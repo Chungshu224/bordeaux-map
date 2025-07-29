@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "vite build && npx vite-plugin-gh-pages"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "deploy": "vite build && npx vite-plugin-gh-pages"
+},
   "dependencies": {
     "@turf/turf": "^7.2.0",
     "mapbox-gl": "^3.13.0",
