@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && npx vite-plugin-gh-pages"
   },
   "dependencies": {
     "@turf/turf": "^7.2.0",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "vite-plugin-gh-pages": "^1.0.1"
   }
 }
