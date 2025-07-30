@@ -9,142 +9,171 @@
       :aocColor="aocColor"
       @selectAOC="showAOCGeojson"
     />
-    <MapSection
-      ref="mapSectionRef"
-      :activeAOC="activeAOC"
-      :regionInfo="regionInfo"
-      :aocColor="aocColor"
-      :resetMap="resetMap"
-      :toggle3D="toggle3D"
-      :is3D="is3D"
-    />
+    <div class="map-section">
+      <div class="map-header">
+        <h1>波爾多葡萄酒產區地圖</h1>
+      </div>
+      
+      <div class="map-info-bar" v-if="activeAOC.aoc">
+        <span class="aoc-info-title">
+          <span class="aoc-dot" :style="{background: aocColor(activeAOC.group)}"></span>
+          {{ activeAOC.aoc.replace('.geojson','').replace(/-/g,' ').replace(/_/g,' ') }}
+        </span>
+        <button class="btn-reset" @click="resetMap">重置地圖</button>
+        <div v-if="regionInfo">
+          <div class="region-info-content">
+            <b>{{ regionInfo.name }}</b> <span class="region-type">({{ regionInfo.type }})</span><br>
+            <span class="grapes">葡萄品種：{{ regionInfo.grapes }}</span><br>
+            <span class="description">{{ regionInfo.description }}</span>
+          </div>
+        </div>
+        <div v-else class="no-info">無詳細產區資料</div>
+      </div>
+      
+      <div ref="mapContainer" class="map"></div>
+      
+      <button class="btn-3d" @click="toggle3D">
+        {{ is3D ? '2D' : '3D' }}
+      </button>
+      
+      <div v-if="mapError" class="map-error">
+        {{ mapError }}
+      </div>
+      <div v-if="isLoading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import AOCList from './AOCList.vue'
-import MapSection from './MapSection.vue'
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
-// 改用 fetch 載入 regionsData
-const regionsData = ref([])
+import AOCList from './AOCList.vue'
 
-const mapSectionRef = ref(null)
+// 狀態管理
+const isLoading = ref(false)
+const mapError = ref(null)
+const mapContainer = ref(null)
 let map = null
 const is3D = ref(false)
 const search = ref('')
 const activeAOC = ref({ group: 'Regional', aoc: 'Bordeaux_AOC.geojson' })
 const regionInfo = ref(null)
+const regionsData = ref([])
+const geojsonCache = new Map()
+
+// 展開/收合狀態
+const expandedGroups = ref({
+  'Regional': true,
+  'LeftBank-Medoc': false,
+  'LeftBank-Graves': false,
+  'RightBank-Libournais': false,
+  'RightBank-Blaye': false,
+  'Entre-Deux-Mers': false,
+  'Sauternais': false
+})
+
+const toggleGroup = (groupName) => {
+  expandedGroups.value[groupName] = !expandedGroups.value[groupName]
+}
+
 // 色彩對應
 function aocColor(groupName) {
-  if (groupName.includes('LeftBank')) return '#8B0000';
-  if (groupName.includes('RightBank')) return '#4169E1';
-  if (groupName === 'Sauternais') return '#FFD700';
-  if (groupName === 'Regional') return '#8B5C2A';
-  if (groupName === 'Entre-Deux-Mers') return '#2E8B57';
-  return '#aaa';
+  if (groupName.includes('LeftBank')) return '#8B0000'
+  if (groupName.includes('RightBank')) return '#4169E1'
+  if (groupName === 'Sauternais') return '#FFD700'
+  if (groupName === 'Regional') return '#8B5C2A'
+  if (groupName === 'Entre-Deux-Mers') return '#2E8B57'
+  return '#aaa'
 }
 
 // 搜尋過濾
+const aocGroups = ref({
+  'Regional': [
+    'Bordeaux_AOC.geojson',
+    'Bordeaux-Superior_AOC.geojson',
+    'Cotes-de-Bordeaux_AOC.geojson',
+    'Cremant-de-Bordeaux_AOC.geojson'
+  ],
+  'LeftBank-Medoc': [
+    'Medoc_AOC.geojson',
+    'Haut-Medoc_AOC.geojson',
+    'Margaux_AOC.geojson',
+    'Pauillac_AOC.geojson',
+    'St-Julien_AOC.geojson',
+    'St-Estephe_AOC.geojson',
+    'Listrac-Medoc_AOC.geojson',
+    'Moulis-en-Medoc_AOC.geojson'
+  ],
+  'LeftBank-Graves': [
+    'Graves_AOC.geojson',
+    'Pessac-Leognan_AOC.geojson',
+    'Graves-Superieures_AOC.geojson'
+  ],
+  'RightBank-Libournais': [
+    'Pomerol_AOC.geojson',
+    'St-Emilion_AOC.geojson',
+    'St-Emilion-Grand-Cru_AOC.geojson',
+    'Fronsac_AOC.geojson',
+    'Canon-Fronsac_AOC.geojson',
+    'Lalande-de-Pomerol_AOC.geojson',
+    'Lussac-St-Emilion_AOC.geojson',
+    'Montagne-St-Emilion_AOC.geojson',
+    'Puisseguin-St-Emilion_AOC.geojson',
+    'St-Georges-St-Emilion_AOC.geojson',
+    'Castillon-Cotes-de-Bordeaux_AOC.geojson'
+  ],
+  'RightBank-Blaye': [
+    'Blaye_AOC.geojson',
+    'Cotes-de-Bourg_AOC.geojson',
+    'Côtes de Blaye_AOC.geojson',
+    'Côtes-de-Bordeaux-Blaye_AOC.geojson',
+    'Côtes-de-Bordeaux_AOC.geojson'
+  ],
+  'Entre-Deux-Mers': [
+    'Entre-Deux-Mers_AOC.geojson',
+    'Cadillac_AOC.geojson',
+    'Loupiac_AOC.geojson',
+    'Sainte-Croix-du-Mont_AOC.geojson',
+    'Entre-deux-Mers-Haut-Benauge_AOC.geojson',
+    'Graves-of-Vayres_AOC.geojson',
+    'St-Foy-Bordeaux_AOC.geojson',
+    'Bordeaux Haut-Benauge_AOC.geojson',
+    'Côtes-de-Bordeaux-Cadillac_AOC.geojson',
+    'Côtes-de-Bordeaux-Francs_AOC.geojson',
+    '1er-Côtes-de-Bordeaux_AOC.geojson',
+    'Cotes-de-Bordeaux-St-Macaire_AOC.geojson'
+  ],
+  'Sauternais': [
+    'Sauternes_AOC.geojson',
+    'Barsac_AOC.geojson',
+    'Cerons_AOC.geojson'
+  ]
+})
+
 const filteredGroups = computed(() => {
-  if (!search.value) return aocGroups.value;
-  const result = {};
-  for (const [group, arr] of Object.entries(aocGroups.value)) {
-    const filtered = arr.filter(aoc => aoc.toLowerCase().includes(search.value.toLowerCase()));
-    if (filtered.length) result[group] = filtered;
+  if (!search.value) return aocGroups.value
+  
+  const result = {}
+  for (const [group, aocs] of Object.entries(aocGroups.value)) {
+    const filtered = aocs.filter(aoc => 
+      aoc.toLowerCase().includes(search.value.toLowerCase())
+    )
+    if (filtered.length) result[group] = filtered
   }
-  return result;
-});
+  
+  return result
+})
 
 watch(filteredGroups, (val) => {
+  // 有搜尋結果時，自動展開該群組
   for (const key in expandedGroups.value) {
-    expandedGroups.value[key] = !!val[key];
+    expandedGroups.value[key] = !!val[key]
   }
-});
-
-// AOC清單分組
-const aocGroups = ref({})
-// 展開/收合狀態
-const expandedGroups = ref({})
-const toggleGroup = (groupName) => {
-  // 只展開一個群組
-  for (const key in expandedGroups.value) {
-    expandedGroups.value[key] = false
-  }
-  expandedGroups.value[groupName] = true
-}
-
-// 載入 geojson 資料夾結構
-const loadAOCList = async () => {
-  // 分組對應資料夾
-  const groups = {
-    'Entre-Deux-Mers': [
-      '1er-Côtes-de-Bordeaux_AOC.geojson',
-      'Bordeaux Haut-Benauge_AOC.geojson',
-      'Cadillac_AOC.geojson',
-      'Cotes-de-Bordeaux-St-Macaire_AOC.geojson',
-      'Côtes-de-Bordeaux-Cadillac_AOC.geojson',
-      'Côtes-de-Bordeaux-Francs_AOC.geojson',
-      'Entre-deux-Mers-Haut-Benauge_AOC.geojson',
-      'Entre-Deux-Mers_AOC.geojson',
-      'Graves-of-Vayres_AOC.geojson',
-      'Loupiac_AOC.geojson',
-      'Sainte-Croix-du-Mont_AOC.geojson',
-      'St-Foy-Bordeaux_AOC.geojson',
-    ],
-    'LeftBank-Graves': [
-      'Graves-Superieures_AOC.geojson',
-      'Graves_AOC.geojson',
-      'Pessac-Leognan_AOC.geojson',
-    ],
-    'LeftBank-Medoc': [
-      'Haut-Medoc_AOC.geojson',
-      'Listrac-Medoc_AOC.geojson',
-      'Margaux_AOC.geojson',
-      'Medoc_AOC.geojson',
-      'Moulis-en-Medoc_AOC.geojson',
-      'Pauillac_AOC.geojson',
-      'St-Estephe_AOC.geojson',
-      'St-Julien_AOC.geojson',
-    ],
-    'Regional': [
-      'Bordeaux-Superior_AOC.geojson',
-      'Bordeaux_AOC.geojson',
-      'Cotes-de-Bordeaux_AOC.geojson',
-      'Cremant-de-Bordeaux_AOC.geojson',
-    ],
-    'RightBank-Blaye': [
-      'Blaye_AOC.geojson',
-      'Cotes-de-Bourg_AOC.geojson',
-      'Côtes de Blaye_AOC.geojson',
-      'Côtes-de-Bordeaux-Blaye_AOC.geojson',
-      'Côtes-de-Bordeaux_AOC.geojson',
-    ],
-    'RightBank-Libournais': [
-      'Canon-Fronsac_AOC.geojson',
-      'Castillon-Cotes-de-Bordeaux_AOC.geojson',
-      'Fronsac_AOC.geojson',
-      'Lalande-de-Pomerol_AOC.geojson',
-      'Lussac-St-Emilion_AOC.geojson',
-      'Montagne-St-Emilion_AOC.geojson',
-      'Pomerol_AOC.geojson',
-      'Puisseguin-St-Emilion_AOC.geojson',
-      'St-Emilion-Grand-Cru_AOC.geojson',
-      'St-Emilion_AOC.geojson',
-      'St-Georges-St-Emilion_AOC.geojson',
-    ],
-    'Sauternais': [
-      'Barsac_AOC.geojson',
-      'Cerons_AOC.geojson',
-      'Sauternes_AOC.geojson',
-    ]
-  }
-  aocGroups.value = groups
-  // 預設全部收合
-  for (const key in groups) expandedGroups.value[key] = false
-}
+})
 
 // 亂數顏色產生器
 function randomColor(alpha = 0.3) {
@@ -154,56 +183,63 @@ function randomColor(alpha = 0.3) {
   return `rgba(${r},${g},${b},${alpha})`
 }
 
-const geojsonCache = new Map();
-
-// 載入 geojson 並加到地圖，groupName 對應資料夾
+// 顯示 AOC 地圖
 const showAOCGeojson = async (groupName, aocFile) => {
-  if (!map) return; // 防止 map 尚未初始化
+  if (!map) {
+    mapError.value = '地圖尚未初始化'
+    return
+  }
+  
+  isLoading.value = true
   activeAOC.value = { group: groupName, aoc: aocFile }
-  // 顯示 regionInfo
-  const aocId = aocFile.replace('.geojson', '').replace(/-/g, '_');
-  if (Array.isArray(regionsData.value) && regionsData.value.length > 0) {
-    regionInfo.value = regionsData.value.find(r => r.id && aocId.startsWith(r.id)) || null;
-  } else {
-    regionInfo.value = null;
-  }
-  // 決定 geojson 路徑
-  let url = ''
-  if (groupName === 'Regional' && aocFile === 'Bordeaux_AOC.geojson') {
-    url = `/${aocFile}` // 起始 geojson 在 public 根目錄
-  } else {
-    let folder = groupName
-    if (groupName.startsWith('RightBank-')) {
-      folder = 'RightBank/' + groupName.split('-')[1]
-    } else if (groupName.startsWith('LeftBank-')) {
-      folder = 'LeftBank/' + groupName.split('-')[1]
-    } else if (groupName === 'Regional') {
-      folder = 'Regional'
-    } else if (groupName === 'Entre-Deux-Mers' || groupName === 'Sauternais') {
-      folder = groupName
-    }
-    url = `/geojson/${folder}/${aocFile}`
-  }
-  console.log('fetching:', url)
-  let geojson;
+  
   try {
-    if (geojsonCache.has(url)) {
-      geojson = geojsonCache.get(url);
+    // 查找產區資訊
+    const aocId = aocFile.replace('.geojson', '')
+    regionInfo.value = Array.isArray(regionsData.value) ? 
+      regionsData.value.find(r => r.id === aocId) || null : null
+    
+    // 決定 geojson 路徑
+    let url = ''
+    if (groupName === 'Regional') {
+      url = `/geojson/Regional/${aocFile}`
     } else {
-      const res = await fetch(url);
+      let folder = groupName
+      if (groupName.startsWith('RightBank-')) {
+        folder = 'RightBank/' + groupName.split('-')[1]
+      } else if (groupName.startsWith('LeftBank-')) {
+        folder = 'LeftBank/' + groupName.split('-')[1]
+      } else if (groupName === 'Regional') {
+        folder = 'Regional'
+      } else if (groupName === 'Entre-Deux-Mers' || groupName === 'Sauternais') {
+        folder = groupName
+      }
+      url = `/geojson/${folder}/${aocFile}`
+    }
+    
+    // 從快取或載入 geojson
+    let geojson
+    if (geojsonCache.has(url)) {
+      geojson = geojsonCache.get(url)
+    } else {
+      const res = await fetch(url)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       geojson = await res.json()
-      geojsonCache.set(url, geojson);
+      geojsonCache.set(url, geojson)
     }
-    // 先移除舊圖層
-    if (map.getLayer('aoc-fill')) map.removeLayer('aoc-fill');
-    if (map.getLayer('aoc-outline')) map.removeLayer('aoc-outline');
-    if (map.getSource('aoc')) map.removeSource('aoc');
+    
+    // 移除舊圖層
+    if (map.getLayer('aoc-fill')) map.removeLayer('aoc-fill')
+    if (map.getLayer('aoc-outline')) map.removeLayer('aoc-outline')
+    if (map.getSource('aoc')) map.removeSource('aoc')
+    
+    // 添加新圖層
     map.addSource('aoc', {
       type: 'geojson',
       data: geojson
     })
-    // 內部填色（30%透明亂數色）
+    
+    // 添加填色圖層
     map.addLayer({
       id: 'aoc-fill',
       type: 'fill',
@@ -218,7 +254,8 @@ const showAOCGeojson = async (groupName, aocFile) => {
         'fill-opacity': 0.9
       }
     })
-    // 外框白色細線
+    
+    // 添加輪廓線
     map.addLayer({
       id: 'aoc-outline',
       type: 'line',
@@ -229,38 +266,22 @@ const showAOCGeojson = async (groupName, aocFile) => {
         'line-opacity': 0.9
       }
     })
-    // 自動縮放至該AOC範圍
+    
+    // 縮放到範圍
     const bbox = turf.bbox(geojson)
     map.fitBounds(bbox, { padding: 40, duration: 1200 })
+    
+    mapError.value = null
   } catch (err) {
     console.error('GeoJSON 載入失敗:', err)
-    alert(`GeoJSON 載入失敗: ${err.message}`)
+    mapError.value = `載入失敗: ${err.message}`
+  } finally {
+    isLoading.value = false
   }
 }
 
 const resetMap = () => {
   showAOCGeojson('Regional', 'Bordeaux_AOC.geojson')
-}
-
-const initMap = async () => {
-  await nextTick()
-  const mapContainer = mapSectionRef.value?.mapContainer?.value
-  if (!mapContainer) return
-  mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
-  map = new mapboxgl.Map({
-    container: mapContainer,
-    style: 'mapbox://styles/mapbox/satellite-streets-v12',
-    center: [-0.45, 44.85],
-    zoom: 9.5,
-    pitch: is3D.value ? 45 : 0,
-    bearing: 0
-  })
-  map.on('load', async () => {
-    // 預設顯示 Bordeaux
-    await showAOCGeojson('Regional', 'Bordeaux_AOC.geojson')
-    map.addControl(new mapboxgl.NavigationControl(), 'top-right')
-    map.addControl(new mapboxgl.FullscreenControl(), 'top-right')
-  })
 }
 
 const toggle3D = () => {
@@ -270,260 +291,294 @@ const toggle3D = () => {
   }
 }
 
-onMounted(async () => {
-  loadAOCList()
-  initMap()
-  // 載入 regionsData
+// 初始化地圖
+const initMap = async (retry = 0) => {
+  try {
+    if (!mapContainer.value) {
+      if (retry < 5) {
+        console.log(`嘗試初始化地圖 (${retry + 1}/5)...`)
+        setTimeout(() => initMap(retry + 1), 200)
+      } else {
+        console.error('無法獲取地圖容器')
+        mapError.value = '無法獲取地圖容器'
+      }
+      return
+    }
+    
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY2h1bmdzaHVsZWUiLCJhIjoiY21kcTZqbHU1MDNnODJsczZ5NXBtNms2NCJ9.UThWFp3_47qETAMZWhdrTg'
+    
+    map = new mapboxgl.Map({
+      container: mapContainer.value,
+      style: 'mapbox://styles/mapbox/satellite-streets-v12',
+      center: [-0.57, 44.84],
+      zoom: 9,
+      pitch: is3D.value ? 45 : 0,
+      bearing: 0
+    })
+    
+    map.on('load', async () => {
+      map.addControl(new mapboxgl.NavigationControl(), 'top-right')
+      map.addControl(new mapboxgl.FullscreenControl(), 'top-right')
+      
+      // 預設顯示波爾多整體
+      await showAOCGeojson('Regional', 'Bordeaux_AOC.geojson')
+    })
+    
+    map.on('error', (err) => {
+      console.error('地圖錯誤:', err)
+      mapError.value = `地圖錯誤: ${err.error?.message || '未知錯誤'}`
+    })
+    
+    mapError.value = null
+  } catch (err) {
+    console.error('地圖初始化錯誤:', err)
+    mapError.value = `初始化錯誤: ${err.message}`
+  }
+}
+
+// 預載常用 geojson
+const preloadGeojson = async () => {
+  try {
+    const commonAOCs = [
+      { group: 'Regional', file: 'Bordeaux_AOC.geojson' },
+      { group: 'LeftBank-Medoc', file: 'Medoc_AOC.geojson' }
+    ]
+    
+    for (const { group, file } of commonAOCs) {
+      let url = ''
+      if (group === 'Regional') {
+        url = `/geojson/Regional/${file}`
+      } else if (group.startsWith('LeftBank-')) {
+        url = `/geojson/LeftBank/${group.split('-')[1]}/${file}`
+      }
+      
+      if (!geojsonCache.has(url)) {
+        const res = await fetch(url)
+        if (res.ok) {
+          const data = await res.json()
+          geojsonCache.set(url, data)
+        }
+      }
+    }
+  } catch (err) {
+    console.warn('預載 GeoJSON 失敗:', err)
+  }
+}
+
+// 載入產區資訊
+const loadRegionsData = async () => {
   try {
     const res = await fetch('/bordeaux-regions.json')
     if (res.ok) {
       regionsData.value = await res.json()
+    } else {
+      throw new Error(`HTTP ${res.status}`)
     }
-  } catch (e) {
+  } catch (err) {
+    console.error('載入產區資料失敗:', err)
     regionsData.value = []
   }
-  if (!Array.isArray(regionsData.value)) regionsData.value = [];
+}
+
+onMounted(async () => {
+  // 先載入產區資料
+  await loadRegionsData()
+  
+  // 確保 DOM 已渲染
+  await nextTick()
+  setTimeout(async () => {
+    await initMap()
+    await preloadGeojson()
+  }, 100)
 })
 
 onUnmounted(() => {
   if (map) {
-    map.remove();
-    map = null;
+    map.remove()
+    map = null
   }
-});
+})
 </script>
 
 <style scoped>
-/* 主版面調整為左20%右80% */
 .main-layout {
   display: flex;
   height: 100vh;
-  align-items: stretch;
-}
-.aoc-list {
-  width: 20%;
-  min-width: 200px;
-  max-width: 340px;
-  background: #f8f8f8;
-  border-right: 1.5px solid #eee;
-  padding: 32px 18px 18px 18px;
-  overflow-y: auto;
-  box-sizing: border-box;
-  position: relative;
-  left: 0;
-  top: 0;
-  z-index: 1200;
-}
-.map-section {
-  flex: 1 1 80%;
-  width: 80%;
-  position: relative;
-  height: 100vh;
   overflow: hidden;
 }
-.aoc-list h2 {
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-  color: #8B0000;
-  letter-spacing: 1px;
-}
-.aoc-search {
-  width: 100%;
-  padding: 7px 12px;
-  border-radius: 6px;
-  border: 1.5px solid #ccc;
-  margin-bottom: 12px;
-  font-size: 1rem;
-  outline: none;
-  transition: border 0.2s;
-}
-.aoc-search:focus {
-  border: 1.5px solid #4169E1;
-}
-.aoc-group {
-  margin-bottom: 10px;
-}
-.group-header {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.08rem;
-  padding: 6px 0 2px 0;
-  user-select: none;
-}
-.arrow {
-  display: inline-block;
-  transition: transform 0.2s;
-  margin-right: 6px;
-}
-.arrow.open {
-  transform: rotate(90deg);
-}
-.group-title {
-  color: #4169E1;
-}
-.aoc-list ul {
-  list-style: none;
-  padding: 0 0 0 18px;
-  margin: 0;
-}
-.aoc-list li {
-  padding: 6px 0 6px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border-left: 3px solid transparent;
-  transition: background 0.18s, border-color 0.18s;
-}
-.aoc-list li:hover {
-  background: #f0f6ff;
-  border-left: 3px solid #4169E1;
-}
-.aoc-list li.active {
-  background: #e6e6fa;
-  border-left: 3px solid #8B0000;
-  font-weight: bold;
-}
-.aoc-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 2px;
-  border: 1.5px solid #fff;
-  box-shadow: 0 0 2px #aaa;
-}
+
 .map-section {
   flex: 1;
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
 .map-header {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  background: rgba(255,255,255,0.97);
-  padding: 20px 20px 16px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.13);
-  max-width: 340px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  z-index: 10;
+  text-align: center;
 }
+
+.map-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #8B0000;
+}
+
 .map-info-bar {
   position: absolute;
-  top: 90px;
-  left: 30px;
-  z-index: 1001;
-  background: rgba(255,255,255,0.98);
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  padding: 10px 18px 10px 12px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  min-width: 180px;
-  font-size: 1.08rem;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
+
 .aoc-info-title {
   display: flex;
   align-items: center;
-  gap: 8px;
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #8B0000;
+  margin-bottom: 8px;
 }
-.btn-reset {
-  background: #fff;
-  border: 1.5px solid #4169E1;
-  color: #4169E1;
-  border-radius: 5px;
-  padding: 4px 14px;
-  font-size: 0.98rem;
-  cursor: pointer;
-  transition: background 0.18s, color 0.18s;
-}
-.btn-reset:hover {
-  background: #4169E1;
-  color: #fff;
-}
-.map-shadow {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  border-radius: 12px;
-}
-.btn-3d-float {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  z-index: 1100;
-  background: #fff;
-  border: 1.5px solid #FFD700;
+
+.aoc-dot {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
+  margin-right: 8px;
+}
+
+.region-info-content {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.region-type {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.grapes {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.description {
+  display: block;
+  margin-top: 5px;
+}
+
+.no-info {
+  margin-top: 10px;
+  color: #888;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.btn-reset {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 12px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.btn-reset:hover {
+  background: #d32f2f;
+}
+
+.btn-3d {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  padding: 8px 15px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+  font-weight: bold;
+}
+
+.btn-3d:hover {
+  background: #388E3C;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  cursor: pointer;
-  transition: background 0.18s, border 0.18s;
+  z-index: 20;
 }
-.btn-3d-float:hover {
-  background: #FFF8DC;
-  border: 1.5px solid #8B0000;
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
-.map-header h1 {
-  margin: 0 0 8px 0;
-  font-size: 1.5rem;
-  color: #333;
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-.map-header p {
-  margin: 0;
-  color: #666;
-  font-size: 0.95rem;
+
+.map-error {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 30;
+  max-width: 80%;
+  text-align: center;
 }
-.btn-3d {
-  margin-top: 8px;
-  padding: 6px 18px;
-  border-radius: 6px;
-  border: none;
-  background: #4169E1;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.btn-3d:hover {
-  background: #27408b;
-}
-.map {
-  width: 100%;
-  height: 100vh;
-}
-@media (max-width: 900px) {
+
+/* 響應式設計 */
+@media (max-width: 768px) {
   .main-layout {
     flex-direction: column;
   }
-  .aoc-list {
-    width: 100vw;
-    min-width: 0;
-    max-width: none;
-    height: 180px;
-    border-right: none;
-    border-bottom: 1.5px solid #eee;
-    padding: 18px 10px 10px 10px;
-  }
+  
   .map-section {
-    width: 100vw;
-    height: calc(100vh - 180px);
+    height: 70vh;
   }
-  .map {
-    height: 100%;
+  
+  .map-info-bar {
+    max-width: 80%;
   }
 }
 </style>

@@ -1,11 +1,23 @@
+<template>
+  <div class="app">
+    <BordeauxMap />
+  </div>
+</template>
+
 <script setup>
 import BordeauxMap from './components/BordeauxMap.vue'
 </script>
 
-<template>
-  <BordeauxMap />
-</template>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
 
-<style scoped>
-/* 如無 logo，可移除下方 CSS */
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 </style>
