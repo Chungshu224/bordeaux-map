@@ -1,59 +1,42 @@
 <template>
   <div class="main-layout">
-    <!-- 左側AOC清單 -->
-    <aside class="aoc-list">
-      <h2>Bordeaux AOC 清單</h2>
-      <input v-model="search" class="aoc-search" placeholder="搜尋AOC..." />
-      <div v-for="(group, groupName) in filteredGroups" :key="groupName" class="aoc-group">
-        <div class="group-header" @click="toggleGroup(groupName)">
-          <span :class="['arrow', expandedGroups[groupName] ? 'open' : '']">▶</span>
-          <span class="group-title">{{ groupName }}</span>
-        </div>
-        <ul v-show="expandedGroups[groupName]">
-          <li v-for="aoc in group" :key="aoc"
-              @click="showAOCGeojson(groupName, aoc)"
-              :class="['aoc-item', {active: activeAOC.group === groupName && activeAOC.aoc === aoc}]"
-          >
-            <span class="aoc-dot" :style="{background: aocColor(groupName)}"></span>
-            {{ aoc.replace('_AOC.geojson','').replace(/-/g,' ').replace(/_/g,' ') }}
-          </li>
-        </ul>
-      </div>
-    </aside>
-    <!-- 右側地圖區 -->
-    <section class="map-section">
-      <div class="map-header">
-        <h1>波爾多葡萄酒產區地圖</h1>
-        <p>探索法國波爾多AOC分布與地理</p>
-      </div>
-      <div class="map-info-bar" v-if="activeAOC.aoc">
-        <span class="aoc-info-title">
-          <span class="aoc-dot" :style="{background: aocColor(activeAOC.group)}"></span>
-          {{ activeAOC.aoc.replace('_AOC.geojson','').replace(/-/g,' ').replace(/_/g,' ') }}
-        </span>
-        <button class="btn-reset" @click="resetMap">重置地圖</button>
-      </div>
-      <div ref="mapContainer" class="map map-shadow" id="map">
-        <button class="btn-3d-float" @click="toggle3D" :title="is3D ? '切換2D' : '切換3D'">
-          <svg v-if="!is3D" width="22" height="22" viewBox="0 0 24 24"><path fill="#4169E1" d="M3 7.5V17l9 5 9-5V7.5l-9-5zm2 .94l7 3.89v7.73l-7-3.89zm14 7.73-7 3.89v-7.73l7-3.89zm1-1.18-7-3.89V4.11l7 3.89zm-16 0V8l7-3.89v7.73z"/></svg>
-          <svg v-else width="22" height="22" viewBox="0 0 24 24"><path fill="#FFD700" d="M12 2 2 7v13h20V7zm0 2.18 7 3.87v2.11l-7 3.87-7-3.87V8.05zm-7 7.72 7 3.87 7-3.87V18H5z"/></svg>
-        </button>
-      </div>
-    </section>
+    <AOCList
+      v-model:search="search"
+      :filteredGroups="filteredGroups"
+      :expandedGroups="expandedGroups"
+      :toggleGroup="toggleGroup"
+      :activeAOC="activeAOC"
+      :aocColor="aocColor"
+      @selectAOC="showAOCGeojson"
+    />
+    <MapSection
+      ref="mapSectionRef"
+      :activeAOC="activeAOC"
+      :regionInfo="regionInfo"
+      :aocColor="aocColor"
+      :resetMap="resetMap"
+      :toggle3D="toggle3D"
+      :is3D="is3D"
+    />
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import AOCList from './AOCList.vue'
+import MapSection from './MapSection.vue'
+import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import * as turf from '@turf/turf'
+// 改用 fetch 載入 regionsData
+const regionsData = ref([])
 
-
-const mapContainer = ref(null)
+const mapSectionRef = ref(null)
 let map = null
 const is3D = ref(false)
 const search = ref('')
 const activeAOC = ref({ group: 'Regional', aoc: 'Bordeaux_AOC.geojson' })
+const regionInfo = ref(null)
 // 色彩對應
 function aocColor(groupName) {
   if (groupName.includes('LeftBank')) return '#8B0000';
@@ -72,6 +55,10 @@ const filteredGroups = computed(() => {
     const filtered = arr.filter(aoc => aoc.toLowerCase().includes(search.value.toLowerCase()));
     if (filtered.length) result[group] = filtered;
   }
+  // 搜尋時自動展開有結果的群組
+  for (const key in expandedGroups.value) {
+    expandedGroups.value[key] = !!result[key];
+  }
   return result;
 });
 
@@ -80,7 +67,11 @@ const aocGroups = ref({})
 // 展開/收合狀態
 const expandedGroups = ref({})
 const toggleGroup = (groupName) => {
-  expandedGroups.value[groupName] = !expandedGroups.value[groupName]
+  // 只展開一個群組
+  for (const key in expandedGroups.value) {
+    expandedGroups.value[key] = false
+  }
+  expandedGroups.value[groupName] = true
 }
 
 // 載入 geojson 資料夾結構
@@ -149,8 +140,8 @@ const loadAOCList = async () => {
     ]
   }
   aocGroups.value = groups
-  // 預設全部展開
-  for (const key in groups) expandedGroups.value[key] = true
+  // 預設全部收合
+  for (const key in groups) expandedGroups.value[key] = false
 }
 
 // 亂數顏色產生器
@@ -161,67 +152,81 @@ function randomColor(alpha = 0.3) {
   return `rgba(${r},${g},${b},${alpha})`
 }
 
-
 // 載入 geojson 並加到地圖，groupName 對應資料夾
 const showAOCGeojson = async (groupName, aocFile) => {
   activeAOC.value = { group: groupName, aoc: aocFile }
+  // 顯示 regionInfo
+  const aocName = aocFile.replace('_AOC.geojson','').replace(/-/g,' ').replace(/_/g,' ').toLowerCase()
+  if (regionsData.value && regionsData.value.length > 0) {
+    regionInfo.value = regionsData.value.find(r => aocName.includes(r.id.replace(/-/g,' '))) || null
+  } else {
+    regionInfo.value = null
+  }
+  // groupName 轉換為 geojson 資料夾路徑
+  let folder = groupName
+  if (groupName.startsWith('RightBank-')) {
+    folder = 'RightBank/' + groupName.split('-')[1]
+  } else if (groupName.startsWith('LeftBank-')) {
+    folder = 'LeftBank/' + groupName.split('-')[1]
+  }
+  const url = `/geojson/${folder}/${aocFile}`
+  console.log('fetching:', url)
+  try {
+    const res = await fetch(url)
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const geojson = await res.json()
+    // 先移除舊圖層
+    if (map.getSource('aoc')) map.removeLayer('aoc-fill'), map.removeLayer('aoc-outline'), map.removeSource('aoc')
+    map.addSource('aoc', {
+      type: 'geojson',
+      data: geojson
+    })
+    // 內部填色（30%透明亂數色）
+    map.addLayer({
+      id: 'aoc-fill',
+      type: 'fill',
+      source: 'aoc',
+      paint: {
+        'fill-color': [
+          'case',
+          ['has', 'color'],
+          ['get', 'color'],
+          randomColor(0.3)
+        ],
+        'fill-opacity': 0.9
+      }
+    })
+    // 外框白色細線
+    map.addLayer({
+      id: 'aoc-outline',
+      type: 'line',
+      source: 'aoc',
+      paint: {
+        'line-color': '#fff',
+        'line-width': 1.5,
+        'line-opacity': 0.9
+      }
+    })
+    // 自動縮放至該AOC範圍
+    const bbox = turf.bbox(geojson)
+    map.fitBounds(bbox, { padding: 40, duration: 1200 })
+  } catch (err) {
+    console.error('GeoJSON 載入失敗:', err)
+    alert(`GeoJSON 載入失敗: ${err.message}`)
+  }
+}
+
 const resetMap = () => {
   showAOCGeojson('Regional', 'Bordeaux_AOC.geojson')
 }
-  // groupName 轉換為資料夾路徑
-  let folder = ''
-  if (groupName.startsWith('LeftBank-')) {
-    folder = 'LeftBank/' + groupName.split('-')[1]
-  } else if (groupName.startsWith('RightBank-')) {
-    folder = 'RightBank/' + groupName.split('-')[1]
-  } else {
-    folder = groupName
-  }
-  const url = `/geojson/${folder}/${aocFile}`
-  const res = await fetch(url)
-  const geojson = await res.json()
-  // 先移除舊圖層
-  if (map.getSource('aoc')) map.removeLayer('aoc-fill'), map.removeLayer('aoc-outline'), map.removeSource('aoc')
-  map.addSource('aoc', {
-    type: 'geojson',
-    data: geojson
-  })
-  // 內部填色（30%透明亂數色）
-  map.addLayer({
-    id: 'aoc-fill',
-    type: 'fill',
-    source: 'aoc',
-    paint: {
-      'fill-color': [
-        'case',
-        ['has', 'color'],
-        ['get', 'color'],
-        randomColor(0.3)
-      ],
-      'fill-opacity': 0.9
-    }
-  })
-  // 外框白色細線
-  map.addLayer({
-    id: 'aoc-outline',
-    type: 'line',
-    source: 'aoc',
-    paint: {
-      'line-color': '#fff',
-      'line-width': 1.5,
-      'line-opacity': 0.9
-    }
-  })
-  // 自動縮放至該AOC範圍
-  const bbox = turf.bbox(geojson)
-  map.fitBounds(bbox, { padding: 40, duration: 1200 })
-}
 
-import * as turf from '@turf/turf'
-const initMap = () => {
+const initMap = async () => {
+  await nextTick()
+  const mapContainer = mapSectionRef.value?.mapContainer?.value
+  if (!mapContainer) return
   mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
   map = new mapboxgl.Map({
-    container: mapContainer.value,
+    container: mapContainer,
     style: 'mapbox://styles/mapbox/satellite-streets-v12',
     center: [-0.45, 44.85],
     zoom: 9.5,
@@ -243,12 +248,18 @@ const toggle3D = () => {
   }
 }
 
-onMounted(() => {
+onMounted(async () => {
   loadAOCList()
   initMap()
-})
-onUnmounted(() => {
-  if (map) map.remove()
+  // 載入 regionsData
+  try {
+    const res = await fetch('/bordeaux-regions.json')
+    if (res.ok) {
+      regionsData.value = await res.json()
+    }
+  } catch (e) {
+    regionsData.value = []
+  }
 })
 </script>
 
@@ -468,4 +479,5 @@ onUnmounted(() => {
   }
 }
 </style>
+
 
