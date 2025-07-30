@@ -24,7 +24,7 @@
 <script setup>
 import AOCList from './AOCList.vue'
 import MapSection from './MapSection.vue'
-import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
@@ -55,11 +55,13 @@ const filteredGroups = computed(() => {
     const filtered = arr.filter(aoc => aoc.toLowerCase().includes(search.value.toLowerCase()));
     if (filtered.length) result[group] = filtered;
   }
-  // 搜尋時自動展開有結果的群組
-  for (const key in expandedGroups.value) {
-    expandedGroups.value[key] = !!result[key];
-  }
   return result;
+});
+
+watch(filteredGroups, (val) => {
+  for (const key in expandedGroups.value) {
+    expandedGroups.value[key] = !!val[key];
+  }
 });
 
 // AOC清單分組
@@ -152,31 +154,51 @@ function randomColor(alpha = 0.3) {
   return `rgba(${r},${g},${b},${alpha})`
 }
 
+const geojsonCache = new Map();
+
 // 載入 geojson 並加到地圖，groupName 對應資料夾
 const showAOCGeojson = async (groupName, aocFile) => {
+  if (!map) return; // 防止 map 尚未初始化
   activeAOC.value = { group: groupName, aoc: aocFile }
   // 顯示 regionInfo
-  const aocName = aocFile.replace('_AOC.geojson','').replace(/-/g,' ').replace(/_/g,' ').toLowerCase()
-  if (regionsData.value && regionsData.value.length > 0) {
-    regionInfo.value = regionsData.value.find(r => aocName.includes(r.id.replace(/-/g,' '))) || null
+  const aocId = aocFile.replace('.geojson', '').replace(/-/g, '_');
+  if (Array.isArray(regionsData.value) && regionsData.value.length > 0) {
+    regionInfo.value = regionsData.value.find(r => r.id && aocId.startsWith(r.id)) || null;
   } else {
-    regionInfo.value = null
+    regionInfo.value = null;
   }
-  // groupName 轉換為 geojson 資料夾路徑
-  let folder = groupName
-  if (groupName.startsWith('RightBank-')) {
-    folder = 'RightBank/' + groupName.split('-')[1]
-  } else if (groupName.startsWith('LeftBank-')) {
-    folder = 'LeftBank/' + groupName.split('-')[1]
+  // 決定 geojson 路徑
+  let url = ''
+  if (groupName === 'Regional' && aocFile === 'Bordeaux_AOC.geojson') {
+    url = `/${aocFile}` // 起始 geojson 在 public 根目錄
+  } else {
+    let folder = groupName
+    if (groupName.startsWith('RightBank-')) {
+      folder = 'RightBank/' + groupName.split('-')[1]
+    } else if (groupName.startsWith('LeftBank-')) {
+      folder = 'LeftBank/' + groupName.split('-')[1]
+    } else if (groupName === 'Regional') {
+      folder = 'Regional'
+    } else if (groupName === 'Entre-Deux-Mers' || groupName === 'Sauternais') {
+      folder = groupName
+    }
+    url = `/geojson/${folder}/${aocFile}`
   }
-  const url = `/geojson/${folder}/${aocFile}`
   console.log('fetching:', url)
+  let geojson;
   try {
-    const res = await fetch(url)
-    if (!res.ok) throw new Error(`HTTP ${res.status}`)
-    const geojson = await res.json()
+    if (geojsonCache.has(url)) {
+      geojson = geojsonCache.get(url);
+    } else {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      geojson = await res.json()
+      geojsonCache.set(url, geojson);
+    }
     // 先移除舊圖層
-    if (map.getSource('aoc')) map.removeLayer('aoc-fill'), map.removeLayer('aoc-outline'), map.removeSource('aoc')
+    if (map.getLayer('aoc-fill')) map.removeLayer('aoc-fill');
+    if (map.getLayer('aoc-outline')) map.removeLayer('aoc-outline');
+    if (map.getSource('aoc')) map.removeSource('aoc');
     map.addSource('aoc', {
       type: 'geojson',
       data: geojson
@@ -260,21 +282,44 @@ onMounted(async () => {
   } catch (e) {
     regionsData.value = []
   }
+  if (!Array.isArray(regionsData.value)) regionsData.value = [];
 })
+
+onUnmounted(() => {
+  if (map) {
+    map.remove();
+    map = null;
+  }
+});
 </script>
 
 <style scoped>
+/* 主版面調整為左20%右80% */
 .main-layout {
   display: flex;
   height: 100vh;
+  align-items: stretch;
 }
 .aoc-list {
-  width: 320px;
+  width: 20%;
+  min-width: 200px;
+  max-width: 340px;
   background: #f8f8f8;
   border-right: 1.5px solid #eee;
   padding: 32px 18px 18px 18px;
   overflow-y: auto;
   box-sizing: border-box;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 1200;
+}
+.map-section {
+  flex: 1 1 80%;
+  width: 80%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 .aoc-list h2 {
   font-size: 1.2rem;
@@ -466,12 +511,15 @@ onMounted(async () => {
   }
   .aoc-list {
     width: 100vw;
+    min-width: 0;
+    max-width: none;
     height: 180px;
     border-right: none;
     border-bottom: 1.5px solid #eee;
     padding: 18px 10px 10px 10px;
   }
   .map-section {
+    width: 100vw;
     height: calc(100vh - 180px);
   }
   .map {
