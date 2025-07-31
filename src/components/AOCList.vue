@@ -81,9 +81,8 @@ const isActive = (group, aoc) => {
 
 <style scoped>
 .aoc-list {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 100vh;
+  flex: 0 0 320px; /* 固定寬度但不會縮小 */
+  height: 100%;
   overflow-y: auto;
   background: #f8f8f8;
   border-right: 1px solid #ddd;
@@ -173,8 +172,8 @@ h2 {
 @media (max-width: 768px) {
   .aoc-list {
     width: 100%;
-    height: 30vh;
-    overflow-y: scroll;
+    height: auto;
+    flex: 0 0 auto;
     border-right: none;
     border-bottom: 1px solid #ddd;
   }

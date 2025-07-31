@@ -1,5 +1,16 @@
-# Vue 3 + Vite
+波爾多葡萄酒產區地圖
+這是一個互動式波爾多葡萄酒產區教學地圖，使用 Vue 3 + Vite + Mapbox GL JS 開發，提供各 AOC 產區的地理位置及詳細資訊展示。
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+功能特色
+互動式地圖：顯示波爾多各 AOC 產區的精確地理邊界
+產區分類：依左岸、右岸、區域級等類別進行分組
+詳細資訊：包含產區介紹、葡萄品種、酒類型等資料
+3D 視角：支援 2D/3D 視圖切換，更直觀感受地形特色
+搜尋功能：快速尋找特定產區
+響應式設計：支援桌面與行動裝置瀏覽
+技術架構
+前端框架：Vue 3 (使用 Composition API)
+建置工具：Vite
+地圖引擎：Mapbox GL JS
+地理資料：GeoJSON 格式
+資料處理：@turf/turf

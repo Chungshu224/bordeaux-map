@@ -400,21 +400,47 @@ onUnmounted(() => {
 })
 </script>
 
+<style>
+/* 在 App.vue 中添加這些全局樣式 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+</style>
+
 <style scoped>
+/* BordeauxMap.vue 內的樣式 */
 .main-layout {
   display: flex;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .map-section {
   flex: 1;
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
 .map {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -424,10 +450,11 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 8px 20px;
   z-index: 10;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .map-header h1 {
@@ -444,7 +471,7 @@ onUnmounted(() => {
   padding: 15px;
   border-radius: 8px;
   max-width: 400px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 
@@ -571,14 +598,30 @@ onUnmounted(() => {
 @media (max-width: 768px) {
   .main-layout {
     flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* AOCList 組件樣式修改建議 */
+  :deep(.aoc-list) {
+    height: 30%;
+    width: 100%;
+    overflow-y: auto;
+    flex-shrink: 0;
   }
   
   .map-section {
-    height: 70vh;
+    height: 70%;
+    width: 100%;
   }
   
   .map-info-bar {
-    max-width: 80%;
+    max-width: calc(100% - 40px);
+    width: auto;
+  }
+  
+  .map-header h1 {
+    font-size: 1.2rem;
   }
 }
 </style>
