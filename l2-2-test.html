@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2-2 Margaux優雅的香水之鄉 - 測試頁面</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
+            color: white;
+            border-radius: 15px;
+        }
+        .course-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .info-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #e91e63;
+        }
+        .test-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #c2185b 0%, #880e4f 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .test-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .feature {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #d81b60;
+        }
+        .feature h3 {
+            color: #880e4f;
+            margin-bottom: 1rem;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-size: 1.2rem;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #e91e63;
+        }
+        .elegant-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.history.back()">← 返回</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1><span class="elegant-icon">🌸</span> L2-2: Margaux - 優雅的香水之鄉</h1>
+            <p>Level 2 進階課程 - 探索"葡萄酒中的香水"的優雅魅力</p>
+        </div>
+
+        <div class="course-info">
+            <div class="info-card">
+                <h3>⏱️ 課程時長</h3>
+                <p>30分鐘</p>
+            </div>
+            <div class="info-card">
+                <h3>📊 難度等級</h3>
+                <p>Level 2 (進階)</p>
+            </div>
+            <div class="info-card">
+                <h3>🎯 學習目標</h3>
+                <p>5個專業目標</p>
+            </div>
+            <div class="info-card">
+                <h3>📝 互動元素</h3>
+                <p>3個測驗問題</p>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3><span class="elegant-icon">💎</span> Margaux產區特色</h3>
+            <p><strong>"葡萄酒中的香水"</strong> - Margaux以其獨特的優雅風格和複雜的花香層次聞名於世，是波爾多最精緻的產區之一。</p>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>🌸 Margaux風土與土壤特色</h3>
+                <p>深入了解Margaux產區獨特的砂質砂礫土壤，以及造就優雅風格的風土條件。</p>
+                <ul>
+                    <li><strong>五個村莊：</strong>Margaux、Cantenac、Soussans、Labarde、Arsac</li>
+                    <li><strong>砂質土壤：</strong>70%以上砂質砂礫土，排水極佳</li>
+                    <li><strong>微氣候：</strong>Gironde河調節的穩定氣候環境</li>
+                    <li><strong>地形多樣：</strong>複雜的丘陵與平原交錯地形</li>
+                </ul>
+            </div>
+            
+            <div class="feature">
+                <h3>👑 Château Margaux與傳奇酒莊</h3>
+                <p>全面了解Margaux產區的頂級酒莊，特別是唯一的一級酒莊Château Margaux。</p>
+                <ul>
+                    <li><strong>一級酒莊：</strong>Château Margaux的歷史與釀酒工藝</li>
+                    <li><strong>二級酒莊：</strong>Rauzan-Ségla、Lascombes等優秀酒莊</li>
+                    <li><strong>三級酒莊：</strong>Palmer、Malescot等精品酒莊</li>
+                    <li><strong>投資價值：</strong>市場表現與收藏潛力分析</li>
+                </ul>
+            </div>
+            
+            <div class="feature">
+                <h3>🍷 Margaux風格特色與品鑑要點</h3>
+                <p>掌握Margaux優雅風格的感官特徵，以及專業品鑑技巧與餐酒搭配藝術。</p>
+                <ul>
+                    <li><strong>紫羅蘭花香：</strong>Margaux最具代表性的香氣特徵</li>
+                    <li><strong>絲滑口感：</strong>如天鵝絨般的優雅質地</li>
+                    <li><strong>陳年潛力：</strong>20-40年的發展軌跡分析</li>
+                    <li><strong>餐酒搭配：</strong>精緻料理的完美配對原則</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <h2>🚀 開始學習</h2>
+            <p>點擊下方按鈕進入 L2-2 課程簡報模式</p>
+            <a href="index.html?lesson=l2-2&mode=presentation" class="test-link">
+                進入 L2-2 簡報模式
+            </a>
+            <a href="index.html" class="test-link">
+                返回主頁
+            </a>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+            <h3 style="color: #880e4f;"><span class="elegant-icon">💡</span> 學習重點</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                <div>
+                    <h4 style="color: #c2185b;">🌱 風土特色</h4>
+                    <ul>
+                        <li>砂質砂礫土的獨特性</li>
+                        <li>五個村莊的風格差異</li>
+                        <li>微氣候環境影響</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #c2185b;">🏰 酒莊傳奇</h4>
+                    <ul>
+                        <li>Château Margaux的卓越</li>
+                        <li>分級制度中的地位</li>
+                        <li>現代化釀酒工藝</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #c2185b;">🎯 品鑑技巧</h4>
+                    <ul>
+                        <li>花香識別與描述</li>
+                        <li>優雅風格的特點</li>
+                        <li>專業餐酒搭配</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%); color: white; padding: 1.5rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
+            <h3><span class="elegant-icon">🎓</span> 課程特色</h3>
+            <p>本課程專注於Margaux產區的深度探索，從風土條件到酒莊傳奇，從釀酒工藝到品鑑技巧，全方位展現這個"香水之鄉"的優雅魅力。適合對波爾多葡萄酒有一定了解，希望深入學習單一產區特色的學習者。</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌸</div>
+                    <strong>優雅風格</strong><br>
+                    <small>深度了解Margaux的細膩特質</small>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">👑</div>
+                    <strong>頂級酒莊</strong><br>
+                    <small>探索世界級酒莊的秘密</small>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🍷</div>
+                    <strong>專業品鑑</strong><br>
+                    <small>掌握專業品酒技巧</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 優雅的互動效果
+        document.querySelectorAll('.info-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(233, 30, 99, 0.2)';
+                this.style.borderLeftColor = '#c2185b';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+                this.style.borderLeftColor = '#e91e63';
+            });
+        });
+
+        document.querySelectorAll('.feature').forEach(feature => {
+            feature.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 8px 16px rgba(216, 27, 96, 0.15)';
+                this.style.borderLeftColor = '#ad1457';
+            });
+            
+            feature.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+                this.style.borderLeftColor = '#d81b60';
+            });
+        });
+
+        // 添加花瓣飄落效果
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.innerHTML = '🌸';
+            petal.style.position = 'fixed';
+            petal.style.top = '-50px';
+            petal.style.left = Math.random() * window.innerWidth + 'px';
+            petal.style.fontSize = Math.random() * 20 + 10 + 'px';
+            petal.style.opacity = Math.random() * 0.5 + 0.3;
+            petal.style.pointerEvents = 'none';
+            petal.style.zIndex = '1000';
+            petal.style.animation = `fall ${Math.random() * 3 + 5}s linear infinite`;
+            
+            document.body.appendChild(petal);
+            
+            setTimeout(() => {
+                petal.remove();
+            }, 8000);
+        }
+        
+        // 添加CSS動畫
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // 每隔一段時間創建花瓣
+        setInterval(createPetal, 2000);
+    </script>
+</body>
+</html>

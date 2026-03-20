@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3-6：頂級酒莊深度研究 - 測試</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8E24AA 0%, #3F51B5 50%, #1976D2 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8E24AA, #9C27B0);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .course-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .question {
+            margin-bottom: 35px;
+            padding: 25px;
+            border-left: 5px solid #8E24AA;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .question h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .question-type {
+            background: #e1bee7;
+            color: #6a1b9a;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .options {
+            list-style: none;
+        }
+
+        .options li {
+            margin: 12px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .options li:hover {
+            border-color: #8E24AA;
+            background: #f3e5f5;
+        }
+
+        .options li.selected {
+            border-color: #8E24AA;
+            background: #e1bee7;
+        }
+
+        .essay-area {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .chateau-card {
+            background: #f8f9fa;
+            border: 2px solid #8E24AA;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .chateau-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .chateau-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8E24AA, #3F51B5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .chateau-info h4 {
+            color: #8E24AA;
+            margin-bottom: 5px;
+            font-size: 1.4em;
+        }
+
+        .chateau-classification {
+            background: #ff6f00;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .chateau-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .detail-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #8E24AA;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: #8E24AA;
+            margin-bottom: 5px;
+        }
+
+        .vintage-comparison {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .vintage-row {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .vintage-year {
+            font-weight: bold;
+            color: #8E24AA;
+            width: 60px;
+        }
+
+        .rating-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .rating-exceptional { background: #4caf50; }
+        .rating-outstanding { background: #2196f3; }
+        .rating-excellent { background: #ff9800; }
+        .rating-very-good { background: #9c27b0; }
+        .rating-good { background: #607d8b; }
+
+        .terroir-map {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #4caf50;
+        }
+
+        .map-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .plot-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #4caf50;
+        }
+
+        .plot-name {
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .investment-tracker {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #ff9800;
+        }
+
+        .price-chart {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .price-point {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #ff9800;
+        }
+
+        .price-year {
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 5px;
+        }
+
+        .price-value {
+            font-size: 1.2em;
+            color: #ff6f00;
+            font-weight: bold;
+        }
+
+        .winemaking-process {
+            background: #f3e5f5;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid #8E24AA;
+        }
+
+        .step-number {
+            background: #8E24AA;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #8E24AA, #3F51B5);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(142, 36, 170, 0.3);
+        }
+
+        .progress-bar {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 8px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #8E24AA, #3F51B5);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .skill-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #8e24aa, #3f51b5);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .market-analysis {
+            background: #e3f2fd;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #2196f3;
+        }
+
+        .market-metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #bbdefb;
+        }
+
+        .metric-label {
+            font-weight: bold;
+            color: #1976d2;
+        }
+
+        .metric-value {
+            font-size: 1.1em;
+            color: #0d47a1;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .content-section {
+                padding: 25px;
+            }
+            
+            .course-info {
+                gap: 20px;
+            }
+            
+            .chateau-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .vintage-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="level-badge">🎯 Level 3 - 高級專業</div>
+            <h1>🏰 頂級酒莊深度研究</h1>
+            <p class="subtitle">波爾多傳奇酒莊的歷史、風土、工藝與市場分析</p>
+            
+            <div class="course-info">
+                <div class="info-item">
+                    <span>⏱️</span>
+                    <span>測試時間：65分鐘</span>
+                </div>
+                <div class="info-item">
+                    <span>📝</span>
+                    <span>題目數量：18題</span>
+                </div>
+                <div class="info-item">
+                    <span>🎯</span>
+                    <span>通過分數：80分</span>
+                </div>
+                <div class="info-item">
+                    <span>📊</span>
+                    <span>難度等級：專家</span>
+                </div>
+            </div>
+            
+            <div class="skill-tags">
+                <div class="skill-tag">🏰 酒莊研究</div>
+                <div class="skill-tag">📈 市場分析</div>
+                <div class="skill-tag">🍷 品質評估</div>
+                <div class="skill-tag">💰 投資分析</div>
+                <div class="skill-tag">🌱 風土解析</div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <form id="testForm">
+                <!-- 第1題：一級酒莊概況 -->
+                <div class="question">
+                    <div class="question-type">🏆 一級酒莊題</div>
+                    <h3>1. 波爾多1855年分級制度中的一級酒莊</h3>
+                    <div class="chateau-card">
+                        <div class="chateau-header">
+                            <div class="chateau-logo">🏰</div>
+                            <div class="chateau-info">
+                                <h4>1855年分級 - 一級酒莊</h4>
+                                <div class="chateau-classification">Premier Grand Cru Classé</div>
+                            </div>
+                        </div>
+                        <div class="chateau-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Château Lafite Rothschild</div>
+                                <div>Pauillac | 112公頃 | Cabernet Sauvignon主導</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Château Latour</div>
+                                <div>Pauillac | 78公頃 | 力量與優雅</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Château Margaux</div>
+                                <div>Margaux | 87公頃 | 精緻典雅</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Château Haut-Brion</div>
+                                <div>Pessac-Léognan | 51公頃 | 獨特風土</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Château Mouton Rothschild</div>
+                                <div>Pauillac | 84公頃 | 1973年升級</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>哪個一級酒莊是在1973年才從二級升為一級？</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. Château Lafite Rothschild</li>
+                        <li data-value="b">B. Château Mouton Rothschild</li>
+                        <li data-value="c">C. Château Margaux</li>
+                        <li data-value="d">D. Château Latour</li>
+                    </ul>
+                </div>
+
+                <!-- 第2題：右岸頂級酒莊 -->
+                <div class="question">
+                    <div class="question-type">🌟 右岸精品題</div>
+                    <h3>2. 右岸傳奇酒莊分析</h3>
+                    <div class="chateau-card">
+                        <div class="chateau-header">
+                            <div class="chateau-logo">💎</div>
+                            <div class="chateau-info">
+                                <h4>右岸頂級莊園</h4>
+                                <div class="chateau-classification">Saint-Émilion & Pomerol</div>
+                            </div>
+                        </div>
+                        <div class="chateau-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Château Pétrus</div>
+                                <div>Pomerol | 11.4公頃 | 100% Merlot</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Château Le Pin</div>
+                                <div>Pomerol | 2.7公頃 | 車庫酒鼻祖</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Château Cheval Blanc</div>
+                                <div>Saint-Émilion | 39公頃 | Cabernet Franc 58%</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Château Ausone</div>
+                                <div>Saint-Émilion | 7公頃 | 石灰岩坡地</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>被譽為「Pomerol之王」且以100% Merlot聞名的酒莊是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. Château Le Pin</li>
+                        <li data-value="b">B. Château Pétrus</li>
+                        <li data-value="c">C. Château Cheval Blanc</li>
+                        <li data-value="d">D. Château Ausone</li>
+                    </ul>
+                </div>
+
+                <!-- 第3題：年份評估 -->
+                <div class="question">
+                    <div class="question-type">📅 年份分析題</div>
+                    <h3>3. 傳奇年份與酒莊表現</h3>
+                    <div class="vintage-comparison">
+                        <h4 style="text-align: center; color: #8E24AA; margin-bottom: 20px;">🍷 經典年份比較</h4>
+                        <div class="vintage-row" style="font-weight: bold; background: #f5f5f5;">
+                            <div class="vintage-year">年份</div>
+                            <div>氣候特徵</div>
+                            <div>Lafite評分</div>
+                            <div>Pétrus評分</div>
+                            <div>市場價值</div>
+                        </div>
+                        <div class="vintage-row">
+                            <div class="vintage-year">1982</div>
+                            <div>理想條件，Parker推崇</div>
+                            <div><div class="rating-circle rating-exceptional">100</div></div>
+                            <div><div class="rating-circle rating-exceptional">95</div></div>
+                            <div>傳奇等級</div>
+                        </div>
+                        <div class="vintage-row">
+                            <div class="vintage-year">2000</div>
+                            <div>千禧年，完美平衡</div>
+                            <div><div class="rating-circle rating-outstanding">98</div></div>
+                            <div><div class="rating-circle rating-exceptional">100</div></div>
+                            <div>收藏首選</div>
+                        </div>
+                        <div class="vintage-row">
+                            <div class="vintage-year">2005</div>
+                            <div>濃縮度極高</div>
+                            <div><div class="rating-circle rating-outstanding">96</div></div>
+                            <div><div class="rating-circle rating-outstanding">98</div></div>
+                            <div>投資熱門</div>
+                        </div>
+                        <div class="vintage-row">
+                            <div class="vintage-year">2010</div>
+                            <div>結構完美，陳年潛力</div>
+                            <div><div class="rating-circle rating-exceptional">99</div></div>
+                            <div><div class="rating-circle rating-outstanding">97</div></div>
+                            <div>未來經典</div>
+                        </div>
+                    </div>
+                    <p><strong>被Robert Parker評為100分且奠定其聲譽的Lafite經典年份是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 1982年</li>
+                        <li data-value="b">B. 2000年</li>
+                        <li data-value="c">C. 2005年</li>
+                        <li data-value="d">D. 2010年</li>
+                    </ul>
+                </div>
+
+                <!-- 第4題：風土分析 -->
+                <div class="question">
+                    <div class="question-type">🌱 風土研究題</div>
+                    <h3>4. Château Margaux的風土分析</h3>
+                    <div class="terroir-map">
+                        <h4 style="text-align: center; color: #2e7d32; margin-bottom: 20px;">🗺️ Margaux產區地塊分布</h4>
+                        <div class="map-section">
+                            <div class="plot-card">
+                                <div class="plot-name">地塊A</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>礫石土壤</div>
+                                    <div>排水極佳</div>
+                                    <div>Cabernet Sauvignon</div>
+                                </div>
+                            </div>
+                            <div class="plot-card">
+                                <div class="plot-name">地塊B</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>深層礫石</div>
+                                    <div>蓄熱能力強</div>
+                                    <div>Cabernet Sauvignon</div>
+                                </div>
+                            </div>
+                            <div class="plot-card">
+                                <div class="plot-name">地塊C</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>黏土-礫石</div>
+                                    <div>保水性好</div>
+                                    <div>Merlot</div>
+                                </div>
+                            </div>
+                            <div class="plot-card">
+                                <div class="plot-name">地塊D</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>沙質土壤</div>
+                                    <div>早熟特性</div>
+                                    <div>Cabernet Franc</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 10px;">
+                            <strong>核心特徵：</strong>加倫河左岸的深層礫石台地，完美的排水系統和微氣候，造就了Margaux的優雅風格
+                        </div>
+                    </div>
+                    <p><strong>Château Margaux風土的最大特色是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 石灰岩土壤</li>
+                        <li data-value="b">B. 深層礫石台地</li>
+                        <li data-value="c">C. 黏土為主</li>
+                        <li data-value="d">D. 沙質土壤</li>
+                    </ul>
+                </div>
+
+                <!-- 第5題：釀造工藝 -->
+                <div class="question">
+                    <div class="question-type">🛠️ 釀造工藝題</div>
+                    <h3>5. Château Latour的釀造哲學</h3>
+                    <div class="winemaking-process">
+                        <h4 style="text-align: center; color: #8E24AA; margin-bottom: 20px;">🔬 Latour釀造工藝流程</h4>
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <strong>精選採收：</strong>手工採收，多次篩選，確保只有最優質的葡萄進入釀造環節
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <strong>地塊發酵：</strong>按地塊分別發酵，使用溫控不鏽鋼槽和橡木槽
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <strong>浸漬管理：</strong>長時間浸漬(3-4週)，溫和萃取，保持果實純淨度
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div>
+                                <strong>橡木陳釀：</strong>18-20個月新橡木桶陳釀，定期攪桶和換桶
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <div>
+                                <strong>最終調配：</strong>品嚐師團隊精心調配，追求完美平衡和風格一致性
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>Château Latour釀造工藝的核心特色是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 快速發酵</li>
+                        <li data-value="b">B. 按地塊分別釀造</li>
+                        <li data-value="c">C. 全部機械採收</li>
+                        <li data-value="d">D. 不使用橡木桶</li>
+                    </ul>
+                </div>
+
+                <!-- 第6題：投資價值 -->
+                <div class="question">
+                    <div class="question-type">💰 投資分析題</div>
+                    <h3>6. 頂級波爾多的投資價值分析</h3>
+                    <div class="investment-tracker">
+                        <h4 style="text-align: center; color: #e65100; margin-bottom: 20px;">📈 價格走勢分析 (Lafite 2000年)</h4>
+                        <div class="price-chart">
+                            <div class="price-point">
+                                <div class="price-year">2003</div>
+                                <div class="price-value">€200</div>
+                                <div style="font-size: 0.8em;">首發價格</div>
+                            </div>
+                            <div class="price-point">
+                                <div class="price-year">2008</div>
+                                <div class="price-value">€800</div>
+                                <div style="font-size: 0.8em;">市場認知</div>
+                            </div>
+                            <div class="price-point">
+                                <div class="price-year">2011</div>
+                                <div class="price-value">€2,500</div>
+                                <div style="font-size: 0.8em;">亞洲熱潮</div>
+                            </div>
+                            <div class="price-point">
+                                <div class="price-year">2018</div>
+                                <div class="price-value">€1,800</div>
+                                <div style="font-size: 0.8em;">市場調整</div>
+                            </div>
+                            <div class="price-point">
+                                <div class="price-year">2023</div>
+                                <div class="price-value">€2,200</div>
+                                <div style="font-size: 0.8em;">穩定增長</div>
+                            </div>
+                        </div>
+                        <div class="market-analysis">
+                            <h5 style="color: #1976d2; margin-bottom: 15px;">📊 投資要素分析</h5>
+                            <div class="market-metric">
+                                <span class="metric-label">年化報酬率 (20年)</span>
+                                <span class="metric-value">12.5%</span>
+                            </div>
+                            <div class="market-metric">
+                                <span class="metric-label">波動性</span>
+                                <span class="metric-value">中等</span>
+                            </div>
+                            <div class="market-metric">
+                                <span class="metric-label">流動性</span>
+                                <span class="metric-value">高</span>
+                            </div>
+                            <div class="market-metric">
+                                <span class="metric-label">收藏價值</span>
+                                <span class="metric-value">極高</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>頂級波爾多葡萄酒投資的主要風險因素是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 品質下降</li>
+                        <li data-value="b">B. 市場投機和週期性波動</li>
+                        <li data-value="c">C. 產量過大</li>
+                        <li data-value="d">D. 儲存困難</li>
+                    </ul>
+                </div>
+
+                <!-- 第7題：副牌酒策略 -->
+                <div class="question">
+                    <div class="question-type">🎯 副牌策略題</div>
+                    <h3>7. 一級酒莊的副牌酒戰略</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 只是次等葡萄的利用</li>
+                        <li data-value="b">B. 品牌延伸和品質階層化策略</li>
+                        <li data-value="c">C. 純粹為了增加產量</li>
+                        <li data-value="d">D. 降低生產成本的手段</li>
+                    </ul>
+                </div>
+
+                <!-- 第8題：橡木桶策略 -->
+                <div class="question">
+                    <div class="question-type">🛢️ 橡木桶題</div>
+                    <h3>8. 頂級酒莊的橡木桶使用策略</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 100%新橡木桶</li>
+                        <li data-value="b">B. 根據年份和地塊特性調整新桶比例</li>
+                        <li data-value="c">C. 完全不使用橡木桶</li>
+                        <li data-value="d">D. 只使用舊橡木桶</li>
+                    </ul>
+                </div>
+
+                <!-- 第9題：市場定位 -->
+                <div class="question">
+                    <div class="question-type">🌍 市場定位題</div>
+                    <h3>9. 波爾多一級酒莊在全球市場的地位</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 僅在法國有影響力</li>
+                        <li data-value="b">B. 全球葡萄酒投資和收藏的基準</li>
+                        <li data-value="c">C. 主要面向歐洲市場</li>
+                        <li data-value="d">D. 價格過高缺乏競爭力</li>
+                    </ul>
+                </div>
+
+                <!-- 第10題：技術創新 -->
+                <div class="question">
+                    <div class="question-type">🔬 技術創新題</div>
+                    <h3>10. 傳統酒莊的現代技術應用</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 完全拒絕現代技術</li>
+                        <li data-value="b">B. 在保持傳統的基礎上謹慎引入新技術</li>
+                        <li data-value="c">C. 全面採用最新技術</li>
+                        <li data-value="d">D. 只在銷售環節使用技術</li>
+                    </ul>
+                </div>
+
+                <!-- 第11題：氣候變遷應對 -->
+                <div class="question">
+                    <div class="question-type">🌡️ 氣候適應題</div>
+                    <h3>11. 頂級酒莊如何應對氣候變遷挑戰</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 改變釀造風格</li>
+                        <li data-value="b">B. 調整種植品種比例和管理技術</li>
+                        <li data-value="c">C. 遷移到其他產區</li>
+                        <li data-value="d">D. 維持現狀不變</li>
+                    </ul>
+                </div>
+
+                <!-- 第12題：收藏家行為 -->
+                <div class="question">
+                    <div class="question-type">👑 收藏行為題</div>
+                    <h3>12. 頂級波爾多收藏家的主要動機</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 純粹投資獲利</li>
+                        <li data-value="b">B. 結合投資、收藏和品嚐的綜合價值</li>
+                        <li data-value="c">C. 社交地位象徵</li>
+                        <li data-value="d">D. 只為了品嚐</li>
+                    </ul>
+                </div>
+
+                <!-- 第13題：簡答題 -->
+                <div class="question">
+                    <div class="question-type">📝 簡答題</div>
+                    <h3>13. 分析Château Pétrus成為「Pomerol之王」的關鍵因素（250字內）</h3>
+                    <textarea class="essay-area" placeholder="請從風土條件、釀造工藝、市場策略、稀缺性等角度分析..."></textarea>
+                </div>
+
+                <!-- 第14題：比較分析 -->
+                <div class="question">
+                    <div class="question-type">⚖️ 比較分析題</div>
+                    <h3>14. 比較左岸一級酒莊與右岸頂級酒莊的不同特色</h3>
+                    <div class="chateau-card">
+                        <h4>🎯 分析要點</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px;">
+                            <li>風土條件差異</li>
+                            <li>主要品種構成</li>
+                            <li>釀造風格特點</li>
+                            <li>市場定位策略</li>
+                            <li>投資收藏價值</li>
+                        </ul>
+                    </div>
+                    <textarea class="essay-area" placeholder="請詳細比較左右岸頂級酒莊的差異與特色..."></textarea>
+                </div>
+
+                <!-- 第15題：案例研究 -->
+                <div class="question">
+                    <div class="question-type">📚 案例研究題</div>
+                    <h3>15. 設計一個頂級酒莊的品牌傳承策略</h3>
+                    <div class="chateau-card">
+                        <h4>🏰 假設酒莊背景</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px;">
+                            <li><strong>歷史：</strong>300年歷史的家族酒莊</li>
+                            <li><strong>等級：</strong>梅多克二級酒莊</li>
+                            <li><strong>規模：</strong>85公頃葡萄園</li>
+                            <li><strong>挑戰：</strong>面臨世代交替和市場競爭</li>
+                            <li><strong>目標：</strong>提升品牌價值和市場地位</li>
+                        </ul>
+                    </div>
+                    <textarea class="essay-area" placeholder="請設計包含品質提升、品牌建設、市場策略、傳承規劃的完整方案..."></textarea>
+                </div>
+
+                <!-- 第16題：投資組合 -->
+                <div class="question">
+                    <div class="question-type">💼 投資組合題</div>
+                    <h3>16. 構建頂級波爾多葡萄酒的投資組合</h3>
+                    <textarea class="essay-area" placeholder="請設計一個平衡風險與收益的波爾多葡萄酒投資組合，包含酒莊選擇、年份配比、預算分配等..."></textarea>
+                </div>
+
+                <!-- 第17題：市場趨勢 -->
+                <div class="question">
+                    <div class="question-type">📈 市場趨勢題</div>
+                    <h3>17. 分析當前頂級波爾多市場的主要趨勢</h3>
+                    <textarea class="essay-area" placeholder="請從消費者偏好、價格走勢、地區差異、新興市場等角度分析..."></textarea>
+                </div>
+
+                <!-- 第18題：未來展望 -->
+                <div class="question">
+                    <div class="question-type">🔮 未來展望題</div>
+                    <h3>18. 預測頂級波爾多酒莊在未來10年的發展方向</h3>
+                    <p>請從技術創新、可持續發展、市場策略、品質提升等角度進行預測（400字內）</p>
+                    <textarea class="essay-area" placeholder="請提供您對頂級波爾多酒莊未來發展的預測和建議..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">提交測試答案</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 答案選擇功能
+        document.querySelectorAll('.options li').forEach(option => {
+            option.addEventListener('click', function() {
+                // 移除同一題目中其他選項的選中狀態
+                const question = this.closest('.question');
+                question.querySelectorAll('.options li').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                // 添加選中狀態
+                this.classList.add('selected');
+                updateProgress();
+            });
+        });
+
+        // 進度更新
+        function updateProgress() {
+            const totalQuestions = 18;
+            let answered = 0;
+            
+            // 統計選擇題答案
+            document.querySelectorAll('.question').forEach(q => {
+                if (q.querySelector('.selected') || q.querySelector('textarea').value.trim()) {
+                    answered++;
+                }
+            });
+            
+            const progress = (answered / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        // 文本區域監聽
+        document.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', updateProgress);
+        });
+
+        // 表單提交
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 收集答案
+            const answers = {};
+            let questionCount = 1;
+            
+            document.querySelectorAll('.question').forEach(question => {
+                const selected = question.querySelector('.selected');
+                const textarea = question.querySelector('textarea');
+                
+                if (selected) {
+                    answers[`question_${questionCount}`] = selected.dataset.value;
+                } else if (textarea && textarea.value.trim()) {
+                    answers[`question_${questionCount}`] = textarea.value.trim();
+                }
+                questionCount++;
+            });
+            
+            // 檢查完成度
+            const completed = Object.keys(answers).length;
+            if (completed < 18) {
+                alert(`請完成所有題目！目前已完成：${completed}/18`);
+                return;
+            }
+            
+            // 顯示結果
+            showResults(answers);
+        });
+
+        function showResults(answers) {
+            const correctAnswers = {
+                question_1: 'b', // Château Mouton Rothschild
+                question_2: 'b', // Château Pétrus
+                question_3: 'a', // 1982年
+                question_4: 'b', // 深層礫石台地
+                question_5: 'b', // 按地塊分別釀造
+                question_6: 'b', // 市場投機和週期性波動
+                question_7: 'b', // 品牌延伸和品質階層化策略
+                question_8: 'b', // 根據年份和地塊特性調整新桶比例
+                question_9: 'b', // 全球葡萄酒投資和收藏的基準
+                question_10: 'b', // 在保持傳統的基礎上謹慎引入新技術
+                question_11: 'b', // 調整種植品種比例和管理技術
+                question_12: 'b'  // 結合投資、收藏和品嚐的綜合價值
+            };
+            
+            let score = 0;
+            
+            // 計算選擇題分數
+            for (let i = 1; i <= 12; i++) {
+                if (answers[`question_${i}`] === correctAnswers[`question_${i}`]) {
+                    score += 4; // 每題4分
+                }
+            }
+            
+            // 簡答題和綜合題給予基礎分數
+            const essayQuestions = [13, 14, 15, 16, 17, 18];
+            essayQuestions.forEach(q => {
+                if (answers[`question_${q}`] && answers[`question_${q}`].length > 50) {
+                    if (q === 13) score += 8; // 簡答題8分
+                    if (q === 14) score += 10; // 比較分析10分
+                    if (q === 15) score += 12; // 案例研究12分
+                    if (q === 16) score += 8; // 投資組合8分
+                    if (q === 17) score += 8; // 市場趨勢8分
+                    if (q === 18) score += 10; // 未來展望10分
+                }
+            });
+            
+            const passed = score >= 80;
+            const resultHtml = `
+                <div style="text-align: center; padding: 30px; background: ${passed ? '#e8f5e9' : '#ffebee'}; border-radius: 15px; margin: 20px 0;">
+                    <h2 style="color: ${passed ? '#4caf50' : '#f44336'}; margin-bottom: 20px;">
+                        ${passed ? '🏆 測試通過！' : '📚 繼續努力！'}
+                    </h2>
+                    <div style="font-size: 2em; font-weight: bold; color: ${passed ? '#4caf50' : '#f44336'}; margin: 20px 0;">
+                        ${score} / 100 分
+                    </div>
+                    <p style="font-size: 1.1em; margin: 15px 0;">
+                        通過標準：80分 | 您的成績：${score}分
+                    </p>
+                    <div style="margin: 20px 0;">
+                        <div style="background: #f5f5f5; border-radius: 10px; padding: 15px; margin: 10px 0;">
+                            <strong>評語：</strong>
+                            ${passed ? 
+                                '卓越！您對頂級酒莊的深度理解已達到專家水準，具備專業酒莊分析和投資評估能力。' : 
+                                '您已掌握基礎知識，建議加強對具體酒莊案例和市場動態的深入研究。'
+                            }
+                        </div>
+                    </div>
+                    ${passed ? 
+                        '<div style="margin: 20px 0;"><a href="l3-5-test.html" style="background: #4caf50; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold;">繼續下一課程 L3-5 →</a></div>' : 
+                        '<div style="margin: 20px 0;"><button onclick="location.reload()" style="background: #ff9800; color: white; padding: 15px 30px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">重新測試</button></div>'
+                    }
+                </div>
+            `;
+            
+            document.querySelector('.content-section').innerHTML = resultHtml;
+        }
+
+        // 初始化
+        updateProgress();
+        
+        console.log('L3-6 頂級酒莊深度研究測試頁面載入完成');
+    </script>
+</body>
+</html>

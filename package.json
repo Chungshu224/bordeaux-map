@@ -1,0 +1,52 @@
+{
+  "name": "bordeaux-wine-academy",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Interactive Bordeaux Wine Education Platform",
+  "keywords": [
+    "wine",
+    "bordeaux",
+    "education",
+    "interactive",
+    "mapping"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && npx vite-plugin-gh-pages",
+    "media:scan": "node scripts/media-optimize.mjs --scan",
+    "media:optimize": "node scripts/media-optimize.mjs --apply"
+  },
+  "dependencies": {
+    "@turf/turf": "^6.5.0",
+    "html2pdf.js": "^0.12.1",
+    "mapbox-gl": "^2.15.0",
+    "pinia": "^2.3.1",
+    "vue": "^3.5.18",
+    "vue-draggable-next": "^2.3.0",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@types/mapbox-gl": "^2.7.21",
+    "@vitejs/plugin-vue": "^4.x",
+    "ffmpeg-static": "^5.2.0",
+    "sass": "^1.93.2",
+    "sharp": "^0.33.5",
+    "vite": "^4.x"
+  },
+  "vite": {
+    "plugins": [
+      "@vitejs/plugin-vue"
+    ],
+    "server": {
+      "port": 5173,
+      "open": true
+    },
+    "build": {
+      "sourcemap": true,
+      "chunkSizeWarningLimit": 1000
+    }
+  }
+}

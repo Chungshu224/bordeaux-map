@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>l1-4 左岸與右岸課程測試</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .test-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .test-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .test-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .test-link {
+            display: block;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .test-link:hover {
+            transform: translateY(-2px);
+        }
+        .status {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .bank-card {
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 3px solid;
+        }
+        .left-bank-card {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe6e6 100%);
+            border-color: #dc3545;
+        }
+        .right-bank-card {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            border-color: #007bff;
+        }
+        .bank-title {
+            text-align: center;
+            padding: 0.8rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .left-bank-title {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        }
+        .right-bank-title {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🏞️ l1-4 左岸與右岸初探</h1>
+            <p>探索波爾多兩岸的地理、土壤與風格差異</p>
+        </div>
+
+        <div class="status">
+            <h3>✅ 課程實現狀態</h3>
+            <ul>
+                <li>✅ lessonDataMap 已添加 l1-4 課程數據</li>
+                <li>✅ 3個專業幻燈片：地理位置、土壤差異、酒款風格</li>
+                <li>✅ 左岸右岸對比視覺設計</li>
+                <li>✅ 土壤類型詳細分析</li>
+                <li>✅ 品鑑特色與風格對比</li>
+                <li>✅ 選擇指南與建議</li>
+                <li>✅ 響應式專用樣式系統</li>
+            </ul>
+        </div>
+
+        <div class="test-links">
+            <a href="http://localhost:5174" class="test-link">
+                🏠 返回主系統
+            </a>
+            <a href="http://localhost:5174/#presentation-l1-1" class="test-link">
+                📍 l1-1 地理位置
+            </a>
+            <a href="http://localhost:5174/#presentation-l1-2" class="test-link">
+                🌡️ l1-2 氣候環境
+            </a>
+            <a href="http://localhost:5174/#presentation-l1-3" class="test-link">
+                🍇 l1-3 葡萄品種
+            </a>
+            <a href="http://localhost:5174/#presentation-l1-4" class="test-link">
+                🏞️ l1-4 左岸右岸
+            </a>
+        </div>
+
+        <div class="status">
+            <h3>🎯 l1-4 課程核心對比</h3>
+            <div class="comparison-grid">
+                <div class="bank-card left-bank-card">
+                    <div class="bank-title left-bank-title">🏛️ 左岸 (Left Bank)</div>
+                    <h4>🌊 地理特徵</h4>
+                    <ul>
+                        <li><strong>河流：</strong> 加龍河 (Garonne) 左岸</li>
+                        <li><strong>產區：</strong> 梅多克、格拉夫</li>
+                        <li><strong>村莊：</strong> 瑪歌、波雅克、聖朱利安</li>
+                        <li><strong>地勢：</strong> 平坦緩坡，排水良好</li>
+                    </ul>
+                    <h4>🏗️ 土壤特色</h4>
+                    <ul>
+                        <li><strong>主要土壤：</strong> 礫石 (Gravel)</li>
+                        <li><strong>排水性：</strong> 優異</li>
+                        <li><strong>蓄熱性：</strong> 白天吸熱，夜晚釋放</li>
+                        <li><strong>適宜品種：</strong> Cabernet Sauvignon</li>
+                    </ul>
+                    <h4>🍷 酒款風格</h4>
+                    <ul>
+                        <li><strong>結構：</strong> 強勁有力，高單寧</li>
+                        <li><strong>風味：</strong> 黑醋栗、雪松、煙草</li>
+                        <li><strong>陳年：</strong> 需要時間軟化</li>
+                        <li><strong>搭配：</strong> 紅肉、野味</li>
+                    </ul>
+                </div>
+                <div class="bank-card right-bank-card">
+                    <div class="bank-title right-bank-title">🏰 右岸 (Right Bank)</div>
+                    <h4>🌊 地理特徵</h4>
+                    <ul>
+                        <li><strong>河流：</strong> 多爾多涅河 (Dordogne) 右岸</li>
+                        <li><strong>產區：</strong> 聖愛美濃、波美侯</li>
+                        <li><strong>村莊：</strong> 聖愛美濃、波美侯</li>
+                        <li><strong>地勢：</strong> 起伏較大，微氣候豐富</li>
+                    </ul>
+                    <h4>🏺 土壤特色</h4>
+                    <ul>
+                        <li><strong>主要土壤：</strong> 粘土 (Clay)</li>
+                        <li><strong>保水性：</strong> 極佳</li>
+                        <li><strong>基底：</strong> 石灰岩母岩</li>
+                        <li><strong>適宜品種：</strong> Merlot</li>
+                    </ul>
+                    <h4>🍷 酒款風格</h4>
+                    <ul>
+                        <li><strong>結構：</strong> 柔順圓潤，絲滑單寧</li>
+                        <li><strong>風味：</strong> 紅莓、櫻桃、紫羅蘭</li>
+                        <li><strong>陳年：</strong> 年輕時即可享用</li>
+                        <li><strong>搭配：</strong> 烤禽類、小牛肉</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>📚 學習重點總結</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; border-left: 4px solid #28a745;">
+                    <h4>🗺️ 地理認知</h4>
+                    <ul>
+                        <li>理解河流系統的劃分作用</li>
+                        <li>掌握主要產區的地理位置</li>
+                        <li>認識地形對葡萄種植的影響</li>
+                    </ul>
+                </div>
+                <div style="background: #fff3cd; padding: 1rem; border-radius: 10px; border-left: 4px solid #ffc107;">
+                    <h4>🏗️ 土壤科學</h4>
+                    <ul>
+                        <li>掌握礫石與粘土的特性</li>
+                        <li>理解排水性與保水性</li>
+                        <li>學習土壤與品種的匹配</li>
+                    </ul>
+                </div>
+                <div style="background: #f8d7da; padding: 1rem; border-radius: 10px; border-left: 4px solid #dc3545;">
+                    <h4>🍷 風格差異</h4>
+                    <ul>
+                        <li>區分兩岸酒款的口感特色</li>
+                        <li>理解陳年潛力的差異</li>
+                        <li>掌握餐酒搭配的原則</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #e8f5e8 0%, #d1ecf1 100%); border-radius: 10px;">
+            <h3>🎉 l1-4 課程已準備就緒！</h3>
+            <p>現在可以在學習系統中選擇「左岸與右岸初探」課程，深入了解波爾多兩岸的風土差異。</p>
+            <p><strong>專業亮點：</strong>地理位置 → 土壤分析 → 風格對比 → 選擇指南</p>
+        </div>
+    </div>
+</body>
+</html>

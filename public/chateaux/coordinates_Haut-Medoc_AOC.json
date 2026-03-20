@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Château Belgrave",
+    "coordinates": [-0.70123, 45.00234],
+    "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
+    "description": "位於 Haut-Médoc 南端，風格均衡、果香豐富。",
+    "image": "/images/chateaux/LeftBank/Medoc/Belgrave.jpg"
+  },
+  {
+    "name": "Château Camensac",
+    "coordinates": [-0.73456, 45.04567],
+    "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
+    "description": "位於 Haut-Médoc，風格均衡、單寧柔順，性價比優異。",
+    "image": "/images/chateaux/LeftBank/Medoc/Camensac.jpg"
+  },
+  {
+    "name": "Château La Tour Carnet",
+    "coordinates": [-0.79234, 45.03234],
+    "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
+    "description": "擁有中世紀塔樓的歷史名莊，風格濃郁、結構紮實。",
+    "image": "/images/chateaux/LeftBank/Medoc/la_tour_carnet.jpg"
+  }
+]

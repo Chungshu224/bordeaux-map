@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Château Clarke",
+    "coordinates": [-0.83456, 45.07123],
+    "rank": "中級酒莊 (Cru Bourgeois)",
+    "description": "Rothschild 家族旗下酒莊，現代化管理、品質穩定。",
+    "image": "/images/chateaux/LeftBank/Medoc/Clarke.jpg"
+  },
+  {
+    "name": "Château Fourcas Dupré",
+    "coordinates": [-0.82789, 45.07456],
+    "rank": "中級酒莊 (Cru Bourgeois)",
+    "description": "家族世代經營，風格傳統、單寧結構良好。",
+    "image": "/images/chateaux/LeftBank/Medoc/fourcas_dupre.jpg"
+  },
+  {
+    "name": "Château Fourcas-Hosten",
+    "coordinates": [-0.82912, 45.07234],
+    "rank": "中級酒莊 (Cru Bourgeois)",
+    "description": "以均衡風格和穩定品質著稱，性價比高。",
+    "image": "/images/chateaux/LeftBank/Medoc/Fourcas-Hosten.jpg"
+  }
+]

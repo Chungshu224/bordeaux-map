@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3-13 Part 1 測試 - 創新技術與未來趨勢（精準農業與智能釀造）</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        .content-section {
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            background: #f8f9ff;
+            border-radius: 8px;
+        }
+        .highlight {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .quiz-section {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #ff9800;
+        }
+        .quiz-question {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        .options li {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: #f5f5f5;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .options li:hover {
+            background: #e0e0e0;
+        }
+        .correct {
+            background: #c8e6c9 !important;
+            font-weight: bold;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .loading { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .tech-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+        }
+        .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 L3-13 Part 1 測試</h1>
+            <h2>創新技術與未來趨勢 - 精準農業與智能釀造</h2>
+            <p>測試課程內容載入和顯示功能</p>
+        </div>
+
+        <div id="status" class="status loading">正在載入課程內容...</div>
+        <div id="content"></div>
+    </div>
+
+    <script type="module">
+        async function loadAndDisplayContent() {
+            const statusDiv = document.getElementById('status');
+            const contentDiv = document.getElementById('content');
+            
+            try {
+                // 載入課程內容
+                const module = await import('./src/data/lessons/l3-13-part1.js');
+                const content = module.l313Part1Content || module.default;
+                
+                if (!content || !Array.isArray(content)) {
+                    throw new Error('課程內容格式錯誤');
+                }
+                
+                statusDiv.className = 'status success';
+                statusDiv.textContent = `✅ 課程載入成功！共 ${content.length} 個內容區塊`;
+                
+                // 顯示課程內容
+                displayContent(content);
+                
+            } catch (error) {
+                statusDiv.className = 'status error';
+                statusDiv.textContent = `❌ 載入失敗: ${error.message}`;
+                console.error('載入錯誤:', error);
+            }
+        }
+        
+        function displayContent(content) {
+            const contentDiv = document.getElementById('content');
+            
+            content.forEach((section, index) => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'content-section';
+                
+                let sectionHTML = `<h3>${section.type?.toUpperCase() || 'SECTION'} ${index + 1}</h3>`;
+                
+                if (section.title) {
+                    sectionHTML += `<h4>${section.title}</h4>`;
+                }
+                
+                if (section.subtitle) {
+                    sectionHTML += `<p><em>${section.subtitle}</em></p>`;
+                }
+                
+                if (section.content) {
+                    sectionHTML += `<div>${section.content}</div>`;
+                }
+                
+                if (section.highlights) {
+                    sectionHTML += '<h5>重點摘要:</h5>';
+                    section.highlights.forEach(highlight => {
+                        sectionHTML += `
+                            <div class="highlight">
+                                <strong>${highlight.icon} ${highlight.title}</strong><br>
+                                ${highlight.content}
+                            </div>
+                        `;
+                    });
+                }
+                
+                if (section.objectives) {
+                    sectionHTML += '<h5>學習目標:</h5><ul>';
+                    section.objectives.forEach(obj => {
+                        const objText = typeof obj === 'string' ? obj : obj.text;
+                        const objIcon = typeof obj === 'object' ? obj.icon : '📍';
+                        sectionHTML += `<li>${objIcon} ${objText}</li>`;
+                    });
+                    sectionHTML += '</ul>';
+                }
+                
+                if (section.questions) {
+                    sectionHTML += '<div class="quiz-section">';
+                    sectionHTML += '<h5>📝 課程測驗</h5>';
+                    section.questions.forEach((q, qIndex) => {
+                        sectionHTML += `
+                            <div class="quiz-question">
+                                <p><strong>問題 ${qIndex + 1}:</strong> ${q.question}</p>
+                                <ul class="options">
+                        `;
+                        q.options.forEach((option, oIndex) => {
+                            const isCorrect = oIndex === q.correct;
+                            sectionHTML += `
+                                <li class="${isCorrect ? 'correct' : ''}" 
+                                    onclick="showExplanation(${qIndex})">
+                                    ${String.fromCharCode(65 + oIndex)}. ${option}
+                                    ${isCorrect ? ' ✓ (正確答案)' : ''}
+                                </li>
+                            `;
+                        });
+                        sectionHTML += `
+                                </ul>
+                                <div id="explanation-${qIndex}" style="display:none; margin-top:10px; padding:10px; background:#e8f5e8; border-radius:5px;">
+                                    <strong>解釋:</strong> ${q.explanation}
+                                </div>
+                            </div>
+                        `;
+                    });
+                    sectionHTML += '</div>';
+                }
+                
+                sectionDiv.innerHTML = sectionHTML;
+                contentDiv.appendChild(sectionDiv);
+            });
+        }
+        
+        // 顯示測驗解釋
+        window.showExplanation = function(questionIndex) {
+            const explanationDiv = document.getElementById(`explanation-${questionIndex}`);
+            if (explanationDiv) {
+                explanationDiv.style.display = explanationDiv.style.display === 'none' ? 'block' : 'none';
+            }
+        };
+        
+        // 頁面載入時執行
+        document.addEventListener('DOMContentLoaded', loadAndDisplayContent);
+    </script>
+</body>
+</html>

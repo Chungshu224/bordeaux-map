@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Château Chasse-Spleen",
+    "coordinates": [-0.80123, 45.06789],
+    "rank": "中級酒莊 (Cru Bourgeois Exceptionnel)",
+    "description": "Moulis 產區代表酒莊，風格濃郁、品質卓越，媲美列級酒莊。",
+    "image": "/images/chateaux/LeftBank/Medoc/Chasse-Spleen.jpg"
+  },
+  {
+    "name": "Château Maucaillou",
+    "coordinates": [-0.81234, 45.06234],
+    "rank": "中級酒莊 (Cru Bourgeois)",
+    "description": "家族經營的優質酒莊，風格均衡、果香豐富。",
+    "image": "/images/chateaux/LeftBank/Medoc/Maucaillou.jpg"
+  },
+  {
+    "name": "Château Poujeaux",
+    "coordinates": [-0.80789, 45.06567],
+    "rank": "中級酒莊 (Cru Bourgeois Exceptionnel)",
+    "description": "Moulis 產區頂級酒莊，風格強勁、陳年潛力佳。",
+    "image": "/images/chateaux/LeftBank/Medoc/Poujeaux.jpg"
+  }
+]

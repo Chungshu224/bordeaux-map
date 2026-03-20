@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L3 Quiz Integration Test - Bordeaux Wine Academy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    .info-box {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .info-box h2 {
+      color: #f5576c;
+      margin-bottom: 1rem;
+    }
+    .banner {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .banner h2 {
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .banner p {
+      opacity: 0.9;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .stat-card .number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .stat-card .label {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .lesson-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .lesson-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+    .lesson-card h3 {
+      color: #f5576c;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .lesson-card .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .lesson-card .tag {
+      background: #f3f4f6;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    .lesson-card .tag.quiz {
+      background: #fce7f3;
+      color: #be185d;
+    }
+    .lesson-card .tag.ready {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .note {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-top: 1rem;
+    }
+    .note strong {
+      color: #92400e;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+    .feature-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: start;
+    }
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+    .feature-list .icon {
+      color: #10b981;
+      margin-right: 0.75rem;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 L3 Quiz Integration Test</h1>
+    
+    <div class="banner">
+      <h2>✅ L3 Quiz 已整合!</h2>
+      <p>Level 3 使用 type: 'interactive-quiz' 格式，已自動支援測驗功能</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="number">10+</div>
+        <div class="label">L3 課程</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">50+</div>
+        <div class="label">Quiz 總數</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">✓</div>
+        <div class="label">自動整合</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h2>📋 L3 Quiz 特色</h2>
+      <ul class="feature-list">
+        <li>
+          <span class="icon">✓</span>
+          <div>
+            <strong>專業深度：</strong>L3 quiz 涵蓋氣候變遷、釀造工藝、產區細節等進階主題，難度符合 WSET Level 3 標準
+          </div>
+        </li>
+        <li>
+          <span class="icon">✓</span>
+          <div>
+            <strong>questions 陣列：</strong>每個 interactive-quiz 包含多個題目，自動拆分為獨立投影片
+          </div>
+        </li>
+        <li>
+          <span class="icon">✓</span>
+          <div>
+            <strong>詳細解析：</strong>每題都有完整的解析說明，不只給答案還說明原理與背景知識
+          </div>
+        </li>
+        <li>
+          <span class="icon">✓</span>
+          <div>
+            <strong>思考討論題：</strong>部分課程包含 reflection-questions（開放式思考題），適合課堂討論
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lesson-grid">
+      <a href="index.html?level=3&lesson=1" class="lesson-card">
+        <h3>L3-1：氣候變遷的影響</h3>
+        <p>測試重點：氣候變遷對波爾多產區的影響、適應策略</p>
+        <div class="meta">
+          <span class="tag quiz">3 個 Interactive Quiz</span>
+          <span class="tag ready">✓ 已整合</span>
+        </div>
+      </a>
+
+      <a href="index.html?level=3&lesson=2" class="lesson-card">
+        <h3>L3-2：土壤科學深度解析</h3>
+        <p>測試重點：土壤類型、礫石排水系統、風土表達</p>
+        <div class="meta">
+          <span class="tag quiz">3 個 Interactive Quiz</span>
+          <span class="tag ready">✓ 已整合</span>
+        </div>
+      </a>
+
+      <a href="index.html?level=3&lesson=3" class="lesson-card">
+        <h3>L3-3：葡萄品種深度研究</h3>
+        <p>測試重點：品種特性、克隆選擇、混釀比例</p>
+        <div class="meta">
+          <span class="tag quiz">3 個 Interactive Quiz</span>
+          <span class="tag ready">✓ 已整合</span>
+        </div>
+      </a>
+
+      <a href="index.html?level=3&lesson=4" class="lesson-card">
+        <h3>L3-4：葡萄園管理進階</h3>
+        <p>測試重點：樹冠管理、產量控制、有機/生物動力農法</p>
+        <div class="meta">
+          <span class="tag quiz">2 個 Interactive Quiz</span>
+          <span class="tag ready">✓ 已整合</span>
+        </div>
+      </a>
+
+      <a href="index.html?level=3&lesson=5" class="lesson-card">
+        <h3>L3-5：釀造工藝深度解析</h3>
+        <p>測試重點：發酵管理、萃取技術、橡木桶使用</p>
+        <div class="meta">
+          <span class="tag quiz">4 個 Interactive Quiz</span>
+          <span class="tag ready">✓ 已整合</span>
+        </div>
+      </a>
+
+      <a href="index.html?level=3&lesson=6" class="lesson-card">
+        <h3>L3-6：Médoc 列級莊制度</h3>
+        <p>測試重點：1855 分級、一級莊特色、超二級莊</p>
+        <div class="meta">
+          <span class="tag quiz">Interactive Quiz</span>
+          <span class="tag ready">✓ 已整合</span>
+        </div>
+      </a>
+
+      <a href="index.html?level=3&lesson=7" class="lesson-card">
+        <h3>L3-7：St-Émilion 分級制度</h3>
+        <p>測試重點：Premier Grand Cru Classé、風土差異</p>
+        <div class="meta">
+          <span class="tag quiz">Interactive Quiz</span>
+          <span class="tag ready">✓ 已整合</span>
+        </div>
+      </a>
+
+      <a href="index.html?level=3&lesson=8" class="lesson-card">
+        <h3>L3-8：Pomerol 產區解析</h3>
+        <p>測試重點：藍色黏土、Merlot 主導、Pétrus</p>
+        <div class="meta">
+          <span class="tag quiz">Interactive Quiz</span>
+          <span class="tag ready">✓ 已整合</span>
+        </div>
+      </a>
+
+      <a href="index.html?level=3&lesson=9" class="lesson-card">
+        <h3>L3-9：Graves & Pessac-Léognan</h3>
+        <p>測試重點：礫石土壤、紅白酒特色、列級莊</p>
+        <div class="meta">
+          <span class="tag quiz">Interactive Quiz</span>
+          <span class="tag ready">✓ 已整合</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="info-box">
+      <h2>🔍 技術說明</h2>
+      <div class="note">
+        <strong>無需額外修改：</strong> L3 課程已經使用 <code>type: 'interactive-quiz'</code> 格式，PresentationLesson.vue 的 <code>normalizeSlide</code> 函數會自動處理此類型，將 questions 陣列拆分為獨立的 quiz 投影片。
+      </div>
+      
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: #f5576c;">L3 Quiz 格式</h3>
+      <pre style="background: #f3f4f6; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.875rem;">
+{
+  type: 'interactive-quiz',
+  title: '知識檢測：氣候變遷影響',
+  questions: [
+    {
+      question: '波爾多氣候變暖的主要影響是...',
+      options: ['A. ...', 'B. ...', 'C. ...', 'D. ...'],
+      correct: 1,
+      explanation: '詳細解析...'
+    },
+    // ... 更多題目
+  ]
+}</pre>
+
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: #f5576c;">自動處理邏輯</h3>
+      <pre style="background: #f3f4f6; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.875rem;">
+case 'interactive-quiz': {
+  if (Array.isArray(s.questions) && s.questions.length) {
+    return s.questions.map((q, idx) => ({
+      title: `${s.title} — 第 ${idx + 1} 題`,
+      quiz: {
+        question: q.question,
+        options: q.options,
+        correct: q.correct,
+        explanation: q.explanation
+      }
+    }))
+  }
+}</pre>
+    </div>
+
+    <div class="info-box">
+      <h2>📊 測試檢查清單</h2>
+      <ul class="feature-list">
+        <li>
+          <span class="icon">☑</span>
+          <div>點擊各課程，確認 quiz 投影片正確顯示</div>
+        </li>
+        <li>
+          <span class="icon">☑</span>
+          <div>檢查每個 quiz 的標題格式：「知識檢測 — 第 X 題」</div>
+        </li>
+        <li>
+          <span class="icon">☑</span>
+          <div>測試答題功能：選擇選項、查看正確答案、閱讀解析</div>
+        </li>
+        <li>
+          <span class="icon">☑</span>
+          <div>確認解析文字完整且易讀（L3 解析通常較長）</div>
+        </li>
+        <li>
+          <span class="icon">☑</span>
+          <div>驗證投影片導航流暢（quiz 投影片與內容投影片之間切換）</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="info-box" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border: none;">
+      <h2 style="color: #0c4a6e;">💡 L3 vs L1/L2 差異</h2>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+        <thead>
+          <tr style="background: white;">
+            <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid #0c4a6e;">項目</th>
+            <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid #0c4a6e;">L1/L2</th>
+            <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid #0c4a6e;">L3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #cbd5e1;"><strong>資料格式</strong></td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #cbd5e1;">內嵌 quiz 物件</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #cbd5e1;">type: 'interactive-quiz'</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #cbd5e1;"><strong>題目數量</strong></td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #cbd5e1;">每個內容 1 題</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #cbd5e1;">每個 quiz 區塊多題</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #cbd5e1;"><strong>處理方式</strong></td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #cbd5e1;">提取並創建 quiz 投影片</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #cbd5e1;">拆分 questions 陣列</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem;"><strong>難度</strong></td>
+            <td style="padding: 0.75rem;">基礎/進階</td>
+            <td style="padding: 0.75rem;">專業深度</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

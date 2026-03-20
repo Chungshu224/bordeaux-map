@@ -1,0 +1,18 @@
+  // ========== 5. 一級酒莊 =========
+  {
+    type: 'custom',
+    component: 'FirstGrowthsMap',
+    title: '金字塔頂端：五大一級酒莊',
+    highlights: [
+      { id: 1, icon: '👑', title: '五大酒莊', content: 'Lafite, Latour, Margaux, Haut-Brion, Mouton' },
+      { id: 2, icon: '🏆', title: '品質巔峰', content: '代表波爾多乃至全世界葡萄酒的最高水準' },
+      { id: 3, icon: '📍', title: '地理分布', content: '3家位於Pauillac，1家Margaux，1家Pessac-Léognan' },
+      { id: 4, icon: '🎨', title: '獨特風格', content: '每家酒莊都有獨一無二的風土與釀造風格' }
+    ],
+    quiz: {
+      question: '哪家一級酒莊是在1973年從二級晉升的？',
+      options: ['Château Lafite Rothschild', 'Château Haut-Brion', 'Château Mouton Rothschild', 'Château Margaux'],
+      correct: 2,
+      explanation: 'Château Mouton Rothschild是唯一一家在1855年之後獲得晉升的酒莊，在莊主菲利普男爵長達數十年的努力下，於1973年成功從二級晉升為一級。'
+    }
+  },

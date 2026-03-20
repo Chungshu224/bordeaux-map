@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>裝置偵測系統示範 - Bordeaux Wine Academy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 3rem;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .info-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-card h2 {
+      color: #667eea;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .info-item {
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 12px;
+      border-left: 4px solid #667eea;
+    }
+
+    .info-item .label {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .info-item .value {
+      font-size: 1.5rem;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .info-item .value.highlight {
+      color: #667eea;
+    }
+
+    .device-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0.5rem;
+    }
+
+    .device-badge.mobile {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .device-badge.tablet {
+      background: #FF9800;
+      color: white;
+    }
+
+    .device-badge.desktop {
+      background: #2196F3;
+      color: white;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-name {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .feature-value {
+      font-weight: 700;
+      color: #667eea;
+      padding: 0.25rem 0.75rem;
+      background: #f0f0ff;
+      border-radius: 12px;
+    }
+
+    .feature-value.yes {
+      color: #4CAF50;
+      background: #e8f5e9;
+    }
+
+    .feature-value.no {
+      color: #f44336;
+      background: #ffebee;
+    }
+
+    .layout-preview {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 12px;
+      border: 2px dashed #667eea;
+    }
+
+    .layout-preview h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+    }
+
+    .layout-config {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .config-item {
+      background: white;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .config-label {
+      color: #666;
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .config-value {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .test-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+      transition: all 0.3s ease;
+      margin: 0.5rem;
+    }
+
+    .test-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
+    }
+
+    .note {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .note strong {
+      color: #856404;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      .header h1 {
+        font-size: 1.8rem;
+      }
+
+      .header p {
+        font-size: 1rem;
+      }
+
+      .info-card {
+        padding: 1.5rem;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .layout-config {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎯 裝置偵測系統示範</h1>
+      <p>Bordeaux Wine Academy - Device Detection Demo</p>
+    </div>
+
+    <!-- 當前裝置資訊 -->
+    <div class="info-card">
+      <h2>📱 當前裝置資訊</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="label">裝置類型</div>
+          <div class="value highlight" id="deviceType">偵測中...</div>
+        </div>
+        <div class="info-item">
+          <div class="label">螢幕尺寸</div>
+          <div class="value" id="screenSize">偵測中...</div>
+        </div>
+        <div class="info-item">
+          <div class="label">螢幕方向</div>
+          <div class="value" id="orientation">偵測中...</div>
+        </div>
+        <div class="info-item">
+          <div class="label">輸入方式</div>
+          <div class="value" id="inputType">偵測中...</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.5rem; text-align: center;">
+        <div id="deviceBadges"></div>
+      </div>
+    </div>
+
+    <!-- 裝置能力 -->
+    <div class="info-card">
+      <h2>✨ 裝置能力檢測</h2>
+      <ul class="feature-list">
+        <li>
+          <span class="feature-name">是否為手機</span>
+          <span class="feature-value" id="isMobile">-</span>
+        </li>
+        <li>
+          <span class="feature-name">是否為平板</span>
+          <span class="feature-value" id="isTablet">-</span>
+        </li>
+        <li>
+          <span class="feature-name">是否為桌面</span>
+          <span class="feature-value" id="isDesktop">-</span>
+        </li>
+        <li>
+          <span class="feature-name">支援觸控</span>
+          <span class="feature-value" id="isTouch">-</span>
+        </li>
+        <li>
+          <span class="feature-name">小螢幕 (< 768px)</span>
+          <span class="feature-value" id="isSmallScreen">-</span>
+        </li>
+        <li>
+          <span class="feature-name">中型螢幕 (768-1024px)</span>
+          <span class="feature-value" id="isMediumScreen">-</span>
+        </li>
+        <li>
+          <span class="feature-name">大螢幕 (>= 1024px)</span>
+          <span class="feature-value" id="isLargeScreen">-</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 佈局模式 -->
+    <div class="info-card">
+      <h2>🎨 當前佈局模式</h2>
+      <div style="text-align: center; margin: 2rem 0;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;" id="layoutIcon">🎨</div>
+        <div style="font-size: 1.8rem; font-weight: 700; color: #667eea;" id="layoutMode">偵測中...</div>
+      </div>
+
+      <div class="layout-preview">
+        <h3>佈局配置建議</h3>
+        <div class="layout-config" id="layoutConfig">
+          <!-- 動態生成 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 測試功能 -->
+    <div class="info-card">
+      <h2>🧪 測試功能</h2>
+      <div style="text-align: center; padding: 1rem 0;">
+        <button class="test-button" onclick="location.href='/'">
+          🏠 返回主頁
+        </button>
+        <button class="test-button" onclick="window.location.reload()">
+          🔄 重新整理
+        </button>
+      </div>
+
+      <div class="note">
+        <strong>💡 測試提示:</strong> 
+        試著調整瀏覽器視窗大小、旋轉裝置方向,或使用開發者工具模擬不同裝置,觀察資訊的即時更新!
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    // 簡化版的裝置偵測 (實際應用請使用 Vue 版本)
+    
+    function detectDevice() {
+      const ua = navigator.userAgent.toLowerCase()
+      const width = window.innerWidth
+      
+      // 裝置類型
+      const isMobile = /android|webos|iphone|ipod|blackberry|iemobile|opera mini/i.test(ua) && width < 768
+      const isTablet = /ipad|android(?!.*mobile)|tablet/i.test(ua) || (width >= 768 && width < 1024)
+      const isDesktop = !isMobile && !isTablet
+      
+      // 觸控
+      const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+      
+      // 方向
+      const isPortrait = window.innerHeight > window.innerWidth
+      const orientation = isPortrait ? 'portrait' : 'landscape'
+      
+      // 螢幕尺寸分類
+      const isSmallScreen = width < 768
+      const isMediumScreen = width >= 768 && width < 1024
+      const isLargeScreen = width >= 1024
+      
+      // 裝置類型字串
+      let deviceType = 'desktop'
+      if (isMobile) deviceType = 'mobile'
+      else if (isTablet) deviceType = 'tablet'
+      
+      // 佈局模式
+      let layoutMode = 'desktop-full'
+      let layoutIcon = '🖥️'
+      if (isMobile) {
+        layoutMode = isPortrait ? 'mobile-compact' : 'mobile-expanded'
+        layoutIcon = '📱'
+      } else if (isTablet) {
+        layoutMode = 'tablet-split'
+        layoutIcon = '📱'
+      }
+      
+      // 佈局配置
+      let layoutConfig = {
+        showSidebar: true,
+        sidebarPosition: 'left',
+        contentColumns: 2,
+        mapPosition: 'right',
+        useBottomNav: false,
+        useFloatingControls: false,
+        enableSwipeGestures: false,
+        showCompactHeader: false,
+        stackVertically: false
+      }
+      
+      if (layoutMode === 'mobile-compact') {
+        layoutConfig = {
+          showSidebar: false,
+          contentColumns: 1,
+          mapPosition: 'top',
+          useBottomNav: true,
+          useFloatingControls: true,
+          enableSwipeGestures: true,
+          showCompactHeader: true,
+          stackVertically: true
+        }
+      } else if (layoutMode === 'mobile-expanded') {
+        layoutConfig = {
+          showSidebar: false,
+          contentColumns: 1,
+          mapPosition: 'left',
+          useBottomNav: true,
+          useFloatingControls: true,
+          enableSwipeGestures: true,
+          showCompactHeader: true,
+          stackVertically: false
+        }
+      } else if (layoutMode === 'tablet-split') {
+        layoutConfig = {
+          showSidebar: true,
+          contentColumns: 1,
+          mapPosition: 'right',
+          useBottomNav: false,
+          useFloatingControls: false,
+          enableSwipeGestures: true,
+          showCompactHeader: false,
+          stackVertically: false
+        }
+      }
+      
+      return {
+        deviceType,
+        isMobile,
+        isTablet,
+        isDesktop,
+        isTouch,
+        width,
+        height: window.innerHeight,
+        orientation,
+        isPortrait,
+        isSmallScreen,
+        isMediumScreen,
+        isLargeScreen,
+        layoutMode,
+        layoutIcon,
+        layoutConfig
+      }
+    }
+    
+    function updateUI() {
+      const info = detectDevice()
+      
+      // 裝置資訊
+      document.getElementById('deviceType').textContent = info.deviceType.toUpperCase()
+      document.getElementById('screenSize').textContent = `${info.width} × ${info.height}`
+      document.getElementById('orientation').textContent = info.orientation.toUpperCase()
+      document.getElementById('inputType').textContent = info.isTouch ? '觸控' : '滑鼠'
+      
+      // 裝置徽章
+      const badges = []
+      if (info.isMobile) badges.push('<span class="device-badge mobile">📱 Mobile</span>')
+      if (info.isTablet) badges.push('<span class="device-badge tablet">📱 Tablet</span>')
+      if (info.isDesktop) badges.push('<span class="device-badge desktop">🖥️ Desktop</span>')
+      document.getElementById('deviceBadges').innerHTML = badges.join('')
+      
+      // 裝置能力
+      function setBoolValue(id, value) {
+        const el = document.getElementById(id)
+        el.textContent = value ? '是' : '否'
+        el.className = 'feature-value ' + (value ? 'yes' : 'no')
+      }
+      
+      setBoolValue('isMobile', info.isMobile)
+      setBoolValue('isTablet', info.isTablet)
+      setBoolValue('isDesktop', info.isDesktop)
+      setBoolValue('isTouch', info.isTouch)
+      setBoolValue('isSmallScreen', info.isSmallScreen)
+      setBoolValue('isMediumScreen', info.isMediumScreen)
+      setBoolValue('isLargeScreen', info.isLargeScreen)
+      
+      // 佈局模式
+      document.getElementById('layoutIcon').textContent = info.layoutIcon
+      
+      const layoutNames = {
+        'mobile-compact': '📱 手機緊湊模式',
+        'mobile-expanded': '📱 手機展開模式',
+        'tablet-split': '📱 平板分屏模式',
+        'desktop-full': '🖥️ 桌面完整模式'
+      }
+      document.getElementById('layoutMode').textContent = layoutNames[info.layoutMode]
+      
+      // 佈局配置
+      const configHTML = Object.entries(info.layoutConfig).map(([key, value]) => {
+        const labels = {
+          showSidebar: '顯示側邊欄',
+          sidebarPosition: '側邊欄位置',
+          contentColumns: '內容欄位數',
+          mapPosition: '地圖位置',
+          useBottomNav: '使用底部導航',
+          useFloatingControls: '使用浮動控制項',
+          enableSwipeGestures: '啟用滑動手勢',
+          showCompactHeader: '顯示緊湊標頭',
+          stackVertically: '垂直堆疊'
+        }
+        
+        let displayValue = value
+        if (typeof value === 'boolean') {
+          displayValue = value ? '✅ 是' : '❌ 否'
+        }
+        
+        return `
+          <div class="config-item">
+            <div class="config-label">${labels[key]}</div>
+            <div class="config-value">${displayValue}</div>
+          </div>
+        `
+      }).join('')
+      
+      document.getElementById('layoutConfig').innerHTML = configHTML
+      
+      console.log('📱 裝置偵測更新:', info)
+    }
+    
+    // 初始化
+    updateUI()
+    
+    // 監聽變化
+    let resizeTimer
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer)
+      resizeTimer = setTimeout(updateUI, 150)
+    })
+    
+    window.addEventListener('orientationchange', () => {
+      setTimeout(updateUI, 100)
+    })
+  </script>
+</body>
+</html>

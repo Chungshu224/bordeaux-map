@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3-7：國際市場與貿易 - 測試</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #00BCD4 0%, #4CAF50 50%, #8BC34A 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00BCD4, #4CAF50);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .course-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .question {
+            margin-bottom: 35px;
+            padding: 25px;
+            border-left: 5px solid #00BCD4;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .question h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .question-type {
+            background: #b2ebf2;
+            color: #00838f;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .options {
+            list-style: none;
+        }
+
+        .options li {
+            margin: 12px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .options li:hover {
+            border-color: #00BCD4;
+            background: #e0f7ff;
+        }
+
+        .options li.selected {
+            border-color: #00BCD4;
+            background: #b2ebf2;
+        }
+
+        .essay-area {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .market-overview {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #4CAF50;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .trade-flow {
+            background: #fff3e0;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #ff9800;
+        }
+
+        .flow-diagram {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .flow-node {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 3px solid #ff9800;
+            position: relative;
+        }
+
+        .flow-node::after {
+            content: '→';
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #ff9800;
+            font-weight: bold;
+        }
+
+        .flow-node:last-child::after {
+            display: none;
+        }
+
+        .node-title {
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 10px;
+        }
+
+        .regional-analysis {
+            background: #f3e5f5;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .region-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .region-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 5px solid #9c27b0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .region-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .region-flag {
+            width: 40px;
+            height: 30px;
+            background: linear-gradient(135deg, #00BCD4, #4CAF50);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .region-name {
+            font-weight: bold;
+            color: #9c27b0;
+            font-size: 1.2em;
+        }
+
+        .market-metrics {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .market-metrics li {
+            padding: 5px 0;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .metric-name {
+            color: #666;
+        }
+
+        .metric-value {
+            font-weight: bold;
+            color: #9c27b0;
+        }
+
+        .price-analysis {
+            background: #e3f2fd;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #2196f3;
+        }
+
+        .price-chart {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .price-tier {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #2196f3;
+        }
+
+        .tier-label {
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .tier-range {
+            color: #0d47a1;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .tier-share {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .distribution-network {
+            background: #fce4ec;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #e91e63;
+        }
+
+        .network-level {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid #e91e63;
+        }
+
+        .level-number {
+            background: #e91e63;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .level-content {
+            flex: 1;
+        }
+
+        .level-title {
+            font-weight: bold;
+            color: #ad1457;
+            margin-bottom: 5px;
+        }
+
+        .regulatory-framework {
+            background: #fff8e1;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #ffc107;
+        }
+
+        .regulation-item {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .regulation-title {
+            font-weight: bold;
+            color: #f57c00;
+            margin-bottom: 8px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #00BCD4, #4CAF50);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+        }
+
+        .progress-bar {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 8px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #00BCD4, #4CAF50);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .skill-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #00bcd4, #4caf50);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .currency-impact {
+            background: #e8eaf6;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #3f51b5;
+        }
+
+        .currency-pair {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #3f51b5;
+        }
+
+        .pair-label {
+            font-weight: bold;
+            color: #3f51b5;
+        }
+
+        .pair-impact {
+            color: #303f9f;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .content-section {
+                padding: 25px;
+            }
+            
+            .course-info {
+                gap: 20px;
+            }
+            
+            .flow-diagram {
+                grid-template-columns: 1fr;
+            }
+            
+            .flow-node::after {
+                content: '↓';
+                right: auto;
+                bottom: -30px;
+                top: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .region-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="level-badge">🎯 Level 3 - 高級專業</div>
+            <h1>🌍 國際市場與貿易</h1>
+            <p class="subtitle">波爾多葡萄酒的全球市場分析、貿易流程與商業策略</p>
+            
+            <div class="course-info">
+                <div class="info-item">
+                    <span>⏱️</span>
+                    <span>測試時間：70分鐘</span>
+                </div>
+                <div class="info-item">
+                    <span>📝</span>
+                    <span>題目數量：20題</span>
+                </div>
+                <div class="info-item">
+                    <span>🎯</span>
+                    <span>通過分數：80分</span>
+                </div>
+                <div class="info-item">
+                    <span>📊</span>
+                    <span>難度等級：專家</span>
+                </div>
+            </div>
+            
+            <div class="skill-tags">
+                <div class="skill-tag">🌍 國際貿易</div>
+                <div class="skill-tag">📈 市場分析</div>
+                <div class="skill-tag">💱 匯率影響</div>
+                <div class="skill-tag">📋 法規遵循</div>
+                <div class="skill-tag">🚛 物流管理</div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <form id="testForm">
+                <!-- 第1題：全球市場概況 -->
+                <div class="question">
+                    <div class="question-type">🌍 全球市場題</div>
+                    <h3>1. 波爾多葡萄酒的全球市場概況</h3>
+                    <div class="market-overview">
+                        <h4 style="text-align: center; color: #2e7d32; margin-bottom: 20px;">📊 2023年波爾多出口數據</h4>
+                        <div class="market-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">4.9億</div>
+                                <div class="stat-label">瓶裝出口量</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">22億</div>
+                                <div class="stat-label">歐元出口值</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">170+</div>
+                                <div class="stat-label">出口國家</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">45%</div>
+                                <div class="stat-label">亞洲市場占比</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">€4.5</div>
+                                <div class="stat-label">平均單瓶價格</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">8.2%</div>
+                                <div class="stat-label">年增長率</div>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 10px; margin-top: 20px;">
+                            <strong>關鍵趨勢：</strong>亞洲市場持續擴張，高端產品需求強勁，數位化銷售管道快速發展
+                        </div>
+                    </div>
+                    <p><strong>根據最新數據，波爾多葡萄酒出口的最大區域市場是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 歐洲</li>
+                        <li data-value="b">B. 北美</li>
+                        <li data-value="c">C. 亞洲</li>
+                        <li data-value="d">D. 南美</li>
+                    </ul>
+                </div>
+
+                <!-- 第2題：主要出口市場 -->
+                <div class="question">
+                    <div class="question-type">🎯 主要市場題</div>
+                    <h3>2. 波爾多葡萄酒的主要出口市場分析</h3>
+                    <div class="regional-analysis">
+                        <h4 style="text-align: center; color: #9c27b0; margin-bottom: 20px;">🗺️ 主要出口市場概覽</h4>
+                        <div class="region-grid">
+                            <div class="region-card">
+                                <div class="region-header">
+                                    <div class="region-flag">🇨🇳</div>
+                                    <div class="region-name">中國</div>
+                                </div>
+                                <ul class="market-metrics">
+                                    <li><span class="metric-name">市場份額</span><span class="metric-value">18%</span></li>
+                                    <li><span class="metric-name">年增長</span><span class="metric-value">+12%</span></li>
+                                    <li><span class="metric-name">偏好價位</span><span class="metric-value">€15-50</span></li>
+                                    <li><span class="metric-name">主要管道</span><span class="metric-value">電商+精品店</span></li>
+                                </ul>
+                            </div>
+                            <div class="region-card">
+                                <div class="region-header">
+                                    <div class="region-flag">🇺🇸</div>
+                                    <div class="region-name">美國</div>
+                                </div>
+                                <ul class="market-metrics">
+                                    <li><span class="metric-name">市場份額</span><span class="metric-value">15%</span></li>
+                                    <li><span class="metric-name">年增長</span><span class="metric-value">+6%</span></li>
+                                    <li><span class="metric-name">偏好價位</span><span class="metric-value">€8-25</span></li>
+                                    <li><span class="metric-name">主要管道</span><span class="metric-value">餐廳+零售</span></li>
+                                </ul>
+                            </div>
+                            <div class="region-card">
+                                <div class="region-header">
+                                    <div class="region-flag">🇯🇵</div>
+                                    <div class="region-name">日本</div>
+                                </div>
+                                <ul class="market-metrics">
+                                    <li><span class="metric-name">市場份額</span><span class="metric-value">12%</span></li>
+                                    <li><span class="metric-name">年增長</span><span class="metric-value">+8%</span></li>
+                                    <li><span class="metric-name">偏好價位</span><span class="metric-value">€20-80</span></li>
+                                    <li><span class="metric-name">主要管道</span><span class="metric-value">百貨+專賣店</span></li>
+                                </ul>
+                            </div>
+                            <div class="region-card">
+                                <div class="region-header">
+                                    <div class="region-flag">🇬🇧</div>
+                                    <div class="region-name">英國</div>
+                                </div>
+                                <ul class="market-metrics">
+                                    <li><span class="metric-name">市場份額</span><span class="metric-value">10%</span></li>
+                                    <li><span class="metric-name">年增長</span><span class="metric-value">+3%</span></li>
+                                    <li><span class="metric-name">偏好價位</span><span class="metric-value">€12-35</span></li>
+                                    <li><span class="metric-name">主要管道</span><span class="metric-value">傳統酒商</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>中國市場對波爾多葡萄酒的主要特點是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 偏好低價位產品</li>
+                        <li data-value="b">B. 增長快速且偏好中高價位</li>
+                        <li data-value="c">C. 市場飽和增長緩慢</li>
+                        <li data-value="d">D. 主要通過傳統渠道銷售</li>
+                    </ul>
+                </div>
+
+                <!-- 第3題：貿易流程 -->
+                <div class="question">
+                    <div class="question-type">🚛 貿易流程題</div>
+                    <h3>3. 波爾多葡萄酒國際貿易流程</h3>
+                    <div class="trade-flow">
+                        <h4 style="text-align: center; color: #e65100; margin-bottom: 20px;">📦 出口貿易流程圖</h4>
+                        <div class="flow-diagram">
+                            <div class="flow-node">
+                                <div class="node-title">酒莊生產</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>• 釀造完成</div>
+                                    <div>• 品質檢驗</div>
+                                    <div>• 裝瓶包裝</div>
+                                </div>
+                            </div>
+                            <div class="flow-node">
+                                <div class="node-title">酒商收購</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>• 商業談判</div>
+                                    <div>• 合約簽署</div>
+                                    <div>• 庫存管理</div>
+                                </div>
+                            </div>
+                            <div class="flow-node">
+                                <div class="node-title">出口準備</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>• 出口許可</div>
+                                    <div>• 品質證書</div>
+                                    <div>• 包裝標示</div>
+                                </div>
+                            </div>
+                            <div class="flow-node">
+                                <div class="node-title">國際運輸</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>• 海運/空運</div>
+                                    <div>• 溫控管理</div>
+                                    <div>• 保險覆蓋</div>
+                                </div>
+                            </div>
+                            <div class="flow-node">
+                                <div class="node-title">進口通關</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>• 海關申報</div>
+                                    <div>• 稅務繳納</div>
+                                    <div>• 檢疫檢驗</div>
+                                </div>
+                            </div>
+                            <div class="flow-node">
+                                <div class="node-title">市場分銷</div>
+                                <div style="font-size: 0.9em;">
+                                    <div>• 批發分銷</div>
+                                    <div>• 零售上架</div>
+                                    <div>• 消費者購買</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>葡萄酒國際貿易中最關鍵的品質控制環節是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 酒莊裝瓶</li>
+                        <li data-value="b">B. 溫控運輸</li>
+                        <li data-value="c">C. 海關檢驗</li>
+                        <li data-value="d">D. 零售儲存</li>
+                    </ul>
+                </div>
+
+                <!-- 第4題：價格結構 -->
+                <div class="question">
+                    <div class="question-type">💰 價格分析題</div>
+                    <h3>4. 波爾多葡萄酒的國際價格結構</h3>
+                    <div class="price-analysis">
+                        <h4 style="text-align: center; color: #1976d2; margin-bottom: 20px;">💶 價格層級分析</h4>
+                        <div class="price-chart">
+                            <div class="price-tier">
+                                <div class="tier-label">入門級</div>
+                                <div class="tier-range">€3-8</div>
+                                <div class="tier-share">市場占比: 60%</div>
+                            </div>
+                            <div class="price-tier">
+                                <div class="tier-label">中端</div>
+                                <div class="tier-range">€8-20</div>
+                                <div class="tier-share">市場占比: 25%</div>
+                            </div>
+                            <div class="price-tier">
+                                <div class="tier-label">高端</div>
+                                <div class="tier-range">€20-50</div>
+                                <div class="tier-share">市場占比: 10%</div>
+                            </div>
+                            <div class="price-tier">
+                                <div class="tier-label">奢華級</div>
+                                <div class="tier-range">€50-200</div>
+                                <div class="tier-share">市場占比: 4%</div>
+                            </div>
+                            <div class="price-tier">
+                                <div class="tier-label">收藏級</div>
+                                <div class="tier-range">€200+</div>
+                                <div class="tier-share">市場占比: 1%</div>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 10px; margin-top: 20px;">
+                            <strong>價格決定因素：</strong>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>酒莊等級與聲譽 (30%)</li>
+                                <li>年份品質評分 (25%)</li>
+                                <li>產量稀缺性 (20%)</li>
+                                <li>市場需求狀況 (15%)</li>
+                                <li>運輸與稅收成本 (10%)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p><strong>波爾多葡萄酒出口的主要收入來源是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 入門級大量銷售</li>
+                        <li data-value="b">B. 中端產品的量價平衡</li>
+                        <li data-value="c">C. 高端產品的高利潤</li>
+                        <li data-value="d">D. 收藏級的稀缺性</li>
+                    </ul>
+                </div>
+
+                <!-- 第5題：分銷網絡 -->
+                <div class="question">
+                    <div class="question-type">🏪 分銷網絡題</div>
+                    <h3>5. 波爾多葡萄酒的國際分銷網絡</h3>
+                    <div class="distribution-network">
+                        <h4 style="text-align: center; color: #ad1457; margin-bottom: 20px;">🌐 分銷層級結構</h4>
+                        <div class="network-level">
+                            <div class="level-number">1</div>
+                            <div class="level-content">
+                                <div class="level-title">酒莊 & 合作社</div>
+                                <div>直接生產者，負責釀造和初級銷售</div>
+                            </div>
+                        </div>
+                        <div class="network-level">
+                            <div class="level-number">2</div>
+                            <div class="level-content">
+                                <div class="level-title">波爾多酒商 (Négociants)</div>
+                                <div>區域整合者，負責收購、陳釀和大宗交易</div>
+                            </div>
+                        </div>
+                        <div class="network-level">
+                            <div class="level-number">3</div>
+                            <div class="level-content">
+                                <div class="level-title">國際進口商</div>
+                                <div>各國總代理，負責市場開發和法規遵循</div>
+                            </div>
+                        </div>
+                        <div class="network-level">
+                            <div class="level-number">4</div>
+                            <div class="level-content">
+                                <div class="level-title">批發分銷商</div>
+                                <div>區域分銷網絡，連接零售終端</div>
+                            </div>
+                        </div>
+                        <div class="network-level">
+                            <div class="level-number">5</div>
+                            <div class="level-content">
+                                <div class="level-title">零售終端</div>
+                                <div>酒專賣店、餐廳、超市等直接面向消費者</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>波爾多酒商(Négociants)在國際貿易中的核心作用是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 直接零售給消費者</li>
+                        <li data-value="b">B. 整合小酒莊產品並提供國際貿易服務</li>
+                        <li data-value="c">C. 只負責運輸物流</li>
+                        <li data-value="d">D. 僅從事倉儲業務</li>
+                    </ul>
+                </div>
+
+                <!-- 第6題：匯率影響 -->
+                <div class="question">
+                    <div class="question-type">💱 匯率影響題</div>
+                    <h3>6. 匯率波動對波爾多葡萄酒出口的影響</h3>
+                    <div class="currency-impact">
+                        <h4 style="text-align: center; color: #3f51b5; margin-bottom: 20px;">💹 主要貨幣對影響分析</h4>
+                        <div class="currency-pair">
+                            <span class="pair-label">EUR/USD</span>
+                            <span class="pair-impact">美國市場價格敏感度: 高</span>
+                        </div>
+                        <div class="currency-pair">
+                            <span class="pair-label">EUR/CNY</span>
+                            <span class="pair-impact">中國市場進入門檻影響: 中</span>
+                        </div>
+                        <div class="currency-pair">
+                            <span class="pair-label">EUR/JPY</span>
+                            <span class="pair-impact">日本高端市場穩定性: 低</span>
+                        </div>
+                        <div class="currency-pair">
+                            <span class="pair-label">EUR/GBP</span>
+                            <span class="pair-impact">英國市場競爭力: 中</span>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 10px; margin-top: 20px;">
+                            <strong>匯率策略：</strong>多數出口商採用遠期外匯合約規避短期波動風險，長期策略則著重於品牌價值提升
+                        </div>
+                    </div>
+                    <p><strong>歐元升值對波爾多葡萄酒出口的主要影響是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 提高國際競爭力</li>
+                        <li data-value="b">B. 降低出口價格競爭力</li>
+                        <li data-value="c">C. 不產生任何影響</li>
+                        <li data-value="d">D. 只影響低端產品</li>
+                    </ul>
+                </div>
+
+                <!-- 第7題：法規遵循 -->
+                <div class="question">
+                    <div class="question-type">📋 法規遵循題</div>
+                    <h3>7. 波爾多葡萄酒出口的法規要求</h3>
+                    <div class="regulatory-framework">
+                        <h4 style="text-align: center; color: #f57c00; margin-bottom: 20px;">⚖️ 主要法規框架</h4>
+                        <div class="regulation-item">
+                            <div class="regulation-title">歐盟出口法規</div>
+                            <div>AOC認證、出口許可證、植物檢疫證書、原產地證明</div>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="regulation-title">目標國進口法規</div>
+                            <div>酒精度標示、健康警語、進口配額、關稅稅率</div>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="regulation-title">食品安全標準</div>
+                            <div>農藥殘留檢測、重金屬含量、微生物檢驗、添加劑規範</div>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="regulation-title">標籤要求</div>
+                            <div>多語言標示、營養成分、過敏原警告、環保標章</div>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="regulation-title">貿易協定</div>
+                            <div>雙邊貿易協定、關稅優惠、反傾銷措施、技術性貿易障礙</div>
+                        </div>
+                    </div>
+                    <p><strong>波爾多AOC葡萄酒出口最重要的認證文件是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 商業發票</li>
+                        <li data-value="b">B. AOC原產地認證</li>
+                        <li data-value="c">C. 運輸保險單</li>
+                        <li data-value="d">D. 銀行信用證</li>
+                    </ul>
+                </div>
+
+                <!-- 第8題：物流管理 -->
+                <div class="question">
+                    <div class="question-type">🚢 物流管理題</div>
+                    <h3>8. 葡萄酒國際運輸的特殊要求</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 只需考慮成本最低</li>
+                        <li data-value="b">B. 溫度控制是最關鍵因素</li>
+                        <li data-value="c">C. 運輸時間不重要</li>
+                        <li data-value="d">D. 包裝要求與一般商品相同</li>
+                    </ul>
+                </div>
+
+                <!-- 第9題：數位化趨勢 -->
+                <div class="question">
+                    <div class="question-type">💻 數位化題</div>
+                    <h3>9. 數位化對波爾多葡萄酒國際貿易的影響</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 完全取代傳統貿易方式</li>
+                        <li data-value="b">B. 提高交易效率和透明度</li>
+                        <li data-value="c">C. 只適用於低端產品</li>
+                        <li data-value="d">D. 增加貿易成本</li>
+                    </ul>
+                </div>
+
+                <!-- 第10題：可持續發展 -->
+                <div class="question">
+                    <div class="question-type">🌱 可持續發展題</div>
+                    <h3>10. 可持續發展對波爾多出口貿易的影響</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 不影響國際貿易</li>
+                        <li data-value="b">B. 成為重要的市場差異化因素</li>
+                        <li data-value="c">C. 只是營銷噱頭</li>
+                        <li data-value="d">D. 增加成本無實際價值</li>
+                    </ul>
+                </div>
+
+                <!-- 第11題：貿易風險 -->
+                <div class="question">
+                    <div class="question-type">⚠️ 風險管理題</div>
+                    <h3>11. 葡萄酒國際貿易的主要風險因素</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 只有匯率風險</li>
+                        <li data-value="b">B. 政治、經濟、天然災害等多重風險</li>
+                        <li data-value="c">C. 只需考慮運輸風險</li>
+                        <li data-value="d">D. 風險可以完全避免</li>
+                    </ul>
+                </div>
+
+                <!-- 第12題：新興市場 -->
+                <div class="question">
+                    <div class="question-type">🚀 新興市場題</div>
+                    <h3>12. 波爾多葡萄酒在新興市場的發展策略</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 完全照搬成熟市場模式</li>
+                        <li data-value="b">B. 根據當地文化和消費習慣調整策略</li>
+                        <li data-value="c">C. 只關注高端消費者</li>
+                        <li data-value="d">D. 避免進入新興市場</li>
+                    </ul>
+                </div>
+
+                <!-- 第13題：簡答題 -->
+                <div class="question">
+                    <div class="question-type">📝 簡答題</div>
+                    <h3>13. 分析中國市場對波爾多葡萄酒貿易的重要性和特點（250字內）</h3>
+                    <textarea class="essay-area" placeholder="請從市場規模、增長潛力、消費特點、政策環境等角度分析..."></textarea>
+                </div>
+
+                <!-- 第14題：貿易模式分析 -->
+                <div class="question">
+                    <div class="question-type">🔄 貿易模式題</div>
+                    <h3>14. 比較分析直接出口與代理分銷兩種貿易模式</h3>
+                    <div class="trade-flow">
+                        <h4>📋 模式比較要點</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px;">
+                            <li>成本結構差異</li>
+                            <li>風險控制程度</li>
+                            <li>市場控制力</li>
+                            <li>適用產品類型</li>
+                            <li>長期發展策略</li>
+                        </ul>
+                    </div>
+                    <textarea class="essay-area" placeholder="請詳細比較兩種貿易模式的優缺點和適用情況..."></textarea>
+                </div>
+
+                <!-- 第15題：物流策略 -->
+                <div class="question">
+                    <div class="question-type">🚛 物流策略題</div>
+                    <h3>15. 設計波爾多葡萄酒到亞洲市場的物流解決方案</h3>
+                    <div class="trade-flow">
+                        <h4>🎯 設計要求</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px;">
+                            <li><strong>目標市場：</strong>中國、日本、韓國</li>
+                            <li><strong>產品類型：</strong>中高端波爾多紅酒</li>
+                            <li><strong>運輸要求：</strong>溫控、防震、快速清關</li>
+                            <li><strong>成本控制：</strong>合理的成本效益比</li>
+                            <li><strong>服務標準：</strong>全程可追溯</li>
+                        </ul>
+                    </div>
+                    <textarea class="essay-area" placeholder="請設計包含運輸方式、路線規劃、倉儲管理、風險控制的完整物流方案..."></textarea>
+                </div>
+
+                <!-- 第16題：市場准入策略 -->
+                <div class="question">
+                    <div class="question-type">🎯 市場準入題</div>
+                    <h3>16. 制定波爾多中小酒莊的國際市場準入策略</h3>
+                    <textarea class="essay-area" placeholder="請為資源有限的中小酒莊設計國際化策略，包含市場選擇、夥伴關係、品牌建設等..."></textarea>
+                </div>
+
+                <!-- 第17題：數位貿易平台 -->
+                <div class="question">
+                    <div class="question-type">💻 數位平台題</div>
+                    <h3>17. 評估數位貿易平台對傳統葡萄酒貿易的影響</h3>
+                    <textarea class="essay-area" placeholder="請分析B2B電商平台、區塊鏈技術、數位支付等對葡萄酒國際貿易的改變..."></textarea>
+                </div>
+
+                <!-- 第18題：貿易協定影響 -->
+                <div class="question">
+                    <div class="question-type">⚖️ 貿易協定題</div>
+                    <h3>18. 分析國際貿易協定對波爾多葡萄酒出口的影響</h3>
+                    <textarea class="essay-area" placeholder="請分析CETA、CPTPP等貿易協定如何影響波爾多葡萄酒的國際競爭力..."></textarea>
+                </div>
+
+                <!-- 第19題：可持續貿易 -->
+                <div class="question">
+                    <div class="question-type">🌱 可持續貿易題</div>
+                    <h3>19. 設計波爾多葡萄酒的可持續國際貿易模式</h3>
+                    <textarea class="essay-area" placeholder="請設計包含環保包裝、碳足跡管理、公平貿易認證的可持續貿易模式..."></textarea>
+                </div>
+
+                <!-- 第20題：未來趨勢 -->
+                <div class="question">
+                    <div class="question-type">🔮 未來趨勢題</div>
+                    <h3>20. 預測波爾多葡萄酒國際貿易的未來發展趨勢</h3>
+                    <p>請從技術創新、市場變化、消費者行為、政策環境等角度進行預測（400字內）</p>
+                    <textarea class="essay-area" placeholder="請提供您對波爾多葡萄酒國際貿易未來發展的預測和建議..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">提交測試答案</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 答案選擇功能
+        document.querySelectorAll('.options li').forEach(option => {
+            option.addEventListener('click', function() {
+                // 移除同一題目中其他選項的選中狀態
+                const question = this.closest('.question');
+                question.querySelectorAll('.options li').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                // 添加選中狀態
+                this.classList.add('selected');
+                updateProgress();
+            });
+        });
+
+        // 進度更新
+        function updateProgress() {
+            const totalQuestions = 20;
+            let answered = 0;
+            
+            // 統計選擇題答案
+            document.querySelectorAll('.question').forEach(q => {
+                if (q.querySelector('.selected') || q.querySelector('textarea').value.trim()) {
+                    answered++;
+                }
+            });
+            
+            const progress = (answered / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        // 文本區域監聽
+        document.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', updateProgress);
+        });
+
+        // 表單提交
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 收集答案
+            const answers = {};
+            let questionCount = 1;
+            
+            document.querySelectorAll('.question').forEach(question => {
+                const selected = question.querySelector('.selected');
+                const textarea = question.querySelector('textarea');
+                
+                if (selected) {
+                    answers[`question_${questionCount}`] = selected.dataset.value;
+                } else if (textarea && textarea.value.trim()) {
+                    answers[`question_${questionCount}`] = textarea.value.trim();
+                }
+                questionCount++;
+            });
+            
+            // 檢查完成度
+            const completed = Object.keys(answers).length;
+            if (completed < 20) {
+                alert(`請完成所有題目！目前已完成：${completed}/20`);
+                return;
+            }
+            
+            // 顯示結果
+            showResults(answers);
+        });
+
+        function showResults(answers) {
+            const correctAnswers = {
+                question_1: 'c', // 亞洲
+                question_2: 'b', // 增長快速且偏好中高價位
+                question_3: 'b', // 溫控運輸
+                question_4: 'b', // 中端產品的量價平衡
+                question_5: 'b', // 整合小酒莊產品並提供國際貿易服務
+                question_6: 'b', // 降低出口價格競爭力
+                question_7: 'b', // AOC原產地認證
+                question_8: 'b', // 溫度控制是最關鍵因素
+                question_9: 'b', // 提高交易效率和透明度
+                question_10: 'b', // 成為重要的市場差異化因素
+                question_11: 'b', // 政治、經濟、天然災害等多重風險
+                question_12: 'b'  // 根據當地文化和消費習慣調整策略
+            };
+            
+            let score = 0;
+            
+            // 計算選擇題分數
+            for (let i = 1; i <= 12; i++) {
+                if (answers[`question_${i}`] === correctAnswers[`question_${i}`]) {
+                    score += 3; // 每題3分
+                }
+            }
+            
+            // 簡答題和綜合題給予基礎分數
+            const essayQuestions = [13, 14, 15, 16, 17, 18, 19, 20];
+            essayQuestions.forEach(q => {
+                if (answers[`question_${q}`] && answers[`question_${q}`].length > 50) {
+                    if (q === 13) score += 8; // 簡答題8分
+                    if (q === 14) score += 8; // 貿易模式8分
+                    if (q === 15) score += 10; // 物流策略10分
+                    if (q === 16) score += 8; // 市場準入8分
+                    if (q === 17) score += 8; // 數位平台8分
+                    if (q === 18) score += 8; // 貿易協定8分
+                    if (q === 19) score += 8; // 可持續貿易8分
+                    if (q === 20) score += 10; // 未來趨勢10分
+                }
+            });
+            
+            const passed = score >= 80;
+            const resultHtml = `
+                <div style="text-align: center; padding: 30px; background: ${passed ? '#e8f5e9' : '#ffebee'}; border-radius: 15px; margin: 20px 0;">
+                    <h2 style="color: ${passed ? '#4caf50' : '#f44336'}; margin-bottom: 20px;">
+                        ${passed ? '🌍 測試通過！' : '📚 繼續努力！'}
+                    </h2>
+                    <div style="font-size: 2em; font-weight: bold; color: ${passed ? '#4caf50' : '#f44336'}; margin: 20px 0;">
+                        ${score} / 100 分
+                    </div>
+                    <p style="font-size: 1.1em; margin: 15px 0;">
+                        通過標準：80分 | 您的成績：${score}分
+                    </p>
+                    <div style="margin: 20px 0;">
+                        <div style="background: #f5f5f5; border-radius: 10px; padding: 15px; margin: 10px 0;">
+                            <strong>評語：</strong>
+                            ${passed ? 
+                                '傑出！您對國際市場與貿易的掌握已達到專業水準，具備全球化商業思維和實務操作能力。' : 
+                                '您已掌握基礎概念，建議加強對國際貿易實務和市場分析的深入學習。'
+                            }
+                        </div>
+                    </div>
+                    ${passed ? 
+                        '<div style="margin: 20px 0;"><a href="l3-8-test.html" style="background: #4caf50; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold;">繼續下一課程 L3-8 →</a></div>' : 
+                        '<div style="margin: 20px 0;"><button onclick="location.reload()" style="background: #ff9800; color: white; padding: 15px 30px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">重新測試</button></div>'
+                    }
+                </div>
+            `;
+            
+            document.querySelector('.content-section').innerHTML = resultHtml;
+        }
+
+        // 初始化
+        updateProgress();
+        
+        console.log('L3-7 國際市場與貿易測試頁面載入完成');
+    </script>
+</body>
+</html>

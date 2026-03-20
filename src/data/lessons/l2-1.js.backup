@@ -1,0 +1,86 @@
+// L2-1: Médoc產區深度探索
+export const l21Content = [
+  { type: 'title' },
+  // ========== 1. 地理位置 =========
+  {
+    title: 'Médoc半島地理概覽',
+    highlights: [
+      { id: 1, icon: '🗺️', title: '獨特地理', content: 'Gironde河左岸，延伸60公里的狹長半島' },
+      { id: 2, icon: '📍', title: '戰略位置', content: '從波爾多市西北方延伸至大西洋' }
+    ],
+  // 加入布局提示 class：layout-split-map-right 讓地圖在桌面版靠右呈現，左側為文字內容。
+  // 若在行動裝置，樣式系統會自動堆疊。
+  content: '<div class="medoc-geography layout-split-map-right layout-hint-map-right"><p class="lead-text">Médoc半島是波爾多左岸最重要的產區，以出產世界頂級紅酒而聞名於世。其獨特的地理位置是形成卓越風土的基礎。</p><div class="geography-analysis"><div class="geo-section peninsula-overview"><h4>🗺️ Médoc半島地理位置</h4><div class="peninsula-layout"><div class="location-details"><div class="location-card strategic"><h5>🎯 戰略位置</h5><div class="location-content"><p><strong>地理座標：</strong>位於波爾多市西北方，Gironde河左岸</p><p><strong>半島長度：</strong>從波爾多市延伸至大西洋約60公里</p><p><strong>最大寬度：</strong>東西向約15公里的狹長地帶</p><div class="strategic-advantages"><h6>地理優勢</h6><ul><li><strong>河流保護：</strong>Gironde河提供天然防風屏障</li><li><strong>海洋調節：</strong>大西洋帶來溫和濕潤氣候</li><li><strong>排水良好：</strong>砂礫土壤確保優異的排水性</li><li><strong>日照充足：</strong>朝東南向的緩坡獲得充足陽光</li></ul></div></div></div><div class="location-card boundaries"><h5>🔲 產區邊界劃分</h5><div class="boundary-details"><div class="boundary-north"><h6>北部邊界</h6><p>延伸至Saint-Vivien-de-Médoc，接近大西洋海岸</p></div><div class="boundary-south"><h6>南部邊界</h6><p>從波爾多市區開始，與Haut-Médoc產區銜接</p></div><div class="boundary-east"><h6>東側邊界</h6><p>沿Gironde河岸，享受河流氣候調節</p></div><div class="boundary-west"><h6>西側邊界</h6><p>深入內陸，與Landes森林相鄰</p></div></div></div><div class="location-card elevations"><h5>📏 地形高度變化</h5><div class="elevation-profile"><div class="elevation-zone high"><h6>高台地區 (20-40m)</h6><p>位於內陸地帶，排水最佳，適合種植Cabernet Sauvignon</p></div><div class="elevation-zone medium"><h6>中台地區 (10-20m)</h6><p>大部分著名酒莊所在地，土壤結構多樣</p></div><div class="elevation-zone low"><h6>低台地區 (5-10m)</h6><p>靠近河岸地帶，土壤較為濕潤</p></div></div></div></div></div></div></div></div>',
+    hasMap: true, mapFocus: 'LeftBank-Medoc',
+    // 同時顯示 Médoc AOC 和 Bordeaux AOC 圖層
+    geojsonPaths: [
+      '/geojson/LeftBank/Medoc/Medoc_AOC.geojson',
+      '/Bordeaux_AOC.geojson'
+    ],
+    showBordeaux: false,
+    quiz: {
+      question: 'Médoc半島位於哪個地理位置？',
+      options: ['Gironde河右岸', 'Dordogne河畔', 'Gironde河左岸', 'Garonne河上游'],
+      correct: 2,
+      explanation: 'Médoc半島位於Gironde河的左岸，這是其最核心的地理標識，與右岸的產區形成對比。'
+    }
+  },
+  // ========== 2. 土壤組成 =========
+  {
+    title: 'Médoc的靈魂：砂礫土壤',
+    highlights: [
+      { id: 1, icon: '🪨', title: '核心土壤', content: '以石英為主的古老河流沖積砂礫' },
+      { id: 2, icon: '🌡️', title: '天然優勢', content: '優異的排水性與熱量儲存能力' }
+    ],
+    content: '<div class="medoc-geography"><p class="lead-text">砂礫土壤是Médoc產區風土的基石，賦予了Cabernet Sauvignon完美的生長環境，並塑造了葡萄酒強勁的結構與陳年潛力。</p><div class="geography-analysis"><div class="geo-section soil-analysis"><h4>🪨 土壤組成與地質結構</h4><div class="soil-composition"><div class="soil-layers"><h5>📊 土壤分層結構</h5><div class="layer-analysis"><div class="soil-layer surface"><h6>表土層 (0-30cm)</h6><div class="layer-details"><p><strong>主要成分：</strong>細砂、粉土與少量黏土</p><p><strong>特殊性質：</strong>保水性適中，透氣性良好</p></div></div><div class="soil-layer gravel"><h6>砂礫層 (30-100cm)</h6><div class="layer-details"><p><strong>核心特徵：</strong>Médoc產區的標誌性土壤</p><p><strong>組成成分：</strong>石英砂礫、鵝卵石、粗砂</p><p><strong>關鍵作用：</strong>優異排水與熱能儲存</p><ul><li>熱反射效應：白天吸熱，夜間放熱</li><li>根系穿透：促進葡萄根系深扎</li></ul></div></div><div class="soil-layer subsoil"><h6>底土層 (100cm以下)</h6><div class="layer-details"><p><strong>地質基礎：</strong>古老的河流沖積層</p><p><strong>礦物組成：</strong>石灰岩、鐵質黏土</p><p><strong>水分調節：</strong>深層保水，乾旱時供應水分</p></div></div></div></div><div class="soil-types"><h5>🎯 不同區域土壤特色</h5><div class="regional-soils"><div class="soil-region margaux-area"><h6>Margaux地區土壤</h6><p><strong>特徵：</strong>細砂礫為主，排水極佳，風格優雅</p></div><div class="soil-region pauillac-area"><h6>Pauillac地區土壤</h6><p><strong>特徵：</strong>深厚砂礫，石英含量高，結構強勁</p></div><div class="soil-region saint-julien-area"><h6>Saint-Julien地區土壤</h6><p><strong>特徵：</strong>砂礫與黏土平衡組合，風格平衡</p></div><div class="soil-region saint-estephe-area"><h6>Saint-Estèphe地區土壤</h6><p><strong>特徵：</strong>黏土含量較高，保水性強，風格濃郁</p></div></div></div></div></div></div></div>',
+    hasMap: true, mapFocus: 'LeftBank-Medoc',
+    quiz: {
+      question: 'Médoc半島砂礫土壤的主要優勢是什麼？',
+      options: ['保水性強', '養分豐富', '優異的排水與儲熱', '適合白葡萄生長'],
+      correct: 2,
+      explanation: 'Médoc的砂礫土壤以其卓越的排水能力和白天儲存熱量並在夜間釋放的能力而聞名，這為晚熟的Cabernet Sauvignon創造了理想的成熟條件。'
+    }
+  },
+  // ========== 3. 氣候影響 =========
+  {
+    title: '海洋與河流的氣候調節',
+    highlights: [
+      { id: 1, icon: '🌊', title: '海洋性氣候', content: '大西洋暖流帶來溫和濕潤的氣候' },
+      { id: 2, icon: '💨', title: '雙重調節', content: 'Gironde河與森林共同調節微氣候' }
+    ],
+    content: '<div class="medoc-geography"><p class="lead-text">得益於大西洋和Gironde河的雙重影響，Médoc擁有一個相對溫和穩定的氣候系統，有效降低了極端天氣的風險。</p><div class="geography-analysis"><div class="geo-section climate-influence"><h4>🌤️ 氣候環境與微氣候</h4><div class="climate-systems"><div class="macro-climate"><h5>🌍 宏觀氣候特徵</h5><div class="climate-factors"><div class="factor oceanic"><h6>海洋性氣候主導</h6><div class="climate-details"><p><strong>溫度調節：</strong>大西洋暖流維持溫和氣溫</p><ul><li>年均溫度：13-14°C</li><li>生長季溫度：18-22°C</li><li>霜凍風險：春季霜凍機率較低</li></ul></div></div><div class="factor precipitation"><h6>降雨模式</h6><div class="climate-details"><p><strong>年降雨量：</strong>800-900mm，分布較均勻</p><ul><li>春季降雨：促進萌芽與新梢生長</li><li>夏季乾燥：7-8月相對乾燥有利成熟</li></ul></div></div><div class="factor winds"><h6>風向與風力</h6><div class="climate-details"><p><strong>主導風向：</strong>西南風與西北風交替</p><ul><li>通風良好：減少真菌病害風險</li></ul></div></div></div></div><div class="micro-climate"><h5>🎯 微氣候差異分析</h5><div class="microclimate-variations"><div class="variation riverside"><h6>河岸地帶微氣候</h6><p><strong>特徵：</strong>溫度緩衝效應最明顯</p><div class="microclimate-effects"><ul><li><strong>溫度穩定：</strong>河水調節日夜溫差</li><li><strong>霜凍保護：</strong>水體熱容量大，防霜效果佳</li></ul></div></div><div class="variation inland"><h6>內陸高台微氣候</h6><p><strong>特徵：</strong>排水極佳，日照充足</p><div class="microclimate-effects"><ul><li><strong>升溫快速：</strong>砂礫土快速吸收熱能</li><li><strong>香氣濃縮：</strong>適度水分應力增強風味</li></ul></div></div><div class="variation forest-edge"><h6>林緣地帶微氣候</h6><p><strong>特徵：</strong>受森林保護，微環境穩定</p><div class="microclimate-effects"><ul><li><strong>風力緩解：</strong>森林屏障減少強風</li><li><strong>生態平衡：</strong>天敵昆蟲控制害蟲</li></ul></div></div></div></div></div></div></div></div>',
+    quiz: {
+      question: 'Gironde河對Médoc的微氣候有何重要影響？',
+      options: ['增加降雨量', '提供霜凍保護', '導致氣溫劇烈變化', '沒有影響'],
+      correct: 1,
+      explanation: 'Gironde河巨大的水體具有熱容量，能夠在春季夜晚釋放熱量，有效保護鄰近的葡萄園免受霜凍的危害。'
+    }
+  },
+  // ========== 4. 1855分級制度歷史 =========
+  {
+    title: '1855年分級制度的誕生',
+    highlights: [
+      { id: 1, icon: '📜', title: '歷史契機', content: '為1855年巴黎世界博覽會而創立' },
+      { id: 2, icon: '💰', title: '分級依據', content: '主要基於酒款長期的市場價格與聲譽' }
+    ],
+    content: '<div class="classification-system"><p class="lead-text">1855年分級制度是波爾多葡萄酒品質認證的黃金標準，它並非由品酒專家評定，而是市場無形之手的傑作，至今仍是全球最權威的酒莊分級系統之一。</p><div class="classification-analysis"><div class="classification-section history"><h4>📜 1855年分級制度的歷史背景</h4><div class="historical-context"><div class="context-card origin"><h5>🎯 分級起源與目的</h5><div class="origin-details"><div class="background-story"><h6>歷史契機</h6><p>1855年巴黎世界博覽會，拿破崙三世要求波爾多商會為參展酒款建立品質分級，以展現法國葡萄酒的卓越品質。</p></div><div class="selection-criteria"><h6>分級標準</h6><p><strong>主要依據：</strong>酒款市場價格與聲譽</p><ul><li><strong>價格水準：</strong>長期市場表現反映品質</li><li><strong>歷史聲譽：</strong>酒莊數百年來的聲望</li><li><strong>風土條件：</strong>葡萄園的地理位置與土壤</li></ul></div><div class="geographic-scope"><h6>涵蓋範圍</h6><p>主要針對Médoc產區的紅酒酒莊，以及Sauternes和Barsac的甜酒酒莊。</p></div></div></div><div class="context-card significance"><h5>⚖️ 分級制度的重要意義</h5><div class="significance-aspects"><div class="aspect quality"><h6>品質保證</h6><p>建立了客觀的品質評估標準，為消費者提供可靠的選酒指南。</p></div><div class="aspect market"><h6>市場秩序</h6><p>規範了葡萄酒市場的價格體系，形成了穩定的品質—價格對應關係。</p></div><div class="aspect heritage"><h6>文化傳承</h6><p>保護和傳承了波爾多葡萄酒的釀造傳統與文化價值。</p></div></div></div></div></div><div class="classification-section modern-relevance"><h4>🔄 現代意義與市場影響</h4><div class="modern-impact"><div class="impact-area market-pricing"><h5>💰 市場定價影響</h5><p>分級制度至今仍是Médoc葡萄酒定價的核心參考。級別越高，通常價格越昂貴。</p></div><div class="impact-area investment"><h5>📈 投資收藏價值</h5><p>分級酒莊，尤其是一、二級，因其稀缺性和全球認知度，成為葡萄酒投資市場的硬通貨。</p></div><div class="impact-area quality-evolution"><h5>📊 品質演變趨勢</h5><p>儘管分級近170年未變，但許多酒莊的品質已遠超其原始級別，形成了"超二級"、"超三級"等概念。</p></div></div></div></div></div>',
+    hasMap: false,
+    quiz: {
+      question: '1855年分級制度的主要分級依據是什麼？',
+      options: ['專家盲品分數', '產量大小', '酒莊的歷史長度', '市場價格與聲譽'],
+      correct: 3,
+      explanation: '1855年分級制度並非基於品鑑，而是根據當時酒莊葡萄酒在市場上的長期售價和聲譽來劃分，這反映了市場對其品質的認可。'
+    }
+  },
+  // ========== 5. 一級酒莊 =========
+  {
+    type: 'custom',
+    component: 'FirstGrowthsMap',
+    title: '金字塔頂端：五大一級酒莊',
+    highlights: [
+      { id: 1, icon: '👑', title: '五大酒莊', content: 'Lafite, Latour, Margaux, Haut-Brion, Mouton' },
+      { id: 2, icon: '🏆', title: '品質巔峰', content: '代表波爾多乃至全世界葡萄酒的最高水準' },
+      { id: 3, icon: '📍', title: '地理分布', content: '3家位於Pauillac，1家Margaux，1家Pessac-Léognan' },
+      { id: 4, icon: '🎨', title: '獨特風格', content: '每家酒莊都有獨一無二的風土與釀造風格' }
+    ],quiz: {
+      question: '哪家一級酒莊是在1973年從二級晉升的？',

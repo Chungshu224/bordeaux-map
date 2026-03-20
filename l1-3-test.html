@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>l1-3 葡萄品種課程測試</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .test-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .test-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .test-link {
+            display: block;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .test-link:hover {
+            transform: translateY(-2px);
+        }
+        .status {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🍇 l1-3 葡萄品種課程測試頁面</h1>
+            <p>測試新實現的葡萄品種簡報課程</p>
+        </div>
+
+        <div class="status">
+            <h3>✅ 課程實現狀態</h3>
+            <ul>
+                <li>✅ lessonDataMap 已添加 l1-3 課程數據</li>
+                <li>✅ 3個完整幻燈片：紅葡萄品種、白葡萄品種、混釀哲學</li>
+                <li>✅ 專業術語標註系統</li>
+                <li>✅ 互動小測驗</li>
+                <li>✅ 視覺化品種卡片</li>
+                <li>✅ 混釀比例圖表</li>
+                <li>✅ 響應式葡萄品種專用樣式</li>
+            </ul>
+        </div>
+
+        <div class="test-links">
+            <a href="http://localhost:5174" class="test-link">
+                🏠 返回主系統
+            </a>
+            <a href="http://localhost:5174/#presentation-l1-1" class="test-link">
+                📍 l1-1 地理位置
+            </a>
+            <a href="http://localhost:5174/#presentation-l1-2" class="test-link">
+                🌡️ l1-2 氣候環境
+            </a>
+            <a href="http://localhost:5174/#presentation-l1-3" class="test-link">
+                🍇 l1-3 葡萄品種
+            </a>
+        </div>
+
+        <div class="status">
+            <h3>🎯 l1-3 課程內容亮點</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div style="background: #f0f8ff; padding: 1rem; border-radius: 10px; border-left: 4px solid #8b0000;">
+                    <h4>🍇 紅葡萄三劍客</h4>
+                    <ul>
+                        <li>Cabernet Sauvignon - 骨架品種</li>
+                        <li>Merlot - 柔順品種</li>
+                        <li>Cabernet Franc - 香氣品種</li>
+                    </ul>
+                </div>
+                <div style="background: #f0fff0; padding: 1rem; border-radius: 10px; border-left: 4px solid #32cd32;">
+                    <h4>🥂 白葡萄雙璧</h4>
+                    <ul>
+                        <li>Sauvignon Blanc - 清新酸度</li>
+                        <li>Sémillon - 豐富結構</li>
+                    </ul>
+                </div>
+                <div style="background: #fff8dc; padding: 1rem; border-radius: 10px; border-left: 4px solid #ffd700;">
+                    <h4>🎼 混釀哲學</h4>
+                    <ul>
+                        <li>左岸：Cabernet Sauvignon 主導</li>
+                        <li>右岸：Merlot 主導</li>
+                        <li>比例圖表視覺化展示</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>📚 學習目標達成</h3>
+            <p>通過本課程，學員將能夠：</p>
+            <ol>
+                <li><strong>識別主要品種：</strong>掌握波爾多 5 大主要葡萄品種的特徵</li>
+                <li><strong>理解風味特色：</strong>學會描述各品種的香氣和口感特點</li>
+                <li><strong>掌握混釀概念：</strong>了解左岸右岸不同的混釀風格</li>
+                <li><strong>專業術語運用：</strong>正確使用英法對照的葡萄酒術語</li>
+            </ol>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1rem; background: #e8f5e8; border-radius: 10px;">
+            <h3>🎉 課程已準備就緒！</h3>
+            <p>現在可以在學習系統中選擇「主要葡萄品種介紹」課程，體驗完整的簡報模式學習。</p>
+        </div>
+    </div>
+</body>
+</html>

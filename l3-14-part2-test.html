@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3-14：創新與科技應用（第二部分）- 測試</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #673AB7 0%, #9C27B0 50%, #E91E63 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #673AB7, #9C27B0);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .part-indicator {
+            background: linear-gradient(135deg, #4CAF50, #66BB6A);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .course-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .question {
+            margin-bottom: 35px;
+            padding: 25px;
+            border-left: 5px solid #673AB7;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .question h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .question-type {
+            background: #f3e5f5;
+            color: #673AB7;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .options {
+            list-style: none;
+        }
+
+        .options li {
+            margin: 12px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .options li:hover {
+            border-color: #673AB7;
+            background: #f3e5f5;
+        }
+
+        .options li.selected {
+            border-color: #673AB7;
+            background: #e1bee7;
+        }
+
+        .essay-area {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .future-technologies {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            border: 2px solid #4caf50;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .future-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .future-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid #e8f5e8;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .future-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4caf50, #66bb6a);
+        }
+
+        .future-year {
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .future-title {
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .future-description {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .future-potential {
+            background: #f1f8e9;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #4caf50;
+            font-size: 0.8em;
+        }
+
+        .sustainability-tech {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffcc02 100%);
+            border: 2px solid #ff9800;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .sustainability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .sustainability-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            border-top: 4px solid #ff9800;
+        }
+
+        .sustainability-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ff9800, #ffb74d);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .sustainability-title {
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .sustainability-description {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .sustainability-metrics {
+            background: #fff8e1;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            color: #bf360c;
+        }
+
+        .digital-ecosystem {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border: 2px solid #2196f3;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .ecosystem-diagram {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .ecosystem-layer {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #2196f3;
+            position: relative;
+        }
+
+        .ecosystem-layer::after {
+            content: '↓';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: #2196f3;
+            font-weight: bold;
+        }
+
+        .ecosystem-layer:last-child::after {
+            display: none;
+        }
+
+        .layer-title {
+            font-weight: bold;
+            color: #1565c0;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .layer-components {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .component {
+            background: #e3f2fd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #0d47a1;
+            border: 1px solid #2196f3;
+        }
+
+        .innovation-challenges {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+            border: 2px solid #e91e63;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .challenge-matrix {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .challenge-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid #e91e63;
+        }
+
+        .challenge-type {
+            background: #e91e63;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .challenge-title {
+            font-weight: bold;
+            color: #ad1457;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .challenge-description {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .roi-analysis {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            border: 2px solid #9c27b0;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .roi-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .roi-header {
+            background: #9c27b0;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            text-align: center;
+        }
+
+        .roi-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .roi-cell {
+            padding: 15px;
+            border-right: 1px solid #e9ecef;
+            text-align: center;
+        }
+
+        .roi-cell:last-child {
+            border-right: none;
+        }
+
+        .roi-positive {
+            background: #e8f5e8;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .roi-neutral {
+            background: #fff3e0;
+            color: #e65100;
+            font-weight: bold;
+        }
+
+        .roi-high {
+            background: #e3f2fd;
+            color: #1976d2;
+            font-weight: bold;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #673AB7, #9C27B0);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(103, 58, 183, 0.3);
+        }
+
+        .progress-bar {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 8px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #673AB7, #9C27B0);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .skill-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #673AB7, #9C27B0);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .content-section {
+                padding: 25px;
+            }
+            
+            .course-info {
+                gap: 20px;
+            }
+            
+            .future-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sustainability-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .challenge-matrix {
+                grid-template-columns: 1fr;
+            }
+            
+            .roi-header, .roi-row {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .ecosystem-diagram {
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="level-badge">🎯 Level 3 - 高級專業</div>
+            <div class="part-indicator">🚀 第二部分 - 未來展望與策略規劃</div>
+            <h1>🔮 創新與科技應用（續）</h1>
+            <p class="subtitle">未來科技趨勢、永續發展與投資回報分析</p>
+            
+            <div class="course-info">
+                <div class="info-item">
+                    <span>⏱️</span>
+                    <span>測試時間：60分鐘</span>
+                </div>
+                <div class="info-item">
+                    <span>📝</span>
+                    <span>題目數量：12題</span>
+                </div>
+                <div class="info-item">
+                    <span>🎯</span>
+                    <span>通過分數：85分</span>
+                </div>
+                <div class="info-item">
+                    <span>📊</span>
+                    <span>第二部分：進階</span>
+                </div>
+            </div>
+            
+            <div class="skill-tags">
+                <div class="skill-tag">🔮 未來趨勢</div>
+                <div class="skill-tag">🌱 永續科技</div>
+                <div class="skill-tag">💰 ROI分析</div>
+                <div class="skill-tag">🏗️ 生態系統</div>
+                <div class="skill-tag">⚡ 創新策略</div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <form id="testForm">
+                <!-- 第15題：未來技術 -->
+                <div class="question">
+                    <div class="question-type">🔮 未來技術題</div>
+                    <h3>15. 2030年波爾多葡萄酒業的新興技術展望</h3>
+                    <div class="future-technologies">
+                        <h4 style="text-align: center; color: #2e7d32; margin-bottom: 20px;">🚀 未來技術發展路線圖</h4>
+                        <div class="future-grid">
+                            <div class="future-card">
+                                <div class="future-year">2025-2027</div>
+                                <div class="future-title">量子感測技術</div>
+                                <div class="future-description">
+                                    超高精度環境監測、分子級品質分析、即時化學成分檢測
+                                </div>
+                                <div class="future-potential">
+                                    潛力：檢測精度提升1000倍，品質預測準確度達99.9%
+                                </div>
+                            </div>
+                            <div class="future-card">
+                                <div class="future-year">2027-2029</div>
+                                <div class="future-title">合成生物學</div>
+                                <div class="future-description">
+                                    定制酵母菌株、生物合成香氣化合物、精準發酵控制
+                                </div>
+                                <div class="future-potential">
+                                    潛力：創造全新風味特徵，縮短陳年時間50%
+                                </div>
+                            </div>
+                            <div class="future-card">
+                                <div class="future-year">2028-2030</div>
+                                <div class="future-title">腦機介面品評</div>
+                                <div class="future-description">
+                                    神經科學品酒分析、腦波感官測量、個性化風味預測
+                                </div>
+                                <div class="future-potential">
+                                    潛力：革命性的品酒體驗，精準個人化推薦
+                                </div>
+                            </div>
+                            <div class="future-card">
+                                <div class="future-year">2030+</div>
+                                <div class="future-title">奈米釀造技術</div>
+                                <div class="future-description">
+                                    分子級精準控制、奈米膠囊風味釋放、智能酒分子
+                                </div>
+                                <div class="future-potential">
+                                    潛力：重新定義葡萄酒概念，創造超越自然的品質
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>未來技術發展的核心趨勢是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 完全人工化</li>
+                        <li data-value="b">B. 精準控制與個性化定制的完美結合</li>
+                        <li data-value="c">C. 降低生產成本</li>
+                        <li data-value="d">D. 標準化量產</li>
+                    </ul>
+                </div>
+
+                <!-- 第16題：永續科技 -->
+                <div class="question">
+                    <div class="question-type">🌱 永續科技題</div>
+                    <h3>16. 波爾多葡萄酒業的綠色科技創新</h3>
+                    <div class="sustainability-tech">
+                        <h4 style="text-align: center; color: #e65100; margin-bottom: 20px;">♻️ 永續技術解決方案</h4>
+                        <div class="sustainability-grid">
+                            <div class="sustainability-card">
+                                <div class="sustainability-icon">🌞</div>
+                                <div class="sustainability-title">智慧太陽能系統</div>
+                                <div class="sustainability-description">
+                                    自適應太陽能板、儲能管理、智能電網整合
+                                </div>
+                                <div class="sustainability-metrics">
+                                    效益：減少碳排放80%，能源成本降低60%
+                                </div>
+                            </div>
+                            <div class="sustainability-card">
+                                <div class="sustainability-icon">💧</div>
+                                <div class="sustainability-title">循環水處理</div>
+                                <div class="sustainability-description">
+                                    廢水回收再利用、生物處理系統、零排放目標
+                                </div>
+                                <div class="sustainability-metrics">
+                                    效益：節水95%，廢水零排放，成本節約40%
+                                </div>
+                            </div>
+                            <div class="sustainability-card">
+                                <div class="sustainability-icon">🍃</div>
+                                <div class="sustainability-title">碳捕捉技術</div>
+                                <div class="sustainability-description">
+                                    發酵CO2回收、土壤碳封存、碳中和認證
+                                </div>
+                                <div class="sustainability-metrics">
+                                    效益：碳負排放，額外收入來源，環保認證
+                                </div>
+                            </div>
+                            <div class="sustainability-card">
+                                <div class="sustainability-icon">🔄</div>
+                                <div class="sustainability-title">循環經濟模式</div>
+                                <div class="sustainability-description">
+                                    廢料資源化、副產品開發、產業鏈協同
+                                </div>
+                                <div class="sustainability-metrics">
+                                    效益：廢料減少90%，新收入流，成本優化
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>永續科技對波爾多葡萄酒業的戰略意義是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 只是環保要求</li>
+                        <li data-value="b">B. 創造競爭優勢、降低成本、開拓新市場</li>
+                        <li data-value="c">C. 增加複雜度</li>
+                        <li data-value="d">D. 政府政策要求</li>
+                    </ul>
+                </div>
+
+                <!-- 第17題：數位生態系統 -->
+                <div class="question">
+                    <div class="question-type">🏗️ 生態系統題</div>
+                    <h3>17. 波爾多葡萄酒數位生態系統架構</h3>
+                    <div class="digital-ecosystem">
+                        <h4 style="text-align: center; color: #1565c0; margin-bottom: 20px;">🌐 數位生態系統層級</h4>
+                        <div class="ecosystem-diagram">
+                            <div class="ecosystem-layer">
+                                <div class="layer-title">應用層 Application Layer</div>
+                                <div class="layer-components">
+                                    <div class="component">消費者App</div>
+                                    <div class="component">酒莊管理</div>
+                                    <div class="component">行銷平台</div>
+                                    <div class="component">電商系統</div>
+                                </div>
+                            </div>
+                            <div class="ecosystem-layer">
+                                <div class="layer-title">服務層 Service Layer</div>
+                                <div class="layer-components">
+                                    <div class="component">AI分析</div>
+                                    <div class="component">區塊鏈</div>
+                                    <div class="component">IoT管理</div>
+                                    <div class="component">大數據</div>
+                                </div>
+                            </div>
+                            <div class="ecosystem-layer">
+                                <div class="layer-title">平台層 Platform Layer</div>
+                                <div class="layer-components">
+                                    <div class="component">雲端運算</div>
+                                    <div class="component">邊緣計算</div>
+                                    <div class="component">API網關</div>
+                                    <div class="component">安全認證</div>
+                                </div>
+                            </div>
+                            <div class="ecosystem-layer">
+                                <div class="layer-title">基礎層 Infrastructure Layer</div>
+                                <div class="layer-components">
+                                    <div class="component">5G網路</div>
+                                    <div class="component">感測器</div>
+                                    <div class="component">設備終端</div>
+                                    <div class="component">數據存儲</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>建構完整數位生態系統的關鍵成功因素是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 技術先進性</li>
+                        <li data-value="b">B. 各層級協同整合、數據流通、用戶體驗一致性</li>
+                        <li data-value="c">C. 投資規模</li>
+                        <li data-value="d">D. 技術供應商選擇</li>
+                    </ul>
+                </div>
+
+                <!-- 第18題：創新挑戰 -->
+                <div class="question">
+                    <div class="question-type">⚠️ 創新挑戰題</div>
+                    <h3>18. 波爾多葡萄酒科技創新面臨的挑戰</h3>
+                    <div class="innovation-challenges">
+                        <h4 style="text-align: center; color: #ad1457; margin-bottom: 20px;">🚧 創新障礙分析</h4>
+                        <div class="challenge-matrix">
+                            <div class="challenge-item">
+                                <div class="challenge-type">技術挑戰</div>
+                                <div class="challenge-title">技術成熟度差異</div>
+                                <div class="challenge-description">
+                                    新興技術穩定性、可靠性、適用性需要驗證和優化
+                                </div>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-type">經濟挑戰</div>
+                                <div class="challenge-title">投資回報不確定</div>
+                                <div class="challenge-description">
+                                    高昂的研發成本、漫長的回收期、市場接受度未知
+                                </div>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-type">文化挑戰</div>
+                                <div class="challenge-title">傳統與創新衝突</div>
+                                <div class="challenge-description">
+                                    保守的行業文化、對新技術的疑慮、世代間認知差異
+                                </div>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-type">人才挑戰</div>
+                                <div class="challenge-title">專業人才短缺</div>
+                                <div class="challenge-description">
+                                    跨領域專家稀少、培訓成本高、人才流失風險
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>克服創新挑戰的最佳策略是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 等待技術成熟</li>
+                        <li data-value="b">B. 分階段試點、產學合作、風險分散、持續學習</li>
+                        <li data-value="c">C. 全面投入</li>
+                        <li data-value="d">D. 外包給技術公司</li>
+                    </ul>
+                </div>
+
+                <!-- 第19題：投資回報 -->
+                <div class="question">
+                    <div class="question-type">💰 ROI分析題</div>
+                    <h3>19. 波爾多酒莊科技投資回報分析</h3>
+                    <div class="roi-analysis">
+                        <h4 style="text-align: center; color: #6a1b9a; margin-bottom: 20px;">📊 技術投資ROI比較</h4>
+                        <div class="roi-table">
+                            <div class="roi-header">
+                                <div>技術類別</div>
+                                <div>投資回收期</div>
+                                <div>ROI預期</div>
+                                <div>風險等級</div>
+                            </div>
+                            <div class="roi-row">
+                                <div class="roi-cell">IoT監控系統</div>
+                                <div class="roi-cell roi-positive">2-3年</div>
+                                <div class="roi-cell roi-positive">150-200%</div>
+                                <div class="roi-cell roi-positive">低</div>
+                            </div>
+                            <div class="roi-row">
+                                <div class="roi-cell">AI品質預測</div>
+                                <div class="roi-cell roi-neutral">3-4年</div>
+                                <div class="roi-cell roi-neutral">120-180%</div>
+                                <div class="roi-cell roi-neutral">中</div>
+                            </div>
+                            <div class="roi-row">
+                                <div class="roi-cell">區塊鏈溯源</div>
+                                <div class="roi-cell roi-neutral">4-5年</div>
+                                <div class="roi-cell roi-high">200-300%</div>
+                                <div class="roi-cell roi-neutral">中</div>
+                            </div>
+                            <div class="roi-row">
+                                <div class="roi-cell">自動化機器人</div>
+                                <div class="roi-cell roi-high">5-7年</div>
+                                <div class="roi-cell roi-high">100-150%</div>
+                                <div class="roi-cell roi-high">高</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>科技投資決策的優先考量是：</strong></p>
+                    <ul class="options">
+                        <li data-value="a">A. 最新技術</li>
+                        <li data-value="b">B. 投資風險與回報平衡、技術成熟度、業務契合度</li>
+                        <li data-value="c">C. 投資金額</li>
+                        <li data-value="d">D. 競爭對手動向</li>
+                    </ul>
+                </div>
+
+                <!-- 第20題：合作夥伴 -->
+                <div class="question">
+                    <div class="question-type">🤝 合作策略題</div>
+                    <h3>20. 波爾多酒莊的科技合作夥伴策略</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 完全自主研發</li>
+                        <li data-value="b">B. 產學研合作、技術聯盟、開放創新生態</li>
+                        <li data-value="c">C. 純粹技術採購</li>
+                        <li data-value="d">D. 單一供應商依賴</li>
+                    </ul>
+                </div>
+
+                <!-- 第21題：數據安全 -->
+                <div class="question">
+                    <div class="question-type">🔒 數據安全題</div>
+                    <h3>21. 波爾多酒莊數位化轉型的資安挑戰</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 安全不重要</li>
+                        <li data-value="b">B. 多層防護、數據加密、存取控制、定期稽核</li>
+                        <li data-value="c">C. 基本防毒即可</li>
+                        <li data-value="d">D. 雲端廠商負責</li>
+                    </ul>
+                </div>
+
+                <!-- 第22題：標準化 -->
+                <div class="question">
+                    <div class="question-type">📐 標準化題</div>
+                    <h3>22. 波爾多葡萄酒業數位標準建立</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 各自為政</li>
+                        <li data-value="b">B. 行業標準制定、互操作性、數據格式統一</li>
+                        <li data-value="c">C. 跟隨國際標準</li>
+                        <li data-value="d">D. 技術廠商主導</li>
+                    </ul>
+                </div>
+
+                <!-- 第23題：人才培育 -->
+                <div class="question">
+                    <div class="question-type">👨‍🎓 人才培育題</div>
+                    <h3>23. 波爾多葡萄酒科技人才培育策略</h3>
+                    <ul class="options">
+                        <li data-value="a">A. 外聘即可</li>
+                        <li data-value="b">B. 內部培訓、產學合作、國際交流、跨領域整合</li>
+                        <li data-value="c">C. 依賴顧問</li>
+                        <li data-value="d">D. 自然發展</li>
+                    </ul>
+                </div>
+
+                <!-- 第24題：綜合策略 -->
+                <div class="question">
+                    <div class="question-type">📊 綜合策略題</div>
+                    <h3>24. 制定波爾多酒莊2025-2030數位化轉型路線圖</h3>
+                    <textarea class="essay-area" placeholder="請設計包含技術選擇、實施階段、資源配置、風險管理的完整5年數位轉型策略..."></textarea>
+                </div>
+
+                <!-- 第25題：創新評估 -->
+                <div class="question">
+                    <div class="question-type">💡 創新評估題</div>
+                    <h3>25. 評估新興科技對波爾多傳統釀酒文化的影響與融合</h3>
+                    <textarea class="essay-area" placeholder="請分析科技創新如何在保持波爾多傳統精神的同時，推動產業現代化發展..."></textarea>
+                </div>
+
+                <!-- 第26題：未來願景 -->
+                <div class="question">
+                    <div class="question-type">🔮 未來願景題</div>
+                    <h3>26. 描繪2035年波爾多智慧酒莊的完整願景</h3>
+                    <textarea class="essay-area" placeholder="請描述未來智慧酒莊的技術架構、營運模式、消費者體驗、可持續發展等全方位願景..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">完成測試 🎯</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 載入第一部分答案
+        const part1Answers = JSON.parse(localStorage.getItem('l3_14_part1_answers') || '{}');
+        console.log('第一部分答案：', part1Answers);
+
+        // 答案選擇功能
+        document.querySelectorAll('.options li').forEach(option => {
+            option.addEventListener('click', function() {
+                // 移除同一題目中其他選項的選中狀態
+                const question = this.closest('.question');
+                question.querySelectorAll('.options li').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                // 添加選中狀態
+                this.classList.add('selected');
+                updateProgress();
+            });
+        });
+
+        // 進度更新
+        function updateProgress() {
+            const totalQuestions = 12; // 第二部分
+            let answered = 0;
+            
+            // 統計選擇題答案
+            document.querySelectorAll('.question').forEach(q => {
+                if (q.querySelector('.selected') || q.querySelector('textarea').value.trim()) {
+                    answered++;
+                }
+            });
+            
+            const progress = (answered / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        // 文本區域監聽
+        document.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', updateProgress);
+        });
+
+        // 表單提交
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 收集第二部分答案
+            const part2Answers = {};
+            let questionCount = 15; // 從第15題開始
+            
+            document.querySelectorAll('.question').forEach(question => {
+                const selected = question.querySelector('.selected');
+                const textarea = question.querySelector('textarea');
+                
+                if (selected) {
+                    part2Answers[`question_${questionCount}`] = selected.dataset.value;
+                } else if (textarea && textarea.value.trim()) {
+                    part2Answers[`question_${questionCount}`] = textarea.value.trim();
+                }
+                questionCount++;
+            });
+            
+            // 檢查完成度
+            const completed = Object.keys(part2Answers).length;
+            if (completed < 12) {
+                alert(`請完成所有題目！目前已完成：${completed}/12`);
+                return;
+            }
+            
+            // 合併兩部分答案
+            const allAnswers = { ...part1Answers, ...part2Answers };
+            
+            // 計算分數（簡化評分）
+            let score = 0;
+            const totalQuestions = 26;
+            
+            // 選擇題評分（假設前23題為選擇題）
+            const correctAnswers = {
+                question_1: 'b', question_2: 'b', question_3: 'b', question_4: 'b',
+                question_5: 'b', question_6: 'b', question_7: 'b', question_8: 'b',
+                question_9: 'b', question_10: 'b', question_11: 'b',
+                question_15: 'b', question_16: 'b', question_17: 'b', question_18: 'b',
+                question_19: 'b', question_20: 'b', question_21: 'b', question_22: 'b',
+                question_23: 'b'
+            };
+            
+            // 選擇題評分
+            for (let i = 1; i <= 23; i++) {
+                if (i === 12 || i === 13 || i === 14) continue; // 跳過問答題
+                if (allAnswers[`question_${i}`] === correctAnswers[`question_${i}`]) {
+                    score += 3; // 每題3分
+                }
+            }
+            
+            // 問答題評分（簡化為有作答就給分）
+            [12, 13, 14, 24, 25, 26].forEach(q => {
+                if (allAnswers[`question_${q}`] && allAnswers[`question_${q}`].length > 100) {
+                    score += 7; // 每題7分
+                }
+            });
+            
+            const percentage = Math.round((score / 100) * 100);
+            
+            // 儲存結果
+            const testResults = {
+                course: 'L3-14',
+                title: '創新與科技應用',
+                answers: allAnswers,
+                score: percentage,
+                passed: percentage >= 85,
+                completedAt: new Date().toISOString(),
+                timeSpent: '150分鐘'
+            };
+            
+            localStorage.setItem('l3_14_results', JSON.stringify(testResults));
+            
+            // 顯示結果
+            if (percentage >= 85) {
+                alert(`🎉 恭喜通過測試！\n\n您的成績：${percentage}分\n課程：L3-14 創新與科技應用\n\n您已掌握：\n✅ 數位化轉型策略\n✅ AI與IoT應用\n✅ 區塊鏈溯源技術\n✅ 永續科技創新\n✅ 未來發展趨勢`);
+            } else {
+                alert(`📚 需要繼續努力！\n\n您的成績：${percentage}分\n通過標準：85分\n\n建議加強：\n• 新興技術理解\n• 數位轉型策略\n• 投資回報分析\n• 創新管理能力`);
+            }
+            
+            // 清除臨時儲存
+            localStorage.removeItem('l3_14_part1_answers');
+        });
+
+        // 初始化
+        updateProgress();
+        
+        console.log('L3-14 創新與科技應用測試頁面（第二部分）載入完成');
+    </script>
+</body>
+</html>

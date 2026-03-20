@@ -1,0 +1,4927 @@
+// 波爾多氣候與環境課程詳細內容
+export const climateAndEnvironmentContent = {
+  'l1-2': {
+    title: '波爾多氣候與環境基礎',
+    fullContent: {
+      introduction: `
+        波爾多地區享有得天獨厚的自然條件，其溫帶海洋性氣候為葡萄種植提供了理想的環境。
+        本課程將帶您了解這些自然因素如何共同作用，造就了波爾多葡萄酒的獨特品質。
+      `,
+      sections: [
+        {
+          id: 'geography-climate',
+          title: '地理位置與氣候類型',
+          content: `
+            <h3>地理優勢</h3>
+            <p>波爾多位於法國西南部，北緯44-45度之間，距離大西洋約60公里。這個位置賦予了波爾多溫帶海洋性氣候的特徵：</p>
+            <ul>
+              <li><strong>溫和的溫度變化：</strong>年平均溫度13-14°C，冬季很少低於0°C，夏季很少超過30°C</li>
+              <li><strong>充足的日照：</strong>年平均日照時間約2000小時，特別是9-10月的秋季陽光對葡萄成熟至關重要</li>
+              <li><strong>適宜的降雨量：</strong>年降雨量800-900毫米，主要集中在冬春季節</li>
+            </ul>
+          `,
+          interactive: 'temperature-rainfall-chart'
+        },
+        {
+          id: 'river-influence',
+          title: 'Gironde河口的調節作用',
+          content: `
+            <h3>天然的溫度調節器</h3>
+            <p>Gironde河口及其支流Garonne河和Dordogne河形成了一個巨大的水體系統，對波爾多的氣候產生深遠影響：</p>
+            
+            <h4>溫度調節</h4>
+            <ul>
+              <li>夏季：水體蒸發帶走熱量，降低極端高溫</li>
+              <li>冬季：水體釋放儲存的熱量，減少霜凍風險</li>
+              <li>日夜溫差：水體的熱慣性減緩了日夜溫度變化</li>
+            </ul>
+            
+            <h4>濕度調節</h4>
+            <p>河流系統提供適度的空氣濕度，有利於：</p>
+            <ul>
+              <li>葡萄生長期的水分供應</li>
+              <li>某些甜酒產區貴腐菌的形成</li>
+              <li>減少極端乾燥對葡萄的傷害</li>
+            </ul>
+          `,
+          interactive: 'river-effect-simulator'
+        },
+        {
+          id: 'seasonal-cycle',
+          title: '年度氣候循環',
+          content: `
+            <h3>葡萄生長的四季變化</h3>
+            
+            <h4>春季（3-5月）</h4>
+            <p><strong>特點：</strong>溫和濕潤，平均溫度8-16°C</p>
+            <p><strong>對葡萄的影響：</strong></p>
+            <ul>
+              <li>促進葡萄藤發芽和新梢生長</li>
+              <li>適度降雨補充土壤水分</li>
+              <li>需防範晚霜對新芽的傷害</li>
+            </ul>
+            
+            <h4>夏季（6-8月）</h4>
+            <p><strong>特點：</strong>溫暖乾燥，平均溫度16-20°C</p>
+            <p><strong>對葡萄的影響：</strong></p>
+            <ul>
+              <li>促進開花和座果</li>
+              <li>充足陽光利於葡萄發育</li>
+              <li>適度水分壓力提高品質</li>
+            </ul>
+            
+            <h4>秋季（9-11月）</h4>
+            <p><strong>特點：</strong>溫和乾燥，日夜溫差大</p>
+            <p><strong>對葡萄的影響：</strong></p>
+            <ul>
+              <li>理想的成熟期氣候</li>
+              <li>日夜溫差保持果實酸度</li>
+              <li>乾燥天氣減少病害風險</li>
+            </ul>
+            
+            <h4>冬季（12-2月）</h4>
+            <p><strong>特點：</strong>溫和濕潤，很少結冰</p>
+            <p><strong>對葡萄的影響：</strong></p>
+            <ul>
+              <li>葡萄藤進入休眠期</li>
+              <li>適度低溫有利於藤蔓休息</li>
+              <li>冬季降雨補充地下水</li>
+            </ul>
+          `,
+          interactive: 'seasonal-changes-timeline'
+        },
+        {
+          id: 'environmental-factors',
+          title: '其他環境影響因素',
+          content: `
+            <h3>森林的保護作用</h3>
+            <p>波爾多西側的松樹林（Landes森林）起到重要的屏障作用：</p>
+            <ul>
+              <li>阻擋來自大西洋的強風和鹽分</li>
+              <li>調節局部濕度和溫度</li>
+              <li>減少極端天氣的直接影響</li>
+            </ul>
+            
+            <h3>地形地貌的微調節</h3>
+            <ul>
+              <li><strong>緩坡地帶：</strong>有利於冷空氣流動，減少霜凍風險</li>
+              <li><strong>河谷地區：</strong>晨霧有助於某些甜酒的貴腐菌發展</li>
+              <li><strong>高地平台：</strong>日照充足，排水良好</li>
+            </ul>
+            
+            <h3>土壤與氣候的互動</h3>
+            <p>不同土壤類型對小氣候的影響：</p>
+            <ul>
+              <li><strong>礫石土：</strong>白天吸熱，夜間放熱，延長生長季</li>
+              <li><strong>黏土：</strong>保水能力強，緩解乾旱壓力</li>
+              <li><strong>沙土：</strong>排水快，土壤溫度變化較大</li>
+            </ul>
+          `,
+          interactive: 'environmental-factors-map'
+        }
+      ],
+      practicalExercises: [
+        {
+          type: 'climate-data-reading',
+          title: '氣候數據解讀',
+          description: '學習如何閱讀和分析波爾多地區的氣候數據圖表'
+        },
+        {
+          type: 'season-matching',
+          title: '季節與葡萄生長配對',
+          description: '將不同的氣候條件與葡萄生長階段進行正確配對'
+        }
+      ],
+      assessmentQuestions: [
+        {
+          question: '波爾多地區的年平均溫度大約是多少？',
+          options: ['10-11°C', '13-14°C', '16-17°C', '19-20°C'],
+          correctAnswer: 1,
+          explanation: '波爾多的年平均溫度為13-14°C，這是溫帶海洋性氣候的典型特徵。'
+        },
+        {
+          question: 'Gironde河口對波爾多氣候的主要作用是什麼？',
+          options: ['提供灌溉水源', '溫度調節', '增加降雨量', '防止洪水'],
+          correctAnswer: 1,
+          explanation: 'Gironde河口主要起到溫度調節作用，夏季降溫，冬季保溫。'
+        }
+      ]
+    }
+  },
+
+  'l1-6': {
+    title: 'AOC系統入門',
+    fullContent: {
+      introduction: `
+        AOC（Appellation d'Origine Contrôlée）原產地管制命名系統是法國葡萄酒品質保證的基石。
+        了解AOC系統不僅能幫助您選擇高品質的波爾多葡萄酒，更能深度理解法國葡萄酒的精髓所在。
+        本課程將從基礎概念開始，帶您全面掌握這個影響全世界的酒類分級系統。
+      `,
+      sections: [
+        {
+          id: 'aoc-fundamentals',
+          title: 'AOC基本概念與歷史',
+          content: `
+            <h3>🏛️ AOC系統的歷史起源</h3>
+            <p>AOC系統誕生於1935年，其創建背景和發展歷程：</p>
+            <ul>
+              <li><strong>1935年創立：</strong>為了保護法國優質葡萄酒產區免受假酒衝擊</li>
+              <li><strong>Terroir概念：</strong>強調土地、氣候、傳統工藝的獨特組合</li>
+              <li><strong>法律保護：</strong>世界上第一個完整的葡萄酒原產地保護法律框架</li>
+              <li><strong>國際影響：</strong>成為全球葡萄酒分級系統的範本</li>
+            </ul>
+            
+            <h3>🔍 AOC的核心理念</h3>
+            <p>AOC系統基於四大支柱：</p>
+            <div class="concept-pillars">
+              <div class="pillar">
+                <h4>地理邊界 (Geographic Boundaries)</h4>
+                <p>嚴格劃定的產區範圍，每塊土地都有詳細記錄</p>
+              </div>
+              <div class="pillar">
+                <h4>葡萄品種 (Grape Varieties)</h4>
+                <p>指定允許種植的葡萄品種及其比例限制</p>
+              </div>
+              <div class="pillar">
+                <h4>栽培技術 (Viticultural Practices)</h4>
+                <p>種植密度、修剪方式、產量控制等技術規範</p>
+              </div>
+              <div class="pillar">
+                <h4>釀造工藝 (Winemaking Methods)</h4>
+                <p>傳統的釀造方法和品質標準</p>
+              </div>
+            </div>
+          `,
+          interactive: 'aoc-timeline'
+        },
+        {
+          id: 'aoc-hierarchy',
+          title: '法國葡萄酒分級體系',
+          content: `
+            <h3>📊 四級分級架構</h3>
+            <p>法國葡萄酒按品質和產區特性分為四個主要等級：</p>
+            
+            <h4>🏆 AOC/AOP（最高級）</h4>
+            <ul>
+              <li><strong>全稱：</strong>Appellation d'Origine Contrôlée / Protégée</li>
+              <li><strong>特徵：</strong>嚴格的產區界定和生產規範</li>
+              <li><strong>波爾多例子：</strong>Pauillac、Margaux、Saint-Émilion</li>
+              <li><strong>品質保證：</strong>代表該產區的最高水準</li>
+            </ul>
+            
+            <h4>🥈 IGP（地區級）</h4>
+            <ul>
+              <li><strong>全稱：</strong>Indication Géographique Protégée</li>
+              <li><strong>特徵：</strong>較靈活的產區規定，允許更多品種</li>
+              <li><strong>波爾多例子：</strong>Atlantique IGP</li>
+              <li><strong>優勢：</strong>性價比高，適合日常飲用</li>
+            </ul>
+            
+            <h4>🥉 Vin de France（國家級）</h4>
+            <ul>
+              <li><strong>特徵：</strong>來自法國任何產區的葡萄</li>
+              <li><strong>靈活性：</strong>可標示品種和年份</li>
+              <li><strong>定位：</strong>入門級別，價格親民</li>
+            </ul>
+          `,
+          interactive: 'hierarchy-pyramid'
+        },
+        {
+          id: 'bordeaux-aoc-system',
+          title: '波爾多AOC體系詳解',
+          content: `
+            <h3>🗺️ 波爾多AOC的三層結構</h3>
+            <p>波爾多擁有獨特的三層AOC體系，從廣泛到專精：</p>
+            
+            <h4>第一層：地區級AOC（Regional AOC）</h4>
+            <div class="aoc-level">
+              <h5>🍷 Bordeaux AOC</h5>
+              <ul>
+                <li><strong>範圍：</strong>整個波爾多地區（110,000公頃）</li>
+                <li><strong>產量：</strong>約佔波爾多總產量的55%</li>
+                <li><strong>特色：</strong>價格親民，風格多樣</li>
+                <li><strong>品種：</strong>紅酒以Merlot、Cabernet Sauvignon為主</li>
+              </ul>
+              
+              <h5>🍷 Bordeaux Supérieur AOC</h5>
+              <ul>
+                <li><strong>要求：</strong>更嚴格的產量限制和最低酒精度</li>
+                <li><strong>陳年：</strong>必須陳釀至少12個月</li>
+                <li><strong>品質：</strong>介於Bordeaux和村莊級之間</li>
+              </ul>
+            </div>
+            
+            <h4>第二層：次區域級AOC（Sub-regional AOC）</h4>
+            <div class="aoc-level">
+              <h5>🏞️ Haut-Médoc AOC</h5>
+              <ul>
+                <li><strong>位置：</strong>左岸上梅多克地區</li>
+                <li><strong>土壤：</strong>以礫石土為主</li>
+                <li><strong>風格：</strong>結構較為強勁</li>
+              </ul>
+              
+              <h5>🏞️ Graves AOC</h5>
+              <ul>
+                <li><strong>特色：</strong>同時生產紅酒和白酒</li>
+                <li><strong>土壤：</strong>礫石和沙土混合</li>
+                <li><strong>歷史：</strong>波爾多最古老的產區之一</li>
+              </ul>
+            </div>
+            
+            <h4>第三層：村莊級AOC（Communal AOC）</h4>
+            <div class="aoc-level">
+              <h5>👑 Left Bank 四大名村</h5>
+              <ul>
+                <li><strong>Margaux：</strong>優雅細膩，「酒中皇后」</li>
+                <li><strong>Pauillac：</strong>力量與結構的典範</li>
+                <li><strong>Saint-Julien：</strong>平衡與和諧的代表</li>
+                <li><strong>Saint-Estèphe：</strong>強勁耐陳的風格</li>
+              </ul>
+              
+              <h5>💎 Right Bank 精品產區</h5>
+              <ul>
+                <li><strong>Saint-Émilion：</strong>世界文化遺產產區</li>
+                <li><strong>Pomerol：</strong>精品小產區，無分級制度</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'bordeaux-aoc-map'
+        }
+      ],
+      practicalApplications: [
+        {
+          title: '酒標解讀實務',
+          description: '學習如何從波爾多酒標中識別AOC等級、產區特色和品質指標，成為選酒達人。'
+        },
+        {
+          title: '品酒筆記記錄',
+          description: '建立系統性的品酒記錄，包含AOC資訊、風味描述、配餐建議等專業內容。'
+        },
+        {
+          title: '酒窖管理應用',
+          description: '運用AOC分級知識管理個人酒窖，制定最佳的收藏和飲用時間表。'
+        }
+      ],
+      assessment: {
+        questions: [
+          {
+            question: 'AOC系統創立於哪一年？',
+            options: ['1920年', '1935年', '1945年', '1955年'],
+            correctAnswer: 1,
+            explanation: 'AOC系統創立於1935年，是為了保護法國葡萄酒產區免受假酒衝擊而建立的。'
+          },
+          {
+            question: 'AOC系統的四大支柱不包括以下哪項？',
+            options: ['地理邊界', '葡萄品種', '價格控制', '釀造工藝'],
+            correctAnswer: 2,
+            explanation: 'AOC系統的四大支柱是地理邊界、葡萄品種、栽培技術和釀造工藝，不包括價格控制。'
+          },
+          {
+            question: '波爾多AOC體系中，哪個是最基礎的等級？',
+            options: ['Pauillac AOC', 'Haut-Médoc AOC', 'Bordeaux AOC', 'Médoc AOC'],
+            correctAnswer: 2,
+            explanation: 'Bordeaux AOC是波爾多最基礎的地區級AOC，覆蓋整個波爾多地區。'
+          },
+          {
+            question: '負責監督AOC標準的法國機構是？',
+            options: ['CIVB', 'INAO', 'OIV', 'BNIC'],
+            correctAnswer: 1,
+            explanation: 'INAO（國家原產地與品質研究院）是負責制定和監督AOC標準的官方機構。'
+          },
+          {
+            question: '下列哪個產區同時生產紅酒和白酒？',
+            options: ['Pauillac', 'Pomerol', 'Graves', 'Saint-Julien'],
+            correctAnswer: 2,
+            explanation: 'Graves AOC是波爾多少數同時生產高品質紅酒和白酒的產區之一。'
+          }
+        ]
+      }
+    }
+  },
+
+  'l1-7': {
+    title: '品嚐技巧基礎',
+    fullContent: {
+      introduction: `
+        品酒是一門融合感官體驗與理性分析的藝術。掌握正確的品酒技巧不僅能提升您對葡萄酒的理解和欣賞能力，
+        更能幫助您建立自己的味覺記憶庫，成為真正的葡萄酒鑑賞家。本課程將從基礎的感官訓練開始，
+        系統性地教授專業品酒師使用的技巧和方法。
+      `,
+      sections: [
+        {
+          id: 'tasting-fundamentals',
+          title: '品酒基礎原理與準備',
+          content: `
+            <h3>👁️ 視覺觀察技巧</h3>
+            <p>品酒的第一步是用眼睛觀察，這能提供關於酒款品質和特性的重要線索：</p>
+            
+            <h4>觀察環境設置</h4>
+            <ul>
+              <li><strong>光線要求：</strong>自然光或白色燈光，避免有色光源</li>
+              <li><strong>背景選擇：</strong>白色背景最佳，便於觀察顏色變化</li>
+              <li><strong>酒杯角度：</strong>45度傾斜，觀察酒液邊緣</li>
+              <li><strong>觀察距離：</strong>眼睛距離酒杯30-40公分</li>
+            </ul>
+            
+            <h4>顏色分析要點</h4>
+            <div class="color-analysis">
+              <div class="wine-type">
+                <h5>🍷 紅酒顏色判讀</h5>
+                <ul>
+                  <li><strong>深紫紅色：</strong>年輕的濃郁紅酒，單寧豐富</li>
+                  <li><strong>櫻桃紅色：</strong>中等酒體，平衡良好</li>
+                  <li><strong>石榴紅色：</strong>開始成熟的紅酒</li>
+                  <li><strong>磚紅色：</strong>充分陳年的成熟紅酒</li>
+                  <li><strong>琥珀色邊緣：</strong>老年份葡萄酒的標誌</li>
+                </ul>
+              </div>
+              
+              <div class="wine-type">
+                <h5>🥂 白酒顏色特徵</h5>
+                <ul>
+                  <li><strong>近乎透明：</strong>年輕清爽的白酒</li>
+                  <li><strong>淺檸檬色：</strong>典型的干白葡萄酒</li>
+                  <li><strong>深金黃色：</strong>橡木桶陳釀或貴腐甜酒</li>
+                  <li><strong>琥珀色調：</strong>長期陳年的白酒</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h4>清澈度與其他視覺要素</h4>
+            <ul>
+              <li><strong>透明度：</strong>優質酒應該清澈透明</li>
+              <li><strong>濃郁度：</strong>顏色深淺反映葡萄品種和釀造工藝</li>
+              <li><strong>酒腿觀察：</strong>搖晃後的酒液流淌速度顯示酒精度和甘油含量</li>
+            </ul>
+          `,
+          interactive: 'color-identification-game'
+        },
+        {
+          id: 'aroma-analysis',
+          title: '香氣識別與分析技巧',
+          content: `
+            <h3>👃 嗅覺訓練方法</h3>
+            <p>香氣是葡萄酒最複雜也最迷人的部分，需要系統性的訓練來提升識別能力：</p>
+            
+            <h4>聞香的正確步驟</h4>
+            <ol>
+              <li><strong>靜止聞香：</strong>將鼻子放在杯緣，輕柔地吸氣</li>
+              <li><strong>搖杯聞香：</strong>輕搖酒杯釋放更多香氣分子</li>
+              <li><strong>深度聞香：</strong>深吸一口氣，讓香氣充滿鼻腔</li>
+              <li><strong>間歇休息：</strong>避免嗅覺疲勞，每次聞香後休息片刻</li>
+            </ol>
+            
+            <h4>三層香氣結構</h4>
+            <div class="aroma-layers">
+              <div class="aroma-level">
+                <h5>🌸 一級香氣（Primary Aromas）</h5>
+                <p>來自葡萄品種本身的天然香氣</p>
+                <ul>
+                  <li><strong>果香類：</strong>黑莓、櫻桃、柑橘、蘋果</li>
+                  <li><strong>花香類：</strong>紫羅蘭、玫瑰、茉莉</li>
+                  <li><strong>草本類：</strong>薄荷、迷迭香、青椒</li>
+                  <li><strong>礦物類：</strong>石墨、濕石頭、海風</li>
+                </ul>
+              </div>
+              
+              <div class="aroma-level">
+                <h5>🍯 二級香氣（Secondary Aromas）</h5>
+                <p>發酵過程中產生的香氣</p>
+                <ul>
+                  <li><strong>酵母香：</strong>麵包、餅乾、奶油</li>
+                  <li><strong>發酵香：</strong>蜂蜜、堅果、香草</li>
+                  <li><strong>乳酸香：</strong>奶油、優格、起司</li>
+                </ul>
+              </div>
+              
+              <div class="aroma-level">
+                <h5>🌰 三級香氣（Tertiary Aromas）</h5>
+                <p>陳年過程中發展出的複雜香氣</p>
+                <ul>
+                  <li><strong>橡木香：</strong>香草、椰子、烘焙香</li>
+                  <li><strong>陳年香：</strong>皮革、雪茄盒、蘑菇</li>
+                  <li><strong>氧化香：</strong>堅果、焦糖、蜂蜜</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h4>香氣描述技巧</h4>
+            <ul>
+              <li><strong>建立香氣記憶庫：</strong>經常聞不同的天然香料和水果</li>
+              <li><strong>使用精確詞彙：</strong>避免籠統描述，具體描述香氣特徵</li>
+              <li><strong>強度評估：</strong>輕微、中等、強烈、非常強烈</li>
+              <li><strong>持久度觀察：</strong>香氣在杯中的持續時間</li>
+            </ul>
+          `,
+          interactive: 'aroma-wheel-training'
+        },
+        {
+          id: 'taste-technique',
+          title: '口感品評與味覺分析',
+          content: `
+            <h3>👅 品嚐技術要領</h3>
+            <p>口感品評是品酒過程的核心，需要調動所有味覺感受器來全面分析酒款：</p>
+            
+            <h4>正確的品嚐步驟</h4>
+            <ol>
+              <li><strong>適量入口：</strong>約10-15毫升，覆蓋整個舌面</li>
+              <li><strong>在口中攪動：</strong>讓酒液接觸所有味蕾區域</li>
+              <li><strong>吸氣技巧：</strong>輕吸空氣增強香氣感受</li>
+              <li><strong>充分體驗：</strong>在口中停留10-15秒</li>
+              <li><strong>吞嚥或吐出：</strong>專業品酒通常選擇吐出</li>
+            </ol>
+            
+            <h4>五大味覺要素分析</h4>
+            <div class="taste-elements">
+              <div class="taste-component">
+                <h5>🍯 甜度（Sweetness）</h5>
+                <ul>
+                  <li><strong>檢測位置：</strong>舌尖最敏感</li>
+                  <li><strong>分級標準：</strong>骨干型、半干型、半甜型、甜型</li>
+                  <li><strong>來源分析：</strong>殘糖、酒精、甘油的甜味感受</li>
+                </ul>
+              </div>
+              
+              <div class="taste-component">
+                <h5>🍋 酸度（Acidity）</h5>
+                <ul>
+                  <li><strong>檢測位置：</strong>舌頭兩側</li>
+                  <li><strong>重要作用：</strong>提供清新感，平衡甜度</li>
+                  <li><strong>品質指標：</strong>優質酸度應該清新而不刺激</li>
+                </ul>
+              </div>
+              
+              <div class="taste-component">
+                <h5>🫖 單寧（Tannins）</h5>
+                <ul>
+                  <li><strong>感受特徵：</strong>乾澀、收斂感</li>
+                  <li><strong>檢測位置：</strong>牙齦和舌頭中後部</li>
+                  <li><strong>品質評估：</strong>細膩絲滑 vs 粗糙乾澀</li>
+                  <li><strong>陳年潛力：</strong>高品質單寧是長期陳年的保證</li>
+                </ul>
+              </div>
+              
+              <div class="taste-component">
+                <h5>🔥 酒精度（Alcohol）</h5>
+                <ul>
+                  <li><strong>感受方式：</strong>溫熱感、重量感</li>
+                  <li><strong>平衡標準：</strong>與其他要素和諧統一</li>
+                  <li><strong>品質判斷：</strong>不應有灼熱或突兀感</li>
+                </ul>
+              </div>
+              
+              <div class="taste-component">
+                <h5>⚖️ 酒體（Body）</h5>
+                <ul>
+                  <li><strong>輕盈酒體：</strong>如水般輕盈</li>
+                  <li><strong>中等酒體：</strong>如牛奶般的重量感</li>
+                  <li><strong>飽滿酒體：</strong>如奶油般厚重</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h4>餘韻分析技巧</h4>
+            <p>吞嚥後的餘韻是評估酒款品質的重要指標：</p>
+            <ul>
+              <li><strong>長度評估：</strong>短（<3秒）、中等（3-10秒）、長（>10秒）</li>
+              <li><strong>變化觀察：</strong>餘韻中香氣和味道的演變</li>
+              <li><strong>品質指標：</strong>優質酒款應有持久且愉悅的餘韻</li>
+              <li><strong>平衡度：</strong>餘韻應與整體風格保持一致</li>
+            </ul>
+          `,
+          interactive: 'taste-training-simulator'
+        }
+      ],
+      practicalApplications: [
+        {
+          title: '建立個人品酒詞彙庫',
+          description: '建立屬於自己的香氣和味道描述詞彙，提升品酒表達能力和記憶準確度。'
+        },
+        {
+          title: '盲品訓練練習',
+          description: '通過盲品訓練提升感官敏感度，學會僅憑感官判斷葡萄酒的品種、產區和品質。'
+        },
+        {
+          title: '品酒筆記系統',
+          description: '建立系統化的品酒記錄方法，包含視覺、嗅覺、味覺的完整分析框架。'
+        }
+      ],
+      assessment: {
+        questions: [
+          {
+            question: '品酒時觀察酒液顏色的最佳角度是？',
+            options: ['垂直向下', '30度傾斜', '45度傾斜', '水平觀察'],
+            correctAnswer: 2,
+            explanation: '45度傾斜是觀察葡萄酒顏色的最佳角度，可以清楚看到酒液的顏色深淺和邊緣變化。'
+          },
+          {
+            question: '葡萄酒的三級香氣主要來自於？',
+            options: ['葡萄品種', '發酵過程', '陳年過程', '土壤條件'],
+            correctAnswer: 2,
+            explanation: '三級香氣（Tertiary Aromas）是在陳年過程中發展出的複雜香氣，包括橡木、皮革等特徵。'
+          },
+          {
+            question: '單寧主要在口腔的哪個部位被感受到？',
+            options: ['舌尖', '舌頭兩側', '牙齦和舌頭中後部', '喉嚨'],
+            correctAnswer: 2,
+            explanation: '單寧主要在牙齦和舌頭中後部被感受到，表現為乾澀和收斂感。'
+          },
+          {
+            question: '優質葡萄酒的餘韻長度通常應該？',
+            options: ['少於3秒', '3-5秒', '5-10秒', '超過10秒'],
+            correctAnswer: 3,
+            explanation: '優質葡萄酒的餘韻通常超過10秒，且應該是愉悅和複雜的。'
+          },
+          {
+            question: '品酒時每次入口的適當分量約為？',
+            options: ['5毫升', '10-15毫升', '20-25毫升', '30毫升'],
+            correctAnswer: 1,
+            explanation: '品酒時每次入口約10-15毫升最為適宜，既能充分接觸味蕾又不會過量。'
+          }
+        ]
+      }
+    }
+  },
+
+  'l1-8': {
+    title: 'Level 1 綜合評量',
+    fullContent: {
+      introduction: `
+        恭喜您完成了Level 1的所有基礎課程！這個綜合評量將測試您對波爾多葡萄酒基礎知識的掌握程度，
+        包括氣候環境、AOC系統、品嚐技巧等核心內容。通過這個評量，您將獲得Level 1認證，
+        並為進入更高階的學習做好準備。
+      `,
+      sections: [
+        {
+          id: 'knowledge-review',
+          title: '知識回顧與整合',
+          content: `
+            <h3>📚 Level 1 核心知識點</h3>
+            <p>在進行綜合評量前，讓我們回顧Level 1涵蓋的所有重要概念：</p>
+            
+            <h4>🌍 波爾多氣候與環境基礎</h4>
+            <ul>
+              <li><strong>氣候特徵：</strong>溫帶海洋性氣候，年均溫13-14°C</li>
+              <li><strong>地理優勢：</strong>Gironde河口調節、大西洋影響</li>
+              <li><strong>微氣候差異：</strong>左岸vs右岸的氣候特色</li>
+              <li><strong>環境因子：</strong>土壤、地形、水文系統的影響</li>
+            </ul>
+            
+            <h4>🏛️ AOC系統基礎</h4>
+            <ul>
+              <li><strong>歷史起源：</strong>1935年創立的原產地保護系統</li>
+              <li><strong>四大支柱：</strong>地理邊界、葡萄品種、栽培技術、釀造工藝</li>
+              <li><strong>分級體系：</strong>AOC/AOP、IGP、Vin de France三級架構</li>
+              <li><strong>波爾多結構：</strong>地區級、次區域級、村莊級AOC</li>
+            </ul>
+            
+            <h4>🍷 品嚐技巧基礎</h4>
+            <ul>
+              <li><strong>視覺觀察：</strong>顏色、清澈度、濃郁度評估</li>
+              <li><strong>香氣識別：</strong>一二三級香氣的分類與描述</li>
+              <li><strong>口感分析：</strong>甜度、酸度、單寧、酒精度、酒體</li>
+              <li><strong>品酒流程：</strong>專業品酒的標準步驟</li>
+            </ul>
+            
+            <h3>🎯 學習目標達成檢核</h3>
+            <div class="learning-objectives">
+              <div class="objective-group">
+                <h5>✅ 基礎知識掌握</h5>
+                <ul>
+                  <li>理解波爾多產區的地理與氣候特色</li>
+                  <li>掌握AOC系統的基本概念與運作</li>
+                  <li>學會基礎的葡萄酒品嚐技巧</li>
+                </ul>
+              </div>
+              
+              <div class="objective-group">
+                <h5>🔍 實用技能培養</h5>
+                <ul>
+                  <li>能夠解讀波爾多葡萄酒標</li>
+                  <li>具備基本的感官品評能力</li>
+                  <li>建立系統性的學習筆記</li>
+                </ul>
+              </div>
+            </div>
+          `,
+          interactive: 'knowledge-mind-map'
+        },
+        {
+          id: 'practical-assessment',
+          title: '實務應用評量',
+          content: `
+            <h3>🔬 情境應用測試</h3>
+            <p>以下情境題將測試您運用所學知識解決實際問題的能力：</p>
+            
+            <h4>情境一：選酒顧問</h4>
+            <div class="scenario">
+              <p><strong>情境描述：</strong>朋友想要購買一款適合收藏的波爾多紅酒，預算中等，希望您提供建議。</p>
+              <h5>需要考慮的因素：</h5>
+              <ul>
+                <li>AOC等級對品質的影響</li>
+                <li>不同產區的陳年潛力</li>
+                <li>年份與氣候條件的關係</li>
+                <li>價格與品質的平衡</li>
+              </ul>
+            </div>
+            
+            <h4>情境二：品酒活動主持</h4>
+            <div class="scenario">
+              <p><strong>情境描述：</strong>您被邀請主持一場波爾多葡萄酒品酒會，需要引導參與者進行專業品酒。</p>
+              <h5>需要掌握的技能：</h5>
+              <ul>
+                <li>正確的品酒步驟指導</li>
+                <li>香氣和味覺的描述技巧</li>
+                <li>酒款背景知識介紹</li>
+                <li>互動引導與問題解答</li>
+              </ul>
+            </div>
+            
+            <h4>情境三：產區特色解說</h4>
+            <div class="scenario">
+              <p><strong>情境描述：</strong>遊客詢問左岸和右岸葡萄酒的差異，您需要提供專業而易懂的解釋。</p>
+              <h5>解說重點：</h5>
+              <ul>
+                <li>氣候條件的差異影響</li>
+                <li>土壤類型與葡萄品種適性</li>
+                <li>酒款風格特色對比</li>
+                <li>代表性產區與酒莊介紹</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'scenario-simulation'
+        },
+        {
+          id: 'certification-exam',
+          title: 'Level 1 認證考試',
+          content: `
+            <h3>🏆 認證考試說明</h3>
+            <p>Level 1認證考試包含選擇題、情境分析題和實務應用題，全面評估您的學習成果。</p>
+            
+            <h4>考試範圍與比重</h4>
+            <div class="exam-structure">
+              <div class="exam-section">
+                <h5>📊 選擇題 (40%)</h5>
+                <ul>
+                  <li>波爾多氣候與地理知識</li>
+                  <li>AOC系統基本概念</li>
+                  <li>品酒技巧基礎理論</li>
+                  <li>產區分級與特色</li>
+                </ul>
+              </div>
+              
+              <div class="exam-section">
+                <h5>🎯 情境分析題 (35%)</h5>
+                <ul>
+                  <li>酒標解讀與產區判斷</li>
+                  <li>品酒描述與分析</li>
+                  <li>選酒建議與理由說明</li>
+                  <li>產區特色比較</li>
+                </ul>
+              </div>
+              
+              <div class="exam-section">
+                <h5>✍️ 實務應用題 (25%)</h5>
+                <ul>
+                  <li>品酒筆記撰寫</li>
+                  <li>配餐建議制定</li>
+                  <li>收藏計畫規劃</li>
+                  <li>知識整合運用</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h4>評分標準</h4>
+            <ul>
+              <li><strong>優秀 (90-100分)：</strong>知識掌握扎實，應用能力出色</li>
+              <li><strong>良好 (80-89分)：</strong>基礎知識充實，具備實用技能</li>
+              <li><strong>及格 (70-79分)：</strong>基本概念正確，需加強應用</li>
+              <li><strong>不及格 (<70分)：</strong>建議複習後重新考試</li>
+            </ul>
+            
+            <h4>認證效益</h4>
+            <ul>
+              <li>📜 獲得Level 1 波爾多葡萄酒基礎認證</li>
+              <li>🎓 解鎖Level 2 進階課程學習資格</li>
+              <li>💼 增強個人履歷與專業形象</li>
+              <li>🌟 加入學習社群與同好交流</li>
+            </ul>
+          `,
+          interactive: 'certification-exam'
+        }
+      ],
+      practicalApplications: [
+        {
+          title: '個人學習檔案建立',
+          description: '整理Level 1的所有學習筆記，建立個人知識庫，為持續學習奠定基礎。'
+        },
+        {
+          title: '品酒活動規劃',
+          description: '運用所學知識規劃一場波爾多主題品酒會，實踐理論與實務的結合。'
+        },
+        {
+          title: '進階學習路徑制定',
+          description: '根據Level 1的學習經驗，制定個人化的Level 2學習計畫和目標。'
+        }
+      ],
+      assessment: {
+        title: 'Level 1 綜合認證考試',
+        timeLimit: 90,
+        passingScore: 70,
+        questions: [
+          {
+            question: '波爾多地區的年平均溫度約為多少？',
+            options: ['11-12°C', '13-14°C', '15-16°C', '17-18°C'],
+            correctAnswer: 1,
+            explanation: '波爾多享有溫帶海洋性氣候，年均溫約13-14°C，非常適合葡萄種植。',
+            category: '氣候環境'
+          },
+          {
+            question: 'AOC系統創立的主要目的是什麼？',
+            options: ['增加稅收', '保護產區特色', '提高產量', '降低成本'],
+            correctAnswer: 1,
+            explanation: 'AOC系統創立於1935年，主要目的是保護法國葡萄酒的產區特色和傳統工藝。',
+            category: 'AOC系統'
+          },
+          {
+            question: '品酒時觀察酒液顏色的最佳環境是？',
+            options: ['暖色燈光下', '自然光或白光下', '彩色燈光下', '昏暗環境中'],
+            correctAnswer: 1,
+            explanation: '自然光或白色燈光提供最準確的顏色判讀環境，避免光線干擾對顏色的影響。',
+            category: '品嚐技巧'
+          },
+          {
+            question: 'Pauillac AOC位於波爾多的哪個區域？',
+            options: ['右岸', '左岸', 'Entre-Deux-Mers', 'Sauternais'],
+            correctAnswer: 1,
+            explanation: 'Pauillac是波爾多左岸最重要的村莊級AOC之一，以生產頂級紅酒聞名。',
+            category: '產區知識'
+          },
+          {
+            question: '葡萄酒的三級香氣主要來自於？',
+            options: ['葡萄品種', '發酵過程', '陳年過程', '土壤特性'],
+            correctAnswer: 2,
+            explanation: '三級香氣(Tertiary Aromas)在陳年過程中發展，包括橡木、皮革等複雜香氣。',
+            category: '品嚐技巧'
+          },
+          {
+            question: '下列哪個是波爾多地區級AOC？',
+            options: ['Margaux', 'Saint-Émilion', 'Bordeaux', 'Pomerol'],
+            correctAnswer: 2,
+            explanation: 'Bordeaux AOC是波爾多最基礎的地區級AOC，覆蓋整個波爾多地區。',
+            category: 'AOC系統'
+          },
+          {
+            question: 'Gironde河口對波爾多氣候的主要作用是？',
+            options: ['提供灌溉', '溫度調節', '防止洪水', '增加濕度'],
+            correctAnswer: 1,
+            explanation: 'Gironde河口起到重要的溫度調節作用，夏季降溫、冬季保溫。',
+            category: '氣候環境'
+          },
+          {
+            question: '品酒時單寧主要在口腔的哪個部位被感受到？',
+            options: ['舌尖', '舌頭兩側', '牙齦和舌頭中後部', '喉嚨深處'],
+            correctAnswer: 2,
+            explanation: '單寧主要在牙齦和舌頭中後部被感受到，表現為乾澀和收斂感。',
+            category: '品嚐技巧'
+          },
+          {
+            question: '左岸和右岸葡萄酒風格差異的主要原因是？',
+            options: ['釀酒技術不同', '氣候土壤差異', '葡萄品種相同', '陳年時間不同'],
+            correctAnswer: 1,
+            explanation: '左岸右岸的氣候微差異和土壤類型不同，造就了不同的葡萄品種適性和酒款風格。',
+            category: '產區知識'
+          },
+          {
+            question: '優質葡萄酒的餘韻長度通常應該？',
+            options: ['3秒以內', '3-5秒', '5-10秒', '10秒以上'],
+            correctAnswer: 3,
+            explanation: '優質葡萄酒通常具有10秒以上的持久餘韻，且應該是愉悅和複雜的。',
+            category: '品嚐技巧'
+          }
+        ]
+      }
+    }
+  },
+
+  'l2-5': {
+    title: '微氣候與風土條件深度分析',
+    fullContent: {
+      introduction: `
+        在波爾多的大氣候框架內，每個產區、每個葡萄園，甚至每個地塊都有其獨特的微氣候特徵。
+        這些細微差別正是造就波爾多葡萄酒風格多樣性的關鍵因素。
+      `,
+      sections: [
+        {
+          id: 'left-right-bank-climate',
+          title: '左岸與右岸的微氣候差異',
+          content: `
+            <h3>左岸特徵</h3>
+            <ul>
+              <li><strong>海洋影響更直接：</strong>受大西洋影響更明顯，氣候更加穩定</li>
+              <li><strong>日夜溫差較小：</strong>海洋調節作用降低極端溫度</li>
+              <li><strong>春季回暖較早：</strong>葡萄發芽期相對提前</li>
+              <li><strong>秋季延遲降溫：</strong>成熟季延長，有利於晚熟品種</li>
+            </ul>
+
+            <h3>右岸特徵</h3>
+            <ul>
+              <li><strong>大陸性氣候特徵：</strong>受內陸氣團影響較大</li>
+              <li><strong>日夜溫差較大：</strong>有利於香氣物質積累</li>
+              <li><strong>春季霜凍風險：</strong>地勢較高，冷空氣滯留</li>
+              <li><strong>成熟期提前：</strong>Merlot等早熟品種表現優異</li>
+            </ul>
+
+            <h3>實際影響</h3>
+            <p>這些差異導致：</p>
+            <ul>
+              <li>左岸更適合晚熟的Cabernet Sauvignon</li>
+              <li>右岸更適合早熟的Merlot</li>
+              <li>不同的採收時間和釀造策略</li>
+            </ul>
+          `,
+          interactive: 'bank-comparison-climate-map'
+        },
+        {
+          id: 'topography-influence',
+          title: '地形地貌的影響',
+          content: `
+            <h3>坡向的重要性</h3>
+            <h4>南向坡面</h4>
+            <ul>
+              <li>全日照時間最長</li>
+              <li>葡萄成熟度最佳</li>
+              <li>適合晚熟品種</li>
+            </ul>
+
+            <h4>東向坡面</h4>
+            <ul>
+              <li>上午陽光充足</li>
+              <li>下午避免過熱</li>
+              <li>保持良好酸度</li>
+            </ul>
+
+            <h4>西向坡面</h4>
+            <ul>
+              <li>下午日照強烈</li>
+              <li>延長成熟期</li>
+              <li>需注意過度成熟風險</li>
+            </ul>
+
+            <h3>海拔高度影響</h3>
+            <p>波爾多雖然整體地勢不高，但微小的海拔差異仍有影響：</p>
+            <ul>
+              <li><strong>10-30米：</strong>大部分優質葡萄園的海拔範圍</li>
+              <li><strong>排水優勢：</strong>高地排水較好，避免根部積水</li>
+              <li><strong>霜凍保護：</strong>冷空氣下沉，高地霜凍風險較低</li>
+            </ul>
+
+            <h3>河流與水體的局部影響</h3>
+            <ul>
+              <li><strong>晨霧形成：</strong>有利於某些甜酒的貴腐菌發展</li>
+              <li><strong>空氣流動：</strong>河谷風帶來空氣循環</li>
+              <li><strong>濕度調節：</strong>局部濕度的細微變化</li>
+            </ul>
+          `,
+          interactive: 'topography-3d-viewer'
+        },
+        {
+          id: 'extreme-weather',
+          title: '極端天氣風險',
+          content: `
+            <h3>春霜風險</h3>
+            <p><strong>發生條件：</strong>4-5月清朗無雲的夜晚，輻射冷卻導致近地面溫度驟降</p>
+            <p><strong>高風險區域：</strong></p>
+            <ul>
+              <li>低洼地區：冷空氣滯留</li>
+              <li>右岸高原：夜間輻射冷卻強烈</li>
+              <li>河谷底部：冷空氣匯聚</li>
+            </ul>
+            <p><strong>防護措施：</strong></p>
+            <ul>
+              <li>燃燒加溫器或蠟燭</li>
+              <li>噴灑系統形成冰膜保護</li>
+              <li>風扇攪拌空氣</li>
+              <li>選擇較晚發芽的品種或克隆</li>
+            </ul>
+
+            <h3>冰雹威脅</h3>
+            <p><strong>發生特點：</strong>夏季雷暴天氣，局部性強但破壞力大</p>
+            <p><strong>高風險區域：</strong></p>
+            <ul>
+              <li>Graves產區北部</li>
+              <li>Entre-Deux-Mers東部</li>
+              <li>右岸聖愛美濃周邊</li>
+            </ul>
+            <p><strong>應對策略：</strong></p>
+            <ul>
+              <li>防雹網安裝</li>
+              <li>氣象預警系統</li>
+              <li>保險保障</li>
+              <li>多地塊分散風險</li>
+            </ul>
+
+            <h3>乾旱壓力</h3>
+            <p><strong>近年趨勢：</strong>夏季乾旱頻率增加，持續時間延長</p>
+            <p><strong>不同產區應對能力：</strong></p>
+            <ul>
+              <li><strong>黏土產區：</strong>保水能力強，抗旱性較好</li>
+              <li><strong>礫石產區：</strong>排水過快，需要灌溉補充</li>
+              <li><strong>沙質產區：</strong>最易受乾旱影響</li>
+            </ul>
+          `,
+          interactive: 'weather-risk-assessment-tool'
+        }
+      ],
+      caseStudies: [
+        {
+          title: '2003年熱浪事件分析',
+          description: '分析2003年歐洲熱浪對波爾多不同產區的差異化影響',
+          content: '左岸由於海洋調節作用，受影響相對較小；右岸則經歷了更嚴重的水分壓力...'
+        },
+        {
+          title: '1991年春霜災害',
+          description: '研究1991年4月春霜對波爾多造成的歷史性損失',
+          content: '這次春霜事件導致產量下降70%，不同地塊的損失程度反映了微地形的重要性...'
+        }
+      ]
+    }
+  },
+
+  'l3-1': {
+    title: '氣候變遷對波爾多的影響與應對',
+    fullContent: {
+      introduction: `
+        全球氣候變遷正在深刻改變波爾多葡萄酒業的面貌。從傳統的風土條件到現代的適應策略，
+        本課程將帶您深入了解這一複雜而重要的議題。
+      `,
+      sections: [
+        {
+          id: 'historical-trends',
+          title: '歷史氣候變化趨勢',
+          content: `
+            <h3>溫度變化數據</h3>
+            <p><strong>過去50年趨勢：</strong></p>
+            <ul>
+              <li>年平均溫度上升約1.1°C</li>
+              <li>夏季最高溫度增加1.5-2°C</li>
+              <li>生長季（4-10月）平均延長15天</li>
+              <li>極端高溫事件頻率增加3倍</li>
+            </ul>
+
+            <h3>降水模式變化</h3>
+            <ul>
+              <li>年總降水量略有減少（-5%）</li>
+              <li>降水分佈更不均勻</li>
+              <li>極端降雨事件增加</li>
+              <li>乾旱期延長，強度增加</li>
+            </ul>
+
+            <h3>對葡萄生長週期的影響</h3>
+            <h4>發芽期提前</h4>
+            <ul>
+              <li>平均提前10-14天</li>
+              <li>增加春霜風險</li>
+              <li>打亂傳統農事安排</li>
+            </ul>
+
+            <h4>成熟期加速</h4>
+            <ul>
+              <li>成熟期提前2-3週</li>
+              <li>糖分積累過快</li>
+              <li>酸度下降明顯</li>
+              <li>酚類化合物發展不平衡</li>
+            </ul>
+
+            <h4>採收期調整</h4>
+            <ul>
+              <li>從9月底提前到8月底</li>
+              <li>夜間採收成為常態</li>
+              <li>分批採收更加精細</li>
+            </ul>
+          `,
+          interactive: 'climate-trend-visualizer'
+        },
+        {
+          id: 'winery-adaptations',
+          title: '酒莊應對策略',
+          content: `
+            <h3>葡萄園管理調整</h3>
+            
+            <h4>品種與克隆選擇</h4>
+            <ul>
+              <li><strong>晚熟品種回歸：</strong>重新關注Petit Verdot等品種</li>
+              <li><strong>耐熱克隆：</strong>選擇適應高溫的葡萄克隆</li>
+              <li><strong>試驗性種植：</strong>嘗試地中海品種的可能性</li>
+            </ul>
+
+            <h4>種植密度與株型調整</h4>
+            <ul>
+              <li>適度降低種植密度</li>
+              <li>調整藤蔓訓練系統</li>
+              <li>增加葉幕厚度防曬</li>
+              <li>提高結果部位高度</li>
+            </ul>
+
+            <h4>土壤與水分管理</h4>
+            <ul>
+              <li><strong>覆蓋作物：</strong>保持土壤濕度和溫度</li>
+              <li><strong>精準灌溉：</strong>滴灌系統的廣泛採用</li>
+              <li><strong>土壤改良：</strong>增加有機質含量</li>
+              <li><strong>深耕技術：</strong>促進根系深扎</li>
+            </ul>
+
+            <h3>釀造技術創新</h3>
+            
+            <h4>採收策略優化</h4>
+            <ul>
+              <li>夜間或清晨採收</li>
+              <li>快速冷卻處理</li>
+              <li>分批精準採收</li>
+              <li>即時品質檢測</li>
+            </ul>
+
+            <h4>發酵條件控制</h4>
+            <ul>
+              <li>更精確的溫度控制</li>
+              <li>延長冷浸漬時間</li>
+              <li>調整發酵週期</li>
+              <li>酸度平衡技術</li>
+            </ul>
+
+            <h4>陳釀策略調整</h4>
+            <ul>
+              <li>縮短橡木桶陳釀時間</li>
+              <li>選擇更輕烘焙的橡木桶</li>
+              <li>調整調配比例</li>
+              <li>提早裝瓶釋放</li>
+            </ul>
+          `,
+          interactive: 'adaptation-strategy-simulator'
+        },
+        {
+          id: 'future-scenarios',
+          title: '未來情景預測',
+          content: `
+            <h3>2050年氣候預測</h3>
+            
+            <h4>溫度預測</h4>
+            <ul>
+              <li>年平均溫度再上升1-2°C</li>
+              <li>夏季極端高溫（>35°C）天數倍增</li>
+              <li>冬季更加溫和，低溫時數減少</li>
+            </ul>
+
+            <h4>降水預測</h4>
+            <ul>
+              <li>年降水量減少10-15%</li>
+              <li>夏季乾旱期延長至4-5個月</li>
+              <li>春秋季降水更加集中</li>
+              <li>極端天氣事件頻率增加</li>
+            </ul>
+
+            <h3>產區地圖重繪</h3>
+            
+            <h4>適宜性區劃變化</h4>
+            <ul>
+              <li><strong>優質區北移：</strong>傳統精品區域條件相對惡化</li>
+              <li><strong>高海拔優勢：</strong>較高地勢區域條件改善</li>
+              <li><strong>海岸帶優勢：</strong>海洋調節作用更加珍貴</li>
+              <li><strong>內陸挑戰：</strong>遠離水體區域壓力增大</li>
+            </ul>
+
+            <h4>品種適應性重評</h4>
+            <table border="1">
+              <tr><th>品種</th><th>當前適應性</th><th>2050年預測</th></tr>
+              <tr><td>Merlot</td><td>優秀</td><td>良好（需調整）</td></tr>
+              <tr><td>Cabernet Sauvignon</td><td>優秀</td><td>優秀（仍適宜）</td></tr>
+              <tr><td>Cabernet Franc</td><td>良好</td><td>優秀（條件改善）</td></tr>
+              <tr><td>Petit Verdot</td><td>一般</td><td>良好（重新受重視）</td></tr>
+            </table>
+
+            <h3>可持續發展路徑</h3>
+            
+            <h4>碳足跡管理</h4>
+            <ul>
+              <li>可再生能源使用</li>
+              <li>碳中和認證推廣</li>
+              <li>包裝材料環保化</li>
+              <li>運輸方式優化</li>
+            </ul>
+
+            <h4>生物多樣性保護</h4>
+            <ul>
+              <li>有機/生物動力法種植</li>
+              <li>生態廊道建設</li>
+              <li>天敵昆蟲保護</li>
+              <li>土壤微生物多樣性維護</li>
+            </ul>
+
+            <h4>技術創新方向</h4>
+            <ul>
+              <li>精準農業技術普及</li>
+              <li>人工智慧決策支援</li>
+              <li>基因技術合理應用</li>
+              <li>新材料包裝技術</li>
+            </ul>
+          `,
+          interactive: 'future-scenario-explorer'
+        }
+      ],
+      researchInsights: [
+        {
+          title: 'INRA研究報告摘要',
+          content: '法國國家農業研究院關於氣候變遷對波爾多影響的最新研究成果...'
+        },
+        {
+          title: '頂級酒莊案例分析',
+          content: '拉菲、瑪歌等一級酒莊如何應對氣候變遷挑戰的具體措施...'
+        }
+      ],
+      practicalApplications: [
+        {
+          title: '氣候數據分析實習',
+          description: '使用真實氣象數據分析特定年份的氣候特徵'
+        },
+        {
+          title: '適應策略制定',
+          description: '為虛擬酒莊制定未來20年的氣候適應計劃'
+        }
+      ]
+    }
+  },
+
+  // Médoc產區深度探索課程
+  'l2-1': {
+    title: 'Médoc產區深度探索',
+    fullContent: {
+      introduction: `
+        Médoc產區是波爾多左岸最負盛名的葡萄酒產區，以其卓越的紅酒聞名於世。
+        從海濱的低地到內陸的砂礫丘陵，Médoc的多樣化地形造就了風格各異的頂級佳釀。
+        本課程將帶您深入探索這片傳奇土地的地理、歷史、風土特色及其著名酒莊。
+      `,
+      sections: [
+        {
+          id: 'medoc-geography',
+          title: 'Médoc地理概覽',
+          content: `
+            <h3>地理位置與邊界</h3>
+            <p>Médoc產區位於波爾多左岸，是一個狹長的半島地形：</p>
+            <ul>
+              <li><strong>北界：</strong>延伸至大西洋海岸，北端到達Soulac-sur-Mer</li>
+              <li><strong>東界：</strong>沿著Gironde河口，長約80公里</li>
+              <li><strong>西界：</strong>面臨大西洋，海岸線綿延</li>
+              <li><strong>南界：</strong>與Haut-Médoc產區相接</li>
+            </ul>
+
+            <h3>地形特徵</h3>
+            <p>Médoc的地形呈現從海岸到內陸的漸進變化：</p>
+            <ul>
+              <li><strong>海岸平原：</strong>標高0-10米，主要為沖積土和沙土</li>
+              <li><strong>中部丘陵：</strong>標高10-40米，砂礫土壤為主</li>
+              <li><strong>東部河岸：</strong>面向Gironde河，擁有最佳朝向</li>
+            </ul>
+
+            <h4>與Haut-Médoc的區別</h4>
+            <p>Médoc與Haut-Médoc雖然地理相連，但在法定分級上有所區分：</p>
+            <ul>
+              <li>Médoc AOC：涵蓋整個半島北部較平坦地區</li>
+              <li>Haut-Médoc AOC：專指南部地勢較高、土質更優的區域</li>
+              <li>村莊級AOC：Saint-Estèphe、Pauillac、Saint-Julien、Margaux等均屬Haut-Médoc範圍</li>
+            </ul>
+          `,
+          interactive: 'medoc-map-explorer'
+        },
+        {
+          id: 'terroir-analysis',
+          title: '風土條件分析',
+          content: `
+            <h3>土壤類型多樣性</h3>
+            <p>Médoc的土壤構成複雜，主要源於不同地質年代的沉積：</p>
+            
+            <h4>主要土壤類型</h4>
+            <ul>
+              <li><strong>砂礫土（Graves）：</strong>
+                <ul>
+                  <li>分布：主要在東部靠近Gironde河的丘陵</li>
+                  <li>成分：石英、燧石砂礫，混合黏土和沙土</li>
+                  <li>特性：排水良好、保溫性佳、反射陽光</li>
+                  <li>適合品種：赤霞珠表現卓越</li>
+                </ul>
+              </li>
+              <li><strong>黏土-石灰岩：</strong>
+                <ul>
+                  <li>分布：內陸較高地勢</li>
+                  <li>特性：保水性強、養分豐富</li>
+                  <li>適合品種：梅洛適應性佳</li>
+                </ul>
+              </li>
+              <li><strong>沙土：</strong>
+                <ul>
+                  <li>分布：西部靠近海岸地區</li>
+                  <li>特性：排水極佳但保肥性差</li>
+                  <li>適合品種：早熟品種</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>微氣候特徵</h3>
+            <p>Médoc的微氣候受多重因素影響：</p>
+            
+            <h4>海洋性影響</h4>
+            <ul>
+              <li><strong>溫度調節：</strong>大西洋的溫和影響，減少極端氣溫</li>
+              <li><strong>濕度控制：</strong>海風帶來適度濕度，但需注意病害防治</li>
+              <li><strong>降雨模式：</strong>秋季降雨需要精準把控採收時機</li>
+            </ul>
+
+            <h4>河流效應</h4>
+            <ul>
+              <li>Gironde河口的熱緩衝效應</li>
+              <li>河流霧氣對清晨溫度的影響</li>
+              <li>河岸斜坡的優越排水條件</li>
+            </ul>
+          `,
+          interactive: 'soil-climate-analyzer'
+        },
+        {
+          id: 'appellations-hierarchy',
+          title: 'AOC分級體系',
+          content: `
+            <h3>Médoc AOC體系架構</h3>
+            <p>Médoc地區擁有複雜而嚴謹的AOC分級制度：</p>
+
+            <h4>區域級AOC</h4>
+            <ul>
+              <li><strong>Médoc AOC：</strong>
+                <ul>
+                  <li>範圍：覆蓋整個Médoc半島</li>
+                  <li>特色：主要為日常飲用的優質紅酒</li>
+                  <li>品種：赤霞珠、梅洛、品麗珠等</li>
+                </ul>
+              </li>
+              <li><strong>Haut-Médoc AOC：</strong>
+                <ul>
+                  <li>範圍：Médoc南部較優質地區</li>
+                  <li>地位：高於Médoc AOC的品質等級</li>
+                  <li>特色：更嚴格的產量限制和品質要求</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>村莊級AOC（Communales）</h4>
+            <p>Haut-Médoc內的六個頂級村莊AOC：</p>
+            <ul>
+              <li><strong>Saint-Estèphe：</strong>最北端，風格強勁、結構緊實</li>
+              <li><strong>Pauillac：</strong>擁有三個一級酒莊，力量與優雅並存</li>
+              <li><strong>Saint-Julien：</strong>均衡典雅，無一級酒莊但品質穩定</li>
+              <li><strong>Margaux：</strong>最南端，風格精緻、香氣複雜</li>
+              <li><strong>Moulis-en-Médoc：</strong>內陸位置，獨特的風土特色</li>
+              <li><strong>Listrac-Médoc：</strong>地勢較高，結構紮實</li>
+            </ul>
+
+            <h3>1855年分級制度</h3>
+            <p>1855年巴黎世博會建立的分級制度至今仍是Médoc品質的權威標準：</p>
+            
+            <h4>一級酒莊（Premiers Grands Crus Classés）</h4>
+            <ul>
+              <li>Château Lafite Rothschild（Pauillac）</li>
+              <li>Château Latour（Pauillac）</li>
+              <li>Château Margaux（Margaux）</li>
+              <li>Château Mouton Rothschild（Pauillac，1973年升級）</li>
+              <li>Château Haut-Brion（Pessac-Léognan，Graves例外）</li>
+            </ul>
+
+            <h4>分級特點</h4>
+            <ul>
+              <li>基於當時的市場價格和聲譽</li>
+              <li>160年來幾乎未曾改變</li>
+              <li>反映了terroir的持久價值</li>
+            </ul>
+          `,
+          interactive: 'aoc-hierarchy-game'
+        },
+        {
+          id: 'famous-estates',
+          title: '著名酒莊巡禮',
+          content: `
+            <h3>頂級酒莊深度解析</h3>
+            
+            <h4>Château Lafite Rothschild</h4>
+            <ul>
+              <li><strong>位置：</strong>Pauillac北部，面向Gironde河</li>
+              <li><strong>面積：</strong>107公頃葡萄園</li>
+              <li><strong>土壤：</strong>優質砂礫土，排水極佳</li>
+              <li><strong>品種比例：</strong>赤霞珠70%、梅洛25%、品麗珠3%、小維度2%</li>
+              <li><strong>風格特色：</strong>優雅細膩、香氣複雜、陳年潛力極佳</li>
+              <li><strong>歷史：</strong>自17世紀起即享有盛名，拿破崙時代的"王者之酒"</li>
+            </ul>
+
+            <h4>Château Latour</h4>
+            <ul>
+              <li><strong>位置：</strong>Pauillac東南部，Gironde河畔最佳位置</li>
+              <li><strong>面積：</strong>66公頃葡萄園</li>
+              <li><strong>土壤：</strong>深厚砂礫土，含豐富鐵質</li>
+              <li><strong>品種比例：</strong>赤霞珠75%、梅洛20%、品麗珠4%、小維度1%</li>
+              <li><strong>風格特色：</strong>力量強勁、結構緊實、需長期陳年</li>
+              <li><strong>特點：</strong>擁有標誌性的古塔，象徵堅固不變的品質</li>
+            </ul>
+
+            <h4>Château Margaux</h4>
+            <ul>
+              <li><strong>位置：</strong>Margaux村中心，地勢略高</li>
+              <li><strong>面積：</strong>87公頃葡萄園（82公頃紅酒，5公頃白酒）</li>
+              <li><strong>土壤：</strong>砂礫土為主，含石灰岩成分</li>
+              <li><strong>品種比例：</strong>赤霞珠75%、梅洛20%、品麗珠3%、小維度2%</li>
+              <li><strong>風格特色：</strong>精緻優雅、香氣迷人、單寧絲滑</li>
+              <li><strong>建築：</strong>新古典主義城堡，波爾多最美酒莊之一</li>
+            </ul>
+
+            <h4>Château Mouton Rothschild</h4>
+            <ul>
+              <li><strong>位置：</strong>Pauillac高地，與Lafite相鄰</li>
+              <li><strong>面積：</strong>84公頃葡萄園</li>
+              <li><strong>土壤：</strong>砂礫土，深度和質量俱佳</li>
+              <li><strong>品種比例：</strong>赤霞珠81%、梅洛15%、品麗珠3%、小維度1%</li>
+              <li><strong>風格特色：</strong>濃郁豐富、果味突出、現代感強</li>
+              <li><strong>特色：</strong>每年邀請藝術家設計酒標，文化價值獨特</li>
+            </ul>
+
+            <h3>其他重要酒莊</h3>
+            
+            <h4>二級酒莊精選</h4>
+            <ul>
+              <li><strong>Château Cos d'Estournel（Saint-Estèphe）：</strong>異國風情建築，品質卓越</li>
+              <li><strong>Château Ducru-Beaucaillou（Saint-Julien）：</strong>河岸絕佳位置</li>
+              <li><strong>Château Pichon Baron（Pauillac）：</strong>現代化經營典範</li>
+            </ul>
+
+            <h4>超二級酒莊（Super Seconds）</h4>
+            <ul>
+              <li>Château Pontet-Canet（Pauillac）：生物動力法先驅</li>
+              <li>Château Lynch-Bages（Pauillac）：性價比優秀</li>
+              <li>Château Palmer（Margaux）：風格獨特，接近一級水準</li>
+            </ul>
+          `,
+          interactive: 'estate-virtual-tour'
+        },
+        {
+          id: 'winemaking-styles',
+          title: '釀酒風格與技術',
+          content: `
+            <h3>Médoc釀酒哲學</h3>
+            <p>Médoc地區的釀酒傳統融合了centuries-old的經驗與現代科技：</p>
+
+            <h4>傳統釀造理念</h4>
+            <ul>
+              <li><strong>Terroir至上：</strong>尊重土地特性，讓葡萄自然表達</li>
+              <li><strong>調配藝術：</strong>巧妙融合不同品種的特色</li>
+              <li><strong>時間哲學：</strong>相信陳年能帶來更深層的複雜性</li>
+              <li><strong>世代傳承：</strong>技藝與知識的家族傳承</li>
+            </ul>
+
+            <h3>品種搭配策略</h3>
+            
+            <h4>主要品種角色</h4>
+            <ul>
+              <li><strong>赤霞珠（Cabernet Sauvignon）：</strong>
+                <ul>
+                  <li>角色：主導品種，提供結構和陳年潛力</li>
+                  <li>比例：通常50-80%</li>
+                  <li>特色：單寧強勁、酸度高、黑醋栗香氣</li>
+                  <li>適應性：在砂礫土上表現最佳</li>
+                </ul>
+              </li>
+              <li><strong>梅洛（Merlot）：</strong>
+                <ul>
+                  <li>角色：柔化單寧、增加果味和豐滿度</li>
+                  <li>比例：通常15-40%</li>
+                  <li>特色：早熟、柔順、李子和櫻桃香氣</li>
+                  <li>適應性：在黏土較多的土壤上表現佳</li>
+                </ul>
+              </li>
+              <li><strong>品麗珠（Cabernet Franc）：</strong>
+                <ul>
+                  <li>角色：增加香氣複雜性和優雅度</li>
+                  <li>比例：通常5-15%</li>
+                  <li>特色：草本植物香、胡椒味、良好酸度</li>
+                </ul>
+              </li>
+              <li><strong>小維度（Petit Verdot）：</strong>
+                <ul>
+                  <li>角色：增加顏色深度和辛香料味</li>
+                  <li>比例：通常1-5%</li>
+                  <li>特色：晚熟、高單寧、強烈香料味</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>釀造工藝特色</h3>
+            
+            <h4>採收與分選</h4>
+            <ul>
+              <li><strong>手工採摘：</strong>頂級酒莊堅持手工採收，確保品質</li>
+              <li><strong>多重分選：</strong>葡萄園→酒槽前→除梗後多層篩選</li>
+              <li><strong>分批處理：</strong>不同地塊、品種分別處理</li>
+            </ul>
+
+            <h4>發酵技術</h4>
+            <ul>
+              <li><strong>控溫發酵：</strong>精確控制發酵溫度28-30°C</li>
+              <li><strong>浸皮時間：</strong>通常20-30天，頂級酒款可達45天</li>
+              <li><strong>攪桶技術：</strong>傳統人工攪桶與現代技術結合</li>
+            </ul>
+
+            <h4>陳年工藝</h4>
+            <ul>
+              <li><strong>橡木桶選擇：</strong>
+                <ul>
+                  <li>法國橡木為主，以Vosges和Allier產區最受青睞</li>
+                  <li>新桶比例：頂級酒款通常60-100%新桶</li>
+                  <li>桶陳時間：12-24個月</li>
+                </ul>
+              </li>
+              <li><strong>調配藝術：</strong>
+                <ul>
+                  <li>時間：通常在陳年6-12個月後進行</li>
+                  <li>過程：品嚐數百個樣品，精確調配</li>
+                  <li>目標：達到完美平衡和複雜性</li>
+                </ul>
+              </li>
+            </ul>
+          `,
+          interactive: 'winemaking-simulator'
+        },
+        {
+          id: 'tasting-characteristics',
+          title: '品嚐特徵與陳年潛力',
+          content: `
+            <h3>Médoc葡萄酒的典型特徵</h3>
+            
+            <h4>外觀特色</h4>
+            <ul>
+              <li><strong>年輕時：</strong>深紫紅色，幾乎不透光</li>
+              <li><strong>成熟期：</strong>寶石紅色，邊緣開始出現磚紅色調</li>
+              <li><strong>完全成熟：</strong>磚紅色至褐紅色，透明度增加</li>
+            </ul>
+
+            <h4>香氣層次</h4>
+            <ul>
+              <li><strong>一級香氣（品種香）：</strong>
+                <ul>
+                  <li>黑醋栗、黑櫻桃、李子等黑色果實</li>
+                  <li>青椒、薄荷等植物性香氣（主要來自品麗珠）</li>
+                  <li>紫羅蘭等花香（優質年份特有）</li>
+                </ul>
+              </li>
+              <li><strong>二級香氣（發酵香）：</strong>
+                <ul>
+                  <li>酵母發酵帶來的麵包、奶油香氣</li>
+                  <li>蘋果酸乳酸發酵的奶香味</li>
+                </ul>
+              </li>
+              <li><strong>三級香氣（陳年香）：</strong>
+                <ul>
+                  <li>橡木桶帶來的香草、烘烤、煙燻味</li>
+                  <li>瓶陳產生的皮革、雪茄盒、松露香</li>
+                  <li>礦物質、石墨等土壤特徵香氣</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>口感結構</h4>
+            <ul>
+              <li><strong>酸度：</strong>中高酸度，提供清新感和陳年基礎</li>
+              <li><strong>單寧：</strong>年輕時較為強勁，隨陳年逐漸柔和</li>
+              <li><strong>酒體：</strong>中等至飽滿，質地優雅</li>
+              <li><strong>酒精度：</strong>通常12.5-14%，平衡良好</li>
+              <li><strong>餘韻：</strong>悠長複雜，頂級酒款可達數分鐘</li>
+            </ul>
+
+            <h3>不同村莊的風格差異</h3>
+            
+            <h4>Saint-Estèphe風格</h4>
+            <ul>
+              <li><strong>土壤影響：</strong>黏土比例較高，保水性強</li>
+              <li><strong>氣候特點：</strong>最靠北，相對涼爽</li>
+              <li><strong>酒款特色：</strong>結構緊實、單寧強勁、需長期陳年</li>
+              <li><strong>香氣特徵：</strong>礦物質感強，香料味突出</li>
+            </ul>
+
+            <h4>Pauillac風格</h4>
+            <ul>
+              <li><strong>土壤優勢：</strong>深厚砂礫土，排水完美</li>
+              <li><strong>品種表現：</strong>赤霞珠達到巔峰水準</li>
+              <li><strong>酒款特色：</strong>力量與優雅並存，平衡性卓越</li>
+              <li><strong>香氣特徵：</strong>黑醋栗為主，雪松木香氣明顯</li>
+            </ul>
+
+            <h4>Saint-Julien風格</h4>
+            <ul>
+              <li><strong>地理優勢：</strong>靠近Gironde河，排水良好</li>
+              <li><strong>一致性：</strong>品質穩定，風格統一</li>
+              <li><strong>酒款特色：</strong>均衡典雅、適飲性強</li>
+              <li><strong>香氣特徵：</strong>果味純正，花香怡人</li>
+            </ul>
+
+            <h4>Margaux風格</h4>
+            <ul>
+              <li><strong>土壤特色：</strong>砂礫土中含較多沙土</li>
+              <li><strong>氣候影響：</strong>相對溫暖，成熟期較早</li>
+              <li><strong>酒款特色：</strong>精緻優雅、香氣複雜、單寧絲滑</li>
+              <li><strong>香氣特徵：</strong>紫羅蘭香氣顯著，果香豐富</li>
+            </ul>
+
+            <h3>陳年潛力分析</h3>
+            
+            <h4>陳年階段劃分</h4>
+            <ul>
+              <li><strong>青澀期（0-5年）：</strong>單寧突出，需要醒酒，果味為主</li>
+              <li><strong>發展期（5-15年）：</strong>開始展現複雜性，平衡性改善</li>
+              <li><strong>成熟期（15-30年）：</strong>達到巔峰，香氣最複雜</li>
+              <li><strong>衰退期（30年+）：</strong>開始走下坡，但頂級年份仍可飲用</li>
+            </ul>
+
+            <h4>影響陳年的因素</h4>
+            <ul>
+              <li><strong>年份條件：</strong>優秀年份陳年潛力更強</li>
+              <li><strong>酒莊等級：</strong>頂級酒莊通常陳年潛力更長</li>
+              <li><strong>儲存條件：</strong>適當的溫濕度控制至關重要</li>
+              <li><strong>瓶型大小：</strong>大瓶裝陳年速度較慢</li>
+            </ul>
+          `,
+          interactive: 'tasting-comparison-tool'
+        }
+      ],
+      assessment: {
+        questions: [
+          {
+            id: 'medoc-geography-1',
+            type: 'multiple-choice',
+            question: 'Médoc產區的地理位置特徵是什麼？',
+            options: [
+              '位於波爾多右岸，面臨Dordogne河',
+              '位於波爾多左岸，是一個狹長的半島',
+              '位於波爾多中心，被兩河環繞',
+              '位於波爾多南部，靠近西班牙邊境'
+            ],
+            correct: 1,
+            explanation: 'Médoc位於波爾多左岸，是一個狹長的半島地形，東面Gironde河口，西臨大西洋，北端延伸到海岸。'
+          },
+          {
+            id: 'medoc-soil-2',
+            type: 'multiple-choice',
+            question: '在Médoc地區，哪種土壤類型最適合赤霞珠的生長？',
+            options: [
+              '純沙土',
+              '重黏土',
+              '砂礫土（Graves）',
+              '石灰岩土'
+            ],
+            correct: 2,
+            explanation: '砂礫土（Graves）排水良好、保溫性佳，能反射陽光幫助葡萄成熟，特別適合赤霞珠這種晚熟品種。'
+          },
+          {
+            id: 'medoc-aoc-3',
+            type: 'identification',
+            question: '請按照品質等級從高到低排列以下AOC：\n1. Médoc AOC\n2. Pauillac AOC\n3. Haut-Médoc AOC',
+            options: [
+              '1-2-3',
+              '2-3-1',
+              '3-1-2',
+              '2-1-3'
+            ],
+            correct: 1,
+            explanation: '品質等級從高到低：Pauillac AOC（村莊級）> Haut-Médoc AOC（次區域級）> Médoc AOC（區域級）。'
+          },
+          {
+            id: 'medoc-1855-4',
+            type: 'multiple-choice',
+            question: '1855年分級制度中，Médoc地區有幾個一級酒莊？',
+            options: [
+              '3個',
+              '4個',
+              '5個',
+              '6個'
+            ],
+            correct: 0,
+            explanation: 'Médoc地區有3個一級酒莊：Lafite、Latour、Margaux，另外Mouton在1973年升級。Haut-Brion雖是一級但位於Graves。'
+          },
+          {
+            id: 'medoc-blend-5',
+            type: 'multiple-choice',
+            question: '在Médoc的調配中，赤霞珠通常扮演什麼角色？',
+            options: [
+              '增加果味和柔順度',
+              '提供結構和陳年潛力',
+              '增加香氣複雜性',
+              '提升酒的顏色深度'
+            ],
+            correct: 1,
+            explanation: '赤霞珠是Médoc調配的主導品種，提供強勁的單寧結構、高酸度和優秀的陳年潛力。'
+          },
+          {
+            id: 'medoc-villages-6',
+            type: 'identification',
+            question: '以下哪個村莊AOC以精緻優雅、香氣複雜著稱？',
+            options: [
+              'Saint-Estèphe',
+              'Pauillac',
+              'Saint-Julien',
+              'Margaux'
+            ],
+            correct: 3,
+            explanation: 'Margaux以精緻優雅、香氣複雜、單寧絲滑的風格著稱，紫羅蘭香氣是其典型特徵。'
+          },
+          {
+            id: 'medoc-climate-7',
+            type: 'multiple-choice',
+            question: 'Médoc地區的微氣候主要受哪些因素影響？',
+            options: [
+              '僅受Gironde河影響',
+              '僅受大西洋影響',
+              '同時受大西洋和Gironde河影響',
+              '主要受內陸氣候影響'
+            ],
+            correct: 2,
+            explanation: 'Médoc的微氣候同時受到大西洋的溫和海洋性影響和Gironde河口的溫度調節作用影響。'
+          },
+          {
+            id: 'medoc-aging-8',
+            type: 'multiple-choice',
+            question: 'Médoc頂級紅酒的典型陳年潛力是多少年？',
+            options: [
+              '5-10年',
+              '10-20年',
+              '15-30年甚至更長',
+              '通常不超過15年'
+            ],
+            correct: 2,
+            explanation: 'Médoc頂級紅酒具有15-30年甚至更長的陳年潛力，優秀年份的一級酒莊作品可陳年數十年。'
+          },
+          {
+            id: 'medoc-estates-9',
+            type: 'identification',
+            question: '哪個酒莊以每年邀請藝術家設計酒標聞名？',
+            options: [
+              'Château Lafite Rothschild',
+              'Château Latour',
+              'Château Margaux',
+              'Château Mouton Rothschild'
+            ],
+            correct: 3,
+            explanation: 'Château Mouton Rothschild自1945年起每年邀請著名藝術家設計酒標，包括畢卡索、米羅、安迪·沃荷等。'
+          },
+          {
+            id: 'medoc-terroir-10',
+            type: 'multiple-choice',
+            question: 'Médoc釀酒哲學的核心理念是什麼？',
+            options: [
+              '追求最高產量',
+              '使用最新科技',
+              'Terroir至上，尊重土地特性',
+              '標準化生產流程'
+            ],
+            correct: 2,
+            explanation: 'Médoc釀酒哲學強調Terroir至上，尊重土地特性，讓葡萄自然表達，結合傳統工藝與現代技術。'
+          }
+        ],
+        passingScore: 70,
+        totalPoints: 100,
+        timeLimit: 25
+      },
+      practicalApplications: [
+        {
+          id: 'medoc-tasting-exercise',
+          title: 'Médoc四村風格品鑑練習',
+          description: '通過品嚐練習掌握Saint-Estèphe、Pauillac、Saint-Julien、Margaux的風格差異',
+          steps: [
+            '準備四個村莊的代表性酒款各一瓶',
+            '按照正確順序品嚐：Margaux → Saint-Julien → Pauillac → Saint-Estèphe',
+            '記錄每款酒的香氣、口感、結構特點',
+            '分析土壤、氣候對風格的影響',
+            '總結各村莊的典型特徵'
+          ],
+          materials: ['四村代表酒款', '品酒杯', '品酒記錄表', '吐酒器'],
+          duration: '2小時',
+          difficulty: 'intermediate'
+        },
+        {
+          id: 'medoc-map-study',
+          title: 'Médoc地圖解讀訓練',
+          description: '學習解讀Médoc產區地圖，掌握地理位置與品質關係',
+          steps: [
+            '獲得詳細的Médoc產區地圖',
+            '標記各村莊AOC邊界',
+            '標識主要酒莊位置',
+            '分析地勢高低與河流關係',
+            '理解土壤分布與品質關聯'
+          ],
+          materials: ['Médoc產區地圖', '彩色筆', '放大鏡'],
+          duration: '1小時',
+          difficulty: 'beginner'
+        },
+        {
+          id: 'vintage-comparison',
+          title: '年份對比分析',
+          description: '比較同一酒莊不同年份的表現，理解年份差異',
+          steps: [
+            '選擇一個知名酒莊的三個不同年份',
+            '研究各年份的氣候條件',
+            '進行垂直品嚐對比',
+            '分析年份對酒款風格的影響',
+            '評估陳年潛力差異'
+          ],
+          materials: ['同酒莊不同年份酒款', '年份報告', '品酒記錄'],
+          duration: '1.5小時',
+          difficulty: 'advanced'
+        }
+      ],
+      resources: [
+        {
+          type: 'book',
+          title: 'The Wines of Bordeaux',
+          author: 'David Peppercorn',
+          description: 'Médoc產區權威指南'
+        },
+        {
+          type: 'website',
+          title: 'Conseil Interprofessionnel du Vin de Bordeaux',
+          url: 'https://www.bordeaux.com',
+          description: '波爾多酒業官方網站'
+        },
+        {
+          type: 'documentary',
+          title: 'Bordeaux: Inside the World of Fine Wine',
+          description: 'BBC製作的波爾多葡萄酒紀錄片'
+        }
+      ]
+    }
+  },
+
+  // Margaux產區深度探索課程
+  'l2-2': {
+    title: 'Margaux - 優雅的香水之鄉',
+    fullContent: {
+      introduction: `
+        Margaux，這個充滿詩意的名字代表了波爾多葡萄酒世界中最優雅、最精緻的風格。
+        位於Médoc半島南端的Margaux產區，以其獨特的砂質砂礫土壤和溫和的微氣候，
+        孕育出香氣複雜、單寧絲滑的傳奇佳釀。從傳奇的Château Margaux到眾多精品酒莊，
+        這片土地展現了波爾多葡萄酒藝術的最高境界。
+      `,
+      sections: [
+        {
+          id: 'margaux-geography',
+          title: 'Margaux地理位置與環境',
+          content: `
+            <h3>地理位置優勢</h3>
+            <p>Margaux位於Médoc半島的南端，是四大名村中最靠南的產區：</p>
+            <ul>
+              <li><strong>位置：</strong>距離波爾多市中心約25公里，交通便利</li>
+              <li><strong>面積：</strong>約1,413公頃的葡萄園面積</li>
+              <li><strong>村莊組成：</strong>包含Margaux、Cantenac、Labarde、Arsac、Soussans五個村莊</li>
+              <li><strong>海拔：</strong>平均海拔3-15米，地勢相對平坦</li>
+            </ul>
+
+            <h3>獨特的地形特徵</h3>
+            <p>Margaux的地形為其優雅風格奠定了基礎：</p>
+            <ul>
+              <li><strong>砂礫丘陵：</strong>由第四紀沖積形成的砂礫臺地</li>
+              <li><strong>排水系統：</strong>優良的自然排水，避免根部積水</li>
+              <li><strong>朝向：</strong>大多數優質葡萄園面向Gironde河，接受充足陽光</li>
+              <li><strong>微地形變化：</strong>細微的坡度變化創造了多樣化的微環境</li>
+            </ul>
+
+            <h3>氣候條件</h3>
+            <p>Margaux享有溫和的微氣候：</p>
+            <ul>
+              <li><strong>溫度：</strong>比北部村莊略溫暖，有利於葡萄完全成熟</li>
+              <li><strong>濕度：</strong>靠近Gironde河，濕度適中</li>
+              <li><strong>風向：</strong>西南風帶來海洋性氣候影響</li>
+              <li><strong>霜害風險：</strong>相對較低，春季霜害發生率較小</li>
+            </ul>
+          `,
+          interactive: 'margaux-terrain-explorer'
+        },
+        {
+          id: 'soil-terroir',
+          title: '土壤特性與風土表達',
+          content: `
+            <h3>Margaux土壤的獨特性</h3>
+            <p>Margaux的土壤組成是其優雅風格的關鍵因素：</p>
+            
+            <h4>主要土壤類型</h4>
+            <ul>
+              <li><strong>深層砂礫土：</strong>
+                <ul>
+                  <li>成分：石英砂礫、燧石、花崗岩碎片</li>
+                  <li>深度：可達2-4米</li>
+                  <li>特性：排水極佳、保溫性好、反射陽光</li>
+                  <li>影響：促進葡萄早熟，增加香氣複雜性</li>
+                </ul>
+              </li>
+              <li><strong>沙質土壤：</strong>
+                <ul>
+                  <li>分布：比其他Médoc村莊含沙量更高</li>
+                  <li>特性：質地細膩、排水快速</li>
+                  <li>優勢：減少單寧的粗糙感，增加酒款精緻度</li>
+                </ul>
+              </li>
+              <li><strong>黏土底層：</strong>
+                <ul>
+                  <li>作用：提供必要的水分和養分儲備</li>
+                  <li>平衡：防止過度排水造成的水分壓力</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>風土對葡萄品種的影響</h3>
+            <p>Margaux的土壤特性特別適合某些葡萄品種：</p>
+            
+            <h4>赤霞珠（Cabernet Sauvignon）</h4>
+            <ul>
+              <li>在砂礫土上表現優異，單寧精緻不粗糙</li>
+              <li>香氣更加複雜，帶有典型的紫羅蘭花香</li>
+              <li>成熟度佳，避免青草味</li>
+            </ul>
+
+            <h4>梅洛（Merlot）</h4>
+            <ul>
+              <li>在較重的土壤上種植，提供豐滿度</li>
+              <li>柔化整體酒款結構</li>
+              <li>增加果味和早期適飲性</li>
+            </ul>
+
+            <h4>品麗珠（Cabernet Franc）</h4>
+            <ul>
+              <li>貢獻香氣複雜性</li>
+              <li>增加酒款的優雅度和精緻感</li>
+              <li>帶來特有的香料和草本植物香氣</li>
+            </ul>
+
+            <h3>微氣候與土壤的協同效應</h3>
+            <p>Margaux的風土特色源於土壤與氣候的完美結合：</p>
+            <ul>
+              <li><strong>早熟優勢：</strong>砂質土壤升溫快，延長生長期</li>
+              <li><strong>應力管理：</strong>適度的水分壓力提高葡萄品質</li>
+              <li><strong>香氣發展：</strong>溫和氣候有利於香氣物質積累</li>
+              <li><strong>酚類成熟：</strong>充足日照促進酚類物質完全成熟</li>
+            </ul>
+          `,
+          interactive: 'soil-analysis-tool'
+        },
+        {
+          id: 'famous-chateaux',
+          title: '傳奇酒莊巡禮',
+          content: `
+            <h3>Château Margaux - 優雅的化身</h3>
+            <p>作為1855年分級一級酒莊中唯一以產區命名的酒莊，Château Margaux代表了Margaux風格的巔峰。</p>
+            
+            <h4>基本資訊</h4>
+            <ul>
+              <li><strong>建立時間：</strong>12世紀開始種植葡萄，18世紀確立現代地位</li>
+              <li><strong>葡萄園面積：</strong>87公頃（82公頃紅酒，5公頃白酒）</li>
+              <li><strong>年產量：</strong>約130,000-150,000瓶正牌酒</li>
+              <li><strong>土壤：</strong>深層砂礫土，排水極佳</li>
+            </ul>
+
+            <h4>品種配置</h4>
+            <ul>
+              <li><strong>赤霞珠：</strong>75% - 提供結構和陳年潛力</li>
+              <li><strong>梅洛：</strong>20% - 增加豐滿度和柔順性</li>
+              <li><strong>品麗珠：</strong>3% - 貢獻香氣複雜性</li>
+              <li><strong>小維度：</strong>2% - 增加顏色深度和辛香料味</li>
+            </ul>
+
+            <h4>釀酒特色</h4>
+            <ul>
+              <li><strong>分塊發酵：</strong>不同地塊分別處理，精確控制品質</li>
+              <li><strong>新桶比例：</strong>100%新法國橡木桶陳年</li>
+              <li><strong>陳年時間：</strong>18-24個月桶陳</li>
+              <li><strong>調配藝術：</strong>追求完美平衡的調配哲學</li>
+            </ul>
+
+            <h3>其他重要酒莊</h3>
+            
+            <h4>超二級酒莊</h4>
+            <ul>
+              <li><strong>Château Palmer：</strong>
+                <ul>
+                  <li>位置：Cantenac村，與Margaux相鄰</li>
+                  <li>特色：風格接近一級酒莊，優雅而有深度</li>
+                  <li>品種：較高比例的梅洛（約47%）</li>
+                  <li>風格：絲滑單寧，複雜香氣</li>
+                </ul>
+              </li>
+              <li><strong>Château Rauzan-Ségla：</strong>
+                <ul>
+                  <li>等級：二級酒莊</li>
+                  <li>特色：傳統Margaux風格的典型代表</li>
+                  <li>歷史：曾與Château Margaux齊名</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>精品酒莊</h4>
+            <ul>
+              <li><strong>Château d'Issan：</strong>三級酒莊，城堡建築優美</li>
+              <li><strong>Château Malescot Saint-Exupéry：</strong>三級酒莊，風格優雅</li>
+              <li><strong>Château Brane-Cantenac：</strong>二級酒莊，品質穩定</li>
+              <li><strong>Château Durfort-Vivens：</strong>二級酒莊，純粹Margaux風格</li>
+            </ul>
+
+            <h3>酒莊分布特色</h3>
+            <p>Margaux產區的酒莊分布呈現以下特點：</p>
+            <ul>
+              <li><strong>集中度高：</strong>優質酒莊多集中在砂礫土最佳地段</li>
+              <li><strong>歷史悠久：</strong>多數酒莊擁有數百年歷史</li>
+              <li><strong>建築美學：</strong>許多酒莊擁有優美的城堡建築</li>
+              <li><strong>家族經營：</strong>保持傳統釀酒工藝和理念</li>
+            </ul>
+          `,
+          interactive: 'chateau-virtual-tour'
+        },
+        {
+          id: 'winemaking-philosophy',
+          title: '釀酒哲學與技術',
+          content: `
+            <h3>Margaux釀酒哲學</h3>
+            <p>Margaux的釀酒哲學強調優雅與精緻，追求香氣的複雜性和單寧的絲滑感：</p>
+
+            <h4>核心理念</h4>
+            <ul>
+              <li><strong>精緻至上：</strong>追求酒款的精緻度而非力量</li>
+              <li><strong>香氣導向：</strong>重視香氣的複雜性和持久性</li>
+              <li><strong>平衡美學：</strong>各要素間的和諧統一</li>
+              <li><strong>個性表達：</strong>展現Margaux獨特的風土特色</li>
+            </ul>
+
+            <h3>葡萄園管理特色</h3>
+            
+            <h4>種植密度與管理</h4>
+            <ul>
+              <li><strong>密植系統：</strong>每公頃種植8,000-10,000株</li>
+              <li><strong>低產量控制：</strong>限制產量以確保濃縮度</li>
+              <li><strong>綠色採收：</strong>疏果確保葡萄品質</li>
+              <li><strong>葉片管理：</strong>精確控制陽光照射</li>
+            </ul>
+
+            <h4>可持續發展實踐</h4>
+            <ul>
+              <li>有機或生物動力法種植</li>
+              <li>土壤健康維護</li>
+              <li>生物多樣性保護</li>
+              <li>水資源合理利用</li>
+            </ul>
+
+            <h3>釀造技術特點</h3>
+            
+            <h4>採收與分選</h4>
+            <ul>
+              <li><strong>手工採收：</strong>確保葡萄完整性</li>
+              <li><strong>多重分選：</strong>光學分選結合人工篩選</li>
+              <li><strong>分批處理：</strong>不同地塊分別處理</li>
+              <li><strong>快速運輸：</strong>減少氧化風險</li>
+            </ul>
+
+            <h4>發酵工藝</h4>
+            <ul>
+              <li><strong>溫控發酵：</strong>精確控制發酵溫度26-28°C</li>
+              <li><strong>浸皮時間：</strong>通常20-25天，追求優雅萃取</li>
+              <li><strong>淋皮技術：</strong>輕柔的淋皮避免過度萃取</li>
+              <li><strong>分段壓榨：</strong>分離不同壓榨階段的酒液</li>
+            </ul>
+
+            <h4>陳年藝術</h4>
+            <ul>
+              <li><strong>橡木桶選擇：</strong>
+                <ul>
+                  <li>法國橡木為主，來源多樣化</li>
+                  <li>新桶比例：50-100%（視年份和酒莊而定）</li>
+                  <li>桶型選擇：225升Bordeaux桶為標準</li>
+                </ul>
+              </li>
+              <li><strong>陳年時間：</strong>通常18-20個月</li>
+              <li><strong>調配時機：</strong>陳年後期進行精確調配</li>
+              <li><strong>澄清工藝：</strong>輕微過濾，保持天然複雜性</li>
+            </ul>
+
+            <h3>品質控制體系</h3>
+            <p>Margaux酒莊採用嚴格的品質控制：</p>
+            <ul>
+              <li><strong>實驗室分析：</strong>化學成分和微生物監控</li>
+              <li><strong>感官評估：</strong>專業品酒師定期評估</li>
+              <li><strong>年份篩選：</strong>只有最佳年份才生產正牌酒</li>
+              <li><strong>國際認證：</strong>符合國際有機或生物動力認證</li>
+            </ul>
+          `,
+          interactive: 'winemaking-process-simulator'
+        },
+        {
+          id: 'style-characteristics',
+          title: 'Margaux風格特徵',
+          content: `
+            <h3>Margaux葡萄酒的典型特徵</h3>
+            <p>Margaux被譽為"葡萄酒中的香水"，以其獨特的優雅風格聞名於世。</p>
+
+            <h4>外觀特色</h4>
+            <ul>
+              <li><strong>顏色：</strong>深寶石紅色，年輕時帶有紫色調</li>
+              <li><strong>透明度：</strong>清澈明亮，反射光澤優美</li>
+              <li><strong>陳年變化：</strong>逐漸轉為磚紅色，邊緣呈橙色調</li>
+              <li><strong>濃度：</strong>中等至深濃，不如Pauillac濃重</li>
+            </ul>
+
+            <h4>香氣層次分析</h4>
+            <ul>
+              <li><strong>一級香氣（品種香）：</strong>
+                <ul>
+                  <li><strong>紫羅蘭：</strong>Margaux最具代表性的花香</li>
+                  <li><strong>黑醋栗：</strong>成熟的黑色果實香氣</li>
+                  <li><strong>櫻桃：</strong>優雅的紅色果實調性</li>
+                  <li><strong>薄荷：</strong>清新的植物性香氣</li>
+                </ul>
+              </li>
+              <li><strong>二級香氣（發酵香）：</strong>
+                <ul>
+                  <li>細膩的酵母香氣</li>
+                  <li>乳酸發酵的奶香味</li>
+                </ul>
+              </li>
+              <li><strong>三級香氣（陳年香）：</strong>
+                <ul>
+                  <li><strong>香草：</strong>法國橡木桶的經典香氣</li>
+                  <li><strong>雪松：</strong>木質香氣的高級表現</li>
+                  <li><strong>煙草：</strong>複雜的植物性陳年香氣</li>
+                  <li><strong>皮革：</strong>成熟後的動物性香氣</li>
+                  <li><strong>松露：</strong>頂級年份的珍貴香氣</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>口感結構特點</h4>
+            <ul>
+              <li><strong>酒體：</strong>中等至中等飽滿，質地絲滑</li>
+              <li><strong>單寧：</strong>精緻細膩，如絲綢般柔順</li>
+              <li><strong>酸度：</strong>中高酸度，提供清新感</li>
+              <li><strong>酒精度：</strong>通常12.5-14%，平衡良好</li>
+              <li><strong>餘韻：</strong>悠長優雅，香氣層次豐富</li>
+            </ul>
+
+            <h3>與其他村莊的風格對比</h3>
+            
+            <h4>Margaux vs Pauillac</h4>
+            <ul>
+              <li><strong>Margaux：</strong>優雅精緻、香氣複雜、單寧絲滑</li>
+              <li><strong>Pauillac：</strong>力量強勁、結構緊實、需長期陳年</li>
+            </ul>
+
+            <h4>Margaux vs Saint-Julien</h4>
+            <ul>
+              <li><strong>Margaux：</strong>個性鮮明、風格獨特、香氣突出</li>
+              <li><strong>Saint-Julien：</strong>均衡典雅、和諧統一、適飲性強</li>
+            </ul>
+
+            <h4>Margaux vs Saint-Estèphe</h4>
+            <ul>
+              <li><strong>Margaux：</strong>溫和柔順、早期適飲、香氣導向</li>
+              <li><strong>Saint-Estèphe：</strong>結構緊實、單寧突出、需時間發展</li>
+            </ul>
+
+            <h3>陳年潛力與發展軌跡</h3>
+            
+            <h4>陳年階段特徵</h4>
+            <ul>
+              <li><strong>青年期（0-5年）：</strong>
+                <ul>
+                  <li>果味突出，花香明顯</li>
+                  <li>單寧尚顯，但已相對柔順</li>
+                  <li>適合配餐享用</li>
+                </ul>
+              </li>
+              <li><strong>發展期（5-15年）：</strong>
+                <ul>
+                  <li>複雜性開始顯現</li>
+                  <li>單寧完全融合</li>
+                  <li>香氣層次更加豐富</li>
+                </ul>
+              </li>
+              <li><strong>成熟期（15-25年）：</strong>
+                <ul>
+                  <li>達到巔峰狀態</li>
+                  <li>所有元素完美融合</li>
+                  <li>展現最大複雜性</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>最佳飲用建議</h4>
+            <ul>
+              <li><strong>年輕飲用：</strong>感受純粹果香和花香</li>
+              <li><strong>中期品嚐：</strong>體驗平衡與優雅</li>
+              <li><strong>長期收藏：</strong>等待最大複雜性的展現</li>
+            </ul>
+          `,
+          interactive: 'style-comparison-tool'
+        },
+        {
+          id: 'food-pairing',
+          title: '餐酒搭配藝術',
+          content: `
+            <h3>Margaux餐酒搭配原則</h3>
+            <p>Margaux的優雅風格使其成為餐酒搭配的理想選擇，其精緻的單寧和複雜的香氣能與多種料理完美融合。</p>
+
+            <h4>搭配哲學</h4>
+            <ul>
+              <li><strong>優雅對優雅：</strong>選擇精緻料理與精緻酒款搭配</li>
+              <li><strong>香氣互補：</strong>利用酒款的花香和果香增強料理層次</li>
+              <li><strong>質地匹配：</strong>絲滑單寧配合柔嫩肉質</li>
+              <li><strong>平衡原則：</strong>避免過重料理掩蓋酒款細膩特色</li>
+            </ul>
+
+            <h3>經典搭配推薦</h3>
+            
+            <h4>肉類料理</h4>
+            <ul>
+              <li><strong>羔羊肉：</strong>
+                <ul>
+                  <li>香草烤羔羊腿 - 香草與紫羅蘭香氣呼應</li>
+                  <li>紅酒燉羔羊 - 同調搭配增強風味深度</li>
+                  <li>羔羊排配薄荷醬 - 薄荷香氣與酒款完美融合</li>
+                </ul>
+              </li>
+              <li><strong>牛肉料理：</strong>
+                <ul>
+                  <li>菲力牛排 - 嫩滑肉質配合絲滑單寧</li>
+                  <li>紅酒燉牛肉 - 經典法式搭配</li>
+                  <li>烤牛小排 - 適中油脂平衡酒款結構</li>
+                </ul>
+              </li>
+              <li><strong>禽類：</strong>
+                <ul>
+                  <li>烤鴨胸配櫻桃醬 - 果香與酒款呼應</li>
+                  <li>香草烤雞 - 清淡優雅的搭配</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>野味料理</h4>
+            <ul>
+              <li><strong>鹿肉：</strong>香草烤鹿排，展現野性與優雅的對比</li>
+              <li><strong>野兔：</strong>紅酒燉野兔，傳統法式經典</li>
+              <li><strong>鵪鶉：</strong>烤鵪鶉配無花果，果香與酒款和諧</li>
+            </ul>
+
+            <h3>乳酪搭配</h3>
+            
+            <h4>理想選擇</h4>
+            <ul>
+              <li><strong>軟質乳酪：</strong>
+                <ul>
+                  <li>Camembert - 奶香與酒款柔和特質相配</li>
+                  <li>Brie - 細膩質地呼應絲滑單寧</li>
+                </ul>
+              </li>
+              <li><strong>半硬質乳酪：</strong>
+                <ul>
+                  <li>Comté - 堅果香氣增加複雜層次</li>
+                  <li>Gruyère - 經典的瑞士風味</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>素食搭配創意</h3>
+            
+            <h4>蔬菜料理</h4>
+            <ul>
+              <li><strong>茄子：</strong>普羅旺斯燉菜，香草與酒款香氣融合</li>
+              <li><strong>蘑菇：</strong>野菇燴飯，土壤氣息與風土呼應</li>
+              <li><strong>甜菜根：</strong>烤甜菜根沙拉，大地風味平衡</li>
+            </ul>
+
+            <h4>豆類與穀物</h4>
+            <ul>
+              <li>扁豆燉菜配香草</li>
+              <li>野米沙拉配堅果</li>
+              <li>藜麥料理配乾果</li>
+            </ul>
+
+            <h3>搭配技巧與注意事項</h3>
+            
+            <h4>溫度控制</h4>
+            <ul>
+              <li><strong>侍酒溫度：</strong>16-18°C最佳</li>
+              <li><strong>醒酒時間：</strong>年輕酒款1-2小時，陳年酒款30分鐘</li>
+              <li><strong>杯具選擇：</strong>使用大碗型紅酒杯展現香氣</li>
+            </ul>
+
+            <h4>避免搭配</h4>
+            <ul>
+              <li>過於辛辣的料理</li>
+              <li>重油重鹹的食物</li>
+              <li>過酸的醬料</li>
+              <li>強烈腥味的海鮮</li>
+            </ul>
+
+            <h3>不同年齡酒款的搭配策略</h3>
+            <ul>
+              <li><strong>年輕Margaux（5年內）：</strong>適合簡單烹調的優質食材</li>
+              <li><strong>中年Margaux（5-15年）：</strong>可配複雜醬汁和精緻料理</li>
+              <li><strong>陳年Margaux（15年以上）：</strong>簡單調味，突出酒款本身魅力</li>
+            </ul>
+          `,
+          interactive: 'pairing-recommendation-engine'
+        }
+      ],
+      assessment: {
+        questions: [
+          {
+            id: 'margaux-geography-1',
+            type: 'multiple-choice',
+            question: 'Margaux產區包含幾個村莊？',
+            options: [
+              '3個村莊',
+              '4個村莊',
+              '5個村莊',
+              '6個村莊'
+            ],
+            correct: 2,
+            explanation: 'Margaux產區包含5個村莊：Margaux、Cantenac、Labarde、Arsac、Soussans。'
+          },
+          {
+            id: 'margaux-soil-2',
+            type: 'multiple-choice',
+            question: 'Margaux土壤的主要特徵是什麼？',
+            options: [
+              '重黏土為主',
+              '純砂岩土壤',
+              '深層砂礫土配合沙質土壤',
+              '石灰岩土壤'
+            ],
+            correct: 2,
+            explanation: 'Margaux以深層砂礫土為主，含沙量比其他Médoc村莊更高，這是其優雅風格的土壤基礎。'
+          },
+          {
+            id: 'margaux-style-3',
+            type: 'identification',
+            question: '以下哪個香氣最能代表Margaux葡萄酒的特色？',
+            options: [
+              '黑胡椒',
+              '紫羅蘭',
+              '煙燻味',
+              '礦物質'
+            ],
+            correct: 1,
+            explanation: '紫羅蘭香氣是Margaux最具代表性的特徵，被譽為"葡萄酒中的香水"。'
+          },
+          {
+            id: 'margaux-chateau-4',
+            type: 'multiple-choice',
+            question: 'Château Margaux的葡萄園中，紅酒和白酒的面積分配是？',
+            options: [
+              '全部都是紅酒',
+              '82公頃紅酒，5公頃白酒',
+              '80公頃紅酒，7公頃白酒',
+              '85公頃紅酒，2公頃白酒'
+            ],
+            correct: 1,
+            explanation: 'Château Margaux總共87公頃葡萄園，其中82公頃種植紅酒品種，5公頃種植白酒品種。'
+          },
+          {
+            id: 'margaux-blend-5',
+            type: 'multiple-choice',
+            question: 'Margaux酒款中哪個品種通常佔主導地位？',
+            options: [
+              '梅洛（Merlot）',
+              '赤霞珠（Cabernet Sauvignon）',
+              '品麗珠（Cabernet Franc）',
+              '小維度（Petit Verdot）'
+            ],
+            correct: 1,
+            explanation: '赤霞珠通常在Margaux酒款中佔主導地位，一般佔60-80%，在砂礫土上表現出優雅精緻的特色。'
+          },
+          {
+            id: 'margaux-tannin-6',
+            type: 'identification',
+            question: 'Margaux葡萄酒的單寧特色最適合用哪個詞描述？',
+            options: [
+              '粗糙強勁',
+              '絲滑精緻',
+              '堅硬緊實',
+              '苦澀突出'
+            ],
+            correct: 1,
+            explanation: 'Margaux以絲滑精緻的單寧著稱，這源於其獨特的沙質砂礫土壤，減少了單寧的粗糙感。'
+          },
+          {
+            id: 'margaux-climate-7',
+            type: 'multiple-choice',
+            question: 'Margaux相比其他Médoc村莊的氣候特點是？',
+            options: [
+              '更加涼爽',
+              '更加溫暖',
+              '濕度更高',
+              '霜害風險更大'
+            ],
+            correct: 1,
+            explanation: 'Margaux位於Médoc半島南端，比北部村莊略溫暖，有利於葡萄完全成熟和香氣發展。'
+          },
+          {
+            id: 'margaux-palmer-8',
+            type: 'identification',
+            question: 'Château Palmer被稱為什麼等級的酒莊？',
+            options: [
+              '一級酒莊',
+              '二級酒莊',
+              '超二級酒莊',
+              '三級酒莊'
+            ],
+            correct: 2,
+            explanation: 'Château Palmer雖然在1855年分級中為三級酒莊，但因品質卓越被譽為超二級酒莊，接近一級水準。'
+          },
+          {
+            id: 'margaux-aging-9',
+            type: 'multiple-choice',
+            question: 'Margaux葡萄酒的最佳陳年期通常是？',
+            options: [
+              '5-10年',
+              '10-15年',
+              '15-25年',
+              '25年以上'
+            ],
+            correct: 2,
+            explanation: 'Margaux葡萄酒通常在15-25年時達到最佳狀態，此時所有元素完美融合，展現最大複雜性。'
+          },
+          {
+            id: 'margaux-pairing-10',
+            type: 'multiple-choice',
+            question: '以下哪種料理最適合搭配Margaux？',
+            options: [
+              '麻辣火鍋',
+              '香草烤羔羊腿',
+              '重口味海鮮',
+              '酸辣湯'
+            ],
+            correct: 1,
+            explanation: '香草烤羔羊腿的優雅風格與Margaux的精緻特色相配，香草香氣與酒款的紫羅蘭香氣形成美好呼應。'
+          }
+        ],
+        passingScore: 75,
+        totalPoints: 100,
+        timeLimit: 30
+      },
+      practicalApplications: [
+        {
+          id: 'margaux-tasting-exercise',
+          title: 'Margaux風格品鑑練習',
+          description: '通過對比品嚐深入理解Margaux的優雅風格特徵',
+          steps: [
+            '準備一款年輕Margaux（5年內）和一款陳年Margaux（10年以上）',
+            '使用合適的紅酒杯，在適當溫度下品嚐',
+            '重點關注香氣的層次變化，特別是紫羅蘭花香',
+            '分析單寧的質地，感受絲滑特性',
+            '記錄兩款酒的差異，理解陳年發展軌跡',
+            '嘗試與建議的食物搭配'
+          ],
+          materials: ['Margaux葡萄酒2款', '品酒杯', '品酒記錄表', '配菜小食'],
+          duration: '2小時',
+          difficulty: 'intermediate'
+        },
+        {
+          id: 'terroir-analysis',
+          title: 'Margaux風土分析實習',
+          description: '實地或虛擬考察Margaux的土壤和微氣候',
+          steps: [
+            '研究Margaux產區地圖，標記五個村莊位置',
+            '分析不同地塊的土壤組成差異',
+            '比較Margaux與其他村莊的地理條件',
+            '製作風土特徵對比表',
+            '總結土壤與酒款風格的關聯性'
+          ],
+          materials: ['產區地圖', '土壤樣本圖片', '氣候數據', '分析表格'],
+          duration: '1.5小時',
+          difficulty: 'advanced'
+        },
+        {
+          id: 'food-pairing-workshop',
+          title: '餐酒搭配工作坊',
+          description: '探索Margaux與不同料理的搭配可能性',
+          steps: [
+            '準備多種不同風格的料理樣品',
+            '系統性地測試Margaux與各種料理的搭配',
+            '記錄搭配效果和原因分析',
+            '設計一套完整的Margaux主題晚餐菜單',
+            '分享搭配心得和創新想法'
+          ],
+          materials: ['Margaux葡萄酒', '多樣料理樣品', '搭配記錄表', '菜單設計表'],
+          duration: '3小時',
+          difficulty: 'intermediate'
+        }
+      ],
+      resources: [
+        {
+          type: 'book',
+          title: 'Margaux: The Complete Guide',
+          author: 'Clive Coates',
+          description: 'Margaux產區的權威指南'
+        },
+        {
+          type: 'website',
+          title: 'Château Margaux Official Site',
+          url: 'https://www.chateau-margaux.com',
+          description: '一級酒莊官方網站'
+        },
+        {
+          type: 'documentary',
+          title: 'The Elegance of Margaux',
+          description: '探索Margaux優雅風格的紀錄片'
+        },
+        {
+          type: 'wine-map',
+          title: 'Margaux Terroir Map',
+          description: '詳細的Margaux風土地圖'
+        }
+      ]
+    }
+  }
+}
+
+// 互動元素配置
+export const interactiveElements = {
+  'temperature-rainfall-chart': {
+    type: 'chart',
+    title: '波爾多月度溫度與降雨量圖表',
+    description: '可互動的氣候數據視覺化工具'
+  },
+  'river-effect-simulator': {
+    type: 'simulator',
+    title: 'Gironde河口溫度調節模擬器',
+    description: '模擬河流對周邊溫度的影響效果'
+  },
+  'seasonal-changes-timeline': {
+    type: 'timeline',
+    title: '葡萄生長季節變化時間軸',
+    description: '互動式季節變化展示'
+  },
+  'environmental-factors-map': {
+    type: 'map',
+    title: '環境因素分佈地圖',
+    description: '可切換不同環境要素的地圖視圖'
+  },
+  'bank-comparison-climate-map': {
+    type: 'comparison-map',
+    title: '左右岸氣候對比地圖',
+    description: '並排顯示左右岸氣候差異'
+  },
+  'topography-3d-viewer': {
+    type: '3d-viewer',
+    title: '地形3D查看器',
+    description: '可旋轉的3D地形模型'
+  },
+  'weather-risk-assessment-tool': {
+    type: 'assessment-tool',
+    title: '天氣風險評估工具',
+    description: '評估不同地塊的天氣風險等級'
+  },
+  'climate-trend-visualizer': {
+    type: 'data-visualization',
+    title: '氣候趨勢視覺化工具',
+    description: '動態展示歷史氣候變化趨勢'
+  },
+  'adaptation-strategy-simulator': {
+    type: 'strategy-simulator',
+    title: '適應策略模擬器',
+    description: '模擬不同適應策略的效果'
+  },
+  'future-scenario-explorer': {
+    type: 'scenario-explorer',
+    title: '未來情景探索器',
+    description: '探索不同氣候變化情景下的影響'
+  },
+  
+  // 葡萄品種課程互動元素
+  'red-grape-comparison-tool': {
+    type: 'comparison-tool',
+    title: '紅葡萄品種對比工具',
+    description: '並排比較不同紅葡萄品種的特性和風味'
+  },
+  'white-grape-tasting-simulator': {
+    type: 'tasting-simulator',
+    title: '白葡萄品種品鑑模擬器',
+    description: '虛擬品鑑不同白葡萄品種的香氣和口感'
+  },
+  'blending-workshop-simulator': {
+    type: 'blending-simulator',
+    title: '調配工作坊模擬器',
+    description: '體驗波爾多經典調配的藝術與科學'
+  },
+  'growth-cycle-calendar': {
+    type: 'calendar',
+    title: '葡萄生長週期日曆',
+    description: '互動式葡萄年度生長週期展示'
+  },
+  'grape-matching': {
+    type: 'matching-game',
+    title: '品種產區配對遊戲',
+    description: '將葡萄品種與最適合的產區進行配對'
+  },
+  'flavor-wheel': {
+    type: 'wheel-selector',
+    title: '風味輪盤',
+    description: '探索不同品種的風味特徵'
+  },
+  'vineyard-management-game': {
+    type: 'strategy-game',
+    title: '葡萄園管理遊戲',
+    description: '模擬葡萄園一年四季的管理決策'
+  },
+  'grape-identification-quiz': {
+    type: 'identification-quiz',
+    title: '葡萄品種識別測驗',
+    description: '通過圖片和描述識別不同葡萄品種'
+  },
+
+  // 葡萄品種課程內容
+  'l1-3': {
+    title: '波爾多主要葡萄品種介紹',
+    fullContent: {
+      introduction: `
+        波爾多葡萄酒的卓越品質來自於其獨特的葡萄品種組合。本課程將帶您深入了解波爾多的經典葡萄品種，
+        從紅葡萄的貴族Cabernet Sauvignon和優雅的Merlot，到白葡萄的清香Sauvignon Blanc和豐腴的Sémillon，
+        每個品種都有其獨特的個性和風味特徵。
+      `,
+      sections: [
+        {
+          id: 'red-grape-varieties',
+          title: '紅葡萄品種 - 波爾多紅酒的靈魂',
+          content: `
+            <h3>Cabernet Sauvignon - 紅酒之王</h3>
+            <div class="grape-profile">
+              <h4>品種特性</h4>
+              <ul>
+                <li><strong>原產地：</strong>波爾多Médoc地區</li>
+                <li><strong>成熟期：</strong>晚熟品種（10月中下旬）</li>
+                <li><strong>果皮：</strong>厚實，深紫黑色</li>
+                <li><strong>果粒：</strong>小而緊實</li>
+                <li><strong>抗病性：</strong>較強，適應性好</li>
+              </ul>
+              
+              <h4>風味特徵</h4>
+              <ul>
+                <li><strong>果香：</strong>黑醋栗、黑莓、藍莓</li>
+                <li><strong>植物香：</strong>青椒、薄荷、桉樹</li>
+                <li><strong>橡木香：</strong>香草、雪松、煙燻</li>
+                <li><strong>口感：</strong>單寧強勁，酸度中高，酒體飽滿</li>
+                <li><strong>陳年潛力：</strong>優秀，可陳年20-30年或更久</li>
+              </ul>
+              
+              <h4>種植區域</h4>
+              <p>主要分佈在左岸地區：</p>
+              <ul>
+                <li><strong>Médoc：</strong>占總種植面積60-70%</li>
+                <li><strong>Pauillac：</strong>三大一級酒莊的主力品種</li>
+                <li><strong>St-Estèphe：</strong>適應較冷涼氣候</li>
+                <li><strong>Margaux：</strong>與Merlot完美調配</li>
+              </ul>
+            </div>
+
+            <h3>Merlot - 優雅的調配師</h3>
+            <div class="grape-profile">
+              <h4>品種特性</h4>
+              <ul>
+                <li><strong>原產地：</strong>波爾多右岸地區</li>
+                <li><strong>成熟期：</strong>早中熟品種（9月下旬-10月上旬）</li>
+                <li><strong>果皮：</strong>中等厚度，深藍黑色</li>
+                <li><strong>果粒：</strong>中等大小，較鬆散</li>
+                <li><strong>抗病性：</strong>中等，對濕度較敏感</li>
+              </ul>
+              
+              <h4>風味特徵</h4>
+              <ul>
+                <li><strong>果香：</strong>櫻桃、李子、草莓</li>
+                <li><strong>植物香：</strong>草本、薄荷、茶葉</li>
+                <li><strong>橡木香：</strong>咖啡、巧克力、甘草</li>
+                <li><strong>口感：</strong>單寧柔順，酸度中等，酒體中等至飽滿</li>
+                <li><strong>陳年潛力：</strong>良好，一般可陳年10-20年</li>
+              </ul>
+              
+              <h4>種植區域</h4>
+              <p>右岸地區的主力品種：</p>
+              <ul>
+                <li><strong>Pomerol：</strong>占總面積80-90%</li>
+                <li><strong>St-Émilion：</strong>與Cabernet Franc完美搭配</li>
+                <li><strong>左岸調配：</strong>增加酒款的圓潤度</li>
+                <li><strong>Entre-Deux-Mers：</strong>日常餐酒的主要品種</li>
+              </ul>
+            </div>
+
+            <h3>Cabernet Franc - 精緻的貴族</h3>
+            <div class="grape-profile">
+              <h4>品種特性</h4>
+              <ul>
+                <li><strong>原產地：</strong>法國Loire Valley（後傳入波爾多）</li>
+                <li><strong>成熟期：</strong>中早熟品種（9月中下旬）</li>
+                <li><strong>果皮：</strong>中等厚度，深紅色</li>
+                <li><strong>果粒：</strong>小，較緊實</li>
+                <li><strong>抗病性：</strong>良好，耐寒性強</li>
+              </ul>
+              
+              <h4>風味特徵</h4>
+              <ul>
+                <li><strong>果香：</strong>覆盆子、紅醋栗、紫羅蘭</li>
+                <li><strong>植物香：</strong>青椒、草本、茶葉</li>
+                <li><strong>橡木香：</strong>香料、胡椒、土壤</li>
+                <li><strong>口感：</strong>單寧優雅，酸度較高，酒體中等</li>
+                <li><strong>陳年潛力：</strong>中等，適合中期飲用</li>
+              </ul>
+              
+              <h4>種植區域</h4>
+              <ul>
+                <li><strong>St-Émilion：</strong>與Merlot的經典搭配</li>
+                <li><strong>Pomerol：</strong>少量種植，增加複雜度</li>
+                <li><strong>左岸：</strong>作為調配品種使用</li>
+              </ul>
+            </div>
+
+            <h3>其他紅葡萄品種</h3>
+            <div class="grape-profile">
+              <h4>Petit Verdot - 色彩與結構的提供者</h4>
+              <ul>
+                <li><strong>特點：</strong>極晚熟，深色，高單寧</li>
+                <li><strong>用途：</strong>調配中增加顏色和結構</li>
+                <li><strong>比例：</strong>通常不超過總調配的5%</li>
+                <li><strong>風味：</strong>紫羅蘭、香料、皮革</li>
+              </ul>
+              
+              <h4>Malbec - 歷史的見證者</h4>
+              <ul>
+                <li><strong>歷史：</strong>曾是波爾多重要品種</li>
+                <li><strong>現狀：</strong>種植面積大幅減少</li>
+                <li><strong>特點：</strong>深色，單寧豐富</li>
+                <li><strong>用途：</strong>少量用於調配</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'red-grape-comparison-tool'
+        },
+        {
+          id: 'white-grape-varieties',
+          title: '白葡萄品種 - 清新與優雅的代表',
+          content: `
+            <h3>Sauvignon Blanc - 清香的使者</h3>
+            <div class="grape-profile">
+              <h4>品種特性</h4>
+              <ul>
+                <li><strong>原產地：</strong>法國Loire Valley（後成為波爾多經典品種）</li>
+                <li><strong>成熟期：</strong>早熟品種（9月初中旬）</li>
+                <li><strong>果皮：</strong>較薄，金黃綠色</li>
+                <li><strong>果粒：</strong>小而緊實</li>
+                <li><strong>抗病性：</strong>良好，較耐病害</li>
+              </ul>
+              
+              <h4>風味特徵</h4>
+              <ul>
+                <li><strong>果香：</strong>青蘋果、檸檬、西柚</li>
+                <li><strong>植物香：</strong>青草、醋栗葉、接骨木花</li>
+                <li><strong>礦物香：</strong>燧石、濕石頭</li>
+                <li><strong>口感：</strong>酸度高，酒體輕盈至中等</li>
+                <li><strong>適飲期：</strong>年輕時最佳，一般2-5年內飲用</li>
+              </ul>
+              
+              <h4>種植區域與風格</h4>
+              <ul>
+                <li><strong>Graves：</strong>與Sémillon調配，產生複雜白酒</li>
+                <li><strong>Pessac-Léognan：</strong>頂級白酒產區</li>
+                <li><strong>Entre-Deux-Mers：</strong>清新易飲的白酒</li>
+                <li><strong>Sauternes：</strong>甜白酒的重要組成</li>
+              </ul>
+            </div>
+
+            <h3>Sémillon - 豐腴的貴族</h3>
+            <div class="grape-profile">
+              <h4>品種特性</h4>
+              <ul>
+                <li><strong>原產地：</strong>波爾多地區</li>
+                <li><strong>成熟期：</strong>中熟品種（9月中下旬）</li>
+                <li><strong>果皮：</strong>較薄，金黃色</li>
+                <li><strong>果粒：</strong>中等大小，果串緊實</li>
+                <li><strong>特性：</strong>易感染貴腐菌，適合釀造甜酒</li>
+              </ul>
+              
+              <h4>風味特徵</h4>
+              <ul>
+                <li><strong>果香：</strong>蜂蜜、杏桃、無花果</li>
+                <li><strong>花香：</strong>椴花、金合歡</li>
+                <li><strong>橡木香：</strong>香草、奶油、堅果</li>
+                <li><strong>口感：</strong>酸度中等，酒體豐滿</li>
+                <li><strong>陳年潛力：</strong>優秀，特別是甜白酒</li>
+              </ul>
+              
+              <h4>用途與風格</h4>
+              <ul>
+                <li><strong>乾白酒：</strong>與Sauvignon Blanc調配，增加酒體和複雜度</li>
+                <li><strong>甜白酒：</strong>Sauternes等產區的主力品種</li>
+                <li><strong>陳年潛力：</strong>優質Sémillon可陳年數十年</li>
+                <li><strong>風土表達：</strong>忠實反映產地特色</li>
+              </ul>
+            </div>
+
+            <h3>其他白葡萄品種</h3>
+            <div class="grape-profile">
+              <h4>Muscadelle - 芳香的點綴</h4>
+              <ul>
+                <li><strong>特點：</strong>極具芳香，花香濃郁</li>
+                <li><strong>用途：</strong>調配中增加香氣複雜度</li>
+                <li><strong>比例：</strong>通常不超過5-10%</li>
+                <li><strong>風味：</strong>麝香、荔枝、玫瑰花瓣</li>
+              </ul>
+              
+              <h4>Ugni Blanc - 傳統的配角</h4>
+              <ul>
+                <li><strong>歷史：</strong>波爾多傳統品種之一</li>
+                <li><strong>現狀：</strong>種植面積逐漸減少</li>
+                <li><strong>特點：</strong>高酸度，清淡</li>
+                <li><strong>用途：</strong>主要用於干邑白蘭地</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'white-grape-tasting-simulator'
+        },
+        {
+          id: 'blending-philosophy',
+          title: '調配哲學 - 波爾多的藝術精髓',
+          content: `
+            <h3>調配的歷史淵源</h3>
+            <p>波爾多葡萄酒的調配傳統可以追溯到17世紀。與勃艮地的單一品種哲學不同，
+            波爾多釀酒師發現，不同葡萄品種的組合能夠創造出比單一品種更加複雜、平衡的葡萄酒。</p>
+            
+            <h3>經典調配模式</h3>
+            <div class="blending-patterns">
+              <h4>左岸經典調配</h4>
+              <ul>
+                <li><strong>Cabernet Sauvignon主導：</strong>60-80%</li>
+                <li><strong>Merlot：</strong>15-25%（增加圓潤度）</li>
+                <li><strong>Cabernet Franc：</strong>5-15%（增加優雅感）</li>
+                <li><strong>Petit Verdot：</strong>0-5%（增加結構）</li>
+              </ul>
+              
+              <h4>右岸經典調配</h4>
+              <ul>
+                <li><strong>Merlot主導：</strong>70-90%</li>
+                <li><strong>Cabernet Franc：</strong>10-25%（增加複雜度）</li>
+                <li><strong>Cabernet Sauvignon：</strong>0-10%（增加結構）</li>
+              </ul>
+              
+              <h4>白酒經典調配</h4>
+              <ul>
+                <li><strong>乾白酒：</strong>Sauvignon Blanc 60-80% + Sémillon 20-40%</li>
+                <li><strong>甜白酒：</strong>Sémillon 60-80% + Sauvignon Blanc 20-40%</li>
+                <li><strong>Muscadelle：</strong>通常作為香氣調味劑，不超過10%</li>
+              </ul>
+            </div>
+
+            <h3>調配的科學與藝術</h3>
+            <div class="blending-science">
+              <h4>互補性原則</h4>
+              <ul>
+                <li><strong>結構互補：</strong>高單寧品種配低單寧品種</li>
+                <li><strong>酸度平衡：</strong>高酸品種配低酸品種</li>
+                <li><strong>香氣層次：</strong>不同香氣類型的組合</li>
+                <li><strong>陳年潛力：</strong>早熟與晚熟品種的平衡</li>
+              </ul>
+              
+              <h4>風土適配性</h4>
+              <ul>
+                <li><strong>土壤條件：</strong>不同品種對土壤類型的偏好</li>
+                <li><strong>氣候適應：</strong>成熟期的錯開安排</li>
+                <li><strong>地形考慮：</strong>坡向和海拔的影響</li>
+                <li><strong>風險分散：</strong>降低天災對單一品種的衝擊</li>
+              </ul>
+            </div>
+
+            <h3>現代調配趨勢</h3>
+            <div class="modern-trends">
+              <h4>氣候變化的應對</h4>
+              <ul>
+                <li><strong>品種比例調整：</strong>增加晚熟品種的比例</li>
+                <li><strong>新品種嘗試：</strong>引入更耐熱的品種</li>
+                <li><strong>採收策略：</strong>分批採收保持平衡</li>
+              </ul>
+              
+              <h4>市場需求變化</h4>
+              <ul>
+                <li><strong>易飲性提升：</strong>增加Merlot比例</li>
+                <li><strong>獨特性追求：</strong>小比例特殊品種的使用</li>
+                <li><strong>環保意識：</strong>有機和生物動力法種植</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'blending-workshop-simulator'
+        },
+        {
+          id: 'grape-growing-cycle',
+          title: '葡萄生長週期 - 從萌芽到收穫',
+          content: `
+            <h3>年度生長週期概覽</h3>
+            <div class="growth-cycle">
+              <h4>春季：萌芽與生長（3-5月）</h4>
+              <ul>
+                <li><strong>3月：</strong>樹液開始流動，芽眼萌動</li>
+                <li><strong>4月：</strong>萌芽展葉，新梢生長</li>
+                <li><strong>5月：</strong>開花期，對霜凍敏感</li>
+              </ul>
+              
+              <h4>夏季：座果與發育（6-8月）</h4>
+              <ul>
+                <li><strong>6月：</strong>座果，幼果形成</li>
+                <li><strong>7月：</strong>轉色期開始</li>
+                <li><strong>8月：</strong>果實快速發育，糖分積累</li>
+              </ul>
+              
+              <h4>秋季：成熟與收穫（9-11月）</h4>
+              <ul>
+                <li><strong>9月：</strong>早熟品種開始收穫</li>
+                <li><strong>10月：</strong>主要收穫期</li>
+                <li><strong>11月：</strong>晚熟品種和貴腐甜酒</li>
+              </ul>
+              
+              <h4>冬季：休眠與修剪（12-2月）</h4>
+              <ul>
+                <li><strong>12月-2月：</strong>葡萄藤休眠期</li>
+                <li><strong>1-2月：</strong>冬季修剪</li>
+                <li><strong>2月底：</strong>準備新一年的生長</li>
+              </ul>
+            </div>
+
+            <h3>關鍵生長階段詳解</h3>
+            <div class="growth-stages">
+              <h4>開花期（Flowering）</h4>
+              <p><strong>時間：</strong>5月下旬至6月上旬</p>
+              <p><strong>重要性：</strong>決定當年產量的關鍵期</p>
+              <p><strong>風險因素：</strong></p>
+              <ul>
+                <li>低溫和雨水導致授粉不良</li>
+                <li>強風影響花粉傳播</li>
+                <li>營養不良影響花芽分化</li>
+              </ul>
+              
+              <h4>轉色期（Véraison）</h4>
+              <p><strong>時間：</strong>7月中旬至8月上旬</p>
+              <p><strong>標誌：</strong>果實開始變色，糖分開始積累</p>
+              <p><strong>品種差異：</strong></p>
+              <ul>
+                <li><strong>紅品種：</strong>從綠色轉為紫紅色</li>
+                <li><strong>白品種：</strong>從深綠轉為淺綠或金黃</li>
+                <li><strong>時間差異：</strong>早熟品種先於晚熟品種</li>
+              </ul>
+              
+              <h4>成熟期（Ripening）</h4>
+              <p><strong>時間：</strong>8月至10月</p>
+              <p><strong>變化過程：</strong></p>
+              <ul>
+                <li><strong>糖分積累：</strong>從10°Brix增至20-25°Brix</li>
+                <li><strong>酸度下降：</strong>蘋果酸逐漸減少</li>
+                <li><strong>酚類發育：</strong>色素和單寧成熟</li>
+                <li><strong>香氣形成：</strong>品種特有香氣物質發展</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'growth-cycle-calendar'
+        }
+      ],
+      caseStudies: [
+        {
+          title: '一級酒莊的品種選擇策略',
+          description: '分析拉菲、瑪歌等頂級酒莊如何選擇和調配不同葡萄品種',
+          content: `
+            <h4>Château Lafite Rothschild</h4>
+            <ul>
+              <li><strong>主力品種：</strong>Cabernet Sauvignon (70%)</li>
+              <li><strong>調配策略：</strong>追求優雅和陳年潛力</li>
+              <li><strong>土壤適配：</strong>礫石土壤最適合Cabernet Sauvignon</li>
+            </ul>
+            
+            <h4>Château Margaux</h4>
+            <ul>
+              <li><strong>品種組合：</strong>Cabernet Sauvignon + Merlot為主</li>
+              <li><strong>風格特色：</strong>優雅芳香，被譽為"葡萄酒中的香水"</li>
+              <li><strong>調配藝術：</strong>每年根據年份特點調整比例</li>
+            </ul>
+          `
+        },
+        {
+          title: '右岸明星產區的品種哲學',
+          description: 'Pomerol和St-Émilion如何發揮Merlot和Cabernet Franc的優勢',
+          content: `
+            <h4>Pomerol產區</h4>
+            <ul>
+              <li><strong>Merlot主導：</strong>平均占85%以上</li>
+              <li><strong>土壤優勢：</strong>黏土土壤最適合Merlot</li>
+              <li><strong>代表酒莊：</strong>Pétrus幾乎100%使用Merlot</li>
+            </ul>
+            
+            <h4>St-Émilion產區</h4>
+            <ul>
+              <li><strong>雙品種組合：</strong>Merlot + Cabernet Franc</li>
+              <li><strong>地形影響：</strong>高地適合Cabernet Franc，平地適合Merlot</li>
+              <li><strong>風格多樣：</strong>根據地塊特性調整品種比例</li>
+            </ul>
+          `
+        }
+      ],
+      practicalExercises: [
+        {
+          type: 'grape-identification',
+          title: '葡萄品種識別練習',
+          description: '通過外觀特徵識別不同的波爾多葡萄品種'
+        },
+        {
+          type: 'blending-simulation',
+          title: '調配模擬實驗',
+          description: '嘗試不同的品種組合，理解調配對酒款風格的影響'
+        },
+        {
+          type: 'harvest-timing',
+          title: '採收時機判斷',
+          description: '根據不同品種的特性，判斷最佳採收時機'
+        }
+      ]
+    }
+  },
+
+  'l1-4': {
+    title: '左岸與右岸初探',
+    fullContent: {
+      introduction: `
+        波爾多地區被Gironde河及其支流分為兩個截然不同的世界：左岸與右岸。
+        這不僅僅是地理上的劃分，更代表了兩種不同的釀酒哲學、風土條件和葡萄酒風格。
+        讓我們踏上這趟探索之旅，了解這兩岸各自的魅力所在。
+      `,
+      sections: [
+        {
+          id: 'geographical-division',
+          title: '地理劃分與河流系統',
+          content: `
+            <h3>🌊 河流塑造的邊界</h3>
+            <div class="river-system-info">
+              <p>波爾多的左右岸劃分源於其獨特的河流系統：</p>
+              
+              <div class="bank-definition">
+                <h4>左岸 (Rive Gauche)</h4>
+                <ul>
+                  <li><strong>地理位置：</strong>Garonne河和Gironde河左側（西南側）</li>
+                  <li><strong>主要產區：</strong>Médoc、Haut-Médoc、Graves、Pessac-Léognan</li>
+                  <li><strong>面向方向：</strong>朝向大西洋，接受海洋影響</li>
+                  <li><strong>地形特點：</strong>相對平坦，緩坡較多</li>
+                </ul>
+                
+                <h4>右岸 (Rive Droite)</h4>
+                <ul>
+                  <li><strong>地理位置：</strong>Dordogne河右側（東北側）</li>
+                  <li><strong>主要產區：</strong>St-Émilion、Pomerol、Fronsac、Côtes de Blaye</li>
+                  <li><strong>面向方向：</strong>朝向內陸，大陸性氣候較明顯</li>
+                  <li><strong>地形特點：</strong>丘陵起伏，坡地較多</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="climate-impact">
+              <h3>🌡️ 氣候微差異</h3>
+              <p>雖然同屬溫帶海洋性氣候，兩岸仍有細微差別：</p>
+              <div class="climate-comparison">
+                <div class="left-bank-climate">
+                  <h5>左岸氣候特點</h5>
+                  <ul>
+                    <li>受大西洋影響更直接</li>
+                    <li>夏季較為涼爽</li>
+                    <li>海風帶來的濕度調節</li>
+                    <li>春季較早回暖</li>
+                  </ul>
+                </div>
+                <div class="right-bank-climate">
+                  <h5>右岸氣候特點</h5>
+                  <ul>
+                    <li>大陸性氣候特徵較明顯</li>
+                    <li>夏季相對溫暖</li>
+                    <li>春季霜凍風險略高</li>
+                    <li>秋季陽光充足</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          `,
+          interactive: 'bank-geography-explorer'
+        },
+        {
+          id: 'soil-foundation',
+          title: '土壤：風土的基石',
+          content: `
+            <h3>🪨 土壤類型決定品種選擇</h3>
+            <p>兩岸最根本的差異在於土壤構成，這直接影響了適合種植的葡萄品種和最終的酒款風格。</p>
+            
+            <div class="soil-analysis">
+              <div class="left-bank-soil">
+                <h4>🏔️ 左岸土壤特徵</h4>
+                <div class="soil-profile">
+                  <h5>礫石土壤 (Gravel Soils)</h5>
+                  <ul>
+                    <li><strong>組成：</strong>大小不等的礫石，混合砂土和黏土</li>
+                    <li><strong>排水性：</strong>極佳，避免根部積水</li>
+                    <li><strong>保溫性：</strong>白天吸熱，夜晚釋放，延長生長期</li>
+                    <li><strong>深度：</strong>通常較深，利於根系深扎</li>
+                    <li><strong>貧瘠度：</strong>營養較少，促使藤蔓向深處扎根</li>
+                  </ul>
+                  
+                  <div class="grape-adaptation">
+                    <h6>適合的葡萄品種</h6>
+                    <p><strong>Cabernet Sauvignon</strong> - 完美適配</p>
+                    <ul>
+                      <li>晚熟品種需要良好的排水和保溫</li>
+                      <li>礫石土的貧瘠促進品質而非產量</li>
+                      <li>深層根系獲取複雜的礦物質</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="famous-terroirs">
+                  <h5>著名風土地塊</h5>
+                  <ul>
+                    <li><strong>Pauillac：</strong>深厚礫石層，排水完美</li>
+                    <li><strong>Margaux：</strong>細礫石混合砂土，優雅細膩</li>
+                    <li><strong>St-Julien：</strong>均勻礫石分佈，平衡性佳</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="right-bank-soil">
+                <h4>🏺 右岸土壤特徵</h4>
+                <div class="soil-profile">
+                  <h5>黏土和石灰岩土壤</h5>
+                  <ul>
+                    <li><strong>組成：</strong>以黏土為主，含石灰岩和砂土</li>
+                    <li><strong>保水性：</strong>較好，在乾旱年份有優勢</li>
+                    <li><strong>保溫性：</strong>中等，溫度變化較穩定</li>
+                    <li><strong>營養性：</strong>相對豐富，適合早熟品種</li>
+                    <li><strong>地形：</strong>丘陵地形，排水和日照條件多樣</li>
+                  </ul>
+                  
+                  <div class="grape-adaptation">
+                    <h6>適合的葡萄品種</h6>
+                    <p><strong>Merlot</strong> - 天作之合</p>
+                    <ul>
+                      <li>早熟品種適應黏土保水特性</li>
+                      <li>黏土提供足夠養分支持果實發育</li>
+                      <li>避免了礫石土的過度水分流失</li>
+                    </ul>
+                    
+                    <p><strong>Cabernet Franc</strong> - 理想配角</p>
+                    <ul>
+                      <li>適應石灰岩土壤的排水特性</li>
+                      <li>在冷涼年份表現更穩定</li>
+                      <li>為調配增加複雜度和優雅感</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="famous-terroirs">
+                  <h5>著名風土地塊</h5>
+                  <ul>
+                    <li><strong>Pomerol：</strong>鐵質黏土，造就頂級Merlot</li>
+                    <li><strong>St-Émilion：</strong>石灰岩高原，複雜多樣的土壤</li>
+                    <li><strong>Fronsac：</strong>石灰岩和黏土混合，結構感強</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          `,
+          interactive: 'soil-cross-section'
+        },
+        {
+          id: 'grape-varieties-banks',
+          title: '品種特色：兩岸的釀酒哲學',
+          content: `
+            <h3>🍇 品種組合反映風土智慧</h3>
+            <p>兩岸的葡萄品種選擇不是偶然，而是數百年來與自然環境磨合的結果。</p>
+            
+            <div class="variety-philosophy">
+              <div class="left-bank-varieties">
+                <h4>🏰 左岸：Cabernet Sauvignon的王國</h4>
+                <div class="blend-composition">
+                  <h5>典型調配比例</h5>
+                  <ul>
+                    <li><strong>Cabernet Sauvignon：</strong>60-70% （主導品種）</li>
+                    <li><strong>Merlot：</strong>20-30% （柔化調配）</li>
+                    <li><strong>Cabernet Franc：</strong>5-10% （增加複雜度）</li>
+                    <li><strong>Petit Verdot：</strong>0-5% （強化結構）</li>
+                  </ul>
+                </div>
+                
+                <div class="style-characteristics">
+                  <h5>酒款風格特徵</h5>
+                  <ul>
+                    <li><strong>結構：</strong>強勁有力，單寧堅實</li>
+                    <li><strong>香氣：</strong>黑醋栗、雪松、鉛筆芯</li>
+                    <li><strong>陳年：</strong>潛力巨大，可陳年數十年</li>
+                    <li><strong>口感：</strong>年輕時較為內斂，需要時間發展</li>
+                    <li><strong>食物配對：</strong>適合搭配紅肉、野味</li>
+                  </ul>
+                </div>
+                
+                <div class="representative-châteaux">
+                  <h5>代表酒莊</h5>
+                  <ul>
+                    <li><strong>Lafite Rothschild (Pauillac)：</strong>優雅版的Cabernet Sauvignon</li>
+                    <li><strong>Latour (Pauillac)：</strong>強勁有力的經典風格</li>
+                    <li><strong>Margaux (Margaux)：</strong>女性化的細膩表現</li>
+                    <li><strong>Haut-Brion (Graves)：</strong>礦物感突出的獨特風格</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="right-bank-varieties">
+                <h4>🌸 右岸：Merlot的優雅世界</h4>
+                <div class="blend-composition">
+                  <h5>典型調配比例</h5>
+                  <ul>
+                    <li><strong>Merlot：</strong>70-90% （絕對主導）</li>
+                    <li><strong>Cabernet Franc：</strong>10-25% （結構支撐）</li>
+                    <li><strong>Cabernet Sauvignon：</strong>0-10% （偶爾使用）</li>
+                  </ul>
+                </div>
+                
+                <div class="style-characteristics">
+                  <h5>酒款風格特徵</h5>
+                  <ul>
+                    <li><strong>結構：</strong>圓潤優雅，單寧柔順</li>
+                    <li><strong>香氣：</strong>櫻桃、李子、紫羅蘭、土壤</li>
+                    <li><strong>陳年：</strong>中等潛力，適飲期較早</li>
+                    <li><strong>口感：</strong>年輕時已有魅力，易於親近</li>
+                    <li><strong>食物配對：</strong>適合搭配禽肉、蘑菇類</li>
+                  </ul>
+                </div>
+                
+                <div class="representative-châteaux">
+                  <h5>代表酒莊</h5>
+                  <ul>
+                    <li><strong>Pétrus (Pomerol)：</strong>Merlot的終極表達</li>
+                    <li><strong>Le Pin (Pomerol)：</strong>現代風格的優雅代表</li>
+                    <li><strong>Cheval Blanc (St-Émilion)：</strong>Cabernet Franc的經典之作</li>
+                    <li><strong>Ausone (St-Émilion)：</strong>石灰岩風土的極致表現</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          `,
+          interactive: 'variety-comparison-tool'
+        },
+        {
+          id: 'wine-style-comparison',
+          title: '品嚐差異：兩岸風格對比',
+          content: `
+            <h3>🍷 品嚐中的兩岸印象</h3>
+            <p>通過品嚐來理解兩岸差異是最直觀的學習方式。讓我們從感官角度分析這些差異。</p>
+            
+            <div class="tasting-comparison">
+              <div class="visual-comparison">
+                <h4>👁️ 外觀差異</h4>
+                <div class="color-analysis">
+                  <div class="left-bank-visual">
+                    <h5>左岸酒款外觀</h5>
+                    <ul>
+                      <li><strong>年輕時：</strong>深紫紅色，幾乎不透光</li>
+                      <li><strong>陳年後：</strong>石榴紅，邊緣呈橘色</li>
+                      <li><strong>濃度：</strong>通常較深，單寧沉澱明顯</li>
+                      <li><strong>掛杯：</strong>酒體厚重，掛杯明顯</li>
+                    </ul>
+                  </div>
+                  <div class="right-bank-visual">
+                    <h5>右岸酒款外觀</h5>
+                    <ul>
+                      <li><strong>年輕時：</strong>深紅寶石色，有一定透光性</li>
+                      <li><strong>陳年後：</strong>磚紅色，邊緣較快變化</li>
+                      <li><strong>濃度：</strong>中等至深，較為透亮</li>
+                      <li><strong>掛杯：</strong>中等酒體，掛杯適中</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="aroma-comparison">
+                <h4>👃 香氣特徵</h4>
+                <div class="aroma-profiles">
+                  <div class="left-bank-aroma">
+                    <h5>左岸香氣輪廓</h5>
+                    <div class="aroma-category">
+                      <h6>果香類</h6>
+                      <ul>
+                        <li>黑醋栗（標誌性）</li>
+                        <li>黑莓、藍莓</li>
+                        <li>黑櫻桃（成熟表現）</li>
+                      </ul>
+                      
+                      <h6>植物類</h6>
+                      <ul>
+                        <li>雪松、檀香</li>
+                        <li>月桂葉、桉樹</li>
+                        <li>青椒（年輕酒款）</li>
+                      </ul>
+                      
+                      <h6>礦物類</h6>
+                      <ul>
+                        <li>鉛筆芯、石墨</li>
+                        <li>濕石頭</li>
+                        <li>煙燻、烘烤</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="right-bank-aroma">
+                    <h5>右岸香氣輪廓</h5>
+                    <div class="aroma-category">
+                      <h6>果香類</h6>
+                      <ul>
+                        <li>櫻桃、李子（主導）</li>
+                        <li>草莓、覆盆子</li>
+                        <li>無花果（成熟表現）</li>
+                      </ul>
+                      
+                      <h6>花香類</h6>
+                      <ul>
+                        <li>紫羅蘭（Cabernet Franc特色）</li>
+                        <li>玫瑰花瓣</li>
+                        <li>乾燥花束</li>
+                      </ul>
+                      
+                      <h6>土壤類</h6>
+                      <ul>
+                        <li>濕土、泥土</li>
+                        <li>蘑菇、松露</li>
+                        <li>礦物質、鹽分</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="palate-comparison">
+                <h4>👅 口感結構</h4>
+                <div class="structure-analysis">
+                  <div class="left-bank-palate">
+                    <h5>左岸口感特點</h5>
+                    <ul>
+                      <li><strong>酒體：</strong>飽滿厚重，層次豐富</li>
+                      <li><strong>單寧：</strong>高且結構化，年輕時較緊澀</li>
+                      <li><strong>酸度：</strong>中高，提供良好平衡</li>
+                      <li><strong>酒精度：</strong>通常13-14.5%</li>
+                      <li><strong>餘韻：</strong>悠長持久，礦物感突出</li>
+                      <li><strong>發展性：</strong>需要時間軟化，陳年潛力大</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="right-bank-palate">
+                    <h5>右岸口感特點</h5>
+                    <ul>
+                      <li><strong>酒體：</strong>中等至飽滿，質地絲滑</li>
+                      <li><strong>單寧：</strong>中等，圓潤易於入口</li>
+                      <li><strong>酸度：</strong>中等，平衡感良好</li>
+                      <li><strong>酒精度：</strong>通常13-14%</li>
+                      <li><strong>餘韻：</strong>中長，果香和花香並重</li>
+                      <li><strong>親和力：</strong>年輕時已有魅力，易於品飲</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `,
+          interactive: 'tasting-wheel-comparison'
+        }
+      ],
+      assessment: {
+        questions: [
+          {
+            id: 'banks-geography',
+            type: 'multiple-choice',
+            question: '波爾多左岸主要位於哪條河流的左側？',
+            options: [
+              'Dordogne河',
+              'Garonne河和Gironde河',
+              'Loire河',
+              'Rhône河'
+            ],
+            correct: 1,
+            explanation: '左岸位於Garonne河和Gironde河的左側（西南側），面向大西洋，接受海洋氣候影響。'
+          },
+          {
+            id: 'soil-types',
+            type: 'multiple-choice',
+            question: '左岸的礫石土壤最適合種植哪個葡萄品種？',
+            options: [
+              'Merlot',
+              'Cabernet Franc',
+              'Cabernet Sauvignon',
+              'Sauvignon Blanc'
+            ],
+            correct: 2,
+            explanation: 'Cabernet Sauvignon是晚熟品種，需要礫石土壤的良好排水和保溫特性，兩者完美匹配。'
+          },
+          {
+            id: 'right-bank-varieties',
+            type: 'multiple-choice',
+            question: '右岸葡萄酒的主導品種通常是？',
+            options: [
+              'Cabernet Sauvignon',
+              'Merlot',
+              'Petit Verdot',
+              'Sauvignon Blanc'
+            ],
+            correct: 1,
+            explanation: 'Merlot是右岸的主導品種，通常占調配的70-90%，適應黏土土壤的保水特性。'
+          },
+          {
+            id: 'style-difference',
+            type: 'matching',
+            question: '將以下特徵與正確的岸邊配對',
+            pairs: [
+              { left: '單寧強勁', right: '左岸' },
+              { left: '優雅絲滑', right: '右岸' },
+              { left: '黑醋栗香氣', right: '左岸' },
+              { left: '櫻桃李子香', right: '右岸' },
+              { left: '礦物餘韻', right: '左岸' },
+              { left: '紫羅蘭花香', right: '右岸' }
+            ],
+            explanation: '左岸以Cabernet Sauvignon主導，風格強勁；右岸以Merlot為主，更加優雅柔順。'
+          }
+        ],
+        practicalExercise: {
+          title: '兩岸對比品鑑練習',
+          description: '選擇一款左岸和一款右岸的酒進行對比品嚐',
+          steps: [
+            '準備兩款酒：一款來自Pauillac或Margaux（左岸），一款來自St-Émilion或Pomerol（右岸）',
+            '在相同溫度下（16-18°C）同時開瓶醒酒',
+            '使用相同的杯子進行對比品嚐',
+            '記錄外觀、香氣、口感的差異',
+            '判斷哪款酒來自哪一岸，並說明理由'
+          ]
+        }
+      },
+      interactiveElements: [
+        {
+          type: 'bank-geography-explorer',
+          title: '兩岸地理探索器',
+          description: '互動式地圖探索左右岸的地理位置和產區分佈'
+        },
+        {
+          type: 'soil-cross-section',
+          title: '土壤剖面對比',
+          description: '可視化展示兩岸不同的土壤結構和特點'
+        },
+        {
+          type: 'variety-comparison-tool',
+          title: '品種比較工具',
+          description: '並排比較兩岸主要葡萄品種的特徵'
+        },
+        {
+          type: 'tasting-wheel-comparison',
+          title: '風味輪對比',
+          description: '互動式風味輪展示兩岸酒款的香氣差異'
+        },
+        {
+          type: 'identification-quiz',
+          title: '快速識別測驗',
+          description: '通過描述快速判斷酒款來自哪一岸的技能訓練'
+        }
+      ]
+    }
+  },
+
+  'l1-5': {
+    title: '波爾多酒款類型概覽',
+    fullContent: {
+      introduction: `
+        波爾多不僅是世界頂級紅酒的代名詞，同時也生產著多元化的葡萄酒類型。
+        從經典的紅酒到精緻的白酒，從珍貴的甜酒到清新的粉紅酒，每一種類型都承載著波爾多獨特的風土表達。
+        本課程將為您全面介紹波爾多的酒款類型，幫助您建立完整的產區認知框架。
+      `,
+      sections: [
+        {
+          id: 'red-wines-overview',
+          title: '紅酒：波爾多的靈魂',
+          content: `
+            <h3>🍷 波爾多紅酒的地位</h3>
+            <p>紅酒佔波爾多總產量的約85%，是這個產區最重要和最著名的酒款類型。</p>
+            
+            <div class="wine-type-classification">
+              <h4>按產區級別分類</h4>
+              <div class="classification-levels">
+                <div class="aoc-level">
+                  <h5>🏆 村莊級AOC（Village AOC）</h5>
+                  <ul>
+                    <li><strong>左岸村莊：</strong>Pauillac、Margaux、St-Julien、St-Estèphe</li>
+                    <li><strong>右岸村莊：</strong>St-Émilion、Pomerol</li>
+                    <li><strong>特點：</strong>最高品質等級，嚴格的產區規定</li>
+                    <li><strong>風格：</strong>各具特色，體現不同風土特徵</li>
+                  </ul>
+                </div>
+                
+                <div class="aoc-level">
+                  <h5>🥈 地區級AOC（Regional AOC）</h5>
+                  <ul>
+                    <li><strong>Haut-Médoc：</strong>左岸高品質產區</li>
+                    <li><strong>Médoc：</strong>左岸基礎產區</li>
+                    <li><strong>Graves：</strong>歷史悠久的左岸產區</li>
+                    <li><strong>Pessac-Léognan：</strong>Graves的精華部分</li>
+                  </ul>
+                </div>
+                
+                <div class="aoc-level">
+                  <h5>🥉 基礎級AOC（Basic AOC）</h5>
+                  <ul>
+                    <li><strong>Bordeaux：</strong>最基礎的波爾多AOC</li>
+                    <li><strong>Bordeaux Supérieur：</strong>稍高標準的基礎AOC</li>
+                    <li><strong>Côtes系列：</strong>Côtes de Bordeaux等丘陵產區</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="red-wine-styles">
+              <h4>紅酒風格多樣性</h4>
+              <div class="style-categories">
+                <div class="style-group">
+                  <h5>🏰 左岸風格</h5>
+                  <ul>
+                    <li><strong>結構特徵：</strong>單寧強勁，酒體飽滿</li>
+                    <li><strong>香氣特點：</strong>黑醋栗、雪松、礦物質</li>
+                    <li><strong>陳年潛力：</strong>10-30年或更長</li>
+                    <li><strong>適合場合：</strong>正式晚宴、特殊慶祝</li>
+                  </ul>
+                </div>
+                
+                <div class="style-group">
+                  <h5>🌸 右岸風格</h5>
+                  <ul>
+                    <li><strong>結構特徵：</strong>單寧柔順，質地絲滑</li>
+                    <li><strong>香氣特點：</strong>櫻桃、李子、紫羅蘭</li>
+                    <li><strong>陈年潜力：</strong>8-20年</li>
+                    <li><strong>適合場合：</strong>日常品飲、休閒聚會</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          `,
+          interactive: 'red-wine-classification'
+        },
+        {
+          id: 'white-wines-diversity',
+          title: '白酒：被低估的珍寶',
+          content: `
+            <h3>🤍 波爾多白酒的復興</h3>
+            <p>雖然只佔總產量的約10%，但波爾多白酒正經歷著品質革命和市場復興。</p>
+            
+            <div class="white-wine-types">
+              <div class="dry-whites">
+                <h4>🌿 乾白酒（Vins Blancs Secs）</h4>
+                <div class="dry-white-details">
+                  <h5>主要產區</h5>
+                  <ul>
+                    <li><strong>Pessac-Léognan：</strong>頂級乾白酒產區</li>
+                    <li><strong>Graves：</strong>傳統白酒產區</li>
+                    <li><strong>Entre-Deux-Mers：</strong>清新易飲風格</li>
+                    <li><strong>Blaye Côtes de Bordeaux：</strong>新興優質產區</li>
+                  </ul>
+                  
+                  <h5>釀酒品種</h5>
+                  <ul>
+                    <li><strong>Sauvignon Blanc：</strong>60-80%，提供酸度和香氣</li>
+                    <li><strong>Sémillon：</strong>20-40%，增加酒體和複雜度</li>
+                    <li><strong>Muscadelle：</strong>0-10%，添加花香和果香</li>
+                  </ul>
+                  
+                  <h5>風味特徵</h5>
+                  <div class="flavor-profiles">
+                    <div class="young-profile">
+                      <h6>年輕時的特徵</h6>
+                      <ul>
+                        <li>柑橘類水果：檸檬、萊姆、葡萄柚</li>
+                        <li>熱帶水果：西番蓮果、芒果</li>
+                        <li>草本香氣：新鮮草葉、醋栗葉</li>
+                        <li>礦物質感：燧石、濕石頭</li>
+                      </ul>
+                    </div>
+                    
+                    <div class="aged-profile">
+                      <h6>陳年後的發展</h6>
+                      <ul>
+                        <li>蜂蜜、蜂蠟香氣</li>
+                        <li>堅果類：榛子、杏仁</li>
+                        <li>香料：薑、肉桂</li>
+                        <li>礦物複雜度提升</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="sweet-whites">
+                <h4>🍯 甜白酒（Vins Blancs Moelleux/Liquoreux）</h4>
+                <div class="sweet-white-details">
+                  <h5>世界級甜酒產區</h5>
+                  <ul>
+                    <li><strong>Sauternes：</strong>全球最著名的甜酒產區</li>
+                    <li><strong>Barsac：</strong>Sauternes內的精品子產區</li>
+                    <li><strong>Cadillac：</strong>性價比優秀的甜酒</li>
+                    <li><strong>Loupiac：</strong>傳統甜酒產區</li>
+                    <li><strong>Sainte-Croix-du-Mont：</strong>小眾精品產區</li>
+                  </ul>
+                  
+                  <h5>貴腐甜酒的奇蹟</h5>
+                  <div class="noble-rot-process">
+                    <h6>🦠 Botrytis cinerea（貴腐菌）的作用</h6>
+                    <ol>
+                      <li><strong>感染階段：</strong>秋季晨霧提供濕度，貴腐菌感染成熟葡萄</li>
+                      <li><strong>脫水濃縮：</strong>菌絲穿透果皮，水分蒸發，糖分濃縮</li>
+                      <li><strong>風味轉化：</strong>產生獨特的蜂蜜、杏脯、香料香氣</li>
+                      <li><strong>分批採收：</strong>多次人工採收，只選擇完美感染的葡萄</li>
+                    </ol>
+                  </div>
+                  
+                  <h5>甜酒風味層次</h5>
+                  <div class="sweetness-levels">
+                    <div class="moelleux">
+                      <h6>Moelleux（半甜）</h6>
+                      <ul>
+                        <li><strong>殘糖量：</strong>12-45 g/L</li>
+                        <li><strong>特點：</strong>平衡的甜度，清新的酸度</li>
+                        <li><strong>配餐：</strong>鵝肝、藍紋芝士</li>
+                      </ul>
+                    </div>
+                    
+                    <div class="liquoreux">
+                      <h6>Liquoreux（極甜）</h6>
+                      <ul>
+                        <li><strong>殘糖量：</strong>45+ g/L</li>
+                        <li><strong>特點：</strong>濃郁甜美，複雜層次</li>
+                        <li><strong>配餐：</strong>甜點、獨飲欣賞</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `,
+          interactive: 'white-wine-tasting-wheel'
+        },
+        {
+          id: 'rose-wines-renaissance',
+          title: '粉紅酒：夏日的優雅選擇',
+          content: `
+            <h3>🌹 波爾多粉紅酒的特色</h3>
+            <p>波爾多的粉紅酒（Rosé）雖然產量不大，但展現出獨特的優雅風格。</p>
+            
+            <div class="rose-characteristics">
+              <h4>釀造方法</h4>
+              <div class="production-methods">
+                <div class="saignee-method">
+                  <h5>🩸 放血法（Saignée）</h5>
+                  <ul>
+                    <li><strong>原理：</strong>紅葡萄酒釀造初期放出部分汁液</li>
+                    <li><strong>優點：</strong>濃縮紅酒的同時獲得粉紅酒</li>
+                    <li><strong>特色：</strong>顏色較深，風味更濃郁</li>
+                    <li><strong>品種：</strong>主要使用Merlot、Cabernet Sauvignon</li>
+                  </ul>
+                </div>
+                
+                <div class="direct-press">
+                  <h5>🍇 直接壓榨法（Direct Press）</h5>
+                  <ul>
+                    <li><strong>原理：</strong>紅葡萄直接輕柔壓榨，短時間浸皮</li>
+                    <li><strong>優點：</strong>專門為粉紅酒設計的釀造</li>
+                    <li><strong>特色：</strong>顏色較淡，風格清新</li>
+                    <li><strong>控制：</strong>精確控制浸皮時間和溫度</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <h4>風味特徵</h4>
+              <div class="rose-flavors">
+                <h5>香氣層次</h5>
+                <ul>
+                  <li><strong>紅果香氣：</strong>草莓、覆盆子、櫻桃</li>
+                  <li><strong>花香：</strong>玫瑰花瓣、紫羅蘭</li>
+                  <li><strong>柑橘調：</strong>粉紅葡萄柚、柳橙皮</li>
+                  <li><strong>草本味：</strong>新鮮薄荷、羅勒</li>
+                </ul>
+                
+                <h5>口感特點</h5>
+                <ul>
+                  <li><strong>酸度：</strong>清新明快，平衡甜度</li>
+                  <li><strong>酒體：</strong>輕盈至中等，易於飲用</li>
+                  <li><strong>單寧：</strong>極少，不會產生乾澀感</li>
+                  <li><strong>餘韻：</strong>短至中等，果香愉悅</li>
+                </ul>
+              </div>
+              
+              <h4>飲用建議</h4>
+              <div class="serving-suggestions">
+                <h5>🌡️ 侍酒溫度</h5>
+                <p>8-12°C，充分冰鎮後飲用</p>
+                
+                <h5>🍽️ 配餐推薦</h5>
+                <ul>
+                  <li><strong>海鮮類：</strong>烤魚、海鮮沙拉、生蠔</li>
+                  <li><strong>家禽類：</strong>烤雞、火雞肉、鴨胸</li>
+                  <li><strong>素食：</strong>地中海沙拉、烤蔬菜</li>
+                  <li><strong>輕食：</strong>起司拼盤、橄欖、堅果</li>
+                </ul>
+                
+                <h5>⏰ 飲用時機</h5>
+                <ul>
+                  <li>夏日午後的露台聚會</li>
+                  <li>戶外燒烤派對</li>
+                  <li>輕鬆的朋友聚餐</li>
+                  <li>開胃酒時光</li>
+                </ul>
+              </div>
+            </div>
+          `,
+          interactive: 'rose-color-spectrum'
+        },
+        {
+          id: 'sparkling-wines-innovation',
+          title: '氣泡酒：現代創新的結晶',
+          content: `
+            <h3>🥂 Crémant de Bordeaux的崛起</h3>
+            <p>1990年獲得AOC地位的Crémant de Bordeaux代表了波爾多在傳統香檳法氣泡酒領域的創新成果。</p>
+            
+            <div class="cremant-details">
+              <h4>法規要求</h4>
+              <div class="regulations">
+                <h5>🍇 允許使用的品種</h5>
+                <ul>
+                  <li><strong>白葡萄：</strong>Sémillon、Sauvignon Blanc、Sauvignon Gris、Muscadelle</li>
+                  <li><strong>紅葡萄：</strong>Cabernet Sauvignon、Cabernet Franc、Merlot、Malbec、Petit Verdot</li>
+                  <li><strong>特殊規定：</strong>紅葡萄比例不得超過20%</li>
+                </ul>
+                
+                <h5>🏭 釀造標準</h5>
+                <ul>
+                  <li><strong>壓榨：</strong>輕柔壓榨，避免萃取過多單寧</li>
+                  <li><strong>一次發酵：</strong>溫控發酵，保持新鮮果香</li>
+                  <li><strong>調配：</strong>不同品種和年份的精確調配</li>
+                  <li><strong>二次發酵：</strong>瓶中發酵產生氣泡</li>
+                  <li><strong>陳年時間：</strong>最少12個月酒渣陳年</li>
+                </ul>
+              </div>
+              
+              <h4>風味特色</h4>
+              <div class="cremant-flavors">
+                <h5>香氣表現</h5>
+                <ul>
+                  <li><strong>果香：</strong>青蘋果、梨子、柑橘</li>
+                  <li><strong>花香：</strong>金合歡、檸檬花</li>
+                  <li><strong>酵母香：</strong>麵包、餅乾（酒渣陳年帶來）</li>
+                  <li><strong>礦物質：</strong>白堊、濕石頭</li>
+                </ul>
+                
+                <h5>口感特點</h5>
+                <ul>
+                  <li><strong>氣泡：</strong>細膩持久，口感清新</li>
+                  <li><strong>酸度：</strong>明快爽脆，平衡性佳</li>
+                  <li><strong>酒體：</strong>輕至中等，優雅精緻</li>
+                  <li><strong>餘韻：</strong>清爽持久，礦物感明顯</li>
+                </ul>
+              </div>
+              
+              <h4>市場定位</h4>
+              <div class="market-position">
+                <h5>💰 價格優勢</h5>
+                <p>相較於香檳，Crémant de Bordeaux提供了優秀的性價比</p>
+                
+                <h5>🎉 使用場合</h5>
+                <ul>
+                  <li>開胃酒時光</li>
+                  <li>慶祝活動</li>
+                  <li>輕食搭配</li>
+                  <li>夏日清涼飲品</li>
+                </ul>
+              </div>
+            </div>
+          `,
+          interactive: 'sparkling-production-simulator'
+        },
+        {
+          id: 'wine-reading-skills',
+          title: '酒標解讀：選酒的關鍵技能',
+          content: `
+            <h3>🏷️ 波爾多酒標的秘密</h3>
+            <p>學會解讀酒標是選購波爾多葡萄酒的基本技能，每個資訊都有其重要意義。</p>
+            
+            <div class="label-elements">
+              <h4>必要資訊解讀</h4>
+              <div class="essential-info">
+                <div class="appellation-info">
+                  <h5>🎯 產區標示（Appellation）</h5>
+                  <div class="appellation-hierarchy">
+                    <h6>村莊級標示</h6>
+                    <ul>
+                      <li><strong>"Appellation Pauillac Contrôlée"</strong> - 最高等級</li>
+                      <li><strong>"Appellation Margaux Contrôlée"</strong> - 村莊AOC</li>
+                      <li><strong>"Appellation St-Émilion Contrôlée"</strong> - 右岸名村</li>
+                    </ul>
+                    
+                    <h6>地區級標示</h6>
+                    <ul>
+                      <li><strong>"Appellation Haut-Médoc Contrôlée"</strong></li>
+                      <li><strong>"Appellation Graves Contrôlée"</strong></li>
+                      <li><strong>"Appellation Médoc Contrôlée"</strong></li>
+                    </ul>
+                    
+                    <h6>基礎級標示</h6>
+                    <ul>
+                      <li><strong>"Appellation Bordeaux Contrôlée"</strong></li>
+                      <li><strong>"Appellation Bordeaux Supérieur Contrôlée"</strong></li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="classification-marks">
+                  <h5>🏆 分級標示</h5>
+                  <div class="classification-types">
+                    <h6>1855年分級</h6>
+                    <ul>
+                      <li><strong>"Premier Grand Cru Classé"</strong> - 一級酒莊</li>
+                      <li><strong>"Deuxième Grand Cru Classé"</strong> - 二級酒莊</li>
+                      <li><strong>"Grand Cru Classé"</strong> - 列級酒莊</li>
+                    </ul>
+                    
+                    <h6>St-Émilion分級</h6>
+                    <ul>
+                      <li><strong>"Premier Grand Cru Classé A"</strong> - 最高等級</li>
+                      <li><strong>"Premier Grand Cru Classé B"</strong> - 一級B</li>
+                      <li><strong>"Grand Cru Classé"</strong> - 列級酒莊</li>
+                      <li><strong>"Grand Cru"</strong> - 基本認證</li>
+                    </ul>
+                    
+                    <h6>Cru Bourgeois</h6>
+                    <ul>
+                      <li><strong>"Cru Bourgeois Exceptionnel"</strong> - 特優</li>
+                      <li><strong>"Cru Bourgeois Supérieur"</strong> - 優等</li>
+                      <li><strong>"Cru Bourgeois"</strong> - 基本等級</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <h4>其他重要資訊</h4>
+              <div class="additional-info">
+                <div class="producer-info">
+                  <h5>🏰 生產者資訊</h5>
+                  <ul>
+                    <li><strong>Château名稱：</strong>酒莊品牌標識</li>
+                    <li><strong>Propriétaire：</strong>酒莊擁有者</li>
+                    <li><strong>Mis en bouteille au château：</strong>酒莊裝瓶</li>
+                    <li><strong>Négociant：</strong>酒商調配酒款</li>
+                  </ul>
+                </div>
+                
+                <div class="technical-info">
+                  <h5>📊 技術資訊</h5>
+                  <ul>
+                    <li><strong>年份（Millésime）：</strong>葡萄採收年份</li>
+                    <li><strong>酒精度：</strong>通常12.5-14.5%</li>
+                    <li><strong>容量：</strong>750ml標準瓶</li>
+                    <li><strong>硫化物警告：</strong>法規要求標示</li>
+                  </ul>
+                </div>
+                
+                <div class="quality-indicators">
+                  <h5>🔍 品質線索</h5>
+                  <ul>
+                    <li><strong>老藤（Vieilles Vignes）：</strong>老藤葡萄</li>
+                    <li><strong>Cuvée Spéciale：</strong>特別調配</li>
+                    <li><strong>Élevé en fûts de chêne：</strong>橡木桶陈年</li>
+                    <li><strong>Agriculture Biologique：</strong>有機認證</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="reading-tips">
+              <h4>💡 選酒實用技巧</h4>
+              <div class="selection-strategy">
+                <h5>按預算選擇</h5>
+                <ul>
+                  <li><strong>入門級（€10-25）：</strong>Bordeaux、Bordeaux Supérieur</li>
+                  <li><strong>中檔級（€25-50）：</strong>Cru Bourgeois、地區AOC</li>
+                  <li><strong>高檔級（€50-150）：</strong>村莊AOC、分級酒莊</li>
+                  <li><strong>收藏級（€150+）：</strong>一二級酒莊、頂級年份</li>
+                </ul>
+                
+                <h5>按場合選擇</h5>
+                <ul>
+                  <li><strong>日常飲用：</strong>基礎AOC、年輕酒款</li>
+                  <li><strong>朋友聚餐：</strong>中檔村莊級、粉紅酒</li>
+                  <li><strong>正式晚宴：</strong>分級酒莊、陈年酒款</li>
+                  <li><strong>特殊慶祝：</strong>頂級年份、一級酒莊</li>
+                </ul>
+                
+                <h5>年份考量</h5>
+                <ul>
+                  <li><strong>優秀年份：</strong>2009、2010、2016、2019、2020</li>
+                  <li><strong>良好年份：</strong>2012、2014、2018</li>
+                  <li><strong>陈年建議：</strong>頂級年份可陈年15-30年</li>
+                  <li><strong>適飲期：</strong>基礎酒款2-5年內飲用</li>
+                </ul>
+              </div>
+            </div>
+          `,
+          interactive: 'label-reading-trainer'
+        }
+      ],
+      assessment: {
+        questions: [
+          {
+            id: 'wine-types-classification',
+            type: 'multiple-choice',
+            question: '波爾多紅酒大約佔該地區總產量的多少比例？',
+            options: [
+              '約65%',
+              '約75%',
+              '約85%',
+              '約95%'
+            ],
+            correct: 2,
+            explanation: '紅酒是波爾多最重要的酒款類型，約佔總產量的85%，其餘為白酒、粉紅酒和氣泡酒。'
+          },
+          {
+            id: 'sweet-wine-process',
+            type: 'multiple-choice',
+            question: 'Sauternes甜酒的特殊風味主要來自於？',
+            options: [
+              '人工添加糖分',
+              '貴腐菌感染',
+              '冰凍葡萄',
+              '延遲採收'
+            ],
+            correct: 1,
+            explanation: 'Sauternes甜酒的獨特風味來自貴腐菌（Botrytis cinerea）感染，使葡萄脫水濃縮並產生特殊香氣。'
+          },
+          {
+            id: 'label-reading',
+            type: 'multiple-choice',
+            question: '酒標上"Grand Cru Classé"標示代表什麼意思？',
+            options: [
+              '有機認證酒款',
+              '列級酒莊出品',
+              '老藤葡萄釀造',
+              '橡木桶陳年'
+            ],
+            correct: 1,
+            explanation: '"Grand Cru Classé"表示該酒款來自官方分級系統中的列級酒莊，代表較高的品質等級。'
+          },
+          {
+            id: 'appellation-hierarchy',
+            type: 'sorting',
+            question: '請將以下AOC等級按品質從高到低排列',
+            items: [
+              { id: 'village', text: '村莊級AOC（如Pauillac）', order: 1 },
+              { id: 'regional', text: '地區級AOC（如Haut-Médoc）', order: 2 },
+              { id: 'basic', text: '基礎級AOC（如Bordeaux）', order: 3 }
+            ],
+            explanation: 'AOC等級從高到低為：村莊級（最嚴格的產區規定）→ 地區級（中等標準）→ 基礎級（最基本的標準）。'
+          }
+        ],
+        practicalExercise: {
+          title: '酒款類型識別練習',
+          description: '通過觀察和品嚐來識別不同類型的波爾多葡萄酒',
+          steps: [
+            '準備四種不同類型的波爾多酒：紅酒、乾白酒、甜白酒、粉紅酒',
+            '觀察每種酒的顏色、透明度和粘稠度差異',
+            '聞香：識別各種酒款的典型香氣特徵',
+            '品嚐：注意甜度、酸度、單寧和酒體的不同',
+            '記錄每種酒款的特徵並進行分類說明'
+          ]
+        }
+      },
+      interactiveElements: [
+        {
+          type: 'red-wine-classification',
+          title: '紅酒分類探索器',
+          description: '互動式學習波爾多紅酒的AOC等級和風格分類'
+        },
+        {
+          type: 'white-wine-tasting-wheel',
+          title: '白酒風味輪',
+          description: '可視化展示乾白酒和甜白酒的香氣特徵差異'
+        },
+        {
+          type: 'rose-color-spectrum',
+          title: '粉紅酒色彩光譜',
+          description: '展示不同釀造方法對粉紅酒顏色的影響'
+        },
+        {
+          type: 'sparkling-production-simulator',
+          title: 'Crémant釀造模擬器',
+          description: '模擬傳統香檳法氣泡酒的釀造過程'
+        },
+        {
+          type: 'label-reading-trainer',
+          title: '酒標解讀訓練器',
+          description: '練習識別和理解波爾多酒標上的各種資訊'
+        }
+      ]
+    }
+  },
+
+  'l2-5': {
+    title: '氣候變遷對波爾多的影響',
+    fullContent: {
+      introduction: `
+        氣候變遷正在深刻影響著全球的葡萄酒產業，波爾多作為世界最重要的葡萄酒產區之一，
+        也面臨著前所未有的挑戰和機遇。本課程將探討這些變化如何影響葡萄種植、酒款風格，
+        以及產業的適應策略。
+      `,
+      sections: [
+        {
+          id: 'temperature-trends',
+          title: '溫度變化趨勢',
+          content: `
+            <h3>📈 升溫的現實</h3>
+            <p>近幾十年來，波爾多地區的溫度變化呈現明顯趨勢：</p>
+            <ul>
+              <li><strong>平均氣溫上升：</strong>比20世紀平均溫度高1.5-2°C</li>
+              <li><strong>生長季延長：</strong>春季提前，秋季延後</li>
+              <li><strong>極端氣候增加：</strong>熱浪和乾旱更加頻繁</li>
+              <li><strong>夜間溫度：</strong>夜溫升高影響酸度保持</li>
+            </ul>
+            
+            <h3>🍇 對葡萄生長的影響</h3>
+            <div class="climate-impacts">
+              <div class="positive-impacts">
+                <h4>正面影響</h4>
+                <ul>
+                  <li>Cabernet Sauvignon等晚熟品種更容易完全成熟</li>
+                  <li>減少某些年份的成熟度不足問題</li>
+                  <li>擴大了優質年份的可能性</li>
+                  <li>某些以前較冷涼地塊獲得更好表現機會</li>
+                </ul>
+              </div>
+              
+              <div class="negative-impacts">
+                <h4>負面挑戰</h4>
+                <ul>
+                  <li>過度成熟風險增加，影響酸度平衡</li>
+                  <li>酒精度過高，失去優雅特質</li>
+                  <li>採收期提前，壓縮決策時間</li>
+                  <li>水分壓力增加，影響葡萄品質</li>
+                </ul>
+              </div>
+            </div>
+          `,
+          interactive: 'temperature-timeline'
+        }
+      ],
+      assessmentQuestions: [
+        {
+          question: '波爾多左岸最重要的紅葡萄品種是什麼？',
+          options: ['Merlot', 'Cabernet Sauvignon', 'Cabernet Franc', 'Petit Verdot'],
+          correctAnswer: 1,
+          explanation: 'Cabernet Sauvignon是左岸最重要的品種，特別是在Médoc地區，通常占調配的60-80%。'
+        },
+        {
+          question: '為什麼Merlot在右岸表現優異？',
+          options: ['氣候較冷', '土壤含黏土較多', '海拔較高', '日照時間較短'],
+          correctAnswer: 1,
+          explanation: '右岸的黏土土壤特別適合Merlot生長，能夠提供適當的水分和養分。'
+        },
+        {
+          question: 'Sauternes甜酒的主要品種是什麼？',
+          options: ['Sauvignon Blanc', 'Sémillon', 'Muscadelle', 'Chardonnay'],
+          correctAnswer: 1,
+          explanation: 'Sémillon是Sauternes甜酒的主要品種，易感染貴腐菌，能產生複雜的蜂蜜香氣。'
+        },
+        {
+          question: '波爾多紅酒調配的主要目的是什麼？',
+          options: ['降低成本', '增加產量', '平衡風味和結構', '統一風格'],
+          correctAnswer: 2,
+          explanation: '調配的主要目的是平衡不同品種的特性，創造比單一品種更複雜、和諧的酒款。'
+        }
+      ]
+    }
+  },
+
+  'l1-6': {
+    title: 'AOC系統入門',
+    fullContent: {
+      introduction: `
+        AOC（Appellation d'Origine Contrôlée）原產地管制命名系統是法國葡萄酒品質保證的基石。
+        了解AOC系統不僅能幫助您選擇高品質的波爾多葡萄酒，更能深度理解法國葡萄酒的精髓所在。
+        本課程將從基礎概念開始，帶您全面掌握這個影響全世界的酒類分級系統。
+      `,
+      sections: [
+        {
+          id: 'aoc-fundamentals',
+          title: 'AOC基本概念與歷史',
+          content: `
+            <h3>🏛️ AOC系統的歷史起源</h3>
+            <p>AOC系統誕生於1935年，其創建背景和發展歷程：</p>
+            <ul>
+              <li><strong>1935年創立：</strong>為了保護法國優質葡萄酒產區免受假酒衝擊</li>
+              <li><strong>Terroir概念：</strong>強調土地、氣候、傳統工藝的獨特組合</li>
+              <li><strong>法律保護：</strong>世界上第一個完整的葡萄酒原產地保護法律框架</li>
+              <li><strong>國際影響：</strong>成為全球葡萄酒分級系統的範本</li>
+            </ul>
+            
+            <h3>🔍 AOC的核心理念</h3>
+            <p>AOC系統基於四大支柱：</p>
+            <div class="concept-pillars">
+              <div class="pillar">
+                <h4>地理邊界 (Geographic Boundaries)</h4>
+                <p>嚴格劃定的產區範圍，每塊土地都有詳細記錄</p>
+              </div>
+              <div class="pillar">
+                <h4>葡萄品種 (Grape Varieties)</h4>
+                <p>指定允許種植的葡萄品種及其比例限制</p>
+              </div>
+              <div class="pillar">
+                <h4>栽培技術 (Viticultural Practices)</h4>
+                <p>種植密度、修剪方式、產量控制等技術規範</p>
+              </div>
+              <div class="pillar">
+                <h4>釀造工藝 (Winemaking Methods)</h4>
+                <p>傳統的釀造方法和品質標準</p>
+              </div>
+            </div>
+          `,
+          interactive: 'aoc-timeline'
+        },
+        {
+          id: 'aoc-hierarchy',
+          title: '法國葡萄酒分級體系',
+          content: `
+            <h3>📊 四級分級架構</h3>
+            <p>法國葡萄酒按品質和產區特性分為四個主要等級：</p>
+            
+            <h4>🏆 AOC/AOP（最高級）</h4>
+            <ul>
+              <li><strong>全稱：</strong>Appellation d'Origine Contrôlée / Protégée</li>
+              <li><strong>特徵：</strong>嚴格的產區界定和生產規範</li>
+              <li><strong>波爾多例子：</strong>Pauillac、Margaux、Saint-Émilion</li>
+              <li><strong>品質保證：</strong>代表該產區的最高水準</li>
+            </ul>
+            
+            <h4>🥈 IGP（地區級）</h4>
+            <ul>
+              <li><strong>全稱：</strong>Indication Géographique Protégée</li>
+              <li><strong>特徵：</strong>較靈活的產區規定，允許更多品種</li>
+              <li><strong>波爾多例子：</strong>Atlantique IGP</li>
+              <li><strong>優勢：</strong>性價比高，適合日常飲用</li>
+            </ul>
+            
+            <h4>🥉 Vin de France（國家級）</h4>
+            <ul>
+              <li><strong>特徵：</strong>來自法國任何產區的葡萄</li>
+              <li><strong>靈活性：</strong>可標示品種和年份</li>
+              <li><strong>定位：</strong>入門級別，價格親民</li>
+            </ul>
+          `,
+          interactive: 'hierarchy-pyramid'
+        },
+        {
+          id: 'bordeaux-aoc-system',
+          title: '波爾多AOC體系詳解',
+          content: `
+            <h3>🗺️ 波爾多AOC的三層結構</h3>
+            <p>波爾多擁有獨特的三層AOC體系，從廣泛到專精：</p>
+            
+            <h4>第一層：地區級AOC（Regional AOC）</h4>
+            <div class="aoc-level">
+              <h5>🍷 Bordeaux AOC</h5>
+              <ul>
+                <li><strong>範圍：</strong>整個波爾多地區（110,000公頃）</li>
+                <li><strong>產量：</strong>約佔波爾多總產量的55%</li>
+                <li><strong>特色：</strong>價格親民，風格多樣</li>
+                <li><strong>品種：</strong>紅酒以Merlot、Cabernet Sauvignon為主</li>
+              </ul>
+              
+              <h5>🍷 Bordeaux Supérieur AOC</h5>
+              <ul>
+                <li><strong>要求：</strong>更嚴格的產量限制和最低酒精度</li>
+                <li><strong>陳年：</strong>必須陳釀至少12個月</li>
+                <li><strong>品質：</strong>介於Bordeaux和村莊級之間</li>
+              </ul>
+            </div>
+            
+            <h4>第二層：次區域級AOC（Sub-regional AOC）</h4>
+            <div class="aoc-level">
+              <h5>🏞️ Haut-Médoc AOC</h5>
+              <ul>
+                <li><strong>位置：</strong>左岸上梅多克地區</li>
+                <li><strong>土壤：</strong>以礫石土為主</li>
+                <li><strong>風格：</strong>結構較為強勁</li>
+              </ul>
+              
+              <h5>🏞️ Graves AOC</h5>
+              <ul>
+                <li><strong>特色：</strong>同時生產紅酒和白酒</li>
+                <li><strong>土壤：</strong>礫石和沙土混合</li>
+                <li><strong>歷史：</strong>波爾多最古老的產區之一</li>
+              </ul>
+            </div>
+            
+            <h4>第三層：村莊級AOC（Communal AOC）</h4>
+            <div class="aoc-level">
+              <h5>👑 Left Bank 四大名村</h5>
+              <ul>
+                <li><strong>Margaux：</strong>優雅細膩，「酒中皇后」</li>
+                <li><strong>Pauillac：</strong>力量與結構的典範</li>
+                <li><strong>Saint-Julien：</strong>平衡與和諧的代表</li>
+                <li><strong>Saint-Estèphe：</strong>強勁耐陳的風格</li>
+              </ul>
+              
+              <h5>💎 Right Bank 精品產區</h5>
+              <ul>
+                <li><strong>Saint-Émilion：</strong>世界文化遺產產區</li>
+                <li><strong>Pomerol：</strong>精品小產區，無分級制度</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'bordeaux-aoc-map'
+        },
+        {
+          id: 'aoc-regulations',
+          title: 'AOC生產規範深度解析',
+          content: `
+            <h3>📋 嚴格的生產標準</h3>
+            <p>每個AOC都有詳細的生產規範，確保品質一致性：</p>
+            
+            <h4>🍇 葡萄品種規定</h4>
+            <div class="regulation-example">
+              <h5>以Pauillac AOC為例：</h5>
+              <ul>
+                <li><strong>主要品種：</strong>Cabernet Sauvignon（通常50-80%）</li>
+                <li><strong>輔助品種：</strong>Merlot、Cabernet Franc、Petit Verdot</li>
+                <li><strong>禁用品種：</strong>不在許可清單內的所有品種</li>
+                <li><strong>調配靈活性：</strong>允許生產者根據年份調整比例</li>
+              </ul>
+            </div>
+            
+            <h4>🌱 栽培技術要求</h4>
+            <div class="cultivation-standards">
+              <h5>種植密度標準：</h5>
+              <ul>
+                <li><strong>Médoc村莊級：</strong>每公頃7,000-10,000株</li>
+                <li><strong>Right Bank：</strong>每公頃5,500-7,000株</li>
+                <li><strong>地區級AOC：</strong>每公頃4,500株以上</li>
+              </ul>
+              
+              <h5>產量限制：</h5>
+              <ul>
+                <li><strong>村莊級AOC：</strong>45-50 hl/ha</li>
+                <li><strong>地區級AOC：</strong>55-65 hl/ha</li>
+                <li><strong>豐收年調整：</strong>可申請15%的產量增幅</li>
+              </ul>
+            </div>
+            
+            <h4>🍷 釀造工藝規範</h4>
+            <div class="winemaking-rules">
+              <h5>發酵要求：</h5>
+              <ul>
+                <li><strong>天然發酵：</strong>鼓勵使用野生酵母</li>
+                <li><strong>溫度控制：</strong>紅酒發酵溫度不超過32°C</li>
+                <li><strong>浸皮時間：</strong>最少15天</li>
+              </ul>
+              
+              <h5>陈酿規定：</h5>
+              <ul>
+                <li><strong>橡木桶使用：</strong>傳統法式橡木桶優先</li>
+                <li><strong>最短陳年：</strong>大部分AOC要求12個月以上</li>
+                <li><strong>瓶中陳年：</strong>某些AOC要求額外瓶中陳年</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'regulation-calculator'
+        },
+        {
+          id: 'quality-control',
+          title: 'AOC品質控制與認證',
+          content: `
+            <h3>🔍 嚴格的品質監督</h3>
+            <p>AOC系統通過多層次的品質控制確保標準：</p>
+            
+            <h4>📝 認證機構：INAO</h4>
+            <div class="certification-body">
+              <h5>國家原產地與品質研究院（INAO）職責：</h5>
+              <ul>
+                <li><strong>標準制定：</strong>制定和更新各AOC的生產規範</li>
+                <li><strong>產區劃界：</strong>精確劃定每個AOC的地理邊界</li>
+                <li><strong>監督檢查：</strong>定期實地檢查生產者合規性</li>
+                <li><strong>品質認證：</strong>審核酒款是否符合AOC標準</li>
+              </ul>
+            </div>
+            
+            <h4>🧪 品質檢測程序</h4>
+            <div class="quality-process">
+              <h5>三階段檢測：</h5>
+              <div class="stage">
+                <h6>第一階段：田間檢查</h6>
+                <ul>
+                  <li>種植密度測量</li>
+                  <li>品種比例核查</li>
+                  <li>產量統計</li>
+                  <li>栽培技術審核</li>
+                </ul>
+              </div>
+              
+              <div class="stage">
+                <h6>第二階段：釀造監督</h6>
+                <ul>
+                  <li>釀造工藝檢查</li>
+                  <li>設備規範審核</li>
+                  <li>添加劑使用監控</li>
+                  <li>陳年過程跟蹤</li>
+                </ul>
+              </div>
+              
+              <div class="stage">
+                <h6>第三階段：成品審核</h6>
+                <ul>
+                  <li>化學分析檢測</li>
+                  <li>感官品評</li>
+                  <li>標籤合規審查</li>
+                  <li>最終認證授予</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h4>⚖️ 處罰機制</h4>
+            <div class="penalty-system">
+              <h5>違規後果：</h5>
+              <ul>
+                <li><strong>警告：</strong>初次輕微違規</li>
+                <li><strong>產品降級：</strong>從AOC降為IGP或Vin de France</li>
+                <li><strong>禁用AOC標識：</strong>嚴重違規的酒款</li>
+                <li><strong>吊銷認證：</strong>重複或嚴重違規的生產者</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'quality-control-flow'
+        },
+        {
+          id: 'consumer-benefits',
+          title: 'AOC對消費者的意義',
+          content: `
+            <h3>🛡️ 品質保障與消費指導</h3>
+            <p>AOC系統為消費者提供可靠的品質指標和選購依據：</p>
+            
+            <h4>🎯 品質保證</h4>
+            <div class="quality-guarantee">
+              <h5>AOC標籤的含義：</h5>
+              <ul>
+                <li><strong>原產地保證：</strong>葡萄確實來自標示的產區</li>
+                <li><strong>品種保證：</strong>使用傳統的葡萄品種組合</li>
+                <li><strong>工藝保證：</strong>遵循該產區的傳統釀造方法</li>
+                <li><strong>品質保證：</strong>達到該AOC的最低品質標準</li>
+              </ul>
+            </div>
+            
+            <h4>📖 選酒指南</h4>
+            <div class="buying-guide">
+              <h5>如何利用AOC資訊選酒：</h5>
+              
+              <h6>🍷 按風格偏好選擇：</h6>
+              <ul>
+                <li><strong>喜愛強勁酒體：</strong>選擇Pauillac、Saint-Estèphe</li>
+                <li><strong>偏好優雅風格：</strong>選擇Margaux、Saint-Julien</li>
+                <li><strong>追求圓潤口感：</strong>選擇Pomerol、Saint-Émilion</li>
+                <li><strong>預算考量：</strong>選擇Bordeaux、Bordeaux Supérieur</li>
+              </ul>
+              
+              <h6>💰 按價位段選擇：</h6>
+              <ul>
+                <li><strong>入門級（€8-15）：</strong>Bordeaux AOC</li>
+                <li><strong>進階級（€15-30）：</strong>Bordeaux Supérieur、Haut-Médoc</li>
+                <li><strong>精品級（€30-100）：</strong>村莊AOC、Cru Bourgeois</li>
+                <li><strong>收藏級（€100+）：</strong>分級酒莊、頂級年份</li>
+              </ul>
+            </div>
+            
+            <h4>🔄 與其他產區的比較</h4>
+            <div class="international-comparison">
+              <h5>AOC系統的國際影響：</h5>
+              <ul>
+                <li><strong>義大利：</strong>DOC/DOCG系統借鑑AOC模式</li>
+                <li><strong>西班牙：</strong>DO/DOCa系統</li>
+                <li><strong>德國：</strong>QbA/QmP系統</li>
+                <li><strong>新世界：</strong>美國AVA、澳洲GI等地理標示</li>
+              </ul>
+            </div>
+          `,
+          interactive: 'aoc-comparison-tool'
+        }
+      ],
+      practicalApplications: [
+        {
+          title: '酒標解讀實務',
+          description: '學習如何從波爾多酒標中識別AOC等級、產區特色和品質指標，成為選酒達人。'
+        },
+        {
+          title: '品酒筆記記錄',
+          description: '建立系統性的品酒記錄，包含AOC資訊、風味描述、配餐建議等專業內容。'
+        },
+        {
+          title: '酒窖管理應用',
+          description: '運用AOC分級知識管理個人酒窖，制定最佳的收藏和飲用時間表。'
+        }
+      ],
+      assessment: {
+        questions: [
+          {
+            question: 'AOC系統創立於哪一年？',
+            options: ['1920年', '1935年', '1945年', '1955年'],
+            correctAnswer: 1,
+            explanation: 'AOC系統創立於1935年，是為了保護法國葡萄酒產區免受假酒衝擊而建立的。'
+          },
+          {
+            question: 'AOC系統的四大支柱不包括以下哪項？',
+            options: ['地理邊界', '葡萄品種', '價格控制', '釀造工藝'],
+            correctAnswer: 2,
+            explanation: 'AOC系統的四大支柱是地理邊界、葡萄品種、栽培技術和釀造工藝，不包括價格控制。'
+          },
+          {
+            question: '波爾多AOC體系中，哪個是最基礎的等級？',
+            options: ['Pauillac AOC', 'Haut-Médoc AOC', 'Bordeaux AOC', 'Médoc AOC'],
+            correctAnswer: 2,
+            explanation: 'Bordeaux AOC是波爾多最基礎的地區級AOC，覆蓋整個波爾多地區。'
+          },
+          {
+            question: '負責監督AOC標準的法國機構是？',
+            options: ['CIVB', 'INAO', 'OIV', 'BNIC'],
+            correctAnswer: 1,
+            explanation: 'INAO（國家原產地與品質研究院）是負責制定和監督AOC標準的官方機構。'
+          },
+          {
+            question: '下列哪個產區同時生產紅酒和白酒？',
+            options: ['Pauillac', 'Pomerol', 'Graves', 'Saint-Julien'],
+            correctAnswer: 2,
+            explanation: 'Graves AOC是波爾多少數同時生產高品質紅酒和白酒的產區之一。'
+          }
+        ]
+      }
+    }
+  },
+
+  'l2-6': {
+    title: 'Graves產區與環境特色',
+    subtitle: '紅酒與白酒的雙重典範',
+    duration: '32分鐘',
+    difficulty: 'Level 2',
+    fullContent: {
+      introduction: {
+        overview: 'Graves是波爾多歷史最悠久的產區之一，以其獨特的砂礫土壤命名。這裡同時生產世界級的紅酒和白酒，包括著名的Château Haut-Brion，展現了波爾多產區的多樣性與複雜性。',
+        objectives: [
+          '了解Graves產區的歷史地位',
+          '認識砂礫土壤的影響',
+          '掌握紅酒與白酒的雙重特色',
+          '學習Pessac-Léognan的精華',
+          '理解環境對風味的影響'
+        ],
+        keyPoints: [
+          '波爾多最古老的葡萄酒產區',
+          '以砂礫(Graves)土壤聞名',
+          '唯一同時生產頂級紅白酒的產區',
+          'Château Haut-Brion的故鄉',
+          'Pessac-Léognan為核心精華區'
+        ]
+      },
+      sections: [
+        {
+          id: 'historical-significance',
+          title: '歷史地位與重要性',
+          content: 'Graves是波爾多最古老的葡萄酒產區，早在12世紀就開始種植葡萄。這裡誕生了波爾多第一個國際知名的酒莊Château Haut-Brion，奠定了波爾多在世界葡萄酒版圖中的地位。',
+          details: [
+            '歷史：12世紀開始的葡萄種植傳統',
+            '地位：波爾多葡萄酒的發源地之一',
+            '傳承：八個世紀的釀酒工藝積淀',
+            '影響：對波爾多酒業發展的重要貢獻',
+            '榮耀：多座歷史名莊的搖籃'
+          ],
+          interactive: {
+            type: 'historical-timeline',
+            description: '探索Graves產區的歷史發展軌跡'
+          }
+        },
+        {
+          id: 'terroir-geology',
+          title: '砂礫風土特色',
+          content: 'Graves的名稱直接來源於其特有的砂礫土壤。這種由砂石、礫石和黏土組成的複雜土壤結構，為葡萄提供了優異的排水條件和獨特的礦物質風味。',
+          details: [
+            '土壤組成：砂礫、砂石、黏土的複合結構',
+            '排水性：優異的水分控制能力',
+            '蓄熱性：白天吸熱，夜晚緩慢釋放',
+            '礦物質：豐富的礦物質含量',
+            '風土表現：賦予酒款獨特的礦物風味'
+          ],
+          interactive: {
+            type: 'soil-cross-section',
+            description: '分析Graves砂礫土壤的結構特徵'
+          }
+        },
+        {
+          id: 'dual-production',
+          title: '紅白酒雙重特色',
+          content: 'Graves是波爾多少數同時生產頂級紅酒和白酒的產區。紅酒以Cabernet Sauvignon和Merlot為主，白酒則以Sauvignon Blanc和Sémillon調配，各具特色。',
+          details: [
+            '紅酒：優雅的Cabernet Sauvignon主導風格',
+            '白酒：清新的Sauvignon Blanc與圓潤的Sémillon',
+            '平衡：紅白酒生產的完美平衡',
+            '多樣性：滿足不同口味需求',
+            '品質：紅白酒均達到頂級水準'
+          ],
+          interactive: {
+            type: 'wine-style-comparison',
+            description: '比較Graves紅酒與白酒的風格特徵'
+          }
+        },
+        {
+          id: 'pessac-leognan',
+          title: 'Pessac-Léognan核心區',
+          content: 'Pessac-Léognan是Graves產區的精華部分，於1987年獨立成為AOC。這裡集中了最優質的酒莊，包括所有的Graves列級莊，代表了產區的最高水準。',
+          details: [
+            'Château Haut-Brion：唯一的Graves一級莊',
+            'Château La Mission Haut-Brion：傳奇對手',
+            'Château Pape Clément：歷史悠久的名莊',
+            '白酒精品：Château Laville Haut-Brion等',
+            '土壤優勢：最優質的砂礫土壤集中地'
+          ],
+          interactive: {
+            type: 'estate-map-explorer',
+            description: '探索Pessac-Léognan的知名酒莊分佈'
+          }
+        },
+        {
+          id: 'environmental-factors',
+          title: '環境因素影響',
+          content: 'Graves的環境條件獨特，受大西洋影響的溫和氣候、森林屏障的保護以及砂礫土壤的調節作用，共同創造了理想的葡萄種植環境。',
+          details: [
+            '氣候：大西洋調節的溫和海洋性氣候',
+            '森林：Landes森林的天然屏障作用',
+            '微氣候：多樣化的微環境條件',
+            '水源：加倫河的滋養與調節',
+            '生態：豐富的生物多樣性環境'
+          ],
+          interactive: {
+            type: 'climate-analysis',
+            description: '分析環境因素對Graves風味的影響'
+          }
+        },
+        {
+          id: 'modern-development',
+          title: '現代發展與創新',
+          content: 'Graves產區在保持傳統的同時積極創新，採用現代技術提升酒質，發展生態友善種植，並致力於可持續發展，為產區的未來奠定基礎。',
+          details: [
+            '技術創新：現代釀酒技術的應用',
+            '有機種植：環境友善的栽培方式',
+            '品質提升：持續的品質改善努力',
+            '市場拓展：國際市場的積極開發',
+            '未來展望：可持續發展的長遠規劃'
+          ],
+          interactive: {
+            type: 'innovation-showcase',
+            description: '了解Graves產區的創新發展'
+          }
+        }
+      ],
+      assessment: {
+        questions: [
+          {
+            id: 1,
+            type: 'multiple-choice',
+            question: 'Graves產區的名稱來源於？',
+            options: ['古老城堡', '砂礫土壤', '河流名稱', '貴族家族'],
+            correct: 1,
+            explanation: 'Graves的名稱直接來源於其特有的砂礫(Graves)土壤。'
+          },
+          {
+            id: 2,
+            type: 'multiple-choice',
+            question: 'Graves產區最早的葡萄種植歷史可追溯到？',
+            options: ['10世紀', '12世紀', '14世紀', '16世紀'],
+            correct: 1,
+            explanation: 'Graves是波爾多最古老的產區之一，早在12世紀就開始種植葡萄。'
+          },
+          {
+            id: 3,
+            type: 'multiple-choice',
+            question: 'Château Haut-Brion在1855年分級中的地位是？',
+            options: ['二級莊', '三級莊', '一級莊', '未分級'],
+            correct: 2,
+            explanation: 'Château Haut-Brion是Graves唯一的一級莊，也是唯一不在Médoc的一級莊。'
+          },
+          {
+            id: 4,
+            type: 'multiple-choice',
+            question: 'Pessac-Léognan成為獨立AOC的年份是？',
+            options: ['1985年', '1987年', '1989年', '1991年'],
+            correct: 1,
+            explanation: 'Pessac-Léognan於1987年從Graves產區獨立出來，成為單獨的AOC。'
+          },
+          {
+            id: 5,
+            type: 'multiple-choice',
+            question: 'Graves產區的獨特之處在於？',
+            options: ['只產紅酒', '只產白酒', '紅白酒並產', '只產甜酒'],
+            correct: 2,
+            explanation: 'Graves是波爾多少數同時生產頂級紅酒和白酒的產區。'
+          },
+          {
+            id: 6,
+            type: 'multiple-choice',
+            question: 'Graves白酒的主要葡萄品種組合是？',
+            options: ['Chardonnay + Riesling', 'Sauvignon Blanc + Sémillon', 'Chenin Blanc + Muscadelle', 'Gewürztraminer + Pinot Gris'],
+            correct: 1,
+            explanation: 'Graves白酒主要由Sauvignon Blanc和Sémillon調配而成。'
+          },
+          {
+            id: 7,
+            type: 'multiple-choice',
+            question: 'Graves砂礫土壤的主要優勢是？',
+            options: ['保水能力強', '排水性優異', '養分含量高', '酸性較強'],
+            correct: 1,
+            explanation: 'Graves砂礫土壤的主要特點是排水性優異，有利於葡萄根系發展。'
+          },
+          {
+            id: 8,
+            type: 'multiple-choice',
+            question: '影響Graves氣候的主要因素是？',
+            options: ['山脈屏障', '大西洋調節', '內陸高原', '地中海影響'],
+            correct: 1,
+            explanation: 'Graves受大西洋影響，具有溫和的海洋性氣候特徵。'
+          },
+          {
+            id: 9,
+            type: 'multiple-choice',
+            question: 'Graves紅酒的主要特色是？',
+            options: ['極其強勁', '優雅礦物', '果味濃郁', '輕盈易飲'],
+            correct: 1,
+            explanation: 'Graves紅酒以其優雅的風格和獨特的礦物質風味著稱。'
+          },
+          {
+            id: 10,
+            type: 'multiple-choice',
+            question: 'Landes森林對Graves產區的作用是？',
+            options: ['提供木材', '天然屏障', '水源調節', '土壤改良'],
+            correct: 1,
+            explanation: 'Landes森林為Graves產區提供天然屏障，保護葡萄園免受惡劣天氣影響。'
+          }
+        ]
+      },
+      practicalApplications: [
+        '品嚐Graves紅白酒的風格對比',
+        '參觀Château Haut-Brion等知名酒莊',
+        '學習砂礫土壤對風味的影響',
+        '探索Graves與Médoc的差異',
+        '了解雙重生產的管理技術'
+      ],
+      resources: [
+        '《Graves產區完全指南》',
+        'Château Haut-Brion酒莊歷史',
+        'Pessac-Léognan AOC官方資料',
+        '波爾多砂礫土壤研究',
+        'Level 2 - Graves章節'
+      ]
+    }
+  },
+
+  // Removed duplicate 'l3-2' key and its value to fix the error.
+
+  'l3-2': {
+    title: '土壤科學與風土表達',
+    subtitle: '從地質學到感官體驗的深度解析',
+    duration: '45分鐘',
+    difficulty: 'Level 3',
+    fullContent: {
+      introduction: {
+        overview: '土壤是風土(Terroir)概念的核心要素之一，其物理、化學和生物特性深刻影響著葡萄的生長和最終酒款的風味表達。本課程從科學角度深入探討波爾多不同土壤類型的形成機制、特性分析以及對葡萄酒風格的影響機理。',
+        objectives: [
+          '掌握土壤科學的基礎理論',
+          '分析波爾多主要土壤類型的特徵',
+          '理解土壤-葡萄-酒款的關聯機制',
+          '學習土壤分析的科學方法',
+          '探索風土表達的科學基礎'
+        ],
+        keyPoints: [
+          '土壤物理、化學、生物特性的綜合影響',
+          '礫石、黏土、石灰岩等土壤類型分析',
+          '土壤pH值、礦物質含量的作用機制',
+          '根系發展與土壤結構的相互關係',
+          '土壤微生物群落對風味的貢獻'
+        ]
+      },
+      sections: [
+        {
+          id: 'soil-science-fundamentals',
+          title: '土壤科學基礎理論',
+          content: '土壤是一個複雜的生態系統，由礦物質、有機物、水分、空氣和微生物組成。其物理結構、化學成分和生物活性共同決定了葡萄的營養吸收和風味發展。',
+          details: [
+            '土壤組成：礦物質（45%）、有機物（5%）、孔隙空間（50%）',
+            '物理特性：質地、結構、密度、孔隙率、持水性',
+            '化學特性：pH值、陽離子交換能力、營養元素含量',
+            '生物特性：微生物群落、酶活性、有機物分解',
+            '形成因素：母岩、氣候、地形、時間、生物活動'
+          ],
+          interactive: {
+            type: 'soil-composition-analyzer',
+            description: '分析不同土壤組成對葡萄生長的影響'
+          }
+        },
+        {
+          id: 'bordeaux-soil-types',
+          title: '波爾多土壤類型分類',
+          content: '波爾多的土壤類型多樣，主要包括礫石土、黏土、石灰岩土和沖積土。每種土壤類型都有其獨特的形成歷史和特徵，適合不同的葡萄品種種植。',
+          details: [
+            '礫石土：吉隆德河古河道沉積，排水佳、蓄熱強',
+            '黏土：海洋沉積形成，保水性強、營養豐富',
+            '石灰岩土：古海床抬升，pH偏鹼、礦物質豐富',
+            '沖積土：現代河流沉積，肥沃但排水需改善',
+            '混合土：多種土壤類型的複合結構'
+          ],
+          interactive: {
+            type: 'soil-type-mapper',
+            description: '探索波爾多不同產區的土壤分佈圖'
+          }
+        },
+        {
+          id: 'physical-properties-impact',
+          title: '土壤物理特性的影響',
+          content: '土壤的物理特性直接影響葡萄根系的發展、水分管理和溫度調節，進而影響葡萄的成熟過程和風味濃縮度。',
+          details: [
+            '質地影響：砂土排水快但保肥差，黏土相反',
+            '結構作用：團粒結構利於根系穿透和通氣',
+            '密度效應：適度緊實促進根系下扎尋找養分',
+            '孔隙作用：大孔隙排水，小孔隙保水',
+            '溫度調節：深色土壤吸熱，淺色土壤反光'
+          ],
+          interactive: {
+            type: 'physical-properties-simulator',
+            description: '模擬不同物理特性對葡萄生長的影響'
+          }
+        },
+        {
+          id: 'chemical-composition-analysis',
+          title: '土壤化學成分解析',
+          content: '土壤的化學成分決定了葡萄能夠獲得的營養元素種類和數量，pH值影響養分的有效性，礦物質含量直接反映在酒款的風味特徵中。',
+          details: [
+            'pH值影響：酸性土壤利於鐵鋁吸收，鹼性土壤利於鈣鎂',
+            '主要元素：氮（葉片生長）、磷（根系發育）、鉀（果實品質）',
+            '次要元素：鈣、鎂、硫對酒質的微妙影響',
+            '微量元素：鐵、錳、鋅、硼的催化作用',
+            '有機質：腐殖質提供緩釋營養和改善土壤結構'
+          ],
+          interactive: {
+            type: 'chemical-analysis-lab',
+            description: '虛擬土壤化學分析實驗室'
+          }
+        },
+        {
+          id: 'root-soil-interaction',
+          title: '根系與土壤的相互作用',
+          content: '葡萄根系與土壤環境的相互作用是一個動態平衡過程，根系形態、分佈深度和活動強度都會影響植株的營養狀態和抗逆性。',
+          details: [
+            '根系形態：主根深扎vs鬚根橫展的適應策略',
+            '分佈模式：土壤條件決定根系的空間配置',
+            '營養吸收：主動吸收與被動吸收的平衡',
+            '水分利用：根系對土壤水分梯度的響應',
+            '共生關係：菌根真菌與根系的互惠合作'
+          ],
+          interactive: {
+            type: 'root-development-3d',
+            description: '3D模擬不同土壤中的根系發展'
+          }
+        },
+        {
+          id: 'terroir-expression-mechanism',
+          title: '風土表達的科學機制',
+          content: '風土表達是土壤、氣候、地形和人為因素綜合作用的結果。土壤通過影響葡萄的生理代謝過程，最終在酒款中留下獨特的化學指紋。',
+          details: [
+            '代謝途徑：土壤條件影響次生代謝物的合成',
+            '香氣化合物：礦物質催化特定香氣物質的形成',
+            '單寧結構：土壤pH和礦物質影響單寧聚合度',
+            '酸度平衡：土壤緩衝能力影響果實酸度',
+            '陳年潛力：土壤賦予的結構穩定性影響陳年能力'
+          ],
+          interactive: {
+            type: 'terroir-expression-analyzer',
+            description: '分析土壤如何影響最終的酒款風格'
+          }
+        }
+      ],
+      assessment: {
+        questions: [
+          {
+            id: 1,
+            type: 'multiple-choice',
+            question: '土壤中礦物質的典型比例約為？',
+            options: ['25%', '35%', '45%', '55%'],
+            correct: 2,
+            explanation: '健康土壤中礦物質通常佔45%左右，有機物約5%，孔隙空間約50%。'
+          },
+          {
+            id: 2,
+            type: 'multiple-choice',
+            question: '波爾多礫石土壤的主要優勢是？',
+            options: ['保水性強', '排水佳且蓄熱', '營養豐富', 'pH值穩定'],
+            correct: 1,
+            explanation: '礫石土壤的主要優勢是優異的排水性和良好的蓄熱能力，適合Cabernet Sauvignon等晚熟品種。'
+          },
+          {
+            id: 3,
+            type: 'multiple-choice',
+            question: '土壤pH值對葡萄生長的主要影響是？',
+            options: ['影響光合作用', '影響營養吸收', '影響開花結果', '影響抗病性'],
+            correct: 1,
+            explanation: 'pH值主要影響土壤中營養元素的有效性，進而影響葡萄的營養吸收。'
+          },
+          {
+            id: 4,
+            type: 'multiple-choice',
+            question: '黏土的主要特徵是？',
+            options: ['排水性好', '保水保肥能力強', '升溫快', '通透性佳'],
+            correct: 1,
+            explanation: '黏土具有強的保水保肥能力，但排水性較差，升溫也較慢。'
+          },
+          {
+            id: 5,
+            type: 'multiple-choice',
+            question: '菌根真菌對葡萄根系的作用是？',
+            options: ['增加病害', '競爭營養', '互惠共生', '抑制生長'],
+            correct: 2,
+            explanation: '菌根真菌與葡萄根系形成互惠共生關係，幫助植物吸收水分和營養。'
+          },
+          {
+            id: 6,
+            type: 'essay',
+            question: '請分析礫石土壤和黏土對Cabernet Sauvignon和Merlot兩個品種生長的不同影響，並說明這種差異如何反映在最終的酒款風格上。',
+            points: 15,
+            criteria: [
+              '準確描述兩種土壤的物理化學特性（5分）',
+              '分析土壤與品種適應性的關係（5分）',
+              '闡述土壤影響酒款風格的機制（5分）'
+            ]
+          },
+          {
+            id: 7,
+            type: 'multiple-choice',
+            question: '石灰岩土壤對葡萄酒風味的典型影響是？',
+            options: ['增加果味', '提升礦物感', '降低酸度', '減少單寧'],
+            correct: 1,
+            explanation: '石灰岩土壤富含礦物質，通常會給葡萄酒帶來明顯的礦物風味特徵。'
+          },
+          {
+            id: 8,
+            type: 'case-study',
+            question: '某酒莊位於波爾多左岸，土壤分析顯示：表層礫石厚度2米，底層為石灰岩基岩，pH值6.8，有機質含量2.1%。請分析這種土壤條件的特點，並推薦最適合的葡萄品種及釀造策略。',
+            points: 20,
+            criteria: [
+              '土壤條件分析的準確性（8分）',
+              '品種選擇的合理性（6分）',
+              '釀造策略的科學性（6分）'
+            ]
+          },
+          {
+            id: 9,
+            type: 'multiple-choice',
+            question: '土壤有機質的主要作用不包括？',
+            options: ['改善土壤結構', '提供緩釋養分', '增強保水能力', '提高土壤pH'],
+            correct: 3,
+            explanation: '有機質主要作用是改善土壤結構、提供養分和增強保水能力，但不會顯著提高土壤pH值。'
+          },
+          {
+            id: 10,
+            type: 'analysis',
+            question: '根據土壤三角圖，判斷含有40%砂粒、35%粉粒、25%黏粒的土壤質地類型，並分析其對葡萄栽培的適宜性。',
+            points: 12,
+            criteria: [
+              '正確判斷土壤質地類型（4分）',
+              '分析物理特性（4分）',
+              '評估栽培適宜性（4分）'
+            ]
+          }
+        ]
+      },
+      practicalApplications: [
+        '進行土壤樣本的物理化學分析',
+        '使用土壤三角圖判斷土壤質地',
+        '分析不同產區土壤對酒款風格的影響',
+        '設計針對特定土壤的栽培管理方案',
+        '建立土壤-品種-風格的關聯資料庫'
+      ],
+      resources: [
+        '《葡萄園土壤學》專業教材',
+        '波爾多地質調查報告',
+        '國際土壤科學學會(ISSS)標準',
+        '法國農業研究院土壤資料庫',
+        '葡萄酒風土科學研究最新文獻'
+      ]
+    }
+  }
+};
+
+// 評估標準
+export const assessmentCriteria = {
+  'l1-2': {
+    passingScore: 70,
+    questionTypes: ['multiple-choice', 'matching', 'short-answer'],
+    skills: ['data-reading', 'concept-understanding', 'application']
+  },
+  'l1-3': {
+    passingScore: 75,
+    questionTypes: ['multiple-choice', 'identification', 'matching', 'blending-exercise'],
+    skills: ['grape-identification', 'flavor-profiling', 'blending-understanding', 'terroir-matching']
+  },
+  'l1-6': {
+    passingScore: 75,
+    questionTypes: ['multiple-choice', 'case-analysis', 'label-reading'],
+    skills: ['aoc-understanding', 'quality-assessment', 'wine-selection', 'system-knowledge']
+  },
+  'l2-5': {
+    passingScore: 75,
+    questionTypes: ['multiple-choice', 'case-analysis', 'comparison'],
+    skills: ['analysis', 'synthesis', 'critical-thinking']
+  },
+  'l3-1': {
+    passingScore: 80,
+    questionTypes: ['essay', 'case-study', 'research-based'],
+    skills: ['research', 'analysis', 'strategy-development', 'communication']
+  },
+  'l2-1': {
+    passingScore: 70,
+    questionTypes: ['multiple-choice', 'identification', 'map-reading'],
+    skills: ['terroir-analysis', 'appellation-knowledge', 'historical-context']
+  },
+  'l2-2': {
+    passingScore: 75,
+    questionTypes: ['multiple-choice', 'identification', 'style-analysis'],
+    skills: ['terroir-understanding', 'style-recognition', 'sensory-analysis', 'food-pairing']
+  },
+  'l2-3': {
+    passingScore: 75,
+    questionTypes: ['multiple-choice', 'chateau-comparison', 'tasting-analysis'],
+    skills: ['premier-cru-knowledge', 'terroir-analysis', 'aging-potential', 'style-identification']
+  },
+  'l2-4': {
+    passingScore: 75,
+    questionTypes: ['multiple-choice', 'balance-analysis', 'value-assessment'],
+    skills: ['balance-recognition', 'estate-knowledge', 'value-analysis', 'style-comparison']
+  },
+  'l2-6': {
+    passingScore: 75,
+    questionTypes: ['multiple-choice', 'historical-analysis', 'terroir-comparison'],
+    skills: ['historical-knowledge', 'dual-production-understanding', 'environmental-analysis', 'estate-recognition']
+  },
+  'l3-2': {
+    passingScore: 80,
+    questionTypes: ['multiple-choice', 'essay', 'case-study', 'analysis'],
+    skills: ['soil-science-knowledge', 'terroir-analysis', 'scientific-reasoning', 'practical-application']
+  }
+}

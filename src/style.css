@@ -1,0 +1,2995 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  /* 避免全域置中造成版面偏移，改回預設 block */
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* 響應式媒體：圖片 / 影片 / iframe */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+iframe {
+  max-width: 100%;
+  /* 盡量避免固定高度，讓容器控制比例 */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+
+  /* --- Mobile responsiveness for self-study blocks --- */
+  @media (max-width: 640px) {
+    /* Steps: collapse to one column and increase tap targets */
+    .steps {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .step {
+      padding: 12px 14px;
+    }
+
+    /* Compare table: enable horizontal scroll with sticky header */
+    .compare-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9rem;
+    }
+    .compare-table thead th,
+    .compare-table tbody td {
+      min-width: 140px;
+    }
+    .compare-table tbody td:first-child {
+      min-width: 120px;
+      font-weight: 600; /* 強化面向欄辨識度 */
+    }
+    .compare-table thead th {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 1;
+    }
+
+    /* Lead text tighter line height on small screens */
+    .lead-text {
+      line-height: 1.55;
+    }
+
+    /* Quiz options wrap nicely on small screens */
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .quiz-option {
+      white-space: normal;
+      text-align: left;
+      padding: 10px 12px;
+    }
+
+    /* Emphasize strong text within content blocks */
+    .main-content strong {
+      font-weight: 700;
+    }
+
+    /* Tighten margins for cards */
+    .info-card,
+    .misconception-card,
+    .callout {
+      margin: 8px 0 10px;
+    }
+  }
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  /* 讓應用容器充滿寬度，由各頁面自行置中內部內容 */
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: initial;
+  min-height: 100vh;
+}
+
+/* === Utility classes for mobile adjustments and tables === */
+.u-stack-sm { display: flex; }
+@media (max-width: 768px) {
+  .u-stack-sm { flex-direction: column !important; gap: 0.75rem; }
+}
+
+.u-pad-sm { padding: 12px !important; }
+.u-pad-xs { padding: 8px !important; }
+.u-mb-xs { margin-bottom: 8px !important; }
+.u-mt-xs { margin-top: 8px !important; }
+.u-gap-xs { gap: 0.5rem !important; }
+
+@media (max-width: 768px) {
+  .u-hide-sm { display: none !important; }
+  .u-show-sm { display: initial !important; }
+}
+.u-show-sm { display: none; }
+
+/* 手機專用工具類 */
+@media (max-width: 640px) {
+  .u-hide-mobile { display: none !important; }
+  .u-show-mobile { display: initial !important; }
+  .u-compact-mobile { padding: 0.5rem !important; }
+  .u-tight-mobile { gap: 0.5rem !important; }
+  .u-text-sm-mobile { font-size: 0.85rem !important; }
+  .u-text-xs-mobile { font-size: 0.75rem !important; }
+}
+.u-show-mobile { display: none; }
+
+.u-scroll-x { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+.u-wrap { white-space: normal !important; }
+.u-break-anywhere { overflow-wrap: anywhere !important; word-break: break-word !important; }
+
+/* Table helpers */
+.table-scroll { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+.table-wrap th, .table-wrap td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+
+/* Column priority (apply to th/td) */
+@media (max-width: 640px) {
+  .u-col-prio-3 { display: none !important; }
+}
+@media (max-width: 480px) {
+  .u-col-prio-2 { display: none !important; }
+}
+
+/* Ensure compare/data tables wrap long entries by default */
+.compare-table th, .compare-table td,
+.data-table th, .data-table td { overflow-wrap: anywhere; word-break: break-word; }
+
+/* Correct mobile compare-table behavior (outside nested rules) */
+@media (max-width: 640px) {
+  .compare-table.table-scroll,
+  .data-table.table-scroll { display: block; overflow-x: auto; white-space: nowrap; }
+}
+/* 小螢幕：縮小標題、保留正文字體約 16px 並提高行高，壓縮常見卡片內邊距 */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* 保持良好可讀性 */
+    line-height: 1.6;
+  }
+
+  h1 { font-size: 1.8rem; line-height: 1.25; }
+  h2 { font-size: 1.4rem; line-height: 1.35; }
+  h3 { font-size: 1.2rem; line-height: 1.4; }
+
+  .card { padding: 1rem; }
+  .info-card,
+  .misconception-card,
+  .callout { padding: 10px 12px; }
+}
+
+/* 手機進一步優化 - 640px 以下 */
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  h1 { font-size: 1.6rem; line-height: 1.3; }
+  h2 { font-size: 1.3rem; line-height: 1.35; }
+  h3 { font-size: 1.1rem; line-height: 1.4; }
+  h4 { font-size: 1rem; }
+
+  .card { padding: 0.75rem; }
+  .info-card,
+  .misconception-card,
+  .callout { 
+    padding: 8px 10px;
+    margin: 8px 0;
+  }
+  
+  /* 按鈕優化 - 更大的觸控目標 */
+  button {
+    min-height: 44px; /* iOS 建議最小觸控尺寸 */
+    padding: 0.6em 1em;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* --- Self-study blocks for presentation --- */
+.info-card {
+  border-left: 4px solid #4caf50;
+  background: #f6fff8;
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin: 10px 0;
+  text-align: left;
+}
+.misconception-card {
+  border-left: 4px solid #ff9800;
+  background: #fff8e6;
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin: 10px 0;
+  text-align: left;
+}
+.callout {
+  background: #eef3ff;
+  border: 1px solid #cfd8ff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  text-align: left;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+.compare-table th,
+.compare-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.compare-table thead th {
+  background: #f3f4f6;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  text-align: left;
+}
+.step {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 10px;
+}
+.glossary-toggle {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+.glossary-drawer {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: min(420px, 90vw);
+  max-height: 60vh;
+  overflow: auto;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  padding: 14px;
+  text-align: left;
+  z-index: 1000;
+}
+.glossary-drawer h4 { margin: 0 0 8px; }
+.glossary-search { display: flex; gap: 8px; margin: 8px 0 10px; }
+.glossary-search input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+.glossary-search input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96,165,250,0.25);
+}
+.glossary-item { margin: 8px 0; }
+.glossary-item .term { font-weight: 700; }
+.glossary-item mark.glossary-hl {
+  background: #fef3c7; /* amber-100 */
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+.glossary-empty { color: #6b7280; font-size: 0.95rem; margin: 8px 0; }
+.glossary-close {
+  float: right;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* 課程資料表格 — 標準樣式 */
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 12px 0 16px;
+  font-size: 0.95rem;
+}
+.data-table thead th {
+  background: #f6f7f9;
+  color: #334155;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 12px;
+}
+.data-table tbody td {
+  border-bottom: 1px solid #eef1f4;
+  padding: 10px 12px;
+  color: #1f2937;
+}
+.data-table tbody tr:nth-child(odd) td {
+  background: #fafbfc;
+}
+.data-table tbody tr:hover td {
+  background: #f2f6ff;
+}
+.data-table th, .data-table td {
+  border-right: 1px solid #eef1f4;
+}
+.data-table th:last-child, .data-table td:last-child {
+  border-right: none;
+}
+
+/* 表格緊湊版（資訊密集頁面） */
+.data-table.compact thead th { padding: 6px 8px; font-size: 0.9rem; }
+.data-table.compact tbody td { padding: 6px 8px; font-size: 0.9rem; }
+
+/* 章節摘要卡（highlights） */
+.highlights-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 12px 0 16px;
+  --highlight-delay-step: 0.05s;
+}
+.highlight-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  opacity: 0;
+  transform: translateY(8px);
+  animation: highlightFadeIn 0.4s ease forwards;
+  animation-delay: calc(var(--highlight-order, 0) * var(--highlight-delay-step, 0.05s));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.highlights-section .highlight-card:nth-child(1) { --highlight-order: 0; }
+.highlights-section .highlight-card:nth-child(2) { --highlight-order: 1; }
+.highlights-section .highlight-card:nth-child(3) { --highlight-order: 2; }
+.highlights-section .highlight-card:nth-child(4) { --highlight-order: 3; }
+.highlights-section .highlight-card:nth-child(5) { --highlight-order: 4; }
+.highlight-card:hover,
+.highlight-card:focus-within {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+}
+.highlight-card:active {
+  transform: translateY(0) scale(0.995);
+}
+.highlight-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+.highlight-content h4 { margin: 0 0 4px; font-size: 1rem; }
+.highlight-content p { margin: 0; color: #374151; }
+
+@keyframes highlightFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 首頁：學習目標卡片 */
+.objectives-section {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+}
+.objectives-section .section-title {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+.objective-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.objective-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.objective-card:hover { 
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+.objective-icon {
+  --icon-bg: #e0f2fe;
+  --icon-fg: #0369a1;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--icon-bg);
+  color: var(--icon-fg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1;
+  flex: 0 0 28px;
+}
+.objective-text {
+  color: #1f2937;
+}
+/* 交錯色彩點綴 */
+.objective-card:nth-child(3n+1) .objective-icon { --icon-bg: #e0f2fe; --icon-fg: #0369a1; }
+.objective-card:nth-child(3n+2) .objective-icon { --icon-bg: #e9d5ff; --icon-fg: #6b21a8; }
+.objective-card:nth-child(3n+3) .objective-icon { --icon-bg: #dcfce7; --icon-fg: #166534; }
+
+@media (max-width: 640px) {
+  .objectives-section { padding: 14px; }
+  .objective-grid { grid-template-columns: 1fr; }
+  .objective-card { padding: 10px; }
+}
+
+/* 水分模型小工具 */
+.water-trend-widget {
+  --sparkline-color: var(--highlight-color, #0ea5e9);
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 14px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 12px;
+}
+.water-trend-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.water-trend-widget .control-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.water-trend-widget .control-row label {
+  padding: 6px 12px;
+  border: 1px solid #dbe2f0;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.water-trend-widget .opt-base:checked ~ .control-row label[for="wt-base"],
+.water-trend-widget .opt-drought:checked ~ .control-row label[for="wt-drought"],
+.water-trend-widget .opt-irrigation:checked ~ .control-row label[for="wt-irrigation"] {
+  background: rgba(14, 165, 233, 0.12);
+  color: #0f172a;
+  border-color: #0ea5e9;
+}
+.water-trend-widget .panels {
+  display: grid;
+}
+.water-trend-widget .chart {
+  display: none;
+  justify-content: center;
+}
+.water-trend-widget svg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+.water-trend-widget svg polyline {
+  fill: none;
+  stroke: var(--sparkline-color);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.water-trend-widget svg .threshold {
+  stroke: #d1d5db;
+  stroke-dasharray: 6 5;
+  stroke-width: 2;
+}
+.water-trend-widget .metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+}
+.water-trend-widget .metric {
+  display: none;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+.water-trend-widget .metric .label {
+  display: block;
+  font-size: 0.78rem;
+  color: #475569;
+}
+.water-trend-widget .metric .value {
+  font-weight: 600;
+  color: #0f172a;
+}
+.water-trend-widget .notes {
+  font-size: 0.85rem;
+  color: #475569;
+}
+.water-trend-widget .opt-base:checked ~ .panels .chart[data-scenario="base"],
+.water-trend-widget .opt-drought:checked ~ .panels .chart[data-scenario="drought"],
+.water-trend-widget .opt-irrigation:checked ~ .panels .chart[data-scenario="irrigation"] {
+  display: flex;
+}
+.water-trend-widget .opt-base:checked ~ .metrics .metric[data-scenario="base"],
+.water-trend-widget .opt-drought:checked ~ .metrics .metric[data-scenario="drought"],
+.water-trend-widget .opt-irrigation:checked ~ .metrics .metric[data-scenario="irrigation"] {
+  display: block;
+}
+
+/* 烘烤配置小工具 */
+.toast-profile-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.toast-profile-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.toast-profile-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.toast-profile-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.toast-profile-widget .opt-light:checked ~ .selectors label[for="toast-light"],
+.toast-profile-widget .opt-medium:checked ~ .selectors label[for="toast-medium"],
+.toast-profile-widget .opt-heavy:checked ~ .selectors label[for="toast-heavy"] {
+  background: rgba(249, 115, 22, 0.14);
+  border-color: var(--highlight-color, #f97316);
+  color: #7c2d12;
+}
+.toast-profile-widget .panels {
+  position: relative;
+}
+.toast-profile-widget .panel {
+  display: none;
+  gap: 12px;
+}
+.toast-profile-widget .panel .note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+.toast-profile-widget .opt-light:checked ~ .panels .panel[data-profile="light"],
+.toast-profile-widget .opt-medium:checked ~ .panels .panel[data-profile="medium"],
+.toast-profile-widget .opt-heavy:checked ~ .panels .panel[data-profile="heavy"] {
+  display: block;
+}
+
+/* 盈虧平衡儀表 */
+.breakeven-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.breakeven-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.breakeven-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.breakeven-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.breakeven-widget .opt-base:checked ~ .selectors label[for="bev-base"],
+.breakeven-widget .opt-price:checked ~ .selectors label[for="bev-price"],
+.breakeven-widget .opt-efficiency:checked ~ .selectors label[for="bev-efficiency"] {
+  background: rgba(34, 197, 94, 0.14);
+  border-color: var(--highlight-color, #22c55e);
+  color: #14532d;
+}
+.breakeven-widget .panels {
+  position: relative;
+}
+.breakeven-widget .panel {
+  display: none;
+}
+.breakeven-widget .panel .note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+.breakeven-widget .opt-base:checked ~ .panels .panel[data-scenario="base"],
+.breakeven-widget .opt-price:checked ~ .panels .panel[data-scenario="price"],
+.breakeven-widget .opt-efficiency:checked ~ .panels .panel[data-scenario="efficiency"] {
+  display: block;
+}
+
+/* ROI 儀表 */
+.roi-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.roi-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.roi-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.roi-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.roi-widget .opt-quality:checked ~ .selectors label[for="roi-quality"],
+.roi-widget .opt-direct:checked ~ .selectors label[for="roi-direct"],
+.roi-widget .opt-esg:checked ~ .selectors label[for="roi-esg"] {
+  background: rgba(99, 102, 241, 0.14);
+  border-color: var(--highlight-color, #6366f1);
+  color: #312e81;
+}
+.roi-widget .panels {
+  position: relative;
+}
+.roi-widget .panel {
+  display: none;
+}
+.roi-widget .metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.roi-widget .metric {
+  min-width: 140px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+.roi-widget .metric .label {
+  display: block;
+  font-size: 0.78rem;
+  color: #475569;
+}
+.roi-widget .metric .value {
+  font-weight: 600;
+  color: #1f2937;
+}
+.roi-widget .panel .note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+.roi-widget .opt-quality:checked ~ .panels .panel[data-scenario="quality"],
+.roi-widget .opt-direct:checked ~ .panels .panel[data-scenario="direct"],
+.roi-widget .opt-esg:checked ~ .panels .panel[data-scenario="esg"] {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .roi-widget .metrics { flex-direction: column; }
+}
+
+/* 通路策略小工具 */
+.channel-mix-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.channel-mix-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.channel-mix-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.channel-mix-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.channel-mix-widget .opt-traditional:checked ~ .selectors label[for="channel-traditional"],
+.channel-mix-widget .opt-hybrid:checked ~ .selectors label[for="channel-hybrid"],
+.channel-mix-widget .opt-direct:checked ~ .selectors label[for="channel-direct"] {
+  background: rgba(245, 158, 11, 0.14);
+  border-color: var(--highlight-color, #f59e0b);
+  color: #7c2d12;
+}
+.channel-mix-widget .panels {
+  position: relative;
+}
+.channel-mix-widget .panel {
+  display: none;
+}
+.channel-mix-widget .panel .note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+.channel-mix-widget .opt-traditional:checked ~ .panels .panel[data-scenario="traditional"],
+.channel-mix-widget .opt-hybrid:checked ~ .panels .panel[data-scenario="hybrid"],
+.channel-mix-widget .opt-direct:checked ~ .panels .panel[data-scenario="direct"] {
+  display: block;
+}
+
+/* 市場文化互動 */
+.market-culture-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.market-culture-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.market-culture-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.market-culture-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.market-culture-widget .opt-us:checked ~ .selectors label[for="culture-us"],
+.market-culture-widget .opt-cn:checked ~ .selectors label[for="culture-cn"],
+.market-culture-widget .opt-jp:checked ~ .selectors label[for="culture-jp"],
+.market-culture-widget .opt-gb:checked ~ .selectors label[for="culture-gb"] {
+  background: rgba(16, 185, 129, 0.14);
+  border-color: var(--highlight-color, #10b981);
+  color: #064e3b;
+}
+.market-culture-widget .panels {
+  position: relative;
+}
+.market-culture-widget .panel {
+  display: none;
+}
+.market-culture-widget .panel .note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+.market-culture-widget .opt-us:checked ~ .panels .panel[data-market="us"],
+.market-culture-widget .opt-cn:checked ~ .panels .panel[data-market="cn"],
+.market-culture-widget .opt-jp:checked ~ .panels .panel[data-market="jp"],
+.market-culture-widget .opt-gb:checked ~ .panels .panel[data-market="gb"] {
+  display: block;
+}
+
+/* AOC 認證流程小工具 */
+.aoc-process-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.aoc-process-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.aoc-process-widget .selectors {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.aoc-process-widget .selectors label {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.aoc-process-widget .opt-step1:checked ~ .selectors label[for="aoc-step1"],
+.aoc-process-widget .opt-step2:checked ~ .selectors label[for="aoc-step2"],
+.aoc-process-widget .opt-step3:checked ~ .selectors label[for="aoc-step3"],
+.aoc-process-widget .opt-step4:checked ~ .selectors label[for="aoc-step4"],
+.aoc-process-widget .opt-step5:checked ~ .selectors label[for="aoc-step5"],
+.aoc-process-widget .opt-step6:checked ~ .selectors label[for="aoc-step6"] {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: #3b82f6;
+  color: #1e3a8a;
+}
+.aoc-process-widget .panels {
+  position: relative;
+}
+.aoc-process-widget .panel {
+  display: none;
+}
+.aoc-process-widget .panel h4 {
+  margin-top: 0;
+  color: #1e3a8a;
+  font-size: 1.05rem;
+}
+.aoc-process-widget .panel ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.aoc-process-widget .opt-step1:checked ~ .panels .panel[data-step="1"],
+.aoc-process-widget .opt-step2:checked ~ .panels .panel[data-step="2"],
+.aoc-process-widget .opt-step3:checked ~ .panels .panel[data-step="3"],
+.aoc-process-widget .opt-step4:checked ~ .panels .panel[data-step="4"],
+.aoc-process-widget .opt-step5:checked ~ .panels .panel[data-step="5"],
+.aoc-process-widget .opt-step6:checked ~ .panels .panel[data-step="6"] {
+  display: block;
+}
+
+/* 法律救濟路徑小工具 */
+.legal-remedy-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.legal-remedy-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.legal-remedy-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.legal-remedy-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.legal-remedy-widget .opt-admin:checked ~ .selectors label[for="remedy-admin"],
+.legal-remedy-widget .opt-civil:checked ~ .selectors label[for="remedy-civil"],
+.legal-remedy-widget .opt-criminal:checked ~ .selectors label[for="remedy-criminal"] {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: #ef4444;
+  color: #7f1d1d;
+}
+.legal-remedy-widget .panels {
+  position: relative;
+}
+.legal-remedy-widget .panel {
+  display: none;
+}
+.legal-remedy-widget .panel h4 {
+  margin-top: 0;
+  color: #7f1d1d;
+  font-size: 1.05rem;
+}
+.legal-remedy-widget .panel ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.legal-remedy-widget .opt-admin:checked ~ .panels .panel[data-remedy="admin"],
+.legal-remedy-widget .opt-civil:checked ~ .panels .panel[data-remedy="civil"],
+.legal-remedy-widget .opt-criminal:checked ~ .panels .panel[data-remedy="criminal"] {
+  display: block;
+}
+
+/* 風險矩陣小工具 */
+.risk-matrix-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.risk-matrix-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.risk-matrix-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.risk-matrix-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.risk-matrix-widget .opt-climate:checked ~ .selectors label[for="risk-climate"],
+.risk-matrix-widget .opt-market:checked ~ .selectors label[for="risk-market"],
+.risk-matrix-widget .opt-operation:checked ~ .selectors label[for="risk-operation"] {
+  background: rgba(220, 38, 38, 0.12);
+  border-color: #dc2626;
+  color: #7f1d1d;
+}
+.risk-matrix-widget .panels {
+  position: relative;
+}
+.risk-matrix-widget .panel {
+  display: none;
+}
+.risk-matrix-widget .panel h4 {
+  margin-top: 0;
+  color: #7f1d1d;
+  font-size: 1.05rem;
+}
+.risk-matrix-widget .panel .note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-style: italic;
+}
+.risk-matrix-widget .opt-climate:checked ~ .panels .panel[data-risk="climate"],
+.risk-matrix-widget .opt-market:checked ~ .panels .panel[data-risk="market"],
+.risk-matrix-widget .opt-operation:checked ~ .panels .panel[data-risk="operation"] {
+  display: block;
+}
+
+/* 保險組合小工具 */
+.insurance-portfolio-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.insurance-portfolio-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.insurance-portfolio-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.insurance-portfolio-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.insurance-portfolio-widget .opt-basic:checked ~ .selectors label[for="ins-basic"],
+.insurance-portfolio-widget .opt-standard:checked ~ .selectors label[for="ins-standard"],
+.insurance-portfolio-widget .opt-premium:checked ~ .selectors label[for="ins-premium"] {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: #22c55e;
+  color: #14532d;
+}
+.insurance-portfolio-widget .panels {
+  position: relative;
+}
+.insurance-portfolio-widget .panel {
+  display: none;
+}
+.insurance-portfolio-widget .panel h4 {
+  margin-top: 0;
+  color: #14532d;
+  font-size: 1.05rem;
+}
+.insurance-portfolio-widget .panel ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.insurance-portfolio-widget .opt-basic:checked ~ .panels .panel[data-tier="basic"],
+.insurance-portfolio-widget .opt-standard:checked ~ .panels .panel[data-tier="standard"],
+.insurance-portfolio-widget .opt-premium:checked ~ .panels .panel[data-tier="premium"] {
+  display: block;
+}
+
+/* 水資源策略小工具 */
+.water-strategy-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.water-strategy-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.water-strategy-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.water-strategy-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.water-strategy-widget .opt-rainfed:checked ~ .selectors label[for="water-rainfed"],
+.water-strategy-widget .opt-drip:checked ~ .selectors label[for="water-drip"],
+.water-strategy-widget .opt-reserve:checked ~ .selectors label[for="water-reserve"] {
+  background: rgba(6, 182, 212, 0.12);
+  border-color: #06b6d4;
+  color: #164e63;
+}
+.water-strategy-widget .panels {
+  position: relative;
+}
+.water-strategy-widget .panel {
+  display: none;
+}
+.water-strategy-widget .panel h4 {
+  margin-top: 0;
+  color: #164e63;
+  font-size: 1.05rem;
+}
+.water-strategy-widget .panel ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.water-strategy-widget .opt-rainfed:checked ~ .panels .panel[data-strategy="rainfed"],
+.water-strategy-widget .opt-drip:checked ~ .panels .panel[data-strategy="drip"],
+.water-strategy-widget .opt-reserve:checked ~ .panels .panel[data-strategy="reserve"] {
+  display: block;
+}
+
+/* 危機情境小工具 */
+.crisis-scenario-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0 18px;
+  background: #ffffff;
+  display: grid;
+  gap: 14px;
+}
+.crisis-scenario-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.crisis-scenario-widget .selectors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.crisis-scenario-widget .selectors label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.crisis-scenario-widget .opt-frost:checked ~ .selectors label[for="crisis-frost"],
+.crisis-scenario-widget .opt-fire:checked ~ .selectors label[for="crisis-fire"],
+.crisis-scenario-widget .opt-cyber:checked ~ .selectors label[for="crisis-cyber"] {
+  background: rgba(249, 115, 22, 0.12);
+  border-color: #f97316;
+  color: #7c2d12;
+}
+.crisis-scenario-widget .panels {
+  position: relative;
+}
+.crisis-scenario-widget .panel {
+  display: none;
+}
+.crisis-scenario-widget .panel h4 {
+  margin-top: 0;
+  color: #7c2d12;
+  font-size: 1.05rem;
+}
+.crisis-scenario-widget .panel ol {
+  margin: 8px 0;
+  padding-left: 24px;
+}
+.crisis-scenario-widget .panel .note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-style: italic;
+}
+.crisis-scenario-widget .opt-frost:checked ~ .panels .panel[data-crisis="frost"],
+.crisis-scenario-widget .opt-fire:checked ~ .panels .panel[data-crisis="fire"],
+.crisis-scenario-widget .opt-cyber:checked ~ .panels .panel[data-crisis="cyber"] {
+  display: block;
+}
+
+/* === L4-8: 永續與碳盤查小工具 === */
+
+/* 永續驅動力小工具 */
+.sustainability-driver-widget {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
+}
+.sustainability-driver-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.sustainability-driver-widget .selectors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.sustainability-driver-widget .selectors label {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid #10b981;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #10b981;
+}
+.sustainability-driver-widget .opt-regulation:checked ~ .selectors label[for="driver-regulation"],
+.sustainability-driver-widget .opt-market:checked ~ .selectors label[for="driver-market"],
+.sustainability-driver-widget .opt-risk:checked ~ .selectors label[for="driver-risk"],
+.sustainability-driver-widget .opt-brand:checked ~ .selectors label[for="driver-brand"] {
+  background: #10b981;
+  color: white;
+}
+.sustainability-driver-widget .panels {
+  position: relative;
+}
+.sustainability-driver-widget .panel {
+  display: none;
+}
+.sustainability-driver-widget .panel h4 {
+  margin-top: 0;
+  color: #065f46;
+  font-size: 1.2rem;
+}
+.sustainability-driver-widget .panel ul {
+  margin: 0.75rem 0;
+}
+.sustainability-driver-widget .panel .note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 3px solid #10b981;
+  color: #4b5563;
+  font-style: italic;
+}
+.sustainability-driver-widget .opt-regulation:checked ~ .panels .panel[data-driver="regulation"],
+.sustainability-driver-widget .opt-market:checked ~ .panels .panel[data-driver="market"],
+.sustainability-driver-widget .opt-risk:checked ~ .panels .panel[data-driver="risk"],
+.sustainability-driver-widget .opt-brand:checked ~ .panels .panel[data-driver="brand"] {
+  display: block;
+}
+
+/* 碳盤查範疇小工具 */
+.carbon-inventory-widget {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.1);
+}
+.carbon-inventory-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.carbon-inventory-widget .selectors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.carbon-inventory-widget .selectors label {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid #0ea5e9;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #0ea5e9;
+}
+.carbon-inventory-widget .opt-scope1:checked ~ .selectors label[for="carbon-scope1"],
+.carbon-inventory-widget .opt-scope2:checked ~ .selectors label[for="carbon-scope2"],
+.carbon-inventory-widget .opt-scope3:checked ~ .selectors label[for="carbon-scope3"] {
+  background: #0ea5e9;
+  color: white;
+}
+.carbon-inventory-widget .panels {
+  position: relative;
+}
+.carbon-inventory-widget .panel {
+  display: none;
+}
+.carbon-inventory-widget .panel h4 {
+  margin-top: 0;
+  color: #075985;
+  font-size: 1.2rem;
+}
+.carbon-inventory-widget .panel .note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(14, 165, 233, 0.1);
+  border-left: 3px solid #0ea5e9;
+  color: #4b5563;
+  font-style: italic;
+}
+.carbon-inventory-widget .opt-scope1:checked ~ .panels .panel[data-scope="scope1"],
+.carbon-inventory-widget .opt-scope2:checked ~ .panels .panel[data-scope="scope2"],
+.carbon-inventory-widget .opt-scope3:checked ~ .panels .panel[data-scope="scope3"] {
+  display: block;
+}
+
+/* 減碳成本曲線小工具 */
+.abatement-curve-widget {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(234, 179, 8, 0.1);
+}
+.abatement-curve-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.abatement-curve-widget .selectors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.abatement-curve-widget .selectors label {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid #eab308;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #eab308;
+}
+.abatement-curve-widget .opt-quick:checked ~ .selectors label[for="abate-quick"],
+.abatement-curve-widget .opt-cost:checked ~ .selectors label[for="abate-cost"],
+.abatement-curve-widget .opt-impact:checked ~ .selectors label[for="abate-impact"] {
+  background: #eab308;
+  color: white;
+}
+.abatement-curve-widget .panels {
+  position: relative;
+}
+.abatement-curve-widget .panel {
+  display: none;
+}
+.abatement-curve-widget .panel h4 {
+  margin-top: 0;
+  color: #854d0e;
+  font-size: 1.2rem;
+}
+.abatement-curve-widget .panel ol {
+  margin: 0.75rem 0;
+}
+.abatement-curve-widget .panel .note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(234, 179, 8, 0.1);
+  border-left: 3px solid #eab308;
+  color: #4b5563;
+  font-style: italic;
+}
+.abatement-curve-widget .opt-quick:checked ~ .panels .panel[data-priority="quick"],
+.abatement-curve-widget .opt-cost:checked ~ .panels .panel[data-priority="cost"],
+.abatement-curve-widget .opt-impact:checked ~ .panels .panel[data-priority="impact"] {
+  display: block;
+}
+
+/* 認證決策樹小工具 */
+.certification-decision-widget {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
+}
+.certification-decision-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.certification-decision-widget .selectors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.certification-decision-widget .selectors label {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid #ef4444;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #ef4444;
+}
+.certification-decision-widget .opt-organic:checked ~ .selectors label[for="cert-organic"],
+.certification-decision-widget .opt-climate:checked ~ .selectors label[for="cert-climate"],
+.certification-decision-widget .opt-holistic:checked ~ .selectors label[for="cert-holistic"] {
+  background: #ef4444;
+  color: white;
+}
+.certification-decision-widget .panels {
+  position: relative;
+}
+.certification-decision-widget .panel {
+  display: none;
+}
+.certification-decision-widget .panel h4 {
+  margin-top: 0;
+  color: #991b1b;
+  font-size: 1.2rem;
+}
+.certification-decision-widget .panel ol {
+  margin: 0.75rem 0;
+}
+.certification-decision-widget .opt-organic:checked ~ .panels .panel[data-path="organic"],
+.certification-decision-widget .opt-climate:checked ~ .panels .panel[data-path="climate"],
+.certification-decision-widget .opt-holistic:checked ~ .panels .panel[data-path="holistic"] {
+  display: block;
+}
+
+/* 重大性矩陣小工具 */
+.materiality-matrix-widget {
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+}
+.materiality-matrix-widget .matrix-header {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-left: 4px solid #8b5cf6;
+  border-radius: 4px;
+}
+.materiality-matrix-widget .matrix-header p {
+  margin: 0;
+  font-weight: 500;
+  color: #5b21b6;
+}
+.materiality-matrix-widget .matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.materiality-matrix-widget .quadrant {
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+  border: 2px solid #8b5cf6;
+}
+.materiality-matrix-widget .quadrant h5 {
+  margin: 0 0 0.75rem 0;
+  color: #5b21b6;
+  font-size: 1rem;
+}
+.materiality-matrix-widget .quadrant ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.materiality-matrix-widget .quadrant.high-high {
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+  border-color: #7c3aed;
+  border-width: 3px;
+}
+.materiality-matrix-widget .quadrant.low-high {
+  background: rgba(139, 92, 246, 0.05);
+}
+.materiality-matrix-widget .quadrant.high-low {
+  background: rgba(139, 92, 246, 0.05);
+}
+.materiality-matrix-widget .quadrant.low-low {
+  background: rgba(139, 92, 246, 0.02);
+  opacity: 0.7;
+}
+
+/* === L4-9: 感官科學與盲品框架小工具 === */
+
+/* 感官適應小工具 */
+.sensory-adaptation-widget {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+}
+.sensory-adaptation-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.sensory-adaptation-widget .selectors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.sensory-adaptation-widget .selectors label {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid #f59e0b;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #f59e0b;
+}
+.sensory-adaptation-widget .opt-olfactory:checked ~ .selectors label[for="adapt-olfactory"],
+.sensory-adaptation-widget .opt-gustatory:checked ~ .selectors label[for="adapt-gustatory"],
+.sensory-adaptation-widget .opt-cross:checked ~ .selectors label[for="adapt-cross"] {
+  background: #f59e0b;
+  color: white;
+}
+.sensory-adaptation-widget .panels {
+  position: relative;
+}
+.sensory-adaptation-widget .panel {
+  display: none;
+}
+.sensory-adaptation-widget .panel h4 {
+  margin-top: 0;
+  color: #92400e;
+  font-size: 1.2rem;
+}
+.sensory-adaptation-widget .panel ul {
+  margin: 0.75rem 0;
+}
+.sensory-adaptation-widget .panel .note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 3px solid #f59e0b;
+  color: #4b5563;
+  font-style: italic;
+}
+.sensory-adaptation-widget .opt-olfactory:checked ~ .panels .panel[data-adapt="olfactory"],
+.sensory-adaptation-widget .opt-gustatory:checked ~ .panels .panel[data-adapt="gustatory"],
+.sensory-adaptation-widget .opt-cross:checked ~ .panels .panel[data-adapt="cross"] {
+  display: block;
+}
+
+/* 校準方法小工具 */
+.calibration-method-widget {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+}
+.calibration-method-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.calibration-method-widget .selectors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.calibration-method-widget .selectors label {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid #3b82f6;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #3b82f6;
+}
+.calibration-method-widget .opt-triangle:checked ~ .selectors label[for="calib-triangle"],
+.calibration-method-widget .opt-reference:checked ~ .selectors label[for="calib-reference"],
+.calibration-method-widget .opt-consensus:checked ~ .selectors label[for="calib-consensus"] {
+  background: #3b82f6;
+  color: white;
+}
+.calibration-method-widget .panels {
+  position: relative;
+}
+.calibration-method-widget .panel {
+  display: none;
+}
+.calibration-method-widget .panel h4 {
+  margin-top: 0;
+  color: #1e40af;
+  font-size: 1.2rem;
+}
+.calibration-method-widget .panel ol,
+.calibration-method-widget .panel ul {
+  margin: 0.75rem 0;
+}
+.calibration-method-widget .panel .note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 3px solid #3b82f6;
+  color: #4b5563;
+  font-style: italic;
+}
+.calibration-method-widget .opt-triangle:checked ~ .panels .panel[data-method="triangle"],
+.calibration-method-widget .opt-reference:checked ~ .panels .panel[data-method="reference"],
+.calibration-method-widget .opt-consensus:checked ~ .panels .panel[data-method="consensus"] {
+  display: block;
+}
+
+/* 葡萄酒缺陷小工具 */
+.wine-fault-widget {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
+}
+.wine-fault-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.wine-fault-widget .selectors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.wine-fault-widget .selectors label {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid #ef4444;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #ef4444;
+  font-size: 0.9rem;
+}
+.wine-fault-widget .opt-tca:checked ~ .selectors label[for="fault-tca"],
+.wine-fault-widget .opt-brett:checked ~ .selectors label[for="fault-brett"],
+.wine-fault-widget .opt-reduction:checked ~ .selectors label[for="fault-reduction"],
+.wine-fault-widget .opt-oxidation:checked ~ .selectors label[for="fault-oxidation"] {
+  background: #ef4444;
+  color: white;
+}
+.wine-fault-widget .panels {
+  position: relative;
+}
+.wine-fault-widget .panel {
+  display: none;
+}
+.wine-fault-widget .panel h4 {
+  margin-top: 0;
+  color: #991b1b;
+  font-size: 1.2rem;
+}
+.wine-fault-widget .panel ol,
+.wine-fault-widget .panel ul {
+  margin: 0.75rem 0;
+}
+.wine-fault-widget .panel .note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 3px solid #ef4444;
+  color: #4b5563;
+  font-style: italic;
+}
+.wine-fault-widget .opt-tca:checked ~ .panels .panel[data-fault="tca"],
+.wine-fault-widget .opt-brett:checked ~ .panels .panel[data-fault="brett"],
+.wine-fault-widget .opt-reduction:checked ~ .panels .panel[data-fault="reduction"],
+.wine-fault-widget .opt-oxidation:checked ~ .panels .panel[data-fault="oxidation"] {
+  display: block;
+}
+
+/* 品種典型性小工具 */
+.varietal-typicity-widget {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
+}
+.varietal-typicity-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.varietal-typicity-widget .selectors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.varietal-typicity-widget .selectors label {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid #22c55e;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #22c55e;
+  font-size: 0.9rem;
+}
+.varietal-typicity-widget .opt-cabernet:checked ~ .selectors label[for="var-cabernet"],
+.varietal-typicity-widget .opt-pinot:checked ~ .selectors label[for="var-pinot"],
+.varietal-typicity-widget .opt-syrah:checked ~ .selectors label[for="var-syrah"] {
+  background: #22c55e;
+  color: white;
+}
+.varietal-typicity-widget .panels {
+  position: relative;
+}
+.varietal-typicity-widget .panel {
+  display: none;
+}
+.varietal-typicity-widget .panel h4 {
+  margin-top: 0;
+  color: #15803d;
+  font-size: 1.2rem;
+}
+.varietal-typicity-widget .panel ul {
+  margin: 0.75rem 0;
+}
+.varietal-typicity-widget .panel .note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(34, 197, 94, 0.1);
+  border-left: 3px solid #22c55e;
+  color: #4b5563;
+  font-style: italic;
+}
+.varietal-typicity-widget .opt-cabernet:checked ~ .panels .panel[data-variety="cabernet"],
+.varietal-typicity-widget .opt-pinot:checked ~ .panels .panel[data-variety="pinot"],
+.varietal-typicity-widget .opt-syrah:checked ~ .panels .panel[data-variety="syrah"] {
+  display: block;
+}
+
+/* 筆記系統小工具 */
+.note-system-widget {
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.1);
+}
+.note-system-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.note-system-widget .selectors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.note-system-widget .selectors label {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 2px solid #a855f7;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #a855f7;
+}
+.note-system-widget .opt-grid:checked ~ .selectors label[for="note-grid"],
+.note-system-widget .opt-shorthand:checked ~ .selectors label[for="note-shorthand"],
+.note-system-widget .opt-mental:checked ~ .selectors label[for="note-mental"] {
+  background: #a855f7;
+  color: white;
+}
+.note-system-widget .panels {
+  position: relative;
+}
+.note-system-widget .panel {
+  display: none;
+}
+.note-system-widget .panel h4 {
+  margin-top: 0;
+  color: #6b21a8;
+  font-size: 1.2rem;
+}
+.note-system-widget .panel ol,
+.note-system-widget .panel ul {
+  margin: 0.75rem 0;
+}
+.note-system-widget .panel code {
+  background: rgba(168, 85, 247, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: #6b21a8;
+}
+.note-system-widget .panel .note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(168, 85, 247, 0.1);
+  border-left: 3px solid #a855f7;
+  color: #4b5563;
+  font-style: italic;
+}
+.note-system-widget .opt-grid:checked ~ .panels .panel[data-system="grid"],
+.note-system-widget .opt-shorthand:checked ~ .panels .panel[data-system="shorthand"],
+.note-system-widget .opt-mental:checked ~ .panels .panel[data-system="mental"] {
+  display: block;
+}
+
+/* 混調策略小工具 */
+.blend-widget {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  background: #ffffff;
+  margin: 16px 0 18px;
+  display: grid;
+  gap: 14px;
+}
+.blend-widget input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.blend-widget .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.blend-widget .tabs label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbe2f0;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.blend-widget .opt-classic:checked ~ .tabs label[for="blend-classic"],
+.blend-widget .opt-classic:checked ~ .tabs label[for="mix-classic"],
+.blend-widget .opt-aromatic:checked ~ .tabs label[for="blend-aromatic"],
+.blend-widget .opt-aromatic:checked ~ .tabs label[for="mix-hybrid"],
+.blend-widget .opt-reserve:checked ~ .tabs label[for="blend-reserve"],
+.blend-widget .opt-reserve:checked ~ .tabs label[for="mix-innovation"] {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: #6366f1;
+  color: #1e1b4b;
+}
+.blend-widget .scenarios {
+  position: relative;
+}
+.blend-widget .scenario {
+  display: none;
+  gap: 10px;
+}
+.blend-widget .scenario .metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.blend-widget .scenario .metric {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px 12px;
+  min-width: 150px;
+}
+.blend-widget .scenario .metric .label {
+  display: block;
+  font-size: 0.78rem;
+  color: #475569;
+}
+.blend-widget .scenario .metric .value {
+  font-weight: 600;
+  color: #1f2937;
+}
+.blend-widget .scenario .note {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #475569;
+}
+.blend-widget .opt-classic:checked ~ .scenarios .scenario[data-scenario="classic"],
+.blend-widget .opt-aromatic:checked ~ .scenarios .scenario[data-scenario="aromatic"],
+.blend-widget .opt-reserve:checked ~ .scenarios .scenario[data-scenario="reserve"] {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .blend-widget .scenario .metrics { flex-direction: column; }
+}
+
+/* 章節內小標（不觸發自動分頁） */
+.subhead { margin: 10px 0 6px; font-weight: 700; color: #111827; }
+
+/* 裝瓶 DO 控制：純 HTML/CSS 假資料儀表 */
+.do-widget { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; margin: 12px 0 16px; }
+.do-widget .do-title { font-weight: 700; margin-bottom: 8px; }
+.do-row { display: grid; grid-template-columns: 140px 1fr 260px; align-items: center; gap: 10px; padding: 6px 0; }
+.do-row + .do-row { border-top: 1px dashed #e5e7eb; }
+.do-row .label { font-weight: 600; color: #111827; }
+.do-row .controls label { margin-right: 10px; font-size: 0.95rem; color: #374151; cursor: pointer; }
+.do-row .controls input { margin-right: 4px; }
+.gauge { position: relative; height: 14px; background: #f3f4f6; border-radius: 999px; overflow: hidden; border: 1px solid #e5e7eb; }
+.gauge .gauge-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 25%; background: #16a34a; transition: width 0.25s ease, background 0.25s ease; }
+.gauge .badges { position: absolute; left: 8px; top: -28px; display: flex; gap: 8px; }
+.badge { font-size: 12px; padding: 2px 6px; border-radius: 6px; color: #111827; background: #e5e7eb; display: none; }
+.badge.ok { background: #dcfce7; color: #166534; }
+.badge.high { background: #fee2e2; color: #991b1b; }
+.badge.low { background: #e0f2fe; color: #075985; }
+
+/* 以 radio 狀態切換儀表（不需 JS） */
+.do-row .opt-ok:checked ~ .gauge .gauge-fill { width: 25%; background: #16a34a; }
+.do-row .opt-high:checked ~ .gauge .gauge-fill { width: 85%; background: #ef4444; }
+.do-row .opt-low:checked ~ .gauge .gauge-fill { width: 10%; background: #0ea5e9; }
+.do-row .opt-ok:checked ~ .gauge .badges .badge.ok { display: inline-block; }
+.do-row .opt-high:checked ~ .gauge .badges .badge.high { display: inline-block; }
+.do-row .opt-low:checked ~ .gauge .badges .badge.low { display: inline-block; }
+
+@media (max-width: 768px) {
+  .do-row { grid-template-columns: 1fr; align-items: start; }
+  .gauge { height: 12px; }
+}
+
+/* 課程資料表格樣式：提升可讀性與掃描性 */
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 12px 0 16px;
+  font-size: 0.95rem;
+}
+.data-table thead th {
+  background: #f6f7f9;
+  color: #334155;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 12px;
+}
+.data-table tbody td {
+  border-bottom: 1px solid #eef1f4;
+  padding: 10px 12px;
+  color: #1f2937;
+}
+.data-table tbody tr:nth-child(odd) td {
+  background: #fafbfc;
+}
+.data-table tbody tr:hover td {
+  background: #f2f6ff;
+}
+.data-table th, .data-table td {
+  border-right: 1px solid #eef1f4;
+}
+.data-table th:last-child, .data-table td:last-child {
+  border-right: none;
+}
+
+/* ===============================================
+   L4-10 互動小工具樣式 (資料科學與 AI)
+   =============================================== */
+
+/* Widget 1: 資料治理三面向 (綠色主題) */
+.data-governance-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.1);
+}
+
+.data-governance-widget input[type="radio"] {
+  display: none;
+}
+
+.data-governance-widget .selectors {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.data-governance-widget label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #86efac;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #166534;
+  transition: all 0.3s ease;
+}
+
+.data-governance-widget label:hover {
+  background: #f0fdf4;
+  border-color: #4ade80;
+  transform: translateY(-2px);
+}
+
+.data-governance-widget .opt-quality:checked ~ .selectors label[for="gov-quality"],
+.data-governance-widget .opt-security:checked ~ .selectors label[for="gov-security"],
+.data-governance-widget .opt-ethics:checked ~ .selectors label[for="gov-ethics"] {
+  background: #22c55e;
+  color: white;
+  border-color: #22c55e;
+  box-shadow: 0 4px 8px rgba(34, 197, 94, 0.3);
+}
+
+.data-governance-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.data-governance-widget .opt-quality:checked ~ .panels .panel[data-aspect="quality"],
+.data-governance-widget .opt-security:checked ~ .panels .panel[data-aspect="security"],
+.data-governance-widget .opt-ethics:checked ~ .panels .panel[data-aspect="ethics"] {
+  display: block;
+}
+
+.data-governance-widget h4 {
+  color: #15803d;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.data-governance-widget .note {
+  background: #fefce8;
+  border-left: 4px solid #eab308;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Widget 2: ML 模型選擇器 (藍色主題) */
+.ml-model-selector-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.1);
+}
+
+.ml-model-selector-widget input[type="radio"] {
+  display: none;
+}
+
+.ml-model-selector-widget .selectors {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.ml-model-selector-widget label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #93c5fd;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #1e40af;
+  transition: all 0.3s ease;
+}
+
+.ml-model-selector-widget label:hover {
+  background: #eff6ff;
+  border-color: #60a5fa;
+  transform: translateY(-2px);
+}
+
+.ml-model-selector-widget .opt-regression:checked ~ .selectors label[for="model-regression"],
+.ml-model-selector-widget .opt-classification:checked ~ .selectors label[for="model-classification"],
+.ml-model-selector-widget .opt-clustering:checked ~ .selectors label[for="model-clustering"] {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.ml-model-selector-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.ml-model-selector-widget .opt-regression:checked ~ .panels .panel[data-task="regression"],
+.ml-model-selector-widget .opt-classification:checked ~ .panels .panel[data-task="classification"],
+.ml-model-selector-widget .opt-clustering:checked ~ .panels .panel[data-task="clustering"] {
+  display: block;
+}
+
+.ml-model-selector-widget h4 {
+  color: #1e40af;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.ml-model-selector-widget .note {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Widget 3: 需求預測情境 (黃色主題) */
+.demand-forecast-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(245, 158, 11, 0.1);
+}
+
+.demand-forecast-widget input[type="radio"] {
+  display: none;
+}
+
+.demand-forecast-widget .selectors {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.demand-forecast-widget label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #fcd34d;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #92400e;
+  transition: all 0.3s ease;
+}
+
+.demand-forecast-widget label:hover {
+  background: #fffbeb;
+  border-color: #fbbf24;
+  transform: translateY(-2px);
+}
+
+.demand-forecast-widget .opt-baseline:checked ~ .selectors label[for="forecast-baseline"],
+.demand-forecast-widget .opt-seasonal:checked ~ .selectors label[for="forecast-seasonal"],
+.demand-forecast-widget .opt-promo:checked ~ .selectors label[for="forecast-promo"] {
+  background: #f59e0b;
+  color: white;
+  border-color: #f59e0b;
+  box-shadow: 0 4px 8px rgba(245, 158, 11, 0.3);
+}
+
+.demand-forecast-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.demand-forecast-widget .opt-baseline:checked ~ .panels .panel[data-scenario="baseline"],
+.demand-forecast-widget .opt-seasonal:checked ~ .panels .panel[data-scenario="seasonal"],
+.demand-forecast-widget .opt-promo:checked ~ .panels .panel[data-scenario="promo"] {
+  display: block;
+}
+
+.demand-forecast-widget h4 {
+  color: #92400e;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.demand-forecast-widget .note {
+  background: #dbeafe;
+  border-left: 4px solid #3b82f6;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Widget 4: 異常偵測方法 (紅色主題) */
+.anomaly-detection-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.1);
+}
+
+.anomaly-detection-widget input[type="radio"] {
+  display: none;
+}
+
+.anomaly-detection-widget .selectors {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.anomaly-detection-widget label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #fca5a5;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #991b1b;
+  transition: all 0.3s ease;
+}
+
+.anomaly-detection-widget label:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+  transform: translateY(-2px);
+}
+
+.anomaly-detection-widget .opt-statistical:checked ~ .selectors label[for="anomaly-statistical"],
+.anomaly-detection-widget .opt-ml:checked ~ .selectors label[for="anomaly-ml"],
+.anomaly-detection-widget .opt-dl:checked ~ .selectors label[for="anomaly-dl"] {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+.anomaly-detection-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.anomaly-detection-widget .opt-statistical:checked ~ .panels .panel[data-method="statistical"],
+.anomaly-detection-widget .opt-ml:checked ~ .panels .panel[data-method="ml"],
+.anomaly-detection-widget .opt-dl:checked ~ .panels .panel[data-method="dl"] {
+  display: block;
+}
+
+.anomaly-detection-widget h4 {
+  color: #991b1b;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.anomaly-detection-widget .note {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Widget 5: AI 用例矩陣 (紫色主題) */
+.ai-usecase-matrix-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(168, 85, 247, 0.1);
+}
+
+.ai-usecase-matrix-widget input[type="radio"] {
+  display: none;
+}
+
+.ai-usecase-matrix-widget .selectors {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.ai-usecase-matrix-widget label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #d8b4fe;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #6b21a8;
+  transition: all 0.3s ease;
+}
+
+.ai-usecase-matrix-widget label:hover {
+  background: #faf5ff;
+  border-color: #c084fc;
+  transform: translateY(-2px);
+}
+
+.ai-usecase-matrix-widget .opt-quality:checked ~ .selectors label[for="usecase-quality"],
+.ai-usecase-matrix-widget .opt-operations:checked ~ .selectors label[for="usecase-operations"],
+.ai-usecase-matrix-widget .opt-marketing:checked ~ .selectors label[for="usecase-marketing"] {
+  background: #a855f7;
+  color: white;
+  border-color: #a855f7;
+  box-shadow: 0 4px 8px rgba(168, 85, 247, 0.3);
+}
+
+.ai-usecase-matrix-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.ai-usecase-matrix-widget .opt-quality:checked ~ .panels .panel[data-usecase="quality"],
+.ai-usecase-matrix-widget .opt-operations:checked ~ .panels .panel[data-usecase="operations"],
+.ai-usecase-matrix-widget .opt-marketing:checked ~ .panels .panel[data-usecase="marketing"] {
+  display: block;
+}
+
+.ai-usecase-matrix-widget h4 {
+  color: #6b21a8;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.ai-usecase-matrix-widget .note {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* ===============================================
+   L4-11 互動小工具樣式 (En Primeur 與葡萄酒投資)
+   =============================================== */
+
+/* Widget 1: Tranche 策略 (深紅色主題) */
+.tranche-strategy-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(185, 28, 28, 0.1);
+}
+
+.tranche-strategy-widget input[type="radio"] {
+  display: none;
+}
+
+.tranche-strategy-widget .selectors {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.tranche-strategy-widget label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #fca5a5;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #7c2d12;
+  transition: all 0.3s ease;
+}
+
+.tranche-strategy-widget label:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+  transform: translateY(-2px);
+}
+
+.tranche-strategy-widget .opt-tranche1:checked ~ .selectors label[for="tranche-1"],
+.tranche-strategy-widget .opt-tranche2:checked ~ .selectors label[for="tranche-2"],
+.tranche-strategy-widget .opt-tranche3:checked ~ .selectors label[for="tranche-3"] {
+  background: #b91c1c;
+  color: white;
+  border-color: #b91c1c;
+  box-shadow: 0 4px 8px rgba(185, 28, 28, 0.3);
+}
+
+.tranche-strategy-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.tranche-strategy-widget .opt-tranche1:checked ~ .panels .panel[data-tranche="1"],
+.tranche-strategy-widget .opt-tranche2:checked ~ .panels .panel[data-tranche="2"],
+.tranche-strategy-widget .opt-tranche3:checked ~ .panels .panel[data-tranche="3"] {
+  display: block;
+}
+
+.tranche-strategy-widget h4 {
+  color: #7c2d12;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.tranche-strategy-widget .note {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Widget 2: 定價模型 (金色主題) */
+.pricing-model-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(202, 138, 4, 0.1);
+}
+
+.pricing-model-widget input[type="radio"] {
+  display: none;
+}
+
+.pricing-model-widget .selectors {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.pricing-model-widget label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #fde047;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #713f12;
+  transition: all 0.3s ease;
+}
+
+.pricing-model-widget label:hover {
+  background: #fefce8;
+  border-color: #facc15;
+  transform: translateY(-2px);
+}
+
+.pricing-model-widget .opt-simple:checked ~ .selectors label[for="model-simple"],
+.pricing-model-widget .opt-advanced:checked ~ .selectors label[for="model-advanced"],
+.pricing-model-widget .opt-ml:checked ~ .selectors label[for="model-ml"] {
+  background: #ca8a04;
+  color: white;
+  border-color: #ca8a04;
+  box-shadow: 0 4px 8px rgba(202, 138, 4, 0.3);
+}
+
+.pricing-model-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.pricing-model-widget .opt-simple:checked ~ .panels .panel[data-model="simple"],
+.pricing-model-widget .opt-advanced:checked ~ .panels .panel[data-model="advanced"],
+.pricing-model-widget .opt-ml:checked ~ .panels .panel[data-model="ml"] {
+  display: block;
+}
+
+.pricing-model-widget h4 {
+  color: #713f12;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.pricing-model-widget .note {
+  background: #dbeafe;
+  border-left: 4px solid #3b82f6;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Widget 3: 風險評估 (橙色主題) */
+.risk-assessment-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(234, 88, 12, 0.1);
+}
+
+.risk-assessment-widget input[type="radio"] {
+  display: none;
+}
+
+.risk-assessment-widget .selectors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.risk-assessment-widget label {
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #fdba74;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #7c2d12;
+  transition: all 0.3s ease;
+}
+
+.risk-assessment-widget label:hover {
+  background: #fff7ed;
+  border-color: #fb923c;
+  transform: translateY(-2px);
+}
+
+.risk-assessment-widget .opt-market:checked ~ .selectors label[for="risk-market"],
+.risk-assessment-widget .opt-vintage:checked ~ .selectors label[for="risk-vintage"],
+.risk-assessment-widget .opt-operational:checked ~ .selectors label[for="risk-operational"],
+.risk-assessment-widget .opt-fraud:checked ~ .selectors label[for="risk-fraud"] {
+  background: #ea580c;
+  color: white;
+  border-color: #ea580c;
+  box-shadow: 0 4px 8px rgba(234, 88, 12, 0.3);
+}
+
+.risk-assessment-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.risk-assessment-widget .opt-market:checked ~ .panels .panel[data-risk="market"],
+.risk-assessment-widget .opt-vintage:checked ~ .panels .panel[data-risk="vintage"],
+.risk-assessment-widget .opt-operational:checked ~ .panels .panel[data-risk="operational"],
+.risk-assessment-widget .opt-fraud:checked ~ .panels .panel[data-risk="fraud"] {
+  display: block;
+}
+
+.risk-assessment-widget h4 {
+  color: #7c2d12;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.risk-assessment-widget .note {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Widget 4: Liv-ex 平台 (天藍色主題) */
+.livex-platform-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(14, 165, 233, 0.1);
+}
+
+.livex-platform-widget input[type="radio"] {
+  display: none;
+}
+
+.livex-platform-widget .selectors {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.livex-platform-widget label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #7dd3fc;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #075985;
+  transition: all 0.3s ease;
+}
+
+.livex-platform-widget label:hover {
+  background: #f0f9ff;
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+.livex-platform-widget .opt-mechanism:checked ~ .selectors label[for="livex-mechanism"],
+.livex-platform-widget .opt-indices:checked ~ .selectors label[for="livex-indices"],
+.livex-platform-widget .opt-data:checked ~ .selectors label[for="livex-data"] {
+  background: #0ea5e9;
+  color: white;
+  border-color: #0ea5e9;
+  box-shadow: 0 4px 8px rgba(14, 165, 233, 0.3);
+}
+
+.livex-platform-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.livex-platform-widget .opt-mechanism:checked ~ .panels .panel[data-feature="mechanism"],
+.livex-platform-widget .opt-indices:checked ~ .panels .panel[data-feature="indices"],
+.livex-platform-widget .opt-data:checked ~ .panels .panel[data-feature="data"] {
+  display: block;
+}
+
+.livex-platform-widget h4 {
+  color: #075985;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.livex-platform-widget .note {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Widget 5: 投資組合策略 (深綠色主題) */
+.portfolio-strategy-widget {
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(21, 128, 61, 0.1);
+}
+
+.portfolio-strategy-widget input[type="radio"] {
+  display: none;
+}
+
+.portfolio-strategy-widget .selectors {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.portfolio-strategy-widget label {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #86efac;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  color: #14532d;
+  transition: all 0.3s ease;
+}
+
+.portfolio-strategy-widget label:hover {
+  background: #f0fdf4;
+  border-color: #4ade80;
+  transform: translateY(-2px);
+}
+
+.portfolio-strategy-widget .opt-conservative:checked ~ .selectors label[for="portfolio-conservative"],
+.portfolio-strategy-widget .opt-balanced:checked ~ .selectors label[for="portfolio-balanced"],
+.portfolio-strategy-widget .opt-aggressive:checked ~ .selectors label[for="portfolio-aggressive"] {
+  background: #15803d;
+  color: white;
+  border-color: #15803d;
+  box-shadow: 0 4px 8px rgba(21, 128, 61, 0.3);
+}
+
+.portfolio-strategy-widget .panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.portfolio-strategy-widget .opt-conservative:checked ~ .panels .panel[data-type="conservative"],
+.portfolio-strategy-widget .opt-balanced:checked ~ .panels .panel[data-type="balanced"],
+.portfolio-strategy-widget .opt-aggressive:checked ~ .panels .panel[data-type="aggressive"] {
+  display: block;
+}
+
+.portfolio-strategy-widget h4 {
+  color: #14532d;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.portfolio-strategy-widget .note {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* ===== L4-12: 綜合專題與口頭答辯 互動小工具樣式 ===== */
+
+/* 專題題目選擇器 */
+.project-topic-widget {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.project-topic-widget h4 {
+  color: #b45309;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.project-topic-widget .topic-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.project-topic-widget input[type="radio"] {
+  display: none;
+}
+
+.project-topic-widget label {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: white;
+  border: 2px solid #fbbf24;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-topic-widget label:hover {
+  background: #fffbeb;
+  border-color: #f59e0b;
+  transform: translateX(5px);
+}
+
+.project-topic-widget input[type="radio"]:checked + label {
+  background: #fef3c7;
+  border-color: #d97706;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.project-topic-widget label strong {
+  color: #92400e;
+  font-size: 1.05em;
+  margin-bottom: 5px;
+}
+
+.project-topic-widget label span {
+  color: #78350f;
+  font-size: 0.9em;
+  margin-top: 3px;
+}
+
+.project-topic-widget .topic-content > div {
+  display: none;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+}
+
+.project-topic-widget input#topic-case:checked ~ .topic-content [data-topic="case"],
+.project-topic-widget input#topic-region:checked ~ .topic-content [data-topic="region"],
+.project-topic-widget input#topic-innovation:checked ~ .topic-content [data-topic="innovation"] {
+  display: block;
+}
+
+.project-topic-widget .topic-content h5 {
+  color: #d97706;
+  margin-bottom: 12px;
+  font-size: 1.05em;
+}
+
+.project-topic-widget .topic-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-topic-widget .topic-content li {
+  padding: 8px 0;
+  border-bottom: 1px solid #fef3c7;
+}
+
+.project-topic-widget .topic-content li:last-child {
+  border-bottom: none;
+}
+
+/* 報告結構檢查清單 */
+.report-structure-checklist {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.report-structure-checklist h4 {
+  color: #1e40af;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.report-structure-checklist label {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  margin: 8px 0;
+  background: white;
+  border: 2px solid #93c5fd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.report-structure-checklist label:hover {
+  background: #eff6ff;
+  border-color: #60a5fa;
+  transform: translateX(5px);
+}
+
+.report-structure-checklist input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.report-structure-checklist input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.report-structure-checklist label span {
+  color: #1e3a8a;
+  line-height: 1.5;
+}
+
+.report-structure-checklist label span strong {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+/* 答辯準備評分卡 */
+.defense-prep-scorecard {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  border: 2px solid #22c55e;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.defense-prep-scorecard h4 {
+  color: #15803d;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.defense-prep-scorecard label {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  margin: 8px 0;
+  background: white;
+  border: 2px solid #86efac;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.defense-prep-scorecard label:hover {
+  background: #f0fdf4;
+  border-color: #4ade80;
+  transform: translateX(5px);
+}
+
+.defense-prep-scorecard input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.defense-prep-scorecard input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.defense-prep-scorecard label span {
+  color: #14532d;
+  line-height: 1.5;
+}
+
+.defense-prep-scorecard label span strong {
+  color: #15803d;
+  font-weight: 600;
+}

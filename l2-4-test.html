@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2-4 Saint-Julien平衡的典範 - 測試頁面</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1b5e20 0%, #4caf50 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            color: white;
+            border-radius: 15px;
+        }
+        .course-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .info-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #2e7d32;
+        }
+        .test-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .test-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .feature {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #4caf50;
+        }
+        .feature h3 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-size: 1.2rem;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #2e7d32;
+        }
+        .balance-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        .chateaux-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .chateau-card {
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .chateau-card:hover {
+            transform: translateY(-5px);
+        }
+        .chateau-card h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .chateau-card .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .leoville-family {
+            background: linear-gradient(135deg, #388e3c 0%, #66bb6a 100%);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            color: white;
+        }
+        .leoville-family h4 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .leoville-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .leoville-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .leoville-card h5 {
+            margin-bottom: 0.5rem;
+            color: #c8e6c9;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.history.back()">← 返回</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1><span class="balance-icon">⚖️</span> L2-4: Saint-Julien - 平衡的典範</h1>
+            <p>Level 2 進階課程 - 探索Médoc半島最均衡完美的產區</p>
+        </div>
+
+        <div class="course-info">
+            <div class="info-card">
+                <h3>⏱️ 課程時長</h3>
+                <p>32分鐘</p>
+            </div>
+            <div class="info-card">
+                <h3>📊 難度等級</h3>
+                <p>Level 2 (進階)</p>
+            </div>
+            <div class="info-card">
+                <h3>🎯 學習目標</h3>
+                <p>5個專業目標</p>
+            </div>
+            <div class="info-card">
+                <h3>📝 互動元素</h3>
+                <p>3個測驗問題</p>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3><span class="balance-icon">⚖️</span> 平衡的典範</h3>
+            <p><strong>完美平衡的產區</strong> - Saint-Julien在優雅與力量之間找到完美的平衡點，被稱為Médoc最一致的高品質產區，是波爾多紅酒理想典範的代表。</p>
+        </div>
+
+        <div class="chateaux-showcase">
+            <div class="chateau-card">
+                <span class="icon">💎</span>
+                <h4>Château Ducru-Beaucaillou</h4>
+                <p><strong>優雅的寶石</strong></p>
+                <p>以"美麗的石頭"命名，展現Saint-Julien最優雅的風格</p>
+            </div>
+            <div class="chateau-card">
+                <span class="icon">🌟</span>
+                <h4>Château Léoville Las Cases</h4>
+                <p><strong>"超級二級"</strong></p>
+                <p>被譽為超級二級酒莊，品質接近一級水準</p>
+            </div>
+            <div class="chateau-card">
+                <span class="icon">🏛️</span>
+                <h4>Château Léoville Barton</h4>
+                <p><strong>傳統典範</strong></p>
+                <p>Barton家族200多年經營，傳統工藝的守護者</p>
+            </div>
+        </div>
+
+        <div class="leoville-family">
+            <h4>👑 Léoville家族三雄</h4>
+            <p style="text-align: center; margin-bottom: 1.5rem;">法國大革命後分割的傳奇莊園，三個酒莊各具特色</p>
+            <div class="leoville-grid">
+                <div class="leoville-card">
+                    <h5>🌟 Léoville Las Cases</h5>
+                    <p><strong>特色：</strong>力量強勁，"超級二級"</p>
+                    <p><strong>位置：</strong>緊鄰Latour，風土卓越</p>
+                    <p><strong>陳年：</strong>30-50年陳年潛力</p>
+                </div>
+                <div class="leoville-card">
+                    <h5>🌸 Léoville Poyferré</h5>
+                    <p><strong>特色：</strong>優雅平衡，現代化</p>
+                    <p><strong>風格：</strong>力量與優雅的結合</p>
+                    <p><strong>陳年：</strong>20-35年陳年潛力</p>
+                </div>
+                <div class="leoville-card">
+                    <h5>🏛️ Léoville Barton</h5>
+                    <p><strong>特色：</strong>傳統純淨，性價比</p>
+                    <p><strong>管理：</strong>家族200年傳承</p>
+                    <p><strong>陳年：</strong>25-40年陳年潛力</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>🗺️ Saint-Julien產區優越地理位置與風土條件</h3>
+                <p>探索Saint-Julien位於Pauillac和Margaux之間的黃金地段，了解其卓越的風土條件。</p>
+                <ul>
+                    <li><strong>戰略位置：</strong>Médoc半島地理中心，氣候最穩定</li>
+                    <li><strong>河岸優勢：</strong>2.5公里Gironde河岸線調節氣候</li>
+                    <li><strong>土壤一致：</strong>全產區土壤類型相對統一</li>
+                    <li><strong>品質保證：</strong>嚴格的AOC標準和品質控制</li>
+                </ul>
+            </div>
+            
+            <div class="feature">
+                <h3>🏰 Ducru-Beaucaillou、Léoville家族等頂級酒莊</h3>
+                <p>深入了解Saint-Julien頂級酒莊的歷史傳承、風土特色和各自獨特的風格。</p>
+                <ul>
+                    <li><strong>Ducru-Beaucaillou：</strong>"美麗石頭"的優雅典範</li>
+                    <li><strong>Léoville三雄：</strong>分割莊園的不同表達</li>
+                    <li><strong>品質標竿：</strong>整體品質水準極高</li>
+                    <li><strong>投資價值：</strong>穩定的長期投資回報</li>
+                </ul>
+            </div>
+            
+            <div class="feature">
+                <h3>⚖️ Saint-Julien優雅平衡的經典風格</h3>
+                <p>掌握Saint-Julien完美平衡的風格特徵，了解其在力量與優雅間的理想平衡。</p>
+                <ul>
+                    <li><strong>完美平衡：</strong>力量與優雅的理想結合</li>
+                    <li><strong>一致品質：</strong>年份間品質變化最小</li>
+                    <li><strong>經典風格：</strong>典型的波爾多紅酒風格</li>
+                    <li><strong>投資穩定：</strong>風險較低的投資選擇</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <h2>🚀 開始學習</h2>
+            <p>點擊下方按鈕進入 L2-4 課程簡報模式</p>
+            <a href="index.html?lesson=l2-4&mode=presentation" class="test-link">
+                進入 L2-4 簡報模式
+            </a>
+            <a href="index.html" class="test-link">
+                返回主頁
+            </a>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+            <h3 style="color: #2e7d32;"><span class="balance-icon">💡</span> 學習重點</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                <div>
+                    <h4 style="color: #388e3c;">🗺️ 優越風土</h4>
+                    <ul>
+                        <li>黃金地段的戰略位置</li>
+                        <li>Gironde河岸的氣候調節</li>
+                        <li>土壤條件的一致性</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #388e3c;">🏰 頂級酒莊</h4>
+                    <ul>
+                        <li>Ducru-Beaucaillou的優雅</li>
+                        <li>Léoville家族的傳奇</li>
+                        <li>整體品質的卓越</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #388e3c;">⚖️ 平衡典範</h4>
+                    <ul>
+                        <li>力量與優雅的統一</li>
+                        <li>年份間的一致性</li>
+                        <li>投資價值的穩定</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); color: white; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+            <h3 style="text-align: center;"><span class="balance-icon">🎓</span> 課程特色</h3>
+            <p style="text-align: center;">本課程深入探索Saint-Julien產區的平衡藝術，從優越的風土條件到頂級酒莊的詳細分析，全面展現這個被譽為"平衡典範"產區的獨特魅力。適合希望了解理想波爾多風格的專業學習者。</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚖️</div>
+                    <strong>平衡典範</strong><br>
+                    <small>力量與優雅的完美統一</small>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🗺️</div>
+                    <strong>優越位置</strong><br>
+                    <small>Médoc半島的黃金地段</small>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">👑</div>
+                    <strong>頂級酒莊</strong><br>
+                    <small>Ducru與Léoville家族</small>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📈</div>
+                    <strong>投資穩定</strong><br>
+                    <small>一致的品質與價值</small>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #388e3c 0%, #66bb6a 100%); color: white; padding: 1rem; border-radius: 10px; margin-top: 1rem; text-align: center; font-size: 0.9rem;">
+            <strong>💎 專業提示：</strong>Saint-Julien紅酒通常在年輕時就展現良好的平衡感，建議在16-18°C溫度下品嚐，醒酒時間1-2小時即可充分展現其優雅平衡的特質。
+        </div>
+    </div>
+
+    <script>
+        // 平衡主題的互動效果
+        document.querySelectorAll('.info-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(46, 125, 50, 0.2)';
+                this.style.borderLeftColor = '#4caf50';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+                this.style.borderLeftColor = '#2e7d32';
+            });
+        });
+
+        document.querySelectorAll('.feature').forEach(feature => {
+            feature.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 8px 16px rgba(76, 175, 80, 0.15)';
+                this.style.borderLeftColor = '#2e7d32';
+            });
+            
+            feature.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+                this.style.borderLeftColor = '#4caf50';
+            });
+        });
+
+        // 添加平衡天秤效果
+        function createBalance() {
+            const balance = document.createElement('div');
+            balance.innerHTML = '⚖️';
+            balance.style.position = 'fixed';
+            balance.style.top = Math.random() * window.innerHeight + 'px';
+            balance.style.left = Math.random() * window.innerWidth + 'px';
+            balance.style.fontSize = Math.random() * 20 + 15 + 'px';
+            balance.style.opacity = Math.random() * 0.7 + 0.3;
+            balance.style.pointerEvents = 'none';
+            balance.style.zIndex = '1000';
+            balance.style.animation = `sway ${Math.random() * 3 + 2}s ease-in-out infinite alternate`;
+            
+            document.body.appendChild(balance);
+            
+            setTimeout(() => {
+                balance.remove();
+            }, 4000);
+        }
+        
+        // 添加CSS動畫
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sway {
+                from {
+                    opacity: 0.3;
+                    transform: rotate(-10deg) scale(0.8);
+                }
+                to {
+                    opacity: 1;
+                    transform: rotate(10deg) scale(1.2);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // 每隔一段時間創建天秤
+        setInterval(createBalance, 2000);
+    </script>
+</body>
+</html>

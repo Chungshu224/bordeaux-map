@@ -1,0 +1,414 @@
+// L2-1: Médoc產區深度探索
+export const l21Content = [
+  { type: 'title' },
+  // ========== 1. 地理位置 =========
+  {
+    title: 'Médoc半島地理概覽',
+    highlights: [
+      { id: 1, icon: '🗺️', title: '獨特地理', content: 'Gironde河左岸，延伸60公里的狹長半島' },
+      { id: 2, icon: '📍', title: '戰略位置', content: '從波爾多市西北方延伸至大西洋' }
+    ],
+  // 加入布局提示 class：layout-split-map-right 讓地圖在桌面版靠右呈現，左側為文字內容。
+  // 若在行動裝置，樣式系統會自動堆疊。
+  content: '<div class="medoc-geography layout-split-map-right layout-hint-map-right"><p class="lead-text">Médoc半島是波爾多左岸最重要的產區，以出產世界頂級紅酒而聞名於世。其獨特的地理位置是形成卓越風土的基礎。</p><div class="geography-analysis"><div class="geo-section peninsula-overview"><h4>🗺️ Médoc半島地理位置</h4><div class="peninsula-layout"><div class="location-details"><div class="location-card strategic"><h5>🎯 戰略位置</h5><div class="location-content"><p><strong>地理座標：</strong>位於波爾多市西北方，Gironde河左岸</p><p><strong>半島長度：</strong>從波爾多市延伸至大西洋約60公里</p><p><strong>最大寬度：</strong>東西向約15公里的狹長地帶</p><div class="strategic-advantages"><h6>地理優勢</h6><ul><li><strong>河流保護：</strong>Gironde河提供天然防風屏障</li><li><strong>海洋調節：</strong>大西洋帶來溫和濕潤氣候</li><li><strong>排水良好：</strong>砂礫土壤確保優異的排水性</li><li><strong>日照充足：</strong>朝東南向的緩坡獲得充足陽光</li></ul></div></div></div><div class="location-card boundaries"><h5>🔲 產區邊界劃分</h5><div class="boundary-details"><div class="boundary-north"><h6>北部邊界</h6><p>延伸至Saint-Vivien-de-Médoc，接近大西洋海岸</p></div><div class="boundary-south"><h6>南部邊界</h6><p>從波爾多市區開始，與Haut-Médoc產區銜接</p></div><div class="boundary-east"><h6>東側邊界</h6><p>沿Gironde河岸，享受河流氣候調節</p></div><div class="boundary-west"><h6>西側邊界</h6><p>深入內陸，與Landes森林相鄰</p></div></div></div><div class="location-card elevations"><h5>📏 地形高度變化</h5><div class="elevation-profile"><div class="elevation-zone high"><h6>高台地區 (20-40m)</h6><p>位於內陸地帶，排水最佳，適合種植Cabernet Sauvignon</p></div><div class="elevation-zone medium"><h6>中台地區 (10-20m)</h6><p>大部分著名酒莊所在地，土壤結構多樣</p></div><div class="elevation-zone low"><h6>低台地區 (5-10m)</h6><p>靠近河岸地帶，土壤較為濕潤</p></div></div></div></div></div></div></div></div>',
+    hasMap: true, mapFocus: 'LeftBank-Medoc',
+    // 同時顯示 Médoc AOC 和 Bordeaux AOC 圖層
+    geojsonPaths: [
+      '/geojson/LeftBank/Medoc/Medoc_AOC.geojson',
+      '/Bordeaux_AOC.geojson'
+    ],
+    showBordeaux: false,
+    quiz: {
+      question: 'Médoc半島位於哪個地理位置？',
+      options: ['Gironde河右岸', 'Dordogne河畔', 'Gironde河左岸', 'Garonne河上游'],
+      correct: 2,
+      explanation: 'Médoc半島位於Gironde河的左岸，這是其最核心的地理標識，與右岸的產區形成對比。'
+    }
+  },
+  // ========== 1.5 互動地圖區塊 =========
+  {
+    type: 'map',
+    title: '📍 Médoc產區互動地圖',
+    highlights: [
+      { id: 1, icon: '🗺️', title: '互動探索', content: '在地圖上探索Médoc各個村莊產區' },
+      { id: 2, icon: '🏰', title: '酒莊位置', content: '查看著名酒莊的精確位置與分布' }
+    ],
+    content: `
+      <div class="layout-split-map-right medoc-map-wrapper">
+      <div class="interactive-map-intro">
+        <div class="map-intro-content">
+          <h3>🗺️ 探索Médoc產區地圖</h3>
+          <p class="map-description">
+            使用互動地圖深入了解Médoc半島的地理結構、主要村莊產區的位置，
+            以及著名酒莊的分布。您可以縮放、平移地圖，點擊不同的產區標記來查看詳細資訊。
+          </p>
+          
+          <div class="map-features-grid">
+            <div class="feature-card">
+              <span class="feature-icon">📍</span>
+              <div class="feature-info">
+                <h4>8個村莊AOC</h4>
+                <p>從北到南的產區分布</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">🏰</span>
+              <div class="feature-info">
+                <h4>61家列級酒莊</h4>
+                <p>1855分級制度酒莊位置</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">🌊</span>
+              <div class="feature-info">
+                <h4>Gironde河</h4>
+                <p>左岸的地理標誌</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">🛣️</span>
+              <div class="feature-info">
+                <h4>葡萄酒之路</h4>
+                <p>Route des Châteaux</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-legend-box">
+            <h4>圖例說明</h4>
+            <div class="legend-grid">
+              <div class="legend-item">
+                <span class="legend-symbol first">👑</span>
+                <span>一級酒莊</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-symbol second">🥈</span>
+                <span>二級酒莊</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-symbol village">📍</span>
+                <span>村莊AOC</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-symbol river">🌊</span>
+                <span>河流</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-tips">
+            <h4>💡 操作提示</h4>
+            <ul>
+              <li><strong>縮放：</strong>使用滑鼠滾輪或觸控手勢</li>
+              <li><strong>平移：</strong>點擊並拖曳地圖</li>
+              <li><strong>詳情：</strong>點擊標記查看資訊</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .interactive-map-intro {
+          padding: 1.5rem;
+          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+          border-radius: 12px;
+          height: 100%;
+          overflow-y: auto;
+        }
+
+        .map-intro-content h3 {
+          color: #2c3e50;
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
+
+        .map-description {
+          font-size: 1rem;
+          color: #555;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+
+        .map-features-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .feature-card {
+          background: white;
+          padding: 1rem;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+          transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+          font-size: 1.8rem;
+          flex-shrink: 0;
+        }
+
+        .feature-info h4 {
+          margin: 0 0 0.25rem 0;
+          font-size: 0.95rem;
+          color: #2c3e50;
+        }
+
+        .feature-info p {
+          margin: 0;
+          font-size: 0.85rem;
+          color: #666;
+        }
+
+        .map-legend-box {
+          background: white;
+          padding: 1.25rem;
+          border-radius: 10px;
+          margin-bottom: 1.5rem;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .map-legend-box h4 {
+          color: #2c3e50;
+          margin-bottom: 1rem;
+          font-size: 1.1rem;
+        }
+
+        .legend-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.75rem;
+        }
+
+        .legend-item {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.5rem;
+          background: #f8f9fa;
+          border-radius: 6px;
+          font-size: 0.9rem;
+        }
+
+        .legend-symbol {
+          font-size: 1.2rem;
+        }
+
+        .map-tips {
+          background: #fff3cd;
+          border-left: 4px solid #ffc107;
+          padding: 1rem;
+          border-radius: 8px;
+        }
+
+        .map-tips h4 {
+          color: #856404;
+          margin-bottom: 0.75rem;
+          font-size: 1rem;
+        }
+
+        .map-tips ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .map-tips li {
+          padding: 0.35rem 0;
+          color: #856404;
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+
+        .map-tips strong {
+          color: #533f03;
+        }
+
+        /* 手機版調整 */
+        @media (max-width: 768px) {
+          .interactive-map-intro {
+            padding: 1rem;
+          }
+
+          .map-features-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .legend-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .map-intro-content h3 {
+            font-size: 1.3rem;
+          }
+
+          .map-description {
+            font-size: 0.95rem;
+          }
+        }
+      </style>
+      </div>
+    `,
+    hasMap: true,
+    mapFocus: 'LeftBank-Medoc',
+    // 同時顯示 Médoc AOC 和 Bordeaux AOC 圖層
+    geojsonPaths: [
+      '/geojson/LeftBank/Medoc/Medoc_AOC.geojson',
+      '/Bordeaux_AOC.geojson'
+    ],
+    showBordeaux: false, // 不載入 Bordeaux 大區,只顯示 Médoc
+    mapPosition: 'right', // 桌面版在右邊
+    mapInteractive: true,
+    showMapControls: true,
+    quiz: {
+      question: 'Médoc產區從北到南主要包含哪些著名村莊產區？',
+      options: [
+        'Pauillac, Margaux, Saint-Julien',
+        'Saint-Estèphe, Pauillac, Saint-Julien, Margaux',
+        'Pomerol, Saint-Émilion, Fronsac',
+        'Graves, Pessac-Léognan, Sauternes'
+      ],
+      correct: 1,
+      explanation: 'Médoc產區從北到南的四個最著名村莊產區依序是：Saint-Estèphe（最北）、Pauillac、Saint-Julien和Margaux（最南），這四個村莊集中了大部分的列級酒莊。'
+    }
+  },
+  // ========== 2. 土壤組成 =========
+  {
+    title: 'Médoc的靈魂：砂礫土壤',
+    highlights: [
+      { id: 1, icon: '🪨', title: '核心土壤', content: '以石英為主的古老河流沖積砂礫' },
+      { id: 2, icon: '🌡️', title: '天然優勢', content: '優異的排水性與熱量儲存能力' }
+    ],
+    content: '<div class="medoc-geography"><p class="lead-text">砂礫土壤是Médoc產區風土的基石，賦予了Cabernet Sauvignon完美的生長環境，並塑造了葡萄酒強勁的結構與陳年潛力。</p><div class="geography-analysis"><div class="geo-section soil-analysis"><h4>🪨 土壤組成與地質結構</h4><div class="soil-composition"><div class="soil-layers"><h5>📊 土壤分層結構</h5><div class="layer-analysis"><div class="soil-layer surface"><h6>表土層 (0-30cm)</h6><div class="layer-details"><p><strong>主要成分：</strong>細砂、粉土與少量黏土</p><p><strong>特殊性質：</strong>保水性適中，透氣性良好</p></div></div><div class="soil-layer gravel"><h6>砂礫層 (30-100cm)</h6><div class="layer-details"><p><strong>核心特徵：</strong>Médoc產區的標誌性土壤</p><p><strong>組成成分：</strong>石英砂礫、鵝卵石、粗砂</p><p><strong>關鍵作用：</strong>優異排水與熱能儲存</p><ul><li>熱反射效應：白天吸熱，夜間放熱</li><li>根系穿透：促進葡萄根系深扎</li></ul></div></div><div class="soil-layer subsoil"><h6>底土層 (100cm以下)</h6><div class="layer-details"><p><strong>地質基礎：</strong>古老的河流沖積層</p><p><strong>礦物組成：</strong>石灰岩、鐵質黏土</p><p><strong>水分調節：</strong>深層保水，乾旱時供應水分</p></div></div></div></div><div class="soil-types"><h5>🎯 不同區域土壤特色</h5><div class="regional-soils"><div class="soil-region margaux-area"><h6>Margaux地區土壤</h6><p><strong>特徵：</strong>細砂礫為主，排水極佳，風格優雅</p></div><div class="soil-region pauillac-area"><h6>Pauillac地區土壤</h6><p><strong>特徵：</strong>深厚砂礫，石英含量高，結構強勁</p></div><div class="soil-region saint-julien-area"><h6>Saint-Julien地區土壤</h6><p><strong>特徵：</strong>砂礫與黏土平衡組合，風格平衡</p></div><div class="soil-region saint-estephe-area"><h6>Saint-Estèphe地區土壤</h6><p><strong>特徵：</strong>黏土含量較高，保水性強，風格濃郁</p></div></div></div></div></div></div></div>',
+    hasMap: true, mapFocus: 'LeftBank-Medoc',
+    quiz: {
+      question: 'Médoc半島砂礫土壤的主要優勢是什麼？',
+      options: ['保水性強', '養分豐富', '優異的排水與儲熱', '適合白葡萄生長'],
+      correct: 2,
+      explanation: 'Médoc的砂礫土壤以其卓越的排水能力和白天儲存熱量並在夜間釋放的能力而聞名，這為晚熟的Cabernet Sauvignon創造了理想的成熟條件。'
+    }
+  },
+  // ========== 3. 氣候影響 =========
+  {
+    title: '海洋與河流的氣候調節',
+    highlights: [
+      { id: 1, icon: '🌊', title: '海洋性氣候', content: '大西洋暖流帶來溫和濕潤的氣候' },
+      { id: 2, icon: '💨', title: '雙重調節', content: 'Gironde河與森林共同調節微氣候' }
+    ],
+    content: '<div class="medoc-geography"><p class="lead-text">得益於大西洋和Gironde河的雙重影響，Médoc擁有一個相對溫和穩定的氣候系統，有效降低了極端天氣的風險。</p><div class="geography-analysis"><div class="geo-section climate-influence"><h4>🌤️ 氣候環境與微氣候</h4><div class="climate-systems"><div class="macro-climate"><h5>🌍 宏觀氣候特徵</h5><div class="climate-factors"><div class="factor oceanic"><h6>海洋性氣候主導</h6><div class="climate-details"><p><strong>溫度調節：</strong>大西洋暖流維持溫和氣溫</p><ul><li>年均溫度：13-14°C</li><li>生長季溫度：18-22°C</li><li>霜凍風險：春季霜凍機率較低</li></ul></div></div><div class="factor precipitation"><h6>降雨模式</h6><div class="climate-details"><p><strong>年降雨量：</strong>800-900mm，分布較均勻</p><ul><li>春季降雨：促進萌芽與新梢生長</li><li>夏季乾燥：7-8月相對乾燥有利成熟</li></ul></div></div><div class="factor winds"><h6>風向與風力</h6><div class="climate-details"><p><strong>主導風向：</strong>西南風與西北風交替</p><ul><li>通風良好：減少真菌病害風險</li></ul></div></div></div></div><div class="micro-climate"><h5>🎯 微氣候差異分析</h5><div class="microclimate-variations"><div class="variation riverside"><h6>河岸地帶微氣候</h6><p><strong>特徵：</strong>溫度緩衝效應最明顯</p><div class="microclimate-effects"><ul><li><strong>溫度穩定：</strong>河水調節日夜溫差</li><li><strong>霜凍保護：</strong>水體熱容量大，防霜效果佳</li></ul></div></div><div class="variation inland"><h6>內陸高台微氣候</h6><p><strong>特徵：</strong>排水極佳，日照充足</p><div class="microclimate-effects"><ul><li><strong>升溫快速：</strong>砂礫土快速吸收熱能</li><li><strong>香氣濃縮：</strong>適度水分應力增強風味</li></ul></div></div><div class="variation forest-edge"><h6>林緣地帶微氣候</h6><p><strong>特徵：</strong>受森林保護，微環境穩定</p><div class="microclimate-effects"><ul><li><strong>風力緩解：</strong>森林屏障減少強風</li><li><strong>生態平衡：</strong>天敵昆蟲控制害蟲</li></ul></div></div></div></div></div></div></div></div>',
+    hasMap: true, mapFocus: 'LeftBank-Medoc',
+    quiz: {
+      question: 'Gironde河對Médoc的微氣候有何重要影響？',
+      options: ['增加降雨量', '提供霜凍保護', '導致氣溫劇烈變化', '沒有影響'],
+      correct: 1,
+      explanation: 'Gironde河巨大的水體具有熱容量，能夠在春季夜晚釋放熱量，有效保護鄰近的葡萄園免受霜凍的危害。'
+    }
+  },
+  // ========== 4. 1855分級制度歷史 =========
+  {
+    title: '1855年分級制度的誕生',
+    highlights: [
+      { id: 1, icon: '📜', title: '歷史契機', content: '為1855年巴黎世界博覽會而創立' },
+      { id: 2, icon: '💰', title: '分級依據', content: '主要基於酒款長期的市場價格與聲譽' }
+    ],
+    content: '<div class="classification-system"><p class="lead-text">1855年分級制度是波爾多葡萄酒品質認證的黃金標準，它並非由品酒專家評定，而是市場無形之手的傑作，至今仍是全球最權威的酒莊分級系統之一。</p><div class="classification-analysis"><div class="classification-section history"><h4>📜 1855年分級制度的歷史背景</h4><div class="historical-context"><div class="context-card origin"><h5>🎯 分級起源與目的</h5><div class="origin-details"><div class="background-story"><h6>歷史契機</h6><p>1855年巴黎世界博覽會，拿破崙三世要求波爾多商會為參展酒款建立品質分級，以展現法國葡萄酒的卓越品質。</p></div><div class="selection-criteria"><h6>分級標準</h6><p><strong>主要依據：</strong>酒款市場價格與聲譽</p><ul><li><strong>價格水準：</strong>長期市場表現反映品質</li><li><strong>歷史聲譽：</strong>酒莊數百年來的聲望</li><li><strong>風土條件：</strong>葡萄園的地理位置與土壤</li></ul></div><div class="geographic-scope"><h6>涵蓋範圍</h6><p>主要針對Médoc產區的紅酒酒莊，以及Sauternes和Barsac的甜酒酒莊。</p></div></div></div><div class="context-card significance"><h5>⚖️ 分級制度的重要意義</h5><div class="significance-aspects"><div class="aspect quality"><h6>品質保證</h6><p>建立了客觀的品質評估標準，為消費者提供可靠的選酒指南。</p></div><div class="aspect market"><h6>市場秩序</h6><p>規範了葡萄酒市場的價格體系，形成了穩定的品質—價格對應關係。</p></div><div class="aspect heritage"><h6>文化傳承</h6><p>保護和傳承了波爾多葡萄酒的釀造傳統與文化價值。</p></div></div></div></div></div><div class="classification-section modern-relevance"><h4>🔄 現代意義與市場影響</h4><div class="modern-impact"><div class="impact-area market-pricing"><h5>💰 市場定價影響</h5><p>分級制度至今仍是Médoc葡萄酒定價的核心參考。級別越高，通常價格越昂貴。</p></div><div class="impact-area investment"><h5>📈 投資收藏價值</h5><p>分級酒莊，尤其是一、二級，因其稀缺性和全球認知度，成為葡萄酒投資市場的硬通貨。</p></div><div class="impact-area quality-evolution"><h5>📊 品質演變趨勢</h5><p>儘管分級近170年未變，但許多酒莊的品質已遠超其原始級別，形成了"超二級"、"超三級"等概念。</p></div></div></div></div></div>',
+    hasMap: false,
+    quiz: {
+      question: '1855年分級制度的主要分級依據是什麼？',
+      options: ['專家盲品分數', '產量大小', '酒莊的歷史長度', '市場價格與聲譽'],
+      correct: 3,
+      explanation: '1855年分級制度並非基於品鑑，而是根據當時酒莊葡萄酒在市場上的長期售價和聲譽來劃分，這反映了市場對其品質的認可。'
+    }
+  },
+  // ========== 5. 一級酒莊 =========
+  {
+    title: '金字塔頂端：五大一級酒莊',
+    highlights: [
+      { id: 1, icon: '👑', title: '五大酒莊', content: 'Lafite, Latour, Margaux, Haut-Brion, Mouton' },
+      { id: 2, icon: '🏆', title: '品質巔峰', content: '代表波爾多乃至全世界葡萄酒的最高水準' }
+    ],
+    content: '<div class="classification-system"><p class="lead-text">五家一級酒莊是1855分級制度的巔峰，每一家都擁有獨一無二的風土和風格，是全球收藏家夢寐以求的珍品。</p><div class="classification-analysis"><div class="classification-section grades"><h4>🏆 一級酒莊 (Premiers Grands Crus Classés)</h4><div class="grade-system"><div class="grade-tier first-growth"><div class="tier-header"><h5>👑 一級酒莊 (5家)</h5></div><div class="tier-content"><div class="estates-list"><div class="estate-card lafite"><div class="estate-info"><h6>🏰 Château Lafite Rothschild (Pauillac)</h6><div class="estate-details"><p><strong>特色：</strong>以優雅精緻著稱，被譽為"王者之酒"</p><div class="signature-style"><strong>風格特徵：</strong>細膩香氣，絲滑口感，完美平衡</div></div></div></div><div class="estate-card margaux"><div class="estate-info"><h6>🏰 Château Margaux (Margaux)</h6><div class="estate-details"><p><strong>特色：</strong>以芬芳複雜的香氣和女性化風格聞名</p><div class="signature-style"><strong>風格特徵：</strong>花香突出，優雅細膩，餘韻悠長</div></div></div></div><div class="estate-card latour"><div class="estate-info"><h6>🏰 Château Latour (Pauillac)</h6><div class="estate-details"><p><strong>特色：</strong>結構強勁，力量感十足，陳年能力最強</p><div class="signature-style"><strong>風格特徵：</strong>濃郁厚重，單寧紮實，王者風範</div></div></div></div><div class="estate-card haut-brion"><div class="estate-info"><h6>🏰 Château Haut-Brion (Pessac-Léognan)</h6><div class="estate-details"><p><strong>特色：</strong>唯一不在Médoc的紅酒一級莊，帶有獨特煙燻礦物味</p><div class="signature-style"><strong>風格特徵：</strong>煙燻礦物，複雜層次，獨特風土</div></div></div></div><div class="estate-card mouton"><div class="estate-info"><h6>🏰 Château Mouton Rothschild (Pauillac)</h6><div class="estate-details"><p><strong>特色：</strong>1973年破格升級的傳奇，每年更換藝術酒標</p><div class="signature-style"><strong>風格特徵：</strong>濃郁奔放，藝術氣息，創新精神</div></div></div></div></div><div class="tier-characteristics"><h6>一級酒莊共同特徵</h6><ul><li><strong>頂級風土：</strong>最優秀的葡萄園位置</li><li><strong>完美工藝：</strong>傳統與現代技術的結合</li><li><strong>超長陳年潛力：</strong>具備50-100年的陳年能力</li><li><strong>極高投資價值：</strong>全球市場的硬通貨</li></ul></div></div></div></div></div></div></div>',
+    hasMap: true, mapFocus: 'medoc-estates',
+    quiz: {
+      question: '哪家一級酒莊是在1973年從二級晉升的？',
+      options: ['Château Lafite Rothschild', 'Château Haut-Brion', 'Château Mouton Rothschild', 'Château Margaux'],
+      correct: 2,
+      explanation: 'Château Mouton Rothschild是唯一一家在1855年之後獲得晉升的酒莊，在莊主菲利普男爵長達數十年的努力下，於1973年成功從二級晉升為一級。'
+    }
+  },
+  // ========== 6. 其他級別酒莊 =========
+  {
+    title: '列級莊的中堅力量',
+    highlights: [
+      { id: 1, icon: '🥈', title: '二級酒莊', content: '品質極高，常被譽為"超二級"' },
+      { id: 2, icon: '🥉', title: '三至五級', content: '品質優秀，是體驗列級莊的絕佳選擇' }
+    ],
+    content: '<div class="classification-system"><p class="lead-text">從二級到五級的列級酒莊構成了Médoc產區的精英梯隊，它們風格各異，品質卓越，其中不乏品質媲美一級莊的"超二級"酒莊。</p><div class="classification-analysis"><div class="classification-section grades"><h4>🏆 其他級別酒莊詳解</h4><div class="grade-system"><div class="grade-tier second-growth"><div class="tier-header"><h5>🥈 二級酒莊 (Deuxièmes Crus) - 14家</h5></div><div class="tier-content"><div class="notable-estates"><h6>"超二級(Super Seconds)"酒莊代表</h6><div class="second-growth-examples"><div class="estate-example cos-destournel"><strong>Château Cos d\'Estournel (Saint-Estèphe)：</strong>東方宮殿建築，風格濃郁強勁，品質媲美一級莊。</div><div class="estate-example ducru-beaucaillou"><strong>Château Ducru-Beaucaillou (Saint-Julien)：</strong>風格平衡優雅，品質極其穩定，Saint-Julien的典範。</div><div class="estate-example leoville-las-cases"><strong>Château Léoville Las Cases (Saint-Julien)：</strong>被譽為"最接近一級莊的酒"，結構宏大。</div></div></div></div></div><div class="grade-tier third-fourth-fifth"><div class="tier-header"><h5>🥉 三、四、五級酒莊</h5></div><div class="tier-content"><div class="lower-tiers-overview"><div class="tier-group third"><h6>三級酒莊 (14家)</h6><p><strong>代表酒莊：</strong>Château Palmer (常被認為有二級甚至一級水準), Château Calon-Ségur (心形酒標)。</p><p><strong>特徵：</strong>品質穩定，具有明確的產區特色，是資深愛好者的選擇。</p></div><div class="tier-group fourth"><h6>四級酒莊 (10家)</h6><p><strong>代表酒莊：</strong>Château Talbot, Château Beychevelle (龍船)。</p><p><strong>特徵：</strong>品質良好，是了解Médoc風格的優秀選擇。</p></div><div class="tier-group fifth"><h6>五級酒莊 (18家)</h6><p><strong>代表酒莊：</strong>Château Lynch-Bages (被譽為有二級水準), Château Grand-Puy-Lacoste。</p><p><strong>特徵：</strong>入門級分級酒莊，性價比突出，是許多愛好者的日常最愛。</p></div></div></div></div></div></div></div></div>',
+    hasMap: true, mapFocus: 'medoc-estates',
+    quiz: {
+      question: '被譽為"龍船"的酒莊是哪個級別的？',
+      options: ['二級酒莊', '三級酒莊', '四級酒莊', '五級酒莊'],
+      correct: 2,
+      explanation: 'Château Beychevelle是一家著名的四級酒莊，其酒標上的帆船圖案使其獲得了"龍船"的暱稱，在亞洲市場尤其受歡迎。'
+    }
+  },
+  // ========== 7. 品種與調配 =========
+  {
+    title: 'Médoc的調配藝術',
+    highlights: [
+      { id: 1, icon: '🍇', title: '品種之王', content: 'Cabernet Sauvignon提供結構與陳年潛力' },
+      { id: 2, icon: '🎨', title: '調配哲學', content: '多品種混釀以達到完美平衡與複雜度' }
+    ],
+    content: '<div class="medoc-winemaking"><p class="lead-text">Médoc的偉大之處在於其調配的藝術——將不同葡萄品種的優點融合在一起，創造出比單一品種更複雜、更和諧的傑作。</p><div class="winemaking-analysis"><div class="winemaking-section grape-varieties"><h4>🍇 葡萄品種組合與調配哲學</h4><div class="varietal-composition"><div class="blend-philosophy"><h5>🎯 Médoc調配傳統</h5><div class="blending-approach"><div class="blend-card primary"><h6>主導品種策略</h6><div class="primary-varieties"><div class="variety cabernet-sauvignon"><h7>Cabernet Sauvignon (50-70%)</h7><div class="variety-role"><p><strong>核心作用：</strong>提供結構、單寧與陳年潛力</p><ul><li><strong>香氣特徵：</strong>黑醋栗、雪松、鉛筆芯</li><li><strong>口感貢獻：</strong>強勁單寧，厚實酒體</li></ul></div></div><div class="variety merlot"><h7>Merlot (20-40%)</h7><div class="variety-role"><p><strong>調和功能：</strong>增加柔順度與果香</p><ul><li><strong>香氣特徵：</strong>櫻桃、李子、巧克力</li><li><strong>口感貢獻：</strong>圓潤口感，柔化單寧</li></ul></div></div></div></div><div class="blend-card supporting"><h6>輔助品種角色</h6><div class="supporting-varieties"><div class="variety cabernet-franc"><h7>Cabernet Franc (5-15%)</h7><div class="variety-contribution"><p><strong>特殊貢獻：</strong>增加香氣的複雜度（紫羅蘭、香料）</p></div></div><div class="variety petit-verdot"><h7>Petit Verdot (0-5%)</h7><div class="variety-contribution"><p><strong>精準調味：</strong>提供顏色、單寧和香料風味</p></div></div></div></div></div></div><div class="vintage-variations"><h5>📊 年份調配變化</h5><p>釀酒師會根據每個年份不同品種的成熟狀況，靈活調整最終的調配比例，以求達到該年份下的最佳平衡。這正是波爾多調配的精髓所在。</p></div></div></div></div></div>',
+    hasMap: false,
+    quiz: {
+      question: '在Médoc調配中，Merlot扮演的主要角色是什麼？',
+      options: ['提供主要結構', '增加酸度', '柔化單寧並提供圓潤口感', '增加陳年潛力'],
+      correct: 2,
+      explanation: 'Merlot在以Cabernet Sauvignon為主導的Médoc調配中，主要起到"柔順劑"的作用，它圓潤的口感和柔和的單寧可以平衡Cabernet Sauvignon的強勁結構。'
+    }
+  },
+  // ========== 8. 釀造工藝 =========
+  {
+    title: '從葡萄到美酒：釀造工藝',
+    highlights: [
+      { id: 1, icon: '🔍', title: '嚴格篩選', content: '多重篩選確保只用最優質的葡萄' },
+      { id: 2, icon: '🏺', title: '橡木桶陳年', content: '在法國橡木桶中培養複雜度與結構' }
+    ],
+    content: '<div class="medoc-winemaking"><p class="lead-text">Médoc的釀酒工藝是傳統與現代科技的結晶。從精細的採收到漫長的桶中陳年，每一步都為了最終的品質服務。</p><div class="winemaking-analysis"><div class="winemaking-section vinification"><h4>🏭 釀造工藝流程</h4><div class="production-process"><div class="process-stage harvest"><h5>🍇 採收與篩選</h5><div class="harvest-practices"><div class="selection-process"><h6>嚴格篩選制度</h6><p>頂級酒莊通常會進行多次篩選：在葡萄園採收時初選，回到酒莊後在篩選台上進行人工或光學精選，確保每一顆進入發酵罐的葡萄都處於完美狀態。</p></div></div></div><div class="process-stage fermentation"><h5>🧪 發酵控制技術</h5><div class="fermentation-management"><div class="temperature-control"><h6>溫度控制發酵</h6><p>酒精發酵在溫控不銹鋼罐或木桶中進行，精確控制溫度以萃取理想的顏色、香氣和單寧。</p></div><div class="extraction-techniques"><h6>萃取技術運用</h6><p>通過淋皮 (Pumping Over) 和壓帽 (Punching Down) 等技術，溫和地萃取果皮中的精華物質。</p></div></div></div><div class="process-stage aging"><h5>🏺 橡木桶陳年工藝</h5><div class="barrel-aging"><div class="barrel-selection"><h6>橡木桶選擇</h6><p>通常使用225升的法國橡木桶。一級酒莊會使用100%的新橡木桶，而其他級別則根據年份和期望風格調整新桶比例。</p></div><div class="aging-program"><h6>陳年計劃</h6><p>酒液會在橡木桶中陳年12至24個月，期間會進行蘋果酸-乳酸發酵，並定期進行換桶以澄清酒液。這個過程賦予了葡萄酒烘烤、香草、雪松等複雜香氣，並柔化了單寧。</p></div></div></div></div></div></div>',
+    hasMap: false,
+    quiz: {
+      question: 'Médoc頂級酒莊在陳年過程中通常使用什麼比例的新橡木桶？',
+      options: ['25%', '50%', '75%', '100%'],
+      correct: 3,
+      explanation: '為了賦予葡萄酒最強勁的結構和最複雜的風味，一級酒莊和許多頂級的二級酒莊在好年份通常會使用100%的全新法國橡木桶來陳釀它們的正牌酒。'
+    }
+  },
+  // ========== 9. 風格與陳年 =========
+  {
+    title: 'Médoc風格與陳年潛力',
+    highlights: [
+      { id: 1, icon: '🍷', title: '典型風格', content: '結構宏大、單寧緊實、風味複雜' },
+      { id: 2, icon: '⏳', title: '陳年潛力', content: '世界頂級的陳年能力，可發展數十年' }
+    ],
+    content: '<div class="medoc-winemaking"><p class="lead-text">Médoc紅酒以其無與倫比的陳年潛力而聞名於世。一款偉大的Médoc酒如同一部交響樂，需要時間來展開其所有的層次與複雜度。</p><div class="winemaking-analysis"><div class="winemaking-section style-characteristics"><h4>🎯 Médoc風格特徵分析</h4><div class="style-profile"><div class="sensory-analysis"><h5>👃 感官特徵描述</h5><div class="sensory-aspects"><div class="aspect visual"><h6>視覺</h6><p>年輕時為深邃的紫紅色，陳年後轉為石榴紅甚至磚紅色。</p></div><div class="aspect aroma"><h6>香氣</h6><p>年輕時以黑醋栗、黑莓等黑色水果為主，伴有橡木桶帶來的雪松、香草氣息。陳年後會發展出皮革、煙草、雪茄盒、森林地表等極為複雜的第三層香氣。</p></div><div class="aspect palate"><h6>口感</h6><p>酒體飽滿，結構宏大。年輕時單寧強勁緊實，酸度清晰。經過陳年，單寧會變得如天鵝絨般絲滑，口感圓潤和諧，餘韻悠長。</p></div></div></div><div class="aging-potential"><h5>📈 陳年潛力評估</h5><div class="aging-analysis"><div class="aging-phases"><div class="phase youth"><h6>年輕期 (0-5年)</h6><p>果香充沛，但單寧非常強勁，難以入口，需要長時間醒酒。</p></div><div class="phase maturity"><h6>發展期 (5-15年)</h6><p>果香與陳年香氣開始融合，單寧逐漸柔化，進入適飲期。</p></div><div class="phase peak"><h6>巔峰期 (15-40年+)</h6><p>達到完美平衡，展現出驚人的複雜度和層次感，是品嚐的最佳時機。</p></div></div><div class="storage-recommendations"><h6>储存建議</h6><p>恆溫（12-15°C）、恆濕（70-75%）、避光、避震是長期儲存Médoc名酒的必要條件。</p></div></div></div></div></div></div></div>',
+    hasMap: false,
+    quiz: {
+      question: '陳年後的Médoc紅酒通常會發展出下列哪種香氣？',
+      options: ['新鮮的檸檬香', '熱帶水果香', '皮革與煙草香', '濃郁的奶油香'],
+      correct: 2,
+      explanation: '隨著時間的推移，Médoc紅酒中的新鮮果香會逐漸轉化為更為複雜的第三層香氣，其中皮革、煙草、雪茄盒和森林地表是最經典的陳年香氣特徵。'
+    }
+  }
+];
+
+export default l21Content;

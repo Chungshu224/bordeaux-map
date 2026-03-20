@@ -1,0 +1,352 @@
+<template>
+  <div class="medoc-interactive-map-container">
+    <PresentationMap
+      :mapFocus="mapFocus"
+      :geojsonPaths="geojsonPaths"
+      :showBordeaux="false"
+      :key="mapKey"
+      @mapReady="handleMapReady"
+    />
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import PresentationMap from '../PresentationMap.vue'
+import mapboxgl from 'mapbox-gl'
+
+const mapKey = ref(Date.now())
+const mapFocus = ref('LeftBank-Medoc')
+
+// 8個村莊AOC的geojson路徑
+const geojsonPaths = ref([
+  '/geojson/LeftBank/Medoc/Margaux_AOC.geojson',
+  '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
+  '/geojson/LeftBank/Medoc/St-Julien_AOC.geojson',
+  '/geojson/LeftBank/Medoc/St-Estephe_AOC.geojson',
+  '/geojson/LeftBank/Medoc/Listrac-Medoc_AOC.geojson',
+  '/geojson/LeftBank/Medoc/Moulis-en-Medoc_AOC.geojson',
+  '/geojson/LeftBank/Medoc/Haut-Medoc_AOC.geojson',
+  '/geojson/LeftBank/Medoc/Medoc_AOC.geojson'
+])
+
+let map = null
+const chateauxMarkers = ref([])
+
+// 61家列級酒莊資料
+const medocChateaux = [
+  // Margaux
+  { name: 'Chateau Margaux', coords: [-0.6687, 45.0444], rank: '1', aoc: 'Margaux', description: 'First Growth' },
+  { name: 'Chateau Rauzan-Segla', coords: [-0.6756, 45.0360], rank: '2', aoc: 'Margaux', description: 'Top 2nd Growth' },
+  { name: 'Chateau Lascombes', coords: [-0.6838, 45.0415], rank: '2', aoc: 'Margaux', description: 'Rich and structured' },
+  { name: 'Chateau Brane-Cantenac', coords: [-0.6737, 45.0240], rank: '2', aoc: 'Margaux', description: 'Elegant tannins' },
+  { name: 'Chateau Durfort-Vivens', coords: [-0.6745, 45.0388], rank: '2', aoc: 'Margaux', description: 'Traditional Margaux' },
+  { name: 'Chateau Palmer', coords: [-0.6694, 45.0369], rank: '3', aoc: 'Margaux', description: 'First Growth quality' },
+  { name: "Chateau d'Issan", coords: [-0.6581, 45.0379], rank: '3', aoc: 'Margaux', description: 'Elegant and floral' },
+  { name: 'Chateau Kirwan', coords: [-0.6582, 45.0274], rank: '3', aoc: 'Margaux', description: 'Rich fruit character' },
+  { name: 'Chateau Malescot Saint-Exupery', coords: [-0.6725, 45.0402], rank: '3', aoc: 'Margaux', description: 'Rich and complex' },
+  { name: 'Chateau Cantenac-Brown', coords: [-0.6748, 45.0281], rank: '3', aoc: 'Margaux', description: 'Powerful style' },
+  { name: 'Chateau Boyd-Cantenac', coords: [-0.6738, 45.0367], rank: '3', aoc: 'Margaux', description: 'Classic Margaux' },
+  { name: 'Chateau Giscours', coords: [-0.6865, 45.0168], rank: '3', aoc: 'Margaux', description: 'Large estate' },
+  { name: 'Chateau Marquis de Terme', coords: [-0.6712, 45.0378], rank: '4', aoc: 'Margaux', description: 'Traditional winemaking' },
+  { name: 'Chateau Prieure-Lichine', coords: [-0.6698, 45.0356], rank: '4', aoc: 'Margaux', description: 'Fruity and accessible' },
+  { name: 'Chateau Pouget', coords: [-0.6735, 45.0373], rank: '4', aoc: 'Margaux', description: 'Small boutique estate' },
+  { name: 'Chateau Latour', coords: [-0.7527, 45.2026], rank: '1', aoc: 'Pauillac', description: 'Most powerful First Growth' },
+  { name: 'Chateau Lafite Rothschild', coords: [-0.7698, 45.2247], rank: '1', aoc: 'Pauillac', description: 'Epitome of elegance' },
+  { name: 'Chateau Mouton Rothschild', coords: [-0.7690, 45.2195], rank: '1', aoc: 'Pauillac', description: 'Promoted to 1st in 1973' },
+  { name: 'Chateau Pichon Longueville Baron', coords: [-0.7538, 45.1968], rank: '2', aoc: 'Pauillac', description: 'Powerful 2nd Growth' },
+  { name: 'Chateau Pichon Longueville Comtesse de Lalande', coords: [-0.7543, 45.1952], rank: '2', aoc: 'Pauillac', description: 'Elegant Pauillac' },
+  { name: 'Chateau Lynch-Bages', coords: [-0.7578, 45.2089], rank: '5', aoc: 'Pauillac', description: 'Super 5th Growth' },
+  { name: 'Chateau Grand-Puy-Lacoste', coords: [-0.7612, 45.2125], rank: '5', aoc: 'Pauillac', description: 'Classic Pauillac' },
+  { name: 'Chateau Pontet-Canet', coords: [-0.7685, 45.2178], rank: '5', aoc: 'Pauillac', description: 'Biodynamic pioneer' },
+  { name: 'Chateau Batailley', coords: [-0.7628, 45.2142], rank: '5', aoc: 'Pauillac', description: 'Excellent value' },
+  { name: "Chateau d'Armailhac", coords: [-0.7682, 45.2188], rank: '5', aoc: 'Pauillac', description: 'Rothschild property' },
+  { name: 'Chateau Clerc Milon', coords: [-0.7672, 45.2165], rank: '5', aoc: 'Pauillac', description: 'Rothschild boutique' },
+  { name: 'Chateau Duhart-Milon', coords: [-0.7695, 45.2205], rank: '4', aoc: 'Pauillac', description: 'Lafite sibling' },
+  { name: 'Chateau Croizet-Bages', coords: [-0.7585, 45.2095], rank: '5', aoc: 'Pauillac', description: 'Traditional style' },
+  { name: 'Chateau Haut-Bages-Liberal', coords: [-0.7592, 45.2108], rank: '5', aoc: 'Pauillac', description: 'Quality improved' },
+  { name: 'Chateau Lynch-Moussas', coords: [-0.7568, 45.2078], rank: '5', aoc: 'Pauillac', description: 'Classic Pauillac' },
+  { name: 'Chateau Pedesclaux', coords: [-0.7555, 45.2062], rank: '5', aoc: 'Pauillac', description: 'Rising star' },
+  { name: 'Chateau Grand-Puy Ducasse', coords: [-0.7548, 45.2045], rank: '5', aoc: 'Pauillac', description: 'Reliable quality' },
+  { name: 'Chateau Leoville Las Cases', coords: [-0.7425, 45.1628], rank: '2', aoc: 'Saint-Julien', description: 'Near 1st Growth quality' },
+  { name: 'Chateau Leoville Poyferre', coords: [-0.7438, 45.1615], rank: '2', aoc: 'Saint-Julien', description: 'Rich and opulent' },
+  { name: 'Chateau Leoville Barton', coords: [-0.7445, 45.1598], rank: '2', aoc: 'Saint-Julien', description: 'Traditional classic' },
+  { name: 'Chateau Ducru-Beaucaillou', coords: [-0.7395, 45.1685], rank: '2', aoc: 'Saint-Julien', description: 'Elegant balance' },
+  { name: 'Chateau Gruaud-Larose', coords: [-0.7485, 45.1548], rank: '2', aoc: 'Saint-Julien', description: 'Powerful style' },
+  { name: 'Chateau Beychevelle', coords: [-0.7368, 45.1725], rank: '4', aoc: 'Saint-Julien', description: 'Elegant 4th Growth' },
+  { name: 'Chateau Branaire-Ducru', coords: [-0.7412, 45.1652], rank: '4', aoc: 'Saint-Julien', description: 'Reliable quality' },
+  { name: 'Chateau Saint-Pierre', coords: [-0.7428, 45.1642], rank: '4', aoc: 'Saint-Julien', description: 'Small boutique' },
+  { name: 'Chateau Talbot', coords: [-0.7475, 45.1565], rank: '4', aoc: 'Saint-Julien', description: 'Full-bodied' },
+  { name: 'Chateau Langoa Barton', coords: [-0.7452, 45.1588], rank: '3', aoc: 'Saint-Julien', description: 'Barton family' },
+  { name: 'Chateau Lagrange', coords: [-0.7598, 45.1485], rank: '3', aoc: 'Saint-Julien', description: 'Suntory owned' },
+  { name: 'Chateau Fourcas Hosten', coords: [-0.7895, 45.0885], rank: 'Cru Bourgeois', aoc: 'Listrac-Medoc', description: 'Top Listrac' },
+  { name: 'Chateau Clarke', coords: [-0.7925, 45.0845], rank: 'Cru Bourgeois', aoc: 'Listrac-Medoc', description: 'Rothschild investment' },
+  { name: 'Chateau Fourcas Dupre', coords: [-0.7908, 45.0868], rank: 'Cru Bourgeois', aoc: 'Listrac-Medoc', description: 'Structured' },
+  { name: 'Chateau Chasse-Spleen', coords: [-0.7685, 45.0725], rank: 'Cru Bourgeois', aoc: 'Moulis-en-Medoc', description: 'Moulis leader' },
+  { name: 'Chateau Poujeaux', coords: [-0.7728, 45.0698], rank: 'Cru Bourgeois', aoc: 'Moulis-en-Medoc', description: 'Classified quality' },
+  { name: 'Chateau Maucaillou', coords: [-0.7745, 45.0712], rank: 'Cru Bourgeois', aoc: 'Moulis-en-Medoc', description: 'Consistent quality' },
+  { name: 'Chateau La Lagune', coords: [-0.6958, 44.9485], rank: '3', aoc: 'Haut-Medoc', description: 'Southernmost classified' },
+  { name: 'Chateau Cantemerle', coords: [-0.6825, 44.9625], rank: '5', aoc: 'Haut-Medoc', description: 'Elegant style' },
+  { name: 'Chateau Belgrave', coords: [-0.7125, 45.0125], rank: '5', aoc: 'Haut-Medoc', description: 'Recently improved' },
+  { name: 'Chateau de Camensac', coords: [-0.7165, 45.0185], rank: '5', aoc: 'Haut-Medoc', description: 'Traditional' },
+  { name: 'Chateau Sociando-Mallet', coords: [-0.7528, 45.2348], rank: 'Cru Bourgeois', aoc: 'Haut-Medoc', description: 'Classified quality Cru Bourgeois' }
+]
+
+// Gironde River path simplified
+const girondeRiverPath = [
+  [-0.55, 45.45],  // North
+  [-0.56, 45.40],
+  [-0.57, 45.35],
+  [-0.58, 45.30],
+  [-0.60, 45.25],
+  [-0.62, 45.20],
+  [-0.65, 45.15],
+  [-0.67, 45.10],
+  [-0.69, 45.05],
+  [-0.71, 45.00],
+  [-0.72, 44.95],
+  [-0.73, 44.90],  // South
+]
+
+// 葡萄酒之路 (Route des Chateaux) 路徑
+const routeDesChateauxPath = [
+  [-0.7698, 45.2247],  // Lafite
+  [-0.7690, 45.2195],  // Mouton
+  [-0.7685, 45.2178],  // Pontet-Canet
+  [-0.7578, 45.2089],  // Lynch-Bages
+  [-0.7527, 45.2026],  // Latour
+  [-0.7538, 45.1968],  // Pichon Baron
+  [-0.7425, 45.1628],  // Leoville Las Cases
+  [-0.7395, 45.1685],  // Ducru-Beaucaillou
+  [-0.7368, 45.1725],  // Beychevelle
+  [-0.6865, 45.0168],  // Giscours
+  [-0.6687, 45.0444],  // Margaux
+]
+
+const handleMapReady = (mapInstance) => {
+  map = mapInstance
+  
+  // 添加 Gironde 河流圖層
+  addGirondeRiver()
+  
+  // 添加葡萄酒之路
+  addRouteDesChateaux()
+  
+  // 添加酒莊標記
+  addChateauxMarkers()
+}
+
+const addGirondeRiver = () => {
+  if (!map) return
+  
+  // 添加河流數據源
+  map.addSource('gironde-river', {
+    type: 'geojson',
+    data: {
+      type: 'Feature',
+      properties: { name: 'Gironde River' },
+      geometry: {
+        type: 'LineString',
+        coordinates: girondeRiverPath
+      }
+    }
+  })
+  
+  // 添加河流圖層（外層較淡的線條）
+  map.addLayer({
+    id: 'gironde-river-outer',
+    type: 'line',
+    source: 'gironde-river',
+    paint: {
+      'line-color': '#4A90E2',
+      'line-width': 8,
+      'line-opacity': 0.3
+    }
+  })
+  
+  // 添加河流圖層（內層較深的線條）
+  map.addLayer({
+    id: 'gironde-river-inner',
+    type: 'line',
+    source: 'gironde-river',
+    paint: {
+      'line-color': '#2E5C8A',
+      'line-width': 4,
+      'line-opacity': 0.6
+    }
+  })
+  
+  // 添加河流標籤
+  map.addLayer({
+    id: 'gironde-river-label',
+    type: 'symbol',
+    source: 'gironde-river',
+    layout: {
+      'text-field': '🌊 Gironde River',
+      'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+      'text-size': 14,
+      'symbol-placement': 'line',
+      'text-rotation-alignment': 'map'
+    },
+    paint: {
+      'text-color': '#2E5C8A',
+      'text-halo-color': '#ffffff',
+      'text-halo-width': 2
+    }
+  })
+}
+
+const addRouteDesChateaux = () => {
+  if (!map) return
+  
+  // 添加葡萄酒之路數據源
+  map.addSource('route-des-chateaux', {
+    type: 'geojson',
+    data: {
+      type: 'Feature',
+      properties: { name: 'Route des Chateaux' },
+      geometry: {
+        type: 'LineString',
+        coordinates: routeDesChateauxPath
+      }
+    }
+  })
+  
+  // 添加路線圖層（虛線）
+  map.addLayer({
+    id: 'route-des-chateaux',
+    type: 'line',
+    source: 'route-des-chateaux',
+    paint: {
+      'line-color': '#D4AF37',
+      'line-width': 3,
+      'line-dasharray': [2, 2],
+      'line-opacity': 0.8
+    }
+  })
+}
+
+const addChateauxMarkers = () => {
+  if (!map) return
+  
+  medocChateaux.forEach(chateau => {
+    // 根據級數選擇圖標和顏色
+    let icon = '📍'
+    let color = '#666'
+    
+    if (chateau.rank === '1') {
+      icon = '👑'
+      color = '#FFD700'
+    } else if (chateau.rank === '2') {
+      icon = '🥈'
+      color = '#C0C0C0'
+    } else if (chateau.rank === '3') {
+      icon = '🥉'
+      color = '#CD7F32'
+    } else if (chateau.rank === '4') {
+      icon = '⭐'
+      color = '#4A90E2'
+    } else if (chateau.rank === '5') {
+      icon = '✨'
+      color = '#7CB342'
+    } else {
+      icon = '🏰'
+      color = '#9E9E9E'
+    }
+    
+    // 創建 HTML 標記元素
+    const el = document.createElement('div')
+    el.className = 'chateau-marker'
+    el.innerHTML = icon
+    el.style.fontSize = '20px'
+    el.style.cursor = 'pointer'
+    el.style.filter = 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+    
+    // 創建彈出窗口
+    const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
+      <div class="chateau-popup">
+        <h3 style="margin: 0 0 0.5rem 0; color: ${color};">${icon} ${chateau.name}</h3>
+        <div style="margin-bottom: 0.5rem;">
+          <strong>等級：</strong>${getRankName(chateau.rank)}
+        </div>
+        <div style="margin-bottom: 0.5rem;">
+          <strong>產區：</strong>${chateau.aoc}
+        </div>
+        <div style="color: #666; font-size: 0.9rem;">
+          ${chateau.description}
+        </div>
+      </div>
+    `)
+    
+    // 創建標記並添加到地圖
+    const marker = new mapboxgl.Marker(el)
+      .setLngLat(chateau.coords)
+      .setPopup(popup)
+      .addTo(map)
+    
+    chateauxMarkers.value.push(marker)
+  })
+}
+
+const getRankName = (rank) => {
+  const rankNames = {
+    '1': '一級酒莊 (Premier Cru)',
+    '2': '二級酒莊 (Deuxieme Cru)',
+    '3': '三級酒莊 (Troisieme Cru)',
+    '4': '四級酒莊 (Quatrieme Cru)',
+    '5': '五級酒莊 (Cinquieme Cru)',
+    'Cru Bourgeois': '中級酒莊 (Cru Bourgeois)'
+  }
+  return rankNames[rank] || rank
+}
+
+onUnmounted(() => {
+  // 清理標記
+  chateauxMarkers.value.forEach(marker => marker.remove())
+  chateauxMarkers.value = []
+  
+  // 清理圖層
+  if (map) {
+    const layersToRemove = [
+      'gironde-river-outer',
+      'gironde-river-inner',
+      'gironde-river-label',
+      'route-des-chateaux'
+    ]
+    
+    layersToRemove.forEach(layerId => {
+      if (map.getLayer(layerId)) {
+        map.removeLayer(layerId)
+      }
+    })
+    
+    const sourcesToRemove = ['gironde-river', 'route-des-chateaux']
+    sourcesToRemove.forEach(sourceId => {
+      if (map.getSource(sourceId)) {
+        map.removeSource(sourceId)
+      }
+    })
+  }
+})
+</script>
+
+<style scoped>
+.medoc-interactive-map-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+:deep(.chateau-popup) {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-width: 250px;
+}
+
+:deep(.chateau-marker) {
+  transition: transform 0.2s;
+}
+
+:deep(.chateau-marker:hover) {
+  transform: scale(1.3);
+}
+</style>
