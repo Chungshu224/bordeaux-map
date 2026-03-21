@@ -176,16 +176,7 @@ body {
   min-width: 44px;
 }
 
-/* 螢幕尺寸調整 */
-.screen-small .mode-switcher {
-  top: 0.5rem;
-  right: 0.5rem;
-}
-
-.screen-large .mode-switcher {
-  top: 1.5rem;
-  right: 3rem;
-}
+/* 螢幕尺寸調整 - 移除原本的 mode-switcher 分支點，改統一依靠響應式佈局 */
 
 .original-map-mode {
   position: relative;
@@ -196,10 +187,16 @@ body {
 .mode-switcher {
   position: absolute;
   top: 80px;
-  left: 10px;
+  left: calc(320px + 10px); /* AOCList width + 10px spacing */
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  .mode-switcher {
+    top: calc(30vh + 80px); /* 30vh is AOCList height on mobile */
+    left: 10px;
+  }
+}
 .learning-mode-btn {
   display: flex;
   align-items: center;
