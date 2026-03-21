@@ -623,8 +623,8 @@ const initMap = async (retry = 0) => {
           mapboxgl.setTelemetryEnabled(false) 
         }
       } catch {}
-      chosenStyle = getMapboxStyleUrl(MAPBOX_TOKEN, 'satellite-v9')
-      if (debug) console.log('[Mapbox] 使用 Mapbox 樣式 (satellite-v9)')
+      chosenStyle = getMapboxStyleUrl(MAPBOX_TOKEN, 'satellite-streets-v12')
+      if (debug) console.log('[Mapbox] 使用 Mapbox 樣式 (satellite-streets-v12)')
     } else {
       // 退回 OSM Raster
       // 設置一個假的 token 以避免 Mapbox GL 驗證錯誤（使用 OSM 樣式時不會實際用到）

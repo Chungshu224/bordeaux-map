@@ -108,8 +108,8 @@ onMounted(async () => {
           mapboxgl.setTelemetryEnabled(false) 
         }
       } catch {}
-      chosenStyle = getMapboxStyleUrl(MAPBOX_TOKEN, 'satellite-v9')
-      console.log('[Mapbox] 使用 Mapbox 樣式 (satellite-v9)')
+      chosenStyle = getMapboxStyleUrl(MAPBOX_TOKEN, 'satellite-streets-v12')
+      console.log('[Mapbox] 使用 Mapbox 樣式 (satellite-streets-v12)')
     } else {
       // 無 Token 時退回 OSM raster
       // 設置一個假的 token 以避免 Mapbox GL 驗證錯誤（使用 OSM 樣式時不會實際用到）
