@@ -48,7 +48,13 @@ export function getMapboxToken(propsToken = '') {
   } catch {}
 
   // 4. Vite 環境變數
-  const envToken = (import.meta?.env?.VITE_MAPBOX_TOKEN || '').trim()
+  let envToken = ''
+  try {
+    // 必須使用精準的 import.meta.env.VITE_MAPBOX_TOKEN，不能加上 ?. (optional chaining)
+    // 因為 Vite 是使用字串靜態替換 (Static Replacement) 來植入環境變數
+    envToken = (import.meta.env.VITE_MAPBOX_TOKEN || '').trim()
+  } catch (e) {}
+
   if (envToken && !runtimeToken) console.log('[getMapboxToken] 使用 Vite 環境變數')
 
   const finalToken = runtimeToken || envToken || ''
