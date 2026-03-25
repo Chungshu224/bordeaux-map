@@ -95,6 +95,17 @@ export const l23Content = [
     ],
     content: '<div class="pauillac-terroir"><p class="lead-text">Pauillac的偉大源於其獨特的深厚砂礫土壤，為Cabernet Sauvignon提供了完美的生長環境，是釀造強勁、長壽命葡萄酒的基礎。</p><div class="terroir-analysis"><div class="terroir-section soil"><h4>🪨 Pauillac土壤特徵</h4><div class="soil-analysis"><div class="soil-composition"><h5>🔬 土壤組成</h5><div class="soil-types"><div class="soil-type gunz-gravel"><h6>Gunz砂礫層 (主導類型)</h6><div class="soil-details"><p><strong>特徵：</strong>Pauillac的標誌性土壤，由第四紀冰河期形成的古老砂礫構成，礫石顆粒較大。</p><p><strong>深度：</strong>部分地區的砂礫層深度可達數米，是整個Médoc最深厚的區域之一。</p><div class="soil-benefits"><h7>土壤優勢</h7><ul><li><strong>極佳排水：</strong>確保葡萄根部不會過濕。</li><li><strong>熱儲存：</strong>白天吸收熱量，夜間釋放，幫助葡萄完美成熟。</li><li><strong>貧瘠土壤：</strong>迫使葡萄根系深扎，吸收底層的微量元素，增加複雜度。</li></ul></div></div></div></div></div></div></div></div>',
     hasMap: true, mapFocus: 'LeftBank-Medoc-Pauillac',
+    geojsonPaths: [
+      '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
+      '/geojson/geology/Gravel.geojson'
+    ],
+    showBordeaux: false,
+    mapConfig: {
+      center: [-0.7483, 45.1967],
+      zoom: 12.5,
+      pitch: 0,
+      bearing: 0
+    },
     quiz: {
       question: 'Pauillac標誌性的砂礫土壤有什麼主要優勢？',
       options: ['養分豐富', '保水性強', '極佳的排水和儲熱能力', '適合種植白葡萄'],

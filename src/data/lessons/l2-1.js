@@ -98,6 +98,18 @@ export const l21Content = [
     ],
     content: '<div class="medoc-geography"><p class="lead-text">砂礫土壤是Médoc產區風土的基石，賦予了Cabernet Sauvignon完美的生長環境，並塑造了葡萄酒強勁的結構與陳年潛力。</p><div class="geography-analysis"><div class="geo-section soil-analysis"><h4>🪨 土壤組成與地質結構</h4><div class="soil-composition"><div class="soil-layers"><h5>📊 土壤分層結構</h5><div class="layer-analysis"><div class="soil-layer surface"><h6>表土層 (0-30cm)</h6><div class="layer-details"><p><strong>主要成分：</strong>細砂、粉土與少量黏土</p><p><strong>特殊性質：</strong>保水性適中，透氣性良好</p></div></div><div class="soil-layer gravel"><h6>砂礫層 (30-100cm)</h6><div class="layer-details"><p><strong>核心特徵：</strong>Médoc產區的標誌性土壤</p><p><strong>組成成分：</strong>石英砂礫、鵝卵石、粗砂</p><p><strong>關鍵作用：</strong>優異排水與熱能儲存</p><ul><li>熱反射效應：白天吸熱，夜間放熱</li><li>根系穿透：促進葡萄根系深扎</li></ul></div></div><div class="soil-layer subsoil"><h6>底土層 (100cm以下)</h6><div class="layer-details"><p><strong>地質基礎：</strong>古老的河流沖積層</p><p><strong>礦物組成：</strong>石灰岩、鐵質黏土</p><p><strong>水分調節：</strong>深層保水，乾旱時供應水分</p></div></div></div></div><div class="soil-types"><h5>🎯 不同區域土壤特色</h5><div class="regional-soils"><div class="soil-region margaux-area"><h6>Margaux地區土壤</h6><p><strong>特徵：</strong>細砂礫為主，排水極佳，風格優雅</p></div><div class="soil-region pauillac-area"><h6>Pauillac地區土壤</h6><p><strong>特徵：</strong>深厚砂礫，石英含量高，結構強勁</p></div><div class="soil-region saint-julien-area"><h6>Saint-Julien地區土壤</h6><p><strong>特徵：</strong>砂礫與黏土平衡組合，風格平衡</p></div><div class="soil-region saint-estephe-area"><h6>Saint-Estèphe地區土壤</h6><p><strong>特徵：</strong>黏土含量較高，保水性強，風格濃郁</p></div></div></div></div></div></div></div>',
     hasMap: true, mapFocus: 'LeftBank-Medoc',
+    geojsonPaths: [
+      '/geojson/LeftBank/Medoc/Medoc_AOC.geojson',
+      '/geojson/geology/Gravel.geojson',
+      '/geojson/geology/Sand.geojson'
+    ],
+    showBordeaux: false,
+    mapConfig: {
+      center: [-0.77, 45.12],
+      zoom: 10.8,
+      pitch: 0,
+      bearing: 0
+    },
     quiz: {
       question: 'Médoc半島砂礫土壤的主要優勢是什麼？',
       options: ['保水性強', '養分豐富', '優異的排水與儲熱', '適合白葡萄生長'],

@@ -95,7 +95,12 @@ export const l24Content = [
     ],
     content: '<div class="saint-julien-terroir"><p class="lead-text">Saint-Julien的土壤是其平衡風格的基礎，不像Pauillac那樣極端的深厚砂礫，也不像Margaux那樣細膩，而是兩者的完美結合。</p><div class="terroir-analysis"><div class="terroir-section soil"><h4>🪨 Saint-Julien土壤特徵</h4><div class="soil-analysis"><div class="soil-composition"><h5>🔬 土壤組成</h5><div class="soil-types"><div class="soil-type gravel-sand"><h6>砂礫與砂土的混合</h6><div class="soil-details"><p><strong>特徵：</strong>土壤由排水良好的砂礫和具有一定保水能力的砂土及黏土混合而成。</p><p><strong>優勢：</strong>這種平衡的土壤結構使得葡萄藤在乾燥年份能獲得水分，在濕潤年份又能保證良好排水，是其品質穩定的關鍵。</p></div></div></div></div></div></div></div>',
     hasMap: true,
-    geojsonPath: '/geojson/LeftBank/Medoc/St-Julien_AOC.geojson',
+    geojsonPaths: [
+      '/geojson/LeftBank/Medoc/St-Julien_AOC.geojson',
+      '/geojson/geology/Gravel.geojson',
+      '/geojson/geology/Sand.geojson'
+    ],
+    showBordeaux: false,
     mapConfig: {
       center: [-0.745, 45.155],
       zoom: 12.5

@@ -137,7 +137,9 @@ export const l25Content = [
     hasMap: true, 
     mapFocus: 'LeftBank-Medoc-SaintEstephe',
     geojsonPaths: [
-      '/geojson/LeftBank/Medoc/St-Estephe_AOC.geojson'
+      '/geojson/LeftBank/Medoc/St-Estephe_AOC.geojson',
+      '/geojson/geology/Clay.geojson',
+      '/geojson/geology/Gravel.geojson'
     ],
     showBordeaux: false,
     onMapReady: async (map) => {

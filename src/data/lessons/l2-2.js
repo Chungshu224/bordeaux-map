@@ -151,6 +151,18 @@ export const l22Content = [
     ],
     content: '<div class="margaux-terroir"><p class="lead-text">Margaux土壤的獨特性在於其細膩的砂質砂礫土，這賦予了葡萄酒無與倫比的優雅感和香氣複雜度。</p><div class="terroir-analysis"><div class="terroir-section soil-composition"><h4>🪨 Margaux土壤的獨特性</h4><div class="soil-analysis"><div class="soil-characteristics"><h5>🔬 土壤成分分析</h5><div class="soil-breakdown"><div class="soil-type sandy-gravel"><h6>砂質砂礫土 (主導類型)</h6><div class="soil-details"><p><strong>比例：</strong>佔總面積的70%以上</p><p><strong>特徵：</strong>細砂粒與小砂礫的完美組合</p><p><strong>形成：</strong>古代Gironde河沖積形成</p><div class="soil-benefits"><h7>土壤優勢</h7><ul><li><strong>排水極佳：</strong>砂質結構防止積水</li><li><strong>升溫快速：</strong>砂土快速吸收和釋放熱量</li><li><strong>根系穿透：</strong>疏鬆結構利於根系發展</li></ul></div></div></div><div class="soil-type clay-limestone"><h6>黏土石灰岩 (輔助類型)</h6><div class="soil-details"><p><strong>分布：</strong>主要在內陸較高海拔地區</p><p><strong>作用：</strong>提供深層礦物質和保水能力</p></div></div></div></div></div></div></div>',
     hasMap: true, mapFocus: 'LeftBank-Medoc-Margaux',
+    geojsonPaths: [
+      '/geojson/LeftBank/Medoc/Margaux_AOC.geojson',
+      '/geojson/geology/Gravel.geojson',
+      '/geojson/geology/Sand.geojson'
+    ],
+    showBordeaux: false,
+    mapConfig: {
+      center: [-0.73, 45.04],
+      zoom: 12.4,
+      pitch: 0,
+      bearing: 0
+    },
     quiz: {
       question: 'Margaux產區最主要的土壤類型是什麼？',
       options: ['黏土', '石灰岩', '砂質砂礫土', '火山岩'],

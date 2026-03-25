@@ -1,6 +1,39 @@
 <template>
   <div class="presentation-map">
     <div ref="mapContainer" class="map-container"></div>
+    <div v-if="hasGeologyControls" class="geology-controls">
+      <button class="btn-geology" @click="toggleGeology">
+        {{ geologyEnabled ? '隱藏地質' : '顯示地質' }}
+      </button>
+      <div v-if="geologyEnabled" class="soil-toggle-panel">
+        <div
+          v-for="item in availableGeologyLayers"
+          :key="item.id"
+          class="soil-control-item"
+        >
+          <button
+            class="btn-soil"
+            :class="{ active: soilVisibility[item.id] }"
+            @click="toggleSoil(item.id)"
+          >
+            <span class="soil-dot" :style="{ background: item.color }"></span>
+            {{ item.label }}
+          </button>
+          <div class="soil-opacity-row">
+            <input
+              class="soil-opacity-slider"
+              type="range"
+              min="0.1"
+              max="0.9"
+              step="0.05"
+              v-model.number="soilOpacity[item.id]"
+              @input="applySoilOpacity(item.id)"
+            >
+            <span class="soil-opacity-label">{{ Math.round(soilOpacity[item.id] * 100) }}%</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <div v-if="isLoading" class="loading-overlay">
       <div class="loading-spinner"></div>
       <p>載入地圖中...</p>
@@ -12,7 +45,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { computed, ref, onMounted, onUnmounted, watch } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { 
@@ -66,9 +99,149 @@ let map = null
 let unhandledRejectionHandler = null
 let transitionEndHandler = null
 let onMapReadyCleanup = null
+const geologyEnabled = ref(false)
+const activeAocBounds = ref(null)
+const soilVisibility = ref({
+  limestone: true,
+  gravel: true,
+  clay: true,
+  sand: true,
+  mixed: true
+})
+const soilOpacity = ref({
+  limestone: 0.78,
+  gravel: 0.78,
+  clay: 0.72,
+  sand: 0.78,
+  mixed: 0.72
+})
+
+const geologyLayerConfig = [
+  { id: 'limestone', label: '石灰岩', path: '/geojson/geology/Limestone.geojson', fileName: 'Limestone.geojson', color: '#00E5FF', lineColor: '#007C91' },
+  { id: 'gravel', label: '礫石卵石', path: '/geojson/geology/Gravel.geojson', fileName: 'Gravel.geojson', color: '#FF8C00', lineColor: '#8A4C00' },
+  { id: 'clay', label: '黏土為主', path: '/geojson/geology/Clay.geojson', fileName: 'Clay.geojson', color: '#8B4513', lineColor: '#3D1E08' },
+  { id: 'sand', label: '砂為主', path: '/geojson/geology/Sand.geojson', fileName: 'Sand.geojson', color: '#FFD700', lineColor: '#8A7300' },
+  { id: 'mixed', label: '混合沉積物', path: '/geojson/geology/Mixed.geojson', fileName: 'Mixed.geojson', color: '#ADFF2F', lineColor: '#4D7A00' }
+]
+
+const allGeojsonPaths = computed(() => {
+  const paths = []
+  if (props.geojsonPath) paths.push(props.geojsonPath)
+  if (Array.isArray(props.geojsonPaths)) paths.push(...props.geojsonPaths)
+  return paths
+})
+
+const availableGeologyLayers = computed(() => geologyLayerConfig.filter(item => allGeojsonPaths.value.some(path => path.includes(item.fileName))))
+const hasGeologyControls = computed(() => availableGeologyLayers.value.length > 0)
 
 // 使用統一的 Token 取得邏輯
 const MAPBOX_TOKEN = getMapboxToken(props.accessToken)
+
+function setAOCOpacityByContext() {
+  if (!map) return
+  const style = map.getStyle()
+  if (!style?.layers) return
+  style.layers.forEach(layer => {
+    if (!layer.id.startsWith('aoc-fill-')) return
+    const isGeologyLayer = availableGeologyLayers.value.some(item => layer.id === `aoc-fill-${item.id}`)
+    if (isGeologyLayer) return
+    const isVisible = map.getLayoutProperty(layer.id, 'visibility') !== 'none'
+    map.setPaintProperty(layer.id, 'fill-opacity', geologyEnabled.value && isVisible ? 0.04 : 0.4)
+  })
+}
+
+function getGeometryBounds(coords, bounds = { minX: Infinity, minY: Infinity, maxX: -Infinity, maxY: -Infinity }) {
+  if (!Array.isArray(coords) || coords.length === 0) return bounds
+  if (typeof coords[0] === 'number' && typeof coords[1] === 'number') {
+    const x = coords[0]
+    const y = coords[1]
+    if (x < bounds.minX) bounds.minX = x
+    if (x > bounds.maxX) bounds.maxX = x
+    if (y < bounds.minY) bounds.minY = y
+    if (y > bounds.maxY) bounds.maxY = y
+    return bounds
+  }
+  coords.forEach(item => getGeometryBounds(item, bounds))
+  return bounds
+}
+
+function addViewportCenterProperty(geojson) {
+  if (!geojson?.features) return geojson
+  geojson.features.forEach(feature => {
+    if (!feature.properties) feature.properties = {}
+    if (
+      typeof feature.properties._cx === 'number' &&
+      typeof feature.properties._cy === 'number' &&
+      typeof feature.properties._minX === 'number' &&
+      typeof feature.properties._minY === 'number' &&
+      typeof feature.properties._maxX === 'number' &&
+      typeof feature.properties._maxY === 'number'
+    ) return
+    const coords = feature.geometry?.coordinates
+    if (!coords) return
+    const bounds = getGeometryBounds(coords)
+    if (!Number.isFinite(bounds.minX) || !Number.isFinite(bounds.maxX)) return
+    feature.properties._cx = (bounds.minX + bounds.maxX) / 2
+    feature.properties._cy = (bounds.minY + bounds.maxY) / 2
+    feature.properties._minX = bounds.minX
+    feature.properties._minY = bounds.minY
+    feature.properties._maxX = bounds.maxX
+    feature.properties._maxY = bounds.maxY
+  })
+  return geojson
+}
+
+function updateGeologyFilter() {
+  if (!map) return
+  const bounds = activeAocBounds.value
+  const hasVisibleArea = bounds && bounds.west <= bounds.east && bounds.south <= bounds.north
+  availableGeologyLayers.value.forEach(item => {
+    const fillId = `aoc-fill-${item.id}`
+    const outlineId = `aoc-outline-${item.id}`
+    const filter = hasVisibleArea
+      ? [
+          'all',
+          ['>=', ['get', '_maxX'], bounds.west],
+          ['<=', ['get', '_minX'], bounds.east],
+          ['>=', ['get', '_maxY'], bounds.south],
+          ['<=', ['get', '_minY'], bounds.north]
+        ]
+      : ['==', ['get', '_minX'], -999999]
+    if (map.getLayer(fillId)) map.setFilter(fillId, filter)
+    if (map.getLayer(outlineId)) map.setFilter(outlineId, filter)
+  })
+}
+
+function setGeologyVisibility() {
+  if (!map) return
+  availableGeologyLayers.value.forEach(item => {
+    const visibility = geologyEnabled.value && soilVisibility.value[item.id] ? 'visible' : 'none'
+    const fillId = `aoc-fill-${item.id}`
+    const outlineId = `aoc-outline-${item.id}`
+    if (map.getLayer(fillId)) map.setLayoutProperty(fillId, 'visibility', visibility)
+    if (map.getLayer(outlineId)) map.setLayoutProperty(outlineId, 'visibility', visibility)
+  })
+  setAOCOpacityByContext()
+  updateGeologyFilter()
+}
+
+function toggleGeology() {
+  geologyEnabled.value = !geologyEnabled.value
+  setGeologyVisibility()
+}
+
+function toggleSoil(soilId) {
+  soilVisibility.value[soilId] = !soilVisibility.value[soilId]
+  setGeologyVisibility()
+}
+
+function applySoilOpacity(soilId) {
+  if (!map) return
+  const fillId = `aoc-fill-${soilId}`
+  if (map.getLayer(fillId)) {
+    map.setPaintProperty(fillId, 'fill-opacity', soilOpacity.value[soilId])
+  }
+}
 
 onMounted(async () => {
   console.log('PresentationMap mounted', {
@@ -367,7 +540,7 @@ onUnmounted(() => {
       const style = map.getStyle()
       if (style && style.layers) {
         // 移除所有自定義圖層（AOC、rivers等）
-        const customLayerPrefixes = ['aoc-', 'rivers-', 'bordeaux-']
+        const customLayerPrefixes = ['aoc-', 'rivers-', 'bordeaux-', 'geology-']
         style.layers.forEach(layer => {
           const isCustomLayer = customLayerPrefixes.some(prefix => layer.id.startsWith(prefix))
           if (isCustomLayer) {
@@ -382,7 +555,7 @@ onUnmounted(() => {
       
       // 移除所有自定義資料源
       if (style && style.sources) {
-        const customSourcePrefixes = ['aoc-', 'rivers', 'bordeaux-']
+        const customSourcePrefixes = ['aoc-', 'rivers', 'bordeaux-', 'geology-']
         Object.keys(style.sources).forEach(sourceId => {
           const isCustomSource = customSourcePrefixes.some(prefix => sourceId.startsWith(prefix))
           if (isCustomSource) {
@@ -518,16 +691,22 @@ async function loadMultipleAOC(urls = [], skipFitBounds = false) {
 
   console.log('[Map] loadMultipleAOC called with:', urls, 'skipFitBounds:', skipFitBounds)
   const loadedGeojsons = []
+  const activeRegionGeojsons = []
+  const hasGeologyContext = urls.some(u => u.includes('/geojson/geology/'))
 
   for (const url of urls) {
     try {
       console.log('[Map] Fetching:', url)
       const response = await fetch(url)
       if (!response.ok) throw new Error(`Failed to load ${url}: ${response.status}`)
-      const geo = await response.json()
+      const rawGeo = await response.json()
+      const geo = url.includes('/geojson/geology/') ? addViewportCenterProperty(rawGeo) : rawGeo
       loadedGeojsons.push(geo)
 
-      const idBase = (url.split('/').pop() || 'layer').replace(/\.geojson$/i, '')
+      const matchedGeologyConfig = geologyLayerConfig.find(item => url.includes(item.fileName))
+      const idBase = matchedGeologyConfig
+        ? matchedGeologyConfig.id
+        : (url.split('/').pop() || 'layer').replace(/\.geojson$/i, '')
       const sourceId = `aoc-${idBase}`
       const fillId = `aoc-fill-${idBase}`
       const outlineId = `aoc-outline-${idBase}`
@@ -542,6 +721,12 @@ async function loadMultipleAOC(urls = [], skipFitBounds = false) {
 
       // 判斷產區類型
       const isBordeauxOuter = url.includes('Bordeaux_AOC.geojson') && !url.includes('/LeftBank/') && !url.includes('/RightBank/')
+      const isGeology = url.includes('/geojson/geology/')
+      const isLimestone = isGeology && url.includes('Limestone.geojson')
+      const isGravel = isGeology && url.includes('Gravel.geojson')
+      const isClay = isGeology && url.includes('Clay.geojson')
+      const isSand = isGeology && url.includes('Sand.geojson')
+      const isMixed = isGeology && url.includes('Mixed.geojson')
       
       // 優先判斷甜酒產區（Sauternes, Barsac, Cadillac, Loupiac, Sainte-Croix, Cérons）
       const isSweetWine = url.includes('Sauternes') || url.includes('Barsac') || 
@@ -560,6 +745,11 @@ async function loadMultipleAOC(urls = [], skipFitBounds = false) {
       // 左岸和右岸（紅酒產區）
       const isLeftBank = url.includes('/LeftBank/') && !isWhiteWine
       const isRightBank = url.includes('/RightBank/')
+      const isMainAOC = !isGeology && !isBordeauxOuter
+
+      if (isMainAOC) {
+        activeRegionGeojsons.push(geo)
+      }
       
       let fillColor, fillOpacity, lineColor, lineWidth, regionType
       
@@ -570,31 +760,61 @@ async function loadMultipleAOC(urls = [], skipFitBounds = false) {
         lineColor = '#FFFFFF'
         lineWidth = 2
         regionType = 'outer'
+      } else if (isLimestone) {
+        fillColor = '#00E5FF'
+        fillOpacity = 0.78
+        lineColor = '#007C91'
+        lineWidth = 1.6
+        regionType = 'geology-limestone'
+      } else if (isGravel) {
+        fillColor = '#FF8C00'
+        fillOpacity = 0.78
+        lineColor = '#8A4C00'
+        lineWidth = 1.6
+        regionType = 'geology-gravel'
+      } else if (isClay) {
+        fillColor = '#8B4513'
+        fillOpacity = 0.72
+        lineColor = '#3D1E08'
+        lineWidth = 1.6
+        regionType = 'geology-clay'
+      } else if (isSand) {
+        fillColor = '#FFD700'
+        fillOpacity = 0.78
+        lineColor = '#8A7300'
+        lineWidth = 1.6
+        regionType = 'geology-sand'
+      } else if (isMixed) {
+        fillColor = '#ADFF2F'
+        fillOpacity = 0.72
+        lineColor = '#4D7A00'
+        lineWidth = 1.6
+        regionType = 'geology-mixed'
       } else if (isSweetWine) {
         // 甜酒產區：金黃色（代表蜂蜜、液體黃金）
         fillColor = '#FFD700'
-        fillOpacity = 0.5
+        fillOpacity = hasGeologyContext ? 0.2 : 0.5
         lineColor = '#DAA520'
         lineWidth = 1.5
         regionType = 'sweet'
       } else if (isWhiteWine) {
         // 白酒產區：淡綠色（代表清新、白蘇維翁）
         fillColor = '#90EE90'
-        fillOpacity = 0.4
+        fillOpacity = hasGeologyContext ? 0.18 : 0.4
         lineColor = '#32CD32'
         lineWidth = 1.5
         regionType = 'white'
       } else if (isLeftBank) {
         // 左岸紅酒：深紅色
         fillColor = '#8B0000'
-        fillOpacity = 0.4
+        fillOpacity = hasGeologyContext ? 0.18 : 0.4
         lineColor = '#8B0000'
         lineWidth = 1.5
         regionType = 'left-red'
       } else if (isRightBank) {
         // 右岸紅酒：深紫色
         fillColor = '#4B0082'
-        fillOpacity = 0.4
+        fillOpacity = hasGeologyContext ? 0.18 : 0.4
         lineColor = '#4B0082'
         lineWidth = 1.5
         regionType = 'right-red'
@@ -607,25 +827,35 @@ async function loadMultipleAOC(urls = [], skipFitBounds = false) {
         regionType = 'default'
       }
 
+      const geologyBeforeLayerId = isGeology
+        ? map.getStyle()?.layers?.find(layer => layer.id.startsWith('aoc-outline-') && !availableGeologyLayers.value.some(item => layer.id === `aoc-outline-${item.id}`))?.id
+        : undefined
+
       map.addLayer({
         id: fillId,
         type: 'fill',
         source: sourceId,
+        layout: {
+          visibility: isGeology ? 'none' : 'visible'
+        },
         paint: {
           'fill-color': fillColor,
-          'fill-opacity': fillOpacity
+          'fill-opacity': isGeology ? soilOpacity.value[idBase] || fillOpacity : fillOpacity
         }
-      })
+      }, geologyBeforeLayerId)
 
       map.addLayer({
         id: outlineId,
         type: 'line',
         source: sourceId,
+        layout: {
+          visibility: isGeology ? 'none' : 'visible'
+        },
         paint: {
           'line-color': lineColor,
           'line-width': lineWidth
         }
-      })
+      }, geologyBeforeLayerId)
       
       // 添加點擊事件 - 顯示 AOC 名稱（除了外框）
       // 已停用 - 避免與自定義 marker 衝突
@@ -705,6 +935,24 @@ async function loadMultipleAOC(urls = [], skipFitBounds = false) {
   }
 
   // 自動 fit 到所有疊層的聯集邊界（如果沒有被跳過）
+  if (activeRegionGeojsons.length > 0) {
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity
+    for (const g of activeRegionGeojsons) {
+      const [x1, y1, x2, y2] = turfBbox(g)
+      if (x1 < minX) minX = x1
+      if (y1 < minY) minY = y1
+      if (x2 > maxX) maxX = x2
+      if (y2 > maxY) maxY = y2
+    }
+    if (isFinite(minX) && isFinite(minY) && isFinite(maxX) && isFinite(maxY)) {
+      activeAocBounds.value = { west: minX, south: minY, east: maxX, north: maxY }
+    }
+  } else {
+    activeAocBounds.value = null
+  }
+
+  setGeologyVisibility()
+
   if (!skipFitBounds) {
     try {
       if (loadedGeojsons.length > 0) {
@@ -842,6 +1090,7 @@ function removeAllAOCLayers() {
   if (map.getLayer('bordeaux-aoc-fill')) map.removeLayer('bordeaux-aoc-fill')
   if (map.getLayer('bordeaux-aoc-outline')) map.removeLayer('bordeaux-aoc-outline')
   if (map.getSource('bordeaux-aoc')) map.removeSource('bordeaux-aoc')
+  activeAocBounds.value = null
   
   // 移除所有 aoc-* 開頭的圖層（多重疊層）
   const style = map.getStyle()
@@ -876,6 +1125,7 @@ watch(() => props.geojsonPath, async (newPath, oldPath) => {
   if (!map || newPath === oldPath) return
   
   console.log('[Map] geojsonPath changed:', oldPath, '→', newPath)
+  geologyEnabled.value = false
   removeAllAOCLayers()
   
   if (newPath) {
@@ -892,6 +1142,7 @@ watch(() => props.geojsonPaths, async (newPaths, oldPaths) => {
   if (!changed) return
   
   console.log('[Map] geojsonPaths changed:', oldPaths, '→', newPaths)
+  geologyEnabled.value = false
   removeAllAOCLayers()
   
   if (Array.isArray(newPaths) && newPaths.length > 0) {
@@ -945,6 +1196,94 @@ watch(() => props.focusType, (newFocus) => {
   border-radius: 8px;
   overflow: hidden;
   background: #f5f5f5;
+}
+
+.geology-controls {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 240px;
+}
+
+.btn-geology {
+  padding: 8px 12px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  background: #795548;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.btn-geology:hover {
+  background: #5D4037;
+}
+
+.soil-toggle-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.soil-control-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-soil {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: rgba(30, 30, 30, 0.82);
+  color: #eee;
+  width: 108px;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.btn-soil.active {
+  color: #111;
+  background: #f2f2f2;
+  font-weight: 700;
+}
+
+.soil-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.soil-opacity-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 3px 6px;
+  border-radius: 4px;
+  height: 30px;
+}
+
+.soil-opacity-slider {
+  width: 72px;
+}
+
+.soil-opacity-label {
+  font-size: 0.78rem;
+  color: #333;
+  min-width: 34px;
+  text-align: right;
 }
 
 /* Mapbox 控制角落間距與安全區支援 */

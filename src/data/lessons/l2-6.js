@@ -111,7 +111,19 @@ export const l26Content = [
       { id: 2, icon: '💧', title: '完美保水', content: '在乾旱年份為葡萄提供穩定水源' }
     ],
     content: '<div class="pomerol-terroir"><p class="lead-text">Pomerol的魔力集中在其中心一塊被稱為「高原」的區域，這裡的土壤是獨一無二的藍黏土（blue clay），也是傳奇酒莊Petrus的所在地。</p><div class="terroir-analysis"><div class="terroir-section soil"><h4>🪨 藍黏土的魔力</h4><div class="soil-analysis"><div class="soil-composition"><h5>🔬 獨特土壤</h5><div class="soil-details"><p><strong>特徵：</strong>這種黏土富含礦物質，在乾燥時變得如石頭般堅硬，但在濕潤時又能儲存大量水分。</p><p><strong>功效：</strong>在波爾多的炎熱夏季，藍黏土能像海綿一樣緩慢釋放水分，避免葡萄藤因缺水而停止成熟，從而獲得完美的酚類物質成熟度。這是釀造頂級Merlot的關鍵。</p></div></div></div></div></div></div>',
-    hasMap: false,
+    hasMap: true,
+    mapFocus: 'RightBank-Pomerol',
+    geojsonPaths: [
+      '/geojson/RightBank/Libournais/Pomerol_AOC.geojson',
+      '/geojson/geology/Clay.geojson'
+    ],
+    showBordeaux: false,
+    mapConfig: {
+      center: [-0.1950, 44.9300],
+      zoom: 13,
+      pitch: 0,
+      bearing: 0
+    },
     quiz: {
       question: 'Pomerol產區最珍貴的土壤類型是什麼，它對葡萄生長有何益處？',
       options: ['深層砂礫，排水好', '藍黏土，保水性極佳', '石灰岩，提供礦物感', '沙土，使風格輕盈'],

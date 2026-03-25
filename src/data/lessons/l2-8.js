@@ -184,7 +184,9 @@ export const l28Content = [
       '/geojson/RightBank/Libournais/Montagne-St-Emilion_AOC.geojson',
       '/geojson/RightBank/Libournais/Lussac-St-Emilion_AOC.geojson',
       '/geojson/RightBank/Libournais/Puisseguin-St-Emilion_AOC.geojson',
-      '/geojson/RightBank/Libournais/St-Georges-St-Emilion_AOC.geojson'
+      '/geojson/RightBank/Libournais/St-Georges-St-Emilion_AOC.geojson',
+      '/geojson/geology/Limestone.geojson',
+      '/geojson/geology/Clay.geojson'
     ],
     showBordeaux: false,
     onMapReady: async (map) => {
@@ -334,7 +336,9 @@ export const l28Content = [
     mapFocus: 'RightBank-Libournais-Satellites',
     geojsonPaths: [
       '/geojson/RightBank/Libournais/Fronsac_AOC.geojson',
-      '/geojson/RightBank/Libournais/Canon-Fronsac_AOC.geojson'
+      '/geojson/RightBank/Libournais/Canon-Fronsac_AOC.geojson',
+      '/geojson/geology/Limestone.geojson',
+      '/geojson/geology/Clay.geojson'
     ],
     showBordeaux: false,
     onMapReady: async (map) => {

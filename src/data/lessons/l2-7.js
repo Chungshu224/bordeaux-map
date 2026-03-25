@@ -195,6 +195,18 @@ export const lessonContent = [
     </div>`,
     hasMap: true,
     mapFocus: 'RightBank-SaintEmilion',
+    geojsonPaths: [
+      '/geojson/RightBank/Libournais/St-Emilion_AOC.geojson',
+      '/geojson/geology/Limestone.geojson',
+      '/geojson/geology/Clay.geojson'
+    ],
+    showBordeaux: false,
+    mapConfig: {
+      center: [-0.133, 44.855],
+      zoom: 13,
+      pitch: 0,
+      bearing: 0
+    },
     quiz: {
       question: '在Saint-Émilion的石灰岩高原上，哪個葡萄品種表現得尤為出色？',
       options: ['Merlot', 'Cabernet Sauvignon', 'Malbec', 'Cabernet Franc'],
