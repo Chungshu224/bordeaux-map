@@ -1429,6 +1429,7 @@ onUnmounted(() => {
   z-index: 10;
   font-size: 16px;
   transition: all 0.3s ease;
+  color: #222;
 }
 
 .mobile-sheet-handle-wrap {
@@ -1600,6 +1601,7 @@ onUnmounted(() => {
   font-size: 1.15rem;
   line-height: 1.5;
   text-align: left;
+  color: #222;
 }
 
 .info-header {
@@ -1615,6 +1617,7 @@ onUnmounted(() => {
   margin-top: 10px;
   font-size: 1.1rem;
   text-align: left;
+  color: #2f2f2f;
 }
 
 .grape-section {
@@ -2096,6 +2099,17 @@ onUnmounted(() => {
 
 /* 響應式設計 */
 @media (max-width: 768px) {
+  .map-info-bar,
+  .map-info-bar .region-info-content,
+  .map-info-bar .description,
+  .map-info-bar .grape-title,
+  .map-info-bar .info-header,
+  .map-info-bar .region-type,
+  .map-info-bar .region-hectare,
+  .map-info-bar .no-info {
+    color: #1f1f1f;
+  }
+
   .map-section {
     padding-top: 0;
   }

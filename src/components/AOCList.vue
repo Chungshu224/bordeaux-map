@@ -88,6 +88,7 @@ const isActive = (group, aoc) => {
   border-right: 1px solid #ddd;
   padding: 20px 15px;
   box-sizing: border-box;
+  color: #222;
 }
 
 h2 {
@@ -122,6 +123,7 @@ h2 {
   padding: 8px 5px;
   cursor: pointer;
   border-radius: 4px;
+  color: #222;
 }
 
 .group-header:hover {
@@ -131,6 +133,7 @@ h2 {
 .group-icon {
   font-size: 0.9rem;
   margin-right: 8px;
+  color: #444;
 }
 
 .group-name {
@@ -151,6 +154,7 @@ h2 {
   border-radius: 4px;
   cursor: pointer;
   font-size: 1.1rem;
+  color: #222;
 }
 
 .aoc-item:hover {
@@ -160,6 +164,7 @@ h2 {
 .aoc-item.active {
   background: rgba(0, 0, 0, 0.08);
   font-weight: 500;
+  color: #111;
 }
 
 .aoc-dot {
