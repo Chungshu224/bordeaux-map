@@ -3,14 +3,30 @@
     <div class="map-header">
       <h1>波爾多葡萄酒產區地圖</h1>
     </div>
-    <div class="map-info-bar" v-if="activeAOC.aoc" :class="{ collapsed: infoBarCollapsed }">
+    <div
+      class="map-info-bar"
+      v-if="activeAOC.aoc"
+      :class="{
+        collapsed: infoBarCollapsed,
+        'mobile-half': isMobile && mobileInfoSheetState === 'half',
+        'mobile-full': isMobile && mobileInfoSheetState === 'full'
+      }"
+    >
+      <div
+        v-if="isMobile"
+        class="mobile-sheet-handle-wrap"
+        @touchstart.passive="onInfoSheetTouchStart"
+        @touchend="onInfoSheetTouchEnd"
+      >
+        <div class="mobile-sheet-handle"></div>
+      </div>
       <div class="aoc-title-row">
         <span class="aoc-info-title">
           <span class="aoc-dot" :style="{background: aocColor(activeAOC.group)}"></span>
           {{ activeAOC.aoc.replace('_AOC.geojson','').replace(/-/g,' ').replace(/_/g,' ') }}
         </span>
         <div class="title-buttons">
-          <button class="btn-collapse-inline" @click.stop="infoBarCollapsed = !infoBarCollapsed" :title="infoBarCollapsed ? '展開資訊' : '收合資訊'">
+          <button class="btn-collapse-inline" @click.stop="toggleInfoPanel" :title="infoBarCollapsed ? '展開資訊' : '收合資訊'">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline :points="infoBarCollapsed ? '18 15 12 9 6 15' : '6 9 12 15 18 9'"></polyline>
             </svg>
@@ -64,7 +80,11 @@
       </div>
     </div>
     <div ref="mapContainer" class="map"></div>
-    <div class="map-controls">
+    <div class="map-controls" :class="{ 'mobile-open': mobileLayersOpen }">
+      <div v-if="isMobile" class="mobile-panel-header">
+        <span>圖層與顯示</span>
+        <button class="mobile-panel-close" @click="mobileLayersOpen = false">完成</button>
+      </div>
       <button class="btn-3d" @click="toggle3D" v-if="map">
         {{ is3D ? '2D' : '3D' }}
       </button>
@@ -105,10 +125,36 @@
       <button class="btn-legend" @click="toggleLegend" v-if="map">
         {{ legendVisible ? '隱藏圖例' : '顯示圖例' }}
       </button>
+      <div v-if="isMobile && legendVisible" class="mobile-legend-summary">
+        <div class="mobile-legend-chip"><span class="chip-dot left-bank"></span>左岸</div>
+        <div class="mobile-legend-chip"><span class="chip-dot right-bank"></span>右岸</div>
+        <div class="mobile-legend-chip"><span class="chip-dot sweet"></span>甜酒</div>
+        <div class="mobile-legend-chip"><span class="chip-dot entre"></span>兩河之間</div>
+        <div class="mobile-legend-chip"><span class="chip-dot regional"></span>波爾多 AOC</div>
+      </div>
+    </div>
+
+    <div v-if="map" class="mobile-map-toolbar">
+      <button class="mobile-tool-btn" @click="emit('openAOCList')">
+        <span class="mobile-tool-icon">產</span>
+        <span>產區</span>
+      </button>
+      <button class="mobile-tool-btn" :class="{ active: mobileLayersOpen }" @click="toggleMobileLayers">
+        <span class="mobile-tool-icon">層</span>
+        <span>圖層</span>
+      </button>
+      <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
+        <span class="mobile-tool-icon">3D</span>
+        <span>{{ is3D ? '2D' : '3D' }}</span>
+      </button>
+      <button class="mobile-tool-btn" :class="{ active: !infoBarCollapsed }" @click="toggleMobileInfo">
+        <span class="mobile-tool-icon">資</span>
+        <span>資訊</span>
+      </button>
     </div>
     
     <!-- 圖例組件 -->
-    <div v-if="legendVisible" class="map-legend">
+    <div v-if="legendVisible && !isMobile" class="map-legend">
       <div class="legend-title">產區分類</div>
       <div class="legend-items">
         <div class="legend-item">
@@ -195,7 +241,7 @@ const props = defineProps({
 })
 
 // 定義要發送到父組件的事件
-const emit = defineEmits(['showAOC', 'resetMap', 'toggle3D'])
+const emit = defineEmits(['showAOC', 'resetMap', 'toggle3D', 'openAOCList'])
 
 // 狀態管理
 const isLoading = ref(false)
@@ -223,9 +269,14 @@ const soilOpacity = ref({
 })
 const infoBarCollapsed = ref(false)
 const legendVisible = ref(true) // 圖例顯示開關
+const isMobile = ref(false)
+const mobileLayersOpen = ref(false)
+const mobileInfoSheetState = ref('peek')
 const geojsonCache = new Map()
 const defaultAOCFillOpacity = 0.1
 const activeAocBounds = ref(null)
+let resizeHandler = null
+let infoSheetTouchStartY = 0
 
 const geologyLayerConfig = [
   { id: 'limestone', label: '石灰岩', path: '/geojson/geology/Limestone.geojson', color: '#00E5FF', lineColor: '#007C91' },
@@ -672,6 +723,81 @@ const toggleContours = () => {
 const toggleLegend = () => {
   legendVisible.value = !legendVisible.value
   console.log('[圖例]', legendVisible.value ? '已顯示' : '已隱藏')
+}
+
+const syncResponsiveLayout = () => {
+  const nextIsMobile = window.innerWidth <= 768
+  const changed = nextIsMobile !== isMobile.value
+  isMobile.value = nextIsMobile
+
+  if (changed) {
+    mobileLayersOpen.value = false
+    if (nextIsMobile) {
+      mobileInfoSheetState.value = 'peek'
+      infoBarCollapsed.value = true
+      legendVisible.value = false
+    } else {
+      mobileInfoSheetState.value = 'full'
+      infoBarCollapsed.value = false
+      legendVisible.value = true
+    }
+  }
+}
+
+const toggleMobileLayers = () => {
+  mobileLayersOpen.value = !mobileLayersOpen.value
+}
+
+const setInfoSheetState = (state) => {
+  mobileInfoSheetState.value = state
+  infoBarCollapsed.value = state === 'peek'
+}
+
+const cycleInfoSheetState = (direction) => {
+  const order = ['peek', 'half', 'full']
+  const currentIndex = order.indexOf(mobileInfoSheetState.value)
+  const nextIndex = Math.min(order.length - 1, Math.max(0, currentIndex + direction))
+  setInfoSheetState(order[nextIndex])
+}
+
+const onInfoSheetTouchStart = (event) => {
+  const touch = event.touches?.[0]
+  if (!touch) return
+  infoSheetTouchStartY = touch.clientY
+}
+
+const onInfoSheetTouchEnd = (event) => {
+  const touch = event.changedTouches?.[0]
+  if (!touch) return
+  const deltaY = touch.clientY - infoSheetTouchStartY
+  if (Math.abs(deltaY) < 28) return
+  if (deltaY < 0) {
+    cycleInfoSheetState(1)
+  } else {
+    cycleInfoSheetState(-1)
+  }
+}
+
+const toggleInfoPanel = () => {
+  if (!isMobile.value) {
+    infoBarCollapsed.value = !infoBarCollapsed.value
+    return
+  }
+  if (mobileInfoSheetState.value === 'peek') {
+    setInfoSheetState('half')
+  } else {
+    setInfoSheetState('peek')
+  }
+}
+
+const toggleMobileInfo = () => {
+  if (mobileInfoSheetState.value === 'peek') {
+    setInfoSheetState('half')
+  } else if (mobileInfoSheetState.value === 'half') {
+    setInfoSheetState('full')
+  } else {
+    setInfoSheetState('peek')
+  }
 }
 
 const setAOCFillTransparent = (isTransparent) => {
@@ -1236,12 +1362,19 @@ watch(() => props.activeAOC, (newAOC, oldAOC) => {
 onMounted(async () => {
   // 確保 DOM 已渲染
   await nextTick()
+  syncResponsiveLayout()
+  resizeHandler = () => syncResponsiveLayout()
+  window.addEventListener('resize', resizeHandler)
   setTimeout(async () => {
     await initMap()
   }, 100)
 })
 
 onUnmounted(() => {
+  if (resizeHandler) {
+    window.removeEventListener('resize', resizeHandler)
+    resizeHandler = null
+  }
   if (map) {
     map.remove()
     map = null
@@ -1298,6 +1431,17 @@ onUnmounted(() => {
   transition: all 0.3s ease;
 }
 
+.mobile-sheet-handle-wrap {
+  display: none;
+}
+
+.mobile-sheet-handle {
+  width: 52px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(107, 31, 31, 0.22);
+}
+
 .map-info-bar.collapsed {
   max-width: 350px;
   padding: 12px 18px;
@@ -1307,21 +1451,6 @@ onUnmounted(() => {
   display: flex;
   gap: 8px;
   align-items: center;
-}
-
-.btn-collapse-inline {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 6px 10px;
-  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #555;
 }
 
 .btn-collapse-inline:hover {
@@ -1538,6 +1667,20 @@ onUnmounted(() => {
   z-index: 999;
 }
 
+.mobile-panel-header,
+.mobile-map-toolbar {
+  display: none;
+}
+
+.mobile-panel-close {
+  border: none;
+  border-radius: 999px;
+  background: #6b1f1f;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 14px;
+}
+
 .btn-3d,
 .btn-contours,
 .btn-geology,
@@ -1660,6 +1803,48 @@ onUnmounted(() => {
   background: #1976D2;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.mobile-legend-summary {
+  display: none;
+}
+
+.mobile-legend-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.chip-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.chip-dot.left-bank {
+  background: #DC143C;
+}
+
+.chip-dot.right-bank {
+  background: #4169E1;
+}
+
+.chip-dot.sweet {
+  background: #FFD700;
+}
+
+.chip-dot.entre {
+  background: #2E8B57;
+}
+
+.chip-dot.regional {
+  background: #8B0000;
 }
 
 /* 圖例樣式 */
@@ -1911,13 +2096,328 @@ onUnmounted(() => {
 
 /* 響應式設計 */
 @media (max-width: 768px) {
+  .map-section {
+    padding-top: 0;
+  }
+
   .map-info-bar {
-    max-width: calc(100% - 40px);
+    left: 12px;
+    right: 12px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 78px);
+    max-width: none;
     width: auto;
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    max-height: min(42vh, 360px);
+    overflow: hidden;
+  }
+
+  .mobile-sheet-handle-wrap {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+    margin-top: -2px;
+  }
+
+  .map-info-bar.collapsed {
+    left: 12px;
+    right: 12px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 78px);
+    max-width: none;
+    padding: 10px 12px;
+  }
+
+  .map-info-bar.mobile-half {
+    max-height: min(42vh, 360px);
+  }
+
+  .map-info-bar.mobile-full {
+    max-height: min(62vh, 520px);
+  }
+
+  .info-details {
+    overflow-y: auto;
+    max-height: min(28vh, 220px);
+    padding-right: 4px;
+  }
+
+  .map-info-bar.mobile-half .info-details {
+    max-height: min(28vh, 220px);
+  }
+
+  .map-info-bar.mobile-full .info-details {
+    max-height: min(48vh, 400px);
+  }
+
+  .aoc-title-row {
+    gap: 8px;
+  }
+
+  .aoc-info-title {
+    font-size: 1rem;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .title-buttons {
+    flex-shrink: 0;
+  }
+
+  .map-buttons {
+    flex-wrap: wrap;
+  }
+
+  .btn-reset,
+  .btn-chateaux {
+    flex: 1 1 140px;
+    font-size: 0.95rem;
+  }
+
+  .map-controls {
+    top: auto;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 72px);
+    left: 12px;
+    right: 12px;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(29, 24, 20, 0.94);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    transform: translateY(calc(100% + 18px));
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    max-height: min(48vh, 380px);
+    overflow-y: auto;
+  }
+
+  .map-controls.mobile-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .map-controls .btn-3d {
+    display: none;
+  }
+
+  .btn-contours,
+  .btn-geology,
+  .btn-legend {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .soil-control-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .btn-soil,
+  .soil-opacity-row {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .soil-opacity-slider {
+    width: 100%;
+  }
+
+  .mobile-legend-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 2px;
+  }
+
+  .mobile-map-toolbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(92vw, 360px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  }
+
+  .mobile-tool-btn {
+    border-radius: 16px;
+    background: linear-gradient(180deg, #faf5ef 0%, #f1e7dd 100%);
+    color: #4f3422;
+    min-height: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 0.76rem;
+    font-weight: 800;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .mobile-tool-btn.active {
+    background: linear-gradient(180deg, #7b2424 0%, #5f1717 100%);
+    color: #fff;
+  }
+
+  .mobile-tool-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(107, 31, 31, 0.08);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+
+  .mobile-tool-btn.active .mobile-tool-icon {
+    background: rgba(255, 255, 255, 0.18);
   }
   
   .map-header h1 {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .map-header {
+    padding: 6px 12px;
+    min-height: 38px;
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  .map-legend {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .map-header {
+    padding: 5px 10px;
+    min-height: 34px;
+  }
+
+  .map-header h1 {
+    font-size: 0.88rem;
+  }
+
+  .mobile-map-toolbar {
+    width: min(94vw, 340px);
+    gap: 6px;
+    padding: 6px;
+    border-radius: 16px;
+  }
+
+  .mobile-tool-btn {
+    min-height: 50px;
+    border-radius: 13px;
+    font-size: 0.72rem;
+  }
+
+  .mobile-tool-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 0.74rem;
+  }
+
+  .map-controls {
+    left: 10px;
+    right: 10px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 66px);
+    border-radius: 16px;
+    max-height: min(52vh, 360px);
+  }
+
+  .map-info-bar {
+    left: 10px;
+    right: 10px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 74px);
+    padding: 12px 10px;
+    border-radius: 14px;
+    max-height: min(56vh, 420px);
+  }
+
+  .map-info-bar.mobile-full {
+    max-height: min(66vh, 500px);
+  }
+
+  .aoc-info-title {
+    font-size: 0.92rem;
+  }
+
+  .btn-collapse-inline {
+    padding: 5px 8px;
+  }
+
+  .btn-pronunciation {
+    width: 32px;
+    height: 32px;
+  }
+
+  .region-info-content,
+  .description,
+  .grape-title,
+  .region-type,
+  .region-hectare {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-map-toolbar {
+    width: min(96vw, 320px);
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .mobile-tool-btn {
+    min-height: 46px;
+    font-size: 0.68rem;
+  }
+
+  .mobile-tool-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.68rem;
+  }
+
+  .map-info-bar {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 70px);
+    padding: 10px 9px;
+  }
+
+  .info-details {
+    max-height: min(26vh, 180px);
+  }
+
+  .map-info-bar.mobile-full .info-details {
+    max-height: min(44vh, 320px);
   }
 }
 

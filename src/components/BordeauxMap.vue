@@ -1,21 +1,49 @@
 <template>
   <div class="main-layout">
-    <AOCList
-      v-model:search="search"
-      :filteredGroups="filteredGroups"
-      :expandedGroups="expandedGroups"
-      :toggleGroup="toggleGroup"
-      :activeAOC="activeAOC"
-      :aocColor="aocColor"
-      @selectAOC="showAOCGeojson"
-    />
+    <div class="desktop-aoc-list">
+      <AOCList
+        v-model:search="search"
+        :filteredGroups="filteredGroups"
+        :expandedGroups="expandedGroups"
+        :toggleGroup="toggleGroup"
+        :activeAOC="activeAOC"
+        :aocColor="aocColor"
+        @selectAOC="showAOCGeojson"
+      />
+    </div>
     
     <MapSection
       :activeAOC="activeAOC"
       :regionInfo="regionInfo"
       :styleColors="styleColors"
       @resetMap="resetMap"
+      @openAOCList="openMobileAocDrawer"
     />
+
+    <transition name="mobile-sheet-fade">
+      <div
+        v-if="mobileAocDrawerOpen"
+        class="mobile-aoc-backdrop"
+        @click.self="closeMobileAocDrawer"
+      >
+        <div class="mobile-aoc-drawer">
+          <div class="mobile-aoc-handle"></div>
+          <div class="mobile-aoc-toolbar">
+            <h2>選擇產區</h2>
+            <button class="mobile-aoc-close" @click="closeMobileAocDrawer">關閉</button>
+          </div>
+          <AOCList
+            v-model:search="search"
+            :filteredGroups="filteredGroups"
+            :expandedGroups="expandedGroups"
+            :toggleGroup="toggleGroup"
+            :activeAOC="activeAOC"
+            :aocColor="aocColor"
+            @selectAOC="handleMobileAOCSelect"
+          />
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -29,6 +57,7 @@ const search = ref('')
 const activeAOC = ref({ group: 'Regional', aoc: 'Bordeaux_AOC.geojson' })
 const regionInfo = ref(null)
 const regionsData = ref([])
+const mobileAocDrawerOpen = ref(false)
 
 // 展開/收合狀態
 const expandedGroups = ref({
@@ -159,6 +188,19 @@ const showAOCGeojson = async (groupName, aocFile) => {
     regionsData.value.find(r => r.id === aocId) || null : null
 }
 
+const openMobileAocDrawer = () => {
+  mobileAocDrawerOpen.value = true
+}
+
+const closeMobileAocDrawer = () => {
+  mobileAocDrawerOpen.value = false
+}
+
+const handleMobileAOCSelect = async (groupName, aocFile) => {
+  await showAOCGeojson(groupName, aocFile)
+  closeMobileAocDrawer()
+}
+
 // 重置地圖
 const resetMap = () => {
   showAOCGeojson('Regional', 'Bordeaux_AOC.geojson')
@@ -218,19 +260,138 @@ html, body {
   bottom: 0;
 }
 
+.desktop-aoc-list {
+  display: contents;
+}
+
+.mobile-aoc-backdrop {
+  display: none;
+}
+
+.mobile-aoc-drawer {
+  display: none;
+}
+
+.mobile-aoc-toolbar,
+.mobile-aoc-handle,
+.mobile-aoc-close {
+  display: none;
+}
+
+.mobile-sheet-fade-enter-active,
+.mobile-sheet-fade-leave-active {
+  transition: opacity 0.24s ease;
+}
+
+.mobile-sheet-fade-enter-from,
+.mobile-sheet-fade-leave-to {
+  opacity: 0;
+}
+
 /* 響應式設計 */
 @media (max-width: 768px) {
   .main-layout {
-    flex-direction: column;
     height: 100%;
     width: 100%;
   }
-  
-  :deep(.aoc-list) {
-    height: 30%;
+
+  .desktop-aoc-list {
+    display: none;
+  }
+
+  .mobile-aoc-backdrop {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.34);
+    z-index: 1200;
+    backdrop-filter: blur(4px);
+  }
+
+  .mobile-aoc-drawer {
     width: 100%;
+    max-height: min(76vh, 760px);
+    display: flex;
+    flex-direction: column;
+    background: #f7f3ee;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+  }
+
+  .mobile-aoc-handle {
+    display: block;
+    width: 52px;
+    height: 5px;
+    border-radius: 999px;
+    background: rgba(122, 90, 64, 0.28);
+    margin: 10px auto 8px;
+  }
+
+  .mobile-aoc-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px 12px;
+    border-bottom: 1px solid rgba(122, 90, 64, 0.14);
+  }
+
+  .mobile-aoc-toolbar h2 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #6b1f1f;
+  }
+
+  .mobile-aoc-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 999px;
+    background: #6b1f1f;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .mobile-aoc-drawer :deep(.aoc-list) {
+    display: block;
+    flex: 1;
+    width: 100%;
+    height: auto;
     overflow-y: auto;
-    flex-shrink: 0;
+    border-right: none;
+    border-bottom: none;
+    background: transparent;
+    padding: 14px 16px 18px;
+  }
+
+  .mobile-aoc-drawer :deep(h2) {
+    display: none;
+  }
+
+  .mobile-aoc-drawer :deep(.aoc-search) {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin-bottom: 14px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    border: 1px solid rgba(107, 31, 31, 0.16);
+    font-size: 1rem;
+  }
+
+  .mobile-aoc-drawer :deep(.group-name) {
+    font-size: 1rem;
+  }
+
+  .mobile-aoc-drawer :deep(.aoc-item) {
+    font-size: 1rem;
+    padding: 10px 12px;
   }
 }
 </style>

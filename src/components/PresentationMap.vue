@@ -1,7 +1,19 @@
 <template>
   <div class="presentation-map">
     <div ref="mapContainer" class="map-container"></div>
-    <div v-if="hasGeologyControls" class="geology-controls">
+    <button
+      v-if="hasGeologyControls && isMobile"
+      class="mobile-geology-trigger"
+      :class="{ active: mobileControlsOpen }"
+      @click="mobileControlsOpen = !mobileControlsOpen"
+    >
+      {{ mobileControlsOpen ? '關閉圖層' : '地圖圖層' }}
+    </button>
+    <div v-if="hasGeologyControls" class="geology-controls" :class="{ 'mobile-open': mobileControlsOpen, 'mobile-layout': isMobile }">
+      <div v-if="isMobile" class="geology-mobile-header">
+        <span>地圖圖層</span>
+        <button class="geology-mobile-close" @click="mobileControlsOpen = false">完成</button>
+      </div>
       <button class="btn-geology" @click="toggleGeology">
         {{ geologyEnabled ? '隱藏地質' : '顯示地質' }}
       </button>
@@ -100,6 +112,8 @@ let unhandledRejectionHandler = null
 let transitionEndHandler = null
 let onMapReadyCleanup = null
 const geologyEnabled = ref(false)
+const isMobile = ref(false)
+const mobileControlsOpen = ref(false)
 const activeAocBounds = ref(null)
 const soilVisibility = ref({
   limestone: true,
@@ -133,6 +147,7 @@ const allGeojsonPaths = computed(() => {
 
 const availableGeologyLayers = computed(() => geologyLayerConfig.filter(item => allGeojsonPaths.value.some(path => path.includes(item.fileName))))
 const hasGeologyControls = computed(() => availableGeologyLayers.value.length > 0)
+let resizeHandler = null
 
 // 使用統一的 Token 取得邏輯
 const MAPBOX_TOKEN = getMapboxToken(props.accessToken)
@@ -243,6 +258,15 @@ function applySoilOpacity(soilId) {
   }
 }
 
+function syncResponsiveLayout() {
+  const nextIsMobile = window.innerWidth <= 768
+  const changed = nextIsMobile !== isMobile.value
+  isMobile.value = nextIsMobile
+  if (changed && !nextIsMobile) {
+    mobileControlsOpen.value = false
+  }
+}
+
 onMounted(async () => {
   console.log('PresentationMap mounted', {
     focusType: props.focusType,
@@ -252,6 +276,9 @@ onMounted(async () => {
   
   // 等待 DOM 完全渲染
   await new Promise(resolve => setTimeout(resolve, 100))
+  syncResponsiveLayout()
+  resizeHandler = () => syncResponsiveLayout()
+  window.addEventListener('resize', resizeHandler)
   
   try {
     isLoading.value = true
@@ -519,6 +546,10 @@ onMounted(async () => {
 })
 onUnmounted(() => {
   try {
+    if (resizeHandler) {
+      window.removeEventListener('resize', resizeHandler)
+      resizeHandler = null
+    }
     if (unhandledRejectionHandler) {
       window.removeEventListener('unhandledrejection', unhandledRejectionHandler)
       unhandledRejectionHandler = null
@@ -1209,6 +1240,21 @@ watch(() => props.focusType, (newFocus) => {
   max-width: 240px;
 }
 
+.mobile-geology-trigger,
+.geology-mobile-header {
+  display: none;
+}
+
+.geology-mobile-close {
+  border: none;
+  border-radius: 999px;
+  background: #6b1f1f;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
 .btn-geology {
   padding: 8px 12px;
   color: white;
@@ -1284,6 +1330,97 @@ watch(() => props.focusType, (newFocus) => {
   color: #333;
   min-width: 34px;
   text-align: right;
+}
+
+@media (max-width: 768px) {
+  .mobile-geology-trigger {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+    z-index: 1002;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(250, 245, 239, 0.98) 0%, rgba(241, 231, 221, 0.96) 100%);
+    color: #4f3422;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-geology-trigger.active {
+    background: linear-gradient(180deg, #7b2424 0%, #5f1717 100%);
+    color: #fff;
+  }
+
+  .geology-controls.mobile-layout {
+    top: auto;
+    left: 12px;
+    right: 12px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 66px);
+    max-width: none;
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(29, 24, 20, 0.94);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    transform: translateY(calc(100% + 18px));
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    max-height: min(52vh, 380px);
+    overflow-y: auto;
+  }
+
+  .geology-controls.mobile-layout.mobile-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .geology-mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .geology-controls.mobile-layout .btn-geology {
+    width: 100%;
+    min-height: 46px;
+    border-radius: 14px;
+  }
+
+  .geology-controls.mobile-layout .soil-control-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .geology-controls.mobile-layout .btn-soil,
+  .geology-controls.mobile-layout .soil-opacity-row {
+    width: 100%;
+  }
+
+  .geology-controls.mobile-layout .btn-soil {
+    min-height: 42px;
+    border-radius: 12px;
+  }
+
+  .geology-controls.mobile-layout .soil-opacity-row {
+    border-radius: 12px;
+    min-height: 38px;
+  }
+
+  .geology-controls.mobile-layout .soil-opacity-slider {
+    width: 100%;
+  }
 }
 
 /* Mapbox 控制角落間距與安全區支援 */
