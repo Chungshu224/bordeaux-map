@@ -2240,11 +2240,12 @@ onUnmounted(() => {
   }
 
   .map-info-bar {
-    left: 12px;
-    right: 12px;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 78px);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(92vw, 360px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 98px);
     max-width: none;
-    width: auto;
     padding: 14px;
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.97);
@@ -2261,9 +2262,11 @@ onUnmounted(() => {
   }
 
   .map-info-bar.collapsed {
-    left: 12px;
-    right: 12px;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 78px);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(92vw, 360px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 98px);
     max-width: none;
     padding: 10px 12px;
   }
@@ -2473,7 +2476,10 @@ onUnmounted(() => {
   }
   
   .map-header h1 {
-    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.08rem;
+    font-weight: 700;
     letter-spacing: 0.02em;
     white-space: nowrap;
     overflow: hidden;
@@ -2498,7 +2504,7 @@ onUnmounted(() => {
   }
 
   .map-header h1 {
-    font-size: 0.88rem;
+    font-size: 1rem;
   }
 
   .mobile-map-toolbar {
@@ -2529,12 +2535,19 @@ onUnmounted(() => {
   }
 
   .map-info-bar {
-    left: 10px;
-    right: 10px;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 74px);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(94vw, 340px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 94px);
     padding: 12px 10px;
     border-radius: 14px;
     max-height: min(56vh, 420px);
+  }
+
+  .map-info-bar.collapsed {
+    width: min(94vw, 340px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 94px);
   }
 
   .map-info-bar.mobile-full {
@@ -2588,8 +2601,14 @@ onUnmounted(() => {
   }
 
   .map-info-bar {
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 70px);
+    width: min(96vw, 320px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 90px);
     padding: 10px 9px;
+  }
+
+  .map-info-bar.collapsed {
+    width: min(96vw, 320px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 90px);
   }
 
   .info-details {
