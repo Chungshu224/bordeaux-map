@@ -39,11 +39,17 @@
             <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
           </svg>
         </button>
+          <button v-if="isMobile" class="btn-reset-icon" @click="resetMap" title="重置地圖">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 3v6h-6"></path>
+              <path d="M20.49 15A9 9 0 1 1 21 9"></path>
+            </svg>
+          </button>
         </div>
       </div>
       <div v-show="!infoBarCollapsed" class="info-details">
         <div class="map-buttons">
-        <button class="btn-reset" @click="resetMap">重置地圖</button>
+        <button v-if="!isMobile" class="btn-reset" @click="resetMap">重置地圖</button>
         <button v-if="hasChateauxFile" class="btn-chateaux" @click="toggleChateauxMarkers">
           {{ showingChateaux ? '隱藏酒莊' : '顯示知名酒莊' }}
         </button>
@@ -290,6 +296,7 @@ const geologyLayerConfig = [
 const currentMarkers = ref([])
 const showingChateaux = ref(false)
 const hasChateauxFile = ref(false)
+const chateauxDataCache = new Map()
 
 // 音頻播放器
 let currentAudio = null
@@ -1200,22 +1207,51 @@ const initMap = async (retry = 0) => {
   }
 }
 
+// 取得並驗證酒莊資料
+const loadChateauxData = async (aocId) => {
+  const chateauFilePath = `/chateaux/coordinates_${aocId}.json`
+  const response = await fetch(chateauFilePath, {
+    headers: { 'Accept': 'application/json' },
+    cache: 'no-store'
+  })
+
+  if (!response.ok) {
+    throw new Error(`無法載入酒莊資料 (${response.status})`)
+  }
+
+  const contentType = (response.headers.get('content-type') || '').toLowerCase()
+  if (!contentType.includes('application/json')) {
+    throw new Error('酒莊資料格式錯誤')
+  }
+
+  const raw = await response.text()
+  let parsed
+  try {
+    parsed = JSON.parse(raw)
+  } catch {
+    throw new Error('酒莊資料 JSON 解析失敗')
+  }
+
+  if (!Array.isArray(parsed)) {
+    throw new Error('酒莊資料格式錯誤')
+  }
+
+  return parsed
+}
+
 // 檢查是否有酒莊文件
 const checkChateauxFile = async (aocId) => {
   try {
-    // 使用標準格式 coordinates_產區名稱.json
-    const chateauFilePath = `/chateaux/coordinates_${aocId}.json`
-    
-    const response = await fetch(chateauFilePath, { 
-      method: 'HEAD',
-      headers: { 'Accept': 'application/json' }
-    })
-    
-    if (debug) console.log('酒莊文件檢查結果:', response.ok, response.status)
-    
-    return response.ok
+    const chateaux = await loadChateauxData(aocId)
+    chateauxDataCache.set(aocId, chateaux)
+
+    const hasData = chateaux.length > 0
+    if (debug) console.log('酒莊文件檢查結果:', hasData, `(${aocId})`)
+
+    return hasData
   } catch (err) {
-    console.error('檢查酒莊文件時出錯:', err)
+    if (debug) console.warn('檢查酒莊文件時出錯:', aocId, err.message)
+    chateauxDataCache.delete(aocId)
     return false
   }
 }
@@ -1238,13 +1274,13 @@ const showChateauxMarkers = async () => {
   const aocId = props.activeAOC.aoc.replace('.geojson', '')
   
   try {
-    const chateauFilePath = `/chateaux/coordinates_${aocId}.json`
-    
-    // 動態載入該 AOC 的酒莊檔案
-    const response = await fetch(chateauFilePath)
-    if (!response.ok) throw new Error(`無法載入酒莊資料 (${response.status})`)
-    
-    const chateaux = await response.json()
+    const chateaux = chateauxDataCache.has(aocId)
+      ? chateauxDataCache.get(aocId)
+      : await loadChateauxData(aocId)
+
+    if (!Array.isArray(chateaux) || chateaux.length === 0) {
+      throw new Error('此產區尚無酒莊資料')
+    }
     
     // 移除所有現有標記
     removeChateauxMarkers()
@@ -1552,6 +1588,32 @@ onUnmounted(() => {
 .btn-pronunciation svg {
   width: 20px;
   height: 20px;
+}
+
+.btn-reset-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ff6f61 0%, #ef4f45 100%);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  flex-shrink: 0;
+}
+
+.btn-reset-icon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+}
+
+.btn-reset-icon:active {
+  transform: translateY(0);
 }
 
 .aoc-dot {
@@ -2179,6 +2241,41 @@ onUnmounted(() => {
 
   .title-buttons {
     flex-shrink: 0;
+    gap: 6px;
+  }
+
+  .btn-collapse-inline,
+  .btn-pronunciation,
+  .btn-reset-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    padding: 0;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-collapse-inline {
+    background: linear-gradient(180deg, #121212 0%, #050505 100%);
+    border: none;
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.28);
+  }
+
+  .btn-collapse-inline .btn-text {
+    display: none;
+  }
+
+  .btn-collapse-inline svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .btn-pronunciation {
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(83, 44, 145, 0.34);
   }
 
   .map-buttons {
@@ -2264,7 +2361,7 @@ onUnmounted(() => {
     transform: translateX(-50%);
     width: min(92vw, 360px);
     bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
-    z-index: 1000;
+    z-index: 1300;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 8px;
@@ -2392,6 +2489,12 @@ onUnmounted(() => {
   .btn-pronunciation {
     width: 32px;
     height: 32px;
+  }
+
+  .btn-reset-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
   }
 
   .region-info-content,

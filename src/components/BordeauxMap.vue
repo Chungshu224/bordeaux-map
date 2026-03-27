@@ -30,7 +30,6 @@
           <div class="mobile-aoc-handle"></div>
           <div class="mobile-aoc-toolbar">
             <h2>選擇產區</h2>
-            <button class="mobile-aoc-close" @click="closeMobileAocDrawer">關閉</button>
           </div>
           <AOCList
             v-model:search="search"
@@ -273,8 +272,7 @@ html, body {
 }
 
 .mobile-aoc-toolbar,
-.mobile-aoc-handle,
-.mobile-aoc-close {
+.mobile-aoc-handle {
   display: none;
 }
 
@@ -306,20 +304,24 @@ html, body {
     align-items: flex-end;
     justify-content: center;
     background: rgba(15, 23, 42, 0.34);
-    z-index: 1200;
+    z-index: 1210;
     backdrop-filter: blur(4px);
   }
 
   .mobile-aoc-drawer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(env(safe-area-inset-top, 0px) + 2px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 86px);
     width: 100%;
-    max-height: min(76vh, 760px);
     display: flex;
     flex-direction: column;
     background: #f7f3ee;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 14px 14px;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.24);
     overflow: hidden;
-    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+    padding-bottom: 10px;
   }
 
   .mobile-aoc-handle {
@@ -334,7 +336,7 @@ html, body {
   .mobile-aoc-toolbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 16px 12px;
     border-bottom: 1px solid rgba(122, 90, 64, 0.14);
   }
@@ -345,24 +347,11 @@ html, body {
     color: #6b1f1f;
   }
 
-  .mobile-aoc-close {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 36px;
-    padding: 0 14px;
-    border: none;
-    border-radius: 999px;
-    background: #6b1f1f;
-    color: #fff;
-    font-weight: 700;
-  }
-
   .mobile-aoc-drawer :deep(.aoc-list) {
     display: block;
     flex: 1;
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow-y: auto;
     border-right: none;
     border-bottom: none;
