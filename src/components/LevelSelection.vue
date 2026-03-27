@@ -900,9 +900,32 @@ const getBubbleStyle = (index) => {
   }
   
   .brand-header {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 1.25rem 1rem;
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+
+  .brand-logo {
+    width: 100%;
+    justify-content: center;
+    min-width: 0;
+    gap: 0.9rem;
+  }
+
+  .brand-text {
+    min-width: 0;
+  }
+
+  .brand-title {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.2;
+    text-align: center;
+    font-size: clamp(1.55rem, 6.2vw, 2rem);
   }
   
   .grid-container {
@@ -931,9 +954,17 @@ const getBubbleStyle = (index) => {
   .main-container {
     padding: 0.75rem;
   }
+
+  .brand-header {
+    padding: 1rem 0.85rem;
+  }
+
+  .brand-logo {
+    gap: 0.7rem;
+  }
   
   .brand-title {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 7vw, 1.65rem);
   }
   
   .brand-subtitle {
