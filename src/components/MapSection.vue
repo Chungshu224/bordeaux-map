@@ -736,7 +736,7 @@ const toggleLegend = () => {
 }
 
 const syncResponsiveLayout = () => {
-  const nextIsMobile = window.innerWidth <= 768
+  const nextIsMobile = window.innerWidth <= 1180
   const changed = nextIsMobile !== isMobile.value
   isMobile.value = nextIsMobile
 
@@ -2223,7 +2223,7 @@ onUnmounted(() => {
 }
 
 /* 響應式設計 */
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   .map-info-bar,
   .map-info-bar .region-info-content,
   .map-info-bar .description,
@@ -2243,7 +2243,7 @@ onUnmounted(() => {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    width: min(92vw, 360px);
+    width: min(90vw, 560px);
     bottom: calc(env(safe-area-inset-bottom, 0px) + 98px);
     max-width: none;
     padding: 14px;
@@ -2265,7 +2265,7 @@ onUnmounted(() => {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    width: min(92vw, 360px);
+    width: min(90vw, 560px);
     bottom: calc(env(safe-area-inset-bottom, 0px) + 98px);
     max-width: none;
     padding: 10px 12px;
@@ -2425,7 +2425,7 @@ onUnmounted(() => {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: min(92vw, 360px);
+    width: min(90vw, 560px);
     bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
     z-index: 1300;
     display: grid;
@@ -2494,6 +2494,20 @@ onUnmounted(() => {
 
   .map-legend {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-info-bar {
+    width: min(92vw, 360px);
+  }
+
+  .map-info-bar.collapsed {
+    width: min(92vw, 360px);
+  }
+
+  .mobile-map-toolbar {
+    width: min(92vw, 360px);
   }
 }
 

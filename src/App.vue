@@ -191,9 +191,9 @@ body {
   z-index: 1000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   .mode-switcher {
-    top: calc(30vh + 80px); /* 30vh is AOCList height on mobile */
+    top: 84px;
     left: 10px;
   }
 }
@@ -226,7 +226,7 @@ body {
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   .learning-mode-btn {
     padding: 0.5rem 1rem;
   }

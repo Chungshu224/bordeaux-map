@@ -292,7 +292,7 @@ html, body {
 }
 
 /* 響應式設計 */
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   .main-layout {
     height: 100%;
     width: 100%;
@@ -315,11 +315,12 @@ html, body {
 
   .mobile-aoc-drawer {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: calc(env(safe-area-inset-top, 0px) + 2px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 86px);
-    width: 100%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    top: calc(env(safe-area-inset-top, 0px) + 6px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 92px);
+    width: min(88vw, 560px);
     display: flex;
     flex-direction: column;
     background: #f7f3ee;
@@ -386,6 +387,18 @@ html, body {
   .mobile-aoc-drawer :deep(.aoc-item) {
     font-size: 1rem;
     padding: 10px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-aoc-drawer {
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    top: calc(env(safe-area-inset-top, 0px) + 2px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 86px);
+    border-radius: 20px 20px 14px 14px;
   }
 }
 </style>
