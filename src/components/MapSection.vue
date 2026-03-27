@@ -89,7 +89,6 @@
     <div class="map-controls" :class="{ 'mobile-open': mobileLayersOpen }">
       <div v-if="isMobile" class="mobile-panel-header">
         <span>圖層與顯示</span>
-        <button class="mobile-panel-close" @click="mobileLayersOpen = false">完成</button>
       </div>
       <button class="btn-3d" @click="toggle3D" v-if="map">
         {{ is3D ? '2D' : '3D' }}
@@ -97,10 +96,10 @@
       <button class="btn-contours" @click="toggleContours" v-if="map">
         {{ contoursEnabled ? '隱藏等高線' : '顯示等高線' }}
       </button>
-      <button class="btn-geology" @click="toggleGeology" v-if="map">
+      <button class="btn-geology" @click="toggleGeology" v-if="map && !isMobile">
         {{ geologyEnabled ? '隱藏地質' : '顯示地質' }}
       </button>
-      <div v-if="map && geologyEnabled" class="soil-toggle-panel">
+      <div v-if="map && geologyEnabled && !isMobile" class="soil-toggle-panel">
         <div
           v-for="item in geologyLayerConfig"
           :key="item.id"
@@ -141,19 +140,19 @@
     </div>
 
     <div v-if="map" class="mobile-map-toolbar">
-      <button class="mobile-tool-btn" @click="emit('openAOCList')">
+      <button class="mobile-tool-btn" :class="{ active: mobileAocDrawerOpen }" @click="toggleMobileTool('aoc')">
         <span class="mobile-tool-icon">產</span>
         <span>產區</span>
       </button>
-      <button class="mobile-tool-btn" :class="{ active: mobileLayersOpen }" @click="toggleMobileLayers">
+      <button class="mobile-tool-btn" :class="{ active: mobileLayersOpen }" @click="toggleMobileTool('layers')">
         <span class="mobile-tool-icon">層</span>
         <span>圖層</span>
       </button>
-      <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
+      <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggleMobileTool('3d')">
         <span class="mobile-tool-icon">3D</span>
         <span>{{ is3D ? '2D' : '3D' }}</span>
       </button>
-      <button class="mobile-tool-btn" :class="{ active: !infoBarCollapsed }" @click="toggleMobileInfo">
+      <button class="mobile-tool-btn" :class="{ active: mobileInfoSheetState !== 'peek' }" @click="toggleMobileTool('info')">
         <span class="mobile-tool-icon">資</span>
         <span>資訊</span>
       </button>
@@ -243,7 +242,11 @@ const props = defineProps({
   regionsData: Object,
   styleColors: Object,
   aocGroups: Object,
-  search: String
+  search: String,
+  mobileAocDrawerOpen: {
+    type: Boolean,
+    default: false
+  }
 })
 
 // 定義要發送到父組件的事件
@@ -740,6 +743,9 @@ const syncResponsiveLayout = () => {
   if (changed) {
     mobileLayersOpen.value = false
     if (nextIsMobile) {
+      if (geologyEnabled.value && map) {
+        toggleGeology()
+      }
       mobileInfoSheetState.value = 'peek'
       infoBarCollapsed.value = true
       legendVisible.value = false
@@ -753,6 +759,63 @@ const syncResponsiveLayout = () => {
 
 const toggleMobileLayers = () => {
   mobileLayersOpen.value = !mobileLayersOpen.value
+}
+
+const closeMobileToolsExcept = (tool) => {
+  if (tool !== 'aoc' && props.mobileAocDrawerOpen) {
+    emit('openAOCList', false)
+  }
+
+  if (tool !== 'layers') {
+    mobileLayersOpen.value = false
+  }
+
+  if (tool !== 'info' && mobileInfoSheetState.value !== 'peek') {
+    setInfoSheetState('peek')
+  }
+
+  if (tool !== '3d' && is3D.value) {
+    toggle3D()
+  }
+}
+
+const toggleMobileTool = (tool) => {
+  if (!isMobile.value) return
+
+  const activeMap = {
+    aoc: props.mobileAocDrawerOpen,
+    layers: mobileLayersOpen.value,
+    '3d': is3D.value,
+    info: mobileInfoSheetState.value !== 'peek'
+  }
+
+  const isActive = !!activeMap[tool]
+
+  if (isActive) {
+    closeMobileToolsExcept(null)
+    return
+  }
+
+  closeMobileToolsExcept(tool)
+
+  if (tool === 'aoc') {
+    emit('openAOCList', true)
+    return
+  }
+
+  if (tool === 'layers') {
+    mobileLayersOpen.value = true
+    return
+  }
+
+  if (tool === '3d') {
+    if (!is3D.value) toggle3D()
+    return
+  }
+
+  if (tool === 'info') {
+    setInfoSheetState('half')
+  }
 }
 
 const setInfoSheetState = (state) => {

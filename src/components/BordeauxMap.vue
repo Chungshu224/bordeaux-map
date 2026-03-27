@@ -16,8 +16,9 @@
       :activeAOC="activeAOC"
       :regionInfo="regionInfo"
       :styleColors="styleColors"
+      :mobileAocDrawerOpen="mobileAocDrawerOpen"
       @resetMap="resetMap"
-      @openAOCList="openMobileAocDrawer"
+      @openAOCList="setMobileAocDrawerOpen"
     />
 
     <transition name="mobile-sheet-fade">
@@ -187,8 +188,12 @@ const showAOCGeojson = async (groupName, aocFile) => {
     regionsData.value.find(r => r.id === aocId) || null : null
 }
 
-const openMobileAocDrawer = () => {
-  mobileAocDrawerOpen.value = true
+const setMobileAocDrawerOpen = (open) => {
+  if (typeof open === 'boolean') {
+    mobileAocDrawerOpen.value = open
+    return
+  }
+  mobileAocDrawerOpen.value = !mobileAocDrawerOpen.value
 }
 
 const closeMobileAocDrawer = () => {
