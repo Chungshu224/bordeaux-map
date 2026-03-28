@@ -1,19 +1,6 @@
 <template>
   <div class="main-layout">
-    <div class="desktop-aoc-list">
-      <AOCList
-        v-model:search="search"
-        :filteredGroups="filteredGroups"
-        :expandedGroups="expandedGroups"
-        :toggleGroup="toggleGroup"
-        :activeAOC="activeAOC"
-        :aocColor="aocColor"
-        @selectAOC="showAOCGeojson"
-      />
-    </div>
-    
-    <MapSection
-      :activeAOC="activeAOC"
+
       :regionInfo="regionInfo"
       :styleColors="styleColors"
       :mobileAocDrawerOpen="mobileAocDrawerOpen"
@@ -264,21 +251,91 @@ html, body {
   bottom: 0;
 }
 
-.desktop-aoc-list {
-  display: contents;
-}
-
 .mobile-aoc-backdrop {
-  display: none;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.34);
+  z-index: 1210;
+  backdrop-filter: blur(4px);
 }
 
 .mobile-aoc-drawer {
+  position: absolute;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  top: calc(env(safe-area-inset-top, 0px) + 6px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 92px);
+  width: min(90vw, 560px);
+  display: flex;
+  flex-direction: column;
+  background: #f7f3ee;
+  border-radius: 20px 20px 14px 14px;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.mobile-aoc-handle {
+  display: block;
+  width: 52px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(122, 90, 64, 0.28);
+  margin: 10px auto 8px;
+}
+
+.mobile-aoc-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px 12px;
+  border-bottom: 1px solid rgba(122, 90, 64, 0.14);
+}
+
+.mobile-aoc-toolbar h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #6b1f1f;
+}
+
+.mobile-aoc-drawer :deep(.aoc-list) {
+  display: block;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  border-right: none;
+  border-bottom: none;
+  background: transparent;
+  padding: 14px 16px 18px;
+}
+
+.mobile-aoc-drawer :deep(h2) {
   display: none;
 }
 
-.mobile-aoc-toolbar,
-.mobile-aoc-handle {
-  display: none;
+.mobile-aoc-drawer :deep(.aoc-search) {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin-bottom: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  border: 1px solid rgba(107, 31, 31, 0.16);
+  font-size: 1rem;
+}
+
+.mobile-aoc-drawer :deep(.group-name) {
+  font-size: 1rem;
+}
+
+.mobile-aoc-drawer :deep(.aoc-item) {
+  font-size: 1rem;
+  padding: 10px 12px;
 }
 
 .mobile-sheet-fade-enter-active,
@@ -292,104 +349,6 @@ html, body {
 }
 
 /* 響應式設計 */
-@media (max-width: 1180px) {
-  .main-layout {
-    height: 100%;
-    width: 100%;
-  }
-
-  .desktop-aoc-list {
-    display: none;
-  }
-
-  .mobile-aoc-backdrop {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background: rgba(15, 23, 42, 0.34);
-    z-index: 1210;
-    backdrop-filter: blur(4px);
-  }
-
-  .mobile-aoc-drawer {
-    position: absolute;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    top: calc(env(safe-area-inset-top, 0px) + 6px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 92px);
-    width: min(88vw, 560px);
-    display: flex;
-    flex-direction: column;
-    background: #f7f3ee;
-    border-radius: 20px 20px 14px 14px;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.24);
-    overflow: hidden;
-    padding-bottom: 10px;
-  }
-
-  .mobile-aoc-handle {
-    display: block;
-    width: 52px;
-    height: 5px;
-    border-radius: 999px;
-    background: rgba(122, 90, 64, 0.28);
-    margin: 10px auto 8px;
-  }
-
-  .mobile-aoc-toolbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px 12px;
-    border-bottom: 1px solid rgba(122, 90, 64, 0.14);
-  }
-
-  .mobile-aoc-toolbar h2 {
-    margin: 0;
-    font-size: 1.05rem;
-    color: #6b1f1f;
-  }
-
-  .mobile-aoc-drawer :deep(.aoc-list) {
-    display: block;
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    border-right: none;
-    border-bottom: none;
-    background: transparent;
-    padding: 14px 16px 18px;
-  }
-
-  .mobile-aoc-drawer :deep(h2) {
-    display: none;
-  }
-
-  .mobile-aoc-drawer :deep(.aoc-search) {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    margin-bottom: 14px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    border: 1px solid rgba(107, 31, 31, 0.16);
-    font-size: 1rem;
-  }
-
-  .mobile-aoc-drawer :deep(.group-name) {
-    font-size: 1rem;
-  }
-
-  .mobile-aoc-drawer :deep(.aoc-item) {
-    font-size: 1rem;
-    padding: 10px 12px;
-  }
-}
-
 @media (max-width: 768px) {
   .mobile-aoc-drawer {
     left: 0;

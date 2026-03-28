@@ -191,7 +191,7 @@ body {
   z-index: 1000;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 9999px) {
   .mode-switcher {
     top: 84px;
     left: 10px;
@@ -226,7 +226,7 @@ body {
   font-size: 1rem;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 9999px) {
   .learning-mode-btn {
     padding: 0.5rem 1rem;
   }

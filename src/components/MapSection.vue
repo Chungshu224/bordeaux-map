@@ -736,8 +736,7 @@ const toggleLegend = () => {
 }
 
 const syncResponsiveLayout = () => {
-  const nextIsMobile = window.innerWidth <= 1180
-  const changed = nextIsMobile !== isMobile.value
+    const nextIsMobile = window.innerWidth <= 9999
   isMobile.value = nextIsMobile
 
   if (changed) {
@@ -1676,7 +1675,7 @@ onUnmounted(() => {
 }
 
 .btn-reset-icon:active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 .aoc-dot {
@@ -2223,7 +2222,7 @@ onUnmounted(() => {
 }
 
 /* 響應式設計 */
-@media (max-width: 1180px) {
+@media (max-width: 9999px) {
   .map-info-bar,
   .map-info-bar .region-info-content,
   .map-info-bar .description,
@@ -2364,7 +2363,7 @@ onUnmounted(() => {
     border-radius: 18px;
     background: rgba(29, 24, 20, 0.94);
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
-    transform: translateY(calc(100% + 18px));
+    transform: translateX(-50%) translateY(calc(100% + 18px));
     opacity: 0;
     pointer-events: none;
     transition: transform 0.25s ease, opacity 0.25s ease;
@@ -2373,7 +2372,7 @@ onUnmounted(() => {
   }
 
   .map-controls.mobile-open {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
     pointer-events: auto;
   }
