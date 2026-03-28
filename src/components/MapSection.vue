@@ -1260,7 +1260,7 @@ const initMap = async (retry = 0) => {
     
     map.on('error', (err) => {
       console.error('地圖錯誤:', err)
-      mapError.value = `地圖錯誤: ${err.error?.message || '未知錯誤'}`
+      console.log("Ignored Mapbox Error:", err.error?.message || err)
     })
     
     mapError.value = null
@@ -2642,3 +2642,4 @@ onUnmounted(() => {
 }
 </style>
 // oxlint-disable-next-line
+
