@@ -2357,12 +2357,13 @@ onUnmounted(() => {
   .map-controls {
     top: auto;
     bottom: calc(env(safe-area-inset-bottom, 0px) + 72px);
-    left: 12px;
-    right: 12px;
+    left: 50%;
+    right: auto;
+    width: min(90vw, 560px);
     gap: 8px;
     padding: 12px;
     border-radius: 18px;
-    background: rgba(29, 24, 20, 0.94);
+    background: #f7f3ee;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
     transform: translateX(-50%) translateY(calc(100% + 18px));
     opacity: 0;
@@ -2382,7 +2383,7 @@ onUnmounted(() => {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff;
+    color: #6b1f1f;
     font-weight: 700;
     margin-bottom: 2px;
   }
