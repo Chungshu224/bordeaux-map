@@ -737,7 +737,8 @@ const toggleLegend = () => {
 
 const syncResponsiveLayout = () => {
     const nextIsMobile = window.innerWidth <= 9999
-  isMobile.value = nextIsMobile
+    const changed = nextIsMobile !== isMobile.value
+    isMobile.value = nextIsMobile
 
   if (changed) {
     mobileLayersOpen.value = false
