@@ -1,6 +1,7 @@
 <template>
   <div class="main-layout">
-
+    <MapSection
+      :activeAOC="activeAOC"
       :regionInfo="regionInfo"
       :styleColors="styleColors"
       :mobileAocDrawerOpen="mobileAocDrawerOpen"
