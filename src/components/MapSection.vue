@@ -1,7 +1,7 @@
 <template>
   <section class="map-section">
     <div class="map-header">
-      <h1>波爾多葡萄酒產區地圖</h1>
+      <h1>Bordeaux Wine Region Map</h1>
     </div>
     <div
       class="map-info-bar"
@@ -127,16 +127,6 @@
           </div>
         </div>
       </div>
-      <button class="btn-legend" @click="toggleLegend" v-if="map">
-        {{ legendVisible ? '隱藏圖例' : '顯示圖例' }}
-      </button>
-      <div v-if="isMobile && legendVisible" class="mobile-legend-summary">
-        <div class="mobile-legend-chip"><span class="chip-dot left-bank"></span>左岸</div>
-        <div class="mobile-legend-chip"><span class="chip-dot right-bank"></span>右岸</div>
-        <div class="mobile-legend-chip"><span class="chip-dot sweet"></span>甜酒</div>
-        <div class="mobile-legend-chip"><span class="chip-dot entre"></span>兩河之間</div>
-        <div class="mobile-legend-chip"><span class="chip-dot regional"></span>波爾多 AOC</div>
-      </div>
     </div>
 
     <div v-if="map" class="mobile-map-toolbar">
@@ -158,59 +148,7 @@
       </button>
     </div>
     
-    <!-- 圖例組件 -->
-    <div v-if="legendVisible && !isMobile" class="map-legend">
-      <div class="legend-title">產區分類</div>
-      <div class="legend-items">
-        <div class="legend-item">
-          <div class="legend-color" style="background: #DC143C;"></div>
-          <span>左岸產區</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background: #4169E1;"></div>
-          <span>右岸產區</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background: #FFD700;"></div>
-          <span>Sauternais</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background: #2E8B57;"></div>
-          <span>Entre-Deux-Mers</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background: #8B5C2A;"></div>
-          <span>其他產區</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background: #8B0000;"></div>
-          <span>波爾多 AOC</span>
-        </div>
-        <template v-if="geologyEnabled">
-          <div class="legend-item" v-if="soilVisibility.limestone">
-            <div class="legend-color" style="background: #00E5FF;"></div>
-            <span>石灰岩</span>
-          </div>
-          <div class="legend-item" v-if="soilVisibility.gravel">
-            <div class="legend-color" style="background: #FF8C00;"></div>
-            <span>礫石卵石</span>
-          </div>
-          <div class="legend-item" v-if="soilVisibility.clay">
-            <div class="legend-color" style="background: #8B4513;"></div>
-            <span>黏土為主</span>
-          </div>
-          <div class="legend-item" v-if="soilVisibility.sand">
-            <div class="legend-color" style="background: #FFD700;"></div>
-            <span>砂為主</span>
-          </div>
-          <div class="legend-item" v-if="soilVisibility.mixed">
-            <div class="legend-color" style="background: #ADFF2F;"></div>
-            <span>混合沉積物</span>
-          </div>
-        </template>
-      </div>
-    </div>
-    
+
     <div v-if="mapError" class="map-error">
       {{ mapError }}
     </div>
@@ -277,7 +215,6 @@ const soilOpacity = ref({
   mixed: 0.55
 })
 const infoBarCollapsed = ref(false)
-const legendVisible = ref(true) // 圖例顯示開關
 const isMobile = ref(false)
 const mobileLayersOpen = ref(false)
 const mobileInfoSheetState = ref('peek')
@@ -729,12 +666,6 @@ const toggleContours = () => {
   console.log('[等高線] ====================================')
 }
 
-// 切換圖例顯示
-const toggleLegend = () => {
-  legendVisible.value = !legendVisible.value
-  console.log('[圖例]', legendVisible.value ? '已顯示' : '已隱藏')
-}
-
 const syncResponsiveLayout = () => {
     const nextIsMobile = window.innerWidth <= 9999
     const changed = nextIsMobile !== isMobile.value
@@ -748,11 +679,9 @@ const syncResponsiveLayout = () => {
       }
       mobileInfoSheetState.value = 'peek'
       infoBarCollapsed.value = true
-      legendVisible.value = false
     } else {
       mobileInfoSheetState.value = 'full'
       infoBarCollapsed.value = false
-      legendVisible.value = true
     }
   }
 }
@@ -1811,8 +1740,7 @@ onUnmounted(() => {
 
 .btn-3d,
 .btn-contours,
-.btn-geology,
-.btn-legend {
+.btn-geology {
   padding: 8px 15px;
   color: white;
   border: none;
@@ -1921,118 +1849,6 @@ onUnmounted(() => {
   color: #333;
   min-width: 34px;
   text-align: right;
-}
-
-.btn-legend {
-  background: #2196F3;
-}
-
-.btn-legend:hover {
-  background: #1976D2;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-}
-
-.mobile-legend-summary {
-  display: none;
-}
-
-.mobile-legend-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  font-size: 0.85rem;
-}
-
-.chip-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.chip-dot.left-bank {
-  background: #DC143C;
-}
-
-.chip-dot.right-bank {
-  background: #4169E1;
-}
-
-.chip-dot.sweet {
-  background: #FFD700;
-}
-
-.chip-dot.entre {
-  background: #2E8B57;
-}
-
-.chip-dot.regional {
-  background: #8B0000;
-}
-
-/* 圖例樣式 */
-.map-legend {
-  position: absolute;
-  bottom: 30px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  min-width: 180px;
-  backdrop-filter: blur(10px);
-  animation: slideInRight 0.3s ease;
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.legend-title {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-  color: #333;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 8px;
-}
-
-.legend-items {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-}
-
-.legend-color {
-  width: 30px;
-  height: 20px;
-  border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
-}
-
-.legend-item span {
-  color: #555;
 }
 
 .loading-overlay {
@@ -2244,7 +2060,7 @@ onUnmounted(() => {
     right: auto;
     transform: translateX(-50%);
     width: min(90vw, 560px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 98px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
     max-width: none;
     padding: 14px;
     border-radius: 18px;
@@ -2266,7 +2082,7 @@ onUnmounted(() => {
     right: auto;
     transform: translateX(-50%);
     width: min(90vw, 560px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 98px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
     max-width: none;
     padding: 10px 12px;
   }
@@ -2356,7 +2172,7 @@ onUnmounted(() => {
 
   .map-controls {
     top: auto;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 72px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
     left: 50%;
     right: auto;
     width: min(90vw, 560px);
@@ -2393,8 +2209,7 @@ onUnmounted(() => {
   }
 
   .btn-contours,
-  .btn-geology,
-  .btn-legend {
+  .btn-geology {
     width: 100%;
     min-width: 0;
   }
@@ -2413,13 +2228,6 @@ onUnmounted(() => {
 
   .soil-opacity-slider {
     width: 100%;
-  }
-
-  .mobile-legend-summary {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 2px;
   }
 
   .mobile-map-toolbar {
@@ -2494,9 +2302,6 @@ onUnmounted(() => {
     background: rgba(255, 255, 255, 0.72);
   }
 
-  .map-legend {
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
@@ -2551,7 +2356,7 @@ onUnmounted(() => {
     right: 10px;
     width: auto;
     transform: translateY(calc(100% + 18px));
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 66px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
     border-radius: 16px;
     max-height: min(52vh, 360px);
   }
@@ -2565,7 +2370,7 @@ onUnmounted(() => {
     right: auto;
     transform: translateX(-50%);
     width: min(94vw, 340px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 94px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
     padding: 12px 10px;
     border-radius: 14px;
     max-height: min(56vh, 420px);
@@ -2573,7 +2378,7 @@ onUnmounted(() => {
 
   .map-info-bar.collapsed {
     width: min(94vw, 340px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 94px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
   }
 
   .map-info-bar.mobile-full {
@@ -2628,13 +2433,13 @@ onUnmounted(() => {
 
   .map-info-bar {
     width: min(96vw, 320px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 90px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
     padding: 10px 9px;
   }
 
   .map-info-bar.collapsed {
     width: min(96vw, 320px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 90px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
   }
 
   .info-details {

@@ -18,7 +18,7 @@
         <div class="mobile-aoc-drawer">
           <div class="mobile-aoc-handle"></div>
           <div class="mobile-aoc-toolbar">
-            <h2>選擇產區</h2>
+            <h2>Select Region</h2>
           </div>
           <AOCList
             v-model:search="search"
@@ -269,7 +269,7 @@ html, body {
   right: auto;
   transform: translateX(-50%);
   top: calc(env(safe-area-inset-top, 0px) + 6px);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 92px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
   width: min(90vw, 560px);
   display: flex;
   flex-direction: column;
@@ -357,7 +357,7 @@ html, body {
     transform: none;
     width: 100%;
     top: calc(env(safe-area-inset-top, 0px) + 2px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 86px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
     border-radius: 20px 20px 14px 14px;
   }
 }

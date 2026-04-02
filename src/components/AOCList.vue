@@ -1,11 +1,11 @@
 <template>
   <div class="aoc-list">
-    <h2>波爾多產區清單</h2>
+    <h2>Bordeaux Region List</h2>
     
     <input
       type="text"
       class="aoc-search"
-      placeholder="搜尋產區..."
+      placeholder="Search regions..."
       v-model="searchModel"
     />
     
@@ -55,13 +55,13 @@ const searchModel = computed({
 
 // 格式化群組名稱
 const formatGroupName = (group) => {
-  if (group.includes('LeftBank-Medoc')) return '左岸 - 梅多克'
-  if (group.includes('LeftBank-Graves')) return '左岸 - 格拉夫'
-  if (group.includes('RightBank-Libournais')) return '右岸 - 利布爾內'
-  if (group.includes('RightBank-Blaye')) return '右岸 - 布萊'
-  if (group === 'Entre-Deux-Mers') return '兩河之間'
-  if (group === 'Sauternais') return '索甜地區'
-  if (group === 'Regional') return '區域級'
+  if (group.includes('LeftBank-Medoc')) return 'Left Bank - Medoc'
+  if (group.includes('LeftBank-Graves')) return 'Left Bank - Graves'
+  if (group.includes('RightBank-Libournais')) return 'Right Bank - Libournais'
+  if (group.includes('RightBank-Blaye')) return 'Right Bank - Blaye'
+  if (group === 'Entre-Deux-Mers') return 'Entre-Deux-Mers'
+  if (group === 'Sauternais') return 'Sauternais'
+  if (group === 'Regional') return 'Regional'
   return group
 }
 
