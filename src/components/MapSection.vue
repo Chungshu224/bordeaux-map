@@ -139,7 +139,7 @@
       </div>
     </div>
 
-    <div v-if="map" class="mobile-map-toolbar">
+    <div v-if="map" class="mobile-map-toolbar" :class="{ 'panel-open': activePanel }">
       <button class="mobile-tool-btn" :class="{ active: mobileAocDrawerOpen }" @click="toggleMobileTool('aoc')">
         <span class="mobile-tool-icon">產</span>
         <span>產區</span>
@@ -221,7 +221,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
@@ -756,6 +756,13 @@ const syncResponsiveLayout = () => {
     }
   }
 }
+
+const activePanel = computed(() => {
+  if (props.mobileAocDrawerOpen) return 'aoc'
+  if (mobileLayersOpen.value) return 'layers'
+  if (mobileInfoSheetState.value !== 'peek') return 'info'
+  return null
+})
 
 const toggleMobileLayers = () => {
   mobileLayersOpen.value = !mobileLayersOpen.value
@@ -2431,6 +2438,7 @@ onUnmounted(() => {
     z-index: 1300;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    transition: grid-template-columns 0.2s ease;
     gap: 8px;
     padding: 8px;
     border-radius: 18px;
@@ -2457,6 +2465,18 @@ onUnmounted(() => {
   .mobile-tool-btn.active {
     background: linear-gradient(180deg, #7b2424 0%, #5f1717 100%);
     color: #fff;
+  }
+
+  .mobile-map-toolbar.panel-open {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-map-toolbar.panel-open .mobile-tool-btn:not(.active) {
+    display: none;
+  }
+
+  .mobile-map-toolbar.panel-open .mobile-tool-btn.active {
+    min-height: 54px;
   }
 
   .mobile-tool-icon {
@@ -2510,6 +2530,10 @@ onUnmounted(() => {
   .mobile-map-toolbar {
     width: min(92vw, 360px);
   }
+
+  .map-controls {
+    width: min(92vw, 360px);
+  }
 }
 
 @media (max-width: 420px) {
@@ -2544,9 +2568,15 @@ onUnmounted(() => {
   .map-controls {
     left: 10px;
     right: 10px;
+    width: auto;
+    transform: translateY(calc(100% + 18px));
     bottom: calc(env(safe-area-inset-bottom, 0px) + 66px);
     border-radius: 16px;
     max-height: min(52vh, 360px);
+  }
+
+  .map-controls.mobile-open {
+    transform: translateY(0);
   }
 
   .map-info-bar {
