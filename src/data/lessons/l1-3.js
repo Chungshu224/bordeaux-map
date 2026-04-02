@@ -154,6 +154,10 @@ export const lessonContent = [
     ],
     content: `<div class="red-varieties">
       <p class="lead-text">波爾多紅酒的卓越品質來自於三個主要葡萄品種的完美調配，每個品種都有其獨特的特性和貢獻。</p>
+      <div class="course-image-block">
+        <img src="/images/courses/主要紅葡萄品種特徵.png" alt="主要紅葡萄品種特徵" class="course-img" />
+        <p class="img-caption">▲ 主要紅葡萄品種特徵對照</p>
+      </div>
       <div class="variety-profiles">
         <div class="cabernet-sauvignon">
           <h4>🍇 卡本內-蘇維濃 (Cabernet Sauvignon)</h4>
@@ -270,6 +274,10 @@ export const lessonContent = [
     ],
     content: `<div class="white-varieties">
       <p class="lead-text">波爾多白酒雖然產量不及紅酒，但同樣展現出卓越的品質，主要由兩個經典品種構成完美平衡。</p>
+      <div class="course-image-block">
+        <img src="/images/courses/主要白葡萄品種特徵.png" alt="主要白葡萄品種特徵" class="course-img" />
+        <p class="img-caption">▲ 主要白葡萄品種特徵對照</p>
+      </div>
       <div class="white-variety-profiles">
         <div class="sauvignon-blanc">
           <h4>🤍 白蘇維翁 (Sauvignon Blanc)</h4>

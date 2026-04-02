@@ -146,6 +146,20 @@ export const lessonContent = [
     }
   },
   {
+    title: '葡萄園水分管理',
+    highlights: [
+      { id: 1, icon: '💧', title: '灌溉技術', content: '滴灌系統精準控制水分供應，應對夏季乾燥期' }
+    ],
+    content: `<div class="irrigation-section">
+      <p class="lead-text">波爾多部分產區在乾燥年份採用精準灌溉技術，確保葡萄生長所需的穩定水分供應。</p>
+      <div class="course-image-block">
+        <img src="/images/courses/滴灌系統配置.png" alt="滴灌系統配置" class="course-img" />
+        <p class="img-caption">▲ 葡萄園滴灌系統配置示意</p>
+      </div>
+    </div>`,
+    hasMap: false
+  },
+  {
     title: '溫帶海洋性氣候 — 光照與濕度',
     type: 'chart',
     chartType: 'bar',
@@ -260,6 +274,10 @@ export const lessonContent = [
     ],
     content: `<div class="grape-growth-cycle-enhanced">
       <p class="lead-text">波爾多葡萄從休眠到採收的完整年度週期 — 12個月生長時鐘</p>
+      <div class="course-image-block">
+        <img src="/images/courses/葡萄藤生長階段圖.png" alt="葡萄藤生長階段圖" class="course-img" />
+        <p class="img-caption">▲ 葡萄藤年度生長階段示意圖</p>
+      </div>
       
       <!-- 圓形時鐘式布局 -->
       <div class="cycle-clock-container">
@@ -813,6 +831,16 @@ lessonContent.push(
             <li>抗病品種選擇</li>
             <li>生物防治方法</li>
           </ul>
+        </div>
+      </div>
+      <div class="course-image-row">
+        <div class="course-image-block">
+          <img src="/images/courses/冬季修剪技術.png" alt="冬季修剪技術" class="course-img" />
+          <p class="img-caption">▲ 冬季修剪技術示範</p>
+        </div>
+        <div class="course-image-block">
+          <img src="/images/courses/病蟲害鑑別圖.png" alt="病蟲害鑑別圖" class="course-img" />
+          <p class="img-caption">▲ 常見病蟲害鑑別圖</p>
         </div>
       </div>
       <div class="climate-adaptation">
