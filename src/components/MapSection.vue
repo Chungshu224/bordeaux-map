@@ -139,7 +139,7 @@
       </div>
     </div>
 
-    <div v-if="map" class="mobile-map-toolbar" :class="{ 'panel-open': activePanel }">
+    <div v-if="map" class="mobile-map-toolbar">
       <button class="mobile-tool-btn" :class="{ active: mobileAocDrawerOpen }" @click="toggleMobileTool('aoc')">
         <span class="mobile-tool-icon">產</span>
         <span>產區</span>
@@ -221,7 +221,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
@@ -756,13 +756,6 @@ const syncResponsiveLayout = () => {
     }
   }
 }
-
-const activePanel = computed(() => {
-  if (props.mobileAocDrawerOpen) return 'aoc'
-  if (mobileLayersOpen.value) return 'layers'
-  if (mobileInfoSheetState.value !== 'peek') return 'info'
-  return null
-})
 
 const toggleMobileLayers = () => {
   mobileLayersOpen.value = !mobileLayersOpen.value
@@ -2465,18 +2458,6 @@ onUnmounted(() => {
   .mobile-tool-btn.active {
     background: linear-gradient(180deg, #7b2424 0%, #5f1717 100%);
     color: #fff;
-  }
-
-  .mobile-map-toolbar.panel-open {
-    grid-template-columns: 1fr;
-  }
-
-  .mobile-map-toolbar.panel-open .mobile-tool-btn:not(.active) {
-    display: none;
-  }
-
-  .mobile-map-toolbar.panel-open .mobile-tool-btn.active {
-    min-height: 54px;
   }
 
   .mobile-tool-icon {
