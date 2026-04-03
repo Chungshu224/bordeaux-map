@@ -108,150 +108,66 @@ export const lessonContent = [
     type: 'chapter-divider',
     chapter: '2',
     title: '感官分析',
-    subtitle: '視覺、嗅覺與味覺品評',
-    icon: '👃',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-  },
-
-  {
-    title: '視覺品評：觀察酒色與外觀',
+    subt  {
+    title: '視覺品評 (1/3)：色澤分析',
     highlights: [
-      { id: 1, icon: '👁️', title: '色澤觀察', content: '從顏色深淺判斷酒款年齡和風格' },
-      { id: 2, icon: '💎', title: '透明度', content: '清澈度反映釀造工藝和儲存狀況' }
+      { id: 1, icon: '👁️', title: '色澤觀察', content: '從顏色深淺判斷酒款年齡和風格' }
     ],
     content: `<div class="visual-evaluation">
-      <p class="lead-text">視覺品評是品酒的第一步，通過觀察酒色、透明度和黏度，可以獲得關於酒款年齡、品種和品質的重要信息。</p>
+      <p class="lead-text">視覺品評是品酒的第一步，通過紅酒與白酒的顏色特徵，可以獲得關於酒款年齡與品種的初步信息。</p>
       <div class="visual-aspects">
-        <div class="color-analysis">
-          <h4>🎨 色澤分析</h4>
-          <div class="color-evaluation">
-            <div class="red-wine-colors">
-              <h5>紅酒顏色演變</h5>
-              <div class="color-stages">
-                <div class="young-red">
-                  <h6>年輕紅酒（1-3年）</h6>
-                  <ul>
-                    <li><strong>深紫紅色：</strong>卡本內-蘇維濃主導的左岸酒</li>
-                    <li><strong>寶石紅色：</strong>梅洛主導的右岸酒</li>
-                    <li><strong>邊緣顏色：</strong>紫色調明顯</li>
-                    <li><strong>整體印象：</strong>顏色濃郁，充滿活力</li>
-                  </ul>
-                </div>
-                <div class="mature-red">
-                  <h6>成熟紅酒（5-10年）</h6>
-                  <ul>
-                    <li><strong>紅寶石色：</strong>經典的成熟紅酒色澤</li>
-                    <li><strong>石榴石色：</strong>高品質酒款的特徵</li>
-                    <li><strong>邊緣變化：</strong>開始出現橙色調</li>
-                    <li><strong>深度變化：</strong>中心仍深，邊緣轉淺</li>
-                  </ul>
-                </div>
-                <div class="aged-red">
-                  <h6>陳年紅酒（10年以上）</h6>
-                  <ul>
-                    <li><strong>磚紅色：</strong>經典老酒色澤</li>
-                    <li><strong>褐色調：</strong>極老年份的特徵</li>
-                    <li><strong>邊緣特徵：</strong>明顯的棕色或橙色邊緣</li>
-                    <li><strong>整體變化：</strong>顏色變淺但更加複雜</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="white-wine-colors">
-              <h5>白酒顏色特徵</h5>
-              <div class="white-color-types">
-                <div class="dry-white-colors">
-                  <h6>干型白酒</h6>
-                  <ul>
-                    <li><strong>淺檸檬色：</strong>年輕白蘇維濃主導酒款</li>
-                    <li><strong>金黃色：</strong>橡木桶陳年或賽美容主導</li>
-                    <li><strong>稻草黃：</strong>中等陳年的優質白酒</li>
-                    <li><strong>琥珀色：</strong>長期陳年的頂級白酒</li>
-                  </ul>
-                </div>
-                <div class="sweet-wine-colors">
-                  <h6>甜酒色澤</h6>
-                  <ul>
-                    <li><strong>深金黃色：</strong>年輕貴腐甜酒</li>
-                    <li><strong>琥珀色：</strong>陳年蘇岱甜酒</li>
-                    <li><strong>深琥珀色：</strong>極老年份甜酒</li>
-                    <li><strong>焦糖色：</strong>百年老甜酒的色澤</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="color-analysis" style="margin-bottom: 20px;">
+          <h4>🍷 紅酒顏色演變</h4>
+          <img src="/images/L1-7/紅酒顏色演變.png" alt="紅酒顏色演變" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
         </div>
-        <div class="clarity-assessment">
+        <div class="color-analysis">
+          <h4>🥂 白酒顏色特徵</h4>
+          <img src="/images/L1-7/白酒顏色特徵.png" alt="白酒顏色特徵" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
+        </div>
+      </div>
+    </div>`,
+    hasMap: false
+  },
+  {
+    title: '視覺品評 (2/3)：透明度與黏度',
+    highlights: [
+      { id: 1, icon: '💎', title: '狀態評估', content: '清澈度與酒腿能反映結構與品質' }
+    ],
+    content: `<div class="visual-evaluation">
+      <div class="visual-aspects">
+        <div class="clarity-assessment" style="margin-bottom: 20px;">
           <h4>💎 透明度評估</h4>
-          <div class="clarity-factors">
-            <div class="clarity-levels">
-              <h5>清澈度等級</h5>
-              <ul>
-                <li><strong>水晶般清澈：</strong>頂級釀造工藝，現代過濾技術</li>
-                <li><strong>清澈：</strong>正常的高品質酒款標準</li>
-                <li><strong>略混濁：</strong>可能是未過濾或有沉澱</li>
-                <li><strong>混濁：</strong>可能有品質問題或過度陳年</li>
-              </ul>
-            </div>
-            <div class="sediment-observation">
-              <h5>沉澱物觀察</h5>
-              <ul>
-                <li><strong>結晶沉澱：</strong>正常的酒石酸結晶，無害</li>
-                <li><strong>細微沉澱：</strong>老酒的自然沉澱</li>
-                <li><strong>粗糙沉澱：</strong>可能的品質問題指標</li>
-                <li><strong>沉澱分布：</strong>觀察沉澱的形態和分布</li>
-              </ul>
-            </div>
-          </div>
+          <img src="/images/L1-7/透明度評估.png" alt="透明度評估" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
         </div>
         <div class="viscosity-evaluation">
           <h4>🌊 黏度與酒腿</h4>
-          <div class="viscosity-analysis">
-            <div class="wine-legs">
-              <h5>酒腿(酒淚)觀察</h5>
-              <ul>
-                <li><strong>形成速度：</strong>酒腿形成的快慢</li>
-                <li><strong>流動速度：</strong>沿杯壁下滑的速度</li>
-                <li><strong>持續時間：</strong>酒腿消失的時間</li>
-                <li><strong>密度分布：</strong>酒腿的密集程度</li>
-              </ul>
-            </div>
-            <div class="viscosity-indicators">
-              <h5>黏度指標意義</h5>
-              <ul>
-                <li><strong>高黏度：</strong>高酒精度或高糖分</li>
-                <li><strong>中等黏度：</strong>平衡的酒體結構</li>
-                <li><strong>低黏度：</strong>清淡酒體或低酒精度</li>
-                <li><strong>品質關聯：</strong>黏度與濃縮度的關係</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="observation-technique">
-          <h4>🔍 觀察技巧</h4>
-          <div class="observation-methods">
-            <div class="viewing-angles">
-              <h5>觀察角度</h5>
-              <ul>
-                <li><strong>垂直觀察：</strong>從上往下看酒液表面</li>
-                <li><strong>45度角：</strong>傾斜酒杯觀察色澤變化</li>
-                <li><strong>側面觀察：</strong>檢查透明度和沉澱</li>
-                <li><strong>光線透射：</strong>透過酒液觀察光線穿透</li>
-              </ul>
-            </div>
-            <div class="recording-notes">
-              <h5>記錄要點</h5>
-              <ul>
-                <li><strong>顏色描述：</strong>準確的色澤描述</li>
-                <li><strong>強度評估：</strong>顏色的濃淡程度</li>
-                <li><strong>變化觀察：</strong>從中心到邊緣的顏色變化</li>
-                <li><strong>整體印象：</strong>視覺帶來的初步判斷</li>
-              </ul>
-            </div>
-          </div>
+          <img src="/images/L1-7/黏度與酒腿.png" alt="黏度與酒腿" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
         </div>
       </div>
+    </div>`,
+    hasMap: false
+  },
+  {
+    title: '視覺品評 (3/3)：觀察技巧',
+    highlights: [
+      { id: 1, icon: '🔍', title: '觀察方法', content: '掌握正確角度與光線判讀' }
+    ],
+    content: `<div class="visual-evaluation">
+      <div class="visual-aspects">
+        <div class="observation-technique" style="margin-bottom: 20px;">
+          <h4>🔍 葡萄酒觀察技巧</h4>
+          <img src="/images/L1-7/葡萄酒觀察技巧.png" alt="葡萄酒觀察技巧" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
+        </div>
+      </div>
+    </div>`,
+    hasMap: false,
+    quiz: {
+      question: '紅酒出現明顯的橙色邊緣通常表示什麼？',
+      options: ['酒款有缺陷', '酒款正在成熟或已經陳年', '酒精度過高', '釀造工藝有問題'],
+      correct: 1,
+      explanation: '紅酒出現橙色邊緣是正常的陳年特徵，表示酒款正在成熟或已經經過一定時間的陳年，是酒款演化的自然過程。'
+    }
+  },    </div>
     </div>`,
     hasMap: false,
     quiz: {
