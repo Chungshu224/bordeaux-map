@@ -78,104 +78,19 @@ export const lessonContent = [
       <div class="preparation-elements">
         <div class="tasting-environment">
           <h4>🌟 品酒環境設置</h4>
-          <div class="environment-requirements">
-            <div class="lighting">
-              <h5>光線條件</h5>
-              <ul>
-                <li><strong>自然光最佳：</strong>白天使用自然光線觀察酒色</li>
-                <li><strong>避免有色光：</strong>不使用黃光或彩色燈光</li>
-                <li><strong>白色背景：</strong>使用白紙或白布作為對比背景</li>
-                <li><strong>光線充足：</strong>確保能清楚觀察酒液透明度和色澤</li>
-              </ul>
-            </div>
-            <div class="room-conditions">
-              <h5>室內環境</h5>
-              <ul>
-                <li><strong>溫度控制：</strong>18-20°C的舒適品酒溫度</li>
-                <li><strong>空氣清新：</strong>避免香水、煙味等雜味干擾</li>
-                <li><strong>安靜空間：</strong>減少噪音，專注品酒體驗</li>
-                <li><strong>適當濕度：</strong>50-70%的相對濕度</li>
-              </ul>
-            </div>
-          </div>
+          <img src="/images/L1-7/品酒環境設置.png" alt="品酒環境設置" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
         </div>
         <div class="glassware-selection">
           <h4>🥃 酒杯選擇與準備</h4>
-          <div class="glassware-details">
-            <div class="glass-types">
-              <h5>酒杯類型</h5>
-              <ul>
-                <li><strong>波爾多杯型：</strong>較大杯身，適合紅酒的香氣展現</li>
-                <li><strong>勃艮地杯型：</strong>更寬杯身，適合精緻紅酒</li>
-                <li><strong>白酒杯：</strong>較小杯身，保持白酒的清新</li>
-                <li><strong>甜酒杯：</strong>小型杯，濃縮甜酒香氣</li>
-              </ul>
-            </div>
-            <div class="glass-preparation">
-              <h5>酒杯準備</h5>
-              <ul>
-                <li><strong>清潔無味：</strong>確保酒杯完全清潔，無洗劑殘留</li>
-                <li><strong>適當溫度：</strong>室溫下的酒杯，避免過冷或過熱</li>
-                <li><strong>乾燥狀態：</strong>完全乾燥，避免水分稀釋</li>
-                <li><strong>數量準備：</strong>每款酒使用單獨酒杯</li>
-              </ul>
-            </div>
-          </div>
+          <img src="/images/L1-7/酒杯選擇與準備.png" alt="酒杯選擇與準備" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
         </div>
         <div class="serving-temperature">
           <h4>🌡️ 侍酒溫度指南</h4>
-          <div class="temperature-guidelines">
-            <div class="red-wine-temperatures">
-              <h5>紅酒溫度</h5>
-              <ul>
-                <li><strong>年輕紅酒：</strong>14-16°C，突出果香和清新感</li>
-                <li><strong>成熟紅酒：</strong>16-18°C，展現複雜香氣和結構</li>
-                <li><strong>頂級老酒：</strong>18-20°C，完全展現陳年特色</li>
-                <li><strong>加溫原則：</strong>寧可稍涼，讓酒在杯中自然升溫</li>
-              </ul>
-            </div>
-            <div class="white-wine-temperatures">
-              <h5>白酒溫度</h5>
-              <ul>
-                <li><strong>年輕白酒：</strong>8-10°C，保持清新活潑</li>
-                <li><strong>橡木桶白酒：</strong>10-12°C，展現複雜度</li>
-                <li><strong>甜酒：</strong>6-8°C，平衡甜度和酸度</li>
-                <li><strong>起泡酒：</strong>6-8°C，保持氣泡細緻</li>
-              </ul>
-            </div>
-            <div class="temperature-control">
-              <h5>溫度控制方法</h5>
-              <ul>
-                <li><strong>冰桶冷卻：</strong>冰水混合，快速降溫</li>
-                <li><strong>冰箱預冷：</strong>提前1-2小時放入冰箱</li>
-                <li><strong>酒窖儲存：</strong>恆溫酒窖的理想儲存</li>
-                <li><strong>室溫回溫：</strong>過冷的酒可室溫回升</li>
-              </ul>
-            </div>
-          </div>
+          <img src="/images/L1-7/侍酒溫度指南.png" alt="侍酒溫度指南" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
         </div>
         <div class="decanting-guide">
           <h4>🍶 醒酒與換瓶</h4>
-          <div class="decanting-details">
-            <div class="when-to-decant">
-              <h5>何時需要醒酒</h5>
-              <ul>
-                <li><strong>年輕單寧重酒：</strong>左岸年輕紅酒，軟化單寧</li>
-                <li><strong>老年份酒款：</strong>分離沉澱物，展現香氣</li>
-                <li><strong>封閉酒款：</strong>開啟內斂的香氣表現</li>
-                <li><strong>特殊年份：</strong>需要氧化發展的年份</li>
-              </ul>
-            </div>
-            <div class="decanting-time">
-              <h5>醒酒時間建議</h5>
-              <ul>
-                <li><strong>年輕波爾多：</strong>1-3小時，充分氧化</li>
-                <li><strong>中等陳年：</strong>30分鐘-1小時</li>
-                <li><strong>老年份酒：</strong>15-30分鐘，避免過度氧化</li>
-                <li><strong>精緻老酒：</strong>即開即飲，或輕微醒酒</li>
-              </ul>
-            </div>
-          </div>
+          <img src="/images/L1-7/醒酒與換瓶.png" alt="醒酒與換瓶" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
         </div>
       </div>
     </div>`,
