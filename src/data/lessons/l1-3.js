@@ -15,7 +15,7 @@ export const lessonContent = [
         </p>
 
         <p class="intro-context">
-          本課程將帶您認識波爾多最重要的六大葡萄品種。紅葡萄品種：赤霞珠 (Cabernet Sauvignon)、梅洛 (Merlot)、卡本內弗朗 (Cabernet Franc)；白葡萄品種：賽美蓉 (Sémillon)、白蘇維濃 (Sauvignon Blanc)、密思卡岱 (Muscadelle)。我們將深入學習每個品種的特性、風味特徵、種植區域，以及它們在混釀中扮演的角色。
+          本課程將帶您認識波爾多最重要的六大葡萄品種。紅葡萄品種：卡本內蘇維濃 (Cabernet Sauvignon)、梅洛 (Merlot)、卡本內弗朗 (Cabernet Franc)；白葡萄品種：賽美蓉 (Sémillon)、白蘇維濃 (Sauvignon Blanc)、密思卡岱 (Muscadelle)。我們將深入學習每個品種的特性、風味特徵、種植區域，以及它們在混釀中扮演的角色。
         </p>
 
         <h3 class="section-title">本課程學習目標</h3>
@@ -33,7 +33,7 @@ export const lessonContent = [
 
           <div class="point-item">
             <h4>🗺️ 認識品種-產區配對</h4>
-            <p>理解左岸以赤霞珠為主、右岸以梅洛為主的原因與邏輯</p>
+            <p>理解左岸以卡本內蘇維濃為主、右岸以梅洛為主的原因與邏輯</p>
           </div>
 
           <div class="point-item">
@@ -269,7 +269,7 @@ export const lessonContent = [
   {
     title: '白酒葡萄品種：清香典雅',
     highlights: [
-      { id: 1, icon: '🤍', title: '白蘇維翁', content: '清新爽口，帶有青草和柑橘香氣' },
+      { id: 1, icon: '🤍', title: '白蘇維濃', content: '清新爽口，帶有青草和柑橘香氣' },
       { id: 2, icon: '🍯', title: '賽美容', content: '圓潤豐富，適合釀造甜酒' }
     ],
     content: `<div class="white-varieties">
@@ -280,7 +280,7 @@ export const lessonContent = [
       </div>
       <div class="white-variety-profiles">
         <div class="sauvignon-blanc">
-          <h4>🤍 白蘇維翁 (Sauvignon Blanc)</h4>
+          <h4>🤍 白蘇維濃 (Sauvignon Blanc)</h4>
           <div class="variety-details">
             <div class="characteristics">
               <h5>品種特性</h5>
@@ -374,7 +374,7 @@ export const lessonContent = [
     </div>`,
     hasMap: true,
     geojsonPaths: [
-      // 白蘇維翁 (Sauvignon Blanc) 主要干白產區
+      // 白蘇維濃 (Sauvignon Blanc) 主要干白產區
       '/geojson/LeftBank/Graves/Pessac-Leognan_AOC.geojson',  // 頂級干白產區
       '/geojson/LeftBank/Graves/Graves_AOC.geojson',          // 傳統干白產區
       '/geojson/Entre-Deux-Mers/Entre-Deux-Mers_AOC.geojson', // 清爽干白產區
@@ -384,10 +384,10 @@ export const lessonContent = [
       '/geojson/Sauternais/Barsac_AOC.geojson'                // 優雅甜酒產區
     ],
     quiz: {
-  question: '波爾多白酒中，白蘇維翁葡萄的主要作用是什麼？',
+  question: '波爾多白酒中，白蘇維濃葡萄的主要作用是什麼？',
       options: ['提供甜度和酒體', '增加花香和香料氣息', '提供酸度和清新感', '增加酒精度和濃郁度'],
       correct: 2,
-  explanation: '白蘇維翁是波爾多白酒的重要品種，以其高酸度和清新的果香著稱，為調配酒提供骨架結構和活潑的口感。'
+  explanation: '白蘇維濃是波爾多白酒的重要品種，以其高酸度和清新的果香著稱，為調配酒提供骨架結構和活潑的口感。'
     }
   },
 
@@ -457,7 +457,7 @@ export const lessonContent = [
               <div class="blend-composition">
                 <p><strong>典型比例：</strong></p>
                 <ul>
-                  <li>白蘇維翁：60-80%</li>
+                  <li>白蘇維濃：60-80%</li>
                   <li>賽美容：20-40%</li>
                   <li>慕絲卡岱：0-10%</li>
                 </ul>
@@ -470,7 +470,7 @@ export const lessonContent = [
                 <p><strong>典型比例：</strong></p>
                 <ul>
                   <li>賽美容：60-90%</li>
-                  <li>白蘇維翁：10-30%</li>
+                  <li>白蘇維濃：10-30%</li>
                   <li>慕絲卡岱：5-15%</li>
                 </ul>
                 <p><strong>風格特點：</strong>濃郁甜美，複雜度高，超長陳年潛力</p>
@@ -480,7 +480,7 @@ export const lessonContent = [
           <div class="white-blending-benefits">
             <h5>白酒調配優勢</h5>
             <ul>
-              <li><strong>酸度平衡：</strong>白蘇維翁提供活力，賽美容增加豐滿</li>
+              <li><strong>酸度平衡：</strong>白蘇維濃提供活力，賽美容增加豐滿</li>
               <li><strong>香氣互補：</strong>清新果香與蜂蜜香氣的完美結合</li>
               <li><strong>質感層次：</strong>爽脆與圓潤的質感平衡</li>
               <li><strong>陳年發展：</strong>不同品種在陳年中展現不同特質</li>
@@ -495,7 +495,7 @@ export const lessonContent = [
               <ul>
                 <li>增加梅洛比例，帶來清新感</li>
                 <li>加入更多卡本內-弗朗，增加酸度</li>
-                <li>白酒中提高白蘇維翁比例</li>
+                <li>白酒中提高白蘇維濃比例</li>
                 <li>控制酒精度，保持平衡</li>
               </ul>
             </div>
@@ -515,7 +515,7 @@ export const lessonContent = [
     hasMap: false,
     quiz: {
       question: '波爾多右岸酒款主要以哪個葡萄品種為主導？',
-  options: ['卡本內-蘇維濃', '梅洛', '卡本內-弗朗', '白蘇維翁'],
+  options: ['卡本內-蘇維濃', '梅洛', '卡本內-弗朗', '白蘇維濃'],
       correct: 1,
       explanation: '波爾多右岸（聖愛美濃、龐美侯等）以梅洛為主導品種，通常佔60-90%，創造出柔順優雅、早期適飲的酒款風格。'
     }
@@ -671,3 +671,5 @@ export const lessonContent = [
 ]
 
 export default lessonContent
+
+

@@ -1246,7 +1246,7 @@ export const climateAndEnvironmentContent = {
                   <li>分布：主要在東部靠近Gironde河的丘陵</li>
                   <li>成分：石英、燧石砂礫，混合黏土和沙土</li>
                   <li>特性：排水良好、保溫性佳、反射陽光</li>
-                  <li>適合品種：赤霞珠表現卓越</li>
+                  <li>適合品種：卡本內蘇維濃表現卓越</li>
                 </ul>
               </li>
               <li><strong>黏土-石灰岩：</strong>
@@ -1297,7 +1297,7 @@ export const climateAndEnvironmentContent = {
                 <ul>
                   <li>範圍：覆蓋整個Médoc半島</li>
                   <li>特色：主要為日常飲用的優質紅酒</li>
-                  <li>品種：赤霞珠、梅洛、品麗珠等</li>
+                  <li>品種：卡本內蘇維濃、梅洛、卡本內弗朗等</li>
                 </ul>
               </li>
               <li><strong>Haut-Médoc AOC：</strong>
@@ -1352,7 +1352,7 @@ export const climateAndEnvironmentContent = {
               <li><strong>位置：</strong>Pauillac北部，面向Gironde河</li>
               <li><strong>面積：</strong>107公頃葡萄園</li>
               <li><strong>土壤：</strong>優質砂礫土，排水極佳</li>
-              <li><strong>品種比例：</strong>赤霞珠70%、梅洛25%、品麗珠3%、小維度2%</li>
+              <li><strong>品種比例：</strong>卡本內蘇維濃70%、梅洛25%、卡本內弗朗3%、小維度2%</li>
               <li><strong>風格特色：</strong>優雅細膩、香氣複雜、陳年潛力極佳</li>
               <li><strong>歷史：</strong>自17世紀起即享有盛名，拿破崙時代的"王者之酒"</li>
             </ul>
@@ -1362,7 +1362,7 @@ export const climateAndEnvironmentContent = {
               <li><strong>位置：</strong>Pauillac東南部，Gironde河畔最佳位置</li>
               <li><strong>面積：</strong>66公頃葡萄園</li>
               <li><strong>土壤：</strong>深厚砂礫土，含豐富鐵質</li>
-              <li><strong>品種比例：</strong>赤霞珠75%、梅洛20%、品麗珠4%、小維度1%</li>
+              <li><strong>品種比例：</strong>卡本內蘇維濃75%、梅洛20%、卡本內弗朗4%、小維度1%</li>
               <li><strong>風格特色：</strong>力量強勁、結構緊實、需長期陳年</li>
               <li><strong>特點：</strong>擁有標誌性的古塔，象徵堅固不變的品質</li>
             </ul>
@@ -1372,7 +1372,7 @@ export const climateAndEnvironmentContent = {
               <li><strong>位置：</strong>Margaux村中心，地勢略高</li>
               <li><strong>面積：</strong>87公頃葡萄園（82公頃紅酒，5公頃白酒）</li>
               <li><strong>土壤：</strong>砂礫土為主，含石灰岩成分</li>
-              <li><strong>品種比例：</strong>赤霞珠75%、梅洛20%、品麗珠3%、小維度2%</li>
+              <li><strong>品種比例：</strong>卡本內蘇維濃75%、梅洛20%、卡本內弗朗3%、小維度2%</li>
               <li><strong>風格特色：</strong>精緻優雅、香氣迷人、單寧絲滑</li>
               <li><strong>建築：</strong>新古典主義城堡，波爾多最美酒莊之一</li>
             </ul>
@@ -1382,7 +1382,7 @@ export const climateAndEnvironmentContent = {
               <li><strong>位置：</strong>Pauillac高地，與Lafite相鄰</li>
               <li><strong>面積：</strong>84公頃葡萄園</li>
               <li><strong>土壤：</strong>砂礫土，深度和質量俱佳</li>
-              <li><strong>品種比例：</strong>赤霞珠81%、梅洛15%、品麗珠3%、小維度1%</li>
+              <li><strong>品種比例：</strong>卡本內蘇維濃81%、梅洛15%、卡本內弗朗3%、小維度1%</li>
               <li><strong>風格特色：</strong>濃郁豐富、果味突出、現代感強</li>
               <li><strong>特色：</strong>每年邀請藝術家設計酒標，文化價值獨特</li>
             </ul>
@@ -1424,7 +1424,7 @@ export const climateAndEnvironmentContent = {
             
             <h4>主要品種角色</h4>
             <ul>
-              <li><strong>赤霞珠（Cabernet Sauvignon）：</strong>
+              <li><strong>卡本內蘇維濃（Cabernet Sauvignon）：</strong>
                 <ul>
                   <li>角色：主導品種，提供結構和陳年潛力</li>
                   <li>比例：通常50-80%</li>
@@ -1440,7 +1440,7 @@ export const climateAndEnvironmentContent = {
                   <li>適應性：在黏土較多的土壤上表現佳</li>
                 </ul>
               </li>
-              <li><strong>品麗珠（Cabernet Franc）：</strong>
+              <li><strong>卡本內弗朗（Cabernet Franc）：</strong>
                 <ul>
                   <li>角色：增加香氣複雜性和優雅度</li>
                   <li>比例：通常5-15%</li>
@@ -1510,7 +1510,7 @@ export const climateAndEnvironmentContent = {
               <li><strong>一級香氣（品種香）：</strong>
                 <ul>
                   <li>黑醋栗、黑櫻桃、李子等黑色果實</li>
-                  <li>青椒、薄荷等植物性香氣（主要來自品麗珠）</li>
+                  <li>青椒、薄荷等植物性香氣（主要來自卡本內弗朗）</li>
                   <li>紫羅蘭等花香（優質年份特有）</li>
                 </ul>
               </li>
@@ -1551,7 +1551,7 @@ export const climateAndEnvironmentContent = {
             <h4>Pauillac風格</h4>
             <ul>
               <li><strong>土壤優勢：</strong>深厚砂礫土，排水完美</li>
-              <li><strong>品種表現：</strong>赤霞珠達到巔峰水準</li>
+              <li><strong>品種表現：</strong>卡本內蘇維濃達到巔峰水準</li>
               <li><strong>酒款特色：</strong>力量與優雅並存，平衡性卓越</li>
               <li><strong>香氣特徵：</strong>黑醋栗為主，雪松木香氣明顯</li>
             </ul>
@@ -1611,7 +1611,7 @@ export const climateAndEnvironmentContent = {
           {
             id: 'medoc-soil-2',
             type: 'multiple-choice',
-            question: '在Médoc地區，哪種土壤類型最適合赤霞珠的生長？',
+            question: '在Médoc地區，哪種土壤類型最適合卡本內蘇維濃的生長？',
             options: [
               '純沙土',
               '重黏土',
@@ -1619,7 +1619,7 @@ export const climateAndEnvironmentContent = {
               '石灰岩土'
             ],
             correct: 2,
-            explanation: '砂礫土（Graves）排水良好、保溫性佳，能反射陽光幫助葡萄成熟，特別適合赤霞珠這種晚熟品種。'
+            explanation: '砂礫土（Graves）排水良好、保溫性佳，能反射陽光幫助葡萄成熟，特別適合卡本內蘇維濃這種晚熟品種。'
           },
           {
             id: 'medoc-aoc-3',
@@ -1650,7 +1650,7 @@ export const climateAndEnvironmentContent = {
           {
             id: 'medoc-blend-5',
             type: 'multiple-choice',
-            question: '在Médoc的調配中，赤霞珠通常扮演什麼角色？',
+            question: '在Médoc的調配中，卡本內蘇維濃通常扮演什麼角色？',
             options: [
               '增加果味和柔順度',
               '提供結構和陳年潛力',
@@ -1658,7 +1658,7 @@ export const climateAndEnvironmentContent = {
               '提升酒的顏色深度'
             ],
             correct: 1,
-            explanation: '赤霞珠是Médoc調配的主導品種，提供強勁的單寧結構、高酸度和優秀的陳年潛力。'
+            explanation: '卡本內蘇維濃是Médoc調配的主導品種，提供強勁的單寧結構、高酸度和優秀的陳年潛力。'
           },
           {
             id: 'medoc-villages-6',
@@ -1878,7 +1878,7 @@ export const climateAndEnvironmentContent = {
             <h3>風土對葡萄品種的影響</h3>
             <p>Margaux的土壤特性特別適合某些葡萄品種：</p>
             
-            <h4>赤霞珠（Cabernet Sauvignon）</h4>
+            <h4>卡本內蘇維濃（Cabernet Sauvignon）</h4>
             <ul>
               <li>在砂礫土上表現優異，單寧精緻不粗糙</li>
               <li>香氣更加複雜，帶有典型的紫羅蘭花香</li>
@@ -1892,7 +1892,7 @@ export const climateAndEnvironmentContent = {
               <li>增加果味和早期適飲性</li>
             </ul>
 
-            <h4>品麗珠（Cabernet Franc）</h4>
+            <h4>卡本內弗朗（Cabernet Franc）</h4>
             <ul>
               <li>貢獻香氣複雜性</li>
               <li>增加酒款的優雅度和精緻感</li>
@@ -1927,9 +1927,9 @@ export const climateAndEnvironmentContent = {
 
             <h4>品種配置</h4>
             <ul>
-              <li><strong>赤霞珠：</strong>75% - 提供結構和陳年潛力</li>
+              <li><strong>卡本內蘇維濃：</strong>75% - 提供結構和陳年潛力</li>
               <li><strong>梅洛：</strong>20% - 增加豐滿度和柔順性</li>
-              <li><strong>品麗珠：</strong>3% - 貢獻香氣複雜性</li>
+              <li><strong>卡本內弗朗：</strong>3% - 貢獻香氣複雜性</li>
               <li><strong>小維度：</strong>2% - 增加顏色深度和辛香料味</li>
             </ul>
 
@@ -2333,12 +2333,12 @@ export const climateAndEnvironmentContent = {
             question: 'Margaux酒款中哪個品種通常佔主導地位？',
             options: [
               '梅洛（Merlot）',
-              '赤霞珠（Cabernet Sauvignon）',
-              '品麗珠（Cabernet Franc）',
+              '卡本內蘇維濃（Cabernet Sauvignon）',
+              '卡本內弗朗（Cabernet Franc）',
               '小維度（Petit Verdot）'
             ],
             correct: 1,
-            explanation: '赤霞珠通常在Margaux酒款中佔主導地位，一般佔60-80%，在砂礫土上表現出優雅精緻的特色。'
+            explanation: '卡本內蘇維濃通常在Margaux酒款中佔主導地位，一般佔60-80%，在砂礫土上表現出優雅精緻的特色。'
           },
           {
             id: 'margaux-tannin-6',
@@ -4925,3 +4925,4 @@ export const assessmentCriteria = {
     skills: ['soil-science-knowledge', 'terroir-analysis', 'scientific-reasoning', 'practical-application']
   }
 }
+

@@ -248,7 +248,7 @@ export const lessonContent = [
                 <div class="dry-white-colors">
                   <h6>干型白酒</h6>
                   <ul>
-                    <li><strong>淺檸檬色：</strong>年輕白蘇維翁主導酒款</li>
+                    <li><strong>淺檸檬色：</strong>年輕白蘇維濃主導酒款</li>
                     <li><strong>金黃色：</strong>橡木桶陳年或賽美容主導</li>
                     <li><strong>稻草黃：</strong>中等陳年的優質白酒</li>
                     <li><strong>琥珀色：</strong>長期陳年的頂級白酒</li>
@@ -393,7 +393,7 @@ export const lessonContent = [
                   <div class="white-varieties-aromas">
                     <h6>白葡萄品種</h6>
                     <ul>
-                      <li><strong>白蘇維翁：</strong>青草、番石榴、檸檬皮</li>
+                      <li><strong>白蘇維濃：</strong>青草、番石榴、檸檬皮</li>
                       <li><strong>賽美容：</strong>蜂蜜、蜂蠟、白桃</li>
                       <li><strong>慕絲卡岱：</strong>玫瑰花、荔枝、麝香</li>
                     </ul>
@@ -513,7 +513,7 @@ export const lessonContent = [
     hasMap: false,
     quiz: {
       question: '波爾多葡萄酒中的"鉛筆芯"香氣通常來自哪個葡萄品種？',
-  options: ['梅洛', '卡本內-蘇維濃', '卡本內-弗朗', '白蘇維翁'],
+  options: ['梅洛', '卡本內-蘇維濃', '卡本內-弗朗', '白蘇維濃'],
       correct: 1,
       explanation: '鉛筆芯或石墨香氣是卡本內-蘇維濃品種的典型一層香氣特徵，特別是在波爾多左岸的優質酒款中經常出現。'
     }
@@ -891,3 +891,4 @@ export const lessonContent = [
 ]
 
 export default lessonContent
+

@@ -121,7 +121,7 @@ export const l310Content = [
       },
       {
         subtitle: '波爾多白酒的酸度優勢',
-        text: 'Pessac-Léognan的白酒以白蘇維翁為主，酸度爽脆，搭配生蠔、白魚、山羊乳酪等食物時，酸度能提升海洋鮮味，創造清爽的體驗。'
+        text: 'Pessac-Léognan的白酒以白蘇維濃為主，酸度爽脆，搭配生蠔、白魚、山羊乳酪等食物時，酸度能提升海洋鮮味，創造清爽的體驗。'
       }
     ]
   },
@@ -267,7 +267,7 @@ export const l310Content = [
           {
             dish: '烤羊腿配蒜蓉',
             wine: 'Château Cheval Blanc (St-Émilion)',
-            reason: 'Cheval Blanc獨特的品麗珠比例（40%）帶來草本、紫羅蘭氣息，與蒜蓉和羊肉和諧。'
+            reason: 'Cheval Blanc獨特的卡本內弗朗比例（40%）帶來草本、紫羅蘭氣息，與蒜蓉和羊肉和諧。'
           },
           {
             dish: '燉羊肉配紅酒醬',
@@ -366,7 +366,7 @@ export const l310Content = [
           {
             oyster: 'Gillardeau 3號生蠔',
             wine: 'Château Smith Haut Lafitte Blanc',
-            reason: '白蘇維翁的檸檬酸度、葡萄柚氣息與生蠔的海洋鮮味完美提升，礦質感呼應。'
+            reason: '白蘇維濃的檸檬酸度、葡萄柚氣息與生蠔的海洋鮮味完美提升，礦質感呼應。'
           },
           {
             oyster: 'Marennes-Oléron生蠔',
@@ -892,3 +892,5 @@ export const l310Content = [
 ]
 
 export default l310Content
+
+

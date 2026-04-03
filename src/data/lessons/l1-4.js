@@ -11,7 +11,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          「左岸還是右岸？」這是波爾多愛好者最常討論的話題。吉隆河 (Gironde) 如同一條分界線，將波爾多劃分為截然不同的兩個世界：左岸的礫石土壤孕育出強勁優雅的赤霞珠，右岸的黏土與石灰岩則讓梅洛展現柔順飽滿的魅力。
+          「左岸還是右岸？」這是波爾多愛好者最常討論的話題。吉隆河 (Gironde) 如同一條分界線，將波爾多劃分為截然不同的兩個世界：左岸的礫石土壤孕育出強勁優雅的卡本內蘇維濃，右岸的黏土與石灰岩則讓梅洛展現柔順飽滿的魅力。
         </p>
 
         <p class="intro-context">
@@ -33,7 +33,7 @@ export const lessonContent = [
 
           <div class="point-item">
             <h4>🍇 認識品種配置</h4>
-            <p>學習為何左岸偏愛赤霞珠、右岸鍾情梅洛的土壤與氣候原因</p>
+            <p>學習為何左岸偏愛卡本內蘇維濃、右岸鍾情梅洛的土壤與氣候原因</p>
           </div>
 
           <div class="point-item">
@@ -460,3 +460,4 @@ export const lessonContent = [
 ]
 
 export default lessonContent
+

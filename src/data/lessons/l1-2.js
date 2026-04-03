@@ -13,7 +13,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          葡萄酒是自然的產物，而氣候是決定葡萄酒風格最關鍵的自然因素之一。波爾多擁有得天獨厚的溫帶海洋性氣候——溫暖但不炎熱、濕潤但不過分、四季分明但變化溫和。這樣的氣候條件，為赤霞珠、梅洛等葡萄品種創造了理想的生長環境。
+          葡萄酒是自然的產物，而氣候是決定葡萄酒風格最關鍵的自然因素之一。波爾多擁有得天獨厚的溫帶海洋性氣候——溫暖但不炎熱、濕潤但不過分、四季分明但變化溫和。這樣的氣候條件，為卡本內蘇維濃、梅洛等葡萄品種創造了理想的生長環境。
         </p>
 
         <p class="intro-context">
@@ -1579,3 +1579,4 @@ lessonContent.push(
 )
 
 export default lessonContent
+

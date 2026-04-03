@@ -7,11 +7,11 @@ export const l23Content = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          Pauillac——波爾多的王冠，葡萄酒世界的權力中心。在這個僅1,200公頃的產區內，坐落著三座1855一級酒莊（Château Latour、Lafite Rothschild、Mouton Rothschild），以及18座其他列級酒莊。Pauillac定義了頂級赤霞珠葡萄酒的標準：強勁、優雅、複雜、持久。
+          Pauillac——波爾多的王冠，葡萄酒世界的權力中心。在這個僅1,200公頃的產區內，坐落著三座1855一級酒莊（Château Latour、Lafite Rothschild、Mouton Rothschild），以及18座其他列級酒莊。Pauillac定義了頂級卡本內蘇維濃葡萄酒的標準：強勁、優雅、複雜、持久。
         </p>
 
         <p class="intro-context">
-          本課程將帶您深入探索Pauillac的王者風範。我們將學習Pauillac得天獨厚的地理位置——位於Médoc心臟地帶、Gironde河岸最佳段落；深厚的砂礫土壤如何賦予赤霞珠無與倫比的結構與陳年潛力；三座一級莊（Latour的力量、Lafite的優雅、Mouton的華麗）各自的風格特徵；以及Pauillac的「黑色水果、雪松、鉛筆芯、石墨」經典香氣譜系的成因。
+          本課程將帶您深入探索Pauillac的王者風範。我們將學習Pauillac得天獨厚的地理位置——位於Médoc心臟地帶、Gironde河岸最佳段落；深厚的砂礫土壤如何賦予卡本內蘇維濃無與倫比的結構與陳年潛力；三座一級莊（Latour的力量、Lafite的優雅、Mouton的華麗）各自的風格特徵；以及Pauillac的「黑色水果、雪松、鉛筆芯、石墨」經典香氣譜系的成因。
         </p>
 
         <h3 class="section-title">本課程學習目標</h3>
@@ -328,7 +328,7 @@ export const l23Content = [
       { id: 1, icon: '👑', title: '王者地位', content: '波爾多最負盛名的一級莊之一' },
       { id: 2, icon: '🌿', title: '經典風格', content: '優雅、精緻、細膩的極致表現' }
     ],
-    content: '<div class="pauillac-estates"><p class="lead-text">Château Lafite Rothschild 拉菲古堡,位於Pauillac北部,是波爾多最負盛名的酒莊之一,以其無與倫比的優雅風格和悠久歷史而聞名於世。</p><div class="estates-analysis"><div class="estate-section lafite"><h4>🏰 拉菲古堡簡介</h4><div class="estate-profile"><div class="profile-card history"><h5>📜 歷史淵源</h5><div class="history-details"><p><strong>源起：</strong>酒莊歷史可追溯至中世紀,1868年由羅斯柴爾德家族(Rothschild)收購,至今仍由家族經營管理。</p><p><strong>榮耀：</strong>1855年梅多克分級中被評為一級莊(Premier Grand Cru Classé),奠定了其頂級地位。</p></div></div><div class="profile-card vineyard"><h5>🍇 葡萄園概況</h5><div class="vineyard-details"><p><strong>面積：</strong>葡萄園總面積約112公頃,是Pauillac最大的一級莊葡萄園。</p><p><strong>土壤：</strong>深厚的Gunz砂礫層,排水性極佳,為赤霞珠提供理想的生長環境。</p><p><strong>品種配置：</strong>以赤霞珠(Cabernet Sauvignon)為主,約佔70%,搭配梅洛(Merlot)、品麗珠(Cabernet Franc)和小維多(Petit Verdot)。</p></div></div><div class="profile-card characteristics"><h5>🎯 風格特色</h5><div class="style-details"><p><strong>風格：</strong>以極致的優雅、精緻和平衡著稱,力量蘊含其中而非顯露在外,被譽為「王者之酒」。</p><p><strong>香氣：</strong>年輕時展現黑醋栗、覆盆子等紅色水果香氣,伴隨獨特的礦物氣息(鉛筆芯、石墨)和精緻的花香(紫羅蘭)。陳年後發展出雪松、皮革、煙草和雪茄盒的複雜香氣。</p><p><strong>口感：</strong>單寧極為細膩絲滑,結構完美平衡,酸度清新,餘韻悠長且帶有礦物感,陳年潛力可達數十年。</p></div></div><div class="profile-card production"><h5>🍷 釀造與產量</h5><div class="production-details"><p><strong>釀造：</strong>手工採收,嚴格篩選,在橡木桶中陳釀18-20個月,其中新桶比例約為100%。</p><p><strong>產量：</strong>正牌酒(Grand Vin)年產量約18,000-20,000箱,副牌酒為Carruades de Lafite。</p></div></div></div></div></div></div>',
+    content: '<div class="pauillac-estates"><p class="lead-text">Château Lafite Rothschild 拉菲古堡,位於Pauillac北部,是波爾多最負盛名的酒莊之一,以其無與倫比的優雅風格和悠久歷史而聞名於世。</p><div class="estates-analysis"><div class="estate-section lafite"><h4>🏰 拉菲古堡簡介</h4><div class="estate-profile"><div class="profile-card history"><h5>📜 歷史淵源</h5><div class="history-details"><p><strong>源起：</strong>酒莊歷史可追溯至中世紀,1868年由羅斯柴爾德家族(Rothschild)收購,至今仍由家族經營管理。</p><p><strong>榮耀：</strong>1855年梅多克分級中被評為一級莊(Premier Grand Cru Classé),奠定了其頂級地位。</p></div></div><div class="profile-card vineyard"><h5>🍇 葡萄園概況</h5><div class="vineyard-details"><p><strong>面積：</strong>葡萄園總面積約112公頃,是Pauillac最大的一級莊葡萄園。</p><p><strong>土壤：</strong>深厚的Gunz砂礫層,排水性極佳,為卡本內蘇維濃提供理想的生長環境。</p><p><strong>品種配置：</strong>以卡本內蘇維濃(Cabernet Sauvignon)為主,約佔70%,搭配梅洛(Merlot)、卡本內弗朗(Cabernet Franc)和小維多(Petit Verdot)。</p></div></div><div class="profile-card characteristics"><h5>🎯 風格特色</h5><div class="style-details"><p><strong>風格：</strong>以極致的優雅、精緻和平衡著稱,力量蘊含其中而非顯露在外,被譽為「王者之酒」。</p><p><strong>香氣：</strong>年輕時展現黑醋栗、覆盆子等紅色水果香氣,伴隨獨特的礦物氣息(鉛筆芯、石墨)和精緻的花香(紫羅蘭)。陳年後發展出雪松、皮革、煙草和雪茄盒的複雜香氣。</p><p><strong>口感：</strong>單寧極為細膩絲滑,結構完美平衡,酸度清新,餘韻悠長且帶有礦物感,陳年潛力可達數十年。</p></div></div><div class="profile-card production"><h5>🍷 釀造與產量</h5><div class="production-details"><p><strong>釀造：</strong>手工採收,嚴格篩選,在橡木桶中陳釀18-20個月,其中新桶比例約為100%。</p><p><strong>產量：</strong>正牌酒(Grand Vin)年產量約18,000-20,000箱,副牌酒為Carruades de Lafite。</p></div></div></div></div></div></div>',
     hasMap: true,
     geojsonPath: '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
     showBordeaux: false,
@@ -399,7 +399,7 @@ export const l23Content = [
           
           <div style="margin-bottom: 10px;">
             <strong style="color: #9B1B30;">🍇 品種：</strong>
-            <p style="margin: 4px 0; font-size: 0.9rem;">70% Cabernet Sauvignon + 梅洛、品麗珠、小維多</p>
+            <p style="margin: 4px 0; font-size: 0.9rem;">70% Cabernet Sauvignon + 梅洛、卡本內弗朗、小維多</p>
           </div>
           
           <div style="margin-bottom: 10px;">
@@ -453,7 +453,7 @@ export const l23Content = [
       { id: 1, icon: '🏰', title: '堅實堡壘', content: '力量、深度與陳年潛力的象徵' },
       { id: 2, icon: '⏳', title: '超凡陳年', content: '波爾多最頂級的陳年潛力' }
     ],
-    content: '<div class="pauillac-estates"><p class="lead-text">Château Latour 拉圖城堡,位於Pauillac南部,是波爾多力量型風格的終極代表,以其強勁的結構、厚實的單寧和超凡的陳年潛力而聞名於世。</p><div class="estates-analysis"><div class="estate-section latour"><h4>🏰 拉圖城堡簡介</h4><div class="estate-profile"><div class="profile-card history"><h5>📜 歷史淵源</h5><div class="history-details"><p><strong>源起：</strong>酒莊歷史可追溯至14世紀,標誌性的塔樓(La Tour)建於1620-1630年間,是Pauillac的地標。</p><p><strong>榮耀：</strong>1855年梅多克分級中被評為一級莊,多次被評為「波爾多之王」,代表著力量與深度的巔峰。</p><p><strong>擁有權：</strong>1993年由法國億萬富翁François Pinault收購,投入巨資進行現代化改造。</p></div></div><div class="profile-card vineyard"><h5>🍇 葡萄園概況</h5><div class="vineyard-details"><p><strong>面積：</strong>葡萄園總面積約92公頃,其中核心地塊「LEnclos」(圍場)佔47公頃,被認為是Pauillac最優質的土地。</p><p><strong>土壤：</strong>深厚的砂礫土壤,底層含較多黏土,賦予葡萄酒強勁的結構和陳年潛力。</p><p><strong>品種配置：</strong>以赤霞珠(Cabernet Sauvignon)為絕對主導,約佔75-80%,搭配梅洛(Merlot)、品麗珠(Cabernet Franc)和小維多(Petit Verdot)。</p></div></div><div class="profile-card characteristics"><h5>🎯 風格特色</h5><div class="style-details"><p><strong>風格：</strong>極為強勁、集中和深邃,結構感是其核心,被譽為「鋼鐵拳頭包裹絲絨」,力量與優雅的完美結合。</p><p><strong>香氣：</strong>年輕時展現濃郁的黑醋栗、黑莓等黑色水果香氣,伴隨甘草、泥土、石墨和明顯的礦物質感。陳年後發展出皮革、雪茄盒、松露、煙草和濕石子的複雜香氣。</p><p><strong>口感：</strong>酒體極為飽滿,單寧如建築般厚實緊密,結構宏大深邃。年輕時強勁封閉,需要數十年陳年才能完全綻放,展現驚人的複雜度和深度。</p></div></div><div class="profile-card production"><h5>🍷 釀造與產量</h5><div class="production-details"><p><strong>釀造：</strong>採用傳統與現代結合的方式,手工採收,嚴格篩選,在不鏽鋼槽中發酵,然後在橡木桶中陳釀18-20個月,新桶比例約為100%。</p><p><strong>產量：</strong>正牌酒(Grand Vin)年產量約18,000箱,副牌酒為Les Forts de Latour,三牌酒為Pauillac de Latour。</p><p><strong>特色：</strong>自2012年起退出期酒(En Primeur)系統,只在酒莊認為適飲時才發售,充分展現其對品質的極致追求。</p></div></div></div></div></div></div>',
+    content: '<div class="pauillac-estates"><p class="lead-text">Château Latour 拉圖城堡,位於Pauillac南部,是波爾多力量型風格的終極代表,以其強勁的結構、厚實的單寧和超凡的陳年潛力而聞名於世。</p><div class="estates-analysis"><div class="estate-section latour"><h4>🏰 拉圖城堡簡介</h4><div class="estate-profile"><div class="profile-card history"><h5>📜 歷史淵源</h5><div class="history-details"><p><strong>源起：</strong>酒莊歷史可追溯至14世紀,標誌性的塔樓(La Tour)建於1620-1630年間,是Pauillac的地標。</p><p><strong>榮耀：</strong>1855年梅多克分級中被評為一級莊,多次被評為「波爾多之王」,代表著力量與深度的巔峰。</p><p><strong>擁有權：</strong>1993年由法國億萬富翁François Pinault收購,投入巨資進行現代化改造。</p></div></div><div class="profile-card vineyard"><h5>🍇 葡萄園概況</h5><div class="vineyard-details"><p><strong>面積：</strong>葡萄園總面積約92公頃,其中核心地塊「LEnclos」(圍場)佔47公頃,被認為是Pauillac最優質的土地。</p><p><strong>土壤：</strong>深厚的砂礫土壤,底層含較多黏土,賦予葡萄酒強勁的結構和陳年潛力。</p><p><strong>品種配置：</strong>以卡本內蘇維濃(Cabernet Sauvignon)為絕對主導,約佔75-80%,搭配梅洛(Merlot)、卡本內弗朗(Cabernet Franc)和小維多(Petit Verdot)。</p></div></div><div class="profile-card characteristics"><h5>🎯 風格特色</h5><div class="style-details"><p><strong>風格：</strong>極為強勁、集中和深邃,結構感是其核心,被譽為「鋼鐵拳頭包裹絲絨」,力量與優雅的完美結合。</p><p><strong>香氣：</strong>年輕時展現濃郁的黑醋栗、黑莓等黑色水果香氣,伴隨甘草、泥土、石墨和明顯的礦物質感。陳年後發展出皮革、雪茄盒、松露、煙草和濕石子的複雜香氣。</p><p><strong>口感：</strong>酒體極為飽滿,單寧如建築般厚實緊密,結構宏大深邃。年輕時強勁封閉,需要數十年陳年才能完全綻放,展現驚人的複雜度和深度。</p></div></div><div class="profile-card production"><h5>🍷 釀造與產量</h5><div class="production-details"><p><strong>釀造：</strong>採用傳統與現代結合的方式,手工採收,嚴格篩選,在不鏽鋼槽中發酵,然後在橡木桶中陳釀18-20個月,新桶比例約為100%。</p><p><strong>產量：</strong>正牌酒(Grand Vin)年產量約18,000箱,副牌酒為Les Forts de Latour,三牌酒為Pauillac de Latour。</p><p><strong>特色：</strong>自2012年起退出期酒(En Primeur)系統,只在酒莊認為適飲時才發售,充分展現其對品質的極致追求。</p></div></div></div></div></div></div>',
     hasMap: true,
     geojsonPath: '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
     showBordeaux: false,
@@ -524,7 +524,7 @@ export const l23Content = [
           
           <div style="margin-bottom: 10px;">
             <strong style="color: #800020;">🍇 品種：</strong>
-            <p style="margin: 4px 0; font-size: 0.9rem;">75-80% Cabernet Sauvignon + 梅洛、品麗珠</p>
+            <p style="margin: 4px 0; font-size: 0.9rem;">75-80% Cabernet Sauvignon + 梅洛、卡本內弗朗</p>
           </div>
           
           <div style="margin-bottom: 10px;">
@@ -584,7 +584,7 @@ export const l23Content = [
       { id: 1, icon: '🎨', title: '藝術酒標', content: '每年邀請世界頂尖藝術家設計酒標' },
       { id: 2, icon: '🌟', title: '華麗風格', content: '豐富、奔放、充滿表現力' }
     ],
-    content: '<div class="pauillac-estates"><p class="lead-text">Château Mouton Rothschild 木桐酒莊,位於Pauillac中部,是三大一級莊中最具藝術氣息和表現力的酒莊,以其華麗的風格和獨特的藝術酒標聞名於世。</p><div class="estates-analysis"><div class="estate-section mouton"><h4>🏰 木桐酒莊簡介</h4><div class="estate-profile"><div class="profile-card history"><h5>📜 歷史淵源</h5><div class="history-details"><p><strong>源起：</strong>1853年由Nathaniel de Rothschild男爵購入,與拉菲同屬羅斯柴爾德家族但不同分支。</p><p><strong>晉升傳奇：</strong>1855年分級時被評為二級莊,經過一個多世紀的努力,1973年破例晉升為一級莊,是唯一改變分級的酒莊。酒莊格言「Premier ne puis, second ne daigne, Mouton suis」(我不能是第一,不屑居第二,我是木桐)後改為「Premier je suis, second je fus, Mouton ne change」(如今我是第一,曾經我是第二,木桐不變)。</p><p><strong>藝術創舉：</strong>1945年起,每年邀請一位世界頂級藝術家為酒標創作,包括畢卡索、達利、米羅、安迪沃荷等大師,將葡萄酒與藝術完美結合。</p></div></div><div class="profile-card vineyard"><h5>🍇 葡萄園概況</h5><div class="vineyard-details"><p><strong>面積：</strong>葡萄園總面積約90公頃,位於Pauillac產區的核心地帶,砂礫土壤深厚。</p><p><strong>土壤：</strong>深厚的砂礫層,是Pauillac最深厚的區域之一,排水性極佳,儲熱能力強。</p><p><strong>品種配置：</strong>以赤霞珠(Cabernet Sauvignon)為主導,約佔80-86%,搭配梅洛(Merlot)、品麗珠(Cabernet Franc)和小維多(Petit Verdot)。</p></div></div><div class="profile-card characteristics"><h5>🎯 風格特色</h5><div class="style-details"><p><strong>風格：</strong>豐富、華麗、奔放,帶有異國情調和濃郁的表現力,是三大一級莊中最具魅力和感官衝擊力的風格。</p><p><strong>香氣：</strong>年輕時展現成熟的黑莓、黑醋栗果醬等濃郁果香,常伴隨烘焙咖啡、摩卡、黑巧克力、香料和香草的氣息,橡木桶的影響更為明顯。陳年後發展出雪茄、皮革、紫羅蘭和東方香料的複雜香氣。</p><p><strong>口感：</strong>酒體飽滿豐厚,口感豐富油潤如天鵝絨,單寧強勁但圓潤成熟,層次感極佳,餘韻華麗悠長,兼具力量與優雅。</p></div></div><div class="profile-card production"><h5>🍷 釀造與產量</h5><div class="production-details"><p><strong>釀造：</strong>手工採收,嚴格篩選,在橡木桶中陳釀19-22個月,新桶比例約為100%,注重提取和濃縮度。</p><p><strong>產量：</strong>正牌酒(Grand Vin)年產量約15,000-18,000箱,副牌酒為Le Petit Mouton de Mouton Rothschild。</p><p><strong>藝術酒標：</strong>自1945年起每年更換藝術酒標,已成為酒莊最獨特的標誌,收藏價值極高。酒莊內設有葡萄酒藝術博物館,展示歷年酒標原作。</p></div></div></div></div></div></div>',
+    content: '<div class="pauillac-estates"><p class="lead-text">Château Mouton Rothschild 木桐酒莊,位於Pauillac中部,是三大一級莊中最具藝術氣息和表現力的酒莊,以其華麗的風格和獨特的藝術酒標聞名於世。</p><div class="estates-analysis"><div class="estate-section mouton"><h4>🏰 木桐酒莊簡介</h4><div class="estate-profile"><div class="profile-card history"><h5>📜 歷史淵源</h5><div class="history-details"><p><strong>源起：</strong>1853年由Nathaniel de Rothschild男爵購入,與拉菲同屬羅斯柴爾德家族但不同分支。</p><p><strong>晉升傳奇：</strong>1855年分級時被評為二級莊,經過一個多世紀的努力,1973年破例晉升為一級莊,是唯一改變分級的酒莊。酒莊格言「Premier ne puis, second ne daigne, Mouton suis」(我不能是第一,不屑居第二,我是木桐)後改為「Premier je suis, second je fus, Mouton ne change」(如今我是第一,曾經我是第二,木桐不變)。</p><p><strong>藝術創舉：</strong>1945年起,每年邀請一位世界頂級藝術家為酒標創作,包括畢卡索、達利、米羅、安迪沃荷等大師,將葡萄酒與藝術完美結合。</p></div></div><div class="profile-card vineyard"><h5>🍇 葡萄園概況</h5><div class="vineyard-details"><p><strong>面積：</strong>葡萄園總面積約90公頃,位於Pauillac產區的核心地帶,砂礫土壤深厚。</p><p><strong>土壤：</strong>深厚的砂礫層,是Pauillac最深厚的區域之一,排水性極佳,儲熱能力強。</p><p><strong>品種配置：</strong>以卡本內蘇維濃(Cabernet Sauvignon)為主導,約佔80-86%,搭配梅洛(Merlot)、卡本內弗朗(Cabernet Franc)和小維多(Petit Verdot)。</p></div></div><div class="profile-card characteristics"><h5>🎯 風格特色</h5><div class="style-details"><p><strong>風格：</strong>豐富、華麗、奔放,帶有異國情調和濃郁的表現力,是三大一級莊中最具魅力和感官衝擊力的風格。</p><p><strong>香氣：</strong>年輕時展現成熟的黑莓、黑醋栗果醬等濃郁果香,常伴隨烘焙咖啡、摩卡、黑巧克力、香料和香草的氣息,橡木桶的影響更為明顯。陳年後發展出雪茄、皮革、紫羅蘭和東方香料的複雜香氣。</p><p><strong>口感：</strong>酒體飽滿豐厚,口感豐富油潤如天鵝絨,單寧強勁但圓潤成熟,層次感極佳,餘韻華麗悠長,兼具力量與優雅。</p></div></div><div class="profile-card production"><h5>🍷 釀造與產量</h5><div class="production-details"><p><strong>釀造：</strong>手工採收,嚴格篩選,在橡木桶中陳釀19-22個月,新桶比例約為100%,注重提取和濃縮度。</p><p><strong>產量：</strong>正牌酒(Grand Vin)年產量約15,000-18,000箱,副牌酒為Le Petit Mouton de Mouton Rothschild。</p><p><strong>藝術酒標：</strong>自1945年起每年更換藝術酒標,已成為酒莊最獨特的標誌,收藏價值極高。酒莊內設有葡萄酒藝術博物館,展示歷年酒標原作。</p></div></div></div></div></div></div>',
     hasMap: true,
     geojsonPath: '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
     showBordeaux: false,
@@ -660,7 +660,7 @@ export const l23Content = [
           
           <div style="margin-bottom: 10px;">
             <strong style="color: #6B0F1A;">🍇 品種：</strong>
-            <p style="margin: 4px 0; font-size: 0.9rem;">80-86% Cabernet Sauvignon + 梅洛、品麗珠</p>
+            <p style="margin: 4px 0; font-size: 0.9rem;">80-86% Cabernet Sauvignon + 梅洛、卡本內弗朗</p>
           </div>
           
           <div style="margin-bottom: 10px;">
@@ -958,3 +958,4 @@ export const l23Content = [
 ];
 
 export default l23Content;
+

@@ -119,7 +119,7 @@ export const lessonContent = [
               <h5>核心概念</h5>
               <ul>
                 <li><strong>紅酒三大品種：</strong>卡本內-蘇維濃、梅洛、卡本內-弗朗</li>
-                <li><strong>白酒主要品種：</strong>白蘇維翁、賽美容、慕絲卡岱</li>
+                <li><strong>白酒主要品種：</strong>白蘇維濃、賽美容、慕絲卡岱</li>
                 <li><strong>調配藝術：</strong>品種間的互補和平衡</li>
                 <li><strong>風土適應：</strong>不同品種對土壤和氣候的適應性</li>
               </ul>
@@ -232,7 +232,7 @@ export const lessonContent = [
     hasMap: false,
     quiz: {
       question: '波爾多左岸主導品種與土壤類型的正確搭配是？',
-  options: ['梅洛 + 粘土', '卡本內-蘇維濃 + 砂礫土', '白蘇維翁 + 石灰岩', '賽美容 + 砂質土'],
+  options: ['梅洛 + 粘土', '卡本內-蘇維濃 + 砂礫土', '白蘇維濃 + 石灰岩', '賽美容 + 砂質土'],
       correct: 1,
       explanation: '波爾多左岸以卡本內-蘇維濃為主導品種，主要土壤類型是砂礫土，這種組合造就了左岸酒款結構強勁、陳年潛力佳的特色。'
     }
@@ -246,7 +246,7 @@ export const lessonContent = [
       items: [
         {
           question: '左岸（梅多克）常見的主導紅葡萄品種是？',
-          options: ['梅洛', '卡本內-蘇維濃', '卡本內-弗朗', '白蘇維翁'],
+          options: ['梅洛', '卡本內-蘇維濃', '卡本內-弗朗', '白蘇維濃'],
           correct: 1,
           explanation: '左岸以砂礫土著稱，適合卡本內-蘇維濃成熟，形成結構明確、單寧充足的風格。'
         },
@@ -278,7 +278,7 @@ export const lessonContent = [
           question: 'Entre‑Deux‑Mers（兩海之間）以哪類酒款為主？',
           options: ['甜白', '氣泡酒', '干白', '加烈酒'],
           correct: 2,
-          explanation: '兩海之間區域以新鮮爽口的干白酒著稱，常見白蘇維翁與賽美容調配。'
+          explanation: '兩海之間區域以新鮮爽口的干白酒著稱，常見白蘇維濃與賽美容調配。'
         },
         {
           question: '下列何者是典型的波爾多貴腐甜白產區？',
@@ -293,10 +293,10 @@ export const lessonContent = [
           explanation: '瑪歌風格常以優雅、香氣細緻著稱，相對於波雅克/聖埃斯泰夫的勁健。'
         },
         {
-          question: '白蘇維翁在波爾多干白中的常見風味是？',
+          question: '白蘇維濃在波爾多干白中的常見風味是？',
           options: ['黑莓、黑醋栗', '檸檬、青草與礦質感', '李子與巧克力', '胡椒與紫羅蘭'],
           correct: 1,
-          explanation: '白蘇維翁常見檸檬柑橘、青草/香草與礦質感，與賽美容互補形成結構。'
+          explanation: '白蘇維濃常見檸檬柑橘、青草/香草與礦質感，與賽美容互補形成結構。'
         },
         {
           question: '以下哪個描述較符合左岸 vs 右岸的普遍印象？',
@@ -762,3 +762,4 @@ export const lessonContent = [
 ]
 
 export default lessonContent
+

@@ -447,10 +447,14 @@ function annotateAOC(html) {
   return result
 }
 
-// 品種名稱正規化：將「長相思」全域改為「白蘇維翁」，保留英文不變
+// 品種名稱正規化：將舊譯名統一為台灣常用譯名，保留英文不變
 function normalizeVarieties(text) {
   if (!text || typeof text !== 'string') return text
-  return text.replace(/長相思/g, '白蘇維翁')
+  return text
+    .replace(/長相思/g, '白蘇維濃')
+    .replace(/白蘇維翁/g, '白蘇維濃')
+    .replace(/赤霞珠/g, '卡本內蘇維濃')
+    .replace(/品麗珠/g, '卡本內弗朗')
 }
 
 // 統一輸出管線：先做品種正規化，再做 AOC 標註
@@ -2279,6 +2283,7 @@ defineExpose({
   align-items: center;
   min-height: 60vh;
   background: white;
+  color: #333;
   border-radius: 20px;
   padding: 3rem;
   text-align: center;
@@ -2324,6 +2329,7 @@ defineExpose({
 /* 課程內容區域 */
 .lesson-content {
   width: 100%;
+  color: #333;
 }
 
 /* 進度指示器 */
@@ -2354,6 +2360,7 @@ defineExpose({
 /* 幻燈片容器 */
 .slide-container {
   background: white;
+  color: #333;
   border-radius: 20px;
   padding: 3rem;
   margin-bottom: 2rem;
@@ -2435,6 +2442,7 @@ defineExpose({
 
 .objectives-preview li {
   background: white;
+  color: #333;
   margin: 0.5rem 0;
   padding: 1rem;
   border-radius: 8px;
@@ -3023,6 +3031,7 @@ defineExpose({
 
 .quiz-option {
   background: white;
+  color: #333;
   border: 2px solid #e9ecef;
   padding: 1rem;
   border-radius: 8px;
@@ -3121,6 +3130,7 @@ defineExpose({
 
 .completion-card {
   background: white;
+  color: #333;
   padding: 3rem;
   border-radius: 20px;
   text-align: center;
@@ -3530,3 +3540,4 @@ defineExpose({
   }
 }
 </style>
+

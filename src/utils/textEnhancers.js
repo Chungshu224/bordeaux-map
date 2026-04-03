@@ -19,9 +19,10 @@ function normalize(text) {
   if (!text || typeof text !== 'string') return text
   // Common alias mappings (zh -> zh normalized)
   return text
-    .replace(/長相思/g, '白蘇維翁')
-    .replace(/卡本內蘇維濃/g, '赤霞珠') // 常見中文異名
-    .replace(/卡本內弗朗/g, '品麗珠')
+    .replace(/長相思/g, '白蘇維濃')
+    .replace(/白蘇維翁/g, '白蘇維濃')
+    .replace(/赤霞珠/g, '卡本內蘇維濃')
+    .replace(/品麗珠/g, '卡本內弗朗')
     // Saint-Émilion 多種中文寫法，統一為「聖愛美濃」
     .replace(/聖埃米利永/g, '聖愛美濃')
     .replace(/聖艾美濃/g, '聖愛美濃')
@@ -35,12 +36,12 @@ function normalize(text) {
 function annotateVarieties(text) {
   if (!text || typeof text !== 'string') return text
   const mappings = {
-    '白蘇維翁': 'Sauvignon Blanc',
+    '白蘇維濃': 'Sauvignon Blanc',
     '賽美蓉': 'Sémillon',
     '密斯卡岱': 'Muscadelle',
     '梅洛': 'Merlot',
-    '赤霞珠': 'Cabernet Sauvignon',
-    '品麗珠': 'Cabernet Franc',
+    '卡本內蘇維濃': 'Cabernet Sauvignon',
+    '卡本內弗朗': 'Cabernet Franc',
     '小維多': 'Petit Verdot',
     '馬爾貝克': 'Malbec',
     '佳美娜': 'Carmenère'
@@ -183,3 +184,5 @@ export function enhanceText(text) {
 }
 
 export default { enhanceText }
+
+

@@ -9,7 +9,7 @@ export const l32Content = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          土壤是 terroir（風土）最神秘也最核心的元素。在波爾多，礫石、黏土、石灰岩、砂土與淤泥構成了獨特的土壤拼圖，每一種土壤類型都在訴說著不同的葡萄酒故事。左岸的礫石賦予赤霞珠強勁的架構，右岸的黏土讓梅洛展現柔順的質地。
+          土壤是 terroir（風土）最神秘也最核心的元素。在波爾多，礫石、黏土、石灰岩、砂土與淤泥構成了獨特的土壤拼圖，每一種土壤類型都在訴說著不同的葡萄酒故事。左岸的礫石賦予卡本內蘇維濃強勁的架構，右岸的黏土讓梅洛展現柔順的質地。
         </p>
 
         <p class="intro-context">
@@ -878,7 +878,7 @@ export const l32Content = [
         </div>
         <div class="pathway-section highlight">
           <h4>⏰ 實例：Médoc的礫石優勢</h4>
-          <p>Médoc深厚的礫石層能夠為晚熟品種（如 Cabernet Sauvignon）提供額外 2-3 週的有效熱量積累時間，這是該產區能夠完美成熟赤霞珠的關鍵優勢之一。</p>
+          <p>Médoc深厚的礫石層能夠為晚熟品種（如 Cabernet Sauvignon）提供額外 2-3 週的有效熱量積累時間，這是該產區能夠完美成熟卡本內蘇維濃的關鍵優勢之一。</p>
         </div>
       </div>
     `,
@@ -1370,3 +1370,4 @@ export const l32Content = [
 ]
 
 export default l32Content
+

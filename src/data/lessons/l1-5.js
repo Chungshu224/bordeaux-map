@@ -335,7 +335,7 @@ export const lessonContent = [
   {
     title: '白酒與甜酒的多樣性',
     highlights: [
-      { id: 1, icon: '🤍', title: '干型白酒', content: '清新優雅，以白蘇維翁和賽美容調配' },
+      { id: 1, icon: '🤍', title: '干型白酒', content: '清新優雅，以白蘇維濃和賽美容調配' },
       { id: 2, icon: '🍯', title: '貴腐甜酒', content: '世界頂級甜酒，蘇岱和巴薩克的傑作' }
     ],
     content: `<div class="white-sweet-wines">
@@ -347,7 +347,7 @@ export const lessonContent = [
             <div class="graves-white">
               <h5>格拉夫白酒</h5>
               <ul>
-                <li><strong>品種組成：</strong>白蘇維翁60-80%，賽美容20-40%</li>
+                <li><strong>品種組成：</strong>白蘇維濃60-80%，賽美容20-40%</li>
                 <li><strong>釀造風格：</strong>不鏽鋼發酵保持清新，部分橡木陳年</li>
                 <li><strong>風味特徵：</strong>柑橘果香，青草氣息，礦物質感</li>
                 <li><strong>品質等級：</strong>佩薩克-雷奧良為最高等級</li>
@@ -368,7 +368,7 @@ export const lessonContent = [
               <h5>兩海之間白酒</h5>
               <ul>
                 <li><strong>產區位置：</strong>吉隆河和多爾多涅河之間</li>
-                <li><strong>品種特點：</strong>白蘇維翁主導，清新果香</li>
+                <li><strong>品種特點：</strong>白蘇維濃主導，清新果香</li>
                 <li><strong>風格定位：</strong>清爽易飲，性價比高</li>
                 <li><strong>適飲溫度：</strong>8-10°C，冰鎮享用</li>
                 <li><strong>搭配建議：</strong>海鮮、沙拉、山羊乳酪</li>
@@ -383,7 +383,7 @@ export const lessonContent = [
               <h5>蘇岱貴腐甜酒 (Sauternes)</h5>
               <ul>
                 <li><strong>貴腐菌作用：</strong>Botrytis cinerea濃縮葡萄糖分</li>
-                <li><strong>品種組成：</strong>賽美容80%，白蘇維翁15%，慕絲卡岱5%</li>
+                <li><strong>品種組成：</strong>賽美容80%，白蘇維濃15%，慕絲卡岱5%</li>
                 <li><strong>風味特徵：</strong>蜂蜜、杏桃、橙皮、香料</li>
                 <li><strong>陳年潛力：</strong>20-100年，甚至更久</li>
                 <li><strong>世界地位：</strong>與德國雷司令冰酒齊名</li>
@@ -479,7 +479,7 @@ export const lessonContent = [
               <h5>傳統法釀造</h5>
               <ul>
                 <li><strong>釀造方法：</strong>香檳法（傳統法）二次發酵</li>
-                <li><strong>法定品種：</strong>白蘇維翁、賽美容、慕絲卡岱、黑皮諾等</li>
+                <li><strong>法定品種：</strong>白蘇維濃、賽美容、慕絲卡岱、黑皮諾等</li>
                 <li><strong>陳年要求：</strong>最少12個月酒泥接觸</li>
                 <li><strong>壓榨方式：</strong>輕柔壓榨，保持清澈</li>
                 <li><strong>品質標準：</strong>嚴格的產量和品質限制</li>
@@ -643,3 +643,4 @@ export const lessonContent = [
 ]
 
 export default lessonContent
+

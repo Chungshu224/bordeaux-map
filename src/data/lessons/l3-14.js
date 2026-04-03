@@ -778,7 +778,7 @@ export const lessonContent = [
                 <h6>第一道：生蠔（Gillardeau 3號）與海膽</h6>
                 <p><strong>推薦酒款：</strong>Château Smith Haut Lafitte Blanc 2018</p>
                 <ul>
-                  <li><strong>理由：</strong>白蘇維翁主導，礦質感明顯，酸度爽脆</li>
+                  <li><strong>理由：</strong>白蘇維濃主導，礦質感明顯，酸度爽脆</li>
                   <li><strong>配餐邏輯：</strong>酸度與海鮮的鮮味呼應，礦質感提升生蠔的海洋特質</li>
                   <li><strong>侍酒溫度：</strong>8-10°C</li>
                   <li><strong>價格：</strong>約120€/瓶，開2瓶</li>
@@ -1200,3 +1200,4 @@ export const lessonContent = [
 ]
 
 export default lessonContent
+

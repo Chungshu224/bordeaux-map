@@ -180,7 +180,7 @@ export const lessonContent = [
   {
     title: '風土：高原 vs 坡地',
     highlights: [
-      { id: 1, icon: '⛰️', title: '石灰岩高原', content: '賦予酒體結構與礦物感，適合品麗珠' },
+      { id: 1, icon: '⛰️', title: '石灰岩高原', content: '賦予酒體結構與礦物感，適合卡本內弗朗' },
       { id: 2, icon: '🏞️', title: '黏土坡地', content: '帶來力量與圓潤感，適合梅洛' }
     ],
     content: `<div class="saint-emilion-style">
@@ -188,7 +188,7 @@ export const lessonContent = [
       <div class="terroir-section">
         <h4>🌄 兩大核心風土</h4>
         <ul>
-          <li><strong>石灰岩高原 (Plateau)：</strong>位於村莊周圍，土壤較薄，下方是堅硬的石灰岩基岩。這裡的酒風格優雅、結構清晰，帶有明顯的礦物質氣息。<strong>Cabernet Franc (品麗珠)</strong> 在此表現極佳。代表酒莊：Château Ausone。</li>
+          <li><strong>石灰岩高原 (Plateau)：</strong>位於村莊周圍，土壤較薄，下方是堅硬的石灰岩基岩。這裡的酒風格優雅、結構清晰，帶有明顯的礦物質氣息。<strong>Cabernet Franc (卡本內弗朗)</strong> 在此表現極佳。代表酒莊：Château Ausone。</li>
           <li><strong>黏土坡地 (Côtes)：</strong>環繞高原的斜坡，表層是厚重的黏土。這裡的酒風格更為強勁、豐滿、酒體宏大。<strong>Merlot (梅洛)</strong> 在此如魚得水。代表酒莊：Château Pavie。</li>
         </ul>
       </div>
@@ -211,7 +211,7 @@ export const lessonContent = [
       question: '在Saint-Émilion的石灰岩高原上，哪個葡萄品種表現得尤為出色？',
       options: ['Merlot', 'Cabernet Sauvignon', 'Malbec', 'Cabernet Franc'],
       correct: 3,
-      explanation: 'Cabernet Franc（品麗珠）特別適合生長在石灰岩土壤上，能夠發展出優雅的香氣、清新的酸度和精緻的單寧結構，為葡萄酒增添骨架和複雜性。'
+      explanation: 'Cabernet Franc（卡本內弗朗）特別適合生長在石灰岩土壤上，能夠發展出優雅的香氣、清新的酸度和精緻的單寧結構，為葡萄酒增添骨架和複雜性。'
     }
   },
   // ========== 第二章：雙王與明星 ==========
@@ -227,7 +227,7 @@ export const lessonContent = [
   {
     title: '雙王：Cheval Blanc & Ausone',
     highlights: [
-      { id: 1, icon: '🐴', title: 'Cheval Blanc (白馬)', content: '品麗珠主導的優雅典範' },
+      { id: 1, icon: '🐴', title: 'Cheval Blanc (白馬)', content: '卡本內弗朗主導的優雅典範' },
       { id: 2, icon: '🏛️', title: 'Ausone (歐頌)', content: '石灰岩上的不朽傳奇' }
     ],
     content: `<div class="saint-emilion-chateaux">
@@ -318,7 +318,7 @@ export const lessonContent = [
         const chevalBlancPos = [-0.19170525235414804, 44.91992803845212]
         const ausonePos = [-0.15618326584386588, 44.8893420981509]
 
-        makeEstate(chevalBlancPos, '🐴', 'Château Cheval Blanc', '白馬莊 — 品麗珠的優雅典範', `
+        makeEstate(chevalBlancPos, '🐴', 'Château Cheval Blanc', '白馬莊 — 卡本內弗朗的優雅典範', `
           <p style="margin:4px 0"><strong>地位：</strong>Saint-Émilion一級A莊，全球最負盛名的酒莊之一。</p>
           <p style="margin:4px 0"><strong>風土：</strong>位於Pomerol邊界，風土含砂礫與黏土，獨特的微氣候。</p>
           <p style="margin:4px 0"><strong>品種：</strong>約55% Cabernet Franc主導（罕見），搭配Merlot。</p>
@@ -469,7 +469,7 @@ export const lessonContent = [
     title: '品種與風格：Merlot與Cabernet Franc的二重奏',
     highlights: [
       { id: 1, icon: '🍇', title: 'Merlot (梅洛)', content: '帶來圓潤、豐滿的果味和柔順口感' },
-      { id: 2, icon: '🌿', title: 'Cabernet Franc (品麗珠)', content: '提供結構、清新的酸度和複雜的香氣' }
+      { id: 2, icon: '🌿', title: 'Cabernet Franc (卡本內弗朗)', content: '提供結構、清新的酸度和複雜的香氣' }
     ],
     content: `<div class="saint-emilion-style">
       <p class="lead-text">Saint-Émilion的魅力在於Merlot和Cabernet Franc這兩個品種的精妙結合。它們在不同風土上的表現，共同譜寫了產區的風格樂章。</p>
@@ -567,3 +567,4 @@ export const lessonContent = [
 ];
 
 export default lessonContent;
+

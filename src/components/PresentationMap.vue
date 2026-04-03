@@ -829,7 +829,7 @@ async function loadMultipleAOC(urls = [], skipFitBounds = false) {
         lineWidth = 1.5
         regionType = 'sweet'
       } else if (isWhiteWine) {
-        // 白酒產區：淡綠色（代表清新、白蘇維翁）
+        // 白酒產區：淡綠色（代表清新、白蘇維濃）
         fillColor = '#90EE90'
         fillOpacity = hasGeologyContext ? 0.18 : 0.4
         lineColor = '#32CD32'
@@ -922,7 +922,7 @@ async function loadMultipleAOC(urls = [], skipFitBounds = false) {
           } else if (isLeftBank) {
             regionLabel = '左岸 (Left Bank)'
             icon = '🍷'
-            description = '以赤霞珠 (Cabernet Sauvignon) 為主'
+            description = '以卡本內蘇維濃 (Cabernet Sauvignon) 為主'
           } else if (isRightBank) {
             regionLabel = '右岸 (Right Bank)'
             icon = '🍷'
@@ -1542,3 +1542,5 @@ watch(() => props.focusType, (newFocus) => {
   }
 }
 </style>
+
+

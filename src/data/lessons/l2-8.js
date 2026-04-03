@@ -420,7 +420,7 @@ export const l28Content = [
       { id: 1, icon: '🍇', title: 'Merlot主導', content: '佔據了70%以上的種植面積' },
       { id: 2, icon: '🌿', title: 'Cabernet Franc輔助', content: '提供香氣和結構' }
     ],
-    content: '<div class="libournais-overview"><p class="lead-text">與整個右岸一樣，衛星產區也是Merlot的天下。這個品種的早熟和柔順特性，完美適應了這裡的風土。</p><div class="geography-analysis"><div class="geo-section soil-climate"><h4>🌱 品種表現</h4><div class="terroir-analysis"><p><strong>Merlot (梅洛)：</strong>絕對的主角，賦予葡萄酒圓潤的口感、豐滿的酒體和李子、櫻桃等紅色/黑色水果的風味。</p><p><strong>Cabernet Franc (品麗珠)：</strong>最重要的配角，為混釀帶來清新的酸度、紫羅蘭等花香和更精細的結構感。</p><p><strong>Cabernet Sauvignon (赤霞珠)：</strong>少量種植，用以增加酒體的骨架和陳年潛力。</p></div></div></div></div>',
+    content: '<div class="libournais-overview"><p class="lead-text">與整個右岸一樣，衛星產區也是Merlot的天下。這個品種的早熟和柔順特性，完美適應了這裡的風土。</p><div class="geography-analysis"><div class="geo-section soil-climate"><h4>🌱 品種表現</h4><div class="terroir-analysis"><p><strong>Merlot (梅洛)：</strong>絕對的主角，賦予葡萄酒圓潤的口感、豐滿的酒體和李子、櫻桃等紅色/黑色水果的風味。</p><p><strong>Cabernet Franc (卡本內弗朗)：</strong>最重要的配角，為混釀帶來清新的酸度、紫羅蘭等花香和更精細的結構感。</p><p><strong>Cabernet Sauvignon (卡本內蘇維濃)：</strong>少量種植，用以增加酒體的骨架和陳年潛力。</p></div></div></div></div>',
     hasMap: false,
     quiz: {
       question: '在Libournais衛星產區中，最主要的葡萄品種是什麼？',
@@ -509,4 +509,5 @@ export const l28Content = [
     shareMessage: '我剛完成了Level 2的「Libournais衛星產區」課程！發現了環繞Saint-Émilion的性價比寶藏，現在我能找到物超所值的波爾多紅酒了！💎🍷 #波爾多 #衛星產區 #性價比 #葡萄酒學習'
   }
 ];
+
 

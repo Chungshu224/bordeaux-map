@@ -9,7 +9,7 @@ export const l21Content = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          Médoc——這個名字代表著波爾多葡萄酒的巔峰。在這片狹長的半島上，坐落著波爾多61座列級酒莊中的60座（除Château Haut-Brion外），包括舉世聞名的五大一級莊中的四座。Médoc不僅是波爾多左岸的心臟，更是全球頂級赤霞珠葡萄酒的聖地。
+          Médoc——這個名字代表著波爾多葡萄酒的巔峰。在這片狹長的半島上，坐落著波爾多61座列級酒莊中的60座（除Château Haut-Brion外），包括舉世聞名的五大一級莊中的四座。Médoc不僅是波爾多左岸的心臟，更是全球頂級卡本內蘇維濃葡萄酒的聖地。
         </p>
 
         <p class="intro-context">
@@ -1220,3 +1220,4 @@ export const l21Content = [
 ];
 
 export default l21Content;
+
