@@ -1,3 +1,4 @@
+import mapboxgl from 'mapbox-gl'
 // L2-3: Pauillac - 王者風範的產區
 export const l23Content = [
   // 課程導讀
@@ -126,7 +127,7 @@ export const l23Content = [
     geojsonPath: '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
     showBordeaux: false,
     onMapReady: async (map) => {
-      const mapboxgl = await import('mapbox-gl')
+      let _cancelled = false
       
       // 等待地圖完全 idle (所有圖層載入完成且停止移動)
       await new Promise(resolve => {
@@ -142,7 +143,8 @@ export const l23Content = [
         {
           name: 'Château Lafite Rothschild',
           nameChinese: '拉菲古堡',
-          position: [-0.77169833035195, 45.22533323154843], // Pauillac 北部
+          position: [-0.77306, 45.225], // Wikipedia: 45°13′30″N 0°46′23″W
+          image: '/images/chateaux/LeftBank/Medoc/lafite_rothschild.jpg',
           icon: '👑',
           color: '#9B1B30',
           style: '優雅精緻',
@@ -154,7 +156,8 @@ export const l23Content = [
         {
           name: 'Château Mouton Rothschild',
           nameChinese: '木桐酒莊',
-          position: [-0.7696842219814992, 45.213134197007186], // Pauillac 中部
+          position: [-0.7686, 45.2153], // Wikipedia: 45.2153°N 0.7686°W
+          image: '/images/chateaux/LeftBank/Medoc/mouton_rothschild.jpg',
           icon: '🎨',
           color: '#6B0F1A',
           style: '華麗奔放',
@@ -167,7 +170,8 @@ export const l23Content = [
         {
           name: 'Château Latour',
           nameChinese: '拉圖城堡',
-          position: [-0.749093459004799, 45.17531786761962], // Pauillac 南部
+          position: [-0.7450, 45.1767], // Wikipedia: 45°10′36″N 0°44′42″W
+          image: '/images/chateaux/LeftBank/Medoc/latour.jpg',
           icon: '🏰',
           color: '#800020',
           style: '強勁深邃',
@@ -203,72 +207,100 @@ export const l23Content = [
 
       // 再次等待確保定位和渲染完全穩定
       await new Promise(resolve => setTimeout(resolve, 150))
+      if (_cancelled || !map.getContainer()) return
       
       // 為每個酒莊添加標記
       const createdMarkers = []
       const createdPopups = []
       firstGrowths.forEach((estate) => {
-        // 創建自定義標記元素
+        // 創建自定義標記元素（酒莊圖片圓形標記）
+        // 注意：外層 el 不能設 transition:transform，否則會干擾 Mapbox 的定位 transform
         const el = document.createElement('div')
         el.className = 'first-growth-marker'
-        el.innerHTML = estate.icon
         el.style.cssText = `
-          font-size: 32px;
           cursor: pointer;
-          filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-          transition: transform 0.2s;
+          width: 52px;
+          height: 52px;
+        `
+        el.innerHTML = `
+          <div style="
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 3px solid ${estate.color};
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+          ">
+            <img src="${estate.image}" alt="${estate.nameChinese}"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=font-size:26px>${estate.icon}</span>'" />
+          </div>
         `
         
         el.addEventListener('mouseenter', () => {
-          el.style.transform = 'scale(1.2)'
+          const inner = el.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1.2)'
         })
         el.addEventListener('mouseleave', () => {
-          el.style.transform = 'scale(1)'
+          const inner = el.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1)'
         })
         
-        // 創建詳細的彈出視窗
+        // 創建詳細的彈出視窗（含酒莊圖片）
         const popupContent = document.createElement('div')
-        popupContent.style.padding = '12px'
+        popupContent.style.padding = '0'
         popupContent.innerHTML = `
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-            <span style="font-size: 28px;">${estate.icon}</span>
-            <div>
-              <h3 style="margin: 0; color: ${estate.color}; font-size: 16px; font-weight: bold;">${estate.nameChinese}</h3>
-              <p style="margin: 2px 0 0 0; font-size: 11px; color: #666;">${estate.name}</p>
-            </div>
+          <div style="border-radius: 8px 8px 0 0; overflow: hidden; height: 110px; background: ${estate.color}22;">
+            <img src="${estate.image}" alt="${estate.nameChinese}"
+              style="width: 100%; height: 110px; object-fit: cover; display: block;"
+              onerror="this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center'; this.parentElement.innerHTML='<span style=font-size:52px>${estate.icon}</span>'; this.remove();" />
           </div>
-          
-          <div style="background: linear-gradient(135deg, ${estate.color}15, ${estate.color}05); padding: 10px; border-radius: 8px; margin-bottom: 10px;">
-            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
-              <span style="font-weight: bold; color: ${estate.color};">🏆</span>
-              <span style="font-size: 13px; font-weight: bold;">${estate.ranking}</span>
+          <div style="padding: 12px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <span style="font-size: 22px;">${estate.icon}</span>
+              <div>
+                <h3 style="margin: 0; color: ${estate.color}; font-size: 16px; font-weight: bold;">${estate.nameChinese}</h3>
+                <p style="margin: 2px 0 0 0; font-size: 11px; color: #666;">${estate.name}</p>
+              </div>
             </div>
-            ${estate.special ? `<div style="font-size: 12px; color: #666; margin-left: 22px;">✨ ${estate.special}</div>` : ''}
-          </div>
-          
-          <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; font-size: 13px;">
-            <span style="color: #888;">🎭 風格：</span>
-            <span style="font-weight: 500;">${estate.style}</span>
             
-            <span style="color: #888;">👃 特徵：</span>
-            <span style="font-weight: 500;">${estate.signature}</span>
+            <div style="background: linear-gradient(135deg, ${estate.color}15, ${estate.color}05); padding: 10px; border-radius: 8px; margin-bottom: 10px;">
+              <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+                <span style="font-weight: bold; color: ${estate.color};">🏆</span>
+                <span style="font-size: 13px; font-weight: bold;">${estate.ranking}</span>
+              </div>
+              ${estate.special ? `<div style="font-size: 12px; color: #666; margin-left: 22px;">✨ ${estate.special}</div>` : ''}
+            </div>
             
-            <span style="color: #888;">📐 面積：</span>
-            <span>${estate.area}</span>
-            
-            <span style="color: #888;">🍷 產量：</span>
-            <span>${estate.production}</span>
+            <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; font-size: 13px;">
+              <span style="color: #888;">🎭 風格：</span>
+              <span style="font-weight: 500;">${estate.style}</span>
+              
+              <span style="color: #888;">👃 特徵：</span>
+              <span style="font-weight: 500;">${estate.signature}</span>
+              
+              <span style="color: #888;">📐 面積：</span>
+              <span>${estate.area}</span>
+              
+              <span style="color: #888;">🍷 產量：</span>
+              <span>${estate.production}</span>
+            </div>
           </div>
         `
         
-        const popup = new mapboxgl.default.Popup({ 
+        const popup = new mapboxgl.Popup({ 
           offset: 35,
           maxWidth: '400px',
           className: 'estate-popup'
         }).setDOMContent(popupContent)
         createdPopups.push(popup)
         // 添加標記到地圖
-        const marker = new mapboxgl.default.Marker(el)
+        const marker = new mapboxgl.Marker(el)
           .setLngLat(estate.position)
           .setPopup(popup)
           .addTo(map)
@@ -290,7 +322,7 @@ export const l23Content = [
           box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         `
         
-        const labelMarker = new mapboxgl.default.Marker(labelEl, { 
+        const labelMarker = new mapboxgl.Marker(labelEl, { 
           offset: [0, -45],
           anchor: 'bottom'
         })
@@ -301,6 +333,7 @@ export const l23Content = [
       
       // 回傳清理函式，供 PresentationMap 在卸載時呼叫
       return () => {
+        _cancelled = true
         try { createdMarkers.forEach(m => { try { m.remove() } catch {} }) } catch {}
         try { createdPopups.forEach(p => { try { p.remove() } catch {} }) } catch {}
       }
@@ -333,7 +366,7 @@ export const l23Content = [
     geojsonPath: '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
     showBordeaux: false,
     onMapReady: async (map) => {
-      const mapboxgl = await import('mapbox-gl')
+      let _cancelled = false
       
       // 等待地圖完全 idle (所有圖層載入完成且停止移動)
       await new Promise(resolve => {
@@ -350,30 +383,37 @@ export const l23Content = [
       
       // 再次等待確保定位和渲染完全穩定
       await new Promise(resolve => setTimeout(resolve, 150))
+      if (_cancelled || !map.getContainer()) return
       
-      // Château Lafite Rothschild 標記
+      // Château Lafite Rothschild 標記（外層 el 不可設 transition，避免干擾 Mapbox 定位 transform）
       const el = document.createElement('div')
       el.style.cssText = `
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, #9B1B30, #800020);
-        border-radius: 50%;
-        border: 3px solid white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        width: 48px;
+        height: 48px;
         cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-        transition: transform 0.2s;
       `
-      el.innerHTML = '👑'
-      
+      el.innerHTML = `
+        <div style="
+          width: 48px;
+          height: 48px;
+          background: #9B1B30;
+          border-radius: 50%;
+          border: 2px solid white;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 22px;
+          transition: transform 0.2s;
+        ">👑</div>
+      `
       el.addEventListener('mouseenter', () => {
-        el.style.transform = 'scale(1.15)'
+        const inner = el.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1.15)'
       })
       el.addEventListener('mouseleave', () => {
-        el.style.transform = 'scale(1)'
+        const inner = el.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1)'
       })
       
       // 創建詳細資訊彈出視窗
@@ -381,6 +421,9 @@ export const l23Content = [
       popupContent.style.padding = '16px'
       popupContent.innerHTML = `
         <div style="text-align: center; margin-bottom: 12px;">
+          <img src="/images/chateaux/LeftBank/Medoc/lafite_rothschild.jpg" alt="拉菲古堡酒標"
+            style="height:120px;width:auto;object-fit:contain;border-radius:4px;margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;"
+            onerror="this.style.display='none'" />
           <h3 style="margin: 0; color: #9B1B30; font-size: 1.3rem;">👑 拉菲古堡</h3>
           <p style="margin: 4px 0 0 0; color: #666; font-size: 0.85rem;">Château Lafite Rothschild</p>
           <p style="margin: 2px 0 0 0; color: #888; font-size: 0.8rem; font-style: italic;">Premier Grand Cru Classé 1855</p>
@@ -420,21 +463,22 @@ export const l23Content = [
       
       const createdMarkers = []
       const createdPopups = []
-      const popup = new mapboxgl.default.Popup({ 
+      const popup = new mapboxgl.Popup({ 
         offset: 25,
         closeButton: true,
         closeOnClick: false,
         maxWidth: '450px'
       }).setDOMContent(popupContent)
       
-      // 添加標記 (更新為 Google 地圖顯示的精確位置)
+      // 添加標記 (更新為 Wikipedia 精確座標)
       createdPopups.push(popup)
-      const marker = new mapboxgl.default.Marker(el)
-        .setLngLat([-0.77169833035195, 45.22533323154843])
+      const marker = new mapboxgl.Marker(el)
+        .setLngLat([-0.77306, 45.225])
         .setPopup(popup)
         .addTo(map)
       createdMarkers.push(marker)
       return () => {
+        _cancelled = true
         try { createdMarkers.forEach(m => { try { m.remove() } catch {} }) } catch {}
         try { createdPopups.forEach(p => { try { p.remove() } catch {} }) } catch {}
       }
@@ -458,7 +502,7 @@ export const l23Content = [
     geojsonPath: '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
     showBordeaux: false,
     onMapReady: async (map) => {
-      const mapboxgl = await import('mapbox-gl')
+      let _cancelled = false
       
       // 等待地圖完全 idle (所有圖層載入完成且停止移動)
       await new Promise(resolve => {
@@ -469,36 +513,43 @@ export const l23Content = [
         }
       })
       
-      // 設置地圖中心和縮放 (同步操作,無動畫)
-      map.setCenter([-0.7433, 45.1883])
+      // 設置地圖中心直接在 Latour 座標，確保標記可見
+      map.setCenter([-0.7450, 45.1767])
       map.setZoom(14)
       
       // 再次等待確保定位和渲染完全穩定
       await new Promise(resolve => setTimeout(resolve, 150))
+      if (_cancelled || !map.getContainer()) return
       
-      // Château Latour 標記
+      // Château Latour 標記（外層 el 不可設 transition，避免干擾 Mapbox 定位 transform）
       const el = document.createElement('div')
       el.style.cssText = `
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, #800020, #4B0000);
-        border-radius: 50%;
-        border: 3px solid white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        width: 48px;
+        height: 48px;
         cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-        transition: transform 0.2s;
       `
-      el.innerHTML = '🏰'
-      
+      el.innerHTML = `
+        <div style="
+          width: 48px;
+          height: 48px;
+          background: #800020;
+          border-radius: 50%;
+          border: 2px solid white;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 22px;
+          transition: transform 0.2s;
+        ">🏰</div>
+      `
       el.addEventListener('mouseenter', () => {
-        el.style.transform = 'scale(1.15)'
+        const inner = el.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1.15)'
       })
       el.addEventListener('mouseleave', () => {
-        el.style.transform = 'scale(1)'
+        const inner = el.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1)'
       })
       
       // 創建詳細資訊彈出視窗
@@ -506,6 +557,9 @@ export const l23Content = [
       popupContent.style.padding = '16px'
       popupContent.innerHTML = `
         <div style="text-align: center; margin-bottom: 12px;">
+          <img src="/images/chateaux/LeftBank/Medoc/latour.jpg" alt="拉圖城堡酒標"
+            style="height:120px;width:auto;object-fit:contain;border-radius:4px;margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;"
+            onerror="this.style.display='none'" />
           <h3 style="margin: 0; color: #800020; font-size: 1.3rem;">🏰 拉圖城堡</h3>
           <p style="margin: 4px 0 0 0; color: #666; font-size: 0.85rem;">Château Latour</p>
           <p style="margin: 2px 0 0 0; color: #888; font-size: 0.8rem; font-style: italic;">Premier Grand Cru Classé 1855</p>
@@ -551,21 +605,22 @@ export const l23Content = [
       
       const createdMarkers = []
       const createdPopups = []
-      const popup = new mapboxgl.default.Popup({ 
+      const popup = new mapboxgl.Popup({ 
         offset: 25,
         closeButton: true,
         closeOnClick: false,
         maxWidth: '450px'
       }).setDOMContent(popupContent)
       
-      // 添加標記
+      // 添加標記 (Wikipedia 精確座標)
       createdPopups.push(popup)
-      const marker = new mapboxgl.default.Marker(el)
-        .setLngLat([-0.749093459004799, 45.17531786761962])
+      const marker = new mapboxgl.Marker(el)
+        .setLngLat([-0.7450, 45.1767])
         .setPopup(popup)
         .addTo(map)
       createdMarkers.push(marker)
       return () => {
+        _cancelled = true
         try { createdMarkers.forEach(m => { try { m.remove() } catch {} }) } catch {}
         try { createdPopups.forEach(p => { try { p.remove() } catch {} }) } catch {}
       }
@@ -589,7 +644,7 @@ export const l23Content = [
     geojsonPath: '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
     showBordeaux: false,
     onMapReady: async (map) => {
-      const mapboxgl = await import('mapbox-gl')
+      let _cancelled = false
       
       // 等待地圖完全 idle (所有圖層載入完成且停止移動)
       await new Promise(resolve => {
@@ -606,30 +661,37 @@ export const l23Content = [
       
       // 再次等待確保定位和渲染完全穩定
       await new Promise(resolve => setTimeout(resolve, 150))
+      if (_cancelled || !map.getContainer()) return
       
-      // Château Mouton Rothschild 標記
+      // Château Mouton Rothschild 標記（外層 el 不可設 transition，避免干擾 Mapbox 定位 transform）
       const el = document.createElement('div')
       el.style.cssText = `
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, #6B0F1A, #8B0000);
-        border-radius: 50%;
-        border: 3px solid white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        width: 48px;
+        height: 48px;
         cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-        transition: transform 0.2s;
       `
-      el.innerHTML = '🎨'
-      
+      el.innerHTML = `
+        <div style="
+          width: 48px;
+          height: 48px;
+          background: #6B0F1A;
+          border-radius: 50%;
+          border: 2px solid white;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 22px;
+          transition: transform 0.2s;
+        ">🎨</div>
+      `
       el.addEventListener('mouseenter', () => {
-        el.style.transform = 'scale(1.15)'
+        const inner = el.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1.15)'
       })
       el.addEventListener('mouseleave', () => {
-        el.style.transform = 'scale(1)'
+        const inner = el.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1)'
       })
       
       // 創建詳細資訊彈出視窗
@@ -637,6 +699,9 @@ export const l23Content = [
       popupContent.style.padding = '16px'
       popupContent.innerHTML = `
         <div style="text-align: center; margin-bottom: 12px;">
+          <img src="/images/chateaux/LeftBank/Medoc/mouton_rothschild.jpg" alt="木桐酒莊酒標"
+            style="height:120px;width:auto;object-fit:contain;border-radius:4px;margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;"
+            onerror="this.style.display='none'" />
           <h3 style="margin: 0; color: #6B0F1A; font-size: 1.3rem;">🎨 木桐酒莊</h3>
           <p style="margin: 4px 0 0 0; color: #666; font-size: 0.85rem;">Château Mouton Rothschild</p>
           <p style="margin: 2px 0 0 0; color: #888; font-size: 0.8rem; font-style: italic;">Premier Grand Cru Classé (1973年晉升)</p>
@@ -682,21 +747,22 @@ export const l23Content = [
       
       const createdMarkers = []
       const createdPopups = []
-      const popup = new mapboxgl.default.Popup({ 
+      const popup = new mapboxgl.Popup({ 
         offset: 25,
         closeButton: true,
         closeOnClick: false,
         maxWidth: '450px'
       }).setDOMContent(popupContent)
       
-      // 添加標記
+      // 添加標記 (Wikipedia 精確座標)
       createdPopups.push(popup)
-      const marker = new mapboxgl.default.Marker(el)
-        .setLngLat([-0.7696842219814992, 45.213134197007186])
+      const marker = new mapboxgl.Marker(el)
+        .setLngLat([-0.7686, 45.2153])
         .setPopup(popup)
         .addTo(map)
       createdMarkers.push(marker)
       return () => {
+        _cancelled = true
         try { createdMarkers.forEach(m => { try { m.remove() } catch {} }) } catch {}
         try { createdPopups.forEach(p => { try { p.remove() } catch {} }) } catch {}
       }
@@ -720,7 +786,7 @@ export const l23Content = [
     geojsonPath: '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
     showBordeaux: false,
     onMapReady: async (map) => {
-      const mapboxgl = await import('mapbox-gl')
+      let _cancelled = false
       
       // 等待地圖完全 idle (所有圖層載入完成且停止移動)
       await new Promise(resolve => {
@@ -737,13 +803,15 @@ export const l23Content = [
       
       // 再次等待確保定位和渲染完全穩定
       await new Promise(resolve => setTimeout(resolve, 150))
+      if (_cancelled || !map.getContainer()) return
       
       // Pauillac 其他著名酒莊
       const estates = [
         {
           name: 'Château Pichon Longueville Comtesse de Lalande',
           nameChinese: '碧尚女爵',
-          position: [-0.7502609118529217, 45.17633466917962],
+          position: [-0.7524, 45.1762],
+          image: '/images/chateaux/LeftBank/Medoc/pichon_lalande.jpg',
           icon: '👸',
           color: '#D946A6',
           classification: '二級莊 (1855)',
@@ -753,7 +821,8 @@ export const l23Content = [
         {
           name: 'Château Pichon Longueville Baron',
           nameChinese: '碧尚男爵',
-          position: [-0.7504821007605895, 45.17676185713876],
+          position: [-0.7525, 45.17611],
+          image: '/images/chateaux/LeftBank/Medoc/pichon_baron.jpg',
           icon: '🤴',
           color: '#0891B2',
           classification: '二級莊 (1855)',
@@ -763,7 +832,8 @@ export const l23Content = [
         {
           name: 'Château Lynch-Bages',
           nameChinese: '靚茨伯',
-          position: [-0.7540962449374069, 45.191315253528906],
+          position: [-0.75561, 45.19083],
+          image: '/images/chateaux/LeftBank/Medoc/lynch_bages.jpg',
           icon: '⭐',
           color: '#DC2626',
           classification: '五級莊 (1855)',
@@ -773,7 +843,8 @@ export const l23Content = [
         {
           name: 'Château Pontet-Canet',
           nameChinese: '龐特卡奈',
-          position: [-0.7696112774692825, 45.20907844524586],
+          position: [-0.77053, 45.20833],
+          image: '/images/chateaux/LeftBank/Medoc/pontet_canet.jpg',
           icon: '🌿',
           color: '#16A34A',
           classification: '五級莊 (1855)',
@@ -783,7 +854,8 @@ export const l23Content = [
         {
           name: 'Château Duhart-Milon',
           nameChinese: '杜哈磨坊',
-          position: [-0.7463546658252905, 45.197933654466894],
+          position: [-0.747, 45.1979],
+          image: '/images/chateaux/LeftBank/Medoc/Duhart-Milon.jpg',
           icon: '🏛️',
           color: '#9333EA',
           classification: '四級莊 (1855)',
@@ -793,7 +865,8 @@ export const l23Content = [
         {
           name: 'Château Grand-Puy-Lacoste',
           nameChinese: '拉科斯特',
-          position: [-0.76787355233235, 45.18986958994947],
+          position: [-0.7691, 45.19007],
+          image: '/images/chateaux/LeftBank/Medoc/grand_puy_lacoste.jpg',
           icon: '🏆',
           color: '#EA580C',
           classification: '五級莊 (1855)',
@@ -803,6 +876,7 @@ export const l23Content = [
       ]
       
       // 為每個酒莊添加標記
+      // 注意：外層 el 不可設 transition:transform，否則會干擾 Mapbox 定位 transform
       const createdMarkers = []
       const createdPopups = []
       estates.forEach((estate) => {
@@ -810,30 +884,40 @@ export const l23Content = [
         el.style.cssText = `
           width: 40px;
           height: 40px;
-          background: ${estate.color};
-          border-radius: 50%;
-          border: 2px solid white;
-          box-shadow: 0 3px 8px rgba(0,0,0,0.3);
           cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 20px;
-          transition: transform 0.2s;
         `
-        el.innerHTML = estate.icon
+        el.innerHTML = `
+          <div style="
+            width: 40px;
+            height: 40px;
+            background: ${estate.color};
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: transform 0.2s;
+          ">${estate.icon}</div>
+        `
         
         el.addEventListener('mouseenter', () => {
-          el.style.transform = 'scale(1.15)'
+          const inner = el.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1.15)'
         })
         el.addEventListener('mouseleave', () => {
-          el.style.transform = 'scale(1)'
+          const inner = el.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1)'
         })
         
         const popupContent = document.createElement('div')
         popupContent.style.padding = '12px'
         popupContent.innerHTML = `
           <div style="text-align: center; margin-bottom: 10px;">
+            <img src="${estate.image}" alt="${estate.nameChinese}酒標"
+              style="height:100px;width:auto;object-fit:contain;border-radius:4px;margin-bottom:6px;display:block;margin-left:auto;margin-right:auto;"
+              onerror="this.style.display='none'" />
             <h3 style="margin: 0; color: ${estate.color}; font-size: 1.1rem;">${estate.icon} ${estate.nameChinese}</h3>
             <p style="margin: 4px 0 0 0; color: #666; font-size: 0.8rem;">${estate.name}</p>
             <p style="margin: 2px 0 0 0; color: #888; font-size: 0.75rem; font-style: italic;">${estate.classification}</p>
@@ -851,14 +935,14 @@ export const l23Content = [
           </div>
         `
         
-        const popup = new mapboxgl.default.Popup({ 
+        const popup = new mapboxgl.Popup({ 
           offset: 20,
           closeButton: true,
           closeOnClick: false,
           maxWidth: '350px'
         }).setDOMContent(popupContent)
         createdPopups.push(popup)
-        const marker = new mapboxgl.default.Marker(el)
+        const marker = new mapboxgl.Marker(el)
           .setLngLat(estate.position)
           .setPopup(popup)
           .addTo(map)
@@ -866,6 +950,7 @@ export const l23Content = [
       })
       // 清理函式
       return () => {
+        _cancelled = true
         try { createdMarkers.forEach(m => { try { m.remove() } catch {} }) } catch {}
         try { createdPopups.forEach(p => { try { p.remove() } catch {} }) } catch {}
       }

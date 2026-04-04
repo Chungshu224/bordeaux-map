@@ -70,7 +70,7 @@ export const l22Content = [
     courseIntro: 'Margaux是 Médoc 最大的村莊級產區，以其複雜的地形和多樣的土壤聞名，是波爾多最優雅風格的代名詞。',
     highlights: [
       { id: 1, icon: '🗺️', title: '產區核心', content: '位於Médoc半島中心，風土條件優越' },
-      { id: 2, icon: '🏘️', title: '五村聯合', content: '由Margaux、Cantenac等五個村莊組成' }
+      { id: 2, icon: '�️', title: '五村聯合', content: '由Margaux、Cantenac等五個村莊組成' }
     ],
     content: '<div class="margaux-terroir"><p class="lead-text">Margaux是Médoc最大的村莊級產區，以其複雜的地形和多樣的土壤聞名，是波爾多最優雅風格的代名詞。</p><div class="terroir-analysis"><div class="terroir-section geography"><h4>🗺️ Margaux產區地理概況</h4><div class="geography-overview"><div class="location-details"><div class="location-card central"><h5>🎯 中心位置</h5><div class="location-content"><p><strong>戰略地位：</strong>位於Médoc半島中心，享有最佳風土條件</p><p><strong>產區面積：</strong>約1,400公頃，是Médoc最大的村莊產區</p><p><strong>地形特徵：</strong>複雜的丘陵與平原交錯地形</p></div></div><div class="location-card communes"><h5>🏘️ 五個村莊構成</h5><div class="commune-details"><div class="commune margaux-village"><h6>Margaux村</h6><p>產區核心，擁有最著名的酒莊如Château Margaux</p></div><div class="commune cantenac"><h6>Cantenac村</h6><p>土壤砂質成分最高，風格最為優雅細膩</p></div><div class="commune soussans"><h6>Soussans村</h6><p>北部村莊，土壤較重，風格相對厚重</p></div><div class="commune labarde"><h6>Labarde村</h6><p>南部村莊，與Haut-Médoc產區接壤</p></div><div class="commune arsac"><h6>Arsac村</h6><p>西部內陸村莊，風格介於優雅與力量之間</p></div></div></div></div></div></div></div></div>',
     hasMap: true, 
@@ -80,6 +80,15 @@ export const l22Content = [
     ],
     showBordeaux: false,
     onMapReady: async (map) => {
+      // 飛到 Margaux AOC 最佳視角：顯示全部 5 個村莊及 Gironde 河岸
+      map.flyTo({
+        center: [-0.6950, 45.0400],
+        zoom: 12.5,
+        pitch: 0,
+        bearing: 0,
+        duration: 1500
+      })
+
       const createdMarkers = []
       const createdPopups = []
       // 五個村莊的名稱標籤
@@ -158,8 +167,8 @@ export const l22Content = [
     ],
     showBordeaux: false,
     mapConfig: {
-      center: [-0.73, 45.04],
-      zoom: 12.4,
+      center: [-0.6950, 45.0400],
+      zoom: 12.5,
       pitch: 0,
       bearing: 0
     },
@@ -366,35 +375,35 @@ export const l22Content = [
       // Margaux 產區所有列級酒莊資料
       const margauxChateaux = [
         // 一級莊
-        { name: 'Château Margaux', coords: [-0.6687, 45.0444], rank: '1', description: '波爾多五大酒莊之一，以優雅和複雜度聞名', image: '/images/chateaux/LeftBank/Medoc/margaux.jpg' },
+        { name: 'Château Margaux', coords: [-0.6688, 45.0444], rank: '1', description: '波爾多五大酒莊之一，以優雅和複雜度聞名', image: '/images/chateaux/LeftBank/Medoc/margaux.jpg' },
         
         // 二級莊
-        { name: 'Château Rauzan-Ségla', coords: [-0.6756, 45.0360], rank: '2', description: '品質卓越的二級莊，風格優雅強勁', image: '/images/chateaux/LeftBank/Medoc/rauzan_segla.jpg' },
-        { name: 'Château Rauzan-Gassies', coords: [-0.6765, 45.0355], rank: '2', description: '與Rauzan-Ségla同源，歷史悠久', image: '/images/chateaux/LeftBank/Medoc/rauzan_gassies.jpg' },
-        { name: 'Château Durfort-Vivens', coords: [-0.6700, 45.0420], rank: '2', description: '小而精緻的二級莊，風格細膩', image: '/images/chateaux/LeftBank/Medoc/durfort_vivens.jpg' },
-        { name: 'Château Lascombes', coords: [-0.6820, 45.0340], rank: '2', description: '面積較大的二級莊，風格豐滿', image: '/images/chateaux/LeftBank/Medoc/lascombes.jpg' },
-        { name: 'Château Brane-Cantenac', coords: [-0.6860, 45.0310], rank: '2', description: '位於Cantenac村，優雅芬芳', image: '/images/chateaux/LeftBank/Medoc/brane_cantenac.jpg' },
+        { name: 'Château Rauzan-Ségla', coords: [-0.67484, 45.03543], rank: '2', description: '品質卓越的二級莊，風格優雅強勁', image: '/images/chateaux/LeftBank/Medoc/rauzan_segla.jpg' },
+        { name: 'Château Rauzan-Gassies', coords: [-0.67497, 45.03669], rank: '2', description: '與Rauzan-Ségla同源，歷史悠久', image: '/images/chateaux/LeftBank/Medoc/rauzan_gassies.jpg' },
+        { name: 'Château Durfort-Vivens', coords: [-0.67498, 45.03990], rank: '2', description: '小而精緻的二級莊，風格細膩', image: '/images/chateaux/LeftBank/Medoc/durfort_vivens.jpg' },
+        { name: 'Château Lascombes', coords: [-0.68376, 45.04145], rank: '2', description: '面積較大的二級莊，風格豐滿', image: '/images/chateaux/LeftBank/Medoc/lascombes.jpg' },
+        { name: 'Château Brane-Cantenac', coords: [-0.6737, 45.02395], rank: '2', description: '位於Cantenac村，優雅芬芳', image: '/images/chateaux/LeftBank/Medoc/brane_cantenac.jpg' },
         
         // 三級莊
-        { name: 'Château Palmer', coords: [-0.6800, 45.0330], rank: '3', description: '超二級品質，常與一級莊媲美', image: '/images/chateaux/LeftBank/Medoc/palmer.jpg' },
-        { name: 'Château d\'Issan', coords: [-0.6790, 45.0325], rank: '3', description: '美麗的護城河城堡，優雅經典', image: '/images/chateaux/LeftBank/Medoc/dissan.jpg' },
-        { name: 'Château Kirwan', coords: [-0.6835, 45.0318], rank: '3', description: '位於Cantenac，風格細膩', image: '/images/chateaux/LeftBank/Medoc/kirwan.jpg' },
-        { name: 'Château Giscours', coords: [-0.6600, 45.0150], rank: '3', description: '位於Labarde，風格強勁', image: '/images/chateaux/LeftBank/Medoc/giscours.jpg' },
-        { name: 'Château Malescot St-Exupéry', coords: [-0.6730, 45.0400], rank: '3', description: '位於Margaux村中心，濃郁優雅', image: '/images/chateaux/LeftBank/Medoc/malescot_st_exupery.jpg' },
-        { name: 'Château Boyd-Cantenac', coords: [-0.6850, 45.0315], rank: '3', description: 'Cantenac村的小型精品酒莊', image: '/images/chateaux/LeftBank/Medoc/Boyd-Cantenac.jpg' },
-        { name: 'Château Cantenac-Brown', coords: [-0.6845, 45.0312], rank: '3', description: '英式城堡風格，酒體豐滿', image: '/images/chateaux/LeftBank/Medoc/cantenac_brown.jpg' },
-        { name: 'Château Desmirail', coords: [-0.6825, 45.0335], rank: '3', description: '復興中的三級莊', image: '/images/chateaux/LeftBank/Medoc/desmirail.jpg' },
-        { name: 'Château Ferrière', coords: [-0.6715, 45.0415], rank: '3', description: '小型精品酒莊，風格精緻', image: '/images/chateaux/LeftBank/Medoc/ferriere.jpg' },
-        { name: 'Château Marquis d\'Alesme', coords: [-0.6710, 45.0408], rank: '3', description: '小而優雅的三級莊', image: '/images/chateaux/LeftBank/Medoc/marquis_dalesme.jpg' },
+        { name: 'Château Palmer', coords: [-0.6694, 45.0369], rank: '3', description: '超二級品質，常與一級莊媲美', image: '/images/chateaux/LeftBank/Medoc/palmer.jpg' },
+        { name: 'Château d\'Issan', coords: [-0.6581, 45.0379], rank: '3', description: '美麗的護城河城堡，優雅經典', image: '/images/chateaux/LeftBank/Medoc/dissan.jpg' },
+        { name: 'Château Kirwan', coords: [-0.65816, 45.02742], rank: '3', description: '位於Cantenac，風格細膩', image: '/images/chateaux/LeftBank/Medoc/kirwan.jpg' },
+        { name: 'Château Giscours', coords: [-0.64605, 45.0087], rank: '3', description: '位於Labarde，風格強勁', image: '/images/chateaux/LeftBank/Medoc/Giscours.jpg' },
+        { name: 'Château Malescot St-Exupéry', coords: [-0.6736, 45.0414], rank: '3', description: '位於Margaux村中心，濃郁優雅', image: '/images/chateaux/LeftBank/Medoc/malescot_st_exupery.jpg' },
+        { name: 'Château Boyd-Cantenac', coords: [-0.6560, 45.0228], rank: '3', description: 'Cantenac村的小型精品酒莊', image: '/images/chateaux/LeftBank/Medoc/Boyd-Cantenac.jpg' },
+        { name: 'Château Cantenac-Brown', coords: [-0.67923, 45.02780], rank: '3', description: '英式城堡風格，酒體豐滿', image: '/images/chateaux/LeftBank/Medoc/cantenac_brown.jpg' },
+        { name: 'Château Desmirail', coords: [-0.65397, 45.02852], rank: '3', description: '復興中的三級莊', image: '/images/chateaux/LeftBank/Medoc/desmirail.jpg' },
+        { name: 'Château Ferrière', coords: [-0.6778, 45.0433], rank: '3', description: '小型精品酒莊，風格精緻', image: '/images/chateaux/LeftBank/Medoc/ferriere.jpg' },
+        { name: 'Château Marquis d\'Alesme', coords: [-0.67702, 45.04194], rank: '3', description: '小而優雅的三級莊', image: '/images/chateaux/LeftBank/Medoc/marquis_dalesme.jpg' },
         
         // 四級莊
-        { name: 'Château Pouget', coords: [-0.6840, 45.0320], rank: '4', description: '與Boyd-Cantenac同一擁有者', image: '/images/chateaux/LeftBank/Medoc/Pouget.jpg' },
-        { name: 'Château Prieuré-Lichine', coords: [-0.6780, 45.0345], rank: '4', description: '前修道院產業，風格現代', image: '/images/chateaux/LeftBank/Medoc/prieure_lichine.jpg' },
-        { name: 'Château Marquis de Terme', coords: [-0.6695, 45.0425], rank: '4', description: '傳統風格，結構紮實', image: '/images/chateaux/LeftBank/Medoc/marquis_de_terme.jpg' },
+        { name: 'Château Pouget', coords: [-0.6569, 45.0232], rank: '4', description: '與Boyd-Cantenac同一擁有者', image: '/images/chateaux/LeftBank/Medoc/Pouget.jpg' },
+        { name: 'Château Prieuré-Lichine', coords: [-0.6559, 45.0290], rank: '4', description: '前修道院產業，風格現代', image: '/images/chateaux/LeftBank/Medoc/prieure_lichine.jpg' },
+        { name: 'Château Marquis de Terme', coords: [-0.67729, 45.03840], rank: '4', description: '傳統風格，結構紮實', image: '/images/chateaux/LeftBank/Medoc/marquis_de_terme.jpg' },
         
         // 五級莊
-        { name: 'Château du Tertre', coords: [-0.6950, 45.0280], rank: '5', description: '位於Arsac，風土獨特', image: '/images/chateaux/LeftBank/Medoc/du_tertre.jpg' },
-        { name: 'Château Dauzac', coords: [-0.6580, 45.0180], rank: '5', description: '位於Labarde，近年品質提升', image: '/images/chateaux/LeftBank/Medoc/dauzac.jpg' }
+        { name: 'Château du Tertre', coords: [-0.68090, 45.00593], rank: '5', description: '位於Arsac，風土獨特', image: '/images/chateaux/LeftBank/Medoc/du_tertre.jpg' },
+        { name: 'Château Dauzac', coords: [-0.62345, 45.01936], rank: '5', description: '位於Labarde，近年品質提升', image: '/images/chateaux/LeftBank/Medoc/dauzac.jpg' }
       ]
 
       // 定義每個等級的顏色和圖標

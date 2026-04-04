@@ -8,7 +8,7 @@
   },
   {
     "name": "Château Rauzan-Ségla",
-    "coordinates": [ -0.67556, 45.03595 ],
+    "coordinates": [ -0.67484, 45.03543 ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "Margaux 產區最頂尖的二級酒莊之一，風格細膩優雅。",
   "image": "/images/chateaux/LeftBank/Medoc/rauzan_segla.jpg"
@@ -64,7 +64,7 @@
   },
   {
     "name": "Château Boyd-Cantenac",
-    "coordinates": [ -0.67655, 45.02850 ],
+    "coordinates": [ -0.6560, 45.0228 ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "風格濃郁、單寧紮實，陳年後展現優雅複雜的層次。",
     "image": "/images/chateaux/LeftBank/Medoc/Boyd-Cantenac.jpg"
@@ -78,37 +78,79 @@
   },
   {
     "name": "Château Durfort-Vivens",
-    "coordinates": [ -0.67234, 45.04123 ],
+    "coordinates": [ -0.67498, 45.03990 ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "歷史悠久的 Margaux 二級酒莊，風格優雅精緻。",
     "image": "/images/chateaux/LeftBank/Medoc/Durfort-Vivens.jpg"
   },
   {
     "name": "Château Giscours",
-    "coordinates": [ -0.69723, 45.01234 ],
+    "coordinates": [ -0.64605, 45.0087 ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "酒體飽滿、結構紮實，現代化管理下品質穩定提升。",
     "image": "/images/chateaux/LeftBank/Medoc/Giscours.jpg"
   },
   {
     "name": "Château Malescot Saint-Exupéry",
-    "coordinates": [ -0.67456, 45.03912 ],
+    "coordinates": [ -0.6736, 45.0414 ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "以花香與優雅單寧著稱，Margaux 典型風格代表。",
-    "image": "/images/chateaux/LeftBank/Medoc/malescot_saint_exupery.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/malescot_st_exupery.jpg"
   },
   {
     "name": "Château Pouget",
-    "coordinates": [ -0.67556, 45.02734 ],
+    "coordinates": [ -0.6569, 45.0232 ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "小型精品酒莊，風格濃郁、單寧飽滿。",
     "image": "/images/chateaux/LeftBank/Medoc/Pouget.jpg"
   },
   {
     "name": "Château Prieuré-Lichine",
-    "coordinates": [ -0.67889, 45.02567 ],
+    "coordinates": [ -0.6559, 45.0290 ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "以果香豐富、易飲性佳著稱，適合年輕時飲用。",
     "image": "/images/chateaux/LeftBank/Medoc/Prieuré-Lichine.jpg"
+  },
+  {
+    "name": "Château Rauzan-Gassies",
+    "coordinates": [ -0.67497, 45.03669 ],
+    "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
+    "description": "與 Rauzan-Ségla 同源，歷史悠久的 Margaux 二級酒莊。",
+    "image": "/images/chateaux/LeftBank/Medoc/rauzan_gassies.jpg"
+  },
+  {
+    "name": "Château Desmirail",
+    "coordinates": [ -0.65397, 45.02852 ],
+    "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
+    "description": "復興中的三級莊，風格精緻細膩。",
+    "image": "/images/chateaux/LeftBank/Medoc/desmirail.jpg"
+  },
+  {
+    "name": "Château Ferrière",
+    "coordinates": [ -0.6778, 45.0433 ],
+    "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
+    "description": "小型精品酒莊，風格精緻優雅。",
+    "image": "/images/chateaux/LeftBank/Medoc/ferriere.jpg"
+  },
+  {
+    "name": "Château Marquis d'Alesme Becker",
+    "coordinates": [ -0.67702, 45.04194 ],
+    "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
+    "description": "小而優雅的三級莊，風格精緻。",
+    "image": "/images/chateaux/LeftBank/Medoc/marquis_dalesme.jpg"
+  },
+  {
+    "name": "Château du Tertre",
+    "coordinates": [ -0.68090, 45.00593 ],
+    "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
+    "description": "位於 Arsac，風土獨特的五級酒莊。",
+    "image": "/images/chateaux/LeftBank/Medoc/du_tertre.jpg"
+  },
+  {
+    "name": "Château Dauzac",
+    "coordinates": [ -0.62345, 45.01936 ],
+    "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
+    "description": "位於 Labarde，近年品質持續提升。",
+    "image": "/images/chateaux/LeftBank/Medoc/dauzac.jpg"
   }
 ]

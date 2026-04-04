@@ -2,8 +2,8 @@
   {
     "name": "Château Lafite Rothschild",
     "coordinates": [
-      -0.7705,
-      45.2217
+      -0.77306,
+      45.225
     ],
     "rank": "一級酒莊 (Premier Grand Cru Classé 1855)",
     "description": "波爾多五大酒莊之一，Pauillac 產區的頂級代表，優雅細緻、陳年潛力極佳。",
@@ -12,8 +12,8 @@
   {
     "name": "Château Latour",
     "coordinates": [
-      -0.751,
-      45.1727
+      -0.745,
+      45.17667
     ],
     "rank": "一級酒莊 (Premier Grand Cru Classé 1855)",
     "description": "以濃郁結構和強大陳年實力著稱，Pauillac 最具力量感的一級酒莊。",
@@ -32,8 +32,8 @@
   {
     "name": "Château Pichon Baron",
     "coordinates": [
-      -0.7515,
-      45.1768
+      -0.7525,
+      45.17611
     ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "Pauillac 最具代表性的二級酒莊之一，酒體濃郁、結構感強。",
@@ -62,8 +62,8 @@
   {
     "name": "Château Lynch-Bages",
     "coordinates": [
-      -0.75455,
-      45.19138
+      -0.75561,
+      45.19083
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "以濃郁果香和結構感著稱，深受收藏家喜愛。",
@@ -102,8 +102,8 @@
   {
     "name": "Château Clerc Milon",
     "coordinates": [
-      -0.76912,
-      45.21234
+      -0.765319,
+      45.221615
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "Rothschild 家族旗下酒莊，風格濃郁、果香豐富。",
@@ -112,8 +112,8 @@
   {
     "name": "Château Croizet-Bages",
     "coordinates": [
-      -0.75678,
-      45.19567
+      -0.75658,
+      45.19073
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "風格紮實、單寧豐富，適合長期陳年。",
@@ -122,8 +122,8 @@
   {
     "name": "Château d'Armailhac",
     "coordinates": [
-      -0.76834,
-      45.21456
+      -0.7700,
+      45.2111
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "鄰近 Mouton Rothschild，風格優雅、性價比高。",
@@ -132,8 +132,8 @@
   {
     "name": "Château Duhart-Milon",
     "coordinates": [
-      -0.77123,
-      45.21789
+      -0.747,
+      45.1979
     ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "Lafite Rothschild 姊妹酒莊，風格細膩優雅。",
@@ -142,8 +142,8 @@
   {
     "name": "Château Grand-Puy Ducasse",
     "coordinates": [
-      -0.76234,
-      45.18923
+      -0.74658,
+      45.19987
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "風格經典、結構良好，穩定可靠的 Pauillac 五級酒莊。",
@@ -152,8 +152,8 @@
   {
     "name": "Château Haut-Bages-Libéral",
     "coordinates": [
-      -0.75891,
-      45.19345
+      -0.75181,
+      45.18073
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "風格濃郁、果味豐富，近年品質提升顯著。",
@@ -162,8 +162,8 @@
   {
     "name": "Château Lynch-Moussas",
     "coordinates": [
-      -0.75567,
-      45.19678
+      -0.79317,
+      45.18363
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "風格平衡、易飲，性價比優異的 Pauillac 酒莊。",
@@ -172,8 +172,8 @@
   {
     "name": "Château Pédesclaux",
     "coordinates": [
-      -0.76456,
-      45.19012
+      -0.7582,
+      45.2114
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "現代化管理下品質快速提升，風格濃郁飽滿。",

@@ -292,7 +292,7 @@ export const lessonContent = [
             ['右岸紅（柔順型）', '15–17°C', '中大肚紅酒杯；醒 15–45 分視單寧', '鴨胸、菌菇料理、綿密質地料理'],
             ['干型白（清脆/佩薩克白）', '8–10°C（清新型）／10–12°C（桶陳型）', '郁金香杯；頂級款可短醒', '貝類海鮮、白肉、山羊乳酪（桶陳配奶油醬）'],
             ['貴腐甜（蘇岱/巴薩克）', '10–12°C', '小鬱金香杯；不建議長醒', '鵝肝、藍紋乳酪、辛香料理、甜點（甜度需高於餐）'],
-            ['起泡（克雷芒）', '6–8°C', '鬱金香杯（避免笛形）；不醒酒', '生蠔、天婦羅、鹽酥小點、開胃菜'],
+            ['起泡（Crémant de Bordeaux）', '6–8°C', '鬱金香杯（避免笛形）；不醒酒', '生蠔、天婦羅、鹽酥小點、開胃菜'],
             ['桃紅（清爽型）', '8–10°C', '白酒杯；不醒酒', '沙拉、冷盤、地中海料理、輕油脂食物']
           ]
         }
@@ -313,7 +313,7 @@ export const lessonContent = [
       question: '下列哪一個「類型 → 侍酒策略」搭配較為合理？',
       options: [
         '貴腐甜：18–20°C、醒 1–2 小時',
-        '克雷芒：6–8°C、鬱金香杯、不醒酒',
+        'Crémant de Bordeaux：6–8°C、鬱金香杯、不醒酒',
         '左岸紅：12–14°C、小白酒杯',
         '桃紅：14–16°C、醒 30–60 分'
       ],
@@ -466,14 +466,14 @@ export const lessonContent = [
   {
     title: '起泡酒與特殊酒款',
     highlights: [
-      { id: 1, icon: '🫧', title: '克雷芒起泡酒', content: '波爾多傳統法起泡酒，品質優異' },
+      { id: 1, icon: '🫧', title: 'Crémant de Bordeaux', content: '波爾多傳統法起泡酒，品質優異' },
       { id: 2, icon: '🌹', title: '桃紅酒', content: '清新優雅，適合夏日享用' }
     ],
     content: `<div class="special-wine-types">
       <p class="lead-text">除了經典的紅白甜酒外，波爾多還生產高品質的起泡酒和桃紅酒，豐富了酒款類型的多樣性。</p>
       <div class="special-categories">
         <div class="cremant-bordeaux">
-          <h4>🫧 克雷芒-德-波爾多起泡酒</h4>
+          <h4>🫧 Crémant de Bordeaux 起泡酒</h4>
           <div class="cremant-details">
             <div class="production-method">
               <h5>傳統法釀造</h5>
@@ -540,7 +540,7 @@ export const lessonContent = [
           </div>
         </div>
         <div class="clairet-bordeaux">
-          <h4>🟫 波爾多克萊雷特</h4>
+          <h4>🟫 波爾多（Bordeaux Claret）克萊雷特</h4>
           <div class="clairet-details">
             <div class="historical-significance">
               <h5>歷史傳統</h5>
@@ -571,7 +571,7 @@ export const lessonContent = [
                 <li><strong>紅酒：</strong>85%（各等級紅酒）</li>
                 <li><strong>干型白酒：</strong>10%（主要在格拉夫）</li>
                 <li><strong>甜酒：</strong>3%（蘇岱、巴薩克等）</li>
-                <li><strong>起泡酒：</strong>1.5%（克雷芒-德-波爾多）</li>
+                <li><strong>起泡酒：</strong>1.5%（Crémant de Bordeaux）</li>
                 <li><strong>桃紅酒：</strong>0.5%（季節性生產）</li>
               </ul>
             </div>
@@ -590,10 +590,10 @@ export const lessonContent = [
     </div>`,
     hasMap: false,
     quiz: {
-      question: '克雷芒-德-波爾多起泡酒採用什麼釀造方法？',
+      question: 'Crémant de Bordeaux 起泡酒採用什麼釀造方法？',
       options: ['槽中二次發酵法', '傳統法（香檳法）', '碳酸注入法', '自然發酵法'],
       correct: 1,
-      explanation: '克雷芒-德-波爾多採用傳統法（又稱香檳法）釀造，在瓶中進行二次發酵產生氣泡，並需要至少12個月的酒泥接觸。'
+      explanation: 'Crémant de Bordeaux 採用傳統法（又稱香檳法）釀造，在瓶中進行二次發酵產生氣泡，並需要至少12個月的酒泥接觸。'
     }  },
 
   // 結束頁

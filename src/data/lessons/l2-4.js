@@ -282,18 +282,21 @@ export const l24Content = [
         {
           name: 'Château Léoville Las Cases',
           coordinates: [-0.7398762351430916, 45.163833230181055],
+          image: '/images/chateaux/LeftBank/Medoc/leoville_las_cases.jpg',
           description: '🦁 <strong>Château Léoville Las Cases</strong><br/>被譽為「超二級」（Super Second），品質最接近一級莊。<br/><br/><strong>特色：</strong>風格強勁、結構宏大、陳年潛力極佳<br/><strong>地理優勢：</strong>緊鄰Château Latour，共享優質風土',
           color: '#8B0000'
         },
         {
           name: 'Château Léoville Poyferré',
           coordinates: [-0.7406018946627771, 45.16444037596807],
+          image: '/images/chateaux/LeftBank/Medoc/leoville_poyferre.jpg',
           description: '🦁 <strong>Château Léoville Poyferré</strong><br/>風格更為現代，果香奔放，口感圓潤。<br/><br/><strong>特色：</strong>華麗的現代風格，近年獲極高評價<br/><strong>釀造：</strong>採用更多現代化技術，強調果味表現',
           color: '#B22222'
         },
         {
           name: 'Château Léoville Barton',
           coordinates: [-0.739149473222552, 45.157206879878785],
+          image: '/images/chateaux/LeftBank/Medoc/leoville_barton.jpg',
           description: '🦁 <strong>Château Léoville Barton</strong><br/>堅守傳統釀造，風格經典。<br/><br/><strong>特色：</strong>三者中性價比最高，深受資深愛好者喜愛<br/><strong>傳統：</strong>保持傳統釀造工藝，風格優雅而古典',
           color: '#DC143C'
         }
@@ -309,35 +312,37 @@ export const l24Content = [
 
       // 立即添加標記（不等待 idle）
       console.log('[L2-4] Adding estate markers')
+      const _leovMarkers = []; const _leovPopups = []
       leovilleEstates.forEach(estate => {
-        // 創建固定的標記元素
+        // 創建固定的標記元素（外層不可設 position/transform，避免干擾 Mapbox 定位）
         const markerEl = document.createElement('div')
         markerEl.className = 'custom-estate-marker-leoville'
         markerEl.style.cssText = `
+          cursor: pointer;
+          width: 36px;
+          height: 36px;
+        `
+        markerEl.innerHTML = `<div style="
           width: 36px;
           height: 36px;
           background-color: ${estate.color};
           border: 3px solid white;
           border-radius: 50%;
-          cursor: pointer;
           box-shadow: 0 4px 12px rgba(0,0,0,0.6);
           display: flex;
           align-items: center;
           justify-content: center;
           font-size: 18px;
-          transition: all 0.2s ease;
-          position: absolute;
-          pointer-events: auto;
-        `
-        markerEl.innerHTML = '🦁'
+          transition: transform 0.2s;
+        ">🦁</div>`
         
         markerEl.addEventListener('mouseenter', () => {
-          markerEl.style.transform = 'scale(1.3)'
-          markerEl.style.zIndex = '1000'
+          const inner = markerEl.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1.3)'
         })
         markerEl.addEventListener('mouseleave', () => {
-          markerEl.style.transform = 'scale(1)'
-          markerEl.style.zIndex = '1'
+          const inner = markerEl.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1)'
         })
 
         // 創建彈窗
@@ -348,8 +353,11 @@ export const l24Content = [
           maxWidth: '340px',
           className: 'estate-popup-leoville'
         }).setHTML(`
-          <div style="padding: 10px; font-family: 'Noto Sans TC', sans-serif; line-height: 1.6;">
-            ${estate.description}
+          <div style="font-family: 'Noto Sans TC', sans-serif; line-height: 1.6;">
+            <img src="${estate.image}" alt="${estate.name}"
+              style="width: 100%; max-height: 200px; object-fit: contain; display: block; background: #f5f5f5;"
+              onerror="this.style.display='none'" />
+            <div style="padding: 10px;">${estate.description}</div>
           </div>
         `)
 
@@ -364,6 +372,7 @@ export const l24Content = [
           .setLngLat(estate.coordinates)
           .setPopup(popup)
           .addTo(map)
+        _leovMarkers.push(marker); _leovPopups.push(popup)
 
         console.log(`[L2-4] Added marker for ${estate.name} at`, estate.coordinates)
 
@@ -379,6 +388,10 @@ export const l24Content = [
       map.touchZoomRotate.disableRotation()
       
       console.log('[L2-4] All markers added successfully')
+      return () => {
+        _leovMarkers.forEach(m => { try { m.remove() } catch {} })
+        _leovPopups.forEach(p => { try { p.remove() } catch {} })
+      }
     },
     quiz: {
       question: 'Léoville家族的三座酒莊中，哪一座被公認為品質最接近一級莊？',
@@ -477,34 +490,35 @@ export const l24Content = [
         color: '#4169E1'
       }
 
-      // 創建標記元素
+      // 創建標記元素（外層不可設 position/transform，避免干擾 Mapbox 定位）
       const markerEl = document.createElement('div')
       markerEl.className = 'custom-estate-marker-ducru'
       markerEl.style.cssText = `
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+      `
+      markerEl.innerHTML = `<div style="
         width: 36px;
         height: 36px;
         background-color: ${ducruEstate.color};
         border: 3px solid white;
         border-radius: 50%;
-        cursor: pointer;
         box-shadow: 0 4px 12px rgba(0,0,0,0.6);
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 18px;
-        transition: all 0.2s ease;
-        position: absolute;
-        pointer-events: auto;
-      `
-      markerEl.innerHTML = '💎'
+        transition: transform 0.2s;
+      ">💎</div>`
       
       markerEl.addEventListener('mouseenter', () => {
-        markerEl.style.transform = 'scale(1.3)'
-        markerEl.style.zIndex = '1000'
+        const inner = markerEl.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1.3)'
       })
       markerEl.addEventListener('mouseleave', () => {
-        markerEl.style.transform = 'scale(1)'
-        markerEl.style.zIndex = '1'
+        const inner = markerEl.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1)'
       })
 
       // 創建彈窗
@@ -515,8 +529,11 @@ export const l24Content = [
         maxWidth: '340px',
         className: 'estate-popup-ducru'
       }).setHTML(`
-        <div style="padding: 10px; font-family: 'Noto Sans TC', sans-serif; line-height: 1.6;">
-          ${ducruEstate.description}
+        <div style="font-family: 'Noto Sans TC', sans-serif; line-height: 1.6;">
+          <img src="/images/chateaux/LeftBank/Medoc/ducru_beaucaillou.jpg" alt="Château Ducru-Beaucaillou"
+            style="width: 100%; max-height: 200px; object-fit: contain; display: block; background: #f5f5f5;"
+            onerror="this.style.display='none'" />
+          <div style="padding: 10px;">${ducruEstate.description}</div>
         </div>
       `)
 
@@ -545,6 +562,10 @@ export const l24Content = [
       map.touchZoomRotate.disableRotation()
       
       console.log('[L2-4 Ducru] Marker added successfully')
+      return () => {
+        try { marker.remove() } catch {}
+        try { popup.remove() } catch {}
+      }
     },
     quiz: {
       question: 'Château Ducru-Beaucaillou的名字"Beaucaillou"是什麼意思？',
@@ -691,55 +712,56 @@ export const l24Content = [
           emoji: '🐉',
           coordinates: [-0.7341112885654008, 45.14587964869861],
           color: '#8B0000',
+          image: '/images/chateaux/LeftBank/Medoc/beychevelle.jpg',
           description: '🐉 <strong>Château Beychevelle (龍船)</strong><br/>四級莊 (4ème Grand Cru Classé)<br/><br/><strong>特色：</strong>以優雅風格與帆船標誌聞名<br/><strong>理念：</strong>卓越風土與精準釀造的完美結合<br/><strong>風格：</strong>力量與優雅的完美平衡'
         },
         {
           name: 'Château Branaire-Ducru',
           emoji: '🌺',
           coordinates: [-0.7381962448174286, 45.1450658770304],
-          color: '#8B4789',
-          description: '🌺 <strong>Château Branaire-Ducru (班尼杜克)</strong><br/>四級莊 (4ème Grand Cru Classé)<br/><br/><strong>特色：</strong>精緻優雅風格的代表<br/><strong>風格：</strong>絲滑單寧與純淨果香<br/><strong>陳年：</strong>年輕時已迷人，但具良好陳年潛力'
+          color: '#8B4789',          image: '/images/chateaux/LeftBank/Medoc/branaire_ducru.jpg',          description: '🌺 <strong>Château Branaire-Ducru (班尼杜克)</strong><br/>四級莊 (4ème Grand Cru Classé)<br/><br/><strong>特色：</strong>精緻優雅風格的代表<br/><strong>風格：</strong>絲滑單寧與純淨果香<br/><strong>陳年：</strong>年輕時已迷人，但具良好陳年潛力'
         },
         {
           name: 'Château Talbot',
           emoji: '⚔️',
           coordinates: [-0.7555591327421673, 45.160417704888765],
-          color: '#4A4A4A',
-          description: '⚔️ <strong>Château Talbot (大寶)</strong><br/>四級莊 (4ème Grand Cru Classé)<br/><br/><strong>特色：</strong>以英國將軍John Talbot命名<br/><strong>風格：</strong>飽滿結構與穩定品質<br/><strong>評價：</strong>性價比極高，深受市場喜愛'
+          color: '#4A4A4A',          image: '/images/chateaux/LeftBank/Medoc/talbot.jpg',          description: '⚔️ <strong>Château Talbot (大寶)</strong><br/>四級莊 (4ème Grand Cru Classé)<br/><br/><strong>特色：</strong>以英國將軍John Talbot命名<br/><strong>風格：</strong>飽滿結構與穩定品質<br/><strong>評價：</strong>性價比極高，深受市場喜愛'
         }
       ]
 
       // 立即添加標記
       console.log('[L2-4 Star Estates] Adding estate markers')
+      const _starMarkers = []; const _starPopups = []
       estates.forEach(estate => {
-        // 創建固定的標記元素
+        // 創建固定的標記元素（外層不可設 position/transform，避免干擾 Mapbox 定位）
         const markerEl = document.createElement('div')
         markerEl.className = 'custom-estate-marker-star'
         markerEl.style.cssText = `
+          cursor: pointer;
+          width: 36px;
+          height: 36px;
+        `
+        markerEl.innerHTML = `<div style="
           width: 36px;
           height: 36px;
           background-color: ${estate.color};
           border: 3px solid white;
           border-radius: 50%;
-          cursor: pointer;
           box-shadow: 0 4px 12px rgba(0,0,0,0.6);
           display: flex;
           align-items: center;
           justify-content: center;
           font-size: 18px;
-          transition: all 0.2s ease;
-          position: absolute;
-          pointer-events: auto;
-        `
-        markerEl.innerHTML = estate.emoji
+          transition: transform 0.2s;
+        ">${estate.emoji}</div>`
         
         markerEl.addEventListener('mouseenter', () => {
-          markerEl.style.transform = 'scale(1.3)'
-          markerEl.style.zIndex = '1000'
+          const inner = markerEl.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1.3)'
         })
         markerEl.addEventListener('mouseleave', () => {
-          markerEl.style.transform = 'scale(1)'
-          markerEl.style.zIndex = '1'
+          const inner = markerEl.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1)'
         })
 
         // 創建彈窗
@@ -750,8 +772,11 @@ export const l24Content = [
           maxWidth: '340px',
           className: 'estate-popup-star'
         }).setHTML(`
-          <div style="padding: 10px; font-family: 'Noto Sans TC', sans-serif; line-height: 1.6;">
-            ${estate.description}
+          <div style="font-family: 'Noto Sans TC', sans-serif; line-height: 1.6;">
+            <img src="${estate.image}" alt="${estate.name}"
+              style="width: 100%; max-height: 200px; object-fit: contain; display: block; background: #f5f5f5;"
+              onerror="this.style.display='none'" />
+            <div style="padding: 10px;">${estate.description}</div>
           </div>
         `)
 
@@ -766,6 +791,7 @@ export const l24Content = [
           .setLngLat(estate.coordinates)
           .setPopup(popup)
           .addTo(map)
+        _starMarkers.push(marker); _starPopups.push(popup)
 
         console.log(`[L2-4 Star Estates] Added marker for ${estate.name} at`, estate.coordinates)
 
@@ -777,6 +803,10 @@ export const l24Content = [
       })
       
       console.log('[L2-4 Star Estates] All markers added successfully')
+      return () => {
+        _starMarkers.forEach(m => { try { m.remove() } catch {} })
+        _starPopups.forEach(p => { try { p.remove() } catch {} })
+      }
     },
     quiz: {
       question: '在亞洲市場被暱稱為「龍船」的是哪家酒莊？',

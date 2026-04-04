@@ -37,11 +37,11 @@
                 </button>
               </div>
 
-              <h2 v-if="!currentSlideData.component" class="slide-heading">{{ enhanceText(currentSlideData.title) }}</h2>
+              <h2 v-if="!currentSlideData.component && currentSlideData.layout !== 'split'" class="slide-heading">{{ enhanceText(currentSlideData.title) }}</h2>
 
               <!-- 重點標記 -->
               <div
-                v-if="currentSlideData.highlights"
+                v-if="currentSlideData.highlights && currentSlideData.layout !== 'split'"
                 class="highlights-section"
                 :style="currentSlideData.highlightDelayStep ? {'--highlight-delay-step': currentSlideData.highlightDelayStep} : null"
               >
@@ -73,6 +73,49 @@
                   <div class="notes">
                     <div class="row" v-for="(n, i) in currentSlideData.presenterNotes" :key="'pnote-c-' + i">{{ n }}</div>
                   </div>
+                </div>
+              </div>
+
+              <!-- ★ 全幅左右分欄佈局（layout: 'split'） -->
+              <div v-else-if="currentSlideData.layout === 'split'" class="slide-split-layout">
+                <!-- 左欄：標題 + 重點 + 內容 -->
+                <div class="split-left-col">
+                  <h2 class="slide-heading">{{ enhanceText(currentSlideData.title) }}</h2>
+                  <div
+                    v-if="currentSlideData.highlights"
+                    class="highlights-section"
+                    :style="currentSlideData.highlightDelayStep ? {'--highlight-delay-step': currentSlideData.highlightDelayStep} : null"
+                  >
+                    <div
+                      v-for="highlight in currentSlideData.highlights"
+                      :key="highlight.id"
+                      class="highlight-card"
+                    >
+                      <div class="highlight-icon">{{ highlight.icon }}</div>
+                      <div class="highlight-content">
+                        <h4>{{ enhanceText(highlight.title) }}</h4>
+                        <p>{{ enhanceText(highlight.content) }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-content">
+                    <div v-html="enhanceText(currentSlideData.content)"></div>
+                    <div v-if="currentSlideData.presenterNotes && currentSlideData.presenterNotes.length" class="notes">
+                      <div class="row" v-for="(n, i) in currentSlideData.presenterNotes" :key="'pnote-sp-' + i">{{ n }}</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 右欄：地圖 -->
+                <div v-if="currentSlideData.hasMap" class="split-right-col">
+                  <PresentationMap
+                    :key="`map-${currentSlide}`"
+                    :focus-type="currentSlideData.mapFocus || 'france-overview'"
+                    :show-bordeaux="currentSlideData.showBordeaux !== false"
+                    :on-map-ready="currentSlideData.onMapReady || null"
+                    :geojson-path="currentSlideData.geojsonPath || ''"
+                    :geojson-paths="currentSlideData.geojsonPaths || []"
+                    :map-config="currentSlideData.mapConfig || null"
+                  />
                 </div>
               </div>
 
@@ -1655,6 +1698,7 @@ const normalizeSlide = (s) => {
         if (s.mapFocus) slide.mapFocus = s.mapFocus
         if (s.showBordeaux !== undefined) slide.showBordeaux = s.showBordeaux
         if (typeof s.onMapReady === 'function') slide.onMapReady = s.onMapReady
+        if (s.mapConfig) slide.mapConfig = s.mapConfig
       }
       break
     }
@@ -1836,7 +1880,7 @@ const normalizeSlide = (s) => {
   // 這些屬性對於地圖元件的正確配置至關重要
   const preservedProps = [
     'geojsonPath', 'geojsonPaths', 'showBordeaux', 'mapFocus', 'mapPosition',
-    'onMapReady', 'presenterNotes', 'componentProps', 'highlightDelayStep'
+    'onMapReady', 'presenterNotes', 'componentProps', 'highlightDelayStep', 'layout', 'mapConfig'
   ]
   preservedProps.forEach(prop => {
     if (s[prop] !== undefined && slide[prop] === undefined) {
@@ -2619,6 +2663,127 @@ defineExpose({
 
   .quiz-section {
     margin-top: 1.5rem;
+  }
+}
+
+/* ★ 全幅左右分欄佈局 (layout: 'split') */
+.slide-split-layout {
+  display: flex;
+  gap: 1.5rem;
+  min-height: 560px;
+  align-items: stretch;
+}
+
+.split-left-col {
+  flex: 1 1 50%;
+  min-width: 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 190px);
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.split-left-col .slide-heading {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.split-left-col .highlights-section {
+  margin: 0.5rem 0 0.75rem;
+}
+
+.split-left-col .main-content {
+  margin: 0.5rem 0 0;
+  flex: 1;
+}
+
+/* key-facts / strategic-location 用於 split 佈局內容 */
+.split-left-col .key-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0.75rem 0;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+.split-left-col .fact-item {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+.split-left-col .fact-item strong {
+  color: #333;
+}
+.split-left-col .strategic-location {
+  margin-top: 0.75rem;
+}
+.split-left-col .strategic-location h4 {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+.split-left-col .strategic-location ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+.split-left-col .strategic-location li {
+  font-size: 0.93rem;
+  color: #555;
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+.split-left-col .lead-text {
+  font-size: 0.97rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.split-right-col {
+  flex: 1 1 50%;
+  min-width: 0;
+  min-height: 560px;
+  height: calc(100vh - 190px);
+  max-height: 820px;
+  position: sticky;
+  top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .slide-split-layout {
+    flex-direction: column;
+  }
+  .split-left-col {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+  .split-right-col {
+    position: static;
+    height: 400px;
+    min-height: 400px;
+    max-height: none;
+  }
+}
+
+@media (max-height: 768px) {
+  .slide-split-layout {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .split-left-col {
+    max-height: none;
+    overflow-y: visible;
+  }
+  .split-right-col {
+    position: static !important;
+    height: 360px !important;
+    max-height: none !important;
   }
 }
 

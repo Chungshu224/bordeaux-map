@@ -555,6 +555,7 @@ export const lessonContent = [
         for (const it of (arr || [])) {
           const key = gradeKeyOf(it.rank, f.category)
           if (!Array.isArray(it.coordinates) || it.coordinates.length !== 2) continue
+          if (key === 'other') continue   // 隱藏非1855分級酒莊
           features.push({
             type: 'Feature',
             properties: {
@@ -1125,7 +1126,7 @@ export const lessonContent = [
         ]
       }
     ],
-    presenterNotes: '提示學員：接下來進入圖片情境題，請將上述重點套入判讀流程。'
+    presenterNotes: ['提示學員：接下來進入圖片情境題，請將上述重點套入判讀流程。'],
   },
   { 
     type: 'chapter-divider', 

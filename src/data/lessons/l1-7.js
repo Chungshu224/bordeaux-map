@@ -108,7 +108,12 @@ export const lessonContent = [
     type: 'chapter-divider',
     chapter: '2',
     title: '感官分析',
-    subt  {
+    subtitle: '視覺、嗅覺與味覺品評',
+    icon: '👃',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+
+  {
     title: '視覺品評 (1/3)：色澤分析',
     highlights: [
       { id: 1, icon: '👁️', title: '色澤觀察', content: '從顏色深淺判斷酒款年齡和風格' }
@@ -159,15 +164,6 @@ export const lessonContent = [
           <img src="/images/L1-7/葡萄酒觀察技巧.png" alt="葡萄酒觀察技巧" style="max-width: 100%; border-radius: 8px; margin: 15px 0;">
         </div>
       </div>
-    </div>`,
-    hasMap: false,
-    quiz: {
-      question: '紅酒出現明顯的橙色邊緣通常表示什麼？',
-      options: ['酒款有缺陷', '酒款正在成熟或已經陳年', '酒精度過高', '釀造工藝有問題'],
-      correct: 1,
-      explanation: '紅酒出現橙色邊緣是正常的陳年特徵，表示酒款正在成熟或已經經過一定時間的陳年，是酒款演化的自然過程。'
-    }
-  },    </div>
     </div>`,
     hasMap: false,
     quiz: {

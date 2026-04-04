@@ -65,23 +65,30 @@ export const l21Content = [
   // ========== 1. 地理位置 =========
   {
     title: 'Médoc半島地理概覽',
+    layout: 'split',
     duration: '20分鐘',
     level: '中級',
-    courseIntro: 'Médoc半島是波爾多左岸最重要的產區，以出產世界頂級紅酒而聞名於世。其獨特的地理位置是形成卓越風土的基礎。',
     highlights: [
       { id: 1, icon: '🗺️', title: '獨特地理', content: 'Gironde河左岸，延伸60公里的狹長半島' },
-      { id: 2, icon: '📍', title: '戰略位置', content: '從波爾多市西北方延伸至大西洋' }
+      { id: 2, icon: '📍', title: '戰略位置', content: '從波爾多市西北方延伸至大西洋，左岸精華所在' }
     ],
-  // 加入布局提示 class：layout-split-map-right 讓地圖在桌面版靠右呈現，左側為文字內容。
-  // 若在行動裝置，樣式系統會自動堆疊。
-  content: '<div class="medoc-geography layout-split-map-right layout-hint-map-right"><p class="lead-text">Médoc半島是波爾多左岸最重要的產區，以出產世界頂級紅酒而聞名於世。其獨特的地理位置是形成卓越風土的基礎。</p><div class="geography-analysis"><div class="geo-section peninsula-overview"><h4>🗺️ Médoc半島地理位置</h4><div class="peninsula-layout"><div class="location-details"><div class="location-card strategic"><h5>🎯 戰略位置</h5><div class="location-content"><p><strong>地理座標：</strong>位於波爾多市西北方，Gironde河左岸</p><p><strong>半島長度：</strong>從波爾多市延伸至大西洋約60公里</p><p><strong>最大寬度：</strong>東西向約15公里的狹長地帶</p><div class="strategic-advantages"><h6>地理優勢</h6><ul><li><strong>河流保護：</strong>Gironde河提供天然防風屏障</li><li><strong>海洋調節：</strong>大西洋帶來溫和濕潤氣候</li><li><strong>排水良好：</strong>砂礫土壤確保優異的排水性</li><li><strong>日照充足：</strong>朝東南向的緩坡獲得充足陽光</li></ul></div></div></div><div class="location-card boundaries"><h5>🔲 產區邊界劃分</h5><div class="boundary-details"><div class="boundary-north"><h6>北部邊界</h6><p>延伸至Saint-Vivien-de-Médoc，接近大西洋海岸</p></div><div class="boundary-south"><h6>南部邊界</h6><p>從波爾多市區開始，與Haut-Médoc產區銜接</p></div><div class="boundary-east"><h6>東側邊界</h6><p>沿Gironde河岸，享受河流氣候調節</p></div><div class="boundary-west"><h6>西側邊界</h6><p>深入內陸，與Landes森林相鄰</p></div></div></div><div class="location-card elevations"><h5>📏 地形高度變化</h5><div class="elevation-profile"><div class="elevation-zone high"><h6>高台地區 (20-40m)</h6><p>位於內陸地帶，排水最佳，適合種植Cabernet Sauvignon</p></div><div class="elevation-zone medium"><h6>中台地區 (10-20m)</h6><p>大部分著名酒莊所在地，土壤結構多樣</p></div><div class="elevation-zone low"><h6>低台地區 (5-10m)</h6><p>靠近河岸地帶，土壤較為濕潤</p></div></div></div></div></div></div></div></div>',
-    hasMap: true, mapFocus: 'LeftBank-Medoc',
-    // 同時顯示 Médoc AOC 和 Bordeaux AOC 圖層
+    content: '<div class="medoc-geography"><p class="lead-text">Médoc半島是波爾多左岸的核心產區，沿Gironde河左岸延伸約60公里。這片狹長半島坐落著波爾多61座列級酒莊中的60座，是全球頂級卡本內蘇維濃的聖地。</p><div class="key-facts"><div class="fact-item"><strong>地理座標：</strong>北緯45°，Gironde河左岸</div><div class="fact-item"><strong>半島長度：</strong>從波爾多市延伸至大西洋約60公里</div><div class="fact-item"><strong>東西寬度：</strong>最寬約15公里，地形狹長</div><div class="fact-item"><strong>列級酒莊：</strong>61座列級莊中的60座位於Médoc</div></div><div class="strategic-location"><h4>🎯 地理優勢</h4><ul><li><strong>河流保護：</strong>Gironde河提供天然防風屏障與氣候調節</li><li><strong>海洋影響：</strong>距大西洋約50公里，受溫和海洋性氣候調節</li><li><strong>排水良好：</strong>砂礫台地確保優異的土壤排水性</li><li><strong>日照充足：</strong>朝東南向的緩坡享有充足日照</li></ul></div></div>',
+    hasMap: true,
+    mapFocus: 'LeftBank-Medoc',
     geojsonPaths: [
       '/geojson/LeftBank/Medoc/Medoc_AOC.geojson',
       '/Bordeaux_AOC.geojson'
     ],
     showBordeaux: false,
+    onMapReady: async (map) => {
+      map.flyTo({
+        center: [-0.9500, 45.1500],
+        zoom: 9.2,
+        pitch: 0,
+        bearing: 0,
+        duration: 1800
+      })
+    },
     quiz: {
       question: 'Médoc半島位於哪個地理位置？',
       options: ['Gironde河右岸', 'Dordogne河畔', 'Gironde河左岸', 'Garonne河上游'],
