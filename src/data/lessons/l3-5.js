@@ -215,27 +215,133 @@ export const l35Content = [
     ]
   },
   {
-    type: 'comparison-table',
+    type: 'content',
     title: '浸漬技術比較矩陣',
-    description: '不同浸漬技術的特性與適用場景',
-    headers: ['技術','萃取強度','氧化程度','勞動強度','成本','適用品種','波爾多使用率'],
-    rows: [
-      ['淋皮 Remontage','中等 ⭐⭐⭐','中等 ⭐⭐⭐','低 ⭐','中等 €€','全品種','90%'],
-      ['壓帽 Pigeage','高 ⭐⭐⭐⭐','低 ⭐⭐','高 ⭐⭐⭐⭐','低-中等 €-€€','梅洛、卡本內弗朗','30%'],
-      ['循環 Délestage','很高 ⭐⭐⭐⭐⭐','高 ⭐⭐⭐⭐','很高 ⭐⭐⭐⭐⭐','中等 €€','卡本內蘇維濃','20%'],
-      ['旋轉罐 Rotary','極高 ⭐⭐⭐⭐⭐⭐','低 ⭐','很低 ⭐','很高 €€€€€','實驗批次','5%'],
-      ['淋皮+壓帽組合','高 ⭐⭐⭐⭐','中等 ⭐⭐⭐','中高 ⭐⭐⭐','中等 €€','精品酒','40%']
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.78rem;color:#666;margin-bottom:10px;text-align:center;">不同浸漬技術的特性與適用場景——波爾多釀酒師依年份與目標靈活選擇</div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.74rem;">
+            <thead>
+              <tr style="background:linear-gradient(135deg,#7B1FA2,#9C27B0);">
+                <th style="color:#fff;padding:7px 10px;text-align:left;font-weight:700;border-right:1px solid rgba(255,255,255,0.2);">技術</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">萃取強度</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">氧化程度</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">勞動強度</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">成本</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">適用品種</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;">使用率</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:#F3E5F5;">
+                <td style="padding:7px 10px;font-weight:700;color:#7B1FA2;">淋皮 Remontage</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中等 ⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中等 ⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">低 ⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€€</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">全品種</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#7B1FA2;color:#fff;border-radius:10px;padding:2px 8px;font-size:0.72rem;">90%</span></td>
+              </tr>
+              <tr style="background:#fff;">
+                <td style="padding:7px 10px;font-weight:700;color:#C62828;">壓帽 Pigeage</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高 ⭐⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">低 ⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高 ⭐⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€–€€</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">梅洛・卡弗</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#C62828;color:#fff;border-radius:10px;padding:2px 8px;font-size:0.72rem;">30%</span></td>
+              </tr>
+              <tr style="background:#F3E5F5;">
+                <td style="padding:7px 10px;font-weight:700;color:#1565C0;">循環 Délestage</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">很高 ⭐⭐⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高 ⭐⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">很高 ⭐⭐⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€€</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">卡本內蘇維濃</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#1565C0;color:#fff;border-radius:10px;padding:2px 8px;font-size:0.72rem;">20%</span></td>
+              </tr>
+              <tr style="background:#fff;">
+                <td style="padding:7px 10px;font-weight:700;color:#37474F;">旋轉罐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">極高 ⭐×6</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">低 ⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">很低 ⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€€€€€</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">實驗批次</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#37474F;color:#fff;border-radius:10px;padding:2px 8px;font-size:0.72rem;">5%</span></td>
+              </tr>
+              <tr style="background:#F3E5F5;">
+                <td style="padding:7px 10px;font-weight:700;color:#2E7D32;">淋皮+壓帽組合</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高 ⭐⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中等 ⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中高 ⭐⭐⭐</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€€</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">精品酒款</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#2E7D32;color:#fff;border-radius:10px;padding:2px 8px;font-size:0.72rem;">40%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `
   },
   {
-    type: 'case-study',
+    type: 'content',
     title: '案例：Château Margaux 的浸漬管理',
-    winery: 'Château Margaux',
-    region: '瑪歌',
-    challenge: '如何在卡本內蘇維濃的強勁結構與瑪歌村莊特有的優雅柔順之間找到平衡？',
-    approach: `**技術組合策略：**\n\n1️⃣ **冷浸漬階段（4-5天）**\n   - 溫度：10-12°C\n   - 目的：萃取花青素與果香\n   - 淋皮：每日一次，輕柔\n\n2️⃣ **酒精發酵階段（8-10天）**\n   - 溫度：30-31°C（精確控制）\n   - 淋皮：每日3次\n   - 壓帽：每日1次（較輕柔）\n   - 監控：每2小時測溫，每日品嚐\n\n3️⃣ **發酵後浸漬（8-12天）**\n   - 降低淋皮頻率至每日1-2次\n   - 每日品嚐評估單寧萃取\n   - 根據年份特性調整浸漬長度\n\n4️⃣ **分批次管理**\n   - 不同地塊分開釀造\n   - 不同樹齡分開處理\n   - 總共40-50個發酵批次\n\n**總浸漬時間：** 20-27天（視年份）`,
-    results: `🏆 **成果：**\n- 深寶石紅色澤，邊緣帶紫羅蘭反光\n- 單寧細膩如絲綢，強勁但不粗糙\n- 保留瑪歌村的花香、優雅特質\n- 同時具備足夠結構支撐30-50年陳年\n\n📊 **品質指標：**\n- 顏色強度：OD 10-14\n- 總酚類：2,800-3,200mg/L\n- 單寧：3.0-3.5g/L\n- pH：3.6-3.7\n\n💡 **關鍵要素：**\n浸漬的藝術在於「知道何時停止」。Château Margaux 的技術總監每日品嚐數十次，透過味覺判斷最佳萃取點。`,
-    lessons: ['沒有萬能的浸漬配方，必須根據年份、地塊、品種調整','精確的溫度控制（±1°C）對萃取品質至關重要','品嚐評估比實驗室數據更能指導釀酒決策','傳統技術（壓帽）與現代技術（溫控）可完美結合']
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#B71C1C,#C62828);border-radius:8px;padding:8px 14px;margin-bottom:10px;">
+          <span style="color:rgba(255,255,255,0.75);font-size:0.72rem;">核心挑戰 ｜ 瑪歌</span>
+          <div style="color:#fff;font-size:0.78rem;font-weight:600;margin-top:2px;">如何在卡本內蘇維濃的強勁結構與瑪歌村莊特有的優雅柔順之間找到平衡？</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#C62828,#E53935);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">🍷 四段式浸漬策略</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.85;">
+              <div style="margin-bottom:4px;"><strong style="color:#C62828;">①冷浸漬 4–5天</strong> 10–12°C｜萃取花青素與果香</div>
+              <div style="margin-bottom:4px;"><strong style="color:#E65100;">②酒精發酵 8–10天</strong> 30–31°C｜淋皮×3 + 壓帽×1/日</div>
+              <div style="margin-bottom:4px;"><strong style="color:#F57F17;">③發酵後浸漬 8–12天</strong> 降低淋皮至1–2次｜每日品嚐評估</div>
+              <div style="margin-bottom:6px;"><strong style="color:#2E7D32;">④分批次管理</strong> 40–50個發酵批次｜地塊/樹齡分開</div>
+              <div style="background:#FFEBEE;border-radius:5px;padding:4px 9px;font-size:0.7rem;color:#B71C1C;">總浸漬時間：20–27天（視年份調整）</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">📊 成果與技術指標</div>
+            <div style="padding:9px 12px 11px;">
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:5px;margin-bottom:7px;">
+                <div style="background:#E8F5E9;border-radius:5px;padding:5px 7px;text-align:center;">
+                  <div style="font-size:0.69rem;color:#555;">顏色強度 (OD)</div>
+                  <div style="font-weight:700;color:#1B5E20;font-size:0.8rem;">10–14</div>
+                </div>
+                <div style="background:#FFF3E0;border-radius:5px;padding:5px 7px;text-align:center;">
+                  <div style="font-size:0.69rem;color:#555;">總酚類 (mg/L)</div>
+                  <div style="font-weight:700;color:#E65100;font-size:0.8rem;">2800–3200</div>
+                </div>
+                <div style="background:#F3E5F5;border-radius:5px;padding:5px 7px;text-align:center;">
+                  <div style="font-size:0.69rem;color:#555;">單寧 (g/L)</div>
+                  <div style="font-weight:700;color:#6A1B9A;font-size:0.8rem;">3.0–3.5</div>
+                </div>
+                <div style="background:#E3F2FD;border-radius:5px;padding:5px 7px;text-align:center;">
+                  <div style="font-size:0.69rem;color:#555;">pH</div>
+                  <div style="font-weight:700;color:#1565C0;font-size:0.8rem;">3.6–3.7</div>
+                </div>
+              </div>
+              <div style="font-size:0.73rem;color:#333;line-height:1.75;">
+                <div style="margin-bottom:3px;">· 深寶石紅，邊緣帶紫羅蘭反光</div>
+                <div style="margin-bottom:3px;">· 單寧如絲綢，強勁不粗糙</div>
+                <div>· 保留瑪歌花香＋30–50年陳年結構</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;">
+          <div style="background:#FFEBEE;border-radius:7px;padding:7px 10px;font-size:0.71rem;color:#B71C1C;line-height:1.65;"><strong>無萬能配方</strong><br><span style="color:#555;">必須根據年份、地塊、品種靈活調整浸漬策略</span></div>
+          <div style="background:#FFF3E0;border-radius:7px;padding:7px 10px;font-size:0.71rem;color:#E65100;line-height:1.65;"><strong>溫控精度至關重要</strong><br><span style="color:#555;">±1°C 控制對萃取品質有決定性影響</span></div>
+          <div style="background:#E3F2FD;border-radius:7px;padding:7px 10px;font-size:0.71rem;color:#1565C0;line-height:1.65;"><strong>感官 > 數據</strong><br><span style="color:#555;">品嚐評估比實驗室數據更能指導釀酒決策</span></div>
+          <div style="background:#E8F5E9;border-radius:7px;padding:7px 10px;font-size:0.71rem;color:#1B5E20;line-height:1.65;"><strong>傳統與現代互補</strong><br><span style="color:#555;">壓帽傳統技術與現代溫控精密配合，最佳化萃取</span></div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'chapter-divider',
@@ -250,49 +356,85 @@ export const l35Content = [
     type: 'content',
     title: '白酒釀造：與紅酒的本質差異',
     content: `
-      <div class="white-wine-overview">
-        <p class="lead-text">白酒釀造的核心原則與紅酒截然不同：<strong>保護優於萃取</strong>。波爾多白酒從清爽的Entre-Deux-Mers到複雜的Pessac-Léognan，再到世界頂級甜白Sauternes，各有獨特的釀造邏輯。</p>
-        
-        <div class="fundamental-principles">
-          <h4>白酒釀造基本原則</h4>
-          
-          <div class="principle">
-            <h5>🛡️ 氧化保護</h5>
-            <ul>
-              <li>白葡萄酚類含量低，極易氧化褐變</li>
-              <li>全程使用惰性氣體（N₂或CO₂）保護</li>
-              <li>SO₂用量比紅酒高（50-80mg/L vs 30-50mg/L）</li>
-              <li>溫度控制更嚴格</li>
-            </ul>
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.78rem;color:#666;margin-bottom:10px;text-align:center;">核心哲學：<strong style="color:#1B5E20;">保護優於萃取</strong>——從清爽干白到甜白，各有獨特釀造邏輯</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🛡️</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">氧化保護</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.74rem;color:#333;line-height:1.75;">
+              <div style="margin-bottom:3px;">· 酚類含量低，極易氧化褐變</div>
+              <div style="margin-bottom:3px;">· 全程惰性氣體（N₂/CO₂）保護</div>
+              <div style="margin-bottom:3px;">· SO₂ 50–80 mg/L（高於紅酒）</div>
+              <div>· 溫度控制更嚴格</div>
+            </div>
           </div>
-
-          <div class="principle">
-            <h5>🌡️ 低溫發酵</h5>
-            <ul>
-              <li><strong>溫度：</strong>16-20°C（vs 紅酒28-32°C）</li>
-              <li><strong>時間：</strong>2-4週（vs 紅酒7-14天）</li>
-              <li><strong>目的：</strong>保留果香與清新感</li>
-            </ul>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1E88E5);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🌡️</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">低溫發酵</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.74rem;color:#333;line-height:1.75;">
+              <div style="margin-bottom:3px;">· <strong>溫度：</strong>16–20°C（紅酒 28–32°C）</div>
+              <div style="margin-bottom:3px;">· <strong>時間：</strong>2–4 週（紅酒 7–14 天）</div>
+              <div>· <strong>目的：</strong>保留揮發性果香</div>
+            </div>
           </div>
-
-          <div class="principle">
-            <h5>🍇 壓榨優先</h5>
-            <ul>
-              <li>白酒先壓榨後發酵（紅酒先發酵後壓榨）</li>
-              <li>壓榨強度決定酒款風格</li>
-              <li>果汁澄清度影響最終品質</li>
-            </ul>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#6A1B9A,#8E24AA);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🍇</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">壓榨優先</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.74rem;color:#333;line-height:1.75;">
+              <div style="margin-bottom:3px;">· 先壓榨後發酵（與紅酒相反）</div>
+              <div style="margin-bottom:3px;">· 壓榨強度決定酒款風格</div>
+              <div>· 果汁澄清度影響最終品質</div>
+            </div>
           </div>
         </div>
-
-        <h4>波爾多白酒三大類型</h4>
+        <div style="font-size:0.78rem;font-weight:700;color:#333;margin-bottom:8px;">波爾多白酒三大類型</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#43A047);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.82rem;">🥗 清爽型干白</div>
+              <div style="color:rgba(255,255,255,0.85);font-size:0.7rem;">Entre-Deux-Mers 風格</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.73rem;color:#333;line-height:1.75;">
+              <div style="margin-bottom:2px;"><strong>目標：</strong>清新、果香、易飲</div>
+              <div style="margin-bottom:2px;">· 不鏽鋼罐 15–18°C 低溫發酵</div>
+              <div style="margin-bottom:2px;">· 阻止 MLF・早裝瓶（12–18月）</div>
+              <div style="margin-bottom:4px;">· 使用芳香酵母</div>
+              <div style="background:#E8F5E9;border-radius:4px;padding:3px 8px;font-size:0.7rem;color:#2E7D32;">€5–15/瓶</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F4511E);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.82rem;">🍾 複雜型干白</div>
+              <div style="color:rgba(255,255,255,0.85);font-size:0.7rem;">Pessac-Léognan 風格</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.73rem;color:#333;line-height:1.75;">
+              <div style="margin-bottom:2px;"><strong>目標：</strong>複雜、結構、陳年</div>
+              <div style="margin-bottom:2px;">· 橡木桶發酵（新桶 20–50%）</div>
+              <div style="margin-bottom:2px;">· 桶內 MLF・酒泥陳釀 6–12 月</div>
+              <div style="margin-bottom:4px;">· 延遲裝瓶（18–24 月）</div>
+              <div style="background:#FFF3E0;border-radius:4px;padding:3px 8px;font-size:0.7rem;color:#E65100;">€25–200+/瓶</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#F57F17,#FF8F00);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.82rem;">🍯 貴腐甜白</div>
+              <div style="color:rgba(255,255,255,0.85);font-size:0.7rem;">Sauternes 風格</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.73rem;color:#333;line-height:1.75;">
+              <div style="margin-bottom:2px;"><strong>目標：</strong>甜美、複雜、超長陳年</div>
+              <div style="margin-bottom:2px;">· 貴腐菌感染・分批採收 6–8 次</div>
+              <div style="margin-bottom:2px;">· 橡木桶發酵（新桶 50–100%）</div>
+              <div style="margin-bottom:4px;">· 殘糖 120–150 g/L</div>
+              <div style="background:#FFF9C4;border-radius:4px;padding:3px 8px;font-size:0.7rem;color:#F57F17;">€30–500+/瓶 (375ml)</div>
+            </div>
+          </div>
+        </div>
       </div>
-    `,
-    subsections: [
-      { subtitle: '1. 清爽型干白（Entre-Deux-Mers風格）', content: `**目標：** 清新、果香、易飲\n\n**釀造特點：**\n- 不鏽鋼罐發酵\n- 低溫發酵（15-18°C）\n- 阻止MLF（保留清新酸度）\n- 早裝瓶（12-18月）\n- 使用芳香酵母\n\n**代表產區：** Entre-Deux-Mers, Bordeaux Blanc\n\n**價格區間：** €5-15/瓶` },
-      { subtitle: '2. 複雜型干白（Pessac-Léognan風格）', content: `**目標：** 複雜、結構、陳年潛力\n\n**釀造特點：**\n- 橡木桶發酵（228L新桶20-50%）\n- 桶內MLF\n- 酒泥接觸6-12月\n- 酒泥攪拌（Bâtonnage）\n- 延遲裝瓶（18-24月）\n\n**代表產區：** Pessac-Léognan, Graves\n\n**價格區間：** €25-200+/瓶` },
-      { subtitle: '3. 貴腐甜白（Sauternes風格）', content: `**目標：** 甜美、複雜、超長陳年潛力\n\n**釀造特點：**\n- 貴腐菌（Botrytis cinerea）感染\n- 極高糖分（300-400g/L）\n- 分批採收（6-8次，歷時數週）\n- 橡木桶發酵（新桶50-100%）\n- 發酵極慢（數月）\n- 酒精度中等（13-14%）\n- 殘糖高（120-150g/L）\n\n**代表產區：** Sauternes, Barsac\n\n**價格區間：** €30-500+/瓶（375ml）` }
-    ]
+    `
   },
   {
     type: 'winemaking-process',
@@ -309,14 +451,67 @@ export const l35Content = [
     ]
   },
   {
-    type: 'case-study',
+    type: 'content',
     title: '案例：Château Smith Haut Lafitte 白酒釀造',
-    winery: 'Château Smith Haut Lafitte',
-    region: 'Pessac-Léognan',
-  challenge: '如何將白蘇維濃與灰蘇維濃結合，創造出既清新又複雜、既現代又經典的波爾多白酒？',
-    approach: `**品種組成：** 90% Sauvignon Blanc, 5% Sémillon, 5% Sauvignon Gris\n\n**釀造流程：**\n\n1️⃣ **採收與分選（8月底-9月初）**\n   - 清晨手工採收\n   - 三次分選台分選\n   - 光學分選機最終檢查\n   - 淘汰率：20-25%\n\n2️⃣ **低溫浸皮（12小時）**\n   - 溫度：8-10°C\n   - 惰性氣體保護\n   - 增加香氣複雜度\n\n3️⃣ **輕柔壓榨**\n   - 氣囊式壓榨機\n   - 壓力：<0.8 bar\n   - 僅使用前60%汁液\n\n4️⃣ **果汁澄清（48小時）**\n   - 10°C靜置\n   - 保留中等濁度（100-120 NTU）\n   - 不使用化學澄清劑\n\n5️⃣ **橡木桶發酵（50%新桶）**\n   - 228L法國橡木桶\n   - 溫度：18-20°C\n   - 時間：3-4週\n   - 天然酵母發酵\n\n6️⃣ **桶內蘋果酸乳酸發酵**\n   - 100%完成MLF\n   - 未接種，自然啟動\n\n7️⃣ **酒泥陳釀（10個月）**\n   - 每週攪拌2次（前3月）\n   - 之後每兩週1次\n   - 不添加SO₂（依靠酒泥保護）\n\n8️⃣ **調配與裝瓶**\n   - 輕柔過濾\n   - 釀造後18個月裝瓶`,
-    results: `🏆 **成果特徵：**\n- **色澤：** 淺金黃帶綠色反光\n- **香氣：** 西柚、百香果、椴花、烤杏仁、香草、燧石\n- **口感：** 活潑酸度、飽滿酒體、絲滑質地、礦物感\n- **陳年潛力：** 15-25年\n\n📊 **技術參數：**\n- 酒精度：13.5%\n- 總酸：3.5g/L (H₂SO₄)\n- pH：3.3\n- 殘糖：2g/L\n- 游離SO₂：35mg/L\n\n💰 **市場表現：**\n- 售價：€50-70/瓶\n- 評分：91-94/100（Wine Advocate）\n- 波爾多頂級白酒標杆之一\n\n🌍 **國際認可：**\n2009年被《Wine Spectator》選為年度百大第三名，是該雜誌歷史上排名最高的波爾多干白。`,
-    lessons: ['品種選擇：少量Sémillon增加酒體與陳年潛力','橡木桶發酵帶來更好的質感整合（vs桶陳釀）','酒泥陳釀是複雜度與質感的關鍵','不過度新桶（50%）保留品種與風土特色','18個月陳釀週期確保各元素和諧整合']
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#00695C,#00897B);border-radius:8px;padding:8px 14px;margin-bottom:10px;">
+          <span style="color:rgba(255,255,255,0.75);font-size:0.72rem;">核心挑戰 ｜ Pessac-Léognan</span>
+          <div style="color:#fff;font-size:0.78rem;font-weight:600;margin-top:2px;">如何將白蘇維濃與灰蘇維濃結合，創造出既清新又複雜、既現代又經典的波爾多白酒？</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">🥂 八步驟釀造流程</div>
+            <div style="padding:9px 12px 11px;font-size:0.72rem;color:#333;line-height:1.8;">
+              <div style="margin-bottom:3px;"><strong style="color:#00695C;">①</strong> 清晨採收 + 三次分選（淘汰率 20–25%）</div>
+              <div style="margin-bottom:3px;"><strong style="color:#00796B;">②</strong> 低溫浸皮 12h ｜ 8–10°C 惰性氣體保護</div>
+              <div style="margin-bottom:3px;"><strong style="color:#00897B;">③</strong> 輕柔壓榨 &lt;0.8 bar｜僅前 60% 汁液</div>
+              <div style="margin-bottom:3px;"><strong style="color:#009688;">④</strong> 靜置澄清 48h ｜ 保留 100–120 NTU</div>
+              <div style="margin-bottom:3px;"><strong style="color:#E65100;">⑤</strong> 橡木桶發酵（50% 新桶）18–20°C 天然酵母</div>
+              <div style="margin-bottom:3px;"><strong style="color:#F57F17;">⑥</strong> 桶內 MLF 100%（不接種，自然啟動）</div>
+              <div style="margin-bottom:3px;"><strong style="color:#6A1B9A;">⑦</strong> Sur lie 10月 ｜ 前 3 月每週攪拌 2 次</div>
+              <div><strong style="color:#37474F;">⑧</strong> 輕柔過濾 → 裝瓶（釀造後 18 個月）</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">🏆 品質與市場表現</div>
+            <div style="padding:9px 12px 11px;">
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:5px;margin-bottom:7px;">
+                <div style="background:#E0F2F1;border-radius:5px;padding:4px 7px;text-align:center;">
+                  <div style="font-size:0.68rem;color:#555;">酒精度</div>
+                  <div style="font-weight:700;color:#00695C;font-size:0.8rem;">13.5%</div>
+                </div>
+                <div style="background:#E8F5E9;border-radius:5px;padding:4px 7px;text-align:center;">
+                  <div style="font-size:0.68rem;color:#555;">總酸 (g/L)</div>
+                  <div style="font-weight:700;color:#1B5E20;font-size:0.8rem;">3.5</div>
+                </div>
+                <div style="background:#FFF3E0;border-radius:5px;padding:4px 7px;text-align:center;">
+                  <div style="font-size:0.68rem;color:#555;">評分</div>
+                  <div style="font-weight:700;color:#E65100;font-size:0.8rem;">91–94 pts</div>
+                </div>
+                <div style="background:#E3F2FD;border-radius:5px;padding:4px 7px;text-align:center;">
+                  <div style="font-size:0.68rem;color:#555;">售價</div>
+                  <div style="font-weight:700;color:#1565C0;font-size:0.8rem;">€50–70</div>
+                </div>
+              </div>
+              <div style="font-size:0.72rem;color:#333;line-height:1.75;">
+                <div style="margin-bottom:3px;">· 淺金黃帶綠反光，燧石礦物感</div>
+                <div style="margin-bottom:3px;">· 西柚・百香果・椴花・烤杏仁</div>
+                <div style="margin-bottom:3px;">· 活潑酸度 + 飽滿酒體 + 絲滑質地</div>
+                <div>· 陳年潛力 15–25 年</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;">
+          <div style="background:#E0F2F1;border-radius:6px;padding:6px 8px;font-size:0.69rem;color:#00695C;line-height:1.55;text-align:center;"><strong>品種選擇</strong><br><span style="color:#555;">Sémillon 增加酒體與陳年</span></div>
+          <div style="background:#FFF3E0;border-radius:6px;padding:6px 8px;font-size:0.69rem;color:#E65100;line-height:1.55;text-align:center;"><strong>桶內發酵</strong><br><span style="color:#555;">質感整合優於桶陳釀</span></div>
+          <div style="background:#F3E5F5;border-radius:6px;padding:6px 8px;font-size:0.69rem;color:#6A1B9A;line-height:1.55;text-align:center;"><strong>酒泥陳釀</strong><br><span style="color:#555;">複雜度與質感關鍵</span></div>
+          <div style="background:#E8F5E9;border-radius:6px;padding:6px 8px;font-size:0.69rem;color:#1B5E20;line-height:1.55;text-align:center;"><strong>50% 新桶</strong><br><span style="color:#555;">保留品種風土特色</span></div>
+          <div style="background:#E3F2FD;border-radius:6px;padding:6px 8px;font-size:0.69rem;color:#1565C0;line-height:1.55;text-align:center;"><strong>18月週期</strong><br><span style="color:#555;">各元素和諧整合</span></div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'interactive-quiz',
@@ -333,41 +528,67 @@ export const l35Content = [
   {
     type: 'content',
     title: '釀造工藝：藝術與科學的交融',
-    content: `通過本課程第一部分，我們深入探討了波爾多紅酒與白酒的釀造工藝。每一個技術決策都建立在科學理解之上,但最終仍需釀酒師的經驗與直覺來指導。
-
-**關鍵要點回顧：**
-
-🍷 **紅酒釀造的核心：萃取管理**
-- 冷浸漬、酒精發酵、延長浸漬的三階段策略
-- 淋皮、壓帽、循環等浸漬技術的選擇與組合
-- 溫度控制對萃取強度與品質的決定性影響
-- 蘋果酸乳酸發酵對口感柔順度的貢獻
-
-🥂 **白酒釀造的核心：保護與發展**
-- 氧化保護貫穿整個流程
-- 低溫發酵保留果香
-- 橡木桶發酵vs不鏽鋼罐發酵的風格差異
-- 酒泥陳釀對複雜型白酒的重要性
-
-**波爾多釀造哲學：**
-
-1. **尊重原料**：最好的釀酒是「不干預」，讓葡萄自己表達
-2. **精確控制**：但現代技術提供了前所未有的控制能力
-3. **平衡傳統與創新**：不盲目追求新技術，也不固守舊法
-4. **風土表達**：技術服務於風土，而非掩蓋風土
-
-**下一步學習：**
-
-在 L3-5 Part 2，我們將探討：
-- 🍯 Sauternes 貴腐甜白的釀造奧秘
-- 🪵 橡木桶陳釀的科學原理
-- 🔬 微生物學在釀造中的應用
-- 🚀 現代釀酒技術創新
-
-釀造工藝是葡萄酒品質的最後一道關卡，也是釀酒師施展才華的舞台。`,
-    subsections: [
-      { subtitle: '給學習者的建議', content: `📚 **深化學習：**\n- 參觀酒莊：親眼見證釀造過程\n- 垂直品嚐：對比同酒莊不同年份，感受釀造決策的影響\n- 閱讀技術總監訪談：了解決策背後的思考\n\n🍷 **品酒角度：**\n下次品嚐波爾多葡萄酒時，試著從釀造技術角度思考：\n- 這單寧的細膩度，反映了怎樣的浸漬管理？\n- 這橡木風味的整合度，是桶發酵還是發酵後入桶？\n- 這酸度的平衡，MLF完成程度如何？\n\n🎯 **職業發展：**\n釀酒師是葡萄酒產業最核心的職業之一。掌握釀造工藝不僅有助於品鑑，也為以下職業方向奠定基礎：\n- 酒莊技術總監\n- 釀酒顧問\n- 葡萄酒教育者\n- 葡萄酒記者/評論家` }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.76rem;color:#666;margin-bottom:11px;text-align:center;">每一個技術決策都建立在科學理解之上，但最終仍需釀酒師的經驗與直覺來引導</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:11px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:9px 14px;">
+              <div style="color:#fff;font-weight:700;font-size:0.85rem;">🍷 紅酒釀造核心：萃取管理</div>
+            </div>
+            <div style="padding:9px 14px 11px;font-size:0.74rem;color:#333;line-height:1.85;">
+              <div style="margin-bottom:3px;">· 冷浸漬 → 酒精發酵 → 延長浸漬三階段策略</div>
+              <div style="margin-bottom:3px;">· 淋皮、壓帽、循環等技術組合</div>
+              <div style="margin-bottom:3px;">· 溫度控制對萃取強度的決定性影響</div>
+              <div>· MLF 對口感柔順度的貢獻</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#F57F17,#FF8F00);padding:9px 14px;">
+              <div style="color:#fff;font-weight:700;font-size:0.85rem;">🥂 白酒釀造核心：保護與發展</div>
+            </div>
+            <div style="padding:9px 14px 11px;font-size:0.74rem;color:#333;line-height:1.85;">
+              <div style="margin-bottom:3px;">· 氧化保護貫穿整個釀造流程</div>
+              <div style="margin-bottom:3px;">· 低溫發酵（16–20°C）保留揮發果香</div>
+              <div style="margin-bottom:3px;">· 橡木桶 vs 不鏽鋼罐的風格差異</div>
+              <div>· Sur lie 酒泥陳釀對複雜度的關鍵作用</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:0.78rem;font-weight:700;color:#333;margin-bottom:8px;">波爾多釀造哲學四原則</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:10px;">
+          <div style="background:#E8F5E9;border-radius:8px;padding:9px 10px;">
+            <div style="font-size:1rem;margin-bottom:4px;">🌿</div>
+            <div style="font-size:0.76rem;font-weight:700;color:#1B5E20;margin-bottom:3px;">尊重原料</div>
+            <div style="font-size:0.71rem;color:#555;line-height:1.65;">最小干預，讓葡萄自己表達風土</div>
+          </div>
+          <div style="background:#E3F2FD;border-radius:8px;padding:9px 10px;">
+            <div style="font-size:1rem;margin-bottom:4px;">🎯</div>
+            <div style="font-size:0.76rem;font-weight:700;color:#1565C0;margin-bottom:3px;">精確控制</div>
+            <div style="font-size:0.71rem;color:#555;line-height:1.65;">現代技術提供前所未有的精準能力</div>
+          </div>
+          <div style="background:#FFF3E0;border-radius:8px;padding:9px 10px;">
+            <div style="font-size:1rem;margin-bottom:4px;">⚖️</div>
+            <div style="font-size:0.76rem;font-weight:700;color:#E65100;margin-bottom:3px;">平衡傳統與創新</div>
+            <div style="font-size:0.71rem;color:#555;line-height:1.65;">不盲目追新，也不固守舊法</div>
+          </div>
+          <div style="background:#F3E5F5;border-radius:8px;padding:9px 10px;">
+            <div style="font-size:1rem;margin-bottom:4px;">🗺️</div>
+            <div style="font-size:0.76rem;font-weight:700;color:#6A1B9A;margin-bottom:3px;">風土表達</div>
+            <div style="font-size:0.71rem;color:#555;line-height:1.65;">技術服務風土，而非掩蓋風土</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,#37474F,#455A64);border-radius:8px;padding:9px 14px;">
+          <div style="color:#fff;font-size:0.76rem;font-weight:700;margin-bottom:5px;">▶ Part 2 即將探討</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+            <div style="color:rgba(255,255,255,0.9);font-size:0.71rem;text-align:center;">🍯<br>Sauternes<br>貴腐甜白</div>
+            <div style="color:rgba(255,255,255,0.9);font-size:0.71rem;text-align:center;">🪵<br>橡木桶陳釀<br>科學原理</div>
+            <div style="color:rgba(255,255,255,0.9);font-size:0.71rem;text-align:center;">🔬<br>微生物學<br>應用</div>
+            <div style="color:rgba(255,255,255,0.9);font-size:0.71rem;text-align:center;">🚀<br>現代釀酒<br>技術創新</div>
+          </div>
+        </div>
+      </div>
+    `
   },
   // 補充：傳統哲學與手工工藝（源自 L3-7 的獨特色塊，已合併至 L3-5）
   {
@@ -427,68 +648,196 @@ export const l35Content = [
   {
     type: 'content',
     title: '傳統釀造哲學三原則',
-    content: [
-      { subtitle: '最小干預', text: '盡量減少人工干預，保留葡萄與風土本真表達。', details: '避免過度處理造成香氣退化與風格同質化。' },
-      { subtitle: '品質優先', text: '寧缺勿濫，嚴格挑選每一顆葡萄，維持高品質標準。' },
-      { subtitle: '技法傳承', text: '遵循經驗驗證的方法，審慎面對改變，讓時間完成整合。' }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:12px 14px;">
+              <div style="color:#fff;font-size:1.5rem;margin-bottom:4px;">🌿</div>
+              <div style="color:#fff;font-weight:700;font-size:0.90rem;">最小干預</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.73rem;">Minimal Intervention</div>
+            </div>
+            <div style="padding:11px 14px 13px;">
+              <div style="font-size:0.79rem;color:#333;line-height:1.85;margin-bottom:8px;">盡量減少人工干預，保留葡萄與風土本真表達。</div>
+              <div style="background:#E8F5E9;border-radius:5px;padding:5px 9px;font-size:0.74rem;color:#1B5E20;line-height:1.65;">避免過度處理造成香氣退化與風格同質化。</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#7B1FA2,#9C27B0);padding:12px 14px;">
+              <div style="color:#fff;font-size:1.5rem;margin-bottom:4px;">💎</div>
+              <div style="color:#fff;font-weight:700;font-size:0.90rem;">品質優先</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.73rem;">Quality First</div>
+            </div>
+            <div style="padding:11px 14px 13px;">
+              <div style="font-size:0.79rem;color:#333;line-height:1.85;margin-bottom:8px;">寧缺勿濫，嚴格挑選每一顆葡萄，維持高品質標準。</div>
+              <div style="background:#F3E5F5;border-radius:5px;padding:5px 9px;font-size:0.74rem;color:#7B1FA2;line-height:1.65;">淘汰率可達10-30%，品質是旗艦酒款唯一標準。</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);padding:12px 14px;">
+              <div style="color:#fff;font-size:1.5rem;margin-bottom:4px;">⏳</div>
+              <div style="color:#fff;font-weight:700;font-size:0.90rem;">技法傳承</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.73rem;">Technique Heritage</div>
+            </div>
+            <div style="padding:11px 14px 13px;">
+              <div style="font-size:0.79rem;color:#333;line-height:1.85;margin-bottom:8px;">遵循經驗驗證的方法，審慎面對改變，讓時間完成整合。</div>
+              <div style="background:#EFEBE9;border-radius:5px;padding:5px 9px;font-size:0.74rem;color:#4E342E;line-height:1.65;">技法是數百年智慧結晶，不可輕易捨棄。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'content',
     title: '傳統澄清與處理方法',
-    content: [
-      { subtitle: '自然沉澱（重力澄清）', text: '利用重力讓雜質自然下沉，需耐心靜置 24–48 小時。' },
-      { subtitle: '人工換桶（Racking）', text: '小心轉移清澈酒液至新容器，避免攪動底部酒渣。' },
-      { subtitle: '蛋白澄清（蛋白/魚膠）', text: '使用天然澄清劑去除粗糙單寧與懸浮物，傳統且有效。' },
-      { subtitle: '保留果梗（可選）', text: '於成熟年份保留 5–15% 果梗以增加結構與清新感，但需避免青澀。' }
-    ],
-    insights: [
-      '傳統方法著重穩定與整合，速度較慢但風格更內斂。',
-      '現代技術可作為輔助，核心仍是對原料與時間的尊重。'
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px;">
+          <div style="background:#fff;border-radius:11px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#01579B,#0288D1);padding:9px 13px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">⏬ 自然沉澱（重力澄清）</div>
+            </div>
+            <div style="padding:9px 13px 11px;font-size:0.78rem;color:#444;line-height:1.8;">利用重力讓雜質自然下沉，需耐心靜置 <strong>24–48 小時</strong>。無需化學助劑，保留酒款天然特質。</div>
+          </div>
+          <div style="background:#fff;border-radius:11px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#006064,#00838F);padding:9px 13px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🔄 人工換桶（Racking）</div>
+            </div>
+            <div style="padding:9px 13px 11px;font-size:0.78rem;color:#444;line-height:1.8;">小心轉移清澈酒液至新容器，<strong>避免攪動底部酒渣</strong>。通常每3-4個月進行，促進微氧化與純淨化。</div>
+          </div>
+          <div style="background:#fff;border-radius:11px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4A148C,#6A1B9A);padding:9px 13px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🥚 蛋白澄清（蛋白/魚膠）</div>
+            </div>
+            <div style="padding:9px 13px 11px;font-size:0.78rem;color:#444;line-height:1.8;">使用天然澄清劑去除粗糙單寧與懸浮物，<strong>傳統且有效</strong>。列級莊通常使用2-6個蛋白/桶。</div>
+          </div>
+          <div style="background:#fff;border-radius:11px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#388E3C);padding:9px 13px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🌿 保留果梗（可選）</div>
+            </div>
+            <div style="padding:9px 13px 11px;font-size:0.78rem;color:#444;line-height:1.8;">於成熟年份保留 <strong>5–15% 果梗</strong>以增加結構與清新感，但需確認成熟度以避免青澀。</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,#263238,#37474F);border-radius:8px;padding:9px 14px;">
+          <div style="color:#fff;font-size:0.78rem;line-height:1.7;">📌 傳統方法著重穩定與整合，速度較慢但風格更內斂 ‧ 現代技術可作為輔助，核心仍是對原料與時間的尊重</div>
+        </div>
+      </div>
+    `
   },
   // ==== 第四章：甜酒釀造 ====
   {
-    type: 'intro',
+    type: 'content',
     title: '液體黃金的誕生',
-    content: `Sauternes 與 Barsac 產區出產世界上最複雜、最昂貴、陳年潛力最長的甜白葡萄酒。這些"液體黃金"的誕生依賴於一種特殊的真菌——**貴腐菌（Botrytis cinerea）**，以及釀酒師數百年累積的智慧。
-
-**為什麼 Sauternes 如此特殊？**
-
-🍄 **貴腐菌的奇蹟**
-貴腐菌是一種既能毀滅葡萄園（灰霉病）也能創造奇蹟的真菌。在特定條件下，它穿透葡萄皮但不破壞果實，促進水分蒸發，濃縮糖分、酸度、風味化合物，並產生獨特的香氣分子。
-
-🌫️ **獨特的微氣候**
-Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在秋季清晨產生濃霧，為貴腐菌生長提供濕度；午後陽光驅散霧氣，防止灰霉病爆發。這種微氣候全球罕見。
-
-⏳ **漫長而高風險的釀造**
-- 採收期可長達6-10週，需進行6-8次（有時10+次）分批採收
-- 每次僅採摘達到理想貴腐程度的葡萄
-- 產量極低：一株葡萄藤僅產一杯酒
-- 發酵極其緩慢，可能持續數月
-- 釀造成本是普通乾白的10-20倍
-
-💰 **天價與投資價值**
-頂級 Sauternes（如 Château d'Yquem）售價可達 €300-1,000/瓶（375ml），陳年數十年甚至百年仍保持活力。這不僅是葡萄酒，更是可飲用的藝術品與投資標的。
-
-**本課程第二部分焦點：**
-- 🍄 貴腐菌的生物學與環境條件
-- 🍇 分批採收的策略與挑戰
-- ⚗️ 高糖發酵的特殊性
-- 🪵 橡木桶在甜酒中的角色
-- 🏆 Château d'Yquem 釀造案例深度解析`,
-    image: '/images/sauternes-vineyard.jpg'
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.76rem;color:#666;margin-bottom:10px;text-align:center;">Sauternes 出產世界最複雜、最昂貴、陳年潛力最長的甜白——依賴一種特殊真菌與釀酒師數百年智慧的結晶</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#5D4037,#6D4C41);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.1rem;">🍄</span>
+              <div style="color:#fff;font-weight:700;font-size:0.83rem;">貴腐菌的奇蹟</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.74rem;color:#333;line-height:1.8;">
+              在特定條件下，<em>Botrytis cinerea</em> 穿透葡萄皮但不破壞果實，促進水分蒸發，<strong>濃縮糖分、酸度、風味化合物</strong>，並產生獨特香氣分子。同一菌種在缺乏乾燥條件時則化身破壞性灰霉病。
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.1rem;">🌫️</span>
+              <div style="color:#fff;font-weight:700;font-size:0.83rem;">獨特的微氣候</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.74rem;color:#333;line-height:1.8;">
+              Garonne 河與 Ciron 河交匯處——冰冷 Ciron 河水在秋季清晨產生<strong>濃霧</strong>（贈予貴腐菌濕度），午後陽光驅散霧氣（防止灰霉爆發）。這種「清晨濕 → 午後乾」的微氣候<strong>全球罕見</strong>。
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F4511E);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.1rem;">⏳</span>
+              <div style="color:#fff;font-weight:700;font-size:0.82rem;">漫長高風險採收</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.73rem;color:#333;line-height:1.8;">
+              <div style="margin-bottom:2px;">· 採收期 6–10 週</div>
+              <div style="margin-bottom:2px;">· 分批採收 6–8 次（有時 10+）</div>
+              <div style="margin-bottom:2px;">· 每次僅採最佳貴腐程度葡萄</div>
+              <div>· 產量極低：每株藤 ≈ 1 杯酒</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#F57F17,#FF8F00);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.1rem;">⚗️</span>
+              <div style="color:#fff;font-weight:700;font-size:0.82rem;">極緩發酵</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.73rem;color:#333;line-height:1.8;">
+              高糖（300–450 g/L）造成高滲透壓，發酵可能持續<strong>數月</strong>。酒精上升至 13–14% 後停止，殘留 120–150 g/L 糖。成本是普通乾白的 <strong>10–20 倍</strong>。
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#6A1B9A,#8E24AA);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.1rem;">💰</span>
+              <div style="color:#fff;font-weight:700;font-size:0.82rem;">天價與長壽</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.73rem;color:#333;line-height:1.8;">
+              頂級 Sauternes（d'Yquem）售價 <strong>€300–1,000/375ml</strong>，陳年數十至百年仍具生命力。不只是葡萄酒——是可飲用的藝術品與投資標的。
+            </div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,#F57F17,#FF8F00);border-radius:8px;padding:9px 14px;">
+          <div style="color:#fff;font-size:0.75rem;font-weight:700;margin-bottom:5px;">📚 本課程 Part 2 探討焦點</div>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;">
+            <div style="background:rgba(255,255,255,0.2);border-radius:6px;padding:5px 6px;text-align:center;color:#fff;font-size:0.68rem;line-height:1.55;">🍄<br>貴腐菌<br>生物學</div>
+            <div style="background:rgba(255,255,255,0.2);border-radius:6px;padding:5px 6px;text-align:center;color:#fff;font-size:0.68rem;line-height:1.55;">🍇<br>分批採收<br>策略</div>
+            <div style="background:rgba(255,255,255,0.2);border-radius:6px;padding:5px 6px;text-align:center;color:#fff;font-size:0.68rem;line-height:1.55;">⚗️<br>高糖發酵<br>特殊性</div>
+            <div style="background:rgba(255,255,255,0.2);border-radius:6px;padding:5px 6px;text-align:center;color:#fff;font-size:0.68rem;line-height:1.55;">🪵<br>橡木桶<br>角色</div>
+            <div style="background:rgba(255,255,255,0.2);border-radius:6px;padding:5px 6px;text-align:center;color:#fff;font-size:0.68rem;line-height:1.55;">🏆<br>d'Yquem<br>案例解析</div>
+          </div>
+        </div>
+      </div>
+    `
   },
   {
-    type: 'objectives',
-    title: '學習目標',
-    objectives: [
-      { title: '理解貴腐菌的生物學機制', description: '掌握貴腐菌如何轉化葡萄、所需環境條件、與灰霉病的區別', icon: '🍄' },
-      { title: '掌握分批採收策略', description: '了解如何判斷貴腐程度、採收時機、多次採收的經濟與技術考量', icon: '🍇' },
-      { title: '理解高糖發酵的挑戰', description: '學習酵母在高糖環境下的生理限制、發酵停滯問題、如何平衡甜度與酒精度', icon: '⚗️' },
-      { title: '評估甜酒釀造的經濟性', description: '分析成本結構、風險因素、定價策略、市場定位', icon: '💰' },
-      { title: '鑑賞頂級 Sauternes', description: '學會品評甜酒的複雜度、平衡度、陳年潛力', icon: '🏆' }
-    ]
+    type: 'content',
+    title: '學習目標：甜酒釀造與貴腐',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#F57F17,#F9A825);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🍄</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">貴腐菌生物學機制</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">掌握 Botrytis cinerea 如何轉化葡萄，認識貴腐菌與灰霉病的關鍵差異及所需環境條件。</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#388E3C);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🍇</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">分批採收策略</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">了解為何需要6-8次採收，理解如何判斷最佳貴腐程度，掌握多次採收的經濟與技術考量。</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">⚗️</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">高糖發酵的挑戰</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">學習酵母在高糖環境的生理限制、發酵停滯問題，以及如何平衡甜度與酒精度。</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">💰</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">甜酒釀造的經濟性</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">分析成本結構、風險因素、定價策略，理解為什麼頂級 Sauternes 售價可達 €300+/375ml。</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🏆</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">鑑賞頂級 Sauternes</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">學會品評甜酒的複雜度、甜酸平衡、陳年潛力，解析 Château d'Yquem 的品質決策矩陣。</div>
+          </div>
+        </div>
+      </div>
+    `
   },
   // （出於篇幅，以下 Part2/Part3A/Part3B 詳細內容已按原檔完整內嵌；保持結構與原設計一致）
   // === 已省略重覆引導註解，直接插入其餘原 Part2 章節物件 ===
@@ -658,17 +1007,55 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     ]
   },
   {
-    type: 'case-study',
+    type: 'content',
     title: '案例：Château d\'Yquem 的極致品質模型',
-    challenge: '如何在高風險氣候與極端成本下穩定產出 50–100 年陳年潛力的頂級甜白？',
-    approach: `**關鍵做法：**\n- 多次（6–8+）選擇性採收確保貴腐均勻性\n- 全新桶長期熟成 + 不做 MLF 保留張力\n- 嚴苛批次感官 + 化學雙重篩選\n- 不合年份寧缺勿濫（如 2012 年停產正牌）\n- 副牌（乾白）靈活吸收不適合正牌的部分\n\n**成本思維：**\n- 產量僅 AOC 上限 ~1/3（≈ 9 hL/ha vs 25 hL/ha）\n- 一株葡萄藤 ≈ 1 杯酒的經濟結構\n- 長期品牌資本 > 短期現金流\n\n**風味標誌：** 蜂蜜、杏桃、芒果、柑橘蜜餞、焦糖、藏紅花、香料、貴腐特有麥芽糖/蜂蠟調，酸度支撐使甜而不膩。`,
-    results: `**品質結果：**\n- 感官：濃郁層次 + 拉長酸度骨架 + 絲滑膠質感\n- 陳年：50–100 年（偉大年份 >150 年仍具生命力）\n- 市場：當代年份 €300–400（375ml），偉大年份 €500–800，歷史年份拍賣達 €10K+`,
-    lessons: [
-      '極端標準 + 淘汰率是確保品牌資本的護城河',
-      '高新桶使用前提是原料濃縮度足以支撐',
-      '寧缺勿濫：停產年份長期回報 > 短期現金流',
-      '科技（光學分選）輔助而非取代引導式手工判斷'
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);border-radius:8px;padding:8px 14px;margin-bottom:10px;">
+          <span style="color:rgba(255,255,255,0.75);font-size:0.72rem;">核心挑戰</span>
+          <div style="color:#fff;font-size:0.78rem;font-weight:600;margin-top:2px;">如何在高風險氣候與極端成本下，穩定產出 50–100 年陳年潛力的頂級甜白？</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#F57F17,#FF8F00);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">🛠 關鍵做法 + 成本思維</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.85;">
+              <div style="margin-bottom:3px;">· 多次（6–8+）選擇性採收確保貴腐均勻性</div>
+              <div style="margin-bottom:3px;">· 全新桶長期熟成 + 不做 MLF 保留酸度張力</div>
+              <div style="margin-bottom:3px;">· 嚴苛批次<strong>感官 + 化學雙重篩選</strong></div>
+              <div style="margin-bottom:3px;">· 不合年份寧缺勿濫（如 2012 年停產正牌）</div>
+              <div style="margin-bottom:8px;">· 副牌（乾白）靈活吸收不符合正牌標準批次</div>
+              <div style="background:#FFF3E0;border-radius:5px;padding:5px 9px;font-size:0.71rem;color:#E65100;line-height:1.75;">
+                <div style="font-weight:700;margin-bottom:2px;">💰 成本結構</div>
+                <div>· 產量僅 AOC 上限 ~⅓（≈ 9 hL/ha vs 25 hL/ha）</div>
+                <div>· 每株葡萄藤 ≈ 1 杯酒的經濟結構</div>
+                <div>· 長期品牌資本 &gt; 短期現金流</div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#6A1B9A,#8E24AA);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">🏆 品質成果 + 市場地位</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.85;">
+              <div style="margin-bottom:3px;">· 感官：<strong>濃郁層次 + 拉長酸度骨架 + 絲滑膠質感</strong></div>
+              <div style="margin-bottom:3px;">· 陳年：50–100 年（偉大年份 &gt;150 年仍具生命力）</div>
+              <div style="margin-bottom:8px;">· 當代年份 €300–400，偉大年份 €500–800，歷史年份拍賣 €10K+</div>
+              <div style="background:#F3E5F5;border-radius:5px;padding:5px 9px;font-size:0.71rem;color:#6A1B9A;line-height:1.75;">
+                <div style="font-weight:700;margin-bottom:2px;">🍯 風味標誌</div>
+                <div>蜂蜜・杏桃・芒果・柑橘蜜餞・焦糖</div>
+                <div>藏紅花・香料・蜂蠟調</div>
+                <div style="margin-top:3px;color:#555;">酸度支撐使甜而不膩，餘韻綿延</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:0.75rem;font-weight:700;color:#555;margin-bottom:6px;">💡 關鍵學習</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+          <div style="background:#FFF9C4;border-radius:7px;padding:8px 9px;font-size:0.71rem;color:#F57F17;line-height:1.65;"><strong>護城河思維</strong><br><span style="color:#555;">極端標準 + 淘汰率是品牌資本的核心保障</span></div>
+          <div style="background:#FFF3E0;border-radius:7px;padding:8px 9px;font-size:0.71rem;color:#E65100;line-height:1.65;"><strong>新桶前提</strong><br><span style="color:#555;">高新桶比例需原料濃縮度足以支撐，否則反效果</span></div>
+          <div style="background:#E8F5E9;border-radius:7px;padding:8px 9px;font-size:0.71rem;color:#2E7D32;line-height:1.65;"><strong>寧缺勿濫</strong><br><span style="color:#555;">停產年份長期品牌回報遠 &gt; 短期現金流損失</span></div>
+          <div style="background:#E3F2FD;border-radius:7px;padding:8px 9px;font-size:0.71rem;color:#1565C0;line-height:1.65;"><strong>人機協作</strong><br><span style="color:#555;">光學分選等科技輔助而非取代引導式手工判斷</span></div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'interactive-quiz',
@@ -732,21 +1119,41 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     ]
   },
   {
-    type: 'course-complete',
+    type: 'content',
     title: 'Part 2 完成！',
-    message: '恭喜完成甜酒釀造與貴腐科學的進階模組！',
-    nextSteps: [
-      '進入 Part 3A：橡木桶科學基礎',
-      '回顧貴腐形成條件與採收策略差異',
-      '垂直品飲觀察陳年演化',
-      '比較 Tokaji / TBA 與 Sauternes 風格' 
-    ],
-    achievements: [
-      '理解貴腐菌與灰黴環境分野機制',
-      '掌握高糖長發酵的管理挑戰與對策',
-      '評估 Sauternes 經濟與風險模型',
-      '解析 Château d\'Yquem 品質決策矩陣'
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#F57F17,#FF8F00);border-radius:12px;padding:13px 18px;margin-bottom:12px;text-align:center;">
+          <div style="font-size:1.8rem;margin-bottom:5px;">🍯</div>
+          <div style="color:#fff;font-weight:700;font-size:1rem;">Part 2 完成！</div>
+          <div style="color:rgba(255,255,255,0.9);font-size:0.78rem;margin-top:4px;">恭喜完成甜酒釀造與貴腐科學的進階模組！從貴腐形成至水張平衡管理，您已掌握 Sauternes 的核心密碼。</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 14px;font-weight:700;font-size:0.83rem;color:#fff;">▶️ 下一步學習</div>
+            <div style="padding:10px 14px;">
+              <div style="font-size:0.75rem;color:#333;line-height:1.9;">
+                <div style="margin-bottom:4px;">→ 進入 Part 3A：橡木桶科學基礎</div>
+                <div style="margin-bottom:4px;">→ 回顧貴腐形成條件與採收策略差異</div>
+                <div style="margin-bottom:4px;">→ 垂直品飲觀察陳年演化</div>
+                <div>→ 比較 Tokaji / TBA 與 Sauternes 風格</div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#388E3C);padding:9px 14px;font-weight:700;font-size:0.83rem;color:#fff;">✅ 學習成就</div>
+            <div style="padding:10px 14px;">
+              <div style="font-size:0.75rem;color:#333;line-height:1.9;">
+                <div style="margin-bottom:4px;">☑️ 理解貴腐菌與灰黴環境分野機制</div>
+                <div style="margin-bottom:4px;">☑️ 掌握高糖長發酵的管理挑戰與對策</div>
+                <div style="margin-bottom:4px;">☑️ 評估 Sauternes 經濟與風險模型</div>
+                <div>☑️ 解析 Château d'Yquem 品質決策矩陣</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   // ===== 以下開始追加原 Part3A 內容 =====
@@ -767,15 +1174,46 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     image: '/images/oak-barrels-cellar.jpg'
   },
   {
-    type: 'objectives',
-    title: '學習目標 (3A)',
-    objectives: [
-      { title: '理解橡木生物學基礎', description: '樹種 / 年輪 / 組織與香氣釋放關聯', icon: '🌳' },
-      { title: '掌握風乾與烘烤工藝科學', description: '時間與溫度對化合物轉化路徑', icon: '🔥' },
-      { title: '解析化合物萃取動力學', description: '不同香氣/結構分子釋放速率與序列', icon: '🧪' },
-      { title: '評估新舊桶策略', description: '新桶比例、批次差異、陳年曲線', icon: '📊' },
-      { title: '認識頂級桶廠工藝', description: '選材、風乾週期、客製烘烤方案', icon: '🏭' }
-    ]
+    type: 'content',
+    title: '學習目標：橡木桶科學基礎',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🌳</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">橡木生物學基礎</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">了解樹種、年輪、組織結構與香氣釋放的關聯，比較歐洲橡木與美國橡木的特性差異。</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🔥</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">風乾與烘烤工藝</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">掌握風乾時間與烘烤溫度對化合物轉化的影響路徑，理解熱解、梅納反應、焦糖化的科學。</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🧪</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">化合物萃取動力學</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">解析香草醛、內酯、丁香酚等關鍵分子的釋放速率與序列，理解前6-12個月萃取最快的規律。</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">📊</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">新舊桶策略評估</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">學習如何配置新桶比例、管理批次差異，掌握頂級酒莊桶陳策略的決策邏輯與風險回報。</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🏭</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">頂級桶廠工藝</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">認識 Taransaud、Seguin Moreau 等桶廠，了解選材、風乾週期、客製烘烤方案的工藝傳承。</div>
+          </div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'chapter-divider',
@@ -787,13 +1225,11 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     navLabel: '橡木科學'
   },
   {
-    type: 'intro',
+    type: 'content',
     title: '橡木桶科學基礎導讀',
     content: `
-      <div class="intro-content">
-        <p class="intro-lead">
-          橡木桶不僅是葡萄酒的容器，更是一個動態的化學與生物反應器。從森林中的橡樹到酒窖中的橡木桶，每個環節都影響著葡萄酒的最終風味、結構和陳年潛力。
-        </p>
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.76rem;color:#555;margin-bottom:10px;text-align:center;">橡木桶是動態的化學與生物反應器——化學萃取 / 緩慢微氧化 / 酒泥互動，三層機制共同塑造葡萄酒風格</div>
 
         <p class="intro-context">
           一個優質橡木桶的影響力源於三個層面：化學萃取（香草醛、內酯、丁香酚、橡木單寧）、緩慢微氧化（促進花青素穩定與單寧聚合）、以及與酒泥的互動（提升質地與複雜度）。理解這些科學原理，是評估酒款品質與風格的關鍵。
@@ -829,33 +1265,142 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
         </div>
 
         <p class="intro-conclusion">
-          理解橡木桶科學，您將能夠評估不同酒款背後的桶陳策略選擇，理解為什麼某些酒款使用 100% 新桶而另一些只用 30%，以及這些決策如何影響最終的風味表現。
-        </p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">🌳</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">橡木樹種的差異</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">比較歐洲橡木與美國橡木特性，理解木理緊密度對萃取速率的關鍵影響。</div></div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">🇫🇷</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">法國產區特性</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">認識 Tronçais、Allier、Limousin 等頂級產區密度、單寧、香氣的差異。</div></div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#6A1B9A,#8E24AA);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">🔬</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">化學成分分析</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">理解香草醛、內酯、丁香酚、糠醛等關鍵化合物對香氣與風味的貢獻。</div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#E65100,#F4511E);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">📊</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">萃取動力學</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">掌握前 6–12 個月萃取最快的規律，理解新桶影響力隨時間遞減的原理。</div></div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#37474F,#455A64);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">⚖️</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">新舊桶策略</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">學習如何配置新桶比例，掌握頂級酒莊的桶陳策略決策邏輯。</div></div>
+          </div>
       </div>
-    `,
-    icon: '🌲'
+    `
   },
   {
     type: 'content',
     title: '橡木樹種：風味起源',
-    content: `**核心分類：歐洲橡木 vs 美國橡木**\n- 歐洲：Quercus robur / sessilis（混生）→ 結構緊密、萃取慢、香氣精緻、單寧結構強。\n- 美國：Quercus alba → 內酯/香草醛含量高，椰子 / 甜香顯著，萃取快。\n\n**對釀造影響：** 緊密木理 = 緩釋放；寬鬆木理 = 快釋放 + 更強一次性衝擊。`,
-    subsections: [
-      { subtitle: '解剖差異與影響', content: '導管大小 / 年輪緊密度 / 密度 → 決定萃取速率與微氧化節奏。緊密 (Tronçais) ＝ 優雅漸進；寬鬆 (Limousin) ＝ 強烈快速。' },
-      { subtitle: '化學成分差異', content: '美國橡木：香草醛 5–15 mg/L vs 歐洲 1–5；內酯 3–10 vs 1–3 → 帶來更明顯香草/椰子與甜感。歐洲橡木：較高橡木單寧 → 架構與抗氧化力。' }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.76rem;color:#666;margin-bottom:10px;text-align:center;">核心分類：歐洲橡木 vs 美國橡木——木理緊密度決定萃取速率與香氣輪廓</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:10px 14px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🇪🇺 歐洲橡木</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.71rem;margin-top:2px;">Quercus robur / sessilis（混生）</div>
+            </div>
+            <div style="padding:10px 14px 12px;font-size:0.74rem;color:#333;line-height:1.85;">
+              <div style="margin-bottom:3px;">· <strong>結構</strong>：緊密年輪，導管細小</div>
+              <div style="margin-bottom:3px;">· <strong>萃取</strong>：慢速緩釋，優雅漸進</div>
+              <div style="margin-bottom:3px;">· <strong>香氣</strong>：精緻香料、礦物感</div>
+              <div style="margin-bottom:6px;">· <strong>單寧</strong>：結構強，抗氧化力佳</div>
+              <div style="background:#E8F5E9;border-radius:5px;padding:4px 9px;font-size:0.71rem;color:#1B5E20;">香草醛 1–5 mg/L ｜ 內酯 1–3 mg/L</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#01579B,#0288D1);padding:10px 14px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🇺🇸 美國橡木</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.71rem;margin-top:2px;">Quercus alba</div>
+            </div>
+            <div style="padding:10px 14px 12px;font-size:0.74rem;color:#333;line-height:1.85;">
+              <div style="margin-bottom:3px;">· <strong>結構</strong>：寬鬆年輪，導管較大</div>
+              <div style="margin-bottom:3px;">· <strong>萃取</strong>：快速，強烈一次性衝擊</div>
+              <div style="margin-bottom:3px;">· <strong>香氣</strong>：香草、椰子、甜感顯著</div>
+              <div style="margin-bottom:6px;">· <strong>單寧</strong>：較低，口感更柔順</div>
+              <div style="background:#E3F2FD;border-radius:5px;padding:4px 9px;font-size:0.71rem;color:#01579B;">香草醛 5–15 mg/L ｜ 內酯 3–10 mg/L</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+          <div style="background:#F3E5F5;border-radius:8px;padding:9px 12px;">
+            <div style="font-size:0.75rem;font-weight:700;color:#6A1B9A;margin-bottom:4px;">🔬 解剖差異與影響</div>
+            <div style="font-size:0.72rem;color:#555;line-height:1.75;">導管大小 / 年輪緊密度 / 密度 → 決定萃取速率與微氧化節奏。<br><strong>緊密 (Tronçais)</strong> ＝ 優雅漸進；<strong>寬鬆 (Limousin)</strong> ＝ 強烈快速</div>
+          </div>
+          <div style="background:#FFF3E0;border-radius:8px;padding:9px 12px;">
+            <div style="font-size:0.75rem;font-weight:700;color:#E65100;margin-bottom:4px;">💡 釀造影響</div>
+            <div style="font-size:0.72rem;color:#555;line-height:1.75;">緊密木理 = <strong>緩釋放</strong>；寬鬆木理 = <strong>快釋放 + 更強一次性衝擊</strong>。波爾多頂級紅酒以歐洲橡木為主，追求精緻漸進的風味整合。</div>
+          </div>
+        </div>
+      </div>
+    `
   },
   {
-    type: 'comparison-table',
+    type: 'content',
     title: '法國橡木產區特性對照',
-    description: '密度 / 單寧 / 香氣 / 風格適配',
-    headers: ['產區','密度','單寧強度','香草醛','萃取速度','風格','適用酒款','價格等級'],
-    rows: [
-      ['Vosges', '極高 ★★★★★', '高 ★★★★', '中 ★★★', '慢 ★★', '香料精緻', '頂級紅', '€€€€'],
-      ['Allier', '高 ★★★★', '高 ★★★★', '中高 ★★★★', '中 ★★★', '平衡優雅', '高階紅/白', '€€€'],
-      ['Tronçais', '最高 ★★★★★★', '高精緻 ★★★★★', '低 ★★', '極慢 ★', '極致優雅', '超頂級', '€€€€€€'],
-      ['Limousin', '中 ★★★', '極高 ★★★★★★', '高 ★★★★★', '快 ★★★★★', '強勁直接', '烈酒 / 結構型', '€€'],
-      ['Nevers', '高 ★★★★', '中高 ★★★★', '中 ★★★', '中 ★★★', '圓潤平衡', '中階酒', '€€€']
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.78rem;color:#666;margin-bottom:10px;text-align:center;">密度 / 單寧 / 香氣 / 風格適配——頂級酒莊根據酒款目標精選產區</div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.74rem;">
+            <thead>
+              <tr style="background:linear-gradient(135deg,#4E342E,#6D4C41);">
+                <th style="color:#fff;padding:7px 10px;text-align:left;font-weight:700;border-right:1px solid rgba(255,255,255,0.2);">產區</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">密度</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">單寧強度</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">香草醛</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">萃取速度</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">風格</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">適用</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;">價格</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:#EFEBE9;">
+                <td style="padding:7px 10px;font-weight:700;color:#4E342E;">Vosges</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">極高 ★★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高 ★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中 ★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">慢 ★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">香料精緻</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">頂級紅</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€€€€</td>
+              </tr>
+              <tr style="background:#fff;">
+                <td style="padding:7px 10px;font-weight:700;color:#4E342E;">Allier</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高 ★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高 ★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中高 ★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中 ★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">平衡優雅</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高階紅/白</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€€€</td>
+              </tr>
+              <tr style="background:#EFEBE9;">
+                <td style="padding:7px 10px;font-weight:700;color:#E65100;">Tronçais</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">最高 ★★★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">精緻高 ★★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">低 ★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;"><strong>極慢 ★</strong></td>
+                <td style="padding:7px 8px;text-align:center;color:#E65100;font-weight:600;">極致優雅</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">超頂級</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€€€€€€</td>
+              </tr>
+              <tr style="background:#fff;">
+                <td style="padding:7px 10px;font-weight:700;color:#4E342E;">Limousin</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中 ★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">極高 ★★★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高 ★★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">快 ★★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">強勁直接</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">烈酒/結構型</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€€</td>
+              </tr>
+              <tr style="background:#EFEBE9;">
+                <td style="padding:7px 10px;font-weight:700;color:#4E342E;">Nevers</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高 ★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中高 ★★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中 ★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中 ★★★</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">圓潤平衡</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中階酒</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€€€</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="background:#FFF3E0;border-radius:6px;padding:6px 12px;margin-top:8px;font-size:0.73rem;color:#E65100;">💡 Tronçais 被稱為「橡木中的香檳」——極緻細密年輪造就極緩萃取，是最優雅的選擇，也是最昂貴的投資。</div>
+      </div>
+    `
   },
   {
     type: 'chapter-divider',
@@ -867,13 +1412,11 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     navLabel: '桶材工藝'
   },
   {
-    type: 'intro',
+    type: 'content',
     title: '橡木桶製作工藝導讀',
     content: `
-      <div class="intro-content">
-        <p class="intro-lead">
-          一個優質橡木桶的誕生需要數年時間，從原木的風乾到烘烤的掌握，每個步驟都需要豐富的經驗與精湛的技藝。頂級桶廠如 Taransaud、Seguin Moreau 的工匠們，將傳統工藝與現代科學完美結合。
-        </p>
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.76rem;color:#555;margin-bottom:10px;text-align:center;">頂級橡木桶誕生需要數年——從選材、風乾到烘烤，每個環節都是風味的投資</div>
 
         <p class="intro-context">
           製桶不僅是技術，更是藝術。從選擇樹齡 150-200 年的橡樹，到 24-60 個月的自然風乾，再到精確控制的烘烤過程，每個環節都影響著最終的風味表現。這也是為什麼頂級新橡木桶的價格可達 €800-1200，而其影響力可持續 3-5 年。
@@ -909,53 +1452,227 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
         </div>
 
         <p class="intro-conclusion">
-          學習製桶工藝，您將理解為什麼頂級橡木桶價值不菲，以及為何 Château Margaux 等名莊願意支付高昂成本來確保桶材品質。這不僅是容器的選擇，更是對葡萄酒風格的塑造。
-        </p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#2E7D32,#43A047);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">🌬️</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">自然風乾的化學</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">24–60 個月風乾軟化單寧、釋放香氣前驅物，不能用人工烘乾替代。</div></div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#BF360C,#E64A19);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">🔥</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">烘烤科學</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">160–220°C 多層反應：熱解 / Maillard / 焦糖化，精確控制決定香氣輪廓。</div></div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#F57F17,#FF8F00);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">🎯</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">烘烤程度風味</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">輕烘（椰子）→ 中烘（香草/烤堅果）→ 重烘（咖啡/煙燻）的差異與選擇。</div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#4A148C,#6A1B9A);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">🏭</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">頂級桶廠客製化</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">Taransaud、Seguin Moreau 等名廠根據酒莊需求調整木材、風乾時間、烘烤曲線。</div></div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);"><div style="background:linear-gradient(135deg,#37474F,#455A64);padding:9px 12px;display:flex;align-items:center;gap:8px;"><span style="font-size:1.1rem;">💰</span><div style="color:#fff;font-weight:700;font-size:0.82rem;">桶材品質評估</div></div><div style="padding:8px 12px 10px;font-size:0.73rem;color:#555;line-height:1.75;">頂級新桶 €800–1,200，影響力持續 3–5 年。掌握年限管理是成本決策關鍵。</div></div>
+          </div>
       </div>
-    `,
-    icon: '🔥'
+    `
   },
   {
     type: 'content',
     title: '風乾：時間的催化器',
-    content: '風乾 24–60 月：水分→化學轉化→香氣前驅釋放；過短=生硬草青，過長=資本占用高。',
-    subsections: [
-      { subtitle: '理想環境', content: '15–25°C / 60–80%RH / 通風 / 防直雨；板材留縫 + 定期翻動。' },
-      { subtitle: '自然 vs 人工', content: 'Kiln：2–4 週僅脫水；Air Dry：24–60 月完成單寧水解、內酯前驅累積、苦澀軟化 → 頂級桶堅持漫長自然。' }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.76rem;color:#666;margin-bottom:10px;text-align:center;">風乾 24–60 個月：水分蒸發 → 化學轉化 → 香氣前驅釋放——時間是複雜度的成本</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:10px 14px;font-weight:700;font-size:0.84rem;color:#fff;">🌬️ 理想風乾條件</div>
+            <div style="padding:10px 14px 12px;font-size:0.74rem;color:#333;line-height:1.85;">
+              <div style="margin-bottom:3px;">· <strong>溫度</strong>：15–25°C（避免極端高低溫）</div>
+              <div style="margin-bottom:3px;">· <strong>濕度</strong>：60–80% RH（微生物作用）</div>
+              <div style="margin-bottom:3px;">· <strong>通風</strong>：避免積水腐爛</div>
+              <div style="margin-bottom:3px;">· <strong>避雨</strong>：防直接沖淋過度浸出苦味</div>
+              <div style="margin-bottom:6px;">· 板材留縫 + 定期翻動確保均勻</div>
+              <div style="background:#E0F2F1;border-radius:5px;padding:4px 9px;font-size:0.71rem;color:#00695C;">頂級桶廠戶外風乾場占地數公頃，需數萬片板材管理</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);padding:10px 14px;font-weight:700;font-size:0.84rem;color:#fff;">⏱️ 自然 vs 窯乾</div>
+            <div style="padding:10px 14px 12px;font-size:0.74rem;">
+              <div style="background:#FBE9E7;border-radius:7px;padding:7px 10px;margin-bottom:8px;">
+                <div style="font-size:0.73rem;font-weight:600;color:#BF360C;margin-bottom:3px;">🏭 窯乾 (Kiln Dry)</div>
+                <div style="font-size:0.71rem;color:#555;line-height:1.65;">2–4 週 / 僅脫水 / 成本低<br>苦澀未軟化、香氣前驅未累積</div>
+              </div>
+              <div style="background:#E8F5E9;border-radius:7px;padding:7px 10px;">
+                <div style="font-size:0.73rem;font-weight:600;color:#2E7D32;margin-bottom:3px;">🌲 自然風乾 (Air Dry) ✓</div>
+                <div style="font-size:0.71rem;color:#555;line-height:1.65;">24–60 月 / 完整化學成熟<br>單寧水解 + 內酯前驅累積 + 苦澀軟化<br><strong>頂級桶廠堅持漫長自然</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,#4E342E,#795548);border-radius:8px;padding:8px 14px;display:flex;align-items:center;gap:10px;">
+          <div style="font-size:1.2rem;">⚠️</div>
+          <div style="font-size:0.74rem;color:#fff;line-height:1.6;"><strong>過短</strong>（&lt;18 月）= 生硬草青單寧；<strong>過長</strong>（&gt;60 月）= 資本占用過高，收益遞減。黃金帶：Bordeaux 頂級桶廠標準 <strong>36 月</strong>（Tronçais 常達 60 月）。</div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'content',
     title: '烘烤：風味雕塑',
-    content: '熱解 / Maillard / 焦糖化多層反應決定香氣輪廓：由椰子/清新 → 香草/烤堅果 → 咖啡/巧克力 → 烟燻/炭質。',
-    subsections: [
-      { subtitle: 'Light (L)', content: '160–180°C 15–20min：香草醛初升、椰子新鮮、結構保留。' },
-      { subtitle: 'Medium (M)', content: '180–200°C 25–35min：主流平衡；香草+烤堅果+輕香料。' },
-      { subtitle: 'Medium+ (M+)', content: '200–220°C 35–45min：焦糖/咖啡/香料層次深化。' },
-      { subtitle: 'Heavy (H)', content: '220–250°C 45–60min：炭香/煙燻/黑巧；高風險僅適高濃度酒體。' }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.76rem;color:#666;margin-bottom:10px;text-align:center;">熱解 / Maillard / 焦糖化多層反應決定香氣輪廓——從椰子清新到炭香煙燻的四大烘烤等級</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#F9A825,#FFD54F);padding:9px 10px;text-align:center;">
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">L</div>
+              <div style="color:rgba(255,255,255,0.9);font-size:0.68rem;">輕烘</div>
+            </div>
+            <div style="padding:9px 10px 11px;font-size:0.72rem;color:#333;line-height:1.75;">
+              <div style="font-weight:600;color:#F9A825;margin-bottom:4px;">160–180°C</div>
+              <div style="margin-bottom:3px;">時間：15–20 min</div>
+              <div style="margin-bottom:5px;font-size:0.69rem;color:#777;">香草醛初升 / 椰子 / 新鮮果香</div>
+              <div style="background:#FFF9C4;border-radius:4px;padding:3px 6px;font-size:0.69rem;color:#F57F17;">結構完整保留</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);border:2px solid #FF8F00;">
+            <div style="background:linear-gradient(135deg,#E65100,#FF8F00);padding:9px 10px;text-align:center;position:relative;">
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">M ⭐</div>
+              <div style="color:rgba(255,255,255,0.9);font-size:0.68rem;">中烘（主流）</div>
+            </div>
+            <div style="padding:9px 10px 11px;font-size:0.72rem;color:#333;line-height:1.75;">
+              <div style="font-weight:600;color:#E65100;margin-bottom:4px;">180–200°C</div>
+              <div style="margin-bottom:3px;">時間：25–35 min</div>
+              <div style="margin-bottom:5px;font-size:0.69rem;color:#777;">香草 + 烤堅果 + 輕香料</div>
+              <div style="background:#FFF3E0;border-radius:4px;padding:3px 6px;font-size:0.69rem;color:#E65100;">波爾多主流選擇</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#BF360C,#D84315);padding:9px 10px;text-align:center;">
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">M+</div>
+              <div style="color:rgba(255,255,255,0.9);font-size:0.68rem;">中強烘</div>
+            </div>
+            <div style="padding:9px 10px 11px;font-size:0.72rem;color:#333;line-height:1.75;">
+              <div style="font-weight:600;color:#BF360C;margin-bottom:4px;">200–220°C</div>
+              <div style="margin-bottom:3px;">時間：35–45 min</div>
+              <div style="margin-bottom:5px;font-size:0.69rem;color:#777;">焦糖 / 咖啡 / 香料深化</div>
+              <div style="background:#FBE9E7;border-radius:4px;padding:3px 6px;font-size:0.69rem;color:#BF360C;">高濃度酒款適用</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#37474F,#455A64);padding:9px 10px;text-align:center;">
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">H</div>
+              <div style="color:rgba(255,255,255,0.9);font-size:0.68rem;">重烘</div>
+            </div>
+            <div style="padding:9px 10px 11px;font-size:0.72rem;color:#333;line-height:1.75;">
+              <div style="font-weight:600;color:#37474F;margin-bottom:4px;">220–250°C</div>
+              <div style="margin-bottom:3px;">時間：45–60 min</div>
+              <div style="margin-bottom:5px;font-size:0.69rem;color:#777;">炭香 / 煙燻 / 黑巧克力</div>
+              <div style="background:#ECEFF1;border-radius:4px;padding:3px 6px;font-size:0.69rem;color:#37474F;">⚠️ 高風險，需高濃度</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#FFF3E0;border-radius:6px;padding:7px 12px;font-size:0.73rem;color:#E65100;">💡 烘烤程度直接決定「橡木感強度」——過輕則香氣整合不足；過重則覆蓋品種特性。中烘（M）是波爾多紅酒的主流黃金點。</div>
+      </div>
+    `
   },
   {
-    type: 'toasting-science',
+    type: 'content',
     title: '烘烤溫度與時間階段化學',
-    description: '溫度 vs 反應 vs 代表香氣',
-    stages: [
-      { temperature: '100–140°C', timing: '0–10min', process: '脫水預熱', chemicalChanges: ['水分蒸散','細胞壁軟化'], aromas: '尚無顯著變化', compounds: '—' },
-      { temperature: '140–170°C', timing: '10–20min', process: '早期 Maillard', chemicalChanges: ['半纖維素初分解','前驅轉化'], aromas: '淡烤麵包', compounds: '香草醛↑ 內酯↑' },
-      { temperature: '170–200°C', timing: '20–35min', process: '主反應期', chemicalChanges: ['半纖維素大量裂解','糠醛生成','單寧聚合'], aromas: '香草 杏仁 輕焦糖', compounds: '糠醛↑ 5-甲基糠醛↑ 丁香酚↑' },
-      { temperature: '200–230°C', timing: '35–50min', process: '深度焦糖化', chemicalChanges: ['木質素裂解','咖啡內酯生成','煙燻前驅累積'], aromas: '焦糖 咖啡 烤堅果', compounds: '咖啡內酯↑ 香草醛峰值' },
-      { temperature: '230–250°C+', timing: '50+min', process: '碳化/降解', chemicalChanges: ['表面碳化','香草醛降解','煙燻酚類大量生成'], aromas: '煙燻 炭香', compounds: '煙燻酚↑ 香草醛↓' }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.78rem;color:#666;margin-bottom:10px;text-align:center;">溫度 vs 反應階段 vs 代表香氣 — 從輕烤到碳化的風味轉化之旅</div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.74rem;">
+            <thead>
+              <tr style="background:linear-gradient(135deg,#5D4037,#6D4C41);">
+                <th style="color:#fff;padding:7px 10px;text-align:left;font-weight:700;">溫度範圍</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;">時間</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;">反應階段</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;">化學變化</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;">代表香氣</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;">關鍵化合物</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:#FFF9C4;">
+                <td style="padding:7px 10px;font-weight:700;color:#5D4037;">100–140°C 🌤️</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">0–10 min</td>
+                <td style="padding:7px 8px;text-align:center;font-weight:600;color:#5D4037;">脫水預熱</td>
+                <td style="padding:7px 8px;color:#555;">水分蒸散、細胞壁軟化</td>
+                <td style="padding:7px 8px;text-align:center;color:#777;font-style:italic;">尚無顯著變化</td>
+                <td style="padding:7px 8px;text-align:center;color:#777;">—</td>
+              </tr>
+              <tr style="background:#FFE082;">
+                <td style="padding:7px 10px;font-weight:700;color:#5D4037;">140–170°C 🌅</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">10–20 min</td>
+                <td style="padding:7px 8px;text-align:center;font-weight:600;color:#5D4037;">早期 Maillard</td>
+                <td style="padding:7px 8px;color:#555;">半纖維素初分解、前驅轉化</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">淡烤麵包</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">香草醛↑ 內酯↑</td>
+              </tr>
+              <tr style="background:#FF8F00;">
+                <td style="padding:7px 10px;font-weight:700;color:#fff;">170–200°C 🔥</td>
+                <td style="padding:7px 8px;text-align:center;color:#fff;">20–35 min</td>
+                <td style="padding:7px 8px;text-align:center;font-weight:700;color:#fff;">主反應期 ⭐</td>
+                <td style="padding:7px 8px;color:#fff;">半纖維素大量裂解、糠醛生成、單寧聚合</td>
+                <td style="padding:7px 8px;text-align:center;color:#fff;font-weight:600;">香草 杏仁 輕焦糖</td>
+                <td style="padding:7px 8px;text-align:center;color:#fff;">糠醛↑ 丁香酚↑</td>
+              </tr>
+              <tr style="background:#E64A19;">
+                <td style="padding:7px 10px;font-weight:700;color:#fff;">200–230°C 🌋</td>
+                <td style="padding:7px 8px;text-align:center;color:#fff;">35–50 min</td>
+                <td style="padding:7px 8px;text-align:center;font-weight:600;color:#fff;">深度焦糖化</td>
+                <td style="padding:7px 8px;color:#fff;">木質素裂解、咖啡內酯生成</td>
+                <td style="padding:7px 8px;text-align:center;color:#fff;font-weight:600;">焦糖 咖啡 烤堅果</td>
+                <td style="padding:7px 8px;text-align:center;color:#fff;">咖啡內酯↑ 香草醛峰</td>
+              </tr>
+              <tr style="background:#37474F;">
+                <td style="padding:7px 10px;font-weight:700;color:#fff;">230–250°C+ ⚫</td>
+                <td style="padding:7px 8px;text-align:center;color:#fff;">50+ min</td>
+                <td style="padding:7px 8px;text-align:center;font-weight:600;color:#fff;">碳化 / 降解</td>
+                <td style="padding:7px 8px;color:#ccc;">表面碳化、香草醛降解、煙燻酚類大量生成</td>
+                <td style="padding:7px 8px;text-align:center;color:#fff;font-weight:600;">煙燻 炭香</td>
+                <td style="padding:7px 8px;text-align:center;color:#fff;">煙燻酚↑ 香草醛↓</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="background:#FFF3E0;border-radius:6px;padding:7px 12px;margin-top:8px;font-size:0.73rem;color:#E65100;">💡 Medium Toast（170–200°C，25–35 min）是波爾多頂級紅酒桶的黃金烘烤點——香草醛 + 糠醛達峰值，與濃郁果實旗鼓相當。</div>
+      </div>
+    `
   },
   {
-    type: 'case-study',
+    type: 'content',
     title: '案例：François Frères 的雙階段烘烤',
-    winery: 'François Frères',
-    region: 'Burgundy / Bordeaux / Champagne',
-    challenge: '為 DRC / Leroy / d\'Yquem 等頂級酒莊提供高一致性且客製化的風味輪廓',
-    approach: '階段 1：低溫長時間 Slow Toast 170–180°C 45–60min 深層溫和轉化；階段 2：高溫短時間 Flash Toast 220–240°C 3–5min 表層焦糖鎖香；搭配 36–60 月自然風乾與微批次化學/感官數據閉環。',
-    results: '提升風味整合度 +40%，酒體平衡 +35%，長期客戶回購 >90%。',
-    lessons: [ '原料密度與風乾時間決定天花板', '時間投資是複雜度成本', '雙階段烘烤兼顧深層與表面反應', '客製化數據庫提高重複精準度', '頂級合作基於長期互信與迭代' ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);border-radius:8px;padding:8px 14px;margin-bottom:10px;">
+          <span style="color:rgba(255,255,255,0.75);font-size:0.72rem;">核心挑戰 ｜ Burgundy / Bordeaux / Champagne</span>
+          <div style="color:#fff;font-size:0.78rem;font-weight:600;margin-top:2px;">為 DRC / Leroy / d'Yquem 等頂級酒莊提供高一致性且客製化的風味輪廓</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#BF360C,#E64A19);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">🔥 雙階段烘烤工藝</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.85;">
+              <div style="background:#FBE9E7;border-radius:6px;padding:7px 10px;margin-bottom:7px;">
+                <div style="font-weight:700;color:#BF360C;font-size:0.74rem;margin-bottom:3px;">階段 1：Slow Toast（深層）</div>
+                <div style="font-size:0.71rem;color:#555;">170–180°C × 45–60 min<br>深層溫和轉化，香草醛 + 內酯持續累積</div>
+              </div>
+              <div style="background:#FFF3E0;border-radius:6px;padding:7px 10px;">
+                <div style="font-weight:700;color:#E65100;font-size:0.74rem;margin-bottom:3px;">階段 2：Flash Toast（表層）</div>
+                <div style="font-size:0.71rem;color:#555;">220–240°C × 3–5 min<br>表層焦糖鎖香，密封深層風味不揮發</div>
+              </div>
+              <div style="margin-top:7px;font-size:0.71rem;color:#777;">搭配 36–60 月自然風乾 + 微批次化學/感官數據閉環</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">📈 成果與關鍵學習</div>
+            <div style="padding:9px 12px 11px;">
+              <div style="background:#E8F5E9;border-radius:6px;padding:7px 10px;margin-bottom:8px;font-size:0.72rem;color:#1B5E20;line-height:1.7;">
+                <div>風味整合度 <strong>+40%</strong></div>
+                <div>酒體平衡 <strong>+35%</strong></div>
+                <div>長期客戶回購 <strong>&gt;90%</strong></div>
+              </div>
+              <div style="font-size:0.72rem;color:#333;line-height:1.85;">
+                <div style="margin-bottom:2px;">💡 原料密度與風乾時間決定品質天花板</div>
+                <div style="margin-bottom:2px;">💡 雙階段烘烤兼顧深層與表面反應</div>
+                <div style="margin-bottom:2px;">💡 客製化數據庫提高批次重複精準度</div>
+                <div style="margin-bottom:2px;">💡 時間投資（36–60月）是複雜度成本</div>
+                <div>💡 頂級合作基於長期互信與迭代優化</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'interactive-quiz',
@@ -969,15 +1686,73 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
   {
     type: 'content',
     title: '橡木桶科學：整體回顧',
-    content: '樹種 → 產區 → 風乾 → 烘烤 → 新桶策略 → 時間曲線 形成質地與風味整合序列；最終目標是服務產區/品種表達，而非覆蓋。',
-    subsections: [ { subtitle: '決策架構', content: '目標風格 → 果實濃度 → 陳年曲線需求 → 新桶比例 / 烘烤強度 / 產區配對 → 感官+化學追蹤迭代。' } ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.76rem;color:#666;margin-bottom:10px;text-align:center;">最終目標：服務產區 / 品種表達，而非覆蓋——橡木桶是工具，不是主角</div>
+        <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);border-radius:10px;padding:12px 16px;margin-bottom:10px;">
+          <div style="color:rgba(255,255,255,0.8);font-size:0.71rem;margin-bottom:6px;">六步驟整合序列</div>
+          <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap;">
+            <div style="background:rgba(255,255,255,0.15);border-radius:6px;padding:5px 10px;color:#fff;font-size:0.73rem;font-weight:600;">🌳 樹種選擇</div>
+            <div style="color:rgba(255,255,255,0.5);font-size:0.9rem;">→</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:6px;padding:5px 10px;color:#fff;font-size:0.73rem;font-weight:600;">🗺️ 產區配對</div>
+            <div style="color:rgba(255,255,255,0.5);font-size:0.9rem;">→</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:6px;padding:5px 10px;color:#fff;font-size:0.73rem;font-weight:600;">🌬️ 風乾成熟</div>
+            <div style="color:rgba(255,255,255,0.5);font-size:0.9rem;">→</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:6px;padding:5px 10px;color:#fff;font-size:0.73rem;font-weight:600;">🔥 烘烤程度</div>
+            <div style="color:rgba(255,255,255,0.5);font-size:0.9rem;">→</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:6px;padding:5px 10px;color:#fff;font-size:0.73rem;font-weight:600;">📊 新桶策略</div>
+            <div style="color:rgba(255,255,255,0.5);font-size:0.9rem;">→</div>
+            <div style="background:rgba(255,255,255,0.2);border-radius:6px;padding:5px 10px;color:#FFD54F;font-size:0.73rem;font-weight:700;">⏳ 時間曲線</div>
+          </div>
+        </div>
+        <div style="background:#FFF8E1;border-radius:8px;padding:10px 14px;">
+          <div style="font-size:0.75rem;font-weight:700;color:#5D4037;margin-bottom:6px;">⚙️ 決策架構</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="background:#fff;border-radius:6px;padding:7px 9px;font-size:0.7rem;color:#333;line-height:1.7;"><strong style="color:#BF360C;">① 目標風格</strong><br>品種特性 / 產區個性 / 市場定位</div>
+            <div style="background:#fff;border-radius:6px;padding:7px 9px;font-size:0.7rem;color:#333;line-height:1.7;"><strong style="color:#E65100;">② 果實濃度</strong><br>評估原料能否支撐新桶比例</div>
+            <div style="background:#fff;border-radius:6px;padding:7px 9px;font-size:0.7rem;color:#333;line-height:1.7;"><strong style="color:#F57F17;">③ 陳年需求</strong><br>新桶比例 / 烘烤強度 / 產區選配</div>
+            <div style="background:#fff;border-radius:6px;padding:7px 9px;font-size:0.7rem;color:#333;line-height:1.7;"><strong style="color:#2E7D32;">④ 迭代追蹤</strong><br>感官 + 化學數據閉環驗證</div>
+          </div>
+        </div>
+      </div>
+    `
   },
   {
-    type: 'course-complete',
+    type: 'content',
     title: 'Part 3A 完成！',
-    message: '恭喜完成橡木桶科學模組。',
-    nextSteps: ['進入 Part 3B：現代釀酒科技','回顧不同產區 vs 烘烤組合差異','建立自有桶管理記錄表'],
-    achievements: ['理解樹種/產區差異','掌握風乾/烘烤科學','評估新桶策略風險報酬','認識頂級桶廠工藝','建立決策與評估框架']
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);border-radius:12px;padding:13px 18px;margin-bottom:12px;text-align:center;">
+          <div style="font-size:1.8rem;margin-bottom:5px;">🪵</div>
+          <div style="color:#fff;font-weight:700;font-size:1rem;">Part 3A 完成！</div>
+          <div style="color:rgba(255,255,255,0.9);font-size:0.78rem;margin-top:4px;">恭喜完成橡木桶科學模組！從樹種到烘烤，您已掌握影響葡萄酒風格的木桶密碼。</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 14px;font-weight:700;font-size:0.83rem;color:#fff;">▶️ 下一步學習</div>
+            <div style="padding:10px 14px;">
+              <div style="font-size:0.75rem;color:#333;line-height:1.9;">
+                <div style="margin-bottom:4px;">→ 進入 Part 3B：現代釀酒科技</div>
+                <div style="margin-bottom:4px;">→ 回顧不同產區 vs 烘烤組合差異</div>
+                <div>→ 建立自有桶管理記錄表</div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#388E3C);padding:9px 14px;font-weight:700;font-size:0.83rem;color:#fff;">✅ 學習成就</div>
+            <div style="padding:10px 14px;">
+              <div style="font-size:0.75rem;color:#333;line-height:1.9;">
+                <div style="margin-bottom:4px;">☑️ 理解樹種 / 產區差異</div>
+                <div style="margin-bottom:4px;">☑️ 掌握風乾 / 烘烤科學</div>
+                <div style="margin-bottom:4px;">☑️ 評估新桶策略風險報酬</div>
+                <div style="margin-bottom:4px;">☑️ 認識頂級桶廠工藝</div>
+                <div>☑️ 建立決策與評估框架</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   // ===== 以下開始追加原 Part3B 內容 =====
@@ -998,15 +1773,46 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     image: '/images/modern-winery-technology.jpg'
   },
   {
-    type: 'objectives',
-    title: '學習目標 (3B)',
-    objectives: [
-      { title: '掌握現代分選技術', description: '光學 / X-ray / AI 模型原理與限制', icon: '🔍' },
-      { title: '理解精密發酵控制', description: '溫控 / 氧管理 / 自動攪拌', icon: '🌡️' },
-      { title: '評估後處理創新', description: '膜過濾 / 濃縮 / 冷凍技術', icon: '🍷' },
-      { title: '探索數據分析應用', description: '即時監控 → 風險預測 → 優化', icon: '📈' },
-      { title: '平衡傳統與創新', description: '科技工具服務風土表達', icon: '⚖️' }
-    ]
+    type: 'content',
+    title: '學習目標：現代釀酒科技',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#BF360C,#E64A19);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🔍</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">現代分選技術</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">掌握光學分選、X-Ray、AI模型原理與限制，理解從人工到AI的效率與精準度躍升。</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#6A1B9A,#7B1FA2);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🌡️</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">精密發酵控制</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">理解溫控 ±0.1°C、氧管理、自動攪拌/抽皮系統，學習PID預測控制的科學原理。</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🍷</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">後處理技術創新</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">評估膜過濾、反滲透、冷凍濃縮技術的品質影響、法規限制與使用邊界。</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#01579B,#0277BD);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">📈</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">數據分析應用</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">探索即時監控如何轉化為風險預測與優化決策，學習數據驅動釀造的最佳實踐。</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#37474F,#455A64);padding:9px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">⚖️</span><div style="color:#fff;font-weight:700;font-size:0.83rem;">傳統與創新的平衡</div>
+            </div>
+            <div style="padding:8px 12px 10px;font-size:0.75rem;color:#555;line-height:1.75;">理解科技工具如何服務風土表達，認識不同技術的哲學爭議與行業共識邊界。</div>
+          </div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'chapter-divider',
@@ -1077,28 +1883,145 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     ]
   },
   {
-    type: 'comparison-table',
+    type: 'content',
     title: '分選技術綜合比較',
-    description: '速度 / 精度 / 成本 / 適用場景',
-    headers: ['技術類型','檢測速度','精準度','範圍','資本支出','運行成本','適用規模','成熟度'],
-    rows: [
-      ['人工','100 kg/h/人','60–80%','外觀+觸感','€0','高','任何','成熟'],
-      ['振動+風力','500 kg/h','70–85%','大小/密度','€20–50K','低','中大型','成熟'],
-      ['光學','3–8 t/h','95–97%','外觀/顏色','€200–500K','中','大型','成熟'],
-      ['X 射線','1–2 t/h','97–99%','內部缺陷','€500K–1M','高','頂級','新興'],
-      ['AI 分選','2–5 t/h','97–99%','多光譜+學習','€300–800K','中高','高端','快速增長'],
-      ['多技術組合','2–8 t/h','99%+','全方位','€500K–1.5M','高','旗艦','前沿']
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.78rem;color:#666;margin-bottom:10px;text-align:center;">速度 / 精度 / 成本 / 適用場景——從人工到AI的選果技術演進</div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.73rem;">
+            <thead>
+              <tr style="background:linear-gradient(135deg,#BF360C,#D84315);">
+                <th style="color:#fff;padding:7px 10px;text-align:left;font-weight:700;border-right:1px solid rgba(255,255,255,0.2);">技術類型</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">速度</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">精準度</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">資本支出</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;border-right:1px solid rgba(255,255,255,0.2);">適用規模</th>
+                <th style="color:#fff;padding:7px 8px;text-align:center;font-weight:600;">成熟度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:#FBE9E7;">
+                <td style="padding:7px 10px;font-weight:700;color:#BF360C;">👤 人工</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">100 kg/h/人</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#FFF9C4;color:#F57F17;padding:2px 6px;border-radius:4px;font-weight:600;">60–80%</span></td>
+                <td style="padding:7px 8px;text-align:center;color:#2E7D32;font-weight:600;">€0</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">任何規模</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#E8F5E9;color:#2E7D32;padding:2px 6px;border-radius:4px;">成熟</span></td>
+              </tr>
+              <tr style="background:#fff;">
+                <td style="padding:7px 10px;font-weight:700;color:#555;">🔀 振動+風力</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">500 kg/h</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#FFF9C4;color:#F57F17;padding:2px 6px;border-radius:4px;font-weight:600;">70–85%</span></td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€20–50K</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">中大型</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#E8F5E9;color:#2E7D32;padding:2px 6px;border-radius:4px;">成熟</span></td>
+              </tr>
+              <tr style="background:#FBE9E7;">
+                <td style="padding:7px 10px;font-weight:700;color:#555;">💡 光學</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">3–8 t/h</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#E8F5E9;color:#2E7D32;padding:2px 6px;border-radius:4px;font-weight:600;">95–97%</span></td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€200–500K</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">大型</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#E8F5E9;color:#2E7D32;padding:2px 6px;border-radius:4px;">成熟</span></td>
+              </tr>
+              <tr style="background:#fff;">
+                <td style="padding:7px 10px;font-weight:700;color:#BF360C;">☢️ X射線</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">1–2 t/h</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#E3F2FD;color:#1565C0;padding:2px 6px;border-radius:4px;font-weight:600;">97–99%</span></td>
+                <td style="padding:7px 8px;text-align:center;color:#BF360C;font-weight:600;">€500K–1M</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">頂級莊</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#FFF3E0;color:#E65100;padding:2px 6px;border-radius:4px;">新興</span></td>
+              </tr>
+              <tr style="background:#FBE9E7;">
+                <td style="padding:7px 10px;font-weight:700;color:#1565C0;">🤖 AI分選</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">2–5 t/h</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#E3F2FD;color:#1565C0;padding:2px 6px;border-radius:4px;font-weight:600;">97–99%</span></td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">€300–800K</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">高端</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#E3F2FD;color:#1565C0;padding:2px 6px;border-radius:4px;">快速增長</span></td>
+              </tr>
+              <tr style="background:#fff;">
+                <td style="padding:7px 10px;font-weight:700;color:#555;">🔗 多技術組合</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">2–8 t/h</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#E8F5E9;color:#1B5E20;padding:2px 6px;border-radius:4px;font-weight:700;">99%+</span></td>
+                <td style="padding:7px 8px;text-align:center;color:#BF360C;font-weight:600;">€500K–1.5M</td>
+                <td style="padding:7px 8px;text-align:center;color:#555;">旗艦莊</td>
+                <td style="padding:7px 8px;text-align:center;"><span style="background:#F3E5F5;color:#7B1FA2;padding:2px 6px;border-radius:4px;">前沿</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="background:#FBE9E7;border-radius:6px;padding:6px 12px;margin-top:8px;font-size:0.73rem;color:#BF360C;">💡 頂級酒莊趨勢：人工 + 光學 + AI 多重組合，將精準度推至 99%+，每顆葡萄都經過嚴格審視。</div>
+      </div>
+    `
   },
   {
-    type: 'case-study',
+    type: 'content',
     title: '案例：Château Margaux 分選升級',
-    winery: 'Château Margaux',
-    region: 'Margaux',
-    challenge: '傳統精緻 + 現代效率的平衡',
-    approach: '三層機械預分選 → 光學主分選 → AI 模型微調參數 → 人工終檢；建立完整批次數據閉環。',
-    results: '處理效率 +300%，瑕疵檢出率提升，酒質穩定性顯著提高，勞動成本下降。',
-    lessons: ['科技分層導入降低失敗風險','原料數據沉澱驅動發酵策略優化','人機協作 > 單一路徑','批次追溯為長期品質資產']
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#BF360C,#E64A19);border-radius:8px;padding:8px 14px;margin-bottom:10px;">
+          <span style="color:rgba(255,255,255,0.75);font-size:0.72rem;">核心挑戰 ｜ Margaux</span>
+          <div style="color:#fff;font-size:0.78rem;font-weight:600;margin-top:2px;">傳統精緻 + 現代效率的平衡——如何在不捨棄品質的前提下將分選擴容升級？</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#BF360C,#E64A19);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">🔍 四層分選流程</div>
+            <div style="padding:9px 12px 11px;">
+              <div style="margin-bottom:5px;background:#FBE9E7;border-radius:6px;padding:6px 9px;">
+                <div style="font-weight:700;color:#BF360C;font-size:0.73rem;margin-bottom:2px;">三層機械預分選</div>
+                <div style="font-size:0.7rem;color:#555;">振動篩 → 風選 → 輥式篩選，快速去除枝條/葉片</div>
+              </div>
+              <div style="margin-bottom:5px;background:#FFF3E0;border-radius:6px;padding:6px 9px;">
+                <div style="font-weight:700;color:#E65100;font-size:0.73rem;margin-bottom:2px;">光學主分選</div>
+                <div style="font-size:0.7rem;color:#555;">CCD 相機 + 彩色/NIR 分析 → 精準射出瑕疵葡萄</div>
+              </div>
+              <div style="margin-bottom:5px;background:#E8EAF6;border-radius:6px;padding:6px 9px;">
+                <div style="font-weight:700;color:#3949AB;font-size:0.73rem;margin-bottom:2px;">AI 模型微調</div>
+                <div style="font-size:0.7rem;color:#555;">根據年份批次數據動態優化分選參數</div>
+              </div>
+              <div style="background:#E8F5E9;border-radius:6px;padding:6px 9px;">
+                <div style="font-weight:700;color:#2E7D32;font-size:0.73rem;margin-bottom:2px;">人工終檢 + 建立批次閉環</div>
+                <div style="font-size:0.7rem;color:#555;">最終品質把關，分選數據回饋 AI 持續學習</div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;font-weight:700;font-size:0.82rem;color:#fff;">📈 升級成果</div>
+            <div style="padding:9px 12px 11px;">
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:8px;">
+                <div style="background:#E8F5E9;border-radius:6px;padding:6px 8px;text-align:center;">
+                  <div style="font-size:0.69rem;color:#555;">處理效率</div>
+                  <div style="font-weight:700;color:#1B5E20;font-size:0.88rem;">+300%</div>
+                </div>
+                <div style="background:#FFF3E0;border-radius:6px;padding:6px 8px;text-align:center;">
+                  <div style="font-size:0.69rem;color:#555;">瑕疵檢出率</div>
+                  <div style="font-weight:700;color:#E65100;font-size:0.88rem;">顯著提升</div>
+                </div>
+                <div style="background:#E3F2FD;border-radius:6px;padding:6px 8px;text-align:center;">
+                  <div style="font-size:0.69rem;color:#555;">酒質穩定性</div>
+                  <div style="font-weight:700;color:#1565C0;font-size:0.88rem;">大幅提高</div>
+                </div>
+                <div style="background:#F3E5F5;border-radius:6px;padding:6px 8px;text-align:center;">
+                  <div style="font-size:0.69rem;color:#555;">勞動成本</div>
+                  <div style="font-weight:700;color:#6A1B9A;font-size:0.88rem;">顯著下降</div>
+                </div>
+              </div>
+              <div style="background:#FFF8E1;border-radius:6px;padding:6px 10px;font-size:0.71rem;color:#5D4037;line-height:1.65;">
+                <strong>批次數據閉環</strong>：每次採收的分選數據回饋至 AI 模型，年份間精準度持續累積提升。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;">
+          <div style="background:#FBE9E7;border-radius:6px;padding:7px 8px;font-size:0.7rem;color:#BF360C;line-height:1.55;"><strong>分層導入</strong><br><span style="color:#555;">科技分層降低失敗風險</span></div>
+          <div style="background:#E8F5E9;border-radius:6px;padding:7px 8px;font-size:0.7rem;color:#1B5E20;line-height:1.55;"><strong>數據驅動</strong><br><span style="color:#555;">原料數據沉澱強化發酵策略</span></div>
+          <div style="background:#E3F2FD;border-radius:6px;padding:7px 8px;font-size:0.7rem;color:#1565C0;line-height:1.55;"><strong>人機協作</strong><br><span style="color:#555;">優於任何單一路徑</span></div>
+          <div style="background:#F3E5F5;border-radius:6px;padding:7px 8px;font-size:0.7rem;color:#6A1B9A;line-height:1.55;"><strong>批次追溯</strong><br><span style="color:#555;">為長期品質累積資產</span></div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'chapter-divider',
@@ -1169,14 +2092,84 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     ]
   },
   {
-    type: 'fermentation-monitoring',
+    type: 'content',
     title: '現代發酵監控系統',
-    description: '關鍵參數 → 早期預警 → 質量保證',
-    monitoringPoints: [
-      { parameter: '溫度', sensors: '多點 PT100', frequency: '連續', precision: '±0.1°C', alerts: '超閾值 ±1°C', automation: '自動冷/熱調節', winemaking_impact: '影響萃取與香氣保留' },
-      { parameter: '比重/糖度', sensors: '線上密度計', frequency: '即時或每日', precision: '±0.001', alerts: '48h 無下降', automation: '停滯預警', winemaking_impact: '判斷發酵進度與終點' },
-      { parameter: 'pH', sensors: '在線電極', frequency: '每日', precision: '±0.02', alerts: 'pH >4.0 或 <3.0', automation: '酸度調整建議', winemaking_impact: '微生物穩定 / 色穩定 / 口感' }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.78rem;color:#666;margin-bottom:10px;text-align:center;">關鍵參數 → 早期預警 → 質量保證 — 數據驅動的發酵管理</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#C62828,#D32F2F);padding:10px 14px;">
+              <div style="font-size:1.2rem;margin-bottom:3px;">🌡️</div>
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">溫度監控</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;">多點 PT100 感測器</div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+                <span style="font-size:0.73rem;color:#555;">監測頻率</span>
+                <span style="background:#FFEBEE;color:#C62828;padding:2px 7px;border-radius:10px;font-size:0.69rem;font-weight:600;">連續即時</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+                <span style="font-size:0.73rem;color:#555;">精準度</span>
+                <span style="background:#E8F5E9;color:#2E7D32;padding:2px 7px;border-radius:10px;font-size:0.69rem;font-weight:700;">±0.1°C</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+                <span style="font-size:0.73rem;color:#555;">預警觸發</span>
+                <span style="background:#FFEBEE;color:#B71C1C;padding:2px 7px;border-radius:10px;font-size:0.69rem;">超閾值 ±1°C</span>
+              </div>
+              <div style="margin-top:5px;background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.71rem;color:#E65100;">⚡ 自動冷/熱調節</div>
+              <div style="margin-top:6px;font-size:0.71rem;color:#555;line-height:1.7;">影響萃取效率與香氣保留</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:10px 14px;">
+              <div style="font-size:1.2rem;margin-bottom:3px;">⚖️</div>
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">比重 / 糖度</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;">線上密度計</div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+                <span style="font-size:0.73rem;color:#555;">監測頻率</span>
+                <span style="background:#E0F2F1;color:#00695C;padding:2px 7px;border-radius:10px;font-size:0.69rem;font-weight:600;">即時或每日</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+                <span style="font-size:0.73rem;color:#555;">精準度</span>
+                <span style="background:#E8F5E9;color:#2E7D32;padding:2px 7px;border-radius:10px;font-size:0.69rem;font-weight:700;">±0.001</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+                <span style="font-size:0.73rem;color:#555;">預警觸發</span>
+                <span style="background:#FFEBEE;color:#B71C1C;padding:2px 7px;border-radius:10px;font-size:0.69rem;">48h 無下降</span>
+              </div>
+              <div style="margin-top:5px;background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.71rem;color:#E65100;">⚡ 停滯自動預警</div>
+              <div style="margin-top:6px;font-size:0.71rem;color:#555;line-height:1.7;">判斷發酵進度與終點</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:10px 14px;">
+              <div style="font-size:1.2rem;margin-bottom:3px;">🧪</div>
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">pH 值監控</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;">在線電極感測器</div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+                <span style="font-size:0.73rem;color:#555;">監測頻率</span>
+                <span style="background:#E3F2FD;color:#1565C0;padding:2px 7px;border-radius:10px;font-size:0.69rem;font-weight:600;">每日</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+                <span style="font-size:0.73rem;color:#555;">精準度</span>
+                <span style="background:#E8F5E9;color:#2E7D32;padding:2px 7px;border-radius:10px;font-size:0.69rem;font-weight:700;">±0.02</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+                <span style="font-size:0.73rem;color:#555;">預警觸發</span>
+                <span style="background:#FFEBEE;color:#B71C1C;padding:2px 7px;border-radius:10px;font-size:0.69rem;">&gt;4.0 或 &lt;3.0</span>
+              </div>
+              <div style="margin-top:5px;background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.71rem;color:#E65100;">⚡ 酸度調整建議</div>
+              <div style="margin-top:6px;font-size:0.71rem;color:#555;line-height:1.7;">微生物穩定 / 色穩定 / 口感</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
   {
     type: 'chapter-divider',
@@ -1247,14 +2240,86 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     ]
   },
   {
-    type: 'technology-comparison',
+    type: 'content',
     title: '後處理技術綜合評估',
-    description: '投資 / 能耗 / 酒損 / 品質影響',
-    technologies: [
-      { technology: '膜過濾', applications: ['澄清','蛋白穩定','微生物控制'], investment: '€200–800K', operating_cost: '€0.05–0.15/L', quality_impact: '正向：稳定+保留風味', processing_speed: '1–5 KL/h', wine_loss: '1–2%', energy_consumption: '中', regulatory_status: '合規', suitable_scale: '中大型', bordeaux_adoption: '60%' },
-      { technology: 'RO 濃縮', applications: ['濃縮','酒精調整'], investment: '€300–600K', operating_cost: '€0.20–0.50/L', quality_impact: '提升濃度但有香氣流失風險', processing_speed: '0.5–2 KL/h', wine_loss: '5–15%', energy_consumption: '高', regulatory_status: '+2% vol 限制', suitable_scale: '大型', bordeaux_adoption: '30% 偶用' },
-      { technology: '冷凍濃縮', applications: ['甜酒','微幅酒精提升'], investment: '€300K–1M', operating_cost: '€0.30–0.80/L', quality_impact: '香氣保留高', processing_speed: '0.2–1 KL/h', wine_loss: '10–25%', energy_consumption: '極高', regulatory_status: '合規有爭議', suitable_scale: '精品', bordeaux_adoption: '5% 試驗' }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="font-size:0.78rem;color:#666;margin-bottom:10px;text-align:center;">投資 / 能耗 / 酒損 / 品質影響 — 波爾多後處理技術的選擇邏輯</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:10px 14px;">
+              <div style="font-size:1.2rem;margin-bottom:3px;">🧬</div>
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">膜過濾</div>
+              <div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:5px;">
+                <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:0.65rem;padding:1px 6px;border-radius:8px;">澄清</span>
+                <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:0.65rem;padding:1px 6px;border-radius:8px;">蛋白穩定</span>
+                <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:0.65rem;padding:1px 6px;border-radius:8px;">微生物控制</span>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.72rem;color:#555;margin-bottom:5px;">投資：<strong>€200–800K</strong></div>
+              <div style="font-size:0.72rem;color:#555;margin-bottom:5px;">成本：<strong>€0.05–0.15/L</strong> | 速度：1–5 KL/h</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                <span style="font-size:0.72rem;color:#555;">酒損</span>
+                <span style="background:#E8F5E9;color:#2E7D32;padding:2px 7px;border-radius:10px;font-size:0.69rem;font-weight:700;">1–2%</span>
+              </div>
+              <div style="background:#E0F2F1;border-radius:5px;padding:4px 8px;font-size:0.71rem;color:#00695C;margin-bottom:6px;">✅ 正向：穩定 + 保留風味</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:0.7rem;color:#555;">波爾多採用率</span>
+                <span style="background:#00695C;color:#fff;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">60%</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F4511E);padding:10px 14px;">
+              <div style="font-size:1.2rem;margin-bottom:3px;">🔄</div>
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">RO 反滲透濃縮</div>
+              <div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:5px;">
+                <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:0.65rem;padding:1px 6px;border-radius:8px;">濃縮</span>
+                <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:0.65rem;padding:1px 6px;border-radius:8px;">酒精調整</span>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.72rem;color:#555;margin-bottom:5px;">投資：<strong>€300–600K</strong></div>
+              <div style="font-size:0.72rem;color:#555;margin-bottom:5px;">成本：<strong>€0.20–0.50/L</strong> | 速度：0.5–2 KL/h</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                <span style="font-size:0.72rem;color:#555;">酒損</span>
+                <span style="background:#FFF3E0;color:#E65100;padding:2px 7px;border-radius:10px;font-size:0.69rem;font-weight:700;">5–15%</span>
+              </div>
+              <div style="background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.71rem;color:#E65100;margin-bottom:6px;">⚠️ 法規 +2% vol 限制</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:0.7rem;color:#555;">波爾多採用率</span>
+                <span style="background:#E65100;color:#fff;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">30%偶用</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#37474F,#455A64);padding:10px 14px;">
+              <div style="font-size:1.2rem;margin-bottom:3px;">❄️</div>
+              <div style="color:#fff;font-weight:700;font-size:0.88rem;">冷凍濃縮</div>
+              <div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:5px;">
+                <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:0.65rem;padding:1px 6px;border-radius:8px;">甜酒</span>
+                <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:0.65rem;padding:1px 6px;border-radius:8px;">酒精微調</span>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.72rem;color:#555;margin-bottom:5px;">投資：<strong>€300K–1M</strong></div>
+              <div style="font-size:0.72rem;color:#555;margin-bottom:5px;">成本：<strong>€0.30–0.80/L</strong> | 速度：0.2–1 KL/h</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                <span style="font-size:0.72rem;color:#555;">酒損</span>
+                <span style="background:#FFEBEE;color:#C62828;padding:2px 7px;border-radius:10px;font-size:0.69rem;font-weight:700;">10–25%</span>
+              </div>
+              <div style="background:#E3F2FD;border-radius:5px;padding:4px 8px;font-size:0.71rem;color:#1565C0;margin-bottom:6px;">✅ 香氣保留率最高</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:0.7rem;color:#555;">波爾多採用率</span>
+                <span style="background:#546E7A;color:#fff;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">5%試驗</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#E0F2F1;border-radius:6px;padding:7px 12px;margin-top:8px;font-size:0.73rem;color:#00695C;">💡 策略建議：膜過濾是最廣泛且安全的選擇；RO 是特殊年份的謹慎工具；冷凍濃縮目前仍是前沿實驗。</div>
+      </div>
+    `
   },
   {
     type: 'interactive-quiz',
@@ -1272,11 +2337,40 @@ Sauternes 位於 Garonne 河與 Ciron 河交匯處。冰冷的 Ciron 河水在�
     subsections: [ { subtitle: '投資優先級', content: '1. 分選 2. 發酵溫控 3. 後處理穩定 4. 數據平台 5. 高階前沿實驗。' } ]
   },
   {
-    type: 'course-complete',
+    type: 'content',
     title: 'Part 3B 完成！',
-    message: '完成現代釀酒科技模組。',
-    nextSteps: ['回顧各技術 ROI 與風格影響','建置自家數據指標儀表板','規劃下一年度投資路線圖'],
-    achievements: ['掌握核心分選與發酵控制技術','評估膜/濃縮/冷凍技術邊界','建立科技導入決策框架','平衡風土與科技的原則']
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#4A148C,#7B1FA2);border-radius:12px;padding:13px 18px;margin-bottom:12px;text-align:center;">
+          <div style="font-size:1.8rem;margin-bottom:5px;">🔬</div>
+          <div style="color:#fff;font-weight:700;font-size:1rem;">Part 3B 完成！</div>
+          <div style="color:rgba(255,255,255,0.9);font-size:0.78rem;margin-top:4px;">恭喜完成現代釀酒科技模組！從分選到後處理，您已掌握數據驅動的釀造決策框架。</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 14px;font-weight:700;font-size:0.83rem;color:#fff;">▶️ 下一步學習</div>
+            <div style="padding:10px 14px;">
+              <div style="font-size:0.75rem;color:#333;line-height:1.9;">
+                <div style="margin-bottom:4px;">→ 回顧各技術 ROI 與風格影響</div>
+                <div style="margin-bottom:4px;">→ 建置自家數據指標儀表板</div>
+                <div>→ 規劃下一年度投資路線圖</div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#388E3C);padding:9px 14px;font-weight:700;font-size:0.83rem;color:#fff;">✅ 學習成就</div>
+            <div style="padding:10px 14px;">
+              <div style="font-size:0.75rem;color:#333;line-height:1.9;">
+                <div style="margin-bottom:4px;">☑️ 掌握核心分選與發酵控制技術</div>
+                <div style="margin-bottom:4px;">☑️ 評估膜/濃縮/冷凍技術邊界</div>
+                <div style="margin-bottom:4px;">☑️ 建立科技導入決策框架</div>
+                <div>☑️ 平衡風土與科技的原則</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
 ];
 export default l35Content
