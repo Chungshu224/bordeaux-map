@@ -71,101 +71,331 @@ export const l310Content = [
   {
     type: 'content',
     title: '配餐為什麼重要？',
-    content: [
-      {
-        subtitle: '味覺的相互作用',
-        text: '食物與葡萄酒的搭配不是簡單的相加，而是複雜的化學與感官互動。一個好的搭配能讓食物更美味、酒更順口；糟糕的搭配則會放大缺點、產生不愉快的味覺體驗。',
-        highlight: '關鍵概念：互補與對比是配餐的兩大核心策略'
-      },
-      {
-        subtitle: '科學基礎',
-        text: '配餐涉及味覺（甜、酸、苦、鹹、鮮）、嗅覺（香氣）、觸覺（質地、溫度）的多維度互動。理解這些感官元素如何相互影響，是專業配餐的基礎。'
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🍽️ 兩大核心策略</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:2px solid #3b82f6;border-radius:12px;padding:14px;">
+              <div style="font-size:22px;text-align:center;margin-bottom:6px;">🤝</div>
+              <div style="font-size:13px;font-weight:700;color:#1e3a8a;text-align:center;margin-bottom:8px;">互補（Complement）</div>
+              <div style="font-size:11px;color:#1d4ed8;line-height:1.7;">
+                <div>• 相似的風味相互強化</div>
+                <div>• 例：鵝肝 + Sauternes 甜酒</div>
+                <div>• 例：生蠔 + 白蘇維濃</div>
+                <div style="margin-top:6px;background:#dbeafe;border-radius:6px;padding:5px;font-size:10px;color:#1e40af;font-weight:600;">🔑 相同風格的食酒，風味相乘</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:2px solid #a855f7;border-radius:12px;padding:14px;">
+              <div style="font-size:22px;text-align:center;margin-bottom:6px;">⚖️</div>
+              <div style="font-size:13px;font-weight:700;color:#581c87;text-align:center;margin-bottom:8px;">對比（Contrast）</div>
+              <div style="font-size:11px;color:#7e22ce;line-height:1.7;">
+                <div>• 相反特質互相平衡</div>
+                <div>• 例：油膩食物 + 高酸度酒</div>
+                <div>• 例：辛辣菜餚 + 微甜白酒</div>
+                <div style="margin-top:6px;background:#fae8ff;border-radius:6px;padding:5px;font-size:10px;color:#6b21a8;font-weight:600;">🔑 相反特質的食酒，相互制衡</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🧬 配餐的多感官科學基礎</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:10px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">👅</div>
+              <div style="font-size:11px;font-weight:700;color:#7c2d12;margin-bottom:5px;">味覺</div>
+              <div style="font-size:10px;color:#9a3412;line-height:1.6;">甜・酸・苦・鹹・鮮<br>五種基本味覺互動</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">👃</div>
+              <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:5px;">嗅覺</div>
+              <div style="font-size:10px;color:#166534;line-height:1.6;">香氣分子的共鳴<br>果香・花香・土壤・香料</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:10px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">🖐️</div>
+              <div style="font-size:11px;font-weight:700;color:#1e3a8a;margin-bottom:5px;">觸覺</div>
+              <div style="font-size:10px;color:#1d4ed8;line-height:1.6;">質地・溫度・口感<br>絲滑・酥脆・厚重</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `,
   },
 
   {
     type: 'content',
     title: '單寧的配餐作用',
-    content: [
-      {
-        subtitle: '單寧與蛋白質的化學反應',
-        text: '單寧（Tannin）是多酚類化合物，在口腔中產生澀感。當遇到蛋白質時，單寧會與蛋白質結合，形成沉澱物，從而減少澀感，同時蛋白質的脂肪也會柔化單寧的刺激性。',
-        keyPoints: [
-          '紅肉（牛排、羊排）富含蛋白質和脂肪，能完美中和單寧',
-          '高單寧的波爾多紅酒與紅肉是天作之合',
-          '魚類蛋白質較少，搭配高單寧紅酒會產生金屬味、苦澀感',
-          '單寧還能切割油膩感，清爽口腔'
-        ]
-      },
-      {
-        subtitle: '實例分析',
-        text: '為什麼Pauillac紅酒配牛排如此經典？Pauillac酒款單寧充沛、結構強勁，牛排的蛋白質和油脂能完美馴服這些單寧，同時單寧的澀感能切開肉的油膩，形成完美平衡。'
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🧪 單寧與蛋白質的化學反應</div>
+          <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:12px;padding:14px;margin-bottom:10px;">
+            <div style="display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:10px;">
+              <div style="text-align:center;">
+                <div style="font-size:28px;">🍷</div>
+                <div style="font-size:11px;font-weight:700;color:#be123c;margin-top:3px;">單寧（Tannin）</div>
+                <div style="font-size:10px;color:#9f1239;">多酚類化合物<br>產生澀感</div>
+              </div>
+              <div style="font-size:24px;color:#f43f5e;font-weight:700;">+</div>
+              <div style="text-align:center;">
+                <div style="font-size:28px;">🥩</div>
+                <div style="font-size:11px;font-weight:700;color:#be123c;margin-top:3px;">蛋白質 & 脂肪</div>
+                <div style="font-size:10px;color:#9f1239;">紅肉中的<br>天然成分</div>
+              </div>
+              <div style="font-size:24px;color:#f43f5e;font-weight:700;">→</div>
+              <div style="text-align:center;">
+                <div style="font-size:28px;">✨</div>
+                <div style="font-size:11px;font-weight:700;color:#be123c;margin-top:3px;">完美平衡</div>
+                <div style="font-size:10px;color:#9f1239;">澀感軟化<br>油膩被切割</div>
+              </div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:9px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:5px;">✅ 適合搭配（高蛋白質）</div>
+              <div style="font-size:10.5px;color:#166534;line-height:1.7;">
+                <div>🥩 牛排、羊排 — <strong>天作之合</strong></div>
+                <div>🍖 燉牛肉、烤羊腿</div>
+                <div>🧀 熟成硬質乳酪</div>
+                <div>🦌 野味（鹿肉、野豬）</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:9px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#be123c;margin-bottom:5px;">❌ 避免搭配（低蛋白質）</div>
+              <div style="font-size:10.5px;color:#9f1239;line-height:1.7;">
+                <div>🐟 魚類 — 產生金屬味、苦澀感</div>
+                <div>🦑 海鮮 — 放大不愉快風味</div>
+                <div>🥗 清淡沙拉 — 雙方都失色</div>
+                <div>🍰 甜點 — 澀感更突出</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:12px;">
+          <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px;">💡 實例分析：為什麼 Pauillac 配牛排如此經典？</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+            <div style="text-align:center;background:rgba(255,255,255,0.6);border-radius:8px;padding:8px;">
+              <div style="font-size:16px;">🍷</div>
+              <div style="font-size:10.5px;font-weight:700;color:#78350f;margin:3px 0;">Pauillac 紅酒</div>
+              <div style="font-size:10px;color:#92400e;">單寧充沛<br>結構強勁<br>Cab. Sauvignon 主導</div>
+            </div>
+            <div style="text-align:center;display:flex;align-items:center;justify-content:center;font-size:20px;">⚡</div>
+            <div style="text-align:center;background:rgba(255,255,255,0.6);border-radius:8px;padding:8px;">
+              <div style="font-size:16px;">🥩</div>
+              <div style="font-size:10.5px;font-weight:700;color:#78350f;margin:3px 0;">牛排</div>
+              <div style="font-size:10px;color:#92400e;">蛋白質豐富<br>脂肪油花<br>鮮美肉汁</div>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:10.5px;color:#78350f;text-align:center;background:rgba(255,255,255,0.5);border-radius:6px;padding:6px;">
+            蛋白質馴服單寧 → 澀感消失 | 單寧切開油膩 → 口感清爽 | 結果：1+1 > 2 的味覺體驗
+          </div>
+        </div>
+
+      </div>
+    `,
   },
 
   {
     type: 'content',
     title: '酸度的配餐作用',
-    content: [
-      {
-        subtitle: '酸度的多重功能',
-        text: '酸度是葡萄酒的骨架，在配餐中扮演關鍵角色。它能提升新鮮感、切割油膩、平衡甜度、增強風味。',
-        keyPoints: [
-          '油膩食物（炸物、肥肉）需要高酸度酒款來平衡',
-          '酸度能提升食物的鮮味，特別是海鮮',
-          '甜食需要更高酸度的酒，否則酒會顯得平淡',
-          '酸度不足的酒搭配酸味食物會顯得軟弱無力'
-        ]
-      },
-      {
-        subtitle: '波爾多白酒的酸度優勢',
-        text: 'Pessac-Léognan的白酒以白蘇維濃為主，酸度爽脆，搭配生蠔、白魚、山羊乳酪等食物時，酸度能提升海洋鮮味，創造清爽的體驗。'
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🍋 酸度的四大配餐功能</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:10px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">🧹</div>
+              <div style="font-size:11px;font-weight:700;color:#92400e;margin-bottom:5px;">切割油膩</div>
+              <div style="font-size:10px;color:#78350f;line-height:1.5;">炸物・肥肉・奶油醬<br>高酸度清爽口腔</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">🦪</div>
+              <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:5px;">提升鮮味</div>
+              <div style="font-size:10px;color:#166534;line-height:1.5;">海鮮・生蠔・白魚<br>酸度放大Umami</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:10px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">⚖️</div>
+              <div style="font-size:11px;font-weight:700;color:#1e3a8a;margin-bottom:5px;">平衡甜度</div>
+              <div style="font-size:10px;color:#1d4ed8;line-height:1.5;">甜食需要更高酸度<br>否則酒顯平淡</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:10px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">✨</div>
+              <div style="font-size:11px;font-weight:700;color:#581c87;margin-bottom:5px;">增強風味</div>
+              <div style="font-size:10px;color:#7e22ce;line-height:1.5;">提升食物層次感<br>讓每口更有活力</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2px solid #16a34a;border-radius:12px;padding:14px;">
+          <div style="font-size:12px;font-weight:700;color:#14532d;margin-bottom:10px;">🍾 波爾多白酒的酸度優勢 — Pessac-Léognan</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:5px;">🍇 白酒特質</div>
+              <div style="font-size:10.5px;color:#166534;line-height:1.7;">
+                <div>• 白蘇維濃（Sauvignon Blanc）主導</div>
+                <div>• 酸度明亮爽脆</div>
+                <div>• 柑橘・草本・礦物香氣</div>
+                <div>• 酒體適中，清爽宜人</div>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:5px;">🍽️ 最佳搭配</div>
+              <div style="font-size:10.5px;color:#166534;line-height:1.7;">
+                <div>🦪 生蠔 → 酸度提升海洋鮮味</div>
+                <div>🐟 白魚・比目魚</div>
+                <div>🧀 山羊乳酪（Chèvre）</div>
+                <div>🥗 清爽沙拉・檸檬料理</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `,
   },
 
   {
     type: 'content',
     title: '甜度的配餐作用',
-    content: [
-      {
-        subtitle: '甜度搭配的黃金法則',
-        text: '配餐的一條鐵律：葡萄酒的甜度必須高於或等於食物的甜度。否則酒會顯得酸澀、缺乏果味。',
-        highlight: '法則：Wine ≥ Food 的甜度'
-      },
-      {
-        subtitle: '甜度的平衡作用',
-        text: '甜度能平衡辛辣、切割油脂、柔化鹹味。Sauternes甜白酒搭配鵝肝、藍紋乳酪、辛辣菜餚時，甜度能創造和諧的對比。',
-        keyPoints: [
-          '鵝肝的油膩被甜度切割，酒的甜度被油脂平衡',
-          '藍紋乳酪的鹹味被甜度柔化',
-          '辛辣料理（泰式咖哩）的辣度被甜度緩解',
-          '水果甜點需要更甜的酒（如Sauternes）'
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:2px solid #a855f7;border-radius:12px;padding:14px;margin-bottom:14px;text-align:center;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🏆 配餐黃金法則</div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;">
+            <div style="text-align:center;">
+              <div style="font-size:32px;">🍾</div>
+              <div style="font-size:13px;font-weight:800;color:#581c87;margin-top:4px;">Wine 甜度</div>
+            </div>
+            <div style="font-size:36px;font-weight:900;color:#a855f7;">≥</div>
+            <div style="text-align:center;">
+              <div style="font-size:32px;">🍽️</div>
+              <div style="font-size:13px;font-weight:800;color:#581c87;margin-top:4px;">Food 甜度</div>
+            </div>
+          </div>
+          <div style="margin-top:10px;font-size:11px;color:#7e22ce;background:rgba(255,255,255,0.5);border-radius:8px;padding:6px;">
+            若酒的甜度低於食物 → 酒顯得酸澀、缺乏果味、令人失望
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🍯 Sauternes 甜白酒的四大搭配場景</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:10px;">
+              <div style="display:flex;gap:8px;align-items:start;">
+                <div style="font-size:22px;">🥩</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#92400e;margin-bottom:3px;">鵝肝（Foie Gras）</div>
+                  <div style="font-size:10px;color:#78350f;line-height:1.5;">油脂豐腴 ↔ 甜度切割油膩<br>甜度又被油脂平衡 → 最完美的雙向互補</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;">
+              <div style="display:flex;gap:8px;align-items:start;">
+                <div style="font-size:22px;">🧀</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:3px;">藍紋乳酪（Roquefort）</div>
+                  <div style="font-size:10px;color:#166534;line-height:1.5;">濃烈鹹味 ↔ 甜度柔化鹹味<br>霉味複雜度 ↔ 貴腐香氣呼應</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:10px;padding:10px;">
+              <div style="display:flex;gap:8px;align-items:start;">
+                <div style="font-size:22px;">🌶️</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#be123c;margin-bottom:3px;">辛辣料理（泰式咖哩）</div>
+                  <div style="font-size:10px;color:#9f1239;line-height:1.5;">辣度刺激 ↔ 甜度緩和辣感<br>冰涼甜白酒 → 創造有趣對比</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:10px;">
+              <div style="display:flex;gap:8px;align-items:start;">
+                <div style="font-size:22px;">🍰</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#1e3a8a;margin-bottom:3px;">水果甜點（塔・舒芙蕾）</div>
+                  <div style="font-size:10px;color:#1d4ed8;line-height:1.5;">甜點甜度高 → 需 Sauternes 等級<br>否則酒顯酸澀、甜點蓋過酒味</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `,
   },
 
   {
     type: 'content',
     title: '酒體與質地的配餐',
-    content: [
-      {
-        subtitle: '酒體的重量感',
-        text: '酒體（Body）是指葡萄酒在口腔中的重量感和豐滿度，由酒精度、萃取物、甘油等決定。配餐時，酒體應與食物的重量相匹配。',
-        pairingPrinciple: [
-          '輕酒體（Bordeaux AOC）→ 輕食物（沙拉、白魚）',
-          '中酒體（Haut-Médoc）→ 中等食物（烤雞、豬肉）',
-          '重酒體（Pauillac一級莊）→ 重食物（牛排、野味）'
-        ]
-      },
-      {
-        subtitle: '質地的和諧',
-        text: '食物的質地（細膩、粗糙、滑順、酥脆）也需要考慮。絲滑的鵝肝適合質地豐潤的Sauternes，酥脆的炸物適合氣泡酒的顆粒感。'
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⚖️ 酒體的重量感匹配</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+                <div style="text-align:center;">
+                  <div style="font-size:22px;">🥂</div>
+                  <div style="font-size:10px;font-weight:700;color:#14532d;margin-top:2px;">輕酒體</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:3px;">Bordeaux AOC・Entre-Deux-Mers</div>
+                  <div style="font-size:10px;color:#166534;line-height:1.5;">🥗 沙拉 &nbsp; 🐟 白魚 &nbsp; 🦪 生蠔<br>清淡料理・素食・輕食</div>
+                </div>
+              </div>
+              <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+                <div style="text-align:center;">
+                  <div style="font-size:22px;">🍷</div>
+                  <div style="font-size:10px;font-weight:700;color:#7c2d12;margin-top:2px;">中酒體</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#9a3412;margin-bottom:3px;">Haut-Médoc・Saint-Émilion村莊級</div>
+                  <div style="font-size:10px;color:#9a3412;line-height:1.5;">🍗 烤雞 &nbsp; 🥩 豬肉 &nbsp; 🍄 野菇<br>中等料理・鴨肉・小牛肉</div>
+                </div>
+              </div>
+              <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:10px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+                <div style="text-align:center;">
+                  <div style="font-size:22px;">🍾</div>
+                  <div style="font-size:10px;font-weight:700;color:#be123c;margin-top:2px;">重酒體</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#be123c;margin-bottom:3px;">Pauillac 一級莊・Pétrus</div>
+                  <div style="font-size:10px;color:#9f1239;line-height:1.5;">🥩 牛排 &nbsp; 🦌 野味 &nbsp; 🐂 骨髓<br>濃厚料理・陳年硬質乳酪</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🎨 質地的和諧搭配</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:9px;padding:10px;">
+                <div style="font-size:11px;font-weight:700;color:#581c87;margin-bottom:4px;">🥩 絲滑・細膩質地</div>
+                <div style="font-size:10.5px;color:#7e22ce;line-height:1.5;">鵝肝（Foie Gras）→ <strong>Sauternes</strong> 豐潤甜白<br>和牛（A5）→ <strong>Pomerol / Margaux</strong> 天鵝絨單寧<br>菲力牛排 → <strong>Margaux</strong> 優雅絲滑</div>
+              </div>
+              <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:9px;padding:10px;">
+                <div style="font-size:11px;font-weight:700;color:#92400e;margin-bottom:4px;">🍳 酥脆・清爽質地</div>
+                <div style="font-size:10.5px;color:#78350f;line-height:1.5;">炸物（天婦羅・薯條）→ <strong>氣泡酒</strong> 顆粒感清爽<br>烤雞腿皮脆 → <strong>中酒體紅酒</strong><br>脆煎鱸魚 → <strong>Graves 白酒</strong> 酸度切脂</div>
+              </div>
+              <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:9px;padding:10px;">
+                <div style="font-size:11px;font-weight:700;color:#1e3a8a;margin-bottom:4px;">🌊 滑順・濃郁質地</div>
+                <div style="font-size:10.5px;color:#1d4ed8;line-height:1.5;">奶油龍蝦 → <strong>Haut-Brion Blanc</strong> 豐厚白酒<br>燉牛頰肉 → <strong>St-Émilion 陳年</strong><br>奶油義大利麵 → <strong>橡木桶白酒</strong></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    `,
   },
 
   // ========== 知識檢測：配餐科學原理 ==========
@@ -211,108 +441,180 @@ export const l310Content = [
   {
     type: 'content',
     title: '牛排的完美搭配',
-    content: [
-      {
-        subtitle: '左岸卡本內主導的配牛排邏輯',
-        text: '牛排富含蛋白質和脂肪，需要單寧充沛、結構強勁的紅酒來平衡。左岸的Pauillac、Saint-Julien、Margaux都是絕佳選擇。',
-        detailedPairing: [
-          {
-            steak: '紐約客/西冷牛排（Strip Steak）',
-            wine: 'Château Pichon Baron (Pauillac)',
-            reason: '西冷肉質緊實、油花適中，需要中高單寧的酒款。Pauillac的黑醋栗、雪松與牛排的炭火香氣完美呼應。'
-          },
-          {
-            steak: '菲力牛排（Filet Mignon）',
-            wine: 'Château Margaux',
-            reason: '菲力極其細嫩、脂肪較少，需要更優雅細緻的酒款。Margaux的絲滑單寧、花香與菲力的細膩質地和諧共舞。'
-          },
-          {
-            steak: '肋眼牛排（Ribeye）',
-            wine: 'Château Latour',
-            reason: '肋眼油花豐富、風味濃郁，需要強勁有力的酒款。Latour的厚重單寧、複雜層次能hold住肋眼的豐腴。'
-          },
-          {
-            steak: 'T骨牛排（T-Bone）',
-            wine: 'Château Lynch-Bages',
-            reason: 'T骨兼具菲力和西冷，需要平衡力量與優雅的酒款。Lynch-Bages的果味與結構恰到好處。'
-          }
-        ]
-      },
-      {
-        subtitle: '烹調方式的影響',
-        text: '牛排的烹調方式（炭烤、煎、燉）和醬汁（紅酒醬、胡椒醬、蘑菇醬）也影響配酒選擇。',
-        tips: [
-          '炭烤牛排：選擇有煙燻、烘烤氣息的酒款（橡木桶重烘烤）',
-          '紅酒醬牛排：酒款風格應與醬汁用酒相近',
-          '胡椒醬：需要果味濃郁的酒平衡辛辣',
-          '三分熟：果味主導的年輕酒款；七分熟：陳年酒款'
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🥩 四大牛排部位 × 最佳酒款</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:2px solid #f43f5e;border-radius:12px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#be123c;margin-bottom:4px;">西冷牛排</div>
+              <div style="font-size:10px;color:#9f1239;margin-bottom:6px;">Strip Steak</div>
+              <div style="font-size:10px;color:#be123c;line-height:1.6;margin-bottom:6px;">肉質緊實・油花適中・炭烤香氣</div>
+              <div style="background:#be123c;color:white;border-radius:6px;padding:5px;font-size:9.5px;font-weight:700;text-align:center;">🍷 Pichon Baron<br><span style="font-weight:400;font-size:9px;">Pauillac</span></div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:2px solid #a855f7;border-radius:12px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#581c87;margin-bottom:4px;">菲力牛排</div>
+              <div style="font-size:10px;color:#7e22ce;margin-bottom:6px;">Filet Mignon</div>
+              <div style="font-size:10px;color:#7e22ce;line-height:1.6;margin-bottom:6px;">極度細嫩・脂肪少・質地柔軟</div>
+              <div style="background:#7e22ce;color:white;border-radius:6px;padding:5px;font-size:9.5px;font-weight:700;text-align:center;">🍷 Château Margaux<br><span style="font-weight:400;font-size:9px;">絲滑單寧・花香</span></div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:2px solid #f97316;border-radius:12px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#7c2d12;margin-bottom:4px;">肋眼牛排</div>
+              <div style="font-size:10px;color:#9a3412;margin-bottom:6px;">Ribeye</div>
+              <div style="font-size:10px;color:#9a3412;line-height:1.6;margin-bottom:6px;">油花豐富・風味濃郁・入口香腴</div>
+              <div style="background:#c2410c;color:white;border-radius:6px;padding:5px;font-size:9.5px;font-weight:700;text-align:center;">🍷 Château Latour<br><span style="font-weight:400;font-size:9px;">厚重單寧・複雜層次</span></div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2px solid #22c55e;border-radius:12px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:4px;">T骨牛排</div>
+              <div style="font-size:10px;color:#166534;margin-bottom:6px;">T-Bone</div>
+              <div style="font-size:10px;color:#166534;line-height:1.6;margin-bottom:6px;">兼具菲力+西冷・力量與優雅</div>
+              <div style="background:#15803d;color:white;border-radius:6px;padding:5px;font-size:9.5px;font-weight:700;text-align:center;">🍷 Lynch-Bages<br><span style="font-weight:400;font-size:9px;">果味與結構平衡</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:12px;padding:12px;">
+          <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:8px;">🔥 烹調方式影響配酒選擇</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+            <div style="font-size:10.5px;color:#78350f;line-height:1.7;">
+              <div>🪵 <strong>炭烤</strong> → 重烘烤橡木桶酒款（煙燻呼應）</div>
+              <div>🍷 <strong>紅酒醬</strong> → 同款或同風格酒款</div>
+            </div>
+            <div style="font-size:10.5px;color:#78350f;line-height:1.7;">
+              <div>🌶️ <strong>胡椒醬</strong> → 果味濃郁、平衡辛辣</div>
+              <div>🩸 <strong>三分熟</strong> 年輕酒 ｜ <strong>七分熟</strong> 陳年酒</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '羊肉的搭配藝術',
-    content: [
-      {
-        subtitle: '羊肉的特殊挑戰',
-        text: '羊肉有獨特的膻味（羊脂肪酸），需要酒款能包裹、轉化這種氣味，而不是對抗。右岸的梅洛主導酒款是絕佳選擇。',
-        classicPairings: [
-          {
-            dish: '香煎羊排配迷迭香',
-            wine: 'Château Pétrus (Pomerol)',
-            reason: '梅洛的圓潤果味能包裹羊肉的膻味，迷迭香的草本與Pomerol的礦物質呼應。Pétrus的天鵝絨質地與羊排細膩度完美匹配。'
-          },
-          {
-            dish: '烤羊腿配蒜蓉',
-            wine: 'Château Cheval Blanc (St-Émilion)',
-            reason: 'Cheval Blanc獨特的卡本內弗朗比例（40%）帶來草本、紫羅蘭氣息，與蒜蓉和羊肉和諧。'
-          },
-          {
-            dish: '燉羊肉配紅酒醬',
-            wine: 'Château Canon (St-Émilion)',
-            reason: '燉煮的羊肉質地柔軟、風味濃郁，Canon的石灰岩風土帶來的礦質感和陳年潛力完美搭配。'
-          }
-        ]
-      },
-      {
-        subtitle: '地域風格的呼應',
-        text: '法國西南部（包括波爾多）傳統上就是羊肉產區（如Pauillac羊），波爾多紅酒與羊肉的經典搭配有深厚的地域文化根基。'
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:12px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🐑 三大經典羊肉配酒</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:12px;padding:12px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;">
+              <div style="text-align:center;min-width:60px;">
+                <div style="font-size:26px;">🍖</div>
+                <div style="font-size:9.5px;font-weight:700;color:#7e22ce;margin-top:3px;">香煎羊排</div>
+                <div style="font-size:9px;color:#a855f7;">配迷迭香</div>
+              </div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#581c87;margin-bottom:4px;">🍷 Château Pétrus (Pomerol)</div>
+                <div style="font-size:10.5px;color:#7e22ce;line-height:1.6;">梅洛的圓潤果味 <strong>包裹</strong> 羊肉的膻味，迷迭香草本與Pomerol礦物質呼應。天鵝絨質地與羊排細膩度和諧共舞。</div>
+              </div>
+            </div>
+
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:12px;padding:12px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;">
+              <div style="text-align:center;min-width:60px;">
+                <div style="font-size:26px;">🍗</div>
+                <div style="font-size:9.5px;font-weight:700;color:#7c2d12;margin-top:3px;">烤羊腿</div>
+                <div style="font-size:9px;color:#c2410c;">配蒜蓉</div>
+              </div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#7c2d12;margin-bottom:4px;">🍷 Château Cheval Blanc (St-Émilion)</div>
+                <div style="font-size:10.5px;color:#9a3412;line-height:1.6;">獨特的卡本內弗朗比例（40%）帶來草本、紫羅蘭氣息，與蒜蓉和羊肉和諧共鳴。</div>
+              </div>
+            </div>
+
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:12px;padding:12px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;">
+              <div style="text-align:center;min-width:60px;">
+                <div style="font-size:26px;">🥘</div>
+                <div style="font-size:9.5px;font-weight:700;color:#14532d;margin-top:3px;">燉羊肉</div>
+                <div style="font-size:9px;color:#166534;">配紅酒醬</div>
+              </div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#14532d;margin-bottom:4px;">🍷 Château Canon (St-Émilion)</div>
+                <div style="font-size:10.5px;color:#166534;line-height:1.6;">燉煮羊肉柔軟濃郁，Canon的石灰岩風土礦質感與陳年潛力完美搭配。</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:10px;">
+          <div style="font-size:11px;font-weight:700;color:#92400e;margin-bottom:5px;">🗺️ 地域文化的深厚根基</div>
+          <div style="font-size:10.5px;color:#78350f;line-height:1.7;">法國西南部（包括波爾多）傳統上是羊肉產區（如 <strong>Pauillac 羊</strong>），波爾多紅酒與羊肉的搭配源自數百年的飲食文化。右岸梅洛主導的酒款是轉化羊肉膻味的絕佳選擇。</div>
+        </div>
+
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '野味與陳年酒款',
-    content: [
-      {
-        subtitle: '野味的複雜風味',
-        text: '野味（鹿肉、野豬、野鴨、野兔）肉質緊實、風味濃烈，常有泥土、森林氣息，需要陳年的波爾多紅酒來匹配。',
-        ageMatters: '野味最適合10-20年陳年的波爾多紅酒，因為陳年後的三層香氣（皮革、雪茄盒、松露、森林地面）與野味的風土氣息完美呼應。'
-      },
-      {
-        subtitle: '經典野味配酒',
-        pairing: [
-          {
-            game: '烤鹿肉配紅酒醬與黑莓',
-            wine: '陳年15年的Château Pichon Longueville Comtesse de Lalande',
-            reason: '鹿肉的緊實肉質、黑莓的酸甜、紅酒醬的濃郁，需要陳年帶來的複雜度與柔化的單寧。'
-          },
-          {
-            game: '紅燒野鴨配橙醬',
-            wine: '陳年10年的Château Ducru-Beaucaillou',
-            reason: '野鴨的油脂、橙醬的酸甜、肉質的韌性，與Saint-Julien的平衡風格完美契合。'
-          },
-          {
-            game: '野豬肉醬意大利麵',
-            wine: 'Château Montrose (St-Estèphe)',
-            reason: '野豬肉的強勁風味需要St-Estèphe的力量與土壤氣息支撐。'
-          }
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:12px;padding:12px;margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#e0e7ff;margin-bottom:8px;">⏳ 為何野味需要陳年波爾多？</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+            <div style="background:rgba(255,255,255,0.1);border-radius:9px;padding:9px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">🫠</div>
+              <div style="font-size:10.5px;font-weight:700;color:#c7d2fe;margin-bottom:3px;">單寧柔化</div>
+              <div style="font-size:9.5px;color:#a5b4fc;line-height:1.5;">10–20年後<br>澀感消失<br>如天鵝絨</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.1);border-radius:9px;padding:9px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">🌲</div>
+              <div style="font-size:10.5px;font-weight:700;color:#c7d2fe;margin-bottom:3px;">三層香氣</div>
+              <div style="font-size:9.5px;color:#a5b4fc;line-height:1.5;">皮革・雪茄盒<br>松露・森林<br>地面氣息</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.1);border-radius:9px;padding:9px;text-align:center;">
+              <div style="font-size:20px;margin-bottom:4px;">🍄</div>
+              <div style="font-size:10.5px;font-weight:700;color:#c7d2fe;margin-bottom:3px;">風土呼應</div>
+              <div style="font-size:9.5px;color:#a5b4fc;line-height:1.5;">野味的泥土氣息<br>與陳年酒的<br>樹根香完美共鳴</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🦌 三大野味經典搭配</div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <div style="background:linear-gradient(90deg,#fffbeb,#fef3c7);border-left:4px solid #d97706;border-radius:0 10px 10px 0;padding:10px;">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;">
+                <div style="font-size:22px;">🦌</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#78350f;">烤鹿肉配紅酒醬與黑莓</div>
+                  <div style="font-size:10px;color:#92400e;margin-top:3px;">陳年15年 Château Pichon Longueville Comtesse de Lalande</div>
+                  <div style="font-size:10px;color:#78350f;line-height:1.5;margin-top:2px;">鹿肉緊實、黑莓酸甜、紅酒醬濃郁 → 需要陳年帶來的複雜度與柔化單寧</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(90deg,#f0fdf4,#dcfce7);border-left:4px solid #16a34a;border-radius:0 10px 10px 0;padding:10px;">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;">
+                <div style="font-size:22px;">🦆</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#14532d;">紅燒野鴨配橙醬</div>
+                  <div style="font-size:10px;color:#166534;margin-top:3px;">陳年10年 Château Ducru-Beaucaillou (Saint-Julien)</div>
+                  <div style="font-size:10px;color:#14532d;line-height:1.5;margin-top:2px;">野鴨油脂、橙醬酸甜、肉質韌性 → Saint-Julien的平衡風格完美契合</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(90deg,#fff1f2,#ffe4e6);border-left:4px solid #e11d48;border-radius:0 10px 10px 0;padding:10px;">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;">
+                <div style="font-size:22px;">🐗</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#be123c;">野豬肉醬意大利麵</div>
+                  <div style="font-size:10px;color:#9f1239;margin-top:3px;">Château Montrose (St-Estèphe)</div>
+                  <div style="font-size:10px;color:#be123c;line-height:1.5;margin-top:2px;">野豬肉強勁風味 → 需要St-Estèphe的力量與土壤礦物氣息支撐</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   // ========== 知識檢測：紅酒經典搭配 ==========
@@ -358,70 +660,125 @@ export const l310Content = [
   {
     type: 'content',
     title: '干白酒與海鮮',
-    content: [
-      {
-        subtitle: '生蠔的絕配',
-        text: '生蠔的鮮味、海洋礦質感、細膩質地，需要高酸度、礦質感明顯的白酒。Pessac-Léognan是首選。',
-        classicMatch: [
-          {
-            oyster: 'Gillardeau 3號生蠔',
-            wine: 'Château Smith Haut Lafitte Blanc',
-            reason: '白蘇維濃的檸檬酸度、葡萄柚氣息與生蠔的海洋鮮味完美提升，礦質感呼應。'
-          },
-          {
-            oyster: 'Marennes-Oléron生蠔',
-            wine: 'Domaine de Chevalier Blanc',
-            reason: '這款生蠔帶有淡淡的榛果味，Chevalier Blanc的賽美容比例帶來的堅果氣息完美呼應。'
-          }
-        ]
-      },
-      {
-        subtitle: '白魚與海鮮',
-        pairing: [
-          '烤鱸魚 → Château Carbonnieux Blanc（清爽酸度、草本）',
-          '奶油龍蝦 → Château Haut-Brion Blanc（豐厚酒體、橡木桶）',
-          '清蒸比目魚 → Château Couhins-Lurton（細膩礦質）',
-          '扇貝 → Clos Floridène Blanc（果味與礦質平衡）'
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🦪 生蠔的絕配 — 高酸度 × 礦質感</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:12px;padding:12px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <div style="font-size:24px;">🦪</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#1e3a8a;">Gillardeau 3號生蠔</div>
+                  <div style="font-size:9.5px;color:#1d4ed8;">深海鮮甜・海洋礦質感</div>
+                </div>
+              </div>
+              <div style="background:#2563eb;color:white;border-radius:8px;padding:6px;text-align:center;">
+                <div style="font-size:10.5px;font-weight:700;">Château Smith Haut Lafitte Blanc</div>
+                <div style="font-size:9px;opacity:0.9;margin-top:2px;">檸檬酸度・葡萄柚・礦質感</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:12px;padding:12px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <div style="font-size:24px;">🌊</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#14532d;">Marennes-Oléron生蠔</div>
+                  <div style="font-size:9.5px;color:#166534;">淡淡榛果味・細膩質地</div>
+                </div>
+              </div>
+              <div style="background:#15803d;color:white;border-radius:8px;padding:6px;text-align:center;">
+                <div style="font-size:10.5px;font-weight:700;">Domaine de Chevalier Blanc</div>
+                <div style="font-size:9px;opacity:0.9;margin-top:2px;">賽美容比例・堅果氣息呼應</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🐟 白魚與海鮮配對指南</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+            <div style="background:linear-gradient(90deg,#f0f9ff,#e0f2fe);border-left:3px solid #0284c7;border-radius:0 8px 8px 0;padding:8px;">
+              <div style="font-size:10.5px;font-weight:700;color:#0c4a6e;">🐠 烤鱸魚</div>
+              <div style="font-size:10px;color:#075985;margin-top:3px;">Château Carbonnieux Blanc — 清爽酸度、草本</div>
+            </div>
+            <div style="background:linear-gradient(90deg,#fff7ed,#ffedd5);border-left:3px solid #ea580c;border-radius:0 8px 8px 0;padding:8px;">
+              <div style="font-size:10.5px;font-weight:700;color:#7c2d12;">🦞 奶油龍蝦</div>
+              <div style="font-size:10px;color:#9a3412;margin-top:3px;">Château Haut-Brion Blanc — 豐厚酒體、橡木桶</div>
+            </div>
+            <div style="background:linear-gradient(90deg,#f0fdf4,#dcfce7);border-left:3px solid #16a34a;border-radius:0 8px 8px 0;padding:8px;">
+              <div style="font-size:10.5px;font-weight:700;color:#14532d;">🐡 清蒸比目魚</div>
+              <div style="font-size:10px;color:#166534;margin-top:3px;">Château Couhins-Lurton — 細膩礦質</div>
+            </div>
+            <div style="background:linear-gradient(90deg,#fdf4ff,#fae8ff);border-left:3px solid #9333ea;border-radius:0 8px 8px 0;padding:8px;">
+              <div style="font-size:10.5px;font-weight:700;color:#581c87;">🐚 扇貝</div>
+              <div style="font-size:10px;color:#7e22ce;margin-top:3px;">Clos Floridène Blanc — 果味與礦質平衡</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: 'Sauternes的甜蜜藝術',
-    content: [
-      {
-        subtitle: '鵝肝的經典組合',
-        text: '鵝肝與Sauternes被譽為"天堂的組合"。鵝肝的豐腴油脂被甜度切割，Sauternes的蜂蜜、杏桃乾風味與鵝肝的細膩質地完美融合。',
-        highlight: '為什麼這麼完美？甜度切割油脂、酸度保持清爽、貴腐帶來的複雜度提升整體層次。'
-      },
-      {
-        subtitle: '多樣化的甜酒搭配',
-        pairingGuide: [
-          {
-            food: '藍紋乳酪（Roquefort）',
-            wine: 'Château d\'Yquem',
-            reason: '藍紋的鹹味與霉味被Y quem的甜度與複雜度平衡，產生驚人的和諧。'
-          },
-          {
-            food: '法式蘋果塔（Tarte Tatin）',
-            wine: 'Château Rieussec',
-            reason: '焦糖蘋果的甜度與Rieussec的蜂蜜、烤杏仁風味完美呼應。'
-          },
-          {
-            food: '水果撻配香草冰淇淋',
-            wine: 'Château Suduiraut',
-            reason: '水果的酸甜與Suduiraut的熱帶水果、蜂蜜風味和諧。'
-          },
-          {
-            food: '辛辣亞洲料理',
-            wine: 'Château de Fargues',
-            reason: '甜度能緩解辛辣，創造有趣的對比。'
-          }
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:2px solid #d97706;border-radius:12px;padding:14px;margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">👑 鵝肝 × Sauternes — 天堂的組合</div>
+          <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-bottom:10px;">
+            <div style="text-align:center;background:rgba(255,255,255,0.6);border-radius:10px;padding:10px;">
+              <div style="font-size:32px;">🥩</div>
+              <div style="font-size:11px;font-weight:700;color:#78350f;margin-top:4px;">鵝肝</div>
+              <div style="font-size:10px;color:#92400e;margin-top:3px;">豐腴油脂<br>細膩質地</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:28px;">💑</div>
+            </div>
+            <div style="text-align:center;background:rgba(255,255,255,0.6);border-radius:10px;padding:10px;">
+              <div style="font-size:32px;">🍾</div>
+              <div style="font-size:11px;font-weight:700;color:#78350f;margin-top:4px;">Sauternes</div>
+              <div style="font-size:10px;color:#92400e;margin-top:3px;">蜂蜜・杏桃乾<br>貴腐複雜度</div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
+            <div style="background:rgba(255,255,255,0.5);border-radius:7px;padding:6px;text-align:center;font-size:10px;color:#78350f;"><strong>甜度</strong><br>切割油脂</div>
+            <div style="background:rgba(255,255,255,0.5);border-radius:7px;padding:6px;text-align:center;font-size:10px;color:#78350f;"><strong>酸度</strong><br>保持清爽</div>
+            <div style="background:rgba(255,255,255,0.5);border-radius:7px;padding:6px;text-align:center;font-size:10px;color:#78350f;"><strong>貴腐複雜度</strong><br>提升層次</div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🍯 四大配對指南</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:10px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#e0e7ff;margin-bottom:4px;">🧀 Roquefort 藍紋乳酪</div>
+              <div style="font-size:9.5px;color:#a5b4fc;line-height:1.5;margin-bottom:5px;">濃烈鹹味 × 甜度柔化，霉味複雜度 × 貴腐香氣呼應</div>
+              <div style="background:rgba(255,255,255,0.15);border-radius:6px;padding:4px;font-size:9.5px;color:#c7d2fe;font-weight:600;text-align:center;">Château d'Yquem</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#7c2d12;margin-bottom:4px;">🍎 法式蘋果塔</div>
+              <div style="font-size:9.5px;color:#9a3412;line-height:1.5;margin-bottom:5px;">焦糖蘋果甜度 × 蜂蜜烤杏仁風味完美呼應</div>
+              <div style="background:#c2410c;color:white;border-radius:6px;padding:4px;font-size:9.5px;font-weight:600;text-align:center;">Château Rieussec</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:4px;">🍰 水果撻配冰淇淋</div>
+              <div style="font-size:9.5px;color:#166534;line-height:1.5;margin-bottom:5px;">水果酸甜 × 熱帶水果、蜂蜜風味和諧共鳴</div>
+              <div style="background:#15803d;color:white;border-radius:6px;padding:4px;font-size:9.5px;font-weight:600;text-align:center;">Château Suduiraut</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:10px;padding:10px;">
+              <div style="font-size:11px;font-weight:700;color:#be123c;margin-bottom:4px;">🌶️ 辛辣亞洲料理</div>
+              <div style="font-size:9.5px;color:#9f1239;line-height:1.5;margin-bottom:5px;">甜度緩解辛辣，創造東西方味覺對比</div>
+              <div style="background:#be123c;color:white;border-radius:6px;padding:4px;font-size:9.5px;font-weight:600;text-align:center;">Château de Fargues</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   // ========== 知識檢測：白酒與甜酒搭配 ==========
@@ -467,137 +824,176 @@ export const l310Content = [
   {
     type: 'content',
     title: '波爾多酒配中餐',
-    content: [
-      {
-        subtitle: '中餐搭配的挑戰',
-        text: '中餐風味複雜、調味多樣（甜、酸、辣、鹹並存），搭配葡萄酒是一大挑戰。但波爾多的多樣性提供了豐富選擇。',
-        challenges: [
-          '醬油、豆瓣醬等發酵調味料與單寧可能衝突',
-          '高溫炒炸的鍋氣需要果味濃郁的酒款',
-          '甜酸平衡的菜餚需要酸度與果味並重的酒',
-          '辛辣料理需要低單寧、冰鎮的酒款'
-        ]
-      },
-      {
-        subtitle: '經典中餐配酒方案',
-        chinesePairing: [
-          {
-            dish: '北京烤鴨',
-            wine: '右岸梅洛主導（如Pomerol村莊級）',
-            reason: '烤鴨皮脆肉嫩、油脂豐富，梅洛的圓潤果味能包裹油脂，甜醬的甜度與果味和諧。建議冰鎮至12-14°C。'
-          },
-          {
-            dish: '紅燒肉',
-            wine: 'St-Émilion Grand Cru',
-            reason: '紅燒肉的醬油甜味、五花肉的油脂，與St-Émilion的石灰岩礦物質、陳年後的醬油氣息呼應。'
-          },
-          {
-            dish: '清蒸魚',
-            wine: 'Entre-Deux-Mers干白',
-            reason: '清蒸魚的細膩、蔥薑的清香，需要輕盈、高酸度的白酒。'
-          },
-          {
-            dish: '宮保雞丁',
-            wine: '年輕Bordeaux AOC紅酒（冰鎮）',
-            reason: '辛辣、酸甜、鹹香並存，需要果味主導、單寧低的年輕紅酒，冰鎮後更清爽。'
-          },
-          {
-            dish: '小龍蝦',
-            wine: 'Graves干白或Sauternes甜白',
-            reason: '小龍蝦的甜味、香料的辛辣，可以選擇干白的礦質感或甜白的甜度平衡。'
-          }
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:10px;padding:10px;margin-bottom:12px;">
+          <div style="font-size:12px;font-weight:700;color:#be123c;margin-bottom:6px;">⚡ 中餐配酒的挑戰</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+            <div style="font-size:10px;color:#9f1239;line-height:1.6;"><div>• 醬油、豆瓣醬與單寧可能衝突</div><div>• 高溫炒炸需要果味濃郁的酒款</div></div>
+            <div style="font-size:10px;color:#9f1239;line-height:1.6;"><div>• 甜酸平衡需酸度與果味並重</div><div>• 辛辣料理需低單寧、冰鎮酒款</div></div>
+          </div>
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🥢 五大中餐配酒方案</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="background:linear-gradient(90deg,#fff1f2,#fff5f5);border-left:4px solid #dc2626;border-radius:0 9px 9px 0;padding:9px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🦆</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#7f1d1d;">北京烤鴨</div>
+              <div style="font-size:10px;color:#991b1b;margin-top:2px;">右岸梅洛主導（Pomerol村莊級）— 圓潤果味包裹油脂，甜醬與果味和諧</div>
+            </div>
+            <div style="font-size:10px;color:#dc2626;font-weight:700;white-space:nowrap;">12-14°C</div>
+          </div>
+          <div style="background:linear-gradient(90deg,#fff7ed,#fffbeb);border-left:4px solid #d97706;border-radius:0 9px 9px 0;padding:9px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🥩</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#78350f;">紅燒肉</div>
+              <div style="font-size:10px;color:#92400e;margin-top:2px;">St-Émilion Grand Cru — 石灰岩礦物質呼應醬油甜味，陳年後醬油氣息共鳴</div>
+            </div>
+            <div style="font-size:10px;color:#d97706;font-weight:700;white-space:nowrap;">16-18°C</div>
+          </div>
+          <div style="background:linear-gradient(90deg,#f0fdf4,#f7fee7);border-left:4px solid #16a34a;border-radius:0 9px 9px 0;padding:9px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🐟</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#14532d;">清蒸魚</div>
+              <div style="font-size:10px;color:#166534;margin-top:2px;">Entre-Deux-Mers干白 — 細膩魚肉、蔥薑清香，需要輕盈高酸度白酒</div>
+            </div>
+            <div style="font-size:10px;color:#16a34a;font-weight:700;white-space:nowrap;">10-12°C</div>
+          </div>
+          <div style="background:linear-gradient(90deg,#fdf4ff,#faf5ff);border-left:4px solid #9333ea;border-radius:0 9px 9px 0;padding:9px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🌶️</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#581c87;">宮保雞丁</div>
+              <div style="font-size:10px;color:#7e22ce;margin-top:2px;">年輕Bordeaux AOC紅酒（冰鎮）— 辛辣酸甜鹹香，果味主導、低單寧</div>
+            </div>
+            <div style="font-size:10px;color:#9333ea;font-weight:700;white-space:nowrap;">12-14°C</div>
+          </div>
+          <div style="background:linear-gradient(90deg,#eff6ff,#f0f9ff);border-left:4px solid #2563eb;border-radius:0 9px 9px 0;padding:9px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🦞</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#1e3a8a;">小龍蝦</div>
+              <div style="font-size:10px;color:#1d4ed8;margin-top:2px;">Graves干白 <strong>或</strong> Sauternes甜白 — 干白礦質感 或 甜白平衡香料辛辣</div>
+            </div>
+            <div style="font-size:10px;color:#2563eb;font-weight:700;white-space:nowrap;">8-12°C</div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '波爾多酒配日本料理',
-    content: [
-      {
-        subtitle: '日料的細膩美學',
-        text: '日本料理強調食材原味、調味清淡、講究umami鮮味，與波爾多酒的搭配需要尊重這種細膩。',
-        principle: '選擇礦質感強、橡木桶使用克制、酒體輕到中等的酒款。'
-      },
-      {
-        subtitle: '日料配酒指南',
-        japanesePairing: [
-          {
-            dish: '生魚片（刺身）',
-            wine: 'Pessac-Léognan白酒或Entre-Deux-Mers',
-            reason: '生魚片的細膩、醬油的鮮味、山葵的辛辣，需要高酸度、礦質感明顯的白酒。避免橡木桶過重的酒款。'
-          },
-          {
-            dish: '壽司（握壽司）',
-            wine: 'Château Couhins-Lurton Blanc',
-            reason: '壽司米的微甜、魚肉的鮮味，需要酸度明快、果味清爽的白酒。'
-          },
-          {
-            dish: '天婦羅',
-            wine: '氣泡酒或輕盈白酒',
-            reason: '油炸的酥脆需要氣泡或高酸度清爽口腔。'
-          },
-          {
-            dish: '照燒雞肉',
-            wine: '年輕Bordeaux AOC紅酒',
-            reason: '照燒醬的甜鹹與果味紅酒和諧，但避免單寧過高的酒款。'
-          },
-          {
-            dish: '和牛',
-            wine: 'Pomerol或Margaux',
-            reason: '和牛的極致油花、入口即化的質地，需要絲滑細膩的酒款。梅洛的圓潤或Margaux的優雅都能完美搭配。'
-          }
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:10px;padding:10px;margin-bottom:12px;">
+          <div style="font-size:12px;font-weight:700;color:#e0e7ff;margin-bottom:5px;">🎌 日料配酒的核心原則</div>
+          <div style="font-size:10.5px;color:#a5b4fc;line-height:1.7;">強調 <strong style="color:#c7d2fe;">食材原味</strong>・調味清淡・Umami 鮮味。選擇 <strong style="color:#c7d2fe;">礦質感強、橡木桶克制、輕到中等酒體</strong> 的酒款，尊重日料的細膩美學。</div>
+        </div>
+
+        <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🍱 五大日料配酒指南</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="background:linear-gradient(90deg,#f0f9ff,#eff6ff);border-left:4px solid #0284c7;border-radius:0 9px 9px 0;padding:8px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🐟</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#0c4a6e;">生魚片（刺身）</div>
+              <div style="font-size:10px;color:#075985;margin-top:2px;line-height:1.5;">Pessac-Léognan白酒 或 Entre-Deux-Mers — 高酸度礦質感，山葵辛辣呼應，<strong>避免橡木桶過重</strong></div>
+            </div>
+          </div>
+          <div style="background:linear-gradient(90deg,#f0fdf4,#f7fee7);border-left:4px solid #16a34a;border-radius:0 9px 9px 0;padding:8px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🍣</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#14532d;">壽司（握壽司）</div>
+              <div style="font-size:10px;color:#166534;margin-top:2px;line-height:1.5;">Château Couhins-Lurton Blanc — 壽司米微甜・魚肉鮮味，酸度明快・果味清爽</div>
+            </div>
+          </div>
+          <div style="background:linear-gradient(90deg,#fffbeb,#fefce8);border-left:4px solid #ca8a04;border-radius:0 9px 9px 0;padding:8px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🍤</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#78350f;">天婦羅</div>
+              <div style="font-size:10px;color:#92400e;margin-top:2px;line-height:1.5;">氣泡酒 或 輕盈白酒 — 油炸酥脆質地，氣泡或高酸度清爽口腔</div>
+            </div>
+          </div>
+          <div style="background:linear-gradient(90deg,#fff1f2,#fff5f5);border-left:4px solid #dc2626;border-radius:0 9px 9px 0;padding:8px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🍗</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#7f1d1d;">照燒雞肉</div>
+              <div style="font-size:10px;color:#991b1b;margin-top:2px;line-height:1.5;">年輕Bordeaux AOC紅酒 — 照燒醬甜鹹與果味和諧，<strong>避免高單寧</strong></div>
+            </div>
+          </div>
+          <div style="background:linear-gradient(90deg,#fdf4ff,#faf5ff);border-left:4px solid #9333ea;border-radius:0 9px 9px 0;padding:8px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+            <div style="font-size:22px;">🥩</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#581c87;">和牛</div>
+              <div style="font-size:10px;color:#7e22ce;margin-top:2px;line-height:1.5;">Pomerol 或 Margaux — 極致油花入口即化，梅洛圓潤 或 Margaux的天鵝絨質地完美搭配</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '波爾多酒配泰國料理',
-    content: [
-      {
-        subtitle: '泰式料理的複雜風味',
-        text: '泰國料理以酸、辣、甜、鹹、鮮五味並重著稱，香茅、辣椒、魚露、椰奶創造了複雜的味覺層次，搭配葡萄酒極具挑戰性。',
-        strategy: '選擇果味濃郁、低單寧、微甜或半甜的酒款，冰鎮飲用。'
-      },
-      {
-        subtitle: '泰式料理配酒',
-        thaiPairing: [
-          {
-            dish: '青木瓜沙拉（Som Tam）',
-            wine: 'Sauternes或Barsac（冰鎮）',
-            reason: '青木瓜的酸辣、魚露的鹹鮮、花生的香脆，甜白酒的甜度能平衡辣度，果味與木瓜風味呼應。冰鎮至8°C。'
-          },
-          {
-            dish: '綠咖哩雞',
-            wine: '半甜型白酒或Sauternes',
-            reason: '綠咖哩的椰奶、辣椒、香茅，需要甜度緩解辣度，果味呼應椰奶的奶香。'
-          },
-          {
-            dish: '泰式炒河粉（Pad Thai）',
-            wine: '年輕果味紅酒（冰鎮）',
-            reason: '炒河粉的甜酸醬汁、花生、蝦米，需要果味主導、單寧低的紅酒，冰鎮後更清爽。'
-          },
-          {
-            dish: '清蒸檸檬魚',
-            wine: 'Entre-Deux-Mers或Graves白酒',
-            reason: '檸檬的酸度、魚肉的細膩，需要高酸度、清爽的白酒。'
-          }
-        ]
-      },
-      {
-        subtitle: '泰式料理配酒的黃金法則',
-        tips: [
-          '1. 避免高單寧紅酒（與辣椒衝突產生苦味）',
-          '2. 選擇果味濃郁、酸度明快的酒款',
-          '3. 甜白酒是應對辣度的最佳武器',
-          '4. 冰鎮飲用（12-14°C甚至更低）',
-          '5. 選擇年輕、簡單的酒款，不用浪費頂級陳年酒'
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="background:linear-gradient(135deg,#7f1d1d,#991b1b);border-radius:10px;padding:10px;margin-bottom:12px;">
+          <div style="font-size:12px;font-weight:700;color:#fecaca;margin-bottom:5px;">🌶️ 泰式料理的配酒策略</div>
+          <div style="font-size:10.5px;color:#fca5a5;line-height:1.7;">酸・辣・甜・鹹・鮮五味並重 → 選擇 <strong style="color:white;">果味濃郁、低單寧、微甜或半甜</strong> 的酒款，<strong style="color:white;">冰鎮飲用</strong>。高單寧紅酒會與辣椒衝突，產生苦味。</div>
+        </div>
+
+        <div style="margin-bottom:12px;">
+          <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🥢 四大泰式料理配酒</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:10px;">
+              <div style="font-size:20px;margin-bottom:4px;">🥗</div>
+              <div style="font-size:11px;font-weight:700;color:#581c87;margin-bottom:3px;">青木瓜沙拉（Som Tam）</div>
+              <div style="font-size:10px;color:#7e22ce;line-height:1.5;margin-bottom:5px;">酸辣・魚露鹹鮮・花生香脆</div>
+              <div style="background:#7e22ce;color:white;border-radius:6px;padding:4px;font-size:9.5px;font-weight:600;text-align:center;">Sauternes 冰鎮至 8°C</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;">
+              <div style="font-size:20px;margin-bottom:4px;">🍛</div>
+              <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:3px;">綠咖哩雞</div>
+              <div style="font-size:10px;color:#166534;line-height:1.5;margin-bottom:5px;">椰奶・辣椒・香茅濃郁</div>
+              <div style="background:#15803d;color:white;border-radius:6px;padding:4px;font-size:9.5px;font-weight:600;text-align:center;">半甜白酒 或 Sauternes</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:10px;">
+              <div style="font-size:20px;margin-bottom:4px;">🍜</div>
+              <div style="font-size:11px;font-weight:700;color:#7c2d12;margin-bottom:3px;">泰式炒河粉（Pad Thai）</div>
+              <div style="font-size:10px;color:#9a3412;line-height:1.5;margin-bottom:5px;">甜酸醬汁・花生・蝦米</div>
+              <div style="background:#c2410c;color:white;border-radius:6px;padding:4px;font-size:9.5px;font-weight:600;text-align:center;">年輕果味紅酒（冰鎮）</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:10px;">
+              <div style="font-size:20px;margin-bottom:4px;">🐟</div>
+              <div style="font-size:11px;font-weight:700;color:#1e3a8a;margin-bottom:3px;">清蒸檸檬魚</div>
+              <div style="font-size:10px;color:#1d4ed8;line-height:1.5;margin-bottom:5px;">檸檬酸度・魚肉細膩清爽</div>
+              <div style="background:#1d4ed8;color:white;border-radius:6px;padding:4px;font-size:9.5px;font-weight:600;text-align:center;">Entre-Deux-Mers 白酒</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:10px;">
+          <div style="font-size:11px;font-weight:700;color:#92400e;margin-bottom:6px;">🏆 泰式配酒黃金法則</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+            <div style="font-size:10px;color:#78350f;line-height:1.7;">
+              <div>❌ 避免高單寧紅酒（辣椒衝突）</div>
+              <div>✅ 選擇果味濃郁・酸度明快</div>
+            </div>
+            <div style="font-size:10px;color:#78350f;line-height:1.7;">
+              <div>✅ 甜白酒是對付辣度的武器</div>
+              <div>🌡️ 冰鎮飲用（12°C以下）</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   // ========== 知識檢測：亞洲料理創新搭配 ==========
@@ -643,136 +1039,205 @@ export const l310Content = [
   {
     type: 'content',
     title: '多道式配餐的原則',
-    content: [
-      {
-        subtitle: '漸進式的風味旅程',
-        text: '多道式餐酒菜單不是孤立的搭配，而是一場連貫的味覺旅程。每一道都應該為下一道做準備，避免味覺疲勞，創造高潮。',
-        coreRules: [
-          '1. 從輕到重：開胃菜配輕酒體，主菜配重酒體',
-          '2. 從干到甜：甜酒留到最後（甜點前）',
-          '3. 從簡單到複雜：年輕酒在前，陳年酒在後',
-          '4. 從白到紅：白酒開場，紅酒主場',
-          '5. 注意酒精度遞增：避免後面的酒顯得淡薄'
-        ]
-      },
-      {
-        subtitle: '平衡與對比',
-        text: '整個菜單要有平衡（避免口味過於集中）也要有對比（創造驚喜）。考慮顏色、質地、溫度、風味的變化。'
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🚀 漸進式風味旅程 — 五大核心規則</div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <div style="background:linear-gradient(90deg,#eff6ff,#dbeafe);border-left:4px solid #3b82f6;border-radius:0 10px 10px 0;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;">
+              <div style="background:#3b82f6;color:white;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;">1</div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#1e3a8a;">從輕到重</div>
+                <div style="font-size:10.5px;color:#1d4ed8;margin-top:2px;">開胃菜配輕酒體 → 主菜配重酒體，循序漸進不疲勞</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(90deg,#fdf4ff,#fae8ff);border-left:4px solid #a855f7;border-radius:0 10px 10px 0;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;">
+              <div style="background:#a855f7;color:white;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;">2</div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#581c87;">從干到甜</div>
+                <div style="font-size:10.5px;color:#7e22ce;margin-top:2px;">甜酒留到最後（甜點前），否則後續的酒顯得索然無味</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(90deg,#f0fdf4,#dcfce7);border-left:4px solid #22c55e;border-radius:0 10px 10px 0;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;">
+              <div style="background:#22c55e;color:white;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;">3</div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#14532d;">從簡單到複雜</div>
+                <div style="font-size:10.5px;color:#166534;margin-top:2px;">年輕易飲酒款開場，複雜陳年酒款壓軸，層次分明</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(90deg,#fffbeb,#fef3c7);border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;">
+              <div style="background:#f59e0b;color:white;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;">4</div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#78350f;">從白到紅</div>
+                <div style="font-size:10.5px;color:#92400e;margin-top:2px;">白酒（海鮮・前菜）開場，紅酒（肉類・主菜）主場</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(90deg,#fff1f2,#ffe4e6);border-left:4px solid #f43f5e;border-radius:0 10px 10px 0;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;">
+              <div style="background:#f43f5e;color:white;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;">5</div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#be123c;">酒精度遞增</div>
+                <div style="font-size:10.5px;color:#9f1239;margin-top:2px;">避免後面的酒顯得淡薄，保持每款都能展現最佳狀態</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:10px;padding:10px;">
+          <div style="font-size:11px;font-weight:700;color:#e0e7ff;margin-bottom:5px;">⚖️ 平衡與對比的藝術</div>
+          <div style="font-size:10.5px;color:#a5b4fc;line-height:1.7;">整個菜單需要 <strong style="color:white;">平衡</strong>（避免口味集中）也需要 <strong style="color:white;">對比</strong>（創造驚喜）。考慮顏色、質地、溫度、風味的多樣變化，讓每一道都期待下一道的到來。</div>
+        </div>
+
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '經典法式七道式菜單範例',
-    content: [
-      {
-        subtitle: '完整餐酒搭配方案',
-        fullMenu: [
-          {
-            course: '第一道：開胃小點',
-            dish: '煙燻鮭魚配酸豆、洋蔥、檸檬',
-            wine: 'Champagne Brut（波爾多之外）或Entre-Deux-Mers',
-            reason: '開場需要清爽、高酸度，氣泡能刺激食慾，白酒的酸度與檸檬呼應。',
-            serving: '50ml，8-10°C'
-          },
-          {
-            course: '第二道：冷盤',
-            dish: '生蠔拼盤（3種）',
-            wine: 'Château Smith Haut Lafitte Blanc',
-            reason: '生蠔的鮮味、海洋礦質感需要高酸度、礦質感明顯的白酒。',
-            serving: '100ml，10-12°C'
-          },
-          {
-            course: '第三道：熱前菜',
-            dish: '煎鵝肝配無花果與布里歐',
-            wine: 'Château d\'Yquem（半瓶）',
-            reason: '經典組合，鵝肝的油膩被甜度切割，無花果與貴腐風味呼應。',
-            serving: '75ml（半瓶分6人），10-12°C'
-          },
-          {
-            course: '第四道：魚',
-            dish: '奶油龍蝦配黑松露',
-            wine: 'Château Haut-Brion Blanc',
-            reason: '龍蝦的細膩、奶油的豐腴、松露的複雜，需要頂級白酒的深度。',
-            serving: '100ml，12-14°C'
-          },
-          {
-            course: '第五道：主菜1',
-            dish: '烤乳鴿配野菇',
-            wine: 'Château Palmer',
-            reason: '乳鴿的細嫩、野菇的土壤氣息，Margaux的優雅完美過渡到紅酒階段。',
-            serving: '120ml，16-18°C'
-          },
-          {
-            course: '第六道：主菜2',
-            dish: '夏洛來牛排配骨髓、紅酒醬',
-            wine: 'Château Latour（陳年10年）',
-            reason: '重頭戲，牛排的蛋白質、骨髓的油脂需要強勁的單寧與複雜度。',
-            serving: '150ml，17-18°C，提前2小時醒酒'
-          },
-          {
-            course: '第七道：甜點',
-            dish: '覆盆莓舒芙蕾配香草冰淇淋',
-            wine: '繼續Château d\'Yquem',
-            reason: '甜點需要比其更甜的酒，Y quem的複雜度與覆盆莓果味呼應。',
-            serving: '50ml'
-          }
-        ]
-      },
-      {
-        subtitle: '菜單設計要點',
-        designTips: [
-          '總酒量控制在500-700ml/人（約一瓶），避免過度',
-          '考慮上菜節奏（每道間隔15-20分鐘）',
-          '準備替代方案（不喝酒的客人、過敏等）',
-          '酒款預算分配：40%在主菜、30%在Yquem、30%其他',
-          '考慮季節性（夏天更輕盈、冬天更厚重）'
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">📋 完整七道式餐酒搭配方案</div>
+        <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px;">
+
+          <div style="background:linear-gradient(90deg,#f0f9ff,#e0f2fe);border-left:4px solid #0284c7;border-radius:0 8px 8px 0;padding:7px 10px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;">
+            <div style="font-size:10px;background:#0284c7;color:white;border-radius:4px;padding:2px 6px;font-weight:700;white-space:nowrap;">第一道</div>
+            <div>
+              <div style="font-size:10.5px;font-weight:700;color:#0c4a6e;">煙燻鮭魚配酸豆・洋蔥・檸檬</div>
+              <div style="font-size:9.5px;color:#0369a1;">Entre-Deux-Mers — 清爽酸度刺激食慾</div>
+            </div>
+            <div style="font-size:9px;color:#0284c7;text-align:right;">50ml<br>8-10°C</div>
+          </div>
+
+          <div style="background:linear-gradient(90deg,#f0fdf4,#dcfce7);border-left:4px solid #16a34a;border-radius:0 8px 8px 0;padding:7px 10px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;">
+            <div style="font-size:10px;background:#16a34a;color:white;border-radius:4px;padding:2px 6px;font-weight:700;white-space:nowrap;">第二道</div>
+            <div>
+              <div style="font-size:10.5px;font-weight:700;color:#14532d;">生蠔拼盤（3種）</div>
+              <div style="font-size:9.5px;color:#166534;">Château Smith Haut Lafitte Blanc — 礦質感呼應海洋</div>
+            </div>
+            <div style="font-size:9px;color:#16a34a;text-align:right;">100ml<br>10-12°C</div>
+          </div>
+
+          <div style="background:linear-gradient(90deg,#fffbeb,#fef3c7);border-left:4px solid #d97706;border-radius:0 8px 8px 0;padding:7px 10px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;">
+            <div style="font-size:10px;background:#d97706;color:white;border-radius:4px;padding:2px 6px;font-weight:700;white-space:nowrap;">第三道</div>
+            <div>
+              <div style="font-size:10.5px;font-weight:700;color:#78350f;">煎鵝肝配無花果與布里歐</div>
+              <div style="font-size:9.5px;color:#92400e;">Château d'Yquem（半瓶）— 甜度切油脂・貴腐呼應</div>
+            </div>
+            <div style="font-size:9px;color:#d97706;text-align:right;">75ml<br>10-12°C</div>
+          </div>
+
+          <div style="background:linear-gradient(90deg,#fdf4ff,#fae8ff);border-left:4px solid #9333ea;border-radius:0 8px 8px 0;padding:7px 10px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;">
+            <div style="font-size:10px;background:#9333ea;color:white;border-radius:4px;padding:2px 6px;font-weight:700;white-space:nowrap;">第四道</div>
+            <div>
+              <div style="font-size:10.5px;font-weight:700;color:#581c87;">奶油龍蝦配黑松露</div>
+              <div style="font-size:9.5px;color:#7e22ce;">Château Haut-Brion Blanc — 頂級白酒的深度匹配</div>
+            </div>
+            <div style="font-size:9px;color:#9333ea;text-align:right;">100ml<br>12-14°C</div>
+          </div>
+
+          <div style="background:linear-gradient(90deg,#fff7ed,#ffedd5);border-left:4px solid #ea580c;border-radius:0 8px 8px 0;padding:7px 10px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;">
+            <div style="font-size:10px;background:#ea580c;color:white;border-radius:4px;padding:2px 6px;font-weight:700;white-space:nowrap;">第五道</div>
+            <div>
+              <div style="font-size:10.5px;font-weight:700;color:#7c2d12;">烤乳鴿配野菇</div>
+              <div style="font-size:9.5px;color:#9a3412;">Château Palmer (Margaux) — 優雅過渡進入紅酒階段</div>
+            </div>
+            <div style="font-size:9px;color:#ea580c;text-align:right;">120ml<br>16-18°C</div>
+          </div>
+
+          <div style="background:linear-gradient(90deg,#fff1f2,#ffe4e6);border-left:4px solid #dc2626;border-radius:0 8px 8px 0;padding:7px 10px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;">
+            <div style="font-size:10px;background:#dc2626;color:white;border-radius:4px;padding:2px 6px;font-weight:700;white-space:nowrap;">第六道</div>
+            <div>
+              <div style="font-size:10.5px;font-weight:700;color:#7f1d1d;">夏洛來牛排配骨髓・紅酒醬 ⭐ 重頭戲</div>
+              <div style="font-size:9.5px;color:#991b1b;">Château Latour 陳年10年 — 強勁單寧・複雜度（提前2小時醒酒）</div>
+            </div>
+            <div style="font-size:9px;color:#dc2626;text-align:right;">150ml<br>17-18°C</div>
+          </div>
+
+          <div style="background:linear-gradient(90deg,#fdf4ff,#fae8ff);border-left:4px solid #7c3aed;border-radius:0 8px 8px 0;padding:7px 10px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;">
+            <div style="font-size:10px;background:#7c3aed;color:white;border-radius:4px;padding:2px 6px;font-weight:700;white-space:nowrap;">第七道</div>
+            <div>
+              <div style="font-size:10.5px;font-weight:700;color:#4c1d95;">覆盆莓舒芙蕾配香草冰淇淋</div>
+              <div style="font-size:9.5px;color:#6d28d9;">繼續 Château d'Yquem — 複雜度呼應覆盆莓果味</div>
+            </div>
+            <div style="font-size:9px;color:#7c3aed;text-align:right;">50ml</div>
+          </div>
+
+        </div>
+
+        <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:9px;padding:9px;">
+          <div style="font-size:10.5px;font-weight:700;color:#78350f;margin-bottom:4px;">💡 菜單設計要點</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:10px;color:#92400e;line-height:1.6;">
+            <div>• 總酒量 500-700ml/人（約一瓶）</div>
+            <div>• 上菜節奏每道間隔 15-20 分鐘</div>
+            <div>• 酒款預算：40% 主菜・30% Yquem</div>
+            <div>• 季節調整：夏季輕盈・冬季厚重</div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '現代創意菜單範例',
-    content: [
-      {
-        subtitle: '融合東西方的創新搭配',
-        modernMenu: [
-          {
-            course: '第一道',
-            dish: '日式生魚片與西班牙火腿拼盤',
-            wine: 'Pessac-Léognan白酒',
-            innovation: '東西方食材融合，白酒的礦質感同時匹配海鮮與火腿的鹹味。'
-          },
-          {
-            course: '第二道',
-            dish: '泰式香茅燉龍蝦湯',
-            wine: 'Sauternes（冰鎮）',
-            innovation: '甜白酒的甜度平衡香茅與辣椒，果味與椰奶和諧。'
-          },
-          {
-            course: '第三道',
-            dish: '北京烤鴨配墨西哥莎莎醬',
-            wine: 'Pomerol村莊級（冰鎮）',
-            innovation: '梅洛的果味包裹烤鴨油脂，莎莎醬的酸辣被果味中和。'
-          },
-          {
-            course: '第四道',
-            dish: '和牛配韓式泡菜',
-            wine: 'Château Cheval Blanc',
-            innovation: '和牛的油花與Cheval Blanc的絲滑，泡菜的發酵味與陳年酒的複雜度呼應。'
-          },
-          {
-            course: '第五道',
-            dish: '抹茶提拉米蘇',
-            wine: 'Château Climens',
-            innovation: 'Barsac的蜂蜜與抹茶的苦甜創造有趣對比。'
-          }
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🌍 融合東西方的五道式創新菜單</div>
+        <div style="display:flex;flex-direction:column;gap:7px;">
+
+          <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:11px;padding:11px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;">
+            <div style="background:#3b82f6;color:white;border-radius:8px;padding:5px 8px;font-size:10.5px;font-weight:700;white-space:nowrap;text-align:center;">第一道</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#1e3a8a;">日式生魚片 × 西班牙火腿拼盤</div>
+              <div style="font-size:10px;color:#1d4ed8;margin-top:3px;">🍾 <strong>Pessac-Léognan 白酒</strong> — 礦質感同時匹配海鮮與火腿鹹味</div>
+              <div style="font-size:9.5px;color:#2563eb;margin-top:2px;font-style:italic;">東西方食材融合，一款酒呼應兩種文化的食材</div>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:11px;padding:11px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;">
+            <div style="background:#f97316;color:white;border-radius:8px;padding:5px 8px;font-size:10.5px;font-weight:700;white-space:nowrap;text-align:center;">第二道</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#7c2d12;">泰式香茅燉龍蝦湯</div>
+              <div style="font-size:10px;color:#9a3412;margin-top:3px;">🍾 <strong>Sauternes（冰鎮）</strong> — 甜度平衡香茅辣椒，果味與椰奶和諧</div>
+              <div style="font-size:9.5px;color:#c2410c;margin-top:2px;font-style:italic;">甜白酒的意外配角，化辣為和諧</div>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:11px;padding:11px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;">
+            <div style="background:#f43f5e;color:white;border-radius:8px;padding:5px 8px;font-size:10.5px;font-weight:700;white-space:nowrap;text-align:center;">第三道</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#be123c;">北京烤鴨 × 墨西哥莎莎醬</div>
+              <div style="font-size:10px;color:#9f1239;margin-top:3px;">🍾 <strong>Pomerol 村莊級（冰鎮）</strong> — 梅洛果味包裹烤鴨油脂，莎莎醬酸辣被中和</div>
+              <div style="font-size:9.5px;color:#dc2626;margin-top:2px;font-style:italic;">東方傳統 + 拉丁活力 = 梅洛果味的和諧包容</div>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:11px;padding:11px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;">
+            <div style="background:#a855f7;color:white;border-radius:8px;padding:5px 8px;font-size:10.5px;font-weight:700;white-space:nowrap;text-align:center;">第四道</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#581c87;">和牛 × 韓式泡菜</div>
+              <div style="font-size:10px;color:#7e22ce;margin-top:3px;">🍾 <strong>Château Cheval Blanc</strong> — 和牛油花配絲滑質地，泡菜發酵味與陳年複雜度共鳴</div>
+              <div style="font-size:9.5px;color:#9333ea;margin-top:2px;font-style:italic;">頂級食材 + 發酵傳統 = 複雜度的完美匹配</div>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:11px;padding:11px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;">
+            <div style="background:#22c55e;color:white;border-radius:8px;padding:5px 8px;font-size:10.5px;font-weight:700;white-space:nowrap;text-align:center;">第五道</div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#14532d;">抹茶提拉米蘇</div>
+              <div style="font-size:10px;color:#166534;margin-top:3px;">🍾 <strong>Château Climens (Barsac)</strong> — 蜂蜜與抹茶苦甜創造有趣對比</div>
+              <div style="font-size:9.5px;color:#15803d;margin-top:2px;font-style:italic;">西方甜點 + 東方苦韻 = 甜與苦之間的完美張力</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    `
   },
 
   // ========== 知識檢測：餐酒菜單設計 ==========
@@ -818,30 +1283,72 @@ export const l310Content = [
   {
     type: 'content',
     title: '配餐的核心思維',
-    content: [
-      {
-        subtitle: '科學與藝術的平衡',
-        text: '配餐既有科學原理（單寧與蛋白質、酸度與油脂），也有藝術直覺（文化背景、個人偏好）。最好的配餐是在理解原理基礎上的大膽創新。',
-        keyPrinciples: [
-          '1. 理解基礎原理（單寧、酸度、甜度、酒體）',
-          '2. 尊重地域傳統（波爾多紅酒配紅肉的文化基礎）',
-          '3. 考慮整體體驗（不只是味道，還有情境、氛圍）',
-          '4. 大膽嘗試創新（跨文化搭配的驚喜）',
-          '5. 聆聽個人偏好（沒有絕對正確的搭配）'
-        ]
-      },
-      {
-        subtitle: '持續學習與實踐',
-        text: '配餐是一門需要不斷實踐的藝術。每次用餐都是一次實驗，記錄成功與失敗，逐步建立自己的配餐資料庫。',
-        practiceAdvice: [
-          '組織定期的配餐實驗晚宴',
-          '記錄每次搭配的感受（成功/失敗原因）',
-          '閱讀侍酒師的配餐建議',
-          '參加餐酒搭配工作坊',
-          '保持開放心態，嘗試意想不到的組合'
-        ]
-      }
-    ]
+    content: `
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🎯 五大核心配餐原則</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+
+            <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:10px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+              <div style="font-size:26px;">🔬</div>
+              <div>
+                <div style="font-size:11.5px;font-weight:700;color:#e0e7ff;">1. 理解科學基礎</div>
+                <div style="font-size:10px;color:#a5b4fc;margin-top:2px;">單寧軟化蛋白質 • 酸度切割油脂 • 甜度平衡辣味 • 酒體對應食物重量</div>
+              </div>
+            </div>
+
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+              <div style="font-size:26px;">🗺️</div>
+              <div>
+                <div style="font-size:11.5px;font-weight:700;color:#7c2d12;">2. 尊重地域傳統</div>
+                <div style="font-size:10px;color:#9a3412;margin-top:2px;">波爾多紅酒配紅肉 • 白酒配海鮮 • Sauternes配鵝肝 — 數百年飲食智慧的結晶</div>
+              </div>
+            </div>
+
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+              <div style="font-size:26px;">✨</div>
+              <div>
+                <div style="font-size:11.5px;font-weight:700;color:#14532d;">3. 考慮整體體驗</div>
+                <div style="font-size:10px;color:#166534;margin-top:2px;">不只是味道，還有情境・氛圍・季節・場合 — 配餐是創造完整記憶的藝術</div>
+              </div>
+            </div>
+
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+              <div style="font-size:26px;">💡</div>
+              <div>
+                <div style="font-size:11.5px;font-weight:700;color:#1e3a8a;">4. 大膽創新探索</div>
+                <div style="font-size:10px;color:#1d4ed8;margin-top:2px;">跨文化搭配的驚喜 — 泰式料理配Sauternes・和牛配Cheval Blanc，突破常規的美好</div>
+              </div>
+            </div>
+
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;">
+              <div style="font-size:26px;">❤️</div>
+              <div>
+                <div style="font-size:11.5px;font-weight:700;color:#581c87;">5. 聆聽個人偏好</div>
+                <div style="font-size:10px;color:#7e22ce;margin-top:2px;">沒有絕對正確的搭配 — 你認為美好的組合就是最好的配餐。規則是起點，不是終點。</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:10px;">
+          <div style="font-size:11px;font-weight:700;color:#92400e;margin-bottom:5px;">📚 持續學習的實踐方法</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:10px;color:#78350f;line-height:1.7;">
+            <div>
+              <div>🍽️ 定期組織配餐實驗晚宴</div>
+              <div>📝 記錄每次搭配的成敗原因</div>
+            </div>
+            <div>
+              <div>📖 閱讀侍酒師配餐建議</div>
+              <div>🔓 保持開放心態嘗試新組合</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   // 結束頁
