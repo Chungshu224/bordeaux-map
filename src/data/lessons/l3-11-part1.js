@@ -67,141 +67,210 @@ export const l311Part1Content = [
     title: '第一章：古代起源與中世紀發展',
     subtitle: '從羅馬征服到修道院時代',
     content: `
-      <div class="chapter-content">
-        <div class="historical-origins">
-          <h3>🏛️ 羅馬時代的奠基</h3>
-          <div class="roman-period">
-            <div class="historical-timeline">
-              <div class="timeline-event">
-                <h4>西元前56年 - 羅馬征服</h4>
-                <div class="event-details">
-                  <p><strong>凱撒征服高盧：</strong></p>
-                  <ul>
-                    <li>羅馬軍隊征服了高盧地區（今法國）</li>
-                    <li>Burdigala（波爾多）成為重要的羅馬城市</li>
-                    <li>羅馬人帶來了先進的葡萄種植技術</li>
-                    <li>建立了第一批有組織的葡萄園</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div class="timeline-event">
-                <h4>西元1-4世紀 - 產業萌芽</h4>
-                <div class="event-details">
-                  <p><strong>羅馬統治下的發展：</strong></p>
-                  <ul>
-                    <li>引進了義大利的葡萄品種和釀造技術</li>
-                    <li>建立了完整的葡萄酒貿易網絡</li>
-                    <li>波爾多葡萄酒開始出口到羅馬帝國各地</li>
-                    <li>奠定了波爾多作為葡萄酒產區的基礎</li>
-                  </ul>
-                </div>
+      <h3 style="display:none;">🏛️ 羅馬時代的奠基</h3>
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⏳ 關鍵歷史時間軸</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:2px solid #f97316;border-radius:12px;padding:14px;">
+              <div style="font-size:20px;font-weight:800;color:#c2410c;margin-bottom:4px;letter-spacing:-0.5px;">📅 西元前 56 年</div>
+              <div style="font-size:12px;font-weight:700;color:#7c2d12;margin-bottom:8px;">凱撒征服高盧</div>
+              <div style="font-size:11px;color:#9a3412;line-height:1.7;">
+                <div>• Burdigala（波爾多古名）成為重要羅馬城市</div>
+                <div>• 帶來先進的葡萄種植與管理技術</div>
+                <div>• 建立第一批有組織的葡萄園</div>
+                <div>• 奠定波爾多作為產區的制度基礎</div>
               </div>
             </div>
-
-            <div class="roman-legacy">
-              <h4>🍇 羅馬時代的技術遺產</h4>
-              <div class="legacy-aspects">
-                <div class="legacy-item">
-                  <h5>種植技術</h5>
-                  <p>• 葡萄園的規劃和管理方法<br>
-                  • 土壤改良和排水系統<br>
-                  • 葡萄品種的選擇和培育<br>
-                  • 收穫時機的判斷標準</p>
-                </div>
-                <div class="legacy-item">
-                  <h5>釀造工藝</h5>
-                  <p>• 發酵容器的製作技術<br>
-                  • 酒液澄清和過濾方法<br>
-                  • 儲存和陳年的基本概念<br>
-                  • 品質控制的初步標準</p>
-                </div>
-                <div class="legacy-item">
-                  <h5>貿易體系</h5>
-                  <p>• 建立了與地中海地區的貿易路線<br>
-                  • 發展了葡萄酒的包裝和運輸技術<br>
-                  • 創建了品質評估和定價機制<br>
-                  • 培養了專業的葡萄酒商人階層</p>
-                </div>
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:2px solid #3b82f6;border-radius:12px;padding:14px;">
+              <div style="font-size:20px;font-weight:800;color:#1d4ed8;margin-bottom:4px;letter-spacing:-0.5px;">📅 西元 1–4 世紀</div>
+              <div style="font-size:12px;font-weight:700;color:#1e3a8a;margin-bottom:8px;">產業萌芽與擴張</div>
+              <div style="font-size:11px;color:#1d4ed8;line-height:1.7;">
+                <div>• 引進義大利葡萄品種與釀造技術</div>
+                <div>• 建立完整的葡萄酒貿易網絡</div>
+                <div>• 波爾多葡萄酒出口至羅馬帝國各地</div>
+                <div>• 鞏固波爾多的葡萄酒產區地位</div>
               </div>
             </div>
           </div>
+        </div>
 
-          <h3>⛪ 中世紀的修道院時代</h3>
-          <div class="medieval-period">
-            <div class="monastery-development">
-              <h4>修道院葡萄酒業的黃金時代</h4>
-              <div class="monastery-contributions">
-                <div class="contribution-period">
-                  <h5>8-12世紀：修道院的興起</h5>
-                  <div class="period-details">
-                    <div class="detail-aspect">
-                      <h6>📿 宗教推動力</h6>
-                      <p>• <strong>聖體聖事需求：</strong>天主教彌撒需要大量葡萄酒<br>
-                      • <strong>修道院經濟：</strong>葡萄酒成為重要收入來源<br>
-                      • <strong>朝聖貿易：</strong>聖雅各朝聖路線帶動葡萄酒需求<br>
-                      • <strong>宗教保護：</strong>教會地位保護葡萄園免受戰爭破壞</p>
-                    </div>
-                    <div class="detail-aspect">
-                      <h6>🔬 技術創新</h6>
-                      <p>• <strong>品種改良：</strong>修士們選育出更適合當地的葡萄品種<br>
-                      • <strong>釀造技術：</strong>發展了更精密的發酵和陳年技術<br>
-                      • <strong>品質控制：</strong>建立了嚴格的品質標準和檢驗制度<br>
-                      • <strong>記錄保存：</strong>詳細記錄天氣、收成和品質資料</p>
-                    </div>
-                  </div>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🍇 羅馬留下的三大技術遺產</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:12px;text-align:center;">
+              <div style="font-size:24px;margin-bottom:5px;">🌱</div>
+              <div style="font-size:12px;font-weight:700;color:#14532d;margin-bottom:6px;">種植技術</div>
+              <div style="font-size:10.5px;color:#166534;line-height:1.7;text-align:left;">
+                <div>• 葡萄園規劃與管理</div>
+                <div>• 土壤改良與排水系統</div>
+                <div>• 品種選擇與培育</div>
+                <div>• 收穫時機判斷標準</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:12px;text-align:center;">
+              <div style="font-size:24px;margin-bottom:5px;">🍶</div>
+              <div style="font-size:12px;font-weight:700;color:#78350f;margin-bottom:6px;">釀造工藝</div>
+              <div style="font-size:10.5px;color:#92400e;line-height:1.7;text-align:left;">
+                <div>• 發酵容器的製作技術</div>
+                <div>• 酒液澄清與過濾方法</div>
+                <div>• 儲存與陳年的基本概念</div>
+                <div>• 品質控制的初步標準</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:12px;text-align:center;">
+              <div style="font-size:24px;margin-bottom:5px;">🚢</div>
+              <div style="font-size:12px;font-weight:700;color:#581c87;margin-bottom:6px;">貿易體系</div>
+              <div style="font-size:10.5px;color:#7e22ce;line-height:1.7;text-align:left;">
+                <div>• 建立地中海貿易路線</div>
+                <div>• 葡萄酒包裝與運輸技術</div>
+                <div>• 品質評估與定價機制</div>
+                <div>• 培養專業商人階層</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 style="display:none;">⛪ 中世紀的修道院時代</h3>
+      <h4 style="display:none;">8-12世紀：修道院的興起</h4>
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:10px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⛪ 修道院成為葡萄酒業的守護者</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:12px;padding:14px;">
+              <div style="font-size:13px;font-weight:700;color:#e0e7ff;margin-bottom:10px;">📿 宗教推動力</div>
+              <div style="display:flex;flex-direction:column;gap:7px;">
+                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
+                  <div style="font-size:11px;font-weight:700;color:#c7d2fe;margin-bottom:2px;">聖體聖事需求</div>
+                  <div style="font-size:10px;color:#a5b4fc;line-height:1.5;">天主教彌撒需要大量葡萄酒，宗教儀式成為穩定需求</div>
                 </div>
-
-                <div class="contribution-period">
-                  <h5>12-15世紀：技術成熟期</h5>
-                  <div class="period-details">
-                    <div class="detail-aspect">
-                      <h6>🏰 封建制度下的發展</h6>
-                      <p>• <strong>領主特權：</strong>貴族控制最佳葡萄園地塊<br>
-                      • <strong>農奴制度：</strong>提供穩定的勞動力來源<br>
-                      • <strong>市場保護：</strong>行會制度保護本地葡萄酒業<br>
-                      • <strong>技術傳承：</strong>師傅制度確保技術代代相傳</p>
-                    </div>
-                    <div class="detail-aspect">
-                      <h6>📈 商業化發展</h6>
-                      <p>• <strong>市場擴張：</strong>葡萄酒貿易延伸到歐洲各地<br>
-                      • <strong>品質分級：</strong>開始根據產地和品質進行分級<br>
-                      • <strong>品牌概念：</strong>特定修道院的葡萄酒享有聲譽<br>
-                      • <strong>價格差異：</strong>優質葡萄酒開始命令更高價格</p>
-                    </div>
-                  </div>
+                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
+                  <div style="font-size:11px;font-weight:700;color:#c7d2fe;margin-bottom:2px;">修道院經濟</div>
+                  <div style="font-size:10px;color:#a5b4fc;line-height:1.5;">葡萄酒成為修道院重要收入來源，推動持續投資</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
+                  <div style="font-size:11px;font-weight:700;color:#c7d2fe;margin-bottom:2px;">朝聖貿易</div>
+                  <div style="font-size:10px;color:#a5b4fc;line-height:1.5;">聖雅各朝聖路線帶動週邊葡萄酒需求激增</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
+                  <div style="font-size:11px;font-weight:700;color:#c7d2fe;margin-bottom:2px;">宗教保護</div>
+                  <div style="font-size:10px;color:#a5b4fc;line-height:1.5;">教會地位使葡萄園免受戰爭與掠奪破壞</div>
                 </div>
               </div>
             </div>
-
-            <div class="medieval-achievements">
-              <h4>中世紀的重要成就</h4>
-              <div class="achievement-categories">
-                <div class="achievement-item">
-                  <h5>🍇 葡萄品種發展</h5>
-                  <p>• 培育出更適合波爾多氣候的葡萄品種<br>
-                  • 開始嘗試不同品種的混釀技術<br>
-                  • 建立了品種選育的科學方法<br>
-                  • 保存了珍貴的葡萄品種基因資源</p>
+            <div style="background:linear-gradient(135deg,#052e16,#14532d);border-radius:12px;padding:14px;">
+              <div style="font-size:13px;font-weight:700;color:#bbf7d0;margin-bottom:10px;">🔬 技術革新</div>
+              <div style="display:flex;flex-direction:column;gap:7px;">
+                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
+                  <div style="font-size:11px;font-weight:700;color:#86efac;margin-bottom:2px;">品種改良</div>
+                  <div style="font-size:10px;color:#6ee7b7;line-height:1.5;">修士們選育出更適合波爾多氣候的葡萄品種</div>
                 </div>
-                <div class="achievement-item">
-                  <h5>🏭 釀造技術進步</h5>
-                  <p>• 發明了更精確的發酵控制方法<br>
-                  • 改進了葡萄酒的儲存和陳年技術<br>
-                  • 開發了葡萄酒的澄清和過濾工藝<br>
-                  • 建立了品質檢驗的標準程序</p>
+                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
+                  <div style="font-size:11px;font-weight:700;color:#86efac;margin-bottom:2px;">釀造技術</div>
+                  <div style="font-size:10px;color:#6ee7b7;line-height:1.5;">發展更精密的發酵控制與陳年技術</div>
                 </div>
-                <div class="achievement-item">
-                  <h5>📚 知識體系建立</h5>
-                  <p>• 編寫了第一批葡萄酒釀造手冊<br>
-                  • 建立了完整的釀酒日曆和作業指南<br>
-                  • 記錄了大量的氣候和收成數據<br>
-                  • 形成了葡萄酒文化的理論基礎</p>
+                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
+                  <div style="font-size:11px;font-weight:700;color:#86efac;margin-bottom:2px;">品質控制</div>
+                  <div style="font-size:10px;color:#6ee7b7;line-height:1.5;">建立嚴格的品質標準與檢驗制度</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
+                  <div style="font-size:11px;font-weight:700;color:#86efac;margin-bottom:2px;">記錄保存</div>
+                  <div style="font-size:10px;color:#6ee7b7;line-height:1.5;">詳細記錄天氣、收成與品質的珍貴歷史資料</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:10px;">
+          <div style="font-size:11px;font-weight:700;color:#92400e;margin-bottom:5px;">💡 為何修道院能成功守護葡萄酒業？</div>
+          <div style="font-size:10.5px;color:#78350f;line-height:1.7;">修道院兼具 <strong>穩定的勞動力</strong>（修士）、<strong>豐富的土地資源</strong>（教會地產）、<strong>長遠的時間視野</strong>（不受王朝更迭影響），三者結合使其成為中世紀最有效的葡萄酒業守護者與創新者。</div>
+        </div>
+
+      </div>
+      <h4 style="display:none;">12-15世紀：技術完熟與商業化</h4>
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⚙️ 封建制度與商業化雙軌並進</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:12px;padding:12px;">
+              <div style="font-size:13px;font-weight:700;color:#be123c;margin-bottom:8px;">🏰 封建制度下的發展</div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#9f1239;margin-bottom:2px;">領主特權</div>
+                  <div style="font-size:10px;color:#be123c;line-height:1.5;">貴族控制最佳風土地塊，形成精英葡萄園格局</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#9f1239;margin-bottom:2px;">勞動力保障</div>
+                  <div style="font-size:10px;color:#be123c;line-height:1.5;">農奴制度提供穩定的葡萄園耕作勞動力</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#9f1239;margin-bottom:2px;">技術傳承</div>
+                  <div style="font-size:10px;color:#be123c;line-height:1.5;">師傅制度確保釀酒技術代代精確傳承</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:12px;padding:12px;">
+              <div style="font-size:13px;font-weight:700;color:#14532d;margin-bottom:8px;">📈 商業化加速發展</div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">市場擴張</div>
+                  <div style="font-size:10px;color:#14532d;line-height:1.5;">葡萄酒貿易延伸至歐洲各地，建立廣泛市場</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">品質分級萌芽</div>
+                  <div style="font-size:10px;color:#14532d;line-height:1.5;">開始依產地與品質分級，品牌概念初步形成</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">價格差異化</div>
+                  <div style="font-size:10px;color:#14532d;line-height:1.5;">優質葡萄酒獲得更高溢價，推動品質競爭</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🏆 中世紀留下的三大成就</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:11px;">
+              <div style="font-size:20px;margin-bottom:5px;">🍇</div>
+              <div style="font-size:11.5px;font-weight:700;color:#1e3a8a;margin-bottom:5px;">葡萄品種發展</div>
+              <div style="font-size:10px;color:#1d4ed8;line-height:1.7;">
+                <div>• 選育適合波爾多氣候的品種</div>
+                <div>• 嘗試不同品種的混釀技術</div>
+                <div>• 建立品種選育的科學方法</div>
+                <div>• 保存珍貴的品種基因資源</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:11px;">
+              <div style="font-size:20px;margin-bottom:5px;">🏭</div>
+              <div style="font-size:11.5px;font-weight:700;color:#7c2d12;margin-bottom:5px;">釀造技術進步</div>
+              <div style="font-size:10px;color:#9a3412;line-height:1.7;">
+                <div>• 精確的發酵控制方法</div>
+                <div>• 改進儲存與陳年技術</div>
+                <div>• 開發澄清過濾工藝</div>
+                <div>• 建立品質檢驗標準程序</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:11px;">
+              <div style="font-size:20px;margin-bottom:5px;">📚</div>
+              <div style="font-size:11.5px;font-weight:700;color:#581c87;margin-bottom:5px;">知識體系建立</div>
+              <div style="font-size:10px;color:#7e22ce;line-height:1.7;">
+                <div>• 編寫第一批釀造手冊</div>
+                <div>• 建立釀酒日曆與作業指南</div>
+                <div>• 記錄大量氣候與收成數據</div>
+                <div>• 形成葡萄酒文化理論基礎</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     `,
     highlights: [
