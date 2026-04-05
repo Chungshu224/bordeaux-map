@@ -434,10 +434,15 @@ const retryLoad = () => {
 }
 
 // 導航方法
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
 const nextSlide = () => {
   if (currentSlide.value < totalSlides.value - 1) {
     currentSlide.value++
     resetQuiz()
+    scrollToTop()
   }
 }
 
@@ -445,12 +450,14 @@ const previousSlide = () => {
   if (currentSlide.value > 0) {
     currentSlide.value--
     resetQuiz()
+    scrollToTop()
   }
 }
 
 const goToSlide = (index) => {
   currentSlide.value = index
   resetQuiz()
+  scrollToTop()
 }
 
 // 地圖控制
