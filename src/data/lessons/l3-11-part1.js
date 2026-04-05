@@ -345,196 +345,200 @@ export const l311Part1Content = [
     title: '第二章：英國統治時期的黃金年代',
     subtitle: '英法聯姻開啟的貿易繁榮',
     content: `
-      <div class="chapter-content">
-        <div class="english-period">
-          <h3>👑 阿基坦公國的聯姻</h3>
-          <div class="marriage-alliance">
-            <div class="historical-context">
-              <h4>1152年：改變歷史的聯姻</h4>
-              <div class="marriage-details">
-                <div class="key-figures">
-                  <div class="figure-card">
-                    <h5>👸 阿基坦的埃莉諾</h5>
-                    <p>• 阿基坦公國女繼承人<br>
-                    • 控制著包括波爾多在內的廣大領土<br>
-                    • 法國國王路易七世的前妻<br>
-                    • 中世紀最有權勢的女性之一</p>
-                  </div>
-                  <div class="figure-card">
-                    <h5>🤴 亨利·安茹</h5>
-                    <p>• 後來的英國國王亨利二世<br>
-                    • 安茹伯爵和諾曼底公爵<br>
-                    • 通過聯姻獲得阿基坦公國<br>
-                    • 建立了橫跨海峽兩岸的帝國</p>
-                  </div>
-                </div>
-                
-                <div class="marriage-consequences">
-                  <h5>聯姻的深遠影響</h5>
-                  <div class="impact-areas">
-                    <div class="impact-item">
-                      <h6>🗺️ 政治影響</h6>
-                      <p>• 波爾多成為英國領土的一部分<br>
-                      • 英國統治持續了300年（1152-1453）<br>
-                      • 建立了穩定的政治環境<br>
-                      • 為長期商業發展創造條件</p>
-                    </div>
-                    <div class="impact-item">
-                      <h6>💼 經濟影響</h6>
-                      <p>• 開闢了直接的英國市場<br>
-                      • 建立了特殊的貿易特權<br>
-                      • 吸引了英國商人投資<br>
-                      • 創造了穩定的收入來源</p>
-                    </div>
-                    <div class="impact-item">
-                      <h6>🍷 葡萄酒業影響</h6>
-                      <p>• 英國成為波爾多葡萄酒的主要市場<br>
-                      • 英國貴族的需求推動品質提升<br>
-                      • 建立了葡萄酒貿易的制度框架<br>
-                      • 形成了延續至今的商業關係</p>
-                    </div>
-                  </div>
-                </div>
+      <h3 style="display:none;">👑 阿基坦公國的聯姻</h3>
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:12px;padding:14px;margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#e0e7ff;margin-bottom:4px;">📅 1152年 — 改變波爾多命運的聯姻</div>
+          <div style="font-size:10.5px;color:#a5b4fc;margin-bottom:10px;">英國統治持續300年（1152–1453），奠定波爾多葡萄酒業國際化基礎</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:12px;">
+              <div style="font-size:24px;text-align:center;margin-bottom:5px;">👸</div>
+              <div style="font-size:12px;font-weight:700;color:#c7d2fe;text-align:center;margin-bottom:7px;">阿基坦的埃莉諾</div>
+              <div style="font-size:10px;color:#a5b4fc;line-height:1.7;">
+                <div>• 阿基坦公國女繼承人</div>
+                <div>• 控制包括波爾多的廣大領土</div>
+                <div>• 法王路易七世的前妻</div>
+                <div>• 中世紀最有影響力的女性</div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:12px;">
+              <div style="font-size:24px;text-align:center;margin-bottom:5px;">🤴</div>
+              <div style="font-size:12px;font-weight:700;color:#c7d2fe;text-align:center;margin-bottom:7px;">亨利·安茹（後英王亨利二世）</div>
+              <div style="font-size:10px;color:#a5b4fc;line-height:1.7;">
+                <div>• 安茹伯爵・諾曼底公爵</div>
+                <div>• 通過聯姻獲得阿基坦公國</div>
+                <div>• 建立橫跨英法的安茹帝國</div>
+                <div>• 開啟波爾多英國時代</div>
               </div>
             </div>
           </div>
+        </div>
 
-          <h3>🚢 中世紀的葡萄酒貿易</h3>
-          <div class="medieval-trade">
-            <div class="trade-system">
-              <h4>英波葡萄酒貿易體系</h4>
-              <div class="trade-mechanics">
-                <div class="trade-routes">
-                  <h5>🗺️ 貿易路線</h5>
-                  <div class="route-details">
-                    <div class="route-item">
-                      <h6>加龍河水運</h6>
-                      <p>• 波爾多港口成為葡萄酒集散中心<br>
-                      • 內陸葡萄園通過河運將酒運到港口<br>
-                      • 發展了專門的葡萄酒運輸船隻<br>
-                      • 建立了完善的倉儲設施</p>
-                    </div>
-                    <div class="route-item">
-                      <h6>跨海運輸</h6>
-                      <p>• 每年秋季的「酒船隊」(Wine Fleet)<br>
-                      • 直航英國的倫敦、布里斯托等港口<br>
-                      • 專業的葡萄酒運輸技術<br>
-                      • 海上保險和風險管理</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="trade-privileges">
-                  <h5>🏛️ 貿易特權與保護</h5>
-                  <div class="privilege-types">
-                    <div class="privilege-item">
-                      <h6>英國市場特權</h6>
-                      <p>• 波爾多葡萄酒享有較低的關稅<br>
-                      • 優先進入英國市場的權利<br>
-                      • 免受貿易禁令的保護<br>
-                      • 英國王室的採購優先權</p>
-                    </div>
-                    <div class="privilege-item">
-                      <h6>生產者保護</h6>
-                      <p>• 波爾多本地生產者的獨占權<br>
-                      • 外地葡萄酒的銷售限制<br>
-                      • 品質標準的法律保護<br>
-                      • 商標和產地標示的早期形式</p>
-                    </div>
-                  </div>
-                </div>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🌍 聯姻的三層深遠影響</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:10px;padding:12px;">
+              <div style="font-size:20px;text-align:center;margin-bottom:5px;">🗺️</div>
+              <div style="font-size:12px;font-weight:700;color:#be123c;text-align:center;margin-bottom:7px;">政治影響</div>
+              <div style="font-size:10px;color:#9f1239;line-height:1.7;">
+                <div>• 波爾多成為英國領土</div>
+                <div>• 建立穩定政治環境</div>
+                <div>• 保護貿易免受干擾</div>
+                <div>• 為商業發展創造條件</div>
               </div>
             </div>
-
-            <div class="trade-volume">
-              <h4>📊 貿易規模與經濟影響</h4>
-              <div class="economic-data">
-                <div class="volume-statistics">
-                  <h5>貿易量數據</h5>
-                  <div class="stats-grid">
-                    <div class="stat-item">
-                      <h6>13世紀高峰期</h6>
-                      <p>• 年出口量：約100萬加侖<br>
-                      • 占波爾多總產量的80%<br>
-                      • 英國葡萄酒消費的主要來源<br>
-                      • 創造了數千個就業機會</p>
-                    </div>
-                    <div class="stat-item">
-                      <h6>經濟貢獻</h6>
-                      <p>• 占波爾多總收入的60%以上<br>
-                      • 支撐了整個地區的經濟發展<br>
-                      • 推動了相關產業的繁榮<br>
-                      • 成為英國王室的重要財政來源</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="social-impact">
-                  <h5>社會文化影響</h5>
-                  <div class="cultural-changes">
-                    <div class="change-aspect">
-                      <h6>🏛️ 城市發展</h6>
-                      <p>• 波爾多成為重要的商業城市<br>
-                      • 建設了宏偉的商業建築<br>
-                      • 吸引了各國商人定居<br>
-                      • 形成了國際化的城市文化</p>
-                    </div>
-                    <div class="change-aspect">
-                      <h6>👥 社會階層</h6>
-                      <p>• 創造了富有的葡萄酒商人階層<br>
-                      • 推動了中產階級的形成<br>
-                      • 提升了釀酒師的社會地位<br>
-                      • 建立了專業的葡萄酒行業</p>
-                    </div>
-                  </div>
-                </div>
+            <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:12px;">
+              <div style="font-size:20px;text-align:center;margin-bottom:5px;">💼</div>
+              <div style="font-size:12px;font-weight:700;color:#78350f;text-align:center;margin-bottom:7px;">經濟影響</div>
+              <div style="font-size:10px;color:#92400e;line-height:1.7;">
+                <div>• 直接打開英國市場</div>
+                <div>• 建立特殊貿易特權</div>
+                <div>• 吸引英國商人投資</div>
+                <div>• 創造穩定收入來源</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:12px;">
+              <div style="font-size:20px;text-align:center;margin-bottom:5px;">🍷</div>
+              <div style="font-size:12px;font-weight:700;color:#1e3a8a;text-align:center;margin-bottom:7px;">葡萄酒業影響</div>
+              <div style="font-size:10px;color:#1d4ed8;line-height:1.7;">
+                <div>• 英國成為最大市場</div>
+                <div>• 貴族需求推動品質</div>
+                <div>• 建立貿易制度框架</div>
+                <div>• 奠定延續至今的關係</div>
               </div>
             </div>
           </div>
+        </div>
 
-          <h3>⚔️ 百年戰爭的衝擊</h3>
-          <div class="hundred-years-war">
-            <div class="war-impact">
-              <h4>戰爭對葡萄酒業的影響</h4>
-              <div class="war-phases">
-                <div class="phase-item">
-                  <h5>1337-1380年：第一階段</h5>
-                  <p>• 貿易路線受到威脅<br>
-                  • 葡萄園遭受戰爭破壞<br>
-                  • 勞動力短缺問題嚴重<br>
-                  • 但英國市場需求依然強勁</p>
+      </div>
+
+      <h3 style="display:none;">🚢 中世紀的葡萄酒貿易</h3>
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🚢 英波葡萄酒貿易體系</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #0284c7;border-radius:12px;padding:12px;">
+              <div style="font-size:12px;font-weight:700;color:#0c4a6e;margin-bottom:8px;">🗺️ 貿易路線</div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="background:rgba(255,255,255,0.7);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#0369a1;margin-bottom:2px;">加龍河水運</div>
+                  <div style="font-size:10px;color:#0284c7;line-height:1.5;">波爾多港成為集散中心，內陸葡萄園透過河運輸往港口，配備專業葡萄酒運輸船</div>
                 </div>
-                <div class="phase-item">
-                  <h5>1415-1453年：最後階段</h5>
-                  <p>• 法國逐漸收復失地<br>
-                  • 英國統治搖搖欲墜<br>
-                  • 葡萄酒貿易急劇下降<br>
-                  • 1453年：波爾多重歸法國</p>
+                <div style="background:rgba(255,255,255,0.7);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#0369a1;margin-bottom:2px;">跨海酒船隊（Wine Fleet）</div>
+                  <div style="font-size:10px;color:#0284c7;line-height:1.5;">每年秋季固定船隊直航倫敦・布里斯托，建立保險制度管理海上風險</div>
                 </div>
               </div>
-              
-              <div class="adaptation-strategies">
-                <h5>💡 產業適應策略</h5>
-                <div class="strategy-list">
-                  <div class="strategy-item">
-                    <h6>市場多元化</h6>
-                    <p>• 開拓荷蘭、德國等新市場<br>
-                    • 減少對英國市場的依賴<br>
-                    • 發展本土消費市場<br>
-                    • 探索其他貿易夥伴</p>
-                  </div>
-                  <div class="strategy-item">
-                    <h6>品質提升</h6>
-                    <p>• 專注於高品質葡萄酒生產<br>
-                    • 建立更嚴格的品質標準<br>
-                    • 發展獨特的釀造技術<br>
-                    • 強化產區品牌形象</p>
-                  </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:12px;padding:12px;">
+              <div style="font-size:12px;font-weight:700;color:#14532d;margin-bottom:8px;">🏛️ 貿易特權保護</div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="background:rgba(255,255,255,0.7);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">英國市場特權</div>
+                  <div style="font-size:10px;color:#14532d;line-height:1.5;">享有較低關稅・優先進入市場・免受貿易禁令・英國王室採購優先</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.7);border-radius:7px;padding:7px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">生產者保護</div>
+                  <div style="font-size:10px;color:#14532d;line-height:1.5;">波爾多本地獨占權・外地酒銷售限制・品質標準受法律保護，產地標示雛形</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">📊 13世紀貿易高峰期的經濟成就</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:12px;">
+              <div style="font-size:12px;font-weight:700;color:#581c87;margin-bottom:8px;">📈 貿易規模數據</div>
+              <div style="display:flex;flex-direction:column;gap:5px;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="background:#a855f7;color:white;border-radius:6px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap;">年出口量</div>
+                  <div style="font-size:10.5px;color:#7e22ce;">約 <strong>100萬加侖</strong>，佔總產量 80%</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="background:#a855f7;color:white;border-radius:6px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap;">收入佔比</div>
+                  <div style="font-size:10.5px;color:#7e22ce;">佔波爾多總收入 <strong>60% 以上</strong></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="background:#a855f7;color:white;border-radius:6px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap;">就業貢獻</div>
+                  <div style="font-size:10.5px;color:#7e22ce;">創造 <strong>數千個</strong> 直接就業機會</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:12px;">
+              <div style="font-size:12px;font-weight:700;color:#7c2d12;margin-bottom:8px;">🏛️ 社會文化影響</div>
+              <div style="display:flex;flex-direction:column;gap:5px;">
+                <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:6px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#7c2d12;margin-bottom:2px;">🌆 城市發展</div>
+                  <div style="font-size:10px;color:#9a3412;line-height:1.4;">波爾多躍升為重要商業城市，建設宏偉商業建築，吸引各國商人定居</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:6px;">
+                  <div style="font-size:10.5px;font-weight:700;color:#7c2d12;margin-bottom:2px;">👥 社會階層</div>
+                  <div style="font-size:10px;color:#9a3412;line-height:1.4;">催生富裕的葡萄酒商人階層，推動中產階級形成，提升釀酒師社會地位</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 style="display:none;">⚔️ 百年戰爭的衝擊</h3>
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⚔️ 百年戰爭兩階段衝擊（1337–1453）</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:2px solid #f97316;border-radius:12px;padding:12px;">
+              <div style="font-size:11px;font-weight:700;color:#7c2d12;margin-bottom:6px;">📅 1337–1380 年：第一階段</div>
+              <div style="font-size:10.5px;color:#9a3412;line-height:1.8;">
+                <div>⚠️ 貿易路線受到戰爭威脅</div>
+                <div>⚠️ 葡萄園遭受戰火破壞</div>
+                <div>⚠️ 勞動力嚴重短缺</div>
+                <div style="margin-top:4px;background:rgba(249,115,22,0.1);border-radius:5px;padding:5px;font-size:10px;color:#7c2d12;">✅ 英國市場需求仍然強勁，支撐產業</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:2px solid #f43f5e;border-radius:12px;padding:12px;">
+              <div style="font-size:11px;font-weight:700;color:#be123c;margin-bottom:6px;">📅 1415–1453 年：最後階段</div>
+              <div style="font-size:10.5px;color:#9f1239;line-height:1.8;">
+                <div>⚠️ 法國逐步收復失地</div>
+                <div>⚠️ 英國統治搖搖欲墜</div>
+                <div>⚠️ 葡萄酒貿易量急劇下滑</div>
+                <div style="margin-top:4px;background:rgba(244,63,94,0.1);border-radius:5px;padding:5px;font-size:10px;color:#be123c;font-weight:700;">🏁 1453年：波爾多重歸法國版圖</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">💡 危機轉機：波爾多的因應策略</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:12px;padding:12px;">
+              <div style="font-size:13px;font-weight:700;color:#14532d;margin-bottom:8px;">🌍 市場多元化</div>
+              <div style="font-size:10.5px;color:#166534;line-height:1.8;">
+                <div>• 開拓荷蘭・德國・北歐新市場</div>
+                <div>• 降低對英國單一市場的依賴</div>
+                <div>• 發展法國本土消費市場</div>
+                <div>• 探索更多貿易夥伴關係</div>
+                <div style="margin-top:6px;background:rgba(34,197,94,0.12);border-radius:6px;padding:5px;font-size:10px;color:#14532d;font-weight:600;">→ 這一轉型奠定了現代全球銷售格局</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:12px;padding:12px;">
+              <div style="font-size:13px;font-weight:700;color:#1e3a8a;margin-bottom:8px;">⬆️ 品質提升策略</div>
+              <div style="font-size:10.5px;color:#1d4ed8;line-height:1.8;">
+                <div>• 專注高品質葡萄酒生產</div>
+                <div>• 建立更嚴格的品質標準</div>
+                <div>• 發展獨特的波爾多釀造技術</div>
+                <div>• 強化產區品牌形象</div>
+                <div style="margin-top:6px;background:rgba(59,130,246,0.12);border-radius:6px;padding:5px;font-size:10px;color:#1e3a8a;font-weight:600;">→ 為1855年分級制度的誕生埋下伏筆</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     `,
     highlights: [
@@ -557,13 +561,7 @@ export const l311Part1Content = [
         content: '百年戰爭雖然結束了英國統治，但促使波爾多發展多元化市場策略'
       }
     ],
-    hasMap: true,
-    mapConfig: {
-      center: [44.85, -0.65],
-      zoom: 8,
-      showTradeRoutes: true,
-      highlightPorts: true
-    },
+        hasMap: false,
     interactiveElements: [
       {
         type: 'trade-route-explorer',
