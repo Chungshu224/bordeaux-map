@@ -72,134 +72,67 @@ export const l39Content = [
     type: 'content',
     title: '產業價值鏈與生態系統分析',
     content: `
-      <div class="chapter-content">
-        <div class="business-ecosystem">
-          <h3>🏗️ 產業價值鏈分析</h3>
-          <div class="value-chain">
-            <div class="chain-segment">
-              <h4>🍇 上游：葡萄種植</h4>
-              <div class="segment-details">
-                <div class="detail-item">
-                  <h5>土地所有者</h5>
-                  <p>• 大型酒莊集團<br>
-                  • 家族式酒莊<br>
-                  • 投資基金持有<br>
-                  • 合作社成員</p>
-                </div>
-                <div class="detail-item">
-                  <h5>供應商網絡</h5>
-                  <p>• 農業設備供應商<br>
-                  • 肥料和農藥供應商<br>
-                  • 技術服務提供商<br>
-                  • 勞務承包商</p>
-                </div>
-                <div class="detail-item">
-                  <h5>成本結構</h5>
-                  <p>• 土地成本：40-50%<br>
-                  • 勞動成本：25-30%<br>
-                  • 材料成本：15-20%<br>
-                  • 其他成本：10-15%</p>
-                </div>
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <!-- 三層價值鏈 -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:8px 12px;color:#fff;font-weight:700;font-size:0.81rem;">🍇 上游：葡萄種植</div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <b style="color:#1B5E20;">土地所有者：</b>大型酒莊集團·家族式酒莊·投資基金·合作社<br>
+              <b style="color:#1B5E20;">供應商：</b>農業設備·肥料農藥·技術服務·勞務承包
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:6px;font-size:0.68rem;">
+                <div style="background:#E8F5E9;border-radius:4px;padding:3px 6px;">土地成本 <b style="color:#1B5E20;">40-50%</b></div>
+                <div style="background:#E8F5E9;border-radius:4px;padding:3px 6px;">勞動成本 <b style="color:#1B5E20;">25-30%</b></div>
+                <div style="background:#E8F5E9;border-radius:4px;padding:3px 6px;">材料成本 <b style="color:#1B5E20;">15-20%</b></div>
+                <div style="background:#E8F5E9;border-radius:4px;padding:3px 6px;">其他成本 <b style="color:#1B5E20;">10-15%</b></div>
               </div>
             </div>
-
-            <div class="chain-segment">
-              <h4>🍷 中游：釀造與陳年</h4>
-              <div class="segment-details">
-                <div class="detail-item">
-                  <h5>釀造設施</h5>
-                  <p>• 現代化釀酒設備<br>
-                  • 橡木桶投資<br>
-                  • 儲存設施<br>
-                  • 品質控制實驗室</p>
-                </div>
-                <div class="detail-item">
-                  <h5>專業服務</h5>
-                  <p>• 釀酒顧問<br>
-                  • 品質檢測服務<br>
-                  • 技術支持<br>
-                  • 認證機構</p>
-                </div>
-                <div class="detail-item">
-                  <h5>時間成本</h5>
-                  <p>• 發酵期：1-2個月<br>
-                  • 橡木桶陳年：12-24個月<br>
-                  • 瓶陳：6個月-數年<br>
-                  • 資金佔用成本高</p>
-                </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:8px 12px;color:#fff;font-weight:700;font-size:0.81rem;">🍷 中游：釀造與陳年</div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <b style="color:#1565C0;">釀造設施：</b>現代釀酒設備·橡木桶·儲存設施·品質實驗室<br>
+              <b style="color:#1565C0;">專業服務：</b>釀酒顧問·品質檢測·技術支持·認證機構
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:6px;font-size:0.68rem;">
+                <div style="background:#E3F2FD;border-radius:4px;padding:3px 6px;">發酵期 <b style="color:#1565C0;">1-2 個月</b></div>
+                <div style="background:#E3F2FD;border-radius:4px;padding:3px 6px;">桶陳 <b style="color:#1565C0;">12-24 月</b></div>
+                <div style="background:#E3F2FD;border-radius:4px;padding:3px 6px;">瓶陳 <b style="color:#1565C0;">6月-數年</b></div>
+                <div style="background:#E3F2FD;border-radius:4px;padding:3px 6px;">資金佔用 <b style="color:#1565C0;">成本高</b></div>
               </div>
             </div>
-
-            <div class="chain-segment">
-              <h4>📦 下游：銷售與分銷</h4>
-              <div class="segment-details">
-                <div class="detail-item">
-                  <h5>銷售渠道</h5>
-                  <p>• 酒商（Négociants）<br>
-                  • 直接銷售<br>
-                  • 出口代理<br>
-                  • 電商平台</p>
-                </div>
-                <div class="detail-item">
-                  <h5>終端市場</h5>
-                  <p>• 餐飲業（50%）<br>
-                  • 零售商（30%）<br>
-                  • 收藏家（15%）<br>
-                  • 其他（5%）</p>
-                </div>
-                <div class="detail-item">
-                  <h5>利潤分配</h5>
-                  <p>• 生產者：30-40%<br>
-                  • 分銷商：20-25%<br>
-                  • 零售商：35-50%<br>
-                  • 稅費：各國不同</p>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF6D00);padding:8px 12px;color:#fff;font-weight:700;font-size:0.81rem;">📦 下游：銷售與分銷</div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <b style="color:#E65100;">銷售渠道：</b>酒商（Négociants）·直接銷售·出口代理·電商平台
+              <div style="margin-top:6px;font-size:0.68rem;">
+                <div style="background:#FFF3E0;border-radius:5px;padding:5px 8px;">
+                  <div style="font-weight:600;color:#E65100;margin-bottom:3px;">利潤分配</div>
+                  <div style="display:flex;flex-direction:column;gap:2px;">
+                    <div style="display:flex;justify-content:space-between;">生產者<span style="color:#1B5E20;font-weight:700;">30-40%</span></div>
+                    <div style="display:flex;justify-content:space-between;">分銷商<span style="color:#1565C0;font-weight:700;">20-25%</span></div>
+                    <div style="display:flex;justify-content:space-between;">零售商<span style="color:#E65100;font-weight:700;">35-50% ★</span></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <h3>🤝 關鍵參與者分析</h3>
-          <div class="key-players">
-            <div class="player-category">
-              <h4>🏰 頂級酒莊</h4>
-              <div class="player-analysis">
-                <div class="player-item">
-                  <h5>一級莊 (First Growth)</h5>
-                  <p>• <strong>特點：</strong>品牌價值極高，價格制定者<br>
-                  • <strong>策略：</strong>稀缺性營銷，高端定位<br>
-                  • <strong>優勢：</strong>歷史聲譽，品質保證<br>
-                  • <strong>挑戰：</strong>產量限制，市場波動影響大</p>
-                </div>
-                <div class="player-item">
-                  <h5>列级莊 (Cru Classé)</h5>
-                  <p>• <strong>特點：</strong>品質與價格平衡，市場中堅<br>
-                  • <strong>策略：</strong>品質提升，品牌差異化<br>
-                  • <strong>優勢：</strong>穩定品質，合理價格<br>
-                  • <strong>挑戰：</strong>競爭激烈，需要持續投資</p>
-                </div>
-              </div>
+        </div>
+        <!-- 關鍵參與者 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:7px 12px;color:#fff;font-weight:700;font-size:0.78rem;">🏰 頂級酒莊策略</div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;line-height:1.75;">
+              <b style="color:#B71C1C;">一級莊：</b>品牌價值極高·稀缺性營銷·歷史聲譽保證·產量限制挑戰<br>
+              <b style="color:#B71C1C;">列級莊：</b>品質與價格平衡·差異化品牌·穩定品質·持續投資需求
             </div>
-
-            <div class="player-category">
-              <h4>🏢 酒商集團</h4>
-              <div class="merchant-analysis">
-                <div class="merchant-role">
-                  <h5>傳統酒商功能</h5>
-                  <ul>
-                    <li><strong>採購整合：</strong>向小生產者採購，規模化運作</li>
-                    <li><strong>品質控制：</strong>統一品質標準，品牌保證</li>
-                    <li><strong>市場開發：</strong>國際市場拓展，渠道建設</li>
-                    <li><strong>資金支持：</strong>為生產者提供預付款和融資</li>
-                  </ul>
-                </div>
-                <div class="merchant-evolution">
-                  <h5>現代轉型趨勢</h5>
-                  <p>• 向上游整合：收購葡萄園和酒莊<br>
-                  • 品牌建設：打造自有品牌<br>
-                  • 數位化轉型：電商和數據分析<br>
-                  • 可持續發展：環保和社會責任</p>
-                </div>
-              </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);padding:7px 12px;color:#fff;font-weight:700;font-size:0.78rem;">🏢 酒商集團（Négociants）功能</div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;line-height:1.75;">
+              <b style="color:#4527A0;">採購整合：</b>向小生產者採購，規模化運作<br>
+              <b style="color:#4527A0;">市場開發：</b>國際渠道建設·資金支持生產者<br>
+              <b style="color:#4527A0;">現代轉型：</b>向上游整合·打造自有品牌·數位化電商
             </div>
           </div>
         </div>
@@ -218,26 +151,9 @@ export const l39Content = [
         title: '生態系統',
         content: '頂級酒莊、酒商集團等關鍵參與者形成了相互依存的商業生態系統'
       }
-    ],
-    hasMap: true,
-    mapConfig: {
-      center: [44.85, -0.65],
-      zoom: 9,
-      showRegions: ['all-regions'],
-      highlightBusinessCenters: true
-    },
-    interactiveElements: [
-      {
-        type: 'value-chain-analyzer',
-        title: '價值鏈分析工具',
-        data: {
-          segments: ['葡萄種植', '釀造陳年', '銷售分銷'],
-          costs: ['土地', '勞動', '設備', '營銷'],
-          margins: ['生產者', '分銷商', '零售商']
-        }
-      }
     ]
   },
+
 
   // 第一章知識檢測
   {
@@ -283,157 +199,109 @@ export const l39Content = [
     type: 'content',
     title: '市場細分與品牌建設',
     content: `
-      <div class="chapter-content">
-        <div class="market-positioning">
-          <h3>🎯 市場細分策略</h3>
-          <div class="segmentation-analysis">
-            <div class="segmentation-dimension">
-              <h4>👥 消費者細分</h4>
-              <div class="consumer-segments">
-                <div class="segment-card">
-                  <h5>🍷 鑒賞家 (Connoisseurs)</h5>
-                  <div class="segment-profile">
-                    <p><strong>特徵：</strong>深度專業知識，追求極致品質</p>
-                    <p><strong>需求：</strong>稀有年份，頂級產區，完美陳年</p>
-                    <p><strong>價格敏感度：</strong>低</p>
-                    <p><strong>購買動機：</strong>收藏價值，社交地位，個人享受</p>
-                    <p><strong>行銷策略：</strong>專業品鑑會，限量發售，專家推薦</p>
-                  </div>
-                </div>
-                <div class="segment-card">
-                  <h5>🥂 社交飲者 (Social Drinkers)</h5>
-                  <div class="segment-profile">
-                    <p><strong>特徵：</strong>中等收入，偶爾享用，重視品牌</p>
-                    <p><strong>需求：</strong>知名品牌，合理價格，易於搭配</p>
-                    <p><strong>價格敏感度：</strong>中等</p>
-                    <p><strong>購買動機：</strong>特殊場合，禮品贈送，身份象徵</p>
-                    <p><strong>行銷策略：</strong>品牌故事，節慶促銷，社交媒體</p>
-                  </div>
-                </div>
-                <div class="segment-card">
-                  <h5>🏪 餐飲業者 (F&B Professionals)</h5>
-                  <div class="segment-profile">
-                    <p><strong>特徵：</strong>專業採購，大量購買，重視性價比</p>
-                    <p><strong>需求：</strong>穩定供應，合理利潤空間，食物搭配</p>
-                    <p><strong>價格敏感度：</strong>高</p>
-                    <p><strong>購買動機：</strong>客戶滿意，成本控制，菜單搭配</p>
-                    <p><strong>行銷策略：</strong>專業培訓，批量折扣，技術支持</p>
-                  </div>
-                </div>
-                <div class="segment-card">
-                  <h5>💰 投資收藏家 (Investors)</h5>
-                  <div class="segment-profile">
-                    <p><strong>特徵：</strong>關注投資回報，長期持有，專業儲存</p>
-                    <p><strong>需求：</strong>升值潛力，市場流動性，真品保證</p>
-                    <p><strong>價格敏感度：</strong>低（關注投資價值）</p>
-                    <p><strong>購買動機：</strong>資產配置，通膨對沖，傳承價值</p>
-                    <p><strong>行銷策略：</strong>投資報告，拍賣會，認證服務</p>
-                  </div>
-                </div>
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">👥 消費者細分</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:10px;">
+              <div style="font-size:18px;text-align:center;margin-bottom:4px;">🍷</div>
+              <div style="font-size:12px;font-weight:700;color:#92400e;text-align:center;margin-bottom:6px;">鑒賞家</div>
+              <div style="font-size:10.5px;color:#78350f;line-height:1.5;">
+                <div style="margin-bottom:2px;"><span style="color:#d97706;font-weight:600;">特徵</span> 深度專業知識，追求極致品質</div>
+                <div style="margin-bottom:2px;"><span style="color:#d97706;font-weight:600;">需求</span> 稀有年份、頂級產區</div>
+                <div style="margin-bottom:2px;"><span style="color:#d97706;font-weight:600;">價格敏感</span> 低</div>
+                <div><span style="color:#d97706;font-weight:600;">策略</span> 專業品鑑會、限量發售</div>
               </div>
             </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;">
+              <div style="font-size:18px;text-align:center;margin-bottom:4px;">🥂</div>
+              <div style="font-size:12px;font-weight:700;color:#14532d;text-align:center;margin-bottom:6px;">社交飲者</div>
+              <div style="font-size:10.5px;color:#166534;line-height:1.5;">
+                <div style="margin-bottom:2px;"><span style="color:#16a34a;font-weight:600;">特徵</span> 中等收入，偶爾享用</div>
+                <div style="margin-bottom:2px;"><span style="color:#16a34a;font-weight:600;">需求</span> 知名品牌、合理價格</div>
+                <div style="margin-bottom:2px;"><span style="color:#16a34a;font-weight:600;">價格敏感</span> 中等</div>
+                <div><span style="color:#16a34a;font-weight:600;">策略</span> 品牌故事、節慶促銷</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:10px;">
+              <div style="font-size:18px;text-align:center;margin-bottom:4px;">🏪</div>
+              <div style="font-size:12px;font-weight:700;color:#1e3a8a;text-align:center;margin-bottom:6px;">餐飲業者</div>
+              <div style="font-size:10.5px;color:#1d4ed8;line-height:1.5;">
+                <div style="margin-bottom:2px;"><span style="color:#2563eb;font-weight:600;">特徵</span> 專業採購，大量購買</div>
+                <div style="margin-bottom:2px;"><span style="color:#2563eb;font-weight:600;">需求</span> 穩定供應、合理利潤</div>
+                <div style="margin-bottom:2px;"><span style="color:#2563eb;font-weight:600;">價格敏感</span> 高</div>
+                <div><span style="color:#2563eb;font-weight:600;">策略</span> 專業培訓、批量折扣</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:10px;">
+              <div style="font-size:18px;text-align:center;margin-bottom:4px;">💰</div>
+              <div style="font-size:12px;font-weight:700;color:#581c87;text-align:center;margin-bottom:6px;">投資收藏家</div>
+              <div style="font-size:10.5px;color:#7e22ce;line-height:1.5;">
+                <div style="margin-bottom:2px;"><span style="color:#9333ea;font-weight:600;">特徵</span> 關注投資回報、長期持有</div>
+                <div style="margin-bottom:2px;"><span style="color:#9333ea;font-weight:600;">需求</span> 升值潛力、真品保證</div>
+                <div style="margin-bottom:2px;"><span style="color:#9333ea;font-weight:600;">價格敏感</span> 低（關注投資價值）</div>
+                <div><span style="color:#9333ea;font-weight:600;">策略</span> 投資報告、拍賣會</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <div class="segmentation-dimension">
-              <h4>🌍 地理市場細分</h4>
-              <div class="geographic-segments">
-                <div class="geo-segment">
-                  <h5>🇫🇷 法國本土市場</h5>
-                  <p>• <strong>特點：</strong>傳統消費習慣，日常飲用為主<br>
-                  • <strong>趨勢：</strong>消費量下降，品質要求提升<br>
-                  • <strong>策略：</strong>強調傳統價值，推廣餐酒搭配</p>
-                </div>
-                <div class="geo-segment">
-                  <h5>🇺🇸 北美市場</h5>
-                  <p>• <strong>特點：</strong>高端消費，品牌意識強<br>
-                  • <strong>趨勢：</strong>有機酒款需求增長<br>
-                  • <strong>策略：</strong>教育推廣，專業評分，零售合作</p>
-                </div>
-                <div class="geo-segment">
-                  <h5>🇨🇳 亞洲新興市場</h5>
-                  <p>• <strong>特點：</strong>快速成長，禮品文化濃厚<br>
-                  • <strong>趨勢：</strong>年輕消費者崛起，數位化購買<br>
-                  • <strong>策略：</strong>奢侈品定位，文化適應，電商布局</p>
-                </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🏷️ 品牌價值四大支柱</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+              <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:9px;padding:9px;">
+                <div style="font-size:15px;text-align:center;">🏛️</div>
+                <div style="font-size:11px;font-weight:700;color:#be123c;text-align:center;margin:3px 0;">歷史傳承</div>
+                <div style="font-size:10px;color:#9f1239;line-height:1.5;">• 酒莊建立年份故事<br>• 家族傳承與工藝延續<br>• 歷史事件名人關聯<br>• 傳統與現代的平衡</div>
+              </div>
+              <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #16a34a;border-radius:9px;padding:9px;">
+                <div style="font-size:15px;text-align:center;">🌍</div>
+                <div style="font-size:11px;font-weight:700;color:#14532d;text-align:center;margin:3px 0;">風土特色</div>
+                <div style="font-size:10px;color:#166534;line-height:1.5;">• 獨特地理位置優勢<br>• 土壤與氣候特殊性<br>• 產區與品質關聯<br>• Terroir概念深化</div>
+              </div>
+              <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:9px;padding:9px;">
+                <div style="font-size:15px;text-align:center;">🎨</div>
+                <div style="font-size:11px;font-weight:700;color:#1e3a8a;text-align:center;margin:3px 0;">釀造工藝</div>
+                <div style="font-size:10px;color:#1d4ed8;line-height:1.5;">• 傳統工藝精湛技術<br>• 釀酒師專業能力<br>• 嚴格品質控制標準<br>• 傳統與創新結合</div>
+              </div>
+              <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:9px;padding:9px;">
+                <div style="font-size:15px;text-align:center;">🏆</div>
+                <div style="font-size:11px;font-weight:700;color:#7c2d12;text-align:center;margin:3px 0;">品質認證</div>
+                <div style="font-size:10px;color:#9a3412;line-height:1.5;">• 權威評分與獎項<br>• 國際品質認證<br>• 一致品質標準<br>• 維護品牌信任</div>
               </div>
             </div>
           </div>
 
-          <h3>🏷️ 品牌建立策略</h3>
-          <div class="branding-strategies">
-            <div class="brand-dimensions">
-              <h4>💎 品牌價值構建</h4>
-              <div class="value-pillars">
-                <div class="pillar-item">
-                  <h5>🏛️ 歷史傳承</h5>
-                  <p>• 強調酒莊建立年份和歷史故事<br>
-                  • 突出家族傳承和工藝延續<br>
-                  • 利用歷史事件和名人關聯<br>
-                  • 建立傳統與現代的平衡</p>
-                </div>
-                <div class="pillar-item">
-                  <h5>🌍 風土特色</h5>
-                  <p>• 強調獨特的地理位置優勢<br>
-                  • 突出土壤和氣候的特殊性<br>
-                  • 建立產區和品質的關聯<br>
-                  • 推廣terroir概念的深度理解</p>
-                </div>
-                <div class="pillar-item">
-                  <h5>🎨 釀造工藝</h5>
-                  <p>• 展現傳統工藝的精湛技術<br>
-                  • 強調釀酒師的專業能力<br>
-                  • 突出品質控制的嚴格標準<br>
-                  • 平衡傳統與創新的結合</p>
-                </div>
-                <div class="pillar-item">
-                  <h5>🏆 品質認證</h5>
-                  <p>• 獲得權威評分和獎項<br>
-                  • 通過國際品質認證<br>
-                  • 建立一致的品質標準<br>
-                  • 維護品牌聲譽和信任</p>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">📢 品牌傳播三大渠道</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="background:linear-gradient(135deg,#fffbeb,#fef9c3);border:1px solid #ca8a04;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#713f12;margin-bottom:4px;">🎓 專業教育</div>
+                <div style="font-size:10px;color:#92400e;line-height:1.5;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+                  <div>• WSET等專業認證</div><div>• 酒莊沉浸式參訪</div>
+                  <div>• 大師班知識分享</div><div>• 行業技術研討會</div>
                 </div>
               </div>
-            </div>
-
-            <div class="brand-communication">
-              <h4>📢 品牌傳播策略</h4>
-              <div class="communication-channels">
-                <div class="channel-category">
-                  <h5>🎓 專業教育</h5>
-                  <div class="education-methods">
-                    <ul>
-                      <li><strong>品酒課程：</strong>Court等專業認證</li>
-                      <li><strong>酒莊參訪：</strong>沉浸式體驗和學習</li>
-                      <li><strong>大師班：</strong>邀請專家分享知識</li>
-                      <li><strong>技術研討會：</strong>行業專業交流</li>
-                    </ul>
-                  </div>
+              <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #c026d3;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#701a75;margin-bottom:4px;">🎪 體驗行銷</div>
+                <div style="font-size:10px;color:#86198f;line-height:1.5;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+                  <div>• 新酒發表垂直品鑑</div><div>• 知名餐廳美食搭配</div>
+                  <div>• 藝術文化主題活動</div><div>• 酒莊旅遊住宿體驗</div>
                 </div>
-                <div class="channel-category">
-                  <h5>🎪 體驗行銷</h5>
-                  <div class="experience-methods">
-                    <ul>
-                      <li><strong>品鑑活動：</strong>新酒發表會和垂直品鑑</li>
-                      <li><strong>美食搭配：</strong>與知名餐廳合作</li>
-                      <li><strong>文化活動：</strong>藝術展覽和音樂會</li>
-                      <li><strong>旅遊體驗：</strong>酒莊旅遊和住宿</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="channel-category">
-                  <h5>📱 數位行銷</h5>
-                  <div class="digital-methods">
-                    <ul>
-                      <li><strong>社交媒體：</strong>Instagram、Facebook視覺營銷</li>
-                      <li><strong>內容營銷：</strong>部落格、影片內容創作</li>
-                      <li><strong>KOL合作：</strong>意見領袖和品酒師推薦</li>
-                      <li><strong>電商平台：</strong>直接銷售和會員經營</li>
-                    </ul>
-                  </div>
+              </div>
+              <div style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #0284c7;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#0c4a6e;margin-bottom:4px;">📱 數位行銷</div>
+                <div style="font-size:10px;color:#075985;line-height:1.5;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+                  <div>• Instagram視覺營銷</div><div>• 部落格影片內容</div>
+                  <div>• KOL品酒師推薦</div><div>• 電商會員直接銷售</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     `,
     highlights: [
@@ -464,6 +332,7 @@ export const l39Content = [
     ]
   },
 
+  // 第二章知識檢測
   // 第二章知識檢測
   {
     type: 'interactive-quiz',
@@ -508,225 +377,121 @@ export const l39Content = [
     type: 'content',
     title: '全球市場分析與拓展策略',
     content: `
-      <div class="chapter-content">
-        <div class="international-expansion">
-          <h3>🌍 全球市場分析</h3>
-          <div class="global-markets">
-            <div class="market-overview">
-              <h4>📊 全球消費趨勢</h4>
-              <div class="consumption-trends">
-                <div class="trend-data">
-                  <h5>🏆 主要出口市場（2023年數據）</h5>
-                  <div class="export-markets">
-                    <div class="market-item">
-                      <h6>🇺🇸 美國</h6>
-                      <p>• 市場份額：28%<br>
-                      • 年增長率：3-5%<br>
-                      • 平均價格：€15-20/瓶<br>
-                      • 主要渠道：專業零售、餐飲</p>
-                    </div>
-                    <div class="market-item">
-                      <h6>🇨🇳 中國</h6>
-                      <p>• 市場份額：15%<br>
-                      • 年增長率：8-12%<br>
-                      • 平均價格：€25-35/瓶<br>
-                      • 主要渠道：電商、禮品市場</p>
-                    </div>
-                    <div class="market-item">
-                      <h6>🇬🇧 英國</h6>
-                      <p>• 市場份額：12%<br>
-                      • 年增長率：1-2%<br>
-                      • 平均價格：€12-18/瓶<br>
-                      • 主要渠道：傳統零售、在線</p>
-                    </div>
-                    <div class="market-item">
-                      <h6>🇩🇪 德國</h6>
-                      <p>• 市場份額：10%<br>
-                      • 年增長率：2-3%<br>
-                      • 平均價格：€10-15/瓶<br>
-                      • 主要渠道：超市、專業店</p>
-                    </div>
-                  </div>
-                </div>
+      <div style="font-family:sans-serif;padding:4px 0;">
 
-                <div class="emerging-markets">
-                  <h5>🚀 新興市場機會</h5>
-                  <div class="emerging-opportunities">
-                    <div class="opportunity-item">
-                      <h6>🇮🇳 印度</h6>
-                      <p>• 中產階級快速成長<br>
-                      • 西式生活方式普及<br>
-                      • 高檔餐飲業發展<br>
-                      • 年輕消費者接受度高</p>
-                    </div>
-                    <div class="opportunity-item">
-                      <h6>🇧🇷 巴西</h6>
-                      <p>• 拉美最大葡萄酒市場<br>
-                      • 進口酒品偏好增強<br>
-                      • 社交飲酒文化發達<br>
-                      • 經濟復甦帶動消費</p>
-                    </div>
-                    <div class="opportunity-item">
-                      <h6>🇯🇵 日本</h6>
-                      <p>• 精緻文化追求品質<br>
-                      • 高端消費能力強<br>
-                      • 法國文化認同度高<br>
-                      • 餐酒搭配需求增長</p>
-                    </div>
-                  </div>
-                </div>
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🏆 主要出口市場（2023年數據）</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:10px;">
+              <div style="font-size:20px;text-align:center;margin-bottom:4px;">🇺🇸</div>
+              <div style="font-size:12px;font-weight:700;color:#1e3a8a;text-align:center;margin-bottom:2px;">美國</div>
+              <div style="font-size:18px;font-weight:800;color:#1d4ed8;text-align:center;margin-bottom:6px;">28%</div>
+              <div style="font-size:10px;color:#1e40af;line-height:1.6;">
+                <div>📈 年增長 3-5%</div>
+                <div>💶 €15-20/瓶</div>
+                <div>🏪 專業零售、餐飲</div>
               </div>
             </div>
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:10px;">
+              <div style="font-size:20px;text-align:center;margin-bottom:4px;">🇨🇳</div>
+              <div style="font-size:12px;font-weight:700;color:#7c2d12;text-align:center;margin-bottom:2px;">中國</div>
+              <div style="font-size:18px;font-weight:800;color:#ea580c;text-align:center;margin-bottom:6px;">15%</div>
+              <div style="font-size:10px;color:#9a3412;line-height:1.6;">
+                <div>📈 年增長 8-12%</div>
+                <div>💶 €25-35/瓶</div>
+                <div>🛒 電商、禮品市場</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;">
+              <div style="font-size:20px;text-align:center;margin-bottom:4px;">🇬🇧</div>
+              <div style="font-size:12px;font-weight:700;color:#14532d;text-align:center;margin-bottom:2px;">英國</div>
+              <div style="font-size:18px;font-weight:800;color:#16a34a;text-align:center;margin-bottom:6px;">12%</div>
+              <div style="font-size:10px;color:#166534;line-height:1.6;">
+                <div>📈 年增長 1-2%</div>
+                <div>💶 €12-18/瓶</div>
+                <div>🏪 傳統零售、在線</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:10px;">
+              <div style="font-size:20px;text-align:center;margin-bottom:4px;">🇩🇪</div>
+              <div style="font-size:12px;font-weight:700;color:#581c87;text-align:center;margin-bottom:2px;">德國</div>
+              <div style="font-size:18px;font-weight:800;color:#9333ea;text-align:center;margin-bottom:6px;">10%</div>
+              <div style="font-size:10px;color:#7e22ce;line-height:1.6;">
+                <div>📈 年增長 2-3%</div>
+                <div>💶 €10-15/瓶</div>
+                <div>🏪 超市、專業店</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <div class="market-entry-strategies">
-              <h4>🚪 市場進入策略</h4>
-              <div class="entry-methods">
-                <div class="method-category">
-                  <h5>🤝 合作夥伴模式</h5>
-                  <div class="partnership-types">
-                    <div class="partnership-item">
-                      <h6>獨家代理商</h6>
-                      <p>• <strong>優勢：</strong>專業市場知識，建立的通路<br>
-                      • <strong>風險：</strong>依賴性高，控制力有限<br>
-                      • <strong>適用：</strong>初次進入新市場<br>
-                      • <strong>案例：</strong>ASC Fine Wines（亞洲）</p>
-                    </div>
-                    <div class="partnership-item">
-                      <h6>分銷商網絡</h6>
-                      <p>• <strong>優勢：</strong>覆蓋面廣，風險分散<br>
-                      • <strong>風險：</strong>品牌控制難度大<br>
-                      • <strong>適用：</strong>成熟市場深度滲透<br>
-                      • <strong>案例：</strong>美國三層分銷體系</p>
-                    </div>
-                    <div class="partnership-item">
-                      <h6>戰略聯盟</h6>
-                      <p>• <strong>優勢：</strong>資源共享，風險共擔<br>
-                      • <strong>風險：</strong>利益衝突可能<br>
-                      • <strong>適用：</strong>大型市場開發<br>
-                      • <strong>案例：</strong>與當地酒業集團合作</p>
-                    </div>
-                  </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🚀 新興市場機會</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:9px;padding:9px;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start;">
+                <div style="font-size:22px;">🇮🇳</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#7c2d12;margin-bottom:3px;">印度</div>
+                  <div style="font-size:10px;color:#9a3412;line-height:1.5;">中產階級快速成長 · 西式生活普及 · 高檔餐飲發展 · 年輕消費者接受度高</div>
                 </div>
-
-                <div class="method-category">
-                  <h5>🏢 直接投資模式</h5>
-                  <div class="investment-types">
-                    <div class="investment-item">
-                      <h6>海外辦事處</h6>
-                      <p>• 建立本地銷售團隊<br>
-                      • 直接客戶關係管理<br>
-                      • 品牌形象統一控制<br>
-                      • 市場反饋即時獲得</p>
-                    </div>
-                    <div class="investment-item">
-                      <h6>倉儲物流中心</h6>
-                      <p>• 縮短交貨時間<br>
-                      • 降低運輸成本<br>
-                      • 改善客戶服務<br>
-                      • 應對市場波動</p>
-                    </div>
-                    <div class="investment-item">
-                      <h6>零售終端投資</h6>
-                      <p>• 品牌旗艦店建立<br>
-                      • 消費者直接接觸<br>
-                      • 完整品牌體驗<br>
-                      • 高價值客戶培養</p>
-                    </div>
-                  </div>
+              </div>
+              <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #16a34a;border-radius:9px;padding:9px;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start;">
+                <div style="font-size:22px;">🇧🇷</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:3px;">巴西</div>
+                  <div style="font-size:10px;color:#166534;line-height:1.5;">拉美最大葡萄酒市場 · 進口酒偏好增強 · 社交飲酒文化發達 · 經濟復甦帶動消費</div>
+                </div>
+              </div>
+              <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:9px;padding:9px;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start;">
+                <div style="font-size:22px;">🇯🇵</div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;color:#1e3a8a;margin-bottom:3px;">日本</div>
+                  <div style="font-size:10px;color:#1d4ed8;line-height:1.5;">精緻文化追求品質 · 高端消費能力強 · 法國文化認同高 · 餐酒搭配需求增長</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <h3>🎭 跨文化行銷策略</h3>
-          <div class="cross-cultural-marketing">
-            <div class="cultural-adaptation">
-              <h4>🌏 文化適應策略</h4>
-              <div class="adaptation-examples">
-                <div class="culture-case">
-                  <h5>🇨🇳 中國市場適應</h5>
-                  <div class="adaptation-details">
-                    <div class="adaptation-aspect">
-                      <h6>🎁 禮品文化</h6>
-                      <p>• 精美包裝設計<br>
-                      • 吉祥數字運用<br>
-                      • 節慶主題推廣<br>
-                      • 企業贈禮服務</p>
-                    </div>
-                    <div class="adaptation-aspect">
-                      <h6>🏮 本土化元素</h6>
-                      <p>• 中文品牌名稱<br>
-                      • 本土藝術家合作<br>
-                      • 中式美食搭配<br>
-                      • 傳統節日營銷</p>
-                    </div>
-                    <div class="adaptation-aspect">
-                      <h6>📱 數位化偏好</h6>
-                      <p>• 微信商城建立<br>
-                      • 直播銷售模式<br>
-                      • KOL網紅合作<br>
-                      • 社交電商整合</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="culture-case">
-                  <h5>🇺🇸 美國市場適應</h5>
-                  <div class="adaptation-details">
-                    <div class="adaptation-aspect">
-                      <h6>⭐ 評分文化</h6>
-                      <p>• Robert Parker評分<br>
-                      • Wine Spectator推薦<br>
-                      • 專業評論重視<br>
-                      • 數字化評級系統</p>
-                    </div>
-                    <div class="adaptation-aspect">
-                      <h6>🍽️ 餐飲文化</h6>
-                      <p>• 餐廳侍酒師培訓<br>
-                      • 配菜建議提供<br>
-                      • 節慶餐桌文化<br>
-                      • 家庭聚會場景</p>
-                    </div>
-                    <div class="adaptation-aspect">
-                      <h6>🌱 健康趨勢</h6>
-                      <p>• 有機認證強調<br>
-                      • 低硫化物標示<br>
-                      • 健康益處宣傳<br>
-                      • 可持續發展故事</p>
-                    </div>
-                  </div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🎭 跨文化行銷 · 文化適應策略</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+              <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#7c2d12;margin-bottom:4px;">🇨🇳 中國市場</div>
+                <div style="font-size:10px;color:#9a3412;line-height:1.5;">
+                  <div style="margin-bottom:2px;">🎁 <span style="font-weight:600;">禮品文化</span> 精美包裝、吉祥數字</div>
+                  <div style="margin-bottom:2px;">🏮 <span style="font-weight:600;">本土化</span> 中文品牌、中式搭配</div>
+                  <div>📱 <span style="font-weight:600;">數位</span> 微信商城、直播銷售</div>
                 </div>
               </div>
-            </div>
-
-            <div class="localization-strategies">
-              <h4>🎯 本土化策略實施</h4>
-              <div class="localization-framework">
-                <div class="framework-layer">
-                  <h5>📋 產品適應層</h5>
-                  <p>• <strong>包裝設計：</strong>符合當地審美和文化偏好<br>
-                  • <strong>產品規格：</strong>適應當地法規和消費習慣<br>
-                  • <strong>價格策略：</strong>考慮當地購買力和競爭環境<br>
-                  • <strong>產品組合：</strong>針對細分市場調整產品線</p>
+              <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#1e3a8a;margin-bottom:4px;">🇺🇸 美國市場</div>
+                <div style="font-size:10px;color:#1d4ed8;line-height:1.5;">
+                  <div style="margin-bottom:2px;">⭐ <span style="font-weight:600;">評分文化</span> Parker、Spectator</div>
+                  <div style="margin-bottom:2px;">🍽️ <span style="font-weight:600;">餐飲</span> 侍酒師培訓、配菜建議</div>
+                  <div>🌱 <span style="font-weight:600;">健康</span> 有機認證、可持續故事</div>
                 </div>
-                <div class="framework-layer">
-                  <h5>📢 傳播適應層</h5>
-                  <p>• <strong>語言本土化：</strong>專業翻譯和文化轉化<br>
-                  • <strong>媒體選擇：</strong>當地主流媒體和平台<br>
-                  • <strong>訊息調整：</strong>符合當地價值觀和偏好<br>
-                  • <strong>創意元素：</strong>融入當地文化符號</p>
+              </div>
+              <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #16a34a;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:4px;">🤝 合作夥伴模式</div>
+                <div style="font-size:10px;color:#166534;line-height:1.5;">
+                  <div>• 獨家代理商（初入市場）</div>
+                  <div>• 分銷商網絡（成熟市場）</div>
+                  <div>• 戰略聯盟（資源共享）</div>
                 </div>
-                <div class="framework-layer">
-                  <h5>🤝 關係建立層</h5>
-                  <p>• <strong>政府關係：</strong>了解法規，建立合規體系<br>
-                  • <strong>業界網絡：</strong>參與當地行業組織和活動<br>
-                  • <strong>媒體關係：</strong>與當地媒體建立良好關係<br>
-                  • <strong>社區參與：</strong>支持當地社區和慈善活動</p>
+              </div>
+              <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#581c87;margin-bottom:4px;">🏢 直接投資模式</div>
+                <div style="font-size:10px;color:#7e22ce;line-height:1.5;">
+                  <div>• 海外辦事處（品牌掌控）</div>
+                  <div>• 倉儲物流中心（縮短交期）</div>
+                  <div>• 零售旗艦店（體驗完整）</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     `,
     highlights: [
@@ -807,242 +572,109 @@ export const l39Content = [
     type: 'content',
     title: '電子商務與數位化轉型',
     content: `
-      <div class="chapter-content">
-        <div class="digital-innovation">
-          <h3>💻 電子商務革命</h3>
-          <div class="ecommerce-evolution">
-            <div class="platform-development">
-              <h4>🛒 電商平台發展</h4>
-              <div class="platform-types">
-                <div class="platform-category">
-                  <h5>🏪 自有電商平台</h5>
-                  <div class="platform-features">
-                    <div class="feature-set">
-                      <h6>核心功能</h6>
-                      <ul>
-                        <li><strong>產品展示：</strong>高品質圖片、詳細描述、專業評分</li>
-                        <li><strong>庫存管理：</strong>即時庫存、預訂功能、缺貨通知</li>
-                        <li><strong>訂單處理：</strong>自動化處理、物流追蹤、交貨確認</li>
-                        <li><strong>客戶服務：</strong>在線客服、FAQ、退換貨服務</li>
-                      </ul>
-                    </div>
-                    <div class="feature-set">
-                      <h6>進階功能</h6>
-                      <ul>
-                        <li><strong>個性化推薦：</strong>基於購買歷史的智能推薦</li>
-                        <li><strong>虛擬品鑑：</strong>AR/VR技術輔助選購</li>
-                        <li><strong>會員制度：</strong>積分系統、等級特權、專屬優惠</li>
-                        <li><strong>社群功能：</strong>評論分享、品鑑筆記、專家問答</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+      <div style="font-family:sans-serif;padding:4px 0;">
 
-                <div class="platform-category">
-                  <h5>🌐 第三方平台合作</h5>
-                  <div class="cooperation-strategies">
-                    <div class="strategy-item">
-                      <h6>Amazon/天貓等綜合平台</h6>
-                      <p>• <strong>優勢：</strong>巨大流量，成熟體系<br>
-                      • <strong>挑戰：</strong>競爭激烈，利潤微薄<br>
-                      • <strong>策略：</strong>品牌旗艦店，差異化產品</p>
-                    </div>
-                    <div class="strategy-item">
-                      <h6>專業酒類平台</h6>
-                      <p>• <strong>優勢：</strong>精準客群，專業服務<br>
-                      • <strong>挑戰：</strong>規模有限，依賴性強<br>
-                      • <strong>策略：</strong>深度合作，獨家產品</p>
-                    </div>
-                    <div class="strategy-item">
-                      <h6>社交電商平台</h6>
-                      <p>• <strong>優勢：</strong>社交裂變，內容營銷<br>
-                      • <strong>挑戰：</strong>模式新穎，效果難測<br>
-                      • <strong>策略：</strong>試點投入，數據驅動</p>
-                    </div>
-                  </div>
-                </div>
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🛒 電商平台發展策略</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px;">
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:10px;">
+              <div style="font-size:16px;text-align:center;margin-bottom:4px;">🏪</div>
+              <div style="font-size:11px;font-weight:700;color:#1e3a8a;text-align:center;margin-bottom:6px;">自有電商平台</div>
+              <div style="font-size:10px;color:#1d4ed8;line-height:1.6;">
+                <div>• 高品質產品展示</div>
+                <div>• 即時庫存管理</div>
+                <div>• AR/VR虛擬品鑑</div>
+                <div>• 會員積分系統</div>
+                <div>• 品牌體驗完整掌控</div>
               </div>
             </div>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:10px;">
+              <div style="font-size:16px;text-align:center;margin-bottom:4px;">🌐</div>
+              <div style="font-size:11px;font-weight:700;color:#14532d;text-align:center;margin-bottom:6px;">第三方平台合作</div>
+              <div style="font-size:10px;color:#166534;line-height:1.6;">
+                <div>• Amazon/天貓綜合平台</div>
+                <div>• 專業酒類垂直平台</div>
+                <div>• 巨大流量引入</div>
+                <div>• 品牌旗艦店差異化</div>
+                <div>• 精準客群觸達</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:10px;">
+              <div style="font-size:16px;text-align:center;margin-bottom:4px;">📱</div>
+              <div style="font-size:11px;font-weight:700;color:#581c87;text-align:center;margin-bottom:6px;">社交電商整合</div>
+              <div style="font-size:10px;color:#7e22ce;line-height:1.6;">
+                <div>• 微信/Instagram電商</div>
+                <div>• 直播銷售模式</div>
+                <div>• KOL網紅帶貨</div>
+                <div>• 社交裂變傳播</div>
+                <div>• O2O線上線下整合</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <div class="omnichannel-strategy">
-              <h4>🔄 全渠道整合策略</h4>
-              <div class="channel-integration">
-                <div class="integration-aspect">
-                  <h5>📱 Online to Offline (O2O)</h5>
-                  <div class="o2o-applications">
-                    <div class="application-item">
-                      <h6>線上選購，線下體驗</h6>
-                      <p>• 網站瀏覽和比較<br>
-                      • 實體店品鑑確認<br>
-                      • 專業建議獲得<br>
-                      • 現場取貨或配送</p>
-                    </div>
-                    <div class="application-item">
-                      <h6>線下體驗，線上購買</h6>
-                      <p>• 酒莊參訪體驗<br>
-                      • 品鑑會參與<br>
-                      • QR碼即時下單<br>
-                      • 會員積分累積</p>
-                    </div>
-                  </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🤖 AI 人工智能應用</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #c026d3;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#701a75;margin-bottom:4px;">📈 需求預測</div>
+                <div style="font-size:10px;color:#86198f;line-height:1.5;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+                  <div>• 歷史銷售數據分析</div><div>• 季節性因素模型</div>
+                  <div>• 市場趨勢指標</div><div>• 智能庫存計劃</div>
                 </div>
-
-                <div class="integration-aspect">
-                  <h5>📊 數據整合分析</h5>
-                  <div class="data-integration">
-                    <div class="data-source">
-                      <h6>多渠道數據收集</h6>
-                      <p>• <strong>線上行為：</strong>瀏覽軌跡、購買偏好、搜索關鍵詞<br>
-                      • <strong>線下互動：</strong>門店訪問、活動參與、品鑑反饋<br>
-                      • <strong>社交媒體：</strong>關注互動、內容分享、用戶生成內容<br>
-                      • <strong>客服記錄：</strong>咨詢內容、問題類型、滿意度評價</p>
-                    </div>
-                    <div class="data-application">
-                      <h6>智能分析應用</h6>
-                      <p>• <strong>客戶畫像：</strong>360度客戶視圖建立<br>
-                      • <strong>行為預測：</strong>購買意向和時機預測<br>
-                      • <strong>個性化服務：</strong>定制化產品推薦<br>
-                      • <strong>營銷優化：</strong>精準投放和效果評估</p>
-                    </div>
-                  </div>
+              </div>
+              <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#1e3a8a;margin-bottom:4px;">🎯 精準營銷</div>
+                <div style="font-size:10px;color:#1d4ed8;line-height:1.5;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+                  <div>• 機器學習客戶分群</div><div>• 動態行為標籤</div>
+                  <div>• 個性化郵件內容</div><div>• 智能推薦引擎</div>
+                </div>
+              </div>
+              <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #16a34a;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:4px;">🤖 智能客服</div>
+                <div style="font-size:10px;color:#166534;line-height:1.5;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+                  <div>• 常見問題自動回答</div><div>• 多語言即時翻譯</div>
+                  <div>• 品酒建議推薦</div><div>• 搭配建議自動生成</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <h3>🤖 人工智能應用</h3>
-          <div class="ai-applications">
-            <div class="ai-use-cases">
-              <h4>🧠 AI驅動的商業智能</h4>
-              <div class="ai-business-intelligence">
-                <div class="ai-application">
-                  <h5>📈 需求預測</h5>
-                  <div class="prediction-system">
-                    <div class="prediction-factor">
-                      <h6>數據輸入</h6>
-                      <p>• 歷史銷售數據<br>
-                      • 季節性因素<br>
-                      • 市場趨勢指標<br>
-                      • 外部環境變化</p>
-                    </div>
-                    <div class="prediction-output">
-                      <h6>預測結果</h6>
-                      <p>• 產品需求量預測<br>
-                      • 庫存需求計劃<br>
-                      • 價格趨勢預測<br>
-                      • 市場機會識別</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="ai-application">
-                  <h5>🎯 精準營銷</h5>
-                  <div class="precision-marketing">
-                    <div class="marketing-component">
-                      <h6>客戶細分</h6>
-                      <p>• 機器學習自動分群<br>
-                      • 動態標籤更新<br>
-                      • 行為模式識別<br>
-                      • 價值評估排序</p>
-                    </div>
-                    <div class="marketing-component">
-                      <h6>內容優化</h6>
-                      <p>• 個性化郵件內容<br>
-                      • 動態網站展示<br>
-                      • 智能推薦引擎<br>
-                      • A/B測試自動化</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="ai-application">
-                  <h5>🤖 智能客服</h5>
-                  <div class="intelligent-service">
-                    <div class="service-layer">
-                      <h6>自動化回應</h6>
-                      <p>• 常見問題自動回答<br>
-                      • 多語言實時翻譯<br>
-                      • 情感分析理解<br>
-                      • 問題分類轉接</p>
-                    </div>
-                    <div class="service-layer">
-                      <h6>專家系統</h6>
-                      <p>• 品酒建議智能推薦<br>
-                      • 搭配建議自動生成<br>
-                      • 品質問題診斷<br>
-                      • 專業知識查詢</p>
-                    </div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🚀 新興技術應用</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#7c2d12;margin-bottom:4px;">🥽 AR/VR 沉浸式體驗</div>
+                <div style="font-size:10px;color:#9a3412;line-height:1.5;">
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+                    <div>• 360度虛擬酒莊參訪</div><div>• 釀造過程沉浸展示</div>
+                    <div>• 酒標信息AR顯示</div><div>• 虛擬品鑑品酒筆記</div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="emerging-technologies">
-              <h4>🚀 新興技術應用</h4>
-              <div class="tech-innovations">
-                <div class="innovation-area">
-                  <h5>🥽 AR/VR體驗技術</h5>
-                  <div class="immersive-experiences">
-                    <div class="experience-type">
-                      <h6>虛擬酒莊參訪</h6>
-                      <p>• 360度沉浸式體驗<br>
-                      • 釀造過程虛擬展示<br>
-                      • 歷史故事互動敘述<br>
-                      • 遠程品鑑指導</p>
-                    </div>
-                    <div class="experience-type">
-                      <h6>增強現實購物</h6>
-                      <p>• 酒標信息AR顯示<br>
-                      • 虛擬品鑑筆記<br>
-                      • 3D產品展示<br>
-                      • 場景搭配預覽</p>
-                    </div>
+              <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#92400e;margin-bottom:4px;">🔗 區塊鏈溯源</div>
+                <div style="font-size:10px;color:#78350f;line-height:1.5;">
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+                    <div>• 不可篡改生產記錄</div><div>• 供應鏈透明化</div>
+                    <div>• 防偽真品驗證</div><div>• 收藏品數位證書</div>
                   </div>
                 </div>
-
-                <div class="innovation-area">
-                  <h5>🔗 區塊鏈溯源</h5>
-                  <div class="blockchain-applications">
-                    <div class="application-benefit">
-                      <h6>產品真實性保證</h6>
-                      <p>• 不可篡改的生產記錄<br>
-                      • 供應鏈透明化<br>
-                      • 假貨防範機制<br>
-                      • 消費者信任建立</p>
-                    </div>
-                    <div class="application-benefit">
-                      <h6>投資價值保護</h6>
-                      <p>• 收藏品數位證書<br>
-                      • 轉手記錄追蹤<br>
-                      • 市場價值評估<br>
-                      • 保險理賠支持</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="innovation-area">
-                  <h5>🌐 物聯網整合</h5>
-                  <div class="iot-integration">
-                    <div class="iot-application">
-                      <h6>智能倉儲管理</h6>
-                      <p>• 溫濕度自動監控<br>
-                      • 庫存實時追蹤<br>
-                      • 品質狀態預警<br>
-                      • 自動補貨觸發</p>
-                    </div>
-                    <div class="iot-application">
-                      <h6>消費者設備連結</h6>
-                      <p>• 智能酒櫃管理<br>
-                      • 品鑑設備同步<br>
-                      • 環境最佳化建議<br>
-                      • 社群分享整合</p>
-                    </div>
+              </div>
+              <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:9px;padding:9px;">
+                <div style="font-size:11px;font-weight:700;color:#14532d;margin-bottom:4px;">🌐 物聯網整合</div>
+                <div style="font-size:10px;color:#166534;line-height:1.5;">
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+                    <div>• 智能倉儲溫濕度監控</div><div>• 庫存即時追蹤</div>
+                    <div>• 智能酒櫃管理</div><div>• 品質狀態預警</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     `,
     highlights: [
@@ -1075,62 +707,58 @@ export const l39Content = [
 
   // 總結
   {
-    type: 'summary',
+    type: 'content',
     title: '課程總結：商業智慧的核心要素',
     content: `
-      <div class="summary-content">
-        <div class="business-wisdom">
-          <h3>💼 商業成功的關鍵要素</h3>
-          <div class="success-factors">
-            <div class="factor-item">
-              <h4>🎯 精準的市場洞察</h4>
-              <p>深度理解目標客戶需求，準確把握市場趨勢，是制定有效商業策略的基礎</p>
+      <div style="font-family:sans-serif;padding:4px 0;">
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">💼 商業成功的四大支柱</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:11px;padding:12px;">
+              <div style="font-size:22px;text-align:center;margin-bottom:6px;">🎯</div>
+              <div style="font-size:12px;font-weight:700;color:#1e3a8a;text-align:center;margin-bottom:6px;">精準的市場洞察</div>
+              <div style="font-size:10.5px;color:#1d4ed8;line-height:1.6;text-align:center;">深度理解目標客戶需求，準確把握市場趨勢，是制定有效商業策略的基礎</div>
             </div>
-            <div class="factor-item">
-              <h4>🏷️ 差異化的品牌價值</h4>
-              <p>建立獨特的品牌定位，創造難以複製的競爭優勢，是長期成功的保證</p>
+            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:11px;padding:12px;">
+              <div style="font-size:22px;text-align:center;margin-bottom:6px;">🏷️</div>
+              <div style="font-size:12px;font-weight:700;color:#7c2d12;text-align:center;margin-bottom:6px;">差異化的品牌價值</div>
+              <div style="font-size:10.5px;color:#9a3412;line-height:1.6;text-align:center;">建立獨特的品牌定位，創造難以複製的競爭優勢，是長期成功的保證</div>
             </div>
-            <div class="factor-item">
-              <h4>🌍 全球化的視野格局</h4>
-              <p>在保持本土特色的同時，適應全球市場需求，實現可持續的國際化發展</p>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:11px;padding:12px;">
+              <div style="font-size:22px;text-align:center;margin-bottom:6px;">🌍</div>
+              <div style="font-size:12px;font-weight:700;color:#14532d;text-align:center;margin-bottom:6px;">全球化的視野格局</div>
+              <div style="font-size:10.5px;color:#166534;line-height:1.6;text-align:center;">在保持本土特色的同時，適應全球市場需求，實現可持續的國際化發展</div>
             </div>
-            <div class="factor-item">
-              <h4>💻 數位化的創新能力</h4>
-              <p>擁抱新技術，持續創新商業模式，在數位化時代保持競爭力</p>
+            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:11px;padding:12px;">
+              <div style="font-size:22px;text-align:center;margin-bottom:6px;">💻</div>
+              <div style="font-size:12px;font-weight:700;color:#581c87;text-align:center;margin-bottom:6px;">數位化的創新能力</div>
+              <div style="font-size:10.5px;color:#7e22ce;line-height:1.6;text-align:center;">擁抱新技術，持續創新商業模式，在數位化時代保持競爭力</div>
             </div>
           </div>
         </div>
 
-        <div class="strategic-insights">
-          <h3>💡 策略性思考框架</h3>
-          <div class="thinking-framework">
-            <div class="framework-dimension">
-              <h4>📊 數據驅動決策</h4>
-              <p>建立完善的數據收集和分析體系，讓商業決策建立在客觀數據基礎上，減少主觀判斷的風險</p>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">💡 策略性思考三大框架</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+            <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:11px;">
+              <div style="font-size:18px;text-align:center;margin-bottom:4px;">📊</div>
+              <div style="font-size:11px;font-weight:700;color:#92400e;text-align:center;margin-bottom:6px;">數據驅動決策</div>
+              <div style="font-size:10px;color:#78350f;line-height:1.6;">建立完善的數據收集和分析體系，讓商業決策建立在客觀數據基礎上，減少主觀判斷風險</div>
             </div>
-            <div class="framework-dimension">
-              <h4>🔄 敏捷應變能力</h4>
-              <p>在快速變化的市場環境中，保持組織的靈活性和快速應變能力，及時調整策略方向</p>
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #16a34a;border-radius:10px;padding:11px;">
+              <div style="font-size:18px;text-align:center;margin-bottom:4px;">🔄</div>
+              <div style="font-size:11px;font-weight:700;color:#14532d;text-align:center;margin-bottom:6px;">敏捷應變能力</div>
+              <div style="font-size:10px;color:#166534;line-height:1.6;">在快速變化的市場環境中，保持組織的靈活性和快速應變能力，及時調整策略方向</div>
             </div>
-            <div class="framework-dimension">
-              <h4>🤝 生態系統思維</h4>
-              <p>不僅關注自身發展，更要建立和維護健康的產業生態系統，實現共同成長</p>
-            </div>
-            <div class="framework-dimension">
-              <h4>🌱 可持續發展理念</h4>
-              <p>在追求經濟效益的同時，承擔社會責任，實現經濟、社會和環境的和諧發展</p>
+            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:11px;">
+              <div style="font-size:18px;text-align:center;margin-bottom:4px;">🤝</div>
+              <div style="font-size:11px;font-weight:700;color:#1e3a8a;text-align:center;margin-bottom:6px;">生態系統思維</div>
+              <div style="font-size:10px;color:#1d4ed8;line-height:1.6;">不僅關注自身發展，更要建立和維護健康的產業生態系統，與合作夥伴共同成長</div>
             </div>
           </div>
         </div>
 
-        <div class="future-outlook">
-          <h3>🔮 商業發展展望</h3>
-          <p>波爾多葡萄酒產業的商業模式正在經歷深刻變革。數位化技術的發展為傳統產業帶來新的機遇，
-          但也對經營者提出了更高要求。成功的關鍵在於：既要保持傳統的品質優勢和文化價值，
-          又要積極擁抱新技術和新模式，在傳承與創新之間找到最佳平衡點。
-          未來的葡萄酒商業將更加注重客戶體驗、可持續發展和全球化布局，
-          只有具備前瞻性思維和執行力的企業才能在激烈競爭中脫穎而出。</p>
-        </div>
       </div>
     `,
     highlights: [
@@ -1151,7 +779,7 @@ export const l39Content = [
 
   // 綜合測驗
   {
-    type: 'quiz',
+    type: 'interactive-quiz',
     title: '綜合測驗：商業分析與市場策略',
     questions: [
       {
