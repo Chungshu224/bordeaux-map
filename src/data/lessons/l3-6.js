@@ -71,74 +71,78 @@ export const l36Content = [
   {
     type: 'content',
     title: '為什麼要調配？',
-    content: [
-      {
-        subtitle: '複雜度的創造',
-        text: '單一品種葡萄酒雖然能夠表達純粹的品種特性，但調配能創造出任何單一品種都無法達到的複雜度和平衡感。就像交響樂團中不同樂器的和諧配合，每個品種都扮演著獨特的角色。',
-        highlight: '1 + 1 > 2：調配的魔力在於整體效果超越各部分之和'
-      },
-      {
-        subtitle: '風險的分散',
-        text: '波爾多的海洋性氣候變化多端，不同品種的成熟期和抗病性各異。通過調配，釀酒師可以平衡年份間的差異，確保每年都能釀造出高品質的葡萄酒。',
-        highlight: '氣候保險：多品種種植降低了單一年份的風險'
-      },
-      {
-        subtitle: '風格的塑造',
-        text: '調配是釀酒師表達個人風格和酒莊哲學的重要工具。同樣的品種，不同的比例組合，能創造出截然不同的風格表達。',
-        highlight: '藝術表達：調配比例反映釀酒師的美學理念'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="text-align:center;font-size:0.75rem;color:#777;margin-bottom:10px;">波爾多混釀的三大核心動機</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF8F00);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🎵 複雜度的創造</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">單一品種能表達純粹品種特性，但調配能創造出任何單一品種都無法達到的複雜度與平衡感。就像交響樂中不同樂器的和諧配合，每個品種都扮演獨特角色。<div style="background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#E65100;margin-top:7px;">✨ 1 + 1 > 2——整體效果超越各部分之和</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#388E3C);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🌧️ 風險的分散</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">波爾多的海洋性氣候變化多端，不同品種的成熟期和抗病性各異。透過調配，釀酒師可以平衡年份間的差異，確保每年都能釀出高品質葡萄酒。<div style="background:#E8F5E9;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1B5E20;margin-top:7px;">🛡️ 氣候保險——多品種種植降低單一年份的風險</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🎨 風格的塑造</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">調配是釀酒師表達個人風格和酒莊哲學的重要工具。同樣的品種，不同的比例組合，能創造出截然不同的風格表達。<div style="background:#EDE7F6;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#4527A0;margin-top:7px;">🖌️ 藝術表達——調配比例反映釀酒師的美學理念</div></div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '波爾多調配的三大支柱',
-    content: [
-      {
-        subtitle: 'Cabernet Sauvignon - 架構之王 👑',
-        text: 'Cabernet Sauvignon 是波爾多左岸的靈魂，提供了葡萄酒的骨架與力量。它的厚實單寧、深邃顏色和黑醋栗、黑櫻桃等黑色水果香氣，賦予葡萄酒強大的陳年潛力。在調配中，CS 通常佔 40-70%，是結構的基石。',
-        highlight: '🎯 角色定位：骨架 | ⏱️ 陳年潛力：20-50年 | 📊 典型比例：40-70%'
-      },
-      {
-        subtitle: 'Merlot - 柔順之源 🍇',
-        text: 'Merlot 為調配帶來圓潤的口感和豐富的果味。它的早熟特性和較低的單寧，能軟化 Cabernet Sauvignon 的剛性，使酒體更加平衡和易飲。右岸以 Merlot 為主導（60-90%），而左岸則用它來增添肉感（20-40%）。',
-        highlight: '🎯 角色定位：肉感與果味 | 🌡️ 早熟性：比CS早2週 | 📊 典型比例：20-90%'
-      },
-      {
-        subtitle: 'Cabernet Franc - 優雅調味師 🌸',
-        text: 'Cabernet Franc 雖然比例較小（5-25%），卻扮演著畫龍點睛的角色。它帶來紫羅蘭、鉛筆芯、香料等複雜香氣，提升整體的優雅度和清新感。特別在右岸（如 Cheval Blanc），CF 的比例可達 40-60%。',
-        highlight: '🎯 角色定位：香氣與優雅 | 🌺 特色：花香與香料 | 📊 典型比例：5-25%'
-      }
-    ],
-    visualAid: {
-      type: 'info-grid',
-      items: [
-        {
-          icon: '🏛️',
-          title: '左岸調配典型',
-          description: 'CS 60% + Merlot 30% + CF 10%',
-          detail: '結構主導，力量型風格'
-        },
-        {
-          icon: '🌊',
-          title: '右岸調配典型',
-          description: 'Merlot 70% + CF 20% + CS 10%',
-          detail: '柔順優雅，早適飲風格'
-        },
-        {
-          icon: '⚖️',
-          title: '調配黃金法則',
-          description: '1+1+1 > 3',
-          detail: '整體效果超越各部分之和'
-        },
-        {
-          icon: '🎨',
-          title: '釀酒師的畫布',
-          description: '每1%的調整都能改變風格',
-          detail: '微調創造獨特性格'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:9px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:8px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.82rem;">👑 Cabernet Sauvignon</div>
+              <div style="font-size:0.68rem;opacity:0.85;">架構之王</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">提供骨架與力量，厚實單寧、深邃顏色、黑醋栗香氣，賦予強大的陳年潛力。左岸調配的靈魂品種。
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px;">
+                <div style="background:#FFEBEE;border-radius:4px;padding:3px 6px;text-align:center;font-size:0.66rem;color:#B71C1C;"><div>典型比例</div><div style="font-weight:700;">40–70%</div></div>
+                <div style="background:#FFF3E0;border-radius:4px;padding:3px 6px;text-align:center;font-size:0.66rem;color:#E65100;"><div>陳年潛力</div><div style="font-weight:700;">20–50年</div></div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1A237E,#283593);padding:8px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.82rem;">🍇 Merlot</div>
+              <div style="font-size:0.68rem;opacity:0.85;">柔順之源</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">帶來圓潤口感和豐富果味，軟化CS的剛性，使酒體更平衡易飲。右岸主導品種（60–90%）。
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px;">
+                <div style="background:#E8EAF6;border-radius:4px;padding:3px 6px;text-align:center;font-size:0.66rem;color:#1A237E;"><div>典型比例</div><div style="font-weight:700;">20–90%</div></div>
+                <div style="background:#E3F2FD;border-radius:4px;padding:3px 6px;text-align:center;font-size:0.66rem;color:#1565C0;"><div>比CS早熟</div><div style="font-weight:700;">約2週</div></div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:8px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.82rem;">🌸 Cabernet Franc</div>
+              <div style="font-size:0.68rem;opacity:0.85;">優雅調味師</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">比例雖小（5–25%）卻畫龍點睛：紫羅蘭、鉛筆芯、香料香氣，提升整體優雅度。Cheval Blanc 可達 40–60%。
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px;">
+                <div style="background:#E0F2F1;border-radius:4px;padding:3px 6px;text-align:center;font-size:0.66rem;color:#00695C;"><div>典型比例</div><div style="font-weight:700;">5–25%</div></div>
+                <div style="background:#F3E5F5;border-radius:4px;padding:3px 6px;text-align:center;font-size:0.66rem;color:#6A1B9A;"><div>Cheval Blanc</div><div style="font-weight:700;">40–60%</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;">
+          <div style="background:#FFF3E0;border-radius:7px;padding:7px 9px;font-size:0.7rem;text-align:center;"><div style="font-size:1.1rem;">🏛️</div><div style="font-weight:700;color:#E65100;font-size:0.75rem;margin:2px 0;">左岸典型</div><div style="color:#333;">CS 60%+M 30%+CF 10%</div><div style="font-size:0.64rem;color:#777;margin-top:2px;">結構主導·力量型</div></div>
+          <div style="background:#E3F2FD;border-radius:7px;padding:7px 9px;font-size:0.7rem;text-align:center;"><div style="font-size:1.1rem;">🌊</div><div style="font-weight:700;color:#1565C0;font-size:0.75rem;margin:2px 0;">右岸典型</div><div style="color:#333;">M 70%+CF 20%+CS 10%</div><div style="font-size:0.64rem;color:#777;margin-top:2px;">柔順優雅·早適飲</div></div>
+          <div style="background:#E8F5E9;border-radius:7px;padding:7px 9px;font-size:0.7rem;text-align:center;"><div style="font-size:1.1rem;">⚖️</div><div style="font-weight:700;color:#2E7D32;font-size:0.75rem;margin:2px 0;">黃金法則</div><div style="color:#333;">1+1+1 > 3</div><div style="font-size:0.64rem;color:#777;margin-top:2px;">整體超越各部分之和</div></div>
+          <div style="background:#F3E5F5;border-radius:7px;padding:7px 9px;font-size:0.7rem;text-align:center;"><div style="font-size:1.1rem;">🎨</div><div style="font-weight:700;color:#6A1B9A;font-size:0.75rem;margin:2px 0;">釀酒師畫布</div><div style="color:#333;">每1%的調整都改變風格</div><div style="font-size:0.64rem;color:#777;margin-top:2px;">微調創造獨特性格</div></div>
+        </div>
+      </div>
+    `
   },
 
   // 知識檢測：調配基礎
@@ -184,80 +188,71 @@ export const l36Content = [
   {
     type: 'content',
     title: '左岸 vs 右岸調配風格',
-    content: [
-      {
-        subtitle: '左岸：Cabernet Sauvignon 主導的力量美學 🏛️',
-        text: '左岸的梅多克（Médoc）和格拉夫（Graves）地區以砂礫土壤為主，非常適合 Cabernet Sauvignon 的種植。左岸的調配哲學追求結構、力量和超長的陳年潛力。Cabernet Sauvignon 通常佔 50-80%，為酒體提供堅實的骨架，Merlot（20-40%）增添柔順感，Cabernet Franc（5-10%）帶來優雅與香氣。',
-        highlight: '🎯 典型調配：CS 70% + Merlot 25% + PV 5% | 🏆 代表酒莊：Lafite, Latour, Margaux'
-      },
-      {
-        subtitle: '右岸：Merlot 主導的柔美哲學 🌊',
-        text: '右岸的波美侯（Pomerol）和聖愛美濃（Saint-Émilion）以黏土和石灰岩為主，最適合 Merlot 的表達。右岸調配追求柔順、優雅和早期適飲性。Merlot 通常佔 60-95%，提供豐富的果味和圓潤口感，Cabernet Franc（10-40%）增加複雜度與香氣，Cabernet Sauvignon 比例較少或完全不用。',
-        highlight: '🎯 典型調配：Merlot 85% + CF 15% | 💎 代表酒莊：Petrus, Cheval Blanc, Ausone'
-      },
-      {
-        subtitle: '兩種哲學的對話 ⚖️',
-        text: '左岸追求的是「建築式」的結構美學，需要時間來柔化單寧，展現複雜性；右岸則是「雕塑式」的圓潤美學，強調品種的純粹表達和早期魅力。兩者沒有高下之分，只是不同的美學追求。有趣的是，近年來左岸增加了 Merlot 比例以提升早期適飲性，而右岸一些酒莊也開始嘗試增加結構感。',
-        highlight: '🔄 現代趨勢：兩岸調配哲學正在相互借鑒，邊界逐漸模糊'
-      }
-    ],
-    visualAid: {
-      type: 'comparison-table',
-      items: [
-        {
-          category: '主導品種',
-          leftBank: '👑 Cabernet Sauvignon (50-80%)',
-          rightBank: '🍇 Merlot (60-95%)'
-        },
-        {
-          category: '風格特點',
-          leftBank: '💪 結構、力量、陳年潛力',
-          rightBank: '✨ 柔順、優雅、早適飲'
-        },
-        {
-          category: '土壤類型',
-          leftBank: '🏔️ 砂礫土（排水佳）',
-          rightBank: '🌊 黏土、石灰岩（保水性好）'
-        },
-        {
-          category: '陳年時間',
-          leftBank: '⏰ 需 10-20 年達到適飲期',
-          rightBank: '⏱️ 5-10 年即可享受'
-        },
-        {
-          category: '代表酒莊',
-          leftBank: '🏆 Lafite, Latour, Margaux, Haut-Brion',
-          rightBank: '💎 Petrus, Cheval Blanc, Ausone, Le Pin'
-        },
-        {
-          category: '調配哲學',
-          leftBank: '🏗️ 以結構為框架填充',
-          rightBank: '🎵 以柔順為基調增複雜度'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:9px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#D32F2F);padding:9px 12px;color:#fff;">
+              <div style="font-weight:700;font-size:0.82rem;">🏛️ 左岸：CS主導的力量美學</div><div style="font-size:0.68rem;opacity:0.85;">梅多克·格拉夫</div></div>
+            <div style="padding:9px 12px 11px;font-size:0.72rem;color:#333;line-height:1.75;">砂礫土壤排水佳，追求結構、力量與超長陳年潛力。
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:7px;">
+                <div style="background:#FFEBEE;border-radius:4px;padding:4px 5px;text-align:center;font-size:0.66rem;"><div style="color:#777;">CS比例</div><div style="font-weight:700;color:#B71C1C;">50–80%</div></div>
+                <div style="background:#FFF3E0;border-radius:4px;padding:4px 5px;text-align:center;font-size:0.66rem;"><div style="color:#777;">適飲期</div><div style="font-weight:700;color:#E65100;">10–20年</div></div>
+                <div style="background:#F3E5F5;border-radius:4px;padding:4px 5px;text-align:center;font-size:0.66rem;"><div style="color:#777;">典型</div><div style="font-weight:700;color:#6A1B9A;">CS70+M25+PV5</div></div>
+                <div style="background:#E8F5E9;border-radius:4px;padding:4px 5px;text-align:center;font-size:0.66rem;"><div style="color:#777;">代表</div><div style="font-weight:700;color:#1B5E20;">Lafite·Latour</div></div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1A237E,#283593);padding:9px 12px;color:#fff;">
+              <div style="font-weight:700;font-size:0.82rem;">🌊 右岸：Merlot主導的柔美哲學</div><div style="font-size:0.68rem;opacity:0.85;">波美侯·聖愛美濃</div></div>
+            <div style="padding:9px 12px 11px;font-size:0.72rem;color:#333;line-height:1.75;">黏土與石灰岩最適Merlot，追求柔順、優雅與早期適飲。
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:7px;">
+                <div style="background:#E8EAF6;border-radius:4px;padding:4px 5px;text-align:center;font-size:0.66rem;"><div style="color:#777;">M比例</div><div style="font-weight:700;color:#1A237E;">60–95%</div></div>
+                <div style="background:#E3F2FD;border-radius:4px;padding:4px 5px;text-align:center;font-size:0.66rem;"><div style="color:#777;">適飲期</div><div style="font-weight:700;color:#1565C0;">5–10年</div></div>
+                <div style="background:#E0F2F1;border-radius:4px;padding:4px 5px;text-align:center;font-size:0.66rem;"><div style="color:#777;">典型</div><div style="font-weight:700;color:#00695C;">M85+CF15</div></div>
+                <div style="background:#E8F5E9;border-radius:4px;padding:4px 5px;text-align:center;font-size:0.66rem;"><div style="color:#777;">代表</div><div style="font-weight:700;color:#1B5E20;">Petrus·Ausone</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.72rem;">
+            <thead><tr style="background:linear-gradient(90deg,#37474F,#546E7A);"><th style="padding:6px 10px;text-align:left;color:#fff;font-weight:600;width:18%;">項目</th><th style="padding:6px 10px;color:#fff;font-weight:600;text-align:center;">🏛️ 左岸</th><th style="padding:6px 10px;color:#fff;font-weight:600;text-align:center;">🌊 右岸</th></tr></thead>
+            <tbody>
+              <tr style="background:#FFEBEE;"><td style="padding:5px 10px;font-weight:600;color:#333;">主導品種</td><td style="padding:5px 10px;color:#B71C1C;text-align:center;">👑 CS 50–80%</td><td style="padding:5px 10px;color:#1A237E;text-align:center;">🍇 Merlot 60–95%</td></tr>
+              <tr style="background:#F5F5F5;"><td style="padding:5px 10px;font-weight:600;color:#333;">風格特點</td><td style="padding:5px 10px;color:#555;text-align:center;">💪 結構·力量·陳年</td><td style="padding:5px 10px;color:#555;text-align:center;">✨ 柔順·優雅·早適飲</td></tr>
+              <tr style="background:#FFEBEE;"><td style="padding:5px 10px;font-weight:600;color:#333;">土壤</td><td style="padding:5px 10px;color:#555;text-align:center;">🏔️ 砂礫土（排水佳）</td><td style="padding:5px 10px;color:#555;text-align:center;">🌊 黏土·石灰岩</td></tr>
+              <tr style="background:#F5F5F5;"><td style="padding:5px 10px;font-weight:600;color:#333;">適飲期</td><td style="padding:5px 10px;color:#555;text-align:center;">⏰ 10–20年</td><td style="padding:5px 10px;color:#555;text-align:center;">⏱️ 5–10年</td></tr>
+              <tr style="background:#FFEBEE;"><td style="padding:5px 10px;font-weight:600;color:#333;">決策哲學</td><td style="padding:5px 10px;color:#555;text-align:center;">🏗️ 以結構為框架填充</td><td style="padding:5px 10px;color:#555;text-align:center;">🎵 以柔順為基調增複雜</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '品種角色分工詳解',
-    content: [
-      {
-        subtitle: 'Cabernet Sauvignon - 架構師',
-        text: '如同建築的鋼筋框架，Cabernet Sauvignon為葡萄酒提供堅實的結構基礎。其高單寧含量和深邃的顏色，賦予酒款強大的陳年潛力和複雜的陳年香氣發展能力。',
-        highlight: '核心貢獻：結構、單寧、陳年潛力、黑醋栗風味'
-      },
-      {
-        subtitle: 'Merlot - 調和者',
-        text: 'Merlot就像溫柔的調和劑，其圓潤的質地和豐富的果味能夠柔化Cabernet Sauvignon的堅硬邊角，同時填補口感中的空隙，創造出更加平衡和諧的整體。',
-        highlight: '核心貢獻：圓潤口感、果味、早期適飲性、李子/櫻桃風味'
-      },
-      {
-        subtitle: 'Cabernet Franc - 藝術家',
-        text: 'Cabernet Franc像是調色盤上的精細畫筆，為混釀增添優雅的花香、草本氣息和清新的酸度。它能提升整體的芳香複雜度，賦予酒款更多的層次感。',
-        highlight: '核心貢獻：花香、草本氣息、酸度、優雅感'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🏛️ CS——架構師</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">如同建築的鋼筋框架，Cabernet Sauvignon為葡萄酒提供堅實的結構基礎。其高單寧含量和深邃的顏色，賦予酒款強大的陳年潛力和複雜的陳年香氣發展能力。<div style="background:#FFEBEE;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#B71C1C;margin-top:7px;">核心貢獻：結構·單寧·陳年潛力·黑醋栗風味</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🍇 Merlot——調和者</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">Merlot就像溫柔的調和劑，其圓潤的質地和豐富的果味能夠柔化Cabernet Sauvignon的堅硬邊角，同時填補口感中的空隙，創造出更加平衡和諧的整體。<div style="background:#E3F2FD;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1565C0;margin-top:7px;">核心貢獻：圓潤口感·果味·早期適飲·李子/櫻桃風味</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🌸 CF——藝術家</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">Cabernet Franc像是調色盤上的精細畫筆，為混釀增添優雅的花香、草本氣息和清新的酸度。它能提升整體的芳香複雜度，賦予酒款更多的層次感。<div style="background:#E0F2F1;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#00695C;margin-top:7px;">核心貢獻：花香·草本氣息·酸度·優雅感</div></div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   // 知識檢測：左岸與右岸調配
@@ -303,74 +298,87 @@ export const l36Content = [
   {
     type: 'content',
     title: '五大一級莊調配比例解密',
-    content: [
-      {
-        subtitle: 'Château Lafite Rothschild - 優雅派 👑',
-        text: '**Pauillac | 葡萄園面積 112 公頃**\n\n調配比例：Cabernet Sauvignon 70% + Merlot 25% + Cabernet Franc 3% + Petit Verdot 2%\n\nLafite 的調配哲學追求「優雅與力量的完美平衡」。相較於同村的 Latour，Lafite 使用更高比例的 Merlot 來柔化 CS 的剛性。這種配方創造出標誌性的絲滑單寧和礦物質特徵，以及驚人的陳年潛力（30-50年）。',
-        highlight: '🎨 風格簽名：絲滑單寧 + 雪松木香 + 鉛筆芯礦物質'
-      },
-      {
-        subtitle: 'Château Latour - 力量派 💪',
-        text: '**Pauillac | 葡萄園面積 78 公頃**\n\n調配比例：Cabernet Sauvignon 80% + Merlot 18% + Petit Verdot 2%\n\nLatour 追求「最純粹的力量表達」，使用波爾多最高比例的 CS（80%）。這種配方賦予 Latour 傳奇般的結構感和陳年潛力（50-100年）。年輕時需要耐心等待，成熟後展現深邃的層次和複雜度。',
-        highlight: '🎨 風格簽名：鋼鐵結構 + 黑色水果 + 深邃層次'
-      },
-      {
-        subtitle: 'Château Margaux - 精緻派 🌸',
-        text: '**Margaux | 葡萄園面積 87 公頃**\n\n調配比例：Cabernet Sauvignon 75% + Merlot 20% + Cabernet Franc 3% + Petit Verdot 2%\n\nMargaux 被譽為「波爾多最女性化的酒」，調配哲學追求「精緻與優雅」。4 個品種的和諧配比創造出標誌性的花香（紫羅蘭）和絲滑質地。這是力量與優雅的教科書式平衡。',
-        highlight: '🎨 風格簽名：紫羅蘭花香 + 絲綢質地 + 優雅精緻'
-      }
-    ],
-    visualAid: {
-      type: 'info-grid',
-      items: [
-        {
-          icon: '📊',
-          title: 'Château Haut-Brion',
-          description: 'CS 45% + Merlot 40% + CF 15%',
-          detail: 'Graves | 煙燻與礦物質'
-        },
-        {
-          icon: '💎',
-          title: 'Château Mouton Rothschild',
-          description: 'CS 83% + Merlot 15% + CF 2%',
-          detail: 'Pauillac | 華麗濃郁'
-        },
-        {
-          icon: '🍇',
-          title: 'Château Petrus (右岸)',
-          description: 'Merlot 95% + CF 5%',
-          detail: 'Pomerol | Merlot 極致表達'
-        },
-        {
-          icon: '🏆',
-          title: 'Château Cheval Blanc',
-          description: 'Merlot 52% + CF 43% + CS 5%',
-          detail: 'Saint-Émilion | CF 高比例'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:9px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:8px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.8rem;">👑 Château Lafite</div>
+              <div style="font-size:0.67rem;opacity:0.85;">Pauillac · 優雅派</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">追求「優雅與力量的完美平衡」，CS比Latour低，更多Merlot柔化剛性。創造絲滑單寧與礦物質特徵，陳年潛力30–50年。
+              <div style="background:#E8F5E9;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1B5E20;margin-top:5px;">CS 70% + M 25% + CF 3% + PV 2%</div>
+              <div style="font-size:0.67rem;color:#666;margin-top:3px;">🎨 絲滑單寧·雪松木·鉛筆芯礦物質</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#37474F,#546E7A);padding:8px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.8rem;">💪 Château Latour</div>
+              <div style="font-size:0.67rem;opacity:0.85;">Pauillac · 力量派</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">追求「最純粹的力量表達」，波爾多最高CS比例（80%）。傳奇結構感與陳年潛力（50–100年），年輕時需耐心等待。
+              <div style="background:#ECEFF1;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#37474F;margin-top:5px;">CS 80% + M 18% + PV 2%</div>
+              <div style="font-size:0.67rem;color:#666;margin-top:3px;">🎨 鋼鐵結構·黑色水果·深邃層次</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#880E4F,#AD1457);padding:8px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.8rem;">🌸 Château Margaux</div>
+              <div style="font-size:0.67rem;opacity:0.85;">Margaux · 精緻派</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">「波爾多最女性化的酒」，4品種和諧配比創造標誌性花香（紫羅蘭）和絲滑質地。力量與優雅的教科書式平衡。
+              <div style="background:#FCE4EC;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#880E4F;margin-top:5px;">CS 75% + M 20% + CF 3% + PV 2%</div>
+              <div style="font-size:0.67rem;color:#666;margin-top:3px;">🎨 紫羅蘭花香·絲綢質地·優雅精緻</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;">
+          <div style="background:#FFF3E0;border-radius:7px;padding:7px 9px;font-size:0.7rem;">
+            <div style="font-weight:700;color:#E65100;font-size:0.75rem;margin-bottom:3px;">📊 Haut-Brion</div>
+            <div style="color:#333;">CS 45%+M 40%+CF 15%</div>
+            <div style="font-size:0.64rem;color:#777;margin-top:2px;">Graves · 煙燻礦物質</div>
+          </div>
+          <div style="background:#FFEBEE;border-radius:7px;padding:7px 9px;font-size:0.7rem;">
+            <div style="font-weight:700;color:#B71C1C;font-size:0.75rem;margin-bottom:3px;">💎 Mouton</div>
+            <div style="color:#333;">CS 83%+M 15%+CF 2%</div>
+            <div style="font-size:0.64rem;color:#777;margin-top:2px;">Pauillac · 華麗濃郁</div>
+          </div>
+          <div style="background:#E8EAF6;border-radius:7px;padding:7px 9px;font-size:0.7rem;">
+            <div style="font-weight:700;color:#1A237E;font-size:0.75rem;margin-bottom:3px;">🍇 Petrus（右岸）</div>
+            <div style="color:#333;">M 95%+CF 5%</div>
+            <div style="font-size:0.64rem;color:#777;margin-top:2px;">Pomerol · Merlot極致</div>
+          </div>
+          <div style="background:#E0F2F1;border-radius:7px;padding:7px 9px;font-size:0.7rem;">
+            <div style="font-weight:700;color:#00695C;font-size:0.75rem;margin-bottom:3px;">🏆 Cheval Blanc</div>
+            <div style="color:#333;">M 52%+CF 43%+CS 5%</div>
+            <div style="font-size:0.64rem;color:#777;margin-top:2px;">St-Émilion · CF高比例</div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '調配比例的演變',
-    content: [
-      {
-        subtitle: '歷史趨勢分析',
-        text: '過去50年間，波爾多的調配比例發生了顯著變化。氣候變化使得Cabernet Sauvignon更容易成熟，同時市場對早期適飲性的需求推動了Merlot比例的增加。',
-        highlight: '1970年代 vs 2020年代：Merlot比例普遍上升5-15%'
-      },
-      {
-        subtitle: '技術進步的影響',
-        text: '現代釀酒技術如光學分選、微氧化等，讓釀酒師能夠更精確地控制每個品種的表現，從而在調配中發揮更大的創造空間。',
-        highlight: '精準釀造：現代技術讓調配變得更加科學化'
-      },
-      {
-        subtitle: '市場導向的調整',
-        text: '年輕世代消費者偏好果味更豐富、單寧更柔順的酒款，這促使許多酒莊增加Merlot的種植比例，或採用更溫和的萃取方式。',
-        highlight: '消費趨勢：從需要陳年轉向早期適飲'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57F17);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">📈 歷史趨勢分析</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">過去50年間，波爾多的調配比例發生顯著變化。氣候變化使Cabernet Sauvignon更易成熟，市場對早期適飲性的需求推動了Merlot比例的增加。<div style="background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#E65100;margin-top:7px;">1970s vs 2020s：Merlot比例普遍上升5–15%</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🔬 技術進步的影響</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">現代釀酒技術如光學分選、微氧化等，讓釀酒師能夠更精確地控制每個品種的表現，從而在調配中發揮更大的創造空間。<div style="background:#E3F2FD;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1565C0;margin-top:7px;">精準釀造：現代技術讓調配變得更加科學化</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🌍 市場導向的調整</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">年輕世代消費者偏好果味更豐富、單寧更柔順的酒款，促使許多酒莊增加Merlot的種植比例，或採用更溫和的萃取方式。<div style="background:#EDE7F6;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#4527A0;margin-top:7px;">消費趨勢：從需要陳年轉向早期適飲</div></div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   // 知識檢測：經典調配比例
@@ -416,79 +424,66 @@ export const l36Content = [
   {
     type: 'content',
     title: '調配決策的完整時間線',
-    content: [
-      {
-        subtitle: '第一階段：初步評估（採收後 1 個月）⏱️',
-        text: '**階段任務：完成酒精發酵，進行初步品鑑**\n\n在這個階段，釀酒師需要：\n• 評估每個品種的品質潛力與成熟度\n• 分析每個地塊的獨特特色與表現\n• 確定基本的調配方向與策略框架\n\n此時的品鑑還很初步，但經驗豐富的釀酒師已經能判斷出大致的調配方向。這個階段最重要的是保持開放心態，不要過早下結論。',
-        highlight: '🎯 關鍵決策：確定主導品種和大致比例框架（如 CS 65-75%）'
-      },
-      {
-        subtitle: '第二階段：精確調配（採收後 3-6 個月）🔬',
-        text: '**階段任務：完成蘋果酸乳酸發酵，進行正式調配**\n\n這是調配最關鍵的時期：\n• 逐一品鑑每個橡木桶中的酒（可能 50-100 個桶）\n• 進行多組小比例試調（通常 5-10 個組合）\n• 評估不同組合的平衡性、複雜度、陳年潛力\n\n釀酒師會邀請技術團隊共同品鑑，討論各種可能性。最終的調配比例往往是經過數十次試驗才確定的。',
-        highlight: '🎯 關鍵決策：確定最終調配比例（精確到 1%）'
-      },
-      {
-        subtitle: '第三階段：微調完善（採收後 12-18 個月）✨',
-        text: '**階段任務：裝瓶前的最後調整**\n\n在裝瓶前，還有最後的檢驗機會：\n• 評估調配後的陳年發展與整合度\n• 根據市場反饋和年份特點進行微調\n• 確保正牌酒與副牌酒的品質一致性\n\n這個階段的調整通常很細微（1-3%），但可能對最終風格產生重要影響。一些頂級酒莊甚至會在裝瓶前一刻做出調整。',
-        highlight: '🎯 關鍵決策：最終確認並裝瓶，決定正副牌分選'
-      }
-    ],
-    visualAid: {
-      type: 'info-grid',
-      items: [
-        {
-          icon: '📅',
-          title: '決策週期',
-          description: '12-18 個月',
-          detail: '從採收到裝瓶的完整過程'
-        },
-        {
-          icon: '🍷',
-          title: '品鑑次數',
-          description: '50-100 次',
-          detail: '逐桶品鑑與試調'
-        },
-        {
-          icon: '🧪',
-          title: '試驗組合',
-          description: '5-10 組',
-          detail: '不同比例的測試'
-        },
-        {
-          icon: '👥',
-          title: '參與人員',
-          description: '3-8 人',
-          detail: '釀酒師團隊與顧問'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:9px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF8F00);padding:8px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.78rem;">⏱️ 第一階段</div>
+              <div style="font-size:0.68rem;opacity:0.85;">採收後1個月·初步評估</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">評估每個品種的品質潛力、分析每個地塊特色，確定基本調配方向。此時保持開放心態，不要過早下結論。<div style="background:#FFF3E0;border-radius:4px;padding:3px 7px;font-size:0.67rem;color:#E65100;margin-top:6px;">🎯 確定主導品種與大致比例框架（如CS 65–75%）</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:8px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.78rem;">🔬 第二階段</div>
+              <div style="font-size:0.68rem;opacity:0.85;">採收後3–6個月·精確調配</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">逐一品鑑50–100個橡木桶，進行5–10個小比例試調，評估不同組合的平衡性、複雜度、陳年潛力。<div style="background:#E3F2FD;border-radius:4px;padding:3px 7px;font-size:0.67rem;color:#1565C0;margin-top:6px;">🎯 確定最終調配比例（精確到1%）</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:8px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.78rem;">✨ 第三階段</div>
+              <div style="font-size:0.68rem;opacity:0.85;">採收後12–18個月·微調完善</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">裝瓶前評估調配後的陳年發展與整合度，根據市場反饋進行微調（1–3%）。確認正副牌酒品質一致性。<div style="background:#E8F5E9;border-radius:4px;padding:3px 7px;font-size:0.67rem;color:#1B5E20;margin-top:6px;">🎯 最終確認裝瓶，決定正副牌分選</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;">
+          <div style="background:#FFF3E0;border-radius:7px;padding:7px 9px;text-align:center;font-size:0.7rem;"><div style="font-size:1rem;">📅</div><div style="font-weight:700;color:#E65100;font-size:0.8rem;">12–18個月</div><div style="color:#555;margin-top:2px;">決策週期</div><div style="font-size:0.64rem;color:#777;">採收到裝瓶</div></div>
+          <div style="background:#E3F2FD;border-radius:7px;padding:7px 9px;text-align:center;font-size:0.7rem;"><div style="font-size:1rem;">🍷</div><div style="font-weight:700;color:#1565C0;font-size:0.8rem;">50–100次</div><div style="color:#555;margin-top:2px;">品鑑次數</div><div style="font-size:0.64rem;color:#777;">逐桶評估</div></div>
+          <div style="background:#E8F5E9;border-radius:7px;padding:7px 9px;text-align:center;font-size:0.7rem;"><div style="font-size:1rem;">🧪</div><div style="font-weight:700;color:#1B5E20;font-size:0.8rem;">5–10組</div><div style="color:#555;margin-top:2px;">試驗組合</div><div style="font-size:0.64rem;color:#777;">比例測試</div></div>
+          <div style="background:#F3E5F5;border-radius:7px;padding:7px 9px;text-align:center;font-size:0.7rem;"><div style="font-size:1rem;">👥</div><div style="font-weight:700;color:#6A1B9A;font-size:0.8rem;">3–8人</div><div style="color:#555;margin-top:2px;">參與人員</div><div style="font-size:0.64rem;color:#777;">團隊品鑑</div></div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '大師訪談：Michel Rolland 談調配的藝術',
-    content: [
-      {
-        subtitle: '國際釀酒顧問的調配哲學 🎓',
-        text: 'Michel Rolland 是波爾多最具影響力的釀酒顧問之一，為全球超過 100 家酒莊提供諮詢服務。他對調配的深刻理解來自數十年的實戰經驗，涵蓋了各種風土條件和年份變化。以下是他對調配藝術的精闢見解。',
-        highlight: '💡 諮詢酒莊：包括 Pétrus、Le Pin、Angelus 等頂級名莊'
-      },
-      {
-        subtitle: 'Q1：調配最重要的原則是什麼？',
-        text: '**Michel Rolland 回答：**\n\n「平衡是一切的核心。但我說的不是數學式的平衡，而是味覺上的和諧。每個年份、每個地塊都有其個性，我的工作是讓它們在一起時能夠唱出最美的和聲。\n\n一款偉大的調配酒，你不應該能分辨出哪個是 Cabernet、哪個是 Merlot，你感受到的應該是完美融合的整體。這需要時間、經驗，還有對葡萄酒的深刻理解。」',
-        highlight: '🎵 關鍵：追求味覺和諧，而非數學比例'
-      },
-      {
-        subtitle: 'Q2：年份差異如何影響調配決策？',
-        text: '**Michel Rolland 回答：**\n\n「這是調配最迷人的地方。在溫暖年份（如 2003、2009），我會增加 Cabernet Franc 的比例來保持清新感和酸度；在涼爽年份（如 2013、2014），則可能增加 Merlot 來補充圓潤度和果味。\n\n關鍵是理解每個年份的特點，然後用調配來優化表現。沒有固定的公式，每個年份都是新的挑戰和機會。」',
-        highlight: '🌡️ 彈性策略：根據年份特點調整比例'
-      },
-      {
-        subtitle: 'Q3：給年輕釀酒師的建議？',
-        text: '**Michel Rolland 回答：**\n\n「首先要學會品鑑，培養敏銳的味覺。每天品嚐不同的酒，訓練自己辨識細微差異的能力。\n\n其次要理解每個品種的特性 — 不只是理論上的，而是在不同土壤、不同年份下的實際表現。\n\n最重要的是要有耐心。調配是一門需要時間和經驗累積的藝術。不要急於下結論，讓葡萄酒告訴你它需要什麼。」',
-        highlight: '📚 三大要素：味覺訓練 + 品種理解 + 耐心經驗'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#37474F,#546E7A);border-radius:8px;padding:8px 14px;margin-bottom:9px;">
+          <div style="color:rgba(255,255,255,0.8);font-size:0.7rem;">國際釀酒顧問 · 諮詢超過100家酒莊</div>
+          <div style="color:#fff;font-weight:700;font-size:0.8rem;margin-top:2px;">Michel Rolland 的調配哲學——包括 Pétrus、Le Pin、Angelus 等頂級名莊</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:7px 11px;color:#fff;font-weight:700;font-size:0.75rem;">Q1 · 最重要的原則是什麼？</div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.75;"><em style="color:#555;">「平衡是一切的核心。但我說的不是數學式的平衡，而是味覺上的和諧。每個年份、每個地塊都有其個性，我的工作是讓它們唱出最美的和聲。一款偉大的調配酒，你不應該能分辨哪個是Cabernet、哪個是Merlot，你感受到的應該是完美融合的整體。」</em><div style="background:#FFEBEE;border-radius:4px;padding:3px 7px;font-size:0.67rem;color:#B71C1C;margin-top:6px;">🎵 追求味覺和諧，而非數學比例</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:7px 11px;color:#fff;font-weight:700;font-size:0.75rem;">Q2 · 年份差異如何影響調配？</div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.75;"><em style="color:#555;">「在溫暖年份，我會增加Cabernet Franc的比例來保持清新感和酸度；在涼爽年份，則可能增加Merlot來補充圓潤度和果味。關鍵是理解每個年份的特點，然後用調配來優化表現。沒有固定的公式，每個年份都是新的挑戰和機會。」</em><div style="background:#E3F2FD;border-radius:4px;padding:3px 7px;font-size:0.67rem;color:#1565C0;margin-top:6px;">🌡️ 彈性策略：根據年份特點調整比例</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:7px 11px;color:#fff;font-weight:700;font-size:0.75rem;">Q3 · 給年輕釀酒師的建議？</div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.75;"><em style="color:#555;">「首先要學會品鑑，培養敏銳的味覺。每天品嚐不同的酒，訓練辨識細微差異的能力。其次要理解每個品種在不同土壤、不同年份下的實際表現。最重要的是要有耐心——調配是需要時間和經驗累積的藝術。」</em><div style="background:#E8F5E9;border-radius:4px;padding:3px 7px;font-size:0.67rem;color:#1B5E20;margin-top:6px;">📚 味覺訓練 + 品種理解 + 耐心經驗</div></div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   // 知識檢測：釀酒師決策
@@ -532,58 +527,66 @@ export const l36Content = [
   },
 
   {
-    type: 'practical',
+    type: 'content',
     title: '專業調配流程',
-    steps: [
-      {
-        step: 1,
-        title: '準備階段',
-        description: '建立標準化的品鑑環境',
-        details: [
-          '確保適宜的溫度（16-18°C）',
-          '準備足夠數量的標準品鑑杯',
-          '準備吐酒桶和清水',
-          '確保良好的光線條件'
-        ],
-        tip: '環境的一致性對準確判斷至關重要'
-      },
-      {
-        step: 2,
-        title: '單品評估',
-        description: '逐一品鑑每個組成部分',
-        details: [
-          '按品種分別品鑑',
-          '記錄每個樣品的特點',
-          '評估酸度、單寧、酒體、香氣',
-          '判斷每個組成的潛力'
-        ],
-        tip: '詳細記錄有助於後續的調配決策'
-      },
-      {
-        step: 3,
-        title: '試調階段',
-        description: '進行小比例的調配實驗',
-        details: [
-          '從50ml小樣開始試調',
-          '逐步調整各品種比例',
-          '每次只改變一個變數',
-          '記錄每次調配的結果'
-        ],
-        tip: '小樣試調可以節約成本並快速找到最佳比例'
-      },
-      {
-        step: 4,
-        title: '優化調整',
-        description: '根據品鑑結果精確調配',
-        details: [
-          '選出最佳的幾個組合',
-          '進行更大比例的試調（200-500ml）',
-          '邀請其他專業人士品鑑',
-          '考慮陳年後的發展潛力'
-        ],
-        tip: '團隊品鑑能夠減少個人偏好的影響'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF8F00);padding:8px 11px;color:#fff;">
+              <div style="font-size:0.68rem;opacity:0.8;">Step 1</div>
+              <div style="font-weight:700;font-size:0.78rem;">準備階段</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <div style="margin-bottom:3px;">· 溫度 16–18°C</div>
+              <div style="margin-bottom:3px;">· 標準品鑑杯</div>
+              <div style="margin-bottom:3px;">· 吐酒桶與清水</div>
+              <div style="margin-bottom:6px;">· 良好光線條件</div>
+              <div style="background:#FFF3E0;border-radius:4px;padding:3px 6px;font-size:0.67rem;color:#E65100;">環境一致性至關重要</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:8px 11px;color:#fff;">
+              <div style="font-size:0.68rem;opacity:0.8;">Step 2</div>
+              <div style="font-weight:700;font-size:0.78rem;">單品評估</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <div style="margin-bottom:3px;">· 按品種分別品鑑</div>
+              <div style="margin-bottom:3px;">· 記錄每個特點</div>
+              <div style="margin-bottom:3px;">· 評估酸度/單寧/酒體</div>
+              <div style="margin-bottom:6px;">· 判斷各組成潛力</div>
+              <div style="background:#E3F2FD;border-radius:4px;padding:3px 6px;font-size:0.67rem;color:#1565C0;">詳細記錄有助於決策</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:8px 11px;color:#fff;">
+              <div style="font-size:0.68rem;opacity:0.8;">Step 3</div>
+              <div style="font-weight:700;font-size:0.78rem;">試調階段</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <div style="margin-bottom:3px;">· 50ml小樣開始</div>
+              <div style="margin-bottom:3px;">· 逐步調整比例</div>
+              <div style="margin-bottom:3px;">· 每次只改一個變數</div>
+              <div style="margin-bottom:6px;">· 記錄每次結果</div>
+              <div style="background:#E8F5E9;border-radius:4px;padding:3px 6px;font-size:0.67rem;color:#1B5E20;">小樣試調節約成本</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);padding:8px 11px;color:#fff;">
+              <div style="font-size:0.68rem;opacity:0.8;">Step 4</div>
+              <div style="font-weight:700;font-size:0.78rem;">優化調整</div>
+            </div>
+            <div style="padding:8px 11px 10px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <div style="margin-bottom:3px;">· 選出最佳組合</div>
+              <div style="margin-bottom:3px;">· 擴大試調200–500ml</div>
+              <div style="margin-bottom:3px;">· 邀請其他專業品鑑</div>
+              <div style="margin-bottom:6px;">· 考慮陳年發展潛力</div>
+              <div style="background:#EDE7F6;border-radius:4px;padding:3px 6px;font-size:0.67rem;color:#4527A0;">團隊品鑑減少個人偏好</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
@@ -680,75 +683,96 @@ export const l36Content = [
   {
     type: 'content',
     title: '年份特徵對調配的影響',
-    content: [
-      {
-        subtitle: '溫暖年份的調配策略',
-        text: '在溫暖年份，葡萄成熟度高，糖分充足，但可能缺乏酸度。釀酒師通常會增加Cabernet Franc的比例來提升清新感，或選擇較涼爽地塊的葡萄來平衡整體風格。',
-        highlight: '2003、2005、2009、2010：經典溫暖年份的調配挑戰'
-      },
-      {
-        subtitle: '涼爽年份的調配智慧',
-        text: '涼爽年份的葡萄酸度高，但成熟度可能不足。釀酒師會增加Merlot的比例來補充果味和圓潤感，同時選擇最溫暖地塊的葡萄作為調配基礎。',
-        highlight: '2007、2008、2013、2014：考驗調配技巧的涼爽年份'
-      },
-      {
-        subtitle: '理想年份的平衡藝術',
-        text: '在氣候條件理想的年份，所有品種都能達到完美成熟度。此時釀酒師的任務是不要過度干預，讓每個品種發揮其最佳特質，創造出和諧的整體。',
-        highlight: '2000、2016、2019、2020：近乎完美的平衡年份'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF8F00);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">☀️ 溫暖年份策略</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">在溫暖年份，葡萄成熟度高，糖分充足，但可能缺乏酸度。釀酒師通常會增加Cabernet Franc的比例來提升清新感，或選擇較涼爽地塊的葡萄來平衡整體風格。<div style="background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#E65100;margin-top:7px;">2003·2005·2009·2010：經典溫暖年份挑戰</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🌧️ 涼爽年份智慧</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">涼爽年份的葡萄酸度高，但成熟度可能不足。釀酒師會增加Merlot的比例來補充果味和圓潤感，同時選擇最溫暖地塊的葡萄作為調配基礎。<div style="background:#E3F2FD;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1565C0;margin-top:7px;">2007·2008·2013·2014：考驗調配技巧的年份</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">⚖️ 理想年份平衡</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">在氣候條件理想的年份，所有品種都能達到完美成熟度。此時釀酒師的任務是不要過度干預，讓每個品種發揮最佳特質，創造和諧整體。<div style="background:#E8F5E9;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1B5E20;margin-top:7px;">2000·2016·2019·2020：近乎完美的平衡年份</div></div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '案例研究：2010 vs 2013 年份調配策略',
-    content: [
-      {
-        subtitle: '2010 年份：炎熱乾燥的完美年 ☀️',
-        text: '**氣候特徵：** 炎熱乾燥，陽光充沛，被譽為21世紀最偉大的年份之一\n\n**面臨挑戰：**\n• 極高的成熟度與潛在的過度濃縮\n• 酸度偏低的風險\n• 酒精度可能過高（14-15%）\n• 單寧過於強勁\n\n**調配解決方案：**\n• 增加 Cabernet Franc 比例（+5-10%）來提升清新感\n• 選用較涼爽地塊或朝北坡面的葡萄\n• 縮短浸皮時間以避免過度萃取\n• 精準控制發酵溫度保留果香',
-        highlight: '🏆 結果：創造出濃郁、強勁但平衡優雅的傳奇年份'
-      },
-      {
-        subtitle: '案例：Château Pichon Baron 的 2010 調配',
-        text: '**常規調配：** Cabernet Sauvignon 70% + Merlot 25% + Cabernet Franc 5%\n\n**2010 年份調配：** Cabernet Sauvignon 65% + Merlot 23% + Cabernet Franc 12%\n\n**策略理由：**\nPichon Baron 將 CF 比例從 5% 提升至 12%，是正常年份的 2.4 倍。這個大膽的調整成功地為這個炎熱年份注入了清新感和優雅度，同時保持了 CS 的結構感。結果獲得 RP 98 分的驚人評價。',
-        highlight: '💡 關鍵：CF 從 5% → 12%，提升清新感與香氣複雜度'
-      },
-      {
-        subtitle: '2013 年份：涼爽多雨的挑戰年 🌧️',
-        text: '**氣候特徵：** 涼爽多雨，成熟期延長，是近年最具挑戰性的年份之一\n\n**面臨挑戰：**\n• 成熟度不足，尤其是 Cabernet Sauvignon\n• 酸度過高，口感尖銳\n• 果味不夠集中和飽滿\n• 單寧偏生澀，缺乏圓潤感\n\n**調配解決方案：**\n• 大幅增加 Merlot 比例（+10-15%）來補充果味\n• 嚴格選果，只選最成熟的串\n• 延長浸皮時間以增加萃取\n• 使用較高比例新橡木桶增添結構',
-        highlight: '🎯 結果：在困難年份中仍創造出優雅平衡、值得陳年的酒款'
-      },
-      {
-        subtitle: '案例：Château Lynch-Bages 的 2013 調配',
-        text: '**常規調配：** Cabernet Sauvignon 73% + Merlot 15% + Cabernet Franc 10% + Petit Verdot 2%\n\n**2013 年份調配：** Cabernet Sauvignon 60% + Merlot 30% + Cabernet Franc 8% + Petit Verdot 2%\n\n**策略理由：**\nLynch-Bages 做出了戲劇性的調整，將 Merlot 比例從 15% 翻倍至 30%，同時將 CS 比例降低 13%。這個策略成功地為涼爽年份補充了圓潤度和果味，避免了過於尖銳的口感。最終獲得 RP 90 分，證明了調配技巧的重要性。',
-        highlight: '💡 關鍵：Merlot 從 15% → 30%，補充圓潤度與早適飲性'
-      }
-    ],
-    visualAid: {
-      type: 'comparison-table',
-      items: [
-        {
-          category: '氣候條件',
-          year2010: '☀️ 炎熱乾燥（完美年）',
-          year2013: '🌧️ 涼爽多雨（挑戰年）'
-        },
-        {
-          category: '主要挑戰',
-          year2010: '過度成熟、酸度不足',
-          year2013: '成熟不足、酸度過高'
-        },
-        {
-          category: '調配策略',
-          year2010: '↑ CF (+5-10%) 增加清新',
-          year2013: '↑ Merlot (+10-15%) 增圓潤'
-        },
-        {
-          category: '最終風格',
-          year2010: '濃郁強勁、超長陳年潛力',
-          year2013: '優雅平衡、早期適飲'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF6D00);padding:8px 12px;color:#fff;">
+              <div style="font-weight:700;font-size:0.85rem;">☀️ 2010 炎熱乾燥・完美年</div>
+            </div>
+            <div style="padding:9px 12px;font-size:0.72rem;color:#333;line-height:1.7;">
+              <b>挑戰：</b>過度成熟・酸度不足・酒精偏高・單寧強勁<br>
+              <b>策略：</b>↑ CF (+5-10%) 清新감・選涼爽地塊・縮短浸皮<br>
+              <div style="background:#FFF3E0;border-radius:6px;padding:5px 8px;margin-top:6px;font-size:0.7rem;">
+                <b>Pichon Baron 案例：</b><br>
+                常規：CS 70% + Merlot 25% + CF 5%<br>
+                2010：CS 65% + Merlot 23% + <span style="color:#E65100;font-weight:700;">CF 12%</span><br>
+                <span style="color:#2E7D32;">→ CF 翻倍↑，RP 98分</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:8px 12px;color:#fff;">
+              <div style="font-weight:700;font-size:0.85rem;">🌧️ 2013 涼爽多雨・挑戰年</div>
+            </div>
+            <div style="padding:9px 12px;font-size:0.72rem;color:#333;line-height:1.7;">
+              <b>挑戰：</b>成熟不足・酸度過高・果味薄弱・單寧生澀<br>
+              <b>策略：</b>↑ Merlot (+10-15%) 圓潤・嚴格選果・延長浸皮<br>
+              <div style="background:#E3F2FD;border-radius:6px;padding:5px 8px;margin-top:6px;font-size:0.7rem;">
+                <b>Lynch-Bages 案例：</b><br>
+                常規：CS 73% + Merlot 15% + CF 10% + PV 2%<br>
+                2013：CS 60% + <span style="color:#1565C0;font-weight:700;">Merlot 30%</span> + CF 8% + PV 2%<br>
+                <span style="color:#2E7D32;">→ Merlot 翻倍↑，RP 90分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:0.72rem;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.07);">
+          <thead>
+            <tr style="background:#37474F;color:#fff;">
+              <th style="padding:6px 10px;text-align:left;width:26%;">比較項目</th>
+              <th style="padding:6px 10px;text-align:center;color:#FFB300;">☀️ 2010</th>
+              <th style="padding:6px 10px;text-align:center;color:#90CAF9;">🌧️ 2013</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#FFF8E1;">
+              <td style="padding:5px 10px;font-weight:600;color:#333;">氣候條件</td>
+              <td style="padding:5px 10px;text-align:center;color:#E65100;">炎熱乾燥・完美成熟</td>
+              <td style="padding:5px 10px;text-align:center;color:#1565C0;">涼爽多雨・成熟延遲</td>
+            </tr>
+            <tr style="background:#F5F5F5;">
+              <td style="padding:5px 10px;font-weight:600;color:#333;">主要挑戰</td>
+              <td style="padding:5px 10px;text-align:center;color:#E65100;">過度成熟・酸度不足</td>
+              <td style="padding:5px 10px;text-align:center;color:#1565C0;">成熟不足・酸度過高</td>
+            </tr>
+            <tr style="background:#FFF8E1;">
+              <td style="padding:5px 10px;font-weight:600;color:#333;">調配策略</td>
+              <td style="padding:5px 10px;text-align:center;color:#E65100;">↑ CF (+5-10%)清新</td>
+              <td style="padding:5px 10px;text-align:center;color:#1565C0;">↑ Merlot (+10-15%)圓潤</td>
+            </tr>
+            <tr style="background:#F5F5F5;">
+              <td style="padding:5px 10px;font-weight:600;color:#333;">最終風格</td>
+              <td style="padding:5px 10px;text-align:center;color:#E65100;">濃郁強勁・超長陳年</td>
+              <td style="padding:5px 10px;text-align:center;color:#1565C0;">優雅平衡・早期適飲</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    `
   },
 
   // ========== 第七章：現代技術與調配創新 ==========
@@ -764,74 +788,73 @@ export const l36Content = [
   {
     type: 'content',
     title: '現代調配技術革新',
-    content: [
-      {
-        subtitle: '精密分析技術的應用 🔬',
-        text: '現代實驗室可以精確分析每個組成部分的化學成分，包括酚類化合物（單寧、花青素）、色素、香氣分子（如 Rotundone、TDN）等數百種化合物。這些數據為釀酒師提供了科學依據，使調配決策從「憑感覺」進化為「數據支持的直覺」。\n\n例如，釀酒師可以通過分析知道哪個桶的單寧成熟度最佳，哪個批次的香氣化合物最豐富，從而做出更精準的調配選擇。',
-        highlight: '💡 化學分析 + 感官評估 = 更精準的調配決策（準確度提升 30%）'
-      },
-      {
-        subtitle: '微氧化技術的革命 💨',
-        text: '通過精確控制氧氣的接觸量（0.5-2 mg/L/月）和時間，釀酒師可以在調配階段就開始塑造酒款的質地和香氣發展方向。微氧化能軟化單寧、穩定色素、促進香氣分子的聚合，使不同組分更快地融合為和諧整體。\n\n這項技術讓調配後的酒款不需要長時間陳年就能達到較好的平衡感，大大縮短了從調配到裝瓶的時間週期。',
-        highlight: '⚗️ 微氧化讓調配組分提前 6-12 個月達到和諧融合'
-      },
-      {
-        subtitle: '數位化調配管理系統 💻',
-        text: '先進的酒莊使用專業軟體系統記錄每次調配的詳細資料：每個桶的來源、品種、地塊、發酵參數、感官評分、最終使用比例等。經過多年累積，這些數據庫能夠分析歷史調配決策的效果，識別成功模式，為未來決策提供科學參考。\n\n例如，系統可以告訴釀酒師：「在過去 10 個年份中，當 CF 比例超過 15% 時，酒款在年輕時期的表現更優雅。」',
-        highlight: '📊 大數據分析：10 年調配歷史形成決策支持系統'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🔬 精密分析技術</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">現代實驗室可精確分析每個組成部分的化學成分，包括酚類化合物、色素、香氣分子等數百種化合物。數據讓調配決策從「憑感覺」進化為「數據支持的直覺」，準確度提升 30%。<div style="background:#EDE7F6;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#4527A0;margin-top:7px;">化學分析 + 感官評估 = 更精準的調配決策</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">💨 微氧化技術革命</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">精確控制氧氣接觸量（0.5-2 mg/L/月）和時間，能軟化單寧、穩定色素、促進香氣分子聚合，使不同組分更快融合為和諧整體，縮短調配到裝瓶的時間週期。<div style="background:#E0F2F1;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#00695C;margin-top:7px;">微氧化讓調配組分提前 6-12 個月達到和諧融合</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">💻 數位化管理系統</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">先進酒莊使用專業軟體記錄每次調配詳細資料：品種、地塊、發酵參數、感官評分、最終比例等。多年累積後，系統可分析歷史模式，為未來決策提供科學參考。<div style="background:#E3F2FD;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1565C0;margin-top:7px;">大數據分析：10 年調配歷史形成決策支持系統</div></div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '頂級酒莊採用的創新調配工具',
-    content: [
-      {
-        subtitle: '光譜分析儀 - 化學成分的即時解碼 🔍',
-        text: '**功能：** 使用近紅外光譜（NIR）或質譜技術，在幾分鐘內快速分析酒液的化學成分\n\n**核心優勢：**\n• 即時檢測總酚類、單寧、花青素含量\n• 預測葡萄酒的陳年潛力和發展軌跡\n• 確保批次間的品質一致性\n• 減少對傳統化學分析的依賴\n\n**採用現況：** 80% 的頂級酒莊（如五大一級莊）已經配備這項設備，投資成本 €50K-150K。',
-        highlight: '⚡ 分析速度：從 2-3 天縮短至 5 分鐘'
-      },
-      {
-        subtitle: '調配軟體系統 - AI 輔助的智慧決策 🖥️',
-        text: '**功能：** 電腦輔助調配比例計算與模擬，整合歷史數據與預測模型\n\n**核心優勢：**\n• 快速試算數十種不同組合的理論效果\n• 預測調配後的成本效益與市場定位\n• 記錄完整調配歷史供未來參考\n• 整合實驗室數據自動生成建議\n\n**採用現況：** 65% 的中大型酒莊使用專業調配軟體，訂閱費用 €2K-10K/年。部分軟體開始整合機器學習模型。',
-        highlight: '🤖 AI 建議：基於 1000+ 個調配案例的智慧推薦'
-      },
-      {
-        subtitle: '標準化感官分析室 - 專業品鑑環境 👃',
-        text: '**功能：** 按照國際標準（ISO 8589）設計的專業品鑑空間\n\n**核心優勢：**\n• 消除光線、溫度、氣味等環境干擾\n• 提供獨立品鑑隔間避免相互影響\n• 配備標準品鑑杯、吐酒設施、記錄系統\n• 支援團隊品鑑與盲品測試\n\n**採用現況：** 90% 的頂級酒莊擁有專業感官分析室，建設成本 €30K-100K。這是確保調配品質的基礎設施。',
-        highlight: '🏛️ 標準環境：溫度 20±2°C、濕度 60-70%、中性光源'
-      }
-    ],
-    visualAid: {
-      type: 'info-grid',
-      items: [
-        {
-          icon: '📈',
-          title: '技術普及率',
-          description: '80-90% 頂級酒莊',
-          detail: '現代技術已成標配'
-        },
-        {
-          icon: '💰',
-          title: '投資回報',
-          description: '品質提升 15-25%',
-          detail: '精準度大幅提高'
-        },
-        {
-          icon: '⏱️',
-          title: '效率提升',
-          description: '決策時間減少 40%',
-          detail: '從數週縮短至數天'
-        },
-        {
-          icon: '🎯',
-          title: '一致性',
-          description: '批次差異 < 5%',
-          detail: '品質穩定性提升'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🔍 光譜分析儀</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">使用近紅外光譜（NIR）技術，幾分鐘內快速分析酒液化學成分，即時檢測總酚類、單寧、花青素含量，預測陳年潛力並確保批次品質一致性。<div style="background:#EDE7F6;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#4527A0;margin-top:7px;">分析速度：從 2-3 天縮短至 5 分鐘</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🖥️ 調配軟體系統</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">AI 輔助的電腦調配比例計算與模擬，快速試算數十種組合的理論效果，整合歷史數據與預測模型，部分已整合機器學習基於 1,000+ 調配案例提供智慧建議。<div style="background:#E3F2FD;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1565C0;margin-top:7px;">65% 中大型酒莊採用・€2K-10K/年</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">👃 感官分析室</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">按 ISO 8589 標準設計的專業品鑑空間，消除光線、溫度、氣味等環境干擾，配備獨立品鑑隔間、標準品鑑杯、記錄系統，確保調配品質評估的客觀性。<div style="background:#E0F2F1;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#00695C;margin-top:7px;">溫度 20±2°C・濕度 60-70%・中性光源</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+          <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">📈</div>
+            <div style="font-weight:700;font-size:0.78rem;">技術普及率</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">80-90%</div>
+            <div style="font-size:0.65rem;opacity:0.85;">頂級酒莊已採用</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#1565C0,#1976D2);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">💰</div>
+            <div style="font-weight:700;font-size:0.78rem;">投資回報</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">+15-25%</div>
+            <div style="font-size:0.65rem;opacity:0.85;">品質精準度提升</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#00695C,#00897B);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">⏱️</div>
+            <div style="font-weight:700;font-size:0.78rem;">效率提升</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">-40%</div>
+            <div style="font-size:0.65rem;opacity:0.85;">決策時間縮短</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#B71C1C,#C62828);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">🎯</div>
+            <div style="font-weight:700;font-size:0.78rem;">一致性</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">&lt; 5%</div>
+            <div style="font-size:0.65rem;opacity:0.85;">批次差異率</div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   // ========== 知識檢測：現代技術與調配創新 ==========
@@ -877,80 +900,89 @@ export const l36Content = [
   {
     type: 'content',
     title: '全球調配理念的三大流派',
-    content: [
-      {
-        subtitle: '波爾多（舊世界）- 傳統與風土的守護者 🏛️',
-        text: '**核心哲學：** 傳統與風土純粹表達\n\n**調配特徵：**\n• 嚴格遵循傳統品種組合（CS + Merlot + CF）\n• 強調風土的純粹表達，不過度人為干預\n• 追求優雅與平衡，而非極致的力量\n• 重視超長陳年潛力（20-50年）\n• 尊重 AOC 法規與傳統釀造方式\n\n**典型調配：** CS 50-80% + Merlot 15-40% + CF 5-15% + PV 0-5%\n\n**創新方式：** 在傳統框架內的微調創新（如調整比例、優化採收時機），但不會突破品種限制。',
-        highlight: '🎯 關鍵詞：風土表達、優雅平衡、陳年潛力、傳統尊重'
-      },
-      {
-        subtitle: '納帕谷（新世界）- 果味與現代風格的先鋒 🌟',
-        text: '**核心哲學：** 果味表現與早期適飲\n\n**調配特徵：**\n• 更多創新品種組合嘗試（加入 Syrah、Zinfandel 等）\n• 強調濃郁果味與即時享受\n• 追求力量、濃郁度與視覺衝擊\n• 早期適飲性優先（3-10年適飲期）\n• 市場導向的風格設計\n\n**典型調配：** CS 70-90% + Merlot 5-15% + 創新小品種（Petite Sirah、Malbec）0-10%\n\n**創新方式：** 大膽嘗試新品種組合，不受傳統限制。例如 Opus One 採用 CS 80% + CF 7% + Merlot 6% + Malbec 4% + PV 3% 的創新配方。',
-        highlight: '🎯 關鍵詞：濃郁果味、早期適飲、創新組合、市場導向'
-      },
-      {
-        subtitle: '澳洲（新世界）- 技術驅動的實用主義 🔬',
-        text: '**核心哲學：** 科技輔助與成本效益\n\n**調配特徵：**\n• 科技輔助決策（光譜分析、預測模型）\n• 市場導向的靈活調配\n• 追求穩定品質與批次一致性\n• 成本效益與規模化生產考量\n• 大膽跨區域調配（South Australia + Barossa）\n\n**典型調配：** 靈活多變，從 CS + Shiraz 到 Grenache + Shiraz + Mourvèdre（GSM）\n\n**創新方式：** 技術創新引領調配，例如 Penfolds 的多區域調配理念（跨越數百公里選取最佳葡萄），這在波爾多是不可想像的。',
-        highlight: '🎯 關鍵詞：科技驅動、靈活調配、穩定品質、跨區域混釀'
-      }
-    ],
-    visualAid: {
-      type: 'comparison-table',
-      items: [
-        {
-          category: '核心價值',
-          oldWorld: '🏛️ 風土表達與傳統',
-          newWorld: '🌟 果味表現與創新'
-        },
-        {
-          category: '品種限制',
-          oldWorld: '✓ 嚴格遵循 AOC 規範',
-          newWorld: '✗ 自由嘗試新組合'
-        },
-        {
-          category: '陳年目標',
-          oldWorld: '⏰ 20-50年超長陳年',
-          newWorld: '⏱️ 3-10年早期適飲'
-        },
-        {
-          category: '風格追求',
-          oldWorld: '⚖️ 優雅、平衡、精緻',
-          newWorld: '💪 力量、濃郁、果味'
-        },
-        {
-          category: '技術應用',
-          oldWorld: '🎨 傳統為主，技術為輔',
-          newWorld: '🔬 技術引領，數據支持'
-        },
-        {
-          category: '調配靈活度',
-          oldWorld: '📏 框架內微調（±5%）',
-          newWorld: '🎲 大膽實驗（±20%）'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#37474F,#546E7A);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🏛️ 波爾多：風土守護者</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">嚴格遵循傳統品種組合（CS+Merlot+CF），強調風土純粹表達，追求優雅平衡，重視超長陳年潛力（20-50年），尊重 AOC 法規。<div style="background:#ECEFF1;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#37474F;margin-top:7px;">風土表達·優雅平衡·超長陳年·傳統尊重</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF6D00);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🌟 納帕谷：果味先鋒</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">創新品種組合嘗試（加入 Syrah、Malbec 等），強調濃郁果味與即時享受，早期適飲性優先（3-10年），市場導向的風格設計。<div style="background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#E65100;margin-top:7px;">濃郁果味·早期適飲·創新組合·市場導向</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🔬 澳洲：技術實用主義</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">科技輔助決策（光譜分析、預測模型），靈活跨區域調配（South Australia+Barossa），追求穩定品質與批次一致性，成本效益導向。<div style="background:#E0F2F1;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#00695C;margin-top:7px;">科技驅動·靈活調配·穩定品質·跨區混釀</div></div>
+          </div>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:0.72rem;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.07);">
+          <thead>
+            <tr style="background:#37474F;color:#fff;">
+              <th style="padding:5px 10px;text-align:left;width:22%;">比較面向</th>
+              <th style="padding:5px 10px;text-align:center;">🏛️ 波爾多</th>
+              <th style="padding:5px 10px;text-align:center;">🌟 納帕谷</th>
+              <th style="padding:5px 10px;text-align:center;">🔬 澳洲</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#FFEBEE;">
+              <td style="padding:5px 10px;font-weight:600;color:#333;">核心價值</td>
+              <td style="padding:5px 10px;text-align:center;color:#37474F;">風土·傳統</td>
+              <td style="padding:5px 10px;text-align:center;color:#E65100;">果味·創新</td>
+              <td style="padding:5px 10px;text-align:center;color:#00695C;">科技·效益</td>
+            </tr>
+            <tr style="background:#F5F5F5;">
+              <td style="padding:5px 10px;font-weight:600;color:#333;">品種限制</td>
+              <td style="padding:5px 10px;text-align:center;color:#37474F;">嚴格遵循 AOC</td>
+              <td style="padding:5px 10px;text-align:center;color:#E65100;">自由嘗試組合</td>
+              <td style="padding:5px 10px;text-align:center;color:#00695C;">靈活跨區混釀</td>
+            </tr>
+            <tr style="background:#FFEBEE;">
+              <td style="padding:5px 10px;font-weight:600;color:#333;">陳年目標</td>
+              <td style="padding:5px 10px;text-align:center;color:#37474F;">20-50 年超長</td>
+              <td style="padding:5px 10px;text-align:center;color:#E65100;">3-10 年早飲</td>
+              <td style="padding:5px 10px;text-align:center;color:#00695C;">彈性設定</td>
+            </tr>
+            <tr style="background:#F5F5F5;">
+              <td style="padding:5px 10px;font-weight:600;color:#333;">風格追求</td>
+              <td style="padding:5px 10px;text-align:center;color:#37474F;">優雅·精緻</td>
+              <td style="padding:5px 10px;text-align:center;color:#E65100;">力量·濃郁</td>
+              <td style="padding:5px 10px;text-align:center;color:#00695C;">穩定·一致</td>
+            </tr>
+            <tr style="background:#FFEBEE;">
+              <td style="padding:5px 10px;font-weight:600;color:#333;">調配靈活度</td>
+              <td style="padding:5px 10px;text-align:center;color:#37474F;">框架內±5%</td>
+              <td style="padding:5px 10px;text-align:center;color:#E65100;">大膽±20%</td>
+              <td style="padding:5px 10px;text-align:center;color:#00695C;">市場導向</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '調配理念的演進趨勢',
-    content: [
-      {
-        subtitle: '舊世界的現代化',
-        text: '傳統產區如波爾多正在吸收新世界的技術創新，同時保持自身的風土特色。現代化設備的引入並沒有改變基本的調配哲學，而是讓傳統理念得到更精確的執行。',
-        highlight: '技術現代化 + 傳統理念 = 進化的經典風格'
-      },
-      {
-        subtitle: '新世界的精緻化',
-        text: '新世界產區越來越重視風土表達和調配的精緻度，從早期的果味主導風格逐漸發展出更具複雜性和陳年潛力的調配理念。',
-        highlight: '從簡單果味到復雜優雅的風格轉變'
-      },
-      {
-        subtitle: '全球化的影響',
-        text: '國際市場的需求和酒評家的偏好正在影響全球的調配趨勢，促進了不同產區間的相互學習和融合。',
-        highlight: '全球化推動調配理念的交流與融合'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🏛️ 舊世界現代化</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">傳統產區如波爾多正在吸收新世界的技術創新，同時保持自身的風土特色。現代化設備的引入沒有改變基本調配哲學，而是讓傳統理念得到更精確的執行。<div style="background:#FFEBEE;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#B71C1C;margin-top:7px;">技術現代化 + 傳統理念 = 進化的經典風格</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🌟 新世界精緻化</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">新世界產區越來越重視風土表達和調配的精緻度，從早期的果味主導風格逐漸發展出更具複雜性和陳年潛力的調配理念。<div style="background:#E3F2FD;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1565C0;margin-top:7px;">從簡單果味到複雜優雅的風格轉變</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🌐 全球化影響</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.75;">國際市場的需求和酒評家的偏好正在影響全球調配趨勢，促進了不同產區間的相互學習與融合，形成新的「全球化優質葡萄酒」標準。<div style="background:#E8F5E9;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1B5E20;margin-top:7px;">全球化推動調配理念的交流與融合</div></div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   // ========== 知識檢測：新世界與舊世界的調配理念 ==========
@@ -996,103 +1028,99 @@ export const l36Content = [
   {
     type: 'content',
     title: '專業調配品鑑技巧',
-    content: [
-      {
-        subtitle: '第一步：視覺評估 - 色澤的語言 👁️',
-        text: '**目標：** 觀察調配後的色澤變化與和諧度\n\n**關鍵技巧：**\n• 比較各組分的顏色深度（CS 深紫色 vs Merlot 寶石紅）\n• 觀察調配後的色調變化（是否更和諧？）\n• 評估透明度和光澤（淡淡的水緣表示陳年潛力）\n• 預測陳年後的色澤發展（紫紅 → 石榴紅 → 磚紅）\n\n**專業要點：**\n在白色背景下傾斜酒杯 45°，觀察酒的邊緣。顏色的和諧度往往反映調配的成功程度 — 優秀的調配會展現統一而深邃的色澤。',
-        highlight: '💡 評估時間：30-60 秒 | 關鍵：色調和諧、深度一致'
-      },
-      {
-        subtitle: '第二步：香氣分析 - 複雜度的證明 👃',
-        text: '**目標：** 識別調配帶來的香氣複雜度與層次\n\n**分層聞香法：**\n1. **第一印象（前調）：** 輕聞一下，捕捉最明顯的香氣\n   - CS：黑醋栗、青椒\n   - Merlot：李子、櫻桃\n   - CF：紫羅蘭、鉛筆芯\n\n2. **深度香氣（中調）：** 搖杯後再聞，感受複雜度\n   - 橡木桶香氣（香草、煙燻）\n   - 三級香氣（皮革、菌菇）\n\n3. **餘韻（後調）：** 聞空杯，評估持久度\n\n**關鍵評估：**\n優秀的調配會產生單一品種無法達到的香氣複雜度。你應該能辨識出不同品種的貢獻，但它們應該和諧融合而非各自為政。',
-        highlight: '💡 評估時間：2-3 分鐘 | 關鍵：層次與和諧度'
-      },
-      {
-        subtitle: '第三步：口感評估 - 結構的平衡 👅',
-        text: '**目標：** 感受調配對整體結構的影響\n\n**系統性品鑑步驟：**\n\n1. **入口第一印象（Attack）：**\n   • 果味的爆發感（Merlot 貢獻）\n   • 酸度的活力（CF 貢獻）\n   • 單寧的存在感（CS 貢獻）\n\n2. **中段平衡性（Mid-Palate）：**\n   • 果味、酸度、單寧、酒精的平衡\n   • 酒體的寬度與深度\n   • 質地的細膩度\n\n3. **尾韻長度（Finish）：**\n   • 餘味持續時間（優秀調配 > 60 秒）\n   • 香氣的變化與發展\n   • 收結的乾淨度\n\n**專業要點：**\n完美的調配應該讓各組分渾然一體，不見接縫。你不應該感覺到「這是 CS，那是 Merlot」，而是「這是一款和諧的整體」。',
-        highlight: '💡 評估時間：1-2 分鐘 | 關鍵：平衡、融合、餘韻'
-      }
-    ],
-    visualAid: {
-      type: 'info-grid',
-      items: [
-        {
-          icon: '👁️',
-          title: '視覺評估',
-          description: '30-60 秒',
-          detail: '顏色和諧、深度一致'
-        },
-        {
-          icon: '👃',
-          title: '香氣分析',
-          description: '2-3 分鐘',
-          detail: '分層聞香、複雜度評估'
-        },
-        {
-          icon: '👅',
-          title: '口感評估',
-          description: '1-2 分鐘',
-          detail: '結構平衡、融合度'
-        },
-        {
-          icon: '⏱️',
-          title: '總評估時間',
-          description: '4-6 分鐘/樣',
-          detail: '專業品鑑流程'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">👁️ 視覺評估</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">在白色背景下傾斜酒杯 45°，觀察色澤深度（CS深紫vs Merlot寶石紅）、色調和諧、透明度與光澤（淡水緣示陳年潛力），預測陳年色澤發展方向。<div style="background:#EDE7F6;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#4527A0;margin-top:7px;">評估 30-60秒・關鍵：色調和諧·深度一致</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">👃 香氣分析</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">分三階段：前調（輕聞 CS黑醋栗/Merlot李子/CF紫羅蘭）→ 中調（搖杯後橡木桶香草/煙燻）→ 後調（聞空杯評持久度）。優秀調配香氣和諧融合。<div style="background:#E0F2F1;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#00695C;margin-top:7px;">評估 2-3分鐘・關鍵：層次複雜·和諧融合</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">👅 口感評估</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">三段品鑑：入口果味爆發感 → 中段酸/單寧/酒精平衡 → 尾韻長度（優秀&gt;60秒）。完美調配渾然一體，感受整體而非各別品種。<div style="background:#FFEBEE;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#B71C1C;margin-top:7px;">評估 1-2分鐘・關鍵：平衡·融合·餘韻</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+          <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">👁️</div>
+            <div style="font-weight:700;font-size:0.78rem;">視覺評估</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">30-60s</div>
+            <div style="font-size:0.65rem;opacity:0.85;">色澤和諧度</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#00695C,#00897B);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">👃</div>
+            <div style="font-weight:700;font-size:0.78rem;">香氣分析</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">2-3min</div>
+            <div style="font-size:0.65rem;opacity:0.85;">分層複雜度</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#B71C1C,#C62828);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">👅</div>
+            <div style="font-weight:700;font-size:0.78rem;">口感評估</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">1-2min</div>
+            <div style="font-size:0.65rem;opacity:0.85;">結構平衡</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#E65100,#FF6D00);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">⏱️</div>
+            <div style="font-weight:700;font-size:0.78rem;">總評估</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">4-6min</div>
+            <div style="font-size:0.65rem;opacity:0.85;">完整品鑑流程</div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '調配品鑑的三大練習方法',
-    content: [
-      {
-        subtitle: '初級練習：品種識別能力 🎓',
-        text: '**目標：** 在混釀中識別各個品種的特徵\n\n**練習方法：**\n先分別品嚐單一品種，熟悉各自特徵：\n\n• **Cabernet Sauvignon 單獨品鑑：**\n  - 香氣：黑醇粟、青椒、雪松木\n  - 口感：高單寧、堅實結構、酸度中等\n\n• **Merlot 單獨品鑑：**\n  - 香氣：李子、櫻桃、巧克力\n  - 口感：柔順單寧、圓潤酒體、酸度較低\n\n• **Cabernet Franc 單獨品鑑：**\n  - 香氣：紫羅蘭、鉛筆芯、草莓\n  - 口感：中等單寧、高酸度、優雅質地\n\n**進階練習：**\n嘗試品鑑簡單混釀：\n- CS 70% + Merlot 30%：識別 CS 的結構感\n- Merlot 60% + CF 40%：識別 CF 的花香特質',
-        highlight: '🎯 成功標準：80% 以上的正確識別率'
-      },
-      {
-        subtitle: '中級練習：比例判斷能力 📊',
-        text: '**目標：** 估算混釀中各品種的大致比例\n\n**練習方法：**\n\n1. **三種基礎混釀熟悉：**\n   - CS 主導（> 65%）：結構感明顯、單寧高\n   - Merlot 主導（> 60%）：果味豐富、柔順圓潤\n   - 平衡型（CS 50-60%）：結構與果味並重\n\n2. **盲品挑戰：**\n   品鑑神秘樣品，嘗試判斷：\n   - 主導品種是什麼？\n   - 大致比例範圍（±10%）\n   - 是否有小比例的第三品種？\n\n**實例練習：**\n神秘樣品 A：\n- 實際配方：CS 65% + M 25% + CF 10%\n- 練習目標：僅通過品鑑判斷比例（誤差 < 15%）',
-        highlight: '🎯 成功標準：比例判斷誤差 < 15%'
-      },
-      {
-        subtitle: '高級練習：調配改善建議 💡',
-        text: '**目標：** 為給定的調配提出專業改善建議\n\n**情境模擬：**\n\n**案例 1：單寧過強的混釀**\n- 現有配方：CS 80% + Merlot 15% + CF 5%\n- 問題：單寧過於強勁，口感生澀\n- 你的建議？\n\n**參考解法：**\n• 增加 Merlot 至 25-30% 來軟化單寧\n• 或增加 CF 至 10-15% 來提升優雅度\n• 考慮減少新橡木桶比例\n\n**案例 2：果味不足的混釀**\n- 現有配方：CS 75% + CF 20% + Merlot 5%\n- 問題：結構感好但果味單薄\n- 你的建議？\n\n**參考解法：**\n• 大幅提升 Merlot 至 20-30%\n• 選用果味更豐富的地塊\n• 考慮縮短浸皮時間保留新鮮果香',
-        highlight: '🎯 成功標準：能提出 3 個以上可行解法並說明理由'
-      }
-    ],
-    visualAid: {
-      type: 'info-grid',
-      items: [
-        {
-          icon: '🎓',
-          title: '初級：品種識別',
-          description: '正確率 > 80%',
-          detail: '熟悉單一品種特徵'
-        },
-        {
-          icon: '📊',
-          title: '中級：比例判斷',
-          description: '誤差 < 15%',
-          detail: '估算調配比侏'
-        },
-        {
-          icon: '💡',
-          title: '高級：改善建議',
-          description: '3+ 解法',
-          detail: '提出專業優化方案'
-        },
-        {
-          icon: '⏱️',
-          title: '練習週期',
-          description: '6-12 個月',
-          detail: '從初級到高級'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🎓 初級：品種識別</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">先分別品嚐單一品種熟悉各自特徵：CS（黑醋栗/高單寧）、Merlot（李子/柔順）、CF（紫羅蘭/高酸度）。再嘗試簡單混釀，識別各品種貢獻。<div style="background:#E8F5E9;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1B5E20;margin-top:7px;">成功標準：正確識別率 &gt; 80%</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">📊 中級：比例判斷</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">熟悉三種基礎比例類型：CS主導（&gt;65%結構感強）、Merlot主導（&gt;60%果味豐富）、平衡型（CS 50-60%）。進行盲品挑戰，估算各品種比例。<div style="background:#E3F2FD;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1565C0;margin-top:7px;">成功標準：比例判斷誤差 &lt; 15%</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF6D00);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">💡 高級：改善建議</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">情境模擬：單寧過強（CS 80%）→ 建議增 Merlot至 25-30%；果味不足（CF 20%+）→ 建議增 Merlot 至 20-30%。提出 3 個以上可行解法。<div style="background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#E65100;margin-top:7px;">成功標準：提出 3+ 解法並說明理由</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+          <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">🎓</div>
+            <div style="font-weight:700;font-size:0.78rem;">初級</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">&gt;80%</div>
+            <div style="font-size:0.65rem;opacity:0.85;">識別正確率</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#1565C0,#1976D2);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">📊</div>
+            <div style="font-weight:700;font-size:0.78rem;">中級</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">&lt;15%</div>
+            <div style="font-size:0.65rem;opacity:0.85;">比例誤差</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#E65100,#FF6D00);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">💡</div>
+            <div style="font-weight:700;font-size:0.78rem;">高級</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">3+</div>
+            <div style="font-size:0.65rem;opacity:0.85;">優化解法數</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">⏱️</div>
+            <div style="font-weight:700;font-size:0.78rem;">練習週期</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">6-12m</div>
+            <div style="font-size:0.65rem;opacity:0.85;">達到高級水準</div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   // ========== 第十章：課程總結與進階學習 ==========
@@ -1108,79 +1136,77 @@ export const l36Content = [
   {
     type: 'content',
     title: '調配藝術的核心要點總結',
-    content: [
-      {
-        subtitle: '基礎原理：調配的本質 🎯',
-        text: '通過本課程的學習，我們理解了調配的三大基本原理：\n\n• **複雜度與平衡的創造：** 調配不是簡單的混合，而是為了創造出任何單一品種都無法達到的複雜度與平衡感。就像交響樂中不同樂器的和諧，1+1+1 > 3。\n\n• **品種角色的精準分工：** Cabernet Sauvignon 提供骨架與結構，Merlot 賦予肉感與果味，Cabernet Franc 增添優雅與香氣。每個品種都有其不可取代的角色。\n\n• **釀酒師風格的表達：** 調配比例不僅是技術決策，更反映了釀酒師的美學理念、哲學思考與個人風格。每 1% 的調整都能改變風格。',
-        highlight: '💡 核心理念：調配 = 藝術 + 科學 + 哲學'
-      },
-      {
-        subtitle: '實務技巧：從理論到實踐 🔬',
-        text: '我們掌握了專業調配的三大實務技巧：\n\n• **系統性的品鑑流程：** 從視覺評估到香氣分析，再到口感判斷，每個步驟都至關重要。完整的品鑑需要 4-6 分鐘，不能急於下結論。\n\n• **小樣試調的智慧：** 在正式調配前，先進行小比例試驗（100-200ml），可以節約成本並快速驗證想法。一次性混合 5-10 個不同比例來比較。\n\n• **團隊品鑑的價值：** 多人品鑑有助於減少個人偏好的影響，獲得更客觀的評估。頂級酒莊通常有 5-10 人的品鑑團隊。',
-        highlight: '💡 實踐經驗：品鑑 + 試驗 + 協作 = 成功調配'
-      },
-      {
-        subtitle: '決策因素：影響調配的變數 🌡️',
-        text: '我們分析了影響調配決策的三大關鍵因素：\n\n• **年份特徵的應對：** 溫暖年份增加 CF 提升清新，涼爽年份增加 Merlot 補充果味。靈活調整比例（±10-15%）是應對氣候變化的關鍵。\n\n• **市場需求的引導：** 消費者偏好從「需要陳年」轉向「早期適飲」，促使酒莊增加 Merlot 比例。同時注重果味表現與柔順口感。\n\n• **現代技術的賦能：** 光譜分析、微氧化、AI 輔助等技術為傳統調配提供了新工具，使決策更精準、品質更穩定。',
-        highlight: '💡 靈活策略：氣候 + 市場 + 技術 = 動態調配'
-      },
-      {
-        subtitle: '發展趨勢：調配藝術的未來 🚀',
-        text: '我們探討了調配領域的三大發展趨勢：\n\n• **新舊世界的融合：** 舊世界吸收新世界的技術創新，新世界學習舊世界的風土表達。邊界正在模糊，形成新的全球風格。\n\n• **永續發展的追求：** 有機農法、生物動力法、氣候變化應對等理念，影響著品種選擇與調配策略。未來可能看到更多抗病品種的應用。\n\n• **個性化的凸強：** 市場從追求「標準化」轉向「個性化」和「差異化」。釀酒師有更多空間表達獨特風格，創造獨一無二的作品。',
-        highlight: '💡 未來方向：融合 + 永續 + 個性 = 新時代調配'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:8px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🎯 基礎原理</div>
+            <div style="padding:9px 12px 11px;font-size:0.72rem;color:#333;line-height:1.7;">調配創造任何單一品種無法達到的複雜度（1+1+1&gt;3）。CS提供骨架·Merlot賦予肉感·CF增添優雅。比例不僅是技術決策，更反映釀酒師的美學哲學，每1%的調整都能改變風格。<div style="background:#FFEBEE;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#B71C1C;margin-top:6px;">調配 = 藝術 + 科學 + 哲學</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:8px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🔬 實務技巧</div>
+            <div style="padding:9px 12px 11px;font-size:0.72rem;color:#333;line-height:1.7;">系統性品鑑流程（4-6分鐘/樣）不能急於下結論。小樣試調（100-200ml）節約成本快速驗證。5-10人品鑑團隊確保客觀評估。50-100次小樣品鑑形成最終調配決策。<div style="background:#E3F2FD;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1565C0;margin-top:6px;">品鑑 + 試驗 + 協作 = 成功調配</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF6D00);padding:8px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🌡️ 決策因素</div>
+            <div style="padding:9px 12px 11px;font-size:0.72rem;color:#333;line-height:1.7;">溫暖年份↑CF清新·涼爽年份↑Merlot圓潤（±10-15%靈活調整）。消費者偏好推動早期適飲化。光譜分析·AI輔助·微氧化等現代技術讓決策更精準。<div style="background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#E65100;margin-top:6px;">氣候 + 市場 + 技術 = 動態調配</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:8px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🚀 發展趨勢</div>
+            <div style="padding:9px 12px 11px;font-size:0.72rem;color:#333;line-height:1.7;">新舊世界相互學習：舊世界現代化·新世界精緻化，邊界逐漸模糊。永續發展影響品種選擇。市場從標準化轉向個性化差異化，釀酒師有更多空間表達獨特風格。<div style="background:#E8F5E9;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#1B5E20;margin-top:6px;">融合 + 永續 + 個性 = 新時代調配</div></div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '進階學習路徑與建議',
-    content: [
-      {
-        subtitle: '實務進階：參與實際調配 🏭',
-        text: '**目標：** 從理論學習進入實際操作\n\n**學習方法：**\n• **參觀酒莊調配過程：** 在 3-6 月期間訪問波爾多酒莊，觀察釀酒師如何逐桶品鑑與調配\n• **參加專業工作坊：** 報名 WSET、Court of Master Sommeliers 的調配專門課程\n• **小規模調配實驗：** 購買單一品種酒款，自己嘗試不同比例的調配實驗\n• **建立品鑑筆記：** 系統性記錄每次品鑑的感受與發現，累積個人資料庫\n\n**學習資源：**\n- 專業調配課程（WSET Level 4、DipWSET）\n- 波爾多酒莊實習機會\n- 調配設備供應商（如品鑑杯、小樣瓶）',
-        highlight: '🎯 學習週期：6-12 個月 | 投入：€2K-10K'
-      },
-      {
-        subtitle: '理論深化：深入研究調配科學 📚',
-        text: '**目標：** 從感性認識提升到科學理解\n\n**研究方向：**\n• **葡萄酒化學知識：** 學習酚類化合物、花青素、香氣分子的化學機制，理解調配如何影響化學平衡\n• **產區調配傳統：** 比較波爾多、勃根第、納帕谷、托斯卡納等不同產區的調配哲學\n• **最新技術發展：** 關注光譜分析、AI 輔助、微氧化等新技術的應用\n• **案例研究：** 深入分析 Opus One、Sassicaia、Tignanello 等成功調配案例\n\n**學習資源：**\n- 專業期刊（Journal of Wine Economics、Wine & Viticulture Journal）\n- 產業研討會（Vinexpo、ProWein）\n- 學術研究機構（UC Davis、Bordeaux Sciences Agro）',
-        highlight: '🎯 學習週期：1-2 年 | 目標：Master of Wine 等級'
-      },
-      {
-        subtitle: '商業應用：調配的商業化運用 💼',
-        text: '**目標：** 將調配知識轉化為商業價值\n\n**應用領域：**\n• **市場偏好研究：** 了解亞洲市場偏好柔順風格，歐美市場偏好結構感，調整調配策略\n• **成本控制與品質平衡：** 學習如何在保持品質的前提下優化成本（如正副牌分選）\n• **行銷策略與故事：** 掌握如何說好調配故事，將技術轉化為消費者能理解的價值\n• **消費者行為研究：** 分析年輕世代對早期適飲的需求，調整產品定位\n\n**學習資源：**\n- 市場調研報告（IWSR、Wine Intelligence）\n- 商業案例研究（Harvard Business School）\n- 行業專家訪談（釀酒師、采購經理、行銷總監）',
-        highlight: '🎯 應用場景：酒莊、貿易、評分、教育'
-      }
-    ],
-    visualAid: {
-      type: 'info-grid',
-      items: [
-        {
-          icon: '🏭',
-          title: '實務進階',
-          description: '6-12 個月',
-          detail: '工作坊 + 實習 + 實驗'
-        },
-        {
-          icon: '📚',
-          title: '理論深化',
-          description: '1-2 年',
-          detail: 'MW/DipWSET 等級'
-        },
-        {
-          icon: '💼',
-          title: '商業應用',
-          description: '持續學習',
-          detail: '市場 + 成本 + 行銷'
-        },
-        {
-          icon: '🎓',
-          title: '終身學習',
-          description: '無限期',
-          detail: '調配藝術的探索'
-        }
-      ]
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">🏭 實務進階</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">參觀酒莊調配過程（3-6月）、報名 WSET/CMS 工作坊、購買單品種酒款自行試調實驗、系統性建立品鑑筆記資料庫。<div style="background:#E0F2F1;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#00695C;margin-top:7px;">週期 6-12個月・投入 €2K-10K</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">📚 理論深化</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">研究葡萄酒化學（酚類/花青素/香氣分子）、比較全球調配哲學、追蹤最新技術發展、深入分析 Opus One/Sassicaia 等成功案例。<div style="background:#EDE7F6;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#4527A0;margin-top:7px;">週期 1-2年・目標 MW/DipWSET 等級</div></div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF6D00);padding:9px 12px;color:#fff;font-weight:700;font-size:0.82rem;">💼 商業應用</div>
+            <div style="padding:9px 12px 11px;font-size:0.73rem;color:#333;line-height:1.7;">研究市場偏好差異（亞洲柔順/歐美結構）、學習成本控制與品質平衡、掌握調配故事行銷、分析年輕世代對早期適飲的需求趨勢。<div style="background:#FFF3E0;border-radius:5px;padding:4px 8px;font-size:0.69rem;color:#E65100;margin-top:7px;">應用：酒莊·貿易·評分·教育</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+          <div style="background:linear-gradient(135deg,#00695C,#00897B);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">🏭</div>
+            <div style="font-weight:700;font-size:0.78rem;">實務階段</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">6-12m</div>
+            <div style="font-size:0.65rem;opacity:0.85;">工作坊 + 實習</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#4527A0,#7B1FA2);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">📚</div>
+            <div style="font-weight:700;font-size:0.78rem;">理論階段</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">1-2y</div>
+            <div style="font-size:0.65rem;opacity:0.85;">MW/DipWSET</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#E65100,#FF6D00);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">💼</div>
+            <div style="font-weight:700;font-size:0.78rem;">商業應用</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">持續</div>
+            <div style="font-size:0.65rem;opacity:0.85;">市場·成本·行銷</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);border-radius:8px;padding:8px 10px;text-align:center;color:#fff;">
+            <div style="font-size:1.1rem;margin-bottom:3px;">🎓</div>
+            <div style="font-weight:700;font-size:0.78rem;">終身學習</div>
+            <div style="font-size:0.85rem;font-weight:800;margin:2px 0;">∞</div>
+            <div style="font-size:0.65rem;opacity:0.85;">調配藝術探索</div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   // ========== 知識檢測：調配品鑑實務 ==========
