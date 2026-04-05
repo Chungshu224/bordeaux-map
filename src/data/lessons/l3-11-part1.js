@@ -834,36 +834,36 @@ export const l311Part1Content = [
     title: '課程總結：歷史傳承的智慧',
     content: `
       <div class="summary-content">
-        <div class="historical-wisdom">
-          <h3>📚 歷史發展的關鍵洞察</h3>
-          <div class="key-insights">
-            <div class="insight-item">
-              <h4>🏛️ 技術傳承的重要性</h4>
-              <p>從羅馬時代到修道院時期，技術的積累和傳承是波爾多葡萄酒業發展的基石</p>
+
+        <div class="key-point-banner">
+          <p>波爾多的偉大不是偶然，而是歷經羅馬奠基、修道院淬鍊、英國市場催化，以及 1855 年分級制度塑造，層層積累出來的歷史成就。</p>
+        </div>
+
+        <h3>📚 第一部分：四大歷史洞察</h3>
+        <div class="info-cards-grid two-col">
+          <div class="info-card">
+            <div class="card-header"><span class="card-icon">🏛️</span><h4>技術傳承的重要性</h4></div>
+            <p>從羅馬時代到修道院時期，技術的一代代積累與傳承，是波爾多葡萄酒業發展最深厚的基石</p>
+          </div>
+          <div class="info-card">
+            <div class="card-header"><span class="card-icon">🤝</span><h4>國際合作的價值</h4></div>
+            <p>英國統治時期展示了國際市場合作對產業繁榮的決定性推動作用，貿易網絡造就了品質革命</p>
+          </div>
+          <div class="info-card">
+            <div class="card-header"><span class="card-icon">📏</span><h4>標準化的力量</h4></div>
+            <p>1855 年分級制度證明了在農產品領域建立標準化評估體系，可以創造 170 年屹立不倒的市場價值</p>
             </div>
-            <div class="insight-item">
-              <h4>🤝 國際合作的價值</h4>
-              <p>英國統治時期展示了國際市場合作對於產業發展的重要推動作用</p>
-            </div>
-            <div class="insight-item">
-              <h4>📏 標準化的力量</h4>
-              <p>1855年分級制度證明了標準化評估體系對於產業發展的深遠影響</p>
-            </div>
-            <div class="insight-item">
-              <h4>🔄 適應變化的能力</h4>
-              <p>歷史上的每次危機都促使波爾多葡萄酒業發展出更強的適應能力</p>
-            </div>
+          <div class="info-card">
+            <div class="card-header"><span class="card-icon">🔄</span><h4>適應變化的能力</h4></div>
+            <p>歷史上的每次危機——根瘤蚜蟲、世界大戰、經濟蕭條——都催生了產業更強的韌性與創新應對能力</p>
           </div>
         </div>
 
-        <div class="modern-relevance">
-          <h3>🔗 歷史與現代的連接</h3>
-          <p>波爾多葡萄酒的歷史不僅是過去的記錄，更是理解現代葡萄酒業的重要鑰匙。
-          從羅馬時代的技術基礎，到中世紀的品質追求，從英國統治期的國際化視野，
-          到1855年分級制度的標準化思維，每一個歷史階段都為現代波爾多提供了寶貴的經驗和智慧。
-          理解這些歷史背景，有助於我們更好地欣賞波爾多葡萄酒的深度與複雜性，
-          也為我們展望其未來發展提供了重要的參考框架。</p>
+        <h3>🔗 歷史與現代的連接</h3>
+        <div class="key-point-banner">
+          <p>波爾多的歷史不僅是過去的記錄，更是理解今日波爾多的鑰匙。每一個歷史節點的選擇，都塑造了我們今日所見的頂級產區格局。繼續第二部分，探索文化傳承與現代挑戰。</p>
         </div>
+
       </div>
     `,
     highlights: [

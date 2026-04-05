@@ -6,31 +6,42 @@ export const l311Part2Content = [
   {
     type: 'intro',
     title: '課程導讀 - 第二部分',
-    content: '波爾多葡萄酒不僅是商品，更是文化的載體和藝術的表達。在第二部分中，我們將深入探討波爾多葡萄酒如何從單純的農產品發展為法國文化的象徵，如何在現代社會中保持其獨特的文化價值，以及它在全球葡萄酒文化中的影響和地位。我們也將分析現代化進程對傳統文化的衝擊與融合。',
-    duration: '預計學習時間：35分鐘',
-    level: '高級專業',
-    objectives: [
-      {
-        id: 1,
-        text: '深度理解波爾多葡萄酒的文化內涵和社會象徵意義',
-        icon: '🎭'
-      },
-      {
-        id: 2,
-        text: '分析法國葡萄酒文化的特色和國際影響力',
-        icon: '🇫🇷'
-      },
-      {
-        id: 3,
-        text: '評估波爾多在全球葡萄酒文化中的地位和作用',
-        icon: '🌍'
-      },
-      {
-        id: 4,
-        text: '探討現代化對傳統酒業文化的影響與機遇',
-        icon: '🔄'
-      }
-    ]
+    content: `
+      <div class="intro-content">
+        <p class="intro-lead">
+          葡萄酒不只是農產品，更是文化的載體與藝術的表達。第二部分深入探討波爾多如何從單純的釀造產業，蛻變為代表法國生活哲學的文化符號，以及如何在全球化浪潮中守護傳統、開創新局。
+        </p>
+
+        <h3 class="section-title">第二部分學習目標</h3>
+
+        <div class="learning-points">
+          <div class="point-item">
+            <h4>🎭 深度理解文化內涵與象徵意義</h4>
+            <p>探索波爾多葡萄酒如何成為法式生活藝術（Art de Vivre）與 Terroir 風土哲學的具體體現</p>
+          </div>
+
+          <div class="point-item">
+            <h4>🇫🇷 分析法國文化軟實力的輸出</h4>
+            <p>理解波爾多如何透過教育體系、文化外交與媒體傳播，引領全球葡萄酒文化標準</p>
+          </div>
+
+          <div class="point-item">
+            <h4>🌍 評估波爾多的全球文化地位</h4>
+            <p>了解波爾多在國際市場、聯合國教科文組織認可與多邊文化合作中的核心角色</p>
+          </div>
+
+          <div class="point-item">
+            <h4>🔄 探討現代化的挑戰與應對策略</h4>
+            <p>分析科技發展、世代差異帶來的文化衝擊，以及如何在數位時代守護並創新傳統文化</p>
+          </div>
+        </div>
+
+        <div class="course-info">
+          <p><strong>預計學習時間：</strong>35 分鐘</p>
+          <p><strong>難度等級：</strong>高級專業</p>
+        </div>
+      </div>
+    `,
   },
 
   // 第一章：法國葡萄酒文化的核心價值
@@ -500,37 +511,36 @@ export const l311Part2Content = [
     title: '課程總結：文化的永恆價值',
     content: `
       <div class="summary-content">
-        <div class="cultural-legacy">
-          <h3>🎭 文化傳承的核心使命</h3>
-          <div class="cultural-mission">
-            <div class="mission-item">
-              <h4>🔥 保持文化火種</h4>
-              <p>在全球化和現代化的浪潮中，保持波爾多葡萄酒文化的獨特性和純正性</p>
-            </div>
-            <div class="mission-item">
-              <h4>🌱 促進文化創新</h4>
-              <p>在傳承中創新，在創新中傳承，讓古老文化煥發新的生命力</p>
-            </div>
-            <div class="mission-item">
-              <h4>🌍 擴大文化影響</h4>
-              <p>通過文化外交和國際合作，擴大法國葡萄酒文化的全球影響力</p>
-            </div>
-            <div class="mission-item">
-              <h4>👥 培養文化傳人</h4>
-              <p>培養新一代的文化傳承者，確保文化的永續發展</p>
-            </div>
+
+        <div class="key-point-banner">
+          <p>波爾多葡萄酒的文化影響力已遠超一瓶酒的本身，它承載著 Art de Vivre 的生活哲學、Terroir 的自然智慧，以及法國面向世界的文化軟實力。</p>
+        </div>
+
+        <h3>🎭 文化傳承的四大核心使命</h3>
+        <div class="info-cards-grid two-col">
+          <div class="info-card accent-green">
+            <div class="card-header"><span class="card-icon">🔥</span><h4>守護文化火種</h4></div>
+            <p>在全球化浪潮中，堅持波爾多葡萄酒文化的獨特性與純正性，讓百年傳統不因商業壓力而稀釋</p>
+          </div>
+          <div class="info-card accent-green">
+            <div class="card-header"><span class="card-icon">🌱</span><h4>促進文化創新</h4></div>
+            <p>在傳承中創新，在創新中傳承，以數位工具、跨界合作讓古老文化煥發新一代的生命力</p>
+          </div>
+          <div class="info-card accent-green">
+            <div class="card-header"><span class="card-icon">🌍</span><h4>擴大文化影響</h4></div>
+            <p>透過文化外交與國際合作，讓法國葡萄酒文化的普世價值觸達全球更廣泛的受眾</p>
+          </div>
+          <div class="info-card accent-green">
+            <div class="card-header"><span class="card-icon">👥</span><h4>培育文化傳人</h4></div>
+            <p>透過正規教育、師徒傳承與國際交流，培養新世代成為文化的守護者與創新者</p>
           </div>
         </div>
 
-        <div class="future-vision">
-          <h3>🔮 文化發展的未來展望</h3>
-          <p>波爾多葡萄酒文化正站在歷史的新起點上。面對數位化、全球化、可持續發展等時代挑戰，
-          我們既要保持文化的核心價值和獨特魅力，又要積極擁抱變化，創新發展方式。
-          未來的波爾多文化將是一個更加開放、包容、創新的文化體系，
-          它將繼續引領全球葡萄酒文化的發展方向，
-          為人類文明的豐富多彩貢獻法國智慧和波爾多經驗。
-          這不僅是一種文化責任，更是一種歷史使命。</p>
+        <h3>🔮 波爾多文化的未來展望</h3>
+        <div class="key-point-banner">
+          <p>波爾多葡萄酒文化正站在歷史的新起點。核心價值不變，傳播方式因時俱進——這是面對數位化、永續發展等時代挑戰的唯一解方，也是法國文化智慧留給世界的最珍貴禮物。</p>
         </div>
+
       </div>
     `,
     highlights: [
