@@ -287,13 +287,7 @@ export const l311Part1Content = [
         content: '中世紀修道院不僅保存了釀酒技術，更推動了品種改良和品質提升的重要發展'
       }
     ],
-    hasMap: true,
-    mapConfig: {
-      center: [44.85, -0.65],
-      zoom: 10,
-      showHistoricalSites: true,
-      highlightMonasteries: true
-    },
+    hasMap: false,
     interactiveElements: [
       {
         type: 'historical-timeline',
