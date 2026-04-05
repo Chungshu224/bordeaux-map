@@ -37,9 +37,9 @@ export const l311Part2Content = [
   // 章節導覽分隔（供簡報章節導覽晶片使用）
   {
     type: 'chapter-divider',
-    title: '第一章',
+    title: '第四章',
     subtitle: '法國葡萄酒文化的核心價值',
-    icon: '🎭',
+    icon: '🇫🇷',
     navLabel: '文化核心'
   },
   {
@@ -212,7 +212,7 @@ export const l311Part2Content = [
   // 章節導覽分隔（供簡報章節導覽晶片使用）
   {
     type: 'chapter-divider',
-    title: '第二章',
+    title: '第五章',
     subtitle: '波爾多的現代文化地位',
     icon: '🌍',
     navLabel: '現代地位'
@@ -354,9 +354,9 @@ export const l311Part2Content = [
   // 章節導覽分隔（供簡報章節導覽晶片使用）
   {
     type: 'chapter-divider',
-    title: '第三章',
+    title: '第六章',
     subtitle: '現代化挑戰與文化傳承',
-    icon: '⚖️',
+    icon: '⚡',
     navLabel: '挑戰與傳承'
   },
   {

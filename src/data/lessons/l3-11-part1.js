@@ -950,6 +950,34 @@ export const l311Part1Content = [
     ],
     passingScore: 80,
     timeLimit: 300
+  },
+
+  // 第四章：法國葡萄酒文化的核心價值（Part2）
+  // 章節導覽分隔 — 供簡報頂部晶片使用
+  {
+    type: 'chapter-divider',
+    title: '第四章',
+    subtitle: '法國葡萄酒文化的核心價值',
+    icon: '🇫🇷',
+    navLabel: '文化核心'
+  },
+
+  // 第五章：波爾多的現代文化地位（Part2）
+  {
+    type: 'chapter-divider',
+    title: '第五章',
+    subtitle: '波爾多的現代文化地位',
+    icon: '🌍',
+    navLabel: '現代地位'
+  },
+
+  // 第六章：現代化挑戰與文化傳承（Part2）
+  {
+    type: 'chapter-divider',
+    title: '第六章',
+    subtitle: '現代化挑戰與文化傳承',
+    icon: '⚡',
+    navLabel: '挑戰與傳承'
   }
 ];
 
