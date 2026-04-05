@@ -190,8 +190,11 @@ export const l26Content = [
       el.style.cssText = `font-size: 36px; cursor: pointer; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));`
 
       const popupContent = document.createElement('div')
-      popupContent.style.padding = '12px'
       popupContent.innerHTML = `
+        <img src="/images/chateaux/RightBank/Libournais/petrus.jpg" alt="Château Petrus"
+          style="width:100%;max-height:200px;object-fit:contain;display:block;background:#f5f5f5;"
+          onerror="this.style.display='none'" />
+        <div style="padding:12px;">
         <div style="display:flex;gap:8px;align-items:center">
           <span style="font-size:28px">👑</span>
           <div>
@@ -203,6 +206,7 @@ export const l26Content = [
           <p style="margin:4px 0"><strong>面積：</strong>11.4 公頃</p>
           <p style="margin:4px 0"><strong>土壤：</strong>藍黏土</p>
           <p style="margin:4px 0"><strong>品種：</strong>以 Merlot 為主</p>
+        </div>
         </div>
       `
 
@@ -248,8 +252,11 @@ export const l26Content = [
       el.style.cssText = `font-size: 34px; cursor: pointer; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));`
 
       const popupContent = document.createElement('div')
-      popupContent.style.padding = '12px'
       popupContent.innerHTML = `
+        <img src="/images/chateaux/RightBank/Libournais/le_pin.jpg" alt="Château Le Pin"
+          style="width:100%;max-height:200px;object-fit:contain;display:block;background:#f5f5f5;"
+          onerror="this.style.display='none'" />
+        <div style="padding:12px;">
         <div style="display:flex;gap:8px;align-items:center">
           <span style="font-size:26px">🌲</span>
           <div>
@@ -261,6 +268,7 @@ export const l26Content = [
           <p style="margin:4px 0"><strong>面積：</strong>2.7 公頃</p>
           <p style="margin:4px 0"><strong>風格：</strong>豐腴、奔放、現代</p>
           <p style="margin:4px 0"><strong>特色：</strong>小批量高集中、價格昂貴</p>
+        </div>
         </div>
       `
 
@@ -317,13 +325,12 @@ export const l26Content = [
         el.style.cssText = `font-size:28px; cursor: pointer; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));`
 
         const popupContent = document.createElement('div')
-        popupContent.style.padding = '12px'
         
         let html = ''
         if (imagePath) {
-          html += `<div style="text-align:center;margin-bottom:10px;"><img src="${imagePath}" alt="${title}" style="width:100%;max-height:200px;object-fit:cover;border-radius:6px;" onerror="this.style.display='none'"></div>`
+          html += `<img src="${imagePath}" alt="${title}" style="width:100%;max-height:200px;object-fit:contain;display:block;background:#f5f5f5;" onerror="this.style.display='none'">`
         }
-        html += `
+        html += `<div style="padding:12px;">
           <div style="display:flex;gap:8px;align-items:center">
             <span style="font-size:22px">${emoji}</span>
             <div>
@@ -332,7 +339,7 @@ export const l26Content = [
             </div>
           </div>
           <div style="margin-top:8px;font-size:13px;">${detailsHtml}</div>
-        `
+        </div>`
         popupContent.innerHTML = html
 
         const popup = new mapboxgl.Popup({ offset: 26, maxWidth: '320px' }).setDOMContent(popupContent)
@@ -348,7 +355,7 @@ export const l26Content = [
       // Vieux Château Certan
       makeEstate(vieuxCertan, '🏰', 'Vieux Château Certan', '老色丹堡 — 經典平衡', `
         <p style="margin:4px 0"><strong>特色：</strong>歷史悠久、風格經典且穩定，是Pomerol的長期代表。</p>
-      `)
+      `, '/images/chateaux/RightBank/Libournais/Vieuxchateaucertan.jpg')
 
       // Château L'Évangile
       makeEstate(levangile, '🎖️', "Château L'Évangile", '樂王吉 — 力量與優雅兼備', `

@@ -147,6 +147,72 @@ export const l28Content = [
         } else {
           map.fitBounds(bounds, { padding: 60, maxZoom: 12, duration: 1000 })
         }
+
+        // 各產區顯示名稱與顏色設定
+        const regionLabels = {
+          'Montagne-St-Emilion_AOC': { label: 'Montagne\nSt-Émilion', color: '#C2185B' },
+          'Lussac-St-Emilion_AOC':   { label: 'Lussac\nSt-Émilion',   color: '#E91E63' },
+          'Puisseguin-St-Emilion_AOC':{ label: 'Puisseguin\nSt-Émilion', color: '#AD1457' },
+          'St-Georges-St-Emilion_AOC':{ label: 'St-Georges\nSt-Émilion', color: '#880E4F' },
+          'Lalande-de-Pomerol_AOC':  { label: 'Lalande-de-\nPomerol',  color: '#6A1B9A' },
+          'Fronsac_AOC':             { label: 'Fronsac',                color: '#4527A0', offset: [0, 0.016] },
+          'Canon-Fronsac_AOC':       { label: 'Canon-Fronsac',         color: '#283593', offset: [0, -0.010] }
+        }
+
+        // 計算每個 GeoJSON 的中心點並加文字標記
+        const labelMarkers = []
+        results.forEach((result, i) => {
+          if (result.status !== 'fulfilled' || !result.value) return
+          const gj = result.value
+          const pathKey = Object.keys(regionLabels).find(k => geojsonPaths[i].includes(k))
+          if (!pathKey) return
+          const { label, color, offset } = regionLabels[pathKey]
+
+          // 計算所有頂點的平均座標作為中心點
+          const pts = []
+          const collectPts = (coords) => {
+            if (!coords) return
+            if (typeof coords[0] === 'number') { pts.push(coords); return }
+            coords.forEach(c => collectPts(c))
+          }
+          if (gj.type === 'FeatureCollection') gj.features.forEach(f => collectPts(f.geometry.coordinates))
+          else if (gj.type === 'Feature') collectPts(gj.geometry.coordinates)
+          else collectPts(gj.coordinates)
+          if (!pts.length) return
+
+          const cx = pts.reduce((s, p) => s + p[0], 0) / pts.length
+          const cy = pts.reduce((s, p) => s + p[1], 0) / pts.length
+
+          // 建立文字標籤 marker（外層不設 transform 避免 Mapbox 飄移）
+          const el = document.createElement('div')
+          el.style.cssText = `pointer-events: none;`
+          const inner = document.createElement('div')
+          inner.style.cssText = `
+            background: ${color};
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            font-family: 'Noto Sans TC', sans-serif;
+            padding: 4px 7px;
+            border-radius: 4px;
+            text-align: center;
+            white-space: pre;
+            line-height: 1.4;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            border: 1.5px solid rgba(255,255,255,0.7);
+          `
+          inner.textContent = label
+          el.appendChild(inner)
+
+          const marker = new mapboxgl.Marker({ element: el, anchor: 'center' })
+            .setLngLat([cx + (offset?.[0] || 0), cy + (offset?.[1] || 0)])
+            .addTo(map)
+          labelMarkers.push(marker)
+        })
+
+        return () => {
+          labelMarkers.forEach(m => { try { m.remove() } catch {} })
+        }
       } catch (err) {
         console.warn('Satellite regions geojson load failed', err)
         map.flyTo({ center: [-0.15, 44.95], zoom: 11, duration: 1000 })

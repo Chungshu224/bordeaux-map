@@ -273,50 +273,65 @@ export const lessonContent = [
         else if (gj.type === 'Feature') extendCoords(gj.geometry.coordinates)
         else extendCoords(gj.coordinates)
 
-        if (!extended) map.flyTo({ center: [-0.133, 44.855], zoom: 13, duration: 1000 })
-        else map.fitBounds(bounds, { padding: 80, maxZoom: 14, duration: 1000 })
+        // 兩個酒莊座標先定義，加入 bounds 確保畫面一定包含雙王
+        const chevalBlancPos = [-0.19170525235414804, 44.91992803845212]
+        const ausonePos = [-0.15618326584386588, 44.8893420981509]
+        bounds.extend(chevalBlancPos)
+        bounds.extend(ausonePos)
+        extended = true
+
+        map.fitBounds(bounds, { padding: 80, maxZoom: 14, duration: 1000 })
 
         // Add Cheval Blanc & Ausone markers on this slide
         const markers = []
         const makeEstate = (pos, emoji, title, subtitle, detailsHtml, imagePath) => {
+          // 外層 el 不設 transform/transition，避免干擾 Mapbox 定位
           const el = document.createElement('div')
           el.className = 'estate-marker'
-          el.innerHTML = emoji
-          el.style.cssText = `font-size:30px; cursor:pointer; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));`
+          el.style.cssText = `cursor:pointer; font-size:30px;`
+          el.innerHTML = `<div style="display:inline-block; filter:drop-shadow(0 3px 6px rgba(0,0,0,0.25)); transition:transform 0.2s;">${emoji}</div>`
+          el.addEventListener('mouseenter', () => {
+            const inner = el.querySelector('div')
+            if (inner) inner.style.transform = 'scale(1.2)'
+          })
+          el.addEventListener('mouseleave', () => {
+            const inner = el.querySelector('div')
+            if (inner) inner.style.transform = 'scale(1)'
+          })
 
           const popupContent = document.createElement('div')
-          popupContent.style.padding = '12px'
-          
-          // Add image if provided
+
+          // 酒標圖片全圖顯示於資訊上方
           if (imagePath) {
-            const imgDiv = document.createElement('div')
-            imgDiv.style.marginBottom = '10px'
-            imgDiv.style.textAlign = 'center'
-            imgDiv.innerHTML = `<img src="${imagePath}" alt="${title}" style="width:100%;max-height:200px;object-fit:cover;border-radius:6px;" onerror="this.style.display='none'">`
-            popupContent.appendChild(imgDiv)
+            const imgEl = document.createElement('img')
+            imgEl.src = imagePath
+            imgEl.alt = title
+            imgEl.style.cssText = `width:100%;max-height:200px;object-fit:contain;display:block;background:#f5f5f5;`
+            imgEl.onerror = () => { imgEl.style.display = 'none' }
+            popupContent.appendChild(imgEl)
           }
-          
+
+          const body = document.createElement('div')
+          body.style.padding = '12px'
+
           const header = document.createElement('div')
-          header.style.display = 'flex'
-          header.style.gap = '8px'
-          header.style.alignItems = 'center'
+          header.style.cssText = `display:flex; gap:8px; align-items:center;`
           header.innerHTML = `<span style="font-size:22px">${emoji}</span>`
           const info = document.createElement('div')
           info.innerHTML = `<h3 style="margin:0;color:#6B0F1A;font-size:15px">${title}</h3><p style="margin:4px 0 0 0;font-size:12px;color:#666">${subtitle}</p>`
           header.appendChild(info)
-          popupContent.appendChild(header)
+          body.appendChild(header)
+
           const details = document.createElement('div')
-          details.style.marginTop = '8px'
-          details.style.fontSize = '13px'
+          details.style.cssText = `margin-top:8px; font-size:13px;`
           details.innerHTML = detailsHtml
-          popupContent.appendChild(details)
+          body.appendChild(details)
+          popupContent.appendChild(body)
+
           const popup = new mapboxgl.Popup({ offset: 26, maxWidth: '320px' }).setDOMContent(popupContent)
-          const marker = new mapboxgl.Marker(el).setLngLat(pos).setPopup(popup).addTo(map)
+          const marker = new mapboxgl.Marker({ element: el, anchor: 'center' }).setLngLat(pos).setPopup(popup).addTo(map)
           markers.push({ marker, popup })
         }
-
-        const chevalBlancPos = [-0.19170525235414804, 44.91992803845212]
-        const ausonePos = [-0.15618326584386588, 44.8893420981509]
 
         makeEstate(chevalBlancPos, '🐴', 'Château Cheval Blanc', '白馬莊 — 卡本內弗朗的優雅典範', `
           <p style="margin:4px 0"><strong>地位：</strong>Saint-Émilion一級A莊，全球最負盛名的酒莊之一。</p>
@@ -400,39 +415,50 @@ export const lessonContent = [
 
         const markers = []
         const makeEstate = (pos, emoji, title, subtitle, detailsHtml, imagePath) => {
+          // 外層 el 不設 transform/transition，避免干擾 Mapbox 定位
           const el = document.createElement('div')
           el.className = 'estate-marker'
-          el.innerHTML = emoji
-          el.style.cssText = `font-size:30px; cursor:pointer; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));`
+          el.style.cssText = `cursor:pointer; font-size:30px;`
+          el.innerHTML = `<div style="display:inline-block; filter:drop-shadow(0 3px 6px rgba(0,0,0,0.25)); transition:transform 0.2s;">${emoji}</div>`
+          el.addEventListener('mouseenter', () => {
+            const inner = el.querySelector('div')
+            if (inner) inner.style.transform = 'scale(1.2)'
+          })
+          el.addEventListener('mouseleave', () => {
+            const inner = el.querySelector('div')
+            if (inner) inner.style.transform = 'scale(1)'
+          })
 
           const popupContent = document.createElement('div')
-          popupContent.style.padding = '12px'
-          
-          // Add image if provided
+
+          // 酒標圖片全圖顯示於資訊上方
           if (imagePath) {
-            const imgDiv = document.createElement('div')
-            imgDiv.style.marginBottom = '10px'
-            imgDiv.style.textAlign = 'center'
-            imgDiv.innerHTML = `<img src="${imagePath}" alt="${title}" style="width:100%;max-height:200px;object-fit:cover;border-radius:6px;" onerror="this.style.display='none'">`
-            popupContent.appendChild(imgDiv)
+            const imgEl = document.createElement('img')
+            imgEl.src = imagePath
+            imgEl.alt = title
+            imgEl.style.cssText = `width:100%;max-height:200px;object-fit:contain;display:block;background:#f5f5f5;`
+            imgEl.onerror = () => { imgEl.style.display = 'none' }
+            popupContent.appendChild(imgEl)
           }
-          
+
+          const body = document.createElement('div')
+          body.style.padding = '12px'
+
           const header = document.createElement('div')
-          header.style.display = 'flex'
-          header.style.gap = '8px'
-          header.style.alignItems = 'center'
+          header.style.cssText = `display:flex; gap:8px; align-items:center;`
           header.innerHTML = `<span style="font-size:22px">${emoji}</span>`
           const info = document.createElement('div')
           info.innerHTML = `<h3 style="margin:0;color:#6B0F1A;font-size:15px">${title}</h3><p style="margin:4px 0 0 0;font-size:12px;color:#666">${subtitle}</p>`
           header.appendChild(info)
-          popupContent.appendChild(header)
+          body.appendChild(header)
           const details = document.createElement('div')
           details.style.marginTop = '8px'
           details.style.fontSize = '13px'
           details.innerHTML = detailsHtml
-          popupContent.appendChild(details)
+          body.appendChild(details)
+          popupContent.appendChild(body)
           const popup = new mapboxgl.Popup({ offset: 26, maxWidth: '320px' }).setDOMContent(popupContent)
-          const marker = new mapboxgl.Marker(el).setLngLat(pos).setPopup(popup).addTo(map)
+          const marker = new mapboxgl.Marker({ element: el, anchor: 'center' }).setLngLat(pos).setPopup(popup).addTo(map)
           markers.push({ marker, popup })
         }
 

@@ -843,10 +843,10 @@ async function loadMultipleAOC(urls = [], skipFitBounds = false) {
         lineWidth = 1.5
         regionType = 'left-red'
       } else if (isRightBank) {
-        // 右岸紅酒：深紫色
-        fillColor = '#4B0082'
-        fillOpacity = hasGeologyContext ? 0.18 : 0.4
-        lineColor = '#4B0082'
+        // 右岸紅酒：酒紅色，降低透明度避免遮蓋標記
+        fillColor = '#C2185B'
+        fillOpacity = hasGeologyContext ? 0.12 : 0.22
+        lineColor = '#880E4F'
         lineWidth = 1.5
         regionType = 'right-red'
       } else {

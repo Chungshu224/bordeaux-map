@@ -201,6 +201,7 @@ export const l25Content = [
           position: [-0.7749579835665066, 45.230882308194865],
           icon: '🐘',
           color: '#8B4513',
+          image: '/images/chateaux/LeftBank/Medoc/cos_destournel.jpg',
           style: '優雅精緻',
           signature: '黑醋栗、紫羅蘭、香料',
           ranking: '二級莊 (1855)',
@@ -214,6 +215,7 @@ export const l25Content = [
           position: [-0.7622022160985353, 45.246412938477135],
           icon: '🌹',
           color: '#8B0000',
+          image: '/images/chateaux/LeftBank/Medoc/montrose.jpg',
           style: '強勁深邃',
           signature: '黑莓、石墨、煙燻',
           ranking: '二級莊 (1855)',
@@ -257,28 +259,35 @@ export const l25Content = [
       const createdPopups = []
       
       secondGrowths.forEach((estate) => {
-        // 創建自定義標記元素
+        // 創建自定義標記元素（外層不可設 transition:transform，避免干擾 Mapbox 定位）
         const el = document.createElement('div')
         el.className = 'second-growth-marker'
-        el.innerHTML = estate.icon
         el.style.cssText = `
-          font-size: 32px;
           cursor: pointer;
+          font-size: 32px;
+        `
+        el.innerHTML = `<div style="
+          display: inline-block;
           filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
           transition: transform 0.2s;
-        `
+        ">${estate.icon}</div>`
         
         el.addEventListener('mouseenter', () => {
-          el.style.transform = 'scale(1.2)'
+          const inner = el.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1.2)'
         })
         el.addEventListener('mouseleave', () => {
-          el.style.transform = 'scale(1)'
+          const inner = el.querySelector('div')
+          if (inner) inner.style.transform = 'scale(1)'
         })
         
         // 創建詳細的彈出視窗
         const popupContent = document.createElement('div')
-        popupContent.style.padding = '12px'
         popupContent.innerHTML = `
+          <img src="${estate.image}" alt="${estate.name}"
+            style="width: 100%; max-height: 200px; object-fit: contain; display: block; background: #f5f5f5;"
+            onerror="this.style.display='none'" />
+          <div style="padding: 12px;">
           <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
             <span style="font-size: 28px;">${estate.icon}</span>
             <div>
@@ -307,6 +316,7 @@ export const l25Content = [
             
             <span style="color: #888;">🍷 產量：</span>
             <span>${estate.production}</span>
+          </div>
           </div>
         `
         
@@ -388,28 +398,35 @@ export const l25Content = [
       
       await new Promise(resolve => setTimeout(resolve, 150))
       
-      // 創建自定義標記元素
+      // 創建自定義標記元素（外層不可設 transition:transform，避免干擾 Mapbox 定位）
       const el = document.createElement('div')
       el.className = 'calon-segur-marker'
-      el.innerHTML = estate.icon
       el.style.cssText = `
-        font-size: 36px;
         cursor: pointer;
+        font-size: 36px;
+      `
+      el.innerHTML = `<div style="
+        display: inline-block;
         filter: drop-shadow(0 3px 6px rgba(196,30,58,0.5));
         transition: transform 0.2s;
-      `
+      ">${estate.icon}</div>`
       
       el.addEventListener('mouseenter', () => {
-        el.style.transform = 'scale(1.3)'
+        const inner = el.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1.3)'
       })
       el.addEventListener('mouseleave', () => {
-        el.style.transform = 'scale(1)'
+        const inner = el.querySelector('div')
+        if (inner) inner.style.transform = 'scale(1)'
       })
       
       // 創建詳細的彈出視窗
       const popupContent = document.createElement('div')
-      popupContent.style.padding = '12px'
       popupContent.innerHTML = `
+        <img src="/images/chateaux/LeftBank/Medoc/calon_segur.jpg" alt="Château Calon-Ségur"
+          style="width: 100%; max-height: 200px; object-fit: contain; display: block; background: #f5f5f5;"
+          onerror="this.style.display='none'" />
+        <div style="padding: 12px;">
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
           <span style="font-size: 32px;">${estate.icon}</span>
           <div>
@@ -438,6 +455,7 @@ export const l25Content = [
           
           <span style="color: #888;">🍷 產量：</span>
           <span>${estate.production}</span>
+        </div>
         </div>
       `
       
