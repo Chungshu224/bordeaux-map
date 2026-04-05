@@ -44,8 +44,27 @@ export const l311Part1Content = [
           完成本部分後，您將全面理解波爾多葡萄酒業的歷史深度，以及分級制度如何塑造今日的市場格局。
         </p>
 
+        <h3 class="section-title">第二部分預覽：文化傳承與現代影響</h3>
+
+        <div class="learning-points part2-preview">
+          <div class="point-item">
+            <h4>🇫🇷 第一章：法國葡萄酒文化的核心價值</h4>
+            <p>深入探索「Art de Vivre」法式生活藝術、Terroir 風土哲學的文化意涵，以及波爾多如何成為法國文化軟實力的重要象徵</p>
+          </div>
+
+          <div class="point-item">
+            <h4>🌍 第二章：波爾多的現代文化地位</h4>
+            <p>分析波爾多作為全球葡萄酒文化引領者的品質標準輸出、國際教育體系影響，以及在全球文化外交中的積極角色</p>
+          </div>
+
+          <div class="point-item">
+            <h4>⚡ 第三章：現代化挑戰與文化傳承</h4>
+            <p>評估科技發展與世代差異對傳統文化的雙面衝擊，探討知識數位化保存、核心價值守護與文化創新的平衡策略</p>
+          </div>
+        </div>
+
         <div class="course-info">
-          <p><strong>預計學習時間：</strong>30分鐘</p>
+          <p><strong>預計學習時間：</strong>第一部分 30 分鐘 ／ 第二部分 35 分鐘</p>
           <p><strong>難度等級：</strong>高級專業</p>
         </div>
       </div>
