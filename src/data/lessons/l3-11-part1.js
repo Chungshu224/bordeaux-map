@@ -620,222 +620,129 @@ export const l311Part1Content = [
     subtitle: '改變波爾多命運的歷史性評選',
     content: `
       <div class="chapter-content">
-        <div class="classification-1855">
-          <h3>🌍 巴黎世界博覽會的背景</h3>
-          <div class="expo-context">
-            <div class="historical-setting">
-              <h4>1855年：法國的雄心壯志</h4>
-              <div class="expo-details">
-                <div class="political-context">
-                  <h5>🏛️ 拿破崙三世的法國</h5>
-                  <div class="context-aspects">
-                    <div class="aspect-item">
-                      <h6>國際地位競爭</h6>
-                      <p>• 法國尋求在工業革命中重建國際聲望<br>
-                      • 與英國在經濟和文化領域的競爭<br>
-                      • 通過世界博覽會展示法國的優秀產品<br>
-                      • 葡萄酒作為法國文化的重要代表</p>
-                    </div>
-                    <div class="aspect-item">
-                      <h6>經濟現代化需求</h6>
-                      <p>• 工業化進程需要農產品標準化<br>
-                      • 國際貿易要求明確的品質分級<br>
-                      • 消費者需要可信賴的品質保證<br>
-                      • 出口市場需要統一的評價標準</p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="expo-organization">
-                  <h5>📋 博覽會的組織需求</h5>
-                  <div class="organizational-requirements">
-                    <div class="requirement-item">
-                      <h6>展品分類標準化</h6>
-                      <p>• 需要清晰的產品等級劃分<br>
-                      • 國際參觀者容易理解的分類<br>
-                      • 客觀公正的評選標準<br>
-                      • 具有說服力的評選依據</p>
-                    </div>
-                    <div class="requirement-item">
-                      <h6>波爾多的機遇</h6>
-                      <p>• 展示法國葡萄酒的最高水準<br>
-                      • 確立國際市場地位<br>
-                      • 吸引全球買家和投資者<br>
-                      • 建立長期的品牌價值</p>
-                    </div>
-                  </div>
-                </div>
+        <h3>🌍 巴黎世界博覽會的背景</h3>
+        <div class="section-intro">
+          <div class="key-point-banner">
+            <p>1855年，拿破崙三世為巴黎世界博覽會委託波爾多商會制定葡萄酒官方分級，一個改變葡萄酒世界的歷史決定就此誕生。</p>
+          </div>
+          <div class="info-cards-grid three-col">
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🏛️</span><h4>時代背景</h4></div>
+              <ul>
+                <li>法國工業革命後競相重建國際聲望</li>
+                <li>拿破崙三世積極推動法國現代化形象</li>
+                <li>英法之間持續的經濟與文化競爭</li>
+                <li>葡萄酒成為展示法國優越性的核心代表</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">📋</span><h4>博覽會的需求</h4></div>
+              <ul>
+                <li>需要清晰的展品等級劃分供國際訪客理解</li>
+                <li>展示法國葡萄酒的最高品質與多元層次</li>
+                <li>建立可信賴、具說服力的客觀評選標準</li>
+                <li>為法國葡萄酒確立長期國際市場地位</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🍷</span><h4>波爾多的優勢</h4></div>
+              <ul>
+                <li>已是法國最具國際聲譽的葡萄酒產區</li>
+                <li>英國、荷蘭等歐洲貴族長期收藏愛用</li>
+                <li>酒商公會保有百年完整的價格交易記錄</li>
+                <li>波爾多商會隨即受官方委託負責執行</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3>⚖️ 分級制度的制定過程</h3>
+        <div class="section-classification">
+          <div class="subsection-block">
+            <h4>三大評選標準</h4>
+            <div class="info-cards-grid three-col">
+              <div class="info-card accent-gold">
+                <div class="card-header"><span class="card-icon">💰</span><h4>市場價格</h4></div>
+                <p>過去 50–100 年的長期價格趨勢、年份間穩定性，以及在英國、荷蘭等出口市場的實際成交紀錄。</p>
+              </div>
+              <div class="info-card accent-gold">
+                <div class="card-header"><span class="card-icon">🏆</span><h4>歷史聲譽</h4></div>
+                <p>法國與歐洲貴族的收藏偏好、酒商公會的專業評價，以及在各主要國際市場的品牌認知程度。</p>
+              </div>
+              <div class="info-card accent-gold">
+                <div class="card-header"><span class="card-icon">🍇</span><h4>品質一致性</h4></div>
+                <p>跨年份的品質穩定表現、釀造技術水準，以及葡萄酒的陳年潛力與對產區風土的完整呈現。</p>
               </div>
             </div>
           </div>
 
-          <h3>⚖️ 分級制度的制定過程</h3>
-          <div class="classification-process">
-            <div class="evaluation-criteria">
-              <h4>評選標準與方法</h4>
-              <div class="criteria-analysis">
-                <div class="primary-criteria">
-                  <h5>🎯 主要評選標準</h5>
-                  <div class="criteria-grid">
-                    <div class="criteria-item">
-                      <h6>💰 市場價格表現</h6>
-                      <p>• <strong>長期價格趨勢：</strong>過去50-100年的價格記錄<br>
-                      • <strong>價格穩定性：</strong>在不同年份中的價格表現<br>
-                      • <strong>相對價格水平：</strong>與其他酒莊的價格比較<br>
-                      • <strong>國際市場認可：</strong>出口價格與本土價格的對比</p>
-                    </div>
-                    <div class="criteria-item">
-                      <h6>🏆 歷史聲譽</h6>
-                      <p>• <strong>貴族認可：</strong>法國和歐洲貴族的收藏偏好<br>
-                      • <strong>商業聲譽：</strong>酒商和經銷商的評價<br>
-                      • <strong>國際知名度：</strong>在各國市場的認知程度<br>
-                      • <strong>專業評價：</strong>當時葡萄酒專家的意見</p>
-                    </div>
-                    <div class="criteria-item">
-                      <h6>🍇 品質一致性</h6>
-                      <p>• <strong>年份穩定性：</strong>不同年份間的品質表現<br>
-                      • <strong>釀造工藝：</strong>釀造技術的先進程度<br>
-                      • <strong>陳年潛力：</strong>葡萄酒的保存和發展能力<br>
-                      • <strong>風土表達：</strong>對產區特色的完美呈現</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="evaluation-committee">
-                  <h5>👥 評選委員會</h5>
-                  <div class="committee-composition">
-                    <div class="member-group">
-                      <h6>波爾多商會代表</h6>
-                      <p>• 了解本地市場情況的商業專家<br>
-                      • 掌握詳細的價格和銷售數據<br>
-                      • 具有豐富的商業判斷經驗<br>
-                      • 代表產業的整體利益</p>
-                    </div>
-                    <div class="member-group">
-                      <h6>酒商公會成員</h6>
-                      <p>• 專業的葡萄酒貿易經驗<br>
-                      • 深度的品質鑑賞能力<br>
-                      • 廣泛的國際市場知識<br>
-                      • 客觀的商業判斷標準</p>
-                    </div>
-                    <div class="member-group">
-                      <h6>政府官員</h6>
-                      <p>• 確保評選過程的公正性<br>
-                      • 代表國家利益和政策導向<br>
-                      • 提供法律和制度保障<br>
-                      • 維護評選結果的權威性</p>
-                    </div>
-                  </div>
-                </div>
+          <div class="subsection-block">
+            <h4>分級結果：共 61 家列級酒莊</h4>
+            <div class="info-cards-grid two-col">
+              <div class="info-card">
+                <div class="card-header"><span class="card-icon">📊</span><h4>五個等級分布</h4></div>
+                <ul>
+                  <li><strong>一級莊（Premiers Crus）：</strong>4 家</li>
+                  <li><strong>二級莊（Deuxièmes Crus）：</strong>14 家</li>
+                  <li><strong>三級莊（Troisièmes Crus）：</strong>14 家</li>
+                  <li><strong>四級莊（Quatrièmes Crus）：</strong>10 家</li>
+                  <li><strong>五級莊（Cinquièmes Crus）：</strong>18 家</li>
+                  <li><strong>產區分布：</strong>Médoc 59 家 + Graves 1 家</li>
+                </ul>
               </div>
-            </div>
-
-            <div class="classification-results">
-              <h4>🏆 分級結果與意義</h4>
-              <div class="grade-structure">
-                <div class="grade-level">
-                  <h5>第一級酒莊 (Premiers Crus)</h5>
-                  <div class="first-growth-details">
-                    <div class="chateau-list">
-                      <div class="chateau-item">
-                        <h6>🏰 Château Lafite Rothschild</h6>
-                        <p>• <strong>產區：</strong>Pauillac<br>
-                        • <strong>特色：</strong>優雅細膩，長期陳年潛力<br>
-                        • <strong>歷史價格：</strong>一直保持最高價格水準<br>
-                        • <strong>國際聲譽：</strong>歐洲皇室收藏首選</p>
-                      </div>
-                      <div class="chateau-item">
-                        <h6>🏰 Château Latour</h6>
-                        <p>• <strong>產區：</strong>Pauillac<br>
-                        • <strong>特色：</strong>強勁有力，結構完美<br>
-                        • <strong>歷史價格：</strong>價格穩定性極佳<br>
-                        • <strong>國際聲譽：</strong>英國市場最受推崇</p>
-                      </div>
-                      <div class="chateau-item">
-                        <h6>🏰 Château Margaux</h6>
-                        <p>• <strong>產區：</strong>Margaux<br>
-                        • <strong>特色：</strong>香氣複雜，口感絲滑<br>
-                        • <strong>歷史價格：</strong>女性貴族偏愛品牌<br>
-                        • <strong>國際聲譽：</strong>法國宮廷指定用酒</p>
-                      </div>
-                      <div class="chateau-item">
-                        <h6>🏰 Château Haut-Brion</h6>
-                        <p>• <strong>產區：</strong>Graves (唯一非Médoc酒莊)<br>
-                        • <strong>特色：</strong>獨特風土，卓越品質<br>
-                        • <strong>歷史價格：</strong>早期即享有高價地位<br>
-                        • <strong>國際聲譽：</strong>美國總統傑佛遜最愛</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="grade-statistics">
-                  <h5>📊 分級統計概覽</h5>
-                  <div class="stats-overview">
-                    <div class="stat-category">
-                      <h6>等級分布</h6>
-                      <p>• <strong>一級莊：</strong>4家<br>
-                      • <strong>二級莊：</strong>14家<br>
-                      • <strong>三級莊：</strong>14家<br>
-                      • <strong>四級莊：</strong>10家<br>
-                      • <strong>五級莊：</strong>18家</p>
-                    </div>
-                    <div class="stat-category">
-                      <h6>產區分布</h6>
-                      <p>• <strong>Médoc：</strong>59家<br>
-                      • <strong>Graves：</strong>1家 (Haut-Brion)<br>
-                      • <strong>覆蓋面積：</strong>約8,500公頃<br>
-                      • <strong>年產量：</strong>約4,000萬瓶</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <h3>🌟 分級制度的深遠影響</h3>
-          <div class="classification-impact">
-            <div class="immediate-effects">
-              <h4>立即效應</h4>
-              <div class="immediate-impacts">
-                <div class="impact-area">
-                  <h5>💼 商業影響</h5>
-                  <p>• <strong>價格體系：</strong>建立了清晰的價格階層<br>
-                  • <strong>市場認知：</strong>消費者有了明確的品質指標<br>
-                  • <strong>投資價值：</strong>列級莊成為投資收藏的標準<br>
-                  • <strong>國際貿易：</strong>簡化了國際市場的溝通成本</p>
-                </div>
-                <div class="impact-area">
-                  <h5>🏭 產業影響</h5>
-                  <p>• <strong>品質競爭：</strong>激勵所有酒莊提升品質<br>
-                  • <strong>技術創新：</strong>推動釀造技術的持續改進<br>
-                  • <strong>品牌建設：</strong>強化了酒莊品牌的重要性<br>
-                  • <strong>專業化：</strong>促進了葡萄酒行業的專業化</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="long-term-legacy">
-              <h4>長期影響與爭議</h4>
-              <div class="legacy-aspects">
-                <div class="positive-legacy">
-                  <h5>✅ 正面影響</h5>
-                  <p>• <strong>品質標準：</strong>建立了世界葡萄酒品質的標竿<br>
-                  • <strong>產區聲譽：</strong>確立了波爾多的國際地位<br>
-                  • <strong>文化價值：</strong>成為法國文化軟實力的象徵<br>
-                  • <strong>經濟貢獻：</strong>為法國帶來巨大的經濟價值</p>
-                </div>
-                <div class="challenges-debates">
-                  <h5>⚠️ 挑戰與爭議</h5>
-                  <p>• <strong>靜態評價：</strong>無法反映現代品質變化<br>
-                  • <strong>市場壟斷：</strong>可能限制新興酒莊的發展<br>
-                  • <strong>價格扭曲：</strong>歷史聲譽可能超越實際品質<br>
-                  • <strong>制度僵化：</strong>170年來幾乎沒有調整</p>
-                </div>
+              <div class="info-card">
+                <div class="card-header"><span class="card-icon">👑</span><h4>四家一級莊</h4></div>
+                <ul>
+                  <li><strong>Château Lafite Rothschild</strong>（Pauillac）— 歐洲皇室收藏首選</li>
+                  <li><strong>Château Latour</strong>（Pauillac）— 英國市場最受推崇</li>
+                  <li><strong>Château Margaux</strong>（Margaux）— 法國宮廷指定用酒</li>
+                  <li><strong>Château Haut-Brion</strong>（Graves）— 唯一非 Médoc 酒莊，傑佛遜總統最愛</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+
+        <h3>🌟 分級制度的歷史意義與影響</h3>
+        <div class="section-impact">
+          <div class="key-point-banner">
+            <p>170 年幾乎未作更動，1855 年分級至今仍是全球葡萄酒市場最重要的品質指標，也是史上最具影響力的農產品分級制度。</p>
+          </div>
+          <div class="info-cards-grid three-col">
+            <div class="info-card accent-green">
+              <div class="card-header"><span class="card-icon">✅</span><h4>正面影響</h4></div>
+              <ul>
+                <li>建立世界葡萄酒品質的最高標竿</li>
+                <li>確立波爾多作為全球頂尖產區的地位</li>
+                <li>成為法國文化軟實力的重要象徵</li>
+                <li>激勵整體產業持續提升技術與品質</li>
+                <li>推動葡萄酒行業走向專業化與標準化</li>
+              </ul>
+            </div>
+            <div class="info-card accent-amber">
+              <div class="card-header"><span class="card-icon">⚠️</span><h4>挑戰與爭議</h4></div>
+              <ul>
+                <li>靜態評價無法反映現代品質的實際變化</li>
+                <li>可能限制優秀新興酒莊的市場認可</li>
+                <li>歷史聲譽有時凌駕於實際品質之上</li>
+                <li>170 年來制度幾乎毫無調整，缺乏彈性</li>
+                <li>部分酒莊靠名聲維持高價但品質下滑</li>
+              </ul>
+            </div>
+            <div class="info-card accent-purple">
+              <div class="card-header"><span class="card-icon">🔄</span><h4>唯一升級紀錄</h4></div>
+              <ul>
+                <li>1973 年，Mouton Rothschild 從二級升為一級</li>
+                <li>歷時數十年的外交交涉與政治努力</li>
+                <li>由法國農業部長正式批准頒布</li>
+                <li>Baron Philippe de Rothschild 親身主導爭取</li>
+                <li>驗證了 1855 分級制度的極端穩定性</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
     `,
     highlights: [
@@ -858,13 +765,7 @@ export const l311Part1Content = [
         content: '分級制度不僅改變了波爾多，更影響了全世界的葡萄酒評價體系'
       }
     ],
-    hasMap: true,
-    mapConfig: {
-      center: [45.2, -0.6],
-      zoom: 9,
-      show1855Chateaux: true,
-      highlightClassifications: true
-    },
+    hasMap: false,
     interactiveElements: [
       {
         type: 'classification-explorer',
