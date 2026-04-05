@@ -590,54 +590,124 @@ export const l36Content = [
   },
 
   {
-    type: 'interactive',
+    type: 'content',
     title: '虛擬調配實驗室',
-    interactiveType: 'blending-lab',
-    content: {
-      description: '在虛擬環境中體驗調配過程',
-      scenario: '您是一位釀酒師，需要為2020年份調配一款Pauillac紅酒',
-      availableWines: [
-        {
-          variety: 'Cabernet Sauvignon',
-          characteristics: {
-            color: '深紫紅色',
-            aroma: '黑醋栗、雪松、石墨',
-            palate: '飽滿酒體，高單寧，結構強勁',
-            finish: '持久，礦物感明顯'
-          },
-          maxPercentage: 80
-        },
-        {
-          variety: 'Merlot',
-          characteristics: {
-            color: '深紅色',
-            aroma: '李子、黑櫻桃、香草',
-            palate: '中等酒體，柔順單寧，果味豐富',
-            finish: '中等長度，圓潤'
-          },
-          maxPercentage: 40
-        },
-        {
-          variety: 'Cabernet Franc',
-          characteristics: {
-            color: '中等深度紅色',
-            aroma: '紫羅蘭、薄荷、香料',
-            palate: '中等酒體，優雅單寧，酸度清新',
-            finish: '中等長度，花香'
-          },
-          maxPercentage: 25
-        }
-      ],
-      targetProfile: {
-        style: '經典Pauillac風格',
-        requirements: [
-          '結構強勁但不粗糙',
-          '果味豐富但有層次',
-          '適合陳年10-15年',
-          '體現產區典型性'
-        ]
-      }
-    }
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+
+        <!-- 任務說明橫幅 -->
+        <div style="background:linear-gradient(135deg,#1A237E,#283593);border-radius:10px;padding:9px 14px;color:#fff;margin-bottom:10px;display:flex;align-items:center;gap:12px;">
+          <div style="font-size:1.6rem;">🧪</div>
+          <div>
+            <div style="font-weight:700;font-size:0.82rem;margin-bottom:2px;">釀酒師任務 — 2020 年份 Pauillac 紅酒調配</div>
+            <div style="font-size:0.72rem;opacity:0.88;">使用以下三種葡萄品種，調配出一款體現 Pauillac 風土特色、可陳年 10-15 年的經典波爾多混釀</div>
+          </div>
+        </div>
+
+        <!-- 三種可用品種卡片 -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px;">
+
+          <!-- CS -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.09);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#C62828);padding:7px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.8rem;">🍇 Cabernet Sauvignon</div>
+              <div style="font-size:0.67rem;opacity:0.88;margin-top:1px;">建議用量：50–80%</div>
+            </div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 6px;">
+                <span style="color:#B71C1C;font-weight:600;">色澤</span><span>深紫紅色</span>
+                <span style="color:#B71C1C;font-weight:600;">香氣</span><span>黑醋栗·雪松·石墨</span>
+                <span style="color:#B71C1C;font-weight:600;">口感</span><span>飽滿酒體·高單寧·結構強勁</span>
+                <span style="color:#B71C1C;font-weight:600;">尾韻</span><span>持久·礦物感明顯</span>
+              </div>
+              <div style="background:#FFEBEE;border-radius:5px;padding:3px 7px;font-size:0.67rem;color:#B71C1C;margin-top:6px;">骨架·陳年潛力·典型性</div>
+            </div>
+          </div>
+
+          <!-- Merlot -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.09);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:7px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.8rem;">🍇 Merlot</div>
+              <div style="font-size:0.67rem;opacity:0.88;margin-top:1px;">建議用量：15–40%</div>
+            </div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 6px;">
+                <span style="color:#1565C0;font-weight:600;">色澤</span><span>深紅寶石色</span>
+                <span style="color:#1565C0;font-weight:600;">香氣</span><span>李子·黑櫻桃·香草</span>
+                <span style="color:#1565C0;font-weight:600;">口感</span><span>中等酒體·柔順單寧·果味豐富</span>
+                <span style="color:#1565C0;font-weight:600;">尾韻</span><span>中等長度·圓潤</span>
+              </div>
+              <div style="background:#E3F2FD;border-radius:5px;padding:3px 7px;font-size:0.67rem;color:#1565C0;margin-top:6px;">圓潤·果味·早期適飲性</div>
+            </div>
+          </div>
+
+          <!-- CF -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.09);">
+            <div style="background:linear-gradient(135deg,#4527A0,#6A1B9A);padding:7px 11px;color:#fff;">
+              <div style="font-weight:700;font-size:0.8rem;">🍇 Cabernet Franc</div>
+              <div style="font-size:0.67rem;opacity:0.88;margin-top:1px;">建議用量：5–25%</div>
+            </div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;line-height:1.7;">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 6px;">
+                <span style="color:#4527A0;font-weight:600;">色澤</span><span>中等深度紅色</span>
+                <span style="color:#4527A0;font-weight:600;">香氣</span><span>紫羅蘭·薄荷·香料</span>
+                <span style="color:#4527A0;font-weight:600;">口感</span><span>中等酒體·優雅單寧·酸度清新</span>
+                <span style="color:#4527A0;font-weight:600;">尾韻</span><span>中等長度·花香</span>
+              </div>
+              <div style="background:#EDE7F6;border-radius:5px;padding:3px 7px;font-size:0.67rem;color:#4527A0;margin-top:6px;">優雅·香氣複雜·清新感</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 目標風格 + 參考比例 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#00695C,#00897B);padding:7px 11px;color:#fff;font-weight:700;font-size:0.78rem;">🎯 目標風格 — 經典 Pauillac</div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;line-height:1.75;">
+              <div style="display:flex;flex-direction:column;gap:3px;">
+                <div>✅ 結構強勁但不粗糙</div>
+                <div>✅ 果味豐富且有層次</div>
+                <div>✅ 適合陳年 10–15 年</div>
+                <div>✅ 體現 Pauillac 產區典型性</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.07);">
+            <div style="background:linear-gradient(135deg,#E65100,#FF6D00);padding:7px 11px;color:#fff;font-weight:700;font-size:0.78rem;">💡 參考調配比例（依年份調整）</div>
+            <div style="padding:8px 11px;font-size:0.71rem;color:#333;">
+              <div style="display:flex;flex-direction:column;gap:4px;">
+                <div style="display:flex;align-items:center;gap:6px;">
+                  <span style="color:#B71C1C;font-weight:600;min-width:60px;">CS</span>
+                  <div style="flex:1;background:#FFEBEE;border-radius:3px;height:10px;overflow:hidden;">
+                    <div style="width:70%;height:100%;background:#B71C1C;border-radius:3px;"></div>
+                  </div>
+                  <span style="color:#B71C1C;font-weight:700;min-width:30px;text-align:right;">70%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;">
+                  <span style="color:#1565C0;font-weight:600;min-width:60px;">Merlot</span>
+                  <div style="flex:1;background:#E3F2FD;border-radius:3px;height:10px;overflow:hidden;">
+                    <div style="width:22%;height:100%;background:#1565C0;border-radius:3px;"></div>
+                  </div>
+                  <span style="color:#1565C0;font-weight:700;min-width:30px;text-align:right;">22%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;">
+                  <span style="color:#4527A0;font-weight:600;min-width:60px;">CF</span>
+                  <div style="flex:1;background:#EDE7F6;border-radius:3px;height:10px;overflow:hidden;">
+                    <div style="width:8%;height:100%;background:#4527A0;border-radius:3px;"></div>
+                  </div>
+                  <span style="color:#4527A0;font-weight:700;min-width:30px;text-align:right;">8%</span>
+                </div>
+              </div>
+              <div style="margin-top:6px;font-size:0.67rem;color:#777;">溫暖年份（如2020）可調整 CF ↑10%、CS ↓5%</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `
   },
 
   // ========== 知識檢測：調配實務技巧 ==========
