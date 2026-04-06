@@ -6,66 +6,55 @@ export const l311Content = [
   // 課程簡介
   {
     type: 'intro',
-    title: '課程導讀 - 第一部分',
+    title: '課程導讀',
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          波爾多葡萄酒不僅是釀造的藝術，更是歷史的結晶。從羅馬時代的 Burdigala（波爾多古名）葡萄種植，到中世紀修道院的精細釀造，從12世紀英國統治帶來的貿易繁榮，到1855年分級制度建立的歷史性時刻，每一個歷史節點都深深影響著今日波爾多的面貌。
+          波爾多葡萄酒不僅是釀造的藝術，更是歷史與文化的結晶。本課程共六章，從羅馬時代的起源出發，橫跨中世紀、英國統治、1855年分級制度，直至法國文化哲學、現代全球影響力，以及傳統文化在當代的傳承與挑戰。
         </p>
 
-        <p class="intro-context">
-          本課程第一部分將帶您穿越時空，深入了解波爾多葡萄酒產業的歷史發展脈絡。從羅馬人如何將葡萄藤帶到波爾多，到英國市場如何推動產業繁榮，再到1855年分級制度如何塑造今日的列級莊體系。這些歷史不僅是過去，更是理解波爾多當今地位的關鍵。
-        </p>
+        <h3 class="section-title">課程架構：六章內容一覽</h3>
 
-        <h3 class="section-title">本課程學習目標</h3>
-
-        <div class="learning-points">
-          <div class="point-item">
-            <h4>📚 了解波爾多葡萄酒業發展史</h4>
-            <p>全面掌握從羅馬時代、中世紀、英國統治到現代的歷史演變與關鍵轉折點</p>
+        <div class="course-chapters-grid">
+          <div class="chapter-group">
+            <h4 class="chapter-group-label">第一部分：歷史發展與分級制度</h4>
+            <div class="learning-points">
+              <div class="point-item">
+                <h4>🏛️ 第一章：古代起源與中世紀發展</h4>
+                <p>從羅馬征服帶來葡萄種植技術，到中世紀修道院精細釀造，奠定波爾多產業的根基</p>
+              </div>
+              <div class="point-item">
+                <h4>🇬🇧 第二章：英國統治時期的黃金年代</h4>
+                <p>12 世紀聯姻開闢英國市場，推動 300 年貿易繁榮，確立波爾多的國際地位</p>
+              </div>
+              <div class="point-item">
+                <h4>📜 第三章：1855 年分級制度的誕生</h4>
+                <p>巴黎世博會催生官方分級，61 家列級莊奠定 170 年不變的品質標竿</p>
+              </div>
+            </div>
           </div>
 
-          <div class="point-item">
-            <h4>🏆 深度理解1855年分級制度</h4>
-            <p>學習分級制度的歷史背景、評選標準、五個等級劃分，以及150年來對產業的深遠影響</p>
-          </div>
-
-          <div class="point-item">
-            <h4>🇬🇧 掌握英國市場的決定性作用</h4>
-            <p>理解英國如何在波爾多葡萄酒的貿易、品質標準、市場地位中發揮決定性影響</p>
-          </div>
-
-          <div class="point-item">
-            <h4>⚖️ 分析重大歷史事件影響</h4>
-            <p>探討根瘤蚜蟲災、世界大戰、經濟危機如何重塑產業，以及產業的應對策略</p>
-          </div>
-        </div>
-
-        <p class="intro-conclusion">
-          完成本部分後，您將全面理解波爾多葡萄酒業的歷史深度，以及分級制度如何塑造今日的市場格局。
-        </p>
-
-        <h3 class="section-title">第二部分預覽：文化傳承與現代影響</h3>
-
-        <div class="learning-points part2-preview">
-          <div class="point-item">
-            <h4>🇫🇷 第一章：法國葡萄酒文化的核心價值</h4>
-            <p>深入探索「Art de Vivre」法式生活藝術、Terroir 風土哲學的文化意涵，以及波爾多如何成為法國文化軟實力的重要象徵</p>
-          </div>
-
-          <div class="point-item">
-            <h4>🌍 第二章：波爾多的現代文化地位</h4>
-            <p>分析波爾多作為全球葡萄酒文化引領者的品質標準輸出、國際教育體系影響，以及在全球文化外交中的積極角色</p>
-          </div>
-
-          <div class="point-item">
-            <h4>⚡ 第三章：現代化挑戰與文化傳承</h4>
-            <p>評估科技發展與世代差異對傳統文化的雙面衝擊，探討知識數位化保存、核心價值守護與文化創新的平衡策略</p>
+          <div class="chapter-group">
+            <h4 class="chapter-group-label">第二部分：文化傳承與現代影響</h4>
+            <div class="learning-points">
+              <div class="point-item">
+                <h4>🇫🇷 第四章：法國葡萄酒文化的核心價值</h4>
+                <p>探索 Art de Vivre 法式生活藝術、Terroir 風土哲學，以及波爾多作為法國文化軟實力象徵的深層意涵</p>
+              </div>
+              <div class="point-item">
+                <h4>🌍 第五章：波爾多的現代文化地位</h4>
+                <p>分析波爾多如何以品質標準、教育體系與文化外交，持續引領全球葡萄酒文化的發展</p>
+              </div>
+              <div class="point-item">
+                <h4>⚡ 第六章：現代化挑戰與文化傳承</h4>
+                <p>評估科技與世代差異帶來的雙面衝擊，探討如何在數位時代守護並創新傳統文化價值</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="course-info">
-          <p><strong>預計學習時間：</strong>第一部分 30 分鐘 ／ 第二部分 35 分鐘</p>
+          <p><strong>預計學習時間：</strong>65 分鐘（前三章 30 分鐘 ／ 後三章 35 分鐘）</p>
           <p><strong>難度等級：</strong>高級專業</p>
         </div>
       </div>
