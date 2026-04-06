@@ -313,16 +313,6 @@
         </div>
       </section>
 
-      <!-- 學習進度摘要 -->
-      <div class="progress-summary-section">
-        <LearningStatsMini @show-details="showProgress = true" />
-      </div>
-
-      <!-- 成就摘要 -->
-      <div class="achievements-summary-section">
-        <AchievementsMini @show-all="showAchievements = true" />
-      </div>
-
       <!-- 底部功能區域 -->
       <footer class="bottom-section">
         <div class="quick-actions">
@@ -347,6 +337,16 @@
           </div>
         </div>
       </footer>
+
+      <!-- 學習進度摘要 -->
+      <div class="progress-summary-section">
+        <LearningStatsMini @show-details="showProgress = true" />
+      </div>
+
+      <!-- 成就摘要 -->
+      <div class="achievements-summary-section">
+        <AchievementsMini @show-all="showAchievements = true" />
+      </div>
     </div>
 
     <!-- 成就彈窗 -->
