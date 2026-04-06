@@ -8,7 +8,7 @@ let achievementManager = null
 const loadAchievementSystem = async () => {
   if (!achievementManager) {
     const module = await import('./achievementSystem.js')
-    achievementManager = module.achievementManager
+    achievementManager = module.globalAchievementManager  // 修正：之前錯用 module.achievementManager
   }
   return achievementManager
 }
@@ -459,20 +459,73 @@ export const progressActions = {
   async checkAchievements() {
     try {
       const manager = await loadAchievementSystem()
-      if (manager && manager.checkAchievements) {
-        // 構建用戶統計數據
-        const stats = {
-          totalStudyTime: Object.values(progressState.studyTime).reduce((sum, time) => sum + time, 0),
-          totalLessons: Object.keys(progressState.lessonProgress).length,
-          totalQuizzes: Object.values(progressState.quizHistory).flat().length,
-          quizAccuracy: this.calculateOverallQuizAccuracy(),
-          studyStreak: this.getStudyStreak(),
-          totalSessions: progressState.sessions.length
-        }
-        
-        // 觸發成就檢查
-        manager.checkAchievements(stats)
+      if (!manager) return
+
+      const lp = progressState.lessonProgress
+
+      // 課程是否完成：completedSlides 全溢 totalSlides
+      const isLessonComplete = (entry) => {
+        if (!entry || entry.totalSlides <= 0) return false
+        const done = entry.completedSlides instanceof Set
+          ? entry.completedSlides.size
+          : (entry.completedSlides?.length ?? 0)
+        return done >= entry.totalSlides
       }
+
+      const completedLessons = Object.values(lp).filter(isLessonComplete).length
+
+      // 各等級課程 ID（與 learningStore 保持一致）
+      const LEVEL_LESSONS = {
+        1: ['l1-1','l1-2','l1-3','l1-4','l1-5','l1-6','l1-7','l1-8'],
+        2: ['l2-1','l2-2','l2-3','l2-4','l2-5','l2-6','l2-7','l2-8','l2-9'],
+        3: ['l3-1','l3-2','l3-3','l3-4','l3-5','l3-6','l3-7','l3-8','l3-9','l3-10','l3-11','l3-12','l3-13','l3-14','l3-15'],
+        4: ['l4-1','l4-2','l4-3','l4-4','l4-5','l4-6','l4-7','l4-8','l4-9','l4-10','l4-11','l4-12']
+      }
+      const isLevelDone = (lvl) => LEVEL_LESSONS[lvl].every(id => isLessonComplete(lp[id]))
+
+      const level1Completed = isLevelDone(1)
+      const level2Completed = isLevelDone(2)
+      const level3Completed = isLevelDone(3)
+      const level4Completed = isLevelDone(4)
+
+      // 測驗統計
+      const allQuizzes = Object.values(progressState.quizHistory).flat()
+      const totalQuizzes = allQuizzes.length
+
+      // 完美分數：某課程所有測驗全對
+      const perfectScores = Object.values(progressState.quizHistory)
+        .filter(history => history.length > 0 && history.every(q => q.correct)).length
+
+      // 最長學習會話（秒）
+      const longestSession = progressState.sessions.length > 0
+        ? Math.max(...progressState.sessions.map(s => s.duration || 0))
+        : 0
+
+      // 夜間／清晨學習次數
+      const nightTimeStudy = progressState.sessions.filter(s => {
+        const h = new Date(s.startTime).getHours()
+        return h >= 22 || h < 4
+      }).length
+      const earlyMorningStudy = progressState.sessions.filter(s => {
+        const h = new Date(s.startTime).getHours()
+        return h >= 5 && h < 8
+      }).length
+
+      // 呼叫 updateStats() 以更新 achievementState.userStats 並觸發檢查
+      manager.updateStats({
+        completedLessons,
+        level1Completed,
+        level2Completed,
+        level3Completed,
+        level4Completed,
+        allCoursesCompleted: level1Completed && level2Completed && level3Completed && level4Completed,
+        totalQuizzes,
+        perfectScores,
+        consecutiveDays: this.getStudyStreak(),
+        longestSession,
+        nightTimeStudy,
+        earlyMorningStudy
+      })
     } catch (error) {
       console.warn('成就檢查失敗:', error)
     }
