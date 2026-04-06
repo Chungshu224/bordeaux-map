@@ -18,6 +18,20 @@
             <p class="brand-subtitle">波爾多葡萄酒學院</p>
           </div>
         </div>
+        <!-- 使用者面板 -->
+        <div class="user-panel">
+          <template v-if="authUser">
+            <div class="user-avatar">👤</div>
+            <div class="user-info">
+              <span class="user-name">{{ displayName }}</span>
+              <button class="user-action-btn logout" @click="handleLogout">登出</button>
+            </div>
+          </template>
+          <template v-else>
+            <button class="user-action-btn login" @click="$emit('login')"><span>🔑</span> 登入</button>
+            <button class="user-action-btn register" @click="$emit('register')"><span>✏️</span> 註冊</button>
+          </template>
+        </div>
       </header>
 
       <!-- 等級選擇卡片 -->
@@ -323,6 +337,11 @@
             <span class="btn-icon">📊</span>
             <span class="btn-text">學習進度</span>
           </button>
+
+          <!-- 雲端同步提示（未登入時顯示） -->
+          <div v-if="!authUser" class="sync-hint">
+            📍 登入後可學習進度雲端同步
+          </div>
         </div>
       </footer>
     </div>
@@ -360,6 +379,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { learningState, learningActions } from '../stores/learningStore.js'
+import { authState, authActions } from '../stores/authStore.js'
 import LearningStatsMini from './LearningStatsMini.vue'
 import LearningProgress from './LearningProgress.vue'
 import AchievementsMini from './AchievementsMini.vue'
@@ -383,7 +403,15 @@ const showAchievements = ref(false)
 const showProgress = ref(false)
 
 // 事件定義
-const emit = defineEmits(['selectLevel', 'exploreMode'])
+const emit = defineEmits(['selectLevel', 'exploreMode', 'register', 'login'])
+
+// 認證狀態
+const authUser = computed(() => authState.user)
+const displayName = computed(() => authActions.getDisplayName())
+
+async function handleLogout() {
+  await authActions.signOut()
+}
 
 // 裝置相關計算屬性
 const isMobileLayout = computed(() => props.deviceInfo.isMobile || props.deviceInfo.isSmallScreen)
@@ -552,6 +580,87 @@ const getBubbleStyle = (index) => {
 .certification-text {
   font-size: 0.9rem;
   color: #777;
+}
+
+/* ── 使用者面板 ──────────────────────────────────── */
+.user-panel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.user-avatar {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-action-btn {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.user-action-btn.logout {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+.user-action-btn.logout:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.user-action-btn.login {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+.user-action-btn.login:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.user-action-btn.register {
+  background: rgba(102, 126, 234, 0.1);
+  color: #5a67d8;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+.user-action-btn.register:hover {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+/* ── 雲端同步提示 ─────────────────────────────────── */
+.sync-hint {
+  font-size: 0.78rem;
+  color: #888;
+  padding: 0.4rem 0.9rem;
+  background: rgba(0,0,0,0.04);
+  border-radius: 20px;
+  border: 1px dashed #ccc;
+  white-space: nowrap;
 }
 
 /* 學習進度摘要區域 */

@@ -1,31 +1,49 @@
 <template>
   <div :class="['app', platformClasses]">
+    <!-- 身份驗證中 — loading 畫面 -->
+    <div v-if="effectiveMode === 'loading'" class="auth-loading">
+      <div class="auth-loading-inner">
+        <div class="wine-glass-icon">🍷</div>
+        <div class="auth-spinner"></div>
+        <p>認證中…</p>
+      </div>
+    </div>
+
+    <!-- 登入頁面 -->
+    <Login
+      v-else-if="effectiveMode === 'login'"
+      @backToHome="backToLevelSelection"
+      @goToRegister="goToRegister"
+      @loginSuccess="backToLevelSelection"
+    />
+
     <!-- 註冊頁面 -->
     <Register
-      v-if="currentMode === 'register'"
+      v-else-if="effectiveMode === 'register'"
       @backToHome="backToLevelSelection"
-      @goToLogin="backToLevelSelection"
+      @goToLogin="goToLogin"
     />
 
     <!-- 等級選擇首頁 -->
     <LevelSelection 
-      v-else-if="currentMode === 'levelSelection'"
+      v-else-if="effectiveMode === 'levelSelection'"
       @selectLevel="enterLearningMode"
       @exploreMode="enterExploreMode"
       @register="goToRegister"
+      @login="goToLogin"
       :deviceInfo="deviceInfo"
     />
     
     <!-- 學習系統模式 -->
     <LearningSystem 
-      v-else-if="currentMode === 'learning'" 
+      v-else-if="effectiveMode === 'learning'" 
       :selectedLevel="selectedLevel"
       @exitLearning="backToLevelSelection"
       :deviceInfo="deviceInfo"
     />
     
     <!-- 原始地圖探索模式 -->
-    <div v-else-if="currentMode === 'explore'" class="original-map-mode">
+    <div v-else-if="effectiveMode === 'explore'" class="original-map-mode">
       <div class="mode-switcher">
         <button 
           class="learning-mode-btn" 
@@ -63,10 +81,12 @@ import BordeauxMap from './components/BordeauxMap.vue'
 import LearningSystem from './components/LearningSystem.vue'
 import LevelSelection from './components/LevelSelection.vue'
 import Register from './components/Register.vue'
+import Login from './components/Login.vue'
 import AchievementNotificationsContainer from './components/AchievementNotificationsContainer.vue'
 import { learningActions } from './stores/learningStore.js'
 import { globalAchievementManager } from './stores/achievementSystem.js'
 import { useResponsiveLayout, getPlatformClasses } from './utils/deviceDetection.js'
+import { authState } from './stores/authStore.js'
 
 // 裝置偵測
 const layout = useResponsiveLayout()
@@ -105,8 +125,18 @@ const handleKeyDown = (event) => {
 }
 
 // 應用模式狀態
-const currentMode = ref('levelSelection')  // 改回原本
+const currentMode = ref('levelSelection')
 const selectedLevel = ref(1)
+
+// 实際顔現模式：未登入時強制展示登入頁
+const effectiveMode = computed(() => {
+  if (authState.loading) return 'loading'
+  // 登入 / 註冊頁不需要驗證
+  if (currentMode.value === 'login' || currentMode.value === 'register') return currentMode.value
+  // 其他頁面必須登入
+  if (!authState.user) return 'login'
+  return currentMode.value
+})
 
 // 模式切換方法
 const enterLearningMode = (level) => {
@@ -128,6 +158,11 @@ const backToLevelSelection = () => {
 const goToRegister = () => {
   currentMode.value = 'register'
   console.log('進入註冊頁面')
+}
+
+const goToLogin = () => {
+  currentMode.value = 'login'
+  console.log('進入登入頁面')
 }
 
 // 初始化
@@ -161,6 +196,47 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: auto; /* allow scrolling when content exceeds viewport */
+}
+
+/* 認證 loading 畫面 */
+.auth-loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a0a2e 0%, #2d1b69 40%, #4a1942 70%, #6b2d3e 100%);
+}
+
+.auth-loading-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.auth-loading-inner .wine-glass-icon {
+  font-size: 3rem;
+}
+
+.auth-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #c48ba6;
+  border-radius: 50%;
+  animation: auth-spin 0.8s linear infinite;
+}
+
+@keyframes auth-spin {
+  to { transform: rotate(360deg); }
+}
+
+.auth-loading-inner p {
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 @media (max-height: 768px) {

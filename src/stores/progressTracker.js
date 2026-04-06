@@ -1,5 +1,7 @@
 // 學習進度追蹤系統 - 細粒度進度管理
 import { reactive, computed, watch } from 'vue'
+import { authState } from './authStore.js'
+import { saveProgressToSupabase, loadProgressFromSupabase } from '../lib/progressSync.js'
 
 // 動態導入成就系統以避免循環依賴
 let achievementManager = null
@@ -580,11 +582,71 @@ if (typeof window !== 'undefined') {
           ])
         )
       }
-      localStorage.setItem('bordeaux-progress', JSON.stringify(serializedState))
+      localStorage.setItem('bordeaux-progress', JSON.stringify({
+        ...serializedState,
+        savedAt: new Date().toISOString()
+      }))
+
+      // ── 雲端同步（已登入時，防抖 5 秒） ──
+      if (authState.user) {
+        clearTimeout(cloudSaveTimer)
+        cloudSaveTimer = setTimeout(() => {
+          saveProgressToSupabase(
+            authState.user.id,
+            progressActions.exportProgress()
+          )
+        }, 5000)
+      }
     },
     { deep: true }
   )
 }
+
+// ===== 監聽登入狀態，登入後從雲端載入進度 =====
+let cloudSaveTimer = null
+
+watch(
+  () => authState.user,
+  async (user, prevUser) => {
+    if (user && !prevUser) {
+      // 剛登入：比較本地與雲端的 savedAt，取較新的
+      const cloudProgress = await loadProgressFromSupabase(user.id)
+
+      if (cloudProgress) {
+        const cloudTime = cloudProgress.savedAt ? new Date(cloudProgress.savedAt).getTime() : 0
+        const localRaw = localStorage.getItem('bordeaux-progress')
+        const localTime = (() => {
+          try {
+            const d = JSON.parse(localRaw)
+            return d?.savedAt ? new Date(d.savedAt).getTime() : 0
+          } catch { return 0 }
+        })()
+
+        if (cloudTime >= localTime) {
+          progressActions.importProgress(cloudProgress)
+          console.log('☁️ 已從雲端載入學習進度（雲端較新）')
+        } else {
+          // 本地較新 → 上傳到雲端覆蓋
+          console.log('☁️ 本地進度較新，將上傳至雲端')
+          await saveProgressToSupabase(user.id, progressActions.exportProgress())
+        }
+      } else {
+        // 雲端無資料（新帳號） → 把現有本地進度上傳
+        const localRaw = localStorage.getItem('bordeaux-progress')
+        if (localRaw) {
+          console.log('☁️ 新帳號，上傳現有本地進度至雲端')
+          await saveProgressToSupabase(user.id, progressActions.exportProgress())
+        }
+      }
+    }
+    if (!user && prevUser) {
+      // 登出：清除雲端同步 timer（繼續使用 localStorage）
+      clearTimeout(cloudSaveTimer)
+      cloudSaveTimer = null
+      console.log('🔒 已登出，改用本地進度')
+    }
+  }
+)
 
 export default {
   state: progressState,
