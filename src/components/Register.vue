@@ -226,6 +226,10 @@ async function handleRegister() {
 
   isLoading.value = true
   try {
+    if (!supabase) {
+      apiError.value = '服務尚未就緒，請稍後再試'
+      return
+    }
     const { error } = await supabase.auth.signUp({
       email: form.value.email,
       password: form.value.password,
