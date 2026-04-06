@@ -86,206 +86,132 @@ export const l311Part1Content = [
     title: '第一章：古代起源與中世紀發展',
     subtitle: '從羅馬征服到修道院時代',
     content: `
-      <h3 style="display:none;">🏛️ 羅馬時代的奠基</h3>
-      <div style="font-family:sans-serif;padding:4px 0;">
+      <div class="chapter-content">
 
-        <div style="margin-bottom:14px;">
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⏳ 關鍵歷史時間軸</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:2px solid #f97316;border-radius:12px;padding:14px;">
-              <div style="font-size:20px;font-weight:800;color:#c2410c;margin-bottom:4px;letter-spacing:-0.5px;">📅 西元前 56 年</div>
-              <div style="font-size:12px;font-weight:700;color:#7c2d12;margin-bottom:8px;">凱撒征服高盧</div>
-              <div style="font-size:11px;color:#9a3412;line-height:1.7;">
-                <div>• Burdigala（波爾多古名）成為重要羅馬城市</div>
-                <div>• 帶來先進的葡萄種植與管理技術</div>
-                <div>• 建立第一批有組織的葡萄園</div>
-                <div>• 奠定波爾多作為產區的制度基礎</div>
-              </div>
+        <h3>🏛️ 羅馬時代的奠基</h3>
+        <div class="section-intro">
+          <div class="key-point-banner">
+            <p>西元前 56 年凱撒征服高盧，Burdigala（波爾多古名）成為重要羅馬城市，帶來先進種植技術與完整貿易體系，為波爾多葡萄酒業奠定千年基礎。</p>
+          </div>
+          <div class="info-cards-grid two-col">
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">📅</span><h4>西元前 56 年：凱撒征服高盧</h4></div>
+              <ul>
+                <li>Burdigala（波爾多古名）成為重要羅馬城市</li>
+                <li>帶來先進的葡萄種植與管理技術</li>
+                <li>建立第一批有組織的葡萄園</li>
+                <li>奠定波爾多作為產區的制度基礎</li>
+              </ul>
             </div>
-            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:2px solid #3b82f6;border-radius:12px;padding:14px;">
-              <div style="font-size:20px;font-weight:800;color:#1d4ed8;margin-bottom:4px;letter-spacing:-0.5px;">📅 西元 1–4 世紀</div>
-              <div style="font-size:12px;font-weight:700;color:#1e3a8a;margin-bottom:8px;">產業萌芽與擴張</div>
-              <div style="font-size:11px;color:#1d4ed8;line-height:1.7;">
-                <div>• 引進義大利葡萄品種與釀造技術</div>
-                <div>• 建立完整的葡萄酒貿易網絡</div>
-                <div>• 波爾多葡萄酒出口至羅馬帝國各地</div>
-                <div>• 鞏固波爾多的葡萄酒產區地位</div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">📅</span><h4>西元 1–4 世紀：產業萌芽與擴張</h4></div>
+              <ul>
+                <li>引進義大利葡萄品種與釀造技術</li>
+                <li>建立完整的葡萄酒貿易網絡</li>
+                <li>波爾多葡萄酒出口至羅馬帝國各地</li>
+                <li>鞏固波爾多的葡萄酒產區地位</li>
+              </ul>
+            </div>
+          </div>
+          <div class="info-cards-grid three-col">
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🌱</span><h4>種植技術</h4></div>
+              <ul>
+                <li>葡萄園規劃與管理</li>
+                <li>土壤改良與排水系統</li>
+                <li>品種選擇與培育</li>
+                <li>收穫時機判斷標準</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🍶</span><h4>釀造工藝</h4></div>
+              <ul>
+                <li>發酵容器的製作技術</li>
+                <li>酒液澄清與過濾方法</li>
+                <li>儲存與陳年的基本概念</li>
+                <li>品質控制的初步標準</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🚢</span><h4>貿易體系</h4></div>
+              <ul>
+                <li>建立地中海貿易路線</li>
+                <li>葡萄酒包裝與運輸技術</li>
+                <li>品質評估與定價機制</li>
+                <li>培養專業商人階層</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div>
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🍇 羅馬留下的三大技術遺產</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:10px;padding:12px;text-align:center;">
-              <div style="font-size:24px;margin-bottom:5px;">🌱</div>
-              <div style="font-size:12px;font-weight:700;color:#14532d;margin-bottom:6px;">種植技術</div>
-              <div style="font-size:10.5px;color:#166534;line-height:1.7;text-align:left;">
-                <div>• 葡萄園規劃與管理</div>
-                <div>• 土壤改良與排水系統</div>
-                <div>• 品種選擇與培育</div>
-                <div>• 收穫時機判斷標準</div>
-              </div>
+        <h3>⛪ 中世紀的修道院時代</h3>
+        <div class="section-intro">
+          <div class="key-point-banner">
+            <p>8–15 世紀，修道院兼具穩定的勞動力、豐富的土地資源與長遠的時間視野，成為中世紀最有效的葡萄酒業守護者與創新者。</p>
+          </div>
+          <div class="info-cards-grid two-col">
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">📿</span><h4>宗教推動力（8–12 世紀）</h4></div>
+              <ul>
+                <li><strong>聖體聖事需求：</strong>天主教彌撒需要大量葡萄酒，形成穩定需求</li>
+                <li><strong>修道院經濟：</strong>葡萄酒成為重要收入來源，推動持續投資</li>
+                <li><strong>朝聖貿易：</strong>聖雅各朝聖路線帶動週邊葡萄酒需求激增</li>
+                <li><strong>宗教保護：</strong>教會地位使葡萄園免受戰爭與掠奪破壞</li>
+              </ul>
             </div>
-            <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:12px;text-align:center;">
-              <div style="font-size:24px;margin-bottom:5px;">🍶</div>
-              <div style="font-size:12px;font-weight:700;color:#78350f;margin-bottom:6px;">釀造工藝</div>
-              <div style="font-size:10.5px;color:#92400e;line-height:1.7;text-align:left;">
-                <div>• 發酵容器的製作技術</div>
-                <div>• 酒液澄清與過濾方法</div>
-                <div>• 儲存與陳年的基本概念</div>
-                <div>• 品質控制的初步標準</div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🔬</span><h4>技術革新（8–12 世紀）</h4></div>
+              <ul>
+                <li><strong>品種改良：</strong>修士們選育出更適合波爾多氣候的葡萄品種</li>
+                <li><strong>釀造技術：</strong>發展更精密的發酵控制與陳年技術</li>
+                <li><strong>品質控制：</strong>建立嚴格的品質標準與檢驗制度</li>
+                <li><strong>記錄保存：</strong>詳細記錄天氣、收成與品質的珍貴歷史資料</li>
+              </ul>
             </div>
-            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:12px;text-align:center;">
-              <div style="font-size:24px;margin-bottom:5px;">🚢</div>
-              <div style="font-size:12px;font-weight:700;color:#581c87;margin-bottom:6px;">貿易體系</div>
-              <div style="font-size:10.5px;color:#7e22ce;line-height:1.7;text-align:left;">
-                <div>• 建立地中海貿易路線</div>
-                <div>• 葡萄酒包裝與運輸技術</div>
-                <div>• 品質評估與定價機制</div>
-                <div>• 培養專業商人階層</div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🏰</span><h4>封建制度下的發展（12–15 世紀）</h4></div>
+              <ul>
+                <li><strong>領主特權：</strong>貴族控制最佳風土地塊，形成精英葡萄園格局</li>
+                <li><strong>勞動力保障：</strong>農奴制度提供穩定的葡萄園耕作勞動力</li>
+                <li><strong>技術傳承：</strong>師傅制度確保釀酒技術代代精確傳承</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">📈</span><h4>商業化加速發展（12–15 世紀）</h4></div>
+              <ul>
+                <li><strong>市場擴張：</strong>葡萄酒貿易延伸至歐洲各地，建立廣泛市場</li>
+                <li><strong>品質分級萌芽：</strong>開始依產地與品質分級，品牌概念初步形成</li>
+                <li><strong>價格差異化：</strong>優質葡萄酒獲得更高溢價，推動品質競爭</li>
+              </ul>
             </div>
           </div>
-        </div>
-
-      </div>
-
-      <h3 style="display:none;">⛪ 中世紀的修道院時代</h3>
-      <h4 style="display:none;">8-12世紀：修道院的興起</h4>
-      <div style="font-family:sans-serif;padding:4px 0;">
-
-        <div style="margin-bottom:10px;">
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⛪ 修道院成為葡萄酒業的守護者</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:12px;padding:14px;">
-              <div style="font-size:13px;font-weight:700;color:#e0e7ff;margin-bottom:10px;">📿 宗教推動力</div>
-              <div style="display:flex;flex-direction:column;gap:7px;">
-                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
-                  <div style="font-size:11px;font-weight:700;color:#c7d2fe;margin-bottom:2px;">聖體聖事需求</div>
-                  <div style="font-size:10px;color:#a5b4fc;line-height:1.5;">天主教彌撒需要大量葡萄酒，宗教儀式成為穩定需求</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
-                  <div style="font-size:11px;font-weight:700;color:#c7d2fe;margin-bottom:2px;">修道院經濟</div>
-                  <div style="font-size:10px;color:#a5b4fc;line-height:1.5;">葡萄酒成為修道院重要收入來源，推動持續投資</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
-                  <div style="font-size:11px;font-weight:700;color:#c7d2fe;margin-bottom:2px;">朝聖貿易</div>
-                  <div style="font-size:10px;color:#a5b4fc;line-height:1.5;">聖雅各朝聖路線帶動週邊葡萄酒需求激增</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
-                  <div style="font-size:11px;font-weight:700;color:#c7d2fe;margin-bottom:2px;">宗教保護</div>
-                  <div style="font-size:10px;color:#a5b4fc;line-height:1.5;">教會地位使葡萄園免受戰爭與掠奪破壞</div>
-                </div>
-              </div>
+          <div class="info-cards-grid three-col">
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🍇</span><h4>葡萄品種發展</h4></div>
+              <ul>
+                <li>選育適合波爾多氣候的品種</li>
+                <li>嘗試不同品種的混釀技術</li>
+                <li>建立品種選育的科學方法</li>
+                <li>保存珍貴的品種基因資源</li>
+              </ul>
             </div>
-            <div style="background:linear-gradient(135deg,#052e16,#14532d);border-radius:12px;padding:14px;">
-              <div style="font-size:13px;font-weight:700;color:#bbf7d0;margin-bottom:10px;">🔬 技術革新</div>
-              <div style="display:flex;flex-direction:column;gap:7px;">
-                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
-                  <div style="font-size:11px;font-weight:700;color:#86efac;margin-bottom:2px;">品種改良</div>
-                  <div style="font-size:10px;color:#6ee7b7;line-height:1.5;">修士們選育出更適合波爾多氣候的葡萄品種</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
-                  <div style="font-size:11px;font-weight:700;color:#86efac;margin-bottom:2px;">釀造技術</div>
-                  <div style="font-size:10px;color:#6ee7b7;line-height:1.5;">發展更精密的發酵控制與陳年技術</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
-                  <div style="font-size:11px;font-weight:700;color:#86efac;margin-bottom:2px;">品質控制</div>
-                  <div style="font-size:10px;color:#6ee7b7;line-height:1.5;">建立嚴格的品質標準與檢驗制度</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.10);border-radius:8px;padding:8px;">
-                  <div style="font-size:11px;font-weight:700;color:#86efac;margin-bottom:2px;">記錄保存</div>
-                  <div style="font-size:10px;color:#6ee7b7;line-height:1.5;">詳細記錄天氣、收成與品質的珍貴歷史資料</div>
-                </div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🏭</span><h4>釀造技術進步</h4></div>
+              <ul>
+                <li>精確的發酵控制方法</li>
+                <li>改進儲存與陳年技術</li>
+                <li>開發澄清過濾工藝</li>
+                <li>建立品質檢驗標準程序</li>
+              </ul>
             </div>
-          </div>
-        </div>
-
-        <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:10px;">
-          <div style="font-size:11px;font-weight:700;color:#92400e;margin-bottom:5px;">💡 為何修道院能成功守護葡萄酒業？</div>
-          <div style="font-size:10.5px;color:#78350f;line-height:1.7;">修道院兼具 <strong>穩定的勞動力</strong>（修士）、<strong>豐富的土地資源</strong>（教會地產）、<strong>長遠的時間視野</strong>（不受王朝更迭影響），三者結合使其成為中世紀最有效的葡萄酒業守護者與創新者。</div>
-        </div>
-
-      </div>
-      <h4 style="display:none;">12-15世紀：技術完熟與商業化</h4>
-      <div style="font-family:sans-serif;padding:4px 0;">
-
-        <div style="margin-bottom:14px;">
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⚙️ 封建制度與商業化雙軌並進</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:12px;padding:12px;">
-              <div style="font-size:13px;font-weight:700;color:#be123c;margin-bottom:8px;">🏰 封建制度下的發展</div>
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#9f1239;margin-bottom:2px;">領主特權</div>
-                  <div style="font-size:10px;color:#be123c;line-height:1.5;">貴族控制最佳風土地塊，形成精英葡萄園格局</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#9f1239;margin-bottom:2px;">勞動力保障</div>
-                  <div style="font-size:10px;color:#be123c;line-height:1.5;">農奴制度提供穩定的葡萄園耕作勞動力</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#9f1239;margin-bottom:2px;">技術傳承</div>
-                  <div style="font-size:10px;color:#be123c;line-height:1.5;">師傅制度確保釀酒技術代代精確傳承</div>
-                </div>
-              </div>
-            </div>
-            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:12px;padding:12px;">
-              <div style="font-size:13px;font-weight:700;color:#14532d;margin-bottom:8px;">📈 商業化加速發展</div>
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">市場擴張</div>
-                  <div style="font-size:10px;color:#14532d;line-height:1.5;">葡萄酒貿易延伸至歐洲各地，建立廣泛市場</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">品質分級萌芽</div>
-                  <div style="font-size:10px;color:#14532d;line-height:1.5;">開始依產地與品質分級，品牌概念初步形成</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.6);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">價格差異化</div>
-                  <div style="font-size:10px;color:#14532d;line-height:1.5;">優質葡萄酒獲得更高溢價，推動品質競爭</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🏆 中世紀留下的三大成就</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:11px;">
-              <div style="font-size:20px;margin-bottom:5px;">🍇</div>
-              <div style="font-size:11.5px;font-weight:700;color:#1e3a8a;margin-bottom:5px;">葡萄品種發展</div>
-              <div style="font-size:10px;color:#1d4ed8;line-height:1.7;">
-                <div>• 選育適合波爾多氣候的品種</div>
-                <div>• 嘗試不同品種的混釀技術</div>
-                <div>• 建立品種選育的科學方法</div>
-                <div>• 保存珍貴的品種基因資源</div>
-              </div>
-            </div>
-            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:11px;">
-              <div style="font-size:20px;margin-bottom:5px;">🏭</div>
-              <div style="font-size:11.5px;font-weight:700;color:#7c2d12;margin-bottom:5px;">釀造技術進步</div>
-              <div style="font-size:10px;color:#9a3412;line-height:1.7;">
-                <div>• 精確的發酵控制方法</div>
-                <div>• 改進儲存與陳年技術</div>
-                <div>• 開發澄清過濾工藝</div>
-                <div>• 建立品質檢驗標準程序</div>
-              </div>
-            </div>
-            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:11px;">
-              <div style="font-size:20px;margin-bottom:5px;">📚</div>
-              <div style="font-size:11.5px;font-weight:700;color:#581c87;margin-bottom:5px;">知識體系建立</div>
-              <div style="font-size:10px;color:#7e22ce;line-height:1.7;">
-                <div>• 編寫第一批釀造手冊</div>
-                <div>• 建立釀酒日曆與作業指南</div>
-                <div>• 記錄大量氣候與收成數據</div>
-                <div>• 形成葡萄酒文化理論基礎</div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">📚</span><h4>知識體系建立</h4></div>
+              <ul>
+                <li>編寫第一批釀造手冊</li>
+                <li>建立釀酒日曆與作業指南</li>
+                <li>記錄大量氣候與收成數據</li>
+                <li>形成葡萄酒文化理論基礎</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -364,196 +290,144 @@ export const l311Part1Content = [
     title: '第二章：英國統治時期的黃金年代',
     subtitle: '英法聯姻開啟的貿易繁榮',
     content: `
-      <h3 style="display:none;">👑 阿基坦公國的聯姻</h3>
-      <div style="font-family:sans-serif;padding:4px 0;">
+      <div class="chapter-content">
 
-        <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:12px;padding:14px;margin-bottom:14px;">
-          <div style="font-size:13px;font-weight:700;color:#e0e7ff;margin-bottom:4px;">📅 1152年 — 改變波爾多命運的聯姻</div>
-          <div style="font-size:10.5px;color:#a5b4fc;margin-bottom:10px;">英國統治持續300年（1152–1453），奠定波爾多葡萄酒業國際化基礎</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:12px;">
-              <div style="font-size:24px;text-align:center;margin-bottom:5px;">👸</div>
-              <div style="font-size:12px;font-weight:700;color:#c7d2fe;text-align:center;margin-bottom:7px;">阿基坦的埃莉諾</div>
-              <div style="font-size:10px;color:#a5b4fc;line-height:1.7;">
-                <div>• 阿基坦公國女繼承人</div>
-                <div>• 控制包括波爾多的廣大領土</div>
-                <div>• 法王路易七世的前妻</div>
-                <div>• 中世紀最有影響力的女性</div>
-              </div>
+        <h3>👑 阿基坦公國的聯姻</h3>
+        <div class="section-intro">
+          <div class="key-point-banner">
+            <p>1152 年，阿基坦的埃莉諾與亨利二世聯姻，開啟波爾多 300 年的英國統治時代（1152–1453），直接打通英國市場，奠定波爾多葡萄酒業國際化基礎。</p>
+          </div>
+          <div class="info-cards-grid two-col">
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">👸</span><h4>阿基坦的埃莉諾</h4></div>
+              <ul>
+                <li>阿基坦公國女繼承人</li>
+                <li>控制包括波爾多的廣大領土</li>
+                <li>法王路易七世的前妻</li>
+                <li>中世紀最有影響力的女性</li>
+              </ul>
             </div>
-            <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:12px;">
-              <div style="font-size:24px;text-align:center;margin-bottom:5px;">🤴</div>
-              <div style="font-size:12px;font-weight:700;color:#c7d2fe;text-align:center;margin-bottom:7px;">亨利·安茹（後英王亨利二世）</div>
-              <div style="font-size:10px;color:#a5b4fc;line-height:1.7;">
-                <div>• 安茹伯爵・諾曼底公爵</div>
-                <div>• 通過聯姻獲得阿基坦公國</div>
-                <div>• 建立橫跨英法的安茹帝國</div>
-                <div>• 開啟波爾多英國時代</div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🤴</span><h4>亨利·安茹（英王亨利二世）</h4></div>
+              <ul>
+                <li>安茹伯爵・諾曼底公爵</li>
+                <li>通過聯姻獲得阿基坦公國</li>
+                <li>建立橫跨英法的安茹帝國</li>
+                <li>開啟波爾多英國時代</li>
+              </ul>
+            </div>
+          </div>
+          <div class="info-cards-grid three-col">
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🗺️</span><h4>政治影響</h4></div>
+              <ul>
+                <li>波爾多成為英國領土</li>
+                <li>建立穩定政治環境</li>
+                <li>保護貿易免受干擾</li>
+                <li>為商業發展創造條件</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">💼</span><h4>經濟影響</h4></div>
+              <ul>
+                <li>直接打開英國市場</li>
+                <li>建立特殊貿易特權</li>
+                <li>吸引英國商人投資</li>
+                <li>創造穩定收入來源</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🍷</span><h4>葡萄酒業影響</h4></div>
+              <ul>
+                <li>英國成為最大市場</li>
+                <li>貴族需求推動品質</li>
+                <li>建立貿易制度框架</li>
+                <li>奠定延續至今的關係</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div>
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🌍 聯姻的三層深遠影響</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:1px solid #f43f5e;border-radius:10px;padding:12px;">
-              <div style="font-size:20px;text-align:center;margin-bottom:5px;">🗺️</div>
-              <div style="font-size:12px;font-weight:700;color:#be123c;text-align:center;margin-bottom:7px;">政治影響</div>
-              <div style="font-size:10px;color:#9f1239;line-height:1.7;">
-                <div>• 波爾多成為英國領土</div>
-                <div>• 建立穩定政治環境</div>
-                <div>• 保護貿易免受干擾</div>
-                <div>• 為商業發展創造條件</div>
-              </div>
+        <h3>🚢 中世紀的葡萄酒貿易</h3>
+        <div class="section-trade">
+          <div class="key-point-banner">
+            <p>13 世紀高峰期，年出口量約 100 萬加侖，佔總產量 80%，佔波爾多總收入 60% 以上；英波葡萄酒貿易成為中世紀最成功的國際商業模式之一。</p>
+          </div>
+          <div class="info-cards-grid two-col">
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🗺️</span><h4>貿易路線</h4></div>
+              <ul>
+                <li><strong>加龍河水運：</strong>波爾多港成為集散中心，內陸葡萄園透過河運輸往港口</li>
+                <li><strong>跨海酒船隊（Wine Fleet）：</strong>每年秋季固定船隊直航倫敦・布里斯托</li>
+                <li>配備專業葡萄酒運輸船，建立保險制度管理海上風險</li>
+              </ul>
             </div>
-            <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #f59e0b;border-radius:10px;padding:12px;">
-              <div style="font-size:20px;text-align:center;margin-bottom:5px;">💼</div>
-              <div style="font-size:12px;font-weight:700;color:#78350f;text-align:center;margin-bottom:7px;">經濟影響</div>
-              <div style="font-size:10px;color:#92400e;line-height:1.7;">
-                <div>• 直接打開英國市場</div>
-                <div>• 建立特殊貿易特權</div>
-                <div>• 吸引英國商人投資</div>
-                <div>• 創造穩定收入來源</div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🏛️</span><h4>貿易特權保護</h4></div>
+              <ul>
+                <li><strong>英國市場特權：</strong>享有較低關稅、優先進入市場、免受貿易禁令</li>
+                <li><strong>英國王室採購優先：</strong>皇室穩定需求保障市場</li>
+                <li><strong>生產者保護：</strong>波爾多本地獨占權、外地酒銷售限制</li>
+                <li>品質標準受法律保護，產地標示雛形出現</li>
+              </ul>
             </div>
-            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:10px;padding:12px;">
-              <div style="font-size:20px;text-align:center;margin-bottom:5px;">🍷</div>
-              <div style="font-size:12px;font-weight:700;color:#1e3a8a;text-align:center;margin-bottom:7px;">葡萄酒業影響</div>
-              <div style="font-size:10px;color:#1d4ed8;line-height:1.7;">
-                <div>• 英國成為最大市場</div>
-                <div>• 貴族需求推動品質</div>
-                <div>• 建立貿易制度框架</div>
-                <div>• 奠定延續至今的關係</div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">📈</span><h4>13 世紀貿易規模</h4></div>
+              <ul>
+                <li><strong>年出口量：</strong>約 100 萬加侖，佔總產量 80%</li>
+                <li><strong>收入佔比：</strong>佔波爾多總收入 60% 以上</li>
+                <li><strong>就業貢獻：</strong>創造數千個直接就業機會</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🌆</span><h4>社會文化影響</h4></div>
+              <ul>
+                <li><strong>城市發展：</strong>波爾多躍升重要商業城市，吸引各國商人定居</li>
+                <li><strong>社會階層：</strong>催生富裕的葡萄酒商人階層，推動中產階級形成</li>
+                <li>提升釀酒師社會地位，建設宏偉商業建築</li>
+              </ul>
             </div>
           </div>
         </div>
 
-      </div>
-
-      <h3 style="display:none;">🚢 中世紀的葡萄酒貿易</h3>
-      <div style="font-family:sans-serif;padding:4px 0;">
-
-        <div style="margin-bottom:14px;">
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🚢 英波葡萄酒貿易體系</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #0284c7;border-radius:12px;padding:12px;">
-              <div style="font-size:12px;font-weight:700;color:#0c4a6e;margin-bottom:8px;">🗺️ 貿易路線</div>
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <div style="background:rgba(255,255,255,0.7);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#0369a1;margin-bottom:2px;">加龍河水運</div>
-                  <div style="font-size:10px;color:#0284c7;line-height:1.5;">波爾多港成為集散中心，內陸葡萄園透過河運輸往港口，配備專業葡萄酒運輸船</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.7);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#0369a1;margin-bottom:2px;">跨海酒船隊（Wine Fleet）</div>
-                  <div style="font-size:10px;color:#0284c7;line-height:1.5;">每年秋季固定船隊直航倫敦・布里斯托，建立保險制度管理海上風險</div>
-                </div>
-              </div>
+        <h3>⚔️ 百年戰爭的衝擊</h3>
+        <div class="section-war">
+          <div class="info-cards-grid two-col">
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">📅</span><h4>1337–1380 年：第一階段</h4></div>
+              <ul>
+                <li>貿易路線受到戰爭威脅</li>
+                <li>葡萄園遭受戰火破壞</li>
+                <li>勞動力嚴重短缺</li>
+                <li>英國市場需求仍然強勁，支撐產業度過危機</li>
+              </ul>
             </div>
-            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:12px;padding:12px;">
-              <div style="font-size:12px;font-weight:700;color:#14532d;margin-bottom:8px;">🏛️ 貿易特權保護</div>
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <div style="background:rgba(255,255,255,0.7);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">英國市場特權</div>
-                  <div style="font-size:10px;color:#14532d;line-height:1.5;">享有較低關稅・優先進入市場・免受貿易禁令・英國王室採購優先</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.7);border-radius:7px;padding:7px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#166534;margin-bottom:2px;">生產者保護</div>
-                  <div style="font-size:10px;color:#14532d;line-height:1.5;">波爾多本地獨占權・外地酒銷售限制・品質標準受法律保護，產地標示雛形</div>
-                </div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">📅</span><h4>1415–1453 年：最後階段</h4></div>
+              <ul>
+                <li>法國逐步收復失地</li>
+                <li>英國統治搖搖欲墜</li>
+                <li>葡萄酒貿易量急劇下滑</li>
+                <li><strong>1453 年：</strong>波爾多重歸法國版圖，英國時代結束</li>
+              </ul>
             </div>
-          </div>
-        </div>
-
-        <div>
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">📊 13世紀貿易高峰期的經濟成就</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #a855f7;border-radius:10px;padding:12px;">
-              <div style="font-size:12px;font-weight:700;color:#581c87;margin-bottom:8px;">📈 貿易規模數據</div>
-              <div style="display:flex;flex-direction:column;gap:5px;">
-                <div style="display:flex;align-items:center;gap:8px;">
-                  <div style="background:#a855f7;color:white;border-radius:6px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap;">年出口量</div>
-                  <div style="font-size:10.5px;color:#7e22ce;">約 <strong>100萬加侖</strong>，佔總產量 80%</div>
-                </div>
-                <div style="display:flex;align-items:center;gap:8px;">
-                  <div style="background:#a855f7;color:white;border-radius:6px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap;">收入佔比</div>
-                  <div style="font-size:10.5px;color:#7e22ce;">佔波爾多總收入 <strong>60% 以上</strong></div>
-                </div>
-                <div style="display:flex;align-items:center;gap:8px;">
-                  <div style="background:#a855f7;color:white;border-radius:6px;padding:4px 7px;font-size:11px;font-weight:700;white-space:nowrap;">就業貢獻</div>
-                  <div style="font-size:10.5px;color:#7e22ce;">創造 <strong>數千個</strong> 直接就業機會</div>
-                </div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">🌍</span><h4>危機應對：市場多元化</h4></div>
+              <ul>
+                <li>開拓荷蘭・德國・北歐新市場</li>
+                <li>降低對英國單一市場的依賴</li>
+                <li>發展法國本土消費市場</li>
+                <li>這一轉型奠定了現代全球銷售格局</li>
+              </ul>
             </div>
-            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #f97316;border-radius:10px;padding:12px;">
-              <div style="font-size:12px;font-weight:700;color:#7c2d12;margin-bottom:8px;">🏛️ 社會文化影響</div>
-              <div style="display:flex;flex-direction:column;gap:5px;">
-                <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:6px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#7c2d12;margin-bottom:2px;">🌆 城市發展</div>
-                  <div style="font-size:10px;color:#9a3412;line-height:1.4;">波爾多躍升為重要商業城市，建設宏偉商業建築，吸引各國商人定居</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:6px;">
-                  <div style="font-size:10.5px;font-weight:700;color:#7c2d12;margin-bottom:2px;">👥 社會階層</div>
-                  <div style="font-size:10px;color:#9a3412;line-height:1.4;">催生富裕的葡萄酒商人階層，推動中產階級形成，提升釀酒師社會地位</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <h3 style="display:none;">⚔️ 百年戰爭的衝擊</h3>
-      <div style="font-family:sans-serif;padding:4px 0;">
-
-        <div style="margin-bottom:14px;">
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⚔️ 百年戰爭兩階段衝擊（1337–1453）</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:2px solid #f97316;border-radius:12px;padding:12px;">
-              <div style="font-size:11px;font-weight:700;color:#7c2d12;margin-bottom:6px;">📅 1337–1380 年：第一階段</div>
-              <div style="font-size:10.5px;color:#9a3412;line-height:1.8;">
-                <div>⚠️ 貿易路線受到戰爭威脅</div>
-                <div>⚠️ 葡萄園遭受戰火破壞</div>
-                <div>⚠️ 勞動力嚴重短缺</div>
-                <div style="margin-top:4px;background:rgba(249,115,22,0.1);border-radius:5px;padding:5px;font-size:10px;color:#7c2d12;">✅ 英國市場需求仍然強勁，支撐產業</div>
-              </div>
-            </div>
-            <div style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);border:2px solid #f43f5e;border-radius:12px;padding:12px;">
-              <div style="font-size:11px;font-weight:700;color:#be123c;margin-bottom:6px;">📅 1415–1453 年：最後階段</div>
-              <div style="font-size:10.5px;color:#9f1239;line-height:1.8;">
-                <div>⚠️ 法國逐步收復失地</div>
-                <div>⚠️ 英國統治搖搖欲墜</div>
-                <div>⚠️ 葡萄酒貿易量急劇下滑</div>
-                <div style="margin-top:4px;background:rgba(244,63,94,0.1);border-radius:5px;padding:5px;font-size:10px;color:#be123c;font-weight:700;">🏁 1453年：波爾多重歸法國版圖</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">💡 危機轉機：波爾多的因應策略</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #22c55e;border-radius:12px;padding:12px;">
-              <div style="font-size:13px;font-weight:700;color:#14532d;margin-bottom:8px;">🌍 市場多元化</div>
-              <div style="font-size:10.5px;color:#166534;line-height:1.8;">
-                <div>• 開拓荷蘭・德國・北歐新市場</div>
-                <div>• 降低對英國單一市場的依賴</div>
-                <div>• 發展法國本土消費市場</div>
-                <div>• 探索更多貿易夥伴關係</div>
-                <div style="margin-top:6px;background:rgba(34,197,94,0.12);border-radius:6px;padding:5px;font-size:10px;color:#14532d;font-weight:600;">→ 這一轉型奠定了現代全球銷售格局</div>
-              </div>
-            </div>
-            <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #3b82f6;border-radius:12px;padding:12px;">
-              <div style="font-size:13px;font-weight:700;color:#1e3a8a;margin-bottom:8px;">⬆️ 品質提升策略</div>
-              <div style="font-size:10.5px;color:#1d4ed8;line-height:1.8;">
-                <div>• 專注高品質葡萄酒生產</div>
-                <div>• 建立更嚴格的品質標準</div>
-                <div>• 發展獨特的波爾多釀造技術</div>
-                <div>• 強化產區品牌形象</div>
-                <div style="margin-top:6px;background:rgba(59,130,246,0.12);border-radius:6px;padding:5px;font-size:10px;color:#1e3a8a;font-weight:600;">→ 為1855年分級制度的誕生埋下伏筆</div>
-              </div>
+            <div class="info-card">
+              <div class="card-header"><span class="card-icon">⬆️</span><h4>危機應對：品質提升策略</h4></div>
+              <ul>
+                <li>專注高品質葡萄酒生產</li>
+                <li>建立更嚴格的品質標準</li>
+                <li>發展獨特的波爾多釀造技術</li>
+                <li>強化產區品牌形象，為 1855 年分級制度埋下伏筆</li>
+              </ul>
             </div>
           </div>
         </div>
