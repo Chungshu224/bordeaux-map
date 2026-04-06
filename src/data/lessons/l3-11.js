@@ -1242,7 +1242,7 @@ export const l311Content = [
 
   // 綜合測驗
   {
-    type: 'quiz',
+    type: 'interactive-quiz',
     title: '綜合測驗：波爾多葡萄酒產業史與文化（全六章）',
     questions: [
       {
