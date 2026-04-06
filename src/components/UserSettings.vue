@@ -1,0 +1,515 @@
+<template>
+  <div class="settings-overlay">
+    <!-- 背景動畫 -->
+    <div class="background-animation">
+      <div class="wine-bubbles">
+        <div v-for="i in 12" :key="i" class="bubble" :style="getBubbleStyle(i)"></div>
+      </div>
+    </div>
+
+    <div class="settings-container">
+      <!-- 品牌 Logo -->
+      <div class="brand-header">
+        <div class="wine-glass-icon">🍷</div>
+        <div class="brand-text">
+          <h1 class="brand-title">Bordeaux Wine Academy</h1>
+          <p class="brand-subtitle">波爾多葡萄酒學院</p>
+        </div>
+      </div>
+
+      <!-- 設定卡片 -->
+      <div class="settings-card">
+        <h2 class="card-title">⚙️ 個人設定</h2>
+        <p class="card-subtitle">管理您的帳號資訊與學習偏好</p>
+
+        <!-- API 錯誤 -->
+        <div v-if="apiError" class="api-error" role="alert">
+          <span>⚠️</span>
+          <span>{{ apiError }}</span>
+        </div>
+
+        <!-- 儲存成功提示 -->
+        <div v-if="saveSuccess" class="success-notice" role="status">
+          <span>✅</span>
+          <span>設定已儲存！</span>
+        </div>
+
+        <!-- ── 帳號資訊（唯讀）──── -->
+        <section class="settings-section">
+          <h3 class="section-title">帳號資訊</h3>
+          <div class="field-group">
+            <label class="field-label">電子信箱</label>
+            <div class="field-readonly">{{ userEmail }}</div>
+          </div>
+        </section>
+
+        <!-- ── 個人資料 ──── -->
+        <section class="settings-section">
+          <h3 class="section-title">個人資料</h3>
+          <div class="field-group">
+            <label for="s-display-name" class="field-label">顯示名稱</label>
+            <input
+              id="s-display-name"
+              v-model.trim="form.displayName"
+              type="text"
+              class="field-input"
+              placeholder="您的姓名或暱稱"
+              :disabled="isSaving"
+              maxlength="40"
+            />
+            <p class="field-hint">顯示於學習首頁右上角</p>
+          </div>
+        </section>
+
+        <!-- ── 學習偏好 ──── -->
+        <section class="settings-section">
+          <h3 class="section-title">學習偏好</h3>
+
+          <div class="field-group">
+            <label for="s-learning-goal" class="field-label">學習目標</label>
+            <select id="s-learning-goal" v-model="form.learningGoal" class="field-select" :disabled="isSaving">
+              <option value="">請選擇</option>
+              <option value="wset">WSET 備考</option>
+              <option value="hobby">純粹興趣</option>
+              <option value="restaurant">餐廳服務專業</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="s-experience-level" class="field-label">目前程度</label>
+            <select id="s-experience-level" v-model="form.experienceLevel" class="field-select" :disabled="isSaving">
+              <option value="">請選擇</option>
+              <option value="beginner">初學者</option>
+              <option value="intermediate">有基礎</option>
+              <option value="advanced">進階</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- ── 學習統計（唯讀）──── -->
+        <section class="settings-section" v-if="stats">
+          <h3 class="section-title">學習統計</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">⏱️</div>
+              <div class="stat-value">{{ formatStudyTime(stats.totalStudySeconds) }}</div>
+              <div class="stat-label">累計學習時間</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">{{ stats.completedLevels }}／4</div>
+              <div class="stat-label">完成等級</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🎯</div>
+              <div class="stat-value">{{ stats.quizAccuracy }}%</div>
+              <div class="stat-label">測驗正確率</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── 操作按鈕 ──── -->
+        <div class="actions-row">
+          <button class="btn-save" @click="handleSave" :disabled="isSaving">
+            {{ isSaving ? '儲存中…' : '💾 儲存設定' }}
+          </button>
+        </div>
+
+        <!-- 底部連結列 -->
+        <div class="bottom-links">
+          <button class="link-btn back" @click="$emit('backToHome')">← 返回首頁</button>
+          <button class="link-btn logout" @click="handleLogout">登出</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, reactive, onMounted, computed } from 'vue'
+import { supabase } from '../lib/supabaseClient.js'
+import { authState, authActions } from '../stores/authStore.js'
+
+const emit = defineEmits(['backToHome'])
+
+// ── 表單狀態 ─────────────────────────────
+const form = reactive({
+  displayName: '',
+  learningGoal: '',
+  experienceLevel: ''
+})
+
+const isSaving  = ref(false)
+const apiError  = ref('')
+const saveSuccess = ref(false)
+
+// ── 帳號資訊 ─────────────────────────────
+const userEmail = computed(() => authActions.getEmail() ?? '')
+
+// ── 學習統計 ─────────────────────────────
+const stats = ref(null)   // { totalStudySeconds, completedLevels, quizAccuracy }
+
+// ── 載入現有設定 ──────────────────────────
+async function loadSettings() {
+  if (!supabase || !authState.user) return
+  const { data, error } = await supabase
+    .from('profiles')
+    .select('display_name, learning_goal, experience_level, total_study_seconds, completed_levels, quiz_accuracy_overall')
+    .eq('id', authState.user.id)
+    .single()
+  if (error) {
+    console.warn('讀取設定失敗', error.message)
+    return
+  }
+  if (data) {
+    form.displayName     = data.display_name     ?? authActions.getDisplayName() ?? ''
+    form.learningGoal    = data.learning_goal    ?? ''
+    form.experienceLevel = data.experience_level ?? ''
+    stats.value = {
+      totalStudySeconds: data.total_study_seconds  ?? 0,
+      completedLevels:   (data.completed_levels ?? []).length,
+      quizAccuracy:      data.quiz_accuracy_overall ?? 0
+    }
+  }
+}
+
+// ── 儲存設定 ──────────────────────────────
+async function handleSave() {
+  if (!supabase || !authState.user) return
+  apiError.value  = ''
+  saveSuccess.value = false
+  isSaving.value  = true
+  try {
+    // 1. 更新 profiles 表
+    const { error: dbError } = await supabase
+      .from('profiles')
+      .update({
+        display_name:      form.displayName   || null,
+        learning_goal:     form.learningGoal  || null,
+        experience_level:  form.experienceLevel || null,
+        updated_at:        new Date().toISOString()
+      })
+      .eq('id', authState.user.id)
+    if (dbError) throw dbError
+
+    // 2. 同步更新 auth user_metadata，讓 getDisplayName() 即時反映新名稱
+    if (form.displayName) {
+      await supabase.auth.updateUser({ data: { full_name: form.displayName } })
+    }
+
+    saveSuccess.value = true
+    setTimeout(() => { saveSuccess.value = false }, 3000)
+  } catch (err) {
+    apiError.value = err.message || '儲存失敗，請稍後再試'
+  } finally {
+    isSaving.value = false
+  }
+}
+
+// ── 登出 ──────────────────────────────────
+async function handleLogout() {
+  await authActions.signOut()
+  emit('backToHome')
+}
+
+// ── 背景泡泡樣式 ─────────────────────────
+function getBubbleStyle(i) {
+  const sizes   = [8, 12, 6, 16, 10, 14, 7, 11, 9, 13, 15, 8]
+  const lefts   = [5, 12, 22, 35, 45, 55, 65, 75, 82, 90, 30, 60]
+  const delays  = [0, 2, 4, 1, 3, 5, 2.5, 1.5, 3.5, 0.5, 4.5, 2.2]
+  const durations = [8, 11, 9, 13, 10, 12, 9, 11, 8, 14, 10, 12]
+  const idx = (i - 1) % sizes.length
+  return {
+    width:  `${sizes[idx]}px`,
+    height: `${sizes[idx]}px`,
+    left:   `${lefts[idx]}%`,
+    animationDelay:    `${delays[idx]}s`,
+    animationDuration: `${durations[idx]}s`
+  }
+}
+
+// ── 學習時間格式化 ────────────────────────
+function formatStudyTime(seconds) {
+  if (!seconds) return '0 分鐘'
+  const h = Math.floor(seconds / 3600)
+  const m = Math.floor((seconds % 3600) / 60)
+  if (h > 0) return `${h} 小時 ${m} 分`
+  return `${m} 分鐘`
+}
+
+onMounted(loadSettings)
+</script>
+
+<style scoped>
+/* ── 全頁遮罩 ─────────────────────────────────────── */
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  min-height: 100svh;
+  background: linear-gradient(135deg, #1a0533 0%, #2d0a4e 25%, #1a1a4e 50%, #0d1b4e 75%, #060d2e 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+/* ── 泡泡背景 ─────────────────────────────────────── */
+.background-animation {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.wine-bubbles { position: absolute; inset: 0; }
+.bubble {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), rgba(139,0,0,0.1));
+  animation: floatUp linear infinite;
+}
+@keyframes floatUp {
+  0%   { transform: translateY(0) scale(1); opacity: 0.6; }
+  50%  { opacity: 0.4; }
+  100% { transform: translateY(-110vh) scale(0.6); opacity: 0; }
+}
+
+/* ── 容器 ────────────────────────────────────────── */
+.settings-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── 品牌 Logo ────────────────────────────────────── */
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+.wine-glass-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 12px rgba(255,255,255,0.4));
+}
+.brand-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+.brand-subtitle {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  margin: 0.15rem 0 0;
+}
+
+/* ── 設定卡片 ─────────────────────────────────────── */
+.settings-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a0533;
+  text-align: center;
+  margin: 0;
+}
+.card-subtitle {
+  font-size: 0.88rem;
+  color: #666;
+  text-align: center;
+  margin: -0.75rem 0 0;
+}
+
+/* ── 區段 ────────────────────────────────────────── */
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+.section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #764ba2;
+  margin: 0 0 0.25rem;
+}
+
+/* ── 欄位 ────────────────────────────────────────── */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.field-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+}
+.field-readonly {
+  padding: 0.65rem 1rem;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+.field-input,
+.field-select {
+  padding: 0.65rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.field-input:focus,
+.field-select:focus {
+  border-color: #764ba2;
+  background: #fff;
+}
+.field-input:disabled,
+.field-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.field-hint {
+  font-size: 0.78rem;
+  color: #999;
+  margin: 0;
+}
+
+/* ── 統計格 ──────────────────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+.stat-card {
+  background: linear-gradient(135deg, rgba(118,75,162,0.08), rgba(102,126,234,0.08));
+  border: 1px solid rgba(118,75,162,0.15);
+  border-radius: 12px;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.stat-icon  { font-size: 1.4rem; }
+.stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a0533;
+}
+.stat-label {
+  font-size: 0.72rem;
+  color: #888;
+}
+
+/* ── 儲存按鈕 ─────────────────────────────────────── */
+.actions-row {
+  display: flex;
+  justify-content: center;
+}
+.btn-save {
+  padding: 0.75rem 2.5rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  min-width: 160px;
+}
+.btn-save:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.btn-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── 底部連結 ─────────────────────────────────────── */
+.bottom-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  margin-top: -0.5rem;
+}
+.link-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0;
+  transition: color 0.2s;
+}
+.link-btn.back   { color: #667eea; }
+.link-btn.back:hover  { color: #5a67d8; }
+.link-btn.logout { color: #dc2626; }
+.link-btn.logout:hover { color: #b91c1c; }
+
+/* ── 訊息區 ──────────────────────────────────────── */
+.api-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.3);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #b91c1c;
+}
+.success-notice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(34,197,94,0.08);
+  border: 1px solid rgba(34,197,94,0.3);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #16a34a;
+}
+
+/* ── 手機 RWD ─────────────────────────────────────── */
+@media (max-width: 480px) {
+  .settings-overlay  { padding: 1.25rem 0.75rem; }
+  .settings-card     { padding: 1.5rem 1.25rem; gap: 1.25rem; }
+  .stats-grid        { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .stat-value        { font-size: 0.9rem; }
+  .stat-label        { font-size: 0.68rem; }
+}
+</style>

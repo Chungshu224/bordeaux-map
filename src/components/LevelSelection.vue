@@ -24,7 +24,10 @@
             <div class="user-avatar">👤</div>
             <div class="user-info">
               <span class="user-name">{{ displayName }}</span>
-              <button class="user-action-btn logout" @click="handleLogout">登出</button>
+              <div class="user-btns">
+                <button class="user-action-btn settings" @click="$emit('settings')">⚙️ 設定</button>
+                <button class="user-action-btn logout" @click="handleLogout">登出</button>
+              </div>
             </div>
           </template>
           <template v-else>
@@ -403,7 +406,7 @@ const showAchievements = ref(false)
 const showProgress = ref(false)
 
 // 事件定義
-const emit = defineEmits(['selectLevel', 'exploreMode', 'register', 'login'])
+const emit = defineEmits(['selectLevel', 'exploreMode', 'register', 'login', 'settings'])
 
 // 認證狀態
 const authUser = computed(() => authState.user)
@@ -650,6 +653,22 @@ const getBubbleStyle = (index) => {
 }
 .user-action-btn.register:hover {
   background: rgba(102, 126, 234, 0.2);
+}
+
+.user-action-btn.settings {
+  background: rgba(118, 75, 162, 0.1);
+  color: #764ba2;
+  border: 1px solid rgba(118, 75, 162, 0.3);
+}
+.user-action-btn.settings:hover {
+  background: rgba(118, 75, 162, 0.2);
+}
+
+.user-btns {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /* ── 雲端同步提示 ─────────────────────────────────── */

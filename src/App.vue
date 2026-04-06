@@ -31,9 +31,16 @@
       @exploreMode="enterExploreMode"
       @register="goToRegister"
       @login="goToLogin"
+      @settings="goToSettings"
       :deviceInfo="deviceInfo"
     />
     
+    <!-- 個人設定頁 -->
+    <UserSettings
+      v-else-if="effectiveMode === 'settings'"
+      @backToHome="backToLevelSelection"
+    />
+
     <!-- 學習系統模式 -->
     <LearningSystem 
       v-else-if="effectiveMode === 'learning'" 
@@ -82,6 +89,7 @@ import LearningSystem from './components/LearningSystem.vue'
 import LevelSelection from './components/LevelSelection.vue'
 import Register from './components/Register.vue'
 import Login from './components/Login.vue'
+import UserSettings from './components/UserSettings.vue'
 import AchievementNotificationsContainer from './components/AchievementNotificationsContainer.vue'
 import { learningActions } from './stores/learningStore.js'
 import { globalAchievementManager } from './stores/achievementSystem.js'
@@ -163,6 +171,11 @@ const goToRegister = () => {
 const goToLogin = () => {
   currentMode.value = 'login'
   console.log('進入登入頁面')
+}
+
+const goToSettings = () => {
+  currentMode.value = 'settings'
+  console.log('進入個人設定頁')
 }
 
 // 初始化
