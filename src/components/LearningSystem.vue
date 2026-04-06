@@ -125,7 +125,7 @@
             ref="presentationLessonRef"
             :lessonId="resolvedLessonId"
             @lessonComplete="completeCurrentLesson"
-            @nextLesson="goToNextLesson"
+            @nextLesson="handleLessonNext"
           />
         </div>
       </section>
@@ -329,6 +329,11 @@ const completeCurrentLesson = () => {
   if (currentLesson.value) {
     learningActions.completeLesson(currentLesson.value.id)
   }
+}
+
+const handleLessonNext = () => {
+  completeCurrentLesson()
+  goToNextLesson()
 }
 
 const goToNextLesson = () => {

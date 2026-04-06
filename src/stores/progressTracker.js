@@ -2,6 +2,7 @@
 import { reactive, computed, watch } from 'vue'
 import { authState } from './authStore.js'
 import { saveProgressToSupabase, loadProgressFromSupabase } from '../lib/progressSync.js'
+import { learningActions } from './learningStore.js'
 
 // 動態導入成就系統以避免循環依賴
 let achievementManager = null
@@ -593,6 +594,13 @@ if (typeof window !== 'undefined') {
     try {
       const data = JSON.parse(savedProgress)
       progressActions.importProgress(data)
+      // 將已完成的課程同步回 learningStore
+      Object.entries(progressState.lessonProgress).forEach(([lessonId, p]) => {
+        const done = p.completedSlides instanceof Set ? p.completedSlides.size : (p.completedSlides?.length ?? 0)
+        if (p.totalSlides > 0 && done >= p.totalSlides) {
+          learningActions.completeLesson(lessonId)
+        }
+      })
       console.log('✅ 已載入保存的學習進度')
     } catch (e) {
       console.error('❌ 載入進度失敗:', e)

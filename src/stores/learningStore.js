@@ -5,19 +5,13 @@ import { reactive, computed } from 'vue'
 export const learningState = reactive({
   currentLevel: 1, // 等級 1-4
   currentLesson: null, // 當前課程對象
-  completedLessons: [
-    // Level 1 所有課程已完成
-    'l1-1', 'l1-2', 'l1-3', 'l1-4', 'l1-5', 'l1-6', 'l1-7', 'l1-8',
-    // Level 2 所有課程已完成
-    'l2-1', 'l2-2', 'l2-3', 'l2-4', 'l2-5', 'l2-6', 'l2-7', 'l2-8', 'l2-9'
-    // Level 3 課程進度由用戶實際學習決定
-  ],
+  completedLessons: [],
   learningMode: true, // 是否為學習模式
   testMode: false, // 測試模式（預設關閉，可手動開啟）
   userProgress: {
-    level1: { completed: 8, total: 8 },
-    level2: { completed: 9, total: 9 },
-    level3: { completed: 1, total: 15 },
+    level1: { completed: 0, total: 8 },
+    level2: { completed: 0, total: 9 },
+    level3: { completed: 0, total: 15 },
     level4: { completed: 0, total: 12 }
   },
   currentQuiz: null,
