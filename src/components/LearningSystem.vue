@@ -145,7 +145,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch, nextTick } from 'vue'
 import { learningState, learningLevels, learningActions, learningProgress } from '../stores/learningStore.js'
 import PresentationLesson from './PresentationLesson.vue'
 
@@ -167,10 +167,13 @@ const presentationLessonRef = ref(null)
 // 計算屬性
 const currentLevel = computed(() => learningState.currentLevel)
 const currentLesson = computed(() => learningState.currentLesson)
-// 若課程是分段課（有 parts），直接回傳 lesson.id（由合併載入器處理）
+// 若課程為分段課（有 parts），預設載入第一段；否則載入自身 id
 const resolvedLessonId = computed(() => {
   const lesson = learningState.currentLesson
   if (!lesson) return null
+  if (Array.isArray(lesson.parts) && lesson.parts.length > 0) {
+    return lesson.parts[0]
+  }
   return lesson.id
 })
 const currentLevelData = computed(() => learningLevels[`level${currentLevel.value}`])
@@ -299,6 +302,14 @@ const resetToNormalMode = () => {
 const selectLesson = (lesson, index) => {
   if (isLessonUnlocked(lesson.id, index)) {
     learningActions.startLesson(lesson.id)
+    nextTick(() => {
+      const container = document.querySelector('.learning-main')
+      if (container) {
+        container.scrollTo({ top: 0, behavior: 'instant' })
+      } else {
+        window.scrollTo({ top: 0, behavior: 'instant' })
+      }
+    })
   }
 }
 
