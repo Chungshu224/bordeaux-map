@@ -1,10 +1,18 @@
 <template>
   <div :class="['app', platformClasses]">
+    <!-- 註冊頁面 -->
+    <Register
+      v-if="currentMode === 'register'"
+      @backToHome="backToLevelSelection"
+      @goToLogin="backToLevelSelection"
+    />
+
     <!-- 等級選擇首頁 -->
     <LevelSelection 
-      v-if="currentMode === 'levelSelection'"
+      v-else-if="currentMode === 'levelSelection'"
       @selectLevel="enterLearningMode"
       @exploreMode="enterExploreMode"
+      @register="goToRegister"
       :deviceInfo="deviceInfo"
     />
     
@@ -54,6 +62,7 @@ import { ref, computed, onMounted } from 'vue'
 import BordeauxMap from './components/BordeauxMap.vue'
 import LearningSystem from './components/LearningSystem.vue'
 import LevelSelection from './components/LevelSelection.vue'
+import Register from './components/Register.vue'
 import AchievementNotificationsContainer from './components/AchievementNotificationsContainer.vue'
 import { learningActions } from './stores/learningStore.js'
 import { globalAchievementManager } from './stores/achievementSystem.js'
@@ -96,7 +105,7 @@ const handleKeyDown = (event) => {
 }
 
 // 應用模式狀態
-const currentMode = ref('levelSelection') // 'levelSelection' | 'learning' | 'explore'
+const currentMode = ref('levelSelection')  // 改回原本
 const selectedLevel = ref(1)
 
 // 模式切換方法
@@ -114,6 +123,11 @@ const enterExploreMode = () => {
 const backToLevelSelection = () => {
   currentMode.value = 'levelSelection'
   console.log('返回等級選擇頁面')
+}
+
+const goToRegister = () => {
+  currentMode.value = 'register'
+  console.log('進入註冊頁面')
 }
 
 // 初始化
