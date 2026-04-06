@@ -235,8 +235,8 @@
         class="lesson-progress-bar"
       />
 
-      <!-- 課程完成提示 -->
-  <div v-if="currentSlide === totalSlides - 1 && showCompletionCard" class="completion-section">
+      <!-- 課程完成提示（-part1 課程不顯示） -->
+  <div v-if="currentSlide === totalSlides - 1 && showCompletionCard && !lessonId?.endsWith('-part1')" class="completion-section">
         <div class="completion-card">
           <button @click="closeCompletionCard" class="close-completion-btn" title="關閉">✕</button>
           <h3>🎉 課程完成！</h3>

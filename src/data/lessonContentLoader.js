@@ -162,9 +162,36 @@ export const lessonModuleLoaders = {
   'l3-9': () => import('./lessons/l3-9.js'),
   // 'l3-gtc': () => import('./lessons/l3-gtc.js'), // 已被 l3-1/2/3 取代，預設不再載入
   'l3-10': () => import('./lessons/l3-10.js'),
+  // l3-11 合併載入器：將 Part1 + Part2 內容合为一份陣列
+  'l3-11': async () => {
+    const [p1, p2] = await Promise.all([
+      import('./lessons/l3-11-part1.js'),
+      import('./lessons/l3-11-part2.js')
+    ])
+    const part1 = p1.l311Part1Content || p1.default || []
+    const part2 = p2.l311Part2Content || p2.default || []
+    // Part1 結尾的 Ch4-6 chapter-divider 僅供独立展示時使用，合併時移除
+    const part1Filtered = part1.filter(s => !(
+      s.type === 'chapter-divider' && /第[四五六]章/.test(s.title ?? '')
+    ))
+    // Part2 的 intro 導讀頁在合併時移除（Part1 intro 已涵蓋六章架構）
+    const part2Filtered = part2.filter(s => s.type !== 'intro')
+    return { default: [...part1Filtered, ...part2Filtered] }
+  },
   'l3-11-part1': () => import('./lessons/l3-11-part1.js'),
   'l3-12': () => import('./lessons/l3-12.js'),
   'l3-11-part2': () => import('./lessons/l3-11-part2.js'),
+  // l3-13 合併載入器：將 Part1 + Part2 內容合為一份陣列
+  'l3-13': async () => {
+    const [p1, p2] = await Promise.all([
+      import('./lessons/l3-13-part1.js'),
+      import('./lessons/l3-13-part2.js')
+    ])
+    const part1 = p1.default || []
+    const part2 = p2.default || []
+    const part2Filtered = part2.filter(s => s.type !== 'intro')
+    return { default: [...part1, ...part2Filtered] }
+  },
   'l3-13-part1': () => import('./lessons/l3-13-part1.js'),
   'l3-13-part2': () => import('./lessons/l3-13-part2.js'),
   'l3-14': () => import('./lessons/l3-14.js'), // Level 3 綜合評量

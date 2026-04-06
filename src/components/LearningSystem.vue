@@ -167,13 +167,10 @@ const presentationLessonRef = ref(null)
 // 計算屬性
 const currentLevel = computed(() => learningState.currentLevel)
 const currentLesson = computed(() => learningState.currentLesson)
-// 若課程為分段課（有 parts），預設載入第一段；否則載入自身 id
+// 若課程是分段課（有 parts），直接回傳 lesson.id（由合併載入器處理）
 const resolvedLessonId = computed(() => {
   const lesson = learningState.currentLesson
   if (!lesson) return null
-  if (Array.isArray(lesson.parts) && lesson.parts.length > 0) {
-    return lesson.parts[0]
-  }
   return lesson.id
 })
 const currentLevelData = computed(() => learningLevels[`level${currentLevel.value}`])
