@@ -1005,26 +1005,44 @@ const normalizeSlide = (s) => {
       const toText = (str) => (str || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
 
       // 當某段過長時，嘗試再以 <h4> 拆分
+      // 只切「結構性 h4」（不在 .card-header 內的 h4），避免卡片標題被誤切
       const splitByH4IfLong = (sectionHtml, baseTitle, headingText) => {
         const MAX_LEN = 1800 // 依內容長度大致估算，可再調整
         if ((sectionHtml || '').length <= MAX_LEN) {
           return [{ title: `${baseTitle} — ${headingText}`, html: sectionHtml }]
         }
+        // 記錄所有 .card-header 的範圍，排除其中的 h4 不作為切割點
+        const cardHeaderRegions = []
+        const chRe = /<div class="card-header">[^]*?<\/div>/g
+        let chM
+        while ((chM = chRe.exec(sectionHtml)) !== null) {
+          cardHeaderRegions.push([chM.index, chM.index + chM[0].length])
+        }
+        const inCardHeader = (pos) => cardHeaderRegions.some(([s, e]) => pos >= s && pos < e)
+
         const h4Regex = /<h4[^>]*>([\s\S]*?)<\/h4>/gi
         const subs = []
         let mh4
         while ((mh4 = h4Regex.exec(sectionHtml)) !== null) {
-          subs.push({ start: mh4.index, subHeadingHtml: mh4[1] })
+          if (!inCardHeader(mh4.index)) {
+            subs.push({ start: mh4.index, subHeadingHtml: mh4[1] })
+          }
         }
         if (!subs.length) {
           return [{ title: `${baseTitle} — ${headingText}`, html: sectionHtml }]
         }
         subs.forEach((s, i) => { s.end = i < subs.length - 1 ? subs[i + 1].start : sectionHtml.length })
-        return subs.map(sub => {
+        const result = []
+        // 第一個結構 h4 之前若有內容，保留為獨立頁
+        if (subs[0].start > 0) {
+          result.push({ title: `${baseTitle} — ${headingText}`, html: sectionHtml.slice(0, subs[0].start) })
+        }
+        subs.forEach(sub => {
           const subHeadingText = toText(sub.subHeadingHtml)
           const body = sectionHtml.slice(sub.start, sub.end)
-          return { title: `${baseTitle} — ${headingText} · ${subHeadingText}`, html: body }
+          result.push({ title: `${baseTitle} — ${headingText} · ${subHeadingText}`, html: body })
         })
+        return result
       }
 
       const baseTitle = s.title || '章節'

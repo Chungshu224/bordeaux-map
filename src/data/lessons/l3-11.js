@@ -100,9 +100,10 @@ export const l311Content = [
               </ul>
             </div>
           </div>
-          <div class="subsection-block">
-            <h4>🍇 羅馬留下的三大技術遺產</h4>
-            <div class="info-cards-grid three-col">
+        </div>
+        <h4 class="section-subheading">🍇 羅馬留下的三大技術遺產</h4>
+        <div class="subsection-block">
+          <div class="info-cards-grid three-col">
               <div class="info-card accent-green">
                 <div class="card-header"><span class="card-icon">🌱</span><h4>種植技術</h4></div>
                 <ul>
@@ -131,7 +132,6 @@ export const l311Content = [
                 </ul>
               </div>
             </div>
-          </div>
         </div>
 
         <h3>⛪ 中世紀修道院的守護</h3>
@@ -183,9 +183,10 @@ export const l311Content = [
               </ul>
             </div>
           </div>
-          <div class="subsection-block">
-            <h4>🏆 中世紀波爾多的三大代表性成就</h4>
-            <div class="info-cards-grid three-col">
+        </div>
+        <h4 class="section-subheading">🏆 中世紀波爾多的三大代表性成就</h4>
+        <div class="subsection-block">
+          <div class="info-cards-grid three-col">
               <div class="info-card accent-blue">
                 <div class="card-header"><span class="card-icon">🍾</span><h4>克萊雷葡萄酒（Claret）</h4></div>
                 <ul>
@@ -213,7 +214,6 @@ export const l311Content = [
                   <li>中世紀英國人均葡萄酒消費遠超今日水準，波爾多是其最重要供應來源</li>
                 </ul>
               </div>
-            </div>
           </div>
         </div>
 
