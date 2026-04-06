@@ -235,8 +235,8 @@
         class="lesson-progress-bar"
       />
 
-      <!-- 課程完成提示（-part1 課程不顯示） -->
-  <div v-if="currentSlide === totalSlides - 1 && showCompletionCard && !lessonId?.endsWith('-part1')" class="completion-section">
+      <!-- 課程完成提示 -->
+  <div v-if="currentSlide === totalSlides - 1 && showCompletionCard" class="completion-section">
         <div class="completion-card">
           <button @click="closeCompletionCard" class="close-completion-btn" title="關閉">✕</button>
           <h3>🎉 課程完成！</h3>
@@ -532,7 +532,7 @@ const lessonDataMap = {
       '能評估科技導入對風格、品質與成本的影響'
     ]
   },
-  // L3-11 波爾多葡萄酒產業史與文化（分兩部分呈現）
+  // L3-11 波爾多葡萄酒產業史與文化（六章合併版）
   'l3-11': {
     title: '波爾多葡萄酒產業史與文化',
     subtitle: '歷史發展・分級制度・文化傳承',
@@ -543,30 +543,6 @@ const lessonDataMap = {
       '掌握1855年分級制度的背景與意義',
       '理解波爾多葡萄酒的文化內涵與國際影響',
       '分析傳統與現代的文化互動與傳承機制'
-    ]
-  },
-  'l3-11-part1': {
-    title: '波爾多葡萄酒產業史與文化（第一部分）',
-    subtitle: '歷史發展與1855分級制度',
-    duration: '30分鐘',
-    difficulty: 'Level 3',
-    objectives: [
-      '從羅馬時代到近代的發展脈絡',
-      '英國時期對貿易與品質的推動',
-      '1855年分級制度的制定與影響',
-      '重大歷史事件對產業的衝擊'
-    ]
-  },
-  'l3-11-part2': {
-    title: '波爾多葡萄酒產業史與文化（第二部分）',
-    subtitle: '文化核心、現代地位與傳承',
-    duration: '35分鐘',
-    difficulty: 'Level 3',
-    objectives: [
-      '理解法國葡萄酒文化的核心價值',
-      '評估波爾多在全球文化中的地位',
-      '探討現代化挑戰與文化傳承策略',
-      '建立文化外交與軟實力的觀點'
     ]
   },
   // Level 4 - 專家認證（示範課）

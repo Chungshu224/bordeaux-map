@@ -445,7 +445,7 @@ export const learningLevels = {
         ],
         interactiveElements: ['historical-timeline', 'trade-route-explorer', 'classification-explorer', 'culture-explorer'],
         duration: 65,
-        parts: ['l3-11-part1', 'l3-11-part2']
+        parts: ['l3-11']
       },
       {
         id: 'l3-12',
