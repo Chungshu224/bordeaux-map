@@ -706,129 +706,6 @@ export const l311Content = [
     ]
   },
 
-  // 總結
-  {
-    type: 'summary',
-    title: '課程總結：歷史傳承的智慧',
-    content: `
-      <div class="summary-content">
-
-        <div class="key-point-banner">
-          <p>波爾多的偉大不是偶然，而是歷經羅馬奠基、修道院淬鍊、英國市場催化，以及 1855 年分級制度塑造，層層積累出來的歷史成就。</p>
-        </div>
-
-        <h3>📚 第一部分：四大歷史洞察</h3>
-        <div class="info-cards-grid two-col">
-          <div class="info-card">
-            <div class="card-header"><span class="card-icon">🏛️</span><h4>技術傳承的重要性</h4></div>
-            <p>從羅馬時代到修道院時期，技術的一代代積累與傳承，是波爾多葡萄酒業發展最深厚的基石</p>
-          </div>
-          <div class="info-card">
-            <div class="card-header"><span class="card-icon">🤝</span><h4>國際合作的價值</h4></div>
-            <p>英國統治時期展示了國際市場合作對產業繁榮的決定性推動作用，貿易網絡造就了品質革命</p>
-          </div>
-          <div class="info-card">
-            <div class="card-header"><span class="card-icon">📏</span><h4>標準化的力量</h4></div>
-            <p>1855 年分級制度證明了在農產品領域建立標準化評估體系，可以創造 170 年屹立不倒的市場價值</p>
-            </div>
-          <div class="info-card">
-            <div class="card-header"><span class="card-icon">🔄</span><h4>適應變化的能力</h4></div>
-            <p>歷史上的每次危機——根瘤蚜蟲、世界大戰、經濟蕭條——都催生了產業更強的韌性與創新應對能力</p>
-          </div>
-        </div>
-
-        <h3>🔗 歷史與現代的連接</h3>
-        <div class="key-point-banner">
-          <p>波爾多的歷史不僅是過去的記錄，更是理解今日波爾多的鑰匙。每一個歷史節點的選擇，都塑造了我們今日所見的頂級產區格局。繼續第二部分，探索文化傳承與現代挑戰。</p>
-        </div>
-
-      </div>
-    `,
-    highlights: [
-      {
-        id: 1,
-        icon: '📚',
-        title: '歷史智慧',
-        content: '技術傳承、國際合作、標準化和適應能力是波爾多成功的四大要素'
-      },
-      {
-        id: 2,
-        icon: '🔗',
-        title: '現代意義',
-        content: '歷史經驗為理解現代波爾多和展望未來提供了重要的參考框架'
-      }
-    ]
-  },
-
-  // 第一部分測驗
-  {
-    type: 'quiz',
-    title: '第一部分測驗：歷史發展與分級制度',
-    questions: [
-      {
-        id: 1,
-        question: '波爾多葡萄酒業的真正起源可以追溯到哪個時期？',
-        options: [
-          '高盧人時期',
-          '羅馬征服後',
-          '中世紀修道院時期',
-          '英國統治時期'
-        ],
-        correct: 1,
-        explanation: '西元前56年羅馬征服高盧後，羅馬人帶來了先進的葡萄種植和釀造技術，為波爾多葡萄酒業奠定了真正的基礎。'
-      },
-      {
-        id: 2,
-        question: '1152年阿基坦的埃莉諾與亨利二世的聯姻對波爾多葡萄酒業最重要的影響是？',
-        options: [
-          '引入了新的葡萄品種',
-          '改進了釀造技術',
-          '開闢了穩定的英國市場',
-          '建立了修道院釀酒傳統'
-        ],
-        correct: 2,
-        explanation: '這次聯姻使波爾多成為英國領土，開闢了直接穩定的英國市場，建立了延續300年的特殊貿易關係，為波爾多葡萄酒業發展提供了重要推動力。'
-      },
-      {
-        id: 3,
-        question: '1855年波爾多分級制度的評選主要基於什麼標準？',
-        options: [
-          '當年的品酒會評分',
-          '葡萄園的土壤質量',
-          '歷史價格和市場聲譽',
-          '酒莊的建立年份'
-        ],
-        correct: 2,
-        explanation: '1855年分級制度主要基於過去50-100年的市場價格表現和歷史聲譽，這種以市場為導向的評選標準體現了當時的商業智慧。'
-      },
-      {
-        id: 4,
-        question: '在1855年分級中，唯一入選的非Médoc產區酒莊是？',
-        options: [
-          'Château Margaux',
-          'Château Latour',
-          'Château Haut-Brion',
-          'Château Lafite'
-        ],
-        correct: 2,
-        explanation: 'Château Haut-Brion來自Graves產區，是1855年分級中唯一的非Médoc酒莊，這證明了它卓越的品質和特殊的歷史地位。'
-      },
-      {
-        id: 5,
-        question: '中世紀修道院對波爾多葡萄酒業最重要的貢獻是？',
-        options: [
-          '大規模擴張葡萄園面積',
-          '建立了國際貿易網絡',
-          '推動了釀造技術創新和品質提升',
-          '制定了第一個分級標準'
-        ],
-        correct: 2,
-        explanation: '中世紀修道院通過品種改良、釀造技術創新、品質控制和知識記錄，為波爾多葡萄酒業的技術發展和品質提升做出了決定性貢獻。'
-      }
-    ],
-    passingScore: 80,
-    timeLimit: 300
-  },
   // 第四章：法國葡萄酒文化的核心價值
   // 章節導覽分隔（供簡報章節導覽晶片使用）
   {
@@ -1290,22 +1167,42 @@ export const l311Content = [
     ]
   },
 
-  // 總結
+  // 課程總結
   {
     type: 'summary',
-    title: '課程總結：文化的永恆價值',
+    title: '課程總結：波爾多的歷史與文化',
     content: `
       <div class="summary-content">
 
         <div class="key-point-banner">
-          <p>波爾多葡萄酒的文化影響力已遠超一瓶酒的本身，它承載著 Art de Vivre 的生活哲學、Terroir 的自然智慧，以及法國面向世界的文化軟實力。</p>
+          <p>波爾多的偉大源自兩大支柱：<strong>歷史的積累</strong>（羅馬奠基、修道院淬鍊、英國市場催化、1855 年分級制度）與<strong>文化的傳承</strong>（Art de Vivre 生活哲學、Terroir 風土智慧、法國文化軟實力）共同塑造。</p>
         </div>
 
-        <h3>🎭 文化傳承的四大核心使命</h3>
+        <h3>📚 第一部分：四大歷史洞察</h3>
+        <div class="info-cards-grid two-col">
+          <div class="info-card">
+            <div class="card-header"><span class="card-icon">🏛️</span><h4>技術傳承的重要性</h4></div>
+            <p>從羅馬時代到修道院時期，技術的一代代積累與傳承，是波爾多葡萄酒業發展最深厚的基石</p>
+          </div>
+          <div class="info-card">
+            <div class="card-header"><span class="card-icon">🤝</span><h4>國際合作的價值</h4></div>
+            <p>英國統治時期展示了國際市場合作對產業繁榮的決定性推動作用，貿易網絡造就了品質革命</p>
+          </div>
+          <div class="info-card">
+            <div class="card-header"><span class="card-icon">📏</span><h4>標準化的力量</h4></div>
+            <p>1855 年分級制度證明了在農產品領域建立標準化評估體系，可以創造 170 年屹立不倒的市場價值</p>
+          </div>
+          <div class="info-card">
+            <div class="card-header"><span class="card-icon">🔄</span><h4>適應變化的能力</h4></div>
+            <p>歷史上的每次危機——根瘤蚜蟲、世界大戰、經濟蕭條——都催生了產業更強的韌性與創新應對能力</p>
+          </div>
+        </div>
+
+        <h3>🎭 第二部分：文化傳承的四大使命</h3>
         <div class="info-cards-grid two-col">
           <div class="info-card accent-green">
             <div class="card-header"><span class="card-icon">🔥</span><h4>守護文化火種</h4></div>
-            <p>在全球化浪潮中，堅持波爾多葡萄酒文化的獨特性與純正性，讓百年傳統不因商業壓力而稀釋</p>
+            <p>在全球化浪潮中，堅守波爾多葡萄酒文化的獨特性與純正性，讓百年傳統不因商業壓力而稀釋</p>
           </div>
           <div class="info-card accent-green">
             <div class="card-header"><span class="card-icon">🌱</span><h4>促進文化創新</h4></div>
@@ -1321,7 +1218,6 @@ export const l311Content = [
           </div>
         </div>
 
-        <h3>🔮 波爾多文化的未來展望</h3>
         <div class="key-point-banner">
           <p>波爾多葡萄酒文化正站在歷史的新起點。核心價值不變，傳播方式因時俱進——這是面對數位化、永續發展等時代挑戰的唯一解方，也是法國文化智慧留給世界的最珍貴禮物。</p>
         </div>
@@ -1331,87 +1227,97 @@ export const l311Content = [
     highlights: [
       {
         id: 1,
-        icon: '🎭',
-        title: '文化使命',
-        content: '保持火種、促進創新、擴大影響、培養傳人是文化傳承的四大核心使命'
+        icon: '📚',
+        title: '歷史基石',
+        content: '技術傳承、國際合作、標準化與適應能力是波爾多成功的四大歷史要素'
       },
       {
         id: 2,
-        icon: '🔮',
-        title: '未來展望',
-        content: '波爾多文化將成為更加開放包容的體系，繼續引領全球葡萄酒文化發展'
+        icon: '🎭',
+        title: '文化傳承',
+        content: '守護火種、促進創新、擴大影響、培養傳人是文化永續傳承的四大使命'
       }
     ]
   },
 
-  // 第二部分測驗
+  // 綜合測驗
   {
     type: 'quiz',
-    title: '第二部分測驗：文化傳承與現代影響',
+    title: '綜合測驗：波爾多葡萄酒產業史與文化（全六章）',
     questions: [
       {
         id: 1,
-        question: '法國葡萄酒文化中"Art de Vivre"的核心理念是什麼？',
-        options: [
-          '追求最高的經濟利益',
-          '將葡萄酒融入生活藝術和美學體驗',
-          '大規模工業化生產',
-          '模仿其他國家的葡萄酒文化'
-        ],
+        question: '波爾多葡萄酒業的真正起源可以追溯到哪個時期？',
+        options: ['高盧人時期', '羅馬征服後', '中世紀修道院時期', '英國統治時期'],
         correct: 1,
-        explanation: '"Art de Vivre"（法式生活藝術）強調將葡萄酒融入美食文化、社交活動和美學體驗中，體現了法國人對生活品質和精神享受的追求。'
+        explanation: '西元前 56 年羅馬征服高盧後，帶來先進的葡萄種植與釀造技術，為波爾多葡萄酒業奠定了真正的基礎。'
       },
       {
         id: 2,
-        question: 'Terroir風土文化的深層內涵主要體現在？',
-        options: [
-          '純粹的土壤科學研究',
-          '人與自然和諧相處的哲學思想',
-          '現代農業技術的應用',
-          '國際市場的競爭策略'
-        ],
-        correct: 1,
-        explanation: 'Terroir風土文化體現了人與自然和諧相處、時間與耐心、傳統傳承等深層哲學思想，是法國葡萄酒文化的重要組成部分。'
+        question: '1152 年聯姻對波爾多葡萄酒業最重要的影響是？',
+        options: ['引入了新的葡萄品種', '改進了釀造技術', '開闢了穩定的英國市場', '建立了修道院釀酒傳統'],
+        correct: 2,
+        explanation: '這次聯姻使波爾多成為英國領土，建立了延續 300 年的特殊貿易關係，為波爾多葡萄酒業發展提供了重要推動力。'
       },
       {
         id: 3,
-        question: '波爾多在全球葡萄酒文化中的引領作用主要表現在？',
-        options: [
-          '價格最低的葡萄酒產區',
-          '產量最大的葡萄酒產區',
-          '建立品質標準和文化規範',
-          '最新釀造技術的發明地'
-        ],
+        question: '1855 年波爾多分級制度的評選主要基於什麼標準？',
+        options: ['當年的品酒會評分', '葡萄園的土壤質量', '歷史價格和市場聲譽', '酒莊的建立年份'],
         correct: 2,
-        explanation: '波爾多通過1855年分級制度建立了全球葡萄酒品質標準，在評價體系、教育體系、文化規範等方面引領全球葡萄酒文化發展。'
+        explanation: '1855 年分級制度主要基於過去 50–100 年的市場價格表現和歷史聲譽，體現了當時的商業智慧。'
       },
       {
         id: 4,
+        question: '在 1855 年分級中，唯一入選的非 Médoc 產區酒莊是？',
+        options: ['Château Margaux', 'Château Latour', 'Château Haut-Brion', 'Château Lafite'],
+        correct: 2,
+        explanation: 'Château Haut-Brion 來自 Graves 產區，是 1855 年分級中唯一的非 Médoc 酒莊，證明了它卓越的品質與特殊歷史地位。'
+      },
+      {
+        id: 5,
+        question: '中世紀修道院對波爾多葡萄酒業最重要的貢獻是？',
+        options: ['大規模擴張葡萄園面積', '建立了國際貿易網絡', '推動了釀造技術創新和品質提升', '制定了第一個分級標準'],
+        correct: 2,
+        explanation: '修道院修士們進行品種改良、發展精密釀造技術、建立品質控制標準，並詳細記錄天氣和收成資料，對技術發展做出了決定性貢獻。'
+      },
+      {
+        id: 6,
+        question: '法國葡萄酒文化中「Art de Vivre」的核心理念是？',
+        options: ['追求最高的經濟利益', '將葡萄酒融入生活藝術和美學體驗', '大規模工業化生產', '模仿其他國家的葡萄酒文化'],
+        correct: 1,
+        explanation: '「Art de Vivre」（法式生活藝術）強調將葡萄酒融入美食文化、社交活動和美學體驗中，體現了法國人對生活品質和精神享受的追求。'
+      },
+      {
+        id: 7,
+        question: 'Terroir 風土文化的深層內涵主要體現在？',
+        options: ['純粹的土壤科學研究', '人與自然和諧相處的哲學思想', '現代農業技術的應用', '國際市場的競爭策略'],
+        correct: 1,
+        explanation: 'Terroir 風土文化體現了人與自然和諧相處、時間與耐心、傳統傳承等深層哲學思想，是法國葡萄酒文化的重要核心。'
+      },
+      {
+        id: 8,
+        question: '波爾多在全球葡萄酒文化中的引領作用主要表現在？',
+        options: ['價格最低的葡萄酒產區', '產量最大的葡萄酒產區', '建立品質標準和文化規範', '最新釀造技術的發明地'],
+        correct: 2,
+        explanation: '波爾多通過 1855 年分級制度建立了全球葡萄酒品質標準，在評價體系、教育體系、文化規範等方面引領全球葡萄酒文化發展。'
+      },
+      {
+        id: 9,
         question: '現代化進程對傳統葡萄酒文化的最大挑戰是？',
-        options: [
-          '技術設備的成本過高',
-          '平衡傳統價值與現代創新',
-          '葡萄品種的基因改造',
-          '國際貿易政策的變化'
-        ],
+        options: ['技術設備的成本過高', '平衡傳統價值與現代創新', '葡萄品種的基因改造', '國際貿易政策的變化'],
         correct: 1,
         explanation: '現代化的最大挑戰是如何在保持傳統文化核心價值的同時，適應現代技術和市場需求，實現傳統與創新的動態平衡。'
       },
       {
-        id: 5,
+        id: 10,
         question: '波爾多文化發展的未來策略應該著重於？',
-        options: [
-          '完全拒絕任何現代化改變',
-          '全面放棄傳統文化價值',
-          '在核心價值保護基礎上創新發展',
-          '只關注短期商業利益'
-        ],
+        options: ['完全拒絕任何現代化改變', '全面放棄傳統文化價值', '在核心價值保護基礎上創新發展', '只關注短期商業利益'],
         correct: 2,
-        explanation: '未來策略應該建立核心價值保護機制，在不妥協品質標準和文化認同的基礎上，靈活適應現代發展需求，實現可持續的文化創新。'
+        explanation: '未來策略應建立核心價值保護機制，在不妥協品質標準和文化認同的基礎上，靈活適應現代發展需求，實現可持續的文化創新。'
       }
     ],
     passingScore: 80,
-    timeLimit: 300
+    timeLimit: 600
   }
 
 ];
