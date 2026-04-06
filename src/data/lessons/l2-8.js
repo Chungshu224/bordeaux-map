@@ -155,8 +155,8 @@ export const l28Content = [
           'Puisseguin-St-Emilion_AOC':{ label: 'Puisseguin\nSt-Émilion', color: '#AD1457' },
           'St-Georges-St-Emilion_AOC':{ label: 'St-Georges\nSt-Émilion', color: '#880E4F' },
           'Lalande-de-Pomerol_AOC':  { label: 'Lalande-de-\nPomerol',  color: '#6A1B9A' },
-          'Fronsac_AOC':             { label: 'Fronsac',                color: '#4527A0', offset: [0, 0.016] },
-          'Canon-Fronsac_AOC':       { label: 'Canon-Fronsac',         color: '#283593', offset: [0, -0.010] }
+          'Canon-Fronsac_AOC':       { label: 'Canon Fronsac',       color: '#283593', offset: [0, -0.010] },
+          'Fronsac_AOC':             { label: 'Fronsac',              color: '#4527A0', offset: [0, 0.016] }
         }
 
         // 計算每個 GeoJSON 的中心點並加文字標記

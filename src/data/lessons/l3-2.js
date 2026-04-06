@@ -70,89 +70,174 @@ export const l32Content = [
 
   {
     type: 'content',
-    title: '土壤核心特性：物理面',
-    content: [
-      {
-        subtitle: '物理特性 (Physical Properties)',
-        text: '決定水分與空氣流動，為根系生長提供基礎環境。',
-        keyFactors: [
-          '質地：沙/粉砂/黏土比例 → 排水/保水',
-          '結構：顆粒聚合度 → 根系穿透/透氣',
-          '深度：可開發根層範圍',
-          '排水性：過快/過慢皆可能影響品質',
-          '熱容量：儲/釋熱能力，影響成熟節奏'
-        ],
-        importance: '最直觀且直接影響藤勢與成熟節奏'
-      }
-    ]
+    title: '土壤核心特性：三大維度',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+
+          <!-- 物理特性 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.25rem;">⚙️</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">物理特性</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">Physical Properties</div>
+              </div>
+            </div>
+            <div style="padding:10px 12px 12px;">
+              <div style="font-size:0.77rem;color:#555;line-height:1.6;margin-bottom:8px;">決定水分與空氣流動，為根系生長提供基礎環境。</div>
+              <ul style="margin:0 0 8px;padding-left:13px;font-size:0.76rem;color:#333;line-height:1.85;">
+                <li>質地：沙/粉砂/黏土比例 → 排水/保水</li>
+                <li>結構：顆粒聚合度 → 根系穿透/透氣</li>
+                <li>深度：可開發根層範圍</li>
+                <li>排水性：過快/過慢皆影響品質</li>
+                <li>熱容量：儲/釋熱能力</li>
+              </ul>
+              <div style="background:#E3F2FD;border-left:3px solid #1565C0;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#0D47A1;">
+                最直觀，直接影響藤勢與成熟節奏
+              </div>
+            </div>
+          </div>
+
+          <!-- 化學特性 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.25rem;">⚗️</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">化學特性</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">Chemical Properties</div>
+              </div>
+            </div>
+            <div style="padding:10px 12px 12px;">
+              <div style="font-size:0.77rem;color:#555;line-height:1.6;margin-bottom:8px;">決定可用養分元素與獲取方式，影響葡萄健康與品質。</div>
+              <ul style="margin:0 0 8px;padding-left:13px;font-size:0.76rem;color:#333;line-height:1.85;">
+                <li>pH：養分可利用性（理想 6.5–7.5）</li>
+                <li>礦物：Ca/Mg/K/Fe 對品質之影響</li>
+                <li>有機質：肥力與微生物活性</li>
+                <li>CEC：保持養分能力</li>
+                <li>NPK 平衡：生長與果實品質</li>
+              </ul>
+              <div style="background:#FFF3E0;border-left:3px solid #E65100;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#BF360C;">
+                左右營養狀態與整體健康
+              </div>
+            </div>
+          </div>
+
+          <!-- 生物特性 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#388E3C);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.25rem;">🦠</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">生物特性</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">Biological Properties</div>
+              </div>
+            </div>
+            <div style="padding:10px 12px 12px;">
+              <div style="font-size:0.77rem;color:#555;line-height:1.6;margin-bottom:8px;">土壤為活的生態系；微生物活動對健康與韌性關鍵。</div>
+              <ul style="margin:0 0 8px;padding-left:13px;font-size:0.76rem;color:#333;line-height:1.85;">
+                <li>微生物多樣性：細菌/真菌/放線菌</li>
+                <li>菌根：與根系共生，助吸水吸養</li>
+                <li>土壤呼吸：微生物活動指標</li>
+                <li>有機質分解：養分循環核心</li>
+                <li>病蟲害抑制：健康土壤的自防</li>
+              </ul>
+              <div style="background:#E8F5E9;border-left:3px solid #2E7D32;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#1B5E20;">
+                土壤健康與長期可持續性的基礎
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
-    title: '土壤核心特性：化學面',
-    content: [
-      {
-        subtitle: '化學特性 (Chemical Properties)',
-        text: '決定可用營養元素與獲取方式，影響葡萄健康與品質。',
-        keyFactors: [
-          'pH：影響養分可利用性（理想6.5-7.5）',
-          '礦物：Ca/Mg/K/Fe 等對品質之影響',
-          '有機質：提升肥力與微生物活性',
-          'CEC：保持養分能力',
-          'NPK 平衡：影響生長與果實品質'
-        ],
-        importance: '左右營養狀態與整體健康'
-      }
-    ]
-  },
-
-  {
-    type: 'content',
-    title: '土壤核心特性：生物面',
-    content: [
-      {
-        subtitle: '生物特性 (Biological Properties)',
-        text: '土壤為活的生態系；微生物活動對健康與韌性關鍵。',
-        keyFactors: [
-          '微生物多樣性：細菌/真菌/放線菌',
-          '菌根：與根系共生，助吸水吸養',
-          '土壤呼吸：微生物活動指標',
-          '有機質分解：養分循環核心',
-          '病蟲害抑制：健康土壤的自防'
-        ],
-        importance: '土壤健康與長期可持續性的基礎'
-      }
-    ]
-  },
-
-  {
-    type: 'soil-analysis-framework',
     title: '土壤分析的三層次框架',
-    description: '從宏觀到微觀理解土壤',
-    levels: [
-      {
-        level: '地質層 (Geological Level)',
-        timeScale: '數百萬年',
-        focus: '母岩類型、地質歷史、沉積過程',
-        example: '第四紀Günz冰期的加龍河沉積物形成Médoc礫石',
-        tools: '地質圖、鑽孔取樣、地球物理探測'
-      },
-      {
-        level: '土壤層 (Pedological Level)',
-        timeScale: '數千至數萬年',
-        focus: '土壤剖面、層次結構、發育程度',
-        example: 'Pomerol的鐵質黏土層（crasse de fer）',
-        tools: '土壤剖面分析、理化測試、顯微鏡觀察'
-      },
-      {
-        level: '根際層 (Rhizosphere Level)',
-        timeScale: '季節性變化',
-        focus: '根系-土壤-微生物互動',
-        example: '葡萄根系分泌物與菌根真菌的共生關係',
-        tools: '根系觀察、微生物測序、土壤呼吸測定'
-      }
-    ],
-    insight: '理解土壤需要跨越時間尺度，從地質演化到當下的生物互動'
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="text-align:center;font-size:0.8rem;color:#666;margin-bottom:10px;">從宏觀到微觀理解土壤</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px;">
+
+          <!-- 地質層 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);padding:10px 12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="color:#fff;font-weight:700;font-size:0.86rem;">🌋 地質層</div>
+                <span style="background:rgba(255,255,255,0.18);color:#fff;border-radius:20px;padding:2px 8px;font-size:0.72rem;white-space:nowrap;">數百萬年</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.73rem;margin-top:2px;">Geological Level</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="margin-bottom:6px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#4E342E;margin-bottom:3px;">🔍 研究重點</div>
+                <div style="font-size:0.75rem;color:#555;line-height:1.6;">母岩類型、地質歷史、沉積過程</div>
+              </div>
+              <div style="margin-bottom:7px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#4E342E;margin-bottom:3px;">📌 實例</div>
+                <div style="font-size:0.75rem;color:#555;line-height:1.6;">Günz冰期加龍河沉積形成Médoc礫石</div>
+              </div>
+              <div style="background:#EFEBE9;border-radius:4px;padding:4px 7px;font-size:0.73rem;color:#4E342E;line-height:1.6;">
+                🛠 地質圖・鑽孔取樣・地球物理探測
+              </div>
+            </div>
+          </div>
+
+          <!-- 土壤層 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#F57F17,#F9A825);padding:10px 12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="color:#fff;font-weight:700;font-size:0.86rem;">🌱 土壤層</div>
+                <span style="background:rgba(255,255,255,0.18);color:#fff;border-radius:20px;padding:2px 8px;font-size:0.72rem;white-space:nowrap;">數千至數萬年</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.85);font-size:0.73rem;margin-top:2px;">Pedological Level</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="margin-bottom:6px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#E65100;margin-bottom:3px;">🔍 研究重點</div>
+                <div style="font-size:0.75rem;color:#555;line-height:1.6;">土壤剖面、層次結構、發育程度</div>
+              </div>
+              <div style="margin-bottom:7px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#E65100;margin-bottom:3px;">📌 實例</div>
+                <div style="font-size:0.75rem;color:#555;line-height:1.6;">Pomerol的鐵質黏土層（crasse de fer）</div>
+              </div>
+              <div style="background:#FFFDE7;border-radius:4px;padding:4px 7px;font-size:0.73rem;color:#F57F17;line-height:1.6;">
+                🛠 土壤剖面分析・理化測試・顯微鏡觀察
+              </div>
+            </div>
+          </div>
+
+          <!-- 根際層 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:10px 12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="color:#fff;font-weight:700;font-size:0.86rem;">🌿 根際層</div>
+                <span style="background:rgba(255,255,255,0.18);color:#fff;border-radius:20px;padding:2px 8px;font-size:0.72rem;white-space:nowrap;">季節性變化</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.85);font-size:0.73rem;margin-top:2px;">Rhizosphere Level</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="margin-bottom:6px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#1B5E20;margin-bottom:3px;">🔍 研究重點</div>
+                <div style="font-size:0.75rem;color:#555;line-height:1.6;">根系—土壤—微生物互動</div>
+              </div>
+              <div style="margin-bottom:7px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#1B5E20;margin-bottom:3px;">📌 實例</div>
+                <div style="font-size:0.75rem;color:#555;line-height:1.6;">葡萄根系分泌物與菌根真菌共生</div>
+              </div>
+              <div style="background:#E8F5E9;border-radius:4px;padding:4px 7px;font-size:0.73rem;color:#1B5E20;line-height:1.6;">
+                🛠 根系觀察・微生物測序・土壤呼吸測定
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div style="background:linear-gradient(135deg,#37474F,#455A64);border-radius:8px;padding:10px 16px;text-align:center;">
+          <span style="color:#fff;font-size:0.8rem;line-height:1.6;">💡 理解土壤需要跨越時間尺度——從地質演化（數百萬年）到當下的生物互動（當季）</span>
+        </div>
+      </div>
+    `
   },
 
   {
@@ -972,96 +1057,200 @@ export const l32Content = [
   {
     type: 'content',
     title: '地表管理：覆蓋作物與抑草',
-    content: [
-      {
-        subtitle: '覆蓋作物（Cover crops）',
-        text: '提升土壤有機質、改善團粒結構、促進微生物活性，並能固定氮素或抑制雜草。',
-        details: '常見組合：禾本科（增加有機質）+豆科（固氮）+菊科（生物鑿孔鬆土）',
-        highlight: '關鍵效果：減少侵蝕、提升持水、穩定溫度、改善可行走性'
-      },
-      {
-        subtitle: '覆蓋物（Mulch）與行間抑草',
-        text: '木屑、稻草、葡萄渣覆蓋可降低蒸發、壓抑雜草並保護土壤表層生命。',
-        details: '需兼顧鼠害管理與氮素鎖定風險，並依年份彈性調整厚度。',
-        highlight: '在乾旱年份顯著降低灌溉需求'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+
+          <!-- 覆蓋作物 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#388E3C);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🌿</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">覆蓋作物 Cover Crops</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">主動改善土壤結構</div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.65;margin-bottom:8px;">提升土壤有機質、改善團粒結構、促進微生物活性，並能固定氮素或抑制雜草。</div>
+              <div style="background:#F1F8E9;border-radius:6px;padding:7px 10px;margin-bottom:8px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#2E7D32;margin-bottom:4px;">🌾 常見組合</div>
+                <ul style="margin:0;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.8;">
+                  <li>禾本科 — 增加有機質</li>
+                  <li>豆科 — 固定氮素</li>
+                  <li>菊科 — 生物鑿孔鬆土</li>
+                </ul>
+              </div>
+              <div style="background:#E8F5E9;border-left:3px solid #2E7D32;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#1B5E20;">
+                ✅ 減少侵蝕・提升持水・穩定溫度・改善可行走性
+              </div>
+            </div>
+          </div>
+
+          <!-- 覆蓋物 Mulch -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🪵</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">覆蓋物 Mulch</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">降蒸發・壓雜草・護土層</div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.65;margin-bottom:8px;">木屑、稻草、葡萄渣覆蓋可降低蒸發、壓抑雜草並保護土壤表層生命。</div>
+              <div style="background:#FFF3E0;border-radius:6px;padding:7px 10px;margin-bottom:8px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#E65100;margin-bottom:4px;">⚠️ 管理注意</div>
+                <ul style="margin:0;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.8;">
+                  <li>兼顧鼠害管理</li>
+                  <li>注意氮素鎖定風險</li>
+                  <li>依年份彈性調整厚度</li>
+                </ul>
+              </div>
+              <div style="background:#FFF3E0;border-left:3px solid #E65100;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#BF360C;">
+                ✅ 乾旱年份顯著降低灌溉需求
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '水分管理與土壤結構維護',
-    content: [
-      {
-        subtitle: '精準灌溉（若法規允許）',
-        text: '滴灌結合土壤含水監測，將水分投放集中於關鍵期（結束轉色前後）。',
-        details: '避免連續小水量滋養淺根，建議更低頻但有效水量，鼓勵深根發展。',
-        highlight: '目標是「適度水分脅迫」而非高產量灌溉'
-      },
-      {
-        subtitle: '減少土壤壓實與侵蝕',
-        text: '合理輪作作業路徑、減少濕土上機械通行；坡地採用等高線耕作與草帶。',
-        details: '壓實會降低孔隙度與滲水性，導致根系淺層化與缺氧風險。',
-        highlight: '土壤貫入阻力與滲透率是長期監測的核心指標'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+
+          <!-- 精準灌溉 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#01579B,#0288D1);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">💧</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">精準灌溉</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">若法規允許</div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.65;margin-bottom:8px;">滴灌結合土壤含水監測，將水分投放集中於關鍵期（轉色前後）。</div>
+              <div style="background:#E1F5FE;border-radius:6px;padding:7px 10px;margin-bottom:8px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#01579B;margin-bottom:4px;">📋 作業原則</div>
+                <ul style="margin:0;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.8;">
+                  <li>避免連續小水量 → 淺根化</li>
+                  <li>低頻但足量 → 鼓勵深根</li>
+                  <li>轉色期後收水 → 濃縮風味</li>
+                </ul>
+              </div>
+              <div style="background:#E1F5FE;border-left:3px solid #0288D1;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#01579B;">
+                🎯 目標：「適度水分脅迫」而非高產量灌溉
+              </div>
+            </div>
+          </div>
+
+          <!-- 減少壓實 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#37474F,#546E7A);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🚜</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">減少壓實與侵蝕</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">保護土壤孔隙結構</div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.65;margin-bottom:8px;">合理輪作作業路徑、減少濕土機械通行；坡地採用等高線耕作與草帶。</div>
+              <div style="background:#ECEFF1;border-radius:6px;padding:7px 10px;margin-bottom:8px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#37474F;margin-bottom:4px;">⚠️ 壓實危害</div>
+                <ul style="margin:0;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.8;">
+                  <li>孔隙度↓ → 滲水性下降</li>
+                  <li>根系淺層化</li>
+                  <li>缺氧風險增加</li>
+                </ul>
+              </div>
+              <div style="background:#ECEFF1;border-left:3px solid #546E7A;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#263238;">
+                📊 長期監測：土壤貫入阻力 + 滲透率
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
-    title: '案例：Pessac‑Léognan 精準管理 — 總覽',
-    content: [
-      {
-        subtitle: '酒莊背景（示例）',
-        text: 'Château Smith Haut Lafitte｜Graves/Pessac‑Léognan，紅白雙線著稱。'
-      },
-      {
-        subtitle: '挑戰',
-        text: '在極端年份維持紅/白酒的平衡與清晰度。'
-      },
-      {
-        subtitle: '成效',
-        text: '熱浪年單寧更柔順、白酒酸度保留更佳；灌溉依賴降低、作業視窗更彈性。'
-      }
-    ]
-  },
+    title: '案例：Pessac‑Léognan 精準管理',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
 
-  {
-    type: 'content',
-    title: 'Pessac‑Léognan — 地表與微氣候',
-    content: [
-      {
-        subtitle: '措施',
-        keyFactors: [
-          '行間覆蓋作物：提升土壤碳、穩定水分與降溫',
-          '生物炭：提升持水與CEC（局部）',
-          '紅外熱影像：定位熱斑與缺水點'
-        ]
-      },
-      {
-        subtitle: '結果',
-        highlight: '溫度/水分空間差異降低，成熟節奏更整齊'
-      }
-    ]
-  },
+        <!-- 酒莊總覽 banner -->
+        <div style="background:linear-gradient(135deg,#1A237E,#283593);border-radius:10px;padding:11px 16px;margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+          <span style="font-size:1.5rem;">🏰</span>
+          <div style="flex:1;">
+            <div style="color:#fff;font-weight:700;font-size:0.9rem;">Château Smith Haut Lafitte</div>
+            <div style="color:rgba(255,255,255,0.78);font-size:0.76rem;">Graves / Pessac‑Léognan　紅白雙線著稱</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.12);border-radius:8px;padding:6px 12px;text-align:center;">
+            <div style="color:rgba(255,255,255,0.7);font-size:0.7rem;">核心挑戰</div>
+            <div style="color:#fff;font-size:0.77rem;font-weight:600;">極端年份維持紅/白酒平衡與清晰度</div>
+          </div>
+        </div>
 
-  {
-    type: 'content',
-    title: 'Pessac‑Léognan — 結構與壓實管理',
-    content: [
-      {
-        subtitle: '措施',
-        keyFactors: [
-          '固定作業車道：將壓實集中於少數路徑',
-          '深根型覆蓋作物：在壓實路徑進行「生物鑿孔」',
-          '雨後延遲進園：避免濕土壓實'
-        ]
-      },
-      {
-        subtitle: '結果',
-        highlight: '孔隙度↑，滲水性改善，根系更深入'
-      }
-    ]
+        <!-- 兩欄：地表微氣候 + 結構壓實 -->
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px;">
+
+          <!-- 地表與微氣候 -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#43A047);padding:9px 13px;display:flex;align-items:center;gap:7px;">
+              <span style="font-size:1.05rem;">🌡️</span>
+              <div style="color:#fff;font-weight:700;font-size:0.84rem;">地表與微氣候管理</div>
+            </div>
+            <div style="padding:9px 13px 11px;">
+              <div style="font-size:0.74rem;font-weight:700;color:#2E7D32;margin-bottom:5px;">🔧 措施</div>
+              <ul style="margin:0 0 7px;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.85;">
+                <li><strong>行間覆蓋作物</strong>：提升土壤碳、穩定水分與降溫</li>
+                <li><strong>生物炭</strong>：提升持水與CEC（局部）</li>
+                <li><strong>紅外熱影像</strong>：定位熱斑與缺水點</li>
+              </ul>
+              <div style="background:#E8F5E9;border-left:3px solid #2E7D32;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#1B5E20;">
+                ✅ 溫度/水分空間差異降低，成熟節奏更整齊
+              </div>
+            </div>
+          </div>
+
+          <!-- 結構與壓實管理 -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);padding:9px 13px;display:flex;align-items:center;gap:7px;">
+              <span style="font-size:1.05rem;">🏗️</span>
+              <div style="color:#fff;font-weight:700;font-size:0.84rem;">結構與壓實管理</div>
+            </div>
+            <div style="padding:9px 13px 11px;">
+              <div style="font-size:0.74rem;font-weight:700;color:#4E342E;margin-bottom:5px;">🔧 措施</div>
+              <ul style="margin:0 0 7px;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.85;">
+                <li><strong>固定作業車道</strong>：壓實集中於少數路徑</li>
+                <li><strong>深根型覆蓋作物</strong>：「生物鑿孔」疏鬆壓實層</li>
+                <li><strong>雨後延遲進園</strong>：避免濕土壓實</li>
+              </ul>
+              <div style="background:#EFEBE9;border-left:3px solid #4E342E;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#3E2723;">
+                ✅ 孔隙度↑，滲水性改善，根系更深入
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 綜合成效 -->
+        <div style="background:linear-gradient(135deg,#1A237E,#311B92);border-radius:8px;padding:10px 16px;">
+          <div style="color:rgba(255,255,255,0.7);font-size:0.73rem;margin-bottom:4px;">🏆 綜合成效</div>
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;">
+            <div style="color:#fff;font-size:0.77rem;line-height:1.6;">🍷 熱浪年單寧更柔順、白酒酸度保留更佳</div>
+            <div style="color:#fff;font-size:0.77rem;line-height:1.6;">⚙️ 灌溉依賴降低、作業視窗更彈性</div>
+          </div>
+        </div>
+
+      </div>
+    `
   },
 
   {
@@ -1104,65 +1293,179 @@ export const l32Content = [
   },
 
   {
-    type: 'comparison',
+    type: 'content',
     title: '對比一：礫石 vs 黏土',
-    subtitle: 'Cabernet Sauvignon 與 Merlot 的典型表現',
-    items: [
-      {
-        label: '礫石（Gravel）',
-        icon: '🪨',
-        metrics: [
-          { name: '口感', value: '結構緊實、線條清晰' },
-          { name: '香氣', value: '黑醋栗、鉛筆芯、雪松、石墨' },
-          { name: '酸度/單寧', value: '酸度中高、單寧成熟且細緻' },
-          { name: '陳年', value: '長（15-30年）' }
-        ],
-        style: '優雅克制、力量與精準並存'
-      },
-      {
-        label: '黏土（Clay）',
-        icon: '🧱',
-        metrics: [
-          { name: '口感', value: '酒體飽滿、質地圓潤' },
-          { name: '香氣', value: '李子、黑莓、松露、鐵礦' },
-          { name: '酸度/單寧', value: '酸度中等、單寧柔和' },
-          { name: '陳年', value: '中至長（10-20年）' }
-        ],
-        style: '豐滿深邃、親和力強'
-      }
-    ],
-    conclusion: '兩者皆可達高品質，但表達維度不同：礫石重「線條與精準」，黏土重「質地與包覆」。'
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="text-align:center;font-size:0.79rem;color:#666;margin-bottom:10px;">Cabernet Sauvignon 與 Merlot 的典型感官表現</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:12px;">
+
+          <!-- 礫石 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:10px 14px;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-size:1.3rem;">🪨</span>
+                <div>
+                  <div style="color:#fff;font-weight:700;font-size:0.9rem;">礫石 Gravel</div>
+                  <div style="color:rgba(255,255,255,0.8);font-size:0.74rem;">Cabernet Sauvignon</div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:9px;">
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#1565C0;font-weight:700;min-width:56px;">👄 口感</span>
+                  <span style="color:#333;">結構緊實、線條清晰</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#1565C0;font-weight:700;min-width:56px;">👃 香氣</span>
+                  <span style="color:#333;">黑醋栗、鉛筆芯、雪松、石墨</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#1565C0;font-weight:700;min-width:56px;">⚖️ 酸/寧</span>
+                  <span style="color:#333;">酸度中高、單寧成熟且細緻</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#1565C0;font-weight:700;min-width:56px;">🕰️ 陳年</span>
+                  <span style="color:#333;">長（15–30 年）</span>
+                </div>
+              </div>
+              <div style="background:#E3F2FD;border-radius:6px;padding:6px 10px;font-size:0.75rem;color:#0D47A1;font-weight:600;text-align:center;">
+                優雅克制・力量與精準並存
+              </div>
+            </div>
+          </div>
+
+          <!-- 黏土 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#880E4F,#C2185B);padding:10px 14px;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-size:1.3rem;">🧱</span>
+                <div>
+                  <div style="color:#fff;font-weight:700;font-size:0.9rem;">黏土 Clay</div>
+                  <div style="color:rgba(255,255,255,0.8);font-size:0.74rem;">Merlot</div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:9px;">
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#880E4F;font-weight:700;min-width:56px;">👄 口感</span>
+                  <span style="color:#333;">酒體飽滿、質地圓潤</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#880E4F;font-weight:700;min-width:56px;">👃 香氣</span>
+                  <span style="color:#333;">李子、黑莓、松露、鐵礦</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#880E4F;font-weight:700;min-width:56px;">⚖️ 酸/寧</span>
+                  <span style="color:#333;">酸度中等、單寧柔和</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#880E4F;font-weight:700;min-width:56px;">🕰️ 陳年</span>
+                  <span style="color:#333;">中至長（10–20 年）</span>
+                </div>
+              </div>
+              <div style="background:#FCE4EC;border-radius:6px;padding:6px 10px;font-size:0.75rem;color:#880E4F;font-weight:600;text-align:center;">
+                豐滿深邃・親和力強
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div style="background:linear-gradient(135deg,#263238,#37474F);border-radius:8px;padding:9px 14px;text-align:center;">
+          <span style="color:#fff;font-size:0.79rem;">💡 兩者皆可達高品質，但表達維度不同：礫石重「線條與精準」，黏土重「質地與包覆」</span>
+        </div>
+      </div>
+    `
   },
 
   {
-    type: 'comparison',
+    type: 'content',
     title: '對比二：石灰岩 vs 砂土',
-    subtitle: 'Cabernet Franc / Merlot 的不同面向',
-    items: [
-      {
-        label: '石灰岩（Limestone）',
-        icon: '⛰️',
-        metrics: [
-          { name: '口感', value: '骨架分明、收尾清爽' },
-          { name: '香氣', value: '白堊、濕石、紫羅蘭、紅色水果' },
-          { name: '酸度/單寧', value: '酸度高、單寧細膩' },
-          { name: '陳年', value: '中至長（12-25年）' }
-        ],
-        style: '優雅內斂、礦物感突出'
-      },
-      {
-        label: '砂土（Sand）',
-        icon: '🏖️',
-        metrics: [
-          { name: '口感', value: '輕盈柔和、易飲' },
-          { name: '香氣', value: '草莓、櫻桃、花香' },
-          { name: '酸度/單寧', value: '酸度中高、單寧低至中' },
-          { name: '陳年', value: '短至中（5-10年）' }
-        ],
-        style: '芳香明亮、適飲性高'
-      }
-    ],
-    conclusion: '石灰岩強調「張力與礦物」，砂土強調「芬芳與親和」。'
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="text-align:center;font-size:0.79rem;color:#666;margin-bottom:10px;">Cabernet Franc / Merlot 的不同感官面向</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:12px;">
+
+          <!-- 石灰岩 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4A148C,#7B1FA2);padding:10px 14px;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-size:1.3rem;">⛰️</span>
+                <div>
+                  <div style="color:#fff;font-weight:700;font-size:0.9rem;">石灰岩 Limestone</div>
+                  <div style="color:rgba(255,255,255,0.8);font-size:0.74rem;">Cabernet Franc · Merlot</div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:9px;">
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#4A148C;font-weight:700;min-width:56px;">👄 口感</span>
+                  <span style="color:#333;">骨架分明、收尾清爽</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#4A148C;font-weight:700;min-width:56px;">👃 香氣</span>
+                  <span style="color:#333;">白堊、濕石、紫羅蘭、紅色水果</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#4A148C;font-weight:700;min-width:56px;">⚖️ 酸/寧</span>
+                  <span style="color:#333;">酸度高、單寧細膩</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#4A148C;font-weight:700;min-width:56px;">🕰️ 陳年</span>
+                  <span style="color:#333;">中至長（12–25 年）</span>
+                </div>
+              </div>
+              <div style="background:#F3E5F5;border-radius:6px;padding:6px 10px;font-size:0.75rem;color:#4A148C;font-weight:600;text-align:center;">
+                優雅內斂・礦物感突出
+              </div>
+            </div>
+          </div>
+
+          <!-- 砂土 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:10px 14px;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-size:1.3rem;">🏖️</span>
+                <div>
+                  <div style="color:#fff;font-weight:700;font-size:0.9rem;">砂土 Sand</div>
+                  <div style="color:rgba(255,255,255,0.8);font-size:0.74rem;">早熟品種</div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:9px;">
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#E65100;font-weight:700;min-width:56px;">👄 口感</span>
+                  <span style="color:#333;">輕盈柔和、易飲</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#E65100;font-weight:700;min-width:56px;">👃 香氣</span>
+                  <span style="color:#333;">草莓、櫻桃、花香</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#E65100;font-weight:700;min-width:56px;">⚖️ 酸/寧</span>
+                  <span style="color:#333;">酸度中高、單寧低至中</span>
+                </div>
+                <div style="display:flex;gap:6px;align-items:baseline;font-size:0.76rem;">
+                  <span style="color:#E65100;font-weight:700;min-width:56px;">🕰️ 陳年</span>
+                  <span style="color:#333;">短至中（5–10 年）</span>
+                </div>
+              </div>
+              <div style="background:#FFF3E0;border-radius:6px;padding:6px 10px;font-size:0.75rem;color:#E65100;font-weight:600;text-align:center;">
+                芳香明亮・適飲性高
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div style="background:linear-gradient(135deg,#263238,#37474F);border-radius:8px;padding:9px 14px;text-align:center;">
+          <span style="color:#fff;font-size:0.79rem;">💡 石灰岩強調「張力與礦物」，砂土強調「芬芳與親和」</span>
+        </div>
+      </div>
+    `
   },
 
   {
@@ -1207,73 +1510,198 @@ export const l32Content = [
   {
     type: 'content',
     title: '乾旱與極端熱的應對',
-    content: [
-      {
-        subtitle: '提高土壤持水與遮蔭',
-        text: '以覆蓋作物與覆蓋物提升有機質與保水性，並利用葉幕管理降低串區熱峰值。',
-        details: '選用深根型覆蓋作物增加「生物孔隙」，促進降雨快速入滲並減少逕流。',
-        highlight: '熱浪年份的果實溫度管理是維持酸度的關鍵'
-      },
-      {
-        subtitle: '根砧與地塊策略',
-        text: '選擇耐旱、深根性強的根砧，將早熟品種配置於較涼爽、保水性佳的地塊。',
-        details: '長期以輪作與低擾動耕作增加碳與團粒結構，打造「海綿型」土壤。',
-        highlight: '地塊再設計與品種/克隆調整是十年尺度的戰略'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+
+          <!-- 持水與遮蔭 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#006064,#00838F);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">💧</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">提高土壤持水與遮蔭</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">短期至中期應對</div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.65;margin-bottom:8px;">以覆蓋作物與覆蓋物提升有機質與保水性，並利用葉幕管理降低串區熱峰值。</div>
+              <div style="background:#E0F7FA;border-radius:6px;padding:7px 10px;margin-bottom:8px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#006064;margin-bottom:4px;">🔑 核心作法</div>
+                <ul style="margin:0;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.85;">
+                  <li>深根型覆蓋作物 → 生物孔隙</li>
+                  <li>促進降雨快速入滲</li>
+                  <li>減少地表逕流</li>
+                </ul>
+              </div>
+              <div style="background:#E0F7FA;border-left:3px solid #006064;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#004D40;">
+                🌡️ 熱浪年份：果實溫度管理是維持酸度關鍵
+              </div>
+            </div>
+          </div>
+
+          <!-- 根砧與地塊策略 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🌱</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">根砧與地塊策略</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">十年尺度的長期戰略</div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.65;margin-bottom:8px;">選擇耐旱深根性根砧，將早熟品種配置於較涼爽、保水性佳的地塊。</div>
+              <div style="background:#EFEBE9;border-radius:6px;padding:7px 10px;margin-bottom:8px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#4E342E;margin-bottom:4px;">🔑 核心作法</div>
+                <ul style="margin:0;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.85;">
+                  <li>輪作 + 低擾動 → 增加有機碳</li>
+                  <li>打造「海綿型」土壤結構</li>
+                  <li>品種/克隆再評估與調配</li>
+                </ul>
+              </div>
+              <div style="background:#EFEBE9;border-left:3px solid #4E342E;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#3E2723;">
+                📅 地塊再設計是十年尺度的戰略投資
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
-    title: '再生農法與土壤碳：低擾動/常年覆蓋',
-    content: [
-      {
-        subtitle: '核心作法',
-        text: '減少翻耕與裸地時間，維持微生物與菌根連續性，提升碳固存與抗逆。',
-        details: '搭配堆肥、有機資材、生物炭，穩定有機碳庫並提升CEC。',
-        highlight: '土壤碳↑ = 結構更穩定 + 保水更佳 + 養分更緩釋'
-      }
-    ]
+    title: '再生農法與土壤碳',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:12px;">
+
+          <!-- 低擾動/常年覆蓋 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">🌿</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">低擾動 / 常年覆蓋</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">Regenerative 核心</div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.65;margin-bottom:8px;">減少翻耕與裸地時間，維持微生物與菌根連續性，提升碳固存與抗逆。</div>
+              <div style="background:#E8F5E9;border-radius:6px;padding:7px 10px;margin-bottom:8px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#1B5E20;margin-bottom:4px;">🔑 作法組合</div>
+                <ul style="margin:0;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.85;">
+                  <li>減少翻耕 → 菌根連續性↑</li>
+                  <li>堆肥 + 有機資材 + 生物炭</li>
+                  <li>穩定有機碳庫，提升CEC</li>
+                </ul>
+              </div>
+              <div style="background:#E8F5E9;border-left:3px solid #1B5E20;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#1B5E20;font-weight:600;">
+                土壤碳↑ = 結構穩定 + 保水佳 + 養分緩釋
+              </div>
+            </div>
+          </div>
+
+          <!-- 資料驅動精準管理 -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#01579B,#0277BD);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.2rem;">📊</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">資料驅動精準管理</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.74rem;">Precision 核心</div>
+              </div>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.65;margin-bottom:8px;">以電導/含水/熱像/高程等圖層建模，分區管理與變率施作。</div>
+              <div style="background:#E1F5FE;border-radius:6px;padding:7px 10px;margin-bottom:8px;">
+                <div style="font-size:0.74rem;font-weight:700;color:#01579B;margin-bottom:4px;">🔑 作法組合</div>
+                <ul style="margin:0;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.85;">
+                  <li>電導/含水/熱像/高程建模</li>
+                  <li>分區管理 + 變率施作</li>
+                  <li>小地塊迭代，降低試錯風險</li>
+                </ul>
+              </div>
+              <div style="background:#E1F5FE;border-left:3px solid #01579B;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#01579B;font-weight:600;">
+                精準化：複雜土壤 → 可管理多區域
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
-    title: '再生農法與土壤碳：資料驅動精準管理',
-    content: [
-      {
-        subtitle: '核心作法',
-        text: '以電導/含水/熱像/高程等圖層建模，分區管理與變率施作。',
-        details: '從小試驗地塊迭代最佳方案，降低風險、縮短學習曲線。',
-        highlight: '精準化把「複雜土壤」轉為「可管理多區域」'
-      }
-    ]
-  },
-
-  {
-    type: 'multi-estate-comparison',
     title: '多莊比較：面向未來的土壤策略',
-    description: '不同理念的路徑選擇',
-    estates: [
-      {
-        name: 'Estate A',
-        approach: 'Regenerative（再生農法）',
-        keyMeasures: ['常年覆蓋與多樣化混播', '低擾動耕作', '高比例有機改良材'],
-        philosophy: '以長期碳與結構為核心，從根本提升韌性'
-      },
-      {
-        name: 'Estate B',
-        approach: 'Precision（精準管理）',
-        keyMeasures: ['分區感測與地圖決策', '變率灌溉/施肥', '遙測熱像監控'],
-        philosophy: '以資料縮短試錯成本，精準匹配資源與風險'
-      },
-      {
-        name: 'Estate C',
-        approach: 'Hybrid（混合策略）',
-        keyMeasures: ['再生+精準整合', '地塊再配置與根砧更新', '氣候情境演練'],
-        philosophy: '結合長期韌性與短期效率的平衡之道'
-      }
-    ],
-    insight: '沒有單一「正確」答案；關鍵在於讀懂自家土壤與風格目標，持續迭代。'
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="text-align:center;font-size:0.79rem;color:#666;margin-bottom:10px;">不同理念的路徑選擇</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px;">
+
+          <!-- Estate A: Regenerative -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🌿 Estate A</div>
+              <div style="color:rgba(255,255,255,0.82);font-size:0.73rem;margin-top:2px;">Regenerative 再生農法</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:700;color:#1B5E20;margin-bottom:5px;">🔑 核心措施</div>
+              <ul style="margin:0 0 8px;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.85;">
+                <li>常年覆蓋與多樣化混播</li>
+                <li>低擾動耕作</li>
+                <li>高比例有機改良材</li>
+              </ul>
+              <div style="background:#E8F5E9;border-left:3px solid #1B5E20;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#1B5E20;line-height:1.6;">
+                以長期碳與結構為核心，從根本提升韌性
+              </div>
+            </div>
+          </div>
+
+          <!-- Estate B: Precision -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#01579B,#0277BD);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">📊 Estate B</div>
+              <div style="color:rgba(255,255,255,0.82);font-size:0.73rem;margin-top:2px;">Precision 精準管理</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:700;color:#01579B;margin-bottom:5px;">🔑 核心措施</div>
+              <ul style="margin:0 0 8px;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.85;">
+                <li>分區感測與地圖決策</li>
+                <li>變率灌溉 / 施肥</li>
+                <li>遙測熱像監控</li>
+              </ul>
+              <div style="background:#E1F5FE;border-left:3px solid #01579B;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#01579B;line-height:1.6;">
+                以資料縮短試錯成本，精準匹配資源與風險
+              </div>
+            </div>
+          </div>
+
+          <!-- Estate C: Hybrid -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4A148C,#6A1B9A);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">⚖️ Estate C</div>
+              <div style="color:rgba(255,255,255,0.82);font-size:0.73rem;margin-top:2px;">Hybrid 混合策略</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:700;color:#4A148C;margin-bottom:5px;">🔑 核心措施</div>
+              <ul style="margin:0 0 8px;padding-left:13px;font-size:0.75rem;color:#333;line-height:1.85;">
+                <li>再生 + 精準整合</li>
+                <li>地塊再配置與根砧更新</li>
+                <li>氣候情境演練</li>
+              </ul>
+              <div style="background:#F3E5F5;border-left:3px solid #4A148C;border-radius:4px;padding:5px 8px;font-size:0.74rem;color:#4A148C;line-height:1.6;">
+                結合長期韌性與短期效率的平衡之道
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div style="background:linear-gradient(135deg,#263238,#37474F);border-radius:8px;padding:9px 14px;text-align:center;">
+          <span style="color:#fff;font-size:0.79rem;">💡 沒有單一「正確」答案；關鍵在於讀懂自家土壤與風格目標，持續迭代</span>
+        </div>
+      </div>
+    `
   },
 
   {

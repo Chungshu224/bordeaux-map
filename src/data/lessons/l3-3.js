@@ -70,35 +70,139 @@ export const l33Content = [
 
   {
     type: 'content',
-    title: '極端年份是什麼？',
-    content: [
-      {
-        subtitle: '定義',
-        text: '氣候事件顯著偏離常態，造成產量、品質或經濟損失達到顯著水平的年份。既是災難，也是產業進化的契機。'
-      }
-    ]
+    title: '極端年份：定義與三種類型',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="background:linear-gradient(135deg,#37474F,#455A64);border-radius:10px;padding:11px 16px;margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+          <span style="font-size:1.4rem;">⛈️</span>
+          <div style="color:#fff;font-size:0.81rem;line-height:1.7;">氣候事件<strong>顯著偏離常態</strong>，造成產量、品質或經濟損失達到顯著水平的年份——既是災難，也是產業進化的契機。</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#D32F2F);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">⚠️ 災難型</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;">Catastrophic Year</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="background:#FFEBEE;border-radius:5px;padding:4px 7px;font-size:0.74rem;color:#B71C1C;margin-bottom:6px;font-weight:600;">產量損失 &gt; 50%</div>
+              <div style="font-size:0.76rem;color:#555;line-height:1.75;">品質嚴重受損，釀酒潛力大幅削減</div>
+              <div style="margin-top:6px;font-size:0.73rem;color:#999;">代表：1956・1991・2017・2021</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🌡️ 挑戰型</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;">Challenging Year</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="background:#FFF3E0;border-radius:5px;padding:4px 7px;font-size:0.74rem;color:#E65100;margin-bottom:6px;font-weight:600;">風格顯著偏離常態</div>
+              <div style="font-size:0.76rem;color:#555;line-height:1.75;">極端氣候下可釀特殊風格，評價兩極</div>
+              <div style="margin-top:6px;font-size:0.73rem;color:#999;">代表：2003・2011・2019・2022</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">💎 機會型</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;">Opportunity Year</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="background:#E8F5E9;border-radius:5px;padding:4px 7px;font-size:0.74rem;color:#1B5E20;margin-bottom:6px;font-weight:600;">困境中強者凸顯</div>
+              <div style="font-size:0.76rem;color:#555;line-height:1.75;">精細管理者在困難條件下產出驚人品質</div>
+              <div style="margin-top:6px;font-size:0.73rem;color:#999;">代表：2013・2018・2020</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
-    title: '極端年份三種類型',
-    content: [
-      {
-        subtitle: '分類',
-        keyFactors: [
-          '災難型：產量損失>50%，品質嚴重受損（1956, 1991, 2017）',
-          '挑戰型：風格顯著偏離常態（2003, 2011）',
-          '機會型：困難條件下強者凸顯（2013, 2020）'
-        ]
-      }
-    ]
-  },
-
-  {
-    type: 'extreme-vintages-timeline',
     title: '10個改變波爾多的極端年份',
-    description: '深度解析關鍵歷史事件',
-    vintages: [
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#D32F2F);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;">
+              <div style="color:#fff;font-weight:700;font-size:0.95rem;">❄️ 1956</div>
+              <span style="background:rgba(255,255,255,0.2);color:#fff;border-radius:12px;padding:1px 7px;font-size:0.69rem;">災難型</span>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.77rem;font-weight:700;color:#333;margin-bottom:3px;">世紀大霜凍</div>
+              <div style="font-size:0.72rem;color:#e53935;margin-bottom:5px;">-20°C～-24°C，2月</div>
+              <div style="font-size:0.74rem;color:#555;line-height:1.65;margin-bottom:5px;">80-90%葡萄藤凍死，百年老藤樹幹爆裂，數千小農破產。</div>
+              <div style="background:#FFEBEE;border-radius:4px;padding:3px 7px;font-size:0.72rem;color:#B71C1C;">遺產：大幅增加Merlot，Malbec幾乎消失</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#880E4F,#AD1457);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;">
+              <div style="color:#fff;font-weight:700;font-size:0.95rem;">❄️ 1991</div>
+              <span style="background:rgba(255,255,255,0.2);color:#fff;border-radius:12px;padding:1px 7px;font-size:0.69rem;">災難型</span>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.77rem;font-weight:700;color:#333;margin-bottom:3px;">春霜災難</div>
+              <div style="font-size:0.72rem;color:#e53935;margin-bottom:5px;">-3°C～-7°C，4月20-21日</div>
+              <div style="font-size:0.74rem;color:#555;line-height:1.65;margin-bottom:5px;">80-90%新芽凍壞，產量下降70-80%，戰後最低產量之一。</div>
+              <div style="background:#FCE4EC;border-radius:4px;padding:3px 7px;font-size:0.72rem;color:#880E4F;">遺產：大規模投資防霜設備，保險業發展</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;">
+              <div style="color:#fff;font-weight:700;font-size:0.95rem;">🌡️ 2003</div>
+              <span style="background:rgba(255,255,255,0.2);color:#fff;border-radius:12px;padding:1px 7px;font-size:0.69rem;">挑戰型</span>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.77rem;font-weight:700;color:#333;margin-bottom:3px;">極端熱浪年</div>
+              <div style="font-size:0.72rem;color:#e65100;margin-bottom:5px;">8月多次超過 40°C</div>
+              <div style="font-size:0.74rem;color:#555;line-height:1.65;margin-bottom:5px;">酒精度14-15.5%，酸度極低，市場評價兩極（氣候警鐘）。</div>
+              <div style="background:#FFF3E0;border-radius:4px;padding:3px 7px;font-size:0.72rem;color:#E65100;">遺產：重新定義「成熟度」，不只看糖分</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4A148C,#6A1B9A);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;">
+              <div style="color:#fff;font-weight:700;font-size:0.95rem;">❄️🌫️ 2017</div>
+              <span style="background:rgba(255,255,255,0.2);color:#fff;border-radius:12px;padding:1px 7px;font-size:0.69rem;">災難型</span>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.77rem;font-weight:700;color:#333;margin-bottom:3px;">春霜+霜霉病雙重災</div>
+              <div style="font-size:0.72rem;color:#7B1FA2;margin-bottom:5px;">損失超10億€，50-70%萌芽凍壞</div>
+              <div style="font-size:0.74rem;color:#555;line-height:1.65;margin-bottom:5px;">暖化導致早萌芽，霜凍期仍來——脆弱性增加的反直覺警示。</div>
+              <div style="background:#F3E5F5;border-radius:4px;padding:3px 7px;font-size:0.72rem;color:#4A148C;">遺產：暖化≠霜凍消失，早萌反增風險</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#37474F,#546E7A);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;">
+              <div style="color:#fff;font-weight:700;font-size:0.95rem;">⚠️ 2021</div>
+              <span style="background:rgba(255,255,255,0.2);color:#fff;border-radius:12px;padding:1px 7px;font-size:0.69rem;">災難型</span>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.77rem;font-weight:700;color:#333;margin-bottom:3px;">春霜+冰雹+霜霉三重</div>
+              <div style="font-size:0.72rem;color:#546E7A;margin-bottom:5px;">產量下降25-30%，部分產區 -50%+</div>
+              <div style="font-size:0.74rem;color:#555;line-height:1.65;margin-bottom:5px;">2017+2021連續災難揭示氣候風險頻率升高的系統性問題。</div>
+              <div style="background:#ECEFF1;border-radius:4px;padding:3px 7px;font-size:0.72rem;color:#37474F;">遺產：連續災難→系統性風險意識提升</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#BF360C,#D84315);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;">
+              <div style="color:#fff;font-weight:700;font-size:0.95rem;">🔥 2022</div>
+              <span style="background:rgba(255,255,255,0.2);color:#fff;border-radius:12px;padding:1px 7px;font-size:0.69rem;">挑戰型</span>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.77rem;font-weight:700;color:#333;margin-bottom:3px;">史上最熱最乾旱夏季</div>
+              <div style="font-size:0.72rem;color:#BF360C;margin-bottom:5px;">100+天 &gt;30°C，6-8月幾乎無雨</div>
+              <div style="font-size:0.74rem;color:#555;line-height:1.65;margin-bottom:5px;">老藤/黏土勝，年輕藤/砂土敗；波爾多向地中海氣候轉變的明證。</div>
+              <div style="background:#FBE9E7;border-radius:4px;padding:3px 7px;font-size:0.72rem;color:#BF360C;">遺產：灌溉可能成為必需——政策辯論升溫</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,#263238,#37474F);border-radius:8px;padding:9px 14px;text-align:center;">
+          <span style="color:#fff;font-size:0.79rem;">📌 春霜與熱浪/乾旱是主要極端風險，且頻率正在增加——從「百年一遇」演變為「數年一遇」</span>
+        </div>
+      </div>
+    `,
+    _legacyData: [
       {
         year: '1956',
         type: '災難型 ⚠️⚠️⚠️⚠️⚠️',
@@ -184,8 +288,7 @@ export const l33Content = [
         loser: '年輕藤、砂土、淺土層。部分葡萄停止成熟。',
         implication: '證明波爾多正在向地中海氣候轉變，灌溉可能成為必需'
       }
-    ],
-    conclusion: '從10個年份可見：春霜和熱浪/乾旱是主要極端風險，且頻率正在增加。'
+    ]
   },
 
   {
@@ -214,114 +317,137 @@ export const l33Content = [
 
   {
     type: 'content',
-    title: '六大氣候風險：總覽',
-    content: [
-      {
-        subtitle: '說明',
-        text: '以下六類是波爾多最具代表性的氣候風險。每類風險都有其發生機制、破壞模式與相應策略。'
-      }
-    ]
+    title: '氣候風險 (一)：高頻核心威脅',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#01579B,#0288D1);padding:9px 12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="color:#fff;font-weight:700;font-size:0.86rem;">❄️ 春霜</div>
+                <span style="background:#B71C1C;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.7rem;">極高</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;margin-top:2px;">Spring Frost</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:600;color:#555;margin-bottom:4px;">⏰ 4月初—5月中旬（萌芽期）</div>
+              <div style="font-size:0.74rem;color:#555;line-height:1.7;margin-bottom:5px;">輻射霜：無風晴夜冷空氣沉降於低窪霜穴。-2°C 持續 &gt;2h 則嚴重損失。</div>
+              <ul style="margin:0 0 6px;padding-left:13px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>新芽凍黑枯萎</li>
+                <li>二次萌芽低產</li>
+                <li>低窪地塊全毀</li>
+              </ul>
+              <div style="background:#E1F5FE;border-radius:4px;padding:4px 7px;font-size:0.72rem;color:#01579B;line-height:1.6;">🛡 加熱器/風扇/噴灑・晚修剪・避霜穴</div>
+              <div style="margin-top:5px;background:#FFF9C4;border-radius:4px;padding:3px 7px;font-size:0.71rem;color:#F57F17;">⚠️ 暖冬提前萌芽 → 脆弱期與霜凍期重疊風險↑</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#37474F,#546E7A);padding:9px 12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="color:#fff;font-weight:700;font-size:0.86rem;">🧊 冰雹</div>
+                <span style="background:#B71C1C;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.7rem;">局部毀滅</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;margin-top:2px;">Hail</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:600;color:#555;margin-bottom:4px;">⏰ 5—8月（尤以6—7月）</div>
+              <div style="font-size:0.74rem;color:#555;line-height:1.7;margin-bottom:5px;">強對流形成1—5cm冰雹，路徑難以預測（寬數百米至數公里）。</div>
+              <ul style="margin:0 0 6px;padding-left:13px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>果皮傷口→病菌入口</li>
+                <li>單一地塊損失50—100%</li>
+                <li>數分鐘毀掉整季</li>
+              </ul>
+              <div style="background:#ECEFF1;border-radius:4px;padding:4px 7px;font-size:0.72rem;color:#37474F;line-height:1.6;">🛡 防雹網・保險70-80%覆蓋・地理分散</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:9px 12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="color:#fff;font-weight:700;font-size:0.86rem;">🌡️ 乾旱與熱浪</div>
+                <span style="background:#B71C1C;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.7rem;">頻率↑</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;margin-top:2px;">Drought & Heat</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:600;color:#555;margin-bottom:4px;">⏰ 6—9月（尤以7—8月）</div>
+              <div style="font-size:0.74rem;color:#555;line-height:1.7;margin-bottom:5px;">適度脅迫→濃縮；嚴重→成熟停滯/日灼，產量 -30~50%</div>
+              <ul style="margin:0 0 6px;padding-left:13px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>黏土/老藤有優勢</li>
+                <li>砂土/年輕藤脆弱</li>
+              </ul>
+              <div style="background:#FFF3E0;border-radius:4px;padding:4px 7px;font-size:0.72rem;color:#E65100;line-height:1.6;">🛡 灌溉・覆蓋・葉幕管理・耐旱砧木</div>
+              <div style="margin-top:5px;background:#FFF9C4;border-radius:4px;padding:3px 7px;font-size:0.71rem;color:#F57F17;">⚠️ 2050年或每2-3年一遇</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
-    title: '氣候風險① 春霜 (Spring Frost) ❄️',
-    content: [
-      {
-        subtitle: '風險速覽',
-        keyFactors: [
-          '嚴重度：極高',
-          '時段：4月初至5月中旬（萌芽至展葉期）',
-          '機制：輻射霜（無風晴夜，冷空氣沉降於低窪霜穴）',
-          '主要損害：新芽凍黑枯萎；-2°C持續>2小時嚴重損失；二次萌芽低產',
-          '防護：加熱器/風扇/噴灑、晚修剪、避開低窪地塊',
-          '氣候變化：暖冬提前萌芽→脆弱期與春霜期重疊風險上升（2017為鑑）'
-        ]
-      }
-    ]
-  },
-
-  {
-    type: 'content',
-    title: '氣候風險② 冰雹 (Hail) 🧊',
-    content: [
-      {
-        subtitle: '風險速覽',
-        keyFactors: [
-          '嚴重度：極高（局部毀滅性）',
-          '時段：5-8月（尤以6-7月）',
-          '機制：強對流形成1-5cm冰雹，路徑難以預測（寬數百米至數公里）',
-          '主要損害：擊打嫩芽/葉/果；果皮傷口成病菌入口；地塊損失50-100%',
-          '管理：防雹網（昂貴）、保險（覆蓋70-80%）、地理分散',
-          '心理衝擊：數分鐘毀掉整季努力'
-        ]
-      }
-    ]
-  },
-
-  {
-    type: 'content',
-    title: '氣候風險③ 乾旱與熱浪 (Drought & Heat) 🌡️',
-    content: [
-      {
-        subtitle: '風險速覽',
-        keyFactors: [
-          '嚴重度：高至極高；頻率上升（2003/2019/2022）',
-          '時段：6-9月（尤以7-8月）',
-          '機制：降雨不足+高溫>35°C→蒸散加劇、水分脅迫',
-          '主要影響：適度→濃縮；中度→光合下降/產量-10~20%；嚴重→成熟停滯/日灼/產量-30~50%+',
-          '土壤鍵：黏土/老藤優勢；砂土/年輕藤脆弱',
-          '應對：灌溉（受AOC限制）、覆蓋與葉幕管理、早採、耐旱砧木；2050年或每2-3年一遇'
-        ]
-      }
-    ]
-  },
-
-  {
-    type: 'content',
-    title: '氣候風險④ 過度降雨 (Excessive Rainfall) 🌧️',
-    content: [
-      {
-        subtitle: '風險速覽',
-        keyFactors: [
-          '關鍵時段：開花期→授粉不良/落果；成熟期→稀釋；採收期→腐爛',
-          '主要損害：尺寸不齊、濃度下降；果皮吸水破裂→灰霉病爆發',
-          '病害連動：潮濕是霜霉/白粉/灰霉的溫床',
-          '管理：完善排水、葉幕增通風、增加噴灑頻率、採收決策（提早或等待）'
-        ]
-      }
-    ]
-  },
-
-  {
-    type: 'content',
-    title: '氣候風險⑤ 病害爆發 (Disease Outbreaks) 🦠',
-    content: [
-      {
-        subtitle: '風險速覽',
-        keyFactors: [
-          '典型病害：霜霉（溫暖潮濕20-25°C）、白粉（溫暖乾燥25-28°C）、灰霉（成熟期潮濕）',
-          '氣候變化：暖化與極端降雨改變病害格局，新病害可能北移',
-          '有機挑戰：工具受法規限制（銅用量），在濕年壓力更大',
-          '策略：預測模型+監測、通風與葉幕管理、時機恰當的處理'
-        ]
-      }
-    ]
-  },
-
-  {
-    type: 'content',
-    title: '氣候風險⑥ 颶風與強風 (Storms) 💨',
-    content: [
-      {
-        subtitle: '風險速覽',
-        keyFactors: [
-          '主要損害：枝條折斷、葉片撕裂、果串掉落、設施損壞',
-          '防護：支架加固、避風地塊、樹型管理、保險',
-          '關聯：風暴後病害風險上升（傷口）'
-        ]
-      }
-    ]
+    title: '氣候風險 (二)：連帶與複合威脅',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="color:#fff;font-weight:700;font-size:0.86rem;">🌧️ 過度降雨</div>
+                <span style="background:rgba(255,255,255,0.2);color:#fff;border-radius:10px;padding:1px 7px;font-size:0.7rem;">高</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;margin-top:2px;">Excessive Rainfall</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:600;color:#555;margin-bottom:4px;">⏰ 開花期・成熟期・採收期</div>
+              <ul style="margin:0 0 6px;padding-left:13px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>授粉不良→落果（開花期）</li>
+                <li>濃度稀釋（成熟期）</li>
+                <li>灰霉病爆發（採收期）</li>
+              </ul>
+              <div style="background:#E3F2FD;border-radius:4px;padding:4px 7px;font-size:0.72rem;color:#1565C0;line-height:1.6;">🛡 排水・葉幕通風・採收時機判斷</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#388E3C);padding:9px 12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="color:#fff;font-weight:700;font-size:0.86rem;">🦠 病害爆發</div>
+                <span style="background:rgba(255,255,255,0.2);color:#fff;border-radius:10px;padding:1px 7px;font-size:0.7rem;">中-高</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;margin-top:2px;">Disease Outbreaks</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:600;color:#555;margin-bottom:4px;">三大典型病害</div>
+              <ul style="margin:0 0 6px;padding-left:13px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>霜霉：20-25°C 溫暖潮濕</li>
+                <li>白粉：25-28°C 溫暖乾燥</li>
+                <li>灰霉：成熟期潮濕</li>
+              </ul>
+              <div style="background:#E8F5E9;border-radius:4px;padding:4px 7px;font-size:0.72rem;color:#2E7D32;line-height:1.6;">🛡 預測模型・通風・精準噴灑時機</div>
+              <div style="margin-top:5px;background:#FFF9C4;border-radius:4px;padding:3px 7px;font-size:0.71rem;color:#F57F17;">⚠️ 有機農法銅用量限制，濕年壓力更大</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);padding:9px 12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="color:#fff;font-weight:700;font-size:0.86rem;">💨 颶風與強風</div>
+                <span style="background:rgba(255,255,255,0.2);color:#fff;border-radius:10px;padding:1px 7px;font-size:0.7rem;">中</span>
+              </div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;margin-top:2px;">Storms & Wind</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:600;color:#555;margin-bottom:4px;">⏰ 全年，以秋季為主</div>
+              <ul style="margin:0 0 6px;padding-left:13px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>枝條折斷・葉片撕裂</li>
+                <li>果串掉落</li>
+                <li>風暴後病害風險↑（傷口）</li>
+              </ul>
+              <div style="background:#EFEBE9;border-radius:4px;padding:4px 7px;font-size:0.72rem;color:#4E342E;line-height:1.6;">🛡 支架加固・避風地塊・樹型管理・保險</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
@@ -350,96 +476,148 @@ export const l33Content = [
 
   {
     type: 'content',
-    title: '風險管理① 預防性措施 (Prevention)',
-    content: [
-      {
-        subtitle: '重點',
-        focus: '降低風險發生概率或減輕影響',
-        strategies: '地塊選擇（坡地避霜穴、排水佳）、品種與砧木（晚萌芽、耐旱）、葡萄園設計、基礎設施（排水、防霜、防雹網、灌溉）',
-        timeframe: '長期投資（數年至數十年回報）',
-        effectiveness: '基礎性重要，但無法消除所有風險'
-      }
-    ]
+    title: '風險管理五大策略框架',
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1A237E,#283593);padding:8px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.85rem;">① 預防 Prevention</div>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.73rem;color:#555;margin-bottom:5px;">降低風險發生機率或減輕影響</div>
+              <ul style="margin:0;padding-left:12px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>地塊選擇（坡地/排水佳）</li>
+                <li>品種與砧木（晚萌芽/耐旱）</li>
+                <li>基礎設施（排水/防霜/防雹網）</li>
+              </ul>
+              <div style="margin-top:5px;font-size:0.71rem;color:#888;">⏳ 長期投資（數年至數十年）</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#006064,#00838F);padding:8px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.85rem;">② 監測預警 Monitoring</div>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.73rem;color:#555;margin-bottom:5px;">及時發現風險，爭取應對時間</div>
+              <ul style="margin:0;padding-left:12px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>微氣象站 + 衛星遙感</li>
+                <li>土壤濕度感測器</li>
+                <li>病害預測模型</li>
+              </ul>
+              <div style="margin-top:5px;font-size:0.71rem;color:#888;">⚡ 提前6-48小時預警</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#880E4F,#AD1457);padding:8px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.85rem;">③ 應對 Response</div>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.73rem;color:#555;margin-bottom:5px;">風險發生時的即時行動</div>
+              <ul style="margin:0;padding-left:12px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>霜凍夜啟動加熱器/風扇</li>
+                <li>降雨前加速採收決策</li>
+                <li>冰雹後快速評估損失</li>
+              </ul>
+              <div style="margin-top:5px;font-size:0.71rem;color:#888;">💰 需快速決策 + 充足設備儲備</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:8px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.85rem;">④ 適應 Adaptation</div>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.73rem;color:#555;margin-bottom:5px;">基於風險經驗調整長期策略</div>
+              <ul style="margin:0;padding-left:12px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>品種轉換（耐熱耐旱）</li>
+                <li>調整種植密度/樹型</li>
+                <li>地理多元化（多產區）</li>
+              </ul>
+              <div style="margin-top:5px;font-size:0.71rem;color:#888;">⚠️ 品種轉換可能影響AOC認定</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#388E3C);padding:8px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.85rem;">⑤ 經濟對沖 Hedging</div>
+            </div>
+            <div style="padding:8px 11px 10px;">
+              <div style="font-size:0.73rem;color:#555;margin-bottom:5px;">透過金融工具降低經濟損失</div>
+              <ul style="margin:0;padding-left:12px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>霜凍/冰雹/乾旱保險（覆蓋70-80%）</li>
+                <li>保費約年收入3-8%</li>
+                <li>儲備基金 + 旅遊多元收入</li>
+              </ul>
+              <div style="margin-top:5px;font-size:0.71rem;color:#888;">📌 無法彌補品質損失與品牌聲譽</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
-    title: '風險管理② 監測與預警 (Monitoring)',
-    content: [
-      {
-        subtitle: '重點',
-        focus: '及時發現風險，爭取應對時間',
-        technologies: '氣象站（微氣候監測）、土壤濕度感測器、衛星遙感、病害預測模型、專業氣象預報服務',
-        benefit: '提前6-48小時預警，可啟動應對措施'
-      }
-    ]
-  },
-
-  {
-    type: 'content',
-    title: '風險管理③ 應對性措施 (Response)',
-    content: [
-      {
-        subtitle: '重點',
-        focus: '風險發生時的即時行動',
-        actions: '霜凍夜啟動加熱器/風扇/噴灑、病害威脅加強噴灑、乾旱補充灌溉、降雨前加速採收、冰雹後快速評估',
-        requirement: '需要快速決策、充足人力設備和財力儲備'
-      }
-    ]
-  },
-
-  {
-    type: 'content',
-    title: '風險管理④ 適應性調整 (Adaptation)',
-    content: [
-      {
-        subtitle: '重點',
-        focus: '基於風險經驗調整長期策略',
-        longTerm: '品種轉換（耐熱耐旱品種）、調整種植密度、改變樹型、投資新技術、地理多元化',
-        climateChange: '氣候變化下，適應是必然趨勢',
-        controversy: '品種轉換可能影響AOC身份和市場認同'
-      }
-    ]
-  },
-
-  {
-    type: 'content',
-    title: '風險管理⑤ 經濟對沖 (Economic Hedging)',
-    content: [
-      {
-        subtitle: '重點',
-        focus: '通過金融工具降低經濟損失',
-        insurance: '霜凍險、冰雹險、乾旱險、綜合農業保險。覆蓋70-80%損失，保費通常為年收入3-8%',
-        limitation: '無法彌補品質損失和品牌聲譽影響',
-        other: '期貨合約、儲備基金、多元化收入（旅遊、品鑑）'
-      }
-    ]
-  },
-
-  {
-    type: 'risk-management-comparison',
     title: '不同規模酒莊的風險管理策略',
-    categories: [
-      {
-        scale: '小型酒莊（<5公頃）',
-        resources: '有限',
-        strategies: '地塊選擇、手工管理、病害防治、採收靈活性、互助網絡',
-        challenges: '無力投資昂貴設備、保費負擔重、單一產區風險集中、災年生存危機'
-      },
-      {
-        scale: '中型酒莊（5-30公頃）',
-        resources: '中等',
-        strategies: '核心地塊投資霜凍保護、氣象站、購買保險、光學分選台、適度儲備',
-        challenges: '需在多個風險間分配有限資源、難以地理多元化'
-      },
-      {
-        scale: '大型酒莊/集團（>30公頃）',
-        resources: '充足',
-        strategies: '全面風險管理系統、先進技術、地理多元化、研發投資、專業團隊、全面保險',
-        advantages: '規模經濟、風險分散、抗風險能力強、市場影響力'
-      }
-    ],
-    insight: '風險管理能力是現代葡萄酒產業的核心競爭力，氣候變化下更加凸顯'
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="text-align:center;font-size:0.79rem;color:#666;margin-bottom:10px;">規模決定資源，資源決定策略——風險管理能力是現代葡萄酒產業的核心競爭力</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#4E342E,#6D4C41);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🌱 小型酒莊</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;">&lt; 5 公頃・資源有限</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:700;color:#4E342E;margin-bottom:4px;">✅ 可用策略</div>
+              <ul style="margin:0 0 7px;padding-left:12px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>精選地塊位置</li>
+                <li>手工精細管理</li>
+                <li>病害防治為主</li>
+                <li>採收靈活性</li>
+                <li>鄰居互助網絡</li>
+              </ul>
+              <div style="background:#FFEBEE;border-left:3px solid #B71C1C;border-radius:4px;padding:4px 7px;font-size:0.73rem;color:#B71C1C;line-height:1.6;">昂貴設備難負擔，保費重，災年生存危機高</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🏡 中型酒莊</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;">5—30 公頃・資源中等</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:700;color:#1565C0;margin-bottom:4px;">✅ 可用策略</div>
+              <ul style="margin:0 0 7px;padding-left:12px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>核心地塊投資霜凍保護</li>
+                <li>氣象站安裝</li>
+                <li>農業保險</li>
+                <li>光學分選台</li>
+                <li>適度財務儲備</li>
+              </ul>
+              <div style="background:#E3F2FD;border-left:3px solid #1565C0;border-radius:4px;padding:4px 7px;font-size:0.73rem;color:#0D47A1;line-height:1.6;">需在多種風險間分配有限資源，難以地理多元化</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:9px 12px;">
+              <div style="color:#fff;font-weight:700;font-size:0.86rem;">🏰 大型集團</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;">&gt; 30 公頃・資源充足</div>
+            </div>
+            <div style="padding:9px 12px 11px;">
+              <div style="font-size:0.74rem;font-weight:700;color:#1B5E20;margin-bottom:4px;">✅ 可用策略</div>
+              <ul style="margin:0 0 7px;padding-left:12px;font-size:0.74rem;color:#333;line-height:1.8;">
+                <li>全面風險管理系統</li>
+                <li>先進監測技術</li>
+                <li>多產區地理分散</li>
+                <li>研發投資</li>
+                <li>全面保險覆蓋</li>
+              </ul>
+              <div style="background:#E8F5E9;border-left:3px solid #1B5E20;border-radius:4px;padding:4px 7px;font-size:0.73rem;color:#1B5E20;line-height:1.6;">規模經濟 + 風險分散 → 抗風險能力強</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
 
   {

@@ -508,13 +508,7 @@ export const l39Content = [
         content: '深度理解目標市場文化，實施產品、傳播和關係的全方位本土化'
       }
     ],
-    hasMap: true,
-    mapConfig: {
-      center: [0, 20],
-      zoom: 2,
-      showGlobalMarkets: true,
-      highlightExportRoutes: true
-    },
+    hasMap: false,
     interactiveElements: [
       {
         type: 'market-expansion-planner',

@@ -115,45 +115,98 @@ export const l31Content = [
   },
 
   {
-    type: 'statistics',
     title: '關鍵氣候指標變化',
-    stats: [
-      {
-        indicator: '年均溫度',
-        past: '12.8°C (1970s)',
-        present: '14.5°C (2020s)',
-        change: '+1.7°C',
-        impact: '高'
-      },
-      {
-        indicator: '生長季天數',
-        past: '180天',
-        present: '195-200天',
-        change: '+15-20天',
-        impact: '高'
-      },
-      {
-        indicator: '採收日期',
-        past: '9月28日',
-        present: '9月15日',
-        change: '提前13天',
-        impact: '極高'
-      },
-      {
-        indicator: '熱浪天數',
-        past: '5天/年',
-        present: '15天/年',
-        change: '+200%',
-        impact: '高'
-      },
-      {
-        indicator: '年降雨量',
-        past: '900mm',
-        present: '850mm',
-        change: '-50mm',
-        impact: '中'
-      }
-    ]
+    content: `<div style="font-family:'Noto Sans TC',sans-serif;">
+  <p style="font-size:0.85rem;color:#666;margin:0 0 14px;text-align:center;letter-spacing:0.02em;">
+    📊 波爾多氣象站長期監測數據（1970s → 2020s）
+  </p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:14px;">
+
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="background:#b71c1c;color:white;padding:8px 12px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:1.3rem;">📅</span>
+        <span style="font-weight:700;font-size:0.95rem;">採收日期</span>
+        <span style="margin-left:auto;background:rgba(255,255,255,0.25);border-radius:20px;padding:1px 8px;font-size:0.75rem;font-weight:700;">極高影響</span>
+      </div>
+      <div style="background:#fff8f8;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+          <span style="color:#888;font-size:0.88rem;">9月28日</span>
+          <span style="color:#b71c1c;font-size:1rem;">➜</span>
+          <span style="font-weight:700;font-size:1rem;color:#b71c1c;">9月15日</span>
+        </div>
+        <div style="background:#b71c1c;color:white;display:inline-block;border-radius:20px;padding:2px 10px;font-size:0.82rem;font-weight:700;">提前 13 天</div>
+      </div>
+    </div>
+
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="background:#e64a19;color:white;padding:8px 12px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:1.3rem;">🌡️</span>
+        <span style="font-weight:700;font-size:0.95rem;">年均溫度</span>
+        <span style="margin-left:auto;background:rgba(255,255,255,0.25);border-radius:20px;padding:1px 8px;font-size:0.75rem;font-weight:700;">高影響</span>
+      </div>
+      <div style="background:#fff9f7;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+          <span style="color:#888;font-size:0.88rem;">12.8°C</span>
+          <span style="color:#e64a19;font-size:1rem;">➜</span>
+          <span style="font-weight:700;font-size:1rem;color:#e64a19;">14.5°C</span>
+        </div>
+        <div style="background:#e64a19;color:white;display:inline-block;border-radius:20px;padding:2px 10px;font-size:0.82rem;font-weight:700;">+1.7°C</div>
+      </div>
+    </div>
+
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="background:#f57c00;color:white;padding:8px 12px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:1.3rem;">☀️</span>
+        <span style="font-weight:700;font-size:0.95rem;">生長季天數</span>
+        <span style="margin-left:auto;background:rgba(255,255,255,0.25);border-radius:20px;padding:1px 8px;font-size:0.75rem;font-weight:700;">高影響</span>
+      </div>
+      <div style="background:#fffaf5;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+          <span style="color:#888;font-size:0.88rem;">180 天</span>
+          <span style="color:#f57c00;font-size:1rem;">➜</span>
+          <span style="font-weight:700;font-size:1rem;color:#f57c00;">195–200 天</span>
+        </div>
+        <div style="background:#f57c00;color:white;display:inline-block;border-radius:20px;padding:2px 10px;font-size:0.82rem;font-weight:700;">+15–20 天</div>
+      </div>
+    </div>
+
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="background:#c62828;color:white;padding:8px 12px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:1.3rem;">🔥</span>
+        <span style="font-weight:700;font-size:0.95rem;">熱浪天數</span>
+        <span style="margin-left:auto;background:rgba(255,255,255,0.25);border-radius:20px;padding:1px 8px;font-size:0.75rem;font-weight:700;">高影響</span>
+      </div>
+      <div style="background:#fff8f8;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+          <span style="color:#888;font-size:0.88rem;">5 天/年</span>
+          <span style="color:#c62828;font-size:1rem;">➜</span>
+          <span style="font-weight:700;font-size:1rem;color:#c62828;">15 天/年</span>
+        </div>
+        <div style="background:#c62828;color:white;display:inline-block;border-radius:20px;padding:2px 10px;font-size:0.82rem;font-weight:700;">+200%</div>
+      </div>
+    </div>
+
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="background:#1565c0;color:white;padding:8px 12px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:1.3rem;">🌧️</span>
+        <span style="font-weight:700;font-size:0.95rem;">年降雨量</span>
+        <span style="margin-left:auto;background:rgba(255,255,255,0.25);border-radius:20px;padding:1px 8px;font-size:0.75rem;font-weight:700;">中影響</span>
+      </div>
+      <div style="background:#f5f8ff;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+          <span style="color:#888;font-size:0.88rem;">900 mm</span>
+          <span style="color:#1565c0;font-size:1rem;">➜</span>
+          <span style="font-weight:700;font-size:1rem;color:#1565c0;">850 mm</span>
+        </div>
+        <div style="background:#1565c0;color:white;display:inline-block;border-radius:20px;padding:2px 10px;font-size:0.82rem;font-weight:700;">−50 mm</div>
+      </div>
+    </div>
+
+  </div>
+  <div style="background:linear-gradient(135deg,#fff3e0,#fce4ec);border:1px solid #ffccbc;border-radius:8px;padding:10px 14px;font-size:0.85rem;color:#5d1a03;line-height:1.6;">
+    <strong>🔑 核心結論：</strong>氣候暖化使波爾多葡萄生長週期全面加速，提前採收、高糖高酒精已成常態，傳統釀造邏輯正在深刻轉變。
+  </div>
+</div>`
   },
 
   {
@@ -171,38 +224,97 @@ export const l31Content = [
   },
 
   {
-    type: 'comparison',
     title: '經典年份對比：1982 vs 2020',
-    subtitle: '兩個偉大年份的氣候差異',
-    items: [
-      {
-        label: '1982年（傳統氣候典範）',
-        icon: '🍇',
-        metrics: [
-          { name: '採收日期', value: '9月底至10月初' },
-          { name: '生長季均溫', value: '17.5°C' },
-          { name: '降雨量', value: '650mm（分布均勻）' },
-          { name: '糖度達標', value: '相對緩慢成熟' },
-          { name: '酸度', value: '天然平衡（偏高）' },
-          { name: '潛在酒精度', value: '12.5-13%' }
-        ],
-        style: '經典優雅、平衡感極佳、陳年潛力長'
-      },
-      {
-        label: '2020年（現代氣候典範）',
-        icon: '🌡️',
-        metrics: [
-          { name: '採收日期', value: '9月中旬' },
-          { name: '生長季均溫', value: '19.2°C' },
-          { name: '降雨量', value: '550mm（集中降雨）' },
-          { name: '糖度達標', value: '快速成熟' },
-          { name: '酸度', value: '需管理性保留' },
-          { name: '潛在酒精度', value: '13.5-14%' }
-        ],
-        style: '果味濃郁、酒體飽滿、需控制平衡'
-      }
-    ],
-    conclusion: '兩個年份都是偉大年份，但氣候條件和葡萄酒風格已有明顯差異。現代釀酒師需要更多技術干預來保持波爾多的經典風格。'
+    content: `<div style="font-family:'Noto Sans TC',sans-serif;">
+  <p style="text-align:center;font-size:0.84rem;color:#666;margin:0 0 14px;">兩個偉大年份的氣候數據差異</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+
+    <!-- 1982 -->
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,0.1);">
+      <div style="background:linear-gradient(135deg,#4a148c,#6a1b9a);color:white;padding:12px 14px;text-align:center;">
+        <div style="font-size:1.8rem;">🍇</div>
+        <div style="font-weight:800;font-size:1.05rem;letter-spacing:0.05em;">1982</div>
+        <div style="font-size:0.78rem;opacity:0.85;margin-top:3px;">傳統氣候典範</div>
+      </div>
+      <div style="background:#faf7ff;padding:12px 14px;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.84rem;">
+          <tr style="border-bottom:1px solid #e8e0f0;">
+            <td style="padding:5px 4px;color:#666;">📅 採收日期</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;">9月底至10月初</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e8e0f0;">
+            <td style="padding:5px 4px;color:#666;">🌡️ 生長季均溫</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;">17.5°C</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e8e0f0;">
+            <td style="padding:5px 4px;color:#666;">🌧️ 降雨量</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;">650mm <span style="font-size:0.75rem;color:#888;">均勻分布</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #e8e0f0;">
+            <td style="padding:5px 4px;color:#666;">🍬 糖度成熟</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;">緩慢成熟</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e8e0f0;">
+            <td style="padding:5px 4px;color:#666;">⚗️ 酸度</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;">天然平衡（偏高）</td>
+          </tr>
+          <tr>
+            <td style="padding:5px 4px;color:#666;">🍷 潛在酒精</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;">12.5–13%</td>
+          </tr>
+        </table>
+        <div style="margin-top:10px;background:#ede7f6;border-radius:6px;padding:7px 10px;font-size:0.8rem;color:#4a148c;font-weight:600;text-align:center;">
+          ✨ 經典優雅、平衡感極佳、陳年潛力長
+        </div>
+      </div>
+    </div>
+
+    <!-- 2020 -->
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,0.1);">
+      <div style="background:linear-gradient(135deg,#b71c1c,#e53935);color:white;padding:12px 14px;text-align:center;">
+        <div style="font-size:1.8rem;">🌡️</div>
+        <div style="font-weight:800;font-size:1.05rem;letter-spacing:0.05em;">2020</div>
+        <div style="font-size:0.78rem;opacity:0.85;margin-top:3px;">現代氣候典範</div>
+      </div>
+      <div style="background:#fff8f8;padding:12px 14px;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.84rem;">
+          <tr style="border-bottom:1px solid #ffd0d0;">
+            <td style="padding:5px 4px;color:#666;">📅 採收日期</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;color:#b71c1c;">9月中旬 ↑提前</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ffd0d0;">
+            <td style="padding:5px 4px;color:#666;">🌡️ 生長季均溫</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;color:#b71c1c;">19.2°C ↑+1.7°C</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ffd0d0;">
+            <td style="padding:5px 4px;color:#666;">🌧️ 降雨量</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;">550mm <span style="font-size:0.75rem;color:#b71c1c;">集中降雨</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #ffd0d0;">
+            <td style="padding:5px 4px;color:#666;">🍬 糖度成熟</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;color:#b71c1c;">快速成熟</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ffd0d0;">
+            <td style="padding:5px 4px;color:#666;">⚗️ 酸度</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;color:#b71c1c;">需管理性保留</td>
+          </tr>
+          <tr>
+            <td style="padding:5px 4px;color:#666;">🍷 潛在酒精</td>
+            <td style="padding:5px 4px;font-weight:600;text-align:right;color:#b71c1c;">13.5–14% ↑</td>
+          </tr>
+        </table>
+        <div style="margin-top:10px;background:#ffebee;border-radius:6px;padding:7px 10px;font-size:0.8rem;color:#b71c1c;font-weight:600;text-align:center;">
+          🔥 果味濃郁、酒體飽滿、需控制平衡
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#e8f5e9,#f3e5f5);border:1px solid #c8e6c9;border-radius:8px;padding:10px 14px;font-size:0.84rem;color:#1b5e20;line-height:1.6;">
+    <strong>🔑 關鍵洞察：</strong>兩個年份均為偉大年份，但氣候條件已截然不同。現代釀酒師需更多技術干預——精準採收時機、酸度管理、酒精平衡——才能維繫波爾多的經典優雅風格。
+  </div>
+</div>`
   },
 
   // ========== 第二章：對葡萄種植的影響 ==========
@@ -307,131 +419,122 @@ export const l31Content = [
   },
 
   {
-    type: 'impact-matrix',
     title: '氣候變化對不同葡萄品種的影響',
-    description: '各主要品種的敏感度分析',
-    varieties: [
-      {
-        name: 'Cabernet Sauvignon',
-        sensitivity: '中等',
-        positives: ['晚熟品種受益於延長的生長季', '單寧成熟度提升', '顏色深度增加'],
-        negatives: ['潛在酒精度過高', '可能損失優雅感', '需要更多水分管理'],
-        adaptation: '調整種植密度、改善灌溉、優化葉幕管理'
-      },
-      {
-        name: 'Merlot',
-        sensitivity: '高',
-        positives: ['成熟穩定性提高', '果味更豐富'],
-        negatives: ['過快成熟風險高', '酸度流失快', '容易過熟'],
-        adaptation: '提前採收、增加Cabernet Franc比例、選擇涼爽地塊'
-      },
-      {
-        name: 'Cabernet Franc',
-        sensitivity: '低-中',
-        positives: ['在溫暖氣候下表現穩定', '保持良好酸度', '增加清爽感'],
-        negatives: ['過度成熟時出現植物性風味'],
-        adaptation: '調配比例增加，成為應對氣候變化的重要品種'
-      },
-      {
-        name: 'Petit Verdot',
-        sensitivity: '低',
-        positives: ['過去難以成熟，現在更可靠', '提供結構和香料特徵'],
-        negatives: ['在極端炎熱年份可能過快成熟'],
-        adaptation: '使用比例逐步增加，特別是在Médoc產區'
-      }
-    ]
-  },
+    content: `<div style="font-family:'Noto Sans TC',sans-serif;">
+  <p style="text-align:center;font-size:0.83rem;color:#666;margin:0 0 14px;">各主要品種的氣候敏感度分析</p>
 
-  {
-    type: 'content',
-    title: '品種分析：Cabernet Sauvignon（CS）',
-    content: [
-      {
-        subtitle: '敏感度',
-        text: '中等'
-      },
-      {
-        subtitle: '正面影響',
-        keyFactors: ['晚熟受益於生長季延長', '單寧成熟度提升', '顏色深度增加']
-      },
-      {
-        subtitle: '挑戰',
-        keyFactors: ['潛在酒精度偏高', '優雅感可能下降', '需強化水分管理']
-      },
-      {
-        subtitle: '適應策略',
-        keyFactors: ['調整種植密度與樹勢', '灌溉與覆蓋作物管理', '葉幕降溫與遮蔭']
-      }
-    ]
-  },
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:14px;">
 
-  {
-    type: 'content',
-    title: '品種分析：Merlot',
-    content: [
-      {
-        subtitle: '敏感度',
-        text: '高'
-      },
-      {
-        subtitle: '正面影響',
-        keyFactors: ['成熟穩定性提升', '果味更豐富']
-      },
-      {
-        subtitle: '挑戰',
-        keyFactors: ['過快成熟風險高', '酸度流失快', '容易過熟']
-      },
-      {
-        subtitle: '適應策略',
-        keyFactors: ['提前與分批採收', '提高Cabernet Franc比例', '配置於較涼爽與保水佳地塊']
-      }
-    ]
-  },
+    <!-- Cabernet Sauvignon -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.09);">
+      <div style="background:linear-gradient(135deg,#1a237e,#283593);color:white;padding:10px 13px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-weight:800;font-size:0.95rem;">Cabernet Sauvignon</span>
+          <span style="background:#ffd54f;color:#1a237e;border-radius:20px;padding:2px 9px;font-size:0.72rem;font-weight:800;">⚖️ 中等</span>
+        </div>
+        <div style="font-size:0.75rem;opacity:0.8;margin-top:2px;">CS · 晚熟 · 左岸主角</div>
+      </div>
+      <div style="background:#f7f8ff;padding:10px 13px;font-size:0.82rem;">
+        <div style="color:#2e7d32;font-weight:700;margin-bottom:4px;">✅ 正面影響</div>
+        <ul style="margin:0 0 8px;padding-left:16px;color:#333;line-height:1.7;">
+          <li>晚熟特性可充分利用延長的生長季</li>
+          <li>單寧成熟度與顏色深度提升</li>
+        </ul>
+        <div style="color:#c62828;font-weight:700;margin-bottom:4px;">⚠️ 挑戰</div>
+        <ul style="margin:0 0 8px;padding-left:16px;color:#333;line-height:1.7;">
+          <li>酒精度偏高，優雅感恐流失</li>
+          <li>需要更積極的水分管理</li>
+        </ul>
+        <div style="background:#e8eaf6;border-radius:6px;padding:6px 9px;color:#1a237e;font-size:0.78rem;">
+          🛠 調整種植密度・覆蓋作物管理・葉幕降溫遮蔭・灌溉精細化
+        </div>
+      </div>
+    </div>
 
-  {
-    type: 'content',
-    title: '品種分析：Cabernet Franc（CF）',
-    content: [
-      {
-        subtitle: '敏感度',
-        text: '低-中'
-      },
-      {
-        subtitle: '正面影響',
-        keyFactors: ['在溫暖條件下表現穩定', '保持良好酸度', '增加清爽與花香感']
-      },
-      {
-        subtitle: '挑戰',
-        keyFactors: ['極端炎熱時可能出現草本感', '部分地塊成熟不一']
-      },
-      {
-        subtitle: '適應策略',
-        keyFactors: ['提高在調配中的比例', '精細化採收時點', '選擇石灰岩/涼爽地塊']
-      }
-    ]
-  },
+    <!-- Merlot -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.09);">
+      <div style="background:linear-gradient(135deg,#b71c1c,#c62828);color:white;padding:10px 13px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-weight:800;font-size:0.95rem;">Merlot</span>
+          <span style="background:#ff8a80;color:#7f0000;border-radius:20px;padding:2px 9px;font-size:0.72rem;font-weight:800;">🔴 高</span>
+        </div>
+        <div style="font-size:0.75rem;opacity:0.8;margin-top:2px;">梅洛 · 早熟 · 右岸主角</div>
+      </div>
+      <div style="background:#fff8f8;padding:10px 13px;font-size:0.82rem;">
+        <div style="color:#2e7d32;font-weight:700;margin-bottom:4px;">✅ 正面影響</div>
+        <ul style="margin:0 0 8px;padding-left:16px;color:#333;line-height:1.7;">
+          <li>成熟穩定性提高</li>
+          <li>果味更豐富飽滿</li>
+        </ul>
+        <div style="color:#c62828;font-weight:700;margin-bottom:4px;">⚠️ 挑戰</div>
+        <ul style="margin:0 0 8px;padding-left:16px;color:#333;line-height:1.7;">
+          <li>過快成熟風險高，酸度流失快</li>
+          <li>極端年份容易過熟</li>
+        </ul>
+        <div style="background:#ffebee;border-radius:6px;padding:6px 9px;color:#b71c1c;font-size:0.78rem;">
+          🛠 提前・分批採收・提高CF比例・選擇涼爽保水佳地塊
+        </div>
+      </div>
+    </div>
 
-  {
-    type: 'content',
-    title: '品種分析：Petit Verdot（PV）',
-    content: [
-      {
-        subtitle: '敏感度',
-        text: '低'
-      },
-      {
-        subtitle: '正面影響',
-        keyFactors: ['過去難成熟，現更可靠', '提供結構與香料感']
-      },
-      {
-        subtitle: '挑戰',
-        keyFactors: ['極端炎熱年成熟過快', '酒精與單寧管理需拿捏']
-      },
-      {
-        subtitle: '適應策略',
-        keyFactors: ['逐步提高比例（尤其左岸）', '針對年份微調萃取', '選擇礫石/排水佳地塊']
-      }
-    ]
+    <!-- Cabernet Franc -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.09);">
+      <div style="background:linear-gradient(135deg,#1b5e20,#2e7d32);color:white;padding:10px 13px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-weight:800;font-size:0.95rem;">Cabernet Franc</span>
+          <span style="background:#a5d6a7;color:#1b5e20;border-radius:20px;padding:2px 9px;font-size:0.72rem;font-weight:800;">🟢 低–中</span>
+        </div>
+        <div style="font-size:0.75rem;opacity:0.8;margin-top:2px;">CF · 中熟 · 氣候適應明星</div>
+      </div>
+      <div style="background:#f6fff7;padding:10px 13px;font-size:0.82rem;">
+        <div style="color:#2e7d32;font-weight:700;margin-bottom:4px;">✅ 正面影響</div>
+        <ul style="margin:0 0 8px;padding-left:16px;color:#333;line-height:1.7;">
+          <li>溫暖條件下表現穩定</li>
+          <li>保持良好酸度與清爽花香</li>
+        </ul>
+        <div style="color:#c62828;font-weight:700;margin-bottom:4px;">⚠️ 挑戰</div>
+        <ul style="margin:0 0 8px;padding-left:16px;color:#333;line-height:1.7;">
+          <li>過度成熟時出現植物性或草本風味</li>
+          <li>部分地塊成熟度不一</li>
+        </ul>
+        <div style="background:#e8f5e9;border-radius:6px;padding:6px 9px;color:#1b5e20;font-size:0.78rem;">
+          🛠 提高調配比例・精細化採收時點・選擇石灰岩涼爽地塊
+        </div>
+      </div>
+    </div>
+
+    <!-- Petit Verdot -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.09);">
+      <div style="background:linear-gradient(135deg,#4e342e,#6d4c41);color:white;padding:10px 13px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-weight:800;font-size:0.95rem;">Petit Verdot</span>
+          <span style="background:#bcaaa4;color:#3e2723;border-radius:20px;padding:2px 9px;font-size:0.72rem;font-weight:800;">🟤 低</span>
+        </div>
+        <div style="font-size:0.75rem;opacity:0.8;margin-top:2px;">PV · 極晚熟 · 調配利器</div>
+      </div>
+      <div style="background:#fdf6f4;padding:10px 13px;font-size:0.82rem;">
+        <div style="color:#2e7d32;font-weight:700;margin-bottom:4px;">✅ 正面影響</div>
+        <ul style="margin:0 0 8px;padding-left:16px;color:#333;line-height:1.7;">
+          <li>過去難以成熟，現在更穩定可靠</li>
+          <li>賦予調配深色結構與香料特徵</li>
+        </ul>
+        <div style="color:#c62828;font-weight:700;margin-bottom:4px;">⚠️ 挑戰</div>
+        <ul style="margin:0 0 8px;padding-left:16px;color:#333;line-height:1.7;">
+          <li>極端炎熱年份仍可能過快成熟</li>
+          <li>酒精與單寧管理需精準拿捏</li>
+        </ul>
+        <div style="background:#efebe9;border-radius:6px;padding:6px 9px;color:#4e342e;font-size:0.78rem;">
+          🛠 逐步提高比例・針對年份微調萃取・選擇礫石排水佳地塊
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background:linear-gradient(135deg,#e3f2fd,#e8f5e9);border:1px solid #b3e5fc;border-radius:8px;padding:10px 14px;font-size:0.83rem;color:#0d47a1;line-height:1.7;">
+    <strong>🔑 整體趨勢：</strong>Merlot 受暖化衝擊最大；<strong>Cabernet Franc 正在崛起</strong>為調配關鍵；Petit Verdot 受益於暖化而更普遍使用；CS 居中，需強化管理。品種多樣性成為波爾多應對氣候變遷的最佳防線。
+  </div>
+</div>`
   },
 
   {
@@ -459,137 +562,199 @@ export const l31Content = [
   },
 
   {
-    type: 'content',
-    title: '案例研究：Château Margaux — 總覽',
-    content: [
-      {
-        subtitle: '酒莊背景',
-        text: 'Château Margaux｜1855一級莊，左岸Margaux法定產區的標誌性代表。'
-      },
-      {
-        subtitle: '挑戰',
-        text: '在氣候變暖下，維持其典型的優雅、平衡與精緻細節表達。'
-      },
-      {
-        subtitle: '成果',
-        keyFactors: [
-          '炎熱年份（2003、2009、2018）仍維持平衡感',
-          '風格連貫：細緻單寧與花香層次未受稀釋',
-          '成為產區氣候適應標桿，市場與評分表現穩健'
-        ]
-      },
-      {
-        subtitle: '核心觀點',
-        text: '「我們不是對抗氣候，而是在新條件下找到風土的新表達。」— Paul Pontallier'
-      }
-    ]
+    title: '案例研究：Château Margaux',
+    content: `<div style="font-family:'Noto Sans TC',sans-serif;">
+
+  <div style="background:linear-gradient(135deg,#4a0000,#7b1c1c);color:white;border-radius:12px;padding:14px 18px;margin-bottom:14px;display:flex;align-items:flex-start;gap:14px;">
+    <div style="font-size:2.2rem;line-height:1;">🏰</div>
+    <div style="flex:1;">
+      <div style="font-weight:800;font-size:1.1rem;letter-spacing:0.05em;">Château Margaux</div>
+      <div style="font-size:0.8rem;opacity:0.85;margin-top:3px;">1855 一級莊 · 左岸 Margaux 法定產區 · 氣候適應標桿</div>
+      <div style="margin-top:10px;font-size:0.84rem;font-style:italic;opacity:0.92;border-left:3px solid rgba(255,255,255,0.4);padding-left:10px;line-height:1.6;">
+        「我們不是對抗氣候，而是在新條件下找到風土的新表達。」<br>
+        <span style="font-size:0.78rem;opacity:0.75;font-style:normal;">— Paul Pontallier，前技術總監</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+    <div style="background:#fff8f8;border:1px solid #ffcdd2;border-radius:8px;padding:11px 13px;">
+      <div style="color:#b71c1c;font-weight:700;font-size:0.88rem;margin-bottom:7px;">⚠️ 核心挑戰</div>
+      <div style="font-size:0.83rem;color:#444;line-height:1.7;">在氣候持續暖化下，維持 Margaux 典型的<strong>優雅、平衡與精緻細節</strong>，避免因過熟而流失靈魂。</div>
+    </div>
+    <div style="background:#f6fff7;border:1px solid #c8e6c9;border-radius:8px;padding:11px 13px;">
+      <div style="color:#1b5e20;font-weight:700;font-size:0.88rem;margin-bottom:7px;">✅ 成果驗證</div>
+      <ul style="margin:0;padding-left:16px;font-size:0.83rem;color:#333;line-height:1.8;">
+        <li>2003、2009、2018 炎熱年份仍維持平衡與優雅</li>
+        <li>細緻單寧與花香層次未受稀釋</li>
+        <li>評分穩健，成為產區氣候適應標桿</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#fce4ec,#fff3e0);border:1px solid #f8bbd0;border-radius:8px;padding:10px 14px;font-size:0.82rem;color:#880e4f;line-height:1.6;">
+    <strong>🔑 戰略核心：</strong>不依賴單一技術，而是從葡萄園管理、品種配比、採收時機到釀造工藝全方位協同優化，打造系統性氣候韌性。
+  </div>
+</div>`
   },
 
   {
-    type: 'content',
-    title: 'Château Margaux — 葡萄園精細管理',
-    content: [
-      {
-        subtitle: '關鍵作法',
-        keyFactors: [
-          '行間/株間綠覆蓋：降低土壤溫度、提升持水',
-          '葉幕策略：關鍵期保留葉片遮蔭果串',
-          '精準滴灌：依土壤含水與藤齡靈活補水',
-          '修剪微調：控產以提升濃度與均一成熟'
-        ]
-      },
-      {
-        subtitle: '效果',
-        highlight: '顯著降低熱浪直擊果串的傷害，維持成熟節奏的穩定性'
-      }
-    ]
+    title: 'Château Margaux — 四大氣候應對策略',
+    content: `<div style="font-family:'Noto Sans TC',sans-serif;">
+  <p style="text-align:center;font-size:0.83rem;color:#666;margin:0 0 12px;">葡萄園管理 · 品種配比 · 採收時機 · 釀造工藝</p>
+
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+
+    <!-- 葡萄園管理 -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="background:linear-gradient(135deg,#1b5e20,#2e7d32);color:white;padding:9px 13px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:1.2rem;">🌱</span>
+        <span style="font-weight:700;font-size:0.9rem;">葡萄園精細管理</span>
+      </div>
+      <div style="background:#f6fff7;padding:9px 12px;font-size:0.8rem;">
+        <ul style="margin:0 0 7px;padding-left:15px;color:#333;line-height:1.7;">
+          <li>行間<strong>覆蓋作物</strong>：降低土壤溫度、提升持水</li>
+          <li>關鍵期<strong>保留葉片遮蔭</strong>果串</li>
+          <li><strong>精準滴灌</strong>：依土壤含水與藤齡靈活補水</li>
+          <li>修剪控產：提升濃度與均一成熟</li>
+        </ul>
+        <div style="background:#e8f5e9;border-radius:5px;padding:5px 9px;color:#1b5e20;font-size:0.78rem;font-weight:600;">
+          📈 顯著降低熱浪直擊果串傷害，維持成熟節奏穩定
+        </div>
+      </div>
+    </div>
+
+    <!-- 品種配比 -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="background:linear-gradient(135deg,#1a237e,#283593);color:white;padding:9px 13px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:1.2rem;">🍇</span>
+        <span style="font-weight:700;font-size:0.9rem;">品種配比微調</span>
+      </div>
+      <div style="background:#f7f8ff;padding:9px 12px;font-size:0.8rem;">
+        <ul style="margin:0 0 7px;padding-left:15px;color:#333;line-height:1.7;">
+          <li><strong>CS ~75%</strong>：維持風格連貫性</li>
+          <li><strong>CF ↑ ~12%</strong>：保酸度與花香</li>
+          <li><strong>PV ↑ ~5%</strong>：補結構與清爽感</li>
+          <li><strong>Merlot 微降</strong>：降低過熟風險</li>
+        </ul>
+        <div style="background:#e8eaf6;border-radius:5px;padding:5px 9px;color:#1a237e;font-size:0.78rem;font-weight:600;">
+          📈 暖年仍保持優雅與平衡，細膩感不流失
+        </div>
+      </div>
+    </div>
+
+    <!-- 採收策略 -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="background:linear-gradient(135deg,#e65100,#f57c00);color:white;padding:9px 13px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:1.2rem;">📅</span>
+        <span style="font-weight:700;font-size:0.9rem;">採收時機精準化</span>
+      </div>
+      <div style="background:#fffaf5;padding:9px 12px;font-size:0.8rem;">
+        <ul style="margin:0 0 7px;padding-left:15px;color:#333;line-height:1.7;">
+          <li><strong>分批採收</strong>：依地塊成熟度分 4–6 批</li>
+          <li><strong>夜間 / 清晨採收</strong>：降溫減少氧化</li>
+          <li>糖度 + 酸度 + <strong>酚類成熟度</strong>綜合評估</li>
+          <li>決策窗口：由 1 週壓縮至 <strong>3–4 天</strong></li>
+        </ul>
+        <div style="background:#fff3e0;border-radius:5px;padding:5px 9px;color:#e65100;font-size:0.78rem;font-weight:600;">
+          📈 更精準掌握平衡點，避免過熟或酸度流失
+        </div>
+      </div>
+    </div>
+
+    <!-- 釀造工藝 -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="background:linear-gradient(135deg,#4a0072,#6a1b9a);color:white;padding:9px 13px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:1.2rem;">🍷</span>
+        <span style="font-weight:700;font-size:0.9rem;">釀造工藝優化</span>
+      </div>
+      <div style="background:#fdf5ff;padding:9px 12px;font-size:0.8rem;">
+        <ul style="margin:0 0 7px;padding-left:15px;color:#333;line-height:1.7;">
+          <li>精密<strong>溫控發酵</strong>（±0.5°C）</li>
+          <li>縮短浸漬：避免過度萃取單寧</li>
+          <li><strong>新桶降至 60–70%</strong>：凸顯果香清爽</li>
+          <li>SO₂ 精準管理：保護酸度與新鮮度</li>
+        </ul>
+        <div style="background:#ede7f6;border-radius:5px;padding:5px 9px;color:#4a0072;font-size:0.78rem;font-weight:600;">
+          📈 在釀造端精煉，確保細節與優雅呈現
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>`
   },
 
   {
-    type: 'content',
-    title: 'Château Margaux — 品種配比微調',
-    content: [
-      {
-        subtitle: '方向',
-        keyFactors: [
-          '提高Cabernet Franc至約12%：在暖年保酸度與花香',
-          '增加Petit Verdot至約5%：補充結構與清爽感',
-          '微調Merlot：降低過熟風險',
-          '維持CS為主（~75%）：確保風格連貫'
-        ]
-      },
-      {
-        subtitle: '效果',
-        highlight: '暖年仍能保持優雅與平衡，細膩感不流失'
-      }
-    ]
-  },
+    title: '頂級酒莊應對策略比較',
+    content: `<div style="font-family:'Noto Sans TC',sans-serif;">
+  <p style="text-align:center;font-size:0.83rem;color:#666;margin:0 0 12px;">不同哲學路徑下的氣候應對實踐</p>
 
-  {
-    type: 'content',
-    title: 'Château Margaux — 採收時機與流程',
-    content: [
-      {
-        subtitle: '關鍵作法',
-        keyFactors: [
-          '分批採收：依地塊成熟度分4-6批',
-          '夜間/清晨採收：降溫減氧化',
-          '多維度監測：糖度、酸度、酚類成熟度綜合評估',
-          '決策窗口縮短：由1週壓縮至3-4天'
-        ]
-      },
-      {
-        subtitle: '效果',
-        highlight: '更精準掌握平衡點，避免過熟或酸度流失'
-      }
-    ]
-  },
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px;">
 
-  {
-    type: 'content',
-    title: 'Château Margaux — 釀造工藝優化',
-    content: [
-      {
-        subtitle: '關鍵作法',
-        keyFactors: [
-          '精密溫控發酵（±0.5°C）',
-          '縮短浸漬避免過度萃取',
-          '新桶比例降至60-70%以凸顯果香清爽',
-          'SO₂精準管理：保護酸度與新鮮度'
-        ]
-      },
-      {
-        subtitle: '效果',
-        highlight: '在釀造端進一步精煉，確保細節與優雅呈現'
-      }
-    ]
-  },
+    <!-- Latour -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.09);">
+      <div style="background:linear-gradient(135deg,#0d47a1,#1565c0);color:white;padding:10px 10px;text-align:center;">
+        <div style="font-size:1.3rem;">🔬</div>
+        <div style="font-weight:800;font-size:0.9rem;margin-top:3px;">Ch. Latour</div>
+        <div style="margin-top:4px;background:rgba(255,255,255,0.2);border-radius:20px;display:inline-block;padding:1px 8px;font-size:0.72rem;font-weight:700;">科技驅動派</div>
+      </div>
+      <div style="background:#f5f8ff;padding:9px 10px;font-size:0.8rem;">
+        <ul style="margin:0 0 7px;padding-left:14px;color:#333;line-height:1.7;">
+          <li>精準農業技術投資</li>
+          <li>實時監測系統</li>
+          <li>數據驅動採收決策</li>
+        </ul>
+        <div style="background:#e3f2fd;border-radius:6px;padding:5px 8px;color:#0d47a1;font-size:0.76rem;font-style:italic;">
+          「以現代科技精確應對氣候挑戰」
+        </div>
+      </div>
+    </div>
 
-  {
-    type: 'multi-estate-comparison',
-    title: '多個頂級酒莊的應對策略比較',
-    description: '不同理念與實踐路徑',
-    estates: [
-      {
-        name: 'Château Latour',
-        approach: '科技驅動',
-        keyMeasures: ['投資精準農業技術', '實時監測系統', '數據驅動決策'],
-        philosophy: '用現代科技精確應對氣候挑戰'
-      },
-      {
-        name: 'Château Palmer',
-        approach: '生物動力法',
-        keyMeasures: ['有機認證', '生物動力實踐', '增強土壤生命力'],
-        philosophy: '通過生態平衡增強葡萄藤韌性'
-      },
-      {
-        name: 'Château Pontet-Canet',
-        approach: '有機與馬耕',
-        keyMeasures: ['有機認證', '馬匹耕作', '覆蓋作物'],
-        philosophy: '傳統與生態相結合的可持續路徑'
-      }
-    ],
-    insight: '頂級酒莊的應對策略各有特色，但都強調因地制宜和長期可持續性'
+    <!-- Palmer -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.09);">
+      <div style="background:linear-gradient(135deg,#1b5e20,#388e3c);color:white;padding:10px 10px;text-align:center;">
+        <div style="font-size:1.3rem;">🌿</div>
+        <div style="font-weight:800;font-size:0.9rem;margin-top:3px;">Ch. Palmer</div>
+        <div style="margin-top:4px;background:rgba(255,255,255,0.2);border-radius:20px;display:inline-block;padding:1px 8px;font-size:0.72rem;font-weight:700;">生態派</div>
+      </div>
+      <div style="background:#f6fff7;padding:9px 10px;font-size:0.8rem;">
+        <ul style="margin:0 0 7px;padding-left:14px;color:#333;line-height:1.7;">
+          <li>有機認證</li>
+          <li>生物動力法（Biodynamic）</li>
+          <li>增強土壤生命力與藤蔓韌性</li>
+        </ul>
+        <div style="background:#e8f5e9;border-radius:6px;padding:5px 8px;color:#1b5e20;font-size:0.76rem;font-style:italic;">
+          「透過生態平衡增強葡萄藤韌性」
+        </div>
+      </div>
+    </div>
+
+    <!-- Pontet-Canet -->
+    <div style="border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.09);">
+      <div style="background:linear-gradient(135deg,#4e342e,#795548);color:white;padding:10px 10px;text-align:center;">
+        <div style="font-size:1.3rem;">🐎</div>
+        <div style="font-weight:800;font-size:0.9rem;margin-top:3px;">Pontet-Canet</div>
+        <div style="margin-top:4px;background:rgba(255,255,255,0.2);border-radius:20px;display:inline-block;padding:1px 8px;font-size:0.72rem;font-weight:700;">傳統生態派</div>
+      </div>
+      <div style="background:#fdf6f4;padding:9px 10px;font-size:0.8rem;">
+        <ul style="margin:0 0 7px;padding-left:14px;color:#333;line-height:1.7;">
+          <li>有機認證 + 馬匹耕作</li>
+          <li>覆蓋作物管理</li>
+          <li>傳統工法與生態相融合</li>
+        </ul>
+        <div style="background:#efebe9;border-radius:6px;padding:5px 8px;color:#4e342e;font-size:0.76rem;font-style:italic;">
+          「傳統與生態結合的可持續路徑」
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background:linear-gradient(135deg,#fff8e1,#f3e5f5);border:1px solid #ffe082;border-radius:8px;padding:10px 14px;font-size:0.83rem;color:#4a148c;line-height:1.7;">
+    <strong>🔑 共同結論：</strong>策略各異，但三大名莊均強調<strong>因地制宜</strong>與<strong>長期可持續性</strong>。沒有唯一正確答案，只有適合自身風土與釀酒哲學的最佳路徑。
+  </div>
+</div>`
   },
 
   // ========== 知識檢測：酒莊應對策略 ==========
@@ -635,59 +800,176 @@ export const l31Content = [
   {
     type: 'content',
     title: '傳統產區的挑戰與機遇',
-    content: [
-      {
-        subtitle: '左岸Médoc：雙刃劍效應',
-        text: '排水極佳的礫石土壤在溫暖年份有助於Cabernet Sauvignon達到完美成熟，但在極端乾旱年份可能面臨嚴重水分脅迫。',
-        opportunities: ['Cabernet Sauvignon成熟度更穩定', 'Petit Verdot變得更可靠', '陳年潛力保持優勢'],
-        challenges: ['需要投資灌溉設施', '酒精度控制難度增加', '需要更精細的葡萄園管理'],
-        verdict: '整體仍保持優勢，但成本和技術要求提高'
-      },
-      {
-        subtitle: '右岸Pomerol & Saint-Émilion：Merlot的挑戰',
-        text: '黏土土壤的保水性是優勢，但Merlot早熟特性在高溫下成為風險。過快成熟可能損害品質。',
-        opportunities: ['黏土保水性在乾旱年份是優勢', '石灰岩高原保持清爽感', 'Cabernet Franc比例可提高'],
-        challenges: ['Merlot過度成熟風險高', '採收窗口極短', '酸度保留難度大'],
-        verdict: '需要重大調整，可能改變傳統調配比例'
-      },
-      {
-        subtitle: 'Graves：穩定的表現者',
-        text: '礫石與黏土混合的多樣化土壤提供了靈活性，既能排水又能保水。紅白酒都有發展潛力。',
-        opportunities: ['土壤多樣性提供緩衝', '白葡萄酒品質提升', '相對平衡的風險'],
-        challenges: ['需要因地塊微調策略'],
-        verdict: '可能成為氣候變化的受益者'
-      },
-      {
-        subtitle: 'Entre-Deux-Mers：逆襲的機會',
-        text: '傳統的"次級產區"因氣候變暖而受益。過去成熟度不足的問題得到解決，開始產出高品質白葡萄酒和紅葡萄酒。',
-        opportunities: ['葡萄成熟度顯著提升', '白葡萄酒市場機會大', '土地成本相對低'],
-        challenges: ['品牌認知度需要建立', '基礎設施需要升級'],
-        verdict: '未來之星，值得關注'
-      }
-    ]
+    content: `
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+
+          <!-- 左岸 Médoc -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.3rem;">🏰</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">左岸 Médoc</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.75rem;">雙刃劍效應</div>
+              </div>
+              <span style="margin-left:auto;background:rgba(255,255,255,0.2);color:#fff;border-radius:20px;padding:2px 8px;font-size:0.72rem;white-space:nowrap;">整體優勢 ↑成本</span>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.6;margin-bottom:8px;">礫石土壤在溫暖年份助CS完美成熟，但極端乾旱年份面臨水分脅迫。</div>
+              <div style="margin-bottom:6px;">
+                <div style="font-size:0.75rem;font-weight:700;color:#1565C0;margin-bottom:3px;">✅ 機遇</div>
+                <ul style="margin:0;padding-left:14px;font-size:0.76rem;color:#333;line-height:1.7;">
+                  <li>CS成熟度更穩定</li>
+                  <li>Petit Verdot更可靠</li>
+                  <li>陳年潛力保持優勢</li>
+                </ul>
+              </div>
+              <div style="margin-bottom:8px;">
+                <div style="font-size:0.75rem;font-weight:700;color:#c62828;margin-bottom:3px;">⚠️ 挑戰</div>
+                <ul style="margin:0;padding-left:14px;font-size:0.76rem;color:#333;line-height:1.7;">
+                  <li>需投資灌溉設施</li>
+                  <li>酒精度控制難度↑</li>
+                  <li>更精細的葡萄園管理</li>
+                </ul>
+              </div>
+              <div style="background:#E3F2FD;border-left:3px solid #1565C0;border-radius:4px;padding:5px 8px;font-size:0.75rem;color:#0D47A1;">
+                整體仍保持優勢，但成本與技術要求提高
+              </div>
+            </div>
+          </div>
+
+          <!-- 右岸 Pomerol & Saint-Émilion -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#880E4F,#C2185B);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.3rem;">💎</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">右岸 Pomerol & St-Émilion</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.75rem;">Merlot的挑戰</div>
+              </div>
+              <span style="margin-left:auto;background:rgba(255,255,255,0.2);color:#fff;border-radius:20px;padding:2px 8px;font-size:0.72rem;white-space:nowrap;">需重大調整</span>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.6;margin-bottom:8px;">黏土保水性是優勢，但Merlot早熟特性在高溫下成為風險。</div>
+              <div style="margin-bottom:6px;">
+                <div style="font-size:0.75rem;font-weight:700;color:#880E4F;margin-bottom:3px;">✅ 機遇</div>
+                <ul style="margin:0;padding-left:14px;font-size:0.76rem;color:#333;line-height:1.7;">
+                  <li>黏土保水在乾旱年優勢</li>
+                  <li>石灰岩高原保持清爽感</li>
+                  <li>CF比例可提高</li>
+                </ul>
+              </div>
+              <div style="margin-bottom:8px;">
+                <div style="font-size:0.75rem;font-weight:700;color:#c62828;margin-bottom:3px;">⚠️ 挑戰</div>
+                <ul style="margin:0;padding-left:14px;font-size:0.76rem;color:#333;line-height:1.7;">
+                  <li>Merlot過度成熟風險高</li>
+                  <li>採收窗口極短</li>
+                  <li>酸度保留難度大</li>
+                </ul>
+              </div>
+              <div style="background:#FCE4EC;border-left:3px solid #880E4F;border-radius:4px;padding:5px 8px;font-size:0.75rem;color:#880E4F;">
+                需要重大調整，可能改變傳統調配比例
+              </div>
+            </div>
+          </div>
+
+          <!-- Graves -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#388E3C);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.3rem;">🌟</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">Graves</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.75rem;">穩定的表現者</div>
+              </div>
+              <span style="margin-left:auto;background:rgba(255,255,255,0.2);color:#fff;border-radius:20px;padding:2px 8px;font-size:0.72rem;white-space:nowrap;">可能受益 ✨</span>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.6;margin-bottom:8px;">礫石與黏土混合的多樣土壤提供靈活性，紅白酒皆有發展潛力。</div>
+              <div style="margin-bottom:6px;">
+                <div style="font-size:0.75rem;font-weight:700;color:#2E7D32;margin-bottom:3px;">✅ 機遇</div>
+                <ul style="margin:0;padding-left:14px;font-size:0.76rem;color:#333;line-height:1.7;">
+                  <li>土壤多樣性提供緩衝</li>
+                  <li>白葡萄酒品質提升</li>
+                  <li>相對平衡的風險</li>
+                </ul>
+              </div>
+              <div style="margin-bottom:8px;">
+                <div style="font-size:0.75rem;font-weight:700;color:#c62828;margin-bottom:3px;">⚠️ 挑戰</div>
+                <ul style="margin:0;padding-left:14px;font-size:0.76rem;color:#333;line-height:1.7;">
+                  <li>需因地塊微調策略</li>
+                </ul>
+              </div>
+              <div style="background:#E8F5E9;border-left:3px solid #2E7D32;border-radius:4px;padding:5px 8px;font-size:0.75rem;color:#1B5E20;">
+                可能成為氣候變化的受益者
+              </div>
+            </div>
+          </div>
+
+          <!-- Entre-Deux-Mers -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#E65100,#F57C00);padding:10px 14px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:1.3rem;">📈</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:0.88rem;">Entre-Deux-Mers</div>
+                <div style="color:rgba(255,255,255,0.82);font-size:0.75rem;">逆襲的機會</div>
+              </div>
+              <span style="margin-left:auto;background:rgba(255,255,255,0.2);color:#fff;border-radius:20px;padding:2px 8px;font-size:0.72rem;white-space:nowrap;">未來之星 🌠</span>
+            </div>
+            <div style="padding:10px 14px 12px;">
+              <div style="font-size:0.78rem;color:#555;line-height:1.6;margin-bottom:8px;">傳統"次級產區"因氣候變暖受益，成熟度問題得到解決。</div>
+              <div style="margin-bottom:6px;">
+                <div style="font-size:0.75rem;font-weight:700;color:#E65100;margin-bottom:3px;">✅ 機遇</div>
+                <ul style="margin:0;padding-left:14px;font-size:0.76rem;color:#333;line-height:1.7;">
+                  <li>葡萄成熟度顯著提升</li>
+                  <li>白葡萄酒市場機會大</li>
+                  <li>土地成本相對低</li>
+                </ul>
+              </div>
+              <div style="margin-bottom:8px;">
+                <div style="font-size:0.75rem;font-weight:700;color:#c62828;margin-bottom:3px;">⚠️ 挑戰</div>
+                <ul style="margin:0;padding-left:14px;font-size:0.76rem;color:#333;line-height:1.7;">
+                  <li>品牌認知度需要建立</li>
+                  <li>基礎設施需要升級</li>
+                </ul>
+              </div>
+              <div style="background:#FFF3E0;border-left:3px solid #E65100;border-radius:4px;padding:5px 8px;font-size:0.75rem;color:#BF360C;">
+                未來之星，值得關注
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `
   },
 
   {
     type: 'content',
     title: '產區氣候影響評估矩陣',
     content: `
-      <div class="regional-impact-matrix">
-        <p class="section-description">風險等級與適應能力綜合評估</p>
-        
-        <div class="region-cards">
-          <div class="region-card high-value">
-            <h4>🏆 Médoc (左岸)</h4>
-            <div class="metrics">
-              <div class="metric"><span class="label">當前優勢：</span><span class="value excellent">極高</span></div>
-              <div class="metric"><span class="label">氣候風險：</span><span class="value moderate">中-高</span></div>
-              <div class="metric"><span class="label">適應能力：</span><span class="value high">高</span></div>
+      <div style="font-family:'Noto Sans TC',sans-serif;padding:4px 0;">
+        <div style="text-align:center;font-size:0.8rem;color:#666;margin-bottom:10px;">風險等級與適應能力綜合評估</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+
+          <!-- Médoc -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#1565C0,#1976D2);padding:8px 12px;display:flex;align-items:center;gap:6px;">
+              <span style="font-size:1.1rem;">🏆</span>
+              <div style="color:#fff;font-weight:700;font-size:0.83rem;">Médoc (左岸)</div>
             </div>
-            <div class="outlook">
-              <strong>未來展望：</strong>保持優勢，但需持續投資
-            </div>
-            <div class="key-factors">
-              <strong>關鍵因素：</strong>
-              <ul>
+            <div style="padding:9px 12px;">
+              <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:7px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">當前優勢</span><span style="background:#4CAF50;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">極高</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">氣候風險</span><span style="background:#FF9800;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">中-高</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">適應能力</span><span style="background:#2196F3;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">高</span>
+                </div>
+              </div>
+              <div style="background:#E3F2FD;border-radius:6px;padding:5px 8px;font-size:0.74rem;color:#0D47A1;margin-bottom:6px;">保持優勢，但需持續投資</div>
+              <ul style="margin:0;padding-left:13px;font-size:0.74rem;color:#444;line-height:1.7;">
                 <li>礫石土壤適合CS</li>
                 <li>需要灌溉投資</li>
                 <li>技術實力強</li>
@@ -695,19 +977,26 @@ export const l31Content = [
             </div>
           </div>
 
-          <div class="region-card high-value">
-            <h4>💎 Pomerol (右岸)</h4>
-            <div class="metrics">
-              <div class="metric"><span class="label">當前優勢：</span><span class="value excellent">極高</span></div>
-              <div class="metric"><span class="label">氣候風險：</span><span class="value high">高</span></div>
-              <div class="metric"><span class="label">適應能力：</span><span class="value moderate">中</span></div>
+          <!-- Pomerol -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#880E4F,#C2185B);padding:8px 12px;display:flex;align-items:center;gap:6px;">
+              <span style="font-size:1.1rem;">💎</span>
+              <div style="color:#fff;font-weight:700;font-size:0.83rem;">Pomerol (右岸)</div>
             </div>
-            <div class="outlook">
-              <strong>未來展望：</strong>面臨挑戰，需重大調整
-            </div>
-            <div class="key-factors">
-              <strong>關鍵因素：</strong>
-              <ul>
+            <div style="padding:9px 12px;">
+              <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:7px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">當前優勢</span><span style="background:#4CAF50;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">極高</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">氣候風險</span><span style="background:#e53935;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">高</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">適應能力</span><span style="background:#FF9800;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">中</span>
+                </div>
+              </div>
+              <div style="background:#FCE4EC;border-radius:6px;padding:5px 8px;font-size:0.74rem;color:#880E4F;margin-bottom:6px;">面臨挑戰，需重大調整</div>
+              <ul style="margin:0;padding-left:13px;font-size:0.74rem;color:#444;line-height:1.7;">
                 <li>Merlot脆弱性</li>
                 <li>黏土保水優勢</li>
                 <li>規模小限制投資</li>
@@ -715,19 +1004,26 @@ export const l31Content = [
             </div>
           </div>
 
-          <div class="region-card high-value">
-            <h4>⭐ Saint-Émilion (右岸)</h4>
-            <div class="metrics">
-              <div class="metric"><span class="label">當前優勢：</span><span class="value excellent">極高</span></div>
-              <div class="metric"><span class="label">氣候風險：</span><span class="value moderate">中-高</span></div>
-              <div class="metric"><span class="label">適應能力：</span><span class="value high">高</span></div>
+          <!-- Saint-Émilion -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#6A1B9A,#8E24AA);padding:8px 12px;display:flex;align-items:center;gap:6px;">
+              <span style="font-size:1.1rem;">⭐</span>
+              <div style="color:#fff;font-weight:700;font-size:0.83rem;">Saint-Émilion (右岸)</div>
             </div>
-            <div class="outlook">
-              <strong>未來展望：</strong>多樣化土壤提供靈活性
-            </div>
-            <div class="key-factors">
-              <strong>關鍵因素：</strong>
-              <ul>
+            <div style="padding:9px 12px;">
+              <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:7px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">當前優勢</span><span style="background:#4CAF50;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">極高</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">氣候風險</span><span style="background:#FF9800;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">中-高</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">適應能力</span><span style="background:#2196F3;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">高</span>
+                </div>
+              </div>
+              <div style="background:#F3E5F5;border-radius:6px;padding:5px 8px;font-size:0.74rem;color:#6A1B9A;margin-bottom:6px;">多樣化土壤提供靈活性</div>
+              <ul style="margin:0;padding-left:13px;font-size:0.74rem;color:#444;line-height:1.7;">
                 <li>石灰岩高原優勢</li>
                 <li>CF比例可增加</li>
                 <li>分級體系支持創新</li>
@@ -735,19 +1031,26 @@ export const l31Content = [
             </div>
           </div>
 
-          <div class="region-card medium-value">
-            <h4>🌟 Graves</h4>
-            <div class="metrics">
-              <div class="metric"><span class="label">當前優勢：</span><span class="value high">高</span></div>
-              <div class="metric"><span class="label">氣候風險：</span><span class="value moderate">中</span></div>
-              <div class="metric"><span class="label">適應能力：</span><span class="value high">高</span></div>
+          <!-- Graves -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#2E7D32,#388E3C);padding:8px 12px;display:flex;align-items:center;gap:6px;">
+              <span style="font-size:1.1rem;">🌟</span>
+              <div style="color:#fff;font-weight:700;font-size:0.83rem;">Graves</div>
             </div>
-            <div class="outlook">
-              <strong>未來展望：</strong>穩定表現，可能提升
-            </div>
-            <div class="key-factors">
-              <strong>關鍵因素：</strong>
-              <ul>
+            <div style="padding:9px 12px;">
+              <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:7px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">當前優勢</span><span style="background:#2196F3;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">高</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">氣候風險</span><span style="background:#FF9800;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">中</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">適應能力</span><span style="background:#2196F3;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">高</span>
+                </div>
+              </div>
+              <div style="background:#E8F5E9;border-radius:6px;padding:5px 8px;font-size:0.74rem;color:#1B5E20;margin-bottom:6px;">穩定表現，可能提升</div>
+              <ul style="margin:0;padding-left:13px;font-size:0.74rem;color:#444;line-height:1.7;">
                 <li>紅白酒雙優勢</li>
                 <li>土壤多樣性</li>
                 <li>靠近波爾多市</li>
@@ -755,19 +1058,26 @@ export const l31Content = [
             </div>
           </div>
 
-          <div class="region-card challenge">
-            <h4>⚠️ Sauternes</h4>
-            <div class="metrics">
-              <div class="metric"><span class="label">當前優勢：</span><span class="value high">高</span></div>
-              <div class="metric"><span class="label">氣候風險：</span><span class="value extreme">極高</span></div>
-              <div class="metric"><span class="label">適應能力：</span><span class="value low">低</span></div>
+          <!-- Sauternes -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#B71C1C,#D32F2F);padding:8px 12px;display:flex;align-items:center;gap:6px;">
+              <span style="font-size:1.1rem;">⚠️</span>
+              <div style="color:#fff;font-weight:700;font-size:0.83rem;">Sauternes</div>
             </div>
-            <div class="outlook warning">
-              <strong>未來展望：</strong>嚴峻挑戰
-            </div>
-            <div class="key-factors">
-              <strong>關鍵因素：</strong>
-              <ul>
+            <div style="padding:9px 12px;">
+              <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:7px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">當前優勢</span><span style="background:#2196F3;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">高</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">氣候風險</span><span style="background:#B71C1C;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">極高</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">適應能力</span><span style="background:#9E9E9E;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">低</span>
+                </div>
+              </div>
+              <div style="background:#FFEBEE;border-radius:6px;padding:5px 8px;font-size:0.74rem;color:#B71C1C;margin-bottom:6px;">嚴峻挑戰，前景不確定</div>
+              <ul style="margin:0;padding-left:13px;font-size:0.74rem;color:#444;line-height:1.7;">
                 <li>貴腐菌條件改變</li>
                 <li>乾白轉型可能性</li>
                 <li>經濟壓力大</li>
@@ -775,140 +1085,34 @@ export const l31Content = [
             </div>
           </div>
 
-          <div class="region-card opportunity">
-            <h4>📈 Entre-Deux-Mers</h4>
-            <div class="metrics">
-              <div class="metric"><span class="label">當前優勢：</span><span class="value moderate">中</span></div>
-              <div class="metric"><span class="label">氣候風險：</span><span class="value low">低</span></div>
-              <div class="metric"><span class="label">適應能力：</span><span class="value moderate">中</span></div>
+          <!-- Entre-Deux-Mers -->
+          <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="background:linear-gradient(135deg,#0277BD,#0288D1);padding:8px 12px;display:flex;align-items:center;gap:6px;">
+              <span style="font-size:1.1rem;">📈</span>
+              <div style="color:#fff;font-weight:700;font-size:0.83rem;">Entre-Deux-Mers</div>
             </div>
-            <div class="outlook positive">
-              <strong>未來展望：</strong>顯著提升潛力
-            </div>
-            <div class="key-factors">
-              <strong>關鍵因素：</strong>
-              <ul>
+            <div style="padding:9px 12px;">
+              <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:7px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">當前優勢</span><span style="background:#FF9800;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">中</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">氣候風險</span><span style="background:#9E9E9E;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">低</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;">
+                  <span style="color:#555;">適應能力</span><span style="background:#FF9800;color:#fff;border-radius:10px;padding:1px 7px;font-size:0.72rem;">中</span>
+                </div>
+              </div>
+              <div style="background:#E1F5FE;border-radius:6px;padding:5px 8px;font-size:0.74rem;color:#01579B;margin-bottom:6px;">顯著提升潛力，逆襲中</div>
+              <ul style="margin:0;padding-left:13px;font-size:0.74rem;color:#444;line-height:1.7;">
                 <li>成熟度改善</li>
-                <li>白酒機會</li>
+                <li>白酒機會大</li>
                 <li>價格優勢</li>
               </ul>
             </div>
           </div>
-        </div>
 
-        <style>
-          .regional-impact-matrix {
-            padding: 1rem 0;
-          }
-          .section-description {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2rem;
-          }
-          .region-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-          }
-          .region-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-          }
-          .region-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-          }
-          .region-card h4 {
-            color: white;
-            margin: 0 0 1rem 0;
-            font-size: 1.25rem;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-            padding-bottom: 0.5rem;
-          }
-          .region-card.high-value {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          }
-          .region-card.medium-value {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-          }
-          .region-card.challenge {
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-          }
-          .region-card.opportunity {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-          }
-          .metrics {
-            background: rgba(255,255,255,0.15);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-          }
-          .metric {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 0;
-            color: white;
-          }
-          .metric .label {
-            font-weight: 500;
-          }
-          .metric .value {
-            font-weight: bold;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.9rem;
-          }
-          .metric .value.excellent {
-            background: rgba(76, 175, 80, 0.9);
-          }
-          .metric .value.high {
-            background: rgba(33, 150, 243, 0.9);
-          }
-          .metric .value.moderate {
-            background: rgba(255, 152, 0, 0.9);
-          }
-          .metric .value.low {
-            background: rgba(244, 67, 54, 0.7);
-          }
-          .metric .value.extreme {
-            background: rgba(183, 28, 28, 0.9);
-          }
-          .outlook {
-            background: rgba(255,255,255,0.2);
-            border-radius: 8px;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            color: white;
-            font-size: 0.95rem;
-          }
-          .outlook.warning {
-            background: rgba(255, 193, 7, 0.3);
-          }
-          .outlook.positive {
-            background: rgba(76, 175, 80, 0.3);
-          }
-          .key-factors {
-            color: white;
-          }
-          .key-factors strong {
-            display: block;
-            margin-bottom: 0.5rem;
-          }
-          .key-factors ul {
-            margin: 0;
-            padding-left: 1.25rem;
-          }
-          .key-factors li {
-            margin: 0.25rem 0;
-            font-size: 0.9rem;
-          }
-        </style>
+        </div>
       </div>
     `,
     highlights: [
