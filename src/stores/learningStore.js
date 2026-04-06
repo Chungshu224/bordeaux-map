@@ -13,7 +13,7 @@ export const learningState = reactive({
     // Level 3 課程進度由用戶實際學習決定
   ],
   learningMode: true, // 是否為學習模式
-  testMode: true, // 測試模式已啟用
+  testMode: false, // 測試模式（預設關閉，可手動開啟）
   userProgress: {
     level1: { completed: 8, total: 8 },
     level2: { completed: 9, total: 9 },

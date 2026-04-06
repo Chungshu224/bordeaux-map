@@ -147,6 +147,7 @@
 <script setup>
 import { ref, computed, onMounted, watch, nextTick } from 'vue'
 import { learningState, learningLevels, learningActions, learningProgress } from '../stores/learningStore.js'
+import { authActions } from '../stores/authStore.js'
 import PresentationLesson from './PresentationLesson.vue'
 
 // Emits
@@ -237,8 +238,9 @@ watch(() => props.selectedLevel, (newLevel) => {
 }, { immediate: true })
 
 const isLevelUnlocked = (level) => {
-  // 測試模式下所有等級都解鎖
+  // 測試模式或管理員下所有等級都解鎖
   if (learningState.testMode) return true
+  if (authActions.isAdmin()) return true
   if (level === 1) return true
   const previousLevel = learningState.userProgress[`level${level - 1}`]
   return previousLevel.completed === previousLevel.total
@@ -264,8 +266,9 @@ const isLessonCompleted = (lessonId) => {
 }
 
 const isLessonUnlocked = (lessonId, index) => {
-  // 測試模式下所有課程都解鎖
+  // 測試模式或管理員下所有課程都解鎖
   if (learningState.testMode) return true
+  if (authActions.isAdmin()) return true
   // 第一課總是解鎖的
   if (index === 0) return true
   

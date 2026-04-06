@@ -180,9 +180,6 @@ const goToSettings = () => {
 
 // 初始化
 onMounted(() => {
-  // 自動啟用測試模式
-  learningActions.enableTestMode()
-  
   // 註冊鍵盤事件
   window.addEventListener('keydown', handleKeyDown)
   

@@ -63,5 +63,12 @@ export const authActions = {
    */
   isLoggedIn() {
     return !!authState.user
+  },
+
+  /**
+   * 是否為管理員帳號（開通全部課程）
+   */
+  isAdmin() {
+    return authState.user?.email === 'chungshu224@gmail.com'
   }
 }

@@ -426,6 +426,7 @@ const shouldUseCompactMode = computed(() => {
 const isLevelUnlocked = computed(() => {
   return (level) => {
     if (learningState.testMode) return true
+    if (authActions.isAdmin()) return true
     if (level === 1) return true
     
     const prevLevel = level - 1
