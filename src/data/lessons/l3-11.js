@@ -84,19 +84,19 @@ export const l311Content = [
             <div class="info-card accent-amber">
               <div class="card-header"><span class="card-icon">📅</span><h4>西元前 56 年：凱撒征服高盧</h4></div>
               <ul>
-                <li>Burdigala（波爾多古名）成為重要羅馬城市</li>
-                <li>帶來先進的葡萄種植與管理技術</li>
-                <li>建立第一批有組織的葡萄園</li>
-                <li>奠定波爾多作為產區的制度基礎</li>
+                <li><strong>Burdigala</strong>（波爾多古名，源自凱爾特語）成為高盧最重要的羅馬行政中心之一</li>
+                <li><strong>Via Aquitania</strong> 羅馬大道銜接 Burdigala 至地中海，打通葡萄酒出口動脈</li>
+                <li>羅馬殖民制度引入系統化農業，建立第一批有組織的葡萄園</li>
+                <li>工程師主持排水工程，奠定礫石土壤（Gravel）高效利用的觀念基礎</li>
               </ul>
             </div>
             <div class="info-card accent-blue">
-              <div class="card-header"><span class="card-icon">📅</span><h4>西元 1–4 世紀：產業萌芽與擴張</h4></div>
+              <div class="card-header"><span class="card-icon">📅</span><h4>西元 1–4 世紀：擴張至文字見證</h4></div>
               <ul>
-                <li>引進義大利葡萄品種與釀造技術</li>
-                <li>建立完整的葡萄酒貿易網絡</li>
-                <li>波爾多葡萄酒出口至羅馬帝國各地</li>
-                <li>鞏固波爾多的葡萄酒產區地位</li>
+                <li>1–3 世紀葡萄園擴展至加龍河兩岸，形成今日五大子產區的地理雛形</li>
+                <li>普林尼《博物志》（77 年）記載 <strong>Biturica</strong> 葡萄，推估為卡本內（Cabernet）家族最早祖先</li>
+                <li>4 世紀詩人<strong>奧索尼斯</strong>（Decimus Magnus Ausonius，309–395 年）生於 Burdigala，詩作詳述釀酒生活</li>
+                <li>奧索尼斯在聖埃米利翁附近的莊園遺址，即今日<strong>歐頌酒莊（Château Ausone）</strong>命名由來</li>
               </ul>
             </div>
           </div>
@@ -106,28 +106,28 @@ export const l311Content = [
               <div class="info-card accent-green">
                 <div class="card-header"><span class="card-icon">🌱</span><h4>種植技術</h4></div>
                 <ul>
-                  <li>葡萄園規劃與管理</li>
-                  <li>土壤改良與排水系統</li>
-                  <li>品種選擇與培育</li>
-                  <li>收穫時機判斷標準</li>
+                  <li>Biturica 品種保存與推廣，奠定波爾多主力品種基因庫</li>
+                  <li>棚架整枝（Palissage）引入，提升日照吸收效率</li>
+                  <li>規則化行距種植與定期修剪規範</li>
+                  <li>辨識風土差異，選出適合不同地塊的品種</li>
                 </ul>
               </div>
               <div class="info-card accent-gold">
                 <div class="card-header"><span class="card-icon">🍶</span><h4>釀造工藝</h4></div>
                 <ul>
-                  <li>發酵容器的製作技術</li>
-                  <li>酒液澄清與過濾方法</li>
-                  <li>儲存與陳年的基本概念</li>
-                  <li>品質控制的初步標準</li>
+                  <li>大型陶罐 <strong>Dolium</strong> 用於發酵，逐漸轉向高盧式橡木桶（Barrique）儲存</li>
+                  <li>螺旋壓榨機（<strong>Prelum</strong>）引入，大幅提升出汁率與品質穩定性</li>
+                  <li>高盧木桶工藝超越羅馬本土，奠定後世橡木桶陳年優勢</li>
+                  <li>初步累積陳年對酒質影響的關鍵觀察</li>
                 </ul>
               </div>
               <div class="info-card accent-purple">
                 <div class="card-header"><span class="card-icon">🚢</span><h4>貿易體系</h4></div>
                 <ul>
-                  <li>建立地中海貿易路線</li>
-                  <li>葡萄酒包裝與運輸技術</li>
-                  <li>品質評估與定價機制</li>
-                  <li>培養專業商人階層</li>
+                  <li>加龍河與吉倫特灣成為連通大西洋的天然出口航道</li>
+                  <li>Burdigala 港成為高盧葡萄酒出口至羅馬帝國的核心集散地</li>
+                  <li>雙耳陶罐（<strong>Amphorae</strong>）標準化包裝，保障長途海運品質</li>
+                  <li>酒商公會（Negotiatores Vinari）雛形建立，商業管理制度萌芽</li>
                 </ul>
               </div>
             </div>
@@ -137,25 +137,25 @@ export const l311Content = [
         <h3>⛪ 中世紀修道院的守護</h3>
         <div class="section-intro">
           <div class="key-point-banner">
-            <p>8–12 世紀，天主教修道院兼具穩定勞動力、豐富土地資源與長遠傳承視野，成為波爾多葡萄酒業最重要的守護者與創新者。</p>
+            <p>三個關鍵里程碑，見證修道院接棒羅馬、守護並制度化波爾多葡萄酒業：<br>⬥ <strong>~750 年</strong>：聖埃米利翁修士（Émilion）定居，形成今日聖埃米利翁鎮的核心聚落 ／ <strong>1079 年</strong>：薩沃-馬若爾修道院建立（現為 UNESCO 世界遺產）／ <strong>1199 年</strong>：英王約翰授予<strong>聖埃米利翁裁判機構（Jurade de Saint-Émilion）</strong>特許狀——世界現存最古老的葡萄酒官方品質機構</p>
           </div>
           <div class="info-cards-grid two-col">
             <div class="info-card accent-purple">
-              <div class="card-header"><span class="card-icon">📿</span><h4>宗教推動力</h4></div>
+              <div class="card-header"><span class="card-icon">🏛️</span><h4>重要修道院與代表人物</h4></div>
               <ul>
-                <li><strong>聖體聖事：</strong>天主教彌撒需要大量葡萄酒，形成穩定需求</li>
-                <li><strong>修道院經濟：</strong>葡萄酒成為修道院重要收入來源</li>
-                <li><strong>朝聖貿易：</strong>聖雅各朝聖路線帶動週邊需求激增</li>
-                <li><strong>宗教保護：</strong>教會地位使葡萄園免受戰爭破壞</li>
+                <li><strong>聖埃米利翁修士（~750 年）：</strong>布列塔尼修士在洞岩隱居修行，周邊聚落逐漸形成以其命名的城鎮</li>
+                <li><strong>薩沃-馬若爾修道院（1079 年）：</strong>熱拉爾·德·科比創建，控制周邊大片葡萄園，聖雅各朝聖路線（Via Turonensis）途經此處</li>
+                <li><strong>本篤會 vs 西多會：</strong>兩大修會系統記錄不同地塊差異，建立「氣候」（Climat）風土分區概念雛形</li>
+                <li>騎士團（Templiers）莊園亦分布於波爾多，多元宗教力量共同守護產業穩定</li>
               </ul>
             </div>
             <div class="info-card accent-green">
-              <div class="card-header"><span class="card-icon">🔬</span><h4>技術革新</h4></div>
+              <div class="card-header"><span class="card-icon">🔬</span><h4>技術貢獻與制度創新</h4></div>
               <ul>
-                <li><strong>品種改良：</strong>選育更適合波爾多氣候的葡萄品種</li>
-                <li><strong>釀造技術：</strong>發展精密的發酵控制與陳年技術</li>
-                <li><strong>品質控制：</strong>建立嚴格的品質標準與檢驗制度</li>
-                <li><strong>記錄保存：</strong>詳細記錄天氣、收成與品質的歷史資料</li>
+                <li><strong>Jurade 制度（1199）：</strong>負責品質管控與出口認證，每年春秋兩次「開封」儀式延續至今，是波爾多最重要的葡萄酒文化傳統之一</li>
+                <li><strong>跨代品種選育：</strong>修道院保存優良母株，將百年觀察系統化為選育準則</li>
+                <li><strong>氣候記錄：</strong>抄寫員同步記錄每日天氣與收成品質，形成最早的氣候–品質相關性歷史資料</li>
+                <li><strong>釀造規範：</strong>手稿記錄採收期判斷、壓榨力道、窖藏溫度等細節，確保品質穩定</li>
               </ul>
             </div>
           </div>
@@ -165,50 +165,52 @@ export const l311Content = [
         <div class="section-intro">
           <div class="info-cards-grid two-col">
             <div class="info-card accent-rose">
-              <div class="card-header"><span class="card-icon">🏰</span><h4>封建制度下的發展</h4></div>
+              <div class="card-header"><span class="card-icon">📜</span><h4>波爾多特權（Privilège de Bordeaux）</h4></div>
               <ul>
-                <li><strong>領主特權：</strong>貴族控制最佳風土地塊，形成精英葡萄園格局</li>
-                <li><strong>勞動力保障：</strong>農奴制度提供穩定的葡萄園耕作勞動力</li>
-                <li><strong>技術傳承：</strong>師傅制度確保釀酒技術代代精確傳承</li>
+                <li><strong>上游酒封鎖：</strong>市政法令規定，貝爾熱拉克、卡奧爾等上游產區的葡萄酒，須等波爾多本地酒銷售完畢後才得進入市場</li>
+                <li><strong>英國優惠關稅：</strong>英王確保波爾多出口稅率低於其他法國產區，大幅強化競爭優勢</li>
+                <li>刺激品質競爭，為後世「列級莊」（Cru Classé）精英分層意識奠定觀念基礎</li>
+                <li>此特權直至法國大革命（1789 年）廢除，前後維持逾 <strong>500 年</strong></li>
               </ul>
             </div>
             <div class="info-card accent-green">
-              <div class="card-header"><span class="card-icon">📈</span><h4>商業化加速發展</h4></div>
+              <div class="card-header"><span class="card-icon">🏘️</span><h4>沙特龍商人區（Chartrons）崛起</h4></div>
               <ul>
-                <li><strong>市場擴張：</strong>葡萄酒貿易延伸至歐洲各地，建立廣泛市場</li>
-                <li><strong>品質分級萌芽：</strong>依產地品質分級，品牌概念初步形成</li>
-                <li><strong>價格差異化：</strong>優質葡萄酒獲更高溢價，推動品質競爭</li>
+                <li>波爾多城牆外北側河岸，13 世紀起聚集葡萄酒仲介商（Négociant）</li>
+                <li>商人在港口附近建造地下酒窖，兼具儲存、熟成與展示功能</li>
+                <li>荷蘭（弗蘭芒）、愛爾蘭、英國商人定居，形成多元文化的外資商業社區</li>
+                <li>沙特龍商業模式成為 18–19 世紀波爾多全球貿易的制度骨幹</li>
               </ul>
             </div>
           </div>
           <div class="subsection-block">
-            <h4>🏆 中世紀留下的三大成就</h4>
+            <h4>🏆 中世紀波爾多的三大代表性成就</h4>
             <div class="info-cards-grid three-col">
               <div class="info-card accent-blue">
-                <div class="card-header"><span class="card-icon">🍇</span><h4>葡萄品種發展</h4></div>
+                <div class="card-header"><span class="card-icon">🍾</span><h4>克萊雷葡萄酒（Claret）</h4></div>
                 <ul>
-                  <li>選育適合波爾多氣候的品種</li>
-                  <li>嘗試不同品種的混釀技術</li>
-                  <li>建立品種選育的科學方法</li>
-                  <li>保存珍貴的品種基因資源</li>
+                  <li>中世紀外銷英國的主力產品，顏色介於紅白之間（淡紅色），比現代波爾多紅酒淡許多</li>
+                  <li>採收後數月即裝船出口，以新鮮果香和清爽口感著稱</li>
+                  <li>英語「Claret」一詞沿用至今，仍代指波爾多紅葡萄酒</li>
+                  <li>從 Claret 到現代深色紅酒的演變，反映 500 年釀造技術與市場偏好的歷史進程</li>
                 </ul>
               </div>
               <div class="info-card accent-amber">
-                <div class="card-header"><span class="card-icon">🏭</span><h4>釀造技術進步</h4></div>
+                <div class="card-header"><span class="card-icon">🛢️</span><h4>波爾多桶（Tonneau）標準化</h4></div>
                 <ul>
-                  <li>精確的發酵控制方法</li>
-                  <li>改進儲存與陳年技術</li>
-                  <li>開發澄清過濾工藝</li>
-                  <li>建立品質檢驗標準程序</li>
+                  <li>中世紀確立 <strong>Tonneau</strong>（900 升 ＝ 4 Barrique）為標準貿易計量單位</li>
+                  <li>後演化為現代 <strong>Barrique Bordelaise</strong>（225 升），成為全球酒桶容量標準的起源</li>
+                  <li>桶型標準化保障計量公正，建立可信賴的國際貿易基礎</li>
+                  <li>木桶製作業（Tonnellerie）在波爾多成為重要支柱工業，延續至今</li>
                 </ul>
               </div>
               <div class="info-card accent-purple">
-                <div class="card-header"><span class="card-icon">📚</span><h4>知識體系建立</h4></div>
+                <div class="card-header"><span class="card-icon">📊</span><h4>13 世紀貿易規模高峰</h4></div>
                 <ul>
-                  <li>編寫第一批釀造手冊</li>
-                  <li>建立釀酒日曆與作業指南</li>
-                  <li>記錄大量氣候與收成數據</li>
-                  <li>形成葡萄酒文化理論基礎</li>
+                  <li>年均出口量達 <strong>80,000–100,000 噸桶</strong>，是當時歐洲最大規模的酒類貿易</li>
+                  <li>葡萄酒佔波爾多城市收入約 <strong>60%</strong>，驅動整個地區的經濟繁榮</li>
+                  <li>每年秋季英王派遣定期船隊（Wine Fleet）直航倫敦・布里斯托</li>
+                  <li>中世紀英國人均葡萄酒消費遠超今日水準，波爾多是其最重要供應來源</li>
                 </ul>
               </div>
             </div>
