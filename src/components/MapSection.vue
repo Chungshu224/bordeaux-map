@@ -96,10 +96,10 @@
       <button class="btn-contours" @click="toggleContours" v-if="map">
         {{ contoursEnabled ? '隱藏等高線' : '顯示等高線' }}
       </button>
-      <button class="btn-geology" @click="toggleGeology" v-if="map">
+      <button class="btn-geology" @click="toggleGeology" v-if="map && !isPhoneDevice">
         {{ geologyEnabled ? '隱藏地質' : '顯示地質' }}
       </button>
-      <div v-if="map && geologyEnabled" class="soil-toggle-panel">
+      <div v-if="map && geologyEnabled && !isPhoneDevice" class="soil-toggle-panel">
         <div
           v-for="item in geologyLayerConfig"
           :key="item.id"
@@ -171,6 +171,7 @@ import {
   isLikelyDevHost
 } from '@/utils/getMapboxToken'
 import { supabase } from '@/lib/supabaseClient.js'
+import { useDeviceDetection } from '@/utils/deviceDetection.js'
 
 // 接收來自父組件的屬性
 const props = defineProps({
@@ -201,6 +202,7 @@ const terrainEnabled = ref(false)
 const contoursEnabled = ref(false)
 const geologyEnabled = ref(false)
 const geologyLoaded = ref(false)
+const { isMobile: isPhoneDevice } = useDeviceDetection()
 const soilVisibility = ref({
   limestone: true,
   gravel: true,
@@ -662,8 +664,7 @@ const toggleContours = () => {
     }
     
     console.log('[等高線] 💡 提示: 請放大到 zoom 9 以上查看等高線')
-    console.log('[等高線] 💡 等高線會隨縮放級別自動調整密度')
-    console.log('[等高線] 💡 橙色=一般等高線，亮黃橙=5米間隔，金黃色=10米間隔')
+    console.log('[等高線] 💡 金黃=100m倍數，橙黃=50m倍數，橙色=其餘；每10公尺標示高度（公尺）')
   } else {
     // 隱藏等高線圖層
     if (contoursLayer) {
@@ -981,6 +982,54 @@ const getCurrentAOCGeomJSON = () => {
   return null
 }
 
+// ── AOC 地質遮罩：僅顯示 AOC 範圍內的地質層 ──────────────────────
+const updateGeologyAOCMask = () => {
+  if (!map) return
+
+  if (!geologyEnabled.value || !props.activeAOC?.aoc) {
+    if (map.getLayer('geology-aoc-mask')) {
+      map.setLayoutProperty('geology-aoc-mask', 'visibility', 'none')
+    }
+    return
+  }
+
+  let aocGeoJSON = null
+  for (const [path, data] of geojsonCache.entries()) {
+    if (path.endsWith('/' + props.activeAOC.aoc)) {
+      aocGeoJSON = data
+      break
+    }
+  }
+  if (!aocGeoJSON || !aocGeoJSON.features?.length) return
+
+  let maskData
+  try {
+    maskData = turf.mask(aocGeoJSON)
+  } catch (e) {
+    console.warn('[地質遮罩] turf.mask 失敗', e)
+    return
+  }
+
+  if (map.getSource('geology-aoc-mask-src')) {
+    map.getSource('geology-aoc-mask-src').setData(maskData)
+    if (map.getLayer('geology-aoc-mask')) {
+      map.setLayoutProperty('geology-aoc-mask', 'visibility', 'visible')
+    }
+  } else {
+    map.addSource('geology-aoc-mask-src', { type: 'geojson', data: maskData })
+    const insertBefore = map.getLayer('aoc-fill') ? 'aoc-fill' : undefined
+    map.addLayer({
+      id: 'geology-aoc-mask',
+      type: 'fill',
+      source: 'geology-aoc-mask-src',
+      paint: {
+        'fill-color': '#0d0d0d',
+        'fill-opacity': 0.85
+      }
+    }, insertBefore)
+  }
+}
+
 // ── 地質圖層點擊互動（只註冊一次）──────────────────────────────
 const registerGeologyClickHandlers = () => {
   if (!map || geologyClicksRegistered) return
@@ -1104,6 +1153,11 @@ const toggleGeology = async () => {
     geologyEnabled.value = !geologyEnabled.value
     setAOCFillTransparent(geologyEnabled.value)
     setGeologyVisibility(geologyEnabled.value)
+    if (geologyEnabled.value) {
+      updateGeologyAOCMask()
+    } else if (map.getLayer('geology-aoc-mask')) {
+      map.setLayoutProperty('geology-aoc-mask', 'visibility', 'none')
+    }
     console.log('[地質圖層]', geologyEnabled.value ? '已顯示' : '已隱藏')
   } catch (err) {
     console.error('載入地質圖層失敗:', err)
@@ -1244,20 +1298,16 @@ const initMap = async (retry = 0) => {
           },
           'paint': {
             'line-color': [
-              'step',
-              ['get', 'index'],
-              '#FF6B00', // 主要等高線（橙色）
-              5, '#FFAA00',  // 每5條主線（亮黃橙）
-              10, '#FFD700'  // 每10條特別標記（金黃色）
+              'case',
+              ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFD700',
+              ['==', ['%', ['to-number', ['get', 'ele']], 50], 0], '#FFAA00',
+              '#FF7733'
             ],
             'line-width': [
-              'interpolate',
-              ['linear'],
-              ['zoom'],
-              9, 0.5,
-              11, 1,
-              13, 1.5,
-              16, 2.5
+              'case',
+              ['==', ['%', ['to-number', ['get', 'ele']], 50], 0],
+              ['interpolate', ['linear'], ['zoom'], 9, 0.9, 11, 1.6, 13, 2.2, 16, 3],
+              ['interpolate', ['linear'], ['zoom'], 9, 0.3, 11, 0.7, 13, 1, 16, 1.5]
             ],
             'line-opacity': [
               'interpolate',
@@ -1308,10 +1358,10 @@ const initMap = async (retry = 0) => {
               14, 1
             ]
           },
-          'filter': ['>=', ['get', 'index'], 5], // 只顯示每5米及以上的標籤
-          'minzoom': 11 // 標籤在zoom 11以上顯示
+          'filter': ['==', ['%', ['to-number', ['get', 'ele']], 10], 0], // 每10公尺顯示標籤
+          'minzoom': 10 // 標籤在zoom 10以上顯示
         })
-        console.log('[等高線] ✅ contour-labels 圖層已添加 (minzoom: 11, 默認隱藏)')
+        console.log('[等高線] ✅ contour-labels 圖層已添加 (minzoom: 10, 每10m顯示標籤+公尺單位)')
         console.log('[等高線] ====================================')
       }
       
@@ -1519,11 +1569,21 @@ const removeChateauxMarkers = () => {
 }
 
 // 監聽 AOC 變更
-watch(() => props.activeAOC, (newAOC, oldAOC) => {
+watch(() => props.activeAOC, async (newAOC, oldAOC) => {
   if (newAOC.aoc !== oldAOC?.aoc) {
-    showAOCGeojson(newAOC.group, newAOC.aoc)
+    await showAOCGeojson(newAOC.group, newAOC.aoc)
+    if (geologyEnabled.value && map) {
+      updateGeologyAOCMask()
+    }
   }
 }, { deep: true })
+
+// 手機裝置不支援地質圖層，自動關閉
+watch(isPhoneDevice, (isPhone) => {
+  if (isPhone && geologyEnabled.value && map) {
+    toggleGeology()
+  }
+})
 
 onMounted(async () => {
   // 確保 DOM 已渲染
