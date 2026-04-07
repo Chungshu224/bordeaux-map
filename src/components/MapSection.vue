@@ -246,6 +246,78 @@ const SOIL_LABELS = {
   mixed:     { zh: '混合沉積',  color: '#ADFF2F' },
 }
 
+// 土壤 × 葡萄品種親和性資料
+const GRAPE_AFFINITIES = {
+  limestone: {
+    grapes: [
+      { zh: '梅洛', en: 'Merlot', stars: 3,
+        reason: '石灰岩保水性佳，梅洛根系深能吸收深層礦物質，演繹豐腴圓潤帶石灰良液感' },
+      { zh: '卡本內弗朗', en: 'Cab. Franc', stars: 2,
+        reason: '石灰岩高酸度支架讓品種花香與清展感充分發揮，呈現紅果光輝' }
+    ],
+    regionNote: '右岸代表土壤 · 聖愛美濃、波美侯'
+  },
+  gravel: {
+    grapes: [
+      { zh: '卡本內蘇維濃', en: 'Cab. Sauvignon', stars: 3,
+        reason: '礫石排水佳且升溫快，功助卡本內完全成熟，單寧結構強、深色莓果飽滿' },
+      { zh: '梅洛', en: 'Merlot', stars: 2,
+        reason: '礫石中嵌入黏土夾層賦予豐腴口感，為混釀提供圓潤平衡' }
+    ],
+    regionNote: '左岸代表土壤 · 梅多克、瑪歌、波雅克'
+  },
+  clay: {
+    grapes: [
+      { zh: '梅洛', en: 'Merlot', stars: 3,
+        reason: '黏土保水保肥，梅洛早熟特性在此達最佳狀態，酒體豐厚飽滿圓融' },
+      { zh: '卡本內弗朗', en: 'Cab. Franc', stars: 2,
+        reason: '黏土上展現紅果與辛香，骨架完整且耐陳年' }
+    ],
+    regionNote: '波美侯藍黏土 · Pétrus 的秘密'
+  },
+  sand: {
+    grapes: [
+      { zh: '梅洛', en: 'Merlot', stars: 2,
+        reason: '砂土溫暖貧瘠，梅洛早熟特性適應最佳，風格清鮮輕盈' },
+      { zh: '卡本內弗朗', en: 'Cab. Franc', stars: 2,
+        reason: '砂土上的 Cab Franc 香氣精緻，花果風味突出、酒體嫩滑' }
+    ],
+    regionNote: '河岸低地 · Côtes 地區'
+  },
+  mixed: {
+    grapes: [
+      { zh: '梅洛', en: 'Merlot', stars: 2,
+        reason: '礫石黏土交雜，梅洛展現多層次結構與複雜度' },
+      { zh: '卡本內蘇維濃', en: 'Cab. Sauvignon', stars: 2,
+        reason: '混合土壤平衡熱量與礦物感，支持傳統多品種混釀風格' }
+    ],
+    regionNote: '複雜地形 · 波爾多混釀傳統'
+  }
+}
+
+// 生成土壤品種推薦 HTML（同步，無 loading）
+const renderGrapeRecommendation = (soilType) => {
+  const aff = GRAPE_AFFINITIES[soilType]
+  if (!aff) return ''
+  const starHtml = (n) =>
+    `<span class="grape-stars stars-${n}">${'★'.repeat(n)}${'☆'.repeat(3 - n)}</span>`
+  const cards = aff.grapes.map(g => `
+    <div class="grape-card">
+      <div class="grape-name-row">
+        <span class="grape-name-zh">${g.zh}</span>
+        <span class="grape-name-en">${g.en}</span>
+        ${starHtml(g.stars)}
+      </div>
+      <div class="grape-reason">${g.reason}</div>
+    </div>`).join('')
+  return `
+    <div class="geology-grape-section">
+      <div class="grape-section-title">🍇 最適葡萄品種</div>
+      ${cards}
+      <div class="grape-region-note">${aff.regionNote}</div>
+    </div>`
+}
+
 // 酒莊相關狀態
 const currentMarkers = ref([])
 const showingChateaux = ref(false)
@@ -1075,6 +1147,7 @@ const registerGeologyClickHandlers = () => {
           ${notationHtml}
         </div>
         ${descHtml}
+        ${renderGrapeRecommendation(item.id)}
         <div class="geology-popup-coords">${lat.toFixed(5)}°N / ${Math.abs(lng).toFixed(5)}°${lng < 0 ? 'W' : 'E'}</div>
         ${hasActiveAOC && supabase ? `<div class="geology-popup-analyze"><button class="btn-analyze-aoc" id="geo-analyze-btn">🔍 分析「${aocName}」土壤分布</button><div id="geo-aoc-result"></div></div>` : ''}
         <div class="geology-popup-supa" id="geo-supa-result"><span class="supa-loading">⏳ 查詢 PostGIS…</span></div>
@@ -2797,6 +2870,65 @@ onUnmounted(() => {
   font-size: 11px;
   color: #555;
   min-width: 36px;
+  text-align: right;
+}
+
+/* 土壤 × 品種推薦 */
+.geology-grape-section {
+  background: linear-gradient(135deg, #f9f3e8 0%, #fdf6ee 100%);
+  border: 1px solid #e8d5b0;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin: 6px 0;
+}
+.grape-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b3a10;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+.grape-card {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #e0c898;
+}
+.grape-card:last-of-type {
+  margin-bottom: 3px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.grape-name-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 2px;
+}
+.grape-name-zh {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3d1a00;
+}
+.grape-name-en {
+  font-size: 10px;
+  color: #888;
+  font-style: italic;
+  flex: 1;
+}
+.grape-stars { font-size: 11px; letter-spacing: -1px; }
+.grape-stars.stars-3 { color: #c47f00; }
+.grape-stars.stars-2 { color: #a09260; }
+.grape-stars.stars-1 { color: #bbb; }
+.grape-reason {
+  font-size: 10px;
+  color: #6b5030;
+  line-height: 1.45;
+}
+.grape-region-note {
+  font-size: 10px;
+  color: #aaa;
+  margin-top: 5px;
+  font-style: italic;
   text-align: right;
 }
 </style>
