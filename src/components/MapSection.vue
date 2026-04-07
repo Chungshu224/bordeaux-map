@@ -170,6 +170,7 @@ import {
   getMapboxStyleUrl,
   isLikelyDevHost
 } from '@/utils/getMapboxToken'
+import { supabase } from '@/lib/supabaseClient.js'
 
 // 接收來自父組件的屬性
 const props = defineProps({
@@ -223,6 +224,8 @@ const defaultAOCFillOpacity = 0.1
 const activeAocBounds = ref(null)
 let resizeHandler = null
 let infoSheetTouchStartY = 0
+let soilPopup = null
+let geologyClicksRegistered = false
 
 const geologyLayerConfig = [
   { id: 'limestone', label: '石灰岩', path: '/geojson/geology/Limestone.geojson', color: '#00E5FF', lineColor: '#007C91' },
@@ -231,6 +234,15 @@ const geologyLayerConfig = [
   { id: 'sand', label: '砂為主', path: '/geojson/geology/Sand.geojson', color: '#FFD700', lineColor: '#8A7300' },
   { id: 'mixed', label: '混合沉積物', path: '/geojson/geology/Mixed.geojson', color: '#ADFF2F', lineColor: '#4D7A00' }
 ]
+
+// 土壤類型中文對照（供彈窗使用）
+const SOIL_LABELS = {
+  limestone: { zh: '石灰岩',    color: '#00E5FF' },
+  gravel:    { zh: '礫石/卵石', color: '#FF8C00' },
+  clay:      { zh: '黏土',      color: '#8B4513' },
+  sand:      { zh: '砂土',      color: '#FFD700' },
+  mixed:     { zh: '混合沉積',  color: '#ADFF2F' },
+}
 
 // 酒莊相關狀態
 const currentMarkers = ref([])
@@ -952,6 +964,132 @@ const loadGeologyLayers = async () => {
   }
 
   geologyLoaded.value = true
+  registerGeologyClickHandlers()
+}
+
+// ── 取得當前 AOC 的 geometry JSON 字串（用於 get_soils_in_aoc RPC）──
+const getCurrentAOCGeomJSON = () => {
+  if (!props.activeAOC?.aoc) return null
+  for (const [path, data] of geojsonCache.entries()) {
+    if (path.endsWith('/' + props.activeAOC.aoc)) {
+      const features = data.features || []
+      if (features.length > 0) {
+        return JSON.stringify(features[0].geometry)
+      }
+    }
+  }
+  return null
+}
+
+// ── 地質圖層點擊互動（只註冊一次）──────────────────────────────
+const registerGeologyClickHandlers = () => {
+  if (!map || geologyClicksRegistered) return
+
+  geologyLayerConfig.forEach(item => {
+    const fillId = `geology-${item.id}-fill`
+    const soilInfo = SOIL_LABELS[item.id]
+
+    map.on('mouseenter', fillId, () => {
+      if (geologyEnabled.value && soilVisibility.value[item.id]) {
+        map.getCanvas().style.cursor = 'crosshair'
+      }
+    })
+    map.on('mouseleave', fillId, () => {
+      map.getCanvas().style.cursor = ''
+    })
+
+    map.on('click', fillId, async (e) => {
+      if (!geologyEnabled.value || !soilVisibility.value[item.id]) return
+      e.stopPropagation()
+
+      const { lng, lat } = e.lngLat
+      const feature = e.features?.[0]
+      const props_f = feature?.properties || {}
+
+      // 關閉舊彈窗
+      if (soilPopup) { soilPopup.remove(); soilPopup = null }
+
+      // 構建彈窗 DOM
+      const popupEl = document.createElement('div')
+      popupEl.className = 'geology-popup'
+      const notationHtml = props_f.NOTATION
+        ? `<span class="geology-popup-notation">${props_f.NOTATION}</span>` : ''
+      const descHtml = props_f.DESCR
+        ? `<div class="geology-popup-desc">${props_f.DESCR.substring(0, 130)}${props_f.DESCR.length > 130 ? '…' : ''}</div>` : ''
+      const hasActiveAOC = !!props.activeAOC?.aoc
+      const aocName = hasActiveAOC
+        ? props.activeAOC.aoc.replace('_AOC.geojson', '').replace(/_/g, ' ') : ''
+
+      popupEl.innerHTML = `
+        <div class="geology-popup-header">
+          <span class="soil-type-badge" style="background:${soilInfo.color};color:${['#FFD700','#ADFF2F','#00E5FF'].includes(soilInfo.color)?'#222':'#fff'}">${soilInfo.zh}</span>
+          ${notationHtml}
+        </div>
+        ${descHtml}
+        <div class="geology-popup-coords">${lat.toFixed(5)}°N / ${Math.abs(lng).toFixed(5)}°${lng < 0 ? 'W' : 'E'}</div>
+        ${hasActiveAOC && supabase ? `<div class="geology-popup-analyze"><button class="btn-analyze-aoc" id="geo-analyze-btn">🔍 分析「${aocName}」土壤分布</button><div id="geo-aoc-result"></div></div>` : ''}
+        <div class="geology-popup-supa" id="geo-supa-result"><span class="supa-loading">⏳ 查詢 PostGIS…</span></div>
+      `
+
+      soilPopup = new mapboxgl.Popup({ maxWidth: '340px', offset: 10 })
+        .setLngLat([lng, lat])
+        .setDOMContent(popupEl)
+        .addTo(map)
+
+      // ① 非同步：呼叫 get_soil_at_point
+      if (supabase) {
+        try {
+          const { data, error } = await supabase.rpc('get_soil_at_point', { lng, lat })
+          const resultEl = popupEl.querySelector('#geo-supa-result')
+          if (!resultEl) return
+          if (error || !data || data.length === 0) {
+            resultEl.innerHTML = '<span class="supa-note">（PostGIS 尚未建立索引，顯示本機資料）</span>'
+          } else {
+            const rows = data.map(d =>
+              `<tr><td style="color:${SOIL_LABELS[d.soil_type]?.color||'#ccc'};font-weight:600">${SOIL_LABELS[d.soil_type]?.zh||d.soil_type}</td><td class="notation-cell">${d.notation||''}</td></tr>`
+            ).join('')
+            resultEl.innerHTML = `<div class="supa-confirmed">✅ PostGIS 已確認</div><table class="supa-table"><tbody>${rows}</tbody></table>`
+          }
+        } catch {
+          const resultEl = popupEl.querySelector('#geo-supa-result')
+          if (resultEl) resultEl.innerHTML = '<span class="supa-note">（無法連線 Supabase）</span>'
+        }
+      } else {
+        const resultEl = popupEl.querySelector('#geo-supa-result')
+        if (resultEl) resultEl.innerHTML = '<span class="supa-note">（未設定 Supabase）</span>'
+      }
+
+      // ② AOC 土壤分析按鈕（選點查詢）
+      const aocBtn = popupEl.querySelector('#geo-analyze-btn')
+      if (aocBtn) {
+        aocBtn.addEventListener('click', async () => {
+          aocBtn.disabled = true
+          aocBtn.textContent = '分析中…'
+          const resultEl = popupEl.querySelector('#geo-aoc-result')
+          try {
+            const geomStr = getCurrentAOCGeomJSON()
+            if (!geomStr) { aocBtn.textContent = '無法取得 AOC 資料'; return }
+            const { data, error } = await supabase.rpc('get_soils_in_aoc', { aoc_geojson: geomStr })
+            if (error || !data || data.length === 0) {
+              resultEl.innerHTML = '<span class="supa-note">查無資料（PostGIS 尚未匯入）</span>'
+              aocBtn.textContent = '查無資料'
+            } else {
+              aocBtn.style.display = 'none'
+              const bars = data.map(d => {
+                const col = SOIL_LABELS[d.soil_type]?.color || '#aaa'
+                const zh  = SOIL_LABELS[d.soil_type]?.zh || d.soil_type
+                return `<div class="aoc-soil-row"><span class="aoc-soil-label" style="background:${col};color:${['#FFD700','#ADFF2F','#00E5FF'].includes(col)?'#222':'#fff'}">${zh}</span><div class="aoc-soil-bar-wrap"><div class="aoc-soil-bar" style="width:${Math.min(d.area_pct,100)}%"></div></div><span class="aoc-soil-pct">${d.area_pct}%</span></div>`
+              }).join('')
+              resultEl.innerHTML = `<div class="aoc-soil-title">土壤分布：</div><div class="aoc-soil-chart">${bars}</div>`
+            }
+          } catch {
+            aocBtn.textContent = '查詢失敗'
+          }
+        })
+      }
+    })
+  })
+  geologyClicksRegistered = true
 }
 
 const toggleGeology = async () => {
@@ -2456,6 +2594,150 @@ onUnmounted(() => {
   font-size: 1.1rem;
   font-style: italic;
   margin-left: 5px;
+}
+
+/* ── 地質彈窗（Mapbox GL Popup 內容） ───────────────────── */
+/* 注意：Mapbox popup 的 DOM 不在 scoped 範圍，改用 :global */
+</style>
+
+<style>
+/* geology-popup 全域樣式（Mapbox popup DOM） */
+.geology-popup {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 13px;
+  color: #1a1a2e;
+  min-width: 220px;
+}
+.geology-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.soil-type-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.geology-popup-notation {
+  font-size: 11px;
+  color: #666;
+  font-family: monospace;
+  background: #f0f0f0;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.geology-popup-desc {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  border-left: 3px solid #ddd;
+  padding-left: 6px;
+}
+.geology-popup-coords {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+.geology-popup-supa {
+  border-top: 1px solid #eee;
+  padding-top: 6px;
+  margin-top: 4px;
+}
+.supa-loading {
+  color: #999;
+  font-size: 11px;
+}
+.supa-note {
+  color: #aaa;
+  font-size: 11px;
+  font-style: italic;
+}
+.supa-confirmed {
+  font-size: 11px;
+  color: #2d7a2d;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.supa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.supa-table td {
+  padding: 2px 4px;
+}
+.notation-cell {
+  font-family: monospace;
+  color: #888;
+}
+
+/* AOC 土壤分析 */
+.geology-popup-analyze {
+  margin-top: 8px;
+  border-top: 1px dashed #ccc;
+  padding-top: 8px;
+}
+.btn-analyze-aoc {
+  background: linear-gradient(135deg, #4a1060, #8b1e3f);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 6px;
+  transition: opacity 0.2s;
+}
+.btn-analyze-aoc:hover { opacity: 0.9; }
+.btn-analyze-aoc:disabled { opacity: 0.5; cursor: wait; }
+
+.aoc-soil-title {
+  font-size: 11px;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.aoc-soil-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.aoc-soil-label {
+  display: inline-block;
+  min-width: 64px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+.aoc-soil-bar-wrap {
+  flex: 1;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.aoc-soil-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #8b1e3f, #d4527a);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+.aoc-soil-pct {
+  font-size: 11px;
+  color: #555;
+  min-width: 36px;
+  text-align: right;
 }
 </style>
 // oxlint-disable-next-line
