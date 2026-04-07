@@ -57,7 +57,7 @@
       <div v-if="regionInfo" class="region-info-content">
         <div class="info-header">
           <div>
-            <b>{{ regionInfo.name }}</b> <span class="region-type">({{ regionInfo.type }})</span><span v-if="regionInfo.hectare" class="region-hectare"> - {{ regionInfo.hectare }} 公頃</span>
+            <b>{{ regionInfo.name }}</b> <span class="region-type">({{ regionInfo.type }})</span><span v-if="aocComputedHectare || regionInfo.hectare" class="region-hectare"> - {{ aocComputedHectare || regionInfo.hectare }} 公頃</span>
           </div>
           <div class="style-badges">
             <div v-for="style in Array.isArray(regionInfo.style) ? regionInfo.style : [regionInfo.style]" 
@@ -224,9 +224,11 @@ const mobileInfoSheetState = ref('peek')
 const geojsonCache = new Map()
 const defaultAOCFillOpacity = 0.1
 const activeAocBounds = ref(null)
+const aocComputedHectare = ref(null)  // turf.js 計算的精確面積（公頃）
 let resizeHandler = null
 let infoSheetTouchStartY = 0
 let soilPopup = null
+let aocClickPopup = null
 let geologyClicksRegistered = false
 
 const geologyLayerConfig = [
@@ -418,6 +420,7 @@ const showAOCGeojson = async (groupName, aocFile) => {
   hasChateauxFile.value = false
   removeChateauxMarkers()
   showingChateaux.value = false
+  aocComputedHectare.value = null  // 重置面積，等 GeoJSON 載入後重算
 
   if (!map) return
 
@@ -480,6 +483,15 @@ const showAOCGeojson = async (groupName, aocFile) => {
       }
       
       geojsonCache.set(geojsonPath, geojson)
+    }
+
+    // 計算精確面積（turf.js，公頃）
+    try {
+      const areaSqm = turf.area(geojson) // 平方公尺
+      // 轉換公頃並取整至 10 公頃
+      aocComputedHectare.value = (Math.round(areaSqm / 100000) * 10).toLocaleString('zh-TW')
+    } catch (e) {
+      aocComputedHectare.value = null
     }
 
     // 3. 優化圖層處理 - 圖層復用
@@ -1214,6 +1226,62 @@ const registerGeologyClickHandlers = () => {
   geologyClicksRegistered = true
 }
 
+// ── 地圖點選偵測 AOC（呼叫 PostGIS get_aoc_at_point）────────────
+const registerAocClickHandler = () => {
+  if (!map || !supabase) return
+
+  map.on('click', async (e) => {
+    // 已被地質圖層點擊攔截（e.defaultPrevented 或地質已拿走事件）則跳過
+    // 若地質模式開啟且點在地質圖層上，geology click handler 已呼叫 stopPropagation
+    // 此 general click 只處理「非地質」點擊
+    const { lng, lat } = e.lngLat
+
+    if (aocClickPopup) { aocClickPopup.remove(); aocClickPopup = null }
+
+    let data, error
+    try {
+      ;({ data, error } = await supabase.rpc('get_aoc_at_point', {
+        p_lng: lng,
+        p_lat: lat
+      }))
+    } catch {
+      return
+    }
+
+    if (error || !data || data.length === 0) return
+
+    // 建立 popup 內容
+    const rows = data.map((d, i) => {
+      const aocLabel = d.aoc_id
+        .replace('_AOC', '')
+        .replace(/-/g, ' ')
+        .replace(/_/g, ' ')
+      const areaText = d.area_ha
+        ? `${d.area_ha.toLocaleString('zh-TW')} 公頃`
+        : ''
+      const groupLabel = d.group_name.replace('-', ' / ')
+      const isSmallest = i === 0
+      return `<div class="aoc-point-row${isSmallest ? ' aoc-point-primary' : ''}">
+        <span class="aoc-point-name">${aocLabel}</span>
+        <span class="aoc-point-meta">${groupLabel}${areaText ? ' · ' + areaText : ''}</span>
+      </div>`
+    }).join('')
+
+    const popupEl = document.createElement('div')
+    popupEl.className = 'aoc-point-popup'
+    popupEl.innerHTML = `
+      <div class="aoc-point-header">📍 點選位置所在 AOC</div>
+      ${rows}
+      <div class="aoc-point-coords">${lat.toFixed(5)}°N / ${Math.abs(lng).toFixed(5)}°${lng < 0 ? 'W' : 'E'}</div>
+    `
+
+    aocClickPopup = new mapboxgl.Popup({ maxWidth: '320px', offset: 10, closeButton: true })
+      .setLngLat([lng, lat])
+      .setDOMContent(popupEl)
+      .addTo(map)
+  })
+}
+
 const toggleGeology = async () => {
   if (!map) return
 
@@ -1440,6 +1508,9 @@ const initMap = async (retry = 0) => {
       
       // 預設顯示波爾多整體
       await showAOCGeojson('Regional', 'Bordeaux_AOC.geojson')
+
+      // 註冊 AOC 點選偵測（PostGIS get_aoc_at_point）
+      registerAocClickHandler()
 
       map.on('moveend', () => {
         if (geologyEnabled.value) {
@@ -2930,6 +3001,48 @@ onUnmounted(() => {
   margin-top: 5px;
   font-style: italic;
   text-align: right;
+}
+
+/* AOC 點選偵測 popup */
+.aoc-point-popup {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 13px;
+  color: #1a1a2e;
+  min-width: 200px;
+}
+.aoc-point-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7a1e3f;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+.aoc-point-row {
+  padding: 4px 0;
+  border-bottom: 1px solid #f0e8d5;
+}
+.aoc-point-row:last-of-type { border-bottom: none; }
+.aoc-point-primary .aoc-point-name {
+  font-weight: 700;
+  color: #8b1e3f;
+}
+.aoc-point-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+.aoc-point-meta {
+  display: block;
+  font-size: 11px;
+  color: #888;
+  margin-top: 1px;
+}
+.aoc-point-coords {
+  font-size: 10px;
+  color: #bbb;
+  margin-top: 8px;
+  font-family: monospace;
 }
 </style>
 // oxlint-disable-next-line
