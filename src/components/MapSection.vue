@@ -679,7 +679,7 @@ const toggleContours = () => {
 }
 
 const syncResponsiveLayout = () => {
-    const nextIsMobile = window.innerWidth <= 9999
+    const nextIsMobile = window.innerWidth <= 768
     const changed = nextIsMobile !== isMobile.value
     isMobile.value = nextIsMobile
 
