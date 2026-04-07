@@ -96,10 +96,10 @@
       <button class="btn-contours" @click="toggleContours" v-if="map">
         {{ contoursEnabled ? '隱藏等高線' : '顯示等高線' }}
       </button>
-      <button class="btn-geology" @click="toggleGeology" v-if="map && !isMobile">
+      <button class="btn-geology" @click="toggleGeology" v-if="map">
         {{ geologyEnabled ? '隱藏地質' : '顯示地質' }}
       </button>
-      <div v-if="map && geologyEnabled && !isMobile" class="soil-toggle-panel">
+      <div v-if="map && geologyEnabled" class="soil-toggle-panel">
         <div
           v-for="item in geologyLayerConfig"
           :key="item.id"
@@ -679,7 +679,7 @@ const toggleContours = () => {
 }
 
 const syncResponsiveLayout = () => {
-    const nextIsMobile = window.innerWidth <= 768
+    const nextIsMobile = window.innerWidth <= 9999
     const changed = nextIsMobile !== isMobile.value
     isMobile.value = nextIsMobile
 
