@@ -798,5 +798,95 @@
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "聖伊波利特大型莊園，石灰黏土，Merlot 主導，由美國投資者打造，風格豐沛圓潤，性價比佳。",
     "image": ""
+  },
+  {
+    "name": "Château Beau-Séjour Bécot",
+    "coordinates": [
+      -0.1678,
+      44.8958
+    ],
+    "rank": "特級B級 (Premier Grand Cru Classé B)",
+    "description": "高原西側石灰岩台地，Merlot 與 Cab. Franc 混釀，結構飽滿，果香豐富，由 Bécot 家族管理已逾 40 年。",
+    "image": ""
+  },
+  {
+    "name": "Château Beauséjour Héritiers Duffau-Lagarrosse",
+    "coordinates": [
+      -0.1558,
+      44.8868
+    ],
+    "rank": "特級B級 (Premier Grand Cru Classé B)",
+    "description": "緊鄰 Ausone 坡地，純石灰岩土壤，Merlot 主導，產量極低，風格精緻純粹，為聖愛美濃最具靈魂的傳統名莊之一。",
+    "image": ""
+  },
+  {
+    "name": "Château Bélair-Monange",
+    "coordinates": [
+      -0.1518,
+      44.8872
+    ],
+    "rank": "特級B級 (Premier Grand Cru Classé B)",
+    "description": "緊鄰 Ausone 的陡峭坡地，石灰岩地層深厚，Merlot 主導，岩礦感強烈，由 Moueix 家族以生物動力農法精心管理。",
+    "image": ""
+  },
+  {
+    "name": "Château Canon La Gaffelière",
+    "coordinates": [
+      -0.1618,
+      44.8842
+    ],
+    "rank": "特級B級 (Premier Grand Cru Classé B)",
+    "description": "坡腳砂質黏土地帶，Cab. Franc 比例特別高，花香馥郁，結構細緻優雅，由 Von Neipperg 伯爵家族管理。",
+    "image": ""
+  },
+  {
+    "name": "Château Larcis Ducasse",
+    "coordinates": [
+      -0.1428,
+      44.8852
+    ],
+    "rank": "特級B級 (Premier Grand Cru Classé B)",
+    "description": "東南坡地石灰岩，緊鄰 Pavie，Merlot 主導，採生物動力農法，精緻而深邃，近年評價大幅躍升。",
+    "image": ""
+  },
+  {
+    "name": "Château Pavie Macquin",
+    "coordinates": [
+      -0.1468,
+      44.8858
+    ],
+    "rank": "特級B級 (Premier Grand Cru Classé B)",
+    "description": "東側台地延伸坡，石灰黏土，Merlot 主導，採生物動力農法，風格豐厚，與 Pavie 相鄰，由 Nicolas Thienpont 管理。",
+    "image": ""
+  },
+  {
+    "name": "Château Trottevieille",
+    "coordinates": [
+      -0.1438,
+      44.8962
+    ],
+    "rank": "特級B級 (Premier Grand Cru Classé B)",
+    "description": "東北高原石灰岩台地，Merlot 主導，歷史悠久，風格傳統端雅，近年酒質大幅改善，由 Philippe Castéja 管理。",
+    "image": ""
+  },
+  {
+    "name": "Clos Fourtet",
+    "coordinates": [
+      -0.1588,
+      44.8918
+    ],
+    "rank": "特級B級 (Premier Grand Cru Classé B)",
+    "description": "聖愛美濃鎮西城牆旁，高原石灰岩與海百合化石層，Merlot 主導，岩礦感鮮明，由 Cuvelier 家族管理，品質穩定卓越。",
+    "image": ""
+  },
+  {
+    "name": "La Mondotte",
+    "coordinates": [
+      -0.1508,
+      44.8848
+    ],
+    "rank": "特級B級 (Premier Grand Cru Classé B)",
+    "description": "極小精品地塊（2公頃），緊鄰 Canon La Gaffelière，黏土石灰岩坡地，老藤 Merlot，風格濃郁集中，由 Von Neipperg 家族的旗艦精品。",
+    "image": ""
   }
 ]
