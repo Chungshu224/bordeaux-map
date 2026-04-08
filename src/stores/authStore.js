@@ -68,9 +68,18 @@ export const authActions = {
   },
 
   /**
+   * 取得訂閱方案
+   */
+  getSubscriptionTier() {
+    return authState.user?.app_metadata?.subscription_tier || 'free'
+  },
+
+  /**
    * 是否為管理員帳號（開通全部課程）
+   * 管理員 email 從環境變數 VITE_ADMIN_EMAIL 讀取，fallback 為固定信箱
    */
   isAdmin() {
-    return authState.user?.email === 'chungshu224@gmail.com'
+    const adminEmail = import.meta.env.VITE_ADMIN_EMAIL || 'chungshu224@gmail.com'
+    return !!authState.user?.email && authState.user.email === adminEmail
   }
 }
