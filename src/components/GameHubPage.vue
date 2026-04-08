@@ -95,7 +95,7 @@ const GAMES = [
     tags:        ['地圖互動', '簡單 / 困難', '15–35 題'],
     accent:      '#f97316',
     accent2:     '#ef4444',
-    minimumTier: 'premium'
+    minimumTier: 'basic'
   },
   {
     id:          'bank',
@@ -105,7 +105,7 @@ const GAMES = [
     tags:        ['快答', '簡單 / 困難', 'Combo 系統'],
     accent:      '#0ea5e9',
     accent2:     '#38bdf8',
-    minimumTier: 'premium'
+    minimumTier: 'basic'
   },
   {
     id:          'vintage',
@@ -115,7 +115,7 @@ const GAMES = [
     tags:        ['排序', '簡單 / 困難', '5 輪 × 4-5 張'],
     accent:      '#f59e0b',
     accent2:     '#d97706',
-    minimumTier: 'premium'
+    minimumTier: 'basic'
   },
   {
     id:          'grape',
@@ -125,7 +125,7 @@ const GAMES = [
     tags:        ['配對', '簡單 / 困難', '錯題回顧'],
     accent:      '#22c55e',
     accent2:     '#15803d',
-    minimumTier: 'premium'
+    minimumTier: 'basic'
   },
 ]
 </script>

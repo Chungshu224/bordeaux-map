@@ -110,8 +110,8 @@ export const TIER_WEIGHT = {
 
 // 各等級的升級提示文字
 const UPGRADE_MESSAGES = {
-  basic: '📚 此功能需要「初階付費」方案\n\nLevel 2~4 課程 + 地圖探索功能，立即升級解鎖！',
-  premium: '⭐ 此功能需要「進階付費」方案\n\n互動練習中心 + 品飲筆記本，解鎖全部學習工具！'
+  basic: '📚 此功能需要「初階付費」方案\n\nLevel 2~4 課程 + 地圖探索 + 互動練習，立即升級解鎖！',
+  premium: '⭐ 此功能需要「進階付費」方案\n\n進階地圖圖層（等高線/地質/氣候）+ 酒莊標記 + 品飲筆記本，解鎖全部學習工具！'
 }
 
 router.beforeEach(async (to, from, next) => {
