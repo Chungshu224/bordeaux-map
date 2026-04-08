@@ -8,9 +8,11 @@ export const authState = reactive({
   loading: true   // 初始化時為 true，等 getSession 完成後設為 false
 })
 
+export let authInitPromise = Promise.resolve()
+
 // 初始化：先讀取現有 session，再監聽後續變化
 if (supabase) {
-  supabase.auth.getSession().then(({ data: { session } }) => {
+  authInitPromise = supabase.auth.getSession().then(({ data: { session } }) => {
     authState.user = session?.user ?? null
     authState.loading = false
   })

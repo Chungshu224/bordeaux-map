@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { authState } from '../stores/authStore.js'
+import { authState, authInitPromise, authActions } from '../stores/authStore.js'
 
 const routes = [
   {
@@ -70,13 +70,17 @@ const TIER_WEIGHT = {
   premium: 2
 }
 
-router.beforeEach((to, from, next) => {
-  // 如果還在讀取 auth 狀態，可能需要先等它讀取完 (但目前 authState 是 reactive 且有 loading 標記)
-  // App.vue 已經處理了 loading 畫面，所以能進入這裡代表路由已觸發
+router.beforeEach(async (to, from, next) => {
+  // 等待 auth 初始化完成 (重要！避免 F5 重新重整時被誤判為未登入)
+  if (authState.loading) {
+    await authInitPromise
+  }
+
   const user = authState.user
   
-  // TODO: 未來接上 Supabase 時，從 user_metadata 取得訂閱狀態。目前預設測試用為 'free'
-  const userTier = user?.user_metadata?.subscription_tier || 'free'
+  // 取得訂閱狀態。如果是特定信箱(管理員)，自動賦予 premium 權限
+  const isAdmin = authActions.isAdmin?.() || false
+  const userTier = isAdmin ? 'premium' : (user?.user_metadata?.subscription_tier || 'free')
 
   // 1. 檢查是否需要登入
   if (to.meta.requiresAuth && !user) {
