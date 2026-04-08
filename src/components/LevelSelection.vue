@@ -21,6 +21,10 @@
         <!-- 使用者面板 -->
         <div class="user-panel">
           <template v-if="authUser">
+            <div class="tier-badge" :class="`tier-${userTier}`">
+              <span class="tier-icon">{{ tierInfo.icon }}</span>
+              <span class="tier-label">{{ tierInfo.label }}</span>
+            </div>
             <div class="user-avatar">👤</div>
             <div class="user-info">
               <span class="user-name">{{ displayName }}</span>
@@ -423,6 +427,17 @@ const emit = defineEmits(['selectLevel', 'exploreMode', 'gameHubMode', 'notebook
 const authUser = computed(() => authState.user)
 const displayName = computed(() => authActions.getDisplayName())
 
+const TIER_INFO = {
+  free:    { label: '品飲新手 Explorer',       icon: '🌱', color: '#6b7280' },
+  basic:   { label: '進階愛好者 Enthusiast',    icon: '🍇', color: '#7c3aed' },
+  premium: { label: '專業達人 Professional',   icon: '🏆', color: '#b45309' }
+}
+const userTier = computed(() => {
+  if (authActions.isAdmin()) return 'premium'
+  return authState.user?.app_metadata?.subscription_tier || 'free'
+})
+const tierInfo = computed(() => TIER_INFO[userTier.value])
+
 async function handleLogout() {
   await authActions.signOut()
 }
@@ -605,6 +620,23 @@ const getBubbleStyle = (index) => {
   gap: 0.75rem;
   flex-shrink: 0;
 }
+
+.tier-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  border: 1.5px solid currentColor;
+  opacity: 0.9;
+}
+.tier-badge.tier-free    { color: #6b7280; background: rgba(107,114,128,0.1); }
+.tier-badge.tier-basic   { color: #7c3aed; background: rgba(124,58,237,0.1); }
+.tier-badge.tier-premium { color: #b45309; background: rgba(180,83,9,0.12); }
+.tier-icon { font-size: 0.85rem; }
 
 .user-avatar {
   font-size: 1.8rem;

@@ -41,6 +41,16 @@
             <label class="field-label">電子信箱</label>
             <div class="field-readonly">{{ userEmail }}</div>
           </div>
+          <div class="field-group">
+            <label class="field-label">訂閱方案</label>
+            <div class="tier-display" :class="`tier-${userTier}`">
+              <span class="tier-icon">{{ currentTierInfo.icon }}</span>
+              <div class="tier-texts">
+                <span class="tier-name">{{ currentTierInfo.label }}</span>
+                <span class="tier-desc">{{ currentTierInfo.desc }}</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- ── 個人資料 ──── -->
@@ -145,6 +155,17 @@ const saveSuccess = ref(false)
 
 // ── 帳號資訊 ─────────────────────────────
 const userEmail = computed(() => authActions.getEmail() ?? '')
+
+const TIER_INFO = {
+  free:    { label: '品飲新手 Explorer',     icon: '🌱', desc: '可免費探索基礎課程與地圖' },
+  basic:   { label: '進階愛好者 Enthusiast', icon: '🍇', desc: '可解鎖 Level 2-4 課程與互動練習' },
+  premium: { label: '專業達人 Professional', icon: '🏆', desc: '完整解鎖所有功能與進階地圖分析' }
+}
+const userTier = computed(() => {
+  if (authActions.isAdmin()) return 'premium'
+  return authState.user?.app_metadata?.subscription_tier || 'free'
+})
+const currentTierInfo = computed(() => TIER_INFO[userTier.value])
 
 // ── 學習統計 ─────────────────────────────
 const stats = ref(null)   // { totalStudySeconds, completedLevels, quizAccuracy }
@@ -355,6 +376,23 @@ onMounted(loadSettings)
   color: #764ba2;
   margin: 0 0 0.25rem;
 }
+
+/* ── 訂閱方案徽章 ───────────────────────────────── */
+.tier-display {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 2px solid currentColor;
+}
+.tier-display.tier-free    { color: #6b7280; background: rgba(107,114,128,0.08); }
+.tier-display.tier-basic   { color: #7c3aed; background: rgba(124,58,237,0.08); }
+.tier-display.tier-premium { color: #b45309; background: rgba(180,83,9,0.08); }
+.tier-display .tier-icon { font-size: 1.8rem; line-height: 1; flex-shrink: 0; }
+.tier-texts { display: flex; flex-direction: column; gap: 0.1rem; }
+.tier-name { font-size: 0.95rem; font-weight: 700; }
+.tier-desc { font-size: 0.78rem; opacity: 0.75; }
 
 /* ── 欄位 ────────────────────────────────────────── */
 .field-group {
