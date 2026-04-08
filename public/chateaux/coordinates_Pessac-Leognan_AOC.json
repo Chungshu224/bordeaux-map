@@ -2,91 +2,161 @@
   {
     "name": "Château Haut-Brion",
     "coordinates": [
-      -0.6087,
-      44.8167
+      -0.61243,
+      44.81454
     ],
-    "rank": "一級酒莊 (Premier Grand Cru Classé 1855, Graves)",
-  "description": "波爾多五大酒莊之一，唯一同時列名於1855年分級與Graves分級的頂級酒莊，紅白酒皆享譽國際。",
-  "image": "/images/chateaux/LeftBank/Graves/haut_brion.jpg"
+    "rank": "1855一級莊 / 格拉夫列級莊",
+    "description": "五大酒莊中唯一不在梅多克的王者，以其無與倫比的煙燻與泥土(Graves)香氣聞名於世。",
+    "image": "/images/chateaux/LeftBank/Graves/haut_brion.jpg"
   },
   {
     "name": "Château Pape Clément",
     "coordinates": [
-      -0.64683,
-      44.80571
+      -0.64671,
+      44.80568
     ],
-    "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
-  "description": "歷史可追溯至13世紀，紅白酒均極具代表性，風格濃郁且具陳年潛力。",
-  "image": "/images/chateaux/LeftBank/Graves/pape_clement.jpg"
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "歷史可追溯至13世紀教宗克勉五世，是波爾多歷史最悠久的酒莊之一，酒體豐滿濃郁。",
+    "image": "/images/chateaux/LeftBank/Graves/pape_clement.jpg"
   },
   {
     "name": "Château La Mission Haut-Brion",
     "coordinates": [
-      -0.60565,
-      44.81539
+      -0.60946,
+      44.81173
     ],
-    "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
-  "description": "與Haut-Brion齊名的頂級酒莊，紅酒以濃郁與複雜著稱，白酒產量稀少。",
-  "image": "/images/chateaux/LeftBank/Graves/la_mission_haut_brion.jpg"
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "與 Haut-Brion 僅一路之隔，風格宏大濃郁，常被視為擁有「一級莊」實力的超級傳奇名莊。",
+    "image": "/images/chateaux/LeftBank/Graves/la_mission_haut_brion.jpg"
   },
   {
     "name": "Château Smith Haut Lafitte",
     "coordinates": [
-      -0.55857,
-      44.73251
+      -0.55835,
+      44.73226
     ],
-    "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
-  "description": "現代化管理下品質大幅提升，紅白酒均具國際聲譽。",
-  "image": "/images/chateaux/LeftBank/Graves/smith_haut_lafitte.jpg"
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "結合了現代科技與傳統工藝，近年來成為佩薩克-雷奧良最具代表性且獲極高評價的耀眼頂級莊。",
+    "image": "/images/chateaux/LeftBank/Graves/smith_haut_lafitte.jpg"
   },
   {
     "name": "Château Carbonnieux",
     "coordinates": [
-      -0.56894,
-      44.74533
+      -0.56898,
+      44.74532
     ],
-    "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
-  "description": "同時以紅、白酒聞名，白酒清新優雅，紅酒結構良好。",
-  "image": "/images/chateaux/LeftBank/Graves/carbonnieux.jpg"
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "歷史悠久，其白酒風味清新優雅，紅酒則具有極好的陳年能力。",
+    "image": "/images/chateaux/LeftBank/Graves/carbonnieux.jpg"
   },
   {
     "name": "Château Malartic-Lagravière",
     "coordinates": [
-      -0.6026,
-      44.7223
+      -0.6045,
+      44.7367
     ],
-    "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
-  "description": "少數紅白酒皆獲分級的酒莊，白酒以清新細緻著稱。",
-  "image": "/images/chateaux/LeftBank/Graves/malartic_lagraviere.jpg"
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "擁有獨特風土地貌，近年在重新投資後設備現代化，紅白酒在列級莊中表現極其亮眼。",
+    "image": "/images/chateaux/LeftBank/Graves/malartic_lagraviere.jpg"
   },
   {
     "name": "Château Latour-Martillac",
     "coordinates": [
       -0.53931,
-      44.71156
+      44.71153
     ],
-    "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
-  "description": "紅白酒皆具代表性，白酒以花香與礦石感著稱。",
-  "image": "/images/chateaux/LeftBank/Graves/latour_martillac.jpg"
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "位於瑪蒂亞克(Martillac)，以深厚礫石與獨特微氣候著稱，生產極具性格的紅白佳釀。",
+    "image": "/images/chateaux/LeftBank/Graves/latour_martillac.jpg"
   },
   {
     "name": "Château Olivier",
     "coordinates": [
-      -0.59779,
-      44.74791
+      -0.61731,
+      44.74495
     ],
-    "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
-  "description": "同時生產紅、白酒，白酒表現尤為出色，風格優雅。",
-  "image": "/images/chateaux/LeftBank/Graves/olivier.jpg"
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "擁有中世紀城堡建築，周圍環繞廣闊的森林，其列級紅白酒皆具細膩花果香與礦物味。",
+    "image": "/images/chateaux/LeftBank/Graves/olivier.jpg"
   },
   {
     "name": "Château Bouscaut",
     "coordinates": [
-      -0.54842,
-      44.7468
+      -0.5459,
+      44.74826
     ],
-    "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
-  "description": "紅白酒皆獲分級，白酒圓潤飽滿，紅酒結構紮實。",
-  "image": "/images/chateaux/LeftBank/Graves/bouscaut.jpg"
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "擁有極佳的石灰岩與黏土質，紅白酒皆產，風格傳統而細緻。",
+    "image": "/images/chateaux/LeftBank/Graves/bouscaut.jpg"
+  },
+  {
+    "name": "Domaine de Chevalier",
+    "coordinates": [
+      -0.62927,
+      44.71962
+    ],
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "格拉夫列級莊的超級巨星之一，雖然稱作「Domaine」，但位列頂尖等級，紅白酒品質均出類拔萃。",
+    "image": ""
+  },
+  {
+    "name": "Château Haut-Bailly",
+    "coordinates": [
+      -0.58151,
+      44.73316
+    ],
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "位處優越的高地，出產著結構嚴謹且極度優雅的紅酒，被公認為格拉夫地區的極品名莊。",
+    "image": ""
+  },
+  {
+    "name": "Château de Fieuzal",
+    "coordinates": [
+      -0.60724,
+      44.71384
+    ],
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "其紅酒名列格拉夫列級，表現不俗；而未列級的白酒同樣品質超群，風格豐富醇厚。",
+    "image": ""
+  },
+  {
+    "name": "Château La Tour Haut-Brion",
+    "coordinates": [
+      -0.60089,
+      44.81147
+    ],
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "曾是列級莊，2005年被 La Mission Haut-Brion 併購，原先獨立生產的酒款已成絕響。",
+    "image": ""
+  },
+  {
+    "name": "Château Couhins",
+    "coordinates": [
+      -0.56284,
+      44.76203
+    ],
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "隸屬於法國國家農業研究所(INRA)，以出色的白酒入選格拉夫列級。",
+    "image": ""
+  },
+  {
+    "name": "Château Couhins-Lurton",
+    "coordinates": [
+      -0.564,
+      44.761
+    ],
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "從Couhins分割出來由André Lurton家族管理，生產極具代表性的 100% Sauvignon Blanc 列級白酒。",
+    "image": ""
+  },
+  {
+    "name": "Château Laville Haut-Brion",
+    "coordinates": [
+      -0.61535,
+      44.81225
+    ],
+    "rank": "格拉夫列級莊 (Crus Classés de Graves)",
+    "description": "以生產傳奇白酒著稱（格拉夫白酒列級），2009年起正式更名為 Château La Mission Haut-Brion Blanc。",
+    "image": ""
   }
 ]
