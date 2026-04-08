@@ -1,6 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { authState, authInitPromise, authActions } from '../stores/authStore.js'
 
+// ============================================================
+//  訂閱層級功能對照表 (Tier Access Map)
+// ============================================================
+//  免費 (free)  — 只要註冊即可
+//    ✅ 首頁、登入、設定
+//    ✅ Level 1 課程
+//    ❌ Level 2、3、4 課程
+//    ❌ 地圖探索  (BordeauxMap)
+//    ❌ 互動練習中心 (GameHub)
+//    ❌ 品飲筆記本 (TastingNotebook)
+//
+//  初階付費 (basic) — 可看課程 + 基本地圖
+//    ✅ Level 1~4 課程 (全部)
+//    ✅ 探索地圖 (BordeauxMap)，但擴展圖層被鎖
+//    ❌ 互動練習中心 (GameHub)
+//    ❌ 品飲筆記本 (TastingNotebook)
+//
+//  進階付費 (premium) — 完整解鎖
+//    ✅ Level 1~4 課程
+//    ✅ 探索地圖 (含風土圖層、酒莊精準標記)
+//    ✅ 互動練習中心 (全部 4 種遊戲)
+//    ✅ 品飲筆記本
+// ============================================================
+
 const routes = [
   {
     path: '/',
@@ -27,33 +51,41 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
   {
+    //  /learning?level=1  → free
+    //  /learning?level=2  → basic
+    //  /learning?level=3  → basic
+    //  /learning?level=4  → basic
+    //  層級判斷由 beforeEach 動態計算 (見下方)
     path: '/learning',
     name: 'Learning',
     component: () => import('../components/LearningSystem.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' } // 等級內部的權限可以交由組件內判斷，或在這裡細分
+    meta: { requiresAuth: true, minimumTier: 'free' } // 預設最低，動態會覆蓋
   },
   {
+    // 地圖探索：basic 以上。進階圖層鎖定邏輯在 BordeauxMap 元件內判斷
     path: '/explore',
     name: 'Explore',
     component: () => import('../components/BordeauxMap.vue'),
-    meta: { requiresAuth: true, minimumTier: 'basic' } // 設定探索模式需 basic 以上
+    meta: { requiresAuth: true, minimumTier: 'basic' }
   },
   {
+    // 互動練習中心：premium 以上
     path: '/gamehub',
     name: 'GameHub',
     component: () => import('../components/GameHubPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' }
+    meta: { requiresAuth: true, minimumTier: 'premium' }
   },
   {
+    // 品飲筆記本：premium 以上
     path: '/notebook',
     name: 'Notebook',
     component: () => import('../components/TastingNotebookPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'premium' } // 設定品飲筆記本需 premium
+    meta: { requiresAuth: true, minimumTier: 'premium' }
   },
   {
     path: '/upgrade',
     name: 'Upgrade',
-    component: () => import('../components/LevelSelection.vue'), // 暫時指向首頁，後續可建立專屬的 UpgradePage.vue
+    component: () => import('../components/LevelSelection.vue'),
     meta: { public: true }
   }
 ]
@@ -63,22 +95,28 @@ const router = createRouter({
   routes
 })
 
-// 定義訂閱等級的權重
-const TIER_WEIGHT = {
+// 訂閱等級的數值權重
+export const TIER_WEIGHT = {
   free: 0,
   basic: 1,
   premium: 2
 }
 
+// 各等級的升級提示文字
+const UPGRADE_MESSAGES = {
+  basic: '📚 此功能需要「初階付費」方案\n\nLevel 2~4 課程 + 地圖探索功能，立即升級解鎖！',
+  premium: '⭐ 此功能需要「進階付費」方案\n\n互動練習中心 + 品飲筆記本，解鎖全部學習工具！'
+}
+
 router.beforeEach(async (to, from, next) => {
-  // 等待 auth 初始化完成 (重要！避免 F5 重新重整時被誤判為未登入)
+  // 等待 auth 初始化完成 (避免 F5 重整時被誤判為未登入)
   if (authState.loading) {
     await authInitPromise
   }
 
   const user = authState.user
-  
-  // 取得訂閱狀態。如果是特定信箱(管理員)，自動賦予 premium 權限
+
+  // 管理員信箱自動賦予 premium；否則讀 user_metadata
   const isAdmin = authActions.isAdmin?.() || false
   const userTier = isAdmin ? 'premium' : (user?.user_metadata?.subscription_tier || 'free')
 
@@ -87,21 +125,29 @@ router.beforeEach(async (to, from, next) => {
     return next({ name: 'Login', query: { redirect: to.fullPath } })
   }
 
-  // 2. 檢查訂閱等級(Tier)是否符合最低要求
-  if (to.meta.minimumTier) {
-    const requiredWeight = TIER_WEIGHT[to.meta.minimumTier]
+  // 2. 課程路由的動態 Tier 判斷
+  //    /learning?level=1 → free；其餘 level 2~4 → basic
+  let requiredTier = to.meta.minimumTier
+  if (to.name === 'Learning') {
+    const level = parseInt(to.query.level) || 1
+    requiredTier = level >= 2 ? 'basic' : 'free'
+  }
+
+  // 3. 比對 Tier 權重
+  if (requiredTier) {
+    const requiredWeight = TIER_WEIGHT[requiredTier]
     const currentWeight = TIER_WEIGHT[userTier]
 
     if (currentWeight < requiredWeight) {
-      console.warn(`[權限阻擋] 需要 ${to.meta.minimumTier}，目前只有 ${userTier}`)
-      alert('🔒 此功能為付費訂閱專屬，請升級您的方案解鎖！\n\n(目前這只是測試阻擋機制，未來會導向付款頁面)')
-      
-      // 可以導向升級頁或者退回前一頁
-      return next(from.path !== '/' ? false : { name: 'Home' })
+      console.warn(`[權限阻擋] 此路由需要 "${requiredTier}"，目前為 "${userTier}"`)
+      const msg = UPGRADE_MESSAGES[requiredTier] || '🔒 此功能為付費訂閱專屬，請升級您的方案解鎖！'
+      alert(msg)
+      // 退回前一頁；若無前一頁則回首頁
+      return next(from.name ? false : { name: 'Home' })
     }
   }
 
-  // 3. 放行
+  // 4. 放行
   next()
 })
 

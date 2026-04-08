@@ -16,9 +16,16 @@
           v-for="g in GAMES"
           :key="g.id"
           class="game-card"
+          :class="{ locked: !canAccess(g.minimumTier) }"
           :style="{ '--accent': g.accent, '--accent2': g.accent2 }"
-          @click="currentGame = g.id"
+          @click="handleGameClick(g)"
         >
+          <!-- 鎖頭遮罩：Tier 不足時顯示 -->
+          <div v-if="!canAccess(g.minimumTier)" class="lock-overlay">
+            <span class="lock-icon">🔒</span>
+            <span class="lock-label">{{ TIER_LABEL[g.minimumTier] }} 解鎖</span>
+          </div>
+
           <div class="card-icon">{{ g.icon }}</div>
           <div class="card-body">
             <div class="card-name">{{ g.name }}</div>
@@ -46,52 +53,117 @@ import MapQuizPage       from './MapQuizPage.vue'
 import BankQuizPage      from './BankQuizPage.vue'
 import VintageSortPage   from './VintageSortPage.vue'
 import GrapeSoilMatchPage from './GrapeSoilMatchPage.vue'
+import { authState, authActions } from '../stores/authStore.js'
+import { TIER_WEIGHT } from '../router/index.js'
 
 defineEmits(['back'])
 
 const currentGame = ref(null)
 
+// 使用者目前的訂閱等級
+const userTier = () => {
+  const isAdmin = authActions.isAdmin?.() || false
+  return isAdmin ? 'premium' : (authState.user?.user_metadata?.subscription_tier || 'free')
+}
+
+// 檢查是否滿足最低 Tier 要求
+const canAccess = (minimumTier) => {
+  return TIER_WEIGHT[userTier()] >= TIER_WEIGHT[minimumTier]
+}
+
+// 點擊遊戲卡：權限不足時提示，足夠時進入
+const handleGameClick = (game) => {
+  if (!canAccess(game.minimumTier)) {
+    alert(`🔒 「${game.name}」需要「${TIER_LABEL[game.minimumTier]}」方案才能使用\n\n請升級您的訂閱以解鎖這個遊戲！`)
+    return
+  }
+  currentGame.value = game.id
+}
+
+const TIER_LABEL = {
+  free: '免費',
+  basic: '初階付費',
+  premium: '進階付費'
+}
+
 const GAMES = [
   {
-    id:     'map',
-    icon:   '🗺️',
-    name:   '產區競答',
-    desc:   '點擊地圖上的產區，考驗你對波爾多產區位置的認識',
-    tags:   ['地圖互動', '簡單 / 困難', '15–35 題'],
-    accent: '#f97316',
-    accent2:'#ef4444',
+    id:          'map',
+    icon:        '🗺️',
+    name:        '產區競答',
+    desc:        '點擊地圖上的產區，考驗你對波爾多產區位置的認識',
+    tags:        ['地圖互動', '簡單 / 困難', '15–35 題'],
+    accent:      '#f97316',
+    accent2:     '#ef4444',
+    minimumTier: 'premium'
   },
   {
-    id:     'bank',
-    icon:   '⚡',
-    name:   '左右岸競速',
-    desc:   '看到 AOC 名稱立刻分類：左岸、右岸，困難模式還加入兩河之間與索甸甜酒帶',
-    tags:   ['快答', '簡單 / 困難', 'Combo 系統'],
-    accent: '#0ea5e9',
-    accent2:'#38bdf8',
+    id:          'bank',
+    icon:        '⚡',
+    name:        '左右岸競速',
+    desc:        '看到 AOC 名稱立刻分類：左岸、右岸，困難模式還加入兩河之間與索甸甜酒帶',
+    tags:        ['快答', '簡單 / 困難', 'Combo 系統'],
+    accent:      '#0ea5e9',
+    accent2:     '#38bdf8',
+    minimumTier: 'premium'
   },
   {
-    id:     'vintage',
-    icon:   '🌡️',
-    name:   '年份溫度排列',
-    desc:   '將波爾多年份依夏季均溫由最熱排到最冷，考驗對偉大年份的記憶',
-    tags:   ['排序', '簡單 / 困難', '5 輪 × 4-5 張'],
-    accent: '#f59e0b',
-    accent2:'#d97706',
+    id:          'vintage',
+    icon:        '🌡️',
+    name:        '年份溫度排列',
+    desc:        '將波爾多年份依夏季均溫由最熱排到最冷，考驗對偉大年份的記憶',
+    tags:        ['排序', '簡單 / 困難', '5 輪 × 4-5 張'],
+    accent:      '#f59e0b',
+    accent2:     '#d97706',
+    minimumTier: 'premium'
   },
   {
-    id:     'grape',
-    icon:   '🍇',
-    name:   '葡萄 × 土壤配對',
-    desc:   '快速判斷哪個品種最愛哪種土，困難模式加入逆向題（土壤 → 品種）',
-    tags:   ['配對', '簡單 / 困難', '錯題回顧'],
-    accent: '#22c55e',
-    accent2:'#15803d',
+    id:          'grape',
+    icon:        '🍇',
+    name:        '葡萄 × 土壤配對',
+    desc:        '快速判斷哪個品種最愛哪種土，困難模式加入逆向題（土壤 → 品種）',
+    tags:        ['配對', '簡單 / 困難', '錯題回顧'],
+    accent:      '#22c55e',
+    accent2:     '#15803d',
+    minimumTier: 'premium'
   },
 ]
 </script>
 
 <style scoped>
+.game-card.locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.lock-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 0, 25, 0.55);
+  border-radius: inherit;
+  z-index: 2;
+  gap: 0.4rem;
+}
+
+.lock-icon {
+  font-size: 1.8rem;
+}
+
+.lock-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #e8c97e;
+  letter-spacing: 0.05em;
+  background: rgba(0,0,0,0.4);
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
 .game-hub {
   position: relative;
   width: 100%;

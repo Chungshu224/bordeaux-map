@@ -98,7 +98,8 @@ const selectedLevel = ref(1)
 // 路由切換方法 (替換原本的 mode 變數)
 const enterLearningMode = (level) => {
   selectedLevel.value = level
-  router.push('/learning')
+  // 帶入 ?level=X，供 router beforeEach 動態判斷 Tier
+  router.push({ name: 'Learning', query: { level } })
   console.log(`進入 Level ${level} 學習模式`)
 }
 
