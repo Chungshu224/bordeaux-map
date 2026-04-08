@@ -1,23 +1,102 @@
 [
   {
     "name": "Château Belgrave",
-    "coordinates": [-0.70123, 45.00234],
+    "coordinates": [
+      -0.70123,
+      45.00234
+    ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "位於 Haut-Médoc 南端，風格均衡、果香豐富。",
     "image": "/images/chateaux/LeftBank/Medoc/Belgrave.jpg"
   },
   {
     "name": "Château Camensac",
-    "coordinates": [-0.73456, 45.04567],
+    "coordinates": [
+      -0.73456,
+      45.04567
+    ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "位於 Haut-Médoc，風格均衡、單寧柔順，性價比優異。",
     "image": "/images/chateaux/LeftBank/Medoc/Camensac.jpg"
   },
   {
     "name": "Château La Tour Carnet",
-    "coordinates": [-0.79234, 45.03234],
+    "coordinates": [
+      -0.79234,
+      45.03234
+    ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "擁有中世紀塔樓的歷史名莊，風格濃郁、結構紮實。",
     "image": "/images/chateaux/LeftBank/Medoc/la_tour_carnet.jpg"
+  },
+  {
+    "name": "Château d'Agassac",
+    "coordinates": [
+      -0.60877,
+      44.96752
+    ],
+    "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
+    "description": "位於 Haut-Médoc (Ludon-Médoc)，歷史悠久的中世紀童話城堡建築，被評為Cru Bourgeois Exceptionnel。",
+    "image": ""
+  },
+  {
+    "name": "Château Arnauld",
+    "coordinates": [
+      -0.72644,
+      45.0723
+    ],
+    "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
+    "description": "位於 Arcins 村的精品莊，2020年晉升為最高等級中級莊(Exceptionnel)的明星黑馬。",
+    "image": ""
+  },
+  {
+    "name": "Château Belle-Vue",
+    "coordinates": [
+      -0.6186,
+      44.9961
+    ],
+    "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
+    "description": "位於 Macau 村，以高比例的 Petit Verdot 混釀而聞名，賦予極強的辛香與複雜度，晉升 Exceptionnel 之列。",
+    "image": ""
+  },
+  {
+    "name": "Château Cambon La Pelouse",
+    "coordinates": [
+      -0.6277,
+      44.9904
+    ],
+    "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
+    "description": "位於 Macau，也是近年品質飛躍的 Exceptionnel 莊園，風格果香濃郁、架構良好且早飲討喜。",
+    "image": ""
+  },
+  {
+    "name": "Château Charmail",
+    "coordinates": [
+      -0.7866,
+      45.283
+    ],
+    "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
+    "description": "位於 Saint-Seurin-de-Cadourne (近聖愛斯泰夫)，擁有極佳的石灰岩與黏土質，葡萄酒結構嚴謹，特等中級莊。",
+    "image": ""
+  },
+  {
+    "name": "Château de Malleret",
+    "coordinates": [
+      -0.6225,
+      44.945
+    ],
+    "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
+    "description": "位於 Le Pian-Médoc，莊園幅員廣闊，除了葡萄園亦是知名馬術中心，出產風格精緻的 Exceptionnel 等級紅酒。",
+    "image": ""
+  },
+  {
+    "name": "Château du Taillan",
+    "coordinates": [
+      -0.6385,
+      44.908
+    ],
+    "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
+    "description": "位於 Le Taillan-Médoc 近郊，擁有美麗的女性傳承故事，其建築為法定歷史古蹟，也是罕見釀造白酒的Haut-Médoc。",
+    "image": ""
   }
 ]
