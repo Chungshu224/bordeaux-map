@@ -2,8 +2,8 @@
   {
     "name": "Château Cheval Blanc",
     "coordinates": [
-      -0.1893,
-      44.9195
+      -0.19001,
+      44.91955
     ],
     "rank": "特級A級 (Premier Grand Cru Classé A)",
     "description": "聖愛美濃最著名的A級酒莊之一，Merlot與Cabernet Franc混釀，優雅細緻、陳年潛力極佳。",
@@ -32,8 +32,8 @@
   {
     "name": "Château Angélus",
     "coordinates": [
-      -0.1715,
-      44.8927
+      -0.17188,
+      44.89289
     ],
     "rank": "特級A級 (Premier Grand Cru Classé A)",
     "description": "以優雅細膩著稱，近年晉升A級，酒標鐘聲極具辨識度。",
@@ -42,8 +42,8 @@
   {
     "name": "Château Figeac",
     "coordinates": [
-      -0.192425,
-      44.912833
+      -0.20139,
+      44.9156
     ],
     "rank": "特級A級 (Premier Grand Cru Classé A)",
     "description": "2022年晉升A級，Cabernet Franc比例高，風格優雅、陳年潛力佳。",
@@ -52,8 +52,8 @@
   {
     "name": "Château Canon",
     "coordinates": [
-      -0.15695,
-      44.88708
+      -0.16323,
+      44.89293
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "位於聖愛美濃村莊核心，風格細膩優雅，近年品質大幅提升。",
@@ -62,8 +62,8 @@
   {
     "name": "Château La Gaffelière",
     "coordinates": [
-      -0.15695,
-      44.88708
+      -0.16092,
+      44.88116
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "歷史悠久的B級名莊，風格均衡，陳年表現佳。",
@@ -72,8 +72,8 @@
   {
     "name": "Château Troplong Mondot",
     "coordinates": [
-      -0.14075,
-      44.88853
+      -0.14289,
+      44.89102
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "位於高地，風格濃郁，單寧結構強，陳年潛力佳。",
@@ -82,8 +82,8 @@
   {
     "name": "Château Valandraud",
     "coordinates": [
-      -0.0855,
-      44.8878
+      -0.15541,
+      44.89388
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "右岸車庫酒代表，風格現代，果香濃郁，品質穩定提升。",
@@ -112,8 +112,8 @@
   {
     "name": "Château Barde-Haut",
     "coordinates": [
-      -0.1402,
-      44.9098
+      -0.13264,
+      44.89192
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "聖克里斯多夫山丘北坡，日照充足，Merlot 表現優雅圓潤，近年品質大幅提升。",
@@ -122,8 +122,8 @@
   {
     "name": "Château Bellefont-Belcier",
     "coordinates": [
-      -0.1338,
-      44.8778
+      -0.13813,
+      44.88056
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "聖羅蘭坡地，石灰土壤，Merlot 與 Cab. Franc 混釀，風格細緻帶花香。",
@@ -132,8 +132,8 @@
   {
     "name": "Château Bellevue",
     "coordinates": [
-      -0.1708,
-      44.8942
+      -0.17252,
+      44.89494
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "深處高原西側，視野開闊，Merlot 主導，柔和圓潤，早飲型佳釀。",
@@ -162,8 +162,8 @@
   {
     "name": "Château Cadet-Bon",
     "coordinates": [
-      -0.1522,
-      44.9012
+      -0.15323,
+      44.90166
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原北側石灰岩台地，Merlot 與 Cab. Franc 均衡，結構緊致、清新。",
@@ -172,8 +172,8 @@
   {
     "name": "Château Cap de Mourlin",
     "coordinates": [
-      -0.1305,
-      44.9072
+      -0.16323,
+      44.89293
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "東北高原，老藤 Merlot，酒色深邃，果香豐富，層次感佳。",
@@ -182,8 +182,8 @@
   {
     "name": "Château Chauvin",
     "coordinates": [
-      -0.1732,
-      44.9012
+      -0.17203,
+      44.92036
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西北沙礫黏土丘，Merlot 主導，果香友善，採用生物動力農法。",
@@ -192,8 +192,8 @@
   {
     "name": "Clos de Sarpe",
     "coordinates": [
-      -0.1338,
-      44.8862
+      -0.13816,
+      44.89712
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "小型精品莊，高原石灰岩，Merlot 老藤，濃郁而圓潤，限量生產。",
@@ -202,8 +202,8 @@
   {
     "name": "Château Corbin",
     "coordinates": [
-      -0.1958,
-      44.9058
+      -0.18114,
+      44.92314
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "緊鄰波美侯邊界，砂礫黏土，Merlot 主導，風格豐厚，早熟易飲。",
@@ -212,8 +212,8 @@
   {
     "name": "Château Corbin Michotte",
     "coordinates": [
-      -0.1928,
-      44.903
+      -0.18114,
+      44.92314
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "波美侯邊境，黏土礫石，Merlot 與 Cab. Franc 混釀，果香柔和。",
@@ -222,8 +222,8 @@
   {
     "name": "Château Côte de Baleau",
     "coordinates": [
-      -0.1668,
-      44.8812
+      -0.16399,
+      44.90627
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西南坡地，石灰黏土，Merlot 為主，岩礦感獨特，結構細膩，由修道院姊妹莊管理。",
@@ -232,8 +232,8 @@
   {
     "name": "Château Croix de Labrie",
     "coordinates": [
-      -0.1368,
-      44.9082
+      -0.18366,
+      44.90987
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "北坡精品小莊，有機耕作，Merlot 為主，風格精緻、帶礦物韻味。",
@@ -242,8 +242,8 @@
   {
     "name": "Clos Badon Thunevin",
     "coordinates": [
-      -0.1522,
-      44.8868
+      -0.15139,
+      44.87842
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "緊鄰 Ausone 東坡，黏土stone地塊，Merlot 主導，風格濃郁圓潤，由知名釀酒師 Jean-Luc Thunevin 管理。",
@@ -252,8 +252,8 @@
   {
     "name": "Clos de l'Oratoire",
     "coordinates": [
-      -0.1258,
-      44.9028
+      -0.20379,
+      44.90252
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "東北向禱告台地，石灰岩地層，Merlot 與 Cab. Franc，由 Von Neipperg 家族管理，細緻優雅。",
@@ -262,8 +262,8 @@
   {
     "name": "Clos des Jacobins",
     "coordinates": [
-      -0.1542,
-      44.8948
+      -0.17207,
+      44.90308
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "鎮中心古園，緊密石灰岩，Merlot 主導，歷史悠久，風格精緻細膩。",
@@ -282,8 +282,8 @@
   {
     "name": "Château de Ferrand",
     "coordinates": [
-      -0.1118,
-      44.893
+      -0.16122,
+      44.87208
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "聖伊波利特東部莊園，地勢較平，砂質黏土，Merlot 風格柔和優雅。",
@@ -322,8 +322,8 @@
   {
     "name": "Château Fleur Cardinale",
     "coordinates": [
-      -0.1148,
-      44.9028
+      -0.08287,
+      44.88987
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "聖艾蒂安東側山坡，黏土礫石，Merlot 基底，果香純粹，近年品質大幅提升。",
@@ -332,8 +332,8 @@
   {
     "name": "Château Fombrauge",
     "coordinates": [
-      -0.1178,
-      44.9118
+      -0.11308,
+      44.89666
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "聖克里斯多夫大型莊園，石灰黏土，Merlot 主導，果香豐富，Bernard Magrez 旗下名莊。",
@@ -342,8 +342,8 @@
   {
     "name": "Château Fonplégade",
     "coordinates": [
-      -0.1572,
-      44.893
+      -0.16624,
+      44.88538
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原中心，得名古井泉，採生物動力農法，Merlot 主導，細緻有深度。",
@@ -352,8 +352,8 @@
   {
     "name": "Château Fonroque",
     "coordinates": [
-      -0.1738,
-      44.9058
+      -0.15971,
+      44.9044
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西北高原石灰岩，Merlot 主導，採有機農法，風格結構紮實，帶岩礦氣息。",
@@ -362,8 +362,8 @@
   {
     "name": "Château Franc Mayne",
     "coordinates": [
-      -0.1772,
-      44.8932
+      -0.17432,
+      44.89965
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原西側，石灰岩地帶，Merlot 比例高，酒體豐潤，單寧細緻。",
@@ -372,8 +372,8 @@
   {
     "name": "Château Grand Corbin",
     "coordinates": [
-      -0.1908,
-      44.9072
+      -0.16966,
+      44.92028
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西北砂礫台地，緊鄰波美侯，Merlot 主導，果香柔滑，風格圓潤。",
@@ -382,8 +382,8 @@
   {
     "name": "Château Grand Corbin-Despagne",
     "coordinates": [
-      -0.1878,
-      44.9048
+      -0.17783,
+      44.92348
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西北砂礫地，有機農法，Merlot 主導，採現代釀造工藝，近年屢獲高評。",
@@ -392,8 +392,8 @@
   {
     "name": "Château Grand Mayne",
     "coordinates": [
-      -0.1732,
-      44.8952
+      -0.17432,
+      44.89965
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原西側石灰岩，Merlot 比例高，老藤風味濃郁，法蘭西鄉村城堡風貌迷人。",
@@ -402,8 +402,8 @@
   {
     "name": "Château Guadet",
     "coordinates": [
-      -0.1528,
-      44.8968
+      -0.15455,
+      44.89695
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "鎮北高原，古老石灰岩土壤，Merlot 與 Cab. Franc 均衡，風格細優雅，新生代打造精品。",
@@ -412,8 +412,8 @@
   {
     "name": "Château Haut-Sarpe",
     "coordinates": [
-      -0.1288,
-      44.9098
+      -0.13846,
+      44.89702
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "聖克里斯多夫東北坡，石灰黏土，Merlot 主導，果香濃郁,  由 Janoueix 家族管理。",
@@ -422,8 +422,8 @@
   {
     "name": "Château Jean Faure",
     "coordinates": [
-      -0.1878,
-      44.8972
+      -0.1827,
+      44.92023
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "緊鄰 Cheval Blanc 西側，砂礫土壤，Cab. Franc 比例高，風格優雅、花香鮮明。",
@@ -442,8 +442,8 @@
   {
     "name": "Château La Confession",
     "coordinates": [
-      -0.1858,
-      44.9012
+      -0.18679,
+      44.92052
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西北心黏土砂礫，車庫酒風格，Merlot 主導，產量極低，滋味豐醇濃烈。",
@@ -452,8 +452,8 @@
   {
     "name": "Château La Couspaude",
     "coordinates": [
-      -0.1488,
-      44.8902
+      -0.14993,
+      44.89711
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原東側石灰岩，Merlot 主導，由 Aubert 家族管理，風格豐滿，近年提升品質。",
@@ -462,8 +462,8 @@
   {
     "name": "Château La Croizille",
     "coordinates": [
-      -0.1268,
-      44.8978
+      -0.13493,
+      44.88445
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "東北坡地，石灰岩地塊，精品小莊，Merlot 為主，果香鮮明，值得關注的新星。",
@@ -472,8 +472,8 @@
   {
     "name": "Château La Dominique",
     "coordinates": [
-      -0.1858,
-      44.9002
+      -0.18679,
+      44.92052
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "緊鄰 Cheval Blanc 和 Pétrus，砂礫黏土，Merlot 主導，風格豐潤，標誌性現代酒窖。",
@@ -492,8 +492,8 @@
   {
     "name": "Château La Marzelle",
     "coordinates": [
-      -0.1758,
-      44.8932
+      -0.19172,
+      44.90837
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原西坡，石灰岩黏土，Merlot 主導，採生物動力農法，風格精緻細膩。",
@@ -502,8 +502,8 @@
   {
     "name": "Château La Serre",
     "coordinates": [
-      -0.1468,
-      44.8942
+      -0.18679,
+      44.92052
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "北側高原中心，石灰黏土，Merlot 主導，結構平衡，歷史傳統酒莊。",
@@ -512,8 +512,8 @@
   {
     "name": "Château La Tour Figeac",
     "coordinates": [
-      -0.1828,
-      44.8952
+      -0.20139,
+      44.9156
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "Figeac 姊妹莊，砂礫土壤，Merlot 與 Cab. Franc 平衡，風格圓潤易飲。",
@@ -522,8 +522,8 @@
   {
     "name": "Château Laniote",
     "coordinates": [
-      -0.1548,
-      44.8992
+      -0.16069,
+      44.90494
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原北坡，石灰岩土壤，小型家族酒莊，Merlot 主導，岩礦感豐富，產量有限。",
@@ -532,8 +532,8 @@
   {
     "name": "Château Larmande",
     "coordinates": [
-      -0.1658,
-      44.9012
+      -0.15016,
+      44.90476
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "北坡黏土石灰岩，Merlot 與 Cab. Franc 混釀，風格均衡，複雜度高，歷史名莊。",
@@ -552,8 +552,8 @@
   {
     "name": "Château Laroze",
     "coordinates": [
-      -0.1758,
-      44.8978
+      -0.17881,
+      44.90814
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原西側，黏土石灰，Merlot 為主，果香花香並重，風格細膩圓潤。",
@@ -562,8 +562,8 @@
   {
     "name": "Château Le Châtelet",
     "coordinates": [
-      -0.1468,
-      44.8832
+      -0.1625,
+      44.89553
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "南側坡地，石灰岩黏土，Merlot 主導，風格細緻，小型精品莊。",
@@ -592,8 +592,8 @@
   {
     "name": "Château Monbousquet",
     "coordinates": [
-      -0.1688,
-      44.8728
+      -0.17572,
+      44.87115
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "南部低地，砂礫土壤，Merlot 主導，由 Gérard Perse 管理，現代風格，香氣馥郁。",
@@ -602,8 +602,8 @@
   {
     "name": "Château Montlabert",
     "coordinates": [
-      -0.1798,
-      44.8972
+      -0.18118,
+      44.91236
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西北高原，石灰黏土，Merlot 主導，家族經營，果香豐富，風格平易。",
@@ -622,8 +622,8 @@
   {
     "name": "Château Moulin du Cadet",
     "coordinates": [
-      -0.1538,
-      44.9002
+      -0.155,
+      44.90426
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原北坡，純石灰岩土壤，老藤 Merlot，風格精準岩礦感強，由 Moueix 家族管理。",
@@ -632,8 +632,8 @@
   {
     "name": "Château Péby Faugères",
     "coordinates": [
-      -0.0958,
-      44.8708
+      -0.15073,
+      44.90909
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "Faugères 精選地塊，超級精品旗艦酒，Merlot 主導，陳年實力驚人，由建築師 Portzamparc 設計酒窖。",
@@ -642,8 +642,8 @@
   {
     "name": "Château Petit Faurie de Soutard",
     "coordinates": [
-      -0.1458,
-      44.9002
+      -0.14918,
+      44.90155
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原北側，石灰岩地塊，Merlot 為主，風格傳統均衡，與 Soutard 毗鄰。",
@@ -652,8 +652,8 @@
   {
     "name": "Château Ripeau",
     "coordinates": [
-      -0.1788,
-      44.8972
+      -0.17866,
+      44.91772
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西部高原，砂礫土壤，Merlot 主導，果香輕盈柔和，早飲型。",
@@ -662,8 +662,8 @@
   {
     "name": "Château Rochebelle",
     "coordinates": [
-      -0.1448,
-      44.8812
+      -0.13618,
+      44.88387
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "東南坡地，石灰岩黏土，Merlot 主導，小型精品莊，풍格端雅。",
@@ -672,8 +672,8 @@
   {
     "name": "Château Rol Valentin",
     "coordinates": [
-      -0.1828,
-      44.9068
+      -0.21042,
+      44.90972
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西北砂礫黏土，車庫酒風格，Merlot 主導，果香濃縮，由 Erik Prissette 打造精品。",
@@ -682,8 +682,8 @@
   {
     "name": "Château Saint-Georges (Côte Pavie)",
     "coordinates": [
-      -0.1498,
-      44.8832
+      -0.14957,
+      44.88428
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "Pavie 坡地南段，黏土石灰岩，Merlot 主導，結構均衡，帶典雅花香。",
@@ -692,8 +692,8 @@
   {
     "name": "Château Sansonnet",
     "coordinates": [
-      -0.1388,
-      44.8978
+      -0.14439,
+      44.8963
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "東北高原，石灰黏土，Merlot 主導，採有機農法，生動果香與礦物感並存。",
@@ -702,8 +702,8 @@
   {
     "name": "Château Soutard",
     "coordinates": [
-      -0.1438,
-      44.9002
+      -0.14918,
+      44.90155
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "北高原石灰岩大型莊園，Merlot 主導，風格傳統紮實，陳年潛力佳，由 La Mondiale 集團管理。",
@@ -712,8 +712,8 @@
   {
     "name": "Château Tour Baladoz",
     "coordinates": [
-      -0.1418,
-      44.8712
+      -0.19419,
+      44.92065
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "南坡地區，石灰岩斜坡，Merlot 主導，風格清新細緻，近年品質穩步提升。",
@@ -732,8 +732,8 @@
   {
     "name": "Château Villemaurine",
     "coordinates": [
-      -0.1478,
-      44.8948
+      -0.15375,
+      44.89537
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "鎮北高原，純石灰岩，Merlot 主導，岩礦感突出，名字源自摩爾人佔領時期，著名石灰岩酒窖。",
@@ -742,8 +742,8 @@
   {
     "name": "Château Yon-Figeac",
     "coordinates": [
-      -0.1888,
-      44.8952
+      -0.19419,
+      44.92065
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "西部接近 Figeac，砂礫黏土，Merlot 主導，果香圓潤，近年採用現代農法提升品質。",
@@ -752,8 +752,8 @@
   {
     "name": "Clos Dubreuil",
     "coordinates": [
-      -0.1378,
-      44.8818
+      -0.20379,
+      44.90252
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "東南坡地精品小莊，黏土石灰岩，Merlot 主導，產量極低，車庫酒風格，受高度評價。",
@@ -772,8 +772,8 @@
   {
     "name": "Clos Saint-Martin",
     "coordinates": [
-      -0.1588,
-      44.8952
+      -0.20379,
+      44.90252
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原中心微型古園，石灰岩，Merlot 與 Cab. Franc 混釀，由 Reiffers 家族管理，細緻高雅。",
@@ -782,8 +782,8 @@
   {
     "name": "Couvent des Jacobins",
     "coordinates": [
-      -0.1528,
-      44.8932
+      -0.1547,
+      44.89464
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "中世紀雅各賓修道院舊址，石灰岩窖藏，Merlot 主導，歷史感與精緻度兼具，石窖設施聞名。",
@@ -802,8 +802,8 @@
   {
     "name": "Château Beau-Séjour Bécot",
     "coordinates": [
-      -0.1678,
-      44.8958
+      -0.1644,
+      44.89487
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "高原西側石灰岩台地，Merlot 與 Cab. Franc 混釀，結構飽滿，果香豐富，由 Bécot 家族管理已逾 40 年。",
@@ -832,8 +832,8 @@
   {
     "name": "Château Canon La Gaffelière",
     "coordinates": [
-      -0.1618,
-      44.8842
+      -0.16092,
+      44.88116
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "坡腳砂質黏土地帶，Cab. Franc 比例特別高，花香馥郁，結構細緻優雅，由 Von Neipperg 伯爵家族管理。",
@@ -842,8 +842,8 @@
   {
     "name": "Château Larcis Ducasse",
     "coordinates": [
-      -0.1428,
-      44.8852
+      -0.14537,
+      44.88146
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "東南坡地石灰岩，緊鄰 Pavie，Merlot 主導，採生物動力農法，精緻而深邃，近年評價大幅躍升。",
@@ -852,8 +852,8 @@
   {
     "name": "Château Pavie Macquin",
     "coordinates": [
-      -0.1468,
-      44.8858
+      -0.1492,
+      44.89069
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "東側台地延伸坡，石灰黏土，Merlot 主導，採生物動力農法，風格豐厚，與 Pavie 相鄰，由 Nicolas Thienpont 管理。",
@@ -862,8 +862,8 @@
   {
     "name": "Château Trottevieille",
     "coordinates": [
-      -0.1438,
-      44.8962
+      -0.14147,
+      44.89432
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "東北高原石灰岩台地，Merlot 主導，歷史悠久，風格傳統端雅，近年酒質大幅改善，由 Philippe Castéja 管理。",
@@ -872,8 +872,8 @@
   {
     "name": "Clos Fourtet",
     "coordinates": [
-      -0.1588,
-      44.8918
+      -0.15835,
+      44.89462
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "聖愛美濃鎮西城牆旁，高原石灰岩與海百合化石層，Merlot 主導，岩礦感鮮明，由 Cuvelier 家族管理，品質穩定卓越。",
@@ -882,8 +882,8 @@
   {
     "name": "La Mondotte",
     "coordinates": [
-      -0.1508,
-      44.8848
+      -0.14077,
+      44.8851
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "極小精品地塊（2公頃），緊鄰 Canon La Gaffelière，黏土石灰岩坡地，老藤 Merlot，風格濃郁集中，由 Von Neipperg 家族的旗艦精品。",
