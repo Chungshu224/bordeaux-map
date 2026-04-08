@@ -194,6 +194,14 @@
     <!-- 氣候熱力圖 控制列 -->
     <transition name="climate-slide">
     <div v-if="climateEnabled && climateData && !isPhoneDevice" class="climate-overlay">
+      <!-- 指標切換 -->
+      <div class="cy-indicator-tabs">
+        <button v-for="ind in CLIMATE_INDICATORS" :key="ind.id"
+          :class="['cy-ind-btn', { active: climateIndicator === ind.id }]"
+          @click="setClimateIndicator(ind.id)">
+          {{ ind.icon }} {{ ind.label }}
+        </button>
+      </div>
       <div class="climate-header-row">
         <div class="cy-year-badge">
           <span class="cy-year">{{ climateYear }}</span>
@@ -201,10 +209,12 @@
         </div>
         <div class="cy-stats">
           <div v-if="climateCurrentAocLabel" class="cy-aoc-name">{{ climateCurrentAocLabel }}</div>
-          <span v-if="currentYearAvgTemp" class="cy-temp">{{ currentYearAvgTemp }}°C</span>
-          <span v-if="currentYearBaselineDelta !== null" class="cy-delta"
-            :class="currentYearBaselineDelta > 0 ? 'cy-warm' : 'cy-cool'">
-            {{ currentYearBaselineDelta > 0 ? '+' : '' }}{{ currentYearBaselineDelta }}°C vs 基準
+          <span v-if="currentYearValue !== null" class="cy-temp">
+            {{ currentYearValue }}{{ currentIndicatorConfig.unit }}
+          </span>
+          <span v-if="currentYearDelta !== null" class="cy-delta"
+            :class="currentYearDeltaPositive ? 'cy-warm' : 'cy-cool'">
+            {{ currentYearDeltaPositive ? '+' : '' }}{{ currentYearDelta }}{{ currentIndicatorConfig.unit }} vs 基準
           </span>
         </div>
         <button class="cy-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
@@ -220,14 +230,14 @@
         <span>1980</span><span>1990</span><span>2000</span><span>2010</span><span>2020</span><span>2024</span>
       </div>
       <div class="climate-legend">
-        <div class="legend-gradient"></div>
+        <div :class="['legend-gradient', `legend-${climateIndicator}`]"></div>
         <div class="legend-labels">
-          <span>{{ climateStats ? climateStats.min.toFixed(1) : '' }}°C 涼</span>
+          <span>{{ currentGlobalStats ? currentGlobalStats.min.toFixed(0) : '' }}{{ currentIndicatorConfig.unit }} {{ currentIndicatorConfig.lowLabel }}</span>
           <span>均值</span>
-          <span>熱 {{ climateStats ? climateStats.max.toFixed(1) : '' }}°C</span>
+          <span>{{ currentIndicatorConfig.highLabel }} {{ currentGlobalStats ? currentGlobalStats.max.toFixed(0) : '' }}{{ currentIndicatorConfig.unit }}</span>
         </div>
       </div>
-      <div class="climate-footnote">📊 指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010 年均值</div>
+      <div class="climate-footnote">📊 {{ currentIndicatorConfig.footnote }}</div>
     </div>
     </transition>
   </section>
@@ -313,10 +323,58 @@ let chateauMarkerJustClicked = false  // 旗標：酒莊 marker 剛被點擊，A
 // ── 氣候熱力圖 ───────────────────────────────────────────
 const climateEnabled  = ref(false)
 const climateYear     = ref(2003)   // 預設顯示 2003 熱浪年
-const climateData     = ref(null)   // { aoc_id: { group, centroid, temps[], baseline } }
-const climateStats    = ref(null)   // { min, max, mean }
+const climateData     = ref(null)   // { aoc_id: { group, centroid, temps[], sun[], rain[], baseline, baselineSun, baselineRain } }
+const climateStats    = ref(null)   // { min, max, mean }  (溫度)
+const climateStatsSun = ref(null)   // { min, max, mean }  (日照)
+const climateStatsRain= ref(null)   // { min, max, mean }  (降雨)
 const climateYears    = ref([])     // [1980..2024]
 const climateYearAvg  = ref([])     // 各年波爾多均溫
+const climateYearSun  = ref([])     // 各年夏季日照
+const climateYearRain = ref([])     // 各年夏季降雨
+const climateIndicator= ref('temp') // 'temp' | 'sun' | 'rain'
+
+const CLIMATE_INDICATORS = [
+  {
+    id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C',
+    lowLabel: '涼', highLabel: '熱',
+    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010',
+    dataKey: 'temps', baselineKey: 'baseline',
+    globalKey: 'global', yearAvgKey: 'yearAvg',
+  },
+  {
+    id: 'sun', icon: '☀️', label: '日照時數', unit: 'h',
+    lowLabel: '少', highLabel: '多',
+    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010',
+    dataKey: 'sun', baselineKey: 'baselineSun',
+    globalKey: 'globalSun', yearAvgKey: 'yearSunAvg',
+  },
+  {
+    id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm',
+    lowLabel: '乾', highLabel: '濕',
+    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010',
+    dataKey: 'rain', baselineKey: 'baselineRain',
+    globalKey: 'globalRain', yearAvgKey: 'yearRainAvg',
+  },
+]
+
+const currentIndicatorConfig = computed(() =>
+  CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value)
+)
+const currentGlobalStats = computed(() => {
+  const cfg = currentIndicatorConfig.value
+  if (!cfg) return null
+  if (cfg.id === 'temp') return climateStats.value
+  if (cfg.id === 'sun')  return climateStatsSun.value
+  if (cfg.id === 'rain') return climateStatsRain.value
+  return null
+})
+const currentYearAvgArr = computed(() => {
+  const cfg = currentIndicatorConfig.value
+  if (!cfg) return climateYearAvg.value
+  if (cfg.id === 'sun')  return climateYearSun.value
+  if (cfg.id === 'rain') return climateYearRain.value
+  return climateYearAvg.value
+})
 
 const GOLDEN_VINTAGES = new Set([1982, 1989, 1990, 2000, 2003, 2005, 2009, 2010, 2015, 2016, 2019, 2020])
 
@@ -330,36 +388,55 @@ const climateCurrentAocLabel = computed(() => {
     .replace(/-/g, ' ').replace(/_/g, ' ')
 })
 
-// 目前 AOC 在選取年份的均溫（若無則顯示全域均值）
-const currentYearAvgTemp = computed(() => {
+// 目前 AOC 在選取年份的數值
+const currentYearValue = computed(() => {
   if (!climateYears.value.length) return null
+  const cfg = currentIndicatorConfig.value
   const idx = climateYears.value.indexOf(climateYear.value)
   if (idx < 0) return null
   if (climateData.value && props.activeAOC?.aoc) {
     const aocId = props.activeAOC.aoc.replace('.geojson', '')
-    const t = climateData.value[aocId]?.temps?.[idx]
-    if (t != null) return +t.toFixed(1)
+    const arr = climateData.value[aocId]?.[cfg.dataKey]
+    if (arr?.[idx] != null) return +arr[idx].toFixed(cfg.id === 'temp' ? 1 : 0)
   }
-  return climateYearAvg.value[idx] != null ? +climateYearAvg.value[idx].toFixed(1) : null
+  const arr = currentYearAvgArr.value
+  return arr[idx] != null ? +arr[idx].toFixed(cfg.id === 'temp' ? 1 : 0) : null
 })
 
+// 舊名稱保留 backward compat
+const currentYearAvgTemp = currentYearValue
+
 // 目前 AOC 與基準線的差值
-const currentYearBaselineDelta = computed(() => {
+const currentYearDelta = computed(() => {
   if (!climateData.value || !climateYears.value.length) return null
+  const cfg = currentIndicatorConfig.value
   const idx = climateYears.value.indexOf(climateYear.value)
   if (idx < 0) return null
   if (props.activeAOC?.aoc) {
     const aocId = props.activeAOC.aoc.replace('.geojson', '')
     const d = climateData.value[aocId]
-    if (d?.temps?.[idx] != null && d.baseline) {
-      return +(d.temps[idx] - d.baseline).toFixed(2)
+    const arr = d?.[cfg.dataKey]
+    const baseline = d?.[cfg.baselineKey]
+    if (arr?.[idx] != null && baseline) {
+      const dec = cfg.id === 'temp' ? 2 : 0
+      return +(arr[idx] - baseline).toFixed(dec)
     }
   }
-  // 全域平均 delta
+  // 全域 delta
   const vals = Object.values(climateData.value)
-    .map(d => (d.temps[idx] != null && d.baseline) ? d.temps[idx] - d.baseline : null)
-    .filter(v => v != null)
-  return vals.length ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(2) : null
+    .map(d => {
+      const arr = d[cfg.dataKey]
+      const baseline = d[cfg.baselineKey]
+      return (arr?.[idx] != null && baseline) ? arr[idx] - baseline : null
+    }).filter(v => v != null)
+  return vals.length ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(cfg.id === 'temp' ? 2 : 0) : null
+})
+const currentYearBaselineDelta = currentYearDelta  // backward compat
+
+// 對於溫度：暖=正，日照：多=正，降雨：正也顯示橙（濕）
+const currentYearDeltaPositive = computed(() => {
+  if (currentYearDelta.value === null) return false
+  return currentYearDelta.value > 0
 })
 
 const geologyLayerConfig = [
@@ -1508,24 +1585,58 @@ const loadClimateData = async () => {
   const res = await fetch('/data/bordeaux-climate.json')
   if (!res.ok) throw new Error('無法載入氣候資料')
   const json = await res.json()
-  climateData.value    = json.aocs
-  climateStats.value   = json.global
-  climateYears.value   = json.meta.years
-  climateYearAvg.value = json.meta.yearAvg
+  climateData.value     = json.aocs
+  climateStats.value    = json.global
+  climateStatsSun.value = json.globalSun  || null
+  climateStatsRain.value= json.globalRain || null
+  climateYears.value    = json.meta.years
+  climateYearAvg.value  = json.meta.yearAvg
+  climateYearSun.value  = json.meta.yearSunAvg  || []
+  climateYearRain.value = json.meta.yearRainAvg || []
 }
 
-// 溫度 → 顏色（5 段線性插值）
-const tempToClimateColor = (temp) => {
-  if (!climateStats.value) return '#ffffbf'
-  const { min, max, mean } = climateStats.value
-  const stops = [
-    [min,        [69,  117, 180]],  // #4575b4 藍
-    [mean - 1.5, [145, 191, 219]],  // #91bfdb 淺藍
-    [mean,       [255, 255, 191]],  // #ffffbf 淡黃
-    [mean + 1.5, [252, 141,  89]],  // #fc8d59 橙
-    [max,        [215,  48,  39]],  // #d73027 深紅
-  ]
-  const t = Math.max(min, Math.min(max, temp))
+// 數值 → 顏色（共用，支援 temp / sun / rain）
+const valueToClimateColor = (val, indicator) => {
+  let stats, stops
+  if (indicator === 'sun') {
+    stats = climateStatsSun.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    // 日照：藍(少) → 淡黃 → 橙黃(多)
+    stops = [
+      [min,        [120, 81, 169]],   // 深紫（陰雨）
+      [mean - 20,  [145, 191, 219]],
+      [mean,       [255, 255, 191]],
+      [mean + 20,  [254, 224,  72]],
+      [max,        [253, 141,  60]],  // 橙（豔陽）
+    ]
+  } else if (indicator === 'rain') {
+    stats = climateStatsRain.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    // 降雨：橙紅(乾) → 淡黃 → 藍(濕)
+    stops = [
+      [min,        [253, 174,  97]],  // 乾燥橙
+      [mean - 15,  [255, 255, 191]],
+      [mean,       [171, 217, 233]],
+      [mean + 15,  [ 74, 144, 226]],
+      [max,        [ 44,  62, 160]],  // 深藍（濕）
+    ]
+  } else {
+    // temp（原有邏輯）
+    stats = climateStats.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,        [69,  117, 180]],
+      [mean - 1.5, [145, 191, 219]],
+      [mean,       [255, 255, 191]],
+      [mean + 1.5, [252, 141,  89]],
+      [max,        [215,  48,  39]],
+    ]
+  }
+  const { min, max } = stats
+  const t = Math.max(min, Math.min(max, val))
   for (let i = 0; i < stops.length - 1; i++) {
     const [t0, c0] = stops[i]
     const [t1, c1] = stops[i + 1]
@@ -1537,21 +1648,37 @@ const tempToClimateColor = (temp) => {
       return `rgb(${r},${g},${b})`
     }
   }
-  return 'rgb(215,48,39)'
+  return `rgb(${stops[stops.length-1][1].join(',')})`
 }
 
-// 將溫度顏色套用到目前的 aoc-fill 圖層
+// 舊函式別名（保留，避免其他地方呼叫失敗）
+const tempToClimateColor = (temp) => valueToClimateColor(temp, 'temp')
+
+// 將目前指標顏色套用到 aoc-fill 圖層
 const applyClimateColor = (year) => {
-  if (!map || !climateData.value || !climateStats.value) return
+  if (!map || !climateData.value) return
   if (!map.getLayer('aoc-fill')) return
+  const cfg     = currentIndicatorConfig.value
   const aocFile = props.activeAOC?.aoc || ''
   const aocId   = aocFile.replace('.geojson', '')
   const idx     = climateYears.value.indexOf(year)
   const aocInfo = climateData.value[aocId]
-  const temp    = (aocInfo?.temps?.[idx] != null) ? aocInfo.temps[idx] : (climateStats.value.mean ?? 20)
-  const color   = tempToClimateColor(temp)
+  const stats   = currentGlobalStats.value
+
+  let value
+  if (aocInfo?.[cfg.dataKey]?.[idx] != null) {
+    value = aocInfo[cfg.dataKey][idx]
+  } else {
+    value = currentYearAvgArr.value[idx] ?? (stats?.mean ?? 20)
+  }
+  const color = valueToClimateColor(value, cfg.id)
   map.setPaintProperty('aoc-fill', 'fill-color', color)
   map.setPaintProperty('aoc-fill', 'fill-opacity', 0.75)
+}
+
+const setClimateIndicator = (id) => {
+  climateIndicator.value = id
+  applyClimateColor(climateYear.value)
 }
 
 // 還原 aoc-fill 為預設的 group 顏色
@@ -2812,6 +2939,33 @@ onUnmounted(() => {
   line-height: 1.4;
 }
 
+/* 指標切換分頁 */
+.cy-indicator-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.cy-ind-btn {
+  flex: 1;
+  padding: 4px 6px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.72rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.cy-ind-btn:hover { background: rgba(255,255,255,0.16); color: #fff; }
+.cy-ind-btn.active {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  font-weight: 600;
+  border-color: rgba(255,255,255,0.5);
+}
+
 .climate-header-row {
   display: flex;
   align-items: center;
@@ -2937,6 +3091,14 @@ onUnmounted(() => {
   height: 10px;
   border-radius: 5px;
   background: linear-gradient(to right, #4575b4, #91bfdb, #ffffbf, #fc8d59, #d73027);
+}
+/* 日照：灰紫(陰) → 淡黃 → 橙(豔陽) */
+.legend-gradient.legend-sun {
+  background: linear-gradient(to right, #785ba9, #91bfdb, #ffffbf, #fde048, #fd8d3c);
+}
+/* 降雨：橙(乾) → 淡黃 → 藍(濕) */
+.legend-gradient.legend-rain {
+  background: linear-gradient(to right, #fdb96a, #ffffbf, #abdfe7, #4a90e2, #2c3ea0);
 }
 
 .legend-labels {
