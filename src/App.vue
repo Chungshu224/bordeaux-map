@@ -1,7 +1,7 @@
 <template>
   <div :class="['app', platformClasses]">
     <!-- 身份驗證中 — loading 畫面 -->
-    <div v-if="effectiveMode === 'loading'" class="auth-loading">
+    <div v-if="authState.loading" class="auth-loading">
       <div class="auth-loading-inner">
         <div class="wine-glass-icon">🍷</div>
         <div class="auth-spinner"></div>
@@ -9,77 +9,25 @@
       </div>
     </div>
 
-    <!-- 登入頁面 -->
-    <Login
-      v-else-if="effectiveMode === 'login'"
+    <!-- Vue Router 的動態內容渲染區 -->
+    <router-view 
+      v-else
+      :deviceInfo="deviceInfo"
+      :selectedLevel="selectedLevel"
       @backToHome="backToLevelSelection"
       @goToRegister="goToRegister"
       @loginSuccess="backToLevelSelection"
-    />
-
-    <!-- 註冊頁面 -->
-    <Register
-      v-else-if="effectiveMode === 'register'"
-      @backToHome="backToLevelSelection"
       @goToLogin="goToLogin"
-    />
-
-    <!-- 等級選擇首頁 -->
-    <LevelSelection 
-      v-else-if="effectiveMode === 'levelSelection'"
       @selectLevel="enterLearningMode"
       @exploreMode="enterExploreMode"
       @gameHubMode="enterGameHubMode"
       @notebookMode="enterNotebookMode"
-      @register="goToRegister"
-      @login="goToLogin"
       @settings="goToSettings"
-      :deviceInfo="deviceInfo"
-    />
-    
-    <!-- 個人設定頁 -->
-    <UserSettings
-      v-else-if="effectiveMode === 'settings'"
-      @backToHome="backToLevelSelection"
-    />
-
-    <!-- 學習系統模式 -->
-    <LearningSystem 
-      v-else-if="effectiveMode === 'learning'" 
-      :selectedLevel="selectedLevel"
       @exitLearning="backToLevelSelection"
-      :deviceInfo="deviceInfo"
-    />
-    
-    <!-- 原始地圖探索模式 -->
-    <div v-else-if="effectiveMode === 'explore'" class="original-map-mode">
-      <div class="mode-switcher">
-        <button 
-          class="learning-mode-btn" 
-          @click="backToLevelSelection"
-          title="返回學習模式"
-        >
-          <span class="btn-icon">🎓</span>
-          <span class="btn-text">學習模式</span>
-        </button>
-      </div>
-      <BordeauxMap :deviceInfo="deviceInfo" />
-    </div>
-    
-    <!-- 互動練習中心 -->
-    <GameHubPage
-      v-else-if="effectiveMode === 'gamehub'"
-      @back="backToLevelSelection"
-    />
-
-    <!-- 品飲筆記本 -->
-    <TastingNotebookPage
-      v-else-if="effectiveMode === 'notebook'"
-      :deviceInfo="deviceInfo"
       @back="backToLevelSelection"
       @go-to-course="enterLearningMode"
     />
-    
+
     <!-- 成就通知容器 -->
     <AchievementNotificationsContainer />
 
@@ -100,23 +48,13 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import BordeauxMap from './components/BordeauxMap.vue'
-import LearningSystem from './components/LearningSystem.vue'
-import LevelSelection from './components/LevelSelection.vue'
-import Register from './components/Register.vue'
-import Login from './components/Login.vue'
-import UserSettings from './components/UserSettings.vue'
-import MapQuizPage from './components/MapQuizPage.vue'
-import BankQuizPage from './components/BankQuizPage.vue'
-import VintageSortPage from './components/VintageSortPage.vue'
-import GrapeSoilMatchPage from './components/GrapeSoilMatchPage.vue'
-import GameHubPage from './components/GameHubPage.vue'
-import TastingNotebookPage from './components/TastingNotebookPage.vue'
+import { useRouter } from 'vue-router'
 import AchievementNotificationsContainer from './components/AchievementNotificationsContainer.vue'
-import { learningActions } from './stores/learningStore.js'
 import { globalAchievementManager } from './stores/achievementSystem.js'
 import { useResponsiveLayout, getPlatformClasses } from './utils/deviceDetection.js'
 import { authState } from './stores/authStore.js'
+
+const router = useRouter()
 
 // 裝置偵測
 const layout = useResponsiveLayout()
@@ -154,58 +92,47 @@ const handleKeyDown = (event) => {
   }
 }
 
-// 應用模式狀態
-const currentMode = ref('levelSelection')
+// 應用模式狀態 (供兼容子組件)
 const selectedLevel = ref(1)
 
-// 实際顔現模式：未登入時強制展示登入頁
-const effectiveMode = computed(() => {
-  if (authState.loading) return 'loading'
-  // 登入 / 註冊頁不需要驗證
-  if (currentMode.value === 'login' || currentMode.value === 'register') return currentMode.value
-  // 其他頁面必須登入
-  if (!authState.user) return 'login'
-  return currentMode.value
-})
-
-// 模式切換方法
+// 路由切換方法 (替換原本的 mode 變數)
 const enterLearningMode = (level) => {
   selectedLevel.value = level
-  currentMode.value = 'learning'
+  router.push('/learning')
   console.log(`進入 Level ${level} 學習模式`)
 }
 
 const enterExploreMode = () => {
-  currentMode.value = 'explore'
+  router.push('/explore')
   console.log('進入地圖探索模式')
 }
 
 const enterGameHubMode = () => {
-  currentMode.value = 'gamehub'
+  router.push('/gamehub')
   console.log('進入互動練習中心')
 }
 
 const enterNotebookMode = () => {
-  currentMode.value = 'notebook'
+  router.push('/notebook')
 }
 
 const backToLevelSelection = () => {
-  currentMode.value = 'levelSelection'
+  router.push('/')
   console.log('返回等級選擇頁面')
 }
 
 const goToRegister = () => {
-  currentMode.value = 'register'
+  router.push('/register')
   console.log('進入註冊頁面')
 }
 
 const goToLogin = () => {
-  currentMode.value = 'login'
+  router.push('/login')
   console.log('進入登入頁面')
 }
 
 const goToSettings = () => {
-  currentMode.value = 'settings'
+  router.push('/settings')
   console.log('進入個人設定頁')
 }
 

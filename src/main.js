@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+import router from './router'
 import mapboxgl from 'mapbox-gl'
 
 const BLOCKED_PATTERNS = [
@@ -115,4 +116,6 @@ if (typeof mapboxgl.setRTLTextPlugin === 'function') {
   }
 }
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.use(router)
+app.mount('#app')
