@@ -230,6 +230,7 @@ let infoSheetTouchStartY = 0
 let soilPopup = null
 let aocClickPopup = null
 let geologyClicksRegistered = false
+let geologyJustClicked = false  // 旗標：地質圖層剛被點擊，AOC handler 應跳過
 
 const geologyLayerConfig = [
   { id: 'limestone', label: '石灰岩', path: '/geojson/geology/Limestone.geojson', color: '#00E5FF', lineColor: '#007C91' },
@@ -1134,6 +1135,9 @@ const registerGeologyClickHandlers = () => {
     map.on('click', fillId, async (e) => {
       if (!geologyEnabled.value || !soilVisibility.value[item.id]) return
       e.stopPropagation()
+      // 設旗標讓通用 map click handler 跳過（Mapbox stopPropagation 不阻止通用事件）
+      geologyJustClicked = true
+      setTimeout(() => { geologyJustClicked = false }, 0)
 
       const { lng, lat } = e.lngLat
       const feature = e.features?.[0]
@@ -1231,9 +1235,9 @@ const registerAocClickHandler = () => {
   if (!map || !supabase) return
 
   map.on('click', async (e) => {
-    // 已被地質圖層點擊攔截（e.defaultPrevented 或地質已拿走事件）則跳過
-    // 若地質模式開啟且點在地質圖層上，geology click handler 已呼叫 stopPropagation
-    // 此 general click 只處理「非地質」點擊
+    // 地質圖層剛被點擊 → 跳過，避免同時彈出 AOC popup
+    if (geologyJustClicked) return
+
     const { lng, lat } = e.lngLat
 
     if (aocClickPopup) { aocClickPopup.remove(); aocClickPopup = null }
