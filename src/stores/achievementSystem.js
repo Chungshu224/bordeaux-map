@@ -277,8 +277,73 @@ export const achievementDefinitions = {
     category: 'special',
     rarity: 'legendary',
     points: 300,
-    condition: (stats) => stats.allCoursesCompleted && stats.averageScore >= 90
-  }
+    condition: (stats) => stats.allCoursesCompleted && stats.averageScore >= 90  },
+
+  // 品飲筆記成就
+  'first-tasting': {
+    id: 'first-tasting',
+    title: '初次品飲',
+    description: '記錄了第一筆品飲筆記',
+    icon: '📓',
+    category: 'tasting',
+    rarity: 'common',
+    points: 10,
+    condition: (stats) => stats.tastingCount >= 1
+  },
+
+  'tasting-enthusiast': {
+    id: 'tasting-enthusiast',
+    title: '品飲愛好者',
+    description: '累計記錄 10 筆品飲筆記',
+    icon: '🍷',
+    category: 'tasting',
+    rarity: 'uncommon',
+    points: 30,
+    condition: (stats) => stats.tastingCount >= 10
+  },
+
+  'tasting-sommelier': {
+    id: 'tasting-sommelier',
+    title: '賦游侍酒師',
+    description: '累計記錄 30 筆品飲筆記',
+    icon: '🥂',
+    category: 'tasting',
+    rarity: 'rare',
+    points: 75,
+    condition: (stats) => stats.tastingCount >= 30
+  },
+
+  'wishlist-dreamer': {
+    id: 'wishlist-dreamer',
+    title: '美酒夢想家',
+    description: '想喝清單已有 5 筆',
+    icon: '♥️',
+    category: 'tasting',
+    rarity: 'common',
+    points: 10,
+    condition: (stats) => stats.wishlistCount >= 5
+  },
+
+  'vintage-tracker': {
+    id: 'vintage-tracker',
+    title: '年份追蹤者',
+    description: '記錄了 3 個不同年份的品飲筆記',
+    icon: '📅',
+    category: 'tasting',
+    rarity: 'uncommon',
+    points: 25,
+    condition: (stats) => stats.tastingVintages >= 3
+  },
+
+  'aoc-notebook': {
+    id: 'aoc-notebook',
+    title: '產區探索筆記',
+    description: '已在 5 個以上不同產區留下品飲筆記',
+    icon: '🗺️',
+    category: 'tasting',
+    rarity: 'rare',
+    points: 50,
+    condition: (stats) => stats.tastingAOCs >= 5  }
 }
 
 // 成就狀態管理
@@ -322,7 +387,13 @@ export const achievementState = reactive({
     
     // 特殊統計
     foodPairingCompleted: false,
-    correctMarketPredictions: 0
+    correctMarketPredictions: 0,
+
+    // 品飲筆記統計
+    tastingCount:    0,
+    wishlistCount:   0,
+    tastingVintages: 0,
+    tastingAOCs:     0
   },
   newAchievements: [], // 新解鎖的成就列表
   displayQueue: []     // 待顯示的成就通知隊列
@@ -354,7 +425,8 @@ export const achievementConfig = {
     knowledge: { name: '知識掌握', icon: '🎓', color: '#607D8B' },
     social: { name: '社交互動', icon: '👥', color: '#E91E63' },
     time: { name: '時間管理', icon: '⏰', color: '#795548' },
-    special: { name: '特殊成就', icon: '⭐', color: '#FFD700' }
+    special: { name: '特殊成就', icon: '⭐', color: '#FFD700' },
+    tasting: { name: '品飲筆記', icon: '📔', color: '#8B0000' }
   },
   
   // 通知設定
@@ -649,7 +721,11 @@ export class AchievementManager {
       consecutiveDays: 0,
       longestSession: 0,
       foodPairingCompleted: false,
-      correctMarketPredictions: 0
+      correctMarketPredictions: 0,
+      tastingCount:    0,
+      wishlistCount:   0,
+      tastingVintages: 0,
+      tastingAOCs:     0
     }
     this.saveAchievements()
   }

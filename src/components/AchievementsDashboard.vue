@@ -224,6 +224,50 @@
         </div>
       </div>
     </transition>
+
+    <!-- 分享按鈕 -->
+    <div class="share-fab-wrap">
+      <button class="share-fab" :disabled="sharingAch" @click="shareAchievements">
+        {{ sharingAch ? '⏳' : '🖼️ 分享成就卡' }}
+      </button>
+    </div>
+
+    <!-- 成就分享卡 (隱藏，供截圖用) -->
+    <div ref="achShareEl" class="ach-share-card">
+      <div class="asc-header">
+        <span class="asc-logo">🍷 波爾多葡萄酒學院</span>
+        <span class="asc-sub">成就報告</span>
+      </div>
+      <div class="asc-level">
+        <span class="asc-level-icon">👑</span>
+        <div>
+          <div class="asc-level-lv">Lv.{{ userLevel.level }}</div>
+          <div class="asc-level-title">{{ userLevel.title }}</div>
+        </div>
+      </div>
+      <div class="asc-stats">
+        <div class="asc-stat">
+          <div class="asc-stat-val">{{ unlockedCount }}/{{ totalCount }}</div>
+          <div class="asc-stat-lbl">解鎖成就</div>
+        </div>
+        <div class="asc-stat">
+          <div class="asc-stat-val">{{ totalPoints }}</div>
+          <div class="asc-stat-lbl">成就點數</div>
+        </div>
+        <div class="asc-stat">
+          <div class="asc-stat-val">{{ completionPercentage }}%</div>
+          <div class="asc-stat-lbl">完成度</div>
+        </div>
+      </div>
+      <div class="asc-badges">
+        <span
+          v-for="ach in unlockedAchievementList.slice(0, 18)"
+          :key="ach.id"
+          :title="ach.title"
+          class="asc-badge">{{ ach.icon }}</span>
+      </div>
+      <div class="asc-footer">bordeaux-wine.academy · {{ new Date().toLocaleDateString('zh-TW') }}</div>
+    </div>
   </div>
 </template>
 
@@ -241,6 +285,31 @@ import {
 const selectedCategory = ref('all')
 const viewMode = ref('grid')
 const selectedAchievement = ref(null)
+
+// ── Achievement share ──────────────────────────────────────────────
+const achShareEl  = ref(null)
+const sharingAch  = ref(false)
+
+const shareAchievements = async () => {
+  sharingAch.value = true
+  try {
+    const html2canvas = (await import('html2canvas')).default
+    const canvas = await html2canvas(achShareEl.value, {
+      scale: 2, useCORS: true, backgroundColor: '#FFF8F5', logging: false, scrollX: 0, scrollY: 0,
+    })
+    const blob = await new Promise(r => canvas.toBlob(r, 'image/png'))
+    const file = new File([blob], 'achievements.png', { type: 'image/png' })
+    if (navigator.canShare?.({ files: [file] })) {
+      await navigator.share({ title: '我的成就報告', text: `我在波爾多葡萄酒學院解鎖了 ${unlockedCount.value} 個成就！`, files: [file] })
+    } else {
+      const url = URL.createObjectURL(blob)
+      const a = Object.assign(document.createElement('a'), { href: url, download: 'achievements.png' })
+      document.body.appendChild(a); a.click(); document.body.removeChild(a)
+      setTimeout(() => URL.revokeObjectURL(url), 3000)
+    }
+  } catch(e) { if (e?.name !== 'AbortError') console.error(e) }
+  finally { sharingAch.value = false }
+}
 
 // 分類定義
 const categories = [
@@ -285,6 +354,10 @@ const filteredAchievements = computed(() => {
   }
   return achievements.filter(a => a.category === selectedCategory.value)
 })
+
+const unlockedAchievementList = computed(() =>
+  Object.values(achievementDefinitions).filter(a => achievementState.unlockedAchievements.includes(a.id))
+)
 
 // 方法
 const isUnlocked = (achievementId) => {
@@ -975,4 +1048,49 @@ const closeDetails = () => {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Achievement share FAB & card ─────────────────────────────── */
+.share-fab-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 0.5rem;
+}
+.share-fab {
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(135deg, #c8a96e, #8b6914);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(200,169,110,0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.share-fab:hover { transform: translateY(-2px); box-shadow: 0 5px 16px rgba(200,169,110,0.45); }
+.share-fab:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+.ach-share-card {
+  position: fixed; left: -9999px; top: 0; z-index: -1;
+  width: 340px;
+  background: linear-gradient(145deg, #1a0a2e, #2d1a0e);
+  border-radius: 20px;
+  padding: 1.4rem 1.2rem;
+  font-family: 'Noto Serif TC', serif;
+  color: white;
+}
+.asc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.asc-logo { font-size: 0.7rem; color: #c8a96e; font-weight: 600; }
+.asc-sub { font-size: 0.65rem; color: rgba(255,255,255,0.5); }
+.asc-level { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1rem; background: rgba(255,255,255,0.07); border-radius: 12px; padding: 0.7rem 0.9rem; }
+.asc-level-icon { font-size: 1.8rem; }
+.asc-level-lv { font-size: 1.2rem; font-weight: 700; color: #c8a96e; }
+.asc-level-title { font-size: 0.75rem; color: rgba(255,255,255,0.6); }
+.asc-stats { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.asc-stat { flex: 1; text-align: center; background: rgba(255,255,255,0.07); border-radius: 10px; padding: 0.5rem 0; }
+.asc-stat-val { font-size: 1.1rem; font-weight: 700; color: #c8a96e; }
+.asc-stat-lbl { font-size: 0.62rem; color: rgba(255,255,255,0.5); }
+.asc-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.8rem; }
+.asc-badge { font-size: 1.5rem; }
+.asc-footer { text-align: center; font-size: 0.6rem; color: rgba(255,255,255,0.3); }
 </style>

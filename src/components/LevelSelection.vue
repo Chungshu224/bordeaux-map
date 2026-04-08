@@ -37,6 +37,37 @@
         </div>
       </header>
 
+      <!-- 快速功能入口 -->
+      <section class="quick-nav">
+        <div class="quick-nav-grid">
+          <button class="nav-card game-hub" @click="$emit('gameHubMode')">
+            <span class="nav-icon">🎮</span>
+            <span class="nav-title">互動練習</span>
+            <span class="nav-desc">產區競答・左右岸・年份溫度・葡萄土壤</span>
+          </button>
+          <button class="nav-card explore" @click="$emit('exploreMode')">
+            <span class="nav-icon">🗺️</span>
+            <span class="nav-title">探索地圖</span>
+            <span class="nav-desc">互動式波爾多產區地圖・地質・氣候</span>
+          </button>
+          <button class="nav-card achievements" @click="showAchievements = true">
+            <span class="nav-icon">🏆</span>
+            <span class="nav-title">成就系統</span>
+            <span class="nav-desc">查看已解鎖成就與積分等級</span>
+          </button>
+          <button class="nav-card progress" @click="showProgress = true">
+            <span class="nav-icon">📊</span>
+            <span class="nav-title">學習進度</span>
+            <span class="nav-desc">正確率・學習時長・各單元詳細記錄</span>
+          </button>
+          <button class="nav-card notebook" @click="$emit('notebookMode')">
+            <span class="nav-icon">📔</span>
+            <span class="nav-title">品飲筆記</span>
+            <span class="nav-desc">記錄品飲體驗・年份・氣候參考</span>
+          </button>
+        </div>
+      </section>
+
       <!-- 等級選擇卡片 -->
       <section class="level-selection-grid">
         <div class="grid-container">
@@ -313,30 +344,10 @@
         </div>
       </section>
 
-      <!-- 底部功能區域 -->
-      <footer class="bottom-section">
-        <div class="quick-actions">
-          <button class="action-btn explore" @click="$emit('exploreMode')">
-            <span class="btn-icon">🗺️</span>
-            <span class="btn-text">探索地圖</span>
-          </button>
-          
-          <button class="action-btn achievements" @click="showAchievements = true">
-            <span class="btn-icon">🏆</span>
-            <span class="btn-text">成就系統</span>
-          </button>
-          
-          <button class="action-btn progress" @click="showProgress = true">
-            <span class="btn-icon">📊</span>
-            <span class="btn-text">學習進度</span>
-          </button>
-
-          <!-- 雲端同步提示（未登入時顯示） -->
-          <div v-if="!authUser" class="sync-hint">
-            📍 登入後可學習進度雲端同步
-          </div>
-        </div>
-      </footer>
+      <!-- 雲端同步提示（未登入時顯示） -->
+      <div v-if="!authUser" class="sync-hint-bar">
+        📍 登入後可學習進度雲端同步
+      </div>
 
       <!-- 學習進度摘要 -->
       <div class="progress-summary-section">
@@ -406,7 +417,7 @@ const showAchievements = ref(false)
 const showProgress = ref(false)
 
 // 事件定義
-const emit = defineEmits(['selectLevel', 'exploreMode', 'register', 'login', 'settings'])
+const emit = defineEmits(['selectLevel', 'exploreMode', 'gameHubMode', 'notebookMode', 'register', 'login', 'settings'])
 
 // 認證狀態
 const authUser = computed(() => authState.user)
@@ -901,54 +912,97 @@ const getBubbleStyle = (index) => {
   transform: translateX(4px);
 }
 
-/* 底部區域 */
-.bottom-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  margin-top: 2rem;
+/* 快速功能入口 */
+.quick-nav {
+  margin-bottom: 2rem;
 }
 
-.quick-actions {
-  display: flex;
-  gap: 1.5rem;
+.quick-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.action-btn {
+.nav-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  gap: 0.4rem;
+  padding: 1.1rem 1rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 18px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.nav-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.nav-card:hover::after { opacity: 1; }
+.nav-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
 }
 
-.action-btn.explore {
-  background: linear-gradient(135deg, #00BCD4, #26C6DA);
+.nav-icon {
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+.nav-title {
+  font-size: 1rem;
+  font-weight: 800;
   color: white;
+  letter-spacing: 0.01em;
+}
+.nav-desc {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.4;
 }
 
-.action-btn.achievements {
-  background: linear-gradient(135deg, #FFC107, #FFD54F);
-  color: #333;
+.nav-card.game-hub {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+.nav-card.explore {
+  background: linear-gradient(135deg, #00BCD4, #0097A7);
+}
+.nav-card.achievements {
+  background: linear-gradient(135deg, #FFC107, #F57F17);
+}
+.nav-card.progress {
+  background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+}
+.nav-card.notebook {
+  background: linear-gradient(135deg, #8B0000, #5a0000);
 }
 
-.action-btn.progress {
-  background: linear-gradient(135deg, #9C27B0, #BA68C8);
-  color: white;
+/* 雲端同步提示列 */
+.sync-hint-bar {
+  text-align: center;
+  font-size: 0.78rem;
+  color: #888;
+  padding: 0.5rem 1rem;
+  background: rgba(0,0,0,0.04);
+  border-radius: 20px;
+  border: 1px dashed #ccc;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.action-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+
 
 .system-info {
   text-align: right;
@@ -1066,15 +1120,8 @@ const getBubbleStyle = (index) => {
     grid-template-columns: 1fr;
   }
   
-  .bottom-section {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-  
-  .quick-actions {
-    flex-wrap: wrap;
-    justify-content: center;
+  .quick-nav-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

@@ -5,7 +5,7 @@
     </div>
     <div
       class="map-info-bar"
-      v-if="activeAOC.aoc"
+      v-if="activeAOC.aoc && (isMobile || (!layersPanelOpen && !climateEnabled && !geologyEnabled))"
       :class="{
         collapsed: infoBarCollapsed,
         'mobile-half': isMobile && mobileInfoSheetState === 'half',
@@ -138,8 +138,7 @@
     </div>
 
     <!-- 地質土壤 浮動面板 -->
-    <transition name="soil-float-slide">
-    <div v-if="map && geologyEnabled && !isPhoneDevice" class="soil-float-panel">
+    <div v-show="geologyEnabled && !isPhoneDevice" class="soil-float-panel">
       <div class="soil-float-title">🪨 土壤透明度</div>
       <div
         v-for="item in geologyLayerConfig"
@@ -164,7 +163,6 @@
         </div>
       </div>
     </div>
-    </transition>
 
     <div v-if="map" class="mobile-map-toolbar">
       <button class="mobile-tool-btn" :class="{ active: mobileAocDrawerOpen }" @click="toggleMobileTool('aoc')">
@@ -248,6 +246,7 @@ import {
   isLikelyDevHost
 } from '@/utils/getMapboxToken'
 import { supabase } from '@/lib/supabaseClient.js'
+import { authState } from '@/stores/authStore.js'
 import { useDeviceDetection } from '@/utils/deviceDetection.js'
 
 // 接收來自父組件的屬性
@@ -309,6 +308,7 @@ let soilPopup = null
 let aocClickPopup = null
 let geologyClicksRegistered = false
 let geologyJustClicked = false  // 旗標：地質圖層剛被點擊，AOC handler 應跳過
+let chateauMarkerJustClicked = false  // 旗標：酒莊 marker 剛被點擊，AOC handler 應跳過
 
 // ── 氣候熱力圖 ───────────────────────────────────────────
 const climateEnabled  = ref(false)
@@ -1398,8 +1398,8 @@ const registerAocClickHandler = () => {
   if (!map || !supabase) return
 
   map.on('click', async (e) => {
-    // 地質圖層自身已攔截（polygon 直接命中）→ 跳過
-    if (geologyJustClicked) return
+    // 地質圖層或酒莊 marker 已攔截 → 跳過
+    if (geologyJustClicked || chateauMarkerJustClicked) return
 
     const { lng, lat } = e.lngLat
 
@@ -1923,6 +1923,56 @@ const toggleChateauxMarkers = async () => {
   }
 }
 
+// 讀取當前用戶在某 AOC 的品飲筆記，回傳 Map<chateau_name, {id, status}>
+const loadTastingNotesForAOC = async (aocId) => {
+  if (!supabase || !authState.user) return new Map()
+  const { data, error } = await supabase
+    .from('tasting_notes')
+    .select('id, chateau_name, status')
+    .eq('user_id', authState.user.id)
+    .eq('aoc_id', aocId)
+  if (error) { console.warn('載入品飲筆記失敗:', error.message); return new Map() }
+  return new Map(data.map(r => [r.chateau_name, { id: r.id, status: r.status }]))
+}
+
+// 新增/更新 品飲筆記（地圖 popup 快速標記，vintage = null）
+const upsertTastingNote = async (aocId, chateauName, status) => {
+  if (!supabase || !authState.user) return null
+  // 先查是否已有 null-vintage 的筆記（partial index 不支援 Supabase upsert API）
+  const { data: existing } = await supabase
+    .from('tasting_notes')
+    .select('id, status')
+    .eq('user_id', authState.user.id)
+    .eq('aoc_id', aocId)
+    .eq('chateau_name', chateauName)
+    .is('vintage', null)
+    .maybeSingle()
+  if (existing) {
+    const { data, error } = await supabase
+      .from('tasting_notes')
+      .update({ status })
+      .eq('id', existing.id)
+      .select('id, status')
+      .single()
+    if (error) { console.warn('更新品飲筆記失敗:', error.message); return null }
+    return data
+  } else {
+    const { data, error } = await supabase
+      .from('tasting_notes')
+      .insert({ user_id: authState.user.id, aoc_id: aocId, chateau_name: chateauName, status })
+      .select('id, status')
+      .single()
+    if (error) { console.warn('新增品飲筆記失敗:', error.message); return null }
+    return data
+  }
+}
+
+const deleteTastingNote = async (id) => {
+  if (!supabase) return
+  const { error } = await supabase.from('tasting_notes').delete().eq('id', id)
+  if (error) console.warn('刪除品飲筆記失敗:', error.message)
+}
+
 // 顯示酒莊標記
 const showChateauxMarkers = async () => {
   if (!map) return
@@ -1940,12 +1990,19 @@ const showChateauxMarkers = async () => {
     
     // 移除所有現有標記
     removeChateauxMarkers()
+
+    // 批次讀取此 AOC 的品飲筆記
+    const tastingMap = await loadTastingNotesForAOC(aocId)
     
     // 添加新標記
     chateaux.forEach(chateau => {
       // 建立標記元素
       const el = document.createElement('div')
       el.className = 'chateau-marker'
+      el.addEventListener('click', () => {
+        chateauMarkerJustClicked = true
+        setTimeout(() => { chateauMarkerJustClicked = false }, 0)
+      })
 
       // 創建彈窗內容 DOM
       const popupContainer = document.createElement('div')
@@ -2017,6 +2074,62 @@ const showChateauxMarkers = async () => {
         websiteLink.target = '_blank'
         websiteLink.textContent = '官方網站'
         popupContainer.appendChild(websiteLink)
+      }
+
+      // 品飲筆記快速按鈕（僅登入用戶可見）
+      if (authState.user) {
+        const note = tastingMap.get(chateau.name) // { id, status } | undefined
+        let noteState = note ? note : null // 本地追蹤狀態
+
+        const actionsDiv = document.createElement('div')
+        actionsDiv.className = 'tasting-actions'
+
+        const triedBtn = document.createElement('button')
+        triedBtn.className = 'tasting-btn tried' + (noteState?.status === 'tried' ? ' active' : '')
+        triedBtn.textContent = '✓ 我喝過'
+
+        const wishBtn = document.createElement('button')
+        wishBtn.className = 'tasting-btn wish' + (noteState?.status === 'wishlist' ? ' active' : '')
+        wishBtn.textContent = '♡ 想喝'
+
+        const updateBtnStates = () => {
+          triedBtn.className = 'tasting-btn tried' + (noteState?.status === 'tried' ? ' active' : '')
+          wishBtn.className = 'tasting-btn wish' + (noteState?.status === 'wishlist' ? ' active' : '')
+        }
+
+        triedBtn.addEventListener('click', async (e) => {
+          e.stopPropagation()
+          triedBtn.disabled = true; wishBtn.disabled = true
+          if (noteState?.status === 'tried') {
+            // 已是 tried → 取消
+            await deleteTastingNote(noteState.id)
+            noteState = null
+          } else {
+            const result = await upsertTastingNote(aocId, chateau.name, 'tried')
+            noteState = result
+          }
+          updateBtnStates()
+          triedBtn.disabled = false; wishBtn.disabled = false
+        })
+
+        wishBtn.addEventListener('click', async (e) => {
+          e.stopPropagation()
+          triedBtn.disabled = true; wishBtn.disabled = true
+          if (noteState?.status === 'wishlist') {
+            // 已是 wishlist → 取消
+            await deleteTastingNote(noteState.id)
+            noteState = null
+          } else {
+            const result = await upsertTastingNote(aocId, chateau.name, 'wishlist')
+            noteState = result
+          }
+          updateBtnStates()
+          triedBtn.disabled = false; wishBtn.disabled = false
+        })
+
+        actionsDiv.appendChild(triedBtn)
+        actionsDiv.appendChild(wishBtn)
+        popupContainer.appendChild(actionsDiv)
       }
 
       // 建立彈出視窗
@@ -2601,8 +2714,8 @@ onUnmounted(() => {
 /* ══ 地質土壤 浮動面板 ══ */
 .soil-float-panel {
   position: absolute;
-  top: 135px;
-  left: 180px;
+  bottom: 20px;
+  left: 20px;
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(12px);
   border-radius: 14px;
@@ -2610,7 +2723,7 @@ onUnmounted(() => {
   border: 1px solid rgba(0,0,0,0.06);
   padding: 10px 14px;
   z-index: 999;
-  min-width: 260px;
+  width: min(400px, calc(100vw - 44px));
 }
 .soil-float-title {
   font-size: 0.78rem;
@@ -2660,16 +2773,15 @@ onUnmounted(() => {
 .soil-float-slide-enter-from,
 .soil-float-slide-leave-to {
   opacity: 0;
-  transform: translateX(-8px);
+  transform: translateY(10px);
 }
 
 /* ══ 氣候熱力圖 overlay ══ */
 .climate-overlay {
   position: absolute;
-  bottom: 160px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(520px, 92vw);
+  bottom: 20px;
+  left: 20px;
+  width: min(400px, calc(100vw - 44px));
   background: rgba(15, 20, 35, 0.88);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.15);
@@ -2687,7 +2799,7 @@ onUnmounted(() => {
 .climate-slide-enter-from,
 .climate-slide-leave-to {
   opacity: 0;
-  transform: translateX(-50%) translateY(12px);
+  transform: translateY(12px);
 }
 
 .climate-footnote {
@@ -3079,6 +3191,57 @@ onUnmounted(() => {
 
 :global(.chateau-popup a:hover) {
   text-decoration: underline;
+}
+
+:global(.tasting-actions) {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+:global(.tasting-btn) {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #f3f4f6;
+  color: #555;
+}
+
+:global(.tasting-btn.tried) {
+  border-color: #16a34a;
+  color: #16a34a;
+}
+
+:global(.tasting-btn.tried.active) {
+  background: #16a34a;
+  color: #fff;
+}
+
+:global(.tasting-btn.wish) {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+:global(.tasting-btn.wish.active) {
+  background: #dc2626;
+  color: #fff;
+}
+
+:global(.tasting-btn:hover:not(:disabled)) {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+:global(.tasting-btn:disabled) {
+  opacity: 0.5;
+  cursor: wait;
 }
 
 /* 修改 style-badge 相關樣式以支援多個風格標籤 */

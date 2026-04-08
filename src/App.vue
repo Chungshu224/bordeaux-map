@@ -29,6 +29,8 @@
       v-else-if="effectiveMode === 'levelSelection'"
       @selectLevel="enterLearningMode"
       @exploreMode="enterExploreMode"
+      @gameHubMode="enterGameHubMode"
+      @notebookMode="enterNotebookMode"
       @register="goToRegister"
       @login="goToLogin"
       @settings="goToSettings"
@@ -64,6 +66,20 @@
       <BordeauxMap :deviceInfo="deviceInfo" />
     </div>
     
+    <!-- 互動練習中心 -->
+    <GameHubPage
+      v-else-if="effectiveMode === 'gamehub'"
+      @back="backToLevelSelection"
+    />
+
+    <!-- 品飲筆記本 -->
+    <TastingNotebookPage
+      v-else-if="effectiveMode === 'notebook'"
+      :deviceInfo="deviceInfo"
+      @back="backToLevelSelection"
+      @go-to-course="enterLearningMode"
+    />
+    
     <!-- 成就通知容器 -->
     <AchievementNotificationsContainer />
 
@@ -90,6 +106,12 @@ import LevelSelection from './components/LevelSelection.vue'
 import Register from './components/Register.vue'
 import Login from './components/Login.vue'
 import UserSettings from './components/UserSettings.vue'
+import MapQuizPage from './components/MapQuizPage.vue'
+import BankQuizPage from './components/BankQuizPage.vue'
+import VintageSortPage from './components/VintageSortPage.vue'
+import GrapeSoilMatchPage from './components/GrapeSoilMatchPage.vue'
+import GameHubPage from './components/GameHubPage.vue'
+import TastingNotebookPage from './components/TastingNotebookPage.vue'
 import AchievementNotificationsContainer from './components/AchievementNotificationsContainer.vue'
 import { learningActions } from './stores/learningStore.js'
 import { globalAchievementManager } from './stores/achievementSystem.js'
@@ -156,6 +178,15 @@ const enterLearningMode = (level) => {
 const enterExploreMode = () => {
   currentMode.value = 'explore'
   console.log('進入地圖探索模式')
+}
+
+const enterGameHubMode = () => {
+  currentMode.value = 'gamehub'
+  console.log('進入互動練習中心')
+}
+
+const enterNotebookMode = () => {
+  currentMode.value = 'notebook'
 }
 
 const backToLevelSelection = () => {
