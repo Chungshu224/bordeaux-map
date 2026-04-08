@@ -310,7 +310,7 @@ const props = defineProps({
 const resolvedTier = computed(() => {
   if (props.userTier) return props.userTier
   const isAdmin = authActions.isAdmin?.() || false
-  return isAdmin ? 'premium' : (authState.user?.user_metadata?.subscription_tier || 'free')
+  return isAdmin ? 'premium' : (authState.user?.app_metadata?.subscription_tier || 'free')
 })
 const canAccessTier = (minimumTier) => TIER_WEIGHT[resolvedTier.value] >= TIER_WEIGHT[minimumTier]
 

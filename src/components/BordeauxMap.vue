@@ -50,7 +50,7 @@ import { TIER_WEIGHT } from '../router/index.js'
 // ── 訂閱等級工具 ──
 const getUserTier = () => {
   const isAdmin = authActions.isAdmin?.() || false
-  return isAdmin ? 'premium' : (authState.user?.user_metadata?.subscription_tier || 'free')
+  return isAdmin ? 'premium' : (authState.user?.app_metadata?.subscription_tier || 'free')
 }
 const canAccess = (minimumTier) => TIER_WEIGHT[getUserTier()] >= TIER_WEIGHT[minimumTier]
 
