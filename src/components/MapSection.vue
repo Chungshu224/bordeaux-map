@@ -1230,18 +1230,57 @@ const registerGeologyClickHandlers = () => {
   geologyClicksRegistered = true
 }
 
-// ── 地圖點選偵測 AOC（呼叫 PostGIS get_aoc_at_point）────────────
+// ── 地圖點選偵測（AOC 或土壤，視地質模式而定）──────────────────
 const registerAocClickHandler = () => {
   if (!map || !supabase) return
 
   map.on('click', async (e) => {
-    // 地質圖層剛被點擊 → 跳過，避免同時彈出 AOC popup
+    // 地質圖層自身已攔截（polygon 直接命中）→ 跳過
     if (geologyJustClicked) return
 
     const { lng, lat } = e.lngLat
 
+    // 關閉舊 popup
     if (aocClickPopup) { aocClickPopup.remove(); aocClickPopup = null }
 
+    // ── 地質模式開啟：優先嘗試 PostGIS 土壤查詢 ──────────────────
+    // 處理「點擊落在地質多邊形間隙」的情況（圖層事件不觸發）
+    if (geologyEnabled.value) {
+      try {
+        const { data: soilData } = await supabase.rpc('get_soil_at_point', { lng, lat })
+        if (soilData && soilData.length > 0) {
+          const soilType = soilData[0].soil_type
+          const soilInfo = SOIL_LABELS[soilType] || { zh: soilType, color: '#888' }
+          const textColor = ['#FFD700', '#ADFF2F', '#00E5FF'].includes(soilInfo.color) ? '#222' : '#fff'
+          const notationHtml = soilData[0].notation
+            ? `<span class="geology-popup-notation">${soilData[0].notation}</span>` : ''
+          const descHtml = soilData[0].description
+            ? `<div class="geology-popup-desc">${soilData[0].description.substring(0, 130)}${soilData[0].description.length > 130 ? '…' : ''}</div>` : ''
+
+          const popupEl = document.createElement('div')
+          popupEl.className = 'geology-popup'
+          popupEl.innerHTML = `
+            <div class="geology-popup-header">
+              <span class="soil-type-badge" style="background:${soilInfo.color};color:${textColor}">${soilInfo.zh}</span>
+              ${notationHtml}
+            </div>
+            ${descHtml}
+            ${renderGrapeRecommendation(soilType)}
+            <div class="geology-popup-coords">${lat.toFixed(5)}°N / ${Math.abs(lng).toFixed(5)}°${lng < 0 ? 'W' : 'E'}</div>
+            <div class="supa-confirmed" style="margin-top:4px">✅ PostGIS 確認（間隙補查）</div>
+          `
+          if (soilPopup) { soilPopup.remove() }
+          soilPopup = new mapboxgl.Popup({ maxWidth: '340px', offset: 10 })
+            .setLngLat([lng, lat])
+            .setDOMContent(popupEl)
+            .addTo(map)
+        }
+        // 地質模式：無論有無結果，都不顯示 AOC popup
+      } catch { /* 網路錯誤時靜默 */ }
+      return
+    }
+
+    // ── 非地質模式：顯示 AOC 點選 popup ─────────────────────────
     let data, error
     try {
       ;({ data, error } = await supabase.rpc('get_aoc_at_point', {
@@ -1254,7 +1293,6 @@ const registerAocClickHandler = () => {
 
     if (error || !data || data.length === 0) return
 
-    // 建立 popup 內容
     const rows = data.map((d, i) => {
       const aocLabel = d.aoc_id
         .replace('_AOC', '')
