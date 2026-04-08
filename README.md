@@ -6,6 +6,19 @@
 ![Vue](https://img.shields.io/badge/Vue.js-3.5+-green.svg)
 ![Mapbox](https://img.shields.io/badge/Mapbox-GL-orange.svg)
 
+## 🌟 最新突破與更新 (2026)
+
+### 🏰 巨量酒莊地圖資料擴充
+- **精準地理定位**：導入 Photon (OpenStreetMap) Geocoding API，超過 100+ 座知名酒莊精確至「建築物級別」的絕對座標。
+- **Saint-Émilion Grand Cru Classé**：完整收錄 71 家列級莊與 13 家 Premier Grand Cru Classé (A/B) 歷史名莊。
+- **Pomerol 產區**：新增 Hosanna, Petit-Village, Certan de May 等右岸車庫酒莊與傳奇名莊。
+- **Pessac-Léognan**：完整標示 16 家 Graves Cru Classé 列級莊（如 Haut-Brion, Pape Clément 等）。
+- **Cru Bourgeois Exceptionnel**：涵蓋 Haut-Médoc, Saint-Estèphe, Margaux, Listrac 產區的 14 家特級中級莊。
+
+### 🔄 系統架構優化
+- **Supabase 雲端整合**：導入後端資料庫以持久化紀錄使用者的學習進度、測驗成績與成就解鎖。
+- **檔案根目錄瘦身**：清理大量過渡時期的開發及修復腳本，維持專案結構簡潔，全面轉入靜態 JSON API 提供前端響應式存取。
+
 ## ✨ 功能特色
 
 ### 🎓 等級化學習系統
@@ -39,7 +52,12 @@
 - **Vite** - 現代化構建工具
 - **Mapbox GL** - 互動地圖引擎
 - **Turf.js** - 地理空間分析
-- **CSS3** - 現代化樣式和動畫
+- **Tailwind CSS** - 實用優先 CSS 框架
+- **Pinia** - 狀態管理系統
+
+### 後端技術棧
+- **Supabase** - 開放源碼 Firebase 替代方案 (關聯式資料庫、認證)
+- **Node.js** - 用於撰寫資料處理與 Geocoding 批次腳本
 
 ### 核心組件結構
 ```
@@ -125,22 +143,17 @@ VITE_MAPBOX_TOKEN=pk.your_mapbox_public_token_here
 
 未設定 token 時，應用會自動退回 OSM Raster 背景以確保可用性。
 
-3. **安裝新增的依賴**
-```bash
-npm install vue-router@4 pinia@2 vue-draggable-next@2 sass@1 @types/mapbox-gl@2
-```
-
-4. **開發模式運行**
+3. **開發模式運行**
 ```bash
 npm run dev
 ```
 
-5. **生產環境構建**
+4. **生產環境構建**
 ```bash
 npm run build
 ```
 
-6. **預覽構建結果**
+5. **預覽構建結果**
 ```bash
 npm run preview
 ```
