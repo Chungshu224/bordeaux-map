@@ -1115,6 +1115,27 @@ const updateGeologyAOCMask = () => {
   }
 }
 
+// ── 法文 → 繁中翻譯（MyMemory 免費 API，含快取）────────────────
+const _translationCache = new Map()
+const translateFrToZh = async (text) => {
+  if (!text) return ''
+  if (_translationCache.has(text)) return _translationCache.get(text)
+  try {
+    // 限 500 字（API 上限），避免過長逾時
+    const src = text.length > 500 ? text.substring(0, 500) + '…' : text
+    const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(src)}&langpair=fr|zh-TW`
+    const res = await fetch(url)
+    if (!res.ok) throw new Error('translate failed')
+    const json = await res.json()
+    const translated = json?.responseData?.translatedText
+    if (translated && json.responseStatus === 200) {
+      _translationCache.set(text, translated)
+      return translated
+    }
+  } catch { /* ignore */ }
+  return text  // fallback 顯示原文
+}
+
 // ── 地質圖層點擊互動（只註冊一次）──────────────────────────────
 const registerGeologyClickHandlers = () => {
   if (!map || geologyClicksRegistered) return
@@ -1149,10 +1170,14 @@ const registerGeologyClickHandlers = () => {
       // 構建彈窗 DOM
       const popupEl = document.createElement('div')
       popupEl.className = 'geology-popup'
+      const rawDesc = props_f.DESCR || ''
       const notationHtml = props_f.NOTATION
         ? `<span class="geology-popup-notation">${props_f.NOTATION}</span>` : ''
-      const descHtml = props_f.DESCR
-        ? `<div class="geology-popup-desc">${props_f.DESCR.substring(0, 130)}${props_f.DESCR.length > 130 ? '…' : ''}</div>` : ''
+      const descHtml = rawDesc
+        ? `<div class="geology-popup-desc" id="geo-desc-block">
+             <div class="desc-zh" id="geo-desc-zh"><span class="desc-translating">⏳ 翻譯中…</span></div>
+             <details class="desc-fr-toggle"><summary>原文 (fr)</summary><div class="desc-fr-text">${rawDesc.substring(0, 200)}${rawDesc.length > 200 ? '…' : ''}</div></details>
+           </div>` : ''
       const hasActiveAOC = !!props.activeAOC?.aoc
       const aocName = hasActiveAOC
         ? props.activeAOC.aoc.replace('_AOC.geojson', '').replace(/_/g, ' ') : ''
@@ -1169,10 +1194,18 @@ const registerGeologyClickHandlers = () => {
         <div class="geology-popup-supa" id="geo-supa-result"><span class="supa-loading">⏳ 查詢 PostGIS…</span></div>
       `
 
-      soilPopup = new mapboxgl.Popup({ maxWidth: '340px', offset: 10 })
+      soilPopup = new mapboxgl.Popup({ maxWidth: '360px', offset: 10 })
         .setLngLat([lng, lat])
         .setDOMContent(popupEl)
         .addTo(map)
+
+      // 非同步翻譯法文描述
+      if (rawDesc) {
+        translateFrToZh(rawDesc).then(zh => {
+          const el = popupEl.querySelector('#geo-desc-zh')
+          if (el) el.textContent = zh
+        })
+      }
 
       // ① 非同步：呼叫 get_soil_at_point
       if (supabase) {
@@ -1252,10 +1285,14 @@ const registerAocClickHandler = () => {
           const soilType = soilData[0].soil_type
           const soilInfo = SOIL_LABELS[soilType] || { zh: soilType, color: '#888' }
           const textColor = ['#FFD700', '#ADFF2F', '#00E5FF'].includes(soilInfo.color) ? '#222' : '#fff'
+          const rawDesc2 = soilData[0].description || ''
           const notationHtml = soilData[0].notation
             ? `<span class="geology-popup-notation">${soilData[0].notation}</span>` : ''
-          const descHtml = soilData[0].description
-            ? `<div class="geology-popup-desc">${soilData[0].description.substring(0, 130)}${soilData[0].description.length > 130 ? '…' : ''}</div>` : ''
+          const descHtml = rawDesc2
+            ? `<div class="geology-popup-desc" id="geo-desc-block">
+                 <div class="desc-zh" id="geo-desc-zh"><span class="desc-translating">⏳ 翻譯中…</span></div>
+                 <details class="desc-fr-toggle"><summary>原文 (fr)</summary><div class="desc-fr-text">${rawDesc2.substring(0, 200)}${rawDesc2.length > 200 ? '…' : ''}</div></details>
+               </div>` : ''
 
           const popupEl = document.createElement('div')
           popupEl.className = 'geology-popup'
@@ -1270,10 +1307,18 @@ const registerAocClickHandler = () => {
             <div class="supa-confirmed" style="margin-top:4px">✅ PostGIS 確認（間隙補查）</div>
           `
           if (soilPopup) { soilPopup.remove() }
-          soilPopup = new mapboxgl.Popup({ maxWidth: '340px', offset: 10 })
+          soilPopup = new mapboxgl.Popup({ maxWidth: '360px', offset: 10 })
             .setLngLat([lng, lat])
             .setDOMContent(popupEl)
             .addTo(map)
+
+          // 非同步翻譯法文描述
+          if (rawDesc2) {
+            translateFrToZh(rawDesc2).then(zh => {
+              const el = popupEl.querySelector('#geo-desc-zh')
+              if (el) el.textContent = zh
+            })
+          }
         }
         // 地質模式：無論有無結果，都不顯示 AOC popup
       } catch { /* 網路錯誤時靜默 */ }
@@ -2877,12 +2922,45 @@ onUnmounted(() => {
   border-radius: 4px;
 }
 .geology-popup-desc {
-  font-size: 11px;
-  color: #555;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.6;
   margin-bottom: 6px;
   border-left: 3px solid #ddd;
-  padding-left: 6px;
+  padding-left: 8px;
+}
+.desc-zh {
+  color: #2d2d2d;
+  font-size: 12px;
+  line-height: 1.65;
+  margin-bottom: 4px;
+}
+.desc-translating {
+  color: #aaa;
+  font-size: 11px;
+  font-style: italic;
+}
+.desc-fr-toggle {
+  margin-top: 2px;
+}
+.desc-fr-toggle summary {
+  font-size: 10px;
+  color: #bbb;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+.desc-fr-toggle summary::-webkit-details-marker { display: none; }
+.desc-fr-toggle summary::before { content: '▶ '; font-size: 9px; }
+details[open] .desc-fr-toggle summary::before,
+.desc-fr-toggle[open] summary::before { content: '▼ '; font-size: 9px; }
+.desc-fr-text {
+  font-size: 10px;
+  color: #aaa;
+  font-style: italic;
+  line-height: 1.4;
+  margin-top: 3px;
+  padding-left: 4px;
+  border-left: 2px solid #eee;
 }
 .geology-popup-coords {
   font-size: 11px;
