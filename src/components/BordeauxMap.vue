@@ -5,6 +5,7 @@
       :regionInfo="regionInfo"
       :styleColors="styleColors"
       :mobileAocDrawerOpen="mobileAocDrawerOpen"
+      :userTier="getUserTier()"
       @resetMap="resetMap"
       @openAOCList="setMobileAocDrawerOpen"
     />
@@ -29,6 +30,10 @@
             :aocColor="aocColor"
             @selectAOC="handleMobileAOCSelect"
           />
+          <!-- free 用戶：顯示鎖定群組的升級提示 -->
+          <div v-if="!canAccess('basic')" class="aoc-upgrade-hint">
+            🔒 升級至「初階付費」即可解鎖全部 7 大產區群組
+          </div>
         </div>
       </div>
     </transition>
@@ -39,6 +44,18 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import AOCList from './AOCList.vue'
 import MapSection from './MapSection.vue'
+import { authState, authActions } from '../stores/authStore.js'
+import { TIER_WEIGHT } from '../router/index.js'
+
+// ── 訂閱等級工具 ──
+const getUserTier = () => {
+  const isAdmin = authActions.isAdmin?.() || false
+  return isAdmin ? 'premium' : (authState.user?.user_metadata?.subscription_tier || 'free')
+}
+const canAccess = (minimumTier) => TIER_WEIGHT[getUserTier()] >= TIER_WEIGHT[minimumTier]
+
+// free 可用的 AOC 群組（Regional + LeftBank-Medoc）
+const FREE_AOC_GROUPS = ['Regional', 'LeftBank-Medoc']
 
 // 狀態管理
 const search = ref('')
@@ -137,17 +154,25 @@ const aocGroups = ref({
 })
 
 const filteredGroups = computed(() => {
-  if (!search.value) return aocGroups.value
+  const isBasicPlus = canAccess('basic')
   
-  const result = {}
+  // 先依搜尋詞過濾 AOC 項目
+  const base = {}
   for (const [group, aocs] of Object.entries(aocGroups.value)) {
-    const filtered = aocs.filter(aoc => 
-      aoc.toLowerCase().includes(search.value.toLowerCase())
-    )
-    if (filtered.length) result[group] = filtered
+    // free 用戶只能看到開放的群組
+    if (!isBasicPlus && !FREE_AOC_GROUPS.includes(group)) continue
+    
+    if (!search.value) {
+      base[group] = aocs
+    } else {
+      const filtered = aocs.filter(aoc =>
+        aoc.toLowerCase().includes(search.value.toLowerCase())
+      )
+      if (filtered.length) base[group] = filtered
+    }
   }
   
-  return result
+  return base
 })
 
 watch(filteredGroups, (val) => {

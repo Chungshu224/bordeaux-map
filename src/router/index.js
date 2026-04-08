@@ -7,21 +7,27 @@ import { authState, authInitPromise, authActions } from '../stores/authStore.js'
 //  免費 (free)  — 只要註冊即可
 //    ✅ 首頁、登入、設定
 //    ✅ Level 1 課程
+//    ✅ 地圖探索 (限 Regional AOC + LeftBank-Medoc AOC 兩個群組)
 //    ❌ Level 2、3、4 課程
-//    ❌ 地圖探索  (BordeauxMap)
+//    ❌ 地圖進階圖層：等高線、地質土壤、氣候熱力
+//    ❌ 地圖內「顯示知名酒莊」功能
 //    ❌ 互動練習中心 (GameHub)
 //    ❌ 品飲筆記本 (TastingNotebook)
 //
-//  初階付費 (basic) — 可看課程 + 基本地圖
+//  初階付費 (basic) — 課程 + 基本地圖 + 互動練習中心
 //    ✅ Level 1~4 課程 (全部)
-//    ✅ 探索地圖 (BordeauxMap)，但擴展圖層被鎖
-//    ❌ 互動練習中心 (GameHub)
+//    ✅ 探索地圖 (全部 AOC 群組)
+//    ✅ 互動練習中心 (全部 4 種互動遊戲)
+//    ❌ 地圖進階圖層：等高線、地質土壤、氣候熱力
+//    ❌ 地圖內「顯示知名酒莊」功能
 //    ❌ 品飲筆記本 (TastingNotebook)
 //
 //  進階付費 (premium) — 完整解鎖
 //    ✅ Level 1~4 課程
-//    ✅ 探索地圖 (含風土圖層、酒莊精準標記)
-//    ✅ 互動練習中心 (全部 4 種遊戲)
+//    ✅ 探索地圖 (全部 AOC 群組)
+//    ✅ 地圖進階圖層：等高線、地質土壤、氣候熱力
+//    ✅ 地圖內「顯示知名酒莊」功能
+//    ✅ 互動練習中心 (全部 4 種互動遊戲)
 //    ✅ 品飲筆記本
 // ============================================================
 
@@ -62,18 +68,18 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' } // 預設最低，動態會覆蓋
   },
   {
-    // 地圖探索：basic 以上。進階圖層鎖定邏輯在 BordeauxMap 元件內判斷
+    // 地圖探索：free 以上均可進入 (AOC 群組與圖層由元件內部依 Tier 控管)
     path: '/explore',
     name: 'Explore',
     component: () => import('../components/BordeauxMap.vue'),
-    meta: { requiresAuth: true, minimumTier: 'basic' }
+    meta: { requiresAuth: true, minimumTier: 'free' }
   },
   {
-    // 互動練習中心：premium 以上
+    // 互動練習中心：basic 以上
     path: '/gamehub',
     name: 'GameHub',
     component: () => import('../components/GameHubPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'premium' }
+    meta: { requiresAuth: true, minimumTier: 'basic' }
   },
   {
     // 品飲筆記本：premium 以上

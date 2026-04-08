@@ -50,7 +50,14 @@
       <div v-show="!infoBarCollapsed" class="info-details">
         <div class="map-buttons">
         <button v-if="!isMobile" class="btn-reset" @click="resetMap">重置地圖</button>
-        <button v-if="hasChateauxFile" class="btn-chateaux" @click="toggleChateauxMarkers">
+        <!-- 顯示知名酒莊：premium 以上 -->
+        <button
+          v-if="hasChateauxFile"
+          class="btn-chateaux"
+          :class="{ 'btn-locked': !canAccessTier('premium') }"
+          @click="canAccessTier('premium') ? toggleChateauxMarkers() : alertUpgrade('顯示知名酒莊', 'premium')"
+        >
+          <span v-if="!canAccessTier('premium')" class="lock-inline">🔒</span>
           {{ showingChateaux ? '隱藏酒莊' : '顯示知名酒莊' }}
         </button>
       </div>
@@ -110,10 +117,16 @@
             <span class="lbtn-text">3D 地形</span>
             <span class="lbtn-dot" :class="{ on: is3D }"></span>
           </button>
-          <button class="btn-layer" :class="{ active: contoursEnabled, 'color-contours': true }" @click="toggleContours">
+          <!-- 等高線：premium 以上 -->
+          <button
+            class="btn-layer"
+            :class="{ active: contoursEnabled && canAccessTier('premium'), 'color-contours': true, 'btn-layer-locked': !canAccessTier('premium') }"
+            @click="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')"
+          >
             <span class="lbtn-icon">〰</span>
             <span class="lbtn-text">等高線</span>
-            <span class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
+            <span v-if="!canAccessTier('premium')" class="lbtn-lock">🔒</span>
+            <span v-else class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
           </button>
         </div>
       </div>
@@ -122,15 +135,27 @@
       <div class="layer-group" v-if="map && !isPhoneDevice">
         <div class="layer-group-label">資料圖層</div>
         <div class="layer-group-buttons">
-          <button class="btn-layer" :class="{ active: geologyEnabled, 'color-geology': true }" @click="toggleGeology">
+          <!-- 地質土壤：premium 以上 -->
+          <button
+            class="btn-layer"
+            :class="{ active: geologyEnabled && canAccessTier('premium'), 'color-geology': true, 'btn-layer-locked': !canAccessTier('premium') }"
+            @click="canAccessTier('premium') ? toggleGeology() : alertUpgrade('地質土壤', 'premium')"
+          >
             <span class="lbtn-icon">🪨</span>
             <span class="lbtn-text">地質土壤</span>
-            <span class="lbtn-dot" :class="{ on: geologyEnabled }"></span>
+            <span v-if="!canAccessTier('premium')" class="lbtn-lock">🔒</span>
+            <span v-else class="lbtn-dot" :class="{ on: geologyEnabled }"></span>
           </button>
-          <button class="btn-layer" :class="{ active: climateEnabled, 'color-climate': true }" @click="toggleClimate">
+          <!-- 氣候熱力：premium 以上 -->
+          <button
+            class="btn-layer"
+            :class="{ active: climateEnabled && canAccessTier('premium'), 'color-climate': true, 'btn-layer-locked': !canAccessTier('premium') }"
+            @click="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')"
+          >
             <span class="lbtn-icon">🌡</span>
             <span class="lbtn-text">氣候熱力</span>
-            <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
+            <span v-if="!canAccessTier('premium')" class="lbtn-lock">🔒</span>
+            <span v-else class="lbtn-dot" :class="{ on: climateEnabled }"></span>
           </button>
         </div>
       </div>
@@ -256,8 +281,9 @@ import {
   isLikelyDevHost
 } from '@/utils/getMapboxToken'
 import { supabase } from '@/lib/supabaseClient.js'
-import { authState } from '@/stores/authStore.js'
+import { authState, authActions } from '@/stores/authStore.js'
 import { useDeviceDetection } from '@/utils/deviceDetection.js'
+import { TIER_WEIGHT } from '@/router/index.js'
 
 // 接收來自父組件的屬性
 const props = defineProps({
@@ -272,8 +298,27 @@ const props = defineProps({
   mobileAocDrawerOpen: {
     type: Boolean,
     default: false
+  },
+  // 由 BordeauxMap 傳入的訂閱等級；若未傳則自行計算
+  userTier: {
+    type: String,
+    default: null
   }
 })
+
+// ── 訂閱等級工具 ──
+const resolvedTier = computed(() => {
+  if (props.userTier) return props.userTier
+  const isAdmin = authActions.isAdmin?.() || false
+  return isAdmin ? 'premium' : (authState.user?.user_metadata?.subscription_tier || 'free')
+})
+const canAccessTier = (minimumTier) => TIER_WEIGHT[resolvedTier.value] >= TIER_WEIGHT[minimumTier]
+
+// 點擊鎖定功能時的統一提示
+const alertUpgrade = (featureName, requiredTier) => {
+  const labels = { basic: '初階付費', premium: '進階付費' }
+  alert(`🔒 「${featureName}」需要「${labels[requiredTier]}」方案才能使用\n\n請升級您的訂閱以解鎖此功能！`)
+}
 
 // 定義要發送到父組件的事件
 const emit = defineEmits(['showAOC', 'resetMap', 'toggle3D', 'openAOCList'])
@@ -2566,6 +2611,40 @@ onUnmounted(() => {
 
 .btn-chateaux:hover {
   background-color: #A52A2A;
+}
+
+.btn-chateaux.btn-locked {
+  background-color: #555;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.lock-inline {
+  margin-right: 4px;
+  font-size: 0.9em;
+}
+
+/* 圖層面板中的鎖定按鈕 */
+.btn-layer-locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.lbtn-lock {
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+/* free 用戶的 AOC 升級提示 */
+.aoc-upgrade-hint {
+  margin: 12px 16px;
+  padding: 10px 14px;
+  background: rgba(139, 92, 42, 0.12);
+  border: 1px solid rgba(139, 92, 42, 0.3);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: #7a5520;
+  text-align: center;
 }
 
 .region-info-content {
