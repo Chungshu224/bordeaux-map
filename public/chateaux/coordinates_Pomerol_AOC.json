@@ -6,8 +6,8 @@
       44.93073
     ],
     "rank": "Pomerol 頂級名莊",
-  "description": "世界最知名的Pomerol酒莊之一，100% Merlot，極具收藏價值與陳年潛力。",
-  "image": "/images/chateaux/RightBank/Libournais/petrus.jpg"
+    "description": "世界最知名的Pomerol酒莊之一，100% Merlot，極具收藏價值與陳年潛力。",
+    "image": "/images/chateaux/RightBank/Libournais/petrus.jpg"
   },
   {
     "name": "Château Lafleur",
@@ -16,8 +16,8 @@
       44.931
     ],
     "rank": "Pomerol 頂級名莊",
-  "description": "產量極少，風格濃郁複雜，與Pétrus齊名的Pomerol傳奇酒莊。",
-  "image": "/images/chateaux/RightBank/Libournais/lafleur.jpg"
+    "description": "產量極少，風格濃郁複雜，與Pétrus齊名的Pomerol傳奇酒莊。",
+    "image": "/images/chateaux/RightBank/Libournais/lafleur.jpg"
   },
   {
     "name": "Château Le Pin",
@@ -26,8 +26,8 @@
       44.929
     ],
     "rank": "Pomerol 頂級名莊",
-  "description": "極小產量的精品酒莊，酒款稀有且價格高昂，風格濃郁細膩。",
-  "image": "/images/chateaux/RightBank/Libournais/le_pin.jpg"
+    "description": "極小產量的精品酒莊，酒款稀有且價格高昂，風格濃郁細膩。",
+    "image": "/images/chateaux/RightBank/Libournais/le_pin.jpg"
   },
   {
     "name": "Château Trotanoy",
@@ -36,8 +36,8 @@
       44.92938
     ],
     "rank": "Pomerol 頂級名莊",
-  "description": "以結構感與陳年潛力著稱，Pomerol 最具代表性的經典酒莊之一。",
-  "image": "/images/chateaux/RightBank/Libournais/trotanoy.jpg"
+    "description": "以結構感與陳年潛力著稱，Pomerol 最具代表性的經典酒莊之一。",
+    "image": "/images/chateaux/RightBank/Libournais/trotanoy.jpg"
   },
   {
     "name": "Château La Conseillante",
@@ -46,8 +46,8 @@
       44.92411
     ],
     "rank": "Pomerol 頂級名莊",
-  "description": "以優雅細膩風格著稱，Merlot為主，常帶紫羅蘭香氣。",
-  "image": "/images/chateaux/RightBank/Libournais/la_conseillante.jpg"
+    "description": "以優雅細膩風格著稱，Merlot為主，常帶紫羅蘭香氣。",
+    "image": "/images/chateaux/RightBank/Libournais/la_conseillante.jpg"
   },
   {
     "name": "Château L'Évangile",
@@ -56,37 +56,77 @@
       44.92568
     ],
     "rank": "Pomerol 頂級名莊",
-  "description": "拉菲集團旗下，風格濃郁、單寧細緻，陳年表現優異。",
-  "image": "/images/chateaux/RightBank/Libournais/levangile.jpg"
+    "description": "拉菲集團旗下，風格濃郁、單寧細緻，陳年表現優異。",
+    "image": "/images/chateaux/RightBank/Libournais/levangile.jpg"
   },
   {
     "name": "Château Clinet",
     "coordinates": [
-      -0.193,
-      44.928
+      -0.20479,
+      44.934
     ],
     "rank": "Pomerol 優質名莊",
-  "description": "以果香濃郁、結構良好著稱，近年品質大幅提升。",
-  "image": "/images/chateaux/RightBank/Libournais/clinet.jpg"
+    "description": "以果香濃郁、結構良好著稱，近年品質大幅提升。",
+    "image": "/images/chateaux/RightBank/Libournais/clinet.jpg"
   },
   {
     "name": "Château Gazin",
     "coordinates": [
-      -0.194,
-      44.927
+      -0.18748,
+      44.93197
     ],
     "rank": "Pomerol 優質名莊",
-  "description": "鄰近Pétrus，風格均衡，性價比高的Pomerol代表。",
-  "image": "/images/chateaux/RightBank/Libournais/gazin.jpg"
+    "description": "鄰近Pétrus，風格均衡，性價比高的Pomerol代表。",
+    "image": "/images/chateaux/RightBank/Libournais/gazin.jpg"
   },
   {
     "name": "Château Nénin",
     "coordinates": [
-      -0.195,
-      44.926
+      -0.20538,
+      44.92937
     ],
     "rank": "Pomerol 優質名莊",
-  "description": "由Delon家族經營，風格現代，果香明顯，陳年潛力佳。",
-  "image": "/images/chateaux/RightBank/Libournais/nenin.jpg"
+    "description": "由Delon家族經營，風格現代，果香明顯，陳年潛力佳。",
+    "image": "/images/chateaux/RightBank/Libournais/nenin.jpg"
+  },
+  {
+    "name": "Château Petit-Village",
+    "coordinates": [
+      -0.20048,
+      44.92386
+    ],
+    "rank": "Pomerol 優質名莊",
+    "description": "地處高地中心地帶，三角形葡萄園滿佈深厚礫石，由 AXA Millésimes 管理(後轉手)，風格華潤柔雅。",
+    "image": ""
+  },
+  {
+    "name": "Château Certan de May",
+    "coordinates": [
+      -0.1986,
+      44.92784
+    ],
+    "rank": "Pomerol 優質名莊",
+    "description": "位於波美侯高地核心，鄰近 Lafleur 與 Pétrus，風格紮實經典且傳統，陳年功力深厚。",
+    "image": ""
+  },
+  {
+    "name": "Château Hosanna",
+    "coordinates": [
+      -0.1983,
+      44.9295
+    ],
+    "rank": "Pomerol 優質名莊",
+    "description": "曾為 Certan-Giraud，被 Moueix 家族收購，位於精華高地，老藤 Cab Franc 比例佳，被譽為波美侯的白馬酒莊。",
+    "image": ""
+  },
+  {
+    "name": "Château Latour à Pomerol",
+    "coordinates": [
+      -0.2015,
+      44.9292
+    ],
+    "rank": "Pomerol 優質名莊",
+    "description": "擁有極其多元的土壤組合，風格剛柔並濟，曾經產出過波爾多1961世紀傳奇年份的至高佳釀。",
+    "image": ""
   }
 ]
