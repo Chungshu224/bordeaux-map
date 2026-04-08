@@ -197,7 +197,7 @@
             
             <div class="level-action">
               <button class="level-btn" :disabled="!isLevelUnlocked(2)">
-                <span v-if="!isLevelUnlocked(2)">需完成Level 1</span>
+                <span v-if="!isLevelUnlocked(2)">需通過Level 1綜合評量</span>
                 <span v-else-if="getLevelProgress(2) === 0">開始學習</span>
                 <span v-else-if="getLevelProgress(2) === 100">重新學習</span>
                 <span v-else>繼續學習</span>
@@ -265,7 +265,7 @@
             
             <div class="level-action">
               <button class="level-btn" :disabled="!isLevelUnlocked(3)">
-                <span v-if="!isLevelUnlocked(3)">需完成Level 2</span>
+                <span v-if="!isLevelUnlocked(3)">需通過Level 2綜合評量</span>
                 <span v-else-if="getLevelProgress(3) === 0">開始學習</span>
                 <span v-else-if="getLevelProgress(3) === 100">重新學習</span>
                 <span v-else>繼續學習</span>
@@ -333,7 +333,7 @@
             
             <div class="level-action">
               <button class="level-btn" :disabled="!isLevelUnlocked(4)">
-                <span v-if="!isLevelUnlocked(4)">需完成Level 3</span>
+                <span v-if="!isLevelUnlocked(4)">需通過Level 3綜合評量</span>
                 <span v-else-if="getLevelProgress(4) === 0">開始學習</span>
                 <span v-else-if="getLevelProgress(4) === 100">重新學習</span>
                 <span v-else>繼續學習</span>
@@ -439,10 +439,11 @@ const isLevelUnlocked = computed(() => {
     if (learningState.testMode) return true
     if (authActions.isAdmin()) return true
     if (level === 1) return true
-    
+
+    // 必須通過前一個 Level 的綜合評量（最後一課）才能解鎖
     const prevLevel = level - 1
-    const prevProgress = learningState.userProgress[`level${prevLevel}`]
-    return prevProgress && prevProgress.completed === prevProgress.total
+    const finalLessonId = learningActions.getFinalLessonId(prevLevel)
+    return finalLessonId != null && learningState.completedLessons.includes(finalLessonId)
   }
 })
 

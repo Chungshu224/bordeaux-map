@@ -669,6 +669,13 @@ export const learningProgress = computed(() => {
 
 // 學習系統操作方法
 export const learningActions = {
+  // 取得指定 Level 最後一課（綜合評量）的 ID
+  getFinalLessonId(level) {
+    const levelData = learningLevels[`level${level}`]
+    if (!levelData?.lessons?.length) return null
+    return levelData.lessons[levelData.lessons.length - 1].id
+  },
+
   // 切換學習等級
   setLevel(level) {
     learningState.currentLevel = level

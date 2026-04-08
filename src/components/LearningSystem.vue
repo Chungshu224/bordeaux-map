@@ -242,8 +242,9 @@ const isLevelUnlocked = (level) => {
   if (learningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
-  const previousLevel = learningState.userProgress[`level${level - 1}`]
-  return previousLevel.completed === previousLevel.total
+  // 必須通過前一個 Level 的綜合評量（最後一課）才能解鎖
+  const finalLessonId = learningActions.getFinalLessonId(level - 1)
+  return finalLessonId != null && learningState.completedLessons.includes(finalLessonId)
 }
 
 const getLevelTitle = (level) => {
