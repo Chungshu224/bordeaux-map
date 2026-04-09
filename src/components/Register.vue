@@ -26,7 +26,7 @@
           <strong>{{ submittedEmail }}</strong>
         </p>
         <p class="success-hint">請前往信箱點擊驗證連結，完成帳號啟用後即可登入學習系統。</p>
-        <button class="btn-back" @click="$emit('backToHome')">返回首頁</button>
+        <button class="btn-back" @click="$router.push('/')">返回首頁</button>
       </div>
 
       <!-- 註冊表單 -->
@@ -144,7 +144,7 @@
           <button class="link-btn" @click="$emit('goToLogin')">立即登入</button>
         </div>
         <div class="form-footer">
-          <button class="link-btn secondary" @click="$emit('backToHome')">← 返回首頁</button>
+          <button class="link-btn secondary" @click="$router.push('/')">← 返回首頁</button>
         </div>
       </div>
     </div>
