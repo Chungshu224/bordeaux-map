@@ -327,6 +327,102 @@ export const lessonContent = [
           options: ['黑醋栗、雪松、鉛筆芯', '荔枝、玫瑰、胡椒', '蜂蜜、杏乾、貴腐香', '香蕉、泡泡糖'],
           correct: 0,
           explanation: '卡本內-蘇維濃常見黑醋栗、雪松木、鉛筆芯等風味與結構感。'
+        },
+        {
+          question: '波爾多（Bordeaux）城市位於法國哪個行政大區？',
+          options: ['諾曼第', '奧克西塔尼', '新阿基坦（Nouvelle-Aquitaine）', '布列塔尼'],
+          correct: 2,
+          explanation: '波爾多是法國西南部新阿基坦大區（Nouvelle-Aquitaine）的首府，也是吉倫特省（Gironde）的省會，地處大西洋岸邊的溫帶海洋性氣候區。'
+        },
+        {
+          question: '梅洛（Merlot）葡萄的典型風味最接近哪一組描述？',
+          options: ['檸檬、青草、礦物感', '黑醋栗、雪松、鉛筆芯', '李子、黑莓、絲滑圓潤', '蜂蜜、杏乾、貴腐香'],
+          correct: 2,
+          explanation: '梅洛以豐滿圓潤的果味著稱，常見李子、黑莓、藍莓及絲滑口感，比卡本內-蘇維濃更柔順易飲，是右岸主導品種。'
+        },
+        {
+          question: '1855年波爾多分級制度設立的主要背景是？',
+          options: ['一次世界大戰需要籌措軍費', '拿破崙三世為巴黎世界博覽會要求建立', '波爾多大霜凍後重建計畫', '波爾多商會自發性評鑑'],
+          correct: 1,
+          explanation: '1855年拿破崙三世要求為巴黎世界博覽會（Exposition Universelle de Paris）建立展示波爾多最優秀酒莊的分級制度，由波爾多商會委託酒商評選完成。'
+        },
+        {
+          question: '波爾多最著名的甜白酒Château d\'Yquem在蘇玳-巴薩克分級中屬於哪個等級？',
+          options: ['一等特級（Premier Cru Supérieur）', '一等莊', '特等莊', '二等莊'],
+          correct: 0,
+          explanation: 'Château d\'Yquem是蘇玳-巴薩克分級中唯一的「一等特級」（Premier Cru Supérieur），地位超越其他一等莊，被許多專家評為世界最偉大的甜白酒。'
+        },
+        {
+          question: '賽美容（Sémillon）在波爾多白酒中的主要貢獻是？',
+          options: ['提供高酸度和清爽感', '提供豐厚酒體、蜂蠟與複雜感', '提供青草與礦石香氣', '提供氣泡與輕盈感'],
+          correct: 1,
+          explanation: '賽美容皮薄，容易培育貴腐菌；在干白酒中帶來豐厚酒體、蜂蠟、蘭花等複雜風味；與白蘇維濃互補，是波爾多干白和甜白的重要品種。'
+        },
+        {
+          question: '卡本內弗朗（Cabernet Franc）的典型香氣特徵是？',
+          options: ['黑醋栗、煙草、雪松', '紫羅蘭、紅椒、鉛筆芯香', '荔枝、玫瑰、胡椒', '柑橘、白花、礦石'],
+          correct: 1,
+          explanation: '卡本內弗朗常有紫羅蘭、紅色漿果、青椒或紅椒氣息，以及細緻的鉛筆/石墨感，單寧較柔和，是右岸混釀的重要角色。'
+        },
+        {
+          question: '波爾多頂級紅酒陳年主要使用哪種橡木桶？',
+          options: ['美國橡木桶（American Oak）', '法國橡木桶（French Oak）', '斯洛維尼亞橡木桶', '不銹鋼桶'],
+          correct: 1,
+          explanation: '波爾多頂級酒莊以法國橡木桶（尤其Allier、Nevers等森林產區）為主，提供細緻的香草、香料與单寧整合，比美國橡木更為含蓄優雅。'
+        },
+        {
+          question: '「柏圖斯」（Château Pétrus）位於哪個產區？',
+          options: ['Saint-Émilion', 'Pauillac', 'Pomerol', 'Margaux'],
+          correct: 2,
+          explanation: 'Château Pétrus是波美侯（Pomerol）的頂級酒莊，雖無官方分級，卻以極稀少的產量（約30,000瓶/年）、獨特藍色黏土風土和卓越品質，成為波爾多最昂貴的酒款之一。'
+        },
+        {
+          question: '以下哪個葡萄品種「不屬於」波爾多的法定品種？',
+          options: ['小維多（Petit Verdot）', '黑皮諾（Pinot Noir）', '馬爾貝克（Malbec）', '卡門內爾（Carménère）'],
+          correct: 1,
+          explanation: '黑皮諾是勃根地的代表品種，波爾多不種植也不允許。波爾多法定紅葡萄品種包括：卡本內-蘇維濃、梅洛、卡本內弗朗、馬爾貝克（Côt）、小維多、卡門內爾等。'
+        },
+        {
+          question: '「兩海之間」（Entre-Deux-Mers）名稱中的「兩海」指的是？',
+          options: ['大西洋與地中海', '加龍河與多爾多涅河', '比斯開灣與英吉利海峽', '吉倫特河口的南北兩岸'],
+          correct: 1,
+          explanation: '「兩海之間」指的是加龍河（Garonne）與多爾多涅河（Dordogne）之間的三角地帶，兩條河在波爾多以北匯合成吉倫特河口。該區以干白酒著稱。'
+        },
+        {
+          question: '波爾多「副牌酒」（Second Wine）的概念是指？',
+          options: ['品質與正牌完全相同的平行產品', '使用未達正牌標準的批次（年輕藤或次優地塊）釀造', '二等列級莊的酒款', '二氧化硫含量較低的版本'],
+          correct: 1,
+          explanation: '副牌酒使用未被選入正牌的葡萄（較年輕葡萄藤、次優地塊或非最佳批次），讓消費者以較低價格體驗同酒莊的釀造風格。如Carruades de Lafite、Pavillon Rouge等。'
+        },
+        {
+          question: '1855年分級制度共將梅多克紅酒劃分為幾個等級？',
+          options: ['三個等級', '四個等級', '五個等級', '六個等級'],
+          correct: 2,
+          explanation: '1855年分級將梅多克紅酒（加上格拉夫的Haut-Brion）分為五個等級（Premier Cru至Cinquième Cru），以交易價格和聲譽為依據。另有蘇玳-巴薩克甜白的獨立分級。'
+        },
+        {
+          question: '酒標上「Mis en bouteille au Château」代表什麼？',
+          options: ['在酒窖低溫熟成', '在酒莊（城堡）內灌裝完成', '使用有機葡萄釀造', '通過法定品質認證'],
+          correct: 1,
+          explanation: '「Mis en bouteille au Château」意思為「在酒莊裝瓶」，代表葡萄酒從種植、釀造到裝瓶全程在酒莊完成，是品質保障的重要標誌，避免中間商操作。'
+        },
+        {
+          question: '波爾多在哪一年被列為UNESCO世界遺產？',
+          options: ['1985年', '2007年', '2000年', '2015年'],
+          correct: 1,
+          explanation: '波爾多整座歷史城市於2007年被列入UNESCO世界遺產名錄，涵蓋城市中心的歷史建築與港口景觀，同年波爾多葡萄酒的重要文化地位亦受到肯定。'
+        },
+        {
+          question: 'AOC（Appellation d\'Origine Contrôlée）標示對葡萄酒消費者的意義是？',
+          options: ['代表最高品質等級', '確認產地、品種與釀造方式符合法規管控', '代表有機農業認證', '代表期酒預購資格'],
+          correct: 1,
+          explanation: 'AOC是法國法定產區管控制度，確認酒款符合特定地理範圍、許可品種、最低酒精度、釀造工藝等規範。它保障風格一致性，但不直接代表品質高低。'
+        },
+        {
+          question: '波爾多的「城堡」（Château）一詞在葡萄酒語境中真正的含義是？',
+          options: ['必須是中世紀軍事城堡', '擁有葡萄園的莊園酒廠，不一定有城堡建築', '只適用於一等列級莊', '必須超過100公頃才能使用'],
+          correct: 1,
+          explanation: '在波爾多，「Château」泛指擁有自有葡萄園並在該地釀酒的莊園酒廠，不要求有真正的城堡建築。這個詞已成為波爾多葡萄酒風格的象徵，從小農到大莊園皆可使用。'
         }
       ]
     },

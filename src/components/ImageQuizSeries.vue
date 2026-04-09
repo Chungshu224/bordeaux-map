@@ -53,8 +53,10 @@ function enhanceText(text) { return enhanceTextUtil(text) }
 const props = defineProps({
   items: { type: Array, default: () => [] },
   count: { type: Number, default: 3 },
-  title: { type: String, default: '' }
+  title: { type: String, default: '' },
+  passingRate: { type: Number, default: 0.8 }  // 通關門檻（預設 80%）
 })
+const emit = defineEmits(['complete'])
 
 const state = reactive({
   selection: [], // picked questions
@@ -151,6 +153,9 @@ function next() {
   if (!answered.value) return
   if (isLast.value) {
     currentIndex.value = totalCount.value // mark completed
+    const total = totalCount.value
+    const percentage = total > 0 ? score.value / total : 0
+    emit('complete', { score: score.value, total, percentage, passed: percentage >= props.passingRate })
   } else {
     currentIndex.value += 1
     answered.value = false

@@ -432,10 +432,7 @@ const TIER_INFO = {
   basic:   { label: '進階愛好者 Enthusiast',    icon: '🍇', color: '#7c3aed' },
   premium: { label: '專業達人 Professional',   icon: '🏆', color: '#b45309' }
 }
-const userTier = computed(() => {
-  if (authActions.isAdmin()) return 'premium'
-  return authState.user?.app_metadata?.subscription_tier || 'free'
-})
+const userTier = computed(() => authActions.getEffectiveTier())
 const tierInfo = computed(() => TIER_INFO[userTier.value])
 
 async function handleLogout() {

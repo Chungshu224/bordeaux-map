@@ -32,230 +32,205 @@ const mapboxToken = (import.meta?.env?.VITE_MAPBOX_TOKEN)
 
 // 左岸與右岸主要產區的 GeoJSON 路徑
 const geojsonPaths = [
-  // 左岸產區（深紅色 - Cabernet Sauvignon）
-  '/geojson/LeftBank/Medoc/Medoc_AOC.geojson',              // 梅多克
-  '/geojson/LeftBank/Medoc/Haut-Medoc_AOC.geojson',         // 上梅多克
-  '/geojson/LeftBank/Graves/Graves_AOC.geojson',            // 格拉夫
-  
-  // 右岸產區（深紫色 - Merlot）
-  '/geojson/RightBank/Libournais/St-Emilion_AOC.geojson',   // 聖愛美濃
-  '/geojson/RightBank/Libournais/Pomerol_AOC.geojson',      // 波美侯
-  '/geojson/RightBank/Libournais/Fronsac_AOC.geojson'       // 弗朗丘
+  '/geojson/LeftBank/Medoc/Medoc_AOC.geojson',
+  '/geojson/LeftBank/Medoc/Haut-Medoc_AOC.geojson',
+  '/geojson/LeftBank/Graves/Graves_AOC.geojson',
+  '/geojson/RightBank/Libournais/St-Emilion_AOC.geojson',
+  '/geojson/RightBank/Libournais/Pomerol_AOC.geojson',
+  '/geojson/RightBank/Libournais/Fronsac_AOC.geojson'
 ]
 
-// 追加三河標記與河流名稱標註
+// ── 三條主河設定（與 SlideRiversSystem 完全一致）
+const MAIN_RIVERS = [
+  {
+    filename: 'La Garonne.geojson',
+    name: '加龍河',
+    nameEn: 'Garonne',
+    color: '#1565C0',
+    width: 3.5,
+    labelLng: -0.50,
+    labelLat: 44.55,
+    tip: '來自庇里牛斯山脈，流經波爾多市中心，沿岸形成左岸產區，砂礫土壤主要由其沖積而成。'
+  },
+  {
+    filename: 'La Dordogne.geojson',
+    name: '多爾多涅河',
+    nameEn: 'Dordogne',
+    color: '#2E7D32',
+    width: 3.5,
+    labelLng: 0.06,
+    labelLat: 44.89,
+    tip: '來自法國中央高原，流向吉隆德，形成右岸產區的天然邊界，黏土石灰岩地形由此發展。'
+  },
+  {
+    filename: 'La Gironde.geojson',
+    name: '吉隆德河口',
+    nameEn: 'Gironde Estuary',
+    color: '#6A1B9A',
+    width: 5,
+    labelLng: -0.82,
+    labelLat: 45.30,
+    tip: '歐洲最大河口，由加龍河與多爾多涅河匯合形成，直通大西洋，調節整個產區微氣候。'
+  }
+]
+
+const MINOR_RIVERS = [
+  { filename: "L'Isle.geojson",   name: "伊勒河 (L'Isle)" },
+  { filename: 'Le Ciron.geojson', name: '希隆河 (Ciron)'  }
+]
+
+const CONFLUENCE = { lng: -0.535, lat: 45.03 }
+
 const onMapReady = async (map) => {
+  const markers = []
   try {
-    const riversGeoJSON = {
-      type: 'FeatureCollection',
-      features: [
-        // 加龍河 (Garonne)
-        {
-          type: 'Feature',
-          properties: { name: '加龍河 (Garonne)', color: '#1e88e5', width: 3, tip: '左岸邊界的主要河流，帶來良好排水的砂礫土。' },
-          geometry: {
-            type: 'LineString',
-            coordinates: [
-              [-0.600, 45.050],
-              [-0.595, 45.020],
-              [-0.590, 45.000],
-              [-0.588, 44.985],
-              [-0.585, 44.970],
-              [-0.580, 44.955],
-              [-0.576, 44.942],
-              [-0.572, 44.920],
-              [-0.570, 44.900],
-              [-0.568, 44.885],
-              [-0.565, 44.870],
-              [-0.562, 44.855],
-              [-0.560, 44.840],
-              [-0.558, 44.825],
-              [-0.556, 44.810],
-              [-0.553, 44.792],
-              [-0.550, 44.760],
-              [-0.548, 44.745],
-              [-0.545, 44.730],
-              [-0.540, 44.710],
-              [-0.537, 44.700],
-              [-0.533, 44.685],
-              [-0.528, 44.665],
-              [-0.525, 44.650],
-              [-0.520, 44.630],
-              [-0.516, 44.615],
-              [-0.510, 44.585],
-              [-0.506, 44.565],
-              [-0.503, 44.550],
-              [-0.500, 44.520],
-              [-0.498, 44.505],
-              [-0.495, 44.480],
-              [-0.493, 44.465],
-              [-0.490, 44.440]
-            ]
+    // 清理舊圖層 / 來源
+    ;['rivers-glow', 'rivers-lines', 'rivers-labels', 'rivers-minor'].forEach(id => {
+      if (map.getLayer(id)) map.removeLayer(id)
+    })
+    ;['rivers-src', 'rivers-minor-src'].forEach(id => {
+      if (map.getSource(id)) map.removeSource(id)
+    })
+
+    // 通用 GeoJSON 載入器（MultiLineString → Features）
+    const loadFeatures = async (riverList) => {
+      const features = []
+      for (const river of riverList) {
+        try {
+          const res = await fetch(`/geojson/Rivers/${river.filename}`)
+          if (!res.ok) continue
+          const geo = await res.json()
+          if (geo.type === 'MultiLineString' && Array.isArray(geo.coordinates)) {
+            geo.coordinates.forEach(coords => {
+              features.push({ type: 'Feature', properties: { ...river }, geometry: { type: 'LineString', coordinates: coords } })
+            })
           }
-        },
-        // 多爾多涅河 (Dordogne)
-        {
-          type: 'Feature',
-          properties: { name: '多爾多涅河 (Dordogne)', color: '#43a047', width: 3, tip: '右岸邊界的主要河流，石灰岩與黏土風土的關鍵。' },
-          geometry: {
-            type: 'LineString',
-            coordinates: [
-              [0.320, 45.110],
-              [0.280, 45.090],
-              [0.240, 45.075],
-              [0.200, 45.050],
-              [0.150, 45.030],
-              [0.100, 45.010],
-              [0.060, 44.998],
-              [0.020, 44.990],
-              [-0.010, 44.985],
-              [-0.040, 44.980],
-              [-0.060, 44.975],
-              [-0.090, 44.968],
-              [-0.120, 44.962],
-              [-0.140, 44.960],
-              [-0.180, 44.952],
-              [-0.220, 44.945],
-              [-0.260, 44.938],
-              [-0.300, 44.930],
-              [-0.340, 44.925],
-              [-0.380, 44.920],
-              [-0.420, 44.913],
-              [-0.460, 44.905],
-              [-0.500, 44.900],
-              [-0.530, 44.895],
-              [-0.550, 44.890]
-            ]
-          }
-        },
-        // 吉隆德河口 (Gironde estuary)
-        {
-          type: 'Feature',
-          properties: { name: '吉隆德河 (Gironde)', color: '#6d4c41', width: 4, tip: '歐洲最大河口，直通大西洋，調節產區微氣候。' },
-          geometry: {
-            type: 'LineString',
-            coordinates: [
-              [-0.550, 44.900],
-              [-0.560, 44.930],
-              [-0.580, 44.960],
-              [-0.600, 44.995],
-              [-0.630, 45.050],
-              [-0.660, 45.095],
-              [-0.700, 45.150],
-              [-0.740, 45.205],
-              [-0.780, 45.250],
-              [-0.820, 45.290],
-              [-0.870, 45.330],
-              [-0.910, 45.365],
-              [-0.950, 45.400]
-            ]
-          }
+        } catch (e) {
+          console.warn('[SlideRiversAndBanks] Failed:', river.filename, e)
         }
-      ]
+      }
+      return { type: 'FeatureCollection', features }
     }
 
-    if (!map.getSource('rivers')) {
-      map.addSource('rivers', { type: 'geojson', data: riversGeoJSON })
+    // 主河圖層
+    const mainGeo = await loadFeatures(MAIN_RIVERS)
+    map.addSource('rivers-src', { type: 'geojson', data: mainGeo })
 
-      // 光暈/底層線：提升視覺對比
-      map.addLayer({
-        id: 'rivers-glow',
-        type: 'line',
-        source: 'rivers',
-        filter: ['==', ['geometry-type'], 'LineString'],
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round'
-        },
-        paint: {
-          'line-color': ['get', 'color'],
-          'line-opacity': 0.25,
-          'line-blur': 2.0,
-          'line-width': [
-            'interpolate', ['linear'], ['zoom'],
-            6, ['*', ['get', 'width'], 3.0],
-            10, ['*', ['get', 'width'], 4.0],
-            13, ['*', ['get', 'width'], 5.0]
-          ]
-        }
-      })
+    map.addLayer({
+      id: 'rivers-glow',
+      type: 'line',
+      source: 'rivers-src',
+      layout: { 'line-join': 'round', 'line-cap': 'round' },
+      paint: { 'line-color': ['get', 'color'], 'line-opacity': 0.28, 'line-blur': 5, 'line-width': ['*', ['get', 'width'], 3.5] }
+    })
 
-      map.addLayer({
-        id: 'rivers-lines',
-        type: 'line',
-        source: 'rivers',
-        filter: ['==', ['geometry-type'], 'LineString'],
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round'
-        },
-        paint: {
-          'line-color': ['get', 'color'],
-          'line-width': [
-            'interpolate', ['linear'], ['zoom'],
-            6, ['get', 'width'],
-            10, ['*', ['get', 'width'], 1.6],
-            13, ['*', ['get', 'width'], 2.2]
-          ],
-          'line-opacity': 0.9,
-          'line-blur': 0.2
-        }
-      })
+    map.addLayer({
+      id: 'rivers-lines',
+      type: 'line',
+      source: 'rivers-src',
+      layout: { 'line-join': 'round', 'line-cap': 'round' },
+      paint: {
+        'line-color': ['get', 'color'],
+        'line-width': ['interpolate', ['linear'], ['zoom'], 7, ['get', 'width'], 11, ['*', ['get', 'width'], 2]],
+        'line-opacity': 0.92
+      }
+    })
 
-      // 河流名稱標籤 - 使用 symbol-placement: 'line' 讓文字沿著河流線顯示
-      map.addLayer({
-        id: 'rivers-labels',
-        type: 'symbol',
-        source: 'rivers',
-        filter: ['==', ['geometry-type'], 'LineString'],
-        layout: {
-          'text-field': ['get', 'name'],
-          'text-size': 14,
-          'symbol-placement': 'line', // 沿著線段放置文字
-          'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
-          'text-rotation-alignment': 'map',
-          'text-pitch-alignment': 'viewport'
-        },
-        paint: { 
-          'text-color': '#ffffff',
-          'text-halo-color': ['get', 'color'],
-          'text-halo-width': 2
-        }
-      })
+    map.addLayer({
+      id: 'rivers-labels',
+      type: 'symbol',
+      source: 'rivers-src',
+      layout: {
+        'text-field': ['get', 'name'],
+        'text-size': 13,
+        'symbol-placement': 'line',
+        'symbol-spacing': 300,
+        'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+        'text-rotation-alignment': 'map',
+        'text-pitch-alignment': 'viewport'
+      },
+      paint: { 'text-color': '#ffffff', 'text-halo-color': ['get', 'color'], 'text-halo-width': 2.5 }
+    })
+
+    // 支流圖層
+    const minorGeo = await loadFeatures(MINOR_RIVERS)
+    map.addSource('rivers-minor-src', { type: 'geojson', data: minorGeo })
+    map.addLayer({
+      id: 'rivers-minor',
+      type: 'line',
+      source: 'rivers-minor-src',
+      layout: { 'line-join': 'round', 'line-cap': 'round' },
+      paint: { 'line-color': '#90A4AE', 'line-width': 1.5, 'line-opacity': 0.7 }
+    })
+
+    // 三條主河浮動標籤 Marker
+    const makeLabelEl = (river) => {
+      const el = document.createElement('div')
+      el.innerHTML = `
+        <div style="
+          background:${river.color};color:white;
+          padding:5px 10px;border-radius:8px;
+          font-size:13px;font-weight:bold;
+          box-shadow:0 2px 8px rgba(0,0,0,0.55);
+          white-space:nowrap;pointer-events:none;
+          line-height:1.35;text-align:center;
+        ">
+          🌊 ${river.name}
+          <div style="font-size:10px;font-weight:normal;opacity:0.85;">${river.nameEn}</div>
+        </div>`
+      return el
     }
+    MAIN_RIVERS.forEach(river => {
+      const m = new mapboxgl.Marker({ element: makeLabelEl(river), anchor: 'center' })
+        .setLngLat([river.labelLng, river.labelLat])
+        .addTo(map)
+      markers.push(m)
+    })
 
-    // 滑過小知識（僅河流）
+    // 三河匯流點 Marker（可點擊展開說明）
+    const cfEl = document.createElement('div')
+    cfEl.innerHTML = `
+      <div style="
+        background:linear-gradient(135deg,#1565C0 0%,#2E7D32 100%);
+        color:white;padding:6px 12px;border-radius:20px;
+        font-size:12px;font-weight:bold;
+        box-shadow:0 2px 10px rgba(0,0,0,0.65);
+        white-space:nowrap;text-align:center;
+        border:2px solid rgba(255,255,255,0.8);
+      ">
+        🔀 三河匯流點
+        <div style="font-size:9px;font-weight:normal;opacity:0.85;">Bec d'Ambès</div>
+      </div>`
+    const cfMarker = new mapboxgl.Marker({ element: cfEl, anchor: 'center' })
+      .setLngLat([CONFLUENCE.lng, CONFLUENCE.lat])
+      .setPopup(new mapboxgl.Popup({ offset: 22 }).setHTML(`
+        <strong>三河匯流點 (Bec d'Ambès)</strong>
+        <p style="margin:4px 0 0;font-size:12px;color:#555;">
+          加龍河與多爾多涅河在此匯合，形成歐洲最大的河口——吉隆德河口，直通大西洋，對整個波爾多產區的微氣候起到關鍵調節作用。
+        </p>`))
+      .addTo(map)
+    markers.push(cfMarker)
+
+    // hover popup
     const hoverPopup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false })
-
-    const showPopup = (e, html) => {
-      if (!e?.lngLat) return
-      hoverPopup.setLngLat(e.lngLat).setHTML(html).addTo(map)
-    }
-    const clearPopup = () => hoverPopup.remove()
-
-    map.on('mouseenter', 'rivers-lines', (e) => {
-      map.getCanvas().style.cursor = 'pointer'
-      const name = e.features[0]?.properties?.name
-      const tip = e.features[0]?.properties?.tip
-      if (name && tip) {
-        showPopup(e, `<strong>${name}</strong><br/>${tip}`)
-      }
-    })
-
     map.on('mousemove', 'rivers-lines', (e) => {
-      if (hoverPopup.isOpen()) {
-        hoverPopup.setLngLat(e.lngLat)
-      }
+      const f = e?.features?.[0]
+      if (!f) return
+      map.getCanvas().style.cursor = 'pointer'
+      hoverPopup.setLngLat(e.lngLat)
+        .setHTML(`<strong>${f.properties.name}</strong><div style="font-size:11px;color:#555;margin-top:3px;">${f.properties.tip || ''}</div>`)
+        .addTo(map)
     })
+    map.on('mouseleave', 'rivers-lines', () => { map.getCanvas().style.cursor = ''; hoverPopup.remove() })
 
-    map.on('mouseleave', 'rivers-lines', () => {
-      map.getCanvas().style.cursor = ''
-      clearPopup()
-    })
+    // 調整視角
+    map.fitBounds([[-1.35, 44.35], [0.35, 45.65]], { padding: { top: 40, bottom: 40, left: 30, right: 30 }, duration: 700 })
 
   } catch (error) {
     console.error('[SlideRiversAndBanks] 載入河流資料失敗:', error)
   }
+
+  return () => { markers.forEach(m => m.remove()); markers.length = 0 }
 }
 </script>
 

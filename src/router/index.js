@@ -124,7 +124,7 @@ router.beforeEach(async (to, from, next) => {
 
   // 管理員信箱自動賦予 premium；否則讀 user_metadata
   const isAdmin = authActions.isAdmin?.() || false
-  const userTier = isAdmin ? 'premium' : (user?.app_metadata?.subscription_tier || 'free')
+  const userTier = authActions.getEffectiveTier()
 
   // 1. 檢查是否需要登入
   if (to.meta.requiresAuth && !user) {

@@ -259,7 +259,7 @@ const HARD_BANKS = [
   { key: 'sauternais',label: '索甸甜酒帶', icon: '🍯', hint: 'Sauternes・Barsac', cls: 'sau-btn' },
 ]
 
-const TIMER_MAP  = { easy: 3000, hard: 2000 }
+const TIMER_MAP  = { easy: 6000, hard: 4000 }
 const Q_COUNT    = { easy: 15, hard: 20 }
 const COMBO_TIERS = [
   { min: 8, mult: 3 },

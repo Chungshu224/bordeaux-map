@@ -50,6 +50,20 @@
                 <span class="tier-desc">{{ currentTierInfo.desc }}</span>
               </div>
             </div>
+            <div class="subscription-dates">
+              <div class="sub-date-item">
+                <span class="sub-date-label">訂閱日期</span>
+                <span class="sub-date-value">{{ subscriptionStartDate }}</span>
+              </div>
+              <div class="sub-date-item">
+                <span class="sub-date-label">到期日</span>
+                <span class="sub-date-value" :class="{ 'expiry-soon': isExpiringSoon, 'expiry-expired': isExpired }">
+                  {{ subscriptionExpiryDate }}
+                  <span v-if="isExpiringSoon && !isExpired" class="expiry-badge warning">即將到期</span>
+                  <span v-if="isExpired" class="expiry-badge expired">已到期</span>
+                </span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -161,11 +175,41 @@ const TIER_INFO = {
   basic:   { label: '進階愛好者 Enthusiast', icon: '🍇', desc: '可解鎖 Level 2-4 課程與互動練習' },
   premium: { label: '專業達人 Professional', icon: '🏆', desc: '完整解鎖所有功能與進階地圖分析' }
 }
-const userTier = computed(() => {
-  if (authActions.isAdmin()) return 'premium'
-  return authState.user?.app_metadata?.subscription_tier || 'free'
-})
+const userTier = computed(() => authActions.getEffectiveTier())
+// 原始方案（不含到期降級），用於日期區塊的顯示判斷
+const rawTier = computed(() => authActions.getSubscriptionTier())
 const currentTierInfo = computed(() => TIER_INFO[userTier.value])
+
+// ── 訂閱日期 ─────────────────────────────
+const formatDate = (iso) => {
+  if (!iso) return '—'
+  const d = new Date(iso)
+  if (isNaN(d.getTime())) return '—'
+  return d.toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' })
+}
+
+const subscriptionStartDate = computed(() => {
+  if (rawTier.value === 'free') return '免費方案'
+  return formatDate(authState.user?.app_metadata?.subscription_start_date)
+})
+
+const subscriptionExpiryDate = computed(() => {
+  if (rawTier.value === 'free') return '無到期限制'
+  return formatDate(authState.user?.app_metadata?.subscription_expires_at)
+})
+
+const isExpired = computed(() => {
+  const exp = authState.user?.app_metadata?.subscription_expires_at
+  if (!exp || rawTier.value === 'free') return false
+  return new Date(exp) < new Date()
+})
+
+const isExpiringSoon = computed(() => {
+  const exp = authState.user?.app_metadata?.subscription_expires_at
+  if (!exp || rawTier.value === 'free') return false
+  const diff = new Date(exp) - new Date()
+  return diff > 0 && diff < 14 * 24 * 60 * 60 * 1000  // 14天內
+})
 
 // ── 學習統計 ─────────────────────────────
 const stats = ref(null)   // { totalStudySeconds, completedLevels, quizAccuracy }
@@ -393,6 +437,45 @@ onMounted(loadSettings)
 .tier-texts { display: flex; flex-direction: column; gap: 0.1rem; }
 .tier-name { font-size: 0.95rem; font-weight: 700; }
 .tier-desc { font-size: 0.78rem; opacity: 0.75; }
+
+/* ── 訂閱日期 ───────────────────────────────────── */
+.subscription-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.6rem 1rem;
+  background: #f9f9f9;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-top: 0.4rem;
+}
+.sub-date-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+.sub-date-label {
+  color: #888;
+  font-weight: 500;
+}
+.sub-date-value {
+  color: #333;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.sub-date-value.expiry-soon { color: #d97706; }
+.sub-date-value.expiry-expired { color: #dc2626; }
+.expiry-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 20px;
+}
+.expiry-badge.warning { background: #fef3c7; color: #92400e; }
+.expiry-badge.expired  { background: #fee2e2; color: #991b1b; }
 
 /* ── 欄位 ────────────────────────────────────────── */
 .field-group {

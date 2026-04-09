@@ -338,195 +338,210 @@ export const l29Content = [
     `
   },
 
-  // ========== 綜合評量題目（15題）==========
+  // ========== 綜合評量（ImageQuizSeries）==========
   {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第1題',
-    content: '<p class="quiz-intro">以下開始正式評量，請仔細閱讀每個問題。</p>',
-    quiz: {
-      question: 'Médoc半島的砂礫土壤主要來源於什麼地質作用？',
-      options: ['火山噴發沉積', '古代河流沖積', '冰川搬運', '風力堆積'],
-      correct: 1,
-      explanation: 'Médoc的砂礫土壤主要來自於第四紀冰河時期河流沖積作用，Garonne河和Dordogne河帶來的沖積物在Gironde河口形成了深厚的砂礫層。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第2題',
-    content: '',
-    quiz: {
-      question: '以下哪個產區以"優雅細膩、如絲般柔順"的風格著稱？',
-      options: ['Pauillac', 'Saint-Estèphe', 'Margaux', 'Pomerol'],
-      correct: 2,
-      explanation: 'Margaux以其優雅細膩、柔順如絲的風格而聞名，被譽為"Médoc的香水"，其細砂礫土壤造就了這種獨特的優雅風格。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第3題',
-    content: '',
-    quiz: {
-      question: 'Pauillac產區擁有幾座1855一級莊（Premiers Crus）？',
-      options: ['1座', '2座', '3座', '4座'],
-      correct: 2,
-      explanation: 'Pauillac擁有3座一級莊：Château Lafite Rothschild、Château Latour和Château Mouton Rothschild（1973年升級），是所有產區中一級莊最多的。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第4題',
-    content: '',
-    quiz: {
-      question: 'Saint-Julien產區的典型特色是什麼？',
-      options: ['最強勁的單寧', '完美的平衡與優雅', '最高的Merlot比例', '最細膩的香氣'],
-      correct: 1,
-      explanation: 'Saint-Julien被譽為Médoc最平衡的產區，其土壤（砂礫與黏土的理想組合）和品種搭配，使得酒款完美平衡了優雅與力量。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第5題',
-    content: '',
-    quiz: {
-      question: '為什麼Saint-Estèphe的Merlot種植比例比其他Médoc產區更高？',
-      options: ['因為氣候更溫暖', '因為土壤黏土含量較高', '因為靠近大西洋', '因為歷史傳統'],
-      correct: 1,
-      explanation: 'Saint-Estèphe的土壤黏土含量較高，保水性強，更適合早熟的Merlot。增加Merlot比例也有助於柔化該產區強勁的單寧結構。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第6題',
-    content: '',
-    quiz: {
-      question: 'Pomerol產區最著名的土壤類型是什麼？',
-      options: ['紅色砂礫', '藍色黏土（Blue Clay）', '白色石灰岩', '黃色砂土'],
-      correct: 1,
-      explanation: 'Pomerol最著名的是其藍色黏土（Blue Clay），富含鐵質，保水性強，為Merlot提供了理想的生長條件，是Pétrus等頂級酒莊的土壤基礎。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第7題',
-    content: '',
-    quiz: {
-      question: 'Château Pétrus的葡萄園面積約為多少？',
-      options: ['5公頃', '11.5公頃', '50公頃', '100公頃'],
-      correct: 1,
-      explanation: 'Château Pétrus的葡萄園面積僅約11.5公頃，極其稀少的產量（年產約30,000瓶）加上卓越品質，使其成為世界上最昂貴的葡萄酒之一。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第8題',
-    content: '',
-    quiz: {
-      question: 'Saint-Émilion分級制度的特色是什麼？',
-      options: ['永久固定不變', '每10年重新評估', '每年更新', '沒有分級'],
-      correct: 1,
-      explanation: 'Saint-Émilion的分級制度每10年重新評估一次（最近一次為2022年），這種動態機制確保分級反映當前品質水準，與1855固定分級形成對比。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第9題',
-    content: '',
-    quiz: {
-      question: 'Saint-Émilion的Premier Grand Cru Classé A等級目前有幾家酒莊？',
-      options: ['2家', '4家', '5家', '8家'],
-      correct: 1,
-      explanation: '2022年的最新分級中，Saint-Émilion的Premier Grand Cru Classé A等級有4家：Ausone、Cheval Blanc、Angélus和Pavie。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第10題',
-    content: '',
-    quiz: {
-      question: 'Château Ausone位於Saint-Émilion的哪個地形區域？',
-      options: ['砂礫平原', '高台石灰岩區', '河谷低地', '森林區'],
-      correct: 1,
-      explanation: 'Château Ausone位於Saint-Émilion的高台石灰岩區（Côtes），陡峭的南向坡地和石灰岩土壤賦予了其葡萄酒優雅的礦物感和卓越的陳年潛力。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第11題',
-    content: '',
-    quiz: {
-      question: 'Château Cheval Blanc位於Saint-Émilion的哪個地形區域？',
-      options: ['高台石灰岩區', '砂礫平原區', '黏土坡地', '河岸沖積區'],
-      correct: 1,
-      explanation: 'Château Cheval Blanc位於Saint-Émilion西北部的砂礫平原區（Graves），緊鄰Pomerol，其土壤類似左岸，造就了獨特的風格。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第12題',
-    content: '',
-    quiz: {
-      question: '在Cabernet Franc的種植比例上，哪個產區通常最高？',
-      options: ['Pauillac', 'Margaux', 'Pomerol', 'Saint-Émilion高台區'],
-      correct: 3,
-      explanation: 'Saint-Émilion的高台石灰岩區最適合Cabernet Franc生長，該品種在此比例可達30-40%，比左岸和Pomerol都高，為酒款帶來優雅的花香和礦物感。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第13題',
-    content: '',
-    quiz: {
-      question: '波爾多的"車庫酒"（Garage Wine）運動起源於哪裡？',
-      options: ['Médoc', 'Pomerol', 'Libournais衛星產區', 'Graves'],
-      correct: 2,
-      explanation: '車庫酒運動起源於1990年代的Libournais地區（特別是Saint-Émilion衛星產區），以極小產量、極致品質和現代釀造手法挑戰傳統，代表酒莊如Le Pin、Valandraud等。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第14題',
-    content: '',
-    quiz: {
-      question: '左岸和右岸在釀造理念上的主要差異是什麼？',
-      options: [
-        '左岸更注重傳統，右岸更注重創新',
-        '左岸強調結構與陳年，右岸強調果味與平易近人',
-        '左岸全部使用新橡木桶，右岸不用',
-        '左岸產量更大，右岸產量更小'
-      ],
-      correct: 1,
-      explanation: '左岸（特別是列級莊）傳統上強調Cabernet Sauvignon的結構、單寧和長期陳年潛力；右岸則以Merlot為主，更注重果味的表現和年輕時的平易近人，雖然頂級酒莊也具備卓越陳年潛力。'
-    }
-  },
-
-  {
-    type: 'content-with-quiz',
-    title: '綜合評量 - 第15題',
-    content: '',
-    quiz: {
-      question: '以下哪個說法是正確的？',
-      options: [
-        'Pomerol有正式的分級制度',
-        'Saint-Émilion的分級永久固定',
-        'Médoc的1855分級可以每10年修改',
-        'Pomerol沒有官方分級但Pétrus被公認為頂級'
-      ],
-      correct: 3,
-      explanation: 'Pomerol是波爾多主要產區中唯一沒有官方分級制度的，但Château Pétrus憑藉其卓越品質和世界聲譽被公認為產區的"無冕之王"，價格與一級莊相當甚至更高。'
-    }
+    title: 'Level 2 綜合評量小考（隨機 10 題）',
+    component: 'ImageQuizSeries',
+    componentProps: {
+      title: 'L2 綜合評量：小考＋解析（可錯題回練）',
+      count: 10,
+      items: [
+        {
+          question: 'Médoc半島的砂礫土壤主要來源於什麼地質作用？',
+          options: ['火山噴發沉積', '古代河流沖積', '冰川搬運', '風力堆積'],
+          correct: 1,
+          explanation: 'Médoc的砂礫土壤主要來自於第四紀冰河時期河流沖積作用，Garonne河和Dordogne河帶來的沖積物在Gironde河口形成了深厚的砂礫層。'
+        },
+        {
+          question: '以下哪個產區以「優雅細膩、如絲般柔順」的風格著稱？',
+          options: ['Pauillac', 'Saint-Estèphe', 'Margaux', 'Pomerol'],
+          correct: 2,
+          explanation: 'Margaux以其優雅細膩、柔順如絲的風格而聞名，被譽為「Médoc的香水」，其細砂礫土壤造就了這種獨特的優雅風格。'
+        },
+        {
+          question: 'Pauillac產區擁有幾座1855一級莊（Premiers Crus）？',
+          options: ['1座', '2座', '3座', '4座'],
+          correct: 2,
+          explanation: 'Pauillac擁有3座一級莊：Château Lafite Rothschild、Château Latour和Château Mouton Rothschild（1973年升級），是所有產區中一級莊最多的。'
+        },
+        {
+          question: 'Saint-Julien產區的典型特色是什麼？',
+          options: ['最強勁的單寧', '完美的平衡與優雅', '最高的Merlot比例', '最細膩的香氣'],
+          correct: 1,
+          explanation: 'Saint-Julien被譽為Médoc最平衡的產區，其土壤（砂礫與黏土的理想組合）和品種搭配，使得酒款完美平衡了優雅與力量。'
+        },
+        {
+          question: '為什麼Saint-Estèphe的Merlot種植比例比其他Médoc產區更高？',
+          options: ['因為氣候更溫暖', '因為土壤黏土含量較高', '因為靠近大西洋', '因為歷史傳統'],
+          correct: 1,
+          explanation: 'Saint-Estèphe的土壤黏土含量較高，保水性強，更適合早熟的Merlot。增加Merlot比例也有助於柔化該產區強勁的單寧結構。'
+        },
+        {
+          question: 'Pomerol產區最著名的土壤類型是什麼？',
+          options: ['紅色砂礫', '藍色黏土（Blue Clay）', '白色石灰岩', '黃色砂土'],
+          correct: 1,
+          explanation: 'Pomerol最著名的是其藍色黏土（Blue Clay），富含鐵質，保水性強，為Merlot提供了理想的生長條件，是Pétrus等頂級酒莊的土壤基礎。'
+        },
+        {
+          question: 'Château Pétrus的葡萄園面積約為多少？',
+          options: ['5公頃', '11.5公頃', '50公頃', '100公頃'],
+          correct: 1,
+          explanation: 'Château Pétrus的葡萄園面積僅約11.5公頃，極其稀少的產量（年產約30,000瓶）加上卓越品質，使其成為世界上最昂貴的葡萄酒之一。'
+        },
+        {
+          question: 'Saint-Émilion分級制度的特色是什麼？',
+          options: ['永久固定不變', '每10年重新評估', '每年更新', '沒有分級'],
+          correct: 1,
+          explanation: 'Saint-Émilion的分級制度每10年重新評估一次（最近一次為2022年），這種動態機制確保分級反映當前品質水準，與1855固定分級形成對比。'
+        },
+        {
+          question: 'Saint-Émilion的Premier Grand Cru Classé A等級目前有幾家酒莊？',
+          options: ['2家', '4家', '5家', '8家'],
+          correct: 1,
+          explanation: '2022年的最新分級中，Saint-Émilion的Premier Grand Cru Classé A等級有4家：Ausone、Cheval Blanc、Angélus和Pavie。'
+        },
+        {
+          question: 'Château Ausone位於Saint-Émilion的哪個地形區域？',
+          options: ['砂礫平原', '高台石灰岩區', '河谷低地', '森林區'],
+          correct: 1,
+          explanation: 'Château Ausone位於Saint-Émilion的高台石灰岩區（Côtes），陡峭的南向坡地和石灰岩土壤賦予了其葡萄酒優雅的礦物感和卓越的陳年潛力。'
+        },
+        {
+          question: 'Château Cheval Blanc位於Saint-Émilion的哪個地形區域？',
+          options: ['高台石灰岩區', '砂礫平原區', '黏土坡地', '河岸沖積區'],
+          correct: 1,
+          explanation: 'Château Cheval Blanc位於Saint-Émilion西北部的砂礫平原區（Graves），緊鄰Pomerol，其土壤類似左岸，造就了獨特的風格。'
+        },
+        {
+          question: '在Cabernet Franc的種植比例上，哪個產區通常最高？',
+          options: ['Pauillac', 'Margaux', 'Pomerol', 'Saint-Émilion高台區'],
+          correct: 3,
+          explanation: 'Saint-Émilion的高台石灰岩區最適合Cabernet Franc生長，該品種在此比例可達30-40%，比左岸和Pomerol都高，為酒款帶來優雅的花香和礦物感。'
+        },
+        {
+          question: '波爾多的「車庫酒」（Garage Wine）運動起源於哪裡？',
+          options: ['Médoc', 'Pomerol', 'Libournais衛星產區', 'Graves'],
+          correct: 2,
+          explanation: '車庫酒運動起源於1990年代的Libournais地區（特別是Saint-Émilion衛星產區），以極小產量、極致品質和現代釀造手法挑戰傳統，代表酒莊如Le Pin、Valandraud等。'
+        },
+        {
+          question: '左岸和右岸在釀造理念上的主要差異是什麼？',
+          options: [
+            '左岸更注重傳統，右岸更注重創新',
+            '左岸強調結構與陳年，右岸強調果味與平易近人',
+            '左岸全部使用新橡木桶，右岸不用',
+            '左岸產量更大，右岸產量更小'
+          ],
+          correct: 1,
+          explanation: '左岸（特別是列級莊）傳統上強調Cabernet Sauvignon的結構、單寧和長期陳年潛力；右岸則以Merlot為主，更注重果味的表現和年輕時的平易近人，雖然頂級酒莊也具備卓越陳年潛力。'
+        },
+        {
+          question: '以下哪個說法是正確的？',
+          options: [
+            'Pomerol有正式的分級制度',
+            'Saint-Émilion的分級永久固定',
+            'Médoc的1855分級可以每10年修改',
+            'Pomerol沒有官方分級但Pétrus被公認為頂級'
+          ],
+          correct: 3,
+          explanation: 'Pomerol是波爾多主要產區中唯一沒有官方分級制度的，但Château Pétrus憑藉其卓越品質和世界聲譽被公認為產區的「無冕之王」，價格與一級莊相當甚至更高。'
+        },
+        {
+          question: '1855年分級制度的設立背景是哪個重大活動？',
+          options: ['普法戰爭結束慶典', '巴黎世界博覽會（1855年）', '波爾多建市200周年', '法國農業大改革'],
+          correct: 1,
+          explanation: '為配合1855年巴黎世界博覽會，拿破崙三世要求波爾多商會建立分級，向世界展現法國最優秀的葡萄酒。分級主要依據當時市場交易價格排定。'
+        },
+        {
+          question: 'Pauillac相較其他梅多克村莊AOC，地理上最顯著的特色是？',
+          options: ['最靠近大西洋，受海風影響最直接', '緊鄰吉倫特河，砂礫高台排水最佳', '土壤石灰岩含量最高', '黏土比例最高，保水性最強'],
+          correct: 1,
+          explanation: 'Pauillac緊鄰吉倫特河，擁有梅多克最典型的深厚砂礫高台（plateaux de graves），排水性極佳，造就其強勁且陳年力持久的Cabernet Sauvignon主導風格。'
+        },
+        {
+          question: 'Château Margaux的副牌酒（Second Wine）名稱是？',
+          options: ['Petit Mouton', 'Carruades de Lafite', 'Pavillon Rouge du Château Margaux', 'Les Forts de Latour'],
+          correct: 2,
+          explanation: 'Château Margaux的副牌是「Pavillon Rouge du Château Margaux」，同樣以優雅著稱，是副牌酒中品質最受推崇的之一，比其他副牌更具正牌的影子。'
+        },
+        {
+          question: 'Médoc以西的Landes松樹林在葡萄酒種植上的作用是？',
+          options: ['提供橡木桶材料', '阻擋大西洋強風、調節梅多克氣候', '吸引觀光帶動旅遊業', '提供有機肥料來源'],
+          correct: 1,
+          explanation: 'Landes松樹林是歐洲最大的人工林，位於梅多克以西，形成天然屏障阻擋大西洋強風與過多降雨，是梅多克溫和海洋性氣候的重要因素。'
+        },
+        {
+          question: 'Graves（格拉夫）中唯一進入1855年梅多克一級莊分級的酒莊是？',
+          options: ['Château Pétrus', 'Château Haut-Brion', 'Château Margaux', "Château d'Yquem"],
+          correct: 1,
+          explanation: 'Château Haut-Brion是1855年分級唯一的非梅多克紅酒酒莊，被列為一級莊。其歷史可追溯至17世紀，是格拉夫最具代表性的頂級酒莊。'
+        },
+        {
+          question: 'Pomerol「高台」（Plateau de Pomerol）的土壤為何特別珍貴？',
+          options: ['砂礫最深厚，排水最好', '頂端含鐵質泥灰岩（crasse de fer）與藍色黏土', '石灰岩含量最高', '土壤中天然含有豐富礦物質'],
+          correct: 1,
+          explanation: '波美侯高台頂端的鐵質泥灰岩（crasse de fer）和藍色黏土具有卓越保水性，是Pétrus和Le Pin等頂級酒莊的天然優勢所在。'
+        },
+        {
+          question: '1855年分級中，哪個等級的酒莊數量最多？',
+          options: ['一等莊（5家）', '二等莊（14家）', '三等莊（14家）', '五等莊（18家）'],
+          correct: 3,
+          explanation: '1855年的五等莊（Cinquième Cru）共18家，是各等級中數量最多的，主要位於Pauillac和Saint-Estèphe，代表莊園如Mouton Cadet（升格前）等。'
+        },
+        {
+          question: 'Sauternes的Ciron河對貴腐甜酒生成的關鍵作用是？',
+          options: ['提供葡萄園灌溉用水', '帶來清晨霧氣促進貴腐菌（Botrytis cinerea）生長', '阻擋冷空氣入侵', '提供土壤礦物質養分'],
+          correct: 1,
+          explanation: 'Ciron河水溫低，匯入較溫暖的加龍河時產生晨霧，籠罩Sauternes葡萄園，促進貴腐菌形成；午後陽光散霧則防止灰黴病，這種微氣候是貴腐甜酒得天獨厚的條件。'
+        },
+        {
+          question: '以下哪個是Saint-Émilion的「衛星產區」（Satellite Appellation）？',
+          options: ['Pomerol', 'Listrac-Médoc', 'Lussac-Saint-Émilion', 'Fronsac'],
+          correct: 2,
+          explanation: 'Lussac-Saint-Émilion是Saint-Émilion北部的衛星產區，允許在名稱中使用「Saint-Émilion」，以梅洛為主，風格類似但價格更平易近人。同類的還有Montagne-Saint-Émilion等。'
+        },
+        {
+          question: '梅多克的「Crus Bourgeois」制度代表什麼？',
+          options: ['1855列級莊的延伸認證', '非列級莊的分級品質認證（分三等）', '有機農業認證', '梅多克最昂貴酒款的特殊標示'],
+          correct: 1,
+          explanation: 'Crus Bourgeois是梅多克非列級莊的品質認證體系，2020年最新版本分為Cru Bourgeois、Cru Bourgeois Supérieur和Cru Bourgeois Exceptionnel三個等級，為消費者提供更多性價比選擇。'
+        },
+        {
+          question: 'Haut-Médoc AOC與其下的村莊AOC（如Pauillac、Margaux）的關係是？',
+          options: ['完全相同，可以互換使用', 'Haut-Médoc是更大的AOC，涵蓋六個村莊AOC', 'Haut-Médoc品質高於所有村莊AOC', '兩者互相排斥，不能同時出現'],
+          correct: 1,
+          explanation: 'Haut-Médoc AOC涵蓋梅多克優質的南部地區，包含六個重要村莊AOC（Margaux、Moulis、Listrac、Saint-Julien、Pauillac、Saint-Estèphe）。村莊AOC是Haut-Médoc的子集，通常品質更精確。'
+        },
+        {
+          question: '多爾多涅河（Dordogne）在波爾多產區地理中的角色是？',
+          options: ['劃分蘇玳與格拉夫的邊界', '形成右岸的主要河流，孕育Saint-Émilion和Pomerol', '隔開梅多克左右兩岸', '提供左岸砂礫土的沖積物'],
+          correct: 1,
+          explanation: '多爾多涅河向西流匯入吉倫特河口，其右岸孕育了Saint-Émilion、Pomerol、Fronsac等重要右岸產區，是右岸葡萄酒文化的地理核心。'
+        },
+        {
+          question: '瑪歌（Margaux）AOC的土壤與其他梅多克村莊相比，最大的特色是？',
+          options: ['石灰岩含量最高，土質最硬', '砂礫最細、黏土最少，造就最精緻的風格', '砂礫最粗、排水性最強', '黏土比例最高，保水性最佳'],
+          correct: 1,
+          explanation: '瑪歌的砂礫顆粒更細、土壤更貧瘠、黏土層最淺，導致更低的自然產量，賦予葡萄更濃縮的香氣與優雅的單寧結構，這是其「香水般」優雅風格的土壤根源。'
+        },
+        {
+          question: 'Saint-Julien AOC沒有一級莊，但其分級酒莊整體水準以什麼著稱？',
+          options: ['擁有最多五等莊', '所有列級莊的平均品質最高且最穩定', '唯一沒有任何列級莊的村莊', '酒款以甜白著稱'],
+          correct: 1,
+          explanation: 'Saint-Julien雖無一級莊，但擁有5家二等莊（Léoville Las Cases、Léoville Barton、Léoville Poyferré、Ducru-Beaucaillou、Gruaud-Larose），整體列級莊品質穩定，被稱為「最可靠的梅多克村莊」。'
+        },
+        {
+          question: '波爾多「Château」（城堡）酒莊的名稱在法規上的要求是？',
+          options: ['必須有中世紀城堡建築', '必須擁有自有葡萄園且在同地釀酒', '面積須超過50公頃', '必須通過官方品質認證'],
+          correct: 1,
+          explanation: '在波爾多，「Château」泛指擁有自有葡萄園並在該地釀酒的莊園，不要求真正的城堡建築。這詞已成為波爾多農莊酒廠的泛稱，從幾公頃小農到大型莊園皆可使用。'
+        }
+      ]
+    },
+    presenterNotes: [
+      '提醒學員完成後可點「只練錯題」，聚焦補強薄弱點。',
+      '建議正確率達 80% 以上再進入 L3。'
+    ]
   },
 
   // ========== 評量結果與展望 ==========

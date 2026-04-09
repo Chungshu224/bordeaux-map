@@ -48,10 +48,7 @@ import { authState, authActions } from '../stores/authStore.js'
 import { TIER_WEIGHT } from '../router/index.js'
 
 // ── 訂閱等級工具 ──
-const getUserTier = () => {
-  const isAdmin = authActions.isAdmin?.() || false
-  return isAdmin ? 'premium' : (authState.user?.app_metadata?.subscription_tier || 'free')
-}
+const getUserTier = () => authActions.getEffectiveTier()
 const canAccess = (minimumTier) => TIER_WEIGHT[getUserTier()] >= TIER_WEIGHT[minimumTier]
 
 // free 可用的 AOC 群組（Regional + LeftBank-Medoc）

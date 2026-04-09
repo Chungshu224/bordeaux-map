@@ -46,21 +46,6 @@
           </button>
         </div>
         
-        <!-- Level 選擇器：只在未選擇課程時顯示 -->
-        <div v-if="!currentLesson" class="level-selector">
-          <button 
-            v-for="level in [1,2,3,4]" 
-            :key="level"
-            :class="['level-tab', { active: currentLevel === level, locked: !isLevelUnlocked(level) }]"
-            :disabled="!isLevelUnlocked(level)"
-            @click="setLevel(level)"
-            :title="getLevelTitle(level)"
-          >
-            Level {{ level }}
-            <span v-if="getLevelProgress(level) === 100" class="check-mark">✓</span>
-          </button>
-        </div>
-
         <div class="header-right">
           <div class="progress-badge">{{ totalProgress }}%</div>
           <div class="achievement-badge" @click="showAchievements" title="成就">

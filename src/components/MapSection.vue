@@ -309,8 +309,7 @@ const props = defineProps({
 // ── 訂閱等級工具 ──
 const resolvedTier = computed(() => {
   if (props.userTier) return props.userTier
-  const isAdmin = authActions.isAdmin?.() || false
-  return isAdmin ? 'premium' : (authState.user?.app_metadata?.subscription_tier || 'free')
+  return authActions.getEffectiveTier()
 })
 const canAccessTier = (minimumTier) => TIER_WEIGHT[resolvedTier.value] >= TIER_WEIGHT[minimumTier]
 

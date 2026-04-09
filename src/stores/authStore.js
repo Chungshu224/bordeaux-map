@@ -68,10 +68,25 @@ export const authActions = {
   },
 
   /**
-   * 取得訂閱方案
+   * 取得原始訂閱方案（不含到期判斷，用於帳單顯示）
    */
   getSubscriptionTier() {
     return authState.user?.app_metadata?.subscription_tier || 'free'
+  },
+
+  /**
+   * 取得「實際有效」的訂閱方案
+   * - 管理員永遠回傳 'premium'
+   * - basic/premium 若 subscription_expires_at 已過期，降回 'free'
+   * - free 帳號或無到期日設定者直接回傳原始方案
+   */
+  getEffectiveTier() {
+    if (this.isAdmin()) return 'premium'
+    const tier = authState.user?.app_metadata?.subscription_tier || 'free'
+    if (tier === 'free') return 'free'
+    const exp = authState.user?.app_metadata?.subscription_expires_at
+    if (exp && new Date(exp) < new Date()) return 'free'
+    return tier
   },
 
   /**

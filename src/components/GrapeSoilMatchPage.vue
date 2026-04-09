@@ -413,7 +413,7 @@ const uploading    = ref(false)
 const uploadErr    = ref('')
 
 const timerPct = ref(100)
-let timerMs    = 4000
+let timerMs    = 6000
 let timerStart = 0
 let rafId      = null
 let feedbackTimer = null
@@ -461,7 +461,7 @@ const resultEmoji = computed(() => {
 // ── Game Logic ────────────────────────────────────────────────
 function startGame(diff) {
   difficulty.value = diff
-  timerMs = diff === 'hard' ? 2500 : 4000
+  timerMs = diff === 'hard' ? 4000 : 6000
 
   let pool
   if (diff === 'easy') {

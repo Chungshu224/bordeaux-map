@@ -61,10 +61,7 @@ defineEmits(['back'])
 const currentGame = ref(null)
 
 // 使用者目前的訂閱等級
-const userTier = () => {
-  const isAdmin = authActions.isAdmin?.() || false
-  return isAdmin ? 'premium' : (authState.user?.app_metadata?.subscription_tier || 'free')
-}
+const userTier = () => authActions.getEffectiveTier()
 
 // 檢查是否滿足最低 Tier 要求
 const canAccess = (minimumTier) => {

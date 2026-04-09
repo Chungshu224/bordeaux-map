@@ -67,6 +67,7 @@
                   :content="enhanceText(currentSlideData.content)"
                   :highlights="currentSlideData.highlights"
                   v-bind="currentSlideData.componentProps || {}"
+                  @complete="onComponentQuizComplete"
                 />
                 <!-- Presenter notes for component slides -->
                 <div v-if="currentSlideData.presenterNotes && currentSlideData.presenterNotes.length" class="main-content">
@@ -356,20 +357,30 @@ function generateBlankTastingPdf(root) {
     const card = root.querySelector('.tasting-record-card')
     if (!card) return
     const clone = card.cloneNode(true)
+    // 移除下載按鈕（避免出現在 PDF 中）
+    clone.querySelectorAll('[data-download-blank-pdf]').forEach(el => {
+      const wrapper = el.closest('div') || el
+      wrapper.remove()
+    })
     // 清空輸入
     clone.querySelectorAll('input').forEach(el => {
       if (el.type === 'checkbox' || el.type === 'radio') el.checked = false
       else { el.value = ''; el.setAttribute('value', '') }
     })
     clone.querySelectorAll('textarea').forEach(el => { el.value = ''; el.textContent = '' })
+    // 必須附加到 DOM，html2canvas 才能正確計算樣式
+    clone.style.cssText = 'position:absolute;left:-9999px;top:0;width:800px;'
+    document.body.appendChild(clone)
     const opt = {
       margin: [10, 10, 10, 10],
       filename: 'tasting-record-blank.pdf',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
+      html2canvas: { scale: 2, useCORS: true, scrollX: 0, scrollY: 0 },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     }
     html2pdf().set(opt).from(clone).save()
+      .then(() => { document.body.removeChild(clone) })
+      .catch(err => { document.body.removeChild(clone); console.warn('PDF 產生失敗', err) })
   } catch (err) {
     console.warn('PDF 產生失敗', err)
   }
@@ -2245,6 +2256,13 @@ const restartLesson = () => {
 
 const nextLesson = () => {
   emit('nextLesson')
+}
+
+// 處理 component slide（如 ImageQuizSeries）完成事件
+const onComponentQuizComplete = ({ passed } = {}) => {
+  if (passed) {
+    emit('lessonComplete')
+  }
 }
 
 // 生命週期和響應式處理
