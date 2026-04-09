@@ -141,7 +141,7 @@
 
         <!-- 底部連結列 -->
         <div class="bottom-links">
-          <button class="link-btn back" @click="$emit('backToHome')">← 返回首頁</button>
+          <button class="link-btn back" @click="$router.push('/')">← 返回首頁</button>
           <button class="link-btn logout" @click="handleLogout">登出</button>
         </div>
       </div>
@@ -151,9 +151,11 @@
 
 <script setup>
 import { ref, reactive, onMounted, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { supabase } from '../lib/supabaseClient.js'
 import { authState, authActions } from '../stores/authStore.js'
 
+const router = useRouter()
 const emit = defineEmits(['backToHome'])
 
 // ── 表單狀態 ─────────────────────────────
@@ -274,7 +276,7 @@ async function handleSave() {
 // ── 登出 ──────────────────────────────────
 async function handleLogout() {
   await authActions.signOut()
-  emit('backToHome')
+  router.push('/')
 }
 
 // ── 背景泡泡樣式 ─────────────────────────
