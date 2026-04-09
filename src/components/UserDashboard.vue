@@ -1,0 +1,366 @@
+<template>
+  <div class="dashboard-page">
+    <div class="dashboard-inner">
+
+      <!-- 頂部 -->
+      <div class="dash-header">
+        <button class="back-btn" @click="$router.push('/bordeaux')">← 返回課程</button>
+        <div class="dash-title-row">
+          <h1>🎓 我的學習中心</h1>
+          <p>{{ displayName }}・{{ userEmail }}</p>
+        </div>
+      </div>
+
+      <!-- Tier 狀態卡 -->
+      <div class="tier-status-card" :class="effectiveTier">
+        <div class="tsc-left">
+          <div class="tsc-icon">{{ tierInfo.icon }}</div>
+          <div>
+            <div class="tsc-name">{{ tierInfo.label }}</div>
+            <div class="tsc-desc">{{ tierInfo.desc }}</div>
+          </div>
+        </div>
+        <div class="tsc-right">
+          <button v-if="effectiveTier === 'free'" class="upgrade-btn" @click="$router.push('/')">
+            升級方案 →
+          </button>
+          <div v-else class="tsc-expires">
+            {{ expiresText }}
+          </div>
+        </div>
+      </div>
+
+      <!-- 已購課程 -->
+      <section class="dash-section">
+        <h2 class="section-title">📚 已購課程</h2>
+
+        <div v-if="loading" class="loading-row">
+          <div class="spinner"></div>載入中…
+        </div>
+
+        <div v-else-if="purchases.length === 0" class="empty-state">
+          <div class="es-icon">🛒</div>
+          <div class="es-text">您尚未購買任何課程</div>
+          <button class="es-btn" @click="$router.push('/')">瀏覽課程</button>
+        </div>
+
+        <div v-else class="purchase-list">
+          <div class="purchase-item" v-for="p in purchases" :key="p.id">
+            <div class="pi-left">
+              <div class="pi-icon">{{ courseIcon(p.course_id) }}</div>
+              <div>
+                <div class="pi-name">{{ courseName(p.course_id) }}</div>
+                <div class="pi-tier">
+                  <span class="tier-badge" :class="p.tier">{{ tierLabel(p.tier) }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="pi-right">
+              <div class="pi-status" :class="p.status">{{ statusLabel(p.status) }}</div>
+              <div class="pi-date">{{ formatDate(p.paid_at || p.created_at) }}</div>
+              <div class="pi-billing" v-if="p.billing_period">{{ p.billing_period === 'yearly' ? '年繳' : '月繳' }}</div>
+              <div class="pi-amount">{{ formatPrice(p.amount) }}</div>
+              <button class="enter-btn" @click="enterCourse(p.course_id)">進入課程 →</button>
+              <button class="manage-btn" v-if="p.status === 'active' && p.stripe_subscription_id" @click="manageSubscription">⚙️ 管理訂閱</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 免費試學 -->
+      <section class="dash-section" v-if="effectiveTier === 'free'">
+        <h2 class="section-title">🆓 免費體驗內容</h2>
+        <div class="free-content-list">
+          <div class="fc-item" @click="$router.push({ name: 'Learning', query: { level: 1 } })">
+            <span class="fci-icon">📖</span>
+            <div>
+              <div class="fci-title">Level 1 基礎入門</div>
+              <div class="fci-desc">波爾多概論・品種・地理・AOC分級</div>
+            </div>
+            <span class="fci-arrow">→</span>
+          </div>
+          <div class="fc-item" @click="$router.push('/explore')">
+            <span class="fci-icon">🗺️</span>
+            <div>
+              <div class="fci-title">基本地圖探索</div>
+              <div class="fci-desc">Regional AOC + Left Bank Medoc</div>
+            </div>
+            <span class="fci-arrow">→</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 快速功能入口 -->
+      <section class="dash-section" v-if="effectiveTier !== 'free'">
+        <h2 class="section-title">⚡ 快速入口</h2>
+        <div class="quick-grid">
+          <button class="qg-btn" @click="$router.push({ name: 'Learning', query: { level: 1 } })">
+            <span>📖</span>繼續學習
+          </button>
+          <button class="qg-btn" @click="$router.push('/explore')">
+            <span>🗺️</span>探索地圖
+          </button>
+          <button class="qg-btn" @click="$router.push('/gamehub')">
+            <span>🎮</span>互動練習
+          </button>
+          <button class="qg-btn" v-if="effectiveTier === 'premium'" @click="$router.push('/notebook')">
+            <span>📔</span>品飲筆記
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed, onMounted } from 'vue'
+import { authState, authActions } from '../stores/authStore.js'
+import { getUserPurchases, formatPrice, formatDate } from '../lib/purchaseService.js'
+
+const displayName  = computed(() => authActions.getDisplayName())
+const userEmail    = computed(() => authActions.getEmail())
+const effectiveTier = computed(() => authActions.getEffectiveTier())
+
+const TIER_INFO = {
+  free:    { icon: '🆓', label: '免費體驗', desc: '已解鎖 Level 1 基礎課程' },
+  basic:   { icon: '📚', label: '完整課程', desc: 'Level 1–4 全部課程 + 互動練習' },
+  premium: { icon: '⭐', label: '頂級方案', desc: '全功能解鎖：進階地圖 + 品飲筆記本' }
+}
+const tierInfo = computed(() => TIER_INFO[effectiveTier.value] || TIER_INFO.free)
+
+const expiresAt = computed(() => authState.user?.app_metadata?.subscription_expires_at)
+const expiresText = computed(() => {
+  if (!expiresAt.value) return '終身有效'
+  const d = new Date(expiresAt.value)
+  return `有效至 ${d.toLocaleDateString('zh-TW')}`
+})
+
+// 購買記錄
+const purchases = ref([])
+const loading   = ref(true)
+
+onMounted(async () => {
+  const userId = authState.user?.id
+  if (userId) {
+    purchases.value = await getUserPurchases(userId)
+  }
+  loading.value = false
+})
+
+// 工具函式
+const COURSE_META = {
+  bordeaux:  { name: '波爾多葡萄酒', icon: '🏰', route: '/bordeaux' },
+  bourgogne: { name: '勃根地葡萄酒', icon: '🍇', route: '/bourgogne' },
+  italy:     { name: '義大利葡萄酒', icon: '🇮🇹', route: '/italy' }
+}
+const courseName = (id) => COURSE_META[id]?.name || id
+const courseIcon = (id) => COURSE_META[id]?.icon || '📦'
+
+const TIER_LABELS  = { basic: '完整課程', premium: '頂級方案' }
+const STATUS_LABELS = { pending: '等待付款', paid: '已付款', active: '訂閱中', refunded: '已退款', cancelled: '已取消' }
+const tierLabel   = (t) => TIER_LABELS[t] || t
+const statusLabel = (s) => STATUS_LABELS[s] || s
+
+const enterCourse = (courseId) => {
+  const route = COURSE_META[courseId]?.route || '/'
+  // eslint-disable-next-line no-undef
+  useRouter()?.push(route) // fallback included in template via $router
+}
+
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+// 管理 Stripe 訂閱
+const manageSubscription = async () => {
+  const userId = authState.user?.id
+  if (!userId) return
+  try {
+    const res = await fetch('/api/stripe-portal', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId })
+    })
+    const data = await res.json()
+    if (data.portalUrl) {
+      window.location.href = data.portalUrl
+    } else {
+      alert(`無法開啟訂閱管理頁面：${data.message || '請稍後再試'}`)
+    }
+  } catch (err) {
+    alert('請稍後再試')
+  }
+}
+</script>
+
+<style scoped>
+.dashboard-page {
+  min-height: 100vh;
+  background: #0e0406;
+  color: #f5f0e8;
+  font-family: 'Segoe UI', 'PingFang TC', sans-serif;
+  padding: 40px 0 80px;
+}
+.dashboard-inner { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+/* ─── Header ──────────────────────────────────────────────────────────────── */
+.back-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #9a8878;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+.back-btn:hover { color: #d4af37; border-color: #d4af37; }
+.dash-title-row h1 { font-size: 1.8rem; margin: 0 0 6px; }
+.dash-title-row p  { color: #7a6858; font-size: 0.88rem; margin: 0 0 32px; }
+
+/* ─── Tier Status ─────────────────────────────────────────────────────────── */
+.tier-status-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.tier-status-card.basic   { border-color: rgba(114,47,55,0.5); background: rgba(114,47,55,0.08); }
+.tier-status-card.premium { border-color: rgba(212,175,55,0.4); background: rgba(212,175,55,0.06); }
+.tsc-left { display: flex; align-items: center; gap: 14px; }
+.tsc-icon { font-size: 2rem; }
+.tsc-name { font-size: 1.1rem; font-weight: 700; color: #f5f0e8; }
+.tsc-desc { font-size: 0.82rem; color: #9a8878; margin-top: 2px; }
+.upgrade-btn {
+  background: linear-gradient(135deg, #722f37, #9b3a45);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.tsc-expires { color: #9a8878; font-size: 0.82rem; }
+
+/* ─── Sections ────────────────────────────────────────────────────────────── */
+.dash-section { margin-bottom: 40px; }
+.section-title { font-size: 1.1rem; color: #d4af37; margin: 0 0 18px; }
+
+/* ─── Loading / Empty ─────────────────────────────────────────────────────── */
+.loading-row { display: flex; align-items: center; gap: 10px; color: #7a6858; }
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid rgba(212,175,55,0.2);
+  border-top-color: #d4af37;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.empty-state { text-align: center; padding: 48px; }
+.es-icon { font-size: 3rem; margin-bottom: 12px; }
+.es-text { color: #7a6858; margin-bottom: 20px; }
+.es-btn {
+  background: rgba(114,47,55,0.3);
+  border: 1px solid rgba(114,47,55,0.5);
+  color: #e8a0a0;
+  padding: 10px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* ─── Purchase List ───────────────────────────────────────────────────────── */
+.purchase-list { display: flex; flex-direction: column; gap: 12px; }
+.purchase-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 16px 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.pi-left { display: flex; align-items: center; gap: 14px; }
+.pi-icon { font-size: 1.8rem; }
+.pi-name { font-weight: 600; font-size: 0.95rem; color: #f5f0e8; margin-bottom: 4px; }
+.tier-badge { font-size: 0.68rem; padding: 2px 8px; border-radius: 8px; }
+.tier-badge.basic   { background: rgba(114,47,55,0.3); color: #f0a0a0; }
+.tier-badge.premium { background: rgba(212,175,55,0.2); color: #d4af37; }
+.pi-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.pi-status { font-size: 0.75rem; }
+.pi-status.paid { color: #4ade80; }
+.pi-status.pending { color: #fbbf24; }
+.pi-status.refunded { color: #9a8878; }
+.pi-date { color: #7a6858; font-size: 0.78rem; }
+.pi-amount { color: #d4af37; font-size: 0.88rem; font-weight: 600; }
+.enter-btn {
+  background: transparent;
+  border: 1px solid rgba(212,175,55,0.4);
+  color: #d4af37;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.enter-btn:hover { background: rgba(212,175,55,0.1); }
+.manage-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #a89060;
+  padding: 5px 12px;
+  border-radius: 14px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.manage-btn:hover { border-color: #d4af37; color: #d4af37; }
+.pi-billing { color: #7a9a60; font-size: 0.78rem; }
+.pi-status.active { color: #4ade80; }
+.pi-status.cancelled { color: #9a8878; }
+
+/* ─── Free Content ────────────────────────────────────────────────────────── */
+.free-content-list { display: flex; flex-direction: column; gap: 10px; }
+.fc-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+.fc-item:hover { border-color: rgba(212,175,55,0.3); }
+.fci-icon { font-size: 1.5rem; flex-shrink: 0; }
+.fci-title { font-size: 0.9rem; color: #e8dcc8; }
+.fci-desc { font-size: 0.75rem; color: #7a6858; margin-top: 2px; }
+.fci-arrow { color: #7a6858; margin-left: auto; }
+
+/* ─── Quick Grid ──────────────────────────────────────────────────────────── */
+.quick-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+.qg-btn {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e8dcc8;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: border-color .2s;
+}
+.qg-btn span { font-size: 1.6rem; }
+.qg-btn:hover { border-color: rgba(212,175,55,0.4); color: #d4af37; }
+</style>

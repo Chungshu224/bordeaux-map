@@ -118,7 +118,7 @@ const enterNotebookMode = () => {
 }
 
 const backToLevelSelection = () => {
-  router.push('/')
+  router.push('/bordeaux')
   console.log('返回等級選擇頁面')
 }
 

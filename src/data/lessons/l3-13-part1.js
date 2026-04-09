@@ -63,43 +63,49 @@ export const l313Part1Content = [
     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
 
-  // 第一章知識檢測
-  {
-    type: 'interactive-quiz',
-    title: '第一章知識檢測：精準農業革命',
-    questions: [
-      {
-        id: 1,
-        question: '衛星遙感系統中NDVI的主要作用是什麼？',
-        options: [
-          '測量土壤濕度',
-          '提前2-3週發現植物健康問題',
-          '控制灌溉系統',
-          '預測天氣變化'
-        ],
-        correct: 1,
-        explanation: 'NDVI（歸一化植被指數）通過分析植物對不同光譜的反射，能夠在肉眼可見症狀出現前2-3週就檢測出水分壓力、病害等問題，實現早期預警。'
-      },
-      {
-        id: 2,
-        question: '無人機精準噴灑相比傳統方式的主要優勢是？',
-        options: [
-          '完全不需要農藥',
-          '可根據病害分布變量噴灑，節約30-50%農藥',
-          '速度比拖拉機快10倍',
-          '只能用於小面積地塊'
-        ],
-        correct: 1,
-        explanation: '無人機精準噴灑能根據AI識別的病害分布地圖，在不同區域調整藥量，實現變量噴灑，相比傳統統一噴灑可節約30-50%農藥，同時提升防治效果。'
-      }
-    ]
-  },
-  
   // 衛星遙感系統（一）：多光譜影像分析
   {
     type: 'content',
     title: '衛星遙感系統（一）：多光譜影像分析',
-    content: `
+    content: `<div style="font-family:sans-serif;padding:12px;max-width:900px;margin:0 auto">
+  <div style="background:linear-gradient(135deg,#0a3d5c,#1a7a5e);color:#fff;padding:8px 14px;border-radius:6px;font-size:0.85em;font-weight:700;margin-bottom:12px">
+    🛰️ 衛星遙感 × 多光譜分析｜從太空俯瞰每一株葡萄藤的健康狀態
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+    <div style="background:#f0f9ff;border:1px solid #7dd3fc;border-top:3px solid #0284c7;border-radius:8px;padding:12px">
+      <div style="font-weight:700;color:#0284c7;font-size:0.9em;margin-bottom:8px">📊 NDVI 植被指數監測</div>
+      <table style="width:100%;border-collapse:collapse;font-size:0.82em;margin-bottom:8px">
+        <tr><th style="background:#0284c7;color:#fff;padding:4px 8px;text-align:left">植物狀態</th><th style="background:#0284c7;color:#fff;padding:4px 8px;text-align:center">NDVI值</th><th style="background:#0284c7;color:#fff;padding:4px 8px;text-align:right">預警</th></tr>
+        <tr style="background:#f0fdf4"><td style="padding:3px 8px;font-weight:600;color:#15803d">✅ 健康</td><td style="padding:3px 8px;text-align:center;font-weight:700">0.6–0.9</td><td style="padding:3px 8px;text-align:right;color:#6b7280">—</td></tr>
+        <tr style="background:#fef9c3"><td style="padding:3px 8px;font-weight:600;color:#b45309">⚠️ 警戒</td><td style="padding:3px 8px;text-align:center;font-weight:700">0.2–0.5</td><td style="padding:3px 8px;text-align:right;color:#dc2626;font-weight:700">提前 2–3週</td></tr>
+      </table>
+      <div style="background:#fff;border:1px solid #bae6fd;border-radius:4px;padding:7px;font-size:0.82em">
+        <strong style="color:#0369a1">📌 Château Margaux 2024：</strong><br>NDVI 0.78 → 0.65（↓17%）→ 即時灌溉搶救<br><strong style="color:#dc2626">ROI 44:1</strong>，避免損失 €42,320
+      </div>
+    </div>
+    <div style="background:#fff7ed;border:1px solid #fed7aa;border-top:3px solid #ea580c;border-radius:8px;padding:12px">
+      <div style="font-weight:700;color:#ea580c;font-size:0.9em;margin-bottom:8px">🌡️ 熱紅外影像 × 水分管理</div>
+      <div style="font-size:0.83em;color:#374151;line-height:1.65;margin-bottom:8px">
+        <strong>原理：</strong>水分充足→蒸散冷卻→葉溫低；缺水→蒸散停止→葉溫升高<br>
+        <strong>應用：</strong>即時偵測全園水分壓力分布，引導精準灌溉
+      </div>
+      <div style="background:#fff;border:1px solid #fed7aa;border-radius:4px;padding:7px;font-size:0.82em">
+        <strong style="color:#ea580c">📌 Pessac-Léognan 案例：</strong><br>節水 <strong style="color:#16a34a">36%</strong>｜品質 <strong style="color:#2563eb">+3分</strong>｜收益 <strong style="color:#16a34a">€200,000</strong><br>
+        <strong style="color:#7c3aed">ROI 42倍</strong>
+      </div>
+    </div>
+  </div>
+  <div style="background:#f5f3ff;border:1px solid #c4b5fd;border-radius:8px;padding:10px">
+    <div style="font-weight:700;color:#7c3aed;font-size:0.9em;margin-bottom:6px">🗺️ 空間變異分析 × 精準分區採收（Pauillac 案例）</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center;font-size:0.83em">
+      <div style="background:#fff;border:1px solid #c4b5fd;border-radius:6px;padding:8px"><div style="font-size:1.4em;font-weight:700;color:#7c3aed">5</div><div style="color:#6b7280">精準分區</div></div>
+      <div style="background:#fff;border:1px solid #c4b5fd;border-radius:6px;padding:8px"><div style="font-weight:700;color:#16a34a">+2–3分</div><div style="color:#6b7280">品質提升</div></div>
+      <div style="background:#fff;border:1px solid #c4b5fd;border-radius:6px;padding:8px"><div style="font-weight:700;color:#dc2626">€780K</div><div style="color:#6b7280">額外年收益</div></div>
+      <div style="background:#fff;border:1px solid #c4b5fd;border-radius:6px;padding:8px"><div style="font-weight:700;color:#0284c7">正牌優先</div><div style="color:#6b7280">嚴格篩選</div></div>
+    </div>
+  </div>
+</div>
+      <!--ORIGINAL:
       <div class="chapter-content">
         <div class="satellite-remote-sensing">
           <h3>🛰️ 衛星遙感系統：多光譜影像分析</h3>
@@ -470,6 +476,7 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+      -->
     `,
     highlights: [
       {
@@ -491,7 +498,44 @@ export const l313Part1Content = [
   {
     type: 'content',
     title: '衛星遙感系統（二）：高解析度監測與變化檢測',
-    content: `
+    content: `<div style="font-family:sans-serif;padding:12px;max-width:900px;margin:0 auto">
+  <div style="background:linear-gradient(135deg,#1e3a5f,#2d6a8f);color:#fff;padding:8px 14px;border-radius:6px;font-size:0.85em;font-weight:700;margin-bottom:12px">
+    📡 高解析度衛星監測｜亞米級精度 0.3–0.5m × 單株識別
+  </div>
+  <div style="display:grid;grid-template-columns:3fr 2fr;gap:10px;margin-bottom:10px">
+    <div style="background:#f0f7ff;border:1px solid #93c5fd;border-top:3px solid #2563eb;border-radius:8px;padding:12px">
+      <div style="font-weight:700;color:#1d4ed8;font-size:0.9em;margin-bottom:8px">🔍 亞米級精度 × 逐株葡萄藤識別</div>
+      <div style="font-size:0.83em;color:#374151;line-height:1.65;margin-bottom:8px">
+        <strong>衛星來源：</strong>Planet / Maxar 商業衛星，解析度 <strong>0.3–0.5m</strong><br>
+        <strong>能力：</strong>識別單株狀態、發現缺株、分析冠層結構
+      </div>
+      <div style="background:#dbeafe;border-radius:6px;padding:8px;font-size:0.82em">
+        <div style="font-weight:700;color:#1d4ed8;margin-bottom:4px">📌 Pomerol 老藤管理案例</div>
+        <table style="width:100%;border-collapse:collapse">
+          <tr><td style="padding:2px 6px;color:#6b7280">識別葡萄藤：</td><td style="padding:2px 6px;font-weight:700">12,850 株</td></tr>
+          <tr><td style="padding:2px 6px;color:#6b7280">發現缺株：</td><td style="padding:2px 6px;font-weight:700;color:#dc2626">55 株</td></tr>
+          <tr><td style="padding:2px 6px;color:#6b7280">識別準確率：</td><td style="padding:2px 6px;font-weight:700;color:#16a34a">96%</td></tr>
+          <tr><td style="padding:2px 6px;color:#6b7280">巡檢時間：</td><td style="padding:2px 6px;font-weight:700">6天 → <strong style="color:#dc2626">1.5天</strong></td></tr>
+          <tr><td style="padding:2px 6px;color:#6b7280">人力節省：</td><td style="padding:2px 6px;font-weight:700;color:#16a34a">83%</td></tr>
+        </table>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:#fff0f3;border:1px solid #fecdd3;border-top:3px solid #e11d48;border-radius:8px;padding:12px;flex:1">
+        <div style="font-weight:700;color:#be123c;font-size:0.9em;margin-bottom:6px">🌿 冠層結構分析</div>
+        <div style="font-size:0.82em;color:#374151;line-height:1.65">• 精確量測行距、株距<br>• 分析冠層密度與光照<br>• 規劃葡萄藤更新計劃</div>
+      </div>
+      <div style="background:#f0fdf4;border:1px solid #86efac;border-top:3px solid #16a34a;border-radius:8px;padding:12px;flex:1">
+        <div style="font-weight:700;color:#15803d;font-size:0.9em;margin-bottom:6px">⏰ 病害預警效益</div>
+        <div style="font-size:0.82em;color:#374151;line-height:1.65">提前 <strong>3–5天</strong> 發現霜黴病<br>避免損失 <strong style="color:#dc2626">€60,000</strong><br>ROI <strong style="color:#16a34a">12倍</strong></div>
+      </div>
+    </div>
+  </div>
+  <div style="background:linear-gradient(90deg,#f8fafc,#e0f2fe);border:1px solid #bae6fd;border-radius:8px;padding:9px;text-align:center;font-size:0.84em;color:#0369a1;font-weight:600">
+    🎯 從「俯瞰葡萄園」升級為「逐株精準管理」——這是葡萄園管理的「精準醫療」時代
+  </div>
+</div>
+      <!--ORIGINAL:
       <div class="chapter-content">
         <div class="high-resolution-satellite">
           <h3>📡 高解析度衛星監測系統</h3>
@@ -807,6 +851,7 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+      -->
     `,
     highlights: [
       {
@@ -828,7 +873,47 @@ export const l313Part1Content = [
   {
     type: 'content',
     title: '無人機精準作業系統',
-    content: `
+    content: `<div style="font-family:sans-serif;padding:12px;max-width:900px;margin:0 auto">
+  <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:8px 14px;border-radius:6px;font-size:0.85em;font-weight:700;margin-bottom:12px">
+    🚁 無人機精準作業系統｜2–5cm 超高解析度 × 緊急應急評估
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px">
+    <div style="background:#fff8f0;border:1px solid #fcd34d;border-top:3px solid #f59e0b;border-radius:8px;padding:10px;text-align:center">
+      <div style="font-size:1.6em">🚁</div><div style="font-weight:700;color:#b45309;font-size:0.88em">無人機</div>
+      <div style="font-size:0.82em;color:#374151;margin-top:4px"><strong>2–5 cm</strong><br>超高分辨率<br>隨時起飛</div>
+    </div>
+    <div style="background:#f0f9ff;border:1px solid #7dd3fc;border-top:3px solid #0284c7;border-radius:8px;padding:10px;text-align:center">
+      <div style="font-size:1.6em">🛰️</div><div style="font-weight:700;color:#0369a1;font-size:0.88em">衛星</div>
+      <div style="font-size:0.82em;color:#374151;margin-top:4px"><strong>0.5–10m</strong><br>高頻次<br>廣域覆蓋</div>
+    </div>
+    <div style="background:#f5f3ff;border:1px solid #c4b5fd;border-top:3px solid #7c3aed;border-radius:8px;padding:10px;text-align:center">
+      <div style="font-size:1.6em">🤖</div><div style="font-weight:700;color:#6d28d9;font-size:0.88em">AI即時分析</div>
+      <div style="font-size:0.82em;color:#374151;margin-top:4px">自動識別<br>損失評估<br>生成報告</div>
+    </div>
+  </div>
+  <div style="background:#fff1f2;border:1px solid #fecdd3;border-radius:8px;padding:12px;margin-bottom:10px">
+    <div style="font-weight:700;color:#be123c;font-size:0.9em;margin-bottom:8px">⛈️ 緊急案例：Pauillac 冰雹災害評估（2024.7.18）</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="font-size:0.82em;color:#374151;line-height:1.7">
+        <strong>災情：</strong>45公頃，冰雹直徑 1.5–2.5cm<br>
+        <strong>起飛：</strong>DJI Matrice 300 RTK（1小時內）<br>
+        <strong>飛行：</strong>38分鐘，<strong>1,847張</strong>多光譜影像<br>
+        <strong>解析度：</strong>2.5公分/像素
+      </div>
+      <div style="font-size:0.82em;color:#374151;line-height:1.7">
+        受損：<strong style="color:#dc2626">18.6公頃（41.3%）</strong><br>
+        · 輕微 8.2｜中度 7.8｜嚴重 2.6 公頃<br>
+        評估誤差：<strong style="color:#16a34a">±3.2%</strong>（保險認可）<br>
+        <strong style="color:#7c3aed">當天理賠 €185,000</strong>｜ROI <strong>185倍</strong>
+      </div>
+    </div>
+  </div>
+  <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center">
+    <div style="text-align:center;font-size:0.85em;min-width:60px"><div style="font-size:2em">💧</div><div style="font-weight:700;color:#15803d">精準噴灑</div></div>
+    <div style="font-size:0.82em;color:#374151;line-height:1.7">藥劑節省 <strong style="color:#16a34a">16%</strong>｜防治效果提升 <strong style="color:#16a34a">+12%</strong>｜保護產量 <strong style="color:#dc2626">€195,000</strong></div>
+  </div>
+</div>
+      <!--ORIGINAL:
       <div class="chapter-content">
         <div class="drone-precision-system">
           <h3>🚁 無人機精準作業系統</h3>
@@ -1357,6 +1442,7 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+      -->
     `,
     highlights: [
       {
@@ -1378,7 +1464,51 @@ export const l313Part1Content = [
   {
     type: 'content',
     title: '物聯網感測器網絡（一）：環境與土壤監測',
-    content: `
+    content: `<div style="font-family:sans-serif;padding:12px;max-width:900px;margin:0 auto">
+  <div style="background:linear-gradient(135deg,#064e3b,#065f46);color:#fff;padding:8px 14px;border-radius:6px;font-size:0.85em;font-weight:700;margin-bottom:12px">
+    🌡️ 物聯網感測器網絡（一）｜葡萄園的「24小時神經系統」
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+    <div style="background:#f0f9ff;border:1px solid #7dd3fc;border-top:3px solid #0284c7;border-radius:8px;padding:12px">
+      <div style="font-weight:700;color:#0284c7;font-size:0.9em;margin-bottom:8px">🌤️ 智能氣象監測站（6大參數）</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:0.82em;margin-bottom:8px">
+        <div style="background:#fff;border:1px solid #bae6fd;border-radius:4px;padding:5px;text-align:center;color:#0369a1">🌡️ 溫度</div>
+        <div style="background:#fff;border:1px solid #bae6fd;border-radius:4px;padding:5px;text-align:center;color:#0369a1">💧 濕度</div>
+        <div style="background:#fff;border:1px solid #bae6fd;border-radius:4px;padding:5px;text-align:center;color:#0369a1">🌧️ 降雨</div>
+        <div style="background:#fff;border:1px solid #bae6fd;border-radius:4px;padding:5px;text-align:center;color:#0369a1">💨 風向風速</div>
+        <div style="background:#fff;border:1px solid #bae6fd;border-radius:4px;padding:5px;text-align:center;color:#0369a1">☀️ 太陽輻射</div>
+        <div style="background:#fff;border:1px solid #bae6fd;border-radius:4px;padding:5px;text-align:center;color:#0369a1">📊 大氣壓</div>
+      </div>
+      <div style="background:#dbeafe;border-radius:5px;padding:7px;font-size:0.82em">
+        <span style="font-weight:700;color:#1d4ed8">📌 Pomerol 霜凍預警：</span><br>
+        8.5公頃 / 5個氣象站 / 每5分鐘更新<br>
+        提前 <strong style="color:#dc2626">12小時</strong> 霜凍預警 → 零霜凍損失<br>
+        <span style="color:#7c3aed;font-weight:700">ROI 37倍</span>（投入€12,500）
+      </div>
+    </div>
+    <div style="background:#f0fdf4;border:1px solid #86efac;border-top:3px solid #16a34a;border-radius:8px;padding:12px">
+      <div style="font-weight:700;color:#15803d;font-size:0.9em;margin-bottom:8px">🌱 多層土壤水分監測</div>
+      <div style="font-size:0.82em;color:#374151;margin-bottom:8px">
+        <strong>監測深度（4層）：</strong>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:4px">
+          <div style="background:#fff;border:1px solid #86efac;border-radius:4px;padding:4px 6px;text-align:center">15 cm</div>
+          <div style="background:#fff;border:1px solid #86efac;border-radius:4px;padding:4px 6px;text-align:center">30 cm</div>
+          <div style="background:#fff;border:1px solid #86efac;border-radius:4px;padding:4px 6px;text-align:center">45 cm</div>
+          <div style="background:#fff;border:1px solid #86efac;border-radius:4px;padding:4px 6px;text-align:center">60 cm</div>
+        </div>
+      </div>
+      <div style="background:#dcfce7;border-radius:5px;padding:7px;font-size:0.82em">
+        <span style="font-weight:700;color:#15803d">📌 Graves 精準灌溉：</span><br>
+        42公頃 / 18點 / <strong>72個感測器</strong><br>LoRaWAN無線 / 每15分鐘更新<br>
+        節水 <strong style="color:#16a34a">36%</strong>｜增產 <strong style="color:#16a34a">6.3%</strong>｜回收期 <strong style="color:#dc2626">1.3月</strong>
+      </div>
+    </div>
+  </div>
+  <div style="background:linear-gradient(90deg,#f8fdf9,#dcfce7);border:1px solid #86efac;border-radius:8px;padding:9px;text-align:center;font-size:0.84em;color:#15803d;font-weight:600">
+    🧠 衛星（俯瞰）＋ 無人機（近觀）＋ 物聯網（即感）→ 天–空–地一體化監測體系
+  </div>
+</div>
+      <!--ORIGINAL:
       <div class="chapter-content">
         <div class="iot-sensor-network">
           <h3>🌡️ 物聯網感測器網絡：環境與土壤監測</h3>
@@ -1961,6 +2091,7 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+      -->
     `,
     highlights: [
       {
@@ -1982,7 +2113,46 @@ export const l313Part1Content = [
   {
     type: 'content',
     title: '物聯網感測器網絡（二）：數據整合與智能決策',
-    content: `
+    content: `<div style="font-family:sans-serif;padding:12px;max-width:900px;margin:0 auto">
+  <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);color:#fff;padding:8px 14px;border-radius:6px;font-size:0.85em;font-weight:700;margin-bottom:12px">
+    📡 物聯網感測器網絡（二）｜邊緣計算 × 智能決策系統
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+    <div style="background:#f5f3ff;border:1px solid #c4b5fd;border-top:3px solid #7c3aed;border-radius:8px;padding:12px">
+      <div style="font-weight:700;color:#6d28d9;font-size:0.9em;margin-bottom:8px">⚡ 邊緣計算核心優勢</div>
+      <table style="width:100%;border-collapse:collapse;font-size:0.82em">
+        <tr style="background:#7c3aed;color:#fff"><th style="padding:4px 8px;text-align:left">優勢</th><th style="padding:4px 8px;text-align:right">效果</th></tr>
+        <tr style="background:#fff"><td style="padding:3px 8px">⚡ 快速響應</td><td style="padding:3px 8px;text-align:right;font-weight:700;color:#dc2626">&lt;1秒</td></tr>
+        <tr style="background:#faf5ff"><td style="padding:3px 8px">📦 節省帶寬</td><td style="padding:3px 8px;text-align:right;font-weight:700;color:#16a34a">減90%流量</td></tr>
+        <tr style="background:#fff"><td style="padding:3px 8px">🔌 離線工作</td><td style="padding:3px 8px;text-align:right;font-weight:700;color:#0284c7">網絡中斷可用</td></tr>
+        <tr style="background:#faf5ff"><td style="padding:3px 8px">🚨 即時告警</td><td style="padding:3px 8px;text-align:right;font-weight:700;color:#ea580c">超閾即通知</td></tr>
+      </table>
+    </div>
+    <div style="background:#fff8f0;border:1px solid #fed7aa;border-top:3px solid #ea580c;border-radius:8px;padding:12px">
+      <div style="font-weight:700;color:#ea580c;font-size:0.9em;margin-bottom:8px">📌 Saint-Émilion 自動灌溉案例</div>
+      <div style="font-size:0.82em;color:#374151;line-height:1.7">
+        28公頃 ／ <strong>48個感測器</strong>（4層×12點）<br>
+        觸發閾值：<strong>含水量 &lt;25%</strong> → 自動灌溉<br>
+        響應延遲：<strong style="color:#dc2626">僅15秒</strong>（vs 雲端5–10秒）
+      </div>
+      <div style="margin-top:8px;background:#fff;border:1px solid #fed7aa;border-radius:4px;padding:6px;font-size:0.82em">
+        投資 <strong>€88,550</strong>｜年收益 <strong style="color:#16a34a">€230K–€630K</strong><br>
+        <span style="color:#7c3aed;font-weight:700">5年 €950K–€2,850K</span>｜ROI <strong style="color:#dc2626">16倍</strong>
+      </div>
+    </div>
+  </div>
+  <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:10px">
+    <div style="font-weight:700;color:#475569;font-size:0.88em;margin-bottom:6px">🔄 數據流架構</div>
+    <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:4px;align-items:center;font-size:0.82em;text-align:center">
+      <div style="background:#dbeafe;border-radius:6px;padding:7px"><strong>感測器筆端</strong><br><span style="color:#6b7280">24/7採集</span></div>
+      <div style="color:#94a3b8;font-size:1.2em">→</div>
+      <div style="background:#fde8d8;border-radius:6px;padding:7px"><strong>邊緣處理</strong><br><span style="color:#6b7280">本地AI決策</span></div>
+      <div style="color:#94a3b8;font-size:1.2em">→</div>
+      <div style="background:#dcfce7;border-radius:6px;padding:7px"><strong>雲端整合</strong><br><span style="color:#6b7280">分析＋預警</span></div>
+    </div>
+  </div>
+</div>
+      <!--ORIGINAL:
       <div class="chapter-content">
         <div class="iot-data-integration">
           <h3>📡 物聯網數據整合與智能決策系統</h3>
@@ -2536,6 +2706,7 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+      -->
     `,
     highlights: [
       {
@@ -2557,7 +2728,46 @@ export const l313Part1Content = [
   {
     type: 'content',
     title: '物聯網感測器網絡（二）：數據整合與智能決策',
-    content: `
+    content: `<div style="font-family:sans-serif;padding:12px;max-width:900px;margin:0 auto">
+  <div style="background:linear-gradient(135deg,#14532d,#166534);color:#fff;padding:8px 14px;border-radius:6px;font-size:0.85em;font-weight:700;margin-bottom:12px">
+    🌐 物聯網 × 全自動化系統整合案例
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+    <div style="background:#f0fdf4;border:1px solid #86efac;border-top:3px solid #16a34a;border-radius:8px;padding:12px">
+      <div style="font-weight:700;color:#15803d;font-size:0.9em;margin-bottom:8px">📌 Haut-Médoc 智能灌溉系統</div>
+      <div style="font-size:0.82em;color:#374151;line-height:1.7">
+        <strong>規模：</strong>68公頃 / 12個獨立灌溉區<br>
+        <strong>感測器：</strong>36個土壤水分感測器<br>
+        <strong>邊緣網關：</strong>12台（AI模型本地決策）<br>
+        <strong>決策頻率：</strong><span style="color:#dc2626;font-weight:700">每秒1次</span>
+      </div>
+      <div style="margin-top:8px;background:#dcfce7;border-radius:4px;padding:6px;font-size:0.82em">
+        💧 <strong>&lt;24%</strong> → 自動開啟｜<strong>&gt;32%</strong> → 自動關閉<br>
+        節水 <strong style="color:#16a34a">12.4%</strong>｜避免損失 <strong style="color:#dc2626">€25,000</strong>
+      </div>
+    </div>
+    <div style="background:#fff8f0;border:1px solid #fed7aa;border-top:3px solid #f59e0b;border-radius:8px;padding:12px">
+      <div style="font-weight:700;color:#b45309;font-size:0.9em;margin-bottom:8px">🌍 天–空–地一體化監測</div>
+      <div style="font-size:0.83em;color:#374151;line-height:1.6">
+        <div style="padding:4px 0;border-bottom:1px solid #fde8d8">🛰️ <strong style="color:#0284c7">衛星</strong> — NDVI 熱紅外廣域監測</div>
+        <div style="padding:4px 0;border-bottom:1px solid #fde8d8">🚁 <strong style="color:#7c3aed">無人機</strong> — 高解析度緊急評估</div>
+        <div style="padding:4px 0">🌡️ <strong style="color:#16a34a">IoT感測器</strong> — 即時氣象土壤自動決策</div>
+      </div>
+      <div style="margin-top:8px;background:#fff;border:1px solid #fed7aa;border-radius:4px;padding:6px;font-size:0.82em;text-align:center">
+        💡 三層整合 → <strong>數據驅動精準農業</strong><br>從「看天吃飯」到「以數治園」
+      </div>
+    </div>
+  </div>
+  <div style="background:#fef9c3;border:1px solid #fde047;border-radius:8px;padding:10px">
+    <div style="font-weight:700;color:#854d0e;font-size:0.88em;margin-bottom:6px">💰 精準農業整體投資回報</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;font-size:0.82em;text-align:center">
+      <div style="background:#fff;border:1px solid #fde047;border-radius:6px;padding:7px"><div style="font-weight:700;color:#0284c7">衛星遙感</div><div style="color:#16a34a;font-weight:700">ROI 42–44倍</div></div>
+      <div style="background:#fff;border:1px solid #fde047;border-radius:6px;padding:7px"><div style="font-weight:700;color:#7c3aed">無人機作業</div><div style="color:#16a34a;font-weight:700">ROI 185倍</div></div>
+      <div style="background:#fff;border:1px solid #fde047;border-radius:6px;padding:7px"><div style="font-weight:700;color:#15803d">物聯網系統</div><div style="color:#16a34a;font-weight:700">ROI 16–37倍</div></div>
+    </div>
+  </div>
+</div>
+      <!--ORIGINAL:
       <div class="chapter-content">
         <div class="iot-data-integration">
           <h3>📡 物聯網數據整合與智能決策系統</h3>
@@ -3174,6 +3384,7 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+      -->
     `,
     highlights: [
       {
@@ -3191,6 +3402,38 @@ export const l313Part1Content = [
     ]
   },
 
+  // 第一章知識檢測
+  {
+    type: 'interactive-quiz',
+    title: '第一章知識檢測：精準農業革命',
+    questions: [
+      {
+        id: 1,
+        question: '衛星遙感系統中NDVI的主要作用是什麼？',
+        options: [
+          '測量土壤濕度',
+          '提前2-3週發現植物健康問題',
+          '控制灌溉系統',
+          '預測天氣變化'
+        ],
+        correct: 1,
+        explanation: 'NDVI（歸一化植被指數）通過分析植物對不同光譜的反射，能夠在肉眼可見症狀出現前2-3週就檢測出水分壓力、病害等問題，實現早期預警。'
+      },
+      {
+        id: 2,
+        question: '無人機精準噴灣相比傳統方式的主要優勢是？',
+        options: [
+          '完全不需要農藥',
+          '可根據病害分布變量噴灣，節約30-50%農藥',
+          '速度比拖拉機快10倍',
+          '只能用於小面積地塊'
+        ],
+        correct: 1,
+        explanation: '無人機精準噴灣能根據AI識別的病害分布地圖，在不同區域調整藥量，實現變量噴灣，相比傳統統一噴灣可節約30-50%農藥，同時提升防治效果。'
+      }
+    ]
+  },
+
   // 第二章：大數據分析與機器學習
   {
     type: 'chapter-divider',
@@ -3201,44 +3444,82 @@ export const l313Part1Content = [
     background: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)'
   },
 
-  // 第二章知識檢測
-  {
-    type: 'interactive-quiz',
-    title: '第二章知識檢測：大數據分析與機器學習',
-    questions: [
-      {
-        id: 1,
-        question: '物聯網感測器網絡的核心價值是什麼？',
-        options: [
-          '完全替代人工管理',
-          '提供24/7連續監測，實現數據驅動決策',
-          '只用於記錄溫度',
-          '降低葡萄酒價格'
-        ],
-        correct: 1,
-        explanation: '物聯網感測器通過24小時不間斷監測氣象、土壤、植株等多維度數據，配合AI分析，實現從「經驗決策」到「數據驅動決策」的轉變。'
-      },
-      {
-        id: 2,
-        question: '大數據分析能夠提前多久精準預測產量？',
-        options: [
-          '採收前1週',
-          '採收前3-6個月',
-          '無法預測',
-          '需要等到採收後'
-        ],
-        correct: 1,
-        explanation: '通過整合衛星NDVI、氣象數據、土壤監測等多源數據，機器學習模型可以在採收前3-6個月就達到95%+準確率的產量預測。'
-      }
-    ]
-  },
-  
   // 多源數據整合分析 - 第1部分：多維度數據收集
   {
     type: 'content',
     title: '多源數據整合分析（一）：多維度數據收集',
     content: `
-      <div class="chapter-content">
+      <div style="font-family:'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:0 8px">
+        <!-- Header Banner -->
+        <div style="background:linear-gradient(135deg,#1a365d 0%,#2d4a8a 50%,#1e3a5f 100%);border-radius:12px;padding:18px 24px;margin-bottom:20px;color:#fff;display:flex;align-items:center;gap:12px">
+          <span style="font-size:2.2rem">📊</span>
+          <div>
+            <div style="font-size:1.2rem;font-weight:700;letter-spacing:.5px">多源數據整合分析（一）｜多維度數據收集</div>
+            <div style="font-size:.82rem;opacity:.85;margin-top:4px">現代酒莊每天生成海量數據 × 內部生產 + 外部環境 = 完整圖像</div>
+          </div>
+        </div>
+
+        <!-- Two column grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+          <!-- Internal data -->
+          <div style="background:#f0f7ff;border:1.5px solid #3182ce;border-radius:10px;padding:16px">
+            <div style="background:#2b6cb0;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🏭 內部生產數據</div>
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #3182ce">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🌿 葡萄園管理數據</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">農事操作記錄 × 修剪/疏果/採收<br>投入品使用 × 肥料/農藥/水量<br>各地塊產量與品質分級<br>人工與材料成本核算</div>
+              <div style="background:#ebf8ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#2b6cb0;font-weight:700">💡 Château Margaux：</span><br>
+                每地塊每15分鐘記錄土壤濕度<br>工人平板記錄每次修剪與位置<br>每箱葡萄QR碼追蹤來源地塊<br>
+                <span style="color:#c53030;font-weight:700">→ 一季累積超過 50萬筆 田間數據</span>
+              </div>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #4299e1">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🍷 釀造工藝數據</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">發酵參數 × 溫度/密度/pH曲線<br>工藝流程時間與操作記錄<br>化學分析與感官評估數據<br>橡木桶陳年詳細追蹤</div>
+              <div style="background:#ebf8ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#2b6cb0;font-weight:700">💡 一桶Pauillac紅酒的數據足跡：</span><br>
+                發酵期 288個溫度點（12天）<br>蘋果酸乳酸發酵 54次化學分析<br>橡木桶陳年 36次記錄（18月）<br>
+                <span style="color:#c53030;font-weight:700">→ 一桶酒超過 400個 追蹤數據點</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- External data -->
+          <div style="background:#f0fff4;border:1.5px solid #38a169;border-radius:10px;padding:16px">
+            <div style="background:#276749;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🌐 外部環境數據</div>
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #38a169">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🌤️ 氣象數據整合</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">歷史氣象 × 30年以上數據庫<br>即時監測 × 多站位數據<br>衛星遙感 × 區域氣象信息<br>預測數據 × 7–15天天氣預報</div>
+              <div style="background:#f0fff4;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#276749;font-weight:700">💡 Saint-Émilion產區氣象網：</span><br>
+                5個地面站每10分鐘記錄氣象<br>衛星每週2次提供植被指數<br>區域模型提供10天微氣候預測<br>
+                <span style="color:#c53030;font-weight:700">→ 年度累積 260萬筆 氣象數據</span>
+              </div>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #48bb78">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">📈 市場信息數據</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">價格趨勢 × 國際/國內市場<br>消費者偏好與行為數據<br>競爭對手產品與策略分析<br>進出口量與貿易流向</div>
+              <div style="background:#f0fff4;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#276749;font-weight:700">💡 波爾多列級酒莊市場監測：</span><br>
+                追蹤全球12大市場拍賣價（每週）<br>分析社媒品牌提及與消費評論<br>監控50家競爭對手定價策略<br>
+                <span style="color:#c53030;font-weight:700">→ 整合海關數據追蹤新興市場</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats bar -->
+        <div style="background:linear-gradient(90deg,#1a365d,#2d4a8a);border-radius:8px;padding:12px 18px;display:flex;gap:0;justify-content:space-around;color:#fff;font-size:.82rem;text-align:center">
+          <div><div style="font-size:1.4rem;font-weight:700">50萬+</div><div style="opacity:.85">田間管理數據/季</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">400+</div><div style="opacity:.85">追蹤數據點/桶</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">260萬</div><div style="opacity:.85">氣象數據/年</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">12市場</div><div style="opacity:.85">全球市場監測</div></div>
+        </div>
+
+        <!--ORIGINAL:
         <div class="big-data-analytics">
           <h3>📊 多維度數據收集</h3>
           <p class="intro-text">現代酒莊就像一個「數據工廠」，每天產生大量來自不同來源的數據。這些數據如同拼圖的碎片，只有整合在一起才能呈現完整的圖像。</p>
@@ -3326,6 +3607,8 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+        -->
+      </div>
     `,
     highlights: [
       {
@@ -3348,13 +3631,91 @@ export const l313Part1Content = [
     type: 'content',
     title: '多源數據整合分析（二）：數據處理與清洗',
     content: `
-      <div class="chapter-content">
+      <div style="font-family:'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:0 8px">
+        <!-- Header -->
+        <div style="background:linear-gradient(135deg,#44337a 0%,#6b46c1 50%,#553c9a 100%);border-radius:12px;padding:18px 24px;margin-bottom:20px;color:#fff;display:flex;align-items:center;gap:12px">
+          <span style="font-size:2.2rem">💾</span>
+          <div>
+            <div style="font-size:1.2rem;font-weight:700;letter-spacing:.5px">多源數據整合分析（二）｜數據處理與清洗</div>
+            <div style="font-size:.82rem;opacity:.85;margin-top:4px">原始數據如同剛採收的葡萄 × 清洗去除「爛果」× 特徵工程提取「精華」</div>
+          </div>
+        </div>
+
+        <!-- Two sections -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+          <!-- Data preprocessing -->
+          <div style="background:#faf5ff;border:1.5px solid #805ad5;border-radius:10px;padding:16px">
+            <div style="background:#6b46c1;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">💾 數據預處理</div>
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #805ad5">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🧹 數據清洗</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">異常值檢測與識別處理<br>缺失值統計補全<br>跨來源格式標準化<br>不同頻率數據時間對齊</div>
+              <div style="background:#faf5ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#553c9a;font-weight:700">💡 2023年夏季氣象數據案例：</span><br>
+                問題：3天氣象缺失 + −999°C異常讀數<br>解法：線性插值補全 + 範圍過濾 + ISO 8601統一<br>
+                <span style="color:#c53030;font-weight:700">→ 數據完整度 73% ➜ 98%</span>
+              </div>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #9f7aea">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">⚙️ 特徵工程</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">變數轉換與數學運算<br>特徵選擇（最佳影響因子）<br>維度降維 × 提高處理效率<br>領域知識構建新特徵</div>
+              <div style="background:#faf5ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#553c9a;font-weight:700">💡 構建「成熟度指數」：</span><br>
+                積溫度日(GDD) = Σ(日均溫 − 10°C)<br>糖酸比 = 葡萄糖度 / 總酸度<br>水分脅迫指數 = (降雨 − 蒸散) / 持水量<br>
+                <span style="color:#c53030;font-weight:700">→ 預測準確度提升 35%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exploratory analysis -->
+          <div style="background:#fffaf0;border:1.5px solid #dd6b20;border-radius:10px;padding:16px">
+            <div style="background:#c05621;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🔍 探索性分析</div>
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #dd6b20">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">📊 統計描述分析</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">分布特徵 × 規律分析<br>相關性 × 線性/非線性關係<br>趨勢分析 × 時間序列<br>群組分析 × 自然分群</div>
+              <div style="background:#fffaf0;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#c05621;font-weight:700">💡 2010–2025波爾多研究：</span><br>
+                7–8月夜間溫度 × 酒質：<span style="color:#276749;font-weight:700">+0.78 正相關</span><br>
+                成熟期降雨 × 品質：<span style="color:#c53030;font-weight:700">−0.65 負相關</span><br>
+                <span style="color:#c53030;font-weight:700">→ 8月10–20日決定年份品質 60%！</span>
+              </div>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #ed8936">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">📈 視覺化分析</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">時間序列圖 × 趨勢展示<br>散點圖矩陣 × 多變數關係<br>熱力圖 × 相關性與地理分布<br>箱線圖 × 組間比較</div>
+              <div style="background:#fffaf0;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#c05621;font-weight:700">💡 Pomerol地塊品質熱力圖：</span><br>
+                50個地塊 × 10年品質評分分析<br>東南坡：穩定度高（標準差 1.2分）<br>北側低窪：波動大（標準差 3.8分）<br>
+                <span style="color:#c53030;font-weight:700">→ 指導優質年份混釀比例決策</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pipeline + stats bar -->
+        <div style="background:linear-gradient(90deg,#44337a,#553c9a);border-radius:8px;padding:12px 16px;color:#fff">
+          <div style="display:flex;align-items:center;gap:6px;font-size:.78rem;justify-content:center;flex-wrap:wrap;margin-bottom:10px">
+            <div style="background:rgba(255,255,255,.18);border-radius:6px;padding:5px 12px">原始數據</div>
+            <span>→</span><div style="background:rgba(255,255,255,.18);border-radius:6px;padding:5px 12px">清洗補全</div>
+            <span>→</span><div style="background:rgba(255,255,255,.18);border-radius:6px;padding:5px 12px">格式統一</div>
+            <span>→</span><div style="background:rgba(255,255,255,.18);border-radius:6px;padding:5px 12px">特徵工程</div>
+            <span>→</span><div style="background:rgba(255,255,255,.18);border-radius:6px;padding:5px 12px">探索分析</div>
+            <span>→</span><div style="background:#f6e05e;color:#744210;border-radius:6px;padding:5px 12px;font-weight:700">模型輸入 ✓</div>
+          </div>
+          <div style="display:flex;gap:0;justify-content:space-around;font-size:.8rem;text-align:center">
+            <div><div style="font-size:1.2rem;font-weight:700">73→98%</div><div style="opacity:.8">數據完整度提升</div></div>
+            <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+            <div><div style="font-size:1.2rem;font-weight:700">+35%</div><div style="opacity:.8">預測準確度</div></div>
+            <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+            <div><div style="font-size:1.2rem;font-weight:700">0.78</div><div style="opacity:.8">夜間溫度×酒質相關</div></div>
+            <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+            <div><div style="font-size:1.2rem;font-weight:700">60%</div><div style="opacity:.8">年份品質由8月決定</div></div>
+          </div>
+        </div>
+
+        <!--ORIGINAL:
         <div class="data-processing">
           <h3>💾 數據處理與清洗</h3>
-          <p class="intro-text">原始數據就像剛採收的葡萄，需要經過精心挑選和處理才能釀出好酒。數據清洗可以剔除「爛果」，特徵工程則是提取「精華」。</p>
-          
-          <div class="processing-pipeline">
-            <div class="pipeline-stage">
+          <p class="intro-text">原始數據就像剛採收的葡萄，需要經過精心挑選和處理才能釀出好酒。</p>
               <h4>數據預處理</h4>
               <div class="preprocessing-steps">
                 <div class="step-item">
@@ -3444,6 +3805,8 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+        -->
+      </div>
     `,
     highlights: [
       {
@@ -3466,25 +3829,93 @@ export const l313Part1Content = [
     type: 'content',
     title: '機器學習應用（一）：預測建模系統',
     content: `
-      <div class="chapter-content">
+      <div style="font-family:'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:0 8px">
+        <!-- Header -->
+        <div style="background:linear-gradient(135deg,#1c4532 0%,#276749 50%,#22543d 100%);border-radius:12px;padding:18px 24px;margin-bottom:20px;color:#fff;display:flex;align-items:center;gap:12px">
+          <span style="font-size:2.2rem">🤖</span>
+          <div>
+            <div style="font-size:1.2rem;font-weight:700;letter-spacing:.5px">機器學習應用（一）｜預測建模系統</div>
+            <div style="font-size:.82rem;opacity:.85;margin-top:4px">從歷史數據學習規律 × 同時處理萬個變數 × 做出人腦無法完成的複雜預測</div>
+          </div>
+        </div>
+
+        <!-- Two column grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+          <!-- Yield prediction -->
+          <div style="background:#f0fff4;border:1.5px solid #38a169;border-radius:10px;padding:16px">
+            <div style="background:#276749;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🍇 產量預測模型</div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #38a169">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">📅 多階段預測流程</div>
+              <div style="font-size:.8rem;line-height:1.6;color:#444">
+                <div style="display:flex;gap:6px;align-items:flex-start;margin-bottom:4px"><span style="background:#c6f6d5;color:#276749;border-radius:4px;padding:1px 6px;font-weight:700;white-space:nowrap">4–5月</span><span>花期 × 氣象條件預測產量潛力（誤差25%）</span></div>
+                <div style="display:flex;gap:6px;align-items:flex-start;margin-bottom:4px"><span style="background:#c6f6d5;color:#276749;border-radius:4px;padding:1px 6px;font-weight:700;white-space:nowrap">6–7月</span><span>轉色期 × 果串數量+管理數據（誤差11%）</span></div>
+                <div style="display:flex;gap:6px;align-items:flex-start;margin-bottom:4px"><span style="background:#68d391;color:#1c4532;border-radius:4px;padding:1px 6px;font-weight:700;white-space:nowrap">8月下</span><span>整合遙感數據 × 最終預測（誤差4%）</span></div>
+              </div>
+              <div style="background:#f0fff4;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#276749;font-weight:700">💡 Château Latour 2025年：</span><br>
+                最終預測 54噸 ±2噸（8月30日）<br>實際採收：<span style="font-weight:700">53.2噸</span><br>
+                <span style="color:#c53030;font-weight:700">→ 預測誤差僅 1.5%！提前2週精準預測</span>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #48bb78">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">⚡ 算法性能比較</div>
+              <table style="width:100%;font-size:.78rem;border-collapse:collapse">
+                <tr style="background:#f0fff4"><th style="padding:4px 6px;text-align:left">算法</th><th style="padding:4px 6px;text-align:center">R²</th><th style="padding:4px 6px;text-align:center">推薦</th></tr>
+                <tr><td style="padding:3px 6px;color:#666">線性回歸</td><td style="padding:3px 6px;text-align:center">0.65</td><td style="padding:3px 6px;text-align:center">—</td></tr>
+                <tr style="background:#f0fff4"><td style="padding:3px 6px">隨機森林</td><td style="padding:3px 6px;text-align:center">0.84</td><td style="padding:3px 6px;text-align:center">—</td></tr>
+                <tr style="background:#c6f6d5"><td style="padding:3px 6px;font-weight:700">XGBoost</td><td style="padding:3px 6px;text-align:center;font-weight:700">0.89</td><td style="padding:3px 6px;text-align:center">⭐推薦</td></tr>
+                <tr><td style="padding:3px 6px;color:#666">深度神經網絡</td><td style="padding:3px 6px;text-align:center">0.88</td><td style="padding:3px 6px;text-align:center">—</td></tr>
+              </table>
+              <div style="font-size:.78rem;color:#276749;margin-top:6px">中小規模數據（&lt;10年歷史）XGBoost 表現最佳</div>
+            </div>
+          </div>
+
+          <!-- Disease prediction -->
+          <div style="background:#fff5f5;border:1.5px solid #e53e3e;border-radius:10px;padding:16px">
+            <div style="background:#c53030;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🦠 病害預測模型</div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #e53e3e">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🚨 早期預警系統</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">環境模型 × 溫濕度預測發生概率<br>圖像識別 × 自動識別病斑症狀<br>傳播模型 × 預測擴散路徑<br>風險評估 × 各地塊病害風險</div>
+              <div style="background:#fff5f5;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#c53030;font-weight:700">💡 2024年6月霜霉病預警：</span><br>
+                AI預測發生概率 <span style="font-weight:700">78%</span> → 提前噴藥（€120/公頃）<br>
+                鄰近未防守園感染率 35%，本園僅 <span style="color:#276749;font-weight:700">2%</span><br>
+                <span style="color:#c53030;font-weight:700">→ 避免損失 €2,500/公頃 × ROI 20:1</span>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #fc8181">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🧠 深度學習應用</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">CNN × 分析葉片/果實影像特徵<br>LSTM × 分析時序環境變化模式<br>注意力機制 × 聚焦關鍵診斷特徵<br>遷移學習 × 快速適應新病害</div>
+              <div style="background:#fff5f5;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#c53030;font-weight:700">💡 葡萄病害自動診斷系統：</span><br>
+                訓練集：50,000張標註葉片 × 10類病害<br>
+                整體準確率：<span style="font-weight:700">94.3%</span>（霜霉病 96.8%）<br>
+                處理速度：每張 0.08秒<br>
+                <span style="color:#c53030;font-weight:700">→ 診斷時間 1天 ➜ 1分鐘</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats bar -->
+        <div style="background:linear-gradient(90deg,#1c4532,#276749);border-radius:8px;padding:12px 18px;display:flex;gap:0;justify-content:space-around;color:#fff;font-size:.82rem;text-align:center">
+          <div><div style="font-size:1.4rem;font-weight:700">1.5%</div><div style="opacity:.85">產量預測誤差（Latour）</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">R²=0.89</div><div style="opacity:.85">XGBoost 預測精度</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">94.3%</div><div style="opacity:.85">病害識別準確率</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">ROI 20:1</div><div style="opacity:.85">病害預防投資回報</div></div>
+        </div>
+
+        <!--ORIGINAL:
         <div class="machine-learning">
           <h3>🤖 預測建模系統</h3>
-          <p class="intro-text">機器學習就像一位經驗豐富的老酒師，能從歷史數據中學習規律，但它能同時處理成千上萬個變數，做出人腦無法完成的複雜預測。</p>
-          
-          <div class="prediction-models">
-            <div class="model-category">
-              <h4>🍇 產量預測模型</h4>
-              <div class="yield-prediction">
-                <div class="model-approach">
-                  <h5>多階段預測</h5>
-                  <p>• <strong>花期預測（4-5月）：</strong>基於氣象條件預測花期產量潛力<br>
-                  • <strong>果實發育期（6-7月）：</strong>結合氣象和管理數據調整預測<br>
-                  • <strong>成熟前期（8月）：</strong>利用遙感數據精確預測最終產量<br>
-                  • <strong>採收預測（9月）：</strong>預測不同地塊的最佳採收時間</p>
-                  
-                  <div class="example-box">
-                    <h6>💡 預測實例：2025年產量預測</h6>
-                    <p><strong>Château Latour 的產量預測時間線：</strong><br><br>
+          <p class="intro-text">機器學習就像一位經驗豐富的老酒師...</p>
                     <em>5月15日（花期後）：</em><br>
                     • 模型輸入：春季氣溫、降雨、花序數量<br>
                     • 初步預測：48噸 ± 12噸（誤差範圍25%）<br>
@@ -3586,6 +4017,8 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+        -->
+      </div>
     `,
     highlights: [
       {
@@ -3608,11 +4041,100 @@ export const l313Part1Content = [
     type: 'content',
     title: '機器學習應用（二）：優化決策系統',
     content: `
-      <div class="chapter-content">
+      <div style="font-family:'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:0 8px">
+        <!-- Header -->
+        <div style="background:linear-gradient(135deg,#7b341e 0%,#c05621 50%,#9c4221 100%);border-radius:12px;padding:18px 24px;margin-bottom:20px;color:#fff;display:flex;align-items:center;gap:12px">
+          <span style="font-size:2.2rem">🎯</span>
+          <div>
+            <div style="font-size:1.2rem;font-weight:700;letter-spacing:.5px">機器學習應用（二）｜優化決策系統</div>
+            <div style="font-size:.82rem;opacity:.85;margin-top:4px">預測告訴我們「會發生什麼」× 優化系統告訴我們「應該怎麼做」</div>
+          </div>
+        </div>
+
+        <!-- Resource optimization + Winemaking optimization -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+          <!-- Resource -->
+          <div style="background:#fff8f1;border:1.5px solid #ed8936;border-radius:10px;padding:16px">
+            <div style="background:#c05621;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🌱 資源配置優化</div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #ed8936">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">💧 精準灌溉優化</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">需水量模型 × 精確計算各發育期<br>水分平衡 × 降雨/蒸散發整合<br>適度水分脅迫 × 提高果實品質<br>排程優化 × 灌溉時間與頻率</div>
+              <div style="background:#fff8f1;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#c05621;font-weight:700">💡 Pessac-Léognan 50公頃：</span><br>
+                傳統：5,000m³/季 × 均勻灌溉 × 品質85分<br>
+                AI優化：<span style="font-weight:700">3,200m³（節水36%）</span> × 品質 <span style="color:#276749;font-weight:700">88分（+3分）</span><br>
+                <span style="color:#c53030;font-weight:700">→ 節水€1,800 + 品質提升€25,000/年</span>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #f6ad55">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🌿 變量施肥優化</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">土壤/植物分析 × 優化養分配比<br>最佳施肥時機確定<br>200細分區塊 × 個別化方案<br>最小化環境影響</div>
+              <div style="background:#fff8f1;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#c05621;font-weight:700">💡 Saint-Julien 50公頃：</span><br>
+                北側低肥：15kg N/公頃 × 南側高肥：35kg N/公頃<br>
+                全園生長勢均勻度提升 <span style="font-weight:700">42%</span><br>
+                <span style="color:#c53030;font-weight:700">→ 氮肥總用量減少 28% × 節省€8,500/年</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Winemaking -->
+          <div style="background:#f5f3ff;border:1.5px solid #805ad5;border-radius:10px;padding:16px">
+            <div style="background:#6b46c1;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🏭 釀造工藝優化</div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #805ad5">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🌡️ 發酵參數優化</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">每5分鐘測溫度/密度/酵母活性<br>預測未來2小時發酵進程<br>Merlot：26–28°C × Cab.Sauv：28–30°C<br>能耗優化 × 節能20–35%</div>
+              <div style="background:#f5f3ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#553c9a;font-weight:700">💡 Château Palmer（同時發酵30批次）：</span><br>
+                人工控制溫度波動：<span style="color:#c53030">±2.5°C</span><br>
+                AI控制溫度波動：<span style="color:#276749;font-weight:700">±0.3°C</span><br>
+                <span style="color:#c53030;font-weight:700">→ 發酵停滯風險降低85% × 年度品質一致性+35%</span>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #9f7aea">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🛢️ AI調配助手</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">分析28個地塊化學成分與感官特徵<br>1億+種組合 → 推薦最優10個方案<br>15年歷史調配數據訓練模型<br>預測陳年潛力與評分</div>
+              <div style="background:#f5f3ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#553c9a;font-weight:700">💡 Pauillac一級酒莊2024：</span><br>
+                AI推薦：地塊A 38% + 地塊E 25% + 地塊M 20%<br>
+                酒莊長微調 → A調至40%<br>
+                <span style="color:#c53030;font-weight:700">→ 實際評分：96分（Parker）✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decision loop + stats -->
+        <div style="background:linear-gradient(90deg,#7b341e,#c05621);border-radius:8px;padding:12px 16px;color:#fff">
+          <div style="font-size:.78rem;text-align:center;margin-bottom:8px;opacity:.9;font-weight:700">數據驅動決策完整閉環</div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:10px">
+            <div style="background:rgba(255,255,255,.18);border-radius:5px;padding:4px 10px">收集</div><span>→</span>
+            <div style="background:rgba(255,255,255,.18);border-radius:5px;padding:4px 10px">處理</div><span>→</span>
+            <div style="background:rgba(255,255,255,.18);border-radius:5px;padding:4px 10px">分析</div><span>→</span>
+            <div style="background:rgba(255,255,255,.18);border-radius:5px;padding:4px 10px">預測</div><span>→</span>
+            <div style="background:rgba(255,255,255,.18);border-radius:5px;padding:4px 10px">優化</div><span>→</span>
+            <div style="background:rgba(255,255,255,.18);border-radius:5px;padding:4px 10px">執行</div><span>→</span>
+            <div style="background:#f6e05e;color:#744210;border-radius:5px;padding:4px 10px;font-weight:700">反饋改進 ↺</div>
+          </div>
+          <div style="display:flex;gap:0;justify-content:space-around;font-size:.8rem;text-align:center">
+            <div><div style="font-size:1.2rem;font-weight:700">36%</div><div style="opacity:.8">節水（Pessac-Léognan）</div></div>
+            <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+            <div><div style="font-size:1.2rem;font-weight:700">28%</div><div style="opacity:.8">節肥（Saint-Julien）</div></div>
+            <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+            <div><div style="font-size:1.2rem;font-weight:700">±0.3°C</div><div style="opacity:.8">AI溫控精度</div></div>
+            <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+            <div><div style="font-size:1.2rem;font-weight:700">96分</div><div style="opacity:.8">AI調配 Parker評分</div></div>
+          </div>
+        </div>
+
+        <!--ORIGINAL:
         <div class="optimization-systems">
           <h3>🎯 優化決策系統</h3>
-          <p class="intro-text">預測告訴我們「會發生什麼」，而優化系統告訴我們「應該怎麼做」。這是從數據洞察轉化為實際行動的關鍵一步。</p>
-          
+          <p class="intro-text">預測告訴我們「會發生什麼」...</p>
           <div class="decision-optimization">
             <div class="optimization-area">
               <h4>資源配置優化</h4>
@@ -3623,7 +4145,6 @@ export const l313Part1Content = [
                   • <strong>水分平衡：</strong>考慮降雨、蒸散發的水分平衡模型<br>
                   • <strong>壓力管理：</strong>適度水分壓力提高果實品質<br>
                   • <strong>排程優化：</strong>優化灌溉時間和頻率安排</p>
-                  
                   <div class="example-box">
                     <h6>💡 精準灌溉案例：</h6>
                     <p><strong>Pessac-Léognan 產區50公頃葡萄園：</strong><br><br>
@@ -3767,6 +4288,8 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+        -->
+      </div>
     `,
     highlights: [
       {
@@ -3796,6 +4319,38 @@ export const l313Part1Content = [
     ]
   },
 
+  // 第二章知識檢測
+  {
+    type: 'interactive-quiz',
+    title: '第二章知識檢測：大數據分析與機器學習',
+    questions: [
+      {
+        id: 1,
+        question: '物聯網感測器網絡的核心價值是什麼？',
+        options: [
+          '完全替代人工管理',
+          '提供24/7連續監測，實現數據驅動決策',
+          '只用於記錄溫度',
+          '降低葡萄酒價格'
+        ],
+        correct: 1,
+        explanation: '物聯網感測器通過24小時不間斷監測氣象、土壤、植株等多維度數據，配合AI分析，實現從「經驗決策」到「數據驅動決策」的轉變。'
+      },
+      {
+        id: 2,
+        question: '大數據分析能夠提前多久精準預測產量？',
+        options: [
+          '採收前1週',
+          '採收前3-6個月',
+          '無法預測',
+          '需要等到採收後'
+        ],
+        correct: 1,
+        explanation: '通過整合衛星NDVI、氣象數據、土壤監測等多源數據，機器學習模型可以在採收前3-6個月就達到95%+準確率的產量預測。'
+      }
+    ]
+  },
+
   // 第三章：人工智能在釀造中的應用
   {
     type: 'chapter-divider',
@@ -3806,47 +4361,95 @@ export const l313Part1Content = [
     background: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
   },
 
-  // 第三章知識檢測
-  {
-    type: 'interactive-quiz',
-    title: '第三章知識檢測：人工智能在釀造中的應用',
-    questions: [
-      {
-        id: 1,
-        question: 'AI調配系統如何輔助釀酒師？',
-        options: [
-          '完全替代釀酒師決策',
-          '分析數萬種組合提供建議，最終由釀酒師決定',
-          '只用於記錄數據',
-          '隨機生成方案'
-        ],
-        correct: 1,
-        explanation: 'AI通過分析歷史數據和模擬數萬種調配組合，提供科學建議，但最終決策權仍在釀酒師手中，實現AI與人類經驗的完美結合。'
-      },
-      {
-        id: 2,
-        question: 'AI預測陳年潛力的準確率可達？',
-        options: [
-          '50%左右',
-          '85-92%',
-          '100%完美',
-          '無法預測'
-        ],
-        correct: 1,
-        explanation: '通過機器學習分析化學成分、感官特性和歷史陳年數據，AI預測陳年潛力的準確率可達85-92%，為投資和庫存管理提供科學依據。'
-      }
-    ]
-  },
-  
   // AI發酵管理系統（一）：智能溫度控制
   {
     type: 'content',
     title: 'AI發酵管理系統（一）：智能溫度控制',
     content: `
-      <div class="chapter-content">
+      <div style="font-family:'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:0 8px">
+        <!-- Header -->
+        <div style="background:linear-gradient(135deg,#134e4a 0%,#0f766e 50%,#115e59 100%);border-radius:12px;padding:18px 24px;margin-bottom:20px;color:#fff;display:flex;align-items:center;gap:12px">
+          <span style="font-size:2.2rem">🌡️</span>
+          <div>
+            <div style="font-size:1.2rem;font-weight:700;letter-spacing:.5px">AI發酵管理系統（一）｜智能溫度控制</div>
+            <div style="font-size:.82rem;opacity:.85;margin-top:4px">差1°C決定優雅還是粗糙 × AI精準到 ±0.2°C × 32個罐同步協調</div>
+          </div>
+        </div>
+
+        <!-- Two columns -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+          <!-- Adaptive control -->
+          <div style="background:#f0fdfa;border:1.5px solid #0d9488;border-radius:10px;padding:16px">
+            <div style="background:#0f766e;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🎯 自適應溫控策略</div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #0d9488">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🧬 品種專屬曲線</div>
+              <table style="width:100%;font-size:.78rem;border-collapse:collapse">
+                <tr style="background:#f0fdfa"><th style="padding:4px 6px;text-align:left">品種</th><th style="padding:4px 6px;text-align:center">溫度範圍</th><th style="padding:4px 6px;text-align:left">目標</th></tr>
+                <tr><td style="padding:3px 6px">Cab. Sauvignon</td><td style="padding:3px 6px;text-align:center">28–30°C</td><td style="padding:3px 6px">萃取單寧</td></tr>
+                <tr style="background:#f0fdfa"><td style="padding:3px 6px">Merlot</td><td style="padding:3px 6px;text-align:center">26–28°C</td><td style="padding:3px 6px">保留果香</td></tr>
+                <tr><td style="padding:3px 6px">Cab. Franc</td><td style="padding:3px 6px;text-align:center">25–27°C</td><td style="padding:3px 6px">突顯草本</td></tr>
+                <tr style="background:#f0fdfa"><td style="padding:3px 6px">Petit Verdot</td><td style="padding:3px 6px;text-align:center">29–31°C</td><td style="padding:3px 6px">萃取色素</td></tr>
+              </table>
+              <div style="background:#f0fdfa;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#0f766e;font-weight:700">💡 Pichon-Longueville Merlot 2024：</span><br>
+                傳統固定曲線 → 中期發酵過快，香氣損失<br>
+                AI自適應：每階段動態調整 ±0.5°C<br>
+                <span style="color:#c53030;font-weight:700">→ 香氣保留 78% ➜ 91% × 評分87→90分 × 節能28%</span>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #2dd4bf">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🔮 預測控制機制</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">提前2–4小時預測發酵進程<br>智能學習 × 自動調整溫度曲線<br>根據酵母活性即時響應<br>在保證品質前提下節能20–35%</div>
+            </div>
+          </div>
+
+          <!-- Multi-tank + predictive maintenance -->
+          <div style="background:#f0f9ff;border:1.5px solid #0284c7;border-radius:10px;padding:16px">
+            <div style="background:#0369a1;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🏭 多罐協調與預防維護</div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #0284c7">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">⚡ 32罐極限協調（Saint-Julien 2024）</div>
+              <div style="font-size:.8rem;line-height:1.6;color:#444">
+                <div style="display:flex;gap:4px;align-items:flex-start;margin-bottom:3px"><span style="background:#dbeafe;color:#1e40af;border-radius:3px;padding:1px 5px;font-weight:700;white-space:nowrap">P1正牌(8罐)</span><span>目標溫度 ±0.2°C 保證</span></div>
+                <div style="display:flex;gap:4px;align-items:flex-start;margin-bottom:3px"><span style="background:#dbeafe;color:#1e40af;border-radius:3px;padding:1px 5px;font-weight:700;white-space:nowrap">P2副牌(15罐)</span><span>目標溫度 ±0.5°C 保證</span></div>
+                <div style="display:flex;gap:4px;align-items:flex-start;margin-bottom:3px"><span style="background:#dbeafe;color:#1e40af;border-radius:3px;padding:1px 5px;font-weight:700;white-space:nowrap">P3入門(9罐)</span><span>目標溫度 ±1.0°C 保證</span></div>
+              </div>
+              <div style="background:#f0f9ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                冷卻機故障（損失40kW）→ AI 5秒重新分配<br>
+                P1維持不變 × 40分鐘後機組修復<br>
+                <span style="color:#c53030;font-weight:700">→ 32罐全部成功 × 能耗−32% × 利用率65→89%</span>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #38bdf8">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🔧 預測性維護（Pauillac 2024）</div>
+              <div style="font-size:.8rem;line-height:1.6;color:#444">8/15 震動異常 → 8/18 能耗+8% → 8/20 AI警報<br>預計5–7天內故障，可靠度 <span style="font-weight:700">92%</span><br>
+              技師確認後智能排程：8/24晚維修（僅3罐需冷卻）</div>
+              <div style="background:#f0f9ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                維修成本：€2,800 × 若採收高峰故障：€120,000<br>
+                <span style="color:#c53030;font-weight:700">→ ROI 43倍 × 預測準確度92%→97% × 1年預防11次故障</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats bar -->
+        <div style="background:linear-gradient(90deg,#134e4a,#0f766e);border-radius:8px;padding:12px 18px;display:flex;gap:0;justify-content:space-around;color:#fff;font-size:.82rem;text-align:center">
+          <div><div style="font-size:1.4rem;font-weight:700">±0.2°C</div><div style="opacity:.85">P1正牌溫控精度</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">−32%</div><div style="opacity:.85">32罐協調節能</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">+13%</div><div style="opacity:.85">香氣保留提升</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">ROI 43×</div><div style="opacity:.85">預測維護回報</div></div>
+        </div>
+
+        <!--ORIGINAL:
         <div class="ai-winemaking">
           <h3>🌡️ 智能溫度控制系統</h3>
-          <p class="intro-text">發酵溫度是釀酒品質的「生命線」——差1°C就可能決定一瓶酒是優雅還是粗糙。傳統人工控制如同用肉眼判斷，而AI溫控系統則像配備了顯微鏡的外科手術，精準到每0.1°C。</p>
+          <p class="intro-text">發酵溫度是釀酒品質的「生命線」——差1°C就可能決定一瓶酒是優雅還是粗糙。</p>
           
           <div class="intelligent-control">
             <div class="control-system">
@@ -4042,6 +4645,8 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+        -->
+      </div>
     `,
     highlights: [
       {
@@ -4064,35 +4669,91 @@ export const l313Part1Content = [
     type: 'content',
     title: 'AI發酵管理系統（二）：發酵過程監控',
     content: `
-      <div class="chapter-content">
+      <div style="font-family:'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:0 8px">
+        <!-- Header -->
+        <div style="background:linear-gradient(135deg,#1e3a5f 0%,#1d4ed8 50%,#1e40af 100%);border-radius:12px;padding:18px 24px;margin-bottom:20px;color:#fff;display:flex;align-items:center;gap:12px">
+          <span style="font-size:2.2rem">⚗️</span>
+          <div>
+            <div style="font-size:1.2rem;font-weight:700;letter-spacing:.5px">AI發酵管理系統（二）｜發酵過程監控</div>
+            <div style="font-size:.82rem;opacity:.85;margin-top:4px">每天24次 → 28,800次 × 異常檢測從6小時縮短到5分鐘 × 24/7守護</div>
+          </div>
+        </div>
+
+        <!-- Two columns: real-time + anomaly -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+          <!-- Real-time monitoring -->
+          <div style="background:#eff6ff;border:1.5px solid #3b82f6;border-radius:10px;padding:16px">
+            <div style="background:#1d4ed8;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">📊 即時參數追蹤</div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #3b82f6">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🔬 核心發酵參數（每5分鐘）</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">密度監測 × 追蹤糖分轉化进程<br>pH值控制 × 自動調節酸度<br>CO₂產生速率 × 評估酵母活力<br>酒精濃度 × 連續預測監控</div>
+              <div style="background:#eff6ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#1d4ed8;font-weight:700">💡 Château Haut-Brion 2024 Cab.Sauv：</span><br>
+                傳統：每天2次手工測 → 夜間異常10小時後才發現<br>
+                損失€18,000（降副牌）<br>
+                AI：凌晨2:15密度加速 → <span style="font-weight:700">15分鐘內預警+自動冷卻</span><br>
+                <span style="color:#c53030;font-weight:700">→ 全程3,456數據點 × 評分89→94分</span>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #60a5fa">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🧪 MLF生化參數監控</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">乳酸菌活性 × MLF進程監測<br>揮發酸控制 × 追蹤醋酸含量<br>氧化還原電位 × 微生物活動<br>酚類物質 × 單寧/色素萃取</div>
+              <div style="background:#eff6ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#1d4ed8;font-weight:700">💡 Saint-Émilion MLF危機（2024/11）：</span><br>
+                揮發酸晚9:30突升至0.45 g/L → AI高級警報<br>
+                預測24小時超標（>0.8上限）→ 立即降溫+SO₂<br>
+                <span style="color:#c53030;font-weight:700">→ 穩定在0.48 g/L × 避免損失€64,000 × 評分91分</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anomaly detection -->
+          <div style="background:#fef9ec;border:1.5px solid #d97706;border-radius:10px;padding:16px">
+            <div style="background:#b45309;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">🚨 智能異常檢測預警</div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;margin-bottom:10px;border-left:4px solid #d97706">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🛑 發酵停滯預警（Pessac-Léognan 2024）</div>
+              <div style="font-size:.8rem;line-height:1.6;color:#444">
+                <div style="display:flex;gap:4px;align-items:flex-start;margin-bottom:3px"><span style="background:#fef3c7;color:#92400e;border-radius:3px;padding:1px 6px;font-weight:700;white-space:nowrap">Day4 🟡</span><span>速率−12% → 黃色警報，觀察24H</span></div>
+                <div style="display:flex;gap:4px;align-items:flex-start;margin-bottom:3px"><span style="background:#fde68a;color:#78350f;border-radius:3px;padding:1px 6px;font-weight:700;white-space:nowrap">Day5 🟠</span><span>速率−40%，CO₂驟降 → 停滯風險65%</span></div>
+                <div style="display:flex;gap:4px;align-items:flex-start;margin-bottom:3px"><span style="background:#d1fae5;color:#065f46;border-radius:3px;padding:1px 6px;font-weight:700;white-space:nowrap">Day6 🟢</span><span>添加營養劑+降溫 → 發酵恢復</span></div>
+              </div>
+              <div style="background:#fef9ec;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#b45309;font-weight:700">→ 本季16罐預測4次風險，全部成功救回</span><br>
+                <span style="color:#c53030;font-weight:700">避免損失 €95,000 × 提前2.5天預警</span>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #f59e0b">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:6px">🦠 Brett污染早期檢測（Pauillac 2024）</div>
+              <div style="font-size:.82rem;line-height:1.7;color:#444">光譜技術識別微生物污染<br>代謝產物異常訊號偵測<br>污染模式匹配比對<br>來源追蹤與傳播路徑</div>
+              <div style="background:#fef9ec;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#b45309;font-weight:700">💡 4-ethylphenol = 120 μg/L（閾值30%）即預警</span><br>
+                傳統：裝瓶前才發現（已太遲）<br>
+                AI：污染初期即精準識別，立即處理<br>
+                <span style="color:#c53030;font-weight:700">→ 避免損失 12,000L × €12/L = €144,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats bar -->
+        <div style="background:linear-gradient(90deg,#1e3a5f,#1d4ed8);border-radius:8px;padding:12px 18px;display:flex;gap:0;justify-content:space-around;color:#fff;font-size:.82rem;text-align:center">
+          <div><div style="font-size:1.4rem;font-weight:700">28,800</div><div style="opacity:.85">數據點/天（傳統24次）</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">5分鐘</div><div style="opacity:.85">異常檢測（傳統6小時）</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">€144,000</div><div style="opacity:.85">Brett污染避免損失</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">−92%</div><div style="opacity:.85">發酵事故率</div></div>
+        </div>
+
+        <!--ORIGINAL:
         <div class="fermentation-monitoring-system">
           <h3>⚗️ 智能發酵過程監控系統</h3>
-          <p class="intro-text">如果說溫度控制是「方向盤」，那麼過程監控就是「儀表板」和「雷達」。傳統釀酒師每天品嘗2-3次判斷發酵狀態，AI監控系統則每分鐘測量數十個參數，24小時不間斷守護每一罐酒。</p>
-          
-          <div class="monitoring-systems">
-            <div class="realtime-monitoring">
-              <h4>📊 即時參數追蹤系統</h4>
-              <div class="parameter-tracking">
-                <div class="tracking-category">
-                  <h5>核心發酵參數監測</h5>
-                  <p>• <strong>密度監測：</strong>每5分鐘測量一次，追蹤糖分轉化<br>
-                  • <strong>pH值控制：</strong>實時監控酸度變化，自動調節<br>
-                  • <strong>CO₂產生速率：</strong>評估酵母活力和發酵健康度<br>
-                  • <strong>酒精濃度：</strong>連續預測和監控酒精度變化</p>
-                  
-                  <div class="example-box">
-                    <h6>💡 密度監測實時追蹤案例：</h6>
-                    <p><strong>Château Haut-Brion 2024年Cabernet Sauvignon發酵監控：</strong><br><br>
-                    <em>傳統監測方式的盲點：</em><br>
-                    • 酒窖師每天早上9點、下午3點手工測密度<br>
-                    • 2023年某罐在夜間發酵突然加速，早上9點才發現<br>
-                    • 高溫持續了10小時，損失15%的細緻香氣<br>
-                    • 最終只能用作副牌酒，損失約€18,000<br><br>
-                    
-                    <em>2024年AI監控系統運作：</em><br><br>
-                    <strong>罐#12 發酵全程記錄（288小時）：</strong><br>
-                    • 起始密度：1.092（糖度220 g/L）<br>
-                    • 目標終點：0.995（殘糖<2 g/L）<br><br>
+          <p class="intro-text">如果說溫度控制是「方向盤」...</p>
                     
                     <strong>第1-36小時（啟動期）：</strong><br>
                     • 密度變化：1.092 → 1.088（緩慢下降）<br>
@@ -4376,6 +5037,8 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+        -->
+      </div>
     `,
     highlights: [
       {
@@ -4398,11 +5061,105 @@ export const l313Part1Content = [
     type: 'content',
     title: 'AI品質控制系統：光譜分析與感官分析',
     content: `
-      <div class="chapter-content">
+      <div style="font-family:'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:0 8px">
+        <!-- Header -->
+        <div style="background:linear-gradient(135deg,#312e81 0%,#4f46e5 50%,#3730a3 100%);border-radius:12px;padding:18px 24px;margin-bottom:20px;color:#fff;display:flex;align-items:center;gap:12px">
+          <span style="font-size:2.2rem">🔬</span>
+          <div>
+            <div style="font-size:1.2rem;font-weight:700;letter-spacing:.5px">AI品質控制系統｜光譜分析 × 電子感官</div>
+            <div style="font-size:.82rem;opacity:.85;margin-top:4px">NIR 30秒完成22項檢測 × 效率提升180倍 × 電子鼻/舌準確率97.8%</div>
+          </div>
+        </div>
+
+        <!-- Three-column spectral tools -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px">
+          <!-- NIR -->
+          <div style="background:#eef2ff;border:1.5px solid #6366f1;border-radius:10px;padding:14px">
+            <div style="background:#4f46e5;color:#fff;border-radius:5px;padding:4px 10px;font-weight:700;font-size:.82rem;margin-bottom:10px;display:inline-block">🌈 NIR近紅外光譜</div>
+            <div style="font-size:.8rem;line-height:1.7;color:#444;margin-bottom:8px">30秒 × 22項參數同測<br>生產線即時在線分析<br>無需開瓶非破壞檢測<br>R²=<span style="font-weight:700">0.98</span> 極高精度</div>
+            <div style="background:#fff;border-radius:6px;padding:8px;font-size:.78rem;border:1px solid #c7d2fe">
+              <span style="color:#4338ca;font-weight:700">Margaux裝瓶前2024：</span><br>
+              15罐×3天→<span style="color:#c53030;font-weight:700">15分鐘</span>（效率×180）<br>
+              攔截罐#12揮發酸超標<br>
+              調配後即時驗證 ✓<br>
+              節省€45,000/年
+            </div>
+          </div>
+
+          <!-- Raman -->
+          <div style="background:#f0fdf4;border:1.5px solid #22c55e;border-radius:10px;padding:14px">
+            <div style="background:#16a34a;color:#fff;border-radius:5px;padding:4px 10px;font-weight:700;font-size:.82rem;margin-bottom:10px;display:inline-block">🔍 拉曼光譜防偽</div>
+            <div style="font-size:.8rem;line-height:1.7;color:#444;margin-bottom:8px">分子指紋識別<br>無需開瓶 × 2分鐘完成<br>200+特徵峰比對<br>準確率 <span style="font-weight:700">98.5%</span></div>
+            <div style="background:#fff;border-radius:6px;padding:8px;font-size:.78rem;border:1px solid #bbf7d0">
+              <span style="color:#166534;font-weight:700">Pomerol 1982假酒鑑定：</span><br>
+              與真品相似度僅67%<br>（正常應>95%）<br>
+              126瓶可疑中發現38瓶假<br>
+              <span style="color:#c53030;font-weight:700">保護品牌€1.7M/年</span>
+            </div>
+          </div>
+
+          <!-- GC-MS -->
+          <div style="background:#fff7ed;border:1.5px solid #f97316;border-radius:10px;padding:14px">
+            <div style="background:#ea580c;color:#fff;border-radius:5px;padding:4px 10px;font-weight:700;font-size:.82rem;margin-bottom:10px;display:inline-block">🧬 GC-MS香氣指紋</div>
+            <div style="font-size:.8rem;line-height:1.7;color:#444;margin-bottom:8px">300+種香氣化合物定量<br>建立酒款風味檔案<br>缺陷溯源 × 陳年監測<br>風格相似度量化</div>
+            <div style="background:#fff;border-radius:6px;padding:8px;font-size:.78rem;border:1px solid #fed7aa">
+              <span style="color:#c2410c;font-weight:700">Saint-Julien風格控制：</span><br>
+              吡嗪22→15 ng/L（修正）<br>
+              風格相似度72→<span style="color:#276749;font-weight:700">96%</span><br>
+              預售比2023年+15%<br>
+              「典型某某莊風格」
+            </div>
+          </div>
+        </div>
+
+        <!-- Two-column E-nose + E-tongue -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+          <!-- E-nose -->
+          <div style="background:#fdf4ff;border:1.5px solid #a855f7;border-radius:10px;padding:16px">
+            <div style="background:#7e22ce;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">👃 電子鼻 — TCA軟木塞檢測</div>
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #a855f7">
+              <div style="font-size:.82rem;line-height:1.7;color:#444">裝瓶線 <span style="font-weight:700">3秒/瓶</span> 自動檢測<br>靈敏度 2 ng/L（人類感官閾值）<br>系統可靠度：<span style="font-weight:700">97.8%</span><br>TCA陽性→移出→換塞→重測</div>
+              <div style="background:#fdf4ff;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#7e22ce;font-weight:700">💡 Pauillac 50,000瓶裝瓶（2024）：</span><br>
+                傳統人工：417小時 × 感官疲勞<br>
+                電子鼻：42小時 × 100%逐瓶檢測<br>
+                檢出1,847瓶(3.69%) TCA污染<br>
+                <span style="color:#c53030;font-weight:700">→ 避免損失 €277,050 × ROI 32.6倍</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- E-tongue -->
+          <div style="background:#f0fdf4;border:1.5px solid #10b981;border-radius:10px;padding:16px">
+            <div style="background:#065f46;color:#fff;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.9rem;margin-bottom:12px;display:inline-block">👅 電子舌 — 味覺精準量化</div>
+            <div style="background:#fff;border-radius:8px;padding:12px;border-left:4px solid #10b981">
+              <div style="font-size:.82rem;line-height:1.7;color:#444">五種基本味覺精確測定<br>單寧強度/酒體/澀感量化<br>平衡指數計算<br>預測準確度：<span style="font-weight:700">98.5%</span></div>
+              <div style="background:#f0fdf4;border-radius:6px;padding:8px;margin-top:8px;font-size:.8rem">
+                <span style="color:#065f46;font-weight:700">💡 Margaux三級莊調配（2024）：</span><br>
+                18基酒 × AI計算10,000種組合<br>
+                預測評分92 → 實際品鑑 <span style="font-weight:700">93分</span><br>
+                風格相似度：<span style="font-weight:700">94%</span>（過去10年平均）<br>
+                <span style="color:#c53030;font-weight:700">→ 決策時間 3週→5天，節省76%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats bar -->
+        <div style="background:linear-gradient(90deg,#312e81,#4f46e5);border-radius:8px;padding:12px 18px;display:flex;gap:0;justify-content:space-around;color:#fff;font-size:.82rem;text-align:center">
+          <div><div style="font-size:1.4rem;font-weight:700">×180</div><div style="opacity:.85">NIR效率提升</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">98.5%</div><div style="opacity:.85">假酒識別準確率</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">€277,050</div><div style="opacity:.85">電子鼻攔截損失</div></div>
+          <div style="border-left:1px solid rgba(255,255,255,.3)"></div>
+          <div><div style="font-size:1.4rem;font-weight:700">−76%</div><div style="opacity:.85">電子舌節省調配時間</div></div>
+        </div>
+
+        <!--ORIGINAL:
         <div class="quality-control-system">
           <h3>🔬 AI品質控制系統</h3>
-          <p class="intro-text">如果說釀酒是藝術，那麼品質控制就是科學。傳統品鑑依賴資深釀酒師的感官和經驗，而AI品控系統則像配備了「超感官」——能夠檢測人類無法感知的微量成分，預測未來的品質發展。</p>
-          
+          <p class="intro-text">如果說釀酒是藝術，那麼品質控制就是科學。</p>
           <div class="spectral-analysis-systems">
             <h4>🌈 光譜分析自動化系統</h4>
             <div class="spectral-technologies">
@@ -4412,7 +5169,6 @@ export const l313Part1Content = [
                 • <strong>在線分析：</strong>生產線上連續即時品質檢測<br>
                 • <strong>非破壞檢測：</strong>無需開瓶即可分析葡萄酒成分<br>
                 • <strong>多參數同測：</strong>一次掃描獲得20+個品質參數</p>
-                
                 <div class="example-box">
                   <h6>💡 NIR快速分析實戰案例：</h6>
                   <p><strong>Margaux列級莊的裝瓶前品質檢測（2024年6月）：</strong><br><br>
@@ -4770,6 +5526,8 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+        -->
+      </div>
     `,
     highlights: [
       {
@@ -4792,6 +5550,214 @@ export const l313Part1Content = [
     type: 'content',
     title: 'AI輔助調配系統：智能算法與虛擬實驗室',
     content: `
+      <div style="font-family:'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:0 4px;">
+        <!-- Header -->
+        <div style="background:linear-gradient(135deg,#4a044e 0%,#7c3aed 50%,#d97706 100%);border-radius:12px;padding:18px 24px;margin-bottom:16px;display:flex;align-items:center;gap:16px;">
+          <span style="font-size:2.2rem;">🎨</span>
+          <div>
+            <div style="color:#fde68a;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">AI BLENDING SYSTEM</div>
+            <div style="color:#fff;font-size:1.45rem;font-weight:700;line-height:1.2;">AI輔助調配系統｜智能算法 × 虛擬實驗室</div>
+            <div style="color:#e9d5ff;font-size:0.85rem;margin-top:6px;">從2.1億種組合到45分鐘決策·預測準確98%·「AI擔保陳年」</div>
+          </div>
+        </div>
+        <!-- 雙列：左=智能算法 右=虛擬實驗室 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+          <!-- 左欄：三個算法卡片 -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <!-- 多目標優化引擎 -->
+            <div style="background:linear-gradient(135deg,#2d1b69,#4c1d95);border-radius:10px;padding:14px;border-left:4px solid #a78bfa;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+                <span style="font-size:1.3rem;">🧮</span>
+                <span style="color:#e9d5ff;font-size:0.9rem;font-weight:700;">多目標優化引擎</span>
+                <span style="background:#7c3aed;color:#ede9fe;font-size:0.62rem;padding:2px 7px;border-radius:10px;margin-left:auto;">Pauillac案例</span>
+              </div>
+              <div style="background:rgba(167,139,250,0.12);border-radius:8px;padding:10px;">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:7px;">
+                  <div style="background:rgba(255,255,255,0.07);border-radius:6px;padding:6px;text-align:center;">
+                    <div style="color:#fcd34d;font-size:0.62rem;">理論組合</div>
+                    <div style="color:#fff;font-weight:700;font-size:1.05rem;">2.1億種</div>
+                    <div style="color:#c4b5fd;font-size:0.6rem;">64種基酒×185,000L</div>
+                  </div>
+                  <div style="background:rgba(255,255,255,0.07);border-radius:6px;padding:6px;text-align:center;">
+                    <div style="color:#fcd34d;font-size:0.62rem;">AI計算</div>
+                    <div style="color:#a3e635;font-weight:700;font-size:1.05rem;">45分鐘</div>
+                    <div style="color:#c4b5fd;font-size:0.6rem;">500萬方案</div>
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
+                  <div style="background:rgba(163,230,53,0.12);border-radius:5px;padding:6px;">
+                    <div style="color:#d9f99d;font-size:0.67rem;font-weight:600;">🏆 預測96分→實際95.5</div>
+                    <div style="color:#a3e635;font-size:0.62rem;">誤差僅0.5分</div>
+                  </div>
+                  <div style="background:rgba(251,191,36,0.12);border-radius:5px;padding:6px;">
+                    <div style="color:#fde68a;font-size:0.67rem;font-weight:600;">💰 +€600,000收益</div>
+                    <div style="color:#fcd34d;font-size:0.62rem;">利用率65%→73%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 約束條件智能處理 -->
+            <div style="background:linear-gradient(135deg,#1e3a5f,#1d4ed8);border-radius:10px;padding:14px;border-left:4px solid #60a5fa;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+                <span style="font-size:1.3rem;">⚙️</span>
+                <span style="color:#bfdbfe;font-size:0.9rem;font-weight:700;">約束條件智能處理</span>
+                <span style="background:#1e40af;color:#dbeafe;font-size:0.62rem;padding:2px 7px;border-radius:10px;margin-left:auto;">Saint-Émilion</span>
+              </div>
+              <div style="background:rgba(96,165,250,0.12);border-radius:8px;padding:10px;">
+                <div style="color:#93c5fd;font-size:0.7rem;margin-bottom:6px;font-weight:600;">亞洲訂製款：12硬約束＋8軟約束</div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-bottom:6px;">
+                  <div style="background:rgba(255,255,255,0.08);border-radius:5px;padding:5px;text-align:center;">
+                    <div style="color:#bfdbfe;font-size:0.62rem;">Merlot比例</div>
+                    <div style="color:#60a5fa;font-weight:700;">78%</div>
+                    <div style="color:#93c5fd;font-size:0.58rem;">≥60%要求</div>
+                  </div>
+                  <div style="background:rgba(255,255,255,0.08);border-radius:5px;padding:5px;text-align:center;">
+                    <div style="color:#bfdbfe;font-size:0.62rem;">成本控制</div>
+                    <div style="color:#34d399;font-weight:700;">€20.5/L</div>
+                    <div style="color:#93c5fd;font-size:0.58rem;">≤€22上限</div>
+                  </div>
+                  <div style="background:rgba(255,255,255,0.08);border-radius:5px;padding:5px;text-align:center;">
+                    <div style="color:#bfdbfe;font-size:0.62rem;">毛利率</div>
+                    <div style="color:#fbbf24;font-weight:700;">64.8%</div>
+                    <div style="color:#93c5fd;font-size:0.58rem;">翌年+15,000瓶</div>
+                  </div>
+                </div>
+                <div style="background:rgba(52,211,153,0.12);border-radius:5px;padding:5px;color:#6ee7b7;font-size:0.68rem;">
+                  ✅ 23分鐘求解·評分88.5分·開創「訂製化調配」新模式
+                </div>
+              </div>
+            </div>
+            <!-- 機器學習調配引擎 -->
+            <div style="background:linear-gradient(135deg,#134e4a,#065f46);border-radius:10px;padding:14px;border-left:4px solid #34d399;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+                <span style="font-size:1.3rem;">🤖</span>
+                <span style="color:#a7f3d0;font-size:0.9rem;font-weight:700;">機器學習調配引擎</span>
+                <span style="background:#065f46;color:#6ee7b7;font-size:0.62rem;padding:2px 7px;border-radius:10px;margin-left:auto;">Margaux驚喜</span>
+              </div>
+              <div style="background:rgba(52,211,153,0.1);border-radius:8px;padding:10px;">
+                <div style="color:#6ee7b7;font-size:0.7rem;margin-bottom:6px;font-weight:600;">挖掘25年數據：發現人類忽視的隱藏模式</div>
+                <div style="background:rgba(251,191,36,0.1);border-radius:6px;padding:6px;margin-bottom:6px;">
+                  <div style="color:#fde68a;font-size:0.68rem;font-weight:600;">🔍 反直覺推薦：地塊#11比例 3% → 22%</div>
+                  <div style="color:#fcd34d;font-size:0.62rem;margin-top:2px;">「違背30年經驗！」→ 釀酒師決定盲品對比</div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
+                  <div style="background:rgba(220,38,38,0.18);border-radius:5px;padding:5px;text-align:center;">
+                    <div style="color:#fca5a5;font-size:0.62rem;">傳統配方</div>
+                    <div style="color:#ef4444;font-weight:700;font-size:1rem;">90分</div>
+                  </div>
+                  <div style="background:rgba(52,211,153,0.22);border-radius:5px;padding:5px;text-align:center;">
+                    <div style="color:#a7f3d0;font-size:0.62rem;">AI配方</div>
+                    <div style="color:#34d399;font-weight:700;font-size:1rem;">94分 🏆</div>
+                  </div>
+                </div>
+                <div style="color:#a7f3d0;font-size:0.66rem;margin-top:5px;text-align:center;">
+                  Wine Advocate 95分（10年最高）｜期酒+25%｜+€12/瓶
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 右欄：虛擬實驗室 -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <!-- 虛擬調配實驗室 -->
+            <div style="background:linear-gradient(135deg,#78350f,#92400e);border-radius:10px;padding:14px;border-left:4px solid #fbbf24;flex:1;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+                <span style="font-size:1.3rem;">🥼</span>
+                <span style="color:#fde68a;font-size:0.9rem;font-weight:700;">虛擬調配實驗室</span>
+                <span style="background:#92400e;color:#fde68a;font-size:0.62rem;padding:2px 7px;border-radius:10px;margin-left:auto;">零風險</span>
+              </div>
+              <div style="background:rgba(251,191,36,0.12);border-radius:8px;padding:10px;">
+                <div style="color:#fde68a;font-size:0.7rem;margin-bottom:8px;font-weight:600;">Pessac-Léognan白酒穩定性預警</div>
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:7px;">
+                  <div style="background:rgba(255,255,255,0.08);border-radius:6px;padding:6px 8px;flex:1;text-align:center;">
+                    <div style="color:#fed7aa;font-size:0.62rem;">虛擬模擬</div>
+                    <div style="color:#fbbf24;font-weight:700;font-size:1.05rem;">2分鐘</div>
+                    <div style="color:#fdba74;font-size:0.6rem;">傳統需1-2個月</div>
+                  </div>
+                  <div style="font-size:1.2rem;color:#fbbf24;">→</div>
+                  <div style="background:rgba(239,68,68,0.22);border-radius:6px;padding:6px 8px;flex:1;text-align:center;">
+                    <div style="color:#fca5a5;font-size:0.62rem;">⚠️ 警報發現</div>
+                    <div style="color:#f87171;font-weight:700;font-size:0.88rem;">蛋白質沉澱</div>
+                    <div style="color:#fca5a5;font-size:0.6rem;">風險68%</div>
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
+                  <div style="background:rgba(52,211,153,0.18);border-radius:5px;padding:6px;">
+                    <div style="color:#6ee7b7;font-size:0.66rem;font-weight:600;">✅ 澄清預處理</div>
+                    <div style="color:#a7f3d0;font-size:0.62rem;">成本僅€180</div>
+                    <div style="color:#6ee7b7;font-size:0.62rem;">風險降至5%</div>
+                  </div>
+                  <div style="background:rgba(239,68,68,0.15);border-radius:5px;padding:6px;">
+                    <div style="color:#fca5a5;font-size:0.66rem;font-weight:600;">❌ 若無預警</div>
+                    <div style="color:#f87171;font-size:0.62rem;">10,000L混濁</div>
+                    <div style="color:#ef4444;font-size:0.65rem;font-weight:700;">損失€120,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 50年陳年預測 -->
+            <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:10px;padding:14px;border-left:4px solid #818cf8;flex:1;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+                <span style="font-size:1.3rem;">⏳</span>
+                <span style="color:#c7d2fe;font-size:0.9rem;font-weight:700;">50年陳年潛力預測</span>
+                <span style="background:#312e81;color:#c7d2fe;font-size:0.62rem;padding:2px 7px;border-radius:10px;margin-left:auto;">Pomerol</span>
+              </div>
+              <div style="background:rgba(129,140,248,0.12);border-radius:8px;padding:10px;">
+                <div style="color:#c7d2fe;font-size:0.7rem;margin-bottom:7px;font-weight:600;">3個配方AI陳年預測對比</div>
+                <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:7px;">
+                  <div style="display:flex;align-items:center;gap:5px;background:rgba(220,38,38,0.18);border-radius:5px;padding:5px 7px;">
+                    <span style="color:#ef4444;font-size:0.68rem;min-width:40px;">方案A</span>
+                    <div style="flex:1;background:rgba(255,255,255,0.1);border-radius:3px;height:5px;overflow:hidden;">
+                      <div style="width:59%;height:100%;background:#ef4444;border-radius:3px;"></div>
+                    </div>
+                    <span style="color:#fca5a5;font-size:0.62rem;">89分·封閉25年</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:5px;background:rgba(52,211,153,0.18);border-radius:5px;padding:5px 7px;">
+                    <span style="color:#34d399;font-size:0.68rem;min-width:40px;">方案B ✓</span>
+                    <div style="flex:1;background:rgba(255,255,255,0.1);border-radius:3px;height:5px;overflow:hidden;">
+                      <div style="width:91%;height:100%;background:#34d399;border-radius:3px;"></div>
+                    </div>
+                    <span style="color:#6ee7b7;font-size:0.62rem;">91分·30年巔峰</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:5px;background:rgba(239,68,68,0.12);border-radius:5px;padding:5px 7px;">
+                    <span style="color:#f87171;font-size:0.68rem;min-width:40px;">方案C ✗</span>
+                    <div style="flex:1;background:rgba(255,255,255,0.1);border-radius:3px;height:5px;overflow:hidden;">
+                      <div style="width:20%;height:100%;background:#f87171;border-radius:3px;"></div>
+                    </div>
+                    <span style="color:#fca5a5;font-size:0.62rem;">30年後不適飲</span>
+                  </div>
+                </div>
+                <div style="background:rgba(251,191,36,0.12);border-radius:6px;padding:7px;text-align:center;">
+                  <div style="color:#fde68a;font-size:0.68rem;font-weight:600;">限量6,660瓶｜首批3,000瓶2週售罄</div>
+                  <div style="color:#fcd34d;font-size:0.62rem;margin-top:2px;">每瓶附AI陳年曲線｜「AI擔保陳年承諾」</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 底部統計條 -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+          <div style="background:linear-gradient(135deg,#4c1d95,#6d28d9);border-radius:8px;padding:10px;text-align:center;">
+            <div style="color:#fbbf24;font-size:1.4rem;font-weight:800;">85%</div>
+            <div style="color:#ede9fe;font-size:0.7rem;margin-top:2px;">決策時間節省</div>
+            <div style="color:#c4b5fd;font-size:0.62rem;">從6週→3天</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#1e3a5f,#1d4ed8);border-radius:8px;padding:10px;text-align:center;">
+            <div style="color:#60a5fa;font-size:1.4rem;font-weight:800;">98%</div>
+            <div style="color:#bfdbfe;font-size:0.7rem;margin-top:2px;">預測準確度</div>
+            <div style="color:#93c5fd;font-size:0.62rem;">500萬方案分析</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#78350f,#92400e);border-radius:8px;padding:10px;text-align:center;">
+            <div style="color:#fbbf24;font-size:1.4rem;font-weight:800;">€120,000</div>
+            <div style="color:#fde68a;font-size:0.7rem;margin-top:2px;">虛擬實驗室</div>
+            <div style="color:#fdba74;font-size:0.62rem;">每次避免損失</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#134e4a,#065f46);border-radius:8px;padding:10px;text-align:center;">
+            <div style="color:#34d399;font-size:1.4rem;font-weight:800;">+5分</div>
+            <div style="color:#a7f3d0;font-size:0.7rem;margin-top:2px;">WA評分提升</div>
+            <div style="color:#6ee7b7;font-size:0.62rem;">AI發現隱藏配方</div>
+          </div>
+        </div>
+        <!--ORIGINAL:
       <div class="chapter-content">
         <div class="ai-blending-system">
           <h3>🎨 AI輔助調配系統</h3>
@@ -4956,6 +5922,8 @@ export const l313Part1Content = [
           </div>
         </div>
       </div>
+        -->
+      </div>
     `,
     highlights: [
       {
@@ -4969,6 +5937,38 @@ export const l313Part1Content = [
         icon: '🥼',
         title: '虛擬實驗',
         content: '2分鐘預測陳年50年品質，避免€120,000損失，零風險調配'
+      }
+    ]
+  },
+
+  // 第三章知識檢測
+  {
+    type: 'interactive-quiz',
+    title: '第三章知識檢測：人工智能在釀造中的應用',
+    questions: [
+      {
+        id: 1,
+        question: 'AI調配系統如何輔助釀酒師？',
+        options: [
+          '完全替代釀酒師決策',
+          '分析數萬種組合提供建議，最終由釀酒師決定',
+          '只用於記錄數據',
+          '隨機生成方案'
+        ],
+        correct: 1,
+        explanation: 'AI通過分析歷史數據和模擬數萬種調配組合，提供科學建議，但最終決策權仍在釀酒師手中，實現AI與人類經驗的完美結合。'
+      },
+      {
+        id: 2,
+        question: 'AI預測陳年潛力的準確率可達？',
+        options: [
+          '50%左右',
+          '85-92%',
+          '100%完美',
+          '無法預測'
+        ],
+        correct: 1,
+        explanation: '通過機器學習分析化學成分、感官特性和歷史陳年數據，AI預測陳年潛力的準確率可達85-92%，為投資和庫存管理提供科學依據。'
       }
     ]
   },

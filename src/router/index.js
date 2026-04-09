@@ -32,12 +32,38 @@ import { authState, authInitPromise, authActions } from '../stores/authStore.js'
 // ============================================================
 
 const routes = [
+  // ─── 平台首頁（公開，無需登入）────────────────────────────────────────────
   {
     path: '/',
+    name: 'PlatformHome',
+    component: () => import('../components/PlatformHome.vue'),
+    meta: { public: true }
+  },
+
+  // ─── 波爾多課程主頁（原 '/' Home）──────────────────────────────────────────
+  {
+    path: '/bordeaux',
     name: 'Home',
     component: () => import('../components/LevelSelection.vue'),
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
+
+  // ─── 使用者儀表板 ───────────────────────────────────────────────────────────
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: () => import('../components/UserDashboard.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
+  // ─── 付款結果頁（Stripe success_url 跳回）────────────────────────────────
+  {
+    path: '/payment/result',
+    name: 'PaymentResult',
+    component: () => import('../components/PaymentResult.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
   {
     path: '/login',
     name: 'Login',
@@ -129,6 +155,11 @@ router.beforeEach(async (to, from, next) => {
   // 1. 檢查是否需要登入
   if (to.meta.requiresAuth && !user) {
     return next({ name: 'Login', query: { redirect: to.fullPath } })
+  }
+
+  // 1b. 已登入訪問 PlatformHome → 導向波爾多課程主頁
+  if (to.name === 'PlatformHome' && user) {
+    return next({ name: 'Home' })
   }
 
   // 2. 課程路由的動態 Tier 判斷

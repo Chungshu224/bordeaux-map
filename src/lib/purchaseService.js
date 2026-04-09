@@ -1,0 +1,152 @@
+/**
+ * purchaseService.js
+ * 購買記錄查詢工具（前端只讀）
+ * 寫入由後端 webhook（api/stripe-webhook.js）負責
+ */
+import { supabase } from './supabaseClient.js'
+
+// ─── 定義常數 ─────────────────────────────────────────────────────────────────
+
+export const COURSES = {
+  bordeaux: {
+    id: 'bordeaux',
+    name: '波爾多葡萄酒',
+    nameEn: 'Bordeaux Wine',
+    flag: '🏰',
+    region: 'France · Bordeaux',
+    available: true
+  },
+  bourgogne: {
+    id: 'bourgogne',
+    name: '勃根地葡萄酒',
+    nameEn: 'Bourgogne Wine',
+    flag: '🍇',
+    region: 'France · Bourgogne',
+    available: false
+  },
+  italy: {
+    id: 'italy',
+    name: '義大利葡萄酒',
+    nameEn: 'Italian Wine',
+    flag: '🇮🇹',
+    region: 'Italy',
+    available: false
+  }
+}
+
+export const TIERS = {
+  free: {
+    id: 'free',
+    name: '免費體驗',
+    price: { monthly: 0, yearly: 0 },
+    features: ['Level 1 基礎入門', '基本地圖瀏覽'],
+    locked: ['Level 2–4 進階課程', '互動練習中心', '進階地圖圖層', '品飲筆記本']
+  },
+  basic: {
+    id: 'basic',
+    name: '完整課程',
+    price: { monthly: 290, yearly: 1800 },
+    yearlyNote: '相當於 NT$150/月，年省 NT$1,680',
+    features: ['Level 1–4 全部課程', '互動練習中心（4種遊戲）', '全產區地圖'],
+    locked: ['進階地圖圖層（地質/氣候）', '知名酒莊標記', '品飲筆記本']
+  },
+  premium: {
+    id: 'premium',
+    name: '頂級方案',
+    price: { monthly: 590, yearly: 3600 },
+    yearlyNote: '相當於 NT$300/月，年省 NT$3,480',
+    features: [
+      'Level 1–4 全部課程',
+      '互動練習中心（4種遊戲）',
+      '全產區地圖',
+      '進階地圖圖層（等高線/地質/氣候）',
+      '知名酒莊標記',
+      '品飲筆記本'
+    ],
+    locked: []
+  }
+}
+
+export const BILLING_PERIODS = {
+  monthly: { label: '月繳', unit: '月' },
+  yearly:  { label: '年繳', unit: '年' }
+}
+
+// ─── 查詢函式 ─────────────────────────────────────────────────────────────────
+
+/**
+ * 取得使用者在特定課程的有效存取等級
+ * @param {string} userId
+ * @param {string} courseId - 'bordeaux' | 'bourgogne' | 'italy'
+ * @returns {Promise<'free'|'basic'|'premium'>}
+ */
+export async function getCourseAccess(userId, courseId) {
+  if (!supabase || !userId) return 'free'
+
+  try {
+    const { data, error } = await supabase.rpc('get_user_course_access', {
+      p_user_id: userId,
+      p_course_id: courseId
+    })
+    if (error || !data?.length) return 'free'
+    return data[0].tier
+  } catch {
+    return 'free'
+  }
+}
+
+/**
+ * 取得使用者所有購買記錄
+ * @param {string} userId
+ * @returns {Promise<Array>}
+ */
+export async function getUserPurchases(userId) {
+  if (!supabase || !userId) return []
+
+  try {
+    const { data, error } = await supabase.rpc('get_user_all_purchases', {
+      p_user_id: userId
+    })
+    if (error) return []
+    return data || []
+  } catch {
+    return []
+  }
+}
+
+/**
+ * 建立 Stripe Checkout Session（訂閱模式）
+ * @param {{ courseId, tier, billingPeriod, userId, userEmail }} params
+ * @returns {Promise<{ sessionUrl: string, sessionId: string }>}
+ */
+export async function initiateCheckout({ courseId, tier, billingPeriod, userId, userEmail }) {
+  const res = await fetch('/api/stripe-checkout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ courseId, tier, billingPeriod, userId, userEmail })
+  })
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}))
+    throw new Error(err.message || `Checkout failed (${res.status})`)
+  }
+  return await res.json()
+}
+
+/**
+ * 格式化金額顯示
+ */
+export function formatPrice(amount, currency = 'TWD') {
+  if (amount === 0) return '免費'
+  if (currency === 'TWD') return `NT$ ${amount.toLocaleString()}`
+  return `${currency} ${amount.toLocaleString()}`
+}
+
+/**
+ * 格式化日期顯示
+ */
+export function formatDate(dateStr) {
+  if (!dateStr) return '—'
+  return new Date(dateStr).toLocaleDateString('zh-TW', {
+    year: 'numeric', month: '2-digit', day: '2-digit'
+  })
+}
