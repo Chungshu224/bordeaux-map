@@ -73,13 +73,16 @@ export async function createReply({ postId, userId, displayName, content, avatar
 
 // ─── 載入當前使用者的論壇用個人資料 ──────────────────────────────────────────
 export async function loadMyForumProfile(userId) {
-  if (!userId) return { avatarUrl: null }
+  if (!userId) return { avatarUrl: null, topAchievement: null }
   const { data } = await supabase
     .from('profiles')
-    .select('avatar_url')
+    .select('avatar_url, top_achievement')
     .eq('id', userId)
     .single()
-  return { avatarUrl: data?.avatar_url || null }
+  return {
+    avatarUrl:      data?.avatar_url      || null,
+    topAchievement: data?.top_achievement || null
+  }
 }
 
 export async function deleteReply(id) {

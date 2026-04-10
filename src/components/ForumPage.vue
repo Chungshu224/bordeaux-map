@@ -118,7 +118,8 @@ const showNewPost = ref(false)
 const submitting  = ref(false)
 const postError   = ref('')
 const newPost     = ref({ title: '', content: '', category: 'general' })
-const myAvatarUrl = ref(null)
+const myAvatarUrl        = ref(null)
+const myTopAchievement   = ref(null)
 
 async function loadPosts() {
   loading.value = true
@@ -152,7 +153,7 @@ async function submitPost() {
       content:        newPost.value.content.trim(),
       category:       newPost.value.category,
       avatarUrl:      myAvatarUrl.value,
-      topAchievement: globalAchievementManager.getTopAchievement()
+      topAchievement: myTopAchievement.value
     })
     showNewPost.value = false
     newPost.value = { title: '', content: '', category: 'general' }
@@ -170,7 +171,10 @@ onMounted(async () => {
   await loadPosts()
   if (authUser.value) {
     const p = await loadMyForumProfile(authUser.value.id)
-    myAvatarUrl.value = p.avatarUrl
+    myAvatarUrl.value      = p.avatarUrl
+    myTopAchievement.value = p.topAchievement
+      || globalAchievementManager.getTopAchievement()
+      || '🍷 學員'
   }
 })
 </script>

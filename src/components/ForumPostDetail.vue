@@ -121,7 +121,8 @@ const replies    = ref([])
 const newReply   = ref('')
 const replyError = ref('')
 const submitting = ref(false)
-const myAvatarUrl = ref(null)
+const myAvatarUrl      = ref(null)
+const myTopAchievement = ref(null)
 
 async function load() {
   loading.value = true
@@ -162,7 +163,7 @@ async function submitReply() {
       displayName:    authActions.getDisplayName(),
       content:        newReply.value.trim(),
       avatarUrl:      myAvatarUrl.value,
-      topAchievement: globalAchievementManager.getTopAchievement()
+      topAchievement: myTopAchievement.value
     })
     replies.value.push(created)
     post.value.reply_count = (post.value.reply_count || 0) + 1
@@ -178,7 +179,10 @@ onMounted(async () => {
   await load()
   if (authUser.value) {
     const p = await loadMyForumProfile(authUser.value.id)
-    myAvatarUrl.value = p.avatarUrl
+    myAvatarUrl.value      = p.avatarUrl
+    myTopAchievement.value = p.topAchievement
+      || globalAchievementManager.getTopAchievement()
+      || '🍷 學員'
   }
 })
 </script>
