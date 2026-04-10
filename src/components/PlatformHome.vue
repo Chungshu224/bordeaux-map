@@ -256,8 +256,9 @@
         </div>
 
         <div class="fp-actions">
-          <button class="fp-btn outline" @click="router.push('/forum')">查看討論區 →</button>
+          <button class="fp-btn outline" @click="authUser ? router.push('/forum') : router.push({ path: '/login', query: { redirect: '/forum' } })">查看討論區 →</button>
           <button v-if="authUser" class="fp-btn primary" @click="router.push('/forum')">＋ 發起討論</button>
+          <button v-else class="fp-btn primary" @click="router.push({ path: '/login', query: { redirect: '/forum' } })">登入後參與討論</button>
         </div>
       </div>
     </section>

@@ -121,18 +121,18 @@ const routes = [
     meta: { public: true }
   },
 
-  // ─── 學員討論區（公開，無需登入也可瀏覽）───────────────────────────────────
+  // ─── 學員討論區（需登入才能瀏覽與發言）────────────────────────────────────────
   {
     path: '/forum',
     name: 'Forum',
     component: () => import('../components/ForumPage.vue'),
-    meta: { public: true }
+    meta: { requiresAuth: true, minimumTier: 'free' }
   },
   {
     path: '/forum/:id',
     name: 'ForumPost',
     component: () => import('../components/ForumPostDetail.vue'),
-    meta: { public: true }
+    meta: { requiresAuth: true, minimumTier: 'free' }
   }
 ]
 
