@@ -8,5 +8,12 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 
 export const supabase = (supabaseUrl && supabaseAnonKey)
-  ? createClient(supabaseUrl, supabaseAnonKey)
+  ? createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        lock: (name, acquireTimeout, fn) => {
+          // 使用非排他性 lock，避免多分頁衝突錯誤
+          return fn()
+        }
+      }
+    })
   : null
