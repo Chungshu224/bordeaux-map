@@ -6,6 +6,7 @@ export const CATEGORY_LABELS = {
   level2:       '📘 Level 2',
   level3:       '📙 Level 3',
   level4:       '📕 Level 4',
+  gamehub:      '🎮 互動練習區',
   tasting:      '🍷 品飲心得',
   'wine-pairing': '🍽️ 餐酒搭配'
 }

@@ -10,7 +10,7 @@ create table if not exists public.forum_posts (
   title        text        not null,
   content      text        not null,
   category     text        not null default 'general'
-               check (category in ('general','level1','level2','level3','level4','tasting','wine-pairing')),
+               check (category in ('general','level1','level2','level3','level4','gamehub','tasting','wine-pairing')),
   reply_count  integer     not null default 0,
   is_pinned    boolean     not null default false,
   created_at   timestamptz default now()
