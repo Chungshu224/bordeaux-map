@@ -1,5 +1,12 @@
 <template>
   <div class="main-layout">
+
+    <!-- 懸浮導覽列 -->
+    <div class="map-nav-bar">
+      <button class="map-nav-btn" @click="router.push('/bordeaux')">← 返回課程</button>
+      <span class="map-nav-title">🗺️ 探索地圖</span>
+      <button class="map-nav-btn ghost" @click="router.push('/')">🏠 首頁</button>
+    </div>
     <MapSection
       :activeAOC="activeAOC"
       :regionInfo="regionInfo"
@@ -42,10 +49,13 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import AOCList from './AOCList.vue'
 import MapSection from './MapSection.vue'
 import { authState, authActions } from '../stores/authStore.js'
 import { TIER_WEIGHT } from '../router/index.js'
+
+const router = useRouter()
 
 // ── 訂閱等級工具 ──
 const getUserTier = () => authActions.getEffectiveTier()
@@ -273,6 +283,50 @@ html, body {
   right: 0;
   bottom: 0;
 }
+
+/* 懸浮導覽列 */
+.map-nav-bar {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(15, 10, 5, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 30px;
+  padding: 6px 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.map-nav-title {
+  color: #d4af37;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.map-nav-btn {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: rgba(114, 47, 55, 0.85);
+  color: #fff;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.map-nav-btn:hover { background: rgba(155, 58, 69, 1); }
+.map-nav-btn.ghost {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #e0d8cc;
+}
+.map-nav-btn.ghost:hover { background: rgba(255,255,255,0.16); }
 
 .mobile-aoc-backdrop {
   position: absolute;
