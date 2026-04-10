@@ -20,16 +20,16 @@
         </div>
         <!-- 使用者面板 -->
         <div class="user-panel">
-          <button class="user-action-btn home" @click="router.push('/')">🏠 首頁</button>
           <template v-if="authUser">
-            <div class="tier-badge" :class="`tier-${userTier}`">
-              <span class="tier-icon">{{ tierInfo.icon }}</span>
-              <span class="tier-label">{{ tierInfo.label }}</span>
-            </div>
             <div class="user-avatar">👤</div>
             <div class="user-info">
               <span class="user-name">{{ displayName }}</span>
+              <div class="tier-badge" :class="`tier-${userTier}`">
+                <span class="tier-icon">{{ tierInfo.icon }}</span>
+                <span class="tier-label">{{ tierInfo.label }}</span>
+              </div>
               <div class="user-btns">
+                <button class="user-action-btn home" @click="router.push('/')">🏠 首頁</button>
                 <button class="user-action-btn settings" @click="$emit('settings')">⚙️ 設定</button>
                 <button class="user-action-btn logout" @click="handleLogout">登出</button>
               </div>
