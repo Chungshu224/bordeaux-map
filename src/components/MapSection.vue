@@ -1,7 +1,13 @@
 <template>
   <section class="map-section">
     <div class="map-header">
+      <div class="map-header-left">
+        <button class="map-hdr-btn" @click="router.push('/bordeaux')">← 返回課程</button>
+      </div>
       <h1>Bordeaux Wine Region Map</h1>
+      <div class="map-header-right">
+        <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
+      </div>
     </div>
     <div
       class="map-info-bar"
@@ -270,6 +276,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
@@ -284,6 +291,8 @@ import { supabase } from '@/lib/supabaseClient.js'
 import { authState, authActions } from '@/stores/authStore.js'
 import { useDeviceDetection } from '@/utils/deviceDetection.js'
 import { TIER_WEIGHT } from '@/router/index.js'
+
+const router = useRouter()
 
 // 接收來自父組件的屬性
 const props = defineProps({
@@ -2394,17 +2403,50 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 6px 16px;
   z-index: 10;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.map-header-left,
+.map-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+}
+.map-header-right { justify-content: flex-end; }
+
+.map-hdr-btn {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: #8B0000;
+  color: #fff;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.map-hdr-btn:hover { background: #a00; }
+.map-hdr-btn.ghost {
+  background: transparent;
+  border: 1.5px solid #8B0000;
+  color: #8B0000;
+}
+.map-hdr-btn.ghost:hover { background: rgba(139,0,0,0.06); }
+
 .map-header h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #8B0000;
+  text-align: center;
+  flex: 1;
 }
 
 .map-info-bar {
