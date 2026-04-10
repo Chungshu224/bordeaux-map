@@ -16,7 +16,7 @@
       :selectedLevel="selectedLevel"
       @backToHome="backToLevelSelection"
       @goToRegister="goToRegister"
-      @loginSuccess="backToLevelSelection"
+      @loginSuccess="goToHome"
       @goToLogin="goToLogin"
       @selectLevel="enterLearningMode"
       @exploreMode="enterExploreMode"
@@ -120,6 +120,10 @@ const enterNotebookMode = () => {
 const backToLevelSelection = () => {
   router.push('/bordeaux')
   console.log('返回等級選擇頁面')
+}
+
+const goToHome = () => {
+  router.push('/')
 }
 
 const goToRegister = () => {
