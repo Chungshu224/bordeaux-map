@@ -44,8 +44,8 @@ const goHome = () => {
 
 <template>
   <div class="bourgogne-page">
-    <!-- 頂部導覽列 -->
-    <nav class="bourgogne-nav">
+    <!-- 頂部導覽列（LevelSelector 有自己的 brand-header，nav 已隱藏） -->
+    <nav class="bourgogne-nav" style="display:none">
       <button class="nav-back-btn" @click="goHome">
         <span>🏠</span> 返回首頁
       </button>
@@ -82,7 +82,7 @@ const goHome = () => {
 <style scoped>
 .bourgogne-page {
   min-height: 100vh;
-  background: #ffffff;
+  background: transparent;
   display: flex;
   flex-direction: column;
 }
