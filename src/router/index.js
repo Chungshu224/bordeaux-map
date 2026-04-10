@@ -157,11 +157,6 @@ router.beforeEach(async (to, from, next) => {
     return next({ name: 'Login', query: { redirect: to.fullPath } })
   }
 
-  // 1b. 已登入訪問 PlatformHome → 導向波爾多課程主頁
-  if (to.name === 'PlatformHome' && user) {
-    return next({ name: 'Home' })
-  }
-
   // 2. 課程路由的動態 Tier 判斷
   //    /learning?level=1 → free；其餘 level 2~4 → basic
   let requiredTier = to.meta.minimumTier

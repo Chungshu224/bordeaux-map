@@ -36,7 +36,23 @@
           系統化學習波爾多、勃根地、義大利頂級葡萄酒<br>
           互動地圖・AI練習題・品飲筆記，一個平台全搞定
         </p>
-        <div class="hero-cta">
+        <!-- 已登入：顯示課程入口 -->
+        <div v-if="authUser" class="hero-cta logged-in-cta">
+          <div class="course-entry-title">歡迎回來，{{ displayName }}！選擇課程繼續學習：</div>
+          <div class="course-entry-btns">
+            <button class="cta-course bordeaux-btn" @click="router.push('/bordeaux')">
+              🏰 波爾多課程
+            </button>
+            <button class="cta-course coming-btn" disabled>
+              🍇 勃根地（即將推出）
+            </button>
+            <button class="cta-course coming-btn" disabled>
+              🇮🇹 義大利（即將推出）
+            </button>
+          </div>
+        </div>
+        <!-- 未登入：原本的 CTA -->
+        <div v-else class="hero-cta">
           <button class="cta-primary" @click="handleStartFree">
             🚀 免費開始學習
           </button>
@@ -490,6 +506,31 @@ const faqs = [
   transition: all .2s;
 }
 .cta-secondary:hover { background: rgba(212,175,55,0.08); }
+/* 已登入課程入口 */
+.logged-in-cta { flex-direction: column; align-items: center; }
+.course-entry-title { color: #d4af37; font-size: 1rem; margin-bottom: 16px; }
+.course-entry-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.cta-course {
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  border: none;
+}
+.bordeaux-btn {
+  background: linear-gradient(135deg, #722f37, #9b3a45);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(114,47,55,0.5);
+}
+.bordeaux-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(114,47,55,0.6); }
+.coming-btn {
+  background: rgba(255,255,255,0.05);
+  color: #7a6a5a;
+  border: 1.5px solid rgba(255,255,255,0.1);
+  cursor: not-allowed;
+}
 .hero-stats { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
 .stat-item { text-align: center; padding: 0 12px; }
 .stat-num { display: block; font-size: 2rem; font-weight: 800; color: #d4af37; line-height: 1; }
