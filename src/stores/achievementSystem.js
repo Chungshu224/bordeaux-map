@@ -358,6 +358,10 @@ export const achievementState = reactive({
     level3Completed: false,
     level4Completed: false,
     allCoursesCompleted: false,
+    level1Count: 0,
+    level2Count: 0,
+    level3Count: 0,
+    level4Count: 0,
     averageScore: 0,
     
     // 地圖探索統計
@@ -704,6 +708,10 @@ export class AchievementManager {
       level3Completed: false,
       level4Completed: false,
       allCoursesCompleted: false,
+      level1Count: 0,
+      level2Count: 0,
+      level3Count: 0,
+      level4Count: 0,
       averageScore: 0,
       exploredRegions: 0,
       exploredRegionsList: [],
@@ -780,27 +788,49 @@ export class AchievementManager {
   }
 }
 
+// 各 Level 的課程總數
+const LEVEL_TOTAL = { 1: 8, 2: 9, 3: 12, 4: 12 }
+
 // 工具函數：計算成就進度
 function calculateAchievementProgress(achievement, userStats) {
-  // 根據不同成就類型計算進度百分比
+  const id = achievement.id
+
+  // Level 認證：用各等級已完成課程數計算
+  if (id === 'level-1-complete') {
+    if (userStats.level1Completed) return 100
+    return Math.min(Math.round((userStats.level1Count / LEVEL_TOTAL[1]) * 100), 99)
+  }
+  if (id === 'level-2-complete') {
+    if (userStats.level2Completed) return 100
+    return Math.min(Math.round((userStats.level2Count / LEVEL_TOTAL[2]) * 100), 99)
+  }
+  if (id === 'level-3-complete') {
+    if (userStats.level3Completed) return 100
+    return Math.min(Math.round((userStats.level3Count / LEVEL_TOTAL[3]) * 100), 99)
+  }
+  if (id === 'master-sommelier') {
+    if (userStats.level4Completed) return 100
+    return Math.min(Math.round((userStats.level4Count / LEVEL_TOTAL[4]) * 100), 99)
+  }
+
+  // 其餘數值型條件
   const condition = achievement.condition.toString()
-  
-  // 簡化的進度計算邏輯
+
   if (condition.includes('completedLessons')) {
     const required = parseInt(condition.match(/\d+/)?.[0]) || 1
     return Math.min((userStats.completedLessons / required) * 100, 100)
   }
-  
+
   if (condition.includes('exploredRegions')) {
     const required = parseInt(condition.match(/\d+/)?.[0]) || 1
     return Math.min((userStats.exploredRegions / required) * 100, 100)
   }
-  
+
   if (condition.includes('perfectScores')) {
     const required = parseInt(condition.match(/\d+/)?.[0]) || 1
     return Math.min((userStats.perfectScores / required) * 100, 100)
   }
-  
+
   // 預設返回0或100（已完成或未完成）
   return achievement.condition(userStats) ? 100 : 0
 }

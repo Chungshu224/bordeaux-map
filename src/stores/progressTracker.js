@@ -489,6 +489,12 @@ export const progressActions = {
       const level3Completed = isLevelDone(3)
       const level4Completed = isLevelDone(4)
 
+      // 各等級已完成課程數（供成就進度條使用）
+      const level1Count = LEVEL_LESSONS[1].filter(id => isLessonComplete(lp[id])).length
+      const level2Count = LEVEL_LESSONS[2].filter(id => isLessonComplete(lp[id])).length
+      const level3Count = LEVEL_LESSONS[3].filter(id => isLessonComplete(lp[id])).length
+      const level4Count = LEVEL_LESSONS[4].filter(id => isLessonComplete(lp[id])).length
+
       // 測驗統計
       const allQuizzes = Object.values(progressState.quizHistory).flat()
       const totalQuizzes = allQuizzes.length
@@ -519,6 +525,10 @@ export const progressActions = {
         level2Completed,
         level3Completed,
         level4Completed,
+        level1Count,
+        level2Count,
+        level3Count,
+        level4Count,
         allCoursesCompleted: level1Completed && level2Completed && level3Completed && level4Completed,
         totalQuizzes,
         perfectScores,
