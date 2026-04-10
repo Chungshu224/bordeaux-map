@@ -626,7 +626,7 @@ onMounted(loadSettings)
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 8px;
-  color: #e8e0ce;
+  color: #1a1a1a;
   font-size: 0.92rem;
   resize: vertical;
   font-family: inherit;
