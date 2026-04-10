@@ -398,6 +398,7 @@
 import { ref, computed } from 'vue'
 import { learningState, learningActions } from '../stores/learningStore.js'
 import { authState, authActions } from '../stores/authStore.js'
+import { useRouter } from 'vue-router'
 import LearningStatsMini from './LearningStatsMini.vue'
 import LearningProgress from './LearningProgress.vue'
 import AchievementsMini from './AchievementsMini.vue'
@@ -435,8 +436,11 @@ const TIER_INFO = {
 const userTier = computed(() => authActions.getEffectiveTier())
 const tierInfo = computed(() => TIER_INFO[userTier.value])
 
+const router = useRouter()
+
 async function handleLogout() {
   await authActions.signOut()
+  router.push('/')
 }
 
 // 裝置相關計算屬性
