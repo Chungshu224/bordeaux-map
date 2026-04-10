@@ -1,0 +1,545 @@
+{
+  "moduleId": "intermediate-m5",
+  "title": "一級園精選分析",
+  "description": "探索重要一級園（Premier Cru）及其與特級園的差異與投資價值",
+  "lessons": [
+    {
+      "id": "m5-l1",
+      "title": "一級園制度解析",
+      "duration": "20分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "一級園制度",
+          "subtitle": "Lesson 1 - 20分鐘",
+          "description": "了解一級園的定義、標準與分級邏輯"
+        },
+        {
+          "type": "content",
+          "title": "什麼是一級園（Premier Cru）？",
+          "content": "一級園是布根地分級制度的第二級，代表優質但未達特級園標準的地塊。全布根地約有640個一級園，總面積約3,500公頃，佔總產區的10%左右。"
+        },
+        {
+          "type": "list",
+          "title": "🏅 一級園特點",
+          "points": [
+            "酒標標示：村莊名 + 一級園名稱",
+            "例如：「Gevrey-Chambertin 1er Cru Les Cazetiers」",
+            "也可僅標「村莊名 + Premier Cru」（混合多地塊）",
+            "產量限制：每公頃40-48百升（比特級園略高）",
+            "價格：通常是村級酒的2-5倍",
+            "陳年潛力：8-20年（依地塊與年份）"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "一級園 vs 特級園",
+          "leftTitle": "一級園",
+          "leftPoints": [
+            "640個地塊",
+            "占10%產區",
+            "需標示村莊名",
+            "產量稍高",
+            "價格較親民",
+            "陳年8-20年"
+          ],
+          "rightTitle": "特級園",
+          "rightPoints": [
+            "33個地塊",
+            "佔2%產區",
+            "不需標村莊名",
+            "產量最嚴格",
+            "價格昂貴",
+            "陳年20-50年"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "🌟 一級園的價值",
+          "points": [
+            "性價比：品質接近特級園但價格合理",
+            "多樣性：每個村莊都有獨特一級園",
+            "可及性：比特級園更容易購得",
+            "投資潛力：頂級生產者的一級園升值快",
+            "飲用樂趣：通常比特級園更早適飲"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "為何有些一級園未升級特級園？",
+          "content": "原因包括：歷史因素（劃分時的政治考量）、面積太小不具代表性、風土略遜一籌但仍優秀、生產者品質不夠穩定。但許多一級園（如默爾索Les Perrières）品質實已達特級園水準。"
+        }
+      ]
+    },
+    {
+      "id": "m5-l2",
+      "title": "夜丘頂級一級園",
+      "duration": "22分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "夜丘頂級一級園",
+          "subtitle": "Lesson 2 - 22分鐘",
+          "description": "探索夜丘最值得關注的一級園"
+        },
+        {
+          "type": "content",
+          "title": "熱夫雷-香貝丹一級園",
+          "content": "熱夫雷擁有26個一級園，總面積約80公頃。雖然特級園光芒耀眼，但頂級一級園的品質不容小覷。"
+        },
+        {
+          "type": "list",
+          "title": "🏆 熱夫雷最佳一級園",
+          "points": [
+            "Clos Saint-Jacques - 最接近特級園，緊鄰Chambertin",
+            "Les Cazetiers - 優雅細膩，位於高坡",
+            "Lavaux Saint-Jacques - 強勁有力",
+            "Aux Combottes - 小而精，緊鄰特級園",
+            "Estournelles Saint-Jacques - 礦物感明顯",
+            "價格：Clos St-Jacques常比某些特級園還貴"
+          ]
+        },
+        {
+          "type": "map",
+          "title": "熱夫雷-香貝丹頂級一級園地圖",
+          "description": "點擊按鈕查看5大頂級一級園位置",
+          "mapConfig": {
+            "center": [4.9650, 47.2260],
+            "zoom": 13.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "regions": [
+            {"name": "克洛-聖雅克", "nameFr": "Clos Saint-Jacques", "id": "clos-saint-jacques", "fillColor": "#8B0000"},
+            {"name": "卡澤提耶", "nameFr": "Les Cazetiers", "id": "les-cazetiers", "fillColor": "#A52A2A"},
+            {"name": "拉沃-聖雅克", "nameFr": "Lavaut Saint-Jacques", "id": "lavaut-saint-jacques", "fillColor": "#B22222"},
+            {"name": "歐-貢博特", "nameFr": "Aux Combottes", "id": "aux-combottes", "fillColor": "#DC143C"},
+            {"name": "埃斯圖內勒-聖雅克", "nameFr": "Estournelles Saint-Jacques", "id": "estournelles-saint-jacques", "fillColor": "#CD5C5C"}
+          ],
+          "geojsonFiles": [
+            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
+            {"id": "gevrey-village", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/AOC Gevrey-Chambertin (Gevrey-Chambertin).geojson", "displayName": "Gevrey-Chambertin Village", "fillColor": "#FFE4E1", "fillOpacity": 0.4, "lineColor": "#DC143C", "lineWidth": 1.5, "showLabels": true, "defaultVisible": true},
+            {"id": "clos-saint-jacques", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/1er Crus/AOC Gevrey-Chambertin 1er Cru Clos Saint-Jacques.geojson", "displayName": "Clos Saint-Jacques", "fillColor": "#8B0000", "fillOpacity": 0.8, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
+            {"id": "les-cazetiers", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/1er Crus/AOC Gevrey-Chambertin 1er Cru Les Cazetiers.geojson", "displayName": "Les Cazetiers", "fillColor": "#A52A2A", "fillOpacity": 0.8, "lineColor": "#6B1A1A", "lineWidth": 2, "showLabels": true},
+            {"id": "lavaut-saint-jacques", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/1er Crus/AOC Gevrey-Chambertin 1er Cru Lavaut Saint-Jacques.geojson", "displayName": "Lavaut Saint-Jacques", "fillColor": "#B22222", "fillOpacity": 0.8, "lineColor": "#7A1717", "lineWidth": 2, "showLabels": true},
+            {"id": "aux-combottes", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/1er Crus/Gevrey-Chambertin premier cru Aux Combottes.geojson", "displayName": "Aux Combottes", "fillColor": "#DC143C", "fillOpacity": 0.8, "lineColor": "#8B0A0A", "lineWidth": 2, "showLabels": true},
+            {"id": "estournelles-saint-jacques", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/1er Crus/AOC Gevrey-Chambertin 1er Cru Estournelles-Saint-Jacques.geojson", "displayName": "Estournelles Saint-Jacques", "fillColor": "#CD5C5C", "fillOpacity": 0.8, "lineColor": "#8B3A3A", "lineWidth": 2, "showLabels": true}
+          ]
+        },
+        {
+          "type": "content",
+          "title": "香波-慕西尼一級園",
+          "content": "香波有24個一級園，整體風格優雅細膩。由於只有2個特級園，一級園成為體驗香波風格的重要途徑。"
+        },
+        {
+          "type": "list",
+          "title": "🌹 香波最佳一級園",
+          "points": [
+            "Les Amoureuses - 「戀人」，最接近Musigny",
+            "Les Charmes - 優雅迷人",
+            "Les Fuées - 緊鄰Musigny",
+            "Les Cras - 礦物感強",
+            "Aux Beaux Bruns - 位於坡度較陡處",
+            "特色：整體質地如絲綢"
+          ]
+        },
+        {
+          "type": "map",
+          "title": "香波-慕西尼頂級一級園地圖",
+          "description": "點擊按鈕查看各頂級一級園位置",
+          "mapConfig": {
+            "center": [4.9590, 47.1780],
+            "zoom": 13.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "regions": [
+            {"name": "戀人園", "nameFr": "Les Amoureuses", "id": "les-amoureuses", "fillColor": "#DB7093"},
+            {"name": "魅力園", "nameFr": "Les Charmes", "id": "les-charmes-chambolle", "fillColor": "#C71585"},
+            {"name": "火焰園", "nameFr": "Les Fuées", "id": "les-fuees", "fillColor": "#FF1493"},
+            {"name": "石灰岩園", "nameFr": "Les Cras", "id": "les-cras-chambolle", "fillColor": "#BA55D3"},
+            {"name": "美麗棕園", "nameFr": "Aux Beaux Bruns", "id": "aux-beaux-bruns", "fillColor": "#8B008B"}
+          ],
+          "geojsonFiles": [
+            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
+            {"id": "chambolle-village", "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/AOC Chambolle-Musigny.geojson", "displayName": "Chambolle-Musigny Village", "fillColor": "#FFE4E1", "fillOpacity": 0.4, "lineColor": "#DB7093", "lineWidth": 1.5, "showLabels": true, "defaultVisible": true},
+            {"id": "les-amoureuses", "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/1er Crus/AOC Chambolle-Musigny 1er Cru Les Amoureuses.geojson", "displayName": "Les Amoureuses", "fillColor": "#DB7093", "fillOpacity": 0.8, "lineColor": "#8B4567", "lineWidth": 2, "showLabels": true},
+            {"id": "les-charmes-chambolle", "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/1er Crus/AOC Chambolle-Musigny 1er Cru Les Charmes.geojson", "displayName": "Les Charmes", "fillColor": "#C71585", "fillOpacity": 0.8, "lineColor": "#7A0E4F", "lineWidth": 2, "showLabels": true},
+            {"id": "les-fuees", "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/1er Crus/AOC Chambolle-Musigny 1er Cru Les Fuées.geojson", "displayName": "Les Fuées", "fillColor": "#FF1493", "fillOpacity": 0.8, "lineColor": "#9B0B5A", "lineWidth": 2, "showLabels": true},
+            {"id": "les-cras-chambolle", "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/1er Crus/AOC Chambolle-Musigny 1er Cru Les Cras.geojson", "displayName": "Les Cras", "fillColor": "#BA55D3", "fillOpacity": 0.8, "lineColor": "#6A2C7A", "lineWidth": 2, "showLabels": true},
+            {"id": "aux-beaux-bruns", "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/1er Crus/Chambolle-Musigny premier cru Aux Beaux Bruns.geojson", "displayName": "Aux Beaux Bruns", "fillColor": "#8B008B", "fillOpacity": 0.8, "lineColor": "#4B0049", "lineWidth": 2, "showLabels": true}
+          ]
+        },
+        {
+          "type": "content",
+          "title": "夜-聖喬治一級園",
+          "content": "夜-聖喬治沒有特級園，但擁有41個一級園，總面積143公頃。這裡的一級園就是品質標竿。"
+        },
+        {
+          "type": "list",
+          "title": "💎 夜-聖喬治最佳一級園",
+          "points": [
+            "Les Saint-Georges - 村莊命名來源，品質最高",
+            "Les Vaucrains - 強勁濃郁，單寧緊實",
+            "Les Cailles - 細膩優雅",
+            "Aux Boudots - 靠近馮內-羅曼尼",
+            "Les Pruliers - 平衡之作",
+            "投資建議：頂級生產者的這些一級園值得長期持有"
+          ]
+        },
+        {
+          "type": "map",
+          "title": "夜-聖喬治頂級一級園地圖",
+          "description": "點擊按鈕查看各頂級一級園位置",
+          "mapConfig": {
+            "center": [4.9520, 47.1360],
+            "zoom": 12.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "regions": [
+            {"name": "聖喬治園", "nameFr": "Les Saint-Georges", "id": "les-saint-georges", "fillColor": "#8B0A0A"},
+            {"name": "沃克蘭園", "nameFr": "Les Vaucrains", "id": "les-vaucrains", "fillColor": "#A52A2A"},
+            {"name": "鵑鶟園", "nameFr": "Les Cailles", "id": "les-cailles-nsg", "fillColor": "#B22222"},
+            {"name": "布多園", "nameFr": "Aux Boudots", "id": "aux-boudots", "fillColor": "#CD5C5C"},
+            {"name": "普魯利埃園", "nameFr": "Les Pruliers", "id": "les-pruliers", "fillColor": "#DC143C"}
+          ],
+          "geojsonFiles": [
+            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
+            {"id": "nsg-village", "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/AOC Nuits-Saint-Georges.geojson", "displayName": "Nuits-Saint-Georges Village", "fillColor": "#FFE4E1", "fillOpacity": 0.4, "lineColor": "#8B0A0A", "lineWidth": 1.5, "showLabels": true, "defaultVisible": true},
+            {"id": "les-saint-georges", "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/1er Crus/AOC Nuits-Saint-Georges 1er Cru Les Saints-Georges.geojson", "displayName": "Les Saint-Georges", "fillColor": "#8B0A0A", "fillOpacity": 0.8, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
+            {"id": "les-vaucrains", "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/1er Crus/AOC Nuits-Saint-Georges 1er Cru Les Vaucrains.geojson", "displayName": "Les Vaucrains", "fillColor": "#A52A2A", "fillOpacity": 0.8, "lineColor": "#6B1A1A", "lineWidth": 2, "showLabels": true},
+            {"id": "les-cailles-nsg", "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/1er Crus/AOC Nuits-Saint-Georges 1er Cru Les Cailles.geojson", "displayName": "Les Cailles", "fillColor": "#B22222", "fillOpacity": 0.8, "lineColor": "#7A1717", "lineWidth": 2, "showLabels": true},
+            {"id": "aux-boudots", "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/1er Crus/AOC Nuits-Saint-Georges 1er Cru Aux Boudots.geojson", "displayName": "Aux Boudots", "fillColor": "#CD5C5C", "fillOpacity": 0.8, "lineColor": "#8B3A3A", "lineWidth": 2, "showLabels": true},
+            {"id": "les-pruliers", "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/1er Crus/AOC Nuits-Saint-Georges 1er Cru Les Pruliers.geojson", "displayName": "Les Pruliers", "fillColor": "#DC143C", "fillOpacity": 0.8, "lineColor": "#8B0A0A", "lineWidth": 2, "showLabels": true}
+          ]
+        },
+        {
+          "type": "content",
+          "title": "性價比推薦",
+          "content": "夜丘一級園的性價比遠高於特級園。推薦策略：選擇頂級生產者（如Dujac、Armand Rousseau）的一級園，品質接近特級園但價格僅1/3-1/2。"
+        }
+      ]
+    },
+    {
+      "id": "m5-l3",
+      "title": "伯恩丘頂級一級園",
+      "duration": "20分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "伯恩丘頂級一級園",
+          "subtitle": "Lesson 3 - 20分鐘",
+          "description": "探索伯恩丘白酒與紅酒的頂級一級園"
+        },
+        {
+          "type": "content",
+          "title": "默爾索一級園",
+          "content": "默爾索沒有特級園，但其頂級一級園的品質完全可與特級園媲美，特別是Les Perrières。"
+        },
+        {
+          "type": "list",
+          "title": "🥇 默爾索最佳一級園",
+          "points": [
+            "Les Perrières - 「石頭園」，最接近特級園",
+            "風格：礦物感極強、優雅精緻、陳年潛力20-30年",
+            "Les Genevrières - 「杜松園」，平衡完美",
+            "風格：豐滿圓潤、榛果香、奶油質地",
+            "Les Charmes - 「魅力園」，如其名般迷人",
+            "Poruzots - 強勁有力版默爾索",
+            "Goutte d'Or - 「黃金滴」，最豐滿",
+            "價格：Perrières可達巴塔-蒙哈榭的70%價格"
+          ]
+        },        {
+          "type": "map",
+          "title": "默爾索頂級一級園地圖",
+          "description": "點擊按鈕查看各頂級一級園位置",
+          "mapConfig": {
+            "center": [4.7670, 46.9770],
+            "zoom": 13,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "regions": [
+            {"name": "石頭園", "nameFr": "Les Perrières", "id": "les-perrieres-meursault", "fillColor": "#FFD700"},
+            {"name": "杜松園", "nameFr": "Les Genevrières", "id": "les-genevrieres", "fillColor": "#F0E68C"},
+            {"name": "魅力園", "nameFr": "Les Charmes", "id": "les-charmes-meursault", "fillColor": "#DAA520"},
+            {"name": "波魯佐", "nameFr": "Porusot", "id": "porusot", "fillColor": "#B8860B"},
+            {"name": "黃金滴", "nameFr": "Goutte d'Or", "id": "goutte-dor", "fillColor": "#CD853F"}
+          ],
+          "geojsonFiles": [
+            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
+            {"id": "meursault-village", "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson", "displayName": "Meursault Village", "fillColor": "#FFFACD", "fillOpacity": 0.4, "lineColor": "#FFD700", "lineWidth": 1.5, "showLabels": true, "defaultVisible": true},
+            {"id": "les-perrieres-meursault", "url": "/geojson/Cote-de-Beaune/12Meursault/Meursault 1er cru/AOC Meursault 1er Cru Perrières.geojson", "displayName": "Les Perrières", "fillColor": "#FFD700", "fillOpacity": 0.8, "lineColor": "#B8860B", "lineWidth": 2, "showLabels": true},
+            {"id": "les-genevrieres", "url": "/geojson/Cote-de-Beaune/12Meursault/Meursault 1er cru/AOC Meursault 1er Cru Genevrières.geojson", "displayName": "Les Genevrières", "fillColor": "#F0E68C", "fillOpacity": 0.8, "lineColor": "#BDB76B", "lineWidth": 2, "showLabels": true},
+            {"id": "les-charmes-meursault", "url": "/geojson/Cote-de-Beaune/12Meursault/Meursault 1er cru/AOC Meursault 1er Cru Charmes.geojson", "displayName": "Les Charmes", "fillColor": "#DAA520", "fillOpacity": 0.8, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": true},
+            {"id": "porusot", "url": "/geojson/Cote-de-Beaune/12Meursault/Meursault 1er cru/AOC Meursault 1er Cru Porusot.geojson", "displayName": "Porusot", "fillColor": "#B8860B", "fillOpacity": 0.8, "lineColor": "#6B5300", "lineWidth": 2, "showLabels": true},
+            {"id": "goutte-dor", "url": "/geojson/Cote-de-Beaune/12Meursault/Meursault 1er cru/AOC Meursault 1er Cru Les Gouttes d'Or.geojson", "displayName": "Goutte d'Or", "fillColor": "#CD853F", "fillOpacity": 0.8, "lineColor": "#8B5A2B", "lineWidth": 2, "showLabels": true}
+          ]
+        },        {
+          "type": "content",
+          "title": "普里尼-蒙哈榭一級園",
+          "content": "普里尼有17個一級園，風格比默爾索更清瘦優雅，礦物感更明顯。"
+        },
+        {
+          "type": "list",
+          "title": "💎 普里尼最佳一級園",
+          "points": [
+            "Les Pucelles - 「少女園」，最優雅",
+            "緊鄰Bâtard-Montrachet，風格相近",
+            "Le Cailleret - 礦物感極強",
+            "Les Combettes - 平衡之作",
+            "Les Folatières - 花香明顯",
+            "Champ Canet - 位置絕佳",
+            "特色：整體比默爾索更需陳年"
+          ]
+        },
+        {
+          "type": "map",
+          "title": "普里尼-蒙哈契頂級一級園地圖",
+          "description": "點擊按鈕查看各頂級一級園位置",
+          "mapConfig": {
+            "center": [4.7560, 46.9510],
+            "zoom": 13.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "regions": [
+            {"name": "少女園", "nameFr": "Les Pucelles", "id": "les-pucelles", "fillColor": "#FFFF00"},
+            {"name": "石子園", "nameFr": "Le Cailleret", "id": "le-cailleret", "fillColor": "#F0E68C"},
+            {"name": "康贝特園", "nameFr": "Les Combettes", "id": "les-combettes", "fillColor": "#FFD700"},
+            {"name": "福拉蒂埃園", "nameFr": "Les Folatières", "id": "les-folatieres", "fillColor": "#DAA520"},
+            {"name": "香港園", "nameFr": "Champ Canet", "id": "champ-canet", "fillColor": "#B8860B"}
+          ],
+          "geojsonFiles": [
+            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
+            {"id": "puligny-village", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson", "displayName": "Puligny-Montrachet Village", "fillColor": "#FFFACD", "fillOpacity": 0.4, "lineColor": "#FFFF00", "lineWidth": 1.5, "showLabels": true, "defaultVisible": true},
+            {"id": "les-pucelles", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Puligny-Montrachet 1er cru/AOC Puligny-Montrachet 1er Cru Les Pucelles.geojson", "displayName": "Les Pucelles", "fillColor": "#FFFF00", "fillOpacity": 0.8, "lineColor": "#B8B800", "lineWidth": 2, "showLabels": true},
+            {"id": "le-cailleret", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Puligny-Montrachet 1er cru/AOC Puligny-Montrachet 1er Cru Le Cailleret.geojson", "displayName": "Le Cailleret", "fillColor": "#F0E68C", "fillOpacity": 0.8, "lineColor": "#BDB76B", "lineWidth": 2, "showLabels": true},
+            {"id": "les-combettes", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Puligny-Montrachet 1er cru/AOC Puligny-Montrachet 1er Cru Les Combettes.geojson", "displayName": "Les Combettes", "fillColor": "#FFD700", "fillOpacity": 0.8, "lineColor": "#B8860B", "lineWidth": 2, "showLabels": true},
+            {"id": "les-folatieres", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Puligny-Montrachet 1er cru/AOC Puligny-Montrachet 1er Cru Les Folatières.geojson", "displayName": "Les Folatières", "fillColor": "#DAA520", "fillOpacity": 0.8, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": true},
+            {"id": "champ-canet", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Puligny-Montrachet 1er cru/AOC Puligny-Montrachet 1er Cru Champ Canet.geojson", "displayName": "Champ Canet", "fillColor": "#B8860B", "fillOpacity": 0.8, "lineColor": "#6B5300", "lineWidth": 2, "showLabels": true}
+          ]
+        },
+        {
+          "type": "content",
+          "title": "波瑪與沃爾奈一級園",
+          "content": "這兩個村莊沒有特級園，一級園就是品質標竿，且價格相對親民。"
+        },
+        {
+          "type": "list",
+          "title": "🍷 紅酒一級園精選",
+          "points": [
+            "波瑪 Les Rugiens - 「紅土園」，最強勁",
+            "波瑪 Les Epenots - 優雅版波瑪",
+            "沃爾奈 Caillerets - 「石子園」，最優雅",
+            "沃爾奈 Champans - 豐滿有力",
+            "沃爾奈 Santenots - 技術上屬默爾索",
+            "投資價值：這些紅酒一級園被嚴重低估"
+          ]
+        },
+        {
+          "type": "map",
+          "title": "波瑪頂級一級園地圖",
+          "description": "點擊按鈕查看各頂級一級園位置",
+          "mapConfig": {
+            "center": [4.7960, 47.0050],
+            "zoom": 13,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "regions": [
+            {"name": "紅土園", "nameFr": "Les Rugiens", "id": "les-rugiens", "fillColor": "#8B0000"},
+            {"name": "埃佩諾園", "nameFr": "Les Epenots", "id": "les-epenots", "fillColor": "#A52A2A"}
+          ],
+          "geojsonFiles": [
+            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
+            {"id": "pommard-village", "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson", "displayName": "Pommard Village", "fillColor": "#FFE4E1", "fillOpacity": 0.4, "lineColor": "#8B0000", "lineWidth": 1.5, "showLabels": true, "defaultVisible": true},
+            {"id": "les-rugiens", "url": "/geojson/Cote-de-Beaune/07Pommard/Pommard 1er cru/AOC Pommard 1er Cru Les Rugiens Bas.geojson", "displayName": "Les Rugiens", "fillColor": "#8B0000", "fillOpacity": 0.8, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
+            {"id": "les-epenots", "url": "/geojson/Cote-de-Beaune/07Pommard/Pommard 1er cru/AOC Pommard 1er Cru Les Grands Epenots.geojson", "displayName": "Les Epenots", "fillColor": "#A52A2A", "fillOpacity": 0.8, "lineColor": "#6B1A1A", "lineWidth": 2, "showLabels": true}
+          ]
+        },
+        {
+          "type": "map",
+          "title": "沃爾奈頂級一級園地圖",
+          "description": "點擊按鈕查看各頂級一級園位置",
+          "mapConfig": {
+            "center": [4.7770, 46.9940],
+            "zoom": 13.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "regions": [
+            {"name": "石子園", "nameFr": "Caillerets", "id": "caillerets-volnay", "fillColor": "#DC143C"},
+            {"name": "香沿園", "nameFr": "Champans", "id": "champans", "fillColor": "#CD5C5C"},
+            {"name": "桑特諾園", "nameFr": "Santenots", "id": "santenots", "fillColor": "#B22222"}
+          ],
+          "geojsonFiles": [
+            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
+            {"id": "volnay-village", "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson", "displayName": "Volnay Village", "fillColor": "#FFE4E1", "fillOpacity": 0.4, "lineColor": "#DC143C", "lineWidth": 1.5, "showLabels": true, "defaultVisible": true},
+            {"id": "caillerets-volnay", "url": "/geojson/Cote-de-Beaune/08Volnay/Volnay 1er cru/AOC Volnay 1er Cru Les Caillerets.geojson", "displayName": "Caillerets", "fillColor": "#DC143C", "fillOpacity": 0.8, "lineColor": "#8B0A0A", "lineWidth": 2, "showLabels": true},
+            {"id": "champans", "url": "/geojson/Cote-de-Beaune/08Volnay/Volnay 1er cru/AOC Volnay 1er Cru Champans.geojson", "displayName": "Champans", "fillColor": "#CD5C5C", "fillOpacity": 0.8, "lineColor": "#8B3A3A", "lineWidth": 2, "showLabels": true},
+            {"id": "santenots", "url": "/geojson/Cote-de-Beaune/08Volnay/Volnay 1er cru/AOC Volnay 1er Cru Santenots.geojson", "displayName": "Santenots", "fillColor": "#B22222", "fillOpacity": 0.8, "lineColor": "#7A1717", "lineWidth": 2, "showLabels": true}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m5-l4",
+      "title": "一級園選購與投資策略",
+      "duration": "18分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "一級園投資策略",
+          "subtitle": "Lesson 4 - 18分鐘",
+          "description": "如何選購與投資一級園葡萄酒"
+        },
+        {
+          "type": "list",
+          "title": "💡 選購一級園的原則",
+          "points": [
+            "優先選擇：頂級生產者 > 知名一級園 > 好年份",
+            "了解地塊：研究一級園的位置與風土",
+            "比較價格：同一地塊不同生產者差異大",
+            "年份選擇：一級園在好年份表現驚人",
+            "來源可靠：確保正品與正確保存",
+            "平衡收藏：一級園應佔收藏的50-70%"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "🏆 最值得投資的一級園",
+          "points": [
+            "夜丘紅酒：Clos Saint-Jacques、Les Amoureuses",
+            "伯恩丘白酒：Meursault Perrières、Puligny Pucelles",
+            "伯恩丘紅酒：Pommard Rugiens、Volnay Caillerets",
+            "性價比：Nuits-Saint-Georges一級園被低估",
+            "新興：Fixin、Savigny的優質一級園",
+            "長期持有：10-15年可獲豐厚回報"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "投資策略比較",
+          "leftTitle": "特級園投資",
+          "leftPoints": [
+            "高風險高回報",
+            "需要大量資金",
+            "流動性好",
+            "保值穩定",
+            "適合頂級收藏家"
+          ],
+          "rightTitle": "一級園投資",
+          "rightPoints": [
+            "中等風險回報",
+            "資金門檻較低",
+            "流動性中等",
+            "升值潛力大",
+            "適合一般愛好者"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "📊 價格參考（750ml）",
+          "points": [
+            "頂級一級園（Les Amoureuses等）：$200-600",
+            "優質一級園（知名地塊）：$80-200",
+            "一般一級園（普通地塊）：$40-80",
+            "村級酒：$25-50",
+            "特級園：$300-5000+",
+            "價格隨生產者、年份差異極大"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "⚠️ 避免的陷阱",
+          "points": [
+            "不要只看地塊名稱，生產者更重要",
+            "避免「Premier Cru」混調（品質不穩定）",
+            "小心過度炒作的年份",
+            "注意保存條件（溫度、濕度、光線）",
+            "不要太早飲用（至少5-8年陳年）",
+            "避免跟風購買不了解的地塊"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "一級園的真正價值",
+          "content": "一級園是探索布根地的最佳途徑：價格相對合理、品質優異、能真正體驗風土差異。對多數愛好者而言，建立一個以頂級一級園為主的收藏，比追逐天價特級園更實際且更有樂趣。"
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "title": "一級園測驗",
+    "description": "測試您對一級園的理解",
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "一級園的酒標必須標示什麼？",
+        "type": "single",
+        "options": [
+          "只標地塊名",
+          "村莊名 + 一級園名",
+          "只標Premier Cru",
+          "生產者名稱"
+        ],
+        "correctAnswer": 1,
+        "explanation": "一級園必須標示村莊名加一級園名稱，例如「Gevrey-Chambertin 1er Cru Les Cazetiers」。"
+      },
+      {
+        "id": "q2",
+        "question": "哪個一級園被認為最接近特級園品質？",
+        "type": "single",
+        "options": [
+          "Volnay Caillerets",
+          "Clos Saint-Jacques",
+          "Nuits-Saint-Georges Les Pruliers",
+          "Meursault Charmes"
+        ],
+        "correctAnswer": 1,
+        "explanation": "熱夫雷-香貝丹的Clos Saint-Jacques被公認為最接近特級園品質，價格常超過某些特級園。"
+      },
+      {
+        "id": "q3",
+        "question": "默爾索哪個一級園礦物感最強？",
+        "type": "single",
+        "options": [
+          "Les Charmes",
+          "Les Perrières",
+          "Goutte d'Or",
+          "Les Genevrières"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Les Perrières（石頭園）以極強的礦物感著稱，是最接近特級園品質的默爾索一級園。"
+      },
+      {
+        "id": "q4",
+        "question": "香波-慕西尼哪個一級園被稱為「戀人」？",
+        "type": "single",
+        "options": [
+          "Les Charmes",
+          "Les Fuées",
+          "Les Amoureuses",
+          "Les Cras"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Les Amoureuses意為「戀人」，是最接近Musigny特級園品質的一級園。"
+      },
+      {
+        "id": "q5",
+        "question": "一級園佔布根地總產區的比例約為？",
+        "type": "single",
+        "options": ["2%", "5%", "10%", "20%"],
+        "correctAnswer": 2,
+        "explanation": "一級園約佔布根地總產區的10%，特級園佔2%，其餘為村級與區域級。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1030 @@
+{
+  "moduleId": "beginner-m1",
+  "title": "認識布根地",
+  "description": "探索布根地的地理環境、悠久歷史、經典品種與酒標解讀",
+  "lessons": [
+    {
+      "id": "m1-l1",
+      "title": "地理位置與氣候環境",
+      "duration": "15分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "地理位置與氣候環境",
+          "subtitle": "Lesson 1 - 15分鐘",
+          "description": "認識布根地的地理位置、氣候特色與六大產區分布"
+        },
+        {
+          "type": "map",
+          "title": "布根地在哪裡？",
+          "content": "布根地位於法國東部，從巴黎東南方約 300 公里處開始，南北延伸約 230 公里，是世界上最負盛名的葡萄酒產區之一。",
+          "mapConfig": {
+            "center": [2.5, 46.5],
+            "zoom": 6,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "bourgogne-map",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "fillColor": "#8B4789",
+              "fillOpacity": 0.3,
+              "lineColor": "#5C2E5C",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ],
+          "bounds": [[3.5, 46.8], [5.5, 48.0]],
+          "markers": [
+            {
+              "name": "Dijon",
+              "coordinates": [5.0415, 47.3220]
+            },
+            {
+              "name": "Beaune",
+              "coordinates": [4.8378, 47.0247]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "📍 地理特徵",
+          "points": [
+            "位於北緯 46-48 度之間，葡萄種植的黃金緯度",
+            "南北跨越約 230 公里，從夏布利延伸至薄酒萊",
+            "主要城市：第戎（Dijon）與博訥（Beaune）",
+            "鄰近瑞士邊境，受阿爾卑斯山脈影響"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "🌤️ 大陸性氣候",
+          "points": [
+            "春季：溫和潮濕，需注意霜凍風險",
+            "夏季：溫暖但不炎熱（22-25°C），葡萄緩慢成熟",
+            "秋季：涼爽乾燥，保持葡萄的新鮮酸度",
+            "冬季：寒冷（可降至 -5°C），葡萄藤休眠"
+          ]
+        },
+        {
+          "type": "map",
+          "title": "🌍 六大產區（南北排列）",
+          "interactive": true,
+          "buttonPosition": "left",
+          "regions": [
+            {
+              "id": "chablis",
+              "name": "夏布利",
+              "nameFr": "Chablis",
+              "description": "純淨礦物風格的霞多麗白酒"
+            },
+            {
+              "id": "cote-de-nuits",
+              "name": "夜丘",
+              "nameFr": "Côte de Nuits",
+              "description": "世界頂級黑皮諾紅酒產區"
+            },
+            {
+              "id": "cote-de-beaune",
+              "name": "伯恩丘",
+              "nameFr": "Côte de Beaune",
+              "description": "紅白酒並重的偉大產區"
+            },
+            {
+              "id": "cote-chalonnaise",
+              "name": "夏隆丘",
+              "nameFr": "Côte Chalonnaise",
+              "description": "高性價比優質產區"
+            },
+            {
+              "id": "maconnais",
+              "name": "馬貢內",
+              "nameFr": "Mâconnais",
+              "description": "清新易飲的白酒產區"
+            },
+            {
+              "id": "beaujolais",
+              "name": "薄酒萊",
+              "nameFr": "Beaujolais",
+              "description": "加美葡萄的天堂"
+            }
+          ],
+          "mapConfig": {
+            "center": [4.5, 47.0],
+            "zoom": 8.2,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "bourgogne-base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.2,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "chablis",
+              "url": "/geojson/Chablis/AOC Chablis.geojson",
+              "displayName": "夏布利",
+              "displayNameFr": "Chablis",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.7,
+              "lineColor": "#DAA520",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "cote-de-nuits",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Chenôve).geojson",
+              "displayName": "夜丘",
+              "displayNameFr": "Côte de Nuits",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "marsannay-couchey",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Couchey).geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "marsannay",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Marsannay-la-côte).geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "fixin",
+              "url": "/geojson/Cote-de-Nuits/02Fixin/AOC Fixin (Fixin).geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "brochon",
+              "url": "/geojson/Cote-de-Nuits/03Brochon/Brochon.geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "gevrey-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/AOC Gevrey-Chambertin (Gevrey-Chambertin).geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "morey-saint-denis",
+              "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/AOC Morey-Saint-Denis.geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "chambolle-musigny",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/AOC Chambolle-Musigny.geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "flagey-echezeaux",
+              "url": "/geojson/Cote-de-Nuits/07Flagey-Echézeaux/Flagey-Echézeaux.geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "vosne-romanee",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/AOC Vosne-Romanée.geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "vougeot",
+              "url": "/geojson/Cote-de-Nuits/09Vougeot/AOC Vougeot.geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "nuits-saint-georges",
+              "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/AOC Nuits-Saint-Georges.geojson",
+              "isBase": true,
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "cote-de-beaune",
+              "url": "/geojson/Cote-de-Beaune/01Pernand-Vergelesses/AOC Pernand-Vergelesses Village.geojson",
+              "displayName": "伯恩丘",
+              "displayNameFr": "Côte de Beaune",
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "ladoix",
+              "url": "/geojson/Cote-de-Beaune/02Ladoix/AOC Ladoix Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "aloxe-corton",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "savigny-les-beaune",
+              "url": "/geojson/Cote-de-Beaune/04Savigny-lès-Beaune/AOC Savigny-lès-Beaune Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "chorey-les-beaune",
+              "url": "/geojson/Cote-de-Beaune/05Chorey-lès-Beaune/AOC Chorey-lès-Beaune Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "beaune",
+              "url": "/geojson/Cote-de-Beaune/06Beaune/AOC Beaune Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "pommard",
+              "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "volnay",
+              "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "monthelie",
+              "url": "/geojson/Cote-de-Beaune/09Monthélie/AOC Monthélie Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "saint-romain",
+              "url": "/geojson/Cote-de-Beaune/10Saint-Romain/AOC Saint-Romain Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "auxey-duresses",
+              "url": "/geojson/Cote-de-Beaune/11Auxey-Duresses/AOC Auxey-Duresses Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "meursault",
+              "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "blagny",
+              "url": "/geojson/Cote-de-Beaune/13Blagny/AOC Blagny Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "puligny-montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "chassagne-montrachet",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "saint-aubin",
+              "url": "/geojson/Cote-de-Beaune/16Saint-Aubin/AOC Saint-Aubin Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "santenay",
+              "url": "/geojson/Cote-de-Beaune/17Santenay/AOC Santenay Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "maranges",
+              "url": "/geojson/Cote-de-Beaune/18Maranges/AOC Maranges Village.geojson",
+              "isBase": true,
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "cote-chalonnaise",
+              "url": "/geojson/Cote-Chalonnaise/AOC Bourgogne Côte Chalonnaise.geojson",
+              "displayName": "夏隆丘",
+              "displayNameFr": "Côte Chalonnaise",
+              "fillColor": "#FF6B6B",
+              "fillOpacity": 0.7,
+              "lineColor": "#DC143C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "maconnais",
+              "url": "/geojson/Maconnais/AOC Mâcon.geojson",
+              "displayName": "馬貢內",
+              "displayNameFr": "Mâconnais",
+              "fillColor": "#98D8C8",
+              "fillOpacity": 0.7,
+              "lineColor": "#45B7AF",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "beaujolais",
+              "url": "/geojson/Beaujolais/AOC Beaujolais Villages.geojson",
+              "displayName": "薄酒萊",
+              "displayNameFr": "Beaujolais",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.7,
+              "lineColor": "#B22222",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ],
+          "bounds": [[3.8, 45.8], [5.2, 48.0]]
+        },
+        {
+          "type": "list",
+          "title": "🗺️ 六大產區特色",
+          "points": [
+            "夏布利與大歐塞瓦(Chablis and Grand Auxerrois) - 純淨礦物風格的夏多內白酒",
+            "夜丘（Côte de Nuits）- 世界頂級黑皮諾紅酒產區",
+            "伯恩丘（Côte de Beaune）- 紅白酒並重的偉大產區",
+            "夏隆丘（Côte Chalonnaise）- 高性價比優質產區",
+            "馬貢內（Mâconnais）- 清新易飲的白酒產區",
+            "薄酒萊（Beaujolais）- 加美葡萄的天堂"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "風土（Terroir）的重要性",
+          "content": "布根地的獨特之處在於「風土」概念 - 同一葡萄品種在不同地塊會展現截然不同的風格，這是由土壤、坡向、海拔與微氣候共同決定的。"
+        }
+      ]
+    },
+    {
+      "id": "m1-l2",
+      "title": "葡萄酒歷史與僧侶傳統",
+      "duration": "20分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "葡萄酒歷史與僧侶傳統",
+          "subtitle": "Lesson 2 - 20分鐘",
+          "description": "從羅馬時代到現代，了解布根地兩千年的釀酒歷史與修道士的智慧"
+        },
+        {
+          "type": "timeline",
+          "title": "📅 布根地葡萄酒歷史時間軸",
+          "note": "建議製作視覺化時間軸圖片，配上歷史圖片和插畫",
+          "timeline": [
+            {
+              "year": "312年",
+              "title": "羅馬時代",
+              "event": "羅馬帝國在布根地種植第一批葡萄藤",
+              "description": "羅馬人帶來先進的種植技術，奠定了布根地葡萄酒的基礎"
+            },
+            {
+              "year": "496年",
+              "title": "基督教化",
+              "event": "克洛維一世皈依基督教，教會開始擁有葡萄園",
+              "description": "教會成為葡萄酒生產的主要推手，葡萄酒用於彌撒儀式"
+            },
+            {
+              "year": "910年",
+              "title": "克呂尼修道院",
+              "event": "克呂尼修道院（Cluny Abbey）成立",
+              "description": "歐洲最有影響力的修道院之一，大力推動葡萄酒釀造與品質提升"
+            },
+            {
+              "year": "1098年",
+              "title": "西篤會誕生",
+              "event": "西篤會（Cistercian）修道士建立修道院",
+              "description": "嚴謹的修道士們開創了「風土」概念，建立了 Clos de Vougeot 等傳奇葡萄園"
+            },
+            {
+              "year": "1336年",
+              "title": "聲名遠播",
+              "event": "教皇遷至亞維儂，布根地酒進入教廷",
+              "description": "布根地葡萄酒成為教皇御用酒，國際聲譽大增"
+            },
+            {
+              "year": "1395年",
+              "title": "品種革命",
+              "event": "勃艮第公爵菲利普二世下令禁種加美葡萄",
+              "description": "歷史性決定：強制種植黑皮諾，奠定了布根地紅酒的品質基礎"
+            },
+            {
+              "year": "1789年",
+              "title": "大革命",
+              "event": "法國大革命，葡萄園國有化後分割出售",
+              "description": "教會土地被沒收，造就了布根地獨特的「小農經濟」格局"
+            },
+            {
+              "year": "1855年",
+              "title": "分級時代",
+              "event": "波爾多建立分級制度",
+              "description": "布根地選擇了不同道路，發展出以「地塊」為核心的分級哲學"
+            },
+            {
+              "year": "1936年",
+              "title": "AOC誕生",
+              "event": "法國 AOC（原產地命名保護）制度正式確立",
+              "description": "布根地的 Climats 和風土概念得到法律保護"
+            },
+            {
+              "year": "2015年",
+              "title": "世界遺產",
+              "event": "布根地 Climats 被列入 UNESCO 世界遺產",
+              "description": "1,247 個地塊的獨特性獲得國際認可，保護千年釀酒文化"
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "🏛️ 羅馬時代的起源（312年起）",
+          "image": "/images/Lesson/roman-burgundy.jpg",
+          "content": "羅馬帝國征服高盧後，在布根地地區引入了葡萄種植技術。羅馬人發現這裡的石灰岩土壤和大陸性氣候非常適合種植葡萄，並建立了最早的葡萄園。許多現今的頂級葡萄園位置，在羅馬時代就已經被認定為優質地塊。"
+        },
+        {
+          "type": "content",
+          "title": "⛪ 中世紀修道院時期（910-1789年）",
+          "image": "/images/Lesson/monastery-vineyard.jpg",
+          "content": "中世紀時期，天主教修道院成為葡萄酒釀造的核心。修道士們需要葡萄酒用於彌撒儀式，同時也將釀酒視為榮耀上帝的工作。他們有充足的時間和資源進行長期觀察和實驗，逐步建立了科學化的葡萄種植與釀造體系。"
+        },
+        {
+          "type": "content",
+          "title": "🏰 西篤會修道士的貢獻",
+          "image": "/images/Lesson/cistercian-monks.jpg",
+          "content": "西篤會修道士（Cistercian Monks）對布根地葡萄酒發展貢獻巨大。1098年從本篤會分離出來的西篤會，秉持「勞動即祈禱」的理念，親自耕作葡萄園。他們以科學精神仔細觀察不同地塊的差異，首創「風土」（Terroir）概念，並建立了嚴格的品質標準。"
+        },
+        {
+          "type": "list",
+          "title": "修道士的五大創新",
+          "points": [
+            "🗺️ **地塊劃分** - 詳細記錄每塊地的土壤成分、坡向、排水性與微氣候特徵",
+            "🧱 **Clos 系統** - 建立石牆（Clos）圍繞葡萄園，劃分不同等級的地塊",
+            "🍇 **精準栽培** - 發展出控制產量、修剪技術等精確的葡萄種植方法",
+            "🍷 **釀造技術** - 記錄不同釀造方法對酒質的影響，建立最佳實踐",
+            "📝 **Climat 命名** - 創造地塊命名系統，每塊地都有獨特名稱與歷史"
+          ]
+        },
+        {
+          "type": "image",
+          "title": "傳奇酒莊：Clos de Vougeot",
+          "image": "/images/Lesson/clos-de-vougeot.jpg",
+          "caption": "Clos de Vougeot 建於 1110 年，是西篤會修道士最偉大的作品。這座 50 公頃的葡萄園被石牆完整圍繞，至今仍是布根地的地標。雖然現在由 80 多位酒農分別擁有，但依然保持著統一的「Clos」身份。"
+        },
+        {
+          "type": "list",
+          "title": "著名的 Clos（有圍牆的葡萄園）",
+          "points": [
+            "🏆 **Clos de Vougeot** - 特級園，50公頃，夜丘最大的單一葡萄園",
+            "👑 **Clos de Tart** - 特級園，7.5公頃，Morey-Saint-Denis 的瑰寶",
+            "💎 **Clos des Lambrays** - 特級園，8.7公頃，單一擁有者",
+            "⭐ **Clos Saint-Denis** - 特級園，6.6公頃，優雅細緻的代表",
+            "🌟 **Clos de la Roche** - 特級園，16.9公頃，強勁有力的風格"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "👑 勃艮第公爵時期（14-15世紀）",
+          "content": "14至15世紀是布根地的黃金時代，勃艮第公爵（Dukes of Burgundy）統治著從荷蘭到瑞士的廣大領土，勢力甚至超越法國國王。公爵們熱愛葡萄酒，以布根地美酒作為外交工具，使其成為歐洲宮廷的首選。"
+        },
+        {
+          "type": "content",
+          "title": "📜 1395年的歷史性決定",
+          "image": "/images/Lesson/philippe-le-hardi.jpg",
+          "content": "1395年7月6日，勃艮第公爵菲利普二世（Philippe le Hardi，勇敢者菲利普）頒布了一道改變布根地命運的法令：\n\n**「禁止種植加美葡萄（Gamay），違者將受到嚴厲懲罰」**\n\n他稱加美為「非常惡劣且不忠的葡萄」（très déloyal plant），認為高產量的加美破壞了布根地葡萄酒的品質與聲譽。這個決定強制種植黑皮諾，奠定了布根地紅酒追求品質勝過產量的傳統。"
+        },
+        {
+          "type": "content",
+          "title": "⚔️ 法國大革命的深遠影響（1789年）",
+          "image": "/images/Lesson/french-revolution-vineyard.jpg",
+          "content": "1789年法國大革命爆發，教會和貴族財產被沒收國有化。1790-1791年間，這些葡萄園被分割成小塊拍賣給平民，形成了布根地獨特的土地所有權結構。"
+        },
+        {
+          "type": "list",
+          "title": "大革命帶來的改變",
+          "points": [
+            "📊 **土地零碎化** - 大型莊園被分割成數百個小地塊",
+            "👨‍🌾 **小農經濟誕生** - 農民首次擁有自己的葡萄園",
+            "🔄 **世代傳承** - 法國繼承法規定子女平分遺產，土地持續細分",
+            "🤝 **合作文化** - 小農無力自行釀酒，促成酒商（Négociant）制度",
+            "🎯 **品質導向** - 小地塊反而促進了對「風土」的精準理解"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "👥 布根地的「小農經濟」奇觀",
+          "image": "/images/Lesson/vineyard-ownership.jpg",
+          "content": "布根地的土地所有權極度分散，這在全球葡萄酒產區中獨樹一幟：\n\n• **Clos de Vougeot** - 50公頃由 80 多位酒農共同擁有\n• **Grand Cru Charlemagne** - 平均每位地主只擁有 0.5 公頃\n• 同一塊特級園可能產出 30 多種不同的酒\n\n這種格局解釋了為什麼布根地有數千家小型酒莊，也是為什麼同一個葡萄園名稱下，品質和價格可能差異巨大。"
+        },
+        {
+          "type": "content",
+          "title": "🏛️ AOC 制度的建立（1936年）",
+          "content": "1936年，法國建立了 AOC（Appellation d'Origine Contrôlée，原產地命名保護）制度，將布根地數百年累積的「風土」智慧法制化。\n\n這個制度嚴格規定：\n• 葡萄品種（黑皮諾、夏多內等）\n• 種植密度與產量上限\n• 釀造方法\n• 酒精度範圍\n\nAOC 確保了「Gevrey-Chambertin」這個名字代表的不只是地理位置，更是一套完整的品質保證體系。"
+        },
+        {
+          "type": "content",
+          "title": "🌍 UNESCO 世界遺產：Climats（2015年）",
+          "image": "/images/Lesson/climats-unesco.jpg",
+          "content": "2015年7月4日，布根地的「Climats」正式被列入聯合國教科文組織世界遺產，這是對布根地千年釀酒文化的最高認可。\n\n**Climats** 指的是 1,247 個被精確劃分的葡萄園地塊，從夏布利延伸到 Maranges，每一塊都有：\n• 獨特的名稱（通常來自中世紀）\n• 特定的土壤組成\n• 明確的邊界（通常由石牆標示）\n• 數百年的歷史記錄\n\n這些 Climats 不只是葡萄園，更是「人與自然互動兩千年的活見證」。"
+        },
+        {
+          "type": "list",
+          "title": "📚 歷史重點回顧",
+          "points": [
+            "🏛️ 羅馬人奠定了布根地葡萄種植的基礎",
+            "⛪ 修道士創造了「風土」概念與科學化釀酒",
+            "👑 勃艮第公爵強制種植黑皮諾，追求品質而非產量",
+            "⚔️ 法國大革命創造了獨特的小農經濟結構",
+            "📜 AOC 制度將傳統智慧轉化為法律保護",
+            "🌍 Climats 世界遺產認證了布根地文化的普世價值"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "💡 為什麼歷史很重要？",
+          "content": "了解布根地的歷史，能幫助我們理解：\n\n**1. 為什麼品質比產量重要** - 從1395年的法令延續至今的哲學\n\n**2. 為什麼每塊地都有名字** - 修道士們千年積累的風土智慧\n\n**3. 為什麼同一個葡萄園有很多酒莊** - 法國大革命的歷史遺產\n\n**4. 為什麼布根地酒如此昂貴** - 小地塊、低產量、高品質的必然結果\n\n歷史不是過去式，它活在每一瓶布根地葡萄酒中。"
+        }
+      ]
+    },
+    {
+      "id": "m1-l3",
+      "title": "主要葡萄品種",
+      "duration": "15分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "主要葡萄品種",
+          "subtitle": "Lesson 3 - 15分鐘",
+          "description": "深入了解黑皮諾（Pinot Noir）與夏多內（Chardonnay）兩大經典品種"
+        },
+        {
+          "type": "content",
+          "title": "布根地的單一品種哲學",
+          "content": "與波爾多的混釀傳統不同，布根地堅持單一品種釀造。紅酒幾乎全部使用黑皮諾（Pinot Noir），白酒則以夏多內（Chardonnay）為主。"
+        },
+        {
+          "type": "comparison",
+          "title": "🍇 兩大經典品種對比",
+          "grapes": [
+            {
+              "name": "黑皮諾",
+              "nameFr": "Pinot Noir",
+              "emoji": "🍷",
+              "characteristics": {
+                "color": "淺至中等紅寶石色",
+                "body": "中等酒體，優雅細緻",
+                "acidity": "高酸度，清新活潑",
+                "tannin": "柔和單寧，絲滑口感",
+                "alcohol": "12.5-14%",
+                "aroma": "紅色莓果、櫻桃、草莓",
+                "flavor": "成熟後發展出森林地表、松露、皮革香氣"
+              },
+              "regions": [
+                "夜丘（Côte de Nuits）- 最頂級",
+                "伯恩丘（Côte de Beaune）- 優雅柔美",
+                "夏隆丘 - 性價比高"
+              ],
+              "temperature": "🌡️ 適飲溫度：14-16°C",
+              "aging": "頂級酒款可陳年 20-50 年"
+            },
+            {
+              "name": "夏多內",
+              "nameFr": "Chardonnay",
+              "emoji": "🥂",
+              "characteristics": {
+                "color": "淺檸檬黃至金黃色",
+                "body": "中至飽滿酒體",
+                "acidity": "中高至高酸度",
+                "alcohol": "12-14%",
+                "aroma": "青蘋果、檸檬、白花",
+                "flavor": "經橡木桶後展現奶油、烤麵包、榛果香氣"
+              },
+              "regions": [
+                "夏布利 - 純淨礦物風格",
+                "伯恩丘 - Meursault、Puligny-Montrachet",
+                "馬貢內 - 清新果味風格"
+              ],
+              "temperature": "🌡️ 適飲溫度：10-12°C",
+              "aging": "頂級白酒可陳年 15-30 年"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "chartType": "radar",
+          "title": "📊 三大品種特性雷達圖",
+          "content": "直觀對比黑皮諾、霞多麗和加美的風味特性與風格差異",
+          "data": {
+            "dimensions": ["酒體", "酸度", "單寧", "果味", "陳年潛力", "價格"],
+            "datasets": [
+              {
+                "label": "黑皮諾 Pinot Noir",
+                "color": "#8B0000",
+                "opacity": 0.3,
+                "values": [6, 8, 5, 7, 9, 8]
+              },
+              {
+                "label": "霞多麗 Chardonnay",
+                "color": "#FFD700",
+                "opacity": 0.3,
+                "values": [7, 8, 0, 6, 8, 7]
+              },
+              {
+                "label": "加美 Gamay",
+                "color": "#DC143C",
+                "opacity": 0.3,
+                "values": [5, 7, 4, 9, 4, 5]
+              }
+            ]
+          },
+          "note": "評分範圍 0-10，數值越高表示該特性越明顯。白葡萄無單寧，故霞多麗單寧值為 0。"
+        },
+        {
+          "type": "list",
+          "title": "為什麼黑皮諾如此特別？",
+          "points": [
+            "最難種植的品種之一 - 對氣候與土壤極為挑剔",
+            "薄皮葡萄 - 容易受病蟲害影響",
+            "早熟品種 - 需要涼爽氣候保持酸度",
+            "能完美表達風土差異 - 被稱為「透明的品種」"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "夏多內的多樣性",
+          "points": [
+            "適應力強 - 在全球各地都有種植",
+            "風格多變 - 從清爽礦物到濃郁奶油",
+            "橡木桶使用 - 影響最終風格的關鍵",
+            "布根地是夏多內的原鄉與標竿"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "其他品種",
+          "content": "除了黑皮諾與夏多內，布根地也種植少量 Aligoté（白葡萄）和 Gamay（紅葡萄，主要在薄酒萊）。Aligoté 用於釀造清新的白酒，也是著名雞尾酒 Kir 的基酒。"
+        }
+      ]
+    },
+    {
+      "id": "m1-l4",
+      "title": "酒標閱讀指南",
+      "duration": "15分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "酒標閱讀指南",
+          "subtitle": "Lesson 4 - 15分鐘",
+          "description": "學會解讀布根地酒標，了解等級系統與關鍵資訊"
+        },
+        {
+          "type": "content",
+          "title": "布根地酒標的獨特性",
+          "content": "布根地酒標看似簡單，實則蘊含豐富資訊。理解酒標是選購布根地酒的第一步，也是了解布根地分級體系的關鍵。"
+        },
+        {
+          "type": "list",
+          "title": "🏷️ 酒標必讀元素（由上而下）",
+          "points": [
+            "1. 酒莊名稱 - Domaine（酒莊）或 Maison（酒商）",
+            "2. 葡萄園名稱 - 可能包含 Grand Cru 或 Premier Cru",
+            "3. 產區/村莊名稱 - 如 Gevrey-Chambertin",
+            "4. AOC 等級標示 - Appellation d'Origine Contrôlée",
+            "5. 年份 - Vintage（非常重要）",
+            "6. 酒精濃度 - 通常 12-14%",
+            "7. 容量 - 標準 750ml"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "四級金字塔分級系統",
+          "points": [
+            "大區級（Régionale）- 約佔產量 53%",
+            "村莊級（Village）- 約佔產量 36%",
+            "一級園（Premier Cru）- 約佔產量 10%",
+            "特級園（Grand Cru）- 僅佔產量 1%"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "如何辨識等級？",
+          "content": "Grand Cru（特級園）- 酒標上只會標示葡萄園名稱，如「Chambertin」；Premier Cru（一級園）- 會標示村莊名 + 葡萄園名，如「Gevrey-Chambertin 1er Cru Les Cazetiers」"
+        },
+        {
+          "type": "image",
+          "title": "🍷 特級園酒標實例：Chambertin Grand Cru",
+          "image": "/images/Lesson/Chambertin Grand Cru.jpg",
+          "caption": "特級園酒標只標示葡萄園名稱「Chambertin」，不需標示村莊名"
+        },
+        {
+          "type": "image",
+          "title": "🍷 一級園酒標實例：Gevrey-Chambertin 1er Cru",
+          "image": "/images/Lesson/Gevrey-Chambertin 1er Cru Les Cazetiers.jpg",
+          "caption": "一級園酒標標示「村莊名 + 1er Cru + 葡萄園名」：Gevrey-Chambertin 1er Cru Les Cazetiers"
+        },
+        {
+          "type": "list",
+          "title": "酒標常見法文術語",
+          "points": [
+            "Mis en bouteille au domaine - 酒莊自行裝瓶",
+            "Vieilles Vignes - 老藤葡萄（通常 30 年以上）",
+            "Monopole - 單一所有權葡萄園",
+            "Clos - 有石牆圍繞的葡萄園",
+            "Climat - 特定命名的地塊"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "選購建議",
+          "points": [
+            "初學者：從村莊級開始，價格合理且品質穩定",
+            "進階者：嘗試一級園，體驗不同地塊的差異",
+            "收藏家：特級園值得長期陳年與投資",
+            "注意年份：布根地年份差異顯著，影響品質與價格"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Domaine vs Négociant",
+          "content": "Domaine（酒莊）擁有自己的葡萄園並釀酒；Négociant（酒商）則是向農民購買葡萄或酒液再裝瓶。兩者各有優勢，許多酒商也擁有自己的葡萄園。"
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "布根地位於法國哪個方位？",
+        "type": "single",
+        "options": [
+          "西南部（波爾多附近）",
+          "東部（巴黎東南方約300公里）",
+          "南部（普羅旺斯地區）",
+          "北部（香檳區附近）"
+        ],
+        "correctAnswer": 1,
+        "explanation": "布根地位於法國東部，從巴黎東南方約300公里處開始，主要城市包括第戎（Dijon）和博訥（Beaune）。"
+      },
+      {
+        "id": "q2",
+        "question": "布根地屬於什麼氣候類型？",
+        "type": "single",
+        "options": [
+          "地中海型氣候",
+          "海洋性氣候",
+          "大陸性氣候",
+          "熱帶氣候"
+        ],
+        "correctAnswer": 2,
+        "explanation": "布根地屬於大陸性氣候，四季分明，冬季寒冷，夏季溫暖但不炎熱，這對黑皮諾和夏多內的生長非常理想。"
+      },
+      {
+        "id": "q3",
+        "question": "哪個修道會對布根地葡萄酒發展貢獻最大？",
+        "type": "single",
+        "options": [
+          "本篤會（Benedictine）",
+          "西篤會（Cistercian）",
+          "方濟會（Franciscan）",
+          "道明會（Dominican）"
+        ],
+        "correctAnswer": 1,
+        "explanation": "西篤會修道士仔細研究不同地塊的差異，首創「風土」概念，並建立了嚴格的葡萄種植與釀酒標準，對布根地發展功不可沒。"
+      },
+      {
+        "id": "q4",
+        "question": "布根地的「Climats」在2015年被列為什麼？",
+        "type": "single",
+        "options": [
+          "法國國家級古蹟",
+          "聯合國教科文組織世界遺產",
+          "歐盟保護產區",
+          "國際美食之都"
+        ],
+        "correctAnswer": 1,
+        "explanation": "2015年，布根地的 Climats（1,247個精確劃分的葡萄園地塊）被列為聯合國教科文組織世界遺產，彰顯其獨特的文化與歷史價值。"
+      },
+      {
+        "id": "q5",
+        "question": "布根地紅酒主要使用哪個葡萄品種？",
+        "type": "single",
+        "options": [
+          "卡本內蘇維濃（Cabernet Sauvignon）",
+          "梅洛（Merlot）",
+          "黑皮諾（Pinot Noir）",
+          "希哈（Syrah）"
+        ],
+        "correctAnswer": 2,
+        "explanation": "布根地紅酒幾乎全部使用黑皮諾（Pinot Noir）單一品種釀造，這是布根地的特色之一，與波爾多的混釀傳統截然不同。"
+      },
+      {
+        "id": "q6",
+        "question": "夏多內（Chardonnay）在布根地主要用於釀造什麼？",
+        "type": "single",
+        "options": [
+          "紅酒",
+          "白酒",
+          "粉紅酒",
+          "氣泡酒"
+        ],
+        "correctAnswer": 1,
+        "explanation": "夏多內是白葡萄品種，在布根地主要用於釀造白酒。布根地是夏多內的原鄉，這裡的夏多內白酒被視為世界標竿。"
+      },
+      {
+        "id": "q7",
+        "question": "布根地四級分級系統中，哪一級產量最少但品質最高？",
+        "type": "single",
+        "options": [
+          "大區級（Régionale）",
+          "村莊級（Village）",
+          "一級園（Premier Cru）",
+          "特級園（Grand Cru）"
+        ],
+        "correctAnswer": 3,
+        "explanation": "特級園（Grand Cru）僅佔布根地總產量的1%，是品質最高的等級。這些葡萄園擁有最優越的風土條件，釀造出的葡萄酒最具陳年潛力。"
+      },
+      {
+        "id": "q8",
+        "question": "在布根地酒標上，如果只標示「Chambertin」而沒有村莊名，這是什麼等級？",
+        "type": "single",
+        "options": [
+          "大區級",
+          "村莊級",
+          "一級園",
+          "特級園"
+        ],
+        "correctAnswer": 3,
+        "explanation": "特級園（Grand Cru）的酒標只會標示葡萄園名稱，不需要標示村莊名。如果是一級園，則會標示「村莊名 + 1er Cru + 葡萄園名」。"
+      },
+      {
+        "id": "q9",
+        "question": "「Mis en bouteille au domaine」在酒標上代表什麼意思？",
+        "type": "single",
+        "options": [
+          "有機認證葡萄酒",
+          "老藤葡萄釀造",
+          "酒莊自行裝瓶",
+          "單一葡萄園"
+        ],
+        "correctAnswer": 2,
+        "explanation": "「Mis en bouteille au domaine」表示這支酒是由酒莊自行裝瓶，通常意味著從葡萄種植到裝瓶都由同一酒莊掌控，品質較有保障。"
+      },
+      {
+        "id": "q10",
+        "question": "布根地從北到南有六大產區，以下哪個不是？",
+        "type": "single",
+        "options": [
+          "夏布利（Chablis）",
+          "夜丘（Côte de Nuits）",
+          "波亞克（Pauillac）",
+          "薄酒萊（Beaujolais）"
+        ],
+        "correctAnswer": 2,
+        "explanation": "波亞克（Pauillac）是波爾多的產區，不屬於布根地。布根地六大產區由北到南為：夏布利、夜丘、伯恩丘、夏隆丘、馬貢內、薄酒萊。"
+      }
+    ]
+  }
+}

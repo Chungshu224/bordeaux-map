@@ -1,0 +1,934 @@
+{
+  "moduleId": "module4",
+  "title": "伯恩丘探索 Côte de Beaune",
+  "description": "深入探索布根地白酒天堂伯恩丘，了解 Meursault、Puligny-Montrachet、Chassagne-Montrachet 等名村，以及霞多麗的極致表現",
+  "lessons": [
+    {
+      "id": "lesson1",
+      "title": "伯恩丘概覽：白酒天堂",
+      "duration": "12分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "伯恩丘概覽：白酒天堂",
+          "subtitle": "12分鐘",
+          "description": "伯恩丘是金丘的南段，以出產世界頂級霞多麗白酒聞名。雖然也產紅酒，但白酒的名氣更勝一籌，Meursault、Puligny-Montrachet、Chassagne-Montrachet 等村莊是白酒愛好者的朝聖地。"
+        },
+        {
+          "type": "map",
+          "title": "🗺️ 伯恩丘全區地圖",
+          "interactive": false,
+          "mapConfig": {
+            "center": [4.82, 47.0],
+            "zoom": 11,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "bourgogne-base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "pernand-vergelesses",
+              "url": "/geojson/Cote-de-Beaune/01Pernand-Vergelesses/AOC Pernand-Vergelesses Village.geojson",
+              "displayName": "Pernand-Vergelesses",
+              "fillColor": "#FFB6C1",
+              "fillOpacity": 0.6,
+              "lineColor": "#FF1493",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "ladoix",
+              "url": "/geojson/Cote-de-Beaune/02Ladoix/AOC Ladoix Village.geojson",
+              "displayName": "Ladoix",
+              "fillColor": "#FFA07A",
+              "fillOpacity": 0.6,
+              "lineColor": "#FF4500",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "aloxe-corton",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson",
+              "displayName": "Aloxe-Corton",
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.6,
+              "lineColor": "#DC143C",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "savigny-les-beaune",
+              "url": "/geojson/Cote-de-Beaune/04Savigny-lès-Beaune/AOC Savigny-lès-Beaune Village.geojson",
+              "displayName": "Savigny-lès-Beaune",
+              "fillColor": "#FFA500",
+              "fillOpacity": 0.6,
+              "lineColor": "#FF8C00",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "chorey-les-beaune",
+              "url": "/geojson/Cote-de-Beaune/05Chorey-lès-Beaune/AOC Chorey-lès-Beaune Village.geojson",
+              "displayName": "Chorey-lès-Beaune",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.6,
+              "lineColor": "#FFA500",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "beaune",
+              "url": "/geojson/Cote-de-Beaune/06Beaune/AOC Beaune Village.geojson",
+              "displayName": "Beaune",
+              "fillColor": "#F4A460",
+              "fillOpacity": 0.6,
+              "lineColor": "#CD853F",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "pommard",
+              "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson",
+              "displayName": "Pommard",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.6,
+              "lineColor": "#660000",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "volnay",
+              "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson",
+              "displayName": "Volnay",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.6,
+              "lineColor": "#B22222",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "monthelie",
+              "url": "/geojson/Cote-de-Beaune/09Monthélie/AOC Monthélie Village.geojson",
+              "displayName": "Monthélie",
+              "fillColor": "#CD5C5C",
+              "fillOpacity": 0.6,
+              "lineColor": "#A52A2A",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "saint-romain",
+              "url": "/geojson/Cote-de-Beaune/10Saint-Romain/AOC Saint-Romain Village.geojson",
+              "displayName": "Saint-Romain",
+              "fillColor": "#BC8F8F",
+              "fillOpacity": 0.6,
+              "lineColor": "#8B4513",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "auxey-duresses",
+              "url": "/geojson/Cote-de-Beaune/11Auxey-Duresses/AOC Auxey-Duresses Village.geojson",
+              "displayName": "Auxey-Duresses",
+              "fillColor": "#DEB887",
+              "fillOpacity": 0.6,
+              "lineColor": "#D2691E",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "meursault",
+              "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson",
+              "displayName": "Meursault",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.7,
+              "lineColor": "#DAA520",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "blagny",
+              "url": "/geojson/Cote-de-Beaune/13Blagny/AOC Blagny Village.geojson",
+              "displayName": "Blagny",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.6,
+              "lineColor": "#BDB76B",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "puligny-montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson",
+              "displayName": "Puligny-Montrachet",
+              "fillColor": "#FFFF00",
+              "fillOpacity": 0.7,
+              "lineColor": "#FFD700",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chassagne-montrachet",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson",
+              "displayName": "Chassagne-Montrachet",
+              "fillColor": "#F5DEB3",
+              "fillOpacity": 0.7,
+              "lineColor": "#DEB887",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "saint-aubin",
+              "url": "/geojson/Cote-de-Beaune/16Saint-Aubin/AOC Saint-Aubin Village.geojson",
+              "displayName": "Saint-Aubin",
+              "fillColor": "#EEE8AA",
+              "fillOpacity": 0.6,
+              "lineColor": "#DAA520",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "santenay",
+              "url": "/geojson/Cote-de-Beaune/17Santenay/AOC Santenay Village.geojson",
+              "displayName": "Santenay",
+              "fillColor": "#FA8072",
+              "fillOpacity": 0.6,
+              "lineColor": "#E9967A",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "maranges",
+              "url": "/geojson/Cote-de-Beaune/18Maranges/AOC Maranges Village.geojson",
+              "displayName": "Maranges",
+              "fillColor": "#F08080",
+              "fillOpacity": 0.6,
+              "lineColor": "#CD5C5C",
+              "lineWidth": 1.5,
+              "showLabels": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "地理與氣候特徵",
+          "content": "伯恩丘從 Ladoix 延伸到 Maranges，長約25公里。相比夜丘，這裡的地形更複雜，山坡走向多變，土壤組成也更多樣化，造就了紅白酒並存的格局。",
+          "keyPoints": [
+            "氣候：比夜丘稍溫暖，更適合霞多麗",
+            "土壤：石灰岩為主，泥灰岩比例較高",
+            "地形：山谷與山坡交錯，微氣候差異大",
+            "產量：白酒佔60%，紅酒40%"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "伯恩丘的獨特之處",
+          "content": "伯恩丘是布根地白酒的心臟地帶，擁有6個白酒特級園（全球最貴霞多麗產地），同時也產出優質黑皮諾。18個村莊級 AOC 展現了驚人的多樣性。",
+          "keyPoints": [
+            "🏆 白酒特級園：6個全球最貴的霞多麗產地（全在 Montrachet 周圍）",
+            "🍷 紅酒村莊：Pommard、Volnay 風格迥異，品質卓越",
+            "💎 性價比之王：Beaune 村莊級酒極具性價比",
+            "🎨 風格多樣性：從礦物到奶油，從強勁到優雅",
+            "📊 產量比例：白酒佔60%，紅酒40%（與夜丘相反）",
+            "🌟 18個村莊級 AOC：最多樣化的產區"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "💡 重點提示",
+          "points": [
+            "🍾 伯恩丘60%產白酒，霞多麗是主角",
+            "🍾 白酒特級園集中在 Montrachet 周圍",
+            "🍾 紅酒雖不如夜丘著名，但品質同樣卓越"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "總結",
+          "content": "伯恩丘展現了霞多麗的極致表現，從奶油般的 Meursault 到礦物感十足的 Puligny，每個村莊都有獨特魅力。"
+        }
+      ]
+    },
+    {
+      "id": "lesson2",
+      "title": "白酒三大名村：Meursault、Puligny、Chassagne",
+      "duration": "18分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "白酒三大名村：Meursault、Puligny、Chassagne",
+          "subtitle": "18分鐘",
+          "description": "伯恩丘的白酒三大名村，代表了霞多麗的三種不同風格：奶油榛果的 Meursault、礦物優雅的 Puligny、紅白兼具的 Chassagne。"
+        },
+        {
+          "type": "map",
+          "title": "🗺️ 白酒三大名村地圖",
+          "interactive": true,
+          "buttonPosition": "left",
+          "regions": [
+            {
+              "id": "meursault",
+              "name": "Meursault",
+              "nameFr": "Meursault",
+              "description": "奶油榛果的經典"
+            },
+            {
+              "id": "puligny-montrachet",
+              "name": "Puligny-Montrachet",
+              "nameFr": "Puligny-Montrachet",
+              "description": "礦物優雅，4個特級園"
+            },
+            {
+              "id": "chassagne-montrachet",
+              "name": "Chassagne-Montrachet",
+              "nameFr": "Chassagne-Montrachet",
+              "description": "紅白兼產，3個特級園"
+            }
+          ],
+          "mapConfig": {
+            "center": [4.75, 46.95],
+            "zoom": 12,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "bourgogne-base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "meursault",
+              "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson",
+              "displayName": "Meursault",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.75,
+              "lineColor": "#DAA520",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "puligny-montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson",
+              "displayName": "Puligny-Montrachet",
+              "fillColor": "#FFFF00",
+              "fillOpacity": 0.75,
+              "lineColor": "#FFD700",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chassagne-montrachet",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson",
+              "displayName": "Chassagne-Montrachet",
+              "fillColor": "#F5DEB3",
+              "fillOpacity": 0.75,
+              "lineColor": "#DEB887",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Meursault：奶油榛果的經典",
+          "content": "Meursault 是伯恩丘最大的白酒村莊，雖然沒有特級園，但一級園品質極高，經典的奶油、榛果、烤麵包香氣是其標誌。",
+          "keyPoints": [
+            "面積：395公頃（伯恩丘最大白酒村）",
+            "一級園：13個，品質極高",
+            "風格：奶油、榛果、烤麵包、圓潤飽滿",
+            "陳年：5-15年",
+            "價格：村莊級 €30-60，一級園 €60-150"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Meursault 頂級一級園",
+          "content": "雖無特級園，但這些一級園可媲美特級園品質",
+          "keyPoints": [
+            "🍾 Perrières - 最接近特級園品質，礦物感強",
+            "🍾 Genevrières - 優雅複雜",
+            "🍾 Charmes - 柔和迷人",
+            "🍾 Poruzots - 力量與優雅並存"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Puligny-Montrachet：礦物優雅",
+          "content": "Puligny-Montrachet 擁有4個特級園，是全球最精緻的霞多麗產地。礦物感強、酸度活潑、陳年潛力驚人。",
+          "keyPoints": [
+            "4個特級園（全球最貴霞多麗產地）",
+            "風格：礦物感極強、酸度活潑、纖細優雅",
+            "陳年：8-30年",
+            "價格：村莊級 €40-80，特級園 €250-2000"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Puligny-Montrachet 特級園（1/2）",
+          "content": "Montrachet 是白酒之王，與 Chevalier-Montrachet 代表了霞多麗的最高成就，這兩個特級園的位置和風土造就了它們獨特的個性。",
+          "keyPoints": [
+            "🏆 Montrachet（白酒之王）",
+            "  面積：7.5公頃（Puligny 3.5ha + Chassagne 4ha）",
+            "  位置：中坡段，排水完美，日照最佳",
+            "  價格：€500-2000/瓶（頂級年份可達 €5000+）",
+            "  陳年：10-30年，巔峰期 15-25年",
+            "  風格：極致複雜、深邃優雅、力量與精緻完美平衡",
+            "  香氣：白花、榛果、蜂蜜、礦物、烤杏仁、黃油",
+            "  口感：奶油般質地、無盡餘韻、層次驚人",
+            "",
+            "🏆 Chevalier-Montrachet（最優雅）",
+            "  面積：7.4公頃（完全在 Puligny）",
+            "  位置：Montrachet 上方，海拔更高、土層更薄",
+            "  價格：€300-800/瓶",
+            "  陳年：10-25年，巔峰期 12-20年",
+            "  風格：礦物感極強、酸度活潑、纖細優雅、更內斂",
+            "  特色：比 Montrachet 更輕盈，但精緻度不輸"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Puligny-Montrachet 特級園（2/2）",
+          "content": "Bâtard 家族的兩個特級園，雖不及 Montrachet 頂級，但依然是世界級的霞多麗產地，各有特色。",
+          "keyPoints": [
+            "🏆 Bâtard-Montrachet（強勁兄弟）",
+            "  面積：11.9公頃（Puligny 6.1ha + Chassagne 5.8ha）",
+            "  位置：Montrachet 下方，土壤更深、黏土更多",
+            "  價格：€300-700/瓶",
+            "  陳年：10-25年，巔峰期 12-20年",
+            "  風格：比 Montrachet 更強勁飽滿、更豐腴",
+            "  特色：果味更濃郁、酒體更厚重、適合配重口味料理",
+            "  香氣：成熟水果、蜂蜜、黃油、烤榛果",
+            "",
+            "🏆 Bienvenues-Bâtard-Montrachet（歡迎來到 Bâtard）",
+            "  面積：3.7公頃（完全在 Puligny）",
+            "  位置：Bâtard-Montrachet 旁邊",
+            "  價格：€250-600/瓶",
+            "  陳年：8-20年，巔峰期 10-15年",
+            "  風格：優雅細膩，介於 Bâtard 與 Chevalier 之間",
+            "  特色：最小特級園之一，產量稀少但性價比較高"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Chassagne-Montrachet：紅白兼產",
+          "content": "Chassagne-Montrachet 紅白兼產，白酒優雅礦物，紅酒也有高水準。共享3個特級園。",
+          "keyPoints": [
+            "3個特級園（全部或部分在 Chassagne）",
+            "白酒：礦物感、優雅、比 Puligny 更圓潤",
+            "紅酒：單寧細膩、果味純淨、陳年潛力",
+            "產量：50% 紅酒，50% 白酒"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Chassagne-Montrachet 特級園",
+          "content": "Chassagne 擁有或共享3個特級園，其中 Criots-Bâtard-Montrachet 完全屬於 Chassagne。這些特級園展現了 Chassagne 更圓潤、更豐滿的風格。",
+          "keyPoints": [
+            "🏆 Montrachet（部分）",
+            "  面積：約4公頃在 Chassagne（共7.5ha）",
+            "  位置：Chassagne 這側通常更溫暖",
+            "  風格：白酒之王，Chassagne 部分更豐滿圓潤",
+            "  價格：€500-2000/瓶（同 Puligny）",
+            "",
+            "🏆 Bâtard-Montrachet（部分）",
+            "  面積：約5.8公頃在 Chassagne（共11.9ha）",
+            "  位置：Chassagne 佔大半面積",
+            "  風格：豐腴飽滿，Chassagne 部分更厚重",
+            "  價格：€300-700/瓶",
+            "",
+            "🏆 Criots-Bâtard-Montrachet（獨有）",
+            "  面積：1.6公頃（完全在 Chassagne）",
+            "  位置：Bâtard 南側，接近 Chassagne 村中心",
+            "  價格：€250-600/瓶",
+            "  陳年：8-20年",
+            "  風格：最小特級園之一，優雅細膩但比 Puligny 更圓潤",
+            "  特色：產量最少、最稀有，但價格相對親民"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "💡 重點提示",
+          "points": [
+            "🍾 Meursault 無特級園，但頂級一級園可媲美特級園",
+            "🍾 Montrachet 是全球最貴霞多麗，均價超過€500",
+            "🍾 Chassagne 的紅酒常被低估，性價比極高"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "總結",
+          "content": "白酒三大名村展現了霞多麗的極致多樣性，從奶油到礦物，每個村莊都有獨特魅力。"
+        }
+      ]
+    },
+    {
+      "id": "lesson3",
+      "title": "紅酒雙雄：Pommard 與 Volnay",
+      "duration": "12分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "紅酒雙雄：Pommard 與 Volnay",
+          "subtitle": "12分鐘",
+          "description": "伯恩丘最著名的兩個紅酒村莊，Pommard 和 Volnay 緊鄰但風格迥異，完美展現了風土的細微差別。"
+        },
+        {
+          "type": "map",
+          "title": "🗺️ 紅酒雙雄地圖",
+          "interactive": true,
+          "buttonPosition": "left",
+          "regions": [
+            {
+              "id": "pommard",
+              "name": "Pommard",
+              "nameFr": "Pommard",
+              "description": "最強勁紅酒，28個一級園"
+            },
+            {
+              "id": "volnay",
+              "name": "Volnay",
+              "nameFr": "Volnay",
+              "description": "最優雅紅酒，35個一級園"
+            }
+          ],
+          "mapConfig": {
+            "center": [4.78, 46.98],
+            "zoom": 12.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "bourgogne-base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "pommard",
+              "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson",
+              "displayName": "Pommard",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.75,
+              "lineColor": "#660000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "volnay",
+              "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson",
+              "displayName": "Volnay",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.75,
+              "lineColor": "#B22222",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Pommard：伯恩丘最強勁紅酒",
+          "content": "Pommard 只產紅酒，以單寧厚實、結構強勁、需長時間陳年著稱。這裡沒有特級園，但一級園品質極高。",
+          "keyPoints": [
+            "面積：318公頃",
+            "一級園：28個",
+            "風格：單寧厚實、結構強勁、野味香氣",
+            "陳年：8-20年",
+            "價格：村莊級 €30-60，一級園 €60-150"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Pommard 頂級一級園",
+          "content": "雖無特級園，但這些一級園品質卓越",
+          "keyPoints": [
+            "🍷 Les Rugiens - Pommard 最佳一級園",
+            "  強勁有力，陳年潛力驚人",
+            "",
+            "🍷 Les Epenots - 強勁有力",
+            "  結構宏大，香料複雜",
+            "",
+            "🍷 Les Pézerolles - 優雅細膩",
+            "  Pommard 中最優雅的一級園"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Volnay：伯恩丘最優雅紅酒",
+          "content": "Volnay 只產紅酒，風格與 Pommard 截然相反，以絲滑細膩、花香四溢聞名，被稱為「紅酒中的女性」。",
+          "keyPoints": [
+            "面積：213公頃",
+            "一級園：35個",
+            "風格：絲滑細膩、花香四溢、優雅精緻",
+            "陳年：5-15年",
+            "價格：村莊級 €30-60，一級園 €60-150"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Volnay 頂級一級園",
+          "content": "35個一級園中的翹楚",
+          "keyPoints": [
+            "🍷 Caillerets - 最優雅細膩",
+            "  紫羅蘭香氣，絲滑質地",
+            "",
+            "🍷 Champans - 力量與優雅並存",
+            "  Volnay 中最強勁的一級園",
+            "",
+            "🍷 Santenots - 實際位於 Meursault",
+            "  但紅酒只能標示為 Volnay（獨特現象）"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Pommard vs Volnay：風土的奇蹟",
+          "content": "相距僅2公里，風格卻截然不同",
+          "keyPoints": [
+            "📍 土壤：Pommard 黏土高 vs Volnay 石灰岩主導",
+            "💪 單寧：Pommard 厚實強勁 vs Volnay 細膩柔和",
+            "🌸 香氣：Pommard 野味黑果 vs Volnay 紫羅蘭紅果",
+            "🍷 酒體：Pommard 飽滿強健 vs Volnay 中等優雅",
+            "⏳ 陳年：Pommard 8-20年 vs Volnay 5-15年",
+            "🎭 風格：Pommard 陽剛 vs Volnay 陰柔"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "💡 重點提示",
+          "points": [
+            "🍷 Pommard 和 Volnay 僅相距2公里，風格迥異",
+            "🍷 Volnay 的 Santenots 一級園位於 Meursault，但只能標示為 Volnay",
+            "🍷 兩村都無特級園，但一級園品質極高"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "總結",
+          "content": "Pommard 與 Volnay 完美展現了風土的細微差別，即使相距僅2公里，風格也截然不同。"
+        }
+      ]
+    },
+    {
+      "id": "lesson4",
+      "title": "其他重要村莊與品鑑建議",
+      "duration": "10分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "其他重要村莊與品鑑建議",
+          "subtitle": "10分鐘",
+          "description": "除了前面介紹的名村，伯恩丘還有許多值得關注的村莊，性價比極高，適合入門學習。"
+        },
+        {
+          "type": "content",
+          "title": "Aloxe-Corton：紅白雙特級園",
+          "content": "伯恩丘唯一同時擁有紅白特級園的村莊，歷史悠久，品質卓越。",
+          "keyPoints": [
+            "🏆 特級園：Corton（紅）、Corton-Charlemagne（白）",
+            "🍷 紅酒：Corton 強勁有力，陳年潛力驚人",
+            "🍾 白酒：Corton-Charlemagne 礦物感強，優雅複雜",
+            "📍 位置：伯恩丘北部，山坡陡峭",
+            "💰 價格：特級園 €80-300，村莊級 €25-50",
+            "⭐ 特色：查理曼大帝曾擁有此地葡萄園"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Beaune：伯恩丘首府",
+          "content": "伯恩丘最大村莊，42個一級園數量驚人，性價比極高的日常飲用之選。",
+          "keyPoints": [
+            "📊 面積：400公頃以上（伯恩丘最大）",
+            "🎯 一級園：42個（數量最多）",
+            "🍷 風格：紅酒為主，優雅易飲，果味純淨",
+            "💰 價格：村莊級 €20-40，一級園 €40-80",
+            "⭐ 特色：Hospices de Beaune 慈善拍賣會",
+            "🎖️ 推薦：性價比之王，適合入門與日常飲用"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "性價比村莊推薦",
+          "content": "這些村莊品質穩定、價格親民，是探索伯恩丘的絕佳入門選擇。地理位置雖不如名村顯赫，但風土條件優良，許多生產者釀造出超越價格的優質酒款。",
+          "keyPoints": [
+            "🍾 Saint-Romain（聖羅曼）- 性價比之選",
+            "  位置：伯恩丘西側山谷，海拔較高",
+            "  白酒：清爽礦物、檸檬柑橘、酸度活潑",
+            "  紅酒：果味純淨、單寧柔和、易飲",
+            "  價格：€15-30（極具性價比）",
+            "  適合：日常飲用、入門探索",
+            "",
+            "🍾 Auxey-Duresses（歐塞迪雷斯）- Meursault 的替代品",
+            "  位置：Meursault 西側，風土相似",
+            "  白酒：奶油榛果香氣、圓潤飽滿、接近 Meursault 風格",
+            "  紅酒：果味豐富、結構均衡",
+            "  價格：€18-35（Meursault 的一半價格）",
+            "  適合：預算有限但想體驗 Meursault 風格",
+            "",
+            "🍾 Saint-Aubin（聖歐班）- 礦物白酒",
+            "  位置：Puligny-Montrachet 和 Chassagne-Montrachet 西側",
+            "  白酒：礦物感強、酸度活潑、接近 Puligny 風格",
+            "  特點：風土條件優越但知名度較低",
+            "  價格：€20-40（Puligny 的三分之一價格）",
+            "  適合：想體驗礦物霞多麗但預算有限",
+            "",
+            "🍾 Santenay（桑特內）- 南部紅酒",
+            "  位置：伯恩丘最南端",
+            "  紅酒：果味豐富、單寧柔和、易飲易配餐",
+            "  白酒：清新礦物、價格實惠",
+            "  價格：€18-35",
+            "  適合：日常餐酒、紅肉料理搭配"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "品鑑建議：入門與進階",
+          "content": "循序漸進是學習葡萄酒的最佳途徑。從性價比高的村莊開始，逐步體驗經典名村的風格，建立味覺記憶和品鑑能力。",
+          "keyPoints": [
+            "🎓 入門級（€15-40）",
+            "  推薦酒款：Beaune Village、Saint-Romain、Auxey-Duresses",
+            "  學習目標：認識霞多麗與黑皮諾的基本風格",
+            "  品鑑重點：奶油 vs 礦物（白）、果味 vs 單寧（紅）",
+            "  飲用建議：白酒8-12°C，紅酒14-16°C",
+            "  陳年：購買後1-3年內飲用",
+            "  搭配：日常家庭料理、朋友聚餐",
+            "  性價比：★★★★★",
+            "",
+            "🎯 進階級（€40-100）",
+            "  推薦酒款：Meursault Village、Volnay Village、Pommard Village",
+            "  學習目標：理解風土差異、村莊特色",
+            "  品鑑重點：Meursault 奶油 vs Puligny 礦物",
+            "             Pommard 強勁 vs Volnay 優雅",
+            "  飲用建議：提前1-2小時開瓶醒酒（紅酒）",
+            "  陳年：白酒3-8年，紅酒5-12年",
+            "  搭配：精緻餐廳、特殊場合",
+            "  投資價值：適合建立小型酒窖"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "品鑑建議：專業與收藏",
+          "content": "追求極致品質需要深厚的品鑑經驗和專業的儲存條件。這些酒款不僅是味覺享受，更是藝術品和投資標的。",
+          "keyPoints": [
+            "🏅 專業級（€100-300）",
+            "  推薦酒款：Meursault 一級園（Perrières、Genevrières）",
+            "             Puligny-Montrachet Village、Chassagne 1er Cru",
+            "             Pommard 1er Cru（Les Rugiens）、Volnay 1er Cru",
+            "  學習目標：理解微氣候、地塊差異、釀造工藝影響",
+            "  品鑑重點：複雜度、層次感、餘韻長度、陳年潛力",
+            "  飲用建議：陳年5-10年後品飲，需醒酒2-3小時",
+            "  儲存條件：恆溫12-14°C，濕度70%，避光平放",
+            "  投資回報：年增值5-10%（優質年份）",
+            "  適合場合：重要商務、收藏品鑑、投資組合",
+            "",
+            "💎 收藏級（€300-2000+）",
+            "  推薦酒款：Montrachet（€500-2000）、Chevalier-Montrachet（€300-800）",
+            "             Bâtard-Montrachet（€300-700）",
+            "  學習目標：體驗霞多麗的極致表現、理解風土精髓",
+            "  品鑑重點：極致複雜度、無盡餘韻、陳年演化",
+            "  飲用建議：陳年10-20年巔峰期，醒酒3-4小時",
+            "  儲存條件：專業酒窖，恆溫恆濕，長期平放",
+            "  投資價值：頂級年份年增值10-20%",
+            "  購買建議：選擇信譽酒商、確認來源、注意年份",
+            "  注意事項：需要專業品鑑能力才能充分欣賞",
+            "  適合：資深收藏家、投資組合、人生重要時刻"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "餐酒搭配：白酒",
+          "content": "伯恩丘白酒風格多樣，從奶油圓潤到礦物清爽，搭配不同料理能展現最佳風味。關鍵是醬汁與酒體的平衡。",
+          "keyPoints": [
+            "🍾 Meursault（奶油榛果風格）",
+            "  🦞 海鮮類：龍蝦、帝王蟹、奶油醬汁海鮮",
+            "  🍗 禽類：烤雞、火雞、雞肉奶油醬",
+            "  🍄 其他：鵝肝、奶油蘑菇、白醬義大利麵",
+            "  🧀 起司：成熟 Comté、Gruyère、Brie",
+            "  ⚠️ 避免：過酸料理、生魚片、清淡蔬菜",
+            "  🌡️ 侍酒溫度：10-12°C",
+            "  💡 搭配原理：酒的奶油質地與醬汁呼應",
+            "",
+            "🍾 Puligny-Montrachet（礦物優雅風格）",
+            "  🦪 海鮮類：生蠔、扇貝、海膽、清蒸魚",
+            "  🍣 日式：壽司、刺身、天婦羅",
+            "  🥗 其他：海鮮沙拉、檸檬魚、清蒸貝類",
+            "  🧀 起司：山羊起司、新鮮 Chèvre、Feta",
+            "  ⚠️ 避免：重口味醬汁、油炸、辛辣",
+            "  🌡️ 侍酒溫度：8-10°C",
+            "  💡 搭配原理：礦物感與海鮮鮮味完美融合",
+            "",
+            "🍾 Chassagne-Montrachet（圓潤礦物風格）",
+            "  🐟 海鮮類：炙烤鮭魚、烤鱈魚、海鮮燉飯",
+            "  🍗 禽類：烤雞、雞肉蘑菇、白酒燉雞",
+            "  🍄 其他：奶油蘑菇、白松露、龍蝦義大利麵",
+            "  🧀 起司：溫和 Camembert、年輕 Comté",
+            "  🌡️ 侍酒溫度：10-11°C",
+            "  💡 搭配原理：介於 Meursault 與 Puligny 之間"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "餐酒搭配：紅酒",
+          "content": "伯恩丘黑皮諾從強勁到優雅風格豐富，單寧細膩、果味純淨是共同特點。搭配時需考慮酒的單寧強度和陳年程度。",
+          "keyPoints": [
+            "🍷 Pommard（強勁厚重風格）",
+            "  🥩 紅肉類：紅燒牛肉、牛排、羊排、燉牛腩",
+            "  🦆 禽類：烤鴨、鵝肉、野鴨",
+            "  🦌 野味：鹿肉、野豬、兔肉（重口味）",
+            "  🧀 起司：陳年 Comté、Époisses、藍紋起司",
+            "  🍄 其他：黑松露、野菇燉肉、紅酒燉牛肉",
+            "  ⚠️ 避免：清淡魚類、生食、簡單料理",
+            "  🌡️ 侍酒溫度：16-18°C",
+            "  ⏰ 醒酒：年輕酒2-3小時，陳年酒1-2小時",
+            "  💡 搭配原理：強勁單寧需要油脂和蛋白質平衡",
+            "",
+            "🍷 Volnay（優雅細膩風格）",
+            "  🍗 禽類：烤雞、火雞、雞肉蘑菇、鴨胸",
+            "  🐰 野味：燉兔肉、野兔、山雞（清淡）",
+            "  🍄 蘑菇：各式菇類料理、松露、野菇燉飯",
+            "  🧀 起司：溫和 Brie、Camembert、年輕 Comté",
+            "  🥩 其他：小牛肉、豬里肌、鮭魚（重口味）",
+            "  ⚠️ 避免：過重口味、辛辣、油炸",
+            "  🌡️ 侍酒溫度：14-16°C",
+            "  ⏰ 醒酒：1-2小時即可",
+            "  💡 搭配原理：細膩單寧適合中等口味料理",
+            "",
+            "🍷 Beaune（優雅易飲風格）",
+            "  🍗 禽類：烤雞、烤鴨腿、雞肉料理",
+            "  🥩 紅肉：燉牛肉、牛肉漢堡、烤豬排",
+            "  🍄 其他：蘑菇料理、紅酒燉菜、肉醬義大利麵",
+            "  🧀 起司：中度 Comté、Cantal、Reblochon",
+            "  🌡️ 侍酒溫度：15-17°C",
+            "  ⏰ 醒酒：30分鐘-1小時",
+            "  💡 搭配原理：平易近人，百搭日常料理",
+            "  ⭐ 特色：性價比最高的日常餐酒"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "💡 購買建議",
+          "points": [
+            "🍾 Beaune 是性價比之王，適合日常飲用",
+            "🍾 Meursault 村莊級已有很高水準，一級園更卓越",
+            "🍾 白酒特級園價格昂貴，一級園性價比更佳",
+            "🍾 Saint-Romain、Auxey-Duresses 是入門好選擇",
+            "🍾 Pommard 需陳年8年以上，Volnay 5年即可享用",
+            "🍾 購買時注意生產者比產區更重要"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "總結",
+          "content": "伯恩丘除了名村，還有許多性價比極高的村莊值得探索。選擇適合自己預算的等級，搭配合適的料理，逐步提升品鑑能力，享受布根地白酒與紅酒的多樣魅力。"
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "伯恩丘共有多少個白酒特級園？",
+        "type": "single-choice",
+        "options": ["4個", "6個", "8個", "10個"],
+        "correctAnswer": 1,
+        "explanation": "伯恩丘有6個白酒特級園，全部是霞多麗：Montrachet、Chevalier-Montrachet、Bâtard-Montrachet、Bienvenues-Bâtard-Montrachet、Criots-Bâtard-Montrachet、Corton-Charlemagne。"
+      },
+      {
+        "id": "q2",
+        "question": "哪個村莊被稱為「白酒之王」但沒有特級園？",
+        "type": "single-choice",
+        "options": ["Puligny-Montrachet", "Chassagne-Montrachet", "Meursault", "Beaune"],
+        "correctAnswer": 2,
+        "explanation": "Meursault 是伯恩丘最大的白酒村莊，雖然沒有特級園，但一級園品質極高。"
+      },
+      {
+        "id": "q3",
+        "question": "Montrachet 特級園的面積是多少？",
+        "type": "single-choice",
+        "options": ["3.7公頃", "7.5公頃", "11.9公頃", "15.4公頃"],
+        "correctAnswer": 1,
+        "explanation": "Montrachet 特級園面積7.5公頃，橫跨 Puligny-Montrachet 和 Chassagne-Montrachet 兩村。"
+      },
+      {
+        "id": "q4",
+        "question": "伯恩丘最強勁的紅酒產自哪個村莊？",
+        "type": "single-choice",
+        "options": ["Beaune", "Pommard", "Volnay", "Aloxe-Corton"],
+        "correctAnswer": 1,
+        "explanation": "Pommard 以單寧厚實、結構強勁聞名，是伯恩丘最強勁的紅酒。"
+      },
+      {
+        "id": "q5",
+        "question": "Volnay 的風格特徵是？",
+        "type": "single-choice",
+        "options": ["單寧厚實、強勁有力", "絲滑細膩、花香四溢", "礦物感強、酸度高", "奶油榛果、圓潤飽滿"],
+        "correctAnswer": 1,
+        "explanation": "Volnay 以絲滑細膩、花香四溢、優雅精緻聞名，被稱為「紅酒中的女性」。"
+      },
+      {
+        "id": "q6",
+        "question": "哪個村莊擁有42個一級園，是伯恩丘的首府？",
+        "type": "single-choice",
+        "options": ["Meursault", "Beaune", "Pommard", "Volnay"],
+        "correctAnswer": 1,
+        "explanation": "Beaune 是伯恩丘的首府，擁有42個一級園，村莊級酒性價比極高。"
+      },
+      {
+        "id": "q7",
+        "question": "Chassagne-Montrachet 的產量組成是？",
+        "type": "single-choice",
+        "options": ["100%白酒", "80%白酒 20%紅酒", "50%白酒 50%紅酒", "30%白酒 70%紅酒"],
+        "correctAnswer": 2,
+        "explanation": "Chassagne-Montrachet 紅白兼產，產量約各佔50%。"
+      },
+      {
+        "id": "q8",
+        "question": "Meursault 最著名的一級園是？",
+        "type": "single-choice",
+        "options": ["Charmes", "Genevrières", "Perrières", "Poruzots"],
+        "correctAnswer": 2,
+        "explanation": "Perrières 是 Meursault 品質最高的一級園，最接近特級園水準，礦物感強。"
+      },
+      {
+        "id": "q9",
+        "question": "伯恩丘的主要土壤類型與夜丘相比有何不同？",
+        "type": "single-choice",
+        "options": ["完全相同", "泥灰岩比例較高", "花崗岩為主", "火山岩較多"],
+        "correctAnswer": 1,
+        "explanation": "伯恩丘的土壤以石灰岩為主，但泥灰岩比例比夜丘高，更適合霞多麗。"
+      },
+      {
+        "id": "q10",
+        "question": "全球最貴的霞多麗白酒產自哪個特級園？",
+        "type": "single-choice",
+        "options": ["Chevalier-Montrachet", "Montrachet", "Corton-Charlemagne", "Bâtard-Montrachet"],
+        "correctAnswer": 1,
+        "explanation": "Montrachet 是全球最貴的霞多麗產地，均價超過€500，頂級酒莊可達€2000以上。"
+      }
+    ]
+  }
+}

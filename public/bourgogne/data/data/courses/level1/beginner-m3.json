@@ -1,0 +1,864 @@
+{
+  "moduleId": "module3",
+  "title": "夜丘探索 Côte de Nuits",
+  "description": "深入探索布根地紅酒之鄉夜丘，了解9個主要村莊、24個特級園，以及黑皮諾在這片土地上的極致表現",
+  "lessons": [
+    {
+      "id": "lesson1",
+      "title": "夜丘概覽：紅酒之鄉",
+      "duration": "15分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "夜丘概覽：紅酒之鄉",
+          "subtitle": "15分鐘",
+          "description": "夜丘是布根地最負盛名的紅酒產區，擁有24個特級園中的絕大部分。從 Marsannay 到 Nuits-Saint-Georges，這條僅24公里的黃金地帶孕育了世界上最昂貴、最優雅的黑皮諾葡萄酒。"
+        },
+        {
+          "type": "map",
+          "title": "🗺️ 夜丘產區地圖",
+          "mapConfig": {
+            "center": [4.95, 47.15],
+            "zoom": 10.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "bourgogne-base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "marsannay-chenove",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Chenôve).geojson",
+              "displayName": "Marsannay",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "marsannay-couchey",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Couchey).geojson",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "marsannay-main",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Marsannay-la-côte).geojson",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "fixin",
+              "url": "/geojson/Cote-de-Nuits/02Fixin/AOC Fixin (Fixin).geojson",
+              "displayName": "Fixin",
+              "fillColor": "#A52A2A",
+              "fillOpacity": 0.7,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "brochon",
+              "url": "/geojson/Cote-de-Nuits/03Brochon/Brochon.geojson",
+              "displayName": "Brochon",
+              "fillColor": "#B22222",
+              "fillOpacity": 0.7,
+              "lineColor": "#6A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "gevrey-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/AOC Gevrey-Chambertin (Gevrey-Chambertin).geojson",
+              "displayName": "Gevrey-Chambertin",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "morey-saint-denis",
+              "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/AOC Morey-Saint-Denis.geojson",
+              "displayName": "Morey-Saint-Denis",
+              "fillColor": "#C71585",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B008B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chambolle-musigny",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/AOC Chambolle-Musigny.geojson",
+              "displayName": "Chambolle-Musigny",
+              "fillColor": "#DB7093",
+              "fillOpacity": 0.7,
+              "lineColor": "#C71585",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "flagey-echezeaux",
+              "url": "/geojson/Cote-de-Nuits/07Flagey-Echézeaux/Flagey-Echézeaux.geojson",
+              "displayName": "Flagey-Échézeaux",
+              "fillColor": "#CD5C5C",
+              "fillOpacity": 0.7,
+              "lineColor": "#A52A2A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "vosne-romanee",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/AOC Vosne-Romanée.geojson",
+              "displayName": "Vosne-Romanée",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "vougeot",
+              "url": "/geojson/Cote-de-Nuits/09Vougeot/AOC Vougeot.geojson",
+              "displayName": "Vougeot",
+              "fillColor": "#B22222",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "nuits-saint-georges",
+              "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/AOC Nuits-Saint-Georges.geojson",
+              "displayName": "Nuits-Saint-Georges",
+              "fillColor": "#A52A2A",
+              "fillOpacity": 0.7,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "地理位置與氣候",
+          "content": "夜丘位於第戎南部，是金丘（Côte d'Or）的北段。產區呈南北狹長帶狀，寬度僅300-400米，但長度達24公里。朝東的山坡接受充足日照，白天溫暖夜晚涼爽的溫差造就了黑皮諾的優雅風格。",
+          "keyPoints": [
+            "海拔：250-350米的最佳位置",
+            "土壤：侏羅紀石灰岩、泥灰岩",
+            "坡度：5-15度，排水良好",
+            "微氣候：每個村莊甚至每塊園都有差異"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "夜丘的獨特之處",
+          "content": "夜丘擁有布根地33個特級園中的24個，這些園區大多集中在中段（Gevrey-Chambertin 到 Vosne-Romanée）。土壤以石灰岩為主，泥灰岩含量因地而異，造就了不同村莊的獨特風格。",
+          "keyPoints": [
+            "特級園密度：全球最高",
+            "土壤多樣性：從堅硬石灰岩到柔軟泥灰岩",
+            "微氣候差異：每個村莊日照、排水、風向不同",
+            "生產者水準：世界頂級酒莊雲集"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "💡 重點提示",
+          "points": [
+            "🍷 夜丘93%產紅酒，黑皮諾是絕對主角",
+            "🍷 特級園主要集中在中段（Gevrey 到 Vosne-Romanée）",
+            "🍷 村莊級酒已有很高水準，是學習夜丘的好起點"
+          ]
+        },
+        {
+          "type": "chart",
+          "chartType": "bar",
+          "title": "📊 夜丘9大村莊風格對比",
+          "content": "直觀展示各村莊的酒體強度與風格特色（滿分10分）",
+          "data": {
+            "items": [
+              {
+                "label": "Marsannay",
+                "value": 65,
+                "displayValue": "6.5",
+                "color": "#FFB6C1"
+              },
+              {
+                "label": "Fixin",
+                "value": 70,
+                "displayValue": "7.0",
+                "color": "#FFA07A"
+              },
+              {
+                "label": "Gevrey-Chambertin",
+                "value": 90,
+                "displayValue": "9.0 強勁",
+                "color": "#8B0000"
+              },
+              {
+                "label": "Morey-Saint-Denis",
+                "value": 85,
+                "displayValue": "8.5",
+                "color": "#A52A2A"
+              },
+              {
+                "label": "Chambolle-Musigny",
+                "value": 75,
+                "displayValue": "7.5 優雅",
+                "color": "#DC143C"
+              },
+              {
+                "label": "Vougeot",
+                "value": 80,
+                "displayValue": "8.0",
+                "color": "#B22222"
+              },
+              {
+                "label": "Vosne-Romanée",
+                "value": 100,
+                "displayValue": "10 完美",
+                "color": "#8B0000"
+              },
+              {
+                "label": "Flagey-Echézeaux",
+                "value": 85,
+                "displayValue": "8.5",
+                "color": "#CD5C5C"
+              },
+              {
+                "label": "Nuits-Saint-Georges",
+                "value": 85,
+                "displayValue": "8.5 結構",
+                "color": "#A52A2A"
+              }
+            ]
+          },
+          "note": "評分基於酒體強度、複雜度與陳年潛力綜合評估。Vosne-Romanée 被認為是夜丘的巔峰。"
+        },
+        {
+          "type": "content",
+          "title": "總結",
+          "content": "夜丘是黑皮諾的天堂，每個村莊都有獨特個性，從強勁的 Gevrey 到優雅的 Chambolle，風格多樣但都展現了極高的品質。"
+        }
+      ]
+    },
+    {
+      "id": "lesson2",
+      "title": "北部三村：Marsannay、Fixin、Gevrey-Chambertin",
+      "duration": "15分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "北部三村：Marsannay、Fixin、Gevrey-Chambertin",
+          "subtitle": "15分鐘",
+          "description": "夜丘北部以 Gevrey-Chambertin 為核心，這裡集中了9個特級園，是夜丘最強勁、最複雜的紅酒產地。"
+        },
+        {
+          "type": "map",
+          "title": "🗺️ 北部三村地圖",
+          "interactive": true,
+          "buttonPosition": "left",
+          "regions": [
+            {
+              "id": "marsannay",
+              "name": "Marsannay",
+              "nameFr": "Marsannay-la-Côte",
+              "description": "三色酒村莊，入門首選"
+            },
+            {
+              "id": "fixin",
+              "name": "Fixin",
+              "nameFr": "Fixin",
+              "description": "性價比之選"
+            },
+            {
+              "id": "gevrey-chambertin",
+              "name": "Gevrey-Chambertin",
+              "nameFr": "Gevrey-Chambertin",
+              "description": "9個特級園之王"
+            }
+          ],
+          "mapConfig": {
+            "center": [4.96, 47.23],
+            "zoom": 11.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "bourgogne-base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "marsannay",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Chenôve).geojson",
+              "displayName": "Marsannay",
+              "fillColor": "#8B4789",
+              "fillOpacity": 0.75,
+              "lineColor": "#5B2C5A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "marsannay-couchey",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Couchey).geojson",
+              "fillColor": "#8B4789",
+              "fillOpacity": 0.75,
+              "lineColor": "#5B2C5A",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "marsannay-main",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Marsannay-la-côte).geojson",
+              "fillColor": "#8B4789",
+              "fillOpacity": 0.75,
+              "lineColor": "#5B2C5A",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "fixin",
+              "url": "/geojson/Cote-de-Nuits/02Fixin/AOC Fixin (Fixin).geojson",
+              "displayName": "Fixin",
+              "fillColor": "#CD5C5C",
+              "fillOpacity": 0.75,
+              "lineColor": "#8B3A3A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "brochon",
+              "url": "/geojson/Cote-de-Nuits/03Brochon/Brochon.geojson",
+              "displayName": "Brochon",
+              "fillColor": "#B22222",
+              "fillOpacity": 0.7,
+              "lineColor": "#6A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "gevrey-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/AOC Gevrey-Chambertin (Gevrey-Chambertin).geojson",
+              "displayName": "Gevrey-Chambertin",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B0000",
+              "lineWidth": 3,
+              "showLabels": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Marsannay：多彩的入門",
+          "content": "Marsannay 是夜丘最北的村莊，也是唯一可以釀造紅、白、粉紅三色酒的產區。沒有特級園，但村莊級和一級園品質優秀，性價比高。",
+          "keyPoints": [
+            "特色：三色酒（紅、白、粉紅）",
+            "風格：果味新鮮、易飲、親民",
+            "價格：€15-35",
+            "適合：入門夜丘的最佳選擇"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Fixin：Gevrey 的兄弟",
+          "content": "Fixin 緊鄰 Gevrey-Chambertin，土壤相似，風格也接近，但價格更親民。擁有5個一級園，酒體結構扎實，需要陳年。",
+          "keyPoints": [
+            "風格：強勁、結構緊實、單寧明顯",
+            "陳年：5-15年",
+            "價格：€20-50",
+            "推薦：性價比極高的替代選擇"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Gevrey-Chambertin：夜丘之王",
+          "content": "Gevrey-Chambertin 擁有9個特級園，是夜丘最大、最富盛名的村莊。這裡的酒強勁有力、複雜度高、陳年潛力極強，是布根地紅酒的典範。"
+        },
+        {
+          "type": "content",
+          "title": "🏆 Chambertin & Clos de Bèze",
+          "content": "**Chambertin** (12.9公頃)\n拿破崙最愛，夜丘最強勁的特級園。深邃複雜、單寧厚實、陳年後展現極致優雅。陳年潛力：10-30年。\n\n**Chambertin-Clos de Bèze** (15.4公頃)\n與 Chambertin 並列的頂級園。略微優雅於 Chambertin，結構同樣宏大。陳年潛力：10-30年。",
+          "keyPoints": [
+            "兩園可互相標示，但通常保持各自名稱",
+            "Clos de Bèze 可標為 Chambertin，反之不行",
+            "價格：€300-2000+ 每瓶"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "🏆 Charmes 系列特級園",
+          "content": "**Charmes-Chambertin** (31.1公頃) - 最大的特級園\n柔和迷人，相對易飲，是 Gevrey 特級園中最親民的選擇。陳年潛力：8-20年。\n\n**Mazoyères-Chambertin** (18.3公頃)\n可標示為 Charmes-Chambertin，風格相似。陳年潛力：8-20年。",
+          "keyPoints": [
+            "Charmes 是最大的特級園，產量相對較高",
+            "價格較其他特級園親民：€100-300",
+            "適合初次嘗試 Gevrey 特級園的愛好者"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "🏆 其他精品特級園（1/2）",
+          "content": "**Chapelle-Chambertin** (5.4公頃)\n優雅精緻，細膩的單寧。陳年潛力：8-20年。\n\n**Griotte-Chambertin** (2.7公頃)\n小而精緻，帶有櫻桃（Griotte）香氣。陳年潛力：8-20年。",
+          "keyPoints": [
+            "小園區通常更專注品質",
+            "Griotte 是面積最小的特級園之一",
+            "價格：€150-400"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "🏆 其他精品特級園（2/2）",
+          "content": "**Latricières-Chambertin** (7.4公頃)\n細膩優雅，介於力量與優雅之間。陳年潛力：8-20年。\n\n**Mazis-Chambertin** (9.1公頃)\n強勁有力，結構紮實。陳年潛力：10-25年。\n\n**Ruchottes-Chambertin** (3.3公頃)\n稀有小園，優雅礦物感。陳年潛力：8-20年。",
+          "keyPoints": [
+            "Mazis 風格最接近 Chambertin",
+            "Ruchottes 位置最高，礦物質感強",
+            "價格：€150-500"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "💡 重點提示",
+          "points": [
+            "🍷 Gevrey-Chambertin 村莊級已是高品質，一級園更是精品",
+            "🍷 Chambertin 和 Clos de Bèze 可互標，但通常保持各自名稱",
+            "🍷 Fixin 是性價比之選，風格接近 Gevrey 但價格親民"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "總結",
+          "content": "夜丘北部以 Gevrey-Chambertin 為核心，9個特級園展現了黑皮諾的極致力量與復雜度。"
+        }
+      ]
+    },
+    {
+      "id": "lesson3",
+      "title": "中部三村：Morey-Saint-Denis、Chambolle-Musigny、Vougeot",
+      "duration": "12分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "中部三村：Morey-Saint-Denis、Chambolle-Musigny、Vougeot",
+          "subtitle": "12分鐘",
+          "description": "夜丘中部是風格最多樣的區域，從低調複雜的 Morey 到優雅細膩的 Chambolle，再到歷史悠久的 Vougeot，每個村莊都有獨特魅力。"
+        },
+        {
+          "type": "map",
+          "title": "🗺️ 中部三村地圖",
+          "interactive": true,
+          "buttonPosition": "left",
+          "regions": [
+            {
+              "id": "morey-saint-denis",
+              "name": "Morey-Saint-Denis",
+              "nameFr": "Morey-Saint-Denis",
+              "description": "低調的寶石，5個特級園"
+            },
+            {
+              "id": "chambolle-musigny",
+              "name": "Chambolle-Musigny",
+              "nameFr": "Chambolle-Musigny",
+              "description": "夜丘女王，極致優雅"
+            },
+            {
+              "id": "vougeot",
+              "name": "Vougeot",
+              "nameFr": "Vougeot",
+              "description": "Clos de Vougeot，最大特級園"
+            }
+          ],
+          "mapConfig": {
+            "center": [4.965, 47.17],
+            "zoom": 12,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "bourgogne-base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "morey-saint-denis",
+              "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/AOC Morey-Saint-Denis.geojson",
+              "displayName": "Morey-Saint-Denis",
+              "fillColor": "#C71585",
+              "fillOpacity": 0.75,
+              "lineColor": "#8B008B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chambolle-musigny",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/AOC Chambolle-Musigny.geojson",
+              "displayName": "Chambolle-Musigny",
+              "fillColor": "#DB7093",
+              "fillOpacity": 0.75,
+              "lineColor": "#C71585",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "vougeot",
+              "url": "/geojson/Cote-de-Nuits/09Vougeot/AOC Vougeot.geojson",
+              "displayName": "Vougeot",
+              "fillColor": "#B22222",
+              "fillOpacity": 0.75,
+              "lineColor": "#8B0000",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Morey-Saint-Denis：低調的寶石",
+          "content": "Morey-Saint-Denis 擁有5個特級園，但知名度遠不如鄰居 Gevrey 和 Chambolle。這裡的酒介於兩者之間，既有力量又不失優雅，是行家最愛。",
+          "keyPoints": [
+            "5個特級園：Clos de la Roche、Clos Saint-Denis、Clos des Lambrays、Clos de Tart、Bonnes-Mares（部分）",
+            "風格：力量與優雅的完美平衡",
+            "價格：€50-200（村莊級），€200-800（特級園）",
+            "特色：性價比極高，值得深入探索"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Chambolle-Musigny：夜丘女王",
+          "content": "Chambolle-Musigny 以「女性化」風格聞名，絲綢般質地、花香四溢、精緻細膩。Musigny 特級園是夜丘最優雅的酒之一。",
+          "keyPoints": [
+            "2個特級園：Musigny、Bonnes-Mares（主要部分）",
+            "風格：極致優雅細緻，紫羅蘭、玫瑰花香",
+            "價格：€60-250（村莊級），€300-1500+（Musigny）",
+            "特色：適合不喜歡重單寧的愛好者"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Vougeot：歷史的見證",
+          "content": "Vougeot 以 Clos de Vougeot 特級園聞名，這是布根地最大的特級園（50公頃），由西篤會修道士在12世紀建立。80多個擁有者共享這片歷史葡萄園。",
+          "keyPoints": [
+            "1個特級園：Clos de Vougeot（50.6公頃）",
+            "風格：因地塊位置差異極大",
+            "上坡：優雅複雜 | 中坡：均衡 | 下坡：較簡單",
+            "重點：生產者比園名更重要"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "💡 重點提示",
+          "points": [
+            "🍷 Morey-Saint-Denis 性價比極高，值得深入探索",
+            "🍷 Chambolle-Musigny 是最優雅的夜丘酒，適合不喜歡重單寧的人",
+            "🍷 Clos de Vougeot 因地塊差異極大，生產者比園名更重要"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "總結",
+          "content": "夜丘中部展現了黑皮諾的多樣性，從複雜的 Morey 到優雅的 Chambolle，再到歷史悠久的 Vougeot。"
+        }
+      ]
+    },
+    {
+      "id": "lesson4",
+      "title": "南部雙雄：Vosne-Romanée 與 Nuits-Saint-Georges",
+      "duration": "15分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "南部雙雄：Vosne-Romanée 與 Nuits-Saint-Georges",
+          "subtitle": "15分鐘",
+          "description": "夜丘南部以 Vosne-Romanée 為絕對核心，這裡集中了全球最貴、最傳奇的葡萄酒。而 Nuits-Saint-Georges 雖無特級園，但一級園水準極高。"
+        },
+        {
+          "type": "map",
+          "title": "🗺️ 南部三村地圖",
+          "interactive": true,
+          "buttonPosition": "left",
+          "regions": [
+            {
+              "id": "vosne-romanee",
+              "name": "Vosne-Romanée",
+              "nameFr": "Vosne-Romanée",
+              "description": "布根地之巔，8個特級園"
+            },
+            {
+              "id": "flagey-echezeaux",
+              "name": "Flagey-Échézeaux",
+              "nameFr": "Flagey-Échézeaux",
+              "description": "2個特級園，無村莊級"
+            },
+            {
+              "id": "nuits-saint-georges",
+              "name": "Nuits-Saint-Georges",
+              "nameFr": "Nuits-Saint-Georges",
+              "description": "無冕之王，41個一級園"
+            }
+          ],
+          "mapConfig": {
+            "center": [4.955, 47.13],
+            "zoom": 12,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "bourgogne-base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "vosne-romanee",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/AOC Vosne-Romanée.geojson",
+              "displayName": "Vosne-Romanée",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.75,
+              "lineColor": "#660000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "flagey-echezeaux",
+              "url": "/geojson/Cote-de-Nuits/07Flagey-Echézeaux/Flagey-Echézeaux.geojson",
+              "displayName": "Flagey-Échézeaux",
+              "fillColor": "#CD5C5C",
+              "fillOpacity": 0.75,
+              "lineColor": "#A52A2A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "nuits-saint-georges",
+              "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/AOC Nuits-Saint-Georges.geojson",
+              "displayName": "Nuits-Saint-Georges",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.75,
+              "lineColor": "#B22222",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Vosne-Romanée：布根地之巔",
+          "content": "Vosne-Romanée 擁有8個特級園（含 Flagey-Échézeaux 的2個），包括傳奇的 Romanée-Conti。這裡的酒極致優雅、香料複雜、價格昂貴。",
+          "keyPoints": [
+            "8個特級園，包括世界最貴的 Romanée-Conti",
+            "DRC（Domaine de la Romanée-Conti）的主場",
+            "風格：極致優雅、香料複雜、絲滑質地",
+            "價格：€60-300（村莊級），€300-50,000+（特級園）"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Vosne-Romanée 特級園（1/3）",
+          "content": "DRC 的獨佔園代表了黑皮諾的最高成就",
+          "keyPoints": [
+            "🏆 Romanée-Conti - 1.81ha，DRC 獨佔，€15,000-50,000/瓶",
+            "  世界最貴葡萄酒，極致優雅複雜，15-50年陳年",
+            "  玫瑰、紫羅蘭、香料、松露、絲滑質地、無盡餘韻",
+            "",
+            "🏆 La Tâche - 6.06ha，DRC 獨佔，€3,000-10,000/瓶",
+            "  DRC 第二大獨佔園，優雅強勁並存，15-40年陳年"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Vosne-Romanée 特級園（2/3）",
+          "content": "其他頂級特級園各有特色",
+          "keyPoints": [
+            "🏆 Richebourg - 8.03ha，強勁與優雅的完美平衡",
+            "  深邃複雜、單寧細膩、陳年潛力驚人，15-35年",
+            "",
+            "🏆 Romanée-Saint-Vivant - 9.44ha，絲綢般質地",
+            "  最優雅的 Vosne 特級園，10-30年陳年",
+            "",
+            "🏆 La Romanée - 0.85ha（最小特級園）",
+            "  Comte Liger-Belair 獨佔，極度稀有，精緻優雅"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Vosne-Romanée 特級園（3/3）+ Flagey",
+          "content": "Flagey-Échézeaux 的2個特級園也屬 Vosne 體系",
+          "keyPoints": [
+            "🏆 La Grande Rue - 1.65ha，Domaine François Lamarche 獨佔",
+            "  1992年晉升特級園，10-25年陳年",
+            "",
+            "🏆 Grands Échézeaux - 9.14ha（Flagey-Échézeaux）",
+            "  優雅複雜，高品質，10-25年陳年",
+            "",
+            "🏆 Échézeaux - 37.69ha（第二大特級園，Flagey）",
+            "  面積大、地塊多、品質差異明顯，8-20年陳年"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Nuits-Saint-Georges：無冕之王",
+          "content": "Nuits-Saint-Georges 雖然沒有特級園，但擁有41個一級園，品質極高。這裡的酒強健有力、野味香氣明顯、陳年潛力強。",
+          "keyPoints": [
+            "一級園數量：41個（夜丘最多）",
+            "風格：強勁、單寧厚實、野味香氣",
+            "陳年：8-20年",
+            "價格：€30-150（一級園）",
+            "特色：為何無特級園？歷史與政治因素"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Nuits-Saint-Georges 頂級一級園",
+          "content": "這些一級園品質不輸某些特級園",
+          "keyPoints": [
+            "🍷 Les Saint-Georges - 最著名，最接近特級園品質",
+            "🍷 Les Vaucrains - 強勁有力",
+            "🍷 Les Cailles - 優雅礦物",
+            "🍷 Les Porrets-Saint-Georges - 野味香料"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "💡 重點提示",
+          "points": [
+            "🍷 DRC（Domaine de la Romanée-Conti）是布根地的神話",
+            "🍷 Vosne-Romanée 村莊級已是頂級水準，值得投資",
+            "🍷 Nuits-Saint-Georges 的頂級一級園不輸某些特級園",
+            "🍷 Flagey-Échézeaux 無村莊級，酒標使用 Vosne-Romanée"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "總結",
+          "content": "Vosne-Romanée 是黑皮諾的極致表現，這裡的酒代表了布根地的最高成就。而 Nuits-Saint-Georges 雖無特級園，但一級園品質卓越，性價比更高。"
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "夜丘共有多少個特級園？",
+        "type": "single-choice",
+        "options": ["18個", "24個", "30個", "33個"],
+        "correctAnswer": 1,
+        "explanation": "夜丘擁有24個特級園，佔布根地33個特級園的絕大部分。"
+      },
+      {
+        "id": "q2",
+        "question": "哪個村莊擁有最多特級園（9個）？",
+        "type": "single-choice",
+        "options": ["Vosne-Romanée", "Gevrey-Chambertin", "Morey-Saint-Denis", "Chambolle-Musigny"],
+        "correctAnswer": 1,
+        "explanation": "Gevrey-Chambertin 擁有9個特級園，是夜丘特級園最多的村莊。"
+      },
+      {
+        "id": "q3",
+        "question": "Romanée-Conti 特級園的面積是多少？",
+        "type": "single-choice",
+        "options": ["0.85公頃", "1.81公頃", "6.06公頃", "8.03公頃"],
+        "correctAnswer": 1,
+        "explanation": "Romanée-Conti 僅1.81公頃，是全球最貴的葡萄酒產地之一。"
+      },
+      {
+        "id": "q4",
+        "question": "哪個村莊以「女性化」風格聞名？",
+        "type": "single-choice",
+        "options": ["Gevrey-Chambertin", "Chambolle-Musigny", "Nuits-Saint-Georges", "Fixin"],
+        "correctAnswer": 1,
+        "explanation": "Chambolle-Musigny 以絲綢般質地、花香四溢、精緻細膩的「女性化」風格著稱。"
+      },
+      {
+        "id": "q5",
+        "question": "布根地最大的特級園是哪一個？",
+        "type": "single-choice",
+        "options": ["Chambertin", "Clos de Vougeot", "Échézeaux", "Charmes-Chambertin"],
+        "correctAnswer": 1,
+        "explanation": "Clos de Vougeot 是布根地最大的特級園，面積達50.6公頃。"
+      },
+      {
+        "id": "q6",
+        "question": "Nuits-Saint-Georges 有多少個特級園？",
+        "type": "single-choice",
+        "options": ["0個", "2個", "5個", "8個"],
+        "correctAnswer": 0,
+        "explanation": "Nuits-Saint-Georges 沒有特級園，但擁有41個一級園，品質極高。"
+      },
+      {
+        "id": "q7",
+        "question": "哪個村莊是夜丘唯一可釀造紅、白、粉紅三色酒的？",
+        "type": "single-choice",
+        "options": ["Marsannay", "Fixin", "Vougeot", "Morey-Saint-Denis"],
+        "correctAnswer": 0,
+        "explanation": "Marsannay 是夜丘唯一可以釀造紅、白、粉紅三色酒的村莊。"
+      },
+      {
+        "id": "q8",
+        "question": "DRC（Domaine de la Romanée-Conti）獨佔哪兩個特級園？",
+        "type": "single-choice",
+        "options": [
+          "Romanée-Conti & Richebourg",
+          "Romanée-Conti & La Tâche",
+          "La Tâche & Richebourg",
+          "Romanée-Saint-Vivant & La Romanée"
+        ],
+        "correctAnswer": 1,
+        "explanation": "DRC 獨佔 Romanée-Conti（1.81公頃）和 La Tâche（6.06公頃）兩個特級園。"
+      },
+      {
+        "id": "q9",
+        "question": "Morey-Saint-Denis 擁有多少個特級園？",
+        "type": "single-choice",
+        "options": ["2個", "3個", "5個", "7個"],
+        "correctAnswer": 2,
+        "explanation": "Morey-Saint-Denis 擁有5個特級園：Clos de la Roche、Clos Saint-Denis、Clos des Lambrays、Clos de Tart 和 Bonnes-Mares（部分）。"
+      },
+      {
+        "id": "q10",
+        "question": "夜丘的主要土壤類型是？",
+        "type": "single-choice",
+        "options": ["花崗岩", "侏羅紀石灰岩與泥灰岩", "火山岩", "沙質土"],
+        "correctAnswer": 1,
+        "explanation": "夜丘的主要土壤是侏羅紀石灰岩與泥灰岩，這種土壤造就了黑皮諾的優雅風格。"
+      }
+    ]
+  }
+}

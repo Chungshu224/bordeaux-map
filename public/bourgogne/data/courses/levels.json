@@ -1,0 +1,91 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "name": "基礎入門",
+      "nameEn": "Level 1",
+      "icon": "🍇",
+      "color": "#E8F5E9",
+      "primaryColor": "#4CAF50",
+      "duration": "6-8 小時",
+      "description": "建立布根地葡萄酒的基礎認知，了解地理環境、主要葡萄品種與產區分級系統",
+      "features": [
+        { "icon": "🗺️", "text": "地理位置與風土" },
+        { "icon": "🍇", "text": "主要葡萄品種" },
+        { "icon": "🍷", "text": "金丘產區特色" },
+        { "icon": "🏰", "text": "品酒基礎技巧" }
+      ],
+      "modules": 8,
+      "hours": 6.5,
+      "requiredScore": 60,
+      "certificate": "布根地探索者證書",
+      "unlocked": true
+    },
+    {
+      "id": 2,
+      "name": "中級進階",
+      "nameEn": "Level 2",
+      "icon": "🍷",
+      "color": "#FFF3E0",
+      "primaryColor": "#FF9800",
+      "duration": "8-10 小時",
+      "description": "深入了解五大產區各自特性與典型酒款特徵，掌握品鑑要點與分析技能",
+      "features": [
+        { "icon": "🎯", "text": "夜丘與伯恩丘" },
+        { "icon": "💎", "text": "特級園與一級園" },
+        { "icon": "🍯", "text": "村莊級風格差異" },
+        { "icon": "📋", "text": "品鑑與收藏" }
+      ],
+      "modules": 8,
+      "hours": 8,
+      "requiredScore": 70,
+      "certificate": "布根地愛好者證書",
+      "unlocked": false,
+      "prerequisite": "完成第一階段並達到 100%"
+    },
+    {
+      "id": 3,
+      "name": "高級專業",
+      "nameEn": "Level 3",
+      "icon": "🏆",
+      "color": "#F3E5F5",
+      "primaryColor": "#9C27B0",
+      "duration": "12-15 小時",
+      "description": "掌握頂級風土條件差異與著名酒莊，深入理解氣候年份以及市場趨勢",
+      "features": [
+        { "icon": "🍃", "text": "風土深度解析" },
+        { "icon": "👨‍🎓", "text": "土壤科學研究" },
+        { "icon": "🌟", "text": "頂級釀造工藝" },
+        { "icon": "📊", "text": "市場投資分析" }
+      ],
+      "modules": 15,
+      "hours": 8,
+      "requiredScore": 75,
+      "certificate": "布根地專家證書",
+      "unlocked": false,
+      "prerequisite": "完成第二階段並達到 85% 以上"
+    },
+    {
+      "id": 4,
+      "name": "專家認證",
+      "nameEn": "Level 4",
+      "icon": "👨‍🏫",
+      "color": "#E3F2FD",
+      "primaryColor": "#2196F3",
+      "duration": "20+ 小時",
+      "description": "專業分析與經營評估能力培養，成為布根地葡萄酒培訓的專業顧問",
+      "features": [
+        { "icon": "🔬", "text": "專業論文研究" },
+        { "icon": "💼", "text": "商業案例分析" },
+        { "icon": "🔥", "text": "行業趨勢剖析" },
+        { "icon": "🌍", "text": "國際市場調策" }
+      ],
+      "modules": 8,
+      "hours": 12,
+      "requiredScore": 80,
+      "certificate": "布根地大師證書 + 講師資格認證",
+      "unlocked": false,
+      "prerequisite": "完成第三階段並達到 85% 以上"
+    }
+  ]
+}

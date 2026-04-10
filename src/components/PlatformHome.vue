@@ -43,8 +43,8 @@
             <button class="cta-course bordeaux-btn" @click="router.push('/bordeaux')">
               🏰 波爾多課程
             </button>
-            <button class="cta-course coming-btn" disabled>
-              🍇 勃根地（即將推出）
+            <button class="cta-course bourgogne-btn" @click="router.push('/bourgogne')">
+              🍇 布根地課程
             </button>
             <button class="cta-course coming-btn" disabled>
               🇮🇹 義大利（即將推出）
@@ -156,21 +156,17 @@
           </div>
 
           <!-- ── Bourgogne ── -->
-          <div class="course-card bourgogne coming-soon">
-            <div class="card-status soon">⏳ 即將推出</div>
+          <div class="course-card bourgogne">
+            <div class="card-status active">✅ 正式上線</div>
             <div class="card-hero">
               <div class="card-icon">🍇</div>
               <div class="card-region">France · Bourgogne</div>
               <h3 class="card-title">勃根地葡萄酒</h3>
               <p class="card-desc">從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界</p>
             </div>
-            <div class="coming-soon-overlay">
-              <div class="cs-box">
-                <div class="cs-icon">🚧</div>
-                <div class="cs-title">課程製作中</div>
-                <div class="cs-desc">預計 2026 年下半年上線</div>
-                <button class="cs-notify" @click="handleNotify('bourgogne')">✉️ 上線時通知我</button>
-              </div>
+            <div class="card-actions">
+              <button class="card-cta" @click="router.push('/bourgogne')">🍇 進入布根地課程</button>
+              <button class="card-info-btn" @click="openCourseDetail('bourgogne')">📋 課程說明</button>
             </div>
           </div>
 
@@ -724,6 +720,12 @@ onMounted(async () => {
   box-shadow: 0 4px 20px rgba(114,47,55,0.5);
 }
 .bordeaux-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(114,47,55,0.6); }
+.bourgogne-btn {
+  background: linear-gradient(135deg, #4a1e5e, #6b2d8b);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(74,30,94,0.5);
+}
+.bourgogne-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(74,30,94,0.6); }
 .coming-btn {
   background: rgba(255,255,255,0.05);
   color: #7a6a5a;
@@ -762,6 +764,32 @@ onMounted(async () => {
   overflow: hidden;
 }
 .course-card.bordeaux { border-color: rgba(212,175,55,0.3); background: rgba(212,175,55,0.04); }
+.course-card.bourgogne { border-color: rgba(107,45,139,0.4); background: rgba(107,45,139,0.05); }
+.card-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.card-cta {
+  flex: 1;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4a1e5e, #6b2d8b);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .2s, transform .2s;
+}
+.card-cta:hover { opacity: .85; transform: translateY(-1px); }
+.card-info-btn {
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.06);
+  color: #9a8878;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.card-info-btn:hover { background: rgba(255,255,255,0.12); }
 .card-status {
   display: inline-block;
   padding: 4px 12px;
@@ -771,6 +799,7 @@ onMounted(async () => {
   margin-bottom: 20px;
 }
 .card-status.available { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+.card-status.active { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
 .card-status.soon { background: rgba(251,191,36,0.1); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
 .card-hero { margin-bottom: 20px; }
 .card-icon { font-size: 2.4rem; margin-bottom: 8px; }

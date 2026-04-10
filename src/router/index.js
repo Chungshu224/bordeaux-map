@@ -48,6 +48,14 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
 
+  // ─── 布根地課程 ─────────────────────────────────────────────────────────────
+  {
+    path: '/bourgogne',
+    name: 'Bourgogne',
+    component: () => import('../components/BourgognePage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
   // ─── 使用者儀表板 ───────────────────────────────────────────────────────────
   {
     path: '/dashboard',

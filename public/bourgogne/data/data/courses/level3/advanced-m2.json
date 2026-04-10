@@ -1,0 +1,1016 @@
+{
+  "moduleId": "advanced-m2",
+  "title": "名家酒莊研究",
+  "description": "探索DRC、Leroy、Rousseau等頂級酒莊的歷史、哲學與釀造工藝",
+  "lessons": [
+    {
+      "id": "m2-l1",
+      "title": "Domaine de la Romanée-Conti (DRC)",
+      "duration": "20分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "DRC：葡萄酒界的傳奇",
+          "subtitle": "Lesson 1 - 20分鐘",
+          "description": "深入了解世界最昂貴葡萄酒的誕生地"
+        },
+        {
+          "type": "content",
+          "title": "DRC的歷史傳承",
+          "content": "Domaine de la Romanée-Conti成立於1869年，但其歷史可追溯至13世紀。Romanée-Conti地塊在1760年被康帝親王（Prince de Conti）購入，與路易十五的情婦龐巴度夫人競價而得，從此以其姓氏命名。現由de Villaine和Leroy-Roch家族共同擁有。"
+        },
+        {
+          "type": "timeline",
+          "title": "DRC的歷史里程碑",
+          "events": [
+            {"year": "13世紀", "title": "修道院時期", "description": "聖維旺修道院（Saint-Vivant）開始耕種此地，建立葡萄園基礎"},
+            {"year": "1760年", "title": "康帝親王收購", "description": "與龐巴度夫人競價8萬里弗爾買下，改名Romanée-Conti"},
+            {"year": "1869年", "title": "酒莊正式成立", "description": "Jacques-Marie Duvault-Blochet購入並整合多個地塊"},
+            {"year": "1942年", "title": "現代DRC誕生", "description": "de Villaine與Leroy家族共同接手管理"},
+            {"year": "1985年", "title": "生物動力革命", "description": "全面實施生物動力法，成為產區先驅"}
+          ]
+        },
+        {
+          "type": "list",
+          "title": "🏆 DRC的八大特級園",
+          "points": [
+            "Romanée-Conti（1.8ha）- 獨佔園，年產約6,000瓶，每瓶$20,000-50,000",
+            "La Tâche（6.06ha）- 獨佔園，年產約20,000瓶，每瓶$5,000-15,000",
+            "Richebourg（3.51ha）- 最強勁有力的DRC，濃郁複雜",
+            "Romanée-Saint-Vivant（5.29ha）- 最優雅細緻，絲綢般質地",
+            "Grands-Echézeaux（3.53ha）- 宏大結構，需長時間陳年",
+            "Echézeaux（4.67ha）- 最'親民'的DRC，優雅果香",
+            "Montrachet（0.67ha）- 唯一白酒，年產約3,000瓶，極稀有",
+            "Corton（0.48ha）- 2009年新增，來自Corton Bressandes"
+          ]
+        },
+        {
+          "type": "chart",
+          "chartType": "bar",
+          "title": "📊 DRC 8大特級園面積與價格對比",
+          "content": "面積從1.8ha（RC）到6.06ha（La Tâche），但價格反向關係。RC面積最小但價格最高，證明稀有性決定價值。",
+          "data": {
+            "items": [
+              {
+                "label": "Romanée-Conti",
+                "value": 100,
+                "displayValue": "$35,000 (1.8ha)",
+                "color": "#8B4789"
+              },
+              {
+                "label": "La Tâche",
+                "value": 29,
+                "displayValue": "$10,000 (6.06ha)",
+                "color": "#9C27B0"
+              },
+              {
+                "label": "Richebourg",
+                "value": 14,
+                "displayValue": "$5,000 (3.51ha)",
+                "color": "#673AB7"
+              },
+              {
+                "label": "Romanée-St-Vivant",
+                "value": 9,
+                "displayValue": "$3,000 (5.29ha)",
+                "color": "#3F51B5"
+              },
+              {
+                "label": "Grands-Echézeaux",
+                "value": 7,
+                "displayValue": "$2,500 (3.53ha)",
+                "color": "#2196F3"
+              },
+              {
+                "label": "Echézeaux",
+                "value": 6,
+                "displayValue": "$2,000 (4.67ha)",
+                "color": "#03A9F4"
+              },
+              {
+                "label": "Montrachet",
+                "value": 29,
+                "displayValue": "$10,000 (0.67ha 白酒)",
+                "color": "#FFD700"
+              },
+              {
+                "label": "Corton",
+                "value": 4,
+                "displayValue": "$1,500 (0.48ha)",
+                "color": "#00BCD4"
+              }
+            ]
+          },
+          "note": "RC價格是Echézeaux的17倍，但面積僅是其38%。稀有性+歷史地位=天價。La Tâche面積最大但仍維持高價，展現獨佔園優勢。"
+        },
+        {
+          "type": "content",
+          "title": "DRC的釀造哲學",
+          "content": "DRC自1985年起全面採用生物動力法（Biodynamics），是布根地頂級酒莊中最早的實踐者之一。他們堅信只有健康的土壤才能產出偉大的葡萄酒。釀造上採用100%整串發酵、100%新橡木桶、不過濾不澄清，追求風土的純粹表達。"
+        },
+        {
+          "type": "list",
+          "title": "🍇 DRC的釀造特色",
+          "points": [
+            "極低產量：每公頃產量僅20-25hl，遠低於法定上限",
+            "100%整串發酵：保留果梗增加複雜度",
+            "100%新橡木桶：來自酒莊自有的Allier森林",
+            "長時間陳年：至少18個月橡木桶陳年",
+            "不過濾不澄清：保留所有風土訊息",
+            "延遲裝瓶：比一般酒莊晚6-12個月裝瓶"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Romanée-Conti vs La Tâche",
+          "leftTitle": "Romanée-Conti",
+          "leftPoints": [
+            "面積最小：僅1.8公頃",
+            "價格最高：平均每瓶2-5萬美元",
+            "風格：極致優雅、空靈、多層次",
+            "陳年潛力：50年以上",
+            "產量：約6,000瓶/年"
+          ],
+          "rightTitle": "La Tâche",
+          "rightPoints": [
+            "面積：6.06公頃",
+            "價格：每瓶5,000-15,000美元",
+            "風格：力量與優雅的完美平衡",
+            "陳年潛力：30-50年",
+            "產量：約20,000瓶/年"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "為什麼DRC如此昂貴？",
+          "content": "DRC的天價源於多重因素：1) 極致稀有性（Romanée-Conti僅1.8公頃）；2) 無可比擬的品質穩定性；3) 悠久的歷史聲譽；4) 生物動力法的高成本；5) 市場需求遠超供應。一瓶Romanée-Conti的價格可以購買一輛汽車，而且還在持續上漲。"
+        },
+        {
+          "type": "timeline",
+          "title": "Romanée-Conti價格演變史",
+          "events": [
+            {"year": "1985年", "title": "精品酒起步", "description": "市場價格約$500/瓶，開始受到收藏家關注"},
+            {"year": "2000年", "title": "進入黃金期", "description": "價格突破$2,000/瓶，亞洲市場崛起"},
+            {"year": "2010年", "title": "投資級酒款", "description": "價格達$10,000+/瓶，成為投資標的"},
+            {"year": "2018年", "title": "拍賣紀錄", "description": "1945年份在蘇富比以$558,000成交，創單瓶紀錄"},
+            {"year": "2025年", "title": "持續攀升", "description": "新年份市價$20,000-50,000/瓶，需求仍遠超供應"}
+          ]
+        },
+        {
+          "type": "chart",
+          "chartType": "timeline",
+          "title": "📈 Romanée-Conti 40年價格躍升軌跡",
+          "content": "40年間價格增長50倍，年化報酬率10%。亞洲市場崛起（2000-2015）是最大助燃，價格增速最快。",
+          "data": {
+            "items": [
+              {
+                "year": "1985",
+                "score": 20,
+                "label": "$500 - 精品酒起步期"
+              },
+              {
+                "year": "1995",
+                "score": 35,
+                "label": "$1,200 - 穩定成長（10年+140%）"
+              },
+              {
+                "year": "2000",
+                "score": 48,
+                "label": "$2,000 - 突破大關 (+300%)"
+              },
+              {
+                "year": "2005",
+                "score": 60,
+                "label": "$4,000 - 完美年份推助 (+700%)"
+              },
+              {
+                "year": "2010",
+                "score": 78,
+                "label": "$10,000 - 投資級地位 (+1900%)"
+              },
+              {
+                "year": "2015",
+                "score": 90,
+                "label": "$18,000 - 亞洲高峰 (+3500%)"
+              },
+              {
+                "year": "2020",
+                "score": 98,
+                "label": "$23,000 - 疫情加速 (+4500%)"
+              },
+              {
+                "year": "2025",
+                "score": 100,
+                "label": "$25,000 - 穩定高原 (+4900%)"
+              }
+            ]
+          },
+          "note": "40年漲幅49倍，年均增值10.2%。超越股市（8%）、房地產（6%）、黃金（5%）。最大漦2005-2015年，亞洲買家多進推加上2個完美年份。"
+        },
+        {
+          "type": "comparison",
+          "title": "DRC獨佔園 vs 共享特級園",
+          "leftTitle": "獨佔園（RC & La Tâche）",
+          "leftPoints": [
+            "100%控制品質標準",
+            "統一的葡萄園管理",
+            "完整的風土表達",
+            "品牌價值最高",
+            "價格：極度昂貴",
+            "稀有性：最高"
+          ],
+          "rightTitle": "共享特級園（其他6園）",
+          "rightPoints": [
+            "與其他生產者共享",
+            "需維持高於他人標準",
+            "地塊位置優勢明顯",
+            "品質保證仍極高",
+            "價格：相對合理（但仍昂貴）",
+            "稀有性：較低（但仍難得）"
+          ]
+        },
+        {
+          "type": "chart",
+          "chartType": "radar",
+          "title": "🎯 三大名莊特色對比雷達圖",
+          "content": "DRC、Leroy、Rousseau三大名莊在6個維度的全面對比。DRC價格最高但平衡性最佳，Leroy濃度極致，Rousseau性價比優秀。",
+          "data": {
+            "dimensions": ["價格/稀有性", "品質穩定性", "風堺聲譽", "願其根芯", "陳年潛力", "濃度/強度"],
+            "datasets": [
+              {
+                "label": "DRC",
+                "values": [10, 10, 10, 9, 10, 8],
+                "color": "#8B4789",
+                "opacity": 0.3
+              },
+              {
+                "label": "Domaine Leroy",
+                "values": [9, 9, 9, 10, 10, 10],
+                "color": "#9C27B0",
+                "opacity": 0.3
+              },
+              {
+                "label": "Rousseau",
+                "values": [7, 8, 8, 8, 9, 9],
+                "color": "#3F51B5",
+                "opacity": 0.3
+              }
+            ]
+          },
+          "note": "DRC在所有維度近乎滿分，但Leroy的極致濃度更勝一籌。Rousseau以相對親民的價格提供頂級品質，性價比最優。皆採用生物動力法。"
+        }
+      ]
+    },
+    {
+      "id": "m2-l2",
+      "title": "Domaine Leroy",
+      "duration": "18分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Domaine Leroy：生物動力法的極致",
+          "subtitle": "Lesson 2 - 18分鐘",
+          "description": "探索Lalou Bize-Leroy的釀酒哲學與極端低產量策略"
+        },
+        {
+          "type": "content",
+          "title": "鐵娘子Lalou Bize-Leroy",
+          "content": "Lalou Bize-Leroy是布根地最具爭議性的人物之一。她原是DRC的共同經營者，1988年因理念分歧被迫離開，隨後創立自己的Domaine Leroy。她將生物動力法推向極致，產量極低但品質驚人，價格甚至可與DRC媲美。"
+        },
+        {
+          "type": "list",
+          "title": "🌿 Leroy的生物動力法實踐",
+          "points": [
+            "超低產量：每公頃僅15-18hl（法定上限35hl，DRC也僅20-25hl）",
+            "嚴格老藤：平均樹齡50年以上，最老達80-100年",
+            "手工栽培：完全拒絕化學藥劑，純手工除草除蟲",
+            "月相管理：根據月亮週期進行所有作業（剪枝、採收等）",
+            "土壤活化：使用500號（牛角糞）、501號（牛角矽）等9種製劑",
+            "自然釀造：野生酵母、最少干預、不過濾不澄清"
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Lalou Bize-Leroy的職業生涯",
+          "events": [
+            {"year": "1955年", "title": "進入家族酒業", "description": "加入父親的Maison Leroy，學習葡萄酒貿易"},
+            {"year": "1974年", "title": "共同管理DRC", "description": "代表Leroy家族成為DRC共同經營者"},
+            {"year": "1988年", "title": "創立Domaine Leroy", "description": "離開DRC後購入Charles Noëllat酒莊，開始自己的事業"},
+            {"year": "1989年", "title": "全面生物動力", "description": "將所有葡萄園轉為生物動力法管理"},
+            {"year": "2000年代", "title": "登峰造極", "description": "酒款品質與價格達到與DRC同級的高度"}
+          ]
+        },
+        {
+          "type": "list",
+          "title": "🧪 生物動力製劑詳解",
+          "points": [
+            "500號（牛角糞）：秋季埋入土中，春季取出，增強土壤活力",
+            "501號（牛角矽）：促進光合作用，增強植物抗病力",
+            "502-507號：堆肥製劑，使用草藥（西洋蓍草、洋甘菊等）",
+            "508號：木賊茶，預防真菌病害，取代化學殺菌劑",
+            "應用頻率：每年4-6次，選在特定月相時噴灑",
+            "稀釋比例：1克製劑稀釋於40公升水中，可噴灑1公頃"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Domaine Leroy的特級園",
+          "content": "Domaine Leroy擁有多個頂級特級園地塊：Musigny、Chambertin、Clos de Vougeot、Richebourg、Romanée-Saint-Vivant等。每個地塊都以極致的精準度管理，釀出的酒款濃縮、深邃、陳年潛力驚人。"
+        },
+        {
+          "type": "list",
+          "title": "🍷 Leroy主要特級園",
+          "points": [
+            "Musigny（0.27ha）- 最優雅精緻",
+            "Chambertin（0.5ha）- 帝王之酒",
+            "Clos de Vougeot（1.91ha）- 上坡最佳位置",
+            "Richebourg（0.78ha）- 強勁有力",
+            "Romanée-Saint-Vivant（0.99ha）- 絲綢般質地",
+            "Latricières-Chambertin（0.58ha）- 優雅版Chambertin",
+            "Clos de la Roche（0.67ha）- 礦物感強烈"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Domaine Leroy vs Maison Leroy",
+          "leftTitle": "Domaine Leroy",
+          "leftPoints": [
+            "自有葡萄園酒款",
+            "極低產量、生物動力法",
+            "價格：每瓶1,000-20,000美元",
+            "產量極少，非常稀有",
+            "代表：Musigny, Chambertin"
+          ],
+          "rightTitle": "Maison Leroy",
+          "rightPoints": [
+            "收購葡萄或酒液釀造",
+            "嚴選供應商",
+            "價格：每瓶200-2,000美元",
+            "產量較多，相對容易取得",
+            "代表：各村莊級與一級園"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Leroy風格：濃縮與優雅的並存",
+          "content": "Leroy的酒款以極度濃縮著稱，但絕不粗糙。超低產量帶來驚人的濃度，但生物動力法保持了土壤活力，產出的酒款在濃郁中保持優雅。年輕時單寧強勁需要長時間陳年，15-20年後會展現出驚人的複雜度與深度。"
+        }
+      ]
+    },
+    {
+      "id": "m2-l3",
+      "title": "Domaine Armand Rousseau",
+      "duration": "16分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Armand Rousseau：Gevrey的王者",
+          "subtitle": "Lesson 3 - 16分鐘",
+          "description": "探索Gevrey-Chambertin最具代表性的酒莊"
+        },
+        {
+          "type": "content",
+          "title": "Gevrey-Chambertin的代名詞",
+          "content": "Domaine Armand Rousseau成立於1909年，是Gevrey-Chambertin村最受尊敬的酒莊。酒莊擁有多個頂級地塊，包括Chambertin、Chambertin-Clos de Bèze等。現任莊主Eric Rousseau延續家族傳統，釀造出兼具力量與優雅的酒款。"
+        },
+        {
+          "type": "list",
+          "title": "👑 Rousseau的頂級園藏",
+          "points": [
+            "Chambertin（2.15ha）- 拿破崙最愛，帝王之酒",
+            "Chambertin-Clos de Bèze（1.42ha）- 與Chambertin同級",
+            "Clos de la Roche（1.48ha）- 來自Morey-Saint-Denis",
+            "Mazis-Chambertin（0.53ha）- 緊鄰Chambertin",
+            "Charmes-Chambertin（1.38ha）- 最柔和迷人",
+            "Clos des Ruchottes（1.06ha）- 獨佔園",
+            "Gevrey-Chambertin Clos Saint-Jacques（2.2ha）- 最佳一級園"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Rousseau的釀造哲學",
+          "content": "Rousseau堅持傳統與現代的平衡：尊重風土表達，但不排斥現代技術。使用約50-70%整串發酵（視年份調整），約30-50%新橡木桶，避免過度萃取。釀出的酒款展現Gevrey典型的強勁結構，同時保持優雅與純淨。"
+        },
+        {
+          "type": "list",
+          "title": "🍇 Rousseau釀造特色",
+          "points": [
+            "整串發酵比例：50-70%（視年份而定）",
+            "新橡木桶：30-50%（特級園較高）",
+            "冷浸漬：低溫浸皮5-7天提取香氣",
+            "溫和萃取：避免過度提取粗糙單寧",
+            "傳統壓榨：使用垂直壓榨機",
+            "陳年時間：16-18個月橡木桶陳年"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Chambertin vs Clos de Bèze",
+          "leftTitle": "Chambertin",
+          "leftPoints": [
+            "位置：略低於Clos de Bèze",
+            "土壤：黏土比例稍高",
+            "風格：更強勁、雄偉",
+            "結構：單寧更厚重",
+            "陳年：需要更長時間"
+          ],
+          "rightTitle": "Chambertin-Clos de Bèze",
+          "rightPoints": [
+            "位置：略高於Chambertin",
+            "土壤：石灰岩比例稍高",
+            "風格：更優雅、精緻",
+            "結構：單寧更細膩",
+            "陳年：較早適飲"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Clos Saint-Jacques：最佳一級園",
+          "content": "許多專家認為Rousseau的Clos Saint-Jacques品質可媲美特級園，甚至超越許多二線特級園。這塊一級園位於理想的東南向坡地，土壤完美平衡，產出的酒款優雅、複雜、陳年潛力極佳。價格也反映了其品質，通常與特級園相當。"
+        },
+        {
+          "type": "comparison",
+          "title": "Clos Saint-Jacques vs 特級園",
+          "leftTitle": "Clos Saint-Jacques（一級園）",
+          "leftPoints": [
+            "位置：緊鄰Chambertin上方",
+            "坡向：完美的東南向",
+            "海拔：280-330m，理想高度",
+            "土壤：石灰岩與黏土完美平衡",
+            "品質：可媲美特級園",
+            "價格：$300-800/瓶（接近特級園）"
+          ],
+          "rightTitle": "Chambertin（特級園）",
+          "rightPoints": [
+            "位置：歷史分級為特級園",
+            "坡向：東向為主",
+            "海拔：270-300m",
+            "土壤：黏土比例稍高",
+            "品質：法定特級園",
+            "價格：$500-1,500/瓶"
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Chambertin與拿破崙的傳奇",
+          "events": [
+            {"year": "630年", "title": "Bèze修道院", "description": "本篤會修士首次在Clos de Bèze種植葡萄"},
+            {"year": "7世紀", "title": "Chambertin誕生", "description": "農夫Bertin在Bèze旁開墾葡萄園，稱為Champ de Bertin"},
+            {"year": "1219年", "title": "首次文獻記載", "description": "正式文獻中出現Chambertin地名"},
+            {"year": "1789-1815", "title": "拿破崙時代", "description": "拿破崙隨軍攜帶Chambertin，稱'只有Chambertin配得上勝利'"},
+            {"year": "1937年", "title": "AOC分級", "description": "Chambertin與Clos de Bèze被評為特級園"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2-l4",
+      "title": "Domaine Coche-Dury（白酒之王）",
+      "duration": "15分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Coche-Dury：白酒的終極標準",
+          "subtitle": "Lesson 4 - 15分鐘",
+          "description": "探索布根地最傳奇的白酒生產者"
+        },
+        {
+          "type": "content",
+          "title": "最難買到的布根地白酒",
+          "content": "Domaine Coche-Dury由Jean-François Coche-Dury創立，現由其子Raphaël接手。酒莊位於Meursault，專精於白酒釀造。Coche-Dury的酒款極度稀有，幾乎全部被老客戶訂購，市場上一瓶難求，價格甚至超過許多紅酒特級園。"
+        },
+        {
+          "type": "list",
+          "title": "🌟 Coche-Dury的頂級白酒",
+          "points": [
+            "Corton-Charlemagne（0.34ha）- 唯一特級園",
+            "Meursault Les Perrières（0.37ha）- 最接近特級園品質",
+            "Meursault Les Rougeots（0.48ha）- 獨佔園",
+            "Meursault Les Caillerets（0.15ha）- 極度稀有",
+            "Puligny-Montrachet Les Enseignères（0.24ha）",
+            "Meursault Village（多個地塊）- 村莊級也極難取得"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Coche-Dury的釀造秘密",
+          "content": "Coche-Dury的成功在於對細節的極致追求。葡萄園管理接近有機法，採收時嚴格挑選，釀造時使用野生酵母、少量新橡木桶（20-30%）、長時間酒泥陳年（18個月）、不過濾。釀出的酒款在年輕時已展現深度，陳年後更加複雜迷人。"
+        },
+        {
+          "type": "list",
+          "title": "🔬 Coche-Dury釀造細節",
+          "points": [
+            "野生酵母發酵：保留風土特性",
+            "低比例新橡木桶：僅20-30%，避免木味過重",
+            "長時間酒泥陳年：18個月，每週攪桶（bâtonnage）",
+            "晚裝瓶：比一般酒莊晚6個月裝瓶",
+            "不過濾：保留所有複雜度",
+            "極低產量：嚴格控制產量確保品質"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Meursault Les Perrières的傳奇",
+          "content": "許多專家認為Coche-Dury的Meursault Les Perrières品質超越許多白酒特級園，甚至可與Le Montrachet相提並論。這塊一級園位於Meursault上坡，石灰岩土壤，排水極佳。Coche-Dury在此地塊的釀造展現了Meursault白酒的終極潛力。"
+        },
+        {
+          "type": "timeline",
+          "title": "Coche-Dury白酒釀造時間軸（18個月週期）",
+          "events": [
+            {"year": "9月", "title": "精準採收", "description": "清晨手工採收，多次挑選，確保完美成熟度"},
+            {"year": "9-10月", "title": "野生酵母發酵", "description": "橡木桶內緩慢發酵15-20天，溫度控制在18-20°C"},
+            {"year": "11月-次年3月", "title": "酒泥陳年第一階段", "description": "每週攪桶（bâtonnage）2次，增加複雜度與油潤感"},
+            {"year": "4-8月", "title": "靜置熟成", "description": "停止攪桶，讓酒液自然澄清，發展深度"},
+            {"year": "次年9-12月", "title": "裝瓶前整合", "description": "繼續橡木桶陳年，不過濾，重力裝瓶"}
+          ]
+        },
+        {
+          "type": "list",
+          "title": "🍷 攪桶（Bâtonnage）的藝術",
+          "points": [
+            "目的：將沉澱的酒泥（死酵母）攪起，增加酒體複雜度",
+            "頻率：Coche-Dury每週2次（冬季），比一般酒莊更頻繁",
+            "時機：主要在發酵後4-5個月內進行",
+            "效果：增加油潤感、奶油質地、堅果氣息",
+            "風險：過度攪桶會掩蓋風土特性，需精準控制",
+            "獨特性：Coche掌握了攪桶的完美平衡點"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Coche-Dury vs 其他Meursault名家",
+          "leftTitle": "Coche-Dury",
+          "leftPoints": [
+            "風格：深邃、複雜、層次豐富",
+            "陳年潛力：20-30年",
+            "價格：極高（每瓶500-5,000美元）",
+            "可得性：幾乎不可能買到",
+            "新橡木桶：20-30%"
+          ],
+          "rightTitle": "其他頂級生產者",
+          "rightPoints": [
+            "風格：各有特色",
+            "陳年潛力：10-20年",
+            "價格：較合理（每瓶100-800美元）",
+            "可得性：相對容易取得",
+            "新橡木桶：通常30-50%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2-l5",
+      "title": "Domaine Comte Georges de Vogüé",
+      "duration": "14分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "Comte de Vogüé：Musigny的守護者",
+          "subtitle": "Lesson 5 - 14分鐘",
+          "description": "探索Chambolle-Musigny最具代表性的酒莊"
+        },
+        {
+          "type": "content",
+          "title": "Musigny最大地主",
+          "content": "Domaine Comte Georges de Vogüé擁有Musigny特級園7.2公頃中的7.12公頃（約70%），是Musigny的代名詞。酒莊歷史可追溯至15世紀，現由François Millet擔任釀酒師，釀造出Chambolle-Musigny最優雅精緻的酒款。"
+        },
+        {
+          "type": "list",
+          "title": "🏰 Vogüé的核心園藏",
+          "points": [
+            "Musigny Grand Cru（7.12ha）- 擁有70%的Musigny",
+            "Musigny Blanc（0.65ha）- 極稀有的白Musigny",
+            "Bonnes-Mares（2.7ha）- 擁有26%的Bonnes-Mares",
+            "Chambolle-Musigny Les Amoureuses（0.56ha）- 最佳一級園",
+            "Chambolle-Musigny 1er Cru（多個地塊）"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "1990年代的復興",
+          "content": "Vogüé在1970-80年代品質下滑，1986年François Millet接手後進行大改革：降低產量、更新設備、改進釀造技術。從1990年份開始，品質顯著提升，重回頂級酒莊行列。這段歷史提醒我們：偉大的風土也需要優秀的管理。"
+        },
+        {
+          "type": "list",
+          "title": "🍇 Vogüé的品質革命",
+          "points": [
+            "降低產量：從40hl/ha降至30hl/ha",
+            "嚴格挑選：葡萄園與酒窖兩次挑選",
+            "溫控發酵：引進現代化溫控系統",
+            "新橡木桶：提升至40-50%（特級園）",
+            "延長陳年：增加橡木桶陳年時間至18個月",
+            "晚裝瓶：比以往晚6個月裝瓶"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Musigny vs Bonnes-Mares",
+          "leftTitle": "Musigny",
+          "leftPoints": [
+            "風格：極致優雅、精緻、飄逸",
+            "土壤：石灰岩為主，土層薄",
+            "單寧：絲綢般細膩",
+            "香氣：花香、紅色漿果",
+            "價格：更高（每瓶300-1,500美元）"
+          ],
+          "rightTitle": "Bonnes-Mares",
+          "rightPoints": [
+            "風格：較強勁、結構更明顯",
+            "土壤：黏土比例較高",
+            "單寧：更有架構",
+            "香氣：黑色漿果、礦物",
+            "價格：稍低（每瓶200-1,000美元）"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Musigny Blanc的稀有性",
+          "content": "Musigny Blanc僅有0.65公頃，年產約3,000瓶，是布根地最稀有的白酒之一。Vogüé擁有其中絕大部分。這款酒展現了霞多麗在石灰岩土壤上的極致優雅，價格可媲美Le Montrachet。2015-2020年間酒莊為了提升品質，甚至停止生產Musigny Blanc。"
+        },
+        {
+          "type": "timeline",
+          "title": "Vogüé的品質革命歷程",
+          "events": [
+            {"year": "1925-1985", "title": "黃金時代", "description": "Vogüé維持頂級酒莊地位，品質卓越"},
+            {"year": "1970-1985", "title": "品質下滑期", "description": "產量過高，釀造管理鬆散，評價下降"},
+            {"year": "1986年", "title": "François Millet接手", "description": "新釀酒師上任，開始全面改革"},
+            {"year": "1990年", "title": "品質顯著提升", "description": "新釀造哲學成效顯現，重獲好評"},
+            {"year": "2015-2020", "title": "Musigny Blanc停產", "description": "為提升品質，暫停釀造白Musigny，重新種植"}
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Vogüé品質革命前後對比",
+          "leftTitle": "改革前（1970-1985）",
+          "leftPoints": [
+            "產量：40 hl/ha（過高）",
+            "挑選：較為寬鬆",
+            "設備：老舊，缺乏溫控",
+            "新橡木桶：僅20-30%",
+            "品質：不穩定，評價下降",
+            "市場地位：逐漸失去頂級地位"
+          ],
+          "rightTitle": "改革後（1990-至今）",
+          "rightPoints": [
+            "產量：30 hl/ha（嚴格控制）",
+            "挑選：兩次嚴格篩選",
+            "設備：現代化溫控系統",
+            "新橡木桶：40-50%（特級園）",
+            "品質：穩定卓越，重回巔峰",
+            "市場地位：重回頂級酒莊行列"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2-l6",
+      "title": "新生代名家：Dujac, Méo-Camuzet",
+      "duration": "15分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "新生代的崛起",
+          "subtitle": "Lesson 6 - 15分鐘",
+          "description": "探索20世紀後期崛起的頂級酒莊"
+        },
+        {
+          "type": "content",
+          "title": "Domaine Dujac：整串發酵的先驅",
+          "content": "Domaine Dujac由Jacques Seysses創立於1968年，是布根地「新生代」酒莊的代表。Seysses來自非葡萄酒世家，但憑藉對品質的追求和創新精神，將Dujac打造成頂級酒莊。他是整串發酵（100%）的堅定支持者，認為這能帶來更多複雜度。"
+        },
+        {
+          "type": "list",
+          "title": "🌟 Dujac的核心園藏",
+          "points": [
+            "Clos de la Roche（1.95ha）- 酒莊旗艦酒款",
+            "Clos Saint-Denis（1.46ha）- 優雅細緻",
+            "Bonnes-Mares（0.18ha）- 稀有小地塊",
+            "Charmes-Chambertin（0.68ha）- 柔和迷人",
+            "Echézeaux（0.69ha）- 來自Vosne-Romanée側",
+            "Chambertin（0.28ha）- 2005年購入"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Domaine Méo-Camuzet：委託管理的典範",
+          "content": "Méo-Camuzet的歷史獨特：酒莊長期將葡萄園委託給佃農（métayage）管理。1988年Jean-Nicolas Méo接手後，決定收回葡萄園自己釀造。他邀請Henri Jayer（布根地傳奇釀酒師）指導，學習其釀造哲學，成就了今日的頂級品質。"
+        },
+        {
+          "type": "list",
+          "title": "🍷 Méo-Camuzet的特級園",
+          "points": [
+            "Richebourg（0.35ha）- 酒莊最頂級酒款",
+            "Clos de Vougeot（3.0ha）- 大面積持有",
+            "Corton（1.11ha）- 來自Corton Perrières",
+            "Echézeaux（0.76ha）- 優雅版Vosne",
+            "Vosne-Romanée Cros Parantoux（0.29ha）- 一級園，Henri Jayer名作"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Dujac vs Méo-Camuzet",
+          "leftTitle": "Dujac",
+          "leftPoints": [
+            "整串發酵：100%",
+            "風格：優雅、香氣導向",
+            "新橡木桶：50-60%",
+            "核心產區：Morey-Saint-Denis",
+            "特色：複雜的香料氣息"
+          ],
+          "rightTitle": "Méo-Camuzet",
+          "rightPoints": [
+            "整串發酵：0-50%（視年份）",
+            "風格：果味豐富、單寧絲滑",
+            "新橡木桶：80-100%",
+            "核心產區：Vosne-Romanée",
+            "特色：深邃的果味與質地"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Henri Jayer的遺產",
+          "content": "Henri Jayer（1922-2006）被譽為20世紀最偉大的布根地釀酒師。他的釀造哲學深刻影響了整個產區：重視葡萄園管理、低產量、去梗發酵、使用高比例新橡木桶。Méo-Camuzet、Rouget等酒莊都深受其影響。Jayer的Cros Parantoux是布根地最傳奇的一級園之一。"
+        },
+        {
+          "type": "timeline",
+          "title": "Henri Jayer的影響力演變",
+          "events": [
+            {"year": "1945年", "title": "開始釀酒生涯", "description": "二戰後開始在Vosne-Romanée釀酒"},
+            {"year": "1978年", "title": "Cros Parantoux首年份", "description": "開墾荒地種植，創造傳奇一級園"},
+            {"year": "1988年", "title": "指導Méo-Camuzet", "description": "Jean-Nicolas Méo邀請Jayer擔任顧問"},
+            {"year": "2001年", "title": "最後一個年份", "description": "79歲退休，2001成為最後釀造年份"},
+            {"year": "2006年", "title": "辭世與傳承", "description": "逝世，但釀造哲學持續影響整個產區"}
+          ]
+        },
+        {
+          "type": "list",
+          "title": "🎓 Henri Jayer的釀造哲學核心",
+          "points": [
+            "葡萄園第一：品質95%取決於葡萄，釀造僅5%",
+            "極低產量：25-30 hl/ha，遠低於法定上限",
+            "100%去梗：認為整串發酵會帶來青澀味",
+            "冷浸漬：發酵前5-7天低溫浸皮提取香氣",
+            "高比例新橡木桶：100%新桶，但來自特定桶匠",
+            "不過濾：保留所有風土訊息與複雜度"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "委託管理（Métayage）系統演變",
+          "leftTitle": "傳統委託制（1988前）",
+          "leftPoints": [
+            "地主：提供土地與設備",
+            "佃農：負責種植與釀造",
+            "收益：對半分成",
+            "品質控制：由佃農決定",
+            "風險：品質不穩定",
+            "Méo-Camuzet長期採用此制"
+          ],
+          "rightTitle": "自主經營（1988後）",
+          "rightPoints": [
+            "酒莊：收回所有葡萄園",
+            "管理：統一標準化管理",
+            "收益：100%歸酒莊",
+            "品質控制：完全掌控",
+            "結果：品質大幅提升",
+            "聘請Jayer指導新團隊"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2-l7",
+      "title": "釀造哲學比較與盲品辨識",
+      "duration": "12分鐘",
+      "type": "presentation",
+      "slides": [
+        {
+          "type": "title",
+          "title": "名家風格比較",
+          "subtitle": "Lesson 7 - 12分鐘",
+          "description": "學習辨識不同酒莊的風格特徵"
+        },
+        {
+          "type": "content",
+          "title": "釀造哲學的光譜",
+          "content": "布根地頂級酒莊的釀造哲學可以放在一個光譜上：從極度傳統（Rousseau）到創新現代（Méo-Camuzet），從最小干預（Leroy）到精準控制（DRC）。理解這些差異可以幫助我們在盲品時辨識生產者風格。"
+        },
+        {
+          "type": "list",
+          "title": "🔬 關鍵釀造參數比較",
+          "points": [
+            "整串發酵：DRC 100% | Dujac 100% | Rousseau 50-70% | Méo 0-50% | Jayer 0%",
+            "新橡木桶：DRC 100% | Méo 80-100% | Dujac 50-60% | Rousseau 30-50% | Coche 20-30%",
+            "產量：Leroy 15hl/ha | DRC 20-25hl/ha | Jayer 25-30hl/ha | Rousseau 28-32hl/ha",
+            "生物動力：Leroy與DRC全面實施 | 其他部分或不實施",
+            "過濾：DRC、Leroy、Jayer不過濾 | 其他視情況決定",
+            "陳年時間：DRC 18個月 | Coche 18個月 | 一般酒莊 12-16個月"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "盲品辨識：整串發酵vs去梗發酵",
+          "leftTitle": "高比例整串（DRC, Dujac）",
+          "leftPoints": [
+            "香氣：花香、香料、草本植物",
+            "單寧：更細緻但結構明顯",
+            "口感：清新感、垂直感",
+            "色澤：略淺（相同濃度下）",
+            "陳年：需要更長時間",
+            "特徵：康乃馨、白胡椒氣息"
+          ],
+          "rightTitle": "去梗發酵（Jayer, Méo）",
+          "rightPoints": [
+            "香氣：純淨果味、黑櫻桃",
+            "單寧：柔和絲滑",
+            "口感：圓潤、橫向展開",
+            "色澤：較深（相同濃度下）",
+            "陳年：較早適飲",
+            "特徵：濃郁純淨的果香"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "👁️ 盲品辨識要點（進階版）",
+          "points": [
+            "DRC：極度優雅、空靈、多層次、整串香料+完美平衡+極長餘韻",
+            "Leroy：極度濃縮、深邃、年輕時單寧強勁+超高密度+需20年陳年",
+            "Rousseau：力量與優雅平衡、純淨果味+中等整串+完美萃取",
+            "Coche-Dury白酒：深邃複雜、礦物感+油潤質地+堅果與蜂蜜",
+            "Vogüé：絲綢般質地、極致優雅+花香主導（Musigny特徵）",
+            "Dujac：香氣導向、花香突出+100%整串+康乃馨與玫瑰",
+            "Méo-Camuzet：豐富果味、單寧絲滑+高比例新橡木+濃郁但不厚重",
+            "辨識技巧：先判斷整串比例→再評估新橡木桶→最後確認濃縮度"
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "傳統派 vs 現代派",
+          "leftTitle": "傳統派（如Rousseau）",
+          "leftPoints": [
+            "尊重年份差異",
+            "適度整串發酵",
+            "適度新橡木桶使用",
+            "溫和萃取",
+            "長時間陳年後裝瓶"
+          ],
+          "rightTitle": "現代派（如Méo-Camuzet）",
+          "rightPoints": [
+            "追求一致性",
+            "視年份決定整串比例",
+            "高比例新橡木桶",
+            "精準控制萃取",
+            "運用現代技術"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "沒有絕對的「最好」",
+          "content": "每位頂級生產者都有自己的哲學和風格，沒有絕對的「最好」。DRC追求風土的純粹性，Leroy追求極致的濃度，Rousseau追求力量與優雅的平衡，Coche-Dury追求白酒的深度。理解並欣賞這些差異，才是真正的布根地愛好者。"
+        },
+        {
+          "type": "list",
+          "title": "💡 學習建議",
+          "points": [
+            "盡可能品鑑同一村莊的不同生產者作品進行比較",
+            "注意觀察整串發酵的影響（香料、花香、單寧質地）",
+            "留意新橡木桶的比例（香草、烤麵包、煙燻氣息）",
+            "比較不同年份，理解酒莊如何因應氣候變化",
+            "閱讀酒莊訪談，理解其釀造哲學背後的思考"
+          ]
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "id": "advanced-m2-quiz",
+    "title": "名家酒莊研究 - 綜合測驗",
+    "passingScore": 75,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multiple-choice",
+        "question": "DRC擁有的唯一白酒特級園是？",
+        "options": [
+          "Corton-Charlemagne",
+          "Montrachet",
+          "Meursault Perrières",
+          "Musigny Blanc"
+        ],
+        "correctAnswer": 1,
+        "explanation": "DRC擁有0.67公頃的Montrachet，是酒莊唯一的白酒特級園，年產量極少，價格昂貴。"
+      },
+      {
+        "id": "q2",
+        "type": "multiple-choice",
+        "question": "Domaine Leroy的創辦人Lalou Bize-Leroy，每公頃產量約為多少？",
+        "options": [
+          "30-35 hl/ha",
+          "25-30 hl/ha",
+          "15-18 hl/ha",
+          "40-45 hl/ha"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Leroy採用極端的生物動力法，產量極低，每公頃僅15-18 hl，遠低於法定上限，這是其酒款濃郁度的來源。"
+      },
+      {
+        "id": "q3",
+        "type": "true-false",
+        "question": "Domaine Armand Rousseau被認為是Gevrey-Chambertin村最具代表性的酒莊。",
+        "correctAnswer": true,
+        "explanation": "Armand Rousseau擁有多個Gevrey-Chambertin頂級地塊，包括Chambertin和Clos de Bèze，是該村最受尊敬的酒莊。"
+      },
+      {
+        "id": "q4",
+        "type": "multiple-choice",
+        "question": "Domaine Coche-Dury使用的新橡木桶比例約為？",
+        "options": [
+          "80-100%",
+          "50-60%",
+          "20-30%",
+          "不使用新橡木桶"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Coche-Dury僅使用20-30%新橡木桶，避免木味掩蓋風土表達，這是其白酒如此純淨優雅的原因之一。"
+      },
+      {
+        "id": "q5",
+        "type": "multiple-choice",
+        "question": "Domaine Comte de Vogüé擁有Musigny特級園的多少比例？",
+        "options": [
+          "約30%",
+          "約50%",
+          "約70%",
+          "100%（獨佔園）"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Vogüé擁有Musigny 7.2公頃中的7.12公頃，約佔70%，是Musigny最大的地主。"
+      },
+      {
+        "id": "q6",
+        "type": "multiple-choice",
+        "question": "以下哪位釀酒師被譽為20世紀最偉大的布根地釀酒師，深刻影響了Méo-Camuzet的風格？",
+        "options": [
+          "Aubert de Villaine",
+          "Henri Jayer",
+          "Jacques Seysses",
+          "Lalou Bize-Leroy"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Henri Jayer是20世紀最偉大的布根地釀酒師之一，他指導Jean-Nicolas Méo建立了Méo-Camuzet的釀造風格。"
+      },
+      {
+        "id": "q7",
+        "type": "true-false",
+        "question": "DRC和Domaine Leroy都採用100%整串發酵。",
+        "correctAnswer": false,
+        "explanation": "DRC採用100%整串發酵，但Leroy視年份和地塊調整整串比例，並非總是100%。"
+      },
+      {
+        "id": "q8",
+        "type": "multiple-choice",
+        "question": "Domaine Dujac的整串發酵比例通常為？",
+        "options": [
+          "0%（完全去梗）",
+          "50%",
+          "100%",
+          "視年份調整"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Dujac是100%整串發酵的堅定支持者，Jacques Seysses認為這能帶來更多複雜度和香料氣息。"
+      },
+      {
+        "id": "q9",
+        "type": "multiple-choice",
+        "question": "Domaine Comte de Vogüé在哪個時期進行了品質革命，重回頂級行列？",
+        "options": [
+          "1970年代",
+          "1980年代中期",
+          "1990年代初期",
+          "2000年代"
+        ],
+        "correctAnswer": 2,
+        "explanation": "1986年François Millet接手後進行改革，從1990年份開始品質顯著提升，重回頂級酒莊行列。"
+      },
+      {
+        "id": "q10",
+        "type": "multiple-choice",
+        "question": "以下哪個酒莊的Meursault Les Perrières被認為品質可媲美特級園？",
+        "options": [
+          "Domaine Leflaive",
+          "Domaine Coche-Dury",
+          "Domaine Roulot",
+          "Domaine Comtes Lafon"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Coche-Dury的Meursault Les Perrières被許多專家認為品質可與Le Montrachet相提並論，是布根地最頂級的一級園白酒之一。"
+      }
+    ]
+  }
+}
