@@ -90,6 +90,7 @@
               <div class="card-region">France · Bordeaux</div>
               <h3 class="card-title">波爾多葡萄酒</h3>
               <p class="card-desc">全方位波爾多產區學習：左岸右岸AOC分級、五大酒莊、年份氣候分析，以及互動式地圖深度探索</p>
+              <button class="course-detail-btn" @click="showCourseModal = true">📋 課程說明</button>
             </div>
 
             <div class="course-includes">
@@ -289,6 +290,110 @@
       </div>
     </div>
 
+    <!-- ═══ 課程說明 Modal ══════════════════════════════════════════════════ -->
+    <div class="cm-backdrop" v-if="showCourseModal" @click.self="showCourseModal = false">
+      <div class="cm-modal">
+        <button class="cm-close" @click="showCourseModal = false">✕</button>
+
+        <!-- 標題 -->
+        <div class="cm-header">
+          <div class="cm-icon">🏰</div>
+          <h2 class="cm-title">波爾多葡萄酒完整課程說明</h2>
+          <p class="cm-sub">從入門到大師，全方位掌握波爾多葡萄酒知識</p>
+        </div>
+
+        <!-- 課程總覽 -->
+        <div class="cm-section">
+          <h3 class="cm-sec-title">📚 課程內容總覽</h3>
+          <div class="cm-levels-grid">
+            <div class="cm-level">
+              <div class="cm-lv-badge">Level 1</div>
+              <div class="cm-lv-name">基礎入門</div>
+              <ul class="cm-lv-list">
+                <li>葡萄酒世界地理</li>
+                <li>波爾多產區介紹</li>
+                <li>主要葡萄品種</li>
+                <li>基礎釀造流程</li>
+                <li>波爾多分級制度</li>
+              </ul>
+            </div>
+            <div class="cm-level">
+              <div class="cm-lv-badge lv2">Level 2</div>
+              <div class="cm-lv-name">進階學習</div>
+              <ul class="cm-lv-list">
+                <li>左岸產區深度剖析</li>
+                <li>美多克六大村莊</li>
+                <li>格拉夫與貝沙克</li>
+                <li>土壤與風土關係</li>
+                <li>年份差異解析</li>
+              </ul>
+            </div>
+            <div class="cm-level">
+              <div class="cm-lv-badge lv3">Level 3</div>
+              <div class="cm-lv-name">深度探索</div>
+              <ul class="cm-lv-list">
+                <li>右岸聖愛美濃與波美侯</li>
+                <li>知名酒莊歷史故事</li>
+                <li>地質科學深入分析</li>
+                <li>氣候與年份評分</li>
+                <li>甜白酒索甸與巴薩克</li>
+              </ul>
+            </div>
+            <div class="cm-level">
+              <div class="cm-lv-badge lv4">Level 4</div>
+              <div class="cm-lv-name">大師課程</div>
+              <ul class="cm-lv-list">
+                <li>頂級酒莊品飲評析</li>
+                <li>波爾多投資與收藏</li>
+                <li>餐酒搭配專業指南</li>
+                <li>期酒制度 En Primeur</li>
+                <li>侍酒師考試準備</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 互動工具 -->
+        <div class="cm-section">
+          <h3 class="cm-sec-title">🛠️ 學習工具</h3>
+          <div class="cm-tools-grid">
+            <div class="cm-tool"><span class="ct-icon">🗺️</span><span class="ct-name">互動地圖</span><span class="ct-desc">Mapbox 互動式產區地圖，地質、氣候圖層</span></div>
+            <div class="cm-tool"><span class="ct-icon">🎮</span><span class="ct-name">互動練習</span><span class="ct-desc">4 種遊戲：產區競答、左右岸識別、年份排序、葡萄土壤配對</span></div>
+            <div class="cm-tool"><span class="ct-icon">🏆</span><span class="ct-name">成就系統</span><span class="ct-desc">解鎖徽章、累積積分、追蹤學習進度</span></div>
+            <div class="cm-tool"><span class="ct-icon">📔</span><span class="ct-name">品飲筆記</span><span class="ct-desc">記錄品飲心得，結合年份氣候資料輔助分析</span></div>
+            <div class="cm-tool"><span class="ct-icon">💬</span><span class="ct-name">學員論壇</span><span class="ct-desc">與其他學員交流心得、分享品飲體驗</span></div>
+            <div class="cm-tool"><span class="ct-icon">📊</span><span class="ct-name">學習追蹤</span><span class="ct-desc">正確率、學習時長、各單元詳細進度記錄</span></div>
+          </div>
+        </div>
+
+        <!-- 方案比較 -->
+        <div class="cm-section">
+          <h3 class="cm-sec-title">💎 方案比較</h3>
+          <div class="cm-compare-table">
+            <div class="cm-compare-header">
+              <div class="cc-col feature-col">功能</div>
+              <div class="cc-col free-col">免費體驗<br><span class="cc-price">NT$ 0</span></div>
+              <div class="cc-col basic-col popular-col">完整課程 ⭐<br><span class="cc-price">NT$ 290/月</span></div>
+              <div class="cc-col premium-col">頂級方案<br><span class="cc-price">NT$ 590/月</span></div>
+            </div>
+            <div v-for="row in compareRows" :key="row.feature" class="cm-compare-row">
+              <div class="cc-col feature-col">{{ row.feature }}</div>
+              <div class="cc-col free-col"><span :class="row.free ? 'cc-yes' : 'cc-no'">{{ row.free ? '✓' : '✗' }}</span><span v-if="row.freeNote" class="cc-note">{{ row.freeNote }}</span></div>
+              <div class="cc-col basic-col"><span :class="row.basic ? 'cc-yes' : 'cc-no'">{{ row.basic ? '✓' : '✗' }}</span><span v-if="row.basicNote" class="cc-note">{{ row.basicNote }}</span></div>
+              <div class="cc-col premium-col"><span :class="row.premium ? 'cc-yes' : 'cc-no'">{{ row.premium ? '✓' : '✗' }}</span><span v-if="row.premiumNote" class="cc-note">{{ row.premiumNote }}</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cm-cta">
+          <button class="cm-btn free" @click="showCourseModal = false; handleFreeTier()">免費開始體驗</button>
+          <button class="cm-btn basic" @click="showCourseModal = false; handlePurchase('bordeaux','basic')">訂閱完整課程 NT$290/月</button>
+          <button class="cm-btn premium" @click="showCourseModal = false; handlePurchase('bordeaux','premium')">頂級方案 NT$590/月</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -371,6 +476,26 @@ const handleNotify = (courseId) => {
 // ─── FAQ ─────────────────────────────────────────────────────────────────────
 const openFaq = ref(null)
 const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
+
+// ─── 課程說明 Modal ──────────────────────────────────────────────────────────
+const showCourseModal = ref(false)
+
+const compareRows = [
+  { feature: 'Level 1 基礎入門', free: true, basic: true, premium: true },
+  { feature: 'Level 2 進階學習', free: false, basic: true, premium: true },
+  { feature: 'Level 3 深度探索', free: false, basic: true, premium: true },
+  { feature: 'Level 4 大師課程', free: false, basic: true, premium: true },
+  { feature: '基本地圖瀏覽', free: true, basic: true, premium: true },
+  { feature: '全產區地圖探索', free: false, basic: true, premium: true },
+  { feature: '地質圖層', free: false, basic: false, premium: true },
+  { feature: '氣候熱力圖層', free: false, basic: false, premium: true },
+  { feature: '知名酒莊地圖標記', free: false, basic: false, premium: true },
+  { feature: '互動練習（4種遊戲）', free: false, basic: true, premium: true },
+  { feature: '成就系統', free: true, basic: true, premium: true },
+  { feature: '學習進度追蹤', free: true, basic: true, premium: true },
+  { feature: '品飲筆記本', free: false, basic: false, premium: true },
+  { feature: '學員論壇', free: true, basic: true, premium: true },
+]
 
 // ─── 靜態資料 ─────────────────────────────────────────────────────────────────
 const bordeauxIncludes = [
@@ -812,4 +937,110 @@ onMounted(async () => {
   margin: 0 auto 20px;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── 課程說明按鈕 ──────────────────────────────────────────── */
+.course-detail-btn {
+  margin-top: 12px;
+  padding: 8px 20px;
+  background: rgba(212,175,55,0.12);
+  border: 1.5px solid rgba(212,175,55,0.4);
+  border-radius: 20px;
+  color: #d4af37;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.course-detail-btn:hover { background: rgba(212,175,55,0.22); transform: translateY(-1px); }
+
+/* ── 課程說明 Modal ──────────────────────────────────────────── */
+.cm-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 9000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 16px;
+  overflow-y: auto;
+}
+.cm-modal {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  max-width: 860px;
+  width: 100%;
+  padding: 40px;
+  color: #1a1a1a;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+}
+.cm-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+}
+.cm-close:hover { color: #333; }
+.cm-header { text-align: center; margin-bottom: 32px; }
+.cm-icon { font-size: 3rem; margin-bottom: 8px; }
+.cm-title { font-size: 1.6rem; font-weight: 800; color: #2c1810; margin: 0 0 8px; }
+.cm-sub { color: #6b5a45; font-size: 0.95rem; margin: 0; }
+.cm-section { margin-bottom: 32px; }
+.cm-sec-title { font-size: 1.05rem; font-weight: 700; color: #722f37; margin: 0 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0e8d8; }
+
+/* 四個等級卡片 */
+.cm-levels-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.cm-level { background: #faf7f2; border-radius: 12px; padding: 16px; border: 1px solid #e8e0d4; }
+.cm-lv-badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; background: #722f37; color: #fff; margin-bottom: 6px; }
+.cm-lv-badge.lv2 { background: #3b5998; }
+.cm-lv-badge.lv3 { background: #1a6b3c; }
+.cm-lv-badge.lv4 { background: #7c4f00; }
+.cm-lv-name { font-weight: 700; font-size: 0.9rem; color: #2c1810; margin-bottom: 8px; }
+.cm-lv-list { margin: 0; padding-left: 14px; font-size: 0.8rem; color: #5a4a3a; line-height: 1.8; }
+
+/* 學習工具格 */
+.cm-tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.cm-tool { display: flex; flex-direction: column; background: #faf7f2; border-radius: 10px; padding: 14px; border: 1px solid #e8e0d4; gap: 4px; }
+.ct-icon { font-size: 1.5rem; }
+.ct-name { font-weight: 700; font-size: 0.88rem; color: #2c1810; }
+.ct-desc { font-size: 0.78rem; color: #7a6a5a; line-height: 1.5; }
+
+/* 比較表 */
+.cm-compare-table { border-radius: 12px; overflow: hidden; border: 1px solid #e8e0d4; }
+.cm-compare-header { display: grid; grid-template-columns: 2fr 1fr 1.2fr 1.2fr; background: #2c1810; color: #fff; }
+.cm-compare-row { display: grid; grid-template-columns: 2fr 1fr 1.2fr 1.2fr; border-bottom: 1px solid #f0e8d8; }
+.cm-compare-row:last-child { border-bottom: none; }
+.cm-compare-row:nth-child(even) { background: #faf7f2; }
+.cc-col { padding: 10px 14px; font-size: 0.82rem; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.cm-compare-header .cc-col { font-weight: 700; font-size: 0.8rem; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px; }
+.popular-col { background: rgba(212,175,55,0.25) !important; }
+.cc-price { font-size: 0.72rem; opacity: 0.85; font-weight: 400; margin-top: 2px; }
+.feature-col { font-weight: 500; color: #3c2a1a; }
+.cc-yes { color: #1a6b3c; font-weight: 700; font-size: 1rem; }
+.cc-no  { color: #c0392b; font-size: 1rem; }
+.cc-note { font-size: 0.72rem; color: #8a7a6a; }
+
+/* CTA */
+.cm-cta { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 8px; padding-top: 24px; border-top: 2px solid #f0e8d8; }
+.cm-btn { padding: 12px 24px; border-radius: 24px; font-size: 0.9rem; font-weight: 700; cursor: pointer; border: none; transition: all 0.2s; }
+.cm-btn.free { background: #f0f0f0; color: #555; }
+.cm-btn.free:hover { background: #e0e0e0; }
+.cm-btn.basic { background: linear-gradient(135deg, #722f37, #9b4d57); color: #fff; }
+.cm-btn.basic:hover { opacity: 0.9; transform: translateY(-1px); }
+.cm-btn.premium { background: linear-gradient(135deg, #7c4f00, #d4af37); color: #fff; }
+.cm-btn.premium:hover { opacity: 0.9; transform: translateY(-1px); }
+
+@media (max-width: 700px) {
+  .cm-modal { padding: 24px 16px; }
+  .cm-levels-grid { grid-template-columns: repeat(2, 1fr); }
+  .cm-tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .cm-compare-header, .cm-compare-row { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
+  .cc-col { font-size: 0.72rem; padding: 8px 6px; }
+}
 </style>
