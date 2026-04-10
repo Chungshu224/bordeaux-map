@@ -188,7 +188,7 @@ import { ref, reactive, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { supabase } from '../lib/supabaseClient.js'
 import { authState, authActions } from '../stores/authStore.js'
-import { achievementActions } from '../stores/achievementSystem.js'
+import { globalAchievementManager } from '../stores/achievementSystem.js'
 
 const router = useRouter()
 const emit = defineEmits(['backToHome'])
@@ -309,7 +309,7 @@ async function handleSave() {
     }
 
     // 2. 自動計算最高成就
-    const topAchievement = achievementActions.getTopAchievement()
+    const topAchievement = globalAchievementManager.getTopAchievement()
 
     // 3. 更新 profiles 表
     const { error: dbError } = await supabase

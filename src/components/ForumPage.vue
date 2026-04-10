@@ -99,7 +99,7 @@ import { ref, computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState, authActions } from '../stores/authStore.js'
 import { fetchPosts, createPost, CATEGORY_LABELS, formatTime, loadMyForumProfile } from '../lib/forumService.js'
-import { achievementActions } from '../stores/achievementSystem.js'
+import { globalAchievementManager } from '../stores/achievementSystem.js'
 
 const router   = useRouter()
 const authUser = computed(() => authState.user)
@@ -152,7 +152,7 @@ async function submitPost() {
       content:        newPost.value.content.trim(),
       category:       newPost.value.category,
       avatarUrl:      myAvatarUrl.value,
-      topAchievement: achievementActions.getTopAchievement()
+      topAchievement: globalAchievementManager.getTopAchievement()
     })
     showNewPost.value = false
     newPost.value = { title: '', content: '', category: 'general' }

@@ -109,7 +109,7 @@ import {
   fetchReplies, createReply, deleteReply,
   CATEGORY_LABELS, formatTime, loadMyForumProfile
 } from '../lib/forumService.js'
-import { achievementActions } from '../stores/achievementSystem.js'
+import { globalAchievementManager } from '../stores/achievementSystem.js'
 
 const route    = useRoute()
 const router   = useRouter()
@@ -162,7 +162,7 @@ async function submitReply() {
       displayName:    authActions.getDisplayName(),
       content:        newReply.value.trim(),
       avatarUrl:      myAvatarUrl.value,
-      topAchievement: achievementActions.getTopAchievement()
+      topAchievement: globalAchievementManager.getTopAchievement()
     })
     replies.value.push(created)
     post.value.reply_count = (post.value.reply_count || 0) + 1
