@@ -701,8 +701,18 @@ export const learningActions = {
   completeLesson(lessonId) {
     if (!learningState.completedLessons.includes(lessonId)) {
       learningState.completedLessons.push(lessonId)
-      learningState.userProgress[`level${learningState.currentLevel}`].completed++
-      
+
+      // 從 lessonId 解析所屬 level（如 l1-3 → level1, l2-5 → level2）
+      const match = lessonId.match(/^l(\d+)-/)
+      const lessonLevel = match ? parseInt(match[1]) : learningState.currentLevel
+      const levelKey = `level${lessonLevel}`
+      if (learningState.userProgress[levelKey]) {
+        learningState.userProgress[levelKey].completed = Math.min(
+          learningState.userProgress[levelKey].completed + 1,
+          learningState.userProgress[levelKey].total
+        )
+      }
+
       // 檢查是否解鎖成就
       this.checkAchievements()
     }
