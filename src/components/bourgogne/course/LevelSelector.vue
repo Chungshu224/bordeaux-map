@@ -1,6 +1,6 @@
 ﻿<template>
   <div class="level-selector">
-    <!-- 背景動畫 ——與波爱多相同 -->
+    <!-- 背景動畫 -->
     <div class="background-animation">
       <div class="wine-bubbles">
         <div v-for="i in 20" :key="i" class="bubble" :style="getBubbleStyle(i)"></div>
@@ -8,7 +8,7 @@
     </div>
 
     <div class="main-container">
-      <!-- 品牌額頭（包含 logo + 用戶面版） -->
+      <!-- 品牌頭部 -->
       <header class="brand-header">
         <div class="brand-logo">
           <div class="wine-glass-icon">🍇</div>
@@ -17,7 +17,7 @@
             <p class="brand-subtitle">布根地葡萄酒學院</p>
           </div>
         </div>
-        <!-- 用戶面版 -->
+        <!-- 用戶面板 -->
         <div class="user-panel">
           <template v-if="authUser">
             <div class="user-avatar">👤</div>
@@ -39,50 +39,66 @@
         </div>
       </header>
 
-      <!-- hero 區塊（進度統計卡） -->
-      <div class="hero-section">
-        <div class="hero-grid">
-          <div class="hero-text">
-            <p class="hero-tagline">追隨布根地的香氣足跡，從入門到大師的完整學習旅程。</p>
-            <div class="hero-actions">
-              <button class="hero-btn primary" @click="startJourney">
-                <span class="btn-icon">▶</span>
-                {{ heroButtonText }}
-              </button>
-              <button class="hero-btn secondary" @click="emit('openMap')">
-                <span class="btn-icon">🗺️</span>
-                探索地圖
-              </button>
+      <!-- 快速功能入口（與波爾多相同） -->
+      <section class="quick-nav">
+        <div class="quick-nav-grid">
+          <button class="nav-card explore" @click="emit('openMap')">
+            <span class="nav-icon">🗺️</span>
+            <span class="nav-title">探索地圖</span>
+            <span class="nav-desc">互動式布根地產區地圖・產區分佈</span>
+          </button>
+          <button class="nav-card achievements" @click="showAchievements">
+            <span class="nav-icon">🏆</span>
+            <span class="nav-title">成就系統</span>
+            <span class="nav-desc">查看已解鎖成就與積分等級</span>
+          </button>
+          <button class="nav-card progress" @click="showDetailedProgress">
+            <span class="nav-icon">📊</span>
+            <span class="nav-title">學習進度</span>
+            <span class="nav-desc">正確率・學習時長・各單元詳細記錄</span>
+          </button>
+          <button class="nav-card certificate" @click="showCertificatesInfo">
+            <span class="nav-icon">🎓</span>
+            <span class="nav-title">我的證書</span>
+            <span class="nav-desc">查看已獲得的布根地學習認證</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 學習進度統計橫列 -->
+      <div class="hero-stats-bar">
+        <div class="stats-bar-card">
+          <div class="stats-row-inner">
+            <div class="stat-hero-item">
+              <span class="stat-hero-value">{{ totalProgress }}%</span>
+              <span class="stat-hero-label">總體進度</span>
             </div>
-          </div>
-          <div class="hero-stats">
-            <div class="stats-card">
-              <div class="stat-item">
-                <span class="stat-label">總體進度</span>
-                <span class="stat-value">{{ totalProgress }}%</span>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="stat-item">
-                <span class="stat-label">完成模組</span>
-                <span class="stat-value">{{ completedLevels }}</span>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="stat-item">
-                <span class="stat-label">累積時數</span>
-                <span class="stat-value">{{ studyTime }} 小時</span>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="stat-item">
-                <span class="stat-label">獲得證書</span>
-                <span class="stat-value">{{ earnedCertificates }}</span>
-              </div>
+            <div class="stat-sep"></div>
+            <div class="stat-hero-item">
+              <span class="stat-hero-value">{{ completedLevels }} / 4</span>
+              <span class="stat-hero-label">完成階段</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-hero-item">
+              <span class="stat-hero-value">{{ studyTime }} h</span>
+              <span class="stat-hero-label">累積時數</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-hero-item">
+              <span class="stat-hero-value">{{ earnedCertificates }}</span>
+              <span class="stat-hero-label">獲得證書</span>
+            </div>
+            <div class="stats-actions">
+              <button class="hero-start-btn" @click="startJourney">
+                <span>▶</span> {{ heroButtonText }}
+              </button>
             </div>
           </div>
         </div>
       </div>
 
       <!-- 等級選擇區 -->
-      <div class="levels-section">
+      <section class="levels-section">
         <div class="section-header">
           <div class="section-title-group">
             <h2>選擇課程階段</h2>
@@ -99,62 +115,86 @@
             :key="level.id"
             class="level-card"
             :class="{
-              locked: !level.unlocked,
-              'level-1': level.id === 1,
-              'level-2': level.id === 2,
-              'level-3': level.id === 3,
-              'level-4': level.id === 4
+              disabled: !level.unlocked,
+              [`level-${level.id}`]: true
             }"
             @click="level.unlocked && startLevel(level)"
           >
-            <div class="level-number">{{ level.id }}</div>
-            <div class="card-title">
-              <h2>{{ level.name }}</h2>
-              <p class="level-label">Level {{ level.id }}</p>
-            </div>
-            <p class="card-description">{{ level.description }}</p>
-            <div class="features-list">
-              <div v-for="(feature, index) in level.features" :key="index" class="feature-item">
-                <span class="feature-icon">{{ feature.icon }}</span>
-                <span class="feature-text">{{ feature.text }}</span>
+            <!-- 卡片頂部彩色裝飾線（波爾多風格） -->
+            <div class="card-accent-bar"></div>
+
+            <!-- 標頭：標章 + 標題 -->
+            <div class="level-header">
+              <div class="level-badge">
+                <span class="level-number">{{ level.id }}</span>
+                <div class="level-icon">{{ level.icon }}</div>
+              </div>
+              <div class="level-title">
+                <h3>{{ level.name }}</h3>
+                <p>Level {{ level.id }}</p>
               </div>
             </div>
-            <div class="stats-row">
-              <div class="stat-box">
-                <div class="stat-value">{{ level.modules }}</div>
-                <div class="stat-label">個模組</div>
+
+            <!-- 內容區 -->
+            <div class="level-content">
+              <p class="level-description">{{ level.description }}</p>
+
+              <div class="level-features">
+                <div v-for="(feature, index) in level.features" :key="index" class="feature-item">
+                  <span class="feature-icon">{{ feature.icon }}</span>
+                  <span>{{ feature.text }}</span>
+                </div>
               </div>
-              <div class="stat-box">
-                <div class="stat-value">{{ level.hours }}</div>
-                <div class="stat-label">小時</div>
+
+              <div class="level-stats">
+                <div class="stat-item">
+                  <span class="stat-number">{{ level.modules }}</span>
+                  <span class="stat-label">個模組</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">{{ level.hours }}</span>
+                  <span class="stat-label">小時</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">{{ Math.round(getProgress(level.id)) }}%</span>
+                  <span class="stat-label">完成度</span>
+                </div>
               </div>
-              <div class="stat-box">
-                <div class="stat-value">{{ Math.round(getProgress(level.id)) }}%</div>
-                <div class="stat-label">完成度</div>
+
+              <!-- 進度條 -->
+              <div class="progress-bar-wrap">
+                <div class="progress-bar-track">
+                  <div class="progress-bar-fill" :style="{ width: `${getProgress(level.id)}%` }"></div>
+                </div>
               </div>
             </div>
-            <button v-if="level.unlocked" class="action-btn" @click.stop="startLevel(level)">
-              {{ isInProgress(level.id) ? '繼續學習' : '開始學習' }} →
-            </button>
-            <button v-else class="action-btn locked-btn" disabled>開始學習 →</button>
+
+            <!-- 操作按鈕 -->
+            <div class="level-action">
+              <button
+                class="level-btn"
+                :disabled="!level.unlocked"
+                @click.stop="level.unlocked && startLevel(level)"
+              >
+                <template v-if="!level.unlocked">需完成前一階段</template>
+                <template v-else-if="getProgress(level.id) >= 100">重新學習</template>
+                <template v-else-if="isInProgress(level.id)">繼續學習</template>
+                <template v-else>開始學習</template>
+                <span v-if="level.unlocked" class="btn-arrow">→</span>
+              </button>
+            </div>
+
+            <!-- 鎖定遮罩 -->
             <div v-if="!level.unlocked" class="lock-overlay">
               <div class="lock-icon">🔒</div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- 底部功能列 -->
-      <div class="bottom-actions">
-        <button class="action-button explore-map" @click="emit('openMap')">
-          <span class="btn-icon">🗺️</span>探索地圖
-        </button>
-        <button class="action-button achievements" @click="showAchievements">
-          <span class="btn-icon">🏆</span>成就系統
-        </button>
-        <button class="action-button learning-progress" @click="showDetailedProgress">
-          <span class="btn-icon">📊</span>學習進度
-        </button>
+      <!-- 未登入提示列 -->
+      <div v-if="!authUser" class="sync-hint-bar">
+        📍 登入後可將學習進度同步至雲端
       </div>
     </div>
   </div>
@@ -293,6 +333,20 @@ const startJourney = () => {
   }
 }
 
+// 證書資訊彈窗
+const showCertificatesInfo = () => {
+  const certs = progressStore.getCertificates()
+  if (certs.length === 0) {
+    alert('🎓 尚未獲得任何證書\n\n完成各階段課程即可獲得對應證書：\n• Level 1 → 布根地探索者證書\n• Level 2 → 布根地愛好者證書\n• Level 3 → 布根地專家證書\n• Level 4 → 布根地大師證書 + 講師資格認證')
+    return
+  }
+  let msg = '🎓 我的證書記錄\n' + '='.repeat(30) + '\n\n'
+  certs.forEach((cert, i) => {
+    msg += `${i + 1}. Level ${cert.level} 證書\n   完成模組：${cert.completedModules}/${cert.totalModules}　平均分數：${cert.averageScore}\n\n`
+  })
+  alert(msg)
+}
+
 // 成就系統功能（即將推出）
 const showAchievements = () => {
   alert('🏆 成就系統即將推出！\n\n敬請期待更多精彩功能：\n• 解鎖成就徽章\n• 關鍵節點獎勵\n• 學習里程碟記錄\n• 排行榜與挑戰賽事')
@@ -345,7 +399,7 @@ const showDetailedProgress = async () => {
 </script>
 
 <style scoped>
-/* ── 整體背景（與波爾多完全一致） ──────────────────────────── */
+/* ── 整體背景 ──────────────────────────────────────────────── */
 .level-selector {
   min-height: 100vh;
   background: linear-gradient(135deg,
@@ -399,17 +453,20 @@ const showDetailedProgress = async () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 2rem 0;
-  padding: 1.5rem 2rem;
+  margin: 0 0 2rem;
+  padding: 1.75rem 2rem;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 }
-.brand-logo { display: flex; align-items: center; gap: 1.2rem; }
-.wine-glass-icon { font-size: 2.8rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)); }
+.brand-logo   { display: flex; align-items: center; gap: 1.25rem; }
+.wine-glass-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
 .brand-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   margin: 0;
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -417,12 +474,12 @@ const showDetailedProgress = async () => {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.brand-subtitle { font-size: 1rem; color: #666; margin: 0.3rem 0 0 0; }
+.brand-subtitle { font-size: 1rem; color: #666; margin: 0.3rem 0 0; }
 
 /* ── 用戶面板 ──────────────────────────────────────────────── */
-.user-panel { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
-.user-avatar { font-size: 1.8rem; line-height: 1; }
-.user-info { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+.user-panel   { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+.user-avatar  { font-size: 1.8rem; line-height: 1; }
+.user-info    { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
 .user-name {
   font-size: 0.9rem; font-weight: 600; color: #2c3e50;
   max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
@@ -440,8 +497,8 @@ const showDetailedProgress = async () => {
 .user-btns { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: flex-end; }
 .user-action-btn {
   padding: 0.4rem 1rem; border: none; border-radius: 20px;
-  font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.25s ease;
-  display: flex; align-items: center; gap: 0.3rem;
+  font-size: 0.8rem; font-weight: 600; cursor: pointer;
+  transition: all 0.25s ease; display: flex; align-items: center; gap: 0.3rem;
 }
 .user-action-btn.home {
   background: rgba(102,126,234,0.08); color: #4a3a8a;
@@ -458,57 +515,117 @@ const showDetailedProgress = async () => {
 }
 .user-action-btn.login:hover { opacity: 0.9; transform: translateY(-1px); }
 
-/* ── Hero 統計區 ───────────────────────────────────────────── */
-.hero-section {
-  margin: 0 0 2rem;
-  padding: 2rem;
+/* ── 快速功能入口 ──────────────────────────────────────────── */
+.quick-nav {
+  margin-bottom: 1.5rem;
+}
+.quick-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.2rem 1rem;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.nav-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.nav-card:hover::after { opacity: 1; }
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
+.nav-icon  { font-size: 2rem; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+.nav-title { font-size: 1rem; font-weight: 800; color: white; letter-spacing: 0.01em; }
+.nav-desc  { font-size: 0.72rem; color: rgba(255,255,255,0.78); line-height: 1.4; }
+
+.nav-card.explore {
+  background: linear-gradient(135deg, #00BCD4, #0097A7);
+}
+.nav-card.achievements {
+  background: linear-gradient(135deg, #FFC107, #F57F17);
+}
+.nav-card.progress {
+  background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+}
+.nav-card.certificate {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+/* ── 進度統計橫列 ──────────────────────────────────────────── */
+.hero-stats-bar {
+  margin-bottom: 1.5rem;
+}
+.stats-bar-card {
   background: rgba(255,255,255,0.95);
   border-radius: 20px;
+  padding: 1.5rem 2rem;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
   backdrop-filter: blur(10px);
 }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+.stats-row-inner {
+  display: flex;
   align-items: center;
+  gap: 0;
 }
-.hero-text {
-  display: flex; flex-direction: column; gap: 20px;
-  align-items: flex-start; text-align: left;
+.stat-hero-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
-.hero-tagline { font-size: 1rem; color: #4b5563; line-height: 1.7; margin: 0; }
-.hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-.hero-btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 24px; border-radius: 12px; font-size: 0.95rem; font-weight: 600;
-  border: none; cursor: pointer; transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+.stat-hero-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.2;
 }
-.hero-btn.primary {
+.stat-hero-label {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.stat-sep {
+  width: 1px;
+  height: 40px;
+  background: #e5e7eb;
+  flex-shrink: 0;
+  margin: 0 8px;
+}
+.stats-actions { flex-shrink: 0; margin-left: 1.5rem; }
+.hero-start-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
   background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white; box-shadow: 0 16px 40px rgba(102,126,234,0.35);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 8px 24px rgba(102,126,234,0.35);
+  white-space: nowrap;
 }
-.hero-btn.primary:hover { transform: translateY(-3px); box-shadow: 0 22px 50px rgba(102,126,234,0.45); }
-.hero-btn.secondary {
-  background: white; color: #4b5563;
-  border: 1px solid rgba(102,126,234,0.35);
-}
-.hero-btn.secondary:hover { border-color: rgba(102,126,234,0.6); }
-.btn-icon { font-size: 1.1rem; }
-
-.hero-stats { display: flex; justify-content: flex-end; }
-.stats-card {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  padding: 28px; border-radius: 20px; color: white;
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 20px; align-items: center;
-  box-shadow: 0 20px 50px rgba(102,126,234,0.45);
-  width: 100%;
-}
-.stat-item { display: flex; flex-direction: column; gap: 4px; }
-.stat-item .stat-label { font-size: 0.85rem; opacity: 0.85; font-weight: 500; }
-.stat-item .stat-value { font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
-.stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.3); }
+.hero-start-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(102,126,234,0.45); }
 
 /* ── 課程階段選擇 ───────────────────────────────────────────── */
 .levels-section {
@@ -520,8 +637,11 @@ const showDetailedProgress = async () => {
   margin-bottom: 1.5rem;
 }
 .section-header {
-  display: flex; justify-content: space-between;
-  align-items: flex-end; gap: 24px; margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 28px;
 }
 .section-title-group h2 {
   font-size: 1.75rem; color: #1f2937; margin: 0 0 8px; font-weight: 700;
@@ -530,118 +650,201 @@ const showDetailedProgress = async () => {
 .section-btn {
   padding: 12px 24px; border-radius: 12px; border: none;
   background: #1f2937; color: white; font-size: 14px; font-weight: 700;
-  cursor: pointer; transition: all 0.3s; white-space: nowrap;
+  cursor: pointer; transition: all 0.3s; white-space: nowrap; flex-shrink: 0;
 }
 .section-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(17,24,39,0.2); }
-.section-actions { flex-shrink: 0; }
 
 .levels-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
-/* ── 等級卡片 ───────────────────────────────────────────────── */
+/* ── 等級卡片（波爾多風格） ────────────────────────────────── */
 .level-card {
-  background: white; border-radius: 20px; padding: 24px;
+  background: rgba(255,255,255,0.98);
+  border-radius: 20px;
+  overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-  position: relative; overflow: hidden;
-  border: 1px solid #e5e7eb; cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f0f0f0;
 }
-.level-card:hover:not(.locked) {
-  transform: translateY(-8px); box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+.level-card:hover:not(.disabled) {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
 }
-.level-card.locked { opacity: 0.65; cursor: default; }
+.level-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.level-card.disabled:hover { transform: none; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+
+/* 卡片頂部彩色裝飾線 */
+.card-accent-bar {
+  height: 5px;
+  width: 100%;
+  flex-shrink: 0;
+}
+.level-1 .card-accent-bar { background: linear-gradient(90deg, #4CAF50, #66BB6A); }
+.level-2 .card-accent-bar { background: linear-gradient(90deg, #2196F3, #42A5F5); }
+.level-3 .card-accent-bar { background: linear-gradient(90deg, #FF9800, #FFA726); }
+.level-4 .card-accent-bar { background: linear-gradient(90deg, #E91E63, #EC407A); }
+
+/* 卡片標頭 */
+.level-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 0;
+  margin-bottom: 1.25rem;
+}
+.level-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+.level-1 .level-badge { background: linear-gradient(135deg, #4CAF50, #66BB6A); color: white; }
+.level-2 .level-badge { background: linear-gradient(135deg, #2196F3, #42A5F5); color: white; }
+.level-3 .level-badge { background: linear-gradient(135deg, #FF9800, #FFA726); color: white; }
+.level-4 .level-badge { background: linear-gradient(135deg, #E91E63, #EC407A); color: white; }
 
 .level-number {
-  width: 48px; height: 48px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem; font-weight: 700; color: white; margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
-.level-1 .level-number { background: linear-gradient(135deg, #667eea, #764ba2); }
-.level-2 .level-number { background: linear-gradient(135deg, #f093fb, #f5576c); }
-.level-3 .level-number { background: linear-gradient(135deg, #4facfe, #00f2fe); }
-.level-4 .level-number { background: linear-gradient(135deg, #fa709a, #fee140); }
+.level-icon {
+  position: absolute;
+  top: -4px; right: -4px;
+  font-size: 1.1rem;
+}
+.level-title h3 { font-size: 1.4rem; margin: 0 0 0.25rem; color: #2c3e50; font-weight: 700; }
+.level-title p  { margin: 0; color: #9ca3af; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
 
-.card-title h2 {
-  font-size: 1.25rem; font-weight: 600; color: #1f2937; margin: 0 0 4px; line-height: 1.3;
+/* 卡片內容 */
+.level-content {
+  padding: 0 1.5rem;
+  flex: 1;
 }
-.level-label {
-  font-size: 0.75rem; color: #9ca3af; margin: 0 0 12px;
-  font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;
+.level-description {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
 }
-.card-description {
-  font-size: 0.85rem; line-height: 1.6; color: #4b5563; margin-bottom: 18px; min-height: 55px;
+.level-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
 }
-.features-list {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px;
+.feature-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.85rem; color: #555;
 }
-.feature-item { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: #374151; }
-.feature-icon { font-size: 0.95rem; flex-shrink: 0; }
-.feature-text { font-weight: 500; line-height: 1.4; }
+.feature-icon { font-size: 1rem; }
 
-.stats-row {
-  display: flex; justify-content: space-around;
-  padding: 14px 0; margin-bottom: 16px;
-  border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;
+.level-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.9rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
-.stat-box { text-align: center; }
-.stat-box .stat-value { font-size: 1.4rem; font-weight: 700; color: #1f2937; line-height: 1.2; }
-.stat-box .stat-label {
-  font-size: 0.65rem; color: #94a3b8; text-transform: uppercase;
-  letter-spacing: 0.8px; margin-top: 3px; display: block;
-}
+.stat-item   { text-align: center; }
+.stat-number { display: block; font-size: 1.4rem; font-weight: 700; color: #2c3e50; }
+.stat-label  { font-size: 0.75rem; color: #9ca3af; }
 
-.action-btn {
-  width: 100%; padding: 12px 0; border: none; border-radius: 10px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white; font-size: 0.9rem; font-weight: 600; cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: 0 4px 14px rgba(102,126,234,0.3);
+/* 進度條 */
+.progress-bar-wrap { margin-bottom: 1rem; }
+.progress-bar-track {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
 }
-.action-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.35); }
-.locked-btn { background: #e5e7eb; color: #9ca3af; box-shadow: none; cursor: default; }
-.locked-btn:hover { transform: none; box-shadow: none; }
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.5s ease;
+}
+.level-2 .progress-bar-fill { background: linear-gradient(90deg, #2196F3, #42A5F5); }
+.level-3 .progress-bar-fill { background: linear-gradient(90deg, #FF9800, #FFA726); }
+.level-4 .progress-bar-fill { background: linear-gradient(90deg, #E91E63, #EC407A); }
 
+/* 操作按鈕 */
+.level-action { padding: 0 1.5rem 1.5rem; }
+.level-btn {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  border: none; border-radius: 12px;
+  font-size: 1rem; font-weight: 600; cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+}
+.level-1 .level-btn { background: linear-gradient(135deg, #4CAF50, #66BB6A); color: white; }
+.level-2 .level-btn { background: linear-gradient(135deg, #2196F3, #42A5F5); color: white; }
+.level-3 .level-btn { background: linear-gradient(135deg, #FF9800, #FFA726); color: white; }
+.level-4 .level-btn { background: linear-gradient(135deg, #E91E63, #EC407A); color: white; }
+.level-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+.level-btn:disabled { background: #e5e7eb; color: #9ca3af; cursor: not-allowed; }
+.btn-arrow { font-size: 1.1rem; transition: transform 0.3s; }
+.level-btn:hover .btn-arrow { transform: translateX(4px); }
+
+/* 鎖定遮罩 */
 .lock-overlay {
-  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.92); border-radius: 20px;
+  position: absolute; inset: 0;
+  background: rgba(255,255,255,0.92);
+  border-radius: 20px;
   display: flex; align-items: center; justify-content: center;
   z-index: 10; backdrop-filter: blur(4px);
 }
-.lock-icon { font-size: 50px; opacity: 0.6; }
+.lock-icon { font-size: 50px; opacity: 0.5; }
 
-/* ── 底部操作列 ────────────────────────────────────────────── */
-.bottom-actions {
-  background: rgba(255,255,255,0.95); border-radius: 20px;
-  padding: 18px 28px; display: flex; justify-content: center;
-  align-items: center; gap: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  flex-wrap: wrap; backdrop-filter: blur(10px);
+/* ── 未登入提示 ────────────────────────────────────────────── */
+.sync-hint-bar {
+  text-align: center;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.8);
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.25);
+  margin-bottom: 1.5rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(4px);
 }
-.action-button {
-  display: flex; align-items: center; gap: 10px;
-  padding: 14px 28px; border: none; border-radius: 12px;
-  font-size: 15px; font-weight: 600; cursor: pointer;
-  transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.explore-map    { background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; }
-.achievements   { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: white; }
-.learning-progress { background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; }
-.action-button:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
 
 /* ── RWD ───────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-  .hero-text { align-items: center; text-align: center; }
-  .hero-stats { justify-content: center; }
+  .quick-nav-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-row-inner { flex-wrap: wrap; gap: 12px; }
+  .stat-sep { display: none; }
+  .stats-actions { width: 100%; text-align: center; margin-left: 0; }
 }
 @media (max-width: 768px) {
   .main-container { padding: 1rem; }
-  .hero-actions { flex-direction: column; width: 100%; }
+  .brand-header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+  .quick-nav-grid { grid-template-columns: repeat(2, 1fr); }
   .levels-grid { grid-template-columns: 1fr; }
   .levels-section { padding: 1.5rem; }
-  .brand-header { flex-direction: column; gap: 1rem; align-items: flex-start; }
-  .bottom-actions { flex-direction: column; padding: 16px; }
+  .level-features { grid-template-columns: 1fr; }
+  .hero-start-btn { width: 100%; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .quick-nav-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .brand-title { font-size: 1.6rem; }
 }
 </style>
