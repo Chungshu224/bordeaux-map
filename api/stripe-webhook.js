@@ -90,6 +90,11 @@ export default async function handler(req, res) {
         const expiresAt = calcExpiresAt(billingPeriod || 'monthly')
 
         // upsert：若相同 session 重複送出也不重複建立
+        // Stripe TWD 以最小單位儲存（29000 = NT$290），除以 100 還原
+        const rawAmount = session.amount_total ?? 0
+        const currency  = (session.currency || 'twd').toUpperCase()
+        const amount    = currency === 'TWD' ? Math.round(rawAmount / 100) : rawAmount
+
         await supabase.from('purchases').upsert({
           user_id:               userId,
           course_id:             courseId,
@@ -102,9 +107,8 @@ export default async function handler(req, res) {
           stripe_session_id:     session.id,
           expires_at:            expiresAt,
           paid_at:               new Date().toISOString(),
-          // amount 以 TWD（零小數位）儲存
-          amount:   session.amount_total ?? 0,
-          currency: (session.currency || 'twd').toUpperCase()
+          amount,
+          currency
         }, { onConflict: 'stripe_session_id' })
 
         // 更新 auth.users app_metadata
