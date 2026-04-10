@@ -45,13 +45,20 @@ export default async function handler(req, res) {
     return res.status(405).send('Method Not Allowed')
   }
 
-  const sig           = req.headers['stripe-signature']
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
-  const secretKey     = process.env.STRIPE_SECRET_KEY
+  const sig             = req.headers['stripe-signature']
+  const webhookSecret   = process.env.STRIPE_WEBHOOK_SECRET
+  const secretKey       = process.env.STRIPE_SECRET_KEY
+  const supabaseUrl     = process.env.SUPABASE_URL
+  const supabaseService = process.env.SUPABASE_SERVICE_ROLE_KEY
 
   if (!sig || !webhookSecret || !secretKey) {
     console.error('[stripe-webhook] 缺少 Stripe 環境變數')
-    return res.status(400).send('Missing configuration')
+    return res.status(400).send('Missing Stripe configuration')
+  }
+
+  if (!supabaseUrl || !supabaseService) {
+    console.error('[stripe-webhook] 缺少 Supabase 環境變數 (SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY)')
+    return res.status(500).send('Missing Supabase configuration')
   }
 
   const stripe = new Stripe(secretKey)
@@ -65,10 +72,7 @@ export default async function handler(req, res) {
     return res.status(400).send(`Webhook Error: ${err.message}`)
   }
 
-  const supabase = createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-  )
+  const supabase = createClient(supabaseUrl, supabaseService)
 
   try {
     switch (event.type) {
