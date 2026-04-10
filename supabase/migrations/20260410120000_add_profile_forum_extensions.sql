@@ -37,6 +37,10 @@ INSERT INTO storage.buckets (id, name, public)
   VALUES ('avatars', 'avatars', true)
   ON CONFLICT (id) DO NOTHING;
 
+DROP POLICY IF EXISTS "Avatar upload allow" ON storage.objects;
+DROP POLICY IF EXISTS "Avatar update allow" ON storage.objects;
+DROP POLICY IF EXISTS "Avatar public read" ON storage.objects;
+
 CREATE POLICY "Avatar upload allow" ON storage.objects
   FOR INSERT TO authenticated
   WITH CHECK (bucket_id = 'avatars' AND (storage.foldername(name))[1] = auth.uid()::text);
