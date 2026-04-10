@@ -786,6 +786,16 @@ export class AchievementManager {
     
     return badges
   }
+
+  // 取得論壇顯示用的最高成就標籤
+  getTopAchievement() {
+    const stats = achievementState.userStats
+    if (stats.level4Completed) return '👑 Level 4 大師'
+    if (stats.level3Completed) return '🥇 Level 3 專家'
+    if (stats.level2Completed) return '📘 Level 2 學習者'
+    if (stats.level1Completed) return '📗 Level 1 認證'
+    return null
+  }
 }
 
 // 各 Level 的課程總數

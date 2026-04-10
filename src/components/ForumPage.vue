@@ -45,7 +45,12 @@
           </div>
           <div class="post-card-title">{{ post.title }}</div>
           <div class="post-card-meta">
-            <span class="post-author">{{ post.display_name }}</span>
+            <div class="post-author-row">
+              <img v-if="post.avatar_url" :src="post.avatar_url" class="mini-avatar" :alt="post.display_name" />
+              <div v-else class="mini-avatar mini-avatar-ph">{{ (post.display_name || '?')[0] }}</div>
+              <span class="post-author">{{ post.display_name }}</span>
+              <span v-if="post.top_achievement" class="achievement-tag">{{ post.top_achievement }}</span>
+            </div>
             <span class="post-time">{{ formatTime(post.created_at) }}</span>
             <span class="post-replies">💬 {{ post.reply_count }}</span>
           </div>
@@ -93,7 +98,8 @@
 import { ref, computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState, authActions } from '../stores/authStore.js'
-import { fetchPosts, createPost, CATEGORY_LABELS, formatTime } from '../lib/forumService.js'
+import { fetchPosts, createPost, CATEGORY_LABELS, formatTime, loadMyForumProfile } from '../lib/forumService.js'
+import { achievementActions } from '../stores/achievementSystem.js'
 
 const router   = useRouter()
 const authUser = computed(() => authState.user)
@@ -112,6 +118,7 @@ const showNewPost = ref(false)
 const submitting  = ref(false)
 const postError   = ref('')
 const newPost     = ref({ title: '', content: '', category: 'general' })
+const myAvatarUrl = ref(null)
 
 async function loadPosts() {
   loading.value = true
@@ -139,11 +146,13 @@ async function submitPost() {
   submitting.value = true
   try {
     await createPost({
-      userId:      authUser.value.id,
-      displayName: authActions.getDisplayName(),
-      title:       newPost.value.title.trim(),
-      content:     newPost.value.content.trim(),
-      category:    newPost.value.category
+      userId:         authUser.value.id,
+      displayName:    authActions.getDisplayName(),
+      title:          newPost.value.title.trim(),
+      content:        newPost.value.content.trim(),
+      category:       newPost.value.category,
+      avatarUrl:      myAvatarUrl.value,
+      topAchievement: achievementActions.getTopAchievement()
     })
     showNewPost.value = false
     newPost.value = { title: '', content: '', category: 'general' }
@@ -157,7 +166,13 @@ async function submitPost() {
 }
 
 watch([activeCategory, page], loadPosts)
-onMounted(loadPosts)
+onMounted(async () => {
+  await loadPosts()
+  if (authUser.value) {
+    const p = await loadMyForumProfile(authUser.value.id)
+    myAvatarUrl.value = p.avatarUrl
+  }
+})
 </script>
 
 <style scoped>
@@ -264,8 +279,24 @@ onMounted(loadPosts)
 .pin-tag { font-size: 0.72rem; color: #b45309; font-weight: 700; }
 .post-cat { font-size: 0.72rem; color: #7a6a5a; background: #f5f0e8; padding: 2px 8px; border-radius: 10px; }
 .post-card-title { font-size: 1rem; font-weight: 600; color: #2c1810; margin-bottom: 8px; line-height: 1.4; }
-.post-card-meta { display: flex; gap: 12px; font-size: 0.78rem; color: #9a8878; }
+.post-card-meta { display: flex; gap: 12px; font-size: 0.78rem; color: #9a8878; align-items: center; }
+.post-author-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.mini-avatar {
+  width: 22px; height: 22px; border-radius: 50%; object-fit: cover;
+  border: 1.5px solid rgba(212,175,55,0.3); flex-shrink: 0;
+}
+.mini-avatar-ph {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: #722f37; color: #fff; font-size: 0.7rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
 .post-author { font-weight: 600; color: #6b5a45; }
+.achievement-tag {
+  font-size: 0.68rem; font-weight: 600;
+  padding: 1px 6px; border-radius: 8px;
+  background: rgba(212,175,55,0.12); color: #b89a30; border: 1px solid rgba(212,175,55,0.2);
+  white-space: nowrap;
+}
 .post-replies { margin-left: auto; }
 
 .forum-loading, .forum-empty { text-align: center; padding: 60px 20px; color: #9a8878; }

@@ -38,10 +38,10 @@ export async function fetchPost(id) {
   return data
 }
 
-export async function createPost({ userId, displayName, title, content, category }) {
+export async function createPost({ userId, displayName, title, content, category, avatarUrl = null, topAchievement = null }) {
   const { data, error } = await supabase
     .from('forum_posts')
-    .insert({ user_id: userId, display_name: displayName, title, content, category })
+    .insert({ user_id: userId, display_name: displayName, title, content, category, avatar_url: avatarUrl, top_achievement: topAchievement })
     .select()
     .single()
   if (error) throw error
@@ -65,14 +65,25 @@ export async function fetchReplies(postId) {
   return data
 }
 
-export async function createReply({ postId, userId, displayName, content }) {
+export async function createReply({ postId, userId, displayName, content, avatarUrl = null, topAchievement = null }) {
   const { data, error } = await supabase
     .from('forum_replies')
-    .insert({ post_id: postId, user_id: userId, display_name: displayName, content })
+    .insert({ post_id: postId, user_id: userId, display_name: displayName, content, avatar_url: avatarUrl, top_achievement: topAchievement })
     .select()
     .single()
   if (error) throw error
   return data
+}
+
+// ─── 載入當前使用者的論壇用個人資料 ──────────────────────────────────────────
+export async function loadMyForumProfile(userId) {
+  if (!userId) return { avatarUrl: null }
+  const { data } = await supabase
+    .from('profiles')
+    .select('avatar_url')
+    .eq('id', userId)
+    .single()
+  return { avatarUrl: data?.avatar_url || null }
 }
 
 export async function deleteReply(id) {

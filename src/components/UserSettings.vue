@@ -70,6 +70,26 @@
         <!-- ── 個人資料 ──── -->
         <section class="settings-section">
           <h3 class="section-title">個人資料</h3>
+
+          <!-- 大頭貼 -->
+          <div class="field-group avatar-group">
+            <label class="field-label">大頭貼</label>
+            <div class="avatar-row">
+              <div class="avatar-preview" @click="$refs.avatarInput.click()">
+                <img v-if="avatarPreview || form.avatarUrl" :src="avatarPreview || form.avatarUrl" class="avatar-img" alt="大頭貼" />
+                <div v-else class="avatar-placeholder">{{ (form.displayName || userEmail || '?')[0].toUpperCase() }}</div>
+                <div class="avatar-overlay">📷</div>
+              </div>
+              <div class="avatar-info">
+                <p class="field-hint">點擊圖片更換大頭貼</p>
+                <p class="field-hint">JPG / PNG / WebP，最大2 MB</p>
+                <button v-if="avatarPreview" class="avatar-remove-btn" @click.stop="removeAvatar" type="button">移除新圖片</button>
+              </div>
+            </div>
+            <input ref="avatarInput" type="file" accept="image/jpeg,image/png,image/webp" class="hidden-input" @change="handleAvatarChange" />
+            <p v-if="avatarError" class="field-error">{{ avatarError }}</p>
+          </div>
+
           <div class="field-group">
             <label for="s-display-name" class="field-label">顯示名稱</label>
             <input
@@ -77,11 +97,25 @@
               v-model.trim="form.displayName"
               type="text"
               class="field-input"
-              placeholder="您的姓名或暱稱"
+              placeholder="您的姓名或昵稱"
               :disabled="isSaving"
               maxlength="40"
             />
-            <p class="field-hint">顯示於學習首頁右上角</p>
+            <p class="field-hint">顯示於學習首頁右上角與論壇區</p>
+          </div>
+
+          <div class="field-group">
+            <label for="s-bio" class="field-label">個人簡介</label>
+            <textarea
+              id="s-bio"
+              v-model.trim="form.bio"
+              class="field-textarea"
+              placeholder="簡短介紹一下自己吧！（最多 120 字）"
+              :disabled="isSaving"
+              maxlength="120"
+              rows="3"
+            ></textarea>
+            <p class="field-hint">{{ form.bio.length }} / 120</p>
           </div>
         </section>
 
@@ -154,6 +188,7 @@ import { ref, reactive, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { supabase } from '../lib/supabaseClient.js'
 import { authState, authActions } from '../stores/authStore.js'
+import { achievementActions } from '../stores/achievementSystem.js'
 
 const router = useRouter()
 const emit = defineEmits(['backToHome'])
@@ -162,12 +197,19 @@ const emit = defineEmits(['backToHome'])
 const form = reactive({
   displayName: '',
   learningGoal: '',
-  experienceLevel: ''
+  experienceLevel: '',
+  avatarUrl: '',
+  bio: ''
 })
 
-const isSaving  = ref(false)
-const apiError  = ref('')
-const saveSuccess = ref(false)
+const isSaving     = ref(false)
+const apiError     = ref('')
+const saveSuccess  = ref(false)
+const avatarPreview  = ref('')
+const avatarFile     = ref(null)
+const avatarUploading = ref(false)
+const avatarError    = ref('')
+const avatarInput    = ref(null)
 
 // ── 帳號資訊 ─────────────────────────────
 const userEmail = computed(() => authActions.getEmail() ?? '')
@@ -221,7 +263,7 @@ async function loadSettings() {
   if (!supabase || !authState.user) return
   const { data, error } = await supabase
     .from('profiles')
-    .select('display_name, learning_goal, experience_level, total_study_seconds, completed_levels, quiz_accuracy_overall')
+    .select('display_name, learning_goal, experience_level, total_study_seconds, completed_levels, quiz_accuracy_overall, avatar_url, bio')
     .eq('id', authState.user.id)
     .single()
   if (error) {
@@ -232,6 +274,8 @@ async function loadSettings() {
     form.displayName     = data.display_name     ?? authActions.getDisplayName() ?? ''
     form.learningGoal    = data.learning_goal    ?? ''
     form.experienceLevel = data.experience_level ?? ''
+    form.avatarUrl       = data.avatar_url       ?? ''
+    form.bio             = data.bio              ?? ''
     stats.value = {
       totalStudySeconds: data.total_study_seconds  ?? 0,
       completedLevels:   (data.completed_levels ?? []).length,
@@ -247,30 +291,75 @@ async function handleSave() {
   saveSuccess.value = false
   isSaving.value  = true
   try {
-    // 1. 更新 profiles 表
+    // 1. 上傳大頭貼（如果有選新圖片）
+    let finalAvatarUrl = form.avatarUrl
+    if (avatarFile.value) {
+      avatarUploading.value = true
+      const ext = avatarFile.value.name.split('.').pop().toLowerCase()
+      const path = `${authState.user.id}/avatar.${ext}`
+      const { error: uploadError } = await supabase.storage
+        .from('avatars')
+        .upload(path, avatarFile.value, { upsert: true, contentType: avatarFile.value.type })
+      if (uploadError) throw new Error('大頭貼上傳失敗：' + uploadError.message)
+      const { data: { publicUrl } } = supabase.storage.from('avatars').getPublicUrl(path)
+      finalAvatarUrl = publicUrl
+      avatarUploading.value = false
+      avatarFile.value = null
+      avatarPreview.value = ''
+    }
+
+    // 2. 自動計算最高成就
+    const topAchievement = achievementActions.getTopAchievement()
+
+    // 3. 更新 profiles 表
     const { error: dbError } = await supabase
       .from('profiles')
       .update({
-        display_name:      form.displayName   || null,
-        learning_goal:     form.learningGoal  || null,
-        experience_level:  form.experienceLevel || null,
+        display_name:      form.displayName      || null,
+        learning_goal:     form.learningGoal     || null,
+        experience_level:  form.experienceLevel  || null,
+        avatar_url:        finalAvatarUrl        || null,
+        bio:               form.bio              || null,
+        top_achievement:   topAchievement        || null,
         updated_at:        new Date().toISOString()
       })
       .eq('id', authState.user.id)
     if (dbError) throw dbError
 
-    // 2. 同步更新 auth user_metadata，讓 getDisplayName() 即時反映新名稱
-    if (form.displayName) {
-      await supabase.auth.updateUser({ data: { full_name: form.displayName } })
-    }
+    // 4. 同步 auth metadata
+    await supabase.auth.updateUser({ data: {
+      full_name:  form.displayName || undefined,
+      avatar_url: finalAvatarUrl   || undefined
+    } })
 
+    form.avatarUrl = finalAvatarUrl
     saveSuccess.value = true
     setTimeout(() => { saveSuccess.value = false }, 3000)
   } catch (err) {
     apiError.value = err.message || '儲存失敗，請稍後再試'
+    avatarUploading.value = false
   } finally {
     isSaving.value = false
   }
+}
+
+// ── 大頭貼處理 ────────────────────────────────
+function handleAvatarChange(e) {
+  avatarError.value = ''
+  const file = e.target.files[0]
+  if (!file) return
+  if (file.size > 2 * 1024 * 1024) { avatarError.value = '圖片超過 2 MB，請選小一點的圖片'; return }
+  avatarFile.value = file
+  const reader = new FileReader()
+  reader.onload = (ev) => { avatarPreview.value = ev.target.result }
+  reader.readAsDataURL(file)
+  e.target.value = ''
+}
+
+function removeAvatar() {
+  avatarPreview.value = ''
+  avatarFile.value = null
+  avatarError.value = ''
 }
 
 // ── 登出 ──────────────────────────────────
@@ -526,6 +615,61 @@ onMounted(loadSettings)
   color: #999;
   margin: 0;
 }
+.field-error {
+  font-size: 0.78rem;
+  color: #f87171;
+  margin: 4px 0 0;
+}
+.field-textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  color: #e8e0ce;
+  font-size: 0.92rem;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+.field-textarea:focus { outline: none; border-color: rgba(212,175,55,0.5); }
+.hidden-input { display: none; }
+
+/* ── 大頭貼 ──────────────────────────────────────── */
+.avatar-group {}
+.avatar-row { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+.avatar-preview {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid rgba(212,175,55,0.3);
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.06);
+}
+.avatar-img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; font-weight: 700; color: #d4af37;
+}
+.avatar-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  opacity: 0; transition: opacity 0.2s;
+}
+.avatar-preview:hover .avatar-overlay { opacity: 1; }
+.avatar-info { display: flex; flex-direction: column; gap: 4px; }
+.avatar-remove-btn {
+  font-size: 0.75rem; color: #f87171; background: none;
+  border: 1px solid rgba(248,113,113,0.4); border-radius: 6px;
+  padding: 3px 8px; cursor: pointer; margin-top: 4px;
+  transition: background 0.2s;
+}
+.avatar-remove-btn:hover { background: rgba(248,113,113,0.1); }
 
 /* ── 統計格 ──────────────────────────────────────── */
 .stats-grid {

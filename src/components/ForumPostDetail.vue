@@ -25,7 +25,14 @@
           </div>
           <h1 class="post-title">{{ post.title }}</h1>
           <div class="post-meta">
-            <span class="author">{{ post.display_name }}</span>
+            <div class="author-block">
+              <img v-if="post.avatar_url" :src="post.avatar_url" class="author-avatar" :alt="post.display_name" />
+              <div v-else class="author-avatar author-avatar-ph">{{ (post.display_name || '?')[0] }}</div>
+              <div>
+                <div class="author-name">{{ post.display_name }}</div>
+                <div v-if="post.top_achievement" class="author-achievement">{{ post.top_achievement }}</div>
+              </div>
+            </div>
             <span class="time">{{ formatTime(post.created_at) }}</span>
             <button
               v-if="authUser && authUser.id === post.user_id"
@@ -44,7 +51,14 @@
 
           <div v-for="reply in replies" :key="reply.id" class="reply-card">
             <div class="reply-meta">
-              <span class="author">{{ reply.display_name }}</span>
+              <div class="author-block">
+                <img v-if="reply.avatar_url" :src="reply.avatar_url" class="reply-avatar" :alt="reply.display_name" />
+                <div v-else class="reply-avatar reply-avatar-ph">{{ (reply.display_name || '?')[0] }}</div>
+                <div>
+                  <div class="reply-author-name">{{ reply.display_name }}</div>
+                  <div v-if="reply.top_achievement" class="author-achievement small">{{ reply.top_achievement }}</div>
+                </div>
+              </div>
               <span class="time">{{ formatTime(reply.created_at) }}</span>
               <button
                 v-if="authUser && authUser.id === reply.user_id"
@@ -93,8 +107,9 @@ import { authState, authActions } from '../stores/authStore.js'
 import {
   fetchPost, deletePost,
   fetchReplies, createReply, deleteReply,
-  CATEGORY_LABELS, formatTime
+  CATEGORY_LABELS, formatTime, loadMyForumProfile
 } from '../lib/forumService.js'
+import { achievementActions } from '../stores/achievementSystem.js'
 
 const route    = useRoute()
 const router   = useRouter()
@@ -106,6 +121,7 @@ const replies    = ref([])
 const newReply   = ref('')
 const replyError = ref('')
 const submitting = ref(false)
+const myAvatarUrl = ref(null)
 
 async function load() {
   loading.value = true
@@ -141,10 +157,12 @@ async function submitReply() {
   submitting.value = true
   try {
     const created = await createReply({
-      postId:      post.value.id,
-      userId:      authUser.value.id,
-      displayName: authActions.getDisplayName(),
-      content:     newReply.value.trim()
+      postId:         post.value.id,
+      userId:         authUser.value.id,
+      displayName:    authActions.getDisplayName(),
+      content:        newReply.value.trim(),
+      avatarUrl:      myAvatarUrl.value,
+      topAchievement: achievementActions.getTopAchievement()
     })
     replies.value.push(created)
     post.value.reply_count = (post.value.reply_count || 0) + 1
@@ -156,7 +174,13 @@ async function submitReply() {
   }
 }
 
-onMounted(load)
+onMounted(async () => {
+  await load()
+  if (authUser.value) {
+    const p = await loadMyForumProfile(authUser.value.id)
+    myAvatarUrl.value = p.avatarUrl
+  }
+})
 </script>
 
 <style scoped>
@@ -250,6 +274,15 @@ onMounted(load)
 }
 .reply-meta { display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: #9a8878; margin-bottom: 8px; }
 .reply-content { font-size: 0.9rem; color: #3c2a1a; line-height: 1.7; white-space: pre-wrap; }
+.author-block { display: flex; align-items: center; gap: 10px; }
+.author-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1.5px solid rgba(212,175,55,0.3); flex-shrink: 0; }
+.author-avatar-ph { width: 36px; height: 36px; border-radius: 50%; background: #722f37; color: #fff; font-size: 0.9rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.author-name { font-weight: 700; color: #6b5a45; font-size: 0.9rem; }
+.author-achievement { font-size: 0.7rem; color: #b89a30; background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.2); padding: 1px 6px; border-radius: 8px; display: inline-block; margin-top: 2px; }
+.author-achievement.small { font-size: 0.65rem; }
+.reply-avatar { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 1.5px solid rgba(212,175,55,0.3); flex-shrink: 0; }
+.reply-avatar-ph { width: 28px; height: 28px; border-radius: 50%; background: #722f37; color: #fff; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.reply-author-name { font-weight: 600; color: #6b5a45; font-size: 0.82rem; }
 
 /* ── Reply Form ──────────────────────────────────────────── */
 .reply-form-section {
