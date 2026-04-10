@@ -49,7 +49,7 @@ defineEmits(['show-details'])
 const stats = computed(() => {
   const overall = progressComputed.overallStats.value
   return {
-    completedLessons: overall.totalLessons,
+    completedLessons: overall.completedLessons ?? overall.totalLessons,
     totalStudyTime: overall.totalStudyTime,
     quizAccuracy: overall.quizAccuracy,
     studyStreak: overall.studyStreak

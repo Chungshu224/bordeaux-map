@@ -823,12 +823,72 @@ function calculateAchievementProgress(achievement, userStats) {
 
   if (condition.includes('exploredRegions')) {
     const required = parseInt(condition.match(/\d+/)?.[0]) || 1
-    return Math.min((userStats.exploredRegions / required) * 100, 100)
+    return Math.min(Math.round((userStats.exploredRegions / required) * 100), 100)
   }
 
   if (condition.includes('perfectScores')) {
     const required = parseInt(condition.match(/\d+/)?.[0]) || 1
-    return Math.min((userStats.perfectScores / required) * 100, 100)
+    return Math.min(Math.round((userStats.perfectScores / required) * 100), 100)
+  }
+
+  if (condition.includes('consecutiveHighScores')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.consecutiveHighScores / required) * 100), 100)
+  }
+
+  if (condition.includes('consecutiveDays')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.consecutiveDays / required) * 100), 100)
+  }
+
+  if (condition.includes('nightTimeStudy')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.nightTimeStudy / required) * 100), 100)
+  }
+
+  if (condition.includes('earlyMorningStudy')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.earlyMorningStudy / required) * 100), 100)
+  }
+
+  if (condition.includes('longestSession')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.longestSession / required) * 100), 100)
+  }
+
+  if (condition.includes('tastingCount')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.tastingCount / required) * 100), 100)
+  }
+
+  if (condition.includes('wishlistCount')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.wishlistCount / required) * 100), 100)
+  }
+
+  if (condition.includes('tastingVintages')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.tastingVintages / required) * 100), 100)
+  }
+
+  if (condition.includes('tastingAOCs')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.tastingAOCs / required) * 100), 100)
+  }
+
+  if (condition.includes('grapeVarietiesCorrect')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.grapeVarietiesCorrect / required) * 100), 100)
+  }
+
+  if (condition.includes('terriorAnalysis')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.terriorAnalysis / required) * 100), 100)
+  }
+
+  if (condition.includes('vintageKnowledge')) {
+    const required = parseInt(condition.match(/\d+/)?.[0]) || 1
+    return Math.min(Math.round((userStats.vintageKnowledge / required) * 100), 100)
   }
 
   // 預設返回0或100（已完成或未完成）

@@ -533,7 +533,7 @@ export const progressActions = {
         totalQuizzes,
         perfectScores,
         consecutiveDays: this.getStudyStreak(),
-        longestSession,
+        longestSession: Math.round(longestSession / 60), // 秒→分鐘，與成就條件一致
         nightTimeStudy,
         earlyMorningStudy
       })
@@ -555,13 +555,20 @@ export const progressActions = {
 export const progressComputed = {
   // 總體學習統計
   overallStats: computed(() => {
+    const isLessonComplete = (entry) => {
+      if (!entry) return false
+      const done = entry.completedSlides instanceof Set ? entry.completedSlides.size : (entry.completedSlides?.length ?? 0)
+      return done >= entry.totalSlides && entry.totalSlides > 0
+    }
     const totalLessons = Object.keys(progressState.lessonProgress).length
+    const completedLessons = Object.values(progressState.lessonProgress).filter(isLessonComplete).length
     const totalStudyTimeSeconds = Object.values(progressState.studyTime).reduce((sum, time) => sum + time, 0)
     const totalQuizzes = Object.values(progressState.quizHistory).flat().length
     const correctQuizzes = Object.values(progressState.quizHistory).flat().filter(q => q.correct).length
     
     return {
       totalLessons,
+      completedLessons,
       totalStudyTime: progressActions.formatDuration(totalStudyTimeSeconds),
       totalStudyTimeSeconds,
       totalQuizzes,
