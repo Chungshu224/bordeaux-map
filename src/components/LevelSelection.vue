@@ -20,6 +20,7 @@
         </div>
         <!-- 使用者面板 -->
         <div class="user-panel">
+          <button class="user-action-btn home" @click="router.push('/')">🏠 首頁</button>
           <template v-if="authUser">
             <div class="tier-badge" :class="`tier-${userTier}`">
               <span class="tier-icon">{{ tierInfo.icon }}</span>
@@ -681,6 +682,16 @@ const getBubbleStyle = (index) => {
 }
 .user-action-btn.logout:hover {
   background: rgba(239, 68, 68, 0.2);
+}
+
+.user-action-btn.home {
+  background: rgba(114, 47, 55, 0.08);
+  color: #8B0000;
+  border: 1.5px solid rgba(114, 47, 55, 0.35);
+  font-weight: 700;
+}
+.user-action-btn.home:hover {
+  background: rgba(114, 47, 55, 0.15);
 }
 
 .user-action-btn.login {
