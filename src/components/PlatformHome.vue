@@ -230,6 +230,38 @@
       </div>
     </section>
 
+    <!-- ═══ 論壇預覽 ═══════════════════════════════════════════════════════════ -->
+    <section class="forum-preview-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span class="sh-eyebrow">COMMUNITY</span>
+          <h2>💬 學員討論區</h2>
+          <p>與其他學員分享品酒心得，互相解惑、共同進步</p>
+        </div>
+
+        <div v-if="forumLoading" class="fp-loading">載入中…</div>
+        <div v-else-if="recentPosts.length" class="fp-list">
+          <div
+            v-for="post in recentPosts"
+            :key="post.id"
+            class="fp-card"
+            @click="router.push(`/forum/${post.id}`)"
+          >
+            <div class="fp-card-title">{{ post.title }}</div>
+            <div class="fp-card-meta">
+              <span>{{ post.display_name }}</span>
+              <span>💬 {{ post.reply_count }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fp-actions">
+          <button class="fp-btn outline" @click="router.push('/forum')">查看討論區 →</button>
+          <button v-if="authUser" class="fp-btn primary" @click="router.push('/forum')">＋ 發起討論</button>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ Footer ═══════════════════════════════════════════════════════════ -->
     <footer class="site-footer">
       <div class="footer-inner">
@@ -260,10 +292,11 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState, authActions } from '../stores/authStore.js'
 import { initiateCheckout } from '../lib/purchaseService.js'
+import { fetchRecentPosts } from '../lib/forumService.js'
 
 const router = useRouter()
 
@@ -363,9 +396,49 @@ const faqs = [
   { q: '支援哪些付款方式？', a: '透過 Stripe 安全付款，支援 Visa、MasterCard、JCB 等主要信用卡，加密處理。' },
   { q: '有退款政策嗎？', a: '訂閱後 7 天內如需退款，請聯絡 support@wineacademy.tw，我們將全額退款。' }
 ]
+
+// ─── 論壇預覽 ─────────────────────────────────────────────────────────────────
+const recentPosts  = ref([])
+const forumLoading = ref(false)
+
+onMounted(async () => {
+  forumLoading.value = true
+  try {
+    recentPosts.value = await fetchRecentPosts(5)
+  } catch (e) {
+    console.error('forum preview error', e)
+  } finally {
+    forumLoading.value = false
+  }
+})
 </script>
 
 <style scoped>
+/* ─── 論壇預覽 ──────────────────────────────────────────────────────────── */
+.forum-preview-section { background: #0a0306; padding: 80px 20px; }
+.fp-loading { text-align: center; color: #7a6a5a; padding: 20px; font-size: 0.9rem; }
+.fp-list { display: flex; flex-direction: column; gap: 10px; max-width: 720px; margin: 0 auto 28px; }
+.fp-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: 10px;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+.fp-card:hover { border-color: rgba(212,175,55,0.35); background: rgba(255,255,255,0.07); }
+.fp-card-title { font-size: 0.95rem; color: #e8dcc8; margin-bottom: 6px; font-weight: 600; }
+.fp-card-meta { display: flex; justify-content: space-between; font-size: 0.78rem; color: #7a6a5a; }
+.fp-actions { display: flex; justify-content: center; gap: 12px; margin-top: 10px; }
+.fp-btn {
+  padding: 10px 24px; border-radius: 24px; font-size: 0.88rem;
+  font-weight: 600; cursor: pointer; transition: all .2s;
+}
+.fp-btn.outline { background: transparent; border: 1.5px solid rgba(212,175,55,0.5); color: #d4af37; }
+.fp-btn.outline:hover { background: rgba(212,175,55,0.1); }
+.fp-btn.primary { background: #722f37; color: #fff; border: 1.5px solid #722f37; }
+.fp-btn.primary:hover { background: #9b3a45; }
+
 /* ─── 計費週期切換 ────────────────────────────────────────────────────────── */
 .billing-toggle { display:flex; justify-content:center; gap:8px; margin-bottom:20px; }
 .bt-btn { padding:8px 20px; border-radius:20px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:#c8bba8; cursor:pointer; font-size:0.88rem; transition:all .2s; }

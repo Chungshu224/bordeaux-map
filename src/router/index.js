@@ -119,6 +119,20 @@ const routes = [
     name: 'Upgrade',
     component: () => import('../components/LevelSelection.vue'),
     meta: { public: true }
+  },
+
+  // ─── 學員討論區（公開，無需登入也可瀏覽）───────────────────────────────────
+  {
+    path: '/forum',
+    name: 'Forum',
+    component: () => import('../components/ForumPage.vue'),
+    meta: { public: true }
+  },
+  {
+    path: '/forum/:id',
+    name: 'ForumPost',
+    component: () => import('../components/ForumPostDetail.vue'),
+    meta: { public: true }
   }
 ]
 
