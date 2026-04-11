@@ -199,17 +199,127 @@
       </button>
     </div>
     
-    <!-- 圖層選擇面板 (在手機版由 圖層 按鈕呼叫) -->
+    <!-- 圖層選擇面板（Bordeaux 同款設計） -->
     <div v-if="isMobileView && showLayerPanel" class="mobile-layer-panel">
-      <div class="layer-panel-header">
-        <h4>圖層設定</h4>
+      <!-- 面板標題 -->
+      <div class="layers-panel-header">
+        <span>圖層與顯示</span>
+        <button class="layers-panel-close" @click="showLayerPanel = false" aria-label="關閉">✕</button>
       </div>
-      <div class="layer-panel-content">
-        <button class="layer-toggle-btn" :class="{ active: showContours }" @click="toggleContours">
-          {{ showContours ? '隱藏等高線' : '顯示等高線' }}
-        </button>
+
+      <!-- 視角群組 -->
+      <div class="layer-group">
+        <div class="layer-group-label">視角</div>
+        <div class="layer-group-buttons">
+          <button class="btn-layer" :class="{ active: showContours, 'color-contours': true }" @click="toggleContours">
+            <span class="lbtn-icon">〰</span>
+            <span class="lbtn-text">等高線</span>
+            <span class="lbtn-dot" :class="{ on: showContours }"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 資料圖層群組（桌機/平板才顯示；真實手機 ≤768px 隱藏）-->
+      <template v-if="!isRealMobile">
+        <div class="layer-group">
+          <div class="layer-group-label">資料圖層</div>
+          <div class="layer-group-buttons">
+            <!-- 地質土壤 -->
+            <button v-if="geologyIndex && currentGeologyProvinceCodes.length > 0"
+              class="btn-layer" :class="{ active: geologyVisible, 'color-geology': true }" type="button"
+              @click="() => { if (!geologyVisible) { climateEnabled = false; restoreAocFillColor() } geologyVisible = !geologyVisible }">
+              <span class="lbtn-icon">🪨</span>
+              <span class="lbtn-text">地質土壤</span>
+              <span class="lbtn-dot" :class="{ on: geologyVisible }"></span>
+            </button>
+            <!-- 氣候熱力 -->
+            <button class="btn-layer" :class="{ active: climateEnabled, 'color-climate': true }" type="button" @click="toggleClimate">
+              <span class="lbtn-icon">🌡</span>
+              <span class="lbtn-text">氣候熱力</span>
+              <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
+            </button>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <!-- 地質土壤 浮動面板（Bordeaux 同款，位於左下角） -->
+    <div v-show="geologyVisible && !isRealMobile && geologyIndex" class="soil-float-panel">
+      <div class="soil-float-title">🪨 土壤透明度</div>
+      <div v-for="material in geologyIndex?.materials" :key="material.id" class="soil-float-row">
+        <div class="soil-float-left">
+          <button
+            type="button"
+            class="soil-material-toggle"
+            :class="{ active: geologyActiveMaterials.includes(material.id) }"
+            @click="toggleGeologyMaterial(material.id)"
+          >
+            <span class="soil-dot" :style="{ background: material.fillColor }"></span>
+            <span class="soil-float-name">{{ material.name }}</span>
+          </button>
+        </div>
+        <div class="soil-float-right">
+          <input
+            class="soil-opacity-slider"
+            type="range"
+            min="0.1"
+            max="0.85"
+            step="0.05"
+            v-model.number="geologyMaterialOpacity[material.id]"
+          />
+          <span class="soil-opacity-pct">{{ Math.round((geologyMaterialOpacity[material.id] || 0) * 100) }}%</span>
+        </div>
       </div>
     </div>
+
+    <!-- 氣候熱力 Overlay -->
+    <transition name="climate-slide">
+    <div v-if="climateEnabled && climateData && !isRealMobile" class="climate-overlay">
+      <!-- 指標切換 -->
+      <div class="cy-indicator-tabs">
+        <button v-for="ind in CLIMATE_INDICATORS" :key="ind.id"
+          :class="['cy-ind-btn', { active: climateIndicator === ind.id }]"
+          @click="setClimateIndicator(ind.id)">
+          {{ ind.icon }} {{ ind.label }}
+        </button>
+      </div>
+      <div class="climate-header-row">
+        <div class="cy-year-badge">
+          <span class="cy-year">{{ climateYear }}</span>
+          <span v-if="isGoldenVintage" class="cy-golden">🏆 黃金年份</span>
+        </div>
+        <div class="cy-aoc-col">
+          <div v-if="climateCurrentAocLabel" class="cy-aoc-name">{{ climateCurrentAocLabel }}</div>
+        </div>
+        <button class="cy-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
+      </div>
+      <!-- 年份滑桿 -->
+      <input
+        class="climate-slider"
+        v-model.number="climateYear"
+        type="range"
+        :min="climateYears[0]"
+        :max="climateYears[climateYears.length - 1]"
+        step="1"
+        @input="onClimateYearChange"
+      />
+      <div class="climate-year-axis">
+        <span>{{ climateYears[0] }}</span>
+        <span>{{ climateYears[Math.floor(climateYears.length / 2)] }}</span>
+        <span>{{ climateYears[climateYears.length - 1] }}</span>
+      </div>
+      <!-- 圖例 -->
+      <div class="climate-legend">
+        <div :class="['legend-gradient', `legend-${climateIndicator}`]"></div>
+        <div class="legend-labels">
+          <span>{{ currentIndicatorConfig.lowLabel }}</span>
+          <span>{{ currentIndicatorConfig.highLabel }}</span>
+        </div>
+      </div>
+      <div class="climate-footnote">📊 {{ currentIndicatorConfig.footnote }}</div>
+    </div>
+    </transition>
+
     <div ref="mapContainer" class="map"></div>
     <!-- 返回學習模式按鈕 (手機版顯示為圓形圖示) -->
     <button class="btn-learning-mode" @click="$emit('request-learning-mode')" title="返回學習模式">
@@ -225,7 +335,7 @@
     <button :class="['btn-contours', { 'controls-wide': geologyVisible }]" @click="toggleContours">
       {{ showContours ? '隱藏等高線' : '顯示等高線' }}
     </button>
-    <div :class="['geology-panel', { 'controls-wide': geologyVisible }]" v-if="!isMobileView && geologyIndex && currentGeologyProvinceCodes.length > 0">
+    <div :class="['geology-panel', { 'controls-wide': geologyVisible }]" v-if="false && !isRealMobile && geologyIndex && currentGeologyProvinceCodes.length > 0">
       <button class="geology-visibility-btn" :class="{ active: geologyVisible }" type="button" @click="geologyVisible = !geologyVisible">
         {{ geologyVisible ? '隱藏地質' : '顯示地質' }}
       </button>
@@ -318,15 +428,18 @@ const props = defineProps({
 const emit = defineEmits(['resetMap', 'clear-region-info', 'reselect-aoc', 'request-aoc-list', 'request-learning-mode'])
 
 const TOUCH_LAYOUT_MAX_WIDTH = 4096
+const REAL_MOBILE_MAX_WIDTH = 768
 const useTouchCompactLayout = () => {
   return typeof window !== 'undefined' && window.innerWidth <= TOUCH_LAYOUT_MAX_WIDTH
 }
 
 const isMobileView = ref(useTouchCompactLayout())
+const isRealMobile = ref(typeof window !== 'undefined' && window.innerWidth <= REAL_MOBILE_MAX_WIDTH)
 const showLayerPanel = ref(false)
 
 const checkMobile = () => {
   isMobileView.value = useTouchCompactLayout()
+  isRealMobile.value = typeof window !== 'undefined' && window.innerWidth <= REAL_MOBILE_MAX_WIDTH
 }
 
 // 根據區域 ID 獲取基礎路徑
@@ -373,6 +486,58 @@ const imageIndex = ref(0)
 // 音頻播放器
 const audioPlayer = ref(null)
 const isPlayingAudio = ref(false)
+
+// ── 氣候熱力 ────────────────────────────────────────────
+const climateEnabled   = ref(false)
+const climateYear      = ref(2010)
+const climateData      = ref(null)
+const climateStats     = ref(null)
+const climateStatsSun  = ref(null)
+const climateStatsRain = ref(null)
+const climateYears     = ref([])
+const climateYearAvg   = ref([])
+const climateYearSun   = ref([])
+const climateYearRain  = ref([])
+const climateIndicator = ref('temp')
+
+const CLIMATE_INDICATORS = [
+  { id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C', lowLabel: '涼', highLabel: '熱',
+    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010',
+    dataKey: 'temps', baselineKey: 'baseline', globalKey: 'global', yearAvgKey: 'yearAvg' },
+  { id: 'sun', icon: '☀️', label: '日照時數', unit: 'h', lowLabel: '少', highLabel: '多',
+    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010',
+    dataKey: 'sun', baselineKey: 'baselineSun', globalKey: 'globalSun', yearAvgKey: 'yearSunAvg' },
+  { id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm', lowLabel: '乾', highLabel: '濕',
+    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010',
+    dataKey: 'rain', baselineKey: 'baselineRain', globalKey: 'globalRain', yearAvgKey: 'yearRainAvg' },
+]
+
+const currentIndicatorConfig = computed(() => CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value))
+const currentGlobalStats = computed(() => {
+  const cfg = currentIndicatorConfig.value
+  if (!cfg) return null
+  if (cfg.id === 'temp') return climateStats.value
+  if (cfg.id === 'sun')  return climateStatsSun.value
+  if (cfg.id === 'rain') return climateStatsRain.value
+  return null
+})
+const currentYearAvgArr = computed(() => {
+  const cfg = currentIndicatorConfig.value
+  if (!cfg) return []
+  if (cfg.id === 'temp') return climateYearAvg.value
+  if (cfg.id === 'sun')  return climateYearSun.value
+  if (cfg.id === 'rain') return climateYearRain.value
+  return []
+})
+const isGoldenVintage = computed(() => {
+  if (!climateData.value) return false
+  const gv = climateData.value.__meta?.goldenVintages || []
+  return gv.includes(climateYear.value)
+})
+const climateCurrentAocLabel = computed(() => {
+  if (!props.activeAOC?.aoc) return null
+  return props.activeAOC.aoc.replace('.geojson', '').replace(/_/g, ' ')
+})
 
 const REGION_PROVINCES = {
   chablis: ['089'],
@@ -1121,6 +1286,131 @@ const geologySourceId = (materialId) => `geology-src-${materialId}`
 const geologyFillId = (materialId) => `geology-fill-${materialId}`
 const geologyLineId = (materialId) => `geology-line-${materialId}`
 const EMPTY_FEATURE_COLLECTION = { type: 'FeatureCollection', features: [] }
+
+// ── 氣候熱力函式 ──────────────────────────────────────────────────
+const loadClimateData = async () => {
+  if (climateData.value) return
+  const res = await fetch('/data/bourgogne-climate.json')
+  if (!res.ok) throw new Error('無法載入氣候資料')
+  const json = await res.json()
+  climateData.value      = { ...json.aocs, __meta: json.meta }
+  climateStats.value     = json.global
+  climateStatsSun.value  = json.globalSun  || null
+  climateStatsRain.value = json.globalRain || null
+  climateYears.value     = json.meta.years
+  climateYearAvg.value   = json.meta.yearAvg
+  climateYearSun.value   = json.meta.yearSunAvg  || []
+  climateYearRain.value  = json.meta.yearRainAvg || []
+}
+
+const valueToClimateColor = (val, indicator) => {
+  let stats, stops
+  if (indicator === 'sun') {
+    stats = climateStatsSun.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,        [120, 81, 169]],
+      [mean - 20,  [145, 191, 219]],
+      [mean,       [255, 255, 191]],
+      [mean + 20,  [254, 224,  72]],
+      [max,        [253, 141,  60]],
+    ]
+  } else if (indicator === 'rain') {
+    stats = climateStatsRain.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,        [253, 174,  97]],
+      [mean - 15,  [255, 255, 191]],
+      [mean,       [171, 217, 233]],
+      [mean + 15,  [ 74, 144, 226]],
+      [max,        [ 44,  62, 160]],
+    ]
+  } else {
+    stats = climateStats.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,        [69,  117, 180]],
+      [mean - 1.5, [145, 191, 219]],
+      [mean,       [255, 255, 191]],
+      [mean + 1.5, [252, 141,  89]],
+      [max,        [215,  48,  39]],
+    ]
+  }
+  const { min, max } = stats
+  const t = Math.max(min, Math.min(max, val))
+  for (let i = 0; i < stops.length - 1; i++) {
+    const [t0, c0] = stops[i]
+    const [t1, c1] = stops[i + 1]
+    if (t <= t1) {
+      const f = (t - t0) / (t1 - t0)
+      const r = Math.round(c0[0] + f * (c1[0] - c0[0]))
+      const g = Math.round(c0[1] + f * (c1[1] - c0[1]))
+      const b = Math.round(c0[2] + f * (c1[2] - c0[2]))
+      return `rgb(${r},${g},${b})`
+    }
+  }
+  return `rgb(${stops[stops.length - 1][1].join(',')})`
+}
+
+const applyClimateColor = (year) => {
+  if (!map || !climateData.value) return
+  if (!map.getLayer('aoc-fill')) return
+  const cfg    = currentIndicatorConfig.value
+  const aocId  = (props.activeAOC?.aoc || '').replace('.geojson', '')
+  const idx    = climateYears.value.indexOf(year)
+  const aocInfo = climateData.value[aocId]
+  const stats  = currentGlobalStats.value
+  let value
+  if (aocInfo?.[cfg.dataKey]?.[idx] != null) {
+    value = aocInfo[cfg.dataKey][idx]
+  } else {
+    value = currentYearAvgArr.value[idx] ?? (stats?.mean ?? 19.2)
+  }
+  const color = valueToClimateColor(value, cfg.id)
+  map.setPaintProperty('aoc-fill', 'fill-color', color)
+  map.setPaintProperty('aoc-fill', 'fill-opacity', 0.72)
+}
+
+const restoreAocFillColor = () => {
+  if (!map || !map.getLayer('aoc-fill')) return
+  map.setPaintProperty('aoc-fill', 'fill-color', '#8B0000')
+  map.setPaintProperty('aoc-fill', 'fill-opacity', 0.1)
+}
+
+const setClimateIndicator = (id) => {
+  climateIndicator.value = id
+  applyClimateColor(climateYear.value)
+}
+
+const onClimateYearChange = () => { applyClimateColor(climateYear.value) }
+
+const toggleClimate = async () => {
+  if (!map) return
+  showLayerPanel.value = false
+  if (!climateEnabled.value) {
+    isLoading.value = true
+    try {
+      await loadClimateData()
+      // 互斥：關閉地質
+      if (geologyVisible.value) {
+        geologyVisible.value = false
+        clearGeologyLayers()
+      }
+      climateEnabled.value = true
+      applyClimateColor(climateYear.value)
+    } catch (err) {
+      mapError.value = `氣候資料載入失敗: ${err.message}`
+    } finally {
+      isLoading.value = false
+    }
+  } else {
+    climateEnabled.value = false
+    restoreAocFillColor()
+  }
+}
 
 const clearGeologyLayers = () => {
   if (!map) return
@@ -2447,106 +2737,344 @@ onUnmounted(() => {
   }
 
   .mobile-grid-buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-    align-items: center;
     position: fixed;
-    bottom: 12px;
-    left: 5px;
-    right: 5px;
-    background: white;
-    padding: 9px 8px;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(90vw, 560px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
     z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   }
   .mobile-grid-buttons.merged-with-info {
-    bottom: 12px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    padding-top: 4px; /* Move slightly closer to the top piece */
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
   }
 
   .m-grid-btn {
+    border-radius: 16px;
+    background: linear-gradient(180deg, #faf5ef 0%, #f1e7dd 100%);
+    color: #4f3422;
+    min-height: 54px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #FAEFEC;
-    border-radius: 12px;
+    gap: 3px;
+    font-size: 0.76rem;
+    font-weight: 800;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
     border: none;
-    padding: 8px 0;
-    gap: 4px;
-    color: #6D4C41;
+    cursor: pointer;
     transition: all 0.2s;
+    padding: 8px 4px;
   }
   .m-grid-btn.active {
-    background: white;
-    color: #8B0000;
-    box-shadow: inset 0 0 0 1px #8B0000;
+    background: linear-gradient(180deg, #7b2424 0%, #5f1717 100%);
+    color: #fff;
   }
   .m-grid-icon {
-    font-size: 1rem;
-    font-weight: bold;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: none !important;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(107, 31, 31, 0.08);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
   }
   .m-grid-btn.active .m-grid-icon {
-    background: none !important;
-    color: #8B0000;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
   }
   .m-grid-text {
-    font-size: 0.7rem;
-    font-weight: bold;
+    font-size: 0.76rem;
+    font-weight: 800;
   }
 
   .mobile-layer-panel {
     position: fixed;
-    bottom: 142px;
-    left: 5px;
-    background: white;
-    padding: 14px;
-    border-radius: 14px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1003;
-    width: calc(100vw - 10px);
-    max-width: calc(100vw - 10px);
-    transform: none;
-    overflow: visible;
+    width: min(90vw, 560px);
+    background: rgba(252, 248, 244, 0.98);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    padding: 14px;
+    border: 1px solid rgba(0,0,0,0.06);
+    max-height: min(52vh, 420px);
+    overflow-y: auto;
   }
 
-  .layer-panel-header {
+  /* 面板標題（Bordeaux 同款）*/
+  .layers-panel-header {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 12px;
-  }
-  .layer-panel-header h4 {
-    margin: 0;
-    font-size: 0.92rem;
-    color: #333;
-  }
-  .layer-toggle-btn {
-    width: 100%;
-    padding: 9px;
-    margin-bottom: 8px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    background: #f8f8f8;
-    color: #333;
+    justify-content: space-between;
+    font-size: 0.78rem;
     font-weight: 700;
-    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    color: #6b1f1f;
+    text-transform: uppercase;
+    padding: 0 2px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    margin-bottom: 10px;
+  }
+  .layers-panel-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(107,31,31,0.1);
+    color: #6b1f1f;
+    font-size: 13px;
     cursor: pointer;
+    border: none;
   }
-  .layer-toggle-btn.active {
-    background: #800020;
-    color: white;
-    border-color: #800020;
+
+  /* 圖層分群組 */
+  .layer-group {
+    margin-bottom: 8px;
   }
+  .layer-group-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #aaa;
+    text-transform: uppercase;
+    padding: 0 2px 4px;
+  }
+  .layer-group-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* 圖層切換按鈕（Bordeaux btn-layer）*/
+  .btn-layer {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    padding: 7px 10px;
+    border: 1.5px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    background: rgba(0,0,0,0.04);
+    color: #444;
+    transition: background 0.18s, border-color 0.18s, color 0.18s;
+    text-align: left;
+  }
+  .btn-layer:hover { background: rgba(0,0,0,0.08); }
+  .lbtn-icon { font-size: 1rem; flex-shrink: 0; width: 20px; text-align: center; }
+  .lbtn-text { flex: 1; white-space: nowrap; }
+  .lbtn-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    flex-shrink: 0; background: #ddd; transition: background 0.2s;
+  }
+  .lbtn-dot.on { background: currentColor; }
+
+  /* 各圖層色彩主題 */
+  .btn-layer.color-contours.active         { background: #f3e5f5; border-color: #9C27B0; color: #6a1b9a; }
+  .btn-layer.color-contours:not(.active):hover { border-color: #ce93d8; }
+  .btn-layer.color-contours .lbtn-dot.on   { background: #9C27B0; }
+  .btn-layer.color-geology.active          { background: #efebe9; border-color: #795548; color: #4e342e; }
+  .btn-layer.color-geology:not(.active):hover { border-color: #bcaaa4; }
+  .btn-layer.color-geology .lbtn-dot.on    { background: #795548; }
+
+  .btn-layer.color-climate.active          { background: #e3f0ff; border-color: #4575b4; color: #1a3a6b; }
+  .btn-layer.color-climate:not(.active):hover { border-color: #90b8e8; }
+  .btn-layer.color-climate .lbtn-dot.on    { background: #4575b4; }
+
+  /* ====================== 氣候熱力 Overlay ====================== */
+  .climate-overlay {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: min(380px, calc(100vw - 44px));
+    background: rgba(20, 30, 48, 0.93);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 14px 16px 12px;
+    z-index: 1010;
+    color: #e8eaf6;
+  }
+  .cy-indicator-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .cy-ind-btn {
+    flex: 1;
+    font-size: 0.72rem;
+    padding: 5px 4px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.07);
+    color: rgba(230,230,255,0.7);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    text-align: center;
+  }
+  .cy-ind-btn.active {
+    background: #4575b4;
+    border-color: #6699cc;
+    color: #fff;
+    font-weight: 700;
+  }
+  .cy-ind-btn:not(.active):hover { background: rgba(255,255,255,0.14); color: #fff; }
+  .climate-header-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .cy-year-badge { display: flex; align-items: baseline; gap: 6px; }
+  .cy-year { font-size: 1.5rem; font-weight: 700; color: #aed6f1; line-height: 1; }
+  .cy-golden { font-size: 0.7rem; color: #f39c12; font-weight: 600; white-space: nowrap; }
+  .cy-aoc-col { flex: 1; min-width: 0; }
+  .cy-aoc-name {
+    font-size: 0.72rem;
+    color: rgba(200,220,255,0.85);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .cy-close {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .cy-close:hover { background: rgba(255,255,255,0.2); color: #fff; }
+  .climate-slider {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    accent-color: #4575b4;
+    cursor: pointer;
+    margin-bottom: 2px;
+  }
+  .climate-year-axis {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: rgba(200,210,255,0.55);
+    margin-bottom: 10px;
+    padding: 0 2px;
+  }
+  .climate-legend { margin-bottom: 6px; }
+  .legend-gradient {
+    height: 8px;
+    border-radius: 4px;
+    width: 100%;
+  }
+  .legend-gradient.legend-temp { background: linear-gradient(to right, #4575b4, #ffffbf, #d73027); }
+  .legend-gradient.legend-sun  { background: linear-gradient(to right, #7851a9, #ffffbf, #fd8d3c); }
+  .legend-gradient.legend-rain { background: linear-gradient(to right, #fd8d3c, #ffffbf, #2c3ea0); }
+  .legend-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.63rem;
+    color: rgba(200,210,255,0.6);
+    margin-top: 3px;
+  }
+  .climate-footnote {
+    font-size: 0.63rem;
+    color: rgba(180,200,255,0.5);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* Transition */
+  .climate-slide-enter-active,
+  .climate-slide-leave-active {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .climate-slide-enter-from,
+  .climate-slide-leave-to {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  /* 地質土壤 浮動面板（Bordeaux soil-float-panel 同款） */
+  .soil-float-panel {
+    position: fixed;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+    left: 20px;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.16);
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 10px 14px;
+    z-index: 999;
+    width: min(400px, calc(100vw - 44px));
+  }
+  .soil-float-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .soil-float-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 0;
+  }
+  .soil-float-left {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex: 1;
+    min-width: 0;
+  }
+  .soil-material-toggle {
+    display: flex; align-items: center; gap: 6px;
+    background: none; border: none; cursor: pointer;
+    font-size: 0.84rem; color: #bbb; padding: 2px 0;
+    transition: color 0.18s;
+  }
+  .soil-material-toggle.active { color: #333; font-weight: 700; }
+  .soil-dot {
+    width: 9px; height: 9px; border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.22); flex-shrink: 0;
+  }
+  .soil-float-name { font-size: 0.84rem; color: #333; }
+  .soil-float-right { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .soil-opacity-slider { width: 70px; accent-color: #795548; }
+  .soil-opacity-pct { font-size: 0.78rem; color: #666; min-width: 34px; text-align: right; }
 
   .btn-reset {
     background: rgba(244, 67, 54, 0.9);
@@ -2572,6 +3100,11 @@ onUnmounted(() => {
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
+  }
+  /* 土壤浮動面板保持左對齊 */
+  .soil-float-panel {
+    left: 20px !important;
+    transform: none !important;
   }
 }
 

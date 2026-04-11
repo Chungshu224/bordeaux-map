@@ -4,12 +4,14 @@ import { useRouter } from 'vue-router'
 import CourseManager from './bourgogne/course/CourseManager.vue'
 import BourgogneRegionSelector from './bourgogne/BourgogneRegionSelector.vue'
 import BourgogneRegionMap from './bourgogne/BourgogneRegionMap.vue'
+import BourgogneGameHubPage from './BourgogneGameHubPage.vue'
+import BourgogneTastingNotebookPage from './BourgogneTastingNotebookPage.vue'
 
 const router = useRouter()
 
 const currentRegion = ref(null)
 const showRegionSelector = ref(true)
-const currentMode = ref('course') // 'course' 主要模式, 'map' 地圖模式
+const currentMode = ref('course') // 'course' | 'map' | 'gamehub' | 'notebook'
 
 // 提供全域狀態給子組件
 provide('currentRegion', currentRegion)
@@ -58,7 +60,7 @@ const goHome = () => {
 
     <!-- 課程模式（預設） -->
     <div v-if="currentMode === 'course'" class="mode-content">
-      <CourseManager @openMap="switchMode('map')" />
+      <CourseManager @openMap="switchMode('map')" @openGameHub="switchMode('gamehub')" @openNotebook="switchMode('notebook')" />
     </div>
 
     <!-- 地圖模式 -->
@@ -75,6 +77,16 @@ const goHome = () => {
           @request-learning-mode="switchMode('course')"
         />
       </div>
+    </div>
+
+    <!-- 互動練習模式 -->
+    <div v-else-if="currentMode === 'gamehub'" class="mode-content">
+      <BourgogneGameHubPage @back="switchMode('course')" />
+    </div>
+
+    <!-- 品飲筆記模式 -->
+    <div v-else-if="currentMode === 'notebook'" class="mode-content">
+      <BourgogneTastingNotebookPage @back="switchMode('course')" />
     </div>
   </div>
 </template>

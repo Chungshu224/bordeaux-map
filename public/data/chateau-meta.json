@@ -1,0 +1,1124 @@
+{
+  "chateaux": [
+    {
+      "key": "lafite_rothschild",
+      "name": "Château Lafite Rothschild",
+      "img": "/images/chateaux/LeftBank/Medoc/lafite_rothschild.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "latour",
+      "name": "Château Latour",
+      "img": "/images/chateaux/LeftBank/Medoc/latour.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "margaux",
+      "name": "Château Margaux",
+      "img": "/images/chateaux/LeftBank/Medoc/margaux.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "mouton_rothschild",
+      "name": "Château Mouton Rothschild",
+      "img": "/images/chateaux/LeftBank/Medoc/mouton_rothschild.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "haut_brion",
+      "name": "Château Haut-Brion",
+      "img": "/images/chateaux/LeftBank/Graves/haut_brion.jpg",
+      "bank": "left",
+      "region": "Graves",
+      "aoc": "Pessac-Léognan",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "cos_destournel",
+      "name": "Château Cos d'Estournel",
+      "img": "/images/chateaux/LeftBank/Medoc/cos_destournel.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "montrose",
+      "name": "Château Montrose",
+      "img": "/images/chateaux/LeftBank/Medoc/montrose.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "ducru_beaucaillou",
+      "name": "Château Ducru-Beaucaillou",
+      "img": "/images/chateaux/LeftBank/Medoc/ducru_beaucaillou.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "leoville_las_cases",
+      "name": "Château Léoville Las Cases",
+      "img": "/images/chateaux/LeftBank/Medoc/leoville_las_cases.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "leoville_barton",
+      "name": "Château Léoville Barton",
+      "img": "/images/chateaux/LeftBank/Medoc/leoville_barton.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "leoville_poyferre",
+      "name": "Château Léoville Poyferré",
+      "img": "/images/chateaux/LeftBank/Medoc/leoville_poyferre.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "gruaud_larose",
+      "name": "Château Gruaud Larose",
+      "img": "/images/chateaux/LeftBank/Medoc/gruaud_larose.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "lascombes",
+      "name": "Château Lascombes",
+      "img": "/images/chateaux/LeftBank/Medoc/lascombes.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "rauzan_segla",
+      "name": "Château Rauzan-Ségla",
+      "img": "/images/chateaux/LeftBank/Medoc/rauzan_segla.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "rauzan_gassies",
+      "name": "Château Rauzan-Gassies",
+      "img": "/images/chateaux/LeftBank/Medoc/rauzan_gassies.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "pichon_baron",
+      "name": "Château Pichon Baron",
+      "img": "/images/chateaux/LeftBank/Medoc/pichon_baron.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "pichon_lalande",
+      "name": "Château Pichon Lalande",
+      "img": "/images/chateaux/LeftBank/Medoc/pichon_lalande.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "brane_cantenac",
+      "name": "Château Brane-Cantenac",
+      "img": "/images/chateaux/LeftBank/Medoc/brane_cantenac.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "palmer",
+      "name": "Château Palmer",
+      "img": "/images/chateaux/LeftBank/Medoc/palmer.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "kirwan",
+      "name": "Château Kirwan",
+      "img": "/images/chateaux/LeftBank/Medoc/kirwan.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "dissan",
+      "name": "Château d'Issan",
+      "img": "/images/chateaux/LeftBank/Medoc/dissan.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "giscours",
+      "name": "Château Giscours",
+      "img": "/images/chateaux/LeftBank/Medoc/Giscours.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "malescot_saint_exupery",
+      "name": "Château Malescot Saint-Exupéry",
+      "img": "/images/chateaux/LeftBank/Medoc/malescot_saint_exupery.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "lagrange",
+      "name": "Château Lagrange",
+      "img": "/images/chateaux/LeftBank/Medoc/Lagrange.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "langoa_barton",
+      "name": "Château Langoa Barton",
+      "img": "/images/chateaux/LeftBank/Medoc/langoa_barton.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "cantenac_brown",
+      "name": "Château Cantenac Brown",
+      "img": "/images/chateaux/LeftBank/Medoc/cantenac_brown.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "desmirail",
+      "name": "Château Desmirail",
+      "img": "/images/chateaux/LeftBank/Medoc/desmirail.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "ferriere",
+      "name": "Château Ferrière",
+      "img": "/images/chateaux/LeftBank/Medoc/ferriere.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "marquis_dalesme",
+      "name": "Château Marquis d'Alesme",
+      "img": "/images/chateaux/LeftBank/Medoc/marquis_dalesme.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "boyd_cantenac",
+      "name": "Château Boyd-Cantenac",
+      "img": "/images/chateaux/LeftBank/Medoc/Boyd-Cantenac.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "branaire_ducru",
+      "name": "Château Branaire-Ducru",
+      "img": "/images/chateaux/LeftBank/Medoc/branaire_ducru.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "beychevelle",
+      "name": "Château Beychevelle",
+      "img": "/images/chateaux/LeftBank/Medoc/beychevelle.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "talbot",
+      "name": "Château Talbot",
+      "img": "/images/chateaux/LeftBank/Medoc/talbot.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "st_pierre",
+      "name": "Château Saint-Pierre",
+      "img": "/images/chateaux/LeftBank/Medoc/beychevelle.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Julien",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "duhart_milon",
+      "name": "Château Duhart-Milon",
+      "img": "/images/chateaux/LeftBank/Medoc/Duhart-Milon.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "lafon_rochet",
+      "name": "Château Lafon-Rochet",
+      "img": "/images/chateaux/LeftBank/Medoc/lafon_rochet.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "marquis_de_terme",
+      "name": "Château Marquis de Terme",
+      "img": "/images/chateaux/LeftBank/Medoc/marquis_de_terme.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "prieure_lichine",
+      "name": "Château Prieuré-Lichine",
+      "img": "/images/chateaux/LeftBank/Medoc/prieure_lichine.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "pouget",
+      "name": "Château Pouget",
+      "img": "/images/chateaux/LeftBank/Medoc/Pouget.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "la_tour_carnet",
+      "name": "Château La Tour Carnet",
+      "img": "/images/chateaux/LeftBank/Medoc/la_tour_carnet.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Haut-Médoc",
+      "classification": "4ème Grand Cru Classé",
+      "classRank": 4
+    },
+    {
+      "key": "batailley",
+      "name": "Château Batailley",
+      "img": "/images/chateaux/LeftBank/Medoc/batailley.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "haut_batailley",
+      "name": "Château Haut-Batailley",
+      "img": "/images/chateaux/LeftBank/Medoc/haut_batailley.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "grand_puy_lacoste",
+      "name": "Château Grand-Puy-Lacoste",
+      "img": "/images/chateaux/LeftBank/Medoc/grand_puy_lacoste.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "grand_puy_ducasse",
+      "name": "Château Grand-Puy-Ducasse",
+      "img": "/images/chateaux/LeftBank/Medoc/grand_puy_ducasse.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "lynch_bages",
+      "name": "Château Lynch-Bages",
+      "img": "/images/chateaux/LeftBank/Medoc/lynch_bages.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "lynch_moussas",
+      "name": "Château Lynch-Moussas",
+      "img": "/images/chateaux/LeftBank/Medoc/Lynch-Moussas.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "dauzac",
+      "name": "Château Dauzac",
+      "img": "/images/chateaux/LeftBank/Medoc/dauzac.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "du_tertre",
+      "name": "Château du Tertre",
+      "img": "/images/chateaux/LeftBank/Medoc/du_tertre.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "d_armailhac",
+      "name": "Château d'Armailhac",
+      "img": "/images/chateaux/LeftBank/Medoc/d'Armailhac.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "clerc_milon",
+      "name": "Château Clerc Milon",
+      "img": "/images/chateaux/LeftBank/Medoc/clerc_milon.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "pontet_canet",
+      "name": "Château Pontet-Canet",
+      "img": "/images/chateaux/LeftBank/Medoc/pontet_canet.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "cos_labory",
+      "name": "Château Cos Labory",
+      "img": "/images/chateaux/LeftBank/Medoc/cos_labory.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "croizet_bages",
+      "name": "Château Croizet-Bages",
+      "img": "/images/chateaux/LeftBank/Medoc/Croizet-Bages.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "haut_bages_liberal",
+      "name": "Château Haut-Bages Libéral",
+      "img": "/images/chateaux/LeftBank/Medoc/Haut-Bages-Libéral.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "pedesclaux",
+      "name": "Château Pédesclaux",
+      "img": "/images/chateaux/LeftBank/Medoc/Pédesclaux.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Pauillac",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "belgrave",
+      "name": "Château Belgrave",
+      "img": "/images/chateaux/LeftBank/Medoc/Belgrave.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Haut-Médoc",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "camensac",
+      "name": "Château Camensac",
+      "img": "/images/chateaux/LeftBank/Medoc/Camensac.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Haut-Médoc",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "cantemerle",
+      "name": "Château Cantemerle",
+      "img": "/images/chateaux/LeftBank/Medoc/Cantemerle.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Haut-Médoc",
+      "classification": "5ème Grand Cru Classé",
+      "classRank": 5
+    },
+    {
+      "key": "calon_segur",
+      "name": "Château Calon-Ségur",
+      "img": "/images/chateaux/LeftBank/Medoc/calon_segur.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "3ème Grand Cru Classé",
+      "classRank": 3
+    },
+    {
+      "key": "durfort_vivens",
+      "name": "Château Durfort-Vivens",
+      "img": "/images/chateaux/LeftBank/Medoc/durfort_vivens.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Margaux",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "haut_marbuzet",
+      "name": "Château Haut-Marbuzet",
+      "img": "/images/chateaux/LeftBank/Medoc/haut_marbuzet.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "Cru Bourgeois Exceptionnel",
+      "classRank": 0
+    },
+    {
+      "key": "phelan_segur",
+      "name": "Château Phélan-Ségur",
+      "img": "/images/chateaux/LeftBank/Medoc/phelan_segur.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "Cru Bourgeois Exceptionnel",
+      "classRank": 0
+    },
+    {
+      "key": "le_boscq",
+      "name": "Château Le Boscq",
+      "img": "/images/chateaux/LeftBank/Medoc/le_boscq.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "Cru Bourgeois",
+      "classRank": 0
+    },
+    {
+      "key": "lilian_ladouys",
+      "name": "Château Lilian Ladouys",
+      "img": "/images/chateaux/LeftBank/Medoc/lilian_ladouys.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "Cru Bourgeois",
+      "classRank": 0
+    },
+    {
+      "key": "meyney",
+      "name": "Château Meyney",
+      "img": "/images/chateaux/LeftBank/Medoc/meyney.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Saint-Estèphe",
+      "classification": "Cru Bourgeois Supérieur",
+      "classRank": 0
+    },
+    {
+      "key": "chasse_spleen",
+      "name": "Château Chasse-Spleen",
+      "img": "/images/chateaux/LeftBank/Medoc/Chasse-Spleen.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Moulis",
+      "classification": "Cru Bourgeois Exceptionnel",
+      "classRank": 0
+    },
+    {
+      "key": "poujeaux",
+      "name": "Château Poujeaux",
+      "img": "/images/chateaux/LeftBank/Medoc/Poujeaux.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Moulis",
+      "classification": "Cru Bourgeois Exceptionnel",
+      "classRank": 0
+    },
+    {
+      "key": "clarke",
+      "name": "Château Clarke",
+      "img": "/images/chateaux/LeftBank/Medoc/Clarke.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Listrac",
+      "classification": "Cru Bourgeois",
+      "classRank": 0
+    },
+    {
+      "key": "fourcas_dupre",
+      "name": "Château Fourcas-Dupré",
+      "img": "/images/chateaux/LeftBank/Medoc/fourcas_dupre.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Listrac",
+      "classification": "Cru Bourgeois Supérieur",
+      "classRank": 0
+    },
+    {
+      "key": "fourcas_hosten",
+      "name": "Château Fourcas-Hosten",
+      "img": "/images/chateaux/LeftBank/Medoc/Fourcas-Hosten.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Listrac",
+      "classification": "Cru Bourgeois Supérieur",
+      "classRank": 0
+    },
+    {
+      "key": "maucaillou",
+      "name": "Château Maucaillou",
+      "img": "/images/chateaux/LeftBank/Medoc/Maucaillou.jpg",
+      "bank": "left",
+      "region": "Médoc",
+      "aoc": "Moulis",
+      "classification": "Cru Bourgeois",
+      "classRank": 0
+    },
+    {
+      "key": "la_mission_haut_brion",
+      "name": "Château La Mission Haut-Brion",
+      "img": "/images/chateaux/LeftBank/Graves/la_mission_haut_brion.jpg",
+      "bank": "left",
+      "region": "Graves",
+      "aoc": "Pessac-Léognan",
+      "classification": "Grand Cru Classé de Graves",
+      "classRank": 6
+    },
+    {
+      "key": "pape_clement",
+      "name": "Château Pape Clément",
+      "img": "/images/chateaux/LeftBank/Graves/pape_clement.jpg",
+      "bank": "left",
+      "region": "Graves",
+      "aoc": "Pessac-Léognan",
+      "classification": "Grand Cru Classé de Graves",
+      "classRank": 6
+    },
+    {
+      "key": "smith_haut_lafitte",
+      "name": "Château Smith Haut Lafitte",
+      "img": "/images/chateaux/LeftBank/Graves/smith_haut_lafitte.jpg",
+      "bank": "left",
+      "region": "Graves",
+      "aoc": "Pessac-Léognan",
+      "classification": "Grand Cru Classé de Graves",
+      "classRank": 6
+    },
+    {
+      "key": "malartic_lagraviere",
+      "name": "Château Malartic-Lagravière",
+      "img": "/images/chateaux/LeftBank/Graves/malartic_lagraviere.jpg",
+      "bank": "left",
+      "region": "Graves",
+      "aoc": "Pessac-Léognan",
+      "classification": "Grand Cru Classé de Graves",
+      "classRank": 6
+    },
+    {
+      "key": "latour_martillac",
+      "name": "Château Latour-Martillac",
+      "img": "/images/chateaux/LeftBank/Graves/latour_martillac.jpg",
+      "bank": "left",
+      "region": "Graves",
+      "aoc": "Pessac-Léognan",
+      "classification": "Grand Cru Classé de Graves",
+      "classRank": 6
+    },
+    {
+      "key": "carbonnieux",
+      "name": "Château Carbonnieux",
+      "img": "/images/chateaux/LeftBank/Graves/carbonnieux.jpg",
+      "bank": "left",
+      "region": "Graves",
+      "aoc": "Pessac-Léognan",
+      "classification": "Grand Cru Classé de Graves",
+      "classRank": 6
+    },
+    {
+      "key": "bouscaut",
+      "name": "Château Bouscaut",
+      "img": "/images/chateaux/LeftBank/Graves/bouscaut.jpg",
+      "bank": "left",
+      "region": "Graves",
+      "aoc": "Pessac-Léognan",
+      "classification": "Grand Cru Classé de Graves",
+      "classRank": 6
+    },
+    {
+      "key": "olivier",
+      "name": "Château Olivier",
+      "img": "/images/chateaux/LeftBank/Graves/olivier.jpg",
+      "bank": "left",
+      "region": "Graves",
+      "aoc": "Pessac-Léognan",
+      "classification": "Grand Cru Classé de Graves",
+      "classRank": 6
+    },
+    {
+      "key": "petrus",
+      "name": "Pétrus",
+      "img": "/images/chateaux/RightBank/Libournais/petrus.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "le_pin",
+      "name": "Le Pin",
+      "img": "/images/chateaux/RightBank/Libournais/le_pin.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "lafleur",
+      "name": "Château Lafleur",
+      "img": "/images/chateaux/RightBank/Libournais/lafleur.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "trotanoy",
+      "name": "Château Trotanoy",
+      "img": "/images/chateaux/RightBank/Libournais/trotanoy.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "clinet",
+      "name": "Château Clinet",
+      "img": "/images/chateaux/RightBank/Libournais/clinet.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "la_conseillante",
+      "name": "Château La Conseillante",
+      "img": "/images/chateaux/RightBank/Libournais/la_conseillante.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "levangile",
+      "name": "Château L'Évangile",
+      "img": "/images/chateaux/RightBank/Libournais/levangile.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "gazin",
+      "name": "Château Gazin",
+      "img": "/images/chateaux/RightBank/Libournais/gazin.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "nenin",
+      "name": "Château Nénin",
+      "img": "/images/chateaux/RightBank/Libournais/nenin.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "cheval_blanc",
+      "name": "Château Cheval Blanc",
+      "img": "/images/chateaux/RightBank/Libournais/cheval_blanc.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Saint-Émilion Grand Cru",
+      "classification": "Premier Grand Cru Classé A",
+      "classRank": 1
+    },
+    {
+      "key": "ausone",
+      "name": "Château Ausone",
+      "img": "/images/chateaux/RightBank/Libournais/ausone.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Saint-Émilion Grand Cru",
+      "classification": "Premier Grand Cru Classé A",
+      "classRank": 1
+    },
+    {
+      "key": "angelus",
+      "name": "Château Angélus",
+      "img": "/images/chateaux/RightBank/Libournais/angelus.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Saint-Émilion Grand Cru",
+      "classification": "Premier Grand Cru Classé A",
+      "classRank": 1
+    },
+    {
+      "key": "pavie",
+      "name": "Château Pavie",
+      "img": "/images/chateaux/RightBank/Libournais/pavie.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Saint-Émilion Grand Cru",
+      "classification": "Premier Grand Cru Classé A",
+      "classRank": 1
+    },
+    {
+      "key": "figeac",
+      "name": "Château Figeac",
+      "img": "/images/chateaux/RightBank/Libournais/figeac.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Saint-Émilion Grand Cru",
+      "classification": "Premier Grand Cru Classé B",
+      "classRank": 1
+    },
+    {
+      "key": "canon",
+      "name": "Château Canon",
+      "img": "/images/chateaux/RightBank/Libournais/canon.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Saint-Émilion Grand Cru",
+      "classification": "Premier Grand Cru Classé B",
+      "classRank": 1
+    },
+    {
+      "key": "troplong_mondot",
+      "name": "Château Troplong Mondot",
+      "img": "/images/chateaux/RightBank/Libournais/troplong_mondot.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Saint-Émilion Grand Cru",
+      "classification": "Premier Grand Cru Classé B",
+      "classRank": 1
+    },
+    {
+      "key": "la_gaffeliere",
+      "name": "Château La Gaffelière",
+      "img": "/images/chateaux/RightBank/Libournais/la_gaffeliere.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Saint-Émilion Grand Cru",
+      "classification": "Premier Grand Cru Classé B",
+      "classRank": 1
+    },
+    {
+      "key": "valandraud",
+      "name": "Château Valandraud",
+      "img": "/images/chateaux/RightBank/Libournais/valandraud.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Saint-Émilion Grand Cru",
+      "classification": "Premier Grand Cru Classé B",
+      "classRank": 1
+    },
+    {
+      "key": "vieux_chateau_certan",
+      "name": "Vieux Château Certan",
+      "img": "/images/chateaux/RightBank/Libournais/Vieuxchateaucertan.jpg",
+      "bank": "right",
+      "region": "Libournais",
+      "aoc": "Pomerol",
+      "classification": "Non-classé (Prestige)",
+      "classRank": 99
+    },
+    {
+      "key": "dyquem",
+      "name": "Château d'Yquem",
+      "img": "/images/chateaux/Sauternais/dyquem.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Sauternes",
+      "classification": "1er Grand Cru Classé Supérieur",
+      "classRank": 1
+    },
+    {
+      "key": "rieussec",
+      "name": "Château Rieussec",
+      "img": "/images/chateaux/Sauternais/rieussec.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Sauternes",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "suduiraut",
+      "name": "Château Suduiraut",
+      "img": "/images/chateaux/Sauternais/suduiraut.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Sauternes",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "guiraud",
+      "name": "Château Guiraud",
+      "img": "/images/chateaux/Sauternais/guiraud.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Sauternes",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "la_tour_blanche",
+      "name": "Château La Tour Blanche",
+      "img": "/images/chateaux/Sauternais/la_tour_blanche.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Sauternes",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "climens",
+      "name": "Château Climens",
+      "img": "/images/chateaux/Sauternais/climens.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Barsac",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "coutet",
+      "name": "Château Coutet",
+      "img": "/images/chateaux/Sauternais/coutet.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Barsac",
+      "classification": "1er Grand Cru Classé",
+      "classRank": 1
+    },
+    {
+      "key": "filhot",
+      "name": "Château Filhot",
+      "img": "/images/chateaux/Sauternais/filhot.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Sauternes",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "doisy_daene",
+      "name": "Château Doisy-Daëne",
+      "img": "/images/chateaux/Sauternais/doisy_daene.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Barsac",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "doisy_vedrines",
+      "name": "Château Doisy-Védrines",
+      "img": "/images/chateaux/Sauternais/doisy_vedrines.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Barsac",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "nairac",
+      "name": "Château Nairac",
+      "img": "/images/chateaux/Sauternais/nairac.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Barsac",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "caillou",
+      "name": "Château Caillou",
+      "img": "/images/chateaux/Sauternais/caillou.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Barsac",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "de_myrat",
+      "name": "Château de Myrat",
+      "img": "/images/chateaux/Sauternais/de_myrat.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Barsac",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    },
+    {
+      "key": "simon",
+      "name": "Château Simon",
+      "img": "/images/chateaux/Sauternais/simon.jpg",
+      "bank": "left",
+      "region": "Sauternais",
+      "aoc": "Barsac",
+      "classification": "2ème Grand Cru Classé",
+      "classRank": 2
+    }
+  ]
+}

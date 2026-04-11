@@ -156,6 +156,7 @@ const props = defineProps({
   note: { type: Object, default: null },           // 現有筆記（null = 新增）
   defaultAocId: { type: String, default: '' },
   defaultChateauName: { type: String, default: '' },
+  source: { type: String, default: 'bordeaux' },  // 'bordeaux' | 'bourgogne'
 })
 const emit = defineEmits(['save', 'delete', 'close'])
 
@@ -269,6 +270,7 @@ const save = async () => {
   saving.value = true
   const payload = {
     user_id:     authState.user.id,
+    source:      props.source,
     aoc_id:      form.value.aoc_id,
     chateau_name: form.value.chateau_name.trim(),
     vintage:     form.value.vintage || null,

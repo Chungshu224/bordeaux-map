@@ -44,6 +44,7 @@
     <BankQuizPage     v-else-if="currentGame === 'bank'"    @back="currentGame = null" />
     <VintageSortPage  v-else-if="currentGame === 'vintage'" @back="currentGame = null" />
     <GrapeSoilMatchPage v-else-if="currentGame === 'grape'" @back="currentGame = null" />
+    <LabelQuizPage    v-else-if="currentGame === 'label'"   @back="currentGame = null" />
   </div>
 </template>
 
@@ -53,6 +54,7 @@ import MapQuizPage       from './MapQuizPage.vue'
 import BankQuizPage      from './BankQuizPage.vue'
 import VintageSortPage   from './VintageSortPage.vue'
 import GrapeSoilMatchPage from './GrapeSoilMatchPage.vue'
+import LabelQuizPage      from './LabelQuizPage.vue'
 import { authState, authActions } from '../stores/authStore.js'
 import { TIER_WEIGHT } from '../router/index.js'
 
@@ -123,8 +125,16 @@ const GAMES = [
     accent:      '#22c55e',
     accent2:     '#15803d',
     minimumTier: 'basic'
-  },
-]
+  },  {
+    id:          'label',
+    icon:        '🏷️',
+    name:        '酒標辨識賽',
+    desc:        '看酒標圖片判斷左右岸、村莊級 AOC、党數等級，三種難度挑戰',
+    tags:        ['圖片辨識', '簡單 / 中 / 困難', '錯題回顾'],
+    accent:      '#c8a96e',
+    accent2:     '#92400e',
+    minimumTier: 'basic'
+  },]
 </script>
 
 <style scoped>

@@ -5,6 +5,8 @@
       v-if="currentView === 'levelSelector'" 
       @startLevel="handleSelectLevel"
       @openMap="handleOpenMap"
+      @openGameHub="handleOpenGameHub"
+      @openNotebook="handleOpenNotebook"
     />
 
     <!-- 課程學習介面 -->
@@ -100,7 +102,7 @@ import SlideViewer from './SlideViewer.vue'
 import QuizEngine from './QuizEngine.vue'
 import CertificateGenerator from './CertificateGenerator.vue'
 
-const emit = defineEmits(['openMap'])
+const emit = defineEmits(['openMap', 'openGameHub', 'openNotebook'])
 const progressStore = useProgress()
 
 // 當前視圖狀態
@@ -477,6 +479,14 @@ const openMapInteraction = (mapData) => {
 
 const handleOpenMap = () => {
   emit('openMap')
+}
+
+const handleOpenGameHub = () => {
+  emit('openGameHub')
+}
+
+const handleOpenNotebook = () => {
+  emit('openNotebook')
 }
 </script>
 

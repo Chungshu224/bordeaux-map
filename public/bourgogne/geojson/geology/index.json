@@ -44,31 +44,31 @@
         {
           "materialId": "clay",
           "name": "黏土為主",
-          "url": "/geojson/geology/provinces/021/clay.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/021/clay.geojson",
           "featureCount": 3603
         },
         {
           "materialId": "sand",
           "name": "砂為主",
-          "url": "/geojson/geology/provinces/021/sand.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/021/sand.geojson",
           "featureCount": 520
         },
         {
           "materialId": "limestone",
           "name": "石灰岩",
-          "url": "/geojson/geology/provinces/021/limestone.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/021/limestone.geojson",
           "featureCount": 5896
         },
         {
           "materialId": "gravel",
           "name": "礫石卵石",
-          "url": "/geojson/geology/provinces/021/gravel.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/021/gravel.geojson",
           "featureCount": 245
         },
         {
           "materialId": "mixed",
           "name": "混合沉積物",
-          "url": "/geojson/geology/provinces/021/mixed.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/021/mixed.geojson",
           "featureCount": 3083
         }
       ],
@@ -80,31 +80,31 @@
         {
           "materialId": "clay",
           "name": "黏土為主",
-          "url": "/geojson/geology/provinces/058/clay.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/058/clay.geojson",
           "featureCount": 4311
         },
         {
           "materialId": "sand",
           "name": "砂為主",
-          "url": "/geojson/geology/provinces/058/sand.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/058/sand.geojson",
           "featureCount": 902
         },
         {
           "materialId": "limestone",
           "name": "石灰岩",
-          "url": "/geojson/geology/provinces/058/limestone.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/058/limestone.geojson",
           "featureCount": 3521
         },
         {
           "materialId": "gravel",
           "name": "礫石卵石",
-          "url": "/geojson/geology/provinces/058/gravel.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/058/gravel.geojson",
           "featureCount": 592
         },
         {
           "materialId": "mixed",
           "name": "混合沉積物",
-          "url": "/geojson/geology/provinces/058/mixed.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/058/mixed.geojson",
           "featureCount": 3623
         }
       ],
@@ -116,31 +116,31 @@
         {
           "materialId": "clay",
           "name": "黏土為主",
-          "url": "/geojson/geology/provinces/069/clay.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/069/clay.geojson",
           "featureCount": 828
         },
         {
           "materialId": "sand",
           "name": "砂為主",
-          "url": "/geojson/geology/provinces/069/sand.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/069/sand.geojson",
           "featureCount": 574
         },
         {
           "materialId": "limestone",
           "name": "石灰岩",
-          "url": "/geojson/geology/provinces/069/limestone.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/069/limestone.geojson",
           "featureCount": 732
         },
         {
           "materialId": "gravel",
           "name": "礫石卵石",
-          "url": "/geojson/geology/provinces/069/gravel.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/069/gravel.geojson",
           "featureCount": 331
         },
         {
           "materialId": "mixed",
           "name": "混合沉積物",
-          "url": "/geojson/geology/provinces/069/mixed.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/069/mixed.geojson",
           "featureCount": 898
         }
       ],
@@ -152,31 +152,31 @@
         {
           "materialId": "clay",
           "name": "黏土為主",
-          "url": "/geojson/geology/provinces/071/clay.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/071/clay.geojson",
           "featureCount": 3922
         },
         {
           "materialId": "sand",
           "name": "砂為主",
-          "url": "/geojson/geology/provinces/071/sand.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/071/sand.geojson",
           "featureCount": 1872
         },
         {
           "materialId": "limestone",
           "name": "石灰岩",
-          "url": "/geojson/geology/provinces/071/limestone.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/071/limestone.geojson",
           "featureCount": 3276
         },
         {
           "materialId": "gravel",
           "name": "礫石卵石",
-          "url": "/geojson/geology/provinces/071/gravel.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/071/gravel.geojson",
           "featureCount": 164
         },
         {
           "materialId": "mixed",
           "name": "混合沉積物",
-          "url": "/geojson/geology/provinces/071/mixed.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/071/mixed.geojson",
           "featureCount": 3357
         }
       ],
@@ -188,31 +188,31 @@
         {
           "materialId": "clay",
           "name": "黏土為主",
-          "url": "/geojson/geology/provinces/089/clay.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/089/clay.geojson",
           "featureCount": 1157
         },
         {
           "materialId": "sand",
           "name": "砂為主",
-          "url": "/geojson/geology/provinces/089/sand.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/089/sand.geojson",
           "featureCount": 1657
         },
         {
           "materialId": "limestone",
           "name": "石灰岩",
-          "url": "/geojson/geology/provinces/089/limestone.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/089/limestone.geojson",
           "featureCount": 1174
         },
         {
           "materialId": "gravel",
           "name": "礫石卵石",
-          "url": "/geojson/geology/provinces/089/gravel.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/089/gravel.geojson",
           "featureCount": 907
         },
         {
           "materialId": "mixed",
           "name": "混合沉積物",
-          "url": "/geojson/geology/provinces/089/mixed.geojson",
+          "url": "/bourgogne/geojson/geology/provinces/089/mixed.geojson",
           "featureCount": 1231
         }
       ],

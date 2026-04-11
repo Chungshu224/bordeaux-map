@@ -155,6 +155,7 @@
       :note="selectedNote"
       :default-aoc-id="selectedNote?.aoc_id || ''"
       :default-chateau-name="selectedNote?.chateau_name || ''"
+      source="bordeaux"
       @save="onModalSave"
       @delete="onModalDelete"
       @close="showModal = false"
@@ -271,6 +272,7 @@ const loadNotes = async () => {
     .from('tasting_notes')
     .select('*')
     .eq('user_id', authState.user.id)
+    .or('source.eq.bordeaux,source.is.null')
     .order('updated_at', { ascending: false })
   if (error) console.warn('載入筆記失敗:', error.message)
   notes.value = data || []

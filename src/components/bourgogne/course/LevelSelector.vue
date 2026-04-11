@@ -42,6 +42,11 @@
       <!-- 快速功能入口（與波爾多相同） -->
       <section class="quick-nav">
         <div class="quick-nav-grid">
+          <button class="nav-card game-hub" @click="emit('openGameHub')">
+            <span class="nav-icon">🎮</span>
+            <span class="nav-title">互動練習</span>
+            <span class="nav-desc">產區競答・年份排列・Grand Cru 歸村賽・紅白快答</span>
+          </button>
           <button class="nav-card explore" @click="emit('openMap')">
             <span class="nav-icon">🗺️</span>
             <span class="nav-title">探索地圖</span>
@@ -52,50 +57,18 @@
             <span class="nav-title">成就系統</span>
             <span class="nav-desc">查看已解鎖成就與積分等級</span>
           </button>
-          <button class="nav-card progress" @click="showDetailedProgress">
+          <button class="nav-card progress" @click="showProgress = true">
             <span class="nav-icon">📊</span>
             <span class="nav-title">學習進度</span>
             <span class="nav-desc">正確率・學習時長・各單元詳細記錄</span>
           </button>
-          <button class="nav-card certificate" @click="showCertificatesInfo">
-            <span class="nav-icon">🎓</span>
-            <span class="nav-title">我的證書</span>
-            <span class="nav-desc">查看已獲得的布根地學習認證</span>
+          <button class="nav-card note-hub" @click="emit('openNotebook')">
+            <span class="nav-icon">📔</span>
+            <span class="nav-title">品飲筆記</span>
+            <span class="nav-desc">記錄品飲體驗・年份・產區收藏</span>
           </button>
         </div>
       </section>
-
-      <!-- 學習進度統計橫列 -->
-      <div class="hero-stats-bar">
-        <div class="stats-bar-card">
-          <div class="stats-row-inner">
-            <div class="stat-hero-item">
-              <span class="stat-hero-value">{{ totalProgress }}%</span>
-              <span class="stat-hero-label">總體進度</span>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat-hero-item">
-              <span class="stat-hero-value">{{ completedLevels }} / 4</span>
-              <span class="stat-hero-label">完成階段</span>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat-hero-item">
-              <span class="stat-hero-value">{{ studyTime }} h</span>
-              <span class="stat-hero-label">累積時數</span>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat-hero-item">
-              <span class="stat-hero-value">{{ earnedCertificates }}</span>
-              <span class="stat-hero-label">獲得證書</span>
-            </div>
-            <div class="stats-actions">
-              <button class="hero-start-btn" @click="startJourney">
-                <span>▶</span> {{ heroButtonText }}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- 等級選擇區 -->
       <section class="levels-section">
@@ -192,12 +165,122 @@
         </div>
       </section>
 
+      <!-- 學習進度統計橫列（移至課程卡片下方） -->
+      <div class="hero-stats-bar">
+        <div class="stats-bar-card">
+          <div class="stats-row-inner">
+            <div class="stat-hero-item">
+              <span class="stat-hero-value">{{ totalProgress }}%</span>
+              <span class="stat-hero-label">總體進度</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-hero-item">
+              <span class="stat-hero-value">{{ completedLevels }} / 4</span>
+              <span class="stat-hero-label">完成階段</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-hero-item">
+              <span class="stat-hero-value">{{ studyTime }} h</span>
+              <span class="stat-hero-label">累積時數</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-hero-item">
+              <span class="stat-hero-value">{{ earnedCertificates }}</span>
+              <span class="stat-hero-label">獲得證書</span>
+            </div>
+            <div class="stats-actions">
+              <button class="hero-start-btn" @click="startJourney">
+                <span>▶</span> {{ heroButtonText }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- 未登入提示列 -->
       <div v-if="!authUser" class="sync-hint-bar">
         📍 登入後可將學習進度同步至雲端
       </div>
     </div>
   </div>
+
+  <!-- 學習進度 Modal -->
+  <Teleport to="body">
+    <div v-if="showProgress" class="modal-overlay" @click.self="showProgress = false">
+      <div class="progress-modal">
+        <div class="pm-header">
+          <h3 class="pm-title">📊 學習進度報告</h3>
+          <button class="pm-close" @click="showProgress = false">×</button>
+        </div>
+        <div class="pm-body">
+          <!-- 總體統計 -->
+          <div class="pm-overview">
+            <div class="pm-stat-card">
+              <div class="pm-stat-icon">🌟</div>
+              <div class="pm-stat-content">
+                <span class="pm-stat-val">{{ totalProgress }}%</span>
+                <span class="pm-stat-lbl">總體進度</span>
+              </div>
+            </div>
+            <div class="pm-stat-card">
+              <div class="pm-stat-icon">✅</div>
+              <div class="pm-stat-content">
+                <span class="pm-stat-val">{{ completedLevels }}/4</span>
+                <span class="pm-stat-lbl">完成階段</span>
+              </div>
+            </div>
+            <div class="pm-stat-card">
+              <div class="pm-stat-icon">⏱️</div>
+              <div class="pm-stat-content">
+                <span class="pm-stat-val">{{ studyTime }}h</span>
+                <span class="pm-stat-lbl">累積時數</span>
+              </div>
+            </div>
+            <div class="pm-stat-card">
+              <div class="pm-stat-icon">🎓</div>
+              <div class="pm-stat-content">
+                <span class="pm-stat-val">{{ earnedCertificates }}</span>
+                <span class="pm-stat-lbl">獲得證書</span>
+              </div>
+            </div>
+          </div>
+          <!-- 各 Level 進度條 -->
+          <div class="pm-levels">
+            <div v-for="level in levels" :key="level.id" class="pm-level-row">
+              <div class="pm-level-info">
+                <span class="pm-level-badge" :class="`pm-l${level.id}`">L{{ level.id }}</span>
+                <span class="pm-level-name">{{ level.name }}</span>
+              </div>
+              <div class="pm-level-bar-wrap">
+                <div class="pm-level-bar-track">
+                  <div class="pm-level-bar-fill" :class="`pm-l${level.id}`"
+                    :style="{ width: `${getProgress(level.id)}%` }"></div>
+                </div>
+                <span class="pm-level-pct">{{ Math.round(getProgress(level.id)) }}%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Teleport>
+
+  <!-- 成就系統 Modal -->
+  <Teleport to="body">
+    <Transition name="ach-overlay">
+      <div v-if="showAchievementDashboard" class="ach-modal-overlay" @click.self="showAchievementDashboard = false">
+        <div class="ach-modal-card" @click.stop>
+          <div class="ach-modal-header">
+            <h3>🏆 學習成就</h3>
+            <button class="ach-modal-close" @click="showAchievementDashboard = false">×</button>
+          </div>
+          <div class="ach-modal-body">
+            <BourgogneAchievementsDashboard @back="showAchievementDashboard = false" />
+          </div>
+        </div>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <script setup>
@@ -205,6 +288,8 @@ import { ref, computed, onMounted } from 'vue'
 import { useProgress } from '../composables/useProgress.js'
 import { authState, authActions } from '../../../stores/authStore.js'
 import { useRouter } from 'vue-router'
+import BourgogneAchievementsDashboard from '../../BourgogneAchievementsDashboard.vue'
+import { globalBurgAchievementManager } from '../../../stores/bourgogneAchievementSystem.js'
 
 const progressStore = useProgress()
 const router = useRouter()
@@ -216,7 +301,7 @@ const userProgress = ref({
   4: { completed: false, progress: 0, score: 0 }
 })
 
-const emit = defineEmits(['startLevel', 'openMap'])
+const emit = defineEmits(['startLevel', 'openMap', 'openGameHub', 'openNotebook'])
 
 // 認證狀態（與波爾多相同）
 const authUser = computed(() => authState.user)
@@ -333,23 +418,11 @@ const startJourney = () => {
   }
 }
 
-// 證書資訊彈窗
-const showCertificatesInfo = () => {
-  const certs = progressStore.getCertificates()
-  if (certs.length === 0) {
-    alert('🎓 尚未獲得任何證書\n\n完成各階段課程即可獲得對應證書：\n• Level 1 → 布根地探索者證書\n• Level 2 → 布根地愛好者證書\n• Level 3 → 布根地專家證書\n• Level 4 → 布根地大師證書 + 講師資格認證')
-    return
-  }
-  let msg = '🎓 我的證書記錄\n' + '='.repeat(30) + '\n\n'
-  certs.forEach((cert, i) => {
-    msg += `${i + 1}. Level ${cert.level} 證書\n   完成模組：${cert.completedModules}/${cert.totalModules}　平均分數：${cert.averageScore}\n\n`
-  })
-  alert(msg)
-}
-
-// 成就系統功能（即將推出）
+// 成就系統功能
+const showAchievementDashboard = ref(false)
 const showAchievements = () => {
-  alert('🏆 成就系統即將推出！\n\n敬請期待更多精彩功能：\n• 解鎖成就徽章\n• 關鍵節點獎勵\n• 學習里程碟記錄\n• 排行榜與挑戰賽事')
+  globalBurgAchievementManager.init()
+  showAchievementDashboard.value = true
 }
 
 // 學習進度詳情
@@ -521,7 +594,7 @@ const showDetailedProgress = async () => {
 }
 .quick-nav-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
 }
 .nav-card {
@@ -562,9 +635,91 @@ const showDetailedProgress = async () => {
 .nav-card.progress {
   background: linear-gradient(135deg, #9C27B0, #6A1B9A);
 }
-.nav-card.certificate {
+.nav-card.game-hub {
   background: linear-gradient(135deg, #8b5cf6, #6d28d9);
 }
+.nav-card.note-hub {
+  background: linear-gradient(135deg, #e07b54, #c0392b);
+}
+
+/* ── 進度 Modal ───────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  z-index: 9000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+}
+.progress-modal {
+  background: #fff;
+  border-radius: 20px;
+  width: 100%; max-width: 560px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.pm-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.pm-title { font-size: 1.15rem; font-weight: 700; color: #1f2937; margin: 0; }
+.pm-close {
+  width: 32px; height: 32px; border-radius: 50%; border: none;
+  background: #f3f4f6; color: #6b7280; font-size: 1.2rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.pm-close:hover { background: #e5e7eb; }
+.pm-body { padding: 1.5rem; }
+.pm-overview {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px; margin-bottom: 1.5rem;
+}
+.pm-stat-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.pm-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.pm-stat-icon { font-size: 2rem; flex-shrink: 0; line-height: 1; }
+.pm-stat-content { flex: 1; }
+.pm-stat-val { display: block; font-size: 1.75rem; font-weight: 700; color: #1f2937; line-height: 1.2; }
+.pm-stat-lbl { display: block; font-size: 0.8rem; color: #6b7280; margin-top: 5px; }
+.pm-levels { display: flex; flex-direction: column; gap: 1rem; }
+.pm-level-row { display: flex; align-items: center; gap: 12px; }
+.pm-level-info { display: flex; align-items: center; gap: 8px; min-width: 130px; }
+.pm-level-badge {
+  padding: 3px 9px; border-radius: 8px;
+  font-size: 0.8rem; font-weight: 700; color: white;
+}
+.pm-l1 { background: linear-gradient(135deg, #4CAF50, #66BB6A); }
+.pm-l2 { background: linear-gradient(135deg, #2196F3, #42A5F5); }
+.pm-l3 { background: linear-gradient(135deg, #FF9800, #FFA726); }
+.pm-l4 { background: linear-gradient(135deg, #E91E63, #EC407A); }
+.pm-level-name { font-size: 0.85rem; font-weight: 600; color: #374151; }
+.pm-level-bar-wrap { flex: 1; display: flex; align-items: center; gap: 10px; }
+.pm-level-bar-track {
+  flex: 1; height: 8px; background: #e5e7eb; border-radius: 999px; overflow: hidden;
+}
+.pm-level-bar-fill {
+  height: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.4s ease;
+}
+.pm-level-bar-fill.pm-l2 { background: linear-gradient(90deg, #2196F3, #42A5F5); }
+.pm-level-bar-fill.pm-l3 { background: linear-gradient(90deg, #FF9800, #FFA726); }
+.pm-level-bar-fill.pm-l4 { background: linear-gradient(90deg, #E91E63, #EC407A); }
+.pm-level-pct { font-size: 0.85rem; font-weight: 600; color: #6b7280; min-width: 36px; text-align: right; }
 
 /* ── 進度統計橫列 ──────────────────────────────────────────── */
 .hero-stats-bar {
@@ -811,6 +966,41 @@ const showDetailedProgress = async () => {
 }
 .lock-icon { font-size: 50px; opacity: 0.5; }
 
+/* ── 成就 Modal ────────────────────────────────────────── */
+.ach-modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.ach-modal-card {
+  background: white; border-radius: 20px;
+  width: 90%; max-width: 900px; max-height: 88vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+.ach-modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 28px;
+  border-bottom: 1px solid #ede9fe;
+  flex-shrink: 0;
+}
+.ach-modal-header h3 { margin: 0; font-size: 1.2rem; color: #1f2937; font-weight: 700; }
+.ach-modal-close {
+  background: none; border: none; font-size: 1.5rem; cursor: pointer;
+  color: #9ca3af; width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.ach-modal-close:hover { background: #f3f4f6; color: #374151; }
+.ach-modal-body { flex: 1; overflow-y: auto; }
+
+.ach-overlay-enter-from, .ach-overlay-leave-to { opacity: 0; }
+.ach-overlay-enter-active, .ach-overlay-leave-active { transition: opacity 0.22s ease; }
+.ach-overlay-enter-from .ach-modal-card { transform: scale(0.96) translateY(12px); }
+.ach-overlay-enter-active .ach-modal-card { transition: transform 0.22s ease; }
+
 /* ── 未登入提示 ────────────────────────────────────────────── */
 .sync-hint-bar {
   text-align: center;
@@ -828,11 +1018,15 @@ const showDetailedProgress = async () => {
 }
 
 /* ── RWD ───────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .quick-nav-grid { grid-template-columns: repeat(5, 1fr); }
+}
 @media (max-width: 1024px) {
-  .quick-nav-grid { grid-template-columns: repeat(2, 1fr); }
+  .quick-nav-grid { grid-template-columns: repeat(3, 1fr); }
   .stats-row-inner { flex-wrap: wrap; gap: 12px; }
   .stat-sep { display: none; }
   .stats-actions { width: 100%; text-align: center; margin-left: 0; }
+  .pm-overview { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
   .main-container { padding: 1rem; }
