@@ -1,0 +1,94 @@
+{
+  "lessonId": "L1M4L1",
+  "title": "義式料理與葡萄酒入門",
+  "quiz": [
+    {
+      "question": "義大利配餐文化的金科玉律是？",
+      "options": [
+        "價格越貴越好",
+        "當地菜配當地酒",
+        "紅酒配紅肉，白酒配白肉",
+        "葡萄酒只在晚餐喝"
+      ],
+      "answer": 1,
+      "explanation": "義大利人深信「當地菜配當地酒」，因為千年飲食文化已經找到了最佳的組合。"
+    },
+    {
+      "question": "番茄義大利麵應該搭配什麼樣的酒？",
+      "options": [
+        "低酸度白酒",
+        "高酸度紅酒",
+        "甜酒",
+        "低酸度紅酒"
+      ],
+      "answer": 1,
+      "explanation": "番茄的高酸度需要高酸度的酒來匹配，如 Chianti 或 Barbera，否則酒會顯得苦澀。"
+    },
+    {
+      "question": "配餐的甜度法則是？",
+      "options": [
+        "食物甜度 > 酒的甜度",
+        "酒的甜度 ≥ 食物甜度",
+        "甜度無關緊要",
+        "甜食不能配酒"
+      ],
+      "answer": 1,
+      "explanation": "酒的甜度必須大於或等於食物的甜度，否則酒會顯得酸澀難喝。"
+    },
+    {
+      "question": "為什麼高油脂料理適合搭配高酸度或高單寧的酒？",
+      "options": [
+        "可以增加油膩感",
+        "可以切割油膩感",
+        "可以增加甜度",
+        "只是習慣而已"
+      ],
+      "answer": 1,
+      "explanation": "高酸度和高單寧能夠切割油脂，清爽口腔，使整體用餐體驗更加平衡。"
+    }
+  ],
+  "slides": [
+    {
+      "type": "title",
+      "title": "🍝 義式料理與葡萄酒入門",
+      "subtitle": "從餐桌文化到完美配對"
+    },
+    {
+      "type": "content",
+      "title": "🇮🇹 義大利餐酒文化",
+      "content": "<div class=\"culture-intro\"><div class=\"culture-card\"><div class=\"culture-icon\">🍷</div><h3>葡萄酒是餐桌必需品</h3><p>義大利人視葡萄酒為「液體麵包」，每餐必備。不是為了喝醉，而是為了提升用餐體驗。</p></div><div class=\"culture-card\"><div class=\"culture-icon\">🌍</div><h3>地域性至上</h3><p>「當地菜配當地酒」是金科玉律。千年飲食文化已找到最佳組合。</p></div><div class=\"culture-card\"><div class=\"culture-icon\">⚖️</div><h3>平衡與和諧</h3><p>配餐重點不在「壓過」而在「提升」。酒與食物應相互襯托，而非競爭。</p></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "📚 配餐基本原則",
+      "content": "<div class=\"principles-grid\"><div class=\"principle-card weight\"><div class=\"principle-num\">1</div><div class=\"principle-content\"><h4>⚖️ 重量匹配</h4><div class=\"principle-desc\"><p><strong>輕盈料理</strong> ↔ <strong>輕盈酒體</strong></p><p><strong>濃郁料理</strong> ↔ <strong>飽滿酒體</strong></p></div><div class=\"example\"><p>✓ 清蒸魚 + Pinot Grigio</p><p>✓ 燉牛肉 + Barolo</p><p>✗ 沙拉 + Amarone（太強）</p></div></div></div><div class=\"principle-card acidity\"><div class=\"principle-num\">2</div><div class=\"principle-content\"><h4>🍋 酸度平衡</h4><div class=\"principle-desc\"><p><strong>酸性料理</strong>（番茄、醋）需要<strong>高酸度酒</strong></p><p>酒的酸度應≥食物酸度</p></div><div class=\"example\"><p>✓ 番茄義大利麵 + Chianti（高酸）</p><p>✓ 檸檬海鮮 + Verdicchio</p><p>✗ 番茄菜 + 低酸酒（會顯苦）</p></div></div></div><div class=\"principle-card fat\"><div class=\"principle-num\">3</div><div class=\"principle-content\"><h4>🧈 油脂切割</h4><div class=\"principle-desc\"><p><strong>高油脂料理</strong>需要<strong>高酸度或高單寧</strong>來切割</p></div><div class=\"example\"><p>✓ 炸海鮮 + 氣泡酒（酸度清爽）</p><p>✓ 牛排 + Sangiovese（單寧）</p><p>✓ 起司 + 紅酒（單寧化解油膩）</p></div></div></div><div class=\"principle-card flavor\"><div class=\"principle-num\">4</div><div class=\"principle-content\"><h4>🌿 風味呼應</h4><div class=\"principle-desc\"><p>找出酒與食物的<strong>共同風味元素</strong></p></div><div class=\"example\"><p>✓ 蘑菇燉飯 + Nebbiolo（土壤香）</p><p>✓ 香草雞肉 + Vermentino（香草味）</p><p>✓ 黑櫻桃醬 + Barbera（櫻桃味）</p></div></div></div><div class=\"principle-card sweetness\"><div class=\"principle-num\">5</div><div class=\"principle-content\"><h4>🍯 甜度法則</h4><div class=\"principle-desc\"><p><strong>酒的甜度必須 ≥ 食物甜度</strong></p><p>否則酒會顯得酸澀</p></div><div class=\"example\"><p>✓ 提拉米蘇 + Moscato d'Asti</p><p>✓ Panna Cotta + Recioto</p><p>✗ 甜點 + 不甜酒（大忌）</p></div></div></div><div class=\"principle-card contrast\"><div class=\"principle-num\">6</div><div class=\"principle-content\"><h4>⚡ 對比原則</h4><div class=\"principle-desc\"><p>有時<strong>對比</strong>比相似更出色</p></div><div class=\"example\"><p>✓ 鹹起司 + 甜酒（Gorgonzola + 甜白）</p><p>✓ 辣食 + 微甜氣泡酒</p><p>✓ 油炸 + 清爽氣泡</p></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍝 義大利麵配酒指南",
+      "content": "<div class=\"pasta-pairing\"><div class=\"pasta-row\"><div class=\"pasta-dish\"><h4>🍅 紅醬系列</h4><p>番茄醬、肉醬、Arrabbiata</p></div><div class=\"pasta-arrow\">→</div><div class=\"pasta-wine\"><p><strong>高酸度紅酒</strong></p><ul><li>Chianti Classico</li><li>Barbera d'Alba</li><li>Sangiovese</li></ul></div></div><div class=\"pasta-row\"><div class=\"pasta-dish\"><h4>🧈 白醬系列</h4><p>奶油白醬、Carbonara、Alfredo</p></div><div class=\"pasta-arrow\">→</div><div class=\"pasta-wine\"><p><strong>中等酒體白酒</strong></p><ul><li>Pinot Grigio</li><li>Soave Classico</li><li>Verdicchio</li></ul></div></div><div class=\"pasta-row\"><div class=\"pasta-dish\"><h4>🌿 青醬系列</h4><p>Pesto, 橄欖油蒜香</p></div><div class=\"pasta-arrow\">→</div><div class=\"pasta-wine\"><p><strong>香草味白酒</strong></p><ul><li>Vermentino</li><li>Gavi (Cortese)</li><li>Vernaccia di San Gimignano</li></ul></div></div><div class=\"pasta-row\"><div class=\"pasta-dish\"><h4>🦐 海鮮系列</h4><p>蛤蜊麵、墨魚麵、龍蝦麵</p></div><div class=\"pasta-arrow\">→</div><div class=\"pasta-wine\"><p><strong>清新白酒或氣泡酒</strong></p><ul><li>Verdicchio</li><li>Soave</li><li>Franciacorta</li></ul></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍕 Pizza 配酒",
+      "content": "<div class=\"pizza-section\"><div class=\"pizza-intro\"><h3>🍕 Pizza 的配酒挑戰</h3><p>Pizza 有多種配料、高溫烘烤、番茄醬底，需要<strong>高酸度、中等酒體、果香豐富</strong>的酒款。</p></div><div class=\"pizza-wines\"><div class=\"pizza-wine-card best\"><div class=\"card-badge\">最佳選擇</div><h4>🔴 Chianti</h4><p>高酸度完美匹配番茄醬，櫻桃味與 Mozzarella 和諧。</p></div><div class=\"pizza-wine-card good\"><div class=\"card-badge\">優質選擇</div><h4>🔴 Barbera</h4><p>低單寧高酸，不會與起司衝突，果香豐富。</p></div><div class=\"pizza-wine-card fresh\"><div class=\"card-badge\">清爽選擇</div><h4>🥂 Prosecco</h4><p>氣泡切割油膩，清爽解膩，適合輕盈口味。</p></div><div class=\"pizza-wine-card casual\"><div class=\"card-badge\">日常選擇</div><h4>🔴 Montepulciano d'Abruzzo</h4><p>性價比高，果香濃郁，酸度適中，百搭。</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🧀 起司配酒",
+      "content": "<div class=\"cheese-pairing-grid\"><div class=\"cheese-item\"><h4>🧀 新鮮起司</h4><p class=\"cheese-type\">Mozzarella, Ricotta, Burrata</p><div class=\"wine-rec\">🍾 <strong>推薦：</strong>Prosecco, Pinot Grigio<br>清爽白酒或氣泡酒不壓過細膩風味</div></div><div class=\"cheese-item\"><h4>🧀 半硬質起司</h4><p class=\"cheese-type\">Pecorino Romano, Parmigiano-Reggiano</p><div class=\"wine-rec\">🍷 <strong>推薦：</strong>Sangiovese, Chianti<br>酸度與鹹度平衡，單寧化解油脂</div></div><div class=\"cheese-item\"><h4>🧀 藍紋起司</h4><p class=\"cheese-type\">Gorgonzola</p><div class=\"wine-rec\">🍯 <strong>推薦：</strong>Moscato d'Asti, Recioto della Valpolicella<br>甜酒與鹹味形成絕妙對比</div></div><div class=\"cheese-item\"><h4>🧀 陳年硬質起司</h4><p class=\"cheese-type\">陳年 Parmigiano (24-36 月)</p><div class=\"wine-rec\">🍷 <strong>推薦：</strong>Amarone, Barolo<br>濃郁酒體匹配強烈風味</div></div></div>"
+    },
+    {
+      "type": "list",
+      "title": "🎓 重點回顧",
+      "points": [
+        "✓ 義大利配餐強調「地域性」- 當地菜配當地酒",
+        "✓ 重量匹配：輕料理配輕酒，重料理配重酒",
+        "✓ 酸度平衡：番茄料理必須配高酸度酒",
+        "✓ 油脂切割：高油脂需要高酸度或高單寧",
+        "✓ 甜度法則：酒的甜度必須 ≥ 食物甜度",
+        "✓ Pizza 和義大利麵最佳搭配是高酸度紅酒"
+      ]
+    }
+  ]
+}

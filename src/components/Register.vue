@@ -12,8 +12,8 @@
       <div class="brand-header">
         <div class="wine-glass-icon">🍷</div>
         <div class="brand-text">
-          <h1 class="brand-title">Bordeaux Wine Academy</h1>
-          <p class="brand-subtitle">波爾多葡萄酒學院</p>
+          <h1 class="brand-title">Wine Academy</h1>
+          <p class="brand-subtitle">葡萄酒學院</p>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
       <!-- 註冊表單 -->
       <div v-else class="register-card">
         <h2 class="card-title">建立帳號</h2>
-        <p class="card-subtitle">加入學院，開始你的波爾多葡萄酒學習旅程</p>
+        <p class="card-subtitle">加入學院，開始你的葡萄酒學習旅程</p>
 
         <form @submit.prevent="handleRegister" novalidate class="register-form">
           <!-- 姓名 -->

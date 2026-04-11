@@ -1,0 +1,104 @@
+{
+  "lessonId": "L1M4L2",
+  "title": "地域性配對原則",
+  "quiz": [
+    {
+      "question": "地域性配對的核心理念是？",
+      "options": [
+        "選最貴的酒",
+        "當地酒配當地菜",
+        "紅酒配紅肉白酒配白肉",
+        "隨意搭配"
+      ],
+      "answer": 1,
+      "explanation": "「What grows together, goes together」- 當地的葡萄酒與料理經過數百年共同演化，已達到完美平衡。"
+    },
+    {
+      "question": "Bistecca alla Fiorentina（佛羅倫斯牛排）最經典的搭配是？",
+      "options": [
+        "Barolo",
+        "Chianti Classico",
+        "Prosecco",
+        "Soave"
+      ],
+      "answer": 1,
+      "explanation": "佛羅倫斯牛排來自托斯卡納，當地的 Chianti Classico（Sangiovese）的高酸高單寧完美切割牛肉油脂。"
+    },
+    {
+      "question": "為什麼白松露燉飯適合搭配 Barolo？",
+      "options": [
+        "顏色相同",
+        "土壤香與松露呼應，高單寧切割奶油",
+        "價格相近",
+        "都來自法國"
+      ],
+      "answer": 1,
+      "explanation": "Barolo 的土壤香與白松露完美呼應，且高單寧能切割燉飯中奶油的油膩感。"
+    },
+    {
+      "question": "西西里的 Pasta alla Norma（茄子番茄麵）最佳搭配是？",
+      "options": [
+        "Nero d'Avola",
+        "Barbaresco",
+        "Franciacorta",
+        "Verdicchio"
+      ],
+      "answer": 0,
+      "explanation": "Pasta alla Norma 是西西里經典菜餚，搭配當地的 Nero d'Avola，茄子香與果香呼應。"
+    }
+  ],
+  "slides": [
+    {
+      "type": "title",
+      "title": "🌍 地域性配對原則",
+      "subtitle": "What grows together, goes together"
+    },
+    {
+      "type": "content",
+      "title": "💡 地域性配對的核心理念",
+      "content": "<div class=\"core-concept\"><div class=\"concept-header\"><h3>「一方水土養一方人酒」</h3><p class=\"subtitle-text\">當地的葡萄酒與當地料理經過數百年甚至上千年的共同演化，已經達到完美平衡。</p></div><div class=\"concept-grid\"><div class=\"concept-card\"><div class=\"concept-icon\">⏳</div><h4>時間驗證</h4><p>世代相傳的組合已被無數次驗證，不是偶然，是必然。</p></div><div class=\"concept-card\"><div class=\"concept-icon\">🌱</div><h4>風土一致</h4><p>同一片土地孕育的葡萄與食材，有著相似的礦物質、氣候烙印。</p></div><div class=\"concept-card\"><div class=\"concept-icon\">🧬</div><h4>文化基因</h4><p>釀酒師和廚師都在同一文化背景下創作，自然和諧。</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🗺️ 義大利五大區域配對",
+      "content": "<div class=\"regional-overview\"><div class=\"region-map-card north\"><div class=\"region-label\">🏔️ 北部 (Piemonte, Veneto, Lombardy)</div><div class=\"region-features\"><p><strong>氣候：</strong>大陸性、涼爽、四季分明</p><p><strong>料理特色：</strong>奶油、起司、燉菜、松露、玉米糊</p><p><strong>酒款特色：</strong>高酸度、優雅、結構感強</p></div></div><div class=\"region-map-card central\"><div class=\"region-label\">🌻 中部 (Tuscany, Umbria, Marche)</div><div class=\"region-features\"><p><strong>氣候：</strong>地中海、溫和、日照充足</p><p><strong>料理特色：</strong>橄欖油、番茄、烤肉、野味、豆類</p><p><strong>酒款特色：</strong>高酸高單寧、適合配紅肉</p></div></div><div class=\"region-map-card south\"><div class=\"region-label\">☀️ 南部與島嶼 (Sicily, Sardinia, Puglia)</div><div class=\"region-features\"><p><strong>氣候：</strong>炎熱、乾燥、海洋影響</p><p><strong>料理特色：</strong>海鮮、辛香料、橄欖油、蔬菜</p><p><strong>酒款特色：</strong>酒體飽滿、果香豐富、酒精度高</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍷 Piemonte 地域配對",
+      "content": "<div class=\"regional-pairing\"><div class=\"region-header piemonte-bg\"><h3>🏔️ Piemonte 皮埃蒙特</h3><p>阿爾卑斯山麓的美食天堂</p></div><div class=\"pairing-details\"><div class=\"food-section\"><h4>🍽️ 代表料理</h4><ul><li><strong>Agnolotti del Plin</strong> - 肉餡小餃子</li><li><strong>Brasato al Barolo</strong> - Barolo 紅酒燉牛肉</li><li><strong>Tajarin al Tartufo</strong> - 白松露細麵</li><li><strong>Vitello Tonnato</strong> - 鮪魚醬小牛肉</li><li><strong>Bagna Cauda</strong> - 熱鯷魚蒜醬</li></ul></div><div class=\"wine-section\"><h4>🍷 代表酒款</h4><ul><li><strong>Barolo DOCG</strong> - 力量型紅酒</li><li><strong>Barbaresco DOCG</strong> - 優雅型紅酒</li><li><strong>Barbera d'Alba</strong> - 日常紅酒</li><li><strong>Moscato d'Asti</strong> - 微甜氣泡</li><li><strong>Gavi</strong> - 清爽白酒</li></ul></div></div><div class=\"pairing-examples\"><div class=\"pairing-match perfect\"><div class=\"match-icon\">⭐</div><div class=\"match-content\"><p><strong>經典組合：</strong>白松露燉飯 + Barolo</p><p class=\"match-reason\">土壤香與松露完美呼應，高單寧切割奶油的油膩</p></div></div><div class=\"pairing-match perfect\"><div class=\"match-icon\">⭐</div><div class=\"match-content\"><p><strong>經典組合：</strong>Vitello Tonnato + Gavi</p><p class=\"match-reason\">清爽白酒平衡鮪魚醬的鹹鮮，不壓過小牛肉</p></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍷 Tuscany 地域配對",
+      "content": "<div class=\"regional-pairing\"><div class=\"region-header tuscany-bg\"><h3>🌻 Tuscany 托斯卡納</h3><p>橄欖油與 Sangiovese 的王國</p></div><div class=\"pairing-details\"><div class=\"food-section\"><h4>🍽️ 代表料理</h4><ul><li><strong>Bistecca alla Fiorentina</strong> - 佛羅倫斯 T 骨牛排</li><li><strong>Pappardelle al Cinghiale</strong> - 野豬肉寬麵</li><li><strong>Ribollita</strong> - 托斯卡納蔬菜湯</li><li><strong>Panzanella</strong> - 麵包番茄沙拉</li><li><strong>Lampredotto</strong> - 牛肚三明治</li></ul></div><div class=\"wine-section\"><h4>🍷 代表酒款</h4><ul><li><strong>Brunello di Montalcino</strong></li><li><strong>Chianti Classico</strong></li><li><strong>Vino Nobile di Montepulciano</strong></li><li><strong>Super Tuscan</strong></li><li><strong>Vernaccia di San Gimignano</strong></li></ul></div></div><div class=\"pairing-examples\"><div class=\"pairing-match perfect\"><div class=\"match-icon\">⭐</div><div class=\"match-content\"><p><strong>經典組合：</strong>Bistecca alla Fiorentina + Chianti Classico</p><p class=\"match-reason\">高酸高單寧的 Sangiovese 完美切割牛肉油脂</p></div></div><div class=\"pairing-match perfect\"><div class=\"match-icon\">⭐</div><div class=\"match-content\"><p><strong>經典組合：</strong>野豬肉醬麵 + Brunello di Montalcino</p><p class=\"match-reason\">野味需要濃郁酒體和複雜香料香氣來匹配</p></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍷 Veneto 地域配對",
+      "content": "<div class=\"regional-pairing\"><div class=\"region-header veneto-bg\"><h3>🏛️ Veneto 威尼托</h3><p>從威尼斯潟湖到 Valpolicella 山丘</p></div><div class=\"pairing-details\"><div class=\"food-section\"><h4>🍽️ 代表料理</h4><ul><li><strong>Sarde in Saor</strong> - 醋漬沙丁魚</li><li><strong>Risotto al Nero di Seppia</strong> - 墨魚汁燉飯</li><li><strong>Fegato alla Veneziana</strong> - 威尼斯式肝臟</li><li><strong>Baccalà Mantecato</strong> - 鱈魚慕斯</li><li><strong>Polenta e Osei</strong> - 玉米糊配小鳥</li></ul></div><div class=\"wine-section\"><h4>🍷 代表酒款</h4><ul><li><strong>Prosecco</strong></li><li><strong>Soave Classico</strong></li><li><strong>Amarone della Valpolicella</strong></li><li><strong>Valpolicella Ripasso</strong></li><li><strong>Lugana</strong></li></ul></div></div><div class=\"pairing-examples\"><div class=\"pairing-match perfect\"><div class=\"match-icon\">⭐</div><div class=\"match-content\"><p><strong>經典組合：</strong>Sarde in Saor + Prosecco</p><p class=\"match-reason\">氣泡酒的清爽切割醋漬的酸度，不互相競爭</p></div></div><div class=\"pairing-match perfect\"><div class=\"match-icon\">⭐</div><div class=\"match-content\"><p><strong>經典組合：</strong>燉野味 + Amarone</p><p class=\"match-reason\">濃郁甜美的 Amarone 匹配野味的強烈風味</p></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍷 Sicily 地域配對",
+      "content": "<div class=\"regional-pairing\"><div class=\"region-header sicily-bg\"><h3>🌋 Sicily 西西里</h3><p>地中海陽光與火山土壤</p></div><div class=\"pairing-details\"><div class=\"food-section\"><h4>🍽️ 代表料理</h4><ul><li><strong>Arancini</strong> - 炸飯糰</li><li><strong>Pasta alla Norma</strong> - 茄子番茄麵</li><li><strong>Caponata</strong> - 茄汁燉蔬菜</li><li><strong>Pesce Spada</strong> - 劍魚排</li><li><strong>Involtini di Pesce Spada</strong> - 劍魚捲</li></ul></div><div class=\"wine-section\"><h4>🍷 代表酒款</h4><ul><li><strong>Nero d'Avola</strong></li><li><strong>Etna Rosso</strong></li><li><strong>Grillo</strong></li><li><strong>Cerasuolo di Vittoria</strong></li><li><strong>Marsala</strong></li></ul></div></div><div class=\"pairing-examples\"><div class=\"pairing-match perfect\"><div class=\"match-icon\">⭐</div><div class=\"match-content\"><p><strong>經典組合：</strong>Pasta alla Norma + Nero d'Avola</p><p class=\"match-reason\">當地番茄茄子與當地濃郁紅酒，茄香與果香呼應</p></div></div><div class=\"pairing-match perfect\"><div class=\"match-icon\">⭐</div><div class=\"match-content\"><p><strong>經典組合：</strong>烤劍魚 + Grillo</p><p class=\"match-reason\">地中海白酒的檸檬香與劍魚的鮮甜完美平衡</p></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "📋 地域配對實戰檢查表",
+      "content": "<div class=\"checklist\"><div class=\"check-item\"><div class=\"check-icon\">✓</div><div class=\"check-text\"><strong>Step 1:</strong> 確認料理來自哪個產區</div></div><div class=\"check-item\"><div class=\"check-icon\">✓</div><div class=\"check-text\"><strong>Step 2:</strong> 選擇同產區的葡萄酒（首選）</div></div><div class=\"check-item\"><div class=\"check-icon\">✓</div><div class=\"check-text\"><strong>Step 3:</strong> 如無同產區酒，選擇氣候相似產區</div></div><div class=\"check-item\"><div class=\"check-icon\">✓</div><div class=\"check-text\"><strong>Step 4:</strong> 驗證重量匹配（輕配輕、重配重）</div></div><div class=\"check-item\"><div class=\"check-icon\">✓</div><div class=\"check-text\"><strong>Step 5:</strong> 檢查酸度是否足夠（番茄、醋等）</div></div><div class=\"check-item\"><div class=\"check-icon\">✓</div><div class=\"check-text\"><strong>Step 6:</strong> 確認單寧/酸度能否切割油脂</div></div></div>"
+    },
+    {
+      "type": "list",
+      "title": "🎓 重點回顧",
+      "points": [
+        "✓ 地域配對是義大利配餐的核心原則",
+        "✓ 當地酒配當地菜經過數百年驗證，不是偶然",
+        "✓ 北部：奶油料理配高酸度酒（Barolo + 松露）",
+        "✓ 中部：番茄料理配高酸高單寧酒（Chianti + 牛排）",
+        "✓ 南部：海鮮與辛香料配果香豐富酒（Nero d'Avola + 茄子）",
+        "✓ 實戰時先找同產區酒，再驗證重量和酸度"
+      ]
+    }
+  ]
+}

@@ -35,6 +35,11 @@ export const learningLevels = {
     color: '#4CAF50',
     visibleLayers: ['Regional'],
     features: ['geography', 'basic-grapes', 'climate'],
+    modules: [
+      { id: 'B1M1', title: '地理與品種基礎', lessonIds: ['l1-1', 'l1-2', 'l1-3'] },
+      { id: 'B1M2', title: '產區認識與法規', lessonIds: ['l1-4', 'l1-5', 'l1-6'] },
+      { id: 'B1M3', title: '品鑑技巧與評量', lessonIds: ['l1-7', 'l1-8'] }
+    ],
     lessons: [
       {
         id: 'l1-1',
@@ -168,6 +173,11 @@ export const learningLevels = {
     color: '#2196F3',
     visibleLayers: ['Regional', 'LeftBank-Medoc', 'LeftBank-Graves', 'RightBank-Libournais', 'RightBank-Blaye'],
     features: ['appellations', 'soil-types', 'grape-blends', 'vintage-variation'],
+    modules: [
+      { id: 'B2M1', title: '左岸 Médoc 深度探索', lessonIds: ['l2-1', 'l2-2', 'l2-3', 'l2-4', 'l2-5'] },
+      { id: 'B2M2', title: '右岸精品產區', lessonIds: ['l2-6', 'l2-7', 'l2-8'] },
+      { id: 'B2M3', title: '進階綜合評量', lessonIds: ['l2-9'] }
+    ],
     lessons: [
       {
         id: 'l2-1',
@@ -304,6 +314,12 @@ export const learningLevels = {
     color: '#FF9800',
     visibleLayers: 'all',
     features: ['terroir-details', 'vintage-analysis', 'market-positioning', 'food-pairing'],
+    modules: [
+      { id: 'B3M1', title: '氣候、風土與風險', lessonIds: ['l3-1', 'l3-2', 'l3-3'] },
+      { id: 'B3M2', title: '葵萄園、釀造與調配', lessonIds: ['l3-4', 'l3-5', 'l3-6'] },
+      { id: 'B3M3', title: '商業、文化與配餐', lessonIds: ['l3-9', 'l3-10', 'l3-11'] },
+      { id: 'B3M4', title: '深度分析與認證', lessonIds: ['l3-12', 'l3-13', 'l3-14'] }
+    ],
     lessons: [
       {
         id: 'l3-1',
@@ -495,6 +511,12 @@ export const learningLevels = {
     color: '#E91E63',
     visibleLayers: 'all',
     features: ['expert-analysis', 'investment-grading', 'market-trends', 'production-analysis'],
+    modules: [
+      { id: 'B4M1', title: '風土與釀造科學', lessonIds: ['l4-1', 'l4-2', 'l4-3'] },
+      { id: 'B4M2', title: '商業管理與法規', lessonIds: ['l4-4', 'l4-5', 'l4-6'] },
+      { id: 'B4M3', title: '風險、永續與感官', lessonIds: ['l4-7', 'l4-8', 'l4-9'] },
+      { id: 'B4M4', title: '科技、投資與專題', lessonIds: ['l4-10', 'l4-11', 'l4-12'] }
+    ],
     lessons: [
       {
         id: 'l4-1',

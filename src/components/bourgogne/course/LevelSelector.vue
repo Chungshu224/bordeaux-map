@@ -165,36 +165,41 @@
         </div>
       </section>
 
-      <!-- 學習進度統計橫列（移至課程卡片下方） -->
-      <div class="hero-stats-bar">
-        <div class="stats-bar-card">
-          <div class="stats-row-inner">
-            <div class="stat-hero-item">
-              <span class="stat-hero-value">{{ totalProgress }}%</span>
-              <span class="stat-hero-label">總體進度</span>
+      <!-- 學習進度統計橫列（波爾多同款） -->
+      <div class="burg-stats-mini">
+        <div class="burg-stats-row">
+          <div class="burg-stat-item">
+            <div class="burg-stat-icon">📚</div>
+            <div class="burg-stat-details">
+              <div class="burg-stat-value">{{ burgMiniStats.completedLessons }}</div>
+              <div class="burg-stat-label">已完成</div>
             </div>
-            <div class="stat-sep"></div>
-            <div class="stat-hero-item">
-              <span class="stat-hero-value">{{ completedLevels }} / 4</span>
-              <span class="stat-hero-label">完成階段</span>
+          </div>
+          <div class="burg-stat-item">
+            <div class="burg-stat-icon">⏱️</div>
+            <div class="burg-stat-details">
+              <div class="burg-stat-value">{{ burgMiniStats.studyTime }}</div>
+              <div class="burg-stat-label">學習時長</div>
             </div>
-            <div class="stat-sep"></div>
-            <div class="stat-hero-item">
-              <span class="stat-hero-value">{{ studyTime }} h</span>
-              <span class="stat-hero-label">累積時數</span>
+          </div>
+          <div class="burg-stat-item">
+            <div class="burg-stat-icon">🎯</div>
+            <div class="burg-stat-details">
+              <div class="burg-stat-value">{{ burgMiniStats.quizAccuracy }}%</div>
+              <div class="burg-stat-label">正確率</div>
             </div>
-            <div class="stat-sep"></div>
-            <div class="stat-hero-item">
-              <span class="stat-hero-value">{{ earnedCertificates }}</span>
-              <span class="stat-hero-label">獲得證書</span>
-            </div>
-            <div class="stats-actions">
-              <button class="hero-start-btn" @click="startJourney">
-                <span>▶</span> {{ heroButtonText }}
-              </button>
+          </div>
+          <div class="burg-stat-item">
+            <div class="burg-stat-icon">🔥</div>
+            <div class="burg-stat-details">
+              <div class="burg-stat-value">{{ burgMiniStats.studyStreak }}</div>
+              <div class="burg-stat-label">連續天數</div>
             </div>
           </div>
         </div>
+        <button @click="showProgress = true" class="burg-view-details-btn">
+          查看詳細統計 →
+        </button>
       </div>
 
       <!-- 未登入提示列 -->
@@ -394,6 +399,37 @@ const studyTime = computed(() => {
 
 const earnedCertificates = computed(() => {
   return completedLevels.value
+})
+
+// 學習統計面板數據（波爾多同款）
+const showProgress = ref(false)
+
+const burgMiniStats = computed(() => {
+  let completedCount = 0
+  let totalMinutes = 0
+  let totalScore = 0
+  let scoreCount = 0
+  for (let levelId = 1; levelId <= 4; levelId++) {
+    const levelProg = progressStore.getLevelProgress(levelId)
+    for (const [moduleId, md] of Object.entries(levelProg)) {
+      if (md.completed) completedCount++
+      totalMinutes += progressStore.getLearningTime(moduleId)
+      if (md.quizScore > 0) { totalScore += md.quizScore; scoreCount++ }
+    }
+  }
+  const hours = Math.floor(totalMinutes / 60)
+  const mins = totalMinutes % 60
+  const timeStr = totalMinutes === 0
+    ? '0分鐘'
+    : hours > 0
+      ? (mins > 0 ? `${hours}小時${mins}分鐘` : `${hours}小時`)
+      : `${totalMinutes}分鐘`
+  return {
+    completedLessons: completedCount,
+    studyTime: timeStr,
+    quizAccuracy: scoreCount > 0 ? Math.round(totalScore / scoreCount) : 0,
+    studyStreak: 0
+  }
 })
 
 const startLevel = (level) => {
@@ -721,66 +757,46 @@ const showDetailedProgress = async () => {
 .pm-level-bar-fill.pm-l4 { background: linear-gradient(90deg, #E91E63, #EC407A); }
 .pm-level-pct { font-size: 0.85rem; font-weight: 600; color: #6b7280; min-width: 36px; text-align: right; }
 
-/* ── 進度統計橫列 ──────────────────────────────────────────── */
-.hero-stats-bar {
+/* ── 學習統計面板（波爾多同款） ─────────────────────────────── */
+.burg-stats-mini {
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
   margin-bottom: 1.5rem;
 }
-.stats-bar-card {
-  background: rgba(255,255,255,0.95);
-  border-radius: 20px;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-  backdrop-filter: blur(10px);
+.burg-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
 }
-.stats-row-inner {
+.burg-stat-item {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 12px;
 }
-.stat-hero-item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-.stat-hero-value {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #1f2937;
-  line-height: 1.2;
-}
-.stat-hero-label {
-  font-size: 0.8rem;
-  color: #9ca3af;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-}
-.stat-sep {
-  width: 1px;
-  height: 40px;
-  background: #e5e7eb;
-  flex-shrink: 0;
-  margin: 0 8px;
-}
-.stats-actions { flex-shrink: 0; margin-left: 1.5rem; }
-.hero-start-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+.burg-stat-icon { font-size: 32px; opacity: 0.9; }
+.burg-stat-value { font-size: 24px; font-weight: bold; line-height: 1; }
+.burg-stat-label { font-size: 12px; opacity: 0.8; margin-top: 4px; }
+.burg-view-details-btn {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
   color: white;
-  font-size: 0.95rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: 0 8px 24px rgba(102,126,234,0.35);
-  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-family: inherit;
 }
-.hero-start-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(102,126,234,0.45); }
+.burg-view-details-btn:hover { background: rgba(255, 255, 255, 0.3); }
+@media (max-width: 768px) {
+  .burg-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .burg-stat-item { flex-direction: column; text-align: center; gap: 8px; }
+}
 
 /* ── 課程階段選擇 ───────────────────────────────────────────── */
 .levels-section {

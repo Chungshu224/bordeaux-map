@@ -359,10 +359,6 @@
         <LearningStatsMini @show-details="showProgress = true" />
       </div>
 
-      <!-- 成就摘要 -->
-      <div class="achievements-summary-section">
-        <AchievementsMini @show-all="showAchievements = true" />
-      </div>
     </div>
 
     <!-- 成就彈窗 -->
@@ -402,7 +398,6 @@ import { authState, authActions } from '../stores/authStore.js'
 import { useRouter } from 'vue-router'
 import LearningStatsMini from './LearningStatsMini.vue'
 import LearningProgress from './LearningProgress.vue'
-import AchievementsMini from './AchievementsMini.vue'
 import AchievementsDashboard from './AchievementsDashboard.vue'
 
 // Props

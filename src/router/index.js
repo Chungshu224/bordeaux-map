@@ -56,6 +56,14 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
 
+  // ─── 義大利課程 ─────────────────────────────────────────────────────────────
+  {
+    path: '/italy',
+    name: 'Italy',
+    component: () => import('../components/ItalyPage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
   // ─── 使用者儀表板 ───────────────────────────────────────────────────────────
   {
     path: '/dashboard',

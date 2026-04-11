@@ -1,6 +1,10 @@
 ﻿<template>
   <section class="map-section">
     <div class="map-header">
+      <div class="map-header-left">
+        <button class="map-hdr-btn" @click="router.push('/bourgogne')">← 返回課程</button>
+        <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
+      </div>
       <h1>{{ props.regionConfig?.name || 'Bourgogne wine map' }} 葡萄酒產區地圖</h1>
     </div>
     <div class="map-info-bar" v-if="activeAOC.aoc" :class="{ collapsed: isInfoCollapsed }">
@@ -321,14 +325,6 @@
     </transition>
 
     <div ref="mapContainer" class="map"></div>
-    <!-- 返回學習模式按鈕 (手機版顯示為圓形圖示) -->
-    <button class="btn-learning-mode" @click="$emit('request-learning-mode')" title="返回學習模式">
-      <svg class="learning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-      </svg>
-      <span class="learning-text">返回學習模式</span>
-    </button>
     <button :class="['btn-3d', { 'controls-wide': geologyVisible }]" @click="toggle3D">
       {{ is3D ? '2D' : '3D' }}
     </button>
@@ -402,6 +398,7 @@ function grapeBadgeStyle(grape) {
   }
 }
 import { ref, onMounted, onUnmounted, nextTick, watch, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
@@ -426,6 +423,7 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['resetMap', 'clear-region-info', 'reselect-aoc', 'request-aoc-list', 'request-learning-mode'])
+const router = useRouter()
 
 const TOUCH_LAYOUT_MAX_WIDTH = 4096
 const REAL_MOBILE_MAX_WIDTH = 768
@@ -1857,20 +1855,51 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 16px 20px 12px;
+  background: none;
+  padding: 12px 16px;
   z-index: 10;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  pointer-events: none;
 }
-
+.map-header-left {
+  display: flex;
+  gap: 8px;
+  pointer-events: auto;
+  flex-shrink: 0;
+}
 .map-header h1 {
   margin: 0;
+  flex: 1;
+  text-align: center;
   font-size: 1.5rem;
-  color: #006400; /* DarkGreen for Veneto */
-  line-height: 1.4;
+  color: #006400;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.9), 0 0 10px rgba(255,255,255,0.9);
+  pointer-events: none;
+  padding-top: 4px;
 }
+.map-hdr-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: rgba(0,100,0,0.78);
+  color: #fff;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.map-hdr-btn:hover { background: rgba(0,120,0,0.92); }
+.map-hdr-btn.ghost {
+  background: rgba(255,255,255,0.75);
+  border: 1.5px solid rgba(0,100,0,0.5);
+  color: #005000;
+}
+.map-hdr-btn.ghost:hover { background: rgba(255,255,255,0.92); }
 
 .map-info-bar {
   position: absolute;
@@ -2230,52 +2259,6 @@ onUnmounted(() => {
   font-style: italic;
 }
 
-.btn-learning-mode {
-  position: absolute;
-  top: 80px;
-  left: 20px;
-  width: 200px;
-  height: 48px;
-  padding: 0 12px;
-  background: linear-gradient(180deg, #4784b4, #33669d);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 100;
-  font-weight: 800;
-  font-size: 1.15rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transition: transform 0.18s ease, filter 0.18s ease;
-}
-
-.btn-learning-mode:hover {
-  filter: brightness(1.05);
-  transform: translateY(-1px);
-}
-
-.btn-learning-mode:active {
-  transform: translateY(0px);
-}
-
-
-.btn-learning-mode .learning-icon {
-  display: none;
-}
-
-.btn-learning-mode .learning-text {
-  display: inline;
-}
-
-
-.btn-learning-mode .learning-icon {
-  display: none;
-}
-
-.btn-learning-mode .learning-text {
-  display: inline;
-}
-
 .btn-3d {
 
 
@@ -2624,38 +2607,16 @@ onUnmounted(() => {
     background: none;
     border: none;
     pointer-events: none;
-    padding-top: 25px;
+    padding: 12px 16px;
     z-index: 1000;
   }
   .map-header h1 {
     font-size: 1.16rem;
     color: #5b1d1d;
     text-shadow: 0 1px 4px rgba(255,255,255, 0.9), 0 0 10px rgba(255,255,255, 0.9), 0 0 15px rgba(255,255,255, 0.9);
-    pointer-events: auto;
+    pointer-events: none;
   }
-
-  .btn-learning-mode {
-    position: fixed !important;
-    top: 45%;
-    left: 10px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    padding: 0;
-    background: #4CAF50; /* Green */
-    color: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  }
-  .btn-learning-mode .learning-icon {
-    display: block;
-    color: #111;
-  }
-  .btn-learning-mode .learning-text {
-    display: none;
-  }
+  .map-header-left { pointer-events: auto; }
 
   .btn-3d, .btn-contours {
     display: none; /* Map tools moved to panels */

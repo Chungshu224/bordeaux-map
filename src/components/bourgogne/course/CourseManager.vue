@@ -11,61 +11,14 @@
 
     <!-- 課程學習介面 -->
     <div v-else-if="currentView === 'courseContent'" class="course-container">
-      <!-- 課程列表和模組總覽 -->
-      <CourseLayout 
+      <!-- 新版統一側邊欄架構 -->
+      <BourgogneCourseLayout
         v-if="viewMode !== 'lesson'"
         :currentLevel="selectedLevel"
         @backToLevelSelector="backToLevelSelector"
-        @selectModule="handleSelectModule"
         @changeLevel="handleChangeLevel"
         @startLesson="handleStartLesson"
-      >
-        <!-- 模組總覽 -->
-        <div v-if="viewMode === 'overview' && selectedModule && moduleData" class="module-overview">
-          <div class="module-header">
-            <div class="module-icon">{{ selectedModule.icon }}</div>
-            <h1>{{ selectedModule.title }}</h1>
-            <p class="module-description">{{ selectedModule.description }}</p>
-          </div>
-
-          <div class="lessons-list">
-            <h2>課程大綱</h2>
-            <div
-              v-for="(lesson, index) in moduleData.lessons"
-              :key="lesson.id"
-              class="lesson-item"
-              @click="startLesson(index)"
-            >
-              <div class="lesson-number">{{ index + 1 }}</div>
-              <div class="lesson-info">
-                <h3>{{ lesson.title }}</h3>
-              </div>
-              <div class="lesson-status">
-                <span v-if="isLessonCompleted(lesson.id)" class="completed-icon">✓</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="module-actions">
-            <button class="start-module-btn" @click="startLesson(0)">
-              {{ hasModuleProgress ? '繼續學習' : '開始學習' }}
-            </button>
-            <button class="quiz-btn" @click="startQuiz" v-if="moduleData.quiz">
-              {{ allLessonsCompleted ? '📝 開始測驗' : '📝 挑戰測驗' }}
-            </button>
-          </div>
-        </div>
-
-        <!-- 測驗 -->
-        <QuizEngine
-          v-else-if="viewMode === 'quiz'"
-          :quiz="moduleData.quiz"
-          :moduleId="selectedModule.id"
-          @quizComplete="handleQuizComplete"
-          @reviewLessons="reviewLessons"
-          @continueNext="continueToNextModule"
-        />
-      </CourseLayout>
+      />
 
       <!-- 課程內容 - 全螢幕簡報模式 -->
       <SlideViewer
@@ -96,7 +49,7 @@
 import { ref, computed, defineEmits } from 'vue'
 import { useProgress } from '../composables/useProgress.js'
 import LevelSelector from './LevelSelector.vue'
-import CourseLayout from './CourseLayout.vue'
+import BourgogneCourseLayout from './BourgogneCourseLayout.vue'
 import LessonViewer from './LessonViewer.vue'
 import SlideViewer from './SlideViewer.vue'
 import QuizEngine from './QuizEngine.vue'

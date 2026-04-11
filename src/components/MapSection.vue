@@ -3,11 +3,9 @@
     <div class="map-header">
       <div class="map-header-left">
         <button class="map-hdr-btn" @click="router.push('/bordeaux')">← 返回課程</button>
-      </div>
-      <h1>Bordeaux Wine Region Map</h1>
-      <div class="map-header-right">
         <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
       </div>
+      <h1>Bordeaux Wine Region Map</h1>
     </div>
     <div
       class="map-info-bar"
@@ -2403,43 +2401,43 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 6px 16px;
+  background: none;
+  padding: 12px 16px;
   z-index: 10;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  align-items: flex-start;
+  gap: 12px;
+  pointer-events: none;
 }
 
-.map-header-left,
-.map-header-right {
+.map-header-left {
   display: flex;
-  align-items: center;
   gap: 8px;
-  min-width: 120px;
+  pointer-events: auto;
+  flex-shrink: 0;
 }
-.map-header-right { justify-content: flex-end; }
 
 .map-hdr-btn {
-  padding: 5px 14px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   border: none;
-  background: #8B0000;
+  background: rgba(139,0,0,0.82);
   color: #fff;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   transition: background 0.2s;
   white-space: nowrap;
 }
-.map-hdr-btn:hover { background: #a00; }
+.map-hdr-btn:hover { background: rgba(160,0,0,0.92); }
 .map-hdr-btn.ghost {
-  background: transparent;
-  border: 1.5px solid #8B0000;
-  color: #8B0000;
+  background: rgba(255,255,255,0.75);
+  border: 1.5px solid rgba(139,0,0,0.5);
+  color: #7b1212;
 }
-.map-hdr-btn.ghost:hover { background: rgba(139,0,0,0.06); }
+.map-hdr-btn.ghost:hover { background: rgba(255,255,255,0.92); }
 
 .map-header h1 {
   margin: 0;
@@ -2447,6 +2445,8 @@ onUnmounted(() => {
   color: #8B0000;
   text-align: center;
   flex: 1;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.9), 0 0 10px rgba(255,255,255,0.9);
+  padding-top: 4px;
 }
 
 .map-info-bar {

@@ -1,0 +1,106 @@
+{
+  "lessonId": "L1M1L1",
+  "title": "義大利葡萄酒簡介",
+  "quiz": [
+    {
+      "question": "義大利大約有多少個本土葡萄品種？",
+      "options": [
+        "約 100 個",
+        "約 200 個",
+        "約 350 個",
+        "約 500 個"
+      ],
+      "answer": 2,
+      "explanation": "義大利擁有超過 350 個本土葡萄品種，是世界上葡萄品種最多樣化的國家之一。"
+    },
+    {
+      "question": "義大利的 DOCG 和 DOC 總數約有多少個？",
+      "options": [
+        "約 200 個",
+        "約 300 個",
+        "約 400 個",
+        "約 500 個"
+      ],
+      "answer": 2,
+      "explanation": "義大利有 74 個 DOCG 和 334 個 DOC，總計超過 400 個法定產區。"
+    },
+    {
+      "question": "義大利紅葡萄酒產量約佔總產量的多少比例？",
+      "options": [
+        "約 30%",
+        "約 45%",
+        "約 60%",
+        "約 75%"
+      ],
+      "answer": 2,
+      "explanation": "義大利紅葡萄酒產量約佔 60%，白葡萄酒約 35%，氣泡酒約 5%。"
+    },
+    {
+      "question": "以下哪個不是義大利北部的主要產區？",
+      "options": [
+        "Piemonte",
+        "Veneto",
+        "Sicily",
+        "Lombardy"
+      ],
+      "answer": 2,
+      "explanation": "Sicily（西西里）是義大利南部的島嶼產區，不屬於北部。"
+    }
+  ],
+  "slides": [
+    {
+      "type": "title",
+      "title": "🍷 義大利葡萄酒簡介",
+      "subtitle": "探索世界上最多樣化的葡萄酒國度"
+    },
+    {
+      "type": "list",
+      "title": "🌍 義大利 = 葡萄酒王國",
+      "points": [
+        "🥇 世界第一大葡萄酒生產國",
+        "🍇 超過 350 種本土葡萄品種",
+        "🏛️ 4000 年釀酒歷史",
+        "🗺️ 20 個行政區都產酒",
+        "📜 74 個 DOCG + 334 個 DOC"
+      ]
+    },
+    {
+      "type": "stats",
+      "title": "📊 產量數據一覽",
+      "stats": [
+        {
+          "value": "45-50",
+          "label": "億公升/年"
+        },
+        {
+          "value": "60%",
+          "label": "紅葡萄酒"
+        },
+        {
+          "value": "35%",
+          "label": "白葡萄酒"
+        },
+        {
+          "value": "5%",
+          "label": "氣泡酒"
+        }
+      ],
+      "intro": ""
+    },
+    {
+      "type": "content",
+      "title": "🗺️ 三大區域劃分",
+      "content": "<table class=\"region-table\"><tbody><tr><th>區域</th><th>代表產區</th><th>特色</th></tr><tr><td><strong>北部</strong></td><td>Piemonte, Veneto, Lombardy</td><td>🏔️ 高品質紅酒、氣泡酒</td></tr><tr><td><strong>中部</strong></td><td>Toscana, Umbria, Marche</td><td>🌿 Sangiovese 為王</td></tr><tr><td><strong>南部 + 島嶼</strong></td><td>Campania, Puglia, Sicily</td><td>☀️ 濃郁風格、本土品種</td></tr></tbody></table>"
+    },
+    {
+      "type": "list",
+      "title": "🎯 課程目標",
+      "points": [
+        "✓ 認識義大利葡萄酒的獨特性",
+        "✓ 了解基本產區分布",
+        "✓ 掌握分級制度概念",
+        "✓ 建立進一步學習的基礎"
+      ]
+    }
+  ]
+}

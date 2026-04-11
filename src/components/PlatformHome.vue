@@ -33,7 +33,7 @@
         <div class="hero-tag">🌍 世界三大頂級產區・全中文深度教學</div>
         <h1 class="hero-title">用知識<span class="accent">品味</span>每一口</h1>
         <p class="hero-desc">
-          系統化學習波爾多、勃根地、義大利頂級葡萄酒<br>
+          系統化學習波爾多、布根地、義大利頂級葡萄酒<br>
           互動地圖・AI練習題・品飲筆記，一個平台全搞定
         </p>
         <!-- 已登入：顯示課程入口 -->
@@ -46,8 +46,8 @@
             <button class="cta-course bourgogne-btn" @click="router.push('/bourgogne')">
               🍇 布根地課程
             </button>
-            <button class="cta-course coming-btn" disabled>
-              🇮🇹 義大利（即將推出）
+            <button class="cta-course italy-btn" @click="router.push('/italy')">
+              🇮🇹 義大利課程
             </button>
           </div>
         </div>
@@ -77,7 +77,7 @@
       <div class="section-inner">
         <div class="section-header">
           <h2>選擇您的課程</h2>
-          <p>每套課程由專業認證講師設計，結合互動地圖、測驗與品飲工具</p>
+          <p>專業課程設計，結合互動地圖、測驗與品飲工具</p>
         </div>
 
         <div class="courses-grid">
@@ -161,7 +161,7 @@
             <div class="card-hero">
               <div class="card-icon">🍇</div>
               <div class="card-region">France · Bourgogne</div>
-              <h3 class="card-title">勃根地葡萄酒</h3>
+              <h3 class="card-title">布根地葡萄酒</h3>
               <p class="card-desc">從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界</p>
             </div>
             <div class="card-actions">
@@ -171,21 +171,16 @@
           </div>
 
           <!-- ── Italy ── -->
-          <div class="course-card italy coming-soon">
-            <div class="card-status soon">⏳ 即將推出</div>
+          <div class="course-card italy">
+            <div class="card-status new">🆕 正式上線</div>
             <div class="card-hero">
               <div class="card-icon">🇮🇹</div>
               <div class="card-region">Italy</div>
               <h3 class="card-title">義大利葡萄酒</h3>
               <p class="card-desc">探索 Barolo、Brunello、Amarone 等世界頂級義大利葡萄酒，20 個 DOC/DOCG 產區完整解析</p>
             </div>
-            <div class="coming-soon-overlay">
-              <div class="cs-box">
-                <div class="cs-icon">🚧</div>
-                <div class="cs-title">課程製作中</div>
-                <div class="cs-desc">預計 2027 年上半年上線</div>
-                <button class="cs-notify" @click="handleNotify('italy')">✉️ 上線時通知我</button>
-              </div>
+            <div class="card-actions">
+              <button class="card-cta" @click="router.push('/italy')">🇮🇹 進入義大利課程</button>
             </div>
           </div>
 
@@ -726,12 +721,12 @@ onMounted(async () => {
   box-shadow: 0 4px 20px rgba(74,30,94,0.5);
 }
 .bourgogne-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(74,30,94,0.6); }
-.coming-btn {
-  background: rgba(255,255,255,0.05);
-  color: #7a6a5a;
-  border: 1.5px solid rgba(255,255,255,0.1);
-  cursor: not-allowed;
+.italy-btn {
+  background: linear-gradient(135deg, #7a2020, #a33030);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(122,32,32,0.5);
 }
+.italy-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(122,32,32,0.6); }
 .hero-stats { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
 .stat-item { text-align: center; padding: 0 12px; }
 .stat-num { display: block; font-size: 2rem; font-weight: 800; color: #d4af37; line-height: 1; }

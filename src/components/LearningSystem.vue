@@ -12,100 +12,41 @@
       </div>
     </div>
 
-    <!-- 頂部導航 - 簡化版 -->
-    <header class="learning-header">
-      <div class="header-content">
-        <div class="header-left">
-          <h1 class="system-title">🍷 波爾多葡萄酒學院</h1>
-          <button 
-            class="back-btn" 
-            @click="handleBackButton" 
-            :title="currentLesson ? '返回課程簡介' : '返回 Level 選擇'"
-          >
-            ← {{ currentLesson ? '返回課程簡介' : '返回 Level 選擇' }}
-          </button>
-        </div>
-        
-        <!-- 課程導航按鈕：僅在有課程時顯示 -->
-        <div v-if="currentLesson" class="lesson-nav-btns">
-          <button 
-            class="nav-btn prev-btn"
-            @click="handlePreviousSlide"
-            :disabled="!canGoPrevious"
-            title="上一頁"
-          >
-            ← 上一頁
-          </button>
-          <button 
-            class="nav-btn next-btn"
-            @click="handleNextSlide"
-            :disabled="!canGoNext"
-            title="下一頁"
-          >
-            下一頁 →
-          </button>
-        </div>
-        
-        <div class="header-right">
-          <div class="progress-badge">{{ totalProgress }}%</div>
-          <div class="achievement-badge" @click="showAchievements" title="成就">
-            🏆 {{ achievementCount }}
+    <!-- 課程內容頁（總覽）：無當前課程時顯示 BordeauxCourseLayout -->
+    <BordeauxCourseLayout
+      v-if="!currentLesson"
+      :currentLevel="currentLevel"
+      :currentLevelData="currentLevelData"
+      :completedLessons="learningState.completedLessons"
+      @backToLevelSelector="emit('exitLearning')"
+      @changeLevel="(n) => learningActions.setLevel(n)"
+      @startLesson="(lesson) => learningActions.startLesson(lesson.id)"
+    />
+
+    <!-- 課程播放頁：有當前課程時顯示頂部導航欄 + 簡報內容 -->
+    <template v-else>
+      <header class="learning-header">
+        <!-- Row 1: 返回按鈕 + 進度徽章 -->
+        <div class="lh-row lh-row-1">
+          <button class="lh-btn lh-back-btn" @click="handleBackButton">← 返回</button>
+          <div class="lh-badges">
+            <span class="lh-badge lh-progress-badge">{{ totalProgress }}%</span>
+            <span class="lh-badge lh-achievement-badge" @click="showAchievements" title="成就">
+              🏆 {{ achievementCount }}
+            </span>
           </div>
         </div>
-      </div>
-    </header>
-
-    <!-- 主要內容區域 -->
-    <main class="learning-main">
-      <!-- 主要學習區域 -->
-      <section class="learning-content">
-        <!-- 歡迎頁面 - 簡化版 -->
-        <div v-if="!currentLesson" class="welcome-screen">
-          <div class="welcome-content">
-            <h2>{{ currentLevelData.title }}</h2>
-            <p class="level-description">{{ currentLevelData.description }}</p>
-            
-            <div class="quick-start">
-              <button 
-                class="start-btn"
-                @click="startFirstLesson"
-              >
-                {{ currentLevelProgress.completed === 0 ? '🚀 開始學習' : '▶ 繼續學習' }}
-              </button>
-              <p class="progress-hint">已完成 {{ currentLevelProgress.completed }}/{{ currentLevelProgress.total }} 課程</p>
-            </div>
-
-            <!-- 課程列表 - 整合到簡介頁面 -->
-            <div class="intro-lessons-list">
-              <h3 class="lessons-list-title">課程內容</h3>
-              <div class="intro-lessons-grid">
-                <div 
-                  v-for="(lesson, index) in visibleLessons" 
-                  :key="lesson.id"
-                  :class="['intro-lesson-card', { 
-                    completed: isLessonCompleted(lesson.id),
-                    locked: !isLessonUnlocked(lesson.id, index)
-                  }]"
-                  @click="selectLesson(lesson, index)"
-                >
-                  <div class="intro-lesson-number">
-                    <span v-if="isLessonCompleted(lesson.id)">✓</span>
-                    <span v-else-if="!isLessonUnlocked(lesson.id, index)">🔒</span>
-                    <span v-else>{{ index + 1 }}</span>
-                  </div>
-                  <div class="intro-lesson-info">
-                    <h4 class="intro-lesson-title">{{ lesson.title }}</h4>
-                    <span class="intro-lesson-duration">{{ lesson.duration }}分</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Row 2: 上一頁 / 下一頁 -->
+        <div class="lh-row lh-row-2">
+          <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious" title="上一頁">◀ 上一頁</button>
+          <span class="lh-nav-label">投影片導航</span>
+          <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext" title="下一頁">下一頁 ▶</button>
         </div>
+      </header>
 
-        <!-- 課程內容 -->
-        <div v-else class="lesson-view">
-          <!-- 簡報模式 -->
+      <!-- 課程簡報主體 -->
+      <main class="learning-main">
+        <div class="lesson-view">
           <PresentationLesson
             ref="presentationLessonRef"
             :lessonId="resolvedLessonId"
@@ -113,8 +54,8 @@
             @nextLesson="handleLessonNext"
           />
         </div>
-      </section>
-    </main>
+      </main>
+    </template>
 
     <!-- 成就通知 -->
     <div v-if="achievementNotification" class="achievement-notification">
@@ -133,6 +74,7 @@
 import { ref, computed, onMounted, watch, nextTick } from 'vue'
 import { learningState, learningLevels, learningActions, learningProgress } from '../stores/learningStore.js'
 import { authActions } from '../stores/authStore.js'
+import BordeauxCourseLayout from './BordeauxCourseLayout.vue'
 import PresentationLesson from './PresentationLesson.vue'
 
 // Emits
@@ -410,5 +352,81 @@ html, body {
 }
 
 @keyframes rotateSys { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-</style> to { transform: rotate(360deg); } }
+</style>
 
+<style scoped>
+/* ===== 波爾多課程簡報頁頂部導航欄 ===== */
+.learning-header {
+  background: linear-gradient(135deg, #8B0000 0%, #4a0000 100%);
+  padding: 12px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.lh-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lh-row-1 {
+  margin-bottom: 10px;
+}
+
+.lh-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  white-space: nowrap;
+}
+
+.lh-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lh-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.lh-back-btn {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lh-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lh-badge {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lh-achievement-badge {
+  cursor: pointer;
+}
+
+.lh-achievement-badge:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lh-nav-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+</style>
