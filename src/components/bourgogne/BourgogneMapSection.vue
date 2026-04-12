@@ -402,6 +402,12 @@ import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
+import {
+  getMapboxToken,
+  shouldUseMapbox,
+  getOSMStyle,
+  getMapboxStyleUrl
+} from '@/utils/getMapboxToken'
 
 const props = defineProps({
   activeAOC: Object,
@@ -464,9 +470,11 @@ const mapContainer = ref(null)
 let map = null
 const is3D = ref(false)
 const showContours = ref(false)
+const mapSupportsTerrain = ref(false)
 const isInfoCollapsed = ref(false)
 const geojsonCache = new Map()
 let resetBounds = null // stored bbox [minX,minY,maxX,maxY] for reset
+let hasRetriedWithOsmFallback = false
 const geologyIndex = ref(null)
 const geologyVisible = ref(false)
 const geologyActiveMaterials = ref([])
@@ -1153,7 +1161,32 @@ const resetMap = async () => {
   emit('resetMap')
 }
 
+const extractMapErrorMessage = (err) => {
+  if (typeof err === 'string') return err
+  return err?.error?.message || err?.message || '未知錯誤'
+}
+
+const isMapboxAuthError = (err) => {
+  const message = extractMapErrorMessage(err).toLowerCase()
+  const status = Number(err?.error?.status || err?.status || 0)
+  return (
+    status === 401 ||
+    status === 403 ||
+    message.includes('401') ||
+    message.includes('403') ||
+    message.includes('forbidden') ||
+    message.includes('unauthorized') ||
+    message.includes('access token') ||
+    message.includes('not authorized')
+  )
+}
+
 const toggle3D = () => {
+  if (!mapSupportsTerrain.value) {
+    is3D.value = false
+    return
+  }
+
   is3D.value = !is3D.value
   if (map) {
     if (is3D.value) {
@@ -1196,6 +1229,11 @@ const toggle3D = () => {
 }
 
 const toggleContours = () => {
+  if (!mapSupportsTerrain.value) {
+    showContours.value = false
+    return
+  }
+
   showContours.value = !showContours.value
   if (map) {
     const visibility = showContours.value ? 'visible' : 'none'
@@ -1641,11 +1679,29 @@ const initMap = async (retry = 0) => {
       return
     }
     
-    mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
+    const MAPBOX_TOKEN = getMapboxToken()
+    const useMapbox = !hasRetriedWithOsmFallback && shouldUseMapbox(MAPBOX_TOKEN)
+
+    let chosenStyle
+    if (useMapbox) {
+      mapboxgl.accessToken = MAPBOX_TOKEN
+      chosenStyle = getMapboxStyleUrl(MAPBOX_TOKEN, 'satellite-streets-v12')
+    } else {
+      mapboxgl.accessToken = 'pk.notarealtoken'
+      chosenStyle = getOSMStyle()
+      if (!MAPBOX_TOKEN) {
+        console.warn('[BourgogneMap] 未偵測到 Mapbox token，改用 OSM 背景。')
+      }
+    }
+    mapSupportsTerrain.value = useMapbox
+    if (!useMapbox) {
+      is3D.value = false
+      showContours.value = false
+    }
     
     map = new mapboxgl.Map({
       container: mapContainer.value,
-      style: 'mapbox://styles/mapbox/satellite-streets-v12',
+      style: chosenStyle,
       // 使用 regionConfig 的預設視角
       center: DEFAULT_VIEW.value.center,
       zoom: DEFAULT_VIEW.value.zoom,
@@ -1657,110 +1713,112 @@ const initMap = async (retry = 0) => {
       map.addControl(new mapboxgl.NavigationControl(), 'top-right')
       map.addControl(new mapboxgl.FullscreenControl(), 'top-right')
       
-      // 添加 3D 地形 source (Mapbox Terrain DEM v1)
-      map.addSource('mapbox-dem', {
-        type: 'raster-dem',
-        url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
-        tileSize: 512,
-        maxzoom: 14
-      })
-      
-      // 添加等高線 source (Mapbox Terrain Vector v2)
-      map.addSource('contours', {
-        type: 'vector',
-        url: 'mapbox://mapbox.mapbox-terrain-v2'
-      })
-      
-      // 添加等高線圖層（初始隱藏）
-      map.addLayer({
-        id: 'contour-lines',
-        type: 'line',
-        source: 'contours',
-        'source-layer': 'contour',
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round',
-          'visibility': 'none'  // 初始隱藏
-        },
-        paint: {
-          'line-color': '#ff6b35',
-          'line-width': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            10, 0.5,
-            14, 1.5
-          ],
-          'line-opacity': 0.8
-        },
-        filter: ['==', ['get', 'index'], 1]  // 每10米一條等高線
-      })
-      
-      // 添加粗等高線（每100米）
-      map.addLayer({
-        id: 'contour-lines-bold',
-        type: 'line',
-        source: 'contours',
-        'source-layer': 'contour',
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round',
-          'visibility': 'none'  // 初始隱藏
-        },
-        paint: {
-          'line-color': '#d62828',
-          'line-width': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            10, 1,
-            14, 2.5
-          ],
-          'line-opacity': 0.9
-        },
-        filter: ['==', ['get', 'index'], 5]  // 每50米一條粗等高線
-      })
-      
-      // 添加等高線標籤
-      map.addLayer({
-        id: 'contour-labels',
-        type: 'symbol',
-        source: 'contours',
-        'source-layer': 'contour',
-        layout: {
-          'symbol-placement': 'line',
-          'text-field': ['concat', ['get', 'ele'], 'm'],
-          'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
-          'text-size': 10,
-          'text-pitch-alignment': 'viewport',
-          'symbol-spacing': 250,  // 增加標籤間距避免過於密集
-          'visibility': 'none'  // 初始隱藏
-        },
-        paint: {
-          'text-color': '#d62828',
-          'text-halo-color': '#fff',
-          'text-halo-width': 1.5
-        },
-        filter: ['==', ['get', 'index'], 1]  // 每10米顯示標籤
-      })
-      
-      // 如果已經是 3D 模式，立即啟用地形
-      if (is3D.value) {
-        map.setTerrain({ 
-          source: 'mapbox-dem', 
-          exaggeration: 1.5  // 地形高度誇張倍數（1.5x）
+      if (mapSupportsTerrain.value) {
+        // 添加 3D 地形 source (Mapbox Terrain DEM v1)
+        map.addSource('mapbox-dem', {
+          type: 'raster-dem',
+          url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+          tileSize: 512,
+          maxzoom: 14
         })
-        
-        // 添加天空層增強 3D 效果
+
+        // 添加等高線 source (Mapbox Terrain Vector v2)
+        map.addSource('contours', {
+          type: 'vector',
+          url: 'mapbox://mapbox.mapbox-terrain-v2'
+        })
+
+        // 添加等高線圖層（初始隱藏）
         map.addLayer({
-          id: 'sky',
-          type: 'sky',
+          id: 'contour-lines',
+          type: 'line',
+          source: 'contours',
+          'source-layer': 'contour',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round',
+            'visibility': 'none'  // 初始隱藏
+          },
           paint: {
-            'sky-type': 'atmosphere',
-            'sky-atmosphere-sun': [0.0, 90.0],
-            'sky-atmosphere-sun-intensity': 15
-          }
+            'line-color': '#ff6b35',
+            'line-width': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              10, 0.5,
+              14, 1.5
+            ],
+            'line-opacity': 0.8
+          },
+          filter: ['==', ['get', 'index'], 1]  // 每10米一條等高線
         })
+
+        // 添加粗等高線（每100米）
+        map.addLayer({
+          id: 'contour-lines-bold',
+          type: 'line',
+          source: 'contours',
+          'source-layer': 'contour',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round',
+            'visibility': 'none'  // 初始隱藏
+          },
+          paint: {
+            'line-color': '#d62828',
+            'line-width': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              10, 1,
+              14, 2.5
+            ],
+            'line-opacity': 0.9
+          },
+          filter: ['==', ['get', 'index'], 5]  // 每50米一條粗等高線
+        })
+
+        // 添加等高線標籤
+        map.addLayer({
+          id: 'contour-labels',
+          type: 'symbol',
+          source: 'contours',
+          'source-layer': 'contour',
+          layout: {
+            'symbol-placement': 'line',
+            'text-field': ['concat', ['get', 'ele'], 'm'],
+            'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+            'text-size': 10,
+            'text-pitch-alignment': 'viewport',
+            'symbol-spacing': 250,  // 增加標籤間距避免過於密集
+            'visibility': 'none'  // 初始隱藏
+          },
+          paint: {
+            'text-color': '#d62828',
+            'text-halo-color': '#fff',
+            'text-halo-width': 1.5
+          },
+          filter: ['==', ['get', 'index'], 1]  // 每10米顯示標籤
+        })
+
+        // 如果已經是 3D 模式，立即啟用地形
+        if (is3D.value) {
+          map.setTerrain({
+            source: 'mapbox-dem',
+            exaggeration: 1.5  // 地形高度誇張倍數（1.5x）
+          })
+
+          // 添加天空層增強 3D 效果
+          map.addLayer({
+            id: 'sky',
+            type: 'sky',
+            paint: {
+              'sky-type': 'atmosphere',
+              'sky-atmosphere-sun': [0.0, 90.0],
+              'sky-atmosphere-sun-intensity': 15
+            }
+          })
+        }
       }
       
       // load initial village-level geojsons and set reset bounds
@@ -1770,9 +1828,27 @@ const initMap = async (retry = 0) => {
       await loadGeologyIndex()
     })
     
-    map.on('error', (err) => {
+    map.on('error', async (err) => {
+      const errorMessage = extractMapErrorMessage(err)
+
+      if (mapSupportsTerrain.value && isMapboxAuthError(err) && !hasRetriedWithOsmFallback) {
+        console.warn('[BourgogneMap] Mapbox 授權失敗，將自動改用 OSM。', errorMessage)
+        hasRetriedWithOsmFallback = true
+        mapError.value = null
+        showContours.value = false
+        is3D.value = false
+
+        if (map) {
+          map.remove()
+          map = null
+        }
+
+        await initMap(0)
+        return
+      }
+
       console.error('地圖錯誤:', err)
-      mapError.value = `地圖錯誤: ${err.error?.message || '未知錯誤'}`
+      mapError.value = `地圖錯誤: ${errorMessage}`
     })
     
     mapError.value = null

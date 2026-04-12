@@ -488,7 +488,7 @@ async function initMap() {
       filter: ['==', ['get', 'index'], 1]
     })
     mapReady.value = true
-    await loadAllOutlines()
+    // 進入探索地圖時只顯示最大範圍框架（region outline）
     await loadRegionOutline({ animate: false })  // 位置已由 bounds 指定，只畫邊界線
   })
 }
@@ -564,7 +564,7 @@ watch(() => props.region, async (newRegion) => {
     const style = map.getStyle()
     ;(style.layers || []).forEach(l => { if (l.id.startsWith('aoc_') || l.id.startsWith('highlight') || l.id === 'region_outline_line') map.removeLayer(l.id) })
     Object.keys(style.sources || {}).forEach(s => { if (s.startsWith('aoc_') || s === 'highlight' || s === 'region_outline') map.removeSource(s) })
-    await loadAllOutlines()
+    // 切換區域時同樣維持只顯示區域框架
     await loadRegionOutline()
   }
 }, { deep: true })
