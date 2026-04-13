@@ -27,6 +27,73 @@
       "type": "content",
       "title": "綜合對比：盲品決策樹",
       "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">在盲品義大利氣泡酒時，可以遵循以下決策樹來快速定位酒款：</p><div class=\"bg-gray-900 p-6 rounded-xl text-white mb-8\"><div class=\"flex flex-col space-y-4\"><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-yellow-400 font-bold mb-2\">步驟 1：是否有明顯的酵母自溶味（烤麵包、餅乾）？</h4><div class=\"flex flex-col md:flex-row gap-4 mt-2\"><div class=\"flex-1 bg-gray-700 p-3 rounded border-l-4 border-red-500\"><span class=\"font-bold text-red-300\">否 (純粹果香) ➔ 查馬法</span><p class=\"text-sm text-gray-300 mt-1\">進入步驟 2A</p></div><div class=\"flex-1 bg-gray-700 p-3 rounded border-l-4 border-green-500\"><span class=\"font-bold text-green-300\">是 (麵包/餅乾) ➔ 傳統法</span><p class=\"text-sm text-gray-300 mt-1\">進入步驟 2B</p></div></div></div><div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\"><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-red-400 font-bold mb-2\">步驟 2A：果香類型與甜度？</h4><ul class=\"text-sm text-gray-300 space-y-2\"><li><strong class=\"text-white\">青蘋果/梨子 + 微甜：</strong> <span class=\"text-blue-300\">Prosecco</span></li><li><strong class=\"text-white\">荔枝/玫瑰/葡萄 + 極甜：</strong> <span class=\"text-blue-300\">Asti (Moscato)</span></li><li><strong class=\"text-white\">紅色水果 + 微氣泡 (Frizzante)：</strong> <span class=\"text-blue-300\">Lambrusco</span></li></ul></div><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-green-400 font-bold mb-2\">步驟 2B：酸度與果香成熟度？</h4><ul class=\"text-sm text-gray-300 space-y-2\"><li><strong class=\"text-white\">酸度柔和 + 成熟黃蘋果/桃子：</strong> <span class=\"text-amber-300\">Franciacorta (溫暖)</span></li><li><strong class=\"text-white\">酸度極高 + 青蘋果/冷冽礦物：</strong> <span class=\"text-blue-300\">Trento DOC (高山)</span></li></ul></div></div></div></div></div>"
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 年份識別知識檢測",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "在盲品氣泡酒時，如果你聞到明顯的「烤麵包、布里歐 (Brioche) 與餅乾」香氣，這代表該酒款使用了哪種釀造法？",
+          "options": [
+            "查馬法 (Charmat Method)",
+            "傳統法 (Traditional Method)",
+            "阿斯蒂法 (Asti Method)",
+            "二氧化碳注入法"
+          ],
+          "correct": 1,
+          "explanation": "烤麵包與餅乾香氣來自「酵母自溶 (Yeast Autolysis)」，這是傳統法（瓶中二次發酵並與酒渣接觸）的標誌性特徵。"
+        },
+        {
+          "type": "single",
+          "question": "如果你盲品到一款氣泡酒，香氣充滿純淨的「青蘋果與西洋梨 (Pear Drop)」，完全沒有烤麵包味，且入口帶有微甜感，這最可能是：",
+          "options": [
+            "Franciacorta",
+            "Trento DOC",
+            "Prosecco",
+            "Champagne"
+          ],
+          "correct": 2,
+          "explanation": "Prosecco 使用查馬法釀造，強調純淨的果香（青蘋果、梨子），且通常帶有較高的殘糖量（如 Extra Dry）。"
+        },
+        {
+          "type": "single",
+          "question": "Franciacorta 與 Trento DOC 同樣使用傳統法釀造，但在盲品中，Trento DOC 通常具有什麼明顯的結構特徵？",
+          "options": [
+            "酸度極低，口感甜美",
+            "帶有強烈的荔枝與玫瑰花香",
+            "酸度極高，帶有冷冽的礦物感",
+            "顏色呈現深紅色"
+          ],
+          "correct": 2,
+          "explanation": "Trento DOC 產自阿爾卑斯山腳下的高海拔地區，冷涼氣候賦予了它極高的酸度與冷冽的礦物感，比 Franciacorta 更為銳利。"
+        },
+        {
+          "type": "single",
+          "question": "在盲品中，Franciacorta 的果香通常比法國香檳 (Champagne) 表現得更為：",
+          "options": [
+            "青澀（如未成熟的青蘋果）",
+            "成熟（如黃蘋果、水蜜桃）",
+            "中性（幾乎沒有果香）",
+            "草本（如青椒、蘆筍）"
+          ],
+          "correct": 1,
+          "explanation": "Franciacorta 所在的倫巴底產區氣候比香檳區溫暖，因此葡萄成熟度較高，果香偏向成熟的黃蘋果與核果類，酸度也相對較柔和。"
+        },
+        {
+          "type": "single",
+          "question": "義大利酒盲品中，極高酸度＋輕酒體＋礦物感最可能指向哪個產區？",
+          "options": [
+            "A. Sicily（Nero d'Avola）",
+            "B. Alto Adige 高海拔白酒或 Campania（Fiano/Greco）",
+            "C. Barolo",
+            "D. Amarone"
+          ],
+          "correct": 1,
+          "explanation": "極高酸度＋輕酒體＋礦物感的組合在義大利白酒中最典型見於：Alto Adige 高海拔（Riesling/Gewürztraminer）或 Campania（Fiano di Avellino、Greco di Tufo）的火山礦物土壤。"
+        }
+      ]
     }
   ],
   "quiz": [

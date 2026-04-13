@@ -133,6 +133,73 @@
         "✓ Montefalco Rosso（Sangiovese + Sagrantino）是了解 Sagrantino 的入門酒款",
         "✓ Sagrantino 適合野味、烤紅肉，陳年潛力 15-30 年"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Umbria 知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Sagrantino 的單寧含量大約是多少？",
+          "options": [
+            "1000-2000 mg/L",
+            "2500-3500 mg/L",
+            "5000-6000 mg/L",
+            "8000-10000 mg/L"
+          ],
+          "correct": 2,
+          "explanation": "Sagrantino 的單寧含量約 5000-6000 mg/L，是世界上單寧含量最高的葡萄品種之一。"
+        },
+        {
+          "type": "single",
+          "question": "Sagrantino di Montefalco Passito 的釀造方式是？",
+          "options": [
+            "普通發酵",
+            "葡萄風乾後發酵",
+            "加烈酒",
+            "冰凍葡萄發酵"
+          ],
+          "correct": 1,
+          "explanation": "Passito 版本使用風乾（Appassimento）技術，將葡萄風乾 2-3 個月後發酵，釀成甜型酒。"
+        },
+        {
+          "type": "single",
+          "question": "Orvieto DOC 的主導品種是？",
+          "options": [
+            "Trebbiano",
+            "Grechetto",
+            "Verdicchio",
+            "Malvasia"
+          ],
+          "correct": 1,
+          "explanation": "Orvieto 以 Grechetto（40-60%）為主導品種，混合 Trebbiano Toscano 和其他品種。"
+        },
+        {
+          "type": "single",
+          "question": "Montefalco Rosso 與 Sagrantino di Montefalco 的主要差別是？",
+          "options": [
+            "產區不同",
+            "Rosso 是 Sangiovese + Sagrantino 混釀",
+            "陳年時間相同",
+            "單寧含量相同"
+          ],
+          "correct": 1,
+          "explanation": "Montefalco Rosso 使用 Sangiovese（60-70%）+ Sagrantino（10-15%）混釀，比純 Sagrantino 更易飲、價格更親民。"
+        },
+        {
+          "type": "single",
+          "question": "Sagrantino di Montefalco DOCG 是以哪種特色聞名的？",
+          "options": [
+            "A. 清爽酸度",
+            "B. 極高單寧與陳年潛力",
+            "C. 細緻花香",
+            "D. 低酒精輕盈風格"
+          ],
+          "correct": 1,
+          "explanation": "Sagrantino 含有全義大利最高的單寧量，陳年潛力極強，最少需 37 個月才能裝瓶。"
+        }
+      ]
     }
   ]
 }

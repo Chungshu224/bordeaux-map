@@ -25,29 +25,177 @@
           "title": "伯恩丘重要村莊地圖",
           "description": "點擊按鈕查看各村莊位置與範圍",
           "regions": [
-            {"name": "阿羅克斯-科爾通", "nameFr": "Aloxe-Corton", "id": "aloxe-corton", "fillColor": "#D4AF37"},
-            {"name": "薩維尼", "nameFr": "Savigny-lès-Beaune", "id": "savigny", "fillColor": "#E6DAA6"},
-            {"name": "伯恩", "nameFr": "Beaune", "id": "beaune", "fillColor": "#DAA520"},
-            {"name": "波瑪", "nameFr": "Pommard", "id": "pommard", "fillColor": "#8B0000"},
-            {"name": "沃爾奈", "nameFr": "Volnay", "id": "volnay", "fillColor": "#DC143C"},
-            {"name": "默爾索", "nameFr": "Meursault", "id": "meursault", "fillColor": "#FFD700"},
-            {"name": "普里尼-蒙哈榭", "nameFr": "Puligny-Montrachet", "id": "puligny-montrachet", "fillColor": "#FFFF00"},
-            {"name": "夏山-蒙哈榭", "nameFr": "Chassagne-Montrachet", "id": "chassagne-montrachet", "fillColor": "#F5DEB3"},
-            {"name": "聖歐班", "nameFr": "Saint-Aubin", "id": "saint-aubin", "fillColor": "#EEE8AA"},
-            {"name": "桑特內", "nameFr": "Santenay", "id": "santenay", "fillColor": "#BC8F8F"}
+            {
+              "name": "阿羅克斯-科爾通",
+              "nameFr": "Aloxe-Corton",
+              "id": "aloxe-corton",
+              "fillColor": "#D4AF37"
+            },
+            {
+              "name": "薩維尼",
+              "nameFr": "Savigny-lès-Beaune",
+              "id": "savigny",
+              "fillColor": "#E6DAA6"
+            },
+            {
+              "name": "伯恩",
+              "nameFr": "Beaune",
+              "id": "beaune",
+              "fillColor": "#DAA520"
+            },
+            {
+              "name": "波瑪",
+              "nameFr": "Pommard",
+              "id": "pommard",
+              "fillColor": "#8B0000"
+            },
+            {
+              "name": "沃爾奈",
+              "nameFr": "Volnay",
+              "id": "volnay",
+              "fillColor": "#DC143C"
+            },
+            {
+              "name": "默爾索",
+              "nameFr": "Meursault",
+              "id": "meursault",
+              "fillColor": "#FFD700"
+            },
+            {
+              "name": "普里尼-蒙哈榭",
+              "nameFr": "Puligny-Montrachet",
+              "id": "puligny-montrachet",
+              "fillColor": "#FFFF00"
+            },
+            {
+              "name": "夏山-蒙哈榭",
+              "nameFr": "Chassagne-Montrachet",
+              "id": "chassagne-montrachet",
+              "fillColor": "#F5DEB3"
+            },
+            {
+              "name": "聖歐班",
+              "nameFr": "Saint-Aubin",
+              "id": "saint-aubin",
+              "fillColor": "#EEE8AA"
+            },
+            {
+              "name": "桑特內",
+              "nameFr": "Santenay",
+              "id": "santenay",
+              "fillColor": "#BC8F8F"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "aloxe-corton", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson", "displayName": "Aloxe-Corton", "fillColor": "#D4AF37", "fillOpacity": 0.7, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": true},
-            {"id": "savigny", "url": "/geojson/Cote-de-Beaune/04Savigny-lès-Beaune/AOC Savigny-lès-Beaune ou Savigny-lès-Beaune Côte de Beaune.geojson", "displayName": "Savigny-lès-Beaune", "fillColor": "#E6DAA6", "fillOpacity": 0.7, "lineColor": "#9B870C", "lineWidth": 2, "showLabels": true},
-            {"id": "beaune", "url": "/geojson/Cote-de-Beaune/06Beaune/AOC Beaune Village.geojson", "displayName": "Beaune", "fillColor": "#DAA520", "fillOpacity": 0.7, "lineColor": "#8B6914", "lineWidth": 2, "showLabels": true},
-            {"id": "pommard", "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson", "displayName": "Pommard", "fillColor": "#8B0000", "fillOpacity": 0.7, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
-            {"id": "volnay", "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson", "displayName": "Volnay", "fillColor": "#DC143C", "fillOpacity": 0.7, "lineColor": "#8B0A50", "lineWidth": 2, "showLabels": true},
-            {"id": "meursault", "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson", "displayName": "Meursault", "fillColor": "#FFD700", "fillOpacity": 0.7, "lineColor": "#B8860B", "lineWidth": 2, "showLabels": true},
-            {"id": "puligny-montrachet", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson", "displayName": "Puligny-Montrachet", "fillColor": "#FFFF00", "fillOpacity": 0.7, "lineColor": "#CCCC00", "lineWidth": 2, "showLabels": true},
-            {"id": "chassagne-montrachet", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson", "displayName": "Chassagne-Montrachet", "fillColor": "#F5DEB3", "fillOpacity": 0.7, "lineColor": "#D2B48C", "lineWidth": 2, "showLabels": true},
-            {"id": "saint-aubin", "url": "/geojson/Cote-de-Beaune/16Saint-Aubin/AOC Saint-Aubin Village.geojson", "displayName": "Saint-Aubin", "fillColor": "#EEE8AA", "fillOpacity": 0.7, "lineColor": "#BDB76B", "lineWidth": 2, "showLabels": true},
-            {"id": "santenay", "url": "/geojson/Cote-de-Beaune/17Santenay/AOC Santenay Village.geojson", "displayName": "Santenay", "fillColor": "#BC8F8F", "fillOpacity": 0.7, "lineColor": "#8B6969", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "aloxe-corton",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson",
+              "displayName": "Aloxe-Corton",
+              "fillColor": "#D4AF37",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "savigny",
+              "url": "/geojson/Cote-de-Beaune/04Savigny-lès-Beaune/AOC Savigny-lès-Beaune ou Savigny-lès-Beaune Côte de Beaune.geojson",
+              "displayName": "Savigny-lès-Beaune",
+              "fillColor": "#E6DAA6",
+              "fillOpacity": 0.7,
+              "lineColor": "#9B870C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "beaune",
+              "url": "/geojson/Cote-de-Beaune/06Beaune/AOC Beaune Village.geojson",
+              "displayName": "Beaune",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B6914",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "pommard",
+              "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson",
+              "displayName": "Pommard",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "volnay",
+              "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson",
+              "displayName": "Volnay",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B0A50",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "meursault",
+              "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson",
+              "displayName": "Meursault",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.7,
+              "lineColor": "#B8860B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "puligny-montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson",
+              "displayName": "Puligny-Montrachet",
+              "fillColor": "#FFFF00",
+              "fillOpacity": 0.7,
+              "lineColor": "#CCCC00",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chassagne-montrachet",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson",
+              "displayName": "Chassagne-Montrachet",
+              "fillColor": "#F5DEB3",
+              "fillOpacity": 0.7,
+              "lineColor": "#D2B48C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "saint-aubin",
+              "url": "/geojson/Cote-de-Beaune/16Saint-Aubin/AOC Saint-Aubin Village.geojson",
+              "displayName": "Saint-Aubin",
+              "fillColor": "#EEE8AA",
+              "fillOpacity": 0.7,
+              "lineColor": "#BDB76B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "santenay",
+              "url": "/geojson/Cote-de-Beaune/17Santenay/AOC Santenay Village.geojson",
+              "displayName": "Santenay",
+              "fillColor": "#BC8F8F",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B6969",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -95,6 +243,77 @@
           "type": "content",
           "title": "為何伯恩丘白酒如此偉大？",
           "content": "完美的風土條件：石灰岩土壤賦予礦物感與活潑酸度、東南向坡地提供充足陽光、涼爽氣候保持新鮮度、數百年來對夏多內的專精釀造技術。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 伯恩丘產區總覽知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "伯恩丘（Côte de Beaune）與夜丘相比，最主要的特色是什麼？",
+              "options": [
+                "A. 只產紅酒",
+                "B. 是布根地頂級白酒（Chardonnay）的主要產地",
+                "C. 比夜丘更靠北，氣候更涼爽",
+                "D. 只有大區等級的 AOC"
+              ],
+              "correct": 1,
+              "explanation": "雖然伯恩丘也出產頂級 Pinot Noir，但其最大的榮耀是頂級 Chardonnay 白酒——蒙哈榭、默爾索、科爾通·查理曼等，是全球最偉大白酒的集中地。"
+            },
+            {
+              "type": "single",
+              "question": "伯恩（Beaune）市的「Hospices de Beaune 慈善醫院拍賣會」的特殊意義是？",
+              "options": [
+                "A. 義賣收益全數捐給當地醫院，被視為布根地年份質量的風向標",
+                "B. 全球最大的葡萄酒消費集會",
+                "C. 只允許 Grand Cru 參與拍賣",
+                "D. 在地下酒窖舉行，深受遊客歡迎"
+              ],
+              "correct": 0,
+              "explanation": "Hospices de Beaune 拍賣自 1859 年舉辦，以慈善醫院命名，收益捐給 Hôtel-Dieu。這場每年 11 月的拍賣是布根地最重要的傳統活動，成交價也反映了當年的市場信心。"
+            },
+            {
+              "type": "single",
+              "question": "伯恩丘的白酒特級園主要集中在哪個氣候帶？",
+              "options": [
+                "A. 科爾通山（Montagne de Corton）和普利尼-蒙哈榭一帶",
+                "B. 接近馬貢的南端",
+                "C. 沿索恩河谷地",
+                "D. 布根地最高海拔處"
+              ],
+              "correct": 0,
+              "explanation": "伯恩丘的白酒特級園集中在兩個核心：北端的科爾通山（Corton-Charlemagne）和南端的普利尼-蒙哈榭/夏山-蒙哈榭（Montrachet 家族）。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些村莊屬於伯恩丘？（多選）",
+              "options": [
+                "A. Meursault 默爾索",
+                "B. Gevrey-Chambertin",
+                "C. Puligny-Montrachet 普利尼-蒙哈榭",
+                "D. Beaune 伯恩"
+              ],
+              "correct": [
+                0,
+                2,
+                3
+              ],
+              "explanation": "Meursault、Puligny-Montrachet 和 Beaune 都是伯恩丘的重要村莊。Gevrey-Chambertin 位於夜丘。"
+            },
+            {
+              "type": "single",
+              "question": "伯恩丘紅酒著名村莊 Pommard 的特色是？",
+              "options": [
+                "A. 輕盈花香，類似 Chambolle",
+                "B. 以強勁、豐厚的 Pinot Noir 聞名，是伯恩丘最強健的紅酒",
+                "C. 只出產 Grand Cru",
+                "D. 出口量是布根地最低的"
+              ],
+              "correct": 1,
+              "explanation": "Pommard 在伯恩丘以其強健、豐滿的 Pinot Noir 著稱——風格接近夜丘的氣魄，和鄰村 Volnay 的優雅形成鮮明對比，是伯恩丘最受國際買家偏愛的紅酒村莊之一。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -120,25 +339,149 @@
           "title": "蒙哈榭家族特級園地圖",
           "description": "點擊按鈕查看蒙哈榭及其周邊特級園",
           "regions": [
-            {"name": "普里尼村莊級", "nameFr": "Puligny Village", "id": "puligny-village", "fillColor": "#FFFACD"},
-            {"name": "夏山村莊級", "nameFr": "Chassagne Village", "id": "chassagne-village", "fillColor": "#FFEFD5"},
-            {"name": "蒙哈榭", "nameFr": "Montrachet", "id": "montrachet", "fillColor": "#FFD700"},
-            {"name": "騎士-蒙哈榭", "nameFr": "Chevalier-Montrachet", "id": "chevalier-montrachet", "fillColor": "#F0E68C"},
-            {"name": "巴塔-蒙哈榭", "nameFr": "Bâtard-Montrachet", "id": "batard-montrachet", "fillColor": "#DAA520"},
-            {"name": "比恩維尼-巴塔", "nameFr": "Bienvenues-Bâtard", "id": "bienvenues-batard", "fillColor": "#B8860B"},
-            {"name": "克里奧-巴塔", "nameFr": "Criots-Bâtard", "id": "criots-batard", "fillColor": "#CD853F"}
+            {
+              "name": "普里尼村莊級",
+              "nameFr": "Puligny Village",
+              "id": "puligny-village",
+              "fillColor": "#FFFACD"
+            },
+            {
+              "name": "夏山村莊級",
+              "nameFr": "Chassagne Village",
+              "id": "chassagne-village",
+              "fillColor": "#FFEFD5"
+            },
+            {
+              "name": "蒙哈榭",
+              "nameFr": "Montrachet",
+              "id": "montrachet",
+              "fillColor": "#FFD700"
+            },
+            {
+              "name": "騎士-蒙哈榭",
+              "nameFr": "Chevalier-Montrachet",
+              "id": "chevalier-montrachet",
+              "fillColor": "#F0E68C"
+            },
+            {
+              "name": "巴塔-蒙哈榭",
+              "nameFr": "Bâtard-Montrachet",
+              "id": "batard-montrachet",
+              "fillColor": "#DAA520"
+            },
+            {
+              "name": "比恩維尼-巴塔",
+              "nameFr": "Bienvenues-Bâtard",
+              "id": "bienvenues-batard",
+              "fillColor": "#B8860B"
+            },
+            {
+              "name": "克里奧-巴塔",
+              "nameFr": "Criots-Bâtard",
+              "id": "criots-batard",
+              "fillColor": "#CD853F"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "puligny-village", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson", "displayName": "Puligny-Montrachet Village", "fillColor": "#FFFACD", "fillOpacity": 0.5, "lineColor": "#B8860B", "lineWidth": 2, "showLabels": true},
-            {"id": "chassagne-village", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson", "displayName": "Chassagne-Montrachet Village", "fillColor": "#FFEFD5", "fillOpacity": 0.5, "lineColor": "#D2B48C", "lineWidth": 2, "showLabels": true},
-            {"id": "montrachet-puligny", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Puligny).geojson", "displayName": "Montrachet (Puligny)", "fillColor": "#FFD700", "fillOpacity": 0.8, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": true},
-            {"id": "montrachet-chassagne", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Chassagne).geojson", "displayName": "Montrachet (Chassagne)", "fillColor": "#FFD700", "fillOpacity": 0.8, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": false},
-            {"id": "chevalier-montrachet", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Chevalier-Montrachet Grand Cru.geojson", "displayName": "Chevalier-Montrachet", "fillColor": "#F0E68C", "fillOpacity": 0.8, "lineColor": "#9B870C", "lineWidth": 2, "showLabels": true},
-            {"id": "batard-puligny", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Puligny).geojson", "displayName": "Bâtard-Montrachet (Puligny)", "fillColor": "#DAA520", "fillOpacity": 0.8, "lineColor": "#8B6914", "lineWidth": 2, "showLabels": true},
-            {"id": "batard-chassagne", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Chassagne).geojson", "displayName": "Bâtard-Montrachet (Chassagne)", "fillColor": "#DAA520", "fillOpacity": 0.8, "lineColor": "#8B6914", "lineWidth": 2, "showLabels": false},
-            {"id": "bienvenues-batard", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bienvenues-Bâtard-Montrachet Grand Cru .geojson", "displayName": "Bienvenues-Bâtard-Montrachet", "fillColor": "#B8860B", "fillOpacity": 0.8, "lineColor": "#8B6508", "lineWidth": 2, "showLabels": true},
-            {"id": "criots-batard", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Criots-Bâtard-Montrachet Grand Cru.geojson", "displayName": "Criots-Bâtard-Montrachet", "fillColor": "#CD853F", "fillOpacity": 0.8, "lineColor": "#8B5A2B", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "puligny-village",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson",
+              "displayName": "Puligny-Montrachet Village",
+              "fillColor": "#FFFACD",
+              "fillOpacity": 0.5,
+              "lineColor": "#B8860B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chassagne-village",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson",
+              "displayName": "Chassagne-Montrachet Village",
+              "fillColor": "#FFEFD5",
+              "fillOpacity": 0.5,
+              "lineColor": "#D2B48C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "montrachet-puligny",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Puligny).geojson",
+              "displayName": "Montrachet (Puligny)",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "montrachet-chassagne",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Chassagne).geojson",
+              "displayName": "Montrachet (Chassagne)",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "chevalier-montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Chevalier-Montrachet Grand Cru.geojson",
+              "displayName": "Chevalier-Montrachet",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.8,
+              "lineColor": "#9B870C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "batard-puligny",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Puligny).geojson",
+              "displayName": "Bâtard-Montrachet (Puligny)",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B6914",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "batard-chassagne",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Chassagne).geojson",
+              "displayName": "Bâtard-Montrachet (Chassagne)",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B6914",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "bienvenues-batard",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bienvenues-Bâtard-Montrachet Grand Cru .geojson",
+              "displayName": "Bienvenues-Bâtard-Montrachet",
+              "fillColor": "#B8860B",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B6508",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "criots-batard",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Criots-Bâtard-Montrachet Grand Cru.geojson",
+              "displayName": "Criots-Bâtard-Montrachet",
+              "fillColor": "#CD853F",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B5A2B",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -200,11 +543,31 @@
           "content": "五大白酒特級園面積與價格關係",
           "data": {
             "items": [
-              {"label": "Bâtard-Montrachet\n12公頃", "value": 12, "color": "#DAA520"},
-              {"label": "Montrachet\n8公頃", "value": 8, "color": "#FFD700"},
-              {"label": "Chevalier-Montrachet\n7.4公頃", "value": 7.4, "color": "#F0E68C"},
-              {"label": "Bienvenues-Bâtard\n3.7公頃", "value": 3.7, "color": "#B8860B"},
-              {"label": "Criots-Bâtard\n1.6公頃", "value": 1.6, "color": "#CD853F"}
+              {
+                "label": "Bâtard-Montrachet\n12公頃",
+                "value": 12,
+                "color": "#DAA520"
+              },
+              {
+                "label": "Montrachet\n8公頃",
+                "value": 8,
+                "color": "#FFD700"
+              },
+              {
+                "label": "Chevalier-Montrachet\n7.4公頃",
+                "value": 7.4,
+                "color": "#F0E68C"
+              },
+              {
+                "label": "Bienvenues-Bâtard\n3.7公頃",
+                "value": 3.7,
+                "color": "#B8860B"
+              },
+              {
+                "label": "Criots-Bâtard\n1.6公頃",
+                "value": 1.6,
+                "color": "#CD853F"
+              }
             ],
             "unit": "公頃"
           },
@@ -236,6 +599,77 @@
           "type": "content",
           "title": "品鑑建議",
           "content": "蒙哈榭需要時間展開，建議陳年至少5-10年。侍酒溫度12-14°C，使用大型勃艮第白酒杯，醒酒30-60分鐘。年輕時會有閉鎖期，耐心等待會得到豐厚回報。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 蒙哈榭知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "「Montrachet」特級園位於哪兩個村莊之間？",
+              "options": [
+                "A. Gevrey 和 Morey",
+                "B. Puligny-Montrachet 和 Chassagne-Montrachet",
+                "C. Meursault 和 Beaune",
+                "D. Corton 和 Pernand-Vergelesses"
+              ],
+              "correct": 1,
+              "explanation": "Le Montrachet 特級園橫跨 Puligny-Montrachet 和 Chassagne-Montrachet 兩個村莊邊界，兩個村莊都在村名後加上 Montrachet 以彰顯其榮耀。"
+            },
+            {
+              "type": "single",
+              "question": "「Montrachet」的典型風格是？",
+              "options": [
+                "A. 清爽、低酒精、礦物感強烈",
+                "B. 金黃濃郁、奶油、烤堅果，極強陳年潛力",
+                "C. 清新白花、果香為主",
+                "D. 甜潤如蜜，接近貴腐酒"
+              ],
+              "correct": 1,
+              "explanation": "Montrachet 被視為全球最偉大的乾白酒之一，以豐厚的奶油質地、烤堅果、蜂蜜、礦物感著稱，年輕時封閉，需要 10-20 年才能充分展開，陳年30年後仍精彩。"
+            },
+            {
+              "type": "single",
+              "question": "「Bâtard-Montrachet」和「Bienvenues-Bâtard-Montrachet」是什麼等級？",
+              "options": [
+                "A. Premier Cru 一級園",
+                "B. Village 村莊級别",
+                "C. Grand Cru 特級園",
+                "D. Bourgogne 大區"
+              ],
+              "correct": 2,
+              "explanation": "兩者都是正式的 Grand Cru（特級園），是 Montrachet 的「同族」特級園，品質接近 Montrachet 本身，但面積更大、產量更多，更容易取得，是蒙哈榭家族的「性價比選項」。"
+            },
+            {
+              "type": "multiple",
+              "question": "蒙哈榭家族（Montrachet Group）的特級園包括哪些？（多選）",
+              "options": [
+                "A. Le Montrachet",
+                "B. Bâtard-Montrachet",
+                "C. Chevalier-Montrachet",
+                "D. Corton-Charlemagne"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "Montrachet 家族特級園：Le Montrachet、Bâtard-Montrachet、Bienvenues-Bâtard-Montrachet、Chevalier-Montrachet（及部分 Criots-Bâtard-Montrachet）。Corton-Charlemagne 屬於科爾通山，不同地區。"
+            },
+            {
+              "type": "single",
+              "question": "「Chevalier-Montrachet」（騎士）在蒙哈榭家族中的位置和特色是？",
+              "options": [
+                "A. 位於 Montrachet 下坡，風格寬厚",
+                "B. 位於 Montrachet 上坡，土壤較薄，風格更細膩礦物",
+                "C. 來自完全不同的土壤，無關聯",
+                "D. 只允許在伯恩市內陳年"
+              ],
+              "correct": 1,
+              "explanation": "Chevalier-Montrachet 位於 Montrachet 特級園上方坡地，土壤更淺薄，雖產量更少，但往往展現比 Montrachet 更緊實的礦物感，是部分鑑賞家的最愛。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -261,11 +695,33 @@
           "title": "默爾索村莊地圖",
           "description": "點擊按鈕查看默爾索村莊範圍",
           "regions": [
-            {"name": "默爾索村莊級", "nameFr": "Meursault Village", "id": "meursault-village", "fillColor": "#FFD700"}
+            {
+              "name": "默爾索村莊級",
+              "nameFr": "Meursault Village",
+              "id": "meursault-village",
+              "fillColor": "#FFD700"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "meursault-village", "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson", "displayName": "Meursault Village", "fillColor": "#FFD700", "fillOpacity": 0.7, "lineColor": "#B8860B", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "meursault-village",
+              "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson",
+              "displayName": "Meursault Village",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.7,
+              "lineColor": "#B8860B",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -317,6 +773,77 @@
           "type": "content",
           "title": "性價比推薦",
           "content": "默爾索一級園是體驗頂級布根地白酒的絕佳入門，特別是優質生產者的Les Perrières或Les Genevrières，品質接近特級園但價格合理許多。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 默爾索知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "默爾索（Meursault）最著名的風格特徵是？",
+              "options": [
+                "A. 清瘦礦物感，不適合橡木桶陳年",
+                "B. 豐富奶油感、堅果香（尤其榛果）和如絲般的口感",
+                "C. 高酸、低酒精的清爽白酒",
+                "D. 甜蜜可口的半甜型白酒"
+              ],
+              "correct": 1,
+              "explanation": "Meursault 以其豐厚的奶油質地、烤榛果、黃油麵包和礦物感著稱，是布根地最「圓潤」的 Chardonnay 產區，通常在橡木桶中充分熟化，展現獨特的奶油複雜感。"
+            },
+            {
+              "type": "single",
+              "question": "為什麼 Meursault 沒有 Grand Cru（特級園）但仍極受尊崇？",
+              "options": [
+                "A. 因太貴才沒有被評為 Grand Cru",
+                "B. 頂級一級園（如 Perrières、Charmes）品質媲美特級園，歷史上未申請升格",
+                "C. 規定只有紅酒才能評為 Grand Cru",
+                "D. Meursault 的 Grand Cru 已在 2010 年取消分級"
+              ],
+              "correct": 1,
+              "explanation": "Meursault 雖沒有 Grand Cru，但其頂尖一級園（Perrières、Charmes、Genevrières）的品質實際上媲美特級園。歷史上曾有申請升格，但因莊主群意見不一而未成功。"
+            },
+            {
+              "type": "multiple",
+              "question": "默爾索最頂級的一級園包括哪些？（多選）",
+              "options": [
+                "A. Les Perrières",
+                "B. Les Charmes",
+                "C. Les Saint-Georges",
+                "D. Les Genevrières"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Meursault 三大頂級一級園：Perrières（以礦物感著稱）、Charmes（最豐滿圓潤）和 Genevrières（平衡優雅）。Les Saint-Georges 屬於 Nuits-Saint-Georges。"
+            },
+            {
+              "type": "single",
+              "question": "「La Paulée de Meursault」是什麼？",
+              "options": [
+                "A. 默爾索每年的葡萄收穫節慶",
+                "B. Meursault 的一個一級園名稱",
+                "C. 布根地著名的採收後慶祝宴會，莊主們帶酒共飲",
+                "D. 一個 Meursault 的釀酒合作社"
+              ],
+              "correct": 2,
+              "explanation": "La Paulée 是布根地每年 11 月的傳統慶宴，在採收完成後舉行。莊主們互帶自家最好的葡萄酒與同行共享，是業界最古老也最盛大的聯誼傳統之一。"
+            },
+            {
+              "type": "single",
+              "question": "結合 Meursault 的地質，坡地中段的「Perrières」為什麼最具礦物感？",
+              "options": [
+                "A. 土壤含有大量有機腐植質",
+                "B. 土壤極淺，石灰岩直接外露，根系直接在石灰岩中生長",
+                "C. 採用生物動力法種植",
+                "D. 使用最多新橡木桶熟化"
+              ],
+              "correct": 1,
+              "explanation": "Perrières 的名稱源自「perrière」（採石場），土壤極薄，石灰石直接暴露，葡萄藤根系必須深入石灰岩縫隙攝取水分和礦物質，這正是其鮮明礦物感的地質原因。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -342,17 +869,81 @@
           "title": "科爾通山特級園地圖",
           "description": "點擊按鈕查看科爾通紅白特級園",
           "regions": [
-            {"name": "阿羅克斯村莊級", "nameFr": "Aloxe Village", "id": "aloxe-village", "fillColor": "#FFEFD5"},
-            {"name": "科爾通紅酒", "nameFr": "Corton (Rouge)", "id": "corton-rouge", "fillColor": "#8B0000"},
-            {"name": "科爾通-查理曼", "nameFr": "Corton-Charlemagne", "id": "corton-charlemagne", "fillColor": "#FFD700"},
-            {"name": "查理曼", "nameFr": "Charlemagne", "id": "charlemagne", "fillColor": "#F0E68C"}
+            {
+              "name": "阿羅克斯村莊級",
+              "nameFr": "Aloxe Village",
+              "id": "aloxe-village",
+              "fillColor": "#FFEFD5"
+            },
+            {
+              "name": "科爾通紅酒",
+              "nameFr": "Corton (Rouge)",
+              "id": "corton-rouge",
+              "fillColor": "#8B0000"
+            },
+            {
+              "name": "科爾通-查理曼",
+              "nameFr": "Corton-Charlemagne",
+              "id": "corton-charlemagne",
+              "fillColor": "#FFD700"
+            },
+            {
+              "name": "查理曼",
+              "nameFr": "Charlemagne",
+              "id": "charlemagne",
+              "fillColor": "#F0E68C"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "aloxe-village", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson", "displayName": "Aloxe-Corton Village", "fillColor": "#FFEFD5", "fillOpacity": 0.5, "lineColor": "#D2B48C", "lineWidth": 2, "showLabels": true},
-            {"id": "corton-rouge", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton Grand Cru(Aloxe).geojson", "displayName": "Corton (Rouge)", "fillColor": "#8B0000", "fillOpacity": 0.8, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
-            {"id": "corton-charlemagne", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson", "displayName": "Corton-Charlemagne", "fillColor": "#FFD700", "fillOpacity": 0.8, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": true},
-            {"id": "charlemagne", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Charlemagne Grand Cru (Aloxe).geojson", "displayName": "Charlemagne", "fillColor": "#F0E68C", "fillOpacity": 0.8, "lineColor": "#9B870C", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "aloxe-village",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson",
+              "displayName": "Aloxe-Corton Village",
+              "fillColor": "#FFEFD5",
+              "fillOpacity": 0.5,
+              "lineColor": "#D2B48C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "corton-rouge",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton Grand Cru(Aloxe).geojson",
+              "displayName": "Corton (Rouge)",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "corton-charlemagne",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson",
+              "displayName": "Corton-Charlemagne",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "charlemagne",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Charlemagne Grand Cru (Aloxe).geojson",
+              "displayName": "Charlemagne",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.8,
+              "lineColor": "#9B870C",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -394,6 +985,77 @@
           "type": "content",
           "title": "投資建議",
           "content": "科爾通-查理曼是投資布根地頂級白酒的絕佳選擇，價格比蒙哈榭低30-50%，但陳年潛力與複雜度不遑多讓。優質生產者包括Bonneau du Martray、Coche-Dury等。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 科爾通山知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "科爾通山（Montagne de Corton）最特殊之處是？",
+              "options": [
+                "A. 只產白酒",
+                "B. 是伯恩丘唯一同時有頂級紅酒和白酒特級園的地標",
+                "C. 面積最小的布根地特級園",
+                "D. 全部由一個酒莊擁有"
+              ],
+              "correct": 1,
+              "explanation": "科爾通山是伯恩丘的標誌性山丘，獨特地同時擁有紅酒特級園（Le Corton）和白酒特級園（Corton-Charlemagne），前者以強勁 Pinot Noir 著稱，後者是布根地最偉大的白酒之一。"
+            },
+            {
+              "type": "single",
+              "question": "「Corton-Charlemagne」的名字來由是？",
+              "options": [
+                "A. 以一位釀酒大師命名",
+                "B. 据傳來自查理曼大帝（Charlemagne）曾擁有此地",
+                "C. Charlemagne 是一個地質層的名稱",
+                "D. 以最初種植白葡萄的修道士命名"
+              ],
+              "correct": 1,
+              "explanation": "傳說查理曼大帝（Charlemagne）擁有此地，並命令種植白葡萄（據說因其白鬍子被紅酒染色），這個傳說至今仍是 Corton-Charlemagne 品牌故事的核心。"
+            },
+            {
+              "type": "single",
+              "question": "Corton-Charlemagne 的典型口感風格是？",
+              "options": [
+                "A. 輕盈、低酸",
+                "B. 豐滿、礦物感、陳年後展現煙燻、蜂蜜和薑辛香",
+                "C. 清新、果香主導，適合年輕飲用",
+                "D. 帶有明顯甜感"
+              ],
+              "correct": 1,
+              "explanation": "Corton-Charlemagne 以宏大的構架、礦物感和陳年潛力著稱，年輕時緊澀，需要 8-15 年展開，成熟後展現煙燻、蜂蜜、香料和礦石礦物感，是與 Montrachet 抗衡的偉大白酒。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下關於 Corton 紅酒特級園的描述，哪些正確？（多選）",
+              "options": [
+                "A. 僅使用 Pinot Noir 釀造",
+                "B. 橫跨多個村莊（Aloxe-Corton、Ladoix、Pernand-Vergelesses）",
+                "C. 是伯恩丘面積最大的紅酒特級園",
+                "D. 風格輕盈優雅，類似 Chambolle"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "Corton 是伯恩丘面積最大的紅酒特級園（約 160 公頃），橫跨三個村莊，全用 Pinot Noir。其風格通常比夜丘 Grand Cru 更強健厚實，而非輕盈優雅。"
+            },
+            {
+              "type": "single",
+              "question": "「Louis Latour」是科爾通山最著名的莊主之一，其特色是？",
+              "options": [
+                "A. 以生物動力法著稱",
+                "B. 在 Corton-Charlemagne 擁有最大的單一莊主地塊，也以製桶廠聞名",
+                "C. 只出產紅酒",
+                "D. 是最新成立的布根地酒莊"
+              ],
+              "correct": 1,
+              "explanation": "Louis Latour 是 Corton-Charlemagne 最大的莊主之一，擁有約 10 公頃的 Corton-Charlemagne，同時也以自有製桶廠著稱。這是布根地罕見的垂直整合酒莊。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -419,13 +1081,49 @@
           "title": "波瑪與沃爾奈地圖",
           "description": "點擊按鈕查看兩個紅酒村莊的位置",
           "regions": [
-            {"name": "波瑪", "nameFr": "Pommard", "id": "pommard", "fillColor": "#8B0000"},
-            {"name": "沃爾奈", "nameFr": "Volnay", "id": "volnay", "fillColor": "#DC143C"}
+            {
+              "name": "波瑪",
+              "nameFr": "Pommard",
+              "id": "pommard",
+              "fillColor": "#8B0000"
+            },
+            {
+              "name": "沃爾奈",
+              "nameFr": "Volnay",
+              "id": "volnay",
+              "fillColor": "#DC143C"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "pommard", "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson", "displayName": "Pommard", "fillColor": "#8B0000", "fillOpacity": 0.7, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
-            {"id": "volnay", "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson", "displayName": "Volnay", "fillColor": "#DC143C", "fillOpacity": 0.7, "lineColor": "#8B0A50", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "pommard",
+              "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson",
+              "displayName": "Pommard",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "volnay",
+              "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson",
+              "displayName": "Volnay",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B0A50",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -481,6 +1179,77 @@
           "type": "content",
           "title": "伯恩丘紅酒總結",
           "content": "伯恩丘的紅酒整體比夜丘更優雅、更易飲，但頂級一級園（如波瑪Les Rugiens、沃爾奈Caillerets）的品質絲毫不遜色，且價格更親民。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 伯恩丘紅酒產區知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "伯恩（Beaune）村莊以哪類葡萄酒著名？",
+              "options": [
+                "A. 主要白酒，與 Meursault 風格相近",
+                "B. 大量一級園紅酒，村莊核心是多個莊主集中的 Premier Cru",
+                "C. 所有酒款都是 Grand Cru",
+                "D. 只產大區 Bourgogne 等級"
+              ],
+              "correct": 1,
+              "explanation": "Beaune 村擁有布根地任何村莊中最多的一級園面積，共有約 42 個一級園，大多有歷史悠久的 Négociant（如 Bouchard、Louis Jadot）大量持有，是伯恩丘紅酒的心臟地帶。"
+            },
+            {
+              "type": "single",
+              "question": "沃利尼（Volnay）的葡萄酒以何著稱？",
+              "options": [
+                "A. 強勁單寧，可陳年 50 年",
+                "B. 精緻優雅、花香細膩，是伯恩丘最「女性化」的紅酒",
+                "C. 濃郁厚實，以花崗岩土壤著稱",
+                "D. 以 Chardonnay 白酒著名"
+              ],
+              "correct": 1,
+              "explanation": "Volnay 和 Chambolle-Musigny 是布根地最常被形容為「女性化」的村莊，紅酒以輕盈、優雅、細膩的花香（紫羅蘭、玫瑰）著稱，單寧絲滑，是鑑賞家最愛。"
+            },
+            {
+              "type": "single",
+              "question": "Pommard 和 Volnay 的主要風格差異是？",
+              "options": [
+                "A. Pommard 白酒，Volnay 紅酒",
+                "B. Pommard 強勁厚實，Volnay 輕盈優雅",
+                "C. 兩者風格完全相同",
+                "D. Pommard 只產 Grand Cru"
+              ],
+              "correct": 1,
+              "explanation": "相鄰的 Pommard 和 Volnay 形成鮮明對比：Pommard 以強健、飽滿、深色果味著稱；Volnay 則輕盈、精巧、花香突出。這種差異源於兩村土壤成分的微小不同。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是伯恩丘著名的紅酒村莊？（多選）",
+              "options": [
+                "A. Pommard",
+                "B. Volnay",
+                "C. Chambolle-Musigny",
+                "D. Savigny-lès-Beaune"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Pommard、Volnay 和 Savigny-lès-Beaune 都是伯恩丘紅酒村莊。Chambolle-Musigny 雖也是知名紅酒村，但屬於夜丘，不在伯恩丘。"
+            },
+            {
+              "type": "single",
+              "question": "「Monthélie」和「Saint-Romain」代表伯恩丘的什麼類型？",
+              "options": [
+                "A. 頂級特級園村莊",
+                "B. 性價比高的村莊等級產區，葡萄酒以合理價格提供優質體驗",
+                "C. 以氣泡酒著稱的產區",
+                "D. 紅酒和白酒各占一半的混合產區"
+              ],
+              "correct": 1,
+              "explanation": "Monthélie 和 Saint-Romain 屬於伯恩丘的「性價比村莊」，知名度不如 Pommard 或 Volnay，因此價格合理，但仍提供道地的布根地 Pinot Noir 風格，是尋寶獵酒人的最愛。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     }
@@ -494,7 +1263,12 @@
         "id": "q1",
         "question": "伯恩丘共有多少個白酒特級園？",
         "type": "single",
-        "options": ["5個", "6個", "7個", "8個"],
+        "options": [
+          "5個",
+          "6個",
+          "7個",
+          "8個"
+        ],
         "correctAnswer": 3,
         "explanation": "伯恩丘共有8個白酒特級園，包括蒙哈榭、騎士-蒙哈榭、巴塔-蒙哈榭等。"
       },
@@ -515,7 +1289,12 @@
         "id": "q3",
         "question": "默爾索白酒最典型的香氣是什麼？",
         "type": "single",
-        "options": ["柑橘", "榛果奶油", "青蘋果", "礦物"  ],
+        "options": [
+          "柑橘",
+          "榛果奶油",
+          "青蘋果",
+          "礦物"
+        ],
         "correctAnswer": 1,
         "explanation": "默爾索白酒以榛果、奶油、烤杏仁等香氣著稱，口感豐滿如黃油般滑順。"
       },
@@ -523,7 +1302,12 @@
         "id": "q4",
         "question": "科爾通山橫跨幾個村莊？",
         "type": "single",
-        "options": ["1個", "2個", "3個", "4個"],
+        "options": [
+          "1個",
+          "2個",
+          "3個",
+          "4個"
+        ],
         "correctAnswer": 2,
         "explanation": "科爾通山橫跨三個村莊：Aloxe-Corton、Pernand-Vergelesses和Ladoix。"
       },
@@ -531,7 +1315,12 @@
         "id": "q5",
         "question": "以下哪個村莊以優雅細膩的紅酒著稱？",
         "type": "single",
-        "options": ["波瑪", "沃爾奈", "伯恩", "桑特內"],
+        "options": [
+          "波瑪",
+          "沃爾奈",
+          "伯恩",
+          "桑特內"
+        ],
         "correctAnswer": 1,
         "explanation": "沃爾奈是伯恩丘最優雅的紅酒村莊，被稱為「紅酒中的香波-慕西尼」。"
       }

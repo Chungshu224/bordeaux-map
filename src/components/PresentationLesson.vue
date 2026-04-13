@@ -271,6 +271,7 @@ import ImageQuizSeries from './ImageQuizSeries.vue'
 import MedocInteractiveMap from './maps/MedocInteractiveMap.vue'
 import FirstGrowthsMap from './maps/FirstGrowthsMap.vue'
 import LessonProgressIndicator from './LessonProgressIndicator.vue'
+import QuizSlide from './italy/course/slides/QuizSlide.vue'
 // 改用 lessonContentLoader 的單例載入器,避免間接層帶來的潛在等待問題
 import { loadLessonContent as coreLoadLessonContent } from '../data/lessonContentLoader.js'
 // 導入進度追蹤系統
@@ -299,6 +300,24 @@ const isLoading = ref(false)
 const loadError = ref(null)
 const lessonContent = ref([])
 const showGlossary = ref(false)
+const finalQuizBank = ref([])
+
+function pickRandom(arr, n) {
+  const copy = [...arr]
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));[copy[i], copy[j]] = [copy[j], copy[i]]
+  }
+  return copy.slice(0, n)
+}
+
+async function loadQuizBank() {
+  try {
+    const res = await fetch('/data/bordeaux-l1-quiz-bank.json')
+    if (!res.ok) return
+    const data = await res.json()
+    finalQuizBank.value = data.questions || []
+  } catch (_) { /* 靜默失敗 */ }
+}
 const combinedGlossary = computed(() => getCombinedGlossary(props.lessonId))
 const glossaryQuery = ref('')
 const filteredGlossary = computed(() => {
@@ -435,7 +454,8 @@ const slideComponentMap = {
   ServiceABCompare,
   ImageQuizSeries,
   MedocInteractiveMap,
-  FirstGrowthsMap
+  FirstGrowthsMap,
+  QuizSlide
 }
 
 // 將內容中的 AOC 名稱標準化並附上英文原文（避免重複標註，具備一定的容錯與等幣性）
@@ -2060,7 +2080,22 @@ const slides = computed(() => {
   // 避免重複呈現封面/標題（第 0 頁已用 lessonData 顯示）
   const mapped = raw.filter(s => s?.type !== 'cover' && s?.type !== 'title').map(normalizeSlide)
   // 支援 normalizeSlide 回傳多張投影片
-  return mapped.flatMap(x => Array.isArray(x) ? x : [x]).filter(Boolean)
+  const slideArray = mapped.flatMap(x => Array.isArray(x) ? x : [x]).filter(Boolean)
+  // 若此課程為綜合評量且題庫已載入，在最後添加隨機測驗
+  if (props.lessonId === 'l1-8' && finalQuizBank.value.length > 0) {
+    slideArray.push({
+      component: 'QuizSlide',
+      componentProps: {
+        slide: {
+          title: '📋 Level 1 綜合評量',
+          isFinalExam: true,
+          passScore: 80,
+          questions: pickRandom(finalQuizBank.value, Math.min(20, finalQuizBank.value.length))
+        }
+      }
+    })
+  }
+  return slideArray
 })
 
 const totalSlides = computed(() => slides.value.length)
@@ -2289,6 +2324,8 @@ onMounted(() => {
   // 開始學習會話
   const lessonTitle = lessonData.value?.title || props.lessonId
   progressActions.startSession(props.lessonId, lessonTitle)
+  // 若為 L1 綜合評量課，預載題庫
+  if (props.lessonId === 'l1-8') loadQuizBank()
 })
 
 // 組件卸載時結束學習會話

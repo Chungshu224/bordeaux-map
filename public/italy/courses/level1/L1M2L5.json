@@ -141,6 +141,80 @@
       "content": "<div class=\"buying-tips\"><div class=\"tip-card beginner\"><h4>🌱 入門推薦</h4><ul><li>Franciacorta Non-vintage (€20-30)</li><li>Oltrepò Pavese DOC (€10-15)</li></ul><p class=\"tip-note\">性價比高，適合日常飲用</p></div><div class=\"tip-card intermediate\"><h4>🍷 進階選擇</h4><ul><li>Franciacorta Satèn (€30-45)</li><li>Franciacorta Millesimato (€35-50)</li><li>Valtellina Superiore Riserva (€25-40)</li></ul><p class=\"tip-note\">品質優異，適合特殊場合</p></div><div class=\"tip-card premium\"><h4>💎 頂級收藏</h4><ul><li>Franciacorta Riserva (€60-100+)</li><li>Sforzato di Valtellina DOCG (€40-70)</li></ul><p class=\"tip-note\">陳年潛力佳，值得收藏</p></div></div>"
     },
     {
+      "type": "quiz",
+      "title": "🧠 知識檢測",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Franciacorta 為何被稱為「義大利的香檳」？",
+          "options": [
+            "A. 產自靠近法國的地區",
+            "B. 使用 Pinot Nero/Chardonnay，採傳統法（瓶中二次發酵）",
+            "C. 是義大利最昂貴的葡萄酒",
+            "D. 使用 Champagne 這個名稱"
+          ],
+          "correct": 1,
+          "explanation": "Franciacorta 使用 Pinot Nero、Chardonnay 等品種，採用 Metodo Classico（傳統法）在瓶中二次發酵，陳年要求嚴格，是義大利最接近香檳工藝的高品質氣泡酒。"
+        },
+        {
+          "type": "multiple",
+          "question": "Franciacorta DOCG 的陳年規定包括哪些？（多選）",
+          "options": [
+            "A. Non Vintage 至少 18 個月瓶陳",
+            "B. Vintage 至少 30 個月瓶陳",
+            "C. Non Vintage 只需 6 個月",
+            "D. Riserva 需要至少 60 個月"
+          ],
+          "correct": [
+            0,
+            1,
+            3
+          ],
+          "explanation": "Franciacorta 陳年規定嚴格：Non Vintage ≥ 18 個月、Vintage ≥ 30 個月、Riserva ≥ 60 個月，遠超 Cava、Prosecco 等其他氣泡酒，確保最高品質。"
+        },
+        {
+          "type": "single",
+          "question": "Valtellina 產區的葡萄酒用什麼品種，當地稱它為什麼？",
+          "options": [
+            "A. Sangiovese，當地稱 Prugnolo",
+            "B. Nebbiolo，當地稱 Chiavennasca",
+            "C. Barbera，當地稱 Bonarda",
+            "D. Montepulciano，當地稱 Cordisco"
+          ],
+          "correct": 1,
+          "explanation": "Valtellina 以 Nebbiolo 為核心品種，當地稱為 Chiavennasca。種植在阿爾卑斯山陡峭梯田，海拔帶來涼爽微氣候，釀出比 Barolo 更輕盈細膩的風格。"
+        },
+        {
+          "type": "single",
+          "question": "Sforzato di Valtellina DOCG 的特別之處是？",
+          "options": [
+            "A. 普通 Nebbiolo 干型酒",
+            "B. 採用風乾工藝，酒精度至少 14%",
+            "C. 義大利最甜的氣泡酒",
+            "D. 用 Chardonnay 釀的白酒"
+          ],
+          "correct": 1,
+          "explanation": "Sforzato（Sfursat）採用類似 Amarone 的 Appassimento 風乾工藝，葡萄風乾後釀造，酒精度至少達 14%，口感濃郁複雜，是 Valtellina 的頂級紅酒代表。"
+        },
+        {
+          "type": "multiple",
+          "question": "以下哪些是倫巴第（Lombardy）的重要葡萄酒產區？（多選）",
+          "options": [
+            "A. Franciacorta",
+            "B. Valtellina",
+            "C. Lugana",
+            "D. Barolo"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "Franciacorta（傳統法氣泡）、Valtellina（山地 Nebbiolo）和 Lugana（加爾達湖畔的 Trebbiano di Lugana 白酒）都在 Lombardy 境內。Barolo 在 Piemonte。"
+        }
+      ]
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

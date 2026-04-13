@@ -226,6 +226,84 @@ export const lessonContent = [
     keyInsight: '波爾多的地理劃分不僅是地圖上的線條，更是風土哲學的體現。左岸的砂礫與Cabernet Sauvignon造就強勁骨架，右岸的黏土與Merlot帶來柔美圓潤，理解這個基礎劃分，就是理解波爾多葡萄酒的起點。',
     shareMessage: '我剛完成了波爾多葡萄酒Level 1的第一課「左岸與右岸概覽」！現在我能分辨波爾多的地理劃分了！🗺️🍷 #波爾多 #左岸右岸 #葡萄酒學習'
   }
+,
+  // ====== inject-bordeaux-quiz ======
+  {
+    "component": "QuizSlide",
+    "componentProps": {
+      "slide": {
+        "title": "🧠 知識檢測",
+        "isFinalExam": false,
+        "passScore": 70,
+        "questions": [
+          {
+            "type": "single",
+            "question": "波爾多位於法國的哪個方向？",
+            "options": [
+              "A. 東北部",
+              "B. 西南部",
+              "C. 中部",
+              "D. 東南部"
+            ],
+            "correct": 1,
+            "explanation": "波爾多位於法國西南部，北緯44-45度之間，距大西洋約60公里，得天獨厚的地理位置造就了其溫和的海洋性氣候。"
+          },
+          {
+            "type": "single",
+            "question": "波爾多最重要的河流是哪條？",
+            "options": [
+              "A. 塞納河（Seine）",
+              "B. 吉隆河（Gironde）",
+              "C. 隆河（Rhône）",
+              "D. 盧瓦爾河（Loire）"
+            ],
+            "correct": 1,
+            "explanation": "吉隆河（Gironde）河口是波爾多的核心地理特徵，由加龍河和多爾多涅河匯合而成，「左岸」和「右岸」的劃分以此為基準。"
+          },
+          {
+            "type": "multiple",
+            "question": "以下哪些河流流經波爾多產區？（多選）",
+            "options": [
+              "A. 加龍河（Garonne）",
+              "B. 多爾多涅河（Dordogne）",
+              "C. 索恩河（Saône）",
+              "D. 吉隆河（Gironde）"
+            ],
+            "correct": [
+              0,
+              1,
+              3
+            ],
+            "explanation": "波爾多三大河流系統：加龍河（左岸西側）、多爾多涅河（右岸北側）和兩河匯合形成的吉隆河（Gironde），索恩河位於布根地，不在波爾多。"
+          },
+          {
+            "type": "single",
+            "question": "左岸（Left Bank）和右岸（Right Bank）以什麼為基準劃分？",
+            "options": [
+              "A. 城市波爾多中心",
+              "B. 吉隆河/加龍河的西東兩側",
+              "C. 以山脊線為界",
+              "D. 以高速公路為界"
+            ],
+            "correct": 1,
+            "explanation": "波爾多的「左岸」是指吉隆河/加龍河的西（左）岸，包含梅多克和格拉夫；「右岸」是東（右）岸，包含波美侯和聖愛美濃。面向河流下游，左手邊為左岸。"
+          },
+          {
+            "type": "single",
+            "question": "波爾多「兩海之間（Entre-Deux-Mers）」指的是什麼？",
+            "options": [
+              "A. 同時面向大西洋和地中海",
+              "B. 加龍河和多爾多涅河之間的三角地帶",
+              "C. 波爾多城東西兩側的海峽",
+              "D. 左岸和右岸之間的地帶"
+            ],
+            "correct": 1,
+            "explanation": "「兩海之間」（Entre-Deux-Mers）是加龍河和多爾多涅河之間的三角地帶，字面意思是「兩河之間」（被誤譯為兩海），以清爽的白酒著稱，是波爾多最大的白酒 AOC。"
+          }
+        ]
+      }
+    }
+  }
 ]
 
 export default lessonContent

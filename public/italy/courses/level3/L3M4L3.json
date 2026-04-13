@@ -27,6 +27,73 @@
       "type": "content",
       "title": "南部飽滿型：Fiano & Greco",
       "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">義大利南部的坎帕尼亞 (Campania) 產區以火山土壤著稱，這裡的白酒通常酒體飽滿、香氣濃郁，且帶有獨特的煙燻與礦物感。</p><div class=\"bg-white p-8 rounded-xl shadow-sm border border-gray-200 mb-8\"><div class=\"flex flex-col md:flex-row gap-8\"><div class=\"w-full md:w-1/2 border-r border-gray-200 pr-6\"><div class=\"flex items-center mb-4\"><div class=\"w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-orange-200 mr-4 shadow-inner\"></div><h3 class=\"text-xl font-bold text-gray-800\">Fiano (菲亞諾)</h3></div><p class=\"text-sm text-gray-500 mb-4\">主要產區：Campania (Fiano di Avellino DOCG)</p><div class=\"space-y-3\"><div class=\"bg-gray-50 p-3 rounded\"><span class=\"font-bold text-gray-700\">結構：</span> 中高酸度，中等至飽滿酒體，蠟質口感。</div><div class=\"bg-gray-50 p-3 rounded\"><span class=\"font-bold text-gray-700\">香氣：</span> 蜂蜜、榛果 (Hazelnut)、花香、熱帶水果、煙燻礦物。</div><div class=\"bg-gray-50 p-3 rounded\"><span class=\"font-bold text-gray-700\">盲品辨識：</span> 尋找「蜂蜜」與「烤榛果」的香氣組合，口感圓潤且帶有蠟質包覆感，陳年潛力極佳。</div></div></div><div class=\"w-full md:w-1/2\"><div class=\"flex items-center mb-4\"><div class=\"w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-300 mr-4 shadow-inner\"></div><h3 class=\"text-xl font-bold text-gray-800\">Greco (格雷克)</h3></div><p class=\"text-sm text-gray-500 mb-4\">主要產區：Campania (Greco di Tufo DOCG)</p><div class=\"space-y-3\"><div class=\"bg-gray-50 p-3 rounded\"><span class=\"font-bold text-gray-700\">結構：</span> 高酸度，飽滿酒體，帶有單寧感 (Phenolic grip)。</div><div class=\"bg-gray-50 p-3 rounded\"><span class=\"font-bold text-gray-700\">香氣：</span> 桃子、杏桃、百香果、強烈的硫磺/火山灰礦物感。</div><div class=\"bg-gray-50 p-3 rounded\"><span class=\"font-bold text-gray-700\">盲品辨識：</span> 顏色通常較深（金黃色），入口有明顯的酚類物質（微澀感），酸度極高且帶有強烈的火山礦物氣息。</div></div></div></div></div></div>"
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 產區風土識別知識檢測",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "在盲品中，哪一個義大利白酒特徵最常被用來作為辨識義大利產區的標誌？",
+          "options": [
+            "強烈的橡木桶香草味",
+            "尾韻帶有微苦的杏仁味 (Bitter Almond)",
+            "極低的酸度與甜美的口感",
+            "明顯的荔枝與玫瑰花香"
+          ],
+          "correct": 1,
+          "explanation": "苦杏仁 (Bitter Almond) 尾韻是許多義大利白葡萄品種（如 Garganega, Verdicchio, Cortese）的經典共同特徵。"
+        },
+        {
+          "type": "single",
+          "question": "如果你在盲品中聞到「洋甘菊 (Chamomile)」與「白桃」香氣，口感圓潤且尾韻有烤杏仁味，這最可能是哪一個品種？",
+          "options": [
+            "Pinot Grigio",
+            "Garganega (Soave)",
+            "Sauvignon Blanc",
+            "Greco"
+          ],
+          "correct": 1,
+          "explanation": "洋甘菊、白桃與烤杏仁是 Garganega (Soave) 最經典的香氣組合，其口感比 Pinot Grigio 更圓潤。"
+        },
+        {
+          "type": "single",
+          "question": "哪一個義大利白葡萄品種常帶有「綠色反光」，香氣中帶有「茴香 (Fennel)」與青蘋果，且具有極高的陳年潛力？",
+          "options": [
+            "Verdicchio",
+            "Fiano",
+            "Cortese",
+            "Pinot Grigio"
+          ],
+          "correct": 0,
+          "explanation": "Verdicchio 的名字源自 Verde (綠色)，常帶有綠色反光。茴香、高酸度與強大的陳年潛力是它的標誌。"
+        },
+        {
+          "type": "single",
+          "question": "來自南部坎帕尼亞 (Campania) 的 Fiano 品種，在盲品中最具辨識度的香氣特徵通常是什麼？",
+          "options": [
+            "青椒與蘆筍",
+            "蜂蜜與烤榛果 (Hazelnut)",
+            "荔枝與玫瑰",
+            "黑醋栗與雪松"
+          ],
+          "correct": 1,
+          "explanation": "Fiano 以其獨特的蜂蜜、烤榛果香氣以及蠟質口感著稱，陳年後這些特徵會更加明顯。"
+        },
+        {
+          "type": "single",
+          "question": "識別 Piemonte 風土特徵時，哪種香氣是 Langhe 的關鍵識別符號？",
+          "options": [
+            "A. 胡椒與煙燻",
+            "B. 焦油、玫瑰、枯葉（Nebbiolo 三重奏）",
+            "C. 熱帶水果與巧克力",
+            "D. 青草與白花"
+          ],
+          "correct": 1,
+          "explanation": "Nebbiolo 在 Langhe（Barolo/Barbaresco）的風土識別符號是「焦油＋玫瑰（新鮮時）→ 枯葉/蘑菇（陳年時）」三重奏，高酸度和精細單寧作為佐證。"
+        }
+      ]
     }
   ],
   "quiz": [

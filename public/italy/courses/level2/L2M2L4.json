@@ -134,6 +134,73 @@
         "✓ Cerasuolo d'Abruzzo 是義大利最佳粉紅酒之一，色澤深邃、風味濃郁",
         "✓ 挑選 Abruzzo 酒要注意生產者和產量控制"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Abruzzo 知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Montepulciano d'Abruzzo 與 Vino Nobile di Montepulciano 的差別是？",
+          "options": [
+            "相同酒款，不同名稱",
+            "品種和產區都不同",
+            "只有產區不同",
+            "只有陳年時間不同"
+          ],
+          "correct": 1,
+          "explanation": "Montepulciano d'Abruzzo 使用 Montepulciano 品種，產自 Abruzzo；Vino Nobile di Montepulciano 使用 Sangiovese 品種，產自 Tuscany。"
+        },
+        {
+          "type": "single",
+          "question": "Montepulciano d'Abruzzo 的最高品質分級是？",
+          "options": [
+            "Classico",
+            "Superiore",
+            "Colline Teramane DOCG",
+            "Gran Selezione"
+          ],
+          "correct": 2,
+          "explanation": "Montepulciano d'Abruzzo Colline Teramane 在 2003 年升級為 DOCG，是該產區的最高品質分級。"
+        },
+        {
+          "type": "single",
+          "question": "Cerasuolo d'Abruzzo 的特點是？",
+          "options": [
+            "甜型白酒",
+            "加烈酒",
+            "深色粉紅酒（用 Montepulciano 釀造）",
+            "氣泡酒"
+          ],
+          "correct": 2,
+          "explanation": "Cerasuolo（櫻桃色）是用 Montepulciano 葡萄釀造的粉紅酒，浸皮時間較長，呈現深粉紅至淺紅色。"
+        },
+        {
+          "type": "single",
+          "question": "Trebbiano d'Abruzzo 與 Trebbiano Toscano 的關係是？",
+          "options": [
+            "相同品種",
+            "不同品種，Abruzzese 品質潛力更高",
+            "只是名稱不同",
+            "Toscano 品質更高"
+          ],
+          "correct": 1,
+          "explanation": "Trebbiano d'Abruzzo（更正確名稱：Trebbiano Abruzzese 或 Bombino Bianco）與 Trebbiano Toscano 是不同品種，品質潛力更高。"
+        },
+        {
+          "type": "single",
+          "question": "Montepulciano d'Abruzzo 的主要品種是？",
+          "options": [
+            "A. Sangiovese",
+            "B. Montepulciano",
+            "C. Trebbiano",
+            "D. Primitivo"
+          ],
+          "correct": 1,
+          "explanation": "Montepulciano d'Abruzzo 以 Montepulciano 品種（非 Vino Nobile di Montepulciano 的 Sangiovese）釀造。"
+        }
+      ]
     }
   ]
 }

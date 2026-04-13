@@ -91,6 +91,73 @@
         "✓ MGA 標示要求葡萄 100% 來自該園，且字體不可大於產區名稱",
         "✓ 選酒時，生產者比 MGA 更重要，年份影響也極大"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 MGA 與 Cru 知識檢測",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Barolo MGA 制度正式實施是在哪一年？",
+          "options": [
+            "1990",
+            "2000",
+            "2010",
+            "2015"
+          ],
+          "correct": 2,
+          "explanation": "Barolo MGA 制度於 2010 年正式實施，共有 170 個葡萄園獲得 MGA 認證。"
+        },
+        {
+          "type": "single",
+          "question": "Giacomo Conterno 的傳奇酒款 Monfortino Francia 實際上來自哪個 MGA？",
+          "options": [
+            "Cannubi",
+            "Brunate",
+            "Vigna Rionda",
+            "Bussia"
+          ],
+          "correct": 2,
+          "explanation": "Francia 是 Giacomo Conterno 家族對 Vigna Rionda 的稱呼，Monfortino Francia 實際上就是 Vigna Rionda MGA。"
+        },
+        {
+          "type": "single",
+          "question": "Barbaresco 的官方 MGA 數量是多少？",
+          "options": [
+            "33 個",
+            "66 個",
+            "100 個",
+            "170 個"
+          ],
+          "correct": 1,
+          "explanation": "Barbaresco 有 66 個官方 MGA，遠少於 Barolo 的 170 個。"
+        },
+        {
+          "type": "single",
+          "question": "酒標上標示 MGA 時，MGA 名稱的字體大小有何限制？",
+          "options": [
+            "不可大於生產者名稱",
+            "不可大於產區名稱",
+            "不可大於年份數字",
+            "沒有限制"
+          ],
+          "correct": 1,
+          "explanation": "法規規定 MGA 名稱不可大於產區名稱（如 Barolo），以防止誤導消費者。"
+        },
+        {
+          "type": "single",
+          "question": "Barolo MGA 系統中，「MGA」代表什麼？",
+          "options": [
+            "A. Master Grand Appellation",
+            "B. Menzione Geografica Aggiuntiva（附加地理名稱）",
+            "C. Massimo Grado Artigianale",
+            "D. Metodo Geografico Avanzato"
+          ],
+          "correct": 1,
+          "explanation": "MGA 是 Menzione Geografica Aggiuntiva 的縮寫，允許酒標上標示特定葡萄園名稱，類似勃根地的一級/特級園概念。"
+        }
+      ]
     }
   ]
 }

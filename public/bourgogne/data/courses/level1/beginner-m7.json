@@ -53,7 +53,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.70, 46.80],
+            "center": [
+              4.7,
+              46.8
+            ],
             "zoom": 10,
             "pitch": 0,
             "bearing": 0
@@ -273,6 +276,76 @@
           ]
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夏隆內丘（Côte Chalonnaise）的地理位置是？",
+              "options": [
+                "A. 夏布利北部，接近 Auxerre",
+                "B. 金丘（Côte d'Or）南方延伸",
+                "C. 馬貢內以南，接近里昂",
+                "D. 薄酒萊以北"
+              ],
+              "correct": 1,
+              "explanation": "夏隆內丘位於金丘（伯恩丘）的直接延伸地帶，再往南是馬貢內。雖地名知名度不如金丘，但性價比極高，Mercurey 和 Rully 等 AOC 提供了非常物超所值的 Pinot Noir 和 Chardonnay。"
+            },
+            {
+              "type": "single",
+              "question": "夏隆內丘最受好評的 Pinot Noir AOC 是？",
+              "options": [
+                "A. Givry",
+                "B. Pouilly-Fuissé",
+                "C. Mâcon-Villages",
+                "D. Viré-Clessé"
+              ],
+              "correct": 0,
+              "explanation": "Givry 是夏隆內丘最著名的 Pinot Noir 紅酒 AOC，以絲滑的果香和優雅的土地感著稱，歷史上曾是法國國王亨利四世的最愛，性價比在布根地系統中非常突出。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是夏隆內丘的重要 AOC？（多選）",
+              "options": [
+                "A. Mercurey",
+                "B. Rully",
+                "C. Gevrey-Chambertin",
+                "D. Montagny"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Mercurey（夏隆內丘最大、紅白皆有）、Rully（優質起泡酒 Crémant 和 Chardonnay）和 Montagny（白酒 AOC，100% Chardonnay）都是夏隆內丘重要的 AOC。Gevrey-Chambertin 在夜丘。"
+            },
+            {
+              "type": "single",
+              "question": "馬貢內（Mâconnais）最著名的白酒 AOC 是？",
+              "options": [
+                "A. Bourgogne Blanc",
+                "B. Pouilly-Fuissé",
+                "C. Chablis",
+                "D. Saint-Véran"
+              ],
+              "correct": 1,
+              "explanation": "Pouilly-Fuissé 是馬貢內最著名的 Chardonnay AOC，以圓潤成熟的白酒著稱，近年推出一級園概念，品質大幅提升。價格比金丘親民，但在馬貢內屬最高等級。"
+            },
+            {
+              "type": "single",
+              "question": "為什麼夏隆內丘和馬貢內被稱為布根地的「性價比天堂」？",
+              "options": [
+                "A. 這兩個地區的酒完全免費",
+                "B. 同樣品種（Pinot Noir、Chardonnay）的酒，相同品質但價格通常遠低於金丘",
+                "C. 法規規定這兩個地區的酒必須低價出售",
+                "D. 只生產入門等級的大區酒"
+              ],
+              "correct": 1,
+              "explanation": "夏隆內丘和馬貢內使用與金丘相同的 Pinot Noir 和 Chardonnay，在涼爽大陸性氣候下也能釀出細膩的酒，但因知名度不如金丘，售價通常只是金丘類似酒款的 1/3-1/5，是精打細算購酒的好選擇。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "總結",
           "content": "夏隆內丘是金丘的延續，擁有相似的風土條件和釀酒品種，但因名氣較小而價格更親民。五大村莊各具特色，是尋找高品質、高性價比布根地的絕佳選擇。"
@@ -335,7 +408,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.75, 46.30],
+            "center": [
+              4.75,
+              46.3
+            ],
             "zoom": 10.5,
             "pitch": 0,
             "bearing": 0
@@ -605,6 +681,76 @@
             "🍷 Viré-Clessé 是馬貢唯一強調橡木桶陳年的產區",
             "🍷 馬貢氣候溫暖，果味豐富、酸度柔和",
             "🍷 大部分馬貢白酒適合年輕時飲用（1-5年）"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夏隆內丘（Côte Chalonnaise）的地理位置是？",
+              "options": [
+                "A. 夏布利北部，接近 Auxerre",
+                "B. 金丘（Côte d'Or）南方延伸",
+                "C. 馬貢內以南，接近里昂",
+                "D. 薄酒萊以北"
+              ],
+              "correct": 1,
+              "explanation": "夏隆內丘位於金丘（伯恩丘）的直接延伸地帶，再往南是馬貢內。雖地名知名度不如金丘，但性價比極高，Mercurey 和 Rully 等 AOC 提供了非常物超所值的 Pinot Noir 和 Chardonnay。"
+            },
+            {
+              "type": "single",
+              "question": "夏隆內丘最受好評的 Pinot Noir AOC 是？",
+              "options": [
+                "A. Givry",
+                "B. Pouilly-Fuissé",
+                "C. Mâcon-Villages",
+                "D. Viré-Clessé"
+              ],
+              "correct": 0,
+              "explanation": "Givry 是夏隆內丘最著名的 Pinot Noir 紅酒 AOC，以絲滑的果香和優雅的土地感著稱，歷史上曾是法國國王亨利四世的最愛，性價比在布根地系統中非常突出。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是夏隆內丘的重要 AOC？（多選）",
+              "options": [
+                "A. Mercurey",
+                "B. Rully",
+                "C. Gevrey-Chambertin",
+                "D. Montagny"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Mercurey（夏隆內丘最大、紅白皆有）、Rully（優質起泡酒 Crémant 和 Chardonnay）和 Montagny（白酒 AOC，100% Chardonnay）都是夏隆內丘重要的 AOC。Gevrey-Chambertin 在夜丘。"
+            },
+            {
+              "type": "single",
+              "question": "馬貢內（Mâconnais）最著名的白酒 AOC 是？",
+              "options": [
+                "A. Bourgogne Blanc",
+                "B. Pouilly-Fuissé",
+                "C. Chablis",
+                "D. Saint-Véran"
+              ],
+              "correct": 1,
+              "explanation": "Pouilly-Fuissé 是馬貢內最著名的 Chardonnay AOC，以圓潤成熟的白酒著稱，近年推出一級園概念，品質大幅提升。價格比金丘親民，但在馬貢內屬最高等級。"
+            },
+            {
+              "type": "single",
+              "question": "為什麼夏隆內丘和馬貢內被稱為布根地的「性價比天堂」？",
+              "options": [
+                "A. 這兩個地區的酒完全免費",
+                "B. 同樣品種（Pinot Noir、Chardonnay）的酒，相同品質但價格通常遠低於金丘",
+                "C. 法規規定這兩個地區的酒必須低價出售",
+                "D. 只生產入門等級的大區酒"
+              ],
+              "correct": 1,
+              "explanation": "夏隆內丘和馬貢內使用與金丘相同的 Pinot Noir 和 Chardonnay，在涼爽大陸性氣候下也能釀出細膩的酒，但因知名度不如金丘，售價通常只是金丘類似酒款的 1/3-1/5，是精打細算購酒的好選擇。"
+            }
           ]
         },
         {
@@ -901,6 +1047,76 @@
           ]
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夏隆內丘（Côte Chalonnaise）的地理位置是？",
+              "options": [
+                "A. 夏布利北部，接近 Auxerre",
+                "B. 金丘（Côte d'Or）南方延伸",
+                "C. 馬貢內以南，接近里昂",
+                "D. 薄酒萊以北"
+              ],
+              "correct": 1,
+              "explanation": "夏隆內丘位於金丘（伯恩丘）的直接延伸地帶，再往南是馬貢內。雖地名知名度不如金丘，但性價比極高，Mercurey 和 Rully 等 AOC 提供了非常物超所值的 Pinot Noir 和 Chardonnay。"
+            },
+            {
+              "type": "single",
+              "question": "夏隆內丘最受好評的 Pinot Noir AOC 是？",
+              "options": [
+                "A. Givry",
+                "B. Pouilly-Fuissé",
+                "C. Mâcon-Villages",
+                "D. Viré-Clessé"
+              ],
+              "correct": 0,
+              "explanation": "Givry 是夏隆內丘最著名的 Pinot Noir 紅酒 AOC，以絲滑的果香和優雅的土地感著稱，歷史上曾是法國國王亨利四世的最愛，性價比在布根地系統中非常突出。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是夏隆內丘的重要 AOC？（多選）",
+              "options": [
+                "A. Mercurey",
+                "B. Rully",
+                "C. Gevrey-Chambertin",
+                "D. Montagny"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Mercurey（夏隆內丘最大、紅白皆有）、Rully（優質起泡酒 Crémant 和 Chardonnay）和 Montagny（白酒 AOC，100% Chardonnay）都是夏隆內丘重要的 AOC。Gevrey-Chambertin 在夜丘。"
+            },
+            {
+              "type": "single",
+              "question": "馬貢內（Mâconnais）最著名的白酒 AOC 是？",
+              "options": [
+                "A. Bourgogne Blanc",
+                "B. Pouilly-Fuissé",
+                "C. Chablis",
+                "D. Saint-Véran"
+              ],
+              "correct": 1,
+              "explanation": "Pouilly-Fuissé 是馬貢內最著名的 Chardonnay AOC，以圓潤成熟的白酒著稱，近年推出一級園概念，品質大幅提升。價格比金丘親民，但在馬貢內屬最高等級。"
+            },
+            {
+              "type": "single",
+              "question": "為什麼夏隆內丘和馬貢內被稱為布根地的「性價比天堂」？",
+              "options": [
+                "A. 這兩個地區的酒完全免費",
+                "B. 同樣品種（Pinot Noir、Chardonnay）的酒，相同品質但價格通常遠低於金丘",
+                "C. 法規規定這兩個地區的酒必須低價出售",
+                "D. 只生產入門等級的大區酒"
+              ],
+              "correct": 1,
+              "explanation": "夏隆內丘和馬貢內使用與金丘相同的 Pinot Noir 和 Chardonnay，在涼爽大陸性氣候下也能釀出細膩的酒，但因知名度不如金丘，售價通常只是金丘類似酒款的 1/3-1/5，是精打細算購酒的好選擇。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "總結",
           "content": "夏隆內丘和馬貢內是性價比的寶庫，用合理的價格就能享受高品質布根地。掌握選購技巧，從年份、酒莊、價格和口感四個方面考量，就能找到最適合自己的超值美酒。記住：好酒不一定貴，貴酒不一定適合你！"
@@ -914,35 +1130,60 @@
       {
         "id": "q1",
         "question": "夏隆內丘最大的村莊是？",
-        "options": ["Bouzeron", "Rully", "Mercurey", "Givry"],
+        "options": [
+          "Bouzeron",
+          "Rully",
+          "Mercurey",
+          "Givry"
+        ],
         "correctAnswer": 2,
         "explanation": "Mercurey 是夏隆內丘最大的村莊，以紅酒為主，產量占整個產區約60%。"
       },
       {
         "id": "q2",
         "question": "Bouzeron 產區的特色是？",
-        "options": ["只產黑皮諾", "只產霞多麗", "只產 Aligoté", "只產氣泡酒"],
+        "options": [
+          "只產黑皮諾",
+          "只產霞多麗",
+          "只產 Aligoté",
+          "只產氣泡酒"
+        ],
         "correctAnswer": 2,
         "explanation": "Bouzeron 是布根地唯一只產 Aligoté 白酒的村莊級AOC。"
       },
       {
         "id": "q3",
         "question": "馬貢內最頂級的產區是？",
-        "options": ["Mâcon-Villages", "Pouilly-Fuissé", "Saint-Véran", "Viré-Clessé"],
+        "options": [
+          "Mâcon-Villages",
+          "Pouilly-Fuissé",
+          "Saint-Véran",
+          "Viré-Clessé"
+        ],
         "correctAnswer": 1,
         "explanation": "Pouilly-Fuissé 是馬貢內品質最高的產區，礦物質感強，陳年潛力佳。"
       },
       {
         "id": "q4",
         "question": "夏隆內丘相比金丘的價格差異約為？",
-        "options": ["10-20%", "30-50%", "60-80%", "幾乎相同"],
+        "options": [
+          "10-20%",
+          "30-50%",
+          "60-80%",
+          "幾乎相同"
+        ],
         "correctAnswer": 1,
         "explanation": "夏隆內丘的酒比金丘便宜30-50%，是性價比之選。"
       },
       {
         "id": "q5",
         "question": "Montagny 產區的特色是？",
-        "options": ["只產紅酒", "只產白酒", "紅白兼產", "產氣泡酒"],
+        "options": [
+          "只產紅酒",
+          "只產白酒",
+          "紅白兼產",
+          "產氣泡酒"
+        ],
         "correctAnswer": 1,
         "explanation": "Montagny 是夏隆內丘唯一只產白酒的村莊，以霞多麗為主。"
       }

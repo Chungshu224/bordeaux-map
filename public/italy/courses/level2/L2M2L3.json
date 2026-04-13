@@ -134,6 +134,73 @@
         "✓ 火山土壤賦予葡萄酒強烈礦物感",
         "✓ Frascati 完美搭配羅馬四大經典義大利麵"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Lazio 知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Frascati 產自羅馬的哪個區域？",
+          "options": [
+            "羅馬市中心",
+            "Castelli Romani 火山丘陵",
+            "Adriatic 海岸",
+            "Alps 山區"
+          ],
+          "correct": 1,
+          "explanation": "Frascati 產自羅馬東南方的 Castelli Romani（羅馬丘）火山丘陵地區。"
+        },
+        {
+          "type": "single",
+          "question": "Est! Est!! Est!!! di Montefiascone 的傳說中，僕人為何寫下三個「Est」？",
+          "options": [
+            "酒非常貴",
+            "酒非常好喝",
+            "酒館很大",
+            "產量很多"
+          ],
+          "correct": 1,
+          "explanation": "傳說中僕人 Martin 對 Montefiascone 的酒感到驚艷，寫下「Est! Est!! Est!!!」（是！是！是！）表達對酒的讚賞。"
+        },
+        {
+          "type": "single",
+          "question": "Lazio 唯一的紅酒 DOCG 是？",
+          "options": [
+            "Frascati",
+            "Cesanese del Piglio",
+            "Marino",
+            "Est! Est!! Est!!!"
+          ],
+          "correct": 1,
+          "explanation": "Cesanese del Piglio 在 2008 年升級為 DOCG，是 Lazio 唯一的紅酒 DOCG。"
+        },
+        {
+          "type": "single",
+          "question": "羅馬四大經典義大利麵中，Carbonara 最適合搭配哪種酒？",
+          "options": [
+            "Brunello di Montalcino",
+            "Frascati Superiore",
+            "Barolo",
+            "Amarone"
+          ],
+          "correct": 1,
+          "explanation": "Carbonara 的蛋黃和豬頰肉較油膩，Frascati Superiore 的酸度能切割油脂、清爽口腔。"
+        },
+        {
+          "type": "single",
+          "question": "Frascati DOC 的主要產地位於哪個城市附近？",
+          "options": [
+            "A. Napoli",
+            "B. Firenze",
+            "C. Roma",
+            "D. Siena"
+          ],
+          "correct": 2,
+          "explanation": "Frascati 位於 Roma 南方的 Castelli Romani 丘陵區，是羅馬餐桌上的傳統白酒。"
+        }
+      ]
     }
   ]
 }

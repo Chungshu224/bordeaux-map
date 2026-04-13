@@ -94,6 +94,73 @@
         "✓ Gorgonzola Dolce 配 Moscato d'Asti（甜度平衡鹹度）、Piccante 配 Amarone（極度濃郁匹配）",
         "✓ 超長陳年起司（60+ 月）需要最高等級陳年酒款匹配（Amarone Riserva、Brunello Riserva、Barolo Riserva）"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 收藏投資知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "為什麼 Burrata 適合配氣泡酒？",
+          "options": [
+            "顏色搭配",
+            "氣泡切 Burrata 的濃郁奶油感、酸度清爽口腔",
+            "價格匹配",
+            "傳統習慣"
+          ],
+          "correct": 1,
+          "explanation": "Burrata 內層是流動奶油（Stracciatella + 鮮奶油），極度濃郁。氣泡酒（Franciacorta、Prosecco）的氣泡可以切開奶油感、酸度清爽口腔，同時奢華感匹配。"
+        },
+        {
+          "type": "single",
+          "question": "60+ 個月陳年 Parmigiano Reggiano 的最佳配酒是？",
+          "options": [
+            "Prosecco",
+            "Soave",
+            "Amarone della Valpolicella Riserva",
+            "Pinot Grigio"
+          ],
+          "correct": 2,
+          "explanation": "60+ 個月 Parmigiano（Stravecchio）極度濃郁、鹹鮮、複雜，需要極度複雜的陳年酒款匹配。Amarone Riserva（15+ 年）的複雜度、濃郁度、殘糖可以完美平衡。"
+        },
+        {
+          "type": "single",
+          "question": "Gorgonzola Dolce 為什麼配 Moscato d'Asti？",
+          "options": [
+            "顏色搭配",
+            "甜度平衡鹹度、低酒精度不搶味、花香呼應奶油感",
+            "產區相同",
+            "價格匹配"
+          ],
+          "correct": 1,
+          "explanation": "Gorgonzola Dolce 鹹度高、霉菌風味刺激，Moscato d'Asti 的甜度可以平衡鹹度、低酒精度（5.5%）不搶味、花香呼應奶油感，這是義大利經典配對。"
+        },
+        {
+          "type": "single",
+          "question": "Pecorino Romano 最佳配酒同產區原則選擇？",
+          "options": [
+            "Chianti Classico",
+            "Vermentino di Sardegna",
+            "Barolo",
+            "Prosecco"
+          ],
+          "correct": 1,
+          "explanation": "70% Pecorino Romano 產自 Sardinia（雖然名稱是 Romano），同產區原則選擇 Vermentino di Sardegna，高酸度 + 礦物感可以平衡 Pecorino Romano 的極度鹹味。"
+        },
+        {
+          "type": "single",
+          "question": "義大利葡萄酒拍賣市場中，哪款酒通常最保值？",
+          "options": [
+            "A. Prosecco DOC",
+            "B. Barolo Riserva 特定酒莊",
+            "C. Pinot Grigio",
+            "D. Chianti Classico 普通款"
+          ],
+          "correct": 1,
+          "explanation": "頂尖酒莊（如 Giacomo Conterno、Bruno Giacosa）的 Barolo Riserva 在國際拍賣場表現最佳，長期升值。"
+        }
+      ]
     }
   ]
 }

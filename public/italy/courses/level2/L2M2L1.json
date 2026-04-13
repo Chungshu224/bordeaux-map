@@ -134,6 +134,73 @@
         "✓ Pecorino、Passerina 是新興的優質白葡萄品種",
         "✓ Lacrima di Morro d'Alba 是義大利最芳香的紅葡萄品種之一"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Marche 知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Verdicchio 的兩大 DOCG 中，哪個酒體更強、陳年潛力更佳？",
+          "options": [
+            "Verdicchio dei Castelli di Jesi",
+            "Verdicchio di Matelica",
+            "都一樣",
+            "兩者都不能陳年"
+          ],
+          "correct": 1,
+          "explanation": "Verdicchio di Matelica 位於內陸山谷，海拔更高，日夜溫差大，釀出的酒酸度更高、結構更強，陳年潛力更佳。"
+        },
+        {
+          "type": "single",
+          "question": "Rosso Conero DOCG 主要使用哪個葡萄品種？",
+          "options": [
+            "Sangiovese",
+            "Montepulciano",
+            "Nebbiolo",
+            "Barbera"
+          ],
+          "correct": 1,
+          "explanation": "Rosso Conero 以 Montepulciano（85% 以上）為主，可少量混入 Sangiovese，風格濃郁、果香豐富。"
+        },
+        {
+          "type": "single",
+          "question": "Verdicchio Riserva 陳年後會發展出什麼氣息？",
+          "options": [
+            "巧克力",
+            "咖啡",
+            "石油氣息（類似 Riesling）",
+            "煙燻"
+          ],
+          "correct": 2,
+          "explanation": "頂級的 Verdicchio Riserva 能陳年 10-20 年，發展出蜂蜜、堅果、石油氣息，類似德國 Riesling 的陳年特徵。"
+        },
+        {
+          "type": "single",
+          "question": "Lacrima di Morro d'Alba 最大的特點是？",
+          "options": [
+            "高單寧",
+            "極芳香（紫羅蘭、玫瑰）",
+            "高酒精度",
+            "能長期陳年"
+          ],
+          "correct": 1,
+          "explanation": "Lacrima di Morro d'Alba 是義大利最芳香的紅葡萄品種之一，以濃郁的紫羅蘭、玫瑰、黑櫻桃香氣聞名。"
+        },
+        {
+          "type": "single",
+          "question": "Verdicchio dei Castelli di Jesi Classico Superiore 需陳年多久才能上市？",
+          "options": [
+            "A. 無最低陳年要求",
+            "B. 至少 6 個月",
+            "C. 至少 1 年",
+            "D. 至少 2 年"
+          ],
+          "correct": 1,
+          "explanation": "Classico Superiore 需至少陳年 6 個月，而 Riserva 則需 2 年以上。"
+        }
+      ]
     }
   ]
 }

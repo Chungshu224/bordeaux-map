@@ -1,0 +1,31 @@
+{
+  "lessonId": "L3FinalExam",
+  "title": "Level 3 綜合評量",
+  "slides": [
+    {
+      "type": "title",
+      "title": "📋 Level 3 綜合評量",
+      "subtitle": "義大利葡萄酒 Level 3 · 專家完整測驗"
+    },
+    {
+      "type": "list",
+      "title": "🎯 Level 3 重點回顧",
+      "points": [
+        "🍇 北義稀有品種：Timorasso（Piemonte）、Ruché、Erbaluce、Nosiola（Trentino）",
+        "🍊 橘酒革命：Josko Gravner 在 Friuli 以陶甕帶皮浸漬復興古法",
+        "🗺️ MGA 系統：Barolo/Barbaresco 的葡萄園分級（Menzione Geografica Aggiuntiva）",
+        "🔍 酒標解讀：政府防偽貼紙（fascetta）是 DOCG 最難偽造的識別標誌",
+        "👑 Sassicaia：唯一以單一酒莊命名的義大利 DOC（Bolgheri Sassicaia）",
+        "📅 年份評估：採收季氣候是決定性因素，晚熟品種受夏末秋雨影響最大",
+        "🏠 理想窖藏：12-14°C，70-75% 濕度，避免溫差劇烈波動",
+        "👁️ SAT 盲品法：Sight（視覺）→ Aroma（嗅覺）→ Taste（味覺）",
+        "🎯 品種辨識：Nebbiolo 特徵碼「焦油＋玫瑰＋枯葉」+ 橙色邊緣",
+        "🏭 合作社模式貢獻義大利超過 50% 總產量，規模效益顯著",
+        "🌍 美國是義大利葡萄酒最大出口市場（按金額）",
+        "🌿 生物動力法準備劑 500：牛角牛糞發酵後噴灑活化土壤",
+        "🌡️ 氣候暖化：北義高海拔短期受益（成熟度提升），長期風險仍存",
+        "🍽️ 杯賣酒策略：選開瓶後穩定性佳、能搭配多道菜式的酒款"
+      ]
+    }
+  ]
+}

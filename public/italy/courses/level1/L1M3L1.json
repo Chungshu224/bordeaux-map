@@ -84,6 +84,80 @@
       "content": "<div class=\"comparison-table\"><table><tbody><tr><th>品種</th><th>單寧</th><th>酸度</th><th>酒體</th><th>陳年潛力</th><th>價格帶</th><th>適飲場合</th></tr><tr><td><strong>Nebbiolo</strong></td><td>非常高</td><td>非常高</td><td>中-飽滿</td><td>10-30 年</td><td>$$$-$$$$</td><td>特殊場合</td></tr><tr><td><strong>Sangiovese</strong></td><td>中-高</td><td>高</td><td>中-飽滿</td><td>5-30 年</td><td>$$-$$$</td><td>正餐、宴客</td></tr><tr><td><strong>Barbera</strong></td><td>低-中</td><td>高</td><td>中-飽滿</td><td>2-8 年</td><td>$-$$</td><td>日常飲用</td></tr><tr><td><strong>Montepulciano</strong></td><td>中</td><td>中</td><td>飽滿</td><td>3-10 年</td><td>$-$$</td><td>日常、BBQ</td></tr><tr><td><strong>Nero d'Avola</strong></td><td>中-高</td><td>中</td><td>飽滿</td><td>5-15 年</td><td>$$-$$$</td><td>正餐、地中海料理</td></tr></tbody></table></div>"
     },
     {
+      "type": "quiz",
+      "title": "🧠 知識檢測",
+      "questions": [
+        {
+          "type": "single",
+          "question": "以下哪個描述最準確地說明了 Nebbiolo 的特性？",
+          "options": [
+            "A. 低單寧低酸，果香豐沛，適合年輕飲用",
+            "B. 高酸高單寧但酒色偏淺寶石紅，邊緣帶磚橙色",
+            "C. 高酸高單寧，酒色極深如墨，不透光",
+            "D. 低單寧高酸，清爽易飲"
+          ],
+          "correct": 1,
+          "explanation": "Nebbiolo 矛盾之處在於：高酸高單寧（很有力道），但酒色卻偏淺寶石紅，隨陳年出現磚橙色邊緣。年輕時單寧極澀，需長期陳年才能軟化到最佳狀態。"
+        },
+        {
+          "type": "multiple",
+          "question": "關於 Sangiovese，以下哪些描述是正確的？（多選）",
+          "options": [
+            "A. 義大利種植面積最廣的紅葡萄品種",
+            "B. 高酸中高單寧的特性",
+            "C. 代表酒款：Chianti 和 Brunello di Montalcino",
+            "D. 主要種植在皮埃蒙特"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "Sangiovese 是義大利種植最廣的紅葡萄，以高酸、中高單寧著稱，是 Chianti、Brunello di Montalcino 等酒款的核心品種。它主要種植在中部義大利，皮埃蒙特罕見。"
+        },
+        {
+          "type": "single",
+          "question": "Barbera 在義大利葡萄酒中的地位是？",
+          "options": [
+            "A. 高端陳年型，需十年以上才最佳",
+            "B. 高酸低單寧的日常佳釀，物超所值",
+            "C. 最濃郁的品種，適合釀加烈酒",
+            "D. 主要用於釀造氣泡酒"
+          ],
+          "correct": 1,
+          "explanation": "Barbera 以高酸、低單寧著稱，果味豐沛（黑莓、黑李），年輕即飲，是皮埃蒙特日常餐酒主力，個性活潑，性價比在義大利品種中數一數二。"
+        },
+        {
+          "type": "single",
+          "question": "Montepulciano d'Abruzzo（酒名）和 Vino Nobile di Montepulciano（酒名）的關鍵差異是？",
+          "options": [
+            "A. 兩者完全相同，只是名稱不同",
+            "B. 前者是 Abruzzo 州的 Montepulciano 品種；後者是托斯卡納地名 Montepulciano，品種是 Sangiovese",
+            "C. 前者在托斯卡納；後者在 Abruzzo",
+            "D. 兩者品種和產地都一樣"
+          ],
+          "correct": 1,
+          "explanation": "典型的名稱陷阱！Montepulciano d'Abruzzo 是來自 Abruzzo 的 Montepulciano 品種紅酒；Vino Nobile di Montepulciano 是托斯卡納小鎮 Montepulciano 的酒，核心品種是 Sangiovese（當地稱 Prugnolo Gentile）。"
+        },
+        {
+          "type": "multiple",
+          "question": "關於 Nero d'Avola，以下哪些描述是正確的？（多選）",
+          "options": [
+            "A. 主要產自西西里",
+            "B. 濃郁豐沛，帶有成熟黑果和巧克力",
+            "C. 是義大利北部的代表品種",
+            "D. 在地中海炎熱氣候下表現出色"
+          ],
+          "correct": [
+            0,
+            1,
+            3
+          ],
+          "explanation": "Nero d'Avola 是西西里島最著名的紅葡萄品種，在炎熱的地中海型氣候中充分成熟，釀出濃郁豐沛的紅酒，帶有成熟黑莓、黑棗和可可風味。它是南部吃不是北部的代表品種。"
+        }
+      ]
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

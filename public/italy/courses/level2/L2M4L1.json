@@ -94,6 +94,73 @@
         "✓ Sangiovese 是義大利種植面積最大品種（71,000 公頃），克隆差異極大",
         "✓ Aglianico 是「南方的 Nebbiolo」，單寧、酸度極高，火山土壤帶來獨特礦物感"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 北義品種深度知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Nebbiolo 為什麼幾乎只在 Piemonte 表現卓越？",
+          "options": [
+            "對風土要求極端（海拔、朝向、土壤、氣候）",
+            "容易種植",
+            "早熟品種",
+            "適應性強"
+          ],
+          "correct": 0,
+          "explanation": "Nebbiolo 對風土要求極端：需要特定海拔（200-450m）、朝向（南至西南）、土壤（Tortonian/Serravallian）和霧氣氣候，只在 Piemonte 特定區域完美表現。"
+        },
+        {
+          "type": "single",
+          "question": "Barbera 的最大特點是？",
+          "options": [
+            "低酸高單寧",
+            "酸度極高（TA 7-9 g/L）、單寧低",
+            "甜型",
+            "適合陳年 30 年"
+          ],
+          "correct": 1,
+          "explanation": "Barbera 是義大利酸度最高的紅葡萄品種（TA 7-9 g/L），同時單寧低，這種特性讓它成為義大利料理的完美配酒。"
+        },
+        {
+          "type": "single",
+          "question": "Sangiovese Grosso 主要用於哪個 DOCG？",
+          "options": [
+            "Chianti Classico",
+            "Brunello di Montalcino",
+            "Barolo",
+            "Barbaresco"
+          ],
+          "correct": 1,
+          "explanation": "Sangiovese Grosso（大顆粒克隆）是 Brunello di Montalcino DOCG 的專用克隆，皮厚、濃縮、單寧高，需陳年 5 年（Riserva 6 年）。"
+        },
+        {
+          "type": "single",
+          "question": "為什麼 Aglianico 被稱為「南方的 Nebbiolo」？",
+          "options": [
+            "顏色相似",
+            "單寧、酸度極高、需長時間陳年",
+            "產量相似",
+            "價格相似"
+          ],
+          "correct": 1,
+          "explanation": "Aglianico 與 Nebbiolo 相似之處在於：單寧、酸度極高，極需陳年（5-30 年），都是各自地區最高貴的品種，結構複雜、陳年潛力驚人。"
+        },
+        {
+          "type": "single",
+          "question": "Barolo 的「傳統派」與「現代派」的主要釀造差異是？",
+          "options": [
+            "A. 葡萄品種不同",
+            "B. 橡木桶種類與浸皮時間",
+            "C. 採收時間不同",
+            "D. 種植密度不同"
+          ],
+          "correct": 1,
+          "explanation": "傳統派使用大型舊式 Slavonian 橡木桶長期陳年；現代派則使用法國小橡木桶（barriques）縮短浸皮時間。"
+        }
+      ]
     }
   ]
 }

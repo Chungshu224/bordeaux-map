@@ -100,6 +100,73 @@
         "✓ Greco di Tufo 的火山凝灰岩土壤帶來爆炸性礦物感",
         "✓ Falanghina 可能是古羅馬 Falernum 的後代，1990 年代瀕臨絕種後復興"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 南義品種知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Primitivo 為什麼叫這個名字？",
+          "options": [
+            "品種原始",
+            "Primo（第一個成熟）",
+            "發明者叫 Primitivo",
+            "顏色最深"
+          ],
+          "correct": 1,
+          "explanation": "Primitivo 名稱源自義大利文 \"Primo\"（第一個、首要的），因為它是 Apulia 最早成熟的品種之一（8 月底 - 9 月初）。"
+        },
+        {
+          "type": "single",
+          "question": "Negroamaro 的名稱意義是？",
+          "options": [
+            "黑海",
+            "拉丁文 Niger（黑）+ 希臘文 Mavro（黑）= 雙倍黑",
+            "黑苦味",
+            "黑愛"
+          ],
+          "correct": 1,
+          "explanation": "Negroamaro = 拉丁文 \"Niger\"（黑）+ 希臘文 \"Mavro\"（黑），意為「雙倍黑」，反映這個品種極深的顏色。"
+        },
+        {
+          "type": "single",
+          "question": "Cerasuolo di Vittoria DOCG 的混釀比例是？",
+          "options": [
+            "100% Nero d'Avola",
+            "100% Frappato",
+            "Nero d'Avola 50-70% + Frappato 30-50%",
+            "50% Nero d'Avola + 50% Syrah"
+          ],
+          "correct": 2,
+          "explanation": "Cerasuolo di Vittoria DOCG（Sicily 唯一 DOCG）混釀：Nero d'Avola 50-70%（結構、顏色）+ Frappato 30-50%（芳香、優雅、酸度）。"
+        },
+        {
+          "type": "single",
+          "question": "Fiano 為什麼古羅馬稱為 Vitis Apiana？",
+          "options": [
+            "產自 Apianum 地區",
+            "Apis = 蜜蜂，蜜蜂特別喜愛這種甜美葡萄",
+            "發明者叫 Apianus",
+            "顏色像蜂蜜"
+          ],
+          "correct": 1,
+          "explanation": "Fiano 古羅馬稱 Vitis Apiana（源自 Apis = 蜜蜂），因為 Fiano 成熟時糖分高、香氣濃郁，吸引大量蜜蜂。"
+        },
+        {
+          "type": "single",
+          "question": "Nero d'Avola 最佳的種植區域位於 Sicily 哪個部分？",
+          "options": [
+            "A. 西北角",
+            "B. 東南角",
+            "C. 北部沿海",
+            "D. 中部高原"
+          ],
+          "correct": 1,
+          "explanation": "Nero d'Avola 在 Sicily 東南部表現最佳，尤其 Avola 鎮周邊和 Noto 谷地，炎熱氣候使其發展濃郁果味。"
+        }
+      ]
     }
   ]
 }

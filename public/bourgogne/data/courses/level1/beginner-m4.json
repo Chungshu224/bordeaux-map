@@ -20,7 +20,10 @@
           "title": "🗺️ 伯恩丘全區地圖",
           "interactive": false,
           "mapConfig": {
-            "center": [4.82, 47.0],
+            "center": [
+              4.82,
+              47
+            ],
             "zoom": 11,
             "pitch": 0,
             "bearing": 0
@@ -252,6 +255,76 @@
           ]
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "伯恩丘（Côte de Beaune）最著名的是哪種類型的葡萄酒？",
+              "options": [
+                "A. 薄酒萊新酒",
+                "B. 頂級 Chardonnay 干型白酒",
+                "C. 甜型貴腐白酒",
+                "D. 加烈酒（Fortified wine）"
+              ],
+              "correct": 1,
+              "explanation": "伯恩丘是世界頂級白酒的核心，Meursault、Puligny-Montrachet 和 Chassagne-Montrachet 等村莊的 Chardonnay 被視為白酒世界的最高標準之一。也有優質的 Pinot Noir 紅酒如 Pommard 和 Volnay。"
+            },
+            {
+              "type": "single",
+              "question": "「Le Montrachet」是什麼？",
+              "options": [
+                "A. 布根地最著名的 Pinot Noir 特級園",
+                "B. 被譽為世界最偉大白酒的特級園（Chardonnay）",
+                "C. 薄酒萊十大特級村之一",
+                "D. 一個村莊 AOC 等級的酒"
+              ],
+              "correct": 1,
+              "explanation": "「Le Montrachet」（通常稱 Montrachet）是一個 7 公頃的白酒特級園，跨越 Puligny-Montrachet 和 Chassagne-Montrachet 兩村，以礦物感和複雜度被譽為世界最偉大的 Chardonnay 白酒。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是伯恩丘著名的 Chardonnay 白酒村莊？（多選）",
+              "options": [
+                "A. Meursault",
+                "B. Puligny-Montrachet",
+                "C. Gevrey-Chambertin",
+                "D. Chassagne-Montrachet"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Meursault、Puligny-Montrachet 和 Chassagne-Montrachet 是伯恩丘白酒的「三大名村」，出產的 Chardonnay 各有特色：Meursault 奶油感、Puligny 礦物優雅、Chassagne 豐沛複雜。Gevrey-Chambertin 在夜丘，以紅酒著名。"
+            },
+            {
+              "type": "single",
+              "question": "Pommard 和 Volnay 是伯恩丘的哪種類型代表？",
+              "options": [
+                "A. 頂級白酒代表村",
+                "B. 伯恩丘優質 Pinot Noir 紅酒代表村",
+                "C. 薄酒萊 Gamay 的代表產區",
+                "D. 夏布利風格的礦物白酒"
+              ],
+              "correct": 1,
+              "explanation": "Pommard（深色、濃郁、需陳年）和 Volnay（優雅輕盈、花香、可早飲）是伯恩丘最著名的兩個 Pinot Noir 紅酒村莊，雖沒有特級園，卻有多個優質的一級園。"
+            },
+            {
+              "type": "single",
+              "question": "伯恩市（Beaune）最著名的年度葡萄酒活動是什麼？",
+              "options": [
+                "A. 布根地新酒節（Nouveau）",
+                "B. 伯恩慈善醫院拍賣會（Hospices de Beaune Auction）",
+                "C. 金丘葡萄酒展（Côte d'Or Wine Fair）",
+                "D. 布根地收藏家大會"
+              ],
+              "correct": 1,
+              "explanation": "每年11月第三個週末的「Hospices de Beaune Auction」（伯恩慈善醫院葡萄酒拍賣）是全球最古老的葡萄酒慈善拍賣，始於1859年，拍賣所得支持醫院，也是布根地年份行情的重要風向標。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "總結",
           "content": "伯恩丘展現了霞多麗的極致表現，從奶油般的 Meursault 到礦物感十足的 Puligny，每個村莊都有獨特魅力。"
@@ -296,7 +369,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.75, 46.95],
+            "center": [
+              4.75,
+              46.95
+            ],
             "zoom": 12,
             "pitch": 0,
             "bearing": 0
@@ -471,6 +547,76 @@
           ]
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "伯恩丘（Côte de Beaune）最著名的是哪種類型的葡萄酒？",
+              "options": [
+                "A. 薄酒萊新酒",
+                "B. 頂級 Chardonnay 干型白酒",
+                "C. 甜型貴腐白酒",
+                "D. 加烈酒（Fortified wine）"
+              ],
+              "correct": 1,
+              "explanation": "伯恩丘是世界頂級白酒的核心，Meursault、Puligny-Montrachet 和 Chassagne-Montrachet 等村莊的 Chardonnay 被視為白酒世界的最高標準之一。也有優質的 Pinot Noir 紅酒如 Pommard 和 Volnay。"
+            },
+            {
+              "type": "single",
+              "question": "「Le Montrachet」是什麼？",
+              "options": [
+                "A. 布根地最著名的 Pinot Noir 特級園",
+                "B. 被譽為世界最偉大白酒的特級園（Chardonnay）",
+                "C. 薄酒萊十大特級村之一",
+                "D. 一個村莊 AOC 等級的酒"
+              ],
+              "correct": 1,
+              "explanation": "「Le Montrachet」（通常稱 Montrachet）是一個 7 公頃的白酒特級園，跨越 Puligny-Montrachet 和 Chassagne-Montrachet 兩村，以礦物感和複雜度被譽為世界最偉大的 Chardonnay 白酒。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是伯恩丘著名的 Chardonnay 白酒村莊？（多選）",
+              "options": [
+                "A. Meursault",
+                "B. Puligny-Montrachet",
+                "C. Gevrey-Chambertin",
+                "D. Chassagne-Montrachet"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Meursault、Puligny-Montrachet 和 Chassagne-Montrachet 是伯恩丘白酒的「三大名村」，出產的 Chardonnay 各有特色：Meursault 奶油感、Puligny 礦物優雅、Chassagne 豐沛複雜。Gevrey-Chambertin 在夜丘，以紅酒著名。"
+            },
+            {
+              "type": "single",
+              "question": "Pommard 和 Volnay 是伯恩丘的哪種類型代表？",
+              "options": [
+                "A. 頂級白酒代表村",
+                "B. 伯恩丘優質 Pinot Noir 紅酒代表村",
+                "C. 薄酒萊 Gamay 的代表產區",
+                "D. 夏布利風格的礦物白酒"
+              ],
+              "correct": 1,
+              "explanation": "Pommard（深色、濃郁、需陳年）和 Volnay（優雅輕盈、花香、可早飲）是伯恩丘最著名的兩個 Pinot Noir 紅酒村莊，雖沒有特級園，卻有多個優質的一級園。"
+            },
+            {
+              "type": "single",
+              "question": "伯恩市（Beaune）最著名的年度葡萄酒活動是什麼？",
+              "options": [
+                "A. 布根地新酒節（Nouveau）",
+                "B. 伯恩慈善醫院拍賣會（Hospices de Beaune Auction）",
+                "C. 金丘葡萄酒展（Côte d'Or Wine Fair）",
+                "D. 布根地收藏家大會"
+              ],
+              "correct": 1,
+              "explanation": "每年11月第三個週末的「Hospices de Beaune Auction」（伯恩慈善醫院葡萄酒拍賣）是全球最古老的葡萄酒慈善拍賣，始於1859年，拍賣所得支持醫院，也是布根地年份行情的重要風向標。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "總結",
           "content": "白酒三大名村展現了霞多麗的極致多樣性，從奶油到礦物，每個村莊都有獨特魅力。"
@@ -509,7 +655,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.78, 46.98],
+            "center": [
+              4.78,
+              46.98
+            ],
             "zoom": 12.5,
             "pitch": 0,
             "bearing": 0
@@ -621,6 +770,76 @@
             "🍷 Pommard 和 Volnay 僅相距2公里，風格迥異",
             "🍷 Volnay 的 Santenots 一級園位於 Meursault，但只能標示為 Volnay",
             "🍷 兩村都無特級園，但一級園品質極高"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "伯恩丘（Côte de Beaune）最著名的是哪種類型的葡萄酒？",
+              "options": [
+                "A. 薄酒萊新酒",
+                "B. 頂級 Chardonnay 干型白酒",
+                "C. 甜型貴腐白酒",
+                "D. 加烈酒（Fortified wine）"
+              ],
+              "correct": 1,
+              "explanation": "伯恩丘是世界頂級白酒的核心，Meursault、Puligny-Montrachet 和 Chassagne-Montrachet 等村莊的 Chardonnay 被視為白酒世界的最高標準之一。也有優質的 Pinot Noir 紅酒如 Pommard 和 Volnay。"
+            },
+            {
+              "type": "single",
+              "question": "「Le Montrachet」是什麼？",
+              "options": [
+                "A. 布根地最著名的 Pinot Noir 特級園",
+                "B. 被譽為世界最偉大白酒的特級園（Chardonnay）",
+                "C. 薄酒萊十大特級村之一",
+                "D. 一個村莊 AOC 等級的酒"
+              ],
+              "correct": 1,
+              "explanation": "「Le Montrachet」（通常稱 Montrachet）是一個 7 公頃的白酒特級園，跨越 Puligny-Montrachet 和 Chassagne-Montrachet 兩村，以礦物感和複雜度被譽為世界最偉大的 Chardonnay 白酒。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是伯恩丘著名的 Chardonnay 白酒村莊？（多選）",
+              "options": [
+                "A. Meursault",
+                "B. Puligny-Montrachet",
+                "C. Gevrey-Chambertin",
+                "D. Chassagne-Montrachet"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Meursault、Puligny-Montrachet 和 Chassagne-Montrachet 是伯恩丘白酒的「三大名村」，出產的 Chardonnay 各有特色：Meursault 奶油感、Puligny 礦物優雅、Chassagne 豐沛複雜。Gevrey-Chambertin 在夜丘，以紅酒著名。"
+            },
+            {
+              "type": "single",
+              "question": "Pommard 和 Volnay 是伯恩丘的哪種類型代表？",
+              "options": [
+                "A. 頂級白酒代表村",
+                "B. 伯恩丘優質 Pinot Noir 紅酒代表村",
+                "C. 薄酒萊 Gamay 的代表產區",
+                "D. 夏布利風格的礦物白酒"
+              ],
+              "correct": 1,
+              "explanation": "Pommard（深色、濃郁、需陳年）和 Volnay（優雅輕盈、花香、可早飲）是伯恩丘最著名的兩個 Pinot Noir 紅酒村莊，雖沒有特級園，卻有多個優質的一級園。"
+            },
+            {
+              "type": "single",
+              "question": "伯恩市（Beaune）最著名的年度葡萄酒活動是什麼？",
+              "options": [
+                "A. 布根地新酒節（Nouveau）",
+                "B. 伯恩慈善醫院拍賣會（Hospices de Beaune Auction）",
+                "C. 金丘葡萄酒展（Côte d'Or Wine Fair）",
+                "D. 布根地收藏家大會"
+              ],
+              "correct": 1,
+              "explanation": "每年11月第三個週末的「Hospices de Beaune Auction」（伯恩慈善醫院葡萄酒拍賣）是全球最古老的葡萄酒慈善拍賣，始於1859年，拍賣所得支持醫院，也是布根地年份行情的重要風向標。"
+            }
           ]
         },
         {
@@ -839,6 +1058,76 @@
           ]
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "伯恩丘（Côte de Beaune）最著名的是哪種類型的葡萄酒？",
+              "options": [
+                "A. 薄酒萊新酒",
+                "B. 頂級 Chardonnay 干型白酒",
+                "C. 甜型貴腐白酒",
+                "D. 加烈酒（Fortified wine）"
+              ],
+              "correct": 1,
+              "explanation": "伯恩丘是世界頂級白酒的核心，Meursault、Puligny-Montrachet 和 Chassagne-Montrachet 等村莊的 Chardonnay 被視為白酒世界的最高標準之一。也有優質的 Pinot Noir 紅酒如 Pommard 和 Volnay。"
+            },
+            {
+              "type": "single",
+              "question": "「Le Montrachet」是什麼？",
+              "options": [
+                "A. 布根地最著名的 Pinot Noir 特級園",
+                "B. 被譽為世界最偉大白酒的特級園（Chardonnay）",
+                "C. 薄酒萊十大特級村之一",
+                "D. 一個村莊 AOC 等級的酒"
+              ],
+              "correct": 1,
+              "explanation": "「Le Montrachet」（通常稱 Montrachet）是一個 7 公頃的白酒特級園，跨越 Puligny-Montrachet 和 Chassagne-Montrachet 兩村，以礦物感和複雜度被譽為世界最偉大的 Chardonnay 白酒。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是伯恩丘著名的 Chardonnay 白酒村莊？（多選）",
+              "options": [
+                "A. Meursault",
+                "B. Puligny-Montrachet",
+                "C. Gevrey-Chambertin",
+                "D. Chassagne-Montrachet"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Meursault、Puligny-Montrachet 和 Chassagne-Montrachet 是伯恩丘白酒的「三大名村」，出產的 Chardonnay 各有特色：Meursault 奶油感、Puligny 礦物優雅、Chassagne 豐沛複雜。Gevrey-Chambertin 在夜丘，以紅酒著名。"
+            },
+            {
+              "type": "single",
+              "question": "Pommard 和 Volnay 是伯恩丘的哪種類型代表？",
+              "options": [
+                "A. 頂級白酒代表村",
+                "B. 伯恩丘優質 Pinot Noir 紅酒代表村",
+                "C. 薄酒萊 Gamay 的代表產區",
+                "D. 夏布利風格的礦物白酒"
+              ],
+              "correct": 1,
+              "explanation": "Pommard（深色、濃郁、需陳年）和 Volnay（優雅輕盈、花香、可早飲）是伯恩丘最著名的兩個 Pinot Noir 紅酒村莊，雖沒有特級園，卻有多個優質的一級園。"
+            },
+            {
+              "type": "single",
+              "question": "伯恩市（Beaune）最著名的年度葡萄酒活動是什麼？",
+              "options": [
+                "A. 布根地新酒節（Nouveau）",
+                "B. 伯恩慈善醫院拍賣會（Hospices de Beaune Auction）",
+                "C. 金丘葡萄酒展（Côte d'Or Wine Fair）",
+                "D. 布根地收藏家大會"
+              ],
+              "correct": 1,
+              "explanation": "每年11月第三個週末的「Hospices de Beaune Auction」（伯恩慈善醫院葡萄酒拍賣）是全球最古老的葡萄酒慈善拍賣，始於1859年，拍賣所得支持醫院，也是布根地年份行情的重要風向標。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "總結",
           "content": "伯恩丘除了名村，還有許多性價比極高的村莊值得探索。選擇適合自己預算的等級，搭配合適的料理，逐步提升品鑑能力，享受布根地白酒與紅酒的多樣魅力。"
@@ -853,7 +1142,12 @@
         "id": "q1",
         "question": "伯恩丘共有多少個白酒特級園？",
         "type": "single-choice",
-        "options": ["4個", "6個", "8個", "10個"],
+        "options": [
+          "4個",
+          "6個",
+          "8個",
+          "10個"
+        ],
         "correctAnswer": 1,
         "explanation": "伯恩丘有6個白酒特級園，全部是霞多麗：Montrachet、Chevalier-Montrachet、Bâtard-Montrachet、Bienvenues-Bâtard-Montrachet、Criots-Bâtard-Montrachet、Corton-Charlemagne。"
       },
@@ -861,7 +1155,12 @@
         "id": "q2",
         "question": "哪個村莊被稱為「白酒之王」但沒有特級園？",
         "type": "single-choice",
-        "options": ["Puligny-Montrachet", "Chassagne-Montrachet", "Meursault", "Beaune"],
+        "options": [
+          "Puligny-Montrachet",
+          "Chassagne-Montrachet",
+          "Meursault",
+          "Beaune"
+        ],
         "correctAnswer": 2,
         "explanation": "Meursault 是伯恩丘最大的白酒村莊，雖然沒有特級園，但一級園品質極高。"
       },
@@ -869,7 +1168,12 @@
         "id": "q3",
         "question": "Montrachet 特級園的面積是多少？",
         "type": "single-choice",
-        "options": ["3.7公頃", "7.5公頃", "11.9公頃", "15.4公頃"],
+        "options": [
+          "3.7公頃",
+          "7.5公頃",
+          "11.9公頃",
+          "15.4公頃"
+        ],
         "correctAnswer": 1,
         "explanation": "Montrachet 特級園面積7.5公頃，橫跨 Puligny-Montrachet 和 Chassagne-Montrachet 兩村。"
       },
@@ -877,7 +1181,12 @@
         "id": "q4",
         "question": "伯恩丘最強勁的紅酒產自哪個村莊？",
         "type": "single-choice",
-        "options": ["Beaune", "Pommard", "Volnay", "Aloxe-Corton"],
+        "options": [
+          "Beaune",
+          "Pommard",
+          "Volnay",
+          "Aloxe-Corton"
+        ],
         "correctAnswer": 1,
         "explanation": "Pommard 以單寧厚實、結構強勁聞名，是伯恩丘最強勁的紅酒。"
       },
@@ -885,7 +1194,12 @@
         "id": "q5",
         "question": "Volnay 的風格特徵是？",
         "type": "single-choice",
-        "options": ["單寧厚實、強勁有力", "絲滑細膩、花香四溢", "礦物感強、酸度高", "奶油榛果、圓潤飽滿"],
+        "options": [
+          "單寧厚實、強勁有力",
+          "絲滑細膩、花香四溢",
+          "礦物感強、酸度高",
+          "奶油榛果、圓潤飽滿"
+        ],
         "correctAnswer": 1,
         "explanation": "Volnay 以絲滑細膩、花香四溢、優雅精緻聞名，被稱為「紅酒中的女性」。"
       },
@@ -893,7 +1207,12 @@
         "id": "q6",
         "question": "哪個村莊擁有42個一級園，是伯恩丘的首府？",
         "type": "single-choice",
-        "options": ["Meursault", "Beaune", "Pommard", "Volnay"],
+        "options": [
+          "Meursault",
+          "Beaune",
+          "Pommard",
+          "Volnay"
+        ],
         "correctAnswer": 1,
         "explanation": "Beaune 是伯恩丘的首府，擁有42個一級園，村莊級酒性價比極高。"
       },
@@ -901,7 +1220,12 @@
         "id": "q7",
         "question": "Chassagne-Montrachet 的產量組成是？",
         "type": "single-choice",
-        "options": ["100%白酒", "80%白酒 20%紅酒", "50%白酒 50%紅酒", "30%白酒 70%紅酒"],
+        "options": [
+          "100%白酒",
+          "80%白酒 20%紅酒",
+          "50%白酒 50%紅酒",
+          "30%白酒 70%紅酒"
+        ],
         "correctAnswer": 2,
         "explanation": "Chassagne-Montrachet 紅白兼產，產量約各佔50%。"
       },
@@ -909,7 +1233,12 @@
         "id": "q8",
         "question": "Meursault 最著名的一級園是？",
         "type": "single-choice",
-        "options": ["Charmes", "Genevrières", "Perrières", "Poruzots"],
+        "options": [
+          "Charmes",
+          "Genevrières",
+          "Perrières",
+          "Poruzots"
+        ],
         "correctAnswer": 2,
         "explanation": "Perrières 是 Meursault 品質最高的一級園，最接近特級園水準，礦物感強。"
       },
@@ -917,7 +1246,12 @@
         "id": "q9",
         "question": "伯恩丘的主要土壤類型與夜丘相比有何不同？",
         "type": "single-choice",
-        "options": ["完全相同", "泥灰岩比例較高", "花崗岩為主", "火山岩較多"],
+        "options": [
+          "完全相同",
+          "泥灰岩比例較高",
+          "花崗岩為主",
+          "火山岩較多"
+        ],
         "correctAnswer": 1,
         "explanation": "伯恩丘的土壤以石灰岩為主，但泥灰岩比例比夜丘高，更適合霞多麗。"
       },
@@ -925,7 +1259,12 @@
         "id": "q10",
         "question": "全球最貴的霞多麗白酒產自哪個特級園？",
         "type": "single-choice",
-        "options": ["Chevalier-Montrachet", "Montrachet", "Corton-Charlemagne", "Bâtard-Montrachet"],
+        "options": [
+          "Chevalier-Montrachet",
+          "Montrachet",
+          "Corton-Charlemagne",
+          "Bâtard-Montrachet"
+        ],
         "correctAnswer": 1,
         "explanation": "Montrachet 是全球最貴的霞多麗產地，均價超過€500，頂級酒莊可達€2000以上。"
       }

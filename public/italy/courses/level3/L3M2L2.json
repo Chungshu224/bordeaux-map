@@ -101,6 +101,73 @@
         "✓ 氣泡酒甜度：Extra Dry 比 Brut 更甜（常見誤解）",
         "✓ 尋找 \"Imbottigliato all'origine\"（莊園裝瓶）代表品質控制更好"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 酒標解讀進階知識檢測",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Barolo Riserva 的最低陳年要求是多少？",
+          "options": [
+            "38 個月",
+            "50 個月",
+            "62 個月",
+            "72 個月"
+          ],
+          "correct": 2,
+          "explanation": "Barolo Riserva 需要至少 62 個月陳年（5年+），比基本款的 38 個月多 24 個月。"
+        },
+        {
+          "type": "single",
+          "question": "\"Superiore\" 術語主要強調什麼？",
+          "options": [
+            "更長的陳年時間",
+            "更高的酒精度（葡萄成熟度）",
+            "單一葡萄園",
+            "有機認證"
+          ],
+          "correct": 1,
+          "explanation": "Superiore 主要強調更高的酒精度（通常 +0.5-1% ABV），代表更成熟的葡萄，通常也有更長的陳年要求。"
+        },
+        {
+          "type": "single",
+          "question": "氣泡酒甜度術語中，哪一個比 Brut 更甜？",
+          "options": [
+            "Extra Brut",
+            "Brut Nature",
+            "Extra Dry",
+            "Dosaggio Zero"
+          ],
+          "correct": 2,
+          "explanation": "Extra Dry（12-17 g/L）比 Brut（6-12 g/L）更甜，這是歷史遺留的命名問題，容易造成誤解。"
+        },
+        {
+          "type": "single",
+          "question": "Chianti Classico Gran Selezione 要求葡萄必須來自哪裡？",
+          "options": [
+            "任何 Chianti Classico 產區",
+            "酒莊自有葡萄園",
+            "指定的 MGA",
+            "有機認證葡萄園"
+          ],
+          "correct": 1,
+          "explanation": "Gran Selezione（2014年創立）要求葡萄必須來自酒莊自有葡萄園，且陳年至少 30 個月，代表最高品質保證。"
+        },
+        {
+          "type": "single",
+          "question": "義大利酒標上 \"Classico\" 的意義是？",
+          "options": [
+            "A. 古典配方釀造",
+            "B. DOC/DOCG 核心歷史產區的葡萄",
+            "C. 陳年超過 5 年",
+            "D. 僅以手工採收"
+          ],
+          "correct": 1,
+          "explanation": "\"Classico\" 標示表示葡萄來自 DOC/DOCG 的核心歷史原產地（如 Soave Classico、Chianti Classico），通常代表更高品質的傳統精華產區。"
+        }
+      ]
     }
   ]
 }

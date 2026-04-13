@@ -715,6 +715,85 @@ export const lessonContent = [
     keyInsight: '品酒是一種感官訓練與記憶建立的過程。通過視覺觀察，我們能判斷酒齡與狀態；通過嗅覺分析，我們能辨識品種與產區；通過味覺體驗，我們能評價結構與平衡。每次品酒都是一次學習，每次對比都是一次成長。持續練習，建立自己的感官記憶庫，就能成為真正的品酒專家。',
     shareMessage: '我剛完成了波爾多葡萄酒Level 1的「品鑒與評價基礎」課程！現在我能使用專業術語品酒了！👃🍷 #波爾多 #品酒技能 #葡萄酒學習'
   }
+,
+  // ====== inject-bordeaux-quiz ======
+  {
+    "component": "QuizSlide",
+    "componentProps": {
+      "slide": {
+        "title": "🧠 知識檢測",
+        "isFinalExam": false,
+        "passScore": 70,
+        "questions": [
+          {
+            "type": "single",
+            "question": "品酒時的「觀色」主要評估什麼？",
+            "options": [
+              "A. 酒精度",
+              "B. 酒的顏色深淺、清澈度和色調",
+              "C. 香氣強度",
+              "D. 單寧多少"
+            ],
+            "correct": 1,
+            "explanation": "品酒觀色（Visual Assessment）評估：色澤深淺（深紅/淺紅反映品種、年齡、葡萄成熟度）；清澈度（有無渾濁）；石榴紅/寶石紅/磚紅等色調（反映陳年程度）。"
+          },
+          {
+            "type": "single",
+            "question": "波爾多紅酒在鼻腔最典型的「一級香氣（Primary Aromas）」是？",
+            "options": [
+              "A. 橡木桶香：如烤橡木、香草",
+              "B. 陳年發展：如皮革、泥土",
+              "C. 葡萄本身的果香：如黑醋栗、李子、藍莓",
+              "D. 乳酪發酵味"
+            ],
+            "correct": 2,
+            "explanation": "一級香氣（品種香/果香）直接來自葡萄本身：波爾多紅酒（Cab Sauv 主導）的一級香氣以黑色水果為主——黑醋栗（Cassis）、李子、黑莓。橡木和皮革屬於二、三級香氣。"
+          },
+          {
+            "type": "multiple",
+            "question": "品酒的「口感（Palate）」評估包含哪些要素？（多選）",
+            "options": [
+              "A. 酸度（Acidity）",
+              "B. 單寧（Tannins）",
+              "C. 酒體（Body）",
+              "D. 餘韻長度（Finish Length）"
+            ],
+            "correct": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "explanation": "完整的口感評估包含：酸度（活躍度/骨幹）、單寧（澀感/結構）、甜度（殘糖）、酒體（輕/中/飽滿）、酒精感、複雜度和餘韻長短。這些要素共同決定了葡萄酒的整體印象和品質評估。"
+          },
+          {
+            "type": "single",
+            "question": "「盲品（Blind Tasting）」的主要目的是？",
+            "options": [
+              "A. 節省成本",
+              "B. 排除品牌偏見，客觀評估酒的品質",
+              "C. 訓練記憶力",
+              "D. 法規要求"
+            ],
+            "correct": 1,
+            "explanation": "盲品是專業品酒師訓練的核心技能：不看酒瓶、不知道品牌，純粹從感官評估來判斷酒的品質、品種、產區和年份。排除心理暗示（如貴酒=好酒）的干擾，訓練客觀的感官判斷。"
+          },
+          {
+            "type": "single",
+            "question": "波爾多紅酒陳年後最常出現的「三級香氣（Tertiary Aromas）」是？",
+            "options": [
+              "A. 新鮮黑醋栗",
+              "B. 青草和蔬菜",
+              "C. 皮革、雪松、雪茄盒、土腥",
+              "D. 牛奶糖和奶油"
+            ],
+            "correct": 2,
+            "explanation": "三級香氣（陳年香气/Bouquet）是波爾多紅酒在瓶中陳年後發展出的複雜香氣：皮革、雪松木、雪茄盒、泥土、松露、動物感、馬鞍皮等，這正是陳年波爾多的迷人之處，也是收藏價值的體現。"
+          }
+        ]
+      }
+    }
+  }
 ]
 
 export default lessonContent

@@ -129,6 +129,73 @@
         "✓ 海風賦予 Liguria 葡萄酒清新和鹹鮮特色",
         "✓ 產量少、手工採收，價格較高"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Liguria 知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Liguria 最具代表性的白葡萄品種是？",
+          "options": [
+            "Pinot Grigio",
+            "Trebbiano",
+            "Vermentino",
+            "Chardonnay"
+          ],
+          "correct": 2,
+          "explanation": "Vermentino 是 Liguria 最具代表性的白葡萄品種，展現獨特的海洋礦物感和鹹鮮味。"
+        },
+        {
+          "type": "single",
+          "question": "Cinque Terre 五漁村的主要白葡萄品種是？",
+          "options": [
+            "Vermentino",
+            "Bosco",
+            "Pinot Grigio",
+            "Trebbiano"
+          ],
+          "correct": 1,
+          "explanation": "Bosco 是 Cinque Terre DOC 的主要品種，必須占 60% 以上，適應陡坡環境。"
+        },
+        {
+          "type": "single",
+          "question": "Sciacchetrà 是什麼類型的酒？",
+          "options": [
+            "氣泡酒",
+            "紅酒",
+            "風乾甜白酒",
+            "橘酒"
+          ],
+          "correct": 2,
+          "explanation": "Sciacchetrà 是 Cinque Terre 產區的風乾甜白酒，極稀有且手工釀造，酒精度可達 17-22%。"
+        },
+        {
+          "type": "single",
+          "question": "Liguria 葡萄園的主要特色是？",
+          "options": [
+            "平原地形",
+            "陡峭海岸梯田",
+            "火山土壤",
+            "高海拔山區"
+          ],
+          "correct": 1,
+          "explanation": "Liguria 的葡萄園大多建在陡峭的海岸懸崖上（45 度以上），需要手工採收，勞動強度極高。"
+        },
+        {
+          "type": "single",
+          "question": "Liguria 的 Vermentino 搭配哪類料理最佳？",
+          "options": [
+            "A. 紅肉燉煮",
+            "B. 海鮮與橄欖油料理",
+            "C. 甜點與乳酪",
+            "D. 濃郁肉醬麵食"
+          ],
+          "correct": 1,
+          "explanation": "Liguria 地處海濱，Vermentino 的清新鹽味礦物感與海鮮及橄欖油料理完美契合。"
+        }
+      ]
     }
   ]
 }

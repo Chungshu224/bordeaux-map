@@ -134,6 +134,73 @@
         "✓ Molise 產量極小（< 0.5% 義大利總產量），缺乏國際知名度",
         "✓ Di Majo Norante 是 Molise 最知名的酒莊"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Molise 知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Molise 與 Abruzzo 的關係是？",
+          "options": [
+            "沒有關係",
+            "Molise 在 1963 年從 Abruzzo 分離獨立",
+            "Abruzzo 從 Molise 分離",
+            "兩者仍是同一個大區"
+          ],
+          "correct": 1,
+          "explanation": "Molise 直到 1963 年才從 Abruzzo 分離成為獨立大區，這也是為什麼 Molise 品牌認知度較低的原因之一。"
+        },
+        {
+          "type": "single",
+          "question": "Tintilia 是什麼？",
+          "options": [
+            "一種白葡萄品種",
+            "Molise 的代表性紅葡萄品種",
+            "一種甜點",
+            "一個 DOC 產區"
+          ],
+          "correct": 1,
+          "explanation": "Tintilia 是 Molise 的代表性紅葡萄品種，曾在 1980-90 年代幾近消失，近年重新受到重視。"
+        },
+        {
+          "type": "single",
+          "question": "Molise 葡萄酒產量約佔義大利總產量的多少？",
+          "options": [
+            "10%",
+            "5%",
+            "< 0.5%",
+            "20%"
+          ],
+          "correct": 2,
+          "explanation": "Molise 葡萄酒產量極小，佔義大利總產量不到 0.5%，這也是為什麼很少在國際市場見到的原因。"
+        },
+        {
+          "type": "single",
+          "question": "Molise 最知名的酒莊是？",
+          "options": [
+            "Antinori",
+            "Gaja",
+            "Di Majo Norante",
+            "Valentini"
+          ],
+          "correct": 2,
+          "explanation": "Di Majo Norante 是 Molise 最知名的酒莊，致力於推廣 Tintilia 和其他 Molise 本土品種。"
+        },
+        {
+          "type": "single",
+          "question": "Molise 最重要的原生品種是？",
+          "options": [
+            "A. Aglianico",
+            "B. Tintilia del Molise",
+            "C. Primitivo",
+            "D. Greco"
+          ],
+          "correct": 1,
+          "explanation": "Tintilia del Molise 是當地最具代表性的原生紅品種，現有 DOC 保護。"
+        }
+      ]
     }
   ]
 }

@@ -1425,4 +1425,84 @@ normalizedLessonContent.push({
   shareMessage: '我剛完成了波爾多葡萄酒Level 1的「分級制度與酒莊認識」課程！現在我能讀懂波爾多酒標，辨識分級制度了！🏆🍷 #波爾多 #1855分級 #葡萄酒學習'
 });
 
+normalizedLessonContent.push(
+  // ====== inject-bordeaux-quiz ======
+  {
+    "component": "QuizSlide",
+    "componentProps": {
+      "slide": {
+        "title": "🧠 知識檢測",
+        "isFinalExam": false,
+        "passScore": 70,
+        "questions": [
+          {
+            "type": "single",
+            "question": "1855 年分級制度的最高等級是？",
+            "options": [
+              "A. 五級酒莊（Cinquièmes Crus）",
+              "B. 二級酒莊（Deuxièmes Crus）",
+              "C. 一級酒莊（Premiers Crus）",
+              "D. 超級一級莊（Super Seconds）"
+            ],
+            "correct": 2,
+            "explanation": "1855 年分級（梅多克和格拉夫）將紅酒莊分為五個等級，一級酒莊（Premiers Crus）是最高等級，原本只有四個（拉菲、拉圖、瑪歌、歐布里翁），1973 年木桐加入，共五個一級莊。"
+          },
+          {
+            "type": "multiple",
+            "question": "波爾多五大一級酒莊（Premier Grand Cru Classé）包括哪些？（多選）",
+            "options": [
+              "A. Château Lafite Rothschild",
+              "B. Château Mouton Rothschild",
+              "C. Château Pétrus",
+              "D. Château Latour"
+            ],
+            "correct": [
+              0,
+              1,
+              3
+            ],
+            "explanation": "1855 年五大一級莊：Lafite、Margaux、Latour、Haut-Brion（以及 1973 年晉升的 Mouton Rothschild）。Pétrus 是波美侯傳奇但不屬於 1855 年分級體系（波美侯沒有官方分級制度）。"
+          },
+          {
+            "type": "single",
+            "question": "聖愛美濃（Saint-Émilion）有自己的分級制度，最高等級是？",
+            "options": [
+              "A. Premier Grand Cru Classé A",
+              "B. Grand Cru Classé",
+              "C. Cru Bourgeois",
+              "D. Grand Cru Supérieur"
+            ],
+            "correct": 0,
+            "explanation": "聖愛美濃的分級（Saint-Émilion Classification）最高等級是「Premier Grand Cru Classé A」，目前只有 Château Pétrus 所在的波美侯沒有此制度，聖愛美濃的 PGCCA 包括奧松（Ausone）和白馬（Cheval Blanc）等。"
+          },
+          {
+            "type": "single",
+            "question": "「中級酒（Cru Bourgeois）」是哪個地區的分級？",
+            "options": [
+              "A. 右岸聖愛美濃",
+              "B. 格拉夫（Graves）",
+              "C. 梅多克（Médoc）",
+              "D. 蘇玳（Sauternes）"
+            ],
+            "correct": 2,
+            "explanation": "Cru Bourgeois 是梅多克的非正式分級體系，針對未入選 1855 年正式分級但品質卓越的酒莊。分為 Cru Bourgeois、Cru Bourgeois Supérieur 和 Cru Bourgeois Exceptionnel 三個次等級。"
+          },
+          {
+            "type": "single",
+            "question": "AOC（Appellation d'Origine Contrôlée）制度的最重要功能是什麼？",
+            "options": [
+              "A. 規定葡萄酒的最低售價",
+              "B. 保護特定地理區域的葡萄酒名稱和生產規範",
+              "C. 認定酒莊的歷史等級",
+              "D. 核發出口許可"
+            ],
+            "correct": 1,
+            "explanation": "AOC 制度（現代更新為 AOP）保護特定地理區域的葡萄酒：只有符合該地理範圍內種植、釀造規範（品種、產量上限、釀造方法）的酒才能使用 AOC 名稱，同時防止外地仿冒。"
+          }
+        ]
+      }
+    }
+  }
+)
+
 export default normalizedLessonContent

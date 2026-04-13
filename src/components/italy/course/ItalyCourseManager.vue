@@ -24,6 +24,7 @@
       <ItalySlideViewer
         v-else
         :lesson="activeLesson"
+        :isFinalExam="activeLessonMeta?.isFinalExam || false"
         @close="closeLesson"
         @complete="handleComplete"
         @openMap="$emit('openMap')"
@@ -44,6 +45,7 @@ const emit = defineEmits(['openMap'])
 const view = ref('levelSelector')
 const selectedLevelKey = ref(null)
 const activeLesson = ref(null)
+const activeLessonMeta = ref(null)
 
 // 已完成課程清單（從 localStorage）
 const completedMap = ref({})
@@ -78,19 +80,23 @@ function backToLevelSelector () {
 }
 
 async function startLesson (lessonMeta) {
+  activeLessonMeta.value = lessonMeta
   try {
     const levelKey = selectedLevelKey.value
-    // 從 public/italy/courses/{level}/{lessonId}.json 載入課程
     const res = await fetch(`/italy/courses/${levelKey}/${lessonMeta.id}.json`)
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     const data = await res.json()
+    if (lessonMeta.mapRegion) data.mapRegion = lessonMeta.mapRegion
+    // 注入 levelKey 供綜合評量題庫載入使用
+    data.levelKey = levelKey
     activeLesson.value = data
   } catch (e) {
     console.error('載入課程失敗:', e)
-    // Fallback: 顯示基本訊息
     activeLesson.value = {
       lessonId: lessonMeta.id,
       title: lessonMeta.title,
+      mapRegion: lessonMeta.mapRegion || null,
+      levelKey: selectedLevelKey.value,
       slides: [{ type: 'content', title: lessonMeta.title, content: '課程內容載入中，請稍後再試。' }]
     }
   }
@@ -98,6 +104,7 @@ async function startLesson (lessonMeta) {
 
 function closeLesson () {
   activeLesson.value = null
+  activeLessonMeta.value = null
 }
 
 function handleComplete (lessonId) {

@@ -640,6 +640,85 @@ export const lessonContent = [
     },
     keyInsight: '波爾多的魅力不僅在於左岸的強勁，更在於右岸的柔美與白酒的優雅。Pomerol的藍黏土釀出Merlot的天堂，Saint-Émilion的千年歷史展現文化厚度，Sauternes的貴腐甜白是大自然的神蹟。理解波爾多的多樣性，才能真正領略這個偉大產區的全貌。',
     shareMessage: '我剛完成了波爾多葡萄酒Level 1的「右岸核心產區與白酒」課程！現在我理解Pomerol與Sauternes的魅力了！🍯🍷 #波爾多 #右岸 #貴腐甜白 #葡萄酒學習'  }
+,
+  // ====== inject-bordeaux-quiz ======
+  {
+    "component": "QuizSlide",
+    "componentProps": {
+      "slide": {
+        "title": "🧠 知識檢測",
+        "isFinalExam": false,
+        "passScore": 70,
+        "questions": [
+          {
+            "type": "single",
+            "question": "蘇玳（Sauternes）以生產哪種類型的葡萄酒著稱？",
+            "options": [
+              "A. 干型紅酒",
+              "B. 起泡酒",
+              "C. 貴腐甜白酒",
+              "D. 干型白酒"
+            ],
+            "correct": 2,
+            "explanation": "蘇玳 AOC 以利用貴腐菌（Botrytis Cinerea）釀製的甜白酒聞名，金黃色的 Château d'Yquem 是世界最偉大的甜酒之一，採用 Sémillon 和 Sauvignon Blanc 調配，甜度高但酸度也十分顯著。"
+          },
+          {
+            "type": "multiple",
+            "question": "波爾多生產哪些類型的葡萄酒？（多選）",
+            "options": [
+              "A. 干型紅酒",
+              "B. 干型白酒",
+              "C. 貴腐甜白酒（如蘇玳）",
+              "D. 起泡酒（Crémant de Bordeaux）"
+            ],
+            "correct": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "explanation": "波爾多是一個多元的葡萄酒產區：以干型紅酒最知名；格拉夫、兩海之間產干型白酒；蘇玳和巴薩克產頂級甜酒；也生產相對少量的 Crémant de Bordeaux 起泡酒。"
+          },
+          {
+            "type": "single",
+            "question": "「副標（Second Wine）」是什麼概念？",
+            "options": [
+              "A. 品質次於第一瓶酒的拒絕策略",
+              "B. 大酒莊用年輕藤蔓或未達正牌標準的葡萄釀製的「二軍酒」",
+              "C. 只向私人客戶販售的特釀",
+              "D. 白酒的法定名稱"
+            ],
+            "correct": 1,
+            "explanation": "波爾多頂級酒莊通常釀製「正牌酒（Grand Vin）」和「二軍酒（Second Wine）」：年輕藤蔓、品質稍低地塊的葡萄或品質未達正牌標準的批次，用來釀製二軍酒。如拉菲的二軍是小拉菲（Carruades de Lafite）。"
+          },
+          {
+            "type": "single",
+            "question": "波爾多干型白酒（Bordeaux Blanc）的風格偏向？",
+            "options": [
+              "A. 甜型，高酒精",
+              "B. 清新草本（Sauvignon 為主）或圓潤複雜（Sémillon 為主）",
+              "C. 濃郁奶油感，類似布根地",
+              "D. 高單寧，接近紅酒"
+            ],
+            "correct": 1,
+            "explanation": "波爾多干型白酒根據品種比例有兩種風格：Sauvignon Blanc 比例高的清新草本風；Sémillon 比例高的圓潤蠟感。格拉夫（尤其是 Pessac-Léognan）生產的干型白酒是波爾多最頂尖的白酒。"
+          },
+          {
+            "type": "single",
+            "question": "波爾多粉紅酒（Bordeaux Rosé）使用什麼品種釀造？",
+            "options": [
+              "A. 只用 Merlot",
+              "B. 只用 Cabernet Sauvignon",
+              "C. 可用任何波爾多允許的紅葡萄品種",
+              "D. 混合紅白酒調製"
+            ],
+            "correct": 2,
+            "explanation": "波爾多粉紅酒可以使用所有 AOC 允許的紅葡萄品種（Merlot、Cabernet Sauvignon、Cabernet Franc 等），採用直接壓榨法或短時間浸皮釀造，呈現不同深淺的粉紅色，風格清爽易飲。"
+          }
+        ]
+      }
+    }
+  }
 ]
 
 export default lessonContent

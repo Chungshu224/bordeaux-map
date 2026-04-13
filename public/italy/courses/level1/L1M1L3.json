@@ -97,6 +97,80 @@
       "content": "<div class=\"soil-types\"><div class=\"soil-card\"><div class=\"soil-name\">🪨 石灰岩 (Calcareous)</div><div class=\"soil-regions\">Piemonte (Barolo), Toscana</div><div class=\"soil-effect\">排水佳，賦予優雅與礦物感</div></div><div class=\"soil-card\"><div class=\"soil-name\">🧱 黏土 (Clay)</div><div class=\"soil-regions\">Toscana (Chianti), Umbria</div><div class=\"soil-effect\">保水性好，葡萄飽滿有力</div></div><div class=\"soil-card\"><div class=\"soil-name\">🌋 火山土 (Volcanic)</div><div class=\"soil-regions\">Sicily (Etna), Campania</div><div class=\"soil-effect\">礦物質豐富，風味獨特</div></div><div class=\"soil-card\"><div class=\"soil-name\">⛰️ 砂岩 (Sandstone)</div><div class=\"soil-regions\">Veneto, Friuli</div><div class=\"soil-effect\">早熟，果香明顯</div></div></div>"
     },
     {
+      "type": "quiz",
+      "title": "🧠 知識檢測",
+      "questions": [
+        {
+          "type": "single",
+          "question": "貫穿義大利半島全境的主要山脈是？",
+          "options": [
+            "A. 阿爾卑斯山",
+            "B. 亞平寧山脈",
+            "C. 多洛米底山",
+            "D. 比利牛斯山"
+          ],
+          "correct": 1,
+          "explanation": "亞平寧山脈（Apennines）從北到南貫穿整個義大利半島，像脊骨一樣影響全國的氣候和排水條件，是義大利最重要的地理特徵。"
+        },
+        {
+          "type": "multiple",
+          "question": "以下哪些自然因素影響義大利葡萄酒的地區風格差異？（多選）",
+          "options": [
+            "A. 緯度（南北溫度差）",
+            "B. 海拔高度",
+            "C. 酒莊的品牌知名度",
+            "D. 土壤類型"
+          ],
+          "correct": [
+            0,
+            1,
+            3
+          ],
+          "explanation": "緯度決定基礎氣溫；海拔每升高 100 公尺降溫約 0.6°C；土壤影響葡萄的礦物感和酸度。品牌知名度是市場因素，不影響自然風土條件。"
+        },
+        {
+          "type": "single",
+          "question": "Etna 火山土壤對當地葡萄酒最主要的貢獻是？",
+          "options": [
+            "A. 大量水分供給",
+            "B. 降低環境氣溫",
+            "C. 賦予獨特礦物感和火山岩風味",
+            "D. 增加日照時間"
+          ],
+          "correct": 2,
+          "explanation": "Etna 的火山土富含礦物質，賦予 Nerello Mascalese 等葡萄酒獨特的礦物感和火山岩風味，是當地葡萄酒區別於其他產區的核心特徵。"
+        },
+        {
+          "type": "single",
+          "question": "義大利北部大陸性氣候最典型的特徵是？",
+          "options": [
+            "A. 全年高溫乾燥",
+            "B. 四季分明，夏熱冬冷，典型有秋霧（Nebbia）",
+            "C. 年雨量極少，接近沙漠氣候",
+            "D. 受熱帶氣流主導"
+          ],
+          "correct": 1,
+          "explanation": "北部大陸性氣候四季分明，夏熱冬冷。秋霧（Nebbia）是皮埃蒙特典型的氣候特徵，Nebbiolo 品種名字即源自於此，有助於緩慢成熟和風味複雜度。"
+        },
+        {
+          "type": "multiple",
+          "question": "以下哪些是義大利重要的優質土壤類型？（多選）",
+          "options": [
+            "A. 石灰岩土（Calcareous）",
+            "B. 火山土（Volcanic）",
+            "C. 永凍土（Permafrost）",
+            "D. 黏土（Clay）"
+          ],
+          "correct": [
+            0,
+            1,
+            3
+          ],
+          "explanation": "義大利土壤多樣：石灰岩（Barolo、Chianti）提供排水和礦物感；火山土（Etna）賦予獨特礦物風味；黏土（Chianti、Umbria）保水性好使葡萄飽滿。義大利無永凍土。"
+        }
+      ]
+    },
+    {
       "type": "content",
       "title": "🎓 重點總結",
       "content": "<div class=\"key-takeaways\"><div class=\"takeaway-item\">✓ 南北跨越 10 個緯度，氣候差異巨大</div><div class=\"takeaway-item\">✓ 丘陵地形最適合釀酒葡萄種植</div><div class=\"takeaway-item\">✓ 海拔、朝向、土壤共同決定風土</div><div class=\"takeaway-item\">✓ 北部優雅、中部平衡、南部濃郁</div></div><div class=\"map-prompt\"><p>💡 <strong>建議：</strong>點擊「互動地圖」按鈕，探索義大利 20 個產區的地理分布！</p></div>"

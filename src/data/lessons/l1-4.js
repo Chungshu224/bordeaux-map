@@ -457,6 +457,84 @@ export const lessonContent = [
     keyInsight: '左岸的核心是Cabernet Sauvignon與砂礫土壤的完美結合。Médoc的深層砂礫提供優秀排水，造就Cabernet的強勁骨架與陳年潛力；Graves的多樣風土則展現更豐富的風格。理解左岸，就是理解如何通過風土與品種的匹配，創造出世界上最具陳年潛力、最優雅複雜的紅葡萄酒。',
     shareMessage: '我剛完成了波爾多葡萄酒Level 1的「左岸核心產區詳解」課程！現在我能分辨Médoc與Graves的風格了！🏆🍷 #波爾多 #左岸 #Médoc #葡萄酒學習'
   }
+,
+  // ====== inject-bordeaux-quiz ======
+  {
+    "component": "QuizSlide",
+    "componentProps": {
+      "slide": {
+        "title": "🧠 知識檢測",
+        "isFinalExam": false,
+        "passScore": 70,
+        "questions": [
+          {
+            "type": "single",
+            "question": "梅多克（Médoc）位於波爾多的哪一岸？",
+            "options": [
+              "A. 右岸",
+              "B. 左岸",
+              "C. 兩海之間",
+              "D. 河中央小島"
+            ],
+            "correct": 1,
+            "explanation": "梅多克是波爾多左岸最著名的產區，沿吉隆河西岸延伸，以礫石土壤和 Cabernet Sauvignon 為主導，1855 年的著名分級制度就是針對梅多克和格拉夫建立的。"
+          },
+          {
+            "type": "single",
+            "question": "波美侯（Pomerol）和聖愛美濃（Saint-Émilion）在哪一岸？",
+            "options": [
+              "A. 左岸",
+              "B. 右岸",
+              "C. 兩海之間",
+              "D. 分屬兩岸"
+            ],
+            "correct": 1,
+            "explanation": "波美侯和聖愛美濃都在右岸，以 Merlot 和 Cabernet Franc 為主導品種，土壤以黏土和石灰岩為主，與左岸礫石的 Cabernet Sauvignon 風格完全不同。右岸是波爾多另一個頂級產地，Petrus 就在波美侯。"
+          },
+          {
+            "type": "multiple",
+            "question": "以下哪些是左岸的特徵？（多選）",
+            "options": [
+              "A. 礫石和砂礫土壤，排水優良",
+              "B. Cabernet Sauvignon 為主",
+              "C. 1855 年分級制度覆蓋的主要地區",
+              "D. Merlot 佔主導地位"
+            ],
+            "correct": [
+              0,
+              1,
+              2
+            ],
+            "explanation": "左岸（主要是梅多克、格拉夫）的特徵：礫石土壤排水優良 → 適合晚熟的 Cabernet Sauvignon；1855 年分級也主要涵蓋此區。Merlot 是右岸的主導品種，不是左岸。"
+          },
+          {
+            "type": "single",
+            "question": "為什麼左岸土壤以礫石為主對 Cabernet Sauvignon 有利？",
+            "options": [
+              "A. 礫石直接提供葡萄所需的養分",
+              "B. 礫石反射熱量、排水快，有助晚熟的 Cabernet Sauvignon 成熟",
+              "C. 礫石防止病蟲害",
+              "D. 礫石是決定等級的法規標準"
+            ],
+            "correct": 1,
+            "explanation": "礫石土壤的兩大優點：反射熱量讓土壤和空氣溫度升高，且排水迅速避免積水。這正好配合了 Cabernet Sauvignon 晚熟的本性——需要更多積溫和乾燥條件才能完全成熟，礫石地的波爾多正好提供此環境。"
+          },
+          {
+            "type": "single",
+            "question": "「右岸」為什麼以 Merlot 為主？",
+            "options": [
+              "A. 因為 Merlot 比 Cabernet 貴，釀酒師偏好它",
+              "B. 右岸黏土保水性佳，適合早熟的 Merlot",
+              "C. 法規規定右岸只能種 Merlot",
+              "D. 氣候比左岸熱，所以需要更耐熱的品種"
+            ],
+            "correct": 1,
+            "explanation": "右岸（波美侯、聖愛美濃）的土壤以黏土和石灰岩為主，保水性強，溫度比左岸礫石地略低。早熟的 Merlot 和 Cabernet Franc 在此環境中能穩定成熟，與土壤形成完美的風土匹配。"
+          }
+        ]
+      }
+    }
+  }
 ]
 
 export default lessonContent

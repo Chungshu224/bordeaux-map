@@ -89,6 +89,79 @@
       "content": "<div class=\"label-guide\"><div class=\"label-item\"><span class=\"label-number\">1</span><div class=\"label-text\"><strong>酒莊名稱</strong><br>Producer Name</div></div><div class=\"label-item\"><span class=\"label-number\">2</span><div class=\"label-text\"><strong>產區等級</strong><br>DOCG / DOC / IGT</div></div><div class=\"label-item\"><span class=\"label-number\">3</span><div class=\"label-text\"><strong>年份</strong><br>Vintage</div></div><div class=\"label-item\"><span class=\"label-number\">4</span><div class=\"label-text\"><strong>酒精濃度</strong><br>Alcohol %</div></div><div class=\"label-item\"><span class=\"label-number\">5</span><div class=\"label-text\"><strong>容量</strong><br>Volume (ml)</div></div></div>"
     },
     {
+      "type": "quiz",
+      "title": "🧠 知識檢測",
+      "questions": [
+        {
+          "type": "single",
+          "question": "DOCG 中的字母「G」代表什麼意思？",
+          "options": [
+            "A. Geografica",
+            "B. Garantita（保証）",
+            "C. Grande",
+            "D. Genuina"
+          ],
+          "correct": 1,
+          "explanation": "DOCG 中的 G 代表 Garantita（保証），表示除了法定產區之外，還有品質上的官方保證，是義大利最嚴格的葡萄酒等級。"
+        },
+        {
+          "type": "multiple",
+          "question": "超級托斯卡納（Super Tuscan）最初為 IGT 等級的原因包括哪些？（多選）",
+          "options": [
+            "A. 使用了 Cabernet Sauvignon 等非法定品種",
+            "B. 釀酒師刻意降低等級賣便宜",
+            "C. 當時法規不允許非傳統品種出現在 DOC 酒中",
+            "D. IGT 的市場認知度比 DOC 更高"
+          ],
+          "correct": [
+            0,
+            2
+          ],
+          "explanation": "80 年代釀酒師想用 Cabernet Sauvignon 等品種釀酒，但 DOC 法規限制只能用傳統品種，所以只能標示為 IGT。後來 Sassicaia 品質卓越，自成一個 DOC。"
+        },
+        {
+          "type": "single",
+          "question": "義大利目前大約有多少個 DOCG？",
+          "options": [
+            "A. 約 30 個",
+            "B. 約 50 個",
+            "C. 超過 77 個",
+            "D. 超過 150 個"
+          ],
+          "correct": 2,
+          "explanation": "義大利目前有超過 77 個 DOCG 產區，主要集中在 Piemonte（18 個）、Tuscany 和 Veneto 等核心地區，持續成長中。"
+        },
+        {
+          "type": "single",
+          "question": "哪個等級讓釀酒師有最大的品種和釀造方式創作自由？",
+          "options": [
+            "A. DOCG",
+            "B. DOC",
+            "C. IGT",
+            "D. Vino da Tavola"
+          ],
+          "correct": 2,
+          "explanation": "IGT（Indicazione Geografica Tipica）是四個等級中限制最少的，允許使用各種品種和釀造工藝，許多創新頂級酒款如 Super Tuscan 選擇 IGT 標示。"
+        },
+        {
+          "type": "multiple",
+          "question": "義大利葡萄酒酒標上必須標示哪些法定資訊？（多選）",
+          "options": [
+            "A. 酒莊/生產者名稱",
+            "B. 產區等級（DOCG/DOC/IGT）",
+            "C. 年份（Vintage）",
+            "D. 建議零售價格"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "酒標上必須標示生產者、產區等級和年份，這些是識別一款義大利酒的基本資訊。售價不屬於酒標的法定標示項目，由市場決定。"
+        }
+      ]
+    },
+    {
       "type": "content",
       "title": "🎓 重點總結",
       "content": "<div class=\"summary-boxes\"><div class=\"summary-box\"><strong>DOCG</strong><br>最高等級，品質保證</div><div class=\"summary-box\"><strong>DOC</strong><br>優質法定產區</div><div class=\"summary-box\"><strong>IGT</strong><br>創新與地區特色</div><div class=\"summary-box\"><strong>VdT</strong><br>日常餐酒</div></div>"

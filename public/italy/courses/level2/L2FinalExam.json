@@ -1,0 +1,31 @@
+{
+  "lessonId": "L2FinalExam",
+  "title": "Level 2 綜合評量",
+  "slides": [
+    {
+      "type": "title",
+      "title": "📋 Level 2 綜合評量",
+      "subtitle": "義大利葡萄酒 Level 2 · 進階完整測驗"
+    },
+    {
+      "type": "list",
+      "title": "🎯 Level 2 重點回顧",
+      "points": [
+        "🏔️ 北義：Trentino、Friuli、Liguria、Emilia-Romagna 各具特色",
+        "🌿 Trentino-Alto Adige 超過 98% 葡萄酒達 DOC/DOCG 等級",
+        "🍷 Friuli 以 Tocai Friulano、Ribolla Gialla 等原生白品種著稱",
+        "🌊 Liguria 的 Vermentino 帶有鹽味礦物感，與海鮮絕配",
+        "🫧 Lambrusco 是 Emilia-Romagna 最具代表性的微氣泡紅酒",
+        "🗺️ 中義：Marche 的 Verdicchio、Umbria 的 Sagrantino、Lazio 的 Frascati",
+        "🍇 Sagrantino di Montefalco 含義大利最高單寧量，需至少 37 個月熟成",
+        "☀️ 南義：Campania、Puglia、Basilicata、Calabria、Sardinia",
+        "🌋 Aglianico 生長於火山土壤，被稱為「南義的 Nebbiolo」",
+        "🔄 Primitivo 與美國 Zinfandel 基因相同，均源自克羅埃西亞",
+        "👑 Nebbiolo → Barolo（傳統派大桶 vs 現代派小桶之爭）",
+        "🍇 Sangiovese → Brunello di Montalcino（5 年才能上市）",
+        "🍽️ 配餐地域性原則：同產區酒食最搭",
+        "💰 Barolo Riserva 頂尖酒莊在拍賣市場最保值"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "level": "level3",
+  "title": "Level 3 綜合評量題庫",
+  "questions": [
+    {
+      "type": "single",
+      "question": "Timorasso 葡萄在哪個 Piemonte 地區復興最成功？",
+      "options": [
+        "A. Langhe",
+        "B. Colli Tortonesi",
+        "C. Monferrato",
+        "D. Roero"
+      ],
+      "correct": 1,
+      "explanation": "Walter Massa 在 Tortona 丘陵（Colli Tortonesi）帶頭復興 Timorasso 白酒，使其成為 Piemonte 最受矚目的稀有白品種之一。"
+    },
+    {
+      "type": "single",
+      "question": "Ribolla Gialla 是哪個大區最重要的原生白品種？",
+      "options": [
+        "A. Trentino",
+        "B. Friuli-Venezia Giulia",
+        "C. Veneto",
+        "D. Lombardy"
+      ],
+      "correct": 1,
+      "explanation": "Ribolla Gialla 是 Friuli 的靈魂品種，在 Collio 和 Colli Orientali 表現最佳，也是橘酒運動最常使用的品種。"
+    },
+    {
+      "type": "single",
+      "question": "Valle d'Aosta 的葡萄種植面積為何極小？",
+      "options": [
+        "A. 不適合葡萄生長的氣候",
+        "B. 阿爾卑斯山地形陡峭，梯田耕作艱難",
+        "C. 法律限制種植",
+        "D. 消費者偏好進口酒"
+      ],
+      "correct": 1,
+      "explanation": "Valle d'Aosta 是義大利最小的葡萄酒產區，因阿爾卑斯山地形極為陡峭，葡萄種植全靠手工梯田，成本極高，產量因此極為有限。"
+    },
+    {
+      "type": "single",
+      "question": "DOCG 酒標上的粉紅色政府貼紙（fascetta）的主要功能是？",
+      "options": [
+        "A. 標示葡萄酒的甜度",
+        "B. 防偽並確認每瓶酒已通過官方審核",
+        "C. 標示最佳飲用日期",
+        "D. 區分有機認證"
+      ],
+      "correct": 1,
+      "explanation": "Fascetta（政府防偽貼紙）確保每瓶 DOCG 酒都有唯一序號，並驗證已通過官方化學分析和感官審查委員會認可，是偽造最困難的識別標誌。"
+    },
+    {
+      "type": "single",
+      "question": "酒標上 \"Riserva\" 的法定涵義是？",
+      "options": [
+        "A. 僅表示釀酒師的個人精選",
+        "B. 達到 DOC/DOCG 規定的最低陳年年限要求（通常比普通款更長）",
+        "C. 限量版，每批次少於 500 瓶",
+        "D. 有機認證的保留酒"
+      ],
+      "correct": 1,
+      "explanation": "Riserva 在 DOC/DOCG 規範中有明確的最低陳年年限要求（如 Barolo Riserva 需 5 年、Brunello Riserva 需 6 年），並非隨意使用的行銷術語。"
+    },
+    {
+      "type": "single",
+      "question": "義大利葡萄酒「二次沉澱（bottle sedimentation）」主要是由什麼形成的？",
+      "options": [
+        "A. 殘糖結晶",
+        "B. 酒石酸鹽結晶和單寧-花青素聚合物",
+        "C. 雜質污染",
+        "D. 二氧化硫沉澱"
+      ],
+      "correct": 1,
+      "explanation": "陳年紅酒的沉澱物主要是酒石酸鹽結晶和單寧與花青素結合形成的聚合物，是正常的陳年現象，並不影響品質。"
+    },
+    {
+      "type": "single",
+      "question": "開瓶後的 Barolo 建議最長可醒酒多久？",
+      "options": [
+        "A. 15 分鐘",
+        "B. 老年份 30-60 分鐘，年輕年份可達 2-3 小時",
+        "C. 不需要醒酒",
+        "D. 24 小時"
+      ],
+      "correct": 1,
+      "explanation": "年輕 Barolo（<10 年）因單寧緊澀，可醒酒 2-3 小時；老年份（>20 年）更為脆弱，醒酒 30-60 分鐘後需立即飲用，過度氧化會使香氣消散。"
+    },
+    {
+      "type": "single",
+      "question": "盲品時，酒液邊緣出現「翠綠色（green rim）」代表什麼？",
+      "options": [
+        "A. 酒已變質",
+        "B. 極年輕的白酒（往往是清新高酸型品種）",
+        "C. 添加了食用色素",
+        "D. 過度氧化"
+      ],
+      "correct": 1,
+      "explanation": "白酒邊緣的翠綠色調是年輕度的指標，常見於極年輕的高酸品種（如 Verdicchio、Vermentino、Soave），隨時間會轉為金黃色。"
+    },
+    {
+      "type": "single",
+      "question": "盲品中聞到「火柴燃燒（struck match / 還原硫）」的氣味，最可能是？",
+      "options": [
+        "A. 酒已腐壞",
+        "B. 還原（reductive）風格釀造，通氣後可消散",
+        "C. Cork taint（軟木塞污染）",
+        "D. 揮發性酸（volatile acidity）過高"
+      ],
+      "correct": 1,
+      "explanation": "「火柴燃燒」氣味是二氧化硫還原產生的硫醇類物質，在還原風格釀造（不鏽鋼桶低氧）中常見，通常搖杯通氣後 5-10 分鐘內消散，並非缺陷。"
+    },
+    {
+      "type": "multiple",
+      "question": "以下哪些是 Brunello di Montalcino 盲品的典型特徵？（多選）",
+      "options": [
+        "A. 橙色邊緣（陳年款）",
+        "B. 極高酸度和細緻單寧",
+        "C. 焦油、乾燥草本、黑色水果香氣",
+        "D. 濃郁的新法國橡木香草氣息"
+      ],
+      "correct": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Brunello 的盲品特徵：橙色邊緣（陳年）、Sangiovese 的高酸、細膩單寧，複雜的焦油/草本/黑色水果。法國新橡木桶香草氣不是傳統 Brunello 的特徵（多使用大型舊桶）。"
+    },
+    {
+      "type": "single",
+      "question": "Prosecco DOC（非 DOCG）最大的爭議點是？",
+      "options": [
+        "A. 品質太差，不應受保護",
+        "B. 產區範圍過大（9 省），稀釋了 Conegliano Valdobbiadene DOCG 的精品形象",
+        "C. 釀酒方法不符合傳統",
+        "D. 使用 Chardonnay 而非 Glera"
+      ],
+      "correct": 1,
+      "explanation": "Prosecco DOC 涵蓋威尼托和弗留利 9 個省份，範圍過大造成品質參差不齊，許多人認為稀釋了頂級 DOCG（Conegliano Valdobbiadene）的形象和市場價值。"
+    },
+    {
+      "type": "single",
+      "question": "義大利自然酒運動中，「minimal intervention（最低干預）」最核心的釀酒原則是？",
+      "options": [
+        "A. 完全不使用任何添加物，包括二氧化硫",
+        "B. 有機/生物動力農耕，酒窖中減少或不使用二氧化硫等人工添加物",
+        "C. 僅使用傳統橡木桶陳年",
+        "D. 只在滿月日採收"
+      ],
+      "correct": 1,
+      "explanation": "自然酒核心：先從農業（有機/生物動力）做起，酒窖中減少添加（尤其二氧化硫），讓酒「自然」呈現風土。但並無官方規範，「完全零添加」是最嚴格的詮釋之一，非所有自然酒都達到。"
+    },
+    {
+      "type": "single",
+      "question": "侍酒師服務 Barolo 時，正確的準備動作是？",
+      "options": [
+        "A. 直接冰鎮至 8°C",
+        "B. 提前 1-2 小時醒酒，或直立靜置讓沉澱物下沉後換瓶",
+        "C. 強力搖晃使沉澱物均勻分布",
+        "D. 加熱至 25°C"
+      ],
+      "correct": 1,
+      "explanation": "頂級 Barolo 建議提前醒酒（年輕款 2-3 小時，老款 30-60 分鐘），老年份有沉澱物時建議先直立靜置 24-48 小時後換瓶濾除沉澱。"
+    },
+    {
+      "type": "single",
+      "question": "義大利最重要的葡萄酒展覽 Vinitaly 在哪個城市舉辦？",
+      "options": [
+        "A. Milan",
+        "B. Verona",
+        "C. Rome",
+        "D. Florence"
+      ],
+      "correct": 1,
+      "explanation": "Vinitaly 每年 4 月在 Verona 舉辦，是全球最重要的義大利葡萄酒展覽，也是全球三大葡萄酒展之一。"
+    },
+    {
+      "type": "multiple",
+      "question": "以下哪些因素是 Barolo 和 Barbaresco 品質差異的關鍵？（多選）",
+      "options": [
+        "A. 海拔與坡向",
+        "B. 土壤組成（石灰土 Tortonian vs Helvetian）",
+        "C. 葡萄採收年份",
+        "D. 釀酒師的個人風格（傳統 vs 現代）"
+      ],
+      "correct": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "海拔最高的 Serralunga（Helvetian 石灰土）較 La Morra（Tortonian 泥灰土）單體結構更強；採收年份影響成熟度；釀酒師風格決定桶型和浸皮時間——這些因素共同塑造了酒款個性。"
+    },
+    {
+      "type": "multiple",
+      "question": "下列哪些屬於義大利「原生品種復興運動」的代表品種？（多選）",
+      "options": [
+        "A. Timorasso",
+        "B. Cabernet Sauvignon",
+        "C. Sagrantino",
+        "D. Nerello Mascalese"
+      ],
+      "correct": [
+        0,
+        2,
+        3
+      ],
+      "explanation": "Timorasso（Piemonte）、Sagrantino（Umbria）、Nerello Mascalese（Sicily Etna）都是本土原生品種復興的代表。Cabernet Sauvignon 是國際品種，不在復興運動範疇內。"
+    },
+    {
+      "type": "multiple",
+      "question": "義大利侍酒師資格考試（AIS）的評分維度包含哪些？（多選）",
+      "options": [
+        "A. 視覺（外觀）",
+        "B. 嗅覺（香氣）",
+        "C. 味覺（口感）",
+        "D. 價格評估"
+      ],
+      "correct": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "AIS 義大利侍酒師協會的評分系統涵蓋：視覺（顏色、清澈度）、嗅覺（香氣複雜度和質量）、味覺（口感結構和品質），不含價格評估。"
+    },
+    {
+      "type": "single",
+      "question": "在世界三大著名葡萄酒雜誌（Wine Spectator、Decanter、Wine Advocate）中，評分最影響 Barolo 二手市場價格的是？",
+      "options": [
+        "A. Wine Spectator",
+        "B. Wine Advocate（尤其 Robert Parker 時代）",
+        "C. Decanter",
+        "D. 三者影響力相同"
+      ],
+      "correct": 1,
+      "explanation": "Robert Parker 的 Wine Advocate 100 分制在 1990-2010 年代對 Barolo 二手市場定價影響力最大，甚至引發釀酒師為迎合其口味轉型為現代派的「Parker Effect」。"
+    },
+    {
+      "type": "single",
+      "question": "為何義大利葡萄酒專家強調「橫向比較（horizontal tasting）」的教育價值？",
+      "options": [
+        "A. 更省錢，只需購買一個年份",
+        "B. 同年份同產區的對比揭示風土、酒莊與釀酒師哲學的差異",
+        "C. 便於評估陳年潛力",
+        "D. 法規規定教育品酒必須橫向比較"
+      ],
+      "correct": 1,
+      "explanation": "橫向品酒（同年份同產區多酒莊）是研究風土詮釋差異的最佳方式：年份影響被控制為相同，因此酒款之間的差異直接反映土壤、海拔、坡向和釀酒師決策的影響。"
+    },
+    {
+      "type": "single",
+      "question": "義大利葡萄酒文化中「零界小農（Vignaiolio）」代表什麼精神？",
+      "options": [
+        "A. 大規模工業化生產",
+        "B. 親力親為的小農釀酒師，從葡萄種植到裝瓶全程掌控",
+        "C. 僅負責葡萄種植、外包釀造的農戶",
+        "D. 合作社的管理職稱"
+      ],
+      "correct": 1,
+      "explanation": "Vignaiolio（葡萄園農）是義大利的精品酒農精神：不依賴大酒廠，從葡萄園管理到釀酒銷售一手包辦，與法國「Récoltant-Manipulant」（農家酒） 概念相似，是義大利精品酒文化的核心。"
+    },
+    {
+      "type": "single",
+      "question": "為什麼高品質義大利橘酒有時比一般白酒更能承受橡木桶陳年？",
+      "options": [
+        "A. 橘酒法規要求必須橡木桶陳年",
+        "B. 帶皮浸漬萃取的單寧和酚類物質使橘酒具備類似紅酒的結構，更能整合橡木風味",
+        "C. 橙色色素與橡木桶產生化學反應",
+        "D. 橘酒水份含量更低"
+      ],
+      "correct": 1,
+      "explanation": "橘酒因帶皮浸漬萃取了白葡萄皮中的單寧和多酚物質，結構較一般白酒更強，就像紅酒一樣更能整合和承受橡木桶熟化，也因此具備更長的陳年潛力。"
+    },
+    {
+      "type": "single",
+      "question": "義大利 DOCG 升級審查的決定性條件是？",
+      "options": [
+        "A. 獲獎數量",
+        "B. 生產規定更嚴格、通過官方委員會感官評測和品質一致性驗證",
+        "C. 出口量超過門檻",
+        "D. 葡萄園總面積達標"
+      ],
+      "correct": 1,
+      "explanation": "DOC 升格 DOCG 需要更嚴格的生產規定（更低產量、更長陳年等），並需通過義大利農業部組織的官方感官評測委員會，驗證品質一致性和高辨識度。"
+    },
+    {
+      "type": "single",
+      "question": "哪個義大利原生品種被稱為「南義的 Pinot Noir」？",
+      "options": [
+        "A. Aglianico",
+        "B. Nerello Mascalese",
+        "C. Negroamaro",
+        "D. Primitivo"
+      ],
+      "correct": 1,
+      "explanation": "Nerello Mascalese（尤其在 Etna 火山土壤）以其輕盈、透明、複雜的特質常被稱為「南義的 Pinot Noir」，在國際市場掀起 Etna 熱潮。"
+    },
+    {
+      "type": "single",
+      "question": "評估盲品酒的「酒體（body）」主要取決於哪個感官因素？",
+      "options": [
+        "A. 顏色深淺",
+        "B. 口腔中酒精、多醣和甘油帶來的重量感",
+        "C. 香氣濃郁度",
+        "D. 餘韻長度"
+      ],
+      "correct": 1,
+      "explanation": "酒體是口腔中感受到的「重量感」，主要來自酒精濃度（最關鍵）、殘糖、甘油和萃取物的綜合感知，與顏色深淺或香氣無直接關係。"
+    },
+    {
+      "type": "single",
+      "question": "以下哪一項不是義大利葡萄酒有機認證的要求？",
+      "options": [
+        "A. 禁止使用合成殺蟲劑",
+        "B. 禁止使用基因改造品種",
+        "C. 必須使用生物動力法日曆",
+        "D. 禁止使用除草劑"
+      ],
+      "correct": 2,
+      "explanation": "有機認證（EU有機標章）要求禁止合成農藥、除草劑和 GMO，但並不要求採用生物動力法的月曆農作系統。生物動力法是有機農業的進階版本，有其獨立的認證（Demeter 等）。"
+    },
+    {
+      "type": "multiple",
+      "question": "義大利近年「火山葡萄酒（Volcanic Wines）」趨勢的代表產區有哪些？（多選）",
+      "options": [
+        "A. Etna DOC（Sicily）",
+        "B. Aglianico del Vulture（Basilicata）",
+        "C. Soave Classico（Veneto）",
+        "D. Campi Flegrei DOC（Campania）"
+      ],
+      "correct": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Etna（西西里火山）、Aglianico del Vulture（Vulture 火山）和 Campi Flegrei（坎帕尼亞火山地帶）都是「火山葡萄酒」趨勢的代表。Soave Classico 主要是玄武岩和石灰岩，非典型火山概念。"
+    }
+  ]
+}

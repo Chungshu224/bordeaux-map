@@ -96,6 +96,73 @@
         "✓ Cesanese 干型風格需要陳年，有強勁單寧和藥草風味",
         "✓ 兩者都是被低估的品種，有投資潛力"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 北義特殊品種知識檢測",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Ciliegiolo 這個名字的由來是什麼？",
+          "options": [
+            "產區名稱",
+            "櫻桃(Ciliegia)",
+            "發現者名字",
+            "羅馬神話人物"
+          ],
+          "correct": 1,
+          "explanation": "Ciliegiolo 源自義大利文 'Ciliegia'（櫻桃），因其明顯的櫻桃風味而得名。"
+        },
+        {
+          "type": "single",
+          "question": "哪位古羅馬學者在著作中提及 Cesanese 葡萄？",
+          "options": [
+            "Julius Caesar",
+            "Pliny the Elder",
+            "Cicero",
+            "Virgil"
+          ],
+          "correct": 1,
+          "explanation": "古羅馬博物學家 Pliny the Elder 在其著作中提及了 Cesanese，證明這個品種有超過 2000 年的歷史。"
+        },
+        {
+          "type": "single",
+          "question": "Cesanese del Piglio 在哪一年獲得 DOCG 認證？",
+          "options": [
+            "1996",
+            "2003",
+            "2008",
+            "2015"
+          ],
+          "correct": 2,
+          "explanation": "Cesanese del Piglio 在 2008 年獲得 DOCG 認證，成為拉齊奧大區第一個也是唯一的 DOCG。"
+        },
+        {
+          "type": "single",
+          "question": "哪個酒莊是 Ciliegiolo 自然酒的代表？",
+          "options": [
+            "Gaja",
+            "Paolo Bea",
+            "Antinori",
+            "Frescobaldi"
+          ],
+          "correct": 1,
+          "explanation": "Paolo Bea 是翁布里亞的自然酒先驅，其 Rosso de Veo（100% Ciliegiolo）是國際知名的自然酒代表。"
+        },
+        {
+          "type": "single",
+          "question": "Nosiola 是哪個產區最具代表性的白品種？",
+          "options": [
+            "A. Friuli",
+            "B. Trentino",
+            "C. Veneto",
+            "D. Lombardy"
+          ],
+          "correct": 1,
+          "explanation": "Nosiola 是 Trentino 的原生白品種，以清爽的榛果（noce=榛果）香氣著稱，也是當地傳統 Vin Santo Trentino 的原料。"
+        }
+      ]
     }
   ]
 }

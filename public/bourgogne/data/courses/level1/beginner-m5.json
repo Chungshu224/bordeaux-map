@@ -13,7 +13,10 @@
           "title": "🗺️ 夏布利產區地圖",
           "content": "探索夏布利的地理位置與四個分級",
           "mapConfig": {
-            "center": [3.8, 47.82],
+            "center": [
+              3.8,
+              47.82
+            ],
             "zoom": 11.5,
             "pitch": 0,
             "bearing": 0
@@ -60,7 +63,10 @@
           "title": "🗺️ 夏布利產區地圖",
           "interactive": false,
           "mapConfig": {
-            "center": [3.8, 47.82],
+            "center": [
+              3.8,
+              47.82
+            ],
             "zoom": 11.5,
             "pitch": 0,
             "bearing": 0
@@ -159,19 +165,40 @@
           "title": "📊 夏布利 vs 金丘霞多麗風格對比",
           "content": "同樣的霞多麗品種，不同風土造就截然不同的風格",
           "data": {
-            "dimensions": ["酒體", "酸度", "礦物感", "果味濃度", "橡木桶", "陳年潛力"],
+            "dimensions": [
+              "酒體",
+              "酸度",
+              "礦物感",
+              "果味濃度",
+              "橡木桶",
+              "陳年潛力"
+            ],
             "datasets": [
               {
                 "label": "夏布利 Chablis",
                 "color": "#4CAF50",
                 "opacity": 0.3,
-                "values": [5, 9, 10, 6, 2, 7]
+                "values": [
+                  5,
+                  9,
+                  10,
+                  6,
+                  2,
+                  7
+                ]
               },
               {
                 "label": "金丘白酒 Côte d'Or",
                 "color": "#FFD700",
                 "opacity": 0.3,
-                "values": [8, 7, 5, 8, 9, 9]
+                "values": [
+                  8,
+                  7,
+                  5,
+                  8,
+                  9,
+                  9
+                ]
               }
             ]
           },
@@ -209,6 +236,76 @@
             "🌊 2017、2018年霜凍導致產量減少50%以上",
             "🌊 夏布利只種植霞多麗，是單一品種產區",
             "🌊 Serein 河調節微氣候，降低霜凍風險"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夏布利（Chablis）葡萄酒的核心特徵是？",
+              "options": [
+                "A. 豐盛奶油感，成熟熱帶水果",
+                "B. 高酸礦物感，帶獨特火石（Flinty）氣息",
+                "C. 甜型，口感圓潤甜美",
+                "D. 低酸高酒精，容易入口"
+              ],
+              "correct": 1,
+              "explanation": "夏布利位於布根地最北、最涼爽的地方，加上 Kimmeridgian 石灰岩土壤（含古牡蠣化石），Chardonnay 在此展現出高酸、清瘦、礦物感和獨特的「打火石」（Flinty）氣息，與南部 Côte de Beaune 的奶油風格截然不同。"
+            },
+            {
+              "type": "single",
+              "question": "夏布利獨特的 Kimmeridgian 土壤有什麼特色？",
+              "options": [
+                "A. 富含鐵質，賦予紅酒濃郁色澤",
+                "B. 白堊紀石灰岩，含古牡蠣化石，賦予獨特礦物感",
+                "C. 火山崩積土，帶有煙燻礦石味",
+                "D. 砂礫混合土，適合早熟品種"
+              ],
+              "correct": 1,
+              "explanation": "Kimmeridgian（Kimméridgien）是侏羅紀晚期的白堊質石灰岩，含有微小的牡蠣化石，是夏布利最珍貴的土壤，也是夏布利礦物感和獨特個性的地質基礎，只在夜丘和夏布利最佳地塊出現。"
+            },
+            {
+              "type": "single",
+              "question": "夏布利最高等級的白酒叫做？",
+              "options": [
+                "A. Petit Chablis",
+                "B. Chablis",
+                "C. Chablis Premier Cru",
+                "D. Chablis Grand Cru"
+              ],
+              "correct": 3,
+              "explanation": "Chablis 的 AOC 分四個等級：Petit Chablis（入門）< Chablis < Chablis Premier Cru（17 個一級園）< Chablis Grand Cru（7 個特級園，如 Blanchot、Les Clos 等，最為頂尖）。"
+            },
+            {
+              "type": "multiple",
+              "question": "夏布利的 Grand Cru 特級園有哪些？（舉例多選）",
+              "options": [
+                "A. Les Clos",
+                "B. Blanchot",
+                "C. Valmur",
+                "D. Chambertin"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "Chablis Grand Cru 有 7 個：Les Clos、Blanchot、Valmur、Grenouilles、Bougros、Les Preuses、Vaudésir，全都在 Chablis 北部山坡。Chambertin 是夜丘的 Pinot Noir 特級園，不屬於夏布利。"
+            },
+            {
+              "type": "single",
+              "question": "關於夏布利使用橡木桶的做法，現代主流是？",
+              "options": [
+                "A. 所有夏布利都必須用橡木桶陳年",
+                "B. 傳統派用橡木桶，但現代多用不銹鋼桶保持純淨礦物感",
+                "C. 夏布利法規禁止使用橡木桶",
+                "D. 只有 Petit Chablis 才用不銹鋼，其他等級都用橡木"
+              ],
+              "correct": 1,
+              "explanation": "夏布利有派別之爭：傳統派（如 Raveneau、Dauvissat）使用舊橡木桶增加圓潤層次；現代派（多數）用不銹鋼桶釀造，保留純淨的礦物風味和高酸度。兩種做法各有擁護者。"
+            }
           ]
         },
         {
@@ -262,7 +359,10 @@
             }
           ],
           "mapConfig": {
-            "center": [3.8, 47.82],
+            "center": [
+              3.8,
+              47.82
+            ],
             "zoom": 11.5,
             "pitch": 0,
             "bearing": 0
@@ -477,7 +577,10 @@
             }
           ],
           "mapConfig": {
-            "center": [3.815, 47.815],
+            "center": [
+              3.815,
+              47.815
+            ],
             "zoom": 13.5,
             "pitch": 0,
             "bearing": 0
@@ -720,6 +823,76 @@
             "🍾 La Moutonne 雖非官方第八園，但品質相當",
             "🍾 一級園 Montée de Tonnerre 品質接近特級園，性價比高",
             "🍾 夏布利分級極為清晰，比金丘更易理解"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夏布利（Chablis）葡萄酒的核心特徵是？",
+              "options": [
+                "A. 豐盛奶油感，成熟熱帶水果",
+                "B. 高酸礦物感，帶獨特火石（Flinty）氣息",
+                "C. 甜型，口感圓潤甜美",
+                "D. 低酸高酒精，容易入口"
+              ],
+              "correct": 1,
+              "explanation": "夏布利位於布根地最北、最涼爽的地方，加上 Kimmeridgian 石灰岩土壤（含古牡蠣化石），Chardonnay 在此展現出高酸、清瘦、礦物感和獨特的「打火石」（Flinty）氣息，與南部 Côte de Beaune 的奶油風格截然不同。"
+            },
+            {
+              "type": "single",
+              "question": "夏布利獨特的 Kimmeridgian 土壤有什麼特色？",
+              "options": [
+                "A. 富含鐵質，賦予紅酒濃郁色澤",
+                "B. 白堊紀石灰岩，含古牡蠣化石，賦予獨特礦物感",
+                "C. 火山崩積土，帶有煙燻礦石味",
+                "D. 砂礫混合土，適合早熟品種"
+              ],
+              "correct": 1,
+              "explanation": "Kimmeridgian（Kimméridgien）是侏羅紀晚期的白堊質石灰岩，含有微小的牡蠣化石，是夏布利最珍貴的土壤，也是夏布利礦物感和獨特個性的地質基礎，只在夜丘和夏布利最佳地塊出現。"
+            },
+            {
+              "type": "single",
+              "question": "夏布利最高等級的白酒叫做？",
+              "options": [
+                "A. Petit Chablis",
+                "B. Chablis",
+                "C. Chablis Premier Cru",
+                "D. Chablis Grand Cru"
+              ],
+              "correct": 3,
+              "explanation": "Chablis 的 AOC 分四個等級：Petit Chablis（入門）< Chablis < Chablis Premier Cru（17 個一級園）< Chablis Grand Cru（7 個特級園，如 Blanchot、Les Clos 等，最為頂尖）。"
+            },
+            {
+              "type": "multiple",
+              "question": "夏布利的 Grand Cru 特級園有哪些？（舉例多選）",
+              "options": [
+                "A. Les Clos",
+                "B. Blanchot",
+                "C. Valmur",
+                "D. Chambertin"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "Chablis Grand Cru 有 7 個：Les Clos、Blanchot、Valmur、Grenouilles、Bougros、Les Preuses、Vaudésir，全都在 Chablis 北部山坡。Chambertin 是夜丘的 Pinot Noir 特級園，不屬於夏布利。"
+            },
+            {
+              "type": "single",
+              "question": "關於夏布利使用橡木桶的做法，現代主流是？",
+              "options": [
+                "A. 所有夏布利都必須用橡木桶陳年",
+                "B. 傳統派用橡木桶，但現代多用不銹鋼桶保持純淨礦物感",
+                "C. 夏布利法規禁止使用橡木桶",
+                "D. 只有 Petit Chablis 才用不銹鋼，其他等級都用橡木"
+              ],
+              "correct": 1,
+              "explanation": "夏布利有派別之爭：傳統派（如 Raveneau、Dauvissat）使用舊橡木桶增加圓潤層次；現代派（多數）用不銹鋼桶釀造，保留純淨的礦物風味和高酸度。兩種做法各有擁護者。"
+            }
           ]
         },
         {
@@ -982,6 +1155,76 @@
             "🥂 'When in doubt, Chablis' - 不確定配什麼酒時，夏布利是海鮮的萬能選擇",
             "🥂 礦物感是夏布利的核心特徵",
             "🥂 高酸度使其成為解膩利器"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夏布利（Chablis）葡萄酒的核心特徵是？",
+              "options": [
+                "A. 豐盛奶油感，成熟熱帶水果",
+                "B. 高酸礦物感，帶獨特火石（Flinty）氣息",
+                "C. 甜型，口感圓潤甜美",
+                "D. 低酸高酒精，容易入口"
+              ],
+              "correct": 1,
+              "explanation": "夏布利位於布根地最北、最涼爽的地方，加上 Kimmeridgian 石灰岩土壤（含古牡蠣化石），Chardonnay 在此展現出高酸、清瘦、礦物感和獨特的「打火石」（Flinty）氣息，與南部 Côte de Beaune 的奶油風格截然不同。"
+            },
+            {
+              "type": "single",
+              "question": "夏布利獨特的 Kimmeridgian 土壤有什麼特色？",
+              "options": [
+                "A. 富含鐵質，賦予紅酒濃郁色澤",
+                "B. 白堊紀石灰岩，含古牡蠣化石，賦予獨特礦物感",
+                "C. 火山崩積土，帶有煙燻礦石味",
+                "D. 砂礫混合土，適合早熟品種"
+              ],
+              "correct": 1,
+              "explanation": "Kimmeridgian（Kimméridgien）是侏羅紀晚期的白堊質石灰岩，含有微小的牡蠣化石，是夏布利最珍貴的土壤，也是夏布利礦物感和獨特個性的地質基礎，只在夜丘和夏布利最佳地塊出現。"
+            },
+            {
+              "type": "single",
+              "question": "夏布利最高等級的白酒叫做？",
+              "options": [
+                "A. Petit Chablis",
+                "B. Chablis",
+                "C. Chablis Premier Cru",
+                "D. Chablis Grand Cru"
+              ],
+              "correct": 3,
+              "explanation": "Chablis 的 AOC 分四個等級：Petit Chablis（入門）< Chablis < Chablis Premier Cru（17 個一級園）< Chablis Grand Cru（7 個特級園，如 Blanchot、Les Clos 等，最為頂尖）。"
+            },
+            {
+              "type": "multiple",
+              "question": "夏布利的 Grand Cru 特級園有哪些？（舉例多選）",
+              "options": [
+                "A. Les Clos",
+                "B. Blanchot",
+                "C. Valmur",
+                "D. Chambertin"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "Chablis Grand Cru 有 7 個：Les Clos、Blanchot、Valmur、Grenouilles、Bougros、Les Preuses、Vaudésir，全都在 Chablis 北部山坡。Chambertin 是夜丘的 Pinot Noir 特級園，不屬於夏布利。"
+            },
+            {
+              "type": "single",
+              "question": "關於夏布利使用橡木桶的做法，現代主流是？",
+              "options": [
+                "A. 所有夏布利都必須用橡木桶陳年",
+                "B. 傳統派用橡木桶，但現代多用不銹鋼桶保持純淨礦物感",
+                "C. 夏布利法規禁止使用橡木桶",
+                "D. 只有 Petit Chablis 才用不銹鋼，其他等級都用橡木"
+              ],
+              "correct": 1,
+              "explanation": "夏布利有派別之爭：傳統派（如 Raveneau、Dauvissat）使用舊橡木桶增加圓潤層次；現代派（多數）用不銹鋼桶釀造，保留純淨的礦物風味和高酸度。兩種做法各有擁護者。"
+            }
           ]
         },
         {

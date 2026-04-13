@@ -20,7 +20,10 @@
           "title": "布根地在哪裡？",
           "content": "布根地位於法國東部，從巴黎東南方約 300 公里處開始，南北延伸約 230 公里，是世界上最負盛名的葡萄酒產區之一。",
           "mapConfig": {
-            "center": [2.5, 46.5],
+            "center": [
+              2.5,
+              46.5
+            ],
             "zoom": 6,
             "pitch": 0,
             "bearing": 0
@@ -36,15 +39,30 @@
               "showLabels": true
             }
           ],
-          "bounds": [[3.5, 46.8], [5.5, 48.0]],
+          "bounds": [
+            [
+              3.5,
+              46.8
+            ],
+            [
+              5.5,
+              48
+            ]
+          ],
           "markers": [
             {
               "name": "Dijon",
-              "coordinates": [5.0415, 47.3220]
+              "coordinates": [
+                5.0415,
+                47.322
+              ]
             },
             {
               "name": "Beaune",
-              "coordinates": [4.8378, 47.0247]
+              "coordinates": [
+                4.8378,
+                47.0247
+              ]
             }
           ]
         },
@@ -112,7 +130,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.5, 47.0],
+            "center": [
+              4.5,
+              47
+            ],
             "zoom": 8.2,
             "pitch": 0,
             "bearing": 0
@@ -475,7 +496,16 @@
               "showLabels": true
             }
           ],
-          "bounds": [[3.8, 45.8], [5.2, 48.0]]
+          "bounds": [
+            [
+              3.8,
+              45.8
+            ],
+            [
+              5.2,
+              48
+            ]
+          ]
         },
         {
           "type": "list",
@@ -487,6 +517,80 @@
             "夏隆丘（Côte Chalonnaise）- 高性價比優質產區",
             "馬貢內（Mâconnais）- 清新易飲的白酒產區",
             "薄酒萊（Beaujolais）- 加美葡萄的天堂"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "布根地葡萄園最核心的地理概念「Terroir 風土」包含哪個最關鍵的元素？",
+              "options": [
+                "A. 酒莊品牌",
+                "B. 土壤、氣候、地形的綜合",
+                "C. 年份的好壞",
+                "D. 釀酒師技術"
+              ],
+              "correct": 1,
+              "explanation": "布根地的「Terroir 風土」強調土壤、氣候、地形和日照等自然條件的綜合影響，是布根地葡萄酒哲學的核心，也是各地塊（Climat）差異的根本原因。"
+            },
+            {
+              "type": "single",
+              "question": "布根地位於法國的哪個方向？",
+              "options": [
+                "A. 西南部，接近大西洋",
+                "B. 東南部，靠近地中海",
+                "C. 中東部，內陸大陸性氣候",
+                "D. 北部，接近英吉利海峽"
+              ],
+              "correct": 2,
+              "explanation": "布根地位於法國中東部，是典型的大陸性氣候，夏熱冬冷，氣溫差異大，有利於葡萄積累酸度和糖分，為精緻細膩的風格奠定基礎。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是布根地葡萄園的重要地理特徵？（多選）",
+              "options": [
+                "A. 金丘（Côte d'Or）山坡",
+                "B. 石灰岩和黏土混合土壤",
+                "C. 靠近大西洋的海洋性氣候",
+                "D. 朝東或東南方向的坡地"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "金丘山坡、石灰岩黏土土壤和朝東坡地都是布根地關鍵地理特徵。布根地是大陸性氣候，不是海洋性氣候：距大西洋遙遠。"
+            },
+            {
+              "type": "single",
+              "question": "布根地最重要的河流是哪條？",
+              "options": [
+                "A. 塞納河（Seine）",
+                "B. 索恩河（Saône）",
+                "C. 隆河（Rhône）",
+                "D. 盧瓦爾河（Loire）"
+              ],
+              "correct": 1,
+              "explanation": "索恩河流經布根地東側，調節了整個區域的氣溫，減少了霜害風險，並在歷史上是布根地葡萄酒的重要運輸通道。"
+            },
+            {
+              "type": "multiple",
+              "question": "哪些是影響布根地葡萄酒風格的氣候特點？（多選）",
+              "options": [
+                "A. 大陸性氣候，溫差大",
+                "B. 春霜和冰雹是主要自然風險",
+                "C. 全年溫暖少雨，類似地中海",
+                "D. 較涼爽，葡萄成熟期長"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "布根地大陸性氣候特點：春霜和冰雹是主要危害，較涼爽的氣溫使葡萄成熟期長，有助於酸度保留。布根地絕非地中海型氣候。"
+            }
           ]
         },
         {
@@ -679,6 +783,76 @@
           ]
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "布根地葡萄酒歷史中，哪個群體對葡萄園的發展和地圖化貢獻最大？",
+              "options": [
+                "A. 法國國王",
+                "B. 天主教修道院僧侶",
+                "C. 英國商人",
+                "D. 荷蘭投資者"
+              ],
+              "correct": 1,
+              "explanation": "熙篤會（Cistercian）和克呂尼修道院（Cluny Abbey）的僧侶在中世紀對布根地的葡萄園進行了精密的研究、分類和地圖化，建立了現代 Climat 系統的基礎。"
+            },
+            {
+              "type": "single",
+              "question": "歷史上哪個貴族家族統治布根地公國並使布根地酒享譽歐洲？",
+              "options": [
+                "A. 美第奇家族（Medici）",
+                "B. 哈布斯堡家族（Habsburg）",
+                "C. 瓦羅瓦公爵家族（Valois）",
+                "D. 薩伏依家族（Savoy）"
+              ],
+              "correct": 2,
+              "explanation": "中世紀布根地公國由瓦羅瓦公爵（Dukes of Burgundy）統治，他們積極推廣布根地酒，並出口至歐洲各地宮廷，讓布根地葡萄酒享譽大陸。"
+            },
+            {
+              "type": "multiple",
+              "question": "法國大革命對布根地葡萄園的影響包括哪些？（多選）",
+              "options": [
+                "A. 沒收修道院和貴族的葡萄園",
+                "B. 葡萄園被分割後拍賣給多位買家",
+                "C. 所有葡萄園都收歸國有",
+                "D. 導致今日布根地極為分散的土地所有權"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "法國大革命（1789年）沒收並拍賣了修道院和貴族的葡萄園，土地被分割給多位小地主，形成了布根地今日極度碎片化的土地結構，同一個 Climat 可能有幾十個擁有者。"
+            },
+            {
+              "type": "single",
+              "question": "布根地的「拿破崙法典」（Napoleonic Code）對葡萄園所有權的長遠影響是？",
+              "options": [
+                "A. 集中了土地所有權",
+                "B. 平均繼承原則使葡萄園繼續分割",
+                "C. 禁止賣地，保持穩定",
+                "D. 沒有顯著影響"
+              ],
+              "correct": 1,
+              "explanation": "拿破崙法典規定遺產必須平均分配給所有子女，每代相傳使葡萄園不斷細分。因此 DRC 的 Romanée-Conti 只有 1.8 公頃，但可能曾有幾十個擁有者。"
+            },
+            {
+              "type": "single",
+              "question": "「Négociant」在布根地葡萄酒貿易中扮演什麼角色？",
+              "options": [
+                "A. 政府認證的品酒師",
+                "B. 收購葡萄或葡萄汁並釀造裝瓶的酒商",
+                "C. 専門出口布根地酒的外國企業",
+                "D. 負責布根地葡萄酒認證的機構"
+              ],
+              "correct": 1,
+              "explanation": "Négociant（酒商）是布根地重要的角色：向多個小莊主收購葡萄或原酒，統一釀造和裝瓶銷售。Bouchard、Louis Jadot、Drouhin 等都是知名的 Négoce 酒商。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "💡 為什麼歷史很重要？",
           "content": "了解布根地的歷史，能幫助我們理解：\n\n**1. 為什麼品質比產量重要** - 從1395年的法令延續至今的哲學\n\n**2. 為什麼每塊地都有名字** - 修道士們千年積累的風土智慧\n\n**3. 為什麼同一個葡萄園有很多酒莊** - 法國大革命的歷史遺產\n\n**4. 為什麼布根地酒如此昂貴** - 小地塊、低產量、高品質的必然結果\n\n歷史不是過去式，它活在每一瓶布根地葡萄酒中。"
@@ -755,25 +929,53 @@
           "title": "📊 三大品種特性雷達圖",
           "content": "直觀對比黑皮諾、霞多麗和加美的風味特性與風格差異",
           "data": {
-            "dimensions": ["酒體", "酸度", "單寧", "果味", "陳年潛力", "價格"],
+            "dimensions": [
+              "酒體",
+              "酸度",
+              "單寧",
+              "果味",
+              "陳年潛力",
+              "價格"
+            ],
             "datasets": [
               {
                 "label": "黑皮諾 Pinot Noir",
                 "color": "#8B0000",
                 "opacity": 0.3,
-                "values": [6, 8, 5, 7, 9, 8]
+                "values": [
+                  6,
+                  8,
+                  5,
+                  7,
+                  9,
+                  8
+                ]
               },
               {
                 "label": "霞多麗 Chardonnay",
                 "color": "#FFD700",
                 "opacity": 0.3,
-                "values": [7, 8, 0, 6, 8, 7]
+                "values": [
+                  7,
+                  8,
+                  0,
+                  6,
+                  8,
+                  7
+                ]
               },
               {
                 "label": "加美 Gamay",
                 "color": "#DC143C",
                 "opacity": 0.3,
-                "values": [5, 7, 4, 9, 4, 5]
+                "values": [
+                  5,
+                  7,
+                  4,
+                  9,
+                  4,
+                  5
+                ]
               }
             ]
           },
@@ -797,6 +999,79 @@
             "風格多變 - 從清爽礦物到濃郁奶油",
             "橡木桶使用 - 影響最終風格的關鍵",
             "布根地是夏多內的原鄉與標竿"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "布根地紅酒幾乎全用哪個葡萄品種釀造？",
+              "options": [
+                "A. Cabernet Sauvignon",
+                "B. Merlot",
+                "C. Pinot Noir",
+                "D. Syrah"
+              ],
+              "correct": 2,
+              "explanation": "Pinot Noir 是布根地紅酒的唯一品種，既是其優雅和複雜度的來源，也是布根地葡萄酒風格的定義者。高酸輕體，香氣細膩，是世界上最難種植也最受收藏家追捧的品種。"
+            },
+            {
+              "type": "single",
+              "question": "布根地白酒主要用哪個品種釀造？",
+              "options": [
+                "A. Sauvignon Blanc",
+                "B. Chardonnay",
+                "C. Riesling",
+                "D. Viognier"
+              ],
+              "correct": 1,
+              "explanation": "Chardonnay 是布根地白酒的核心品種，從夏布利的礦物感到默爾索（Meursault）的奶油感，展現了 Chardonnay 在不同風土下的驚人多樣性，被視為世界最偉大的白葡萄品種之一。"
+            },
+            {
+              "type": "multiple",
+              "question": "關於布根地 Pinot Noir 的特徵，以下哪些是正確的？（多選）",
+              "options": [
+                "A. 單寧輕，顏色比 Cabernet Sauvignon 淺",
+                "B. 以高酸度和果香見長",
+                "C. 老藤和好年份可陳年數十年",
+                "D. 濃黑如墨，高酒精，適合早期飲用"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "Pinot Noir 以輕盈單寧、淺寶石紅色、高酸度和紅果香為特徵。優質 Pinot Noir（如 Grand Cru）具有極強的陳年潛力，但顏色永遠不會像 Cabernet 那樣深濃，這是品種本質。"
+            },
+            {
+              "type": "single",
+              "question": "布根地薄酒萊（Beaujolais）地區主要使用哪個品種釀酒？",
+              "options": [
+                "A. Pinot Noir",
+                "B. Gamay",
+                "C. Grenache",
+                "D. Tempranillo"
+              ],
+              "correct": 1,
+              "explanation": "Gamay 是薄酒萊的核心品種，帶有紅果、花香和些微土壤香，以新鮮活潑的風格著稱。十大特級村（Crus）的 Gamay 甚至可陳年，比一般薄酒萊風格複雜許多。"
+            },
+            {
+              "type": "multiple",
+              "question": "布根地還有哪些輔助葡萄品種？（多選）",
+              "options": [
+                "A. Aligoté（薄酒萊以外的白葡萄）",
+                "B. Bourgogne Blanc（Chardonnay）",
+                "C. Merlot 也允許調配",
+                "D. Pinot Gris 和 Pinot Blanc 可少量使用"
+              ],
+              "correct": [
+                0,
+                3
+              ],
+              "explanation": "Aligoté 是布根地最重要的次要白葡萄，常在 Bourgogne Aligoté AOC 出現。Pinot Gris 和 Pinot Blanc 允許少量用在白酒調配。Merlot 完全不允許在布根地使用。"
+            }
           ]
         },
         {
@@ -882,6 +1157,76 @@
             "進階者：嘗試一級園，體驗不同地塊的差異",
             "收藏家：特級園值得長期陳年與投資",
             "注意年份：布根地年份差異顯著，影響品質與價格"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "看到一瓶酒標上寫著「Gevrey-Chambertin」，這是指什麼？",
+              "options": [
+                "A. 葡萄品種名稱",
+                "B. 村莊 AOC 級別產區名",
+                "C. 特定酒莊名稱",
+                "D. 釀酒師的名字"
+              ],
+              "correct": 1,
+              "explanation": "Gevrey-Chambertin 是夜丘的一個村莊，在布根地酒標上寫村莊名表示此酒來自村莊等級（Village AOC），品質比大區 Bourgogne 高，但低於一級園（Premier Cru）和特級園（Grand Cru）。"
+            },
+            {
+              "type": "single",
+              "question": "酒標上的「1er Cru」或「Premier Cru」表示什麼？",
+              "options": [
+                "A. 第一年釀造",
+                "B. 布根地分級第二高等級的葡萄園",
+                "C. 酒莊創始人的稱號",
+                "D. 表示酒是在第一桶橡木桶陳年"
+              ],
+              "correct": 1,
+              "explanation": "布根地的 Premier Cru（一級園）是分四級中的第二高等（大區 < 村莊 < 一級園 < 特級園）。一級園的名字通常在村名後面，如 Chambolle-Musigny Les Amoureuses 1er Cru。"
+            },
+            {
+              "type": "multiple",
+              "question": "解讀「Chambolle-Musigny Les Amoureuses Premier Cru 2018」這個酒標，以下哪些資訊是正確的？（多選）",
+              "options": [
+                "A. 這是一個一級園等級的酒",
+                "B. 葡萄園叫做 Les Amoureuses，位於 Chambolle-Musigny 村",
+                "C. 2018 是葡萄種植年份",
+                "D. 這是布根地最高的 Grand Cru 特級園"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "這瓶酒是 Premier Cru（一級園），不是 Grand Cru。Les Amoureuses 是葡萄園（Climat）名稱，位於 Chambolle-Musigny 村，2018 是年份。Premier Cru 雖高但仍次於 Grand Cru。"
+            },
+            {
+              "type": "single",
+              "question": "如果酒標只寫「Bourgogne Pinot Noir」，這代表什麼等級？",
+              "options": [
+                "A. 最高等級，Grand Cru",
+                "B. 布根地大區等級（最基礎）",
+                "C. 一級園等級",
+                "D. 村莊等級"
+              ],
+              "correct": 1,
+              "explanation": "只寫「Bourgogne」是大區 AOC，是四個等級中最基礎的，葡萄可來自布根地全區，品質通常最親民，適合日常飲用，價格也最低。"
+            },
+            {
+              "type": "single",
+              "question": "「Domaine」和「Négociant」在布根地的主要差異是？",
+              "options": [
+                "A. Domaine 只賣白酒，Négociant 只賣紅酒",
+                "B. Domaine 擁有自己葡萄園自釀；Négociant 向外購買葡萄或原酒",
+                "C. 兩者法律上完全相同",
+                "D. Négociant 代表更高品質"
+              ],
+              "correct": 1,
+              "explanation": "Domaine（酒莊）擁有自己的葡萄園並全程自釀；Négociant（酒商）向多個小農購買葡萄或葡萄汁釀造裝瓶。Domaine 釀造通常更有地塊特點，Négociant 則提供更穩定的量和多元選擇。"
+            }
           ]
         },
         {

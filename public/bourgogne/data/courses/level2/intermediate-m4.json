@@ -47,6 +47,77 @@
           "type": "content",
           "title": "特級園的認定標準",
           "content": "特級園的劃分基於數百年的經驗與現代科學驗證：土壤分析、坡向研究、歷史價格、品質穩定性。一旦認定為特級園，地位永久不變，是對風土的最高認可。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 特級園制度知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "布根地合計有多少個 Grand Cru（特級園）AOC？",
+              "options": [
+                "A. 12 個",
+                "B. 25 個",
+                "C. 33 個",
+                "D. 50 個"
+              ],
+              "correct": 2,
+              "explanation": "布根地全境共有 33 個 Grand Cru AOC，主要集中在金丘（夜丘 24 個紅酒 Grand Cru + 伯恩丘 8 個白酒 Grand Cru），加上夏布利 1 個（含 7 個 Climate）。"
+            },
+            {
+              "type": "single",
+              "question": "Grand Cru 酒款在酒標上如何表示其等級？",
+              "options": [
+                "A. 寫上「Grand Cru」並以大字標明 Bourgogne",
+                "B. 只寫特級園名稱（如 Chambertin），不需標村莊名，AOC 即為其園名",
+                "C. 需寫「Grand Cru Reserved」才完整",
+                "D. 以星形符號代替文字說明"
+              ],
+              "correct": 1,
+              "explanation": "布根地 Grand Cru 酒標上只需寫出特級園名稱（如「Chambertin」），這個名稱本身就是一個 AOC，等級高於村莊 AOC。這是布根地分級制度最簡潔也最有力的識別方式。"
+            },
+            {
+              "type": "multiple",
+              "question": "Grand Cru 與 Premier Cru 在法規上的主要差異是？（多選）",
+              "options": [
+                "A. Grand Cru 有更嚴格的最低酒精度要求",
+                "B. Grand Cru 的最高允許產量（每公頃）比 Premier Cru 更低",
+                "C. Grand Cru 需要更長的法定陳年時間",
+                "D. Grand Cru 的 AOC 直接以地塊名命名，不再冠村莊名"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Grand Cru 規定：更高最低酒精度、更低最高產量（每公頃），以及 AOC 直接為地塊名（無需冠村莊）。布根地 Grand Cru 沒有強制最低陳年期（但酒莊可自願陳年更久）。"
+            },
+            {
+              "type": "single",
+              "question": "布根地特級園制度最初由哪個機構確立分級架構？",
+              "options": [
+                "A. 法國農業部",
+                "B. 由布根地葡萄酒職同業公會（BIVB）獨立發展",
+                "C. 19 世紀地質學家 Jules Lavalle 等提出的葡萄園分類，後被 AOC 法規採納",
+                "D. 由歐盟於二戰後制定"
+              ],
+              "correct": 2,
+              "explanation": "布根地分級制度的基礎來自 19 世紀的地質和農業研究（如 Jules Lavalle 1855 年的著作），結合數百年修道院積累的地塊知識，在 20 世紀被正式採納為 AOC 法規。"
+            },
+            {
+              "type": "single",
+              "question": "為什麼「Clos de Vougeot」雖是 Grand Cru，品質卻被認為差異極大？",
+              "options": [
+                "A. 因為 Clos de Vougeot 使用多種葡萄品種",
+                "B. 因為超過 80 個莊主持有不同地塊，不同位置（上段/下段）土壤差異顯著",
+                "C. 因為 AOC 法規對 Clos de Vougeot 管理不嚴",
+                "D. 因為 Clos de Vougeot 跨越兩個大區"
+              ],
+              "correct": 1,
+              "explanation": "Clos de Vougeot 共 50 公頃，有逾 80 位莊主，靠近坡頂的上段地塊土壤較薄、品質最高（接近 Chambolle 和 Vosne）；下段較平坦、土壤肥沃，品質較低。買這款酒，莊主的選擇比特級園名稱本身更重要。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -72,27 +143,161 @@
           "title": "熱夫雷-香貝丹9大特級園地圖",
           "description": "點擊按鈕查看每個特級園的位置",
           "regions": [
-            {"name": "香貝丹", "nameFr": "Chambertin", "id": "chambertin", "fillColor": "#8B0000"},
-            {"name": "香貝丹-貝茲園", "nameFr": "Chambertin Clos de Bèze", "id": "chambertin-cdb", "fillColor": "#A52A2A"},
-            {"name": "查姆-香貝丹", "nameFr": "Charmes-Chambertin", "id": "charmes-chambertin", "fillColor": "#B22222"},
-            {"name": "沙貝勒-香貝丹", "nameFr": "Chapelle-Chambertin", "id": "chapelle-chambertin", "fillColor": "#CD5C5C"},
-            {"name": "格里奧特-香貝丹", "nameFr": "Griotte-Chambertin", "id": "griotte-chambertin", "fillColor": "#DC143C"},
-            {"name": "拉特希葉-香貝丹", "nameFr": "Latricières-Chambertin", "id": "latricieres-chambertin", "fillColor": "#E9967A"},
-            {"name": "瑪茲-香貝丹", "nameFr": "Mazis-Chambertin", "id": "mazis-chambertin", "fillColor": "#F08080"},
-            {"name": "瑪佐耶", "nameFr": "Mazoyères-Chambertin", "id": "mazoyeres-chambertin", "fillColor": "#FA8072"},
-            {"name": "呂修特-香貝丹", "nameFr": "Ruchottes-Chambertin", "id": "ruchottes-chambertin", "fillColor": "#FF6347"}
+            {
+              "name": "香貝丹",
+              "nameFr": "Chambertin",
+              "id": "chambertin",
+              "fillColor": "#8B0000"
+            },
+            {
+              "name": "香貝丹-貝茲園",
+              "nameFr": "Chambertin Clos de Bèze",
+              "id": "chambertin-cdb",
+              "fillColor": "#A52A2A"
+            },
+            {
+              "name": "查姆-香貝丹",
+              "nameFr": "Charmes-Chambertin",
+              "id": "charmes-chambertin",
+              "fillColor": "#B22222"
+            },
+            {
+              "name": "沙貝勒-香貝丹",
+              "nameFr": "Chapelle-Chambertin",
+              "id": "chapelle-chambertin",
+              "fillColor": "#CD5C5C"
+            },
+            {
+              "name": "格里奧特-香貝丹",
+              "nameFr": "Griotte-Chambertin",
+              "id": "griotte-chambertin",
+              "fillColor": "#DC143C"
+            },
+            {
+              "name": "拉特希葉-香貝丹",
+              "nameFr": "Latricières-Chambertin",
+              "id": "latricieres-chambertin",
+              "fillColor": "#E9967A"
+            },
+            {
+              "name": "瑪茲-香貝丹",
+              "nameFr": "Mazis-Chambertin",
+              "id": "mazis-chambertin",
+              "fillColor": "#F08080"
+            },
+            {
+              "name": "瑪佐耶",
+              "nameFr": "Mazoyères-Chambertin",
+              "id": "mazoyeres-chambertin",
+              "fillColor": "#FA8072"
+            },
+            {
+              "name": "呂修特-香貝丹",
+              "nameFr": "Ruchottes-Chambertin",
+              "id": "ruchottes-chambertin",
+              "fillColor": "#FF6347"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "chambertin", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chambertin Grand Cru.geojson", "displayName": "Chambertin", "fillColor": "#8B0000", "fillOpacity": 0.8, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
-            {"id": "chambertin-cdb", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chambertin Clos de Bèze Grand Cru.geojson", "displayName": "Clos de Bèze", "fillColor": "#A52A2A", "fillOpacity": 0.8, "lineColor": "#6B1A1A", "lineWidth": 2, "showLabels": true},
-            {"id": "charmes-chambertin", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Charmes Chambertin Grand Cru.geojson", "displayName": "Charmes-Chambertin", "fillColor": "#B22222", "fillOpacity": 0.8, "lineColor": "#7A1717", "lineWidth": 2, "showLabels": true},
-            {"id": "chapelle-chambertin", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chapelle Chambertin Grand Cru.geojson", "displayName": "Chapelle-Chambertin", "fillColor": "#CD5C5C", "fillOpacity": 0.8, "lineColor": "#8B3A3A", "lineWidth": 2, "showLabels": true},
-            {"id": "griotte-chambertin", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Griotte Chambertin Grand Cru.geojson", "displayName": "Griotte-Chambertin", "fillColor": "#DC143C", "fillOpacity": 0.8, "lineColor": "#990000", "lineWidth": 2, "showLabels": true},
-            {"id": "latricieres-chambertin", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Latricières Chambertin Grand Cru.geojson", "displayName": "Latricières-Chambertin", "fillColor": "#E9967A", "fillOpacity": 0.8, "lineColor": "#A0522D", "lineWidth": 2, "showLabels": true},
-            {"id": "mazis-chambertin", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Mazis Chambertin Grand Cru.geojson", "displayName": "Mazis-Chambertin", "fillColor": "#F08080", "fillOpacity": 0.8, "lineColor": "#CD5C5C", "lineWidth": 2, "showLabels": true},
-            {"id": "mazoyeres-chambertin", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Mazoyères Chambertin Grand Cru.geojson", "displayName": "Mazoyères-Chambertin", "fillColor": "#FA8072", "fillOpacity": 0.8, "lineColor": "#E9967A", "lineWidth": 2, "showLabels": true},
-            {"id": "ruchottes-chambertin", "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Ruchottes Chambertin Grand Cru.geojson", "displayName": "Ruchottes-Chambertin", "fillColor": "#FF6347", "fillOpacity": 0.8, "lineColor": "#FF4500", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chambertin Grand Cru.geojson",
+              "displayName": "Chambertin",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chambertin-cdb",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chambertin Clos de Bèze Grand Cru.geojson",
+              "displayName": "Clos de Bèze",
+              "fillColor": "#A52A2A",
+              "fillOpacity": 0.8,
+              "lineColor": "#6B1A1A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "charmes-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Charmes Chambertin Grand Cru.geojson",
+              "displayName": "Charmes-Chambertin",
+              "fillColor": "#B22222",
+              "fillOpacity": 0.8,
+              "lineColor": "#7A1717",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chapelle-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chapelle Chambertin Grand Cru.geojson",
+              "displayName": "Chapelle-Chambertin",
+              "fillColor": "#CD5C5C",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B3A3A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "griotte-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Griotte Chambertin Grand Cru.geojson",
+              "displayName": "Griotte-Chambertin",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.8,
+              "lineColor": "#990000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "latricieres-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Latricières Chambertin Grand Cru.geojson",
+              "displayName": "Latricières-Chambertin",
+              "fillColor": "#E9967A",
+              "fillOpacity": 0.8,
+              "lineColor": "#A0522D",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "mazis-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Mazis Chambertin Grand Cru.geojson",
+              "displayName": "Mazis-Chambertin",
+              "fillColor": "#F08080",
+              "fillOpacity": 0.8,
+              "lineColor": "#CD5C5C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "mazoyeres-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Mazoyères Chambertin Grand Cru.geojson",
+              "displayName": "Mazoyères-Chambertin",
+              "fillColor": "#FA8072",
+              "fillOpacity": 0.8,
+              "lineColor": "#E9967A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "ruchottes-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Ruchottes Chambertin Grand Cru.geojson",
+              "displayName": "Ruchottes-Chambertin",
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.8,
+              "lineColor": "#FF4500",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -120,19 +325,97 @@
           "title": "莫雷-聖丹尼5大特級園地圖",
           "description": "點擊按鈕查看每個特級園的位置",
           "regions": [
-            {"name": "洛奇園", "nameFr": "Clos de la Roche", "id": "clos-de-la-roche", "fillColor": "#8B008B"},
-            {"name": "聖丹尼園", "nameFr": "Clos Saint-Denis", "id": "clos-saint-denis", "fillColor": "#9932CC"},
-            {"name": "蘭布雷園", "nameFr": "Clos des Lambrays", "id": "clos-des-lambrays", "fillColor": "#BA55D3"},
-            {"name": "塔爾園", "nameFr": "Clos de Tart", "id": "clos-de-tart", "fillColor": "#9370DB"},
-            {"name": "邦馬爾(莫雷部分)", "nameFr": "Bonnes-Mares", "id": "bonnes-mares-morey", "fillColor": "#8A2BE2"}
+            {
+              "name": "洛奇園",
+              "nameFr": "Clos de la Roche",
+              "id": "clos-de-la-roche",
+              "fillColor": "#8B008B"
+            },
+            {
+              "name": "聖丹尼園",
+              "nameFr": "Clos Saint-Denis",
+              "id": "clos-saint-denis",
+              "fillColor": "#9932CC"
+            },
+            {
+              "name": "蘭布雷園",
+              "nameFr": "Clos des Lambrays",
+              "id": "clos-des-lambrays",
+              "fillColor": "#BA55D3"
+            },
+            {
+              "name": "塔爾園",
+              "nameFr": "Clos de Tart",
+              "id": "clos-de-tart",
+              "fillColor": "#9370DB"
+            },
+            {
+              "name": "邦馬爾(莫雷部分)",
+              "nameFr": "Bonnes-Mares",
+              "id": "bonnes-mares-morey",
+              "fillColor": "#8A2BE2"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "clos-de-la-roche", "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Clos de la Roche Grand Cru.geojson", "displayName": "Clos de la Roche", "fillColor": "#8B008B", "fillOpacity": 0.8, "lineColor": "#68007D", "lineWidth": 2, "showLabels": true},
-            {"id": "clos-saint-denis", "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Clos Saint-Denis Grand Cru.geojson", "displayName": "Clos Saint-Denis", "fillColor": "#9932CC", "fillOpacity": 0.8, "lineColor": "#7B1FA2", "lineWidth": 2, "showLabels": true},
-            {"id": "clos-des-lambrays", "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Clos des Lambrays Grand Cru.geojson", "displayName": "Clos des Lambrays", "fillColor": "#BA55D3", "fillOpacity": 0.8, "lineColor": "#9B30FF", "lineWidth": 2, "showLabels": true},
-            {"id": "clos-de-tart", "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Clos de Tart Grand Cru.geojson", "displayName": "Clos de Tart", "fillColor": "#9370DB", "fillOpacity": 0.8, "lineColor": "#6A5ACD", "lineWidth": 2, "showLabels": true},
-            {"id": "bonnes-mares-morey", "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Bonnes Mares Grand Cru.geojson", "displayName": "Bonnes-Mares (Morey)", "fillColor": "#8A2BE2", "fillOpacity": 0.8, "lineColor": "#6A0DAD", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "clos-de-la-roche",
+              "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Clos de la Roche Grand Cru.geojson",
+              "displayName": "Clos de la Roche",
+              "fillColor": "#8B008B",
+              "fillOpacity": 0.8,
+              "lineColor": "#68007D",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "clos-saint-denis",
+              "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Clos Saint-Denis Grand Cru.geojson",
+              "displayName": "Clos Saint-Denis",
+              "fillColor": "#9932CC",
+              "fillOpacity": 0.8,
+              "lineColor": "#7B1FA2",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "clos-des-lambrays",
+              "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Clos des Lambrays Grand Cru.geojson",
+              "displayName": "Clos des Lambrays",
+              "fillColor": "#BA55D3",
+              "fillOpacity": 0.8,
+              "lineColor": "#9B30FF",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "clos-de-tart",
+              "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Clos de Tart Grand Cru.geojson",
+              "displayName": "Clos de Tart",
+              "fillColor": "#9370DB",
+              "fillOpacity": 0.8,
+              "lineColor": "#6A5ACD",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "bonnes-mares-morey",
+              "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/Grand Crus/AOC Bonnes Mares Grand Cru.geojson",
+              "displayName": "Bonnes-Mares (Morey)",
+              "fillColor": "#8A2BE2",
+              "fillOpacity": 0.8,
+              "lineColor": "#6A0DAD",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -154,6 +437,78 @@
           "type": "content",
           "title": "投資建議",
           "content": "莫雷-聖丹尼的特級園被嚴重低估，價格僅為熱夫雷-香貝丹的60-70%，但品質不遑多讓。Clos de la Roche和Clos Saint-Denis是性價比極高的投資選擇。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 夜丘特級園（北段）知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "熱夫雷-香貝丹 9 個特級園中，被稱為「王者之王」的是哪一個？",
+              "options": [
+                "A. Mazis-Chambertin",
+                "B. Chambertin",
+                "C. Latricières-Chambertin",
+                "D. Griotte-Chambertin"
+              ],
+              "correct": 1,
+              "explanation": "Chambertin（約 13 公頃）和 Chambertin-Clos de Bèze（約 15 公頃）並列 Gevrey 最頂尖，是布根地評分最高的 Grand Cru 之一，以強勁酒體、深色果味和極強陳年潛力著稱。"
+            },
+            {
+              "type": "single",
+              "question": "「Clos de Bèze」與「Chambertin-Clos de Bèze」有什麼法規差異？",
+              "options": [
+                "A. 完全相同，只是行銷用詞不同",
+                "B. Clos de Bèze 可選擇標示為 Chambertin，但 Chambertin 不能標為 Clos de Bèze",
+                "C. Clos de Bèze 等級比 Chambertin 低",
+                "D. Clos de Bèze 是一級園而非特級園"
+              ],
+              "correct": 1,
+              "explanation": "這是布根地一個有趣的法規細節：Clos de Bèze 酒款可選擇在酒標上寫「Chambertin-Clos de Bèze」或純粹的「Chambertin」，但 Chambertin 園（不含 Clos de Bèze）則不能反過來標 Clos de Bèze。"
+            },
+            {
+              "type": "multiple",
+              "question": "莫雷-聖丹尼（Morey-Saint-Denis）的 Grand Cru 包括哪些？（多選）",
+              "options": [
+                "A. Clos de la Roche",
+                "B. Clos Saint-Denis",
+                "C. Clos de Tart（全部由 Pinault 家族擁有）",
+                "D. Bonnes-Mares（少部分）"
+              ],
+              "correct": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "explanation": "Morey-Saint-Denis 的 Grand Cru 有：Clos de la Roche、Clos Saint-Denis、Clos des Lambrays、Clos de Tart（Monopole），以及一小部分 Bonnes-Mares——共五個特級園，是夜丘最多特級園（按數量）的村莊之一。"
+            },
+            {
+              "type": "single",
+              "question": "「Bonnes-Mares」特級園橫跨哪兩個村莊？",
+              "options": [
+                "A. Gevrey 和 Morey",
+                "B. Chambolle-Musigny 和 Morey-Saint-Denis",
+                "C. Vosne-Romanée 和 Nuits-Saint-Georges",
+                "D. Beaune 和 Pommard"
+              ],
+              "correct": 1,
+              "explanation": "Bonnes-Mares 是少數橫跨兩個村莊的大型 Grand Cru——絕大部分（約 13.5 公頃）位於 Chambolle-Musigny，小部分（約 1.5 公頃）在 Morey-Saint-Denis，以豐滿的酒體著稱。"
+            },
+            {
+              "type": "single",
+              "question": "「Clos des Lambrays」的特殊性質是？",
+              "options": [
+                "A. 是布根地最小的特級園",
+                "B. 唯一完全被石圍牆包圍（Monopole）的夜丘特級園之一",
+                "C. 是近年才升格的最新特級園",
+                "D. 以白酒著稱"
+              ],
+              "correct": 2,
+              "explanation": "Clos des Lambrays 是布根地最新升格為 Grand Cru 的葡萄園（1981 年），幾乎是 Monopole（由單一莊主 Domaine des Lambrays 持有），以優雅精緻的 Pinot Noir 著稱。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -179,15 +534,65 @@
           "title": "香波-慕西尼與伏舊特級園地圖",
           "description": "點擊按鈕查看特級園位置",
           "regions": [
-            {"name": "慕西尼", "nameFr": "Musigny", "id": "musigny", "fillColor": "#DB7093"},
-            {"name": "邦馬爾", "nameFr": "Bonnes-Mares", "id": "bonnes-mares-chambolle", "fillColor": "#C71585"},
-            {"name": "克洛伏舊", "nameFr": "Clos de Vougeot", "id": "clos-vougeot", "fillColor": "#B22222"}
+            {
+              "name": "慕西尼",
+              "nameFr": "Musigny",
+              "id": "musigny",
+              "fillColor": "#DB7093"
+            },
+            {
+              "name": "邦馬爾",
+              "nameFr": "Bonnes-Mares",
+              "id": "bonnes-mares-chambolle",
+              "fillColor": "#C71585"
+            },
+            {
+              "name": "克洛伏舊",
+              "nameFr": "Clos de Vougeot",
+              "id": "clos-vougeot",
+              "fillColor": "#B22222"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "musigny", "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/Grand Crus/AOC Musigny Grand Cru.geojson", "displayName": "Musigny", "fillColor": "#DB7093", "fillOpacity": 0.8, "lineColor": "#C71585", "lineWidth": 2, "showLabels": true},
-            {"id": "bonnes-mares-chambolle", "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/Grand Crus/AOC Bonnes-Mares Grand Cru.geojson", "displayName": "Bonnes-Mares", "fillColor": "#C71585", "fillOpacity": 0.8, "lineColor": "#9B1B6E", "lineWidth": 2, "showLabels": true},
-            {"id": "clos-vougeot", "url": "/geojson/Cote-de-Nuits/09Vougeot/Grand Crus/AOC Clos de Vougeot ou Clos Vougeot Grand Cru.geojson", "displayName": "Clos de Vougeot", "fillColor": "#B22222", "fillOpacity": 0.8, "lineColor": "#8B0000", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "musigny",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/Grand Crus/AOC Musigny Grand Cru.geojson",
+              "displayName": "Musigny",
+              "fillColor": "#DB7093",
+              "fillOpacity": 0.8,
+              "lineColor": "#C71585",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "bonnes-mares-chambolle",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/Grand Crus/AOC Bonnes-Mares Grand Cru.geojson",
+              "displayName": "Bonnes-Mares",
+              "fillColor": "#C71585",
+              "fillOpacity": 0.8,
+              "lineColor": "#9B1B6E",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "clos-vougeot",
+              "url": "/geojson/Cote-de-Nuits/09Vougeot/Grand Crus/AOC Clos de Vougeot ou Clos Vougeot Grand Cru.geojson",
+              "displayName": "Clos de Vougeot",
+              "fillColor": "#B22222",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B0000",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -231,6 +636,77 @@
             "選購關鍵：必須了解生產者與地塊位置",
             "最佳生產者：Anne Gros、Méo-Camuzet、Leroy"
           ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 夜丘特級園（中段）知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "香波-慕西尼（Chambolle-Musigny）的兩個特級園是哪兩個？",
+              "options": [
+                "A. Musigny 和 Les Amoureuses",
+                "B. Musigny 和 Bonnes-Mares",
+                "C. Musigny 和 Chambolle",
+                "D. Bonnes-Mares 和 Clos Saint-Denis"
+              ],
+              "correct": 1,
+              "explanation": "Chambolle-Musigny 有兩個 Grand Cru：Musigny（以花香和優雅著稱）和 Bonnes-Mares（少部分）。Les Amoureuses 雖品質接近 Grand Cru，但正式分級仍是 Premier Cru。"
+            },
+            {
+              "type": "single",
+              "question": "「Musigny 白酒（Blanc de Musigny）」最特別之處是？",
+              "options": [
+                "A. 由 Gamay 品種釀造",
+                "B. 是夜丘 Grand Cru 中極罕見允許生產白酒的地塊（Chardonnay）",
+                "C. 完全由政府管理",
+                "D. 是布根地最便宜的特級園白酒"
+              ],
+              "correct": 1,
+              "explanation": "Le Musigny 是夜丘唯一允許部分種植 Chardonnay 的 Grand Cru，De Vogüé 酒莊保存了少量老藤 Chardonnay，出產極稀少且昂貴的白 Musigny。這是布根地最獨特的白酒之一。"
+            },
+            {
+              "type": "single",
+              "question": "Vougeot 村最著名的特級園 Clos de Vougeot 的酒莊——已改建為博物館的歷史建築是？",
+              "options": [
+                "A. Château de Pommard",
+                "B. Château du Clos de Vougeot（熙篤會酒窖）",
+                "C. Château de Gevrey",
+                "D. Château Montrachet"
+              ],
+              "correct": 1,
+              "explanation": "Château du Clos de Vougeot 是中世紀熙篤會修道院的酒窖，現為「騎士兄弟會（Confrérie des Chevaliers du Tastevin）」的總部，定期舉辦盛宴，是布根地最重要的歷史建築之一。"
+            },
+            {
+              "type": "multiple",
+              "question": "馮內-羅曼尼（Vosne-Romanée）的特級園包括哪些？（多選）",
+              "options": [
+                "A. Romanée-Conti",
+                "B. La Tâche",
+                "C. Richebourg",
+                "D. Chambertin"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "Vosne-Romanée 的特級園：Romanée-Conti、La Tâche、Richebourg、La Romanée、Romanée-Saint-Vivant（及 Echézeaux、Grands Echézeaux 在技術上位於 Flagey-Echézeaux）。Chambertin 屬於 Gevrey-Chambertin。"
+            },
+            {
+              "type": "single",
+              "question": "為什麼 Romanée-Conti 的價格遠超其他布根地特級園？",
+              "options": [
+                "A. 因為使用特殊的橡木桶品種",
+                "B. 極少量年產量（約 5,000 瓶）+ 風土傳奇性 + DRC 品牌溢價的三重效應",
+                "C. 因為政府對其徵稅最少",
+                "D. 因為是布根地最新的特級園"
+              ],
+              "correct": 1,
+              "explanation": "RC 的超高價格是多因素的完美組合：極小面積（1.8 公頃）+ 極低年產量（約 5,000-6,000 瓶）+ 數百年歷史風土傳奇 + DRC 酒莊無懈可擊的品質聲譽 + 全球藏家的強烈需求，造就了無法複製的稀缺神話。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -256,25 +732,145 @@
           "title": "馮內-羅曼尼8大特級園地圖",
           "description": "點擊按鈕查看每個傳奇特級園的位置",
           "regions": [
-            {"name": "羅曼尼康帝", "nameFr": "Romanée-Conti", "id": "romanee-conti", "fillColor": "#8B0000"},
-            {"name": "拉塔希", "nameFr": "La Tâche", "id": "la-tache", "fillColor": "#A52A2A"},
-            {"name": "羅曼尼", "nameFr": "La Romanée", "id": "la-romanee", "fillColor": "#B22222"},
-            {"name": "李奇堡", "nameFr": "Richebourg", "id": "richebourg", "fillColor": "#CD5C5C"},
-            {"name": "羅曼尼-聖維旺", "nameFr": "Romanée-Saint-Vivant", "id": "romanee-saint-vivant", "fillColor": "#DC143C"},
-            {"name": "大街", "nameFr": "La Grande Rue", "id": "la-grande-rue", "fillColor": "#E9967A"},
-            {"name": "依瑟索", "nameFr": "Echézeaux", "id": "echezeaux", "fillColor": "#F08080"},
-            {"name": "大依瑟索", "nameFr": "Grands Echézeaux", "id": "grands-echezeaux", "fillColor": "#FA8072"}
+            {
+              "name": "羅曼尼康帝",
+              "nameFr": "Romanée-Conti",
+              "id": "romanee-conti",
+              "fillColor": "#8B0000"
+            },
+            {
+              "name": "拉塔希",
+              "nameFr": "La Tâche",
+              "id": "la-tache",
+              "fillColor": "#A52A2A"
+            },
+            {
+              "name": "羅曼尼",
+              "nameFr": "La Romanée",
+              "id": "la-romanee",
+              "fillColor": "#B22222"
+            },
+            {
+              "name": "李奇堡",
+              "nameFr": "Richebourg",
+              "id": "richebourg",
+              "fillColor": "#CD5C5C"
+            },
+            {
+              "name": "羅曼尼-聖維旺",
+              "nameFr": "Romanée-Saint-Vivant",
+              "id": "romanee-saint-vivant",
+              "fillColor": "#DC143C"
+            },
+            {
+              "name": "大街",
+              "nameFr": "La Grande Rue",
+              "id": "la-grande-rue",
+              "fillColor": "#E9967A"
+            },
+            {
+              "name": "依瑟索",
+              "nameFr": "Echézeaux",
+              "id": "echezeaux",
+              "fillColor": "#F08080"
+            },
+            {
+              "name": "大依瑟索",
+              "nameFr": "Grands Echézeaux",
+              "id": "grands-echezeaux",
+              "fillColor": "#FA8072"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "romanee-conti", "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC Romanée-Conti Grand Cru.geojson", "displayName": "Romanée-Conti", "fillColor": "#8B0000", "fillOpacity": 0.9, "lineColor": "#5A0000", "lineWidth": 3, "showLabels": true},
-            {"id": "la-tache", "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC La Tâche Grand Cru.geojson", "displayName": "La Tâche", "fillColor": "#A52A2A", "fillOpacity": 0.9, "lineColor": "#6B1A1A", "lineWidth": 2, "showLabels": true},
-            {"id": "la-romanee", "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC La Romanée Grand Cru.geojson", "displayName": "La Romanée", "fillColor": "#B22222", "fillOpacity": 0.9, "lineColor": "#7A1717", "lineWidth": 2, "showLabels": true},
-            {"id": "richebourg", "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC Richebourg Grand Cru.geojson", "displayName": "Richebourg", "fillColor": "#CD5C5C", "fillOpacity": 0.8, "lineColor": "#8B3A3A", "lineWidth": 2, "showLabels": true},
-            {"id": "romanee-saint-vivant", "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC Romanée-Saint-Vivant Grand Cru.geojson", "displayName": "Romanée-Saint-Vivant", "fillColor": "#DC143C", "fillOpacity": 0.8, "lineColor": "#990000", "lineWidth": 2, "showLabels": true},
-            {"id": "la-grande-rue", "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC La Grande Rue Grand Cru.geojson", "displayName": "La Grande Rue", "fillColor": "#E9967A", "fillOpacity": 0.8, "lineColor": "#A0522D", "lineWidth": 2, "showLabels": true},
-            {"id": "echezeaux", "url": "/geojson/Cote-de-Nuits/07Flagey-Echézeaux/Grand Crus/AOC Echezeaux Grand Cru.geojson", "displayName": "Echézeaux", "fillColor": "#F08080", "fillOpacity": 0.8, "lineColor": "#CD5C5C", "lineWidth": 2, "showLabels": true},
-            {"id": "grands-echezeaux", "url": "/geojson/Cote-de-Nuits/07Flagey-Echézeaux/Grand Crus/AOC Grands-Echezeaux Grand Cru.geojson", "displayName": "Grands Echézeaux", "fillColor": "#FA8072", "fillOpacity": 0.8, "lineColor": "#E9967A", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "romanee-conti",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC Romanée-Conti Grand Cru.geojson",
+              "displayName": "Romanée-Conti",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.9,
+              "lineColor": "#5A0000",
+              "lineWidth": 3,
+              "showLabels": true
+            },
+            {
+              "id": "la-tache",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC La Tâche Grand Cru.geojson",
+              "displayName": "La Tâche",
+              "fillColor": "#A52A2A",
+              "fillOpacity": 0.9,
+              "lineColor": "#6B1A1A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "la-romanee",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC La Romanée Grand Cru.geojson",
+              "displayName": "La Romanée",
+              "fillColor": "#B22222",
+              "fillOpacity": 0.9,
+              "lineColor": "#7A1717",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "richebourg",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC Richebourg Grand Cru.geojson",
+              "displayName": "Richebourg",
+              "fillColor": "#CD5C5C",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B3A3A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "romanee-saint-vivant",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC Romanée-Saint-Vivant Grand Cru.geojson",
+              "displayName": "Romanée-Saint-Vivant",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.8,
+              "lineColor": "#990000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "la-grande-rue",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC La Grande Rue Grand Cru.geojson",
+              "displayName": "La Grande Rue",
+              "fillColor": "#E9967A",
+              "fillOpacity": 0.8,
+              "lineColor": "#A0522D",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "echezeaux",
+              "url": "/geojson/Cote-de-Nuits/07Flagey-Echézeaux/Grand Crus/AOC Echezeaux Grand Cru.geojson",
+              "displayName": "Echézeaux",
+              "fillColor": "#F08080",
+              "fillOpacity": 0.8,
+              "lineColor": "#CD5C5C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "grands-echezeaux",
+              "url": "/geojson/Cote-de-Nuits/07Flagey-Echézeaux/Grand Crus/AOC Grands-Echezeaux Grand Cru.geojson",
+              "displayName": "Grands Echézeaux",
+              "fillColor": "#FA8072",
+              "fillOpacity": 0.8,
+              "lineColor": "#E9967A",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -296,28 +892,50 @@
           "content": "平均單瓶售價對比（歐元）",
           "data": {
             "items": [
-              {"label": "Romanée-Conti", "value": 15000, "color": "#8B0000"},
-              {"label": "La Tâche", "value": 3500, "color": "#A52A2A"},
-              {"label": "La Romanée", "value": 2800, "color": "#B22222"},
-              {"label": "Richebourg", "value": 1500, "color": "#CD5C5C"},
-              {"label": "Romanée-Saint-Vivant", "value": 1200, "color": "#DC143C"},
-              {"label": "La Grande Rue", "value": 900, "color": "#E9967A"},
-              {"label": "Grands Echézeaux", "value": 600, "color": "#FA8072"},
-              {"label": "Echézeaux", "value": 400, "color": "#F08080"}
+              {
+                "label": "Romanée-Conti",
+                "value": 15000,
+                "color": "#8B0000"
+              },
+              {
+                "label": "La Tâche",
+                "value": 3500,
+                "color": "#A52A2A"
+              },
+              {
+                "label": "La Romanée",
+                "value": 2800,
+                "color": "#B22222"
+              },
+              {
+                "label": "Richebourg",
+                "value": 1500,
+                "color": "#CD5C5C"
+              },
+              {
+                "label": "Romanée-Saint-Vivant",
+                "value": 1200,
+                "color": "#DC143C"
+              },
+              {
+                "label": "La Grande Rue",
+                "value": 900,
+                "color": "#E9967A"
+              },
+              {
+                "label": "Grands Echézeaux",
+                "value": 600,
+                "color": "#FA8072"
+              },
+              {
+                "label": "Echézeaux",
+                "value": 400,
+                "color": "#F08080"
+              }
             ],
             "unit": "€"
           },
           "note": "羅曼尼康帝的價格是其他特級園的 4-40 倍。Echézeaux 是最親民的馮內-羅曼尼特級園，但品質仍屬頂級。投資收藏建議：頂級 3 個，性價比選擇：後 3 個。"
-        },
-        {
-          "type": "list",
-          "title": "💎 La Tâche - 拉塔希",
-          "points": [
-            "面積：6.1公頃",
-            "獨家所有：DRC",
-            "風格：比RC更強勁、更開放",
-            "香氣：玫瑰、香料、黑色水果",
-            "陳年：15-40年"
         },
         {
           "type": "list",
@@ -364,6 +982,77 @@
           "type": "content",
           "title": "投資與收藏",
           "content": "馮內-羅曼尼的特級園是頂級收藏家的必備。建議：DRC的酒需極高預算；其他優質生產者如Leroy、Méo-Camuzet性價比更佳；Richebourg和RSV是較親民的入門選擇。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 夜丘特級園（下段）知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "Echézeaux 和 Grands Echézeaux 的差異是？",
+              "options": [
+                "A. 完全相同，只是名稱不同",
+                "B. Grands Echézeaux（9 公頃）面積小且地位更高，Echézeaux（37 公頃）更大且風格多元",
+                "C. Echézeaux 是 Grand Cru，Grands Echézeaux 是 Premier Cru",
+                "D. 兩者都屬於 Gevrey-Chambertin"
+              ],
+              "correct": 1,
+              "explanation": "Grands Echézeaux（約 9 公頃）品質更集中統一，更接近 Vosne-Romanée 特級園的細膩風格；Echézeaux（約 37 公頃）面積大得多，莊主眾多，品質差異顯著，但更容易取得（且相對 RC 性價比極高）。"
+            },
+            {
+              "type": "single",
+              "question": "「Nuits-Saint-Georges」雖是夜丘南端重要村莊，卻沒有 Grand Cru 的主要原因是？",
+              "options": [
+                "A. 當地葡萄品質不夠好",
+                "B. 歷史上分級申請未能通過，一級園品質已獲認可但升格程序仍在進行",
+                "C. 當地釀酒師不願申請",
+                "D. 法規規定南夜丘不得設特級園"
+              ],
+              "correct": 1,
+              "explanation": "Nuits-Saint-Georges 沒有 Grand Cru 的原因複雜：歷史上分級時期各方未能達成共識，加之土地所有者利益分歧，使某些品質極高的地塊（如 Les Saint-Georges）未能順利升格，這一討論至今尚在繼續。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些布根地特級園屬於 DRC 酒莊的擁有範圍？（多選）",
+              "options": [
+                "A. Romanée-Conti（全部）",
+                "B. La Tâche（全部）",
+                "C. Chambertin（全部）",
+                "D. Richebourg（部分）"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "DRC 完全擁有（Monopole）兩個 Grand Cru：Romanée-Conti 和 La Tâche；此外也持有 Richebourg、Romanée-Saint-Vivant、Echézeaux、Grands Echézeaux 的部分地塊。Chambertin 不屬於 DRC。"
+            },
+            {
+              "type": "single",
+              "question": "瞭解夜丘 Grand Cru 時，「Monopole」的含義是？",
+              "options": [
+                "A. 只對會員開放的特級園",
+                "B. 整個特級園由單一莊主完全擁有",
+                "C. 最高單價的特級園稱謂",
+                "D. 法國政府官方認定的最佳酒款"
+              ],
+              "correct": 1,
+              "explanation": "Monopole 意指單一莊主獨家持有整個地塊。布根地例子包括 DRC 的 Romanée-Conti 和 La Tâche、Clos de Tart（由 Pinault/Artémis 集團擁有）、Romanée（Comte Liger-Belair）等。"
+            },
+            {
+              "type": "single",
+              "question": "La Romanée 特級園（約 0.85 公頃）的特殊性是？",
+              "options": [
+                "A. 是全法國唯一由政府直接管理的葡萄園",
+                "B. 是布根地面積最小的特級園，由 Comte Liger-Belair 獨有",
+                "C. 是最高度機械化的布根地特級園",
+                "D. 以混種多個品種著名"
+              ],
+              "correct": 1,
+              "explanation": "La Romanée（0.85 公頃）是布根地面積最小的 Grand Cru，由 Comte Liger-Belair 家族獨家持有（Monopole），年產量極少，拍賣市場價格接近甚至超過 Romanée-Conti，是布根地最神秘的特級園之一。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -389,27 +1078,165 @@
           "title": "伯恩丘特級園地圖",
           "description": "點擊按鈕查看白酒特級園位置",
           "regions": [
-            {"name": "蒙哈榭", "nameFr": "Montrachet", "id": "montrachet", "fillColor": "#FFD700"},
-            {"name": "騎士-蒙哈榭", "nameFr": "Chevalier-Montrachet", "id": "chevalier-montrachet", "fillColor": "#F0E68C"},
-            {"name": "巴塔-蒙哈榭", "nameFr": "Bâtard-Montrachet", "id": "batard-montrachet", "fillColor": "#DAA520"},
-            {"name": "比恩維尼-巴塔", "nameFr": "Bienvenues-Bâtard", "id": "bienvenues-batard", "fillColor": "#B8860B"},
-            {"name": "克里奧-巴塔", "nameFr": "Criots-Bâtard", "id": "criots-batard", "fillColor": "#CD853F"},
-            {"name": "科爾通-查理曼", "nameFr": "Corton-Charlemagne", "id": "corton-charlemagne", "fillColor": "#FFE4B5"},
-            {"name": "查理曼", "nameFr": "Charlemagne", "id": "charlemagne", "fillColor": "#FFEFD5"},
-            {"name": "科爾通(紅酒)", "nameFr": "Corton", "id": "corton-rouge", "fillColor": "#8B0000"}
+            {
+              "name": "蒙哈榭",
+              "nameFr": "Montrachet",
+              "id": "montrachet",
+              "fillColor": "#FFD700"
+            },
+            {
+              "name": "騎士-蒙哈榭",
+              "nameFr": "Chevalier-Montrachet",
+              "id": "chevalier-montrachet",
+              "fillColor": "#F0E68C"
+            },
+            {
+              "name": "巴塔-蒙哈榭",
+              "nameFr": "Bâtard-Montrachet",
+              "id": "batard-montrachet",
+              "fillColor": "#DAA520"
+            },
+            {
+              "name": "比恩維尼-巴塔",
+              "nameFr": "Bienvenues-Bâtard",
+              "id": "bienvenues-batard",
+              "fillColor": "#B8860B"
+            },
+            {
+              "name": "克里奧-巴塔",
+              "nameFr": "Criots-Bâtard",
+              "id": "criots-batard",
+              "fillColor": "#CD853F"
+            },
+            {
+              "name": "科爾通-查理曼",
+              "nameFr": "Corton-Charlemagne",
+              "id": "corton-charlemagne",
+              "fillColor": "#FFE4B5"
+            },
+            {
+              "name": "查理曼",
+              "nameFr": "Charlemagne",
+              "id": "charlemagne",
+              "fillColor": "#FFEFD5"
+            },
+            {
+              "name": "科爾通(紅酒)",
+              "nameFr": "Corton",
+              "id": "corton-rouge",
+              "fillColor": "#8B0000"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "montrachet-puligny", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Puligny).geojson", "displayName": "Montrachet (Puligny)", "fillColor": "#FFD700", "fillOpacity": 0.9, "lineColor": "#8B7500", "lineWidth": 3, "showLabels": true},
-            {"id": "montrachet-chassagne", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Chassagne).geojson", "displayName": "Montrachet (Chassagne)", "fillColor": "#FFD700", "fillOpacity": 0.9, "lineColor": "#8B7500", "lineWidth": 3, "showLabels": false},
-            {"id": "chevalier-montrachet", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Chevalier-Montrachet Grand Cru.geojson", "displayName": "Chevalier-Montrachet", "fillColor": "#F0E68C", "fillOpacity": 0.8, "lineColor": "#9B870C", "lineWidth": 2, "showLabels": true},
-            {"id": "batard-puligny", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Puligny).geojson", "displayName": "Bâtard-Montrachet (Puligny)", "fillColor": "#DAA520", "fillOpacity": 0.8, "lineColor": "#8B6914", "lineWidth": 2, "showLabels": true},
-            {"id": "batard-chassagne", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Chassagne).geojson", "displayName": "Bâtard-Montrachet (Chassagne)", "fillColor": "#DAA520", "fillOpacity": 0.8, "lineColor": "#8B6914", "lineWidth": 2, "showLabels": false},
-            {"id": "bienvenues-batard", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bienvenues-Bâtard-Montrachet Grand Cru .geojson", "displayName": "Bienvenues-Bâtard-Montrachet", "fillColor": "#B8860B", "fillOpacity": 0.8, "lineColor": "#8B6508", "lineWidth": 2, "showLabels": true},
-            {"id": "criots-batard", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Criots-Bâtard-Montrachet Grand Cru.geojson", "displayName": "Criots-Bâtard-Montrachet", "fillColor": "#CD853F", "fillOpacity": 0.8, "lineColor": "#8B5A2B", "lineWidth": 2, "showLabels": true},
-            {"id": "corton-charlemagne", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson", "displayName": "Corton-Charlemagne", "fillColor": "#FFE4B5", "fillOpacity": 0.8, "lineColor": "#DEB887", "lineWidth": 2, "showLabels": true},
-            {"id": "charlemagne", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Charlemagne Grand Cru (Aloxe).geojson", "displayName": "Charlemagne", "fillColor": "#FFEFD5", "fillOpacity": 0.8, "lineColor": "#D2B48C", "lineWidth": 2, "showLabels": true},
-            {"id": "corton-rouge", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton Grand Cru(Aloxe).geojson", "displayName": "Corton (Rouge)", "fillColor": "#8B0000", "fillOpacity": 0.7, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "montrachet-puligny",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Puligny).geojson",
+              "displayName": "Montrachet (Puligny)",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.9,
+              "lineColor": "#8B7500",
+              "lineWidth": 3,
+              "showLabels": true
+            },
+            {
+              "id": "montrachet-chassagne",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Chassagne).geojson",
+              "displayName": "Montrachet (Chassagne)",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.9,
+              "lineColor": "#8B7500",
+              "lineWidth": 3,
+              "showLabels": false
+            },
+            {
+              "id": "chevalier-montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Chevalier-Montrachet Grand Cru.geojson",
+              "displayName": "Chevalier-Montrachet",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.8,
+              "lineColor": "#9B870C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "batard-puligny",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Puligny).geojson",
+              "displayName": "Bâtard-Montrachet (Puligny)",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B6914",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "batard-chassagne",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Chassagne).geojson",
+              "displayName": "Bâtard-Montrachet (Chassagne)",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B6914",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "bienvenues-batard",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bienvenues-Bâtard-Montrachet Grand Cru .geojson",
+              "displayName": "Bienvenues-Bâtard-Montrachet",
+              "fillColor": "#B8860B",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B6508",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "criots-batard",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Criots-Bâtard-Montrachet Grand Cru.geojson",
+              "displayName": "Criots-Bâtard-Montrachet",
+              "fillColor": "#CD853F",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B5A2B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "corton-charlemagne",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson",
+              "displayName": "Corton-Charlemagne",
+              "fillColor": "#FFE4B5",
+              "fillOpacity": 0.8,
+              "lineColor": "#DEB887",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "charlemagne",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Charlemagne Grand Cru (Aloxe).geojson",
+              "displayName": "Charlemagne",
+              "fillColor": "#FFEFD5",
+              "fillOpacity": 0.8,
+              "lineColor": "#D2B48C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "corton-rouge",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton Grand Cru(Aloxe).geojson",
+              "displayName": "Corton (Rouge)",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -469,6 +1296,77 @@
           "type": "content",
           "title": "特級園總結",
           "content": "布根地33個特級園代表世界最偉大的黑皮諾與夏多內。每個特級園都有獨特個性，是風土的極致表現。投資特級園不僅是享受美酒，更是擁有一塊無法複製的文化遺產。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 伯恩丘特級園知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "伯恩丘最重要的白酒特級園「Montrachet」與「Corton-Charlemagne」，哪個風格更飽滿濃郁？",
+              "options": [
+                "A. Corton-Charlemagne 更飽滿",
+                "B. Montrachet 更飽滿",
+                "C. 兩者完全相同",
+                "D. Chevalier-Montrachet 比兩者都更飽滿"
+              ],
+              "correct": 1,
+              "explanation": "Le Montrachet 以豐厚、奶油質地和卓越的陳年複雜度著稱，常被認為是全球最偉大的乾白酒。Corton-Charlemagne 更緊實礦物，但甜潤感不如 Montrachet；Chevalier 更細膩緊致。"
+            },
+            {
+              "type": "single",
+              "question": "Corton（紅酒 Grand Cru）和 Corton-Charlemagne（白酒 Grand Cru）的分界怎麼決定？",
+              "options": [
+                "A. 由政府隨意指定",
+                "B. 根據種植品種：種 Pinot Noir 的地塊為 Corton 紅酒，種 Chardonnay 的為 Corton-Charlemagne",
+                "C. 南邊為白酒，北邊為紅酒",
+                "D. 按土壤顏色：白土為白酒，紅土為紅酒"
+              ],
+              "correct": 1,
+              "explanation": "科爾通山的 Grand Cru 劃分相對靈活：法規核心是種什麼品種就生產對應的酒款，種 Pinot Noir 的可申報 Corton，種 Chardonnay 的可申報 Corton-Charlemagne，但具體到山丘的坡向位置也有影響。"
+            },
+            {
+              "type": "multiple",
+              "question": "伯恩丘 Grand Cru 中，以下哪些是白酒特級園？（多選）",
+              "options": [
+                "A. Montrachet",
+                "B. Corton-Charlemagne",
+                "C. Chambertin",
+                "D. Bâtard-Montrachet"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "伯恩丘主要 Grand Cru 白酒：Montrachet、Bâtard-Montrachet、Chevalier-Montrachet、Bienvenues-Bâtard-Montrachet、Corton-Charlemagne，以及 Criots-Bâtard-Montrachet。Chambertin 是夜丘紅酒 Grand Cru。"
+            },
+            {
+              "type": "single",
+              "question": "「Criots-Bâtard-Montrachet」是蒙哈榭家族中面積最小的特級園，約多少公頃？",
+              "options": [
+                "A. 0.5 公頃",
+                "B. 1.6 公頃",
+                "C. 5 公頃",
+                "D. 10 公頃"
+              ],
+              "correct": 1,
+              "explanation": "Criots-Bâtard-Montrachet 約只有 1.6 公頃，是蒙哈榭特級園家族中最小的成員，位於 Chassagne-Montrachet，以精緻細膩的礦物感著稱，年產量極少。"
+            },
+            {
+              "type": "single",
+              "question": "「Bienvenues-Bâtard-Montrachet」的位置在哪裡？",
+              "options": [
+                "A. 在 Le Montrachet 正上坡",
+                "B. 在 Puligny-Montrachet 一側，緊鄰 Bâtard-Montrachet",
+                "C. 在 Meursault 境內",
+                "D. 在 Corton 山上"
+              ],
+              "correct": 1,
+              "explanation": "Bienvenues-Bâtard-Montrachet 完全位於 Puligny-Montrachet，緊鄰 Bâtard-Montrachet 之上，面積約 3.7 公頃，風格比 Bâtard 更細膩精緻，價格卻稍低，是性價比極高的 Grand Cru。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -536,6 +1434,76 @@
           "type": "content",
           "title": "特級園的終極意義",
           "content": "特級園不只是昂貴的葡萄酒，更是數百年風土研究的結晶、人類文明的瑰寶。每一瓶特級園都訴說著一個獨特的風土故事，值得我們用一生去探索與品味。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 特級園品鑑與選購知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "初次購買布根地 Grand Cru，以下哪個策略最明智？",
+              "options": [
+                "A. 直接選最貴的 Romanée-Conti",
+                "B. 從 Grand Cru「入門款」（如 Echézeaux、Corton）開始，了解特級園風格",
+                "C. 只買超市特惠款",
+                "D. 只購買超過 30 年陳年的老年份"
+              ],
+              "correct": 1,
+              "explanation": "布根地 Grand Cru 的「入門選擇」：Echézeaux（相對平實）、Corton（寬廣）、Corton-Charlemagne（白）——這些雖是特級園但相對 RC 易入手，適合建立參考標準後再比較其他 Grand Cru。"
+            },
+            {
+              "type": "multiple",
+              "question": "評估布根地 Grand Cru 時，莊主比地塊更重要的說法在哪些情況成立？（多選）",
+              "options": [
+                "A. Clos de Vougeot（80+ 莊主，品質差異極大）",
+                "B. Echézeaux（多莊主，品質差異顯著）",
+                "C. Romanée-Conti（單一莊主，品質穩定）",
+                "D. 任何地塊品質都主要取決於 AOC 等級，與莊主無關"
+              ],
+              "correct": [
+                0,
+                1
+              ],
+              "explanation": "在 Clos de Vougeot 和 Echézeaux 等多莊主特級園，同一 Grand Cru 地塊中不同莊主的水準天差地別，此時莊主選擇比地塊名更關鍵。Romanée-Conti 因只有 DRC 一莊，反而沒有這個問題。"
+            },
+            {
+              "type": "single",
+              "question": "選購布根地 Grand Cru 時，「橫向比較（Horizontal Tasting）」指的是？",
+              "options": [
+                "A. 同一酒莊不同年份的比較",
+                "B. 同一年份同一 Grand Cru 的不同莊主比較",
+                "C. 不同 Grand Cru 的比較",
+                "D. 紅酒與白酒的比較"
+              ],
+              "correct": 1,
+              "explanation": "橫向品酒（Horizontal）= 同年份、同地塊、不同莊主的比較，可直接評估各莊的農耕和釀酒哲學差異。例如比較同年份的 10 家 Chambolle Musigny Premier Cru，是了解布根地多元表達的最佳方式。"
+            },
+            {
+              "type": "single",
+              "question": "「En Primeur（期酒）」制度在布根地有多普遍？",
+              "options": [
+                "A. 非常普遍，類似波爾多",
+                "B. 布根地沒有期酒制度，所有酒款在裝瓶後才出售",
+                "C. 只有 DRC 有期酒制度",
+                "D. 全部特級園都有強制期酒制度"
+              ],
+              "correct": 1,
+              "explanation": "布根地（Burgundy）沒有波爾多式的期酒（En Primeur）制度，幾乎所有酒款都是裝瓶後才進入市場。這使得購買布根地酒時，買家需要直接評估已裝瓶的成品，而非期貨預測。"
+            },
+            {
+              "type": "single",
+              "question": "布根地 Grand Cru 投資收藏的核心風險是什麼？",
+              "options": [
+                "A. 特級園酒從不升值",
+                "B. 儲存條件不佳導致品質下降，加之年份差異風險和假酒問題",
+                "C. 特級園酒產量太大，無法稀缺",
+                "D. 布根地特級園已不再受收藏家追捧"
+              ],
+              "correct": 1,
+              "explanation": "收藏布根地 Grand Cru 的主要風險：1) 儲存溫控（12-14°C、70-75% 濕度）一旦失當，投資全毀；2) 年份差異顯著，差年份的 Grand Cru 不一定值得高價；3) 布根地是假酒重災區，需從可靠渠道購買。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     }
@@ -549,7 +1517,12 @@
         "id": "q1",
         "question": "布根地共有多少個特級園（不含夏布利）？",
         "type": "single",
-        "options": ["24個", "28個", "33個", "40個"],
+        "options": [
+          "24個",
+          "28個",
+          "33個",
+          "40個"
+        ],
         "correctAnswer": 2,
         "explanation": "布根地有33個特級園（不含夏布利的7個），其中24個在夜丘，9個在伯恩丘。"
       },
@@ -570,7 +1543,12 @@
         "id": "q3",
         "question": "羅曼尼康帝特級園獨家擁有者是？",
         "type": "single",
-        "options": ["Leroy", "DRC", "Méo-Camuzet", "Dujac"],
+        "options": [
+          "Leroy",
+          "DRC",
+          "Méo-Camuzet",
+          "Dujac"
+        ],
         "correctAnswer": 1,
         "explanation": "羅曼尼康帝由Domaine de la Romanée-Conti (DRC)獨家擁有，是Monopole。"
       },

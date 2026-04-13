@@ -129,6 +129,73 @@
         "✓ Picolit 是義大利最珍貴的甜白酒",
         "✓ 產區分級：Collio > Colli Orientali > Grave"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Friuli 知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Friuli 最優質的產區是？",
+          "options": [
+            "Friuli Grave DOC",
+            "Collio DOC",
+            "Prosecco DOC",
+            "Soave DOC"
+          ],
+          "correct": 1,
+          "explanation": "Collio DOC 是 Friuli 品質最高的產區，以 Ponca 土壤和頂級白葡萄酒聞名。"
+        },
+        {
+          "type": "single",
+          "question": "Friuli 的「白葡萄之王」是？",
+          "options": [
+            "Pinot Grigio",
+            "Chardonnay",
+            "Friulano",
+            "Ribolla Gialla"
+          ],
+          "correct": 2,
+          "explanation": "Friulano（前稱 Tocai Friulano）是 Friuli 最具代表性的白葡萄品種，被稱為「白葡萄之王」。"
+        },
+        {
+          "type": "single",
+          "question": "橘酒（Orange Wine）是如何釀造的？",
+          "options": [
+            "用橙子釀造",
+            "白葡萄採用紅酒工藝（皮接觸）",
+            "紅葡萄加入橙皮",
+            "添加橙色色素"
+          ],
+          "correct": 1,
+          "explanation": "橘酒是用白葡萄釀造，但採用紅酒工藝（連皮發酵），從果皮中提取單寧、顏色和風味。"
+        },
+        {
+          "type": "single",
+          "question": "Collio 獨特的土壤類型是？",
+          "options": [
+            "火山土",
+            "Ponca（泥灰岩）",
+            "石灰岩",
+            "沙土"
+          ],
+          "correct": 1,
+          "explanation": "Ponca 是 Collio 獨特的泥灰岩和砂岩混合土壤，賦予葡萄酒獨特的鹹鮮礦物感。"
+        },
+        {
+          "type": "single",
+          "question": "Collio 和 Colli Orientali del Friuli 的共同特色是什麼？",
+          "options": [
+            "A. 以紅酒著名",
+            "B. 擅長釀造原生白品種",
+            "C. 氣候炎熱乾燥",
+            "D. 土壤以石灰岩為主"
+          ],
+          "correct": 1,
+          "explanation": "Collio 和 Colli Orientali 均以 Tocai Friulano、Ribolla Gialla 等原生白品種聞名。"
+        }
+      ]
     }
   ]
 }

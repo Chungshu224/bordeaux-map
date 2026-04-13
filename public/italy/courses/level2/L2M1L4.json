@@ -99,6 +99,73 @@
         "✓ Lambrusco 與 Emilia 料理（起司、火腿）完美配對",
         "✓ Sangiovese di Romagna 比 Tuscany 版本更果香柔順"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Emilia-Romagna 知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "優質的 Lambrusco 主流風格是？",
+          "options": [
+            "甜型（Dolce）",
+            "不甜（Secco）",
+            "加烈酒",
+            "橘酒"
+          ],
+          "correct": 1,
+          "explanation": "現代高品質 Lambrusco 主流是不甜（Secco）風格，清爽、果香豐富，改變了過去甜型廉價酒的印象。"
+        },
+        {
+          "type": "single",
+          "question": "三種 Lambrusco DOC 中，哪個最優雅、酒體最輕？",
+          "options": [
+            "Lambrusco Grasparossa",
+            "Lambrusco di Sorbara",
+            "Reggiano Lambrusco",
+            "都一樣"
+          ],
+          "correct": 1,
+          "explanation": "Lambrusco di Sorbara 是最優雅的品種，酒體最輕，呈現玫瑰粉紅色，高酸度、細膩氣泡。"
+        },
+        {
+          "type": "single",
+          "question": "義大利第一個白酒 DOCG 是？",
+          "options": [
+            "Soave",
+            "Gavi",
+            "Albana di Romagna",
+            "Vernaccia di San Gimignano"
+          ],
+          "correct": 2,
+          "explanation": "Albana di Romagna 在 1987 年成為義大利第一個白酒 DOCG，主要產自 Romagna 地區。"
+        },
+        {
+          "type": "single",
+          "question": "為什麼 Lambrusco 適合搭配 Emilia 的油膩料理？",
+          "options": [
+            "低酒精度",
+            "高酸度 + 氣泡可切割油膩",
+            "甜味平衡",
+            "顏色搭配"
+          ],
+          "correct": 1,
+          "explanation": "Lambrusco 的高酸度和氣泡能有效切割 Parmigiano、Prosciutto 等油膩料理的油脂，清爽口腔。"
+        },
+        {
+          "type": "single",
+          "question": "Lambrusco 最重要的 DOCG 產區位於哪裡？",
+          "options": [
+            "A. Bologna 附近",
+            "B. Modena 與 Reggio Emilia",
+            "C. Parma 以北",
+            "D. Ferrara 平原"
+          ],
+          "correct": 1,
+          "explanation": "Lambrusco 主要 DOCG（Lambrusco di Sorbara、Lambrusco Grasparossa）均位於 Modena 與 Reggio Emilia 一帶。"
+        }
+      ]
     }
   ]
 }

@@ -89,6 +89,80 @@
       "content": "<div class=\"docg-grid\"><div class=\"docg-item tier-s\">Barolo</div><div class=\"docg-item tier-s\">Barbaresco</div><div class=\"docg-item tier-a\">Barbera d'Asti</div><div class=\"docg-item tier-a\">Gavi</div><div class=\"docg-item tier-a\">Roero</div><div class=\"docg-item tier-b\">Dolcetto di Dogliani Superiore</div><div class=\"docg-item tier-b\">Gattinara</div><div class=\"docg-item tier-b\">Ghemme</div><div class=\"docg-item tier-c\">Moscato d'Asti / Asti</div></div><div class=\"tier-explanation\"><h3>📊 分級標準說明</h3><div class=\"tier-details\"><div class=\"tier-detail tier-s-detail\"><h4>🏆 S 級：世界頂級 (Legendary)</h4><p><strong>標準：</strong>國際聲譽最高、陳年潛力 20 年以上、價格頂級</p><p><strong>代表：</strong>Barolo、Barbaresco - 100% Nebbiolo，義大利紅酒巔峰，全球收藏家追捧</p></div><div class=\"tier-detail tier-a-detail\"><h4>⭐ A 級：優質精品 (Premium)</h4><p><strong>標準：</strong>優秀品質、廣受好評、性價比高</p><p><strong>代表：</strong></p><p>• Barbera d'Asti - 高酸度紅酒，適口性佳</p><p>• Gavi - 皮埃蒙特最佳白酒，清爽礦物感</p><p>• Roero - Nebbiolo 親民版，果香豐富</p></div><div class=\"tier-detail tier-b-detail\"><h4>💎 B 級：高品質 (Quality)</h4><p><strong>標準：</strong>傳統產區、品質穩定、值得探索</p><p><strong>代表：</strong></p><p>• Dolcetto di Dogliani Superiore - 日常餐酒之選</p><p>• Gattinara、Ghemme - 北部 Nebbiolo，較清新風格</p></div><div class=\"tier-detail tier-c-detail\"><h4>🌸 C 級：特色酒款 (Specialty)</h4><p><strong>標準：</strong>獨特風格、市場廣受歡迎、入門首選</p><p><strong>代表：</strong>Moscato d'Asti / Asti - 世界最著名微甜氣泡酒，低酒精度，適合慶祝與甜點</p></div></div></div><div class=\"tier-legend\"><div class=\"legend-item\"><span class=\"legend-color tier-s\"></span> S 級：世界頂級</div><div class=\"legend-item\"><span class=\"legend-color tier-a\"></span> A 級：優質精品</div><div class=\"legend-item\"><span class=\"legend-color tier-b\"></span> B 級：高品質</div><div class=\"legend-item\"><span class=\"legend-color tier-c\"></span> C 級：特色酒款</div></div>"
     },
     {
+      "type": "quiz",
+      "title": "🧠 知識檢測",
+      "questions": [
+        {
+          "type": "single",
+          "question": "皮埃蒙特的「Nebbia」是什麼，和葡萄酒有什麼關係？",
+          "options": [
+            "A. 一種高酸葡萄品種",
+            "B. 秋天的霧，Nebbiolo 品種名稱的由來",
+            "C. 一種特殊土壤類型",
+            "D. 阿爾卑斯山的冷風"
+          ],
+          "correct": 1,
+          "explanation": "Nebbia 意為「霧」，是皮埃蒙特秋季特有的氣候。Nebbiolo 品種的名字直接源自 Nebbia，秋霧幫助葡萄緩慢成熟，增加複雜度和濃縮度。"
+        },
+        {
+          "type": "multiple",
+          "question": "Barolo 和 Barbaresco 的共同特徵有哪些？（多選）",
+          "options": [
+            "A. 均以 Nebbiolo 品種釀造",
+            "B. 均為 DOCG 等級",
+            "C. 均產自皮埃蒙特",
+            "D. 均為甜型酒款"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "Barolo 和 Barbaresco 都是用 Nebbiolo 釀造的 DOCG 頂級紅酒，均產自皮埃蒙特。兩者都是干型酒，非甜酒。"
+        },
+        {
+          "type": "single",
+          "question": "Barolo 和 Barbaresco 在風格上最大的差異是？",
+          "options": [
+            "A. Barolo 使用白葡萄，Barbaresco 使用紅葡萄",
+            "B. Barolo 強勁需長期陳年；Barbaresco 優雅可早飲",
+            "C. Barbaresco 酒精度比 Barolo 高很多",
+            "D. 兩者幾乎完全相同，無差異"
+          ],
+          "correct": 1,
+          "explanation": "Barolo 被稱為「葡萄酒之王」，風格雄渾，法規要求最少陳年 3 年；Barbaresco 是「葡萄酒女王」，較優雅細膩，最少陳年 2 年，相對可早開瓶。"
+        },
+        {
+          "type": "single",
+          "question": "Moscato d'Asti DOCG 的主要特點是？",
+          "options": [
+            "A. 干型高酒精紅酒",
+            "B. 微甜低酒精微氣泡白酒（約 5.5% ABV）",
+            "C. 完全發酵、無糖干型白酒",
+            "D. 橘酒（Skin-contact）"
+          ],
+          "correct": 1,
+          "explanation": "Moscato d'Asti 是 Frizzante（微氣泡）甜白酒，以 Moscato Bianco 釀造，酒精度約 5%，帶桃子、杏子和蜂蜜香氣，適合飯後甜點搭配。"
+        },
+        {
+          "type": "multiple",
+          "question": "以下哪些是皮埃蒙特的核心紅葡萄品種？（多選）",
+          "options": [
+            "A. Nebbiolo",
+            "B. Barbera",
+            "C. Dolcetto",
+            "D. Sangiovese"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "Nebbiolo（王者）、Barbera（日常高酸）和 Dolcetto（易飲）是皮埃蒙特三大紅葡萄品種。Sangiovese 主要種植在托斯卡納，皮埃蒙特罕見。"
+        }
+      ]
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

@@ -19,7 +19,10 @@
           "type": "map",
           "title": "🗺️ 夜丘產區地圖",
           "mapConfig": {
-            "center": [4.95, 47.15],
+            "center": [
+              4.95,
+              47.15
+            ],
             "zoom": 10.5,
             "pitch": 0,
             "bearing": 0
@@ -252,6 +255,76 @@
           "note": "評分基於酒體強度、複雜度與陳年潛力綜合評估。Vosne-Romanée 被認為是夜丘的巔峰。"
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夜丘（Côte de Nuits）以哪種類型的葡萄酒最為知名？",
+              "options": [
+                "A. 頂級 Chardonnay 白酒",
+                "B. 甜型遲摘白酒",
+                "C. 頂級 Pinot Noir 紅酒",
+                "D. 薄酒萊風格的 Gamay 紅酒"
+              ],
+              "correct": 2,
+              "explanation": "夜丘是全球頂級 Pinot Noir 紅酒的核心產地，Romanée-Conti、Chambertin、Musigny 等最傳奇的特級園都集中在這條南北長約 20 公里的山坡上。"
+            },
+            {
+              "type": "single",
+              "question": "夜丘最著名也最北端的特級村是哪個？",
+              "options": [
+                "A. Nuits-Saint-Georges",
+                "B. Vosne-Romanée",
+                "C. Gevrey-Chambertin",
+                "D. Chambolle-Musigny"
+              ],
+              "correct": 2,
+              "explanation": "Gevrey-Chambertin 是夜丘最北端的重要特級村，擁有布根地最多的特級園之一（包括 Chambertin 和 Mazis-Chambertin 等），以濃郁強勁風格著稱，是夜丘的門戶。"
+            },
+            {
+              "type": "multiple",
+              "question": "DRC（Domaine de la Romanée-Conti）在布根地的地位包括哪些？（多選）",
+              "options": [
+                "A. 全球最著名也最貴的布根地酒莊",
+                "B. 擁有唯一完整的 Romanée-Conti 特級園（1.8ha）",
+                "C. 全部使用有機耕作",
+                "D. 只生產白酒"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "DRC 是布根地最傳奇的酒莊：Romanée-Conti 特級園歸其完整所有；採用生物動力法和有機種植；出產紅、白酒，並非只有白酒。其酒在全球拍賣會上屢創天價。"
+            },
+            {
+              "type": "single",
+              "question": "「Clos de Vougeot」這個特級園最特別的地方是？",
+              "options": [
+                "A. 全部由一個釀酒師釀造",
+                "B. 是布根地最小的特級園",
+                "C. 50 公頃由超過 80 個不同擁有者共享",
+                "D. 位於夏布利，是唯一的礦物紅酒"
+              ],
+              "correct": 2,
+              "explanation": "Clos de Vougeot 是布根地分散所有權的極端例子：50 公頃的特級園有超過 80 個不同的擁有者，每個人釀出的 Clos de Vougeot 品質差異極大，是研究「風土 vs. 釀酒師」很有趣的案例。"
+            },
+            {
+              "type": "single",
+              "question": "夜丘的土壤主要由哪種岩石組成，對葡萄酒有什麼影響？",
+              "options": [
+                "A. 砂岩，賦予清爽果香",
+                "B. 花崗岩，造就礦物感",
+                "C. 石灰岩和黏土混合，賦予複雜度和陳年潛力",
+                "D. 火山岩，帶來獨特煙燻感"
+              ],
+              "correct": 2,
+              "explanation": "夜丘山坡以石灰岩、黏土和泥灰岩（Marl）混合土壤為主，這種組合不僅提供了良好的排水性，也賦予 Pinot Noir 細膩的結構感、礦石風味和長期陳年的能力。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "總結",
           "content": "夜丘是黑皮諾的天堂，每個村莊都有獨特個性，從強勁的 Gevrey 到優雅的 Chambolle，風格多樣但都展現了極高的品質。"
@@ -296,7 +369,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.96, 47.23],
+            "center": [
+              4.96,
+              47.23
+            ],
             "zoom": 11.5,
             "pitch": 0,
             "bearing": 0
@@ -449,6 +525,76 @@
           ]
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夜丘（Côte de Nuits）以哪種類型的葡萄酒最為知名？",
+              "options": [
+                "A. 頂級 Chardonnay 白酒",
+                "B. 甜型遲摘白酒",
+                "C. 頂級 Pinot Noir 紅酒",
+                "D. 薄酒萊風格的 Gamay 紅酒"
+              ],
+              "correct": 2,
+              "explanation": "夜丘是全球頂級 Pinot Noir 紅酒的核心產地，Romanée-Conti、Chambertin、Musigny 等最傳奇的特級園都集中在這條南北長約 20 公里的山坡上。"
+            },
+            {
+              "type": "single",
+              "question": "夜丘最著名也最北端的特級村是哪個？",
+              "options": [
+                "A. Nuits-Saint-Georges",
+                "B. Vosne-Romanée",
+                "C. Gevrey-Chambertin",
+                "D. Chambolle-Musigny"
+              ],
+              "correct": 2,
+              "explanation": "Gevrey-Chambertin 是夜丘最北端的重要特級村，擁有布根地最多的特級園之一（包括 Chambertin 和 Mazis-Chambertin 等），以濃郁強勁風格著稱，是夜丘的門戶。"
+            },
+            {
+              "type": "multiple",
+              "question": "DRC（Domaine de la Romanée-Conti）在布根地的地位包括哪些？（多選）",
+              "options": [
+                "A. 全球最著名也最貴的布根地酒莊",
+                "B. 擁有唯一完整的 Romanée-Conti 特級園（1.8ha）",
+                "C. 全部使用有機耕作",
+                "D. 只生產白酒"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "DRC 是布根地最傳奇的酒莊：Romanée-Conti 特級園歸其完整所有；採用生物動力法和有機種植；出產紅、白酒，並非只有白酒。其酒在全球拍賣會上屢創天價。"
+            },
+            {
+              "type": "single",
+              "question": "「Clos de Vougeot」這個特級園最特別的地方是？",
+              "options": [
+                "A. 全部由一個釀酒師釀造",
+                "B. 是布根地最小的特級園",
+                "C. 50 公頃由超過 80 個不同擁有者共享",
+                "D. 位於夏布利，是唯一的礦物紅酒"
+              ],
+              "correct": 2,
+              "explanation": "Clos de Vougeot 是布根地分散所有權的極端例子：50 公頃的特級園有超過 80 個不同的擁有者，每個人釀出的 Clos de Vougeot 品質差異極大，是研究「風土 vs. 釀酒師」很有趣的案例。"
+            },
+            {
+              "type": "single",
+              "question": "夜丘的土壤主要由哪種岩石組成，對葡萄酒有什麼影響？",
+              "options": [
+                "A. 砂岩，賦予清爽果香",
+                "B. 花崗岩，造就礦物感",
+                "C. 石灰岩和黏土混合，賦予複雜度和陳年潛力",
+                "D. 火山岩，帶來獨特煙燻感"
+              ],
+              "correct": 2,
+              "explanation": "夜丘山坡以石灰岩、黏土和泥灰岩（Marl）混合土壤為主，這種組合不僅提供了良好的排水性，也賦予 Pinot Noir 細膩的結構感、礦石風味和長期陳年的能力。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "總結",
           "content": "夜丘北部以 Gevrey-Chambertin 為核心，9個特級園展現了黑皮諾的極致力量與復雜度。"
@@ -493,7 +639,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.965, 47.17],
+            "center": [
+              4.965,
+              47.17
+            ],
             "zoom": 12,
             "pitch": 0,
             "bearing": 0
@@ -584,6 +733,76 @@
           ]
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夜丘（Côte de Nuits）以哪種類型的葡萄酒最為知名？",
+              "options": [
+                "A. 頂級 Chardonnay 白酒",
+                "B. 甜型遲摘白酒",
+                "C. 頂級 Pinot Noir 紅酒",
+                "D. 薄酒萊風格的 Gamay 紅酒"
+              ],
+              "correct": 2,
+              "explanation": "夜丘是全球頂級 Pinot Noir 紅酒的核心產地，Romanée-Conti、Chambertin、Musigny 等最傳奇的特級園都集中在這條南北長約 20 公里的山坡上。"
+            },
+            {
+              "type": "single",
+              "question": "夜丘最著名也最北端的特級村是哪個？",
+              "options": [
+                "A. Nuits-Saint-Georges",
+                "B. Vosne-Romanée",
+                "C. Gevrey-Chambertin",
+                "D. Chambolle-Musigny"
+              ],
+              "correct": 2,
+              "explanation": "Gevrey-Chambertin 是夜丘最北端的重要特級村，擁有布根地最多的特級園之一（包括 Chambertin 和 Mazis-Chambertin 等），以濃郁強勁風格著稱，是夜丘的門戶。"
+            },
+            {
+              "type": "multiple",
+              "question": "DRC（Domaine de la Romanée-Conti）在布根地的地位包括哪些？（多選）",
+              "options": [
+                "A. 全球最著名也最貴的布根地酒莊",
+                "B. 擁有唯一完整的 Romanée-Conti 特級園（1.8ha）",
+                "C. 全部使用有機耕作",
+                "D. 只生產白酒"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "DRC 是布根地最傳奇的酒莊：Romanée-Conti 特級園歸其完整所有；採用生物動力法和有機種植；出產紅、白酒，並非只有白酒。其酒在全球拍賣會上屢創天價。"
+            },
+            {
+              "type": "single",
+              "question": "「Clos de Vougeot」這個特級園最特別的地方是？",
+              "options": [
+                "A. 全部由一個釀酒師釀造",
+                "B. 是布根地最小的特級園",
+                "C. 50 公頃由超過 80 個不同擁有者共享",
+                "D. 位於夏布利，是唯一的礦物紅酒"
+              ],
+              "correct": 2,
+              "explanation": "Clos de Vougeot 是布根地分散所有權的極端例子：50 公頃的特級園有超過 80 個不同的擁有者，每個人釀出的 Clos de Vougeot 品質差異極大，是研究「風土 vs. 釀酒師」很有趣的案例。"
+            },
+            {
+              "type": "single",
+              "question": "夜丘的土壤主要由哪種岩石組成，對葡萄酒有什麼影響？",
+              "options": [
+                "A. 砂岩，賦予清爽果香",
+                "B. 花崗岩，造就礦物感",
+                "C. 石灰岩和黏土混合，賦予複雜度和陳年潛力",
+                "D. 火山岩，帶來獨特煙燻感"
+              ],
+              "correct": 2,
+              "explanation": "夜丘山坡以石灰岩、黏土和泥灰岩（Marl）混合土壤為主，這種組合不僅提供了良好的排水性，也賦予 Pinot Noir 細膩的結構感、礦石風味和長期陳年的能力。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "總結",
           "content": "夜丘中部展現了黑皮諾的多樣性，從複雜的 Morey 到優雅的 Chambolle，再到歷史悠久的 Vougeot。"
@@ -628,7 +847,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.955, 47.13],
+            "center": [
+              4.955,
+              47.13
+            ],
             "zoom": 12,
             "pitch": 0,
             "bearing": 0
@@ -764,6 +986,76 @@
           ]
         },
         {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "夜丘（Côte de Nuits）以哪種類型的葡萄酒最為知名？",
+              "options": [
+                "A. 頂級 Chardonnay 白酒",
+                "B. 甜型遲摘白酒",
+                "C. 頂級 Pinot Noir 紅酒",
+                "D. 薄酒萊風格的 Gamay 紅酒"
+              ],
+              "correct": 2,
+              "explanation": "夜丘是全球頂級 Pinot Noir 紅酒的核心產地，Romanée-Conti、Chambertin、Musigny 等最傳奇的特級園都集中在這條南北長約 20 公里的山坡上。"
+            },
+            {
+              "type": "single",
+              "question": "夜丘最著名也最北端的特級村是哪個？",
+              "options": [
+                "A. Nuits-Saint-Georges",
+                "B. Vosne-Romanée",
+                "C. Gevrey-Chambertin",
+                "D. Chambolle-Musigny"
+              ],
+              "correct": 2,
+              "explanation": "Gevrey-Chambertin 是夜丘最北端的重要特級村，擁有布根地最多的特級園之一（包括 Chambertin 和 Mazis-Chambertin 等），以濃郁強勁風格著稱，是夜丘的門戶。"
+            },
+            {
+              "type": "multiple",
+              "question": "DRC（Domaine de la Romanée-Conti）在布根地的地位包括哪些？（多選）",
+              "options": [
+                "A. 全球最著名也最貴的布根地酒莊",
+                "B. 擁有唯一完整的 Romanée-Conti 特級園（1.8ha）",
+                "C. 全部使用有機耕作",
+                "D. 只生產白酒"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "DRC 是布根地最傳奇的酒莊：Romanée-Conti 特級園歸其完整所有；採用生物動力法和有機種植；出產紅、白酒，並非只有白酒。其酒在全球拍賣會上屢創天價。"
+            },
+            {
+              "type": "single",
+              "question": "「Clos de Vougeot」這個特級園最特別的地方是？",
+              "options": [
+                "A. 全部由一個釀酒師釀造",
+                "B. 是布根地最小的特級園",
+                "C. 50 公頃由超過 80 個不同擁有者共享",
+                "D. 位於夏布利，是唯一的礦物紅酒"
+              ],
+              "correct": 2,
+              "explanation": "Clos de Vougeot 是布根地分散所有權的極端例子：50 公頃的特級園有超過 80 個不同的擁有者，每個人釀出的 Clos de Vougeot 品質差異極大，是研究「風土 vs. 釀酒師」很有趣的案例。"
+            },
+            {
+              "type": "single",
+              "question": "夜丘的土壤主要由哪種岩石組成，對葡萄酒有什麼影響？",
+              "options": [
+                "A. 砂岩，賦予清爽果香",
+                "B. 花崗岩，造就礦物感",
+                "C. 石灰岩和黏土混合，賦予複雜度和陳年潛力",
+                "D. 火山岩，帶來獨特煙燻感"
+              ],
+              "correct": 2,
+              "explanation": "夜丘山坡以石灰岩、黏土和泥灰岩（Marl）混合土壤為主，這種組合不僅提供了良好的排水性，也賦予 Pinot Noir 細膩的結構感、礦石風味和長期陳年的能力。"
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "總結",
           "content": "Vosne-Romanée 是黑皮諾的極致表現，這裡的酒代表了布根地的最高成就。而 Nuits-Saint-Georges 雖無特級園，但一級園品質卓越，性價比更高。"
@@ -778,7 +1070,12 @@
         "id": "q1",
         "question": "夜丘共有多少個特級園？",
         "type": "single-choice",
-        "options": ["18個", "24個", "30個", "33個"],
+        "options": [
+          "18個",
+          "24個",
+          "30個",
+          "33個"
+        ],
         "correctAnswer": 1,
         "explanation": "夜丘擁有24個特級園，佔布根地33個特級園的絕大部分。"
       },
@@ -786,7 +1083,12 @@
         "id": "q2",
         "question": "哪個村莊擁有最多特級園（9個）？",
         "type": "single-choice",
-        "options": ["Vosne-Romanée", "Gevrey-Chambertin", "Morey-Saint-Denis", "Chambolle-Musigny"],
+        "options": [
+          "Vosne-Romanée",
+          "Gevrey-Chambertin",
+          "Morey-Saint-Denis",
+          "Chambolle-Musigny"
+        ],
         "correctAnswer": 1,
         "explanation": "Gevrey-Chambertin 擁有9個特級園，是夜丘特級園最多的村莊。"
       },
@@ -794,7 +1096,12 @@
         "id": "q3",
         "question": "Romanée-Conti 特級園的面積是多少？",
         "type": "single-choice",
-        "options": ["0.85公頃", "1.81公頃", "6.06公頃", "8.03公頃"],
+        "options": [
+          "0.85公頃",
+          "1.81公頃",
+          "6.06公頃",
+          "8.03公頃"
+        ],
         "correctAnswer": 1,
         "explanation": "Romanée-Conti 僅1.81公頃，是全球最貴的葡萄酒產地之一。"
       },
@@ -802,7 +1109,12 @@
         "id": "q4",
         "question": "哪個村莊以「女性化」風格聞名？",
         "type": "single-choice",
-        "options": ["Gevrey-Chambertin", "Chambolle-Musigny", "Nuits-Saint-Georges", "Fixin"],
+        "options": [
+          "Gevrey-Chambertin",
+          "Chambolle-Musigny",
+          "Nuits-Saint-Georges",
+          "Fixin"
+        ],
         "correctAnswer": 1,
         "explanation": "Chambolle-Musigny 以絲綢般質地、花香四溢、精緻細膩的「女性化」風格著稱。"
       },
@@ -810,7 +1122,12 @@
         "id": "q5",
         "question": "布根地最大的特級園是哪一個？",
         "type": "single-choice",
-        "options": ["Chambertin", "Clos de Vougeot", "Échézeaux", "Charmes-Chambertin"],
+        "options": [
+          "Chambertin",
+          "Clos de Vougeot",
+          "Échézeaux",
+          "Charmes-Chambertin"
+        ],
         "correctAnswer": 1,
         "explanation": "Clos de Vougeot 是布根地最大的特級園，面積達50.6公頃。"
       },
@@ -818,7 +1135,12 @@
         "id": "q6",
         "question": "Nuits-Saint-Georges 有多少個特級園？",
         "type": "single-choice",
-        "options": ["0個", "2個", "5個", "8個"],
+        "options": [
+          "0個",
+          "2個",
+          "5個",
+          "8個"
+        ],
         "correctAnswer": 0,
         "explanation": "Nuits-Saint-Georges 沒有特級園，但擁有41個一級園，品質極高。"
       },
@@ -826,7 +1148,12 @@
         "id": "q7",
         "question": "哪個村莊是夜丘唯一可釀造紅、白、粉紅三色酒的？",
         "type": "single-choice",
-        "options": ["Marsannay", "Fixin", "Vougeot", "Morey-Saint-Denis"],
+        "options": [
+          "Marsannay",
+          "Fixin",
+          "Vougeot",
+          "Morey-Saint-Denis"
+        ],
         "correctAnswer": 0,
         "explanation": "Marsannay 是夜丘唯一可以釀造紅、白、粉紅三色酒的村莊。"
       },
@@ -847,7 +1174,12 @@
         "id": "q9",
         "question": "Morey-Saint-Denis 擁有多少個特級園？",
         "type": "single-choice",
-        "options": ["2個", "3個", "5個", "7個"],
+        "options": [
+          "2個",
+          "3個",
+          "5個",
+          "7個"
+        ],
         "correctAnswer": 2,
         "explanation": "Morey-Saint-Denis 擁有5個特級園：Clos de la Roche、Clos Saint-Denis、Clos des Lambrays、Clos de Tart 和 Bonnes-Mares（部分）。"
       },
@@ -855,7 +1187,12 @@
         "id": "q10",
         "question": "夜丘的主要土壤類型是？",
         "type": "single-choice",
-        "options": ["花崗岩", "侏羅紀石灰岩與泥灰岩", "火山岩", "沙質土"],
+        "options": [
+          "花崗岩",
+          "侏羅紀石灰岩與泥灰岩",
+          "火山岩",
+          "沙質土"
+        ],
         "correctAnswer": 1,
         "explanation": "夜丘的主要土壤是侏羅紀石灰岩與泥灰岩，這種土壤造就了黑皮諾的優雅風格。"
       }

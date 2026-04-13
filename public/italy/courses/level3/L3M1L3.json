@@ -101,6 +101,73 @@
         "✓ Primitivo di Manduria 是義大利酒精度最高的干型紅酒之一",
         "✓ 南義品種都受益於火山土和極端氣候"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 南義稀有品種知識檢測",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Aglianico del Vulture 為什麼被稱為「南義的 Barolo」？",
+          "options": [
+            "價格相同",
+            "都需要長時間陳年且單寧強勁",
+            "使用相同葡萄品種",
+            "產區海拔相同"
+          ],
+          "correct": 1,
+          "explanation": "Aglianico del Vulture 因其極高的單寧、酸度和需要 10 年以上陳年的特性，被稱為南義的 Barolo。"
+        },
+        {
+          "type": "single",
+          "question": "Greco di Tufo 的 'Tufo' 指的是什麼？",
+          "options": [
+            "村莊名稱",
+            "凝灰岩（火山灰沉積岩）",
+            "葡萄克隆",
+            "釀酒師名字"
+          ],
+          "correct": 1,
+          "explanation": "Tufo 是義大利文的凝灰岩（火山灰沉積岩），Greco di Tufo 的葡萄園必須位於這種土壤上。"
+        },
+        {
+          "type": "single",
+          "question": "Primitivo 與哪個品種 DNA 完全相同？",
+          "options": [
+            "Syrah",
+            "Zinfandel",
+            "Grenache",
+            "Tempranillo"
+          ],
+          "correct": 1,
+          "explanation": "1968 年科學研究證實 Primitivo 與美國加州的 Zinfandel DNA 完全相同，是同一品種的不同名稱。"
+        },
+        {
+          "type": "single",
+          "question": "哪個酒莊是 Aglianico del Vulture 的生物動力法代表？",
+          "options": [
+            "Gaja",
+            "Elena Fucci",
+            "Antinori",
+            "Feudi di San Gregorio"
+          ],
+          "correct": 1,
+          "explanation": "Elena Fucci 是 Basilicata 的生物動力法先驅，其旗艦酒款 Titolo 獲得 Wine Advocate 96+ 高分。"
+        },
+        {
+          "type": "single",
+          "question": "Negroamaro 品種名稱的字面意義是什麼？",
+          "options": [
+            "A. 黑色甜美",
+            "B. 黑色苦澀（nero + amaro）",
+            "C. 黑色海洋",
+            "D. 深色鈴鐺"
+          ],
+          "correct": 1,
+          "explanation": "Negroamaro 由 nero（黑）+ amaro（苦）組成，反映了品種天然帶有的苦感單寧，是 Puglia Salento 半島最重要的本土紅品種。"
+        }
+      ]
     }
   ]
 }

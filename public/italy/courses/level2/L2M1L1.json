@@ -129,6 +129,73 @@
         "✓ Teroldego 是 Trentino 的本土紅葡萄之王",
         "✓ 高山冷涼氣候造就高酸度、清新風格"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Trentino-Alto Adige 知識檢測",
+      "_marker": "// inject-italy-l2-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Gewürztraminer 的發源地是？",
+          "options": [
+            "Alsace 法國",
+            "Alto Adige 義大利",
+            "Baden 德國",
+            "Barossa Valley 澳洲"
+          ],
+          "correct": 1,
+          "explanation": "Gewürztraminer 的發源地就在 Alto Adige 的 Tramin 村，這裡至今仍產出最正宗的版本。"
+        },
+        {
+          "type": "single",
+          "question": "Trento DOC 採用什麼釀造法？",
+          "options": [
+            "Charmat 法",
+            "Metodo Classico（傳統香檳法）",
+            "Asti 法",
+            "Transfer 法"
+          ],
+          "correct": 1,
+          "explanation": "Trento DOC 採用傳統香檳法（Metodo Classico）釀造，是義大利兩大頂級氣泡酒之一。"
+        },
+        {
+          "type": "single",
+          "question": "Trentino 最具代表性的紅葡萄品種是？",
+          "options": [
+            "Nebbiolo",
+            "Sangiovese",
+            "Teroldego",
+            "Corvina"
+          ],
+          "correct": 2,
+          "explanation": "Teroldego 是 Trentino 的本土紅葡萄品種，主要產於 Rotaliano 平原，被稱為 Trentino 的「紅酒之王」。"
+        },
+        {
+          "type": "single",
+          "question": "Alto Adige 在 1919 年之前屬於哪個帝國？",
+          "options": [
+            "羅馬帝國",
+            "拜占庭帝國",
+            "奧匈帝國",
+            "神聖羅馬帝國"
+          ],
+          "correct": 2,
+          "explanation": "Alto Adige 在 1919 年之前屬於奧匈帝國，因此至今仍保留濃厚的德語文化和奧地利影響。"
+        },
+        {
+          "type": "single",
+          "question": "Alto Adige 有多少比例的葡萄酒達到 DOC/DOCG 等級？",
+          "options": [
+            "A. 約 50%",
+            "B. 約 70%",
+            "C. 超過 98%",
+            "D. 約 80%"
+          ],
+          "correct": 2,
+          "explanation": "Alto Adige 超過 98% 的葡萄酒達到 DOC 或更高等級，是義大利品質最整齊的產區之一。"
+        }
+      ]
     }
   ]
 }

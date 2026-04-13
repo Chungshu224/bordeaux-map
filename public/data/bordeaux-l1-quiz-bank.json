@@ -1,0 +1,384 @@
+{
+  "level": "l1",
+  "title": "Level 1 波爾多葡萄酒入門 — 題庫",
+  "questions": [
+    {
+      "type": "single",
+      "question": "波爾多位於法國的哪個方向？",
+      "options": [
+        "A. 東北部",
+        "B. 西南部",
+        "C. 中部",
+        "D. 東南部"
+      ],
+      "correct": 1,
+      "explanation": "波爾多位於法國西南部，北緯44-45度，距大西洋約60公里，得天獨厚的地理帶來溫和海洋性氣候。"
+    },
+    {
+      "type": "single",
+      "question": "吉隆河是由哪兩條河流匯合而成？",
+      "options": [
+        "A. 塞納河和盧瓦爾河",
+        "B. 加龍河和多爾多涅河",
+        "C. 隆河和薩翁河",
+        "D. 萊茵河和摩澤爾河"
+      ],
+      "correct": 1,
+      "explanation": "吉隆河（Gironde）是南部加龍河（Garonne）和北部多爾多涅河（Dordogne）匯合的寬廣河口，是波爾多左右岸的自然分界。"
+    },
+    {
+      "type": "single",
+      "question": "「兩海之間（Entre-Deux-Mers）」是指哪兩河之間的地區？",
+      "options": [
+        "A. 吉隆河和大西洋",
+        "B. 加龍河和多爾多涅河",
+        "C. 吉隆河和加龍河",
+        "D. 多爾多涅河和索恩河"
+      ],
+      "correct": 1,
+      "explanation": "「兩海之間」是加龍河和多爾多涅河夾成的三角地帶，以清爽干型白酒著稱，是波爾多最大的白酒 AOC。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多屬於哪種氣候類型？",
+      "options": [
+        "A. 地中海氣候",
+        "B. 溫帶海洋性氣候",
+        "C. 大陸性氣候",
+        "D. 半乾旱氣候"
+      ],
+      "correct": 1,
+      "explanation": "受大西洋和暖流影響，波爾多屬溫帶海洋性氣候，冬暖夏涼，全年降水均勻，是葡萄生長的理想環境。"
+    },
+    {
+      "type": "single",
+      "question": "哪種氣候現象在特定條件下有助蘇玳甜酒的釀製？",
+      "options": [
+        "A. 冰雹",
+        "B. 春霜",
+        "C. 貴腐菌（Botrytis）",
+        "D. 暴洪"
+      ],
+      "correct": 2,
+      "explanation": "貴腐菌（Noble Rot）在晨霧後暖乾環境下，穿透葡萄皮使水分蒸發糖分濃縮，是釀製蘇玳頂級甜白酒的關鍵。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多左岸最主要的紅葡萄品種是？",
+      "options": [
+        "A. Merlot",
+        "B. Cabernet Franc",
+        "C. Cabernet Sauvignon",
+        "D. Syrah"
+      ],
+      "correct": 2,
+      "explanation": "Cabernet Sauvignon 在左岸礫石土壤中表現最佳，以高單寧高酸和長陳年潛力著稱，是梅多克一級莊的核心品種。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多右岸（波美侯、聖愛美濃）最主要的品種是？",
+      "options": [
+        "A. Cabernet Sauvignon",
+        "B. Merlot",
+        "C. Pinot Noir",
+        "D. Grenache"
+      ],
+      "correct": 1,
+      "explanation": "Merlot 在右岸黏土石灰岩土壤上表現最佳，較早熟、單寧柔軟、口感豐盈，是波美侯 Pétrus 的主導品種。"
+    },
+    {
+      "type": "multiple",
+      "question": "波爾多允許的主要紅葡萄品種包括？（多選）",
+      "options": [
+        "A. Cabernet Sauvignon",
+        "B. Merlot",
+        "C. Cabernet Franc",
+        "D. Petit Verdot"
+      ],
+      "correct": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "波爾多 AOC 允許的紅葡萄包括：Cabernet Sauvignon、Merlot、Cabernet Franc（三大主角），以及 Petit Verdot、Malbec 和 Carménère（輔助品種）。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多的頂級白酒品種組合是？",
+      "options": [
+        "A. Chardonnay 和 Pinot Gris",
+        "B. Sauvignon Blanc 和 Sémillon",
+        "C. Riesling 和 Muscat",
+        "D. Viognier 和 Marsanne"
+      ],
+      "correct": 1,
+      "explanation": "Sauvignon Blanc（清新草本）和 Sémillon（圓潤複雜，陳年潛力強）是波爾多干型和甜型白酒的主要品種組合，也是蘇玳甜酒的核心。"
+    },
+    {
+      "type": "multiple",
+      "question": "以下哪些是左岸的特徵？（多選）",
+      "options": [
+        "A. 礫石土壤，排水優良",
+        "B. Cabernet Sauvignon 為主導",
+        "C. 1855 年正式分級主要蓋此區",
+        "D. 黏土土壤，Merlot 為主"
+      ],
+      "correct": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "左岸（梅多克、格拉夫）特徵：礫石排水好→適合晚熟 Cab Sauv；1855 年五大一級莊都在此。黏土+Merlot 是右岸的特色。"
+    },
+    {
+      "type": "single",
+      "question": "為什麼右岸黏土土壤更適合 Merlot？",
+      "options": [
+        "A. 黏土含更多礦物質",
+        "B. 黏土保水性好，適合早熟的 Merlot 穩定成熟",
+        "C. 法規規定右岸只能種 Merlot",
+        "D. 黏土防蟲防病"
+      ],
+      "correct": 1,
+      "explanation": "右岸黏土保水性強，溫度比左岸礫石地略低，讓早熟的 Merlot 在不過熟的情況下完美成熟。Merlot 不需要像 Cab Sauv 那麼長的生長季，黏土地恰到好處。"
+    },
+    {
+      "type": "single",
+      "question": "蘇玳（Sauternes）以什麼類型的酒著稱？",
+      "options": [
+        "A. 濃郁干型紅酒",
+        "B. 頂級起泡酒",
+        "C. 貴腐甜白酒",
+        "D. 橡木桶陳年干型白酒"
+      ],
+      "correct": 2,
+      "explanation": "蘇玳以 Botrytis 貴腐甜白酒著稱，Château d'Yquem 是其巔峰，甜橙蜜、杏桃、薑的香氣，酸甜平衡，可陳年數十年甚至百年。"
+    },
+    {
+      "type": "single",
+      "question": "「副標酒（Second Wine）」的概念是？",
+      "options": [
+        "A. 由副總釀酒師掌管的酒款",
+        "B. 以年輕藤蔓或未達正牌標準的葡萄釀製的二軍酒",
+        "C. 只在波爾多境內銷售的酒",
+        "D. 蘇玳甜酒的法定稱呼"
+      ],
+      "correct": 1,
+      "explanation": "副標/二軍酒是頂級酒莊降低品質標準的方式：未達正牌門檻的批次釀成副標，品質穩定但定價親民。如拉菲正牌對應小拉菲（Carruades de Lafite）。"
+    },
+    {
+      "type": "single",
+      "question": "1855 年分級的一級酒莊原本有幾個（不含 1973 年晉升的）？",
+      "options": [
+        "A. 3 個",
+        "B. 4 個",
+        "C. 5 個",
+        "D. 10 個"
+      ],
+      "correct": 1,
+      "explanation": "1855 年最初的一級莊只有四個：Lafite、Latour、Margaux（左岸）和 Haut-Brion（格拉夫），1973 年 Mouton Rothschild 晉升才成為五個。"
+    },
+    {
+      "type": "single",
+      "question": "聖愛美濃分級制度最高等級是？",
+      "options": [
+        "A. Grand Cru Classé",
+        "B. Premier Grand Cru Classé A",
+        "C. Grand Vin Classé",
+        "D. Cru Exceptionnel"
+      ],
+      "correct": 1,
+      "explanation": "聖愛美濃（Saint-Émilion）的最高等級是「Premier Grand Cru Classé A（PGCCA）」，目前有奧松（Ausone）、白馬（Cheval Blanc）、金鐘（Angélus）和帕維（Pavie）等。"
+    },
+    {
+      "type": "single",
+      "question": "波美侯（Pomerol）的分級制度有何特別？",
+      "options": [
+        "A. 使用 1855 年相同體系",
+        "B. 沒有官方分級制度，靠市場和聲望決定",
+        "C. 有自己的 Grand Cru Classé",
+        "D. 由 CIVB 定期修訂"
+      ],
+      "correct": 1,
+      "explanation": "波美侯是波爾多唯一沒有官方分級制度的知名產區，葡萄酒的地位全靠市場聲望決定。Petrus 雖沒有任何官方「一級」頭銜，但其市場地位超越所有正式一級莊。"
+    },
+    {
+      "type": "single",
+      "question": "AOC 制度最主要的功能是？",
+      "options": [
+        "A. 保護特定地理區域的名稱和生產規範",
+        "B. 決定最低售價",
+        "C. 核准酒莊的出口配額",
+        "D. 監測每年的氣候"
+      ],
+      "correct": 0,
+      "explanation": "AOC（現為 AOP）是法定地理保護制度，確保「Bordeaux AOC」只能來自波爾多特定地區、特定品種和符合質量的方式生產，保護消費者和生產者雙方利益。"
+    },
+    {
+      "type": "single",
+      "question": "品酒三個主要步驟是？",
+      "options": [
+        "A. 購買、儲存、飲用",
+        "B. 觀色 → 聞香 → 品味",
+        "C. 選酒、醒酒、搭餐",
+        "D. 辨別品種、年份、產地"
+      ],
+      "correct": 1,
+      "explanation": "標準品酒步驟：觀色（色澤/清澈度/黏稠度）→ 聞香（一級果香/二級發酵香/三級陳年香）→ 品味（酸度/單寧/酒體/餘韻），是系統性評估葡萄酒的基礎方法。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多陳年老酒最典型的三級香氣（Tertiary Aromas）是？",
+      "options": [
+        "A. 新鮮黑醋栗和藍莓",
+        "B. 青草和蔬菜",
+        "C. 皮革、雪茄盒、雪松木、松露",
+        "D. 奶油和香草（橡木桶影響）"
+      ],
+      "correct": 2,
+      "explanation": "三級香氣（陳年香）是波爾多老酒的靈魂：皮革、雪茄盒、雪松、泥土、松露等，這些香氣在瓶中緩慢還原發展，是愛好者為好年份名莊等候 10-20 年的最大動力。"
+    },
+    {
+      "type": "multiple",
+      "question": "「口感（Palate）」評估包含哪些要素？（多選）",
+      "options": [
+        "A. 酸度",
+        "B. 單寧",
+        "C. 酒體",
+        "D. 餘韻"
+      ],
+      "correct": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "完整口感四要素：酸度（骨架/保鮮）、單寧（結構/澀感）、酒體（輕/中/飽滿）、餘韻（長/中/短，複雜度）——總體構成對葡萄酒品質的完整評估。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多採用多品種調配（Blending）的主要原因是？",
+      "options": [
+        "A. 調配能賣更高的價格",
+        "B. 平衡不同品種的優缺點，提升複雜度和穩定性",
+        "C. 法規要求至少三個品種",
+        "D. 單一品種在波爾多無法生長"
+      ],
+      "correct": 1,
+      "explanation": "調配讓不同品種取長補短：Cab Sauv 的高單寧配 Merlot 的豐盈；早熟品種保底，晚熟品種增深度；也讓酒莊在年份不穩定時維持風格一致性。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多「期酒（En Primeur）」制度是指？",
+      "options": [
+        "A. 在採收前就售出的酒",
+        "B. 在葡萄酒仍在橡木桶中陳年時就預訂購買",
+        "C. 只向餐廳銷售的特定批次",
+        "D. 波爾多最便宜的入門款"
+      ],
+      "correct": 1,
+      "explanation": "期酒（En Primeur）是波爾多獨特的交易制度：每年春天在葡萄尚在桶中陳年時開放訂購，通常在採收後約18個月出貨。買家可能以較低價購入好年份，但也承擔品質和市場變動的風險。"
+    },
+    {
+      "type": "single",
+      "question": "「Château」在波爾多的意思是？",
+      "options": [
+        "A. 一定是一個城堡建築",
+        "B. 一個莊園，擁有自己葡萄園並自行裝瓶的歷史性單位",
+        "C. 分級制度的最高稱號",
+        "D. 等同於布根地的 Domaine，僅是品牌"
+      ],
+      "correct": 1,
+      "explanation": "「Château」在波爾多指一個葡萄酒莊園，強調「地方性」：特定地塊、特定建築物（不一定是城堡）、自有葡萄園和自行生產裝瓶。是波爾多葡萄酒品牌認同的核心，現有超過 7000 個 Château。"
+    },
+    {
+      "type": "single",
+      "question": "梅多克（Médoc）最有名的村莊 AOC 包含哪四個？",
+      "options": [
+        "A. Pauillac, Saint-Julien, Margaux, Saint-Estèphe",
+        "B. Pomerol, Fronsac, Blaye, Bourg",
+        "C. Sauternes, Barsac, Loupiac, Cadillac",
+        "D. Pessac-Léognan, Graves, Langon, Cérons"
+      ],
+      "correct": 0,
+      "explanation": "梅多克四大著名 AOC 村莊：Pauillac（三個一級莊——拉菲、拉圖、木桐）、Saint-Julien（左岸最精練）、Margaux（最優雅花香）、Saint-Estèphe（最強單寧）。這四個村莊集中了 1855 年分級的大多數名莊。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多「格拉夫（Graves）」地區的特別之處是？",
+      "options": [
+        "A. 只生產甜酒",
+        "B. 唯一同時生產頂級紅酒和頂級干型白酒的地區",
+        "C. 只有右岸風格",
+        "D. 完全不使用橡木桶"
+      ],
+      "correct": 1,
+      "explanation": "格拉夫（尤其是北部的 Pessac-Léognan）是波爾多唯一同時以頂級干型紅酒和白酒著稱的地區，Château Haut-Brion 是唯一不在梅多克卻入選 1855 一級莊的紅酒莊，而其白酒同樣傳奇。"
+    },
+    {
+      "type": "multiple",
+      "question": "以下關於 Château Pétrus 的說法哪些正確？（多選）",
+      "options": [
+        "A. 位於波美侯（Pomerol），右岸",
+        "B. 主要使用 Merlot 釀造（>90%）",
+        "C. 是 1855 年分級的一級莊",
+        "D. 無官方分級但市場地位超越大多數一級莊"
+      ],
+      "correct": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Pétrus 位於右岸波美侯，以幾乎純 Merlot（高達 95%+）釀造，藍色黏土的特殊土壤給予其無與倫比的濃縮度。波美侯沒有官方分級，Pétrus 憑市場聲望和稀缺性（年產僅 3000 箱左右）成為全球最貴葡萄酒之一。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多干型紅酒在橡木桶陳年的主要目的是？",
+      "options": [
+        "A. 快速去除所有果香",
+        "B. 軟化單寧、增加複雜度、微量氧化輔助穩定",
+        "C. 增加甜度",
+        "D. 只是為了傳統，沒有實際作用"
+      ],
+      "correct": 1,
+      "explanation": "橡木桶陳年通過微量氧化（Micro-oxygenation）有助單寧聚合變得更柔滑；桶材成分（單寧酸、香草醛）賦予香草、烤橡木等香氣；適度蒸發則自然濃縮風味，提升結構和陳年潛力。"
+    },
+    {
+      "type": "single",
+      "question": "什麼是「醒酒（Decanting）」，對波爾多年輕紅酒的作用是？",
+      "options": [
+        "A. 去除葡萄酒中的糖分",
+        "B. 透過空氣接觸讓封閉的酒香打開，單寧軟化",
+        "C. 降低酒精度",
+        "D. 快速加熱葡萄酒至適飲溫度"
+      ],
+      "correct": 1,
+      "explanation": "醒酒是將酒從瓶中倒入醒酒器（Decanter），讓酒接觸空氣：年輕的波爾多通常單寧強、香氣封閉，醒酒 1-2 小時可讓香氣散發更豐富，單寧略微柔化，整體更易飲。老年份紅酒也可用醒酒去除沉澱。"
+    },
+    {
+      "type": "single",
+      "question": "哪個波爾多子產區主要以 Sauvignon Blanc 為主的清爽白酒知名？",
+      "options": [
+        "A. 蘇玳（Sauternes）",
+        "B. 兩海之間（Entre-Deux-Mers）",
+        "C. 梅多克（Médoc）",
+        "D. 波美侯（Pomerol）"
+      ],
+      "correct": 1,
+      "explanation": "兩海之間（Entre-Deux-Mers）是波爾多最大的干型白酒 AOC，以 Sauvignon Blanc 為主（有時調入 Sémillon），風格清爽草本，柑橘和白花香，口感爽脆，適合早飲且性價比高。"
+    },
+    {
+      "type": "single",
+      "question": "波爾多紅酒的「vintage variation（年份差異）」相對哪個歐洲產區更顯著？",
+      "options": [
+        "A. 西班牙南部（高溫穩定）",
+        "B. 義大利南部（乾旱穩定）",
+        "C. 布根地也同樣有顯著差異",
+        "D. 與所有產區都相同"
+      ],
+      "correct": 2,
+      "explanation": "布根地同樣有顯著年份差異，因為同為大陸性/海洋性氣候，氣象不穩定。相比之下，西班牙南部（Rioja 以南）、義大利南部（Puglia、Sicily）因更乾燥和穩定的地中海氣候，年份間差異較小。"
+    }
+  ]
+}

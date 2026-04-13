@@ -19,7 +19,7 @@ export const courseLevels = {
         lessons: [
           { id: 'L1M1L1', title: '義大利葡萄酒簡介' },
           { id: 'L1M1L2', title: '義大利分級制度 (DOCG/DOC/IGT)' },
-          { id: 'L1M1L3', title: '義大利地理與氣候' }
+          { id: 'L1M1L3', title: '義大利地理與氣候', mapRegion: 'all' }
         ]
       },
       {
@@ -45,8 +45,15 @@ export const courseLevels = {
         id: 'L1M4',
         title: '第四章：基礎餐酒搭配',
         lessons: [
-          { id: 'L1M4L1', title: '義式料理與葡萄酒入門' },
-          { id: 'L1M4L2', title: '地域性配對原則' }
+          { id: 'L1M4L1', title: '義式料理與葡萄酒入門' }
+        ]
+      },
+      {
+        id: 'L1M5',
+        title: '第五章：Level 1 綜合評量',
+        isFinalExamModule: true,
+        lessons: [
+          { id: 'L1M4L2', title: 'Level 1 綜合評量', isFinalExam: true }
         ]
       }
     ]
@@ -60,8 +67,7 @@ export const courseLevels = {
     difficulty: '進階',
     icon: '🍷',
     color: '#FF9800',
-    totalLessons: 23,
-    prerequisites: ['完成 Level 1'],
+    totalLessons: 24,
     modules: [
       {
         id: 'L2M1',
@@ -113,6 +119,14 @@ export const courseLevels = {
           { id: 'L2M5L2', title: '年份評鑑與收藏策略' },
           { id: 'L2M5L3', title: '國際市場與拍賣' }
         ]
+      },
+      {
+        id: 'L2M6',
+        title: '第六章：Level 2 綜合評量',
+        isFinalExamModule: true,
+        lessons: [
+          { id: 'L2FinalExam', title: 'Level 2 綜合評量', isFinalExam: true }
+        ]
       }
     ]
   },
@@ -125,7 +139,7 @@ export const courseLevels = {
     difficulty: '專家',
     icon: '🏆',
     color: '#9C27B0',
-    totalLessons: 26,
+    totalLessons: 27,
     prerequisites: ['完成 Level 1', '完成 Level 2'],
     modules: [
       {
@@ -167,7 +181,15 @@ export const courseLevels = {
         { id: 'L3M6L1', title: '酒單設計原則' },
         { id: 'L3M6L2', title: '餐廳選酒顧問角色' },
         { id: 'L3M6L3', title: '品酒活動策劃' }
-      ]}
+      ]},
+      {
+        id: 'L3M7',
+        title: '第七章：Level 3 綜合評量',
+        isFinalExamModule: true,
+        lessons: [
+          { id: 'L3FinalExam', title: 'Level 3 綜合評量', isFinalExam: true }
+        ]
+      }
     ]
   }
 }

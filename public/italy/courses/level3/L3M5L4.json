@@ -22,6 +22,73 @@
       "type": "content",
       "title": "法規的挑戰與未來",
       "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">氣候變遷不僅是農業問題，也對義大利嚴格的葡萄酒法規 (DOC/DOCG) 提出了嚴峻的挑戰。</p><div class=\"bg-gray-900 p-6 rounded-xl text-white mb-8\"><div class=\"flex flex-col space-y-4\"><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-yellow-400 font-bold mb-2\">傳統法規的僵化</h4><p class=\"text-sm text-gray-300\">DOC/DOCG 法規嚴格規定了每個產區允許種植的葡萄品種、最高產量與最低酒精度。然而，當氣候改變導致傳統品種無法適應時，法規的修改往往曠日廢時。</p></div><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-green-400 font-bold mb-2\">實驗性品種的引入</h4><p class=\"text-sm text-gray-300\">一些產區（如波爾多已允許種植 Touriga Nacional 等抗旱品種）開始實驗性地引入非傳統品種。義大利部分產區也開始討論是否應該放寬品種限制，以應對未來的極端氣候。</p></div><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-blue-400 font-bold mb-2\">永續認證的普及</h4><p class=\"text-sm text-gray-300\">除了有機與生物動力，義大利推出了國家級的永續認證標準（如 Equalitas, VIVA），不僅關注環境保護，也涵蓋了碳足跡計算、水資源管理與社會經濟責任，成為酒莊應對氣候變遷的綜合指南。</p></div></div></div></div>"
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 氣候變遷知識檢測",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "全球暖化對義大利葡萄酒風格最直接、最普遍的影響是什麼？",
+          "options": [
+            "葡萄酒的顏色變得越來越淺",
+            "葡萄酒的酸度變得極高，難以入口",
+            "葡萄提早成熟，導致酒精度升高，果香變得更加成熟或果醬化 (Jammy)",
+            "葡萄酒中出現強烈的橡木桶香草味"
+          ],
+          "correct": 2,
+          "explanation": "氣溫升高導致葡萄糖分累積過快，發酵後轉化為更高的酒精度；同時酸度流失，果香從清新的新鮮水果轉變為成熟甚至果醬般的氣息。"
+        },
+        {
+          "type": "single",
+          "question": "為了應對氣候變遷帶來的炎熱與乾旱，義大利酒莊在「葡萄園管理 (Viticulture)」上最常採取的適應策略之一是什麼？",
+          "options": [
+            "大量砍伐葡萄藤周圍的樹木以增加日照",
+            "改變樹冠管理 (Canopy Management)，保留更多葉片來為葡萄遮陽，防止烈日灼傷",
+            "全面改種需要大量水分的國際品種如 Chardonnay",
+            "將葡萄園全部遷移到溫室內種植"
+          ],
+          "correct": 1,
+          "explanation": "過去為了讓葡萄成熟會剪去葉子，現在為了防止極端高溫灼傷葡萄 (Sunburn)，農夫會保留更多葉片作為「遮陽傘」。"
+        },
+        {
+          "type": "single",
+          "question": "在傳統的 Barolo 產區，過去最昂貴、最受追捧的葡萄園通常是哪一個坡向 (Aspect)？而在氣候變遷下，酒莊開始重新評估哪些坡向的價值？",
+          "options": [
+            "過去是朝北；現在重新評估朝南",
+            "過去是朝東；現在重新評估朝西",
+            "過去是朝南 (South-facing) 以獲取最多陽光；現在重新評估朝東或朝北以避免過度曝曬",
+            "過去是平地；現在重新評估山谷底部"
+          ],
+          "correct": 2,
+          "explanation": "傳統上，Nebbiolo 需要充足的陽光才能成熟，因此朝南的坡地最為珍貴。但在極端炎熱的年份，朝南坡地容易導致葡萄過熟或灼傷，因此較涼爽的朝東或朝北坡地開始受到重視。"
+        },
+        {
+          "type": "single",
+          "question": "面對氣候變遷，義大利許多酒莊在「釀造技術 (Winemaking)」上做出了調整。下列哪一項「不是」常見的應對策略？",
+          "options": [
+            "提早採收 (Early Harvest) 以保留葡萄的天然酸度",
+            "減少使用全新小橡木桶 (Barrique)，改用大型舊木桶或水泥槽以保持果香清新",
+            "在紅酒發酵時保留部分果梗 (Whole Bunch Fermentation) 以增加清新感與結構",
+            "在發酵前大量添加人工糖分 (Chaptalization) 以提高酒精度"
+          ],
+          "correct": 3,
+          "explanation": "氣候變遷已經導致葡萄糖分過高、酒精度飆升，因此酒莊的目標是「降低」酒精度並保留酸度，絕不會再額外添加糖分（加糖在義大利多數產區也是非法的）。"
+        },
+        {
+          "type": "single",
+          "question": "氣候變遷對北義高緯度產區（如 Alto Adige）最正面的短期影響是？",
+          "options": [
+            "A. 完全破壞葡萄質量",
+            "B. 葡萄成熟度提升，可種植過去無法成熟的品種",
+            "C. 降雨增加解決旱害",
+            "D. 夜間溫度降低改善酸度"
+          ],
+          "correct": 1,
+          "explanation": "對北義高緯度/高海拔產區而言，氣候暖化短期帶來的正面效果是葡萄成熟度改善，甚至可嘗試種植過去氣候過冷而難以成熟的品種（但長期風險仍然存在）。"
+        }
+      ]
     }
   ],
   "quiz": [

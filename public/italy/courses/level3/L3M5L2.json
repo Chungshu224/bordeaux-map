@@ -22,6 +22,73 @@
       "type": "content",
       "title": "新興投資標的：Etna 與 Alto Piemonte",
       "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">除了傳統的三巨頭，精明的收藏家與投資者正將目光轉向義大利的「新興經典 (Emerging Classics)」。這些產區目前的價格相對親民，但具備極高的增值潛力。</p><div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\"><div class=\"bg-orange-50 p-6 rounded-xl border border-orange-100\"><h4 class=\"text-orange-800 font-bold mb-3 flex items-center\"><span class=\"material-icons mr-2\">volcano</span> 西西里島 Etna (埃特納火山)</h4><p class=\"text-gray-700 text-sm mb-3\">被譽為「地中海的勃根地」。這裡的 Nerello Mascalese 品種在火山灰土壤與高海拔的加持下，展現出極致的優雅、複雜度與陳年潛力。</p><ul class=\"text-sm text-gray-600 list-disc list-inside\"><li><strong>投資亮點：</strong> 單一園 (Contrada) 概念興起，產量極少。</li><li><strong>代表酒莊：</strong> Tenuta delle Terre Nere, Passopisciaro, Frank Cornelissen。</li></ul></div><div class=\"bg-blue-50 p-6 rounded-xl border border-blue-100\"><h4 class=\"text-blue-800 font-bold mb-3 flex items-center\"><span class=\"material-icons mr-2\">landscape</span> 北皮埃蒙特 (Alto Piemonte)</h4><p class=\"text-gray-700 text-sm mb-3\">位於 Barolo 北方靠近阿爾卑斯山脈的產區（如 Gattinara, Ghemme）。同樣種植 Nebbiolo，但氣候更冷涼，土壤富含火山岩與斑岩。</p><ul class=\"text-sm text-gray-600 list-disc list-inside\"><li><strong>投資亮點：</strong> 氣候變遷下，冷涼產區的 Nebbiolo 越來越受重視。價格僅為頂級 Barolo 的一小部分。</li><li><strong>代表酒莊：</strong> Nervi-Conterno, Antoniolo, Proprietà Sperino。</li></ul></div></div></div>"
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 出口市場知識檢測",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "在義大利投資級葡萄酒市場中，哪一個類別是最早進入國際拍賣市場，且被視為「藍籌股」的代表？",
+          "options": [
+            "Prosecco",
+            "Super Tuscans (超級托斯卡納)",
+            "Amarone della Valpolicella",
+            "Chianti Classico"
+          ],
+          "correct": 1,
+          "explanation": "Super Tuscans（如 Sassicaia, Ornellaia）是最早獲得國際酒評家極高評價並進入全球拍賣市場的義大利酒款，至今仍是交易最熱絡的標的。"
+        },
+        {
+          "type": "single",
+          "question": "評估一款義大利精品酒的投資價值時，下列哪一項因素通常「最不」重要？",
+          "options": [
+            "國際權威酒評家的分數 (如 100 分滿分)",
+            "該年份的氣候條件與整體評價",
+            "酒標設計的顏色與字體",
+            "酒款的來源證明與保存狀況 (Provenance)"
+          ],
+          "correct": 2,
+          "explanation": "投資價值主要取決於酒質（年份、評分）、稀缺性以及保存狀況。酒標的藝術設計雖然有時能增加收藏趣味，但通常不是決定投資價值的核心要素。"
+        },
+        {
+          "type": "single",
+          "question": "Sassicaia 1985 年份在拍賣市場上享有傳奇地位，主要原因為何？",
+          "options": [
+            "它是義大利第一款使用螺旋蓋的紅酒",
+            "它獲得了 Robert Parker 100 分滿分，震驚全球酒界",
+            "它是唯一一款 100% 使用 Sangiovese 釀造的 Super Tuscan",
+            "該年份產量高達一百萬瓶"
+          ],
+          "correct": 1,
+          "explanation": "Sassicaia 1985 獲得了 Robert Parker 的 100 分滿分評價，這在當時的義大利酒界是極其罕見的成就，確立了其世界級名酒的地位。"
+        },
+        {
+          "type": "single",
+          "question": "近年來，哪一個西西里島的產區因為其優雅的風格與單一園概念，被投資者譽為「地中海的勃根地」，成為新興的投資標的？",
+          "options": [
+            "Marsala",
+            "Pantelleria",
+            "Etna (埃特納火山)",
+            "Vittoria"
+          ],
+          "correct": 2,
+          "explanation": "Etna 火山產區憑藉高海拔與獨特的火山灰土壤，釀造出極具優雅度與陳年潛力的 Nerello Mascalese 紅酒，加上單一園 (Contrada) 的稀缺性，成為備受矚目的新興投資標的。"
+        },
+        {
+          "type": "single",
+          "question": "義大利葡萄酒最大的單一出口目的國是？",
+          "options": [
+            "A. 中國",
+            "B. 美國",
+            "C. 德國",
+            "D. 英國"
+          ],
+          "correct": 1,
+          "explanation": "美國是義大利葡萄酒長期最大的出口市場（按金額），對 Prosecco、Pinot Grigio、Chianti 的需求龐大。德國按量可能更高，但美國按金額排名第一。"
+        }
+      ]
     }
   ],
   "quiz": [

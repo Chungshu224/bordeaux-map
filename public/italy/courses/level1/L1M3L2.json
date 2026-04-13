@@ -89,6 +89,80 @@
       "content": "<div class=\"pairing-grid\"><div class=\"pairing-category\"><h4>🐟 海鮮料理</h4><ul><li><strong>生蠔、貝類</strong> → Verdicchio</li><li><strong>烤魚、鱸魚</strong> → Garganega (Soave)</li><li><strong>炸海鮮</strong> → Trebbiano, Vermentino</li><li><strong>壽司</strong> → Pinot Grigio</li></ul></div><div class=\"pairing-category\"><h4>🥗 輕食沙拉</h4><ul><li><strong>綠沙拉</strong> → Pinot Grigio</li><li><strong>地中海沙拉</strong> → Vermentino</li><li><strong>凱薩沙拉</strong> → Garganega</li></ul></div><div class=\"pairing-category\"><h4>🍝 義大利麵</h4><ul><li><strong>白酒蛤蜊麵</strong> → Verdicchio</li><li><strong>奶油培根麵</strong> → Pinot Grigio</li><li><strong>青醬麵</strong> → Vermentino</li><li><strong>橄欖油蒜香麵</strong> → Trebbiano</li></ul></div><div class=\"pairing-category\"><h4>🧀 起司</h4><ul><li><strong>新鮮 Mozzarella</strong> → Pinot Grigio</li><li><strong>Ricotta</strong> → Garganega</li><li><strong>Pecorino（輕熟）</strong> → Vermentino</li></ul></div></div>"
     },
     {
+      "type": "quiz",
+      "title": "🧠 知識檢測",
+      "questions": [
+        {
+          "type": "single",
+          "question": "哪個義大利白葡萄品種是全球出口最多、最受國際消費者歡迎的？",
+          "options": [
+            "A. Trebbiano",
+            "B. Garganega",
+            "C. Pinot Grigio",
+            "D. Verdicchio"
+          ],
+          "correct": 2,
+          "explanation": "Pinot Grigio 是義大利出口最多的白葡萄品種，北部（尤其 Friuli）的清爽版本風格討喜，暢銷美國、英國等市場，是義大利白酒的國際形象代表。"
+        },
+        {
+          "type": "multiple",
+          "question": "以下關於 Trebbiano（Ugni Blanc）的描述哪些是正確的？（多選）",
+          "options": [
+            "A. 義大利種植面積最大的白葡萄品種之一",
+            "B. 風格清淡，多用於調配",
+            "C. 法國名稱是 Ugni Blanc，用於干邑基酒",
+            "D. 釀出的酒通常極為濃郁複雜"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "Trebbiano 是義大利最廣植的白葡萄，本身風味清淡，多用於調配。在法國稱為 Ugni Blanc，是 Cognac（干邑）的核心基酒品種。通常不以濃郁複雜著稱。"
+        },
+        {
+          "type": "single",
+          "question": "Verdicchio 最著名的產區在哪個州？",
+          "options": [
+            "A. Veneto",
+            "B. Tuscany",
+            "C. Marche",
+            "D. Piemonte"
+          ],
+          "correct": 2,
+          "explanation": "Verdicchio 是 Marche 州的代表性白葡萄，以 Verdicchio dei Castelli di Jesi DOC 最為著名，酒體清脆，帶有草本和杏仁苦味的收尾，是義大利中部最有特色的白酒之一。"
+        },
+        {
+          "type": "single",
+          "question": "Garganega 是哪個著名白酒的核心品種？",
+          "options": [
+            "A. Pinot Grigio delle Venezie",
+            "B. Soave DOC",
+            "C. Trebbiano d'Abruzzo",
+            "D. Vermentino di Sardegna"
+          ],
+          "correct": 1,
+          "explanation": "Garganega 是 Veneto 的 Soave DOC 核心品種（法規要求至少 70%），帶有白花、杏仁和蜂蜜香氣，Soave Classico 版本尤為優秀，可媲美頂級白勃根地。"
+        },
+        {
+          "type": "multiple",
+          "question": "關於 Vermentino，以下哪些是正確的？（多選）",
+          "options": [
+            "A. 主要產自 Sardinia 和 Liguria",
+            "B. 帶有海風礦物感和清爽草本味",
+            "C. 非常適合搭配海鮮",
+            "D. 和 Nebbiolo 並稱皮埃蒙特代表品種"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "Vermentino 是 Sardinia（Vermentino di Gallura DOCG）和 Liguria 的特色白葡萄，靠海種植帶有礦鹽感，是搭配海鮮的絕佳選擇。它與皮埃蒙特無關。"
+        }
+      ]
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

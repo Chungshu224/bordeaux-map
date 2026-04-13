@@ -114,6 +114,80 @@
       "content": "<div class=\"winery-tour\"><div class=\"winery-intro\"><p style=\"background:rgba(192,57,43,0.1);padding:15px;border-radius:8px;border-left:4px solid #c0392b;margin-bottom:25px\">托斯卡納擁有眾多歷史悠久的家族酒莊，以及改寫產區歷史的創新先驅</p></div><div class=\"winery-cards\"><div class=\"winery-card antinori-card\"><div class=\"winery-header\"><h3>🏛️ Marchesi Antinori</h3><div class=\"winery-subtitle\">托斯卡納葡萄酒貴族</div></div><div class=\"winery-body\"><p class=\"winery-history\"><strong>📅 歷史：</strong>1385年成立，26代家族傳承，超過630年歷史</p><p class=\"winery-innovation\"><strong>🚀 創新：</strong>1970年代創造Tignanello，開啟超級托斯卡納時代</p><p class=\"winery-estates\"><strong>🏰 莊園：</strong>遍布Chianti Classico、Montalcino、Bolgheri</p><p class=\"winery-wines\"><strong>🍷 代表酒款：</strong></p><ul class=\"wine-list\"><li>Tignanello - 超托經典</li><li>Solaia - Cabernet主導旗艦</li><li>Pèppoli Chianti Classico - 入門款</li><li>Guado al Tasso - Bolgheri產區</li></ul><p class=\"winery-style\"><strong>🎯 風格：</strong>傳統與創新結合，兼顧Sangiovese傳統與國際化風格</p></div></div><div class=\"winery-card frescobaldi-card\"><div class=\"winery-header\"><h3>👑 Frescobaldi</h3><div class=\"winery-subtitle\">700年家族傳奇</div></div><div class=\"winery-body\"><p class=\"winery-history\"><strong>📅 歷史：</strong>1300年開始釀酒，文藝復興時期即供應教皇與皇室</p><p class=\"winery-innovation\"><strong>🏰 城堡遺產：</strong>Nipozzano城堡是Chianti Rufina的標誌性莊園</p><p class=\"winery-estates\"><strong>🗺️ 產區布局：</strong>11個莊園橫跨托斯卡納，涵蓋主要DOCG</p><p class=\"winery-wines\"><strong>🍷 代表酒款：</strong></p><ul class=\"wine-list\"><li>Nipozzano Chianti Rufina Riserva - 經典旗艦</li><li>Castelgiocondo Brunello - Montalcino莊園</li><li>Ornellaia - 2005年收購（與Antinori共同擁有）</li><li>Luce - 與Robert Mondavi合作</li></ul><p class=\"winery-style\"><strong>🎯 風格：</strong>尊重傳統，強調風土表現，優雅精緻</p></div></div><div class=\"winery-card banfi-card\"><div class=\"winery-header\"><h3>🇺🇸 Castello Banfi</h3><div class=\"winery-subtitle\">Brunello 現代化推手</div></div><div class=\"winery-body\"><p class=\"winery-history\"><strong>📅 歷史：</strong>1978年由美國Mariani家族創立（義大利裔）</p><p class=\"winery-innovation\"><strong>🚀 革命性貢獻：</strong>將現代釀酒科技帶入Montalcino，大規模種植實驗</p><p class=\"winery-estates\"><strong>🏰 規模：</strong>7,100英畝，其中2,800英畝葡萄園，Montalcino最大莊園</p><p class=\"winery-wines\"><strong>🍷 代表酒款：</strong></p><ul class=\"wine-list\"><li>Brunello di Montalcino DOCG - 旗艦款</li><li>Poggio alle Mura Brunello Riserva - 單一園</li><li>Excelsus - 超級托斯卡納</li><li>Summus - Merlot + Sangiovese + Cabernet + Syrah</li></ul><p class=\"winery-style\"><strong>🎯 風格：</strong>現代、國際化、果香奔放、易飲親民</p></div></div><div class=\"winery-card sassicaia-card\"><div class=\"winery-header\"><h3>🌊 Tenuta San Guido</h3><div class=\"winery-subtitle\">超級托斯卡納始祖</div></div><div class=\"winery-body\"><p class=\"winery-history\"><strong>📅 歷史：</strong>Marchese Mario Incisa della Rocchetta於1940年代開始實驗種植Cabernet</p><p class=\"winery-innovation\"><strong>🚀 革命創舉：</strong>1968年Sassicaia首發，開創托斯卡納海岸產區新紀元</p><p class=\"winery-estates\"><strong>🏖️ 風土：</strong>Bolgheri海岸，礫石土壤，類似波爾多左岸</p><p class=\"winery-wines\"><strong>🍷 代表酒款：</strong></p><ul class=\"wine-list\"><li>Sassicaia Bolgheri DOC - 唯一擁有專屬DOC的單一酒款</li><li>Guidalberto - 副牌，Merlot + Sangiovese + Cabernet</li><li>Le Difese - 入門款（與Tenuta dell'Ornellaia合作）</li></ul><p class=\"winery-style\"><strong>🎯 風格：</strong>優雅、波爾多風格、雪松香氣、絲滑單寧</p><p class=\"winery-legend\"><strong>🏆 傳奇：</strong>1985年獲《Decanter》盲品冠軍，超越波爾多一級酒莊</p></div></div><div class=\"winery-card gaja-card\"><div class=\"winery-header\"><h3>🍷 Gaja (Ca' Marcanda)</h3><div class=\"winery-subtitle\">Piemonte 巨頭的托斯卡納征程</div></div><div class=\"winery-body\"><p class=\"winery-history\"><strong>📅 歷史：</strong>Angelo Gaja 於1996年進軍Bolgheri，購買Ca' Marcanda莊園</p><p class=\"winery-innovation\"><strong>🚀 Piemonte傳奇：</strong>Gaja是Barbaresco的代名詞，將Piemonte的精準帶入托斯卡納</p><p class=\"winery-estates\"><strong>🗺️ 托斯卡納布局：</strong>Ca' Marcanda (Bolgheri) + Pieve Santa Restituta (Montalcino)</p><p class=\"winery-wines\"><strong>🍷 代表酒款：</strong></p><ul class=\"wine-list\"><li>Ca' Marcanda Camarcanda - Merlot主導混釀</li><li>Magari - Cabernet Franc主導</li><li>Promis - 入門超托</li><li>Pieve Santa Restituta Brunello - Montalcino旗艦</li></ul><p class=\"winery-style\"><strong>🎯 風格：</strong>精準、現代、濃郁、國際化但不失優雅</p></div></div></div><div class=\"winery-map-section\"><h3>🗺️ 酒莊地理分布</h3><div class=\"winery-distribution\"><div class=\"distribution-zone\"><h4>Chianti Classico 區</h4><p>Antinori (總部), Frescobaldi (Nipozzano)</p></div><div class=\"distribution-zone\"><h4>Montalcino 區</h4><p>Banfi, Frescobaldi (Castelgiocondo), Gaja (Pieve Santa Restituta)</p></div><div class=\"distribution-zone\"><h4>Bolgheri 海岸區</h4><p>Tenuta San Guido (Sassicaia), Ornellaia (Frescobaldi), Gaja (Ca' Marcanda), Antinori (Guado al Tasso)</p></div></div></div></div>"
     },
     {
+      "type": "quiz",
+      "title": "🧠 知識檢測",
+      "questions": [
+        {
+          "type": "single",
+          "question": "黑公雞（Gallo Nero）標誌是哪個產區的象徵？",
+          "options": [
+            "A. Brunello di Montalcino",
+            "B. Barolo",
+            "C. Chianti Classico",
+            "D. Vino Nobile di Montepulciano"
+          ],
+          "correct": 2,
+          "explanation": "黑公雞是 Chianti Classico DOCG 的官方標誌，代表 Florence 和 Siena 之間的核心產區，品質高於普通 Chianti，必須 100% Sangiovese。"
+        },
+        {
+          "type": "single",
+          "question": "Brunello di Montalcino DOCG 的最短陳年要求是幾年？",
+          "options": [
+            "A. 2 年",
+            "B. 3 年",
+            "C. 5 年",
+            "D. 7 年"
+          ],
+          "correct": 2,
+          "explanation": "Brunello di Montalcino 要求至少陳年 5 年（其中 2 年橡木桶），Riserva 版本更需 6 年，是義大利陳年規定最嚴格的酒款之一。"
+        },
+        {
+          "type": "multiple",
+          "question": "超級托斯卡納（Super Tuscan）的主要特點包括哪些？（多選）",
+          "options": [
+            "A. 使用 Cabernet Sauvignon 或 Merlot 等非傳統品種",
+            "B. 最初被分類為 IGT 等級",
+            "C. 誕生於 1970-80 年代的創新嘗試",
+            "D. 法規規定必須使用 100% Sangiovese"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "超級托斯卡納是釀酒師突破法規的創新：使用國際品種，一開始只能標 IGT，但品質卓越。Sassicaia 後來升格為 DOC，成為義大利最具代表性的頂級酒。"
+        },
+        {
+          "type": "single",
+          "question": "Sangiovese 在義大利葡萄種植上的地位是？",
+          "options": [
+            "A. 僅限托斯卡納種植",
+            "B. 義大利種植面積最廣的紅葡萄品種",
+            "C. 新引進的國際品種",
+            "D. 主要用於白酒"
+          ],
+          "correct": 1,
+          "explanation": "Sangiovese 是義大利種植面積最大的紅葡萄品種，除了托斯卡納外，也分布在 Umbria（Sagrantino di Montefalco 旁）、Marche、Emilia 等多個中部地區。"
+        },
+        {
+          "type": "multiple",
+          "question": "以下哪些是托斯卡納的 DOCG 紅酒？（多選）",
+          "options": [
+            "A. Brunello di Montalcino",
+            "B. Chianti Classico",
+            "C. Barolo",
+            "D. Vino Nobile di Montepulciano"
+          ],
+          "correct": [
+            0,
+            1,
+            3
+          ],
+          "explanation": "Brunello di Montalcino、Chianti Classico 和 Vino Nobile di Montepulciano 都是托斯卡納的 DOCG 紅酒。Barolo 是皮埃蒙特的 DOCG，與托斯卡納無關。"
+        }
+      ]
+    },
+    {
       "type": "content",
       "title": "🎓 重點回顧",
       "content": "<div class=\"summary-points\"><div class=\"point-item\">✓ Sangiovese 是托斯卡納的靈魂品種，擁有多種地方變種</div><div class=\"point-item\">✓ Brunello = 最強勁，Chianti Classico = 最經典</div><div class=\"point-item\">✓ Chianti Classico 2014年新增Gran Selezione等級</div><div class=\"point-item\">✓ 超級托斯卡納打破傳統創造新風格，Sassicaia開創先河</div><div class=\"point-item\">✓ Bolgheri海岸產區崛起，成為國際品種理想家園</div><div class=\"point-item\">✓ 傳統家族酒莊與創新精神並存，塑造托斯卡納多元風貌</div><div class=\"point-item\">✓ 高酸度使其成為餐酒搭配之王</div></div>"

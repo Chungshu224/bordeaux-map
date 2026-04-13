@@ -90,7 +90,7 @@
               <div class="card-region">France · Bordeaux</div>
               <h3 class="card-title">波爾多葡萄酒</h3>
               <p class="card-desc">全方位波爾多產區學習：左岸右岸AOC分級、五大酒莊、年份氣候分析，以及互動式地圖深度探索</p>
-              <button class="course-detail-btn" @click="showCourseModal = true">📋 課程說明</button>
+              <button class="course-detail-btn" @click="openCourseDetail('bordeaux')">📋 課程說明</button>
             </div>
 
             <div class="course-includes">
@@ -157,30 +157,31 @@
 
           <!-- ── Bourgogne ── -->
           <div class="course-card bourgogne">
-            <div class="card-status active">✅ 正式上線</div>
+            <div class="card-status active">⏳ 預計2027開放</div>
             <div class="card-hero">
               <div class="card-icon">🍇</div>
               <div class="card-region">France · Bourgogne</div>
               <h3 class="card-title">布根地葡萄酒</h3>
-              <p class="card-desc">從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界</p>
+              <p class="card-desc">從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界（預計2027開放）</p>
             </div>
             <div class="card-actions">
-              <button class="card-cta" @click="router.push('/bourgogne')">🍇 進入布根地課程</button>
+              <button class="card-cta" @click="handleNotify('bourgogne')">🔔 搶先通知我</button>
               <button class="card-info-btn" @click="openCourseDetail('bourgogne')">📋 課程說明</button>
             </div>
           </div>
 
           <!-- ── Italy ── -->
           <div class="course-card italy">
-            <div class="card-status new">🆕 正式上線</div>
+            <div class="card-status new">⏳ 預計2027開放</div>
             <div class="card-hero">
               <div class="card-icon">🇮🇹</div>
               <div class="card-region">Italy</div>
               <h3 class="card-title">義大利葡萄酒</h3>
-              <p class="card-desc">探索 Barolo、Brunello、Amarone 等世界頂級義大利葡萄酒，20 個 DOC/DOCG 產區完整解析</p>
+              <p class="card-desc">探索 Barolo、Brunello、Amarone 等世界頂級義大利葡萄酒，20 個 DOC/DOCG 產區完整解析（預計2027開放）</p>
             </div>
             <div class="card-actions">
-              <button class="card-cta" @click="router.push('/italy')">🇮🇹 進入義大利課程</button>
+              <button class="card-cta" @click="handleNotify('italy')">🔔 搶先通知我</button>
+              <button class="card-info-btn" @click="openCourseDetail('italy')">📋 課程說明</button>
             </div>
           </div>
 
@@ -286,6 +287,8 @@
       <div class="cm-modal">
         <button class="cm-close" @click="showCourseModal = false">✕</button>
 
+        <template v-if="activeCourseDetail === 'bordeaux'">
+
         <!-- 標題 -->
         <div class="cm-header">
           <div class="cm-icon">🏰</div>
@@ -382,6 +385,57 @@
           <button class="cm-btn basic" @click="showCourseModal = false; handlePurchase('bordeaux','basic')">訂閱完整課程 NT$290/月</button>
           <button class="cm-btn premium" @click="showCourseModal = false; handlePurchase('bordeaux','premium')">頂級方案 NT$590/月</button>
         </div>
+        </template>
+
+        <template v-else-if="activePrelaunchDetail">
+          <div class="cm-header">
+            <div class="cm-icon">{{ activePrelaunchDetail.icon }}</div>
+            <h2 class="cm-title">{{ activePrelaunchDetail.title }}</h2>
+            <p class="cm-sub">{{ activePrelaunchDetail.subtitle }}</p>
+            <div class="cm-badge-preview">⏳ 預計 2027 開放</div>
+          </div>
+
+          <div class="cm-alert">
+            以下為依據目前開發進度整理的預先參考版本，正式課程以最終上線內容為準。
+          </div>
+
+          <div class="cm-section">
+            <h3 class="cm-sec-title">🧭 目前開發進度</h3>
+            <div class="cm-tools-grid">
+              <div class="cm-tool" v-for="item in activePrelaunchDetail.devStatus" :key="item.title">
+                <span class="ct-icon">{{ item.icon }}</span>
+                <span class="ct-name">{{ item.title }}</span>
+                <span class="ct-desc">{{ item.desc }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cm-section">
+            <h3 class="cm-sec-title">📚 預計課程架構</h3>
+            <div class="cm-preview-grid">
+              <div class="cm-preview-card" v-for="lv in activePrelaunchDetail.roadmap" :key="lv.level">
+                <div class="cm-lv-badge">{{ lv.level }}</div>
+                <div class="cm-lv-name">{{ lv.name }}</div>
+                <div class="cm-preview-meta">{{ lv.meta }}</div>
+                <ul class="cm-lv-list">
+                  <li v-for="point in lv.points" :key="point">{{ point }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cm-section">
+            <h3 class="cm-sec-title">🛠️ 預計開放功能</h3>
+            <div class="cm-pill-list">
+              <span class="cm-pill" v-for="f in activePrelaunchDetail.features" :key="f">{{ f }}</span>
+            </div>
+          </div>
+
+          <div class="cm-cta">
+            <button class="cm-btn basic" @click="showCourseModal = false; handleNotify(activeCourseDetail)">🔔 搶先通知我</button>
+            <button class="cm-btn free" @click="showCourseModal = false">稍後再看</button>
+          </div>
+        </template>
       </div>
     </div>
 
@@ -470,6 +524,50 @@ const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
 
 // ─── 課程說明 Modal ──────────────────────────────────────────────────────────
 const showCourseModal = ref(false)
+const activeCourseDetail = ref('bordeaux')
+
+const openCourseDetail = (courseId = 'bordeaux') => {
+  activeCourseDetail.value = courseId
+  showCourseModal.value = true
+}
+
+const prelaunchCourseDetails = {
+  bourgogne: {
+    icon: '🍇',
+    title: '布根地葡萄酒課程預先參考',
+    subtitle: '依照現有開發資料整理的先行版課程說明',
+    devStatus: [
+      { icon: '✅', title: '課程框架', desc: 'Level 1–4 架構與課程模組資料已建立（levels.json）。' },
+      { icon: '✅', title: '探索地圖', desc: '主要產區地圖、AOC 邊界、地質與氣候圖層功能已整合。' },
+      { icon: '✅', title: '互動功能', desc: '練習中心與品飲筆記頁已接入布根地頁面流程。' }
+    ],
+    roadmap: [
+      { level: 'Level 1', name: '基礎入門', meta: '8 模組｜6-8 小時', points: ['地理與風土基礎', '品種與分級制度', '金丘產區入門'] },
+      { level: 'Level 2', name: '中級進階', meta: '8 模組｜8-10 小時', points: ['夜丘與伯恩丘對照', '特級園與一級園', '風格差異品鑑'] },
+      { level: 'Level 3', name: '高級專業', meta: '15 模組｜12-15 小時', points: ['風土深度解析', '市場與投資分析', '頂級酒莊案例'] },
+      { level: 'Level 4', name: '專家認證', meta: '8 模組｜20+ 小時', points: ['專業評估框架', '商業與顧問實務', '整合型認證任務'] }
+    ],
+    features: ['互動地圖探索', '地質圖層', '氣候熱力圖', 'AOC/產區導覽', '互動練習中心', '品飲筆記系統']
+  },
+  italy: {
+    icon: '🇮🇹',
+    title: '義大利葡萄酒課程預先參考',
+    subtitle: '依照現有開發資料整理的先行版課程說明',
+    devStatus: [
+      { icon: '✅', title: '課程框架', desc: 'Level 1–3 共 61 課架構已完成，課程 JSON 已建立。' },
+      { icon: '✅', title: '探索地圖', desc: '18 大產區選擇、AOC 邊界、等高線與氣候熱力顯示已建置。' },
+      { icon: '🛠️', title: '持續優化中', desc: '依最新開發持續調整互動體驗與內容編排。' }
+    ],
+    roadmap: [
+      { level: 'Level 1', name: '入門基礎', meta: '12 課｜3-4 小時', points: ['分級制度與地理氣候', '五大必學產區', '基礎品種與餐酒搭配'] },
+      { level: 'Level 2', name: '進階全覽', meta: '23 課｜6-8 小時', points: ['北中南義產區深度', '品種研究進階', '投資收藏與市場'] },
+      { level: 'Level 3', name: '專家訓練', meta: '26 課｜10-12 小時', points: ['稀有品種與小產區', '盲品與酒標判讀', '產業趨勢與侍酒實務'] }
+    ],
+    features: ['互動地圖探索', '氣候熱力圖', '等高線圖層', 'AOC 產區查詢', '課程簡報學習', '學習進度追蹤']
+  }
+}
+
+const activePrelaunchDetail = computed(() => prelaunchCourseDetails[activeCourseDetail.value] || null)
 
 const compareRows = [
   { feature: 'Level 1 基礎入門', free: true, basic: true, premium: true },
@@ -1060,10 +1158,62 @@ onMounted(async () => {
 .cm-btn.premium { background: linear-gradient(135deg, #7c4f00, #d4af37); color: #fff; }
 .cm-btn.premium:hover { opacity: 0.9; transform: translateY(-1px); }
 
+.cm-badge-preview {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 180, 0, 0.15);
+  color: #9c5f00;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+.cm-alert {
+  background: #fff7eb;
+  border: 1px solid #f2d39a;
+  color: #7d5a21;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.cm-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.cm-preview-card {
+  background: #faf7f2;
+  border: 1px solid #e8e0d4;
+  border-radius: 12px;
+  padding: 14px;
+}
+.cm-preview-meta {
+  font-size: 0.78rem;
+  color: #7a6a5a;
+  margin-bottom: 6px;
+}
+.cm-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cm-pill {
+  background: #f7efe2;
+  border: 1px solid #e3d4b9;
+  color: #5a4630;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 @media (max-width: 700px) {
   .cm-modal { padding: 24px 16px; }
   .cm-levels-grid { grid-template-columns: repeat(2, 1fr); }
   .cm-tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .cm-preview-grid { grid-template-columns: 1fr; }
   .cm-compare-header, .cm-compare-row { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
   .cc-col { font-size: 0.72rem; padding: 8px 6px; }
 }

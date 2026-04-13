@@ -162,7 +162,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.65, 46.15],
+            "center": [
+              4.65,
+              46.15
+            ],
             "zoom": 10.5,
             "pitch": 0,
             "bearing": 0
@@ -458,6 +461,76 @@
             "🍷 Chénas 面積最小（285公頃），最稀有",
             "🍷 Morgon 面積最大（1100公頃）",
             "🍷 十大特級村都可陳年，不是只能年輕飲用"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "薄酒萊（Beaujolais）以哪個品種為核心，風格最大特徵是什麼？",
+              "options": [
+                "A. Pinot Noir，濃郁陳年潛力",
+                "B. Chardonnay，礦物感白酒",
+                "C. Gamay，輕盈果香紅酒",
+                "D. Grenache，高酒精濃郁"
+              ],
+              "correct": 2,
+              "explanation": "Gamay 是薄酒萊的靈魂品種，以輕盈、活潑的紅果和花香著稱。薄酒萊採用碳酸浸泡法（Carbonic Maceration），不破皮直接整串發酵，造就鮮嫩多汁、易飲的風格。"
+            },
+            {
+              "type": "single",
+              "question": "薄酒萊新酒（Beaujolais Nouveau）每年何時發售？",
+              "options": [
+                "A. 9 月初，採收後立即銷售",
+                "B. 11 月第三個星期四",
+                "C. 12 月 31 日跨年夜",
+                "D. 隔年 2 月"
+              ],
+              "correct": 1,
+              "explanation": "Beaujolais Nouveau 於每年 11 月第三個星期四全球同步發售，以「新酒季節」的方式行銷，曾是一大葡萄酒行銷奇蹟。現在此風潮雖已沒落，但在日本等地仍很受歡迎。"
+            },
+            {
+              "type": "multiple",
+              "question": "薄酒萊十大特級村（Crus du Beaujolais）中哪些最著名？（多選）",
+              "options": [
+                "A. Moulin-à-Vent",
+                "B. Fleurie",
+                "C. Morgon",
+                "D. Chambertin"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "Moulin-à-Vent（風車村，最強勁可陳年）、Fleurie（最花香優雅）和 Morgon（泥土感礦物感，具陳年潛力）都是薄酒萊的頂級村莊。Chambertin 是夜丘的 Pinot Noir 特級園，不屬於薄酒萊。"
+            },
+            {
+              "type": "single",
+              "question": "薄酒萊特級村（Crus du Beaujolais）的酒和一般薄酒萊有何差異？",
+              "options": [
+                "A. 完全相同，只是名稱不同",
+                "B. 特級村的 Gamay 更濃郁，部分可陳年 5-10 年",
+                "C. 特級村都是白酒",
+                "D. 特級村使用 Pinot Noir 而非 Gamay"
+              ],
+              "correct": 1,
+              "explanation": "薄酒萊十大特級村（Crus）的 Gamay 在花崗岩土壤和嚴格生產規範下，風格遠比普通薄酒萊複雜：顏色更深、結構更強，Moulin-à-Vent 甚至可以陳年 10 年以上，展現類 Pinot Noir 的複雜度。"
+            },
+            {
+              "type": "single",
+              "question": "碳酸浸泡法（Carbonic Maceration）對薄酒萊風格有什麼影響？",
+              "options": [
+                "A. 增加高單寧和深色色澤",
+                "B. 造就鮮嫩、果香馥郁、單寧低的風格",
+                "C. 加速陳年成熟",
+                "D. 讓酒更甜"
+              ],
+              "correct": 1,
+              "explanation": "碳酸浸泡法（整串葡萄在 CO₂ 環境中進行胞内發酵）減少了單寧提取，保留了大量鮮嫩果香（草莓、香蕉、接骨木花），造就薄酒萊標誌性的輕柔易飲風格，但也使酒不適合長期陳年。"
+            }
           ]
         },
         {

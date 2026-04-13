@@ -79,6 +79,7 @@ import TimelineSlide from './slides/TimelineSlide.vue'
 import MapSlide from './slides/MapSlide.vue'
 import WinerySlide from './slides/WinerySlide.vue'
 import ChartSlide from './slides/ChartSlide.vue'
+import QuizSlide from '../../italy/course/slides/QuizSlide.vue'
 
 const props = defineProps({
   lesson: {
@@ -90,6 +91,26 @@ const props = defineProps({
 const emit = defineEmits(['complete', 'close'])
 
 const currentSlide = ref(0)
+const finalQuizBank = ref([])
+
+function pickRandom(arr, n) {
+  const copy = [...arr]
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]]
+  }
+  return copy.slice(0, n)
+}
+
+async function loadQuizBank() {
+  if (!props.lesson.quizBankPath) return
+  try {
+    const res = await fetch(props.lesson.quizBankPath)
+    if (!res.ok) return
+    const data = await res.json()
+    finalQuizBank.value = data.questions || []
+  } catch (_) { /* 靜默失敗 */ }
+}
 
 // 進度百分比
 const progressPercentage = computed(() => {
@@ -112,6 +133,16 @@ const slides = computed(() => {
   // 如果課程已經包含 slides 陣列，合併使用
   if (props.lesson.slides && Array.isArray(props.lesson.slides)) {
     slideArray.push(...props.lesson.slides)
+    // 如果是綜合評量且題庫已載入，在最後添加隨機測驗
+    if (props.lesson.isFinalExam && finalQuizBank.value.length > 0) {
+      slideArray.push({
+        type: 'quiz',
+        title: props.lesson.finalExamTitle || '📋 綜合評量',
+        isFinalExam: true,
+        passScore: 80,
+        questions: pickRandom(finalQuizBank.value, Math.min(20, finalQuizBank.value.length))
+      })
+    }
     return slideArray
   }
   
@@ -901,6 +932,7 @@ const getCurrentSlideComponent = computed(() => {
     case 'map': return MapSlide
     case 'winery': return WinerySlide
     case 'chart': return ChartSlide
+    case 'quiz': return QuizSlide
     default: return ContentSlide
   }
 })
@@ -934,6 +966,7 @@ const handleKeydown = (e) => {
 
 onMounted(() => {
   window.addEventListener('keydown', handleKeydown)
+  if (props.lesson.isFinalExam) loadQuizBank()
 })
 
 onUnmounted(() => {
@@ -1091,6 +1124,7 @@ onUnmounted(() => {
   border-radius: 24px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: slideIn 0.4s ease-out;
+  overflow: hidden;
 }
 
 @keyframes slideIn {

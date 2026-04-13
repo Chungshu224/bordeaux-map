@@ -1578,5 +1578,86 @@ lessonContent.push(
   }
 )
 
+lessonContent.push(
+  // ====== inject-bordeaux-quiz ======
+  {
+    "component": "QuizSlide",
+    "componentProps": {
+      "slide": {
+        "title": "🧠 知識檢測",
+        "isFinalExam": false,
+        "passScore": 70,
+        "questions": [
+          {
+            "type": "single",
+            "question": "波爾多屬於哪種氣候類型？",
+            "options": [
+              "A. 地中海氣候",
+              "B. 大陸性氣候",
+              "C. 溫帶海洋性氣候",
+              "D. 熱帶季風氣候"
+            ],
+            "correct": 2,
+            "explanation": "波爾多屬於溫帶海洋性氣候（Temperate Oceanic Climate），受大西洋和暖流調節，冬暖夏涼，全年降水分布均勻，是葡萄成熟的理想環境。"
+          },
+          {
+            "type": "single",
+            "question": "大西洋對波爾多氣候最主要的影響是什麼？",
+            "options": [
+              "A. 帶來強烈乾燥的焚風",
+              "B. 調節溫度，減少極端天氣",
+              "C. 增加夏季高溫",
+              "D. 帶來頻繁的冰雹"
+            ],
+            "correct": 1,
+            "explanation": "大西洋暖流（墨西哥灣流）調節了波爾多的溫度，使其不像同緯度的大陸性氣候那樣冬季嚴寒、夏季酷熱，減少了葡萄生長發育中的極端事件。"
+          },
+          {
+            "type": "multiple",
+            "question": "波爾多葡萄酒的年份差異最主要受哪些氣候因素影響？（多選）",
+            "options": [
+              "A. 夏季的溫度和日照",
+              "B. 秋季採收前的降雨",
+              "C. 春霜的早晚",
+              "D. 暴風雨和冰雹"
+            ],
+            "correct": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "explanation": "波爾多年份差異受多重因素影響：夏季熱量積累決定葡萄成熟度；秋雨可能稀釋果汁；春霜損傷嫩芽；冰雹直接破壞葡萄串，四者都對年份品質有深遠影響。"
+          },
+          {
+            "type": "single",
+            "question": "「印干」（Landes）森林對波爾多的氣候作用是？",
+            "options": [
+              "A. 提供額外水分",
+              "B. 阻擋北風",
+              "C. 阻擋大西洋的冷濕海風，保護葡萄園",
+              "D. 增加土壤的礦物質"
+            ],
+            "correct": 2,
+            "explanation": "波爾多西南方的朗德（Landes）松林是天然防風林，阻擋了來自大西洋的冷濕海風，使葡萄園免受大風和過多降雨的影響，形成有利的微氣候。"
+          },
+          {
+            "type": "single",
+            "question": "波爾多最大的氣候風險之一「貴腐菌（Botrytis）」在哪種條件下是有益的？",
+            "options": [
+              "A. 任何有霜的寒冷早晨",
+              "B. 特定濕潤晨霧後的暖乾午後，形成貴腐甜酒",
+              "C. 連續大雨後的環境",
+              "D. 極端炎熱乾燥的夏季"
+            ],
+            "correct": 1,
+            "explanation": "貴腐菌（Noble Rot / Pourriture Noble）在特定條件下是釀製甜酒的寶貴資產：晨霧造就的濕度讓菌絲穿透葡萄皮，但隨後暖乾的天氣讓水分蒸發、糖分濃縮，蘇玳（Sauternes）就是利用此原理釀造的世界頂級甜酒。"
+          }
+        ]
+      }
+    }
+  }
+)
+
 export default lessonContent
 

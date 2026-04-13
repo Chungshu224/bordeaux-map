@@ -1,0 +1,283 @@
+{
+  "level": "level1",
+  "title": "Level 1 布根地葡萄酒入門 — 題庫",
+  "questions": [
+    {
+      "type": "single",
+      "question": "布根地 AOC 金字塔最高等級是？",
+      "options": [
+        "A. Bourgogne",
+        "B. Village",
+        "C. Premier Cru",
+        "D. Grand Cru"
+      ],
+      "correct": 3,
+      "explanation": "Grand Cru（特級園）是布根地最高等級，全布根地只有 33 個，是世界頂級葡萄酒的代名詞。"
+    },
+    {
+      "type": "single",
+      "question": "布根地紅酒的核心品種是？",
+      "options": [
+        "A. Cabernet Sauvignon",
+        "B. Pinot Noir",
+        "C. Syrah",
+        "D. Gamay"
+      ],
+      "correct": 1,
+      "explanation": "Pinot Noir 是布根地紅酒的唯一核心品種，以細膩的結構、高酸和陳年潛力聞名。"
+    },
+    {
+      "type": "single",
+      "question": "布根地白酒的核心品種是？",
+      "options": [
+        "A. Sauvignon Blanc",
+        "B. Riesling",
+        "C. Chardonnay",
+        "D. Viognier"
+      ],
+      "correct": 2,
+      "explanation": "Chardonnay 是布根地白酒的代表，從夏布利的礦物感到 Meursault 的奶油感，展現出驚人的風土多樣性。"
+    },
+    {
+      "type": "single",
+      "question": "夏布利（Chablis）白酒最典型的風格特徵是？",
+      "options": [
+        "A. 奶油熱帶果香",
+        "B. 高酸礦物感帶火石氣息",
+        "C. 甜美低酸",
+        "D. 高酒精濃郁"
+      ],
+      "correct": 1,
+      "explanation": "夏布利是布根地最北、最涼爽的產區，加上 Kimmeridgian 土壤，Chardonnay 在此展現高酸度和獨特的礦物/火石感。"
+    },
+    {
+      "type": "single",
+      "question": "薄酒萊（Beaujolais）的核心品種是？",
+      "options": [
+        "A. Pinot Noir",
+        "B. Chardonnay",
+        "C. Gamay",
+        "D. Grenache"
+      ],
+      "correct": 2,
+      "explanation": "Gamay 是薄酒萊的靈魂品種，採用碳酸浸泡法釀造，風格輕盈果香，是布根地地區最獨特的品種和風格。"
+    },
+    {
+      "type": "multiple",
+      "question": "金丘（Côte d'Or）分為哪兩個部分？（多選）",
+      "options": [
+        "A. 夜丘（Côte de Nuits）",
+        "B. 伯恩丘（Côte de Beaune）",
+        "C. 夏布利（Chablis）",
+        "D. 薄酒萊（Beaujolais）"
+      ],
+      "correct": [
+        0,
+        1
+      ],
+      "explanation": "金丘分為北部的夜丘（以頂級 Pinot Noir 著名）和南部的伯恩丘（頂級 Chardonnay 白酒集中地）。夏布利和薄酒萊是布根地的其他子區域，不屬於金丘。"
+    },
+    {
+      "type": "single",
+      "question": "夜丘（Côte de Nuits）最著名的特級莊園是？",
+      "options": [
+        "A. Montrachet",
+        "B. Chambertin",
+        "C. Pouilly-Fuissé",
+        "D. Chablis Grand Cru"
+      ],
+      "correct": 1,
+      "explanation": "Chambertin 是夜丘最著名的紅酒特級園之一，拿破侖最愛的酒款，位於 Gevrey-Chambertin 村，以強勁的結構和長達數十年的陳年潛力著稱。"
+    },
+    {
+      "type": "single",
+      "question": "世界最著名的白酒特級園「Le Montrachet」位於伯恩丘哪兩個村莊之間？",
+      "options": [
+        "A. Meursault 到 Puligny-Montrachet",
+        "B. Puligny-Montrachet 和 Chassagne-Montrachet",
+        "C. Volnay 和 Pommard",
+        "D. Nuits-Saint-Georges 和 Vosne-Romanée"
+      ],
+      "correct": 1,
+      "explanation": "Le Montrachet 是一個 7 公頃的白酒特級園，橫跨 Puligny-Montrachet 和 Chassagne-Montrachet 兩村，被認為是世界最偉大的干型白酒。"
+    },
+    {
+      "type": "single",
+      "question": "「DRC」代表哪個傳奇酒莊？",
+      "options": [
+        "A. Domaine Raveneau Chablis",
+        "B. Domaine de la Romanée-Conti",
+        "C. Domaine Robert Collins",
+        "D. Domaine Rousseau Chambertin"
+      ],
+      "correct": 1,
+      "explanation": "DRC（Domaine de la Romanée-Conti）是布根地最傳奇的酒莊，唯一完整擁有 Romanée-Conti 特級園（1.8公頃），出產的酒在拍賣會上是全球最貴葡萄酒之一。"
+    },
+    {
+      "type": "single",
+      "question": "夏隆內丘（Côte Chalonnaise）在地理上位於哪裡？",
+      "options": [
+        "A. 金丘北部",
+        "B. 金丘南部延伸",
+        "C. 夏布利周邊",
+        "D. 薄酒萊北部"
+      ],
+      "correct": 1,
+      "explanation": "夏隆內丘緊跟在伯恩丘南方，是金丘的南部延伸帶，走同樣的 Pinot Noir 和 Chardonnay 路線，但知名度較低，因此性價比更高。"
+    },
+    {
+      "type": "single",
+      "question": "哪個修道院組織對布根地 Climat 系統的建立貢獻最大？",
+      "options": [
+        "A. 方濟各會（Franciscan）",
+        "B. 多明各會（Dominican）",
+        "C. 熙篤會（Cistercian）",
+        "D. 耶穌會（Jesuit）"
+      ],
+      "correct": 2,
+      "explanation": "熙篤會（Cistercians）修士在中世紀精心研究、記錄和分類布根地的每一塊葡萄園，建立了 Climat 系統的基礎，其代表成果是 Clos de Vougeot 的建立（12 世紀）。"
+    },
+    {
+      "type": "single",
+      "question": "法國大革命後布根地葡萄園最重大的變化是？",
+      "options": [
+        "A. 品種從 Pinot 改為 Cabernet",
+        "B. 土地被沒收分割，形成今日碎片化所有制",
+        "C. 產區等級制度被廢除",
+        "D. 葡萄酒出口完全停止"
+      ],
+      "correct": 1,
+      "explanation": "法國大革命（1789年）將教會和貴族的葡萄園沒收拍賣，土地被分割給衆多買家，形成布根地今日極度碎片化的土地結構，同一個特級園可能有幾十到幾百個不同擁有者。"
+    },
+    {
+      "type": "multiple",
+      "question": "布根地的「Climat」體系在 2015 年獲得哪個國際組織認可？（多選）",
+      "options": [
+        "A. 被列入 UNESCO 世界文化遺產",
+        "B. 被 WTO 認定為地理標誌",
+        "C. 獲得歐盟農業遺産認定",
+        "D. 被 OIV 列為葡萄酒文化教科書範例"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "布根地的 Climat（葡萄園地塊系統）於 2015 年被列入 UNESCO 世界文化遺產，被認定為「人與自然千年交互形成的傑出文化景觀」，是第一個以葡萄園地塊文化獲得此認定的地方。"
+    },
+    {
+      "type": "single",
+      "question": "Négociant 在布根地的角色是？",
+      "options": [
+        "A. 政府監管員",
+        "B. 向農莊收購葡萄或原酒並釀造銷售的酒商",
+        "C. 設計酒標的藝術家",
+        "D. 布根地酒在亞洲的代理商"
+      ],
+      "correct": 1,
+      "explanation": "Négociant（酒商）是布根地的重要角色，向多個小農莊購買葡萄、葡萄汁或原酒，在自己的酒窖中完成培養、調配和裝瓶。Bouchard、Louis Jadot、Joseph Drouhin 等都是著名的 Négociant。"
+    },
+    {
+      "type": "single",
+      "question": "布根地白酒（Chardonnay）在橡木桶陳年後出現的典型香氣是？",
+      "options": [
+        "A. 青草和柑橘（不銹鋼桶風格）",
+        "B. 奶油、烤麵包和榛子（橡木桶熟成）",
+        "C. 煙燻和礦物感單一風格",
+        "D. 熱帶水果（炎熱氣候風格）"
+      ],
+      "correct": 1,
+      "explanation": "布根地 Chardonnay 經橡木桶陳年（尤其是 Meursault 風格），通常發展出奶油、牛油、烤榛果、蜂蜜和烤麵包香氣，這是以金丘為中心的布根地白酒最典型的風格。"
+    },
+    {
+      "type": "single",
+      "question": "薄酒萊碳酸浸泡法（Carbonic Maceration）的最主要結果是？",
+      "options": [
+        "A. 高單寧高色澤",
+        "B. 低單寧果香豐富易飲",
+        "C. 增加甜度",
+        "D. 讓酒更耐陳年"
+      ],
+      "correct": 1,
+      "explanation": "碳酸浸泡法通過胞内發酵減少了單寧萃取，保留大量鮮嫩果香（草莓、覆盆子），造就薄酒萊標誌的輕柔易飲風格。但這也意味着酒通常不適合長期陳年。"
+    },
+    {
+      "type": "single",
+      "question": "酒標只寫「Gevrey-Chambertin」不帶任何葡萄園名是什麼等級？",
+      "options": [
+        "A. Grand Cru",
+        "B. Premier Cru",
+        "C. Village AOC",
+        "D. 大區 Bourgogne"
+      ],
+      "correct": 2,
+      "explanation": "只有村莊名（如 Gevrey-Chambertin）而無葡萄園名，是村莊等級（Village AOC），比大區 Bourgogne 高，比一級園（1er Cru）低，品質適中，性價比不錯。"
+    },
+    {
+      "type": "single",
+      "question": "「Chambolle-Musigny Les Amoureuses 1er Cru」中的「Les Amoureuses」是？",
+      "options": [
+        "A. 釀酒師的名字",
+        "B. 一個一級園 Climat（地塊）的名稱",
+        "C. 葡萄品種名",
+        "D. 裝瓶年份"
+      ],
+      "correct": 1,
+      "explanation": "Les Amoureuses（愛人們）是 Chambolle-Musigny 村最著名的一級園 Climat 名稱，以細膩優雅的 Pinot Noir 著稱，是伯恩丘最受追捧的一級園之一，品質接近鄰村的 Musigny 特級園。"
+    },
+    {
+      "type": "multiple",
+      "question": "以下關於 Grand Cru 酒標的說法哪些是正確的？（多選）",
+      "options": [
+        "A. 通常只寫特級園名，不需要村莊名",
+        "B. Grand Cru 是自成一個 AOC 的等級",
+        "C. Grand Cru 必須在酒標上寫出「Grand Cru」",
+        "D. Grand Cru 表示這瓶酒的售價"
+      ],
+      "correct": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Grand Cru 自成一個 AOC（如「Chambertin」就是一個 AOC），因此不需要在酒標上另外寫村莊名；同時通常也會在酒標的其他位置標注「Grand Cru」字樣以確認等級。售價不在酒標上。"
+    },
+    {
+      "type": "single",
+      "question": "布根地葡萄酒最適合搭配哪種布根地傳統料理？",
+      "options": [
+        "A. 海鮮壽司",
+        "B. 紅酒燉牛肉（Boeuf Bourguignon）",
+        "C. 義大利海鮮燉飯",
+        "D. 日式天婦羅"
+      ],
+      "correct": 1,
+      "explanation": "紅酒燉牛肉（Boeuf Bourguignon）是布根地最著名的傳統料理，就用當地 Pinot Noir 燉煮，與布根地紅酒是天然的完美搭配，充分體現「當地食物配當地酒」的原則。"
+    },
+    {
+      "type": "single",
+      "question": "馬貢內（Mâconnais）最著名的 Chardonnay AOC 是？",
+      "options": [
+        "A. Givry",
+        "B. Montagny",
+        "C. Pouilly-Fuissé",
+        "D. Rully"
+      ],
+      "correct": 2,
+      "explanation": "Pouilly-Fuissé 是馬貢內最頂尖的 Chardonnay AOC，近年更獲得正式的一級園（Premier Cru）認定，品質大幅提升，定價仍比金丘 Chardonnay 親民許多。"
+    },
+    {
+      "type": "multiple",
+      "question": "以下哪些描述正確說明了布根地葡萄酒的特點？（多選）",
+      "options": [
+        "A. 強調風土差異，同一地塊不同莊主出產品質可能不同",
+        "B. 土地碎片化，同一個特級園可能有幾十個擁有者",
+        "C. 布根地全部使用用 Cabernet Sauvignon 釀紅酒",
+        "D. 是全球最受收藏家追捧的葡萄酒產區之一"
+      ],
+      "correct": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "布根地以風土差異和碎片化土地所有制著稱：同一個 Clos de Vougeot 有 80 多個擁有者，品質差異極大；布根地紅酒全用 Pinot Noir，不是 Cabernet。布根地是全球收藏家最熱烈追逐的產區之一。"
+    }
+  ]
+}

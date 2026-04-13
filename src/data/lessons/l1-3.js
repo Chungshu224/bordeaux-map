@@ -668,6 +668,84 @@ export const lessonContent = [
     keyInsight: '波爾多的產區多樣性是風土複雜性的直接體現。從砂礫到黏土、從Cabernet到Merlot、從干紅到甜白，每個產區都在講述自己獨特的風土故事。理解產區分類不僅是記憶地名，更是理解土壤、氣候、品種、傳統如何共同塑造每個產區的獨特個性。',
     shareMessage: '我剛完成了波爾多葡萄酒Level 1的「產區分類與特色」課程！現在我能辨識波爾多的完整產區地圖了！🗺️🍷 #波爾多 #產區地圖 #葡萄酒學習'
   }
+,
+  // ====== inject-bordeaux-quiz ======
+  {
+    "component": "QuizSlide",
+    "componentProps": {
+      "slide": {
+        "title": "🧠 知識檢測",
+        "isFinalExam": false,
+        "passScore": 70,
+        "questions": [
+          {
+            "type": "single",
+            "question": "波爾多左岸最主要的紅葡萄品種是？",
+            "options": [
+              "A. Merlot",
+              "B. Cabernet Franc",
+              "C. Cabernet Sauvignon",
+              "D. Petit Verdot"
+            ],
+            "correct": 2,
+            "explanation": "Cabernet Sauvignon 是波爾多左岸梅多克和格拉夫的主導品種，以高單寧、高酸、深色和長陳年潛力著稱，在礫石排水良好的土壤中表現最佳。"
+          },
+          {
+            "type": "single",
+            "question": "波爾多右岸最主要的葡萄品種是？",
+            "options": [
+              "A. Cabernet Sauvignon",
+              "B. Merlot",
+              "C. Petit Verdot",
+              "D. Malbec"
+            ],
+            "correct": 1,
+            "explanation": "Merlot 統治右岸（波美侯、聖愛美濃），在黏土和石灰岩土壤上表現卓越，比 Cabernet Sauvignon 更早熟、單寧更柔，口感圓潤豐盈，是世界種植面積最廣的紅葡萄品種之一。"
+          },
+          {
+            "type": "multiple",
+            "question": "波爾多的主要紅葡萄品種包括哪些？（多選）",
+            "options": [
+              "A. Cabernet Sauvignon",
+              "B. Merlot",
+              "C. Cabernet Franc",
+              "D. Syrah"
+            ],
+            "correct": [
+              0,
+              1,
+              2
+            ],
+            "explanation": "Cabernet Sauvignon、Merlot 和 Cabernet Franc 都是波爾多允許的紅葡萄品種。Syrah/Shiraz 是隆河谷地的品種，波爾多 AOC 規範中不允許使用。另有少量 Petit Verdot 和 Malbec。"
+          },
+          {
+            "type": "single",
+            "question": "波爾多主要白葡萄品種包含哪兩種？",
+            "options": [
+              "A. Chardonnay 和 Sauvignon Blanc",
+              "B. Sauvignon Blanc 和 Sémillon",
+              "C. Riesling 和 Gewürztraminer",
+              "D. Viognier 和 Roussanne"
+            ],
+            "correct": 1,
+            "explanation": "Sauvignon Blanc（帶清爽草本香）和 Sémillon（圓潤蠟質感，陳年後發展出複雜度）是波爾多最重要的白葡萄品種，在格拉夫和蘇玳都有頂尖表現，蘇玳更以 Sémillon 的貴腐甜酒聞名。"
+          },
+          {
+            "type": "single",
+            "question": "為什麼波爾多採用「調配（Blending）」而非單一品種釀酒？",
+            "options": [
+              "A. 法規禁止使用單一品種",
+              "B. 調配可以平衡不同品種的優缺點，提升複雜度和穩定性",
+              "C. 單一品種在波爾多根本無法成熟",
+              "D. 這是現代派的新趨勢，傳統上並不如此"
+            ],
+            "correct": 1,
+            "explanation": "波爾多採用多品種調配（所謂「波爾多調配」）是因為：不同品種的成熟時間、酸度、單寧、香氣各不相同，調配可取長補短；也讓酒莊在年份差異較大的情況下仍能維持穩定風格。"
+          }
+        ]
+      }
+    }
+  }
 ]
 
 export default lessonContent

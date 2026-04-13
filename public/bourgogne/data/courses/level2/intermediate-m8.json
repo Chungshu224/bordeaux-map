@@ -64,6 +64,77 @@
             "酒商特色：購買葡萄或酒液釀造/調配",
             "頂級酒商品質不輸酒莊"
           ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 布根地頂級酒莊知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "「Domaine de la Romanée-Conti（DRC）」的釀酒哲學核心是？",
+              "options": [
+                "A. 最大產量，最高利潤",
+                "B. 極低干預（生物動力法）、老藤維護、全程手工採收和分揀，讓風土說話",
+                "C. 使用最多新桶，強調桶香",
+                "D. 每年更換釀酒師以創新"
+              ],
+              "correct": 1,
+              "explanation": "DRC 是生物動力農法的堅定支持者，拒絕任何化學農藥，保護土壤生物活性；極嚴格的人工採收分揀；以及盡量低的人工干預釀造，讓風土（尤其是 Romanée-Conti 的獨特地塊）完整表達。"
+            },
+            {
+              "type": "single",
+              "question": "「Maison Leroy」和「Domaine Leroy」的差異是？",
+              "options": [
+                "A. 完全沒有差異",
+                "B. Maison Leroy 是酒商（從農夫購入），Domaine Leroy 是 Lalou Bize-Leroy 自有葡萄園",
+                "C. Domaine Leroy 比 Maison Leroy 更新成立",
+                "D. Maison Leroy 只出產氣泡酒"
+              ],
+              "correct": 1,
+              "explanation": "Lalou Bize-Leroy 創立 Domaine Leroy，以生物動力農法管理自有葡萄園（包括夜丘多個頂級地塊）；Maison Leroy 是她家族的老牌酒商，以嚴格採購標準和龐大舊年份庫存著稱。兩者都是極昂貴的布根地象徵。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些是夜丘最受崇敬的頂級 Domaine（酒莊）？（多選）",
+              "options": [
+                "A. Domaine Armand Rousseau",
+                "B. Domaine Georges Roumier",
+                "C. Domaine Louis Jadot（酒商）",
+                "D. Domaine Henri Jayer（傳奇已逝）"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "Rousseau（Gevrey 頂尖，Chambertin Monopole）、Roumier（Chambolle 大師，Les Amoureuses）、Henri Jayer（已故，酒款為布根地最高拍賣價之一）是夜丘最傳奇的三個 Domaine。Louis Jadot 是大型酒商（Négociant），非小型 Domaine。"
+            },
+            {
+              "type": "single",
+              "question": "「Domaine Coche-Dury」在什麼領域是布根地最受尊崇的名字之一？",
+              "options": [
+                "A. 夜丘紅酒",
+                "B. 伯恩丘 Meursault 頂尖 Chardonnay 白酒",
+                "C. 布根地氣泡酒（Crémant）",
+                "D. 夏布利白酒"
+              ],
+              "correct": 1,
+              "explanation": "Jean-François Coche-Dury（現由兒子繼承）在 Meursault 創作了完美的 Chardonnay，其 Corton-Charlemagne 和 Meursault Premier Cru 款式是布根地白酒的最高成就之一，年產量極少，拍賣價可媲美 DRC 紅酒。"
+            },
+            {
+              "type": "single",
+              "question": "「Domaine Ponsot」的極端釀酒哲學是什麼？",
+              "options": [
+                "A. 使用最多新桶",
+                "B. 完全不使用任何新橡木桶（0% New Oak），以保留最純粹的地塊風土",
+                "C. 全部釀造甜酒",
+                "D. 使用電子發酵監控"
+              ],
+              "correct": 1,
+              "explanation": "Ponsot 是布根地最著名的「反新桶」倡導者，堅持 0% 新桶，使用布根地特有舊桶（有時是幾十年的老桶），讓酒款完全表達 Morey-Saint-Denis 特級園的風土，而非氧化桶香型的「國際風格」。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -135,6 +206,77 @@
           "type": "content",
           "title": "風土 vs 釀造技術",
           "content": "頂級釀酒師的共識：釀造是為了表現風土，而非掩蓋風土。最好的酒是在酒窖中干預最少的酒。技術服務於風土表現，而非炫技。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 釀造哲學與風格知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "「低干預（Low Intervention）」釀酒哲學在布根地的核心含義是？",
+              "options": [
+                "A. 不需要做任何事，讓葡萄自然腐爛",
+                "B. 在釀造過程中最少使用添加物（不加糖、不調整酸度、無過濾），讓葡萄本質說話",
+                "C. 使用最簡單的機械設備",
+                "D. 每年更換所有設備"
+              ],
+              "correct": 1,
+              "explanation": "布根地頂尖 Domaine 的「低干預」哲學：盡量不加糖（補糖）、不調酸、不過濾（亦不澄清）、野生酵母自然發酵、盡量少用 SO₂——每一個步驟都是讓土地表達，而非釀酒師控制的過程。"
+            },
+            {
+              "type": "single",
+              "question": "「Whole Cluster Fermentation（整串發酵）」在布根地的效果是？",
+              "options": [
+                "A. 加速發酵過程，節省釀造時間",
+                "B. 增加葡萄梗帶入的丹寧和草本感，使酒款更有結構、更適合陳年",
+                "C. 主要為了降低酒精",
+                "D. 是舊世界禁止的釀造方式"
+              ],
+              "correct": 1,
+              "explanation": "整串發酵（葡萄梗不去除直接發酵）是布根地傳統做法，近年正在復興。葡萄梗帶來更多種類的丹寧、更緊實的骨架，以及獨特的香料/草本感。偉大酒莊（如 Rousseau、Roumier）都保留了這個傳統。"
+            },
+            {
+              "type": "multiple",
+              "question": "「生物動力農法（Biodynamie）」最著名的布根地莊主包括哪些？（多選）",
+              "options": [
+                "A. Domaine Leroy（Lalou Bize-Leroy）",
+                "B. Domaine de la Romanée-Conti",
+                "C. Domaine Leflaive（Puligny 白酒）",
+                "D. 所有布根地酒農都採用生物動力法"
+              ],
+              "correct": [
+                0,
+                1,
+                2
+              ],
+              "explanation": "Leroy（先驅）、DRC（全面實施）、Leflaive（Puligny 的代表）是最著名的布根地生物動力農法酒莊。並非所有布根地酒農都採用，仍有許多使用傳統有機或常規農法。"
+            },
+            {
+              "type": "single",
+              "question": "「Élevage sur lies（帶酒泥熟化）」對布根地 Chardonnay 有什麼作用？",
+              "options": [
+                "A. 加速氧化，使酒提早衰老",
+                "B. 酒液與死酵母接觸，增加圓潤感、豐滿度和麵包/奶油感",
+                "C. 完全沒有影響",
+                "D. 使酒液更清澈"
+              ],
+              "correct": 1,
+              "explanation": "帶酒泥熟化（Lees Aging）是布根地 Chardonnay 最重要的釀造工序之一：死酵母細胞分解後釋放蛋白質和多醣，增加酒液的圓潤質地（Creaminess）、豐滿度，以及標誌性的烤麵包/奶油香氣。"
+            },
+            {
+              "type": "single",
+              "question": "「Bâtonnage（攪桶）」在伯恩丘 Chardonnay 釀造中的作用是？",
+              "options": [
+                "A. 去除不需要的顏色",
+                "B. 定期攪動酒泥懸浮於酒液中，加強與酒泥接觸的圓潤和豐滿效果",
+                "C. 增加發酵速度",
+                "D. 冷卻橡木桶溫度"
+              ],
+              "correct": 1,
+              "explanation": "Bâtonnage（攪桶）= 用棍棒定期攪動橡木桶底部的酒泥，讓其分布在酒液中。過去幾十年是標準做法，但近年趨勢是「少攪桶」甚至「不攪桶」，因為過度攪桶會賦予過多圓潤油脂感，掩蓋地塊的礦物真實性。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
       ]
     },
@@ -197,8 +339,82 @@
           "type": "content",
           "title": "如何發現好酒莊？",
           "content": "參考酒評家評分（但不盲從）；關注專業媒體報導；參加品酒會親自品嚐；訪問產區與酒莊；加入品酒社群交流；建立自己的品味標準。最重要的是：喝你喜歡的，而非別人說好的。"
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 新興酒莊與未來知識檢測",
+          "questions": [
+            {
+              "type": "single",
+              "question": "布根地「新星莊主（新世代 Domaine）」最受業界關注的主要原因是？",
+              "options": [
+                "A. 使用最昂貴的設備",
+                "B. 以現代農業哲學（有機/生物動力）、創新釀造技術，在傳統框架中開拓全新表達",
+                "C. 規模最大，產量最高",
+                "D. 只釀造大區等級的酒款"
+              ],
+              "correct": 1,
+              "explanation": "新一代布根地莊主受到業界關注，通常因為：採用更嚴格的有機/生物動力農法；在「未知」的地塊發掘潛力；釀酒手法更精準（更少干預、整串等）；同時保持艱難的傳統工藝。"
+            },
+            {
+              "type": "single",
+              "question": "「Domaine Bizot」在夜丘的特色是？",
+              "options": [
+                "A. 是最古老的布根地酒莊",
+                "B. 以極低產量、生物動力農法和完全未過濾的 Pinot Noir 呈現最純粹的 Vosne-Romanée 風土",
+                "C. 主要生產氣泡酒",
+                "D. 近年才轉型為葡萄種植"
+              ],
+              "correct": 1,
+              "explanation": "Jean-Yves Bizot 的 Domaine Bizot 是近年最受矚目的 Vosne-Romanée 新星，以生物動力農法、超低產量和完全不過濾的釀造哲學著稱，其酒款在二手市場溢價極高，年輕一代收藏家極力追捧。"
+            },
+            {
+              "type": "multiple",
+              "question": "以下哪些趨勢代表布根地釀酒未來的方向？（多選）",
+              "options": [
+                "A. 對被忽視地塊的再發掘和重新評估",
+                "B. 更嚴格的農法（有機、生物動力）成為主流",
+                "C. 大量使用化學農藥以增加穩定性",
+                "D. 年輕莊主接手傳統 Domaine，帶入更多精準農耕知識"
+              ],
+              "correct": [
+                0,
+                1,
+                3
+              ],
+              "explanation": "布根地未來趨勢：1) 對「被低估」的次級地塊、舊年份、罕見 Monopole 的重新發掘；2) 有機/生物動力農法成為新標準；3) 年輕一代莊主（擁有釀酒學位和科學訓練）接手傳統家族。化學農藥使用反而在減少。"
+            },
+            {
+              "type": "single",
+              "question": "布根地「自然酒（Vin Nature）」運動的主要訴求是什麼？",
+              "options": [
+                "A. 完全不讓葡萄自然生長，最大人工干預",
+                "B. 葡萄園和釀造全程無或最少添加物（含 SO₂），保留最自然的微生物活動和風味表達",
+                "C. 規定使用特定品牌的酵母",
+                "D. 禁止任何形式的橡木桶使用"
+              ],
+              "correct": 1,
+              "explanation": "自然酒運動強調：有機/生物動力葡萄園 + 野生酵母（無添加商業酵母）+ 無或極少 SO₂ 添加 + 不澄清不過濾的釀造方式。部分布根地小莊主（尤其馬貢、薄酒萊延伸區）是自然酒先驅。"
+            },
+            {
+              "type": "single",
+              "question": "展望未來，什麼樣的布根地投資策略最可能同時兼顧品質和升值潛力？",
+              "options": [
+                "A. 只買 DRC 和 Leroy，永遠是最安全",
+                "B. 在新星小莊主尚未被市場發現前購買（10-20 瓶）+ 持有傳統 Grand Cru 基準款",
+                "C. 只在超市購買促銷款",
+                "D. 完全不投資，布根地酒不會升值"
+              ],
+              "correct": 1,
+              "explanation": "聰明的布根地投資組合：一部分持有傳統 Grand Cru 頂尖莊（DRC、Rousseau 等確定性最高）；另一部分研究新興優質小莊（Bizot、Fourrier 等）在市場尚未完全追捧前買入少量——這種組合可同時對沖風險，並保有超額回報的可能。"
+            }
+          ],
+          "_marker": "_inject_bourgogne_l2_quiz"
         }
-      ]
+      ],
+      "isFinalExam": true,
+      "quizBankPath": "/bourgogne/data/courses/level2/quiz-bank.json",
+      "finalExamTitle": "📋 Level 2 綜合評量"
     }
   ],
   "quiz": {

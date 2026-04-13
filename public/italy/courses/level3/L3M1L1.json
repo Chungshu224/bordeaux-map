@@ -94,6 +94,73 @@
         "✓ Freisa 有三種風格：干型、微甜和氣泡",
         "✓ 這三個品種都是皮埃蒙特的稀有寶藏，展現了該區的多樣性"
       ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 北義稀有品種知識檢測",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "誰是 Timorasso 葡萄復興的先驅者？",
+          "options": [
+            "Angelo Gaja",
+            "Walter Massa",
+            "Bruno Giacosa",
+            "Paolo Scavino"
+          ],
+          "correct": 1,
+          "explanation": "Walter Massa 在 1987 年開始 Timorasso 的復興計畫，將這個幾近絕種的品種重新帶回市場。"
+        },
+        {
+          "type": "single",
+          "question": "Ruché 葡萄最獨特的風味特徵是什麼？",
+          "options": [
+            "黑莓和巧克力",
+            "玫瑰精油和紫羅蘭",
+            "青草和醋栗",
+            "無花果和蜂蜜"
+          ],
+          "correct": 1,
+          "explanation": "Ruché 以其極濃郁的玫瑰精油和紫羅蘭香氣聞名，這是其最顯著的特徵。"
+        },
+        {
+          "type": "single",
+          "question": "Freisa 葡萄可以釀造成幾種不同的風格？",
+          "options": [
+            "1種",
+            "2種",
+            "3種",
+            "4種"
+          ],
+          "correct": 2,
+          "explanation": "Freisa 可以釀造成三種風格：干型(Secco)、微甜(Amabile)和氣泡(Frizzante)。"
+        },
+        {
+          "type": "single",
+          "question": "Timorasso 的陳年潛力通常是多久？",
+          "options": [
+            "1-3年",
+            "5-8年",
+            "15-20年",
+            "30年以上"
+          ],
+          "correct": 2,
+          "explanation": "Timorasso 具有極高的陳年潛力，通常可以陳年 15-20 年，是義大利最耐久的白葡萄酒之一。"
+        },
+        {
+          "type": "single",
+          "question": "Erbaluce di Caluso DOCG 的特色是？",
+          "options": [
+            "A. 濃郁紅酒",
+            "B. Piemonte 高海拔白酒，酸度優異且可釀成 Passito",
+            "C. 以 Moscato 品種釀造",
+            "D. 無陳年潛力的清淡白酒"
+          ],
+          "correct": 1,
+          "explanation": "Erbaluce 是 Canavese 高地的白品種，酸度清脆，可乾型飲用也可製成 Passito 甜酒，是 Piemonte 最有個性的稀有白品種之一。"
+        }
+      ]
     }
   ]
 }
