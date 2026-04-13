@@ -17,7 +17,7 @@
           @click="prevSlide"
           :disabled="currentSlide === 0"
         >◀</button>
-        <div class="nav-progress-info">頁面 {{ currentSlide + 1 }} / {{ slides.length }}</div>
+        <div class="nav-progress-info">{{ slides[currentSlide]?.title || `頁面 ${currentSlide + 1} / ${slides.length}` }}</div>
         <button
           class="nav-control-btn nav-control-next"
           @click="nextSlide"
@@ -207,13 +207,17 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
   background: rgba(200,169,110,0.85);
   color: #fff;
   border: none;
-  padding: 7px 16px;
+  padding: 8px 16px;
   border-radius: 8px;
-  font-size: 0.87rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: opacity 0.2s, background 0.2s;
   white-space: nowrap;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-control-btn:disabled { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.35); cursor: default; }
 .nav-control-btn:not(:disabled):hover { opacity: 0.88; background: #c8a96e; }
@@ -241,13 +245,21 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
 /* ── 白色卡片：固定高度 + 裁切子元素 ── */
 .slide {
   width: 100%;
-  max-width: 900px;
+  max-width: 960px;
   height: 100%;
   background: #fff;
   border-radius: 22px;
   box-shadow: 0 12px 48px rgba(0,0,0,0.45),
               0 2px 0 rgba(200,169,110,0.3);
+  animation: slideIn 0.4s ease-out;
   overflow: hidden;
+  /* 防止 Tailwind reset 造成 box-sizing 問題 */
+  box-sizing: border-box;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 /* ── 底部進度條 ── */

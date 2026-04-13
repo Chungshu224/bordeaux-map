@@ -165,42 +165,8 @@
         </div>
       </section>
 
-      <!-- 學習進度統計橫列（波爾多同款） -->
-      <div class="burg-stats-mini">
-        <div class="burg-stats-row">
-          <div class="burg-stat-item">
-            <div class="burg-stat-icon">📚</div>
-            <div class="burg-stat-details">
-              <div class="burg-stat-value">{{ burgMiniStats.completedLessons }}</div>
-              <div class="burg-stat-label">已完成</div>
-            </div>
-          </div>
-          <div class="burg-stat-item">
-            <div class="burg-stat-icon">⏱️</div>
-            <div class="burg-stat-details">
-              <div class="burg-stat-value">{{ burgMiniStats.studyTime }}</div>
-              <div class="burg-stat-label">學習時長</div>
-            </div>
-          </div>
-          <div class="burg-stat-item">
-            <div class="burg-stat-icon">🎯</div>
-            <div class="burg-stat-details">
-              <div class="burg-stat-value">{{ burgMiniStats.quizAccuracy }}%</div>
-              <div class="burg-stat-label">正確率</div>
-            </div>
-          </div>
-          <div class="burg-stat-item">
-            <div class="burg-stat-icon">🔥</div>
-            <div class="burg-stat-details">
-              <div class="burg-stat-value">{{ burgMiniStats.studyStreak }}</div>
-              <div class="burg-stat-label">連續天數</div>
-            </div>
-          </div>
-        </div>
-        <button @click="showProgress = true" class="burg-view-details-btn">
-          查看詳細統計 →
-        </button>
-      </div>
+      <!-- 學習進度統計橫列 -->
+      <LearningStatsMini course-key="bourgogne" @show-details="showProgress = true" />
 
       <!-- 未登入提示列 -->
       <div v-if="!authUser" class="sync-hint-bar">
@@ -218,53 +184,7 @@
           <button class="pm-close" @click="showProgress = false">×</button>
         </div>
         <div class="pm-body">
-          <!-- 總體統計 -->
-          <div class="pm-overview">
-            <div class="pm-stat-card">
-              <div class="pm-stat-icon">🌟</div>
-              <div class="pm-stat-content">
-                <span class="pm-stat-val">{{ totalProgress }}%</span>
-                <span class="pm-stat-lbl">總體進度</span>
-              </div>
-            </div>
-            <div class="pm-stat-card">
-              <div class="pm-stat-icon">✅</div>
-              <div class="pm-stat-content">
-                <span class="pm-stat-val">{{ completedLevels }}/4</span>
-                <span class="pm-stat-lbl">完成階段</span>
-              </div>
-            </div>
-            <div class="pm-stat-card">
-              <div class="pm-stat-icon">⏱️</div>
-              <div class="pm-stat-content">
-                <span class="pm-stat-val">{{ studyTime }}h</span>
-                <span class="pm-stat-lbl">累積時數</span>
-              </div>
-            </div>
-            <div class="pm-stat-card">
-              <div class="pm-stat-icon">🎓</div>
-              <div class="pm-stat-content">
-                <span class="pm-stat-val">{{ earnedCertificates }}</span>
-                <span class="pm-stat-lbl">獲得證書</span>
-              </div>
-            </div>
-          </div>
-          <!-- 各 Level 進度條 -->
-          <div class="pm-levels">
-            <div v-for="level in levels" :key="level.id" class="pm-level-row">
-              <div class="pm-level-info">
-                <span class="pm-level-badge" :class="`pm-l${level.id}`">L{{ level.id }}</span>
-                <span class="pm-level-name">{{ level.name }}</span>
-              </div>
-              <div class="pm-level-bar-wrap">
-                <div class="pm-level-bar-track">
-                  <div class="pm-level-bar-fill" :class="`pm-l${level.id}`"
-                    :style="{ width: `${getProgress(level.id)}%` }"></div>
-                </div>
-                <span class="pm-level-pct">{{ Math.round(getProgress(level.id)) }}%</span>
-              </div>
-            </div>
-          </div>
+          <LearningProgressDashboard course-key="bourgogne" />
         </div>
       </div>
     </div>
@@ -280,7 +200,7 @@
             <button class="ach-modal-close" @click="showAchievementDashboard = false">×</button>
           </div>
           <div class="ach-modal-body">
-            <BourgogneAchievementsDashboard @back="showAchievementDashboard = false" />
+            <AchievementsDashboard course-key="bourgogne" @back="showAchievementDashboard = false" />
           </div>
         </div>
       </div>
@@ -293,7 +213,9 @@ import { ref, computed, onMounted } from 'vue'
 import { useProgress } from '../composables/useProgress.js'
 import { authState, authActions } from '../../../stores/authStore.js'
 import { useRouter } from 'vue-router'
-import BourgogneAchievementsDashboard from '../../BourgogneAchievementsDashboard.vue'
+import AchievementsDashboard from '../../AchievementsDashboard.vue'
+import LearningStatsMini from '../../LearningStatsMini.vue'
+import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
 import { globalBurgAchievementManager } from '../../../stores/bourgogneAchievementSystem.js'
 
 const progressStore = useProgress()
@@ -356,23 +278,22 @@ const loadUserProgress = () => {
 }
 
 const updateLevelLocks = () => {
-  const TEST_MODE = true
-  if (TEST_MODE) {
-    levels.value.forEach(level => {
-      level.unlocked = true
-    })
-  } else {
-    levels.value[0].unlocked = true
-    if (userProgress.value[1].progress >= 100) {
-      levels.value[1].unlocked = true
-    }
-    if (userProgress.value[2].progress >= 85) {
-      levels.value[2].unlocked = true
-    }
-    if (userProgress.value[3].progress >= 85) {
-      levels.value[3].unlocked = true
-    }
+  // 管理員或管理常模式：全部解鎖
+  if (authActions.isAdmin() || authActions.getEffectiveTier() === 'admin') {
+    levels.value.forEach(level => { level.unlocked = true })
+    return
   }
+  // L1 永遠開放
+  levels.value[0].unlocked = true
+  // L2 ：需完成 beginner-m8 的最後一課（lesson3）
+  const l1Done = progressStore.getCompletedLessons('beginner-m8').includes('lesson3')
+  levels.value[1].unlocked = l1Done
+  // L3 ：需完成 intermediate-m8 的最後一課（m8-l3）
+  const l2Done = progressStore.getCompletedLessons('intermediate-m8').includes('m8-l3')
+  levels.value[2].unlocked = l2Done
+  // L4 ：需完成 advanced-m15 的最後一課（m15-l5）
+  const l3Done = progressStore.getCompletedLessons('advanced-m15').includes('m15-l5')
+  levels.value[3].unlocked = l3Done
 }
 
 const isInProgress = (levelId) => {

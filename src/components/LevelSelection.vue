@@ -370,7 +370,7 @@
         </div>
         <div class="modal-content">
           <!-- 完整的成就儀表板 -->
-          <AchievementsDashboard />
+          <AchievementsDashboard course-key="bordeaux" />
         </div>
       </div>
     </div>
@@ -383,8 +383,8 @@
           <button class="close-btn" @click="showProgress = false">×</button>
         </div>
         <div class="modal-content">
-          <!-- 完整的學習進度儀表板 -->
-          <LearningProgress />
+          <!-- 統一學習進度儀表板 -->
+          <LearningProgressDashboard course-key="bordeaux" />
         </div>
       </div>
     </div>
@@ -397,7 +397,7 @@ import { learningState, learningActions } from '../stores/learningStore.js'
 import { authState, authActions } from '../stores/authStore.js'
 import { useRouter } from 'vue-router'
 import LearningStatsMini from './LearningStatsMini.vue'
-import LearningProgress from './LearningProgress.vue'
+import LearningProgressDashboard from './LearningProgressDashboard.vue'
 import AchievementsDashboard from './AchievementsDashboard.vue'
 
 // Props

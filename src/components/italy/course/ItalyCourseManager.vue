@@ -5,6 +5,13 @@
       v-if="view === 'levelSelector'"
       @startLevel="handleSelectLevel"
       @openMap="$emit('openMap')"
+      @openNotebook="view = 'notebook'"
+    />
+
+    <!-- Tasting Notebook -->
+    <ItalyTastingNotebookPage
+      v-else-if="view === 'notebook'"
+      @back="view = 'levelSelector'"
     />
 
     <!-- Course Content -->
@@ -34,10 +41,11 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, nextTick } from 'vue'
 import ItalyLevelSelector from './ItalyLevelSelector.vue'
 import ItalySlideViewer from './ItalySlideViewer.vue'
 import ItalyCourseLayout from './ItalyCourseLayout.vue'
+import ItalyTastingNotebookPage from '../notebook/ItalyTastingNotebookPage.vue'
 import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevels.js'
 
 const emit = defineEmits(['openMap'])
@@ -90,6 +98,7 @@ async function startLesson (lessonMeta) {
     // 注入 levelKey 供綜合評量題庫載入使用
     data.levelKey = levelKey
     activeLesson.value = data
+    nextTick(() => window.scrollTo({ top: 0, behavior: 'instant' }))
   } catch (e) {
     console.error('載入課程失敗:', e)
     activeLesson.value = {

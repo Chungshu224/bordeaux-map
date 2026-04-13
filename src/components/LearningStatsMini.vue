@@ -1,35 +1,11 @@
 <template>
   <div class="learning-stats-mini">
     <div class="stats-row">
-      <div class="stat-item">
-        <div class="stat-icon">📚</div>
+      <div v-for="stat in miniStats" :key="stat.label" class="stat-item">
+        <div class="stat-icon">{{ stat.icon }}</div>
         <div class="stat-details">
-          <div class="stat-value">{{ stats.completedLessons }}</div>
-          <div class="stat-label">已完成</div>
-        </div>
-      </div>
-
-      <div class="stat-item">
-        <div class="stat-icon">⏱️</div>
-        <div class="stat-details">
-          <div class="stat-value">{{ stats.totalStudyTime }}</div>
-          <div class="stat-label">學習時長</div>
-        </div>
-      </div>
-
-      <div class="stat-item">
-        <div class="stat-icon">🎯</div>
-        <div class="stat-details">
-          <div class="stat-value">{{ stats.quizAccuracy }}%</div>
-          <div class="stat-label">正確率</div>
-        </div>
-      </div>
-
-      <div class="stat-item">
-        <div class="stat-icon">🔥</div>
-        <div class="stat-details">
-          <div class="stat-value">{{ stats.studyStreak }}</div>
-          <div class="stat-label">連續天數</div>
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
         </div>
       </div>
     </div>
@@ -41,20 +17,15 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { progressComputed } from '../stores/progressTracker'
+import { useLearningProgress } from '../composables/useLearningProgress.js'
+
+const props = defineProps({
+  courseKey: { type: String, default: 'bordeaux' }
+})
 
 defineEmits(['show-details'])
 
-const stats = computed(() => {
-  const overall = progressComputed.overallStats.value
-  return {
-    completedLessons: overall.completedLessons ?? overall.totalLessons,
-    totalStudyTime: overall.totalStudyTime,
-    quizAccuracy: overall.quizAccuracy,
-    studyStreak: overall.studyStreak
-  }
-})
+const { miniStats } = useLearningProgress(props.courseKey)
 </script>
 
 <style scoped>

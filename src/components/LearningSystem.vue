@@ -18,8 +18,9 @@
       :currentLevel="currentLevel"
       :currentLevelData="currentLevelData"
       :completedLessons="learningState.completedLessons"
+      :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => learningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) && learningActions.setLevel(n)"
       @startLesson="(lesson) => learningActions.startLesson(lesson.id)"
     />
 
@@ -39,7 +40,7 @@
         <!-- Row 2: 上一頁 / 下一頁 -->
         <div class="lh-row lh-row-2">
           <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious" title="上一頁">◀ 上一頁</button>
-          <span class="lh-nav-label">投影片導航</span>
+          <span class="lh-nav-label">{{ currentSlideTitle }}</span>
           <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext" title="下一頁">下一頁 ▶</button>
         </div>
       </header>
@@ -138,6 +139,15 @@ const canGoNext = computed(() => {
   const totalVal = typeof total === 'number' ? total : total?.value
   return currentVal < totalVal - 1
 })
+
+const currentSlideTitle = computed(() => {
+  if (!presentationLessonRef.value) return '投影片導航'
+  return presentationLessonRef.value.currentSlideTitle || '投影片導航'
+})
+
+const unlockedLevels = computed(() =>
+  [1, 2, 3, 4].filter(n => isLevelUnlocked(n))
+)
 
 // 方法
 const setLevel = (level) => {
@@ -382,11 +392,15 @@ html, body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   padding: 8px 16px;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s, opacity 0.2s;
   white-space: nowrap;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lh-btn:hover:not(:disabled) {

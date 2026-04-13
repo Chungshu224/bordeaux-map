@@ -1,0 +1,65 @@
+{
+  "id": "L3M7L1",
+  "title": "地域搭配哲學：南北差異全攻略",
+  "description": "深入義大利各大地域，從皮埃蒙特松露到西西里海鮮，掌握「長在一起的，就搭在一起」的在地搭配哲學，並理解南北料理文化差異如何影響選酒邏輯。",
+  "slides": [
+    {
+      "type": "content",
+      "title": "「在地搭配」哲學：風土即配對",
+      "content": "<div class='prose max-w-none'><p class='text-lg text-gray-700 mb-6'>義大利餐酒搭配最核心的哲學是：<strong>「What grows together, goes together（長在一起的，就搭在一起）」</strong>。這不只是民間智慧，背後有科學依據——當地的葡萄品種、土壤礦物質、氣候節律與當地食材在幾百年間共同演化，形成天然的味覺和諧。</p><div class='bg-gradient-to-r from-amber-50 to-red-50 p-6 rounded-xl border border-amber-100 mb-8'><h4 class='font-bold text-gray-800 mb-4'>🇮🇹 為什麼「在地搭配」在義大利特別重要？</h4><div class='grid grid-cols-1 md:grid-cols-3 gap-4'><div class='bg-white p-4 rounded-lg'><strong class='text-red-700'>20 個行政區</strong><p class='text-sm text-gray-600 mt-1'>各有截然不同的料理文化與品種，全球任何國家都難以匹敵的多樣性</p></div><div class='bg-white p-4 rounded-lg'><strong class='text-red-700'>350+ 本土品種</strong><p class='text-sm text-gray-600 mt-1'>大多數品種從未在其他地方種植，與當地食材形成獨一無二的搭配關係</p></div><div class='bg-white p-4 rounded-lg'><strong class='text-red-700'>兩千年農業史</strong><p class='text-sm text-gray-600 mt-1'>羅馬時代的農民就已開始將特定品種與特定料理配對，傳承至今</p></div></div></div><div class='bg-blue-50 p-5 rounded-xl border border-blue-100'><h4 class='font-bold text-blue-800 mb-3'>📐 在地搭配的三個層次</h4><ol class='space-y-2 text-gray-700'><li><strong>省級搭配：</strong>同一省份的酒款與食材（例：Barolo 搭配 Piemonte 白松露）</li><li><strong>大區搭配：</strong>同一行政區的酒款與菜系（例：Campania 白酒搭配拿坡里海鮮）</li><li><strong>跨區靈感搭配：</strong>以科學原則跨越地理界線（例：Sicilia 紅酒搭配普羅旺斯燉菜）</li></ol></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "北義：濃郁料理與強勁紅酒的王國",
+      "content": "<div class='prose max-w-none'><div class='grid grid-cols-1 md:grid-cols-2 gap-8 mb-6'><div class='bg-amber-50 p-6 rounded-xl border border-amber-100'><h4 class='font-bold text-amber-800 mb-4'>🏔️ 皮埃蒙特 (Piemonte)</h4><div class='space-y-3 text-sm text-gray-700'><div class='bg-white p-3 rounded-lg'><strong>白松露 × Barolo / Barbaresco (Nebbiolo)</strong><p class='mt-1'>陳年 Nebbiolo 的泥土、蘑菇與玫瑰香氣與白松露形成絕妙互補；強勁單寧與高酸度切割拌入牛油麵的油脂</p></div><div class='bg-white p-3 rounded-lg'><strong>起司火鍋 Fonduta × Barbera d'Asti</strong><p class='mt-1'>Barbera 幾乎無單寧但高酸度，完美切割 Fontina 起司的濃郁奶脂，酸度讓每一口都清爽宜人</p></div><div class='bg-white p-3 rounded-lg'><strong>生牛肉塔塔 Carne Cruda × Dolcetto</strong><p class='mt-1'>Dolcetto 的新鮮果香（藍莓、苦杏仁）與生牛肉的鮮甜形成互補；低酸度不會過度刺激</p></div></div></div><div class='bg-green-50 p-6 rounded-xl border border-green-100'><h4 class='font-bold text-green-800 mb-4'>🏖️ 艾米利亞羅馬涅 (Emilia-Romagna)</h4><div class='space-y-3 text-sm text-gray-700'><div class='bg-white p-3 rounded-lg'><strong>帕瑪森起司 × Lambrusco Secco</strong><p class='mt-1'>Lambrusco 的高酸度與細緻氣泡是切割起司油脂的完美武器，鹹味強化果香</p></div><div class='bg-white p-3 rounded-lg'><strong>波隆那肉醬義大利麵 × Sangiovese di Romagna</strong><p class='mt-1'>Sangiovese 的酸度與番茄肉醬的酸度同步，單寧入口感知後溶入肉類蛋白質中</p></div><div class='bg-white p-3 rounded-lg'><strong>炸海鮮 Fritto Misto × Albana di Romagna (干型)</strong><p class='mt-1'>干型 Albana 的礦物質感與海鮮的鹹鮮呼應，高酸度切割炸物油脂</p></div></div></div></div><div class='bg-purple-50 p-5 rounded-xl border border-purple-100'><h4 class='font-bold text-purple-800 mb-3'>💡 北義搭配規律</h4><p class='text-sm text-gray-700'>北義料理偏向<strong>奶油、起司、紅肉</strong>，需要<strong>高酸度 + 強單寧</strong>的葡萄酒來切割。Nebbiolo、Sangiovese di Romagna、Barbera 都符合這一邏輯。</p></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "中義與南義：橄欖油、番茄與海鮮的世界",
+      "content": "<div class='prose max-w-none'><div class='grid grid-cols-1 md:grid-cols-2 gap-8 mb-6'><div class='bg-red-50 p-6 rounded-xl border border-red-100'><h4 class='font-bold text-red-800 mb-4'>🌿 托斯卡尼 (Toscana)</h4><div class='space-y-3 text-sm text-gray-700'><div class='bg-white p-3 rounded-lg'><strong>佛羅倫斯大牛排 × Brunello di Montalcino</strong><p class='mt-1'>超級 Sangiovese 的強勁單寧需要牛排豐厚的蛋白質來柔化，酸度切割肉汁油脂，形成完美的「強對強」搭配</p></div><div class='bg-white p-3 rounded-lg'><strong>野豬肉醬寬麵 × Chianti Classico Riserva</strong><p class='mt-1'>高酸度 Sangiovese 與番茄基底肉醬的酸度形成完美互補，野味的深度需要陳年後的橡木複雜性</p></div><div class='bg-white p-3 rounded-lg'><strong>Ribollita（農民蔬菜燉湯）× Vernaccia di San Gimignano</strong><p class='mt-1'>鹹、濃、豆類鮮味搭配礦物感強的白酒，酸度解構湯品的厚重感</p></div></div></div><div class='bg-blue-50 p-6 rounded-xl border border-blue-100'><h4 class='font-bold text-blue-800 mb-4'>☀️ 坎帕尼亞 (Campania)</h4><div class='space-y-3 text-sm text-gray-700'><div class='bg-white p-3 rounded-lg'><strong>拿坡里海鮮麵 × Fiano di Avellino</strong><p class='mt-1'>Fiano 豐厚的果香（桃子、堅果）與礦物鹽度感，完美映照海港鮮蚶的海洋氣息</p></div><div class='bg-white p-3 rounded-lg'><strong>水牛莫扎瑞拉 × Greco di Tufo</strong><p class='mt-1'>Greco 的高酸度切割起司奶脂，礦物感（硫磺、石灰石）與 Irpinia 火山土壤呼應</p></div><div class='bg-white p-3 rounded-lg'><strong>烤羊排 × Aglianico del Vulture</strong><p class='mt-1'>南義最強紅酒之一，黑色水果與皮革香氣搭配碳烤羊脂的焦香，高單寧需要足夠蛋白質</p></div></div></div></div><div class='grid grid-cols-1 md:grid-cols-2 gap-6'><div class='bg-orange-50 p-5 rounded-xl border border-orange-100'><h4 class='font-bold text-orange-800 mb-3'>🌋 西西里 (Sicilia)</h4><div class='space-y-2 text-sm text-gray-700'><p><strong>茄子千層 Melanzane alla Parmigiana × Nero d'Avola：</strong>深色果香與茄子的鮮美形成互補，單寧彰顯料理的濃郁</p><p><strong>炸花枝圈 × Grillo（干型）：</strong>島嶼白酒的鹽漬、檸檬與礦物感，完美配對海鮮的鮮甜</p></div></div><div class='bg-gray-50 p-5 rounded-xl border border-gray-100'><h4 class='font-bold text-gray-700 mb-3'>💡 南義搭配規律</h4><p class='text-sm text-gray-700'>南義料理偏向<strong>橄欖油、海鮮、番茄、茄子</strong>，搭配策略分兩路：海鮮選<strong>高酸白酒</strong>；碳烤肉類選<strong>飽滿紅酒</strong>。南部白酒的鹽礦物感是海鮮搭配的關鍵。</p></div></div></div>"
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 地域配對知識測試",
+      "_marker": "// inject-italy-l3-quiz",
+      "questions": [
+        {
+          "type": "single",
+          "question": "選擇配對「白松露 (White Truffle)」最正確的邏輯是？",
+          "options": [
+            "選擇清淡、果香型白酒，讓白松露的香氣充分展現",
+            "選擇陳年 Nebbiolo（Barolo/Barbaresco），其泥土、蘑菇香氣與白松露形成互補，強單寧切割奶油麵的油脂",
+            "選擇 Prosecco 氣泡酒，氣泡提升白松露的揮發香氣",
+            "選擇 Amarone，濃郁酒體與松露同等強度"
+          ],
+          "correct": 1,
+          "explanation": "白松露的核心環境是皮埃蒙特，Nebbiolo 是當地最重要的品種。陳年 Nebbiolo 的泥土與蘑菇香氣（來自 Brett 或 TDN）與白松露的香氣有著驚人的互補性，高單寧與酸度則切割佐餐的奶油義大利麵。這是典型的在地搭配案例。"
+        },
+        {
+          "type": "single",
+          "question": "坎帕尼亞料理（拿坡里海鮮、水牛莫扎瑞拉）最適合搭配的白酒是？",
+          "options": [
+            "Pinot Grigio（Venezia Giulia）——輕盈清淡",
+            "Soave（Veneto）——柔和易飲",
+            "Fiano di Avellino 或 Greco di Tufo——坎帕尼亞本地高酸礦物白酒",
+            "Vermentino（Sardinia）——清爽海風感"
+          ],
+          "correct": 2,
+          "explanation": "在地搭配原則：坎帕尼亞的食材（海鮮、莫扎瑞拉）最適合坎帕尼亞的白酒。Fiano di Avellino 和 Greco di Tufo 都來自火山土壤，帶有強烈的礦物鹽感，能與海鮮和起司形成完美呼應，酸度切割奶脂。"
+        },
+        {
+          "type": "single",
+          "question": "為什麼帕瑪森起司（含有強烈鮮味 Umami）搭配 Lambrusco 能成功，而不是失敗？",
+          "options": [
+            "Lambrusco 低酒精度，不會放大鮮味的苦澀感",
+            "帕瑪森起司同時帶有強烈鹹味，鹹味會中和鮮味對葡萄酒的負面影響，讓搭配成立",
+            "氣泡酒的氣泡能洗刷鮮味分子",
+            "Lambrusco 高甜度能中和鮮味"
+          ],
+          "correct": 1,
+          "explanation": "鮮味（Umami）通常讓葡萄酒變苦、變澀。但帕瑪森起司同時是高鹽食物，而鹹味能顯著抵消鮮味的負面影響，甚至讓果香更突出。Lambrusco 的高酸度和氣泡則進一步切割起司油脂，整體達到平衡。"
+        }
+      ]
+    }
+  ]
+}

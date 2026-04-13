@@ -522,6 +522,8 @@ export class AchievementManager {
 
   // 初始化
   init() {
+    if (this._initialized) return
+    this._initialized = true
     this.loadAchievements()
     this.startPeriodicCheck()
   }

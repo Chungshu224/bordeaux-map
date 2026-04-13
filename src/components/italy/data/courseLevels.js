@@ -139,7 +139,7 @@ export const courseLevels = {
     difficulty: '專家',
     icon: '🏆',
     color: '#9C27B0',
-    totalLessons: 27,
+    totalLessons: 31,
     prerequisites: ['完成 Level 1', '完成 Level 2'],
     modules: [
       {
@@ -178,13 +178,19 @@ export const courseLevels = {
         { id: 'L3M5L4', title: '未來趨勢與氣候變遷' }
       ]},
       { id: 'L3M6', title: '第六章：侍酒師實務', lessons: [
-        { id: 'L3M6L1', title: '酒單設計原則' },
-        { id: 'L3M6L2', title: '餐廳選酒顧問角色' },
-        { id: 'L3M6L3', title: '品酒活動策劃' }
+        { id: 'L3M6L1', title: '進階餐酒搭配理論' },
+        { id: 'L3M6L2', title: '老酒的侍酒與醒酒藝術' },
+        { id: 'L3M6L3', title: '酒單設計與庫存管理' }
+      ]},
+      { id: 'L3M7', title: '第七章：餐酒搭配實務', lessons: [
+        { id: 'L3M7L1', title: '地域搭配哲學：南北差異全攻略' },
+        { id: 'L3M7L2', title: '特殊酒款搭配：氣泡、甜酒與加烈酒' },
+        { id: 'L3M7L3', title: '侍酒師實務：溫度、開瓶、醒酒與服務' },
+        { id: 'L3M7L4', title: '餐酒搭配實戰：設計完整套餐酒單' }
       ]},
       {
-        id: 'L3M7',
-        title: '第七章：Level 3 綜合評量',
+        id: 'L3M8',
+        title: '第八章：Level 3 綜合評量',
         isFinalExamModule: true,
         lessons: [
           { id: 'L3FinalExam', title: 'Level 3 綜合評量', isFinalExam: true }

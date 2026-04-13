@@ -2,7 +2,7 @@
   <section class="map-section">
     <div class="map-header">
       <div class="map-header-left">
-        <button class="map-hdr-btn" @click="router.push('/bourgogne')">← 返回課程</button>
+        <button class="map-hdr-btn" @click="emit('request-learning-mode')">← 返回課程</button>
         <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
       </div>
       <h1>{{ props.regionConfig?.name || 'Bourgogne wine map' }} 葡萄酒產區地圖</h1>

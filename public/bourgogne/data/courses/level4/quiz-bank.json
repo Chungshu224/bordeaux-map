@@ -1,0 +1,465 @@
+{
+  "id": "bourgogne-l4-final-exam",
+  "title": "📋 布根地 Level 4 綜合評量",
+  "description": "涵蓋 L4 全模組（M1-M8）的綜合測驗，共 30 題，考察歷史文化、品種風土、侍酒技能、教育方法、商業策略、國際貿易、酒莊經營及專家評估等面向。",
+  "questions": [
+    {
+      "module": "M1",
+      "type": "single",
+      "question": "「修道院文化（Monastic Culture）」對布根地葡萄酒的最關鍵歷史貢獻是？",
+      "options": [
+        "A. 修道院只負責飲用葡萄酒，並不參與釀造",
+        "B. 西多會（Cistercians）僧侶系統性地觀察、記錄和區分不同地塊的風味差異，奠定了「風土意識（Terroir Consciousness）」的基礎和 Clos 制度的誕生",
+        "C. 修道院引進了黑皮諾（Pinot Noir）品種",
+        "D. 修道院只對波爾多葡萄酒有貢獻，對布根地無影響"
+      ],
+      "correct": 1,
+      "explanation": "西多會修道院（特別是 Cîteaux 修道院，1098年建立）的系統性風土觀察，使布根地的「地塊分級意識（Plot Classification Consciousness）」比歐洲其他產區早了數百年——Clos de Vougeot 的石牆（約建於 12 世紀）就是這種修道院管理文化的最直接遺產，也是布根地「Clos（封閉葡萄園）」制度的象徵性起源。"
+    },
+    {
+      "module": "M1",
+      "type": "single",
+      "question": "布根地「拿破崙繼承法（Napoleonic Inheritance Law）」對現代葡萄酒產業造成的深遠影響是？",
+      "options": [
+        "A. 拿破崙法律要求葡萄酒必須以法國語言標示",
+        "B. 強制均分繼承（Equal Division Among All Heirs）使葡萄園在代際之間不斷分割，形成了布根地特有的「極度碎片化地塊（Extreme Parcel Fragmentation）」——Musigny Grand Cru（10.86公頃）現有約 85 個共同持有人",
+        "C. 拿破崙法律廢除了布根地的所有 AOC 分級",
+        "D. 拿破崙法律使布根地葡萄酒價格統一，消除了分級差異"
+      ],
+      "correct": 1,
+      "explanation": "拿破崙時代（1804年）頒布的《民法典（Code Civil / Code Napoléon）》中的強制均分繼承條款，是布根地地塊碎片化的根本制度原因——相比之下，選擇性繼承（如波爾多）或大型地產（如德國 Mosel 部分家族）較好地保全了「葡萄園規模一致性（Vineyard Scale Consistency）」。這也解釋了為何布根地 Négociant（葡萄酒商）制度比波爾多更加關鍵——小農無法獨立打市場，Négociant 作為聚合者（Aggregator）提供了必要的市場橋接功能。"
+    },
+    {
+      "module": "M1",
+      "type": "single",
+      "question": "布根地「1995 年 AOC 地塊整合法規（1995 AOC Regulation）」的核心影響是？",
+      "options": [
+        "A. 1995 年法規減少了布根地 Grand Cru 的總數量",
+        "B. 確立了 Premier Cru「地塊名（Lieu-dit Name）」可標示於酒標的規範，強化了頂級葡萄園的個別辨識度",
+        "C. 1995 年法規強制所有布根地葡萄酒必須使用橡木桶",
+        "D. 1995 年法規取消了 Bourgogne AOC，改為只有村莊級以上"
+      ],
+      "correct": 1,
+      "explanation": "1995年的 AOC 法規修訂確立了布根地 Premier Cru 酒標可以清楚標示具體地塊名稱（如「Volnay Premier Cru Clos des Chênes」），使消費者能夠識別具體的地塊來源，而非只知道「村莊 + 等級」，這一規範進一步強化了布根地「地塊即身份（Parcel as Identity）」的核心品牌邏輯。"
+    },
+    {
+      "module": "M2",
+      "type": "single",
+      "question": "「全球 Pinot Noir 比較研究（Global Pinot Noir Comparative Study）」中，奧勒岡（Oregon）Willamette Valley 與布根地 Côte de Nuits 的最關鍵「土壤差異（Soil Difference）」是？",
+      "options": [
+        "A. 兩地土壤完全相同，因此風格也完全相同",
+        "B. 布根地主要是侏羅紀石灰岩-黏土（Jurassic Limestone-Clay），Willamette 以玄武岩（Basalt）、沉積火山灰（Sedimentary Volcanic Ash）和海相沉積層（Marine Sedimentary）為主，造成礦物感構成（Mineral Profile Composition）和口感質地（Palate Texture）的系統性差異",
+        "C. Willamette Valley 沒有任何礦物感，不如布根地複雜",
+        "D. 兩地土壤差異對葡萄酒品質沒有可測量的影響"
+      ],
+      "correct": 1,
+      "explanation": "Willamette Valley 的「Jory（玄武岩紅土）」和「Willakenzie（Marine Sedimentary）」土壤系統，賦予奧勒岡 Pinot Noir 不同於布根地的礦物特質——布根地的石灰岩底層提供一種「白堊-石灰岩礦物純粹感」，而 Jory 土壤的鐵質則傾向於帶來更豐富的「紅色水果 + 微微土壤感」風格。土壤的底層地質差異（侏羅紀石灰岩 vs. 玄武岩）是解釋兩大 Pinot Noir 產地風格差異的最重要地質因素。"
+    },
+    {
+      "module": "M2",
+      "type": "single",
+      "question": "「Chardonnay 全球比較」中，Chablis（夏布利）的「金礦石（Kimmeridgian）土壤」賦予葡萄酒的獨特風格是？",
+      "options": [
+        "A. Kimmeridgian 土壤讓 Chablis 產出豐醇圓潤、奶油感強的風格",
+        "B. Kimmeridgian 泥灰土（由侏羅紀牡蠣殼化石和石灰岩組成）賦予 Chablis 標誌性的緊緻酸度（Taut Acidity）、打火石礦物感（Flint Minerality）和清瘦的骨架（Lean Structure），形成世界上辨識度最高的白酒風格之一",
+        "C. Kimmeridgian 土壤讓 Chablis 只能種植 Pinot Noir，不能種 Chardonnay",
+        "D. Kimmeridgian 土壤對 Chablis 風格沒有任何科學可驗證的影響"
+      ],
+      "correct": 1,
+      "explanation": "Kimmeridgian 泥灰土（約 1.55 億年前的侏羅紀晚期）是 Chablis AOC 嚴格限定的資格土壤——真正 Chablis（Chablis AOC）必須種植在 Kimmeridgian 土壤上；Petit Chablis 則生長在較年輕的「Portlandian（波特蘭石）」石灰岩上，因此礦物深度較低。Chablis Grand Cru（如 Les Clos/Valmur）的頂尖品質正是在最優質的 Kimmeridgian 斜坡（Slope）上的集中體現，其打火石礦物感（「Gunflint Character」）被許多評論家視為 Chardonnay 風土表現力的最純粹形式之一。"
+    },
+    {
+      "module": "M3",
+      "type": "single",
+      "question": "「布根地葡萄酒開瓶決策（Decanting Decision）」的關鍵考量是？",
+      "options": [
+        "A. 所有布根地葡萄酒都需要在服務前醒酒至少 2 小時",
+        "B. 根據葡萄酒的年齡和狀態決定——年輕（5年以內）+ 酒體較豐厚的村莊級/一級園：可短暫醒酒（30-45分鐘）開發香氣；老年份（10年以上）Pinot Noir：避免長時間醒酒（氧化風險高），使用緩慢傾倒或直接從瓶中服務；有沉澱（Sediment）的老酒：需要先直立靜置再緩慢醒酒以分離沉澱",
+        "C. 布根地白酒（Chardonnay）不需要任何溫度或醒酒考量",
+        "D. 開瓶決策只取決於個人口味，沒有專業標準"
+      ],
+      "correct": 1,
+      "explanation": "布根地 Pinot Noir 的「脆弱性（Fragility）」是醒酒決策的核心考量——與波爾多或 Barolo 相比，熟成的布根地 Pinot Noir 在充分開放後會迅速消逝（Fade Quickly），因此頂尖侍酒師通常選擇「短暫醒酒或不醒酒（Brief or No Decanting）」，讓其慢慢在杯中開放；而年輕的布根地（尤其是村莊級以上的緊澀單寧）適合 30-45 分鐘的輕醒酒。服務溫度同樣關鍵：白酒 10-12°C（過冷會封閉香氣），紅酒 14-16°C（不宜過熱，高溫使酒精感突出）。"
+    },
+    {
+      "module": "M3",
+      "type": "single",
+      "question": "「頂尖餐廳酒單設計（Fine Dining Wine List Design）」中，布根地葡萄酒的排列邏輯最佳做法是？",
+      "options": [
+        "A. 酒單應按照酒的顏色（先全部白酒，再全部紅酒）排列，不分產區",
+        "B. 以地理層次（Geographic Hierarchy）+年份（Vintage）雙軸組織——最有效的布根地酒單結構：大區→地區（Chablis/Côte de Beaune/Côte de Nuits/Mâconnais/Beaujolais）→村莊→等級（村莊級/Premier Cru/Grand Cru）→年份，使熟悉布根地地理的客人能迅速定位，也讓侍酒師能引導不熟悉的客人從大到小地認識布根地的地理結構",
+        "C. 酒單必須按照價格從低到高排列，使客人更容易做決定",
+        "D. 布根地酒單只需要列出 Grand Cru，Premier Cru 不需要"
+      ],
+      "correct": 1,
+      "explanation": "頂尖餐廳酒單的「地理教育功能（Geographic Education Function）」：一份組織清晰的布根地酒單不只是選擇清單，更是引導客人理解布根地地理邏輯的視覺工具。侍酒師（Sommelier）可以用酒單結構協助客人從「我喜歡什麼風格」推導到「哪個村莊/等級適合我」，展現布根地酒單的附加教育價值（Educational Value-Add）。酒杯推薦（Glass Recommendation）也是頂尖服務的組成部分——Riedel/Zalto 的 Burgundy Grand Cru 形杯（大型鬱金香形）讓 Pinot Noir 的香氣能充分開放，是服務布根地頂尖品質的標配。"
+    },
+    {
+      "module": "M3",
+      "type": "single",
+      "question": "「布根地葡萄酒缺陷識別（Fault Identification）」中，TCA（2,4,6-三氯苯甲醚）軟木塞污染的感官特徵是？",
+      "options": [
+        "A. TCA 污染使葡萄酒產生濃烈的橡木桶新木材香氣",
+        "B. TCA 賦予葡萄酒潮濕紙板（Wet Cardboard）、霉味（Musty）和明顯壓抑的果香（Suppressed Fruit）——即使極低濃度（1 ppb = 十億分之一）也可被人類嗅覺察覺；TCA 污染後葡萄酒失去典型的品種香氣，呈現「扁平（Flat）」且「陰鬱（Damp）」的感官印象",
+        "C. TCA 污染只影響葡萄酒的酸度，不影響香氣",
+        "D. TCA 是一種對葡萄酒品質有正面影響的化合物"
+      ],
+      "correct": 1,
+      "explanation": "TCA（2,4,6-Trichloroanisole）是全球精品葡萄酒業最著名的葡萄酒缺陷（Wine Fault）之一——估計全球約 3-5% 的軟木塞封蓋葡萄酒存在不同程度的 TCA 污染（「Cork Taint / Bouchonné」）。感官閾值（Detection Threshold）極低：2-4 ng/L（即 0.000000002-0.000000004 g/L）——人類嗅覺對 TCA 極度敏感。TCA 的解決方案：螺旋蓋（Screwcap）和合成軟木塞（Synthetic Cork）的採用率在新世界和部分舊世界增加，但傳統布根地生產者出於美學和傳統原因，仍高度堅持天然軟木塞（Natural Cork），同時透過嚴格的質量控制（Quality Control）降低 TCA 發生率。"
+    },
+    {
+      "module": "M4",
+      "type": "single",
+      "question": "「成人學習理論（Adult Learning Theory）」中，Knowles 的「自主學習者模型（Andragogy）」對葡萄酒教育策略的最重要含義是？",
+      "options": [
+        "A. 成人學習者和兒童完全相同，應用相同的教學方法即可",
+        "B. 成人學習者有強烈的即時應用需求（Immediate Application Needs）和自主決策傾向（Self-Directed Learning Tendency）——葡萄酒教育的含義：成人學員不需要「學了再用（Learn First, Apply Later）」，而是需要「即時應用（Apply Immediately）」——每個知識點都應該連接到現實場景（「學這個在真實工作/生活中如何用？」）；教學應減少講師主導的知識灌輸，增加學員主動探索和討論的機會（Active Learning）",
+        "C. 成人學習者比兒童更難學習，所以葡萄酒課程應更容易",
+        "D. 自主學習理論只適用於線上課程，不適用於實體葡萄酒教學"
+      ],
+      "correct": 1,
+      "explanation": "Malcolm Knowles 的成人學習理論（Andragogy, 1968）六大核心假設適用於葡萄酒教育：① 自主性（Self-Concept）：成人學員是自主的學習者，不喜歡純粹被動接受；② 經驗（Experience）：成人帶進課堂的豐富先備經驗是重要學習資源（品酒記憶/旅行/文化背景）；③ 學習準備（Readiness to Learn）：成人在有明確需要時才最有學習動機（如「我下週要接待布根地酒莊訪問團」）；④ 問題中心（Problem-Centered Orientation）：以解決真實問題為學習目標，而非知識累積本身；⑤ 即時應用（Immediacy of Application）：學完立即想用；⑥ 動機（Motivation）：主要由內在動機（Intrinsic Motivation）驅動（求知、成長）而非外在獎懲。"
+    },
+    {
+      "module": "M4",
+      "type": "single",
+      "question": "「葡萄酒品評教學（Tasting Teaching Methodology）」中，「刻意練習（Deliberate Practice）」的核心原則是？",
+      "options": [
+        "A. 刻意練習就是大量品嘗越多款酒越好",
+        "B. 有意識地在「舒適區邊緣（Edge of Comfort Zone）」、以即時回饋（Immediate Feedback）為核心的標準化品評練習——隨機品嘗（Random Tasting）和刻意練習的差異：隨機品嘗缺乏聚焦的學習目標和即時糾錯機制；刻意練習則要求：特定技能目標（如「今天練習識別 Pinot Noir 中的 Tertiary 香氣」）、即時反饋（品評後對照標準答案/導師回饋）、分析失誤原因並調整",
+        "C. 刻意練習不適用於葡萄酒品評，因為品評是主觀藝術",
+        "D. 刻意練習只對 MW 候選人有意義，對 WSET Level 3 學員無效"
+      ],
+      "correct": 1,
+      "explanation": "K. Anders Ericsson 的刻意練習理論（Deliberate Practice Theory, 1993）在葡萄酒品評的應用：頂尖侍酒師或 MW 候選人的品評能力不是通過「喝更多酒」獲得，而是通過持續的、聚焦的、有即時回饋的標準化練習發展——每次品評后的「回顧分析（Post-Tasting Debrief）」，特別是對錯誤推斷的原因分析，是比品評本身更重要的學習環節。WSET 系統的 SAT 結構（外觀/鼻前/口腔/整體評估/結論）是刻意練習的理想框架——每次都遵循完全相同的流程，使技能在重複中固化（Skill Solidification）。"
+    },
+    {
+      "module": "M4",
+      "type": "single",
+      "question": "「葡萄酒課程評估設計（Wine Course Assessment Design）」中，「真實評估（Authentic Assessment）」的原則是？",
+      "options": [
+        "A. 真實評估只需要選擇題，不需要實際品評",
+        "B. 評估任務應盡量模擬學員在真實職業或消費場景中遇到的挑戰——葡萄酒課程的真實評估範例：請學員「設計一個 6 款布根地入門酒單，預算 NT$15,000，適合接待日本企業客人，並撰寫 100 字的每款推薦理由」——這比「列出布根地所有 Grand Cru 名稱」更能測量學員是否真正掌握了知識的「應用能力（Application Ability）」",
+        "C. 真實評估要求所有學員去布根地進行現場考核",
+        "D. 葡萄酒評估的目的只是篩選，不需要反映真實應用場景"
+      ],
+      "correct": 1,
+      "explanation": "真實評估（Authentic Assessment, Grant Wiggins, 1990）的設計原則：真實評估任務包含四個關鍵特質——Realistic（真實場景）、Requiring Judgment（需要判斷而非記憶）、Asking the Student to 'Do' the Subject（像行業真實人員一樣行動）、Assessing the Student's Ability to Efficiently and Effectively Use a Repertoire of Knowledge and Skill（評估整合應用能力，非孤立知識點）。在布根地葡萄酒教育中，「盲品酒款並連同品酒筆記一起向假設的客人口頭推薦」，比「填寫選擇題記憶土壤類型」更能反映學員在真實侍酒師或葡萄酒顧問場景下的實際能力水準。"
+    },
+    {
+      "module": "M5",
+      "type": "single",
+      "question": "「布根地葡萄酒的市場定位策略（Market Positioning Strategy）」中，「稀缺性溢價（Scarcity Premium）」的商業邏輯是？",
+      "options": [
+        "A. 稀缺性溢價是人為操縱的不正當定價策略",
+        "B. 布根地的物理稀缺（Physical Scarcity）——有限的地理面積（Romanée-Conti 1.81公頃/年產約 5,000瓶）加上高消費需求——形成了合理的市場均衡高價；同時稀缺性本身成為「信號（Signaling）」，傳遞了質量和排他性（Exclusivity）",
+        "C. 所有布根地葡萄酒都是稀缺的，包括大區級",
+        "D. 稀缺性對布根地酒價沒有影響，價格只由盲品分數決定"
+      ],
+      "correct": 1,
+      "explanation": "布根地頂尖酒款的稀缺性是真實的地理約束（Geographic Constraint）而非行銷虛構——Romanée-Conti（1.81 公頃）全年平均產量約 5,000 瓶（約 416 箱），全球收藏家/愛好者需求遠超供給。「信號理論（Signaling Theory, Spence, 1973）」在葡萄酒市場的應用：高價格本身也成為品質信號（Quality Signal）——能夠維持高價的稀缺性葡萄酒，向市場傳達了「值得追求、值得信任」的品質承諾，形成正向的聲譽螺旋（Reputation Spiral）。"
+    },
+    {
+      "module": "M5",
+      "type": "single",
+      "question": "「亞洲精品葡萄酒市場（Asian Fine Wine Market）」中，台灣市場與中國大陸市場的最關鍵結構差異是？",
+      "options": [
+        "A. 兩個市場完全相同，採用相同的行銷策略即可",
+        "B. 台灣市場具有相對穩定的個人消費者基礎（Personal Consumer Base）和成熟的品飲文化（Mature Drinking Culture）；中國大陸市場受商務禮品（Corporate Gifting）和投資收藏（Investment Collecting）動機主導，對政策變化（如反腐政策）高度敏感——2012-2014 年的反腐行動（Anti-Corruption Campaign）使中國大陸精品葡萄酒市場快速萎縮，而台灣受影響幅度則相對較小",
+        "C. 台灣不存在精品葡萄酒市場，只有大眾市場",
+        "D. 中國大陸市場只偏好波爾多，完全不接受布根地"
+      ],
+      "correct": 1,
+      "explanation": "亞洲葡萄酒市場的「結構性差異（Structural Differences）」分析：台灣市場特徵——進口葡萄酒的個人消費者（Personal Consumers）比例高，飲用場合多樣（家庭餐桌、酒友社群、品酒課程），對布根地的接受度持續增長（尤其 Gen X/Millennial 的消費者）；中國大陸市場（2010年代）特徵——商務接待（Business Entertainment）和禮品購買（Gift Purchase）驅動的比例高，拍賣市場（Auction Market）和頂級名莊（Trophy Wine：Romanée-Conti/Pétrus）的投資性購買佔重要比例，使市場受政策環境影響的波動性更大。"
+    },
+    {
+      "module": "M5",
+      "type": "single",
+      "question": "「供應鏈管理（Supply Chain Management）」在布根地葡萄酒進口業務中，最難控制的風險是？",
+      "options": [
+        "A. 最大風險是語言溝通問題，熟悉法語就能解決所有供應鏈問題",
+        "B. 分配控制（Allocation Control）——頂尖布根地酒莊對台灣進口商的分配量有嚴格限制，且優先分配給歷史長期合作且有資格認證展示熱忱的進口商；加上「庫存稀缺性（Inventory Scarcity）」——搶購心態使市場容易出現缺貨，無法穩定供應",
+        "C. 供應鏈的最大風險是台灣的運費過高",
+        "D. 布根地葡萄酒供應完全穩定，沒有任何風險"
+      ],
+      "correct": 1,
+      "explanation": "布根地頂尖小農酒莊的「分配策略（Allocation Strategy）」是全球精品葡萄酒業最著名的供應端挑戰——Domaine Leroy、DRC、Armand Rousseau 等頂尖酒莊的分配名單是嚴格管控的：進入名單需要長期合作關係（通常 5-10 年以上）、對酒莊的真誠熱忱（Genuine Passion，非純商業利益）、對酒款的負責任推廣（Responsible Promotion）；一旦進入名單，穩定關係維護比任何短期商業談判更重要。「捆綁銷售（Allocation Bundling）」也是現實——取得頂尖款（如 Chambolle-Musigny Grand Cru）通常需要同時購買更多的大區/村莊級酒款（Entry-Level Wines），使進口商的庫存管理更加複雜。"
+    },
+    {
+      "module": "M6",
+      "type": "single",
+      "question": "「台灣葡萄酒進口法規（Taiwan Wine Import Regulations）」中，「菸酒管理法」對精品葡萄酒進口商的核心要求是？",
+      "options": [
+        "A. 台灣不允許進口外國葡萄酒",
+        "B. 進口商需取得「菸酒進口業許可執照（Wine Import Business License）」，且每批進口酒款需符合食品衛生法規（Food Safety Regulations），包含標示規範（Chinese Label Requirements）、檢驗要求和進口報關程序",
+        "C. 精品葡萄酒無需任何許可，可直接進口",
+        "D. 台灣只允許大型跨國公司進口葡萄酒，個人或小公司不能申請"
+      ],
+      "correct": 1,
+      "explanation": "台灣葡萄酒進口的法規框架：主管機關——財政部（關稅及貿易相關）+ 衛生福利部食品藥物管理署（TFDA，食品標示和安全）；關鍵法規——菸酒管理法（菸酒專賣法廢止後的管理機制）、食品安全衛生管理法（食安法）；中文標示要求——所有進口葡萄酒必須在台灣完成中文標示（包含：酒名、酒商資訊、酒精度、淨容量、原料、產地、保存條件、進口商名稱地址、容量、適飲年齡警語「18歲以下不能飲酒」）。"
+    },
+    {
+      "module": "M6",
+      "type": "single",
+      "question": "「國際葡萄酒貿易（International Wine Trade）」中，「貿易協定（Trade Agreements）」對布根地葡萄酒進口台灣的影響是？",
+      "options": [
+        "A. 所有葡萄酒的進口關稅已全球統一，貿易協定無影響",
+        "B. 台灣目前對來自歐盟（包含法國）的葡萄酒課徵進口關稅（約 20% Ad Valorem），若台歐 FTA（自由貿易協定）達成，關稅降低將直接提升布根地葡萄酒在台灣的價格競爭力（Price Competitiveness）；同時，歐盟的「原產地保護規範（PDO/PGI System）」在貿易協定中一般要求進口國給予相應的地理標誌保護（GI Protection）",
+        "C. 台灣與法國之間沒有任何貿易往來",
+        "D. 布根地葡萄酒在台灣免稅，不受任何貿易政策影響"
+      ],
+      "correct": 1,
+      "explanation": "台灣的葡萄酒進口關稅結構：瓶裝葡萄酒——進口關稅約 20%（Ad Valorem），散裝葡萄酒——關稅較低，另有業者加工後銷售。CPTPP（跨太平洋夥伴全面進步協定）：台灣正積極申請加入，若成功，與 CPTPP 成員國（如澳洲、智利、紐西蘭）的貿易關係將改善，但與法國（EU 非 CPTPP 成員）的關稅需另行通過台歐 FTA 談判解決。歐盟 PDO 系統（Protected Designation of Origin）：「布根地（Bourgogne）」和所有 AOC（如 Gevrey-Chambertin/Pommard）均受 EU PDO 保護，仿冒使用這些地名構成國際貿易中的地理標誌侵權問題。"
+    },
+    {
+      "module": "M6",
+      "type": "single",
+      "question": "「布根地葡萄酒的永續性（Sustainability）」在國際貿易中的商業含義是？",
+      "options": [
+        "A. 永續認證對市場沒有任何商業影響，只是行銷噱頭",
+        "B. 永續認證（如 HVE/Biodynamic/Organic）在特定市場（北歐/英國/日本）已具有真實的購買溢價（Purchase Premium）和市場入場資格（Market Access）——部分歐洲零售商/餐廳已要求供應商具備永續認證作為進場條件；對台灣市場，消費者環保意識提升使有機/自然動力認證成為差異化行銷的有效工具",
+        "C. 有機認證的葡萄酒品質一定低於傳統農法的葡萄酒",
+        "D. 布根地所有酒莊都已完成永續認證，不再是差異化因素"
+      ],
+      "correct": 1,
+      "explanation": "布根地永續農業認證的層次：HVE Level 3（Haute Valeur Environnementale，高環境價值，法國農業部認證）——已有相當多布根地酒莊取得；Organic Agriculture（AB 有機農業，EU 有機標準）——限制合成農藥和化肥，但仍可使用有機允許的銅鑄劑；Biodynamics（生物動力農法，Demeter/Biodyvin 認證）——基於 Rudolf Steiner 的宇宙農業哲學，在頂尖布根地酒莊（Domaine Leflaive/Leroy/Trapet/Dujac）中比例最高。台灣市場的永續敘事（Sustainability Narrative）：「有機布根地」作為差異化行銷工具；高端餐廳（特別是米其林餐廳）酒單越來越傾向於突出有機/自然動力酒款，與餐廳整體的永續品牌定位（Sustainable Brand Positioning）呼應。"
+    },
+    {
+      "module": "M6",
+      "type": "single",
+      "question": "「葡萄酒拍賣市場（Wine Auction Market）」在布根地葡萄酒的二次市場流通中扮演什麼角色？",
+      "options": [
+        "A. 拍賣市場對布根地葡萄酒沒有任何價格影響",
+        "B. 國際拍賣行（Christie's/Sotheby's/Hart Davis Hart）的成交結果成為布根地頂尖酒款的「市場參考定價（Market Reference Pricing）」，同時也是進口商採購決策和藏家持有策略的重要信號——強勁的拍賣市場（Strong Auction Market）通常推升一手市場（Primary Market）的醒目分配定價",
+        "C. 布根地法律禁止葡萄酒在任何拍賣場合銷售",
+        "D. 只有 Romanée-Conti 拍賣才對市場有影響，其他布根地酒款無效"
+      ],
+      "correct": 1,
+      "explanation": "布根地頂尖酒款拍賣市場的「價格發現（Price Discovery）功能」：Zachys/Acker Merrall & Condit/Hart Davis Hart 的亞洲和歐美拍賣結果，對市場參與者（藏家/進口商/酒莊/零售商）傳達了關鍵的市場信號——如 2023 年 Romanée-Conti 2019 在拍賣會達到的錘落價（Hammer Price），直接成為後續分配和零售定價的重要參考基準。Hospices de Beaune 拍賣（11月，布根地 Beaune）：世界最著名的慈善葡萄酒拍賣，每年成交結果被媒體廣泛報導，成為年度布根地年份品質預測的象徵性指標（即使拍賣結果受到慈善溢價和炒作的影響）。"
+    },
+    {
+      "module": "M7",
+      "type": "single",
+      "question": "「酒莊財務規劃（Domaine Financial Planning）」中，布根地小農酒莊的最典型財務結構挑戰是？",
+      "options": [
+        "A. 布根地酒莊不需要財務規劃，銷售葡萄酒即可自動獲利",
+        "B. 高固定成本（High Fixed Cost）+ 年份波動收入（Vintage-Variable Revenue）的矛盾：土地投資成本極高（Gevrey-Chambertin 村莊級土地每公頃 200-500 萬歐元）；每年的勞動/維護固定成本不隨年份質量波動；而收入受年份條件影響巨大（極端氣候年份可損失 50-70% 收成）——這要求充足的財務緩衝（Financial Buffer）和多年份庫存管理（Multi-Vintage Inventory Management）",
+        "C. 所有布根地酒莊都是大型公司，有充裕的財務資源",
+        "D. 布根地酒莊的唯一收入來源是年份拍賣"
+      ],
+      "correct": 1,
+      "explanation": "布根地小農酒莊（Domaine Vigneron）的財務脆弱性（Financial Vulnerability）：土地資本密集（Capital-Intensive Land）——布根地 Premier Cru/Grand Cru 土地是全球最貴的農業用地之一，每公頃土地市場價格遠超年收入（通常需要 20-50 年的淨利潤才能回收土地成本）；收入波動性高（High Revenue Volatility）——氣候風險（霜害/冰雹/乾旱/黴菌）每年對產量影響可達 30-70%（2016 年嚴重霜害使部分酒莊損失超過 50% 收成）；現金转换周期（Cash Conversion Cycle）長——葡萄酒通常需要 1-2 年（白酒）或 2-3 年（紅酒）的陳調後才能出售，使資金佔用時間增加。"
+    },
+    {
+      "module": "M7",
+      "type": "single",
+      "question": "「酒莊行銷戰略（Domaine Marketing Strategy）」中，「品牌傳承（Brand Heritage）」對定價能力（Pricing Power）的影響是？",
+      "options": [
+        "A. 品牌傳承對現代消費者沒有任何購買影響",
+        "B. 歷史悠久的布根地酒莊（如 Domaine de la Romanée-Conti，17 世紀始）通過品牌傳承（Brand Heritage）建立了「歷史真實性溢價（Historical Authenticity Premium）」——消費者願意為「品牌故事的連續性（Brand Story Continuity）」支付高於純技術品質可以解釋的溢價",
+        "C. 新成立的布根地酒莊比傳統老莊更有競爭力",
+        "D. 布根地酒莊的品牌傳承對亞洲市場無效"
+      ],
+      "correct": 1,
+      "explanation": "布根地品牌傳承（Heritage）的「認知溢價機制（Cognitive Premium Mechanism）」：消費者心理學研究（Stefan Gössling & Scott, 2018）確認了「鑑賞真實性（Connoisseurship Authenticity）」——對葡萄酒深有了解的消費者，對「歷史真實（Historical Authenticity）」的評價高於對「技術完美（Technical Perfection）」的評價；DRC 每一瓶的傳承故事（1760 年孔蒂親王購得/家族持有制/世代知識積累）使其在全球市場無法被複製，形成真正意義上的「非理性溢價（Irrational Premium）」（純從香氣/口感判斷，4,000 美元一瓶的 RC 和 400 美元一瓶的頂尖波爾多在感官分數上差距遠小於價格差距 10 倍）。"
+    },
+    {
+      "module": "M7",
+      "type": "single",
+      "question": "「酒莊繼承規劃（Succession Planning）」對布根地家族酒莊的戰略重要性是？",
+      "options": [
+        "A. 繼承規劃只有酒莊主死後才需要考慮",
+        "B. 提前規劃的繼承安排（如家族股權結構、分割信託）能避免拿破崙繼承法（Equal Division Law）造成的地塊碎片化，是保持酒莊規模與品質一致性的關鍵策略工具",
+        "C. 布根地酒莊應儘早出售給大公司，避免繼承問題",
+        "D. 布根地的繼承法律在 21 世紀已修改，不再需要均分繼承"
+      ],
+      "correct": 1,
+      "explanation": "現代布根地酒莊的繼承規劃策略（Succession Planning Strategies）：農業公司結構（GAEC/EARL/SCEA）——通過設立農業公司（而非個人持有），使酒莊作為整體企業繼承而非土地直接分割；股權轉讓（Share Transfer）代替土地直接分割，可以保持地塊完整性；家族信託（Family Trust Structures）——在法律框架內安排優先繼承者（通常是接受釀造培訓並有意接班的子女）；逐步交接（Gradual Transition）——讓下一代在 30-40 歲接掌主要責任，而上一代仍作為顧問保留影響力，減少突然換代造成的風格或品質斷层。"
+    },
+    {
+      "module": "M7",
+      "type": "single",
+      "question": "「新興布根地酒莊（Emerging Domaine）」的市場進入策略中，「差異化（Differentiation）」的最有效路徑是？",
+      "options": [
+        "A. 新莊只需降低價格，比現有酒莊更便宜即可成功",
+        "B. 專注於被忽略的優質子產區（Undervalued Sub-Appellation）+ 建立獨特的釀造哲學（Distinctive Winemaking Philosophy）——成功案例：Frédéric Mugnier（Chambolle）在繼承前曾有一段低知名度時期，通過持續的品質提升和清晰的「優雅主義（Elegance-First）」哲學，逐漸建立了與酒價不相稱的高品質認知，最終成為最受追捧的新世代酒莊之一",
+        "C. 新莊應複製最成功酒莊的所有做法，包括相同的葡萄園和釀造技術",
+        "D. 新布根地酒莊在市場上沒有任何機會，市場已被老莊完全佔據"
+      ],
+      "correct": 1,
+      "explanation": "布根地「新一代酒農（New Generation Vignerons）」的市場策略案例：Emmanuel Rouget（Henri Jayer 外甥）——通過繼承 Jayer 的風土和哲學，在 Jayer 本人離世後建立了自己的名聲；Domaine des Lambrays（現 LVMH 持有）——通過 20 年的持續品質投資，將一個曾被降級的 Grand Cru 重建為頂尖水準；Domaine Prieuré-Roch（已故創辦人 Yves Roch）——通過激進的極低干預釀造哲學，建立了自然酒（Natural Wine）愛好者的信仰品牌。差異化策略的核心：在布根地成熟市場中，「做和所有人不同的事（Be Different）」比「做和所有人一樣但更便宜」具有更持久的競爭優勢。"
+    },
+    {
+      "module": "M8",
+      "type": "single",
+      "question": "「學術葡萄酒研究（Academic Wine Research）」中，「系統文獻回顧（Systematic Literature Review）」的標準程序是？",
+      "options": [
+        "A. 系統文獻回顧就是隨機閱讀一些相關文章後寫出結論",
+        "B. 制定明確的搜索協議（Search Protocol）→ 使用學術數據庫全面搜索（Google Scholar/Web of Science/Scopus）→ 應用嚴格的納入/排除標準（Inclusion/Exclusion Criteria）→ 批判性評估文獻質量（Critical Quality Appraisal）→ 系統性綜合（Systematic Synthesis）→ 識別研究空白（Research Gap Identification）",
+        "C. 系統文獻回顧只需要搜索中文資料",
+        "D. 系統文獻回顧不適用於葡萄酒研究，只適合醫學研究"
+      ],
+      "correct": 1,
+      "explanation": "葡萄酒學術研究的主要學術數據庫資源：American Journal of Enology and Viticulture (AJEV)——全球最重要的葡萄酒/釀酒學術期刊之一；IVES Technical Reviews——法國葡萄酒研究所的開放存取平台；Journal of Wine Research——社會科學和消費者行為角度的葡萄酒研究；Australian Journal of Grape and Wine Research——澳洲葡萄酒科學的主要期刊。DipWSET 研究論文的搜索策略：組合關鍵詞搜索（如布根地 + 風土 + 地質/Burgundy + Terroir + Geology）+ 前向引用搜索（Forward Citation Search，找到引用了關鍵論文的後續研究）+ 後向引用（Backward Citation，追蹤關鍵論文的引用文獻）組合使用，效率最高。"
+    },
+    {
+      "module": "M8",
+      "type": "single",
+      "question": "「DipWSET 研究論文（Research Paper）」的撰寫中，如何確保「論點的批判性（Argument Criticality）」？",
+      "options": [
+        "A. 批判性論證就是否定所有已有研究的結論",
+        "B. 「批判性 (Critical)」在學術寫作中意指「有依據的分析與評估（Evidence-Based Analysis and Evaluation）」：展示對主題的多角度理解（承認爭議觀點）、對現有證據進行評估（不只是描述，更要判斷證據的強弱）、形成有說服力的自我立場（Defensible Position）而非只是重述他人觀點",
+        "C. 論文只需要羅列事實，不需要形成個人立場",
+        "D. 批判性思維讓論文更容易不及格，最好避免質疑任何已有研究"
+      ],
+      "correct": 1,
+      "explanation": "DipWSET 研究論文的評分標準（Assessment Criteria）中，批判性分析（Critical Analysis）通常佔最高比重——考官所評估的不是「你知道多少事實（Factual Knowledge）」，而是「你能否對複雜問題形成有深度、有說服力的個人立場（Defensible Position）」。批判性論證的實踐技巧：使用「信號語言（Signal Language）」——如「There is compelling evidence that...（有充分證據顯示...）」、「However, this view has been challenged by...（然而，此觀點已被...質疑）」、「The weight of evidence suggests...（總體證據傾向於...）」——這些語言表達了評估性思維（Evaluative Thinking）而非純描述性思維（Descriptive Thinking）。"
+    },
+    {
+      "module": "M8",
+      "type": "single",
+      "question": "「盲品競賽（Blind Tasting Competition）」準備的關鍵心理策略是？",
+      "options": [
+        "A. 盲品競賽只需要準備布根地，忽略其他產區",
+        "B. 建立「系統性消除框架（Systematic Elimination Framework）」+ 維持「不確定性的舒適感（Comfort with Uncertainty）」——頂尖盲品競賽者的核心策略：先用 SAT 的感官數據確定「什麼是最可能的（Most Probable）」，再系統性地排除「什麼是不可能的（Cannot Be）」；同時接受「可能犯錯（Possibility of Error）」並不因不確定而癱瘓，而是在最佳可用信息下做出「最佳推斷（Best Inference）」",
+        "C. 盲品競賽應該快速猜測，思考越少越好",
+        "D. 盲品競賽的正確策略是直接說出最著名的酒款，憑名氣猜"
+      ],
+      "correct": 1,
+      "explanation": "國際頂尖盲品競賽（Best Sommelier of the World(ASI)/WSET Diploma Blind Tasting）的分析框架：「基率思考（Base Rate Thinking）」——頂尖盲品者在做最終推斷時，會根據「什麼葡萄酒在世界上最常見（Base Rate Frequency）」作為先驗估計（Prior Estimate），而非根據最複雜/最罕見的假設；例如，一款淡寶石紅、高酸度、低單寧的紅酒，「基率」最高的推斷是 Pinot Noir（Burgundy/Oregon），而非立即假設它是稀有的 Schiava 或 Poulsard——在基率假設的基礎上，再根據具體感官細節調整、確認或推翻這個假設。"
+    },
+    {
+      "module": "M8",
+      "type": "multiple",
+      "question": "「布根地大師課程（L4）」完成後，持有者的「核心競爭力（Core Competencies）」包括？（多選）",
+      "options": [
+        "A. 跨模組整合分析能力（Cross-Module Integration Analysis）：能夠從歷史、風土、商業、研究等多維度系統性分析布根地葡萄酒議題",
+        "B. 大師級品評技能（Master-Level Tasting Skills）：能夠系統性地品評並提供具分析深度的布根地葡萄酒品酒筆記",
+        "C. 葡萄酒教育與溝通能力（Wine Education & Communication）：能夠針對不同受眾設計並傳遞高品質的葡萄酒知識",
+        "D. L4 完成後只能從事布根地葡萄酒工作，不能轉換到其他產區"
+      ],
+      "correct": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "L4 布根地大師課程建立的核心競爭力是跨領域、可遷移的（Transferable Competencies）——雖然內容以布根地為核心，但建立的「系統性分析框架（Systematic Analysis Framework）」、「批判性研究方法（Critical Research Methods）」和「深度溝通能力（Deep Communication Ability）」，可以完全應用到其他葡萄酒產區的深度研究。L4 的設計哲學：「用布根地作為最高複雜度的葡萄酒學習載體（Burgundy as Learning Vehicle for Maximum Complexity），培養的是分析能力，而非國家/產區特定的記憶。」"
+    },
+    {
+      "module": "M1",
+      "type": "single",
+      "question": "「布根地大公國（Duchy of Burgundy）」在 15 世紀的文化貢獻對今日葡萄酒定位的影響是？",
+      "options": [
+        "A. 大公國時期的歷史與現代葡萄酒品質完全無關",
+        "B. 瓦盧瓦王朝大公（Valois Dukes，1363-1477）將布根地葡萄酒確立為歐洲宮廷的頂尖奢侈品，建立了「布根地葡萄酒 = 最高貴族品位（Highest Aristocratic Taste）」的初始文化定位，此文化記憶持續強化至今的品牌溢價",
+        "C. 大公國廢除了所有葡萄酒的貴族地位",
+        "D. 大公國只推廣波爾多葡萄酒，不包括布根地"
+      ],
+      "correct": 1,
+      "explanation": "勃根地大公菲利普三世（Philip the Good / Philippe le Bon）和大膽查理（Charles the Bold）時代（15 世紀），布根地宮廷是歐洲最富貴的宮廷之一——布根地葡萄酒在這個巔峰時代成為歐洲宮廷的外交工具（Diplomatic Gift）和身份象徵（Status Symbol）。大公國資本：儘管在 1477 年布根地大公國滅亡後被法國王室兼併，布根地葡萄酒的「宮廷傳承品牌（Court Heritage Brand）」在歐洲貴族記憶中留下了深遠印記，是 18-19 世紀布根地葡萄酒在英國、俄羅斯宮廷持續受到追捧的重要文化基礎。"
+    },
+    {
+      "module": "M2",
+      "type": "single",
+      "question": "「新西蘭（New Zealand）中奧塔哥（Central Otago）Pinot Noir」的風土特色是？",
+      "options": [
+        "A. 中奧塔哥是熱帶氣候，生產豐醇濃郁的 Pinot Noir",
+        "B. 世界最南端的主要葡萄酒產區之一（緯度約 45°S），大陸性氣候（Continental Climate）+ 片岩（Schist）土壤，賦予 Pinot Noir 濃郁的暗色水果（Dark Cherry/Plum）+ 獨特的香料感（Spice）和較布根地更豐厚但清爽的酸度，酒體中至豐——是全球最令人興奮的 Pinot Noir 新興產區之一",
+        "C. 中奧塔哥只種植 Chardonnay，不產 Pinot Noir",
+        "D. 中奧塔哥的 Pinot Noir 風格與布根地完全相同，無法區分"
+      ],
+      "correct": 1,
+      "explanation": "中奧塔哥（Central Otago）的地理特殊性：位於南島內陸，被山脈包圍，形成罕見的大陸性氣候（與新西蘭其他沿海產區截然不同）——夏季溫熱（充分成熟）冬季嚴寒（休眠深），加上極強的日照和紫外線（高海拔 + 臭氧層稀薄）使葡萄皮色素（Anthocyanin）濃縮。主要子產區：Bannockburn、Gibbston、Bendigo、Cromwell Basin、Alexandra——各有微氣候和土壤差異，使中奧塔哥內部也呈現布根地式的風土多樣性。代表酒莊：Felton Road / Mt Difficulty / Rippon / Two Paddocks（Sam Neill 持有）——已在國際市場（特別是英、美）建立了布根地品質可比的頂級 Pinot Noir 形象。"
+    },
+    {
+      "module": "M2",
+      "type": "single",
+      "question": "「布根地 Aligoté（阿里哥蝶）」在全球白酒品種多樣性中的定位是？",
+      "options": [
+        "A. Aligoté 已被廢棄，不再在布根地種植",
+        "B. Aligoté 是布根地的次要白酒品種（Secondary White Grape），主要種植於 Bourgogne Aligoté AOC 和 Bouzeron 村莊（Côte Chalonnaise 唯一針對 Aligoté 的村莊 AOC）——以高酸度（High Acidity）、清爽的青蘋果（Green Apple）和檸檬風味聞名，是製作「基爾（Kir）雞尾酒（Aligoté + Blackcurrant Liqueur）」的傳統基酒；Bouzeron 的頂尖 Aligoté（de Villaine 家族）已展示出可媲美中等 Chardonnay 的品質複雜度",
+        "C. Aligoté 在品質上完全超越 Chardonnay",
+        "D. Aligoté 是紅酒品種，不是白酒"
+      ],
+      "correct": 1,
+      "explanation": "Aligoté 的歷史與復興：Aligoté 曾因品質低劣（相較 Chardonnay）被許多布根地酒農逐漸拔除取代；然而，隨著老藤 Aligoté（Vieilles Vignes，50 年以上藤齡）的品質重新受到認可，加上自然酒運動（Natural Wine Movement）對非主流品種的重新發掘，Aligoté 正在布根地經歷一定程度的復興。Bouzeron（Côte Chalonnaise）是唯一可以將「Bouzeron」單獨標示在酒標的 Aligoté 特定 AOC——代表了布根地對 Aligoté 次要品種的最高肯定，也是收藏者中相對被低估但物有所值的布根地白酒選擇。"
+    },
+    {
+      "module": "M4",
+      "type": "single",
+      "question": "「混合式學習（Blended Learning）」在葡萄酒教育中的最佳應用模式是？",
+      "options": [
+        "A. 混合式學習就是同時教多種葡萄酒，沒有特定設計",
+        "B. 線上學習（Online Learning）負責知識傳遞（Knowledge Delivery）——如觀念講解/法規記憶/地圖學習；實體課程（Face-to-Face Sessions）專注於高互動性技能——如品評練習/討論辯論/案例分析；兩者各司其職，最大化學習效果（Learning Effectiveness）和資源效率（Resource Efficiency）",
+        "C. 混合式學習使葡萄酒教育品質下降，應避免使用",
+        "D. 線上課程完全可以取代實體葡萄酒教育，不需要混合模式"
+      ],
+      "correct": 1,
+      "explanation": "混合式學習（Blended Learning）的設計原則（Based on Garrison & Kanuka, 2004）：有效的混合式設計不是簡單地「把課程搬到網路上」，而是根據不同類型的學習目標（Learning Objectives）選擇最適合的媒介——知識性學習目標（Knowledge Learning Objectives，如記憶 AOC 法規、了解土壤類型）更適合異步線上學習（因為學員可以重複觀看/暫停/依自己節奏學習）；技能性和態度性學習目標（Skill/Attitude Learning Objectives，如品評實踐/專業討論/即席分析）則在有講師引導和同儕互學的實體環境中更有效。葡萄酒教育的混合模式典範：WSET 自身的學習材料（Specification/Study Guide，強調線上/自學為主）+ 課堂實體品評和討論，就是已驗證的混合學習框架。"
+    },
+    {
+      "type": "single",
+      "question": "「持續專業發展（Continuing Professional Development, CPD）」對於取得大師級認證後的從業者最重要的意義是？",
+      "options": [
+        "A. CPD 只是形式要求，對實際能力沒有幫助",
+        "B. 維持知識前沿（Knowledge Currency）+ 擴大行業影響力（Industry Influence）——葡萄酒業持續演變（氣候變遷影響、新產區崛起、新研究），CPD 確保持證者的知識保持最新；透過演講、寫作、教學，持證者將個人品牌從「布根地知識擁有者」升級為「布根地意見領袖（Thought Leader）」",
+        "C. 大師認證一旦取得就終身有效，不需要持續更新",
+        "D. CPD 只針對侍酒師，研究者和教育者不需要"
+      ],
+      "correct": 1,
+      "explanation": "CPD 的雙重價值：知識維護（Knowledge Maintenance）——葡萄酒業的快速演變（Aligoté 復興、Gamay 升值、極端氣候年份特徵）要求持續學習；影響力累積（Influence Building）——定期發表（寫作、演講、教學）是將個人知識轉化為社會資本（Social Capital）的關鍵機制，是頂尖葡萄酒專業人士維持業界地位的核心活動。"
+    },
+    {
+      "type": "single",
+      "question": "「大師級品酒筆記（Master-Level Tasting Note）」與初學者筆記的根本差異是？",
+      "options": [
+        "A. 大師筆記只需要更多形容詞，文字越华丽越好",
+        "B. 精準的結構分析（Structural Analysis）+ 一致的推斷邏輯（Deductive Logic）——大師筆記的核心是：每個觀察（香氣、口感、外觀）都是推斷品種/產區/年份的「證據（Evidence）」；筆記的品質在於「觀察→推斷鏈的邏輯一致性（Logical Consistency）」，而非描述語言的華麗程度",
+        "C. 大師筆記必須使用英文，中文筆記不算專業",
+        "D. 大師筆記不需要包含推斷部分，只需精確描述感官"
+      ],
+      "correct": 1,
+      "explanation": "高品質筆記的「SAT 金字塔（Systematic Approach to Tasting Pyramid）」：底層——外觀、香氣強度、口感結構（客觀描述）；中層——香氣類型、品質判斷（類別化）；頂層——推斷邏輯（品種/產區/年份的條件式推斷）。大師筆記的典型失誤：描述豐富但「推斷缺席」（描述了所有感官細節，但沒有基於這些細節做出推斷）——這種筆記在 WSET 或 MW 考試中只能得到「描述分」而非「分析分」。"
+    },
+    {
+      "type": "single",
+      "question": "「建立布根地葡萄酒專業網絡（Professional Network Building）」的最高效策略是？",
+      "options": [
+        "A. 只要有業界名片就能建立足夠的專業人脈",
+        "B. 「給予優先（Give First）」策略——主動為網絡成員提供價值（分享市場洞察、介紹業界聯繫、協助組織活動），而非只尋求接受；在台灣，這意味著：定期舉辦布根地教育品鑑、協助進口商培訓其銷售人員、為本地媒體提供深度內容——「持續給予」會讓你在布根地這個高度依賴人際信任的小社群中，自然成為中心節點",
+        "C. 只需參加最多的酒展，人脈自然建立",
+        "D. 業界人脈的建立完全依靠社群媒體，實體活動不重要"
+      ],
+      "correct": 1,
+      "explanation": "布根地的「小村莊網絡效應（Village Network Effect）」：布根地是一個小圈子，頂尖酒莊的莊主們互相熟識——台灣專業人士要進入這個圈子，需要的是「可信度建立（Credibility Building）」而非「商業拜訪（Business Visit）」；可信度的來源：深度知識展示（現場提問精準，讓對方感到被理解）、長期持續關係（每年訪問同一酒莊，累積信任）、介紹人機制（通過既有業界關係獲得引介，比冷訪問效果高 10 倍）。"
+    },
+    {
+      "type": "single",
+      "question": "「Level 4 布根地大師課程綜合評量」的設計哲學是？",
+      "options": [
+        "A. 只測試記憶能力，誰背得最多誰就通過",
+        "B. 整合性批判思維測試（Integrative Critical Thinking）——綜合評量的目標是測試學習者是否能跨模組整合知識（如：將歷史文化背景 × 土壤科學 × 商業策略 × 盲品技能結合，來分析一個真實問題）；單一模組的答案不足——只有能夠「跨界連結」的學習者才能達到大師水平",
+        "C. 綜合評量只測試最後一個模組（M8），前面模組不重要",
+        "D. 通過標準只需要 50%，不需要真正理解"
+      ],
+      "correct": 1,
+      "explanation": "Layout 4 綜合評量的「跨模組整合題」示範：問題「如果你要為台灣頂级中餐廳設計布根地專題晚宴，你如何整合：產區歷史故事（M1）× 盲品教學設計（M4）× 葡萄酒配餐（M3）× 成本控制（M7）×  進口法規（M6）？」——這類問題沒有單一標準答案，評分的是「整合深度」和「邏輯一致性」，而非標準答案的記憶。"
+    },
+    {
+      "type": "multiple",
+      "question": "完成「Level 4 布根地大師課程」後，學習者應具備的「大師級整合能力」包括哪些？（多選）",
+      "options": [
+        "A. 跨模組知識整合——能連結歷史、土壤、釀造、商業、法規等面向，分析布根地葡萄酒的整體生態",
+        "B. 批判性研究能力——能設計有說服力的研究問題、選擇適合的方法論、撰寫符合學術規範的論文",
+        "C. 大師級盲品——能在有限時間內系統性分析葡萄酒並給出有邏輯的品種/產區/年份推斷",
+        "D. 只需要背誦布根地所有 AOC 的名稱和面積，不需要其他能力"
+      ],
+      "correct": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "大師級能力的三個核心維度（A/B/C 正確，D 描述的是錯誤認知）：知識整合（A）——布根地的複雜性需要跨學科視角，將歷史、地理、科學、商業串聯；研究能力（B）——能設計研究、評估文獻、表達論點，是 DipWSET/MW 的核心要求；盲品技能（C）——系統性感官分析和邏輯推斷是葡萄酒職業的實戰核心。三者相輔相成，缺一不完整。"
+    }
+  ]
+}

@@ -27,7 +27,7 @@
         </button>
         
         <div class="nav-progress-info">
-          頁面 {{ currentSlide + 1 }} / {{ slides.length }}
+          {{ slides[currentSlide]?.title || `頁面 ${currentSlide + 1} / ${slides.length}` }}
         </div>
         
         <button 
@@ -983,15 +983,18 @@ onUnmounted(() => {
   flex-direction: column;
 }
 
-/* 頂部導航欄 */
+/* 頂部導航欄：毛玻璃效果 */
 .top-navigation {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   padding: 12px 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   z-index: 100;
+  flex-shrink: 0;
 }
 
 /* Row 1：返回按鈕 + 頁碼 */
@@ -1107,24 +1110,25 @@ onUnmounted(() => {
 /* 簡報主區域 */
 .slide-container {
   flex: 1;
-  position: relative;
+  min-height: 0;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  padding: 40px;
+  padding: 20px 24px;
   overflow: hidden;
 }
 
 .slide {
   width: 100%;
-  max-width: 1000px;
+  max-width: 960px;
   height: 100%;
-  max-height: 600px;
   background: white;
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-radius: 22px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.45),
+              0 2px 0 rgba(102,126,234,0.3);
   animation: slideIn 0.4s ease-out;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 @keyframes slideIn {
@@ -1140,16 +1144,13 @@ onUnmounted(() => {
 
 /* 底部進度條區域 */
 .bottom-progress {
-  position: relative;
-  background: white;
-  padding: 0;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
 .progress-bar-container {
   width: 100%;
-  height: 6px;
-  background: #e0e0e0;
+  height: 4px;
+  background: rgba(255,255,255,0.1);
   position: relative;
   overflow: hidden;
 }
@@ -1237,8 +1238,6 @@ onUnmounted(() => {
   }
 
   .slide {
-    max-height: none;
-    height: auto;
     max-width: 100%;
     border-radius: 16px;
   }

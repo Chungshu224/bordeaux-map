@@ -13,10 +13,12 @@
             v-for="n in [1, 2, 3, 4]"
             :key="n"
             class="level-tab"
-            :class="{ active: props.currentLevel === n }"
-            @click="emit('changeLevel', n)"
+            :class="{ active: props.currentLevel === n, locked: !props.unlockedLevels.includes(n) }"
+            :disabled="!props.unlockedLevels.includes(n)"
+            :title="!props.unlockedLevels.includes(n) ? `需完成 Level ${n - 1} 綜合評量才能解鎖` : `Level ${n}`"
+            @click="props.unlockedLevels.includes(n) && emit('changeLevel', n)"
           >
-            L{{ n }}
+            <span v-if="!props.unlockedLevels.includes(n)" class="tab-lock">🔒</span>L{{ n }}
           </button>
         </div>
       </div>
@@ -167,7 +169,8 @@ import { ref, computed } from 'vue'
 const props = defineProps({
   currentLevel: { type: Number, required: true },       // 1 | 2 | 3 | 4
   currentLevelData: { type: Object, required: true },   // from learningLevels[`level${n}`]
-  completedLessons: { type: Array, default: () => [] }
+  completedLessons: { type: Array, default: () => [] },
+  unlockedLevels: { type: Array, default: () => [1] }   // e.g. [1, 2]
 })
 
 const emit = defineEmits(['backToLevelSelector', 'changeLevel', 'startLesson'])
@@ -289,8 +292,10 @@ function scrollToModuleAndClose (moduleId) {
   transition: all 0.2s;
   min-width: 44px;
 }
-.level-tab:hover { color: white; background: rgba(255, 255, 255, 0.14); }
+.level-tab:hover:not(.locked) { color: white; background: rgba(255, 255, 255, 0.14); }
 .level-tab.active { background: white; color: var(--primary); }
+.level-tab.locked { opacity: 0.4; cursor: not-allowed; }
+.tab-lock { font-size: 0.65rem; margin-right: 2px; vertical-align: middle; }
 .header-right { display: flex; align-items: center; gap: 10px; }
 .progress-btn {
   display: flex;

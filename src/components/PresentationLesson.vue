@@ -236,18 +236,7 @@
         class="lesson-progress-bar"
       />
 
-      <!-- 課程完成提示 -->
-  <div v-if="currentSlide === totalSlides - 1 && showCompletionCard" class="completion-section">
-        <div class="completion-card">
-          <button @click="closeCompletionCard" class="close-completion-btn" title="關閉">✕</button>
-          <h3>🎉 課程完成！</h3>
-          <p>恭喜您完成了「{{ lessonData.title }}」課程</p>
-          <div class="completion-actions">
-            <button @click="restartLesson" class="restart-btn">🔄 重新開始</button>
-            <button @click="nextLesson" class="next-lesson-btn">➡️ 下一課程</button>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </template>
@@ -2077,8 +2066,8 @@ function renderGenericTable({ headers = [], rows = [], description = '' }) {
 
 const slides = computed(() => {
   const raw = lessonContent.value || []
-  // 避免重複呈現封面/標題（第 0 頁已用 lessonData 顯示）
-  const mapped = raw.filter(s => s?.type !== 'cover' && s?.type !== 'title').map(normalizeSlide)
+  // 避免重複呈現封面/標題（第 0 頁已用 lessonData 顯示），並移除課程完成頁
+  const mapped = raw.filter(s => s?.type !== 'cover' && s?.type !== 'title' && s?.type !== 'course-complete' && s?.type !== 'end').map(normalizeSlide)
   // 支援 normalizeSlide 回傳多張投影片
   const slideArray = mapped.flatMap(x => Array.isArray(x) ? x : [x]).filter(Boolean)
   // 若此課程為綜合評量且題庫已載入，在最後添加隨機測驗
@@ -2103,6 +2092,8 @@ const totalSlides = computed(() => slides.value.length)
 const currentSlideData = computed(() => {
   return slides.value[currentSlide.value] || null
 })
+
+const currentSlideTitle = computed(() => currentSlideData.value?.title || '')
 
 // 監看當前投影片內容變化，於 DOM 更新後掛載互動按鈕（例如下載空白 PDF）
 watch(() => currentSlideData.value?.content, async () => {
@@ -2320,6 +2311,8 @@ watch(currentSlide, (newSlide) => {
 })
 
 onMounted(() => {
+  // 進入課程時捲回最上方，確保返回按鈕可見
+  window.scrollTo({ top: 0, behavior: 'instant' })
   resetQuiz()
   // 開始學習會話
   const lessonTitle = lessonData.value?.title || props.lessonId
@@ -2337,6 +2330,7 @@ onUnmounted(() => {
 defineExpose({
   currentSlide,
   totalSlides,
+  currentSlideTitle,
   nextSlide,
   previousSlide,
   goToSlide

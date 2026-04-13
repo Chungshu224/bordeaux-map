@@ -48,7 +48,7 @@
             <span class="nav-title">探索地圖</span>
             <span class="nav-desc">互動式義大利產區地圖・20 個行政區</span>
           </button>
-          <button class="nav-card achievements" @click="showProgress = true">
+          <button class="nav-card achievements" @click="showAchievements = true">
             <span class="nav-icon">🏆</span>
             <span class="nav-title">學習成就</span>
             <span class="nav-desc">查看已完成課程與學習記錄</span>
@@ -63,10 +63,10 @@
             <span class="nav-title">品種指南</span>
             <span class="nav-desc">350+ 本土品種・Nebbiolo・Sangiovese</span>
           </button>
-          <button class="nav-card pairings" @click="$emit('openPairings')">
-            <span class="nav-icon">🍽️</span>
-            <span class="nav-title">餐酒搭配</span>
-            <span class="nav-desc">義式料理・地域配對・侍酒建議</span>
+          <button class="nav-card notebook" @click="$emit('openNotebook')">
+            <span class="nav-icon">📔</span>
+            <span class="nav-title">品飲筆記</span>
+            <span class="nav-desc">記錄品飲心得・紅白氣泡甜酒・350+ 品種</span>
           </button>
         </div>
       </section>
@@ -238,17 +238,19 @@
         📍 登入後可將學習進度同步至雲端
       </div>
 
-      <!-- 底部統計摘要 -->
-      <div class="progress-summary-section">
-        <div class="stats-mini-bar">
-          <div class="mini-stat-item" v-for="stat in miniStats" :key="stat.label">
-            <span class="mini-stat-icon">{{ stat.icon }}</span>
-            <div class="mini-stat-detail">
-              <span class="mini-stat-value">{{ stat.value }}</span>
-              <span class="mini-stat-label">{{ stat.label }}</span>
-            </div>
-          </div>
-          <button class="view-detail-btn" @click="showProgress = true">查看詳細統計 →</button>
+      <!-- 學習進度統計橫列 -->
+      <LearningStatsMini course-key="italy" @show-details="showProgress = true" />
+    </div>
+
+    <!-- 成就彈窗 -->
+    <div v-if="showAchievements" class="modal-overlay" @click="showAchievements = false">
+      <div class="achievement-modal" @click.stop>
+        <div class="modal-header">
+          <h3>🏆 學習成就</h3>
+          <button class="close-btn" @click="showAchievements = false">×</button>
+        </div>
+        <div class="modal-content">
+          <AchievementsDashboard course-key="italy" @back="showAchievements = false" />
         </div>
       </div>
     </div>
@@ -261,21 +263,7 @@
           <button class="close-btn" @click="showProgress = false">×</button>
         </div>
         <div class="modal-content">
-          <div class="pm-levels">
-            <div v-for="(def, key) in levelDefs" :key="key" class="pm-level-row">
-              <div class="pm-level-info">
-                <span :class="['pm-level-icon', `pm-${key}`]">{{ def.icon }}</span>
-                <span class="pm-level-name">{{ def.title }}</span>
-              </div>
-              <div class="pm-bar-wrap">
-                <div class="pm-bar-track">
-                  <div :class="['pm-bar-fill', `fill-${key}`]"
-                    :style="{ width: `${getLevelProgress(key)}%` }"></div>
-                </div>
-                <span class="pm-pct">{{ getLevelProgress(key) }}%</span>
-              </div>
-            </div>
-          </div>
+          <LearningProgressDashboard course-key="italy" />
         </div>
       </div>
     </div>
@@ -286,12 +274,16 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../../stores/authStore.js'
-import { courseLevels, getLevelProgressPct } from '../data/courseLevels.js'
+import { courseLevels, getLevelProgressPct, getUserProgress } from '../data/courseLevels.js'
+import AchievementsDashboard from '../../AchievementsDashboard.vue'
+import LearningStatsMini from '../../LearningStatsMini.vue'
+import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
 
 const router = useRouter()
-const emit = defineEmits(['startLevel', 'openMap', 'openVarieties', 'openPairings'])
+const emit = defineEmits(['startLevel', 'openMap', 'openVarieties', 'openNotebook'])
 
 const showProgress = ref(false)
+const showAchievements = ref(false)
 
 const authUser = computed(() => authState.user)
 const displayName = computed(() => authActions.getDisplayName())
@@ -318,8 +310,13 @@ function getLevelProgress (key) {
   return getLevelProgressPct(key)
 }
 
-function isLevelUnlocked (_key) {
-  return true
+function isLevelUnlocked (key) {
+  // 管理員全部解鎖
+  if (authActions.isAdmin()) return true
+  if (key === 'level1') return true
+  if (key === 'level2') return getUserProgress('level1').completedLessons.includes('L1M4L2')
+  if (key === 'level3') return getUserProgress('level2').completedLessons.includes('L2FinalExam')
+  return false
 }
 
 function selectLevel (key) {
@@ -482,7 +479,7 @@ function getBubbleStyle (index) {
 .nav-card.achievements { background: linear-gradient(135deg, #FFC107, #F57F17); }
 .nav-card.progress     { background: linear-gradient(135deg, #9C27B0, #6A1B9A); }
 .nav-card.varieties    { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
-.nav-card.pairings     { background: linear-gradient(135deg, #8B0000, #5a0000); }
+.nav-card.notebook     { background: linear-gradient(135deg, #6B4F1A, #3D2B08); }
 
 /* Level cards */
 .level-selection-grid { margin-bottom: 3rem; }
@@ -600,6 +597,12 @@ function getBubbleStyle (index) {
   background: white; border-radius: 20px;
   max-width: 560px; width: 90%; max-height: 80vh; overflow-y: auto;
 }
+.achievement-modal {
+  background: white; border-radius: 20px;
+  max-width: 900px; width: 94%; max-height: 90vh; overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.achievement-modal .modal-content { flex: 1; overflow-y: auto; padding: 0; }
 .modal-header {
   display: flex; justify-content: space-between; align-items: center;
   padding: 1.5rem 2rem; border-bottom: 1px solid #eee;

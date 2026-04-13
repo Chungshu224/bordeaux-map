@@ -67,6 +67,7 @@ const formattedContent = computed(() => {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 0 20px;
 }
 
@@ -76,8 +77,40 @@ const formattedContent = computed(() => {
   color: #34495e;
   text-align: left;
   margin-bottom: 24px;
+  /* 防止任何子元素溢出 */
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
+/* ── v-html 深層子元素統一規格 ── */
+.main-content :deep(*) {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* 確保 grid / flex 容器不讓子元素溢出 */
+.main-content :deep(div) {
+  min-width: 0;
+}
+
+/* 表格水平捲動 */
+.main-content :deep(table) {
+  display: block;
+  overflow-x: auto;
+  white-space: normal;
+  width: 100%;
+}
+
+/* 圖片不超寬 */
+.main-content :deep(img) {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-content :deep(strong),
 .main-content strong {
   color: #2c3e50;
   font-weight: 700;
