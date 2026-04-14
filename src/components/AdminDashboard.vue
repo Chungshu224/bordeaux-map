@@ -188,6 +188,90 @@
         </div>
       </section>
 
+      <!-- ── 學習進度 ── -->
+      <section v-if="activeTab === 'progress'" class="tab-panel">
+        <div class="section-header">
+          <h2 class="section-title">📈 學習進度</h2>
+          <div class="section-actions">
+            <select v-model="progressCourse" class="filter-select" @change="loadProgress">
+              <option value="">全部課程</option>
+              <option value="bordeaux">波爾多</option>
+              <option value="bourgogne">布根地</option>
+              <option value="italy">義大利</option>
+            </select>
+          </div>
+        </div>
+        <div v-if="progressLoading" class="loading-state">載入中…</div>
+        <div v-else class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>課程</th>
+                <th>模組</th>
+                <th>單元</th>
+                <th>完成</th>
+                <th>分數</th>
+                <th>次數</th>
+                <th>更新時間</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="p in progressList" :key="p.user_id + p.course_id + p.module_id + p.unit_id">
+                <td>{{ p.email }}</td>
+                <td><span class="course-tag">{{ courseLabel(p.course_id) }}</span></td>
+                <td class="mono-cell">{{ p.module_id }}</td>
+                <td class="mono-cell">{{ p.unit_id }}</td>
+                <td class="center-cell">{{ p.completed ? '✓' : '—' }}</td>
+                <td class="center-cell">{{ p.score ?? '—' }}</td>
+                <td class="center-cell">{{ p.attempts }}</td>
+                <td class="date-cell">{{ formatDate(p.updated_at) }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p v-if="progressList.length === 0" class="empty-state">尚無學習進度資料</p>
+        </div>
+      </section>
+
+      <!-- ── 成就紀錄 ── -->
+      <section v-if="activeTab === 'achievements'" class="tab-panel">
+        <div class="section-header">
+          <h2 class="section-title">🏆 成就紀錄</h2>
+          <div class="section-actions">
+            <select v-model="achievementsCourse" class="filter-select" @change="loadAchievements">
+              <option value="">全部課程</option>
+              <option value="bordeaux">波爾多</option>
+              <option value="bourgogne">布根地</option>
+              <option value="italy">義大利</option>
+            </select>
+          </div>
+        </div>
+        <div v-if="achievementsLoading" class="loading-state">載入中…</div>
+        <div v-else class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>課程</th>
+                <th>成就</th>
+                <th>類型</th>
+                <th>獲得時間</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="a in achievementsList" :key="a.user_id + a.achievement_id">
+                <td>{{ a.email }}</td>
+                <td>{{ a.course_id ? courseLabel(a.course_id) : '通用' }}</td>
+                <td>{{ a.title }}</td>
+                <td><span :class="['badge-tag', a.badge_type]">{{ badgeTypeLabel(a.badge_type) }}</span></td>
+                <td class="date-cell">{{ formatDate(a.earned_at) }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p v-if="achievementsList.length === 0" class="empty-state">尚無成就紀錄</p>
+        </div>
+      </section>
+
       <!-- ── 辭典管理 ── -->
       <section v-if="activeTab === 'glossary'" class="tab-panel">
         <div class="section-header">
@@ -264,7 +348,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { supabase } from '../lib/supabaseClient.js'
 import { authActions, authState } from '../stores/authStore.js'
@@ -274,11 +358,13 @@ const router = useRouter()
 
 // ── Tab 設定 ────────────────────────────────────────────────
 const tabs = [
-  { id: 'overview',  label: '總覽',     icon: '📊' },
-  { id: 'students',  label: '學員管理', icon: '👥' },
-  { id: 'courses',   label: '課程管理', icon: '📚' },
-  { id: 'revenue',   label: '營收報表', icon: '💰' },
-  { id: 'glossary',  label: '辭典管理', icon: '📖' },
+  { id: 'overview',      label: '總覽',     icon: '📊' },
+  { id: 'students',      label: '學員管理', icon: '👥' },
+  { id: 'courses',       label: '課程管理', icon: '📚' },
+  { id: 'revenue',       label: '營收報表', icon: '💰' },
+  { id: 'progress',      label: '學習進度', icon: '📈' },
+  { id: 'achievements',  label: '成就紀錄', icon: '🏆' },
+  { id: 'glossary',      label: '辭典管理', icon: '📖' },
 ]
 const activeTab = ref('overview')
 
@@ -435,6 +521,38 @@ async function loadRevenue() {
   }
 }
 
+// ── 學習進度 ────────────────────────────────────────────────
+const progressLoading = ref(false)
+const progressList    = ref([])
+const progressCourse  = ref('')
+
+async function loadProgress() {
+  progressLoading.value = true
+  try {
+    const params = progressCourse.value ? { p_course_id: progressCourse.value } : {}
+    const { data } = await supabase.rpc('admin_get_all_progress', params)
+    progressList.value = data ?? []
+  } finally {
+    progressLoading.value = false
+  }
+}
+
+// ── 成就紀錄 ────────────────────────────────────────────────
+const achievementsLoading = ref(false)
+const achievementsList    = ref([])
+const achievementsCourse  = ref('')
+
+async function loadAchievements() {
+  achievementsLoading.value = true
+  try {
+    const params = achievementsCourse.value ? { p_course_id: achievementsCourse.value } : {}
+    const { data } = await supabase.rpc('admin_get_all_achievements', params)
+    achievementsList.value = data ?? []
+  } finally {
+    achievementsLoading.value = false
+  }
+}
+
 // ── 初始化 ──────────────────────────────────────────────────
 onMounted(async () => {
   // 安全檢查：非 admin 跳回首頁
@@ -443,6 +561,12 @@ onMounted(async () => {
     return
   }
   await Promise.all([loadStats(), loadStudents(), loadCourses(), loadRevenue()])
+})
+
+// 切換 tab 時自動載入
+watch(activeTab, (tab) => {
+  if (tab === 'progress'     && progressList.value.length === 0)     loadProgress()
+  if (tab === 'achievements' && achievementsList.value.length === 0) loadAchievements()
 })
 
 // ── 導覽 ────────────────────────────────────────────────────
@@ -475,6 +599,9 @@ function formatDate(dateStr) {
 function barWidth(count, total) {
   if (!total) return 0
   return Math.round((count / total) * 100)
+}
+function badgeTypeLabel(type) {
+  return { badge: '徽章', certificate: '證書', milestone: '里程碑' }[type] ?? type
 }
 </script>
 
@@ -667,4 +794,13 @@ function barWidth(count, total) {
 .notes-loading { font-size: .85rem; color: #aaa; padding: 10px 0; }
 .notes-actions { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
 .notes-saved-msg { font-size: .82rem; color: #27ae60; font-weight: 600; }
+
+/* ── 學習進度 / 成就紀錄 ── */
+.mono-cell   { font-family: monospace; font-size: .8rem; color: #555; }
+.center-cell { text-align: center; color: #444; }
+.course-tag  { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: .75rem; font-weight: 600; background: #f0ebe5; color: #6b1220; }
+.badge-tag   { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: .75rem; font-weight: 600; }
+.badge-tag.badge       { background: #fff3e0; color: #e67e22; }
+.badge-tag.certificate { background: #e8f8f0; color: #27ae60; }
+.badge-tag.milestone   { background: #f3e5f5; color: #8e44ad; }
 </style>
