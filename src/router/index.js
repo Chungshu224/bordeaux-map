@@ -64,6 +64,14 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
 
+  // ─── 西班牙探索地圖 ─────────────────────────────────────────────────────────
+  {
+    path: '/spain',
+    name: 'Spain',
+    component: () => import('../components/SpainPage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
   // ─── 使用者儀表板 ───────────────────────────────────────────────────────────
   {
     path: '/dashboard',

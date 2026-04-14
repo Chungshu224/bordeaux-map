@@ -40,6 +40,7 @@
     "@vitejs/plugin-vue": "^4.x",
     "ffmpeg-static": "^5.2.0",
     "sass": "^1.93.2",
+    "shapefile": "^0.6.6",
     "sharp": "^0.33.5",
     "supabase": "^2.85.0",
     "vite": "^4.x"
