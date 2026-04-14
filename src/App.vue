@@ -31,6 +31,38 @@
     <!-- 成就通知容器 -->
     <AchievementNotificationsContainer />
 
+    <!-- 閒置警告 / 被踢出彈窗 -->
+    <IdleWarningModal
+      :showIdleWarning="showIdleWarning"
+      :idleSecondsLeft="idleSecondsLeft"
+      :kickedByOtherDevice="kickedByOtherDevice"
+      @continue="continueSession"
+      @logout="confirmLogout"
+    />
+
+    <!-- Admin 登入選擇彈窗 -->
+    <div v-if="showAdminChoice" class="admin-choice-overlay" @click.self="showAdminChoice = false">
+      <div class="admin-choice-modal">
+        <div class="admin-choice-header">
+          <span>🍷</span>
+          <h2>管理員登入</h2>
+          <p>請選擇您要進入的頁面</p>
+        </div>
+        <div class="admin-choice-buttons">
+          <button class="choice-btn choice-courses" @click="showAdminChoice = false; router.push('/')">
+            <span class="choice-icon">📚</span>
+            <strong>進入課程</strong>
+            <small>波爾多 · 布根地 · 義大利</small>
+          </button>
+          <button class="choice-btn choice-admin" @click="showAdminChoice = false; router.push('/admin')">
+            <span class="choice-icon">⚙️</span>
+            <strong>後台管理</strong>
+            <small>學員 · 課程 · 營收報表</small>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- 裝置資訊顯示 (測試模式) -->
     <div v-if="showDeviceInfo" class="device-info-overlay">
       <div class="device-info-panel">
@@ -50,11 +82,22 @@
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import AchievementNotificationsContainer from './components/AchievementNotificationsContainer.vue'
+import IdleWarningModal from './components/IdleWarningModal.vue'
 import { globalAchievementManager } from './stores/achievementSystem.js'
 import { useResponsiveLayout, getPlatformClasses } from './utils/deviceDetection.js'
-import { authState } from './stores/authStore.js'
+import { authState, authActions } from './stores/authStore.js'
+import { useSessionGuard } from './composables/useSessionGuard.js'
 
 const router = useRouter()
+
+// Session 安全管理（單裝置 + 閒置 10 分鐘提醒）
+const {
+  showIdleWarning,
+  idleSecondsLeft,
+  kickedByOtherDevice,
+  continueSession,
+  confirmLogout,
+} = useSessionGuard(router)
 
 // 裝置偵測
 const layout = useResponsiveLayout()
@@ -95,6 +138,9 @@ const handleKeyDown = (event) => {
 // 應用模式狀態 (供兼容子組件)
 const selectedLevel = ref(1)
 
+// Admin 模式選擇彈窗
+const showAdminChoice = ref(false)
+
 // 路由切換方法 (替換原本的 mode 變數)
 const enterLearningMode = (level) => {
   selectedLevel.value = level
@@ -123,6 +169,11 @@ const backToLevelSelection = () => {
 }
 
 const goToHome = () => {
+  // Admin 登入後顯示選擇畫面：前往課程 or 後台
+  if (authActions.isAdmin()) {
+    showAdminChoice.value = true
+    return
+  }
   router.push('/')
 }
 
@@ -298,6 +349,50 @@ body {
     display: none;
   }
 }
+
+/* Admin 登入選擇彈窗 */
+.admin-choice-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+.admin-choice-modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.25);
+  text-align: center;
+}
+.admin-choice-header span { font-size: 2.8rem; }
+.admin-choice-header h2  { margin: 10px 0 4px; font-size: 1.3rem; color: #222; }
+.admin-choice-header p   { margin: 0 0 24px; color: #888; font-size: .88rem; }
+.admin-choice-buttons { display: flex; gap: 16px; }
+.choice-btn {
+  flex: 1;
+  border: 2px solid #e0d8d0;
+  border-radius: 12px;
+  background: #faf8f5;
+  padding: 20px 12px;
+  cursor: pointer;
+  transition: all .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.choice-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.1); }
+.choice-courses:hover { border-color: #2980b9; background: #ebf5fb; }
+.choice-admin:hover   { border-color: #8b1a2b; background: #fdf0f0; }
+.choice-icon { font-size: 2rem; }
+.choice-btn strong { font-size: .95rem; color: #222; }
+.choice-btn small  { font-size: .75rem; color: #999; }
 
 /* 裝置資訊面板 (開發測試用) */
 .device-info-overlay {

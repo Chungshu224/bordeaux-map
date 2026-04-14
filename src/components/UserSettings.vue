@@ -166,6 +166,67 @@
           </div>
         </section>
 
+        <!-- ── 修改密碼 ──── -->
+        <section class="settings-section">
+          <h3 class="section-title">修改密碼</h3>
+
+          <!-- 密碼更新成功提示 -->
+          <div v-if="pwSuccess" class="success-notice" role="status">
+            <span>✅</span>
+            <span>密碼已成功更新！</span>
+          </div>
+          <!-- 密碼更新錯誤 -->
+          <div v-if="pwError" class="api-error" role="alert">
+            <span>⚠️</span>
+            <span>{{ pwError }}</span>
+          </div>
+
+          <div class="field-group">
+            <label for="s-new-password" class="field-label">新密碼</label>
+            <div class="password-wrapper">
+              <input
+                id="s-new-password"
+                v-model="pwForm.newPassword"
+                :type="showNewPw ? 'text' : 'password'"
+                class="field-input"
+                :class="{ 'has-error': pwErrors.newPassword }"
+                placeholder="至少 8 個字元"
+                autocomplete="new-password"
+                :disabled="isPwSaving"
+              />
+              <button type="button" class="toggle-pw" @click="showNewPw = !showNewPw">{{ showNewPw ? '🙈' : '👁️' }}</button>
+            </div>
+            <!-- 強度條 -->
+            <div class="strength-bar-wrap" v-if="pwForm.newPassword">
+              <div class="strength-bar" :class="pwStrengthClass" :style="{ width: pwStrengthPct + '%' }"></div>
+            </div>
+            <p v-if="pwErrors.newPassword" class="field-error">{{ pwErrors.newPassword }}</p>
+            <p v-else-if="pwForm.newPassword" class="field-hint strength-hint" :class="pwStrengthClass">{{ pwStrengthLabel }}</p>
+          </div>
+
+          <div class="field-group">
+            <label for="s-confirm-password" class="field-label">確認新密碼</label>
+            <div class="password-wrapper">
+              <input
+                id="s-confirm-password"
+                v-model="pwForm.confirmPassword"
+                :type="showConfirmPw ? 'text' : 'password'"
+                class="field-input"
+                :class="{ 'has-error': pwErrors.confirmPassword }"
+                placeholder="再次輸入新密碼"
+                autocomplete="new-password"
+                :disabled="isPwSaving"
+              />
+              <button type="button" class="toggle-pw" @click="showConfirmPw = !showConfirmPw">{{ showConfirmPw ? '🙈' : '👁️' }}</button>
+            </div>
+            <p v-if="pwErrors.confirmPassword" class="field-error">{{ pwErrors.confirmPassword }}</p>
+          </div>
+
+          <button class="btn-save btn-pw" @click="handleChangePassword" :disabled="isPwSaving || !pwForm.newPassword">
+            {{ isPwSaving ? '更新中…' : '🔒 更新密碼' }}
+          </button>
+        </section>
+
         <!-- ── 操作按鈕 ──── -->
         <div class="actions-row">
           <button class="btn-save" @click="handleSave" :disabled="isSaving">
@@ -210,6 +271,67 @@ const avatarFile     = ref(null)
 const avatarUploading = ref(false)
 const avatarError    = ref('')
 const avatarInput    = ref(null)
+
+// ── 修改密碼 ─────────────────────────────
+const pwForm = reactive({ newPassword: '', confirmPassword: '' })
+const pwErrors = reactive({ newPassword: '', confirmPassword: '' })
+const isPwSaving  = ref(false)
+const pwSuccess   = ref(false)
+const pwError     = ref('')
+const showNewPw     = ref(false)
+const showConfirmPw = ref(false)
+
+const pwStrengthScore = computed(() => {
+  const p = pwForm.newPassword
+  if (!p) return 0
+  let s = 0
+  if (p.length >= 8)  s++
+  if (p.length >= 12) s++
+  if (/[A-Z]/.test(p)) s++
+  if (/[0-9]/.test(p)) s++
+  if (/[^A-Za-z0-9]/.test(p)) s++
+  return s
+})
+const pwStrengthPct   = computed(() => [0, 25, 50, 75, 100][Math.min(pwStrengthScore.value, 4)])
+const pwStrengthClass = computed(() => ['', 'weak', 'fair', 'good', 'strong'][Math.min(pwStrengthScore.value, 4)])
+const pwStrengthLabel = computed(() => ['', '弱', '普通', '良好', '強'][Math.min(pwStrengthScore.value, 4)])
+
+async function handleChangePassword() {
+  pwErrors.newPassword = ''
+  pwErrors.confirmPassword = ''
+  pwError.value = ''
+  pwSuccess.value = false
+
+  if (pwForm.newPassword.length < 8) {
+    pwErrors.newPassword = '密碼長度至少 8 個字元'
+    return
+  }
+  if (!pwForm.confirmPassword) {
+    pwErrors.confirmPassword = '請再次輸入新密碼'
+    return
+  }
+  if (pwForm.newPassword !== pwForm.confirmPassword) {
+    pwErrors.confirmPassword = '兩次輸入的密碼不一致'
+    return
+  }
+
+  isPwSaving.value = true
+  try {
+    const { error } = await supabase.auth.updateUser({ password: pwForm.newPassword })
+    if (error) throw error
+    pwSuccess.value = true
+    pwForm.newPassword = ''
+    pwForm.confirmPassword = ''
+    setTimeout(() => { pwSuccess.value = false }, 4000)
+  } catch (err) {
+    const m = err?.message?.toLowerCase() ?? ''
+    if (m.includes('same password')) pwError.value = '新密碼不能與舊密碼相同'
+    else if (m.includes('password')) pwError.value = '密碼強度不足，請使用至少 8 個字元'
+    else pwError.value = err?.message || '更新失敗，請稍後再試'
+  } finally {
+    isPwSaving.value = false
+  }
+}
 
 // ── 帳號資訊 ─────────────────────────────
 const userEmail = computed(() => authActions.getEmail() ?? '')
@@ -723,6 +845,28 @@ onMounted(loadSettings)
   opacity: 0.6;
   cursor: not-allowed;
 }
+.btn-pw { background: linear-gradient(135deg, #1a3a6b, #2980b9) !important; margin-top: 4px; }
+
+/* ── 密碼強度條 ─────────────────────────────────────── */
+.password-wrapper { position: relative; }
+.toggle-pw {
+  position: absolute; right: 10px; top: 50%;
+  transform: translateY(-50%);
+  background: none; border: none; cursor: pointer; font-size: 1rem; padding: 4px;
+}
+.strength-bar-wrap {
+  height: 4px; background: #eee; border-radius: 2px; margin-top: 8px; overflow: hidden;
+}
+.strength-bar { height: 100%; border-radius: 2px; transition: width .4s, background .4s; }
+.strength-bar.weak   { background: #e74c3c; }
+.strength-bar.fair   { background: #e67e22; }
+.strength-bar.good   { background: #f1c40f; }
+.strength-bar.strong { background: #27ae60; }
+.strength-hint.weak   { color: #e74c3c !important; }
+.strength-hint.fair   { color: #e67e22 !important; }
+.strength-hint.good   { color: #d4ac0d !important; }
+.strength-hint.strong { color: #27ae60 !important; }
+.field-input.has-error { border-color: #e74c3c !important; }
 
 /* ── 底部連結 ─────────────────────────────────────── */
 .bottom-links {

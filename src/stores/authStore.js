@@ -34,13 +34,24 @@ export const authActions = {
     if (!supabase) throw new Error('Auth 服務未初始化，請設定環境變數')
     const { error } = await supabase.auth.signInWithPassword({ email, password })
     if (error) throw error
+    // session token 由 useSessionGuard 在 auth state change 後寫入
   },
 
   /**
-   * 登出
+   * 登出：同時清除 DB 中的 active_session_id
    */
   async signOut() {
     if (!supabase) return
+    // 清除 DB session token（若有登入中的 session）
+    if (authState.user) {
+      try {
+        await supabase
+          .from('profiles')
+          .update({ active_session_id: null })
+          .eq('id', authState.user.id)
+      } catch { /* ignore */ }
+    }
+    sessionStorage.removeItem('wineacademy_session_token')
     await supabase.auth.signOut()
   },
 

@@ -6,11 +6,18 @@
       @startLevel="handleSelectLevel"
       @openMap="$emit('openMap')"
       @openNotebook="view = 'notebook'"
+      @openGames="view = 'games'"
     />
 
     <!-- Tasting Notebook -->
     <ItalyTastingNotebookPage
       v-else-if="view === 'notebook'"
+      @back="view = 'levelSelector'"
+    />
+
+    <!-- Game Hub -->
+    <ItalyGameHubPage
+      v-else-if="view === 'games'"
       @back="view = 'levelSelector'"
     />
 
@@ -46,6 +53,7 @@ import ItalyLevelSelector from './ItalyLevelSelector.vue'
 import ItalySlideViewer from './ItalySlideViewer.vue'
 import ItalyCourseLayout from './ItalyCourseLayout.vue'
 import ItalyTastingNotebookPage from '../notebook/ItalyTastingNotebookPage.vue'
+import ItalyGameHubPage from '../games/ItalyGameHubPage.vue'
 import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevels.js'
 
 const emit = defineEmits(['openMap'])

@@ -68,6 +68,11 @@
             <span class="nav-title">品飲筆記</span>
             <span class="nav-desc">記錄品飲心得・紅白氣泡甜酒・350+ 品種</span>
           </button>
+          <button class="nav-card games" @click="$emit('openGames')">
+            <span class="nav-icon">🎮</span>
+            <span class="nav-title">互動練習</span>
+            <span class="nav-desc">產區競答・分級辨識・品種配對・年份排序</span>
+          </button>
         </div>
       </section>
 
@@ -280,7 +285,7 @@ import LearningStatsMini from '../../LearningStatsMini.vue'
 import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
 
 const router = useRouter()
-const emit = defineEmits(['startLevel', 'openMap', 'openVarieties', 'openNotebook'])
+const emit = defineEmits(['startLevel', 'openMap', 'openVarieties', 'openNotebook', 'openGames'])
 
 const showProgress = ref(false)
 const showAchievements = ref(false)
@@ -480,6 +485,7 @@ function getBubbleStyle (index) {
 .nav-card.progress     { background: linear-gradient(135deg, #9C27B0, #6A1B9A); }
 .nav-card.varieties    { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
 .nav-card.notebook     { background: linear-gradient(135deg, #6B4F1A, #3D2B08); }
+.nav-card.games        { background: linear-gradient(135deg, #1a3a6b, #0d1f4a); }
 
 /* Level cards */
 .level-selection-grid { margin-bottom: 3rem; }

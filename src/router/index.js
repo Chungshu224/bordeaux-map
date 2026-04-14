@@ -149,6 +149,22 @@ const routes = [
     name: 'ForumPost',
     component: () => import('../components/ForumPostDetail.vue'),
     meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
+  // ─── 管理員後台（需登入且為 admin 角色）────────────────────────────────────
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: () => import('../components/AdminDashboard.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true }
+  },
+
+  // ─── 密碼重設（Email 連結回調）─────────────────────────────────────────────
+  {
+    path: '/reset-password',
+    name: 'ResetPassword',
+    component: () => import('../components/ResetPassword.vue'),
+    meta: { public: true }
   }
 ]
 
@@ -185,6 +201,12 @@ router.beforeEach(async (to, from, next) => {
   // 1. 檢查是否需要登入
   if (to.meta.requiresAuth && !user) {
     return next({ name: 'Login', query: { redirect: to.fullPath } })
+  }
+
+  // 1b. 管理員專屬路由防護
+  if (to.meta.requiresAdmin && !isAdmin) {
+    console.warn('[權限阻擋] 此路由僅限管理員')
+    return next({ name: 'Home' })
   }
 
   // 2. 課程路由的動態 Tier 判斷
