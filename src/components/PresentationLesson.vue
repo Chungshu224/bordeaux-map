@@ -198,7 +198,7 @@
         :lessonId="lessonId"
         :currentSlide="currentSlide"
         :totalSlides="totalSlides - 1"
-        :showTimer="true"
+        :showTimer="false"
         class="lesson-progress-bar"
       />
 
