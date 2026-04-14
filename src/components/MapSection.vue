@@ -3571,7 +3571,7 @@ onUnmounted(() => {
     right: auto;
     transform: translateX(-50%);
     width: min(90vw, 560px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
     max-width: none;
     padding: 14px;
     border-radius: 18px;
@@ -3593,7 +3593,7 @@ onUnmounted(() => {
     right: auto;
     transform: translateX(-50%);
     width: min(90vw, 560px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
     max-width: none;
     padding: 10px 12px;
   }
@@ -3683,7 +3683,7 @@ onUnmounted(() => {
 
   .map-controls {
     top: auto;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
     left: 50%;
     right: auto;
     width: min(90vw, 560px);
@@ -3762,7 +3762,7 @@ onUnmounted(() => {
     left: 50%;
     transform: translateX(-50%);
     width: min(90vw, 560px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
     z-index: 1300;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -3883,7 +3883,7 @@ onUnmounted(() => {
     right: 10px;
     width: auto;
     transform: translateY(calc(100% + 18px));
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
     border-radius: 16px;
     max-height: min(52vh, 360px);
   }
@@ -3897,7 +3897,7 @@ onUnmounted(() => {
     right: auto;
     transform: translateX(-50%);
     width: min(94vw, 340px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
     padding: 12px 10px;
     border-radius: 14px;
     max-height: min(56vh, 420px);
@@ -3905,7 +3905,7 @@ onUnmounted(() => {
 
   .map-info-bar.collapsed {
     width: min(94vw, 340px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
   }
 
   .map-info-bar.mobile-full {
