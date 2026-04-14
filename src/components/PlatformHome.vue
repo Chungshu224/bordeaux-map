@@ -14,6 +14,7 @@
         <div class="nav-actions">
           <template v-if="authUser">
             <span class="nav-greeting">{{ displayName }}</span>
+            <router-link v-if="isAdmin" to="/admin" class="btn-nav admin-nav-btn">⚙️ 管理頁面</router-link>
             <router-link to="/bordeaux" class="btn-nav primary">進入課程</router-link>
             <router-link to="/dashboard" class="btn-nav">我的訂單</router-link>
             <button class="btn-nav ghost" @click="handleLogout">登出</button>
@@ -453,6 +454,7 @@ const router = useRouter()
 
 // ─── Auth ─────────────────────────────────────────────────────────────────────
 const authUser    = computed(() => authState.user)
+const isAdmin     = computed(() => authActions.isAdmin())
 const displayName = computed(() => authActions.getDisplayName() || '學員')
 
 const handleLogout = async () => {
@@ -717,6 +719,8 @@ onMounted(async () => {
 .btn-nav.primary { background: #722f37; border-color: #722f37; color: #fff; }
 .btn-nav.primary:hover { background: #8b3a43; }
 .btn-nav.ghost { background: transparent; border-color: rgba(255,255,255,0.15); color: #9a8878; }
+.btn-nav.admin-nav-btn { background: transparent; border-color: #c9a84c; color: #c9a84c; }
+.btn-nav.admin-nav-btn:hover { background: #c9a84c; color: #1a0a00; }
 
 /* ─── Hero ────────────────────────────────────────────────────────────────── */
 .hero {
