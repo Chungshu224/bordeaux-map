@@ -200,7 +200,7 @@
 
     <!-- 學員詳情彈窗 -->
     <div v-if="selectedStudent" class="modal-overlay" @click.self="selectedStudent = null">
-      <div class="modal">
+      <div class="modal modal-student">
         <div class="modal-header">
           <h3>學員詳情</h3>
           <button @click="selectedStudent = null">✕</button>
@@ -211,6 +211,25 @@
           <p><strong>方案：</strong>{{ tierLabel(selectedStudent.tier) }}</p>
           <p><strong>到期日：</strong>{{ formatDate(selectedStudent.subscription_exp) }}</p>
           <p><strong>消費：</strong>NT$ {{ (selectedStudent.total_spent || 0).toLocaleString() }}</p>
+
+          <!-- 管理者備註 -->
+          <div class="notes-section">
+            <label class="notes-label">📝 管理者備註</label>
+            <div v-if="notesLoading" class="notes-loading">載入中…</div>
+            <textarea
+              v-else
+              v-model="notesText"
+              class="notes-textarea"
+              placeholder="輸入備註（僅管理員可見）…"
+              rows="4"
+            ></textarea>
+            <div class="notes-actions">
+              <button class="btn-primary" @click="saveNotes" :disabled="savingNotes">
+                {{ savingNotes ? '儲存中…' : '儲存備註' }}
+              </button>
+              <span v-if="notesSaved" class="notes-saved-msg">✓ 已儲存</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -313,6 +332,12 @@ const studentsList    = ref([])
 const studentSearch   = ref('')
 const selectedStudent = ref(null)
 
+// 管理者備註
+const notesText    = ref('')
+const notesLoading = ref(false)
+const savingNotes  = ref(false)
+const notesSaved   = ref(false)
+
 const filteredStudents = computed(() => {
   const q = studentSearch.value.toLowerCase()
   if (!q) return studentsList.value
@@ -331,8 +356,33 @@ async function loadStudents() {
   }
 }
 
-function viewStudent(s) {
+async function viewStudent(s) {
   selectedStudent.value = s
+  notesText.value = ''
+  notesSaved.value = false
+  notesLoading.value = true
+  try {
+    const { data } = await supabase.rpc('admin_get_notes', { p_user_id: s.user_id })
+    notesText.value = data ?? ''
+  } finally {
+    notesLoading.value = false
+  }
+}
+
+async function saveNotes() {
+  if (!selectedStudent.value) return
+  savingNotes.value = true
+  notesSaved.value = false
+  try {
+    await supabase.rpc('admin_save_notes', {
+      p_user_id: selectedStudent.value.user_id,
+      p_notes:   notesText.value,
+    })
+    notesSaved.value = true
+    setTimeout(() => { notesSaved.value = false }, 2500)
+  } finally {
+    savingNotes.value = false
+  }
 }
 
 // ── 課程管理 ────────────────────────────────────────────────
@@ -603,4 +653,18 @@ function barWidth(count, total) {
 .filter-select { padding: 7px 12px; border: 1px solid #ddd; border-radius: 7px; font-size: .85rem; outline: none; }
 .revenue-total { text-align: right; padding: 16px; font-size: 1rem; color: #333; }
 .revenue-total strong { color: #27ae60; font-size: 1.2rem; }
+
+/* ── 管理者備註 ── */
+.modal-student { max-width: 520px; }
+.notes-section { margin-top: 18px; border-top: 1px solid #eee; padding-top: 16px; }
+.notes-label { display: block; font-size: .82rem; color: #555; font-weight: 600; margin-bottom: 8px; }
+.notes-textarea {
+  width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px;
+  font-size: .88rem; font-family: inherit; resize: vertical; outline: none;
+  transition: border-color .2s; box-sizing: border-box; color: #333; line-height: 1.6;
+}
+.notes-textarea:focus { border-color: #8b1a2b; }
+.notes-loading { font-size: .85rem; color: #aaa; padding: 10px 0; }
+.notes-actions { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+.notes-saved-msg { font-size: .82rem; color: #27ae60; font-weight: 600; }
 </style>
