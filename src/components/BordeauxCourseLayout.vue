@@ -234,7 +234,8 @@ function scrollToModuleAndClose (moduleId) {
   --radius-lg: 16px;
   --radius-full: 9999px;
 
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   background: var(--bg-page);
   font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
   display: flex;

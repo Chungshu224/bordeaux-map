@@ -227,6 +227,8 @@ function scrollToModuleAndClose (moduleId) {
   min-height: 100vh;
   background: var(--bg-page);
   font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
