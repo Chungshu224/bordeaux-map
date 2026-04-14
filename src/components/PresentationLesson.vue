@@ -3175,7 +3175,7 @@ defineExpose({
 
 .quiz-option {
   background: white;
-  color: #333;
+  color: #1a1a1a;
   border: 2px solid #e9ecef;
   padding: 1rem;
   border-radius: 8px;
@@ -3188,6 +3188,7 @@ defineExpose({
 .quiz-option:hover:not(:disabled) {
   border-color: #667eea;
   background: #f0f4ff;
+  color: #1a1a1a;
 }
 
 .quiz-option.correct {
@@ -3593,6 +3594,7 @@ defineExpose({
   .quiz-options button {
     padding: 0.75rem;
     font-size: 0.9rem;
+    color: #1a1a1a;
   }
   
   .quiz-feedback {
