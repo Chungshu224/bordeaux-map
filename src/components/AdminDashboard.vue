@@ -257,10 +257,6 @@
           <p v-if="achievementsList.length === 0" class="empty-state">尚無成就紀錄（學員登入後觸發成就才會同步）</p>
         </div>
       </section>
-          </table>
-          <p v-if="achievementsList.length === 0" class="empty-state">尚無成就紀錄</p>
-        </div>
-      </section>
 
       <!-- ── 辭典管理 ── -->
       <section v-if="activeTab === 'glossary'" class="tab-panel">
