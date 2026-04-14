@@ -50,6 +50,9 @@
             <button class="cta-course italy-btn" @click="router.push('/italy')">
               🇮🇹 義大利課程
             </button>
+            <button class="cta-course spain-btn" @click="router.push('/spain')">
+              🇪🇸 西班牙課程
+            </button>
           </div>
         </div>
         <!-- 未登入：原本的 CTA -->
@@ -66,7 +69,7 @@
           <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">100+</span><span class="stat-label">互動練習題</span></div>
           <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">世界產區</span></div>
+          <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">世界產區</span></div>
           <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">$150</span><span class="stat-label">完整課程起/月</span></div>
         </div>
@@ -183,6 +186,20 @@
             <div class="card-actions">
               <button class="card-cta" @click="handleNotify('italy')">🔔 搶先通知我</button>
               <button class="card-info-btn" @click="openCourseDetail('italy')">📋 課程說明</button>
+            </div>
+          </div>
+
+          <!-- ── Spain ── -->
+          <div class="course-card spain">
+            <div class="card-status new">🆕 新課程・即刻探索</div>
+            <div class="card-hero">
+              <div class="card-icon">🇪🇸</div>
+              <div class="card-region">Spain · España</div>
+              <h3 class="card-title">西班牙葡萄酒</h3>
+              <p class="card-desc">探索 Rioja、Ribera del Duero、Rías Baixas 等頂級產區，DO／DOCa／VP 分級完整解析，互動衛星地圖帶你走遍 96 個法定產區</p>
+            </div>
+            <div class="card-actions">
+              <button class="card-cta spain-cta" @click="router.push('/spain')">🗺 開始探索 →</button>
             </div>
           </div>
 
@@ -831,6 +848,15 @@ onMounted(async () => {
   box-shadow: 0 4px 20px rgba(122,32,32,0.5);
 }
 .italy-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(122,32,32,0.6); }
+.spain-btn {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(192,57,43,0.5);
+}
+.spain-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(192,57,43,0.65); }
+.spain-cta {
+  background: linear-gradient(135deg, #c0392b, #e74c3c) !important;
+}
 .hero-stats { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
 .stat-item { text-align: center; padding: 0 12px; }
 .stat-num { display: block; font-size: 2rem; font-weight: 800; color: #d4af37; line-height: 1; }
@@ -847,10 +873,11 @@ onMounted(async () => {
 .courses-section { padding: 80px 0; background: #120508; }
 .courses-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 24px;
   align-items: start;
 }
+@media (max-width: 1200px) { .courses-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 1024px) { .courses-grid { grid-template-columns: 1fr; max-width: 580px; margin: 0 auto; } }
 
 /* ─── 課程卡片 ────────────────────────────────────────────────────────────── */
@@ -864,6 +891,7 @@ onMounted(async () => {
 }
 .course-card.bordeaux { border-color: rgba(212,175,55,0.3); background: rgba(212,175,55,0.04); }
 .course-card.bourgogne { border-color: rgba(107,45,139,0.4); background: rgba(107,45,139,0.05); }
+.course-card.spain { border-color: rgba(192,57,43,0.4); background: rgba(192,57,43,0.05); }
 .card-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
 .card-cta {
   flex: 1;

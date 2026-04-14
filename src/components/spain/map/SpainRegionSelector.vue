@@ -1,6 +1,7 @@
 <template>
   <div class="region-selector">
     <div class="selector-header">
+      <button class="back-btn" @click="emit('back')">&#8592; 返回課程</button>
       <div class="flag-icon">🇪🇸</div>
       <h2>西班牙葡萄酒產區</h2>
       <p class="subtitle">Spain Wine Regions — DO · DOCa · VP</p>
@@ -41,7 +42,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
-const emit = defineEmits(['regionSelected'])
+const emit = defineEmits(['regionSelected', 'back'])
 const router = useRouter()
 
 const allSpain = {
@@ -282,7 +283,24 @@ function select(region) {
 .selector-header {
   text-align: center;
   padding: 2rem 0 1.5rem;
+  position: relative;
 }
+
+.back-btn {
+  position: absolute;
+  left: 1rem;
+  top: 2rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.35);
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.back-btn:hover { background: rgba(255,255,255,0.28); }
 
 .flag-icon {
   font-size: 3rem;

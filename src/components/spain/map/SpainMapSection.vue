@@ -7,7 +7,7 @@
     <!-- Header -->
     <div class="map-header">
       <div class="map-header-left">
-        <button class="map-hdr-btn" @click="emit('back')">← 返回</button>
+        <button class="map-hdr-btn" @click="emit('back')">☰ 產區</button>
         <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
       </div>
       <div class="map-header-title">
@@ -159,7 +159,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -204,7 +204,6 @@ const legendTypes = [
   { label: 'VC',   color: '#3498db' },
   { label: 'VP',   color: '#9b59b6' },
 ]
-
 function typeColor(label) {
   return legendTypes.find(t => t.label === label)?.color || '#999'
 }
@@ -286,8 +285,9 @@ function normalizeFeature(f, idx) {
 // ── Map init ──────────────────────────────────────────────────────
 onMounted(async () => {
   try {
+    await nextTick()          // 確保容器 DOM 尺寸就緒
     await loadAppellations()
-    initMap()
+    await initMap()
   } catch (e) {
     mapError.value = '地圖載入失敗：' + e.message
     isLoading.value = false
@@ -299,30 +299,41 @@ onUnmounted(() => {
 })
 
 function initMap() {
-  mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
+  return new Promise((resolve, reject) => {
+    mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 
-  const center = props.region.center || [40.0, -3.5]
-  const zoom   = props.region.zoom   || 5.5
+    const center = props.region.center || [40.0, -3.5]
+    const zoom   = props.region.zoom   || 5.5
 
-  map = new mapboxgl.Map({
-    container: mapContainer.value,
-    style: 'mapbox://styles/mapbox/light-v11',
-    center,
-    zoom,
-    maxZoom: 14,
-    minZoom: 4,
-  })
+    map = new mapboxgl.Map({
+      container: mapContainer.value,
+      style: 'mapbox://styles/mapbox/satellite-streets-v12',
+      center,
+      zoom,
+      maxZoom: 14,
+      minZoom: 4,
+    })
 
-  map.addControl(new mapboxgl.NavigationControl(), 'top-right')
+    map.addControl(new mapboxgl.NavigationControl(), 'top-right')
 
-  map.on('load', () => {
-    addLayers()
-    isLoading.value = false
-    mapReady.value = true
-  })
+    map.on('load', async () => {
+      map.resize()  // 確保 canvas 符合容器實際尺寸
+      try {
+        await addLayers()
+      } catch (e) {
+        console.error('[SpainMap] addLayers error:', e)
+        mapError.value = '圖層載入失敗：' + e.message
+      }
+      isLoading.value = false
+      mapReady.value = true
+      resolve()
+    })
 
-  map.on('error', (e) => {
-    mapError.value = '地圖錯誤：' + (e.error?.message || '未知錯誤')
+    map.on('error', (e) => {
+      console.error('[SpainMap] map error:', e)
+      mapError.value = '地圖錯誤：' + (e.error?.message || '未知錯誤')
+      reject(e)
+    })
   })
 }
 
@@ -342,20 +353,10 @@ async function addLayers() {
     return n
   })
 
-  // ── Province layer ──────────────────────────────────────────
+  // ── Province layer（衛星圖上只顯示白色外框，不蓋住底圖）──────────
   map.addSource('provinces', {
     type: 'geojson',
     data: provinceGeo,
-  })
-
-  map.addLayer({
-    id: 'provinces-fill',
-    type: 'fill',
-    source: 'provinces',
-    paint: {
-      'fill-color': '#f8f4ee',
-      'fill-opacity': 0.6,
-    },
   })
 
   map.addLayer({
@@ -363,19 +364,18 @@ async function addLayers() {
     type: 'line',
     source: 'provinces',
     paint: {
-      'line-color': '#bbb',
-      'line-width': 0.8,
+      'line-color': 'rgba(255,255,255,0.7)',
+      'line-width': 1.2,
+      'line-dasharray': [3, 2],
     },
   })
 
   // ── Wine regions layer ──────────────────────────────────────
-  // Add sequential id to each feature for hover state
-  wineGeo.features.forEach((f, i) => { f.id = i })
-
+  // generateId:true 讓 Mapbox 自動產生整數 id，feature-state 才能正常運作
   map.addSource('wine-regions', {
     type: 'geojson',
     data: wineGeo,
-    generateId: false,
+    generateId: true,
   })
 
   // Fill layer — color by TPR_DS_DES
@@ -390,12 +390,12 @@ async function addLayers() {
         'Denominación de Origen Protegida',  '#e67e22',
         'Vino de Calidad',  '#3498db',
         'Vino de Pago',     '#9b59b6',
-        /* default DO */ '#27ae60',
+        '#27ae60',
       ],
       'fill-opacity': [
         'case',
-        ['boolean', ['feature-state', 'hover'], false], 0.65,
-        0.38,
+        ['boolean', ['feature-state', 'hover'], false], 0.75,
+        0.55,
       ],
     },
   })
@@ -414,10 +414,18 @@ async function addLayers() {
         'Vino de Pago',     '#7d3c98',
         '#1e8449',
       ],
+      'line-color': [
+        'match', ['get', 'TPR_DS_DES'],
+        'Denominación de Origen Calificada', '#ff6b6b',
+        'Denominación de Origen Protegida',  '#ffa94d',
+        'Vino de Calidad',  '#74c0fc',
+        'Vino de Pago',     '#da77f2',
+        '#69db7c',
+      ],
       'line-width': [
         'case',
         ['boolean', ['feature-state', 'hover'], false], 2.5,
-        1.2,
+        1.6,
       ],
     },
   })
@@ -474,7 +482,6 @@ function toggleProvinces() {
   showProvinces.value = !showProvinces.value
   if (!map) return
   const vis = showProvinces.value ? 'visible' : 'none'
-  map.setLayoutProperty('provinces-fill', 'visibility', vis)
   map.setLayoutProperty('provinces-line', 'visibility', vis)
 }
 

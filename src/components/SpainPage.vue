@@ -1,37 +1,83 @@
 <script setup>
 import { ref } from 'vue'
+import SpainLevelSelector from './spain/course/SpainLevelSelector.vue'
 import SpainRegionSelector from './spain/map/SpainRegionSelector.vue'
 import SpainMapSection from './spain/map/SpainMapSection.vue'
 
-// 'selector' | 'map'
-const currentMode = ref('selector')
+// 'course' | 'map-selector' | 'map-detail'
+const currentMode = ref('course')
 const selectedRegion = ref(null)
 
-function onRegionSelected(region) {
-  selectedRegion.value = region
-  currentMode.value = 'map'
+const allSpain = {
+  id: 'all',
+  name: '全西班牙',
+  nameEs: 'España',
+  icon: '🇪🇸',
+  color: '#c0392b',
+  center: [40.0, -3.5],
+  zoom: 5.5,
+  filterAutonomiaId: null,
 }
 
-function goBack() {
-  currentMode.value = 'selector'
+// 從課程主頁 → 探索地圖（先到地區選擇器）
+function openMap() {
+  currentMode.value = 'map-selector'
+}
+
+// 從課程主頁 → 依自治區選擇器
+function openSelector() {
+  currentMode.value = 'map-selector'
+}
+
+// 地區選擇器選了一個地區 → 地圖
+function onRegionSelected(region) {
+  selectedRegion.value = region
+  currentMode.value = 'map-detail'
+}
+
+// 地區選擇器選了「探索全西班牙」
+function openFullMap() {
+  selectedRegion.value = allSpain
+  currentMode.value = 'map-detail'
+}
+
+// 地圖 → 回到選擇器
+function backToSelector() {
+  currentMode.value = 'map-selector'
   selectedRegion.value = null
+}
+
+// 地區選擇器 → 回到課程主頁
+function backToCourse() {
+  currentMode.value = 'course'
 }
 </script>
 
 <template>
   <div class="spain-page">
-    <div v-if="currentMode === 'selector'">
-      <SpainRegionSelector
-        @regionSelected="onRegionSelected"
-      />
-    </div>
 
-    <div v-else-if="currentMode === 'map' && selectedRegion">
-      <SpainMapSection
-        :region="selectedRegion"
-        @back="goBack"
-      />
-    </div>
+    <!-- 課程主頁 -->
+    <SpainLevelSelector
+      v-if="currentMode === 'course'"
+      @openMap="openMap"
+      @openSelector="openSelector"
+    />
+
+    <!-- 自治區選擇器 -->
+    <SpainRegionSelector
+      v-else-if="currentMode === 'map-selector'"
+      @regionSelected="onRegionSelected"
+      @openFullMap="openFullMap"
+      @back="backToCourse"
+    />
+
+    <!-- 地圖細節 -->
+    <SpainMapSection
+      v-else-if="currentMode === 'map-detail' && selectedRegion"
+      :region="selectedRegion"
+      @back="backToSelector"
+    />
+
   </div>
 </template>
 
