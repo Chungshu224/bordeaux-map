@@ -50,6 +50,7 @@
         <div class="progress-bar" :style="{ width: progressPct + '%' }"></div>
       </div>
     </div>
+    <WineGlossary />
   </div>
 </template>
 
@@ -70,6 +71,7 @@ import ChartSlide from '../../bourgogne/course/slides/ChartSlide.vue'
 import StatsSlide from './slides/StatsSlide.vue'
 import MapPlaceholderSlide from './slides/MapPlaceholderSlide.vue'
 import QuizSlide from './slides/QuizSlide.vue'
+import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
   lesson:      { type: Object,  required: true },
@@ -178,10 +180,12 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
 
 <style scoped>
 .slide-viewer {
+  position: fixed;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   background: linear-gradient(160deg, #1a0a1e 0%, #2d1b3d 45%, #1a2a4a 100%);
+  z-index: 50;
 }
 
 /* ── 頂部導覽列：毛玻璃效果 ── */

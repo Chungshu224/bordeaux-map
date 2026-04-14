@@ -56,6 +56,7 @@
           />
         </div>
       </main>
+      <WineGlossary />
     </template>
 
     <!-- 成就通知 -->
@@ -77,6 +78,7 @@ import { learningState, learningLevels, learningActions, learningProgress } from
 import { authActions } from '../stores/authStore.js'
 import BordeauxCourseLayout from './BordeauxCourseLayout.vue'
 import PresentationLesson from './PresentationLesson.vue'
+import WineGlossary from './WineGlossary.vue'
 
 // Emits
 const emit = defineEmits(['exitLearning'])
@@ -366,14 +368,23 @@ html, body {
 
 <style scoped>
 /* ===== 波爾多課程簡報頁頂部導航欄 ===== */
+.learning-system {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.learning-main {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
 .learning-header {
   background: linear-gradient(135deg, #8B0000 0%, #4a0000 100%);
   padding: 12px 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   flex-shrink: 0;
   z-index: 100;
-  position: sticky;
-  top: 0;
 }
 
 .lh-row {

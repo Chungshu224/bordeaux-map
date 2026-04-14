@@ -190,40 +190,6 @@
         </transition>
       </div>
 
-      <!-- Glossary toggle -->
-      <div class="glossary-controls" style="margin-top:8px;text-align:right;">
-        <button class="glossary-toggle" @click="showGlossary = !showGlossary">📚 術語辭典</button>
-      </div>
-      <div v-if="showGlossary" class="glossary-drawer">
-        <button class="glossary-close" @click="showGlossary=false" title="關閉">✕</button>
-        <h4>術語快速查詢</h4>
-        <div class="glossary-search">
-          <input
-            type="text"
-            v-model.trim="glossaryQuery"
-            placeholder="輸入關鍵字過濾（支援中英與部分拼寫）"
-            aria-label="搜尋術語"
-          />
-          <button 
-            v-if="glossaryQuery"
-            class="glossary-toggle"
-            @click="glossaryQuery = ''"
-            title="清除搜尋"
-          >清除</button>
-        </div>
-        <template v-if="filteredGlossary.length">
-          <div 
-            v-for="(entry, i) in filteredGlossary"
-            :key="entry.term + '-' + i"
-            class="glossary-item"
-          >
-            <span class="term" v-html="highlightGlossary(entry.term)"></span>：
-            <span v-html="highlightGlossary(entry.def)"></span>
-          </div>
-        </template>
-        <div v-else class="glossary-empty">找不到符合「{{ glossaryQuery }}」的術語。</div>
-      </div>
-
       <!-- 導航控制（點點指示器可保留或日後再加回，此處先移除以減少干擾） -->
 
       <!-- 學習進度指示器 -->
@@ -244,7 +210,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import html2pdf from 'html2pdf.js'
-import { getCombinedGlossary } from '../data/glossary/index.js'
 import PresentationMap from './PresentationMap.vue'
 import SlideFranceBordeaux from './slides/SlideFranceBordeaux.vue'
 import SlideRiversSystem from './slides/SlideRiversSystem.vue'
@@ -288,7 +253,6 @@ const showCompletionCard = ref(true)
 const isLoading = ref(false)
 const loadError = ref(null)
 const lessonContent = ref([])
-const showGlossary = ref(false)
 const finalQuizBank = ref([])
 
 function pickRandom(arr, n) {
@@ -307,19 +271,6 @@ async function loadQuizBank() {
     finalQuizBank.value = data.questions || []
   } catch (_) { /* 靜默失敗 */ }
 }
-const combinedGlossary = computed(() => getCombinedGlossary(props.lessonId))
-const glossaryQuery = ref('')
-const filteredGlossary = computed(() => {
-  const list = combinedGlossary.value || []
-  const q = (glossaryQuery.value || '').toLowerCase().trim()
-  if (!q) return list
-  return list.filter(item => {
-    const t = String(item.term || '').toLowerCase()
-    const d = String(item.def || '').toLowerCase()
-    return t.includes(q) || d.includes(q)
-  })
-})
-
 // 內容區參考，用於掛載互動按鈕（例如：下載空白 PDF）
 const contentHtml = ref(null)
 
@@ -408,28 +359,6 @@ function escapeHtml(str) {
 
 function escapeReg(str) {
   return String(str).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-}
-
-function highlightGlossary(text) {
-  const q = (glossaryQuery.value || '').trim()
-  if (!q) return escapeHtml(text)
-  try {
-    const re = new RegExp(escapeReg(q), 'gi')
-    let last = 0
-    let out = ''
-    const src = String(text)
-    let m
-    while ((m = re.exec(src)) !== null) {
-      out += escapeHtml(src.slice(last, m.index))
-      out += `<mark class="glossary-hl">${escapeHtml(m[0])}</mark>`
-      last = m.index + m[0].length
-      if (m.index === re.lastIndex) re.lastIndex++ // avoid zero-length loops
-    }
-    out += escapeHtml(src.slice(last))
-    return out
-  } catch (e) {
-    return escapeHtml(text)
-  }
 }
 
 // 自訂投影片元件映射
@@ -3639,36 +3568,6 @@ defineExpose({
   .map-section {
     min-height: 250px;
     margin-top: 0;
-  }
-  
-  /* 術語辭典控制 */
-  .glossary-controls {
-    margin-top: 6px !important;
-    text-align: center !important;
-  }
-  
-  .glossary-toggle {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-  }
-  
-  .glossary-drawer {
-    padding: 1rem;
-    max-height: 60vh;
-  }
-  
-  .glossary-drawer h4 {
-    font-size: 1.1rem;
-  }
-  
-  .glossary-search input {
-    font-size: 0.85rem;
-    padding: 0.5rem;
-  }
-  
-  .glossary-item {
-    font-size: 0.85rem;
-    padding: 0.5rem;
   }
   
   /* 測驗區塊 */

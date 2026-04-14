@@ -64,6 +64,7 @@
         <div class="progress-bar" :style="{ width: progressPercentage + '%' }"></div>
       </div>
     </div>
+    <WineGlossary />
   </div>
 </template>
 
@@ -80,6 +81,7 @@ import MapSlide from './slides/MapSlide.vue'
 import WinerySlide from './slides/WinerySlide.vue'
 import ChartSlide from './slides/ChartSlide.vue'
 import QuizSlide from '../../italy/course/slides/QuizSlide.vue'
+import WineGlossary from '../../../WineGlossary.vue'
 
 const props = defineProps({
   lesson: {
@@ -976,11 +978,12 @@ onUnmounted(() => {
 
 <style scoped>
 .slide-viewer {
-  width: 100%;
-  height: 100vh;
+  position: fixed;
+  inset: 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   flex-direction: column;
+  z-index: 50;
 }
 
 /* 頂部導航欄：毛玻璃效果 */
