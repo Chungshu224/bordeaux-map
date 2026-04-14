@@ -126,6 +126,19 @@
         <span class="sc-logo">🍷 {{ courseLabel }}</span>
         <span class="sc-tag">成就報告</span>
       </div>
+
+      <!-- 使用者個人資訊 -->
+      <div class="sc-user">
+        <div class="sc-avatar-wrap">
+          <img v-if="userProfile.avatarUrl" :src="userProfile.avatarUrl" crossorigin="anonymous" class="sc-avatar-img" />
+          <div v-else class="sc-avatar-initial">{{ userProfile.initial }}</div>
+        </div>
+        <div class="sc-user-info">
+          <div class="sc-user-name">{{ userProfile.displayName }}</div>
+          <div v-if="userProfile.bio" class="sc-user-bio">{{ userProfile.bio }}</div>
+        </div>
+      </div>
+
       <div class="sc-level">
         <span class="sc-lv-icon">{{ userLevel.icon }}</span>
         <div>
@@ -184,6 +197,8 @@
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue'
 import { useAchievements } from '../composables/useAchievements.js'
+import { authState } from '../stores/authStore.js'
+import { supabase } from '../lib/supabaseClient.js'
 
 const props = defineProps({
   courseKey: { type: String, default: 'bordeaux' }
@@ -207,7 +222,37 @@ const {
   clearNewUnlocks
 } = useAchievements(props.courseKey)
 
-onMounted(() => { manager.init() })
+onMounted(() => {
+  manager.init()
+  loadUserProfile()
+})
+
+// ── 使用者個人資料（分享卡用）────────────────────────────────
+const userProfile = ref({ displayName: '', bio: '', avatarUrl: '', initial: '？' })
+
+async function loadUserProfile() {
+  const user = authState.user
+  if (!user) {
+    userProfile.value = { displayName: '訪客', bio: '', avatarUrl: '', initial: '訪' }
+    return
+  }
+  const fallbackName = user.user_metadata?.full_name || user.email?.split('@')[0] || '學員'
+  userProfile.value.displayName = fallbackName
+  userProfile.value.initial = [...fallbackName][0] || '？'
+  if (supabase) {
+    const { data } = await supabase
+      .from('profiles')
+      .select('display_name, bio, avatar_url')
+      .eq('id', user.id)
+      .single()
+    if (data) {
+      if (data.display_name) userProfile.value.displayName = data.display_name
+      userProfile.value.bio      = data.bio || ''
+      userProfile.value.avatarUrl = data.avatar_url || ''
+      userProfile.value.initial   = [...userProfile.value.displayName][0] || '？'
+    }
+  }
+}
 
 // ── 稀有度名稱 ────────────────────────────────────────────────
 const RARITY_NAMES = { common: '普通', uncommon: '優良', rare: '稀有', epic: '史詩', legendary: '傳說' }
@@ -503,6 +548,37 @@ async function shareCard() {
 .sc-sl     { font-size: 0.72rem; color: #9ca3af; }
 .sc-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; font-size: 1.5rem; }
 .sc-footer { font-size: 0.7rem; color: #9ca3af; text-align: right; }
+
+/* 分享卡 — 使用者個人資訊 */
+.sc-user {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 0 14px;
+  border-bottom: 1px solid #f0e6d6;
+  margin-bottom: 14px;
+}
+.sc-avatar-wrap {
+  width: 52px; height: 52px;
+  border-radius: 50%; overflow: hidden; flex-shrink: 0;
+  background: linear-gradient(135deg, #7c1d2e, #b5233d);
+}
+.sc-avatar-img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.sc-avatar-initial {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; font-weight: 800; color: white;
+}
+.sc-user-info { flex: 1; min-width: 0; }
+.sc-user-name {
+  font-size: 1.05rem; font-weight: 800; color: #1f2937;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sc-user-bio {
+  font-size: 0.74rem; color: #6b7280; margin-top: 3px;
+  display: -webkit-box; -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; overflow: hidden;
+}
 
 /* ── 詳情彈窗 ────────────────────────────────────────────── */
 .modal-overlay {
