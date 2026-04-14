@@ -204,6 +204,9 @@ let map = null
 let hoveredId = null
 let selectedProvinceId = null
 let hoveredProvinceId = null
+let initialBounds = null    // 起始畫面的 bounds，供重置使用
+let baseFilter = null       // addLayers 套用的初始 filter，重置時恢復
+let selectedRegionId = null // 目前選取的 wine-region feature id
 const allRegionsMap = new Map()   // Map<featureIdx → normalizedInfo> ，供 click 查詢用
 
 // ── Type helpers ─────────────────────────────────────────────────
@@ -320,7 +323,7 @@ function initMap() {
   return new Promise((resolve, reject) => {
     mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 
-    const center = props.region.center || [40.0, -3.5]
+    const center = props.region.center || [-3.5, 40.0]
     const zoom   = props.region.zoom   || 5.5
 
     map = new mapboxgl.Map({
@@ -442,17 +445,13 @@ async function addLayers() {
     paint: {
       'fill-color': [
         'match', ['get', 'TPR_DS_DES'],
-        'Denominación de Origen Calificada', '#e74c3c',
-        'Denominación de Origen Protegida',  '#e67e22',
-        'Vino de Calidad',  '#3498db',
-        'Vino de Pago',     '#9b59b6',
-        '#27ae60',
+        'Denominación de Origen Calificada', '#f1948a',
+        'Denominación de Origen Protegida',  '#f0b27a',
+        'Vino de Calidad',  '#85c1e9',
+        'Vino de Pago',     '#c39bd3',
+        '#82e0aa',
       ],
-      'fill-opacity': [
-        'case',
-        ['boolean', ['feature-state', 'hover'], false], 0.75,
-        0.55,
-      ],
+      'fill-opacity': 0.30,
     },
   })
 
@@ -470,17 +469,14 @@ async function addLayers() {
         'Vino de Pago',     '#da77f2',
         '#69db7c',
       ],
-      'line-width': [
-        'case',
-        ['boolean', ['feature-state', 'hover'], false], 2.5,
-        1.6,
-      ],
+      'line-width': 1.6,
     },
   })
 
   // ── 指定自治區：套用圖層 filter ＋ fitBounds ─────────────────
   if (filterAuto) {
     const filterExpr = ['==', ['get', 'AUTONOMIA_ID'], filterAuto]
+    baseFilter = filterExpr  // 記住初始 filter 供重置恢復
     map.setFilter('wine-regions-fill', filterExpr)
     map.setFilter('wine-regions-line', filterExpr)
 
@@ -502,31 +498,21 @@ async function addLayers() {
         const maxLng = lngs.reduce((a, b) => a > b ? a : b)
         const minLat = lats.reduce((a, b) => a < b ? a : b)
         const maxLat = lats.reduce((a, b) => a > b ? a : b)
+        initialBounds = [[minLng, minLat], [maxLng, maxLat]]
         map.fitBounds(
-          [[minLng, minLat], [maxLng, maxLat]],
+          initialBounds,
           { padding: 80, maxZoom: 11, duration: 800 }
         )
       }
     }
   }
 
-  // ── Hover interaction ───────────────────────────────────────
-  map.on('mousemove', 'wine-regions-fill', (e) => {
-    if (e.features.length > 0) {
-      if (hoveredId !== null) {
-        map.setFeatureState({ source: 'wine-regions', id: hoveredId }, { hover: false })
-      }
-      hoveredId = e.features[0].id
-      map.setFeatureState({ source: 'wine-regions', id: hoveredId }, { hover: true })
-      map.getCanvas().style.cursor = 'pointer'
-    }
+  // ── Hover cursor (no highlight) ─────────────────────────────
+  map.on('mousemove', 'wine-regions-fill', () => {
+    map.getCanvas().style.cursor = 'pointer'
   })
 
   map.on('mouseleave', 'wine-regions-fill', () => {
-    if (hoveredId !== null) {
-      map.setFeatureState({ source: 'wine-regions', id: hoveredId }, { hover: false })
-    }
-    hoveredId = null
     map.getCanvas().style.cursor = ''
   })
 
@@ -558,6 +544,10 @@ async function addLayers() {
     if (info) {
       activeInfo.value = info
       infoCollapsed.value = false
+      // 只顯示選中的產區，其他隱藏
+      selectedRegionId = feat.id
+      map.setFilter('wine-regions-fill', ['==', ['id'], feat.id])
+      map.setFilter('wine-regions-line', ['==', ['id'], feat.id])
     }
     e.originalEvent._spainWineClicked = true
   })
@@ -577,11 +567,19 @@ async function addLayers() {
 // ── Actions ───────────────────────────────────────────────────────
 function resetView() {
   if (!map) return
-  map.flyTo({
-    center: props.region.center || [40.0, -3.5],
-    zoom:   props.region.zoom   || 5.5,
-    duration: 800,
-  })
+  // 恢復所有產區顯示（還原為初始 filter 或清除 filter）
+  if (selectedRegionId !== null) {
+    map.setFilter('wine-regions-fill', baseFilter)
+    map.setFilter('wine-regions-line', baseFilter)
+    selectedRegionId = null
+  }
+  activeInfo.value = null
+  // 回到起始畫面
+  if (initialBounds) {
+    map.fitBounds(initialBounds, { padding: 80, maxZoom: 11, duration: 800 })
+  } else {
+    map.flyTo({ center: [-3.5, 40.0], zoom: 5.5, duration: 800 })
+  }
 }
 
 function toggleProvinces() {

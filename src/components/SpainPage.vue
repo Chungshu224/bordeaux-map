@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import SpainLevelSelector from './spain/course/SpainLevelSelector.vue'
+import SpainCourseManager from './spain/course/SpainCourseManager.vue'
 import SpainRegionSelector from './spain/map/SpainRegionSelector.vue'
 import SpainMapSection from './spain/map/SpainMapSection.vue'
 
@@ -14,7 +14,7 @@ const allSpain = {
   nameEs: 'España',
   icon: '🇪🇸',
   color: '#c0392b',
-  center: [40.0, -3.5],
+  center: [-3.5, 40.0],
   zoom: 5.5,
   filterAutonomiaId: null,
 }
@@ -57,7 +57,7 @@ function backToCourse() {
   <div class="spain-page">
 
     <!-- 課程主頁 -->
-    <SpainLevelSelector
+    <SpainCourseManager
       v-if="currentMode === 'course'"
       @openMap="openMap"
       @openSelector="openSelector"

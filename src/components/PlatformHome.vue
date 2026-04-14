@@ -44,15 +44,17 @@
             <button class="cta-course bordeaux-btn" @click="router.push('/bordeaux')">
               🏰 波爾多課程
             </button>
-            <button class="cta-course bourgogne-btn" @click="router.push('/bourgogne')">
-              🍇 布根地課程
-            </button>
-            <button class="cta-course italy-btn" @click="router.push('/italy')">
-              🇮🇹 義大利課程
-            </button>
-            <button class="cta-course spain-btn" @click="router.push('/spain')">
-              🇪🇸 西班牙課程
-            </button>
+            <template v-if="isAdmin">
+              <button class="cta-course bourgogne-btn" @click="router.push('/bourgogne')">
+                🍇 布根地課程
+              </button>
+              <button class="cta-course italy-btn" @click="router.push('/italy')">
+                🇮🇹 義大利課程
+              </button>
+              <button class="cta-course spain-btn" @click="router.push('/spain')">
+                🇪🇸 西班牙課程
+              </button>
+            </template>
           </div>
         </div>
         <!-- 未登入：原本的 CTA -->
@@ -160,8 +162,8 @@
           </div>
 
           <!-- ── Bourgogne ── -->
-          <div class="course-card bourgogne">
-            <div class="card-status active">⏳ 預計2027開放</div>
+          <div v-if="isAdmin" class="course-card bourgogne">
+            <div class="card-status active">🔓 管理員開放</div>
             <div class="card-hero">
               <div class="card-icon">🍇</div>
               <div class="card-region">France · Bourgogne</div>
@@ -169,14 +171,13 @@
               <p class="card-desc">從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界（預計2027開放）</p>
             </div>
             <div class="card-actions">
-              <button class="card-cta" @click="handleNotify('bourgogne')">🔔 搶先通知我</button>
-              <button class="card-info-btn" @click="openCourseDetail('bourgogne')">📋 課程說明</button>
+              <button class="card-cta bourgogne-cta" @click="router.push('/bourgogne')">📖 進入課程 →</button>
             </div>
           </div>
 
           <!-- ── Italy ── -->
-          <div class="course-card italy">
-            <div class="card-status new">⏳ 預計2027開放</div>
+          <div v-if="isAdmin" class="course-card italy">
+            <div class="card-status new">🔓 管理員開放</div>
             <div class="card-hero">
               <div class="card-icon">🇮🇹</div>
               <div class="card-region">Italy</div>
@@ -184,13 +185,12 @@
               <p class="card-desc">探索 Barolo、Brunello、Amarone 等世界頂級義大利葡萄酒，20 個 DOC/DOCG 產區完整解析（預計2027開放）</p>
             </div>
             <div class="card-actions">
-              <button class="card-cta" @click="handleNotify('italy')">🔔 搶先通知我</button>
-              <button class="card-info-btn" @click="openCourseDetail('italy')">📋 課程說明</button>
+              <button class="card-cta italy-cta" @click="router.push('/italy')">📖 進入課程 →</button>
             </div>
           </div>
 
           <!-- ── Spain ── -->
-          <div class="course-card spain">
+          <div v-if="isAdmin" class="course-card spain">
             <div class="card-status new">🆕 新課程・即刻探索</div>
             <div class="card-hero">
               <div class="card-icon">🇪🇸</div>
