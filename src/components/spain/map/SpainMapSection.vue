@@ -187,6 +187,7 @@ const appellations = ref([])  // spain-appellations.json lookup
 
 let map = null
 let hoveredId = null
+const allRegionsMap = new Map()   // Map<featureIdx → normalizedInfo> ，供 click 查詢用
 
 // ── Type helpers ─────────────────────────────────────────────────
 const TYPE_MAP = {
@@ -346,14 +347,28 @@ async function addLayers() {
   const provinceGeo = await provinceRes.json()
   const wineGeo = await wineRes.json()
 
-  // Normalize all features
-  allRegions.value = wineGeo.features.map((f, i) => {
+  // 用 appellations 查出每個 feature 的 autonomiaId，寫回 GeoJSON properties 
+  // （這樣 Mapbox filter 才能直接用 ['get', 'AUTONOMIA_ID']）
+  allRegionsMap.clear()
+  wineGeo.features.forEach((f, i) => {
+    const appData = lookupAppellation(f.properties.ZON_DS_NOM)
+    f.properties.AUTONOMIA_ID = appData?.autonomiaId || ''
     const n = normalizeFeature(f, i)
-    n.appData = lookupAppellation(n.zonDsNom)
-    return n
+    n.appData = appData
+    allRegionsMap.set(i, n)
   })
 
-  // ── Province layer（衛星圖上只顯示白色外框，不蓋住底圖）──────────
+  // 依當前 region 的 filterAutonomiaId 設定抽屜清單
+  const filterAuto = props.region.filterAutonomiaId
+  if (filterAuto) {
+    allRegions.value = [...allRegionsMap.values()].filter(r =>
+      r.appData?.autonomiaId === filterAuto
+    )
+  } else {
+    allRegions.value = [...allRegionsMap.values()]
+  }
+
+  // ── Province layer（衛星圖上只顯示白色外框）──────────────────
   map.addSource('provinces', {
     type: 'geojson',
     data: provinceGeo,
@@ -371,7 +386,6 @@ async function addLayers() {
   })
 
   // ── Wine regions layer ──────────────────────────────────────
-  // generateId:true 讓 Mapbox 自動產生整數 id，feature-state 才能正常運作
   map.addSource('wine-regions', {
     type: 'geojson',
     data: wineGeo,
@@ -400,20 +414,12 @@ async function addLayers() {
     },
   })
 
-  // Outline layer
+  // Outline layer（移除重複的 line-color key）
   map.addLayer({
     id: 'wine-regions-line',
     type: 'line',
     source: 'wine-regions',
     paint: {
-      'line-color': [
-        'match', ['get', 'TPR_DS_DES'],
-        'Denominación de Origen Calificada', '#c0392b',
-        'Denominación de Origen Protegida',  '#d35400',
-        'Vino de Calidad',  '#2471a3',
-        'Vino de Pago',     '#7d3c98',
-        '#1e8449',
-      ],
       'line-color': [
         'match', ['get', 'TPR_DS_DES'],
         'Denominación de Origen Calificada', '#ff6b6b',
@@ -429,6 +435,38 @@ async function addLayers() {
       ],
     },
   })
+
+  // ── 指定自治區：套用圖層 filter ＋ fitBounds ─────────────────
+  if (filterAuto) {
+    const filterExpr = ['==', ['get', 'AUTONOMIA_ID'], filterAuto]
+    map.setFilter('wine-regions-fill', filterExpr)
+    map.setFilter('wine-regions-line', filterExpr)
+
+    // 計算該自治區所有 feature 的實際 bbox，然後 fitBounds
+    const filtered = wineGeo.features.filter(f =>
+      f.properties.AUTONOMIA_ID === filterAuto
+    )
+    if (filtered.length > 0) {
+      const allCoords = filtered.flatMap(f => {
+        if (!f.geometry) return []
+        if (f.geometry.type === 'Polygon')      return f.geometry.coordinates.flat(1)
+        if (f.geometry.type === 'MultiPolygon') return f.geometry.coordinates.flat(2)
+        return []
+      })
+      const lngs = allCoords.map(c => c[0]).filter(v => typeof v === 'number' && isFinite(v))
+      const lats = allCoords.map(c => c[1]).filter(v => typeof v === 'number' && isFinite(v))
+      if (lngs.length > 0) {
+        const minLng = lngs.reduce((a, b) => a < b ? a : b)
+        const maxLng = lngs.reduce((a, b) => a > b ? a : b)
+        const minLat = lats.reduce((a, b) => a < b ? a : b)
+        const maxLat = lats.reduce((a, b) => a > b ? a : b)
+        map.fitBounds(
+          [[minLng, minLat], [maxLng, maxLat]],
+          { padding: 80, maxZoom: 11, duration: 800 }
+        )
+      }
+    }
+  }
 
   // ── Hover interaction ───────────────────────────────────────
   map.on('mousemove', 'wine-regions-fill', (e) => {
@@ -453,8 +491,7 @@ async function addLayers() {
   // ── Click interaction ───────────────────────────────────────
   map.on('click', 'wine-regions-fill', (e) => {
     const feat = e.features[0]
-    const idx = feat.id
-    const info = allRegions.value[idx]
+    const info = allRegionsMap.get(feat.id)   // 用 Map 查，不依賴 allRegions 陣列 index
     if (info) {
       activeInfo.value = info
       infoCollapsed.value = false

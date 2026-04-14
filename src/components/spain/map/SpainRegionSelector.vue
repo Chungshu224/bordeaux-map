@@ -30,8 +30,10 @@
         <p class="region-name-es">{{ region.nameEs }}</p>
         <div class="region-stats">
           <span v-if="region.docaCount" class="badge doca">{{ region.docaCount }} DOCa</span>
-          <span class="badge do">{{ region.doCount }} DO</span>
-          <span v-if="region.vpCount" class="badge vp">+{{ region.vpCount }} VP</span>
+          <span v-if="region.doCount" class="badge do">{{ region.doCount }} DO</span>
+          <span v-if="region.vcCount" class="badge vc">{{ region.vcCount }} VC</span>
+          <span v-if="region.vpCount" class="badge vp">{{ region.vpCount }} VP</span>
+          <span v-if="!region.docaCount && !region.doCount && !region.vcCount && !region.vpCount" class="badge do">探索中</span>
         </div>
       </div>
     </div>
@@ -440,6 +442,10 @@ function select(region) {
 }
 .badge.do {
   background: rgba(39,174,96,0.7);
+  color: white;
+}
+.badge.vc {
+  background: rgba(52,152,219,0.7);
   color: white;
 }
 .badge.vp {
