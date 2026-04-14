@@ -1,41 +1,6 @@
--- ============================================================
--- 葡萄酒三語辭典（中文 / English / Français / Italiano）
--- 建立日期：2026-04-14  |  修訂：加入三大產區分版（波爾多/布根地/義大利）
--- ============================================================
+-- seed_wine_glossary.sql - 只插入資料，table 已存在時使用
+-- 執行前請確認 wine_glossary table 已建立
 
--- 若已存在舊版本先刪除（首次執行安全）
-DROP TABLE IF EXISTS public.wine_glossary CASCADE;
-
-CREATE TABLE public.wine_glossary (
-  id           uuid        PRIMARY KEY DEFAULT gen_random_uuid(),
-  region       text        NOT NULL DEFAULT 'bordeaux'
-               CHECK (region IN ('bordeaux','bourgogne','italy')),
-  zh           text        NOT NULL,
-  en           text        NOT NULL,
-  fr           text        NOT NULL DEFAULT '',
-  it           text        NOT NULL DEFAULT '',
-  definition   text        NOT NULL,
-  category     text        NOT NULL DEFAULT 'general'
-               CHECK (category IN ('grape','region','winemaking','tasting','appellation','general')),
-  created_at   timestamptz DEFAULT now(),
-  updated_at   timestamptz DEFAULT now()
-);
-
-CREATE INDEX IF NOT EXISTS idx_wg_region ON public.wine_glossary (region);
-CREATE INDEX IF NOT EXISTS idx_wg_zh ON public.wine_glossary USING gin(to_tsvector('simple', zh));
-CREATE INDEX IF NOT EXISTS idx_wg_en ON public.wine_glossary USING gin(to_tsvector('simple', en));
-
-ALTER TABLE public.wine_glossary ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "glossary_public_read" ON public.wine_glossary
-  FOR SELECT USING (true);
-
-CREATE POLICY "glossary_admin_write" ON public.wine_glossary
-  FOR ALL USING (
-    (SELECT role FROM public.profiles WHERE id = auth.uid()) = 'admin'
-  );
-
--- ════════════════════════════════════════════════════════════
 -- 波爾多（Bordeaux）詞條  — 中文 / English / Français
 -- ════════════════════════════════════════════════════════════
 
@@ -274,3 +239,4 @@ INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALU
 ON CONFLICT DO NOTHING;
 
 NOTIFY pgrst, 'reload schema';
+

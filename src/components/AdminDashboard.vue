@@ -188,6 +188,14 @@
         </div>
       </section>
 
+      <!-- ── 辭典管理 ── -->
+      <section v-if="activeTab === 'glossary'" class="tab-panel">
+        <div class="section-header">
+          <h2 class="section-title">📖 葡萄酒辭典管理</h2>
+        </div>
+        <AdminGlossary />
+      </section>
+
     </main>
 
     <!-- 學員詳情彈窗 -->
@@ -241,6 +249,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { supabase } from '../lib/supabaseClient.js'
 import { authActions, authState } from '../stores/authStore.js'
+import AdminGlossary from './AdminGlossary.vue'
 
 const router = useRouter()
 
@@ -250,6 +259,7 @@ const tabs = [
   { id: 'students',  label: '學員管理', icon: '👥' },
   { id: 'courses',   label: '課程管理', icon: '📚' },
   { id: 'revenue',   label: '營收報表', icon: '💰' },
+  { id: 'glossary',  label: '辭典管理', icon: '📖' },
 ]
 const activeTab = ref('overview')
 
