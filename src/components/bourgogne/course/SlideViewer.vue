@@ -64,7 +64,7 @@
         <div class="progress-bar" :style="{ width: progressPercentage + '%' }"></div>
       </div>
     </div>
-    <WineGlossary />
+    <WineGlossary region="bourgogne" />
   </div>
 </template>
 

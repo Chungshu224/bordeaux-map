@@ -9,14 +9,14 @@
   <Teleport to="body">
     <Transition name="glossary-fade">
       <div v-if="open" class="glossary-overlay" @click.self="open = false">
-        <div class="glossary-panel">
+        <div class="glossary-panel" :data-region="region">
 
           <!-- Header -->
           <div class="gp-header">
             <div class="gp-title">
-              <span class="gp-icon">📖</span>
-              <span>葡萄酒三語辭典</span>
-              <span class="gp-langs">中文 · English · Français</span>
+              <span class="gp-icon">{{ regionConfig.icon }}</span>
+              <span>{{ regionConfig.title }}</span>
+              <span class="gp-langs">中文 · English · {{ regionConfig.lang3Label }}</span>
             </div>
             <button class="gp-close" @click="open = false">✕</button>
           </div>
@@ -28,7 +28,7 @@
               v-model.trim="query"
               class="gp-search"
               type="search"
-              placeholder="搜尋中文、英文或法文名詞…"
+              :placeholder="regionConfig.placeholder"
               autocomplete="off"
               @keydown.escape="open = false"
             />
@@ -62,9 +62,9 @@
                   <span class="term-zh" v-html="hl(item.zh)"></span>
                   <span class="term-sep">·</span>
                   <span class="term-en" v-html="hl(item.en)"></span>
-                  <template v-if="item.fr">
+                  <template v-if="item[regionConfig.lang3Key]">
                     <span class="term-sep">·</span>
-                    <span class="term-fr" v-html="hl(item.fr)"></span>
+                    <span class="term-lang3" v-html="hl(item[regionConfig.lang3Key])"></span>
                   </template>
                   <span :class="['cat-badge', `cat-${item.category}`]">{{ catLabel(item.category) }}</span>
                 </div>
@@ -89,8 +89,26 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, nextTick, onMounted } from 'vue'
+import { ref, computed, watch, nextTick } from 'vue'
 import { supabase } from '../lib/supabaseClient.js'
+
+const props = defineProps({
+  region: {
+    type: String,
+    default: 'bordeaux',
+    validator: v => ['bordeaux', 'bourgogne', 'italy'].includes(v)
+  }
+})
+
+// ── Region config ──────────────────────────────────────────
+const regionConfig = computed(() => {
+  const cfg = {
+    bordeaux:  { icon: '🍷', title: '波爾多葡萄酒辭典',  lang3Key: 'fr', lang3Label: 'Français',  placeholder: '搜尋中文、英文或法文名詞…' },
+    bourgogne: { icon: '🍇', title: '布根地葡萄酒辭典',  lang3Key: 'fr', lang3Label: 'Français',  placeholder: '搜尋中文、英文或法文名詞…' },
+    italy:     { icon: '🍾', title: '義大利葡萄酒辭典', lang3Key: 'it', lang3Label: 'Italiano', placeholder: '搜尋中文、英文或義大利文名詞…' },
+  }
+  return cfg[props.region] || cfg.bordeaux
+})
 
 // ── State ──────────────────────────────────────────────────
 const open          = ref(false)
@@ -127,7 +145,8 @@ async function loadGlossary() {
   try {
     const { data, error } = await supabase
       .from('wine_glossary')
-      .select('id, zh, en, fr, definition, category')
+      .select('id, zh, en, fr, it, definition, category')
+      .eq('region', props.region)
       .order('zh')
     if (error) throw error
     allItems.value = data ?? []
@@ -146,10 +165,11 @@ const filtered = computed(() => {
   }
   const q = query.value.toLowerCase()
   if (!q) return list
+  const l3k = regionConfig.value.lang3Key
   return list.filter(i =>
     i.zh.toLowerCase().includes(q) ||
     i.en.toLowerCase().includes(q) ||
-    (i.fr || '').toLowerCase().includes(q) ||
+    (i[l3k] || '').toLowerCase().includes(q) ||
     i.definition.toLowerCase().includes(q)
   )
 })
@@ -239,7 +259,11 @@ watch(activeCategory, () => {
   flex-direction: column;
   overflow: hidden;
   box-shadow: 0 -8px 40px rgba(0,0,0,0.25);
+  /* 區域主題色 */
+  --gp-accent: #c9a84c;
 }
+.glossary-panel[data-region="bourgogne"] { --gp-accent: #8b5fbf; }
+.glossary-panel[data-region="italy"]     { --gp-accent: #3a9b5c; }
 
 /* ── Header ── */
 .gp-header {
@@ -296,7 +320,7 @@ watch(activeCategory, () => {
   outline: none;
   transition: border-color 0.2s;
 }
-.gp-search:focus { border-color: #c9a84c; }
+.gp-search:focus { border-color: var(--gp-accent, #c9a84c); }
 .gp-clear {
   position: absolute;
   right: 26px;
@@ -331,8 +355,8 @@ watch(activeCategory, () => {
   transition: all 0.15s;
 }
 .gp-cat-btn.active, .gp-cat-btn:hover {
-  background: #c9a84c;
-  border-color: #c9a84c;
+  background: var(--gp-accent, #c9a84c);
+  border-color: var(--gp-accent, #c9a84c);
   color: #fff;
 }
 
@@ -365,7 +389,7 @@ watch(activeCategory, () => {
 }
 .term-zh    { font-weight: 700; color: #2c1a0e; font-size: 0.95rem; }
 .term-en    { font-weight: 600; color: #4a3828; font-size: 0.88rem; font-style: italic; }
-.term-fr    { font-weight: 600; color: #6b4f3a; font-size: 0.88rem; font-style: italic; }
+.term-lang3 { font-weight: 600; color: #6b4f3a; font-size: 0.88rem; font-style: italic; }
 .term-sep   { color: #c0b0a0; font-size: 0.75rem; }
 
 .cat-badge {
@@ -392,15 +416,15 @@ watch(activeCategory, () => {
 .gp-more-wrap { text-align: center; padding: 12px 0; }
 .gp-more-btn {
   padding: 7px 20px;
-  border: 1.5px solid #c9a84c;
+  border: 1.5px solid var(--gp-accent, #c9a84c);
   border-radius: 20px;
   background: #fff;
-  color: #c9a84c;
+  color: var(--gp-accent, #c9a84c);
   font-weight: 700;
   font-size: 0.82rem;
   cursor: pointer;
 }
-.gp-more-btn:hover { background: #c9a84c; color: #fff; }
+.gp-more-btn:hover { background: var(--gp-accent, #c9a84c); color: #fff; }
 
 /* ── Footer ── */
 .gp-footer {

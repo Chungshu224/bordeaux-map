@@ -50,7 +50,7 @@
         <div class="progress-bar" :style="{ width: progressPct + '%' }"></div>
       </div>
     </div>
-    <WineGlossary />
+    <WineGlossary region="italy" />
   </div>
 </template>
 

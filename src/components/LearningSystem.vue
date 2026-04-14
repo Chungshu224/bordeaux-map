@@ -56,7 +56,7 @@
           />
         </div>
       </main>
-      <WineGlossary />
+      <WineGlossary region="bordeaux" />
     </template>
 
     <!-- 成就通知 -->
