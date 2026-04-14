@@ -2022,7 +2022,14 @@ const currentSlideData = computed(() => {
   return slides.value[currentSlide.value] || null
 })
 
-const currentSlideTitle = computed(() => currentSlideData.value?.title || '')
+const currentSlideTitle = computed(() => {
+  const slide = currentSlideData.value
+  if (!slide) return ''
+  // 若此投影片包含測驗（quiz 物件或 component 含 quiz 字樣），顯示「知識檢測」
+  if (slide.quiz && typeof slide.quiz === 'object') return '知識檢測'
+  if (slide.component && /quiz/i.test(slide.component)) return '知識檢測'
+  return slide.title || ''
+})
 
 // 監看當前投影片內容變化，於 DOM 更新後掛載互動按鈕（例如下載空白 PDF）
 watch(() => currentSlideData.value?.content, async () => {
