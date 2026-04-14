@@ -7,14 +7,10 @@
     <!-- Header -->
     <div class="map-header">
       <div class="map-header-left">
-        <button class="map-hdr-btn" @click="emit('back')">☰ 產區</button>
+        <button class="map-hdr-btn" @click="emit('back')">← 返回自治區</button>
         <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
       </div>
-      <div class="map-header-title">
-        <span class="region-icon">{{ region.icon }}</span>
-        <span class="region-name">{{ region.name }}</span>
-        <span class="region-sub">{{ region.nameEs }}</span>
-      </div>
+      <h1>{{ region.icon }} {{ region.name }} 產區地圖</h1>
     </div>
 
     <!-- 資訊卡 -->
@@ -591,92 +587,84 @@ function toggleInfo() {
 
 /* ── Header ───────────────────────────────────────────────── */
 .map-header {
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 10;
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  z-index: 1000;
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.7rem 1rem;
-  background: rgba(255,255,255,0.88);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  align-items: flex-start;
+  gap: 12px;
+  pointer-events: none;
 }
 
 .map-header-left {
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
+  pointer-events: auto;
   flex-shrink: 0;
 }
 
 .map-hdr-btn {
-  padding: 0.4rem 0.9rem;
+  padding: 6px 14px;
   border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border: 1.5px solid #d14;
-  background: #fff;
-  color: #d14;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.map-hdr-btn:hover { background: #d14; color: #fff; }
-.map-hdr-btn.ghost { border-color: #888; color: #555; }
-.map-hdr-btn.ghost:hover { background: #555; color: #fff; border-color: #555; }
-
-.map-header-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.region-icon { font-size: 1.3rem; }
-
-.region-name {
-  font-size: 1.05rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: #222;
+  border: none;
+  background: rgba(192,57,43,0.85);
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: all 0.15s;
+  pointer-events: auto;
+}
+.map-hdr-btn:hover { background: rgba(192,57,43,1); }
+.map-hdr-btn.ghost {
+  background: rgba(255,255,255,0.82);
+  border: 1.5px solid rgba(192,57,43,0.5);
+  color: #7b241c;
+}
+.map-hdr-btn.ghost:hover { background: rgba(255,255,255,0.95); }
+
+.map-header h1 {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #5b1d1d;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.9), 0 0 10px rgba(255,255,255,0.9);
+  pointer-events: none;
+  padding-top: 4px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.region-sub {
-  font-size: 0.8rem;
-  color: #888;
-  white-space: nowrap;
-}
-
 /* ── Info bar ─────────────────────────────────────────────── */
 .map-info-bar {
-  position: absolute;
-  bottom: 4.5rem;
-  left: 1rem;
-  right: 1rem;
-  max-width: 480px;
-  z-index: 20;
-  border-radius: 16px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 560px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  z-index: 1001;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
-@media (min-width: 768px) {
-  .map-info-bar {
-    right: auto;
-    width: 380px;
-  }
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  background: linear-gradient(to bottom, white, #fafafa);
+  display: flex;
+  flex-direction: column;
+  max-height: 60vh;
 }
 
 .info-header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.8rem 1rem;
-  background: linear-gradient(135deg, #c0392b, #8e44ad);
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #c0392b 0%, #7b241c 100%);
   color: white;
 }
 
@@ -835,23 +823,25 @@ function toggleInfo() {
 .aoc-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 50;
-  background: rgba(0,0,0,0.35);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  background: rgba(15,23,42,0.34);
+  backdrop-filter: blur(4px);
+  z-index: 1100;
 }
 
 .aoc-drawer {
-  background: white;
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-  max-width: 520px;
-  max-height: 80vh;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(env(safe-area-inset-top, 0px) + 6px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  width: min(90vw, 560px);
+  background: #f7f3ee;
+  border-radius: 20px 20px 14px 14px;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.24);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 -8px 32px rgba(0,0,0,0.2);
+  z-index: 1101;
 }
 
 .aoc-handle {
@@ -973,10 +963,10 @@ function toggleInfo() {
 
 /* ── Legend ──────────────────────────────────────────────────── */
 .map-legend {
-  position: absolute;
-  bottom: 4.5rem;
+  position: fixed;
   right: 1rem;
-  z-index: 10;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  z-index: 999;
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(6px);
   border-radius: 12px;
@@ -1011,41 +1001,62 @@ function toggleInfo() {
 
 /* ── Bottom toolbar ──────────────────────────────────────────── */
 .mobile-grid-buttons {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  z-index: 20;
-  display: flex;
-  background: rgba(255,255,255,0.94);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 560px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.96);
   backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(0,0,0,0.07);
-  padding-bottom: env(safe-area-inset-bottom);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
 .m-grid-btn {
-  flex: 1;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #faf5ef 0%, #f1e7dd 100%);
+  color: #4f3422;
+  min-height: 54px;
+  border: none;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
-  padding: 0.6rem 0.3rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  border-right: 1px solid rgba(0,0,0,0.06);
-  transition: background 0.15s;
+  justify-content: center;
+  gap: 3px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+  transition: all 0.15s;
 }
-.m-grid-btn:last-child { border-right: none; }
-.m-grid-btn:hover, .m-grid-btn.active { background: rgba(192,57,43,0.08); }
-.m-grid-btn.active .m-grid-icon, .m-grid-btn.active .m-grid-text { color: #c0392b; }
+.m-grid-btn:hover { opacity: 0.85; }
+.m-grid-btn.active {
+  background: linear-gradient(180deg, #a93226 0%, #7b241c 100%);
+  color: #fff;
+  box-shadow: none;
+}
 
 .m-grid-icon {
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(107,31,31,0.08);
+  font-size: 0.8rem;
   font-weight: 800;
-  color: #555;
 }
+.m-grid-btn.active .m-grid-icon { background: rgba(255,255,255,0.18); color: #fff; }
+
 .m-grid-text {
-  font-size: 0.7rem;
-  color: #666;
+  font-size: 0.76rem;
+  font-weight: 800;
 }
 
 /* ── Loading / Error ─────────────────────────────────────────── */
@@ -1090,6 +1101,6 @@ function toggleInfo() {
 
 /* mapbox-gl overrides */
 :deep(.mapboxgl-ctrl-top-right) {
-  top: 60px;
+  top: 52px;
 }
 </style>
