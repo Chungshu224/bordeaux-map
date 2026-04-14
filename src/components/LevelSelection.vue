@@ -21,7 +21,10 @@
         <!-- 使用者面板 -->
         <div class="user-panel">
           <template v-if="authUser">
-            <div class="user-avatar">👤</div>
+            <div class="user-avatar">
+              <img v-if="avatarUrl" :src="avatarUrl" class="user-avatar-img" alt="大頭貼" />
+              <span v-else class="user-avatar-initial">{{ (displayName || '?')[0] }}</span>
+            </div>
             <div class="user-info">
               <span class="user-name">{{ displayName }}</span>
               <div class="tier-badge" :class="`tier-${userTier}`">
@@ -392,9 +395,10 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { learningState, learningActions } from '../stores/learningStore.js'
 import { authState, authActions } from '../stores/authStore.js'
+import { supabase } from '../lib/supabaseClient.js'
 import { useRouter } from 'vue-router'
 import LearningStatsMini from './LearningStatsMini.vue'
 import LearningProgressDashboard from './LearningProgressDashboard.vue'
@@ -423,6 +427,22 @@ const emit = defineEmits(['selectLevel', 'exploreMode', 'gameHubMode', 'notebook
 // 認證狀態
 const authUser = computed(() => authState.user)
 const displayName = computed(() => authActions.getDisplayName())
+
+// 大頭貼
+const avatarUrl = ref('')
+
+async function loadAvatar() {
+  if (!authState.user || !supabase) { avatarUrl.value = ''; return }
+  const { data } = await supabase
+    .from('profiles')
+    .select('avatar_url')
+    .eq('id', authState.user.id)
+    .single()
+  avatarUrl.value = data?.avatar_url || ''
+}
+
+onMounted(() => { loadAvatar() })
+watch(() => authState.user?.id, () => { loadAvatar() })
 
 const TIER_INFO = {
   free:    { label: '品飲新手 Explorer',       icon: '🌱', color: '#6b7280' },
@@ -636,8 +656,30 @@ const getBubbleStyle = (index) => {
 .tier-icon { font-size: 0.85rem; }
 
 .user-avatar {
-  font-size: 1.8rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,0.6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.user-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.user-avatar-initial {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .user-info {
