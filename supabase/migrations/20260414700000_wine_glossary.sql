@@ -18,7 +18,8 @@ CREATE TABLE public.wine_glossary (
   category     text        NOT NULL DEFAULT 'general'
                CHECK (category IN ('grape','region','winemaking','tasting','appellation','general')),
   created_at   timestamptz DEFAULT now(),
-  updated_at   timestamptz DEFAULT now()
+  updated_at   timestamptz DEFAULT now(),
+  CONSTRAINT uq_wg_region_zh UNIQUE (region, zh)
 );
 
 CREATE INDEX IF NOT EXISTS idx_wg_region ON public.wine_glossary (region);

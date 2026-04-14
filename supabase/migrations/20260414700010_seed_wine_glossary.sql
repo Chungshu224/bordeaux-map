@@ -22,7 +22,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '高酸清爽，帶有柑橘、青草、百香果氣息，常與賽美蓉混釀波爾多干白（如白色佩薩克-雷奧良）。','grape'),
 ('bordeaux','密思卡岱','Muscadelle','Muscadelle',
  '波爾多白酒少量輔助品種，帶有麝香花香，主要用於增添干甜白酒的芳香強度。','grape')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 產區
 INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALUES
@@ -38,7 +38,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '波爾多南部甜白名區，因西侯河晨霧孕育貴腐黴，釀造全球最偉大甜白（Château d''Yquem），在1855年分級中獨立為最高級別。','region'),
 ('bordeaux','波亞克','Pauillac','Pauillac',
  '梅多克明星村莊，擁有三個1855年一級莊（拉菲、拉圖、木桐），以力量感、陳年潛力和卡本內蘇維翁的結構感著稱。','region')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 釀造
 INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALUES
@@ -54,7 +54,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '裝瓶前加入蛋白、膨潤土等澄清劑，吸附懸浮粒子及不穩定蛋白質，使酒液澄清、口感更滑順。','winemaking'),
 ('bordeaux','浸皮','Maceration','Macération',
  '葡萄汁與葡萄皮、種籽接觸以萃取顏色、單寧和多酚，時間長短決定酒體深淺及單寧多寡，是紅酒關鍵步驟。','winemaking')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 品飲
 INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALUES
@@ -68,7 +68,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '吐出或吞下酒後，風味在口腔中持續的時間與品質；波爾多特級莊可達30秒以上，越長代表品質越高。','tasting'),
 ('bordeaux','陳年潛力','Aging Potential','Potentiel de garde',
  '葡萄酒在適當儲存條件下持續提升品質的能力，高單寧、高酸的波爾多紅酒通常可陳20-50年以上。','tasting')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 法規與分級
 INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALUES
@@ -82,7 +82,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '梅多克非1855年分級酒莊的品質認證，2020年重新啟動官方評鑑，分 Cru Bourgeois、Cru Bourgeois Supérieur 和 Cru Bourgeois Exceptionnel 三等。','appellation'),
 ('bordeaux','特級酒莊','Grand Cru Classé','Grand Cru Classé',
  '聖愛美濃自有分級中的精選酒莊（非梅多克1855年制度），最高為 Premier Grand Cru Classé A，以 Pétrus 概念為靈感，每十年重審一次。','appellation')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- ════════════════════════════════════════════════════════════
 -- 布根地（Bourgogne）詞條  — 中文 / English / Français
@@ -98,7 +98,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '布根地次要白葡萄，高酸清新，常與黑醋栗利口酒（Crème de Cassis）混調成 Kir，有自己的 AOC：Bourgogne Aligoté。','grape'),
 ('bourgogne','加美','Gamay','Gamay',
  '薄酒萊主角，布根地用量少，薄皮大果串，以二氧化碳浸泡法釀出清新果香（香蕉、覆盆子），輕盈易飲，代表新酒文化。','grape')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 產區
 INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALUES
@@ -112,7 +112,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '布根地南部親民產區，夏多內白酒清新柔和，性價比高，代表村莊有普依-富塞（Pouilly-Fuissé）和聖-維朗（Saint-Véran）。','region'),
 ('bourgogne','薄酒萊','Beaujolais','Beaujolais',
  '布根地最南端，以加美和二氧化碳浸泡法聞名，新酒（Nouveau）每年11月第三個週四全球上市，十個頂級村莊（Morgon、Moulin-à-Vent 等）可陳年。','region')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 分級與風土
 INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALUES
@@ -130,7 +130,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '布根地獨有概念，指擁有歷史名稱的獨立葡萄園地塊，相鄰的 Climat 即使位置跨過一條路也可風味迥異，2015年列入聯合國教科文組織世界遺產。','general'),
 ('bourgogne','酒商','Négociant','Négociant',
  '向農民或合作社購買葡萄（汁或成酒）進行混釀熟成裝瓶的商業買家，如 Jadot、Drouhin，與「酒莊（Domaine）」自種自釀模式形成對比。','general')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 釀造
 INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALUES
@@ -142,7 +142,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '不除梗直接連同葡萄梗一起發酵，梗可增添香料、花香及清新感，但需要梗完全成熟，布根地部分頂級莊（如 Leroy）使用此工藝。','winemaking'),
 ('bourgogne','乳酸發酵','Malolactic Fermentation','Fermentation malolactique',
  '將銳利蘋果酸轉化為柔和乳酸，使布根地白酒獲得奶油圓潤感；現代派酒莊偶爾部分阻止以保留清爽礦物感。','winemaking')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 品飲
 INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALUES
@@ -152,7 +152,7 @@ INSERT INTO public.wine_glossary (region, zh, en, fr, definition, category) VALU
  '品飲時感受到的石頭、燧石、粉筆、鹽水等無機質感，在夏布利和夜丘頂級白酒中尤為明顯，被視為頂級布根地的品質標誌。','tasting'),
 ('bourgogne','複雜度','Complexity','Complexité',
  '葡萄酒在香氣與口感上呈現多層次、多面向的能力，隨陳年發展出更豐富的三段香氣，是頂級布根地區分普通酒的關鍵。','tasting')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- ════════════════════════════════════════════════════════════
 -- 義大利（Italy）詞條  — 中文 / English / Italiano
@@ -176,7 +176,7 @@ INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALU
  '義大利最芬芳的白葡萄，以 Moscato d''Asti（DOCG）著稱，低酒精（5-6%）、微甜微泡，帶有桃子、橙花和蜂蜜香。','grape'),
 ('italy','普里密提沃','Primitivo','Primitivo',
  '南義普利亞大區主要品種，與美國金粉黛（Zinfandel）為同一品種，果皮厚、糖分高，帶有黑色水果和香料，酒精度偏高。','grape')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 產區
 INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALUES
@@ -196,7 +196,7 @@ INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALU
  '托斯卡納核心子產區，以山吉歐維賽為主（最少80%），黑公雞標誌代表正宗，分 Annata、Riserva、Gran Selezione 三個品質等級。','region'),
 ('italy','阿瑪羅內','Amarone','Amarone della Valpolicella',
  '威尼托 Valpolicella 以風乾葡萄（Appassimento）釀成的干型紅酒，酒精度高（15-17%），濃郁，帶有無花果、黑巧克力和香料。','region')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 釀造
 INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALUES
@@ -210,7 +210,7 @@ INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALU
  '1970年代義大利酒莊突破 DOC 法規，以非傳統品種（Cabernet、Merlot）釀造的旗艦酒，代表作 Sassicaia、Ornellaia、Tignanello，最終促成 IGT 制度建立。','winemaking'),
 ('italy','聖酒','Vin Santo','Vin Santo',
  '托斯卡納傳統甜酒，以風乾白葡萄（Trebbiano、Malvasia）釀造後置於小木桶（Caratelli）中陳年多年，帶有核桃、焦糖和蜂蜜風味。','winemaking')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 品飲
 INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALUES
@@ -220,7 +220,7 @@ INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALU
  '義大利葡萄酒的靈魂特質，與食物搭配的天然盟友，夏多內替代品種（如 Verdicchio、Vernaccia）和山吉歐維賽均以高酸聞名。','tasting'),
 ('italy','結構','Structure','Struttura',
  '描述葡萄酒在口中單寧、酸度、酒精和果香的整體骨幹感，「有結構」的義大利紅酒具備長期陳年的條件。','tasting')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 -- 法規
 INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALUES
@@ -236,7 +236,7 @@ INSERT INTO public.wine_glossary (region, zh, en, it, definition, category) VALU
  '指一個 DOC/DOCG 產區內歷史最悠久的核心地塊，如 Chianti Classico（非整個奇揚第大區）、Soave Classico，代表更高品質的法定原產地。','appellation'),
 ('italy','優質','Superiore','Superiore',
  '義大利酒標術語，通常表示較高酒精度、較低產量或較長陳年，是部分 DOC產區（如 Valpolicella Superiore）對較高品質的官方認可。','appellation')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (region, zh) DO NOTHING;
 
 NOTIFY pgrst, 'reload schema';
 
