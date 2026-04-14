@@ -13,6 +13,14 @@
       <h1>{{ region.icon }} {{ region.name }} 產區地圖</h1>
     </div>
 
+    <!-- 省份指示 -->
+    <transition name="fade-down">
+      <div v-if="selectedProvince" class="province-indicator">
+        <span>📍 {{ selectedProvince }}</span>
+        <button class="province-close" @click="clearSelectedProvince">✕</button>
+      </div>
+    </transition>
+
     <!-- 資訊卡 -->
     <div v-if="activeInfo" class="map-info-bar" :class="{ collapsed: infoCollapsed }">
       <div class="info-header-bar">
@@ -64,6 +72,20 @@
           <!-- 描述 -->
           <div v-if="activeInfo.appData?.description" class="info-description">
             {{ activeInfo.appData.description }}
+          </div>
+
+          <!-- 所在省份 -->
+          <div v-if="activeInfo.appData?.provinces?.length" class="info-section">
+            <div class="info-section-label">📍 所在省份</div>
+            <div class="province-list">
+              <span
+                v-for="p in activeInfo.appData.provinces"
+                :key="p"
+                class="province-chip"
+                :class="{ active: selectedProvince === p }"
+                @click="highlightProvince(p)"
+              >{{ p }}</span>
+            </div>
           </div>
 
           <!-- 無資料時 -->
@@ -180,9 +202,12 @@ const typeFilter = ref('all')
 const activeInfo = ref(null)
 const allRegions = ref([])    // all 96 features as normalized objects
 const appellations = ref([])  // spain-appellations.json lookup
+const selectedProvince = ref(null)
 
 let map = null
 let hoveredId = null
+let selectedProvinceId = null
+let hoveredProvinceId = null
 const allRegionsMap = new Map()   // Map<featureIdx → normalizedInfo> ，供 click 查詢用
 
 // ── Type helpers ─────────────────────────────────────────────────
@@ -361,7 +386,6 @@ async function addLayers() {
   })
 
   // 依當前 region 的 filterAutonomiaId 設定抽屜清單
-  const filterAuto = props.region.filterAutonomiaId
   if (filterAuto) {
     allRegions.value = [...allRegionsMap.values()].filter(r =>
       r.appData?.autonomiaId === filterAuto
@@ -370,10 +394,26 @@ async function addLayers() {
     allRegions.value = [...allRegionsMap.values()]
   }
 
-  // ── Province layer（衛星圖上只顯示白色外框）──────────────────
+  // ── Province layer（衛星圖上只顯示白色外框 + 點擊高亮）────────
   map.addSource('provinces', {
     type: 'geojson',
     data: provinceGeo,
+    generateId: true,
+  })
+
+  // 透明填充層：供點擊偵測 + feature-state 高亮
+  map.addLayer({
+    id: 'provinces-fill',
+    type: 'fill',
+    source: 'provinces',
+    paint: {
+      'fill-color': '#f5b942',
+      'fill-opacity': [
+        'case',
+        ['boolean', ['feature-state', 'selected'], false], 0.28,
+        ['case', ['boolean', ['feature-state', 'hover'], false], 0.12, 0],
+      ],
+    },
   })
 
   map.addLayer({
@@ -490,20 +530,47 @@ async function addLayers() {
     map.getCanvas().style.cursor = ''
   })
 
+  // ── Province hover ────────────────────────────────────────────
+  map.on('mousemove', 'provinces-fill', (e) => {
+    if (e.features.length > 0) {
+      if (hoveredProvinceId !== null) {
+        map.setFeatureState({ source: 'provinces', id: hoveredProvinceId }, { hover: false })
+      }
+      hoveredProvinceId = e.features[0].id
+      map.setFeatureState({ source: 'provinces', id: hoveredProvinceId }, { hover: true })
+      // 只有在沒有 wine region 的區域才顯示 crosshair
+      const wine = map.queryRenderedFeatures(e.point, { layers: ['wine-regions-fill'] })
+      if (!wine.length) map.getCanvas().style.cursor = 'crosshair'
+    }
+  })
+
+  map.on('mouseleave', 'provinces-fill', () => {
+    if (hoveredProvinceId !== null) {
+      map.setFeatureState({ source: 'provinces', id: hoveredProvinceId }, { hover: false })
+    }
+    hoveredProvinceId = null
+  })
+
   // ── Click interaction ───────────────────────────────────────
   map.on('click', 'wine-regions-fill', (e) => {
     const feat = e.features[0]
-    const info = allRegionsMap.get(feat.id)   // 用 Map 查，不依賴 allRegions 陣列 index
+    const info = allRegionsMap.get(feat.id)
     if (info) {
       activeInfo.value = info
       infoCollapsed.value = false
     }
+    e.originalEvent._spainWineClicked = true
   })
 
-  // click on empty area clears selection
+  // 點擊省份（未蓋住 wine region 的區域）或清除選取
   map.on('click', (e) => {
-    const features = map.queryRenderedFeatures(e.point, { layers: ['wine-regions-fill'] })
-    if (features.length === 0) activeInfo.value = null
+    if (e.originalEvent._spainWineClicked) return
+    const provFeat = map.queryRenderedFeatures(e.point, { layers: ['provinces-fill'] })
+    if (provFeat.length > 0) {
+      selectProvinceByFeature(provFeat[0])
+    } else {
+      activeInfo.value = null
+    }
   })
 }
 
@@ -522,6 +589,42 @@ function toggleProvinces() {
   if (!map) return
   const vis = showProvinces.value ? 'visible' : 'none'
   map.setLayoutProperty('provinces-line', 'visibility', vis)
+  map.setLayoutProperty('provinces-fill', 'visibility', vis)
+}
+
+function selectProvinceByFeature(feat) {
+  if (!map) return
+  const name = feat.properties.province || feat.properties.name
+  if (selectedProvinceId !== null) {
+    map.setFeatureState({ source: 'provinces', id: selectedProvinceId }, { selected: false })
+  }
+  selectedProvinceId = feat.id
+  map.setFeatureState({ source: 'provinces', id: selectedProvinceId }, { selected: true })
+  selectedProvince.value = name
+  // fitBounds 至省份範圍
+  const coords = feat.geometry.type === 'MultiPolygon'
+    ? feat.geometry.coordinates.flat(2)
+    : feat.geometry.coordinates.flat(1)
+  const lngs = coords.map(c => c[0])
+  const lats = coords.map(c => c[1])
+  map.fitBounds(
+    [[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]],
+    { padding: 60, maxZoom: 10, duration: 700 }
+  )
+}
+
+function highlightProvince(name) {
+  if (!map) return
+  const features = map.querySourceFeatures('provinces')
+  const feat = features.find(f => (f.properties.province || f.properties.name) === name)
+  if (feat) selectProvinceByFeature(feat)
+}
+
+function clearSelectedProvince() {
+  if (!map || selectedProvinceId === null) return
+  map.setFeatureState({ source: 'provinces', id: selectedProvinceId }, { selected: false })
+  selectedProvinceId = null
+  selectedProvince.value = null
 }
 
 function toggle3D() {
@@ -966,6 +1069,82 @@ function toggleInfo() {
   transition: opacity 0.22s ease;
 }
 .sheet-fade-enter-from, .sheet-fade-leave-to { opacity: 0; }
+
+/* ── Province indicator ───────────────────────────────────────── */
+.province-indicator {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 52px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(230, 126, 34, 0.92);
+  color: white;
+  padding: 5px 12px 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+.province-close {
+  background: rgba(255,255,255,0.28);
+  border: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.65rem;
+  color: white;
+  line-height: 1;
+  padding: 0;
+  transition: background 0.15s;
+}
+.province-close:hover { background: rgba(255,255,255,0.45); }
+
+/* ── Province chips in info card ──────────────────────────────── */
+.province-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.province-chip {
+  padding: 0.2rem 0.65rem;
+  background: #fff3e0;
+  border: 1.5px solid #e67e22;
+  border-radius: 12px;
+  font-size: 0.77rem;
+  color: #e67e22;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.province-chip:hover,
+.province-chip.active {
+  background: #e67e22;
+  color: #fff;
+}
+
+/* Fade-down for province indicator */
+.fade-down-enter-active, .fade-down-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.fade-down-enter-from, .fade-down-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-6px);
+}
+.fade-down-enter-to, .fade-down-leave-from {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 
 /* ── Legend ──────────────────────────────────────────────────── */
 .map-legend {
