@@ -78,13 +78,13 @@
           <div v-if="activeInfo.appData?.provinces?.length" class="info-section">
             <div class="info-section-label">📍 所在省份</div>
             <div class="province-list">
-              <span
+              <button
                 v-for="p in activeInfo.appData.provinces"
                 :key="p"
                 class="province-chip"
                 :class="{ active: selectedProvince === p }"
                 @click="highlightProvince(p)"
-              >{{ p }}</span>
+              >{{ p }}</button>
             </div>
           </div>
 
@@ -149,14 +149,10 @@
     </div>
 
     <!-- 底部工具列 -->
-    <div v-if="mapReady" class="mobile-grid-buttons">
+    <div v-if="mapReady" class="mobile-grid-buttons mobile-grid-3">
       <button class="m-grid-btn" :class="{ active: drawerOpen }" @click="drawerOpen = !drawerOpen">
         <span class="m-grid-icon">產</span>
         <span class="m-grid-text">產區</span>
-      </button>
-      <button class="m-grid-btn" :class="{ active: showProvinces }" @click="toggleProvinces">
-        <span class="m-grid-icon">省</span>
-        <span class="m-grid-text">省界</span>
       </button>
       <button class="m-grid-btn" :class="{ active: is3D }" @click="toggle3D">
         <span class="m-grid-icon">3D</span>
@@ -1204,6 +1200,9 @@ function toggleInfo() {
   background: rgba(255,255,255,0.96);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.mobile-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .m-grid-btn {
