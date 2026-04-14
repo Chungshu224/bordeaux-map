@@ -193,7 +193,7 @@
         <div class="section-header">
           <h2 class="section-title">📈 學習進度</h2>
           <div class="section-actions">
-            <select v-model="progressCourse" class="filter-select" @change="loadProgress">
+            <select v-model="progressCourse" class="filter-select" @change="loadProgress(true)">
               <option value="">全部課程</option>
               <option value="bordeaux">波爾多</option>
               <option value="bourgogne">布根地</option>
@@ -230,6 +230,12 @@
             </tbody>
           </table>
           <p v-if="progressList.length === 0" class="empty-state">尚無學習進度資料</p>
+          <!-- 分頁控制 -->
+          <div v-if="progressTotal > 0" class="pagination">
+            <button class="pg-btn" :disabled="progressPage === 1" @click="progressGoPage(progressPage - 1)">&lsaquo; 上一頁</button>
+            <span class="pg-info">第 {{ progressPage }} / {{ progressTotalPages }} 頁&nbsp;&nbsp;共 {{ progressTotal }} 筆</span>
+            <button class="pg-btn" :disabled="progressPage >= progressTotalPages" @click="progressGoPage(progressPage + 1)">下一頁 &rsaquo;</button>
+          </div>
         </div>
       </section>
 
@@ -522,19 +528,38 @@ async function loadRevenue() {
 }
 
 // ── 學習進度 ────────────────────────────────────────────────
-const progressLoading = ref(false)
-const progressList    = ref([])
-const progressCourse  = ref('')
+const PAGE_SIZE        = 100
+const progressLoading  = ref(false)
+const progressList     = ref([])
+const progressCourse   = ref('')
+const progressPage     = ref(1)
+const progressTotal    = ref(0)
 
-async function loadProgress() {
+const progressTotalPages = computed(() => Math.max(1, Math.ceil(progressTotal.value / PAGE_SIZE)))
+
+async function loadProgress(resetPage = false) {
+  if (resetPage) progressPage.value = 1
   progressLoading.value = true
   try {
-    const params = progressCourse.value ? { p_course_id: progressCourse.value } : {}
-    const { data } = await supabase.rpc('admin_get_all_progress', params)
-    progressList.value = data ?? []
+    const courseParam = progressCourse.value || null
+    const [{ data }, { data: total }] = await Promise.all([
+      supabase.rpc('admin_get_all_progress', {
+        p_course_id: courseParam,
+        p_limit:     PAGE_SIZE,
+        p_offset:    (progressPage.value - 1) * PAGE_SIZE,
+      }),
+      supabase.rpc('admin_count_all_progress', { p_course_id: courseParam }),
+    ])
+    progressList.value  = data ?? []
+    progressTotal.value = Number(total ?? 0)
   } finally {
     progressLoading.value = false
   }
+}
+
+function progressGoPage(page) {
+  progressPage.value = page
+  loadProgress()
 }
 
 // ── 成就紀錄 ────────────────────────────────────────────────
@@ -565,7 +590,7 @@ onMounted(async () => {
 
 // 切換 tab 時自動載入
 watch(activeTab, (tab) => {
-  if (tab === 'progress'     && progressList.value.length === 0)     loadProgress()
+  if (tab === 'progress'     && progressList.value.length === 0)     loadProgress(true)
   if (tab === 'achievements' && achievementsList.value.length === 0) loadAchievements()
 })
 
@@ -803,4 +828,14 @@ function badgeTypeLabel(type) {
 .badge-tag.badge       { background: #fff3e0; color: #e67e22; }
 .badge-tag.certificate { background: #e8f8f0; color: #27ae60; }
 .badge-tag.milestone   { background: #f3e5f5; color: #8e44ad; }
+
+/* ── 分頁 ── */
+.pagination { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 16px 0 4px; }
+.pg-btn {
+  padding: 6px 18px; border: 1px solid #ddd; border-radius: 7px; background: #fff;
+  color: #555; font-size: .85rem; cursor: pointer; transition: all .2s;
+}
+.pg-btn:hover:not(:disabled) { border-color: #8b1a2b; color: #8b1a2b; }
+.pg-btn:disabled { opacity: .4; cursor: default; }
+.pg-info { font-size: .85rem; color: #777; }
 </style>
