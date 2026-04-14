@@ -362,13 +362,16 @@ function initMap() {
 async function addLayers() {
   // 依 filterAutonomiaId 決定要載入哪個 GeoJSON（分拆小檔 or 全量）
   const filterAuto  = props.region.filterAutonomiaId
-  const wineGeoUrl  = filterAuto
+  const wineGeoUrl     = filterAuto
     ? `/spain/geojson/${filterAuto}.geojson`
     : '/spain/spain-wine-regions.geojson'
+  const provinceGeoUrl = filterAuto
+    ? `/spain/provinces/${filterAuto}.geojson`
+    : '/spain/spain-provinces.geojson'
 
   // Load data in parallel
   const [provinceRes, wineRes] = await Promise.all([
-    fetch('/spain/spain-provinces.geojson'),
+    fetch(provinceGeoUrl),
     fetch(wineGeoUrl),
   ])
   const provinceGeo = await provinceRes.json()
