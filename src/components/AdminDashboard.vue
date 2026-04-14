@@ -192,14 +192,6 @@
       <section v-if="activeTab === 'progress'" class="tab-panel">
         <div class="section-header">
           <h2 class="section-title">📈 學習進度</h2>
-          <div class="section-actions">
-            <select v-model="progressCourse" class="filter-select" @change="loadProgress(true)">
-              <option value="">全部課程</option>
-              <option value="bordeaux">波爾多</option>
-              <option value="bourgogne">布根地</option>
-              <option value="italy">義大利</option>
-            </select>
-          </div>
         </div>
         <div v-if="progressLoading" class="loading-state">載入中…</div>
         <div v-else class="table-wrapper">
@@ -207,35 +199,28 @@
             <thead>
               <tr>
                 <th>Email</th>
-                <th>課程</th>
-                <th>模組</th>
-                <th>單元</th>
-                <th>完成</th>
-                <th>分數</th>
-                <th>次數</th>
-                <th>更新時間</th>
+                <th>完成等級</th>
+                <th>測驗正確率</th>
+                <th>累計學習時間</th>
+                <th>最後活躍</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="p in progressList" :key="p.user_id + p.course_id + p.module_id + p.unit_id">
+              <tr v-for="p in progressList" :key="p.user_id">
                 <td>{{ p.email }}</td>
-                <td><span class="course-tag">{{ courseLabel(p.course_id) }}</span></td>
-                <td class="mono-cell">{{ p.module_id }}</td>
-                <td class="mono-cell">{{ p.unit_id }}</td>
-                <td class="center-cell">{{ p.completed ? '✓' : '—' }}</td>
-                <td class="center-cell">{{ p.score ?? '—' }}</td>
-                <td class="center-cell">{{ p.attempts }}</td>
-                <td class="date-cell">{{ formatDate(p.updated_at) }}</td>
+                <td>
+                  <span v-if="p.completed_levels?.length" class="level-tags">
+                    <span v-for="l in p.completed_levels" :key="l" class="level-tag">Lv{{ l }}</span>
+                  </span>
+                  <span v-else class="date-cell">—</span>
+                </td>
+                <td class="center-cell">{{ p.quiz_accuracy_overall ? p.quiz_accuracy_overall + '%' : '—' }}</td>
+                <td class="center-cell">{{ formatStudyTime(p.total_study_seconds) }}</td>
+                <td class="date-cell">{{ formatDate(p.last_active_at) }}</td>
               </tr>
             </tbody>
           </table>
           <p v-if="progressList.length === 0" class="empty-state">尚無學習進度資料</p>
-          <!-- 分頁控制 -->
-          <div v-if="progressTotal > 0" class="pagination">
-            <button class="pg-btn" :disabled="progressPage === 1" @click="progressGoPage(progressPage - 1)">&lsaquo; 上一頁</button>
-            <span class="pg-info">第 {{ progressPage }} / {{ progressTotalPages }} 頁&nbsp;&nbsp;共 {{ progressTotal }} 筆</span>
-            <button class="pg-btn" :disabled="progressPage >= progressTotalPages" @click="progressGoPage(progressPage + 1)">下一頁 &rsaquo;</button>
-          </div>
         </div>
       </section>
 
@@ -243,14 +228,6 @@
       <section v-if="activeTab === 'achievements'" class="tab-panel">
         <div class="section-header">
           <h2 class="section-title">🏆 成就紀錄</h2>
-          <div class="section-actions">
-            <select v-model="achievementsCourse" class="filter-select" @change="loadAchievements">
-              <option value="">全部課程</option>
-              <option value="bordeaux">波爾多</option>
-              <option value="bourgogne">布根地</option>
-              <option value="italy">義大利</option>
-            </select>
-          </div>
         </div>
         <div v-if="achievementsLoading" class="loading-state">載入中…</div>
         <div v-else class="table-wrapper">
@@ -258,21 +235,28 @@
             <thead>
               <tr>
                 <th>Email</th>
-                <th>課程</th>
-                <th>成就</th>
-                <th>類型</th>
-                <th>獲得時間</th>
+                <th>解鎖數量</th>
+                <th>累積點數</th>
+                <th>已解鎖成就</th>
+                <th>更新時間</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="a in achievementsList" :key="a.user_id + a.achievement_id">
+              <tr v-for="a in achievementsList" :key="a.user_id">
                 <td>{{ a.email }}</td>
-                <td>{{ a.course_id ? courseLabel(a.course_id) : '通用' }}</td>
-                <td>{{ a.title }}</td>
-                <td><span :class="['badge-tag', a.badge_type]">{{ badgeTypeLabel(a.badge_type) }}</span></td>
-                <td class="date-cell">{{ formatDate(a.earned_at) }}</td>
+                <td class="center-cell"><strong>{{ a.unlocked_count }}</strong></td>
+                <td class="center-cell amount-cell">{{ a.total_points }}</td>
+                <td class="unlocked-ids">
+                  <span v-for="id in (a.unlocked_ids || []).slice(0, 5)" :key="id" class="ach-chip">{{ id }}</span>
+                  <span v-if="(a.unlocked_ids?.length || 0) > 5" class="ach-more">+{{ a.unlocked_ids.length - 5 }}</span>
+                </td>
+                <td class="date-cell">{{ formatDate(a.updated_at) }}</td>
               </tr>
             </tbody>
+          </table>
+          <p v-if="achievementsList.length === 0" class="empty-state">尚無成就紀錄（學員登入後觸發成就才會同步）</p>
+        </div>
+      </section>
           </table>
           <p v-if="achievementsList.length === 0" class="empty-state">尚無成就紀錄</p>
         </div>
@@ -528,50 +512,27 @@ async function loadRevenue() {
 }
 
 // ── 學習進度 ────────────────────────────────────────────────
-const PAGE_SIZE        = 100
 const progressLoading  = ref(false)
 const progressList     = ref([])
-const progressCourse   = ref('')
-const progressPage     = ref(1)
-const progressTotal    = ref(0)
 
-const progressTotalPages = computed(() => Math.max(1, Math.ceil(progressTotal.value / PAGE_SIZE)))
-
-async function loadProgress(resetPage = false) {
-  if (resetPage) progressPage.value = 1
+async function loadProgress() {
   progressLoading.value = true
   try {
-    const courseParam = progressCourse.value || null
-    const [{ data }, { data: total }] = await Promise.all([
-      supabase.rpc('admin_get_all_progress', {
-        p_course_id: courseParam,
-        p_limit:     PAGE_SIZE,
-        p_offset:    (progressPage.value - 1) * PAGE_SIZE,
-      }),
-      supabase.rpc('admin_count_all_progress', { p_course_id: courseParam }),
-    ])
-    progressList.value  = data ?? []
-    progressTotal.value = Number(total ?? 0)
+    const { data } = await supabase.rpc('admin_get_progress_summary')
+    progressList.value = data ?? []
   } finally {
     progressLoading.value = false
   }
 }
 
-function progressGoPage(page) {
-  progressPage.value = page
-  loadProgress()
-}
-
 // ── 成就紀錄 ────────────────────────────────────────────────
 const achievementsLoading = ref(false)
 const achievementsList    = ref([])
-const achievementsCourse  = ref('')
 
 async function loadAchievements() {
   achievementsLoading.value = true
   try {
-    const params = achievementsCourse.value ? { p_course_id: achievementsCourse.value } : {}
-    const { data } = await supabase.rpc('admin_get_all_achievements', params)
+    const { data } = await supabase.rpc('admin_get_achievements_summary')
     achievementsList.value = data ?? []
   } finally {
     achievementsLoading.value = false
@@ -627,6 +588,14 @@ function barWidth(count, total) {
 }
 function badgeTypeLabel(type) {
   return { badge: '徽章', certificate: '證書', milestone: '里程碑' }[type] ?? type
+}
+function formatStudyTime(sec) {
+  if (!sec) return '—'
+  const h = Math.floor(sec / 3600)
+  const m = Math.floor((sec % 3600) / 60)
+  if (h > 0) return `${h} 小時 ${m} 分`
+  if (m > 0) return `${m} 分鐘`
+  return `${sec} 秒`
 }
 </script>
 
@@ -825,6 +794,11 @@ function badgeTypeLabel(type) {
 .center-cell { text-align: center; color: #444; }
 .course-tag  { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: .75rem; font-weight: 600; background: #f0ebe5; color: #6b1220; }
 .badge-tag   { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: .75rem; font-weight: 600; }
+.level-tags  { display: flex; gap: 4px; flex-wrap: wrap; }
+.level-tag   { display: inline-block; padding: 1px 8px; border-radius: 8px; font-size: .75rem; font-weight: 700; background: #e8f4fd; color: #2980b9; }
+.unlocked-ids { display: flex; gap: 4px; flex-wrap: wrap; max-width: 320px; }
+.ach-chip    { display: inline-block; padding: 1px 7px; border-radius: 6px; font-size: .72rem; background: #f3e5f5; color: #7b1fa2; white-space: nowrap; }
+.ach-more    { font-size: .75rem; color: #999; align-self: center; }
 .badge-tag.badge       { background: #fff3e0; color: #e67e22; }
 .badge-tag.certificate { background: #e8f8f0; color: #27ae60; }
 .badge-tag.milestone   { background: #f3e5f5; color: #8e44ad; }

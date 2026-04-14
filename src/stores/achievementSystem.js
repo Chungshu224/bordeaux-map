@@ -1,5 +1,7 @@
 // 成就系統管理
 import { reactive, computed } from 'vue'
+import { supabase } from '../lib/supabaseClient.js'
+import { authState } from './authStore.js'
 
 // 成就定義
 export const achievementDefinitions = {
@@ -551,6 +553,20 @@ export class AchievementManager {
       userStats: achievementState.userStats
     }
     localStorage.setItem('bordeaux-wine-academy-achievements', JSON.stringify(data))
+
+    // 同步到 Supabase profiles.achievements_json
+    const userId = authState.user?.id
+    if (supabase && userId) {
+      supabase.from('profiles').update({
+        achievements_json: {
+          unlocked:    achievementState.unlockedAchievements,
+          totalPoints: achievementState.totalPoints,
+          updatedAt:   new Date().toISOString(),
+        }
+      }).eq('id', userId).then(({ error }) => {
+        if (error) console.warn('[achievements] Supabase 同步失敗:', error.message)
+      })
+    }
   }
 
   // 更新使用者統計
