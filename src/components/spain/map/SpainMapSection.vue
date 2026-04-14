@@ -369,12 +369,13 @@ async function addLayers() {
     ? `/spain/provinces/${filterAuto}.geojson`
     : '/spain/spain-provinces.geojson'
 
-  // Load data in parallel
-  const [provinceRes, wineRes] = await Promise.all([
-    fetch(provinceGeoUrl),
+  // Load data in parallel — province file may not exist for all autonomia IDs
+  const EMPTY_FC = { type: 'FeatureCollection', features: [] }
+  const [provinceResult, wineRes] = await Promise.all([
+    fetch(provinceGeoUrl).then(r => r.ok ? r.json() : EMPTY_FC).catch(() => EMPTY_FC),
     fetch(wineGeoUrl),
   ])
-  const provinceGeo = await provinceRes.json()
+  const provinceGeo = provinceResult
   const wineGeo = await wineRes.json()
 
   // 用 appellations 查出每個 feature 的 autonomiaId，寫回 GeoJSON properties 
@@ -413,8 +414,8 @@ async function addLayers() {
       'fill-color': '#f5b942',
       'fill-opacity': [
         'case',
-        ['boolean', ['feature-state', 'selected'], false], 0.28,
-        ['case', ['boolean', ['feature-state', 'hover'], false], 0.12, 0],
+        ['boolean', ['feature-state', 'selected'], false], 0.15,
+        ['case', ['boolean', ['feature-state', 'hover'], false], 0.10, 0],
       ],
     },
   })
@@ -487,10 +488,10 @@ async function addLayers() {
     map.setFilter('wine-regions-fill', filterExpr)
     map.setFilter('wine-regions-line', filterExpr)
 
-    // 計算該自治區所有 feature 的實際 bbox，然後 fitBounds
-    const filtered = wineGeo.features.filter(f =>
-      f.properties.AUTONOMIA_ID === filterAuto
-    )
+    // 計算所有 feature 的實際 bbox（per-auto 檔案已只含該自治區資料）
+    // 備用：若 AUTONOMIA_ID 符合的少，仍用全部 features
+    const byAutoId = wineGeo.features.filter(f => f.properties.AUTONOMIA_ID === filterAuto)
+    const filtered = byAutoId.length > 0 ? byAutoId : wineGeo.features
     if (filtered.length > 0) {
       const allCoords = filtered.flatMap(f => {
         if (!f.geometry) return []
