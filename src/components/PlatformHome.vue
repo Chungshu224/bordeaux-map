@@ -51,10 +51,10 @@
               <button class="cta-course italy-btn" @click="router.push('/italy')">
                 🇮🇹 義大利課程
               </button>
-              <button class="cta-course spain-btn" @click="router.push('/spain')">
-                🇪🇸 西班牙課程
-              </button>
             </template>
+            <button class="cta-course spain-btn" @click="router.push('/spain')">
+              🇪🇸 西班牙課程
+            </button>
           </div>
         </div>
         <!-- 未登入：原本的 CTA -->
@@ -530,7 +530,7 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設偡 active=true 防止関你加載先閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: false })
+const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true })
 
 async function loadCourseData() {
   try {
