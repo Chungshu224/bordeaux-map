@@ -148,35 +148,6 @@
       </div>
     </div>
 
-    <!-- 圖層面板浮動按鈕 (右側) -->
-    <div v-if="mapReady" class="sp-layers-panel">
-      <div class="sp-layers-title">圖層</div>
-      <!-- 等高線 -->
-      <button
-        class="sp-layer-btn"
-        :class="{ active: contoursEnabled && canAccessTier('premium'), locked: !canAccessTier('premium') }"
-        @click="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')"
-        title="等高線"
-      >
-        <span class="sp-lbtn-icon">〰</span>
-        <span class="sp-lbtn-text">等高線</span>
-        <span v-if="!canAccessTier('premium')" class="sp-lbtn-lock">🔒</span>
-        <span v-else class="sp-lbtn-dot" :class="{ on: contoursEnabled }"></span>
-      </button>
-      <!-- 氣候熱力 -->
-      <button
-        class="sp-layer-btn"
-        :class="{ active: climateEnabled && canAccessTier('premium'), locked: !canAccessTier('premium') }"
-        @click="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')"
-        title="氣候熱力"
-      >
-        <span class="sp-lbtn-icon">🌡</span>
-        <span class="sp-lbtn-text">氣候熱力</span>
-        <span v-if="!canAccessTier('premium')" class="sp-lbtn-lock">🔒</span>
-        <span v-else class="sp-lbtn-dot" :class="{ on: climateEnabled }"></span>
-      </button>
-    </div>
-
     <!-- 氣候熱力圖控制列 -->
     <transition name="sp-climate-slide">
     <div v-if="climateEnabled && climateData" class="sp-climate-overlay">
@@ -293,6 +264,7 @@ const mapError = ref(null)
 const infoCollapsed = ref(false)
 const drawerOpen = ref(false)
 const showProvinces = ref(true)
+const showLayerPanel = ref(false)
 const is3D = ref(false)
 const search = ref('')
 const typeFilter = ref('all')
@@ -1635,9 +1607,6 @@ function toggleInfo() {
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
-.mobile-grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
 
 .m-grid-btn {
   border-radius: 16px;
@@ -1726,77 +1695,101 @@ function toggleInfo() {
   top: 52px;
 }
 
-/* ── 5-grid toolbar ─────────────────────────────────────────── */
-.mobile-grid-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-.m-grid-btn.locked {
-  opacity: 0.65;
-}
-
-/* ── 圖層面板 (右側浮動, 桌面版) ───────────────────────────── */
-.sp-layers-panel {
+/* ── 圖層面板 ─────────────────────────────────────────── */
+.mobile-layer-panel {
   position: fixed;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1001;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(8px);
-  border-radius: 14px;
-  padding: 10px 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.16);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  min-width: 78px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1003;
+  width: min(90vw, 560px);
+  background: rgba(252,248,244,0.98);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
 }
-@media (max-width: 640px) {
-  .sp-layers-panel { display: none; }
+.layers-panel-header {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+  color: #7b241c; text-transform: uppercase;
+  padding: 0 2px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.08); margin-bottom: 10px;
 }
+.layers-panel-close { background: none; border: none; cursor: pointer; color: #7b241c; font-size: 14px; }
+.layer-group { margin-bottom: 4px; }
+.layer-group-label { font-size: 0.65rem; font-weight: 700; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; padding: 0 2px 4px; }
+.layer-group-buttons { display: flex; flex-direction: column; gap: 4px; }
+.btn-layer {
+  display: flex; align-items: center; gap: 7px; width: 100%;
+  padding: 8px 10px; border: 1.5px solid transparent; border-radius: 10px;
+  cursor: pointer; font-size: 0.84rem; font-weight: 600;
+  background: rgba(0,0,0,0.04); color: #444;
+  transition: all 0.18s; text-align: left; font-family: inherit;
+}
+.btn-layer:hover { background: rgba(0,0,0,0.07); }
+.btn-layer.active { background: rgba(192,57,43,0.08); border-color: rgba(192,57,43,0.3); color: #c0392b; }
+.btn-layer.locked { opacity: 0.65; }
+.lbtn-icon { font-size: 1rem; }
+.lbtn-text { flex: 1; }
+.lbtn-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #ccc; flex-shrink: 0; transition: background 0.2s;
+}
+.lbtn-dot.on { background: #c0392b; }
 
-.sp-layers-title {
-  font-size: 0.68rem;
-  font-weight: 800;
-  color: #888;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #eee;
-}
+/* slide-up transition */
+.slide-up-enter-active, .slide-up-leave-active { transition: all 0.25s ease; }
+.slide-up-enter-from, .slide-up-leave-to { opacity: 0; transform: translateX(-50%) translateY(12px); }
 
-.sp-layer-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-  padding: 8px 6px;
-  border-radius: 10px;
-  border: 1.5px solid transparent;
-  background: rgba(0,0,0,0.04);
-  cursor: pointer;
-  transition: all 0.15s;
-  color: #34495e;
+/* ── 圖層面板 ─────────────────────────────────────────────── */
+.mobile-layer-panel {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1003;
+  width: min(90vw, 560px);
+  background: rgba(252,248,244,0.98);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
 }
-.sp-layer-btn:hover { background: rgba(0,0,0,0.08); }
-.sp-layer-btn.active {
-  background: linear-gradient(135deg, #c0392b, #7b241c);
-  color: #fff;
-  border-color: transparent;
+.layers-panel-header {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+  color: #7b241c; text-transform: uppercase;
+  padding: 0 2px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.08); margin-bottom: 10px;
 }
-.sp-layer-btn.locked { opacity: 0.65; }
+.layers-panel-close { background: none; border: none; cursor: pointer; color: #7b241c; font-size: 14px; }
+.layer-group { margin-bottom: 4px; }
+.layer-group-label { font-size: 0.65rem; font-weight: 700; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; padding: 0 2px 4px; }
+.layer-group-buttons { display: flex; flex-direction: column; gap: 4px; }
+.btn-layer {
+  display: flex; align-items: center; gap: 7px; width: 100%;
+  padding: 8px 10px; border: 1.5px solid transparent; border-radius: 10px;
+  cursor: pointer; font-size: 0.84rem; font-weight: 600;
+  background: rgba(0,0,0,0.04); color: #444;
+  transition: all 0.18s; text-align: left; font-family: inherit;
+}
+.btn-layer:hover { background: rgba(0,0,0,0.07); }
+.btn-layer.active { background: rgba(192,57,43,0.08); border-color: rgba(192,57,43,0.3); color: #c0392b; }
+.btn-layer.locked { opacity: 0.65; }
+.lbtn-icon { font-size: 1rem; }
+.lbtn-text { flex: 1; }
+.lbtn-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #ccc; flex-shrink: 0; transition: background 0.2s;
+}
+.lbtn-dot.on { background: #c0392b; }
 
-.sp-lbtn-icon { font-size: 1.15rem; }
-.sp-lbtn-text { font-size: 0.65rem; font-weight: 700; }
-.sp-lbtn-lock { font-size: 0.7rem; }
-.sp-lbtn-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: #ccc;
-  border: 1.5px solid #aaa;
-}
-.sp-lbtn-dot.on { background: #2ecc71; border-color: #27ae60; }
+/* slide-up transition */
+.slide-up-enter-active, .slide-up-leave-active { transition: all 0.25s ease; }
+.slide-up-enter-from, .slide-up-leave-to { opacity: 0; transform: translateX(-50%) translateY(12px); }
 
 /* ── 氣候熱力控制列 ─────────────────────────────────────────── */
 .sp-climate-overlay {
