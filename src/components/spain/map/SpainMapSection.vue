@@ -501,7 +501,7 @@ function toggleContours() {
   if (!map) return
   contoursEnabled.value = !contoursEnabled.value
   const vis = contoursEnabled.value ? 'visible' : 'none'
-  if (map.getLayer('sp-contours')) map.setLayoutProperty('sp-contours', 'visibility', vis)
+  if (map.getLayer('sp-contours-line')) map.setLayoutProperty('sp-contours-line', 'visibility', vis)
   if (map.getLayer('sp-contour-labels')) map.setLayoutProperty('sp-contour-labels', 'visibility', vis)
 }
 
@@ -692,7 +692,7 @@ function initMap() {
       }
       // 等高線線條圖層（預設隱藏）
       map.addLayer({
-        id: 'sp-contours',
+        id: 'sp-contours-line',
         type: 'line',
         source: 'sp-contours',
         'source-layer': 'contour',
