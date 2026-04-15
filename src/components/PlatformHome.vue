@@ -471,7 +471,11 @@ const router = useRouter()
 
 // ─── Auth ─────────────────────────────────────────────────────────────────────
 const authUser    = computed(() => authState.user)
-const isAdmin     = computed(() => authActions.isAdmin())
+const authLoading = computed(() => authState.loading)
+const isAdmin     = computed(() => {
+  if (authState.loading) return false
+  return authActions.isAdmin()
+})
 const displayName = computed(() => authActions.getDisplayName() || '學員')
 
 const handleLogout = async () => {

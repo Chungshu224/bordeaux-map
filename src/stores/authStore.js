@@ -106,6 +106,10 @@ export const authActions = {
    */
   isAdmin() {
     const adminEmail = import.meta.env.VITE_ADMIN_EMAIL || 'chungshu224@gmail.com'
-    return !!authState.user?.email && authState.user.email === adminEmail
+    const userEmail  = authState.user?.email
+    if (!userEmail) return false
+    // 支援多個管理員 email（逗號分隔），全部轉小寫比較
+    const adminList = adminEmail.split(',').map(e => e.trim().toLowerCase())
+    return adminList.includes(userEmail.toLowerCase())
   }
 }
