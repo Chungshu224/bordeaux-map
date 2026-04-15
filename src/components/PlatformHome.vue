@@ -385,8 +385,8 @@
             <div class="cm-compare-header">
               <div class="cc-col feature-col">功能</div>
               <div class="cc-col free-col">免費體驗<br><span class="cc-price">NT$ 0</span></div>
-              <div class="cc-col basic-col popular-col">完整課程 ⭐<br><span class="cc-price">NT$ 290/月</span></div>
-              <div class="cc-col premium-col">頂級方案<br><span class="cc-price">NT$ 590/月</span></div>
+              <div class="cc-col basic-col popular-col">完整課程 ⭐<br><span class="cc-price">NT$ {{ pricing.basic.monthly }}/月</span></div>
+              <div class="cc-col premium-col">頂級方案<br><span class="cc-price">NT$ {{ pricing.premium.monthly }}/月</span></div>
             </div>
             <div v-for="row in compareRows" :key="row.feature" class="cm-compare-row">
               <div class="cc-col feature-col">{{ row.feature }}</div>
@@ -463,6 +463,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { supabase } from '../lib/supabaseClient.js'
 import { authState, authActions } from '../stores/authStore.js'
 import { initiateCheckout } from '../lib/purchaseService.js'
 import { fetchRecentPosts } from '../lib/forumService.js'
@@ -504,6 +505,28 @@ const handleFreeTier = () => {
   } else {
     router.push({ path: '/register', query: { plan: 'free' } })
   }
+}
+
+// ─── 訂閱定價（從 DB 讀取 Bordeaux 定價）────────────────────────────────
+const pricing = ref({
+  basic:   { monthly: 290,  yearly: 1800 },
+  premium: { monthly: 590,  yearly: 3600 }
+})
+
+async function loadBordeauxPricing() {
+  try {
+    const { data } = await supabase
+      .from('courses')
+      .select('price_basic_monthly,price_basic_yearly,price_premium_monthly,price_premium_yearly')
+      .eq('id', 'bordeaux')
+      .single()
+    if (data) {
+      pricing.value = {
+        basic:   { monthly: data.price_basic_monthly   ?? 290,  yearly: data.price_basic_yearly   ?? 1800 },
+        premium: { monthly: data.price_premium_monthly ?? 590,  yearly: data.price_premium_yearly ?? 3600 }
+      }
+    }
+  } catch { /* 使用預設定價 */ }
 }
 
 // ─── 訂閱流程 ──────────────────────────────────────────────────────────────────────────
@@ -630,7 +653,7 @@ const faqs = [
   { q: '課程等級如何解鎖？', a: 'Level 1 開放所有學員直接進入。Level 2、3、4 需依序完成前一等級的「綜合評量」（每等級最後一課）才能解鎖，確保您真正掌握前項知識再進階。' },
   { q: '可以跳過等級直接學進階課程嗎？', a: '本平台採循序解鎖制，需依序完成綜合評量才能解鎖下一等級。' },
   { q: '訂閱後如何取消？', a: '可以隨時在「我的訂單」頁面點擊「管理訂閱」，前往 Stripe 客戶入口取消。取消後於當期計費週期結束前仍可繼續使用課程。' },
-  { q: '月繳與年繳有什麼差別？', a: '月繳方案每月自動扣款，彈性較高；年繳方案完整課程年省 NT$1,680，頂級方案年省 NT$3,480。' },
+  { q: '月繳與年繳有什麼差別？', a: `月繳方案每月自動扣款，彈性較高；年繳方案完整課程年省 NT$${(pricing.value.basic.monthly * 12 - pricing.value.basic.yearly).toLocaleString()}，頂級方案年省 NT$${(pricing.value.premium.monthly * 12 - pricing.value.premium.yearly).toLocaleString()}。` },
   { q: '我不會品酒，可以學嗎？', a: '當然！Level 1 從最基礎的葡萄酒知識開始，循序游進，完全不需要任何先備知識。' },
   { q: '訂閱方案可以升級嗎？', a: '可以！隨時可從「完整課程」升級為「頂級方案」，只需重新訂閱頂級方案即可。' },
   { q: '支援哪些付款方式？', a: '透過 Stripe 安全付款，支援 Visa、MasterCard、JCB 等主要信用卡，加密處理。' },
@@ -642,6 +665,7 @@ const recentPosts  = ref([])
 const forumLoading = ref(false)
 
 onMounted(async () => {
+  loadBordeauxPricing()
   forumLoading.value = true
   try {
     recentPosts.value = await fetchRecentPosts(5)

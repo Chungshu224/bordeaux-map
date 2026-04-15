@@ -34,6 +34,15 @@ export const COURSES = {
   }
 }
 
+// 各課程的訂閱定價（月費 / 年費）
+// 此為前端預設值；正式定價以 Supabase courses 表為準，可由後台管理介面修改
+export const COURSE_PRICING = {
+  bordeaux:  { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
+  bourgogne: { basic: { monthly: 390, yearly: 2400 }, premium: { monthly: 690, yearly: 4200 } },
+  italy:     { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
+  spain:     { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
+}
+
 export const TIERS = {
   free: {
     id: 'free',
@@ -45,16 +54,15 @@ export const TIERS = {
   basic: {
     id: 'basic',
     name: '完整課程',
-    price: { monthly: 290, yearly: 1800 },
-    yearlyNote: '相當於 NT$150/月，年省 NT$1,680',
+    // 預設取 bordeaux 定價；若需課程專屬定價請使用 COURSE_PRICING[courseId]
+    price: COURSE_PRICING.bordeaux.basic,
     features: ['Level 1–4 全部課程', '互動練習中心（4種遊戲）', '全產區地圖'],
     locked: ['進階地圖圖層（地質/氣候）', '知名酒莊標記', '品飲筆記本']
   },
   premium: {
     id: 'premium',
     name: '頂級方案',
-    price: { monthly: 590, yearly: 3600 },
-    yearlyNote: '相當於 NT$300/月，年省 NT$3,480',
+    price: COURSE_PRICING.bordeaux.premium,
     features: [
       'Level 1–4 全部課程',
       '互動練習中心（4種遊戲）',

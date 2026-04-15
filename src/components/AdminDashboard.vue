@@ -129,12 +129,28 @@
             <div class="course-flag">{{ courseFlag(c.id) }}</div>
             <h3>{{ c.name_zh }}</h3>
             <p class="course-desc">{{ c.description }}</p>
-            <div class="price-row">
-              <span class="price-label">初階</span>
-              <span class="price-value">NT$ {{ c.price_basic.toLocaleString() }}</span>
-              <span class="price-label ml">進階</span>
-              <span class="price-value">NT$ {{ c.price_premium.toLocaleString() }}</span>
-            </div>
+            <!-- 訂閱定價表格 -->
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>月費</th>
+                  <th>年費</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="pt-tier basic">完整課程</td>
+                  <td>NT$ {{ (c.price_basic_monthly ?? c.price_basic ?? 290).toLocaleString() }}</td>
+                  <td>NT$ {{ (c.price_basic_yearly ?? 1800).toLocaleString() }}</td>
+                </tr>
+                <tr>
+                  <td class="pt-tier premium">頂級方案</td>
+                  <td>NT$ {{ (c.price_premium_monthly ?? c.price_premium ?? 590).toLocaleString() }}</td>
+                  <td>NT$ {{ (c.price_premium_yearly ?? 3600).toLocaleString() }}</td>
+                </tr>
+              </tbody>
+            </table>
             <div class="course-actions">
               <button class="btn-sm" @click="editCourse(c)">編輯價格</button>
               <span :class="['status-dot', c.active ? 'on' : 'off']">
@@ -306,20 +322,38 @@
 
     <!-- 課程價格編輯彈窗 -->
     <div v-if="editingCourse" class="modal-overlay" @click.self="editingCourse = null">
-      <div class="modal">
+      <div class="modal modal-wide">
         <div class="modal-header">
-          <h3>編輯課程：{{ editingCourse.name_zh }}</h3>
+          <h3>編輯定價：{{ editingCourse.name_zh }}</h3>
           <button @click="editingCourse = null">✕</button>
         </div>
         <div class="modal-body">
-          <div class="form-group">
-            <label>初階價格 (NT$)</label>
-            <input v-model.number="editingCourse.price_basic" type="number" min="0" class="field-input" />
+          <div class="price-edit-grid">
+            <div class="peg-section">
+              <div class="peg-title basic">完整課程（Basic）</div>
+              <div class="form-group">
+                <label>月費 (NT$)</label>
+                <input v-model.number="editingCourse.price_basic_monthly" type="number" min="0" class="field-input" />
+              </div>
+              <div class="form-group">
+                <label>年費 (NT$)</label>
+                <input v-model.number="editingCourse.price_basic_yearly" type="number" min="0" class="field-input" />
+              </div>
+            </div>
+            <div class="peg-section">
+              <div class="peg-title premium">頂級方案（Premium）</div>
+              <div class="form-group">
+                <label>月費 (NT$)</label>
+                <input v-model.number="editingCourse.price_premium_monthly" type="number" min="0" class="field-input" />
+              </div>
+              <div class="form-group">
+                <label>年費 (NT$)</label>
+                <input v-model.number="editingCourse.price_premium_yearly" type="number" min="0" class="field-input" />
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label>進階價格 (NT$)</label>
-            <input v-model.number="editingCourse.price_premium" type="number" min="0" class="field-input" />
-          </div>
+          <!-- 年繳小計 -->
+          <div class="peg-note">ℹ️ 年繳等同月費 × 12 時各當 {{ Math.round((editingCourse.price_basic_monthly || 0) * 12 / 100) * 100 }} / {{ Math.round((editingCourse.price_premium_monthly || 0) * 12 / 100) * 100 }}，年費可小於此以鼓勵年繳</div>
           <div class="modal-actions">
             <button class="btn-primary" @click="saveCourse" :disabled="savingCourse">
               {{ savingCourse ? '儲存中…' : '儲存' }}
@@ -477,8 +511,10 @@ async function saveCourse() {
   try {
     await supabase.from('courses')
       .update({
-        price_basic:   editingCourse.value.price_basic,
-        price_premium: editingCourse.value.price_premium,
+        price_basic_monthly:   editingCourse.value.price_basic_monthly,
+        price_basic_yearly:    editingCourse.value.price_basic_yearly,
+        price_premium_monthly: editingCourse.value.price_premium_monthly,
+        price_premium_yearly:  editingCourse.value.price_premium_yearly,
       })
       .eq('id', editingCourse.value.id)
     await loadCourses()
@@ -719,6 +755,22 @@ function formatStudyTime(sec) {
 .price-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
 .price-label { font-size: .75rem; color: #999; }
 .price-value { font-size: .9rem; font-weight: 600; color: #333; }
+/* 訂閱定價表格 */
+.price-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-size: .82rem; }
+.price-table th { text-align: center; color: #aaa; font-weight: 600; padding: 3px 6px; border-bottom: 1px solid #eee; }
+.price-table td { text-align: center; padding: 4px 6px; color: #333; }
+.price-table th:first-child, .price-table td:first-child { text-align: left; }
+.pt-tier { font-weight: 700; font-size: .75rem; }
+.pt-tier.basic { color: #2e7d32; }
+.pt-tier.premium { color: #7b241c; }
+/* 編輯彈窗寬版 */
+.modal-wide { max-width: 540px !important; }
+.price-edit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 10px; }
+.peg-section { display: flex; flex-direction: column; gap: 8px; }
+.peg-title { font-size: .8rem; font-weight: 700; padding: 4px 8px; border-radius: 6px; text-align: center; margin-bottom: 4px; }
+.peg-title.basic { background: #e8f5e9; color: #2e7d32; }
+.peg-title.premium { background: #fce4ec; color: #7b241c; }
+.peg-note { font-size: .75rem; color: #aaa; margin-bottom: 12px; background: #f8f8f8; padding: 6px 10px; border-radius: 6px; }
 .ml { margin-left: 8px; }
 .course-actions { display: flex; align-items: center; gap: 10px; }
 .status-dot { font-size: .78rem; padding: 2px 10px; border-radius: 10px; font-weight: 600; }
