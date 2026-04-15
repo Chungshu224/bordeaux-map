@@ -27,9 +27,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src')
     }
   },
-  define: {
-    global: 'window',
-  },
+  // NOTE: do NOT use `define: { global: 'window' }` — it renames object keys
+  // like `{ global: x }` in destructuring (e.g. @supabase/supabase-js), breaking
+  // settings.global.headers → undefined.headers → TypeError.
+  // Modern packages use globalThis; Node-style `global` refs are handled by Vite's
+  // pre-bundler (esbuild) automatically.
   optimizeDeps: {
     include: ['html2pdf.js', 'html2canvas'],
   },

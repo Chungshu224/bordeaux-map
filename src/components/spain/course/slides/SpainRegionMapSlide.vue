@@ -13,18 +13,54 @@
       <div v-if="errorMsg" class="sms-error">
         <span>⚠️ {{ errorMsg }}</span>
       </div>
+      <!-- 分類圖例（classificationColors 模式時顯示） -->
+      <div v-if="showLegend" class="sms-legend">
+        <div v-for="item in LEGEND_ITEMS" :key="item.label" class="sms-legend-item">
+          <span class="sms-legend-dot" :style="{ background: item.fill, border: `2px solid ${item.line}` }"></span>
+          <span class="sms-legend-label">{{ item.label }}</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 const props = defineProps({
   slide: { type: Object, required: true },
 })
+
+// 分類顏色：與 SpainMapSection 保持一致
+const CLASSIFICATION_COLORS = {
+  fill: {
+    'Denominación de Origen Calificada': '#f1948a',
+    'Denominación de Origen Protegida':  '#f0b27a',
+    'Vino de Calidad':  '#85c1e9',
+    'Vino de Pago':     '#c39bd3',
+    /* default DO */   _default: '#82e0aa',
+  },
+  line: {
+    'Denominación de Origen Calificada': '#ff6b6b',
+    'Denominación de Origen Protegida':  '#ffa94d',
+    'Vino de Calidad':  '#74c0fc',
+    'Vino de Pago':     '#da77f2',
+    /* default DO */   _default: '#69db7c',
+  },
+}
+
+// 圖例項目
+const LEGEND_ITEMS = [
+  { label: 'DOCa', fill: '#f1948a', line: '#ff6b6b' },
+  { label: 'DO',   fill: '#82e0aa', line: '#69db7c' },
+  { label: 'DOP',  fill: '#f0b27a', line: '#ffa94d' },
+  { label: 'VC',   fill: '#85c1e9', line: '#74c0fc' },
+  { label: 'VP',   fill: '#c39bd3', line: '#da77f2' },
+]
+
+const showLegend = ref(false)
 
 const mapContainer = ref(null)
 const loading = ref(true)
@@ -81,6 +117,7 @@ function calcBbox(gj) {
 
 function destroyMap() {
   if (map) { map.remove(); map = null }
+  showLegend.value = false
 }
 
 async function initMap() {
@@ -124,20 +161,51 @@ async function initMap() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const geojson = await res.json()
 
+      // 判斷是否使用分類配色（slide.classificationColors: true 或 mapRegion === 'all'）
+      const useClassColors = props.slide.classificationColors || regionKey === 'all'
+
+      const fillColorExpr = useClassColors
+        ? ['match', ['get', 'TPR_DS_DES'],
+            'Denominación de Origen Calificada', '#f1948a',
+            'Denominación de Origen Protegida',  '#f0b27a',
+            'Vino de Calidad',  '#85c1e9',
+            'Vino de Pago',     '#c39bd3',
+            '#82e0aa',
+          ]
+        : '#c0392b'
+
+      const lineColorExpr = useClassColors
+        ? ['match', ['get', 'TPR_DS_DES'],
+            'Denominación de Origen Calificada', '#ff6b6b',
+            'Denominación de Origen Protegida',  '#ffa94d',
+            'Vino de Calidad',  '#74c0fc',
+            'Vino de Pago',     '#da77f2',
+            '#69db7c',
+          ]
+        : '#c0392b'
+
       // 畫產區邊界
       mapInst.addSource('spain-region', { type: 'geojson', data: geojson })
       mapInst.addLayer({
         id: 'spain-region-fill',
         type: 'fill',
         source: 'spain-region',
-        paint: { 'fill-color': '#c0392b', 'fill-opacity': 0.18 },
+        paint: {
+          'fill-color': fillColorExpr,
+          'fill-opacity': useClassColors ? 0.45 : 0.18,
+        },
       })
       mapInst.addLayer({
         id: 'spain-region-line',
         type: 'line',
         source: 'spain-region',
-        paint: { 'line-color': '#c0392b', 'line-width': 2.5 },
+        paint: {
+          'line-color': lineColorExpr,
+          'line-width': 2.5,
+        },
       })
+
+      showLegend.value = useClassColors
 
       // 自動縮放至邊界
       const bbox = calcBbox(geojson)
@@ -249,5 +317,40 @@ onBeforeUnmount(() => destroyMap())
   border-radius: 8px;
   font-size: 0.82rem;
   white-space: nowrap;
+}
+
+/* 分類圖例 */
+.sms-legend {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(10, 10, 20, 0.72);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  pointer-events: none;
+}
+
+.sms-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sms-legend-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.sms-legend-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  letter-spacing: 0.03em;
 }
 </style>

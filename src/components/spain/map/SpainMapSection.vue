@@ -264,7 +264,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -408,6 +408,15 @@ const TYPE_MAP = {
   'Denominación de Origen Protegida':   { label: 'DOP',  cls: 'dop',  color: '#e67e22' },
   'Vino de Calidad':                    { label: 'VC',   cls: 'vc',   color: '#3498db' },
   'Vino de Pago':                       { label: 'VP',   cls: 'vp',   color: '#9b59b6' },
+}
+
+// typeFilter tab value → GeoJSON TPR_DS_DES 字串
+const CLS_TO_TPR = {
+  doca: 'Denominación de Origen Calificada',
+  do:   'Denominación de Origen',
+  dop:  'Denominación de Origen Protegida',
+  vc:   'Vino de Calidad',
+  vp:   'Vino de Pago',
 }
 
 const legendTypes = [
@@ -706,6 +715,31 @@ const toggleClimate = async () => {
   }
 }
 
+// ── Type filter helpers ──────────────────────────────────────────
+function buildTypeFilter() {
+  const val = typeFilter.value
+  if (val === 'all') return baseFilter
+  const typeExpr = ['==', ['get', 'TPR_DS_DES'], CLS_TO_TPR[val]]
+  return baseFilter ? ['all', baseFilter, typeExpr] : typeExpr
+}
+
+function applyTypeFilter() {
+  if (!map || !map.getLayer('wine-regions-fill')) return
+  const f = buildTypeFilter()
+  map.setFilter('wine-regions-fill', f)
+  map.setFilter('wine-regions-line', f)
+}
+
+watch(typeFilter, () => {
+  if (!mapReady.value) return
+  // 切換分類時清除已選取的產區
+  if (selectedRegionId !== null) {
+    selectedRegionId = null
+    activeInfo.value = null
+  }
+  applyTypeFilter()
+})
+
 // ── Map init ──────────────────────────────────────────────────────
 onMounted(async () => {
   try {
@@ -971,9 +1005,8 @@ function resetView() {
   if (!map) return
   // 恢復所有產區顯示（還原為初始 filter 或清除 filter）
   if (selectedRegionId !== null) {
-    map.setFilter('wine-regions-fill', baseFilter)
-    map.setFilter('wine-regions-line', baseFilter)
     selectedRegionId = null
+    applyTypeFilter()  // 恢復至含 typeFilter 的篩選（而非直接清除）
   }
   activeInfo.value = null
   // 回到起始畫面

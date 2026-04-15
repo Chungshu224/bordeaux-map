@@ -21,7 +21,8 @@
       "La Rioja",
       "Alava",
       "Navarre"
-    ]
+    ],
+    "classification": "DOCa"
   },
   {
     "zonName": "Priorato",
@@ -41,7 +42,8 @@
     "description": "加泰隆尼亞頂級 DOCa 產區，以獨特的板岩土壤 llicorella 著稱，Garnacha 老藤種植於陡峭山坡，孕育極度濃郁、礦物感強勁的紅酒，被譽為西班牙勃根地。",
     "provinces": [
       "Tarragona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Ribera del Duero",
@@ -64,7 +66,8 @@
       "Valladolid",
       "Segovia",
       "Soria"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Rías Baixas",
@@ -80,7 +83,8 @@
     "provinces": [
       "Pontevedra",
       "Coruna"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Penedés",
@@ -103,7 +107,8 @@
     "provinces": [
       "Barcelona",
       "Tarragona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Cava",
@@ -130,7 +135,8 @@
       "Navarre",
       "Zaragoza",
       "Valence"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Jerez-Xeres-Sherry",
@@ -147,7 +153,8 @@
     "description": "安達盧西亞南端的雪莉酒王國，沿用 Solera 陳年系統，Fino、Manzanilla、Oloroso、Pedro Ximénez 各具特色。特殊白色白堊土 Albariza 是成就複雜風味的關鍵。",
     "provinces": [
       "Cadix"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Manzanilla Sanlúcar de Barrameda",
@@ -162,7 +169,8 @@
     "description": "雪莉家族中最精緻的成員，產自瓜達爾基維爾河口的海洋涼風中，帶有獨特的鹹海洋礦物感，是最適合搭配鮮海鮮的 Fino 型不甜雪莉。",
     "provinces": [
       "Cadix"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Rueda",
@@ -181,7 +189,8 @@
       "Valladolid",
       "Segovia",
       "Avila"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Toro",
@@ -198,7 +207,8 @@
     "provinces": [
       "Zamora",
       "Valladolid"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Bierzo",
@@ -216,7 +226,8 @@
     "description": "萊昂省西北角的特殊山谷微氣候，Mencía 葡萄在板岩土壤上展現出罕見的優雅花香與礦物感，被譽為西班牙的 Pinot Noir 風格代表。",
     "provinces": [
       "Leon"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Jumilla",
@@ -236,7 +247,8 @@
     "provinces": [
       "Murcia",
       "Albacete"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Vino Navarra",
@@ -256,7 +268,8 @@
     "description": "納瓦拉多元風土產區，從北部庇里牛斯山麓到南方乾燥平原，紅白粉紅酒俱全。Garnacha 表現尤其突出，傳統粉紅酒享有盛名。",
     "provinces": [
       "Navarre"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Somontano",
@@ -276,7 +289,8 @@
     "description": "庇里牛斯山麓的多元產區，融合 Tempranillo、Garnacha 等本土品種與 Cabernet Sauvignon、Merlot 等國際品種，現代酒莊林立，在西班牙酒界以創新聞名。",
     "provinces": [
       "Huesca"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Valdepeñas",
@@ -293,7 +307,8 @@
     "description": "卡斯提亞-拉曼恰區南端，以 Cencibel（Tempranillo）為主，傳統上以黏土大甕陳年，近年現代化轉型，出產易飲而優質的紅酒，性價比出眾。",
     "provinces": [
       "Ciudad Real"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "La Mancha",
@@ -314,7 +329,8 @@
       "Albacete",
       "Cuenca",
       "Toledo"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Ribeiro",
@@ -333,7 +349,8 @@
     "description": "加利西亞花崗岩地帶的古老酒鄉，以 Treixadura 白酒為代表，清爽多果香，是奧倫塞的傳統地方飲品。",
     "provinces": [
       "Ourense"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Ribeira Sacra",
@@ -353,7 +370,8 @@
     "provinces": [
       "Lugo",
       "Ourense"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Valdeorras",
@@ -370,7 +388,8 @@
     "description": "以 Godello 白葡萄品種復興著稱，Godello 可釀製加利西亞最優雅複雜的白酒，礦物感強，陳年潛力佳。",
     "provinces": [
       "Ourense"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Monterrei",
@@ -388,7 +407,8 @@
     "description": "加利西亞最嚴酷氣候的小型產區，接近葡萄牙邊界，大陸性氣候明顯，產出較豐腴的白酒和結構感強的紅酒。",
     "provinces": [
       "Ourense"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Montilla-Moriles",
@@ -406,7 +426,8 @@
     "description": "科爾多瓦附近以 Pedro Ximénez 老藤著稱，傳統上不添加酒精的自然強化風格是一大特色，濃縮葡萄乾香甜酒聞名，是雪莉 PX 葡萄的主要來源。",
     "provinces": [
       "Cordoba"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Condado de Huelva",
@@ -423,7 +444,8 @@
     "description": "韋爾瓦省沿海產區，鄰近葡萄牙，生產清淡乾型白酒和傳統氧化型加強酒（Condado Viejo）。",
     "provinces": [
       "Huelva"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Binissalem",
@@ -443,7 +465,8 @@
     "description": "馬約卡島上的產區，以原生品種 Manto Negro 紅酒和 Moll（Prensal）白酒為主，帶有地中海果香與鹹礦物感，是島嶼旅遊的熱門伴手禮。",
     "provinces": [
       "Baleares"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Alella",
@@ -462,7 +485,8 @@
     "description": "緊鄰巴塞隆那的小型產區，以花崗岩土壤和 Xarel·lo（Pansa Blanca）白酒著稱，都市化壓力使產區面積持續縮小。",
     "provinces": [
       "Barcelona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Montsant",
@@ -481,7 +505,8 @@
     "description": "環繞 Priorat 的產區，常被稱為「Priorat 的入門款」，以更合理的價格提供相近風格。板岩和石灰岩土壤，老藤 Garnacha 出色。",
     "provinces": [
       "Tarragona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Terra Alta",
@@ -499,7 +524,8 @@
     "description": "塔拉戈納省西南高原，以 Garnacha Blanca 白酒著稱，近年品質飛躍提升，強烈礦物感和結構感令人印象深刻。",
     "provinces": [
       "Tarragona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Cigales",
@@ -517,7 +543,8 @@
     "provinces": [
       "Valladolid",
       "Palencia"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Arlanza",
@@ -535,7 +562,8 @@
     "provinces": [
       "Burgos",
       "Palencia"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Arribes",
@@ -554,7 +582,8 @@
     "provinces": [
       "Salamanca",
       "Zamora"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Empordá",
@@ -575,7 +604,8 @@
     "description": "加泰隆尼亞北端吉隆納省，夾在庇里牛斯山與地中海之間，傳統甜葡萄酒 Garnatxa de l'Empordà 聞名，近年精品紅白酒表現亦相當出色。",
     "provinces": [
       "Girona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Bizkaiko Txakolina-Chacolí de Bizkaia",
@@ -590,7 +620,8 @@
     "description": "巴斯克海岸的輕盈白酒，以 Hondarrabi Zuri 釀製，微氣泡、高酸低酒精，是配搭 Pintxos 小點的最佳拍檔。",
     "provinces": [
       "Biskaia"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Getariako Txakolina-Chacolí de Getaria",
@@ -606,7 +637,8 @@
     "description": "吉普斯科亞海岸的傳統 Txakoli 產區，海洋性氣候孕育細膩的蘋果、柑橘氣息，從高杯傾注以增加碳酸感是當地傳統。",
     "provinces": [
       "Guipuzcoa"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Arabako Txakolina-Chacolí de Álava",
@@ -621,7 +653,8 @@
     "description": "阿拉瓦省內陸的最小 Txakoli 產區，受大陸性氣候影響，酒體比沿海 Txakoli 稍為豐滿，複雜度更高。",
     "provinces": [
       "Alava"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Yecla",
@@ -638,7 +671,8 @@
     "description": "穆爾西亞省北部高原，以 Monastrell 老藤濃縮紅酒著稱，炎熱大陸性氣候，是西班牙最集中的單一品種產區之一。",
     "provinces": [
       "Murcia"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Bullas",
@@ -655,7 +689,8 @@
     "description": "穆爾西亞最西北葡萄酒產區，高海拔使氣候相對溫和，Monastrell 在此表現較為優雅，風格介於 Jumilla 的濃郁和清爽之間。",
     "provinces": [
       "Murcia"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Vinos de Madrid",
@@ -674,7 +709,8 @@
     "description": "馬德里周圍的山地產區，以 Grenache（Garnacha）老藤著稱，阿爾維蘇等副區海拔達 900 公尺，孕育優雅清爽的紅酒。",
     "provinces": [
       "Madrid"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Ribera del Guadiana",
@@ -693,7 +729,8 @@
     "provinces": [
       "Badajoz",
       "Caceres"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Tacoronte-Acentejo",
@@ -711,7 +748,8 @@
     "description": "特內里費島北部最古老的 DO 產區，以 Listán Negro 紅酒為主，火山土壤 picón 賦予獨特的礦物煙燻感。",
     "provinces": [
       "Santa Cruz Tenerife"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Lanzarote",
@@ -729,7 +767,8 @@
     "description": "蘭薩羅特島上獨特的火山景觀，葡萄種植在 *hoyos* 火山灰坑中以防強風，Malvasía 白酒甜潤、帶有杏桃蜂蜜香氣，景色與酒款同樣令人印象深刻。",
     "provinces": [
       "Lanzarote"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Abona",
@@ -747,7 +786,8 @@
     "description": "特內里費島南部高海拔產區（最高達 1750 公尺），是西班牙海拔最高的葡萄酒產區之一，清涼氣候造就清爽多酸白酒。",
     "provinces": [
       "Santa Cruz Tenerife"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Conca de Barberá",
@@ -767,7 +807,8 @@
     "description": "加泰羅尼亞山地涼爽產區，以 Cava 基酒葡萄著稱，本地品種 Trepat 可釀製清淡粉紅色氣泡酒，Miguel Torres 在此有大量投資。",
     "provinces": [
       "Tarragona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Utiel-Requena",
@@ -786,7 +827,8 @@
     "description": "巴倫西亞西部高原（海拔 700 公尺），以本地品種 Bobal 著稱，多汁、顏色深沉，在粉紅酒中表現出色。近年出現越來越多品質導向的裝瓶。",
     "provinces": [
       "Valence"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Alicante",
@@ -805,7 +847,8 @@
     "description": "阿利坎特省地中海氣候，以濃郁 Monastrell 紅酒和傳統甜型 Moscatel 著稱，Marina Alta 子產區靠近海岸，種植優質 Moscatel 釀製甜酒。",
     "provinces": [
       "Alicante"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Valencia",
@@ -826,7 +869,8 @@
     "provinces": [
       "Valence",
       "Castellon"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Almansa",
@@ -843,7 +887,8 @@
     "description": "阿爾巴塞特省東部，連接梅塞塔高原和地中海沿岸。以 Garnacha Tintorera（果肉紅色變種）著稱，是少數允許 100% Garnacha Tintorera 裝瓶的產區之一。",
     "provinces": [
       "Albacete"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Manchuela",
@@ -862,7 +907,8 @@
     "provinces": [
       "Cuenca",
       "Albacete"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Méntrida",
@@ -878,7 +924,8 @@
     "description": "托萊多省中部，以老藤 Garnacha 著稱，歷史上以高酒精度酒聞名，現代釀酒師正在重新詮釋這些老藤，復興精緻風格。",
     "provinces": [
       "Toledo"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Uclés",
@@ -895,7 +942,8 @@
     "description": "庫恩卡省小型子產區，以高海拔和石灰岩土壤出名，2006 年取得 DO 資格，主要種植 Tempranillo。",
     "provinces": [
       "Cuenca"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Ribera del Júcar",
@@ -912,7 +960,8 @@
     "description": "胡卡爾河流域新興產區，2003 年升格 DO，高原氣候，老藤 Bobal 和 Tempranillo 生產深色豐富紅酒。",
     "provinces": [
       "Cuenca"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Pla de Bages",
@@ -930,7 +979,8 @@
     "description": "巴塞隆那省中部山地產區，以本地白品種 Picapoll 著稱，海拔 300-600 公尺，氣候較巴塞隆那涼爽。",
     "provinces": [
       "Barcelona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Costers del Segre",
@@ -949,7 +999,8 @@
     "description": "塞格雷河流域的六個分散子區，以 Raimat 酒莊最為知名，採用現代灌溉技術種植國際品種，是西班牙現代化葡萄酒的先驅。",
     "provinces": [
       "Lleida"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Pla i Llevant",
@@ -968,7 +1019,8 @@
     "description": "馬略卡島東部產區，本地老品種 Callet 和 Fogoneu 表現出獨特的地中海島嶼風土，也種植多種國際品種。",
     "provinces": [
       "Baleares"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Tierra de León",
@@ -986,7 +1038,8 @@
     "provinces": [
       "Leon",
       "Palencia"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Tierra del Vino de Zamora",
@@ -1003,7 +1056,8 @@
     "provinces": [
       "Zamora",
       "Salamanca"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Tarragona",
@@ -1023,7 +1077,8 @@
     "description": "古羅馬時代即盛產葡萄酒，今日以多樣風格著稱，傳統甜型加強酒（Rancio Tarraconense）和現代干型酒並存。",
     "provinces": [
       "Tarragona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Mondéjar",
@@ -1040,7 +1095,8 @@
     "description": "瓜達拉哈拉省小型產區，以石灰岩高原地形著稱，Tempranillo 和本地白品種 Malvar 是主要葡萄品種。",
     "provinces": [
       "Guadalajara"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Calatayud",
@@ -1058,7 +1114,8 @@
     "description": "薩拉戈薩省的老藤 Garnacha 代表產區，海拔超過 900 公尺，部分老藤樹齡逾百年，釀出西班牙最物超所值的優質 Garnacha 紅酒。",
     "provinces": [
       "Zaragoza"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Campo de Borja",
@@ -1076,7 +1133,8 @@
     "description": "薩拉戈薩省的 Garnacha 大本營，傳統酒合作社仍佔主導。近年精品酒莊崛起，以老藤 Garnacha 釀製濃郁且具陳年潛力的紅酒。",
     "provinces": [
       "Zaragoza"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Cariñena",
@@ -1094,7 +1152,8 @@
     "description": "薩拉戈薩省最古老的 DO 產區，Cariñena 葡萄（Carignan）原產於此，現以 Garnacha 為主，出產濃烈、飽滿且性價比突出的紅酒。",
     "provinces": [
       "Zaragoza"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Málaga",
@@ -1112,7 +1171,8 @@
     "description": "馬拉加省的傳統加強甜酒產區，以 Moscatel de Alejandría 和 PX 葡萄的甜型酒著稱，歷史上維多利亞女王最愛的甜酒。",
     "provinces": [
       "Malaga"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Sierras de Málaga",
@@ -1131,7 +1191,8 @@
     "description": "馬拉加省山區認證，以 Ronda 為中心，海拔 600–900 公尺，以 Merlot、Syrah、Petit Verdot 等國際品種表現優異，是安達盧西亞最具潛力的靜態餐酒產區。",
     "provinces": [
       "Malaga"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Cangas",
@@ -1150,7 +1211,8 @@
     "description": "阿斯圖里亞斯山地的小型 VC 產區，採用本土品種 Carrasquín、Verdejo Negro 等，偏遠地形保留了無可複製的傳統風味。",
     "provinces": [
       "Asturias"
-    ]
+    ],
+    "classification": "VC"
   },
   {
     "zonName": "La Palma",
@@ -1168,7 +1230,8 @@
     "description": "拉帕爾馬火山島，以高海拔（最高達 1200 公尺）和多樣的微氣候著稱，Negramoll 釀製清爽紅酒，Albillo 白酒帶有花香。",
     "provinces": [
       "Santa Cruz Tenerife"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Valle de Güimar",
@@ -1186,7 +1249,8 @@
     "description": "特內里費島東南部 Güimar 山谷，火山土壤，乾燥氣候，以清爽 Listán Blanco 白酒和甜型 Moscatel 著稱。",
     "provinces": [
       "Santa Cruz Tenerife"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Valle de la Orotava",
@@ -1204,7 +1268,8 @@
     "description": "特內里費島北部奧羅塔瓦山谷，肥沃的火山土，古老的梯田葡萄園，以優雅清爽的 Listán 品種葡萄酒著稱。",
     "provinces": [
       "Santa Cruz Tenerife"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Ycoden-Daute-Isora",
@@ -1222,7 +1287,8 @@
     "description": "特內里費島西北部梯田產區，面向大西洋的強烈濕潤氣候，以古老前根瘤蚜蟲害時代的老藤著稱，保留了許多珍稀品種。",
     "provinces": [
       "Santa Cruz Tenerife"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Gran Canaria",
@@ -1241,7 +1307,8 @@
     "description": "大加那利島的葡萄酒產區，以山地梯田葡萄園著稱，有多個分散的子產區，Tintilla 是島上特有的本地品種。",
     "provinces": [
       "Gran Canaria"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "La Gomera",
@@ -1259,7 +1326,8 @@
     "description": "戈梅拉小島的葡萄酒產區，以 Forastera 本地白品種著稱，島嶼微氣候和火山土壤賦予獨特的鹹海風味。",
     "provinces": [
       "Santa Cruz Tenerife"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "El Hierro",
@@ -1277,7 +1345,8 @@
     "description": "加那利群島最西端小島，獨特的火山地形和乾燥氣候，保育有世界上最稀有的葡萄品種，如 Verijadiego 和 Baboso Negro。",
     "provinces": [
       "Santa Cruz Tenerife"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Las Islas Canarias",
@@ -1300,7 +1369,8 @@
       "Gran Canaria",
       "Lanzarote",
       "Fuerteventura"
-    ]
+    ],
+    "classification": "DOP"
   },
   {
     "zonName": "Ribera del Júcar",
@@ -1317,7 +1387,8 @@
     "description": "胡卡爾河流域新興產區，2003 年升格 DO，高原氣候，老藤 Bobal 和 Tempranillo 生產深色豐富紅酒。",
     "provinces": [
       "Cuenca"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Rioja",
@@ -1338,7 +1409,8 @@
       "La Rioja",
       "Alava",
       "Navarre"
-    ]
+    ],
+    "classification": "DOCa"
   },
   {
     "zonName": "Navarra",
@@ -1356,7 +1428,8 @@
     "description": "納瓦拉法定產區。",
     "provinces": [
       "Navarre"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Priorato, Comunidad de Cataluña",
@@ -1373,7 +1446,8 @@
     "description": "加泰羅尼亞頂級 DOCa 認證，黑板岩 llicorella 土壤。",
     "provinces": [
       "Tarragona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Penedés, Comunidad de Cataluña",
@@ -1391,7 +1465,8 @@
     "provinces": [
       "Barcelona",
       "Tarragona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Cataluña",
@@ -1411,7 +1486,8 @@
       "Tarragona",
       "Lleida",
       "Girona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Ampurdán-Costa Brava",
@@ -1428,7 +1504,8 @@
     "description": "Costa Brava 沿岸產區，即今日 Empordà DO。",
     "provinces": [
       "Girona"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Binissalem-Mallorca",
@@ -1445,7 +1522,8 @@
     "description": "馬略卡島 Binissalem 法定產區。",
     "provinces": [
       "Baleares"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Chacolí de Bizkaia-Bizkaiko Txakolina",
@@ -1460,7 +1538,8 @@
     "description": "比斯開省 Txakoli 微氣泡白酒。",
     "provinces": [
       "Biskaia"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Chacolí de Getaria-Getariako Txakolina",
@@ -1475,7 +1554,8 @@
     "description": "赫塔里亞科 Txakoli 白酒。",
     "provinces": [
       "Guipuzcoa"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "Arabako Txakolina-Txakolí de Álava",
@@ -1490,7 +1570,8 @@
     "description": "阿拉瓦省 Txakoli 白酒。",
     "provinces": [
       "Alava"
-    ]
+    ],
+    "classification": "DO"
   },
   {
     "zonName": "VC Cangas",
@@ -1507,7 +1588,8 @@
     "description": "卡尼亞斯本地品種葡萄酒（Vino de Calidad）。",
     "provinces": [
       "Asturias"
-    ]
+    ],
+    "classification": "VC"
   },
   {
     "zonName": "Granada",
@@ -1524,7 +1606,8 @@
     "description": "格拉納達省 Vino de Calidad 認證。",
     "provinces": [
       "Granada"
-    ]
+    ],
+    "classification": "VC"
   },
   {
     "zonName": "VC Lebrija",
@@ -1539,7 +1622,8 @@
     "description": "萊夫里哈 Vino de Calidad。",
     "provinces": [
       "Sevilla"
-    ]
+    ],
+    "classification": "VC"
   },
   {
     "zonName": "Sierra de Salamanca",
@@ -1556,7 +1640,8 @@
     "description": "薩拉曼卡山地 Vino de Calidad，本地品種 Rufete。",
     "provinces": [
       "Salamanca"
-    ]
+    ],
+    "classification": "VC"
   },
   {
     "zonName": "Valtiendas",
@@ -1571,7 +1656,8 @@
     "description": "塞哥維亞省 Valtiendas Vino de Calidad。",
     "provinces": [
       "Segovia"
-    ]
+    ],
+    "classification": "VC"
   },
   {
     "zonName": "Valles de Benavente",
@@ -1587,7 +1673,8 @@
     "description": "薩莫拉省 Valles de Benavente Vino de Calidad。",
     "provinces": [
       "Zamora"
-    ]
+    ],
+    "classification": "VC"
   },
   {
     "zonName": "Campo de la Guardia",
@@ -1602,7 +1689,8 @@
     "description": "托萊多省白酒 Vino de Pago。",
     "provinces": [
       "Toledo"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Casa del Blanco",
@@ -1617,7 +1705,8 @@
     "description": "西班牙最大單一酒莊之一 Vino de Pago。",
     "provinces": [
       "Ciudad Real"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Pago Florentino",
@@ -1632,7 +1721,8 @@
     "description": "西班牙薄酒萊，Vino de Pago。",
     "provinces": [
       "Ciudad Real"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Pago Arínzano",
@@ -1648,7 +1738,8 @@
     "description": "納瓦拉 Arínzano 單一莊園 Vino de Pago。",
     "provinces": [
       "Navarre"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Pago Otazu",
@@ -1664,7 +1755,8 @@
     "description": "納瓦拉 Otazu 莊園 Vino de Pago。",
     "provinces": [
       "Navarre"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Vino de Pago Aylés",
@@ -1680,7 +1772,8 @@
     "description": "阿拉貢 Aylés 莊園 Vino de Pago。",
     "provinces": [
       "Zaragoza"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Pago de Calzadilla",
@@ -1696,7 +1789,8 @@
     "description": "庫恩卡 Calzadilla 莊園 Vino de Pago。",
     "provinces": [
       "Cuenca"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "El Terrerazo",
@@ -1711,7 +1805,8 @@
     "description": "烏帝爾-雷格納 El Terrerazo 莊園 Vino de Pago。",
     "provinces": [
       "Valence"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Pago Los Balagueses",
@@ -1726,7 +1821,8 @@
     "description": "巴倫西亞 Los Balagueses 莊園 Vino de Pago。",
     "provinces": [
       "Valence"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Prado Irache",
@@ -1742,7 +1838,8 @@
     "description": "納瓦拉 Irache 修道院酒莊 Vino de Pago。",
     "provinces": [
       "Navarre"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Dehesa del Carrizal",
@@ -1758,7 +1855,8 @@
     "description": "Ciudad Real 省 Carrizal 莊園 Vino de Pago。",
     "provinces": [
       "Ciudad Real"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Dominio de Valdepusa",
@@ -1774,7 +1872,8 @@
     "description": "托萊多 Valdepusa 莊園，西班牙第一個 Vino de Pago 認證（2002）。",
     "provinces": [
       "Toledo"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Finca Élez",
@@ -1790,7 +1889,8 @@
     "description": "阿爾巴塞特 Élez 莊園 Vino de Pago。",
     "provinces": [
       "Albacete"
-    ]
+    ],
+    "classification": "VP"
   },
   {
     "zonName": "Guijoso",
@@ -1806,6 +1906,7 @@
     "description": "阿爾巴塞特 Guijoso 莊園 Vino de Pago。",
     "provinces": [
       "Albacete"
-    ]
+    ],
+    "classification": "VP"
   }
 ]
