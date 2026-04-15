@@ -390,16 +390,44 @@
     ],
     "grapes": [
       "Mencía",
-      "Garnacha Tintorera",
+      "Brancellao",
+      "Merenzao",
+      "Caiño",
+      "Sousón",
+      "Tempranillo",
       "Godello",
-      "Albariño"
+      "Treixadura",
+      "Albariño",
+      "Doña Blanca",
+      "Loureira",
+      "Torrontés"
     ],
-    "description": "陡峭板岩山坡形成的壯觀梯田葡萄園，Mencía 在此展現最精緻細膩的一面，花香突出，被稱為加利西亞最美麗的酒鄉。",
+    "description": "Miño 與 Sil 河谷陡峭梯田，葡萄園海拔 400–500m，土壤混合花崗岩、板岩與石灰岩。Mencía 紅酒展現覆盆子、花香與鉛筆芯礦石感；Godello 白酒同樣出色。釀酒史可追溯至古羅馬時期，Amandi 子產區的加料葡萄酒曾供應皇帝餐桌。 Miño 河谷均溫 14°C、雨量 900mm；Sil 河谷均溫 13°C、雨量 700mm。",
     "provinces": [
       "Lugo",
       "Ourense"
     ],
-    "classification": "DO"
+    "classification": "DO",
+    "subzones": [
+      "Amandi（最知名）",
+      "Chantada",
+      "Ribeiras do Miño",
+      "Ribeiras do Sil",
+      "Quiroga-Bibei"
+    ],
+    "climate": {
+      "minoValley": {
+        "avgTempC": 14,
+        "annualRainfallMm": 900
+      },
+      "silValley": {
+        "avgTempC": 13,
+        "annualRainfallMm": 700
+      }
+    },
+    "elevation": "400–500m",
+    "soilType": "花崗岩、板岩、石灰岩",
+    "history": "古羅馬時期就有釀酒紀錄；Amandi 的加料葡萄酒加七鰓鰻曾專供皇帝餐桌"
   },
   {
     "zonName": "Valdeorras",
