@@ -78,7 +78,7 @@ export const courseLevels = {
     icon: '🍷',
     color: '#8e44ad',
     gradient: 'linear-gradient(135deg, #8e44ad, #9b59b6)',
-    totalLessons: 18,
+    totalLessons: 19,
     prerequisites: ['完成 Level 1'],
     modules: [
       {
@@ -93,11 +93,12 @@ export const courseLevels = {
       },
       {
         id: 'S2M2',
-        title: '第二章：加利西亞 — 綠色海岸',
+        title: '第二章：加利西亞・巴斯克 — 綠色海岸',
         lessons: [
           { id: 'S2M2L1', title: 'Rías Baixas — Albariño 白酒之都' },
           { id: 'S2M2L2', title: 'Ribeiro · Valdeorras · Ribeira Sacra' },
           { id: 'S2M2L3', title: '大西洋氣候與花崗岩土壤的味道' },
+          { id: 'S2M2L4', title: 'Txakoli — 巴斯克微氣泡白酒三大產區' },
         ],
       },
       {

@@ -1736,6 +1736,141 @@ const S2M2L3_slides = [
   },
 ]
 
+// ── S2M2L4：Txakoli — 巴斯克查科麗三大産區 ───────────────────
+const S2M2L4_slides = [
+  {
+    type: 'cover',
+    icon: '🫧',
+    gradient: 'linear-gradient(135deg, #1e5631, #27ae60)',
+    title: 'Txakoli — 巴斯克微氣泡白酒',
+    subtitle: 'Level 2 · Chacolí · 三大 DO · Hondarrabi Zuri',
+    points: [
+      { icon: '🫧', label: '骨乾微氣泡白酒', text: '極乾（Bone Dry）、天然微氣泡，酒精僅 9–11%，大西洋涼爽海岸的清爽代表' },
+      { icon: '🍋', label: 'Hondarrabi Zuri 主角', text: '巴斯克原生白品種，帶有萊姆・青草莓・牡丹・細緻鹽鮮礦石感' },
+      { icon: '📜', label: '三大 DO 從海岸到內陸', text: 'Getaria（1989）· Bizkaia（1994）· Álava（2001），氣候差異顯著' },
+    ],
+  },
+  {
+    type: 'map',
+    title: '巴斯克地區 — Txakoli 三大 DO',
+    mapRegion: 'pais-vasco',
+    description: '巴斯克自治區緊臨比斯開灣（Bay of Biscay），三個 Txakoli DO 從沿海（Getaria・Bizkaia）延伸到內陸省份（Álava），大西洋影響由強至弱，風格各有千秋。',
+  },
+  {
+    type: 'compare',
+    title: 'Txakoli 三大 DO 比較',
+    items: [
+      {
+        icon: '⛵',
+        label: 'Getariako Txakolina（吉普斯夸）',
+        desc: '最早獲認證（1989）；2007 年擴展至整個 Gipuzkoa 省。90% 葡萄園臨海，海拔 10–100m，年雨量 1,600mm、日照 1,800h，砂質表土，最具海洋鮮鹹特質',
+        color: '#1a6fa8',
+      },
+      {
+        icon: '🌊',
+        label: 'Bizkaiko Txakolina（比斯開）',
+        desc: '1994 年取得認證，比斯開省海岸，年雨量 1,200mm，海拔 400m 以下，石灰岩與泥灰岩上的粘壤土（略酸性、表土淺），氣候溫和，風格清爽',
+        color: '#16a085',
+      },
+      {
+        icon: '🏔️',
+        label: 'Arabako Txakolina（阿拉瓦）',
+        desc: '2001 年取得認證，三大中最小、最內陸，夏季高達 38°C，年雨量僅 899mm，活性石灰岩土壤（pH 7.5–8），大陸性氣候讓酒體稍豐滿複雜',
+        color: '#a0792b',
+      },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🌡️',
+    title: '氣候・風土・葡萄品種',
+    html: `
+      <h4>🌦️ 三大產區氣候對比</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#eaf4fb;border-left:4px solid #1a6fa8;padding:12px;border-radius:0 10px 10px 0">
+          <strong>⛵ Getaria（沿海，最大西洋）</strong><br/>
+          年雨量 <strong>1,600mm</strong>（三大最高）・年日照 1,800h・海拔 10–100m<br/>
+          砂質表土 + 沖積粘土底土；海洋氣候，溫差小，高酸清雅
+        </div>
+        <div style="background:#e9f7ef;border-left:4px solid #16a085;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌊 Bizkaia（沿海，最普遍）</strong><br/>
+          年雨量 <strong>1,200mm</strong>・海拔 400m 以下<br/>
+          石灰岩與泥灰岩上的粘壤土，略酸性，土層淺薄；氣候溫和，果香較圓潤
+        </div>
+        <div style="background:#fef9e7;border-left:4px solid #a0792b;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🏔️ Álava（內陸，大陸性）</strong><br/>
+          年雨量 <strong>899mm</strong>（三大最低）・夏季最高 38°C，冬季 -2°C<br/>
+          活性石灰岩土壤（pH 7.5–8）；日夜溫差大，酒體比沿海款更豐滿複雜
+        </div>
+      </div>
+      <h4 style="margin-top:16px">🍇 法定葡萄品種</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+        <div style="background:#e8f5e9;border-radius:8px;padding:10px">
+          <strong>⬜ 白葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Hondarrabi Zuri</strong>（絕對主導）</li>
+            <li>Petit Manseng（Álava 允許）</li>
+            <li>Gros Manseng（Álava 允許）</li>
+            <li>Petit Corbu（Álava 允許）</li>
+          </ul>
+        </div>
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>🟥 紅葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Hondarrabi Beltza</strong>（少量）</li>
+            <li>用於釀製粉紅酒或混釀</li>
+          </ul>
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🫧',
+    title: 'Txakoli 文化傳統與風味輪廓',
+    html: `
+      <h4>🥂 傳統倒酒儀式「Escanciar」</h4>
+      <p>巴斯克傳統習慣是將酒液從約 <strong>25–30 公分高處</strong>倒入<strong>平底直杯（Tumbler）</strong>，利用落差使天然微氣泡充分釋放、活化香氣，這個倒酒動作稱為 <em>escanciar</em>，是巴斯克餐飲文化的重要儀式。</p>
+      <h4>🍷 Txakoli 風味輪廓</h4>
+      <ul>
+        <li><strong>核心香氣</strong>：萊姆皮、青草莓、牡丹花香、柑橘花、細緻鹽鮮礦石</li>
+        <li><strong>口感</strong>：骨乾（Bone Dry）、高酸、輕盈，天然微氣泡（Pétillant）</li>
+        <li><strong>酒精度</strong>：<strong>9–11%</strong>（西班牙酒精度最低的白酒之一）</li>
+        <li><strong>侍酒溫度</strong>：<strong>4–7°C（極冰）</strong></li>
+      </ul>
+      <h4>🍽️ 餐酒搭配 — Pintxos 的最佳拍檔</h4>
+      <p>Txakoli 是配搭巴斯克 <em>Pintxos</em>（麵包串小點）的傳統選擇，特別適合：</p>
+      <ul>
+        <li>生蠔、炸鱈魚（Bacalao al pil-pil）、醃漬鯷魚（Anchovies）</li>
+        <li>烤章魚、蛤蜊湯、龍蝦</li>
+        <li>海鮮飯（Arroz con mariscos）</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '關於 Txakoli（查科麗）下列敘述何者正確？',
+    options: [
+      '以 Tempranillo 為主要品種，是巴斯克最著名的紅酒',
+      '主要品種為 Hondarrabi Zuri，風格骨乾、微氣泡、高酸低酒精，產自巴斯克地區',
+      '三大產區均為 DOCa 最高等級，與 Rioja 並列',
+      '氣泡是利用傳統法（Méthode Traditionnelle）瓶中二次發酵製成',
+    ],
+    answer: 1,
+    explanation: 'Txakoli 以巴斯克原生品種 Hondarrabi Zuri 釀造，風格骨乾（Bone Dry）、具天然微氣泡（非傳統法）、高酸、酒精約 9–11%。三大產區 Getaria、Bizkaia、Álava 均為 DO 等級，不是 DOCa。',
+  },
+  {
+    type: 'summary',
+    message: 'Txakoli 巴斯克查科麗學習完成！',
+    keyPoints: [
+      '三大 DO：Getaria（1989·最海岸·雨量最高 1,600mm）· Bizkaia（1994）· Álava（2001·最內陸）',
+      '主品種 Hondarrabi Zuri；風格骨乾・天然微氣泡・高酸・低酒精（9–11%）',
+      '香氣：萊姆・青草莓・牡丹・鹽鮮礦石；傳統高位倒酒儀式（escanciar）',
+      '綠色西班牙・大西洋氣候・Pintxos 最佳搭檔，展現巴斯克海岸鮮活個性',
+    ],
+  },
+]
+
 const S2M3L1_slides = [
   {
     type: 'cover',
@@ -4726,6 +4861,7 @@ const SLIDE_MAP = {
   S2M2L1: S2M2L1_slides,     // Rías Baixas / Albariño
   S2M2L2: S2M2L2_slides,     // Ribeiro / Valdeorras / Ribeira Sacra
   S2M2L3: S2M2L3_slides,     // 大西洋氣候與花崗岩土壤
+  S2M2L4: S2M2L4_slides,     // Txakoli / 巴斯克查科麗三大 DO
   S2M3L1: S2M3L1_slides,     // Priorat DOCa
   S2M3L2: S2M3L2_slides,     // Montsant / Terra Alta / Empordà
   S2M3L3: S2M3L3_slides,     // Penedès / 白酒革命
