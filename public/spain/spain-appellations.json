@@ -304,15 +304,26 @@
     "styles": [
       "紅酒",
       "粉紅酒",
-      "白酒"
+      "白酒",
+      "甜酒"
     ],
     "grapes": [
       "Garnacha",
       "Tempranillo",
+      "Merlot",
       "Cabernet Sauvignon",
-      "Chardonnay"
+      "Syrah",
+      "Pinot Noir",
+      "Graciano",
+      "Mazuelo",
+      "Viura",
+      "Chardonnay",
+      "Sauvignon Blanc",
+      "Malvasía",
+      "Garnacha Blanca",
+      "Moscatel de Grano Menudo"
     ],
-    "description": "納瓦拉多元風土產區，從北部庇里牛斯山麓到南方乾燥平原，紅白粉紅酒俱全。Garnacha 表現尤其突出，傳統粉紅酒享有盛名。",
+    "description": "納瓦拉 DO 產區，北接庇里牛斯山麓，南達埃布羅河谷，平均海拔 400m，年日照 2,700 小時，三大氣候（大西洋、大陸性、地中海）交匯。以 Garnacha Rosado 粉紅酒聞名，現代化後多元品種（14 個）釀製紅白甜酒皆出色。位於 Olite 的 EVENA 研發中心是 1980 年代技術轉型的關鍵推手，Viura 白酒（哈密瓜・青檸皮・榛果）極乾可陳年 10 年以上，總種植面積約 11,025 公頃。",
     "provinces": [
       "Navarre"
     ],

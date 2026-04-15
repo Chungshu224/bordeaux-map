@@ -1244,65 +1244,135 @@ const S2M1L4_slides = [
     type: 'cover',
     icon: '🌹',
     gradient: 'linear-gradient(135deg, #e91e63, #c0392b)',
-    title: 'Navarra — 玫瑰酒與 Garnacha 的故鄉',
-    subtitle: 'Level 2 · 西班牙最美的粉紅酒產區',
+    title: 'Navarra — 復甦等級・山地到平原',
+    subtitle: 'Level 2 · 庇里牛斯山麓 → 埃布羅河谷 · DO 三大氣候交匯',
     points: [
-      { icon: '🌹', label: '粉紅酒', text: '西班牙最佳 Rosado 的主要來源，以 Garnacha 釀製' },
-      { icon: '🍑', label: 'Garnacha', text: '老藤 Garnacha 是高品質紅酒基礎，風格豐滿香料感' },
-      { icon: '🌍', label: '多樣性', text: '法國邊界接壤，引進 Cabernet、Merlot 等國際品種' },
+      { icon: '🌹', label: '粉紅酒典範', text: '西班牙最具代表性 Garnacha Rosado，草莓・覆盆子香氣，1980 年代前即以粉紅酒調名' },
+      { icon: '🌡️', label: '三大氣候交匯', text: '大西洋・大陸性・地中海三路交匯，年日照 2,700h，多樣化酒款讓 Navarra 成為頂級紅白粉紅酒產區' },
+      { icon: '💜', label: 'Viura 白酒', text: '最主要白葡萄品種，帶有哈密瓜・青檸皮・檸檬馬鞭草，極乾高熟成度，可陳年 10 年以上' },
     ],
   },
   {
     type: 'map',
     title: 'Navarra DO 產區地理',
     mapRegion: 'navarra',
-    description: '北接庇里牛斯山，南達埃布羅河，五個子產區從寒冷山地到溫暖平原。',
+    description: '北接庇里牛斯山，南達埃布羅河，五個子產區從寒冷高山到溫暖平原。平均海拔 400m，年均降雨 400–550mm，年日照約 2,700 小時。',
   },
   {
     type: 'compare',
     title: 'Navarra DO：五個子產區',
     items: [
       { icon: '🏔️', label: 'Valdizarbe', desc: '北部高海拔，受庇里牛斯山影響，氣候最涼爽，生產清爽白酒與輕盈紅酒', color: '#3498db' },
-      { icon: '🌊', label: 'Tierra Estella', desc: '受大西洋影響，香氣清新，適合白品種 Chardonnay 和 Viura', color: '#27ae60' },
+      { icon: '🌊', label: 'Tierra Estella', desc: '受大西洋影響，香氣清新，適合 Chardonnay 與 Viura 白葡萄 — EVENA 研發展示區，構成複雜白酒', color: '#27ae60' },
       { icon: '🌹', label: 'La Ribera Alta', desc: '核心紅酒和粉紅酒地帶，Garnacha 老藤最集中，最典型的 Navarra Rosado', color: '#e91e63' },
-      { icon: '☀️', label: 'La Ribera Baja', desc: '氣候最乾熱，鄰近拉里奧哈，釀造豐滿濃郁紅酒，常與 Rioja 混調', color: '#e67e22' },
-      { icon: '🏜️', label: 'Baja Montaña', desc: '東北部，介於山地與平原之間，多樣化品種種植，包括 Tempranillo 和 Garnacha', color: '#9b59b6' },
+      { icon: '☀️', label: 'La Ribera Baja', desc: '氣候最乾熱，石灰質下的砂質壤，釀造豐滿濃郁紅酒，鄰近拉里奧哈，亦種植 Moscatel 甜酒', color: '#e67e22' },
+      { icon: '🏠', label: 'Baja Montaña', desc: '東北部，介於山地與平原，石灰質與礫石壤，Tempranillo 與 Garnacha 多樣化種植', color: '#9b59b6' },
     ],
   },
   {
     type: 'content',
+    icon: '🌡️',
+    title: '氣候・風土・EVENA 研發中心',
+    html: `
+      <h4>🌦️ 產區氣候數據</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#eaf4fb;border-left:4px solid #2980b9;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 溫度與降雨</strong><br/>
+          夏季最高均溫 <strong>34°C</strong>，冬季最低均溫 <strong>-4°C</strong>，日夜溫差顯著<br/>
+          年均降雨 <strong>400–550mm</strong>，年日照 <strong>2,700 小時</strong>（遠高於波爾多）
+        </div>
+        <div style="background:#e9f7ef;border-left:4px solid #27ae60;padding:12px;border-radius:0 10px 10px 0">
+          <strong>⛰️ 海拔與土壤</strong><br/>
+          葡萄園均海拔 <strong>400m</strong>，主要為石灰質與礫石壤<br/>
+          南部 Ribera Baja 為<strong>砂質土</strong>，保水性低，適合 Moscatel 甜酒
+        </div>
+        <div style="background:#fef9e7;border-left:4px solid #e67e22;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌍 三大氣候交匯帶</strong><br/>
+          北緣大西洋濕潤氣流 × 內陸大陸性乾熱 × 南緣地中海陽光 — 彼此交匯出<strong>多樣化風格</strong>的葡萄酒
+        </div>
+      </div>
+      <h4 style="margin-top:16px">🏢 EVENA 研發中心的貢獻</h4>
+      <p>位於 <strong>Olite 奧利特</strong>的納瓦拉葡萄栽培與釀酒研究站（<strong>EVENA</strong>）由當地政府成立，是 1980 年代 Navarra 轉型的技術推手——對國際品種適應性研究、優選克隆、釀酒訓練，發表大量學術成果，幫助 Navarra 發展為西班牙釀酒技術最先進的產區之一。</p>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '💜',
+    title: 'Viura 白酒與葡萄品種全景',
+    html: `
+      <h4>💜 Viura（維奧娜）— Navarra 最主要白葡萄</h4>
+      <ul>
+        <li><strong>香氣</strong>：哈密瓜、青檸皮、檸檬馬鞭草（Tarragon）、榛果</li>
+        <li><strong>口感</strong>：極乾（Bone-Dry）・中至輕盈酒體・中等酸度</li>
+        <li><strong>侍酒溫度</strong>：<strong>7–13°C</strong>——無需醒酒，準備即飲</li>
+        <li><strong>陳年潛力</strong>：<strong>10 年以上</strong>，緩慢轉化為蘑菇、油脂、蜂蠟風味</li>
+      </ul>
+      <h4>🍷 紅、白、粉紅全產區品種</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>🟥 紅葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Garnacha</strong>（核心粉紅酒/紅酒）</li>
+            <li>Tempranillo</li>
+            <li>Merlot、Cabernet Sauvignon</li>
+            <li>Syrah、Pinot Noir</li>
+            <li>Graciano、Mazuelo</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:10px">
+          <strong>⬜ 白葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Viura</strong>（最主要）</li>
+            <li>Chardonnay、Sauvignon Blanc</li>
+            <li>Malvasía、Garnacha Blanca</li>
+            <li><strong>Moscatel de Grano Menudo</strong>（甜酒）</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:10px;color:#666;font-size:0.9em">📐 總種植面積約 <strong>11,025 公頃</strong></p>
+    `,
+  },
+  {
+    type: 'content',
     icon: '🌹',
-    title: 'Navarra Rosado：西班牙最具代表性的粉紅酒',
+    title: 'Navarra Rosado：粉紅酒與產業演進',
     html: `
       <p>Navarra 的 <strong>Garnacha Rosado 粉紅酒</strong>被認為是西班牙最具代表性的粉紅酒風格，並在國際上享有盛名。</p>
       <h4>🍓 風味特徵</h4>
       <ul>
         <li><strong>顏色</strong>：亮麗的覆盆子粉紅至深玫瑰紅（傳統壓榨法）</li>
         <li><strong>香氣</strong>：草莓、覆盆子、西瓜、玫瑰花瓣</li>
-        <li><strong>口感</strong>：清爽高酸、果味豐滿、干型為主，夏日最佳饗宴</li>
+        <li><strong>口感</strong>：清爽高酸、果味豐滿、乾型為主，夏日最佳饗宴</li>
       </ul>
-      <h4>🍇 Garnacha 老藤紅酒</h4>
-      <p>La Ribera Alta 的 Garnacha 老藤（50+ 年）釀出的紅酒展現香料、紅莓、皮革的豐滿個性。</p>
-      <h4>🌍 國際品種試驗場</h4>
-      <p>1980-90 年代，Navarra 積極引進 Cabernet Sauvignon、Merlot、Chardonnay 等法國品種，成為西班牙最早進行國際品種實驗的產區之一，但近年趨勢重回本土品種。</p>
+      <h4>📅 三個時代的產業演變</h4>
+      <ul>
+        <li><strong>1980 年代前</strong>：幾乎專屬粉紅酒產區，以 Garnacha Rosado 享名</li>
+        <li><strong>1980–1990 年代</strong>：EVENA 導入法國國際品種實驗（Cabernet Sauvignon、Merlot、Chardonnay），建立技術優勢</li>
+        <li><strong>現代</strong>：回歸本土品種，Viura 白酒、Garnacha 紅酒與 Rosado 三足鼎立，多元化定位穩固</li>
+      </ul>
     `,
   },
   {
     type: 'quiz',
-    question: 'Navarra DO 最著名的粉紅酒（Rosado）主要用哪個品種釀製？',
-    options: ['Tempranillo', 'Garnacha', 'Cabernet Sauvignon', 'Viura'],
+    question: '關於 Navarra DO 下列何者正確？',
+    options: [
+      'Navarra 年日照僅 1,200 小時，是西班牙最陰濕的產區之一',
+      'Viura 是 Navarra 最主要白葡萄品種，帶有哈密瓜・青檸皮・榛果，可陳年 10 年以上',
+      'Navarra 完全不受大西洋氣候影響，屬純粹地中海型產區',
+      'EVENA 研發中心對 Navarra 產業轉型沒有幫助',
+    ],
     answer: 1,
-    explanation: 'Navarra 的 Garnacha 是釀造 Rosado 粉紅酒的靈魂品種。Garnacha 老藤在 La Ribera Alta 子產區有最高的密度，釀出的粉紅酒以草莓、覆盆子香氣和飽滿口感著稱。',
+    explanation: 'Viura 是 Navarra 最主要白葡萄品種，帶有哈密瓜・青檸皮・榛果・檸檬馬鞭草香氣，極乾・可陳年 10 年以上。Navarra 年日照高達 2,700h；三大氣候交匯；EVENA（位於 Olite）是 1980 年代產業轉型的關鍵推手。',
   },
-
   {
     type: 'summary',
     message: 'Navarra 學習完成！',
     keyPoints: [
-      '分五個子產區：北部涼爽（庇里牛斯山影響）→ 南部乾熱',
-      'Garnacha Rosado 是 Navarra 最具代表性的特色，西班牙粉紅酒標竿',
-      '老藤 Garnacha 紅酒：香料、紅莓、皮革，豐滿圓潤',
-      '1980-90 年代曾大量種植法國品種，現已回歸本土化',
+      '五個子產區：庇里牛斯山涼爽北部 → 乾熱平原南部，平均海拔 400m，年日照 2,700h',
+      '氣候三大交匯：大西洋・大陸性・地中海，年均降雨 400–550mm',
+      'Garnacha Rosado 是 Navarra 最具象徵性特色，草莓・覆盆子・風味飽滿',
+      'Viura 白酒：極乾・中等酸度・品飲 7–13°C，陳年潛力超 10 年',
+      'EVENA（Olite）研發中心主導了 1980 年代的產業轉型與多品種定位',
     ],
   },
 ]
