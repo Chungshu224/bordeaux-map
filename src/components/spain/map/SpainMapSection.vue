@@ -497,9 +497,77 @@ function normalizeFeature(f, idx) {
 
 // ── 等高線 / 氣候熱力圖函數 ───────────────────────────────────────
 
+let contoursInitialized = false
+
+function initContourLayers() {
+  if (contoursInitialized || !map) return
+  contoursInitialized = true
+
+  if (!map.getSource('mapbox-dem')) {
+    map.addSource('mapbox-dem', {
+      type: 'raster-dem',
+      url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+      tileSize: 512, maxzoom: 14,
+    })
+  }
+  if (!map.getSource('sp-contours')) {
+    map.addSource('sp-contours', {
+      type: 'vector',
+      url: 'mapbox://mapbox.mapbox-terrain-v2',
+    })
+  }
+  if (!map.getLayer('sp-contours-line')) {
+    map.addLayer({
+      id: 'sp-contours-line', type: 'line',
+      source: 'sp-contours', 'source-layer': 'contour',
+      layout: { 'line-join': 'round', 'line-cap': 'round', visibility: 'none' },
+      paint: {
+        'line-color': [
+          'case',
+          ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFD700',
+          ['==', ['%', ['to-number', ['get', 'ele']], 50],  0], '#FFAA00',
+          '#FF7733'
+        ],
+        'line-width': [
+          'case',
+          ['==', ['%', ['to-number', ['get', 'ele']], 50], 0],
+          ['interpolate', ['linear'], ['zoom'], 9, 0.9, 11, 1.6, 13, 2.2, 16, 3],
+          ['interpolate', ['linear'], ['zoom'], 9, 0.3, 11, 0.7, 13, 1,   16, 1.5]
+        ],
+        'line-opacity': ['interpolate', ['linear'], ['zoom'], 9, 0.4, 11, 0.6, 13, 0.8, 16, 0.9]
+      },
+      minzoom: 9,
+    })
+  }
+  if (!map.getLayer('sp-contour-labels')) {
+    map.addLayer({
+      id: 'sp-contour-labels', type: 'symbol',
+      source: 'sp-contours', 'source-layer': 'contour',
+      layout: {
+        'symbol-placement': 'line',
+        'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
+        'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 10, 9, 13, 11, 16, 13],
+        'text-padding': 25, visibility: 'none',
+      },
+      paint: {
+        'text-color': '#FFD700',
+        'text-halo-color': 'rgba(0,0,0,0.8)',
+        'text-halo-width': 2,
+        'text-opacity': ['interpolate', ['linear'], ['zoom'], 10, 0.5, 12, 0.8, 14, 1]
+      },
+      filter: ['==', ['%', ['to-number', ['get', 'ele']], 10], 0],
+      minzoom: 10,
+    })
+  }
+}
+
 function toggleContours() {
   if (!map) return
   contoursEnabled.value = !contoursEnabled.value
+  if (contoursEnabled.value) {
+    initContourLayers()  // 延遲初始化
+  }
   const vis = contoursEnabled.value ? 'visible' : 'none'
   if (map.getLayer('sp-contours-line')) map.setLayoutProperty('sp-contours-line', 'visibility', vis)
   if (map.getLayer('sp-contour-labels')) map.setLayoutProperty('sp-contour-labels', 'visibility', vis)
@@ -674,75 +742,11 @@ function initMap() {
 
     map.on('load', async () => {
       map.resize()  // 確保 canvas 符合容器實際尺寸
-
-      // ── Mapbox DEM + 等高線來源（供 3D 地形 & 等高線使用）──
-      if (!map.getSource('mapbox-dem')) {
-        map.addSource('mapbox-dem', {
-          type: 'raster-dem',
-          url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
-          tileSize: 512,
-          maxzoom: 14,
-        })
-      }
-      if (!map.getSource('sp-contours')) {
-        map.addSource('sp-contours', {
-          type: 'vector',
-          url: 'mapbox://mapbox.mapbox-terrain-v2',
-        })
-      }
-      // 等高線線條圖層（預設隱藏）
-      map.addLayer({
-        id: 'sp-contours-line',
-        type: 'line',
-        source: 'sp-contours',
-        'source-layer': 'contour',
-        layout: { 'line-join': 'round', 'line-cap': 'round', visibility: 'none' },
-        paint: {
-          'line-color': [
-            'case',
-            ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFD700',
-            ['==', ['%', ['to-number', ['get', 'ele']], 50],  0], '#FFAA00',
-            '#FF7733'
-          ],
-          'line-width': [
-            'case',
-            ['==', ['%', ['to-number', ['get', 'ele']], 50], 0],
-            ['interpolate', ['linear'], ['zoom'], 9, 0.9, 11, 1.6, 13, 2.2, 16, 3],
-            ['interpolate', ['linear'], ['zoom'], 9, 0.3, 11, 0.7, 13, 1,   16, 1.5]
-          ],
-          'line-opacity': ['interpolate', ['linear'], ['zoom'], 9, 0.4, 11, 0.6, 13, 0.8, 16, 0.9]
-        },
-        minzoom: 9,
-      })
-      // 等高線標籤圖層（預設隱藏）
-      map.addLayer({
-        id: 'sp-contour-labels',
-        type: 'symbol',
-        source: 'sp-contours',
-        'source-layer': 'contour',
-        layout: {
-          'symbol-placement': 'line',
-          'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
-          'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
-          'text-size': ['interpolate', ['linear'], ['zoom'], 10, 9, 13, 11, 16, 13],
-          'text-padding': 25,
-          visibility: 'none',
-        },
-        paint: {
-          'text-color': '#FFD700',
-          'text-halo-color': 'rgba(0,0,0,0.8)',
-          'text-halo-width': 2,
-          'text-opacity': ['interpolate', ['linear'], ['zoom'], 10, 0.5, 12, 0.8, 14, 1]
-        },
-        filter: ['==', ['%', ['to-number', ['get', 'ele']], 10], 0],
-        minzoom: 10,
-      })
-
       try {
         await addLayers()
       } catch (e) {
         console.error('[SpainMap] addLayers error:', e)
-        mapError.value = '圖層載入失敗：' + e.message
+        mapError.value = '圖層載入失敗：' + (e?.message || String(e))
       }
       isLoading.value = false
       mapReady.value = true
@@ -750,9 +754,8 @@ function initMap() {
     })
 
     map.on('error', (e) => {
-      console.error('[SpainMap] map error:', e)
-      mapError.value = '地圖錯誤：' + (e.error?.message || '未知錯誤')
-      reject(e)
+      // 只記錄，不中斷地圖初始化（tile 載入失敗屬非致命錯誤）
+      console.warn('[SpainMap] map error:', e.error?.message || e)
     })
   })
 }
@@ -1028,7 +1031,7 @@ function toggle3D() {
   is3D.value = !is3D.value
   if (!map) return
   if (is3D.value) {
-    // mapbox-dem 已在 map.on('load') 加入，直接使用
+    initContourLayers()  // 確保 mapbox-dem source 已就緒
     map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 })
     map.setPitch(45)
   } else {
