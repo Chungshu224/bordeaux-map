@@ -295,60 +295,96 @@ const S1M4L1_slides = [
     type: 'cover',
     icon: '🍷',
     gradient: 'linear-gradient(135deg, #c0392b, #922b21)',
-    title: 'Rioja — 西班牙靈魂產區',
-    subtitle: 'Level 1 · 入門產區',
+    title: "DOCa Rioja — 西班牙最著名優質產區",
+    subtitle: "Level 1 · DOCa 最高等級 · Spain's most famous fine wine region",
     points: [
-      { icon: '📍', label: '三個子產區', text: 'Rioja Alta · Rioja Alavesa · Rioja Oriental' },
-      { icon: '🪵', label: '橡木桶傳統', text: '美國橡木賦予的香草椰子風味是 Rioja 標誌' },
-      { icon: '🏅', label: 'DOCa 最高等級', text: '1991 年成為西班牙第一個也是最長時間的 DOCa' },
+      { icon: '🏅', label: "Spain's most famous fine wine region", text: '1991 年取得 DOCa 認定，是西班牙最著名也最受國際市場歡迎的優質產區' },
+      { icon: '📍', label: '三個子產區', text: 'Rioja Alta · Rioja Alavesa · Rioja Oriental，各具截然不同特色' },
+      { icon: '🍇', label: 'Tempranillo is king', text: '品種之王領導陳年紅酒，Garnacha、Mazuelo、Graciano 各司其職' },
     ],
   },
   {
     type: 'map',
-    title: 'Rioja 產區地理位置',
+    title: 'DOCa Rioja 產區地理位置',
     mapRegion: 'rioja',
-    description: 'Rioja DOCa 橫跨拉里奧哈自治區與巴斯克地區，沿埃布羅河谷延伸。',
+    description: 'Rioja DOCa 橫跨拉里奧哈自治區與巴斯克地區，沿埃布羅河谷延伸。產區命名來自支流 Río Oja，但最重要的河流是埃布羅河（Ebro），穿梭於 Sierra Cantabria 與 Sierra Demanda 兩山之間。',
   },
   {
     type: 'content',
-    icon: '🗺️',
-    title: 'Rioja 三個子產區',
+    icon: '🌊',
+    title: 'Rioja 的地理框架與命名由來',
     html: `
-      <p>Rioja 產區沿埃布羅河（Ebro）兩岸延伸，依地形和氣候分為三個子產區：</p>
-      <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px">
-        <div style="border-left:4px solid #c0392b;padding:12px 16px;background:#fff9f9;border-radius:0 10px 10px 0">
-          <strong>🌊 Rioja Alta（西部）</strong><br/>
-          位於埃布羅河上游西側，海拔 400-700 公尺。大西洋與地中海氣候交匯，氣溫涼爽。以黏土石灰岩土壤為主。<br/>
-          <em style="color:#c0392b">以精緻優雅的傳統 Rioja 著稱，是最知名的子產區。</em>
+      <p>「Rioja」命名源自小支流 <strong>Río Oja</strong>，但全區最重要的河流其實是 <strong>埃布羅河（Ebro River）</strong>——西班牙最強大的河流。埃布羅河及其支流在數個世紀的沖刷下，雕琢出產區內著名的葡萄園地形。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#fce8e6;border-left:4px solid #c0392b;padding:12px;border-radius:0 10px 10px 0">
+          <strong>⛰️ 兩大山脈屏障</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li><strong>Sierra Cantabria</strong>：北側山脈，攔截來自大西洋的冷濕氣流，保護 Rioja Alavesa 免於極端高溫</li>
+            <li><strong>Sierra Demanda</strong>：南側山脈，與埃布羅河共同塑造 Rioja Alta 的獨特微氣候</li>
+          </ul>
         </div>
-        <div style="border-left:4px solid #8e44ad;padding:12px 16px;background:#f9f0ff;border-radius:0 10px 10px 0">
-          <strong>🏔️ Rioja Alavesa（巴斯克段）</strong><br/>
-          位於埃布羅河北岸，巴斯克自治區範圍內。海拔較高，土壤多為白堊土石灰岩。氣候更涼爽，風格更精緻。<br/>
-          <em style="color:#8e44ad">精品小酒莊集中，現代風格 Rioja 的發源地之一。</em>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🍇 Tempranillo is king</strong><br/>
+          Tempranillo 無疑是<strong>核心品種</strong>。其他重要品種：Garnacha（Oriental 主導）、Mazuelo（Cariñena，高酸提升骨幹）、Graciano（提升香氣複雜度），以及越來越多本地品種帶來新風格與創意。
         </div>
-        <div style="border-left:4px solid #e67e22;padding:12px 16px;background:#fff8f0;border-radius:0 10px 10px 0">
-          <strong>☀️ Rioja Oriental（東部，舊稱 Baja）</strong><br/>
-          氣候更乾燥炎熱，地中海影響更強。土壤含鐵，顏色發紅。主要以 Garnacha 和 Mazuelo（Carignan）為主。<br/>
-          <em style="color:#e67e22">酒體豐滿、酒精度較高，常用於調配。</em>
+        <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🏅 DOCa 最高等級（1991 年）</strong><br/>
+          西班牙最著名優質產區，大部分聲譽就建立在卓越紅酒上——高品質白酒與粉紅酒也有產制。
         </div>
       </div>
     `,
   },
   {
-    type: 'quiz',
-    question: 'Rioja 的哪個子產區位於巴斯克自治區境內，以白堊土石灰岩著稱？',
-    options: ['Rioja Alta', 'Rioja Oriental', 'Rioja Alavesa', 'Rioja Baja'],
-    answer: 2,
-    explanation: 'Rioja Alavesa 位於埃布羅河北岸的巴斯克自治區，以白堊土石灰岩土壤和精緻現代風格聞名。',
+    type: 'compare',
+    title: 'Rioja 三個子產區特色比較',
+    items: [
+      {
+        icon: '🌊',
+        label: 'Rioja Alta（上里奧哈）',
+        desc: '位於產區西部，海拔 400–700 公尺。大西洋與地中海氣候交化，較涼爽。黏土石灰岩等土壤。出產優雅、高酸度、極佳陳年潛力的紅酒，是 Rioja 的「核心」子產區',
+        color: '#c0392b',
+      },
+      {
+        icon: '🏔️',
+        label: 'Rioja Alavesa（阿拉維沙里奧哈）',
+        desc: '巴斯克自治區範圍內，埃布羅河北岸。Sierra Cantabria 山脈屏障，白色石灰質黏土為主。葡萄園規模較小；酒款比 Alta 更輕盈清新、細膩香氣，適合年輕飲用也具備優質陳年實力',
+        color: '#8e44ad',
+      },
+      {
+        icon: '☀️',
+        label: 'Rioja Oriental（東里奧哈）',
+        desc: '前身 Rioja Baja，2018 年更名。地中海氣候影響深，產區中最炎熱且乾燥。沖積土與含鐵黏土。Garnacha 表現卓越，酒體更飽滿、酒精含量較高、果味濃郁，酸度相對較低',
+        color: '#e67e22',
+      },
+      {
+        icon: '🫐',
+        label: 'Graciano — Rioja 的香氣密碼',
+        desc: '低產本地品種，具備深花香與高酸度，用於與 Tempranillo 混釀提升香氣複雜度與老化潛力。少數酒莊釀公單一品種裝瓶',
+        color: '#4a148c',
+      },
+    ],
   },
-
+  {
+    type: 'quiz',
+    question: '關於 DOCa Rioja，下列哪項最為準確？',
+    options: [
+      '產區命名直接來自埃布羅河（Ebro），Tempranillo 與 Garnacha 在各子產區同樣重要',
+      '命名來自支流 Río Oja，但最重要的河流是埃布羅河；Tempranillo 為品種之王；三子產區各具截然不同特色',
+      'Rioja Alavesa 氣候最炎熱，為 Garnacha 的主要子產區',
+      '屬於 DO 等級，與 Priorat 同為 DOCa，並於 2005 年同步獲認',
+    ],
+    answer: 1,
+    explanation: 'Rioja 產區命名來自支流 Río Oja，但最重要的河流是埃布羅河（Ebro）。Tempranillo 是無爭議的品種之王。三子產區各有特色：Rioja Alta（優雅大西洋風格）、Alavesa（輕盈精緻）、Oriental（飽滿地中海式）。Rioja 1991 年率先取得 DOCa，Priorat 則於 2009 年。',
+  },
   {
     type: 'summary',
-    message: 'Rioja 入門學習完成！',
+    message: 'DOCa Rioja 學習完成！',
     keyPoints: [
-      'Rioja 是西班牙 1991 年第一個 DOCa 認證產區',
-      '三個子產區：Alta（精緻）、Alavesa（現代）、Oriental（豐滿）',
-      'Tempranillo 是主要紅品種，傳統以美國橡木桶陳年',
+      '西班牙最著名優質產區，1991 年取得 DOCa 認定；命名來自 Río Oja，最重要河流為埃布羅河（Ebro）',
+      'Sierra Cantabria 與 Sierra Demanda 兩山跟埃布羅河共同塑造產區地形與微氣候',
+      'Tempranillo 是品種之王；其他重要：Garnacha、Mazuelo（Cariñena）、Graciano',
+      '三子產區各具特色：Alta（優雅高酸、大西洋）、Alavesa（輕盈精緻、山脈屏障）、Oriental（飽滿地中海、Garnacha 主導）',
+      '大部分聲譽建立於紅酒；高品質白酒與粉紅酒也有產製',
     ],
   },
 ]
@@ -1026,19 +1062,53 @@ const S2M1L1_slides = [
     icon: '⛰️',
     title: 'Ribera del Duero：高原上的紅酒王國',
     html: `
-      <p>Ribera del Duero 沿杜羅河（Duero）兩岸延伸，從卡斯提亞-萊昂穿越至索里亞省。<strong>海拔 700-1000 公尺</strong>的高原位置，使這裡的氣候極為獨特：</p>
+      <p>Ribera del Duero（意為「杜羅河兩岸」）沿杜羅河延伸，<strong>1982 年建立 DO</strong>，葡萄園面積約 <strong>22,040 公頃</strong>。<strong>海拔 750–1000 公尺</strong>的高原位置，使氣候極為獨特：</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin:10px 0">
+        <div style="background:#f3e5f5;border-left:4px solid #8e44ad;padding:10px;border-radius:0 8px 8px 0">
+          <strong>🌡️ 極端大陸型氣候</strong><br/>夏季最高可達 <strong>42°C</strong>，冬季最低降至 <strong>−20°C</strong>；日夜溫差極大，減緩熟成過程，賦予果香豐富、酸度鮮活的葡萄。
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #27ae60;padding:10px;border-radius:0 8px 8px 0">
+          <strong>🪨 32 種土壤類型</strong><br/>主要由第三紀沉積物組成——砂質、黏土、石灰岩與泥灰岩的交替層。多樣土壤賦予各地塊葡萄獨特複雜度。
+        </div>
+      </div>
+      <h4>🍷 法定葡萄品種</h4>
       <ul>
-        <li><strong>日溫差大</strong>：夏日白天可超過 40°C，夜間卻只有 15°C — 大溫差有助於保留葡萄的天然酸度和香氣</li>
-        <li><strong>冬季嚴寒</strong>：甚至可能有霜害，但夏季日照強烈充足</li>
-        <li><strong>土壤</strong>：混合石灰岩、石礫與砂土，排水良好</li>
+        <li><strong>Tinto Fino（Tempranillo）</strong>：靈魂品種，又稱 Tinta del País。高海拔低溫下發展出深邃色澤、優異酸度、豐富黑色水果（黑莓、黑李），並形成獨特的<em>粉塵感結構（dusty structure）</em></li>
+        <li><strong>紅葡萄輔助品種</strong>：Cabernet Sauvignon、Malbec、Merlot、Garnacha</li>
+        <li><strong>白葡萄</strong>：Albillo 是唯一獲准種植的白品種</li>
       </ul>
-      <h4>🍷 主要品種：Tinto Fino</h4>
-      <p>即 Tempranillo 的當地變體，在高海拔低溫環境下發展出<strong>更深的色澤、更高的酸度、更豐富的黑色水果風味</strong>（黑莓、黑李）。比 Rioja 的 Tempranillo 更濃郁、更酒體飽滿。</p>
       <h4>🏆 傳奇酒莊</h4>
       <ul>
-        <li><strong>Vega Sicilia</strong>（貝加西西里亞）：西班牙最具傳奇色彩的酒莊，Único 是最頂級的款式</li>
-        <li><strong>Pingus</strong>：丹麥人 Peter Sisseck 在 1995 年創立，迅速躍升為西班牙膜拜酒</li>
+        <li><strong>Vega Sicilia</strong>（貝加西西里亞）：西班牙最具傳奇色彩的酒莊，旗艦款 Único 即西班牙國寶級佳釀，陳年潛力數十年</li>
+        <li><strong>Pingus</strong>：丹麥人 Peter Sisseck 於 1995 年創立，迅速躍升為西班牙最受追捧的膜拜酒</li>
+        <li><strong>Pesquera</strong>：由 Alejandro Fernández 創立，是 1980 年代以來讓 Ribera del Duero 名揚國際的先驅酒莊</li>
       </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🏛️',
+    title: 'Ribera del Duero：產業現況與葡萄酒旅遊',
+    html: `
+      <p>自 1982 年建區以來，Ribera del Duero 各類酒莊（從小型家族經營到大型合作社）皆投入大量資金於現代釀酒技術研發，在全球市場取得顯著成功。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#e8eaf6;border-left:4px solid #3f51b5;padding:12px;border-radius:0 10px 10px 0">
+          <strong>📊 產業規模</strong><br/>
+          葡萄園總面積約 <strong>22,040 公頃</strong>，分布於布爾戈斯（Burgos）、巴利亞多利德（Valladolid）、塞哥維亞（Segovia）、索里亞（Soria）四省。自大型合作社至精品小酒莊，風格多元。
+        </div>
+        <div style="background:#fff8e1;border-left:4px solid #f9a825;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🏰 Peñafiel 城堡葡萄酒博物館</strong><br/>
+          位於 Peñafiel 古城堡內（建於 10 世紀），館內展示 Ribera del Duero 的釀酒歷史、土壤地質與酒莊故事，是產區地標性的文化設施。
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #43a047;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🍷 Aranda del Duero 葡萄酒詮釋中心</strong><br/>
+          位於主要城市 Aranda del Duero，是認識 Ribera del Duero 風土、品種與陳年工藝的最佳起點，並設有品酒廳與互動展覽。
+        </div>
+        <div style="background:#fce8e6;border-left:4px solid #c0392b;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🚀 現代化投資</strong><br/>
+          1982 年建區後，酒莊持續引進溫控發酵、法國橡木桶、低產老藤管理等現代技術，挑戰並超越 Rioja，部分頂級款已獲國際酒評 95–100 分。
+        </div>
+      </div>
     `,
   },
   {
@@ -1050,12 +1120,22 @@ const S2M1L1_slides = [
   },
 
   {
+    type: 'quiz',
+    question: 'Ribera del Duero 唯一獲准種植的白葡萄品種是？',
+    options: ['Verdejo', 'Albariño', 'Albillo', 'Macabeo'],
+    answer: 2,
+    explanation: 'Albillo（Albillo Mayor）是 Ribera del Duero 唯一法定白葡萄品種，雖然產量極少，但近年有酒莊嘗試以其釀造高品質白酒。',
+  },
+  {
     type: 'summary',
     message: 'Ribera del Duero 學習完成！',
     keyPoints: [
-      '海拔 700-1000 公尺，大陸型極端氣候',
-      'Tinto Fino（Tempranillo）是主要品種，風格比 Rioja 更濃郁',
-      'Vega Sicilia 和 Pingus 是世界級頂級酒莊',
+      '1982 年建立 DO，名稱意為「杜羅河兩岸」，面積約 22,040 公頃',
+      '海拔 750–1000 公尺，極端大陸型氣候：夏季 42°C、冬季 −20°C',
+      '32 種土壤類型，主要為第三紀沉積（砂質、黏土、石灰岩、泥灰岩）',
+      'Tinto Fino（Tempranillo）釀出獨特粉塵感結構（dusty structure）',
+      '傳奇酒莊三強：Vega Sicilia、Pingus、Pesquera',
+      '白葡萄唯一法定品種：Albillo',
     ],
   },
 ]
@@ -1087,47 +1167,89 @@ const S2M1L2_slides = [
   {
     type: 'content',
     icon: '🗺️',
-    title: 'Rueda DO：地理與氣候',
+    title: 'Rueda DO：地理、氣候與 Cascajosos 土壤',
     html: `
-      <p>Rueda 位於卡斯提亞-萊昂自治區，沿杜羅河（Duero）支流 Adaja 河谷延伸，距 Ribera del Duero 約 100 公里。</p>
+      <p>Rueda 位於杜羅河谷（Duero River Valley）產區內，卡斯提亞-萊昂自治區，距 Ribera del Duero 約 100 公里。主要城鎮包括 La Seca、Rueda、Serrada、Medina del Campo。</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
         <div style="background:#e8f5e9;border-left:4px solid #27ae60;padding:12px;border-radius:0 10px 10px 0">
           <strong>⛰️ 地理</strong><br/>
-          海拔 700-900 公尺的梅塞塔高原，地形平坦。土壤以砂質壤土和礫石為主，排水良好，根瘤蚜（Phylloxera）難以存活，因此保存了許多老藤（60-100年）。
+          葡萄園位於海拔 <strong>700–800 公尺</strong>的高原上，產區面積中 <strong>95% 為白葡萄</strong>。雖緯度上屬地中海氣候區，但因高海拔影響而呈現大陸型氣候特徵。
         </div>
         <div style="background:#fff3e0;border-left:4px solid #e67e22;padding:12px;border-radius:0 10px 10px 0">
-          <strong>🌡️ 氣候</strong><br/>
-          典型大陸型氣候：夏季炎熱乾燥，冬季寒冷。<strong>日夜溫差大</strong>有助保留 Verdejo 的天然香氣和酸度。年雨量僅 400 毫米，葡萄樹壓力適中。
+          <strong>🌡️ 氣候數據</strong><br/>
+          漫長寒冷的冬季、帶有晚霜的短暫春季、乾燥炎熱的夏季。
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>夏季平均最高溫：<strong>23°C</strong>；冬季平均最低溫：<strong>−3°C</strong></li>
+            <li>年均降雨量：<strong>318 毫米</strong>（極為乾燥）</li>
+            <li>年日照時數：<strong>2,600 小時</strong>（充裕陽光）</li>
+          </ul>
+        </div>
+        <div style="background:#f3e5f5;border-left:4px solid #8e44ad;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 Cascajosos 礫石地（標誌性土壤）</strong><br/>
+          暗灰褐色土壤，<strong>富含鈣與鎂</strong>、有機質含量低、通風與排水性極佳。根瘤蚜（Phylloxera）無法在礫石中存活，因此保存了大量自根老藤（60–100 年）。
         </div>
         <div style="background:#e3f2fd;border-left:4px solid #2196f3;padding:12px;border-radius:0 10px 10px 0">
           <strong>📜 DO Rueda 規定</strong><br/>
           <ul style="margin:4px 0 0;padding-left:18px">
-            <li>Rueda Verdejo：Verdejo ≥ 85%</li>
-            <li>Rueda（一般）：Verdejo ≥ 50%</li>
-            <li>Rueda Espumoso（氣泡）：Verdejo ≥ 85%，傳統法</li>
+            <li><strong>Rueda Verdejo</strong>：Verdejo ≥ 85%</li>
+            <li><strong>Rueda</strong>（一般）：Verdejo ≥ 50%</li>
+            <li><strong>Rueda Espumoso</strong>（氣泡）：Verdejo ≥ 85%，傳統法</li>
           </ul>
         </div>
       </div>
-      <h4 style="margin-top:14px">🌿 Verdejo 的風味特徵</h4>
-      <p>清新<strong>草本（青草、茴香、接骨木花）</strong>、白桃、柑橘、<strong>苦杏仁尾韻</strong>。酸度中高，酒體輕盈至中等。老藤 Verdejo 則帶有更紮實的礦石感和結構。</p>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🌿',
+    title: 'Verdejo：品種歷史、風味與品飲指南',
+    html: `
+      <p>Verdejo 在魯埃達種植已超過<strong>數個世紀</strong>，起源可追溯至 11 世紀阿方索六世時期，據信由<strong>摩爾人自北非引入西班牙</strong>，並在梅塞塔高原長期適應演化。</p>
+      <h4>🍋 主要風味輪廓</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+        <div style="background:#f1f8e9;border-radius:8px;padding:10px;font-size:0.9rem">🍋 青檸</div>
+        <div style="background:#f1f8e9;border-radius:8px;padding:10px;font-size:0.9rem">🍈 哈密瓜</div>
+        <div style="background:#f1f8e9;border-radius:8px;padding:10px;font-size:0.9rem">🍊 葡萄柚皮</div>
+        <div style="background:#f1f8e9;border-radius:8px;padding:10px;font-size:0.9rem">🌿 茴香（靈魂草本氣息）</div>
+        <div style="background:#f1f8e9;border-radius:8px;padding:10px;font-size:0.9rem">🍑 白桃</div>
+        <div style="background:#fce4ec;border-radius:8px;padding:10px;font-size:0.9rem">✨ 尾韻微苦感（bitter touch）</div>
+      </div>
+      <h4 style="margin-top:14px">🍷 口感結構</h4>
+      <ul>
+        <li>酒體<strong>輕盈、無單寧</strong>，酸度中高</li>
+        <li>酒精濃度：<strong>11.5–13.5%</strong></li>
+        <li>口中的<strong>體積感</strong>與尾韻<strong>特有微苦感</strong>是衡量高品質魯埃達的關鍵指標</li>
+      </ul>
+      <h4>🥂 品飲建議</h4>
+      <ul>
+        <li><strong>飲用溫度</strong>：<strong>3–7°C</strong>（極冰冷）</li>
+        <li><strong>醒酒</strong>：無需醒酒，使用白葡萄酒杯</li>
+        <li><strong>適飲期</strong>：通常 3–5 年（老藤款可更長）</li>
+      </ul>
     `,
   },
   {
     type: 'quiz',
-    question: 'DO Rueda 對標示「Rueda Verdejo」的葡萄酒，規定 Verdejo 含量至少需達到多少百分比？',
-    options: ['50%', '70%', '85%', '100%'],
-    answer: 2,
-    explanation: '標示「Rueda Verdejo」的葡萄酒，Verdejo 含量必須達到 85% 以上。若只標示「Rueda」，則 Verdejo 至少 50% 即可。',
+    question: 'DO Rueda 的標誌性土壤「Cascajosos」，哪項最準確描述其特性？',
+    options: [
+      '白堊土、保水力極佳，適合老藤蓄根',
+      '礫石地、富含鈣鎂、排水通風極佳，根瘤蚜難以存活',
+      '第三紀紅壤，保水力強，適合 Garnacha',
+      '第三紀熔岩石，日間蓄熱夜間散熱，適合濃縮紅酒',
+    ],
+    answer: 1,
+    explanation: 'Cascajosos 是魯埃達暗灰褐色礫石土，富含鈣鎂、有機質低、排水通風極佳，根瘤蚜無法在礫石中存活因此保存了大量自根老藤 Verdejo。',
   },
 
   {
     type: 'summary',
     message: 'Rueda 學習完成！',
     keyPoints: [
-      '位於卡斯提亞-萊昂，海拔 700-900 公尺高原，大陸型氣候',
-      '砂質壤土＋礫石土壤，根瘤蚜難以存活，保存大量老藤',
-      'Verdejo：草本、白桃、苦杏仁尾韻，是西班牙最受歡迎白酒品種之一',
-      'Rueda Verdejo 規定 Verdejo ≥ 85%',
+      '杜羅河谷白酒精品，海拔 700–800 公尺，95% 白葡萄',
+      '大陸型氣候：夏季 23°C / 冬季 −3°C，年雨 318mm，日照 2,600 小時',
+      'Cascajosos 礫石地：鈣鎂佳、排水優，根瘤蚜難存，老藤將尼',
+      'Verdejo 起源自 11 世紀，摩爾人自北非引入；酸度中高，尾韻微苦感是品質標誌',
+      'Rueda Verdejo 規定 Verdejo ≥ 85%；飲用溫度 3–7°C，適飲 3–5 年',
     ],
   },
 ]
@@ -1771,6 +1893,705 @@ const S2M1L7_slides = [
       '傳統以乾型粉紅酒（Clarete）聞名，家族 majuelos 村莊園保留最純粹農業傳統',
       'Garnacha Gris 是稀有粉灰色變種：杏桃・核果・油質感，風格類似 Viognier',
       '正積極轉型：Tempranillo 紅酒、法規擬納入 Cab.Sauv./Merlot，吸引外部投資',
+    ],
+  },
+]
+
+// ─── S2M1L8 — Tierra de León DO ─────────────────────────────────────────────
+const S2M1L8_slides = [
+  {
+    type: 'cover',
+    icon: '🦁',
+    gradient: 'linear-gradient(135deg, #6d4c41, #bf360c)',
+    title: 'Tierra de León — 古羅馬傳承的原生品種聖地',
+    subtitle: 'Level 2 · 卡斯提亞-萊昂 · León & Valladolid · 2007 DO',
+    points: [
+      { icon: '🍇', label: 'Prieto Picudo', text: '西班牙以外極罕見的原生紅品種「深色緊造」，深邃紅醋栗・黑莓・甘草・礦物感' },
+      { icon: '🌊', label: '埃斯拉河谷風土', text: '受 Esla 與 Cea 兩河沿岸影響，海拔 750–800 公尺，礫石沉積日照 2,700 小時' },
+      { icon: '🏛️', label: '古羅馬釀酒史', text: '釀酒歷史可追溯至古羅馬時代，2007 年正式建立 DO' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Tierra de León DO 位置',
+    mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/tierra-de-leon.geojson',
+    description: '位於雷昂省（León）南部與巴利亞多利德省（Valladolid）北部，Esla 與 Cea 兩河沿岸，葡萄園 1,413 公頃，海拔 750–800 公尺。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: 'Tierra de León：地理、氣候與風土',
+    html: `
+      <p>Tierra de León DO 位於西班牙西北部，釀酒歷史可追溯至<strong>古羅馬時代</strong>，2007 年正式獲得 DO 地位。產區受 <strong>Esla 與 Cea 兩條河流</strong>沿岸地區的影響，形成獨特風土。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#fff3e0;border-left:4px solid #e65100;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 氣候數據</strong><br/>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>夏季最高溫：<strong>30–35°C</strong>；冬季最低溫：<strong>−10°C</strong></li>
+            <li>年均降雨量：<strong>500 毫米</strong></li>
+            <li>年均日照時數：<strong>2,700 小時</strong>（西班牙日照最充裕的產區之一）</li>
+          </ul>
+          漫長寒冷的冬季、乾燥炎熱的夏季，大陸型氣候賦予葡萄高酸度與豐富果味。
+        </div>
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 土壤特性</strong><br/>
+          沖積階地上的<strong>褐色岩石沉積物與軟質石灰岩</strong>，排水性與通風性極佳，礦物質與有機質含量較低，迫使葡萄樹深根尋求養分，釀出風味集中的酒款。
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>📐 產區規模</strong><br/>
+          葡萄園總面積約 <strong>1,413 公頃</strong>，分布於雷昂省南部與巴利亞多利德省北部，跨越兩個省份。
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🍇',
+    title: 'Prieto Picudo — 極罕見的原生靈魂品種',
+    html: `
+      <p><strong>Prieto Picudo</strong> 是 Tierra de León 最具代表性的原生紅葡萄品種，在西班牙以外地區<strong>極為罕見</strong>，是整個產區國際知名度的關鍵支柱。</p>
+      <h4>📖 名稱含義</h4>
+      <ul>
+        <li><strong>Prieto</strong>：意為「深色皮膚」或「被擠壓 / 緊湊的」，形容其<strong>緊密的果串</strong></li>
+        <li><strong>Picudo</strong>：意為「尖銳的」，描述其<strong>形狀如尖峰或松子</strong></li>
+      </ul>
+      <h4>🌱 生長特性</h4>
+      <ul>
+        <li>偏好<strong>艱難地形與乾熱環境</strong>，具備極高耐旱性</li>
+        <li>適應 Tierra de León 大陸型極端氣候</li>
+      </ul>
+      <h4>🍷 紅酒風格</h4>
+      <ul>
+        <li><strong>顏色</strong>：深邃，接近不透明</li>
+        <li><strong>結構</strong>：單寧充足、酸度良好</li>
+        <li><strong>風味</strong>：紅醋栗、黑莓、甘草、礦物感</li>
+        <li><strong>橡木桶結合</strong>：能與橡木桶完美整合，賦予更複雜的層次</li>
+      </ul>
+      <h4>🌹 粉紅酒風格</h4>
+      <ul>
+        <li><strong>風格</strong>：輕盈，香氣豐富</li>
+        <li><strong>風味</strong>：草莓、覆盆子、桃子、柑橘與花香</li>
+        <li><strong>搭餐</strong>：適合搭配 Fideuá（西班牙式海鮮麵）</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Tierra de León 法定品種全覽',
+    items: [
+      {
+        icon: '🟥',
+        label: 'Prieto Picudo（靈魂品種）',
+        desc: '產區最具代表性的原生紅品種，深色緊湊果串。紅酒深邃高單寧；粉紅酒輕盈多花香',
+        color: '#b71c1c',
+      },
+      {
+        icon: '🍒',
+        label: 'Mencía / Tempranillo / Garnacha',
+        desc: '其他法定紅品種。Mencía 帶礦石感；Tempranillo 提供結構；Garnacha 增添圓潤果味',
+        color: '#c62828',
+      },
+      {
+        icon: '⬜',
+        label: 'Albarín（特色白品種）',
+        desc: '產區特有本土白品種，風味獨特，帶有草本、花香與清新礦石感，在西班牙其他地區罕見',
+        color: '#f9a825',
+      },
+      {
+        icon: '🌿',
+        label: 'Verdejo / Godello / Malvasía / Palomino',
+        desc: '其他法定白品種。Godello 表現優雅；Verdejo 清爽草本；Malvasía 具花香；Palomino 中性',
+        color: '#2e7d32',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Prieto Picudo 名稱中「Picudo」的含義是什麼？此品種最主要的生長特性為何？',
+    options: [
+      '「Picudo」意為「圓潤的」，品種喜好濕潤涼爽的大西洋氣候',
+      '「Picudo」意為「尖銳的」，描述形狀如尖峰或松子；品種偏好艱難地形與乾熱環境，耐旱性極高',
+      '「Picudo」意為「芳香的」，指其獨特的玫瑰花香氣特徵',
+      '「Picudo」意為「深色的」，與「Prieto」一樣都是描述深色特徵',
+    ],
+    answer: 1,
+    explanation: 'Prieto Picudo 的名稱中，「Prieto」意為「深色/緊湊」，描述緊密的果串；「Picudo」意為「尖銳的」，描述形狀如尖峰或松子。品種偏好艱難地形與乾熱環境，耐旱性極高，非常適應 Tierra de León 的大陸型極端氣候。',
+  },
+  {
+    type: 'summary',
+    message: 'Tierra de León 學習完成！',
+    keyPoints: [
+      '2007 年建立 DO，但釀酒史可追溯至古羅馬時代，位於雷昂省南部與巴利亞多利德省北部',
+      '受 Esla 與 Cea 兩河影響，海拔 750–800 公尺，1,413 公頃',
+      '大陸型氣候：夏季 30–35°C / 冬季 −10°C，年雨 500mm，日照 2,700 小時',
+      '土壤：沖積階地褐色岩石沉積物＋軟質石灰岩，排水通風極佳',
+      'Prieto Picudo：「深色尖造」原生紅品種，西班牙以外極罕見；紅酒深邃高單寧，粉紅輕盈芬芳',
+      'Albarín 是產區特有本土白品種；法定紅品種另含 Mencía、Tempranillo、Garnacha',
+    ],
+  },
+]
+
+// ─── S2M1L9 — Tierra del Vino de Zamora DO ──────────────────────────────────
+const S2M1L9_slides = [
+  {
+    type: 'cover',
+    icon: '🍶',
+    gradient: 'linear-gradient(135deg, #4e342e, #bf360c)',
+    title: 'Tierra del Vino de Zamora — 葡萄酒之地',
+    subtitle: 'Level 2 · 卡斯提亞-萊昂 · Zamora & Salamanca · 2007 DO',
+    points: [
+      { icon: '🌾', label: '極端乾性大陸型氣候', text: '年雨不足 400mm、日照超 2,800 小時，夏乾熱冬極寒，深厚沖積土鑄就卓越陳年潛力' },
+      { icon: '🍑', label: 'Malvasía Fina 明星白酒', text: '白桃・野花・綠杏仁・羅勒・海貝殼，酒精 13.5–15%，陳年潛力超 10 年' },
+      { icon: '🍷', label: 'Tempranillo 比 Toro 稍輕', text: '同樣來自杜羅河谷，但沙質沖積土釀出風格更優雅的紅酒' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Tierra del Vino de Zamora DO 位置',
+    mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/tierra-del-vino-de-zamora.geojson',
+    description: '位於薩莫拉省東南部，橫跨杜羅河兩岸，涵蓋 56 個市鎮（46 在薩莫拉省、10 在薩拉曼卡省）。總區域面積 1,799 平方公里，葡萄園 633 公頃。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '地理、氣候與風土',
+    html: `
+      <p>Tierra del Vino de Zamora 名稱在當地語中即意為<strong>「葡萄酒之地」</strong>。產區位於薩莫拉省東南部，橫跨杜羅河兩岸，多條支流（Valderaduey、Guareña、Valparaíso、Ribera de Campeán）流經其中，塑造了多樣的土壤結構。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#fff3e0;border-left:4px solid #e65100;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 氣候數據（極端乾性大陸型）</strong><br/>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>夏季平均最高溫：<strong>23°C</strong>；冬季最低溫：<strong>−11°C</strong></li>
+            <li>年均降雨量：<strong>不足 400 毫米</strong>（西班牙最乾燥產區之一）</li>
+            <li>年均日照時數：<strong>超過 2,800 小時</strong></li>
+          </ul>
+          冬季極度寒冷、夏季乾旱炎熱，極大的年溫差造就葡萄的高酸度與豐富果味。
+        </div>
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;padding:12px;border-radius:0 10px 10px 0">
+          <strong>⛰️ 地理與規模</strong><br/>
+          海拔 <strong>700–900 公尺</strong>（平均約 750 公尺），總區域面積 <strong>1,799 平方公里</strong>，葡萄園 <strong>633 公頃</strong>，涵蓋 56 個市鎮。
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 土壤層次</strong><br/>
+          主要為<strong>沖積土</strong>：表土深厚、滲透性佳、持水力強，但有機質含量低。<br/>
+          ・底層富含<strong>黏土</strong>（保水儲礦）<br/>
+          ・平原地區多<strong>砂質</strong>（根瘤蚜保護）<br/>
+          ・山坡與山頂多<strong>礫石、卵石</strong>（排水、蓄熱）
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🍑',
+    title: 'Malvasía Fina — 明星白葡萄品種',
+    html: `
+      <p><strong>Malvasía Fina</strong> 是 Tierra del Vino de Zamora 最引人注目的白葡萄品種，是提升產區白酒聲譽的關鍵。</p>
+      <h4>🌸 獨特香氣輪廓</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+        <div style="background:#fff8e1;border-radius:8px;padding:10px;font-size:0.9rem">🍑 白桃</div>
+        <div style="background:#fff8e1;border-radius:8px;padding:10px;font-size:0.9rem">🌸 野花</div>
+        <div style="background:#fff8e1;border-radius:8px;padding:10px;font-size:0.9rem">🌿 綠杏仁</div>
+        <div style="background:#fff8e1;border-radius:8px;padding:10px;font-size:0.9rem">🌿 羅勒</div>
+        <div style="background:#e0f7fa;border-radius:8px;padding:10px;font-size:0.9rem">🐚 海貝殼（礦石鹽感）</div>
+        <div style="background:#fce4ec;border-radius:8px;padding:10px;font-size:0.9rem">✨ 甜感尾韻</div>
+      </div>
+      <h4 style="margin-top:14px">🍷 口感特質</h4>
+      <ul>
+        <li><strong>甜感</strong>（Sweet）：酒款呈現明顯甜潤口感</li>
+        <li><strong>酒體</strong>：中等至輕盈</li>
+        <li><strong>酸度</strong>：中低</li>
+        <li><strong>酒精濃度</strong>：<strong>13.5–15%</strong>（相對偏高）</li>
+      </ul>
+      <h4>🥂 侍酒與陳年建議</h4>
+      <ul>
+        <li><strong>飲用溫度</strong>：<strong>7–13°C</strong></li>
+        <li><strong>酒杯</strong>：白葡萄酒杯，無需醒酒</li>
+        <li><strong>陳年潛力</strong>：<strong>10 年以上</strong>卓越陳年能力</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Tierra del Vino de Zamora 葡萄品種',
+    items: [
+      {
+        icon: '🍷',
+        label: 'Tempranillo（主導紅品種）',
+        desc: '與鄰近 Toro DO 同樣以 Tempranillo 為核心，但因沙質沖積土壤風格比 Toro 稍輕盈、更優雅，適合喜愛中等酒體的飲者',
+        color: '#b71c1c',
+      },
+      {
+        icon: '🍑',
+        label: 'Malvasía Fina（明星白品種）',
+        desc: '白桃・野花・綠杏仁・羅勒・海貝殼。中低酸度・甜感・酒精 13.5–15%，陳年超 10 年，是產區白酒聲望的支柱',
+        color: '#f9a825',
+      },
+      {
+        icon: '🍊',
+        label: 'Moscatel de Grano Menudo',
+        desc: '小粒麝香葡萄，帶有濃郁玫瑰花水、橙花、荔枝香氣，可釀造芳香白酒或甜型酒款',
+        color: '#e65100',
+      },
+      {
+        icon: '🌿',
+        label: 'Verdejo',
+        desc: '草本清爽白品種，為產區白酒提供酸度骨架與青檸、茴香清新感，與 Malvasía 風格互補',
+        color: '#2e7d32',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Tierra del Vino de Zamora 的 Malvasía Fina，以下哪項最準確描述其特點？',
+    options: [
+      '高酸乾型白酒，帶有青草與礦石感，適飲期 1–2 年',
+      '帶有白桃、野花、綠杏仁、羅勒與海貝殼香氣；中低酸度、甜感；酒精 13.5–15%；陳年潛力超 10 年',
+      '濃郁板岩礦石感紅酒，與 Prieto Picudo 風格相近',
+      '氣泡酒品種，採傳統法釀造，帶有麵包與柑橘香氣',
+    ],
+    answer: 1,
+    explanation: 'Malvasía Fina 是 Tierra del Vino de Zamora 的明星白品種，以白桃、野花、綠杏仁、羅勒與海貝殼的獨特香氣著稱，酒款帶有甜感、酒精濃度 13.5–15%、中低酸度，具備超過 10 年的卓越陳年潛力，建議 7–13°C 侍酒。',
+  },
+  {
+    type: 'summary',
+    message: 'Tierra del Vino de Zamora 學習完成！',
+    keyPoints: [
+      '名稱意為「葡萄酒之地」，2007 年升格 DO；56 個市鎮，633 公頃葡萄園',
+      '極端乾性大陸型氣候：夏 23°C / 冬 −11°C，年雨 <400mm，日照 >2,800 小時',
+      '深厚沖積土：底層黏土＋平原砂質＋山坡礫石，賦予卓越陳年潛力',
+      'Tempranillo 為核心紅品種，比鄰近 Toro 風格稍輕優雅',
+      'Malvasía Fina：白桃・野花・綠杏仁・羅勒・海貝殼；甜感・酒精 13.5–15%；陳年超 10 年',
+    ],
+  },
+]
+
+// ─── S2M1L10 — Toro DO ───────────────────────────────────────────────────────
+const S2M1L10_slides = [
+  {
+    type: 'cover',
+    icon: '🐂',
+    gradient: 'linear-gradient(135deg, #6d1f00, #c0392b)',
+    title: 'Toro DO — 杜羅河谷的豪邁巨人',
+    subtitle: 'Level 2 · 卡斯提亞-萊昂 · Zamora & Valladolid',
+    points: [
+      { icon: '🌵', label: '極端乾燥高海拔風土', text: '年雨 300–400mm、日照 2,600–3,000 小時，夏季高達 40°C，650–825 公尺沙質貧瘠土壤' },
+      { icon: '🍒', label: 'Tinta de Toro 核心靈魂', text: 'Tempranillo 的本地變種，帶有櫻桃、無花果乾、雪松、菸草與蒔蘿香氣，酒精 13.5–15%' },
+      { icon: '🏆', label: '卓越陳年實力', text: '特級珍藏（Gran Reserva）陳年潛力達 20 年，是西班牙最具收藏價值的紅酒之一' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Toro DO 位置',
+    mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/toro.geojson',
+    description: '位於薩莫拉省東部與瓦亞多利德省西部交界，沿杜羅河延伸。葡萄園面積 5,550 公頃，海拔 650–825 公尺。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '地理、氣候與土壤',
+    html: `
+      <p>Toro 的聲譽可追溯至<strong>中世紀</strong>，近二十年藉由新一代釀酒師引進現代化設備（不鏽鋼發酵槽等）而重新在國際舞台嶄露頭角。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#fbe9e7;border-left:4px solid #bf360c;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 氣候數據（極端乾燥大陸型）</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>夏季最高溫：<strong>40°C</strong>；冬季最低溫：<strong>−10°C</strong></li>
+            <li>年均降雨量：<strong>300–400 毫米</strong>（全西班牙最乾燥產區之一）</li>
+            <li>年均日照：<strong>2,600–3,000 小時</strong></li>
+          </ul>
+          極大的日夜溫差與乾燥環境使葡萄皮厚、糖分集中，造就酒款的深郁顏色與豐沛果香。
+        </div>
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;padding:12px;border-radius:0 10px 10px 0">
+          <strong>⛰️ 地理規模</strong><br/>
+          海拔 <strong>650–825 公尺</strong>，葡萄園總面積 <strong>5,550 公頃</strong>，橫跨薩莫拉省東部與瓦亞多利德省西部。
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 土壤特性</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li><strong>南部</strong>：沖積土或黏土上的<strong>砂質土</strong>——天然抵禦根瘤蚜（Phylloxera），部分老藤無需嫁接</li>
+            <li><strong>東北部</strong>：含有<strong>石灰岩</strong>——提升礦石感與酸度骨架</li>
+          </ul>
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🍒',
+    title: 'Tinta de Toro — 核心靈魂品種',
+    html: `
+      <p><strong>Tinta de Toro</strong> 是 Tempranillo 在當地千百年馴化後形成的<strong>本地變種</strong>，皮更厚、糖分更高，能抵抗 Toro 的極端乾旱與高熱，釀出比一般 Tempranillo 更為強勁的酒款。</p>
+      <h4>🌸 香氣輪廓</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+        <div style="background:#fce4ec;border-radius:8px;padding:10px;font-size:0.9rem">🍒 成熟櫻桃</div>
+        <div style="background:#fce4ec;border-radius:8px;padding:10px;font-size:0.9rem">🌿 無花果乾</div>
+        <div style="background:#e8eaf6;border-radius:8px;padding:10px;font-size:0.9rem">🪵 雪松</div>
+        <div style="background:#e8eaf6;border-radius:8px;padding:10px;font-size:0.9rem">🚬 菸草</div>
+        <div style="background:#f3e5f5;border-radius:8px;padding:10px;font-size:0.9rem;grid-column:span 2">🌿 蒔蘿（Dill）——Toro 標誌性香料辛香</div>
+      </div>
+      <h4 style="margin-top:14px">🍷 口感剖面</h4>
+      <ul>
+        <li><strong>酒型</strong>：乾型（Dry）</li>
+        <li><strong>酒體</strong>：中等至飽滿</li>
+        <li><strong>單寧与酸度</strong>：中高</li>
+        <li><strong>酒精濃度</strong>：<strong>13.5–15%</strong></li>
+      </ul>
+      <h4>🏆 陳年分級指南</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div style="background:#fff3e0;border-radius:8px;padding:10px;font-size:0.85rem"><strong>Young（年輕）</strong><br/>適飲峰值：約 <strong>2 年</strong></div>
+        <div style="background:#fff3e0;border-radius:8px;padding:10px;font-size:0.85rem"><strong>Crianza（陳年）</strong><br/>適飲峰值：<strong>5–9 年</strong></div>
+        <div style="background:#fbe9e7;border-radius:8px;padding:10px;font-size:0.85rem"><strong>Reserva（珍藏）</strong><br/>適飲峰值：約 <strong>13 年</strong></div>
+        <div style="background:#fbe9e7;border-radius:8px;padding:10px;font-size:0.85rem"><strong>Gran Reserva（特級珍藏）</strong><br/>適飲峰值：約 <strong>20 年</strong></div>
+      </div>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '關於 Toro DO 的 Tinta de Toro，以下哪項描述最準確？',
+    options: [
+      '是 Garnacha 的本地別名，以花香清爽著稱，酒精 11–12%',
+      'Tempranillo 的本地變種，帶有成熟櫻桃、無花果乾與蒔蘿香氣；中高單寧、酒精 13.5–15%；Gran Reserva 陳年達 20 年',
+      '與 Ribera del Duero 完全相同的品種，風格上無差異',
+      '主要用來釀造氣泡酒，不適合長期陳年',
+    ],
+    answer: 1,
+    explanation: 'Tinta de Toro 是 Tempranillo 在薩莫拉省的本地變種，皮更厚、糖分更高，釀出酒體強勁的乾型紅酒，帶有成熟櫻桃、無花果乾、雪松、菸草與蒔蘿的標誌性香氣，酒精 13.5–15%，中高單寧與酸度。Gran Reserva 等級陳年潛力達 20 年。',
+  },
+  {
+    type: 'summary',
+    message: 'Toro DO 學習完成！',
+    keyPoints: [
+      '中世紀歷史產區，近年藉現代化設備復興，以豐沛、成熟、強勁紅酒重返國際舞台',
+      '極端乾燥大陸型氣候：40°C/−10°C，年雨 300–400mm，日照 2,600–3,000 小時',
+      '5,550 公頃葡萄園，海拔 650–825 公尺；南部砂質土（根瘡蚜天然保護）、東北部石灰岩',
+      'Tinta de Toro（Tempranillo 本地變種）：成熟櫻桃・無花果乾・雪松・菸草・蒔蘿；酒精 13.5–15%',
+      '四級陳年指南：Young 2yr → Crianza 5–9yr → Reserva 13yr → Gran Reserva 20yr',
+      '侍酒：16–20°C，醒酒 1 小時，Universal 酒杯，優質酒款陳年潛力 10 年以上',
+    ],
+  },
+]
+
+// ─── S2M1L11 — Sierra de Salamanca VC ───────────────────────────────────────
+const S2M1L11_slides = [
+  {
+    type: 'cover',
+    icon: '🏔️',
+    gradient: 'linear-gradient(135deg, #1b5e20, #388e3c)',
+    title: 'Sierra de Salamanca — UNESCO 生物圈保護區的梯田葡萄園',
+    subtitle: 'Level 2 · Vino de Calidad · 卡斯提亞-萊昂 · 2010 年受保護',
+    points: [
+      { icon: '🌿', label: 'UNESCO 生物圈保護區', text: '全境 2006 年獲 UNESCO 列為生物圈保護區，部分區域位於 Las Batuecas–Sierra de Francia 自然公園內' },
+      { icon: '🍑', label: 'Rufete 原生靈魂品種', text: '又稱 Tinta Pinheira，釀出李子・鹹鮮大地的飽滿紅酒，單寧豐厚、具卓越陳年潛力' },
+      { icon: '🌧️', label: '年雨 1,400mm — 反常豐沛', text: '杜羅河谷產區中降雨最豐沛者，Alagón 河梯田海拔 400–1,000 公尺，天然酸度突出' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Sierra de Salamanca VC 位置',
+    mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/sierra-de-salamanca.geojson',
+    description: '薩拉曼卡省南部，Alagón 河上方梯田地帶，涵蓋 Cepeda、Miranda del Castañar、Mogarraz 等市鎮。葡萄園面積僅 90.33 公頃，由六家酒莊共同守護。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '地理、氣候與獨特風土',
+    html: `
+      <p>Sierra de Salamanca 是西班牙杜羅河谷最與眾不同的產區之一——不是因為強勁，而是因為<strong>清涼、多雨與梯田</strong>的反差風土。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌧️ 氣候數據（大西洋影響型）</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>夏季均溫：<strong>24°C</strong>；冬季均溫：<strong>0°C</strong></li>
+            <li>年均降雨量：<strong>1,400 毫米</strong>——比 Ribera del Duero 高出 4–5 倍，為杜羅河谷區最豐沛</li>
+          </ul>
+          豐沛雨水加上高海拔（400–1,000公尺），賦予葡萄<strong>天然高酸度</strong>，這是與周邊乾燥產區最大的差異。
+        </div>
+        <div style="background:#f3e5f5;border-left:4px solid #6a1b9a;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🏔️ 地理與生態地位</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>梯田葡萄園位於 <strong>Alagón 河</strong>上方，海拔 400–1,000 公尺</li>
+            <li>部分區域位於 <strong>Las Batuecas–Sierra de Francia 自然公園</strong></li>
+            <li><strong>2006 年</strong>全境被 UNESCO 列為<strong>生物圈保護區</strong></li>
+            <li>面積僅 <strong>90.33 公頃</strong>，由 <strong>6 家</strong>堅守原生品種的酒莊共同維護</li>
+          </ul>
+        </div>
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 土壤</strong>：<strong>花崗岩與板岩</strong>（Granite-Slate）——低有機質、排水良好，為葡萄提供礦石感骨架
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🍇',
+    title: 'Rufete（Tinta Pinheira）— 靈魂原生品種',
+    html: `
+      <p><strong>Rufete</strong>（葡語又稱 <strong>Tinta Pinheira</strong>）是 Sierra de Salamanca 成功的關鍵，六家酒莊共同堅信這個原生品種的潛力。</p>
+      <h4>🌸 品種特性</h4>
+      <ul>
+        <li><strong>深色皮膚、晚熟品種</strong>——需要足夠的生長季才能完全發揮實力</li>
+        <li>充足的<strong>單寧</strong>與良好的<strong>酸度</strong>，確保長期陳年潛力</li>
+        <li>若果實未完全成熟，酒中會出現<strong>薄荷</strong>的清涼香氣（此為品種特徵而非缺陷）</li>
+      </ul>
+      <h4>🍷 風味輪廓</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+        <div style="background:#fce4ec;border-radius:8px;padding:10px;font-size:0.9rem">🍑 豐富李子</div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:10px;font-size:0.9rem">🌿 薄荷（未熟時）</div>
+        <div style="background:#efebe9;border-radius:8px;padding:10px;font-size:0.9rem;grid-column:span 2">🌍 鹹鮮大地色調（Umami-Earthy）</div>
+      </div>
+      <p style="margin-top:10px">酒體<strong>飽滿</strong>，口感複雜、具地方特色，是西班牙最值得關注的稀有原生品種之一。</p>
+      <h4>🍽️ 餐酒搭配</h4>
+      <ul>
+        <li>🐷 <strong>乳豬</strong>（Leitao a faia）</li>
+        <li>🫀 <strong>歐芹醬烤羊心</strong></li>
+        <li>🥩 <strong>俄羅斯酸奶牛肉</strong>（Beef Stroganoff）</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '以下哪項最準確描述 Sierra de Salamanca VC 的 Rufete 品種特點？',
+    options: [
+      '清爽白葡萄品種，帶有草本與柑橘香氣，不適合陳年',
+      '深色皮晚熟紅品種，帶有李子・鹹鮮大地香氣；未熟時出現薄荷；單寧充足，具長年陳年潛力',
+      '與 Tempranillo 完全相同，僅為方言別名，釀造風格無差異',
+      '以氣泡酒聞名，採傳統法釀造，帶有烤麵包與蜂蜜香',
+    ],
+    answer: 1,
+    explanation: 'Rufete（Tinta Pinheira）是 Sierra de Salamanca 的核心原生紅品種，深色皮、晚熟，釀出酒體飽滿、帶有李子與鹹鮮大地香氣的複雜紅酒。其充足單寧與良好酸度賦予卓越陳年能力；若果實未完全成熟，則會出現薄荷清涼香氣。',
+  },
+  {
+    type: 'summary',
+    message: 'Sierra de Salamanca 學習完成！',
+    keyPoints: [
+      '薩拉曼卡省南部 Vino de Calidad（2010年受保護），全境為 2006 年 UNESCO 生物圈保護區',
+      '梯田葡萄園位於 Alagón 河上方，海拔 400–1,000 公尺；花崗岩與板岩土壤',
+      '年均降雨 1,400mm——杜羅河谷最豐沛，賦予天然高酸度（與鄰近乾燥產區截然不同）',
+      '核心品種 Rufete（Tinta Pinheira）：李子・鹹鮮大地・薄荷（未熟時）；飽滿酒體・長年陳年潛力',
+      '面積僅 90.33 公頃，由 6 家堅守原生品種的酒莊共同維護，是西班牙最珍稀的精品產區之一',
+    ],
+  },
+]
+
+// ─── S2M1L12 — Valles de Benavente VC ───────────────────────────────────────
+const S2M1L12_slides = [
+  {
+    type: 'cover',
+    icon: '🏔️',
+    gradient: 'linear-gradient(135deg, #37474f, #78909c)',
+    title: 'Valles de Benavente — 薩莫拉省北部高原葡萄酒之地',
+    subtitle: 'Level 2 · Vino de Calidad · 卡斯提亞-萊昂 · 薩莫拉省',
+    points: [
+      { icon: '🌵', label: '極端大陸型氣候', text: '夏季高達 40°C、冬季低至 -15°C，年雨僅 350–500mm，日照 2,800 小時' },
+      { icon: '🏜️', label: '砂質排水土壤', text: '低肥沃度砂質土，排水與通風極佳，葡萄藤在逆境中凝聚風味' },
+      { icon: '🍷', label: '原生品種多元', text: 'Tempranillo、Prieto Picudo、Mencía 紅酒；Verdejo、Malvasía 白酒' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Valles de Benavente VC 位置',
+    mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/valles-de-benavente.geojson',
+    description: '位於薩莫拉省北部，葡萄園面積 361 公頃，分布於高原砂質地帶。分級為 Vino de Calidad（VC），地位僅次於 DO。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '風土、氣候與產區定位',
+    html: `
+      <p>Valles de Benavente 是薩莫拉省北部的 <strong>Vino de Calidad（VC）</strong>產區，在西班牙葡萄酒分級制度中地位<strong>僅次於法定產區（DO）</strong>，代表具備地理標示的優質葡萄酒。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#eceff1;border-left:4px solid #546e7a;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 氣候數據（極端乾燥大陸型）</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>夏季最高溫：<strong>40°C</strong>；冬季最低溫：<strong>−15°C</strong>（溫差高達 55°C）</li>
+            <li>年均降雨量：<strong>350–500 毫米</strong></li>
+            <li>年均日照：<strong>2,800 小時</strong></li>
+          </ul>
+          極大的年溫差造就葡萄高酸度與集中果香；充足日照確保充分成熟。
+        </div>
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 土壤特性</strong><br/>
+          以<strong>砂質土壤</strong>為主——肥沃度低，但<strong>排水與通風極佳</strong>，迫使葡萄根系深扎求水，凝聚風味複雜度。砂質土同時提供對根瘡蚜（Phylloxera）的天然保護。
+        </div>
+        <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:12px;border-radius:0 10px 10px 0">
+          <strong>📋 產區規模與定位</strong><br/>
+          葡萄園面積：<strong>361 公頃</strong><br/>
+          分級：<strong>Vino de Calidad（VC）</strong>——西班牙葡萄酒分級中僅次於 DO 的優質等級，代表具有明確地理標示的高品質葡萄酒
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Valles de Benavente 葡萄品種',
+    items: [
+      {
+        icon: '🍷',
+        label: 'Tempranillo（核心紅品種）',
+        desc: '西班牙最重要的紅品種，在高原砂質土壤與極端溫差下釀造出結構扎實、果味豐沛的紅酒，具良好陳年潛力',
+        color: '#b71c1c',
+      },
+      {
+        icon: '🫐',
+        label: 'Prieto Picudo（核心紅品種）',
+        desc: '卡斯提亞-萊昂原生品種，意為「尖銳黑皮」，耐乾熱，釀出深色濃郁、帶黑莓與紫羅蘭氣息的個性紅酒',
+        color: '#4a148c',
+      },
+      {
+        icon: '🍒',
+        label: 'Mencía',
+        desc: '源自西北部（Bierzo/加利西亞），在此呈現稍不同的風格——花香與紅果並存，單寧細緻，增加產區多樣性',
+        color: '#880e4f',
+      },
+      {
+        icon: '🌿',
+        label: 'Verdejo（核心白品種）',
+        desc: '卡斯提亞-萊昂白酒代表品種，草本清爽、柑橘與茴香香氣，帶苦杏仁尾韻，為產區提供出色白酒選擇',
+        color: '#2e7d32',
+      },
+      {
+        icon: '🌸',
+        label: 'Malvasía（白品種）',
+        desc: '芳香型白品種，花香、桃子與杏仁香氣，口感圓潤，與 Verdejo 的清爽風格形成對比',
+        color: '#f57f17',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Valles de Benavente VC 的「VC」分級，在西班牙葡萄酒法規中代表什麼？',
+    options: [
+      '法定產區（DO），與 Ribera del Duero 同等地位',
+      '特優法定產區（DOCa），西班牙最高等級',
+      '具備地理標示的優質葡萄酒（Vino de Calidad），地位僅次於 DO',
+      '地區餐酒（Vino de la Tierra），屬於最基礎的地理標示等級',
+    ],
+    answer: 2,
+    explanation: 'VC（Vino de Calidad con Indicación Geográfica）是西班牙葡萄酒分級中地位僅次於 DO（法定產區）的優質等級，代表具備明確地理標示的高品質葡萄酒，但尚未達到完整 DO 的所有認證要求。',
+  },
+  {
+    type: 'summary',
+    message: 'Valles de Benavente 學習完成！',
+    keyPoints: [
+      '薩莫拉省北部 Vino de Calidad（VC），地位僅次於 DO，葡萄園 361 公頃',
+      '極端大陸型氣候：40°C/−15°C，年雨 350–500mm，日照 2,800 小時',
+      '砂質土壤：低肥沃度、排水通風佳，並提供對根瘡蚜的天然保護',
+      '紅品種：Tempranillo＋Prieto Picudo（核心）＋Mencía；白品種：Verdejo＋Malvasía',
+      '與薩莫拉省南部鄰近 Toro、Tierra del Vino de Zamora 同屬杜羅河谷體系，但位於省境最北端',
+    ],
+  },
+]
+
+// ─── S2M1L13 — Valtiendas VC ────────────────────────────────────────────────
+const S2M1L13_slides = [
+  {
+    type: 'cover',
+    icon: '🪨',
+    gradient: 'linear-gradient(135deg, #795548, #bcaaa4)',
+    title: 'Valtiendas VC — 杜拉通河畔的白堊高原紅酒',
+    subtitle: 'Level 2 · Vino de Calidad · 塞哥維亞省 · 2004 年成立',
+    points: [
+      { icon: '⛰️', label: '海拔 920 公尺', text: '比杜羅河谷平均高出 170 公尺，低溫緩熟，葡萄複雜度更高、產量更低' },
+      { icon: '🪨', label: '鈣質白堊土＋地表滾石', text: '高濃度白堊鈣質土賦予礦石感，滾石反射日照、調節夜間溫度' },
+      { icon: '🌞', label: '年日照 3,000 小時', text: '充足日照確保熟成，Tempranillo 為核心；Albillo 為唯一法定白品種' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Valtiendas VC 位置',
+    mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/valtiendas.geojson',
+    description: '完全位於塞哥維亞省北部，沿杜拉通河（Duratón River）荒野延伸。葡萄園 170 公頃，海拔約 920 公尺。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '地理、氣候與白堊土風土',
+    html: `
+      <p>Valtiendas 成立於 <strong>2004 年</strong>，是杜羅河谷體系中海拔最高的 Vino de Calidad 產區，環繞著 <strong>杜拉通河（Duratón River）</strong> 峽谷的荒野景觀。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;padding:12px;border-radius:0 10px 10px 0">
+          <strong>⛰️ 地理條件</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>海拔：<strong>約 920 公尺</strong>（比杜羅河谷平均 750 公尺高出 170 公尺）</li>
+            <li>葡萄園面積：<strong>170 公頃</strong></li>
+            <li>位置：塞哥維亞省北部，沿杜拉通河荒野</li>
+          </ul>
+        </div>
+        <div style="background:#fff8e1;border-left:4px solid #f57f17;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 氣候數據（極端乾燥大陸型）</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>夏季最高溫：<strong>超過 35°C</strong>；冬季最低溫：<strong>−15°C</strong></li>
+            <li>年均日照：<strong>3,000 小時</strong>（杜羅河谷數一數二）</li>
+            <li>年均降雨：<strong>462 毫米</strong></li>
+          </ul>
+          <strong>高海拔＋極端溫差</strong>使葡萄<strong>熟成緩慢、產量低</strong>，是結構複雜、層次細膩的根本原因。
+        </div>
+        <div style="background:#e8eaf6;border-left:4px solid #3949ab;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 土壤：鈣質白堊土＋地表滾石</strong><br/>
+          ・高濃度<strong>白堊（Chalk）</strong>：強化礦石感，調控水分保留<br/>
+          ・地表<strong>滾石（Rolling stones）</strong>：白天蓄熱、夜晚緩慢釋放熱能，擴大晝夜溫差，有助酸度保留
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Valtiendas VC 葡萄品種',
+    items: [
+      {
+        icon: '🍷',
+        label: 'Tempranillo（核心紅品種）',
+        desc: '在 920 公尺高海拔緩慢熟成，比平地 Tempranillo 結構更扎實、顏色更深，帶有更多礦石感與酸度骨架',
+        color: '#b71c1c',
+      },
+      {
+        icon: '🍇',
+        label: 'Cabernet Sauvignon',
+        desc: '高海拔涼爽條件造就細膩而非過熟的 Cab，帶有黑醋栗、雪松與煙草，提供豐厚單寧結構',
+        color: '#4a148c',
+      },
+      {
+        icon: '🍒',
+        label: 'Merlot / Syrah / Garnacha',
+        desc: '補充混釀品種：Merlot 增添柔順感，Syrah 帶入胡椒香料，Garnacha 提供成熟果香與圓潤酒體',
+        color: '#880e4f',
+      },
+      {
+        icon: '🌿',
+        label: 'Albillo（唯一法定白品種）',
+        desc: '在杜羅河谷極為罕見的法定白品種（Ribera del Duero 亦有種植），帶有花香與蜂蜜調性，在鈣質土上展現獨特礦石尾韻',
+        color: '#f9a825',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Valtiendas VC 的風土特色，以下哪項組合最為準確？',
+    options: [
+      '低海拔砂質土，年雨 1,400mm，以 Rufete 原生品種著稱',
+      '海拔 920 公尺，鈣質白堊土＋地表滾石，年日照 3,000 小時，Tempranillo 核心、Albillo 唯一白品種',
+      '海拔 400 公尺，花崗岩板岩梯田，UNESCO 生物圈保護區',
+      '薩莫拉省北部砂質沖積土，以 Verdejo 白葡萄為核心',
+    ],
+    answer: 1,
+    explanation: 'Valtiendas VC 位於塞哥維亞省北部，海拔約 920 公尺，是杜羅河谷體系中海拔最高的產區之一。鈣質白堊土加地表滾石、年日照 3,000 小時、年雨 462mm，造就緩慢熟成、結構細膩的高品質紅酒。Tempranillo 為核心紅品種，Albillo 為唯一法定白品種。',
+  },
+  {
+    type: 'summary',
+    message: 'Valtiendas VC 學習完成！',
+    keyPoints: [
+      '塞哥維亞省北部 Vino de Calidad（2004 年成立），沿杜拉通河峽谷荒野，170 公頃葡萄園',
+      '海拔 920 公尺——比杜羅河谷平均高出 170 公尺，緩慢熟成、低產量、高複雜度',
+      '鈣質白堊土＋地表滾石：強化礦石感；年日照 3,000 小時、年雨 462mm',
+      '核心紅品種 Tempranillo；補充混釀 Cabernet Sauvignon、Merlot、Syrah、Garnacha',
+      'Albillo 為產區唯一法定白品種，在鈣質土上展現花香與礦石尾韻',
     ],
   },
 ]
@@ -2544,6 +3365,114 @@ const S2M3L3_slides = [
   },
 ]
 
+// ─── S2M3L4 — Alella DO ──────────────────────────────────────────────────────
+const S2M3L4_slides = [
+  {
+    type: 'cover',
+    icon: '🌸',
+    gradient: 'linear-gradient(135deg, #0277bd, #26c6da)',
+    title: 'Alella DO — 巴塞隆那海岸的芳香白酒',
+    subtitle: 'Level 2 · 加泰羅尼亞 · 花崗岩土壤精品產區',
+    points: [
+      { icon: '🌊', label: '地中海海岸', text: '緊鄰海岸，溫暖海風調節氣候，與都市巴塞隆那比鄰而居' },
+      { icon: '🪨', label: '花崗岩土壤', text: '花崗岩（granite）為主，低肥力、排水良好，海拔高度定義酒款風格' },
+      { icon: '🌸', label: 'Pansà Blanca 為核心', text: '即 Cava 的 Xarel·lo，在 Alella 釀出芳香有表現力、帶花香且口感清脆的白酒' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Alella DO 位置',
+    mapRegion: 'catalonia',
+    geojsonUrl: '/spain/geojson/appellations/alella.geojson',
+    description: '位於巴塞隆那省北側海岸，面積極小，都市化壓力持續壓縮葡萄園空間。地中海溫暖海風與花崗岩山丘共同定義產區特色。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '風土條件：海岸 × 花崗岩 × 海拔',
+    html: `
+      <p>Alella 是加泰羅尼亞最小的 DO 之一，卻以<strong>獨特的花崗岩風土</strong>和<strong>芳香型白酒</strong>在市場上極具辨識度。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#e1f5fe;border-left:4px solid #0277bd;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌊 氣候：地中海溫和海岸型</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>緊鄰海岸，地中海<strong>溫暖海風</strong>調節，氣候相對溫和（moderate）</li>
+            <li>夏季不過於炎熱，有助保留葡萄天然酸度與細緻花香</li>
+          </ul>
+        </div>
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 土壤：花崗岩（Granite）</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>主要由<strong>花崗岩</strong>組成，低肥力、排水良好</li>
+            <li>賦予葡萄酒礦石感與清爽的骨幹結構</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>⛰️ 海拔是關鍵因素</strong><br/>
+          產區內<strong>海拔高度</strong>是定義葡萄酒風格的關鍵——較高海拔的葡萄園日夜溫差更大，有助保留細膩香氣與清脆酸度，是精品白酒的來源地
+        </div>
+        <div style="background:#fff3e0;border-left:4px solid #e65100;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🏙️ 都市化壓力</strong><br/>
+          緊鄰巴塞隆那，城市擴張使產區面積持續縮小，但倖存的小農酒莊以精品高品質路線維持市場地位
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Alella DO 葡萄品種',
+    items: [
+      {
+        icon: '🌸',
+        label: 'Pansà Blanca（核心白品種）',
+        desc: '即 Cava 產區的 Xarel·lo，在 Alella 有其專屬地方名稱。花崗岩土壤賦予其獨特的礦石感與清脆骨幹，釀出芳香、有表現力、帶花香且口感清脆的白酒',
+        color: '#0277bd',
+      },
+      {
+        icon: '🍋',
+        label: 'Chardonnay',
+        desc: '國際白品種，在 Alella 涼爽海岸微氣候下展現清爽果香與優雅質地，常用於釀造現代風格白酒',
+        color: '#f9a825',
+      },
+      {
+        icon: '🍷',
+        label: 'Garnacha / Ull de Llebre（Tempranillo）/ Merlot',
+        desc: '紅品種相對次要，產量有限。Ull de Llebre 是 Tempranillo 的加泰羅尼亞語名稱（意為「野兔眼」），Garnacha 在地中海氣候下有適度表現',
+        color: '#b71c1c',
+      },
+      {
+        icon: '🫐',
+        label: 'Monastrell',
+        desc: '較少為人知的紅酒選項，在 Alella 產量極小。相較於著名的芳香白酒，Monastrell 紅酒是產區的另一面——酒體厚實、深色漿果風味',
+        color: '#4a148c',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '關於 Alella DO，以下哪項描述最為準確？',
+    options: [
+      '以板岩土壤著稱，Garnacha 老藤為核心，產區橫跨多省',
+      '緊鄰巴塞隆那海岸，花崗岩土壤，Pansà Blanca（即 Xarel·lo）為核心白品種；白酒以芳香、有表現力、帶花香且清脆著稱',
+      '以 Monastrell 紅酒聞名，也生產部分 Cava 氣泡酒',
+      '屬於 DOCa 等級，是加泰羅尼亞繼 Priorat 之後的第二個 DOCa',
+    ],
+    answer: 1,
+    explanation: 'Alella DO 緊鄰巴塞隆那海岸，以花崗岩土壤和 Pansà Blanca（在 Cava 稱 Xarel·lo）白酒著稱。地中海溫暖海風提供溫和氣候，海拔高度是定義酒款風格的關鍵因素。白酒以芳香、有表現力、帶花香且口感清脆的風格在市場上極具特色。',
+  },
+  {
+    type: 'summary',
+    message: 'Alella DO 學習完成！',
+    keyPoints: [
+      '加泰羅尼亞精緻小型 DO，緊鄰巴塞隆那海岸；都市化壓力持續縮小產區面積',
+      'Pansà Blanca（即 Cava 的 Xarel·lo）是核心白品種，花崗岩土壤賦予礦石感骨幹',
+      '地中海溫暖海風調節氣候溫和，海拔高度是定義風格的關鍵因素',
+      '白酒以芳香（aromatic）、有表現力（expressive）、帶花香且清脆（flowery crispy）著稱',
+      '也生產少量 Garnacha、Ull de Llebre（Tempranillo）、Monastrell 紅酒',
+    ],
+  },
+]
+
 const S2M4L1_slides = [
   {
     type: 'cover',
@@ -2850,6 +3779,426 @@ const S2M4L4_slides = [
       'Lanzarote 的 Zoco 坑洞種植：石牆擋風 + Picon 砂礫收露水（年雨 150mm！）',
       '火山礦石感是加那利葡萄酒的標誌：煙燻、鹹鮮、礦石張力',
       '重要品種：Malvasía（甜白/干白）、Listán Negro（輕盈紅）',
+    ],
+  },
+]
+
+// ─── S2M4L5 — Calatayud DO ───────────────────────────────────────────────────
+const S2M4L5_slides = [
+  {
+    type: 'cover',
+    icon: '🍇',
+    gradient: 'linear-gradient(135deg, #880e4f, #c62828)',
+    title: 'Calatayud DO — 阿拉貢 Garnacha 老藤的王者',
+    subtitle: 'Level 2 · 1990 DO · 阿拉貢 · 埃布羅河谷',
+    points: [
+      { icon: '🍇', label: 'Garnacha 佔 75%', text: '產區靈魂品種，釀造酒體宏大、風味大膽的紅酒，是阿拉貢第二大 DO' },
+      { icon: '🪨', label: 'Calatayud Superior', text: '藤齡 ≥ 50 年 Garnacha 老藤，產量 ≤ 3,500 kg/ha，市場極受歡迎' },
+      { icon: '⛰️', label: '高海拔低產量', text: 'Sierra de la Virgen 山脈南向坡，最高 800 公尺，石灰岩、灰紅米板岩多樣土壤' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Calatayud DO 位置',
+    mapRegion: 'aragon',
+    geojsonUrl: '/spain/geojson/appellations/calatayud.geojson',
+    description: '阿拉貢直轄市薩拉戈薩省，埃布羅河谷內。阿拉貢北部，葡萄園 3,500 公頃，是阿拉貢僅次於 Cariñena 的第二大優質產區。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '風土、氣候與產區發展',
+    html: `
+      <p>Calatayud 於 <strong>1990 年獲得 DO 認證</strong>，近年大量投資新技術與釀酒系統革新，產區潛力正逐漸展現。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#fce4ec;border-left:4px solid #c62828;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 氣候數據（大陸型）</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>平均氣溫：<strong>13.5°C</strong></li>
+            <li>年均降雨：<strong>350 mm</strong></li>
+            <li>年均日照：<strong>2,700 小時</strong></li>
+          </ul>
+          夏季極熱乾燥，冬季極寒，<strong>霜害威脅長達半年以上</strong>——嚴峻的乾旱環境造就 Garnacha 的濃縮、豐滿莓味。
+        </div>
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;padding:12px;border-radius:0 10px 10px 0">
+          <strong>⛰️ 地形與土壤</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>葡萄園多位於 <strong>Sierra de la Virgen 山脈南向坡</strong>，最高海拔 <strong>800 公尺</strong></li>
+            <li>高海拔有助於葡萄在殘糖與潛在酒精度之間取得更好的平衡</li>
+            <li>土壤多樣：<strong>石灰岩、灰紅米板岩、黏土、壤土、石膏與鵝卵石</strong>；鬆散、多石、排水良好</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>📊 產量數據</strong><br/>
+          3,500 公頃葡萄園；紅葡萄限產 7,000 kg/ha，白葡萄限產 8,000 kg/ha，老藤限產 4,500 kg/ha<br/>
+          嚴苛低產量限制讓葡萄酒品質進一步提升。
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🪨',
+    title: 'Calatayud Superior — 50 年老藤的極致',
+    html: `
+      <p><strong>Calatayud Superior</strong> 是產區內最高等級的特殊分類，應對當地最珍稀的老藤資源。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#fce4ec;border-left:4px solid #880e4f;padding:12px;border-radius:0 10px 10px 0">
+          <strong>📜 資格條件</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>品種：必須由 <strong>Garnacha</strong> 葡萄釀造</li>
+            <li>藤齡：葡萄藤必須至少有 <strong>50 年以上的藤齡</strong></li>
+            <li>產量限制：每公頃產量不得超過 <strong>3,500 公斤</strong></li>
+          </ul>
+        </div>
+        <div style="background:#fff8e1;border-left:4px solid #f57f17;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🍷 風格與市場</strong><br/>
+          50+ 年老藤的濃縮果味與歲月積累的墨汁複雜度，展現香料層次、豐厚醇厚體與長考陳年能力。產量稀少但市場上非常受歡迎，是埃布羅河谷最具收藏價值的紅酒之一。
+        </div>
+      </div>
+      <h4 style="margin-top:12px">🍇 Garnacha 是 Calatayud 的靈魂</h4>
+      <p>Garnacha 佔種植面積 <strong>75% 以上</strong>，對當地極端乾燥、寒熱交替的環境具備獨到的適應力，釀出的紅酒帶有滿滿的草莓、紫羅蘭、白胡椒香料，酒精度常在 <strong>14–16%</strong>。</p>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: 'Calatayud Superior 需要符合哪些資格條件？',
+    options: [
+      '必須由 Tempranillo 釀造，藤齡需有 30 年以上',
+      '可用任意紅品種釀造，之限產量限制為 5,000 kg/ha',
+      '必須由 Garnacha 釀造，藤齡 ≥ 50 年，產量 ≤ 3,500 kg/ha',
+      '僅限白葡萄品種，必須經過 24 個月橡木桶陳年',
+    ],
+    answer: 2,
+    explanation: 'Calatayud Superior 是產區最高等級：必須由 Garnacha 葡萄釀造，葡萄藤至少 50 年以上藤齡，每公頃產量不超過 3,500 公斤。這三項資格條件共同確保酒款的稀罕性與收藏價值。',
+  },
+  {
+    type: 'summary',
+    message: 'Calatayud DO 學習完成！',
+    keyPoints: [
+      '1990 年 DO，阿拉貢內第二大優質產區；3,500 公頃葡萄園',
+      'Sierra de la Virgen 山脈南向坡，最高 800 公尺；石灰岩、灰紅米板岩、石膏多樣土壤',
+      '大陸型氣候：平均 13.5°C，年雨 350mm，日照 2,700 小時；夏熱冬寒，霜害威脅達半年',
+      'Garnacha 佔種植面積 75%，釀造酒體宏大、果味大膽紅酒；酒精度常在 14–16%',
+      'Calatayud Superior：Garnacha 至少 50 年老藤，產量 ≤ 3,500 kg/ha，最具收藏價值',
+    ],
+  },
+]
+
+// ─── S2M4L6 — Campo de Borja DO ─────────────────────────────────────────────
+const S2M4L6_slides = [
+  {
+    type: 'cover',
+    icon: '👑',
+    gradient: 'linear-gradient(135deg, #4a0080, #880e4f)',
+    title: 'Campo de Borja DO — 格納希帝國',
+    subtitle: 'Level 2 · 1980 DO · 阿拉貢 · 埃布羅河谷',
+    points: [
+      { icon: '👑', label: '格納希帝國', text: '西班牙 Garnacha 種植面積佔比最高的 DO 之一，逾 2,000 公頃為 30–50 年老藤' },
+      { icon: '🌬️', label: 'Cierzo 北風調節', text: '強冷北風帶走濕氣，夏季乾燥熱烈，成就 Garnacha 高酒精度飽滿果味' },
+      { icon: '🏆', label: 'Borsao 酒莊領頭', text: '旗艦酒莊 Borsao 詮釋大陸型 Garnacha 的精品路線，國際聲譽卓著' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Campo de Borja DO 位置',
+    mapRegion: 'aragon',
+    geojsonUrl: '/spain/geojson/appellations/campo-de-borja.geojson',
+    description: '埃布羅河谷左岸，薩拉戈薩省西北部，Borja 鎮周邊丘陵。7,600 公頃葡萄園，大陸型氣候，老藤 Garnacha 主導。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '風土條件與 Garnacha 優勢',
+    html: `
+      <p>Campo de Borja DO 於 <strong>1980 年</strong>獲得 DO 認定，全區葡萄園 <strong>7,600 公頃</strong>，Garnacha 種植比例居阿拉貢之冠。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#f3e5f5;border-left:4px solid #7b1fa2;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 氣候</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>大陸型：夏季炎熱乾燥，冬季寒冷</li>
+            <li><strong>Cierzo 強冷北風</strong>：減少病蟲害、維持乾燥環境，保存葡萄天然酸度</li>
+            <li>年均降雨：350–400 mm</li>
+          </ul>
+        </div>
+        <div style="background:#ede7f6;border-left:4px solid #512da8;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 土壤</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>砂質土、石灰岩及黏土混合，部分區塊含卵石</li>
+            <li>海拔 250–700 公尺，坡地葡萄園排水良好</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #388e3c;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🍇 老藤 Garnacha 指標</strong><br/>
+          超過 2,000 公頃為 30–50 年老藤；Crianza/Reserva 級紅酒需 Garnacha ≥ 50%，單寧成熟、果味濃郁
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Campo de Borja 主要品種',
+    items: [
+      {
+        icon: '🍷',
+        label: 'Garnacha Tinta（核心）',
+        desc: '佔全區種植面積 80% 以上，高糖份、低酸度，大陸型氣候下可達 15% 酒精度，老藤展現複雜礦物感',
+        color: '#880e4f',
+      },
+      {
+        icon: '🌿',
+        label: 'Tempranillo',
+        desc: '混釀夥伴，補充酸度與結構，與 Garnacha 形成互補，增加陳年潛力',
+        color: '#b71c1c',
+      },
+      {
+        icon: '🫐',
+        label: 'Cabernet Sauvignon / Merlot',
+        desc: '國際品種少量混入，增加深色漿果香氣與細緻單寧，強化品質指標酒款',
+        color: '#311b92',
+      },
+      {
+        icon: '🌸',
+        label: 'Macabeo（白葡萄）',
+        desc: '少量白酒與粉紅酒，清爽果香，Rosado 展現 Garnacha 典型草莓漿果調性',
+        color: '#f9a825',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '關於 Campo de Borja DO，以下哪項最為準確？',
+    options: [
+      '位於納瓦拉，以 Tempranillo 為主，1965 年獲 DO 認定',
+      '1980 年獲 DO 認定，Garnacha 主導，超過 2,000 公頃為老藤；Cierzo 北風是主要氣候特徵',
+      '薩拉戈薩省最古老 DO，以 Cariñena 品種命名，海拔達 800 公尺',
+      '與 Penedès 同屬加泰羅尼亞，以白葡萄 Macabeo 為主要品種',
+    ],
+    answer: 1,
+    explanation: 'Campo de Borja DO 於 1980 年認定，位於薩拉戈薩省西北部。Garnacha 老藤（30–50 年）是產區靈魂，Cierzo 強冷北風調節氣候。Borsao 等酒莊將其打造為阿拉貢精品 Garnacha 標竿。',
+  },
+  {
+    type: 'summary',
+    message: 'Campo de Borja DO 學習完成！',
+    keyPoints: [
+      '1980 年 DO，位於薩拉戈薩省西北部，7,600 公頃；「格納希帝國」美譽',
+      'Garnacha 佔種植面積逾 80%，2,000+ 公頃為 30–50 年老藤，展現複雜礦物感',
+      'Cierzo 強冷北風：減少病蟲害、乾燥環境、保存天然酸度',
+      '大陸型氣候：夏熱冬冷，年雨 350–400mm，海拔 250–700 公尺',
+      'Borsao 酒莊領頭，Crianza/Reserva Garnacha ≥ 50%，國際聲譽卓著',
+    ],
+  },
+]
+
+// ─── S2M4L7 — Cariñena DO ───────────────────────────────────────────────────
+const S2M4L7_slides = [
+  {
+    type: 'cover',
+    icon: '🪨',
+    gradient: 'linear-gradient(135deg, #4a0000, #b71c1c)',
+    title: 'Cariñena DO — 岩石之酒的誕生地',
+    subtitle: 'Level 2 · 1932 DO · 阿拉貢最古老最大產區',
+    points: [
+      { icon: '🪨', label: 'el vino de las piedras', text: '埃布羅河南岩石鵝卵石平原，被稱為「來自岩石的葡萄酒」，1932 年劃定 DO' },
+      { icon: '🍇', label: 'Cariñena 品種命名地', text: '紅色 Carignan 在法國極度著名的品種，即以此鎮命名，但目前 Garnacha 已取代其主導地位' },
+      { icon: '🌬️', label: 'Cierzo 北風保障', text: '強冷北風自然調節夏季高溫與保持低濕度，降低葡萄園病菌風害' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Cariñena DO 位置',
+    mapRegion: 'aragon',
+    geojsonUrl: '/spain/geojson/appellations/carinena.geojson',
+    description: '埃布羅河以南，加拉太尤特東北方，薩拉戈薩省。葡萄園 14,459 公頃，是阿拉貢最大且最古老的 DO 產區。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '風土、氣候與產區發展',
+    html: `
+      <p>Cariñena 於 <strong>1932 年</strong>正式劃定 DO，是阿拉貢最古老也是面積最大的 DO 產區。岩石與鵝卵石遂布平原讓當地葡萄酒獲得<strong>「el vino de las piedras」（來自岩石的葡萄酒）</strong>的美譽。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#ffebee;border-left:4px solid #b71c1c;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 氣候數據（大陸型）</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>夏季最高溫：<strong>40°C</strong>；冬季最低溫：<strong>−6°C</strong></li>
+            <li>年均降雨：<strong>380–450 mm</strong></li>
+            <li><strong>Cierzo 強冷北風</strong>：調節高溫、維持低濕度，減少病蟲害</li>
+          </ul>
+        </div>
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 地形與土壤</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>海拔：<strong>400–800 公尺</strong></li>
+            <li>主要為<strong>紅褐色石灰岩</strong>，底土多石（沖積土與米板岩）</li>
+            <li>遍布嚴岩石與鵝卵石——賦予葡萄酒礦物索蘭等石質尾韻</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>📊 產區規模</strong><br/>
+          14,459 公頃葡萄園；紅葡萄限產 8,500 kg/ha，白葡萄限產 9,000 kg/ha；2015 年產量達 1.09 億公斤
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Cariñena DO 葡萄品種',
+    items: [
+      {
+        icon: '🍇',
+        label: 'Garnacha Tinta（目前主導）',
+        desc: '對當地高溫乾燥環境適感最強，釀造濃醇、酒精度高（常超過 14%）的紅酒，已取代 Cariñena 成為產區主戴',
+        color: '#b71c1c',
+      },
+      {
+        icon: '🫐',
+        label: 'Cariñena（Mazuelo / Carignan）',
+        desc: '產區同名品種，即法國的 Carignan。具備高酸度、高單寧，適合混釀增加骨幹，在南法產區（如 Corbières 科比耶）提升複雜度',
+        color: '#4a148c',
+      },
+      {
+        icon: '🍊',
+        label: 'Juan Ibáñez（地方原生品種）',
+        desc: '阿拉貢規有原生紅品種，具欲深色、格談 extra 特性，在少數酒莊中用作旁小混釀成分增加風味多樣性',
+        color: '#880e4f',
+      },
+      {
+        icon: '🌿',
+        label: 'Macabeo（Viura）／ Moscatel de Alejandría',
+        desc: 'Macabeo 釀造乾白酒，清爽果香；Moscatel 用於甜型 Moscatels 和 mistelas，花香濃郁。面積內亦符合 Cava DO 氣泡酒標準。',
+        color: '#f9a825',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '關於 Cariñena DO，以下哪項最為準確？',
+    options: [
+      '是阿拉貢第二大產區，1980 年獲得 DO；主要甜型 Moscatel 甜酒',
+      '1932 年劃定 DO，阿拉貢最古老也是面積最大的 DO；Cariñena 葡萄品種即源自此鎮，但目前 Garnacha 是主導品種',
+      '被稱為「格納希帝國」，老藤藤齡超過 50 年為主要特色',
+      '僅產紅酒和粉紅酒，不適合釀造白酒或氣泡酒',
+    ],
+    answer: 1,
+    explanation: 'Cariñena DO 於 1932 年劃定，是阿拉貢最古老也是面積最大的 DO（超過 14,000 公頃）。Cariñena 葡萄品種即源自此鎮（即法國 Carignan），但目前 Garnacha 已取代成為主導品種。Cierzo 強冷北風調節氣候。產區也可生產符合 Cava DO 標準的氣泡酒。',
+  },
+  {
+    type: 'summary',
+    message: 'Cariñena DO 學習完成！',
+    keyPoints: [
+      '1932 年 DO，阿拉貢最古老也是面積最大產區（14,459 公頃）；被稱「el vino de las piedras」',
+      'Cariñena 葡萄品種命名產區（即法國 Carignan），但目前 Garnacha 已取代成為主導品種',
+      '大陸型：暑季 40°C／冬季 −6°C，年雨 380–450mm；Cierzo 北風降低病蟲害、調節溫度',
+      '紅褐色石灰岩＋岩石鵝卵石土壤，海拔 400–800 公尺',
+      '多樣酒型：橡木桶陳年紅酒（招牌）、乾白、Rosado、甜型 Moscatel，以及符合 Cava DO 的氣泡酒',
+    ],
+  },
+]
+
+// ─── S2M4L8 — Somontano DO ──────────────────────────────────────────────────
+const S2M4L8_slides = [
+  {
+    type: 'cover',
+    icon: '🏔️',
+    gradient: 'linear-gradient(135deg, #1a237e, #0d47a1)',
+    title: 'Somontano DO — 庇里牛斯山麓的歐陸融合',
+    subtitle: 'Level 2 · 1984 DO · 阿拉貢 · 韋斯卡省',
+    points: [
+      { icon: '🏔️', label: '山麓多元風土', text: '葡萄園海拔 350–1,000 公尺，庇里牛斯山腳下，年均日照 2,700 小時，年雨 500 mm' },
+      { icon: '🌍', label: '15 種品種共存', text: '同時種植 15 種本地與國際品種，是西班牙最具多樣性的 DO 之一' },
+      { icon: '✨', label: '優雅與結構並重', text: '酒款以清新輕盈、細膩感著稱，在西班牙酒界以創新與高品質聞名' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Somontano DO 位置',
+    mapRegion: 'aragon',
+    geojsonUrl: '/spain/geojson/appellations/somontano.geojson',
+    description: '阿拉貢自治區北部，韋斯卡省，埃布羅河谷北側。「Somontano」在阿拉貢語意為「山麓」（sotto il monte），葡萄園約 4,040 公頃。',
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '風土條件與產區特色',
+    html: `
+      <p>Somontano DO 於 <strong>1984 年</strong>獲得認定，位於阿拉貢庇里牛斯山脈（Aragonese Pyrenees）山腳下，海拔 <strong>350–1,000 公尺</strong>，融合山地涼爽與河谷溫暖，釀造出優雅且結構感強的葡萄酒。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌡️ 氣候數據</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>年均降雨：<strong>500 mm</strong>（高於阿拉貢南部，葡萄園自然缺水壓力適中）</li>
+            <li>年均日照：<strong>2,700 小時</strong>（充沛光照確保果實成熟）</li>
+            <li>夏季極端最高溫：<strong>約 26.63°C</strong>；冬季極端最低溫：<strong>約 −0.85°C</strong></li>
+            <li>山地影響帶來較大日夜溫差，有利保留葡萄天然酸度與細緻香氣</li>
+          </ul>
+        </div>
+        <div style="background:#e8eaf6;border-left:4px solid #3949ab;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪨 土壤特性</strong>
+          <ul style="margin:6px 0 0;padding-left:18px">
+            <li>主要為<strong>覆蓋在柔軟物質上的褐色石灰岩土</strong></li>
+            <li>低肥力、含適量石灰質、透水性佳，衛生條件良好</li>
+            <li>有利生產高品質、高複雜度葡萄酒</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>📊 產區規模</strong><br/>
+          種植面積：<strong>4,040 公頃</strong>；紅葡萄限產 8,000 kg/ha，白葡萄 9,000 kg/ha；2015 年總產量約 124,831 hl
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Somontano DO 15 種葡萄品種',
+    items: [
+      {
+        icon: '🍷',
+        label: '國際紅品種',
+        desc: 'Cabernet Sauvignon、Merlot、Syrah、Pinot Noir——少見 Pinot Noir 在西班牙成功落地，Somontano 涼爽山地氣候使其成為優勢',
+        color: '#b71c1c',
+      },
+      {
+        icon: '🫐',
+        label: '本地紅品種',
+        desc: 'Tempranillo、Garnacha——西班牙本土支柱；Moristel（Juan Ibáñez）與 Parraleta——阿拉貢原生珍稀品種，賦予酒款地方特色',
+        color: '#4a148c',
+      },
+      {
+        icon: '🌿',
+        label: '國際白品種',
+        desc: 'Chardonnay（最受歡迎）、Gewürztraminer（Somontano 招牌，花香濃郁）、Sauvignon Blanc、Riesling——高緯度白品種在山地氣候中表現出色',
+        color: '#1a237e',
+      },
+      {
+        icon: '🌾',
+        label: '本地白品種',
+        desc: 'Macabeo（Viura）——西班牙傳統白品種；Garnacha Blanca、Alcañón（阿拉貢原生珍稀白品種，幾乎只在 Somontano 種植）',
+        color: '#f57f17',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '關於 Somontano DO，以下哪項描述最為準確？',
+    options: [
+      '位於薩拉戈薩省，海拔極低，以 Garnacha 老藤為主，1932 年獲 DO 認定',
+      '1984 年獲 DO 認定，位於韋斯卡省庇里牛斯山麓；同時種植約 15 種品種，包含 Gewürztraminer 與 Alcañón 等珍稀品種',
+      '與 Campo de Borja 同屬薩拉戈薩省，以 Cariñena 及 Garnacha 為主要品種',
+      '主要以 Tempranillo 單一品種釀造，風格類似 Rioja Crianza',
+    ],
+    answer: 1,
+    explanation: 'Somontano DO 於 1984 年獲得認定，位於韋斯卡省，阿拉貢庇里牛斯山脈山腳下，海拔 350–1,000 公尺。產區特色是同時種植約 15 種本地與國際品種（罕見的 Gewürztraminer、Alcañón、Parraleta），以清新輕盈、細膩度著稱，是西班牙創新精神的代表性 DO。',
+  },
+  {
+    type: 'summary',
+    message: 'Somontano DO 學習完成！',
+    keyPoints: [
+      '1984 年 DO，位於韋斯卡省庇里牛斯山麓，4,040 公頃；「Somontano」意為「山麓」',
+      '氣候溫和：年雨 500mm、日照 2,700 小時，夏季最高 26.63°C，山地日夜溫差保留細膩香氣',
+      '褐色石灰岩土，低肥力透水佳，有利高品質釀造',
+      '15 種品種共存：Gewürztraminer、Alcañón、Parraleta 等珍稀品種為產區獨有特色',
+      '酒款以清新輕盈、優雅細膩著稱；當地果農與酒莊共同努力，國內外市場均獲高度評價',
     ],
   },
 ]
@@ -5329,6 +6678,12 @@ const SLIDE_MAP = {
   S2M1L5: S2M1L5_slides,     // Arlanza DO / Albillo
   S2M1L6: S2M1L6_slides,     // Arribes DO / Juan García
   S2M1L7: S2M1L7_slides,     // Cigales DO / Garnacha Gris
+  S2M1L8: S2M1L8_slides,     // Tierra de León DO / Prieto Picudo
+  S2M1L9: S2M1L9_slides,     // Tierra del Vino de Zamora / Malvasía Fina
+  S2M1L10: S2M1L10_slides,   // Toro DO / Tinta de Toro
+  S2M1L11: S2M1L11_slides,   // Sierra de Salamanca VC / Rufete
+  S2M1L12: S2M1L12_slides,   // Valles de Benavente VC
+  S2M1L13: S2M1L13_slides,   // Valtiendas VC / Tempranillo / Albillo
   S2M2L1: S2M2L1_slides,     // Rías Baixas / Albariño
   S2M2L2: S2M2L2_slides,     // Ribeiro / Valdeorras / Ribeira Sacra
   S2M2L3: S2M2L3_slides,     // 大西洋氣候與花崗岩土壤
@@ -5336,10 +6691,15 @@ const SLIDE_MAP = {
   S2M3L1: S2M3L1_slides,     // Priorat DOCa
   S2M3L2: S2M3L2_slides,     // Montsant / Terra Alta / Empordà
   S2M3L3: S2M3L3_slides,     // Penedès / 白酒革命
+  S2M3L4: S2M3L4_slides,     // Alella DO / 花崗岩芳香白酒
   S2M4L1: S2M4L1_slides,     // Jerez / Sherry 入門
   S2M4L2: S2M4L2_slides,     // Jumilla & Yecla / Monastrell
   S2M4L3: S2M4L3_slides,     // Utiel-Requena / Bobal
   S2M4L4: S2M4L4_slides,     // Canarias / 火山古藤
+  S2M4L5: S2M4L5_slides,     // Calatayud DO / Garnacha 老藤
+  S2M4L6: S2M4L6_slides,     // Campo de Borja DO / 格納希帝國
+  S2M4L7: S2M4L7_slides,     // Cariñena DO / 岩石之酒
+  S2M4L8: S2M4L8_slides,     // Somontano DO / 庇里牛斯山麓多元風土
   S2FinalExam: S2FinalExam_slides,
   // ── Level 3（完整）──────────────────────────────────────────
   // 第一章：橡木桶與釀造工藝

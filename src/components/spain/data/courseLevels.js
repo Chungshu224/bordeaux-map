@@ -92,6 +92,12 @@ export const courseLevels = {
           { id: 'S2M1L5', title: 'Arlanza DO — 河谷高海拔古老產區（Albillo）' },
           { id: 'S2M1L6', title: 'Arribes DO — 杜羅河峽谷原生品種（Juan García）' },
           { id: 'S2M1L7', title: 'Cigales DO — 粉紅酒傳統與 Garnacha Gris' },
+          { id: 'S2M1L8', title: 'Tierra de León DO — 原生品種 Prieto Picudo' },
+          { id: 'S2M1L9', title: 'Tierra del Vino de Zamora DO — Malvasía Fina 白酒' },
+          { id: 'S2M1L10', title: 'Toro DO — Tinta de Toro 豪邁強勁紅酒' },
+          { id: 'S2M1L11', title: 'Sierra de Salamanca VC — UNESCO 生物圈保護區的 Rufete 原生品種' },
+          { id: 'S2M1L12', title: 'Valles de Benavente VC — 薩莫拉省北部高原砂質風土' },
+          { id: 'S2M1L13', title: 'Valtiendas VC — 杜拉通河白堊高原（海拔 920m）' },
         ],
       },
       {
@@ -111,6 +117,7 @@ export const courseLevels = {
           { id: 'S2M3L1', title: 'Priorat（DOCa）— 板岩 Llicorella 的奇蹟' },
           { id: 'S2M3L2', title: 'Montsant · Terra Alta · Empordà' },
           { id: 'S2M3L3', title: 'Penedès — 現代西班牙白酒革命' },
+          { id: 'S2M3L4', title: 'Alella DO — 巴塞隆那海岸的芳香白酒（Pansà Blanca）' },
         ],
       },
       {
@@ -120,7 +127,11 @@ export const courseLevels = {
           { id: 'S2M4L1', title: 'Jerez — Sherry 雪莉酒入門' },
           { id: 'S2M4L2', title: 'Jumilla & Yecla — Monastrell 老藤' },
           { id: 'S2M4L3', title: 'Utiel-Requena — Bobal 的崛起' },
-          { id: 'S2M4L4', title: 'Canarias — 火山島古藤葡萄酒' },
+          { id: 'S2M4L4', title: 'Canarias — 火山峳古藤葡萄酒' },
+          { id: 'S2M4L5', title: 'Calatayud DO — 阿拉貢 Garnacha 老藤的王者' },
+          { id: 'S2M4L6', title: 'Campo de Borja DO — 格納希帝國' },
+          { id: 'S2M4L7', title: 'Cariñena DO — 岩石之酒的誕生地（1932 DO）' },
+          { id: 'S2M4L8', title: 'Somontano DO — 庇里牛斯山麓的歐陸融合（1984 DO）' },
         ],
       },
       {

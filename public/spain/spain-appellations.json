@@ -3,26 +3,51 @@
     "zonName": "Vino de Rioja",
     "autonomia": "拉里奧哈",
     "autonomiaId": "rioja",
+    "doYear": 1991,
+    "classification": "DOCa",
+    "nickname": "Spain's most famous fine wine region",
+    "mainRiver": "埃布羅河（Ebro River）——西班牙最強大河流，產區命名則來自支流 Río Oja",
+    "mountains": ["Sierra Cantabria", "Sierra Demanda"],
+    "subRegions": [
+      {
+        "name": "Rioja Alta",
+        "climate": "大西洋與地中海氣候交化，較涼爽",
+        "soil": "黏土石灰岩、深層沖積土或含鐵質黏土",
+        "style": "優雅、高酸度、極佳陳年潛力，Rioja 的「核心」"
+      },
+      {
+        "name": "Rioja Alavesa",
+        "climate": "大西洋氣候為主，Sierra Cantabria 山脈屏障保護",
+        "soil": "白色石灰質黏土（Calcareous Clay）",
+        "style": "比 Rioja Alta 更輕盈清新、細膩香氣，適合年輕飲用也具備優質陳年實力"
+      },
+      {
+        "name": "Rioja Oriental",
+        "climate": "地中海氣候影響深，產區中最炎熱且乾燥",
+        "soil": "沖積土與含鐵黏土，土色紅棕",
+        "style": "Garnacha 表現卓越，酒體更飽滿、酒精含量較高、果味濃郁，酸度相對較低"
+      }
+    ],
     "styles": [
-      "紅酒",
+      "紅酒（主要名聲）",
       "白酒",
       "粉紅酒"
     ],
     "grapes": [
-      "Tempranillo",
+      "Tempranillo（品種之王）",
       "Garnacha",
+      "Mazuelo（Cariñena）",
       "Graciano",
-      "Mazuelo",
-      "Viura",
-      "Malvasía"
+      "Viura（Macabeo）",
+      "Malvasía",
+      "Tempranillo Blanco、Maturána 等新鑑定本地品種"
     ],
-    "description": "西班牙唯二 DOCa 認證產區，以橡木桶陳年 Tempranillo 聞名。依陳年時間分為 Joven、Crianza、Reserva、Gran Reserva，各有不同風味層次。產區橫跨拉里奧哈、阿拉瓦和納瓦拉，是西班牙最具代表性的紅酒產區。",
+    "description": "西班牙最著名的優質葡萄酒產區，1991 年取得 DOCa 認定。命名來自支流 Río Oja，但最重要的河流是埃布羅河（Ebro）——在 Sierra Cantabria 與 Sierra Demanda 兩山之間雕琢出葡萄園地形。Tempranillo 為品種之王，大部分聲譽就建立在卓越紅酒上。三子產區各具特色：Rioja Alta（優雅高酸）、Rioja Alavesa（輕盈精緻）、Rioja Oriental（飽滿地中海式）。",
     "provinces": [
       "La Rioja",
       "Alava",
       "Navarre"
-    ],
-    "classification": "DOCa"
+    ]
   },
   {
     "zonName": "Priorato",
@@ -49,18 +74,27 @@
     "zonName": "Ribera del Duero",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "doYear": 1982,
+    "nameTranslation": "杜羅河兩岸",
     "styles": [
       "紅酒",
       "白酒",
       "粉紅酒"
     ],
     "grapes": [
-      "Tempranillo (Tinto Fino)",
+      "Tempranillo (Tinto Fino / Tinta del País)",
       "Cabernet Sauvignon",
+      "Malbec",
       "Merlot",
-      "Garnacha"
+      "Garnacha",
+      "Albillo (白葡萄，唯一法定)"
     ],
-    "description": "西班牙最受矚目的紅酒重鎮，海拔 700–1000 公尺的大陸性氣候，以 Tinto Fino（Tempranillo）著稱，頂級酒莊如 Vega Sicilia、Pingus 聞名全球。日夜溫差大，賦予葡萄優異的酸度與結構。",
+    "elevation": "750–1000 公尺",
+    "area": 22040,
+    "soilTypes": 32,
+    "climateNote": "極端大陸型氣候，夏季最高達 42°C，冬季最低 -20°C，日夜溫差賦予粉塵感結構（dusty structure）",
+    "notableEstates": ["Vega Sicilia", "Pingus", "Pesquera"],
+    "description": "西班牙最受矚目的紅酒重鎮，1982 年建區，名稱意為「杜羅河兩岸」。葡萄園位於海拔 750–1000 公尺的高原，擁有 32 種土壤類型（第三紀沉積物：砂質、粘土、石灰岩、泥灰岩）。極端大陸型氣候造就夏季 42°C 高溫與冬季 -20°C 嚴寒；日夜溫差使 Tinto Fino（Tempranillo）果香豐富、酸度鮮活，並發展出獨特的粉塵感結構。傳奇酒莊 Vega Sicilia、Pingus、Pesquera 聞名全球，頂級酒款陳年潛力可達數十年。",
     "provinces": [
       "Burgos",
       "Valladolid",
@@ -204,15 +238,27 @@
     "zonName": "Rueda",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "doYear": 1980,
+    "elevation": "700–800 公尺",
+    "whiteGrapePct": 95,
+    "soilType": "Cascajosos（砻石地）——富鎈鈐與鏡，有機質含量低，排水通風極佳",
+    "keyTowns": ["La Seca", "Rueda", "Serrada", "Medina del Campo"],
+    "climateNote": "大陸型氣候（高海拔修正）：夏季均温 23°C，冬季均温 -3°C；年隨 318mm，日照 2600 小時",
     "styles": [
-      "白酒"
+      "白酒",
+      "氣泡酒"
     ],
     "grapes": [
-      "Verdejo",
-      "Viura",
-      "Sauvignon Blanc"
+      "Verdejo（主導白品種，過 95%）",
+      "Sauvignon Blanc",
+      "Viura（Macabeo）",
+      "Palomino Fino",
+      "Tempranillo（紅）",
+      "Cabernet Sauvignon（紅）",
+      "Merlot（紅）",
+      "Garnacha（紅）"
     ],
-    "description": "卡斯提亞高原上的白酒精品產區，Verdejo 是主角，擁有濃郁的杏桃、茴香香氣與爽口酸度，是全西班牙最暢銷的本土白酒之一。",
+    "description": "杭羅河谷白酒精品產區，海拔 700–800 公尺。產區 95% 為白葡萄，以原生品種 Verdejo 主導：其在魯埃達种植已超達數世紀，可湯源至 11 世紀阿方根3六世時期，據信由摩爾人自北非引入。Verdejo 具備獨特草本氣息、青檟、哈密瓜、蒸菨葡萄柚皮、茎香與白桃風味，酸度中高，結尾的微苦感（bitter touch）是高品質魯埃達白酒的識別標誌。Cascajosos 砻石土壤排水通風極佳，日照時長達 2,600 小時。",
     "provinces": [
       "Valladolid",
       "Segovia",
@@ -224,14 +270,21 @@
     "zonName": "Toro",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "nameTranslation": "托羅",
+    "area": 5550,
+    "elevation": "650–825公尺",
+    "climateNote": "極端乾燥大陸型氣候：夏季最高 40°C、冬季最低 -10°C，年均降雨 300–400mm，日照 2,600–3,000 小時",
+    "soilType": "南部：沖積土或黏土上的砂質土（根瘤蚜保護）；東北部：含有石灰岩",
+    "agingPotential": { "young": "2年", "crianza": "5–9年", "reserva": "13年", "granReserva": "20年" },
+    "serving": { "tempC": "16–20", "decantMin": 60, "glass": "Universal" },
     "styles": [
       "紅酒"
     ],
     "grapes": [
-      "Tinta de Toro (Tempranillo)",
+      "Tinta de Toro（Tempranillo 變種，核心紅品種）",
       "Garnacha"
     ],
-    "description": "薩莫拉省的豪邁紅酒產地，古老的 Tinta de Toro（Tempranillo）老藤生長在沙質貧瘠土壤，產出酒體強勁、顏色深郁的紅酒，陳年潛力出色。",
+    "description": "薩莫拉省的豪邁紅酒產地，歷史可追溯至中世紀。Tinta de Toro（Tempranillo 本地變種）老藤生長在 650–825 公尺的砂質貧瘠土壤，釀出酒體強勁、顏色深郁的紅酒：櫻桃、無花果乾、雪松、菸草與蒔蘿香氣，酒精 13.5–15%，特級珍藏陳年潛力達 20 年。建議 16–20°C 侍酒、醒酒 1 小時。",
     "provinces": [
       "Zamora",
       "Valladolid"
@@ -333,18 +386,35 @@
     "zonName": "Somontano",
     "autonomia": "阿拉貢",
     "autonomiaId": "aragon",
+    "doYear": 1984,
+    "area": 4040,
+    "elevation": "350–1,000 公尺",
+    "climateNote": "温和型：年均降雨 500mm、日照 2,700 小時，夏季最高 26.63°C、冬季最低 −0.85°C；山地日夜溫差保留香氣細膜感",
+    "soilType": "覆蓋在柔軟物質上的褐色石灯岩土，低肥力、透水性佳、含適量石灯質，士壤衣生條件良好",
+    "yieldLimit": { "紅葡萄": "8,000kg/ha", "白葡萄": "9,000kg/ha" },
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Tempranillo",
       "Cabernet Sauvignon",
       "Merlot",
+      "Tempranillo",
+      "Syrah",
+      "Garnacha",
+      "Moristel（Juan Ibáñez）",
+      "Parraleta（阿拉貢原生品種）",
+      "Pinot Noir",
       "Chardonnay",
-      "Gewürztraminer"
+      "Gewürztraminer",
+      "Macabeo",
+      "Sauvignon Blanc",
+      "Garnacha Blanca",
+      "Riesling",
+      "Alcañón（阿拉貢原生白品種）"
     ],
-    "description": "庇里牛斯山麓的多元產區，融合 Tempranillo、Garnacha 等本土品種與 Cabernet Sauvignon、Merlot 等國際品種，現代酒莊林立，在西班牙酒界以創新聞名。",
+    "description": "1984 年獲得 DO，位於韋斯卡省，阿拉貢庇里牛斯山脈山腳（1984 DO）。同時种植 15 種本地與國際品種，包含罕見的 Gewürztraminer、Alcañón與 Parraleta。海拔 350–1,000 公尺，年雨 500mm、日照 2,700 小時，酒款以清新輕盈、優雅細致著稱。",
     "provinces": [
       "Huesca"
     ],
@@ -625,21 +695,27 @@
     "zonName": "Alella",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "classification": "DO",
+    "soilType": "花崗岩（granite）為主，排水良好、低肥力",
+    "climateNote": "緊鄰海岸，地中海溫暖海風調節，氣候溫和；海拔高度是定義酒款風格的關鍵因素",
+    "coreGrape": "Pansà Blanca（即 Cava 產區的 Xarel·lo）",
     "styles": [
-      "白酒",
+      "白酒（主要名聲，芳香型）",
       "紅酒",
       "氣泡酒"
     ],
     "grapes": [
-      "Xarel·lo (Pansa Blanca)",
-      "Garnacha Blanca",
-      "Chardonnay"
+      "Pansà Blanca（Xarel·lo）——核心白品種",
+      "Chardonnay",
+      "Garnacha",
+      "Ull de Llebre（Tempranillo）",
+      "Merlot",
+      "Monastrell"
     ],
-    "description": "緊鄰巴塞隆那的小型產區，以花崗岩土壤和 Xarel·lo（Pansa Blanca）白酒著稱，都市化壓力使產區面積持續縮小。",
+    "description": "緊鄰巴塞隆那海岸的精緻小型 DO 產區，以花崗岩土壤和 Pansà Blanca（即 Xarel·lo）白酒著稱。地中海溫暖海風帶來溫和氣候，海拔高度定義酒款風格。白酒以芳香、有表現力、帶花香且口感清脆聞名。都市化壓力使產區面積持續縮小，但維持高品質小農精品路線。",
     "provinces": [
       "Barcelona"
-    ],
-    "classification": "DO"
+    ]
   },
   {
     "zonName": "Montsant",
@@ -1186,15 +1262,30 @@
     "zonName": "Tierra de León",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "doYear": 2007,
+    "elevation": "750–800 公尺",
+    "area": 1413,
+    "climateNote": "大陸型氣候：夏季最高 30–35°C，冬季最低 -10°C；年均降雨 500mm，日照 2,700 小時",
+    "soilType": "沖積階地上的褐色岩石沉積物與軟質石灰岩，排水通風極佳，礦物質與有機質含量較低",
+    "keyRivers": ["Esla", "Cea"],
+    "wineHistory": "釀酒歷史可追溯至古羅馬時代，2007 年正式獲得 DO 地位",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Prieto Picudo",
-      "Albarín"
+      "Prieto Picudo（標誌性原生紅品種）",
+      "Mencía",
+      "Tempranillo",
+      "Garnacha",
+      "Albarín（特色白品種）",
+      "Verdejo",
+      "Godello",
+      "Malvasía",
+      "Palomino"
     ],
-    "description": "萊昂省葡萄酒產區，以本地品種 Prieto Picudo（深黑色葡萄）著稱，可釀製從粉紅酒到深紅酒等多種風格，Albarín 白酒也很有特色。",
+    "description": "雷昂之地 DO，2007 年建區但釀酒史可溯至古羅馬。主預埃斯拉河與塞阿河谷地，海拔 750–800 公尺，葡萄園面積 1,413 公頃。標誌性品種為極罕見的原生紅品種 Prieto Picudo（意為「深色緊造」）：紅酒顯色深邃、單寧充足、酸度良好，帶有紅醋栗、黑莓、甘草與礦物感；粉紅酒輕盈馥香，草莓、覆盆子、桃子與花香豐富。Albarín 是產區特色白品種。",
     "provinces": [
       "Leon",
       "Palencia"
@@ -1205,14 +1296,26 @@
     "zonName": "Tierra del Vino de Zamora",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "doYear": 2007,
+    "nameTranslation": "葡萄酒之地",
+    "area": 633,
+    "totalAreaKm2": 1799,
+    "municipalityCount": 56,
+    "elevation": "700–900 公尺（平均約 750 公尺）",
+    "keyRivers": ["Duero", "Valderaduey", "Guareña", "Valparaíso", "Ribera de Campeán"],
+    "climateNote": "極端乾性大陸型氣候：夏季平均最高 23°C，冬季最低 -11°C；年均降雨不足 400mm，日照超過 2,800 小時",
+    "soilType": "沖積土（表土深厚、滲透性佳、持水力強）；底層富含黏土；平原多砂質，山坡與山頂多礫石與卵石",
     "styles": [
-      "紅酒"
+      "紅酒",
+      "白酒"
     ],
     "grapes": [
-      "Tempranillo (Juan García)",
-      "Garnacha"
+      "Tempranillo（主導紅品種）",
+      "Malvasía Fina（明星白品種）",
+      "Moscatel de Grano Menudo",
+      "Verdejo"
     ],
-    "description": "薩莫拉省杜羅河南岸小型產區，與 Toro 相似的 Tempranillo 表達，但風格稍輕，2007 年升格 DO。",
+    "description": "葡萄酒之地 DO，2007 年升格。位於薩莫拉省東南部，橫跨杜羅河兩岸，涵蓋 56 個市鎮、633 公頃。海拔 700–900 公尺，極端乾性大陸型氣候，年雨不足 400mm、日照超 2,800 小時。深厚沖積土賦予卓越陳年潛力。核心紅品種為 Tempranillo（風格比 Toro 稍輕）；明星白品種 Malvasía Fina 帶有白桃、野花、綠杏仁、羅勒與海貝殼香氣，酒精 13.5–15%，陳年潛力超 10 年。",
     "provinces": [
       "Zamora",
       "Salamanca"
@@ -1262,16 +1365,31 @@
     "zonName": "Calatayud",
     "autonomia": "阿拉貢",
     "autonomiaId": "aragon",
+    "doYear": 1990,
+    "area": 3500,
+    "elevation": "最高至 800 公尺（Sierra de la Virgen 山脈南向坡）",
+    "climateNote": "大陸型：平均氣溫 13.5°C，年均降雨 350mm，日照 2,700 小時；夏季極熱乾燥，冬季極寒（霜害威脅長達半年以上）",
+    "soilType": "多樣土壤：石灰岩、灰紅米板岩、黏土、壤土、石膏與鵝卵石；鬆散、多石、排水良好",
+    "yieldLimit": { "紅葡萄": "7,000kg/ha", "白葡萄": "8,000kg/ha", "老藤": "4,500kg/ha" },
+    "superiorCategory": "Calatayud Superior：Garnacha 老藤（藤齡≥ 50 年），產量≤ 3,500kg/ha",
     "styles": [
       "紅酒",
+      "粉紅酒",
       "白酒"
     ],
     "grapes": [
-      "Garnacha",
+      "Garnacha（靈魂品種，佔種植面積 75%）",
       "Tempranillo",
-      "Cariñena"
+      "Mazuelo（Carignan）",
+      "Syrah",
+      "Bobal",
+      "Monastrell",
+      "Macabeo（Viura）",
+      "Malvasía",
+      "Chardonnay",
+      "Garnacha Blanca"
     ],
-    "description": "薩拉戈薩省的老藤 Garnacha 代表產區，海拔超過 900 公尺，部分老藤樹齡逾百年，釀出西班牙最物超所值的優質 Garnacha 紅酒。",
+    "description": "阿拉貢直轄市薩拉戈薩省 DO（1990 年），阿拉貢內僅次於 Cariñena 的第二大優質產區。3,500 公頃葡萄園位於 Sierra de la Virgen 山脈南向坡，最高海拔 800 公尺。Garnacha 佔種植面積 75%，釀造酒體宏大、風味大膽的紅酒；特優分類 Calatayud Superior 需由藤齡≥ 50 年 Garnacha 老藤釀造，產量限 3,500 kg/ha，是阿拉貢地區最具收藏價值的少量結構起作。",
     "provinces": [
       "Zaragoza"
     ],
@@ -1300,16 +1418,35 @@
     "zonName": "Cariñena",
     "autonomia": "阿拉貢",
     "autonomiaId": "aragon",
+    "doYear": 1932,
+    "area": 14459,
+    "nickname": "el vino de las piedras（來自岩石的葡萄酒）",
+    "elevation": "400–800 公尺",
+    "climateNote": "大陸型：夏季最高 40°C、冬季最低 -6°C，年均降雨 380–450mm， Cierzo 強冷北風調節夏季高溫與保持低濕度",
+    "soilType": "紅褐色石灯岩为主，底土多石（沖積土與米板岩），遇布岩石與鵝塶石",
+    "yieldLimit": { "紅葡萄": "8,500kg/ha", "白葡萄": "9,000kg/ha" },
     "styles": [
       "紅酒",
-      "白酒"
+      "粉紅酒",
+      "白酒",
+      "氣泡酒(Cava DO)",
+      "甜酒"
     ],
     "grapes": [
-      "Garnacha",
-      "Cariñena (Mazuelo)",
-      "Tempranillo"
+      "Garnacha Tinta（目前最受歡迎的品種）",
+      "Juan Ibáñez",
+      "Cariñena（Mazuelo，產區同名品種）",
+      "Tempranillo",
+      "Cabernet Sauvignon",
+      "Merlot",
+      "Syrah",
+      "Macabeo（Viura）",
+      "Chardonnay",
+      "Garnacha Blanca",
+      "Moscatel de Alejandría",
+      "Parellada"
     ],
-    "description": "薩拉戈薩省最古老的 DO 產區，Cariñena 葡萄（Carignan）原產於此，現以 Garnacha 為主，出產濃烈、飽滿且性價比突出的紅酒。",
+    "description": "阿拉貢最古老的 DO 產區（1932 年划定），也是最大的 DO〃4,459 公頃葡萄園布於埃布羅河南岩石鵝塶石平原，被稱為「el vino de las piedras（來自岩石的葡萄酒）」。Cariñena 葡萄品種即源自此，但目前 Garnacha 已成為主戴。 Cierzo 強冷北風調節御影。產區正從大鈇式散裝轉向精品酒莊主導的品質貣認時代。",
     "provinces": [
       "Zaragoza"
     ],
@@ -1789,15 +1926,28 @@
     "zonName": "Sierra de Salamanca",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "nameTranslation": "薩拉曼卡山脈",
+    "protectedSince": 2010,
+    "area": 90.33,
+    "elevation": "400–1,000公尺",
+    "climateNote": "大西洋影響型：夏 24°C / 冬 0°C，年均降雨 1,400mm（杜羅河谷最豐沛產區之一）",
+    "soilType": "花崗岩與板岩（Granite-Slate），梯田葡萄園",
+    "keyMunicipalities": ["Cepeda", "Miranda del Castañar", "Mogarraz"],
+    "unescoReserve": "2006年列為生物圈保護區；部分區域位於 Las Batuecas – Sierra de Francia 自然公園",
+    "activeProducers": 6,
     "styles": [
       "紅酒",
       "白酒"
     ],
     "grapes": [
-      "Rufete",
-      "Malvasía Castellana"
+      "Rufete（核心原生紅品種，又稱 Tinta Pinheira）",
+      "Garnacha Tinta",
+      "Tempranillo",
+      "Viura",
+      "Moscatel de Grano Menudo",
+      "Palomino"
     ],
-    "description": "薩拉曼卡山地 Vino de Calidad，本地品種 Rufete。",
+    "description": "薩拉曼卡省南部 Vino de Calidad（2010年起受保護），梯田葡萄園海拔 400–1,000 公尺，全境為 UNESCO 生物圈保護區。核心原生品種 Rufete（Tinta Pinheira）釀出酒體飽滿、李子・鹹鮮大地・充足單寧的陳年紅酒；年均降雨 1,400mm 為杜羅河谷最豐沛，賦予葡萄天然酸度。由六家堅守原生品種的酒莊共同維護，面積雖僅 90 公頃，水準卻深受矚目。",
     "provinces": [
       "Salamanca"
     ],
@@ -1807,13 +1957,26 @@
     "zonName": "Valtiendas",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "nameTranslation": "瓦爾蒂恩達斯",
+    "protectedSince": 2004,
+    "area": 170,
+    "elevation": "920公尺（杜羅河谷平均 750 公尺以上）",
+    "climateNote": "極端乾燥大陸型：夏季 >35°C、冬季 -15°C，年均日照 3,000 小時，年均降雨 462mm",
+    "soilType": "鈣質土含高濃度白堊（Chalk），地表覆蓋滾石（Rolling stones）",
+    "keyRiver": "Duratón River（杜拉通河）",
     "styles": [
-      "紅酒"
+      "紅酒",
+      "白酒"
     ],
     "grapes": [
-      "Tempranillo"
+      "Tempranillo（核心紅品種）",
+      "Cabernet Sauvignon",
+      "Merlot",
+      "Syrah",
+      "Garnacha",
+      "Albillo（唯一法定白品種）"
     ],
-    "description": "塞哥維亞省 Valtiendas Vino de Calidad。",
+    "description": "塞哥維亞省北部 Vino de Calidad（2004 年成立），環繞杜拉通河荒野，海拔 920 公尺。鈣質白堊土＋地表滾石，170 公頃葡萄園。年日照 3,000 小時、年雨 462mm，極端溫差使葡萄熟成緩慢、產量低，賦予複雜結構與細膩層次。核心紅品種 Tempranillo，另有 Cabernet Sauvignon、Merlot、Syrah、Garnacha；唯一法定白品種 Albillo。",
     "provinces": [
       "Segovia"
     ],
@@ -1823,14 +1986,23 @@
     "zonName": "Valles de Benavente",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "nameTranslation": "貝納文特山谷",
+    "area": 361,
+    "elevation": "高原地帶（薩莫拉省北部）",
+    "climateNote": "極端乾燥大陸型氣候：夏季最高 40°C、冬季最低 -15°C，年均降雨 350–500mm，日照 2,800 小時",
+    "soilType": "砂質土壤（肥沃度低，排水與通風極佳）",
     "styles": [
-      "紅酒"
+      "紅酒",
+      "白酒"
     ],
     "grapes": [
-      "Tempranillo",
-      "Prieto Picudo"
+      "Tempranillo（核心紅品種）",
+      "Prieto Picudo（核心紅品種）",
+      "Mencía",
+      "Verdejo（核心白品種）",
+      "Malvasía"
     ],
-    "description": "薩莫拉省 Valles de Benavente Vino de Calidad。",
+    "description": "薩莫拉省北部 Vino de Calidad（品質葡萄酒 VC），分級僅次於 DO。361 公頃葡萄園分布於高原砂質土壤，極端大陸型氣候：40°C/-15°C、年雨 350–500mm、日照 2,800 小時。以 Tempranillo、Prieto Picudo、Mencía 釀造富有地方特色的紅酒，Verdejo 與 Malvasía 作為白品種補充。",
     "provinces": [
       "Zamora"
     ],
