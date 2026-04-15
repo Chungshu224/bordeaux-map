@@ -198,27 +198,48 @@
     </div>
     </transition>
 
+    <!-- 圖層面板──浮動 -->
+    <transition name="slide-up">
+      <div v-if="showLayerPanel" class="mobile-layer-panel">
+        <div class="layers-panel-header">
+          <span>圖層與顯示</span>
+          <button class="layers-panel-close" @click="showLayerPanel = false">✕</button>
+        </div>
+        <div class="layer-group">
+          <div class="layer-group-label">視角</div>
+          <div class="layer-group-buttons">
+            <button class="btn-layer"
+              :class="{ active: contoursEnabled, locked: !canAccessTier('premium') }"
+              @click="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')">
+              <span class="lbtn-icon">〰</span>
+              <span class="lbtn-text">等高線<span v-if="!canAccessTier('premium')"> 🔒</span></span>
+              <span class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
+            </button>
+            <button class="btn-layer"
+              :class="{ active: climateEnabled, locked: !canAccessTier('premium') }"
+              @click="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')">
+              <span class="lbtn-icon">🌡</span>
+              <span class="lbtn-text">氣候熱力<span v-if="!canAccessTier('premium')"> 🔒</span></span>
+              <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </transition>
+
     <!-- 底部工具列 -->
-    <div v-if="mapReady" class="mobile-grid-buttons mobile-grid-5">
-      <button class="m-grid-btn" :class="{ active: drawerOpen }" @click="drawerOpen = !drawerOpen">
+    <div v-if="mapReady" class="mobile-grid-buttons">
+      <button class="m-grid-btn" :class="{ active: drawerOpen }" @click="drawerOpen = !drawerOpen; showLayerPanel = false">
         <span class="m-grid-icon">產</span>
         <span class="m-grid-text">產區</span>
+      </button>
+      <button class="m-grid-btn" :class="{ active: showLayerPanel }" @click="showLayerPanel = !showLayerPanel; drawerOpen = false">
+        <span class="m-grid-icon">層</span>
+        <span class="m-grid-text">圖層</span>
       </button>
       <button class="m-grid-btn" :class="{ active: is3D }" @click="toggle3D">
         <span class="m-grid-icon">3D</span>
         <span class="m-grid-text">{{ is3D ? '2D' : '3D' }}</span>
-      </button>
-      <button class="m-grid-btn"
-        :class="{ active: contoursEnabled, locked: !canAccessTier('premium') }"
-        @click="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')">
-        <span class="m-grid-icon">〰</span>
-        <span class="m-grid-text">等高線<span v-if="!canAccessTier('premium')">🔒</span></span>
-      </button>
-      <button class="m-grid-btn"
-        :class="{ active: climateEnabled, locked: !canAccessTier('premium') }"
-        @click="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')">
-        <span class="m-grid-icon">🌡</span>
-        <span class="m-grid-text">氣候<span v-if="!canAccessTier('premium')">🔒</span></span>
       </button>
       <button class="m-grid-btn" :class="{ active: activeInfo && !infoCollapsed }" @click="toggleInfo">
         <span class="m-grid-icon">資</span>
@@ -1696,54 +1717,6 @@ function toggleInfo() {
 }
 
 /* ── 圖層面板 ─────────────────────────────────────────── */
-.mobile-layer-panel {
-  position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1003;
-  width: min(90vw, 560px);
-  background: rgba(252,248,244,0.98);
-  backdrop-filter: blur(12px);
-  border-radius: 18px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.3);
-  padding: 14px;
-  border: 1px solid rgba(0,0,0,0.06);
-}
-.layers-panel-header {
-  display: flex; align-items: center; justify-content: space-between;
-  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
-  color: #7b241c; text-transform: uppercase;
-  padding: 0 2px 10px;
-  border-bottom: 1px solid rgba(0,0,0,0.08); margin-bottom: 10px;
-}
-.layers-panel-close { background: none; border: none; cursor: pointer; color: #7b241c; font-size: 14px; }
-.layer-group { margin-bottom: 4px; }
-.layer-group-label { font-size: 0.65rem; font-weight: 700; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; padding: 0 2px 4px; }
-.layer-group-buttons { display: flex; flex-direction: column; gap: 4px; }
-.btn-layer {
-  display: flex; align-items: center; gap: 7px; width: 100%;
-  padding: 8px 10px; border: 1.5px solid transparent; border-radius: 10px;
-  cursor: pointer; font-size: 0.84rem; font-weight: 600;
-  background: rgba(0,0,0,0.04); color: #444;
-  transition: all 0.18s; text-align: left; font-family: inherit;
-}
-.btn-layer:hover { background: rgba(0,0,0,0.07); }
-.btn-layer.active { background: rgba(192,57,43,0.08); border-color: rgba(192,57,43,0.3); color: #c0392b; }
-.btn-layer.locked { opacity: 0.65; }
-.lbtn-icon { font-size: 1rem; }
-.lbtn-text { flex: 1; }
-.lbtn-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: #ccc; flex-shrink: 0; transition: background 0.2s;
-}
-.lbtn-dot.on { background: #c0392b; }
-
-/* slide-up transition */
-.slide-up-enter-active, .slide-up-leave-active { transition: all 0.25s ease; }
-.slide-up-enter-from, .slide-up-leave-to { opacity: 0; transform: translateX(-50%) translateY(12px); }
-
-/* ── 圖層面板 ─────────────────────────────────────────────── */
 .mobile-layer-panel {
   position: fixed;
   bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
