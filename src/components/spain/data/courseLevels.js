@@ -78,7 +78,7 @@ export const courseLevels = {
     icon: '🍷',
     color: '#8e44ad',
     gradient: 'linear-gradient(135deg, #8e44ad, #9b59b6)',
-    totalLessons: 22,
+    totalLessons: 30,
     prerequisites: ['完成 Level 1'],
     modules: [
       {
@@ -118,6 +118,14 @@ export const courseLevels = {
           { id: 'S2M3L2', title: 'Montsant · Terra Alta · Empordà' },
           { id: 'S2M3L3', title: 'Penedès — 現代西班牙白酒革命' },
           { id: 'S2M3L4', title: 'Alella DO — 巴塞隆那海岸的芳香白酒（Pansà Blanca）' },
+          { id: 'S2M3L5', title: 'Catalunya DO — 加泰羅尼亞廣域覆蓋產區（海拔與海距的藝術）' },
+          { id: 'S2M3L6', title: 'Conca de Barberá DO — 山脈庇護下的白酒與 Cava 基酒重鎮' },
+          { id: 'S2M3L7', title: 'Costers del Segre DO — 塞格雷河兩岸的本地與国際混釀' },
+          { id: 'S2M3L8', title: 'Empordà DO — 沙壤海風上的現代轉型（甜酒轉紅酒）' },
+          { id: 'S2M3L9', title: 'Montsant DO — 2002 年新秀・Garnacha 地中海濃郁風格' },
+          { id: 'S2M3L10', title: 'Pla de Bages DO — 地中海海風中的本地與法國品種融合' },
+          { id: 'S2M3L11', title: 'Tarragona DO — 加泰羅尼亞最大 DO，本地與國際品種并陳' },
+          { id: 'S2M3L12', title: 'Terra Alta DO — 地中海風中的 Garnacha Blanca 質感白酒與地中海風格紅酒' },
         ],
       },
       {
