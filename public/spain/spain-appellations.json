@@ -525,15 +525,32 @@
       "紅酒"
     ],
     "grapes": [
-      "Treixadura",
+      "Doña Blanca",
       "Godello",
-      "Mencía"
+      "Treixadura",
+      "Mencía",
+      "Bastardo"
     ],
-    "description": "加利西亞最嚴酷氣候的小型產區，接近葡萄牙邊界，大陸性氣候明顯，產出較豐腴的白酒和結構感強的紅酒。",
+    "description": "1996 年正式 DO，加利西亞最南端、最靠近葡萄牙的產區，位於 Verín，海拔 400–500m，491 公頃葡萄園。氣候介於大西洋與大陸性之間：夏最高 37°C、冬最低 -5°C，年雨 700mm，年日照 2,200 小時。土壤含花崗岩、板岩與黏土。白酒：Doña Blanca（主）、Godello、Treixadura；紅酒：Mencía、Bastardo。設有 Monterrei Superior 標籤（≥85% 推薦原生品種）。正處於原生品種緩慢復甦階段，領先酒莊已展現巨大潛力。",
     "provinces": [
       "Ourense"
     ],
-    "classification": "DO"
+    "classification": "DO",
+    "nameTranslation": "蒙特雷（國王之山 King's Mountain）",
+    "location": "加利西亞南部，Verín（奧倫塞省），鄰近葡萄牙邊境",
+    "landmark": "山頂堡壘俯瞰南北兩側葡萄園，鄰近通往馬德里的道路",
+    "history": "1970 年代獲臨時 DO 地位；1996 年正式確立 DO",
+    "climate": {
+      "summerMaxC": 37,
+      "winterMinC": -5,
+      "annualRainfallMm": 700,
+      "annualSunshineHours": 2200
+    },
+    "elevation": "400–500m",
+    "soilType": "花崗岩、板岩、黏土",
+    "vineyardHa": 491,
+    "grading": "Monterrei Superior：≥85% 推薦原生品種",
+    "trend": "清新白酒與年輕 Mencía 紅酒為主；新投資進入小型家族酒莊與合作社；仍有大量散裝銷售，原生品種開發處於早期階段，潛力巨大"
   },
   {
     "zonName": "Montilla-Moriles",
