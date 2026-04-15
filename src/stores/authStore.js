@@ -12,10 +12,15 @@ export let authInitPromise = Promise.resolve()
 
 // 初始化：先讀取現有 session，再監聽後續變化
 if (supabase) {
-  authInitPromise = supabase.auth.getSession().then(({ data: { session } }) => {
-    authState.user = session?.user ?? null
-    authState.loading = false
-  })
+  authInitPromise = supabase.auth.getSession()
+    .then(({ data: { session } }) => {
+      authState.user = session?.user ?? null
+      authState.loading = false
+    })
+    .catch((err) => {
+      console.warn('[Auth] getSession 失敗，跳過登入狀態：', err)
+      authState.loading = false
+    })
 
   supabase.auth.onAuthStateChange((_event, session) => {
     authState.user = session?.user ?? null
