@@ -12,6 +12,14 @@ export let authInitPromise = Promise.resolve()
 
 // 初始化：先讀取現有 session，再監聽後續變化
 if (supabase) {
+  // 安全超時保險：6 秒內無論如何都解除 loading
+  const authTimeout = setTimeout(() => {
+    if (authState.loading) {
+      console.warn('[Auth] getSession 超時，強制解除 loading')
+      authState.loading = false
+    }
+  }, 6000)
+
   authInitPromise = supabase.auth.getSession()
     .then(({ data: { session } }) => {
       authState.user = session?.user ?? null
@@ -21,6 +29,7 @@ if (supabase) {
       console.warn('[Auth] getSession 失敗，跳過登入狀態：', err)
       authState.loading = false
     })
+    .finally(() => clearTimeout(authTimeout))
 
   supabase.auth.onAuthStateChange((_event, session) => {
     authState.user = session?.user ?? null
