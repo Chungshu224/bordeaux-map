@@ -148,8 +148,87 @@
       </div>
     </div>
 
+    <!-- 圖層面板浮動按鈕 (右側) -->
+    <div v-if="mapReady" class="sp-layers-panel">
+      <div class="sp-layers-title">圖層</div>
+      <!-- 等高線 -->
+      <button
+        class="sp-layer-btn"
+        :class="{ active: contoursEnabled && canAccessTier('premium'), locked: !canAccessTier('premium') }"
+        @click="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')"
+        title="等高線"
+      >
+        <span class="sp-lbtn-icon">〰</span>
+        <span class="sp-lbtn-text">等高線</span>
+        <span v-if="!canAccessTier('premium')" class="sp-lbtn-lock">🔒</span>
+        <span v-else class="sp-lbtn-dot" :class="{ on: contoursEnabled }"></span>
+      </button>
+      <!-- 氣候熱力 -->
+      <button
+        class="sp-layer-btn"
+        :class="{ active: climateEnabled && canAccessTier('premium'), locked: !canAccessTier('premium') }"
+        @click="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')"
+        title="氣候熱力"
+      >
+        <span class="sp-lbtn-icon">🌡</span>
+        <span class="sp-lbtn-text">氣候熱力</span>
+        <span v-if="!canAccessTier('premium')" class="sp-lbtn-lock">🔒</span>
+        <span v-else class="sp-lbtn-dot" :class="{ on: climateEnabled }"></span>
+      </button>
+    </div>
+
+    <!-- 氣候熱力圖控制列 -->
+    <transition name="sp-climate-slide">
+    <div v-if="climateEnabled && climateData" class="sp-climate-overlay">
+      <!-- 指標切換 -->
+      <div class="sp-cy-indicator-tabs">
+        <button v-for="ind in CLIMATE_INDICATORS" :key="ind.id"
+          :class="['sp-cy-ind-btn', { active: climateIndicator === ind.id }]"
+          @click="setClimateIndicator(ind.id)">
+          {{ ind.icon }} {{ ind.label }}
+        </button>
+      </div>
+      <div class="sp-climate-header-row">
+        <div class="sp-cy-year-badge">
+          <span class="sp-cy-year">{{ climateYear }}</span>
+          <span v-if="isSpainGoldenVintage" class="sp-cy-golden">🏆 黃金年份</span>
+        </div>
+        <div class="sp-cy-stats">
+          <div v-if="activeInfo" class="sp-cy-aoc-name">{{ activeInfo.calDsNom }}</div>
+          <span v-if="spCurrentYearValue !== null" class="sp-cy-temp">
+            {{ spCurrentYearValue }}{{ spCurrentIndicatorConfig.unit }}
+          </span>
+          <span v-if="spCurrentYearDelta !== null" class="sp-cy-delta"
+            :class="spCurrentYearDeltaPositive ? 'sp-cy-warm' : 'sp-cy-cool'">
+            {{ spCurrentYearDeltaPositive ? '+' : '' }}{{ spCurrentYearDelta }}{{ spCurrentIndicatorConfig.unit }} vs 基準
+          </span>
+        </div>
+        <button class="sp-cy-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
+      </div>
+      <input
+        type="range"
+        class="sp-climate-slider"
+        v-model.number="climateYear"
+        min="1980" max="2024" step="1"
+        @input="onClimateYearChange"
+      >
+      <div class="sp-climate-year-axis">
+        <span>1980</span><span>1990</span><span>2000</span><span>2010</span><span>2020</span><span>2024</span>
+      </div>
+      <div class="sp-climate-legend">
+        <div :class="['sp-legend-gradient', `sp-legend-${climateIndicator}`]"></div>
+        <div class="sp-legend-labels">
+          <span>{{ spCurrentGlobalStats ? spCurrentGlobalStats.min.toFixed(0) : '' }}{{ spCurrentIndicatorConfig.unit }} {{ spCurrentIndicatorConfig.lowLabel }}</span>
+          <span>均值</span>
+          <span>{{ spCurrentIndicatorConfig.highLabel }} {{ spCurrentGlobalStats ? spCurrentGlobalStats.max.toFixed(0) : '' }}{{ spCurrentIndicatorConfig.unit }}</span>
+        </div>
+      </div>
+      <div class="sp-climate-footnote">📊 {{ spCurrentIndicatorConfig.footnote }}</div>
+    </div>
+    </transition>
+
     <!-- 底部工具列 -->
-    <div v-if="mapReady" class="mobile-grid-buttons mobile-grid-3">
+    <div v-if="mapReady" class="mobile-grid-buttons mobile-grid-5">
       <button class="m-grid-btn" :class="{ active: drawerOpen }" @click="drawerOpen = !drawerOpen">
         <span class="m-grid-icon">產</span>
         <span class="m-grid-text">產區</span>
@@ -157,6 +236,18 @@
       <button class="m-grid-btn" :class="{ active: is3D }" @click="toggle3D">
         <span class="m-grid-icon">3D</span>
         <span class="m-grid-text">{{ is3D ? '2D' : '3D' }}</span>
+      </button>
+      <button class="m-grid-btn"
+        :class="{ active: contoursEnabled, locked: !canAccessTier('premium') }"
+        @click="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')">
+        <span class="m-grid-icon">〰</span>
+        <span class="m-grid-text">等高線<span v-if="!canAccessTier('premium')">🔒</span></span>
+      </button>
+      <button class="m-grid-btn"
+        :class="{ active: climateEnabled, locked: !canAccessTier('premium') }"
+        @click="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')">
+        <span class="m-grid-icon">🌡</span>
+        <span class="m-grid-text">氣候<span v-if="!canAccessTier('premium')">🔒</span></span>
       </button>
       <button class="m-grid-btn" :class="{ active: activeInfo && !infoCollapsed }" @click="toggleInfo">
         <span class="m-grid-icon">資</span>
@@ -177,12 +268,22 @@ import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { authActions } from '@/stores/authStore.js'
+import { TIER_WEIGHT } from '@/router/index.js'
 
 const props = defineProps({
   region: { type: Object, required: true }
 })
 const emit = defineEmits(['back'])
 const router = useRouter()
+
+// ── 訂閱等級工具 ──────────────────────────────────────────────────
+const resolvedTier = computed(() => authActions.getEffectiveTier())
+const canAccessTier = (minimumTier) => TIER_WEIGHT[resolvedTier.value] >= TIER_WEIGHT[minimumTier]
+const alertUpgrade = (featureName, requiredTier) => {
+  const labels = { basic: '初階付費', premium: '進階付費' }
+  alert(`🔒 「${featureName}」需要「${labels[requiredTier]}」方案才能使用\n\n請升級您的訂閱以解鎖此功能！`)
+}
 
 // ── State ───────────────────────────────────────────────────────
 const mapContainer = ref(null)
@@ -199,6 +300,97 @@ const activeInfo = ref(null)
 const allRegions = ref([])    // all 96 features as normalized objects
 const appellations = ref([])  // spain-appellations.json lookup
 const selectedProvince = ref(null)
+
+// ── 等高線 / 氣候熱力狀態 ──────────────────────────────────────
+const contoursEnabled  = ref(false)
+const climateEnabled   = ref(false)
+const climateYear      = ref(2003)
+const climateData      = ref(null)
+const climateStats     = ref(null)
+const climateStatsSun  = ref(null)
+const climateStatsRain = ref(null)
+const climateYears     = ref([])
+const climateYearAvg   = ref([])
+const climateYearSun   = ref([])
+const climateYearRain  = ref([])
+const climateIndicator = ref('temp')
+
+const CLIMATE_INDICATORS = [
+  {
+    id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C',
+    lowLabel: '涼', highLabel: '熱',
+    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010',
+    dataKey: 'temps', baselineKey: 'baseline',
+  },
+  {
+    id: 'sun', icon: '☀️', label: '日照時數', unit: 'h',
+    lowLabel: '少', highLabel: '多',
+    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010',
+    dataKey: 'sun', baselineKey: 'baselineSun',
+  },
+  {
+    id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm',
+    lowLabel: '乾', highLabel: '濕',
+    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010',
+    dataKey: 'rain', baselineKey: 'baselineRain',
+  },
+]
+
+const SPAIN_GOLDEN_VINTAGES = new Set([1989, 1994, 1995, 2001, 2004, 2005, 2010, 2015, 2016, 2018, 2021])
+
+const spCurrentIndicatorConfig = computed(() =>
+  CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value)
+)
+const spCurrentGlobalStats = computed(() => {
+  const id = climateIndicator.value
+  if (id === 'sun')  return climateStatsSun.value
+  if (id === 'rain') return climateStatsRain.value
+  return climateStats.value
+})
+const spCurrentYearAvgArr = computed(() => {
+  const id = climateIndicator.value
+  if (id === 'sun')  return climateYearSun.value
+  if (id === 'rain') return climateYearRain.value
+  return climateYearAvg.value
+})
+const isSpainGoldenVintage = computed(() => SPAIN_GOLDEN_VINTAGES.has(climateYear.value))
+
+const spCurrentYearValue = computed(() => {
+  if (!climateYears.value.length) return null
+  const cfg = spCurrentIndicatorConfig.value
+  const idx = climateYears.value.indexOf(climateYear.value)
+  if (idx < 0) return null
+  if (climateData.value && activeInfo.value?.zonDsNom) {
+    const d = climateData.value[activeInfo.value.zonDsNom]
+    if (d?.[cfg.dataKey]?.[idx] != null) {
+      return +(d[cfg.dataKey][idx]).toFixed(cfg.id === 'temp' ? 1 : 0)
+    }
+  }
+  const arr = spCurrentYearAvgArr.value
+  return arr[idx] != null ? +(arr[idx]).toFixed(cfg.id === 'temp' ? 1 : 0) : null
+})
+
+const spCurrentYearDelta = computed(() => {
+  if (!climateData.value || !climateYears.value.length) return null
+  const cfg = spCurrentIndicatorConfig.value
+  const idx = climateYears.value.indexOf(climateYear.value)
+  if (idx < 0) return null
+  if (activeInfo.value?.zonDsNom) {
+    const d = climateData.value[activeInfo.value.zonDsNom]
+    if (d?.[cfg.dataKey]?.[idx] != null && d[cfg.baselineKey]) {
+      const dec = cfg.id === 'temp' ? 2 : 0
+      return +(d[cfg.dataKey][idx] - d[cfg.baselineKey]).toFixed(dec)
+    }
+  }
+  const vals = Object.values(climateData.value)
+    .map(d => {
+      const arr = d[cfg.dataKey]
+      const bl = d[cfg.baselineKey]
+      return arr?.[idx] != null && bl ? arr[idx] - bl : null
+    }).filter(v => v != null)
+  return vals.length ? +(vals.reduce((a,b)=>a+b,0)/vals.length).toFixed(cfg.id==='temp'?2:0) : null
+})
+const spCurrentYearDeltaPositive = computed(() => (spCurrentYearDelta.value ?? 0) > 0)
 
 let map = null
 let hoveredId = null
@@ -303,6 +495,149 @@ function normalizeFeature(f, idx) {
   }
 }
 
+// ── 等高線 / 氣候熱力圖函數 ───────────────────────────────────────
+
+function toggleContours() {
+  if (!map) return
+  contoursEnabled.value = !contoursEnabled.value
+  const vis = contoursEnabled.value ? 'visible' : 'none'
+  if (map.getLayer('sp-contours')) map.setLayoutProperty('sp-contours', 'visibility', vis)
+  if (map.getLayer('sp-contour-labels')) map.setLayoutProperty('sp-contour-labels', 'visibility', vis)
+}
+
+const loadClimateData = async () => {
+  if (climateData.value) return
+  const res = await fetch('/data/spain-climate.json')
+  if (!res.ok) throw new Error('無法載入西班牙氣候資料')
+  const json = await res.json()
+  climateData.value      = json.aocs
+  climateStats.value     = json.global
+  climateStatsSun.value  = json.globalSun  || null
+  climateStatsRain.value = json.globalRain || null
+  climateYears.value     = json.meta.years
+  climateYearAvg.value   = json.meta.yearAvg
+  climateYearSun.value   = json.meta.yearSunAvg  || []
+  climateYearRain.value  = json.meta.yearRainAvg || []
+}
+
+const valueToClimateColor = (val, indicator) => {
+  let stats, stops
+  if (indicator === 'sun') {
+    stats = climateStatsSun.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,       [120,  81, 169]],
+      [mean - 30, [145, 191, 219]],
+      [mean,      [255, 255, 191]],
+      [mean + 30, [254, 224,  72]],
+      [max,       [253, 141,  60]],
+    ]
+  } else if (indicator === 'rain') {
+    stats = climateStatsRain.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,       [253, 174,  97]],
+      [mean - 20, [255, 255, 191]],
+      [mean,      [171, 217, 233]],
+      [mean + 20, [ 74, 144, 226]],
+      [max,       [ 44,  62, 160]],
+    ]
+  } else {
+    stats = climateStats.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,       [ 69, 117, 180]],
+      [mean - 2,  [145, 191, 219]],
+      [mean,      [255, 255, 191]],
+      [mean + 2,  [252, 141,  89]],
+      [max,       [215,  48,  39]],
+    ]
+  }
+  const { min, max } = stats
+  const t = Math.max(min, Math.min(max, val))
+  for (let i = 0; i < stops.length - 1; i++) {
+    const [t0, c0] = stops[i]
+    const [t1, c1] = stops[i + 1]
+    if (t <= t1) {
+      const f = (t - t0) / (t1 - t0)
+      const r = Math.round(c0[0] + f * (c1[0] - c0[0]))
+      const g = Math.round(c0[1] + f * (c1[1] - c0[1]))
+      const b = Math.round(c0[2] + f * (c1[2] - c0[2]))
+      return `rgb(${r},${g},${b})`
+    }
+  }
+  const last = stops[stops.length - 1][1]
+  return `rgb(${last.join(',')})`
+}
+
+const applyClimateColor = (year) => {
+  if (!map || !climateData.value) return
+  if (!map.getLayer('wine-regions-fill')) return
+  const cfg = spCurrentIndicatorConfig.value
+  const idx = climateYears.value.indexOf(year)
+  if (idx < 0) return
+  const stats = spCurrentGlobalStats.value
+  if (!stats) return
+
+  // Build a match expression to color each region individually
+  const matchExpr = ['match', ['get', 'ZON_DS_NOM']]
+  for (const [zonName, d] of Object.entries(climateData.value)) {
+    const arr = d[cfg.dataKey]
+    if (arr?.[idx] != null) {
+      matchExpr.push(zonName)
+      matchExpr.push(valueToClimateColor(arr[idx], cfg.id))
+    }
+  }
+  // Default: global average color
+  const globalAvg = spCurrentYearAvgArr.value[idx] ?? stats.mean
+  matchExpr.push(valueToClimateColor(globalAvg, cfg.id))
+
+  map.setPaintProperty('wine-regions-fill', 'fill-color', matchExpr)
+  map.setPaintProperty('wine-regions-fill', 'fill-opacity', 0.80)
+}
+
+const restoreRegionColors = () => {
+  if (!map || !map.getLayer('wine-regions-fill')) return
+  map.setPaintProperty('wine-regions-fill', 'fill-color', [
+    'match', ['get', 'TPR_DS_DES'],
+    'Denominación de Origen Calificada', '#f1948a',
+    'Denominación de Origen Protegida',  '#f0b27a',
+    'Vino de Calidad',  '#85c1e9',
+    'Vino de Pago',     '#c39bd3',
+    '#82e0aa',
+  ])
+  map.setPaintProperty('wine-regions-fill', 'fill-opacity', 0.30)
+}
+
+const setClimateIndicator = (id) => {
+  climateIndicator.value = id
+  applyClimateColor(climateYear.value)
+}
+
+const onClimateYearChange = () => { applyClimateColor(climateYear.value) }
+
+const toggleClimate = async () => {
+  if (!map) return
+  if (!climateEnabled.value) {
+    isLoading.value = true
+    try {
+      await loadClimateData()
+      climateEnabled.value = true
+      applyClimateColor(climateYear.value)
+    } catch (err) {
+      mapError.value = `氣候資料載入失敗: ${err.message}`
+    } finally {
+      isLoading.value = false
+    }
+  } else {
+    climateEnabled.value = false
+    restoreRegionColors()
+  }
+}
+
 // ── Map init ──────────────────────────────────────────────────────
 onMounted(async () => {
   try {
@@ -339,6 +674,70 @@ function initMap() {
 
     map.on('load', async () => {
       map.resize()  // 確保 canvas 符合容器實際尺寸
+
+      // ── Mapbox DEM + 等高線來源（供 3D 地形 & 等高線使用）──
+      if (!map.getSource('mapbox-dem')) {
+        map.addSource('mapbox-dem', {
+          type: 'raster-dem',
+          url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+          tileSize: 512,
+          maxzoom: 14,
+        })
+      }
+      if (!map.getSource('sp-contours')) {
+        map.addSource('sp-contours', {
+          type: 'vector',
+          url: 'mapbox://mapbox.mapbox-terrain-v2',
+        })
+      }
+      // 等高線線條圖層（預設隱藏）
+      map.addLayer({
+        id: 'sp-contours',
+        type: 'line',
+        source: 'sp-contours',
+        'source-layer': 'contour',
+        layout: { 'line-join': 'round', 'line-cap': 'round', visibility: 'none' },
+        paint: {
+          'line-color': [
+            'case',
+            ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFD700',
+            ['==', ['%', ['to-number', ['get', 'ele']], 50],  0], '#FFAA00',
+            '#FF7733'
+          ],
+          'line-width': [
+            'case',
+            ['==', ['%', ['to-number', ['get', 'ele']], 50], 0],
+            ['interpolate', ['linear'], ['zoom'], 9, 0.9, 11, 1.6, 13, 2.2, 16, 3],
+            ['interpolate', ['linear'], ['zoom'], 9, 0.3, 11, 0.7, 13, 1,   16, 1.5]
+          ],
+          'line-opacity': ['interpolate', ['linear'], ['zoom'], 9, 0.4, 11, 0.6, 13, 0.8, 16, 0.9]
+        },
+        minzoom: 9,
+      })
+      // 等高線標籤圖層（預設隱藏）
+      map.addLayer({
+        id: 'sp-contour-labels',
+        type: 'symbol',
+        source: 'sp-contours',
+        'source-layer': 'contour',
+        layout: {
+          'symbol-placement': 'line',
+          'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
+          'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+          'text-size': ['interpolate', ['linear'], ['zoom'], 10, 9, 13, 11, 16, 13],
+          'text-padding': 25,
+          visibility: 'none',
+        },
+        paint: {
+          'text-color': '#FFD700',
+          'text-halo-color': 'rgba(0,0,0,0.8)',
+          'text-halo-width': 2,
+          'text-opacity': ['interpolate', ['linear'], ['zoom'], 10, 0.5, 12, 0.8, 14, 1]
+        },
+        filter: ['==', ['%', ['to-number', ['get', 'ele']], 10], 0],
+        minzoom: 10,
+      })
+
       try {
         await addLayers()
       } catch (e) {
@@ -629,14 +1028,7 @@ function toggle3D() {
   is3D.value = !is3D.value
   if (!map) return
   if (is3D.value) {
-    if (!map.getSource('mapbox-dem')) {
-      map.addSource('mapbox-dem', {
-        type: 'raster-dem',
-        url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
-        tileSize: 512,
-        maxzoom: 14,
-      })
-    }
+    // mapbox-dem 已在 map.on('load') 加入，直接使用
     map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 })
     map.setPitch(45)
   } else {
@@ -1288,5 +1680,182 @@ function toggleInfo() {
 /* mapbox-gl overrides */
 :deep(.mapboxgl-ctrl-top-right) {
   top: 52px;
+}
+
+/* ── 5-grid toolbar ─────────────────────────────────────────── */
+.mobile-grid-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.m-grid-btn.locked {
+  opacity: 0.65;
+}
+
+/* ── 圖層面板 (右側浮動, 桌面版) ───────────────────────────── */
+.sp-layers-panel {
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 10px 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 78px;
+}
+@media (max-width: 640px) {
+  .sp-layers-panel { display: none; }
+}
+
+.sp-layers-title {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #888;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.sp-layer-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 6px;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  background: rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: all 0.15s;
+  color: #34495e;
+}
+.sp-layer-btn:hover { background: rgba(0,0,0,0.08); }
+.sp-layer-btn.active {
+  background: linear-gradient(135deg, #c0392b, #7b241c);
+  color: #fff;
+  border-color: transparent;
+}
+.sp-layer-btn.locked { opacity: 0.65; }
+
+.sp-lbtn-icon { font-size: 1.15rem; }
+.sp-lbtn-text { font-size: 0.65rem; font-weight: 700; }
+.sp-lbtn-lock { font-size: 0.7rem; }
+.sp-lbtn-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #ccc;
+  border: 1.5px solid #aaa;
+}
+.sp-lbtn-dot.on { background: #2ecc71; border-color: #27ae60; }
+
+/* ── 氣候熱力控制列 ─────────────────────────────────────────── */
+.sp-climate-overlay {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 80px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(96vw, 560px);
+  z-index: 1002;
+  background: rgba(15, 20, 35, 0.92);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 10px 14px 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  color: #fff;
+}
+.sp-cy-indicator-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.sp-cy-ind-btn {
+  flex: 1;
+  padding: 4px 0;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.sp-cy-ind-btn.active {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
+.sp-climate-header-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.sp-cy-year-badge { display: flex; align-items: center; gap: 5px; }
+.sp-cy-year { font-size: 1.3rem; font-weight: 800; color: #ffd700; }
+.sp-cy-golden { font-size: 0.7rem; background: rgba(255,215,0,0.25); padding: 1px 6px; border-radius: 8px; }
+.sp-cy-stats { flex: 1; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.sp-cy-aoc-name { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+.sp-cy-temp { font-size: 1.1rem; font-weight: 800; color: #fff; }
+.sp-cy-delta { font-size: 0.78rem; font-weight: 700; padding: 1px 6px; border-radius: 6px; }
+.sp-cy-warm { background: rgba(252,141,89,0.35); color: #ffb07c; }
+.sp-cy-cool { background: rgba(145,191,219,0.35); color: #a8d0e6; }
+.sp-cy-close {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(255,255,255,0.15); border: none; color: #fff;
+  cursor: pointer; font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.sp-cy-close:hover { background: rgba(255,255,255,0.28); }
+.sp-climate-slider {
+  width: 100%;
+  accent-color: #ffd700;
+  margin: 2px 0 0;
+}
+.sp-climate-year-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.45);
+  margin: 1px 0 6px;
+}
+.sp-climate-legend { margin: 4px 0 2px; }
+.sp-legend-gradient {
+  height: 8px;
+  border-radius: 4px;
+  margin-bottom: 3px;
+}
+.sp-legend-temp {
+  background: linear-gradient(to right, rgb(69,117,180), rgb(145,191,219), rgb(255,255,191), rgb(252,141,89), rgb(215,48,39));
+}
+.sp-legend-sun {
+  background: linear-gradient(to right, rgb(120,81,169), rgb(145,191,219), rgb(255,255,191), rgb(254,224,72), rgb(253,141,60));
+}
+.sp-legend-rain {
+  background: linear-gradient(to right, rgb(253,174,97), rgb(255,255,191), rgb(171,217,233), rgb(74,144,226), rgb(44,62,160));
+}
+.sp-legend-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.55);
+}
+.sp-climate-footnote { font-size: 0.62rem; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+/* Climate slide transition */
+.sp-climate-slide-enter-active,
+.sp-climate-slide-leave-active {
+  transition: all 0.3s ease;
+}
+.sp-climate-slide-enter-from,
+.sp-climate-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
 }
 </style>
