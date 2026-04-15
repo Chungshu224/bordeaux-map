@@ -400,6 +400,7 @@ let initialBounds = null    // 起始畫面的 bounds，供重置使用
 let baseFilter = null       // addLayers 套用的初始 filter，重置時恢復
 let selectedRegionId = null // 目前選取的 wine-region feature id
 const allRegionsMap = new Map()   // Map<featureIdx → normalizedInfo> ，供 click 查詢用
+const featureBboxMap = new Map()  // Map<featureIdx → [[minLng,minLat],[maxLng,maxLat]]>
 
 // ── Type helpers ─────────────────────────────────────────────────
 const TYPE_MAP = {
@@ -816,12 +817,27 @@ async function addLayers() {
   // 用 appellations 查出每個 feature 的 autonomiaId，寫回 GeoJSON properties 
   // （這樣 Mapbox filter 才能直接用 ['get', 'AUTONOMIA_ID']）
   allRegionsMap.clear()
+  featureBboxMap.clear()
   wineGeo.features.forEach((f, i) => {
     const appData = lookupAppellation(f.properties.ZON_DS_NOM)
     f.properties.AUTONOMIA_ID = appData?.autonomiaId || ''
     const n = normalizeFeature(f, i)
     n.appData = appData
     allRegionsMap.set(i, n)
+    // 預存 bbox 供縮放使用
+    if (f.geometry) {
+      const coords = f.geometry.type === 'Polygon'
+        ? f.geometry.coordinates.flat(1)
+        : f.geometry.coordinates.flat(2)
+      const lngs = coords.map(c => c[0]).filter(v => isFinite(v))
+      const lats = coords.map(c => c[1]).filter(v => isFinite(v))
+      if (lngs.length) {
+        featureBboxMap.set(i, [
+          [Math.min(...lngs), Math.min(...lats)],
+          [Math.max(...lngs), Math.max(...lats)],
+        ])
+      }
+    }
   })
 
   // 依當前 region 的 filterAutonomiaId 設定抽屜清單
@@ -980,10 +996,14 @@ async function addLayers() {
     if (info) {
       activeInfo.value = info
       infoCollapsed.value = false
-      // 只顯示選中的產區，其他隱藏
       selectedRegionId = feat.id
+      // Fill：只顯示選中產區（其他產區顏色消失）
       map.setFilter('wine-regions-fill', ['==', ['id'], feat.id])
-      map.setFilter('wine-regions-line', ['==', ['id'], feat.id])
+      // Outline：保留所有產區輪廓（地理脈絡仍可見）
+      map.setFilter('wine-regions-line', baseFilter || null)
+      // 縮放到選中產區的合適大小
+      const bbox = featureBboxMap.get(feat.id)
+      if (bbox) map.fitBounds(bbox, { padding: 80, maxZoom: 12, duration: 800 })
     }
     e.originalEvent._spainWineClicked = true
   })
@@ -1077,25 +1097,16 @@ function selectFromList(item) {
   activeInfo.value = item
   infoCollapsed.value = false
   drawerOpen.value = false
-
-  // Fly to feature bbox
   if (!map) return
-  const src = map.getSource('wine-regions')
-  if (!src) return
 
-  const features = map.querySourceFeatures('wine-regions')
-  const feat = features.find(f => f.id === item.id)
-  if (feat?.geometry) {
-    const coords = feat.geometry.type === 'Polygon'
-      ? feat.geometry.coordinates[0]
-      : feat.geometry.coordinates.flat(2)
-    if (coords.length) {
-      const lngs = coords.map(c => c[0])
-      const lats = coords.map(c => c[1])
-      const bounds = [[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]]
-      map.fitBounds(bounds, { padding: 80, maxZoom: 12, duration: 800 })
-    }
-  }
+  selectedRegionId = item.id
+  // Fill：只顯示選中產區（其他產區顏色消失）
+  map.setFilter('wine-regions-fill', ['==', ['id'], item.id])
+  // Outline：保留所有產區輪廓
+  map.setFilter('wine-regions-line', baseFilter || null)
+  // 縮放到選中產區
+  const bbox = featureBboxMap.get(item.id)
+  if (bbox) map.fitBounds(bbox, { padding: 80, maxZoom: 12, duration: 800 })
 }
 
 function toggleInfo() {
