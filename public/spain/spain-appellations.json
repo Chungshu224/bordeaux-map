@@ -73,13 +73,41 @@
     "zonName": "Rías Baixas",
     "autonomia": "加利西亞",
     "autonomiaId": "galicia",
+    "doYear": 1988,
+    "nameTranslation": "下海灣 (Lower Fjords)",
     "styles": [
       "白酒"
     ],
     "grapes": [
-      "Albariño"
+      "Albariño",
+      "Loureira Blanca",
+      "Treixadura",
+      "Caiño Blanca",
+      "Caiño Tinto",
+      "Espadeiro",
+      "Loureira Tinta",
+      "Sousón"
     ],
-    "description": "加利西亞旗艦白酒產區，多雨潮濕的大西洋氣候孕育西班牙最優質的 Albariño，散發鮮活的柑橘、桃子花香與清脆礦物感，是全球最受矚目的白酒之一。",
+    "subzones": [
+      "Val do Salnés",
+      "Ribeiro do Ulla",
+      "Soutomaior",
+      "Condado do Tea",
+      "O Rosal"
+    ],
+    "description": "加利西亞旗艦白酒產區，1988 年獲 DO 地位。名稱意為「下海灣」，葡萄園沿海岸與河流分布。大西洋海洋氣候，年均降雨 1,691mm，夏季最高溫 25.6°C，冬季最低溫 6°C；海拔 0–300m，花崗岩砂質土壤。以 Albariño 聞名全球，帶檸檬皮、葡萄柚、哈密瓜、油桃與鹽鮮感，骨乾高酸，酒精 11.5–13.5%，適飲 3–7°C，陳年 3–5 年。美國為第一大出口市場。",
+    "climate": {
+      "type": "大西洋海洋氣候",
+      "annualRainfallMm": 1691,
+      "summerMaxC": 25.6,
+      "winterMinC": 6
+    },
+    "elevation": "0–300m",
+    "soilType": "花崗岩砂質土壤",
+    "abvRange": "11.5–13.5%",
+    "servingTempC": "3–7°C",
+    "agingYears": "3–5年",
+    "exportMarket": "美國（第一大出口市場）",
     "provinces": [
       "Pontevedra",
       "Coruna"

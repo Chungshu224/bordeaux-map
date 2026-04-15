@@ -1273,11 +1273,11 @@ const S2M2L1_slides = [
     icon: '🌊',
     gradient: 'linear-gradient(135deg, #1a5276, #2980b9)',
     title: 'Rías Baixas — Albariño 白酒之都',
-    subtitle: 'Level 2 · 加利西亞的大西洋明珠',
+    subtitle: 'Level 2 · 1988 DO · 名稱意為「下海灣」',
     points: [
-      { icon: '🌊', label: '「沉溺的海岸」', text: '冰川侵蝕形成的深入內陸海灣（Rías），環境涼爽多濕' },
-      { icon: '🍋', label: 'Albariño', text: '桃子・柑橘・杏仁・鹽漬礦石，西班牙最精緻白酒' },
-      { icon: '🪨', label: '花崗岩土壤', text: '花崗岩風化土壤賦予獨特礦石與鹽感' },
+      { icon: '🌊', label: '「下海灣」海岸地形', text: '鋸齒形大西洋海灣，年雨量 1,691mm，涼爽多霧，五個子產區' },
+      { icon: '🍋', label: 'Albariño 骨乾白酒', text: '檸檬皮・葡萄柚・哈密瓜・油桃・鹽鮮，11.5–13.5% 酒精，3–7°C 享用' },
+      { icon: '🪨', label: '花崗岩砂質土壤', text: '海拔 0–300m，酸性花崗岩賦予獨特礦石鹽感，美國為第一出口市場' },
     ],
   },
   {
@@ -1294,31 +1294,70 @@ const S2M2L1_slides = [
       { icon: '🏔️', label: 'O Rosal', desc: '葡萄牙邊境，Minho 河南岸，氣候較溫暖，Albariño 帶有更多熱帶水果風味', color: '#27ae60' },
       { icon: '🌿', label: 'Condado do Tea', desc: '最內陸的子產區，受大陸型氣候影響，Albariño 更濃郁飽滿', color: '#e67e22' },
       { icon: '🏝️', label: 'Soutomaior', desc: '最小子產區，丘陵地形，海風影響，Albariño 風格精緻清新', color: '#9b59b6' },
-      { icon: '🌿', label: 'Ribeira do Ulla', desc: '最北的子產區，Ulla 河谷，部分海拔較高，Albariño 帶有更多草本清爽感', color: '#c0392b' },
+      { icon: '🌿', label: 'Ribeiro do Ulla', desc: '最北的子產區，Ulla 河谷，部分海拔較高，Albariño 帶有更多草本清爽感', color: '#c0392b' },
     ],
   },
   {
     type: 'content',
     icon: '🪨',
-    title: '花崗岩風土與 Albariño 種植特色',
+    title: '氣候・風土・Albariño 種植特色',
     html: `
-      <p>Rías Baixas 是研究「土壤-葡萄酒礦石感」關係的最佳案例之一。</p>
-      <h4>🪨 花崗岩土壤（Granitic Soils）</h4>
+      <h4>🌧️ 大西洋氣候數據</h4>
       <ul>
-        <li>酸性土壤（pH 4.5-6.0），養分低，排水良好</li>
-        <li>葡萄樹深根尋礦物質，造就獨特<strong>鹽漬礦石感</strong></li>
-        <li>與 Loire 的 Muscadet（也是花崗岩）有相似的礦石特質對比</li>
+        <li><strong>年均降雨量</strong>：1,691mm（綠色西班牙中雨量最豐沛的區域）</li>
+        <li><strong>夏季最高均溫</strong>：25.6°C；<strong>冬季最低均溫</strong>：6°C</li>
+        <li><strong>海拔</strong>：0–300m；土壤：<strong>花崗岩砂質土壤</strong>（酸性，pH 4.5–6.0）</li>
       </ul>
-      <h4>🌿 Albariño 的種植方式</h4>
+      <h4>🪨 花崗岩土壤的礦石感來源</h4>
       <ul>
-        <li><strong>Pergola（棚架式）系統</strong>：高架種植，讓葡萄懸空，增加通風，減少潮濕環境的黴菌問題</li>
-        <li>高棚架讓葡萄遠離積水地面，這在 Galicia 年雨量 1500mm 的環境中至關重要</li>
+        <li>養分低、排水良好，葡萄樹深根尋礦物質，造就獨特<strong>鹽漬礦石感</strong></li>
+        <li>與 Loire Muscadet 同為花崗岩，但 Rías Baixas 雨量更豐、礦物更鹹鮮</li>
       </ul>
-      <h4>🍋 Albariño 風味特徵</h4>
+      <h4>🌿 Pergola 棚架式種植</h4>
       <ul>
-        <li><strong>香氣</strong>：白桃、杏仁、柑橘皮、橙花、海鹽礦石</li>
-        <li><strong>口感</strong>：高酸、中等酒體、輕微苦杏仁尾韻</li>
-        <li><strong>陳年</strong>：通常年輕飲用；頂級款可桶陳或瓶陳 3-5 年展現蜂蜜、油脂感</li>
+        <li>高架種植讓葡萄懸空，<strong>在 1,691mm 年雨量下增加通風、防黴菌</strong></li>
+        <li>遠離積水地面，是加利西亞潮濕環境的因地制宜智慧</li>
+      </ul>
+      <h4>🍋 Albariño 風味與品飲指南</h4>
+      <ul>
+        <li><strong>香氣</strong>：檸檬皮、葡萄柚、哈密瓜、油桃、杏仁、橙花、鹽鮮礦石</li>
+        <li><strong>口感</strong>：骨乾（Bone-Dry）・高酸・輕盈，酒精 <strong>11.5–13.5%</strong></li>
+        <li><strong>建議侍酒溫度</strong>：<strong>3–7°C（極冰）</strong></li>
+        <li><strong>陳年潛力</strong>：3–5 年；頂級款桶陳後展現蜂蜜、油脂層次</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🌍',
+    title: '其他葡萄品種與市場概況',
+    html: `
+      <h4>🍇 法定葡萄品種</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+        <div style="background:#e8f5e9;border-radius:8px;padding:10px">
+          <strong>⬜ 白葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Albariño</strong>（絕對主導）</li>
+            <li>Loureira Blanca</li>
+            <li>Treixadura</li>
+            <li>Caiño Blanca</li>
+          </ul>
+        </div>
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>🟥 紅葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li>Caiño Tinto</li>
+            <li>Espadeiro</li>
+            <li>Loureira Tinta</li>
+            <li>Sousón</li>
+          </ul>
+        </div>
+      </div>
+      <h4>🌍 市場與產業現況</h4>
+      <ul>
+        <li><strong>美國</strong>是 Rías Baixas 的<strong>第一大出口市場</strong>，Albariño 在北美頂級餐廳深受歡迎</li>
+        <li>生產者規模多元：大型現代化合作社到小型手工釀酒廠（當地稱 <strong>Adegas</strong>）並存</li>
+        <li>近年釀酒師運用現代科技，釀造具備驚人複雜度的「<strong>簽名款</strong>」桶陳 Albariño</li>
       </ul>
     `,
   },
@@ -1339,10 +1378,10 @@ const S2M2L1_slides = [
     type: 'summary',
     message: 'Rías Baixas 學習完成！',
     keyPoints: [
-      '「沉溺的海岸」地形，五個子產區，Val do Salnés 是核心',
-      '花崗岩酸性土壤賦予 Albariño 獨特鹽漬礦石感',
-      'Pergola 棚架式種植：對付加利西亞高達 1500mm 年雨量',
-      'Albariño：白桃・柑橘・杏仁・鹽礦石，高酸清爽，世界頂級白酒之一',
+      '1988 年獲 DO；名稱意為「下海灣」，五個子產區以 Val do Salnés 為核心',
+      '年雨量 1,691mm，夏均最高 25.6°C；海拔 0–300m，花崗岩砂質土壤',
+      'Albariño：檸檬皮・葡萄柚・哈密瓜・油桃・鹽鮮，骨乾高酸 11.5–13.5%，3–7°C 享用',
+      'Pergola 棚架式應對高雨量環境；美國為第一出口市場；小酒莊稱 Adegas',
     ],
   },
 ]
