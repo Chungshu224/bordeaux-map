@@ -28,15 +28,15 @@
           <span class="info-type-dot" :style="{ background: typeColor(activeInfo.typeLabel) }"></span>
           <span class="info-name">{{ activeInfo.calDsNom }}</span>
         </div>
-        <div class="info-actions">
-          <button class="info-btn" @click="infoCollapsed = !infoCollapsed" title="收合">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+        <div class="map-action-buttons">
+          <button class="map-action-btn btn-collapse" @click="infoCollapsed = !infoCollapsed" :title="infoCollapsed ? '展開資訊' : '收合資訊'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
               :style="{ transform: infoCollapsed ? 'rotate(0deg)' : 'rotate(180deg)', transition: 'transform 0.3s' }">
               <polyline points="18 15 12 9 6 15"></polyline>
             </svg>
           </button>
-          <button class="info-btn" @click="resetView" title="重置">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <button class="map-action-btn btn-reset" @click="resetView" title="重置地圖">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 2v6h6"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/>
             </svg>
           </button>
@@ -1237,26 +1237,23 @@ function toggleInfo() {
   text-overflow: ellipsis;
 }
 
-.info-actions {
-  display: flex;
-  gap: 0.3rem;
-  flex-shrink: 0;
-}
-
-.info-btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.22);
-  border: 1px solid rgba(255,255,255,0.4);
-  color: white;
-  cursor: pointer;
+.map-action-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: background 0.15s;
+  gap: 8px;
+  flex-shrink: 0;
 }
-.info-btn:hover { background: rgba(255,255,255,0.38); }
+.map-action-btn {
+  width: 40px; height: 40px;
+  padding: 0; border: none; border-radius: 12px;
+  color: white; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+.map-action-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 18px rgba(0,0,0,0.22); }
+.btn-collapse { background: linear-gradient(145deg, #222, #0f0f0f); }
+.btn-reset    { background: linear-gradient(145deg, #f25f57, #dd3f37); }
 
 .info-content {
   padding: 0.9rem 1rem;
