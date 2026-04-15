@@ -1649,6 +1649,132 @@ const S2M1L6_slides = [
   },
 ]
 
+// ─── S2M1L7 — Cigales DO ────────────────────────────────────────────────────
+const S2M1L7_slides = [
+  {
+    type: 'cover',
+    icon: '🌹',
+    gradient: 'linear-gradient(135deg, #880e4f, #c2185b)',
+    title: 'Cigales DO — 梅塞塔粉紅酒傳統與紅酒崛起',
+    subtitle: 'Level 2 · 卡斯提亞-萊昂 · Valladolid & Palencia · 杜羅河谷核心地帶',
+    points: [
+      { icon: '🌹', label: '粉紅酒傳統', text: '長期以香氣濃郁的乾型粉紅酒（Clarete）聞名，是卡斯提亞-萊昂最傳統的產區之一' },
+      { icon: '🍷', label: 'Tempranillo 紅酒崛起', text: '受杜羅河谷鄰近產區影響，當地生產者正以 Tinta del País（Tempranillo）展示優質紅酒雄心' },
+      { icon: '🪨', label: 'Garnacha Gris 稀有品種', text: '紅加納希的粉灰色變種，帶有杏桃・核果香氣，口感油質飽滿，風格類似 Viognier' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Cigales DO 位置',
+    mapRegion: 'castilla-leon',
+    description: '位於卡斯提亞-萊昂 Valladolid 與 Palencia 省，杜羅河谷中心地帶。葡萄園海拔 700–800m，沉積土壤，年均降雨 425mm，年日照 2,616 小時。',
+  },
+  {
+    type: 'compare',
+    title: 'Cigales：產區核心特徵',
+    items: [
+      {
+        icon: '🌡️',
+        label: '大陸性氣候',
+        desc: '夏季最高 39°C，冬季最低 -6°C，年降雨 425mm，年日照 2,616h。高海拔（700–800m）帶來顯著日夜溫差，利於芳香物質積累',
+        color: '#e53935',
+      },
+      {
+        icon: '🪨',
+        label: '第三/四紀沉積土壤',
+        desc: '表層砂質與石灰岩，底層黏土。結構多樣，保水性佳，適合 Tempranillo 紅酒與 Albillo 白酒的雙重釀造需求',
+        color: '#78909c',
+      },
+      {
+        icon: '🌹',
+        label: '粉紅酒（Clarete）傳統',
+        desc: '香氣濃郁的乾型粉紅酒是 Cigales 長期招牌，以 Tempranillo（Tinta del País）與 Garnacha 為基礎，草莓・覆盆子・花香',
+        color: '#c2185b',
+      },
+      {
+        icon: '🏘️',
+        label: '家族 majuelos 村莊園',
+        desc: '酒莊向家庭式村莊葡萄園（majuelos）收購葡萄，全年耕作與採收多由家庭成員親自完成，保留最傳統的卡斯提亞農業文化',
+        color: '#5d4037',
+      },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍇',
+    title: '葡萄品種・Garnacha Gris 稀有亮點',
+    html: `
+      <h4>🍇 主要葡萄品種</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>🟥 紅葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Tempranillo</strong>（當地稱 Tinta del País）</li>
+            <li><strong>Garnacha</strong></li>
+            <li><strong>Garnacha Gris</strong>（稀有粉灰色變種）</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:10px">
+          <strong>⬜ 白葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Albillo</strong></li>
+            <li><strong>Verdejo</strong></li>
+          </ul>
+        </div>
+      </div>
+      <h4 style="margin-top:14px">💜 Garnacha Gris — 粉灰色稀有變種</h4>
+      <ul>
+        <li><strong>外觀</strong>：Garnacha 的粉灰色突變品種，果皮色澤介於粉與灰之間</li>
+        <li><strong>特性</strong>：生命力強、耐旱，偏好溫暖乾燥環境，Cigales 仍有少量種植</li>
+        <li><strong>香氣</strong>：杏桃、核果（Peach/Apricot）</li>
+        <li><strong>口感</strong>：飽滿、帶有<strong>油質感</strong>，風格類似 Viognier</li>
+        <li><strong>用途</strong>：多用於混釀，單一品種酒款極為罕見</li>
+      </ul>
+      <p style="margin-top:10px;color:#555;font-size:0.9em">📐 總種植面積約 <strong>2,000 公頃</strong></p>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🔄',
+    title: '產業轉型：傳統家族到現代紅酒',
+    html: `
+      <h4>🏘️ 家族 majuelos 傳統</h4>
+      <p>Cigales 是卡斯提亞-萊昂<strong>最傳統的產區之一</strong>。當地酒莊（Bodegas）向家庭式村莊葡萄園（稱為 <strong>majuelos</strong>）收購葡萄，全年的耕作與採收多由家庭成員親自完成，保留了深厚的農業文化傳統。</p>
+      <h4 style="margin-top:14px">🍷 紅酒崛起</h4>
+      <p>受 Ribera del Duero 等鄰近頂尖產區影響，Cigales 生產者正以當地 <strong>Tempranillo（Tinta del País）</strong>展現釀造優質紅酒的雄心，酒款品質逐年提升。</p>
+      <h4 style="margin-top:14px">📜 法規更新計畫</h4>
+      <ul>
+        <li>產區監管委員會起草新法規，計畫納入 <strong>Cabernet Sauvignon 與 Merlot</strong> 用於紅酒</li>
+        <li>新增 <strong>Sauvignon Blanc</strong> 用於粉紅酒，提升酒款多樣性</li>
+        <li>已開始吸引<strong>公共與私營部門新投資</strong>，加速現代化轉型</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '關於 Cigales DO 的 Garnacha Gris，下列何者正確？',
+    options: [
+      'Garnacha Gris 是黑加納希的深色突變，帶有黑醋栗與黑莓香氣，風格類似 Cabernet Sauvignon',
+      'Garnacha Gris 是紅加納希的粉灰色變種，帶有杏桃・核果香氣，口感油質飽滿，風格類似 Viognier',
+      'Garnacha Gris 是 Cigales 最普遍的白葡萄品種，佔全產區種植面積 60%',
+      'Garnacha Gris 需要在冷涼氣候下種植，不適合 Cigales 的乾熱環境',
+    ],
+    answer: 1,
+    explanation: 'Garnacha Gris 是紅加納希（Garnacha）的粉灰色突變變種，生命力強、耐旱，偏好 Cigales 的溫暖乾燥環境。風味以杏桃、核果為主，口感飽滿帶油質感，風格與 Viognier 相似。目前在 Cigales 仍有少量種植，多用於混釀。',
+  },
+  {
+    type: 'summary',
+    message: 'Cigales DO 學習完成！',
+    keyPoints: [
+      '位於卡斯提亞-萊昂 Valladolid & Palencia 省，杜羅河谷核心地帶，2,000 公頃',
+      '大陸性氣候：39°C/-6°C，年降雨 425mm，年日照 2,616h，海拔 700–800m',
+      '傳統以乾型粉紅酒（Clarete）聞名，家族 majuelos 村莊園保留最純粹農業傳統',
+      'Garnacha Gris 是稀有粉灰色變種：杏桃・核果・油質感，風格類似 Viognier',
+      '正積極轉型：Tempranillo 紅酒、法規擬納入 Cab.Sauv./Merlot，吸引外部投資',
+    ],
+  },
+]
+
 const S2M2L1_slides = [
   {
     type: 'cover',
@@ -5202,6 +5328,7 @@ const SLIDE_MAP = {
   S2M1L4: S2M1L4_slides,     // Navarra / Rosado
   S2M1L5: S2M1L5_slides,     // Arlanza DO / Albillo
   S2M1L6: S2M1L6_slides,     // Arribes DO / Juan García
+  S2M1L7: S2M1L7_slides,     // Cigales DO / Garnacha Gris
   S2M2L1: S2M2L1_slides,     // Rías Baixas / Albariño
   S2M2L2: S2M2L2_slides,     // Ribeiro / Valdeorras / Ribeira Sacra
   S2M2L3: S2M2L3_slides,     // 大西洋氣候與花崗岩土壤

@@ -686,13 +686,17 @@
     "autonomiaId": "castilla-leon",
     "styles": [
       "粉紅酒",
-      "紅酒"
+      "紅酒",
+      "白酒"
     ],
     "grapes": [
-      "Tempranillo (Tinto del País)",
-      "Garnacha"
+      "Tempranillo",
+      "Garnacha",
+      "Garnacha Gris",
+      "Albillo",
+      "Verdejo"
     ],
-    "description": "巴利亞多利德以北小型產區，傳統以清爽乾型粉紅酒（Clarete）著稱，近年也積極發展品質導向紅酒。",
+    "description": "杜羅河谷中心地帶 DO，跨 Valladolid 與 Palencia 省，2,000 公頃。大陸性氣候，海拔 700–800m，年降雨 425mm，年日照 2,616h，第三/四紀沉積砂質石灰岩土壤。長期以乾型粉紅酒（Clarete）聞名，家族 majuelos 村莊葡萄園保留傳統農業文化。Tempranillo（Tinta del País）紅酒崛起中；Garnacha Gris 為稀有粉灰色變種，帶杏桃核果香氣，口感油質飽滿類似 Viognier。監管委員會計畫納入 Cabernet Sauvignon/Merlot 及 Sauvignon Blanc 拓展產品線。",
     "provinces": [
       "Valladolid",
       "Palencia"

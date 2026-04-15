@@ -78,7 +78,7 @@ export const courseLevels = {
     icon: '🍷',
     color: '#8e44ad',
     gradient: 'linear-gradient(135deg, #8e44ad, #9b59b6)',
-    totalLessons: 21,
+    totalLessons: 22,
     prerequisites: ['完成 Level 1'],
     modules: [
       {
@@ -91,6 +91,7 @@ export const courseLevels = {
           { id: 'S2M1L4', title: 'Navarra — 玫瑰酒與 Garnacha 的故鄉' },
           { id: 'S2M1L5', title: 'Arlanza DO — 河谷高海拔古老產區（Albillo）' },
           { id: 'S2M1L6', title: 'Arribes DO — 杜羅河峽谷原生品種（Juan García）' },
+          { id: 'S2M1L7', title: 'Cigales DO — 粉紅酒傳統與 Garnacha Gris' },
         ],
       },
       {
