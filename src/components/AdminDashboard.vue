@@ -153,6 +153,12 @@
             </table>
             <div class="course-actions">
               <button class="btn-sm" @click="editCourse(c)">編輯價格</button>
+              <button
+                :class="['btn-sm', c.active ? 'btn-deactivate' : 'btn-activate']"
+                :disabled="togglingCourse === c.id"
+                @click="toggleCourseActive(c)">
+                {{ togglingCourse === c.id ? '處理中…' : c.active ? '下架' : '上架' }}
+              </button>
               <span :class="['status-dot', c.active ? 'on' : 'off']">
                 {{ c.active ? '上架中' : '已下架' }}
               </span>
@@ -492,9 +498,10 @@ async function saveNotes() {
 }
 
 // ── 課程管理 ────────────────────────────────────────────────
-const courses      = ref([])
-const editingCourse = ref(null)
-const savingCourse  = ref(false)
+const courses        = ref([])
+const editingCourse  = ref(null)
+const savingCourse   = ref(false)
+const togglingCourse = ref(null)
 
 async function loadCourses() {
   const { data } = await supabase.from('courses').select('*').order('id')
@@ -503,6 +510,16 @@ async function loadCourses() {
 
 function editCourse(c) {
   editingCourse.value = { ...c }
+}
+
+async function toggleCourseActive(c) {
+  togglingCourse.value = c.id
+  try {
+    await supabase.from('courses').update({ active: !c.active }).eq('id', c.id)
+    await loadCourses()
+  } finally {
+    togglingCourse.value = null
+  }
 }
 
 async function saveCourse() {
@@ -791,6 +808,10 @@ function formatStudyTime(sec) {
 }
 .btn-sm { background: #8b1a2b; color: #fff; }
 .btn-sm:hover { background: #6b1220; }
+.btn-activate { background: #166534 !important; }
+.btn-activate:hover { background: #14532d !important; }
+.btn-deactivate { background: #92400e !important; }
+.btn-deactivate:hover { background: #78350f !important; }
 .btn-xs { background: #f0ebe5; color: #555; padding: 4px 12px; font-size: .78rem; }
 .btn-xs:hover { background: #e3dad0; }
 .btn-primary { background: #8b1a2b; color: #fff; }

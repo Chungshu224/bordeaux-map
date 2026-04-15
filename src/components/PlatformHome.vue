@@ -90,7 +90,9 @@
 
           <!-- ── Bordeaux ── -->
           <div class="course-card bordeaux">
-            <div class="card-status available">✅ 現已開放</div>
+            <div :class="['card-status', courseStatuses.bordeaux ? 'available' : 'planning']">
+              {{ courseStatuses.bordeaux ? '✅ 現已開放' : '📅 課程規劃中' }}
+            </div>
             <div class="card-hero">
               <div class="card-icon">🏰</div>
               <div class="card-region">France · Bordeaux</div>
@@ -105,65 +107,73 @@
               </div>
             </div>
 
-            <!-- 計費週期切換 -->
-            <div class="billing-toggle">
-              <button :class="['bt-btn', billingPeriod === 'monthly' ? 'active' : '']" @click="billingPeriod = 'monthly'">月繳</button>
-              <button :class="['bt-btn', billingPeriod === 'yearly' ? 'active' : '']" @click="billingPeriod = 'yearly'">年繳 <span class="bt-save">最高省 49%</span></button>
-            </div>
+            <template v-if="courseStatuses.bordeaux">
+              <!-- 計費週期切換 -->
+              <div class="billing-toggle">
+                <button :class="['bt-btn', billingPeriod === 'monthly' ? 'active' : '']" @click="billingPeriod = 'monthly'">月繳</button>
+                <button :class="['bt-btn', billingPeriod === 'yearly' ? 'active' : '']" @click="billingPeriod = 'yearly'">年繳 <span class="bt-save">最高省 49%</span></button>
+              </div>
 
-            <div class="tier-grid">
-              <!-- 免費 -->
-              <div class="tier-card free">
-                <div class="tier-name">免費體驗</div>
-                <div class="tier-price">NT$ 0</div>
-                <ul class="tier-list">
-                  <li class="ok">Level 1 基礎入門</li>
-                  <li class="ok">基本地圖瀏覽</li>
-                  <li class="no">Level 2–4 進階課程</li>
-                  <li class="no">互動練習中心</li>
-                </ul>
-                <button class="tier-btn free-btn" @click="handleFreeTier">立即開始</button>
-              </div>
-              <!-- 初階 -->
-              <div class="tier-card basic popular">
-                <div class="popular-tag">最受歡迎</div>
-                <div class="tier-name">完整課程</div>
-                <div class="tier-price">
-                  <template v-if="billingPeriod === 'monthly'">NT$ 290 <span class="price-unit">/ 月</span></template>
-                  <template v-else>NT$ 1,800 <span class="price-unit">/ 年</span></template>
+              <div class="tier-grid">
+                <!-- 免費 -->
+                <div class="tier-card free">
+                  <div class="tier-name">免費體驗</div>
+                  <div class="tier-price">NT$ 0</div>
+                  <ul class="tier-list">
+                    <li class="ok">Level 1 基礎入門</li>
+                    <li class="ok">基本地圖瀏覽</li>
+                    <li class="no">Level 2–4 進階課程</li>
+                    <li class="no">互動練習中心</li>
+                  </ul>
+                  <button class="tier-btn free-btn" @click="handleFreeTier">立即開始</button>
                 </div>
-                <div class="price-note" v-if="billingPeriod === 'yearly'">相當於 NT$150/月，年省 NT$1,680</div>
-                <ul class="tier-list">
-                  <li class="ok">Level 1–4 全部課程</li>
-                  <li class="ok">互動練習中心（4種遊戲）</li>
-                  <li class="ok">全產區地圖探索</li>
-                  <li class="no">進階地圖圖層</li>
-                  <li class="no">品飲筆記本</li>
-                </ul>
-                <button class="tier-btn basic-btn" @click="handlePurchase('bordeaux','basic')">立即訂閱</button>
-              </div>
-              <!-- 頂級 -->
-              <div class="tier-card premium">
-                <div class="tier-name">頂級方案</div>
-                <div class="tier-price">
-                  <template v-if="billingPeriod === 'monthly'">NT$ 590 <span class="price-unit">/ 月</span></template>
-                  <template v-else>NT$ 3,600 <span class="price-unit">/ 年</span></template>
+                <!-- 初階 -->
+                <div class="tier-card basic popular">
+                  <div class="popular-tag">最受歡迎</div>
+                  <div class="tier-name">完整課程</div>
+                  <div class="tier-price">
+                    <template v-if="billingPeriod === 'monthly'">NT$ {{ pricing.basic.monthly.toLocaleString() }} <span class="price-unit">/ 月</span></template>
+                    <template v-else>NT$ {{ pricing.basic.yearly.toLocaleString() }} <span class="price-unit">/ 年</span></template>
+                  </div>
+                  <div class="price-note" v-if="billingPeriod === 'yearly'">相當於 NT${{ Math.round(pricing.basic.yearly / 12) }}/月，年省 NT${{ (pricing.basic.monthly * 12 - pricing.basic.yearly).toLocaleString() }}</div>
+                  <ul class="tier-list">
+                    <li class="ok">Level 1–4 全部課程</li>
+                    <li class="ok">互動練習中心（4種遊戲）</li>
+                    <li class="ok">全產區地圖探索</li>
+                    <li class="no">進階地圖圖層</li>
+                    <li class="no">品飲筆記本</li>
+                  </ul>
+                  <button class="tier-btn basic-btn" @click="handlePurchase('bordeaux','basic')">立即訂閱</button>
                 </div>
-                <div class="price-note" v-if="billingPeriod === 'yearly'">相當於 NT$300/月，年省 NT$3,480</div>
-                <ul class="tier-list">
-                  <li class="ok">包含完整課程全部內容</li>
-                  <li class="ok">進階地圖（地質/氣候）</li>
-                  <li class="ok">知名酒莊地圖標記</li>
-                  <li class="ok">品飲筆記本</li>
-                </ul>
-                <button class="tier-btn premium-btn" @click="handlePurchase('bordeaux','premium')">立即訂閱</button>
+                <!-- 頂級 -->
+                <div class="tier-card premium">
+                  <div class="tier-name">頂級方案</div>
+                  <div class="tier-price">
+                    <template v-if="billingPeriod === 'monthly'">NT$ {{ pricing.premium.monthly.toLocaleString() }} <span class="price-unit">/ 月</span></template>
+                    <template v-else>NT$ {{ pricing.premium.yearly.toLocaleString() }} <span class="price-unit">/ 年</span></template>
+                  </div>
+                  <div class="price-note" v-if="billingPeriod === 'yearly'">相當於 NT${{ Math.round(pricing.premium.yearly / 12) }}/月，年省 NT${{ (pricing.premium.monthly * 12 - pricing.premium.yearly).toLocaleString() }}</div>
+                  <ul class="tier-list">
+                    <li class="ok">包含完整課程全部內容</li>
+                    <li class="ok">進階地圖（地質/氣候）</li>
+                    <li class="ok">知名酒莊地圖標記</li>
+                    <li class="ok">品飲筆記本</li>
+                  </ul>
+                  <button class="tier-btn premium-btn" @click="handlePurchase('bordeaux','premium')">立即訂閱</button>
+                </div>
               </div>
+            </template>
+            <div v-else class="planning-body">
+              <p>此課程目前暫停開放，敬請期待！</p>
+              <button class="tier-btn free-btn" @click="handleFreeTier">先體驗 Level 1 免費</button>
             </div>
           </div>
 
           <!-- ── Bourgogne ── -->
-          <div v-if="isAdmin" class="course-card bourgogne">
-            <div class="card-status active">🔓 管理員開放</div>
+          <div class="course-card bourgogne">
+            <div :class="['card-status', courseStatuses.bourgogne ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.bourgogne ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
             <div class="card-hero">
               <div class="card-icon">🍇</div>
               <div class="card-region">France · Bourgogne</div>
@@ -171,13 +181,16 @@
               <p class="card-desc">從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界（預計2027開放）</p>
             </div>
             <div class="card-actions">
-              <button class="card-cta bourgogne-cta" @click="router.push('/bourgogne')">📖 進入課程 →</button>
+              <button v-if="courseStatuses.bourgogne || isAdmin" class="card-cta bourgogne-cta" @click="router.push('/bourgogne')">📖 進入課程 →</button>
+              <span v-else class="planning-cta">開發中，敬請期待</span>
             </div>
           </div>
 
           <!-- ── Italy ── -->
-          <div v-if="isAdmin" class="course-card italy">
-            <div class="card-status new">🔓 管理員開放</div>
+          <div class="course-card italy">
+            <div :class="['card-status', courseStatuses.italy ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.italy ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
             <div class="card-hero">
               <div class="card-icon">🇮🇹</div>
               <div class="card-region">Italy</div>
@@ -185,13 +198,16 @@
               <p class="card-desc">探索 Barolo、Brunello、Amarone 等世界頂級義大利葡萄酒，20 個 DOC/DOCG 產區完整解析（預計2027開放）</p>
             </div>
             <div class="card-actions">
-              <button class="card-cta italy-cta" @click="router.push('/italy')">📖 進入課程 →</button>
+              <button v-if="courseStatuses.italy || isAdmin" class="card-cta italy-cta" @click="router.push('/italy')">📖 進入課程 →</button>
+              <span v-else class="planning-cta">開發中，敬請期待</span>
             </div>
           </div>
 
           <!-- ── Spain ── -->
-          <div v-if="isAdmin" class="course-card spain">
-            <div class="card-status new">🆕 新課程・即刻探索</div>
+          <div class="course-card spain">
+            <div :class="['card-status', courseStatuses.spain ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.spain ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
             <div class="card-hero">
               <div class="card-icon">🇪🇸</div>
               <div class="card-region">Spain · España</div>
@@ -199,7 +215,8 @@
               <p class="card-desc">探索 Rioja、Ribera del Duero、Rías Baixas 等頂級產區，DO／DOCa／VP 分級完整解析，互動衛星地圖帶你走遍 96 個法定產區</p>
             </div>
             <div class="card-actions">
-              <button class="card-cta spain-cta" @click="router.push('/spain')">🗺 開始探索 →</button>
+              <button v-if="courseStatuses.spain || isAdmin" class="card-cta spain-cta" @click="router.push('/spain')">🗺 開始探索 →</button>
+              <span v-else class="planning-cta">開發中，敬請期待</span>
             </div>
           </div>
 
@@ -507,24 +524,29 @@ const handleFreeTier = () => {
   }
 }
 
-// ─── 訂閱定價（從 DB 讀取 Bordeaux 定價）────────────────────────────────
+// ─── 課程狀態 + 訂閱定價（從 DB 讀取）────────────────────────────────
 const pricing = ref({
   basic:   { monthly: 290,  yearly: 1800 },
   premium: { monthly: 590,  yearly: 3600 }
 })
+// 各課程上架狀態（預設偡 active=true 防止関你加載先閃爍）
+const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: false })
 
-async function loadBordeauxPricing() {
+async function loadCourseData() {
   try {
     const { data } = await supabase
       .from('courses')
-      .select('price_basic_monthly,price_basic_yearly,price_premium_monthly,price_premium_yearly')
-      .eq('id', 'bordeaux')
-      .single()
+      .select('id,active,price_basic_monthly,price_basic_yearly,price_premium_monthly,price_premium_yearly')
     if (data) {
-      pricing.value = {
-        basic:   { monthly: data.price_basic_monthly   ?? 290,  yearly: data.price_basic_yearly   ?? 1800 },
-        premium: { monthly: data.price_premium_monthly ?? 590,  yearly: data.price_premium_yearly ?? 3600 }
-      }
+      data.forEach(c => {
+        courseStatuses.value[c.id] = c.active
+        if (c.id === 'bordeaux') {
+          pricing.value = {
+            basic:   { monthly: c.price_basic_monthly   ?? 290,  yearly: c.price_basic_yearly   ?? 1800 },
+            premium: { monthly: c.price_premium_monthly ?? 590,  yearly: c.price_premium_yearly ?? 3600 }
+          }
+        }
+      })
     }
   } catch { /* 使用預設定價 */ }
 }
@@ -665,7 +687,7 @@ const recentPosts  = ref([])
 const forumLoading = ref(false)
 
 onMounted(async () => {
-  loadBordeauxPricing()
+  loadCourseData()
   forumLoading.value = true
   try {
     recentPosts.value = await fetchRecentPosts(5)
@@ -956,6 +978,10 @@ onMounted(async () => {
 .card-status.available { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
 .card-status.active { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
 .card-status.soon { background: rgba(251,191,36,0.1); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+.card-status.planning { background: rgba(107,114,128,0.15); color: #9ca3af; border: 1px solid rgba(107,114,128,0.3); }
+.planning-body { text-align: center; padding: 24px 16px; color: #9a8878; font-size: 0.9rem; line-height: 1.6; }
+.planning-body p { margin: 0 0 16px; }
+.planning-cta { color: #6b7280; font-size: 0.85rem; font-style: italic; }
 .card-hero { margin-bottom: 20px; }
 .card-icon { font-size: 2.4rem; margin-bottom: 8px; }
 .card-region { color: #9a8878; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
