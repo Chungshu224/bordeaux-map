@@ -1512,6 +1512,143 @@ const S2M1L5_slides = [
   },
 ]
 
+// ─── S2M1L6 — Arribes DO ────────────────────────────────────────────────────
+const S2M1L6_slides = [
+  {
+    type: 'cover',
+    icon: '🏞️',
+    gradient: 'linear-gradient(135deg, #1b5e20, #388e3c)',
+    title: 'Arribes DO — 杜羅河深峽谷原生品種聖地',
+    subtitle: 'Level 2 · 卡斯提亞-萊昂 · Zamora & Salamanca · 2007 DO · 鄰葡萄牙邊境',
+    points: [
+      { icon: '🏞️', label: '峭壁梯田地形', text: '葡萄園分布在杜羅河及支流的陡峭山谷與梯田，海拔約 700m，337 公頃，跨越 47 個城鎮' },
+      { icon: '🍇', label: 'Juan García 原生品種', text: 'Arribes 最核心品種，灌木藤蔓種植於 Fermoselle 附近，鮮艷紫紅色澤，豐富果香，輕至中等酒體' },
+      { icon: '🌡️', label: '三氣候交匯微氣候', text: '大陸性為主，受大西洋調節，杜羅河坡地呈地中海特點；夏季 40°C，年日照 2,800h' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Arribes DO 位置',
+    mapRegion: 'castilla-leon',
+    description: '位於卡斯提亞-萊昂 Zamora 與 Salamanca 省西部，杜羅河谷與葡萄牙交界。葡萄園海拔約 700m，花崗岩與板岩砂質土壤，酸性土，年日照 2,800 小時。',
+  },
+  {
+    type: 'compare',
+    title: 'Arribes：風土核心特徵',
+    items: [
+      {
+        icon: '🏔️',
+        label: '花崗岩・板岩砂質土',
+        desc: '土壤由花崗岩與板岩組成，含石英石與露出岩層，呈酸性（Acid pH）。土層淺，有機質含量低，葡萄根系深扎以獲取水分',
+        color: '#78909c',
+      },
+      {
+        icon: '🌊',
+        label: '杜羅河峽谷微氣候',
+        desc: '深峽谷形成天然屏障，坡地呈地中海特點：夏季高溫 40°C，冬季最低 -9.5°C，年降雨 561mm，年日照高達 2,800h',
+        color: '#1565c0',
+      },
+      {
+        icon: '🍇',
+        label: 'Juan García 灌木老藤',
+        desc: '最核心原生品種，主要在 Fermoselle 附近以灌木藤蔓（Bush Vines）種植，不需搭架，老藤自然低產，釀出的酒深具地方個性',
+        color: '#6a1b9a',
+      },
+      {
+        icon: '🌿',
+        label: 'Rufete（Tinta Pinheira）',
+        desc: '晚熟深色品種，與 Juan García 混釀，增添結構感。在葡萄牙鄰近 Vinho Verde 也有種植，是邊境共有品種',
+        color: '#2e7d32',
+      },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍇',
+    title: 'Juan García 與原生品種圖景',
+    html: `
+      <h4>🍇 Juan García — Arribes 最核心原生品種</h4>
+      <ul>
+        <li><strong>主要產地</strong>：Fermoselle 附近，以灌木藤蔓（Bush Vines）種植</li>
+        <li><strong>外觀</strong>：鮮艷紫紅色，年輕時色深光澤</li>
+        <li><strong>香氣</strong>：豐富紅色與黑色果香，帶有草本與花香元素</li>
+        <li><strong>酒體</strong>：輕至中等濃郁，清新易飲，單寧柔順</li>
+      </ul>
+      <h4>🍷 完整品種列表</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>🟥 紅葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Juan García</strong>（核心原生）</li>
+            <li>Tempranillo</li>
+            <li>Bruñal</li>
+            <li><strong>Rufete</strong>（Tinta Pinheira，晚熟）</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:10px">
+          <strong>⬜ 白葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Malvasía Castellana</strong></li>
+            <li>（亦稱 Doña Blanca）</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:10px;color:#555;font-size:0.9em">📐 總種植面積約 <strong>337 公頃</strong>，跨越 <strong>47 個城鎮</strong>，2007 年 7 月 27 日升格 DO</p>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🍽️',
+    title: '氣候數據與餐酒搭配',
+    html: `
+      <h4>🌡️ 氣候數據</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div style="background:#fce8e6;border-left:4px solid #e53935;padding:10px;border-radius:0 8px 8px 0">
+          <strong>🌞 夏季最高</strong><br/><strong style="font-size:1.3em">40°C</strong>
+        </div>
+        <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:10px;border-radius:0 8px 8px 0">
+          <strong>❄️ 冬季最低</strong><br/><strong style="font-size:1.3em">-9.5°C</strong>
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:10px;border-radius:0 8px 8px 0">
+          <strong>🌧️ 年均降雨</strong><br/><strong style="font-size:1.3em">561mm</strong>
+        </div>
+        <div style="background:#fff8e1;border-left:4px solid #e65100;padding:10px;border-radius:0 8px 8px 0">
+          <strong>☀️ 年均日照</strong><br/><strong style="font-size:1.3em">2,800h</strong>
+        </div>
+      </div>
+      <h4 style="margin-top:14px">🍽️ Juan García 餐酒搭配推薦</h4>
+      <ul>
+        <li>🫘 <strong>鷹嘴豆配菠菜</strong>（西班牙傳統燉菜）</li>
+        <li>🥩 <strong>碎牛肉（Milanesa）</strong>——輕盈果香與牛肉鮮味相輔</li>
+        <li>🧆 <strong>羊肉肉丸（Koftas）佐葡萄乾與紅洋蔥沙拉</strong>——柔順單寧搭配香料羊肉</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '關於 Arribes DO 的 Juan García 葡萄，下列何者正確？',
+    options: [
+      'Juan García 是國際品種，廣泛種植於法國和義大利',
+      'Juan García 主要在 Fermoselle 附近以灌木藤蔓種植，酒色鮮艷紫紅，風格輕至中等濃郁',
+      'Juan García 是高酸高單寧品種，需陳年 20 年以上才適合飲用',
+      'Juan García 只能釀製甜酒，不適合釀製乾型紅酒',
+    ],
+    answer: 1,
+    explanation: 'Juan García 是 Arribes DO 最核心的本土原生品種，主要在 Fermoselle 附近以灌木藤蔓（Bush Vines）種植。酒色鮮艷紫紅，帶有豐富果香，風格介於輕盈至中等濃郁之間，適合搭配鷹嘴豆菠菜、碎牛肉等食物。',
+  },
+  {
+    type: 'summary',
+    message: 'Arribes DO 學習完成！',
+    keyPoints: [
+      '位於卡斯提亞-萊昂 Zamora & Salamanca 省，杜羅河谷葡萄牙邊境，2007 年升格 DO',
+      '地形特色：陡峭峽谷梯田，海拔約 700m，337 公頃，47 個城鎮',
+      '氣候：大陸性 + 大西洋 + 地中海三重交匯，40°C/-9.5°C，年日照 2,800h',
+      '土壤：花崗岩・板岩砂質，酸性 pH，土層淺——保留稀有原生品種的理想環境',
+      'Juan García 是核心原生品種（灌木老藤・Fermoselle），Rufete 為混釀補充，Malvasía Castellana 為主力白品種',
+    ],
+  },
+]
+
 const S2M2L1_slides = [
   {
     type: 'cover',
@@ -5064,6 +5201,7 @@ const SLIDE_MAP = {
   S2M1L3: S2M1L3_slides,     // Bierzo / Mencía
   S2M1L4: S2M1L4_slides,     // Navarra / Rosado
   S2M1L5: S2M1L5_slides,     // Arlanza DO / Albillo
+  S2M1L6: S2M1L6_slides,     // Arribes DO / Juan García
   S2M2L1: S2M2L1_slides,     // Rías Baixas / Albariño
   S2M2L2: S2M2L2_slides,     // Ribeiro / Valdeorras / Ribeira Sacra
   S2M2L3: S2M2L3_slides,     // 大西洋氣候與花崗岩土壤

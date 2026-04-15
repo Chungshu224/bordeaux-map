@@ -730,9 +730,11 @@
     "grapes": [
       "Juan García",
       "Tempranillo",
+      "Bruñal",
+      "Rufete",
       "Malvasía Castellana"
     ],
-    "description": "薩拉曼卡和薩莫拉省西部，杜羅河深峽谷（Arribes）地形，微氣候溫和。Juan García 等本地品種，產出具地方特色的精緻紅酒。",
+    "description": "杜羅河谷與葡萄牙交界邊境 DO（2007），跨 Zamora 與 Salamanca 省 47 個城鎮，陡峭峽谷梯田葡萄園。海拔約 700m，花崗岩板岩砂質土壤，酸性 pH，土層淺薄。三重氣候交匯（大陸性+大西洋+地中海），夏季 40°C、冬季 -9.5°C，年降雨 561mm，年日照 2,800h。核心原生品種 Juan García 以灌木老藤種植於 Fermoselle，釀出鮮艷紫紅色果香紅酒；Rufete（Tinta Pinheira）為晚熟混釀補充品種；Malvasía Castellana（Doña Blanca）為主力白品種。",
     "provinces": [
       "Salamanca",
       "Zamora"
