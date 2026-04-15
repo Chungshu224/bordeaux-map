@@ -249,13 +249,32 @@
     "grapes": [
       "Mencía",
       "Garnacha Tintorera",
-      "Godello"
+      "Godello",
+      "Doña Blanca",
+      "Palomino",
+      "Malvasía"
     ],
-    "description": "萊昂省西北角的特殊山谷微氣候，Mencía 葡萄在板岩土壤上展現出罕見的優雅花香與礦物感，被譽為西班牙的 Pinot Noir 風格代表。",
+    "description": "萊昂省西北部碗形盆地，海拔 450–1,000m，葡萄園面積 2,982 公頃。官方口號「Bierzo, the land of Mencía」——Mencía 佔產量約 75%，以酸櫻桃、石榴、甘草與碎石礦物感著稱，應飲溫 13–16°C，陳年 10 年以上仍出色。Godello 白酒帶柚子、檸檬皮、榲桲與煙燻礦石，應飲溫 7–13°C。半濕潤氣候（夏 20.8°C、冬 5.7°C、年雨 652mm），大西洋氣流調節大陸型極端。",
     "provinces": [
       "Leon"
     ],
-    "classification": "DO"
+    "classification": "DO",
+    "location": "卡斯提亞-萊昂自治區萊昂省西北部；北鄰阿斯圖里亞斯，西接加利西亞（奧倫塞、盧戈省）",
+    "climate": {
+      "type": "半濕潤氣候",
+      "summerAvgC": 20.8,
+      "winterAvgC": 5.7,
+      "annualRainfallMm": 652,
+      "note": "數據來源：Cacabelos 站；大西洋濕潤空氣從加利西亞流入，調節大陸型極端氣候"
+    },
+    "elevation": "450–1,000m",
+    "areaHa": 2982.04,
+    "soilType": "高海拔：石英岩、板岩、花崗岩、石灰岩；低海拔：黏土、卵石、沖積物",
+    "tagline": "Bierzo, the land of Mencía（Mencía 佔產量約 75%）",
+    "servingAging": {
+      "Mencía": "13–16°C，醒酒 1 小時，優質款陳年 10 年以上表現出色",
+      "Godello": "7–13°C，無需醒酒，陳年 3–5 年"
+    }
   },
   {
     "zonName": "Jumilla",
