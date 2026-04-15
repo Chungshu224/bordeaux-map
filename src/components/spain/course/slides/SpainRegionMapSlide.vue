@@ -136,6 +136,8 @@ async function initMap() {
 
   const regionKey = props.slide.mapRegion || 'all'
   const cfg = REGION_CONFIG[regionKey] || REGION_CONFIG['all']
+  // geojsonUrl 優先：讓 slide 指定單一 DO 的 GeoJSON，覆蓋自治區層級檔案
+  const geojsonFile = props.slide.geojsonUrl || cfg.file
 
   mapboxgl.accessToken = token
 
@@ -157,7 +159,7 @@ async function initMap() {
 
   mapInst.on('load', async () => {
     try {
-      const res = await fetch(cfg.file)
+      const res = await fetch(geojsonFile)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const geojson = await res.json()
 

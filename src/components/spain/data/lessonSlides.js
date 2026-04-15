@@ -1018,6 +1018,7 @@ const S2M1L1_slides = [
     type: 'map',
     title: 'Ribera del Duero 高原地理',
     mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/ribera-del-duero.geojson',
     description: '海拔 700–1000 公尺的杜羅河谷，西班牙最大產酒自治區，日夜溫差賦予葡萄卓越酸度。',
   },
   {
@@ -1080,6 +1081,7 @@ const S2M1L2_slides = [
     type: 'map',
     title: 'Rueda DO 產區位置',
     mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/rueda.geojson',
     description: '位於卡斯提亞-萊昂西南部，Verdejo 白酒的核心產地，海拔高原賦予清爽酸度。',
   },
   {
@@ -1147,6 +1149,7 @@ const S2M1L3_slides = [
     type: 'map',
     title: 'Bierzo 板岩谷地',
     mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/bierzo.geojson',
     description: '西班牙西北角的山谷產區，板岩土壤孕育 Mencía 老藤，地形遮擋大西洋與大陸氣候。',
   },
   {
@@ -1321,6 +1324,7 @@ const S2M2L1_slides = [
     type: 'map',
     title: 'Rías Baixas 大西洋海灣',
     mapRegion: 'galicia',
+    geojsonUrl: '/spain/geojson/appellations/rias-baixas.geojson',
     description: '加利西亞西南角的鋸齒形海岸，大西洋海風帶來涼爽潮濕氣候，是 Albariño 的故鄉。',
   },
   {
@@ -1441,6 +1445,7 @@ const S2M2L2_slides = [
     type: 'map',
     title: '加利西亞北部葡萄酒產區',
     mapRegion: 'galicia',
+    geojsonUrl: '/spain/geojson/appellations/galicia-interior-dos.geojson',
     description: 'Ribeiro・Valdeorras・Ribeira Sacra・Monterrei — 多樣地形與花崗岩/板岩土壤孕育各具特色的白酒與紅酒。',
   },
   {
@@ -1659,6 +1664,7 @@ const S2M2L3_slides = [
     type: 'map',
     title: 'Ribeira Sacra 懸崖梯田',
     mapRegion: 'galicia',
+    geojsonUrl: '/spain/geojson/appellations/ribeira-sacra.geojson',
     description: '沿 Miño 和 Sil 河谷的陡峭梯田，手工採收的 Mencía 老藤，加利西亞最壯觀的葡萄酒產區。',
   },
   {
@@ -1747,6 +1753,7 @@ const S2M3L1_slides = [
     type: 'map',
     title: 'Priorat DOCa 板岩山地',
     mapRegion: 'catalonia',
+    geojsonUrl: '/spain/geojson/appellations/priorat.geojson',
     description: '加泰羅尼亞山區，llicorella 板岩土壤覆蓋陡峭山坡，是西班牙兩個 DOCa 之一。',
   },
   {
@@ -1818,6 +1825,7 @@ const S2M3L2_slides = [
     type: 'map',
     title: 'Montsant 與周邊產區',
     mapRegion: 'catalonia',
+    geojsonUrl: '/spain/geojson/appellations/priorat-montsant.geojson',
     description: '環繞 Priorat 的產區，同樣的板岩土壤，以更實惠的價格提供類似的礦物感風格。',
   },
   {
@@ -1880,6 +1888,7 @@ const S2M3L3_slides = [
     type: 'map',
     title: 'Penedès 與加泰羅尼亞白酒產區',
     mapRegion: 'catalonia',
+    geojsonUrl: '/spain/geojson/appellations/penedes.geojson',
     description: '連接巴塞隆納與地中海，是 Cava 的發源地，現代西班牙白酒革命的中心。',
   },
   {
@@ -1949,6 +1958,7 @@ const S2M4L1_slides = [
     type: 'map',
     title: 'Jerez — Sherry 雪莉酒產區',
     mapRegion: 'andalucia',
+    geojsonUrl: '/spain/geojson/appellations/jerez.geojson',
     description: '安達盧西亞西南角，白色白堊土（Albariza）、強烈陽光與海洋微風，Sherry 的獨特風土。',
   },
   {
@@ -2022,6 +2032,7 @@ const S2M4L2_slides = [
     type: 'map',
     title: 'Jumilla & Yecla 穆爾西亞高原',
     mapRegion: 'murcia',
+    geojsonUrl: '/spain/geojson/appellations/jumilla-yecla.geojson',
     description: '內陸半乾旱高原，Monastrell 老藤在極端溫度下濃縮出結構豐厚的紅酒。',
   },
   {
@@ -2684,6 +2695,7 @@ const S3M2L1_slides = [
     type: 'map',
     title: 'Cava 產區地理核心',
     mapRegion: 'catalonia',
+    geojsonUrl: '/spain/geojson/appellations/cava.geojson',
     description: '雖遍布西班牙，但 85% 的 Cava 產自加泰羅尼亞 Penedès，Sant Sadurní d\u0027Anoia 是其心臟。',
   },
   {
@@ -2745,6 +2757,7 @@ const S3M2L2_slides = [
     type: 'map',
     title: 'Cava 葡萄品種產區分布',
     mapRegion: 'catalonia',
+    geojsonUrl: '/spain/geojson/appellations/cava.geojson',
     description: 'Macabeo・Xarel·lo・Parellada 三大本土品種在加泰羅尼亞的地理分布。',
   },
   {
@@ -2800,6 +2813,7 @@ const S3M2L3_slides = [
     type: 'map',
     title: 'Cava DE 與精品 Cava 產區',
     mapRegion: 'catalonia',
+    geojsonUrl: '/spain/geojson/appellations/cava.geojson',
     description: '新設立的 Cava de Paraje Calificado 單一產區和 Cava DE 等級，強調風土表達。',
   },
   {
@@ -2870,6 +2884,7 @@ const S3M2L4_slides = [
     type: 'map',
     title: 'Corpinnat & Clàssic Penedès 精品小農地帶',
     mapRegion: 'catalonia',
+    geojsonUrl: '/spain/geojson/appellations/penedes.geojson',
     description: '脫離 Cava DO 的頂級小農，在 Penedès 核心地帶釀造高品質傳統法氣泡酒。',
   },
   {
@@ -2937,6 +2952,7 @@ const S3M3L1_slides = [
     type: 'map',
     title: 'Sherry 三角地帶',
     mapRegion: 'andalucia',
+    geojsonUrl: '/spain/geojson/appellations/jerez.geojson',
     description: 'Jerez-Xérès-Sherry、El Puerto de Santa María、Sanlúcar de Barrameda 構成的神聖三角。',
   },
   {
@@ -3034,6 +3050,7 @@ const S3M3L3_slides = [
     type: 'map',
     title: 'Sherry 釀酒中心',
     mapRegion: 'andalucia',
+    geojsonUrl: '/spain/geojson/appellations/jerez.geojson',
     description: 'Jerez 城市周邊的酒莊區，Bodega 林立，索雷拉系統在此孕育數十年的複雜風味。',
   },
   {
@@ -3090,6 +3107,7 @@ const S3M3L4_slides = [
     type: 'map',
     title: 'Manzanilla — Sanlúcar 海岸微氣候',
     mapRegion: 'andalucia',
+    geojsonUrl: '/spain/geojson/appellations/jerez-manzanilla.geojson',
     description: 'Sanlúcar de Barrameda 獨特的海洋微氣候，讓 Flor 酵母更活躍，創造最鹹鮮的 Manzanilla。',
   },
   {
@@ -3146,6 +3164,7 @@ const S3M4L1_slides = [
     type: 'map',
     title: 'Toro & Cigales 西部產區',
     mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/toro-cigales.geojson',
     description: '杜羅河上游，Toro 的 Tinta de Toro 和 Cigales 的粉紅酒，卡斯提亞-萊昂的另一面。',
   },
   {
@@ -3219,6 +3238,7 @@ const S3M4L2_slides = [
     type: 'map',
     title: 'La Mancha — 世界最大 DO 高原',
     mapRegion: 'castilla-la-mancha',
+    geojsonUrl: '/spain/geojson/appellations/la-mancha.geojson',
     description: '綿延數百公里的卡斯提亞高原，Airén 白品種和 Cencibel（Tempranillo）的廣大疆域。',
   },
   {
@@ -3489,6 +3509,7 @@ const S3M3L2_slides = [
     type: 'map',
     title: 'Albariza 白堊土地帶分布',
     mapRegion: 'andalucia',
+    geojsonUrl: '/spain/geojson/appellations/jerez.geojson',
     description: '反射陽光的白色白堊土（Albariza）是 Sherry 最佳風土的標誌，主要分布在三角地帶周邊。',
   },
   {
@@ -4140,6 +4161,7 @@ const S4M3L1_slides = [
     type: 'map',
     title: 'Ribera del Duero 頂級名莊地帶',
     mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/ribera-del-duero.geojson',
     description: 'Vega Sicilia・Pingus 的所在地，Burgos 省沿杜羅河的黃金地帶。',
   },
   {
@@ -4220,6 +4242,7 @@ const S4M3L2_slides = [
     type: 'map',
     title: 'Priorat 復興的核心地帶',
     mapRegion: 'catalonia',
+    geojsonUrl: '/spain/geojson/appellations/priorat.geojson',
     description: 'Alvaro Palacios 與 René Barbier 在 1989 年落腳的 Gratallops 村莊，Priorat 文藝復興的起點。',
   },
   {
