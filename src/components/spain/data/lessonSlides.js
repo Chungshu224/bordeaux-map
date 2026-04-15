@@ -1431,7 +1431,7 @@ const S2M2L2_slides = [
     title: 'Ribeiro · Valdeorras · Ribeira Sacra',
     subtitle: 'Level 2 · 加利西亞的三個寶藏產區',
     points: [
-      { icon: '🍃', label: 'Ribeiro', text: '加利西亞最古老的產區，Treixadura 和 Godello 白酒複雜度驚人' },
+      { icon: '🍃', label: 'Ribeiro（1932 DO）', text: '加利西亞最古老 DO，Treixadura 旗艦品種，colleteiros 傳統小農；花崗岩砂質土壤，夏 40°C/冬 -3°C' },
       { icon: '🪨', label: 'Valdeorras「黃金之谷」', text: 'Godello 復興發源地，夏達 40°C、冬低 -8°C，年日照 2,200h；Castas Nobles 等級' },
       { icon: '⬛', label: 'Ribeira Sacra', text: 'Miño/Sil 河谷陡峭梯田，海拔 400–500m，Mencía 紅酒、Godello 白酒，古羅馬釀酒史' },
     ],
@@ -1448,8 +1448,8 @@ const S2M2L2_slides = [
     items: [
       {
         icon: '🍃',
-        label: 'Ribeiro DO',
-        desc: '加利西亞最古老產區。主要品種：白酒 Treixadura（帶花香與豐腴質感）、Godello、Albariño；紅酒 Sousón、Caíño Tinto。風格豐盈多層次。',
+        label: 'Ribeiro DO（1932 年）',
+        desc: '加利西亞最古老 DO，位於 Ribadavia，2,350 公頃，海拔 100–350m。花崗岩砂質土（70%）；夏最高 40°C、冬最低 -3°C、年雨 900mm、年日照 2,250h。白：<strong>Treixadura</strong>（旗艦，優雅花香、果香與香脂）+ Albariño、Godello、Torrontés、Loureira；紅：Caiño Longo、Caiño Tinto、Caiño Bravo、Sousón、Brancellao、Mencía 等。大多以 Treixadura 為主體混釀，酒精 12–13.5%。<em>colleteiros</em> 小型獨立生產者延續傳統釀造文化；近年積極現代化復興。',
         color: '#1e8449',
       },
       {
@@ -1465,6 +1465,54 @@ const S2M2L2_slides = [
         color: '#2c3e50',
       },
     ],
+  },
+  {
+    type: 'content',
+    icon: '🍃',
+    title: 'Ribeiro：加利西亞最古老 DO 的傳統復興',
+    html: `
+      <h4>🏛️ 歷史與地理背景</h4>
+      <ul>
+        <li><strong>1932 年</strong>正式確立 DO，是加利西亞歷史最悠久的命名產區</li>
+        <li>位於奧倫塞省 <strong>Ribadavia</strong>，葡萄園約 <strong>2,350 公頃</strong>，海拔 100–350m</li>
+        <li>目前正歷經復興：憑藉原生品種在國際市場重新嶄露頭角</li>
+      </ul>
+      <h4>🌤️ 氣候與土壤</h4>
+      <ul>
+        <li><strong>氣候</strong>：夏最高 40°C、冬最低 -3°C，年雨 900mm，年日照 <strong>2,250 小時</strong></li>
+        <li><strong>土壤</strong>：花崗岩砂質土（70%）、片岩（20%）、沉積土（10%）</li>
+      </ul>
+      <h4>🍇 明星品種：Treixadura</h4>
+      <ul>
+        <li>被譽為「<strong>萊貝羅葡萄園的瑰寶</strong>」，發芽與成熟較慢，對海拔敏感</li>
+        <li><strong>風味</strong>：精緻花香（玫瑰、白花）、桃子、杏桃、淡淡香脂（balsamic）氣息，質地滑順圓潤</li>
+        <li>多以 Treixadura 為主體，混釀 Albariño、Godello、Torrontés、Loureira，酒精 <strong>12–13.5%</strong></li>
+      </ul>
+      <h4>🍷 完整品種列表</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+        <div style="background:#e8f5e9;border-radius:8px;padding:10px">
+          <strong>⬜ 白葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Treixadura</strong>（旗艦）</li>
+            <li>Albariño、Godello</li>
+            <li>Torrontés、Loureira</li>
+          </ul>
+        </div>
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>🟥 紅葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li>Caiño Longo、Caiño Tinto</li>
+            <li>Caiño Bravo、Ferrón</li>
+            <li>Sousón、Brancellao、Mencía</li>
+          </ul>
+        </div>
+      </div>
+      <h4>👨‍🌾 產業特色</h4>
+      <ul>
+        <li><strong>colleteiros</strong>：眾多小型獨立生產者，堅持以自家種植葡萄進行傳統釀造</li>
+        <li>大型合作社與精品酒莊並存，均大量投入現代化與品質提升</li>
+      </ul>
+    `,
   },
   {
     type: 'content',
@@ -1523,8 +1571,8 @@ const S2M2L2_slides = [
         <li><strong>口感</strong>：豐滿圓潤、中高酸、帶有油脂感和礦石骨架</li>
         <li><strong>桶陳版本</strong>：增加奶油烤麵包感，複雜度媲美頂級 Burgundy 白酒</li>
       </ul>
-      <h4>💡 Treixadura（Ribeiro 的寶貝）</h4>
-      <p>Ribeiro 的代表白品種，帶有玫瑰花瓣、杏桃和淡淡香草，質地圓潤。通常與 Godello、Albariño 混調，增添複雜度。</p>
+      <h4>💡 Treixadura（Ribeiro 的旗艦品種）</h4>
+      <p>Ribeiro 的代表白品種，被譽為「萊貝羅葡萄園的瑰寶」。精緻花香、桃子、杏桃與淡淡香脂（balsamic）氣息，質地圓潤滑順。通常以 Treixadura 為主體，混釀 Albariño、Godello、Loureira，增添複雜度與平衡感（酒精 12–13.5%）。</p>
     `,
   },
   {
@@ -1539,7 +1587,7 @@ const S2M2L2_slides = [
     type: 'summary',
     message: '加利西亞三寶學習完成！',
     keyPoints: [
-      'Ribeiro：最古老的加利西亞產區，Treixadura 和 Godello 白酒並重',
+      'Ribeiro（1932 DO）：加利西亞最古老命名產區；Treixadura 旗艦白品種（花香、香脂、混釀為主），colleteiros 傳統小農；花崗岩砂質土（70%），年日照 2,250h',
       'Valdeorras「黃金之谷」：Godello 復興發源地，夏 40°C/冬 -8°C/年日照 2,200h；Castas Nobles 等級（≥85% 推薦品種）',
       'Ribeira Sacra：Miño/Sil 河谷梯田，400–500m，古羅馬釀酒史；Amandi 最知名；Mencía（紅）+ Godello（白）',
       'Godello：加利西亞白酒寶石，豐滿礦石，媲美頂級 Burgundy Chardonnay',

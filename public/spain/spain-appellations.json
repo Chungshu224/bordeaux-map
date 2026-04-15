@@ -389,15 +389,38 @@
     ],
     "grapes": [
       "Treixadura",
-      "Palomino",
+      "Albariño",
+      "Godello",
       "Torrontés",
+      "Loureira",
+      "Caiño Longo",
+      "Caiño Tinto",
+      "Caiño Bravo",
+      "Ferrón",
+      "Sousón",
+      "Brancellao",
       "Mencía"
     ],
-    "description": "加利西亞花崗岩地帶的古老酒鄉，以 Treixadura 白酒為代表，清爽多果香，是奧倫塞的傳統地方飲品。",
+    "description": "1932 年設立 DO 的加利西亞最古老命名產區，位於 Ribadavia，海拔 100–350m，2,350 公頃葡萄園。花崗岩砂質土壤（70%）賦予清新礦感；夏季最高 40°C、冬季最低 -3°C，年雨 900mm，年日照 2,250 小時。Treixadura 為旗艦白品種（優雅花香、香脂、多層次），通常混釀 Albariño、Godello 等原生品種。紅酒則以多種 Caiño 品種與 Sousón 為特色。擁有眾多 colleteiros（小型獨立生產者），近年正歷經原生品種復興。",
     "provinces": [
       "Ourense"
     ],
-    "classification": "DO"
+    "classification": "DO",
+    "nameTranslation": "萊貝羅",
+    "location": "加利西亞，Ribadavia（奧倫塞省）",
+    "history": "1932 年正式確立 DO，是加利西亞歷史最悠久的命名產區；目前正歷經以原生品種為主軸的復興",
+    "climate": {
+      "summerMaxC": 40,
+      "winterMinC": -3,
+      "annualRainfallMm": 900,
+      "annualSunshineHours": 2250
+    },
+    "elevation": "100–350m",
+    "soilType": "花崗岩砂質土（70%）、片岩（20%）、沉積土（10%）",
+    "vineyardHa": 2350,
+    "marqueeVariety": "Treixadura（被譽為「萊貝羅葡萄園的瑰寶」，精緻滑順，花香、果香與香脂氣息）",
+    "blendingStyle": "大多數酒款以 Treixadura 為主體與其他原生品種混釀，酒精 12–13.5%",
+    "industry": "colleteiros 小型獨立生產者堅持自家種植傳統釀造；大型合作社與精品酒莊均大量現代化投資"
   },
   {
     "zonName": "Ribeira Sacra",
