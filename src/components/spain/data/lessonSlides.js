@@ -2146,7 +2146,7 @@ const S3M1L2_slides = [
       {
         icon: '🌹',
         label: '現代傳統主義（Neo-Tradicional）',
-        desc: '代表：Muga Prado Enea, La Rioja Alta Gran Reserva '904' 傳統長期熟成哲學 + 法國橡木的優雅。保留 Rioja 的骨架，但避免重美國桶帶來的椰子過度感。被許多評家視為 Rioja 的未來方向',
+        desc: '代表：Muga Prado Enea, La Rioja Alta Gran Reserva \'904\' 傳統長期熟成哲學 + 法國橡木的優雅。保留 Rioja 的骨架，但避免重美國桶帶來的椰子過度感。被許多評家視為 Rioja 的未來方向',
         color: '#1a8f5a',
       },
     ],

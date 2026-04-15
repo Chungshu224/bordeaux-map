@@ -81,7 +81,7 @@ import MapSlide from './slides/MapSlide.vue'
 import WinerySlide from './slides/WinerySlide.vue'
 import ChartSlide from './slides/ChartSlide.vue'
 import QuizSlide from '../../italy/course/slides/QuizSlide.vue'
-import WineGlossary from '../../../WineGlossary.vue'
+import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
   lesson: {
