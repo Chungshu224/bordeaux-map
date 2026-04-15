@@ -80,6 +80,12 @@ const S1M1L2_slides = [
     ],
   },
   {
+    type: 'map',
+    title: '西班牙葡萄酒產區全覽',
+    mapRegion: 'all',
+    description: '衛星地圖呈現西班牙六大葡萄酒地理區，探索從加利西亞到安達盧西亞的多元風土。',
+  },
+  {
     type: 'content',
     icon: '🗺️',
     title: '西班牙六大葡萄酒地理區',
@@ -125,12 +131,6 @@ const S1M1L2_slides = [
     options: ['安達盧西亞（Andalucía）', '加利西亞（Galicia）', '拉里奧哈（La Rioja）', '巴倫西亞（Valencia）'],
     answer: 1,
     explanation: '加利西亞位於西班牙西北角，受大西洋影響，氣候涼爽多雨，是 Albariño 葡萄的故鄉。',
-  },
-  {
-    type: 'map',
-    title: '西班牙葡萄酒產區全覽',
-    mapRegion: 'all',
-    description: '衛星地圖呈現西班牙六大葡萄酒地理區，探索從加利西亞到安達盧西亞的多元風土。',
   },
 
   {
@@ -304,6 +304,12 @@ const S1M4L1_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Rioja 產區地理位置',
+    mapRegion: 'rioja',
+    description: 'Rioja DOCa 橫跨拉里奧哈自治區與巴斯克地區，沿埃布羅河谷延伸。',
+  },
+  {
     type: 'content',
     icon: '🗺️',
     title: 'Rioja 三個子產區',
@@ -334,12 +340,6 @@ const S1M4L1_slides = [
     options: ['Rioja Alta', 'Rioja Oriental', 'Rioja Alavesa', 'Rioja Baja'],
     answer: 2,
     explanation: 'Rioja Alavesa 位於埃布羅河北岸的巴斯克自治區，以白堊土石灰岩土壤和精緻現代風格聞名。',
-  },
-  {
-    type: 'map',
-    title: 'Rioja 產區地理位置',
-    mapRegion: 'rioja',
-    description: 'Rioja DOCa 橫跨拉里奧哈自治區與巴斯克地區，沿埃布羅河谷延伸。',
   },
 
   {
@@ -814,6 +814,12 @@ const S1M4L2_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Rioja 三大子產區地形',
+    mapRegion: 'rioja',
+    description: 'Alta（西）・Alavesa（北）・Oriental（東）各有不同海拔與土壤特性。',
+  },
+  {
     type: 'compare',
     title: '傳統派 vs 現代派 Rioja',
     items: [
@@ -871,12 +877,6 @@ const S1M4L2_slides = [
     ],
     answer: 1,
     explanation: 'Rioja 傳統派的標誌是長時間美國橡木桶陳年，賦予酒款香草、椰子、奶油糖果的特殊香氣，搭配磚紅色澤和柔化的單寧，與現代派的濃郁黑果系截然不同。',
-  },
-  {
-    type: 'map',
-    title: 'Rioja 三大子產區地形',
-    mapRegion: 'rioja',
-    description: 'Alta（西）・Alavesa（北）・Oriental（東）各有不同海拔與土壤特性。',
   },
 
   {
@@ -1015,6 +1015,12 @@ const S2M1L1_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Ribera del Duero 高原地理',
+    mapRegion: 'castilla-leon',
+    description: '海拔 700–1000 公尺的杜羅河谷，西班牙最大產酒自治區，日夜溫差賦予葡萄卓越酸度。',
+  },
+  {
     type: 'content',
     icon: '⛰️',
     title: 'Ribera del Duero：高原上的紅酒王國',
@@ -1040,12 +1046,6 @@ const S2M1L1_slides = [
     options: ['200-400 公尺', '400-600 公尺', '700-1000 公尺', '1200-1500 公尺'],
     answer: 2,
     explanation: 'Ribera del Duero 海拔約 700-1000 公尺，屬於高原產區。高海拔帶來大日夜溫差，有助保留酸度和香氣，釀出結構豐富的 Tinto Fino 紅酒。',
-  },
-  {
-    type: 'map',
-    title: 'Ribera del Duero 高原地理',
-    mapRegion: 'castilla-leon',
-    description: '海拔 700–1000 公尺的杜羅河谷，西班牙最大產酒自治區，日夜溫差賦予葡萄卓越酸度。',
   },
 
   {
@@ -1075,6 +1075,12 @@ const S2M1L2_slides = [
       { icon: '🌿', label: 'Verdejo', text: '草本清爽・白桃・苦杏仁，是西班牙最受歡迎的白酒品種之一' },
       { icon: '📜', label: 'DO Rueda', text: 'Verdejo 含量至少 50%，酒標必須標示品種' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Rueda DO 產區位置',
+    mapRegion: 'castilla-leon',
+    description: '位於卡斯提亞-萊昂西南部，Verdejo 白酒的核心產地，海拔高原賦予清爽酸度。',
   },
   {
     type: 'content',
@@ -1111,12 +1117,6 @@ const S2M1L2_slides = [
     answer: 2,
     explanation: '標示「Rueda Verdejo」的葡萄酒，Verdejo 含量必須達到 85% 以上。若只標示「Rueda」，則 Verdejo 至少 50% 即可。',
   },
-  {
-    type: 'map',
-    title: 'Rueda DO 產區位置',
-    mapRegion: 'castilla-leon',
-    description: '位於卡斯提亞-萊昂西南部，Verdejo 白酒的核心產地，海拔高原賦予清爽酸度。',
-  },
 
   {
     type: 'summary',
@@ -1142,6 +1142,12 @@ const S2M1L3_slides = [
       { icon: '🌿', label: 'Mencía', text: '優雅花香・紫羅蘭・鉛筆芯，結構輕盈似 Pinot Noir' },
       { icon: '🗺️', label: '地理', text: '萊昂省西部，受大西洋影響，形成特殊微氣候' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Bierzo 板岩谷地',
+    mapRegion: 'castilla-leon',
+    description: '西班牙西北角的山谷產區，板岩土壤孕育 Mencía 老藤，地形遮擋大西洋與大陸氣候。',
   },
   {
     type: 'content',
@@ -1180,12 +1186,6 @@ const S2M1L3_slides = [
     answer: 2,
     explanation: 'Bierzo DO 的明星品種是 Mencía，種植在陡峭板岩梯田上，以優雅花香、紅果、礦石感和輕盈結構著稱，常被比較為西班牙的 Pinot Noir。',
   },
-  {
-    type: 'map',
-    title: 'Bierzo 板岩谷地',
-    mapRegion: 'castilla-leon',
-    description: '西班牙西北角的山谷產區，板岩土壤孕育 Mencía 老藤，地形遮擋大西洋與大陸氣候。',
-  },
 
   {
     type: 'summary',
@@ -1211,6 +1211,12 @@ const S2M1L4_slides = [
       { icon: '🍑', label: 'Garnacha', text: '老藤 Garnacha 是高品質紅酒基礎，風格豐滿香料感' },
       { icon: '🌍', label: '多樣性', text: '法國邊界接壤，引進 Cabernet、Merlot 等國際品種' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Navarra DO 產區地理',
+    mapRegion: 'navarra',
+    description: '北接庇里牛斯山，南達埃布羅河，五個子產區從寒冷山地到溫暖平原。',
   },
   {
     type: 'compare',
@@ -1248,12 +1254,6 @@ const S2M1L4_slides = [
     answer: 1,
     explanation: 'Navarra 的 Garnacha 是釀造 Rosado 粉紅酒的靈魂品種。Garnacha 老藤在 La Ribera Alta 子產區有最高的密度，釀出的粉紅酒以草莓、覆盆子香氣和飽滿口感著稱。',
   },
-  {
-    type: 'map',
-    title: 'Navarra DO 產區地理',
-    mapRegion: 'navarra',
-    description: '北接庇里牛斯山，南達埃布羅河，五個子產區從寒冷山地到溫暖平原。',
-  },
 
   {
     type: 'summary',
@@ -1279,6 +1279,12 @@ const S2M2L1_slides = [
       { icon: '🍋', label: 'Albariño', text: '桃子・柑橘・杏仁・鹽漬礦石，西班牙最精緻白酒' },
       { icon: '🪨', label: '花崗岩土壤', text: '花崗岩風化土壤賦予獨特礦石與鹽感' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Rías Baixas 大西洋海灣',
+    mapRegion: 'galicia',
+    description: '加利西亞西南角的鋸齒形海岸，大西洋海風帶來涼爽潮濕氣候，是 Albariño 的故鄉。',
   },
   {
     type: 'compare',
@@ -1328,12 +1334,6 @@ const S2M2L1_slides = [
     answer: 1,
     explanation: '加利西亞年雨量高達 1500mm，非常潮濕。Pergola 棚架式將葡萄懸吊高空，增加通風、防止積水，大幅降低黴菌（如灰黴病 Botrytis）的感染風險。',
   },
-  {
-    type: 'map',
-    title: 'Rías Baixas 大西洋海灣',
-    mapRegion: 'galicia',
-    description: '加利西亞西南角的鋸齒形海岸，大西洋海風帶來涼爽潮濕氣候，是 Albariño 的故鄉。',
-  },
 
   {
     type: 'summary',
@@ -1359,6 +1359,12 @@ const S2M2L2_slides = [
       { icon: '🪨', label: 'Valdeorras', text: 'Godello 復興的發源地，板岩土壤帶來礦石張力' },
       { icon: '⬛', label: 'Ribeira Sacra', text: '陡峭花崗岩板岩梯田，Mencía 紅酒和 Godello 白酒並列' },
     ],
+  },
+  {
+    type: 'map',
+    title: '加利西亞北部葡萄酒產區',
+    mapRegion: 'galicia',
+    description: 'Ribeiro・Valdeorras・Ribeira Sacra — 多樣地形與板岩土壤孕育各具特色的白酒與紅酒。',
   },
   {
     type: 'compare',
@@ -1409,12 +1415,6 @@ const S2M2L2_slides = [
     answer: 2,
     explanation: 'Godello 在 1980 年代幾乎瀕絕，被 Valdeorras 的釀酒師拯救。Valdeorras 的板岩土壤賦予 Godello 獨特的礦石骨架和張力，如今是西班牙最受追捧的白葡萄品種之一。',
   },
-  {
-    type: 'map',
-    title: '加利西亞北部葡萄酒產區',
-    mapRegion: 'galicia',
-    description: 'Ribeiro・Valdeorras・Ribeira Sacra — 多樣地形與板岩土壤孕育各具特色的白酒與紅酒。',
-  },
 
   {
     type: 'summary',
@@ -1440,6 +1440,12 @@ const S2M2L3_slides = [
       { icon: '🪨', label: '花崗岩老土', text: '酸性、低養分、礦物豐富，是礦石感的科學基礎' },
       { icon: '🌊', label: '大西洋微氣候', text: '海洋調節溫差，讓葡萄緩慢成熟，香氣複雜' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Ribeira Sacra 懸崖梯田',
+    mapRegion: 'galicia',
+    description: '沿 Miño 和 Sil 河谷的陡峭梯田，手工採收的 Mencía 老藤，加利西亞最壯觀的葡萄酒產區。',
   },
   {
     type: 'content',
@@ -1497,12 +1503,6 @@ const S2M2L3_slides = [
     answer: 1,
     explanation: '加利西亞涼爽多雲的大西洋氣候使葡萄緩慢成熟，天然高酸度被完整保留，同時長時間低溫積累大量花果香氣物質（橙花、桃子）。這是 Albariño 高酸清爽特質的核心原因。',
   },
-  {
-    type: 'map',
-    title: 'Ribeira Sacra 懸崖梯田',
-    mapRegion: 'galicia',
-    description: '沿 Miño 和 Sil 河谷的陡峭梯田，手工採收的 Mencía 老藤，加利西亞最壯觀的葡萄酒產區。',
-  },
 
   {
     type: 'summary',
@@ -1528,6 +1528,12 @@ const S2M3L1_slides = [
       { icon: '🍇', label: '老藤 Garnacha + Carignan', text: '50-100 年老藤，低產驚人濃縮，礦石黑果風格' },
       { icon: '🏅', label: 'DOCa', text: '2009 年取得，西班牙僅有兩個 DOCa 之一（另一個是 Rioja）' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Priorat DOCa 板岩山地',
+    mapRegion: 'catalonia',
+    description: '加泰羅尼亞山區，llicorella 板岩土壤覆蓋陡峭山坡，是西班牙兩個 DOCa 之一。',
   },
   {
     type: 'content',
@@ -1568,12 +1574,6 @@ const S2M3L1_slides = [
     answer: 1,
     explanation: 'Priorat 的 Llicorella 是由黑色板岩（片岩）和石英組成的特殊土壤。排水性極好，蓄熱能力強，讓葡萄承受水分壓力而低產濃縮，是 Priorat 頂級酒礦石感和黑果濃縮特質的土壤根源。',
   },
-  {
-    type: 'map',
-    title: 'Priorat DOCa 板岩山地',
-    mapRegion: 'catalonia',
-    description: '加泰羅尼亞山區，llicorella 板岩土壤覆蓋陡峭山坡，是西班牙兩個 DOCa 之一。',
-  },
 
   {
     type: 'summary',
@@ -1599,6 +1599,12 @@ const S2M3L2_slides = [
       { icon: '💨', label: 'Terra Alta', desc: '高原強風中的 Garnacha Blanca 白酒和 Garnacha 老藤紅酒' },
       { icon: '🌊', label: 'Empordà', desc: '比利牛斯山腳的地中海產區，Tramontana 強風特色' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Montsant 與周邊產區',
+    mapRegion: 'catalonia',
+    description: '環繞 Priorat 的產區，同樣的板岩土壤，以更實惠的價格提供類似的礦物感風格。',
   },
   {
     type: 'compare',
@@ -1631,12 +1637,6 @@ const S2M3L2_slides = [
     answer: 1,
     explanation: 'Terra Alta 位於加泰羅尼亞最南部的內陸高原，以頻繁的強風和 Garnacha Blanca（白 Garnacha）白酒著稱，釀出的酒帶有豐滿口感、蜂蜜和白花特質。',
   },
-  {
-    type: 'map',
-    title: 'Montsant 與周邊產區',
-    mapRegion: 'catalonia',
-    description: '環繞 Priorat 的產區，同樣的板岩土壤，以更實惠的價格提供類似的礦物感風格。',
-  },
 
   {
     type: 'summary',
@@ -1661,6 +1661,12 @@ const S2M3L3_slides = [
       { icon: '🍾', label: 'Cava 的故鄉', text: '85% 的 Cava DO 在 Penedès 生產（聖薩杜尼達諾亞鎮）' },
       { icon: '🌍', label: '品種試驗場', text: 'Chardonnay、Riesling、Gewürztraminer 等法德品種在此扎根' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Penedès 與加泰羅尼亞白酒產區',
+    mapRegion: 'catalonia',
+    description: '連接巴塞隆納與地中海，是 Cava 的發源地，現代西班牙白酒革命的中心。',
   },
   {
     type: 'content',
@@ -1699,12 +1705,6 @@ const S2M3L3_slides = [
     answer: 1,
     explanation: 'Torres 在 1979 年引入不鏽鋼桶和溫控低溫發酵技術，這取代了傳統舊木桶，大幅減少氧化，保留了白酒的清爽花果香氣，徹底改變了西班牙白酒風格。',
   },
-  {
-    type: 'map',
-    title: 'Penedès 與加泰羅尼亞白酒產區',
-    mapRegion: 'catalonia',
-    description: '連接巴塞隆納與地中海，是 Cava 的發源地，現代西班牙白酒革命的中心。',
-  },
 
   {
     type: 'summary',
@@ -1730,6 +1730,12 @@ const S2M4L1_slides = [
       { icon: '🍄', label: 'Flor 酵母', text: '漂浮在酒面的酵母菌膜，保護 Fino 不被氧化，賦予鹹杏仁特色' },
       { icon: '🌾', label: 'Albariza 土壤', text: '白堊白土壤，保水性極強，是 Palomino 在乾燥安達盧西亞生長的關鍵' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Jerez — Sherry 雪莉酒產區',
+    mapRegion: 'andalucia',
+    description: '安達盧西亞西南角，白色白堊土（Albariza）、強烈陽光與海洋微風，Sherry 的獨特風土。',
   },
   {
     type: 'compare',
@@ -1772,12 +1778,6 @@ const S2M4L1_slides = [
     answer: 1,
     explanation: 'Flor 酵母在 15-15.5% 酒精中可以存活並保護酒液。一旦酒精超過 17%，Flor 就會死亡。因此 Fino 保持 15% 讓 Flor 活著（生物熟成），Oloroso 加到 17%+ 殺死 Flor 後走氧化熟成之路，兩種完全不同的風格由此誕生。',
   },
-  {
-    type: 'map',
-    title: 'Jerez — Sherry 雪莉酒產區',
-    mapRegion: 'andalucia',
-    description: '安達盧西亞西南角，白色白堊土（Albariza）、強烈陽光與海洋微風，Sherry 的獨特風土。',
-  },
 
   {
     type: 'summary',
@@ -1803,6 +1803,12 @@ const S2M4L2_slides = [
       { icon: '☀️', label: '極乾熱氣候', text: '年雨量僅 300mm，夏季可達 45°C，是西班牙最乾燥的產區' },
       { icon: '🏔️', label: '高原位置', text: '海拔 400-900 公尺，高原的夜間涼爽保留了酸度' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Jumilla & Yecla 穆爾西亞高原',
+    mapRegion: 'murcia',
+    description: '內陸半乾旱高原，Monastrell 老藤在極端溫度下濃縮出結構豐厚的紅酒。',
   },
   {
     type: 'content',
@@ -1843,12 +1849,6 @@ const S2M4L2_slides = [
     answer: 1,
     explanation: '根瘤蚜（Phylloxera）難以在結構鬆散的砂質土壤中移動，因為砂粒填滿縫隙阻止了蟲卵遷移。Jumilla 部分產區的砂質土壤因此保存了百年以上自根葡萄樹，這些老藤是最珍貴的釀酒資源。',
   },
-  {
-    type: 'map',
-    title: 'Jumilla & Yecla 穆爾西亞高原',
-    mapRegion: 'murcia',
-    description: '內陸半乾旱高原，Monastrell 老藤在極端溫度下濃縮出結構豐厚的紅酒。',
-  },
 
   {
     type: 'summary',
@@ -1874,6 +1874,12 @@ const S2M4L3_slides = [
       { icon: '🏔️', label: '內陸高原', text: '海拔 700-900 公尺，遠離地中海，大陸型氣候，日夜溫差大' },
       { icon: '🌿', label: '高酸老藤', text: 'Bobal 天然高酸，100 年以上老藤釀出的酒兼具果味與結構' },
     ],
+  },
+  {
+    type: 'map',
+    title: '巴倫西亞地中海產區',
+    mapRegion: 'valencia',
+    description: '地中海沿岸，從海岸到內陸山地，Bobal・Monastrell 等本土品種展現豐滿果味。',
   },
   {
     type: 'content',
@@ -1911,12 +1917,6 @@ const S2M4L3_slides = [
     answer: 2,
     explanation: 'Bobal 是西班牙種植面積第 3 大的紅品種（僅次於 Tempranillo 和 Garnacha）。長期以來，它的高酸深色特性被用作散裝酒出口調配，未被認真釀造。直到近年老藤精品化潮流，才讓 Bobal 重獲應有的重視。',
   },
-  {
-    type: 'map',
-    title: '巴倫西亞地中海產區',
-    mapRegion: 'valencia',
-    description: '地中海沿岸，從海岸到內陸山地，Bobal・Monastrell 等本土品種展現豐滿果味。',
-  },
 
   {
     type: 'summary',
@@ -1942,6 +1942,12 @@ const S2M4L4_slides = [
       { icon: '🌿', label: '百年古藤自根生長', text: '根瘤蚜從未入侵，島上保存全歐洲比例最高的自根老藤' },
       { icon: '🌬️', label: '常年強風', text: '葡萄樹以特殊「酒杯坑」種植方式，抵抗 Alisios 信風的侵襲' },
     ],
+  },
+  {
+    type: 'map',
+    title: '加那利群島火山產區',
+    mapRegion: 'canarias',
+    description: '大西洋火山群島，古藤生長在黑色火山岩漿土壤，是歐洲少數未受根瘤蚜侵害的產區。',
   },
   {
     type: 'compare',
@@ -2006,12 +2012,6 @@ const S2M4L4_slides = [
     ],
     answer: 1,
     explanation: 'Lanzarote 飽受強勁的 Alisios 信風侵襲，每棵葡萄樹種在半圓形石牆保護的坑洞中。坑洞阻擋風沙，黑色 Picon 火山砂礫收集海洋露水，解決了年雨量僅 150mm 的嚴重乾旱問題。',
-  },
-  {
-    type: 'map',
-    title: '加那利群島火山產區',
-    mapRegion: 'canarias',
-    description: '大西洋火山群島，古藤生長在黑色火山岩漿土壤，是歐洲少數未受根瘤蚜侵害的產區。',
   },
 
   {
@@ -2171,6 +2171,12 @@ const S3M1L1_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Rioja 三大子產區深度地形',
+    mapRegion: 'rioja',
+    description: 'Sierra Cantabria 山脈遮擋大西洋風雨，埃布羅河調節氣候，造就三個子產區的差異。',
+  },
+  {
     type: 'compare',
     title: '美國橡木 vs 法國橡木：全面比較',
     items: [
@@ -2221,12 +2227,6 @@ const S3M1L1_slides = [
     answer: 1,
     explanation: '傳統 Rioja 使用美國橡木（Quercus alba），其乳內酯（椰子香）含量是法國橡木的 3-5 倍，搭配豐富的香草醛，創造出傳統 Rioja 最具代表性的「椰子香草甜美」香氣。',
   },
-  {
-    type: 'map',
-    title: 'Rioja 三大子產區深度地形',
-    mapRegion: 'rioja',
-    description: 'Sierra Cantabria 山脈遮擋大西洋風雨，埃布羅河調節氣候，造就三個子產區的差異。',
-  },
 
   {
     type: 'summary',
@@ -2252,6 +2252,12 @@ const S3M1L2_slides = [
       { icon: '🍷', label: '現代派', text: '法國新桶短期陳年，保留深紫濃縮果味，豐滿現代感' },
       { icon: '🤝', label: '第三條路', text: '「現代傳統主義」，以法國橡木做長期陳年，兼顧優雅與深度' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Rioja Alta 精緻核心地帶',
+    mapRegion: 'rioja',
+    description: '最西端、最涼爽的子產區，黏土石灰岩土壤，是 Rioja 傳統精緻陳年酒的搖籃。',
   },
   {
     type: 'compare',
@@ -2289,12 +2295,6 @@ const S3M1L2_slides = [
     answer: 1,
     explanation: '傳統 Rioja 使用美國橡木桶長期陳年，時間可長達 6-9 年（Gran Reserva 等級更長）。氧化熟成讓酒色變磚橙、香氣演化出椰子、香草、皮革，口感輕盈絲絨。這是 López de Heredia 等傳統酒莊的核心哲學。',
   },
-  {
-    type: 'map',
-    title: 'Rioja Alta 精緻核心地帶',
-    mapRegion: 'rioja',
-    description: '最西端、最涼爽的子產區，黏土石灰岩土壤，是 Rioja 傳統精緻陳年酒的搖籃。',
-  },
 
   {
     type: 'summary',
@@ -2320,6 +2320,12 @@ const S3M1L3_slides = [
       { icon: '🎯', label: '目標', text: '柔化單寧、穩定顏色、融合香氣，縮短陳年時間' },
       { icon: '🔬', label: '西班牙應用', text: '2000年代後在 Ribera del Duero 和 La Mancha 廣泛採用' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Rioja Alavesa 現代精品地帶',
+    mapRegion: 'rioja',
+    description: '巴斯克自治區境內，白堊土石灰岩，個人酒莊（Vino de Garage）運動的發源地。',
   },
   {
     type: 'content',
@@ -2364,12 +2370,6 @@ const S3M1L3_slides = [
     answer: 1,
     explanation: '微氧化（MOX）以精確控制的微量氧氣溶入酒液，模擬橡木桶的自然透氧效果，目的是柔化生澀單寧、穩定顏色（花青素-單寧聚合）、消除還原氣味，縮短達到成熟口感所需的時間。',
   },
-  {
-    type: 'map',
-    title: 'Rioja Alavesa 現代精品地帶',
-    mapRegion: 'rioja',
-    description: '巴斯克自治區境內，白堊土石灰岩，個人酒莊（Vino de Garage）運動的發源地。',
-  },
 
   {
     type: 'summary',
@@ -2395,6 +2395,12 @@ const S3M1L4_slides = [
       { icon: '🌀', label: '生物動力農法（Biodynamic）', text: '農場視為整體生態系，依宇宙和月相周期作業，Demeter 認證' },
       { icon: '🍇', label: '自然酒（Natural Wine）', text: '無官方定義，低介入主義，少添加亞硫酸鹽，接受些微缺陷' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Rioja Oriental 溫暖寬廣地帶',
+    mapRegion: 'rioja',
+    description: '最東端、最溫暖乾燥，以 Garnacha 和 Viura 為主，果味豐滿、酒精偏高。',
   },
   {
     type: 'compare',
@@ -2432,12 +2438,6 @@ const S3M1L4_slides = [
     answer: 1,
     explanation: '生物動力農法（Biodynamic）由 Rudolf Steiner 1924 年創立，在有機農法基礎上加入宇宙/月相時程作業哲學，使用特殊配方製劑（如牛角糞肥 500 號）。Demeter 是最具代表性的認證機構，認證標準比一般有機更嚴格。',
   },
-  {
-    type: 'map',
-    title: 'Rioja Oriental 溫暖寬廣地帶',
-    mapRegion: 'rioja',
-    description: '最東端、最溫暖乾燥，以 Garnacha 和 Viura 為主，果味豐滿、酒精偏高。',
-  },
 
   {
     type: 'summary',
@@ -2465,6 +2465,12 @@ const S3M2L1_slides = [
       { icon: '🕐', label: '酒泥陳年', text: '瓶中與死去酵母菌體接觸，形成烤麵包、酵母、餅乾香氣' },
       { icon: '🔄', label: 'Riddling → Disgorgement', text: '搖瓶讓酒泥集中瓶口，冷凍噴出，加入 Dosage 糖液' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Cava 產區地理核心',
+    mapRegion: 'catalonia',
+    description: '雖遍布西班牙，但 85% 的 Cava 產自加泰羅尼亞 Penedès，Sant Sadurní d\u0027Anoia 是其心臟。',
   },
   {
     type: 'content',
@@ -2495,12 +2501,6 @@ const S3M2L1_slides = [
     answer: 1,
     explanation: '酒泥陳年（Lees Aging）讓酒液與死去的酵母菌體（Lees）長期接觸，酵母細胞壁自溶，釋放出氨基酸、脂質、甘露糖蛋白等化合物，在氣泡酒中形成烤麵包、餅乾、奶油、酵母的獨特香氣，是 Cava 陳年款複雜度的香氣來源。',
   },
-  {
-    type: 'map',
-    title: 'Cava 產區地理核心',
-    mapRegion: 'catalonia',
-    description: '雖遍布西班牙，但 85% 的 Cava 產自加泰羅尼亞 Penedès，Sant Sadurní d\u0027Anoia 是其心臟。',
-  },
 
   {
     type: 'summary',
@@ -2528,6 +2528,12 @@ const S3M2L2_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Cava 葡萄品種產區分布',
+    mapRegion: 'catalonia',
+    description: 'Macabeo・Xarel·lo・Parellada 三大本土品種在加泰羅尼亞的地理分布。',
+  },
+  {
     type: 'compare',
     title: 'Cava 主要品種深度比較',
     items: [
@@ -2548,12 +2554,6 @@ const S3M2L2_slides = [
     ],
     answer: 1,
     explanation: 'Xarel·lo 是加泰羅尼亞獨有的本土品種，在 Cava 混調中負責提供豐腴質地、草本辛香和天然高酸，是 Cava 結構和陳年潛力的支柱。近年也有精品酒莊釀造單一品種 Xarel·lo Cava。',
-  },
-  {
-    type: 'map',
-    title: 'Cava 葡萄品種產區分布',
-    mapRegion: 'catalonia',
-    description: 'Macabeo・Xarel·lo・Parellada 三大本土品種在加泰羅尼亞的地理分布。',
   },
 
   {
@@ -2581,6 +2581,12 @@ const S3M2L3_slides = [
       { icon: '👑', label: 'Gran Reserva', text: '30 個月以上，必須為 Brut Nature 或 Extra Brut 干型' },
       { icon: '🗺️', label: 'de Paraje Calificado', text: '2017 年新設，最嚴格的單一酒莊精品等級' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Cava DE 與精品 Cava 產區',
+    mapRegion: 'catalonia',
+    description: '新設立的 Cava de Paraje Calificado 單一產區和 Cava DE 等級，強調風土表達。',
   },
   {
     type: 'content',
@@ -2620,12 +2626,6 @@ const S3M2L3_slides = [
     answer: 3,
     explanation: 'Cava de Paraje Calificado 是 Cava DO 體系中最嚴格的等級，要求酒泥陳年至少 36 個月，且必須是 Brut Nature（不添加任何 Dosage 糖液），來自單一認證莊園地塊，並需年份標示。',
   },
-  {
-    type: 'map',
-    title: 'Cava DE 與精品 Cava 產區',
-    mapRegion: 'catalonia',
-    description: '新設立的 Cava de Paraje Calificado 單一產區和 Cava DE 等級，強調風土表達。',
-  },
 
   {
     type: 'summary',
@@ -2651,6 +2651,12 @@ const S3M2L4_slides = [
       { icon: '🌿', label: 'Clàssic Penedès DO', text: '2012 年設立，限制在 Penedès 子區域、有機農法、傳統法氣泡酒' },
       { icon: '💭', label: '脫離的原因', text: '不滿 Cava 允許西班牙各地大量生產，稀釋了 Penedès 的精品形象' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Corpinnat & Clàssic Penedès 精品小農地帶',
+    mapRegion: 'catalonia',
+    description: '脫離 Cava DO 的頂級小農，在 Penedès 核心地帶釀造高品質傳統法氣泡酒。',
   },
   {
     type: 'content',
@@ -2685,12 +2691,6 @@ const S3M2L4_slides = [
     answer: 1,
     explanation: 'Cava DO 允許全西班牙各地生產，Penedès 的頂級精品酒莊認為這稀釋了它們的形象。Corpinnat 要求 100% 有機農法、只用加泰羅尼亞本土品種、手工採收，目的是建立一個真正代表 Penedès 精品氣泡酒的新品牌形象。',
   },
-  {
-    type: 'map',
-    title: 'Corpinnat & Clàssic Penedès 精品小農地帶',
-    mapRegion: 'catalonia',
-    description: '脫離 Cava DO 的頂級小農，在 Penedès 核心地帶釀造高品質傳統法氣泡酒。',
-  },
 
   {
     type: 'summary',
@@ -2718,6 +2718,12 @@ const S3M3L1_slides = [
       { icon: '🛡️', label: '保護機制', text: 'Flor 消耗殘留糖分和氧氣，完全保護酒液不被氧化' },
       { icon: '⚗️', label: '獨特代謝產物', text: '酵母代謝產生乙醛、乙酸乙酯等，賦予鹹杏仁、青蘋果特質' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Sherry 三角地帶',
+    mapRegion: 'andalucia',
+    description: 'Jerez-Xérès-Sherry、El Puerto de Santa María、Sanlúcar de Barrameda 構成的神聖三角。',
   },
   {
     type: 'content',
@@ -2784,12 +2790,6 @@ const S3M3L1_slides = [
     answer: 1,
     explanation: 'Sanlúcar de Barrameda 位於 Guadalquivir 河口旁，大西洋海洋空氣直接流入 Bodega。涼爽氣候讓 Flor 比 Jerez 生長更旺盛均勻（無夏季高溫休眠），海鹽微環境影響 Flor 的代謝產物，造就 Manzanilla 獨特的海洋鹽漬鮮鹹特質，是地理不可複製的風土表達。',
   },
-  {
-    type: 'map',
-    title: 'Sherry 三角地帶',
-    mapRegion: 'andalucia',
-    description: 'Jerez-Xérès-Sherry、El Puerto de Santa María、Sanlúcar de Barrameda 構成的神聖三角。',
-  },
 
   {
     type: 'summary',
@@ -2817,6 +2817,12 @@ const S3M3L3_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Sherry 釀酒中心',
+    mapRegion: 'andalucia',
+    description: 'Jerez 城市周邊的酒莊區，Bodega 林立，索雷拉系統在此孕育數十年的複雜風味。',
+  },
+  {
     type: 'compare',
     title: '六大 Sherry 風格完整對比',
     items: [
@@ -2839,12 +2845,6 @@ const S3M3L3_slides = [
     ],
     answer: 1,
     explanation: 'Palo Cortado 是 Sherry 世界中最難複製的「意外」：原本以 Fino 路線開始培育（有 Flor 保護），但因未知原因 Flor 突然消失，釀酒師改讓它走氧化熟成路線。結果擁有 Amontillado 的精緻鼻香 + Oloroso 的豐滿口感，是極為稀少的珍品。',
-  },
-  {
-    type: 'map',
-    title: 'Sherry 釀酒中心',
-    mapRegion: 'andalucia',
-    description: 'Jerez 城市周邊的酒莊區，Bodega 林立，索雷拉系統在此孕育數十年的複雜風味。',
   },
 
   {
@@ -2873,6 +2873,12 @@ const S3M3L4_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Manzanilla — Sanlúcar 海岸微氣候',
+    mapRegion: 'andalucia',
+    description: 'Sanlúcar de Barrameda 獨特的海洋微氣候，讓 Flor 酵母更活躍，創造最鹹鮮的 Manzanilla。',
+  },
+  {
     type: 'compare',
     title: 'Sherry 六大風格餐酒搭配建議',
     items: [
@@ -2893,12 +2899,6 @@ const S3M3L4_slides = [
     ],
     answer: 1,
     explanation: 'Fino（及 Manzanilla）最經典西班牙搭配：炸小魚（Pescaíto Frito）、醋漬鯷魚（Boquerones en Vinagre）、伊比利火腿，再搭配橄欖和杏仁。飲用溫度 8-10°C，像飲用清爽白酒一樣冰涼，在安達盧西亞的大排檔是最日常不過的風景。',
-  },
-  {
-    type: 'map',
-    title: 'Manzanilla — Sanlúcar 海岸微氣候',
-    mapRegion: 'andalucia',
-    description: 'Sanlúcar de Barrameda 獨特的海洋微氣候，讓 Flor 酵母更活躍，創造最鹹鮮的 Manzanilla。',
   },
 
   {
@@ -2927,6 +2927,12 @@ const S3M4L1_slides = [
       { icon: '🌡️', label: '極端酷熱', text: '夏季可達 45°C，是西班牙最熱的產區之一，葡萄天然糖分極高' },
       { icon: '🪨', label: 'Albariza 白土', text: '與 Jerez 相同的白堊土壤，保水性強，讓乾旱環境的葡萄樹存活' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Toro & Cigales 西部產區',
+    mapRegion: 'castilla-leon',
+    description: '杜羅河上游，Toro 的 Tinta de Toro 和 Cigales 的粉紅酒，卡斯提亞-萊昂的另一面。',
   },
   {
     type: 'content',
@@ -2969,12 +2975,6 @@ const S3M4L1_slides = [
     answer: 1,
     explanation: '科爾多瓦省的夏季極端高溫（45°C）讓 PX 葡萄在採收時含糖量極高，通常自然發酵就能達到 15% 酒精，因此 Montilla-Moriles 的 Fino 類型酒款不需要像 Jerez 一樣添加中性烈酒強化，是天然高糖造就的奇蹟。',
   },
-  {
-    type: 'map',
-    title: 'Toro & Cigales 西部產區',
-    mapRegion: 'castilla-leon',
-    description: '杜羅河上游，Toro 的 Tinta de Toro 和 Cigales 的粉紅酒，卡斯提亞-萊昂的另一面。',
-  },
 
   {
     type: 'summary',
@@ -3000,6 +3000,12 @@ const S3M4L2_slides = [
       { icon: '🍇', label: 'Moscatel de Málaga', text: 'Muscat of Alexandria，香水玫瑰荔枝，是安達盧西亞甜白的頂點' },
       { icon: '📜', label: '歷史', text: '18-19 世紀曾是全歐最昂貴的甜酒，因根瘤蚜幾近消失，近年緩慢復興' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'La Mancha — 世界最大 DO 高原',
+    mapRegion: 'castilla-la-mancha',
+    description: '綿延數百公里的卡斯提亞高原，Airén 白品種和 Cencibel（Tempranillo）的廣大疆域。',
   },
   {
     type: 'content',
@@ -3032,12 +3038,6 @@ const S3M4L2_slides = [
     answer: 1,
     explanation: 'Sierras de Málaga DO 是 2001 年設立的新等級，生產區域在馬拉加省高海拔山地，以 Moscatel 和其他品種釀造干型葡萄酒（白、紅、玫瑰），代表馬拉加葡萄酒的現代面貌，與傳統加強甜型的 Málaga DO 形成互補。',
   },
-  {
-    type: 'map',
-    title: 'La Mancha — 世界最大 DO 高原',
-    mapRegion: 'castilla-la-mancha',
-    description: '綿延數百公里的卡斯提亞高原，Airén 白品種和 Cencibel（Tempranillo）的廣大疆域。',
-  },
 
   {
     type: 'summary',
@@ -3063,6 +3063,12 @@ const S3M4L3_slides = [
       { icon: '☀️', label: '日曬工藝（Pasificación）', text: '葡萄在藤上自然曬乾或採後攤曬，糖分高度濃縮' },
       { icon: '📜', label: '大航海時代', text: '曾是莎士比亞作品中出現的「Malmsey」，16-17 世紀橫掃歐洲貴族宮廷' },
     ],
+  },
+  {
+    type: 'map',
+    title: '阿拉貢 Garnacha 老藤產區',
+    mapRegion: 'aragon',
+    description: 'Campo de Borja・Cariñena・Calatayud，高海拔阿拉貢高原，世界最古老 Garnacha 老藤聚集地。',
   },
   {
     type: 'content',
@@ -3098,12 +3104,6 @@ const S3M4L3_slides = [
     ],
     answer: 1,
     explanation: '加那利 Malvasía（英文稱 Malmsey）在 15-17 世紀大航海時代是橫掃歐洲貴族宮廷的頂級甜酒。莎士比亞在《亨利四世》等作品中多次提及 Malmsey，是彼時文化地位的最好證明。加那利群島是歐洲前往新大陸的中繼站，這讓 Malvasía 得以廣泛流通。',
-  },
-  {
-    type: 'map',
-    title: '阿拉貢 Garnacha 老藤產區',
-    mapRegion: 'aragon',
-    description: 'Campo de Borja・Cariñena・Calatayud，高海拔阿拉貢高原，世界最古老 Garnacha 老藤聚集地。',
   },
 
   {
@@ -3272,6 +3272,12 @@ const S3M3L2_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Albariza 白堊土地帶分布',
+    mapRegion: 'andalucia',
+    description: '反射陽光的白色白堊土（Albariza）是 Sherry 最佳風土的標誌，主要分布在三角地帶周邊。',
+  },
+  {
     type: 'content',
     icon: '⏳',
     title: '索雷拉系統如何運作？',
@@ -3305,12 +3311,6 @@ const S3M3L2_slides = [
     ],
     answer: 1,
     explanation: '為了保持風格一致性，每次從 Solera（最底層）抽取裝瓶的量通常不超過該層存量的 1/3，讓足夠的老酒留存以維持複雜度。',
-  },
-  {
-    type: 'map',
-    title: 'Albariza 白堊土地帶分布',
-    mapRegion: 'andalucia',
-    description: '反射陽光的白色白堊土（Albariza）是 Sherry 最佳風土的標誌，主要分布在三角地帶周邊。',
   },
 
   {
@@ -3923,6 +3923,12 @@ const S4M3L1_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Ribera del Duero 頂級名莊地帶',
+    mapRegion: 'castilla-leon',
+    description: 'Vega Sicilia・Pingus 的所在地，Burgos 省沿杜羅河的黃金地帶。',
+  },
+  {
     type: 'compare',
     title: 'Vega Sicilia vs Pingus 哲學對比',
     items: [
@@ -3970,12 +3976,6 @@ const S4M3L1_slides = [
     answer: 1,
     explanation: 'Vega Sicilia Único 以 Tinto Fino（Tempranillo 在 Ribera del Duero 的稱呼）為主（80-90%），搭配 Cabernet Sauvignon（10-20%）增添波爾多式結構和色素穩定性，這種「西班牙本土品種 + 法國品種」的哲學是 Vega Sicilia 自 1864 年以來的傳統。',
   },
-  {
-    type: 'map',
-    title: 'Ribera del Duero 頂級名莊地帶',
-    mapRegion: 'castilla-leon',
-    description: 'Vega Sicilia・Pingus 的所在地，Burgos 省沿杜羅河的黃金地帶。',
-  },
 
   {
     type: 'summary',
@@ -4003,6 +4003,12 @@ const S4M3L2_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Priorat 復興的核心地帶',
+    mapRegion: 'catalonia',
+    description: 'Alvaro Palacios 與 René Barbier 在 1989 年落腳的 Gratallops 村莊，Priorat 文藝復興的起點。',
+  },
+  {
     type: 'content',
     icon: '📜',
     title: '1989 年：Priorat 復興的起源',
@@ -4027,12 +4033,6 @@ const S4M3L2_slides = [
     options: ['L\'Ermita', 'Clos Erasmus', 'Clos Mogador', 'Costers del Siurana'],
     answer: 2,
     explanation: 'René Barbier（法國出生）是 1989 年 Priorat 復興的首要推動者，他最終創立了 Clos Mogador 酒莊，以宏偉架構和豐富黑果著稱。Álvaro Palacios 創立了 L\'Ermita，Daphne Glorian 創立了 Clos Erasmus，Carlos Pastrana 創立的是 Clos de l\'Obac（Costers del Siurana）。',
-  },
-  {
-    type: 'map',
-    title: 'Priorat 復興的核心地帶',
-    mapRegion: 'catalonia',
-    description: 'Alvaro Palacios 與 René Barbier 在 1989 年落腳的 Gratallops 村莊，Priorat 文藝復興的起點。',
   },
 
   {
@@ -4059,6 +4059,12 @@ const S4M3L3_slides = [
       { icon: '🍷', label: 'Muga', text: '傳統哲學但有現代前瞻性，Prado Enea 是 Rioja 最偉大 Gran Reserva 之一' },
       { icon: '🌟', label: 'Marqués de Murrieta', text: '1847 年創立，最古老的 Rioja 名莊之一，Castillo Ygay 是 Rioja 最具陳年潛力的酒款之一' },
     ],
+  },
+  {
+    type: 'map',
+    title: 'Rioja 名莊核心地帶',
+    mapRegion: 'rioja',
+    description: 'Haro（Rioja Alta）的酒莊區是世界最密集的百年酒莊聚集地，也是傳統 Rioja 的象徵。',
   },
   {
     type: 'compare',
@@ -4096,12 +4102,6 @@ const S4M3L3_slides = [
     answer: 1,
     explanation: 'López de Heredia（1877 年創立）是世界上最堅守傳統的酒莊之一，其 Viña Tondonia Blanco（白酒）在美國和法國橡木桶中陳年長達 10-15 年，呈現深金琥珀色，帶有蜂蜜、核果、香料的複雜氧化陳年特質，是 Rioja 傳統主義的最純粹象徵。',
   },
-  {
-    type: 'map',
-    title: 'Rioja 名莊核心地帶',
-    mapRegion: 'rioja',
-    description: 'Haro（Rioja Alta）的酒莊區是世界最密集的百年酒莊聚集地，也是傳統 Rioja 的象徵。',
-  },
 
   {
     type: 'summary',
@@ -4127,6 +4127,12 @@ const S4M3L4_slides = [
       { icon: '⬛', label: 'Rectoral de Amandi（Ribeira Sacra）', text: 'Mencía 梯田的精品代表，展現 Ribeira Sacra 陡坡板岩的極致個性' },
       { icon: '🍯', label: 'Guitián（Valdeorras Godello）', text: 'Godello 復興的旗手，讓世界認識加利西亞內陸白酒的無限潛力' },
     ],
+  },
+  {
+    type: 'map',
+    title: '加利西亞頂級白酒名莊地帶',
+    mapRegion: 'galicia',
+    description: 'Rías Baixas 的 Val do Salnés 子產區，是最集中的 Albariño 精品白酒產地。',
   },
   {
     type: 'compare',
@@ -4169,12 +4175,6 @@ const S4M3L4_slides = [
     ],
     answer: 1,
     explanation: 'Guitián 的 Godello 桶陳款（Sobre Lías）是推動 Valdeorras 和整個加利西亞 Godello 走向精品市場的先驅作品，豐滿的礦石蜂蜜奶油風格讓業界開始認真對待 Godello 的陳年潛力，並將其與 Burgundy Chardonnay 相提並論。',
-  },
-  {
-    type: 'map',
-    title: '加利西亞頂級白酒名莊地帶',
-    mapRegion: 'galicia',
-    description: 'Rías Baixas 的 Val do Salnés 子產區，是最集中的 Albariño 精品白酒產地。',
   },
 
   {
