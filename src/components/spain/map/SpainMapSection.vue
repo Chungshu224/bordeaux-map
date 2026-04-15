@@ -52,20 +52,23 @@
           </div>
 
           <!-- 酒款類型 -->
-          <div v-if="activeInfo.appData?.styles?.length" class="info-styles">
-            <span
-              v-for="s in activeInfo.appData.styles"
-              :key="s"
-              class="style-tag"
-              :style="styleTagColor(s)"
-            >{{ s }}</span>
+          <div v-if="activeInfo.appData?.styles?.length" class="sp-wine-types-section">
+            <div class="sp-wine-types-title">酒款類型</div>
+            <div class="sp-wine-types-list">
+              <span
+                v-for="s in activeInfo.appData.styles"
+                :key="s"
+                class="sp-wine-type-tag"
+                :style="styleTagColor(s)"
+              >{{ s }}</span>
+            </div>
           </div>
 
           <!-- 葡萄品種 -->
-          <div v-if="activeInfo.appData?.grapes?.length" class="info-section">
-            <div class="info-section-label">主要葡萄品種</div>
-            <div class="grape-list">
-              <span v-for="g in activeInfo.appData.grapes" :key="g" class="grape-chip">{{ g }}</span>
+          <div v-if="activeInfo.appData?.grapes?.length" class="sp-grape-section">
+            <div class="sp-grape-title">主要葡萄品種</div>
+            <div class="sp-grape-badges">
+              <span v-for="g in activeInfo.appData.grapes" :key="g" class="sp-grape-badge">{{ g }}</span>
             </div>
           </div>
 
@@ -1323,6 +1326,18 @@ function toggleInfo() {
   font-size: 0.78rem;
   color: #444;
 }
+
+/* ── 酒款類型（Italy 尌款） ── */
+.sp-wine-types-section { margin: 12px -16px 0; padding: 14px 16px; background: #fafafa; border-left: 3px solid #8B0000; }
+.sp-wine-types-title { font-weight: 700; font-size: 1rem; color: #8B0000; margin-bottom: 10px; }
+.sp-wine-types-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.sp-wine-type-tag { padding: 6px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; }
+
+/* ── 葡萄品種（Italy 尌款） ── */
+.sp-grape-section { margin: 12px -16px 0; padding: 14px 16px; background: #fafafa; border-left: 3px solid #8B0000; }
+.sp-grape-title { font-weight: 700; font-size: 1rem; color: #8B0000; margin-bottom: 12px; }
+.sp-grape-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.sp-grape-badge { padding: 5px 12px; border-radius: 14px; font-size: 0.84rem; font-weight: 700; background: #f0f7f0; color: #2d7a4a; border: 1.5px solid rgba(45,122,74,0.3); }
 
 .info-description {
   font-size: 0.84rem;
