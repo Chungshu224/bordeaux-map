@@ -458,13 +458,40 @@
     ],
     "grapes": [
       "Godello",
-      "Mencía"
+      "Doña Blanca",
+      "Loureira",
+      "Treixadura",
+      "Albariño",
+      "Torrontés",
+      "Lado",
+      "Mencía",
+      "Merenzao",
+      "Sousón",
+      "Albarello",
+      "Tempranillo",
+      "Brancellao",
+      "Caiño Tinto",
+      "Espadeiro",
+      "Ferrón"
     ],
-    "description": "以 Godello 白葡萄品種復興著稱，Godello 可釀製加利西亞最優雅複雜的白酒，礦物感強，陳年潛力佳。",
+    "description": "加利西亞東部「黃金之谷」，Sil 河谷東西走廊，海拔 300–700m，土壤涵蓋板岩、花崗岩、片岩、石英岩等六種類型。氣候極端：夏季最高達 40°C，冬季最低 -8°C，年雨 850–1,000mm，年日照 2,200 小時。Godello 白酒（豐滿、複雜）是復興旗手，30 年來致力原生品種復育。特設 Valdeorras Castas Nobles 等級（≥85% 推薦品種）。",
     "provinces": [
       "Ourense"
     ],
-    "classification": "DO"
+    "classification": "DO",
+    "nameTranslation": "黃金之谷 (Valley of Gold)",
+    "location": "加利西亞東部，Villamartín de Valdeorras；Sil 河塑造的東西向山谷走廊",
+    "climate": {
+      "summerMaxC": 40,
+      "winterMinC": -8,
+      "annualRainfallMm": "850–1,000",
+      "annualSunshineHours": 2200
+    },
+    "elevation": "300–700m",
+    "soilType": "板岩、花崗岩、黏土、含鐵土、石英岩、片岩",
+    "history": "名稱意為「黃金之谷」，古羅馬人 2000 年前即對此地有濃厚興趣",
+    "grading": "Valdeorras Castas Nobles：最低 85% 推薦品種",
+    "revival": "過去 30 年致力復興原生品種；現代酒莊技術帶動 Godello 白酒崛起"
   },
   {
     "zonName": "Monterrei",

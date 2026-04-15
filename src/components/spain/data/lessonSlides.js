@@ -1432,7 +1432,7 @@ const S2M2L2_slides = [
     subtitle: 'Level 2 · 加利西亞的三個寶藏產區',
     points: [
       { icon: '🍃', label: 'Ribeiro', text: '加利西亞最古老的產區，Treixadura 和 Godello 白酒複雜度驚人' },
-      { icon: '🪨', label: 'Valdeorras', text: 'Godello 復興的發源地，板岩土壤帶來礦石張力' },
+      { icon: '🪨', label: 'Valdeorras「黃金之谷」', text: 'Godello 復興發源地，夏達 40°C、冬低 -8°C，年日照 2,200h；Castas Nobles 等級' },
       { icon: '⬛', label: 'Ribeira Sacra', text: 'Miño/Sil 河谷陡峭梯田，海拔 400–500m，Mencía 紅酒、Godello 白酒，古羅馬釀酒史' },
     ],
   },
@@ -1454,8 +1454,8 @@ const S2M2L2_slides = [
       },
       {
         icon: '🪨',
-        label: 'Valdeorras DO',
-        desc: '位於加利西亞東部山區，板岩土壤，海拔 400-700 公尺。Godello 白酒在此復興，展現礦石感、蜂蜜、白花和豐滿質地。Mencía 也有種植。',
+        label: 'Valdeorras DO「黃金之谷」',
+        desc: '加利西亞東部 Sil 河谷，海拔 300–700m。氣候極端：夏最高 40°C、冬最低 -8°C、年雨 850–1,000mm、年日照 2,200h。六種土壤（板岩、花崗岩、片岩等）。白：Godello 為核心（豐滿複雜），另有 Doña Blanca、Loureira、Lado 等 7 種；紅：Mencía 為主，另有 8 種。特設 <strong>Castas Nobles 等級</strong>（≥85% 推薦品種）。近 30 年原生品種復育成果顯著。',
         color: '#8e44ad',
       },
       {
@@ -1509,15 +1509,20 @@ const S2M2L2_slides = [
     icon: '🍇',
     title: 'Godello：加利西亞的白酒寶石',
     html: `
-      <p>Godello 是加利西亞最複雜的白葡萄品種，在 1980 年代幾乎瀕臨絕種，但被 Valdeorras 的釀酒師 Horacio Fernández Bóveda 拯救，如今是西班牙增長最快的白酒品種之一。</p>
+      <p>Godello 是加利西亞最複雜的白葡萄品種，在 1980 年代幾乎瀕臨絕種，但被 Valdeorras 的釀酒師 <strong>Horacio Fernández Bóveda</strong> 拯救，如今是西班牙增長最快的白酒品種之一。</p>
+      <h4>🪨 Valdeorras 的獨特風土</h4>
+      <ul>
+        <li><strong>「黃金之谷」</strong>：名稱源自古羅馬人 2,000 年前對此地的濃厚興趣（可能與黃金採礦有關）</li>
+        <li><strong>極端氣候</strong>：夏最高 40°C、冬最低 -8°C，年雨 850–1,000mm，年日照 <strong>2,200 小時</strong></li>
+        <li><strong>海拔 300–700m</strong>，六種土壤：板岩、花崗岩、黏土、含鐵土、石英岩、片岩</li>
+        <li><strong>Castas Nobles 等級</strong>：新設標準，要求至少 85% 推薦品種，代表產區最高品質承諾</li>
+      </ul>
       <h4>🍷 Godello 風味特徵</h4>
       <ul>
         <li><strong>香氣</strong>：白桃、杏子、蜂蜜、白花（金合歡）、蜂蠟</li>
         <li><strong>口感</strong>：豐滿圓潤、中高酸、帶有油脂感和礦石骨架</li>
         <li><strong>桶陳版本</strong>：增加奶油烤麵包感，複雜度媲美頂級 Burgundy 白酒</li>
       </ul>
-      <h4>🌍 全球認可</h4>
-      <p>業界常將頂級 Godello 與勃根地 Chardonnay 相提並論。</p>
       <h4>💡 Treixadura（Ribeiro 的寶貝）</h4>
       <p>Ribeiro 的代表白品種，帶有玫瑰花瓣、杏桃和淡淡香草，質地圓潤。通常與 Godello、Albariño 混調，增添複雜度。</p>
     `,
@@ -1535,7 +1540,7 @@ const S2M2L2_slides = [
     message: '加利西亞三寶學習完成！',
     keyPoints: [
       'Ribeiro：最古老的加利西亞產區，Treixadura 和 Godello 白酒並重',
-      'Valdeorras：Godello 復興發源地，板岩土壤，礦石張力出色',
+      'Valdeorras「黃金之谷」：Godello 復興發源地，夏 40°C/冬 -8°C/年日照 2,200h；Castas Nobles 等級（≥85% 推薦品種）',
       'Ribeira Sacra：Miño/Sil 河谷梯田，400–500m，古羅馬釀酒史；Amandi 最知名；Mencía（紅）+ Godello（白）',
       'Godello：加利西亞白酒寶石，豐滿礦石，媲美頂級 Burgundy Chardonnay',
     ],
