@@ -1377,6 +1377,141 @@ const S2M1L4_slides = [
   },
 ]
 
+// ─── S2M1L5 — Arlanza DO ────────────────────────────────────────────────────
+const S2M1L5_slides = [
+  {
+    type: 'cover',
+    icon: '🏔️',
+    gradient: 'linear-gradient(135deg, #6c3483, #a569bd)',
+    title: 'Arlanza DO — 河谷高海拔古老產區',
+    subtitle: 'Level 2 · 卡斯提亞-萊昂 · Burgos & Palencia · 12 世紀修道院釀酒傳統',
+    points: [
+      { icon: '⛰️', label: '高海拔極端氣候', text: '葡萄園位於 800–1,200m，夏季 38°C / 冬季 -11°C，年日照僅 1,200h，大陸性氣候典型' },
+      { icon: '🪨', label: '多樣土壤', text: '花崗岩砂質土壤釀出優雅細膩酒款；頁岩黏土賦予礦物質感與結構' },
+      { icon: '💜', label: 'Albillo 白酒', text: '西班牙本土稀有白品種，蘋果、忍冬、橙花、甘菊香氣，酒體類似夏多內但帶西班牙果香' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Arlanza DO 位置',
+    mapRegion: 'castilla-leon',
+    description: '位於卡斯提亞-萊昂自治區 Burgos 與 Palencia 省，得名於流經產區的阿蘭扎河（River Arlanza）。葡萄園海拔 800–1,200m，年均降雨 477mm，年日照 1,200 小時。',
+  },
+  {
+    type: 'compare',
+    title: 'Arlanza：兩大土壤類型',
+    items: [
+      {
+        icon: '🪨',
+        label: '花崗岩砂質土壤',
+        desc: '表層鬆散砂質，底土含深層黏土，酸性偏高。釀出的酒款優雅、細膩，餘韻悠長，礦石感明顯',
+        color: '#8d6e63',
+      },
+      {
+        icon: '⛏️',
+        label: '頁岩黏土（中心地帶）',
+        desc: '源自頁岩的黏土土壤，鹼性（Basic pH），賦予葡萄酒更多礦物質感、骨架與結構感，是 Tempranillo 紅酒的核心產區',
+        color: '#546e7a',
+      },
+      {
+        icon: '🌡️',
+        label: '極端大陸性氣候',
+        desc: '夏季最高 38°C，冬季最低 -11°C，溫差達 49°C。年降雨 477mm，年日照 1,200h。極端環境讓果實緩慢成熟，風味濃縮',
+        color: '#e53935',
+      },
+      {
+        icon: '📏',
+        label: '高海拔小型產區',
+        desc: '葡萄園位於 800–1,200m 高海拔，總種植面積僅約 350 公頃，是卡斯提亞-萊昂最小型的 DO 之一',
+        color: '#1565c0',
+      },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '⛪',
+    title: '歷史淵源・氣候・風土',
+    html: `
+      <h4>⛪ 12 世紀修道院釀酒傳統</h4>
+      <p>Arlanza 的釀酒紀錄最早可追溯至 <strong>12 世紀</strong>。位於 Juarros 的 <strong>聖瑪麗亞布赫多修道院</strong>（Monastery of Santa María de Bujedo de Juarros）在阿蘭扎河與杜羅河岸購買葡萄園，開啟了當地的葡萄酒歷史，直至 2008 年正式升格為 DO。</p>
+      <h4>🌡️ 極端大陸性氣候數據</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div style="background:#fce8e6;border-left:4px solid #e53935;padding:10px;border-radius:0 8px 8px 0">
+          <strong>🌞 夏季最高</strong><br/><strong style="font-size:1.3em">38°C</strong>
+        </div>
+        <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:10px;border-radius:0 8px 8px 0">
+          <strong>❄️ 冬季最低</strong><br/><strong style="font-size:1.3em">-11°C</strong>
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:10px;border-radius:0 8px 8px 0">
+          <strong>🌧️ 年均降雨</strong><br/><strong style="font-size:1.3em">477mm</strong>
+        </div>
+        <div style="background:#fff8e1;border-left:4px solid #e65100;padding:10px;border-radius:0 8px 8px 0">
+          <strong>☀️ 年均日照</strong><br/><strong style="font-size:1.3em">1,200h</strong>
+        </div>
+      </div>
+      <h4 style="margin-top:14px">📐 產區規模</h4>
+      <p>總種植面積約 <strong>350 公頃</strong>，分布於 Burgos 與 Palencia 兩省。土壤表層多為鬆散砂質與礫石，深層含黏土，整體呈<strong>鹼性（Basic pH）</strong>。</p>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '💜',
+    title: 'Albillo — 西班牙稀有白葡萄亮點',
+    html: `
+      <p><strong>Albillo</strong> 是 Arlanza 最具特色的白葡萄品種，在美國幾乎見不到，卻在西班牙日益受到關注。</p>
+      <h4>🍎 香氣與風味</h4>
+      <ul>
+        <li><strong>初級香氣</strong>：蘋果、忍冬（Honeysuckle）、橙花</li>
+        <li><strong>特殊香氣</strong>：蠟嘴（Wax Lips）、甘菊</li>
+        <li><strong>口感風格</strong>：酒體類似 Chardonnay，但帶有明顯的<strong>西班牙果香</strong>與本土地域感</li>
+      </ul>
+      <h4>🍷 釀造特性</h4>
+      <ul>
+        <li><strong>酒精濃度</strong>：中等偏高，帶有細微甜感（非甜酒類）</li>
+        <li><strong>橡木桶陳年</strong>：經橡木桶處理後產生豐富的<strong>乳脂感</strong>，口感更圓潤厚實</li>
+        <li><strong>低酸款式</strong>：某些酒款酸度較低，適合<strong>單獨品飲</strong>，無需搭配食物</li>
+      </ul>
+      <h4>🍇 主要葡萄品種</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>🟥 紅葡萄</strong>
+          <ul style="margin:6px 0 0"><li><strong>Tempranillo</strong>（主力）</li></ul>
+        </div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:10px">
+          <strong>⬜ 白葡萄</strong>
+          <ul style="margin:6px 0 0">
+            <li><strong>Albillo</strong>（特色品種）</li>
+            <li>Viura</li>
+          </ul>
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '關於 Arlanza DO 的 Albillo 白葡萄，下列何者正確？',
+    options: [
+      'Albillo 香氣以黑醋栗和香草為主，適合長時間橡木桶熟成',
+      'Albillo 帶有蘋果・忍冬・甘菊香氣，酒體類似 Chardonnay，橡木桶陳年後產生乳脂感',
+      'Albillo 是 Ribera del Duero 最主要品種，產量佔全西班牙 60%',
+      'Albillo 屬高酸品種，必須搭配食物才能品飲，不適合單獨享用',
+    ],
+    answer: 1,
+    explanation: 'Albillo 帶有蘋果、忍冬、橙花、蠟嘴、甘菊的香氣，酒體與 Chardonnay 相似但帶有西班牙果香。經橡木桶陳年後產生豐富乳脂感；部分酸度較低的款式適合單獨品飲。在美國較罕見，但在西班牙日益受到關注。',
+  },
+  {
+    type: 'summary',
+    message: 'Arlanza DO 學習完成！',
+    keyPoints: [
+      '位於卡斯提亞-萊昂 Burgos & Palencia 省，得名於阿蘭扎河，2008 年升格 DO',
+      '12 世紀修道院（聖瑪麗亞布赫多）開啟釀酒歷史——西班牙最古老產區之一',
+      '極端大陸性氣候：38°C/-11°C，年降雨 477mm，年日照 1,200h，海拔 800–1,200m',
+      '雙土壤格局：花崗岩砂質（優雅細膩）vs 頁岩黏土（礦物質感・結構）',
+      'Albillo 白酒：蘋果・忍冬・甘菊，橡木桶後乳脂感豐富，是西班牙稀有特色品種',
+    ],
+  },
+]
+
 const S2M2L1_slides = [
   {
     type: 'cover',
@@ -4928,6 +5063,7 @@ const SLIDE_MAP = {
   S2M1L2: S2M1L2_slides,     // Rueda / Verdejo
   S2M1L3: S2M1L3_slides,     // Bierzo / Mencía
   S2M1L4: S2M1L4_slides,     // Navarra / Rosado
+  S2M1L5: S2M1L5_slides,     // Arlanza DO / Albillo
   S2M2L1: S2M2L1_slides,     // Rías Baixas / Albariño
   S2M2L2: S2M2L2_slides,     // Ribeiro / Valdeorras / Ribeira Sacra
   S2M2L3: S2M2L3_slides,     // 大西洋氣候與花崗岩土壤

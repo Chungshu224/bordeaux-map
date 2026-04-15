@@ -78,7 +78,7 @@ export const courseLevels = {
     icon: '🍷',
     color: '#8e44ad',
     gradient: 'linear-gradient(135deg, #8e44ad, #9b59b6)',
-    totalLessons: 19,
+    totalLessons: 20,
     prerequisites: ['完成 Level 1'],
     modules: [
       {
@@ -89,6 +89,7 @@ export const courseLevels = {
           { id: 'S2M1L2', title: 'Rueda — 卡斯提亞清爽白酒（Verdejo）' },
           { id: 'S2M1L3', title: 'Bierzo — 板岩上的 Mencía 老藤' },
           { id: 'S2M1L4', title: 'Navarra — 玫瑰酒與 Garnacha 的故鄉' },
+          { id: 'S2M1L5', title: 'Arlanza DO — 河谷高海拔古老產區（Albillo）' },
         ],
       },
       {
