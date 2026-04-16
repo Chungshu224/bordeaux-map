@@ -7,12 +7,40 @@
       <p class="subtitle">Spain Wine Regions — DO · DOCa · VP</p>
     </div>
 
-    <!-- 快速進入全圖 -->
-    <div class="quick-entry">
-      <button class="btn-full-map" @click="select(allSpain)">
-        <span class="btn-icon">🗺</span>
-        <span class="btn-text">探索全西班牙地圖</span>
-        <span class="btn-arrow">→</span>
+    <!-- 產區搜尋框 -->
+    <div class="quick-search">
+      <div class="search-box-wrap">
+        <span class="search-box-icon">🔍</span>
+        <input
+          ref="searchInputEl"
+          v-model="searchQuery"
+          class="search-box-input"
+          placeholder="搜尋 DO / DOCa / VC / VP 產區…"
+          autocomplete="off"
+          @input="onSearchInput"
+          @keydown.enter="pickFirst"
+          @keydown.escape="closeDropdown"
+        />
+        <button v-if="searchQuery" class="search-box-clear" @click="clearSearch">✕</button>
+      </div>
+      <transition name="drop-fade">
+        <ul v-if="suggestions.length" class="search-suggestions">
+          <li
+            v-for="item in suggestions"
+            :key="item.zonName"
+            class="suggestion-item"
+            @click="selectAppellation(item)"
+          >
+            <span class="sugg-badge" :class="badgeClass(item.classification)">{{ item.classification || 'DO' }}</span>
+            <span class="sugg-name">{{ item.zonName }}</span>
+            <span class="sugg-auto">{{ item.autonomia }}</span>
+          </li>
+        </ul>
+      </transition>
+      <button class="btn-full-map-sm" @click="select(allSpain)">
+        <span>🗺</span>
+        <span>瀏覽全西班牙地圖</span>
+        <span>→</span>
       </button>
     </div>
 
@@ -41,11 +69,60 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const emit = defineEmits(['regionSelected', 'back'])
 const router = useRouter()
+
+// ── 全產區搜尋 ───────────────────────────────────────────────
+const searchInputEl = ref(null)
+const searchQuery = ref('')
+const suggestions = ref([])
+let allAppellations = []
+
+onMounted(async () => {
+  try {
+    const res = await fetch('/spain/spain-appellations.json')
+    allAppellations = await res.json()
+  } catch (e) {
+    console.warn('SpainRegionSelector: failed to load appellations', e)
+  }
+})
+
+function onSearchInput() {
+  const q = searchQuery.value.trim().toLowerCase()
+  if (!q) { suggestions.value = []; return }
+  suggestions.value = allAppellations
+    .filter(a => a.zonName?.toLowerCase().includes(q) || a.calDsNom?.toLowerCase().includes(q))
+    .slice(0, 10)
+}
+
+function pickFirst() {
+  if (suggestions.value.length) selectAppellation(suggestions.value[0])
+}
+
+function closeDropdown() {
+  suggestions.value = []
+}
+
+function clearSearch() {
+  searchQuery.value = ''
+  suggestions.value = []
+  searchInputEl.value?.focus()
+}
+
+function selectAppellation(item) {
+  suggestions.value = []
+  searchQuery.value = ''
+  // 直接帶 targetZonName 進全圖，由 SpainMapSection 自動聚焦
+  emit('regionSelected', { ...allSpain, targetZonName: item.zonName })
+}
+
+function badgeClass(cls) {
+  const m = { DOCa: 'doca', DO: 'do', DOP: 'dop', VC: 'vc', VP: 'vp' }
+  return m[cls] || 'do'
+}
 
 const allSpain = {
   id: 'all',
@@ -323,38 +400,124 @@ function select(region) {
   letter-spacing: 0.03em;
 }
 
-/* Quick entry button */
-.quick-entry {
-  max-width: 500px;
+/* Search box */
+.quick-search {
+  max-width: 520px;
   margin: 0 auto 2rem;
+  position: relative;
 }
 
-.btn-full-map {
-  width: 100%;
+.search-box-wrap {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 1.5rem;
-  background: rgba(255,255,255,0.2);
-  border: 2px solid rgba(255,255,255,0.5);
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.22);
+  border: 2px solid rgba(255,255,255,0.55);
   border-radius: 14px;
+  padding: 0.7rem 1rem;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.2s;
+}
+.search-box-wrap:focus-within {
+  border-color: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.3);
+}
+.search-box-icon { font-size: 1.2rem; flex-shrink: 0; }
+.search-box-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
   color: white;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.search-box-input::placeholder { color: rgba(255,255,255,0.6); }
+.search-box-clear {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+.search-box-clear:hover { color: white; }
+
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0; right: 0;
+  background: rgba(20,10,30,0.92);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  list-style: none;
+  margin: 0; padding: 0.4rem 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.suggestion-item:hover { background: rgba(255,255,255,0.1); }
+.sugg-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+.sugg-badge.doca { background: #e74c3c; color: #fff; }
+.sugg-badge.do   { background: #27ae60; color: #fff; }
+.sugg-badge.dop  { background: #e67e22; color: #fff; }
+.sugg-badge.vc   { background: #3498db; color: #fff; }
+.sugg-badge.vp   { background: #9b59b6; color: #fff; }
+.sugg-name {
+  flex: 1;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.sugg-auto {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  flex-shrink: 0;
+}
+
+/* Drop transition */
+.drop-fade-enter-active, .drop-fade-leave-active { transition: opacity 0.15s, transform 0.15s; }
+.drop-fade-enter-from, .drop-fade-leave-to { opacity: 0; transform: translateY(-6px); }
+
+/* Full map small button */
+.btn-full-map-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 0.55rem 1rem;
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.2s;
-  backdrop-filter: blur(8px);
 }
-
-.btn-full-map:hover {
-  background: rgba(255,255,255,0.32);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+.btn-full-map-sm:hover {
+  background: rgba(255,255,255,0.2);
+  color: white;
 }
-
-.btn-icon { font-size: 1.4rem; }
-.btn-text { flex: 1; text-align: left; }
-.btn-arrow { font-size: 1.2rem; opacity: 0.8; }
 
 /* Section label */
 .section-label {

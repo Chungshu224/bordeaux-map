@@ -781,6 +781,13 @@ function initMap() {
       }
       isLoading.value = false
       mapReady.value = true
+      // 若從搜尋傳入 targetZonName，自動聚焦該產區
+      if (props.region.targetZonName) {
+        const target = [...allRegionsMap.values()].find(
+          r => r.zonDsNom === props.region.targetZonName
+        )
+        if (target) selectFromList(target)
+      }
       resolve()
     })
 
