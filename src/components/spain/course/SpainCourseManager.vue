@@ -7,6 +7,20 @@
       @openMap="$emit('openMap')"
       @openSelector="$emit('openSelector')"
       @startLevel="handleSelectLevel"
+      @openNotebook="view = 'notebook'"
+      @openGames="view = 'games'"
+    />
+
+    <!-- 品飲筆記 -->
+    <SpainTastingNotebookPage
+      v-else-if="view === 'notebook'"
+      @back="view = 'levelSelector'"
+    />
+
+    <!-- 互動練習 -->
+    <SpainGameHubPage
+      v-else-if="view === 'games'"
+      @back="view = 'levelSelector'"
     />
 
     <!-- 章節列表 -->
@@ -37,6 +51,8 @@ import { ref, computed } from 'vue'
 import SpainLevelSelector from './SpainLevelSelector.vue'
 import SpainCourseLayout from './SpainCourseLayout.vue'
 import SpainSlideViewer from './SpainSlideViewer.vue'
+import SpainTastingNotebookPage from '../notebook/SpainTastingNotebookPage.vue'
+import SpainGameHubPage from '../games/SpainGameHubPage.vue'
 import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevels.js'
 
 defineEmits(['openMap', 'openSelector'])

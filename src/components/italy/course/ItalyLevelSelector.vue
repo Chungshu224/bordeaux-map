@@ -58,11 +58,6 @@
             <span class="nav-title">學習進度</span>
             <span class="nav-desc">正確率・學習時長・各單元詳細記錄</span>
           </button>
-          <button class="nav-card varieties" @click="$emit('openVarieties')">
-            <span class="nav-icon">🍇</span>
-            <span class="nav-title">品種指南</span>
-            <span class="nav-desc">350+ 本土品種・Nebbiolo・Sangiovese</span>
-          </button>
           <button class="nav-card notebook" @click="$emit('openNotebook')">
             <span class="nav-icon">📔</span>
             <span class="nav-title">品飲筆記</span>

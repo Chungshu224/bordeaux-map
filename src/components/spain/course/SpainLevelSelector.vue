@@ -30,21 +30,15 @@
             <span class="nc-title">探索地圖</span>
             <span class="nc-desc">互動式衛星地圖・96 個法定產區・DO / DOCa / VP</span>
           </button>
-          <button class="nav-card region-card" @click="$emit('openSelector')">
-            <span class="nc-icon">📍</span>
-            <span class="nc-title">依自治區瀏覽</span>
-            <span class="nc-desc">16 個自治區分區探索・Rioja・Cataluña・Galicia</span>
+          <button class="nav-card notebook-card" @click="$emit('openNotebook')">
+            <span class="nc-icon">📔</span>
+            <span class="nc-title">品飲筆記</span>
+            <span class="nc-desc">記錄品飲心得･紅白粉紅雪莉･西班牙產區</span>
           </button>
-          <button class="nav-card grape-card" @click="showGrapeGuide = true">
-            <span class="nc-icon">🍇</span>
-            <span class="nc-title">品種指南</span>
-            <span class="nc-desc">Tempranillo・Garnacha・Albariño・Bobal・Verdejo</span>
-          </button>
-          <button class="nav-card classify-card">
-            <span class="nc-icon">📜</span>
-            <span class="nc-title">分級制度</span>
-            <span class="nc-desc">DO・DOCa・Vino de Pago・Crianza・Reserva 詳解</span>
-            <span class="nc-soon">即將推出</span>
+          <button class="nav-card games-card" @click="$emit('openGames')">
+            <span class="nc-icon">🎮</span>
+            <span class="nc-title">互動練習</span>
+            <span class="nc-desc">產區歸屬・品種配對・雪莉識別・分級辨識・年份排序</span>
           </button>
         </div>
       </section>
@@ -128,7 +122,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../../stores/authStore.js'
 
-const emit = defineEmits(['openMap', 'openSelector', 'startLevel'])
+const emit = defineEmits(['openMap', 'openSelector', 'startLevel', 'openNotebook', 'openGames'])
 const router = useRouter()
 const authUser = authState.user
 const showGrapeGuide = ref(false)
@@ -364,6 +358,9 @@ const grapes = [
 }
 .nav-card:hover::before { background: rgba(255,255,255,0.08); }
 .nav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+.games-card { border-color: rgba(248,113,113,0.25); }
+.games-card .nc-icon { background: rgba(248,113,113,0.15); color: #f87171; }
+.games-card:hover { box-shadow: 0 8px 24px rgba(248,113,113,0.15) !important; }
 .nc-icon { font-size: 1.6rem; }
 .nc-title { font-size: 1rem; font-weight: 700; }
 .nc-desc { font-size: 0.78rem; opacity: 0.8; line-height: 1.4; }
