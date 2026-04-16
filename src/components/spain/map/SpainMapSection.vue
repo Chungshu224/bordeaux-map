@@ -1509,6 +1509,7 @@ function toggleInfo() {
   border-radius: 20px;
   border: 1.5px solid #ddd;
   background: #fff;
+  color: #444;
   font-size: 0.8rem;
   cursor: pointer;
   white-space: nowrap;
