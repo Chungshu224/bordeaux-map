@@ -20,7 +20,10 @@
         <!-- 用戶面板 -->
         <div class="user-panel">
           <template v-if="authUser">
-            <div class="user-avatar">👤</div>
+            <div class="user-avatar">
+              <img v-if="avatarUrl" :src="avatarUrl" class="ls-avatar-img" />
+              <span v-else class="ls-avatar-initial">{{ avatarInitial }}</span>
+            </div>
             <div class="user-info">
               <span class="user-name">{{ displayName }}</span>
               <div class="tier-badge" :class="`tier-${userTier}`">
@@ -217,9 +220,13 @@ import AchievementsDashboard from '../../AchievementsDashboard.vue'
 import LearningStatsMini from '../../LearningStatsMini.vue'
 import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
 import { globalBurgAchievementManager } from '../../../stores/bourgogneAchievementSystem.js'
+import { supabase } from '../../../lib/supabaseClient.js'
 
 const progressStore = useProgress()
 const router = useRouter()
+
+const avatarUrl = ref('')
+const avatarInitial = ref('我')
 const levels = ref([])
 const userProgress = ref({
   1: { completed: false, progress: 0, score: 0 },
@@ -268,6 +275,19 @@ onMounted(async () => {
   levels.value = data.levels
   loadUserProgress()
   updateLevelLocks()
+  // 載入大頭貼
+  const user = authState.user
+  if (user) {
+    const fallback = user.user_metadata?.full_name || user.email?.split('@')[0] || '我'
+    avatarInitial.value = [...fallback][0] || '我'
+    if (supabase) {
+      const { data: pd } = await supabase.from('profiles').select('display_name,avatar_url').eq('id', user.id).single()
+      if (pd) {
+        avatarUrl.value = pd.avatar_url || ''
+        if (pd.display_name) avatarInitial.value = [...pd.display_name][0] || avatarInitial.value
+      }
+    }
+  }
 })
 
 const loadUserProgress = () => {
@@ -508,7 +528,15 @@ const showDetailedProgress = async () => {
 
 /* ── 用戶面板 ──────────────────────────────────────────────── */
 .user-panel   { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
-.user-avatar  { font-size: 1.8rem; line-height: 1; }
+.user-avatar  {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: transparent;
+  border: 2.5px solid rgba(114,47,55,0.4);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; flex-shrink: 0;
+}
+.ls-avatar-img { width: 100%; height: 100%; object-fit: cover; display: block; background: transparent; }
+.ls-avatar-initial { font-size: 1.2rem; font-weight: 700; color: #722f37; line-height: 1; }
 .user-info    { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
 .user-name {
   font-size: 0.9rem; font-weight: 600; color: #2c3e50;

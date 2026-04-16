@@ -17,6 +17,10 @@
           </div>
         </div>
         <div class="header-btns">
+          <div v-if="authUser" class="user-avatar">
+            <img v-if="avatarUrl" :src="avatarUrl" class="ls-avatar-img" />
+            <span v-else class="ls-avatar-initial">{{ avatarInitial }}</span>
+          </div>
           <button class="hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
           <button v-if="authUser" class="hdr-btn ghost" @click="handleLogout">登出</button>
         </div>
@@ -118,14 +122,32 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../../stores/authStore.js'
+import { supabase } from '../../../lib/supabaseClient.js'
 
 const emit = defineEmits(['openMap', 'openSelector', 'startLevel', 'openNotebook', 'openGames'])
 const router = useRouter()
 const authUser = authState.user
 const showGrapeGuide = ref(false)
+const avatarUrl = ref('')
+const avatarInitial = ref('我')
+
+onMounted(async () => {
+  const user = authState.user
+  if (user) {
+    const fallback = user.user_metadata?.full_name || user.email?.split('@')[0] || '我'
+    avatarInitial.value = [...fallback][0] || '我'
+    if (supabase) {
+      const { data: pd } = await supabase.from('profiles').select('display_name,avatar_url').eq('id', user.id).single()
+      if (pd) {
+        avatarUrl.value = pd.avatar_url || ''
+        if (pd.display_name) avatarInitial.value = [...pd.display_name][0] || avatarInitial.value
+      }
+    }
+  }
+})
 
 function handleLogout() {
   authActions.logout()
@@ -308,7 +330,16 @@ const grapes = [
   opacity: 0.8;
   margin: 0;
 }
-.header-btns { display: flex; gap: 0.5rem; }
+.header-btns { display: flex; align-items: center; gap: 0.5rem; }
+.user-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.6);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; flex-shrink: 0;
+}
+.ls-avatar-img { width: 100%; height: 100%; object-fit: cover; display: block; background: transparent; }
+.ls-avatar-initial { font-size: 1.1rem; font-weight: 700; color: white; line-height: 1; }
 .hdr-btn {
   padding: 0.4rem 0.9rem;
   border-radius: 20px;

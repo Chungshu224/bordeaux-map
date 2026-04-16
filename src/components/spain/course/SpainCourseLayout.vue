@@ -35,6 +35,10 @@
           <span class="progress-pct">{{ overallProgress }}%</span>
         </div>
         <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">≡ 章節</button>
+        <div class="hdr-avatar" :title="avatarInitial">
+          <img v-if="avatarUrl" :src="avatarUrl" class="hdr-avatar-img" />
+          <span v-else class="hdr-avatar-initial">{{ avatarInitial }}</span>
+        </div>
       </div>
     </header>
 
@@ -161,7 +165,26 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { supabase } from '../../../lib/supabaseClient.js'
+import { authState } from '../../../stores/authStore.js'
+
+const avatarUrl = ref('')
+const avatarInitial = ref('我')
+
+onMounted(async () => {
+  const user = authState.user
+  if (!user) return
+  const fallback = user.user_metadata?.full_name || user.email?.split('@')[0] || '我'
+  avatarInitial.value = [...fallback][0] || '我'
+  if (supabase) {
+    const { data } = await supabase.from('profiles').select('display_name,avatar_url').eq('id', user.id).single()
+    if (data) {
+      avatarUrl.value = data.avatar_url || ''
+      if (data.display_name) avatarInitial.value = [...data.display_name][0] || avatarInitial.value
+    }
+  }
+})
 
 const props = defineProps({
   currentLevelKey: { type: String, required: true },
@@ -230,6 +253,15 @@ function scrollToModuleAndClose(moduleId) {
 }
 .header-left  { display: flex; align-items: center; gap: 10px; }
 .header-right { display: flex; align-items: center; gap: 8px; }
+.hdr-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; cursor: default; flex-shrink: 0;
+}
+.hdr-avatar-img { width: 100%; height: 100%; object-fit: cover; display: block; background: transparent; }
+.hdr-avatar-initial { font-size: 0.9rem; font-weight: 700; color: white; line-height: 1; }
 .back-btn {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.3);

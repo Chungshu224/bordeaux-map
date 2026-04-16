@@ -119,11 +119,13 @@
                 <div class="tier-card free">
                   <div class="tier-name">免費體驗</div>
                   <div class="tier-price">NT$ 0</div>
+                  <div class="tier-tagline">適合初次探索、先嘗再買</div>
                   <ul class="tier-list">
-                    <li class="ok">Level 1 基礎入門</li>
-                    <li class="ok">基本地圖瀏覽</li>
-                    <li class="no">Level 2–4 進階課程</li>
-                    <li class="no">互動練習中心</li>
+                    <li class="ok">Level 1 入門（12 堂課完整開放）</li>
+                    <li class="ok">57 個 AOC 法定產區互動地圖</li>
+                    <li class="ok">左右岸基礎地理認識</li>
+                    <li class="no">Level 2–4 進階課程（32 堂）</li>
+                    <li class="no">互動練習中心（4 種遊戲）</li>
                   </ul>
                   <button class="tier-btn free-btn" @click="handleFreeTier">立即開始</button>
                 </div>
@@ -136,11 +138,13 @@
                     <template v-else>NT$ {{ pricing.basic.yearly.toLocaleString() }} <span class="price-unit">/ 年</span></template>
                   </div>
                   <div class="price-note" v-if="billingPeriod === 'yearly'">相當於 NT${{ Math.round(pricing.basic.yearly / 12) }}/月，年省 NT${{ (pricing.basic.monthly * 12 - pricing.basic.yearly).toLocaleString() }}</div>
+                  <div class="tier-tagline">適合命名考生、入門御酒師</div>
                   <ul class="tier-list">
-                    <li class="ok">Level 1–4 全部課程</li>
-                    <li class="ok">互動練習中心（4種遊戲）</li>
-                    <li class="ok">全產區地圖探索</li>
-                    <li class="no">進階地圖圖層</li>
+                    <li class="ok">全 4 階段 · 44 堂完整課程</li>
+                    <li class="ok">4 種互動練習（配對、排列、地圖、快答）</li>
+                    <li class="ok">57 個 AOC 法定產區完整地圖袖</li>
+                    <li class="ok">左右岸 · 五大次產區深度解析</li>
+                    <li class="no">地質 / 氣候進階圖層</li>
                     <li class="no">品飲筆記本</li>
                   </ul>
                   <button class="tier-btn basic-btn" @click="handlePurchase('bordeaux','basic')">立即訂閱</button>
@@ -153,11 +157,13 @@
                     <template v-else>NT$ {{ pricing.premium.yearly.toLocaleString() }} <span class="price-unit">/ 年</span></template>
                   </div>
                   <div class="price-note" v-if="billingPeriod === 'yearly'">相當於 NT${{ Math.round(pricing.premium.yearly / 12) }}/月，年省 NT${{ (pricing.premium.monthly * 12 - pricing.premium.yearly).toLocaleString() }}</div>
+                  <div class="tier-tagline">適合從業人員、收藏投資人士</div>
                   <ul class="tier-list">
                     <li class="ok">包含完整課程全部內容</li>
-                    <li class="ok">進階地圖（地質/氣候）</li>
-                    <li class="ok">知名酒莊地圖標記</li>
-                    <li class="ok">品飲筆記本</li>
+                    <li class="ok">地質岩層 · 氣候熱力圖 2 大進階圖層</li>
+                    <li class="ok">酒莊精確位置標記（第一 – 五級分級）</li>
+                    <li class="ok">品飲筆記本（無限則記錄）</li>
+                    <li class="ok">成就系統 · 學習進度全面追蹤</li>
                   </ul>
                   <button class="tier-btn premium-btn" @click="handlePurchase('bordeaux','premium')">立即訂閱</button>
                 </div>
@@ -180,6 +186,33 @@
               <h3 class="card-title">布根地葡萄酒</h3>
               <p class="card-desc">從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界（預計2027開放）</p>
             </div>
+            <!-- 課程深度預覽 -->
+            <div class="course-preview-strip">
+              <div class="cp-stat">
+                <span class="cp-num">4</span>
+                <span class="cp-label">階段課程<br>L1 – L4</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">33</span>
+                <span class="cp-label">Grand Cru<br>產區地圖</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">2</span>
+                <span class="cp-label">地質·氣候<br>進階圖層</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">60<span class="cp-plus">+</span></span>
+                <span class="cp-label">Pinot Noir<br>品種德體課</span>
+              </div>
+            </div>
+            <div class="course-preview-features">
+              <span class="cpf-item">✔ 144+ Premier Cru 葉園區區地圖</span>
+              <span class="cpf-item">✔ 山坡向陰 · 土壤層次分析</span>
+              <span class="cpf-item">✔ 氣候影響與年份差異解讀</span>
+            </div>
             <div class="card-actions">
               <button v-if="courseStatuses.bourgogne || isAdmin" class="card-cta bourgogne-cta" @click="router.push('/bourgogne')">📖 進入課程 →</button>
               <span v-else class="planning-cta">開發中，敬請期待</span>
@@ -197,7 +230,33 @@
               <h3 class="card-title">義大利葡萄酒</h3>
               <p class="card-desc">探索 Barolo、Brunello、Amarone 等世界頂級義大利葡萄酒，20 個 DOC/DOCG 產區完整解析（預計2027開放）</p>
             </div>
-            <div class="card-actions">
+            <!-- 課程深度預覽 -->
+            <div class="course-preview-strip italy-strip">
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label">階段課程<br>L1 – L3</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">66</span>
+                <span class="cp-label">堂課內容<br>完整課程</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">20</span>
+                <span class="cp-label">大產區<br>DOC/DOCG</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">425</span>
+                <span class="cp-label">產區地圖<br>GeoJSON</span>
+              </div>
+            </div>
+            <div class="course-preview-features italy-features">
+              <span class="cpf-item italy-tag">✔ Barolo / Barbaresco 酒區精確邊界</span>
+              <span class="cpf-item italy-tag">✔ Nebbiolo / Sangiovese 品種比較</span>
+              <span class="cpf-item italy-tag">✔ DOC → DOCG 分級演變課</span>
+            </div>
               <button v-if="courseStatuses.italy || isAdmin" class="card-cta italy-cta" @click="router.push('/italy')">📖 進入課程 →</button>
               <span v-else class="planning-cta">開發中，敬請期待</span>
             </div>
@@ -214,11 +273,33 @@
               <h3 class="card-title">西班牙葡萄酒</h3>
               <p class="card-desc">探索 Rioja、Ribera del Duero、Rías Baixas 等頂級產區，DO／DOCa／VP 分級完整解析，互動衛星地圖帶你走遍 96 個法定產區</p>
             </div>
-            <div class="card-actions">
-              <button v-if="courseStatuses.spain || isAdmin" class="card-cta spain-cta" @click="router.push('/spain')">🗺 開始探索 →</button>
-              <span v-else class="planning-cta">開發中，敬請期待</span>
+            <!-- 課程深度預覽 -->
+            <div class="course-preview-strip spain-strip">
+              <div class="cp-stat">
+                <span class="cp-num">4</span>
+                <span class="cp-label">階段課程<br>L1 – L4</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">96</span>
+                <span class="cp-label">法定產區<br>DO 地圖</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">6</span>
+                <span class="cp-label">種互動<br>練習遊戲</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">62</span>
+                <span class="cp-label">產區地圖<br>GeoJSON</span>
+              </div>
             </div>
-          </div>
+            <div class="course-preview-features spain-features">
+              <span class="cpf-item spain-tag">✔ 96 個 DO 衛星地圖完整標記</span>
+              <span class="cpf-item spain-tag">✔ Tempranillo / Garnacha 深度解析</span>
+              <span class="cpf-item spain-tag">✔ Sherry / Cava 特殊酒型專課</span>
+            </div>
 
         </div>
       </div>
@@ -942,6 +1023,50 @@ onMounted(async () => {
 .course-card.bordeaux { border-color: rgba(212,175,55,0.3); background: rgba(212,175,55,0.04); }
 .course-card.bourgogne { border-color: rgba(107,45,139,0.4); background: rgba(107,45,139,0.05); }
 .course-card.spain { border-color: rgba(192,57,43,0.4); background: rgba(192,57,43,0.05); }
+/* 課程深度預覽 strip */
+.course-preview-strip {
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(107,45,139,0.12);
+  border: 1px solid rgba(107,45,139,0.25);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 14px 0 10px;
+  gap: 4px;
+}
+.cp-stat { display: flex; flex-direction: column; align-items: center; gap: 3px; flex: 1; }
+.cp-num { font-size: 1.5rem; font-weight: 800; color: #c89ee0; line-height: 1; }
+.cp-plus { font-size: 0.9rem; font-weight: 700; }
+.cp-label { font-size: 0.62rem; color: #9a7ab0; text-align: center; line-height: 1.35; }
+.cp-divider { width: 1px; height: 32px; background: rgba(107,45,139,0.3); flex-shrink: 0; }
+.course-preview-features {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-bottom: 4px;
+}
+.cpf-item {
+  font-size: 0.68rem; color: #9a7ab0;
+  background: rgba(107,45,139,0.08);
+  border: 1px solid rgba(107,45,139,0.2);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+/* Italy strip */
+.italy-strip { background: rgba(192,57,43,0.08); border-color: rgba(192,57,43,0.2); }
+.italy-strip .cp-num { color: #e07060; }
+.italy-strip .cp-label { color: #a07060; }
+.italy-strip .cp-divider { background: rgba(192,57,43,0.25); }
+.italy-features .italy-tag { color: #b05040; background: rgba(192,57,43,0.07); border-color: rgba(192,57,43,0.18); }
+/* Spain strip */
+.spain-strip { background: rgba(192,57,43,0.08); border-color: rgba(192,57,43,0.25); }
+.spain-strip .cp-num { color: #e85c3a; }
+.spain-strip .cp-label { color: #a06050; }
+.spain-strip .cp-divider { background: rgba(192,57,43,0.28); }
+.spain-features .spain-tag { color: #c0402a; background: rgba(192,57,43,0.07); border-color: rgba(192,57,43,0.2); }
+/* tier tagline */
+.tier-tagline {
+  font-size: 0.68rem; color: #7a6060;
+  margin: 2px 0 10px;
+  font-style: italic;
+}
 .card-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
 .card-cta {
   flex: 1;
