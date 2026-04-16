@@ -149,18 +149,18 @@ const pageEl = ref(null)
 
 // ── Question banks ─────────────────────────────────────────────
 const EASY_QUESTIONS = [
-  { subject: 'Albariño',      clue: '加利西亞大西洋白葡萄，清脆鹽鮮',      answer: '加利西亞',      wrongs: ['拉里奧哈','卡斯提亞-萊昂','安達盧西亞','加泰羅尼亞','阿拉貢'] },
-  { subject: 'Tempranillo',   clue: '西班牙種植最廣紅品種，Rioja 的靈魂',  answer: '拉里奧哈',      wrongs: ['加利西亞','安達盧西亞','加泰羅尼亞','阿拉貢','穆爾西亞'] },
-  { subject: 'Mencía',        clue: 'Bierzo 的代表性品種，花香黑莓',       answer: '卡斯提亞-萊昂', wrongs: ['加利西亞','拉里奧哈','安達盧西亞','阿拉貢','巴倫西亞'] },
-  { subject: 'Verdejo',       clue: 'Rueda 白酒的主要品種，茴香草本',       answer: '卡斯提亞-萊昂', wrongs: ['加利西亞','拉里奧哈','安達盧西亞','加泰羅尼亞','納瓦拉'] },
-  { subject: 'Palomino Fino', clue: '雪莉酒的靈魂品種，產自安達盧西亞',    answer: '安達盧西亞',    wrongs: ['加利西亞','拉里奧哈','加泰羅尼亞','穆爾西亞','巴倫西亞'] },
-  { subject: 'Xarel·lo',     clue: 'Cava 三大品種之一，加泰羅尼亞原生',    answer: '加泰羅尼亞',    wrongs: ['拉里奧哈','安達盧西亞','卡斯提亞-萊昂','阿拉貢','巴倫西亞'] },
-  { subject: 'Monastrell',    clue: 'Jumilla 的濃郁深色紅品種',            answer: '穆爾西亞',      wrongs: ['安達盧西亞','卡斯提亞-萊昂','巴倫西亞','阿拉貢','加泰羅尼亞'] },
-  { subject: 'Txakolina',     clue: '清脆微泡白酒，巴斯克特有品種',         answer: '巴斯克地區',    wrongs: ['加利西亞','納瓦拉','拉里奧哈','卡斯提亞-萊昂','阿拉貢'] },
-  { subject: 'Bobal',         clue: 'Utiel-Requena 原生品種，深色厚皮',    answer: '巴倫西亞',      wrongs: ['穆爾西亞','卡斯提亞-萊昂','安達盧西亞','阿拉貢','加泰羅尼亞'] },
-  { subject: 'Garnacha',      clue: 'Campo de Borja / Cariñena 大產區',   answer: '阿拉貢',        wrongs: ['拉里奧哈','加泰羅尼亞','卡斯提亞-萊昂','穆爾西亞','納瓦拉'] },
-  { subject: 'Pedro Ximénez', clue: '極甜黑色雪莉基底品種',                answer: '安達盧西亞',    wrongs: ['卡斯提亞-萊昂','加利西亞','巴倫西亞','穆爾西亞','埃斯特雷馬杜拉'] },
-  { subject: 'Godello',       clue: 'Valdeorras / Bierzo 白葡萄復興',     answer: '加利西亞',      wrongs: ['卡斯提亞-萊昂','拉里奧哈','納瓦拉','阿拉貢','加泰羅尼亞'] },
+  { subject: 'Albariño',      clue: '加利西亞大西洋白葡萄，清脆鹽鮮',      answer: 'Galicia',                 wrongs: ['La Rioja','Castilla y León','Andalucía','Cataluña','Aragón'] },
+  { subject: 'Tempranillo',   clue: '西班牙種植最廣紅品種，Rioja 的靈魂',  answer: 'La Rioja',                wrongs: ['Galicia','Andalucía','Cataluña','Aragón','Murcia'] },
+  { subject: 'Mencía',        clue: 'Bierzo 的代表性品種，花香黑莓',       answer: 'Castilla y León',         wrongs: ['Galicia','La Rioja','Andalucía','Aragón','Comunitat Valenciana'] },
+  { subject: 'Verdejo',       clue: 'Rueda 白酒的主要品種，茴香草本',       answer: 'Castilla y León',         wrongs: ['Galicia','La Rioja','Andalucía','Cataluña','Navarra'] },
+  { subject: 'Palomino Fino', clue: '雪莉酒的靈魂品種，產自安達盧西亞',    answer: 'Andalucía',               wrongs: ['Galicia','La Rioja','Cataluña','Murcia','Comunitat Valenciana'] },
+  { subject: 'Xarel·lo',     clue: 'Cava 三大品種之一，加泰羅尼亞原生',    answer: 'Cataluña',                wrongs: ['La Rioja','Andalucía','Castilla y León','Aragón','Comunitat Valenciana'] },
+  { subject: 'Monastrell',    clue: 'Jumilla 的濃郁深色紅品種',            answer: 'Murcia',                  wrongs: ['Andalucía','Castilla y León','Comunitat Valenciana','Aragón','Cataluña'] },
+  { subject: 'Txakolina',     clue: '清脆微泡白酒，巴斯克特有品種',         answer: 'País Vasco',              wrongs: ['Galicia','Navarra','La Rioja','Castilla y León','Aragón'] },
+  { subject: 'Bobal',         clue: 'Utiel-Requena 原生品種，深色厚皮',    answer: 'Comunitat Valenciana',    wrongs: ['Murcia','Castilla y León','Andalucía','Aragón','Cataluña'] },
+  { subject: 'Garnacha',      clue: 'Campo de Borja / Cariñena 大產區',   answer: 'Aragón',                  wrongs: ['La Rioja','Cataluña','Castilla y León','Murcia','Navarra'] },
+  { subject: 'Pedro Ximénez', clue: '極甜黑色雪莉基底品種',                answer: 'Andalucía',               wrongs: ['Castilla y León','Galicia','Comunitat Valenciana','Murcia','Extremadura'] },
+  { subject: 'Godello',       clue: 'Valdeorras / Bierzo 白葡萄復興',     answer: 'Galicia',                 wrongs: ['Castilla y León','La Rioja','Navarra','Aragón','Cataluña'] },
 ]
 
 const HARD_QUESTIONS = [

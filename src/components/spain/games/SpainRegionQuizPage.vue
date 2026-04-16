@@ -180,10 +180,30 @@ const EASY_POOL = [
   'Alicante', 'Cariñena', 'Utiel-Requena', 'Terra Alta', 'Getariako Txakolina-Chacolí de Getaria'
 ]
 
+const AUTONOMIA_ZH_TO_ES = {
+  '拉里奧哈':        'La Rioja',
+  '加泰羅尼亞':      'Cataluña',
+  '卡斯提亞-萊昂':   'Castilla y León',
+  '加利西亞':        'Galicia',
+  '穆爾西亞':        'Murcia',
+  '卡斯提亞-拉曼恰': 'Castilla-La Mancha',
+  '安達盧西亞':      'Andalucía',
+  '納瓦拉':          'Navarra',
+  '巴倫西亞':        'Comunitat Valenciana',
+  '阿拉貢':          'Aragón',
+  '埃斯特雷馬杜拉':  'Extremadura',
+  '巴斯克地區':      'País Vasco',
+  '馬德里':          'Comunidad de Madrid',
+  '加那利群島':      'Islas Canarias',
+  '坎塔布里亞':      'Cantabria',
+  '巴利亞利群島':    'Illes Balears',
+  '阿斯圖里亞斯':    'Asturias',
+}
+
 const ALL_AUTONOMIAS = [
-  '拉里奧哈', '加泰羅尼亞', '卡斯提亞-萊昂', '加利西亞', '穆爾西亞',
-  '卡斯提亞-拉曼恰', '安達盧西亞', '納瓦拉', '巴倫西亞', '阿拉貢',
-  '埃斯特雷馬杜拉', '巴斯克地區', '馬德里', '加那利群島', '坎塔布里亞'
+  'La Rioja', 'Cataluña', 'Castilla y León', 'Galicia', 'Murcia',
+  'Castilla-La Mancha', 'Andalucía', 'Navarra', 'Comunitat Valenciana', 'Aragón',
+  'Extremadura', 'País Vasco', 'Comunidad de Madrid', 'Islas Canarias', 'Cantabria'
 ]
 
 // ── Computed ───────────────────────────────────────────────────
@@ -220,7 +240,7 @@ async function startGame(diff) {
     const optCount = diff === 'easy' ? 4 : 6
 
     questions.value = pool.slice(0, total).map(a => {
-      const correct = a.autonomia
+      const correct = AUTONOMIA_ZH_TO_ES[a.autonomia] || a.autonomia
       const distractors = ALL_AUTONOMIAS.filter(r => r !== correct)
       shuffleArr(distractors)
       const opts = [correct, ...distractors.slice(0, optCount - 1)]
