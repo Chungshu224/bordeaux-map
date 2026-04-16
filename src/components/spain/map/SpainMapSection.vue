@@ -68,7 +68,7 @@
           <div v-if="activeInfo.appData?.grapes?.length" class="sp-grape-section">
             <div class="sp-grape-title">主要葡萄品種</div>
             <div class="sp-grape-badges">
-              <span v-for="g in activeInfo.appData.grapes" :key="g" class="sp-grape-badge">{{ g }}</span>
+              <span v-for="g in activeInfo.appData.grapes" :key="g" :class="['sp-grape-badge', grapeTypeCls(g)]">{{ g }}</span>
             </div>
           </div>
 
@@ -436,6 +436,49 @@ function typeLabel(tpr) {
 }
 
 // ── Style tag colors ──────────────────────────────────────────────
+// ── 葡萄品種紅白分類 ──────────────────────────────────────────────
+const RED_GRAPE_KEYWORDS = ['tinta', 'tinto', 'tintorera', 'negro', 'negra', 'noir', 'beltza']
+const WHITE_GRAPE_KEYWORDS = ['blanca', 'blanco', 'blanc', 'zuri', 'gris']
+const RED_GRAPES_CORE = new Set([
+  'garnacha', 'tempranillo', 'monastrell', 'bobal', 'cariñena', 'mazuelo',
+  'mencía', 'mencia', 'graciano', 'malbec', 'merlot', 'cabernet sauvignon',
+  'syrah', 'pinot noir', 'garnatxa', 'callet', 'carrasquín', 'carrasquin',
+  'brancellao', 'espadeiro', 'sousón', 'souson', 'sumoll', 'trepat',
+  'juan garcía', 'juan garcia', 'juan ibáñez', 'juan ibanez',
+  'moristel', 'parraleta', 'prieto picudo', 'rufete', 'merenzao',
+  'bruñal', 'brunal', 'baboso negro', 'ferrón', 'ferron', 'fogoneu',
+  'caiño', 'caino', 'tintilla', 'negramoll', 'listán negro', 'vijariego negro',
+  'albarín tinto', 'loureira tinta',
+])
+const WHITE_GRAPES_CORE = new Set([
+  'albariño', 'albarino', 'verdejo', 'viura', 'macabeo', 'xarel·lo', 'xarello',
+  'parellada', 'chardonnay', 'sauvignon blanc', 'riesling', 'gewürztraminer',
+  'godello', 'treixadura', 'loureira', 'airén', 'airen', 'palomino',
+  'pedro ximénez', 'pedro ximenez', 'moscatel', 'malvasía', 'malvasia',
+  'albillo', 'verdelho', 'torrontés', 'torrontes', 'albarello', 'alcañón',
+  'cayetana blanca', 'merseguera', 'malvar', 'doña blanca', 'dona blanca',
+  'hondarrabi zuri', 'lado', 'picapoll', 'moll', 'garnacha blanca',
+  'forastera', 'listán blanco', 'vijariego', 'vijiriega', 'verijadiego',
+  'zalema', 'gomera', 'palomino fino', 'pansà blanca',
+])
+function grapeTypeCls(name) {
+  const n = name.toLowerCase()
+  // 中文標記
+  if (n.includes('紅') || n.includes('紅品種')) return 'red'
+  if (n.includes('白品種') || n.includes('白葡萄')) return 'white'
+  // 西班牙語/加泰語/巴斯克語關鍵字
+  if (RED_GRAPE_KEYWORDS.some(k => n.includes(k))) return 'red'
+  if (WHITE_GRAPE_KEYWORDS.some(k => n.includes(k))) return 'white'
+  // 核心品種查找（取括號前的基本名稱比對）
+  const base = n.split(/[（(]/)[0].trim()
+  if (RED_GRAPES_CORE.has(base)) return 'red'
+  if (WHITE_GRAPES_CORE.has(base)) return 'white'
+  // 部分前綴比對
+  for (const r of RED_GRAPES_CORE) { if (base.startsWith(r) || r.startsWith(base)) return 'red' }
+  for (const w of WHITE_GRAPES_CORE) { if (base.startsWith(w) || w.startsWith(base)) return 'white' }
+  return ''
+}
+
 function styleTagColor(style) {
   const map = {
     '紅酒':  { background: '#8B0000', color: '#fff' },
@@ -1345,6 +1388,8 @@ function toggleInfo() {
 .sp-grape-title { font-weight: 700; font-size: 1rem; color: #8B0000; margin-bottom: 12px; }
 .sp-grape-badges { display: flex; flex-wrap: wrap; gap: 8px; }
 .sp-grape-badge { padding: 5px 12px; border-radius: 14px; font-size: 0.84rem; font-weight: 700; background: #f0f7f0; color: #2d7a4a; border: 1.5px solid rgba(45,122,74,0.3); }
+.sp-grape-badge.red   { background: #fdf0f2; color: #9b2335; border-color: rgba(155,35,53,0.3); }
+.sp-grape-badge.white { background: #fdfaf0; color: #7a6800; border-color: rgba(122,104,0,0.3); }
 
 .info-description {
   font-size: 0.84rem;
