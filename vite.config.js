@@ -42,6 +42,14 @@ export default defineConfig({
   },
   server: {
     port: 5173,
-    open: true
+    open: true,
+    proxy: {
+      // ISRIC SoilGrids WMS proxy — 解決 localhost CORS 問題
+      '/isric-proxy': {
+        target: 'https://maps.isric.org',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/isric-proxy/, '')
+      }
+    }
   }
 })

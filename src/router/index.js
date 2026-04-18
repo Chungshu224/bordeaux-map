@@ -72,6 +72,22 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
 
+  // ─── 德國探索地圖 ───────────────────────────────────────────────────────────
+  {
+    path: '/germany',
+    name: 'Germany',
+    component: () => import('../components/GermanyPage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
+  // ─── 葡萄牙探索地圖 ─────────────────────────────────────────────────────────
+  {
+    path: '/portugal',
+    name: 'Portugal',
+    component: () => import('../components/PortugalPage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
   // ─── 使用者儀表板 ───────────────────────────────────────────────────────────
   {
     path: '/dashboard',

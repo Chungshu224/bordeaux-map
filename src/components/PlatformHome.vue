@@ -55,6 +55,12 @@
             <button class="cta-course spain-btn" @click="router.push('/spain')">
               🇪🇸 西班牙課程
             </button>
+            <button class="cta-course germany-btn" @click="router.push('/germany')">
+              🇩🇪 德國課程
+            </button>
+            <button class="cta-course portugal-btn" @click="router.push('/portugal')">
+              🇵🇹 葡萄牙課程
+            </button>
           </div>
         </div>
         <!-- 未登入：原本的 CTA -->
@@ -71,7 +77,7 @@
           <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">100+</span><span class="stat-label">互動練習題</span></div>
           <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">世界產區</span></div>
+          <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">世界產區</span></div>
           <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">$150</span><span class="stat-label">完整課程起/月</span></div>
         </div>
@@ -205,12 +211,12 @@
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">60<span class="cp-plus">+</span></span>
-                <span class="cp-label">Pinot Noir<br>品種德體課</span>
+                <span class="cp-label">Pinot Noir<br>產區課</span>
               </div>
             </div>
             <div class="course-preview-features">
-              <span class="cpf-item">✔ 144+ Premier Cru 葉園區區地圖</span>
-              <span class="cpf-item">✔ 山坡向陰 · 土壤層次分析</span>
+              <span class="cpf-item">✔ 144+ Premier Cru 一級園地圖</span>
+              <span class="cpf-item">✔ 山坡 · 土壤層次分析</span>
               <span class="cpf-item">✔ 氣候影響與年份差異解讀</span>
             </div>
             <div class="card-actions">
@@ -249,7 +255,7 @@
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">425</span>
-                <span class="cp-label">產區地圖<br>GeoJSON</span>
+                <span class="cp-label">產區地圖<br></span>
               </div>
             </div>
             <div class="course-preview-features italy-features">
@@ -257,6 +263,7 @@
               <span class="cpf-item italy-tag">✔ Nebbiolo / Sangiovese 品種比較</span>
               <span class="cpf-item italy-tag">✔ DOC → DOCG 分級演變課</span>
             </div>
+            <div class="card-actions">
               <button v-if="courseStatuses.italy || isAdmin" class="card-cta italy-cta" @click="router.push('/italy')">📖 進入課程 →</button>
               <span v-else class="planning-cta">開發中，敬請期待</span>
             </div>
@@ -292,7 +299,7 @@
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">62</span>
-                <span class="cp-label">產區地圖<br>GeoJSON</span>
+                <span class="cp-label">產區地圖<br></span>
               </div>
             </div>
             <div class="course-preview-features spain-features">
@@ -300,6 +307,97 @@
               <span class="cpf-item spain-tag">✔ Tempranillo / Garnacha 深度解析</span>
               <span class="cpf-item spain-tag">✔ Sherry / Cava 特殊酒型專課</span>
             </div>
+            <div class="card-actions">
+              <button v-if="courseStatuses.spain || isAdmin" class="card-cta spain-cta" @click="router.push('/spain')">📖 進入課程 →</button>
+              <span v-else class="planning-cta">開發中，敬請期待</span>
+            </div>
+          </div>
+
+          <!-- ── Germany ── -->
+          <div class="course-card germany">
+            <div :class="['card-status', courseStatuses.germany ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.germany ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🇩🇪</div>
+              <div class="card-region">Germany · Deutschland</div>
+              <h3 class="card-title">德國葡萄酒</h3>
+              <p class="card-desc">深入探索 13 個 Anbaugebiete，從 Mosel 的陡峭板岩到 Rheingau 的優雅 Riesling，葡萄園衛星地圖帶你走遍德國頂級 Weinberg</p>
+            </div>
+            <div class="course-preview-strip germany-strip">
+              <div class="cp-stat">
+                <span class="cp-num">13</span>
+                <span class="cp-label">法定產區<br>Anbaugebiet</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Riesling</span>
+                <span class="cp-label">核心品種<br></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">QmP</span>
+                <span class="cp-label">分級系統<br>探索</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">衛星</span>
+                <span class="cp-label">葡萄園<br>地圖</span>
+              </div>
+            </div>
+            <div class="course-preview-features germany-features">
+              <span class="cpf-item germany-tag">✔ 13 個 Anbaugebiete 衛星地圖</span>
+              <span class="cpf-item germany-tag">✔ Mosel 陡坡 Riesling 深度解析</span>
+              <span class="cpf-item germany-tag">✔ Kabinett → TBA 甜度分級</span>
+            </div>
+            <div class="card-actions">
+              <button v-if="courseStatuses.germany || isAdmin" class="card-cta germany-cta" @click="router.push('/germany')">🗺 探索地圖 →</button>
+              <span v-else class="planning-cta">開發中，敬請期待</span>
+            </div>
+          </div>
+
+          <!-- ── Portugal ── -->
+          <div class="course-card portugal">
+            <div :class="['card-status', courseStatuses.portugal ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.portugal ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🇵🇹</div>
+              <div class="card-region">Portugal · Vinho</div>
+              <h3 class="card-title">葡萄牙葡萄酒</h3>
+              <p class="card-desc">探索 31 個 DOC 法定產區，從北部的 Vinho Verde 清爽綠酒到南部的 Alentejo 濃郁紅酒，互動衛星地圖帶你認識波特酒的故鄉</p>
+            </div>
+            <div class="course-preview-strip portugal-strip">
+              <div class="cp-stat">
+                <span class="cp-num">31</span>
+                <span class="cp-label">DOC 法定<br>產區</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Porto</span>
+                <span class="cp-label">波特酒<br>核心</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Touriga</span>
+                <span class="cp-label">代表品種<br>探索</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">衛星</span>
+                <span class="cp-label">互動<br>地圖</span>
+              </div>
+            </div>
+            <div class="course-preview-features portugal-features">
+              <span class="cpf-item portugal-tag">✔ 全葡 31 個 DOC 互動地圖</span>
+              <span class="cpf-item portugal-tag">✔ Douro 梯田波特酒產區深度解析</span>
+              <span class="cpf-item portugal-tag">✔ Madeira 島嶼加強酒探索</span>
+            </div>
+            <div class="card-actions">
+              <button v-if="courseStatuses.portugal || isAdmin" class="card-cta portugal-cta" @click="router.push('/portugal')">🗺 探索地圖 →</button>
+              <span v-else class="planning-cta">開發中，敬請期待</span>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -611,7 +709,7 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設偡 active=true 防止関你加載先閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true, germany: true, portugal: true })
 
 async function loadCourseData() {
   try {
@@ -988,6 +1086,12 @@ onMounted(async () => {
 .spain-cta {
   background: linear-gradient(135deg, #c0392b, #e74c3c) !important;
 }
+.germany-btn {
+  background: linear-gradient(135deg, #2c3e50, #3d5a80);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(44,62,80,0.5);
+}
+.germany-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(44,62,80,0.65); }
 .hero-stats { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
 .stat-item { text-align: center; padding: 0 12px; }
 .stat-num { display: block; font-size: 2rem; font-weight: 800; color: #d4af37; line-height: 1; }
@@ -1061,6 +1165,26 @@ onMounted(async () => {
 .spain-strip .cp-label { color: #a06050; }
 .spain-strip .cp-divider { background: rgba(192,57,43,0.28); }
 .spain-features .spain-tag { color: #c0402a; background: rgba(192,57,43,0.07); border-color: rgba(192,57,43,0.2); }
+/* Germany card */
+.germany-strip { background: rgba(44,62,80,0.08); border-color: rgba(44,62,80,0.25); }
+.germany-strip .cp-num { color: #2c3e50; font-size: 0.9rem; }
+.germany-strip .cp-label { color: #4a6072; }
+.germany-strip .cp-divider { background: rgba(44,62,80,0.28); }
+.germany-features .germany-tag { color: #2c3e50; background: rgba(44,62,80,0.07); border-color: rgba(44,62,80,0.2); }
+.germany-cta { background: linear-gradient(135deg, #2c3e50, #3d5a80) !important; }
+/* Portugal card */
+.portugal-strip { background: rgba(139,0,0,0.08); border-color: rgba(139,0,0,0.25); }
+.portugal-strip .cp-num { color: #8B0000; font-size: 0.9rem; }
+.portugal-strip .cp-label { color: #7a3a3a; }
+.portugal-strip .cp-divider { background: rgba(139,0,0,0.28); }
+.portugal-features .portugal-tag { color: #8B0000; background: rgba(139,0,0,0.07); border-color: rgba(139,0,0,0.2); }
+.portugal-cta { background: linear-gradient(135deg, #8B0000, #b22222) !important; }
+.portugal-btn {
+  background: linear-gradient(135deg, #8B0000, #b22222);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(139,0,0,0.5);
+}
+.portugal-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(139,0,0,0.65); }
 /* tier tagline */
 .tier-tagline {
   font-size: 0.68rem; color: #7a6060;
