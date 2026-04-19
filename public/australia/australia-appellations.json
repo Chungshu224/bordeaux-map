@@ -1,0 +1,680 @@
+[
+  {
+    "name": "Barossa Valley",
+    "state": "SA",
+    "zone": "Barossa",
+    "gi_level": "Region",
+    "area_ha": 14000,
+    "climate": "大陸型地中海氣候，夏熱乾燥（均溫 32°C），冬溫多雨，日夜溫差大",
+    "soil": "古老紅棕壤（terra rossa）、含石英砂質壤土、紅土壤",
+    "grapes": [
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Grenache", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Mourvèdre", "type": "red" },
+      { "name": "Riesling", "type": "white" }
+    ],
+    "styles": ["紅酒", "加強酒"],
+    "famous_for": "百年老藤 Shiraz，全球最老 Grenache 老藤",
+    "description": "澳洲最著名的紅酒產區，坐落於 Adelaide 北方 60km。以濃郁飽滿的 Shiraz 聞名全球，擁有樹齡逾百年的老藤（old vines），土色磚紅、果香奔放。代表酒莊：Penfolds、Henschke、Torbreck、Two Hands。"
+  },
+  {
+    "name": "Eden Valley",
+    "state": "SA",
+    "zone": "Barossa",
+    "gi_level": "Region",
+    "area_ha": 5000,
+    "climate": "海拔 380–550m 高原，比 Barossa Valley 涼爽，夜間氣溫顯著降低",
+    "soil": "古老片岩與花崗岩，排水良好，貧瘠土壤",
+    "grapes": [
+      { "name": "Riesling", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "澳洲頂級 Riesling 產地之一，乾式萊姆礦石風格",
+    "description": "巴羅薩谷的高地鄰區，以精緻細膩的 Riesling 著稱，檸檬花蜜礦石感明顯，具極佳陳年潛力。Shiraz 在此比 Barossa Valley 更優雅纖細。代表酒莊：Henschke（Hill of Grace 同屬此地）、Yalumba Pewsey Vale。"
+  },
+  {
+    "name": "High Eden",
+    "state": "SA",
+    "zone": "Barossa",
+    "gi_level": "Sub-Region",
+    "area_ha": 500,
+    "climate": "澳洲最高海拔的葡萄酒產區之一（550m+），極涼爽",
+    "soil": "粗礫花崗岩，土層薄，排水極佳",
+    "grapes": [
+      { "name": "Riesling", "type": "white" },
+      { "name": "Shiraz", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "Eden Valley 最高海拔子產區",
+    "description": "Eden Valley 最涼爽的子產區，海拔最高，Riesling 展現更純粹的礦石酸度，是 Eden Valley 頂尖品質的代名詞。"
+  },
+  {
+    "name": "Clare Valley",
+    "state": "SA",
+    "zone": "Mount Lofty Ranges",
+    "gi_level": "Region",
+    "area_ha": 5000,
+    "climate": "大陸型氣候，高海拔（400–500m），夏熱但夜間涼爽，偶有強風降溫",
+    "soil": "石灰岩、板岩、石英岩，土色多樣",
+    "grapes": [
+      { "name": "Riesling", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "澳洲最優質的 Riesling 產地，蠟封旋蓋先驅",
+    "description": "澳洲 Riesling 的聖地，出產具有高酸、萊姆、礦石風格的白酒，陳年後展現汽油（petrol）複雜香氣。Clare Valley 酒莊是全球最早採用螺旋瓶蓋的社群。代表酒莊：Grosset、Skillogalee、Jim Barry。"
+  },
+  {
+    "name": "Adelaide Hills",
+    "state": "SA",
+    "zone": "Mount Lofty Ranges",
+    "gi_level": "Region",
+    "area_ha": 6000,
+    "climate": "海拔 400–700m，涼爽，受大西洋偏南氣流影響，夏季氣溫比 Adelaide 低 5°C",
+    "soil": "泥岩、片岩、砂礫土，多變化",
+    "grapes": [
+      { "name": "Sauvignon Blanc", "type": "white" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Pinot Gris", "type": "white" },
+      { "name": "Shiraz", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒", "氣泡酒"],
+    "famous_for": "南澳最重要涼爽氣候產區，Sauvignon Blanc 與氣泡酒",
+    "description": "Adelaide 東部山脊，夏涼冬寒，是南澳最重要的涼爽氣候產區。Sauvignon Blanc 清爽草本，Pinot Noir 與 Chardonnay 適合釀造氣泡酒基底。代表酒莊：Shaw + Smith、Deviation Road、Petaluma。"
+  },
+  {
+    "name": "Lenswood",
+    "state": "SA",
+    "zone": "Mount Lofty Ranges",
+    "gi_level": "Sub-Region",
+    "area_ha": 500,
+    "climate": "Adelaide Hills 最涼爽的子產區，高海拔強風",
+    "soil": "泥岩質土壤",
+    "grapes": [
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Chardonnay", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "Adelaide Hills 涼爽風格代表",
+    "description": "Adelaide Hills 山脊最高點之一，以精緻 Pinot Noir 和 Chardonnay 聞名。"
+  },
+  {
+    "name": "Piccadilly Valley",
+    "state": "SA",
+    "zone": "Mount Lofty Ranges",
+    "gi_level": "Sub-Region",
+    "area_ha": 600,
+    "climate": "涼爽，多霧，是 Adelaide Hills 中最涼爽的子產區",
+    "soil": "黏土壤土，含礫石",
+    "grapes": [
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Pinot Noir", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒", "氣泡酒"],
+    "famous_for": "Petaluma 酒莊氣泡酒",
+    "description": "Brian Croser（Petaluma 創辦人）選擇的氣泡酒基底產地，涼爽多霧，適合保留高酸度的品種特色。"
+  },
+  {
+    "name": "Mclaren Vale",
+    "state": "SA",
+    "zone": "Fleurieu",
+    "gi_level": "Region",
+    "area_ha": 8000,
+    "climate": "地中海氣候，受南方海洋（Fleurieu 半島）調節，夏熱但海風涼爽",
+    "soil": "多樣化：紅棕壤、石灰岩、黑色黏土、片岩，超過 40 種土壤類型",
+    "grapes": [
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Grenache", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Mourvèdre", "type": "red" },
+      { "name": "Fiano", "type": "white" },
+      { "name": "Vermentino", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "GSM 混釀（Grenache-Shiraz-Mourvèdre）與地中海品種",
+    "description": "Adelaide 南方 40km，兼具海洋調節與充足陽光。Shiraz 豐腴帶黑橄欖巧克力，GSM 混釀是招牌風格。近年積極引進 Fiano、Vermentino 等義大利品種。代表酒莊：d'Arenberg、Clarendon Hills、Wirra Wirra。"
+  },
+  {
+    "name": "Langhorne Creek",
+    "state": "SA",
+    "zone": "Fleurieu",
+    "gi_level": "Region",
+    "area_ha": 5500,
+    "climate": "低海拔，Lake Alexandrina 湖泊調節，夏熱但夜涼，偶有洪泛灌溉（歷史）",
+    "soil": "深層沖積壤土、黏土，保水性佳",
+    "grapes": [
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Malbec", "type": "red" }
+    ],
+    "styles": ["紅酒"],
+    "famous_for": "豐腴柔滑的 Cabernet，常作混釀基底",
+    "description": "湖邊低地產區，以柔滑豐腴的 Cabernet Sauvignon 和 Shiraz 著名，單寧圓潤，常被大型酒廠用作混釀基底。Wolf Blass 早年以此產地建立了卓越聲譽。"
+  },
+  {
+    "name": "Coonawarra",
+    "state": "SA",
+    "zone": "Limestone Coast",
+    "gi_level": "Region",
+    "area_ha": 5500,
+    "climate": "涼爽，受南方海洋性氣流影響，夏天涼爽，生長季長",
+    "soil": "標誌性 Terra rossa（磚紅壤）覆蓋在白色石灰岩台地上，排水完美",
+    "grapes": [
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Riesling", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "澳洲最著名的 Cabernet Sauvignon 產地，terra rossa 土壤",
+    "description": "南澳東南端，以標誌性紅棕色 terra rossa 土壤聞名，Cabernet Sauvignon 展現黑醋栗、薄荷、雪松細膩風格，被譽為「澳洲波爾多」。代表酒莊：Wynns Coonawarra Estate、Majella、Balnaves。"
+  },
+  {
+    "name": "Wrattonbully",
+    "state": "SA",
+    "zone": "Limestone Coast",
+    "gi_level": "Region",
+    "area_ha": 2500,
+    "climate": "涼爽，與 Coonawarra 類似的海洋性涼爽氣候",
+    "soil": "Terra rossa 紅棕壤覆蓋石灰岩，類似 Coonawarra",
+    "grapes": [
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Merlot", "type": "red" }
+    ],
+    "styles": ["紅酒"],
+    "famous_for": "Coonawarra 的優質鄰近產區，terra rossa 出品",
+    "description": "毗鄰 Coonawarra 的新興優質產區，同樣具有 terra rossa 紅棕壤，出品結構良好的 Cabernet，知名度快速上升。"
+  },
+  {
+    "name": "Kangaroo Island",
+    "state": "SA",
+    "zone": "Fleurieu",
+    "gi_level": "Region",
+    "area_ha": 900,
+    "climate": "地中海氣候，四面環海調節，無工業汙染",
+    "soil": "多樣：砂礫壤土、紅棕壤",
+    "grapes": [
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Viognier", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "原始自然環境，無汙染精品產區",
+    "description": "四面環海的大型島嶼，生態保護完善、空氣清潔，葡萄酒帶有純淨的果香與海洋礦石感。代表酒莊：Murdoch Hill、Kangaroo Island Spirits。"
+  },
+  {
+    "name": "Riverland",
+    "state": "SA",
+    "zone": "Lower Murray",
+    "gi_level": "Region",
+    "area_ha": 20000,
+    "climate": "炎熱、乾燥大陸型，靠近 Murray 河灌溉",
+    "soil": "沙質沖積土，深層壤土",
+    "grapes": [
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Colombard", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒", "加強酒"],
+    "famous_for": "澳洲最大灌溉葡萄酒產區，高產量日常用酒",
+    "description": "Murray 河沿岸的大量灌溉農業區，是澳洲超市酒的重要來源地，生產易飲、物超所值的日常葡萄酒。"
+  },
+  {
+    "name": "Yarra Valley",
+    "state": "VIC",
+    "zone": "Port Phillip",
+    "gi_level": "Region",
+    "area_ha": 9000,
+    "climate": "涼爽，海拔 50–400m，受南方海洋性氣流影響，年均氣溫 14°C",
+    "soil": "古老深紅色火山土（lower Yarra）+ 較涼較淺的灰色壤土（upper Yarra）",
+    "grapes": [
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Pinot Gris", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒", "氣泡酒"],
+    "famous_for": "澳洲頂級 Pinot Noir 產地，氣泡酒重鎮",
+    "description": "墨爾本東北方 50km，是澳洲最重要的涼爽氣候產區之一。下亞拉（Lower Yarra）土壤深厚，生產濃郁飽滿的 Pinot；上亞拉（Upper Yarra）海拔更高，出品更精緻。代表酒莊：Yering Station、Coldstream Hills、De Bortoli、Mac Forbes。"
+  },
+  {
+    "name": "Mornington Peninsula",
+    "state": "VIC",
+    "zone": "Port Phillip",
+    "gi_level": "Region",
+    "area_ha": 3000,
+    "climate": "海洋性涼爽氣候，三面環海，夏涼冬溫和，多雲霧",
+    "soil": "深紅色火山土、灰色砂質壤土",
+    "grapes": [
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Pinot Gris", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "三面環海，Pinot Noir 細膩精緻風格",
+    "description": "伸入 Port Phillip 灣的半島，海洋性氣候特色鮮明，Pinot Noir 展現草莓、玫瑰花瓣、絲滑單寧的優雅風格，被喻為「維多利亞的勃艮第」。代表酒莊：Stonier、Kooyong、Moorooduc。"
+  },
+  {
+    "name": "Geelong",
+    "state": "VIC",
+    "zone": "Port Phillip",
+    "gi_level": "Region",
+    "area_ha": 1500,
+    "climate": "涼爽海洋性，Port Phillip 灣西岸，夏短冬長",
+    "soil": "玄武岩、砂礫，排水佳",
+    "grapes": [
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Shiraz", "type": "red" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "Bannockburn 等酒莊的精品 Pinot Noir",
+    "description": "距墨爾本 75km 的涼爽灣區，多風，排水良好的玄武岩土壤造就了緊緻結構的 Pinot Noir 和 Chardonnay。代表酒莊：Bannockburn、Austins & Co.、By Farr。"
+  },
+  {
+    "name": "Macedon Ranges",
+    "state": "VIC",
+    "zone": "Port Phillip",
+    "gi_level": "Region",
+    "area_ha": 600,
+    "climate": "維多利亞最冷的產區之一，海拔 400–700m，常年大風，夏季涼短",
+    "soil": "花崗岩、砂岩",
+    "grapes": [
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Pinot Noir", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒", "氣泡酒"],
+    "famous_for": "澳洲最冷的 Chardonnay 和氣泡酒",
+    "description": "高海拔多風的山脊地帶，低溫賦予 Chardonnay 和 Pinot Noir 極高的酸度，是傳統法氣泡酒的優質基底。代表酒莊：Curly Flat、Bindi。"
+  },
+  {
+    "name": "Sunbury",
+    "state": "VIC",
+    "zone": "Port Phillip",
+    "gi_level": "Region",
+    "area_ha": 500,
+    "climate": "涼爽，受 Port Phillip 海灣影響，多風",
+    "soil": "玄武岩（澳洲最古老的 Chardonnay 園就在這裡）",
+    "grapes": [
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Shiraz", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "Craiglee 酒莊的老藤 Shiraz",
+    "description": "墨爾本北方小型產區，Craiglee 擁有維多利亞最古老的連續生產葡萄園，老藤 Shiraz 帶有胡椒與辛料香氣。"
+  },
+  {
+    "name": "Heathcote",
+    "state": "VIC",
+    "zone": "Central Victoria",
+    "gi_level": "Region",
+    "area_ha": 6000,
+    "climate": "大陸型，夏熱（但海拔調節），日夜溫差大",
+    "soil": "5.4 億年古老寒武紀紫色礫岩（Cambrian greenstone），排水完美",
+    "grapes": [
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Grenache", "type": "red" }
+    ],
+    "styles": ["紅酒"],
+    "famous_for": "澳洲最獨特土壤之一——寒武紀紫色礫岩，出品 Shiraz 之王",
+    "description": "中維多利亞的紅土寶地，5 億年古老寒武紀土壤賦予 Shiraz 強烈黑果、礦物質感與超長陳年潛力，被認為是澳洲最具風土個性的 Shiraz 之一。代表酒莊：Jasper Hill、Greenstone Vineyard。"
+  },
+  {
+    "name": "Bendigo",
+    "state": "VIC",
+    "zone": "Central Victoria",
+    "gi_level": "Region",
+    "area_ha": 1200,
+    "climate": "大陸型，夏熱乾燥，日夜溫差大",
+    "soil": "古老砂岩、石英礫石，排水良好",
+    "grapes": [
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" }
+    ],
+    "styles": ["紅酒"],
+    "famous_for": "黃金礦業歷史，飽滿 Shiraz",
+    "description": "維多利亞淘金熱時代的城市旁，葡萄酒業發展悠久。以飽滿、香料豐富的 Shiraz 著稱，Balgownie Estate 是老牌酒莊。"
+  },
+  {
+    "name": "Grampians",
+    "state": "VIC",
+    "zone": "Western Victoria",
+    "gi_level": "Region",
+    "area_ha": 2000,
+    "climate": "大陸型，海拔 350–400m，夏熱但夜涼",
+    "soil": "古老砂岩、礫石，多孔隙，排水極佳",
+    "grapes": [
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Riesling", "type": "white" },
+      { "name": "Chardonnay", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒", "氣泡酒"],
+    "famous_for": "Sparkling Shiraz（氣泡紅酒）發源地，Great Western 氣泡酒",
+    "description": "以壯觀的格蘭屏山脈聞名，是澳洲傳統氣泡酒（Sparkling Shiraz）的發祥地，Great Western 酒莊自 1865 年開始釀造氣泡酒。代表酒莊：Best's Wines、Grampians Estate。"
+  },
+  {
+    "name": "Rutherglen",
+    "state": "VIC",
+    "zone": "North East Victoria",
+    "gi_level": "Region",
+    "area_ha": 1500,
+    "climate": "炎熱大陸型，夏天乾熱，適合晚摘濃縮",
+    "soil": "深層紅色沙壤土",
+    "grapes": [
+      { "name": "Muscat Blanc à Petits Grains", "type": "white" },
+      { "name": "Muscadelle (Tokay)", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Durif", "type": "red" }
+    ],
+    "styles": ["加強酒"],
+    "famous_for": "Rutherglen Muscat（世界最獨特甜酒之一）",
+    "description": "維多利亞東北部，以 Muscat 和 Topaque（Muscadelle）釀製的褐色黏稠加強甜酒聞名全球，被列入澳洲最獨特的葡萄酒遺產。分為 Rutherglen、Classic、Grand、Rare 四個等級。代表酒莊：Chambers、Morris、Campbells。"
+  },
+  {
+    "name": "King Valley",
+    "state": "VIC",
+    "zone": "North East Victoria",
+    "gi_level": "Region",
+    "area_ha": 2000,
+    "climate": "高山涼爽氣候，海拔 160–860m，大量義大利移民農場",
+    "soil": "多樣，玄武岩、砂岩",
+    "grapes": [
+      { "name": "Prosecco (Glera)", "type": "white" },
+      { "name": "Pinot Grigio", "type": "white" },
+      { "name": "Sangiovese", "type": "red" },
+      { "name": "Barbera", "type": "red" },
+      { "name": "Nebbiolo", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒", "氣泡酒"],
+    "famous_for": "澳洲 Prosecco 首都，義大利品種大本營",
+    "description": "義大利移民後代的農業谷地，是澳洲 Prosecco（Glera 品種）的核心產地，也是 Sangiovese、Barbera、Nebbiolo 等義大利品種的實驗重鎮。代表酒莊：Dal Zotto、Brown Brothers。"
+  },
+  {
+    "name": "Alpine Valleys",
+    "state": "VIC",
+    "zone": "North East Victoria",
+    "gi_level": "Region",
+    "area_ha": 1000,
+    "climate": "涼爽山地氣候，海拔 300–1200m，夏短冬長",
+    "soil": "花崗岩、砂岩",
+    "grapes": [
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Shiraz", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "澳洲最高海拔葡萄園之一",
+    "description": "阿爾卑斯山脈山腳，涼爽夏季賦予葡萄酒細膩的酸度與清鮮的果香，是探索高海拔風土的特殊產區。"
+  },
+  {
+    "name": "Beechworth",
+    "state": "VIC",
+    "zone": "North East Victoria",
+    "gi_level": "Region",
+    "area_ha": 400,
+    "climate": "大陸型涼爽，海拔 500–600m，日夜溫差大",
+    "soil": "古老花崗岩風化砂土，礦物質豐富",
+    "grapes": [
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Pinot Noir", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "Giaconda 酒莊——澳洲最稀有貴重的 Chardonnay",
+    "description": "小而精的精品產區，以 Giaconda 酒莊出品的 Chardonnay 享譽全球——每年產量極少，一瓶難求，被評為澳洲最偉大的白酒之一。"
+  },
+  {
+    "name": "Hunter Valley",
+    "state": "NSW",
+    "zone": "Hunter",
+    "gi_level": "Region",
+    "area_ha": 6000,
+    "climate": "炎熱潮濕，夏季多雨，反常的「熱帶」葡萄酒產區（低緯度）",
+    "soil": "紅色多孔粉砂岩（Pokolbin）、白色石灰岩、黑色礫石",
+    "grapes": [
+      { "name": "Semillon", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Chardonnay", "type": "white" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "Hunter Valley Semillon——陳年 20 年後展現蜂蜜吐司奇蹟",
+    "description": "雪梨北方 160km，是澳洲最古老的葡萄酒產區之一（1820s 開始）。Semillon 以極低酒精（9–11%）裝瓶，年輕時清瘦，陳年 10–20 年後蛻變為蜂蜜、烤麵包、蠟質複雜度，是全球獨一無二的風格。代表酒莊：Tyrrell's、McWilliam's Mount Pleasant。"
+  },
+  {
+    "name": "Orange",
+    "state": "NSW",
+    "zone": "Central Ranges",
+    "gi_level": "Region",
+    "area_ha": 2500,
+    "climate": "澳洲最高海拔產區之一（600–1200m），涼爽大陸型，夏短冬雪",
+    "soil": "玄武岩、紅色礫石壤土",
+    "grapes": [
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Sauvignon Blanc", "type": "white" },
+      { "name": "Riesling", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "NSW 最涼爽高海拔產區，水果鮮明",
+    "description": "海拔 600m 以上才被允許標示 Orange GI，古老玄武岩土壤，涼爽的夏季賦予白酒清新的熱帶水果香氣，紅酒則帶有優雅的胡椒與薄荷感。代表酒莊：Brangayne of Orange、Bloodwood。"
+  },
+  {
+    "name": "Mudgee",
+    "state": "NSW",
+    "zone": "Central Ranges",
+    "gi_level": "Region",
+    "area_ha": 6000,
+    "climate": "大陸型，高海拔（450–600m），日夜溫差大，夏熱乾燥",
+    "soil": "砂質壤土、紅色壤土，礦物質豐富",
+    "grapes": [
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Chardonnay", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "濃郁飽滿的 Cabernet，Lowe 等精品酒莊",
+    "description": "Hunter Valley 的西側山區，以濃郁的 Cabernet Sauvignon 和 Chardonnay 著名，氣候穩定，風格豐盈。"
+  },
+  {
+    "name": "Canberra District",
+    "state": "NSW",
+    "zone": "Southern New South Wales",
+    "gi_level": "Region",
+    "area_ha": 1000,
+    "climate": "涼爽大陸型，高海拔（600–800m），冬霜夏熱，日夜溫差極大（20°C）",
+    "soil": "古老片岩、礫石，排水良好",
+    "grapes": [
+      { "name": "Riesling", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Chardonnay", "type": "white" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "極大日夜溫差，Riesling 和精品 Shiraz",
+    "description": "澳洲首都坎培拉周邊，受科學家和公務員文化影響（許多小型家族酒莊），是澳洲「週末美食家」最愛的精品產區，Riesling 和 Shiraz 俱佳。代表酒莊：Clonakilla（Shiraz/Viognier 澳洲標竿）、Nick O'Leary。"
+  },
+  {
+    "name": "Riverina",
+    "state": "NSW",
+    "zone": "Big Rivers",
+    "gi_level": "Region",
+    "area_ha": 17000,
+    "climate": "炎熱、半乾旱，靠灌溉（Murrumbidgee 河），夏天超過 40°C",
+    "soil": "深層沖積砂土",
+    "grapes": [
+      { "name": "Semillon", "type": "white" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Botrytis Semillon", "type": "white" }
+    ],
+    "styles": ["白酒", "紅酒", "甜酒"],
+    "famous_for": "De Bortoli 的貴腐 Semillon「澳洲 Sauternes」",
+    "description": "澳洲最大的灌溉葡萄酒產區，主產高量日常用酒，但 De Bortoli Wines 在此釀造的 Noble One Botrytis Semillon 被視為澳洲最偉大的甜酒。"
+  },
+  {
+    "name": "Margaret River",
+    "state": "WA",
+    "zone": "South West Australia",
+    "gi_level": "Region",
+    "area_ha": 7000,
+    "climate": "地中海氣候，三面被兩個海洋（印度洋與南冰洋）調節，夏乾涼爽",
+    "soil": "深紅礫質壤土、古老沙岩，排水良好",
+    "grapes": [
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Merlot", "type": "red" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Semillon", "type": "white" },
+      { "name": "Sauvignon Blanc", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "澳洲頂級 Cabernet，波爾多混釀與 Chardonnay",
+    "description": "西澳最著名的精品產區，三面環海的海岬地形帶來完美的地中海氣候。Cabernet Sauvignon / Merlot 混釀是招牌，Chardonnay 和 Semillon/Sauvignon Blanc 混釀同樣世界級。代表酒莊：Cullen、Leeuwin Estate、Moss Wood、Vasse Felix。"
+  },
+  {
+    "name": "Great Southern",
+    "state": "WA",
+    "zone": null,
+    "gi_level": "Zone",
+    "area_ha": 14000,
+    "climate": "涼爽海洋性，受南冰洋影響，澳洲最涼爽的葡萄酒區之一",
+    "soil": "多樣：砂礫壤土、礫石、砂岩",
+    "grapes": [
+      { "name": "Riesling", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Chardonnay", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "澳洲最大的涼爽氣候 Zone，多元地形品種",
+    "description": "西澳最南端最大的葡萄酒大區，包含 Albany、Denmark、Frankland River、Mount Barker、Porongurup 五個 Region，以涼爽精緻風格見長，Riesling 品質頂尖。"
+  },
+  {
+    "name": "Albany",
+    "state": "WA",
+    "zone": "Great Southern",
+    "gi_level": "Region",
+    "area_ha": 1500,
+    "climate": "海洋性涼爽，緊鄰南冰洋，全澳最涼爽產區之一",
+    "soil": "花崗岩、砂礫",
+    "grapes": [
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Pinot Noir", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "全澳最涼爽海洋性氣候紅酒",
+    "description": "面向南冰洋的海港城市旁，強烈海洋影響使此地成為全澳最涼爽的葡萄酒產區之一，Chardonnay 和 Pinot Noir 具有極高天然酸度。"
+  },
+  {
+    "name": "Frankland River",
+    "state": "WA",
+    "zone": "Great Southern",
+    "gi_level": "Region",
+    "area_ha": 2000,
+    "climate": "涼爽地中海型，比其他 Great Southern 次區更大陸性，夏季乾燥",
+    "soil": "深層礫質壤土，砂岩",
+    "grapes": [
+      { "name": "Riesling", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "全澳最受推崇的 Riesling 產地之一（Frankland Estate）",
+    "description": "Great Southern 最內陸的次區，Riesling 展現青蘋果、柑橘礦石風格，Shiraz 則有典型的黑胡椒辛料感。代表酒莊：Frankland Estate、Ferngrove。"
+  },
+  {
+    "name": "Mount Barker",
+    "state": "WA",
+    "zone": "Great Southern",
+    "gi_level": "Region",
+    "area_ha": 3000,
+    "climate": "涼爽地中海型，夏天乾熱，但夜涼，相對穩定",
+    "soil": "砂礫土，礫岩",
+    "grapes": [
+      { "name": "Riesling", "type": "white" },
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Cabernet Sauvignon", "type": "red" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "Great Southern 核心產區，Riesling 與 Shiraz",
+    "description": "Great Southern 中最重要的次區，氣候適中，Riesling 精緻細膩，Shiraz 胡椒辛料感優雅。代表酒莊：Plantagenet、Howard Park。"
+  },
+  {
+    "name": "Porongurup",
+    "state": "WA",
+    "zone": "Great Southern",
+    "gi_level": "Region",
+    "area_ha": 400,
+    "climate": "涼爽，受花崗岩山脈庇護，Great Southern 中最小也最獨特",
+    "soil": "古老花崗岩",
+    "grapes": [
+      { "name": "Riesling", "type": "white" },
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Chardonnay", "type": "white" }
+    ],
+    "styles": ["白酒", "紅酒"],
+    "famous_for": "10 億年古老花崗岩風土，極稀有 Riesling",
+    "description": "受 Porongurup 花崗岩山脈保護的迷你產區，土壤為全球最古老之一（10 億年），Riesling 展現極純淨礦石感，產量稀少，極受收藏家追捧。"
+  },
+  {
+    "name": "Denmark",
+    "state": "WA",
+    "zone": "Great Southern",
+    "gi_level": "Region",
+    "area_ha": 600,
+    "climate": "最靠近海岸，最受海洋影響，全年多雨，涼爽濕潤",
+    "soil": "花崗岩、砂礫",
+    "grapes": [
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Shiraz", "type": "red" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "濕涼海洋性精品 Pinot Noir",
+    "description": "Great Southern 最靠海的次區，多雨涼爽，Pinot Noir 具有新鮮紅果酸度，是西澳精品小產區的代表。"
+  },
+  {
+    "name": "Tasmania",
+    "state": "TAS",
+    "zone": null,
+    "gi_level": "Zone",
+    "area_ha": 2500,
+    "climate": "涼爽海洋性，全澳最涼爽產州，夏涼短暫，多雨多霧，日照長",
+    "soil": "多樣：玄武岩、砂岩、石灰岩，因地形差異大",
+    "grapes": [
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Pinot Noir", "type": "red" },
+      { "name": "Riesling", "type": "white" },
+      { "name": "Sauvignon Blanc", "type": "white" }
+    ],
+    "styles": ["白酒", "紅酒", "氣泡酒"],
+    "famous_for": "全澳最冷 Pinot Noir，頂級氣泡酒基底（Jansz、House of Arras）",
+    "description": "澳洲最南端的島州，涼爽海洋氣候造就了高酸精緻的葡萄酒風格。氣泡酒（以 Pinot Noir 和 Chardonnay）是招牌，靜態酒中 Pinot Noir 、Chardonnay、Riesling 均有世界級表現。代表酒莊：Moorilla、Devil's Corner、Josef Chromy、House of Arras。"
+  },
+  {
+    "name": "Granite Belt",
+    "state": "QLD",
+    "zone": null,
+    "gi_level": "Region",
+    "area_ha": 1300,
+    "climate": "高海拔（800–1000m），相對涼爽，昆士蘭唯一精品酒產區，夏季多雷雨",
+    "soil": "花崗岩礫石，排水極佳，黏土少",
+    "grapes": [
+      { "name": "Shiraz", "type": "red" },
+      { "name": "Chardonnay", "type": "white" },
+      { "name": "Cabernet Sauvignon", "type": "red" },
+      { "name": "Verdelho", "type": "white" }
+    ],
+    "styles": ["紅酒", "白酒"],
+    "famous_for": "昆士蘭唯一知名精品酒產區，「Strange Birds」義大利/西班牙品種",
+    "description": "全澳最北的精品葡萄酒產區（緯度類似地中海），高海拔降溫，花崗岩土壤獨特，近年也積極嘗試 Fiano、Vermentino 等「Strange Bird」品種，風格多元有趣。代表酒莊：Sirromet、Ballandean Estate。"
+  }
+]

@@ -61,6 +61,9 @@
             <button class="cta-course portugal-btn" @click="router.push('/portugal')">
               🇵🇹 葡萄牙課程
             </button>
+            <button class="cta-course australia-btn" @click="router.push('/australia')">
+              🦘 澳洲課程
+            </button>
           </div>
         </div>
         <!-- 未登入：原本的 CTA -->
@@ -399,6 +402,49 @@
             </div>
           </div>
 
+          <!-- ── Australia ── -->
+          <div class="course-card australia">
+            <div :class="['card-status', courseStatuses.australia ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.australia ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🦘</div>
+              <div class="card-region">Australia · Down Under</div>
+              <h3 class="card-title">澳洲葡萄酒</h3>
+              <p class="card-desc">探索 65+ GI 產區，從炎熱的 Barossa Valley 百年老藤到涼爽的 Tasmania 氣泡酒聖地，互動衛星地圖帶你認識新世界葡萄酒巨人</p>
+            </div>
+            <div class="course-preview-strip australia-strip">
+              <div class="cp-stat">
+                <span class="cp-num">65+</span>
+                <span class="cp-label">GI<br>產區</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">6</span>
+                <span class="cp-label">產酒<br>州</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Shiraz</span>
+                <span class="cp-label">旗艦<br>品種</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">100+</span>
+                <span class="cp-label">年<br>老藤</span>
+              </div>
+            </div>
+            <div class="course-preview-features australia-features">
+              <span class="cpf-item australia-tag">✔ 六州 65+ 產區互動衛星地圖</span>
+              <span class="cpf-item australia-tag">✔ Barossa 老藤 Shiraz 深度解析</span>
+              <span class="cpf-item australia-tag">✔ Tasmania 頂級氣泡酒與 Pinot Noir</span>
+            </div>
+            <div class="card-actions">
+              <button v-if="courseStatuses.australia || isAdmin" class="card-cta australia-cta" @click="router.push('/australia')">🗺 探索地圖 →</button>
+              <span v-else class="planning-cta">開發中，敬請期待</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -709,7 +755,7 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設偡 active=true 防止関你加載先閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true, germany: true, portugal: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true, germany: true, portugal: true, australia: true })
 
 async function loadCourseData() {
   try {
@@ -1185,6 +1231,19 @@ onMounted(async () => {
   box-shadow: 0 4px 20px rgba(139,0,0,0.5);
 }
 .portugal-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(139,0,0,0.65); }
+/* Australia card */
+.australia-strip { background: rgba(0,39,78,0.07); border-color: rgba(0,39,78,0.2); }
+.australia-strip .cp-num { color: #00274e; font-size: 0.9rem; }
+.australia-strip .cp-label { color: #2c4a6e; }
+.australia-strip .cp-divider { background: rgba(0,39,78,0.25); }
+.australia-features .australia-tag { color: #00274e; background: rgba(0,39,78,0.06); border-color: rgba(0,39,78,0.18); }
+.australia-cta { background: linear-gradient(135deg, #00274e, #1a4a8a) !important; }
+.australia-btn {
+  background: linear-gradient(135deg, #00274e, #c8a951);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,39,78,0.45);
+}
+.australia-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,39,78,0.6); }
 /* tier tagline */
 .tier-tagline {
   font-size: 0.68rem; color: #7a6060;

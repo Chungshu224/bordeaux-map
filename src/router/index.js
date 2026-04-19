@@ -88,6 +88,14 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
 
+  // ─── 澳洲葡萄酒課程 ─────────────────────────────────────────────────────────
+  {
+    path: '/australia',
+    name: 'Australia',
+    component: () => import('../components/AustraliaPage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
   // ─── 使用者儀表板 ───────────────────────────────────────────────────────────
   {
     path: '/dashboard',
