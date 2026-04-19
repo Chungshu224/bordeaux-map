@@ -1,20 +1,40 @@
 <script setup>
-import { useRouter } from 'vue-router'
+import { ref } from 'vue'
+import PortugalCourseManager from './portugal/course/PortugalCourseManager.vue'
 import PortugalMapSection from './portugal/map/PortugalMapSection.vue'
 
-const router = useRouter()
+// 'course' | 'map'
+const currentMode = ref('course')
+
+function openMap() {
+  currentMode.value = 'map'
+}
+function backToCourse() {
+  currentMode.value = 'course'
+}
 </script>
 
 <template>
   <div class="portugal-page">
-    <PortugalMapSection @back="router.push('/')" />
+
+    <!-- 課程主頁 -->
+    <PortugalCourseManager
+      v-if="currentMode === 'course'"
+      @openMap="openMap"
+    />
+
+    <!-- 產區地圖 -->
+    <PortugalMapSection
+      v-else-if="currentMode === 'map'"
+      @back="backToCourse"
+    />
+
   </div>
 </template>
 
 <style scoped>
 .portugal-page {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
 }
 </style>
