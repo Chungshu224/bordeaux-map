@@ -622,10 +622,10 @@ function tierColor(tier) {
   return { free: '#aaa', basic: '#2980b9', premium: '#8e44ad' }[tier] ?? '#999'
 }
 function courseLabel(id) {
-  return { bordeaux: '波爾多', bourgogne: '布根地', italy: '義大利', spain: '西班牙' }[id] ?? id
+  return { bordeaux: '波爾多', bourgogne: '布根地', italy: '義大利', spain: '西班牙', germany: '德國', portugal: '葡萄牙' }[id] ?? id
 }
 function courseFlag(id) {
-  return { bordeaux: '🇫🇷', bourgogne: '🇫🇷', italy: '🇮🇹', spain: '🇪🇸' }[id] ?? '🍷'
+  return { bordeaux: '🇫🇷', bourgogne: '🇫🇷', italy: '🇮🇹', spain: '🇪🇸', germany: '🇩🇪', portugal: '🇵🇹' }[id] ?? '🍷'
 }
 function formatDate(dateStr) {
   if (!dateStr) return '—'
