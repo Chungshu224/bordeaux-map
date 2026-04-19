@@ -142,7 +142,13 @@
       </button>
       <button class="mobile-tool-btn" :class="{ active: mapReady && !infoCollapsed }" @click="toggleInfo">
         <span class="mobile-tool-icon">資</span>
-        <span)
+        <span>資訊</span>
+      </button>
+    </div>
+  </section>
+</template>
+
+<script setup>
 const router = useRouter()
 
 // ── State ──────────────────────────────────────────────────────────────────
@@ -293,15 +299,7 @@ function styleTagColor(style) {
     '加強酒':{ background: '#7b341e', color: '#fff' },
   }
   return m[style] || { background: '#999', color: '#fff' }
-}grapeBadgeStyle(g) {
-  const colors = {
-    red:   { background: '#8B0000', color: '#fff' },
-    white: { background: '#7a6c1a', color: '#fff' },
-  }
-  return colors[g.type] || { background: '#888', color: '#fff' }
 }
-
-function 
 
 // ── Reset view ─────────────────────────────────────────────────────────────
 function resetView() {
