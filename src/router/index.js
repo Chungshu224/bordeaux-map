@@ -104,6 +104,42 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free', title: '🥝 紐西蘭 · 侍酒師的筆記本' }
   },
 
+  // ─── 羅亞爾河谷探索地圖 ──────────────────────────────────────────────────────
+  {
+    path: '/loire',
+    name: 'Loire',
+    component: () => import('../components/LoirePage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '� 羅亞爾河谷 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/loire/course',
+    name: 'LoireCourse',
+    component: () => import('../components/loire/LoireLearningSystem.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🌊 羅亞爾河谷葡萄酒課程 · 侍酒師的筆記本' }
+  },
+
+  // ─── 匈牙利葡萄酒產區地圖 ────────────────────────────────────────────────────
+  {
+    path: '/hungary',
+    name: 'Hungary',
+    component: () => import('../components/HungaryPage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🇭🇺 匈牙利 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/hungary/course',
+    name: 'HungaryCourse',
+    component: () => import('../components/hungary/HungaryLearningSystem.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🇭🇺 匈牙利葡萄酒課程 · 侍酒師的筆記本' }
+  },
+
+  // ─── 加州 AVA 探索地圖 ───────────────────────────────────────────────────────
+  {
+    path: '/california',
+    name: 'California',
+    component: () => import('../components/CaliforniaPage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🍷 加州葡萄酒產區 · 侍酒師的筆記本' }
+  },
+
   // ─── 定價方案頁 ──────────────────────────────────────────────────────────────
   {
     path: '/pricing',

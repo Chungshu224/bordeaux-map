@@ -45,6 +45,7 @@
               <span class="ceg-label">🇫🇷 法國</span>
               <button class="cta-course bordeaux-btn" @click="router.push('/bordeaux')">🏰 波爾多</button>
               <button v-if="isAdmin" class="cta-course bourgogne-btn" @click="router.push('/bourgogne')">🍇 布根地</button>
+              <button class="cta-course loire-btn" @click="router.push('/loire')">🌿 羅亞爾</button>
             </div>
             <div class="ceg-row">
               <span class="ceg-label">🌍 歐洲</span>
@@ -52,11 +53,13 @@
               <button class="cta-course spain-btn" @click="router.push('/spain')">🇪🇸 西班牙</button>
               <button class="cta-course germany-btn" @click="router.push('/germany')">🇩🇪 德國</button>
               <button class="cta-course portugal-btn" @click="router.push('/portugal')">🇵🇹 葡萄牙</button>
+              <button class="cta-course hungary-btn" @click="router.push('/hungary')">🇭🇺 匈牙利</button>
             </div>
             <div class="ceg-row">
               <span class="ceg-label">🌏 新世界</span>
               <button class="cta-course australia-btn" @click="router.push('/australia')">🦘 澳洲</button>
               <button class="cta-course newzealand-btn" @click="router.push('/newzealand')">🥝 紐西蘭</button>
+              <button class="cta-course california-btn" @click="router.push('/california')">🍷 加州</button>
             </div>
           </div>
         </div>
@@ -71,6 +74,7 @@
             <span class="rb">🇵🇹 葡萄牙</span>
             <span class="rb">🦘 澳洲</span>
             <span class="rb">🥝 紐西蘭</span>
+            <span class="rb">🍷 加州</span>
           </div>
           <div class="cta-btns">
             <button class="cta-primary" @click="handleStartFree">
@@ -1274,12 +1278,30 @@ onMounted(async () => {
 .newzealand-strip .cp-divider { background: rgba(0,100,0,0.25); }
 .newzealand-features .newzealand-tag { color: #006400; background: rgba(0,100,0,0.06); border-color: rgba(0,100,0,0.18); }
 .newzealand-cta { background: linear-gradient(135deg, #006400, #004d00) !important; }
+.loire-btn {
+  background: linear-gradient(135deg, #1e5a32 0%, #2d7a4a 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(30,90,50,0.4);
+}
+.loire-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(30,90,50,0.6); }
 .newzealand-btn {
   background: linear-gradient(135deg, #006400, #4caf50);
   color: #fff;
   box-shadow: 0 4px 20px rgba(0,100,0,0.45);
 }
 .newzealand-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,100,0,0.6); }
+.california-btn {
+  background: linear-gradient(135deg, #7B1A1A, #e74c3c);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(123,26,26,0.45);
+}
+.california-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(231,76,60,0.6); }
+.hungary-btn {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(46,125,50,0.45);
+}
+.hungary-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(46,125,50,0.65); }
 /* tier tagline */
 .tier-tagline {
   font-size: 0.68rem; color: #7a6060;

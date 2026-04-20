@@ -285,7 +285,7 @@ const mapContainer = ref(null)
 const mapReady = ref(false)
 const isLoading = ref(true)
 const mapError = ref(null)
-const infoCollapsed = ref(false)
+const infoCollapsed = ref(true)
 const drawerOpen = ref(false)
 const showProvinces = ref(true)
 const showLayerPanel = ref(false)
@@ -1141,7 +1141,6 @@ function toggle3D() {
 
 function selectFromList(item) {
   activeInfo.value = item
-  infoCollapsed.value = false
   drawerOpen.value = false
   if (!map) return
 

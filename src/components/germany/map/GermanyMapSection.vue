@@ -186,7 +186,7 @@ const mapError = ref(null)
 const is3D = ref(false)
 const showContours = ref(false)
 const showVineyards = ref(true)
-const infoCollapsed = ref(false)
+const infoCollapsed = ref(true)
 const showLayerPanel = ref(false)
 const selectedVineyard = ref(null)
 const showGeology = ref(false)
@@ -415,7 +415,11 @@ async function loadVineyards() {
         const name = feat.properties?.name || feat.properties?.ref || null
         if (name) {
           selectedVineyard.value = name
-          infoCollapsed.value = false
+          // Fit map to this vineyard parcel
+          const b = calcBbox({ features: [feat] })
+          if (b[0] !== Infinity) {
+            map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 80, maxZoom: 14, duration: 700 })
+          }
         }
       }
     })
@@ -541,7 +545,6 @@ function resetMap() {
 // ── Watch region change ──
 watch(() => props.region, async () => {
   selectedVineyard.value = null
-  infoCollapsed.value = false
   regionBounds = null
   const wasGeologyOn = showGeology.value
   showGeology.value = false

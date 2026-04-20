@@ -1,0 +1,222 @@
+[
+  {
+    "id": "Tokaj",
+    "name": "Tokaj",
+    "name_hu": "Tokaj-hegyalja",
+    "group": "Tokaj",
+    "area_ha": 5723,
+    "grapes": "Furmint, Hárslevelű, Sárga Muskotály",
+    "notes": "UNESCO 世界文化遺產；以 Aszú 貴腐甜酒聞名於世，被譽為「葡萄酒之王」",
+    "styles": ["甜酒", "白酒"]
+  },
+  {
+    "id": "Eger",
+    "name": "Eger",
+    "name_hu": "Egri borvidék",
+    "group": "UpperHungary",
+    "area_ha": 3200,
+    "grapes": "Kékfrankos, Egri Bikavér, Leányka, Olaszrizling",
+    "notes": "「公牛血」Bikavér 紅酒的故鄉；火山岩與石灰岩土壤，口感優雅",
+    "styles": ["紅酒", "白酒"]
+  },
+  {
+    "id": "Bukk",
+    "name": "Bükk",
+    "name_hu": "Bükki borvidék",
+    "group": "UpperHungary",
+    "area_ha": 970,
+    "grapes": "Olaszrizling, Leányka, Kékfrankos",
+    "notes": "最小的北部產區；Bükk 山脈冷涼微氣候，適合清爽白酒",
+    "styles": ["白酒", "紅酒"]
+  },
+  {
+    "id": "Matra",
+    "name": "Mátra",
+    "name_hu": "Mátrai borvidék",
+    "group": "UpperHungary",
+    "area_ha": 6000,
+    "grapes": "Olaszrizling, Müller-Thurgau, Szürkebarát, Muscat Ottonel",
+    "notes": "北部最大產區；火山性 Mátra 丘陵，以芳香白酒為主",
+    "styles": ["白酒"]
+  },
+  {
+    "id": "Neszmely",
+    "name": "Neszmély",
+    "name_hu": "Neszmélyi borvidék",
+    "group": "NorthTransdanubia",
+    "area_ha": 3000,
+    "grapes": "Olaszrizling, Rajnai Rizling, Sauvignon Blanc, Chardonnay",
+    "notes": "多瑙河彎道沿岸，匈牙利西北部；以清爽酸度白酒著稱",
+    "styles": ["白酒"]
+  },
+  {
+    "id": "Sopron",
+    "name": "Sopron",
+    "name_hu": "Soproni borvidék",
+    "group": "NorthTransdanubia",
+    "area_ha": 1900,
+    "grapes": "Kékfrankos, Pinot Noir, Cabernet Franc",
+    "notes": "與奧地利接壤；涼爽氣候造就優雅紅酒，以 Kékfrankos 最具代表性",
+    "styles": ["紅酒"]
+  },
+  {
+    "id": "Pannonhalma",
+    "name": "Pannonhalma",
+    "name_hu": "Pannonhalma-Sokoróalja borvidék",
+    "group": "NorthTransdanubia",
+    "area_ha": 400,
+    "grapes": "Rajnai Rizling, Tramini, Pinot Gris, Sauvignon Blanc",
+    "notes": "公元 996 年本篤修道院即有釀酒記錄；石灰岩土壤出產精緻白酒",
+    "styles": ["白酒"]
+  },
+  {
+    "id": "Etyek-Buda",
+    "name": "Etyek-Buda",
+    "name_hu": "Etyek-Budai borvidék",
+    "group": "NorthTransdanubia",
+    "area_ha": 1496,
+    "grapes": "Chardonnay, Sauvignon Blanc, Pinot Blanc, Rajnai Rizling",
+    "notes": "布達佩斯以西；石灰岩高原；Törley 氣泡酒的基酒產區",
+    "styles": ["白酒", "氣泡酒"]
+  },
+  {
+    "id": "Mor",
+    "name": "Mór",
+    "name_hu": "Móri borvidék",
+    "group": "NorthTransdanubia",
+    "area_ha": 1900,
+    "grapes": "Ezerjó, Olaszrizling",
+    "notes": "以匈牙利獨有品種 Ezerjó 聞名；石灰岩陡坡，高酸度白酒",
+    "styles": ["白酒"]
+  },
+  {
+    "id": "Somlo",
+    "name": "Somló",
+    "name_hu": "Somlói borvidék",
+    "group": "Balaton",
+    "area_ha": 600,
+    "grapes": "Juhfark, Olaszrizling, Hárslevelű, Tramini",
+    "notes": "死火山丘陵；獨特玄武岩土壤；傳統「婚禮之酒」—據說能生子",
+    "styles": ["白酒"]
+  },
+  {
+    "id": "Badacsony",
+    "name": "Badacsony",
+    "name_hu": "Badacsonyi borvidék",
+    "group": "Balaton",
+    "area_ha": 1422,
+    "grapes": "Szürkebarát (Pinot Gris), Kéknyelű, Olaszrizling",
+    "notes": "巴拉頓湖北岸；玄武岩火山土壤；代表性的平頂山丘景觀",
+    "styles": ["白酒"]
+  },
+  {
+    "id": "Balatonfured-Csopak",
+    "name": "Balatonfüred-Csopak",
+    "name_hu": "Balatonfüred-Csopaki borvidék",
+    "group": "Balaton",
+    "area_ha": 2000,
+    "grapes": "Olaszrizling, Chardonnay, Cabernet Sauvignon",
+    "notes": "巴拉頓湖北岸東段；紅黏土（vöröshomokkő）土壤，酒體豐富",
+    "styles": ["白酒", "紅酒"]
+  },
+  {
+    "id": "Balaton-felvidek",
+    "name": "Balaton-felvidék",
+    "name_hu": "Balaton-felvidéki borvidék",
+    "group": "Balaton",
+    "area_ha": 1500,
+    "grapes": "Olaszrizling, Rajnai Rizling, Pinot Gris, Chardonnay",
+    "notes": "巴拉頓高地；火山岩與黃土土壤；包含 Öreghegy 著名葡萄園",
+    "styles": ["白酒"]
+  },
+  {
+    "id": "Balatonboglar",
+    "name": "Balatonboglár",
+    "name_hu": "Balatonboglári borvidék",
+    "group": "Balaton",
+    "area_ha": 6000,
+    "grapes": "Olaszrizling, Chardonnay, Sauvignon Blanc, Merlot",
+    "notes": "巴拉頓湖南岸；沙質土壤；巴拉頓產區中面積最大，高產量",
+    "styles": ["白酒", "紅酒"]
+  },
+  {
+    "id": "Zala",
+    "name": "Zala",
+    "name_hu": "Zalai borvidék",
+    "group": "Balaton",
+    "area_ha": 2500,
+    "grapes": "Olaszrizling, Chardonnay, Merlot, Cabernet Franc",
+    "notes": "匈牙利西南部；小型家族酒莊；受 Dráva 河影響的微氣候",
+    "styles": ["白酒", "紅酒"]
+  },
+  {
+    "id": "Tolna",
+    "name": "Tolna",
+    "name_hu": "Tolnai borvidék",
+    "group": "Pannon",
+    "area_ha": 2500,
+    "grapes": "Kékfrankos, Kadarka, Chardonnay, Cabernet Franc",
+    "notes": "中南部；黃土土壤；紅酒聲譽日益上升的新興產區",
+    "styles": ["紅酒", "白酒"]
+  },
+  {
+    "id": "Szekszard",
+    "name": "Szekszárd",
+    "name_hu": "Szekszárdi borvidék",
+    "group": "Pannon",
+    "area_ha": 3000,
+    "grapes": "Kadarka, Kékfrankos, Merlot, Cabernet Sauvignon",
+    "notes": "深厚黃土土壤；Bikavér 風格紅酒；匈牙利 Kadarka 品種的重鎮",
+    "styles": ["紅酒"]
+  },
+  {
+    "id": "Pecs",
+    "name": "Pécs",
+    "name_hu": "Pécsi borvidék",
+    "group": "Pannon",
+    "area_ha": 652,
+    "grapes": "Olaszrizling, Cirfandli (Zierfandler), Chardonnay",
+    "notes": "Mecsek 山丘；地中海氣候；以匈牙利獨有的 Cirfandli 品種為特色",
+    "styles": ["白酒"]
+  },
+  {
+    "id": "Villany",
+    "name": "Villány",
+    "name_hu": "Villányi borvidék",
+    "group": "Pannon",
+    "area_ha": 2800,
+    "grapes": "Cabernet Franc, Cabernet Sauvignon, Merlot, Portugieser",
+    "notes": "匈牙利最南、最溫暖的產區；出產世界級波爾多品種紅酒",
+    "styles": ["紅酒"]
+  },
+  {
+    "id": "Hajos-Baja",
+    "name": "Hajós-Baja",
+    "name_hu": "Hajós-Bajai borvidék",
+    "group": "Duna",
+    "area_ha": 2800,
+    "grapes": "Kadarka, Kékfrankos, Olaszrizling, Chardonnay",
+    "notes": "大平原沙質土壤；Hajós Pincefalu 酒窖村是著名旅遊勝地",
+    "styles": ["紅酒", "白酒"]
+  },
+  {
+    "id": "Kunsag",
+    "name": "Kunság",
+    "name_hu": "Kunsági borvidék",
+    "group": "Duna",
+    "area_ha": 22000,
+    "grapes": "Olaszrizling, Chardonnay, Kékfrankos, Cabernet Sauvignon",
+    "notes": "匈牙利面積最大的葡萄酒產區；沙質土壤；主要高產量日常飲用酒",
+    "styles": ["白酒", "紅酒"]
+  },
+  {
+    "id": "Csongrad",
+    "name": "Csongrád",
+    "name_hu": "Csongrádi borvidék",
+    "group": "Duna",
+    "area_ha": 1117,
+    "grapes": "Kadarka, Kékfrankos, Kövidinka",
+    "notes": "東南大平原；Tisza 河沿岸沙質土壤；傳統 Kadarka 品種保存地",
+    "styles": ["紅酒"]
+  }
+]

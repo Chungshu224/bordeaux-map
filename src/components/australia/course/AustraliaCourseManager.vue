@@ -44,7 +44,7 @@ const activeLesson     = ref(null)
 const completedMap     = ref({})
 
 const currentLevelDef = computed(() =>
-  selectedLevelKey.value ? courseLevels[selectedLevelKey.value] : null
+  selectedLevelKey.value ? courseLevels.find(l => l.key === selectedLevelKey.value) : null
 )
 const completedLessonsArray = computed(() =>
   Object.keys(completedMap.value).filter(k => completedMap.value[k])
@@ -53,7 +53,7 @@ const completedLessonsArray = computed(() =>
 function loadCompleted(levelKey) {
   completedMap.value = {}
   const prog = getUserProgress(levelKey)
-  prog.completedLessons.forEach(id => { completedMap.value[id] = true })
+  Object.keys(prog).filter(k => prog[k]).forEach(id => { completedMap.value[id] = true })
 }
 
 function handleSelectLevel(levelKey) {

@@ -28,6 +28,12 @@
           {{ activeRegion ? activeRegion.name : '點選地圖產區查看詳情' }}
         </span>
         <div class="title-buttons">
+          <button
+            v-if="selectedRegionName"
+            class="btn-show-all"
+            @click="activeRegion = null; restoreFilter()"
+            title="顯示全部產區"
+          >← 全部</button>
           <button class="btn-collapse-inline" @click="infoCollapsed = !infoCollapsed">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline :points="infoCollapsed ? '18 15 12 9 6 15' : '6 9 12 15 18 9'"></polyline>
@@ -117,14 +123,20 @@
         <div class="aoc-drawer">
           <div class="aoc-handle"></div>
           <div class="drawer-header">
-            <span>澳洲產區列表</span>
+            <span>{{ initialCluster ? initialCluster.name + ' 產區' : '澳洲產區列表' }}</span>
             <button class="drawer-close" @click="drawerOpen = false">✕</button>
           </div>
           <div class="drawer-search-wrap">
             <span class="search-icon">🔍</span>
             <input v-model="drawerSearch" class="search-input" placeholder="搜尋產區…" />
           </div>
-          <div class="filter-tabs">
+          <!-- Cluster 模式：顯示 cluster 標示；否則顯示州篩選 tabs -->
+          <div v-if="initialCluster" class="cluster-filter-tag">
+            <span class="cluster-dot" :style="{ background: initialCluster.color }"></span>
+            <span>{{ initialCluster.waCluster }}</span>
+            <span class="cluster-count-badge">{{ filteredDrawerList.length }}</span>
+          </div>
+          <div v-else class="filter-tabs">
             <button
               v-for="tab in STATE_TABS"
               :key="tab.value"
@@ -133,21 +145,29 @@
               @click="drawerStateTab = tab.value"
             >{{ tab.label }}</button>
           </div>
+          <!-- 分組列表：Zone → Region → Sub-Region -->
           <div class="appellation-list">
-            <div
-              v-for="r in filteredDrawerList"
-              :key="r.name + r.state"
-              class="app-item"
-              :class="{ active: activeRegion?.name === r.name }"
-              @click="selectFromDrawer(r)"
-            >
-              <span class="app-badge" :style="{ background: stateColor(r.state) }">{{ r.state }}</span>
-              <div class="app-text">
-                <span class="app-name">{{ r.name }}</span>
-                <span class="app-sub">{{ r.gi_level }}</span>
+            <template v-for="group in groupedDrawerList" :key="group.level">
+              <div class="gi-group-header">
+                <span class="gi-group-icon">{{ group.icon }}</span>
+                <span class="gi-group-label">{{ group.label }}</span>
+                <span class="gi-group-count">{{ group.items.length }}</span>
               </div>
-            </div>
-            <div v-if="filteredDrawerList.length === 0" class="no-results">無符合產區</div>
+              <div
+                v-for="r in group.items"
+                :key="r.name + r.state"
+                class="app-item"
+                :class="{ active: activeRegion?.name === r.name }"
+                @click="selectFromDrawer(r)"
+              >
+                <span class="app-badge" :style="{ background: stateColor(r.state) }">{{ r.state }}</span>
+                <div class="app-text">
+                  <span class="app-name">{{ r.name }}</span>
+                  <span v-if="r.zone" class="app-sub">{{ r.zone }}</span>
+                </div>
+              </div>
+            </template>
+            <div v-if="!drawerHasResults" class="no-results">無符合產區</div>
           </div>
         </div>
       </div>
@@ -181,6 +201,9 @@ import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
+const props  = defineProps({
+  initialCluster: { type: Object, default: null },
+})
 const emit   = defineEmits(['back'])
 const router = useRouter()
 
@@ -190,7 +213,7 @@ const mapReady      = ref(false)
 const isLoading     = ref(true)
 const mapError      = ref(null)
 const is3D          = ref(false)
-const infoCollapsed = ref(false)
+const infoCollapsed = ref(true)
 const drawerOpen    = ref(false)
 const drawerSearch  = ref('')
 const drawerStateTab= ref('all')
@@ -198,11 +221,13 @@ const activeState   = ref('all')
 const showZones     = ref(false)
 const activeRegion  = ref(null)
 
-const allRegions    = ref([])   // all feature properties
-const appellations  = ref([])   // detailed info from JSON
+const allRegions       = ref([])   // all feature properties
+const appellations     = ref([])   // detailed info from JSON
+const selectedRegionName = ref(null) // name of single-selected feature
 
 let map         = null
 let hoveredId   = null
+const featureGeomMap = {}  // name → merged bbox [w, s, e, n] for fitBounds
 
 const AUSTRALIA_CENTER = [134.0, -26.5]
 const AUSTRALIA_ZOOM   = 3.5
@@ -235,15 +260,45 @@ const activeInfo = computed(() => {
   return appellations.value.find(a => a.name === activeRegion.value.name) || null
 })
 
+// If a cluster is active → filter to that cluster's regions; otherwise use state tab
 const filteredDrawerList = computed(() => {
   let list = allRegions.value
-  if (drawerStateTab.value !== 'all') list = list.filter(r => r.state === drawerStateTab.value)
+  const fc = props.initialCluster?.filterConfig
+  if (fc) {
+    // SA sub-cluster: match by explicit region names OR by zone (for zone-level polygons)
+    list = list.filter(r =>
+      r.gi_level === 'Zone'
+        ? fc.filterZones.includes(r.zone) || fc.filterZones.includes(r.name)
+        : fc.regionNames.some(n => n.toLowerCase() === r.name.toLowerCase())
+    )
+  } else if (props.initialCluster) {
+    // Single-state cluster (VIC/NSW/WA/QLD/TAS): filter by state
+    list = list.filter(r => r.state === props.initialCluster.state)
+  } else if (drawerStateTab.value !== 'all') {
+    list = list.filter(r => r.state === drawerStateTab.value)
+  }
   if (drawerSearch.value.trim()) {
     const q = drawerSearch.value.toLowerCase()
     list = list.filter(r => r.name.toLowerCase().includes(q))
   }
   return [...list].sort((a, b) => a.name.localeCompare(b.name))
 })
+
+// Group the filtered list by GI level: Zone → Region → Sub-Region
+const GI_LEVELS = [
+  { level: 'Zone',       icon: '🗂️', label: 'Zone（產區群）' },
+  { level: 'Region',     icon: '📍', label: 'Region（產區）' },
+  { level: 'Sub-Region', icon: '🔎', label: 'Sub-Region（次產區）' },
+]
+const groupedDrawerList = computed(() => {
+  const all = filteredDrawerList.value
+  return GI_LEVELS.map(g => ({
+    ...g,
+    items: all.filter(r => r.gi_level === g.level),
+  })).filter(g => g.items.length > 0)
+})
+
+const drawerHasResults = computed(() => groupedDrawerList.value.length > 0)
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 function stateColor(state) {
@@ -258,11 +313,45 @@ function styleTagClass(s) {
   return 'default'
 }
 
+// ── Bbox helper (no external dep) ────────────────────────────────────────
+function featureBbox(geometry) {
+  const coords = []
+  const collect = (c) => {
+    if (typeof c[0] === 'number') coords.push(c)
+    else c.forEach(collect)
+  }
+  collect(geometry.coordinates)
+  const lngs = coords.map(c => c[0])
+  const lats = coords.map(c => c[1])
+  return [Math.min(...lngs), Math.min(...lats), Math.max(...lngs), Math.max(...lats)]
+}
+
+// ── Apply single-feature filter (isolate one region) ─────────────────────
+function applySingleFeatureFilter(name) {
+  if (!map) return
+  const f = ['==', ['get', 'name'], name]
+  map.setFilter('region-fill',    f)
+  map.setFilter('region-outline', f)
+  map.setFilter('region-labels',  f)
+}
+
+// ── Restore cluster/state filter (deselect) ───────────────────────────────
+function restoreFilter() {
+  selectedRegionName.value = null
+  updateStateFilter()
+}
+
 // ── Reset view ─────────────────────────────────────────────────────────────
 function resetView() {
   if (!map) return
-  activeState.value = 'all'
-  map.flyTo({ center: AUSTRALIA_CENTER, zoom: AUSTRALIA_ZOOM, pitch: 0, bearing: 0, duration: 800 })
+  selectedRegionName.value = null
+  activeState.value = props.initialCluster ? props.initialCluster.state : 'all'
+  if (!props.initialCluster) {
+    map.flyTo({ center: AUSTRALIA_CENTER, zoom: AUSTRALIA_ZOOM, pitch: 0, bearing: 0, duration: 800 })
+  } else {
+    const { center, zoom } = props.initialCluster
+    map.flyTo({ center, zoom, pitch: 0, bearing: 0, duration: 800 })
+  }
   activeRegion.value = null
   if (map.getSource('au-regions')) map.removeFeatureState({ source: 'au-regions' })
   updateStateFilter()
@@ -288,11 +377,26 @@ function updateStateFilter() {
     ? ['in', ['get', 'gi_level'], ['literal', ['Region', 'Zone', 'Sub-Region']]]
     : ['==', ['get', 'gi_level'], 'Region']
 
-  const stateFilter = state === 'all'
-    ? ['literal', true]
-    : ['==', ['get', 'state'], state]
+  const fc = props.initialCluster?.filterConfig
+  let locationFilter
+  if (fc) {
+    // SA sub-cluster: Zone polygons filtered by name; Region/Sub-Region filtered by name list
+    const zonePolyFilter = ['all',
+      ['==', ['get', 'gi_level'], 'Zone'],
+      ['in', ['get', 'name'], ['literal', fc.filterZones]],
+    ]
+    const regionFilter = ['all',
+      ['in', ['get', 'gi_level'], ['literal', ['Region', 'Sub-Region']]],
+      ['in', ['get', 'name'], ['literal', fc.regionNames]],
+    ]
+    locationFilter = ['any', zonePolyFilter, regionFilter]
+  } else if (props.initialCluster) {
+    locationFilter = ['==', ['get', 'state'], props.initialCluster.state]
+  } else {
+    locationFilter = state === 'all' ? ['literal', true] : ['==', ['get', 'state'], state]
+  }
 
-  const combined = ['all', levelFilter, stateFilter]
+  const combined = ['all', levelFilter, locationFilter]
   map.setFilter('region-fill', combined)
   map.setFilter('region-outline', combined)
   map.setFilter('region-labels', combined)
@@ -331,10 +435,16 @@ function toggleInfo() {
 // ── Select from drawer ─────────────────────────────────────────────────────
 function selectFromDrawer(r) {
   activeRegion.value  = r
-  infoCollapsed.value = false
   drawerOpen.value    = false
-  // Fly to region using stateCenter as approximation
-  if (STATE_CENTERS[r.state]) {
+  // Isolate this feature on the map
+  selectedRegionName.value = r.name
+  applySingleFeatureFilter(r.name)
+  // Fit map to the cached full bounding box
+  const bbox = featureGeomMap[r.name]
+  if (bbox) {
+    const [w, s, e, n] = bbox
+    map.fitBounds([[w, s], [e, n]], { padding: 80, maxZoom: 12, duration: 700 })
+  } else if (STATE_CENTERS[r.state]) {
     const { center, zoom } = STATE_CENTERS[r.state]
     map.flyTo({ center, zoom: zoom + 1, duration: 800 })
   }
@@ -357,12 +467,30 @@ async function initMap() {
     appellations.value = appRes.ok ? await appRes.json() : []
 
     // Build region list for drawer (deduplicate by name+state)
+    // Also cache full bounding boxes from the complete geometry
     const seen = new Set()
     for (const f of geoJSON.features) {
       const key = f.properties.name + '|' + f.properties.state
       if (!seen.has(key)) {
         seen.add(key)
         allRegions.value.push(f.properties)
+      }
+      // Merge bbox for all tiles of the same named feature
+      if (f.geometry) {
+        try {
+          const b = featureBbox(f.geometry)
+          const name = f.properties.name
+          if (featureGeomMap[name]) {
+            featureGeomMap[name] = [
+              Math.min(featureGeomMap[name][0], b[0]),
+              Math.min(featureGeomMap[name][1], b[1]),
+              Math.max(featureGeomMap[name][2], b[2]),
+              Math.max(featureGeomMap[name][3], b[3]),
+            ]
+          } else {
+            featureGeomMap[name] = b
+          }
+        } catch (_) {}
       }
     }
 
@@ -463,21 +591,41 @@ async function initMap() {
         map.removeFeatureState({ source: 'au-regions' })
         map.setFeatureState({ source: 'au-regions', id: feat.id }, { selected: true, hover: true })
         activeRegion.value  = feat.properties
-        infoCollapsed.value = false
         drawerOpen.value    = false
+        // Isolate this feature on the map
+        selectedRegionName.value = feat.properties.name
+        applySingleFeatureFilter(feat.properties.name)
+        // Fit map to the cached full bounding box
+        const bbox = featureGeomMap[feat.properties.name]
+        if (bbox) {
+          const [w, s, e2, n] = bbox
+          map.fitBounds([[w, s], [e2, n]], { padding: 80, maxZoom: 12, duration: 700 })
+        }
       })
 
-      // Click empty area → deselect
+      // Click empty area → deselect (restore cluster filter)
       map.on('click', (e) => {
         const feats = map.queryRenderedFeatures(e.point, { layers: ['region-fill'] })
         if (!feats.length) {
           map.removeFeatureState({ source: 'au-regions' })
           activeRegion.value = null
+          restoreFilter()
         }
       })
 
       mapReady.value  = true
       isLoading.value = false
+
+      // 如果從地區選擇器進入，套用初始 cluster 過濾並飛到該位置
+      if (props.initialCluster) {
+        const { center, zoom } = props.initialCluster
+        // 有 filterConfig（SA sub-cluster）時顯示 Zone 層以呈現完整層級
+        if (props.initialCluster.filterConfig) showZones.value = true
+        activeState.value = props.initialCluster.state
+        drawerStateTab.value = props.initialCluster.state
+        updateStateFilter()
+        map.flyTo({ center, zoom, duration: 800 })
+      }
     })
 
     map.on('error', (e) => { console.error('[AustraliaMap]', e) })
@@ -650,6 +798,16 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 }
 .btn-reset-icon:hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.22); }
 
+.btn-show-all {
+  padding: 5px 12px; border: none; border-radius: 10px;
+  background: linear-gradient(180deg, #3e8ef7 0%, #2670d4 100%);
+  color: #fff; font-size: 0.78rem; font-weight: 700;
+  cursor: pointer; transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.16); flex-shrink: 0;
+  white-space: nowrap;
+}
+.btn-show-all:hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(38,112,212,0.35); }
+
 .info-details {
   overflow: hidden;
   transition: all 0.3s ease;
@@ -798,6 +956,38 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 .app-name { color: #222; font-size: 0.82rem; font-weight: 600; }
 .app-sub  { color: #888; font-size: 0.68rem; }
 .no-results { color: #aaa; text-align: center; padding: 20px; font-size: 0.8rem; }
+
+/* ── Cluster filter tag ─────────────────────────────────────────── */
+.cluster-filter-tag {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px 8px;
+  font-size: 0.78rem; font-weight: 600; color: #444;
+}
+.cluster-dot {
+  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+}
+.cluster-count-badge {
+  margin-left: auto;
+  background: #f0f0f0; border-radius: 10px;
+  padding: 1px 7px; font-size: 0.7rem; color: #666;
+}
+
+/* ── GI group header ────────────────────────────────────────────── */
+.gi-group-header {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 10px 4px;
+  font-size: 0.72rem; font-weight: 700; color: #555;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin: 6px 0 2px;
+  letter-spacing: 0.02em;
+}
+.gi-group-icon { font-size: 0.9rem; }
+.gi-group-label { flex: 1; }
+.gi-group-count {
+  background: #e0e0e0; border-radius: 8px;
+  padding: 1px 6px; font-size: 0.68rem; color: #666;
+}
 
 /* ── Bottom toolbar (Bordeaux style) ─────────────────────────────── */
 .mobile-map-toolbar {

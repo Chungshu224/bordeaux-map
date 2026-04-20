@@ -28,4 +28,8 @@ dist-ssr
 
 
 .vercel
+
+# Large Loire regional GeoJSON files (exceed GitHub 100MB limit)
+public/geojson/Loire/Regional/Loire.geojson
+public/geojson/Loire/Regional/Loire-region.geojson
 .env*.local

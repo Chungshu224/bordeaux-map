@@ -162,7 +162,7 @@ const mapReady      = ref(false)
 const isLoading     = ref(true)
 const mapError      = ref(null)
 const is3D          = ref(false)
-const infoCollapsed = ref(false)
+const infoCollapsed = ref(true)
 const drawerOpen    = ref(false)
 const drawerTab     = ref('doc')
 const showIGP       = ref(false)
@@ -173,6 +173,18 @@ const allIGP = ref([])   // IGP feature properties list
 
 let map          = null
 let hoveredDocId = null
+
+const ptGeomMap = {}  // name → [w, s, e, n] for fitBounds
+
+function calcGeomBbox(geometry) {
+  let w = Infinity, s = Infinity, e = -Infinity, n = -Infinity
+  const walk = (c) => {
+    if (typeof c[0] === 'number') { w = Math.min(w, c[0]); s = Math.min(s, c[1]); e = Math.max(e, c[0]); n = Math.max(n, c[1]) }
+    else c.forEach(walk)
+  }
+  walk(geometry.coordinates)
+  return [w, s, e, n]
+}
 let hoveredIgpId = null
 
 const PORTUGAL_CENTER = [-8.0, 39.5]
@@ -353,8 +365,9 @@ function toggleInfo() {
 // ── Select region from drawer ──────────────────────────────────────────────
 function selectFromDrawer(r) {
   activeRegion.value = r
-  infoCollapsed.value = false
   drawerOpen.value = false
+  const b = ptGeomMap[r.name]
+  if (b && map) map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 80, maxZoom: 12, duration: 700 })
 }
 
 // ── Map initialization ─────────────────────────────────────────────────────
@@ -377,6 +390,13 @@ async function initMap() {
     // Build lists for drawer
     allDOC.value = docGeoJSON.features.map(f => f.properties)
     allIGP.value = igpGeoJSON.features.map(f => f.properties)
+
+    // Cache bounding boxes for fitBounds on click
+    for (const f of docGeoJSON.features) {
+      if (f.geometry && f.properties?.name) {
+        try { ptGeomMap[f.properties.name] = calcGeomBbox(f.geometry) } catch (_) {}
+      }
+    }
 
     map = new mapboxgl.Map({
       container: mapContainer.value,
@@ -508,8 +528,10 @@ async function initMap() {
         map.setFeatureState({ source: 'doc-regions', id: fid }, { selected: true, hover: true })
 
         activeRegion.value  = feat.properties
-        infoCollapsed.value = false
         drawerOpen.value    = false
+        // Fit to region
+        const b = ptGeomMap[feat.properties.name]
+        if (b) map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 80, maxZoom: 12, duration: 700 })
       })
 
       // ── Click: IGP ──
@@ -517,7 +539,6 @@ async function initMap() {
         if (!e.features.length) return
         map.removeFeatureState({ source: 'doc-regions' })
         activeRegion.value  = e.features[0].properties
-        infoCollapsed.value = false
       })
 
       // Click on empty area → deselect

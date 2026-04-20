@@ -1,0 +1,1542 @@
+[
+  {
+    "id": "adelaida_district",
+    "name": "Adelaida District",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "alexander_valley_19841123",
+    "name": "Alexander Valley",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Northern Sonoma",
+    "contains": "Pine Mountain-Cloverdale Peak|Russian River Valley",
+    "created": "1984-11-23"
+  },
+  {
+    "id": "alisos_canyon",
+    "name": "Alisos Canyon",
+    "group": "Central Coast",
+    "county": "Santa Barbara",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "",
+    "created": "2020-07-28"
+  },
+  {
+    "id": "alta_mesa",
+    "name": "Alta Mesa",
+    "group": "Central Valley",
+    "county": "Sacramento",
+    "state": "CA",
+    "within": "Lodi",
+    "contains": "",
+    "created": "2006-08-16"
+  },
+  {
+    "id": "anderson_valley",
+    "name": "Anderson Valley",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "Mendocino |North Coast",
+    "contains": "Mendocino Ridge",
+    "created": "1983-09-19"
+  },
+  {
+    "id": "antelope_valley_of_the_california_high_desert",
+    "name": "Antelope Valley of the California High Desert",
+    "group": "South Coast",
+    "county": "Kern|Los Angeles",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2011-06-23"
+  },
+  {
+    "id": "arroyo_grande_valley",
+    "name": "Arroyo Grande Valley",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "",
+    "created": "1990-02-05"
+  },
+  {
+    "id": "arroyo_seco_19830516",
+    "name": "Arroyo Seco",
+    "group": "Central Coast",
+    "county": "Monterey",
+    "state": "CA",
+    "within": "Central Coast|Monterey",
+    "contains": "",
+    "created": "1983-05-16"
+  },
+  {
+    "id": "atlas_peak",
+    "name": "Atlas Peak",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1992-02-24"
+  },
+  {
+    "id": "ballard_canyon",
+    "name": "Ballard Canyon",
+    "group": "Central Coast",
+    "county": "Santa Barbara",
+    "state": "CA",
+    "within": "Central Coast|Santa Ynez Valley",
+    "contains": "",
+    "created": "2013-11-01"
+  },
+  {
+    "id": "ben_lomond_mountain",
+    "name": "Ben Lomond Mountain",
+    "group": "Central Coast",
+    "county": "Santa Cruz",
+    "state": "CA",
+    "within": "Santa Cruz Mountains",
+    "contains": "",
+    "created": "1988-01-08"
+  },
+  {
+    "id": "benmore_valley",
+    "name": "Benmore Valley",
+    "group": "Mendocino & Lake County",
+    "county": "Lake",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "",
+    "created": "1991-11-18"
+  },
+  {
+    "id": "bennett_valley",
+    "name": "Bennett Valley",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Sonoma Coast|Sonoma Mountain|Sonoma Valley",
+    "contains": "",
+    "created": "2003-12-29"
+  },
+  {
+    "id": "big_valley_district_lake_county",
+    "name": "Big Valley District-Lake County",
+    "group": "Mendocino & Lake County",
+    "county": "Lake",
+    "state": "CA",
+    "within": "Clear Lake|North Coast",
+    "contains": "",
+    "created": "2013-11-01"
+  },
+  {
+    "id": "borden_ranch",
+    "name": "Borden Ranch",
+    "group": "Central Valley",
+    "county": "Sacramento|San Joaquin",
+    "state": "CA",
+    "within": "Lodi",
+    "contains": "",
+    "created": "2006-08-16"
+  },
+  {
+    "id": "california_shenandoah_valley",
+    "name": "California Shenandoah Valley",
+    "group": "Sierra Foothills",
+    "county": "Amador|El Dorado",
+    "state": "CA",
+    "within": "Sierra Foothills",
+    "contains": "",
+    "created": "1983-01-27"
+  },
+  {
+    "id": "calistoga",
+    "name": "Calistoga",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "2010-01-07"
+  },
+  {
+    "id": "capay_valley",
+    "name": "Capay Valley",
+    "group": "Central Valley",
+    "county": "Yolo",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2003-02-18"
+  },
+  {
+    "id": "carmel_valley",
+    "name": "Carmel Valley",
+    "group": "Central Coast",
+    "county": "Monterey",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "",
+    "created": "1983-01-13"
+  },
+  {
+    "id": "central_coast_19851125",
+    "name": "Central Coast",
+    "group": "Central Coast",
+    "county": "Alameda|Monterey|San Benito|San Luis Obispo|Santa Barbara|Santa Clara|Santa Cruz",
+    "state": "CA",
+    "within": "",
+    "contains": "Adelaida District|Arroyo Grande|Arroyo Seco|Ballard Canyon|Carmel Valley|Chalone|Cienega Valley|Creston District|Edna Valley|El Pomar District|Gabilan Mountains|Hames Valley|Happy Canyon of Santa Barbara|Lime Kiln Valley|Livermore Valley|Los Olivos District|Monterey|Mt. Harlan|Pacheco Pass|Paicines|Paso Robles|Paso Robles Estrella District|Paso Robles Geneseo District|Paso Robles Highlands District|Paso Robles Willow Creek District|San Antonio Valley|San Benito|San Bernabe|San Francisco Bay|San Juan Creek|San Lucas|San Miguel District|San Ysidro District|Santa Clara Valley|Santa Lucia Highlands|Santa Margarita Ranch|Santa Maria Valley|Santa Ynez Valley|Sta. Rita Hills|Templeton Gap District|York Mountain",
+    "created": "1985-10-24"
+  },
+  {
+    "id": "chalk_hill_19831121",
+    "name": "Chalk Hill",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Northern Sonoma|Russian River Valley|Sonoma Coast",
+    "contains": "",
+    "created": "1983-11-21"
+  },
+  {
+    "id": "chalone",
+    "name": "Chalone",
+    "group": "Central Coast",
+    "county": "Monterey|San Benito",
+    "state": "CA",
+    "within": "Central Coast|Gabilan Mountains",
+    "contains": "",
+    "created": "1982-07-14"
+  },
+  {
+    "id": "chiles_valley",
+    "name": "Chiles Valley",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1999-04-19"
+  },
+  {
+    "id": "cienega_valley",
+    "name": "Cienega Valley",
+    "group": "Central Coast",
+    "county": "San Benito",
+    "state": "CA",
+    "within": "Central Coast|San Benito",
+    "contains": "Lime Kiln Valley",
+    "created": "1982-09-20"
+  },
+  {
+    "id": "clarksburg_19840222",
+    "name": "Clarksburg",
+    "group": "Central Valley",
+    "county": "Sacramento|Solano|Yolo",
+    "state": "CA",
+    "within": "",
+    "contains": "Merritt Island",
+    "created": "1984-02-22"
+  },
+  {
+    "id": "clear_lake_19840607",
+    "name": "Clear Lake",
+    "group": "Mendocino & Lake County",
+    "county": "Lake",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "Big Valley District-Lake County|High Valley|Kelsey Bench-Lake County|Red Hills Lake County",
+    "created": "1984-06-07"
+  },
+  {
+    "id": "clements_hills",
+    "name": "Clements Hills",
+    "group": "Central Valley",
+    "county": "San Joaquin",
+    "state": "CA",
+    "within": "Lodi",
+    "contains": "",
+    "created": "2006-08-16"
+  },
+  {
+    "id": "cole_ranch",
+    "name": "Cole Ranch",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "Mendocino|North Coast",
+    "contains": "",
+    "created": "1983-05-16"
+  },
+  {
+    "id": "comptche",
+    "name": "Comptche",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "",
+    "created": "2024-05-08"
+  },
+  {
+    "id": "contra_costa",
+    "name": "Contra Costa",
+    "group": "San Francisco Bay",
+    "county": "Contra Costa",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2024-04-15"
+  },
+  {
+    "id": "coombsville",
+    "name": "Coombsville",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "2002-01-13"
+  },
+  {
+    "id": "cosumnes_river",
+    "name": "Cosumnes River",
+    "group": "Central Valley",
+    "county": "Sacramento",
+    "state": "CA",
+    "within": "Lodi",
+    "contains": "",
+    "created": "2006-08-16"
+  },
+  {
+    "id": "covelo",
+    "name": "Covelo",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2006-03-20"
+  },
+  {
+    "id": "creston_district",
+    "name": "Creston District",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "crystal_springs_of_napa_valley",
+    "name": "Crystal Springs of Napa Valley ",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2024-11-14"
+  },
+  {
+    "id": "cucamonga_valley",
+    "name": "Cucamonga Valley",
+    "group": "South Coast",
+    "county": "Riverside|San Bernardino",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "1995-05-01"
+  },
+  {
+    "id": "diablo_grande",
+    "name": "Diablo Grande",
+    "group": "Central Valley",
+    "county": "Stanislaus",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "1998-08-21"
+  },
+  {
+    "id": "diamond_mountain_district",
+    "name": "Diamond Mountain District",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "2001-07-31"
+  },
+  {
+    "id": "dos_rios",
+    "name": "Dos Rios",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2005-11-14"
+  },
+  {
+    "id": "dry_creek_valley",
+    "name": "Dry Creek Valley",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Northern Sonoma",
+    "contains": "Rockpile",
+    "created": "1983-09-06"
+  },
+  {
+    "id": "dunnigan_hills",
+    "name": "Dunnigan Hills",
+    "group": "Central Valley",
+    "county": "Yolo",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "1993-06-14"
+  },
+  {
+    "id": "eagle_peak_mendocino_county",
+    "name": "Eagle Peak Mendocino County",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "edna_valley",
+    "name": "Edna Valley",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "",
+    "created": "1982-06-11"
+  },
+  {
+    "id": "el_dorado_19831114",
+    "name": "El Dorado",
+    "group": "Sierra Foothills",
+    "county": "El Dorado",
+    "state": "CA",
+    "within": "Sierra Foothills",
+    "contains": "Fair Play",
+    "created": "1983-11-14"
+  },
+  {
+    "id": "el_pomar_district",
+    "name": "El Pomar District",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "fair_play",
+    "name": "Fair Play",
+    "group": "Sierra Foothills",
+    "county": "El Dorado",
+    "state": "CA",
+    "within": "El Dorado|Sierra Foothills",
+    "contains": "",
+    "created": "2001-04-27"
+  },
+  {
+    "id": "fiddletown_19831103",
+    "name": "Fiddletown",
+    "group": "Sierra Foothills",
+    "county": "Amador",
+    "state": "CA",
+    "within": "Sierra Foothills",
+    "contains": "",
+    "created": "1983-11-03"
+  },
+  {
+    "id": "fort_ross_seaview",
+    "name": "Fort Ross-Seaview",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Sonoma Coast",
+    "contains": "",
+    "created": "2011-12-14"
+  },
+  {
+    "id": "fountaingrove_district",
+    "name": "Fountaingrove District",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "",
+    "created": "2015-03-20"
+  },
+  {
+    "id": "gabilan_mountains",
+    "name": "Gabilan Mountains",
+    "group": "Central Coast",
+    "county": "Monterey|San Benito",
+    "state": "CA",
+    "within": "",
+    "contains": "Chalone|Mt. Harlan",
+    "created": "2022-09-14"
+  },
+  {
+    "id": "green_valley_of_russian_river_valley",
+    "name": "Green Valley of Russian River Valley",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Northern Sonoma Valley|Russian River Valley|Sonoma Coast",
+    "contains": "",
+    "created": "1983-12-21"
+  },
+  {
+    "id": "guenoc_valley",
+    "name": "Guenoc Valley",
+    "group": "Mendocino & Lake County",
+    "county": "Lake",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "",
+    "created": "1981-12-21"
+  },
+  {
+    "id": "hames_valley",
+    "name": "Hames Valley",
+    "group": "Central Coast",
+    "county": "Monterey",
+    "state": "CA",
+    "within": "Central Coast|Monterey",
+    "contains": "",
+    "created": "1994-04-25"
+  },
+  {
+    "id": "happy_canyon_of_santa_barbara",
+    "name": "Happy Canyon of Santa Barbara",
+    "group": "Central Coast",
+    "county": "Santa Barbara",
+    "state": "CA",
+    "within": "Central Coast|Santa Ynez Valley",
+    "contains": "",
+    "created": "2009-11-09"
+  },
+  {
+    "id": "high_valley",
+    "name": "High Valley",
+    "group": "Mendocino & Lake County",
+    "county": "Lake",
+    "state": "CA",
+    "within": "Clear Lake|North Coast",
+    "contains": "",
+    "created": "2023-07-05"
+  },
+  {
+    "id": "howell_mountain_19840130",
+    "name": "Howell Mountain",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1984-01-30"
+  },
+  {
+    "id": "inwood_valley",
+    "name": "Inwood Valley",
+    "group": "Northern California",
+    "county": "Shasta",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2012-10-15"
+  },
+  {
+    "id": "jahant",
+    "name": "Jahant",
+    "group": "Central Valley",
+    "county": "Sacramento|San Joaquin",
+    "state": "CA",
+    "within": "Lodi",
+    "contains": "",
+    "created": "2006-08-16"
+  },
+  {
+    "id": "kelsey_bench_lake_county",
+    "name": "Kelsey Bench-Lake County",
+    "group": "Mendocino & Lake County",
+    "county": "Lake",
+    "state": "CA",
+    "within": "Clear Lake|North Coast",
+    "contains": "",
+    "created": "2013-11-01"
+  },
+  {
+    "id": "knights_valley",
+    "name": "Knights Valley",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Northern Sonoma",
+    "contains": "",
+    "created": "1983-11-21"
+  },
+  {
+    "id": "lamorinda",
+    "name": "Lamorinda",
+    "group": "Central Coast",
+    "county": "Contra Costa",
+    "state": "CA",
+    "within": "Central Coast|San Francisco Bay",
+    "contains": "",
+    "created": "2016-03-25"
+  },
+  {
+    "id": "leona_valley",
+    "name": "Leona Valley",
+    "group": "South Coast",
+    "county": "Los Angeles",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2008-11-28"
+  },
+  {
+    "id": "lime_kiln_valley",
+    "name": "Lime Kiln Valley",
+    "group": "Central Coast",
+    "county": "San Benito",
+    "state": "CA",
+    "within": "Cienega Valley|Central Coast|San Benito",
+    "contains": "",
+    "created": "1982-07-06"
+  },
+  {
+    "id": "livermore_valley_19821001",
+    "name": "Livermore Valley",
+    "group": "Central Coast",
+    "county": "Alameda|Contra Costa",
+    "state": "CA",
+    "within": "Central Coast|San Francisco Bay",
+    "contains": "",
+    "created": "1982-10-01"
+  },
+  {
+    "id": "lodi_19860317",
+    "name": "Lodi",
+    "group": "Central Valley",
+    "county": "Sacramento|San Joaquin",
+    "state": "CA",
+    "within": "",
+    "contains": "Alta Mesa|Borden Ranch|Clements Hills|Cosumnes River|Jahant|Mokelumne River|Sloughhouse",
+    "created": "1986-03-17"
+  },
+  {
+    "id": "long_valley-lake_county",
+    "name": "Long Valley-Lake County",
+    "group": "Mendocino & Lake County",
+    "county": "Lake",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2023-07-05"
+  },
+  {
+    "id": "los_carneros_19830919",
+    "name": "Los Carneros",
+    "group": "Napa Valley",
+    "county": "Napa|Sonoma",
+    "state": "CA",
+    "within": "Napa Valley|North Coast|Sonoma Coast|Sonoma Valley",
+    "contains": "",
+    "created": "1983-09-19"
+  },
+  {
+    "id": "los_olivos_district",
+    "name": "Los Olivos District",
+    "group": "Central Coast",
+    "county": "Santa Barbara",
+    "state": "CA",
+    "within": "Central Coast|Santa Ynez Valley",
+    "contains": "",
+    "created": "2016-02-22"
+  },
+  {
+    "id": "madera_19850107_a",
+    "name": "Madera",
+    "group": "Central Valley",
+    "county": "Madera",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "1985-01-07"
+  },
+  {
+    "id": "malibu_coast",
+    "name": "Malibu Coast",
+    "group": "South Coast",
+    "county": "Los Angeles|Ventura",
+    "state": "CA",
+    "within": "",
+    "contains": "Malibu-Newton Canyon|Saddle Rock-Malibu",
+    "created": "2014-08-18"
+  },
+  {
+    "id": "malibu_newton_canyon",
+    "name": "Malibu-Newton Canyon",
+    "group": "South Coast",
+    "county": "Los Angeles",
+    "state": "CA",
+    "within": "Malibu Coast",
+    "contains": "",
+    "created": "1996-06-13"
+  },
+  {
+    "id": "manton_valley",
+    "name": "Manton Valley",
+    "group": "Northern California",
+    "county": "Shasta|Tehama",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2014-09-02"
+  },
+  {
+    "id": "mcdowell_valley",
+    "name": "McDowell Valley",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "Mendocino|North Coast",
+    "contains": "",
+    "created": "1982-01-04"
+  },
+  {
+    "id": "mendocino_19840716",
+    "name": "Mendocino",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "Anderson Valley|Cole Ranch|McDowell Valley|Mendocino Ridge|Potter Valley|Redwood Valley|Yorkville Highlands",
+    "created": "1984-07-16"
+  },
+  {
+    "id": "mendocino_ridge",
+    "name": "Mendocino Ridge",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "Mendocino|North Coast",
+    "contains": "Anderson Valley",
+    "created": "1997-10-27"
+  },
+  {
+    "id": "merritt_island",
+    "name": "Merritt Island",
+    "group": "Central Valley",
+    "county": "Yolo",
+    "state": "CA",
+    "within": "Clarksburg",
+    "contains": "",
+    "created": "1983-06-16"
+  },
+  {
+    "id": "mokelumne_river",
+    "name": "Mokelumne River",
+    "group": "Central Valley",
+    "county": "San Joaquin",
+    "state": "CA",
+    "within": "Lodi",
+    "contains": "",
+    "created": "2006-08-16"
+  },
+  {
+    "id": "monterey_19840615",
+    "name": "Monterey",
+    "group": "Central Coast",
+    "county": "Monterey",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "Arroyo Seco|Hames Valley|San Bernabe|San Lucas|Santa Lucia|Highlands",
+    "created": "1984-06-15"
+  },
+  {
+    "id": "moon_mountain_district_sonoma_county",
+    "name": "Moon Mountain District Sonoma County",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Sonoma Valley",
+    "contains": "",
+    "created": "2013-11-01"
+  },
+  {
+    "id": "mt__harlan",
+    "name": "Mt. Harlan",
+    "group": "Central Coast",
+    "county": "San Benito",
+    "state": "CA",
+    "within": "Central Coast|Gabilan Mountains",
+    "contains": "",
+    "created": "1990-12-17"
+  },
+  {
+    "id": "mt__veeder_19900322",
+    "name": "Mt. Veeder",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1990-03-22"
+  },
+  {
+    "id": "napa_valley",
+    "name": "Napa Valley",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "Atlas Peak|Calistoga|Chiles Valley|Coombsville|Diamond Mountain District|Howell Mountain|Los Carneros|Mt. Veeder|Oak Knoll District of Napa Valley|Oakville|Rutherford|Spring Mountain District|St. Helena|Stags Leap District|Wild Horse Valley|Yountville",
+    "created": "1981-02-27"
+  },
+  {
+    "id": "north_coast_19831021",
+    "name": "North Coast",
+    "group": "Napa Valley",
+    "county": "Lake|Marin|Mendocino|Napa|Solano|Sonoma",
+    "state": "CA",
+    "within": "",
+    "contains": "Alexander Valley|Anderson Valley|Atlas Peak|Benmore Valley|Bennett Valley|Big Valley District-Lake County|Calistoga|Chalk Hill|Chiles Valley|Clear Lake|Cole Ranch|Comptche|Coombsville|Diamond Mountain District|Dry Creek Valley|Eagle Peak Mendocino County|Fort Ross-Seaview|Fountaingrove District|Green Valley of the Russian River Valley|Guenoc Valley|High Valley|Howell Mountain|Kelsey Bench-Lake County|Knights Valley|Los Carneros|McDowell Valley|Mendocino|Mendocino Ridge|Moon Mountain|District Sonoma|County|Mt. Veeder|Napa Valley|Northern Sonoma|Oak Knoll District of Napa Valley|Oakville|Pine Mountain-Cloverdale Peak|Potter Valley|Red Hills Lake County|Redwood Valley|Rockpile|Russian River Valley|Rutherford|Solano County Green Valley|Sonoma Coast|Sonoma Mountain|Sonoma Valley|Spring Mountain District|St. Helena|Stags Leap District|Suisun Valley|Wild Horse Valley|Yorkville Highlands|Yountville",
+    "created": "1983-09-21"
+  },
+  {
+    "id": "north_yuba",
+    "name": "North Yuba",
+    "group": "Sierra Foothills",
+    "county": "Yuba",
+    "state": "CA",
+    "within": "Sierra Foothills",
+    "contains": "",
+    "created": "1985-08-30"
+  },
+  {
+    "id": "northern_sonoma_19850617",
+    "name": "Northern Sonoma",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "Alexander Valley|Chalk Hill|Dry Creek|Green Valley of Russian River Valley|Knights Valley|Pine Mountain-Cloverdale Peak|Rockpile|Russian River Valley|Sonoma Coast",
+    "created": "1985-06-17"
+  },
+  {
+    "id": "oak_knoll_district_of_napa_valley",
+    "name": "Oak Knoll District of Napa Valley",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "2004-04-26"
+  },
+  {
+    "id": "oakville",
+    "name": "Oakville",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1993-08-02"
+  },
+  {
+    "id": "pacheco_pass",
+    "name": "Pacheco Pass",
+    "group": "Central Coast",
+    "county": "San Benito|Santa Clara",
+    "state": "CA",
+    "within": "Central Coast|San Francisco Bay|Santa Clara Valley\n",
+    "contains": "",
+    "created": "1984-04-11"
+  },
+  {
+    "id": "paicines",
+    "name": "Paicines",
+    "group": "Central Coast",
+    "county": "San Benito",
+    "state": "CA",
+    "within": "Central Coast|San Benito",
+    "contains": "",
+    "created": "1982-09-15"
+  },
+  {
+    "id": "palos_verdes_peninsula",
+    "name": "Palos Verdes Peninsula",
+    "group": "South Coast",
+    "county": "Los Angeles",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2021-07-19"
+  },
+  {
+    "id": "paso_robles_19831103",
+    "name": "Paso Robles",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "Adelaida District|Creston District|El Pomar District|Paso Robles Estrella District|Paso Robles Geneseo District|Paso Robles Highlands District|Paso Robles Willow Creek District|San Juan Creek|San Miguel District|Santa Margarita Ranch|Templeton Gap District",
+    "created": "1983-11-03"
+  },
+  {
+    "id": "paso_robles_estrella_district",
+    "name": "Paso Robles Estrella District",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "paso_robles_geneseo_district",
+    "name": "Paso Robles Geneseo District",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "paso_robles_highlands_district",
+    "name": "Paso Robles Highlands District",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "paso_robles_willow_creek_district",
+    "name": "Paso Robles Willow Creek District",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "paulsell_valley",
+    "name": "Paulsell Valley",
+    "group": "Central Valley",
+    "county": "Stanislaus",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2022-06-03"
+  },
+  {
+    "id": "petaluma_gap",
+    "name": "Petaluma Gap",
+    "group": "Sonoma County",
+    "county": "Marin|Sonoma",
+    "state": "CA",
+    "within": "North Coast|Sonoma Coast",
+    "contains": "",
+    "created": "2018-01-08"
+  },
+  {
+    "id": "pine_mountain_cloverdale_peak",
+    "name": "Pine Mountain-Cloverdale Peak",
+    "group": "Sonoma County",
+    "county": "Mendocino|Sonoma",
+    "state": "CA",
+    "within": "North Coast|Northern Sonoma",
+    "contains": "Alexander Valley",
+    "created": "2011-11-28"
+  },
+  {
+    "id": "potter_valley",
+    "name": "Potter Valley",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "Mendocino|North Coast",
+    "contains": "",
+    "created": "1983-11-14"
+  },
+  {
+    "id": "ramona_valley",
+    "name": "Ramona Valley",
+    "group": "South Coast",
+    "county": "San Diego",
+    "state": "CA",
+    "within": "South Coast",
+    "contains": "",
+    "created": "2006-01-06"
+  },
+  {
+    "id": "red_hills_lake_county_20131101",
+    "name": "Red Hills Lake County",
+    "group": "Mendocino & Lake County",
+    "county": "Lake",
+    "state": "CA",
+    "within": "Clear Lake|North Coast",
+    "contains": "",
+    "created": "2004-09-10"
+  },
+  {
+    "id": "redwood_valley_19970221",
+    "name": "Redwood Valley",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "Mendocino|North Coast",
+    "contains": "",
+    "created": "1997-02-21"
+  },
+  {
+    "id": "river_junction",
+    "name": "River Junction",
+    "group": "Central Valley",
+    "county": "San Joaquin",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2001-07-09"
+  },
+  {
+    "id": "rockpile",
+    "name": "Rockpile",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Northern Sonoma",
+    "contains": "Dry Creek Valley",
+    "created": "2002-04-29"
+  },
+  {
+    "id": "russian_river_valley_19831121",
+    "name": "Russian River Valley",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Northern Sonoma|Sonoma Coast",
+    "contains": "Alexander Valley|Chalk Hill|Green Valley of Russian River Valley",
+    "created": "1983-11-21"
+  },
+  {
+    "id": "rutherford",
+    "name": "Rutherford",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1993-08-02"
+  },
+  {
+    "id": "saddle_rock_malibu",
+    "name": "Saddle Rock-Malibu",
+    "group": "South Coast",
+    "county": "Los Angeles",
+    "state": "CA",
+    "within": "Malibu Coast",
+    "contains": "",
+    "created": "2006-08-16"
+  },
+  {
+    "id": "salado_creek",
+    "name": "Salado Creek",
+    "group": "Central Valley",
+    "county": "Stanislaus",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2004-08-30"
+  },
+  {
+    "id": "san_antonio_valley",
+    "name": "San Antonio Valley",
+    "group": "Central Coast",
+    "county": "Monterey",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "",
+    "created": "2006-07-10"
+  },
+  {
+    "id": "san_benito",
+    "name": "San Benito",
+    "group": "Central Coast",
+    "county": "San Benito",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "Cienega Valley|Lime Kiln Valley|Paicines",
+    "created": "1987-11-04"
+  },
+  {
+    "id": "san_bernabe",
+    "name": "San Bernabe",
+    "group": "Central Coast",
+    "county": "Monterey",
+    "state": "CA",
+    "within": "Central Coast|Monterey",
+    "contains": "",
+    "created": "2004-08-30"
+  },
+  {
+    "id": "san_francisco_bay_19990322",
+    "name": "San Francisco Bay",
+    "group": "Central Coast",
+    "county": "Alameda|Contra Costa|San Benito|San Francisco|San Mateo|Santa Clara|Santa Cruz",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "Lamorinda|Livermore Valley|Pacheco Pass|San Ysidro District|Santa Clara Valley",
+    "created": "1999-03-22"
+  },
+  {
+    "id": "san_juan_creek",
+    "name": "San Juan Creek",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "san_lucas_19870302",
+    "name": "San Lucas",
+    "group": "Central Coast",
+    "county": "Monterey",
+    "state": "CA",
+    "within": "Central Coast|Monterey",
+    "contains": "",
+    "created": "1987-03-02"
+  },
+  {
+    "id": "san_luis_obispo_coast",
+    "name": "San Luis Obispo Coast",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "Arroyo Grande Valley|Edna Valley",
+    "created": "2022-04-08"
+  },
+  {
+    "id": "san_luis_rey",
+    "name": "San Luis Rey",
+    "group": "South Coast",
+    "county": "San Diego",
+    "state": "CA",
+    "within": "South Coast",
+    "contains": "",
+    "created": "2024-09-30"
+  },
+  {
+    "id": "san_miguel_district",
+    "name": "San Miguel District",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "san_pasqual_valley",
+    "name": "San Pasqual Valley",
+    "group": "South Coast",
+    "county": "San Diego",
+    "state": "CA",
+    "within": "South Coast",
+    "contains": "",
+    "created": "1981-09-16"
+  },
+  {
+    "id": "san_ysidro_district",
+    "name": "San Ysidro District",
+    "group": "Central Coast",
+    "county": "Santa Clara",
+    "state": "CA",
+    "within": "Central Coast|San Francisco Bay|Santa Clara Valley",
+    "contains": "",
+    "created": "1990-12-17"
+  },
+  {
+    "id": "santa_clara_valley",
+    "name": "Santa Clara Valley",
+    "group": "Central Coast",
+    "county": "Alameda|San Benito|Santa Clara",
+    "state": "CA",
+    "within": "Central Coast|San Francisco Bay",
+    "contains": "Pacheco Pass|San Ysidro District",
+    "created": "1989-04-27"
+  },
+  {
+    "id": "santa_cruz_mountains",
+    "name": "Santa Cruz Mountains",
+    "group": "Central Coast",
+    "county": "San Mateo|Santa Clara|Santa Cruz",
+    "state": "CA",
+    "within": "",
+    "contains": "Ben Lomond Mountain",
+    "created": "1982-01-04"
+  },
+  {
+    "id": "santa_lucia_highlands_19920615",
+    "name": "Santa Lucia Highlands",
+    "group": "Central Coast",
+    "county": "Monterey",
+    "state": "CA",
+    "within": "Central Coast|Monterey",
+    "contains": "",
+    "created": "1992-06-15"
+  },
+  {
+    "id": "santa_margarita_ranch",
+    "name": "Santa Margarita Ranch",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "santa_maria_valley_19810904",
+    "name": "Santa Maria Valley",
+    "group": "Central Coast",
+    "county": "San Luis Obispo|Santa Barbara",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "",
+    "created": "1981-09-04"
+  },
+  {
+    "id": "santa_ynez_valley",
+    "name": "Santa Ynez Valley",
+    "group": "Central Coast",
+    "county": "Santa Barbara",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "Ballard Canyon|Happy Canyon of Santa Barbara|Los Olivos District|Sta. Rita Hills",
+    "created": "1983-05-16"
+  },
+  {
+    "id": "seiad_valley",
+    "name": "Seiad Valley",
+    "group": "Northern California",
+    "county": "Siskiyou",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "1994-06-20"
+  },
+  {
+    "id": "sierra_foothills",
+    "name": "Sierra Foothills",
+    "group": "Sierra Foothills",
+    "county": "Amador|Calaveras|El Dorado|Mariposa|Nevada|Placer|Tuolumne|Yuba",
+    "state": "CA",
+    "within": "",
+    "contains": "California Shenandoah Valley|El Dorado|Fair Play|Fiddletown|North Yuba|Calaveras|El Dorado|Mariposa|Nevada|Placer|Tuolumne|Yuba",
+    "created": "1987-12-18"
+  },
+  {
+    "id": "sierra_pelona_valley",
+    "name": "Sierra Pelona Valley",
+    "group": "South Coast",
+    "county": "Los Angeles",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2010-08-23"
+  },
+  {
+    "id": "sloughhouse",
+    "name": "Sloughhouse",
+    "group": "Central Valley",
+    "county": "Sacramento",
+    "state": "CA",
+    "within": "Lodi",
+    "contains": "",
+    "created": "2006-08-16"
+  },
+  {
+    "id": "solano_county_green_valley",
+    "name": "Solano County Green Valley",
+    "group": "North Coast",
+    "county": "Solano",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "Wild Horse Valley",
+    "created": "1983-01-28"
+  },
+  {
+    "id": "sonoma_coast",
+    "name": "Sonoma Coast",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "Bennett Valley|Chalk Hill|Green Valley of Russian River Valley|Los Carneros|Northern Sonoma|Russian River Valley|Sonoma Valley",
+    "created": "1987-07-13"
+  },
+  {
+    "id": "sonoma_mountain",
+    "name": "Sonoma Mountain",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Sonoma Valley",
+    "contains": "Bennett Valley",
+    "created": "1985-02-22"
+  },
+  {
+    "id": "sonoma_valley",
+    "name": "Sonoma Valley",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "North Coast|Sonoma Coast",
+    "contains": "Bennett Valley|Los Carneros|Moon Mountain District Sonoma County|Sonoma Mountain",
+    "created": "1982-01-04"
+  },
+  {
+    "id": "south_coast",
+    "name": "South Coast",
+    "group": "South Coast",
+    "county": "Orange|Riverside|San Diego",
+    "state": "CA",
+    "within": "",
+    "contains": "Ramona Valley|San Pasquale Valley|Temecula Valley",
+    "created": "1985-12-23"
+  },
+  {
+    "id": "spring_mountain_district",
+    "name": "Spring Mountain District",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1993-06-14"
+  },
+  {
+    "id": "squaw_valley_miramonte",
+    "name": "Squaw Valley-Miramonte",
+    "group": "Central Valley",
+    "county": "Fresno",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2015-09-08"
+  },
+  {
+    "id": "st__helena",
+    "name": "St. Helena",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1995-10-11"
+  },
+  {
+    "id": "sta__rita_hills_20010730",
+    "name": "Santa Rita Hills",
+    "group": "Central Coast",
+    "county": "Santa Barbara",
+    "state": "CA",
+    "within": "Central Coast|Santa Ynez Valley",
+    "contains": "",
+    "created": "2001-07-30"
+  },
+  {
+    "id": "stags_leap_district",
+    "name": "Stags Leap District",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1989-02-27"
+  },
+  {
+    "id": "suisun_valley",
+    "name": "Suisun Valley",
+    "group": "North Coast",
+    "county": "Solano",
+    "state": "CA",
+    "within": "North Coast",
+    "contains": "",
+    "created": "1982-12-27"
+  },
+  {
+    "id": "tehachapi_mountains",
+    "name": "Tehachapi Mountains",
+    "group": "Central Valley",
+    "county": "Kern",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2020-12-21"
+  },
+  {
+    "id": "temecula_valley_19841123",
+    "name": "Temecula",
+    "group": "South Coast",
+    "county": "Riverside",
+    "state": "CA",
+    "within": "South Coast",
+    "contains": "",
+    "created": "1984-11-23"
+  },
+  {
+    "id": "templeton_gap_district",
+    "name": "Templeton Gap District",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast|Paso Robles",
+    "contains": "",
+    "created": "2014-11-10"
+  },
+  {
+    "id": "tracy_hills",
+    "name": "Tracy Hills",
+    "group": "Central Valley",
+    "county": "San Joaquin|Stanislaus",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2006-12-08"
+  },
+  {
+    "id": "trinity_lakes",
+    "name": "Trinity Lakes",
+    "group": "Northern California",
+    "county": "Trinity",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2005-04-29"
+  },
+  {
+    "id": "upper_lake_valley",
+    "name": "Upper Lake Valley",
+    "group": "Mendocino & Lake County",
+    "county": "Lake",
+    "state": "CA",
+    "within": "Clear Lake|North Coast",
+    "contains": "",
+    "created": "2022-07-05"
+  },
+  {
+    "id": "west_sonoma_coast",
+    "name": "West Sonoma Coast",
+    "group": "Sonoma County",
+    "county": "Sonoma",
+    "state": "CA",
+    "within": "Sonoma Coast, North Coast",
+    "contains": "Fort Ross-Seaview",
+    "created": "2022-05-23"
+  },
+  {
+    "id": "wild_horse_valley",
+    "name": "Wild Horse Valley",
+    "group": "Napa Valley",
+    "county": "Napa|Solano",
+    "state": "CA",
+    "within": "Napa Valley|North Coast|Solano County|Green Valley",
+    "contains": "",
+    "created": "1988-12-30"
+  },
+  {
+    "id": "willow_creek",
+    "name": "Willow Creek",
+    "group": "Northern California",
+    "county": "Humboldt|Trinity",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "1983-09-19"
+  },
+  {
+    "id": "winters_highlands",
+    "name": "Winters Highlands",
+    "group": "Central Valley",
+    "county": "Solano|Yolo",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2023-08-29"
+  },
+  {
+    "id": "york_mountain_19830923",
+    "name": "York Mountain",
+    "group": "Central Coast",
+    "county": "San Luis Obispo",
+    "state": "CA",
+    "within": "Central Coast",
+    "contains": "",
+    "created": "1983-09-23"
+  },
+  {
+    "id": "yorkville_highlands",
+    "name": "Yorkville Highlands",
+    "group": "Mendocino & Lake County",
+    "county": "Mendocino",
+    "state": "CA",
+    "within": "Mendocino|North Coast",
+    "contains": "",
+    "created": "1998-06-08"
+  },
+  {
+    "id": "yountville",
+    "name": "Yountville",
+    "group": "Napa Valley",
+    "county": "Napa",
+    "state": "CA",
+    "within": "Napa Valley|North Coast",
+    "contains": "",
+    "created": "1999-05-18"
+  },
+  {
+    "id": "yucaipa_valley",
+    "name": "Yucaipa Valley",
+    "group": "South Coast",
+    "county": "San Bernardino",
+    "state": "CA",
+    "within": "",
+    "contains": "",
+    "created": "2024-05-28"
+  }
+]

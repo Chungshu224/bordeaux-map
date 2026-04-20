@@ -167,6 +167,24 @@ export const lessonModuleLoaders = {
   'l3-13-part1': () => import('./lessons/l3-13-part1.js'),
   'l3-13-part2': () => import('./lessons/l3-13-part2.js'),
   'l3-14': () => import('./lessons/l3-14.js'), // Level 3 綜合評量
+  // Hungary Level 1
+  'hu-l1-1': () => import('./hungary/hu-l1-1.js'),
+  'hu-l1-2': () => import('./hungary/hu-l1-2.js'),
+  'hu-l1-3': () => import('./hungary/hu-l1-3.js'),
+  'hu-l1-4': () => import('./hungary/hu-l1-4.js'),
+  'hu-l1-5': () => import('./hungary/hu-l1-5.js'),
+  'hu-l1-6': () => import('./hungary/hu-l1-6.js'),
+  'hu-l1-7': () => import('./hungary/hu-l1-7.js'),
+  'hu-l1-8': () => import('./hungary/hu-l1-8.js'),
+  // Loire Level 1
+  'lo-l1-1': () => import('./loire/lo-l1-1.js'),
+  'lo-l1-2': () => import('./loire/lo-l1-2.js'),
+  'lo-l1-3': () => import('./loire/lo-l1-3.js'),
+  'lo-l1-4': () => import('./loire/lo-l1-4.js'),
+  'lo-l1-5': () => import('./loire/lo-l1-5.js'),
+  'lo-l1-6': () => import('./loire/lo-l1-6.js'),
+  'lo-l1-7': () => import('./loire/lo-l1-7.js'),
+  'lo-l1-8': () => import('./loire/lo-l1-8.js'),
   // Level 4 (逐步擴充)
   'l4-1': () => import('./lessons/l4-1.js'),
   'l4-2': () => import('./lessons/l4-2.js'),

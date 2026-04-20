@@ -300,7 +300,7 @@ const isLoading = ref(false)
 const mapError = ref(null)
 const is3D = ref(false)
 const showContours = ref(false)
-const infoCollapsed = ref(false)
+const infoCollapsed = ref(true)
 const aocListOpen = ref(false)
 const showLayerPanel = ref(false)
 const search = ref('')
@@ -942,7 +942,6 @@ function resetMap() {
 
 async function selectAOC(item) {
   activeAOCInfo.value = item
-  infoCollapsed.value = false
   aocListOpen.value = false
   await highlightAOC(item)
   await checkAudio(item)
