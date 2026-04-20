@@ -76,7 +76,7 @@
           <span>送出挑戰！</span>
         </div>
         <div class="csc-header">
-          <div class="csc-logo">🍷 波爾多葡萄酒學院</div>
+          <div class="csc-logo">🍷 侍酒師的筆記本</div>
         </div>
         <div class="csc-challenge">
           <div class="csc-ch-icon" :style="{ background: challenge.color }">{{ challenge.icon }}</div>

@@ -19,9 +19,9 @@ import {
 
 // ── 課程標籤 ──────────────────────────────────────────────────
 const COURSE_LABELS = {
-  bordeaux:  '波爾多葡萄酒學院',
-  bourgogne: '布根地葡萄酒學院',
-  italy:     '義大利葡萄酒學院'
+  bordeaux:  '侍酒師的筆記本',
+  bourgogne: '侍酒師的筆記本',
+  italy:     '侍酒師的筆記本'
 }
 
 // ── 各課程分類定義 ────────────────────────────────────────────
@@ -170,7 +170,7 @@ export function useAchievements(courseKey) {
     state,
     definitions,
     manager,
-    courseLabel:  COURSE_LABELS[courseKey] || '葡萄酒學院',
+    courseLabel:  COURSE_LABELS[courseKey] || '侍酒師的筆記本',
     categories:   COURSE_CATEGORIES[courseKey] || COURSE_CATEGORIES.bordeaux,
     achievements,
     unlockedCount,

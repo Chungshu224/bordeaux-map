@@ -149,6 +149,11 @@
 </template>
 
 <script setup>
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
+import mapboxgl from 'mapbox-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
+
 const router = useRouter()
 
 // ── State ──────────────────────────────────────────────────────────────────
@@ -613,12 +618,13 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 /* ── Info bar (Bordeaux style: bottom-left, white card) ──────────── */
 .map-info-bar {
   position: absolute;
-  bottom: 102px;
-  left: 20px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
+  left: 50%;
+  transform: translateX(-50%);
   background: rgba(255,255,255,0.97);
   padding: 18px;
   border-radius: 8px;
-  max-width: 420px;
+  width: min(90vw, 380px);
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
   z-index: 10;
   font-size: 16px;
@@ -626,7 +632,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   color: #222;
 }
 .map-info-bar.collapsed {
-  max-width: 350px;
+  width: min(90vw, 380px);
   padding: 12px 18px;
 }
 .aoc-title-row {
@@ -851,7 +857,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 24px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -934,25 +940,18 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 /* ── Mobile ───────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .map-info-bar {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: min(92vw, 420px);
-    max-width: none;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 108px);
+    width: min(90vw, 380px);
     font-size: 14px;
     padding: 14px;
     border-radius: 14px;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
   }
   .map-info-bar.collapsed {
-    width: min(92vw, 420px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 108px);
+    width: min(90vw, 380px);
     padding: 10px 14px;
   }
   .mobile-map-toolbar {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
-    width: min(92vw, 380px);
+    width: min(90vw, 380px);
   }
   .region-drawer { width: 260px; }
   .map-header h1 { font-size: 1rem; }

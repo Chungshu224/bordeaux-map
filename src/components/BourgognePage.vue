@@ -53,7 +53,7 @@ const goHome = () => {
       </button>
       <div class="nav-title">
         <span class="nav-logo">🍇</span>
-        <span>布根地葡萄酒學院</span>
+        <span>侍酒師的筆記本</span>
       </div>
       <div class="nav-spacer"></div>
     </nav>

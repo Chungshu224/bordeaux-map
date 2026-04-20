@@ -132,7 +132,7 @@
       <div class="tsc-header">
         <div class="tsc-logo">🍷</div>
         <div>
-          <div class="tsc-app">波爾多葡萄酒學院</div>
+          <div class="tsc-app">侍酒師的筆記本</div>
           <div class="tsc-sub">品味分析報告</div>
         </div>
       </div>

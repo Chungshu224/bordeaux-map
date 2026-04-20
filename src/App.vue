@@ -200,7 +200,7 @@ onMounted(() => {
   // 初始化成就系統
   globalAchievementManager.init()
   
-  console.log('🚀 波爾多葡萄酒學院已啟動')
+  console.log('🚀 侍酒師的筆記本已啟動')
   console.log('🏆 成就系統已初始化')
   console.log('📚 等級選擇頁面已載入')
   console.log(`📱 裝置類型: ${layout.deviceType.value}`)

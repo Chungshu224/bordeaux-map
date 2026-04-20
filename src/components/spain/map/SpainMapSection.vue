@@ -231,22 +231,22 @@
     </transition>
 
     <!-- 底部工具列 -->
-    <div v-if="mapReady" class="mobile-grid-buttons">
-      <button class="m-grid-btn" :class="{ active: drawerOpen }" @click="drawerOpen = !drawerOpen; showLayerPanel = false">
-        <span class="m-grid-icon">產</span>
-        <span class="m-grid-text">產區</span>
+    <div v-if="mapReady" class="mobile-map-toolbar">
+      <button class="mobile-tool-btn" :class="{ active: drawerOpen }" @click="drawerOpen = !drawerOpen; showLayerPanel = false">
+        <span class="mobile-tool-icon">產</span>
+        <span>產區</span>
       </button>
-      <button class="m-grid-btn" :class="{ active: showLayerPanel }" @click="showLayerPanel = !showLayerPanel; drawerOpen = false">
-        <span class="m-grid-icon">層</span>
-        <span class="m-grid-text">圖層</span>
+      <button class="mobile-tool-btn" :class="{ active: showLayerPanel }" @click="showLayerPanel = !showLayerPanel; drawerOpen = false">
+        <span class="mobile-tool-icon">層</span>
+        <span>圖層</span>
       </button>
-      <button class="m-grid-btn" :class="{ active: is3D }" @click="toggle3D">
-        <span class="m-grid-icon">3D</span>
-        <span class="m-grid-text">{{ is3D ? '2D' : '3D' }}</span>
+      <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
+        <span class="mobile-tool-icon">3D</span>
+        <span>{{ is3D ? '2D' : '3D' }}</span>
       </button>
-      <button class="m-grid-btn" :class="{ active: activeInfo && !infoCollapsed }" @click="toggleInfo">
-        <span class="m-grid-icon">資</span>
-        <span class="m-grid-text">資訊</span>
+      <button class="mobile-tool-btn" :class="{ active: activeInfo && !infoCollapsed }" @click="toggleInfo">
+        <span class="mobile-tool-icon">資</span>
+        <span>資訊</span>
       </button>
     </div>
 
@@ -1679,8 +1679,8 @@ function toggleInfo() {
   flex-shrink: 0;
 }
 
-/* ── Bottom toolbar ──────────────────────────────────────────── */
-.mobile-grid-buttons {
+/* ── Bottom toolbar (Bordeaux style) ─────────────────────────── */
+.mobile-map-toolbar {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -1697,7 +1697,7 @@ function toggleInfo() {
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
-.m-grid-btn {
+.mobile-tool-btn {
   border-radius: 16px;
   background: linear-gradient(180deg, #faf5ef 0%, #f1e7dd 100%);
   color: #4f3422;
@@ -1714,14 +1714,14 @@ function toggleInfo() {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
   transition: all 0.15s;
 }
-.m-grid-btn:hover { opacity: 0.85; }
-.m-grid-btn.active {
+.mobile-tool-btn:hover { opacity: 0.85; }
+.mobile-tool-btn.active {
   background: linear-gradient(180deg, #a93226 0%, #7b241c 100%);
   color: #fff;
   box-shadow: none;
 }
 
-.m-grid-icon {
+.mobile-tool-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1732,12 +1732,7 @@ function toggleInfo() {
   font-size: 0.8rem;
   font-weight: 800;
 }
-.m-grid-btn.active .m-grid-icon { background: rgba(255,255,255,0.18); color: #fff; }
-
-.m-grid-text {
-  font-size: 0.76rem;
-  font-weight: 800;
-}
+.mobile-tool-btn.active .mobile-tool-icon { background: rgba(255,255,255,0.18); color: #fff; }
 
 /* ── Loading / Error ─────────────────────────────────────────── */
 .loading-overlay {

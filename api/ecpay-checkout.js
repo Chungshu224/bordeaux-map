@@ -152,7 +152,7 @@ export default async function handler(req, res) {
     MerchantTradeDate:   tradeDate,
     PaymentType:         'aio',
     TotalAmount:         String(amount),
-    TradeDesc:           encodeURIComponent('Wine Academy 課程購買'),
+    TradeDesc:           encodeURIComponent('侍酒師的筆記本 課程購買'),
     ItemName:            itemName,
     ReturnURL:           returnUrl,
     OrderResultURL:      orderResultUrl || '',

@@ -4,7 +4,7 @@
     <header class="admin-header">
       <div class="admin-brand">
         <span class="brand-icon">🍷</span>
-        <span class="brand-name">Wine Academy 後台管理</span>
+        <span class="brand-name">侍酒師的筆記本 後台管理</span>
       </div>
       <div class="admin-user-info">
         <span class="admin-badge">管理員</span>
@@ -17,14 +17,38 @@
     <!-- Tab 導覽 -->
     <nav class="admin-tabs">
       <button
-        v-for="tab in tabs"
+        v-for="(tab, i) in tabs"
         :key="tab.id"
-        :class="['tab-btn', { active: activeTab === tab.id }]"
+        :class="['tab-btn', { active: activeTab === tab.id }, { 'tab-extra': i >= 4 }]"
         @click="activeTab = tab.id"
       >
         <span class="tab-icon">{{ tab.icon }}</span>
         {{ tab.label }}
       </button>
+
+      <!-- 更多選單（手機版） -->
+      <div class="more-menu-wrap" ref="moreRef">
+        <button
+          class="tab-btn more-toggle-btn"
+          :class="{ active: tabs.slice(4).some(t => t.id === activeTab) }"
+          @click="showMoreMenu = !showMoreMenu"
+        >
+          <span class="tab-icon">{{ tabs.slice(4).find(t => t.id === activeTab)?.icon ?? '⋯' }}</span>
+          {{ tabs.slice(4).find(t => t.id === activeTab)?.label ?? '更多' }}
+          <span class="more-chevron" :class="{ open: showMoreMenu }">▾</span>
+        </button>
+        <div v-if="showMoreMenu" class="more-dropdown">
+          <button
+            v-for="tab in tabs.slice(4)"
+            :key="tab.id"
+            :class="['more-item', { active: activeTab === tab.id }]"
+            @click="activeTab = tab.id; showMoreMenu = false"
+          >
+            <span class="tab-icon">{{ tab.icon }}</span>
+            {{ tab.label }}
+          </button>
+        </div>
+      </div>
     </nav>
 
     <!-- 主內容區 -->
@@ -374,7 +398,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { supabase } from '../lib/supabaseClient.js'
 import { authActions, authState } from '../stores/authStore.js'
@@ -393,6 +417,19 @@ const tabs = [
   { id: 'glossary',      label: '辭典管理', icon: '📖' },
 ]
 const activeTab = ref('overview')
+
+// ── 更多選單 (手機版) ────────────────────────────────────────
+const showMoreMenu = ref(false)
+const moreRef = ref(null)
+
+function handleClickOutside(e) {
+  if (moreRef.value && !moreRef.value.contains(e.target)) {
+    showMoreMenu.value = false
+  }
+}
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside)
+})
 
 // ── 基本資訊 ────────────────────────────────────────────────
 const userEmail = computed(() => authActions.getEmail())
@@ -590,6 +627,7 @@ async function loadAchievements() {
 
 // ── 初始化 ──────────────────────────────────────────────────
 onMounted(async () => {
+  document.addEventListener('click', handleClickOutside)
   // 安全檢查：非 admin 跳回首頁
   if (!authActions.isAdmin()) {
     router.replace('/')
@@ -622,10 +660,10 @@ function tierColor(tier) {
   return { free: '#aaa', basic: '#2980b9', premium: '#8e44ad' }[tier] ?? '#999'
 }
 function courseLabel(id) {
-  return { bordeaux: '波爾多', bourgogne: '布根地', italy: '義大利', spain: '西班牙', germany: '德國', portugal: '葡萄牙' }[id] ?? id
+  return { bordeaux: '波爾多', bourgogne: '布根地', italy: '義大利', spain: '西班牙', germany: '德國', portugal: '葡萄牙', australia: '澳洲', newzealand: '紐西蘭' }[id] ?? id
 }
 function courseFlag(id) {
-  return { bordeaux: '🇫🇷', bourgogne: '🇫🇷', italy: '🇮🇹', spain: '🇪🇸', germany: '🇩🇪', portugal: '🇵🇹' }[id] ?? '🍷'
+  return { bordeaux: '🇫🇷', bourgogne: '🇫🇷', italy: '🇮🇹', spain: '🇪🇸', germany: '🇩🇪', portugal: '🇵🇹', australia: '🇦🇺', newzealand: '🇳🇿' }[id] ?? '🍷'
 }
 function formatDate(dateStr) {
   if (!dateStr) return '—'
@@ -705,6 +743,43 @@ function formatStudyTime(sec) {
 .tab-btn:hover  { color: #8b1a2b; }
 .tab-btn.active { color: #8b1a2b; border-bottom-color: #8b1a2b; font-weight: 600; }
 .tab-icon { font-size: 1rem; }
+
+/* 更多選單（預設隱藏，手機版顯示） */
+.more-menu-wrap { display: none; position: relative; }
+
+@media (max-width: 640px) {
+  .tab-extra { display: none !important; }
+  .more-menu-wrap { display: block; }
+  .more-toggle-btn { white-space: nowrap; }
+  .more-chevron {
+    font-size: 0.7rem; margin-left: 3px; display: inline-block;
+    transition: transform .2s;
+  }
+  .more-chevron.open { transform: rotate(180deg); }
+  .more-dropdown {
+    position: absolute;
+    top: calc(100% + 2px);
+    right: 0;
+    background: #fff;
+    border: 1px solid #e9e3da;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    z-index: 200;
+    min-width: 160px;
+    overflow: hidden;
+  }
+  .more-item {
+    display: flex; align-items: center; gap: 8px;
+    width: 100%; padding: 13px 16px;
+    border: none; background: transparent;
+    color: #555; font-size: .9rem;
+    cursor: pointer; text-align: left;
+    transition: background .15s;
+    white-space: nowrap;
+  }
+  .more-item:hover { background: #f5f0eb; color: #8b1a2b; }
+  .more-item.active { color: #8b1a2b; font-weight: 700; background: #fdf5f5; }
+}
 
 /* ── 主內容 ── */
 .admin-content { padding: 28px 32px; max-width: 1200px; margin: 0 auto; }

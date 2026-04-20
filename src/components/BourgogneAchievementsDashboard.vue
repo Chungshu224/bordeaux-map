@@ -5,7 +5,7 @@
 
       <div class="header-center">
         <h1 class="ach-title">🏆 成就系統</h1>
-        <p class="ach-sub">布根地葡萄酒學院・學習里程碑</p>
+        <p class="ach-sub">侍酒師的筆記本・學習里程碼</p>
       </div>
       <!-- 用戶等級卡 -->
       <div class="level-pill" :class="`lv-rarity-${levelRarity}`">

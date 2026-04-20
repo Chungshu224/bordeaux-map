@@ -14,8 +14,8 @@
         <div class="brand-logo">
           <div class="wine-glass-icon">🍷</div>
           <div class="brand-text">
-            <h1 class="brand-title">Bordeaux Wine Academy</h1>
-            <p class="brand-subtitle">波爾多葡萄酒學院</p>
+            <h1 class="brand-title">侍酒師的筆記本</h1>
+            <p class="brand-subtitle">The Sommelier's Notebook</p>
           </div>
         </div>
         <!-- 使用者面板 -->

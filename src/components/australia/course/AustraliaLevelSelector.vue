@@ -11,8 +11,8 @@
         <div class="brand-logo">
           <div class="flag-big">🦘</div>
           <div class="brand-text">
-            <h1 class="brand-title">Australia Wine Academy</h1>
-            <p class="brand-sub">澳洲葡萄酒學院</p>
+            <h1 class="brand-title">侍酒師的筆記本</h1>
+            <p class="brand-sub">The Sommelier's Notebook</p>
           </div>
         </div>
         <div class="header-btns">

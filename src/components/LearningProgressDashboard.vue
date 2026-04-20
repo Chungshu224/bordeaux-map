@@ -74,7 +74,7 @@
     <div ref="shareEl" class="lpd-share-card" aria-hidden="true">
       <!-- 標頭 -->
       <div class="lpd-sc-header">
-        <span class="lpd-sc-logo">{{ COURSE_LABEL[courseKey] || '🍷 葡萄酒學院' }}</span>
+        <span class="lpd-sc-logo">{{ COURSE_LABEL[courseKey] || '🍷 侍酒師的筆記本' }}</span>
         <span class="lpd-sc-tag">學習進度</span>
       </div>
 
@@ -130,7 +130,7 @@ const props = defineProps({
 
 const { topStats, levelProg, weeklyTrend, hasWeeklyTrend } = useLearningProgress(props.courseKey)
 
-const COURSE_LABEL = { bordeaux: '🍷 波爾多葡萄酒學院', bourgogne: '🍇 布根地葡萄酒學院', italy: '🍾 義大利葡萄酒學院' }
+const COURSE_LABEL = { bordeaux: '🍷 侍酒師的筆記本', bourgogne: '🍇 侍酒師的筆記本', italy: '🍾 侍酒師的筆記本' }
 
 function barHeight (studyTime) {
   if (!weeklyTrend?.value) return '4px'
@@ -182,7 +182,7 @@ async function shareCard() {
     if (navigator.canShare?.({ files: [file] })) {
       await navigator.share({
         title: '我的學習進度',
-        text: `我在${COURSE_LABEL[props.courseKey] || '葡萄酒學院'}的學習進度！`,
+        text: `我在${COURSE_LABEL[props.courseKey] || '侍酒師的筆記本'}的學習進度！`,
         files: [file]
       })
     } else {

@@ -24,7 +24,7 @@ export function useShareCard() {
    */
   const captureAndShare = async ({
     filename = 'share-card',
-    title    = '波爾多葡萄酒學院',
+    title    = '侍酒師的筆記本',
     text     = '',
     scale    = 2,
     background = '#FFFFFF',

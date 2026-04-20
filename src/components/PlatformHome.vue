@@ -7,8 +7,8 @@
         <div class="nav-logo" @click="scrollToTop">
           <span class="logo-icon">🍷</span>
           <div>
-            <div class="logo-title">Wine Academy</div>
-            <div class="logo-sub">葡萄酒學院</div>
+            <div class="logo-title">侍酒師的筆記本</div>
+            <div class="logo-sub">The Sommelier's Notebook</div>
           </div>
         </div>
         <div class="nav-actions">
@@ -31,58 +31,68 @@
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <div class="hero-tag">🌍 世界三大頂級產區・全中文深度教學</div>
+        <div class="hero-tag">🌍 8 大世界產區・全中文深度教學</div>
         <h1 class="hero-title">用知識<span class="accent">品味</span>每一口</h1>
         <p class="hero-desc">
-          系統化學習波爾多、布根地、義大利頂級葡萄酒<br>
-          互動地圖・AI練習題・品飲筆記，一個平台全搞定
+          系統化學習法國、義大利、西班牙、德國、葡萄牙、澳洲、紐西蘭頂級葡萄酒<br>
+          互動地圖・分級課程・品飲筆記，一個平台全搞定
         </p>
         <!-- 已登入：顯示課程入口 -->
         <div v-if="authUser" class="hero-cta logged-in-cta">
-          <div class="course-entry-title">歡迎回來，{{ displayName }}！選擇課程繼續學習：</div>
-          <div class="course-entry-btns">
-            <button class="cta-course bordeaux-btn" @click="router.push('/bordeaux')">
-              🏰 波爾多課程
-            </button>
-            <template v-if="isAdmin">
-              <button class="cta-course bourgogne-btn" @click="router.push('/bourgogne')">
-                🍇 布根地課程
-              </button>
-              <button class="cta-course italy-btn" @click="router.push('/italy')">
-                🇮🇹 義大利課程
-              </button>
-            </template>
-            <button class="cta-course spain-btn" @click="router.push('/spain')">
-              🇪🇸 西班牙課程
-            </button>
-            <button class="cta-course germany-btn" @click="router.push('/germany')">
-              🇩🇪 德國課程
-            </button>
-            <button class="cta-course portugal-btn" @click="router.push('/portugal')">
-              🇵🇹 葡萄牙課程
-            </button>
-            <button class="cta-course australia-btn" @click="router.push('/australia')">
-              🦘 澳洲課程
-            </button>
+          <div class="course-entry-title">歡迎回來，{{ displayName }}！選擇課程繼續學習</div>
+          <div class="course-entry-groups">
+            <div class="ceg-row">
+              <span class="ceg-label">🇫🇷 法國</span>
+              <button class="cta-course bordeaux-btn" @click="router.push('/bordeaux')">🏰 波爾多</button>
+              <button v-if="isAdmin" class="cta-course bourgogne-btn" @click="router.push('/bourgogne')">🍇 布根地</button>
+            </div>
+            <div class="ceg-row">
+              <span class="ceg-label">🌍 歐洲</span>
+              <button v-if="isAdmin" class="cta-course italy-btn" @click="router.push('/italy')">🇮🇹 義大利</button>
+              <button class="cta-course spain-btn" @click="router.push('/spain')">🇪🇸 西班牙</button>
+              <button class="cta-course germany-btn" @click="router.push('/germany')">🇩🇪 德國</button>
+              <button class="cta-course portugal-btn" @click="router.push('/portugal')">🇵🇹 葡萄牙</button>
+            </div>
+            <div class="ceg-row">
+              <span class="ceg-label">🌏 新世界</span>
+              <button class="cta-course australia-btn" @click="router.push('/australia')">🦘 澳洲</button>
+              <button class="cta-course newzealand-btn" @click="router.push('/newzealand')">🥝 紐西蘭</button>
+            </div>
           </div>
         </div>
-        <!-- 未登入：原本的 CTA -->
-        <div v-else class="hero-cta">
-          <button class="cta-primary" @click="handleStartFree">
-            🚀 免費開始學習
-          </button>
-          <button class="cta-secondary" @click="scrollToCourses">
-            查看所有課程 ↓
-          </button>
+        <!-- 未登入：增強版 CTA -->
+        <div v-else class="hero-cta guest-cta">
+          <div class="region-badges">
+            <span class="rb">🏰 波爾多</span>
+            <span class="rb">🍇 布根地</span>
+            <span class="rb">🇮🇹 義大利</span>
+            <span class="rb">🇪🇸 西班牙</span>
+            <span class="rb">🇩🇪 德國</span>
+            <span class="rb">🇵🇹 葡萄牙</span>
+            <span class="rb">🦘 澳洲</span>
+            <span class="rb">🥝 紐西蘭</span>
+          </div>
+          <div class="cta-btns">
+            <button class="cta-primary" @click="handleStartFree">
+              🚀 免費開始學習
+            </button>
+            <button class="cta-secondary" @click="goToPricing">
+              💎 查看訂閱方案
+            </button>
+            <button class="cta-tertiary" @click="scrollToCourses">
+              查看所有課程 ↓
+            </button>
+          </div>
+          <p class="cta-trust">免費註冊・無需信用卡・ Level 1 內容全面開放</p>
         </div>
         <div class="hero-stats">
+          <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">世界產區</span></div>
+          <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">學習等級</span></div>
           <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">100+</span><span class="stat-label">互動練習題</span></div>
+          <div class="stat-item"><span class="stat-num">200+</span><span class="stat-label">互動練習題</span></div>
           <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">世界產區</span></div>
-          <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">$150</span><span class="stat-label">完整課程起/月</span></div>
+          <div class="stat-item"><span class="stat-num">NT$290</span><span class="stat-label">完整課程起/月</span></div>
         </div>
       </div>
     </section>
@@ -91,8 +101,8 @@
     <section class="courses-section" ref="coursesRef">
       <div class="section-inner">
         <div class="section-header">
-          <h2>選擇您的課程</h2>
-          <p>專業課程設計，結合互動地圖、測驗與品飲工具</p>
+          <h2>探索 8 大世界產區</h2>
+          <p>每個產區獨立課程，結合互動衛星地圖・分級測驗・品飲筆記，系統化建立葡萄酒知識</p>
         </div>
 
         <div class="courses-grid">
@@ -116,71 +126,12 @@
               </div>
             </div>
 
-            <template v-if="courseStatuses.bordeaux">
-              <!-- 計費週期切換 -->
-              <div class="billing-toggle">
-                <button :class="['bt-btn', billingPeriod === 'monthly' ? 'active' : '']" @click="billingPeriod = 'monthly'">月繳</button>
-                <button :class="['bt-btn', billingPeriod === 'yearly' ? 'active' : '']" @click="billingPeriod = 'yearly'">年繳 <span class="bt-save">最高省 49%</span></button>
+            <div class="card-pricing-cta">
+              <div class="cpc-hint">完整課程 NT$290/月起・免費體驗 Level 1・全通行證 NT$590/月解鎖 8 大產區</div>
+              <div class="cpc-actions">
+                <button class="cpc-btn-free" @click="handleFreeTier">免費開始</button>
+                <button class="cpc-btn-plan" @click="goToPricing">查看訂閱方案 →</button>
               </div>
-
-              <div class="tier-grid">
-                <!-- 免費 -->
-                <div class="tier-card free">
-                  <div class="tier-name">免費體驗</div>
-                  <div class="tier-price">NT$ 0</div>
-                  <div class="tier-tagline">適合初次探索、先嘗再買</div>
-                  <ul class="tier-list">
-                    <li class="ok">Level 1 入門（12 堂課完整開放）</li>
-                    <li class="ok">57 個 AOC 法定產區互動地圖</li>
-                    <li class="ok">左右岸基礎地理認識</li>
-                    <li class="no">Level 2–4 進階課程（32 堂）</li>
-                    <li class="no">互動練習中心（4 種遊戲）</li>
-                  </ul>
-                  <button class="tier-btn free-btn" @click="handleFreeTier">立即開始</button>
-                </div>
-                <!-- 初階 -->
-                <div class="tier-card basic popular">
-                  <div class="popular-tag">最受歡迎</div>
-                  <div class="tier-name">完整課程</div>
-                  <div class="tier-price">
-                    <template v-if="billingPeriod === 'monthly'">NT$ {{ pricing.basic.monthly.toLocaleString() }} <span class="price-unit">/ 月</span></template>
-                    <template v-else>NT$ {{ pricing.basic.yearly.toLocaleString() }} <span class="price-unit">/ 年</span></template>
-                  </div>
-                  <div class="price-note" v-if="billingPeriod === 'yearly'">相當於 NT${{ Math.round(pricing.basic.yearly / 12) }}/月，年省 NT${{ (pricing.basic.monthly * 12 - pricing.basic.yearly).toLocaleString() }}</div>
-                  <div class="tier-tagline">適合命名考生、入門御酒師</div>
-                  <ul class="tier-list">
-                    <li class="ok">全 4 階段 · 44 堂完整課程</li>
-                    <li class="ok">4 種互動練習（配對、排列、地圖、快答）</li>
-                    <li class="ok">57 個 AOC 法定產區完整地圖袖</li>
-                    <li class="ok">左右岸 · 五大次產區深度解析</li>
-                    <li class="no">地質 / 氣候進階圖層</li>
-                    <li class="no">品飲筆記本</li>
-                  </ul>
-                  <button class="tier-btn basic-btn" @click="handlePurchase('bordeaux','basic')">立即訂閱</button>
-                </div>
-                <!-- 頂級 -->
-                <div class="tier-card premium">
-                  <div class="tier-name">頂級方案</div>
-                  <div class="tier-price">
-                    <template v-if="billingPeriod === 'monthly'">NT$ {{ pricing.premium.monthly.toLocaleString() }} <span class="price-unit">/ 月</span></template>
-                    <template v-else>NT$ {{ pricing.premium.yearly.toLocaleString() }} <span class="price-unit">/ 年</span></template>
-                  </div>
-                  <div class="price-note" v-if="billingPeriod === 'yearly'">相當於 NT${{ Math.round(pricing.premium.yearly / 12) }}/月，年省 NT${{ (pricing.premium.monthly * 12 - pricing.premium.yearly).toLocaleString() }}</div>
-                  <div class="tier-tagline">適合從業人員、收藏投資人士</div>
-                  <ul class="tier-list">
-                    <li class="ok">包含完整課程全部內容</li>
-                    <li class="ok">地質岩層 · 氣候熱力圖 2 大進階圖層</li>
-                    <li class="ok">酒莊精確位置標記（第一 – 五級分級）</li>
-                    <li class="ok">品飲筆記本（無限則記錄）</li>
-                    <li class="ok">成就系統 · 學習進度全面追蹤</li>
-                  </ul>
-                  <button class="tier-btn premium-btn" @click="handlePurchase('bordeaux','premium')">立即訂閱</button>
-                </div>
-              </div>
-            </template>
-            <div v-else class="planning-body">
-              <p>此課程目前暫停開放，敬請期待！</p>
-              <button class="tier-btn free-btn" @click="handleFreeTier">先體驗 Level 1 免費</button>
             </div>
           </div>
 
@@ -445,6 +396,49 @@
             </div>
           </div>
 
+          <!-- ── New Zealand ── -->
+          <div class="course-card newzealand">
+            <div :class="['card-status', courseStatuses.newzealand ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.newzealand ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🥝</div>
+              <div class="card-region">New Zealand · Clean & Green</div>
+              <h3 class="card-title">紐西蘭葡萄酒</h3>
+              <p class="card-desc">從 Marlborough 的 Sauvignon Blanc 到 Central Otago 的 Pinot Noir，探索南北兩島 17 個產區，互動衛星地圖帶你深入了解純淨大地的葡萄酒</p>
+            </div>
+            <div class="course-preview-strip newzealand-strip">
+              <div class="cp-stat">
+                <span class="cp-num">17</span>
+                <span class="cp-label">葡萄酒<br>產區</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">2</span>
+                <span class="cp-label">主要<br>島嶼</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">SB</span>
+                <span class="cp-label">旗艦<br>品種</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3+</span>
+                <span class="cp-label">課程<br>等級</span>
+              </div>
+            </div>
+            <div class="course-preview-features newzealand-features">
+              <span class="cpf-item newzealand-tag">✔ 17 產區互動衛星地圖</span>
+              <span class="cpf-item newzealand-tag">✔ Marlborough SB 品種深度解析</span>
+              <span class="cpf-item newzealand-tag">✔ Central Otago Pinot Noir 產區</span>
+            </div>
+            <div class="card-actions">
+              <button v-if="courseStatuses.newzealand || isAdmin" class="card-cta newzealand-cta" @click="router.push('/newzealand')">🗺 探索地圖 →</button>
+              <span v-else class="planning-cta">開發中，敬請期待</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -453,7 +447,7 @@
     <section class="features-section">
       <div class="section-inner">
         <div class="section-header">
-          <h2>為什麼選擇 Wine Academy？</h2>
+          <h2>為什麼選擇侍酒師的筆記本？</h2>
         </div>
         <div class="features-grid">
           <div class="feature-item" v-for="f in features" :key="f.title">
@@ -522,14 +516,14 @@
         <div class="footer-logo">
           <span>🍷</span>
           <div>
-            <div class="fl-title">Wine Academy 葡萄酒學院</div>
-            <div class="fl-copy">© 2026 葡萄酒學院 · 保留所有權利</div>
+            <div class="fl-title">侍酒師的筆記本</div>
+            <div class="fl-copy">© 2026 侍酒師的筆記本 · 保留所有權利</div>
           </div>
         </div>
         <div class="footer-links">
           <router-link to="/login">登入</router-link>
           <router-link to="/register">註冊</router-link>
-          <a href="mailto:support@wineacademy.tw">聯絡我們</a>
+          <a href="mailto:support@sommeliersnotebook.tw">聯絡我們</a>
         </div>
       </div>
     </footer>
@@ -730,6 +724,7 @@ const handleLogout = async () => {
 const coursesRef = ref(null)
 const scrollToCourses = () => coursesRef.value?.scrollIntoView({ behavior: 'smooth' })
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+const goToPricing = () => router.push('/pricing')
 
 // ─── 免費開始 ─────────────────────────────────────────────────────────────────
 const handleStartFree = () => {
@@ -755,7 +750,7 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設偡 active=true 防止関你加載先閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true, germany: true, portugal: true, australia: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true, germany: true, portugal: true, australia: true, newzealand: true })
 
 async function loadCourseData() {
   try {
@@ -888,11 +883,11 @@ const bordeauxIncludes = [
 ]
 
 const features = [
-  { icon: '🗺️', title: '互動地圖學習', desc: '業界唯一結合 Mapbox 的產區地圖，可探索AOC分布、地質土壤、氣候熱力圖' },
-  { icon: '🎮', title: '遊戲化練習', desc: '4種互動遊戲：產區競答、左右岸識別、年份溫度排序、葡萄與土壤配對' },
-  { icon: '📊', title: '深度學習追蹤', desc: '記錄正確率、學習時長、各單元進度，並以成就徽章激勵學習動機' },
-  { icon: '📔', title: '品飲筆記本', desc: '隨時記錄品飲心得，可參考歷史年份氣候資料輔助分析' },
-  { icon: '🔬', title: '科學化內容', desc: '深入地質、氣候科學，用數據理解為何同一產區不同地塊有截然不同的風格' },
+  { icon: '🗺️', title: '互動衛星地圖', desc: '結合 Mapbox 的產區地圖，可探索 AOC 分布、地質土壤、氣候熱力圖，8 大產區全溦蓋' },
+  { icon: '🎮', title: '遊戲化練習', desc: '4 種互動遊戲：產區競答、左右岸識別、年份溫度排序、葡萄與土壤配對，持續激勵學習動力' },
+  { icon: '📊', title: '分級學習路徑', desc: 'Level 1–4 循序解鎖，從基础入門到專家認證，每個產區独立課程架構、內容實料豐富' },
+  { icon: '📔', title: '品飲筆記本', desc: '隨時記錄品飲心得，可參考歷史年份氣候資料輔助分析，建立屬於自己的葡萄酒詞典' },
+  { icon: '🔬', title: '科學化內容', desc: '深入地質、氣候科學，用數據理解為何同一產區不同地塊有截然不同的風格與層次' },
   { icon: '📱', title: '全裝置適配', desc: '桌機、平板、手機皆可流暢使用，隨時隨地學習不中斷' }
 ]
 
@@ -1092,10 +1087,37 @@ onMounted(async () => {
   transition: all .2s;
 }
 .cta-secondary:hover { background: rgba(212,175,55,0.08); }
+.cta-tertiary {
+  padding: 14px 28px;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 30px;
+  color: #9a8878;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+.cta-tertiary:hover { border-color: rgba(255,255,255,0.3); color: #c0b098; }
+/* 未登入 Guest CTA */
+.guest-cta { flex-direction: column; align-items: center; gap: 0; }
+.region-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 28px; }
+.rb {
+  padding: 6px 14px;
+  background: rgba(212,175,55,0.1);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  color: #d4af37;
+  transition: background .2s;
+}
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+.cta-trust { font-size: 0.78rem; color: #6a5848; margin: 0; letter-spacing: 0.3px; }
 /* 已登入課程入口 */
-.logged-in-cta { flex-direction: column; align-items: center; }
-.course-entry-title { color: #d4af37; font-size: 1rem; margin-bottom: 16px; }
-.course-entry-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.logged-in-cta { flex-direction: column; align-items: center; gap: 0; }
+.course-entry-title { color: #d4af37; font-size: 1rem; margin-bottom: 20px; }
+.course-entry-groups { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 680px; }
+.ceg-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.ceg-label { font-size: 0.75rem; color: #9a8878; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 4px 10px; white-space: nowrap; }
 .cta-course {
   padding: 12px 24px;
   border-radius: 30px;
@@ -1151,22 +1173,23 @@ onMounted(async () => {
 .section-header p { color: #9a8878; font-size: 1rem; }
 
 /* ─── 課程區 ──────────────────────────────────────────────────────────────── */
-.courses-section { padding: 80px 0; background: #120508; }
+.courses-section { padding: 72px 0; background: #120508; }
 .courses-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   align-items: start;
 }
-@media (max-width: 1200px) { .courses-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 1024px) { .courses-grid { grid-template-columns: 1fr; max-width: 580px; margin: 0 auto; } }
+@media (max-width: 1280px) { .courses-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 960px)  { .courses-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .courses-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } }
 
 /* ─── 課程卡片 ────────────────────────────────────────────────────────────── */
 .course-card {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
-  padding: 28px;
+  padding: 22px;
   position: relative;
   overflow: hidden;
 }
@@ -1244,6 +1267,19 @@ onMounted(async () => {
   box-shadow: 0 4px 20px rgba(0,39,78,0.45);
 }
 .australia-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,39,78,0.6); }
+/* New Zealand card */
+.newzealand-strip { background: rgba(0,100,0,0.07); border-color: rgba(0,100,0,0.2); }
+.newzealand-strip .cp-num { color: #006400; font-size: 0.9rem; }
+.newzealand-strip .cp-label { color: #2a6a2a; }
+.newzealand-strip .cp-divider { background: rgba(0,100,0,0.25); }
+.newzealand-features .newzealand-tag { color: #006400; background: rgba(0,100,0,0.06); border-color: rgba(0,100,0,0.18); }
+.newzealand-cta { background: linear-gradient(135deg, #006400, #004d00) !important; }
+.newzealand-btn {
+  background: linear-gradient(135deg, #006400, #4caf50);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,100,0,0.45);
+}
+.newzealand-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,100,0,0.6); }
 /* tier tagline */
 .tier-tagline {
   font-size: 0.68rem; color: #7a6060;
@@ -1289,6 +1325,34 @@ onMounted(async () => {
 .card-status.planning { background: rgba(107,114,128,0.15); color: #9ca3af; border: 1px solid rgba(107,114,128,0.3); }
 .planning-body { text-align: center; padding: 24px 16px; color: #9a8878; font-size: 0.9rem; line-height: 1.6; }
 .planning-body p { margin: 0 0 16px; }
+/* ── Bordeaux card pricing CTA ──────────────────────────────────────── */
+.card-pricing-cta { padding: 20px 0 8px; }
+.cpc-hint { font-size: 0.78rem; color: #8a7860; line-height: 1.6; margin-bottom: 14px; text-align: center; }
+.cpc-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.cpc-btn-free {
+  padding: 11px 24px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.07);
+  color: #d0c8b8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+}
+.cpc-btn-free:hover { background: rgba(255,255,255,0.13); }
+.cpc-btn-plan {
+  padding: 11px 24px;
+  border-radius: 22px;
+  border: 1.5px solid rgba(212,175,55,0.5);
+  background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(212,175,55,0.05));
+  color: #d4af37;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+}
+.cpc-btn-plan:hover { background: rgba(212,175,55,0.18); transform: translateY(-1px); }
 .planning-cta { color: #6b7280; font-size: 0.85rem; font-style: italic; }
 .card-hero { margin-bottom: 20px; }
 .card-icon { font-size: 2.4rem; margin-bottom: 8px; }

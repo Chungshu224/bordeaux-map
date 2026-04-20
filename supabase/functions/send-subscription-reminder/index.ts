@@ -24,7 +24,7 @@ const SUPABASE_URL            = Deno.env.get('SUPABASE_URL')!
 const SUPABASE_SERVICE_KEY    = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
 const RESEND_API_KEY          = Deno.env.get('RESEND_API_KEY')!
 const SITE_URL                = Deno.env.get('SITE_URL') ?? 'https://yoursite.com'
-const FROM_EMAIL              = 'Wine Academy <noreply@yourdomain.com>'
+const FROM_EMAIL              = '侍酒師的筆記本 <noreply@yourdomain.com>'
 
 // ── 到期規則 ────────────────────────────────────────────────────────────────
 const REMINDER_RULES = [
@@ -51,8 +51,8 @@ function buildEmailHtml(
   <div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.08)">
     <div style="background:linear-gradient(135deg,#8b1a2b,#c0392b);padding:32px 40px;text-align:center">
       <div style="font-size:2.4rem">🍷</div>
-      <h1 style="color:#fff;margin:8px 0 4px;font-size:1.6rem">Wine Academy</h1>
-      <p style="color:rgba(255,255,255,.8);margin:0;font-size:.9rem">葡萄酒學院</p>
+      <h1 style="color:#fff;margin:8px 0 4px;font-size:1.6rem">侍酒師的筆記本</h1>
+      <p style="color:rgba(255,255,255,.8);margin:0;font-size:.9rem">The Sommelier's Notebook</p>
     </div>
     <div style="padding:36px 40px">
       <p style="color:#333;margin:0 0 16px">親愛的 <strong>${userName}</strong>，您好：</p>

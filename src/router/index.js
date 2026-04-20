@@ -45,7 +45,7 @@ const routes = [
     path: '/bordeaux',
     name: 'Home',
     component: () => import('../components/LevelSelection.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🍷 波爾多 · 侍酒師的筆記本' }
   },
 
   // ─── 布根地課程 ─────────────────────────────────────────────────────────────
@@ -53,7 +53,7 @@ const routes = [
     path: '/bourgogne',
     name: 'Bourgogne',
     component: () => import('../components/BourgognePage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🍇 布根地 · 侍酒師的筆記本' }
   },
 
   // ─── 義大利課程 ─────────────────────────────────────────────────────────────
@@ -61,7 +61,7 @@ const routes = [
     path: '/italy',
     name: 'Italy',
     component: () => import('../components/ItalyPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🇮🇹 義大利 · 侍酒師的筆記本' }
   },
 
   // ─── 西班牙探索地圖 ─────────────────────────────────────────────────────────
@@ -69,7 +69,7 @@ const routes = [
     path: '/spain',
     name: 'Spain',
     component: () => import('../components/SpainPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🇪🇸 西班牙 · 侍酒師的筆記本' }
   },
 
   // ─── 德國探索地圖 ───────────────────────────────────────────────────────────
@@ -77,7 +77,7 @@ const routes = [
     path: '/germany',
     name: 'Germany',
     component: () => import('../components/GermanyPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🇩🇪 德國 · 侍酒師的筆記本' }
   },
 
   // ─── 葡萄牙探索地圖 ─────────────────────────────────────────────────────────
@@ -85,7 +85,7 @@ const routes = [
     path: '/portugal',
     name: 'Portugal',
     component: () => import('../components/PortugalPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🇵🇹 葡萄牙 · 侍酒師的筆記本' }
   },
 
   // ─── 澳洲葡萄酒課程 ─────────────────────────────────────────────────────────
@@ -93,7 +93,22 @@ const routes = [
     path: '/australia',
     name: 'Australia',
     component: () => import('../components/AustraliaPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🦘 澳洲 · 侍酒師的筆記本' }
+  },
+
+  // ─── 紐西蘭葡萄酒課程 ───────────────────────────────────────────────────────
+  {
+    path: '/newzealand',
+    name: 'NewZealand',
+    component: () => import('../components/NewZealandPage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🥝 紐西蘭 · 侍酒師的筆記本' }
+  },
+
+  // ─── 定價方案頁 ──────────────────────────────────────────────────────────────
+  {
+    path: '/pricing',
+    name: 'Pricing',
+    component: () => import('../components/PricingPage.vue'),
   },
 
   // ─── 使用者儀表板 ───────────────────────────────────────────────────────────
@@ -139,28 +154,28 @@ const routes = [
     path: '/learning',
     name: 'Learning',
     component: () => import('../components/LearningSystem.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' } // 預設最低，動態會覆蓋
+    meta: { requiresAuth: true, minimumTier: 'free', title: '📖 波爾多課程 · 侍酒師的筆記本' }
   },
   {
     // 地圖探索：free 以上均可進入 (AOC 群組與圖層由元件內部依 Tier 控管)
     path: '/explore',
     name: 'Explore',
     component: () => import('../components/BordeauxMap.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🗺️ 波爾多地圖 · 侍酒師的筆記本' }
   },
   {
     // 互動練習中心：basic 以上
     path: '/gamehub',
     name: 'GameHub',
     component: () => import('../components/GameHubPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'basic' }
+    meta: { requiresAuth: true, minimumTier: 'basic', title: '🎮 互動練習 · 侍酒師的筆記本' }
   },
   {
     // 品飲筆記本：premium 以上
     path: '/notebook',
     name: 'Notebook',
     component: () => import('../components/TastingNotebookPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'premium' }
+    meta: { requiresAuth: true, minimumTier: 'premium', title: '📝 品飲筆記 · 侍酒師的筆記本' }
   },
   {
     path: '/upgrade',
@@ -265,6 +280,26 @@ router.beforeEach(async (to, from, next) => {
 
   // 4. 放行
   next()
+})
+
+// ── 路由切換後更新瀏覽器標題 ─────────────────────────────────────────────────
+const LEVEL_TITLES = {
+  1: '📖 L1 波爾多入門',
+  2: '📗 L2 波爾多進階',
+  3: '📘 L3 波爾多深探',
+  4: '📙 L4 波爾多精通',
+}
+
+router.afterEach((to) => {
+  let title = to.meta.title
+
+  // /learning 依 level query 動態標題
+  if (to.name === 'Learning') {
+    const level = parseInt(to.query.level) || 1
+    title = `${LEVEL_TITLES[level] || `L${level} 課程`} · 侍酒師的筆記本`
+  }
+
+  document.title = title || '🍷 侍酒師的筆記本 · The Sommelier\'s Notebook'
 })
 
 export default router

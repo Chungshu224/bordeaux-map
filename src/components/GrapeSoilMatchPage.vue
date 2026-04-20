@@ -165,7 +165,7 @@
       <!-- 遊戲分享卡 (隱藏，供截圖用) -->
       <div ref="gameShareEl" class="game-share-card">
         <div class="gsc-header">
-          <span class="gsc-logo">🍷 波爾多葡萄酒學院</span>
+          <span class="gsc-logo">🍷 侍酒師的筆記本</span>
           <span class="gsc-game">🍇 品種×土壤配對</span>
         </div>
         <div class="gsc-result-icon">{{ resultEmoji }}</div>
@@ -203,7 +203,7 @@ const shareGame = async () => {
     const blob = await new Promise(r => canvas.toBlob(r, 'image/png'))
     const file = new File([blob], 'grape-soil-score.png', { type: 'image/png' })
     if (navigator.canShare?.({ files: [file] })) {
-      await navigator.share({ title: '品種×土壤配對', text: `我在波爾多葡萄酒學院拿到 ${score.value} 分！`, files: [file] })
+      await navigator.share({ title: '品種×土壤配對', text: `我在侍酒師的筆記本拿到 ${score.value} 分！`, files: [file] })
     } else {
       const url = URL.createObjectURL(blob)
       const a = Object.assign(document.createElement('a'), { href: url, download: 'grape-soil-score.png' })

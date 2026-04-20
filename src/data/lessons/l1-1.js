@@ -11,7 +11,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          歡迎來到波爾多葡萄酒學院！在這門入門課程中，我們將從最基礎也最重要的問題開始：波爾多在哪裡？這個看似簡單的問題，卻是理解波爾多葡萄酒偉大之處的第一把鑰匙。
+          歡迎來到侍酒師的筆記本！在這門入門課程中，我們將從最基礎也最重要的問題開始：波爾多在哪裡？這個看似簡單的問題，卻是理解波爾多葡萄酒偉大之處的第一把鑰匙。
         </p>
 
         <p class="intro-context">

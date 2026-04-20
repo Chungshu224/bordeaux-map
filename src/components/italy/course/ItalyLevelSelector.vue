@@ -13,8 +13,8 @@
         <div class="brand-logo">
           <div class="wine-glass-icon">🇮🇹</div>
           <div class="brand-text">
-            <h1 class="brand-title">Italy Wine Academy</h1>
-            <p class="brand-subtitle">義大利葡萄酒學院</p>
+            <h1 class="brand-title">侍酒師的筆記本</h1>
+            <p class="brand-subtitle">The Sommelier's Notebook</p>
           </div>
         </div>
         <div class="user-panel">

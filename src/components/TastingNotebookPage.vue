@@ -113,7 +113,7 @@
       <!-- 筆記分享用卡片 (隱藏到畫面外，供截圖用) -->
       <div ref="noteShareEl" class="nb-share-card">
         <div class="nsc-header">
-          <div class="nsc-logo">🍷 波爾多葡萄酒學院</div>
+          <div class="nsc-logo">🍷 侍酒師的筆記本</div>
           <div :class="['nsc-status', sharingNote?.status]">
             {{ sharingNote?.status === 'tried' ? '✓ 已品飲' : '♡ 想喝' }}
           </div>
