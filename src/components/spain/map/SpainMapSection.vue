@@ -7,7 +7,7 @@
     <!-- Header -->
     <div class="map-header">
       <div class="map-header-left">
-        <button class="map-hdr-btn" @click="emit('back')">← 返回自治區</button>
+        <button class="map-hdr-btn" @click="emit('back')">← {{ backLabel }}</button>
         <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
       </div>
       <h1>{{ region.icon }} {{ region.name }} 產區地圖</h1>
@@ -267,7 +267,8 @@ import { authActions } from '@/stores/authStore.js'
 import { TIER_WEIGHT } from '@/router/index.js'
 
 const props = defineProps({
-  region: { type: Object, required: true }
+  region: { type: Object, required: true },
+  backLabel: { type: String, default: '返回自治區' },
 })
 const emit = defineEmits(['back'])
 const router = useRouter()

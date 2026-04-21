@@ -181,8 +181,8 @@ function geojsonBbox(geojson) {
 
 const router = useRouter()
 
-defineProps({ embedded: { type: Boolean, default: false } })
-defineEmits(['back-to-course'])
+const props = defineProps({ embedded: { type: Boolean, default: false }, initialRegion: { type: Object, default: null } })
+const emits = defineEmits(['back-to-course'])
 
 // ── 狀態 ──────────────────────────────────────────────────────
 const mapContainer = ref(null)
@@ -399,6 +399,10 @@ async function initMap(retry = 0) {
       mapReady.value = true
       // 預設顯示所有產區輪廓
       await loadAllRegionsOverlay()
+      // 若從課程指定產區，自動選取
+      if (props.initialRegion?.folder) {
+        await selectRegion(props.initialRegion.group, props.initialRegion.folder)
+      }
     })
     map.on('error', e => { mapError.value = `地圖錯誤: ${e.error?.message || ''}` })
   } catch (err) {

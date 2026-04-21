@@ -11,6 +11,14 @@ export const lessonContent = [
     background: 'linear-gradient(135deg, #1e5f74 0%, #2c8c5e 100%)'
   },
   {
+    component: 'HungaryRegionMapSlide',
+    title: '匈牙利 22 個法定葡萄酒產區全覽',
+    componentProps: {
+      mapRegion: 'all',
+      description: '匈牙利全境 22 個法定葡萄酒產區（PDO），分布於喀爾巴阡盆地，從西北邊境的蘇普朗到東北角的托卡伊'
+    }
+  },
+  {
     title: '喀爾巴阡盆地：孕育葡萄酒的天然溫室',
     highlights: [
       { id: 1, icon: '⛰️', title: '天然屏障', content: '喀爾巴阡山脈（Carpathian Mountains）環繞匈牙利北側和東側，擋住冷空氣，形成溫暖盆地' },

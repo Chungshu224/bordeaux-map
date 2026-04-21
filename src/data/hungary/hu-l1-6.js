@@ -11,6 +11,14 @@ export const lessonContent = [
     background: 'linear-gradient(135deg, #d4a017 0%, #8b6914 100%)'
   },
   {
+    component: 'HungaryRegionMapSlide',
+    title: 'Tokaj 產區地理全貌',
+    componentProps: {
+      mapRegion: 'Tokaj',
+      description: '托卡伊 UNESCO 世界遺產葡萄酒區域，橫跨 27 個村莊，Bodrog 與 Tisza 河谷的秋季晨霧是貴腐菌生長的天然溫床'
+    }
+  },
+  {
     title: '貴腐的奇蹟：Botrytis Cinerea 的魔法',
     highlights: [
       { id: 1, icon: '🦠', title: '什麼是貴腐菌？', content: 'Botrytis Cinerea 真菌以穿透葡萄皮，讓水分蒸發、糖分濃縮，若在正確條件下是「高貴的腐爛（Noble Rot）」' },

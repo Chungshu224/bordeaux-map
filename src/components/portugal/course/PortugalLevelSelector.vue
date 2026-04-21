@@ -191,7 +191,7 @@ const levels = [
     title:    '葡萄牙葡萄酒大師',
     icon:     '🏆',
     gradient: 'linear-gradient(135deg, #B8860B, #DAA520)',
-    status:   'coming',
+    status:   'active',
     difficulty: '大師',
     desc: '進階品鑑技巧、年份分析、盲品策略、與世界頂級葡萄酒的比較，以及葡萄牙葡萄酒的投資與收藏',
     topics: ['年份分析', '盲品技巧', '陳年潛力', '收藏價值'],

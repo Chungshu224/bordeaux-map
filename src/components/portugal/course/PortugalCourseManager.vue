@@ -26,6 +26,7 @@
       :isFinalExam="activeLesson?.isFinalExam || false"
       @close="closeLesson"
       @complete="handleComplete"
+      @openFullMap="$emit('openMap')"
     />
 
   </div>

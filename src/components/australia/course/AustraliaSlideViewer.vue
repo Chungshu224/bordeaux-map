@@ -103,6 +103,11 @@
           </div>
         </template>
 
+        <!-- 地圖 -->
+        <template v-else-if="slide.type === 'map'">
+          <AustraliaMapSlide :slide="slide" />
+        </template>
+
         <!-- 佔位 -->
         <template v-else>
           <div class="slide-placeholder">
@@ -140,6 +145,7 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { getAustraliaLessonSlides } from '../data/lessonSlides.js'
+import AustraliaMapSlide from './slides/AustraliaMapSlide.vue'
 
 const props = defineProps({
   lesson:     { type: Object, required: true },

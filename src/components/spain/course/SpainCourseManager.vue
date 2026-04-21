@@ -41,6 +41,7 @@
       :isFinalExam="activeLesson?.isFinalExam || false"
       @close="closeLesson"
       @complete="handleComplete"
+      @openRegionMap="(key) => $emit('openRegionMap', key)"
     />
 
   </div>
@@ -56,7 +57,7 @@ import SpainGameHubPage from '../games/SpainGameHubPage.vue'
 import { courseLevels, getUserProgress, saveProgress, getLevelProgressPercent } from '../data/courseLevels.js'
 import { globalSpainAchievementManager } from '../../../stores/spainAchievementSystem.js'
 
-defineEmits(['openMap', 'openSelector'])
+defineEmits(['openMap', 'openSelector', 'openRegionMap'])
 
 const view = ref('levelSelector')
 const selectedLevelKey = ref(null)

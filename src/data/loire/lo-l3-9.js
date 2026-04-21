@@ -34,5 +34,18 @@ export const lessonContent = [
         explanation: 'Sancerre 是羅亞爾河谷的重要 AOC，是本課程的核心學習對象。'
       }
     ]
+  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Centre-Loire 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Centre-Loire：Sancerre & Pouilly-Fumé',
+        description: '羅亞爾河谷最東端的 Sauvignon Blanc 聖地，礦石感的巔峰',
+        mapGroup: 'Centre',
+        highlightFiles: ['Sancerre.geojson', 'Pouilly-Fumé-ou-Blanc-Fumé-de-Pouilly.geojson', 'Menetou-Salon.geojson'],
+      }
+    }
   }
 ]

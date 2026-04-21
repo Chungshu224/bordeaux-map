@@ -689,6 +689,12 @@ const P1M4L1_slides = [
     explanation: '波特酒通過加烈工藝（加入葡萄烈酒）達到 19–22% 的酒精濃度，同時保留了大量殘糖，形成獨特的甜型加烈酒。',
   },
   {
+    type: 'map',
+    title: 'Douro DOC 產區地圖',
+    description: '杜羅河谷是葡萄牙最古老的法定葡萄酒產區，1756 年劃定，2001 年獲 UNESCO 世界遺產',
+    mapRegion: 'Douro',
+  },
+  {
     type: 'summary',
     message: '恭喜完成第十課！您已初步認識 Douro 和 Porto。',
     keyPoints: [
@@ -744,6 +750,12 @@ const P1M4L2_slides = [
     options: ['酒的顏色是綠色', '年輕新鮮的意思', '使用綠色葡萄品種', '產區土壤是綠色'],
     answer: 1,
     explanation: '「Vinho Verde」的「Verde（綠）」代表年輕、新鮮，不是顏色。Vinho Verde 可以是白酒、紅酒或粉紅酒，以白酒最常見。',
+  },
+  {
+    type: 'map',
+    title: 'Vinho Verde DOC 產區地圖',
+    description: '葡萄牙最大的 DOC，位於西北部 Minho 大區，大西洋氣候，年雨量高達 1,500mm',
+    mapRegion: 'Vinho Verde',
   },
   {
     type: 'summary',
@@ -805,6 +817,12 @@ const P1M4L3_slides = [
     options: ['Garnacha', 'Monastrell', 'Tempranillo', 'Syrah'],
     answer: 2,
     explanation: 'Aragonez 是 Alentejo 最重要的紅品種，正是西班牙著名品種 Tempranillo 的葡萄牙名稱。同一品種在 Douro 稱為 Tinta Roriz。',
+  },
+  {
+    type: 'map',
+    title: 'Alentejo DOC 產區地圖',
+    description: '葡萄牙南部廣大平原，地中海氣候，年日照超過 3,000 小時，是近代葡萄牙葡萄酒的代表產區',
+    mapRegion: 'Alentejo',
   },
   {
     type: 'summary',
@@ -968,6 +986,12 @@ const P2M1L1_slides = [
     explanation: 'Cima Corgo 是 Douro 的精華核心，頂級 Vintage Port 主要來自這個子產區，Quinta do Crasto・Quinta do Vale Meão 等著名酒莊都集中在此。',
   },
   {
+    type: 'map',
+    title: 'Douro DOC 產區地圖',
+    description: '探索三大子產區：Baixo Corgo・Cima Corgo・Douro Superior，杜羅河沿岸的片岩梯田葡萄園',
+    mapRegion: 'Douro',
+  },
+  {
     type: 'summary',
     message: '恭喜完成 Douro 深度課程！',
     keyPoints: [
@@ -1052,6 +1076,12 @@ const P2M1L2_slides = [
     explanation: 'Vintage Port 在橡木桶中只陳年 2 年（短暫），然後裝瓶，瓶中繼續長期陳年。這是因為 Vintage Port 的複雜度主要來自瓶中陳年，而非桶陳。',
   },
   {
+    type: 'map',
+    title: 'Porto DOC 產區地圖',
+    description: '波特酒的法定產區，與 Douro 高度重疊，是全球最著名加烈甜酒的唯一合法產地',
+    mapRegion: 'Porto',
+  },
+  {
     type: 'summary',
     message: '恭喜完成波特酒類型課程！',
     keyPoints: [
@@ -1121,6 +1151,12 @@ const P2M5L1_slides = [
     explanation: 'Canteiro 是頂級馬德拉酒的自然加熱方式，將酒桶放在酒莊頂樓，利用大西洋氣候的自然溫度和空氣緩慢熟化，過程可達數十年，品質遠優於工業 Estufagem。',
   },
   {
+    type: 'map',
+    title: 'Madeira DOC 產區地圖',
+    description: '位於大西洋上的火山島，以獨特的加熱氧化工藝釀造出可陳年百年的馬德拉酒',
+    mapRegion: 'Madeira',
+  },
+  {
     type: 'summary',
     message: '恭喜完成馬德拉課程！',
     keyPoints: [
@@ -1176,6 +1212,12 @@ const P2M5L2_slides = [
     explanation: 'Pico 島的葡萄園建立在黑色玄武岩火山岩石上，農民用玄武岩堆砌的石牆保護葡萄藤，這個景觀在 2004 年獲 UNESCO 世界遺產認定。',
   },
   {
+    type: 'map',
+    title: 'Açores IGP 產區地圖',
+    description: '葡萄牙大西洋島嶼群，距本土 1,500 公里，Pico 島玄武岩石牆葡萄園是 UNESCO 世界遺產',
+    mapRegion: 'Açores',
+  },
+  {
     type: 'summary',
     message: '恭喜完成亞速爾課程！',
     keyPoints: [
@@ -1183,6 +1225,967 @@ const P2M5L2_slides = [
       'Pico 島玄武岩石牆葡萄園 2004 年獲 UNESCO 世界遺產',
       '玄武岩土壤賦予獨特鹹味礦物質感',
       '主要品種：Verdelho・Arinto dos Açores，高酸清爽適合海鮮',
+    ],
+  },
+]
+
+    ],
+  },
+]
+
+// ───────────────────────────────────────────────────────────────
+//  Level 4 投影片 — 大師品鑑與垂直年份
+// ───────────────────────────────────────────────────────────────
+
+// P4M1L1 — Barca Velha・Quinta do Crasto・Niepoort 頂級酒莊
+const P4M1L1_slides = [
+  {
+    type: 'cover',
+    icon: '👑',
+    gradient: 'linear-gradient(135deg, #B8860B, #DAA520)',
+    title: '葡萄牙頂級酒莊解析',
+    subtitle: 'Level 4 · 第一章 · 第一課',
+    points: [
+      { icon: '🏰', label: 'Barca Velha', text: '葡萄牙最著名的頂級紅酒，Ferreira 酒莊的旗艦作品' },
+      { icon: '🍷', label: 'Quinta do Crasto', text: 'Douro 老藤葡萄酒的代表，年份力量與優雅並存' },
+      { icon: '🌿', label: 'Niepoort', text: '荷裔家族釀酒師 Dirk Niepoort，自然酒先驅' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🏰',
+    title: 'Barca Velha — 葡萄牙的 Pétrus',
+    html: `
+      <p><strong>Barca Velha</strong> 是葡萄牙最具代表性的頂級紅酒，由 Ferreira 酒莊於 1952 年由 Fernando Nicolau de Almeida 創制。它常被稱為「葡萄牙的 Pétrus」，每次發布都引發市場轟動。</p>
+      <h4>🍇 品種與產區</h4>
+      <ul>
+        <li><strong>產區</strong>：Douro Superior（杜羅河上游，靠近西班牙邊界）</li>
+        <li><strong>主要品種</strong>：Touriga Nacional、Touriga Franca、Tinta Roriz（Tempranillo）</li>
+        <li><strong>橡木桶</strong>：法國與美國橡木桶混合陳年，約 24 個月</li>
+      </ul>
+      <h4>📊 極罕見的發布規律</h4>
+      <ul>
+        <li>並非每年都生產：只在最優年份才發布，部分年份降格為 <em>Reserva Especial</em></li>
+        <li>自 1952 年至今，共發布 26 個年份（截至 2023 年）</li>
+        <li>著名年份：1964、1982、1985、1991、2004、2011</li>
+        <li>市場價格：頂級年份每瓶可達數百至逾千歐元</li>
+      </ul>
+      <h4>🎯 品飲特點</h4>
+      <p>深紫紅色，香氣複雜：黑莓、紫羅蘭、甘草、雪松、菸草。入口豐滿但絲滑，單寧細緻，酸度支撐，尾韻長達分鐘級別。可陳年 30+ 年。</p>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '三大頂級酒莊比較',
+    items: [
+      {
+        icon: '🏰',
+        label: 'Barca Velha（Ferreira）',
+        desc: '最具傳奇性，只在頂級年份發布。Douro Superior。偉大陳年潛力，葡萄牙最貴紅酒之一',
+        color: '#8B0000',
+      },
+      {
+        icon: '🗻',
+        label: 'Quinta do Crasto',
+        desc: '家族獨立酒莊，位於 Douro 河岸峭壁。老藤 Reserva 是招牌，展現 Douro 的力量與優雅平衡',
+        color: '#6B3A2A',
+      },
+      {
+        icon: '🌿',
+        label: 'Niepoort',
+        desc: '荷裔第五代家族，Dirk Niepoort 是葡萄牙自然酒先驅。Charme 與 Batuta 代表精緻 Douro 風格',
+        color: '#2C4A1E',
+      },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🌿',
+    title: 'Niepoort — 現代 Douro 的革命者',
+    html: `
+      <p><strong>Dirk Niepoort</strong> 是葡萄牙葡萄酒界最具影響力的人物之一。荷蘭裔家族第五代，將 Niepoort 從波特酒莊轉型為精品 Douro 乾型紅酒的先驅。</p>
+      <h4>🍷 旗艦酒款</h4>
+      <ul>
+        <li><strong>Batuta</strong>：Douro 老藤混釀，複雜優雅，每年僅生產少量。國際頂級媒體評分 95+</li>
+        <li><strong>Charme</strong>：以 Touriga Nacional 為主，展現 Douro 的花香與精緻</li>
+        <li><strong>Redoma</strong>：白酒旗艦，Rabigato 等本土品種，礦物感突出</li>
+      </ul>
+      <h4>🌱 自然農法理念</h4>
+      <ul>
+        <li>減少農藥與化學品使用，強調風土表達</li>
+        <li>全串發酵（whole-cluster fermentation），增加複雜性</li>
+        <li>最低干預釀造，讓葡萄原本個性說話</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: 'Barca Velha 並非每年都發布，不達標準的年份葡萄酒會以什麼名稱上市？',
+    options: ['Barca Nova', 'Reserva Especial', 'Vinha Velha', 'Segunda Selecção'],
+    answer: 1,
+    explanation: '當年份不夠優秀無法達到 Barca Velha 的嚴格標準時，葡萄酒會以「Reserva Especial」名稱發布，仍是高品質但較易親近的酒款。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成頂級酒莊課程！',
+    keyPoints: [
+      'Barca Velha：葡萄牙最傳奇紅酒，1952年創立，只在最佳年份發布',
+      'Quinta do Crasto：老藤 Reserva 代表 Douro 的力量與優雅',
+      'Niepoort：現代 Douro 先驅，Batuta 是自然酒運動的代表作',
+      '三者均來自 Douro 產區，展現不同釀酒哲學',
+    ],
+  },
+]
+
+// P4M1L2 — 盲品：Touriga Nacional vs. Syrah vs. Baga
+const P4M1L2_slides = [
+  {
+    type: 'cover',
+    icon: '🔬',
+    gradient: 'linear-gradient(135deg, #4A235A, #7D3C98)',
+    title: '盲品葡萄牙紅酒：三大品種識別',
+    subtitle: 'Level 4 · 盲品技術訓練',
+    points: [
+      { icon: '🍇', label: 'Touriga Nacional', text: '深紫、紫羅蘭、藍莓、高單寧、高酸、長尾韻' },
+      { icon: '🌶️', label: 'Syrah（Douro）', text: '黑胡椒、煙燻、深紅果香，法國品種在葡萄牙的表現' },
+      { icon: '🍒', label: 'Baga（Bairrada）', text: '高酸、高單寧、紅漿果，葡萄牙最難駕馭的品種' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍇',
+    title: 'Touriga Nacional — 葡萄牙的靈魂品種',
+    html: `
+      <p><strong>Touriga Nacional</strong> 是葡萄牙最重要的紅葡萄品種，被稱為葡萄牙葡萄酒的「靈魂」。原產於 Dão 產區，現已廣植於 Douro、Alentejo 等地。</p>
+      <h4>🎨 視覺特徵</h4>
+      <ul>
+        <li>酒色：<strong>極深紫黑色</strong>，不透明，杯緣略帶寶石紅</li>
+        <li>黏稠度高，掛杯明顯</li>
+      </ul>
+      <h4>👃 香氣特徵（盲品關鍵）</h4>
+      <ul>
+        <li>一類香氣：<strong>紫羅蘭花香</strong>（最重要的識別特徵！）藍莓、黑莓、黑醋栗</li>
+        <li>二類香氣：無（年輕時花果香主導）</li>
+        <li>三類香氣（陳年後）：雪松、菸草、甘草、巧克力</li>
+      </ul>
+      <h4>👅 口感特徵</h4>
+      <ul>
+        <li>高酸度、高單寧（但細膩），強健結構</li>
+        <li>中等至高酒精，酒體飽滿</li>
+        <li>尾韻極長，可達 30 秒以上（頂級年份）</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🌶️',
+    title: 'Syrah in Portugal vs. Baga — 對比識別',
+    html: `
+      <h4>🌶️ Syrah（葡萄牙，特別是 Douro/Alentejo）</h4>
+      <ul>
+        <li><strong>視覺</strong>：深紫黑，比 Touriga Nacional 略淡</li>
+        <li><strong>香氣</strong>：<em>黑胡椒香</em>（最強識別特徵！）煙燻、橄欖、薰衣草、黑橄欖</li>
+        <li><strong>口感</strong>：柔滑單寧，中等至高酸，豐滿酒體，比法國 Syrah 更溫暖圓潤</li>
+        <li><strong>陳年</strong>：雪松、皮革、培根脂肪（Rhône 典型風味）</li>
+      </ul>
+      <h4>🍒 Baga（Bairrada）</h4>
+      <ul>
+        <li><strong>視覺</strong>：中等深度紅色（比上兩者淡），帶石榴紅邊緣</li>
+        <li><strong>香氣</strong>：<em>紅色漿果</em>（草莓、酸櫻桃）、玫瑰花瓣、土壤感、輕微青梗</li>
+        <li><strong>口感</strong>：<em>極高酸度</em>（與 Nebbiolo/Sangiovese 相當）、<em>高澀感單寧</em>、輕盈酒體</li>
+        <li><strong>誤判風險</strong>：年輕時非常緊澀，容易被誤認為缺陷。陳年後絲滑迷人</li>
+      </ul>
+      <h4>🧠 盲品速記口訣</h4>
+      <p><strong>T</strong>ouriga = <strong>V</strong>iolet（紫羅蘭）｜<strong>S</strong>yrah = <strong>P</strong>epper（胡椒）｜<strong>B</strong>aga = <strong>A</strong>cid（高酸）</p>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '三大品種盲品比較表',
+    items: [
+      { icon: '🍇', label: 'Touriga Nacional', desc: '深紫｜紫羅蘭花香（關鍵）｜藍黑果｜高酸高單寧｜長尾韻', color: '#4A235A' },
+      { icon: '🌶️', label: 'Syrah（葡萄牙）', desc: '深紫｜黑胡椒（關鍵）｜煙燻｜黑橄欖｜柔滑單寧', color: '#1C2833' },
+      { icon: '🍒', label: 'Baga（Bairrada）', desc: '中深紅｜紅漿果｜高酸（關鍵）｜緊澀單寧｜需陳年才顯魅力', color: '#943126' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '在盲品中，哪個香氣特徵最能幫助識別 Touriga Nacional？',
+    options: ['黑胡椒香', '紫羅蘭花香', '高酸度表現', '煙燻皮革'],
+    answer: 1,
+    explanation: '紫羅蘭花香是 Touriga Nacional 最獨特的識別特徵，在所有主要葡萄品種中極為罕見。這個花香加上深紫色澤和高單寧，構成識別 Touriga Nacional 的黃金三角。',
+  },
+  {
+    type: 'quiz',
+    question: 'Baga 在盲品中最常被誤判的原因是？',
+    options: ['酒色太淡', '缺乏香氣', '年輕時極高酸度和澀感常被誤認為缺陷', '酒精度太低'],
+    answer: 2,
+    explanation: 'Baga 是世界上酸度和單寧最高的品種之一，年輕時非常緊澀收斂，沒有經驗的品酒師容易誤判為品質問題。實際上這是 Baga 需要陳年才能展現魅力的結構特質。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成盲品技術訓練！',
+    keyPoints: [
+      'Touriga Nacional：紫羅蘭花香是最強識別特徵，深紫黑色，高酸高單寧',
+      'Syrah（葡萄牙）：黑胡椒香是關鍵，煙燻感，比法國版本更溫暖圓潤',
+      'Baga：高酸度是識別關鍵，年輕時緊澀，需陳年顯魅力',
+      '速記：Touriga=Violet ｜ Syrah=Pepper ｜ Baga=Acid',
+    ],
+  },
+]
+
+// P4M1L3 — 頂級波特酒垂直品鑑
+const P4M1L3_slides = [
+  {
+    type: 'cover',
+    icon: '🥃',
+    gradient: 'linear-gradient(135deg, #5c2a0a, #8B4513)',
+    title: 'Vintage Port 垂直品鑑：年份解析',
+    subtitle: 'Level 4 · 波特酒年份深度研究',
+    points: [
+      { icon: '📅', label: '垂直品鑑', text: '同一酒莊不同年份的比較，揭示氣候與陳年對酒的影響' },
+      { icon: '🏆', label: '頂級年份', text: '2011、2007、2000、1994、1985、1977 等公認偉大年份' },
+      { icon: '⏳', label: '陳年演化', text: '觀察顏色從深紫→棕邊→橙棕的演化過程' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '📅',
+    title: 'Vintage Port 宣布制度與頂級年份',
+    html: `
+      <p><strong>Vintage Port</strong> 並非每年都宣布（declared）。酒莊通常在採收後第二個春天，由 IVDP（杜羅河谷葡萄酒協會）審查後決定是否宣布。</p>
+      <h4>📋 宣布流程</h4>
+      <ol>
+        <li>採收後 18 個月，在橡木桶中短暫陳年（通常 2 年）</li>
+        <li>酒莊向 IVDP 提交樣品申請宣布</li>
+        <li>通過後裝瓶，需 10-20 年瓶中陳年才達最佳狀態</li>
+      </ol>
+      <h4>🏆 近代公認頂級年份（Fladgate/Symington 等大莊均宣布）</h4>
+      <table style="width:100%;border-collapse:collapse;font-size:0.9em;margin-top:8px">
+        <tr style="background:#5c2a0a;color:white">
+          <th style="padding:8px">年份</th><th style="padding:8px">評級</th><th style="padding:8px">特徵</th><th style="padding:8px">最佳飲用</th>
+        </tr>
+        <tr style="background:#fdf6ec"><td style="padding:6px;text-align:center"><strong>2011</strong></td><td style="padding:6px">⭐⭐⭐⭐⭐</td><td style="padding:6px">絕世年份，平衡完美，單寧精緻</td><td style="padding:6px">2030–2060</td></tr>
+        <tr><td style="padding:6px;text-align:center"><strong>2007</strong></td><td style="padding:6px">⭐⭐⭐⭐⭐</td><td style="padding:6px">豐滿濃郁，果味豐沛，結構宏偉</td><td style="padding:6px">2025–2055</td></tr>
+        <tr style="background:#fdf6ec"><td style="padding:6px;text-align:center"><strong>2000</strong></td><td style="padding:6px">⭐⭐⭐⭐⭐</td><td style="padding:6px">千禧年份，芳香四溢，陳年力強</td><td style="padding:6px">2020–2050</td></tr>
+        <tr><td style="padding:6px;text-align:center"><strong>1994</strong></td><td style="padding:6px">⭐⭐⭐⭐⭐</td><td style="padding:6px">30年陳年進入最佳狀態，複雜精妙</td><td style="padding:6px">現在–2040</td></tr>
+        <tr style="background:#fdf6ec"><td style="padding:6px;text-align:center"><strong>1985</strong></td><td style="padding:6px">⭐⭐⭐⭐⭐</td><td style="padding:6px">最優雅年份之一，現已完全成熟</td><td style="padding:6px">現在–2030</td></tr>
+        <tr><td style="padding:6px;text-align:center"><strong>1977</strong></td><td style="padding:6px">⭐⭐⭐⭐⭐</td><td style="padding:6px">傳奇年份，歷史評分最高之一</td><td style="padding:6px">現在（顛峰）</td></tr>
+      </table>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🔍',
+    title: '垂直品鑑：如何解讀陳年變化',
+    html: `
+      <h4>🎨 顏色演化（視覺評估）</h4>
+      <table style="width:100%;border-collapse:collapse;font-size:0.9em">
+        <tr style="background:#5c2a0a;color:white">
+          <th style="padding:6px">陳年階段</th><th style="padding:6px">酒色</th><th style="padding:6px">杯緣顏色</th>
+        </tr>
+        <tr style="background:#fdf6ec"><td style="padding:6px">0–5 年</td><td style="padding:6px">深紫黑色</td><td style="padding:6px">寶石紫紅</td></tr>
+        <tr><td style="padding:6px">10–15 年</td><td style="padding:6px">深紅寶石</td><td style="padding:6px">磚紅</td></tr>
+        <tr style="background:#fdf6ec"><td style="padding:6px">20–30 年</td><td style="padding:6px">石榴紅</td><td style="padding:6px">棕橙邊</td></tr>
+        <tr><td style="padding:6px">40+ 年</td><td style="padding:6px">深棕琥珀</td><td style="padding:6px">橙棕明顯</td></tr>
+      </table>
+      <h4>👃 香氣演化</h4>
+      <ul>
+        <li><strong>年輕（0–10年）</strong>：黑莓、藍莓、黑醋栗、紫羅蘭，酒精感明顯</li>
+        <li><strong>中年（15–25年）</strong>：乾果（無花果、棗子）、雪松、菸草、甘草，果香退去</li>
+        <li><strong>成熟（30+年）</strong>：松露、咖啡、巧克力、皮革、精緻花香，複雜度達頂峰</li>
+      </ul>
+      <h4>📝 垂直品鑑筆記格式</h4>
+      <p>外觀 → 香氣（一/二/三類）→ 口感（甜度/酸度/單寧/酒體）→ 餘韻 → 與年份評分對照</p>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: 'Vintage Port 通常需要在瓶中陳年多少年才達到最佳飲用狀態？',
+    options: ['3–5 年', '5–8 年', '10–20 年以上', '與 Tawny 一樣，桶中陳年即可'],
+    answer: 2,
+    explanation: 'Vintage Port 在桶中只陳年 2 年就裝瓶，之後需要在瓶中進行長期陳年。大多數頂級 Vintage Port 需要 15–25 年才開始展現複雜度，最偉大的年份可以持續演化 50–80 年。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Vintage Port 垂直品鑑課程！',
+    keyPoints: [
+      'Vintage Port 並非每年宣布，只在氣候條件優異的年份才 declared',
+      '頂級年份：2011、2007、2000、1994、1985、1977',
+      '陳年顏色演化：深紫黑 → 石榴紅 → 棕橙（視覺判斷年齡的關鍵）',
+      '香氣演化：新鮮果香 → 乾果 → 松露咖啡皮革',
+      '最佳飲用時間：通常 15–30 年後，偉大年份可達 50+ 年',
+    ],
+  },
+]
+
+// P4M2L1 — 杜羅河谷年份評分指南 2000–2023
+const P4M2L1_slides = [
+  {
+    type: 'cover',
+    icon: '📊',
+    gradient: 'linear-gradient(135deg, #1a3a4a, #2980b9)',
+    title: '杜羅河谷年份評分指南：2000–2023',
+    subtitle: 'Level 4 · 年份深度解析',
+    points: [
+      { icon: '☀️', label: '年份差異的根源', text: '採收期降雨、夏季高溫、晝夜溫差決定葡萄品質' },
+      { icon: '📈', label: '近 24 年詳細評分', text: '按氣候條件、波特酒、Douro 乾紅三個維度評估' },
+      { icon: '🌡️', label: '氣候變遷趨勢', text: '21 世紀以來整體溫度上升，影響年份表現節奏' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '📊',
+    title: 'Douro 年份評分總表（2000–2023）',
+    html: `
+      <p>以下評分綜合 Wine Spectator、Robert Parker、IVDP 等主要評審意見，採 <strong>5 星制</strong>。</p>
+      <table style="width:100%;border-collapse:collapse;font-size:0.85em">
+        <tr style="background:#1a3a4a;color:white">
+          <th style="padding:6px">年份</th>
+          <th style="padding:6px">Douro 乾紅</th>
+          <th style="padding:6px">Vintage Port</th>
+          <th style="padding:6px">特徵摘要</th>
+        </tr>
+        <tr style="background:#eaf6ff"><td style="padding:5px;text-align:center"><strong>2023</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">待定</td><td style="padding:5px">涼爽採收期，高酸清爽</td></tr>
+        <tr><td style="padding:5px;text-align:center"><strong>2022</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐½</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐½</td><td style="padding:5px">乾熱夏季，濃郁豐滿</td></tr>
+        <tr style="background:#eaf6ff"><td style="padding:5px;text-align:center"><strong>2021</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐½</td><td style="padding:5px;text-align:center">⭐⭐⭐</td><td style="padding:5px">不均勻，部分區塊優秀</td></tr>
+        <tr><td style="padding:5px;text-align:center"><strong>2020</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px">世紀年份候選，集中深邃</td></tr>
+        <tr style="background:#eaf6ff"><td style="padding:5px;text-align:center"><strong>2019</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐</td><td style="padding:5px">均衡年份，優雅芬芳</td></tr>
+        <tr><td style="padding:5px;text-align:center"><strong>2017</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px">極佳年份，結構宏偉</td></tr>
+        <tr style="background:#eaf6ff"><td style="padding:5px;text-align:center"><strong>2016</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐½</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐½</td><td style="padding:5px">細膩優雅，適合中期陳年</td></tr>
+        <tr><td style="padding:5px;text-align:center"><strong>2015</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐½</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐½</td><td style="padding:5px">溫暖豐熟，Alentejo 特別佳</td></tr>
+        <tr style="background:#eaf6ff"><td style="padding:5px;text-align:center"><strong>2013</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐</td><td style="padding:5px">涼爽精緻，Bairrada 表現佳</td></tr>
+        <tr><td style="padding:5px;text-align:center"><strong>2011</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px">21 世紀最佳年份之一，均衡完美</td></tr>
+        <tr style="background:#eaf6ff"><td style="padding:5px;text-align:center"><strong>2009</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐</td><td style="padding:5px">溫暖豐滿，早熟型</td></tr>
+        <tr><td style="padding:5px;text-align:center"><strong>2007</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px">色深香濃，波特酒特別傑出</td></tr>
+        <tr style="background:#eaf6ff"><td style="padding:5px;text-align:center"><strong>2004</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px">Barca Velha 宣布，Douro 乾紅頂峰</td></tr>
+        <tr><td style="padding:5px;text-align:center"><strong>2003</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐</td><td style="padding:5px">歐洲熱浪年，過熟，酒精偏高</td></tr>
+        <tr style="background:#eaf6ff"><td style="padding:5px;text-align:center"><strong>2000</strong></td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px;text-align:center">⭐⭐⭐⭐⭐</td><td style="padding:5px">千禧年份，深邃均衡，陳年力強</td></tr>
+      </table>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🌡️',
+    title: '影響年份的四大氣候因素',
+    html: `
+      <h4>1. 🌸 冬春降雨（土壤蓄水）</h4>
+      <p>Douro 產區年均雨量 700-900mm，大部分集中在秋冬。春季適量降雨確保土壤水分儲備，是夏季旱期的關鍵。<strong>冬季過於乾燥</strong>（如 2012 年）會導致夏季水分壓力過大。</p>
+      <h4>2. ☀️ 夏季溫度與日照</h4>
+      <p>Douro 夏季平均氣溫 25–35°C，7-8 月高溫可達 40°C+。<strong>適度高溫</strong>促進成熟，但<strong>極端熱浪</strong>（如 2003 年）導致過熟、糖分激增、酸度喪失。</p>
+      <h4>3. 🌙 晝夜溫差</h4>
+      <p>Douro 的海拔差異（50–900m）創造顯著晝夜溫差，夜晚涼爽有助保留酸度與芳香化合物。高海拔葡萄園（如 Douro Superior 的部分地塊）在暖年仍可保持清爽酸度。</p>
+      <h4>4. 🌧️ 採收期（9–10 月）降雨</h4>
+      <p><strong>最關鍵因素</strong>：採收前 2–3 週的降雨會導致：</p>
+      <ul>
+        <li>葡萄吸水膨脹，稀釋風味</li>
+        <li>灰葡萄黴菌病（Botrytis）爆發</li>
+        <li>不均勻成熟，必須快速採收</li>
+      </ul>
+      <p>反之，乾燥涼爽的採收期（如 2011、2004、2000 年）是頂級年份的共同特徵。</p>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '以下哪個年份被公認為 21 世紀 Douro 河谷最佳年份之一，且 Barca Velha 也宣布了該年份？',
+    options: ['2003 年', '2004 年', '2009 年', '2013 年'],
+    answer: 1,
+    explanation: '2004 年是 Douro 乾紅酒的頂峰年份，Barca Velha 宣布了該年份（這是非常罕見的事件），同時也是頂級 Vintage Port 年份。採收前天氣乾燥，葡萄完全成熟且保留了良好酸度。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Douro 年份評分課程！',
+    keyPoints: [
+      '21世紀頂級年份：2020、2017、2011、2007、2004、2000',
+      '年份品質的決定因素：採收期降雨最關鍵，其次是夏季溫度和晝夜溫差',
+      '2003年熱浪年是反面教材：過熟、高酒精、低酸度',
+      '氣候變遷導致採收日期提前，挑戰傳統年份評估方式',
+    ],
+  },
+]
+
+// P4M2L2 — 氣候變遷對葡萄牙葡萄酒的影響
+const P4M2L2_slides = [
+  {
+    type: 'cover',
+    icon: '🌍',
+    gradient: 'linear-gradient(135deg, #1a5c2a, #2ecc71)',
+    title: '氣候變遷與葡萄牙葡萄酒的未來',
+    subtitle: 'Level 4 · 環境挑戰與應對策略',
+    points: [
+      { icon: '🌡️', label: '1.5°C 升溫現實', text: '葡萄牙南部 Alentejo 已是全歐洲升溫最快的區域之一' },
+      { icon: '🔄', label: '品種遷移', text: '耐熱品種需求上升，北方產區（Minho、Vinho Verde）受益' },
+      { icon: '🌊', label: '海拔與緯度', text: '高海拔葡萄園、西部大西洋海岸成為未來的避風港' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🌡️',
+    title: '葡萄牙面臨的氣候挑戰',
+    html: `
+      <h4>📈 已觀察到的變化（1990–2024）</h4>
+      <ul>
+        <li><strong>平均氣溫上升 1.2–1.8°C</strong>：南部 Alentejo 升幅最大，導致採收日期提前 2–3 週</li>
+        <li><strong>乾旱頻率增加</strong>：2004–2023 年間，葡萄牙南部發生 5 次嚴重乾旱</li>
+        <li><strong>極端熱浪</strong>：2003、2017、2022 年的熱浪造成不均勻過熟</li>
+        <li><strong>降雨不規律</strong>：總量未必減少，但分布更集中在秋冬，夏季更乾</li>
+      </ul>
+      <h4>🍷 對葡萄酒的具體影響</h4>
+      <ul>
+        <li>酒精度上升（12.5% → 13.5–14.5%）：葡萄糖分累積更快</li>
+        <li>酸度下降：影響陳年潛力和清爽感</li>
+        <li>風味偏向更成熟、果醬感，傳統花香和礦物感減少</li>
+        <li>採收時間壓縮：需要更快速決策</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '各產區的氣候變遷衝擊與因應',
+    items: [
+      { icon: '☀️', label: 'Alentejo（高衝擊）', desc: '最脆弱。夏季高溫+乾旱組合。對策：夜間採收、灌溉、尋找高海拔地塊、耐熱品種', color: '#C0392B' },
+      { icon: '🌊', label: 'Vinho Verde（受益）', desc: '涼爽大西洋氣候使其成為暖化的避風港。Alvarinho 在升溫後仍保持清爽，需求增加', color: '#27AE60' },
+      { icon: '⛰️', label: 'Douro（中衝擊）', desc: '高海拔葡萄園緩衝衝擊。挑戰：Douro Superior 過熱。機會：Douro 高海拔地塊品質提升', color: '#E67E22' },
+      { icon: '🏝️', label: 'Madeira（特殊）', desc: '島嶼氣候相對穩定，但熱帶化趨勢使白品種（Sercial）更難保持酸度', color: '#8E44AD' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🌱',
+    title: '葡萄牙酒莊的氣候適應策略',
+    html: `
+      <h4>🌿 農業技術層面</h4>
+      <ul>
+        <li><strong>提高葡萄樹高度</strong>（高 Lyre 或 Vertical Shoot Positioning），增加葉幕遮蔭，降低果串溫度</li>
+        <li><strong>延遲修剪</strong>：推遲萌芽，讓採收往後延，避開最熱時期</li>
+        <li><strong>精準灌溉</strong>：Alentejo 已廣泛採用滴灌，Douro 傳統上無灌溉，但法規逐漸放寬</li>
+        <li><strong>覆草</strong>（cover crop）：減少土壤蒸發，調節根部溫度</li>
+      </ul>
+      <h4>🍇 品種多樣化策略</h4>
+      <ul>
+        <li>重新發現耐熱耐旱的原生老品種：Alicante Bouschet、Moreto、Manteúdo</li>
+        <li>Alvarinho 北移：由 Minho 南延至更多產區</li>
+        <li>種植時間調整：選擇較涼爽朝向（北坡）和海拔較高地塊</li>
+      </ul>
+      <h4>🏔️ 地理遷移</h4>
+      <p>Serra da Estrela 山區、Beira Interior 內陸高地，以及 Vinho Verde 最北端的 Monção e Melgaço 子產區，正成為氣候避難所，投資湧入。</p>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '面對氣候變遷，哪個葡萄牙產區被認為是「受益者」，因為其涼爽大西洋氣候使其成為避風港？',
+    options: ['Alentejo', 'Douro Superior', 'Vinho Verde（Minho）', 'Algarve'],
+    answer: 2,
+    explanation: 'Vinho Verde 位於葡萄牙西北部，受大西洋影響最深，氣溫相對涼爽。隨著全球暖化，其他南部產區日益炎熱，Vinho Verde 的清爽特性反而更受市場青睞，尤其是 Alvarinho 白酒。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成氣候變遷課程！',
+    keyPoints: [
+      '葡萄牙南部 Alentejo 是歐洲暖化最快的區域之一，已上升 1.2–1.8°C',
+      'Vinho Verde 是受益者，涼爽大西洋氣候使其成為暖化避風港',
+      '應對策略：調整農業技術（高架式、延遲修剪）、品種多樣化、地理遷移',
+      '氣候變遷正在重塑葡萄牙葡萄酒的版圖，高海拔與北部地區潛力上升',
+    ],
+  },
+]
+
+// P4M2L3 — 有機、生物動力與自然酒
+const P4M2L3_slides = [
+  {
+    type: 'cover',
+    icon: '🌿',
+    gradient: 'linear-gradient(135deg, #155724, #28a745)',
+    title: '有機・生物動力・自然酒：葡萄牙的自然酒革命',
+    subtitle: 'Level 4 · 永續農業與釀造哲學',
+    points: [
+      { icon: '🌱', label: '有機農法', text: '禁用合成農藥和化肥，歐盟認證，葡萄牙有 3,500+ 公頃有機葡萄園' },
+      { icon: '🌕', label: '生物動力農法', text: '根據月相和宇宙節奏作業，Demeter 認證，哲學層面更深' },
+      { icon: '🍶', label: '自然酒', text: '最低干預釀造，不過濾不澄清，無新增 SO₂，風格多元極端' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🌱',
+    title: '三種農法的核心差異',
+    html: `
+      <table style="width:100%;border-collapse:collapse;font-size:0.9em">
+        <tr style="background:#155724;color:white">
+          <th style="padding:8px">項目</th>
+          <th style="padding:8px">有機農法</th>
+          <th style="padding:8px">生物動力農法</th>
+          <th style="padding:8px">自然酒</th>
+        </tr>
+        <tr style="background:#f0fff4">
+          <td style="padding:6px"><strong>認證機構</strong></td>
+          <td style="padding:6px">EU Organic / Ecocert</td>
+          <td style="padding:6px">Demeter / Biodyvin</td>
+          <td style="padding:6px">無官方認證（AVN 等協會）</td>
+        </tr>
+        <tr>
+          <td style="padding:6px"><strong>農藥</strong></td>
+          <td style="padding:6px">禁合成農藥，可用銅硫</td>
+          <td style="padding:6px">同有機，+ 生物動力製劑</td>
+          <td style="padding:6px">通常有機或生物動力基礎</td>
+        </tr>
+        <tr style="background:#f0fff4">
+          <td style="padding:6px"><strong>釀造干預</strong></td>
+          <td style="padding:6px">無特別限制</td>
+          <td style="padding:6px">傾向最低干預</td>
+          <td style="padding:6px">最嚴格：無添加酵母、SO₂ 極低</td>
+        </tr>
+        <tr>
+          <td style="padding:6px"><strong>月相/宇宙</strong></td>
+          <td style="padding:6px">不要求</td>
+          <td style="padding:6px">核心理念</td>
+          <td style="padding:6px">部分實踐者參考</td>
+        </tr>
+        <tr style="background:#f0fff4">
+          <td style="padding:6px"><strong>風格穩定性</strong></td>
+          <td style="padding:6px">高</td>
+          <td style="padding:6px">中高</td>
+          <td style="padding:6px">低（每年變化大）</td>
+        </tr>
+      </table>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '葡萄牙自然酒先驅酒莊',
+    items: [
+      { icon: '🌿', label: 'Niepoort（Douro）', desc: 'Dirk Niepoort：全串發酵、最低 SO₂，Batuta 和 Charme 是自然酒界的標竿作品', color: '#155724' },
+      { icon: '🏔️', label: 'Quinta da Pellada（Dão）', desc: '生物動力農法，Álvaro Castro 的老藤 Touriga Nacional，純淨礦物感', color: '#1a3a6e' },
+      { icon: '🌊', label: 'João Pato（Bairrada）', desc: '有機農法，Baga 的現代詮釋，濃郁但精緻，突破 Bairrada 的傳統高澀印象', color: '#8B4513' },
+      { icon: '🏝️', label: 'Barbeito（Madeira）', desc: '有機農法，極小批次的單一品種馬德拉，展現風土細節', color: '#8E44AD' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '關於自然酒（Natural Wine），以下哪個描述最準確？',
+    options: [
+      '有歐盟官方認證，等同有機認證',
+      '必須使用生物動力農法種植',
+      '無統一官方認證，核心理念是最低干預釀造，極低或不添加 SO₂',
+      '必須是起泡酒風格（Pétillant Naturel）',
+    ],
+    answer: 2,
+    explanation: '自然酒目前沒有全球統一的官方認證標準，由各地協會（如法國 AVN、義大利 VinNatur）自行制定。其核心理念是田間有機/生物動力農法 + 酒窖最低干預，通常不添加或極少添加二氧化硫（SO₂）。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成自然酒課程！',
+    keyPoints: [
+      '有機農法：禁合成農藥，EU 認證，葡萄牙有 3,500+ 公頃',
+      '生物動力農法：有機基礎 + 月相作業 + Demeter 認證',
+      '自然酒：無官方認證，最低干預，低 SO₂，風格多變',
+      '葡萄牙先驅：Niepoort（Douro）、Quinta da Pellada（Dão）',
+    ],
+  },
+]
+
+// P4M3L1 — 葡萄牙菜與葡萄酒餐酒搭配
+const P4M3L1_slides = [
+  {
+    type: 'cover',
+    icon: '🍽️',
+    gradient: 'linear-gradient(135deg, #8B0000, #c0392b)',
+    title: '葡萄牙美食與葡萄酒的完美搭配',
+    subtitle: 'Level 4 · 餐酒搭配大師課',
+    points: [
+      { icon: '🐟', label: 'Bacalhau（鹽漬鱈魚）', text: '葡萄牙國菜，超過 365 種烹調方式，白酒最佳搭檔' },
+      { icon: '🐷', label: '烤乳豬（Leitão）', text: 'Bairrada 的代表菜，Baga 紅酒是天作之合' },
+      { icon: '🥧', label: '蛋撻（Pastéis de Nata）', text: '全球知名甜點，Moscatel de Setúbal 是理想搭配' },
+    ],
+  },
+  {
+    type: 'compare',
+    title: '五大葡萄牙料理 × 葡萄酒搭配指南',
+    items: [
+      {
+        icon: '🐟',
+        label: 'Bacalhau à Brás（蛋炒鱈魚）',
+        desc: '搭配：Vinho Verde Alvarinho 或 Bucelas Arinto。酸爽清冽的白酒切穿鹽漬魚的鹹感，檸檬酸度與魚鮮互補',
+        color: '#2980b9',
+      },
+      {
+        icon: '🐷',
+        label: '烤乳豬 Leitão da Bairrada',
+        desc: '搭配：Bairrada Baga 紅酒。高酸高單寧的 Baga 完美分解豬皮油脂，地域搭配的經典示範',
+        color: '#8B4513',
+      },
+      {
+        icon: '🥩',
+        label: 'Douro 風格燉牛肉',
+        desc: '搭配：Douro Touriga Nacional。強健的 Touriga Nacional 與慢燉牛肉的深邃風味相呼應，單寧與蛋白質完美平衡',
+        color: '#8B0000',
+      },
+      {
+        icon: '🧀',
+        label: 'Queijo da Serra（Serra da Estrela 軟起司）',
+        desc: '搭配：20 年 Tawny Port 或 Colheita。氧化的堅果蜂蜜風味與半液態起司的奶油感，絕配中的絕配',
+        color: '#B8860B',
+      },
+      {
+        icon: '🥧',
+        label: '蛋撻 Pastéis de Nata',
+        desc: '搭配：Moscatel de Setúbal 或 10 年 Tawny。蛋撻的焦糖肉桂香與甜酒的氧化蜜糖感形成優雅的甜點搭配',
+        color: '#DAA520',
+      },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍷',
+    title: '波特酒與起司：終極搭配藝術',
+    html: `
+      <p>葡萄牙波特酒與起司的搭配是世界最著名的餐酒組合之一，尤其在英國有幾百年的傳統。</p>
+      <h4>🧀 起司類型 × 波特酒對應</h4>
+      <table style="width:100%;border-collapse:collapse;font-size:0.9em;margin-top:8px">
+        <tr style="background:#5c2a0a;color:white">
+          <th style="padding:8px">起司類型</th>
+          <th style="padding:8px">波特酒推薦</th>
+          <th style="padding:8px">搭配原因</th>
+        </tr>
+        <tr style="background:#fdf6ec">
+          <td style="padding:6px">Stilton（英式藍起司）</td>
+          <td style="padding:6px"><strong>Vintage Port</strong></td>
+          <td style="padding:6px">經典英國傳統，藍起司的鹹味與 Vintage 的果甜形成對比</td>
+        </tr>
+        <tr>
+          <td style="padding:6px">Queijo da Serra（葡式軟起司）</td>
+          <td style="padding:6px"><strong>20 年 Tawny</strong></td>
+          <td style="padding:6px">氧化的堅果蜂蜜風味與奶油起司完美融合</td>
+        </tr>
+        <tr style="background:#fdf6ec">
+          <td style="padding:6px">Manchego（硬質羊奶酪）</td>
+          <td style="padding:6px"><strong>LBV Port</strong></td>
+          <td style="padding:6px">中等甜度的 LBV 平衡了硬質起司的鹹脆感</td>
+        </tr>
+        <tr>
+          <td style="padding:6px">新鮮山羊奶酪</td>
+          <td style="padding:6px"><strong>White Port（白波特）</strong></td>
+          <td style="padding:6px">白波特的清爽杏仁感不壓制新鮮起司的細膩</td>
+        </tr>
+      </table>
+      <h4>🌰 黃金法則</h4>
+      <ul>
+        <li><strong>甜配鹹</strong>：起司的鹹感讓甜酒更顯精緻</li>
+        <li><strong>質地搭配</strong>：半液態起司配 Tawny，硬質起司配 Vintage</li>
+        <li><strong>產地搭配</strong>：葡式起司 × 葡式波特，是「風土統一性」的最佳示範</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: 'Bairrada 烤乳豬（Leitão）最理想的搭配葡萄酒是？',
+    options: ['Vinho Verde Alvarinho 白酒', 'Alentejo Aragonez 紅酒', 'Bairrada Baga 紅酒', '20 年 Tawny Port'],
+    answer: 2,
+    explanation: 'Bairrada 烤乳豬搭配當地 Baga 紅酒是葡萄牙最著名的地域搭配示範。Baga 的極高酸度和單寧能有效分解豬皮的豐富油脂，同時紅漿果香氣與烤豬的肉香相輔相成——這是「什麼地方的食物搭什麼地方的酒」的完美例子。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成葡萄牙餐酒搭配課程！',
+    keyPoints: [
+      'Bacalhau + Vinho Verde Alvarinho：鹽漬魚 × 高酸清爽白酒',
+      '烤乳豬 Leitão + Bairrada Baga：地域搭配的完美示範',
+      'Queijo da Serra + 20年 Tawny：半液態起司 × 氧化堅果甜酒',
+      '蛋撻 + Moscatel de Setúbal：甜點 × 氧化蜜糖甜酒',
+      '原則：甜配鹹、質地搭配、產地搭配',
+    ],
+  },
+]
+
+// P4M3L2 — 葡萄牙葡萄酒的全球市場
+const P4M3L2_slides = [
+  {
+    type: 'cover',
+    icon: '🌐',
+    gradient: 'linear-gradient(135deg, #1a3a6e, #2980b9)',
+    title: '葡萄牙葡萄酒的全球市場與出口趨勢',
+    subtitle: 'Level 4 · 市場分析',
+    points: [
+      { icon: '📦', label: '全球前 10 出口國', text: '年出口量逾 3 億公升，出口值超過 10 億歐元' },
+      { icon: '🇺🇸', label: '最大市場：美國', text: '美國是葡萄牙酒最重要的成長市場，尤其 Vinho Verde' },
+      { icon: '📈', label: '高端化趨勢', text: '每瓶均價持續上升，頂級 Douro 和 Madeira 受國際收藏家追捧' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '📊',
+    title: '葡萄牙葡萄酒出口市場概覽',
+    html: `
+      <h4>🌍 主要出口目的地（依出口值，2022年數據）</h4>
+      <table style="width:100%;border-collapse:collapse;font-size:0.9em">
+        <tr style="background:#1a3a6e;color:white">
+          <th style="padding:8px">排名</th><th style="padding:8px">市場</th><th style="padding:8px">特徵</th>
+        </tr>
+        <tr style="background:#eef4ff"><td style="padding:6px;text-align:center">1</td><td style="padding:6px"><strong>🇫🇷 法國</strong></td><td style="padding:6px">大量進口葡萄牙散裝酒（調配用），歷史傳統</td></tr>
+        <tr><td style="padding:6px;text-align:center">2</td><td style="padding:6px"><strong>🇺🇸 美國</strong></td><td style="padding:6px">成長最快市場，Vinho Verde 最受歡迎，高端 Douro 日增</td></tr>
+        <tr style="background:#eef4ff"><td style="padding:6px;text-align:center">3</td><td style="padding:6px"><strong>🇬🇧 英國</strong></td><td style="padding:6px">傳統 Porto 最大市場，Vintage Port 收藏文化深厚</td></tr>
+        <tr><td style="padding:6px;text-align:center">4</td><td style="padding:6px"><strong>🇩🇪 德國</strong></td><td style="padding:6px">日常餐酒市場，對性價比要求高</td></tr>
+        <tr style="background:#eef4ff"><td style="padding:6px;text-align:center">5</td><td style="padding:6px"><strong>🇧🇷 巴西</strong></td><td style="padding:6px">葡語文化連結，高端 Douro 和 Alentejo 受歡迎</td></tr>
+        <tr><td style="padding:6px;text-align:center">6</td><td style="padding:6px"><strong>🇨🇦 加拿大</strong></td><td style="padding:6px">成長中市場，Vinho Verde 和 Alentejo 紅酒需求上升</td></tr>
+      </table>
+      <h4>📈 近年趨勢</h4>
+      <ul>
+        <li>台灣、日本等亞洲市場對高端 Douro 和 Vintage Port 興趣增加</li>
+        <li>出口均價：2010–2022 年上漲 40%，反映品質升級和品牌提升</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🍷',
+    title: 'Vinho Verde 的全球爆發',
+    html: `
+      <p><strong>Vinho Verde</strong> 是目前葡萄牙出口成長最快的品類之一，尤其在美國市場的增速令人矚目。</p>
+      <h4>🚀 成功因素分析</h4>
+      <ul>
+        <li><strong>低酒精（8–11.5%）</strong>：健康意識上升，低酒精酒需求暴增</li>
+        <li><strong>清爽微氣泡感</strong>：夏季飲用、派對場合的首選</li>
+        <li><strong>極佳性價比</strong>：入門款只需 8–15 美元，品質卻遠超同價位競品</li>
+        <li><strong>Alvarinho 品牌化</strong>：高端 Alvarinho（20–60 美元）建立精品形象</li>
+        <li><strong>餐廳推動</strong>：美國和加拿大餐廳大量採用作為開胃酒</li>
+      </ul>
+      <h4>📊 關鍵數字</h4>
+      <ul>
+        <li>美國 Vinho Verde 進口量 2015–2022 年增長 <strong>180%</strong></li>
+        <li>在美國進口葡萄牙酒中，Vinho Verde 佔比超過 <strong>45%</strong></li>
+        <li>Monção e Melgaço 子產區的頂級 Alvarinho 已建立收藏家市場</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '哪個是目前葡萄牙葡萄酒出口成長最快的品類，特別是在美國市場？',
+    options: ['Vintage Port', 'Alentejo Reserva 紅酒', 'Vinho Verde', 'Madeira'],
+    answer: 2,
+    explanation: 'Vinho Verde 是目前葡萄牙成長最快的出口品類，2015–2022 年在美國的進口量增長約 180%。其低酒精、清爽微氣泡、高性價比的特點完全符合當代飲酒趨勢。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成全球市場課程！',
+    keyPoints: [
+      '葡萄牙全球前10出口國，年出口超10億歐元',
+      '最大市場：法國（散裝）、美國（成長最快）、英國（Porto 傳統市場）',
+      'Vinho Verde 是成長引擎，美國市場7年增長180%',
+      '高端化趨勢：出口均價2010-2022年上漲40%',
+      '台灣、日本等亞洲市場對頂級 Douro 和 Vintage Port 興趣增加',
+    ],
+  },
+]
+
+// P4M3L3 — 收藏與投資：波特酒與馬德拉的陳年潛力
+const P4M3L3_slides = [
+  {
+    type: 'cover',
+    icon: '💰',
+    gradient: 'linear-gradient(135deg, #B8860B, #FFD700)',
+    title: '波特酒與馬德拉：收藏與投資指南',
+    subtitle: 'Level 4 · 陳年潛力與市場價值',
+    points: [
+      { icon: '📈', label: '資產增值', text: 'Vintage Port 頂級年份年均增值 8–12%，超越多數傳統投資' },
+      { icon: '🏺', label: '馬德拉的永恆性', text: '19 世紀馬德拉至今仍可飲用，是世界上最長壽的葡萄酒' },
+      { icon: '🔍', label: '真偽鑑定', text: '學習如何識別真正的頂級老酒，避免市場上的假酒陷阱' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '📈',
+    title: 'Vintage Port 作為收藏投資',
+    html: `
+      <p>Vintage Port 因其稀少性、陳年潛力和明確的品質評分，成為葡萄酒投資市場中不可忽視的品類。</p>
+      <h4>💎 頂級 Vintage Port 市場價格（2024年參考）</h4>
+      <table style="width:100%;border-collapse:collapse;font-size:0.9em">
+        <tr style="background:#5c2a0a;color:white">
+          <th style="padding:8px">年份/酒莊</th><th style="padding:8px">市場均價（每瓶）</th><th style="padding:8px">陳年潛力</th>
+        </tr>
+        <tr style="background:#fdf6ec"><td style="padding:6px">Graham's 1977</td><td style="padding:6px">€800–1,200</td><td style="padding:6px">現在–2030</td></tr>
+        <tr><td style="padding:6px">Fonseca 1985</td><td style="padding:6px">€400–600</td><td style="padding:6px">現在–2035</td></tr>
+        <tr style="background:#fdf6ec"><td style="padding:6px">Taylor's 2000</td><td style="padding:6px">€200–350</td><td style="padding:6px">2025–2050</td></tr>
+        <tr><td style="padding:6px">Quinta do Noval Nacional 2011</td><td style="padding:6px">€1,500–2,500</td><td style="padding:6px">2035–2080</td></tr>
+        <tr style="background:#fdf6ec"><td style="padding:6px">Graham's 2011</td><td style="padding:6px">€150–220</td><td style="padding:6px">2030–2070</td></tr>
+      </table>
+      <h4>⚠️ 投資注意事項</h4>
+      <ul>
+        <li><strong>儲存條件</strong>：需要 13–15°C 穩定溫度，高濕度地窖，直立置放會導致木塞乾裂</li>
+        <li><strong>來源追蹤</strong>：Provenance（酒的來源歷史）是決定價值的關鍵，拍賣行必提供</li>
+        <li><strong>流動性</strong>：拍賣行（Christie's、Acker、Hart Davis Hart）是主要退出管道</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🏺',
+    title: '馬德拉：世界最長壽的葡萄酒',
+    html: `
+      <p><strong>Madeira</strong> 因其獨特的 Estufagem 氧化加熱工藝，成為葡萄酒世界中最不可思議的存在——一些 18–19 世紀的馬德拉至今仍然充滿活力，可以飲用。</p>
+      <h4>🔬 為什麼馬德拉能陳年數百年？</h4>
+      <ul>
+        <li><strong>高酒精</strong>（17–22%）：抑制微生物活動，防止氧化腐敗</li>
+        <li><strong>高酸度</strong>：保持新鮮感和結構（即使陳年後仍充滿活力）</li>
+        <li><strong>已氧化</strong>：Estufagem 工藝已將酒氧化，裝瓶後不會再進一步氧化</li>
+        <li><strong>高糖分</strong>（甜型）：額外的保存作用</li>
+      </ul>
+      <h4>💎 馬德拉收藏市場</h4>
+      <ul>
+        <li>19 世紀馬德拉（1850–1900 年）：每瓶可達 €1,000–5,000+</li>
+        <li>「Frasqueira」（單一年份馬德拉，桶陳至少 20 年）是收藏家首選</li>
+        <li>最著名收藏家：Barbeito 酒莊保有 19 世紀罐裝馬德拉作為歷史館藏</li>
+      </ul>
+      <h4>📅 值得關注的馬德拉收藏年份</h4>
+      <p>1900、1908、1920、1934、1954、1965、1988、2000、2005 等均是各大酒莊宣布的優秀 Frasqueira 年份。</p>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '波特酒 vs 馬德拉：收藏投資比較',
+    items: [
+      { icon: '🥃', label: 'Vintage Port（投資型）', desc: '明確評分體系、全球拍賣市場成熟、頂級年份年均增值 8–12%，但需嚴格儲存條件', color: '#5c2a0a' },
+      { icon: '🏺', label: 'Madeira Frasqueira（收藏型）', desc: '陳年潛力無限（數百年），儲存相對容易（對溫度變化更寬容），但市場流動性較低', color: '#8E44AD' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Madeira 能夠陳年數百年的最主要原因是？',
+    options: [
+      '酒中含有特殊的天然防腐劑',
+      'Estufagem 工藝已將酒充分氧化，加上高酒精和高酸度的共同保護',
+      '馬德拉島特殊的火山水源',
+      '全程在不銹鋼桶中保存',
+    ],
+    answer: 1,
+    explanation: 'Madeira 的超長壽祕密在於：Estufagem 加熱氧化工藝已使酒充分氧化（不會再進一步氧化），再加上高酒精（17–22%）抑制微生物、高酸度維持結構。這三個因素共同創造了葡萄酒界獨一無二的永恆飲品。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成收藏投資課程！',
+    keyPoints: [
+      'Vintage Port 頂級年份（2011 Quinta do Noval Nacional 等）每瓶可達數千歐元',
+      '投資要點：Provenance（來源）、儲存條件、選擇有拍賣紀錄的年份',
+      'Madeira 是世界最長壽的葡萄酒，19世紀老酒至今仍可飲用',
+      'Madeira 的不老神話：已氧化 + 高酒精 + 高酸度的三重保護',
+    ],
+  },
+]
+
+// P4FinalExam — Level 4 大師評量
+const P4FinalExam_slides = [
+  {
+    type: 'cover',
+    icon: '👑',
+    gradient: 'linear-gradient(135deg, #B8860B, #DAA520)',
+    title: 'Level 4 大師評量',
+    subtitle: '葡萄牙葡萄酒大師認證測驗',
+    points: [
+      { icon: '🎯', label: '考試範圍', text: '涵蓋頂級酒莊、盲品技術、年份分析、市場與投資' },
+      { icon: '📊', label: '題目數量', text: '10 題精選題，每題包含詳細解析' },
+      { icon: '🏆', label: '通過標準', text: '全部完成即視為通過，展現大師級葡萄牙葡萄酒知識' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '「葡萄牙的 Pétrus」指的是哪一支酒？',
+    options: ['Quinta do Crasto Reserva', 'Barca Velha', 'Niepoort Batuta', 'Ramos Pinto Duas Quintas'],
+    answer: 1,
+    explanation: 'Barca Velha 由 Ferreira 酒莊於 1952 年創制，因其稀罕、頂級品質和高昂價格，常被稱為「葡萄牙的 Pétrus」。它只在最優秀的年份才發布，至今共發布約 26 個年份。',
+  },
+  {
+    type: 'quiz',
+    question: '在盲品中，哪個香氣是識別 Touriga Nacional 最強的線索？',
+    options: ['黑胡椒香', '煙燻皮革', '紫羅蘭花香', '草莓果醬'],
+    answer: 2,
+    explanation: '紫羅蘭花香（Violet）是 Touriga Nacional 最獨特的識別特徵，在其他品種中極為罕見。加上深紫黑色澤和高單寧，構成識別 Touriga Nacional 的黃金組合。',
+  },
+  {
+    type: 'quiz',
+    question: 'Vintage Port 在橡木桶中陳年幾年後裝瓶？',
+    options: ['1 年', '2 年', '7 年', '15 年'],
+    answer: 1,
+    explanation: 'Vintage Port 只在橡木桶中短暫陳年 2 年，然後裝瓶。其複雜度主要來自裝瓶後的長期瓶中陳年（通常需要 15–25 年）。這與 LBV（4–6年桶陳）和 Tawny（多年桶陳）完全不同。',
+  },
+  {
+    type: 'quiz',
+    question: '2003 年 Douro 年份品質不佳的主要原因是？',
+    options: ['採收期大量降雨', '歐洲熱浪導致過熟、酒精偏高、酸度不足', '葡萄病害嚴重', '霜害損害大量葡萄'],
+    answer: 1,
+    explanation: '2003 年歐洲經歷了歷史性熱浪，葡萄牙也受到嚴重衝擊。極端高溫導致葡萄快速過熟，糖分急速累積（高酒精）而酸度喪失。這是近代氣候變遷對葡萄酒品質衝擊的典型案例。',
+  },
+  {
+    type: 'quiz',
+    question: 'Vinho Verde 在美國市場成功的最主要原因是？',
+    options: ['高酒精度，適合美國口味', '低酒精、清爽微氣泡、高性價比符合現代飲酒趨勢', '是美國最便宜的進口酒', '有特殊的藥用價值'],
+    answer: 1,
+    explanation: 'Vinho Verde 在美國市場的成功源於多重因素：低酒精（8–11.5%）符合健康意識、天然微氣泡感清爽討喜、性價比極高（8–15 美元入門款品質遠超同價位）。這些特點完全契合現代消費者趨勢。',
+  },
+  {
+    type: 'quiz',
+    question: 'Madeira 能陳年數百年的核心原因組合是？',
+    options: [
+      '特殊的火山玄武岩土壤影響',
+      'Estufagem 氧化 + 高酒精 + 高酸度',
+      '島嶼氣候的獨特保存效果',
+      '不鏽鋼桶密封保存',
+    ],
+    answer: 1,
+    explanation: 'Madeira 的超長壽祕密在於三重保護：Estufagem 工藝已使酒充分氧化（不會再進一步演化腐敗）、高酒精（17–22%）抑制微生物、高酸度維持結構活力。這三個因素共同造就了獨一無二的永恆葡萄酒。',
+  },
+  {
+    type: 'quiz',
+    question: '關於 Baga 品種，以下哪個描述最準確？',
+    options: [
+      '以紫羅蘭花香著稱，口感柔順',
+      '主要種植於 Douro，是波特酒的核心品種',
+      '高酸度和高單寧，年輕時緊澀，需陳年才展現魅力',
+      '是葡萄牙最廣泛種植的品種',
+    ],
+    answer: 2,
+    explanation: 'Baga 是 Bairrada 產區的代表品種，以世界頂級的高酸度和高澀感單寧著稱。年輕時非常緊澀難喝，但陳年後可以發展出令人驚艷的細膩和複雜度。其識別特徵是「酸」——是盲品葡萄牙品種時的重要線索。',
+  },
+  {
+    type: 'quiz',
+    question: 'Colheita 與一般 Tawny Port 最主要的區別是？',
+    options: [
+      'Colheita 只用 Touriga Nacional 釀造',
+      'Colheita 是單一年份的 Tawny，桶陳至少 7 年，標示實際收成年份',
+      'Colheita 比 Vintage Port 更昂貴',
+      'Colheita 必須在酒莊裝瓶（Estate Bottled）',
+    ],
+    answer: 1,
+    explanation: 'Colheita 是 Tawny Port 的特殊形式，關鍵在於：①單一年份（不是多年調配）、②在橡木桶中陳年至少 7 年、③酒標上標示實際收成年份。這使 Colheita 兼具 Tawny 的氧化風格和 Vintage Port 的年份特徵。',
+  },
+  {
+    type: 'quiz',
+    question: '哪個葡萄牙產區在面對氣候變遷時被認為是「受益者」？',
+    options: ['Alentejo', 'Douro Superior', 'Vinho Verde（Minho）', 'Algarve'],
+    answer: 2,
+    explanation: 'Vinho Verde 位於葡萄牙西北部，受大西洋影響最深，氣溫相對涼爽。隨著全球暖化使南部產區日益炎熱，Vinho Verde 的清爽特性反而更受市場青睞，尤其是頂級 Alvarinho 白酒的需求持續上升。',
+  },
+  {
+    type: 'quiz',
+    question: '在波特酒收藏中，「Provenance」（來源）的重要性在於？',
+    options: [
+      '決定波特酒的品種組成',
+      '是評估酒的真實性、儲存歷史和市場價值的關鍵依據',
+      '記錄波特酒的釀造工藝',
+      '標示採收年份',
+    ],
+    answer: 1,
+    explanation: 'Provenance（來源/出處）在波特酒收藏和投資中至關重要。它記錄了一瓶酒的完整歷史：從何處購買、如何儲存、是否來自知名的地窖或拍賣行。完整 Provenance 的老年份波特酒價值遠高於來源不明的同款，這也是防止偽造老酒的重要機制。',
+  },
+  {
+    type: 'summary',
+    icon: '👑',
+    message: '🎉 恭喜您完成葡萄牙葡萄酒 Level 4 大師課程！',
+    keyPoints: [
+      '✅ 頂級酒莊：Barca Velha、Quinta do Crasto、Niepoort 的風格與哲學',
+      '✅ 盲品技術：Touriga（紫羅蘭）、Syrah（胡椒）、Baga（高酸）的識別策略',
+      '✅ 年份解析：Douro 2000–2023 年份評分與氣候影響因子',
+      '✅ 氣候變遷：葡萄牙各產區的衝擊與應對策略',
+      '✅ 自然酒：有機・生物動力・自然酒的核心差異',
+      '✅ 餐酒搭配：Bacalhau/烤乳豬/蛋撻的最佳酒款',
+      '✅ 全球市場：Vinho Verde 在美國的成功故事',
+      '✅ 收藏投資：Vintage Port 和 Madeira 的陳年潛力與市場價值',
     ],
   },
 ]
@@ -1211,6 +2214,17 @@ const SLIDE_MAP = {
   P2M1L2: P2M1L2_slides,
   P2M5L1: P2M5L1_slides,
   P2M5L2: P2M5L2_slides,
+  // Level 4 — 大師品鑑與垂直年份
+  P4M1L1: P4M1L1_slides,
+  P4M1L2: P4M1L2_slides,
+  P4M1L3: P4M1L3_slides,
+  P4M2L1: P4M2L1_slides,
+  P4M2L2: P4M2L2_slides,
+  P4M2L3: P4M2L3_slides,
+  P4M3L1: P4M3L1_slides,
+  P4M3L2: P4M3L2_slides,
+  P4M3L3: P4M3L3_slides,
+  P4FinalExam: P4FinalExam_slides,
 }
 
 export function getPortugalLessonSlides(lessonId) {

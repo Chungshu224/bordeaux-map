@@ -59,15 +59,15 @@
             <span class="nav-title">學習進度</span>
             <span class="nav-desc">{{ totalProgressPct }}% 完成・{{ completedCount }} 課</span>
           </button>
+          <button class="nav-card achievement-card" @click="showAchievementModal = true">
+            <span class="nav-icon">🏆</span>
+            <span class="nav-title">學習成就</span>
+            <span class="nav-desc">解鎖成就・累積點數</span>
+          </button>
           <button class="nav-card region-card">
             <span class="nav-icon">🏔️</span>
             <span class="nav-title">南北兩島</span>
             <span class="nav-desc">北島 · 南島產區對比</span>
-          </button>
-          <button class="nav-card variety-card">
-            <span class="nav-icon">🍇</span>
-            <span class="nav-title">品種索引</span>
-            <span class="nav-desc">SB · Pinot Noir · Chardonnay</span>
           </button>
         </div>
       </section>
@@ -357,6 +357,21 @@
         </div>
       </div>
     </Teleport>
+
+    <!-- 學習成就 Modal -->
+    <Teleport to="body">
+      <div v-if="showAchievementModal" class="achievement-modal-overlay" @click.self="showAchievementModal = false">
+        <div class="achievement-modal">
+          <div class="am-header">
+            <h3>🏆 學習成就</h3>
+            <button class="am-close" @click="showAchievementModal = false">×</button>
+          </div>
+          <div class="am-body">
+            <AchievementsDashboard course-key="newzealand" @back="showAchievementModal = false" />
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
@@ -365,6 +380,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../stores/authStore.js'
 import { supabase } from '../../lib/supabaseClient.js'
+import AchievementsDashboard from '../AchievementsDashboard.vue'
 
 const router = useRouter()
 const emit = defineEmits(['enterLevel', 'openMap'])
@@ -379,6 +395,7 @@ const props = defineProps({
 const avatarUrl = ref('')
 const avatarInitial = ref('我')
 const showProgressModal = ref(false)
+const showAchievementModal = ref(false)
 
 const authUser = computed(() => authState.user)
 const displayName = computed(() => authActions.getDisplayName())
@@ -702,8 +719,9 @@ function getStarStyle(i) {
 
 .map-card      { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.15); }
 .progress-card { background: rgba(56,161,105,0.25);  border: 1px solid rgba(56,161,105,0.4); }
-.region-card   { background: rgba(255,255,255,0.1);  border: 1px solid rgba(255,255,255,0.12); }
-.variety-card  { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); }
+.region-card      { background: rgba(255,255,255,0.1);  border: 1px solid rgba(255,255,255,0.12); }
+.variety-card     { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); }
+.achievement-card { background: rgba(255,215,0,0.12);  border: 1px solid rgba(255,215,0,0.3); }
 
 .nav-icon  { font-size: 2rem; line-height: 1; }
 .nav-title { font-size: 0.95rem; font-weight: 700; }
@@ -949,6 +967,46 @@ function getStarStyle(i) {
 .pm-lesson-status { font-size: 1rem; flex-shrink: 0; }
 .pm-lesson-title  { flex: 1; color: #333; }
 .pm-lesson-time   { color: #888; font-size: 0.78rem; flex-shrink: 0; }
+
+/* ── 學習成就 Modal ──────────────────────── */
+.achievement-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.achievement-modal {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.am-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 2px solid #fff8e1;
+  background: linear-gradient(135deg, #b8860b, #ffd700);
+  color: white;
+  border-radius: 20px 20px 0 0;
+}
+.am-header h3 { margin: 0; font-size: 1.1rem; }
+.am-close {
+  background: rgba(255,255,255,0.15); border: none; border-radius: 8px;
+  color: white; font-size: 1.2rem; width: 32px; height: 32px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.am-body { overflow-y: auto; flex: 1; }
 
 /* ── 響應式 ──────────────────────────────── */
 @media (max-width: 900px) {

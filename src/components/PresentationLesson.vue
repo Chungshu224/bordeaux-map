@@ -68,6 +68,7 @@
                   :highlights="currentSlideData.highlights"
                   v-bind="currentSlideData.componentProps || {}"
                   @complete="onComponentQuizComplete"
+                  @openFullMap="(info) => emit('openRegionMap', info)"
                 />
                 <!-- Presenter notes for component slides -->
                 <div v-if="currentSlideData.presenterNotes && currentSlideData.presenterNotes.length" class="main-content">
@@ -226,6 +227,8 @@ import MedocInteractiveMap from './maps/MedocInteractiveMap.vue'
 import FirstGrowthsMap from './maps/FirstGrowthsMap.vue'
 import LessonProgressIndicator from './LessonProgressIndicator.vue'
 import QuizSlide from './italy/course/slides/QuizSlide.vue'
+import LoireRegionMapSlide from './loire/course/slides/LoireRegionMapSlide.vue'
+import HungaryRegionMapSlide from './hungary/slides/HungaryRegionMapSlide.vue'
 // 改用 lessonContentLoader 的單例載入器,避免間接層帶來的潛在等待問題
 import { loadLessonContent as coreLoadLessonContent } from '../data/lessonContentLoader.js'
 // 導入進度追蹤系統
@@ -238,7 +241,7 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['lessonComplete', 'nextLesson'])
+const emit = defineEmits(['lessonComplete', 'nextLesson', 'openRegionMap'])
 
 // 響應式數據
 const currentSlide = ref(0)
@@ -373,7 +376,9 @@ const slideComponentMap = {
   ImageQuizSeries,
   MedocInteractiveMap,
   FirstGrowthsMap,
-  QuizSlide
+  QuizSlide,
+  LoireRegionMapSlide,
+  HungaryRegionMapSlide
 }
 
 // 將內容中的 AOC 名稱標準化並附上英文原文（避免重複標註，具備一定的容錯與等幣性）

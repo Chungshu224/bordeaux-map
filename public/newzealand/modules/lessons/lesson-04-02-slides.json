@@ -9,6 +9,13 @@
       "background": "linear-gradient(135deg,#f3e7e9 0%,#e3eeff 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "Central Otago 產區地圖",
+      "subtitle": "世界最南端的葡萄酒產區，高海拔大陸性氣候",
+      "mapRegion": "Central_Otago|Bannockburn|Waitaki_Valley_North_Otago"
+    },
+    {
       "id": 2,
       "type": "content",
       "title": "產區概覽與地理位置",

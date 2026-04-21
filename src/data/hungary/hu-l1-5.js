@@ -11,6 +11,14 @@ export const lessonContent = [
     background: 'linear-gradient(135deg, #2c3e50 0%, #4a1942 100%)'
   },
   {
+    component: 'HungaryRegionMapSlide',
+    title: 'Tokaj 產區地理位置',
+    componentProps: {
+      mapRegion: 'Tokaj',
+      description: '托卡伊位於匈牙利東北角，Bodrog 與 Tisza 兩河交匯處，Zemplén 山脈腳下，特殊的河谷地形造就了秋季貴腐菌生長的完美條件'
+    }
+  },
+  {
     title: '托卡伊地區（Tokaj Region）— 世界甜酒之王',
     highlights: [
       { id: 1, icon: '🏆', title: 'UNESCO 世界遺產', content: '托卡伊葡萄酒文化景觀於 2002 年列入 UNESCO 世界文化遺產，是匈牙利的葡萄酒皇冠' },
@@ -59,6 +67,14 @@ export const lessonContent = [
     }
   },
   {
+    component: 'HungaryRegionMapSlide',
+    title: 'Eger 產區地理位置',
+    componentProps: {
+      mapRegion: 'Eger',
+      description: '埃格爾（Eger）位於北匈牙利 Bükk 山脈腳下，流紋岩凝灰土丘陵賦予公牛血紅酒獨特的礦物質感'
+    }
+  },
+  {
     title: '北匈牙利（Upper Hungary）— Eger、Mátra、Bükk',
     highlights: [
       { id: 1, icon: '🐂', title: '公牛血的故鄉', content: '埃格爾（Eger）是 Egri Bikavér（埃格爾公牛血）的出生地，也是匈牙利北部葡萄酒的心臟' },
@@ -93,6 +109,14 @@ export const lessonContent = [
       ],
       correct: 1,
       explanation: 'Egri Bikavér 的法定規定要求：①至少混合 3 種葡萄品種（不能只用 2 種）；②Kékfrankos 必須是主要品種（佔比最高）；③其他允許品種包括 Kadarka、Merlot、Cabernet Franc、Zweigelt 等。更高級的「Egri Bikavér Superior」還有更嚴格的品質標準，包括更長的橡木桶陳年要求。'
+    }
+  },
+  {
+    component: 'HungaryRegionMapSlide',
+    title: 'Villány 產區地理位置',
+    componentProps: {
+      mapRegion: 'Villany',
+      description: '維拉尼（Villány）位於匈牙利最南端，年均氣溫 11.6°C 是全國最高，石灰岩紅色黏土的地形孕育了匈牙利最偉大的紅酒'
     }
   },
   {

@@ -116,7 +116,7 @@
 
         <!-- 地圖投影片 -->
         <template v-else-if="currentSlideData.type === 'map'">
-          <SpainRegionMapSlide :slide="currentSlideData" />
+          <SpainRegionMapSlide :slide="currentSlideData" @openFullMap="(key) => emit('openRegionMap', key)" />
         </template>
 
         <!-- 預設佔位 -->
@@ -175,7 +175,7 @@ const props = defineProps({
   lesson: { type: Object, required: true },
   isFinalExam: { type: Boolean, default: false },
 })
-const emit = defineEmits(['close', 'complete'])
+const emit = defineEmits(['close', 'complete', 'openRegionMap'])
 
 const currentSlide = ref(0)
 const quizAnswered = ref(false)

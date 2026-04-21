@@ -9,6 +9,13 @@
       "background": "linear-gradient(135deg,#89f7fe 0%,#66a6ff 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "Waitaki Valley 產區地圖",
+      "subtitle": "North Otago 的河谷風土，石灰岩土壤的獨特表現",
+      "mapRegion": "Waitaki_Valley_North_Otago"
+    },
+    {
       "id": 2,
       "type": "content",
       "title": "產區位置與地形",

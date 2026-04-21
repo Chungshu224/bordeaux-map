@@ -51,8 +51,8 @@ export const courseLevels = {
         id: 'S1M4',
         title: '第四章：Rioja — 西班牙靈魂產區',
         lessons: [
-          { id: 'S1M4L1', title: 'Rioja 地理：三個子產區（Alta · Alavesa · Oriental）' },
-          { id: 'S1M4L2', title: 'Rioja 風格：傳統派 vs 現代派' },
+          { id: 'S1M4L1', title: 'Rioja 地理：百年歷史・三個子產區・14 個法定品種' },
+          { id: 'S1M4L2', title: 'Rioja 分類：地理四層系統・陳年制度・傳統 vs 現代風格' },
         ],
       },
       {
@@ -78,9 +78,18 @@ export const courseLevels = {
     icon: '🍷',
     color: '#8e44ad',
     gradient: 'linear-gradient(135deg, #8e44ad, #9b59b6)',
-    totalLessons: 30,
+    totalLessons: 33,
     prerequisites: ['完成 Level 1'],
     modules: [
+      {
+        id: 'S2M0',
+        title: '第零章：DOCa Rioja 深度探索',
+        lessons: [
+          { id: 'S2M0L1', title: 'Rioja 三子產區風土深析：石灰岩・含鐵黏土・沖積土的風味密碼' },
+          { id: 'S2M0L2', title: 'Rioja 紅酒混釀藝術：Tempranillo + Garnacha + Graciano + Mazuelo' },
+          { id: 'S2M0L3', title: 'Rioja 白酒文藝復興：從 Viura 到 Chardonnay 的現代白酒革命' },
+        ],
+      },
       {
         id: 'S2M1',
         title: '第一章：北部頂級紅酒產區',

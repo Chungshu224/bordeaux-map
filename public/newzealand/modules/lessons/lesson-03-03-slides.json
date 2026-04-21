@@ -9,6 +9,13 @@
       "background": "linear-gradient(135deg,#a18cd1 0%,#fbc2eb 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "Auckland 及周邊產區地圖",
+      "subtitle": "城市旁的多樣風土：Kumeu、Matakana、Waiheke 等子產區",
+      "mapRegion": "Auckland|Kumeu|Matakana|Waiheke_Island|Northland"
+    },
+    {
       "id": 2,
       "type": "content",
       "title": "產區概覽",

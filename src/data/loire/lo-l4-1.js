@@ -34,5 +34,18 @@ export const lessonContent = [
         explanation: 'Côtes-d\'Auvergne 是羅亞爾河谷的重要 AOC，是本課程的核心學習對象。'
       }
     ]
+  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Massif Central 火山產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Massif Central：Côtes d\'Auvergne',
+        description: '火山岩土壤孕育的獨特風土，羅亞爾河谷最南端的精品產區',
+        mapGroup: 'MassifCentral',
+        highlightFiles: ['Côtes-dAuvergne.geojson'],
+      }
+    }
   }
 ]

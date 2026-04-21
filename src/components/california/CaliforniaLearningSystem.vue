@@ -82,7 +82,7 @@ const currentLevelData = computed(() => californiaLearningLevels[`level${current
 const totalProgress = computed(() => californiaLearningProgress.value)
 
 const unlockedLevels = computed(() =>
-  [1, 2].filter(n => isLevelUnlocked(n))
+  [1, 2, 3].filter(n => isLevelUnlocked(n))
 )
 
 const canGoPrevious = computed(() => {

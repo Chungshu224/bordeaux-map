@@ -246,5 +246,18 @@ export const lessonContent = [
       correct: 1,
       explanation: '中央羅亞爾（Centre-Loire）的半大陸型氣候帶來更大的溫差，加上基默里奇（Kimmeridgian）泥灰岩和燧石土，使這裡的 Sauvignon Blanc 香氣更集中，礦石感更強烈，能發展出典型的煙燻燧石（pierre à fusil）香氣，這是 Muscadet 或 Anjou 白酒所沒有的特色。'
     }
+  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Pays Nantais 地理位置與產區分布',
+    componentProps: {
+      slide: {
+        title: 'Pays Nantais 地理位置與產區分布',
+        description: '大西洋海岸邊的 Muscadet 王國，最涼爽的羅亞爾子產區',
+        mapGroup: 'PayNantes',
+        highlightFiles: ['Muscadet.geojson', 'Muscadet-Sèvre-et-Maine.geojson', 'Muscadet-Côtes-de-Grandlieu.geojson', 'Muscadet-Coteaux-de-la-Loire.geojson'],
+      }
+    }
   }
 ]

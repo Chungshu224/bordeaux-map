@@ -179,10 +179,27 @@
         <span class="mobile-tool-icon">產</span>
         <span>產區</span>
       </button>
-      <button class="mobile-tool-btn" :class="{ active: showZones }" @click="toggleZones">
-        <span class="mobile-tool-icon">Z</span>
-        <span>Zone</span>
+      <button class="mobile-tool-btn" :class="{ active: showLayerPanel || showZones || showContour }" @click="showLayerPanel = !showLayerPanel">
+        <span class="mobile-tool-icon">🗂</span>
+        <span>圖層</span>
       </button>
+
+      <!-- 圖層面板 -->
+      <Transition name="layer-panel">
+        <div v-if="showLayerPanel" class="layer-panel" @click.stop>
+          <div class="layer-panel-title">圖層選擇</div>
+          <button class="layer-toggle-btn" :class="{ active: showZones }" @click="toggleZones">
+            <span class="layer-toggle-icon">🗺️</span>
+            <span class="layer-toggle-label">Zone 層</span>
+            <span class="layer-toggle-status">{{ showZones ? '開' : '關' }}</span>
+          </button>
+          <button class="layer-toggle-btn" :class="{ active: showContour }" @click="toggleContour">
+            <span class="layer-toggle-icon">🌄</span>
+            <span class="layer-toggle-label">等高線</span>
+            <span class="layer-toggle-status">{{ showContour ? '開' : '關' }}</span>
+          </button>
+        </div>
+      </Transition>
       <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
         <span class="mobile-tool-icon">3D</span>
         <span>{{ is3D ? '2D' : '3D' }}</span>
@@ -219,6 +236,8 @@ const drawerSearch  = ref('')
 const drawerStateTab= ref('all')
 const activeState   = ref('all')
 const showZones     = ref(false)
+const showContour   = ref(false)
+const showLayerPanel = ref(false)
 const activeRegion  = ref(null)
 
 const allRegions       = ref([])   // all feature properties
@@ -408,6 +427,83 @@ function toggleZones() {
   updateStateFilter()
 }
 
+// ── Toggle Contour layer ───────────────────────────────────────────────────
+function toggleContour() {
+  showContour.value = !showContour.value
+  if (!map) return
+  if (showContour.value) {
+    if (!map.getSource('mapbox-dem')) {
+      map.addSource('mapbox-dem', {
+        type: 'raster-dem',
+        url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+        tileSize: 512,
+      })
+    }
+    if (!map.getSource('contours')) {
+      map.addSource('contours', {
+        type: 'vector',
+        url: 'mapbox://mapbox.mapbox-terrain-v2',
+      })
+    }
+    if (!map.getLayer('contour-major')) {
+      map.addLayer({
+        id: 'contour-major',
+        type: 'line',
+        source: 'contours',
+        'source-layer': 'contour',
+        filter: ['==', ['%', ['get', 'ele'], 100], 0],
+        paint: {
+          'line-color': 'rgba(255,255,255,0.45)',
+          'line-width': 1.2,
+        },
+        minzoom: 5,
+      }, 'region-fill')
+    }
+    if (!map.getLayer('contour-minor')) {
+      map.addLayer({
+        id: 'contour-minor',
+        type: 'line',
+        source: 'contours',
+        'source-layer': 'contour',
+        filter: ['all', ['!=', ['%', ['get', 'ele'], 100], 0]],
+        paint: {
+          'line-color': 'rgba(255,255,255,0.22)',
+          'line-width': 0.6,
+        },
+        minzoom: 7,
+      }, 'region-fill')
+    }
+    if (!map.getLayer('contour-labels')) {
+      map.addLayer({
+        id: 'contour-labels',
+        type: 'symbol',
+        source: 'contours',
+        'source-layer': 'contour',
+        layout: {
+          'symbol-placement': 'line',
+          'symbol-spacing': 200,
+          'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
+          'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+          'text-size': ['case', ['==', ['%', ['get', 'ele'], 100], 0], 11, 9],
+        },
+        paint: {
+          'text-color': 'rgba(255,255,255,0.7)',
+          'text-halo-color': 'rgba(0,0,0,0.5)',
+          'text-halo-width': 1,
+        },
+        minzoom: 7,
+      }, 'region-fill')
+    }
+    ;['contour-major', 'contour-minor', 'contour-labels'].forEach(id => {
+      if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', 'visible')
+    })
+  } else {
+    ;['contour-major', 'contour-minor', 'contour-labels'].forEach(id => {
+      if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', 'none')
+    })
+  }
+}
+
 // ── Toggle 3D ──────────────────────────────────────────────────────────────
 function toggle3D() {
   is3D.value = !is3D.value
@@ -522,9 +618,9 @@ async function initMap() {
           'fill-color': ['get', 'color'],
           'fill-opacity': [
             'case',
-            ['boolean', ['feature-state', 'selected'], false], 0.82,
-            ['boolean', ['feature-state', 'hover'], false],    0.60,
-            0.42,
+            ['boolean', ['feature-state', 'selected'], false], 0.18,
+            ['boolean', ['feature-state', 'hover'], false],    0.14,
+            0.10,
           ],
         },
       })
@@ -1040,6 +1136,74 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   font-weight: 800;
 }
 .mobile-tool-btn.active .mobile-tool-icon { background: rgba(255,255,255,0.18); }
+
+/* ── Layer panel ─────────────────────────────────────────────────── */
+.layer-panel {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 150px;
+  z-index: 20;
+}
+.layer-panel-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2px;
+}
+.layer-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 10px;
+  background: #f5ede0;
+  color: #4f3422;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s;
+  width: 100%;
+  text-align: left;
+}
+.layer-toggle-btn:hover { background: #eadcc8; }
+.layer-toggle-btn.active {
+  background: linear-gradient(135deg, #003060, #001f40);
+  color: #fff;
+}
+.layer-toggle-icon { font-size: 1rem; }
+.layer-toggle-label { flex: 1; }
+.layer-toggle-status {
+  font-size: 0.7rem;
+  opacity: 0.75;
+  background: rgba(0,0,0,0.08);
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+.layer-toggle-btn.active .layer-toggle-status { background: rgba(255,255,255,0.18); }
+
+/* ── Layer panel transition ──────────────────────────────────────── */
+.layer-panel-enter-active, .layer-panel-leave-active {
+  transition: opacity 0.18s, transform 0.18s;
+}
+.layer-panel-enter-from, .layer-panel-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(6px);
+}
 
 /* ── Sheet transition ─────────────────────────────────────────────── */
 .sheet-fade-enter-active, .sheet-fade-leave-active { transition: opacity 0.2s; }

@@ -298,93 +298,179 @@ const S1M4L1_slides = [
     title: "DOCa Rioja — 西班牙最著名優質產區",
     subtitle: "Level 1 · DOCa 最高等級 · Spain's most famous fine wine region",
     points: [
-      { icon: '🏅', label: "Spain's most famous fine wine region", text: '1991 年取得 DOCa 認定，是西班牙最著名也最受國際市場歡迎的優質產區' },
-      { icon: '📍', label: '三個子產區', text: 'Rioja Alta · Rioja Alavesa · Rioja Oriental，各具截然不同特色' },
-      { icon: '🍇', label: 'Tempranillo is king', text: '品種之王領導陳年紅酒，Garnacha、Mazuelo、Graciano 各司其職' },
+      { icon: '🏅', label: '西班牙最古老 DOCa', text: '1925 年成立 DO，1991 年晉升 DOCa——西班牙第一個最高等級產區' },
+      { icon: '📍', label: '三個子產區', text: 'Rioja Alta · Rioja Alavesa · Rioja Oriental，橫跨 66,000+ 公頃，144 個市鎮' },
+      { icon: '🍇', label: '14 個法定品種', text: '5 紅 + 9 白，Tempranillo 為品種之王，覆蓋超過 75% 種植面積' },
     ],
   },
   {
     type: 'map',
     title: 'DOCa Rioja 產區地理位置',
     mapRegion: 'rioja',
-    description: 'Rioja DOCa 橫跨拉里奧哈自治區與巴斯克地區，沿埃布羅河谷延伸。產區命名來自支流 Río Oja，但最重要的河流是埃布羅河（Ebro），穿梭於 Sierra Cantabria 與 Sierra Demanda 兩山之間。',
+    description: 'Rioja DOCa 橫跨拉里奧哈自治區與巴斯克地區（Álava 省），沿埃布羅河谷延伸約 100 公里。三個子產區各有獨特風土，共超過 66,000 公頃葡萄園，為西班牙核心優質紅酒發源地。',
+  },
+  {
+    type: 'content',
+    icon: '📜',
+    title: 'Rioja 百年歷史里程碑',
+    html: `
+      <p>Rioja 是西班牙最古老的 DO 產區，從羅馬時代便已種植葡萄，擁有超過 2000 年葡萄栽培史。</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+        <div style="background:#fce8e6;border-left:4px solid #c0392b;padding:10px;border-radius:0 10px 10px 0">
+          <strong>1560</strong> — 酒莊業者首次協議在酒款上標示共同來源標籤，Rioja 品牌概念初現
+        </div>
+        <div style="background:#fce8e6;border-left:4px solid #c0392b;padding:10px;border-radius:0 10px 10px 0">
+          <strong>1787</strong> — 成立「Real Junta de Cosecheros（皇家採收者委員會）」，推廣葡萄栽培與北部市場商業化
+        </div>
+        <div style="background:#fdf6e3;border-left:4px solid #e67e22;padding:10px;border-radius:0 10px 10px 0">
+          <strong>1924</strong> — 一批業者申請「原產地保證封條（Precinto de Garantía）」，以區別 Rioja 酒款
+        </div>
+        <div style="background:#fdf6e3;border-left:4px solid #e67e22;padding:10px;border-radius:0 10px 10px 0">
+          <strong>1925</strong> — 正式成立 DO Rioja，劃定產區邊界並頒布第一部法規。1926 年 Consejo Regulador 運作
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #27ae60;padding:10px;border-radius:0 10px 10px 0">
+          <strong>1974</strong> — 率先推出「Crianza 陳年保證標章」，成為全球第一個官方認證陳年酒款的產區
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #27ae60;padding:10px;border-radius:0 10px 10px 0">
+          <strong>1991</strong> — 晉升為西班牙第一個 DOCa（Denominación de Origen Calificada），實施原產地裝瓶制度
+        </div>
+        <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:10px;border-radius:0 10px 10px 0">
+          <strong>2017</strong> — 引入 Viñedo Singular（單一葡萄園）、Vino de Municipio（村莊酒）、Vino de Zona（子區酒）三級地理分類
+        </div>
+        <div style="background:#ede7f6;border-left:4px solid #7b1fa2;padding:10px;border-radius:0 10px 10px 0">
+          <strong>2025</strong> — 慶祝 DOCa Rioja 成立 100 週年（Centennial Celebration），舉辦全球矚目酒展
+        </div>
+      </div>
+    `,
   },
   {
     type: 'content',
     icon: '🌊',
-    title: 'Rioja 的地理框架與命名由來',
+    title: 'Rioja 的地理框架：河流、山脈與風土',
     html: `
-      <p>「Rioja」命名源自小支流 <strong>Río Oja</strong>，但全區最重要的河流其實是 <strong>埃布羅河（Ebro River）</strong>——西班牙最強大的河流。埃布羅河及其支流在數個世紀的沖刷下，雕琢出產區內著名的葡萄園地形。</p>
-      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+      <p>「Rioja」命名源自小支流 <strong>Río Oja</strong>，但全區最重要的河流是 <strong>埃布羅河（Ebro River）</strong>。埃布羅河及其支流在數個世紀的沖刷下，雕琢出三種截然不同的土壤——石灰質黏土、含鐵黏土與沖積土。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
         <div style="background:#fce8e6;border-left:4px solid #c0392b;padding:12px;border-radius:0 10px 10px 0">
-          <strong>⛰️ 兩大山脈屏障</strong>
-          <ul style="margin:6px 0 0;padding-left:18px">
-            <li><strong>Sierra Cantabria</strong>：北側山脈，攔截來自大西洋的冷濕氣流，保護 Rioja Alavesa 免於極端高溫</li>
-            <li><strong>Sierra Demanda</strong>：南側山脈，與埃布羅河共同塑造 Rioja Alta 的獨特微氣候</li>
-          </ul>
+          <strong>⛰️ Sierra Cantabria（北側）</strong><br/>
+          攔截大西洋冷濕氣流，為 Rioja Alavesa 提供天然保護屏障。Foehn 效應造就溫暖南向葡萄園。
         </div>
-        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
-          <strong>🍇 Tempranillo is king</strong><br/>
-          Tempranillo 無疑是<strong>核心品種</strong>。其他重要品種：Garnacha（Oriental 主導）、Mazuelo（Cariñena，高酸提升骨幹）、Graciano（提升香氣複雜度），以及越來越多本地品種帶來新風格與創意。
+        <div style="background:#fce8e6;border-left:4px solid #922b21;padding:12px;border-radius:0 10px 10px 0">
+          <strong>⛰️ Sierra Demanda（南側）</strong><br/>
+          與埃布羅河共同塑造 Rioja Alta 微氣候。海拔 400–700m，延長成熟期。
         </div>
         <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:12px;border-radius:0 10px 10px 0">
-          <strong>🏅 DOCa 最高等級（1991 年）</strong><br/>
-          西班牙最著名優質產區，大部分聲譽就建立在卓越紅酒上——高品質白酒與粉紅酒也有產制。
+          <strong>🌊 Ebro 河谷氣候過渡帶</strong><br/>
+          西部偏大西洋（涼爽多雨），東部趨地中海（乾熱）。同一產區卻孕育截然不同風格。
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>📊 產區規模</strong><br/>
+          逾 66,000 公頃葡萄園・144 個市鎮・近 600 家酒莊・橫跨 3 個行政自治區
         </div>
       </div>
     `,
   },
   {
     type: 'compare',
-    title: 'Rioja 三個子產區特色比較',
+    title: 'Rioja 三個子產區深度比較',
     items: [
       {
-        icon: '🌊',
-        label: 'Rioja Alta（上里奧哈）',
-        desc: '位於產區西部，海拔 400–700 公尺。大西洋與地中海氣候交化，較涼爽。黏土石灰岩等土壤。出產優雅、高酸度、極佳陳年潛力的紅酒，是 Rioja 的「核心」子產區',
+        icon: '🌲',
+        label: 'Rioja Alta（上里奧哈）西部',
+        desc: '77 個市鎮・27,871 公頃。大西洋氣候為主，海拔 400–700m，年雨量 200–400L，夏溫 15–22°C。土壤：石灰質黏土（Tempranillo 最佳）＋含鐵黏土＋沖積土。風格：優雅高酸、精緻複雜、極佳陳年潛力。代表酒莊：La Rioja Alta SA、López de Heredia、Muga、CVNE',
         color: '#c0392b',
       },
       {
         icon: '🏔️',
-        label: 'Rioja Alavesa（阿拉維沙里奧哈）',
-        desc: '巴斯克自治區範圍內，埃布羅河北岸。Sierra Cantabria 山脈屏障，白色石灰質黏土為主。葡萄園規模較小；酒款比 Alta 更輕盈清新、細膩香氣，適合年輕飲用也具備優質陳年實力',
+        label: 'Rioja Alavesa（阿拉維沙）北部',
+        desc: '18 個市鎮・13,178 公頃。巴斯克自治區（Álava 省）。95% 石灰質黏土，Sierra Cantabria 山脈屏障，Foehn 效應。大西洋氣候更濕涼，葡萄園多在梯田小地塊。風格：輕盈精緻、細膩香氣、礦石感鮮明。代表酒莊：Artadi、Bodegas Ysios、Marqués de Riscal',
         color: '#8e44ad',
       },
       {
         icon: '☀️',
-        label: 'Rioja Oriental（東里奧哈）',
-        desc: '前身 Rioja Baja，2018 年更名。地中海氣候影響深，產區中最炎熱且乾燥。沖積土與含鐵黏土。Garnacha 表現卓越，酒體更飽滿、酒精含量較高、果味濃郁，酸度相對較低',
+        label: 'Rioja Oriental（東里奧哈）東部',
+        desc: '49 個市鎮・14,571+ 公頃。原名 Rioja Baja，2018 年更名。地中海氣候，最炎熱乾燥，年雨量 200–400L，夏溫可達 25°C。含鐵黏土與沖積土。Garnacha 在此最精彩。風格：酒體飽滿、高酒精、深色果味、結構強勁。代表品種：Garnacha Tinta、Viura',
         color: '#e67e22',
       },
-      {
-        icon: '🫐',
-        label: 'Graciano — Rioja 的香氣密碼',
-        desc: '低產本地品種，具備深花香與高酸度，用於與 Tempranillo 混釀提升香氣複雜度與老化潛力。少數酒莊釀公單一品種裝瓶',
-        color: '#4a148c',
-      },
     ],
+  },
+  {
+    type: 'content',
+    icon: '🍇',
+    title: 'DOCa Rioja 14 個法定葡萄品種',
+    html: `
+      <p>Rioja 共認可 <strong>14 個品種</strong>（5 紅 + 9 白），由業者世代篩選出最適合當地風土的品種。</p>
+      <h4 style="color:#c0392b;margin-top:12px">🔴 5 大紅葡萄品種</h4>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>01. Tempranillo</strong> — 西班牙靈魂品種，Rioja 最主要品種（佔 70%+）。草莓、皮革、香草、陳年後呈現雪茄盒複雜感
+        </div>
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>02. Garnacha Tinta（Grenache）</strong> — Rioja Oriental 主力，果味奔放、酒精飽滿、適應炎熱乾旱，藍莓、薰衣草、甘草
+        </div>
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>03. Graciano</strong> — 低產珍稀品種，深色花香（紫羅蘭、玫瑰）＋高酸度＋高單寧，與 Tempranillo 混釀提升複雜度與陳年力
+        </div>
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>04. Mazuelo（Carignan / Cariñena）</strong> — 提供高酸度、深色素、豐富單寧，是 Reserva 和 Gran Reserva 的骨幹輔助品種
+        </div>
+        <div style="background:#fce8e6;border-radius:8px;padding:10px">
+          <strong>05. Maturana Tinta</strong> — 2007 年正式納入，Rioja 最古老原生品種之一，全球無其他種植地點
+        </div>
+      </div>
+      <h4 style="color:#2e7d32;margin-top:12px">⚪ 9 大白葡萄品種</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px">
+        <div style="background:#e8f5e9;border-radius:8px;padding:8px;font-size:0.9rem">
+          <strong>Viura（Macabeo）</strong><br/>主力白品種，1970 年代起大規模種植，清爽柑橘青蘋果風格
+        </div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:8px;font-size:0.9rem">
+          <strong>Garnacha Blanca</strong><br/>豐滿圓潤，熱帶果味，低酸
+        </div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:8px;font-size:0.9rem">
+          <strong>Malvasía</strong><br/>花香濃郁，鏈橘皮，傳統白 Rioja 陳年款常見
+        </div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:8px;font-size:0.9rem">
+          <strong>Tempranillo Blanco</strong><br/>2008 年引入，Tempranillo 的白色突變種，清爽花香
+        </div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:8px;font-size:0.9rem">
+          <strong>Maturana Blanca</strong><br/>古老原生白品種，2008 年重新納入
+        </div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:8px;font-size:0.9rem">
+          <strong>Turruntés</strong><br/>2009 年引入的本地白品種，花香特色
+        </div>
+        <div style="background:#dceefb;border-radius:8px;padding:8px;font-size:0.9rem">
+          <strong>Chardonnay</strong><br/>國際品種，2008 年引入，奶油感，現代白 Rioja 常見
+        </div>
+        <div style="background:#dceefb;border-radius:8px;padding:8px;font-size:0.9rem">
+          <strong>Sauvignon Blanc</strong><br/>國際品種，2008 年引入，清新草本柑橘
+        </div>
+        <div style="background:#dceefb;border-radius:8px;padding:8px;font-size:0.9rem">
+          <strong>Verdejo</strong><br/>Rueda 明星品種，活潑草本，為 Rioja 白酒帶來清爽骨幹
+        </div>
+      </div>
+    `,
   },
   {
     type: 'quiz',
     question: '關於 DOCa Rioja，下列哪項最為準確？',
     options: [
-      '產區命名直接來自埃布羅河（Ebro），Tempranillo 與 Garnacha 在各子產區同樣重要',
-      '命名來自支流 Río Oja，但最重要的河流是埃布羅河；Tempranillo 為品種之王；三子產區各具截然不同特色',
-      'Rioja Alavesa 氣候最炎熱，為 Garnacha 的主要子產區',
+      '1925 年成立 DOCa，2008 年才引入 Crianza 等陳年標章制度',
+      '命名來自支流 Río Oja；1925 年成立 DO，1991 年晉升 DOCa；共 14 個法定品種（5 紅 9 白）',
+      'Rioja Alavesa 氣候最炎熱，為 Garnacha 的最主要子產區',
       '屬於 DO 等級，與 Priorat 同為 DOCa，並於 2005 年同步獲認',
     ],
     answer: 1,
-    explanation: 'Rioja 產區命名來自支流 Río Oja，但最重要的河流是埃布羅河（Ebro）。Tempranillo 是無爭議的品種之王。三子產區各有特色：Rioja Alta（優雅大西洋風格）、Alavesa（輕盈精緻）、Oriental（飽滿地中海式）。Rioja 1991 年率先取得 DOCa，Priorat 則於 2009 年。',
+    explanation: 'Rioja 命名來自支流 Río Oja；1925 年成立 DO，1991 年升格為西班牙第一個 DOCa。全產區共 14 個法定品種（5 紅：Tempranillo、Garnacha、Graciano、Mazuelo、Maturana Tinta；9 白：Viura、Garnacha Blanca、Malvasía 等）。Rioja Oriental 才是最炎熱乾燥的子產區。',
   },
   {
     type: 'summary',
-    message: 'DOCa Rioja 學習完成！',
+    message: 'DOCa Rioja 地理入門學習完成！',
     keyPoints: [
-      '西班牙最著名優質產區，1991 年取得 DOCa 認定；命名來自 Río Oja，最重要河流為埃布羅河（Ebro）',
-      'Sierra Cantabria 與 Sierra Demanda 兩山跟埃布羅河共同塑造產區地形與微氣候',
-      'Tempranillo 是品種之王；其他重要：Garnacha、Mazuelo（Cariñena）、Graciano',
-      '三子產區各具特色：Alta（優雅高酸、大西洋）、Alavesa（輕盈精緻、山脈屏障）、Oriental（飽滿地中海、Garnacha 主導）',
-      '大部分聲譽建立於紅酒；高品質白酒與粉紅酒也有產製',
+      '1925 年成立 DO，1991 年升格 DOCa（西班牙最早）；2025 年慶祝百週年',
+      '14 個法定品種：5 紅（Tempranillo、Garnacha、Graciano、Mazuelo、Maturana Tinta）+ 9 白（Viura、Chardonnay 等）',
+      'Rioja Alta（77 市鎮・27,871ha）：大西洋風格，優雅高酸，石灰質黏土',
+      'Rioja Alavesa（18 市鎮・13,178ha）：95% 石灰質黏土，Sierra Cantabria 屏障，輕盈精緻',
+      'Rioja Oriental（49 市鎮・14,571+ha）：地中海風格，Garnacha 最精彩，酒體飽滿',
+      '兩大山脈（Sierra Cantabria + Sierra Demanda）＋埃布羅河共同塑造多元地理風土',
     ],
   },
 ]
@@ -839,90 +925,179 @@ const S1M3L3_slides = [
 const S1M4L2_slides = [
   {
     type: 'cover',
-    icon: '⚔️',
+    icon: '🏷️',
     gradient: 'linear-gradient(135deg, #922b21, #c0392b)',
-    title: 'Rioja 風格：傳統派 vs 現代派',
-    subtitle: 'Level 1 · 第十二課',
+    title: 'Rioja 分類系統：產地 × 陳年 × 風格',
+    subtitle: 'Level 1 · 第十三課 · 西班牙最完整的酒款分類制度',
     points: [
-      { icon: '🪵', label: '傳統派', text: '長時間美國橡木桶陳年，香草椰子磚紅熟成感' },
-      { icon: '🍒', label: '現代派', text: '法國橡木短陳年，濃縮果味、深色系現代感' },
-      { icon: '🤝', label: '折衷派', text: '結合兩者，美國＋法國混用，均衡複雜' },
+      { icon: '🗺️', label: '地理分類', text: 'DOCa → Vino de Zona → Vino de Pueblo → Viñedo Singular 四層地理溯源系統' },
+      { icon: '🪵', label: '陳年分類', text: 'Genérico / Crianza / Reserva / Gran Reserva，嚴格規定桶陳與瓶陳時間' },
+      { icon: '⚔️', label: '風格之爭', text: '傳統美國橡木派 vs 現代法國橡木派，造就千面 Rioja' },
     ],
   },
   {
     type: 'map',
-    title: 'Rioja 三大子產區地形',
+    title: 'Rioja 三大子產區與地理分類',
     mapRegion: 'rioja',
-    description: 'Alta（西）・Alavesa（北）・Oriental（東）各有不同海拔與土壤特性。',
+    description: 'Alta（西）・Alavesa（北）・Oriental（東）是三個 Vino de Zona。下一層級是 Vino de Pueblo（144 個市鎮），最精細的是 Viñedo Singular（單一葡萄園，2017 年引入）。',
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Rioja 地理分類四層系統（2017 年起）',
+    html: `
+      <p>Rioja 於 2017 年建立四層地理分類，讓消費者更清楚了解每款酒的來源精細程度：</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+        <div style="background:#fce8e6;border-left:5px solid #c0392b;padding:14px;border-radius:0 10px 10px 0">
+          <strong>01. DOCa Rioja（最廣）</strong><br/>
+          所有 Rioja 酒款的基礎標示，涵蓋全產區 66,000+ 公頃。由 14 個法定品種釀造，可混合三個子產區的果實。
+        </div>
+        <div style="background:#fde8cc;border-left:5px solid #e67e22;padding:14px;border-radius:0 10px 10px 0">
+          <strong>02. Vino de Zona（子區酒）</strong><br/>
+          標示三個子產區之一的來源：<strong>Rioja Alta</strong>・<strong>Rioja Alavesa</strong>・<strong>Rioja Oriental</strong>。反映子區風土特色，讓消費者識別大西洋型或地中海型風格。
+        </div>
+        <div style="background:#e8f5e9;border-left:5px solid #2e7d32;padding:14px;border-radius:0 10px 10px 0">
+          <strong>03. Vino de Pueblo（村莊酒）</strong><br/>
+          標示 144 個市鎮中的特定村莊。代表酒款中的葡萄 100% 來自該村。比 Zona 更精細，展現村莊級風土個性。如：來自 Haro、Laguardia、Alfaro 等歷史名村的酒款。
+        </div>
+        <div style="background:#e3f2fd;border-left:5px solid #1565c0;padding:14px;border-radius:0 10px 10px 0">
+          <strong>04. Vino de Viñedo Singular（單一葡萄園）</strong><br/>
+          2017 年引入，代表 Rioja 最高地理精度的標示。單一地塊，反映最具代表性的獨特風土。條件嚴格：葡萄樹樹齡、種植密度、手工採收等均有規範。類比布根地 Premier Cru 概念。
+        </div>
+      </div>
+      <p style="margin-top:12px;color:#666;font-size:0.9rem">💡 地理分類與陳年分類可組合使用，如：一款酒可同時標示「Rioja Alta」（Zona）＋「Reserva」（陳年等級）。</p>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🪵',
+    title: 'Rioja 陳年分類：具體時間要求',
+    html: `
+      <p>Rioja 是全球<strong>最早實施陳年時間保證制度</strong>的產區（1974 年），並規定所有酒款必須在產區裝瓶（embotellado en origen）。</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+        <div style="background:#f8f9fa;border-radius:10px;padding:12px;border:1px solid #dee2e6">
+          <strong>🍷 Genérico（通常稱 Joven / 新鮮年輕型）</strong><br/>
+          <span style="color:#666">無最短陳年要求，保留一次香氣（新鮮果味），通常在採收後第一或第二年上市。也可能包含不符合 Crianza 以上等級要求的酒款。</span>
+        </div>
+        <div style="background:#fff3cd;border-radius:10px;padding:12px;border:1px solid #ffc107">
+          <strong>🪵 Crianza（陳年）</strong><br/>
+          紅酒：總陳年 <strong>≥ 2 年</strong>，其中橡木桶（225L）<strong>≥ 12 個月</strong><br/>
+          白酒／粉紅：橡木桶 <strong>≥ 6 個月</strong><br/>
+          <span style="color:#666;font-size:0.9rem">兼具果味一次香（果香）與橡木桶二次香（香草、烘烤），平衡感佳。</span>
+        </div>
+        <div style="background:#ffe0cc;border-radius:10px;padding:12px;border:1px solid #e67e22">
+          <strong>🏆 Reserva（珍藏）</strong><br/>
+          紅酒：總陳年 <strong>≥ 3 年</strong>，橡木桶 <strong>≥ 12 個月</strong>＋瓶中 <strong>≥ 6 個月</strong><br/>
+          白酒／粉紅：總陳年 2 年，橡木桶 <strong>≥ 6 個月</strong><br/>
+          <span style="color:#666;font-size:0.9rem">三層香氣全齊：果香（一次）＋橡木（二次）＋陳年（三次：皮革、煙草、松露）。</span>
+        </div>
+        <div style="background:#fce8e6;border-radius:10px;padding:12px;border:1px solid #c0392b">
+          <strong>🎖️ Gran Reserva（特級珍藏）</strong><br/>
+          紅酒：總陳年 <strong>≥ 5 年</strong>，橡木桶 <strong>≥ 24 個月</strong>＋瓶中 <strong>≥ 24 個月</strong><br/>
+          白酒／粉紅：總陳年 4 年，橡木桶 <strong>≥ 6 個月</strong><br/>
+          <span style="color:#666;font-size:0.9rem">僅在頂級年份釀制，高度複雜、精緻優雅、極佳陳年潛力。</span>
+        </div>
+        <div style="background:#e8f5e9;border-radius:10px;padding:12px;border:1px solid #27ae60">
+          <strong>🥂 氣泡酒（Espumoso）</strong><br/>
+          Genérico：瓶中二次發酵 <strong>≥ 15 個月</strong>（傳統法）<br/>
+          Reserva：<strong>≥ 24 個月</strong>（手工採收）<br/>
+          Gran Añada：<strong>≥ 36 個月</strong>（手工採收，頂級年份）
+        </div>
+      </div>
+    `,
   },
   {
     type: 'compare',
-    title: '傳統派 vs 現代派 Rioja',
+    title: '傳統派 vs 現代派 Rioja 風格對決',
     items: [
       {
-        icon: '🪵',
-        label: '傳統派（Traditional Style）',
-        desc: '長時間美國橡木桶陳年（2–4 年）。香草、椰子、奶油糖果、磚紅色澤、優雅單寧。酒莊代表：López de Heredia、CVNE、Marqués de Murrieta',
-        color: '#e67e22',
+        icon: '🏺',
+        label: '傳統派（Clásico / Traditional）',
+        desc: '美國橡木桶長期陳年（2–9 年+）。酒色磚紅偏橙，透明感強。香草、椰子、奶油糖果、皮革。口感輕盈絲滑、酸度突出。代表：López de Heredia、CVNE Imperial、Marqués de Murrieta Castillo Ygay',
+        color: '#a04000',
       },
       {
-        icon: '🍒',
-        label: '現代派（Modern Style）',
-        desc: '法國橡木短桶陳年（12–18 個月）。深寶石紅、黑莓黑李、巧克力、更濃郁飽滿。酒莊代表：Artadi、Remírez de Ganuza、Ysios',
-        color: '#8e44ad',
+        icon: '🍷',
+        label: '現代派（Moderno / Contemporary）',
+        desc: '法國橡木新桶短期陳年（12–18 個月）。酒色深濃寶石紫黑。黑莓、黑李、咖啡、可可、深烤土司。口感豐滿飽滿，高酒精，果味第一。代表：Artadi（Rioja Alavesa）、Roda、Palacios Remondo',
+        color: '#2c3e50',
       },
       {
-        icon: '🤝',
-        label: '折衷派（Contemporary Style）',
-        desc: '美國橡木 + 法國橡木混用，有時加入小型新桶（225L）。平衡傳統香草風味與現代果味濃縮感。如：Muga、Roda',
-        color: '#27ae60',
+        icon: '🌹',
+        label: '現代傳統主義（Neo-Tradicional）',
+        desc: '傳統長期熟成哲學 + 法國橡木的優雅。保留 Rioja 的骨架，但避免美國桶帶來的過度椰子感。被許多評家視為「Rioja 的未來」。代表：Muga Prado Enea、La Rioja Alta Gran Reserva \'904\'',
+        color: '#1a8f5a',
+      },
+      {
+        icon: '⚗️',
+        label: '車庫酒（Garage Wine / Vino de Autor）',
+        desc: '源自 Rioja Alavesa，1990 年代末興起。小量頂級釀造，強調單一葡萄園或老藤。高度個人化，不受傳統混釀框架限制。代表：Artadi Viña El Pisón、Contino Viña del Olivo',
+        color: '#7b1fa2',
       },
     ],
   },
   {
     type: 'content',
-    icon: '🪵',
-    title: '橡木桶對 Rioja 風格的影響',
+    icon: '🏰',
+    title: 'Rioja 代表酒莊與推薦入門款',
     html: `
-      <h4>🇺🇸 美國橡木桶（American Oak / Roble Americano）</h4>
-      <ul>
-        <li>木紋較寬，透氧速度較快</li>
-        <li>賦予<strong>香草、椰子、奶油糖果、甘草</strong>的香氣</li>
-        <li>長時間陳年 → 酒色趨向磚紅/橙紅，單寧更柔化</li>
-        <li>是 <strong>Rioja 傳統風格</strong>的精髓，已有百年歷史</li>
-      </ul>
-      <h4>🇫🇷 法國橡木桶（French Oak / Roble Francés）</h4>
-      <ul>
-        <li>木紋較細，透氧速度較慢，陳年更精緻</li>
-        <li>賦予<strong>雪松、煙燻、烘烤咖啡、香料</strong>的複雜感</li>
-        <li>保留更多果味，酒色保持深寶石紅</li>
-        <li>1990 年代引入 Rioja，帶動現代風格革命</li>
-      </ul>
-      <h4 style="margin-top:12px">🍷 如何從酒標辨識風格？</h4>
-      <p>「Gran Reserva」幾乎都是傳統風格，「Crianza」和「Reserva」則可能是傳統或現代。看酒莊哲學比等級更重要。</p>
+      <p>Rioja 擁有近 600 家酒莊，以下是各風格的代表：</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div style="background:#fce8e6;border-radius:10px;padding:12px">
+          <strong style="color:#c0392b">🏺 傳統風格代表</strong>
+          <ul style="margin:8px 0 0;padding-left:16px;font-size:0.9rem">
+            <li><strong>López de Heredia</strong> — Viña Tondonia，Rioja Alta 傳統家族酒莊，白酒陳年舉世知名</li>
+            <li><strong>Marqués de Murrieta</strong> — 1852 年創立，Castillo Ygay Gran Reserva 是傳奇</li>
+            <li><strong>CVNE</strong> — 哈洛（Haro）歷史名莊，Imperial 系列是傳統精品</li>
+          </ul>
+        </div>
+        <div style="background:#e3f2fd;border-radius:10px;padding:12px">
+          <strong style="color:#1565c0">🍷 現代風格代表</strong>
+          <ul style="margin:8px 0 0;padding-left:16px;font-size:0.9rem">
+            <li><strong>Artadi</strong> — Rioja Alavesa 現代革命先驅，後轉成獨立 DO Arabako Errioxa</li>
+            <li><strong>Bodegas Roda</strong> — Haro 現代精品，法國桶 Roda I 是現代 Rioja 的標杆</li>
+            <li><strong>Ysios（Bodegas Ysios）</strong> — 建築師 Santiago Calatrava 設計，現代精品形象</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-radius:10px;padding:12px">
+          <strong style="color:#2e7d32">🌹 折衷/新傳統代表</strong>
+          <ul style="margin:8px 0 0;padding-left:16px;font-size:0.9rem">
+            <li><strong>Muga</strong> — Prado Enea 是折衷精品典範，家族傳統結合優雅現代感</li>
+            <li><strong>La Rioja Alta SA</strong> — Gran Reserva 904 & 890 均衡優雅，口碑極佳</li>
+          </ul>
+        </div>
+        <div style="background:#ede7f6;border-radius:10px;padding:12px">
+          <strong style="color:#7b1fa2">🏛️ 著名旅遊酒莊</strong>
+          <ul style="margin:8px 0 0;padding-left:16px;font-size:0.9rem">
+            <li><strong>Marqués de Riscal</strong> — Elciego，Frank Gehry 設計的「波浪酒莊」，酒莊旅遊地標</li>
+            <li><strong>Bodegas Ysios</strong> — Laguardia，Santiago Calatrava 建築設計</li>
+          </ul>
+        </div>
+      </div>
     `,
   },
   {
     type: 'quiz',
-    question: 'Rioja 傳統派的標誌性橡木桶使用，以下哪個描述最準確？',
+    question: '關於 DOCa Rioja 的陳年分類，下列哪項最正確？',
     options: [
-      '使用法國橡木桶，陳年 6 個月',
-      '使用美國橡木桶，長時間陳年（2-4 年以上），帶來香草椰子風味',
-      '完全不使用橡木桶，強調果味純粹',
-      '使用匈牙利橡木桶，帶來蜂蜜辛香風味',
+      'Reserva 紅酒總陳年需 5 年，其中橡木桶 2 年；Gran Reserva 需 7 年',
+      'Crianza 紅酒總陳年需 2 年，橡木桶至少 12 個月；Reserva 需 3 年，桶陳 12 個月+瓶陳 6 個月',
+      'Gran Reserva 白酒需在橡木桶中熟成至少 2 年',
+      'Genérico 等級必須在橡木桶中熟成至少 6 個月才能上市',
     ],
     answer: 1,
-    explanation: 'Rioja 傳統派的標誌是長時間美國橡木桶陳年，賦予酒款香草、椰子、奶油糖果的特殊香氣，搭配磚紅色澤和柔化的單寧，與現代派的濃郁黑果系截然不同。',
+    explanation: 'Crianza 紅酒：總陳年 ≥2 年，橡木桶（225L）≥12 個月。Reserva 紅酒：總陳年 ≥3 年，橡木桶 ≥12 個月，瓶中 ≥6 個月。Gran Reserva：總陳年 ≥5 年，橡木桶 ≥24 個月，瓶中 ≥24 個月。Genérico 無最低陳年要求。Gran Reserva 白酒是總陳年 4 年，桶陳 ≥6 個月。',
   },
-
   {
     type: 'summary',
-    message: 'Rioja 風格學習完成！',
+    message: 'Rioja 分類系統與風格學習完成！',
     keyPoints: [
-      '傳統派：美國橡木桶長陳年 → 香草椰子磚紅熟成感（López de Heredia、Marqués de Murrieta）',
-      '現代派：法國橡木桶短陳年 → 深色果味濃縮現代感（Artadi、Ysios）',
-      '折衷派：兩種橡木混用，均衡複雜（Muga、Roda）',
-      '美國橡木 = 香草椰子；法國橡木 = 雪松煙燻',
+      '四層地理分類：DOCa → Vino de Zona（3 子區）→ Vino de Pueblo（144 市鎮）→ Viñedo Singular（單一葡萄園，2017）',
+      'Crianza（2年/桶12月）→ Reserva（3年/桶12月+瓶6月）→ Gran Reserva（5年/桶24月+瓶24月）',
+      '傳統派：美國橡木長陳年 → 香草椰子磚紅（López de Heredia、Murrieta）',
+      '現代派：法國橡木短陳年 → 深紫濃縮黑果（Artadi、Roda）',
+      '1974 年率先推出陳年保證標章；DOCa 規定必須在產區裝瓶（embotellado en origen）',
+      'Rioja Alta 精緻優雅 · Rioja Alavesa 輕盈礦石 · Rioja Oriental 飽滿地中海',
     ],
   },
 ]
@@ -7615,6 +7790,428 @@ const S4FinalExam_slides = [
 ]
 
 // ───────────────────────────────────────────────────────────────
+//  Level 2 — 第零章：DOCa Rioja 深度探索
+// ───────────────────────────────────────────────────────────────
+
+const S2M0L1_slides = [
+  {
+    type: 'cover',
+    icon: '🪨',
+    gradient: 'linear-gradient(135deg, #7b241c, #c0392b)',
+    title: 'Rioja 三子產區風土深析',
+    subtitle: 'Level 2 · DOCa Rioja 深度 · 石灰岩・含鐵黏土・沖積土',
+    points: [
+      { icon: '🌲', label: 'Rioja Alta', text: '石灰質黏土主導，大西洋涼爽，77 市鎮・27,871 公頃，精緻陳年潛力' },
+      { icon: '🏔️', label: 'Rioja Alavesa', text: '95% 石灰質黏土，Sierra Cantabria 屏障，18 市鎮・13,178 公頃，輕盈礦石' },
+      { icon: '☀️', label: 'Rioja Oriental', text: '含鐵黏土+沖積土，地中海炎熱，49 市鎮・14,571 公頃，Garnacha 最精彩' },
+    ],
+  },
+  {
+    type: 'map',
+    title: 'Rioja 三子產區地理分布',
+    mapRegion: 'rioja',
+    description: '由西向東跨越 100 公里，氣候從大西洋型逐漸轉為地中海型。北側 Sierra Cantabria 和南側 Sierra Demanda 兩大山脈，與埃布羅河共同塑造三種截然不同的風土環境。',
+  },
+  {
+    type: 'content',
+    icon: '🌲',
+    title: 'Rioja Alta — 大西洋風格核心地帶',
+    html: `
+      <p><strong>Rioja Alta</strong> 是整個 DOCa 中面積最大、海拔最高的子產區，也是最接近大西洋氣候影響的地帶。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div style="background:#fce8e6;border-radius:10px;padding:12px">
+          <strong>📊 基礎數據</strong>
+          <ul style="margin:6px 0 0;padding-left:16px;font-size:0.9rem">
+            <li>77 個市鎮</li>
+            <li>27,871 公頃葡萄園</li>
+            <li>海拔 400–700 公尺</li>
+            <li>年雨量 200–400 升</li>
+            <li>夏季均溫 15–22°C</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-radius:10px;padding:12px">
+          <strong>🪨 三種土壤類型</strong>
+          <ul style="margin:6px 0 0;padding-left:16px;font-size:0.9rem">
+            <li><strong>石灰質黏土</strong>：Tempranillo 最佳土壤，高鈣賦予酒體骨架</li>
+            <li><strong>含鐵黏土</strong>：產出酸度平衡、酒體中等的紅酒</li>
+            <li><strong>沖積土</strong>：輕盈果香白酒和早飲型紅酒</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:12px;border-radius:0 10px 10px 0;margin-top:10px">
+        <strong>🍷 風格特色</strong>：大西洋與地中海氣候的過渡帶。較涼爽的高海拔地塊延遲成熟，保留天然酸度。Rioja Alta 是 Gran Reserva 陳年款最重要的來源地。代表小鎮：Haro（哈洛，Rioja 的酒之首都）、San Vicente de la Sonsierra
+      </div>
+      <div style="background:#fdf6e3;border-left:4px solid #f39c12;padding:12px;border-radius:0 10px 10px 0;margin-top:8px">
+        <strong>🏰 世界遺產亮點</strong>：Haro 的「La Estación（車站區）」集中了 López de Heredia、CVNE、Muga、La Rioja Alta SA 等頂級傳統酒莊，是全球密度最高的百年酒莊集中地。San Millán de la Cogolla 修道院（UNESCO 世界遺產）收藏了西班牙語和巴斯克語最早的文字記錄。
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🏔️',
+    title: 'Rioja Alavesa — Sierra Cantabria 的庇護之地',
+    html: `
+      <p><strong>Rioja Alavesa</strong> 是三個子產區中面積最小的，卻因其獨特的石灰質白堊土壤和巴斯克文化色彩而最具個性。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div style="background:#f3e8ff;border-radius:10px;padding:12px">
+          <strong>📊 基礎數據</strong>
+          <ul style="margin:6px 0 0;padding-left:16px;font-size:0.9rem">
+            <li>18 個市鎮（最少）</li>
+            <li>13,178 公頃（最小）</li>
+            <li>95% 石灰質黏土</li>
+            <li>年雨量 200–400 升</li>
+            <li>夏季均溫 -3°C~15°C（年均）</li>
+          </ul>
+        </div>
+        <div style="background:#e8f5e9;border-radius:10px;padding:12px">
+          <strong>🏔️ 氣候特殊性</strong>
+          <ul style="margin:6px 0 0;padding-left:16px;font-size:0.9rem">
+            <li><strong>Foehn 效應</strong>：Sierra Cantabria 西坡截雨，東坡乾暖</li>
+            <li>南向梯田葡萄園，充足日照</li>
+            <li>大西洋氣候更濕涼（三者中最北）</li>
+            <li>葡萄園規模小（梯田地塊）</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background:#ede7f6;border-left:4px solid #7b1fa2;padding:12px;border-radius:0 10px 10px 0;margin-top:10px">
+        <strong>🍷 風格特色</strong>：Alavesa 以石灰質白堊土為主（佔 95%），賦予酒款礦石感和骨架。整體風格比 Alta 更輕盈精緻，花香更細膩，適合年輕飲用。Sierra Cantabria 山脈的屏障是關鍵微氣候因素。<br/>
+        <strong>主要市鎮</strong>：Laguardia（中世紀城牆保存完好的酒鎮）、Elciego（Marqués de Riscal 旗艦酒莊所在地）
+      </div>
+      <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:12px;border-radius:0 10px 10px 0;margin-top:8px">
+        <strong>🏛️ 酒莊建築之旅</strong>：Rioja Alavesa 也是現代建築與葡萄酒文化結合的代表。Marqués de Riscal 由 Frank Gehry 設計，鈦金屬波浪屋頂標誌性外觀。Bodegas Ysios 由 Santiago Calatrava 設計，波浪形鋁制屋頂。Bodegas Darien 由 Jesús Marino Pascual 設計。
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '☀️',
+    title: 'Rioja Oriental — 地中海型的溫暖新大陸',
+    html: `
+      <p><strong>Rioja Oriental</strong>（原名 Rioja Baja，2018 年正式更名）是 DOCa 中最東端、最炎熱、最具地中海特色的子產區。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div style="background:#fff3e0;border-radius:10px;padding:12px">
+          <strong>📊 基礎數據</strong>
+          <ul style="margin:6px 0 0;padding-left:16px;font-size:0.9rem">
+            <li>49 個市鎮</li>
+            <li>14,571+ 公頃</li>
+            <li>年雨量 200–400 升（較少）</li>
+            <li>夏季氣溫可達 25°C 以上</li>
+            <li>年均溫最高的子產區</li>
+          </ul>
+        </div>
+        <div style="background:#fce8e6;border-radius:10px;padding:12px">
+          <strong>🪨 兩大土壤類型</strong>
+          <ul style="margin:6px 0 0;padding-left:16px;font-size:0.9rem">
+            <li><strong>含鐵黏土</strong>：呈紅色，富含鐵質，釀出中等酒體紅酒</li>
+            <li><strong>沖積土</strong>：河流沖積形成，透水性好，輕盈果香酒款</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background:#fff8e1;border-left:4px solid #ff9800;padding:12px;border-radius:0 10px 10px 0;margin-top:10px">
+        <strong>🍷 Garnacha 的精彩主場</strong>：Rioja Oriental 的炎熱乾燥氣候讓 Garnacha 發揮得淋漓盡致——藍莓、薰衣草、甘草、溫暖香料感，酒體飽滿，酒精偏高（14-15.5%）。山區的冷涼地塊（最涼的海拔）也孕育出多樣化的個性酒款。<br/>
+        <strong>主要市鎮</strong>：Alfaro、Calahorra、Logroño（DOCa Rioja 首府）
+      </div>
+      <div style="background:#e8f5e9;border-left:4px solid #27ae60;padding:12px;border-radius:0 10px 10px 0;margin-top:8px">
+        <strong>♻️ 2018 年更名意義</strong>：從「Rioja Baja（下里奧哈）」更名為「Rioja Oriental（東里奧哈）」，不只是地理方位的改變，更是對這個子產區潛力的重新肯定——「Oriental」更中性正面，避免「Baja（低下）」的語義偏見，反映其地中海型風格的獨特價值。
+      </div>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: 'Rioja Alavesa 與 Rioja Alta 最關鍵的土壤差異是什麼？',
+    options: [
+      'Alavesa 以沖積土為主，Alta 以板岩為主',
+      'Alavesa 95% 為石灰質黏土，Alta 則混合石灰質黏土、含鐵黏土與沖積土三種類型',
+      'Alavesa 以含鐵紅土為主，Alta 以火山土為主',
+      '兩者土壤組成完全相同，差異只在氣候',
+    ],
+    answer: 1,
+    explanation: 'Rioja Alavesa 高達 95% 的土壤為石灰質黏土（calcareous clay），土壤組成高度統一，賦予酒款一致的礦石骨架。Rioja Alta 則同時擁有三種土壤：石灰質黏土（最優質 Tempranillo）、含鐵黏土（均衡紅酒）和沖積土（輕盈果香），形成更多元的風格。',
+  },
+  {
+    type: 'summary',
+    message: 'Rioja 三子產區風土深析完成！',
+    keyPoints: [
+      'Rioja Alta（77 市鎮・27,871ha）：混合三種土壤，大西洋涼爽，Gran Reserva 陳年款核心產地',
+      'Rioja Alavesa（18 市鎮・13,178ha）：95% 石灰質黏土，Sierra Cantabria 屏障，Foehn 效應，輕盈礦石',
+      'Rioja Oriental（49 市鎮・14,571+ha）：含鐵黏土+沖積土，地中海炎熱，Garnacha 最精彩',
+      'Haro 的「La Estación 車站區」是全球最高密度百年酒莊集中地',
+      'Rioja Oriental 於 2018 年由 Rioja Baja 更名，肯定其地中海風格的獨特價值',
+    ],
+  },
+]
+
+const S2M0L2_slides = [
+  {
+    type: 'cover',
+    icon: '🍷',
+    gradient: 'linear-gradient(135deg, #922b21, #7d3c98)',
+    title: 'Rioja 紅酒：混釀藝術與陳年演化',
+    subtitle: 'Level 2 · Tempranillo + Garnacha + Graciano + Mazuelo',
+    points: [
+      { icon: '🍒', label: 'Tempranillo', text: '靈魂品種，佔 70%+。草莓、皮革、香草，骨架輕盈但陳年複雜' },
+      { icon: '🫐', label: 'Garnacha + Graciano', text: 'Garnacha 補充果味飽滿度；Graciano 提升花香複雜度與陳年力' },
+      { icon: '🎭', label: 'Mazuelo', text: '高酸高單寧，是 Gran Reserva 骨幹的秘密武器' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🎨',
+    title: '四大品種混釀哲學：各司其職',
+    html: `
+      <p>傳統 Rioja 紅酒是<strong>多品種混釀藝術</strong>。每個品種都有其不可替代的角色：</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#fce8e6;border-left:5px solid #c0392b;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🍒 Tempranillo — 主角與靈魂（佔比 60-85%）</strong><br/>
+          西班牙最重要的品種。「Temprano（早熟）」之意，比 Garnacha 早 2-3 週採收。<br/>
+          <em>年輕風格</em>：草莓、覆盆子、紅李、新鮮香草<br/>
+          <em>陳年後</em>：皮革、煙草葉、雪松、松露、磚紅橙<br/>
+          <strong>弱點</strong>：天然酸度偏低，顏色不夠深——需要其他品種補足
+        </div>
+        <div style="background:#fef0e6;border-left:5px solid #e67e22;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🫐 Garnacha Tinta — 果味與酒精補足者（佔比 5-20%）</strong><br/>
+          主要來自 Rioja Oriental 炎熱地塊的 Garnacha，為混釀帶來：<br/>
+          • 更豐滿的酒體感（高酒精 14-15%）<br/>
+          • 藍莓、桑葚深色果香<br/>
+          • 圓潤甘甜的中段口感<br/>
+          • 白胡椒、普羅旺斯香草等香料感
+        </div>
+        <div style="background:#ede7f6;border-left:5px solid #7b1fa2;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🌹 Graciano — 香氣與結構提升者（佔比 2-8%）</strong><br/>
+          低產的珍稀品種，少量加入即能改變整體品質：<br/>
+          • 深花香：紫羅蘭、玫瑰、鳶尾花<br/>
+          • 天然高酸度（補足 Tempranillo 的短板）<br/>
+          • 深色素（提升顏色深度）<br/>
+          • 高單寧（增加陳年潛力）
+        </div>
+        <div style="background:#e8f5e9;border-left:5px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🦴 Mazuelo（Carignan）— 骨幹與架構者（佔比 2-10%）</strong><br/>
+          提供高度結構感，在 Gran Reserva 中不可或缺：<br/>
+          • 非常高的酸度（陳年保鮮劑）<br/>
+          • 深濃顏色（色素穩定劑）<br/>
+          • 豐富單寧（陳年骨架支撐）<br/>
+          • 黑莓、黑胡椒、礦石感
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '⏳',
+    title: 'Rioja 紅酒陳年演化：風味的時間旅程',
+    html: `
+      <p>Rioja 紅酒（特別是 Reserva 和 Gran Reserva）是世界上<strong>陳年演化最戲劇性</strong>的紅酒之一：</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#fce8e6;border-radius:10px;padding:12px">
+          <strong>🌱 採收後 1-3 年（Joven/Crianza 時期）</strong><br/>
+          新鮮草莓、覆盆子、紫羅蘭。美國橡木桶：初現香草、椰子甜香。
+          單寧爽脆有力，酸度清新，酒色深寶石紅。適合現飲。
+        </div>
+        <div style="background:#ffe8cc;border-radius:10px;padding:12px">
+          <strong>🍷 5-10 年（Reserva 成熟期）</strong><br/>
+          果味開始乾化演變：草莓乾、蔓越莓乾、黑加侖。
+          橡木特性更融合：香草、椰子不再突兀，開始出現皮革、雪松。
+          單寧柔化，酒色偏向石榴紅。進入「第一個美好窗口」。
+        </div>
+        <div style="background:#fdf6e3;border-radius:10px;padding:12px">
+          <strong>🏺 10-20 年（Gran Reserva 巔峰期）</strong><br/>
+          三次香氣全面展開：皮革、菸草、蘑菇、松露、煙燻。
+          美國橡木的磚紅色澤達到最佳狀態，高雅通透。
+          單寧絲絨般精緻，餘韻悠長。這是 Rioja 最難忘的時刻。
+        </div>
+        <div style="background:#e8f5e9;border-radius:10px;padding:12px">
+          <strong>🎖️ 20-40 年（傳奇年份巔峰）</strong><br/>
+          僅最佳年份（如 2010、2001、1994、1982）才能達到此境界。
+          López de Heredia Viña Tondonia Gran Reserva 在此階段呈現不可思議的雅致。
+          氧化特性：磚橙色澤、蘑菇、核桃、花香、蜂蜜感。
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Tempranillo 在不同橡木桶下的風格變化',
+    items: [
+      {
+        icon: '🇺🇸',
+        label: '美國橡木桶（American Oak）',
+        desc: '傳統 Rioja 首選。木紋寬，透氧快，內酯含量高。賦予：香草、椰子、奶油糖果、甘草甜感。長期陳年→磚紅/橙紅色澤，絲絨單寧。是 López de Heredia、Murrieta 的靈魂所在',
+        color: '#a04000',
+      },
+      {
+        icon: '🇫🇷',
+        label: '法國橡木桶（French Oak）',
+        desc: '現代 Rioja 偏好。木紋細，透氧慢，更精緻。賦予：雪松、煙燻、烘烤咖啡、土壤感。保留更多果味，酒色深濃寶石紅。1990 年代引入，是 Artadi、Roda 的現代選擇',
+        color: '#2c3e50',
+      },
+      {
+        icon: '🎛️',
+        label: '混合使用（美+法，部分酒莊）',
+        desc: '兼顧傳統香草感與現代深色果味。Muga 使用約 40% 美國桶 + 60% 法國桶（Prado Enea）。平衡性好，被許多評論家視為「最成功的折衷路線」。La Rioja Alta SA 也採用此策略',
+        color: '#1a8f5a',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '關於 Rioja 的混釀品種搭配，哪項描述最準確？',
+    options: [
+      'Graciano 主要負責提供高酒精和豐厚酒體，Mazuelo 負責花香',
+      'Tempranillo 是主角，Graciano 補充花香與酸度，Mazuelo 提供高酸與架構，Garnacha 增加果味與酒精',
+      'Garnacha 是 Rioja 的主要品種，Tempranillo 只是輔助品種',
+      '現代 Rioja 已不再混釀，全部採用單一品種 Tempranillo 裝瓶',
+    ],
+    answer: 1,
+    explanation: '傳統 Rioja 混釀中：Tempranillo 是主角（60-85%），但天然酸度偏低；Graciano 提供深花香、高酸度和高單寧（少量但影響顯著）；Mazuelo 提供高酸、深色素和豐富骨架（特別在 Gran Reserva 中重要）；Garnacha 增加果味飽滿度和酒精感。',
+  },
+  {
+    type: 'summary',
+    message: 'Rioja 紅酒混釀藝術學習完成！',
+    keyPoints: [
+      'Tempranillo 是主角（60-85%）：草莓皮革香草，需要其他品種補足酸度和深色',
+      'Graciano：花香複雜度（紫羅蘭玫瑰）+ 高酸度 + 陳年力——Rioja 最珍貴的輔助品種',
+      'Mazuelo（Carignan）：高酸 + 深色 + 骨幹——Gran Reserva 的秘密武器',
+      'Garnacha：圓潤果味 + 高酒精——Rioja Oriental 的貢獻',
+      '美國橡木→香草椰子磚紅；法國橡木→雪松煙燻深紫；兩者混用→均衡複雜',
+    ],
+  },
+]
+
+const S2M0L3_slides = [
+  {
+    type: 'cover',
+    icon: '🥂',
+    gradient: 'linear-gradient(135deg, #1a6e3c, #2e7d32)',
+    title: 'Rioja 白酒文藝復興',
+    subtitle: 'Level 2 · 從 Viura 傳統到 Chardonnay 現代——白 Rioja 的驚人崛起',
+    points: [
+      { icon: '🟡', label: 'Viura 傳統', text: '1970 年代起主導白 Rioja，清爽柑橘青蘋果，是 Rioja Blanco 的靈魂' },
+      { icon: '🌹', label: '陳年白 Rioja 奇蹟', text: 'López de Heredia 白酒陳年 10-30 年，蜂蠟榛子礦石，堪稱世界奇蹟' },
+      { icon: '🥂', label: '現代白 Rioja 革命', text: '2008 年引入 Chardonnay、Sauvignon Blanc、Verdejo，帶動新一代白 Rioja 浪潮' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🟡',
+    title: 'Viura（Macabeo）：Rioja 白酒的傳統靈魂',
+    html: `
+      <p><strong>Viura</strong>（在加泰羅尼亞稱 Macabeo）自 1970 年代起成為 Rioja Blanco 的主力白品種。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🍋 年輕型 Viura（Genérico）</strong><br/>
+          • 清新柑橘：柳橙、青檸、葡萄柚<br/>
+          • 青蘋果、白花（茉莉）<br/>
+          • 爽脆酸度，輕盈酒體<br/>
+          • 適合搭配海鮮、沙拉、清淡料理
+        </div>
+        <div style="background:#fdf6e3;border-left:4px solid #f39c12;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🪵 橡木桶陳年 Viura（Crianza/Reserva）</strong><br/>
+          • 香草、奶油、烘烤榛子<br/>
+          • 柑橘演化為金黃水果（芒果、桃子）<br/>
+          • 豐厚酒體，圓潤質地<br/>
+          • 搭配豐盛雞肉、乳酪、蘑菇燉菜絕佳
+        </div>
+        <div style="background:#fce8e6;border-left:4px solid #c0392b;padding:12px;border-radius:0 10px 10px 0">
+          <strong>🏺 López de Heredia 傳奇老年份白酒</strong><br/>
+          Viña Tondonia Blanco 和 Viña Gravonia——長達 10-30 年在橡木桶中緩慢氧化熟成。<br/>
+          • 顏色深金至琥珀<br/>
+          • 蜂蠟、烤榛子、梅子乾、蘑菇、海水礦石<br/>
+          • 超低酸感卻異常清新<br/>
+          這是全球獨一無二的白葡萄酒風格，被 The Wine Advocate 評為世界頂級白酒之一。
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🌟',
+    title: '2008 年白品種革命：Rioja Blanco 的現代化',
+    html: `
+      <p>2008 年，DOCa Rioja 引入 5 個新白品種（包括 3 個國際品種），為 Rioja 白酒帶來嶄新面貌：</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+        <div style="background:#e3f2fd;border-radius:10px;padding:12px">
+          <strong style="color:#1565c0">🥂 Chardonnay</strong><br/>
+          法國最知名品種。在 Rioja 釀出豐滿奶油感的白酒，帶來熱帶水果（鳳梨、芒果）與香草橡木。適合搭配白醬燉雞、法式料理。
+        </div>
+        <div style="background:#e8f5e9;border-radius:10px;padding:12px">
+          <strong style="color:#2e7d32">🌿 Sauvignon Blanc</strong><br/>
+          清新草本與百香果特色。在涼爽高海拔的 Rioja Alta 發揮出最佳表現。帶來現代清爽的白 Rioja 新形象。
+        </div>
+        <div style="background:#fdf6e3;border-radius:10px;padding:12px">
+          <strong style="color:#f39c12">✨ Verdejo</strong><br/>
+          來自 Rueda 的明星品種。活潑草本（茴香、茅草）、杏仁苦感、清爽骨幹。為 Rioja 白酒增添獨特質感。
+        </div>
+        <div style="background:#fce8e6;border-radius:10px;padding:12px">
+          <strong style="color:#c0392b">🌸 Tempranillo Blanco</strong><br/>
+          Tempranillo 的白色突變種（2008 年引入）。清爽花香（白桃、茉莉）+ 爽脆酸度，是 Rioja 自有的特色白品種。
+        </div>
+        <div style="background:#ede7f6;border-radius:10px;padding:12px">
+          <strong style="color:#7b1fa2">🏺 Malvasía</strong><br/>
+          最早出現在 Rioja 的白品種之一。濃郁花香（玫瑰、橙花）、熱帶果味，是傳統陳年 Rioja Blanco 的香氣来源之一。
+        </div>
+        <div style="background:#e0f7fa;border-radius:10px;padding:12px">
+          <strong style="color:#00695c">🌿 Garnacha Blanca</strong><br/>
+          豐滿圓潤，熱帶果香（芭樂、甜瓜）、低酸。在 Rioja Oriental 的炎熱地塊表現最佳，帶來豐滿感。
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Rioja 白酒四大風格對照',
+    items: [
+      {
+        icon: '🍋',
+        label: '年輕清爽型（Viura Joven）',
+        desc: '無木桶陳年的年輕 Viura。清新柑橘、青蘋果、白花。爽脆酸度，輕盈酒體。適合搭配生蠔、醃魚、輕食沙拉。這是 Rioja 量最大的白酒風格。',
+        color: '#f1c40f',
+      },
+      {
+        icon: '🪵',
+        label: '傳統橡木陳年（Crianza/Reserva Blanco）',
+        desc: '美國橡木桶陳年的 Viura。蜂蜜香草、金黃水果、奶油質地。是 Rioja 白酒最具傳統特色的風格。代表：CVNE Monopole、Marqués de Murrieta Capellanía Blanco。',
+        color: '#d4a017',
+      },
+      {
+        icon: '🏺',
+        label: '傳奇長期陳年白酒（López de Heredia 風格）',
+        desc: '氧化熟成多年。深金琥珀色、蜂蠟榛子梅子乾蘑菇礦石。全球獨特風格，被侍酒師界奉為收藏瑰寶。Viña Tondonia Blanco、Viña Gravonia 是代表。',
+        color: '#a04000',
+      },
+      {
+        icon: '🌿',
+        label: '現代新鮮派（Chardonnay/SB/Verdejo）',
+        desc: '2008 年品種革命後的新風格。清新草本、熱帶果香、國際現代感。代表年輕消費者更容易接受的 Rioja 白酒面貌。部分使用法國橡木增添質感。',
+        color: '#2e7d32',
+      },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '關於 López de Heredia Viña Tondonia Blanco，以下哪項最能描述其獨特之處？',
+    options: [
+      '使用 Chardonnay 釀造，在不鏽鋼桶中保留清新果香',
+      '採用 Viura（Macabeo）長期橡木桶氧化熟成（10-30 年），呈現蜂蠟榛子礦石的世界獨特風格',
+      '採用 Sauvignon Blanc，以現代冷發酵技術釀造，清新草本特色',
+      '為 100% Garnacha Blanca，不使用橡木，在地中海陽光下日曬熟成',
+    ],
+    answer: 1,
+    explanation: 'López de Heredia Viña Tondonia Blanco 使用 Viura（Macabeo）為主，在老美國橡木桶中緩慢氧化熟成長達 10-30 年。成品呈深金琥珀色，散發蜂蠟、烤榛子、梅子乾、海水礦石等複雜香氣，是全球最獨特的白葡萄酒風格之一，也是 Rioja 白酒的極致代表。',
+  },
+  {
+    type: 'summary',
+    message: 'Rioja 白酒文藝復興課程完成！',
+    keyPoints: [
+      'Viura（Macabeo）是傳統主力白品種：年輕款清爽柑橘，陳年款蜂蜜香草',
+      'López de Heredia 長期氧化陳年白酒是全球獨一無二的風格：蜂蠟榛子礦石',
+      '2008 年引入 Chardonnay、Sauvignon Blanc、Verdejo 等，帶動現代白 Rioja 新浪潮',
+      '其他重要本地白品種：Tempranillo Blanco、Garnacha Blanca、Malvasía、Maturana Blanca',
+      'Rioja 白酒從清爽早飲到傳奇長期陳年，擁有全球最多元的白酒風格譜系之一',
+    ],
+  },
+]
+
+// ───────────────────────────────────────────────────────────────
 //  查找表：lessonId → 投影片陣列
 // ───────────────────────────────────────────────────────────────
 
@@ -7639,6 +8236,10 @@ const SLIDE_MAP = {
   // 第五章：綜合評量
   S1FinalExam: S1FinalExam_slides,
   // ── Level 2（完整）──────────────────────────────────────────
+  // 第零章：DOCa Rioja 深度探索（3 課）
+  S2M0L1: S2M0L1_slides,     // Rioja 三子產區風土深析
+  S2M0L2: S2M0L2_slides,     // Rioja 紅酒混釀藝術
+  S2M0L3: S2M0L3_slides,     // Rioja 白酒文藝復興
   S2M1L1: S2M1L1_slides,     // Ribera del Duero
   S2M1L2: S2M1L2_slides,     // Rueda / Verdejo
   S2M1L3: S2M1L3_slides,     // Bierzo / Mencía

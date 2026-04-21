@@ -11,7 +11,8 @@
     <!-- 地圖模式 -->
     <HungaryMapPage
       v-else-if="view === 'map'"
-      @back-to-course="view = 'selector'"
+      :initialRegion="pendingMapRegion"
+      @back-to-course="handleMapBack"
     />
 
     <!-- 課程模式 -->
@@ -19,6 +20,7 @@
       v-else-if="view === 'course'"
       :selectedLevel="selectedLevel"
       @exitLearning="view = 'selector'"
+      @openRegionMap="openRegionMap"
     />
 
   </div>
@@ -32,10 +34,29 @@ import HungaryLevelSelector from './HungaryLevelSelector.vue'
 
 const view = ref('selector')   // 'selector' | 'map' | 'course'
 const selectedLevel = ref(1)
+const pendingMapRegion = ref(null)   // { group, folder } or null
+const mapOpenedFromCourse = ref(false)
 
 function goToLevel(n) {
   selectedLevel.value = n
   view.value = 'course'
+}
+
+function openRegionMap(info) {
+  pendingMapRegion.value = info
+  mapOpenedFromCourse.value = true
+  view.value = 'map'
+}
+
+function handleMapBack() {
+  if (mapOpenedFromCourse.value) {
+    mapOpenedFromCourse.value = false
+    pendingMapRegion.value = null
+    view.value = 'course'
+  } else {
+    pendingMapRegion.value = null
+    view.value = 'selector'
+  }
 }
 </script>
 

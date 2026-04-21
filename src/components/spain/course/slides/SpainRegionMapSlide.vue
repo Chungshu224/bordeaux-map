@@ -13,6 +13,14 @@
       <div v-if="errorMsg" class="sms-error">
         <span>⚠️ {{ errorMsg }}</span>
       </div>
+      <!-- 展開全螢幕地圖按鈕 -->
+      <button v-if="!loading && !errorMsg && slide.mapRegion" class="sms-fullmap-btn" @click="emit('openFullMap', slide.mapRegion)" title="開啟完整互動地圖">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        🗺️ 開啟完整互動地圖
+      </button>
       <!-- 分類圖例（classificationColors 模式時顯示） -->
       <div v-if="showLegend" class="sms-legend">
         <div v-for="item in LEGEND_ITEMS" :key="item.label" class="sms-legend-item">
@@ -32,6 +40,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 const props = defineProps({
   slide: { type: Object, required: true },
 })
+const emit = defineEmits(['openFullMap'])
 
 // 分類顏色：與 SpainMapSection 保持一致
 const CLASSIFICATION_COLORS = {
@@ -319,6 +328,31 @@ onBeforeUnmount(() => destroyMap())
   border-radius: 8px;
   font-size: 0.82rem;
   white-space: nowrap;
+}
+
+/* 全螢幕地圖按鈕 */
+.sms-fullmap-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(10, 10, 20, 0.78);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  z-index: 10;
+}
+.sms-fullmap-btn:hover {
+  background: rgba(192, 57, 43, 0.85);
+  transform: scale(1.04);
 }
 
 /* 分類圖例 */

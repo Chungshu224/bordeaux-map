@@ -215,7 +215,6 @@ export const courseLevels = {
     gradient: 'linear-gradient(135deg, #B8860B, #DAA520)',
     totalLessons: 12,
     prerequisites: ['完成 Level 1', '完成 Level 2', '完成 Level 3'],
-    status: 'coming',
     modules: [
       {
         id: 'P4M1',

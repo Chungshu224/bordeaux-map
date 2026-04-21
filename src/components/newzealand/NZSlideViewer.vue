@@ -202,6 +202,11 @@
         </div>
       </div>
 
+      <!-- Map Slide -->
+      <div v-else-if="currentSlide.type === 'map'" class="slide slide-map">
+        <NZMapSlide :slide="currentSlide" />
+      </div>
+
       <!-- Infographic Slide -->
       <div v-else-if="currentSlide.type === 'infographic'" class="slide slide-infographic">
         <div class="slide-header">
@@ -244,6 +249,7 @@ import mapboxgl from 'mapbox-gl'
 import NZQuizViewer from './NZQuizViewer.vue'
 import NZReviewQuiz from './NZReviewQuiz.vue'
 import NZMapPage from './NZMapPage.vue'
+import NZMapSlide from './NZMapSlide.vue'
 
 const props = defineProps({
   slides: { type: Array, default: () => [] },
@@ -434,5 +440,12 @@ onUnmounted(() => {
   .slide-cover .slide-title { font-size: 24px; }
   .slide-header h2 { font-size: 20px; }
   .content-map { min-height: 350px; max-height: 50vh; margin: 0 -16px; }
+}
+.slide-map {
+  padding: 0 !important;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 </style>

@@ -72,6 +72,13 @@ const SLIDE_MAP = {
       emoji: '🗺',
     },
     {
+      type: 'map',
+      title: '澳洲六大產酒州全圖',
+      subtitle: '點擊各州積瀏詳細資訊',
+      mapRegion: 'all',
+      note: '各州顔色不同：SA 橙、VIC 紫、NSW 藍、WA 金、QLD 紅、TAS 綠，與之後探索地圖的展示一致',
+    },
+    {
       type: 'content',
       title: '六大產酒州一覽',
       points: [
@@ -459,6 +466,13 @@ const SLIDE_MAP = {
       emoji: '🌡️',
     },
     {
+      type: 'map',
+      title: 'Barossa Valley 產區位置',
+      subtitle: 'South Australia 北部， Adelaide 北方 60km',
+      mapRegion: 'Barossa Valley',
+      note: 'Barossa Zone 包含 Barossa Valley 與 Eden Valley 兩個區域，地圖題示的是 Barossa Valley（低海拔）',
+    },
+    {
       type: 'content',
       title: 'Barossa Valley 基本資料',
       points: [
@@ -528,6 +542,12 @@ const SLIDE_MAP = {
       emoji: '🌊',
     },
     {
+      type: 'map',
+      title: 'McLaren Vale & Adelaide Hills 產區位置',
+      subtitle: '兩個產區同屬 South Australia，僅相距 40km 卻風格截然不同',
+      mapRegion: 'McLaren Vale|Adelaide Hills',
+    },
+    {
       type: 'compare',
       title: 'McLaren Vale vs Adelaide Hills',
       left: {
@@ -591,6 +611,13 @@ const SLIDE_MAP = {
       subtitle: 'Level 1 · Module 3 · Lesson 3',
       bg: 'linear-gradient(135deg, #d4ac0d 0%, #1a6b9b 100%)',
       emoji: '🍋',
+    },
+    {
+      type: 'map',
+      title: 'Clare Valley & Eden Valley 產區地圖',
+      subtitle: '兩個產區都位於 South Australia，分屬不同 Zone',
+      mapRegion: 'Clare Valley|Eden Valley',
+      note: 'Clare Valley 屬 Mount Lofty Ranges Zone；Eden Valley 屬 Barossa Zone，地理上並不相鄰',
     },
     {
       type: 'compare',
@@ -659,6 +686,13 @@ const SLIDE_MAP = {
       emoji: '🪨',
     },
     {
+      type: 'map',
+      title: 'Coonawarra 產區地圖',
+      subtitle: 'South Australia 最南端，Limestone Coast Zone',
+      mapRegion: 'Coonawarra',
+      note: 'Coonawarra 燕尾形的 terra rossa 紅棕壤傀帶僅 15km 長，是全澳最經典的 Cabernet 小地塊',
+    },
+    {
       type: 'content',
       title: 'Coonawarra 的 Terra Rossa 傳奇',
       points: [
@@ -714,6 +748,13 @@ const SLIDE_MAP = {
       subtitle: 'Level 1 · Module 4 · Lesson 1',
       bg: 'linear-gradient(135deg, #8e44ad 0%, #2980b9 100%)',
       emoji: '🎻',
+    },
+    {
+      type: 'map',
+      title: 'Yarra Valley & Mornington Peninsula 地圖',
+      subtitle: '兩個產區均位於 Victoria，Port Phillip Zone',
+      mapRegion: 'Yarra Valley|Mornington Peninsula',
+      note: 'Yarra Valley 在墨爾本東北，Mornington Peninsula 在南邊半島，両者包圍 Port Phillip 灣',
     },
     {
       type: 'compare',
@@ -784,6 +825,12 @@ const SLIDE_MAP = {
       subtitle: 'Level 1 · Module 4 · Lesson 2',
       bg: 'linear-gradient(135deg, #5d2e0c 0%, #8e44ad 100%)',
       emoji: '🟤',
+    },
+    {
+      type: 'map',
+      title: 'Heathcote & Rutherglen 地圖',
+      subtitle: '兩區均位於 Victoria 內陸',
+      mapRegion: 'Heathcote|Rutherglen',
     },
     {
       type: 'content',
@@ -896,6 +943,13 @@ const SLIDE_MAP = {
       emoji: '🏄',
     },
     {
+      type: 'map',
+      title: 'Margaret River 產區地圖',
+      subtitle: 'Western Australia 西南端，Perth 南方 280km',
+      mapRegion: 'Margaret River',
+      note: '三面環海的地中海氣候，雖僅佔 WA 產酒量 20%，卻产出 80% 的旗艦品質',
+    },
+    {
       type: 'content',
       title: 'Margaret River 基本資料',
       points: [
@@ -949,6 +1003,13 @@ const SLIDE_MAP = {
       subtitle: 'Level 1 · Module 5 · Lesson 2',
       bg: 'linear-gradient(135deg, #006400 0%, #f39c12 100%)',
       emoji: '🧊',
+    },
+    {
+      type: 'map',
+      title: 'Great Southern & Tasmania 地圖',
+      subtitle: '西澳最大 Zone + 澳洲最南州分',
+      mapRegion: 'Great Southern|TAS',
+      note: 'Great Southern 在 WA 西南端（金色）；Tasmania 屬獨立州分（綠色），兩者都是澳洲最溺製產區',
     },
     {
       type: 'compare',

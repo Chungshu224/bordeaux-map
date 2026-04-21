@@ -130,12 +130,6 @@
     <transition name="layer-panel-fade">
       <div v-if="mapReady && layerPanelOpen" class="layer-panel">
         <div class="layer-panel-title">圖層設定</div>
-        <div class="layer-panel-item" @click="toggleIGP">
-          <span class="layer-item-label">IGP 地理標誌</span>
-          <span class="layer-item-toggle" :class="{ on: showIGP }">
-            <span class="toggle-knob"></span>
-          </span>
-        </div>
         <div class="layer-panel-item" @click="toggleContour">
           <span class="layer-item-label">等高線</span>
           <span class="layer-item-toggle" :class="{ on: showContour }">
@@ -229,24 +223,24 @@ const regionData = {
     styles: ['加強酒'],
   },
   'Dão': {
-    desc: '位於葡萄牙中部山地，以花崗岩土壤著稱，出產結構優雅的紅酒，Touriga Nacional 在此展現最細緻的一面。',
+    desc: '位於葡萄牙中北部、海拔 400–800 公尺的山地盆地，四面被 Caramulo、Buçaco、Nave、Estrela 等山脈環繞形成天然屏障，花崗岩貧瘠土壤（西南部亦有片岩），Touriga Nacional 在此展現最優雅細緻的一面，Encruzado 白酒亦享譽全國。',
     grapes: [{ name: 'Touriga Nacional', type: 'red' }, { name: 'Jaen', type: 'red' }, { name: 'Encruzado', type: 'white' }],
     styles: ['紅酒', '白酒'],
   },
   'Bairrada': {
-    desc: '大西洋海洋性氣候，黏土石灰岩土壤，以 Baga 品種的高酸高單寧紅酒聞名，也是 Espumante 氣泡酒的重要產地。',
+    desc: '位於 Águeda 河與科英布拉（Coimbra）之間的大西洋產區，黏土石灰岩土壤，地勢平坦低於 120 公尺，強勁海洋氣候帶來充沛降雨；Baga 品種的高酸高單寧紅酒與 Espumante 氣泡酒（全國最早產地之一）享譽葡萄牙，歷史可追溯至 D. João I 時代的皇家保護。',
     grapes: [{ name: 'Baga', type: 'red' }, { name: 'Bical', type: 'white' }, { name: 'Maria Gomes', type: 'white' }],
     styles: ['紅酒', '白酒', '氣泡酒'],
   },
   'Alentejo': {
-    desc: '葡萄牙南部廣大的平原產區，大陸性氣候炎熱乾燥，出產圓潤濃郁的紅酒，是近年發展最快的產區之一。',
+    desc: '葡萄牙南部廣闊平原，羅馬人最早在此釀酒（聖古法特 São Cucufate 遺址），地中海兼大陸性氣候，花崗岩與閃長岩火成岩土壤，共八個子產區：Portalegre、Borba、Redondo、Reguengos、Vidigueira、Évora、Granja-Amareleja 與 Moura，以出產圓潤濃郁、果味充沛的紅酒聞名全球。',
     grapes: [{ name: 'Aragonez', type: 'red' }, { name: 'Trincadeira', type: 'red' }, { name: 'Antão Vaz', type: 'white' }],
     styles: ['紅酒', '白酒', '粉紅酒'],
   },
   'Lisboa': {
-    desc: '葡萄牙西部濱大西洋的廣大產區，涵蓋 9 個子產區，擁有多元的土壤與微氣候，出品各種風格的葡萄酒。',
-    grapes: [{ name: 'Castelão', type: 'red' }, { name: 'Fernão Pires', type: 'white' }],
-    styles: ['紅酒', '白酒'],
+    desc: '里斯本以北沿大西洋海岸的廣大 IGP，歷史上修道院僧侶奠定釀酒傳統，黏土石灰岩與砂質土壤，年雨量 600–700 mm，涵蓋九個 DOC 子產區：Bucelas、Carcavelos、Colares、Alenquer、Arruda、Torres Vedras、Óbidos、Lourinhã 及 Encostas d\x27Aire，出品風格多元的紅白酒。',
+    grapes: [{ name: 'Castelão', type: 'red' }, { name: 'Fernão Pires', type: 'white' }, { name: 'Arinto', type: 'white' }],
+    styles: ['紅酒', '白酒', '粉紅酒'],
   },
   'Setúbal': {
     desc: '位於里斯本南方的 Setúbal 半島，以 Moscatel de Setúbal 甜型加烈白酒最為著名，具有濃郁的柑橘與蜜糖風味。',
@@ -259,9 +253,9 @@ const regionData = {
     styles: ['加強酒', '甜酒'],
   },
   'Távora-Varosa': {
-    desc: '位於杜羅河支流 Távora 與 Varosa 流域，是葡萄牙最高海拔的產區之一，以 Espumante 氣泡酒見長。',
-    grapes: [{ name: 'Malvasia Fina', type: 'white' }, { name: 'Fernão Pires', type: 'white' }],
-    styles: ['氣泡酒', '白酒'],
+    desc: '介於杜羅河與 Dão 產區之間、Paiva 與 Távora 河流域，花崗岩與片岩土壤，伊比利半島最古老的熙篤會（Cistercian）修道院——聖若昂・德・塔羅卡（S. João de Tarouca，12 世紀）在此奠定釀酒傳統；以高品質 Espumante 氣泡酒著稱，亦產清新白酒與柔順紅酒。',
+    grapes: [{ name: 'Malvasia Fina', type: 'white' }, { name: 'Fernão Pires', type: 'white' }, { name: 'Touriga Nacional', type: 'red' }],
+    styles: ['氣泡酒', '白酒', '紅酒'],
   },
   'Lafões': {
     desc: '小型產區，位於杜羅河谷與 Vinho Verde 之間的山地，以清酸爽口的白酒與清淡紅酒為主。',
@@ -274,8 +268,8 @@ const regionData = {
     styles: ['紅酒', '白酒'],
   },
   'Beira Interior': {
-    desc: '葡萄牙中部山地 Serra da Estrela 周邊，大陸性氣候，花崗岩與片岩土壤，出品結構紮實的紅酒。',
-    grapes: [{ name: 'Touriga Nacional', type: 'red' }, { name: 'Rufete', type: 'red' }],
+    desc: '葡萄牙大陸本土最崎嶇的產區，緊鄰西班牙邊境，Marofa、Gardunha 與 Estrela 等山脈形成屏障，大陸性氣候極端（夏短酷熱、冬長嚴寒），花崗岩土壤，分三個子產區：Castelo Rodrigo（北部）、Pinhel（中部）與 Cova da Beira（延伸至 Castelo Branco 谷地），以個性鮮明的紅酒著稱。',
+    grapes: [{ name: 'Touriga Nacional', type: 'red' }, { name: 'Rufete', type: 'red' }, { name: 'Malvasia Fina', type: 'white' }],
     styles: ['紅酒', '白酒'],
   },
   'Bucelas': {
@@ -294,9 +288,154 @@ const regionData = {
     styles: ['紅酒'],
   },
   'DoTejo': {
-    desc: '泰加斯河谷的廣大產區（舊稱 Ribatejo），河流帶來豐沛水資源，出品各種風格的餐酒。',
-    grapes: [{ name: 'Fernão Pires', type: 'white' }, { name: 'Castelão', type: 'red' }],
+    desc: '泰加斯河（Tejo）流域的廣大 DOC（舊稱 Ribatejo），分三個風土帶：Campo/Lezíria（河岸平原，Fernão Pires 白酒）、Bairro（黏土石灰岩丘陵，Castelão 與 Trincadeira 紅酒）、Charneca（南岸砂質土壤），年雨量 500–600 mm，2009 年重組後更名為 Tejo DOC。',
+    grapes: [{ name: 'Fernão Pires', type: 'white' }, { name: 'Castelão', type: 'red' }, { name: 'Trincadeira', type: 'red' }],
+    styles: ['紅酒', '白酒', '粉紅酒'],
+  },
+  // ── Lisboa 子 DOC ────────────────────────────────────────────────────────
+  'Encostas d\'Aire': {
+    desc: '里斯本北部的法定產區，含 Alcobaça 與 Ourém 兩個子產區，石灰岩與黏土土壤，大西洋氣候帶來清新涼意，生產清爽的白酒與結構適中的紅酒。',
+    grapes: [{ name: 'Fernão Pires', type: 'white' }, { name: 'Arinto', type: 'white' }, { name: 'Castelão', type: 'red' }],
+    styles: ['白酒', '紅酒'],
+  },
+  'Óbidos': {
+    desc: '里斯本地區的精緻小型 DOC，黏土石灰岩土壤，保有中世紀古城風貌，出品風格多元的紅酒與白酒，以果香清新著稱。',
+    grapes: [{ name: 'Fernão Pires', type: 'white' }, { name: 'Castelão', type: 'red' }, { name: 'Aragonez', type: 'red' }],
+    styles: ['紅酒', '白酒', '粉紅酒'],
+  },
+  'Alenquer': {
+    desc: '位於里斯本西北山丘的 DOC，黏土石灰岩土壤，涼爽的大西洋風系使葡萄保有優雅酸度，以結構良好、具陳年潛力的紅酒聞名全國。',
+    grapes: [{ name: 'Castelão', type: 'red' }, { name: 'Tinta Roriz', type: 'red' }, { name: 'Fernão Pires', type: 'white' }],
     styles: ['紅酒', '白酒'],
+  },
+  'Arruda': {
+    desc: '里斯本地區的小型 DOC，位於 Torres Vedras 南方，黏土石灰岩土壤，海洋氣候，生產易飲的紅酒與清新白酒。',
+    grapes: [{ name: 'Castelão', type: 'red' }, { name: 'Fernão Pires', type: 'white' }],
+    styles: ['紅酒', '白酒'],
+  },
+  'Torres Vedras': {
+    desc: '里斯本地區緊臨大西洋的 DOC，黏土石灰岩與砂岩土壤，海洋氣候顯著，以生產清爽白酒與口感柔順的紅酒見稱。',
+    grapes: [{ name: 'Fernão Pires', type: 'white' }, { name: 'Castelão', type: 'red' }, { name: 'Aragonez', type: 'red' }],
+    styles: ['紅酒', '白酒', '粉紅酒'],
+  },
+  'Lourinhã': {
+    desc: '位於里斯本北部海岸的特殊 DOC，以生產葡萄牙法定優質白蘭地（Aguardente Vínica）聞名，是葡萄牙唯一以蒸餾烈酒為主要認定的 DOC 產區，可比擬法國干邑。',
+    grapes: [{ name: 'Malvasia', type: 'white' }, { name: 'Vital', type: 'white' }],
+    styles: ['白酒', '白蘭地'],
+  },
+  // ── 塞圖巴爾半島 ────────────────────────────────────────────────────────
+  'Palmela': {
+    desc: '塞圖巴爾半島的法定產區，砂質土壤，Castelão（又名 Periquita）品種在此表現出色，以圓熟果味豐富的紅酒著稱；白酒以 Moscatel 與 Fernão Pires 為主。',
+    grapes: [{ name: 'Castelão', type: 'red' }, { name: 'Moscatel de Setúbal', type: 'white' }, { name: 'Fernão Pires', type: 'white' }],
+    styles: ['紅酒', '白酒', '粉紅酒'],
+  },
+  // ── 阿爾加維子 DOC ────────────────────────────────────────────────────────
+  'Lagos': {
+    desc: '阿爾加維西端的法定產區，地中海氣候年日照超過 3000 小時，砂岩與石灰岩土壤，生產酒體豐滿的紅酒與芳香白酒。',
+    grapes: [{ name: 'Negra Mole', type: 'red' }, { name: 'Castelão', type: 'red' }, { name: 'Crato Branco', type: 'white' }],
+    styles: ['紅酒', '白酒', '粉紅酒'],
+  },
+  'Portimão': {
+    desc: '阿爾加維中部著名旅遊城市周邊的 DOC，地中海氣候，充沛陽光與砂岩土壤造就濃郁飽滿的紅酒風格。',
+    grapes: [{ name: 'Negra Mole', type: 'red' }, { name: 'Castelão', type: 'red' }, { name: 'Crato Branco', type: 'white' }],
+    styles: ['紅酒', '白酒'],
+  },
+  'Lagoa': {
+    desc: '阿爾加維四個 DOC 中最具代表性、歷史最悠久的產區，地中海氣候，砂岩石灰岩土壤，以飽滿渾厚的紅酒和具陳年潛力的白酒著稱。',
+    grapes: [{ name: 'Negra Mole', type: 'red' }, { name: 'Castelão', type: 'red' }, { name: 'Crato Branco', type: 'white' }],
+    styles: ['紅酒', '白酒'],
+  },
+  'Tavira': {
+    desc: '阿爾加維東部靠近西班牙邊境的 DOC，地中海氣候，砂岩土壤，以 Negra Mole 品種生產具有南方熱情風格的紅酒，口感圓潤易飲。',
+    grapes: [{ name: 'Negra Mole', type: 'red' }, { name: 'Castelão', type: 'red' }, { name: 'Crato Branco', type: 'white' }],
+    styles: ['紅酒', '白酒'],
+  },
+  // ── 亞速爾群島 DOC ────────────────────────────────────────────────────────
+  'Graciosa': {
+    desc: '亞速爾格拉西歐薩島的 DOC，火山玄武岩土壤，石砌「currais」圍牆保護葡萄藤免受大西洋強風侵襲，出品清爽酸活的白酒，Verdelho 與 Arinto dos Açores 為主要品種。',
+    grapes: [{ name: 'Verdelho', type: 'white' }, { name: 'Arinto dos Açores', type: 'white' }],
+    styles: ['白酒', '加強酒'],
+  },
+  'Biscoitos': {
+    desc: '亞速爾第三島（Terceira）的 DOC，「Biscoitos」源自深色多孔火山岩地名，葡萄藤種植於玄武岩石砌格狀圍籬（curraletas）中，以 Verdelho 生產的加烈甜酒聞名，風格獨特迷人。',
+    grapes: [{ name: 'Verdelho', type: 'white' }, { name: 'Terrantez', type: 'white' }],
+    styles: ['加強酒', '白酒'],
+  },
+  'Pico': {
+    desc: '亞速爾皮庫島的 DOC，聯合國教科文組織世界文化遺產，黑色玄武岩熔岩土壤，葡萄藤在石牆「currais」保護下生長，Verdelho 生產的白酒與加烈酒曾是歐洲皇室（包括俄羅斯沙皇）御用佳釀。',
+    grapes: [{ name: 'Verdelho', type: 'white' }, { name: 'Arinto dos Açores', type: 'white' }, { name: 'Terrantez do Pico', type: 'white' }],
+    styles: ['白酒', '加強酒'],
+  },
+  'Madeirense': {
+    desc: '馬德拉島的法定烈酒（Aguardente Madeirense）DOC，以島上葡萄和其他農產原料蒸餾而成，延續數百年傳統工藝，與馬德拉葡萄酒（Madeira DOC）並列為島嶼兩大法定飲品。',
+    grapes: [{ name: 'Sercial', type: 'white' }, { name: 'Verdelho', type: 'white' }],
+    styles: ['白蘭地', '加強酒'],
+  },
+  // ── IGP 地理標誌產區 ────────────────────────────────────────────────────
+  'Minho': {
+    desc: '葡萄牙西北部米尼奧大區的 IGP（Terras do Minho），對應綠酒（Vinho Verde）產區的廣大範圍，海洋氣候濕潤涼爽，花崗岩土壤，棚架式（latadas）葡萄園沿山丘梯田延伸，出品清爽鮮活的日常餐酒。',
+    grapes: [{ name: 'Alvarinho', type: 'white' }, { name: 'Loureiro', type: 'white' }, { name: 'Vinhão', type: 'red' }],
+    styles: ['白酒', '紅酒', '氣泡酒'],
+  },
+  'Transmontano': {
+    desc: '葡萄牙東北部特拉斯蒙特斯（Trás-os-Montes）大區的 IGP，大陸性氣候夏熱冬寒，花崗岩與片岩土壤，以 Bastardo、Touriga Nacional 等地方品種生產個性鮮明的餐酒，為國際品種混調提供靈活框架。',
+    grapes: [{ name: 'Bastardo', type: 'red' }, { name: 'Touriga Nacional', type: 'red' }, { name: 'Rabigato', type: 'white' }],
+    styles: ['紅酒', '白酒'],
+  },
+  'Duriense': {
+    desc: '杜羅河谷地區的 IGP，範圍涵蓋杜羅 DOC 及周邊地帶，以板岩梯田葡萄園的壯觀景色聞名，為追求創新與靈活標示的生產者提供法律框架，出品層次豐富的餐酒。',
+    grapes: [{ name: 'Touriga Nacional', type: 'red' }, { name: 'Touriga Franca', type: 'red' }, { name: 'Rabigato', type: 'white' }],
+    styles: ['紅酒', '白酒'],
+  },
+  'Terras de Cister': {
+    desc: '以熙篤會（Cistercian）修道院文化命名的 IGP，緊鄰 Távora-Varosa DOC，花崗岩土壤，大陸性氣候，伊比利半島第一座熙篤會修道院（S. João de Tarouca，12 世紀）在此奠定釀酒傳統，以氣泡酒和清新白酒為主力。',
+    grapes: [{ name: 'Malvasia Fina', type: 'white' }, { name: 'Fernão Pires', type: 'white' }, { name: 'Touriga Nacional', type: 'red' }],
+    styles: ['氣泡酒', '白酒', '紅酒'],
+  },
+  'Terras do Dão': {
+    desc: '葡萄牙中北部 Dão 盆地所在的廣大 IGP，四面環山形成天然屏障，花崗岩貧瘠土壤，海拔 400–800 公尺，涵蓋 Dão DOC（Touriga Nacional 紅酒）與 Lafões DOC（清酸白酒），出品優雅精緻、具陳年潛力的葡萄酒。',
+    grapes: [{ name: 'Touriga Nacional', type: 'red' }, { name: 'Encruzado', type: 'white' }, { name: 'Jaen', type: 'red' }],
+    styles: ['紅酒', '白酒'],
+  },
+  'Beira Atlântico': {
+    desc: '葡萄牙中部沿海的廣大 IGP，以 Bairrada DOC 為核心，強大的大西洋氣候帶來充沛降雨（年均逾 900 mm）與溫和氣溫，黏土石灰岩與砂質土壤，Baga 紅酒與 Espumante 氣泡酒是最具代表性的產品。',
+    grapes: [{ name: 'Baga', type: 'red' }, { name: 'Bical', type: 'white' }, { name: 'Maria Gomes', type: 'white' }],
+    styles: ['紅酒', '白酒', '氣泡酒'],
+  },
+  'Terras da Beira': {
+    desc: '葡萄牙大陸本土最崎嶇山區的 IGP，緊鄰西班牙，Marofa、Gardunha 與 Estrela 山脈環繞，大陸性氣候極端，花崗岩土壤，涵蓋 Beira Interior DOC 三個子產區（Castelo Rodrigo、Pinhel、Cova da Beira），以個性鮮明的紅酒著稱。',
+    grapes: [{ name: 'Touriga Nacional', type: 'red' }, { name: 'Rufete', type: 'red' }, { name: 'Malvasia Fina', type: 'white' }],
+    styles: ['紅酒', '白酒'],
+  },
+  'Tejo': {
+    desc: '泰加斯河（Tejo）流域廣大的 IGP，範圍涵蓋 Tejo DOC（DoTejo）及其周邊地帶，分三個風土帶：河岸平原（Campo，Fernão Pires 白酒）、丘陵地帶（Bairro，黏土石灰岩，紅酒為主）與南岸砂地（Charneca），出品風格多樣的日常餐酒。',
+    grapes: [{ name: 'Fernão Pires', type: 'white' }, { name: 'Castelão', type: 'red' }, { name: 'Trincadeira', type: 'red' }],
+    styles: ['紅酒', '白酒', '粉紅酒'],
+  },
+  'Península de Setúbal': {
+    desc: '里斯本南方塞圖巴爾半島的廣大 IGP，砂質與黏土土壤，溫暖的地中海氣候，涵蓋 Setúbal DOC（Moscatel 加烈甜酒）與 Palmela DOC（Castelão 紅酒），是葡萄牙甜酒與紅酒的重要產地。',
+    grapes: [{ name: 'Castelão', type: 'red' }, { name: 'Moscatel de Setúbal', type: 'white' }, { name: 'Fernão Pires', type: 'white' }],
+    styles: ['紅酒', '白酒', '甜酒'],
+  },
+  'Alentejano': {
+    desc: '廣大阿連特茹大區的 IGP，涵蓋 Alentejo DOC 八個子產區及整個 Alentejo 大區，地中海型氣候，花崗岩岩漿岩土壤，出品風格豐腴、果味充沛的日常紅酒，是葡萄牙產量最大的 IGP 之一。',
+    grapes: [{ name: 'Aragonez', type: 'red' }, { name: 'Trincadeira', type: 'red' }, { name: 'Antão Vaz', type: 'white' }],
+    styles: ['紅酒', '白酒', '粉紅酒'],
+  },
+  'Algarve': {
+    desc: '葡萄牙最南端大區的 IGP，涵蓋 Lagoa、Lagos、Portimão、Tavira 四個 DOC，年日照超過 3000 小時，地中海型氣候，以 Negra Mole 和 Castelão 生產色深、酒體豐滿的紅酒聞名，也生產清爽芳香的白酒與粉紅酒。',
+    grapes: [{ name: 'Negra Mole', type: 'red' }, { name: 'Castelão', type: 'red' }, { name: 'Crato Branco', type: 'white' }],
+    styles: ['紅酒', '白酒', '粉紅酒'],
+  },
+  'Terras Madeirenses': {
+    desc: '馬德拉島的廣大 IGP，範圍與 Madeira DOC 高度重疊，火山玄武岩土壤，氣候溫暖潮濕，梯田式葡萄園（「poios」）沿山坡延伸，以 Verdelho、Sercial 等品種生產島嶼特色日常餐酒，是馬德拉酒（Madeira DOC）的姊妹產區分類。',
+    grapes: [{ name: 'Verdelho', type: 'white' }, { name: 'Sercial', type: 'white' }, { name: 'Tinta Negra', type: 'red' }],
+    styles: ['白酒', '紅酒'],
+  },
+  'Açores': {
+    desc: '亞速爾群島的廣大 IGP（2004 年由第 853/2004 號法令認定），九島中三島種植葡萄：特賽拉（Terceira）、皮庫（Pico，UNESCO 世界遺產）與格拉西歐薩（Graciosa）；火山玄武岩土壤，大西洋海洋氣候，石砌「currais」圍牆為葡萄藤提供獨特微氣候保護，Verdelho 是最具代表性的品種。',
+    grapes: [{ name: 'Verdelho', type: 'white' }, { name: 'Arinto dos Açores', type: 'white' }, { name: 'Terrantez', type: 'white' }],
+    styles: ['白酒', '加強酒'],
   },
 }
 
@@ -348,6 +487,7 @@ function resetView() {
   if (map.getSource('doc-regions')) {
     map.removeFeatureState({ source: 'doc-regions' })
   }
+  clearSelectionFilter()
 }
 
 // ── Toggle 3D ──────────────────────────────────────────────────────────────
@@ -392,10 +532,41 @@ function toggleInfo() {
   }
 }
 
+// ── Filter helpers ────────────────────────────────────────────────────────
+const HIDE_ALL = ['==', ['get', 'name'], '§NONE§']
+
+function applySelectionFilter(selectedName, type) {
+  if (!map) return
+  const nameFilter = ['==', ['get', 'name'], selectedName]
+  if (type === 'doc') {
+    map.setFilter('doc-fill',    nameFilter)
+    map.setFilter('doc-outline', nameFilter)
+    map.setFilter('doc-labels',  nameFilter)
+    if (map.getLayer('igp-fill'))    map.setFilter('igp-fill',    HIDE_ALL)
+    if (map.getLayer('igp-outline')) map.setFilter('igp-outline', HIDE_ALL)
+  } else {
+    if (map.getLayer('igp-fill'))    map.setFilter('igp-fill',    nameFilter)
+    if (map.getLayer('igp-outline')) map.setFilter('igp-outline', nameFilter)
+    map.setFilter('doc-fill',    HIDE_ALL)
+    map.setFilter('doc-outline', HIDE_ALL)
+    map.setFilter('doc-labels',  HIDE_ALL)
+  }
+}
+
+function clearSelectionFilter() {
+  if (!map) return
+  map.setFilter('doc-fill',    null)
+  map.setFilter('doc-outline', null)
+  map.setFilter('doc-labels',  null)
+  if (map.getLayer('igp-fill'))    map.setFilter('igp-fill',    null)
+  if (map.getLayer('igp-outline')) map.setFilter('igp-outline', null)
+}
+
 // ── Select region from drawer ──────────────────────────────────────────────
 function selectFromDrawer(r) {
   activeRegion.value = r
   drawerOpen.value = false
+  applySelectionFilter(r.name, r.region_type === 'DOC' ? 'doc' : 'igp')
   const b = ptGeomMap[r.name]
   if (b && map) map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 80, maxZoom: 12, duration: 700 })
 }
@@ -451,9 +622,9 @@ async function initMap() {
           'fill-color': ['get', 'color'],
           'fill-opacity': [
             'case',
-            ['boolean', ['feature-state', 'selected'], false], 0.80,
-            ['boolean', ['feature-state', 'hover'], false],    0.65,
-            0.45,
+            ['boolean', ['feature-state', 'selected'], false], 0.35,
+            ['boolean', ['feature-state', 'hover'], false],    0.25,
+            0.10,
           ],
         },
       })
@@ -520,7 +691,6 @@ async function initMap() {
         type: 'symbol',
         source: 'mapbox-terrain',
         'source-layer': 'contour',
-        filter: ['==', ['%', ['get', 'ele'], 200], 0],
         layout: {
           visibility: 'none',
           'symbol-placement': 'line',
@@ -546,7 +716,7 @@ async function initMap() {
         layout: { visibility: 'none' },
         paint: {
           'fill-color': ['coalesce', ['get', 'color'], '#3498db'],
-          'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.5, 0.25],
+          'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.25, 0.10],
         },
       })
 
@@ -604,6 +774,7 @@ async function initMap() {
 
         activeRegion.value  = feat.properties
         drawerOpen.value    = false
+        applySelectionFilter(feat.properties.name, 'doc')
         // Fit to region
         const b = ptGeomMap[feat.properties.name]
         if (b) map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 80, maxZoom: 12, duration: 700 })
@@ -614,6 +785,7 @@ async function initMap() {
         if (!e.features.length) return
         map.removeFeatureState({ source: 'doc-regions' })
         activeRegion.value  = e.features[0].properties
+        applySelectionFilter(e.features[0].properties.name, 'igp')
       })
 
       // Click on empty area → deselect
@@ -623,6 +795,7 @@ async function initMap() {
         if (!docFeat.length && !igpFeat.length) {
           map.removeFeatureState({ source: 'doc-regions' })
           activeRegion.value = null
+          clearSelectionFilter()
         }
       })
 

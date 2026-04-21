@@ -9,6 +9,13 @@
       "background": "linear-gradient(135deg,#89f7fe 0%,#66a6ff 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "Gisborne 與北島其他產區地圖",
+      "subtitle": "東岸海洋氣候孕育的多樣風格",
+      "mapRegion": "Gisborne|Northland"
+    },
+    {
       "id": 2,
       "type": "content",
       "title": "Gisborne 產區概覽",

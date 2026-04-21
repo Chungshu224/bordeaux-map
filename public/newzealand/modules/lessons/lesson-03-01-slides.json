@@ -9,6 +9,13 @@
       "background": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "Hawke's Bay 產區地圖",
+      "subtitle": "紐西蘭北島東岸最重要的紅酒產區",
+      "mapRegion": "Hawkes_Bay|Central_Hawkes_Bay"
+    },
+    {
       "id": 2,
       "type": "content",
       "title": "Hawke's Bay 產區概覽",

@@ -34,6 +34,7 @@
             ref="presentationLessonRef"
             :lessonId="currentLesson.id"
             @lessonComplete="completeCurrentLesson"
+            @openRegionMap="(info) => emit('openRegionMap', info)"
           />
         </div>
       </main>
@@ -53,7 +54,7 @@ import { authActions } from '../../stores/authStore.js'
 import HungaryCourseLayout from './HungaryCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 
-const emit = defineEmits(['exitLearning'])
+const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
 const props = defineProps({
   selectedLevel: { type: Number, default: 1 }

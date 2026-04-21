@@ -9,6 +9,13 @@
       "background": "linear-gradient(135deg,#d4fc79 0%,#96e6a1 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "Nelson 與 Canterbury 產區地圖",
+      "subtitle": "南島北部多樣的白酒與紅酒風土",
+      "mapRegion": "Nelson|North_Canterbury|Waipara_Valley"
+    },
+    {
       "id": 2,
       "type": "content",
       "title": "產區概覽：Nelson 與 Canterbury",

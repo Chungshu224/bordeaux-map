@@ -96,6 +96,17 @@ export const lessonContent = [
         correctIndex: 2,
         explanation: '安茹-索米爾是從大西洋海洋性氣候逐漸過渡到半大陸性氣候的區域，這種過渡造就了產區的多樣葡萄酒風格。'
       }
-    ]
-  }
+    ]  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Anjou-Saumur 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Anjou-Saumur 產區地理位置',
+        description: '凝灰岩地質造就的城堡酒鄉，Chenin Blanc 與 Cabernet Franc 共舞',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Saumur.geojson', 'Saumur-Champigny.geojson', 'Savennières.geojson', 'Coteaux-du-Layon.geojson'],
+      }
+    }  }
 ]

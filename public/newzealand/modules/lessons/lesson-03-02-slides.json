@@ -9,6 +9,13 @@
       "background": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "Martinborough / Wairarapa 產區地圖",
+      "subtitle": "紐西蘭北島南端的精品 Pinot Noir 產區",
+      "mapRegion": "Martinborough|Gladstone"
+    },
+    {
       "id": 2,
       "type": "content",
       "title": "Wairarapa 與 Martinborough 產區概覽",

@@ -9,6 +9,13 @@
       "background": "linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "Marlborough 產區地圖",
+      "subtitle": "紐西蘭最大的白酒產區，Sauvignon Blanc 的故鄉",
+      "mapRegion": "Marlborough"
+    },
+    {
       "id": 2,
       "type": "content",
       "title": "產區概覽與地理位置",

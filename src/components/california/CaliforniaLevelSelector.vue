@@ -204,6 +204,70 @@
               </div>
             </div>
           </div>
+
+          <!-- Level 3 -->
+          <div
+            class="level-card level-3"
+            :class="{ 'locked': !level3Unlocked, 'in-progress': level3Progress > 0 && level3Progress < 100, 'completed': level3Progress >= 100 }"
+            @click="level3Unlocked && emit('startLevel', 3)"
+          >
+            <div class="card-accent-bar"></div>
+            <div class="level-header">
+              <div class="level-badge">
+                <span class="level-number">3</span>
+                <div class="level-icon">🌱</div>
+              </div>
+              <div class="level-title-group">
+                <h3>專業實務</h3>
+                <p>Level 3 · 永續、技術與未來</p>
+              </div>
+            </div>
+            <div class="level-content">
+              <p class="level-description">
+                具備專業選酒能力與宏觀產業視野：微氣候大師課、永續認證、巴黎審判傳奇到 Cult Wine，以及加州高級料理配餐實務訓練。
+              </p>
+              <div class="level-features">
+                <div class="feature-item"><span class="feature-icon">🗺️</span><span>微氣候大師課 & AVA 精細分析</span></div>
+                <div class="feature-item"><span class="feature-icon">🌱</span><span>CCSW 永續認證與自然酒運動</span></div>
+                <div class="feature-item"><span class="feature-icon">🏆</span><span>巴黎審判傳奇 × Cult Wine</span></div>
+                <div class="feature-item"><span class="feature-icon">🍽️</span><span>跨產區加州高級料理配餐</span></div>
+              </div>
+              <div class="level-stats">
+                <div class="stat-item">
+                  <span class="stat-number">4</span>
+                  <span class="stat-label">個模組</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">4</span>
+                  <span class="stat-label">堂課程</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">{{ level3Unlocked ? Math.round(level3Progress) + '%' : '🔒' }}</span>
+                  <span class="stat-label">{{ level3Unlocked ? '完成度' : '鎖定中' }}</span>
+                </div>
+              </div>
+              <div class="progress-bar-wrap" v-if="level3Unlocked">
+                <div class="progress-bar-track">
+                  <div class="progress-bar-fill l3-fill" :style="{ width: `${level3Progress}%` }"></div>
+                </div>
+              </div>
+            </div>
+            <div class="level-action">
+              <button class="level-btn l3-btn" :disabled="!level3Unlocked" @click.stop="level3Unlocked && emit('startLevel', 3)">
+                <template v-if="!level3Unlocked">完成 Level 2 後解鎖</template>
+                <template v-else-if="level3Progress >= 100">重新學習</template>
+                <template v-else-if="level3Progress > 0">繼續學習</template>
+                <template v-else>開始學習</template>
+                <span v-if="level3Unlocked" class="btn-arrow">→</span>
+              </button>
+            </div>
+            <div v-if="!level3Unlocked" class="lock-overlay">
+              <div class="lock-content">
+                <span class="lock-icon">🔒</span>
+                <p>完成 Level 2 後解鎖</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -213,13 +277,13 @@
           <span class="hl-icon">🍷</span>
           <div class="hl-text">
             <strong>{{ totalLessonsCount }} 堂課程</strong>
-            <span>Level 1 + Level 2</span>
+            <span>Level 1 + Level 2 + Level 3</span>
           </div>
         </div>
         <div class="highlight-item">
           <span class="hl-icon">🗺️</span>
           <div class="hl-text">
-            <strong>6 大產區群</strong>
+            <strong>5 大地理區域</strong>
             <span>North Coast · Central Coast · Sierra Foothills…</span>
           </div>
         </div>
@@ -264,6 +328,11 @@
                 <div class="pd-value">{{ level2Unlocked ? Math.round(level2Progress) + '%' : '🔒 未解鎖' }}</div>
                 <div class="pd-bar" v-if="level2Unlocked"><div :style="{ width: level2Progress + '%' }"></div></div>
               </div>
+              <div class="pd-item">
+                <div class="pd-label">Level 3 進度</div>
+                <div class="pd-value">{{ level3Unlocked ? Math.round(level3Progress) + '%' : '🔒 未解鎖' }}</div>
+                <div class="pd-bar" v-if="level3Unlocked"><div :style="{ width: level3Progress + '%' }"></div></div>
+              </div>
               <div class="pd-item pd-wide">
                 <div class="pd-label">已完成課程</div>
                 <div class="pd-value">{{ completedCount }} / {{ totalLessonsCount }} 堂</div>
@@ -273,6 +342,18 @@
               <h4>Level 1 課程進度</h4>
               <div v-for="lesson in level1Lessons" :key="lesson.id" class="pm-lesson-row">
                 <span class="pm-lesson-status">{{ isCompleted(lesson.id) ? '✅' : '⭕' }}</span>
+                <span class="pm-lesson-title">{{ lesson.title }}</span>
+                <span class="pm-lesson-time">{{ lesson.duration }}分</span>
+              </div>
+              <h4 style="margin-top:12px">Level 2 課程進度</h4>
+              <div v-for="lesson in level2Lessons" :key="lesson.id" class="pm-lesson-row">
+                <span class="pm-lesson-status">{{ isCompleted(lesson.id) ? '✅' : (level2Unlocked ? '⭕' : '🔒') }}</span>
+                <span class="pm-lesson-title">{{ lesson.title }}</span>
+                <span class="pm-lesson-time">{{ lesson.duration }}分</span>
+              </div>
+              <h4 style="margin-top:12px">Level 3 課程進度</h4>
+              <div v-for="lesson in level3Lessons" :key="lesson.id" class="pm-lesson-row">
+                <span class="pm-lesson-status">{{ isCompleted(lesson.id) ? '✅' : (level3Unlocked ? '⭕' : '🔒') }}</span>
                 <span class="pm-lesson-title">{{ lesson.title }}</span>
                 <span class="pm-lesson-time">{{ lesson.duration }}分</span>
               </div>
@@ -330,7 +411,8 @@ onMounted(async () => {
 
 const level1Lessons = computed(() => californiaLearningLevels.level1?.lessons || [])
 const level2Lessons = computed(() => californiaLearningLevels.level2?.lessons || [])
-const totalLessonsCount = computed(() => level1Lessons.value.length + level2Lessons.value.length)
+const level3Lessons = computed(() => californiaLearningLevels.level3?.lessons || [])
+const totalLessonsCount = computed(() => level1Lessons.value.length + level2Lessons.value.length + level3Lessons.value.length)
 
 function isCompleted(id) {
   return californiaLearningState.completedLessons.includes(id)
@@ -350,9 +432,24 @@ const level2Progress = computed(() => {
   return (done / lessons.length) * 100
 })
 
+const level3Progress = computed(() => {
+  const lessons = level3Lessons.value
+  if (!lessons.length) return 0
+  const done = lessons.filter(l => isCompleted(l.id)).length
+  return (done / lessons.length) * 100
+})
+
 const level2Unlocked = computed(() => {
   if (californiaLearningState.testMode) return true
+  if (authActions.isAdmin()) return true
   const finalId = californiaLearningActions.getFinalLessonId(1)
+  return finalId != null && californiaLearningState.completedLessons.includes(finalId)
+})
+
+const level3Unlocked = computed(() => {
+  if (californiaLearningState.testMode) return true
+  if (authActions.isAdmin()) return true
+  const finalId = californiaLearningActions.getFinalLessonId(2)
   return finalId != null && californiaLearningState.completedLessons.includes(finalId)
 })
 
@@ -364,13 +461,16 @@ const totalProgressPct = computed(() => {
 })
 
 const heroButtonText = computed(() => {
-  if (level1Progress.value >= 100) return '繼續 Level 2 學習'
+  if (level3Unlocked.value && level3Progress.value < 100) return '繼續 Level 3 學習'
+  if (level2Unlocked.value && level2Progress.value < 100) return '繼續 Level 2 學習'
   if (level1Progress.value > 0) return '繼續學習'
   return '開始我的加州葡萄酒之旅'
 })
 
 function startJourney() {
-  if (level1Progress.value >= 100 && level2Unlocked.value) {
+  if (level3Unlocked.value && level3Progress.value < 100) {
+    emit('startLevel', 3)
+  } else if (level2Unlocked.value && level2Progress.value < 100) {
     emit('startLevel', 2)
   } else {
     emit('startLevel', 1)
@@ -545,7 +645,7 @@ function getRayStyle(i) {
 }
 .section-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(139,26,26,0.4); }
 
-.levels-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.levels-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
 
 /* 等級卡片 */
 .level-card {
@@ -558,7 +658,11 @@ function getRayStyle(i) {
 .level-card.locked { opacity: 0.7; cursor: not-allowed; }
 .card-accent-bar { height: 4px; background: linear-gradient(90deg, #8B1A1A, #c9a84c); }
 .level-1 .card-accent-bar { background: linear-gradient(90deg, #8B1A1A, #c9580e); }
-.level-2 .card-accent-bar { background: linear-gradient(90deg, #c9a84c, #f0d060); }
+.level-2 .card-accent-bar { background: linear-gradient(90deg, #1a4a7a, #0077b6); }
+.level-3 .card-accent-bar { background: linear-gradient(90deg, #3d6b35, #74b244); }
+.l2-fill { background: linear-gradient(90deg, #1a4a7a, #0077b6); }
+.l3-fill { background: linear-gradient(90deg, #3d6b35, #74b244); }
+.l3-btn { background: linear-gradient(135deg, #3d6b35, #74b244); }
 
 .level-header { display: flex; align-items: center; gap: 14px; padding: 16px 20px 8px; }
 .level-badge {

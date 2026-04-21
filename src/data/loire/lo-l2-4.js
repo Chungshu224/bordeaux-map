@@ -36,5 +36,18 @@ export const lessonContent = [
         explanation: 'Chinon 是羅亞爾河谷的重要 AOC，也是本課程的核心學習對象。'
       }
     ]
+  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Touraine 品麗珠三角產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Touraine：Chinon、Bourgueil、Saint-Nicolas-de-Bourgueil',
+        description: '都漢的品麗珠鐵三角——礫石與凝灰岩孕育的優雅紅酒',
+        mapGroup: 'Touraine',
+        highlightFiles: ['Chinon.geojson', 'Bourgueil.geojson', 'Saint-Nicolas-de-Bourgueil.geojson'],
+      }
+    }
   }
 ]

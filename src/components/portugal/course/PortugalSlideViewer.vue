@@ -114,6 +114,14 @@
           </div>
         </template>
 
+        <!-- 產區地圖投影片 -->
+        <template v-else-if="currentSlideData.type === 'map'">
+          <PortugalRegionMapSlide
+            :slide="currentSlideData"
+            @openFullMap="emit('openFullMap')"
+          />
+        </template>
+
         <!-- 預設佔位 -->
         <template v-else>
           <div class="slide-placeholder">
@@ -161,12 +169,13 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { getPortugalLessonSlides } from '../data/lessonSlides.js'
+import PortugalRegionMapSlide from './slides/PortugalRegionMapSlide.vue'
 
 const props = defineProps({
   lesson: { type: Object, required: true },
   isFinalExam: { type: Boolean, default: false },
 })
-const emit = defineEmits(['close', 'complete'])
+const emit = defineEmits(['close', 'complete', 'openFullMap'])
 
 const currentSlide = ref(0)
 const quizAnswered = ref(false)
