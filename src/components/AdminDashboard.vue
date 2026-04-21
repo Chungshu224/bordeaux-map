@@ -770,6 +770,9 @@ function formatStudyTime(sec) {
 .more-menu-wrap { display: none; position: relative; }
 
 @media (max-width: 640px) {
+  .admin-tabs { padding: 0 4px; }
+  .tab-btn { padding: 10px 10px; font-size: .78rem; gap: 4px; }
+  .tab-icon { font-size: .85rem; }
   .tab-extra { display: none !important; }
   .more-menu-wrap { display: block; }
   .more-toggle-btn { white-space: nowrap; }
