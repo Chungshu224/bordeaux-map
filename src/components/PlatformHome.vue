@@ -1163,6 +1163,21 @@ onMounted(async () => {
 .btn-nav.admin-nav-btn { background: transparent; border-color: #c9a84c; color: #c9a84c; }
 .btn-nav.admin-nav-btn:hover { background: #c9a84c; color: #1a0a00; }
 
+/* ─── 導覽列 RWD ─────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .nav-inner { height: 52px; padding: 0 14px; gap: 6px; }
+  .logo-icon { font-size: 1.3rem; }
+  .logo-title { font-size: 0.88rem; }
+  .logo-sub { display: none; }
+  .nav-greeting { display: none; }
+  .nav-actions { gap: 6px; }
+  .btn-nav { padding: 5px 10px; font-size: 0.75rem; }
+  .btn-nav.admin-nav-btn { padding: 5px 8px; font-size: 0; letter-spacing: 0; }
+  .btn-nav.admin-nav-btn::before { content: '⚙️'; font-size: 1rem; }
+  .btn-nav.ghost { padding: 5px 8px; font-size: 0; }
+  .btn-nav.ghost::before { content: '🚪'; font-size: 1rem; }
+}
+
 /* ─── Hero ────────────────────────────────────────────────────────────────── */
 .hero {
   position: relative;

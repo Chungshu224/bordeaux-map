@@ -7,7 +7,7 @@
       @enterLevel="goToLevel"
       @openMap="view = 'map'"
       @openGames="comingSoon('互動練習')"
-      @openNotebook="comingSoon('品飲筆記')"
+      @openNotebook="view = 'notebook'"
       style="min-height: 100vh;"
     />
 
@@ -26,6 +26,12 @@
       @openRegionMap="openRegionMap"
     />
 
+    <!-- 品飲筆記 -->
+    <HungaryTastingNotebookPage
+      v-else-if="view === 'notebook'"
+      @back="view = 'selector'"
+    />
+
   </div>
 </template>
 
@@ -34,8 +40,9 @@ import { ref } from 'vue'
 import HungaryMapPage from './HungaryMapPage.vue'
 import HungaryLearningSystem from './HungaryLearningSystem.vue'
 import HungaryLevelSelector from './HungaryLevelSelector.vue'
+import HungaryTastingNotebookPage from './notebook/HungaryTastingNotebookPage.vue'
 
-const view = ref('selector')   // 'selector' | 'map' | 'course'
+const view = ref('selector')   // 'selector' | 'map' | 'course' | 'notebook'
 const selectedLevel = ref(1)
 const pendingMapRegion = ref(null)   // { group, folder } or null
 const mapOpenedFromCourse = ref(false)

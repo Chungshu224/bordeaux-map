@@ -6,11 +6,18 @@
       @startLevel="handleSelectLevel"
       @openMap="$emit('openMap')"
       @openGames="view = 'games'"
+      @openNotebook="view = 'notebook'"
     />
 
     <!-- Games Hub -->
     <GermanyGameHubPage
       v-else-if="view === 'games'"
+      @back="view = 'levelSelector'"
+    />
+
+    <!-- 品飲筆記 -->
+    <GermanyTastingNotebookPage
+      v-else-if="view === 'notebook'"
       @back="view = 'levelSelector'"
     />
 
@@ -46,6 +53,7 @@ import GermanyLevelSelector from './GermanyLevelSelector.vue'
 import GermanySlideViewer from './GermanySlideViewer.vue'
 import GermanyCourseLayout from './GermanyCourseLayout.vue'
 import GermanyGameHubPage from '../games/GermanyGameHubPage.vue'
+import GermanyTastingNotebookPage from '../notebook/GermanyTastingNotebookPage.vue'
 import { courseLevels, getUserProgress, saveProgress, getLevelProgressPct } from '../data/courseLevels.js'
 import { getLesson } from '../data/lessonSlides.js'
 import { globalGermanyAchievementManager } from '../../../stores/germanyAchievementSystem.js'
@@ -56,7 +64,7 @@ onMounted(() => {
   globalGermanyAchievementManager.init()
 })
 
-const view = ref('levelSelector') // 'levelSelector' | 'courseContent' | 'games'
+const view = ref('levelSelector') // 'levelSelector' | 'courseContent' | 'games' | 'notebook'
 const selectedLevelKey = ref(null)
 const activeLesson = ref(null)
 const activeLessonMeta = ref(null)

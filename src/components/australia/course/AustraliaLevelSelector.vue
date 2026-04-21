@@ -43,10 +43,10 @@
             <span class="nc-title">學習進度</span>
             <span class="nc-desc">各等級完成狀況與學習統計</span>
           </button>
-          <button class="nav-card notebook-card" disabled>
+          <button class="nav-card notebook-card" @click="emit('openNotebook')">
             <span class="nc-icon">📔</span>
             <span class="nc-title">品飲筆記</span>
-            <span class="nc-desc">記錄品飲體驗（即將推出）</span>
+            <span class="nc-desc">記錄澳洲葡萄酒品飲心得</span>
           </button>
         </div>
       </section>
@@ -146,7 +146,7 @@ import { useRouter } from 'vue-router'
 import { ref, computed } from 'vue'
 import { courseLevels, getUserProgress } from '../data/courseLevels.js'
 
-defineEmits(['openMap', 'startLevel', 'openAchievements'])
+const emit = defineEmits(['openMap', 'startLevel', 'openAchievements', 'openNotebook'])
 const router = useRouter()
 
 const showProgressModal = ref(false)

@@ -1,11 +1,18 @@
 <template>
   <div class="portugal-course-manager">
 
+    <!-- 品飲筆記 -->
+    <PortugalTastingNotebookPage
+      v-else-if="view === 'notebook'"
+      @back="view = 'levelSelector'"
+    />
+
     <!-- 等級選擇首頁 -->
     <PortugalLevelSelector
       v-if="view === 'levelSelector'"
       @openMap="$emit('openMap')"
       @startLevel="handleSelectLevel"
+      @openNotebook="view = 'notebook'"
     />
 
     <!-- 章節列表 -->
@@ -35,6 +42,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import PortugalLevelSelector from './PortugalLevelSelector.vue'
+import PortugalTastingNotebookPage from '../notebook/PortugalTastingNotebookPage.vue'
 import PortugalCourseLayout from './PortugalCourseLayout.vue'
 import PortugalSlideViewer from './PortugalSlideViewer.vue'
 import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevels.js'

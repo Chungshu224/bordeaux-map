@@ -1,10 +1,17 @@
 <template>
   <div :class="['california-learning-system', { 'lesson-mode': !!currentLesson }]">
     <!-- 課程首頁（Level Selector） -->
+    <!-- 品飲筆記 -->
+    <CaliforniaTastingNotebookPage
+      v-if="showNotebook"
+      @back="showNotebook = false"
+    />
+
     <CaliforniaLevelSelector
-      v-if="!currentLesson && showLevelSelector"
+      v-else-if="!currentLesson && showLevelSelector"
       @startLevel="handleStartLevel"
       @openMap="emit('exitLearning')"
+      @openNotes="showNotebook = true"
     />
 
     <!-- 課程總覽：已選擇等級、無當前課程時顯示 CaliforniaCourseLayout -->
@@ -59,6 +66,7 @@ import {
 import { authActions } from '../../stores/authStore.js'
 import CaliforniaLevelSelector from './CaliforniaLevelSelector.vue'
 import CaliforniaCourseLayout from './CaliforniaCourseLayout.vue'
+import CaliforniaTastingNotebookPage from './notebook/CaliforniaTastingNotebookPage.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 
 const emit = defineEmits(['exitLearning'])
@@ -69,6 +77,7 @@ const props = defineProps({
 
 const presentationLessonRef = ref(null)
 const showLevelSelector = ref(true)
+const showNotebook = ref(false)
 
 function handleStartLevel(levelNum) {
   californiaLearningActions.setLevel(levelNum)

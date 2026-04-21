@@ -1,11 +1,18 @@
 <template>
   <div class="loire-learning-system">
+    <!-- 品飲筆記 -->
+    <LoireTastingNotebookPage
+      v-if="showNotebook"
+      @back="showNotebook = false"
+    />
+
     <!-- 課程首頁（Level Selector） -->
     <LoireLevelSelector
-      v-if="!currentLesson && showLevelSelector"
+      v-else-if="!currentLesson && showLevelSelector"
       @startLevel="handleStartLevel"
       @openMap="emit('exitLearning')"
       @openGames="emit('openGames')"
+      @openNotes="showNotebook = true"
     />
 
     <!-- 課程總覽：已選擇等級、無當前課程時顯示 LoireCourseLayout -->
@@ -89,6 +96,7 @@ import {
 import { authActions } from '../../stores/authStore.js'
 import LoireLevelSelector from './LoireLevelSelector.vue'
 import LoireCourseLayout from './LoireCourseLayout.vue'
+import LoireTastingNotebookPage from './notebook/LoireTastingNotebookPage.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
 import { globalLoireAchievementManager, loireAchievementState } from '../../stores/loireAchievementSystem.js'
@@ -101,6 +109,7 @@ const props = defineProps({
 
 const presentationLessonRef = ref(null)
 const showLevelSelector = ref(true)
+const showNotebook = ref(false)
 const showAchievementsModal = ref(false)
 const achievementNotification = ref(null)
 

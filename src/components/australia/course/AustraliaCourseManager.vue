@@ -6,6 +6,13 @@
       @openMap="$emit('openMap')"
       @startLevel="handleSelectLevel"
       @openAchievements="showAchievementsModal = true"
+      @openNotebook="view = 'notebook'"
+    />
+
+    <!-- 品飲筆記 -->
+    <AustraliaTastingNotebookPage
+      v-else-if="view === 'notebook'"
+      @back="view = 'levelSelector'"
     />
 
     <!-- 章節列表 -->
@@ -63,6 +70,7 @@ import AustraliaLevelSelector  from './AustraliaLevelSelector.vue'
 import AustraliaCourseLayout   from './AustraliaCourseLayout.vue'
 import AustraliaSlideViewer    from './AustraliaSlideViewer.vue'
 import AchievementsDashboard   from '../../AchievementsDashboard.vue'
+import AustraliaTastingNotebookPage from '../notebook/AustraliaTastingNotebookPage.vue'
 import { courseLevels, getUserProgress, saveProgress, getLevelProgressPercent } from '../data/courseLevels.js'
 import {
   globalAustraliaAchievementManager,
@@ -73,7 +81,7 @@ defineEmits(['openMap'])
 
 globalAustraliaAchievementManager.init()
 
-const view                  = ref('levelSelector')
+const view = ref('levelSelector')  // 'levelSelector' | 'courseContent' | 'notebook'
 const selectedLevelKey      = ref(null)
 const activeLesson          = ref(null)
 const completedMap          = ref({})

@@ -144,6 +144,11 @@
               <span class="nz-nav-title">學習進度</span>
               <span class="nz-nav-desc">正確率・學習時長・各課程詳細記錄</span>
             </button>
+            <button class="nz-nav-card nz-nav-notebook" @click="emit('open-notebook')">
+              <span class="nz-nav-icon">📔</span>
+              <span class="nz-nav-title">品飲筆記</span>
+              <span class="nz-nav-desc">記錄紐西蘭葡萄酒品飲心得</span>
+            </button>
           </div>
         </section>
 
@@ -259,7 +264,7 @@ const props = defineProps({
   slideIndex: { type: Number, default: 0 }
 })
 
-const emit = defineEmits(['mark-complete', 'navigate', 'start-course', 'enter-level', 'open-map', 'select-lesson-direct', 'update-slide-info', 'back-to-home', 'go-to-level'])
+const emit = defineEmits(['mark-complete', 'navigate', 'start-course', 'enter-level', 'open-map', 'select-lesson-direct', 'update-slide-info', 'back-to-home', 'go-to-level', 'open-notebook'])
 
 const router = useRouter()
 

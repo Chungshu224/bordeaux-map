@@ -69,6 +69,11 @@
             <span class="nav-title">南北兩島</span>
             <span class="nav-desc">北島 · 南島產區對比</span>
           </button>
+          <button class="nav-card notebook-card" @click="emit('openNotebook')">
+            <span class="nav-icon">📔</span>
+            <span class="nav-title">品飲筆記</span>
+            <span class="nav-desc">記錄 NZ 葡萄酒品飲心得</span>
+          </button>
         </div>
       </section>
 
