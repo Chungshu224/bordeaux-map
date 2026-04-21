@@ -205,6 +205,8 @@
         </div>
       </section>
 
+    </div><!-- /.main-container -->
+
     <!-- 學習進度 Modal -->
     <Teleport to="body">
       <div v-if="showProgressModal" class="progress-modal-overlay" @click.self="showProgressModal = false">
@@ -304,6 +306,7 @@ function getLevelProgress(n) {
 
 function isLevelUnlocked(n) {
   if (loireLearningState.testMode) return true
+  if (authActions.isAdmin()) return true
   if (n === 1) return true
   const prevFinalId = loireLearningActions.getFinalLessonId(n - 1)
   return prevFinalId != null && loireLearningState.completedLessons.includes(prevFinalId)
