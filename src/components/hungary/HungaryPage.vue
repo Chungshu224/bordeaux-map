@@ -75,9 +75,9 @@ function handleMapBack() {
   overflow: hidden;
 }
 .hungary-page.is-selector {
+  height: 100vh;
   overflow-y: auto;
-  height: auto;
-  min-height: 100vh;
+  overflow-x: hidden;
 }
 </style>
 
