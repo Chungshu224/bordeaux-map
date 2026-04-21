@@ -39,19 +39,6 @@
     </div>
 
     <div v-else-if="currentLesson" class="lesson-content">
-      <!-- Header -->
-      <div class="lesson-header">
-        <div class="lesson-meta">
-          <h1>{{ currentLesson.title }}</h1>
-          <div class="lesson-details">
-            <span class="duration">⏱️ {{ currentLesson.duration }}</span>
-            <span class="type">📚 {{ getLessonTypeText(currentLesson.type) }}</span>
-          </div>
-        </div>
-        <button class="complete-btn" @click="markComplete" :disabled="isCompleted">
-          {{ isCompleted ? '✓ 已完成' : '標記完成' }}
-        </button>
-      </div>
 
       <!-- Interactive Map Lesson -->
       <div v-if="currentLesson.type === 'interactive-map'" class="map-lesson">
@@ -489,13 +476,6 @@ const getReviewConfig = () => {
 <style scoped>
 .lesson-viewer { flex: 1; width: 100%; background: #f8f9fa; display: flex; flex-direction: column; color: #2d3748; padding-bottom: 60px; overflow-y: auto; overflow-x: hidden; }
 .lesson-content { max-width: 100%; width: 100%; margin: 0; padding: 0; display: flex; flex-direction: column; box-sizing: border-box; }
-.lesson-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 32px; gap: 20px; padding: 0 40px 24px 40px; border-bottom: 2px solid #e2e8f0; }
-.lesson-meta h1 { font-size: 28px; font-weight: 700; margin: 0 0 12px 0; color: #2d3748; }
-.lesson-details { display: flex; gap: 16px; flex-wrap: wrap; }
-.duration, .type { font-size: 14px; color: #718096; background: #f7fafc; padding: 4px 12px; border-radius: 20px; border: 1px solid #e2e8f0; }
-.complete-btn { padding: 12px 24px; background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.3s; white-space: nowrap; }
-.complete-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(72,187,120,0.4); }
-.complete-btn:disabled { opacity: 0.6; cursor: not-allowed; background: #a0aec0; }
 .map-lesson { flex: 1; display: flex; flex-direction: column; }
 .map-container { flex: 1; min-height: 600px; }
 .slide-lesson { flex: 1; display: flex; flex-direction: column; min-height: 600px; }
@@ -555,7 +535,6 @@ const getReviewConfig = () => {
 .explore-map-btn { background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%); color: white; }
 .explore-map-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 @media (max-width: 768px) {
-  .lesson-header { padding: 0 16px 16px 16px; flex-direction: column; }
   .text-lesson, .review-lesson { padding: 0 16px; }
   .level-overview { padding: 20px 16px; }
   .welcome-screen { padding: 20px 16px; }

@@ -1,17 +1,25 @@
 <template>
   <div class="nz-course-manager">
-    <!-- Top utility bar -->
-    <div v-if="currentLesson" class="utility-bar">
-      <button class="util-btn" @click="handleGoBack">
-        {{ selectedLevel === 1 ? '← 返回Level1課程' : selectedLevel === 2 ? '← 返回Level2課程' : selectedLevel === 3 ? '← 返回Level3課程' : '← 返回課程選擇' }}
-      </button>
-      <div class="slide-nav-controls" v-if="showSlideControls">
-        <button class="slide-nav-btn" @click="handlePrevSlide" :disabled="!canPrevSlide">← 上一頁</button>
-        <span class="slide-progress">{{ currentSlideNum }} / {{ totalSlides }}</span>
-        <button class="slide-nav-btn" @click="handleNextSlide" :disabled="!canNextSlide">下一頁 →</button>
+    <!-- 課程播放標題欄（Loire 風格兩列） -->
+    <header v-if="currentLesson" class="nz-learning-header">
+      <div class="nz-lh-row nz-lh-row-1">
+        <button class="nz-lh-btn nz-lh-back-btn" @click="handleGoBack">
+          {{ selectedLevel === 1 ? '← Level 1' : selectedLevel === 2 ? '← Level 2' : selectedLevel === 3 ? '← Level 3' : '← 返回' }}
+        </button>
+        <span class="nz-lh-title">{{ currentLesson.title }}</span>
+        <button
+          class="nz-lh-btn nz-lh-complete-btn"
+          :class="{ completed: isCurrentLessonCompleted }"
+          @click="triggerMarkComplete"
+          :disabled="isCurrentLessonCompleted"
+        >{{ isCurrentLessonCompleted ? '✓ 已完成' : '標記完成' }}</button>
       </div>
-      <div v-else class="util-spacer"></div>
-    </div>
+      <div class="nz-lh-row nz-lh-row-2" v-if="showSlideControls">
+        <button class="nz-lh-btn nz-lh-nav-btn" @click="handlePrevSlide" :disabled="!canPrevSlide">◀ 上一頁</button>
+        <span class="nz-lh-nav-label">{{ currentSlideNum }} / {{ totalSlides }}</span>
+        <button class="nz-lh-btn nz-lh-nav-btn" @click="handleNextSlide" :disabled="!canNextSlide">下一頁 ▶</button>
+      </div>
+    </header>
 
     <NZLessonViewer
       :currentLesson="currentLesson"
@@ -70,6 +78,8 @@ const currentSlideNum = computed(() => slideInfo.value.current + 1)
 const totalSlides = computed(() => slideInfo.value.total)
 const canPrevSlide = computed(() => slideInfo.value.current > 0)
 const canNextSlide = computed(() => slideInfo.value.current < slideInfo.value.total - 1)
+const isCurrentLessonCompleted = computed(() => !!currentLesson.value && completedLessons.value.includes(currentLesson.value.id))
+const triggerMarkComplete = () => { if (currentLesson.value) handleMarkComplete(currentLesson.value.id) }
 
 const levels = computed(() => {
   const set = new Set(courseModules.value.map(m => m.level).filter(l => typeof l !== 'undefined'))
@@ -195,55 +205,76 @@ onMounted(async () => {
   flex-direction: column;
   background: #f8f9fa;
 }
-.utility-bar {
+/* ── 課程播放標題欄 ── */
+.nz-learning-header {
+  background: linear-gradient(135deg, #00533e 0%, #003d2d 100%);
+  padding: 8px 20px;
   display: flex;
-  gap: 10px;
-  padding: 12px 20px;
-  align-items: center;
-  justify-content: space-between;
-  background: white;
-  border-bottom: 1px solid #e2e8f0;
+  flex-direction: column;
+  gap: 6px;
   position: sticky;
   top: 0;
   z-index: 50;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 16px rgba(0,83,62,0.35);
+  flex-shrink: 0;
 }
-.util-btn {
-  padding: 8px 16px;
-  border-radius: 8px;
-  background: #f7fafc;
-  color: #4a5568;
-  border: 1px solid #e2e8f0;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-.util-btn:hover { background: #edf2f7; border-color: #cbd5e0; }
-.util-spacer { flex: 1; }
-.slide-nav-controls {
+.nz-lh-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 8px;
 }
-.slide-nav-btn {
-  padding: 8px 20px;
-  background: linear-gradient(135deg, #006400 0%, #004d00 100%);
-  color: white;
-  border: none;
+.nz-lh-row-2 {
+  justify-content: center;
+  gap: 16px;
+}
+.nz-lh-btn {
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 8px;
-  font-size: 14px;
+  color: white;
+  font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 2px 6px rgba(0,100,0,0.3);
+  transition: background 0.2s;
+  white-space: nowrap;
 }
-.slide-nav-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,100,0,0.4); }
-.slide-nav-btn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; }
-.slide-progress { font-size: 15px; font-weight: 600; color: #4a5568; padding: 6px 16px; background: #f7fafc; border-radius: 14px; border: 1px solid #e2e8f0; }
-@media (max-width: 768px) {
-  .utility-bar { padding: 10px 12px; gap: 8px; }
-  .slide-nav-btn { padding: 7px 12px; font-size: 13px; }
+.nz-lh-btn:hover:not(:disabled) { background: rgba(255,255,255,0.28); }
+.nz-lh-btn:disabled { opacity: 0.38; cursor: not-allowed; }
+.nz-lh-title {
+  flex: 1;
+  text-align: center;
+  color: rgba(255,255,255,0.92);
+  font-size: 0.92rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 8px;
+}
+.nz-lh-complete-btn {
+  background: rgba(72,187,120,0.25);
+  border-color: rgba(72,187,120,0.55);
+}
+.nz-lh-complete-btn:hover:not(:disabled) { background: rgba(72,187,120,0.4); }
+.nz-lh-complete-btn.completed { background: rgba(72,187,120,0.18); color: rgba(255,255,255,0.6); }
+.nz-lh-nav-btn {
+  padding: 6px 18px;
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+}
+.nz-lh-nav-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  min-width: 60px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .nz-learning-header { padding: 6px 12px; }
+  .nz-lh-title { font-size: 0.78rem; }
+  .nz-lh-btn { padding: 5px 10px; font-size: 0.75rem; }
 }
 
 /* 成就 Toast 通知 */
