@@ -209,44 +209,50 @@ export const lessonContent = [
   },
 
   {
-    type: 'quiz',
-    title: '課程測驗',
-    questions: [
-      {
-        id: 'ca7-q1',
-        question: '「Wente Clone」是指什麼？',
-        options: ['加州最著名的 Cabernet Sauvignon 克隆株', '加州 80% Chardonnay 的基因來源，由 Wente 家族 1880 年代從勃根地引進', '加州最老的 Zinfandel 老藤克隆', 'Robert Mondavi 研發的 Pinot Noir 克隆'],
-        answer: 1,
-        explanation: '「Wente Clone」指 C.H. Wente 1880 年代從勃根地引進的 Chardonnay 克隆株，成為整個加州 Chardonnay 種植的主要基因來源，加州約 80% 的 Chardonnay 可追溯至此，是全球種植最廣的 Chardonnay 克隆之一。'
-      },
-      {
-        id: 'ca7-q2',
-        question: 'Zinfandel 的 DNA 最終追溯至哪個原生品種和哪個國家？',
-        options: ['法國 Grenache', '義大利 Primitivo', '克羅地亞的 Crljenak Kaštelanski', '西班牙 Tempranillo'],
-        answer: 2,
-        explanation: 'DNA 研究證實，Zinfandel 與義大利 Primitivo 是同一品種，兩者都與克羅地亞的 Crljenak Kaštelanski（也稱 Tribidrag）完全相同，最終基因根源在克羅地亞的 Dalmatia 海岸。'
-      },
-      {
-        id: 'ca7-q3',
-        question: '加州「豐厚 Chardonnay」（奶油爆米花感）的製作方式是？',
-        options: ['完全在不鏽鋼桶發酵，不做乳酸發酵', '使用100%新法國橡木桶發酵，完全乳酸發酵', '全部在石灰岩洞穴低溫陳年', '加入甜蘋果汁調配'],
-        answer: 1,
-        explanation: '傳統豐厚型加州 Chardonnay 使用 100% 新橡木桶發酵（帶來香草、烤橡木香）和完全乳酸發酵（malic acid 轉為 lactic acid，帶來奶油、乳製品口感），是 1980-2000 年代的主流風格。'
-      },
-      {
-        id: 'ca7-q4',
-        question: 'Robert Mondavi 為了市場推廣，將 Sauvignon Blanc 改名為什麼品牌名稱？',
-        options: ['California Blanc', 'Fumé Blanc', 'Golden Gate White', 'Pacific Sauvignon'],
-        answer: 1,
-        explanation: 'Robert Mondavi 在 1960 年代將其帶橡木陳年、更豐厚的 Sauvignon Blanc 命名為「Fumé Blanc」（借用盧瓦爾河 Pouilly-Fumé 的名稱），成功改變了消費者對 Sauvignon Blanc 的認知，「Fumé Blanc」至今仍是加州常見的 Sauvignon Blanc 風格標籤。'
-      },
-      {
-        id: 'ca7-q5',
-        question: '加州 Pinot Noir 和 Zinfandel 各自對應的「最佳氣候類型」是？',
-        options: ['兩者都需要溫暖乾燥氣候', 'Pinot Noir 需要涼爽海洋性氣候；Zinfandel 偏好溫暖大陸性氣候（但不太熱）', 'Zinfandel 需要高海拔涼爽；Pinot Noir 偏好谷底溫暖', '兩者氣候需求相同'],
-        answer: 1,
-        explanation: 'Pinot Noir 是非常「涼爽氣候」的品種，需要海霧和長生長季（Russian River Valley、Sonoma Coast、Sta. Rita Hills）；Zinfandel 偏好溫暖大陸性氣候（Dry Creek Valley、Lodi、Amador County），但過熱容易造成過熟、酒精過高。'
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 70,
+        questions: [
+          {
+            type: 'single',
+            question: '「Wente Clone」是指什麼？',
+            options: ['A. 加州最著名的 Cabernet Sauvignon 克隆株', 'B. 加州 80% Chardonnay 的基因來源，由 Wente 家族 1880 年代從勃根地引進', 'C. 加州最老的 Zinfandel 老藤克隆', 'D. Robert Mondavi 研發的 Pinot Noir 克隆'],
+            correct: 1,
+            explanation: '「Wente Clone」指 C.H. Wente 1880 年代從勃根地引進的 Chardonnay 克隆株，成為整個加州 Chardonnay 種植的主要基因來源，加州約 80% 的 Chardonnay 可追溯至此，是全球種植最廣的 Chardonnay 克隆之一。'
+          },
+          {
+            type: 'single',
+            question: 'Zinfandel 的 DNA 最終追溯至哪個原生品種和哪個國家？',
+            options: ['A. 法國 Grenache', 'B. 義大利 Primitivo', 'C. 克羅地亞的 Crljenak Kaštelanski', 'D. 西班牙 Tempranillo'],
+            correct: 2,
+            explanation: 'DNA 研究證實，Zinfandel 與義大利 Primitivo 是同一品種，兩者都與克羅地亞的 Crljenak Kaštelanski（也稱 Tribidrag）完全相同，最終基因根源在克羅地亞的 Dalmatia 海岸。'
+          },
+          {
+            type: 'single',
+            question: '加州「豐厚 Chardonnay」（奶油爆米花感）的製作方式是？',
+            options: ['A. 完全在不鏽鋼桶發酵，不做乳酸發酵', 'B. 使用100%新法國橡木桶發酵，完全乳酸發酵', 'C. 全部在石灰岩洞穴低溫陳年', 'D. 加入甜蘋果汁調配'],
+            correct: 1,
+            explanation: '傳統豐厚型加州 Chardonnay 使用 100% 新橡木桶發酵（帶來香草、烤橡木香）和完全乳酸發酵（malic acid 轉為 lactic acid，帶來奶油、乳製品口感），是 1980-2000 年代的主流風格。'
+          },
+          {
+            type: 'single',
+            question: 'Robert Mondavi 為了市場推廣，將 Sauvignon Blanc 改名為什麼品牌名稱？',
+            options: ['A. California Blanc', 'B. Fumé Blanc', 'C. Golden Gate White', 'D. Pacific Sauvignon'],
+            correct: 1,
+            explanation: 'Robert Mondavi 在 1960 年代將其帶橡木陳年、更豐厚的 Sauvignon Blanc 命名為「Fumé Blanc」（借用盧瓦爾河 Pouilly-Fumé 的名稱），成功改變了消費者對 Sauvignon Blanc 的認知。'
+          },
+          {
+            type: 'single',
+            question: '加州 Pinot Noir 和 Zinfandel 各自對應的「最佳氣候類型」是？',
+            options: ['A. 兩者都需要溫暖乾燥氣候', 'B. Pinot Noir 需要涼爽海洋性氣候；Zinfandel 偏好溫暖大陸性氣候（但不太熱）', 'C. Zinfandel 需要高海拔涼爽；Pinot Noir 偏好谷底溫暖', 'D. 兩者氣候需求相同'],
+            correct: 1,
+            explanation: 'Pinot Noir 是非常「涼爽氣候」的品種，需要海霧和長生長季（Russian River Valley、Sonoma Coast、Sta. Rita Hills）；Zinfandel 偏好溫暖大陸性氣候（Dry Creek Valley、Lodi、Amador County），但過熱容易造成過熟、酒精過高。'
+          }
+        ]
       }
-    ]
+    }
   }
 ]

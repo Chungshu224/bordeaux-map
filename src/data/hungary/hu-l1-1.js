@@ -29,13 +29,7 @@ export const lessonContent = [
           <li>匈牙利在全球葡萄酒版圖的獨特地位</li>
         </ul>
       </div>
-    </div>`,
-    quiz: {
-      question: '托卡伊（Tokaj）產區是哪一年被列為 UNESCO 世界文化遺產？',
-      options: ['A. 1995 年', 'B. 2002 年', 'C. 2010 年', 'D. 1989 年'],
-      correct: 1,
-      explanation: '托卡伊葡萄酒歷史文化景觀（Tokaj Wine Region Historic Cultural Landscape）於 2002 年被列入 UNESCO 世界文化遺產，這是匈牙利唯一以葡萄酒文化為主題的世遺，也是全球最古老的法定葡萄酒產區之一。'
-    }
+    </div>`
   },
   {
     title: '2,000 年的葡萄酒歷史',
@@ -65,13 +59,7 @@ export const lessonContent = [
           <div class="timeline-text">私有化後外國資本湧入（如法國 AXA、西班牙 Vega Sicilia），現代化釀酒復興開始</div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '路易十四所說的「王者之酒，葡萄酒之王（Wine of Kings, King of Wines）」指的是哪種酒？',
-      options: ['A. 法國香檳', 'B. 托卡伊阿蘇（Tokaji Aszú）', 'C. 波爾多紅酒', 'D. 布根地白酒'],
-      correct: 1,
-      explanation: '17 世紀時，匈牙利王公拉科奇二世將 Tokaji Aszú 作為外交禮品送給法國宮廷，法王路易十四品後留下這句名言。托卡伊阿蘇至今仍是匈牙利最具代表性也最昂貴的葡萄酒。'
-    }
+    </div>`
   },
   {
     title: '共產時期的破壞與現代復興',
@@ -100,13 +88,7 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '下列哪個外國公司投資了匈牙利 Disznókő 酒莊，將現代精品釀酒理念引入托卡伊？',
-      options: ['A. 法國 LVMH', 'B. 西班牙 Torres', 'C. 法國 AXA Millésimes', 'D. 義大利 Antinori'],
-      correct: 2,
-      explanation: 'AXA Millésimes 是法國 AXA 保險集團的葡萄酒投資部門，同時擁有波爾多的碧尚女爵（Pichon Baron）等名莊。1992 年他們收購了托卡伊的 Disznókő，帶入現代精品釀酒技術和管理理念，是匈牙利現代葡萄酒復興的重要推手。'
-    }
+    </div>`
   },
   {
     title: '匈牙利葡萄酒的全球地位',
@@ -139,12 +121,47 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '匈牙利首次建立官方葡萄園分級制度是在哪一年，比波爾多 1855 年分級早多少年？',
-      options: ['A. 1700 年，早 155 年', 'B. 1737 年，早 118 年', 'C. 1800 年，早 55 年', 'D. 1920 年，晚 65 年'],
-      correct: 1,
-      explanation: '1737 年，哈布斯堡王朝皇帝查理六世（Charles VI）頒布法令，將托卡伊的葡萄園正式分為三個等級，這是世界上最早的官方葡萄園分級制度之一，比波爾多著名的 1855 年梅多克分級早了整整 118 年。'
+    </div>`
+  }
+,
+  {
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 60,
+        questions: [
+        {
+          type: 'single',
+          text: '托卡伊（Tokaj）產區是哪一年被列為 UNESCO 世界文化遺產？',
+          options: ['A. 1995 年', 'B. 2002 年', 'C. 2010 年', 'D. 1989 年'],
+          correct: 1,
+          explanation: '托卡伊葡萄酒歷史文化景觀（Tokaj Wine Region Historic Cultural Landscape）於 2002 年被列入 UNESCO 世界文化遺產，這是匈牙利唯一以葡萄酒文化為主題的世遺，也是全球最古老的法定葡萄酒產區之一。'
+        },
+        {
+          type: 'single',
+          text: '路易十四所說的「王者之酒，葡萄酒之王（Wine of Kings, King of Wines）」指的是哪種酒？',
+          options: ['A. 法國香檳', 'B. 托卡伊阿蘇（Tokaji Aszú）', 'C. 波爾多紅酒', 'D. 布根地白酒'],
+          correct: 1,
+          explanation: '17 世紀時，匈牙利王公拉科奇二世將 Tokaji Aszú 作為外交禮品送給法國宮廷，法王路易十四品後留下這句名言。托卡伊阿蘇至今仍是匈牙利最具代表性也最昂貴的葡萄酒。'
+        },
+        {
+          type: 'single',
+          text: '下列哪個外國公司投資了匈牙利 Disznókő 酒莊，將現代精品釀酒理念引入托卡伊？',
+          options: ['A. 法國 LVMH', 'B. 西班牙 Torres', 'C. 法國 AXA Millésimes', 'D. 義大利 Antinori'],
+          correct: 2,
+          explanation: 'AXA Millésimes 是法國 AXA 保險集團的葡萄酒投資部門，同時擁有波爾多的碧尚女爵（Pichon Baron）等名莊。1992 年他們收購了托卡伊的 Disznókő，帶入現代精品釀酒技術和管理理念，是匈牙利現代葡萄酒復興的重要推手。'
+        },
+        {
+          type: 'single',
+          text: '匈牙利首次建立官方葡萄園分級制度是在哪一年，比波爾多 1855 年分級早多少年？',
+          options: ['A. 1700 年，早 155 年', 'B. 1737 年，早 118 年', 'C. 1800 年，早 55 年', 'D. 1920 年，晚 65 年'],
+          correct: 1,
+          explanation: '1737 年，哈布斯堡王朝皇帝查理六世（Charles VI）頒布法令，將托卡伊的葡萄園正式分為三個等級，這是世界上最早的官方葡萄園分級制度之一，比波爾多著名的 1855 年梅多克分級早了整整 118 年。'
+        }
+        ]
+      }
     }
   }
 ]

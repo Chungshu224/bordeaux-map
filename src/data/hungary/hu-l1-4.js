@@ -57,13 +57,7 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: 'Kékfrankos 在奧地利的名稱是什麼？',
-      options: ['A. Grüner Veltliner', 'B. Zweigelt', 'C. Blaufränkisch', 'D. Sankt Laurent'],
-      correct: 2,
-      explanation: 'Kékfrankos 在奧地利被稱為 Blaufränkisch（藍色法蘭克），是奧地利種植面積第二大的紅葡萄品種（僅次於 Zweigelt）。匈牙利的 Sopron 產區位於奧地利邊境，其 Kékfrankos 風格與奧地利 Blaufränkisch 最為接近。在德國（主要在 Württemberg）則稱為 Lemberger 或 Limberger。'
-    }
+    </div>`
   },
   {
     title: 'Kadarka — 傳統公牛血的靈魂',
@@ -82,18 +76,7 @@ export const lessonContent = [
           <p>Kadarka 目前主要種植在塞克薩德（Szekszárd）和埃格爾（Eger），被視為公牛血混釀中不可或缺的「靈魂成分」——雖然比例通常不高，但它的香氣特徵為整個調配帶來獨特個性。</p>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '「公牛血（Bikavér）」這個名字的起源傳說與哪個歷史事件相關？',
-      options: [
-        'A. 一位釀酒師在釀造時不小心混入了牛血',
-        'B. 16 世紀埃格爾守軍飲用 Kadarka 紅酒，染紅鬍鬚嚇退鄂圖曼軍',
-        'C. 匈牙利國王在祭祀中使用牛血與葡萄酒混合的儀式',
-        'D. Kadarka 葡萄串的外觀形似公牛角'
-      ],
-      correct: 1,
-      explanation: '根據傳說，1552 年鄂圖曼軍隊圍攻埃格爾時，守將 István Dobó 讓士兵大量飲用紅色的 Bikavér 酒壯膽，士兵們鬍鬚染紅。土耳其人誤以為他們在喝公牛血，驚懼撤退。雖然這個傳說難以確證，但「公牛血」之名沿用至今，成為匈牙利葡萄酒最著名的品牌之一。'
-    }
+    </div>`
   },
   {
     title: 'Cabernet Franc — 維拉尼的王牌',
@@ -125,13 +108,7 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '匈牙利的哪個產區以 Cabernet Franc 最為著名，甚至建立了以此品種命名的官方品牌「Villányi Franc」？',
-      options: ['A. 托卡伊（Tokaj）', 'B. 埃格爾（Eger）', 'C. 維拉尼（Villány）', 'D. 索普倫（Sopron）'],
-      correct: 2,
-      explanation: '維拉尼（Villány）是匈牙利最溫暖的產區，位於最南端，氣候接近南法。「Villányi Franc」是匈牙利唯一擁有自己專屬品牌認證的葡萄酒，設有嚴格的品質控制標準，是國際上最受認可的匈牙利紅酒品牌。英國酒評家 Michael Broadbent 曾說：「Cabernet Franc 在維拉尼找到了它的天然家園。」'
-    }
+    </div>`
   },
   {
     title: '其他重要紅葡萄品種',
@@ -163,17 +140,47 @@ export const lessonContent = [
           <li><strong>最國際化</strong>：Cabernet Franc（在維拉尼找到天然家園）</li>
         </ul>
       </div>
-    </div>`,
-    quiz: {
-      question: '下列哪種說法正確描述了 Kadarka 在現代匈牙利葡萄酒業的現狀？',
-      options: [
-        'A. Kadarka 現在是匈牙利種植最廣泛的紅葡萄，超過 Kékfrankos',
-        'B. Kadarka 因種植難度高在集體農場時代幾乎被淘汰，現在面積不到 700 公頃，但被精品釀酒師重新發掘',
-        'C. Kadarka 只在托卡伊（Tokaj）產區種植',
-        'D. Kadarka 是新引進的品種，在匈牙利種植歷史不到 50 年'
-      ],
-      correct: 1,
-      explanation: 'Kadarka 曾是匈牙利最重要的紅葡萄，但因對春霜和病害敏感、產量不穩定，在集體農場時代被大量更耐種的 Kékfrankos 取代。目前種植面積不到 700 公頃。然而，它在公牛血（Bikavér）的傳統混釀中具有不可替代的歷史地位，現代精品釀酒師也開始重新重視這個古老品種，以單一品種款展現其獨特的玫瑰香和辛香料風格。'
+    </div>`
+  }
+,
+  {
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 60,
+        questions: [
+        {
+          type: 'single',
+          text: 'Kékfrankos 在奧地利的名稱是什麼？',
+          options: ['A. Grüner Veltliner', 'B. Zweigelt', 'C. Blaufränkisch', 'D. Sankt Laurent'],
+          correct: 2,
+          explanation: 'Kékfrankos 在奧地利被稱為 Blaufränkisch（藍色法蘭克），是奧地利種植面積第二大的紅葡萄品種（僅次於 Zweigelt）。匈牙利的 Sopron 產區位於奧地利邊境，其 Kékfrankos 風格與奧地利 Blaufränkisch 最為接近。在德國（主要在 Württemberg）則稱為 Lemberger 或 Limberger。'
+        },
+        {
+          type: 'single',
+          text: '「公牛血（Bikavér）」這個名字的起源傳說與哪個歷史事件相關？',
+          options: ['A. 一位釀酒師在釀造時不小心混入了牛血', 'B. 16 世紀埃格爾守軍飲用 Kadarka 紅酒，染紅鬍鬚嚇退鄂圖曼軍', 'C. 匈牙利國王在祭祀中使用牛血與葡萄酒混合的儀式', 'D. Kadarka 葡萄串的外觀形似公牛角'],
+          correct: 1,
+          explanation: '根據傳說，1552 年鄂圖曼軍隊圍攻埃格爾時，守將 István Dobó 讓士兵大量飲用紅色的 Bikavér 酒壯膽，士兵們鬍鬚染紅。土耳其人誤以為他們在喝公牛血，驚懼撤退。雖然這個傳說難以確證，但「公牛血」之名沿用至今，成為匈牙利葡萄酒最著名的品牌之一。'
+        },
+        {
+          type: 'single',
+          text: '匈牙利的哪個產區以 Cabernet Franc 最為著名，甚至建立了以此品種命名的官方品牌「Villányi Franc」？',
+          options: ['A. 托卡伊（Tokaj）', 'B. 埃格爾（Eger）', 'C. 維拉尼（Villány）', 'D. 索普倫（Sopron）'],
+          correct: 2,
+          explanation: '維拉尼（Villány）是匈牙利最溫暖的產區，位於最南端，氣候接近南法。「Villányi Franc」是匈牙利唯一擁有自己專屬品牌認證的葡萄酒，設有嚴格的品質控制標準，是國際上最受認可的匈牙利紅酒品牌。英國酒評家 Michael Broadbent 曾說：「Cabernet Franc 在維拉尼找到了它的天然家園。」'
+        },
+        {
+          type: 'single',
+          text: '下列哪種說法正確描述了 Kadarka 在現代匈牙利葡萄酒業的現狀？',
+          options: ['A. Kadarka 現在是匈牙利種植最廣泛的紅葡萄，超過 Kékfrankos', 'B. Kadarka 因種植難度高在集體農場時代幾乎被淘汰，現在面積不到 700 公頃，但被精品釀酒師重新發掘', 'C. Kadarka 只在托卡伊（Tokaj）產區種植', 'D. Kadarka 是新引進的品種，在匈牙利種植歷史不到 50 年'],
+          correct: 1,
+          explanation: 'Kadarka 曾是匈牙利最重要的紅葡萄，但因對春霜和病害敏感、產量不穩定，在集體農場時代被大量更耐種的 Kékfrankos 取代。目前種植面積不到 700 公頃。然而，它在公牛血（Bikavér）的傳統混釀中具有不可替代的歷史地位，現代精品釀酒師也開始重新重視這個古老品種，以單一品種款展現其獨特的玫瑰香和辛香料風格。'
+        }
+        ]
+      }
     }
   }
 ]

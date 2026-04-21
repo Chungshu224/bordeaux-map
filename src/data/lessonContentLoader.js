@@ -167,6 +167,21 @@ export const lessonModuleLoaders = {
   'l3-13-part1': () => import('./lessons/l3-13-part1.js'),
   'l3-13-part2': () => import('./lessons/l3-13-part2.js'),
   'l3-14': () => import('./lessons/l3-14.js'), // Level 3 綜合評量
+  // California Level 1
+  'ca-l1-1': () => import('./california/ca-l1-1.js'),
+  'ca-l1-2': () => import('./california/ca-l1-2.js'),
+  'ca-l1-3': () => import('./california/ca-l1-3.js'),
+  'ca-l1-4': () => import('./california/ca-l1-4.js'),
+  // California Level 2
+  'ca-l2-1': () => import('./california/ca-l2-1.js'),
+  'ca-l2-2': () => import('./california/ca-l2-2.js'),
+  'ca-l2-3': () => import('./california/ca-l2-3.js'),
+  'ca-l2-4': () => import('./california/ca-l2-4.js'),
+  // California Level 3
+  'ca-l3-1': () => import('./california/ca-l3-1.js'),
+  'ca-l3-2': () => import('./california/ca-l3-2.js'),
+  'ca-l3-3': () => import('./california/ca-l3-3.js'),
+  'ca-l3-4': () => import('./california/ca-l3-4.js'),
   // Hungary Level 1
   'hu-l1-1': () => import('./hungary/hu-l1-1.js'),
   'hu-l1-2': () => import('./hungary/hu-l1-2.js'),

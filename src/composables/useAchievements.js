@@ -31,15 +31,36 @@ import {
   nzAchievementDefinitions,
   globalNzAchievementManager
 } from '../stores/nzAchievementSystem.js'
+import {
+  loireAchievementState,
+  loireAchievementDefinitions,
+  globalLoireAchievementManager
+} from '../stores/loireAchievementSystem.js'
+import {
+  hungaryAchievementState,
+  hungaryAchievementDefinitions,
+  globalHungaryAchievementManager
+} from '../stores/hungaryAchievementSystem.js'
+import {
+  australiaAchievementState,
+  australiaAchievementDefinitions,
+  globalAustraliaAchievementManager
+} from '../stores/australiaAchievementSystem.js'
+import {
+  californiaAchievementState,
+  californiaAchievementDefinitions,
+  globalCaliforniaAchievementManager
+} from '../stores/californiaAchievementSystem.js'
 
 // ── 課程標籤 ──────────────────────────────────────────────────
 const COURSE_LABELS = {
-  bordeaux:   '侍酒師的筆記本',
-  bourgogne:  '侍酒師的筆記本',
-  italy:      '侍酒師的筆記本',
-  germany:    '侍酒師的筆記本',
-  spain:      '侍酒師的筆記本',
-  newzealand: '侍酒師的筆記本'
+  bordeaux:    '侍酒師的筆記本',
+  bourgogne:   '侍酒師的筆記本',
+  italy:       '侍酒師的筆記本',
+  germany:     '侍酒師的筆記本',
+  spain:       '侍酒師的筆記本',
+  newzealand:  '侍酒師的筆記本',
+  california:  '侍酒師的筆記本'
 }
 
 // ── 各課程分類定義 ────────────────────────────────────────────
@@ -86,6 +107,38 @@ const COURSE_CATEGORIES = {
     { id: 'time',       name: '時間特殊', icon: '⏰' },
     { id: 'special',    name: '特殊成就', icon: '⭐' }  ],
   newzealand: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
+  loire: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
+  hungary: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
+  australia: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
+  california: [
     { id: 'all',         name: '全部',     icon: '🌟' },
     { id: 'progress',   name: '學習進度', icon: '📚' },
     { id: 'exploration',name: '地圖探索', icon: '🗺️' },
@@ -141,6 +194,22 @@ export function useAchievements(courseKey) {
     state       = nzAchievementState
     definitions = nzAchievementDefinitions
     manager     = globalNzAchievementManager
+  } else if (courseKey === 'loire') {
+    state       = loireAchievementState
+    definitions = loireAchievementDefinitions
+    manager     = globalLoireAchievementManager
+  } else if (courseKey === 'hungary') {
+    state       = hungaryAchievementState
+    definitions = hungaryAchievementDefinitions
+    manager     = globalHungaryAchievementManager
+  } else if (courseKey === 'australia') {
+    state       = australiaAchievementState
+    definitions = australiaAchievementDefinitions
+    manager     = globalAustraliaAchievementManager
+  } else if (courseKey === 'california') {
+    state       = californiaAchievementState
+    definitions = californiaAchievementDefinitions
+    manager     = globalCaliforniaAchievementManager
   } else {
     // default: bordeaux
     state       = achievementState

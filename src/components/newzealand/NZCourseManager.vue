@@ -29,14 +29,34 @@
       @back-to-home="handleBackToHome"
       @go-to-level="handleEnterLevel"
     />
+
+    <!-- 成就通知 Toast -->
+    <div v-if="achievementNotification" class="nz-achievement-toast">
+      <div class="nz-toast-content">
+        <span class="nz-toast-emoji">🏆</span>
+        <div class="nz-toast-info">
+          <strong>成就解鎖！{{ achievementNotification.title }}</strong>
+          <span>+{{ achievementNotification.points }} 點</span>
+        </div>
+        <button class="nz-toast-close" @click="achievementNotification = null">×</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import NZLessonViewer from './NZLessonViewer.vue'
+import {
+  globalNzAchievementManager,
+  nzAchievementState
+} from '../../stores/nzAchievementSystem.js'
 
 defineEmits(['openMap'])
+
+globalNzAchievementManager.init()
+
+const achievementNotification = ref(null)
 
 const selectedLevel = ref(0)
 const courseModules = ref([])
@@ -89,6 +109,37 @@ const handleMarkComplete = (lessonId) => {
   if (!completedLessons.value.includes(lessonId)) {
     completedLessons.value.push(lessonId)
     try { localStorage.setItem('nz-wine-progress', JSON.stringify(completedLessons.value)) } catch (e) {}
+
+    // 計算進度並觸發成就
+    const allModules   = courseModules.value
+    const allLessons   = allModules.flatMap(m => m.lessons || [])
+    const totalCount   = allLessons.length
+    const doneCount    = completedLessons.value.length
+    const totalProgress = totalCount ? Math.round(doneCount / totalCount * 100) : 0
+
+    // 判斷更新的是屬於哪個 level
+    const lessonMod = allModules.find(m => (m.lessons || []).some(l => l.id === lessonId))
+    const levelNum  = lessonMod?.level || selectedLevel.value
+
+    // 檢查該等級是否剛完成
+    const levelLessons = allModules.filter(m => m.level === levelNum).flatMap(m => m.lessons || [])
+    const levelDone    = levelLessons.filter(l => completedLessons.value.includes(l.id) || l.id === lessonId)
+    const levelCompleted = levelDone.length >= levelLessons.length
+
+    // SB / Pinot 判斷（從課程 ID 或標題小寫匹配）
+    const lesson = allLessons.find(l => l.id === lessonId)
+    const titleLower = (lesson?.title || '').toLowerCase()
+    const sbLesson    = titleLower.includes('sauvignon') || titleLower.includes('sb')
+    const pinotLesson = titleLower.includes('pinot')
+
+    const newUnlocks = globalNzAchievementManager.recordLessonCompleted({
+      levelNum, totalProgress, levelCompleted, sbLesson, pinotLesson
+    })
+
+    if (newUnlocks.length > 0) {
+      achievementNotification.value = newUnlocks[0]
+      setTimeout(() => { achievementNotification.value = null }, 4000)
+    }
   }
 }
 
@@ -193,4 +244,37 @@ onMounted(async () => {
   .utility-bar { padding: 10px 12px; gap: 8px; }
   .slide-nav-btn { padding: 7px 12px; font-size: 13px; }
 }
+
+/* 成就 Toast 通知 */
+.nz-achievement-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  animation: nzSlideIn 0.4s ease;
+}
+@keyframes nzSlideIn {
+  from { transform: translateX(120%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+.nz-toast-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #006400 0%, #004d00 100%);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 100, 0, 0.4);
+  min-width: 260px;
+}
+.nz-toast-emoji { font-size: 1.5rem; }
+.nz-toast-info  { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.nz-toast-info strong { font-size: 0.88rem; }
+.nz-toast-info span   { font-size: 0.75rem; opacity: 0.85; }
+.nz-toast-close {
+  background: none; border: none; color: white;
+  font-size: 1.2rem; cursor: pointer; opacity: 0.7; padding: 0 4px;
+}
+.nz-toast-close:hover { opacity: 1; }
 </style>

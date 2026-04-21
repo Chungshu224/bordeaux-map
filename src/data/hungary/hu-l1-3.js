@@ -53,18 +53,7 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '為什麼 Furmint 特別適合釀造 Tokaji Aszú 貴腐甜酒？',
-      options: [
-        'A. 因為 Furmint 的糖分含量天然極高，不需要貴腐菌輔助',
-        'B. Furmint 的薄皮易被貴腐菌穿透，且高天然酸度與甜度形成完美平衡',
-        'C. Furmint 成熟非常早，可以在貴腐菌生長前就採收',
-        'D. Furmint 的果皮顏色特殊，能讓貴腐菌更容易識別'
-      ],
-      correct: 1,
-      explanation: 'Furmint 的兩大特性使其成為 Aszú 釀造的理想品種：①薄皮讓貴腐菌能輕易穿透，形成貴腐果漿（Aszú Berry）；②天然高酸度在糖分極高的情況下仍能保持清新平衡，避免甜酒變得膩口。這兩點缺一不可。'
-    }
+    </div>`
   },
   {
     title: 'Hárslevelű — 椴樹葉品種',
@@ -102,18 +91,7 @@ export const lessonContent = [
       <div class="note-box">
         <p>🎯 在判讀 Tokaji Aszú 時，如果酒款帶有特別豐郁的花香（椴花、金合歡）和蜂蜜感，通常反映了較高比例的 Hárslevelű 在調配中。</p>
       </div>
-    </div>`,
-    quiz: {
-      question: '在托卡伊（Tokaj）的 Aszú 調配中，Hárslevelű 的主要貢獻是什麼？',
-      options: [
-        'A. 提供高酸度和強烈的礦物感',
-        'B. 提供芬芳的花香和豐郁的圓潤感，與 Furmint 的骨架互補',
-        'C. 提高葡萄酒的深色色素',
-        'D. 降低釀酒成本，因為它比 Furmint 產量更高'
-      ],
-      correct: 1,
-      explanation: 'Hárslevelű 在 Tokaji Aszú 的調配中扮演「芬芳提升者」的角色：它的低酸度柔化了 Furmint 的尖銳感，豐郁的椴花和杏桃香氣增加了複雜度。這種互補調配是托卡伊傳統風格的精髓——結構（Furmint）+ 香氣（Hárslevelű）= 完整的甜酒體驗。'
-    }
+    </div>`
   },
   {
     title: 'Olaszrizling — 匈牙利種植面積最廣的白葡萄',
@@ -147,18 +125,7 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: 'Olaszrizling 和 Rhine Riesling（萊茵雷司令）是同一品種嗎？',
-      options: [
-        'A. 是，只是匈牙利和德國的不同叫法',
-        'B. 否，Olaszrizling（Welschriesling）和 Rhine Riesling 是完全不同的兩個品種',
-        'C. 部分相同，是 Rhine Riesling 的一個突變克隆',
-        'D. 是相同品種，但在不同土壤上展現不同特性'
-      ],
-      correct: 1,
-      explanation: 'Olaszrizling（即奧地利的 Welschriesling，字面意思是「外國/義大利雷司令」）和 Rhine Riesling（萊茵雷司令，德國最著名的白葡萄）是完全不同的品種，DNA 分析已確認無親緣關係。Olaszrizling 風格更圓潤易飲，酸度較低；Rhine Riesling 以極高酸度、礦物感和超長陳年潛力著稱。這個名字上的混淆常造成消費者誤解。'
-    }
+    </div>`
   },
   {
     title: '其他重要白葡萄品種',
@@ -192,17 +159,47 @@ export const lessonContent = [
           <tr><td>Szürkebarát</td><td>Badacsony</td><td>豐郁、煙燻、礦物感</td></tr>
         </table>
       </div>
-    </div>`,
-    quiz: {
-      question: 'Juhfark 白葡萄在匈牙利最大的特色是什麼？',
-      options: [
-        'A. 全國種植面積最廣，性價比最高',
-        'B. 幾乎只在 Somló 火山山丘種植，以極高酸度和礦物感著稱，傳統上被視為婚禮紀念酒',
-        'C. 是托卡伊 Aszú 的第三主要品種',
-        'D. 帶有強烈的麝香葡萄（Muscat）香氣'
-      ],
-      correct: 1,
-      explanation: 'Juhfark 是匈牙利最獨特也最稀少的原生白葡萄之一，幾乎只在 Somló 火山山丘種植。其極高酸度、強烈礦物感和需要多年陳年的特性，使其成為收藏家趨之若鶩的珍品。傳統上稱之為「婚禮之夜的酒」，雖然是民間傳說，卻反映了匈牙利文化對此品種的特殊情感。'
+    </div>`
+  }
+,
+  {
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 60,
+        questions: [
+        {
+          type: 'single',
+          text: '為什麼 Furmint 特別適合釀造 Tokaji Aszú 貴腐甜酒？',
+          options: ['A. 因為 Furmint 的糖分含量天然極高，不需要貴腐菌輔助', 'B. Furmint 的薄皮易被貴腐菌穿透，且高天然酸度與甜度形成完美平衡', 'C. Furmint 成熟非常早，可以在貴腐菌生長前就採收', 'D. Furmint 的果皮顏色特殊，能讓貴腐菌更容易識別'],
+          correct: 1,
+          explanation: 'Furmint 的兩大特性使其成為 Aszú 釀造的理想品種：①薄皮讓貴腐菌能輕易穿透，形成貴腐果漿（Aszú Berry）；②天然高酸度在糖分極高的情況下仍能保持清新平衡，避免甜酒變得膩口。這兩點缺一不可。'
+        },
+        {
+          type: 'single',
+          text: '在托卡伊（Tokaj）的 Aszú 調配中，Hárslevelű 的主要貢獻是什麼？',
+          options: ['A. 提供高酸度和強烈的礦物感', 'B. 提供芬芳的花香和豐郁的圓潤感，與 Furmint 的骨架互補', 'C. 提高葡萄酒的深色色素', 'D. 降低釀酒成本，因為它比 Furmint 產量更高'],
+          correct: 1,
+          explanation: 'Hárslevelű 在 Tokaji Aszú 的調配中扮演「芬芳提升者」的角色：它的低酸度柔化了 Furmint 的尖銳感，豐郁的椴花和杏桃香氣增加了複雜度。這種互補調配是托卡伊傳統風格的精髓——結構（Furmint）+ 香氣（Hárslevelű）= 完整的甜酒體驗。'
+        },
+        {
+          type: 'single',
+          text: 'Olaszrizling 和 Rhine Riesling（萊茵雷司令）是同一品種嗎？',
+          options: ['A. 是，只是匈牙利和德國的不同叫法', 'B. 否，Olaszrizling（Welschriesling）和 Rhine Riesling 是完全不同的兩個品種', 'C. 部分相同，是 Rhine Riesling 的一個突變克隆', 'D. 是相同品種，但在不同土壤上展現不同特性'],
+          correct: 1,
+          explanation: 'Olaszrizling（即奧地利的 Welschriesling，字面意思是「外國/義大利雷司令」）和 Rhine Riesling（萊茵雷司令，德國最著名的白葡萄）是完全不同的品種，DNA 分析已確認無親緣關係。Olaszrizling 風格更圓潤易飲，酸度較低；Rhine Riesling 以極高酸度、礦物感和超長陳年潛力著稱。這個名字上的混淆常造成消費者誤解。'
+        },
+        {
+          type: 'single',
+          text: 'Juhfark 白葡萄在匈牙利最大的特色是什麼？',
+          options: ['A. 全國種植面積最廣，性價比最高', 'B. 幾乎只在 Somló 火山山丘種植，以極高酸度和礦物感著稱，傳統上被視為婚禮紀念酒', 'C. 是托卡伊 Aszú 的第三主要品種', 'D. 帶有強烈的麝香葡萄（Muscat）香氣'],
+          correct: 1,
+          explanation: 'Juhfark 是匈牙利最獨特也最稀少的原生白葡萄之一，幾乎只在 Somló 火山山丘種植。其極高酸度、強烈礦物感和需要多年陳年的特性，使其成為收藏家趨之若鶩的珍品。傳統上稱之為「婚禮之夜的酒」，雖然是民間傳說，卻反映了匈牙利文化對此品種的特殊情感。'
+        }
+        ]
+      }
     }
   }
 ]

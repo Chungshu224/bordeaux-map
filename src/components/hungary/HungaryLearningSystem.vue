@@ -19,6 +19,9 @@
           <button class="lh-btn lh-back-btn" @click="handleBackButton">← 返回</button>
           <div class="lh-badges">
             <span class="lh-badge lh-progress-badge">{{ totalProgress }}%</span>
+            <span class="lh-badge lh-achievement-badge" @click="showAchievementsModal = true" title="成就">
+              🏆 {{ achievementCount }}
+            </span>
           </div>
         </div>
         <div class="lh-row lh-row-2">
@@ -39,6 +42,32 @@
         </div>
       </main>
     </template>
+
+    <!-- 成就通知 -->
+    <div v-if="achievementNotification" class="achievement-notification">
+      <div class="notification-content">
+        <span class="achievement-emoji">🏆</span>
+        <div class="achievement-info">
+          <strong>{{ achievementNotification.title }}</strong>
+        </div>
+        <button class="close-notification" @click="achievementNotification = null">×</button>
+      </div>
+    </div>
+
+    <!-- 成就 Modal -->
+    <Teleport to="body">
+      <div v-if="showAchievementsModal" class="hs-modal-overlay" @click.self="showAchievementsModal = false">
+        <div class="hs-modal">
+          <div class="hs-modal-header">
+            <h3>🏆 匈牙利葡萄酒成就系統</h3>
+            <button class="hs-modal-close" @click="showAchievementsModal = false">×</button>
+          </div>
+          <div class="hs-modal-body">
+            <AchievementsDashboard course-key="hungary" @back="showAchievementsModal = false" />
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
@@ -53,6 +82,8 @@ import {
 import { authActions } from '../../stores/authStore.js'
 import HungaryCourseLayout from './HungaryCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import AchievementsDashboard from '../AchievementsDashboard.vue'
+import { globalHungaryAchievementManager, hungaryAchievementState } from '../../stores/hungaryAchievementSystem.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -61,12 +92,17 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+const showAchievementsModal = ref(false)
+const achievementNotification = ref(null)
+
+globalHungaryAchievementManager.init()
 
 const currentLevel = computed(() => hungaryLearningState.currentLevel)
 const currentLesson = computed(() => hungaryLearningState.currentLesson)
 const currentLevelData = computed(() => hungaryLearningLevels[`level${currentLevel.value}`])
 
 const totalProgress = computed(() => hungaryLearningProgress.value)
+const achievementCount = computed(() => hungaryAchievementState.unlockedAchievements.length)
 
 const unlockedLevels = computed(() =>
   [1, 2].filter(n => isLevelUnlocked(n))
@@ -117,6 +153,26 @@ function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
     hungaryLearningActions.completeLesson(lessonId)
+    // 觸發成就記錄
+    const levelId = currentLevel.value
+    const levelData = currentLevelData.value
+    const lessons = levelData?.lessons || []
+    const completedInLevel = lessons.filter(l =>
+      hungaryLearningState.completedLessons.includes(l.id) || l.id === lessonId
+    ).length
+    const isLevelDone = completedInLevel >= lessons.length
+    const totalLessons = 14
+    const overallProgress = Math.round(
+      (hungaryLearningState.completedLessons.length + 1) / totalLessons * 100
+    )
+    const newUnlocks = globalHungaryAchievementManager.recordLessonCompleted({
+      levelId: isLevelDone ? levelId : null,
+      totalProgress: overallProgress
+    })
+    if (newUnlocks.length > 0) {
+      achievementNotification.value = newUnlocks[0]
+      setTimeout(() => { achievementNotification.value = null }, 4000)
+    }
   }
   hungaryLearningActions.exitLesson()
 }
@@ -212,5 +268,98 @@ watch(() => props.selectedLevel, (n) => {
 .lesson-view {
   flex: 1;
   min-width: 0;
+}
+
+/* 成就徽章 */
+.lh-achievement-badge {
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.lh-achievement-badge:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+/* 成就通知 */
+.achievement-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  animation: slideIn 0.4s ease;
+}
+@keyframes slideIn {
+  from { transform: translateX(120%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #c8102e 0%, #8c0b20 100%);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(200, 16, 46, 0.4);
+  min-width: 240px;
+}
+.achievement-emoji { font-size: 1.5rem; }
+.achievement-info  { flex: 1; }
+.achievement-info strong { font-size: 0.9rem; }
+.close-notification {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 0 4px;
+}
+.close-notification:hover { opacity: 1; }
+
+/* 成就 Modal */
+.hs-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 8888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.hs-modal {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 780px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.hs-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #c8102e 0%, #8c0b20 100%);
+  color: white;
+}
+.hs-modal-header h3 { margin: 0; font-size: 1.1rem; }
+.hs-modal-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+.hs-modal-close:hover { opacity: 0.8; }
+.hs-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
 }
 </style>

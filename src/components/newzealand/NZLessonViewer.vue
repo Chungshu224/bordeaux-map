@@ -134,6 +134,11 @@
               <span class="nz-nav-desc">互動式紐西蘭產區地圖・北島・南島</span>
               <span class="nz-nav-desc">查看已完成課程與學習記錄</span>
             </button>
+            <button class="nz-nav-card nz-nav-achievement" @click="showAchievements = true">
+              <span class="nz-nav-icon">🏆</span>
+              <span class="nz-nav-title">成就系統</span>
+              <span class="nz-nav-desc">解鎖成就・累積點數・查看等級</span>
+            </button>
             <button class="nz-nav-card nz-nav-progress" @click="showProgress = true">
               <span class="nz-nav-icon">📊</span>
               <span class="nz-nav-title">學習進度</span>
@@ -682,6 +687,14 @@ const getReviewConfig = () => {
 .nz-nav-icon { font-size: 1.8rem; }
 .nz-nav-title { font-size: 1.05rem; font-weight: 700; }
 .nz-nav-desc { font-size: 0.82rem; opacity: 0.75; line-height: 1.4; }
+.nz-nav-achievement {
+  background: rgba(255, 215, 0, 0.18);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+.nz-nav-achievement:hover {
+  background: rgba(255, 215, 0, 0.32);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.25);
+}
 
 /* ── Level 卡片 ── */
 .nz-level-selection-grid { margin-bottom: 2rem; }

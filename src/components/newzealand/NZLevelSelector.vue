@@ -383,7 +383,7 @@ import { supabase } from '../../lib/supabaseClient.js'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
 
 const router = useRouter()
-const emit = defineEmits(['enterLevel', 'openMap'])
+const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
 
 const props = defineProps({
   modules:          { type: Array, default: () => [] },

@@ -22,34 +22,34 @@ export const californiaLearningLevels = {
     description: '建立對加州葡萄酒的基礎認知，掌握核心品種、五大地理區域與 AVA 系統，以及基本釀造工藝與餐酒搭配。',
     color: '#8B1A1A',
     modules: [
-      { id: 'CA1M1', title: '1.1 產區概覽：五大地理區域', lessonIds: ['ca-l1-1'] },
-      { id: 'CA1M2', title: '1.2 核心品種與風格', lessonIds: ['ca-l1-2'] },
-      { id: 'CA1M3', title: '1.3 釀造工藝：現代與純粹', lessonIds: ['ca-l1-3'] },
-      { id: 'CA1M4', title: '1.4 餐酒搭配與品飲技巧', lessonIds: ['ca-l1-4'] }
+      { id: 'CA1M1', title: '1.1 認識加州葡萄酒：歷史與全球地位', lessonIds: ['ca-l1-1'] },
+      { id: 'CA1M2', title: '1.2 加州產區地理與氣候', lessonIds: ['ca-l1-2'] },
+      { id: 'CA1M3', title: '1.3 Napa Valley 深度探索', lessonIds: ['ca-l1-3'] },
+      { id: 'CA1M4', title: '1.4 Sonoma County 深度探索', lessonIds: ['ca-l1-4'] }
     ],
     lessons: [
       {
         id: 'ca-l1-1',
-        title: '產區概覽：五大主要地理區域',
-        description: '北海岸、中海岸、南海岸、中央山谷、內華達山麓——認識加州五大地理區域與 AVA（美國葡萄種植區）系統基本定義',
+        title: '認識加州葡萄酒：歷史、地位與巴黎評判',
+        description: '從 1769 年傳教士種下第一株葡萄，到 1976 年震驚世界的巴黎評判——加州如何成為全球第四大葡萄酒產地，以及 AVA 制度介紹',
         duration: 18
       },
       {
         id: 'ca-l1-2',
-        title: '核心品種：夏多內、卡本內與金粉黛',
-        description: '白葡萄 Chardonnay 從輕盈到橡木桶風格，紅葡萄 Cabernet Sauvignon 王者地位，以及加州標誌性品種 Zinfandel 的多元面貌',
+        title: '加州葡萄酒產區地理與氣候',
+        description: '太平洋寒流、海岸山脈、晝夜溫差——六大產區群（North Coast、Central Coast、Sierra Foothills、Inland Valleys、Southern CA、Far North CA）的地理特徵與氣候個性',
         duration: 18
       },
       {
         id: 'ca-l1-3',
-        title: '釀造工藝：現代技術與純粹風格',
-        description: '冷卻發酵技術如何保留加州豐厚果味，不鏽鋼桶與橡木桶的基本概念與風味差異',
-        duration: 15
+        title: 'Napa Valley：16 個子 AVA 的 Cabernet 帝國',
+        description: '從 Carneros 到 Calistoga 的南北風土差異，16 個子 AVA 的個性解析，以及 Opus One、Screaming Eagle 等傳奇酒莊',
+        duration: 20
       },
       {
         id: 'ca-l1-4',
-        title: '餐酒搭配與品飲技巧',
-        description: '加州 Farm-to-Table 餐酒文化，辨識加州紅酒特有的熟度（Ripeness）與豐富果香的品飲練習',
+        title: 'Sonoma County：19 個 AVA 的多元王國',
+        description: 'Russian River Valley 的 Pinot Noir、Dry Creek Valley 的 Zinfandel、Alexander Valley 的 Cabernet，以及 99% 可持續農業認證的環保故事',
         duration: 20
       }
     ]

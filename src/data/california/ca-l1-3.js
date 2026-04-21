@@ -280,44 +280,50 @@ export const lessonContent = [
   },
 
   {
-    type: 'quiz',
-    title: '課程測驗',
-    questions: [
-      {
-        id: 'ca3-q1',
-        question: '1976 年「巴黎評判」紅酒組冠軍來自 Napa Valley 的哪個子 AVA？',
-        options: ['Oakville', 'Rutherford', 'Stags Leap District', 'Howell Mountain'],
-        answer: 2,
-        explanation: 'Stag\'s Leap Wine Cellars 1973 Cabernet Sauvignon 來自 Stags Leap District，在 1976 年巴黎評判中奪冠，以絲滑單寧和優雅結構著稱。'
-      },
-      {
-        id: 'ca3-q2',
-        question: '「Rutherford Dust」是指什麼？',
-        options: ['Rutherford 的灰塵汙染問題', 'Rutherford 土壤礫石帶來的特殊塵土感單寧質地', 'Rutherford 的乾旱氣候', 'Rutherford 特有的白葡萄酒風格'],
-        answer: 1,
-        explanation: '「Rutherford Dust」是指 Rutherford 子 AVA 特有的礫石土壤帶來的單寧質地——一種帶有塵土感的單寧結構，是該產區 Cabernet Sauvignon 的標誌性風格。'
-      },
-      {
-        id: 'ca3-q3',
-        question: 'Opus One 是哪兩個名莊合作創立的？',
-        options: ['Chateau Margaux 和 Robert Mondavi', 'Mouton-Rothschild 和 Robert Mondavi', 'Petrus 和 Screaming Eagle', 'Stag\'s Leap 和 Harlan Estate'],
-        answer: 1,
-        explanation: 'Opus One 由美國 Robert Mondavi 和法國波爾多一級名莊 Château Mouton-Rothschild 的 Baron Philippe de Rothschild 聯合創立於 1979 年，是新舊世界合作的歷史性傳奇。'
-      },
-      {
-        id: 'ca3-q4',
-        question: 'Napa Valley 中哪個子 AVA 以罕見的石灰岩土壤著稱，賦予葡萄酒更高的天然酸度？',
-        options: ['Oakville', 'Rutherford', 'Atlas Peak', 'Calistoga'],
-        answer: 2,
-        explanation: 'Atlas Peak 位於 Napa 東側高原，海拔 600-900 公尺，富含石灰岩土壤，在加州相當罕見，賦予葡萄酒更高的天然酸度，適合釀造 Cabernet Sauvignon 和 Sangiovese。'
-      },
-      {
-        id: 'ca3-q5',
-        question: '以下哪個描述最準確地形容 Napa Valley Cabernet Sauvignon 的特點？',
-        options: ['輕盈清雅，酸度高，適合年輕飲用', '豐厚飽滿，黑果香為主，單寧圓潤，橡木風味明顯', '以礦石感和高酸度為主，類似勃根地 Pinot Noir', '以花香和紅果為主，適合配海鮮'],
-        answer: 1,
-        explanation: 'Napa Valley Cabernet Sauvignon 以豐厚飽滿著稱：黑莓、黑醋栗、李子等黑果香，美國或法國橡木帶來香草、雪松和巧克力，單寧圓潤（尤其是谷底產區），酒精偏高（13.5-15.5%）。'
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 70,
+        questions: [
+          {
+            type: 'single',
+            question: '1976 年「巴黎評判」紅酒組冠軍來自 Napa Valley 的哪個子 AVA？',
+            options: ['A. Oakville', 'B. Rutherford', 'C. Stags Leap District', 'D. Howell Mountain'],
+            correct: 2,
+            explanation: 'Stag\'s Leap Wine Cellars 1973 Cabernet Sauvignon 來自 Stags Leap District，在 1976 年巴黎評判中奪冠，以絲滑單寧和優雅結構著稱。'
+          },
+          {
+            type: 'single',
+            question: '「Rutherford Dust」是指什麼？',
+            options: ['A. Rutherford 的灰塵汙染問題', 'B. Rutherford 土壤礫石帶來的特殊塵土感單寧質地', 'C. Rutherford 的乾旱氣候', 'D. Rutherford 特有的白葡萄酒風格'],
+            correct: 1,
+            explanation: '「Rutherford Dust」是指 Rutherford 子 AVA 特有的礫石土壤帶來的單寧質地——一種帶有塵土感的單寧結構，是該產區 Cabernet Sauvignon 的標誌性風格。'
+          },
+          {
+            type: 'single',
+            question: 'Opus One 是哪兩個名莊合作創立的？',
+            options: ['A. Chateau Margaux 和 Robert Mondavi', 'B. Mouton-Rothschild 和 Robert Mondavi', 'C. Petrus 和 Screaming Eagle', 'D. Stag\'s Leap 和 Harlan Estate'],
+            correct: 1,
+            explanation: 'Opus One 由美國 Robert Mondavi 和法國波爾多一級名莊 Château Mouton-Rothschild 的 Baron Philippe de Rothschild 聯合創立於 1979 年，是新舊世界合作的歷史性傳奇。'
+          },
+          {
+            type: 'single',
+            question: 'Napa Valley 中哪個子 AVA 以罕見的石灰岩土壤著稱，賦予葡萄酒更高的天然酸度？',
+            options: ['A. Oakville', 'B. Rutherford', 'C. Atlas Peak', 'D. Calistoga'],
+            correct: 2,
+            explanation: 'Atlas Peak 位於 Napa 東側高原，海拔 600-900 公尺，富含石灰岩土壤，在加州相當罕見，賦予葡萄酒更高的天然酸度，適合釀造 Cabernet Sauvignon 和 Sangiovese。'
+          },
+          {
+            type: 'single',
+            question: '以下哪個描述最準確地形容 Napa Valley Cabernet Sauvignon 的特點？',
+            options: ['A. 輕盈清雅，酸度高，適合年輕飲用', 'B. 豐厚飽滿，黑果香為主，單寧圓潤，橡木風味明顯', 'C. 以礦石感和高酸度為主，類似勃根地 Pinot Noir', 'D. 以花香和紅果為主，適合配海鮮'],
+            correct: 1,
+            explanation: 'Napa Valley Cabernet Sauvignon 以豐厚飽滿著稱：黑莓、黑醋栗、李子等黑果香，美國或法國橡木帶來香草、雪松和巧克力，單寧圓潤（尤其是谷底產區），酒精偏高（13.5-15.5%）。'
+          }
+        ]
       }
-    ]
+    }
   }
 ]

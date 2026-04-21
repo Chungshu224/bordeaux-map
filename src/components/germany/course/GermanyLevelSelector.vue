@@ -31,25 +31,30 @@
       <!-- 快速導覽 -->
       <section class="quick-nav-section">
         <div class="quick-nav-grid">
-          <button class="nav-card explore" @click="$emit('openMap')">
-            <span class="nav-icon">🗺️</span>
-            <span class="nav-title">探索地圖</span>
-            <span class="nav-desc">衛星地圖・13 個 Anbaugebiete・互動產區探索</span>
-          </button>
           <button class="nav-card games" @click="$emit('openGames')">
             <span class="nav-icon">🎮</span>
             <span class="nav-title">互動練習</span>
             <span class="nav-desc">產區競答・分級辨識・品種配對</span>
           </button>
+          <button class="nav-card explore" @click="$emit('openMap')">
+            <span class="nav-icon">🗺️</span>
+            <span class="nav-title">探索地圖</span>
+            <span class="nav-desc">衛星地圖・13 個 Anbaugebiete・互動產區探索</span>
+          </button>
           <button class="nav-card achievements" @click="showAchievements = true">
             <span class="nav-icon">🏆</span>
-            <span class="nav-title">學習成就</span>
-            <span class="nav-desc">已解鎖成就・分級章章・成就點數</span>
+            <span class="nav-title">成就系統</span>
+            <span class="nav-desc">查看已解鎖成就與積分等級</span>
           </button>
           <button class="nav-card progress" @click="showProgress = true">
             <span class="nav-icon">📊</span>
             <span class="nav-title">學習進度</span>
             <span class="nav-desc">各阶段進度・完成課程・學習統計</span>
+          </button>
+          <button class="nav-card notebook" @click="$emit('openNotebook')">
+            <span class="nav-icon">📔</span>
+            <span class="nav-title">品飲筆記</span>
+            <span class="nav-desc">記錄品飲體驗・年份・氣候參考</span>
           </button>
         </div>
       </section>
@@ -240,7 +245,7 @@ import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
 const showAchievements = ref(false)
 const showProgress = ref(false)
 
-const emit = defineEmits(['startLevel', 'openMap', 'openGames'])
+const emit = defineEmits(['startLevel', 'openMap', 'openGames', 'openNotebook'])
 
 const miniStats = computed(() => {
   const keys = ['level1', 'level2', 'level3']

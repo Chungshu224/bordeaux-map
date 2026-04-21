@@ -49,25 +49,30 @@
       <!-- ── 快速入口 ── -->
       <section class="quick-nav">
         <div class="quick-grid">
+          <button class="nav-card game-card" @click="emit('openGames')">
+            <span class="nav-icon">🎮</span>
+            <span class="nav-title">互動練習</span>
+            <span class="nav-desc">產區競答・品種配對・托卡伊識別</span>
+          </button>
           <button class="nav-card map-card" @click="emit('openMap')">
             <span class="nav-icon">🗺️</span>
             <span class="nav-title">探索地圖</span>
             <span class="nav-desc">22 個法定產區互動地圖</span>
+          </button>
+          <button class="nav-card achievement-card" @click="showAchievementModal = true">
+            <span class="nav-icon">🏆</span>
+            <span class="nav-title">成就系統</span>
+            <span class="nav-desc">查看已解鎖成就與積分等級</span>
           </button>
           <button class="nav-card progress-card" @click="showProgressModal = true">
             <span class="nav-icon">📊</span>
             <span class="nav-title">學習進度</span>
             <span class="nav-desc">{{ totalProgressPct }}% 完成・{{ completedLessons.length }} 課</span>
           </button>
-          <button class="nav-card tokaji-card">
-            <span class="nav-icon">🍯</span>
-            <span class="nav-title">托卡伊專題</span>
-            <span class="nav-desc">Aszú・Puttonyos・貴腐甜酒</span>
-          </button>
-          <button class="nav-card variety-card">
-            <span class="nav-icon">🍇</span>
-            <span class="nav-title">品種索引</span>
-            <span class="nav-desc">Furmint・Kékfrankos・Kadarka</span>
+          <button class="nav-card notebook-card" @click="emit('openNotebook')">
+            <span class="nav-icon">📔</span>
+            <span class="nav-title">品飲筆記</span>
+            <span class="nav-desc">記錄品飲體驗・托卡伊風味・年份筆記</span>
           </button>
         </div>
       </section>
@@ -269,6 +274,16 @@
       </div>
     </Teleport>
 
+    <!-- ── 成就彈窗 ── -->
+    <Teleport to="body">
+      <div v-if="showAchievementModal" class="modal-backdrop" @click.self="showAchievementModal = false">
+        <div class="achievement-modal">
+          <button class="modal-close" @click="showAchievementModal = false">✕</button>
+          <AchievementsDashboard course-key="hungary" @back="showAchievementModal = false" />
+        </div>
+      </div>
+    </Teleport>
+
   </div>
 </template>
 
@@ -278,14 +293,16 @@ import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../stores/authStore.js'
 import { hungaryLearningState, hungaryLearningLevels } from '../../stores/hungaryLearningStore.js'
 import { supabase } from '../../lib/supabaseClient.js'
+import AchievementsDashboard from '../AchievementsDashboard.vue'
 
 const router = useRouter()
-const emit = defineEmits(['enterLevel', 'openMap'])
+const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
 
 // 用戶資訊
 const avatarUrl = ref('')
 const avatarInitial = ref('我')
 const showProgressModal = ref(false)
+const showAchievementModal = ref(false)
 
 const authUser = computed(() => authState.user)
 const displayName = computed(() => authActions.getDisplayName())

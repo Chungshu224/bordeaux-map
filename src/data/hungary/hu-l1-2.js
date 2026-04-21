@@ -49,18 +49,7 @@ export const lessonContent = [
       <div class="note-box">
         <p>匈牙利的緯度（46-48°N）與波爾多（44-45°N）、布根地（47°N）相近，但更靠近歐洲大陸中心，受大陸性氣候影響更強，夏季更熱、冬季更冷，葡萄需要在短暫但充足的熱量中快速成熟。</p>
       </div>
-    </div>`,
-    quiz: {
-      question: '為什麼喀爾巴阡盆地對匈牙利葡萄酒業如此重要？',
-      options: [
-        'A. 盆地中有豐富的火山土壤，適合所有品種',
-        'B. 喀爾巴阡山脈環繞形成天然屏障，擋住冷空氣，創造溫暖的葡萄生長環境',
-        'C. 盆地降雨量充足，葡萄不需要灌溉',
-        'D. 盆地靠近大西洋，受海洋氣候調節'
-      ],
-      correct: 1,
-      explanation: '喀爾巴阡盆地的特殊地理位置使其成為天然的暖房：喀爾巴阡山脈擋住了來自北方和東方的冷空氣，使盆地內部升溫更快，夏季熱量積累充足，非常有利於葡萄成熟。這是匈牙利能在相對北緯種植葡萄且取得優異成熟度的關鍵原因。'
-    }
+    </div>`
   },
   {
     title: '多樣化土壤：從火山岩到沙地',
@@ -90,18 +79,7 @@ export const lessonContent = [
           <p>玄武岩（Basalt）火山土，保熱性強，葡萄在晝夜溫差中緩慢成熟，產出複雜的礦物感白酒</p>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: 'Badacsony 的玄武岩（Basalt）火山土對當地葡萄酒風格有何影響？',
-      options: [
-        'A. 玄武岩土壤保水性極差，造就清爽低酒精風格',
-        'B. 玄武岩保熱性強，晝夜溫差配合形成複雜礦物感，白酒風格獨特',
-        'C. 玄武岩阻止葡萄根系深入，品質較差',
-        'D. 玄武岩土壤只適合紅葡萄品種'
-      ],
-      correct: 1,
-      explanation: 'Badacsony 的玄武岩火山土壤有強大的保熱性，白天快速吸熱儲存，夜晚緩慢釋放，使葡萄在晝夜溫差中實現完整的酚類成熟；同時火山礦物質滲入葡萄，賦予當地 Olaszrizling 和 Szürkebarát 顯著的礦物感，是匈牙利最具識別性的白酒風格之一。'
-    }
+    </div>`
   },
   {
     title: '五大產區群：認識匈牙利葡萄酒版圖',
@@ -133,13 +111,7 @@ export const lessonContent = [
           <span>🌾 多瑙河</span><span>Kunság, Hajós-Baja</span><span>日常餐酒</span><span>多品種</span>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '下列哪個匈牙利產區群以頂級紅酒（Cabernet Franc、Kékfrankos）聞名？',
-      options: ['A. 托卡伊地區（Tokaj Region）', 'B. 巴拉頓地區（Balaton Region）', 'C. 潘農地區（Pannon Region）', 'D. 多瑙河平原（Duna Region）'],
-      correct: 2,
-      explanation: '潘農地區（Pannon Region）位於匈牙利南部，是全國最溫暖的葡萄酒產區群。維拉尼（Villány）和塞克薩德（Szekszárd）以頂級 Cabernet Franc 和 Kékfrankos 紅酒著稱，被認為是匈牙利紅酒品質最高的產區。國際酒評家 Michael Broadbent 曾說「Cabernet Franc 在維拉尼找到了它的天然家園」。'
-    }
+    </div>`
   },
   {
     title: '氣候特徵：溫帶大陸性氣候的優勢與挑戰',
@@ -175,17 +147,47 @@ export const lessonContent = [
       <div class="note-box">
         <p>維拉尼是匈牙利最溫暖的產區，年均氣溫接近南法，這也是為什麼波爾多品種（Cabernet Franc、Merlot）在此能充分成熟，達到世界級品質。</p>
       </div>
-    </div>`,
-    quiz: {
-      question: '托卡伊（Tokaj）每年秋季的「晨霧 + 暖乾午後」氣候條件，對釀酒有什麼關鍵作用？',
-      options: [
-        'A. 讓葡萄保持低糖分，釀造清爽干型白酒',
-        'B. 促進貴腐菌（Botrytis Cinerea）在葡萄上選擇性附著，產生精華貴腐果漿',
-        'C. 防止葡萄過度成熟，保留更高的天然酸度',
-        'D. 讓葡萄皮更厚，有助於提取更多紅酒色素'
-      ],
-      correct: 1,
-      explanation: '托卡伊盆地的秋季「晨霧（來自 Tisza 和 Bodrog 河谷的濕氣）+ 暖乾午後（晴天蒸發水分）」是貴腐菌（Botrytis Cinerea）附著的理想環境：晨霧提供濕度讓菌絲穿透葡萄皮，暖乾午後讓水分蒸發、糖分濃縮——這正是 Tokaji Aszú 舉世無雙的天然釀造條件。'
+    </div>`
+  }
+,
+  {
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 60,
+        questions: [
+        {
+          type: 'single',
+          text: '為什麼喀爾巴阡盆地對匈牙利葡萄酒業如此重要？',
+          options: ['A. 盆地中有豐富的火山土壤，適合所有品種', 'B. 喀爾巴阡山脈環繞形成天然屏障，擋住冷空氣，創造溫暖的葡萄生長環境', 'C. 盆地降雨量充足，葡萄不需要灌溉', 'D. 盆地靠近大西洋，受海洋氣候調節'],
+          correct: 1,
+          explanation: '喀爾巴阡盆地的特殊地理位置使其成為天然的暖房：喀爾巴阡山脈擋住了來自北方和東方的冷空氣，使盆地內部升溫更快，夏季熱量積累充足，非常有利於葡萄成熟。這是匈牙利能在相對北緯種植葡萄且取得優異成熟度的關鍵原因。'
+        },
+        {
+          type: 'single',
+          text: 'Badacsony 的玄武岩（Basalt）火山土對當地葡萄酒風格有何影響？',
+          options: ['A. 玄武岩土壤保水性極差，造就清爽低酒精風格', 'B. 玄武岩保熱性強，晝夜溫差配合形成複雜礦物感，白酒風格獨特', 'C. 玄武岩阻止葡萄根系深入，品質較差', 'D. 玄武岩土壤只適合紅葡萄品種'],
+          correct: 1,
+          explanation: 'Badacsony 的玄武岩火山土壤有強大的保熱性，白天快速吸熱儲存，夜晚緩慢釋放，使葡萄在晝夜溫差中實現完整的酚類成熟；同時火山礦物質滲入葡萄，賦予當地 Olaszrizling 和 Szürkebarát 顯著的礦物感，是匈牙利最具識別性的白酒風格之一。'
+        },
+        {
+          type: 'single',
+          text: '下列哪個匈牙利產區群以頂級紅酒（Cabernet Franc、Kékfrankos）聞名？',
+          options: ['A. 托卡伊地區（Tokaj Region）', 'B. 巴拉頓地區（Balaton Region）', 'C. 潘農地區（Pannon Region）', 'D. 多瑙河平原（Duna Region）'],
+          correct: 2,
+          explanation: '潘農地區（Pannon Region）位於匈牙利南部，是全國最溫暖的葡萄酒產區群。維拉尼（Villány）和塞克薩德（Szekszárd）以頂級 Cabernet Franc 和 Kékfrankos 紅酒著稱，被認為是匈牙利紅酒品質最高的產區。國際酒評家 Michael Broadbent 曾說「Cabernet Franc 在維拉尼找到了它的天然家園」。'
+        },
+        {
+          type: 'single',
+          text: '托卡伊（Tokaj）每年秋季的「晨霧 + 暖乾午後」氣候條件，對釀酒有什麼關鍵作用？',
+          options: ['A. 讓葡萄保持低糖分，釀造清爽干型白酒', 'B. 促進貴腐菌（Botrytis Cinerea）在葡萄上選擇性附著，產生精華貴腐果漿', 'C. 防止葡萄過度成熟，保留更高的天然酸度', 'D. 讓葡萄皮更厚，有助於提取更多紅酒色素'],
+          correct: 1,
+          explanation: '托卡伊盆地的秋季「晨霧（來自 Tisza 和 Bodrog 河谷的濕氣）+ 暖乾午後（晴天蒸發水分）」是貴腐菌（Botrytis Cinerea）附著的理想環境：晨霧提供濕度讓菌絲穿透葡萄皮，暖乾午後讓水分蒸發、糖分濃縮——這正是 Tokaji Aszú 舉世無雙的天然釀造條件。'
+        }
+        ]
+      }
     }
   }
 ]

@@ -1,11 +1,14 @@
 <template>
-  <div class="hungary-page">
+  <div class="hungary-page" :class="{ 'is-selector': view === 'selector' }">
 
     <!-- 課程首頁 -->
     <HungaryLevelSelector
       v-if="view === 'selector'"
       @enterLevel="goToLevel"
       @openMap="view = 'map'"
+      @openGames="comingSoon('互動練習')"
+      @openNotebook="comingSoon('品飲筆記')"
+      style="min-height: 100vh;"
     />
 
     <!-- 地圖模式 -->
@@ -48,6 +51,10 @@ function openRegionMap(info) {
   view.value = 'map'
 }
 
+function comingSoon(feature) {
+  alert(`「${feature}」功能即將推出，敬請期待！`)
+}
+
 function handleMapBack() {
   if (mapOpenedFromCourse.value) {
     mapOpenedFromCourse.value = false
@@ -66,6 +73,11 @@ function handleMapBack() {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+.hungary-page.is-selector {
+  overflow-y: auto;
+  height: auto;
+  min-height: 100vh;
 }
 </style>
 

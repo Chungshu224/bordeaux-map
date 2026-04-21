@@ -31,50 +31,31 @@
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <div class="hero-tag">🌍 8 大世界產區・全中文深度教學</div>
+        <div class="hero-tag">🌍 {{ visibleCourseCount }} 大世界產區・全中文深度教學</div>
         <h1 class="hero-title">用知識<span class="accent">品味</span>每一口</h1>
         <p class="hero-desc">
-          系統化學習法國、義大利、西班牙、德國、葡萄牙、澳洲、紐西蘭頂級葡萄酒<br>
+          系統化學習世界各產區頂級葡萄酒知識，掌握風土、品種與釀造工藝<br>
           互動地圖・分級課程・品飲筆記，一個平台全搞定
         </p>
         <!-- 已登入：顯示課程入口 -->
         <div v-if="authUser" class="hero-cta logged-in-cta">
           <div class="course-entry-title">歡迎回來，{{ displayName }}！選擇課程繼續學習</div>
           <div class="course-entry-groups">
-            <div class="ceg-row">
-              <span class="ceg-label">🇫🇷 法國</span>
-              <button class="cta-course bordeaux-btn" @click="router.push('/bordeaux')">🏰 波爾多</button>
-              <button v-if="isAdmin" class="cta-course bourgogne-btn" @click="router.push('/bourgogne')">🍇 布根地</button>
-              <button class="cta-course loire-btn" @click="router.push('/loire')">🌿 羅亞爾</button>
-            </div>
-            <div class="ceg-row">
-              <span class="ceg-label">🌍 歐洲</span>
-              <button v-if="isAdmin" class="cta-course italy-btn" @click="router.push('/italy')">🇮🇹 義大利</button>
-              <button class="cta-course spain-btn" @click="router.push('/spain')">🇪🇸 西班牙</button>
-              <button class="cta-course germany-btn" @click="router.push('/germany')">🇩🇪 德國</button>
-              <button class="cta-course portugal-btn" @click="router.push('/portugal')">🇵🇹 葡萄牙</button>
-              <button class="cta-course hungary-btn" @click="router.push('/hungary/course')">🇭🇺 匈牙利</button>
-            </div>
-            <div class="ceg-row">
-              <span class="ceg-label">🌏 新世界</span>
-              <button class="cta-course australia-btn" @click="router.push('/australia')">🦘 澳洲</button>
-              <button class="cta-course newzealand-btn" @click="router.push('/newzealand')">🥝 紐西蘭</button>
-              <button class="cta-course california-btn" @click="router.push('/california/course')">🍷 加州</button>
+            <div v-for="group in visibleCoursesByGroup" :key="group.label" class="ceg-row">
+              <span class="ceg-label">{{ group.label }}</span>
+              <button
+                v-for="course in group.courses"
+                :key="course.id"
+                :class="['cta-course', course.id + '-btn']"
+                @click="router.push(course.route)"
+              >{{ course.label }}</button>
             </div>
           </div>
         </div>
         <!-- 未登入：增強版 CTA -->
         <div v-else class="hero-cta guest-cta">
           <div class="region-badges">
-            <span class="rb">🏰 波爾多</span>
-            <span class="rb">🍇 布根地</span>
-            <span class="rb">🇮🇹 義大利</span>
-            <span class="rb">🇪🇸 西班牙</span>
-            <span class="rb">🇩🇪 德國</span>
-            <span class="rb">🇵🇹 葡萄牙</span>
-            <span class="rb">🦘 澳洲</span>
-            <span class="rb">🥝 紐西蘭</span>
-            <span class="rb">🍷 加州</span>
+            <span v-for="course in visibleCourses" :key="course.id" class="rb">{{ course.label }}</span>
           </div>
           <div class="cta-btns">
             <button class="cta-primary" @click="handleStartFree">
@@ -90,7 +71,7 @@
           <p class="cta-trust">免費註冊・無需信用卡・ Level 1 內容全面開放</p>
         </div>
         <div class="hero-stats">
-          <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">世界產區</span></div>
+          <div class="stat-item"><span class="stat-num">{{ visibleCourseCount }}</span><span class="stat-label">世界產區</span></div>
           <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">學習等級</span></div>
           <div class="stat-div"></div>
@@ -878,6 +859,21 @@ const handleFreeTier = () => {
   }
 }
 
+// ─── 課程設定清單（順序即為顯示順序）──────────────────────────────────
+const courseConfig = [
+  { id: 'bordeaux',   label: '🏰 波爾多', route: '/bordeaux',          group: 'france'   },
+  { id: 'bourgogne',  label: '🍇 布根地', route: '/bourgogne',         group: 'france'   },
+  { id: 'loire',      label: '🌿 羅亞爾', route: '/loire',             group: 'france'   },
+  { id: 'italy',      label: '🇮🇹 義大利', route: '/italy',            group: 'europe'   },
+  { id: 'spain',      label: '🇪🇸 西班牙', route: '/spain',            group: 'europe'   },
+  { id: 'germany',    label: '🇩🇪 德國',   route: '/germany',          group: 'europe'   },
+  { id: 'portugal',   label: '🇵🇹 葡萄牙', route: '/portugal',         group: 'europe'   },
+  { id: 'hungary',    label: '🇭🇺 匈牙利', route: '/hungary',          group: 'europe'   },
+  { id: 'australia',  label: '🦘 澳洲',   route: '/australia',         group: 'newworld' },
+  { id: 'newzealand', label: '🥝 紐西蘭', route: '/newzealand',        group: 'newworld' },
+  { id: 'california', label: '🍷 加州',   route: '/california/course', group: 'newworld' },
+]
+
 // ─── 課程狀態 + 訂閱定價（從 DB 讀取）────────────────────────────────
 const pricing = ref({
   basic:   { monthly: 290,  yearly: 1800 },
@@ -885,8 +881,8 @@ const pricing = ref({
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
 const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false })
-// 各課程首頁顯示狀態（預設全部顯示，管理員不受限）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: true })
+// 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
+const courseShowHome = ref({ bordeaux: true, bourgogne: false, italy: false, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false })
 
 async function loadCourseData() {
   try {
@@ -907,6 +903,27 @@ async function loadCourseData() {
     }
   } catch { /* 使用預設定價 */ }
 }
+
+// ─── 首頁動態課程 computed ─────────────────────────────────────────────────────────
+// 已上架顯示的課程（管理員可看全部）
+const visibleCourses = computed(() =>
+  courseConfig.filter(c => courseShowHome.value[c.id] || isAdmin.value)
+)
+// 實際上架數量（不含管理員 override，用於顯示數字）
+const visibleCourseCount = computed(() =>
+  courseConfig.filter(c => courseShowHome.value[c.id]).length
+)
+// 依地區分組的已上架課程
+const visibleCoursesByGroup = computed(() => {
+  const groupDefs = [
+    { key: 'france',   label: '🇫🇷 法國' },
+    { key: 'europe',   label: '🌍 歐洲' },
+    { key: 'newworld', label: '🌏 新世界' },
+  ]
+  return groupDefs
+    .map(g => ({ label: g.label, courses: visibleCourses.value.filter(c => c.group === g.key) }))
+    .filter(g => g.courses.length > 0)
+})
 
 // ─── 訂閱流程 ──────────────────────────────────────────────────────────────────────────
 const billingPeriod   = ref('monthly')

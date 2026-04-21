@@ -70,18 +70,7 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '托卡伊的「晨霧＋暖乾午後」氣候組合對貴腐菌有什麼關鍵作用？',
-      options: [
-        'A. 晨霧殺菌，暖乾防止菌絲過度生長',
-        'B. 晨霧提供濕氣讓菌絲穿透葡萄皮，暖乾午後蒸發水分讓糖分濃縮，避免爛葡萄',
-        'C. 晨霧增加葡萄的光合作用，提高糖分含量',
-        'D. 暖乾午後是貴腐菌生長的主要時間，晨霧只是副作用'
-      ],
-      correct: 1,
-      explanation: '這個氣候組合是托卡伊貴腐酒釀造的核心：①晨霧（濕氣）讓 Botrytis Cinerea 的菌絲能穿透 Furmint 的薄果皮（太乾燥則菌絲無法生長）；②暖乾午後（晴天）蒸發葡萄內的水分，防止葡萄整顆爛掉（否則就變成「灰腐（Gray Rot）」，不能用於釀酒）。這個「交替濕乾」的節律是形成高品質 Aszú 果漿的必要條件。'
-    }
+    </div>`
   },
   {
     title: 'Aszú 分級制度：Puttonyos 系統',
@@ -122,18 +111,7 @@ export const lessonContent = [
         <h4>💎 Eszencia：托卡伊的終極精華</h4>
         <p>Eszencia 是僅用純 Aszú 漿果自身重量所壓出的極稀少果汁，糖度高達 450-800 g/L（對比：蜂蜜約 800 g/L）。因糖分極高，酵母幾乎無法完成發酵，成品酒精度可能只有 2-5%。一般需要陳年 3-5 年以上才能裝瓶，是世界上最稀少也最昂貴的葡萄酒之一。傳說哈布斯堡皇帝臨終時以 Eszencia 回光返照（歷史未證實，但足見其尊貴地位）。</p>
       </div>
-    </div>`,
-    quiz: {
-      question: '6 Puttonyos 的 Tokaji Aszú 代表什麼？',
-      options: [
-        'A. 這批酒使用了 6 個不同產區的葡萄',
-        'B. 這款酒在橡木桶中陳年了 6 年',
-        'C. 傳統上代表每 136 公升基酒中加入了 6 桶 Aszú 果漿，是最高甜度等級',
-        'D. 這款酒混合了 6 種不同的葡萄品種'
-      ],
-      correct: 2,
-      explanation: '傳統 Puttonyos 系統中，數字代表在一個 136 公升的 Gönc 桶基酒中添加多少桶（Puttonyos）Aszú 果漿：3 桶是最低（最低甜度），6 桶是最高（最高甜度）。每個 Puttonyos 木桶重約 20-25 公斤。數字越高，糖分越高，香氣越濃郁，陳年潛力也越強。2013 年後法規改以殘糖量（g/L）為指標，但許多酒莊仍使用 Puttonyos 數字在標籤上標示。'
-    }
+    </div>`
   },
   {
     title: '干型 Furmint：21 世紀的新托卡伊',
@@ -188,18 +166,7 @@ export const lessonContent = [
           <span>Áts Károly</span>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '干型（Dry）Furmint 和 Tokaji Aszú 的主要差異是什麼？',
-      options: [
-        'A. 干型 Furmint 使用不同的品種，Aszú 才是純 Furmint',
-        'B. 干型 Furmint 完全發酵所有糖分成酒精，沒有明顯殘糖；Aszú 利用貴腐果漿濃縮糖分，保有高殘糖（120+ g/L）',
-        'C. 干型 Furmint 必須在法國橡木桶中陳年，Aszú 使用匈牙利橡木',
-        'D. 干型 Furmint 只在非 Tokaj 產區生產'
-      ],
-      correct: 1,
-      explanation: '最核心的差異在於釀造方式和殘糖量：干型 Furmint 使用正常成熟的 Furmint 葡萄，讓酵母完全發酵，殘糖通常低於 4 g/L（干型標準）；而 Tokaji Aszú 使用已被貴腐菌感染的高糖 Aszú 果漿，發酵被中途停止或受高糖限制，殘糖高達 120-800 g/L。兩者的香氣特徵也截然不同：干型偏礦物/果酸，Aszú 偏蜂蜜/果乾/橙皮蜜餞。'
-    }
+    </div>`
   },
   {
     title: '1737 年：比波爾多早了 118 年的分級制度',
@@ -240,12 +207,47 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '1737 年托卡伊的官方葡萄園分級制度比波爾多 1855 年分級早了多少年？',
-      options: ['A. 58 年', 'B. 118 年', 'C. 178 年', 'D. 218 年'],
-      correct: 1,
-      explanation: '1855 - 1737 = 118 年。托卡伊在 1737 年由神聖羅馬帝國皇帝查理六世（Karl VI）頒布法令，建立了世界上最早的官方葡萄園品質分級制度（三個等級）並同時限制外地葡萄酒進入，形同現代 AOC 制度的雛形。波爾多著名的 1855 年梅多克分級（Grand Cru Classé）比托卡伊晚了整整 118 年，因此匈牙利人對此非常自豪。'
+    </div>`
+  }
+,
+  {
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 60,
+        questions: [
+        {
+          type: 'single',
+          text: '托卡伊的「晨霧＋暖乾午後」氣候組合對貴腐菌有什麼關鍵作用？',
+          options: ['A. 晨霧殺菌，暖乾防止菌絲過度生長', 'B. 晨霧提供濕氣讓菌絲穿透葡萄皮，暖乾午後蒸發水分讓糖分濃縮，避免爛葡萄', 'C. 晨霧增加葡萄的光合作用，提高糖分含量', 'D. 暖乾午後是貴腐菌生長的主要時間，晨霧只是副作用'],
+          correct: 1,
+          explanation: '這個氣候組合是托卡伊貴腐酒釀造的核心：①晨霧（濕氣）讓 Botrytis Cinerea 的菌絲能穿透 Furmint 的薄果皮（太乾燥則菌絲無法生長）；②暖乾午後（晴天）蒸發葡萄內的水分，防止葡萄整顆爛掉（否則就變成「灰腐（Gray Rot）」，不能用於釀酒）。這個「交替濕乾」的節律是形成高品質 Aszú 果漿的必要條件。'
+        },
+        {
+          type: 'single',
+          text: '6 Puttonyos 的 Tokaji Aszú 代表什麼？',
+          options: ['A. 這批酒使用了 6 個不同產區的葡萄', 'B. 這款酒在橡木桶中陳年了 6 年', 'C. 傳統上代表每 136 公升基酒中加入了 6 桶 Aszú 果漿，是最高甜度等級', 'D. 這款酒混合了 6 種不同的葡萄品種'],
+          correct: 2,
+          explanation: '傳統 Puttonyos 系統中，數字代表在一個 136 公升的 Gönc 桶基酒中添加多少桶（Puttonyos）Aszú 果漿：3 桶是最低（最低甜度），6 桶是最高（最高甜度）。每個 Puttonyos 木桶重約 20-25 公斤。數字越高，糖分越高，香氣越濃郁，陳年潛力也越強。2013 年後法規改以殘糖量（g/L）為指標，但許多酒莊仍使用 Puttonyos 數字在標籤上標示。'
+        },
+        {
+          type: 'single',
+          text: '干型（Dry）Furmint 和 Tokaji Aszú 的主要差異是什麼？',
+          options: ['A. 干型 Furmint 使用不同的品種，Aszú 才是純 Furmint', 'B. 干型 Furmint 完全發酵所有糖分成酒精，沒有明顯殘糖；Aszú 利用貴腐果漿濃縮糖分，保有高殘糖（120+ g/L）', 'C. 干型 Furmint 必須在法國橡木桶中陳年，Aszú 使用匈牙利橡木', 'D. 干型 Furmint 只在非 Tokaj 產區生產'],
+          correct: 1,
+          explanation: '最核心的差異在於釀造方式和殘糖量：干型 Furmint 使用正常成熟的 Furmint 葡萄，讓酵母完全發酵，殘糖通常低於 4 g/L（干型標準）；而 Tokaji Aszú 使用已被貴腐菌感染的高糖 Aszú 果漿，發酵被中途停止或受高糖限制，殘糖高達 120-800 g/L。兩者的香氣特徵也截然不同：干型偏礦物/果酸，Aszú 偏蜂蜜/果乾/橙皮蜜餞。'
+        },
+        {
+          type: 'single',
+          text: '1737 年托卡伊的官方葡萄園分級制度比波爾多 1855 年分級早了多少年？',
+          options: ['A. 58 年', 'B. 118 年', 'C. 178 年', 'D. 218 年'],
+          correct: 1,
+          explanation: '1855 - 1737 = 118 年。托卡伊在 1737 年由神聖羅馬帝國皇帝查理六世（Karl VI）頒布法令，建立了世界上最早的官方葡萄園品質分級制度（三個等級）並同時限制外地葡萄酒進入，形同現代 AOC 制度的雛形。波爾多著名的 1855 年梅多克分級（Grand Cru Classé）比托卡伊晚了整整 118 年，因此匈牙利人對此非常自豪。'
+        }
+        ]
+      }
     }
   }
 ]

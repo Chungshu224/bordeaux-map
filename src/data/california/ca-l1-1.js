@@ -1,6 +1,6 @@
 /**
- * CA-L1-1 認識加州葡萄酒
- * 歷史、地位與「巴黎評判」的里程碑時刻
+ * CA-L1-1 產區概覽：五大主要地理區域
+ * 認識加州葡萄酒的地理架構、六大產區群與 AVA 系統
  * 資料來源：discovercaliforniawines.com（California Wine Institute）
  */
 
@@ -327,44 +327,50 @@ export const lessonContent = [
   },
 
   {
-    type: 'quiz',
-    title: '課程測驗',
-    questions: [
-      {
-        id: 'ca1-q1',
-        question: '「巴黎評判（Judgment of Paris）」發生在哪一年？',
-        options: ['1966年', '1976年', '1986年', '1996年'],
-        answer: 1,
-        explanation: '1976 年 5 月 24 日，在 Steven Spurrier 主辦的巴黎盲品賽中，納帕谷的 Stag\'s Leap Wine Cellars（紅酒）和 Chateau Montelena（白酒）分別奪冠，震驚世界。'
-      },
-      {
-        id: 'ca1-q2',
-        question: '加州約生產美國多少比例的葡萄酒？',
-        options: ['約 50%', '約 65%', '約 75%', '約 85%'],
-        answer: 3,
-        explanation: '加州生產美國約 85% 的葡萄酒，年產量超過 8 億瓶，是美國無可爭議的葡萄酒中心。'
-      },
-      {
-        id: 'ca1-q3',
-        question: 'AVA 制度與法國 AOC 制度最大的區別是什麼？',
-        options: ['AVA 管制更嚴格', 'AVA 主要管制地理邊界，不強制規定釀造品種', 'AVA 要求 100% 原料來自產區', 'AVA 只存在於加州'],
-        answer: 1,
-        explanation: 'AVA 主要劃定地理邊界，不像法國 AOC 那樣嚴格規定釀造品種和方法。標示 AVA 的葡萄酒只需 75% 原料來自該產區即可。'
-      },
-      {
-        id: 'ca1-q4',
-        question: 'Napa Valley 獲得 AVA 認定是在哪一年，使其成為加州第一個 AVA？',
-        options: ['1976年', '1981年', '1985年', '1990年'],
-        answer: 1,
-        explanation: 'Napa Valley 於 1981 年成為加州第一個、美國第二個正式認定的 AVA，建立了加州葡萄酒法定產區制度的基礎。'
-      },
-      {
-        id: 'ca1-q5',
-        question: '加州最北的葡萄酒產區群組稱為？',
-        options: ['Central Coast', 'Sierra Foothills', 'North Coast', 'Far North California'],
-        answer: 2,
-        explanation: 'North Coast（北海岸）是加州最知名的葡萄酒產區群，包含 Napa、Sonoma、Mendocino 和 Lake County，擁有全加州逾半數的葡萄酒酒莊。'
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 70,
+        questions: [
+          {
+            type: 'single',
+            question: '「巴黎評判（Judgment of Paris）」發生在哪一年？',
+            options: ['A. 1966年', 'B. 1976年', 'C. 1986年', 'D. 1996年'],
+            correct: 1,
+            explanation: '1976 年 5 月 24 日，在 Steven Spurrier 主辦的巴黎盲品賽中，納帕谷的 Stag\'s Leap Wine Cellars（紅酒）和 Chateau Montelena（白酒）分別奪冠，震驚世界。'
+          },
+          {
+            type: 'single',
+            question: '加州約生產美國多少比例的葡萄酒？',
+            options: ['A. 約 50%', 'B. 約 65%', 'C. 約 75%', 'D. 約 85%'],
+            correct: 3,
+            explanation: '加州生產美國約 85% 的葡萄酒，年產量超過 8 億瓶，是美國無可爭議的葡萄酒中心。'
+          },
+          {
+            type: 'single',
+            question: 'AVA 制度與法國 AOC 制度最大的區別是什麼？',
+            options: ['A. AVA 管制更嚴格', 'B. AVA 主要管制地理邊界，不強制規定釀造品種', 'C. AVA 要求 100% 原料來自產區', 'D. AVA 只存在於加州'],
+            correct: 1,
+            explanation: 'AVA 主要劃定地理邊界，不像法國 AOC 那樣嚴格規定釀造品種和方法。標示 AVA 的葡萄酒只需 75% 原料來自該產區即可。'
+          },
+          {
+            type: 'single',
+            question: 'Napa Valley 獲得 AVA 認定是在哪一年，使其成為加州第一個 AVA？',
+            options: ['A. 1976年', 'B. 1981年', 'C. 1985年', 'D. 1990年'],
+            correct: 1,
+            explanation: 'Napa Valley 於 1981 年成為加州第一個、美國第二個正式認定的 AVA，建立了加州葡萄酒法定產區制度的基礎。'
+          },
+          {
+            type: 'single',
+            question: '加州最北的葡萄酒產區群組稱為？',
+            options: ['A. Central Coast', 'B. Sierra Foothills', 'C. North Coast', 'D. Far North California'],
+            correct: 2,
+            explanation: 'North Coast（北海岸）是加州最知名的葡萄酒產區群，包含 Napa、Sonoma、Mendocino 和 Lake County，擁有全加州逾半數的葡萄酒酒莊。'
+          }
+        ]
       }
-    ]
+    }
   }
 ]

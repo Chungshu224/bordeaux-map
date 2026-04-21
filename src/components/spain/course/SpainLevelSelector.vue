@@ -29,28 +29,30 @@
       <!-- ── 快速功能入口 ──────────────────────────────────── -->
       <section class="quick-nav">
         <div class="quick-grid">
+          <button class="nav-card games-card" @click="$emit('openGames')">
+            <span class="nc-icon">🎮</span>
+            <span class="nc-title">互動練習</span>
+            <span class="nc-desc">產區歸屬・品種配對・雪莉識別・分級辨識・年份排序</span>
+          </button>
           <button class="nav-card map-card" @click="$emit('openMap')">
             <span class="nc-icon">🗺️</span>
             <span class="nc-title">探索地圖</span>
             <span class="nc-desc">互動式衛星地圖・96 個法定產區・DO / DOCa / VP</span>
-          </button>          <button class="nav-card achievement-card" @click="showAchievements = true">
+          </button>
+          <button class="nav-card achievement-card" @click="showAchievements = true">
             <span class="nc-icon">🏆</span>
-            <span class="nc-title">學習成就</span>
-            <span class="nc-desc">查看已解鎖成就、稻有度與积分結算</span>
+            <span class="nc-title">成就系統</span>
+            <span class="nc-desc">查看已解鎖成就與積分等級</span>
           </button>
           <button class="nav-card progress-card" @click="showProgress = true">
             <span class="nc-icon">📊</span>
             <span class="nc-title">學習進度</span>
             <span class="nc-desc">各階段進度、完成分析與學習統計</span>
-          </button>          <button class="nav-card notebook-card" @click="$emit('openNotebook')">
+          </button>
+          <button class="nav-card notebook-card" @click="$emit('openNotebook')">
             <span class="nc-icon">📔</span>
             <span class="nc-title">品飲筆記</span>
             <span class="nc-desc">記錄品飲心得･紅白粉紅雪莉･西班牙產區</span>
-          </button>
-          <button class="nav-card games-card" @click="$emit('openGames')">
-            <span class="nc-icon">🎮</span>
-            <span class="nc-title">互動練習</span>
-            <span class="nc-desc">產區歸屬・品種配對・雪莉識別・分級辨識・年份排序</span>
           </button>
         </div>
       </section>
@@ -317,7 +319,7 @@ const grapes = [
   min-height: 100vh;
   background: linear-gradient(160deg, #c0392b 0%, #8e44ad 45%, #1a5276 100%);
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
 }
 

@@ -272,37 +272,43 @@ export const lessonContent = [
   },
 
   {
-    type: 'quiz',
-    title: '課程測驗',
-    questions: [
-      {
-        id: 'ca2-q1',
-        question: '哪個地理因素是造成 Napa Valley 南端（Carneros）比北端（Calistoga）涼爽的主因？',
-        options: ['海拔高度', 'San Pablo Bay 帶來的太平洋海霧', '降雨量較多', '土壤含水量高'],
-        answer: 1,
-        explanation: 'Napa Valley 南端緊鄰 San Pablo Bay，太平洋冷海霧每天湧入，使南端（包含 Carneros）比北端 Calistoga 涼爽許多，適合種植 Pinot Noir 和 Chardonnay。'
-      },
-      {
-        id: 'ca2-q2',
-        question: '「Judgment of Paris 30 周年重賽」中名列前茅的 Santa Cruz Mountains 知名 Cabernet 酒莊是？',
-        options: ['Opus One', 'Ridge Vineyards（Monte Bello）', 'Chateau Montelena', 'Stag\'s Leap'],
-        answer: 1,
-        explanation: 'Ridge Vineyards 的 Monte Bello 以罕見石灰岩土壤著稱，在 2006 年「巴黎評判 30 周年重賽」中，Monte Bello 名列前茅，印證加州 Cabernet 的陳年潛力。'
-      },
-      {
-        id: 'ca2-q3',
-        question: 'Sonoma County 以哪個品種的種植面積居加州全州之冠？',
-        options: ['Cabernet Sauvignon', 'Chardonnay', 'Pinot Noir', 'Zinfandel'],
-        answer: 2,
-        explanation: 'Sonoma County 種植的 Pinot Noir 比加州任何其他郡都多，Russian River Valley 是最重要的子 AVA，以優雅、具勃根地風格的 Pinot Noir 聞名。'
-      },
-      {
-        id: 'ca2-q4',
-        question: 'Sierra Foothills 的 Amador County 以什麼特色著稱？',
-        options: ['Cabernet Sauvignon 頂級酒款', 'Zinfandel 老藤，有些樹齡超過 130 年', '冷氣候 Pinot Noir', 'Chardonnay 的發源地'],
-        answer: 1,
-        explanation: 'Sierra Foothills 的 Amador County（Shenandoah Valley）以 Zinfandel 老藤著稱，部分葡萄藤樹齡超過 130 年，是加州葡萄酒中的珍貴遺產。'
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 70,
+        questions: [
+          {
+            type: 'single',
+            question: '哪個地理因素是造成 Napa Valley 南端（Carneros）比北端（Calistoga）涼爽的主因？',
+            options: ['A. 海拔高度', 'B. San Pablo Bay 帶來的太平洋海霧', 'C. 降雨量較多', 'D. 土壤含水量高'],
+            correct: 1,
+            explanation: 'Napa Valley 南端緊鄰 San Pablo Bay，太平洋冷海霧每天湧入，使南端（包含 Carneros）比北端 Calistoga 涼爽許多，適合種植 Pinot Noir 和 Chardonnay。'
+          },
+          {
+            type: 'single',
+            question: '「Judgment of Paris 30 周年重賽」中名列前茅的 Santa Cruz Mountains 知名 Cabernet 酒莊是？',
+            options: ['A. Opus One', 'B. Ridge Vineyards（Monte Bello）', 'C. Chateau Montelena', 'D. Stag\'s Leap'],
+            correct: 1,
+            explanation: 'Ridge Vineyards 的 Monte Bello 以罕見石灰岩土壤著稱，在 2006 年「巴黎評判 30 周年重賽」中，Monte Bello 名列前茅，印證加州 Cabernet 的陳年潛力。'
+          },
+          {
+            type: 'single',
+            question: 'Sonoma County 以哪個品種的種植面積居加州全州之冠？',
+            options: ['A. Cabernet Sauvignon', 'B. Chardonnay', 'C. Pinot Noir', 'D. Zinfandel'],
+            correct: 2,
+            explanation: 'Sonoma County 種植的 Pinot Noir 比加州任何其他郡都多，Russian River Valley 是最重要的子 AVA，以優雅、具勃根地風格的 Pinot Noir 聞名。'
+          },
+          {
+            type: 'single',
+            question: 'Sierra Foothills 的 Amador County 以什麼特色著稱？',
+            options: ['A. Cabernet Sauvignon 頂級酒款', 'B. Zinfandel 老藤，有些樹齡超過 130 年', 'C. 冷氣候 Pinot Noir', 'D. Chardonnay 的發源地'],
+            correct: 1,
+            explanation: 'Sierra Foothills 的 Amador County（Shenandoah Valley）以 Zinfandel 老藤著稱，部分葡萄藤樹齡超過 130 年，是加州葡萄酒中的珍貴遺產。'
+          }
+        ]
       }
-    ]
+    }
   }
 ]

@@ -153,37 +153,125 @@ export const lessonContent = [
   },
 
   {
-    type: 'quiz',
-    title: '課程測驗',
-    questions: [
-      {
-        id: 'ca4-q1',
-        question: 'Russian River Valley 的標誌性土壤類型是什麼？',
-        options: ['Rutherford 礫石', 'Goldridge Sandy Loam（金嶺細沙壤土）', '火山岩', '石灰岩'],
-        answer: 1,
-        explanation: 'Goldridge Sandy Loam（金嶺細沙壤土）是 Russian River Valley 的標誌性土壤，以排水良好、低肥力著稱，被認為是加州最適合 Pinot Noir 的土壤類型之一。'
-      },
-      {
-        id: 'ca4-q2',
-        question: 'Sonoma County 的 Dry Creek Valley 最以哪個品種著稱？',
-        options: ['Pinot Noir', 'Cabernet Sauvignon', 'Zinfandel（包含老藤）', 'Chardonnay'],
-        answer: 2,
-        explanation: 'Dry Creek Valley 是加州 Zinfandel 的聖地，礫石土壤和溫暖氣候讓 Zinfandel 達到最佳表現，許多老藤（100+ 年）釀造的濃郁香料感 Zinfandel 是加州最具代表性的紅酒之一。'
-      },
-      {
-        id: 'ca4-q3',
-        question: 'Sonoma County 的永續農業有多大的認證比例？',
-        options: ['約 50%', '約 75%', '約 90%', '99% 以上'],
-        answer: 3,
-        explanation: 'Sonoma County 有超過 99% 的葡萄種植面積取得可持續農業認證，是全球第一個達到此目標的葡萄酒產區，是全球農業可持續發展的典範。'
-      },
-      {
-        id: 'ca4-q4',
-        question: '以下哪個 Sonoma 子 AVA 以溫暖氣候和 Cabernet Sauvignon 著稱，與 Napa 風格最相似？',
-        options: ['Russian River Valley', 'Sonoma Coast', 'Alexander Valley', 'Carneros'],
-        answer: 2,
-        explanation: 'Alexander Valley 是 Sonoma 最溫暖的 AVA，受太平洋海霧影響最少，以 Cabernet Sauvignon 著稱，風格與 Napa 相近但通常更柔和，Silver Oak 是最知名的代表酒莊。'
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 70,
+        questions: [
+          {
+            type: 'single',
+            question: 'Russian River Valley 的標誌性土壤類型是什麼？',
+            options: ['A. Rutherford 礫石', 'B. Goldridge Sandy Loam（金嶺細沙壤土）', 'C. 火山岩', 'D. 石灰岩'],
+            correct: 1,
+            explanation: 'Goldridge Sandy Loam（金嶺細沙壤土）是 Russian River Valley 的標誌性土壤，以排水良好、低肥力著稱，被認為是加州最適合 Pinot Noir 的土壤類型之一。'
+          },
+          {
+            type: 'single',
+            question: 'Sonoma County 的 Dry Creek Valley 最以哪個品種著稱？',
+            options: ['A. Pinot Noir', 'B. Cabernet Sauvignon', 'C. Zinfandel（包含老藤）', 'D. Chardonnay'],
+            correct: 2,
+            explanation: 'Dry Creek Valley 是加州 Zinfandel 的聖地，礫石土壤和溫暖氣候讓 Zinfandel 達到最佳表現，許多老藤（100+ 年）釀造的濃郁香料感 Zinfandel 是加州最具代表性的紅酒之一。'
+          },
+          {
+            type: 'single',
+            question: 'Sonoma County 的永續農業有多大的認證比例？',
+            options: ['A. 約 50%', 'B. 約 75%', 'C. 約 90%', 'D. 99% 以上'],
+            correct: 3,
+            explanation: 'Sonoma County 有超過 99% 的葡萄種植面積取得可持續農業認證，是全球第一個達到此目標的葡萄酒產區，是全球農業可持續發展的典範。'
+          },
+          {
+            type: 'single',
+            question: '以下哪個 Sonoma 子 AVA 以溫暖氣候和 Cabernet Sauvignon 著稱，與 Napa 風格最相似？',
+            options: ['A. Russian River Valley', 'B. Sonoma Coast', 'C. Alexander Valley', 'D. Carneros'],
+            correct: 2,
+            explanation: 'Alexander Valley 是 Sonoma 最溫暖的 AVA，受太平洋海霧影響最少，以 Cabernet Sauvignon 著稱，風格與 Napa 相近但通常更柔和，Silver Oak 是最知名的代表酒莊。'
+          }
+        ]
       }
-    ]
+    }
+  },
+  {
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '📋 Level 1 綜合評量',
+        isFinalExam: true,
+        passScore: 70,
+        questions: [
+          {
+            type: 'single',
+            question: '「巴黎評判（Judgment of Paris）」在哪一年舉行，震驚了世界葡萄酒界？',
+            options: ['A. 1966年', 'B. 1971年', 'C. 1976年', 'D. 1981年'],
+            correct: 2,
+            explanation: '1976 年 5 月 24 日，Steven Spurrier 在巴黎舉辦的盲品賽中，加州 Stag\'s Leap Wine Cellars（紅酒）和 Chateau Montelena（白酒）分別奪冠，證明加州可以媲美法國最頂尖的葡萄酒。'
+          },
+          {
+            type: 'single',
+            question: '加州大約生產美國多少比例的葡萄酒？',
+            options: ['A. 約 50%', 'B. 約 65%', 'C. 約 75%', 'D. 約 85%'],
+            correct: 3,
+            explanation: '加州生產美國約 85% 的葡萄酒，是美國葡萄酒產業的核心，年產量超過 8 億瓶。'
+          },
+          {
+            type: 'single',
+            question: 'AVA（美國法定葡萄種植區）與法國 AOC 最大的差異是什麼？',
+            options: ['A. AVA 只能在加州使用', 'B. AVA 管制更嚴格，指定品種和產量', 'C. AVA 主要劃定地理邊界，不強制規定品種和釀造方法', 'D. AVA 要求 100% 原料來自產區'],
+            correct: 2,
+            explanation: 'AVA 主要劃定地理邊界，不像法國 AOC 那樣強制規定釀造品種、方法和產量。AVA 標示的葡萄酒只需 75% 原料來自該產區即可。'
+          },
+          {
+            type: 'single',
+            question: '哪個地理因素使 Napa Valley 南端（Carneros）比北端（Calistoga）更涼爽？',
+            options: ['A. 海拔較高', 'B. San Pablo Bay 帶來的太平洋冷海霧', 'C. 降雨量較多', 'D. 土壤含水量高'],
+            correct: 1,
+            explanation: 'Napa Valley 南端緊鄰 San Pablo Bay，太平洋冷海霧每天湧入，使 Carneros 比北端的 Calistoga 涼爽許多，適合種植 Pinot Noir 和 Chardonnay。'
+          },
+          {
+            type: 'single',
+            question: 'Sonoma County 哪個品種的種植面積居加州全州之冠？',
+            options: ['A. Cabernet Sauvignon', 'B. Chardonnay', 'C. Pinot Noir', 'D. Zinfandel'],
+            correct: 2,
+            explanation: 'Sonoma County 種植的 Pinot Noir 比加州任何其他郡都多，Russian River Valley 是最重要的子 AVA，以優雅的勃根地風格 Pinot Noir 聞名。'
+          },
+          {
+            type: 'single',
+            question: '1976 年巴黎評判紅酒組冠軍來自 Napa Valley 的哪個子 AVA？',
+            options: ['A. Oakville', 'B. Rutherford', 'C. Stags Leap District', 'D. Howell Mountain'],
+            correct: 2,
+            explanation: 'Stag\'s Leap Wine Cellars 1973 Cabernet Sauvignon 來自 Stags Leap District，在巴黎評判中奪冠，以絲滑單寧著稱，奠定了 Napa Valley 的世界地位。'
+          },
+          {
+            type: 'single',
+            question: 'Opus One 是哪兩個名莊合作創立的？',
+            options: ['A. Chateau Margaux 和 Robert Mondavi', 'B. Mouton-Rothschild 和 Robert Mondavi', 'C. Petrus 和 Screaming Eagle', 'D. Lafite 和 Harlan Estate'],
+            correct: 1,
+            explanation: 'Opus One 由美國 Robert Mondavi 和法國 Château Mouton-Rothschild 的 Baron Philippe de Rothschild 聯合創立於 1979 年，是新舊世界合作的歷史性象徵。'
+          },
+          {
+            type: 'single',
+            question: 'Russian River Valley 的標誌性土壤類型是什麼？',
+            options: ['A. 礫石', 'B. Goldridge Sandy Loam（金嶺細沙壤土）', 'C. 火山岩', 'D. 石灰岩'],
+            correct: 1,
+            explanation: 'Goldridge Sandy Loam 是 Russian River Valley 的標誌性土壤，排水良好、低肥力，被認為是加州最適合 Pinot Noir 的土壤類型之一。'
+          },
+          {
+            type: 'single',
+            question: 'Sonoma County 的永續農業認證比例大約是多少？',
+            options: ['A. 約 50%', 'B. 約 75%', 'C. 約 90%', 'D. 99% 以上'],
+            correct: 3,
+            explanation: 'Sonoma County 超過 99% 的葡萄種植面積取得可持續農業認證，是全球第一個達到此目標的葡萄酒產區。'
+          },
+          {
+            type: 'single',
+            question: '加州最北的葡萄酒產區群組（包含 Napa、Sonoma）稱為？',
+            options: ['A. Central Coast', 'B. Sierra Foothills', 'C. North Coast', 'D. South Coast'],
+            correct: 2,
+            explanation: 'North Coast（北海岸）包含 Napa、Sonoma、Mendocino 和 Lake County，是加州最重要的葡萄酒產區群，擁有全加州逾半數的葡萄酒酒莊。'
+          }
+        ]
+      }
+    }
   }
 ]

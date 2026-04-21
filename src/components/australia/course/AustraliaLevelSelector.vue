@@ -23,20 +23,30 @@
       <!-- 快速入口 -->
       <section class="quick-nav">
         <div class="quick-grid">
+          <button class="nav-card game-card" disabled>
+            <span class="nc-icon">🎮</span>
+            <span class="nc-title">互動練習</span>
+            <span class="nc-desc">產區競答・品種配對（即將推出）</span>
+          </button>
           <button class="nav-card map-card" @click="$emit('openMap')">
             <span class="nc-icon">🗺️</span>
             <span class="nc-title">探索地圖</span>
-            <span class="nc-desc">互動式澳洲產區地圖・65+ GI・六州分布</span>
+            <span class="nc-desc">互動式澳洲產區地圖、65+ GI・六州分布</span>
           </button>
-          <button class="nav-card info-card">
-            <span class="nc-icon">🍇</span>
-            <span class="nc-title">品種指南</span>
-            <span class="nc-desc">Shiraz・Cabernet・Riesling・Semillon・Chardonnay</span>
-          </button>
-          <button class="nav-card special-card">
+          <button class="nav-card achievement-card" @click="$emit('openAchievements')">
             <span class="nc-icon">🏆</span>
-            <span class="nc-title">標誌性酒款</span>
-            <span class="nc-desc">Penfolds Grange・Henschke Hill of Grace・Leeuwin Art Series</span>
+            <span class="nc-title">成就系統</span>
+            <span class="nc-desc">查看已解鎖成就與標章收藏</span>
+          </button>
+          <button class="nav-card progress-card" @click="showProgressModal = true">
+            <span class="nc-icon">📊</span>
+            <span class="nc-title">學習進度</span>
+            <span class="nc-desc">各等級完成狀況與學習統計</span>
+          </button>
+          <button class="nav-card notebook-card" disabled>
+            <span class="nc-icon">📔</span>
+            <span class="nc-title">品飲筆記</span>
+            <span class="nc-desc">記錄品飲體驗（即將推出）</span>
           </button>
         </div>
       </section>
@@ -90,14 +100,82 @@
         </div>
       </section>
     </div>
+
+    <!-- 學習進度 Modal -->
+    <Teleport to="body">
+      <div v-if="showProgressModal" class="au-prog-overlay" @click.self="showProgressModal = false">
+        <div class="au-prog-modal">
+          <div class="au-prog-header">
+            <h3>📊 澳洲葡萄酒學習進度</h3>
+            <button class="au-prog-close" @click="showProgressModal = false">×</button>
+          </div>
+          <div class="au-prog-body">
+            <!-- 整體進度 -->
+            <div class="au-overall-box">
+              <div class="au-overall-row">
+                <span>整體完成度</span>
+                <strong>{{ overallProgress }}%</strong>
+              </div>
+              <div class="au-overall-bar">
+                <div class="au-overall-fill" :style="{ width: overallProgress + '%' }"></div>
+              </div>
+            </div>
+            <!-- 各等級 -->
+            <div class="au-level-list">
+              <div v-for="lv in levelProgress" :key="lv.key" class="au-lv-row">
+                <div class="au-lv-top">
+                  <span class="au-lv-icon">{{ lv.icon }}</span>
+                  <span class="au-lv-title">{{ lv.title }}</span>
+                  <span class="au-lv-pct" :style="{ color: lv.color }">{{ lv.pct }}%</span>
+                </div>
+                <div class="au-lv-bar">
+                  <div class="au-lv-fill" :style="{ width: lv.pct + '%', background: lv.color }"></div>
+                </div>
+                <div class="au-lv-stat">{{ lv.done }} / {{ lv.total }} 課程完成</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { ref, computed } from 'vue'
+import { courseLevels, getUserProgress } from '../data/courseLevels.js'
 
-defineEmits(['openMap', 'startLevel'])
+defineEmits(['openMap', 'startLevel', 'openAchievements'])
 const router = useRouter()
+
+const showProgressModal = ref(false)
+
+const levelProgress = computed(() => {
+  const keys = ['level1', 'level2', 'level3']
+  return keys.map(key => {
+    const def = courseLevels.find(l => l.key === key)
+    if (!def || !def.modules) return { key, title: key, done: 0, total: 0, pct: 0 }
+    const allLessons = def.modules.flatMap(m => m.lessons)
+    const prog = getUserProgress(key)
+    const done = allLessons.filter(l => prog[l.id]).length
+    return {
+      key,
+      title: def.title,
+      icon:  def.icon,
+      color: def.color,
+      done,
+      total: allLessons.length,
+      pct:   allLessons.length ? Math.round(done / allLessons.length * 100) : 0
+    }
+  })
+})
+
+const overallProgress = computed(() => {
+  const all  = levelProgress.value.reduce((s, l) => s + l.total, 0)
+  const done = levelProgress.value.reduce((s, l) => s + l.done,  0)
+  return all ? Math.round(done / all * 100) : 0
+})
 
 function bubbleStyle(i) {
   const size = 20 + (i * 13) % 60
@@ -299,4 +377,67 @@ const overviewItems = [
   .levels-grid { grid-template-columns: 1fr; }
   .brand-title { font-size: 1.2rem; }
 }
+
+/* 學習進度 Modal */
+.au-prog-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 8888;
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+}
+.au-prog-modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%; max-width: 520px;
+  max-height: 85vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.au-prog-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #00274e 0%, #1a4a8a 100%);
+  color: #fff;
+}
+.au-prog-header h3 { margin: 0; font-size: 1.05rem; }
+.au-prog-close {
+  background: none; border: none; color: #fff;
+  font-size: 1.4rem; cursor: pointer; line-height: 1; padding: 0 4px;
+}
+.au-prog-close:hover { opacity: 0.75; }
+.au-prog-body { flex: 1; overflow-y: auto; padding: 20px; }
+.au-overall-box { margin-bottom: 24px; }
+.au-overall-row {
+  display: flex; justify-content: space-between;
+  font-size: 0.9rem; margin-bottom: 8px; color: #444;
+}
+.au-overall-row strong { color: #00274e; font-size: 1rem; }
+.au-overall-bar {
+  height: 10px; background: #e0e0e0; border-radius: 9999px; overflow: hidden;
+}
+.au-overall-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00274e, #1a4a8a);
+  border-radius: 9999px;
+  transition: width 0.6s ease;
+}
+.au-level-list { display: flex; flex-direction: column; gap: 20px; }
+.au-lv-row { background: #f8f9fa; border-radius: 12px; padding: 14px 16px; }
+.au-lv-top {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 8px;
+}
+.au-lv-icon  { font-size: 1.2rem; }
+.au-lv-title { flex: 1; font-size: 0.88rem; font-weight: 700; color: #333; }
+.au-lv-pct   { font-size: 1rem; font-weight: 800; }
+.au-lv-bar {
+  height: 8px; background: #e0e0e0; border-radius: 9999px;
+  overflow: hidden; margin-bottom: 6px;
+}
+.au-lv-fill {
+  height: 100%; border-radius: 9999px;
+  transition: width 0.6s ease;
+}
+.au-lv-stat { font-size: 0.75rem; color: #888; }
 </style>

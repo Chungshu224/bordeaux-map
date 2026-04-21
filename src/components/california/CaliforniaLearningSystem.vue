@@ -1,5 +1,5 @@
 <template>
-  <div class="california-learning-system">
+  <div :class="['california-learning-system', { 'lesson-mode': !!currentLesson }]">
     <!-- 課程首頁（Level Selector） -->
     <CaliforniaLevelSelector
       v-if="!currentLesson && showLevelSelector"
@@ -143,11 +143,15 @@ watch(() => props.selectedLevel, (n) => {
 
 <style scoped>
 .california-learning-system {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: #1a0800;
   font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+}
+.california-learning-system.lesson-mode {
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* 學習標題欄 */

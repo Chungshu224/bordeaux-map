@@ -295,6 +295,99 @@ export class NzAchievementManager {
   clearNewUnlocks() {
     nzAchievementState.newUnlocks = []
   }
+
+  /**
+   * 完成一節課時呼叫
+   * @param {object} opts
+   * @param {number} opts.levelNum      - 等級數字 (1/2/3)
+   * @param {number} opts.totalProgress - 整體完成百分比 0~100
+   * @param {boolean} opts.levelCompleted - 是否剛完成整個等級
+   * @param {boolean} opts.sbLesson     - 是否為 SB 相關課程
+   * @param {boolean} opts.pinotLesson  - 是否為 Pinot 相關課程
+   */
+  recordLessonCompleted({ levelNum = 0, totalProgress = 0, levelCompleted = false, sbLesson = false, pinotLesson = false } = {}) {
+    const s = nzAchievementState.userStats
+    s.completedLessons = (s.completedLessons || 0) + 1
+    s.totalProgress    = Math.max(s.totalProgress || 0, totalProgress)
+
+    if (levelCompleted) {
+      if (levelNum === 1) s.level1Completed = true
+      if (levelNum === 2) s.level2Completed = true
+      if (levelNum === 3) s.level3Completed = true
+    }
+    if (sbLesson)    s.sbCompleted    = true
+    if (pinotLesson) s.pinotCompleted = true
+
+    const h = new Date().getHours()
+    if (h >= 23 || h < 5) s.nightTimeStudy    = (s.nightTimeStudy    || 0) + 1
+    if (h >= 5  && h < 8) s.earlyMorningStudy = (s.earlyMorningStudy || 0) + 1
+
+    const today     = new Date().toDateString()
+    const yesterday = new Date(Date.now() - 86400000).toDateString()
+    if (s.lastStudyDate !== today) {
+      s.consecutiveDays = (s.lastStudyDate === yesterday) ? (s.consecutiveDays || 0) + 1 : 1
+      s.lastStudyDate   = today
+    }
+    return this.updateStats(s)
+  }
+
+  recordQuizResult({ score, correctCount, totalQ } = {}) {
+    const s   = nzAchievementState.userStats
+    const pct = totalQ ? Math.round((correctCount / totalQ) * 100) : (score || 0)
+    s.totalQuizzes  = (s.totalQuizzes  || 0) + 1
+    s.bestQuizScore = Math.max(s.bestQuizScore || 0, pct)
+    if (pct === 100) s.perfectScores = (s.perfectScores || 0) + 1
+    if (pct >= 90) {
+      s.lastGameScores = [...(s.lastGameScores || []).slice(-2), pct]
+      if (s.lastGameScores.length >= 3 && s.lastGameScores.every(x => x >= 90))
+        s.bestStreak = Math.max(s.bestStreak || 0, 3)
+    } else {
+      s.lastGameScores = []
+    }
+    return this.updateStats(s)
+  }
+
+  recordRegionExplored(regionId) {
+    const s = nzAchievementState.userStats
+    if (!s.exploredRegionsList) s.exploredRegionsList = []
+    const key = regionId.toLowerCase().replace(/[\s'-]/g, '')
+    if (!s.exploredRegionsList.includes(key)) {
+      s.exploredRegionsList = [...s.exploredRegionsList, key]
+      s.exploredRegions     = s.exploredRegionsList.length
+    }
+    return this.updateStats(s)
+  }
+
+  recordTastingNote() {
+    const s = nzAchievementState.userStats
+    s.tastingNotesCount = (s.tastingNotesCount || 0) + 1
+    return this.updateStats(s)
+  }
+
+  getUserLevel() {
+    const pts        = nzAchievementState.totalPoints
+    const thresholds = nzAchievementConfig.levelThresholds
+    return thresholds.slice().reverse().find(t => pts >= t.min) || thresholds[0]
+  }
+
+  isUnlocked(id) {
+    return nzAchievementState.unlockedAchievements.includes(id)
+  }
+
+  getAllAchievements() {
+    return Object.values(nzAchievementDefinitions).map(a => ({
+      ...a, unlocked: this.isUnlocked(a.id)
+    }))
+  }
+
+  getStats() {
+    return {
+      totalPoints:   nzAchievementState.totalPoints,
+      unlockedCount: nzAchievementState.unlockedAchievements.length,
+      totalCount:    Object.keys(nzAchievementDefinitions).length,
+      userLevel:     this.getUserLevel()
+    }
+  }
 }
 
 export const globalNzAchievementManager = new NzAchievementManager()

@@ -58,13 +58,7 @@ export const lessonContent = [
           <span>Tokaj Erzsébet Pince</span>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: 'Tokaji Aszú 被稱為世界上「第一個」有文字記載的貴腐甜酒，這比法國波爾多的 Sauternes 早了多少年？',
-      options: ['A. 約 10 年', 'B. 約 50 年', 'C. 約 100 年', 'D. 約 200 年'],
-      correct: 2,
-      explanation: '有文字記載的 Tokaji Aszú 貴腐甜酒釀造技術可追溯至 1630 年代（傳說中的 Máté Szepsy Laczkó），而法國蘇玳（Sauternes）的 Château d\'Yquem 在 1847 年才首次有文字記載採用貴腐採收技術。托卡伊的貴腐釀造傳統比法國早了約 100-200 年，路易十四因此稱 Tokaji Aszú 為「酒中之王，王者之酒（Wine of Kings, King of Wines）」。'
-    }
+    </div>`
   },
   {
     component: 'HungaryRegionMapSlide',
@@ -98,18 +92,7 @@ export const lessonContent = [
           <p>最小也最涼爽的北部產區，海拔較高，以清爽高酸的白酒見長，近年以原生品種保護著稱。</p>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: 'Egri Bikavér（埃格爾公牛血）的釀造規定是什麼？',
-      options: [
-        'A. 必須 100% 使用 Kadarka 品種',
-        'B. 必須使用至少 3 種葡萄品種，以 Kékfrankos 為主要品種',
-        'C. 只能使用從托卡伊引進的葡萄',
-        'D. 必須在橡木桶中陳年至少 5 年'
-      ],
-      correct: 1,
-      explanation: 'Egri Bikavér 的法定規定要求：①至少混合 3 種葡萄品種（不能只用 2 種）；②Kékfrankos 必須是主要品種（佔比最高）；③其他允許品種包括 Kadarka、Merlot、Cabernet Franc、Zweigelt 等。更高級的「Egri Bikavér Superior」還有更嚴格的品質標準，包括更長的橡木桶陳年要求。'
-    }
+    </div>`
   },
   {
     component: 'HungaryRegionMapSlide',
@@ -150,18 +133,7 @@ export const lessonContent = [
           </ul>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '為什麼維拉尼（Villány）是匈牙利波爾多品種紅酒的最佳產區？',
-      options: [
-        'A. 因為它靠近波爾多，受到直接的大西洋氣候影響',
-        'B. 因為有大量法國釀酒師在此工作',
-        'C. 因為它是匈牙利最溫暖的產區，年均氣溫高，地中海氣候影響使 Cabernet Franc 等品種能充分成熟',
-        'D. 因為土壤中含有與波爾多完全相同的礫石成分'
-      ],
-      correct: 2,
-      explanation: '維拉尼位於匈牙利最南端，年均氣溫 11.6°C 是全國最高，南方的地中海氣候影響顯著（夏季溫暖乾燥），石灰岩和紅色黏土的土壤組合也非常適合波爾多品種。這些條件使 Cabernet Franc 和 Merlot 能達到充分的果實成熟度，單寧柔熟，沒有北部涼爽產區常見的青澀感。'
-    }
+    </div>`
   },
   {
     title: '巴拉頓與多瑙河地區',
@@ -207,17 +179,47 @@ export const lessonContent = [
           <tr><td>🌾 多瑙河</td><td>Kunság</td><td>親民日常餐酒</td></tr>
         </table>
       </div>
-    </div>`,
-    quiz: {
-      question: '為什麼 Badacsony 的 Olaszrizling 比匈牙利其他地區的同品種更具礦物感和複雜度？',
-      options: [
-        'A. 因為 Badacsony 緯度最高，氣候最冷',
-        'B. 因為 Badacsony 使用特別的有機農法',
-        'C. 因為 Badacsony 的玄武岩火山土壤保熱性強，葡萄從中吸取大量火山礦物質',
-        'D. 因為 Badacsony 的降雨量最充足，讓葡萄皮更厚'
-      ],
-      correct: 2,
-      explanation: 'Badacsony 是巴拉頓湖北岸的玄武岩火山山丘，其特殊的玄武岩土壤有兩大優勢：①強大的保熱性（白天吸熱，夜晚釋放），使葡萄緩慢而完整地成熟；②火山岩中的礦物質（鐵、錳、鎂等）滲入土壤，葡萄根系吸收後轉化為葡萄酒中獨特的礦物感。這是平原地區的 Olaszrizling 無法比擬的風土優勢。'
+    </div>`
+  }
+,
+  {
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 60,
+        questions: [
+        {
+          type: 'single',
+          text: 'Tokaji Aszú 被稱為世界上「第一個」有文字記載的貴腐甜酒，這比法國波爾多的 Sauternes 早了多少年？',
+          options: ['A. 約 10 年', 'B. 約 50 年', 'C. 約 100 年', 'D. 約 200 年'],
+          correct: 2,
+          explanation: '有文字記載的 Tokaji Aszú 貴腐甜酒釀造技術可追溯至 1630 年代（傳說中的 Máté Szepsy Laczkó），而法國蘇玳（Sauternes）的 Château d\'Yquem 在 1847 年才首次有文字記載採用貴腐採收技術。托卡伊的貴腐釀造傳統比法國早了約 100-200 年，路易十四因此稱 Tokaji Aszú 為「酒中之王，王者之酒（Wine of Kings, King of Wines）」。'
+        },
+        {
+          type: 'single',
+          text: 'Egri Bikavér（埃格爾公牛血）的釀造規定是什麼？',
+          options: ['A. 必須 100% 使用 Kadarka 品種', 'B. 必須使用至少 3 種葡萄品種，以 Kékfrankos 為主要品種', 'C. 只能使用從托卡伊引進的葡萄', 'D. 必須在橡木桶中陳年至少 5 年'],
+          correct: 1,
+          explanation: 'Egri Bikavér 的法定規定要求：①至少混合 3 種葡萄品種（不能只用 2 種）；②Kékfrankos 必須是主要品種（佔比最高）；③其他允許品種包括 Kadarka、Merlot、Cabernet Franc、Zweigelt 等。更高級的「Egri Bikavér Superior」還有更嚴格的品質標準，包括更長的橡木桶陳年要求。'
+        },
+        {
+          type: 'single',
+          text: '為什麼維拉尼（Villány）是匈牙利波爾多品種紅酒的最佳產區？',
+          options: ['A. 因為它靠近波爾多，受到直接的大西洋氣候影響', 'B. 因為有大量法國釀酒師在此工作', 'C. 因為它是匈牙利最溫暖的產區，年均氣溫高，地中海氣候影響使 Cabernet Franc 等品種能充分成熟', 'D. 因為土壤中含有與波爾多完全相同的礫石成分'],
+          correct: 2,
+          explanation: '維拉尼位於匈牙利最南端，年均氣溫 11.6°C 是全國最高，南方的地中海氣候影響顯著（夏季溫暖乾燥），石灰岩和紅色黏土的土壤組合也非常適合波爾多品種。這些條件使 Cabernet Franc 和 Merlot 能達到充分的果實成熟度，單寧柔熟，沒有北部涼爽產區常見的青澀感。'
+        },
+        {
+          type: 'single',
+          text: '為什麼 Badacsony 的 Olaszrizling 比匈牙利其他地區的同品種更具礦物感和複雜度？',
+          options: ['A. 因為 Badacsony 緯度最高，氣候最冷', 'B. 因為 Badacsony 使用特別的有機農法', 'C. 因為 Badacsony 的玄武岩火山土壤保熱性強，葡萄從中吸取大量火山礦物質', 'D. 因為 Badacsony 的降雨量最充足，讓葡萄皮更厚'],
+          correct: 2,
+          explanation: 'Badacsony 是巴拉頓湖北岸的玄武岩火山山丘，其特殊的玄武岩土壤有兩大優勢：①強大的保熱性（白天吸熱，夜晚釋放），使葡萄緩慢而完整地成熟；②火山岩中的礦物質（鐵、錳、鎂等）滲入土壤，葡萄根系吸收後轉化為葡萄酒中獨特的礦物感。這是平原地區的 Olaszrizling 無法比擬的風土優勢。'
+        }
+        ]
+      }
     }
   }
 ]

@@ -149,37 +149,43 @@ export const lessonContent = [
   },
 
   {
-    type: 'quiz',
-    title: '課程測驗',
-    questions: [
-      {
-        id: 'ca6-q1',
-        question: 'Anderson Valley（Mendocino）以哪兩個特色聞名？',
-        options: ['老藤 Zinfandel 和 Petite Sirah', '世界級 Pinot Noir 和 Alsatian 品種（Gewurztraminer、Riesling）', '火山岩土壤和 Cabernet Sauvignon', 'Rhône 品種和石灰岩土壤'],
-        answer: 1,
-        explanation: 'Anderson Valley 以世界級 Pinot Noir、Chardonnay 和 Alsatian 品種（尤其是 Gewurztraminer、Riesling、Pinot Gris）著稱，是加州唯一能釀造世界頂級 Gewurztraminer 的地方，涼爽的海霧氣候是關鍵。'
-      },
-      {
-        id: 'ca6-q2',
-        question: 'Sierra Foothills 的葡萄酒文化與加州哪段歷史息息相關？',
-        options: ['西班牙傳教士文化（1769年）', '1849 年加州淘金熱（Gold Rush）', '1976 年巴黎評判', '蘇聯軍事基地'],
-        answer: 1,
-        explanation: 'Sierra Foothills 是 1849 年加州淘金熱（Gold Rush）的核心地帶，淘金客對葡萄酒的需求促使大量葡萄園建立，義大利移民帶來了他們的品種（Barbera、Sangiovese 等），留下了今日仍在使用的百年老藤。'
-      },
-      {
-        id: 'ca6-q3',
-        question: 'Lodi 最著名的是哪項農業可持續認證計劃？',
-        options: ['Sonoma Wine County Winegrowers', 'LODI RULES（全美首個農業可持續認證項目）', 'California Certified Organic（CCOF）', 'Napa Green'],
-        answer: 1,
-        explanation: 'LODI RULES 是全美第一個專為葡萄種植者設計的農業可持續認證計劃，由 Lodi Winegrape Commission 創立，在有機農業和可持續農業領域具有開創性意義。'
-      },
-      {
-        id: 'ca6-q4',
-        question: 'Lake County 的 Red Hills 子 AVA 最著名的特色是什麼？',
-        options: ['白色石灰岩土壤', '火山岩紅色礫石土壤，根瘤蚜危害少，以 Cabernet Sauvignon 著稱', 'Goldridge 細沙壤土', '深厚的粘土層'],
-        answer: 1,
-        explanation: 'Red Hills Lake County 以火山岩紅色礫石土壤著稱，富含礦物質、排水極佳。此土壤環境不利根瘤蚜（Phylloxera）生存，許多葡萄藤仍生長在原始根系上，以 Cabernet Sauvignon 著稱。'
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 70,
+        questions: [
+          {
+            type: 'single',
+            question: 'Anderson Valley（Mendocino）以哪兩個特色聞名？',
+            options: ['A. 老藤 Zinfandel 和 Petite Sirah', 'B. 世界級 Pinot Noir 和 Alsatian 品種（Gewurztraminer、Riesling）', 'C. 火山岩土壤和 Cabernet Sauvignon', 'D. Rhône 品種和石灰岩土壤'],
+            correct: 1,
+            explanation: 'Anderson Valley 以世界級 Pinot Noir、Chardonnay 和 Alsatian 品種（尤其是 Gewurztraminer、Riesling、Pinot Gris）著稱，是加州唯一能釀造世界頂級 Gewurztraminer 的地方，涼爽的海霧氣候是關鍵。'
+          },
+          {
+            type: 'single',
+            question: 'Sierra Foothills 的葡萄酒文化與加州哪段歷史息息相關？',
+            options: ['A. 西班牙傳教士文化（1769年）', 'B. 1849 年加州淘金熱（Gold Rush）', 'C. 1976 年巴黎評判', 'D. 蘇聯軍事基地'],
+            correct: 1,
+            explanation: 'Sierra Foothills 是 1849 年加州淘金熱（Gold Rush）的核心地帶，淘金客對葡萄酒的需求促使大量葡萄園建立，義大利移民帶來了他們的品種（Barbera、Sangiovese 等），留下了今日仍在使用的百年老藤。'
+          },
+          {
+            type: 'single',
+            question: 'Lodi 最著名的是哪項農業可持續認證計劃？',
+            options: ['A. Sonoma Wine County Winegrowers', 'B. LODI RULES（全美首個農業可持續認證項目）', 'C. California Certified Organic（CCOF）', 'D. Napa Green'],
+            correct: 1,
+            explanation: 'LODI RULES 是全美第一個專為葡萄種植者設計的農業可持續認證計劃，由 Lodi Winegrape Commission 創立，在有機農業和可持續農業領域具有開創性意義。'
+          },
+          {
+            type: 'single',
+            question: 'Lake County 的 Red Hills 子 AVA 最著名的特色是什麼？',
+            options: ['A. 白色石灰岩土壤', 'B. 火山岩紅色礫石土壤，根瘤蚜危害少，以 Cabernet Sauvignon 著稱', 'C. Goldridge 細沙壤土', 'D. 深厚的粘土層'],
+            correct: 1,
+            explanation: 'Red Hills Lake County 以火山岩紅色礫石土壤著稱，富含礦物質、排水極佳。此土壤環境不利根瘤蚜（Phylloxera）生存，許多葡萄藤仍生長在原始根系上，以 Cabernet Sauvignon 著稱。'
+          }
+        ]
       }
-    ]
+    }
   }
 ]

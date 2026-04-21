@@ -46,6 +46,11 @@
       <!-- 快速功能入口 -->
       <section class="quick-nav">
         <div class="quick-nav-grid">
+          <button class="nav-card games" @click="$emit('openGames')">
+            <span class="nav-icon">🎮</span>
+            <span class="nav-title">互動練習</span>
+            <span class="nav-desc">產區競答・分級辨識・品種配對・年份排序</span>
+          </button>
           <button class="nav-card explore" @click="$emit('openMap')">
             <span class="nav-icon">🗺️</span>
             <span class="nav-title">探索地圖</span>
@@ -53,8 +58,8 @@
           </button>
           <button class="nav-card achievements" @click="showAchievements = true">
             <span class="nav-icon">🏆</span>
-            <span class="nav-title">學習成就</span>
-            <span class="nav-desc">查看已完成課程與學習記錄</span>
+            <span class="nav-title">成就系統</span>
+            <span class="nav-desc">查看已解鎖成就與積分等級</span>
           </button>
           <button class="nav-card progress" @click="showProgress = true">
             <span class="nav-icon">📊</span>
@@ -65,11 +70,6 @@
             <span class="nav-icon">📔</span>
             <span class="nav-title">品飲筆記</span>
             <span class="nav-desc">記錄品飲心得・紅白氣泡甜酒・350+ 品種</span>
-          </button>
-          <button class="nav-card games" @click="$emit('openGames')">
-            <span class="nav-icon">🎮</span>
-            <span class="nav-title">互動練習</span>
-            <span class="nav-desc">產區競答・分級辨識・品種配對・年份排序</span>
           </button>
         </div>
       </section>

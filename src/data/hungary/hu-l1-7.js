@@ -48,13 +48,7 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '「Szamorodni Száraz」（乾型薩瑪羅尼）的風格最類似哪種其他世界名酒？',
-      options: ['A. 法國 Sauternes', 'B. 德國 Trockenbeerenauslese（TBA）', 'C. 西班牙 Fino Sherry', 'D. 義大利 Moscato d\'Asti'],
-      correct: 2,
-      explanation: '干型 Szamorodni（Száraz Szamorodni）在橡木桶中進行氧化性陳年，接觸空氣，發展出榛子、蜂蠟、杏仁、橙皮等複雜的氧化香氣，風格上非常接近西班牙的 Fino Sherry（也是在空氣接觸下陳年的干型強化酒）。這種氧化風格與甜型托卡伊截然不同，也與其他甜酒（Sauternes、TBA）完全不同。'
-    }
+    </div>`
   },
   {
     title: '干型白酒：Furmint 和 Olaszrizling',
@@ -83,18 +77,7 @@ export const lessonContent = [
           <div class="food-pairing">最佳搭配：匈牙利傳統魚湯、清燉豬肉</div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: '下列哪種匈牙利白酒在年輕時非常「閉鎖」，需要多年陳年才能展現完整個性？',
-      options: [
-        'A. Olaszrizling（來自多瑙河平原）',
-        'B. Irsai Olivér',
-        'C. Somló 的 Juhfark',
-        'D. Cserszegi Fűszeres'
-      ],
-      correct: 2,
-      explanation: 'Somló 的 Juhfark 以高酸度、強烈礦物感和極強的陳年潛力著稱。年輕時（1-3年），這款酒通常非常緊繃「閉鎖」，酸度突出，礦物感強烈，果味隱退，需要耐心等待 5-10 年以上才能開放，展現蜂蜜、煙燻礦物和豐富的質地。其他幾個選項（Olaszrizling 平原款、Irsai Olivér、Cserszegi Fűszeres）都是早飲型芳香白酒，不具備明顯的陳年潛力。'
-    }
+    </div>`
   },
   {
     title: 'Egri Bikavér：公牛血的傳奇',
@@ -148,18 +131,7 @@ export const lessonContent = [
           </div>
         </div>
       </div>
-    </div>`,
-    quiz: {
-      question: 'Egri Bikavér 必須符合哪項最基本的法定條件？',
-      options: [
-        'A. 必須在埃格爾釀造，至少使用 3 種葡萄，Kékfrankos 是主要品種',
-        'B. 必須 100% 使用 Kadarka，在橡木桶中陳年 5 年以上',
-        'C. 必須使用 Furmint 和 Kékfrankos 各 50%',
-        'D. 必須添加指定比例的匈牙利橡木桶萃取液'
-      ],
-      correct: 0,
-      explanation: 'Egri Bikavér 的核心法定條件是：①必須來自埃格爾（Eger）法定產區；②至少使用 3 種不同葡萄品種（單一或雙品種不符合規定）；③Kékfrankos 必須是比例最高的品種。這個「多品種混釀以 Kékfrankos 為核心」的結構，是公牛血區別於其他單一品種或雙品種紅酒的根本特徵。'
-    }
+    </div>`
   },
   {
     title: '其他重要酒款類型',
@@ -192,17 +164,47 @@ export const lessonContent = [
           <li>🏆 <strong>頂級紅酒</strong>：Villányi Franc（Cabernet Franc，南部溫暖）</li>
         </ul>
       </div>
-    </div>`,
-    quiz: {
-      question: '匈牙利哪種酒款獲得了自己專屬的官方認證品牌，是匈牙利最受國際認可的單一品種紅酒？',
-      options: [
-        'A. Egri Bikavér（埃格爾公牛血）',
-        'B. Tokaji Furmint（托卡伊弗爾明特）',
-        'C. Villányi Franc（維拉尼弗朗克）',
-        'D. Szekszárdi Bikavér（塞克薩德公牛血）'
-      ],
-      correct: 2,
-      explanation: 'Villányi Franc 是匈牙利唯一擁有自己專屬品牌認證的單一品種紅酒。維拉尼酒農協會建立了嚴格的「Villányi Franc」認證制度，只有通過盲品評審、符合特定品質標準的 Cabernet Franc 單一品種款才能使用此認證。這個品牌在國際上受到了越來越多的認可，英國酒評家 Michael Broadbent 曾表示維拉尼是 Cabernet Franc 的「天然家園」。'
+    </div>`
+  }
+,
+  {
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 60,
+        questions: [
+        {
+          type: 'single',
+          text: '「Szamorodni Száraz」（乾型薩瑪羅尼）的風格最類似哪種其他世界名酒？',
+          options: ['A. 法國 Sauternes', 'B. 德國 Trockenbeerenauslese（TBA）', 'C. 西班牙 Fino Sherry', 'D. 義大利 Moscato d\'Asti'],
+          correct: 2,
+          explanation: '干型 Szamorodni（Száraz Szamorodni）在橡木桶中進行氧化性陳年，接觸空氣，發展出榛子、蜂蠟、杏仁、橙皮等複雜的氧化香氣，風格上非常接近西班牙的 Fino Sherry（也是在空氣接觸下陳年的干型強化酒）。這種氧化風格與甜型托卡伊截然不同，也與其他甜酒（Sauternes、TBA）完全不同。'
+        },
+        {
+          type: 'single',
+          text: '下列哪種匈牙利白酒在年輕時非常「閉鎖」，需要多年陳年才能展現完整個性？',
+          options: ['A. Olaszrizling（來自多瑙河平原）', 'B. Irsai Olivér', 'C. Somló 的 Juhfark', 'D. Cserszegi Fűszeres'],
+          correct: 2,
+          explanation: 'Somló 的 Juhfark 以高酸度、強烈礦物感和極強的陳年潛力著稱。年輕時（1-3年），這款酒通常非常緊繃「閉鎖」，酸度突出，礦物感強烈，果味隱退，需要耐心等待 5-10 年以上才能開放，展現蜂蜜、煙燻礦物和豐富的質地。其他幾個選項（Olaszrizling 平原款、Irsai Olivér、Cserszegi Fűszeres）都是早飲型芳香白酒，不具備明顯的陳年潛力。'
+        },
+        {
+          type: 'single',
+          text: 'Egri Bikavér 必須符合哪項最基本的法定條件？',
+          options: ['A. 必須在埃格爾釀造，至少使用 3 種葡萄，Kékfrankos 是主要品種', 'B. 必須 100% 使用 Kadarka，在橡木桶中陳年 5 年以上', 'C. 必須使用 Furmint 和 Kékfrankos 各 50%', 'D. 必須添加指定比例的匈牙利橡木桶萃取液'],
+          correct: 0,
+          explanation: 'Egri Bikavér 的核心法定條件是：①必須來自埃格爾（Eger）法定產區；②至少使用 3 種不同葡萄品種（單一或雙品種不符合規定）；③Kékfrankos 必須是比例最高的品種。這個「多品種混釀以 Kékfrankos 為核心」的結構，是公牛血區別於其他單一品種或雙品種紅酒的根本特徵。'
+        },
+        {
+          type: 'single',
+          text: '匈牙利哪種酒款獲得了自己專屬的官方認證品牌，是匈牙利最受國際認可的單一品種紅酒？',
+          options: ['A. Egri Bikavér（埃格爾公牛血）', 'B. Tokaji Furmint（托卡伊弗爾明特）', 'C. Villányi Franc（維拉尼弗朗克）', 'D. Szekszárdi Bikavér（塞克薩德公牛血）'],
+          correct: 2,
+          explanation: 'Villányi Franc 是匈牙利唯一擁有自己專屬品牌認證的單一品種紅酒。維拉尼酒農協會建立了嚴格的「Villányi Franc」認證制度，只有通過盲品評審、符合特定品質標準的 Cabernet Franc 單一品種款才能使用此認證。這個品牌在國際上受到了越來越多的認可，英國酒評家 Michael Broadbent 曾表示維拉尼是 Cabernet Franc 的「天然家園」。'
+        }
+        ]
+      }
     }
   }
 ]

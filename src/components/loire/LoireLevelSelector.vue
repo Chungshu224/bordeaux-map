@@ -49,20 +49,25 @@
       <!-- 快速功能入口 -->
       <section class="quick-nav">
         <div class="quick-nav-grid">
+          <button class="nav-card game-hub" @click="emit('openGames')">
+            <span class="nav-icon">🎮</span>
+            <span class="nav-title">互動練習</span>
+            <span class="nav-desc">產區競答・品種配對・分區辨識</span>
+          </button>
           <button class="nav-card map-card" @click="emit('openMap')">
             <span class="nav-icon">🗺️</span>
             <span class="nav-title">探索地圖</span>
             <span class="nav-desc">羅亞爾河谷互動式產區地圖</span>
           </button>
+          <button class="nav-card achievement-card" @click="showAchievements = true">
+            <span class="nav-icon">🏆</span>
+            <span class="nav-title">成就系統</span>
+            <span class="nav-desc">查看已解鎖成就與積分等級</span>
+          </button>
           <button class="nav-card progress-card" @click="showProgressModal = true">
             <span class="nav-icon">📊</span>
             <span class="nav-title">學習進度</span>
             <span class="nav-desc">{{ totalProgressPct }}% 完成・{{ completedCount }} 課</span>
-          </button>
-          <button class="nav-card quiz-card" @click="emit('openQuiz')">
-            <span class="nav-icon">✏️</span>
-            <span class="nav-title">隨堂測驗</span>
-            <span class="nav-desc">品種、產區、風格快速考察</span>
           </button>
           <button class="nav-card notes-card" @click="emit('openNotes')">
             <span class="nav-icon">📔</span>
@@ -239,6 +244,21 @@
         </div>
       </div>
     </Teleport>
+
+    <!-- 成就系統 Modal -->
+    <Teleport to="body">
+      <div v-if="showAchievements" class="progress-modal-overlay" @click.self="showAchievements = false">
+        <div class="progress-modal">
+          <div class="pm-header">
+            <h3>🏆 羅亞爾河谷成就系統</h3>
+            <button class="pm-close" @click="showAchievements = false">×</button>
+          </div>
+          <div class="pm-body">
+            <AchievementsDashboard course-key="loire" @back="showAchievements = false" />
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
@@ -248,14 +268,16 @@ import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../stores/authStore.js'
 import { loireLearningState, loireLearningLevels, loireLearningActions } from '../../stores/loireLearningStore.js'
 import { supabase } from '../../lib/supabaseClient.js'
+import AchievementsDashboard from '../AchievementsDashboard.vue'
 
 const router = useRouter()
-const emit = defineEmits(['startLevel', 'openMap', 'openQuiz', 'openNotes', 'backToPage'])
+const emit = defineEmits(['startLevel', 'openMap', 'openQuiz', 'openNotes', 'openGames', 'backToPage'])
 
 // 用戶資訊
 const avatarUrl = ref('')
 const avatarInitial = ref('我')
 const showProgressModal = ref(false)
+const showAchievements = ref(false)
 
 const authUser = computed(() => authState.user)
 const displayName = computed(() => authActions.getDisplayName())

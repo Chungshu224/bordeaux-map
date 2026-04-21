@@ -29,20 +29,30 @@
       <!-- ── 快速入口 ──────────────────────────────────── -->
       <section class="quick-nav">
         <div class="quick-grid">
+          <button class="nav-card game-card" disabled>
+            <span class="nc-icon">🎮</span>
+            <span class="nc-title">互動練習</span>
+            <span class="nc-desc">產區競答・品種配對（即將推出）</span>
+          </button>
           <button class="nav-card map-card" @click="$emit('openMap')">
             <span class="nc-icon">🗺️</span>
             <span class="nc-title">探索地圖</span>
             <span class="nc-desc">互動式葡萄牙產區地圖・DOC 分布・氣候帶</span>
           </button>
-          <button class="nav-card info-card" @click="$emit('openGrapes')">
-            <span class="nc-icon">🍇</span>
-            <span class="nc-title">品種指南</span>
-            <span class="nc-desc">250+ 原生品種・Touriga Nacional・Alvarinho・Baga</span>
+          <button class="nav-card achievement-card" disabled>
+            <span class="nc-icon">🏆</span>
+            <span class="nc-title">成就系統</span>
+            <span class="nc-desc">查看已解鎖成就（即將推出）</span>
           </button>
-          <button class="nav-card port-card">
-            <span class="nc-icon">🥃</span>
-            <span class="nc-title">波特酒專題</span>
-            <span class="nc-desc">Ruby・Tawny・LBV・Vintage・Colheita 全類型</span>
+          <button class="nav-card progress-card" disabled>
+            <span class="nc-icon">📊</span>
+            <span class="nc-title">學習進度</span>
+            <span class="nc-desc">學習統計（即將推出）</span>
+          </button>
+          <button class="nav-card notebook-card" disabled>
+            <span class="nc-icon">📔</span>
+            <span class="nc-title">品飲筆記</span>
+            <span class="nc-desc">記錄品飲體驗（即將推出）</span>
           </button>
         </div>
       </section>

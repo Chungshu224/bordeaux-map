@@ -1,27 +1,33 @@
 <template>
   <div class="loire-page">
+    <!-- 遊戲中心 -->
+    <LoireGameHubPage
+      v-if="view === 'games'"
+      @back="view = 'course'"
+    />
+
     <!-- 課程模式 -->
     <LoireLearningSystem
-      v-if="showCourse"
-      @exitLearning="showCourse = false"
+      v-else-if="view === 'course'"
+      @exitLearning="view = 'map'"
+      @openGames="view = 'games'"
     />
 
     <!-- 地圖模式 -->
     <LoireMapPage
       v-else
-      @back-to-course="showCourse = true"
+      @back-to-course="view = 'course'"
     />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
 import LoireMapPage from './LoireMapPage.vue'
 import LoireLearningSystem from './LoireLearningSystem.vue'
+import LoireGameHubPage from './games/LoireGameHubPage.vue'
 
-const router = useRouter()
-const showCourse = ref(true)
+const view = ref('course')
 </script>
 
 <style scoped>

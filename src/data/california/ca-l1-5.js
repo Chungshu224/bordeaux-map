@@ -181,37 +181,43 @@ export const lessonContent = [
   },
 
   {
-    type: 'quiz',
-    title: '課程測驗',
-    questions: [
-      {
-        id: 'ca5-q1',
-        question: '哪部電影讓 Santa Barbara 的 Pinot Noir 聲名大噪，並使全美 Pinot Noir 銷量暴增？',
-        options: ['Bottle Shock（2008）', 'Sideways（2004）', 'Wine Country（2019）', 'Somm（2013）'],
-        answer: 1,
-        explanation: '2004 年的電影《Sideways》在 Santa Barbara 葡萄酒鄉拍攝，主角對 Pinot Noir 的激情讚美使全美 Pinot Noir 銷量暴增約 50%，Santa Barbara 也一夕成為國際葡萄酒旅遊目的地。'
-      },
-      {
-        id: 'ca5-q2',
-        question: 'Tablas Creek Vineyard 是由哪個法國 Rhône 名莊共同投資、引進 Rhône 品種到 Paso Robles 的？',
-        options: ['Châteauneuf-du-Pape', 'Château Beaucastel', 'Château Rayas', 'Domaine du Vieux Télégraphe'],
-        answer: 1,
-        explanation: 'Tablas Creek Vineyard 由 Haas 家族和法國 Rhône 名莊 Château Beaucastel 合資創立，從法國引進 Rhône 品種（Syrah、Grenache、Mourvèdre、Roussanne 等），成為美國 Rhône 品種種植的先驅。'
-      },
-      {
-        id: 'ca5-q3',
-        question: 'Santa Cruz Mountains 的 Ridge Monte Bello 以哪種罕見土壤著稱，賦予葡萄酒極強的陳年潛力？',
-        options: ['礫石沖積扇', 'Goldridge 細沙壤土', '石灰岩（Limestone）', '火山岩'],
-        answer: 2,
-        explanation: 'Ridge Monte Bello 位於海拔約 800 公尺，擁有加州罕見的石灰岩土壤，帶來天然高酸度和礦石感，使其 Cabernet Sauvignon 陳年潛力達 20-40 年，在 2006 年「巴黎評判 30 周年重賽」中名列前茅。'
-      },
-      {
-        id: 'ca5-q4',
-        question: 'Paso Robles 西部（如 Adelaida District）與東部最大的差別是什麼？',
-        options: ['西部更熱，東部更涼爽', '西部海拔更高、受海霧影響多，更適合 Rhône 品種；東部更熱，適合 Cabernet', '西部種 Chardonnay，東部種 Pinot Noir', '兩者氣候完全相同'],
-        answer: 1,
-        explanation: 'Paso Robles 東西分野明顯：西部（Adelaida District 等）海拔較高、受太平洋海霧和涼風影響，石灰岩土壤，更適合 Rhône 品種（Syrah、Grenache）；東部更溫暖乾燥，礫石土壤，Cabernet Sauvignon 和 Zinfandel 更佳。'
+    component: 'QuizSlide',
+    componentProps: {
+      slide: {
+        title: '🧠 知識檢測',
+        isFinalExam: false,
+        passScore: 70,
+        questions: [
+          {
+            type: 'single',
+            question: '哪部電影讓 Santa Barbara 的 Pinot Noir 聲名大噪，並使全美 Pinot Noir 銷量暴增？',
+            options: ['A. Bottle Shock（2008）', 'B. Sideways（2004）', 'C. Wine Country（2019）', 'D. Somm（2013）'],
+            correct: 1,
+            explanation: '2004 年的電影《Sideways》在 Santa Barbara 葡萄酒鄉拍攝，主角對 Pinot Noir 的激情讚美使全美 Pinot Noir 銷量暴增約 50%，Santa Barbara 也一夕成為國際葡萄酒旅遊目的地。'
+          },
+          {
+            type: 'single',
+            question: 'Tablas Creek Vineyard 是由哪個法國 Rhône 名莊共同投資、引進 Rhône 品種到 Paso Robles 的？',
+            options: ['A. Châteauneuf-du-Pape（名稱產區）', 'B. Château Beaucastel', 'C. Château Rayas', 'D. Domaine du Vieux Télégraphe'],
+            correct: 1,
+            explanation: 'Tablas Creek Vineyard 由 Haas 家族和法國 Rhône 名莊 Château Beaucastel 合資創立，從法國引進 Rhône 品種（Syrah、Grenache、Mourvèdre、Roussanne 等），成為美國 Rhône 品種種植的先驅。'
+          },
+          {
+            type: 'single',
+            question: 'Santa Cruz Mountains 的 Ridge Monte Bello 以哪種罕見土壤著稱，賦予葡萄酒極強的陳年潛力？',
+            options: ['A. 礫石沖積扇', 'B. Goldridge 細沙壤土', 'C. 石灰岩（Limestone）', 'D. 火山岩'],
+            correct: 2,
+            explanation: 'Ridge Monte Bello 位於海拔約 800 公尺，擁有加州罕見的石灰岩土壤，帶來天然高酸度和礦石感，使其 Cabernet Sauvignon 陳年潛力達 20-40 年，在 2006 年「巴黎評判 30 周年重賽」中名列前茅。'
+          },
+          {
+            type: 'single',
+            question: 'Paso Robles 西部（如 Adelaida District）與東部最大的差別是什麼？',
+            options: ['A. 西部更熱，東部更涼爽', 'B. 西部海拔更高、受海霧影響多，更適合 Rhône 品種；東部更熱，適合 Cabernet', 'C. 西部種 Chardonnay，東部種 Pinot Noir', 'D. 兩者氣候完全相同'],
+            correct: 1,
+            explanation: 'Paso Robles 東西分野明顯：西部（Adelaida District 等）海拔較高、受太平洋海霧和涼風影響，石灰岩土壤，更適合 Rhône 品種；東部更溫暖乾燥，礫石土壤，Cabernet Sauvignon 和 Zinfandel 更佳。'
+          }
+        ]
       }
-    ]
+    }
   }
 ]

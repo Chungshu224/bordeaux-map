@@ -5,6 +5,7 @@
       v-if="!currentLesson && showLevelSelector"
       @startLevel="handleStartLevel"
       @openMap="emit('exitLearning')"
+      @openGames="emit('openGames')"
     />
 
     <!-- 課程總覽：已選擇等級、無當前課程時顯示 LoireCourseLayout -->
@@ -26,6 +27,9 @@
           <button class="lh-btn lh-back-btn" @click="handleBackButton">← 返回</button>
           <div class="lh-badges">
             <span class="lh-badge lh-progress-badge">{{ totalProgress }}%</span>
+            <span class="lh-badge lh-achievement-badge" @click="showAchievementsModal = true" title="成就">
+              🏆 {{ achievementCount }}
+            </span>
           </div>
         </div>
         <div class="lh-row lh-row-2">
@@ -45,6 +49,32 @@
         </div>
       </main>
     </template>
+
+    <!-- 成就通知 -->
+    <div v-if="achievementNotification" class="achievement-notification">
+      <div class="notification-content">
+        <span class="achievement-emoji">🏆</span>
+        <div class="achievement-info">
+          <strong>{{ achievementNotification.title }}</strong>
+        </div>
+        <button class="close-notification" @click="achievementNotification = null">×</button>
+      </div>
+    </div>
+
+    <!-- 成就 Modal -->
+    <Teleport to="body">
+      <div v-if="showAchievementsModal" class="ls-modal-overlay" @click.self="showAchievementsModal = false">
+        <div class="ls-modal">
+          <div class="ls-modal-header">
+            <h3>🏆 羅亞爾河谷成就系統</h3>
+            <button class="ls-modal-close" @click="showAchievementsModal = false">×</button>
+          </div>
+          <div class="ls-modal-body">
+            <AchievementsDashboard course-key="loire" @back="showAchievementsModal = false" />
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
@@ -60,8 +90,10 @@ import { authActions } from '../../stores/authStore.js'
 import LoireLevelSelector from './LoireLevelSelector.vue'
 import LoireCourseLayout from './LoireCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import AchievementsDashboard from '../AchievementsDashboard.vue'
+import { globalLoireAchievementManager, loireAchievementState } from '../../stores/loireAchievementSystem.js'
 
-const emit = defineEmits(['exitLearning'])
+const emit = defineEmits(['exitLearning', 'openGames'])
 
 const props = defineProps({
   selectedLevel: { type: Number, default: 1 }
@@ -69,6 +101,10 @@ const props = defineProps({
 
 const presentationLessonRef = ref(null)
 const showLevelSelector = ref(true)
+const showAchievementsModal = ref(false)
+const achievementNotification = ref(null)
+
+globalLoireAchievementManager.init()
 
 function handleStartLevel(levelNum) {
   loireLearningActions.setLevel(levelNum)
@@ -80,6 +116,7 @@ const currentLesson = computed(() => loireLearningState.currentLesson)
 const currentLevelData = computed(() => loireLearningLevels[`level${currentLevel.value}`])
 
 const totalProgress = computed(() => loireLearningProgress.value)
+const achievementCount = computed(() => loireAchievementState.unlockedAchievements.length)
 
 const unlockedLevels = computed(() =>
   [1, 2, 3, 4].filter(n => isLevelUnlocked(n))
@@ -130,6 +167,22 @@ function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
     loireLearningActions.completeLesson(lessonId)
+    // 觸發成就記錄
+    const levelId = currentLevel.value
+    const levelData = currentLevelData.value
+    const lessons = levelData?.lessons || []
+    const completedInLevel = lessons.filter(l => loireLearningState.completedLessons.includes(l.id) || l.id === lessonId).length
+    const levelTotal = lessons.length
+    const isLevelDone = completedInLevel >= levelTotal
+    const overallProgress = Math.round((loireLearningState.completedLessons.length + 1) / 32 * 100)
+    const newUnlocks = globalLoireAchievementManager.recordLessonCompleted({
+      levelId: isLevelDone ? levelId : null,
+      totalProgress: overallProgress
+    })
+    if (newUnlocks.length > 0) {
+      achievementNotification.value = newUnlocks[0]
+      setTimeout(() => { achievementNotification.value = null }, 4000)
+    }
   }
   loireLearningActions.exitLesson()
 }
@@ -201,6 +254,70 @@ watch(() => props.selectedLevel, (n) => {
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.lh-achievement-badge {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.lh-achievement-badge:hover { background: rgba(255, 215, 0, 0.35); }
+
+/* 成就通知 */
+.achievement-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #1d3d28, #2e5c3e);
+  color: white;
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+  animation: slideInRight 0.4s ease;
+}
+.notification-content { display: flex; align-items: center; gap: 12px; }
+.achievement-emoji { font-size: 1.6rem; }
+.achievement-info strong { font-size: 0.95rem; }
+.close-notification {
+  background: none; border: none; color: rgba(255,255,255,0.7);
+  font-size: 1.1rem; cursor: pointer; padding: 0 4px;
+}
+@keyframes slideInRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* 成就 Modal */
+.ls-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+}
+.ls-modal {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 860px;
+  max-height: 92vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+.ls-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #1d3d28, #2e5c3e);
+  color: white;
+}
+.ls-modal-header h3 { margin: 0; font-size: 1.1rem; font-weight: 700; }
+.ls-modal-close {
+  background: rgba(255,255,255,0.2); border: none; color: white;
+  font-size: 1.2rem; width: 30px; height: 30px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.ls-modal-body { flex: 1; overflow-y: auto; }
 
 .lh-nav-label {
   font-size: 0.85rem;
