@@ -76,8 +76,8 @@
       <section class="levels-section">
         <div class="section-header">
           <div class="section-title-group">
-            <h2>選擇課程階段</h2>
-            <p>循序漸進探索羅亞爾河谷的葡萄酒世界，完成 Level 1 即可解鎖進階課程。</p>
+            <h2>選擇課程產區</h2>
+            <p>依照官網五大子產區循序漸進，完成前一產區的綜合評量即可解鎖下一產區。</p>
           </div>
           <div class="section-actions">
             <button class="section-btn" @click="startJourney">
@@ -87,123 +87,86 @@
         </div>
 
         <div class="levels-grid">
-          <!-- Level 1 -->
+          <!-- Level 卡片（動態渲染） -->
           <div
-            class="level-card level-1"
-            :class="{ 'in-progress': level1Progress > 0 && level1Progress < 100, 'completed': level1Progress >= 100 }"
-            @click="emit('startLevel', 1)"
+            v-for="n in 5"
+            :key="n"
+            class="level-card"
+            :class="[
+              `level-${n}`,
+              {
+                'in-progress': getLevelProgress(n) > 0 && getLevelProgress(n) < 100,
+                'completed': getLevelProgress(n) >= 100,
+                'locked': !isLevelUnlocked(n)
+              }
+            ]"
+            @click="isLevelUnlocked(n) && emit('startLevel', n)"
           >
             <div class="card-accent-bar"></div>
             <div class="level-header">
               <div class="level-badge">
-                <span class="level-number">1</span>
-                <div class="level-icon">🌿</div>
+                <span class="level-number">{{ n }}</span>
+                <div class="level-icon">{{ getLevelData(n).emoji }}</div>
               </div>
               <div class="level-title-group">
-                <h3>羅亞爾河谷入門</h3>
-                <p>Level 1 · 基礎認識</p>
+                <h3>{{ getLevelData(n).title.replace(/^Level \d+ — /, '') }}</h3>
+                <p>Level {{ n }} · {{ getLevelData(n).titleFr }}</p>
               </div>
             </div>
             <div class="level-content">
-              <p class="level-description">
-                建立羅亞爾河谷葡萄酒的完整基礎：從 800 公里的地理旅程，到 Chenin Blanc、Melon de Bourgogne、Cabernet Franc 等品種，以及四大產區的代表酒款。
-              </p>
-              <div class="level-features">
-                <div class="feature-item"><span class="feature-icon">🍾</span><span>Chenin Blanc 從干型到甜酒金字塔</span></div>
-                <div class="feature-item"><span class="feature-icon">🗺️</span><span>四大產區深度探索</span></div>
-                <div class="feature-item"><span class="feature-icon">🥂</span><span>氣泡酒、干白、甜酒、紅酒全類型</span></div>
-                <div class="feature-item"><span class="feature-icon">🍽️</span><span>餐酒搭配黃金法則</span></div>
+              <p class="level-description">{{ getLevelData(n).description }}</p>
+              <!-- 代表 AOC 標籤 -->
+              <div class="aoc-tags">
+                <span
+                  v-for="aoc in getLevelData(n).keyAOC.slice(0, 3)"
+                  :key="aoc"
+                  class="aoc-tag"
+                >{{ aoc }}</span>
+              </div>
+              <!-- 品種資訊 -->
+              <div class="grape-info">
+                <span class="grape-label">品種：</span>
+                <span class="grape-value">{{ getLevelData(n).keyGrapes }}</span>
               </div>
               <div class="level-stats">
                 <div class="stat-item">
-                  <span class="stat-number">4</span>
+                  <span class="stat-number">{{ getLevelData(n).modules.length }}</span>
                   <span class="stat-label">個模組</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">8</span>
+                  <span class="stat-number">{{ getLevelData(n).lessons.length }}</span>
                   <span class="stat-label">堂課程</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">{{ Math.round(level1Progress) }}%</span>
-                  <span class="stat-label">完成度</span>
+                  <span class="stat-number">{{ isLevelUnlocked(n) ? Math.round(getLevelProgress(n)) + '%' : '🔒' }}</span>
+                  <span class="stat-label">{{ isLevelUnlocked(n) ? '完成度' : '鎖定中' }}</span>
                 </div>
               </div>
-              <div class="progress-bar-wrap">
+              <div class="progress-bar-wrap" v-if="isLevelUnlocked(n)">
                 <div class="progress-bar-track">
-                  <div class="progress-bar-fill" :style="{ width: `${level1Progress}%` }"></div>
+                  <div class="progress-bar-fill" :style="{ width: `${getLevelProgress(n)}%`, background: getLevelData(n).color }"></div>
                 </div>
               </div>
             </div>
             <div class="level-action">
-              <button class="level-btn" @click.stop="emit('startLevel', 1)">
-                <template v-if="level1Progress >= 100">重新學習</template>
-                <template v-else-if="level1Progress > 0">繼續學習</template>
+              <button
+                class="level-btn"
+                :style="isLevelUnlocked(n) ? { background: `linear-gradient(135deg, ${getLevelData(n).color}, ${getLevelData(n).color}cc)` } : {}"
+                :disabled="!isLevelUnlocked(n)"
+                @click.stop="isLevelUnlocked(n) && emit('startLevel', n)"
+              >
+                <template v-if="!isLevelUnlocked(n)">完成上一產區後解鎖</template>
+                <template v-else-if="getLevelProgress(n) >= 100">重新學習</template>
+                <template v-else-if="getLevelProgress(n) > 0">繼續學習</template>
                 <template v-else>開始學習</template>
-                <span class="btn-arrow">→</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Level 2 -->
-          <div
-            class="level-card level-2"
-            :class="{ 'locked': !level2Unlocked, 'in-progress': level2Progress > 0 && level2Progress < 100 }"
-            @click="level2Unlocked && emit('startLevel', 2)"
-          >
-            <div class="card-accent-bar"></div>
-            <div class="level-header">
-              <div class="level-badge">
-                <span class="level-number">2</span>
-                <div class="level-icon">🏆</div>
-              </div>
-              <div class="level-title-group">
-                <h3>羅亞爾河谷進階</h3>
-                <p>Level 2 · 深度研究</p>
-              </div>
-            </div>
-            <div class="level-content">
-              <p class="level-description">
-                深入各產區頂級酒款與頂尖生產者：Quarts de Chaume Grand Cru、Savennières 地塊、Sancerre 三種土壤，以及自然酒哲學與年份研究。
-              </p>
-              <div class="level-features">
-                <div class="feature-item"><span class="feature-icon">💎</span><span>Quarts de Chaume Grand Cru 全解</span></div>
-                <div class="feature-item"><span class="feature-icon">🪨</span><span>Sancerre 三種土壤對比品飲</span></div>
-                <div class="feature-item"><span class="feature-icon">🌱</span><span>自然酒哲學與生物動力農法</span></div>
-                <div class="feature-item"><span class="feature-icon">📅</span><span>年份差異深度分析</span></div>
-              </div>
-              <div class="level-stats">
-                <div class="stat-item">
-                  <span class="stat-number">3</span>
-                  <span class="stat-label">個模組</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number">6</span>
-                  <span class="stat-label">堂課程</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number">{{ level2Unlocked ? Math.round(level2Progress) + '%' : '🔒' }}</span>
-                  <span class="stat-label">{{ level2Unlocked ? '完成度' : '鎖定中' }}</span>
-                </div>
-              </div>
-              <div class="progress-bar-wrap" v-if="level2Unlocked">
-                <div class="progress-bar-track">
-                  <div class="progress-bar-fill l2-fill" :style="{ width: `${level2Progress}%` }"></div>
-                </div>
-              </div>
-            </div>
-            <div class="level-action">
-              <button class="level-btn" :disabled="!level2Unlocked" @click.stop="level2Unlocked && emit('startLevel', 2)">
-                <template v-if="!level2Unlocked">完成 Level 1 後解鎖</template>
-                <template v-else-if="level2Progress > 0">繼續學習</template>
-                <template v-else>開始學習</template>
-                <span v-if="level2Unlocked" class="btn-arrow">→</span>
+                <span v-if="isLevelUnlocked(n)" class="btn-arrow">→</span>
               </button>
             </div>
             <!-- 鎖定遮罩 -->
-            <div v-if="!level2Unlocked" class="lock-overlay">
+            <div v-if="!isLevelUnlocked(n)" class="lock-overlay">
               <div class="lock-content">
                 <span class="lock-icon">🔒</span>
-                <p>完成 Level 1 後解鎖</p>
+                <p>完成 Level {{ n - 1 }} 後解鎖</p>
               </div>
             </div>
           </div>
@@ -216,20 +179,20 @@
           <span class="hl-icon">🍷</span>
           <div class="hl-text">
             <strong>{{ totalLessonsCount }} 堂課程</strong>
-            <span>Level 1 + Level 2</span>
+            <span>橫跨五大子產區</span>
           </div>
         </div>
         <div class="highlight-item">
           <span class="hl-icon">🗺️</span>
           <div class="hl-text">
-            <strong>4 大產區</strong>
-            <span>Nantais · Anjou · Touraine · Centre</span>
+            <strong>5 大子產區</strong>
+            <span>Nantais · Anjou · Touraine · Centre · Loir</span>
           </div>
         </div>
         <div class="highlight-item">
           <span class="hl-icon">🍇</span>
           <div class="hl-text">
-            <strong>8 個品種</strong>
+            <strong>10+ 個品種</strong>
             <span>Chenin · Muscadet · Sauvignon · Cab Franc…</span>
           </div>
         </div>
@@ -242,12 +205,6 @@
         </div>
       </section>
 
-      <!-- 未登入提示 -->
-      <div v-if="!authUser" class="sync-hint-bar">
-        📍 登入後可將學習進度同步至雲端，跨裝置繼續學習
-      </div>
-    </div>
-
     <!-- 學習進度 Modal -->
     <Teleport to="body">
       <div v-if="showProgressModal" class="progress-modal-overlay" @click.self="showProgressModal = false">
@@ -258,31 +215,22 @@
           </div>
           <div class="pm-body">
             <div class="progress-detail-grid">
-              <div class="pd-item">
-                <div class="pd-label">Level 1 進度</div>
-                <div class="pd-value">{{ Math.round(level1Progress) }}%</div>
-                <div class="pd-bar"><div :style="{ width: level1Progress + '%' }"></div></div>
-              </div>
-              <div class="pd-item">
-                <div class="pd-label">Level 2 進度</div>
-                <div class="pd-value">{{ level2Unlocked ? Math.round(level2Progress) + '%' : '🔒 未解鎖' }}</div>
-                <div class="pd-bar" v-if="level2Unlocked"><div :style="{ width: level2Progress + '%' }"></div></div>
+              <div
+                v-for="n in 5"
+                :key="n"
+                class="pd-item"
+              >
+                <div class="pd-label">{{ getLevelData(n).emoji }} Level {{ n }} — {{ getLevelData(n).title?.replace(/^Level \d+ — /, '') }}</div>
+                <div class="pd-value" :style="{ color: getLevelData(n).color }">
+                  {{ isLevelUnlocked(n) ? Math.round(getLevelProgress(n)) + '%' : '🔒 未解鎖' }}
+                </div>
+                <div class="pd-bar" v-if="isLevelUnlocked(n)">
+                  <div :style="{ width: getLevelProgress(n) + '%', background: getLevelData(n).color }"></div>
+                </div>
               </div>
               <div class="pd-item pd-wide">
                 <div class="pd-label">已完成課程</div>
                 <div class="pd-value">{{ completedCount }} / {{ totalLessonsCount }} 堂</div>
-              </div>
-            </div>
-            <div class="pm-lesson-list">
-              <h4>Level 1 課程進度</h4>
-              <div
-                v-for="lesson in level1Lessons"
-                :key="lesson.id"
-                class="pm-lesson-row"
-              >
-                <span class="pm-lesson-status">{{ isCompleted(lesson.id) ? '✅' : '⭕' }}</span>
-                <span class="pm-lesson-title">{{ lesson.title }}</span>
-                <span class="pm-lesson-time">{{ lesson.duration }}分</span>
               </div>
             </div>
           </div>
@@ -337,40 +285,36 @@ onMounted(async () => {
   }
 })
 
-// 課程資料
-const level1Lessons = computed(() => loireLearningLevels.level1?.lessons || [])
-const level2Lessons = computed(() => loireLearningLevels.level2?.lessons || [])
-const totalLessonsCount = computed(() => level1Lessons.value.length + level2Lessons.value.length)
+// ── Level 資料輔助函式 ────────────────────────
+function getLevelData(n) {
+  return loireLearningLevels[`level${n}`] || {}
+}
 
 function isCompleted(id) {
   return loireLearningState.completedLessons.includes(id)
 }
 
-// 進度計算
-const level1Progress = computed(() => {
-  const total = level1Lessons.value.length
-  if (!total) return 0
-  const done = level1Lessons.value.filter(l => isCompleted(l.id)).length
-  return (done / total) * 100
-})
+function getLevelProgress(n) {
+  const data = getLevelData(n)
+  const lessons = data.lessons || []
+  if (!lessons.length) return 0
+  const done = lessons.filter(l => isCompleted(l.id)).length
+  return (done / lessons.length) * 100
+}
 
-const level2Unlocked = computed(() => {
+function isLevelUnlocked(n) {
   if (loireLearningState.testMode) return true
-  const finalId = loireLearningActions.getFinalLessonId(1)
-  return finalId != null && loireLearningState.completedLessons.includes(finalId)
+  if (n === 1) return true
+  const prevFinalId = loireLearningActions.getFinalLessonId(n - 1)
+  return prevFinalId != null && loireLearningState.completedLessons.includes(prevFinalId)
+}
+
+// ── 課程統計 ────────────────────────────────
+const totalLessonsCount = computed(() => {
+  return [1,2,3,4,5].reduce((sum, n) => sum + (getLevelData(n).lessons?.length || 0), 0)
 })
 
-const level2Progress = computed(() => {
-  if (!level2Unlocked.value) return 0
-  const total = level2Lessons.value.length
-  if (!total) return 0
-  const done = level2Lessons.value.filter(l => isCompleted(l.id)).length
-  return (done / total) * 100
-})
-
-const completedCount = computed(() =>
-  loireLearningState.completedLessons.length
-)
+const completedCount = computed(() => loireLearningState.completedLessons.length)
 
 const totalProgressPct = computed(() => {
   const total = totalLessonsCount.value
@@ -378,22 +322,29 @@ const totalProgressPct = computed(() => {
   return Math.round((completedCount.value / total) * 100)
 })
 
-// 首頁按鈕文字
+// ── 首頁按鈕文字 ────────────────────────────
 const heroButtonText = computed(() => {
-  if (level1Progress.value >= 100 && level2Unlocked.value) return '開始 Level 2'
-  if (level1Progress.value > 0) return '繼續 Level 1'
+  for (let n = 5; n >= 1; n--) {
+    if (isLevelUnlocked(n) && getLevelProgress(n) > 0 && getLevelProgress(n) < 100) {
+      return `繼續 Level ${n}`
+    }
+  }
+  if (getLevelProgress(1) >= 100 && isLevelUnlocked(2)) return '開始 Level 2'
+  if (getLevelProgress(1) > 0) return '繼續 Level 1'
   return '開始學習'
 })
 
 function startJourney() {
-  if (level1Progress.value >= 100 && level2Unlocked.value) {
-    emit('startLevel', 2)
-  } else {
-    emit('startLevel', 1)
+  for (let n = 1; n <= 5; n++) {
+    if (isLevelUnlocked(n) && getLevelProgress(n) < 100) {
+      emit('startLevel', n)
+      return
+    }
   }
+  emit('startLevel', 1)
 }
 
-// 水波動畫
+// ── 水波動畫 ────────────────────────────────
 function getWaveStyle(i) {
   return {
     animationDelay: `${(i - 1) * 1.2}s`,
@@ -656,7 +607,7 @@ function getBubbleStyle(i) {
 
 .levels-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
@@ -680,8 +631,11 @@ function getBubbleStyle(i) {
   background: linear-gradient(90deg, #2e5c3e, #c9a84c);
 }
 
-.level-1 .card-accent-bar { background: linear-gradient(90deg, #2e5c3e, #5a9e70); }
-.level-2 .card-accent-bar { background: linear-gradient(90deg, #c9a84c, #e8c76a); }
+.level-1 .card-accent-bar { background: linear-gradient(90deg, #1a6b5a, #2ea882); }
+.level-2 .card-accent-bar { background: linear-gradient(90deg, #8b2c2c, #c44b4b); }
+.level-3 .card-accent-bar { background: linear-gradient(90deg, #c19a28, #e8c76a); }
+.level-4 .card-accent-bar { background: linear-gradient(90deg, #2c6e8a, #4bafc9); }
+.level-5 .card-accent-bar { background: linear-gradient(90deg, #7a5c3a, #b38c5a); }
 
 .level-header {
   display: flex;
@@ -692,15 +646,19 @@ function getBubbleStyle(i) {
 .level-badge {
   width: 60px; height: 60px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #2e5c3e, #5a9e70);
+  background: linear-gradient(135deg, #1a6b5a, #2ea882);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(46,92,62,0.3);
+  box-shadow: 0 4px 12px rgba(26,107,90,0.3);
 }
-.level-2 .level-badge { background: linear-gradient(135deg, #c9a84c, #e8c76a); }
+.level-1 .level-badge { background: linear-gradient(135deg, #1a6b5a, #2ea882); }
+.level-2 .level-badge { background: linear-gradient(135deg, #8b2c2c, #c44b4b); }
+.level-3 .level-badge { background: linear-gradient(135deg, #c19a28, #e8c76a); }
+.level-4 .level-badge { background: linear-gradient(135deg, #2c6e8a, #4bafc9); }
+.level-5 .level-badge { background: linear-gradient(135deg, #7a5c3a, #b38c5a); }
 .level-number { font-size: 1.5rem; font-weight: 900; color: white; line-height: 1; }
 .level-icon   { font-size: 0.85rem; margin-top: 1px; }
 
@@ -708,11 +666,24 @@ function getBubbleStyle(i) {
 .level-title-group p  { font-size: 0.78rem; color: #888; margin: 0; }
 
 .level-content { padding: 0 1.5rem 1rem; flex: 1; }
-.level-description { font-size: 0.85rem; color: #555; line-height: 1.6; margin-bottom: 1rem; }
+.level-description { font-size: 0.85rem; color: #555; line-height: 1.6; margin-bottom: 0.75rem; }
 
-.level-features { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
-.feature-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: #444; }
-.feature-icon { font-size: 0.9rem; flex-shrink: 0; }
+/* AOC 標籤 */
+.aoc-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.65rem; }
+.aoc-tag {
+  padding: 0.2rem 0.55rem;
+  background: rgba(46,92,62,0.08);
+  border: 1px solid rgba(46,92,62,0.2);
+  border-radius: 20px;
+  font-size: 0.72rem;
+  color: #2e5c3e;
+  font-weight: 600;
+}
+
+/* 品種資訊 */
+.grape-info { font-size: 0.78rem; color: #666; margin-bottom: 0.75rem; }
+.grape-label { font-weight: 700; color: #444; }
+.grape-value { color: #666; }
 
 .level-stats {
   display: flex;
@@ -721,7 +692,11 @@ function getBubbleStyle(i) {
 }
 .stat-item { display: flex; flex-direction: column; align-items: center; }
 .stat-number { font-size: 1.4rem; font-weight: 800; color: #2e5c3e; }
-.level-2 .stat-number { color: #b8922a; }
+.level-1 .stat-number { color: #1a6b5a; }
+.level-2 .stat-number { color: #8b2c2c; }
+.level-3 .stat-number { color: #b8922a; }
+.level-4 .stat-number { color: #2c6e8a; }
+.level-5 .stat-number { color: #7a5c3a; }
 .stat-label  { font-size: 0.72rem; color: #888; }
 
 .progress-bar-wrap { margin-bottom: 0.5rem; }
@@ -733,11 +708,10 @@ function getBubbleStyle(i) {
 }
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #2e5c3e, #5a9e70);
+  background: linear-gradient(90deg, #1a6b5a, #2ea882);
   border-radius: 3px;
   transition: width 0.6s ease;
 }
-.l2-fill { background: linear-gradient(90deg, #c9a84c, #e8c76a); }
 
 .level-action { padding: 0 1.5rem 1.25rem; }
 .level-btn {
@@ -757,7 +731,6 @@ function getBubbleStyle(i) {
   gap: 0.5rem;
   font-family: inherit;
 }
-.level-2 .level-btn:not(:disabled) { background: linear-gradient(135deg, #c9a84c, #e8c76a); color: #1d3d28; }
 .level-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(46,92,62,0.3); }
 .level-btn:disabled {
   background: #e9ecef;

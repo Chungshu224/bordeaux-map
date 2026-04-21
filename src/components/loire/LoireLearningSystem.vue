@@ -56,6 +56,7 @@ import {
   loireLearningActions,
   loireLearningProgress
 } from '../../stores/loireLearningStore.js'
+import { authActions } from '../../stores/authStore.js'
 import LoireLevelSelector from './LoireLevelSelector.vue'
 import LoireCourseLayout from './LoireCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
@@ -81,7 +82,7 @@ const currentLevelData = computed(() => loireLearningLevels[`level${currentLevel
 const totalProgress = computed(() => loireLearningProgress.value)
 
 const unlockedLevels = computed(() =>
-  [1, 2].filter(n => isLevelUnlocked(n))
+  [1, 2, 3, 4, 5].filter(n => isLevelUnlocked(n))
 )
 
 const canGoPrevious = computed(() => {
@@ -107,6 +108,7 @@ const currentSlideTitle = computed(() => {
 
 function isLevelUnlocked(level) {
   if (loireLearningState.testMode) return true
+  if (authActions.isAdmin()) return true
   if (level === 1) return true
   const finalId = loireLearningActions.getFinalLessonId(level - 1)
   return finalId != null && loireLearningState.completedLessons.includes(finalId)

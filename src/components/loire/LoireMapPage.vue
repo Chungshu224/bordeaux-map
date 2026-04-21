@@ -184,6 +184,19 @@
           <div class="mobile-aoc-toolbar-hdr">
             <h2>Loire Valley</h2>
           </div>
+          <!-- 課程產區快速導航 -->
+          <div class="course-level-chips">
+            <button
+              v-for="n in 5"
+              :key="n"
+              class="clevel-chip"
+              :class="{ active: activeLevelFilter === n }"
+              :style="activeLevelFilter === n ? { background: LEVEL_MAP_GROUPS[n].color, borderColor: LEVEL_MAP_GROUPS[n].color } : { borderColor: LEVEL_MAP_GROUPS[n].color, color: LEVEL_MAP_GROUPS[n].color }"
+              @click="selectLevelFilter(n)"
+            >
+              {{ LEVEL_MAP_GROUPS[n].emoji }} Lv.{{ n }} {{ LEVEL_MAP_GROUPS[n].label }}
+            </button>
+          </div>
           <input
             type="text"
             class="aoc-search"
@@ -291,12 +304,23 @@ function groupColor(key) { return GROUP_COLORS[key] || '#888' }
 // ── 群組標籤 ──────────────────────────────────────────────────
 const groupLabels = {
   Regional:      'Regional',
-  PayNantes:     'Pays Nantais',
-  AnjouSaumur:   'Anjou-Saumur',
-  Touraine:      'Touraine',
-  Centre:        'Centre',
-  MassifCentral: 'Massif Central',
+  PayNantes:     'Lv.1 · Pays Nantais',
+  AnjouSaumur:   'Lv.2 · Anjou-Saumur',
+  Touraine:      'Lv.3 · Touraine',
+  Centre:        'Lv.4 · Centre',
+  MassifCentral: 'Lv.5 · Massif Central',
 }
+
+// ── 課程 Level → 產區群組對應 ───────────────────────────────
+const LEVEL_MAP_GROUPS = {
+  1: { key: 'PayNantes',     emoji: '🌊', color: '#1a6b5a', label: '南特' },
+  2: { key: 'AnjouSaumur',  emoji: '🏰', color: '#8b2c2c', label: '安茹' },
+  3: { key: 'Touraine',     emoji: '🦁', color: '#c19a28', label: '都漢' },
+  4: { key: 'Centre',       emoji: '🌿', color: '#2c6e8a', label: '中央' },
+  5: { key: 'MassifCentral',emoji: '🌻', color: '#7a5c3a', label: '支流' },
+}
+
+const activeLevelFilter = ref(null)
 
 // ── AOC 群組清單 ───────────────────────────────────────────────
 const aocGroups = {
@@ -445,10 +469,96 @@ function getGeojsonPath(group, aocFile) {
 // ── 選擇產區 ──────────────────────────────────────────────────
 async function selectAOC(group, aocFile) {
   activeAOC.value = { group, aoc: aocFile }
+  activeLevelFilter.value = null
   infoBarCollapsed.value = false
   const aocId = aocFile.replace('.geojson', '')
   regionInfo.value = regionsData.value.find(r => r.id === aocId) || null
+  // 清除群組高亮
+  if (map) {
+    if (map.getLayer('loire-group-fill')) map.removeLayer('loire-group-fill')
+    if (map.getLayer('loire-group-outline')) map.removeLayer('loire-group-outline')
+    if (map.getSource('loire-group')) map.removeSource('loire-group')
+  }
   await showAOCGeojson(group, aocFile)
+}
+
+// ── 課程產區篩選 ──────────────────────────────────────────────
+async function selectLevelFilter(n) {
+  if (activeLevelFilter.value === n) {
+    activeLevelFilter.value = null
+    if (map) {
+      if (map.getLayer('loire-group-fill')) map.removeLayer('loire-group-fill')
+      if (map.getLayer('loire-group-outline')) map.removeLayer('loire-group-outline')
+      if (map.getSource('loire-group')) map.removeSource('loire-group')
+    }
+    return
+  }
+  activeLevelFilter.value = n
+  const groupKey = LEVEL_MAP_GROUPS[n]?.key
+  if (groupKey) {
+    expandedGroups.value[groupKey] = true
+    await highlightGroupOnMap(groupKey)
+  }
+}
+
+async function highlightGroupOnMap(groupKey) {
+  if (!map) return
+  const files = aocGroups[groupKey] || []
+  isLoading.value = true
+  mapError.value = null
+  // 清除單一 AOC 圖層
+  if (map.getLayer('loire-fill')) map.removeLayer('loire-fill')
+  if (map.getLayer('loire-outline')) map.removeLayer('loire-outline')
+  if (map.getSource('loire-aoc')) map.removeSource('loire-aoc')
+  // 清除舊的群組圖層
+  if (map.getLayer('loire-group-fill')) map.removeLayer('loire-group-fill')
+  if (map.getLayer('loire-group-outline')) map.removeLayer('loire-group-outline')
+  if (map.getSource('loire-group')) map.removeSource('loire-group')
+  activeAOC.value = null
+  try {
+    const maxFiles = Math.min(files.length, 10)
+    const features = []
+    for (let i = 0; i < maxFiles; i++) {
+      const path = getGeojsonPath(groupKey, files[i])
+      try {
+        let geojson
+        if (geojsonCache.has(path)) {
+          geojson = geojsonCache.get(path)
+        } else {
+          const res = await fetch(path)
+          if (!res.ok) continue
+          geojson = await res.json()
+          geojsonCache.set(path, geojson)
+        }
+        if (geojson.features) features.push(...geojson.features)
+        else if (geojson.type === 'Feature') features.push(geojson)
+      } catch {}
+    }
+    if (!features.length) return
+    const combined = { type: 'FeatureCollection', features }
+    map.addSource('loire-group', { type: 'geojson', data: combined })
+    map.addLayer({
+      id: 'loire-group-fill',
+      type: 'fill',
+      source: 'loire-group',
+      paint: { 'fill-color': groupColor(groupKey), 'fill-opacity': 0.22 }
+    })
+    map.addLayer({
+      id: 'loire-group-outline',
+      type: 'line',
+      source: 'loire-group',
+      paint: { 'line-color': groupColor(groupKey), 'line-width': 2, 'line-opacity': 0.9 }
+    })
+    try {
+      const bbox = turf.bbox(combined)
+      map.fitBounds(bbox, { padding: 80, duration: 900 })
+    } catch {}
+  } catch (err) {
+    mapError.value = `群組載入失敗：${err.message}`
+    setTimeout(() => { mapError.value = null }, 4000)
+  } finally {
+    isLoading.value = false
+  }
 }
 
 // ── 顯示 GeoJSON ─────────────────────────────────────────────
@@ -509,11 +619,15 @@ function playPronunciation() {
 // ── 重置地圖 ──────────────────────────────────────────────────
 function resetMap() {
   activeAOC.value = null
+  activeLevelFilter.value = null
   regionInfo.value = null
   if (map) {
     if (map.getLayer('loire-fill')) map.removeLayer('loire-fill')
     if (map.getLayer('loire-outline')) map.removeLayer('loire-outline')
     if (map.getSource('loire-aoc')) map.removeSource('loire-aoc')
+    if (map.getLayer('loire-group-fill')) map.removeLayer('loire-group-fill')
+    if (map.getLayer('loire-group-outline')) map.removeLayer('loire-group-outline')
+    if (map.getSource('loire-group')) map.removeSource('loire-group')
     map.flyTo({ center: [1.2, 47.5], zoom: 6.5, duration: 1000 })
   }
 }
@@ -1015,6 +1129,30 @@ html, body {
   color: #2d6a4f;
   margin: 0 0 8px;
 }
+
+/* ── 課程產區快速導航 ──────────────────────────────────────── */
+.course-level-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 16px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  margin-bottom: 2px;
+}
+.clevel-chip {
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1.5px solid;
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.clevel-chip.active { color: white; }
+.clevel-chip:hover { opacity: 0.85; transform: translateY(-1px); }
 .mobile-aoc-body {
   flex: 1;
   overflow-y: auto;
