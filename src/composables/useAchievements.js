@@ -1,5 +1,5 @@
 // 統一成就系統組合式函數
-// 支援 courseKey: 'bordeaux' | 'bourgogne' | 'italy'
+// 支援 courseKey: 'bordeaux' | 'bourgogne' | 'italy' | 'spain'
 import { computed } from 'vue'
 import {
   achievementState,
@@ -16,12 +16,24 @@ import {
   italyAchievementDefinitions,
   globalItalyAchievementManager
 } from '../stores/italyAchievementSystem.js'
+import {
+  spainAchievementState,
+  spainAchievementDefinitions,
+  globalSpainAchievementManager
+} from '../stores/spainAchievementSystem.js'
+import {
+  germanyAchievementState,
+  germanyAchievementDefinitions,
+  globalGermanyAchievementManager
+} from '../stores/germanyAchievementSystem.js'
 
 // ── 課程標籤 ──────────────────────────────────────────────────
 const COURSE_LABELS = {
   bordeaux:  '侍酒師的筆記本',
   bourgogne: '侍酒師的筆記本',
-  italy:     '侍酒師的筆記本'
+  italy:     '侍酒師的筆記本',
+  germany:   '侍酒師的筆記本',
+  spain:     '侍酒師的筆記本'
 }
 
 // ── 各課程分類定義 ────────────────────────────────────────────
@@ -52,7 +64,21 @@ const COURSE_CATEGORIES = {
     { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
     { id: 'time',       name: '時間特殊', icon: '⏰' },
     { id: 'special',    name: '特殊成就', icon: '⭐' }
-  ]
+  ],
+  germany: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }  ],
+  spain: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }  ]
 }
 
 // 波爾多等級圖示補充（原始 manager 沒有 icon 欄位）
@@ -89,6 +115,14 @@ export function useAchievements(courseKey) {
     state       = italyAchievementState
     definitions = italyAchievementDefinitions
     manager     = globalItalyAchievementManager
+  } else if (courseKey === 'germany') {
+    state       = germanyAchievementState
+    definitions = germanyAchievementDefinitions
+    manager     = globalGermanyAchievementManager
+  } else if (courseKey === 'spain') {
+    state       = spainAchievementState
+    definitions = spainAchievementDefinitions
+    manager     = globalSpainAchievementManager
   } else {
     // default: bordeaux
     state       = achievementState

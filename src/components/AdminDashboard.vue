@@ -183,6 +183,12 @@
                 @click="toggleCourseActive(c)">
                 {{ togglingCourse === c.id ? '處理中…' : c.active ? '下架' : '上架' }}
               </button>
+              <button
+                :class="['btn-sm', c.show_on_home !== false ? 'btn-show-on' : 'btn-show-off']"
+                :disabled="togglingShowHome === c.id"
+                @click="toggleCourseShowHome(c)">
+                {{ togglingShowHome === c.id ? '處理中…' : c.show_on_home !== false ? '🏠 首頁顯示' : '🚫 首頁隱藏' }}
+              </button>
               <span :class="['status-dot', c.active ? 'on' : 'off']">
                 {{ c.active ? '上架中' : '已下架' }}
               </span>
@@ -535,10 +541,11 @@ async function saveNotes() {
 }
 
 // ── 課程管理 ────────────────────────────────────────────────
-const courses        = ref([])
-const editingCourse  = ref(null)
-const savingCourse   = ref(false)
-const togglingCourse = ref(null)
+const courses          = ref([])
+const editingCourse    = ref(null)
+const savingCourse     = ref(false)
+const togglingCourse   = ref(null)
+const togglingShowHome = ref(null)
 
 async function loadCourses() {
   const { data } = await supabase.from('courses').select('*').order('id')
@@ -556,6 +563,21 @@ async function toggleCourseActive(c) {
     await loadCourses()
   } finally {
     togglingCourse.value = null
+  }
+}
+
+async function toggleCourseShowHome(c) {
+  togglingShowHome.value = c.id
+  try {
+    const newVal = c.show_on_home !== false ? false : true
+    const { error } = await supabase.from('courses').update({ show_on_home: newVal }).eq('id', c.id)
+    if (error) throw error
+    await loadCourses()
+  } catch (err) {
+    console.error('更新首頁顯示失敗：', err)
+    alert('更新首頁顯示失敗：' + (err.message || JSON.stringify(err)))
+  } finally {
+    togglingShowHome.value = null
   }
 }
 
@@ -660,10 +682,10 @@ function tierColor(tier) {
   return { free: '#aaa', basic: '#2980b9', premium: '#8e44ad' }[tier] ?? '#999'
 }
 function courseLabel(id) {
-  return { bordeaux: '波爾多', bourgogne: '布根地', italy: '義大利', spain: '西班牙', germany: '德國', portugal: '葡萄牙', australia: '澳洲', newzealand: '紐西蘭' }[id] ?? id
+  return { bordeaux: '波爾多', bourgogne: '布根地', italy: '義大利', spain: '西班牙', germany: '德國', portugal: '葡萄牙', australia: '澳洲', newzealand: '紐西蘭', loire: '羅亞爾河', california: '加州' }[id] ?? id
 }
 function courseFlag(id) {
-  return { bordeaux: '🇫🇷', bourgogne: '🇫🇷', italy: '🇮🇹', spain: '🇪🇸', germany: '🇩🇪', portugal: '🇵🇹', australia: '🇦🇺', newzealand: '🇳🇿' }[id] ?? '🍷'
+  return { bordeaux: '🇫🇷', bourgogne: '🇫🇷', italy: '🇮🇹', spain: '🇪🇸', germany: '🇩🇪', portugal: '🇵🇹', australia: '🇦🇺', newzealand: '🇳🇿', loire: '🇫🇷', california: '🇺🇸' }[id] ?? '🍷'
 }
 function formatDate(dateStr) {
   if (!dateStr) return '—'
@@ -887,6 +909,10 @@ function formatStudyTime(sec) {
 .btn-activate:hover { background: #14532d !important; }
 .btn-deactivate { background: #92400e !important; }
 .btn-deactivate:hover { background: #78350f !important; }
+.btn-show-on  { background: #0369a1 !important; }
+.btn-show-on:hover  { background: #075985 !important; }
+.btn-show-off { background: #6b7280 !important; }
+.btn-show-off:hover { background: #4b5563 !important; }
 .btn-xs { background: #f0ebe5; color: #555; padding: 4px 12px; font-size: .78rem; }
 .btn-xs:hover { background: #e3dad0; }
 .btn-primary { background: #8b1a2b; color: #fff; }

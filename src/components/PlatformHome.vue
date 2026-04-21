@@ -53,13 +53,13 @@
               <button class="cta-course spain-btn" @click="router.push('/spain')">🇪🇸 西班牙</button>
               <button class="cta-course germany-btn" @click="router.push('/germany')">🇩🇪 德國</button>
               <button class="cta-course portugal-btn" @click="router.push('/portugal')">🇵🇹 葡萄牙</button>
-              <button class="cta-course hungary-btn" @click="router.push('/hungary')">🇭🇺 匈牙利</button>
+              <button class="cta-course hungary-btn" @click="router.push('/hungary/course')">🇭🇺 匈牙利</button>
             </div>
             <div class="ceg-row">
               <span class="ceg-label">🌏 新世界</span>
               <button class="cta-course australia-btn" @click="router.push('/australia')">🦘 澳洲</button>
               <button class="cta-course newzealand-btn" @click="router.push('/newzealand')">🥝 紐西蘭</button>
-              <button class="cta-course california-btn" @click="router.push('/california')">🍷 加州</button>
+              <button class="cta-course california-btn" @click="router.push('/california/course')">🍷 加州</button>
             </div>
           </div>
         </div>
@@ -105,14 +105,21 @@
     <section class="courses-section" ref="coursesRef">
       <div class="section-inner">
         <div class="section-header">
-          <h2>探索 8 大世界產區</h2>
+          <h2>探索世界產區</h2>
           <p>每個產區獨立課程，結合互動衛星地圖・分級測驗・品飲筆記，系統化建立葡萄酒知識</p>
         </div>
 
+      <!-- ── 法國 France ── -->
+      <div class="region-group">
+        <div class="region-group-header">
+          <span class="rg-icon">🇫🇷</span>
+          <span class="rg-name">法國</span>
+          <span class="rg-en">France</span>
+        </div>
         <div class="courses-grid">
 
           <!-- ── Bordeaux ── -->
-          <div class="course-card bordeaux">
+          <div v-if="courseShowHome['bordeaux'] || isAdmin" class="course-card bordeaux">
             <div :class="['card-status', courseStatuses.bordeaux ? 'available' : 'planning']">
               {{ courseStatuses.bordeaux ? '✅ 現已開放' : '📅 課程規劃中' }}
             </div>
@@ -140,7 +147,7 @@
           </div>
 
           <!-- ── Bourgogne ── -->
-          <div class="course-card bourgogne">
+          <div v-if="courseShowHome['bourgogne'] || isAdmin" class="course-card bourgogne">
             <div :class="['card-status', courseStatuses.bourgogne ? 'active' : 'planning']">
               {{ isAdmin ? '🔓 管理員開放' : courseStatuses.bourgogne ? '✅ 開放中' : '📅 課程規劃中' }}
             </div>
@@ -177,14 +184,62 @@
               <span class="cpf-item">✔ 山坡 · 土壤層次分析</span>
               <span class="cpf-item">✔ 氣候影響與年份差異解讀</span>
             </div>
-            <div class="card-actions">
-              <button v-if="courseStatuses.bourgogne || isAdmin" class="card-cta bourgogne-cta" @click="router.push('/bourgogne')">📖 進入課程 →</button>
-              <span v-else class="planning-cta">開發中，敬請期待</span>
+
+          </div>
+
+          <!-- ── Loire ── -->
+          <div v-if="courseShowHome['loire'] || isAdmin" class="course-card loire">
+            <div :class="['card-status', courseStatuses.loire ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.loire ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🌿</div>
+              <div class="card-region">France · Loire Valley</div>
+              <h3 class="card-title">羅亞爾河谷葡萄酒</h3>
+              <p class="card-desc">法國最長的葡萄酒產區，從大西洋 Muscadet 到礦石 Sancerre，800 公里的葡萄酒王國，涵蓋氣泡酒、白酒、紅酒到甜酒的完整風格版圖</p>
+            </div>
+            <div class="course-preview-strip loire-strip">
+              <div class="cp-stat">
+                <span class="cp-num">13</span>
+                <span class="cp-label">主要<br>產區</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">800</span>
+                <span class="cp-label">公里<br>河流</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">SB</span>
+                <span class="cp-label">旗艦<br>品種</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3+</span>
+                <span class="cp-label">課程<br>等級</span>
+              </div>
+            </div>
+            <div class="course-preview-features loire-features">
+              <span class="cpf-item loire-tag">✔ 13 產區互動衛星地圖</span>
+              <span class="cpf-item loire-tag">✔ Sancerre / Pouilly-Fumé 礦石白酒</span>
+              <span class="cpf-item loire-tag">✔ Vouvray / Chinon 貴腐甜酒與紅酒</span>
             </div>
           </div>
 
+        </div><!-- /courses-grid 法國 -->
+      </div><!-- /region-group 法國 -->
+
+      <!-- ── 舊世界 Old World ── -->
+      <div class="region-group">
+        <div class="region-group-header">
+          <span class="rg-icon">🏛️</span>
+          <span class="rg-name">舊世界</span>
+          <span class="rg-en">Old World</span>
+        </div>
+        <div class="courses-grid">
+
           <!-- ── Italy ── -->
-          <div class="course-card italy">
+          <div v-if="courseShowHome['italy'] || isAdmin" class="course-card italy">
             <div :class="['card-status', courseStatuses.italy ? 'active' : 'planning']">
               {{ isAdmin ? '🔓 管理員開放' : courseStatuses.italy ? '✅ 開放中' : '📅 課程規劃中' }}
             </div>
@@ -221,14 +276,11 @@
               <span class="cpf-item italy-tag">✔ Nebbiolo / Sangiovese 品種比較</span>
               <span class="cpf-item italy-tag">✔ DOC → DOCG 分級演變課</span>
             </div>
-            <div class="card-actions">
-              <button v-if="courseStatuses.italy || isAdmin" class="card-cta italy-cta" @click="router.push('/italy')">📖 進入課程 →</button>
-              <span v-else class="planning-cta">開發中，敬請期待</span>
-            </div>
+
           </div>
 
           <!-- ── Spain ── -->
-          <div class="course-card spain">
+          <div v-if="courseShowHome['spain'] || isAdmin" class="course-card spain">
             <div :class="['card-status', courseStatuses.spain ? 'active' : 'planning']">
               {{ isAdmin ? '🔓 管理員開放' : courseStatuses.spain ? '✅ 開放中' : '📅 課程規劃中' }}
             </div>
@@ -265,14 +317,11 @@
               <span class="cpf-item spain-tag">✔ Tempranillo / Garnacha 深度解析</span>
               <span class="cpf-item spain-tag">✔ Sherry / Cava 特殊酒型專課</span>
             </div>
-            <div class="card-actions">
-              <button v-if="courseStatuses.spain || isAdmin" class="card-cta spain-cta" @click="router.push('/spain')">📖 進入課程 →</button>
-              <span v-else class="planning-cta">開發中，敬請期待</span>
-            </div>
+
           </div>
 
           <!-- ── Germany ── -->
-          <div class="course-card germany">
+          <div v-if="courseShowHome['germany'] || isAdmin" class="course-card germany">
             <div :class="['card-status', courseStatuses.germany ? 'active' : 'planning']">
               {{ isAdmin ? '🔓 管理員開放' : courseStatuses.germany ? '✅ 開放中' : '📅 課程規劃中' }}
             </div>
@@ -308,14 +357,11 @@
               <span class="cpf-item germany-tag">✔ Mosel 陡坡 Riesling 深度解析</span>
               <span class="cpf-item germany-tag">✔ Kabinett → TBA 甜度分級</span>
             </div>
-            <div class="card-actions">
-              <button v-if="courseStatuses.germany || isAdmin" class="card-cta germany-cta" @click="router.push('/germany')">🗺 探索地圖 →</button>
-              <span v-else class="planning-cta">開發中，敬請期待</span>
-            </div>
+
           </div>
 
           <!-- ── Portugal ── -->
-          <div class="course-card portugal">
+          <div v-if="courseShowHome['portugal'] || isAdmin" class="course-card portugal">
             <div :class="['card-status', courseStatuses.portugal ? 'active' : 'planning']">
               {{ isAdmin ? '🔓 管理員開放' : courseStatuses.portugal ? '✅ 開放中' : '📅 課程規劃中' }}
             </div>
@@ -351,14 +397,62 @@
               <span class="cpf-item portugal-tag">✔ Douro 梯田波特酒產區深度解析</span>
               <span class="cpf-item portugal-tag">✔ Madeira 島嶼加強酒探索</span>
             </div>
-            <div class="card-actions">
-              <button v-if="courseStatuses.portugal || isAdmin" class="card-cta portugal-cta" @click="router.push('/portugal')">🗺 探索地圖 →</button>
-              <span v-else class="planning-cta">開發中，敬請期待</span>
+
+          </div>
+
+          <!-- ── Hungary ── -->
+          <div v-if="courseShowHome['hungary'] || isAdmin" class="course-card hungary">
+            <div :class="['card-status', courseStatuses.hungary ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.hungary ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🇭🇺</div>
+              <div class="card-region">Hungary · Magyarország</div>
+              <h3 class="card-title">匈牙利葡萄酒</h3>
+              <p class="card-desc">探索 Tokaji Aszú 貴腐酒的傳奇故鄉，從 22 個法定產區到 Furmint 旗艦品種，深入解析匈牙利五級甜度系統與舊世界釀酒文化</p>
+            </div>
+            <div class="course-preview-strip hungary-strip">
+              <div class="cp-stat">
+                <span class="cp-num">22</span>
+                <span class="cp-label">法定<br>產區</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Tokaji</span>
+                <span class="cp-label">頂級<br>甜酒</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">5</span>
+                <span class="cp-label">甜度<br>等級</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Furmint</span>
+                <span class="cp-label">旗艦<br>品種</span>
+              </div>
+            </div>
+            <div class="course-preview-features hungary-features">
+              <span class="cpf-item hungary-tag">✔ 22 法定產區互動衛星地圖</span>
+              <span class="cpf-item hungary-tag">✔ Tokaji Aszú 貴腐甜酒完整解析</span>
+              <span class="cpf-item hungary-tag">✔ Eger 公牛血紅酒與 Furmint 品種</span>
             </div>
           </div>
 
+        </div><!-- /courses-grid 舊世界 -->
+      </div><!-- /region-group 舊世界 -->
+
+      <!-- ── 新世界 New World ── -->
+      <div class="region-group">
+        <div class="region-group-header">
+          <span class="rg-icon">🌏</span>
+          <span class="rg-name">新世界</span>
+          <span class="rg-en">New World</span>
+        </div>
+        <div class="courses-grid">
+
           <!-- ── Australia ── -->
-          <div class="course-card australia">
+          <div v-if="courseShowHome['australia'] || isAdmin" class="course-card australia">
             <div :class="['card-status', courseStatuses.australia ? 'active' : 'planning']">
               {{ isAdmin ? '🔓 管理員開放' : courseStatuses.australia ? '✅ 開放中' : '📅 課程規劃中' }}
             </div>
@@ -394,14 +488,11 @@
               <span class="cpf-item australia-tag">✔ Barossa 老藤 Shiraz 深度解析</span>
               <span class="cpf-item australia-tag">✔ Tasmania 頂級氣泡酒與 Pinot Noir</span>
             </div>
-            <div class="card-actions">
-              <button v-if="courseStatuses.australia || isAdmin" class="card-cta australia-cta" @click="router.push('/australia')">🗺 探索地圖 →</button>
-              <span v-else class="planning-cta">開發中，敬請期待</span>
-            </div>
+
           </div>
 
           <!-- ── New Zealand ── -->
-          <div class="course-card newzealand">
+          <div v-if="courseShowHome['newzealand'] || isAdmin" class="course-card newzealand">
             <div :class="['card-status', courseStatuses.newzealand ? 'active' : 'planning']">
               {{ isAdmin ? '🔓 管理員開放' : courseStatuses.newzealand ? '✅ 開放中' : '📅 課程規劃中' }}
             </div>
@@ -437,14 +528,53 @@
               <span class="cpf-item newzealand-tag">✔ Marlborough SB 品種深度解析</span>
               <span class="cpf-item newzealand-tag">✔ Central Otago Pinot Noir 產區</span>
             </div>
-            <div class="card-actions">
-              <button v-if="courseStatuses.newzealand || isAdmin" class="card-cta newzealand-cta" @click="router.push('/newzealand')">🗺 探索地圖 →</button>
-              <span v-else class="planning-cta">開發中，敬請期待</span>
-            </div>
+
           </div>
 
-        </div>
-      </div>
+          <!-- ── California ── -->
+          <div v-if="courseShowHome['california'] || isAdmin" class="course-card california">
+            <div :class="['card-status', courseStatuses.california ? 'active' : 'planning']">
+              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.california ? '✅ 開放中' : '📅 課程規劃中' }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🍷</div>
+              <div class="card-region">United States · California</div>
+              <h3 class="card-title">加州葡萄酒</h3>
+              <p class="card-desc">從 Napa Valley 的頂級 Cabernet Sauvignon 到 Sonoma 的精緻 Pinot Noir，探索 154+ AVA 產區，深入了解巴黎品酒會震驚世界的葡萄酒大國</p>
+            </div>
+            <div class="course-preview-strip california-strip">
+              <div class="cp-stat">
+                <span class="cp-num">154+</span>
+                <span class="cp-label">AVA<br>產區</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">8</span>
+                <span class="cp-label">課程<br>章節</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Cab</span>
+                <span class="cp-label">旗艦<br>品種</span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">2+</span>
+                <span class="cp-label">課程<br>等級</span>
+              </div>
+            </div>
+            <div class="course-preview-features california-features">
+              <span class="cpf-item california-tag">✔ 154+ AVA 互動衛星地圖</span>
+              <span class="cpf-item california-tag">✔ Napa Valley 16 子產區深度解析</span>
+              <span class="cpf-item california-tag">✔ 1976 巴黎品酒會歷史</span>
+            </div>
+
+          </div>
+
+        </div><!-- /courses-grid 新世界 -->
+      </div><!-- /region-group 新世界 -->
+
+      </div><!-- /section-inner -->
     </section>
 
     <!-- ═══ 特色區塊 ══════════════════════════════════════════════════════════ -->
@@ -753,17 +883,20 @@ const pricing = ref({
   basic:   { monthly: 290,  yearly: 1800 },
   premium: { monthly: 590,  yearly: 3600 }
 })
-// 各課程上架狀態（預設偡 active=true 防止関你加載先閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true, germany: true, portugal: true, australia: true, newzealand: true })
+// 各課程上架狀態（預設 active=true 防止加載前閃爍）
+const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false })
+// 各課程首頁顯示狀態（預設全部顯示，管理員不受限）
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: true })
 
 async function loadCourseData() {
   try {
     const { data } = await supabase
       .from('courses')
-      .select('id,active,price_basic_monthly,price_basic_yearly,price_premium_monthly,price_premium_yearly')
+      .select('id,active,show_on_home,price_basic_monthly,price_basic_yearly,price_premium_monthly,price_premium_yearly')
     if (data) {
       data.forEach(c => {
         courseStatuses.value[c.id] = c.active
+        courseShowHome.value[c.id] = c.show_on_home !== false
         if (c.id === 'bordeaux') {
           pricing.value = {
             basic:   { monthly: c.price_basic_monthly   ?? 290,  yearly: c.price_basic_yearly   ?? 1800 },
@@ -1178,6 +1311,22 @@ onMounted(async () => {
 
 /* ─── 課程區 ──────────────────────────────────────────────────────────────── */
 .courses-section { padding: 72px 0; background: #120508; }
+
+/* ─── 產區分組 ────────────────────────────────────────────────────────────── */
+.region-group { margin-bottom: 44px; }
+.region-group:last-child { margin-bottom: 0; }
+.region-group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.rg-icon { font-size: 1.4rem; line-height: 1; }
+.rg-name { font-size: 1.15rem; font-weight: 700; color: #fff; letter-spacing: 0.06em; }
+.rg-en   { font-size: 0.85rem; color: #9a8878; font-style: italic; }
+
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1278,12 +1427,32 @@ onMounted(async () => {
 .newzealand-strip .cp-divider { background: rgba(0,100,0,0.25); }
 .newzealand-features .newzealand-tag { color: #006400; background: rgba(0,100,0,0.06); border-color: rgba(0,100,0,0.18); }
 .newzealand-cta { background: linear-gradient(135deg, #006400, #004d00) !important; }
+/* California card */
+.california-strip { background: rgba(139,26,26,0.07); border-color: rgba(139,26,26,0.2); }
+.california-strip .cp-num { color: #8B1A1A; font-size: 0.9rem; }
+.california-strip .cp-label { color: #6b1414; }
+.california-strip .cp-divider { background: rgba(139,26,26,0.25); }
+.california-features .california-tag { color: #8B1A1A; background: rgba(139,26,26,0.06); border-color: rgba(139,26,26,0.18); }
+.california-cta { background: linear-gradient(135deg, #8B1A1A, #5c0f0f) !important; }
+.california-map-cta { background: linear-gradient(135deg, #c9a84c, #9e7a2e) !important; }
+/* Loire */
+.loire-strip { background: rgba(30,90,50,0.07); border-color: rgba(30,90,50,0.2); }
+.loire-strip .cp-num { color: #1e5a32; font-size: 0.9rem; }
+.loire-strip .cp-label { color: #1e5a32; }
+.loire-strip .cp-divider { background: rgba(30,90,50,0.25); }
+.loire-features .loire-tag { color: #1e5a32; background: rgba(30,90,50,0.06); border-color: rgba(30,90,50,0.18); }
 .loire-btn {
   background: linear-gradient(135deg, #1e5a32 0%, #2d7a4a 100%);
   color: #fff;
   box-shadow: 0 4px 16px rgba(30,90,50,0.4);
 }
 .loire-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(30,90,50,0.6); }
+/* Hungary card */
+.hungary-strip { background: rgba(206,41,57,0.07); border-color: rgba(206,41,57,0.22); }
+.hungary-strip .cp-num { color: #ce2939; font-size: 0.9rem; }
+.hungary-strip .cp-label { color: #8a1c28; }
+.hungary-strip .cp-divider { background: rgba(206,41,57,0.25); }
+.hungary-features .hungary-tag { color: #ce2939; background: rgba(206,41,57,0.06); border-color: rgba(206,41,57,0.18); }
 .newzealand-btn {
   background: linear-gradient(135deg, #006400, #4caf50);
   color: #fff;

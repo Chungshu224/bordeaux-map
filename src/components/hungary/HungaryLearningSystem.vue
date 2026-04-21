@@ -49,6 +49,7 @@ import {
   hungaryLearningActions,
   hungaryLearningProgress
 } from '../../stores/hungaryLearningStore.js'
+import { authActions } from '../../stores/authStore.js'
 import HungaryCourseLayout from './HungaryCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 
@@ -93,6 +94,7 @@ const currentSlideTitle = computed(() => {
 
 function isLevelUnlocked(level) {
   if (hungaryLearningState.testMode) return true
+  if (authActions.isAdmin()) return true
   if (level === 1) return true
   const finalId = hungaryLearningActions.getFinalLessonId(level - 1)
   return finalId != null && hungaryLearningState.completedLessons.includes(finalId)

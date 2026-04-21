@@ -187,7 +187,7 @@
           <!-- 課程產區快速導航 -->
           <div class="course-level-chips">
             <button
-              v-for="n in 5"
+              v-for="n in 4"
               :key="n"
               class="clevel-chip"
               :class="{ active: activeLevelFilter === n }"
@@ -1254,3 +1254,4 @@ html, body {
 .mobile-sheet-fade-enter-from .mobile-aoc-drawer,
 .mobile-sheet-fade-leave-to .mobile-aoc-drawer { transform: translateY(40px); }
 </style>
+

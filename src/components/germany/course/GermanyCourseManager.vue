@@ -41,15 +41,20 @@
 </template>
 
 <script setup>
-import { ref, computed, nextTick } from 'vue'
+import { ref, computed, nextTick, onMounted } from 'vue'
 import GermanyLevelSelector from './GermanyLevelSelector.vue'
 import GermanySlideViewer from './GermanySlideViewer.vue'
 import GermanyCourseLayout from './GermanyCourseLayout.vue'
 import GermanyGameHubPage from '../games/GermanyGameHubPage.vue'
-import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevels.js'
+import { courseLevels, getUserProgress, saveProgress, getLevelProgressPct } from '../data/courseLevels.js'
 import { getLesson } from '../data/lessonSlides.js'
+import { globalGermanyAchievementManager } from '../../../stores/germanyAchievementSystem.js'
 
 const emit = defineEmits(['openMap'])
+
+onMounted(() => {
+  globalGermanyAchievementManager.init()
+})
 
 const view = ref('levelSelector') // 'levelSelector' | 'courseContent' | 'games'
 const selectedLevelKey = ref(null)
@@ -101,6 +106,17 @@ function handleComplete(lessonId) {
   if (selectedLevelKey.value && lessonId) {
     saveProgress(selectedLevelKey.value, lessonId)
     completedMap.value[lessonId] = true
+
+    // 記錄到成就系統
+    const levelNum = selectedLevelKey.value === 'level1' ? 1
+      : selectedLevelKey.value === 'level2' ? 2 : 3
+    const totalProgress = Math.round(
+      (getLevelProgressPct('level1') + getLevelProgressPct('level2') + getLevelProgressPct('level3')) / 3
+    )
+    globalGermanyAchievementManager.recordLessonCompleted({
+      levelId: levelNum,
+      totalProgress
+    })
   }
   closeLesson()
 }

@@ -33,8 +33,16 @@
             <span class="nc-icon">🗺️</span>
             <span class="nc-title">探索地圖</span>
             <span class="nc-desc">互動式衛星地圖・96 個法定產區・DO / DOCa / VP</span>
+          </button>          <button class="nav-card achievement-card" @click="showAchievements = true">
+            <span class="nc-icon">🏆</span>
+            <span class="nc-title">學習成就</span>
+            <span class="nc-desc">查看已解鎖成就、稻有度與积分結算</span>
           </button>
-          <button class="nav-card notebook-card" @click="$emit('openNotebook')">
+          <button class="nav-card progress-card" @click="showProgress = true">
+            <span class="nc-icon">📊</span>
+            <span class="nc-title">學習進度</span>
+            <span class="nc-desc">各階段進度、完成分析與學習統計</span>
+          </button>          <button class="nav-card notebook-card" @click="$emit('openNotebook')">
             <span class="nc-icon">📔</span>
             <span class="nc-title">品飲筆記</span>
             <span class="nc-desc">記錄品飲心得･紅白粉紅雪莉･西班牙產區</span>
@@ -99,8 +107,35 @@
           </div>
         </div>
       </section>
+      <!-- ── 學習統計横列 ────────────────── -->
+      <LearningStatsMini course-key="spain" @show-details="showProgress = true" />
 
     </div>
+
+    <!-- ── 成就彈窗 ────────────────── -->
+    <div v-if="showAchievements" class="sp-modal-overlay" @click="showAchievements = false">
+      <div class="sp-achievement-modal" @click.stop>
+        <div class="sp-modal-header">
+          <h3>🏆 學習成就</h3>
+          <button class="sp-close-btn" @click="showAchievements = false">×</button>
+        </div>
+        <div class="sp-modal-content">
+          <AchievementsDashboard course-key="spain" @back="showAchievements = false" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 進度彈窗 ────────────────── -->
+    <div v-if="showProgress" class="sp-modal-overlay" @click="showProgress = false">
+      <div class="sp-progress-modal" @click.stop>
+        <div class="sp-modal-header">
+          <h3>📊 西班牙課程學習進度</h3>
+          <button class="sp-close-btn" @click="showProgress = false">×</button>
+        </div>
+        <div class="sp-modal-content">
+          <LearningProgressDashboard course-key="spain" />
+        </div>
+      </div>    </div>
 
     <!-- ── 品種指南彈窗（佔位） ───────────────────────────── -->
     <div v-if="showGrapeGuide" class="modal-backdrop" @click.self="showGrapeGuide = false">
@@ -126,15 +161,22 @@ import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../../stores/authStore.js'
 import { supabase } from '../../../lib/supabaseClient.js'
+import { globalSpainAchievementManager } from '../../../stores/spainAchievementSystem.js'
+import AchievementsDashboard from '../../AchievementsDashboard.vue'
+import LearningStatsMini from '../../LearningStatsMini.vue'
+import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
 
 const emit = defineEmits(['openMap', 'openSelector', 'startLevel', 'openNotebook', 'openGames'])
 const router = useRouter()
 const authUser = authState.user
 const showGrapeGuide = ref(false)
+const showAchievements = ref(false)
+const showProgress = ref(false)
 const avatarUrl = ref('')
 const avatarInitial = ref('我')
 
 onMounted(async () => {
+  globalSpainAchievementManager.init()
   const user = authState.user
   if (user) {
     const fallback = user.user_metadata?.full_name || user.email?.split('@')[0] || '我'
@@ -392,6 +434,12 @@ const grapes = [
 .games-card { border-color: rgba(248,113,113,0.25); }
 .games-card .nc-icon { background: rgba(248,113,113,0.15); color: #f87171; }
 .games-card:hover { box-shadow: 0 8px 24px rgba(248,113,113,0.15) !important; }
+.achievement-card { border-color: rgba(255,179,0,0.35); }
+.achievement-card .nc-icon { color: #fbbf24; }
+.achievement-card:hover { box-shadow: 0 8px 24px rgba(255,179,0,0.2) !important; }
+.progress-card { border-color: rgba(74,222,128,0.3); }
+.progress-card .nc-icon { color: #4ade80; }
+.progress-card:hover { box-shadow: 0 8px 24px rgba(74,222,128,0.15) !important; }
 .nc-icon { font-size: 1.6rem; }
 .nc-title { font-size: 1rem; font-weight: 700; }
 .nc-desc { font-size: 0.78rem; opacity: 0.8; line-height: 1.4; }
@@ -589,4 +637,36 @@ const grapes = [
   .levels-grid { grid-template-columns: 1fr; }
   .overview-grid { grid-template-columns: 1fr; }
 }
+
+/* ── 成就 / 進度 Modal ─────────────────────── */
+.sp-modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+.sp-achievement-modal {
+  background: white; border-radius: 20px;
+  max-width: 920px; width: 94%; max-height: 90vh; overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.sp-achievement-modal .sp-modal-content { flex: 1; overflow-y: auto; padding: 0; }
+.sp-progress-modal {
+  background: white; border-radius: 20px;
+  max-width: 560px; width: 92%; max-height: 82vh; overflow-y: auto;
+}
+.sp-modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.25rem 1.75rem; border-bottom: 1px solid #eee;
+  flex-shrink: 0;
+}
+.sp-modal-header h3 { margin: 0; color: #2c3e50; font-size: 1.1rem; }
+.sp-close-btn {
+  background: none; border: none; font-size: 1.5rem; cursor: pointer;
+  color: #999; width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: all 0.2s;
+}
+.sp-close-btn:hover { background: #f5f5f5; color: #333; }
+.sp-modal-content { padding: 1.5rem; }
 </style>

@@ -126,15 +126,34 @@
       </div>
     </transition>
 
+    <!-- 圖層面板 -->
+    <transition name="layer-panel-fade">
+      <div v-if="mapReady && layerPanelOpen" class="layer-panel">
+        <div class="layer-panel-title">圖層設定</div>
+        <div class="layer-panel-item" @click="toggleIGP">
+          <span class="layer-item-label">IGP 地理標誌</span>
+          <span class="layer-item-toggle" :class="{ on: showIGP }">
+            <span class="toggle-knob"></span>
+          </span>
+        </div>
+        <div class="layer-panel-item" @click="toggleContour">
+          <span class="layer-item-label">等高線</span>
+          <span class="layer-item-toggle" :class="{ on: showContour }">
+            <span class="toggle-knob"></span>
+          </span>
+        </div>
+      </div>
+    </transition>
+
     <!-- 底部工具列 (Bordeaux style: white card, warm colors) -->
     <div v-if="mapReady" class="mobile-map-toolbar">
       <button class="mobile-tool-btn" :class="{ active: drawerOpen }" @click="drawerOpen = !drawerOpen">
         <span class="mobile-tool-icon">產</span>
         <span>產區</span>
       </button>
-      <button class="mobile-tool-btn" :class="{ active: showIGP }" @click="toggleIGP">
-        <span class="mobile-tool-icon">IGP</span>
-        <span>{{ showIGP ? '隱藏' : 'IGP' }}</span>
+      <button class="mobile-tool-btn" :class="{ active: layerPanelOpen }" @click="layerPanelOpen = !layerPanelOpen">
+        <span class="mobile-tool-icon">🗺</span>
+        <span>圖層</span>
       </button>
       <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
         <span class="mobile-tool-icon">3D</span>
@@ -166,6 +185,8 @@ const infoCollapsed = ref(true)
 const drawerOpen    = ref(false)
 const drawerTab     = ref('doc')
 const showIGP       = ref(false)
+const showContour   = ref(false)
+const layerPanelOpen = ref(false)
 const activeRegion  = ref(null)
 
 const allDOC = ref([])   // DOC feature properties list
@@ -353,6 +374,15 @@ function toggleIGP() {
   if (map.getLayer('igp-outline')) map.setLayoutProperty('igp-outline', 'visibility', vis)
 }
 
+// ── Toggle Contour layer ────────────────────────────────────────────────────
+function toggleContour() {
+  showContour.value = !showContour.value
+  if (!map) return
+  const vis = showContour.value ? 'visible' : 'none'
+  if (map.getLayer('contour-lines'))  map.setLayoutProperty('contour-lines',  'visibility', vis)
+  if (map.getLayer('contour-labels')) map.setLayoutProperty('contour-labels', 'visibility', vis)
+}
+
 // ── Toggle info panel ──────────────────────────────────────────────────────
 function toggleInfo() {
   if (activeRegion.value) {
@@ -459,6 +489,51 @@ async function initMap() {
           'text-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.4, 6, 0.9],
         },
         minzoom: 5,
+      })
+
+      // ── Contour lines (hidden by default) ──
+      if (!map.getSource('mapbox-terrain')) {
+        map.addSource('mapbox-terrain', {
+          type: 'vector',
+          url: 'mapbox://mapbox.mapbox-terrain-v2',
+        })
+      }
+      map.addLayer({
+        id: 'contour-lines',
+        type: 'line',
+        source: 'mapbox-terrain',
+        'source-layer': 'contour',
+        layout: { visibility: 'none' },
+        paint: {
+          'line-color': [
+            'interpolate', ['linear'], ['get', 'ele'],
+            0,   '#c8b89a',
+            500, '#a09070',
+            1500,'#786850',
+          ],
+          'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.5, 10, 1.2],
+          'line-opacity': 0.65,
+        },
+      })
+      map.addLayer({
+        id: 'contour-labels',
+        type: 'symbol',
+        source: 'mapbox-terrain',
+        'source-layer': 'contour',
+        filter: ['==', ['%', ['get', 'ele'], 200], 0],
+        layout: {
+          visibility: 'none',
+          'symbol-placement': 'line',
+          'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
+          'text-font': ['DIN Pro Italic', 'Arial Unicode MS Regular'],
+          'text-size': 10,
+        },
+        paint: {
+          'text-color': '#9c8060',
+          'text-halo-color': 'rgba(255,255,255,0.75)',
+          'text-halo-width': 1.2,
+        },
+        minzoom: 7,
       })
 
       // ── IGP layers (hidden by default) ──
@@ -872,6 +947,79 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 .no-results { text-align: center; padding: 2rem; color: #aaa; font-size: 0.9rem; }
 .sheet-fade-enter-active, .sheet-fade-leave-active { transition: opacity 0.22s ease; }
 .sheet-fade-enter-from, .sheet-fade-leave-to { opacity: 0; }
+
+/* ── Layer panel ─────────────────────────────────────────────────── */
+.layer-panel {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  z-index: 20;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  padding: 10px 14px;
+  width: min(86vw, 320px);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.layer-panel-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #8B0000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0 2px 6px;
+  border-bottom: 1px solid rgba(139,0,0,0.12);
+  margin-bottom: 4px;
+}
+.layer-panel-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.layer-panel-item:hover { background: rgba(139,0,0,0.06); }
+.layer-item-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+.layer-item-toggle {
+  width: 40px;
+  height: 22px;
+  border-radius: 11px;
+  background: #d0ccc8;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.layer-item-toggle.on { background: #8B0000; }
+.toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: left 0.2s;
+}
+.layer-item-toggle.on .toggle-knob { left: 20px; }
+.layer-panel-fade-enter-active, .layer-panel-fade-leave-active {
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.layer-panel-fade-enter-from, .layer-panel-fade-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(6px);
+}
 
 /* ── Bottom toolbar (Bordeaux style) ─────────────────────────────── */
 .mobile-map-toolbar {

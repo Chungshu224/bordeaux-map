@@ -53,7 +53,8 @@ import SpainCourseLayout from './SpainCourseLayout.vue'
 import SpainSlideViewer from './SpainSlideViewer.vue'
 import SpainTastingNotebookPage from '../notebook/SpainTastingNotebookPage.vue'
 import SpainGameHubPage from '../games/SpainGameHubPage.vue'
-import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevels.js'
+import { courseLevels, getUserProgress, saveProgress, getLevelProgressPercent } from '../data/courseLevels.js'
+import { globalSpainAchievementManager } from '../../../stores/spainAchievementSystem.js'
 
 defineEmits(['openMap', 'openSelector'])
 
@@ -100,6 +101,15 @@ function handleComplete(lessonId) {
   completedMap.value[lessonId] = true
   saveProgress(selectedLevelKey.value, lessonId)
   activeLesson.value = null
+
+  // 觸發成就系統
+  const levelNum = parseInt((selectedLevelKey.value || '').replace('level', '')) || 0
+  const totalProgress = getLevelProgressPercent(selectedLevelKey.value)
+  globalSpainAchievementManager.recordLessonCompleted({
+    lessonId,
+    levelId: levelNum,
+    totalProgress
+  })
 }
 </script>
 

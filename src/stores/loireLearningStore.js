@@ -8,278 +8,312 @@ export const loireLearningState = reactive({
   completedLessons: [],
   testMode: false,
   userProgress: {
-    level1: { completed: 0, total: 5 },
-    level2: { completed: 0, total: 6 },
-    level3: { completed: 0, total: 6 },
-    level4: { completed: 0, total: 4 },
-    level5: { completed: 0, total: 3 }
+    level1: { completed: 0, total: 7 },
+    level2: { completed: 0, total: 8 },
+    level3: { completed: 0, total: 11 },
+    level4: { completed: 0, total: 6 }
   },
   achievements: []
 })
 
-// 羅亞爾學習等級配置（對應官網五大子產區 vinsdeloire.fr）
+// 羅亞爾學習等級配置——4 大主題關卡
 export const loireLearningLevels = {
 
-  // ── Level 1：南特產區（Le Nantais）──────────────────────────────────
+  // ── Level 1：南特入門——清新之風（PayNantes 7 AOCs）───────────────────
   level1: {
-    title: 'Level 1 — 南特產區',
+    title: 'Level 1 — 入門清新',
     titleFr: 'Le Vignoble Nantais',
     emoji: '🌊',
     region: 'Nantais',
     mapGroup: 'PayNantes',
     description: '大西洋門戶，碘香海風與礦物張力——Muscadet 王國、sur lie 技術與海鮮佐餐藝術',
-    color: '#1a6b5a',
+    color: '#1a6b8a',
     accentColor: '#e0f5f0',
     keyGrapes: 'Melon de Bourgogne · Folle Blanche',
-    keyAOC: ['Muscadet Sèvre-et-Maine', 'Muscadet Côtes de Grandlieu', 'Gros Plant du Pays Nantais', 'Coteaux d\'Ancenis'],
+    keyAOC: ['Muscadet', 'Muscadet-Sèvre-et-Maine', 'Muscadet-Côtes-de-Grandlieu', 'Gros Plant du Pays Nantais'],
     modules: [
-      { id: 'LO1M1', title: '南特地理與海洋性氣候', lessonIds: ['lo-l1-1', 'lo-l1-2'] },
+      { id: 'LO1M1', title: '羅亞爾河谷總覽與南特地理', lessonIds: ['lo-l1-1', 'lo-l1-2'] },
       { id: 'LO1M2', title: 'Muscadet 深度探索', lessonIds: ['lo-l1-3', 'lo-l1-4'] },
-      { id: 'LO1M3', title: '品飲與 Level 1 評量', lessonIds: ['lo-l1-5'] }
+      { id: 'LO1M3', title: '品飲實習與 Level 1 評量', lessonIds: ['lo-l1-5', 'lo-l1-6', 'lo-l1-7'] }
     ],
     lessons: [
       {
         id: 'lo-l1-1',
-        title: '認識南特產區 — 大西洋門戶',
-        description: '探索法國最西邊的葡萄酒產區：地理位置、歷史沿革、17 個 AOC/DGC/IGP 完整版圖，以及為何說「南特是羅亞爾河谷最具海洋個性的產區」',
+        title: '羅亞爾河谷總覽與南特區地理',
+        description: '法國最長葡萄酒產區800公里的全貌，UNESCO遺產，以及南特區作為大西洋門戶的獨特定位',
         duration: 15
       },
       {
         id: 'lo-l1-2',
-        title: 'Melon de Bourgogne — sur lie 的靈魂技術',
-        description: '深入認識 Muscadet 的靈魂品種 Melon de Bourgogne：起源於勃根地、移植南特的歷史，以及影響酒款風格的 sur lie 帶酒泥陳釀技術詳解',
-        duration: 16
+        title: 'Muscadet 家族全解——四大 AOC 比較',
+        description: '系統比較 Muscadet、Muscadet-Sèvre-et-Maine、Muscadet-Côtes-de-Grandlieu、Muscadet-Coteaux-de-la-Loire 四大 AOC 的土壤、分布與風格差異',
+        duration: 18
       },
       {
         id: 'lo-l1-3',
-        title: 'Muscadet 四大 AOC — 地塊、土壤與分級',
-        description: '系統比較 Muscadet Sèvre-et-Maine、Muscadet Côtes de Grandlieu、Muscadet Coteaux de la Loire 三大地理 AOC，以及地塊分級（Clisson、Gorges、Le Pallet 等）的意義與特色',
+        title: 'Sur Lie 陳釀工藝與礦石風味',
+        description: '深入理解 sur lie 帶酒泥陳釀技術：酵母自溶對酒體、氣泡感與礦物張力的影響，以及 Clisson、Gorges、Le Pallet 地塊分級',
         duration: 20
       },
       {
         id: 'lo-l1-4',
-        title: 'Folle Blanche、Gros Plant 與南特其他 AOC',
-        description: '認識 Gros Plant du Pays Nantais（Folle Blanche 單品種）的銳利酸度，以及 Coteaux d\'Ancenis（Malvoisie 甜酒）和 Fiefs Vendéens 的多元風格',
+        title: '南特其他產區——大植、昂塞尼、旺代',
+        description: 'Gros-Plant-du-Pays-Nantais（Folle Blanche）的銳利酸度、Coteaux-d\'Ancenis（Malvoisie）、Fiefs-Vendéens 的多元風格',
         duration: 18
       },
       {
         id: 'lo-l1-5',
-        title: 'Level 1 品飲實習與綜合評量',
-        description: '掌握南特產區品飲技巧，學習 Muscadet 與海鮮的經典搭配法則，完成 Level 1 知識測驗取得認證',
+        title: '片岩土壤與海洋性氣候感官訓練',
+        description: '在南特區的片岩與辉绿岩土壤背景下，訓練辨識 Muscadet 特有的碘鹹、青蘋果、酵母麵包等香氣特徵',
+        duration: 20
+      },
+      {
+        id: 'lo-l1-6',
+        title: 'Muscadet × 生蠔貝類——高酸度餐搭',
+        description: '探索 Muscadet sur lie 與生蠔、貽貝、海鮮的經典搭配原理，以及為何高酸度白酒是海鮮餐搭的黃金組合',
+        duration: 18
+      },
+      {
+        id: 'lo-l1-7',
+        title: 'Level 1 綜合評量',
+        description: '整合南特產區全部知識，完成 Level 1 測驗取得認證，涵蓋 7 個 AOC（PayNantes 全區）',
         duration: 25
       }
     ]
   },
 
-  // ── Level 2：安茹-索米爾（Anjou-Saumur）─────────────────────────────
+  // ── Level 2：石灰岩城堡——紅酒與粉紅進階（19 AOCs）────────────────
   level2: {
-    title: 'Level 2 — 安茹-索米爾',
-    titleFr: 'L\'Anjou-Saumur',
+    title: 'Level 2 — 石灰岩城堡',
+    titleFr: 'Tuffeau & Cabernet Franc',
     emoji: '🏰',
-    region: 'AnjouSaumur',
+    region: 'AnjouSaumur + Touraine（紅）',
     mapGroup: 'AnjouSaumur',
-    description: 'Chenin Blanc 的王國——從礦物干型到貴腐甜酒金字塔，再到索米爾凝灰岩上的 Cabernet Franc 與 Crémant',
-    color: '#8b2c2c',
-    accentColor: '#fdeaea',
-    keyGrapes: 'Chenin Blanc · Cabernet Franc · Cabernet Sauvignon',
-    keyAOC: ['Savennières', 'Coteaux du Layon', 'Quarts de Chaume Grand Cru', 'Saumur-Champigny', 'Crémant de Loire'],
+    description: 'Tuffeau 凝灰岩氣候過渡帶——品麗珠的多元表現，從安茹粉紅到希農，都漢紅酒全景',
+    color: '#8b5e3c',
+    accentColor: '#fdecd8',
+    keyGrapes: 'Cabernet Franc · Cabernet Sauvignon · Gamay · Côt',
+    keyAOC: ['Saumur-Champigny', 'Chinon', 'Bourgueil', 'Anjou-Villages', 'Anjou-Brissac'],
     modules: [
-      { id: 'LO2M1', title: 'Chenin Blanc 干型與 Savennières', lessonIds: ['lo-l2-1', 'lo-l2-2'] },
-      { id: 'LO2M2', title: '甜酒金字塔與起泡酒', lessonIds: ['lo-l2-3', 'lo-l2-4'] },
-      { id: 'LO2M3', title: '索米爾紅酒與 Level 2 評量', lessonIds: ['lo-l2-5', 'lo-l2-6'] }
+      { id: 'LO2M1', title: '安茹索米爾紅酒群', lessonIds: ['lo-l2-1', 'lo-l2-2', 'lo-l2-3'] },
+      { id: 'LO2M2', title: '都漢 Cabernet Franc 王國', lessonIds: ['lo-l2-4', 'lo-l2-5', 'lo-l2-6'] },
+      { id: 'LO2M3', title: '品飲實習與 Level 2 評量', lessonIds: ['lo-l2-7', 'lo-l2-8'] }
     ],
     lessons: [
       {
         id: 'lo-l2-1',
-        title: '安茹產區概論 — Chenin Blanc 的故鄉',
-        description: '認識安茹-索米爾的地理全貌：23 個 AOC、片岩與石灰岩的土壤過渡，以及 Chenin Blanc 在此展現的多元風格（干型、半甜、甜酒、氣泡）',
-        duration: 16,
+        title: 'Tuffeau 地質與氣候過渡帶',
+        description: '安茹-索米爾的凝灰岩地質奇觀：洞窟酒窖、半大陸性氣候過渡，以及片岩與石灰岩土壤轉換的葡萄酒風味影響',
+        duration: 15,
         locked: true
       },
       {
         id: 'lo-l2-2',
-        title: 'Savennières — 片岩上的極致 Chenin Blanc',
-        description: '深探安茹最偉大的干型白酒：Savennières 片岩土壤的礦物張力、Coulée de Serrant 單一園 Monopole 的傳奇、Roche aux Moines 的風土精髓',
+        title: '安茹紅酒三兄弟與索米爾',
+        description: '深探 Anjou（紅）、Anjou-Villages、Anjou-Brissac、Saumur（紅）、Saumur-Champigny 五個 AOC：品麗珠在凝灰岩上的輕盈表現',
         duration: 20,
         locked: true
       },
       {
         id: 'lo-l2-3',
-        title: '安茹甜酒金字塔 — 從 Coteaux du Layon 到 Grand Cru',
-        description: '完整解析羅亞爾甜酒分級：Coteaux du Layon 基礎甜酒、Chaume Premier Cru、Bonnezeaux、Quarts de Chaume Grand Cru 的差異，以及貴腐菌（Botrytis）對 Chenin Blanc 的影響',
-        duration: 22,
+        title: '安茹粉紅光譜與上普瓦圖',
+        description: 'Cabernet-d\'Anjou、Rosé-d\'Anjou、Rosé-de-Loire 的甜度與風格差異，以及 Haut-Poitou 高原白酒概覽',
+        duration: 18,
         locked: true
       },
       {
         id: 'lo-l2-4',
-        title: 'Crémant de Loire — 羅亞爾氣泡酒的藝術',
-        description: '認識以傳統方法釀製的 Crémant de Loire：Chenin Blanc、Cabernet Franc、Chardonnay 的多品種混釀，與香檳的異同，以及在安茹-索米爾的重要性',
-        duration: 16,
+        title: '希農——品麗珠的靈魂故鄉',
+        description: 'Chinon、Bourgueil、Saint-Nicolas-de-Bourgueil 三大 AOC 的土壤比較：礫石台地的輕盈、凝灰石坡地的結構感',
+        duration: 22,
         locked: true
       },
       {
         id: 'lo-l2-5',
-        title: 'Saumur-Champigny — 凝灰岩上的 Cabernet Franc',
-        description: '探索索米爾的白堊凝灰岩（tuffeau）地下洞窟，以及 Saumur-Champigny 如何將 Cabernet Franc 演繹成絲般輕盈、帶有紅果香的精緻紅酒',
+        title: '都漢紅酒產區全景',
+        description: 'Touraine（紅/粉紅）、Touraine-Amboise（紅）、Touraine-Noble-Joué 的地理位置、混釀規定與風格特色',
         duration: 18,
         locked: true
       },
       {
         id: 'lo-l2-6',
-        title: 'Level 2 品飲與綜合評量',
-        description: '整合安茹-索米爾全產區知識，練習辨識 Chenin Blanc 干型/甜型/氣泡，完成 Level 2 進階測驗取得認證',
+        title: '都漢支流紅酒',
+        description: 'Coteaux-du-Loir（紅）、Coteaux-du-Vendômois（紅/粉紅）、Orléans（紅）、Orléans-Cléry 的 Pineau d\'Aunis 辛香特色',
+        duration: 18,
+        locked: true
+      },
+      {
+        id: 'lo-l2-7',
+        title: '鋼桶 vs 木桶品麗珠品飲訓練',
+        description: '以 Chinon 和 Bourgueil 為例，學習辨識不鏽鋼桶與橡木桶陳釀對品麗珠香氣結構的影響，以及最佳侍酒溫度',
+        duration: 20,
+        locked: true
+      },
+      {
+        id: 'lo-l2-8',
+        title: 'Chinon × Rillettes + Level 2 綜合評量',
+        description: '經典都漢鄉村料理 Rillettes 與 Chinon 的搭配原理；完成 Level 2 測驗，涵蓋 19 個紅/粉紅 AOC',
         duration: 28,
         locked: true
       }
     ]
   },
 
-  // ── Level 3：都漢（La Touraine）──────────────────────────────────────
+  // ── Level 3：白詩南燧石——精湛工藝（32 AOCs）──────────────────────
   level3: {
-    title: 'Level 3 — 都漢',
-    titleFr: 'La Touraine',
-    emoji: '🦁',
-    region: 'Touraine',
-    mapGroup: 'Touraine',
-    description: '法國花園中的葡萄酒帝國——17 個 AOC、Cabernet Franc 王者雙城（Chinon & Bourgueil），以及 Vouvray 的百變 Chenin Blanc',
+    title: 'Level 3 — 白詩南燧石',
+    titleFr: 'Chenin Blanc & Silex',
+    emoji: '🍯',
+    region: 'AnjouSaumur（白）+ Touraine（白）+ Centre',
+    mapGroup: 'Centre',
+    description: '白詩南從干型到極甜的工藝全光譜，加上燧石土壤的桑塞爾與普依的 Sauvignon Blanc 雙雄',
     color: '#c19a28',
     accentColor: '#fdf6e0',
-    keyGrapes: 'Cabernet Franc · Chenin Blanc · Gamay · Côt',
-    keyAOC: ['Chinon', 'Bourgueil', 'Vouvray', 'Montlouis-sur-Loire', 'Cour-Cheverny'],
+    keyGrapes: 'Chenin Blanc · Sauvignon Blanc · Romorantin',
+    keyAOC: ['Savennières', 'Quarts-de-Chaume', 'Vouvray', 'Sancerre', 'Pouilly-Fumé'],
     modules: [
-      { id: 'LO3M1', title: 'Cabernet Franc 紅酒三傑', lessonIds: ['lo-l3-1', 'lo-l3-2'] },
-      { id: 'LO3M2', title: 'Chenin Blanc 白酒雙城', lessonIds: ['lo-l3-3', 'lo-l3-4'] },
-      { id: 'LO3M3', title: '特色 AOC 與 Level 3 評量', lessonIds: ['lo-l3-5', 'lo-l3-6'] }
+      { id: 'LO3M1', title: '安茹白詩南工藝', lessonIds: ['lo-l3-1', 'lo-l3-2', 'lo-l3-3', 'lo-l3-4', 'lo-l3-5'] },
+      { id: 'LO3M2', title: '都漢白酒全景', lessonIds: ['lo-l3-6', 'lo-l3-7', 'lo-l3-8'] },
+      { id: 'LO3M3', title: '中央產區燧石雙雄', lessonIds: ['lo-l3-9', 'lo-l3-10', 'lo-l3-11'] }
     ],
     lessons: [
       {
         id: 'lo-l3-1',
-        title: '都漢概論 — 法國花園的葡萄酒版圖',
-        description: '俯瞰都漢的葡萄酒全景：Loire 河中游的地理位置、半大陸性氣候、凝灰岩與礫石土壤，以及 17 個 AOC 的空間分布',
-        duration: 15,
+        title: '白詩南工藝入門——安茹干白與索米爾白酒',
+        description: 'Anjou（白）、Anjou-Coteaux-de-la-Loire、Saumur（白）、Coteaux-de-Saumur：白詩南在片岩與凝灰岩上的干型表現',
+        duration: 16,
         locked: true
       },
       {
         id: 'lo-l3-2',
-        title: 'Chinon、Bourgueil 與 Saint-Nicolas-de-Bourgueil',
-        description: '深入解析 Cabernet Franc 三大產區的風土差異：Chinon 的凝灰石與礫石坡地、Bourgueil 的砂礫台地、Saint-Nicolas-de-Bourgueil 的砂質輕盈風格，以及年份對這三者的不同影響',
-        duration: 22,
-        locked: true
-      },
-      {
-        id: 'lo-l3-3',
-        title: 'Vouvray — 從氣泡到甜酒的 Chenin Blanc 百變風格',
-        description: '認識 Vouvray 複雜的風格光譜：brut 到 moelleux 的甜度分級、地下凝灰岩酒窖對陳年的影響，以及 Huet、Foreau 等頂級生產者的哲學',
+        title: '薩弗尼耶爾三部曲',
+        description: 'Savennières、Savennières-Roche-aux-Moines、Coulée-de-Serrant（Monopole）：片岩陡坡上的礦物干白極致，以及 Nicolas Joly 的自然動力農法哲學',
         duration: 20,
         locked: true
       },
       {
+        id: 'lo-l3-3',
+        title: '萊揚河貴腐甜酒金字塔',
+        description: 'Coteaux-du-Layon、Coteaux-du-Layon-premier-cru-Chaume、Coteaux-de-l\'Aubance：貴腐菌（Botrytis）與逐粒採收的甜酒工藝',
+        duration: 22,
+        locked: true
+      },
+      {
         id: 'lo-l3-4',
-        title: 'Montlouis-sur-Loire 與都漢基礎 AOC',
-        description: 'Montlouis 與 Vouvray 的異同比較、都漢大 AOC 的白酒/紅酒/氣泡酒規定，以及 Touraine-Amboise、Touraine-Noble-Joué 等村莊級 AOC',
-        duration: 18,
+        title: '頂級甜酒——邵姆與波澤奧',
+        description: 'Quarts-de-Chaume（Grand Cru）、Bonnezeaux：羅亞爾最頂級甜白的風土條件、陳年潛力，以及與波爾多貴腐酒的比較',
+        duration: 22,
         locked: true
       },
       {
         id: 'lo-l3-5',
-        title: 'Cour-Cheverny、Valençay 與都漢特色產區',
-        description: '探索都漢最獨特的 AOC：全球唯一 Romorantin 單品種 AOC（Cour-Cheverny）、Valençay 的多元混釀，以及 Orléans、Orléans-Cléry 等北部 AOC',
+        title: '羅亞爾克雷芒與索米爾氣泡',
+        description: 'Crémant-de-Loire、Saumur（氣泡）：傳統方法氣泡酒的釀造工藝、白詩南為基礎的複雜度，以及與香檳的比較',
         duration: 18,
         locked: true
       },
       {
         id: 'lo-l3-6',
-        title: 'Level 3 品飲與綜合評量',
-        description: '整合都漢產區知識，練習盲飲辨別 Cabernet Franc 各地塊風格與 Chenin Blanc 的甜度光譜，完成 Level 3 測驗取得認證',
-        duration: 28,
+        title: '伏弗雷——干到貴腐全光譜',
+        description: 'Vouvray、Montlouis-sur-Loire：同一品種在凝灰岩地下酒窖熟成的 sec/demi-sec/moelleux/liquoreux 全光譜，以及 Huet、Foreau 等名家',
+        duration: 20,
+        locked: true
+      },
+      {
+        id: 'lo-l3-7',
+        title: '都漢白酒四角',
+        description: 'Cheverny、Cour-Cheverny（全球唯一 Romorantin 單品種 AOC）、Valençay、Touraine-Amboise（白）、Touraine-Azay-le-Rideau：多元品種與風格',
+        duration: 18,
+        locked: true
+      },
+      {
+        id: 'lo-l3-8',
+        title: 'Loir 河白酒',
+        description: 'Jasnières、Coteaux-du-Loir（白）、Coteaux-du-Vendômois（白）、Orléans（白）、Touraine（白）：羅亞爾支流的稀世白酒',
+        duration: 18,
+        locked: true
+      },
+      {
+        id: 'lo-l3-9',
+        title: '中央產區雙雄——桑塞爾 & 普依',
+        description: 'Sancerre、Pouilly-Fumé、Pouilly-sur-Loire：燧石、石灰岩、Kimmeridgian 三種土壤的風味差異，以及 Sauvignon Blanc 的全球標竿地位',
+        duration: 22,
+        locked: true
+      },
+      {
+        id: 'lo-l3-10',
+        title: '中央產區隱藏版精品',
+        description: 'Menetou-Salon、Quincy、Reuilly、Coteaux-du-Giennois、Châteaumeillant、Saint-Pourçain：六個性價比極高的衛星 AOC',
+        duration: 20,
+        locked: true
+      },
+      {
+        id: 'lo-l3-11',
+        title: 'Vouvray 甜白 × 起司；Sancerre × 山羊起司 + Level 3 評量',
+        description: '白詩南甜白酒與洗皮起司的搭配原理、Sancerre 與新鮮山羊起司的本地配對傳統；完成 Level 3 測驗，涵蓋 32 個白/氣泡 AOC',
+        duration: 30,
         locked: true
       }
     ]
   },
 
-  // ── Level 4：中央羅亞爾（Centre-Loire）──────────────────────────────
+  // ── Level 4：專業實務——視覺化與策略實戰（MassifCentral 5 AOCs + 跨產區）
   level4: {
-    title: 'Level 4 — 中央羅亞爾',
-    titleFr: 'Le Centre-Loire',
-    emoji: '🌿',
-    region: 'Centre',
-    mapGroup: 'Centre',
-    description: 'Sauvignon Blanc 的聖地——燧石、石灰岩與白堊黏土三種土壤鑄就 Sancerre 與 Pouilly-Fumé 的全球頂尖白酒',
-    color: '#2c6e8a',
-    accentColor: '#e0f0f8',
-    keyGrapes: 'Sauvignon Blanc · Pinot Noir · Pinot Gris',
-    keyAOC: ['Sancerre', 'Pouilly-Fumé', 'Menetou-Salon', 'Quincy', 'Reuilly'],
+    title: 'Level 4 — 專業實務',
+    titleFr: 'Expertise & Stratégie',
+    emoji: '🔬',
+    region: 'MassifCentral + 跨產區',
+    mapGroup: 'MassifCentral',
+    description: '奧弗涅火山土壤精品，結合互動地圖實戰、氣候變遷分析、垂直品飲與高端餐飲設計',
+    color: '#2c3e50',
+    accentColor: '#e8edf2',
+    keyGrapes: 'Gamay · Pinot Noir · Chardonnay',
+    keyAOC: ['Côtes-d\'Auvergne', 'Côtes-d\'Auvergne-Corent', 'Côtes-d\'Auvergne-Chateaugay'],
     modules: [
-      { id: 'LO4M1', title: 'Sancerre 與 Pouilly-Fumé', lessonIds: ['lo-l4-1', 'lo-l4-2'] },
-      { id: 'LO4M2', title: '衛星產區與 Level 4 評量', lessonIds: ['lo-l4-3', 'lo-l4-4'] }
+      { id: 'LO4M1', title: 'MassifCentral 火山精品', lessonIds: ['lo-l4-1'] },
+      { id: 'LO4M2', title: '進階技術與策略', lessonIds: ['lo-l4-2', 'lo-l4-3', 'lo-l4-4', 'lo-l4-5'] },
+      { id: 'LO4M3', title: '專業實務與大師評量', lessonIds: ['lo-l4-6'] }
     ],
     lessons: [
       {
         id: 'lo-l4-1',
-        title: 'Sancerre — 燧石、石灰岩與 Kimmeridgian 黏土',
-        description: '深探桑塞爾三種土壤的風味差異：燧石（silex）的煙燻礦物感、石灰岩（calcaires à belemnites）的清爽活潑、Kimmeridgian 黏土的飽滿圓潤；以及 Pinot Noir 紅酒的精緻優雅',
+        title: '奧弗涅丘——火山土壤精品',
+        description: 'Côtes-d\'Auvergne、Côtes-d\'Auvergne-Boudes、Côtes-d\'Auvergne-Chateaugay、Côtes-d\'Auvergne-Corent、Côtes-d\'Auvergne-Madargues：火山岩上的 Gamay 與 Pinot Noir',
         duration: 20,
         locked: true
       },
       {
         id: 'lo-l4-2',
-        title: 'Pouilly-Fumé vs Sancerre — 同源異流的 Sauvignon Blanc',
-        description: '比較隔河相對的兩大產區：Pouilly-Fumé 的 silex 燧石土壤與槍管金屬礦物感、Pouilly-sur-Loire 的 Chasselas 珍稀白酒，以及 Henri Bourgeois、Didier Dagueneau 等頂級酒莊',
-        duration: 20,
+        title: '互動地圖實戰——GeoJSON 視覺化',
+        description: '運用互動地圖工具，系統整合 58 個 AOC 的地理分布、土壤類型與氣候梯度，建立空間認知記憶框架',
+        duration: 25,
         locked: true
       },
       {
         id: 'lo-l4-3',
-        title: 'Menetou-Salon、Quincy 與 Reuilly',
-        description: '探索中央羅亞爾衛星產區：Menetou-Salon 的金莫里石灰岩（與 Sancerre 同土壤）、Quincy 的砂礫清爽白酒（法國最古老 AOC 之一）、Reuilly 的 Pinot Gris 獨特粉紅酒',
-        duration: 18,
+        title: '氣候變遷——採收期與酒精濃度分析',
+        description: '分析羅亞爾近 30 年採收期提前趨勢、酒精濃度上升數據，以及生產者的應對策略（更高海拔、晚採品種、橡木桶使用）',
+        duration: 22,
         locked: true
       },
       {
         id: 'lo-l4-4',
-        title: 'Level 4 品飲與綜合評量',
-        description: '練習盲飲辨識桑塞爾三種土壤的 Sauvignon Blanc 風格差異，完成 Level 4 測驗取得認證',
+        title: '垂直品飲——陳年潛力判讀',
+        description: 'Savennières、Chinon、Vouvray 三款酒的垂直品飲實戰：學習解讀不同年份下酒款的演化軌跡與陳年潛力評估',
         duration: 25,
         locked: true
-      }
-    ]
-  },
-
-  // ── Level 5：洛瓦爾支流與上普瓦圖（Vallée du Loir & Haut-Poitou）──
-  level5: {
-    title: 'Level 5 — 支流與周邊小產區',
-    titleFr: 'La Vallée du Loir & Le Haut-Poitou',
-    emoji: '🌻',
-    region: 'ValleeLoirPoitou',
-    mapGroup: 'MassifCentral',
-    description: '注意：是 Loir（支流），不是 Loire——Pineau d\'Aunis 辛香品種、Jasnières 稀世白酒，以及上普瓦圖的高原風格',
-    color: '#7a5c3a',
-    accentColor: '#f5f0e8',
-    keyGrapes: 'Pineau d\'Aunis · Chenin Blanc · Romorantin · Gamay',
-    keyAOC: ['Jasnières', 'Coteaux du Loir', 'Coteaux du Vendômois', 'Haut-Poitou'],
-    modules: [
-      { id: 'LO5M1', title: 'Loir 支流產區', lessonIds: ['lo-l5-1', 'lo-l5-2'] },
-      { id: 'LO5M2', title: '上普瓦圖與大師認證評量', lessonIds: ['lo-l5-3'] }
-    ],
-    lessons: [
+      },
       {
-        id: 'lo-l5-1',
-        title: 'Jasnières 與 Coteaux du Loir — Loir 河畔的珍稀白酒',
-        description: '探索羅亞爾河支流 Loir 河（注意：非 Loire）沿岸的稀世產區：Jasnières 凝灰岩陡坡上的頂級 Chenin Blanc 干白（19世紀曾被評為法國最佳白酒）、Coteaux du Loir 的 Pineau d\'Aunis 紅白酒',
-        duration: 18,
+        id: 'lo-l4-5',
+        title: '盲飲診斷——土質差異',
+        description: '訓練盲飲辨識 Sancerre 三種土壤（燧石/石灰岩/Kimmeridgian）、Chinon 礫石 vs 凝灰石的差異，建立系統性土壤感官記憶',
+        duration: 25,
         locked: true
       },
       {
-        id: 'lo-l5-2',
-        title: 'Coteaux du Vendômois 與 Pineau d\'Aunis 特色品種',
-        description: '認識最具個性的羅亞爾本土紅葡萄 Pineau d\'Aunis：帶有胡椒與野花的辛香特色、旺多姆丘的粉紅酒風格，以及這個稀有品種在羅亞爾支流區的文化意義',
-        duration: 18,
-        locked: true
-      },
-      {
-        id: 'lo-l5-3',
-        title: '上普瓦圖與羅亞爾河谷大師認證評量',
-        description: '認識上普瓦圖（Haut-Poitou）的高原風格與 Vienne 河影響，完成橫跨五大子產區的羅亞爾河谷大師認證評量，取得最終認證',
+        id: 'lo-l4-6',
+        title: '高端餐飲設計 + 亞洲料理配對 + Level 4 評量',
+        description: '設計羅亞爾河谷主題餐酒配對菜單；探索 Vouvray 甜白 × 亞洲料理的創意配對；完成跨越 58 AOC 的大師認證評量',
         duration: 35,
         locked: true
       }

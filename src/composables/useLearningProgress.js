@@ -1,6 +1,6 @@
 /**
  * 統一學習進度 Composable
- * 支援 courseKey: 'bordeaux' | 'bourgogne' | 'italy'
+ * 支援 courseKey: 'bordeaux' | 'bourgogne' | 'italy' | 'spain'
  * 返回: topStats, miniStats, levelProg, weeklyTrend, hasWeeklyTrend
  */
 import { computed } from 'vue'
@@ -8,6 +8,8 @@ import { progressComputed } from '../stores/progressTracker.js'
 import { learningState } from '../stores/learningStore.js'
 import { useProgress as useBurgProgress } from './bourgogne/useProgress.js'
 import { getLevelProgressPct } from '../components/italy/data/courseLevels.js'
+import { getLevelProgressPercent as getSpainLevelPct } from '../components/spain/data/courseLevels.js'
+import { getLevelProgressPct as getGermanyLevelProgressPct } from '../components/germany/data/courseLevels.js'
 
 // ── 靜態階段定義 ──────────────────────────────────────────────────────────
 
@@ -29,6 +31,19 @@ const ITALY_LEVELS = [
   { key: 'level1', name: '義大利入門', icon: '🌱', totalLessons: 12 },
   { key: 'level2', name: '進階探索',   icon: '🍷', totalLessons: 23 },
   { key: 'level3', name: '專家認證',   icon: '🏆', totalLessons: 26 }
+]
+
+const GERMANY_LEVELS = [
+  { key: 'level1', name: '德國葡萄酒入門', icon: '🌱', totalLessons: 11 },
+  { key: 'level2', name: '產區深度探索',   icon: '🍷', totalLessons: 17 },
+  { key: 'level3', name: '品飲鑑賞',       icon: '🏆', totalLessons: 9 }
+]
+
+const SPAIN_LEVELS = [
+  { key: 'level1', name: '西班牙入門', icon: '🌱' },
+  { key: 'level2', name: '產區深度探索', icon: '🍷' },
+  { key: 'level3', name: '釀造工藝與特殊酒款', icon: '🏺' },
+  { key: 'level4', name: '大師品鑑', icon: '👑' }
 ]
 
 // ── 工具函式 ─────────────────────────────────────────────────────────────
@@ -198,6 +213,91 @@ export function useLearningProgress (courseKey) {
         progress: getLevelProgressPct(lv.key)
       }))
     })
+
+    return { topStats, miniStats, levelProg, weeklyTrend: null, hasWeeklyTrend: false }
+  }
+
+  // ===== 德國 =====
+  if (courseKey === 'germany') {
+    const topStats = computed(() => {
+      let completed = 0
+      let total = 0
+      GERMANY_LEVELS.forEach(lv => {
+        total += lv.totalLessons
+        completed += Math.round(lv.totalLessons * getGermanyLevelProgressPct(lv.key) / 100)
+      })
+      const pct = total > 0 ? Math.round(completed / total * 100) : 0
+      return [
+        { icon: '🌟', value: `${pct}%`,        label: '總體進度',   colorClass: 'col-overall' },
+        { icon: '📚', value: `${completed}`,   label: '完成課程',   colorClass: 'col-lessons' },
+        { icon: '⏱️', value: '--',             label: '累計時長',   colorClass: 'col-time'    },
+        { icon: '🎯', value: '--',             label: '測驗正確率', colorClass: 'col-quiz'    }
+      ]
+    })
+
+    const miniStats = computed(() => {
+      let completed = 0
+      let total = 0
+      GERMANY_LEVELS.forEach(lv => {
+        total += lv.totalLessons
+        completed += Math.round(lv.totalLessons * getGermanyLevelProgressPct(lv.key) / 100)
+      })
+      const overall = total > 0 ? Math.round(completed / total * 100) : 0
+      return [
+        { icon: '📚', value: completed,        label: '已完成'   },
+        { icon: '🎯', value: total,            label: '全部課程' },
+        { icon: '🌟', value: `${overall}%`,    label: '總體進度' },
+        { icon: '🔥', value: 0,               label: '連續天數' }
+      ]
+    })
+
+    const levelProg = computed(() => {
+      return GERMANY_LEVELS.map(lv => ({
+        id:       lv.key,
+        name:     lv.name,
+        icon:     lv.icon,
+        progress: getGermanyLevelProgressPct(lv.key)
+      }))
+    })
+
+    return { topStats, miniStats, levelProg, weeklyTrend: null, hasWeeklyTrend: false }
+  }
+
+  // ===== 西班牙 =====
+  if (courseKey === 'spain') {
+    const topStats = computed(() => {
+      const progs = SPAIN_LEVELS.map(lv => getSpainLevelPct(lv.key))
+      const overall = Math.round(progs.reduce((s, p) => s + p, 0) / progs.length)
+      // 估算已完成課程數（各級進度 × 各級比重）
+      const completed = Math.round(progs.reduce((s, p) => s + p, 0) / 100)
+      return [
+        { icon: '🌟', value: `${overall}%`, label: '總體進度',   colorClass: 'col-overall' },
+        { icon: '📚', value: `${progs.filter(p => p > 0).length}/${SPAIN_LEVELS.length}`, label: '進行中階段', colorClass: 'col-lessons' },
+        { icon: '⏱️', value: '--',          label: '累計時長',   colorClass: 'col-time'    },
+        { icon: '🎯', value: '--',          label: '測驗正確率', colorClass: 'col-quiz'    }
+      ]
+    })
+
+    const miniStats = computed(() => {
+      const progs = SPAIN_LEVELS.map(lv => getSpainLevelPct(lv.key))
+      const overall = Math.round(progs.reduce((s, p) => s + p, 0) / progs.length)
+      const doneLevels = progs.filter(p => p === 100).length
+      return [
+        { icon: '📚', value: doneLevels,       label: '已完成階段' },
+        { icon: '🎯', value: SPAIN_LEVELS.length, label: '全部階段' },
+        { icon: '🌟', value: `${overall}%`,    label: '總體進度' },
+        { icon: '🔥', value: 0,               label: '連續天數' }
+      ]
+    })
+
+    const levelProg = computed(() =>
+      SPAIN_LEVELS.map(lv => ({
+        id:       lv.key,
+        name:     lv.name,
+        icon:     lv.icon,
+        progress: getSpainLevelPct(lv.key)
+      }))
+    )
 
     return { topStats, miniStats, levelProg, weeklyTrend: null, hasWeeklyTrend: false }
   }

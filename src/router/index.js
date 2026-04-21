@@ -44,7 +44,7 @@ const routes = [
   {
     path: '/bordeaux',
     name: 'Home',
-    component: () => import('../components/LevelSelection.vue'),
+    component: () => import('../components/bordeaux/LevelSelection.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🍷 波爾多 · 侍酒師的筆記本' }
   },
 
@@ -52,7 +52,7 @@ const routes = [
   {
     path: '/bourgogne',
     name: 'Bourgogne',
-    component: () => import('../components/BourgognePage.vue'),
+    component: () => import('../components/bourgogne/BourgognePage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🍇 布根地 · 侍酒師的筆記本' }
   },
 
@@ -60,7 +60,7 @@ const routes = [
   {
     path: '/italy',
     name: 'Italy',
-    component: () => import('../components/ItalyPage.vue'),
+    component: () => import('../components/italy/ItalyPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🇮🇹 義大利 · 侍酒師的筆記本' }
   },
 
@@ -68,7 +68,7 @@ const routes = [
   {
     path: '/spain',
     name: 'Spain',
-    component: () => import('../components/SpainPage.vue'),
+    component: () => import('../components/spain/SpainPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🇪🇸 西班牙 · 侍酒師的筆記本' }
   },
 
@@ -76,7 +76,7 @@ const routes = [
   {
     path: '/germany',
     name: 'Germany',
-    component: () => import('../components/GermanyPage.vue'),
+    component: () => import('../components/germany/GermanyPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🇩🇪 德國 · 侍酒師的筆記本' }
   },
 
@@ -84,7 +84,7 @@ const routes = [
   {
     path: '/portugal',
     name: 'Portugal',
-    component: () => import('../components/PortugalPage.vue'),
+    component: () => import('../components/portugal/PortugalPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🇵🇹 葡萄牙 · 侍酒師的筆記本' }
   },
 
@@ -92,7 +92,7 @@ const routes = [
   {
     path: '/australia',
     name: 'Australia',
-    component: () => import('../components/AustraliaPage.vue'),
+    component: () => import('../components/australia/AustraliaPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🦘 澳洲 · 侍酒師的筆記本' }
   },
 
@@ -100,7 +100,7 @@ const routes = [
   {
     path: '/newzealand',
     name: 'NewZealand',
-    component: () => import('../components/NewZealandPage.vue'),
+    component: () => import('../components/newzealand/NewZealandPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🥝 紐西蘭 · 侍酒師的筆記本' }
   },
 
@@ -108,7 +108,7 @@ const routes = [
   {
     path: '/loire',
     name: 'Loire',
-    component: () => import('../components/LoirePage.vue'),
+    component: () => import('../components/loire/LoirePage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '� 羅亞爾河谷 · 侍酒師的筆記本' }
   },
   {
@@ -122,7 +122,7 @@ const routes = [
   {
     path: '/hungary',
     name: 'Hungary',
-    component: () => import('../components/HungaryPage.vue'),
+    component: () => import('../components/hungary/HungaryPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🇭🇺 匈牙利 · 侍酒師的筆記本' }
   },
   {
@@ -136,8 +136,15 @@ const routes = [
   {
     path: '/california',
     name: 'California',
-    component: () => import('../components/CaliforniaPage.vue'),
+    component: () => import('../components/california/CaliforniaPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🍷 加州葡萄酒產區 · 侍酒師的筆記本' }
+  },
+  // ─── 加州葡萄酒課程 ──────────────────────────────────────────────────────────
+  {
+    path: '/california/course',
+    name: 'CaliforniaCourse',
+    component: () => import('../components/california/CaliforniaLearningSystem.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🍷 加州葡萄酒課程 · 侍酒師的筆記本' }
   },
 
   // ─── 定價方案頁 ──────────────────────────────────────────────────────────────
@@ -189,34 +196,34 @@ const routes = [
     //  層級判斷由 beforeEach 動態計算 (見下方)
     path: '/learning',
     name: 'Learning',
-    component: () => import('../components/LearningSystem.vue'),
+    component: () => import('../components/bordeaux/LearningSystem.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '📖 波爾多課程 · 侍酒師的筆記本' }
   },
   {
     // 地圖探索：free 以上均可進入 (AOC 群組與圖層由元件內部依 Tier 控管)
     path: '/explore',
     name: 'Explore',
-    component: () => import('../components/BordeauxMap.vue'),
+    component: () => import('../components/bordeaux/BordeauxMap.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🗺️ 波爾多地圖 · 侍酒師的筆記本' }
   },
   {
     // 互動練習中心：basic 以上
     path: '/gamehub',
     name: 'GameHub',
-    component: () => import('../components/GameHubPage.vue'),
+    component: () => import('../components/bordeaux/GameHubPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'basic', title: '🎮 互動練習 · 侍酒師的筆記本' }
   },
   {
     // 品飲筆記本：premium 以上
     path: '/notebook',
     name: 'Notebook',
-    component: () => import('../components/TastingNotebookPage.vue'),
+    component: () => import('../components/bordeaux/TastingNotebookPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'premium', title: '📝 品飲筆記 · 侍酒師的筆記本' }
   },
   {
     path: '/upgrade',
     name: 'Upgrade',
-    component: () => import('../components/LevelSelection.vue'),
+    component: () => import('../components/bordeaux/LevelSelection.vue'),
     meta: { public: true }
   },
 

@@ -82,7 +82,7 @@ const currentLevelData = computed(() => loireLearningLevels[`level${currentLevel
 const totalProgress = computed(() => loireLearningProgress.value)
 
 const unlockedLevels = computed(() =>
-  [1, 2, 3, 4, 5].filter(n => isLevelUnlocked(n))
+  [1, 2, 3, 4].filter(n => isLevelUnlocked(n))
 )
 
 const canGoPrevious = computed(() => {

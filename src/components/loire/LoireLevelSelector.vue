@@ -89,7 +89,7 @@
         <div class="levels-grid">
           <!-- Level 卡片（動態渲染） -->
           <div
-            v-for="n in 5"
+            v-for="n in 4"
             :key="n"
             class="level-card"
             :class="[
@@ -218,7 +218,7 @@
           <div class="pm-body">
             <div class="progress-detail-grid">
               <div
-                v-for="n in 5"
+                v-for="n in 4"
                 :key="n"
                 class="pd-item"
               >
@@ -865,3 +865,4 @@ function getBubbleStyle(i) {
   .progress-detail-grid { grid-template-columns: 1fr; }
 }
 </style>
+

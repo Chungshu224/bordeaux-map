@@ -135,6 +135,7 @@ import { ref, computed, watch } from 'vue'
 import NZMapPage from './NZMapPage.vue'
 import NZSlideViewer from './NZSlideViewer.vue'
 import NZReviewQuiz from './NZReviewQuiz.vue'
+import NZLevelSelector from './NZLevelSelector.vue'
 
 const props = defineProps({
   currentLesson: { type: Object, default: null },

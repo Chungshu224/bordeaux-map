@@ -488,7 +488,7 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-import BordeauxMapIntegration from './BordeauxMapIntegration.vue'
+import BordeauxMapIntegration from './bordeaux/BordeauxMapIntegration.vue'
 import { climateAndEnvironmentContent } from '../data/climateAndEnvironmentLessons.js'
 // import draggable from 'vuedraggable'
 

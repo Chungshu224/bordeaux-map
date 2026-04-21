@@ -217,9 +217,7 @@ body {
 }
 
 .app {
-  width: 100vw;
-  height: 100vh;
-  overflow: auto; /* allow scrolling when content exceeds viewport */
+  min-height: 100vh;
 }
 
 /* 認證 loading 畫面 */
@@ -264,10 +262,7 @@ body {
 }
 
 @media (max-height: 768px) {
-  .app {
-    height: auto;
-    min-height: 100vh;
-  }
+  /* .app already uses min-height: 100vh — no override needed */
 }
 
 /* 平台特定樣式 */

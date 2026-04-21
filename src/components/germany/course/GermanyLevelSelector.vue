@@ -41,8 +41,21 @@
             <span class="nav-title">互動練習</span>
             <span class="nav-desc">產區競答・分級辨識・品種配對</span>
           </button>
+          <button class="nav-card achievements" @click="showAchievements = true">
+            <span class="nav-icon">🏆</span>
+            <span class="nav-title">學習成就</span>
+            <span class="nav-desc">已解鎖成就・分級章章・成就點數</span>
+          </button>
+          <button class="nav-card progress" @click="showProgress = true">
+            <span class="nav-icon">📊</span>
+            <span class="nav-title">學習進度</span>
+            <span class="nav-desc">各阶段進度・完成課程・學習統計</span>
+          </button>
         </div>
       </section>
+
+      <!-- 學習統計橫列 -->
+      <LearningStatsMini course-key="germany" @show-details="showProgress = true" />
 
       <!-- 等級選擇 -->
       <section class="level-selection-grid">
@@ -187,12 +200,45 @@
         </div>
       </section>
     </div>
+
+    <!-- 成就彈窗 -->
+    <div v-if="showAchievements" class="modal-overlay" @click="showAchievements = false">
+      <div class="achievement-modal" @click.stop>
+        <div class="modal-header">
+          <h3>🏆 學習成就</h3>
+          <button class="close-btn" @click="showAchievements = false">×</button>
+        </div>
+        <div class="modal-content">
+          <AchievementsDashboard course-key="germany" @back="showAchievements = false" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 進度彈窗 -->
+    <div v-if="showProgress" class="modal-overlay" @click="showProgress = false">
+      <div class="progress-modal" @click.stop>
+        <div class="modal-header">
+          <h3>📊 德國課程學習進度</h3>
+          <button class="close-btn" @click="showProgress = false">×</button>
+        </div>
+        <div class="modal-content">
+          <LearningProgressDashboard course-key="germany" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { getLevelProgressPct, getUserProgress } from '../data/courseLevels.js'
+import { authActions } from '../../../stores/authStore.js'
+import AchievementsDashboard from '../../AchievementsDashboard.vue'
+import LearningStatsMini from '../../LearningStatsMini.vue'
+import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
+
+const showAchievements = ref(false)
+const showProgress = ref(false)
 
 const emit = defineEmits(['startLevel', 'openMap', 'openGames'])
 
@@ -217,6 +263,7 @@ function getLevelProgress(key) {
 }
 
 function isLevelUnlocked(key) {
+  if (authActions.isAdmin()) return true
   if (key === 'level1') return true
   if (key === 'level2') return getUserProgress('level1').completedLessons.includes('G1FinalExam')
   if (key === 'level3') return getUserProgress('level2').completedLessons.includes('G2FinalExam')
@@ -274,7 +321,7 @@ function getBubbleStyle(index) {
 
 /* Quick nav */
 .quick-nav-section { margin-bottom: 2.5rem; }
-.quick-nav-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.quick-nav-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 .nav-card {
   border: none; border-radius: 16px; padding: 1.25rem 1rem;
   cursor: pointer; display: flex; flex-direction: column; gap: 0.35rem;
@@ -286,6 +333,8 @@ function getBubbleStyle(index) {
 .nav-desc { font-size: 0.72rem; color: rgba(255,255,255,0.78); line-height: 1.4; }
 .nav-card.explore { background: linear-gradient(135deg, #00BCD4, #0097A7); }
 .nav-card.games { background: linear-gradient(135deg, #1a3a6b, #0d1f4a); }
+.nav-card.achievements { background: linear-gradient(135deg, #FF9800, #F57C00); }
+.nav-card.progress { background: linear-gradient(135deg, #4CAF50, #388E3C); }
 
 /* Level cards */
 .level-selection-grid { margin-bottom: 3rem; }
@@ -334,8 +383,41 @@ function getBubbleStyle(index) {
 .level-btn:hover .btn-arrow { transform: translateX(4px); }
 
 @media (max-width: 640px) {
-  .quick-nav-grid { grid-template-columns: 1fr 1fr; }
+  .quick-nav-grid { grid-template-columns: repeat(2, 1fr); }
   .level-features { grid-template-columns: 1fr; }
   .mini-stats-bar { gap: 1.5rem; }
 }
+
+/* Modals */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.achievement-modal, .progress-modal {
+  background: white; border-radius: 16px;
+  width: 100%; max-width: 900px;
+  max-height: 90vh; overflow: hidden;
+  display: flex; flex-direction: column;
+  margin-top: 2rem;
+}
+.modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  background: #f8f9fa;
+  border-radius: 16px 16px 0 0;
+  flex-shrink: 0;
+}
+.modal-header h3 { margin: 0; font-size: 1.2rem; color: #2c3e50; }
+.close-btn {
+  background: none; border: none; font-size: 1.5rem;
+  cursor: pointer; color: #666; line-height: 1;
+  padding: 0 0.25rem;
+}
+.close-btn:hover { color: #333; }
+.modal-content { overflow-y: auto; flex: 1; }
 </style>

@@ -1,6 +1,7 @@
 /**
- * LO-L1-6 四大產區深度探索
- * Pays Nantais、Anjou-Saumur、Touraine、Centre-Loire 的深度解析
+ * LO-L1-6 產區深度探索
+ * Pays Nantais、Anjou-Saumur、Touraine、Centre-Loire、Vallée du Loir、Haut-Poitou 全面解析
+ * 資料來源補充：Vins de Loire 官方網站（vinsdeloire.fr）
  */
 
 export const lessonContent = [
@@ -10,8 +11,9 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          現在我們將從地圖走進每個產區，認識它們各自的主角品種、代表酒款和風土個性。這堂課將帶您完成一次從大西洋到中央高地的800公里葡萄酒旅程。
+          現在我們將從地圖走進每個產區，認識它們各自的主角品種、代表酒款和風土個性。這堂課將帶您完成一次從大西洋到法國中央高地的完整葡萄酒旅程，涵蓋羅亞爾河谷官方認定的六大產區群。
         </p>
+        <p class="intro-note" style="font-size:0.9em;color:#888;margin-top:8px;">資料依據：<em>Vins de Loire</em> 官方網站（vinsdeloire.fr），共計 <strong>54 個 AOP/DGC 及 IGP</strong>，分屬 5 個主要葡萄酒次產區。</p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
           <div class="point-item">
@@ -24,11 +26,19 @@ export const lessonContent = [
           </div>
           <div class="point-item">
             <h4>🏯 了解 Touraine 的多樣風格</h4>
-            <p>Vouvray 的干甜多變 + Chinon/Bourgueil 的 Cabernet Franc 精華</p>
+            <p>Vouvray 的干甜多變 + Chinon/Bourgueil 的 Cabernet Franc 精華，及各村莊 AOP 特色</p>
           </div>
           <div class="point-item">
             <h4>⛰️ 探索 Centre-Loire 的礦石殿堂</h4>
             <p>Sancerre 和 Pouilly-Fumé 的 Sauvignon Blanc 巔峰</p>
+          </div>
+          <div class="point-item">
+            <h4>🌿 認識 Vallée du Loir 的辛香個性</h4>
+            <p>Jasnières、Coteaux du Loir、Coteaux du Vendômois——Pineau d'Aunis 的故鄉</p>
+          </div>
+          <div class="point-item">
+            <h4>🏛️ 探索 Haut-Poitou 的特殊地位</h4>
+            <p>隸屬 Nouvelle-Aquitaine 卻歸入羅亞爾河谷的特殊 AOP</p>
           </div>
         </div>
       </div>
@@ -169,8 +179,28 @@ export const lessonContent = [
             <p>三者中最輕盈；砂礫土壤，果香清新，適合微涼服侍；是隨意享用的紅酒佳選</p>
           </div>
           <div class="aop-card">
-            <h5>Touraine-Amboise、Touraine-Chenonceaux、Touraine-Mesland</h5>
-            <p>各有特色的 Touraine 村莊級 AOP，使用 Gamay、Cabernet Franc 和 Côt 的各種組合</p>
+            <h5>Touraine-Amboise</h5>
+            <p><strong>特色：</strong>全球唯一規定以 100% Côt（Malbec）釀製紅酒的 AOP；白酒以 Chenin Blanc 為主</p>
+          </div>
+          <div class="aop-card">
+            <h5>Touraine-Chenonceaux</h5>
+            <p><strong>品種：</strong>Côt + Cabernet Franc（紅酒）；Sauvignon Blanc（白酒）<br><strong>特色：</strong>以雪儂梭城堡（Château de Chenonceau）命名，橫跨 Cher 河的著名城堡旁邊的優美葡萄園</p>
+          </div>
+          <div class="aop-card">
+            <h5>Touraine-Mesland</h5>
+            <p><strong>品種：</strong>Gamay + Côt + Cabernet Franc（紅酒），Chenin Blanc（白酒）<br><strong>特色：</strong>以砂礫土壤為主，紅酒清新活潑，白酒帶花香</p>
+          </div>
+          <div class="aop-card">
+            <h5>Touraine Azay-le-Rideau ✦ 特色 AOP</h5>
+            <p><strong>品種：</strong>白酒：Chenin Blanc（可干型或半甜型）；粉紅酒：Gamay + Grolleau<br><strong>特色：</strong>以 Azay-le-Rideau 城堡命名；白酒以半甜型（Demi-sec）最具代表性，帶有蜂蜜和礦石感</p>
+          </div>
+          <div class="aop-card">
+            <h5>Touraine Noble-Joué ✦ 稀有 AOP</h5>
+            <p><strong>品種：</strong>100% Meunier + Pinot Gris + Pinot Noir（三種 Pinot 混釀）<br><strong>特色：</strong>全法國獨一無二的粉紅酒 AOP，以「灰粉紅」（gris de gris）風格著稱；顏色淡鮭魚粉，香氣細膩，帶花香和蜂蜜感</p>
+          </div>
+          <div class="aop-card">
+            <h5>Touraine Oisly</h5>
+            <p><strong>品種：</strong>Sauvignon Blanc（白酒，最低 85%）<br><strong>特色：</strong>位於 Touraine 東南端的砂質高台（plateau de Oisly），Sauvignon Blanc 個性清新，帶白花和柑橘香，是 Touraine Sauvignon 品質最高的地塊之一</p>
           </div>
         </div>
       </div>
@@ -234,6 +264,169 @@ export const lessonContent = [
       ],
       correct: 1,
       explanation: 'Sancerre 最著名的三種土壤類型是：1）「Terres blanches」泥灰岩——最精緻複雜，陳年潛力最強；2）「Silex」燧石——煙燻礦石感，帶有「打火石」特有香氣；3）「Caillotes」石灰岩碎石——清新活潑，果香明亮，適合早飲。了解這三種土壤，就能理解為何同為 Sancerre 的不同酒莊，風格可以差異如此之大。'
+    }
+  },
+
+  {
+    title: 'Vallée du Loir：北方的辛香世界',
+    highlights: [
+      { id: 1, icon: '🌿', title: 'Pineau d\'Aunis 的故鄉', content: '羅亞爾河北方支流 Loir 河谷（注意：Loir 不是 Loire），是辛辣香料感紅酒品種 Pineau d\'Aunis 最重要的堡壘' },
+      { id: 2, icon: '❄️', title: '最涼爽的羅亞爾子產區', content: '北方位置造就羅亞爾最涼爽的微氣候，Chenin Blanc 白酒酸度極高，個性鮮明，是收藏家的低調珍品' }
+    ],
+    content: `<div class="vallee-du-loir">
+      <p class="lead-text">Vallée du Loir 沿著羅亞爾河北方的支流「Loir 河」延伸（注意：是「Loir」不帶「e」，非羅亞爾主河「Loire」），從 Villiers-sur-Loir 到 Château-du-Loir 一帶。涼爽的氣候和以凝灰石（tuffeau）為主的土壤，孕育出個性鮮明的辛香紅酒和礦石白酒。</p>
+      <div class="loir-stats">
+        <div class="stat-box">
+          <strong>官方描述</strong>：「Cap au nord, fraîcheur garantie！」（向北去，清爽有保障！）<br>
+          <strong>AOP 數量</strong>：4 個 AOP/DGC（不含 IGP Val de Loire）<br>
+          <strong>主要土壤</strong>：凝灰石（tuffeau）+ 黏土（argiles）<br>
+          <strong>特色</strong>：法國最北端的 Chenin Blanc 和 Pineau d'Aunis 產地之一
+        </div>
+      </div>
+      <div class="loir-aops">
+        <h4>🏅 Vallée du Loir 的 AOP</h4>
+        <div class="aop-cards">
+          <div class="aop-card">
+            <h5>🌟 Jasnières（賈斯尼耶爾）</h5>
+            <p><strong>品種：</strong>100% Chenin Blanc（白酒）</p>
+            <p><strong>面積：</strong>僅約 60 公頃，極為稀少</p>
+            <p><strong>土壤：</strong>凝灰石坡地，面朝南方</p>
+            <p><strong>風格：</strong>高酸、清瘦、礦石感強烈；優秀年份帶有蜂蜜、蜂蠟和礦石的細膩複雜度；陳年潛力強，可達 10-20 年以上</p>
+            <p><strong>評價：</strong>常被葡萄酒收藏家視為「最低調的羅亞爾頂級白酒」</p>
+          </div>
+          <div class="aop-card">
+            <h5>Coteaux du Loir（羅亞爾丘）</h5>
+            <p><strong>品種：</strong>白酒：Chenin Blanc；紅酒/粉紅：Pineau d'Aunis、Gamay、Grolleau、Côt、Cabernet Franc</p>
+            <p><strong>面積：</strong>約 200 公頃</p>
+            <p><strong>土壤：</strong>凝灰石、黏土</p>
+            <p><strong>風格：</strong>
+              <ul>
+                <li>白酒：Chenin 的高酸礦石感，年輕時封閉，陳年後展現蜂蜜野花香</li>
+                <li>紅酒：以 Pineau d'Aunis 為主，白胡椒辛香、紅果清新，酒體輕盈</li>
+                <li>粉紅：淡鮭魚色，胡椒香和野草莓風味</li>
+              </ul>
+            </p>
+          </div>
+          <div class="aop-card">
+            <h5>Coteaux du Vendômois（旺多姆丘）</h5>
+            <p><strong>品種：</strong>白酒：Chenin Blanc（+ Chardonnay）；紅酒：Gamay + Pineau d'Aunis（可混釀）；粉紅：Pineau d'Aunis（最著名）</p>
+            <p><strong>特色：</strong>Pineau d'Aunis 的核心堡壘，尤其以「gris de Pineau d'Aunis」（Pineau d'Aunis 粉紅酒）最受推崇；顏色淡、香氣迷人，帶白胡椒和野花香</p>
+            <p><strong>位置：</strong>Vendôme 城市周邊，羅亞爾北部支流沿岸</p>
+          </div>
+        </div>
+      </div>
+      <div class="loir-character">
+        <h4>🌶️ Pineau d'Aunis：Vallée du Loir 的靈魂品種</h4>
+        <p>Pineau d'Aunis 是幾乎只在羅亞爾河谷種植的原生紅葡萄品種，在 Vallée du Loir 找到了它最後的重要堡壘。以其鮮明的<strong>白胡椒辛香</strong>、紅醋栗和野草莓香氣著稱，酒體輕盈，酸度活潑，是自然酒界最受追捧的稀有品種之一。</p>
+      </div>
+      <div class="loir-food">
+        <h4>🍽️ 餐酒搭配</h4>
+        <ul>
+          <li><strong>Jasnières 干白：</strong>河魚料理、淡菜、山羊乳酪</li>
+          <li><strong>Coteaux du Loir 紅酒（Pineau d'Aunis）：</strong>豬肉熟食冷盤（charcuterie）、白肉料理、輕微香料風味食物</li>
+          <li><strong>Coteaux du Vendômois 粉紅：</strong>夏季輕食、沙拉、蔬食料理</li>
+        </ul>
+      </div>
+    </div>`,
+    quiz: {
+      question: 'Vallée du Loir 的 Jasnières AOP 以哪個葡萄品種釀製，風格有何特徵？',
+      options: [
+        'Sauvignon Blanc——草本清新，適合早飲',
+        'Chenin Blanc——高酸礦石感，陳年潛力強，是羅亞爾最低調的頂級白酒之一',
+        'Muscadet——清淡鹹鮮，搭配海鮮',
+        'Pineau d\'Aunis——辛香紅酒，白胡椒個性'
+      ],
+      correct: 1,
+      explanation: 'Jasnières 是 100% Chenin Blanc 的白酒 AOP，面積僅約 60 公頃，是羅亞爾最北端也最為稀少的頂級白酒產地之一。凝灰石南向坡地帶來獨特的礦石感和高酸度，年輕時常顯封閉嚴肅，但隨著陳年逐漸展現蜂蜜、蜂蠟和礦石的細膩複雜度，被許多收藏家視為「被低估的羅亞爾頂級白酒」。'
+    }
+  },
+
+  {
+    title: 'Haut-Poitou：跨越疆界的特殊 AOP',
+    highlights: [
+      { id: 1, icon: '🗺️', title: '地理上的特殊存在', content: 'Haut-Poitou 行政上隸屬 Nouvelle-Aquitaine 大區（非 Pays de la Loire），但因 Vienne 河的影響，酒款被歸入羅亞爾河谷體系' },
+      { id: 2, icon: '🌬️', title: '海洋與大陸氣候的交匯', content: '大西洋的溫和與大陸型的溫差在此交會，賦予白酒特別的清新芬芳，紅酒輕盈爽口' }
+    ],
+    content: `<div class="haut-poitou">
+      <p class="lead-text">Haut-Poitou（上普瓦圖）位於 Poitiers 城市的西北方，行政隸屬 Vienne 省（Nouvelle-Aquitaine 大區）。儘管在行政上不屬於羅亞爾大區，但 Vienne 河的影響讓這裡的葡萄酒被納入羅亞爾河谷體系，官方網站 vinsdeloire.fr 將其列為羅亞爾的第五個葡萄酒次產區。</p>
+      <div class="haut-poitou-stats">
+        <div class="stat-box">
+          <strong>位置</strong>：Poitiers 西北方，Vienne 省<br>
+          <strong>行政隸屬</strong>：Nouvelle-Aquitaine 大區（非 Pays de la Loire）<br>
+          <strong>AOP 數量</strong>：1 個（Haut-Poitou AOP）+ IGP Val de Loire<br>
+          <strong>特色</strong>：海洋與大陸氣候交匯帶，芳香白酒與清新紅酒
+        </div>
+      </div>
+      <div class="haut-poitou-aop">
+        <h4>🏅 Haut-Poitou AOP</h4>
+        <div class="aop-card" style="max-width:100%;">
+          <p><strong>葡萄品種：</strong></p>
+          <ul>
+            <li><strong>白酒（主要）：</strong>Sauvignon Blanc、Sauvignon Gris——活潑清新，柑橘與白花香氣突出</li>
+            <li><strong>紅酒：</strong>Gamay、Cabernet Franc、Pinot Noir、Merlot——風格輕盈爽口，以 Gamay 和 Cabernet Franc 最具代表性</li>
+            <li><strong>粉紅酒：</strong>以上紅酒品種均可</li>
+          </ul>
+          <p><strong>風格特徵：</strong></p>
+          <ul>
+            <li>白酒：香氣特別生動，Sauvignon Blanc 展現濃郁的草本、柑橘和白花香，兼具海洋清新感</li>
+            <li>紅酒：輕盈果香型，適合輕涼服侍</li>
+            <li>整體：清爽、芳香，是性價比優良的日常飲用佳選</li>
+          </ul>
+        </div>
+      </div>
+      <div class="haut-poitou-context">
+        <h4>📌 與羅亞爾其他產區的比較</h4>
+        <table class="comparison-table">
+          <tr>
+            <th>特徵</th>
+            <th>Haut-Poitou</th>
+            <th>Sancerre / Pouilly-Fumé</th>
+          </tr>
+          <tr>
+            <td>主要白酒品種</td>
+            <td>Sauvignon Blanc</td>
+            <td>Sauvignon Blanc</td>
+          </tr>
+          <tr>
+            <td>氣候</td>
+            <td>海洋 + 大陸交匯型</td>
+            <td>半大陸型</td>
+          </tr>
+          <tr>
+            <td>土壤</td>
+            <td>石灰岩、黏土</td>
+            <td>泥灰岩、燧石、石灰岩</td>
+          </tr>
+          <tr>
+            <td>風格</td>
+            <td>清新芳香，果味生動</td>
+            <td>礦石感更強，複雜度更高</td>
+          </tr>
+          <tr>
+            <td>定位</td>
+            <td>日常飲用，性價比高</td>
+            <td>頂級精品，珍藏級</td>
+          </tr>
+        </table>
+      </div>
+      <div class="haut-poitou-food">
+        <h4>🍽️ 餐酒搭配</h4>
+        <ul>
+          <li><strong>Haut-Poitou 白酒：</strong>山羊乳酪、蘆筍、清炒海鮮、越南春捲</li>
+          <li><strong>Haut-Poitou 紅酒：</strong>烤雞腿、豬里脊、輕盈燉菜、軟質乾酪</li>
+        </ul>
+      </div>
+    </div>`,
+    quiz: {
+      question: 'Haut-Poitou AOP 在行政與地理上有何特殊之處？',
+      options: [
+        '它位於巴黎盆地，是羅亞爾最北端的產區',
+        '它行政上隸屬 Nouvelle-Aquitaine（非羅亞爾大區），但因 Vienne 河影響而被歸入羅亞爾葡萄酒體系',
+        '它是羅亞爾唯一生產紅酒的產區',
+        '它是法國面積最大的 AOP'
+      ],
+      correct: 1,
+      explanation: 'Haut-Poitou 的獨特之處在於其跨越行政疆界的歸屬——它位於 Vienne 省（Nouvelle-Aquitaine 大區），行政上並不屬於 Pays de la Loire 大區，但由於受到流經此地的 Vienne 河（羅亞爾的重要支流）影響，葡萄酒風格與羅亞爾體系相近，因此被 InterLoire 官方納入羅亞爾葡萄酒家族。這種「行政在大區外，酒款在體系內」的特殊身份，使 Haut-Poitou 成為羅亞爾葡萄酒版圖中最具趣味的邊界案例。'
     }
   }
 ]

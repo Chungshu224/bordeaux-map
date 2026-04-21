@@ -10,7 +10,7 @@
       <div class="header-center">
         <div class="level-tabs">
           <button
-            v-for="n in [1, 2, 3, 4, 5]"
+            v-for="n in [1, 2, 3, 4]"
             :key="n"
             class="level-tab"
             :class="{ active: props.currentLevel === n, locked: !props.unlockedLevels.includes(n) }"

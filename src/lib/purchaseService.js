@@ -31,6 +31,22 @@ export const COURSES = {
     flag: '🇮🇹',
     region: 'Italy',
     available: false
+  },
+  loire: {
+    id: 'loire',
+    name: '羅亞爾河葡萄酒',
+    nameEn: 'Loire Valley Wine',
+    flag: '🌿',
+    region: 'France · Loire Valley',
+    available: true
+  },
+  california: {
+    id: 'california',
+    name: '加州葡萄酒',
+    nameEn: 'California Wine',
+    flag: '🇺🇸',
+    region: 'USA · California',
+    available: true
   }
 }
 
@@ -41,6 +57,8 @@ export const COURSE_PRICING = {
   bourgogne: { basic: { monthly: 390, yearly: 2400 }, premium: { monthly: 690, yearly: 4200 } },
   italy:     { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
   spain:     { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
+  loire:      { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
+  california: { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
 }
 
 export const TIERS = {
