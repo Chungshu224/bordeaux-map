@@ -778,7 +778,7 @@ function formatStudyTime(sec) {
   .btn-outline-sm, .btn-ghost-sm { padding: 4px 10px; font-size: .75rem; }
 
   /* Tab 列手機版：只顯示 icon，文字隱藏 */
-  .admin-tabs { padding: 0; justify-content: stretch; }
+  .admin-tabs { padding: 0; justify-content: stretch; overflow: visible; }
   .tab-btn {
     padding: 10px 0;
     font-size: 0;        /* 隱藏文字 */
