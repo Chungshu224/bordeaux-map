@@ -56,6 +56,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'Napa Valley 16 子 AVA 地圖',
+    componentProps: {
+      slide: {
+        title: 'Napa Valley 16 個子 AVA 地圖',
+        description: '從南端涼爽的 Carneros 到北端溫暖的 Calistoga，探索 Napa Valley 的南北風土漸變',
+        mapGroup: 'Napa Valley',
+        highlightAVAs: ['Carneros', 'Oakville', 'Rutherford', 'St. Helena', 'Calistoga', 'Stags Leap District'],
+      }
+    }
+  },
+
+  {
     title: 'Napa Valley：從南到北的 16 個子 AVA',
     content: `<div class="napa-sub-avas">
       <h3>📍 Napa 16 個子 AVA — 由南至北風土漸變</h3>

@@ -72,6 +72,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'Napa Valley 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Napa Valley AVA 地圖',
+        description: '美國最著名的葡萄酒谷地，16 個子 AVA，以 Cabernet Sauvignon 聞名全球',
+        mapGroup: 'Napa Valley',
+        highlightAVAs: ['Oakville', 'Rutherford', 'Stags Leap District', 'Howell Mountain', 'Spring Mountain District'],
+      }
+    }
+  },
+
+  {
     title: 'Napa Valley 南北氣候梯度',
     content: `<div class="napa-climate">
       <h3>🌡️ 從 Carneros 到 Calistoga：50 公里的氣候旅程</h3>

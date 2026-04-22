@@ -32,6 +32,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'Central Coast 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Central Coast AVA 地圖',
+        description: '從 Livermore 到 Santa Barbara，探索加州最多元的海岸葡萄酒帶',
+        mapGroup: 'Central Coast',
+        highlightAVAs: ['Santa Rita Hills', 'Santa Ynez Valley', 'Paso Robles', 'Santa Cruz Mountains'],
+      }
+    }
+  },
+
+  {
     title: 'Santa Barbara County：橫向山谷的奇蹟',
     content: `<div class="santa-barbara-geo">
       <h3>🗺️ 加州唯一的橫向山谷體系</h3>

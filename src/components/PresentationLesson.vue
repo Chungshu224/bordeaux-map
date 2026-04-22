@@ -229,6 +229,7 @@ import LessonProgressIndicator from './LessonProgressIndicator.vue'
 import QuizSlide from './italy/course/slides/QuizSlide.vue'
 import LoireRegionMapSlide from './loire/course/slides/LoireRegionMapSlide.vue'
 import HungaryRegionMapSlide from './hungary/slides/HungaryRegionMapSlide.vue'
+import CaliforniaRegionMapSlide from './california/slides/CaliforniaRegionMapSlide.vue'
 // 改用 lessonContentLoader 的單例載入器,避免間接層帶來的潛在等待問題
 import { loadLessonContent as coreLoadLessonContent } from '../data/lessonContentLoader.js'
 // 導入進度追蹤系統
@@ -378,7 +379,8 @@ const slideComponentMap = {
   FirstGrowthsMap,
   QuizSlide,
   LoireRegionMapSlide,
-  HungaryRegionMapSlide
+  HungaryRegionMapSlide,
+  CaliforniaRegionMapSlide
 }
 
 // 將內容中的 AOC 名稱標準化並附上英文原文（避免重複標註，具備一定的容錯與等幣性）

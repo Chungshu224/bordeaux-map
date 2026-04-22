@@ -178,7 +178,7 @@ const is3D          = ref(false)
 const infoCollapsed = ref(true)
 const drawerOpen    = ref(false)
 const drawerTab     = ref('doc')
-const showIGP       = ref(false)
+const showIGP       = ref(true)
 const showContour   = ref(false)
 const layerPanelOpen = ref(false)
 const activeRegion  = ref(null)
@@ -488,6 +488,10 @@ function resetView() {
     map.removeFeatureState({ source: 'doc-regions' })
   }
   clearSelectionFilter()
+  // Restore IGP layer visibility
+  if (map.getLayer('igp-fill'))    map.setLayoutProperty('igp-fill',    'visibility', 'visible')
+  if (map.getLayer('igp-outline')) map.setLayoutProperty('igp-outline', 'visibility', 'visible')
+  showIGP.value = true
 }
 
 // ── Toggle 3D ──────────────────────────────────────────────────────────────
@@ -622,9 +626,9 @@ async function initMap() {
           'fill-color': ['get', 'color'],
           'fill-opacity': [
             'case',
-            ['boolean', ['feature-state', 'selected'], false], 0.35,
-            ['boolean', ['feature-state', 'hover'], false],    0.25,
-            0.10,
+            ['boolean', ['feature-state', 'selected'], false], 0.45,
+            ['boolean', ['feature-state', 'hover'], false],    0.30,
+            0.20,
           ],
         },
       })
@@ -706,17 +710,17 @@ async function initMap() {
         minzoom: 7,
       })
 
-      // ── IGP layers (hidden by default) ──
+      // ── IGP layers (visible by default) ──
       map.addSource('igp-regions', { type: 'geojson', data: igpGeoJSON, generateId: true })
 
       map.addLayer({
         id: 'igp-fill',
         type: 'fill',
         source: 'igp-regions',
-        layout: { visibility: 'none' },
+        layout: { visibility: 'visible' },
         paint: {
           'fill-color': ['coalesce', ['get', 'color'], '#3498db'],
-          'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.25, 0.10],
+          'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.30, 0.15],
         },
       })
 
@@ -724,7 +728,7 @@ async function initMap() {
         id: 'igp-outline',
         type: 'line',
         source: 'igp-regions',
-        layout: { visibility: 'none' },
+        layout: { visibility: 'visible' },
         paint: {
           'line-color': 'rgba(52,152,219,0.8)',
           'line-width': 1.5,

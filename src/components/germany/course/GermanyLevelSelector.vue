@@ -17,6 +17,32 @@
             <p class="brand-subtitle">The Sommelier's Notebook</p>
           </div>
         </div>
+
+        <!-- 用戶面板 -->
+        <div class="user-panel">
+          <template v-if="authUser">
+            <div class="user-avatar">
+              <img v-if="avatarUrl" :src="avatarUrl" class="ls-avatar-img" />
+              <span v-else class="ls-avatar-initial">{{ avatarInitial }}</span>
+            </div>
+            <div class="user-info">
+              <span class="user-name">{{ displayName }}</span>
+              <div class="tier-badge" :class="`tier-${userTier}`">
+                <span class="tier-icon">{{ tierInfo.icon }}</span>
+                <span class="tier-label">{{ tierInfo.label }}</span>
+              </div>
+              <div class="user-btns">
+                <button class="user-action-btn home" @click="router.push('/')">🏠 首頁</button>
+                <button class="user-action-btn settings" @click="router.push('/settings')">⚙️ 設定</button>
+                <button class="user-action-btn logout" @click="handleLogout">登出</button>
+              </div>
+            </div>
+          </template>
+          <template v-else>
+            <button class="user-action-btn login" @click="router.push('/login')">🔑 登入</button>
+            <button class="user-action-btn register" @click="router.push('/register')">✏️ 註冊</button>
+          </template>
+        </div>
       </header>
 
       <!-- 統計列 -->
@@ -235,15 +261,51 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { getLevelProgressPct, getUserProgress } from '../data/courseLevels.js'
-import { authActions } from '../../../stores/authStore.js'
+import { authState, authActions } from '../../../stores/authStore.js'
+import { supabase } from '../../../lib/supabaseClient.js'
 import AchievementsDashboard from '../../AchievementsDashboard.vue'
 import LearningStatsMini from '../../LearningStatsMini.vue'
 import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
 
+const router = useRouter()
 const showAchievements = ref(false)
 const showProgress = ref(false)
+const avatarUrl = ref('')
+const avatarInitial = ref('我')
+
+const authUser = computed(() => authState.user)
+const displayName = computed(() => authActions.getDisplayName())
+
+const TIER_INFO = {
+  free:    { label: '品飲新手 Explorer',     icon: '🌱', color: '#6b7280' },
+  basic:   { label: '進階愛好者 Enthusiast', icon: '🍇', color: '#7c3aed' },
+  premium: { label: '專業達人 Professional', icon: '🏆', color: '#b45309' }
+}
+const userTier = computed(() => authActions.getEffectiveTier())
+const tierInfo = computed(() => TIER_INFO[userTier.value] || TIER_INFO.free)
+
+async function handleLogout() {
+  await authActions.signOut()
+  router.push('/')
+}
+
+onMounted(async () => {
+  const user = authState.user
+  if (user) {
+    const fallback = user.user_metadata?.full_name || user.email?.split('@')[0] || '我'
+    avatarInitial.value = [...fallback][0] || '我'
+    if (supabase) {
+      const { data } = await supabase.from('profiles').select('display_name,avatar_url').eq('id', user.id).single()
+      if (data) {
+        avatarUrl.value = data.avatar_url || ''
+        if (data.display_name) avatarInitial.value = [...data.display_name][0] || avatarInitial.value
+      }
+    }
+  }
+})
 
 const emit = defineEmits(['startLevel', 'openMap', 'openGames', 'openNotebook'])
 
@@ -311,8 +373,28 @@ function getBubbleStyle(index) {
 .main-container { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 2rem 1rem 4rem; }
 
 /* Brand header */
-.brand-header { display: flex; justify-content: center; align-items: center; padding: 2rem 0; margin-bottom: 1.5rem; }
+.brand-header { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
 .brand-logo { display: flex; align-items: center; gap: 1rem; }
+
+/* User panel */
+.user-panel { display: flex; align-items: center; gap: 1rem; }
+.user-avatar { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,0.5); flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.15); }
+.ls-avatar-img { width: 100%; height: 100%; object-fit: cover; }
+.ls-avatar-initial { font-size: 1.1rem; font-weight: 700; color: white; }
+.user-info { display: flex; flex-direction: column; gap: 0.25rem; }
+.user-name { color: white; font-weight: 700; font-size: 0.95rem; }
+.tier-badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 2px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 600; }
+.tier-badge.tier-free    { background: rgba(107,114,128,0.3); color: #d1d5db; }
+.tier-badge.tier-basic   { background: rgba(124,58,237,0.3); color: #c4b5fd; }
+.tier-badge.tier-premium { background: rgba(180,83,9,0.3); color: #fcd34d; }
+.user-btns { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.user-action-btn { padding: 4px 10px; border-radius: 12px; font-size: 0.72rem; font-weight: 600; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); transition: all 0.2s; }
+.user-action-btn.home     { background: rgba(255,255,255,0.15); color: white; }
+.user-action-btn.settings { background: rgba(255,255,255,0.15); color: white; }
+.user-action-btn.logout   { background: rgba(220,38,38,0.4); color: white; border-color: rgba(220,38,38,0.6); }
+.user-action-btn.login    { background: rgba(255,255,255,0.2); color: white; }
+.user-action-btn.register { background: rgba(255,255,255,0.2); color: white; }
+.user-action-btn:hover    { background: rgba(255,255,255,0.3); }
 .wine-glass-icon { font-size: 3rem; }
 .brand-title { font-size: 2rem; font-weight: 800; color: white; margin: 0; }
 .brand-subtitle { font-size: 1rem; color: rgba(255,255,255,0.7); margin: 0; }

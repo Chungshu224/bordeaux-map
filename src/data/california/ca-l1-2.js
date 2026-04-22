@@ -129,6 +129,18 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'North Coast 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'North Coast — Napa、Sonoma、Mendocino 產區地圖',
+        description: 'North Coast 是全球最知名的精品葡萄酒地帶，涵蓋 Napa Valley 和 Sonoma County 等頂尖產區',
+        mapGroup: 'North Coast',
+      }
+    }
+  },
+
+  {
     title: 'Central Coast（中央海岸）產區群',
     content: `<div class="region-detail central-coast">
       <h3>🌊 Central Coast — 從 Livermore 到 Santa Barbara 的海岸精品帶</h3>
@@ -207,6 +219,18 @@ export const lessonContent = [
         </div>
       </div>
     </div>`
+  },
+
+  {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'Central Coast 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Central Coast — 從 Livermore 到 Santa Barbara 的海岸精品帶',
+        description: 'Central Coast 延伸逾 400 公里，多樣地形造就截然不同的葡萄酒風格',
+        mapGroup: 'Central Coast',
+      }
+    }
   },
 
   {

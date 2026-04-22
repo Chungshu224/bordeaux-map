@@ -1,18 +1,18 @@
 <template>
   <div class="portugal-course-manager">
 
-    <!-- 品飲筆記 -->
-    <PortugalTastingNotebookPage
-      v-else-if="view === 'notebook'"
-      @back="view = 'levelSelector'"
-    />
-
     <!-- 等級選擇首頁 -->
     <PortugalLevelSelector
       v-if="view === 'levelSelector'"
       @openMap="$emit('openMap')"
       @startLevel="handleSelectLevel"
       @openNotebook="view = 'notebook'"
+    />
+
+    <!-- 品飲筆記 -->
+    <PortugalTastingNotebookPage
+      v-else-if="view === 'notebook'"
+      @back="view = 'levelSelector'"
     />
 
     <!-- 章節列表 -->

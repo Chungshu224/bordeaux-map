@@ -10,7 +10,7 @@
     <CaliforniaLevelSelector
       v-else-if="!currentLesson && showLevelSelector"
       @startLevel="handleStartLevel"
-      @openMap="emit('exitLearning')"
+      @openMap="router.push('/california')"
       @openNotes="showNotebook = true"
     />
 
@@ -57,6 +57,7 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import {
   californiaLearningState,
   californiaLearningLevels,
@@ -70,6 +71,7 @@ import CaliforniaTastingNotebookPage from './notebook/CaliforniaTastingNotebookP
 import PresentationLesson from '../PresentationLesson.vue'
 
 const emit = defineEmits(['exitLearning'])
+const router = useRouter()
 
 const props = defineProps({
   selectedLevel: { type: Number, default: 1 }

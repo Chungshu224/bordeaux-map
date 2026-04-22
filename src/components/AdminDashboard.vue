@@ -770,12 +770,36 @@ function formatStudyTime(sec) {
 .more-menu-wrap { display: none; position: relative; }
 
 @media (max-width: 640px) {
-  .admin-tabs { padding: 0 4px; }
-  .tab-btn { padding: 10px 10px; font-size: .78rem; gap: 4px; }
-  .tab-icon { font-size: .85rem; }
+  /* Header 手機版 */
+  .admin-header { padding: 10px 14px; gap: 8px; }
+  .brand-name { font-size: .9rem; }
+  .admin-email { display: none; }
+  .admin-user-info { gap: 6px; }
+  .btn-outline-sm, .btn-ghost-sm { padding: 4px 10px; font-size: .75rem; }
+
+  /* Tab 列手機版：只顯示 icon，文字隱藏 */
+  .admin-tabs { padding: 0; justify-content: stretch; }
+  .tab-btn {
+    padding: 10px 0;
+    font-size: 0;        /* 隱藏文字 */
+    gap: 0;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tab-btn .tab-icon { font-size: 1.25rem; display: block; }
   .tab-extra { display: none !important; }
-  .more-menu-wrap { display: block; }
-  .more-toggle-btn { white-space: nowrap; }
+  .more-menu-wrap { display: flex; flex: 1; }
+  .more-toggle-btn {
+    white-space: nowrap;
+    flex: 1;
+    font-size: 0;
+    padding: 10px 0;
+    justify-content: center;
+  }
+  .more-toggle-btn .tab-icon { font-size: 1.25rem; display: block; }
+  .more-chevron { display: none; }
   .more-chevron {
     font-size: 0.7rem; margin-left: 3px; display: inline-block;
     transition: transform .2s;

@@ -127,9 +127,7 @@ const routes = [
   },
   {
     path: '/hungary/course',
-    name: 'HungaryCourse',
-    component: () => import('../components/hungary/HungaryLearningSystem.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free', title: '🇭🇺 匈牙利葡萄酒課程 · 侍酒師的筆記本' }
+    redirect: '/hungary'
   },
 
   // ─── 加州 AVA 探索地圖 ───────────────────────────────────────────────────────

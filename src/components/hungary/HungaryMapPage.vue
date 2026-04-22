@@ -196,8 +196,32 @@ const search = ref('')
 const activeRegion = ref(null)
 const regionInfo = ref(null)
 const regionsData = ref([])
+const allRegionsGeojson = ref(null)
 let map = null
 const geojsonCache = new Map()
+
+// ── 名稱→資料夾/群組對照 ─────────────────────────────────────
+const NAME_TO_FOLDER = {
+  'Tokaj': 'Tokaj', 'Eger': 'Eger', 'Bükk': 'Bukk', 'Mátra': 'Matra',
+  'Neszmély': 'Neszmely', 'Sopron': 'Sopron', 'Pannonhalma': 'Pannonhalma',
+  'Somló': 'Somlo', 'Badacsony': 'Badacsony',
+  'Balatonfüred-Csopak': 'Balatonfured-Csopak',
+  'Balaton-felvidék': 'Balaton-felvidek', 'Balatonboglár': 'Balatonboglar',
+  'Zala': 'Zala', 'Etyek-Buda': 'Etyek-Buda', 'Mór': 'Mor',
+  'Tolna': 'Tolna', 'Szekszárd': 'Szekszard', 'Pécs': 'Pecs',
+  'Villány': 'Villany', 'Hajós-Baja': 'Hajos-Baja',
+  'Kunság': 'Kunsag', 'Csongrád': 'Csongrad',
+}
+const NAME_TO_GROUP = {
+  'Tokaj': 'Tokaj',
+  'Eger': 'UpperHungary', 'Bükk': 'UpperHungary', 'Mátra': 'UpperHungary',
+  'Neszmély': 'NorthTransdanubia', 'Sopron': 'NorthTransdanubia',
+  'Pannonhalma': 'NorthTransdanubia', 'Etyek-Buda': 'NorthTransdanubia', 'Mór': 'NorthTransdanubia',
+  'Somló': 'Balaton', 'Badacsony': 'Balaton', 'Balatonfüred-Csopak': 'Balaton',
+  'Balaton-felvidék': 'Balaton', 'Balatonboglár': 'Balaton', 'Zala': 'Balaton',
+  'Tolna': 'Pannon', 'Szekszárd': 'Pannon', 'Pécs': 'Pannon', 'Villány': 'Pannon',
+  'Hajós-Baja': 'Duna', 'Kunság': 'Duna', 'Csongrád': 'Duna',
+}
 
 // ── 色彩定義 ──────────────────────────────────────────────────
 const styleColors = {
@@ -306,56 +330,26 @@ function getGrapeStyle(grape) {
 }
 
 // ── 選擇產區 ──────────────────────────────────────────────────
-async function selectRegion(group, folder) {
+function selectRegion(group, folder) {
   activeRegion.value = { group, folder }
   infoBarCollapsed.value = false
   regionInfo.value = regionsData.value.find(r => r.id === folder) || null
-  await showRegionGeojson(folder)
-}
 
-// ── 顯示 GeoJSON ─────────────────────────────────────────────
-async function showRegionGeojson(folder) {
-  if (!map) return
-  const path = `/hungary/${folder}/admin.geojson`
-  isLoading.value = true
-  mapError.value = null
-  try {
-    let geojson
-    if (geojsonCache.has(path)) {
-      geojson = geojsonCache.get(path)
-    } else {
-      const res = await fetch(path)
-      if (!res.ok) throw new Error(`無法載入 (${res.status})`)
-      geojson = await res.json()
-      geojsonCache.set(path, geojson)
+  if (map && map.getLayer('hungary-all-fill')) {
+    map.setFilter('hungary-all-fill', ['==', ['get', '_folder'], folder])
+    map.setFilter('hungary-all-outline', ['==', ['get', '_folder'], folder])
+    map.setPaintProperty('hungary-all-fill', 'fill-opacity', 0.55)
+
+    // 縮放至選取產區
+    if (allRegionsGeojson.value) {
+      const features = allRegionsGeojson.value.features.filter(f => f.properties._folder === folder)
+      if (features.length > 0) {
+        try {
+          const bbox = geojsonBbox({ type: 'FeatureCollection', features })
+          map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 80, duration: 900 })
+        } catch {}
+      }
     }
-    if (map.getLayer('hungary-fill')) map.removeLayer('hungary-fill')
-    if (map.getLayer('hungary-outline')) map.removeLayer('hungary-outline')
-    if (map.getSource('hungary-region')) map.removeSource('hungary-region')
-
-    const color = groupColor(activeRegion.value?.group || 'Tokaj')
-    map.addSource('hungary-region', { type: 'geojson', data: geojson })
-    map.addLayer({
-      id: 'hungary-fill',
-      type: 'fill',
-      source: 'hungary-region',
-      paint: { 'fill-color': color, 'fill-opacity': 0.35 }
-    })
-    map.addLayer({
-      id: 'hungary-outline',
-      type: 'line',
-      source: 'hungary-region',
-      paint: { 'line-color': '#fff', 'line-width': 2, 'line-opacity': 0.9 }
-    })
-    try {
-      const bbox = geojsonBbox(geojson)
-      map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 80, duration: 900 })
-    } catch {}
-  } catch (err) {
-    mapError.value = `載入失敗：${err.message}`
-    setTimeout(() => { mapError.value = null }, 4000)
-  } finally {
-    isLoading.value = false
   }
 }
 
@@ -364,9 +358,11 @@ function resetMap() {
   activeRegion.value = null
   regionInfo.value = null
   if (map) {
-    if (map.getLayer('hungary-fill')) map.removeLayer('hungary-fill')
-    if (map.getLayer('hungary-outline')) map.removeLayer('hungary-outline')
-    if (map.getSource('hungary-region')) map.removeSource('hungary-region')
+    if (map.getLayer('hungary-all-fill')) {
+      map.setFilter('hungary-all-fill', null)
+      map.setFilter('hungary-all-outline', null)
+      map.setPaintProperty('hungary-all-fill', 'fill-opacity', 0.38)
+    }
     map.flyTo({ center: [18.5, 47.2], zoom: 6.8, duration: 1000 })
   }
 }
@@ -410,26 +406,65 @@ async function initMap(retry = 0) {
   }
 }
 
-// ── 初始總覽：顯示所有產區輪廓 ──────────────────────────────
+// ── 初始總覽：顯示所有產區輪廓（依群組著色） ──────────────────
 async function loadAllRegionsOverlay() {
   if (!map) return
   try {
     const res = await fetch('/hungary/hungary_wine_regions.geojson')
     if (!res.ok) return
     const geojson = await res.json()
-    map.addSource('hungary-all', { type: 'geojson', data: geojson })
+
+    // 為每個 feature 加上 _folder / _group 屬性
+    const annotated = {
+      ...geojson,
+      features: geojson.features.map(f => {
+        const name = f.properties.name
+        return {
+          ...f,
+          properties: {
+            ...f.properties,
+            _folder: NAME_TO_FOLDER[name] || name,
+            _group:  NAME_TO_GROUP[name]  || 'Tokaj',
+          }
+        }
+      })
+    }
+    allRegionsGeojson.value = annotated
+
+    map.addSource('hungary-all', { type: 'geojson', data: annotated })
     map.addLayer({
       id: 'hungary-all-fill',
       type: 'fill',
       source: 'hungary-all',
-      paint: { 'fill-color': '#8B6914', 'fill-opacity': 0.15 }
+      paint: {
+        'fill-color': ['match', ['get', '_group'],
+          'Tokaj',             '#8B1A1A',
+          'UpperHungary',      '#1B5AA6',
+          'NorthTransdanubia', '#2E7D32',
+          'Balaton',           '#0277BD',
+          'Pannon',            '#6A1B9A',
+          'Duna',              '#BF6900',
+          '#888'
+        ],
+        'fill-opacity': 0.38
+      }
     })
     map.addLayer({
       id: 'hungary-all-outline',
       type: 'line',
       source: 'hungary-all',
-      paint: { 'line-color': '#fff', 'line-width': 1.2, 'line-opacity': 0.6 }
+      paint: { 'line-color': '#fff', 'line-width': 1.5, 'line-opacity': 0.85 }
     })
+
+    // 點擊產區選取
+    map.on('click', 'hungary-all-fill', (e) => {
+      if (e.features?.length > 0) {
+        const f = e.features[0]
+        selectRegion(f.properties._group, f.properties._folder)
+      }
+    })
+    map.on('mouseenter', 'hungary-all-fill', () => { map.getCanvas().style.cursor = 'pointer' })
+    map.on('mouseleave', 'hungary-all-fill', () => { map.getCanvas().style.cursor = '' })
   } catch {}
 }
 

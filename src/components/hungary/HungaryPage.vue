@@ -22,7 +22,7 @@
     <HungaryLearningSystem
       v-else-if="view === 'course'"
       :selectedLevel="selectedLevel"
-      @exitLearning="view = 'selector'"
+      @exitLearning="router.push('/')"
       @openRegionMap="openRegionMap"
     />
 
@@ -37,11 +37,13 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import HungaryMapPage from './HungaryMapPage.vue'
 import HungaryLearningSystem from './HungaryLearningSystem.vue'
 import HungaryLevelSelector from './HungaryLevelSelector.vue'
 import HungaryTastingNotebookPage from './notebook/HungaryTastingNotebookPage.vue'
 
+const router = useRouter()
 const view = ref('selector')   // 'selector' | 'map' | 'course' | 'notebook'
 const selectedLevel = ref(1)
 const pendingMapRegion = ref(null)   // { group, folder } or null

@@ -50,6 +50,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'Sonoma County 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Sonoma County AVA 地圖',
+        description: 'Napa 以西，多達 19 個子 AVA，從涼爽海岸到溫暖內陸，是加州最多樣化的產區',
+        mapGroup: 'Sonoma County',
+        highlightAVAs: ['Russian River Valley', 'Dry Creek Valley', 'Alexander Valley', 'Sonoma Coast'],
+      }
+    }
+  },
+
+  {
     title: 'Russian River Valley — Pinot 的聖地',
     content: `<div class="rrv-detail">
       <h3>🌊 Russian River Valley — 加州最優雅的 Pinot Noir</h3>

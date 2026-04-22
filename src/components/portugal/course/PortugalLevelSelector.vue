@@ -29,30 +29,20 @@
       <!-- ── 快速入口 ──────────────────────────────────── -->
       <section class="quick-nav">
         <div class="quick-grid">
-          <button class="nav-card game-card" disabled>
-            <span class="nc-icon">🎮</span>
-            <span class="nc-title">互動練習</span>
-            <span class="nc-desc">產區競答・品種配對（即將推出）</span>
-          </button>
           <button class="nav-card map-card" @click="$emit('openMap')">
             <span class="nc-icon">🗺️</span>
             <span class="nc-title">探索地圖</span>
             <span class="nc-desc">互動式葡萄牙產區地圖・DOC 分布・氣候帶</span>
           </button>
-          <button class="nav-card achievement-card" disabled>
-            <span class="nc-icon">🏆</span>
-            <span class="nc-title">成就系統</span>
-            <span class="nc-desc">查看已解鎖成就（即將推出）</span>
+          <button class="nav-card info-card" @click="showGrapeGuide = true">
+            <span class="nc-icon">🍇</span>
+            <span class="nc-title">品種指南</span>
+            <span class="nc-desc">250+ 原生品種・Touriga Nacional・Alvarinho・Baga</span>
           </button>
-          <button class="nav-card progress-card" disabled>
-            <span class="nc-icon">📊</span>
-            <span class="nc-title">學習進度</span>
-            <span class="nc-desc">學習統計（即將推出）</span>
-          </button>
-          <button class="nav-card notebook-card" @click="emit('openNotebook')">
-            <span class="nc-icon">📔</span>
-            <span class="nc-title">品飲筆記</span>
-            <span class="nc-desc">記錄葉草牙等各類酒款心得</span>
+          <button class="nav-card port-card" @click="showPortGuide = true">
+            <span class="nc-icon">🥃</span>
+            <span class="nc-title">波特酒專題</span>
+            <span class="nc-desc">Ruby・Tawny・LBV・Vintage・Colheita 全類型</span>
           </button>
         </div>
       </section>
@@ -111,6 +101,59 @@
       </section>
 
     </div>
+
+    <!-- ── 品種指南彈窗 ──────────────────────────────────── -->
+    <div v-if="showGrapeGuide" class="modal-backdrop" @click.self="showGrapeGuide = false">
+      <div class="grape-modal">
+        <div class="grape-modal-header">
+          <h2>🍇 葡萄牙主要葡萄品種</h2>
+          <button class="modal-close" @click="showGrapeGuide = false">✕</button>
+        </div>
+        <div class="grape-modal-tabs">
+          <button :class="['g-tab', grapeTab === 'red' && 'active']" @click="grapeTab = 'red'">🔴 紅品種</button>
+          <button :class="['g-tab', grapeTab === 'white' && 'active']" @click="grapeTab = 'white'">🟡 白品種</button>
+        </div>
+        <div class="grape-grid">
+          <div
+            v-for="g in (grapeTab === 'red' ? redGrapes : whiteGrapes)"
+            :key="g.name"
+            class="grape-card"
+            :style="{ '--gc': g.color }"
+          >
+            <div class="grape-type-badge">{{ g.type }}</div>
+            <h4>{{ g.name }}</h4>
+            <p class="grape-alias">{{ g.alias }}</p>
+            <p class="grape-note">{{ g.note }}</p>
+            <div class="grape-regions">
+              <span v-for="r in g.regions" :key="r" class="grape-region-tag">{{ r }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 波特酒專題彈窗 ──────────────────────────────────── -->
+    <div v-if="showPortGuide" class="modal-backdrop" @click.self="showPortGuide = false">
+      <div class="port-modal">
+        <div class="port-modal-header">
+          <h2>🥃 波特酒全類型指南</h2>
+          <button class="modal-close" @click="showPortGuide = false">✕</button>
+        </div>
+        <p class="port-modal-sub">波特酒（Porto/Port Wine）是葡萄牙 Douro 河谷的加烈甜酒，以高酒精（19–22%）和豐富果味著稱，可分為 Ruby 和 Tawny 兩大系列。</p>
+        <div class="port-grid">
+          <div v-for="p in portTypes" :key="p.name" class="port-card-item" :style="{ '--pc': p.color }">
+            <div class="port-series-badge">{{ p.series }}</div>
+            <h4>{{ p.name }}</h4>
+            <p class="port-desc">{{ p.desc }}</p>
+            <div class="port-tags">
+              <span class="port-tag">{{ p.aging }}</span>
+              <span class="port-tag">{{ p.style }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -125,6 +168,78 @@ const router = useRouter()
 const authUser = authState.user
 const avatarUrl = ref('')
 const avatarInitial = ref('我')
+const showGrapeGuide = ref(false)
+const showPortGuide = ref(false)
+const grapeTab = ref('red')
+
+const redGrapes = [
+  { name: 'Touriga Nacional', alias: '葡萄牙之王', type: '🔴 紅', color: '#5B0F1E',
+    note: '葡萄牙最著名紅品種，高單寧、濃郁紫羅蘭花香，是波特酒和 Douro 頂級餐酒的核心。',
+    regions: ['Douro', 'Dão', 'Lisboa'] },
+  { name: 'Touriga Franca', alias: 'Touriga Francesa', type: '🔴 紅', color: '#7B1A2A',
+    note: '波特酒混釀中比例最高的品種，豐滿果味，單寧柔順，提供成熟紅果和花香。',
+    regions: ['Douro', 'Porto'] },
+  { name: 'Tinta Roriz', alias: 'Tempranillo（西班牙名）', type: '🔴 紅', color: '#8B2020',
+    note: '葡萄牙版的 Tempranillo，帶有紅莓果香和香料感，適應力強，廣泛種植。',
+    regions: ['Douro', 'Dão', 'Alentejo'] },
+  { name: 'Trincadeira', alias: 'Tinta Amarela', type: '🔴 紅', color: '#6B1A1A',
+    note: '南部代表品種，溫暖氣候下表現出熟果和香料特性，高酒精、豐滿酒體。',
+    regions: ['Alentejo', 'Tejo', 'Ribatejo'] },
+  { name: 'Baga', alias: '高酸高單寧傳奇', type: '🔴 紅', color: '#4A1530',
+    note: 'Bairrada 的靈魂品種，世界頂級酸度和單寧，年輕時緊澀，陳年後展現驚人的細膩複雜度。',
+    regions: ['Bairrada', 'Beira Litoral'] },
+  { name: 'Castelão', alias: 'Periquita', type: '🔴 紅', color: '#7A3010',
+    note: '南部和里斯本地區的重要品種，酒體中等，帶有紅果、泥土和香料香氣。',
+    regions: ['Setúbal', 'Tejo', 'Alentejo'] },
+]
+
+const whiteGrapes = [
+  { name: 'Alvarinho', alias: 'Albariño（西班牙名）', type: '🟡 白', color: '#8B6914',
+    note: 'Vinho Verde 最優雅的子產區 Monção e Melgaço 的代表，高酸、果香馥郁，享譽國際。',
+    regions: ['Vinho Verde', 'Monção e Melgaço'] },
+  { name: 'Arinto', alias: 'Pedernã', type: '🟡 白', color: '#6B8B00',
+    note: '葡萄牙分布最廣的白品種，保留良好酸度，結構清晰，可釀造陳年型白酒。',
+    regions: ['Bucelas', 'Lisboa', 'Alentejo'] },
+  { name: 'Encruzado', alias: 'Dão 之后', type: '🟡 白', color: '#9B7A00',
+    note: 'Dão 產區最重要的白品種，複雜度高，帶有礦物感和白花香，陳年後更顯優雅。',
+    regions: ['Dão'] },
+  { name: 'Fernão Pires', alias: 'Maria Gomes', type: '🟡 白', color: '#7A9B20',
+    note: '葡萄牙種植面積最廣的白品種，芬芳花香，釀造清新易飲的日常白酒。',
+    regions: ['Bairrada', 'Tejo', 'Lisboa'] },
+  { name: 'Loureiro', alias: '月桂葉香', type: '🟡 白', color: '#5A8B00',
+    note: 'Vinho Verde 北部的芬芳品種，以月桂葉和白花香著稱，清爽輕盈，極具特色。',
+    regions: ['Vinho Verde', 'Braga', 'Lima'] },
+  { name: 'Verdelho', alias: 'Gouveio（大陸版）', type: '🟡 白', color: '#8B9B10',
+    note: 'Madeira 馬德拉的核心品種之一，釀造中干型加烈酒；在 Douro 也作為白餐酒品種。',
+    regions: ['Madeira', 'Douro', 'Açores'] },
+]
+
+const portTypes = [
+  { name: 'Ruby Port', series: 'Ruby 系列', color: '#8B1A1A',
+    desc: '最基礎的波特酒類型，短期桶陳（3–5 年），保留鮮艷紅寶石色和新鮮紅果香氣，甜美易飲。',
+    aging: '3–5 年桶陳', style: '甜・果香濃郁' },
+  { name: 'LBV（Late Bottled Vintage）', series: 'Ruby 系列', color: '#6B0F0F',
+    desc: '單一年份、桶陳 4–6 年後裝瓶，分 Filtered（易飲）和 Unfiltered（需醒酒）兩種風格。',
+    aging: '4–6 年桶陳', style: '年份標示・適合即飲' },
+  { name: 'Vintage Port', series: 'Ruby 系列', color: '#4A0A0A',
+    desc: '頂級波特酒，只在最佳年份宣布，桶陳僅 2 年後裝瓶，需 15–25 年瓶中熟成。',
+    aging: '2 年桶陳 + 長期瓶中', style: '最高品質・需陳年' },
+  { name: 'Single Quinta Vintage', series: 'Ruby 系列', color: '#5A1010',
+    desc: '單一酒莊的年份波特，非「宣告年份」也可出產，是物超所值的收藏選擇。',
+    aging: '2 年桶陳', style: '單一產區・年份特色' },
+  { name: 'Tawny Port', series: 'Tawny 系列', color: '#9B5A00',
+    desc: '多年調配的氧化風格，呈現琥珀棕色，帶有堅果、焦糖、橙皮香氣。標示 10/20/30/40 年為調配平均年齡。',
+    aging: '多年橡木桶氧化', style: '甜・堅果・焦糖' },
+  { name: 'Colheita', series: 'Tawny 系列', color: '#8B4500',
+    desc: '單一年份的 Tawny，桶陳至少 7 年，同時擁有 Tawny 的氧化風格和年份的獨特個性。',
+    aging: '最少 7 年桶陳', style: '單一年份・氧化複雜' },
+  { name: 'White Port', series: '白波特', color: '#C4A217',
+    desc: '以白葡萄釀造，從干型到甜型皆有，加冰塊或加通寧水是夏季流行喝法（Port & Tonic）。',
+    aging: '短期桶陳', style: '干型至甜型' },
+  { name: 'Rosé Port', series: '粉紅波特', color: '#D4607A',
+    desc: '2008 年推出的新類型，短暫浸皮，呈現草莓和水果香氣，加冰塊飲用，年輕消費者最愛。',
+    aging: '短期桶陳', style: '甜・果香・現代風' },
+]
 
 onMounted(async () => {
   const user = authState.user
@@ -421,5 +536,149 @@ const overviewItems = [
   .overview-grid { grid-template-columns: repeat(2, 1fr); }
   .brand-title { font-size: 1.2rem; }
   .flag-big { font-size: 2.2rem; }
+}
+
+/* ── Modal Backdrop ──────────────────── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* ── Grape Guide Modal ───────────────── */
+.grape-modal {
+  background: white;
+  border-radius: 20px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.grape-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 0;
+}
+.grape-modal-header h2 { font-size: 1.2rem; font-weight: 800; color: #2c3e50; margin: 0; }
+.modal-close {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-close:hover { background: #e0e0e0; }
+.grape-modal-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 14px 24px;
+  border-bottom: 1px solid #eee;
+}
+.g-tab {
+  padding: 6px 18px;
+  border-radius: 9999px;
+  border: 2px solid #ccc;
+  background: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.g-tab.active { background: #006600; border-color: #006600; color: white; }
+.grape-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  padding: 16px 24px 24px;
+}
+.grape-card {
+  border-radius: 14px;
+  padding: 14px;
+  background: color-mix(in srgb, var(--gc) 8%, white);
+  border-left: 4px solid var(--gc);
+}
+.grape-type-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gc);
+  margin-bottom: 4px;
+}
+.grape-card h4 { font-size: 0.95rem; font-weight: 800; color: #2c3e50; margin: 0 0 2px; }
+.grape-alias { font-size: 0.75rem; color: #888; margin: 0 0 6px; font-style: italic; }
+.grape-note { font-size: 0.78rem; color: #555; line-height: 1.45; margin: 0 0 8px; }
+.grape-regions { display: flex; flex-wrap: wrap; gap: 4px; }
+.grape-region-tag {
+  background: color-mix(in srgb, var(--gc) 15%, white);
+  color: var(--gc);
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+/* ── Port Guide Modal ────────────────── */
+.port-modal {
+  background: white;
+  border-radius: 20px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.port-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 0;
+}
+.port-modal-header h2 { font-size: 1.2rem; font-weight: 800; color: #2c3e50; margin: 0; }
+.port-modal-sub {
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.5;
+  padding: 10px 24px 4px;
+  margin: 0;
+}
+.port-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  padding: 12px 24px 24px;
+}
+.port-card-item {
+  border-radius: 14px;
+  padding: 14px;
+  background: color-mix(in srgb, var(--pc) 8%, white);
+  border-left: 4px solid var(--pc);
+}
+.port-series-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--pc);
+  margin-bottom: 4px;
+}
+.port-card-item h4 { font-size: 0.9rem; font-weight: 800; color: #2c3e50; margin: 0 0 6px; }
+.port-desc { font-size: 0.78rem; color: #555; line-height: 1.45; margin: 0 0 8px; }
+.port-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.port-tag {
+  background: color-mix(in srgb, var(--pc) 15%, white);
+  color: var(--pc);
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 0.68rem;
+  font-weight: 600;
 }
 </style>
