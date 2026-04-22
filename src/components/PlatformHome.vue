@@ -42,19 +42,20 @@
         </div>
       </div>
 
-      <!-- 手機下拉選單 -->
-      <transition name="nmd">
-        <div v-if="showMobileMenu" class="nav-mobile-dropdown" @click="showMobileMenu = false">
-          <div class="nmd-inner" @click.stop>
-            <div v-if="authUser" class="nmd-user">👤 {{ displayName }}</div>
-            <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">⚙️ 管理頁面</router-link>
-            <router-link to="/bordeaux" class="nmd-item nmd-primary" @click="showMobileMenu = false">📚 進入課程</router-link>
-            <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">📋 我的訂單</router-link>
-            <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">🚪 登出</button>
-          </div>
-        </div>
-      </transition>
     </nav>
+
+    <!-- 手機下拉選單（移至 nav 外避免 sticky 定位問題） -->
+    <transition name="nmd">
+      <div v-if="showMobileMenu" class="nav-mobile-dropdown" @click="showMobileMenu = false">
+        <div class="nmd-inner" @click.stop>
+          <div v-if="authUser" class="nmd-user">👤 {{ displayName }}</div>
+          <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">⚙️ 管理頁面</router-link>
+          <router-link to="/bordeaux" class="nmd-item nmd-primary" @click="showMobileMenu = false">📚 進入課程</router-link>
+          <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">📋 我的訂單</router-link>
+          <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">🚪 登出</button>
+        </div>
+      </div>
+    </transition>
 
     <!-- ═══ Hero ════════════════════════════════════════════════════════════ -->
     <section class="hero">
@@ -1155,8 +1156,6 @@ onMounted(async () => {
   background: rgba(14, 4, 6, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  /* 讓下拉選單定位正確 */
-  isolation: isolate;
 }
 .nav-inner {
   max-width: 1200px;
@@ -1232,16 +1231,18 @@ onMounted(async () => {
 .btn-mobile-cta { padding: 7px 14px; font-size: 0.82rem; }
 .btn-mobile-login { padding: 7px 12px; font-size: 0.82rem; }
 
-/* 手機下拉選單 */
+/* 手機下拉選單 — fixed 定位于手機 nav 正下方 */
 .nav-mobile-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
+  position: fixed;
+  top: 52px; /* 手機 nav 高度 */
   left: 0;
-  z-index: 99;
-  background: rgba(10, 3, 5, 0.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  right: 0;
+  z-index: 999;
+  background: rgba(10, 3, 5, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 .nmd-inner {
   max-width: 1200px;
