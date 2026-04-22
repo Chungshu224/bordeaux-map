@@ -224,9 +224,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '1976 年「巴黎評判（Judgment of Paris）」中，哪兩個加州酒莊分別奪得紅酒和白酒冠軍？',
-            options: ['A. Opus One（紅）和 Robert Mondavi（白）', 'B. Stag's Leap Wine Cellars（紅）和 Chateau Montelena（白）', 'C. Ridge Monte Bello（紅）和 Kistler（白）', 'D. Harlan Estate（紅）和 Rombauer（白）'],
+            options: ['A. Opus One（紅）和 Robert Mondavi（白）', "B. Stag's Leap Wine Cellars（紅）和 Chateau Montelena（白）", 'C. Ridge Monte Bello（紅）和 Kistler（白）', 'D. Harlan Estate（紅）和 Rombauer（白）'],
             correct: 1,
-            explanation: '1976 年巴黎評判：紅酒冠軍是 Stag's Leap Wine Cellars 1973 Cabernet Sauvignon（Stags Leap District, Napa）；白酒冠軍是 Chateau Montelena 1973 Chardonnay（Calistoga, Napa）。這個結果震驚了法國葡萄酒界。'
+            explanation: "1976 年巴黎評判：紅酒冠軍是 Stag's Leap Wine Cellars 1973 Cabernet Sauvignon（Stags Leap District, Napa）；白酒冠軍是 Chateau Montelena 1973 Chardonnay（Calistoga, Napa）。這個結果震驚了法國葡萄酒界。"
           },
           {
             type: 'single',

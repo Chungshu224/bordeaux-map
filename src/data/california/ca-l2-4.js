@@ -297,7 +297,7 @@ export const lessonContent = [
             question: '1976 年巴黎評判紅酒組冠軍酒款來自哪個產區？',
             options: ['A. Oakville', 'B. Russian River Valley', 'C. Stags Leap District', 'D. Alexander Valley'],
             correct: 2,
-            explanation: 'Stag's Leap Wine Cellars 1973 Cabernet Sauvignon 來自 Stags Leap District，在巴黎評判紅酒組盲品中奪冠，震驚世界。'
+            explanation: "Stag's Leap Wine Cellars 1973 Cabernet Sauvignon 來自 Stags Leap District，在巴黎評判紅酒組盲品中奪冠，震驚世界。"
           },
           {
             type: 'single',

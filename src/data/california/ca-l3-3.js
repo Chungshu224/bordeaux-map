@@ -263,9 +263,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '在 1976 年巴黎審判（Judgment of Paris）中，紅酒組（Cabernet Sauvignon）的冠軍是哪款加州葡萄酒？',
-            options: ['A. Chateau Montelena Chardonnay 1973', 'B. Ridge Monte Bello 1971', 'C. Stag's Leap Wine Cellars Cabernet Sauvignon 1973', 'D. Heitz Martha's Vineyard Cabernet 1970'],
+            options: ['A. Chateau Montelena Chardonnay 1973', 'B. Ridge Monte Bello 1971', "C. Stag's Leap Wine Cellars Cabernet Sauvignon 1973", "D. Heitz Martha's Vineyard Cabernet 1970"],
             correct: 2,
-            explanation: 'Stag's Leap Wine Cellars 的 1973 年份 Cabernet Sauvignon 在 1976 年巴黎評判的紅酒組盲品中奪冠，所有評審均為法國葡萄酒業資深人士。這個結果震驚了整個葡萄酒世界，奠定了 Napa Valley 的全球地位。'
+            explanation: "Stag's Leap Wine Cellars 的 1973 年份 Cabernet Sauvignon 在 1976 年巴黎評判的紅酒組盲品中奪冠，所有評審均為法國葡萄酒業資深人士。這個結果震驚了整個葡萄酒世界，奠定了 Napa Valley 的全球地位。"
           },
           {
             type: 'single',
