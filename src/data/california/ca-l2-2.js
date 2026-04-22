@@ -268,9 +268,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '「Stags Leap District」最著名的是哪款 1976 年巴黎評判冠軍酒？',
-            options: ['A. Opus One', 'B. Chateau Montelena', 'C. Stag's Leap Wine Cellars Cabernet Sauvignon', 'D. Screaming Eagle'],
+            options: ['A. Opus One', 'B. Chateau Montelena', "C. Stag's Leap Wine Cellars Cabernet Sauvignon", 'D. Screaming Eagle'],
             correct: 2,
-            explanation: 'Stag's Leap Wine Cellars 的 1973 年份 Cabernet Sauvignon 在 1976 年巴黎評判的紅酒組盲品中奪冠，讓 Stags Leap District 成為全球最知名的 Cabernet 產地之一。'
+            explanation: "Stag's Leap Wine Cellars 的 1973 年份 Cabernet Sauvignon 在 1976 年巴黎評判的紅酒組盲品中奪冠，讓 Stags Leap District 成為全球最知名的 Cabernet 產地之一。"
           },
           {
             type: 'single',
