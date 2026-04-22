@@ -322,12 +322,14 @@ function toggleInfo() {
 }
 
 // ── 播放發音 ────────────────────────────────────────────────────────────────
+let currentAudio = null
 function playPronunciation() {
   if (!activeRegion.value?.name) return
-  const utt = new SpeechSynthesisUtterance(activeRegion.value.name)
-  utt.lang = 'en-US'
-  utt.rate = 0.85
-  window.speechSynthesis.speak(utt)
+  if (currentAudio) { currentAudio.pause(); currentAudio = null }
+  const audioPath = `/california/sounds/${encodeURIComponent(activeRegion.value.name)}.mp3`
+  currentAudio = new Audio(audioPath)
+  currentAudio.play().catch(() => {})
+  currentAudio.onended = () => { currentAudio = null }
 }
 
 // ── Select from drawer ─────────────────────────────────────────────────────

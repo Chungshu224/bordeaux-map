@@ -40,6 +40,13 @@
             </svg>
             <span class="btn-text">{{ infoCollapsed ? '展開' : '收合' }}</span>
           </button>
+          <button v-if="activeRegion" class="btn-pronunciation-icon" @click="playPronunciation" :disabled="isPlayingAudio" title="聽發音">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </button>
           <button class="btn-reset-icon" @click="resetView" title="重置地圖">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 3v6h-6"></path>
@@ -358,6 +365,19 @@ function applySingleFeatureFilter(name) {
 function restoreFilter() {
   selectedRegionName.value = null
   updateStateFilter()
+}
+
+// ── 播放發音 ─────────────────────────────────────────────────────────────────
+const isPlayingAudio = ref(false)
+let currentAudio = null
+function playPronunciation() {
+  if (!activeRegion.value?.name) return
+  if (currentAudio) { currentAudio.pause(); currentAudio = null }
+  const audioPath = `/australia/sounds/${encodeURIComponent(activeRegion.value.name)}.mp3`
+  currentAudio = new Audio(audioPath)
+  isPlayingAudio.value = true
+  currentAudio.play().catch(() => { isPlayingAudio.value = false })
+  currentAudio.onended = () => { isPlayingAudio.value = false; currentAudio = null }
 }
 
 // ── Reset view ─────────────────────────────────────────────────────────────
@@ -884,6 +904,16 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 .btn-text { font-size: 0.85rem; white-space: nowrap; }
 .map-info-bar.collapsed .btn-text { display: none; }
 .map-info-bar.collapsed .btn-collapse-inline { padding: 6px 8px; }
+.btn-pronunciation-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; padding: 6px;
+  border: none; border-radius: 10px;
+  background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
+  color: #fff; cursor: pointer; transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.16); flex-shrink: 0;
+}
+.btn-pronunciation-icon:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn-pronunciation-icon:not(:disabled):hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.22); }
 .btn-reset-icon {
   display: flex; align-items: center; justify-content: center;
   width: 36px; height: 36px; padding: 6px;

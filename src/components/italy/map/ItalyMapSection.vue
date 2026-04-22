@@ -781,8 +781,7 @@ async function highlightAOC(aoc) {
 // ── Audio ──
 async function checkAudio(aoc) {
   audioAvailable.value = false
-  const folder = regionFolder(props.region.id)
-  const url = `/italy/regions/${folder}/sounds/${encodeURIComponent(aoc.name)}.mp3`
+  const url = `/italy/sounds/${encodeURIComponent(aoc.name)}.mp3`
   try {
     const r = await fetch(url, { method: 'HEAD' })
     audioAvailable.value = r.ok
@@ -791,8 +790,7 @@ async function checkAudio(aoc) {
 
 async function playAudio() {
   if (!activeAOCInfo.value) return
-  const folder = regionFolder(props.region.id)
-  const url = `/italy/regions/${folder}/sounds/${encodeURIComponent(activeAOCInfo.value.name)}.mp3`
+  const url = `/italy/sounds/${encodeURIComponent(activeAOCInfo.value.name)}.mp3`
   if (audioPlayer) { audioPlayer.pause(); audioPlayer = null }
   audioPlayer = new Audio(url)
   isPlayingAudio.value = true

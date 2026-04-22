@@ -29,6 +29,13 @@
             </svg>
             <span class="btn-text">{{ infoCollapsed ? '展開' : '收合' }}</span>
           </button>
+          <button class="btn-pronunciation-icon" @click="playPronunciation" :disabled="isPlayingAudio" title="聽發音">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </button>
           <button class="btn-reset-icon" @click="resetMap" title="重置地圖">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -530,6 +537,19 @@ function addGeologyLayer() {
   }, insertBefore)
 }
 
+// ── 播放發音 ─────────────────────────────────────────────────────────────
+const isPlayingAudio = ref(false)
+let currentAudio = null
+function playPronunciation() {
+  if (!props.region?.name) return
+  if (currentAudio) { currentAudio.pause(); currentAudio = null }
+  const audioPath = `/germany/sounds/${encodeURIComponent(props.region.name)}.mp3`
+  currentAudio = new Audio(audioPath)
+  isPlayingAudio.value = true
+  currentAudio.play().catch(() => { isPlayingAudio.value = false })
+  currentAudio.onended = () => { isPlayingAudio.value = false; currentAudio = null }
+}
+
 function resetMap() {
   if (!map) return
   selectedVineyard.value = null
@@ -672,7 +692,7 @@ onUnmounted(() => {
 /* ── Info Bar (Bordeaux style) ── */
 .map-info-bar {
   position: absolute;
-  bottom: 102px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 102px);
   left: 20px;
   background: rgba(255,255,255,0.97);
   padding: 18px;
@@ -726,6 +746,17 @@ onUnmounted(() => {
 .btn-text { font-size: 0.85rem; white-space: nowrap; }
 .map-info-bar.collapsed .btn-text { display: none; }
 .map-info-bar.collapsed .btn-collapse-inline { padding: 6px 8px; }
+.btn-pronunciation-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border: none; border-radius: 10px;
+  background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
+  color: #fff; cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.16);
+  transition: all 0.2s; flex-shrink: 0;
+}
+.btn-pronunciation-icon:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn-pronunciation-icon:not(:disabled):hover { transform: translateY(-1px); }
 .btn-reset-icon {
   display: flex; align-items: center; justify-content: center;
   width: 36px; height: 36px;
@@ -870,7 +901,7 @@ onUnmounted(() => {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 24px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));

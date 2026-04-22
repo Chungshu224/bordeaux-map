@@ -607,13 +607,14 @@ async function showAOCGeojson(group, aocFile) {
 }
 
 // ── 播放發音 ──────────────────────────────────────────────────
+let currentAudio = null
 function playPronunciation() {
-  if (!activeAOC.value?.aoc) return
-  const name = activeAOC.value.aoc.replace('_AOC.geojson','').replace(/-/g,' ')
-  const utt = new SpeechSynthesisUtterance(name)
-  utt.lang = 'fr-FR'
-  utt.rate = 0.85
-  window.speechSynthesis.speak(utt)
+  if (!regionInfo.value?.nameFr) return
+  if (currentAudio) { currentAudio.pause(); currentAudio = null }
+  const audioPath = `/loire/sounds/${encodeURIComponent(regionInfo.value.nameFr)}.mp3`
+  currentAudio = new Audio(audioPath)
+  currentAudio.play().catch(() => {})
+  currentAudio.onended = () => { currentAudio = null }
 }
 
 // ── 重置地圖 ──────────────────────────────────────────────────
