@@ -216,6 +216,7 @@ watch(() => props.indexPath, async () => {
   border-radius: 8px;
   border: 2px solid #e0e0e0;
   font-size: 0.95rem;
+  color: #222;
   transition: all 0.3s ease;
   background: #fafafa;
 }
@@ -279,6 +280,7 @@ watch(() => props.indexPath, async () => {
   border-radius: 0;
   cursor: pointer;
   font-size: 0.9rem;
+  color: #222;
   background: white;
   border-bottom: 1px solid #f5f5f5;
   transition: all 0.25s ease;

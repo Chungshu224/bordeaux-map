@@ -11,7 +11,9 @@
             <div class="logo-sub">The Sommelier's Notebook</div>
           </div>
         </div>
-        <div class="nav-actions">
+
+        <!-- 桌面導覽 -->
+        <div class="nav-actions nav-desktop">
           <template v-if="authUser">
             <span class="nav-greeting">{{ displayName }}</span>
             <router-link v-if="isAdmin" to="/admin" class="btn-nav admin-nav-btn">⚙️ 管理頁面</router-link>
@@ -24,7 +26,34 @@
             <router-link to="/register" class="btn-nav primary">免費開始</router-link>
           </template>
         </div>
+
+        <!-- 手機導覽 -->
+        <div class="nav-mobile">
+          <template v-if="authUser">
+            <router-link to="/bordeaux" class="btn-nav primary btn-mobile-cta">課程</router-link>
+            <button class="nav-hamburger" @click="showMobileMenu = !showMobileMenu" :class="{ active: showMobileMenu }">
+              <span></span><span></span><span></span>
+            </button>
+          </template>
+          <template v-else>
+            <router-link to="/login" class="btn-nav btn-mobile-login">登入</router-link>
+            <router-link to="/register" class="btn-nav primary btn-mobile-cta">免費開始</router-link>
+          </template>
+        </div>
       </div>
+
+      <!-- 手機下拉選單 -->
+      <transition name="nmd">
+        <div v-if="showMobileMenu" class="nav-mobile-dropdown" @click="showMobileMenu = false">
+          <div class="nmd-inner" @click.stop>
+            <div v-if="authUser" class="nmd-user">👤 {{ displayName }}</div>
+            <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">⚙️ 管理頁面</router-link>
+            <router-link to="/bordeaux" class="nmd-item nmd-primary" @click="showMobileMenu = false">📚 進入課程</router-link>
+            <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">📋 我的訂單</router-link>
+            <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">🚪 登出</button>
+          </div>
+        </div>
+      </transition>
     </nav>
 
     <!-- ═══ Hero ════════════════════════════════════════════════════════════ -->
@@ -841,6 +870,9 @@ const scrollToCourses = () => coursesRef.value?.scrollIntoView({ behavior: 'smoo
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 const goToPricing = () => router.push('/pricing')
 
+// ─── 手機選單 ─────────────────────────────────────────────────────────────────
+const showMobileMenu = ref(false)
+
 // ─── 免費開始 ─────────────────────────────────────────────────────────────────
 const handleStartFree = () => {
   if (authUser.value) {
@@ -1123,6 +1155,8 @@ onMounted(async () => {
   background: rgba(14, 4, 6, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  /* 讓下拉選單定位正確 */
+  isolation: isolate;
 }
 .nav-inner {
   max-width: 1200px;
@@ -1164,18 +1198,95 @@ onMounted(async () => {
 .btn-nav.admin-nav-btn:hover { background: #c9a84c; color: #1a0a00; }
 
 /* ─── 導覽列 RWD ─────────────────────────────────────────────────────────── */
-@media (max-width: 600px) {
-  .nav-inner { height: 52px; padding: 0 14px; gap: 6px; }
+/* 手機版預設隱藏桌面導覽，顯示手機導覽 */
+.nav-desktop { display: flex; }
+.nav-mobile  { display: none; align-items: center; gap: 8px; }
+
+/* 漢堡按鈕 */
+.nav-hamburger {
+  width: 36px; height: 36px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 5px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color .2s;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 18px; height: 2px;
+  background: #e8dcc8;
+  border-radius: 2px;
+  transition: all .25s;
+  transform-origin: center;
+}
+.nav-hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.active span:nth-child(2) { opacity: 0; }
+.nav-hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-hamburger:hover { border-color: #d4af37; }
+
+.btn-mobile-cta { padding: 7px 14px; font-size: 0.82rem; }
+.btn-mobile-login { padding: 7px 12px; font-size: 0.82rem; }
+
+/* 手機下拉選單 */
+.nav-mobile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(10, 3, 5, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nmd-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.nmd-user {
+  color: #d4af37;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 12px 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 4px;
+}
+.nmd-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 11px 12px;
+  font-size: 0.88rem;
+  color: #e8dcc8;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .15s;
+}
+.nmd-item:hover, .nmd-item:active { background: rgba(255,255,255,0.06); color: #d4af37; }
+.nmd-item.nmd-primary { color: #fff; font-weight: 600; }
+.nmd-item.nmd-logout { color: #9a8878; }
+/* 下拉動畫 */
+.nmd-enter-active, .nmd-leave-active { transition: opacity .18s, transform .18s; }
+.nmd-enter-from, .nmd-leave-to { opacity: 0; transform: translateY(-6px); }
+
+@media (max-width: 640px) {
+  .nav-desktop { display: none; }
+  .nav-mobile  { display: flex; }
+  .nav-inner { height: 52px; padding: 0 14px; }
   .logo-icon { font-size: 1.3rem; }
   .logo-title { font-size: 0.88rem; }
   .logo-sub { display: none; }
-  .nav-greeting { display: none; }
-  .nav-actions { gap: 6px; }
-  .btn-nav { padding: 5px 10px; font-size: 0.75rem; }
-  .btn-nav.admin-nav-btn { padding: 5px 8px; font-size: 0; letter-spacing: 0; }
-  .btn-nav.admin-nav-btn::before { content: '⚙️'; font-size: 1rem; }
-  .btn-nav.ghost { padding: 5px 8px; font-size: 0; }
-  .btn-nav.ghost::before { content: '🚪'; font-size: 1rem; }
 }
 
 /* ─── Hero ────────────────────────────────────────────────────────────────── */
