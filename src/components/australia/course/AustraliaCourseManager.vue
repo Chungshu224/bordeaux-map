@@ -7,11 +7,18 @@
       @startLevel="handleSelectLevel"
       @openAchievements="showAchievementsModal = true"
       @openNotebook="view = 'notebook'"
+      @openGameHub="view = 'gameHub'"
     />
 
     <!-- 品飲筆記 -->
     <AustraliaTastingNotebookPage
       v-else-if="view === 'notebook'"
+      @back="view = 'levelSelector'"
+    />
+
+    <!-- 互動練習 GameHub -->
+    <AustraliaGameHubPage
+      v-else-if="view === 'gameHub'"
       @back="view = 'levelSelector'"
     />
 
@@ -71,6 +78,7 @@ import AustraliaCourseLayout   from './AustraliaCourseLayout.vue'
 import AustraliaSlideViewer    from './AustraliaSlideViewer.vue'
 import AchievementsDashboard   from '../../AchievementsDashboard.vue'
 import AustraliaTastingNotebookPage from '../notebook/AustraliaTastingNotebookPage.vue'
+import AustraliaGameHubPage         from '../games/AustraliaGameHubPage.vue'
 import { courseLevels, getUserProgress, saveProgress, getLevelProgressPercent } from '../data/courseLevels.js'
 import {
   globalAustraliaAchievementManager,
@@ -81,7 +89,7 @@ defineEmits(['openMap'])
 
 globalAustraliaAchievementManager.init()
 
-const view = ref('levelSelector')  // 'levelSelector' | 'courseContent' | 'notebook'
+const view = ref('levelSelector')  // 'levelSelector' | 'courseContent' | 'notebook' | 'gameHub'
 const selectedLevelKey      = ref(null)
 const activeLesson          = ref(null)
 const completedMap          = ref({})

@@ -23,10 +23,10 @@
       <!-- 快速入口 -->
       <section class="quick-nav">
         <div class="quick-grid">
-          <button class="nav-card game-card" disabled>
+          <button class="nav-card game-card" @click="$emit('openGameHub')">
             <span class="nc-icon">🎮</span>
             <span class="nc-title">互動練習</span>
-            <span class="nc-desc">產區競答・品種配對（即將推出）</span>
+            <span class="nc-desc">州別競速・品種配對・產區閃卡</span>
           </button>
           <button class="nav-card map-card" @click="$emit('openMap')">
             <span class="nc-icon">🗺️</span>
@@ -146,7 +146,7 @@ import { useRouter } from 'vue-router'
 import { ref, computed } from 'vue'
 import { courseLevels, getUserProgress } from '../data/courseLevels.js'
 
-const emit = defineEmits(['openMap', 'startLevel', 'openAchievements', 'openNotebook'])
+const emit = defineEmits(['openMap', 'startLevel', 'openAchievements', 'openNotebook', 'openGameHub'])
 const router = useRouter()
 
 const showProgressModal = ref(false)

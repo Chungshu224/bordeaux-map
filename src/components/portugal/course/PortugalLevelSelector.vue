@@ -44,6 +44,11 @@
             <span class="nc-title">波特酒專題</span>
             <span class="nc-desc">Ruby・Tawny・LBV・Vintage・Colheita 全類型</span>
           </button>
+          <button class="nav-card game-card" @click="$emit('openGameHub')">
+            <span class="nc-icon">🎮</span>
+            <span class="nc-title">互動練習</span>
+            <span class="nc-desc">產區競速・波特酒分類・產區閪卡</span>
+          </button>
         </div>
       </section>
 
@@ -163,7 +168,7 @@ import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../../stores/authStore.js'
 import { supabase } from '../../../lib/supabaseClient.js'
 
-const emit = defineEmits(['openMap', 'openGrapes', 'startLevel', 'openNotebook'])
+const emit = defineEmits(['openMap', 'openGrapes', 'startLevel', 'openNotebook', 'openGameHub'])
 const router = useRouter()
 const authUser = authState.user
 const avatarUrl = ref('')
@@ -414,7 +419,7 @@ const overviewItems = [
 .quick-nav { margin-bottom: 32px; }
 .quick-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
 .nav-card {
@@ -434,6 +439,7 @@ const overviewItems = [
 .map-card  { background: linear-gradient(135deg, #e8f8e8, #c8f0c8); color: #006600; }
 .info-card { background: linear-gradient(135deg, #fff5e8, #ffe8c0); color: #8B4513; }
 .port-card { background: linear-gradient(135deg, #fff0f0, #ffd0d0); color: #8B0000; }
+.game-card { background: linear-gradient(135deg, #e8e8ff, #c8c8f8); color: #1a1a8B; }
 .nc-icon  { font-size: 1.8rem; margin-bottom: 6px; }
 .nc-title { font-size: 0.95rem; font-weight: 800; margin-bottom: 4px; }
 .nc-desc  { font-size: 0.75rem; opacity: 0.8; line-height: 1.4; }
@@ -531,7 +537,7 @@ const overviewItems = [
 
 /* ── Mobile ──────────────────────────── */
 @media (max-width: 768px) {
-  .quick-grid { grid-template-columns: 1fr; }
+  .quick-grid { grid-template-columns: repeat(2, 1fr); }
   .levels-grid { grid-template-columns: 1fr; }
   .overview-grid { grid-template-columns: repeat(2, 1fr); }
   .brand-title { font-size: 1.2rem; }

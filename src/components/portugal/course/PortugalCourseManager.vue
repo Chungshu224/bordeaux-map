@@ -7,6 +7,13 @@
       @openMap="$emit('openMap')"
       @startLevel="handleSelectLevel"
       @openNotebook="view = 'notebook'"
+      @openGameHub="view = 'gameHub'"
+    />
+
+    <!-- 互動練習遊戲中心 -->
+    <PortugalGameHubPage
+      v-else-if="view === 'gameHub'"
+      @back="view = 'levelSelector'"
     />
 
     <!-- 品飲筆記 -->
@@ -42,6 +49,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import PortugalLevelSelector from './PortugalLevelSelector.vue'
+import PortugalGameHubPage from '../games/PortugalGameHubPage.vue'
 import PortugalTastingNotebookPage from '../notebook/PortugalTastingNotebookPage.vue'
 import PortugalCourseLayout from './PortugalCourseLayout.vue'
 import PortugalSlideViewer from './PortugalSlideViewer.vue'
@@ -49,7 +57,7 @@ import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevel
 
 defineEmits(['openMap'])
 
-const view = ref('levelSelector')
+const view = ref('levelSelector') // 'levelSelector' | 'courseContent' | 'notebook' | 'gameHub'
 const selectedLevelKey = ref(null)
 const activeLesson = ref(null)
 const completedMap = ref({})

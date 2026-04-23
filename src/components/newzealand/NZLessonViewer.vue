@@ -136,6 +136,11 @@
               <span class="nz-nav-title">品飲筆記</span>
               <span class="nz-nav-desc">記錄紐西蘭葡萄酒品飲心得</span>
             </button>
+            <button class="nz-nav-card nz-nav-game" @click="emit('open-game')">
+              <span class="nz-nav-icon">🎮</span>
+              <span class="nz-nav-title">互動練習</span>
+              <span class="nz-nav-desc">產區競答・品種配對・風格閃問</span>
+            </button>
           </div>
         </section>
 
@@ -251,7 +256,7 @@ const props = defineProps({
   slideIndex: { type: Number, default: 0 }
 })
 
-const emit = defineEmits(['mark-complete', 'navigate', 'start-course', 'enter-level', 'open-map', 'select-lesson-direct', 'update-slide-info', 'back-to-home', 'go-to-level', 'open-notebook'])
+const emit = defineEmits(['mark-complete', 'navigate', 'start-course', 'enter-level', 'open-map', 'select-lesson-direct', 'update-slide-info', 'back-to-home', 'go-to-level', 'open-notebook', 'open-game'])
 
 const router = useRouter()
 
@@ -678,6 +683,14 @@ const getReviewConfig = () => {
 .nz-nav-achievement:hover {
   background: rgba(255, 215, 0, 0.32);
   box-shadow: 0 8px 24px rgba(255, 215, 0, 0.25);
+}
+.nz-nav-game {
+  background: rgba(139, 92, 246, 0.18);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+.nz-nav-game:hover {
+  background: rgba(139, 92, 246, 0.32);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
 }
 
 /* ── Level 卡片 ── */

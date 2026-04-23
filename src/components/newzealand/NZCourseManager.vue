@@ -33,6 +33,7 @@
       @enter-level="handleEnterLevel"
       @open-map="$emit('openMap')"
       @open-notebook="$emit('openNotebook')"
+      @open-game="$emit('openGame')"
       @select-lesson-direct="handleSelectLessonDirect"
       @update-slide-info="updateSlideInfo"
       @back-to-home="handleBackToHome"
@@ -61,7 +62,7 @@ import {
   nzAchievementState
 } from '../../stores/nzAchievementSystem.js'
 
-defineEmits(['openMap', 'openNotebook'])
+defineEmits(['openMap', 'openNotebook', 'openGame'])
 
 globalNzAchievementManager.init()
 
