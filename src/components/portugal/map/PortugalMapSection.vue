@@ -693,6 +693,7 @@ function selectFromDrawer(r) {
   activeRegion.value = r
   drawerOpen.value = false
   applySelectionFilter(r.name, r.region_type === 'DOC' ? 'doc' : 'igp')
+  if (climateEnabled.value) applyClimateColor(climateYear.value)
   const b = ptGeomMap[r.name]
   if (b && map) map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 80, maxZoom: 12, duration: 700 })
 }
@@ -901,6 +902,7 @@ async function initMap() {
         activeRegion.value  = feat.properties
         drawerOpen.value    = false
         applySelectionFilter(feat.properties.name, 'doc')
+        if (climateEnabled.value) applyClimateColor(climateYear.value)
         // Fit to region
         const b = ptGeomMap[feat.properties.name]
         if (b) map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 80, maxZoom: 12, duration: 700 })
@@ -912,6 +914,7 @@ async function initMap() {
         map.removeFeatureState({ source: 'doc-regions' })
         activeRegion.value  = e.features[0].properties
         applySelectionFilter(e.features[0].properties.name, 'igp')
+        if (climateEnabled.value) applyClimateColor(climateYear.value)
       })
 
       // Click on empty area → deselect
@@ -922,6 +925,7 @@ async function initMap() {
           map.removeFeatureState({ source: 'doc-regions' })
           activeRegion.value = null
           clearSelectionFilter()
+          if (climateEnabled.value) applyClimateColor(climateYear.value)
         }
       })
 
@@ -1043,7 +1047,9 @@ function applyClimateColor(year) {
   if (idx < 0) return
   const cfg = currentIndicatorConfig.value
   const entries = []
-  for (const doc of allDOC.value) {
+  // 只對已選中的產區上色
+  const target = activeRegion.value ? [activeRegion.value] : []
+  for (const doc of target) {
     const arr = climateData.value[doc.name]?.[cfg.dataKey]
     const value = Array.isArray(arr) && idx < arr.length ? Number(arr[idx]) : null
     if (Number.isFinite(value)) entries.push(doc.name, valueToClimateColor(value, cfg.id))
@@ -1557,9 +1563,10 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 /* ── Climate Overlay ─────────────────────────────────────────────── */
 .climate-overlay {
   position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-  left: 20px;
-  width: min(380px, calc(100vw - 44px));
+  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 96px), 144px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 380px);
   background: rgba(20, 30, 48, 0.93);
   backdrop-filter: blur(16px);
   border-radius: 16px;
