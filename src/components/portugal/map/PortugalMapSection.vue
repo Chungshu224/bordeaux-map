@@ -748,9 +748,9 @@ async function initMap() {
           'fill-color': ['get', 'color'],
           'fill-opacity': [
             'case',
-            ['boolean', ['feature-state', 'selected'], false], 0.20,
-            ['boolean', ['feature-state', 'hover'], false],    0.15,
-            0.10,
+            ['boolean', ['feature-state', 'selected'], false], 0.58,
+            ['boolean', ['feature-state', 'hover'], false],    0.42,
+            0.30,
           ],
         },
       })
@@ -760,9 +760,9 @@ async function initMap() {
         type: 'line',
         source: 'doc-regions',
         paint: {
-          'line-color': ['case', ['boolean', ['feature-state', 'selected'], false], '#fff', 'rgba(255,255,255,0.7)'],
-          'line-width': ['case', ['boolean', ['feature-state', 'selected'], false], 2.5, 1.2],
-          'line-opacity': 0.9,
+          'line-color': ['case', ['boolean', ['feature-state', 'selected'], false], '#ffffff', ['get', 'color']],
+          'line-width': ['case', ['boolean', ['feature-state', 'selected'], false], 3.0, 2.0],
+          'line-opacity': 1.0,
         },
       })
 
@@ -1152,7 +1152,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 /* ── Info bar (Bordeaux style: bottom-left, white card) ──────────── */
 .map-info-bar {
   position: absolute;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
+  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 110px), 158px);
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255,255,255,0.97);
@@ -1474,7 +1474,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 24px), 72px);
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1621,7 +1621,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
     padding: 10px 14px;
   }
   .mobile-map-toolbar {
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+    bottom: max(calc(env(safe-area-inset-bottom, 0px) + 24px), 72px);
     width: min(90vw, 380px);
   }
   .region-drawer { width: 260px; }
