@@ -168,9 +168,9 @@ const EASY_QUESTIONS = [
   {
     category: '🍷 酒款認識',
     question: 'Bikavér 在英語中常被稱為？',
-    options: ['Lion's Blood', 'Bull\'s Blood', 'Red Dragon', 'Wolf's Tooth'],
+    options: ["Lion's Blood", "Bull's Blood", 'Red Dragon', "Wolf's Tooth"],
     correct: 1,
-    explanation: 'Bikavér 匈牙利語意為「公牛血」（Bull's Blood），以埃格爾和塞克薩爾德最為著名。',
+    explanation: "Bikavér 匈牙利語意為「公牛血」（Bull's Blood），以埃格爾和塞克薩爾德最為著名。",
   },
   {
     category: '🗺️ 產區地理',

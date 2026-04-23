@@ -318,7 +318,122 @@
         <AdminGlossary />
       </section>
 
+      <!-- ── 公告管理 ── -->
+      <section v-if="activeTab === 'announcements'" class="tab-panel">
+        <div class="section-header">
+          <h2 class="section-title">📢 公告管理</h2>
+          <button class="btn-primary" @click="openNewAnnouncement">＋ 新增公告</button>
+        </div>
+
+        <div v-if="annLoading" class="loading-state">載入中…</div>
+        <div v-else>
+          <div v-if="announcements.length === 0" class="empty-state">目前沒有任何公告</div>
+          <div v-else class="ann-list">
+            <div v-for="ann in announcements" :key="ann.id" class="ann-row">
+              <div class="ann-row-main">
+                <div class="ann-row-top">
+                  <span :class="['ann-type-tag', ann.type]">{{ annTypeLabel(ann.type) }}</span>
+                  <span :class="['ann-mode-tag', ann.display_mode]">{{ annModeLabel(ann.display_mode) }}</span>
+                  <span :class="['ann-tier-tag', ann.target_tier]">{{ annTierLabel(ann.target_tier) }}</span>
+                  <span :class="['ann-status', ann.is_active ? 'on' : 'off']">{{ ann.is_active ? '● 進行中' : '○ 已停用' }}</span>
+                </div>
+                <div class="ann-title">{{ ann.title }}</div>
+                <div class="ann-content-preview">{{ ann.content }}</div>
+                <div class="ann-meta">
+                  <span>開始：{{ formatDate(ann.starts_at) }}</span>
+                  <span>結束：{{ ann.ends_at ? formatDate(ann.ends_at) : '永不過期' }}</span>
+                  <span>優先級：{{ ann.priority }}</span>
+                </div>
+              </div>
+              <div class="ann-row-actions">
+                <button class="btn-xs" @click="editAnnouncement(ann)">編輯</button>
+                <button
+                  :class="['btn-xs', ann.is_active ? 'btn-deactivate' : 'btn-activate']"
+                  :disabled="togglingAnn === ann.id"
+                  @click="toggleAnn(ann)"
+                >{{ togglingAnn === ann.id ? '…' : ann.is_active ? '停用' : '啟用' }}</button>
+                <button class="btn-xs btn-danger" @click="deleteAnn(ann)">刪除</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+    <!-- 公告編輯彈窗 -->
+    <div v-if="editingAnn" class="modal-overlay" @click.self="editingAnn = null">
+      <div class="modal modal-wide">
+        <div class="modal-header">
+          <h3>{{ editingAnn.id ? '編輯公告' : '新增公告' }}</h3>
+          <button @click="editingAnn = null">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>標題 <span class="req">*</span></label>
+            <input v-model="editingAnn.title" type="text" class="field-input" placeholder="公告標題" />
+          </div>
+          <div class="form-group">
+            <label>內容 <span class="req">*</span></label>
+            <textarea v-model="editingAnn.content" class="field-textarea" rows="4" placeholder="公告內文…" />
+          </div>
+          <div class="form-row-3">
+            <div class="form-group">
+              <label>類型</label>
+              <select v-model="editingAnn.type" class="field-select">
+                <option value="info">資訊</option>
+                <option value="warning">警示</option>
+                <option value="promo">促銷</option>
+                <option value="maintenance">維護</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>顯示模式</label>
+              <select v-model="editingAnn.display_mode" class="field-select">
+                <option value="banner">橫幅 Banner</option>
+                <option value="modal">彈窗 Modal</option>
+                <option value="ticker">跑馬燈 Ticker</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>對象</label>
+              <select v-model="editingAnn.target_tier" class="field-select">
+                <option value="all">所有人</option>
+                <option value="free">免費學員</option>
+                <option value="basic">初階訂閱</option>
+                <option value="premium">進階訂閱</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row-3">
+            <div class="form-group">
+              <label>開始時間</label>
+              <input v-model="editingAnn.starts_at" type="datetime-local" class="field-input" />
+            </div>
+            <div class="form-group">
+              <label>結束時間（空白 = 永不過期）</label>
+              <input v-model="editingAnn.ends_at" type="datetime-local" class="field-input" />
+            </div>
+            <div class="form-group">
+              <label>優先級（數字越大越前面）</label>
+              <input v-model.number="editingAnn.priority" type="number" class="field-input" min="0" />
+            </div>
+          </div>
+          <div class="form-group form-check">
+            <label class="check-label">
+              <input type="checkbox" v-model="editingAnn.is_active" />
+              立即啟用
+            </label>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-primary" @click="saveAnn" :disabled="savingAnn">
+              {{ savingAnn ? '儲存中…' : '儲存' }}
+            </button>
+            <button class="btn-ghost" @click="editingAnn = null">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- 學員詳情彈窗 -->
     <div v-if="selectedStudent" class="modal-overlay" @click.self="selectedStudent = null">
@@ -421,6 +536,7 @@ const tabs = [
   { id: 'progress',      label: '學習進度', icon: '📈' },
   { id: 'achievements',  label: '成就紀錄', icon: '🏆' },
   { id: 'glossary',      label: '辭典管理', icon: '📖' },
+  { id: 'announcements', label: '公告管理', icon: '📢' },
 ]
 const activeTab = ref('overview')
 
@@ -660,9 +776,134 @@ onMounted(async () => {
 
 // 切換 tab 時自動載入
 watch(activeTab, (tab) => {
-  if (tab === 'progress'     && progressList.value.length === 0)     loadProgress(true)
-  if (tab === 'achievements' && achievementsList.value.length === 0) loadAchievements()
+  if (tab === 'progress'       && progressList.value.length === 0)       loadProgress(true)
+  if (tab === 'achievements'   && achievementsList.value.length === 0)   loadAchievements()
+  if (tab === 'announcements'  && announcements.value.length === 0)      loadAnnouncements()
 })
+
+// ── 公告管理 ────────────────────────────────────────────────
+const annLoading    = ref(false)
+const announcements = ref([])
+const editingAnn    = ref(null)
+const savingAnn     = ref(false)
+const togglingAnn   = ref(null)
+
+async function loadAnnouncements() {
+  annLoading.value = true
+  try {
+    const { data, error } = await supabase
+      .from('announcements')
+      .select('*')
+      .order('priority', { ascending: false })
+      .order('created_at', { ascending: false })
+    if (error) throw error
+    announcements.value = data ?? []
+  } finally {
+    annLoading.value = false
+  }
+}
+
+function openNewAnnouncement() {
+  const now = new Date()
+  const pad  = n => String(n).padStart(2, '0')
+  const localIso = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}T${pad(now.getHours())}:${pad(now.getMinutes())}`
+  editingAnn.value = {
+    id: null,
+    title: '',
+    content: '',
+    type: 'info',
+    display_mode: 'banner',
+    target_tier: 'all',
+    is_active: true,
+    starts_at: localIso,
+    ends_at: '',
+    priority: 0,
+  }
+}
+
+function editAnnouncement(ann) {
+  const toLocal = (iso) => {
+    if (!iso) return ''
+    const d = new Date(iso)
+    const pad = n => String(n).padStart(2, '0')
+    return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`
+  }
+  editingAnn.value = {
+    ...ann,
+    starts_at: toLocal(ann.starts_at),
+    ends_at:   toLocal(ann.ends_at),
+  }
+}
+
+async function saveAnn() {
+  const a = editingAnn.value
+  if (!a.title.trim() || !a.content.trim()) {
+    alert('請填寫標題與內容')
+    return
+  }
+  savingAnn.value = true
+  try {
+    const payload = {
+      title:        a.title.trim(),
+      content:      a.content.trim(),
+      type:         a.type,
+      display_mode: a.display_mode,
+      target_tier:  a.target_tier,
+      is_active:    a.is_active,
+      starts_at:    a.starts_at || new Date().toISOString(),
+      ends_at:      a.ends_at   || null,
+      priority:     a.priority  ?? 0,
+    }
+    if (a.id) {
+      const { error } = await supabase.from('announcements').update(payload).eq('id', a.id)
+      if (error) throw error
+    } else {
+      const { error } = await supabase.from('announcements').insert(payload)
+      if (error) throw error
+    }
+    editingAnn.value = null
+    await loadAnnouncements()
+  } catch (err) {
+    alert('儲存失敗：' + (err.message || JSON.stringify(err)))
+  } finally {
+    savingAnn.value = false
+  }
+}
+
+async function toggleAnn(ann) {
+  togglingAnn.value = ann.id
+  try {
+    const { error } = await supabase
+      .from('announcements')
+      .update({ is_active: !ann.is_active })
+      .eq('id', ann.id)
+    if (error) throw error
+    await loadAnnouncements()
+  } finally {
+    togglingAnn.value = null
+  }
+}
+
+async function deleteAnn(ann) {
+  if (!confirm(`確定要刪除「${ann.title}」？此操作無法復原。`)) return
+  try {
+    const { error } = await supabase.from('announcements').delete().eq('id', ann.id)
+    if (error) throw error
+    await loadAnnouncements()
+  } catch (err) {
+    alert('刪除失敗：' + (err.message || JSON.stringify(err)))
+  }
+}
+
+function annTypeLabel(t) {
+  return { info: '資訊', warning: '警示', promo: '促銷', maintenance: '維護' }[t] ?? t
+}
+function annModeLabel(m) {
+  return { banner: 'Banner', modal: 'Modal', ticker: 'Ticker' }[m] ?? m
+}
+function annTierLabel(t) {
+  return { all: '所有人', free: '免費', basic: '初階', premium: '進階' }[t] ?? t
+}
 
 // ── 導覽 ────────────────────────────────────────────────────
 function goToCourses() {
@@ -1009,4 +1250,58 @@ function formatStudyTime(sec) {
 .pg-btn:hover:not(:disabled) { border-color: #8b1a2b; color: #8b1a2b; }
 .pg-btn:disabled { opacity: .4; cursor: default; }
 .pg-info { font-size: .85rem; color: #777; }
+
+/* ── 公告管理 ── */
+.ann-list { display: flex; flex-direction: column; gap: 12px; }
+.ann-row {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.ann-row-main { flex: 1; min-width: 0; }
+.ann-row-top  { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.ann-title    { font-weight: 700; font-size: .95rem; color: #222; margin-bottom: 4px; }
+.ann-content-preview {
+  font-size: .82rem; color: #666; line-height: 1.5;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 600px;
+}
+.ann-meta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; font-size: .76rem; color: #999; }
+.ann-row-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
+
+/* 公告標籤 */
+.ann-type-tag, .ann-mode-tag, .ann-tier-tag, .ann-status {
+  display: inline-block; padding: 2px 9px; border-radius: 9px; font-size: .73rem; font-weight: 600;
+}
+.ann-type-tag.info        { background: #e8f4fd; color: #2980b9; }
+.ann-type-tag.warning     { background: #fff3e0; color: #e67e22; }
+.ann-type-tag.promo       { background: #e8f8f0; color: #27ae60; }
+.ann-type-tag.maintenance { background: #f3e5f5; color: #8e44ad; }
+.ann-mode-tag.banner      { background: #fdf5f5; color: #8b1a2b; }
+.ann-mode-tag.modal       { background: #f0f0f0; color: #555; }
+.ann-mode-tag.ticker      { background: #fffde7; color: #f57f17; }
+.ann-tier-tag.all         { background: #f0f0f0; color: #666; }
+.ann-tier-tag.free        { background: #f0f0f0; color: #777; }
+.ann-tier-tag.basic       { background: #e8f4fd; color: #2980b9; }
+.ann-tier-tag.premium     { background: #f3e5f5; color: #8e44ad; }
+.ann-status.on  { color: #27ae60; font-weight: 700; }
+.ann-status.off { color: #bbb; }
+
+/* 公告表單 */
+.form-row-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.form-check  { display: flex; align-items: center; }
+.check-label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: .88rem; color: #444; }
+.check-label input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; accent-color: #8b1a2b; }
+.field-textarea { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 9px 12px; font-size: .88rem; resize: vertical; font-family: inherit; }
+.field-textarea:focus { outline: none; border-color: #8b1a2b; }
+.field-select { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 9px 12px; font-size: .88rem; background: #fff; }
+.field-select:focus { outline: none; border-color: #8b1a2b; }
+.req { color: #e74c3c; }
+.btn-danger { background: #fde8e8 !important; color: #c0392b !important; }
+.btn-danger:hover { background: #f5c6c6 !important; }
 </style>

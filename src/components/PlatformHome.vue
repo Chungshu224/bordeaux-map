@@ -57,6 +57,42 @@
       </div>
     </transition>
 
+    <!-- ═══ 公告 Banner ════════════════════════════════════════════════════ -->
+    <transition name="ann-fade">
+      <div
+        v-if="activeBanner"
+        :class="['ann-banner', 'ann-banner--' + activeBanner.type]"
+      >
+        <span class="ann-banner-icon">{{ annTypeIcon(activeBanner.type) }}</span>
+        <div class="ann-banner-text">
+          <strong v-if="activeBanner.title" class="ann-banner-title">{{ activeBanner.title }}</strong>
+          <span class="ann-banner-content">{{ activeBanner.content }}</span>
+        </div>
+        <button class="ann-banner-close" @click="dismissBanner(activeBanner.id)" aria-label="關閉公告">✕</button>
+      </div>
+    </transition>
+
+    <!-- ═══ 公告 Modal ══════════════════════════════════════════════════════ -->
+    <transition name="ann-fade">
+      <div v-if="activeModal" class="ann-modal-overlay" @click.self="dismissBanner(activeModal.id)">
+        <div :class="['ann-modal', 'ann-modal--' + activeModal.type]">
+          <div class="ann-modal-header">
+            <span class="ann-modal-icon">{{ annTypeIcon(activeModal.type) }}</span>
+            <h3 class="ann-modal-title">{{ activeModal.title }}</h3>
+            <button class="ann-modal-close" @click="dismissBanner(activeModal.id)">✕</button>
+          </div>
+          <div class="ann-modal-body">{{ activeModal.content }}</div>
+          <div class="ann-modal-footer">
+            <label class="ann-no-today">
+              <input type="checkbox" v-model="noTodayCheck" />
+              今日不再顯示
+            </label>
+            <button class="ann-modal-ok" @click="dismissModal">我知道了</button>
+          </div>
+        </div>
+      </div>
+    </transition>
+
     <!-- ═══ Hero ════════════════════════════════════════════════════════════ -->
     <section class="hero">
       <div class="hero-overlay"></div>
@@ -1129,12 +1165,112 @@ const faqs = [
   { q: '有退款政策嗎？', a: '訂閱後 7 天內如需退款，請聯絡 support@wineacademy.tw，我們將全額退款。' }
 ]
 
+// ─── 公告 ─────────────────────────────────────────────────────────────────────
+const allAnnouncements = ref([])
+
+const DISMISSED_KEY = 'dismissed_announcements'
+const NO_TODAY_KEY  = 'ann_no_today'
+
+function getDismissed() {
+  try { return JSON.parse(localStorage.getItem(DISMISSED_KEY) || '[]') } catch { return [] }
+}
+function saveDismissed(ids) {
+  localStorage.setItem(DISMISSED_KEY, JSON.stringify(ids))
+}
+
+// 取得「今日不再顯示」清單
+function getNoToday() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(NO_TODAY_KEY) || '{}')
+    const today = new Date().toDateString()
+    // 清除非今日的紀錄
+    if (raw.date !== today) return []
+    return raw.ids || []
+  } catch { return [] }
+}
+function saveNoToday(id) {
+  const today = new Date().toDateString()
+  const cur = getNoToday()
+  if (!cur.includes(id)) {
+    localStorage.setItem(NO_TODAY_KEY, JSON.stringify({ date: today, ids: [...cur, id] }))
+  }
+}
+
+// 依使用者層級過濾
+function annMatchesTier(ann) {
+  if (ann.target_tier === 'all') return true
+  const userTier = authState.profile?.tier ?? 'free'
+  return ann.target_tier === userTier
+}
+
+const visibleAnnouncements = computed(() => {
+  const dismissed = getDismissed()
+  const noToday   = getNoToday()
+  return allAnnouncements.value.filter(a =>
+    !dismissed.includes(a.id) &&
+    !noToday.includes(a.id) &&
+    annMatchesTier(a)
+  )
+})
+
+const activeBanner = computed(() =>
+  visibleAnnouncements.value.find(a => a.display_mode === 'banner') ?? null
+)
+const activeModal = computed(() =>
+  visibleAnnouncements.value.find(a => a.display_mode === 'modal') ?? null
+)
+
+const noTodayCheck = ref(false)
+
+function dismissBanner(id) {
+  const dismissed = getDismissed()
+  if (!dismissed.includes(id)) {
+    saveDismissed([...dismissed, id])
+  }
+  // 強制更新視圖
+  allAnnouncements.value = [...allAnnouncements.value]
+}
+
+function dismissModal() {
+  if (!activeModal.value) return
+  const id = activeModal.value.id
+  if (noTodayCheck.value) {
+    saveNoToday(id)
+  } else {
+    const dismissed = getDismissed()
+    if (!dismissed.includes(id)) saveDismissed([...dismissed, id])
+  }
+  noTodayCheck.value = false
+  allAnnouncements.value = [...allAnnouncements.value]
+}
+
+function annTypeIcon(type) {
+  return { info: 'ℹ️', warning: '⚠️', promo: '🎉', maintenance: '🔧' }[type] ?? 'ℹ️'
+}
+
+async function loadAnnouncements() {
+  try {
+    const { supabase } = await import('../lib/supabaseClient.js')
+    const { data } = await supabase
+      .from('announcements')
+      .select('id, title, content, type, display_mode, target_tier, priority')
+      .eq('is_active', true)
+      .lte('starts_at', new Date().toISOString())
+      .or('ends_at.is.null,ends_at.gt.' + new Date().toISOString())
+      .order('priority', { ascending: false })
+    allAnnouncements.value = data ?? []
+  } catch (e) {
+    console.warn('announcements load error', e)
+  }
+}
+
 // ─── 論壇預覽 ─────────────────────────────────────────────────────────────────
 const recentPosts  = ref([])
 const forumLoading = ref(false)
 
 onMounted(async () => {
   loadCourseData()
+  loadAnnouncements()
   forumLoading.value = true
   try {
     recentPosts.value = await fetchRecentPosts(5)
@@ -1179,6 +1315,100 @@ onMounted(async () => {
 .bt-save { display:inline-block; margin-left:6px; background:#2a7a3b; color:#fff; font-size:0.72rem; padding:2px 7px; border-radius:10px; }
 .price-note { font-size:0.78rem; color:#8cb87a; margin-top:4px; }
 .price-unit { font-size:0.9rem; color:#a89060; }
+
+/* ─── 公告 Banner ──────────────────────────────────────────────────────────── */
+.ann-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.ann-banner--info        { background: #1a3a5c; color: #a8d0f5; }
+.ann-banner--warning     { background: #4a2e00; color: #ffd580; }
+.ann-banner--promo       { background: #1a3a25; color: #8cde9e; }
+.ann-banner--maintenance { background: #2e1a40; color: #c8a8f5; }
+.ann-banner-icon  { font-size: 1.1rem; flex-shrink: 0; }
+.ann-banner-text  { flex: 1; }
+.ann-banner-title { margin-right: 8px; }
+.ann-banner-content { opacity: 0.9; }
+.ann-banner-close {
+  background: transparent;
+  border: none;
+  color: inherit;
+  opacity: 0.6;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  flex-shrink: 0;
+  transition: opacity .2s;
+}
+.ann-banner-close:hover { opacity: 1; }
+
+/* ─── 公告 Modal ───────────────────────────────────────────────────────────── */
+.ann-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+.ann-modal {
+  background: #1a0f14;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  overflow: hidden;
+}
+.ann-modal--info        { border-top: 4px solid #2980b9; }
+.ann-modal--warning     { border-top: 4px solid #e67e22; }
+.ann-modal--promo       { border-top: 4px solid #27ae60; }
+.ann-modal--maintenance { border-top: 4px solid #8e44ad; }
+.ann-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 20px 14px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.ann-modal-icon  { font-size: 1.3rem; }
+.ann-modal-title { flex: 1; font-size: 1.05rem; font-weight: 700; color: #f5f0e8; margin: 0; }
+.ann-modal-close {
+  background: transparent; border: none; color: #aaa;
+  cursor: pointer; font-size: 1rem; padding: 4px 8px;
+  transition: color .2s;
+}
+.ann-modal-close:hover { color: #fff; }
+.ann-modal-body { padding: 16px 20px; color: #c8bba8; font-size: 0.9rem; line-height: 1.7; }
+.ann-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px 18px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.ann-no-today {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.82rem; color: #7a6a5a; cursor: pointer;
+}
+.ann-no-today input { accent-color: #8b1a2b; }
+.ann-modal-ok {
+  padding: 8px 22px; border-radius: 20px;
+  background: #722f37; border: none; color: #fff;
+  font-size: 0.88rem; font-weight: 600; cursor: pointer;
+  transition: background .2s;
+}
+.ann-modal-ok:hover { background: #9b3a45; }
+
+/* ─── 公告動畫 ────────────────────────────────────────────────────────────── */
+.ann-fade-enter-active, .ann-fade-leave-active { transition: opacity .3s, transform .3s; }
+.ann-fade-enter-from  { opacity: 0; transform: translateY(-6px); }
+.ann-fade-leave-to    { opacity: 0; transform: translateY(-6px); }
 
 /* ─── 基礎 ─────────────────────────────────────────────────────────────────── */
 .platform-home {
