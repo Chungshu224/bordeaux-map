@@ -414,6 +414,7 @@ async function initMap(retry = 0) {
     map.on('load', async () => {
       map.addControl(new mapboxgl.NavigationControl(), 'top-right')
       map.addControl(new mapboxgl.FullscreenControl(), 'top-right')
+      map.fitBounds([[16.1, 45.7], [22.9, 48.6]], { padding: 40, duration: 0 })
       mapReady.value = true
       // 預設顯示所有產區輪廓
       await loadAllRegionsOverlay()
@@ -592,7 +593,7 @@ html, body {
 /* ── 資訊卡（底部置中，與波爾多一致） ──────────────────────── */
 .map-info-bar {
   position: absolute;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
+  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 110px), 158px);
   left: 50%;
   transform: translateX(-50%);
   width: min(92vw, 560px);
@@ -773,7 +774,7 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   width: min(90vw, 560px);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 24px), 72px);
   z-index: 1300;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -948,7 +949,7 @@ html, body {
     display: flex;
   }
   .map-info-bar {
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
+    bottom: max(calc(env(safe-area-inset-bottom, 0px) + 110px), 158px);
     width: min(90vw, 560px);
     max-height: min(42vh, 360px);
     padding: 10px 14px 14px;
