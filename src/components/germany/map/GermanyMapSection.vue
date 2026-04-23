@@ -104,46 +104,16 @@
           <button class="layers-panel-close" @click="showLayerPanel = false">✕</button>
         </div>
         <div class="layer-group">
-          <div class="layer-group-label">葡萄園顯示</div>
+          <div class="layer-group-label">視角</div>
           <div class="layer-group-buttons">
-            <button class="btn-layer" :class="{ active: showVineyards }" @click="toggleVineyards">
-              <span class="lbtn-icon">🍇</span>
-              <span class="lbtn-text">葡萄園</span>
-              <span class="lbtn-dot" :class="{ on: showVineyards }"></span>
-            </button>
-            <button class="btn-layer" :class="{ active: is3D }" @click="toggle3D">
-              <span class="lbtn-icon">🗺</span>
-              <span class="lbtn-text">3D 地形</span>
-              <span class="lbtn-dot" :class="{ on: is3D }"></span>
-            </button>
             <button class="btn-layer" :class="{ active: showContours }" @click="toggleContours">
               <span class="lbtn-icon">〰</span>
               <span class="lbtn-text">等高線</span>
               <span class="lbtn-dot" :class="{ on: showContours }"></span>
             </button>
-          </div>
-        </div>
-        <div class="layer-group" style="margin-top:0.75rem">
-          <div class="layer-group-label">🌍 地質土壤（ISRIC SoilGrids）</div>
-          <div class="layer-group-buttons">
-            <button class="btn-layer" :class="{ active: showGeology }" @click="toggleGeology" :disabled="isGeologyLoading">
-              <span class="lbtn-icon">{{ isGeologyLoading ? '⏳' : '🪨' }}</span>
-              <span class="lbtn-text">{{ isGeologyLoading ? '載入中…' : '土壤地質圖' }}</span>
-              <span class="lbtn-dot" :class="{ on: showGeology }"></span>
-            </button>
-          </div>
-          <div v-if="geologyError" class="geology-error-msg">{{ geologyError }}</div>
-          <div v-if="showGeology" class="geology-hint">資料來源：ISRIC SoilGrids · WRB 世界土壤分類系統<br>顏色代表不同 WRB 土壤類型</div>
-          <a v-if="showGeology" class="geology-legend-link"
-            href="https://maps.isric.org/mapserv?map=/map/wrb.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&LAYER=MostProbable&FORMAT=image/png&STYLE=default"
-            target="_blank" rel="noopener">查看圖例說明 ↗</a>
-        </div>
-        <div class="layer-group" style="margin-top:0.75rem">
-          <div class="layer-group-label">🌡 氣候熱力</div>
-          <div class="layer-group-buttons">
-            <button class="btn-layer" :class="{ active: climateEnabled }" @click="toggleClimate">
+            <button class="btn-layer" :class="{ active: climateEnabled }" @click="toggleClimate(); showLayerPanel = false">
               <span class="lbtn-icon">🌡</span>
-              <span class="lbtn-text">氣候熱力圖</span>
+              <span class="lbtn-text">氣候熱力</span>
               <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
             </button>
           </div>
@@ -1102,14 +1072,17 @@ onUnmounted(() => {
 
 /* ── Layer Panel ── */
 .mobile-layer-panel {
-  position: absolute;
-  bottom: 102px; right: 16px;
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  right: 16px;
   z-index: 20;
   background: rgba(252,248,244,0.98);
   border-radius: 16px;
   box-shadow: 0 8px 28px rgba(0,0,0,0.18);
   padding: 1rem;
   min-width: 230px;
+  max-height: 60vh;
+  overflow-y: auto;
   border: 1px solid rgba(139,0,0,0.1);
 }
 .layers-panel-header {
