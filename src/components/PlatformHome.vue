@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="platform-home">
 
     <!-- ═══ 頂部導覽列 ═══════════════════════════════════════════════════════ -->
@@ -195,6 +195,10 @@
               <span class="cpf-item">✔ 山坡 · 土壤層次分析</span>
               <span class="cpf-item">✔ 氣候影響與年份差異解讀</span>
             </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.bourgogne" class="btn-enter-course" @click="router.push('/bourgogne')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
+            </div>
 
           </div>
 
@@ -234,6 +238,10 @@
               <span class="cpf-item loire-tag">✔ 13 產區互動衛星地圖</span>
               <span class="cpf-item loire-tag">✔ Sancerre / Pouilly-Fumé 礦石白酒</span>
               <span class="cpf-item loire-tag">✔ Vouvray / Chinon 貴腐甜酒與紅酒</span>
+            </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.loire" class="btn-enter-course" @click="router.push('/loire')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
             </div>
           </div>
 
@@ -287,6 +295,10 @@
               <span class="cpf-item italy-tag">✔ Nebbiolo / Sangiovese 品種比較</span>
               <span class="cpf-item italy-tag">✔ DOC → DOCG 分級演變課</span>
             </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.italy" class="btn-enter-course" @click="router.push('/italy')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
+            </div>
 
           </div>
 
@@ -328,6 +340,10 @@
               <span class="cpf-item spain-tag">✔ Tempranillo / Garnacha 深度解析</span>
               <span class="cpf-item spain-tag">✔ Sherry / Cava 特殊酒型專課</span>
             </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.spain" class="btn-enter-course" @click="router.push('/spain')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
+            </div>
 
           </div>
 
@@ -367,6 +383,10 @@
               <span class="cpf-item germany-tag">✔ 13 個 Anbaugebiete 衛星地圖</span>
               <span class="cpf-item germany-tag">✔ Mosel 陡坡 Riesling 深度解析</span>
               <span class="cpf-item germany-tag">✔ Kabinett → TBA 甜度分級</span>
+            </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.germany" class="btn-enter-course" @click="router.push('/germany')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
             </div>
 
           </div>
@@ -408,6 +428,10 @@
               <span class="cpf-item portugal-tag">✔ Douro 梯田波特酒產區深度解析</span>
               <span class="cpf-item portugal-tag">✔ Madeira 島嶼加強酒探索</span>
             </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.portugal" class="btn-enter-course" @click="router.push('/portugal')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
+            </div>
 
           </div>
 
@@ -447,6 +471,10 @@
               <span class="cpf-item hungary-tag">✔ 22 法定產區互動衛星地圖</span>
               <span class="cpf-item hungary-tag">✔ Tokaji Aszú 貴腐甜酒完整解析</span>
               <span class="cpf-item hungary-tag">✔ Eger 公牛血紅酒與 Furmint 品種</span>
+            </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.hungary" class="btn-enter-course" @click="router.push('/hungary')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
             </div>
           </div>
 
@@ -499,6 +527,10 @@
               <span class="cpf-item australia-tag">✔ Barossa 老藤 Shiraz 深度解析</span>
               <span class="cpf-item australia-tag">✔ Tasmania 頂級氣泡酒與 Pinot Noir</span>
             </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.australia" class="btn-enter-course" @click="router.push('/australia')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
+            </div>
 
           </div>
 
@@ -539,6 +571,10 @@
               <span class="cpf-item newzealand-tag">✔ Marlborough SB 品種深度解析</span>
               <span class="cpf-item newzealand-tag">✔ Central Otago Pinot Noir 產區</span>
             </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.newzealand" class="btn-enter-course" @click="router.push('/newzealand')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
+            </div>
 
           </div>
 
@@ -578,6 +614,10 @@
               <span class="cpf-item california-tag">✔ 154+ AVA 互動衛星地圖</span>
               <span class="cpf-item california-tag">✔ Napa Valley 16 子產區深度解析</span>
               <span class="cpf-item california-tag">✔ 1976 巴黎品酒會歷史</span>
+            </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.california" class="btn-enter-course" @click="router.push('/california/course')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
+              <span v-else class="planning-cta">📅 即將開放</span>
             </div>
 
           </div>
@@ -1689,6 +1729,20 @@ onMounted(async () => {
 }
 .cpc-btn-plan:hover { background: rgba(212,175,55,0.18); transform: translateY(-1px); }
 .planning-cta { color: #6b7280; font-size: 0.85rem; font-style: italic; }
+.card-enter-cta { margin-top: 16px; display: flex; justify-content: flex-end; }
+.btn-enter-course {
+  padding: 9px 22px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(212,175,55,0.55);
+  background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.06));
+  color: #d4af37;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+.btn-enter-course:hover { background: rgba(212,175,55,0.22); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(212,175,55,0.18); }
 .card-hero { margin-bottom: 20px; }
 .card-icon { font-size: 2.4rem; margin-bottom: 8px; }
 .card-region { color: #9a8878; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
