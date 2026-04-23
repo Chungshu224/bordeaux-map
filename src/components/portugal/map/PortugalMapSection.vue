@@ -647,9 +647,9 @@ async function initMap() {
           'fill-color': ['get', 'color'],
           'fill-opacity': [
             'case',
-            ['boolean', ['feature-state', 'selected'], false], 0.45,
-            ['boolean', ['feature-state', 'hover'], false],    0.30,
-            0.20,
+            ['boolean', ['feature-state', 'selected'], false], 0.20,
+            ['boolean', ['feature-state', 'hover'], false],    0.15,
+            0.10,
           ],
         },
       })
@@ -741,7 +741,7 @@ async function initMap() {
         layout: { visibility: 'visible' },
         paint: {
           'fill-color': ['coalesce', ['get', 'color'], '#3498db'],
-          'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.30, 0.15],
+          'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.15, 0.10],
         },
       })
 

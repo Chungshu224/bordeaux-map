@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <section class="de-map-section">
 
     <!-- 全螢幕地圖 -->
@@ -13,51 +13,25 @@
       <h1>🇩🇪 德國葡萄酒產區地圖</h1>
     </div>
 
-    <!-- 左側產區列表面板（桌機）-->
-    <transition name="panel-slide">
-      <div v-if="listPanelOpen" class="region-list-panel">
-        <div class="list-panel-header">
-          <span class="list-panel-title">13 Anbaugebiete</span>
-          <button class="list-panel-close" @click="listPanelOpen = false">✕</button>
-        </div>
-        <div class="list-item all-item" :class="{ active: !selectedId }" @click="resetView">
-          <span class="list-dot" style="background:#4f9cf9"></span>
-          <span>🗺 全部產區</span>
-        </div>
-        <div
-          v-for="r in regions"
-          :key="r.id"
-          class="list-item"
-          :class="{ active: selectedId === r.id }"
-          @click="selectRegion(r)"
-        >
-          <span class="list-dot" :style="{ background: r.color }"></span>
-          <span class="list-item-name">{{ r.icon }} {{ r.name }}</span>
-          <span class="list-item-ha">{{ r.hectares.toLocaleString() }} ha</span>
-        </div>
-      </div>
-    </transition>
-
-    <!-- 面板收合時的展開按鈕 -->
-    <button
-      v-if="!listPanelOpen && mapReady"
-      class="list-reopen-btn"
-      @click="listPanelOpen = true"
-      title="展開產區列表"
-    >☰ 產區</button>
-
-    <!-- 資訊卡（波爾多風格：白色卡片，左下角）-->
+    <!-- 資訊面板（工具列上方，波爾多風格）-->
     <div
-      v-if="activeRegion"
+      v-if="mapReady"
       class="map-info-bar"
-      :class="{ collapsed: infoCollapsed }"
+      :class="{ collapsed: infoCollapsed || !activeRegion }"
     >
       <div class="aoc-title-row">
         <span class="aoc-info-title">
-          <span class="aoc-dot" :style="{ background: activeRegion.color }"></span>
-          {{ activeRegion.icon }} {{ activeRegion.name }}
+          <span class="aoc-dot" :style="{ background: activeRegion ? activeRegion.color : '#1565c0' }"></span>
+          {{ activeRegion ? activeRegion.name : '德國 13 個葡萄酒產區' }}
         </span>
-        <div class="title-buttons">
+        <div class="title-buttons" v-if="activeRegion">
+          <button class="btn-pronunciation" @click="playPronunciation(activeRegion.name)" title="點擊聽發音">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </button>
           <button class="btn-collapse-inline" @click.stop="infoCollapsed = !infoCollapsed"
             :title="infoCollapsed ? '展開資訊' : '收合資訊'">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -75,36 +49,33 @@
           </button>
         </div>
       </div>
-      <div v-show="!infoCollapsed" class="info-details">
-        <div class="map-buttons">
-          <button class="btn-reset" @click="resetView">重置地圖</button>
-        </div>
+      <div v-show="activeRegion && !infoCollapsed" class="info-details">
         <div class="region-info-content">
           <div class="info-header">
-            <b>{{ activeRegion.name }}</b>
-            <span class="region-type">{{ activeRegion.nameDE }}</span>
-            <span class="region-hectare"> — {{ activeRegion.hectares.toLocaleString() }} 公頃</span>
+            <b>{{ activeRegion?.name }}</b>
+            <span class="region-type">{{ activeRegion?.nameDE }}</span>
+            <span class="region-hectare"> — {{ activeRegion?.hectares.toLocaleString() }} 公頃</span>
           </div>
           <div class="grape-section">
             <div class="grape-title">主要品種：</div>
             <div class="grape-badges">
-              <span v-for="g in activeRegion.grapes" :key="g" class="grape-badge">{{ g }}</span>
+              <span v-for="g in activeRegion?.grapes" :key="g" class="grape-badge">{{ g }}</span>
             </div>
           </div>
           <div class="styles-section">
             <div class="grape-title">酒款類型：</div>
             <div class="grape-badges">
-              <span v-for="s in activeRegion.styles" :key="s" class="style-badge-item">{{ s }}</span>
+              <span v-for="s in activeRegion?.styles" :key="s" class="style-badge-item">{{ s }}</span>
             </div>
           </div>
           <div class="grape-section">
             <div class="grape-title">土壤類型：</div>
             <div class="grape-badges">
-              <span v-for="soil in activeRegion.soils" :key="soil" class="soil-badge">{{ soil }}</span>
+              <span v-for="soil in activeRegion?.soils" :key="soil" class="soil-badge">{{ soil }}</span>
             </div>
           </div>
-          <div class="description">{{ activeRegion.description }}</div>
-          <div v-if="activeRegion.villages && activeRegion.villages.length" class="grape-section">
+          <div class="description">{{ activeRegion?.description }}</div>
+          <div v-if="activeRegion?.villages?.length" class="grape-section">
             <div class="grape-title">重要村莊：</div>
             <div class="grape-badges">
               <span v-for="v in activeRegion.villages" :key="v" class="village-badge">{{ v }}</span>
@@ -114,59 +85,72 @@
       </div>
     </div>
 
-    <!-- 未選擇產區時的提示卡 -->
-    <div v-else-if="mapReady" class="map-info-bar info-hint">
-      <div class="aoc-title-row">
-        <span class="aoc-info-title">
-          <span class="aoc-dot" style="background:#1565c0"></span>
-          德國 13 個葡萄酒產區
-        </span>
-      </div>
-      <div class="info-details">
-        <div class="description">點擊地圖上的產區或左側列表選擇產區，查看詳細資訊。</div>
-      </div>
-    </div>
-
-    <!-- 行動版底部工具列（波爾多風格）-->
-    <div v-if="mapReady" class="mobile-map-toolbar">
-      <button class="mobile-tool-btn" :class="{ active: mobileListOpen }" @click="mobileListOpen = !mobileListOpen">
-        <span class="mobile-tool-icon">產</span>
-        <span>產區</span>
+    <!-- 底部工具列（波爾多風格，4 個按鈕）-->
+    <div v-if="mapReady" class="map-toolbar">
+      <button class="tool-btn" :class="{ active: aocDrawerOpen }" @click="toggleTool('aoc')">
+        <span class="tool-icon">產</span>
+        <span class="tool-label">產區</span>
       </button>
-      <button class="mobile-tool-btn reset-tool" @click="resetView">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto 2px">
-          <path d="M21 3v6h-6"/><path d="M20.49 15A9 9 0 1 1 21 9"/>
-        </svg>
-        <span>重置</span>
+      <button class="tool-btn" :class="{ active: layersPanelOpen }" @click="toggleTool('layers')">
+        <span class="tool-icon">層</span>
+        <span class="tool-label">圖層</span>
       </button>
-      <button class="mobile-tool-btn" :class="{ active: activeRegion && !infoCollapsed }"
-        @click="infoCollapsed = !infoCollapsed">
-        <span class="mobile-tool-icon">資</span>
-        <span>資訊</span>
+      <button class="tool-btn" :class="{ active: is3D }" @click="toggle3D">
+        <span class="tool-icon">3D</span>
+        <span class="tool-label">{{ is3D ? '2D' : '3D' }}</span>
+      </button>
+      <button class="tool-btn" :class="{ active: activeRegion && !infoCollapsed }" @click="toggleTool('info')">
+        <span class="tool-icon">資</span>
+        <span class="tool-label">資訊</span>
       </button>
     </div>
 
-    <!-- 行動版產區抽屜（從下方彈出）-->
+    <!-- 產區抽屜（從下方彈出）-->
     <transition name="mobile-sheet-fade">
-      <div v-if="mobileListOpen" class="mobile-aoc-backdrop" @click.self="mobileListOpen = false">
+      <div v-if="aocDrawerOpen" class="mobile-aoc-backdrop" @click.self="aocDrawerOpen = false">
         <div class="mobile-aoc-drawer">
           <div class="mobile-aoc-handle"></div>
           <div class="mobile-aoc-toolbar-header">
-            <h2>選擇產區</h2>
+            <h2>13 Anbaugebiete</h2>
           </div>
           <div class="mobile-region-list">
             <div class="list-item all-item" :class="{ active: !selectedId }"
-              @click="resetView(); mobileListOpen = false">
+              @click="resetView(); aocDrawerOpen = false">
               <span class="list-dot" style="background:#4f9cf9"></span>
               <span>🗺 全部產區</span>
             </div>
             <div v-for="r in regions" :key="r.id" class="list-item"
               :class="{ active: selectedId === r.id }"
-              @click="selectRegion(r); mobileListOpen = false">
+              @click="selectRegion(r); aocDrawerOpen = false">
               <span class="list-dot" :style="{ background: r.color }"></span>
-              <span class="list-item-name">{{ r.icon }} {{ r.name }}</span>
-              <span class="list-item-ha">{{ r.hectares.toLocaleString() }} ha</span>
+              <span class="list-item-name">{{ r.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+
+    <!-- 圖層面板（從下方彈出）-->
+    <transition name="mobile-sheet-fade">
+      <div v-if="layersPanelOpen" class="mobile-aoc-backdrop" @click.self="layersPanelOpen = false">
+        <div class="mobile-aoc-drawer layers-drawer">
+          <div class="mobile-aoc-handle"></div>
+          <div class="mobile-aoc-toolbar-header">
+            <h2>圖層</h2>
+          </div>
+          <div class="layers-panel-content">
+            <div class="layer-group-label">資料圖層</div>
+            <div class="layer-btn-row">
+              <button class="layer-opt-btn" :class="{ active: vineyardEnabled }" @click="toggleVineyard">
+                <span class="lopt-icon">🍇</span>
+                <span class="lopt-text">葡萄園</span>
+                <span class="lopt-dot" :class="{ on: vineyardEnabled }"></span>
+              </button>
+              <button class="layer-opt-btn" :class="{ active: contoursEnabled, 'contours-btn': true }" @click="toggleContours">
+                <span class="lopt-icon">〰️</span>
+                <span class="lopt-text">等高線</span>
+                <span class="lopt-dot" :class="{ on: contoursEnabled }"></span>
+              </button>
             </div>
           </div>
         </div>
@@ -198,9 +182,12 @@ const isLoading = ref(true)
 const mapError = ref(null)
 const selectedId = ref(null)
 const activeRegion = ref(null)
-const infoCollapsed = ref(false)
-const listPanelOpen = ref(true)
-const mobileListOpen = ref(false)
+const infoCollapsed = ref(true)
+const aocDrawerOpen = ref(false)
+const layersPanelOpen = ref(false)
+const is3D = ref(false)
+const vineyardEnabled = ref(false)
+const contoursEnabled = ref(false)
 
 const regions = germanyRegions
 let map = null
@@ -242,6 +229,48 @@ function buildColorMatch() {
   return expr
 }
 
+async function addRegionLayers(geoJSON) {
+  if (!map.getSource('de-regions')) {
+    map.addSource('de-regions', {
+      type: 'geojson',
+      data: geoJSON,
+      generateId: true
+    })
+  }
+
+  if (!map.getLayer('de-region-fill')) {
+    map.addLayer({
+      id: 'de-region-fill',
+      type: 'fill',
+      source: 'de-regions',
+      paint: {
+        'fill-color': buildColorMatch(),
+        'fill-opacity': [
+          'case',
+          ['boolean', ['feature-state', 'hover'], false], 0.15,
+          0.10
+        ]
+      }
+    })
+  }
+
+  if (!map.getLayer('de-region-line')) {
+    map.addLayer({
+      id: 'de-region-line',
+      type: 'line',
+      source: 'de-regions',
+      paint: {
+        'line-color': buildColorMatch(),
+        'line-width': [
+          'case',
+          ['boolean', ['feature-state', 'hover'], false], 3, 2
+        ],
+        'line-opacity': 0.9
+      }
+    })
+  }
+}
+
 async function initMap() {
   if (!mapContainer.value) return
   mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
@@ -260,41 +289,7 @@ async function initMap() {
   map.on('load', async () => {
     try {
       const allGeoJSON = await loadAllRegions()
-
-      // generateId:true is required for feature-state (hover effect)
-      map.addSource('de-regions', {
-        type: 'geojson',
-        data: allGeoJSON,
-        generateId: true
-      })
-
-      map.addLayer({
-        id: 'de-region-fill',
-        type: 'fill',
-        source: 'de-regions',
-        paint: {
-          'fill-color': buildColorMatch(),
-          'fill-opacity': [
-            'case',
-            ['boolean', ['feature-state', 'hover'], false], 0.50,
-            0.22
-          ]
-        }
-      })
-
-      map.addLayer({
-        id: 'de-region-line',
-        type: 'line',
-        source: 'de-regions',
-        paint: {
-          'line-color': buildColorMatch(),
-          'line-width': [
-            'case',
-            ['boolean', ['feature-state', 'hover'], false], 3, 2
-          ],
-          'line-opacity': 0.9
-        }
-      })
+      await addRegionLayers(allGeoJSON)
 
       // Hover effect
       let hoveredId = null
@@ -336,7 +331,6 @@ async function initMap() {
   })
 
   map.on('error', (e) => {
-    // Ignore tile/source-level non-fatal errors
     if (e?.sourceId) return
     const msg = e?.error?.message || ''
     if (
@@ -362,17 +356,194 @@ function selectRegion(region) {
   map.setFilter('de-region-line', ['==', ['get', 'regionId'], region.id])
 
   map.flyTo({ center: region.center, zoom: region.zoom, duration: 900 })
+
+  if (vineyardEnabled.value) loadVineyardForRegion(region)
 }
 
 function resetView() {
   if (!map) return
   selectedId.value = null
   activeRegion.value = null
+  infoCollapsed.value = true
 
   map.setFilter('de-region-fill', null)
   map.setFilter('de-region-line', null)
 
+  // 重置時清空葡萄園圖層
+  if (map.getSource('de-vineyards')) {
+    map.getSource('de-vineyards').setData({ type: 'FeatureCollection', features: [] })
+  }
+
   map.fitBounds(GERMANY_BOUNDS, { padding: 50, duration: 900 })
+}
+
+function toggleTool(type) {
+  if (type === 'aoc') {
+    layersPanelOpen.value = false
+    aocDrawerOpen.value = !aocDrawerOpen.value
+  } else if (type === 'layers') {
+    aocDrawerOpen.value = false
+    layersPanelOpen.value = !layersPanelOpen.value
+  } else if (type === 'info') {
+    aocDrawerOpen.value = false
+    layersPanelOpen.value = false
+    if (activeRegion.value) {
+      infoCollapsed.value = !infoCollapsed.value
+    } else {
+      aocDrawerOpen.value = true
+    }
+  }
+}
+
+function toggle3D() {
+  if (!map) return
+  is3D.value = !is3D.value
+  map.easeTo({ pitch: is3D.value ? 45 : 0, duration: 600 })
+
+  if (is3D.value) {
+    if (!map.getSource('mapbox-dem')) {
+      map.addSource('mapbox-dem', {
+        type: 'raster-dem',
+        url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+        tileSize: 512,
+        maxzoom: 14
+      })
+    }
+    map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 })
+  } else {
+    map.setTerrain(null)
+  }
+}
+
+async function loadVineyardForRegion(region) {
+  if (!map || !region) return
+  const files = !region.vineyardFile ? []
+    : Array.isArray(region.vineyardFile) ? region.vineyardFile : [region.vineyardFile]
+
+  const allFeatures = []
+  for (const file of files) {
+    try {
+      const gj = await fetchGeoJSON(file)
+      allFeatures.push(...(gj.features || []))
+    } catch (e) {
+      console.warn('[GermanyMap] vineyard load failed:', file, e)
+    }
+  }
+  const data = { type: 'FeatureCollection', features: allFeatures }
+
+  if (!map.getSource('de-vineyards')) {
+    map.addSource('de-vineyards', { type: 'geojson', data })
+  } else {
+    map.getSource('de-vineyards').setData(data)
+  }
+
+  if (!map.getLayer('de-vineyard-fill')) {
+    map.addLayer({
+      id: 'de-vineyard-fill',
+      type: 'fill',
+      source: 'de-vineyards',
+      paint: { 'fill-color': region.color, 'fill-opacity': 0.6 }
+    }, 'de-region-fill')
+  } else {
+    map.setLayoutProperty('de-vineyard-fill', 'visibility', 'visible')
+    map.setPaintProperty('de-vineyard-fill', 'fill-color', region.color)
+  }
+}
+
+async function toggleVineyard() {
+  if (!map) return
+  vineyardEnabled.value = !vineyardEnabled.value
+
+  if (vineyardEnabled.value) {
+    if (activeRegion.value) {
+      await loadVineyardForRegion(activeRegion.value)
+    }
+    // 尚未選擇產區時不顯示任何葡萄園
+  } else {
+    if (map.getLayer('de-vineyard-fill')) {
+      map.setLayoutProperty('de-vineyard-fill', 'visibility', 'none')
+    }
+  }
+}
+
+// ── 等高線（德國：緩坡為主，莫塞爾50-300m，minzoom 8早發現）――――――――――――――――――――
+let deContoursInit = false
+function initDEContourLayers() {
+  if (deContoursInit || !map) return
+  deContoursInit = true
+  if (!map.getSource('mapbox-dem')) {
+    map.addSource('mapbox-dem', { type: 'raster-dem', url: 'mapbox://mapbox.mapbox-terrain-dem-v1', tileSize: 512, maxzoom: 14 })
+  }
+  if (!map.getSource('de-all-contours')) {
+    map.addSource('de-all-contours', { type: 'vector', url: 'mapbox://mapbox.mapbox-terrain-v2' })
+  }
+  if (!map.getLayer('de-all-contours-line')) {
+    map.addLayer({
+      id: 'de-all-contours-line', type: 'line',
+      source: 'de-all-contours', 'source-layer': 'contour',
+      layout: { 'line-join': 'round', 'line-cap': 'round', visibility: 'none' },
+      paint: {
+        'line-color': [
+          'case',
+          ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFD700',
+          ['==', ['%', ['to-number', ['get', 'ele']], 50],  0], '#FFAA00',
+          '#FF7733'
+        ],
+        'line-width': [
+          'case',
+          ['==', ['%', ['to-number', ['get', 'ele']], 50], 0],
+          ['interpolate', ['linear'], ['zoom'], 8, 0.7, 10, 1.2, 13, 2.0, 16, 2.8],
+          ['interpolate', ['linear'], ['zoom'], 8, 0.2, 10, 0.5, 13, 0.9, 16, 1.4]
+        ],
+        'line-opacity': ['interpolate', ['linear'], ['zoom'], 8, 0.35, 10, 0.55, 13, 0.8, 16, 0.95]
+      },
+      minzoom: 8,  // 德國緩坡地形，zoom 8起即可看到等高線
+    })
+  }
+  if (!map.getLayer('de-all-contour-labels')) {
+    map.addLayer({
+      id: 'de-all-contour-labels', type: 'symbol',
+      source: 'de-all-contours', 'source-layer': 'contour',
+      layout: {
+        'symbol-placement': 'line',
+        'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
+        'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 9, 9, 12, 11, 15, 13],
+        'text-padding': 20, visibility: 'none',
+      },
+      paint: {
+        'text-color': '#FFD700',
+        'text-halo-color': 'rgba(0,0,0,0.85)',
+        'text-halo-width': 2,
+        'text-opacity': ['interpolate', ['linear'], ['zoom'], 9, 0.5, 11, 0.8, 13, 1]
+      },
+      filter: ['==', ['%', ['to-number', ['get', 'ele']], 25], 0],  // 每25m新標籤（緩坡地形適用）
+      minzoom: 9,
+    })
+  }
+}
+function toggleContours() {
+  if (!map) return
+  contoursEnabled.value = !contoursEnabled.value
+  if (contoursEnabled.value) initDEContourLayers()
+  const vis = contoursEnabled.value ? 'visible' : 'none'
+  if (map.getLayer('de-all-contours-line'))  map.setLayoutProperty('de-all-contours-line',  'visibility', vis)
+  if (map.getLayer('de-all-contour-labels')) map.setLayoutProperty('de-all-contour-labels', 'visibility', vis)
+}
+
+let currentAudio = null
+
+function playPronunciation(regionName) {
+  if (currentAudio) {
+    currentAudio.pause()
+    currentAudio = null
+  }
+  const soundName = activeRegion.value?.soundName || regionName
+  const audioPath = `/germany/sounds/${soundName}.mp3`
+  currentAudio = new Audio(audioPath)
+  currentAudio.play().catch(err => {
+    console.warn('[GermanyMap] 播放發音失敗:', err)
+  })
 }
 
 onMounted(() => { initMap() })
@@ -394,9 +565,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   height: 100%;
 }
 
-/* ══════════════════════════════════════
-   Header（完全仿波爾多）
-══════════════════════════════════════ */
+/* ══ Header ══ */
 .map-header {
   position: absolute;
   top: 0;
@@ -452,130 +621,100 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 }
 
 /* ══════════════════════════════════════
-   左側產區列表面板（仿波爾多 AOC list）
+   底部工具列（波爾多風格，常駐顯示）
 ══════════════════════════════════════ */
-.region-list-panel {
+.map-toolbar {
   position: absolute;
-  top: 52px;
-  left: 10px;
-  width: 210px;
-  max-height: calc(100vh - 140px);
-  overflow-y: auto;
-  background: rgba(255,255,255,0.97);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+  z-index: 200;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
-  padding: 10px 8px;
-  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  width: min(90vw, 480px);
   border: 1px solid rgba(0,0,0,0.06);
 }
 
-.region-list-panel::-webkit-scrollbar { width: 4px; }
-.region-list-panel::-webkit-scrollbar-track { background: transparent; }
-.region-list-panel::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 2px; }
-
-.list-panel-header {
+.tool-btn {
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f0f6ff 0%, #e0ecff 100%);
+  color: #1a3a6b;
+  min-height: 54px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #1565c0;
-  text-transform: uppercase;
-  padding: 0 6px 6px;
-  border-bottom: 1px solid rgba(21,101,192,0.15);
-  margin-bottom: 6px;
-}
-
-.list-panel-close {
-  background: none;
+  justify-content: center;
+  gap: 3px;
+  font-size: 0.76rem;
+  font-weight: 800;
   border: none;
   cursor: pointer;
-  color: #1565c0;
-  font-size: 14px;
-  padding: 0 2px;
-  line-height: 1;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.tool-btn:hover { background: linear-gradient(180deg, #ddeeff 0%, #c8dfff 100%); }
+.tool-btn.active {
+  background: linear-gradient(180deg, #1565c0 0%, #0d47a1 100%);
+  color: #fff;
 }
 
-.list-item {
-  display: flex;
+.tool-icon {
+  display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 7px 8px;
-  margin: 2px 0;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.84rem;
-  color: #222;
-  transition: background 0.15s;
-}
-.list-item:hover { background: rgba(21,101,192,0.07); }
-.list-item.active {
-  background: rgba(21,101,192,0.12);
-  font-weight: 600;
-  color: #1565c0;
-}
-.list-item.all-item { font-weight: 700; }
-
-.list-dot {
-  width: 8px;
-  height: 8px;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  flex-shrink: 0;
+  background: rgba(21, 101, 192, 0.10);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.tool-btn.active .tool-icon {
+  background: rgba(255, 255, 255, 0.18);
 }
 
-.list-item-name { flex: 1; }
-.list-item-ha {
-  font-size: 0.68rem;
-  color: #999;
-  white-space: nowrap;
-}
-
-/* 展開面板按鈕 */
-.list-reopen-btn {
-  position: absolute;
-  top: 52px;
-  left: 10px;
-  z-index: 10;
-  background: rgba(255,255,255,0.96);
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 10px;
-  padding: 6px 12px;
-  font-size: 0.78rem;
+.tool-label {
+  font-size: 0.72rem;
   font-weight: 700;
-  color: #1565c0;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  backdrop-filter: blur(8px);
 }
-.list-reopen-btn:hover { background: rgba(255,255,255,1); }
 
 /* ══════════════════════════════════════
-   資訊卡（完全仿波爾多 map-info-bar）
+   資訊面板（工具列正上方）
 ══════════════════════════════════════ */
 .map-info-bar {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: white;
-  padding: 18px;
-  border-radius: 8px;
-  max-width: 420px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  z-index: 10;
-  font-size: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  width: min(90vw, 480px);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  padding: 14px 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  z-index: 150;
+  border: 1px solid rgba(0,0,0,0.06);
   transition: all 0.3s ease;
-  color: #222;
+  max-height: min(50vh, 400px);
+  overflow: hidden;
 }
 
+/* 收合狀態：無產區時只顯示標題列 */
 .map-info-bar.collapsed {
-  max-width: 350px;
-  padding: 12px 18px;
+  padding: 10px 16px;
+  max-height: 52px;
+  overflow: hidden;
 }
 
-.map-info-bar.info-hint {
-  padding: 12px 16px;
+.map-info-bar.collapsed .aoc-title-row {
+  margin-bottom: 0;
 }
 
 .aoc-title-row {
@@ -587,14 +726,16 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   transition: margin 0.3s ease;
 }
 
-.map-info-bar.collapsed .aoc-title-row { margin-bottom: 0; }
-
 .aoc-info-title {
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .aoc-dot {
@@ -607,8 +748,9 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 
 .title-buttons {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .btn-collapse-inline {
@@ -631,25 +773,14 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   color: #1565c0;
 }
 .btn-collapse-inline svg { transition: transform 0.3s; flex-shrink: 0; }
-.btn-collapse-inline .btn-text { font-size: 0.85rem; white-space: nowrap; }
-
-.map-info-bar.collapsed .btn-collapse-inline .btn-text { display: none; }
-.map-info-bar.collapsed .btn-collapse-inline { padding: 6px 8px; }
-
-.info-details {
-  overflow: hidden;
-  transition: all 0.3s ease;
-  max-height: 1000px;
-  opacity: 1;
-}
-.map-info-bar.collapsed .info-details { max-height: 0; opacity: 0; margin: 0; padding: 0; }
+.btn-collapse-inline .btn-text { font-size: 0.82rem; white-space: nowrap; }
 
 .btn-reset-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   padding: 6px;
   border: none;
   border-radius: 10px;
@@ -662,54 +793,55 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 }
 .btn-reset-icon:hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.22); }
 
-.map-buttons { display: flex; gap: 8px; margin-bottom: 8px; }
-
-.btn-reset {
-  padding: 8px 14px;
-  background: #f44336;
-  color: white;
+.btn-pronunciation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 6px;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
   cursor: pointer;
-  font-size: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(102,126,234,0.35);
+  flex-shrink: 0;
 }
-.btn-reset:hover { background: #d32f2f; }
+.btn-pronunciation:hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(102,126,234,0.45); }
+.btn-pronunciation:active { transform: scale(0.95); }
 
-.region-info-content { font-size: 1rem; line-height: 1.5; color: #222; }
-
-.info-header {
-  margin-bottom: 8px;
-  font-size: 1.05rem;
+.info-details {
+  overflow-y: auto;
+  max-height: min(38vh, 310px);
+  transition: all 0.3s ease;
+  padding-right: 2px;
 }
+.info-details::-webkit-scrollbar { width: 4px; }
+.info-details::-webkit-scrollbar-track { background: transparent; }
+.info-details::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.14); border-radius: 2px; }
+
+.region-info-content { font-size: 0.95rem; line-height: 1.5; color: #222; }
+
+.info-header { margin-bottom: 8px; font-size: 1rem; }
 .info-header b { color: #333; }
-.region-type { color: #888; font-size: 0.85rem; margin-left: 4px; }
-.region-hectare { color: #1565c0; font-size: 0.85rem; }
+.region-type { color: #888; font-size: 0.82rem; margin-left: 4px; }
+.region-hectare { color: #1565c0; font-size: 0.82rem; }
 
 .grape-section, .styles-section { margin: 6px 0; }
-.grape-title { font-size: 0.9rem; color: #555; margin-bottom: 4px; }
+.grape-title { font-size: 0.87rem; color: #555; margin-bottom: 4px; }
 .grape-badges { display: flex; flex-wrap: wrap; gap: 4px; }
 
-.grape-badge   { padding: 2px 8px; border-radius: 10px; font-size: 0.82rem; background: #f3e8ff; color: #7c3aed; }
-.style-badge-item { padding: 2px 8px; border-radius: 10px; font-size: 0.82rem; background: #fff3e0; color: #c65100; }
-.soil-badge    { padding: 2px 8px; border-radius: 10px; font-size: 0.82rem; background: #fef3c7; color: #92400e; }
-.village-badge { padding: 2px 8px; border-radius: 10px; font-size: 0.82rem; background: #e0f2fe; color: #0369a1; }
+.grape-badge    { padding: 2px 8px; border-radius: 10px; font-size: 0.8rem; background: #f3e8ff; color: #7c3aed; }
+.style-badge-item { padding: 2px 8px; border-radius: 10px; font-size: 0.8rem; background: #fff3e0; color: #c65100; }
+.soil-badge     { padding: 2px 8px; border-radius: 10px; font-size: 0.8rem; background: #fef3c7; color: #92400e; }
+.village-badge  { padding: 2px 8px; border-radius: 10px; font-size: 0.8rem; background: #e0f2fe; color: #0369a1; }
 
-.description {
-  margin-top: 8px;
-  font-size: 0.92rem;
-  color: #444;
-  line-height: 1.55;
-}
+.description { margin-top: 8px; font-size: 0.9rem; color: #444; line-height: 1.55; }
 
 /* ══════════════════════════════════════
-   行動版工具列（波爾多風格）
-══════════════════════════════════════ */
-.mobile-map-toolbar {
-  display: none;
-}
-
-/* ══════════════════════════════════════
-   行動版產區抽屜
+   產區/圖層 抽屜（從下方彈出）
 ══════════════════════════════════════ */
 .mobile-aoc-backdrop {
   position: absolute;
@@ -718,7 +850,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   align-items: flex-end;
   justify-content: center;
   background: rgba(15,23,42,0.34);
-  z-index: 200;
+  z-index: 300;
   backdrop-filter: blur(4px);
 }
 
@@ -728,7 +860,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   right: auto;
   transform: translateX(-50%);
   top: calc(env(safe-area-inset-top, 0px) + 6px);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 70px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 90px);
   width: min(90vw, 480px);
   display: flex;
   flex-direction: column;
@@ -745,6 +877,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   border-radius: 999px;
   background: rgba(21,101,192,0.25);
   margin: 10px auto 8px;
+  flex-shrink: 0;
 }
 
 .mobile-aoc-toolbar-header {
@@ -753,11 +886,13 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   justify-content: center;
   padding: 0 16px 12px;
   border-bottom: 1px solid rgba(21,101,192,0.14);
+  flex-shrink: 0;
 }
 .mobile-aoc-toolbar-header h2 {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #1565c0;
+  font-weight: 700;
 }
 
 .mobile-region-list {
@@ -765,19 +900,104 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   overflow-y: auto;
   padding: 10px 12px;
 }
+.mobile-region-list::-webkit-scrollbar { width: 4px; }
+.mobile-region-list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 2px; }
 
-/* ══════════════════════════════════════
-   面板動畫
-══════════════════════════════════════ */
-.panel-slide-enter-active, .panel-slide-leave-active { transition: all 0.25s ease; }
-.panel-slide-enter-from, .panel-slide-leave-to { opacity: 0; transform: translateX(-12px); }
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 10px;
+  margin: 2px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: #222;
+  transition: background 0.15s;
+}
+.list-item:hover { background: rgba(21,101,192,0.07); }
+.list-item.active {
+  background: rgba(21,101,192,0.12);
+  font-weight: 600;
+  color: #1565c0;
+}
+.list-item.all-item { font-weight: 700; }
 
+.list-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.list-item-name { flex: 1; }
+.list-item-ha { font-size: 0.68rem; color: #999; white-space: nowrap; }
+
+/* ══ 圖層抽屜專屬 ══ */
+.layers-drawer .layers-panel-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 16px;
+}
+
+.layer-group-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.layer-btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.layer-opt-btn {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1.5px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  background: rgba(0,0,0,0.03);
+  color: #444;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.18s;
+}
+.layer-opt-btn:hover { background: rgba(21,101,192,0.07); border-color: rgba(21,101,192,0.3); }
+.layer-opt-btn.active {
+  background: #e8f0fe;
+  border-color: #1565c0;
+  color: #1565c0;
+}
+.layer-opt-btn.contours-btn.active {
+  background: #f3e5f5;
+  border-color: #9C27B0;
+  color: #6a1b9a;
+}
+.layer-opt-btn.contours-btn.active .lopt-dot { background: #9C27B0; }
+
+.lopt-icon { font-size: 1.1rem; }
+.lopt-text { flex: 1; }
+.lopt-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: background 0.2s;
+}
+.lopt-dot.on { background: #1565c0; }
+
+/* ══ 動畫 ══ */
 .mobile-sheet-fade-enter-active, .mobile-sheet-fade-leave-active { transition: opacity 0.24s ease; }
 .mobile-sheet-fade-enter-from, .mobile-sheet-fade-leave-to { opacity: 0; }
 
-/* ══════════════════════════════════════
-   Loading / Error
-══════════════════════════════════════ */
+/* ══ Loading / Error ══ */
 .loading-overlay {
   position: absolute;
   inset: 0;
@@ -798,7 +1018,7 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 
 .map-error {
   position: absolute;
-  bottom: 100px;
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(200,30,30,0.92);
@@ -810,67 +1030,12 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   font-size: 0.9rem;
 }
 
-/* ══════════════════════════════════════
-   行動版 RWD（≤768px）
-══════════════════════════════════════ */
-@media (max-width: 768px) {
-  .region-list-panel { display: none; }
-  .list-reopen-btn { display: none; }
-
-  .mobile-map-toolbar {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255,255,255,0.97);
-    border-top: 1px solid rgba(0,0,0,0.07);
-    z-index: 100;
-    padding: 8px 0 calc(8px + env(safe-area-inset-bottom, 0px));
-    gap: 0;
-    justify-content: space-around;
-  }
-
-  .mobile-tool-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    padding: 6px 12px;
-    border: none;
-    background: none;
-    color: #555;
-    font-size: 0.68rem;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: all 0.2s;
-    min-width: 52px;
-  }
-  .mobile-tool-btn.active { color: #1565c0; background: rgba(21,101,192,0.1); }
-  .mobile-tool-btn.reset-tool { color: #f44336; }
-  .mobile-tool-icon { font-size: 1.1rem; font-weight: 800; }
-
-  .map-info-bar {
-    left: 10px;
-    right: 10px;
-    max-width: none;
-    bottom: 68px;
-    font-size: 14px;
-    padding: 14px;
-  }
-  .map-info-bar.collapsed { padding: 10px 14px; }
-
+/* ══ 手機尺寸微調 ══ */
+@media (max-width: 480px) {
+  .map-toolbar { width: min(96vw, 380px); gap: 5px; padding: 6px; }
+  .tool-btn { min-height: 48px; }
+  .map-info-bar { width: min(96vw, 380px); }
+  .mobile-aoc-drawer { width: 100%; left: 0; transform: none; border-radius: 18px 18px 0 0; }
   .map-header h1 { font-size: 1rem; }
-
-  .mobile-aoc-drawer {
-    left: 0;
-    right: 0;
-    transform: none;
-    width: 100%;
-    top: 2px;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 70px);
-    border-radius: 20px 20px 14px 14px;
-  }
 }
 </style>

@@ -99,11 +99,51 @@
       </div>
     </div>
 
+    <!-- 圖層面板 -->
+    <transition name="layers-sheet-fade">
+      <div v-if="layersOpen" class="layers-backdrop" @click.self="layersOpen = false">
+        <div class="layers-sheet">
+          <div class="layers-sheet-header">
+            <span>圖層與顯示</span>
+            <button class="layers-close-btn" @click="layersOpen = false">×</button>
+          </div>
+          <div class="layer-group">
+            <div class="layer-group-label">視角</div>
+            <div class="layer-group-buttons">
+              <button class="btn-layer" :class="{ active: is3D }" @click="toggle3D; layersOpen = false">
+                <span class="lbtn-icon">🗺️</span>
+                <span class="lbtn-text">3D 地形</span>
+                <span class="lbtn-dot" :class="{ on: is3D }"></span>
+              </button>
+              <button class="btn-layer" :class="{ active: contoursEnabled, 'color-contours': true }" @click="toggleContours">
+                <span class="lbtn-icon">〰️</span>
+                <span class="lbtn-text">等高線</span>
+                <span class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
+              </button>
+            </div>
+          </div>
+          <div class="layer-group">
+            <div class="layer-group-label">工具</div>
+            <div class="layer-group-buttons">
+              <button class="btn-layer" @click="emit('resetMap'); layersOpen = false">
+                <span class="lbtn-icon">↺</span>
+                <span class="lbtn-text">重置地圖</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+
     <!-- 底部工具列 (Bordeaux style) -->
     <div v-if="mapReady" class="mobile-map-toolbar">
-      <button class="mobile-tool-btn" :class="{ active: isPlayingAudio }" @click="playPronunciation" :disabled="isPlayingAudio">
-        <span class="mobile-tool-icon">音</span>
-        <span>發音</span>
+      <button class="mobile-tool-btn" :class="{ active: props.drawerOpen }" @click="emit('openDrawer')">
+        <span class="mobile-tool-icon">產</span>
+        <span>產區</span>
+      </button>
+      <button class="mobile-tool-btn" :class="{ active: layersOpen }" @click="layersOpen = !layersOpen">
+        <span class="mobile-tool-icon">層</span>
+        <span>圖層</span>
       </button>
       <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
         <span class="mobile-tool-icon">3D</span>
@@ -112,10 +152,6 @@
       <button class="mobile-tool-btn" :class="{ active: activeAOC && activeAOC.aoc && !infoCollapsed }" @click="infoCollapsed = !infoCollapsed">
         <span class="mobile-tool-icon">資</span>
         <span>資訊</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: props.drawerOpen }" @click="emit('openDrawer')">
-        <span class="mobile-tool-icon">產</span>
-        <span>產區</span>
       </button>
     </div>
 
@@ -167,6 +203,8 @@ const mapContainer = ref(null)
 const infoCollapsed = ref(false)
 let map = null
 const is3D = ref(false)
+const layersOpen = ref(false)
+const contoursEnabled = ref(false)
 const geojsonCache = new Map()
 const isPlayingAudio = ref(false)
 let currentAudio = null
@@ -192,7 +230,7 @@ const showAOCGeojson = async (groupName, aocFile) => {
     if (map.getLayer('aoc-outline')) map.removeLayer('aoc-outline')
     if (map.getSource('aoc')) map.removeSource('aoc')
     map.addSource('aoc', { type: 'geojson', data: geojson })
-    map.addLayer({ id: 'aoc-fill', type: 'fill', source: 'aoc', paint: { 'fill-color': aocColor(), 'fill-opacity': 0.3 } })
+    map.addLayer({ id: 'aoc-fill', type: 'fill', source: 'aoc', paint: { 'fill-color': aocColor(), 'fill-opacity': 0.10 } })
     map.addLayer({ id: 'aoc-outline', type: 'line', source: 'aoc', paint: { 'line-color': '#fff', 'line-width': 2 } })
     const bbox = turf.bbox(geojson)
     map.fitBounds(bbox, { padding: 40, duration: 800 })
@@ -219,6 +257,71 @@ const playPronunciation = () => {
 const toggle3D = () => {
   is3D.value = !is3D.value
   if (map) map.easeTo({ pitch: is3D.value ? 45 : 0, duration: 800 })
+}
+
+// ── 等高線（NZ：南阿爾卑斯山脈高達3000m，標準100m主線）―――――――――――――――――――――
+let nzContoursInit = false
+function initNZContourLayers() {
+  if (nzContoursInit || !map) return
+  nzContoursInit = true
+  if (!map.getSource('mapbox-dem')) {
+    map.addSource('mapbox-dem', { type: 'raster-dem', url: 'mapbox://mapbox.mapbox-terrain-dem-v1', tileSize: 512, maxzoom: 14 })
+  }
+  if (!map.getSource('nz-contours')) {
+    map.addSource('nz-contours', { type: 'vector', url: 'mapbox://mapbox.mapbox-terrain-v2' })
+  }
+  if (!map.getLayer('nz-contours-line')) {
+    map.addLayer({
+      id: 'nz-contours-line', type: 'line',
+      source: 'nz-contours', 'source-layer': 'contour',
+      layout: { 'line-join': 'round', 'line-cap': 'round', visibility: 'none' },
+      paint: {
+        'line-color': [
+          'case',
+          ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFD700',
+          ['==', ['%', ['to-number', ['get', 'ele']], 50],  0], '#FFAA00',
+          '#FF7733'
+        ],
+        'line-width': [
+          'case',
+          ['==', ['%', ['to-number', ['get', 'ele']], 50], 0],
+          ['interpolate', ['linear'], ['zoom'], 9, 0.9, 11, 1.6, 13, 2.2, 16, 3],
+          ['interpolate', ['linear'], ['zoom'], 9, 0.3, 11, 0.7, 13, 1,   16, 1.5]
+        ],
+        'line-opacity': ['interpolate', ['linear'], ['zoom'], 9, 0.4, 11, 0.6, 13, 0.8, 16, 0.9]
+      },
+      minzoom: 9,
+    })
+  }
+  if (!map.getLayer('nz-contour-labels')) {
+    map.addLayer({
+      id: 'nz-contour-labels', type: 'symbol',
+      source: 'nz-contours', 'source-layer': 'contour',
+      layout: {
+        'symbol-placement': 'line',
+        'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
+        'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 10, 9, 13, 11, 16, 13],
+        'text-padding': 25, visibility: 'none',
+      },
+      paint: {
+        'text-color': '#FFD700',
+        'text-halo-color': 'rgba(0,0,0,0.8)',
+        'text-halo-width': 2,
+        'text-opacity': ['interpolate', ['linear'], ['zoom'], 10, 0.5, 12, 0.8, 14, 1]
+      },
+      filter: ['==', ['%', ['to-number', ['get', 'ele']], 50], 0],  // 每50m新標籤
+      minzoom: 10,
+    })
+  }
+}
+function toggleContours() {
+  if (!map) return
+  contoursEnabled.value = !contoursEnabled.value
+  if (contoursEnabled.value) initNZContourLayers()
+  const vis = contoursEnabled.value ? 'visible' : 'none'
+  if (map.getLayer('nz-contours-line'))  map.setLayoutProperty('nz-contours-line',  'visibility', vis)
+  if (map.getLayer('nz-contour-labels')) map.setLayoutProperty('nz-contour-labels', 'visibility', vis)
 }
 
 const initMap = async (retry = 0) => {
@@ -486,6 +589,76 @@ onUnmounted(() => {
   font-weight: 800;
 }
 .mobile-tool-btn.active .mobile-tool-icon { background: rgba(255,255,255,0.18); }
+
+/* ── 圖層面板 ─────────────────────────────────────────────────── */
+.layers-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1400;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.layers-sheet {
+  width: min(90vw, 380px);
+  background: white;
+  border-radius: 20px 20px 14px 14px;
+  padding: 0 0 24px;
+  box-shadow: 0 -8px 32px rgba(0,0,0,0.22);
+  margin-bottom: 96px;
+  color: #222;
+}
+.layers-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.layers-close-btn {
+  width: 32px; height: 32px;
+  background: rgba(0,0,0,0.06);
+  border: none; border-radius: 50%;
+  cursor: pointer; font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  color: #555; transition: background 0.15s;
+}
+.layers-close-btn:hover { background: rgba(0,0,0,0.12); }
+.layer-group { padding: 12px 20px 4px; }
+.layer-group-label {
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: #999; margin-bottom: 8px;
+}
+.layer-group-buttons { display: flex; flex-direction: column; gap: 6px; }
+.btn-layer {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 13px 16px;
+  border: 1.5px solid rgba(0,0,0,0.07);
+  border-radius: 12px; cursor: pointer;
+  font-size: 0.88rem; font-weight: 600;
+  background: rgba(0,0,0,0.02); color: #333;
+  transition: all 0.15s; text-align: left; font-family: inherit;
+}
+.btn-layer:hover { background: rgba(0,100,0,0.06); border-color: rgba(0,100,0,0.2); }
+.btn-layer.active { background: rgba(0,100,0,0.08); border-color: #006400; color: #006400; }
+.btn-layer.color-contours.active { background: #f3e5f5; border-color: #9C27B0; color: #6a1b9a; }
+.btn-layer.color-contours:not(.active):hover { border-color: #ce93d8; }
+.btn-layer.color-contours.active .lbtn-dot { background: #9C27B0; border-color: #9C27B0; }
+.lbtn-icon { font-size: 1.1rem; width: 22px; text-align: center; flex-shrink: 0; }
+.lbtn-text { flex: 1; }
+.lbtn-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid #ccc; flex-shrink: 0; transition: all 0.15s;
+}
+.lbtn-dot.on { background: #006400; border-color: #006400; }
+.layers-sheet-fade-enter-active, .layers-sheet-fade-leave-active { transition: opacity 0.22s ease; }
+.layers-sheet-fade-enter-from, .layers-sheet-fade-leave-to { opacity: 0; }
 
 /* ── Loading / Error ──────────────────────────────────────────── */
 .loading-overlay { position: absolute; inset: 0; background: rgba(255,255,255,0.7); display: flex; align-items: center; justify-content: center; z-index: 20; }

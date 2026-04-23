@@ -734,7 +734,7 @@ const restoreRegionColors = () => {
     'Vino de Pago',     '#c39bd3',
     '#82e0aa',
   ])
-  map.setPaintProperty('wine-regions-fill', 'fill-opacity', 0.30)
+  map.setPaintProperty('wine-regions-fill', 'fill-opacity', 0.10)
 }
 
 const setClimateIndicator = (id) => {
@@ -957,7 +957,7 @@ async function addLayers() {
         'Vino de Pago',     '#c39bd3',
         '#82e0aa',
       ],
-      'fill-opacity': 0.30,
+      'fill-opacity': 0.10,
     },
   })
 

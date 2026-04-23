@@ -58,6 +58,8 @@
       <div v-show="!infoCollapsed" class="info-details">
         <template v-if="activeRegion">
           <div class="region-info-content">
+
+            <!-- 標籌列 -->
             <div class="info-header">
               <div class="style-badges">
                 <span class="info-group-badge" :style="{ background: groupColor(activeRegion.group) }">
@@ -66,18 +68,54 @@
                 <span v-if="activeRegion.county" class="info-county-badge">
                   {{ activeRegion.county }}
                 </span>
+                <span v-if="activeRegion.created" class="info-year-badge">
+                  {{ activeRegion.created.split('-')[0] }}
+                </span>
               </div>
             </div>
-            <div v-if="activeRegion.created" class="info-row">
-              <span class="info-label">🗓 建立年份：</span>
-              <span>{{ activeRegion.created?.split('-')[0] }}</span>
+
+            <!-- 簡介 -->
+            <p v-if="activeRegion.description" class="info-description">{{ activeRegion.description }}</p>
+
+            <!-- 主要葡萄品種 -->
+            <div v-if="activeRegion.grapes?.length" class="info-row">
+              <span class="info-label">🍇 主要品種</span>
+              <div class="grapes-list">
+                <span v-for="g in activeRegion.grapes" :key="g" class="grape-tag">{{ g }}</span>
+              </div>
             </div>
+
+            <!-- 面積 / 海拔 / 氣候 -->
+            <div class="info-stats-row">
+              <div v-if="activeRegion.acres" class="info-stat">
+                <span class="info-stat-icon">📐</span>
+                <div>
+                  <div class="info-stat-value">{{ acresToHectares(activeRegion.acres) }}</div>
+                  <div class="info-stat-label">公頃</div>
+                </div>
+              </div>
+              <div v-if="activeRegion.elevation" class="info-stat">
+                <span class="info-stat-icon">⛰</span>
+                <div>
+                  <div class="info-stat-value">{{ feetToMeters(activeRegion.elevation) }}</div>
+                  <div class="info-stat-label">海拔（公尺）</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 氣候 -->
+            <div v-if="activeRegion.climate" class="info-row climate-row">
+              <span class="info-label">🌡️ 氣候</span>
+              <span class="info-value-wrap">{{ activeRegion.climate }}</span>
+            </div>
+
+            <!-- 所屬 / 包含 -->
             <div v-if="activeRegion.within" class="info-row">
-              <span class="info-label">📍 所屬產區：</span>
+              <span class="info-label">📍 所屬產區</span>
               <span class="info-value">{{ activeRegion.within }}</span>
             </div>
             <div v-if="activeRegion.contains" class="info-row sub-avas">
-              <span class="info-label">🗂 包含子產區：</span>
+              <span class="info-label">🗂 包含子產區</span>
               <div class="sub-ava-list">
                 <span
                   v-for="sub in activeRegion.contains.split('|').map(s => s.trim()).filter(Boolean)"
@@ -86,7 +124,8 @@
                 >{{ sub }}</span>
               </div>
             </div>
-            <div v-if="!activeRegion.within && !activeRegion.contains && !activeRegion.created" class="no-info">
+
+            <div v-if="!activeRegion.description && !activeRegion.grapes && !activeRegion.within && !activeRegion.contains" class="no-info">
               <p style="color:#aaa;font-size:0.78rem">資料建置中</p>
             </div>
           </div>
@@ -163,6 +202,11 @@
                 <span class="lbtn-text">3D 地形</span>
                 <span class="lbtn-dot" :class="{ on: is3D }"></span>
               </button>
+              <button class="btn-layer" :class="{ active: contoursEnabled, 'color-contours': true }" @click="toggleContours">
+                <span class="lbtn-icon">〰️</span>
+                <span class="lbtn-text">等高線</span>
+                <span class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
+              </button>
             </div>
           </div>
 
@@ -213,13 +257,22 @@ const props  = defineProps({
 const emit   = defineEmits(['back'])
 const router = useRouter()
 
+// ── Unit conversion helpers ──────────────────────────────────────────────
+function acresToHectares(acres) {
+  return Math.round(acres * 0.404686).toLocaleString()
+}
+function feetToMeters(elevation) {
+  return String(elevation).split('–').map(v => Math.round(Number(v) * 0.3048)).join('–')
+}
+
 // ── State ──────────────────────────────────────────────────────────────────
 const mapContainer  = ref(null)
 const mapReady      = ref(false)
 const isLoading     = ref(true)
 const mapError      = ref(null)
-const is3D          = ref(false)
-const infoCollapsed = ref(false)
+const is3D             = ref(false)
+const infoCollapsed    = ref(true)
+const contoursEnabled  = ref(false)
 const drawerOpen    = ref(false)
 const layersOpen    = ref(false)
 const activeRegion  = ref(null)
@@ -288,17 +341,25 @@ function featureBbox(geometry) {
 function clearSelection() {
   activeRegion.value = null
   if (!map) return
-  map.setFilter('ava-fill', null)
-  map.setFilter('ava-outline', null)
-  map.setFilter('ava-labels', null)
+  // 回到大區 filter（若有選定大區），否則顯示全部
+  const groupFilter = props.selectedGroup?.id
+    ? ['==', ['get', 'group'], props.selectedGroup.id]
+    : null
+  map.setFilter('ava-fill', groupFilter)
+  map.setFilter('ava-outline', groupFilter)
+  map.setFilter('ava-labels', groupFilter)
   if (map.getSource('ca-avas')) map.removeFeatureState({ source: 'ca-avas' })
 }
 
 function resetView() {
-  clearSelection()
-  const center = props.selectedGroup?.center ?? CA_CENTER
-  const zoom   = props.selectedGroup?.zoom   ?? CA_ZOOM
-  if (map) map.flyTo({ center, zoom, pitch: 0, bearing: 0, duration: 800 })
+  activeRegion.value = null
+  if (!map) return
+  // 重置：移除所有 filter，回到完整加州視圖
+  map.setFilter('ava-fill', null)
+  map.setFilter('ava-outline', null)
+  map.setFilter('ava-labels', null)
+  if (map.getSource('ca-avas')) map.removeFeatureState({ source: 'ca-avas' })
+  map.flyTo({ center: CA_CENTER, zoom: CA_ZOOM, pitch: 0, bearing: 0, duration: 800 })
 }
 
 // ── Toggle 3D ──────────────────────────────────────────────────────────────
@@ -316,7 +377,72 @@ function toggle3D() {
   }
 }
 
-// ── Toggle info panel ──────────────────────────────────────────────────────
+// ── 等高線（加州：山地多、最高0-1500m，200m主線/100m次線）―――――――――――――――――――――――――
+let contoursInitialized = false
+function initContourLayers() {
+  if (contoursInitialized || !map) return
+  contoursInitialized = true
+  if (!map.getSource('mapbox-dem')) {
+    map.addSource('mapbox-dem', { type: 'raster-dem', url: 'mapbox://mapbox.mapbox-terrain-dem-v1', tileSize: 512, maxzoom: 14 })
+  }
+  if (!map.getSource('ca-contours')) {
+    map.addSource('ca-contours', { type: 'vector', url: 'mapbox://mapbox.mapbox-terrain-v2' })
+  }
+  if (!map.getLayer('ca-contours-line')) {
+    map.addLayer({
+      id: 'ca-contours-line', type: 'line',
+      source: 'ca-contours', 'source-layer': 'contour',
+      layout: { 'line-join': 'round', 'line-cap': 'round', visibility: 'none' },
+      paint: {
+        'line-color': [
+          'case',
+          ['==', ['%', ['to-number', ['get', 'ele']], 200], 0], '#FFD700',
+          ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFAA00',
+          '#FF7733'
+        ],
+        'line-width': [
+          'case',
+          ['==', ['%', ['to-number', ['get', 'ele']], 100], 0],
+          ['interpolate', ['linear'], ['zoom'], 9, 0.9, 11, 1.6, 13, 2.4, 16, 3.2],
+          ['interpolate', ['linear'], ['zoom'], 9, 0.3, 11, 0.7, 13, 1.1, 16, 1.6]
+        ],
+        'line-opacity': ['interpolate', ['linear'], ['zoom'], 9, 0.4, 11, 0.6, 13, 0.85, 16, 0.95]
+      },
+      minzoom: 9,
+    })
+  }
+  if (!map.getLayer('ca-contour-labels')) {
+    map.addLayer({
+      id: 'ca-contour-labels', type: 'symbol',
+      source: 'ca-contours', 'source-layer': 'contour',
+      layout: {
+        'symbol-placement': 'line',
+        'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
+        'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 10, 9, 13, 11, 16, 13],
+        'text-padding': 25, visibility: 'none',
+      },
+      paint: {
+        'text-color': '#FFD700',
+        'text-halo-color': 'rgba(0,0,0,0.8)',
+        'text-halo-width': 2,
+        'text-opacity': ['interpolate', ['linear'], ['zoom'], 10, 0.5, 12, 0.8, 14, 1]
+      },
+      filter: ['==', ['%', ['to-number', ['get', 'ele']], 50], 0],  // 每50m新標籤
+      minzoom: 10,
+    })
+  }
+}
+function toggleContours() {
+  if (!map) return
+  contoursEnabled.value = !contoursEnabled.value
+  if (contoursEnabled.value) initContourLayers()
+  const vis = contoursEnabled.value ? 'visible' : 'none'
+  if (map.getLayer('ca-contours-line'))  map.setLayoutProperty('ca-contours-line',  'visibility', vis)
+  if (map.getLayer('ca-contour-labels')) map.setLayoutProperty('ca-contour-labels', 'visibility', vis)
+}
+
+// ── Toggle info panel ─────────────────────────────────────────────────────
 function toggleInfo() {
   infoCollapsed.value = !infoCollapsed.value
 }
@@ -360,13 +486,16 @@ async function initMap() {
   mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 
   try {
-    const [geoRes, regRes] = await Promise.all([
+    const [geoRes, regRes, detailRes] = await Promise.all([
       fetch('/california/california-ava-regions.geojson'),
       fetch('/california/california-regions.json'),
+      fetch('/california/california-ava-details.json'),
     ])
     if (!geoRes.ok) throw new Error('無法載入加州 AVA 地理資料')
     const geoJSON = await geoRes.json()
-    allRegions.value = regRes.ok ? await regRes.json() : []
+    const detailMap = detailRes.ok ? await detailRes.json() : {}
+    const baseRegions = regRes.ok ? await regRes.json() : []
+    allRegions.value = baseRegions.map(r => ({ ...r, ...(detailMap[r.id] || {}) }))
 
     // Cache bounding boxes
     for (const f of geoJSON.features) {
@@ -421,8 +550,8 @@ async function initMap() {
           ],
           'fill-opacity': [
             'case',
-            ['boolean', ['feature-state', 'hover'], false], 0.65,
-            0.40
+            ['boolean', ['feature-state', 'hover'], false], 0.15,
+            0.10
           ],
         },
       })
@@ -517,6 +646,14 @@ async function initMap() {
           clearSelection()
         }
       })
+
+      // 初始只顯示選定大區的 AVA
+      if (props.selectedGroup?.id) {
+        const gf = ['==', ['get', 'group'], props.selectedGroup.id]
+        map.setFilter('ava-fill', gf)
+        map.setFilter('ava-outline', gf)
+        map.setFilter('ava-labels', gf)
+      }
 
       mapReady.value  = true
       isLoading.value = false
@@ -781,6 +918,68 @@ onUnmounted(() => {
   color: #555;
   font-size: 0.75rem;
 }
+.info-year-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  background: rgba(41,128,185,0.12);
+  color: #2980b9;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.info-description {
+  font-size: 0.84rem;
+  color: #333;
+  line-height: 1.55;
+  margin: 6px 0 10px;
+  border-left: 3px solid #e2e2e2;
+  padding-left: 10px;
+}
+.grapes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px;
+}
+.grape-tag {
+  background: rgba(118,75,162,0.1);
+  border: 1px solid rgba(118,75,162,0.25);
+  border-radius: 12px;
+  padding: 2px 9px;
+  font-size: 0.73rem;
+  color: #5a3891;
+  font-weight: 500;
+}
+.info-stats-row {
+  display: flex;
+  gap: 16px;
+  margin: 6px 0 8px;
+  flex-wrap: wrap;
+}
+.info-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.04);
+  border-radius: 10px;
+  padding: 6px 12px;
+  min-width: 90px;
+}
+.info-stat-icon { font-size: 1.1rem; line-height: 1; }
+.info-stat-value {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1;
+}
+.info-stat-label {
+  font-size: 0.68rem;
+  color: #888;
+  line-height: 1.2;
+  margin-top: 1px;
+}
+.climate-row { flex-wrap: wrap; }
+.info-value-wrap { color: #444; font-size: 0.83rem; flex: 1; }
 .info-row {
   display: flex;
   align-items: flex-start;
@@ -1135,6 +1334,9 @@ onUnmounted(() => {
 }
 .btn-layer:hover { background: rgba(139,26,26,0.06); border-color: rgba(139,26,26,0.2); }
 .btn-layer.active { background: rgba(139,26,26,0.08); border-color: #8B1a1a; color: #8B1a1a; }
+.btn-layer.color-contours.active { background: #f3e5f5; border-color: #9C27B0; color: #6a1b9a; }
+.btn-layer.color-contours:not(.active):hover { border-color: #ce93d8; }
+.btn-layer.color-contours.active .lbtn-dot { background: #9C27B0; border-color: #9C27B0; }
 .lbtn-icon { font-size: 1.1rem; width: 22px; text-align: center; flex-shrink: 0; }
 .lbtn-text { flex: 1; }
 .lbtn-dot {
