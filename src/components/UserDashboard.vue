@@ -176,10 +176,21 @@ const manageSubscription = async () => {
   const userId = authState.user?.id
   if (!userId) return
   try {
+    // 帶 JWT，伺服器端以 token 判斷身分（不信任前端 userId）
+    const { supabase } = await import('@/lib/supabaseClient.js')
+    const { data: sessionData } = await supabase.auth.getSession()
+    const accessToken = sessionData?.session?.access_token
+    if (!accessToken) {
+      alert('請先登入')
+      return
+    }
     const res = await fetch('/api/stripe-portal', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId })
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accessToken}`
+      },
+      body: JSON.stringify({})
     })
     const data = await res.json()
     if (data.portalUrl) {

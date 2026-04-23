@@ -12,6 +12,7 @@
 
 import crypto from 'crypto'
 import { createClient } from '@supabase/supabase-js'
+import { maskId } from './_lib/security.js'
 
 // ─── ECPay CheckMacValue 驗證 ─────────────────────────────────────────────────
 
@@ -106,13 +107,31 @@ export default async function handler(req, res) {
   // 1. 查出訂單資訊（以取得 user_id 與 tier）
   const { data: purchase, error: fetchErr } = await supabaseAdmin
     .from('purchases')
-    .select('id, user_id, course_id, tier')
+    .select('id, user_id, course_id, tier, amount, status')
     .eq('merchant_trade_no', MerchantTradeNo)
     .single()
 
   if (fetchErr || !purchase) {
     console.error('[ecpay-callback] 找不到訂單:', MerchantTradeNo, fetchErr)
     return res.status(200).send('1|OK') // 回 OK 避免 ECPay 一直重試
+  }
+
+  // ── C3: 驗證 ECPay 回傳金額與 DB 紀錄一致，防止金額被竄改後付款 ─────
+  const paidAmount = parseInt(body.TradeAmt, 10)
+  if (!Number.isFinite(paidAmount) || paidAmount !== purchase.amount) {
+    console.error(
+      `[ecpay-callback] 金額不符 trade=${MerchantTradeNo} expected=${purchase.amount} got=${body.TradeAmt}`
+    )
+    // 標記為待人工審查，不開通
+    await supabaseAdmin.from('purchases')
+      .update({ status: 'amount_mismatch', payment_ref: TradeNo })
+      .eq('id', purchase.id)
+    return res.status(200).send('1|OK')
+  }
+
+  // Idempotency：若已是 paid 狀態，直接回 OK，不重複開通
+  if (purchase.status === 'paid' || purchase.status === 'active') {
+    return res.status(200).send('1|OK')
   }
 
   // 2. 更新訂單為 paid
@@ -143,7 +162,7 @@ export default async function handler(req, res) {
       }
     })
 
-    console.log(`[ecpay-callback] ✅ 訂單 ${MerchantTradeNo} 付款成功，用戶 ${purchase.user_id} tier → ${newTier}`)
+    console.log(`[ecpay-callback] ✅ 訂單 ${MerchantTradeNo} 付款成功，用戶 ${maskId(purchase.user_id)} tier → ${newTier}`)
   } catch (err) {
     console.error('[ecpay-callback] 更新 user tier 失敗:', err)
     // 不阻斷流程，訂單已標記 paid，管理員可手動更新 tier

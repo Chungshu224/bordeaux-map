@@ -142,14 +142,23 @@ export async function getUserPurchases(userId) {
 
 /**
  * 建立 Stripe Checkout Session（訂閱模式）
- * @param {{ courseId, tier, billingPeriod, userId, userEmail }} params
+ * @param {{ courseId, tier, billingPeriod }} params
+ *   userId / userEmail 不再由前端傳送，伺服器端依 JWT 取得
  * @returns {Promise<{ sessionUrl: string, sessionId: string }>}
  */
-export async function initiateCheckout({ courseId, tier, billingPeriod, userId, userEmail }) {
+export async function initiateCheckout({ courseId, tier, billingPeriod }) {
+  if (!supabase) throw new Error('Supabase 未初始化')
+  const { data: sessionData } = await supabase.auth.getSession()
+  const accessToken = sessionData?.session?.access_token
+  if (!accessToken) throw new Error('請先登入')
+
   const res = await fetch('/api/stripe-checkout', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ courseId, tier, billingPeriod, userId, userEmail })
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${accessToken}`
+    },
+    body: JSON.stringify({ courseId, tier, billingPeriod })
   })
   if (!res.ok) {
     const err = await res.json().catch(() => ({}))

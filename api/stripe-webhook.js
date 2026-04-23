@@ -15,6 +15,7 @@
 
 import Stripe from 'stripe'
 import { createClient } from '@supabase/supabase-js'
+import { maskId } from './_lib/security.js'
 
 // ─── 讀取 raw body（供 Stripe 簽章驗證）──────────────────────────────────────
 async function getRawBody(req) {
@@ -119,7 +120,7 @@ export default async function handler(req, res) {
           }
         })
 
-        console.log(`[stripe-webhook] ✅ 訂閱建立：userId=${userId} tier=${tier} billingPeriod=${billingPeriod}`)
+        console.log(`[stripe-webhook] ✅ 訂閱建立：userId=${maskId(userId)} tier=${tier} billingPeriod=${billingPeriod}`)
         break
       }
 
@@ -154,7 +155,7 @@ export default async function handler(req, res) {
           }
         })
 
-        console.log(`[stripe-webhook] 🔄 訂閱續期：${subscriptionId} → expires ${expiresAt}`)
+        console.log(`[stripe-webhook] 🔄 訂閱續期：${maskId(subscriptionId)} → expires ${expiresAt}`)
         break
       }
 
@@ -177,7 +178,7 @@ export default async function handler(req, res) {
           })
         }
 
-        console.log(`[stripe-webhook] ❌ 訂閱取消：${subscriptionId}`)
+        console.log(`[stripe-webhook] ❌ 訂閱取消：${maskId(subscriptionId)}`)
         break
       }
 
@@ -185,8 +186,10 @@ export default async function handler(req, res) {
         console.log(`[stripe-webhook] 未處理事件：${event.type}`)
     }
   } catch (err) {
-    // 不回傳錯誤給 Stripe（避免無限重試）
-    console.error('[stripe-webhook] 處理失敗:', err)
+    // ── H2: DB / 業務邏輯失敗回 500，讓 Stripe 重試（簽章驗證已通過）─
+    // Stripe 會以指數退避重試最多 3 天，避免「付了錢但 purchases 沒建立」
+    console.error('[stripe-webhook] 處理失敗，將請 Stripe 重試:', err)
+    return res.status(500).json({ error: 'internal_error' })
   }
 
   return res.status(200).json({ received: true })

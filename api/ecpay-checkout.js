@@ -16,7 +16,11 @@
  */
 
 import crypto from 'crypto'
-import { createClient } from '@supabase/supabase-js'
+import { verifyAuth } from './_lib/auth.js'
+import { getUserClient } from './_lib/supabase.js'
+import { getServerPrice } from './_lib/pricing.js'
+import { escapeHtml, maskId } from './_lib/security.js'
+import { checkUserCheckoutRate } from './_lib/ratelimit.js'
 
 // ─── ECPay 工具 ────────────────────────────────────────────────────────────────
 
@@ -63,7 +67,8 @@ function genMerchantTradeNo() {
     String(now.getMinutes()).padStart(2, '0'),
     String(now.getSeconds()).padStart(2, '0')
   ].join('')
-  const rand = Math.floor(Math.random() * 9000 + 1000)
+  // 使用 crypto 隨機數，避免可預測性與碰撞
+  const rand = crypto.randomInt(1000, 10000)
   return `WA${ts}${rand}` // 20 字元
 }
 
@@ -85,20 +90,39 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method Not Allowed' })
   }
 
-  const { courseId, tier, amount, userId } = req.body || {}
+  // ── C2: 驗證 JWT，userId 由 token 決定 ────────────────────────────────
+  const { user, token, error: authErr } = await verifyAuth(req)
+  if (authErr || !user) {
+    return res.status(401).json({ message: authErr || '未授權' })
+  }
+  const userId = user.id
+
+  // M1: 輕量速率限制，同 user 10 秒內只能發起一次
+  const allowed = await checkUserCheckoutRate(userId, 10)
+  if (!allowed) {
+    return res.status(429).json({ message: '請稍後再試' })
+  }
+
+  const { courseId, tier, billingPeriod = 'monthly' } = req.body || {}
 
   // 基本驗證
-  if (!courseId || !tier || !amount || !userId) {
+  if (!courseId || !tier) {
     return res.status(400).json({ message: '缺少必要參數' })
   }
-  if (!['bordeaux', 'bourgogne', 'italy'].includes(courseId)) {
+  if (!['bordeaux', 'bourgogne', 'italy', 'spain', 'loire', 'california'].includes(courseId)) {
     return res.status(400).json({ message: '無效課程 ID' })
   }
   if (!['basic', 'premium'].includes(tier)) {
     return res.status(400).json({ message: '無效方案' })
   }
-  if (typeof amount !== 'number' || amount < 1) {
-    return res.status(400).json({ message: '無效金額' })
+  if (!['monthly', 'yearly'].includes(billingPeriod)) {
+    return res.status(400).json({ message: '無效計費週期' })
+  }
+
+  // ── C1: 金額一律以伺服器端定價為準，忽略 req.body.amount ─────────────
+  const amount = getServerPrice(courseId, tier, billingPeriod)
+  if (!amount) {
+    return res.status(400).json({ message: '無法取得有效定價' })
   }
 
   const merchantId   = process.env.ECPAY_MERCHANT_ID
@@ -112,29 +136,30 @@ export default async function handler(req, res) {
     return res.status(500).json({ message: 'ECPay 環境變數未設定' })
   }
 
-  // 建立待付款訂單記錄
-  const supabaseAdmin = createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-  )
+  // M3: 以使用者身分寫入 purchases（RLS：WITH CHECK auth.uid()=user_id AND status='pending'）
+  const supabaseUser = getUserClient(token)
+  if (!supabaseUser) {
+    return res.status(500).json({ message: 'Supabase 未設定' })
+  }
 
   const merchantTradeNo = genMerchantTradeNo()
 
-  const { error: insertErr } = await supabaseAdmin
+  const { error: insertErr } = await supabaseUser
     .from('purchases')
     .insert({
       user_id: userId,
       course_id: courseId,
       tier,
-      amount,
+      amount,                       // 伺服器端權威金額
       currency: 'TWD',
       status: 'pending',
       payment_provider: 'ecpay',
+      billing_period: billingPeriod,
       merchant_trade_no: merchantTradeNo
     })
 
   if (insertErr) {
-    console.error('[ecpay-checkout] DB insert error:', insertErr)
+    console.error('[ecpay-checkout] DB insert error for user', maskId(userId), ':', insertErr)
     return res.status(500).json({ message: '建立訂單失敗' })
   }
 
@@ -166,11 +191,12 @@ export default async function handler(req, res) {
     ? 'https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5'
     : 'https://payment.ecpay.com.tw/Cashier/AioCheckOut/V5'
 
-  // 產生自動提交的 HTML 表單（前端插入後執行）
+  // ── H1: 產生自動提交的 HTML 表單，value 一律 HTML escape 避免 attribute injection / XSS
+  const safeAction = escapeHtml(ecpayUrl)
   const formHtml = `
-<form id="ecpay-form" method="POST" action="${ecpayUrl}">
+<form id="ecpay-form" method="POST" action="${safeAction}">
   ${Object.entries(params).map(([k, v]) =>
-    `<input type="hidden" name="${k}" value="${v}">`
+    `<input type="hidden" name="${escapeHtml(k)}" value="${escapeHtml(v)}">`
   ).join('\n  ')}
 </form>
 <script>document.getElementById('ecpay-form').submit();<\/script>`

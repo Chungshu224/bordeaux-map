@@ -14,29 +14,33 @@
  */
 
 import Stripe from 'stripe'
-import { createClient } from '@supabase/supabase-js'
+import { verifyAuth } from './_lib/auth.js'
+import { getUserClient } from './_lib/supabase.js'
+import { resolveOrigin } from './_lib/security.js'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' })
   }
 
-  const { userId } = req.body || {}
-  if (!userId) {
-    return res.status(400).json({ message: '缺少 userId' })
+  // ── C2: 驗證 JWT，禁止以 body.userId 操作他人 Billing Portal ──────────
+  const { user, token, error: authErr } = await verifyAuth(req)
+  if (authErr || !user) {
+    return res.status(401).json({ message: authErr || '未授權' })
   }
+  const userId = user.id
 
   const secretKey = process.env.STRIPE_SECRET_KEY
   if (!secretKey) {
     return res.status(500).json({ message: 'Stripe 環境變數未設定' })
   }
 
-  const supabase = createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-  )
+  const supabase = getUserClient(token)
+  if (!supabase) {
+    return res.status(500).json({ message: 'Supabase 未設定' })
+  }
 
-  // 從 purchases 取得 stripe_customer_id
+  // M3: 以使用者身分查詢（RLS: SELECT own），不再使用 service_role
   const { data: purchase, error } = await supabase
     .from('purchases')
     .select('stripe_customer_id')
@@ -52,7 +56,8 @@ export default async function handler(req, res) {
   }
 
   const stripe = new Stripe(secretKey)
-  const origin = req.headers.origin || process.env.APP_URL || 'https://wine-academy.tw'
+  // M2: 以白名單解析 origin，避免伪造 Origin header
+  const origin = resolveOrigin(req)
 
   try {
     const portalSession = await stripe.billingPortal.sessions.create({

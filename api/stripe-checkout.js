@@ -20,6 +20,10 @@
  */
 
 import Stripe from 'stripe'
+import crypto from 'crypto'
+import { verifyAuth } from './_lib/auth.js'
+import { resolveOrigin } from './_lib/security.js'
+import { checkUserCheckoutRate } from './_lib/ratelimit.js'
 
 // Price ID 查詢表（依課程+方案+週期）
 const PRICE_IDS = () => ({
@@ -34,10 +38,24 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method Not Allowed' })
   }
 
-  const { courseId, tier, billingPeriod, userId, userEmail } = req.body || {}
+  // ── C2: 驗證 JWT，userId 一律以 token 為準 ─────────────────────────────
+  const { user, error: authErr } = await verifyAuth(req)
+  if (authErr || !user) {
+    return res.status(401).json({ message: authErr || '未授權' })
+  }
+  const userId    = user.id
+  const userEmail = user.email
+
+  // M1: 輕量速率限制，同 user 10 秒內只能發起一次
+  const allowed = await checkUserCheckoutRate(userId, 10)
+  if (!allowed) {
+    return res.status(429).json({ message: '請稍後再試' })
+  }
+
+  const { courseId, tier, billingPeriod } = req.body || {}
 
   // 驗證必填欄位
-  if (!courseId || !tier || !billingPeriod || !userId) {
+  if (!courseId || !tier || !billingPeriod) {
     return res.status(400).json({ message: '缺少必要參數' })
   }
   if (!['bordeaux', 'bourgogne', 'italy'].includes(courseId)) {
@@ -62,7 +80,8 @@ export default async function handler(req, res) {
   }
 
   const stripe = new Stripe(secretKey)
-  const origin = req.headers.origin || process.env.APP_URL || 'https://wine-academy.tw'
+  // M2: 以白名單解析 origin，避免伪造 Origin header 導致開放重定向
+  const origin = resolveOrigin(req)
 
   const COURSE_NAMES = {
     bordeaux:  '波爾多葡萄酒',
@@ -73,6 +92,11 @@ export default async function handler(req, res) {
   const PERIOD_NAMES = { monthly: '月繳', yearly: '年繳' }
 
   try {
+    // L3: Idempotency-Key 避免重試時重複建立 session（依 userId+方案+分鐘級時間戳）
+    const idemKey = crypto.createHash('sha256')
+      .update(`${userId}|${courseId}|${tier}|${billingPeriod}|${Math.floor(Date.now() / 60000)}`)
+      .digest('hex')
+
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       line_items: [{ price: priceId, quantity: 1 }],
@@ -103,7 +127,7 @@ export default async function handler(req, res) {
           message: `訂閱 ${COURSE_NAMES[courseId]} ${TIER_NAMES[tier]}（${PERIOD_NAMES[billingPeriod]}）`
         }
       }
-    })
+    }, { idempotencyKey: idemKey })
 
     return res.status(200).json({
       sessionUrl: session.url,
