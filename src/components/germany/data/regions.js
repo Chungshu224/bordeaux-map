@@ -147,6 +147,7 @@ export const germanyRegions = [
     id: 'hessische',
     name: 'Hessische Bergstrasse',
     nameDE: 'Hessische Bergstrasse',
+    soundName: 'Hessische Bergstraße',
     icon: '🌸',
     color: '#E91E63',
     center: [8.7, 49.65],

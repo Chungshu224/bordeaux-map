@@ -5,8 +5,8 @@ import CaliforniaRegionSelector from './CaliforniaRegionSelector.vue'
 import CaliforniaMapSection from './CaliforniaMapSection.vue'
 
 const router = useRouter()
-// 'cover' | 'selector' | 'map'
-const currentMode = ref('cover')
+// 'selector' | 'map'
+const currentMode = ref('selector')
 const selectedGroup = ref(null)
 
 function onGroupSelected(group) {

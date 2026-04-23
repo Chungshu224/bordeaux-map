@@ -77,7 +77,7 @@ const groups = [
     desc: '有機農法先驅，清爽風格',
     avaCount: 12,
     center: [-123.2, 39.2],
-    zoom: 9,
+    zoom: 8,
   },
   {
     id: 'Central Coast',
@@ -98,7 +98,7 @@ const groups = [
     color: '#E67E22',
     desc: '高產量主流葡萄酒產地',
     avaCount: 7,
-    center: [-120.0, 36.8],
+    center: [-120.0, 37.5],
     zoom: 7,
   },
   {

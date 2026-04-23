@@ -12,27 +12,25 @@
       @openDrawer="drawerOpen = !drawerOpen"
     />
 
-    <!-- 產區抽屜 (Bordeaux/Portugal style) -->
-    <transition name="sheet-fade">
-      <div v-if="drawerOpen" class="aoc-backdrop" @click.self="drawerOpen = false">
-        <div class="aoc-drawer">
-          <div class="aoc-handle"></div>
-          <div class="drawer-header">
-            <span>紐西蘭產區列表</span>
-            <button class="drawer-close" @click="drawerOpen = false">✕</button>
-          </div>
-          <NZAOCList
-            v-model:search="search"
-            :aocGroups="filteredAocGroups"
-            :expandedIslands="expandedIslands"
-            :expandedRegions="expandedRegions"
-            :toggleIsland="toggleIsland"
-            :toggleRegion="toggleRegion"
-            :activeAOC="activeAOC"
-            :aocColor="aocColor"
-            @selectAOC="handleSelectAOC"
-          />
+    <!-- 產區抽屜：浮動於工具列上方，同寬 -->
+    <transition name="drawer-fade">
+      <div v-if="drawerOpen" class="aoc-drawer-float">
+        <div class="drawer-handle"></div>
+        <div class="drawer-header">
+          <span>紐西蘭產區列表</span>
+          <button class="drawer-close" @click="drawerOpen = false">✕</button>
         </div>
+        <NZAOCList
+          v-model:search="search"
+          :aocGroups="filteredAocGroups"
+          :expandedIslands="expandedIslands"
+          :expandedRegions="expandedRegions"
+          :toggleIsland="toggleIsland"
+          :toggleRegion="toggleRegion"
+          :activeAOC="activeAOC"
+          :aocColor="aocColor"
+          @selectAOC="handleSelectAOC"
+        />
       </div>
     </transition>
   </div>
@@ -211,29 +209,26 @@ watch(() => props.focusRegion, async (newRegion) => {
   height: 600px;
 }
 
-/* ── 產區抽屜 ── */
-.aoc-backdrop {
+/* ── 產區抽屜：浮動卡片，位於工具列上方同寬 ── */
+.aoc-drawer-float {
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 1000;
-  display: flex;
-  align-items: flex-end;
-}
-.aoc-drawer {
-  width: 100%;
-  max-height: 75vh;
-  background: #f7f3ee;
-  border-radius: 18px 18px 0 0;
-  overflow-y: auto;
-  padding: 0 0 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 380px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 108px);
+  max-height: 55vh;
   display: flex;
   flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.2), 0 8px 24px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 1300;
 }
-.aoc-handle {
+.drawer-handle {
   width: 40px;
   height: 4px;
-  background: #ccc;
+  background: rgba(0,100,0,0.22);
   border-radius: 2px;
   margin: 10px auto 6px;
   flex-shrink: 0;
@@ -242,35 +237,32 @@ watch(() => props.focusRegion, async (newRegion) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 18px 10px;
-  border-bottom: 1px solid #e0d8cf;
+  padding: 6px 16px 10px;
+  border-bottom: 1px solid rgba(0,100,0,0.1);
   flex-shrink: 0;
 }
 .drawer-header span {
   font-size: 1rem;
   font-weight: 700;
-  color: #1a1a2e;
+  color: #004d00;
 }
 .drawer-close {
-  background: none;
+  background: rgba(0,100,0,0.08);
   border: none;
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 1rem;
+  color: #004d00;
   cursor: pointer;
-  padding: 2px 6px;
-  border-radius: 6px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.15s;
 }
-.drawer-close:hover { background: rgba(0,0,0,0.08); }
+.drawer-close:hover { background: rgba(0,100,0,0.18); }
 
 /* 抽屜動畫 */
-.sheet-fade-enter-active,
-.sheet-fade-leave-active { transition: opacity 0.22s ease; }
-.sheet-fade-enter-active .aoc-drawer,
-.sheet-fade-leave-active .aoc-drawer { transition: transform 0.28s cubic-bezier(.32,.72,0,1); }
-.sheet-fade-enter-from,
-.sheet-fade-leave-to { opacity: 0; }
-.sheet-fade-enter-from .aoc-drawer,
-.sheet-fade-leave-to .aoc-drawer { transform: translateY(100%); }
+.drawer-fade-enter-active,
+.drawer-fade-leave-active { transition: opacity 0.2s ease, transform 0.25s cubic-bezier(.32,.72,0,1); }
+.drawer-fade-enter-from,
+.drawer-fade-leave-to { opacity: 0; transform: translateX(-50%) translateY(12px); }
 
 @media (max-width: 768px) {
   .nz-map-page.is-embedded { height: 500px; }

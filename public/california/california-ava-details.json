@@ -1,0 +1,590 @@
+{
+  "napa_valley": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Chardonnay", "Pinot Noir", "Zinfandel"],
+    "acres": 479000,
+    "elevation": "0–2677",
+    "climate": "白天溫暖乾燥，夜晚受聖帕布羅灣涼風調節，日夜溫差顯著",
+    "description": "加州最著名葡萄酒產區，以世界頂級卡本內蘇維濃聞名。縱橫約50公里，囊括16個子產區，Opus One、Screaming Eagle 等名莊均坐落於此。"
+  },
+  "oakville": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Sauvignon Blanc"],
+    "acres": 9030,
+    "elevation": "50–600",
+    "climate": "溫暖，受海灣霧氣調節，土壤多樣，含礫石與壤土",
+    "description": "納帕谷精華核心地帶，Opus One、Robert Mondavi、Screaming Eagle 等頂級名莊皆位於此，以豐富圓潤的卡本內蘇維濃著稱。"
+  },
+  "rutherford": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Cabernet Franc"],
+    "acres": 16900,
+    "elevation": "50–500",
+    "climate": "溫暖乾燥，礫石與黏土混合土壤，午後有涼風",
+    "description": "以「Rutherford Dust」獨特礦物質口感聞名，Inglenook、Beaulieu Vineyard 等百年名莊於此奠定了加州卡本內的地位。"
+  },
+  "stags_leap_district": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Petite Sirah"],
+    "acres": 2710,
+    "elevation": "40–1300",
+    "climate": "下午涼爽海風吹入，岩石峭壁蓄熱，溫差顯著",
+    "description": "1976年「巴黎品酒會」一舉擊敗法國名莊，以優雅細膩的卡本內蘇維濃享譽全球，Stag's Leap Wine Cellars 聞名於世。"
+  },
+  "st__helena": {
+    "grapes": ["Cabernet Sauvignon", "Cabernet Franc", "Merlot", "Petit Verdot"],
+    "acres": 8500,
+    "elevation": "50–700",
+    "climate": "納帕谷中心偏北，日照充足，溫暖乾燥",
+    "description": "納帕谷中心地帶重要子產區，酒款風格強勁豐厚，Grace Family Vineyard、Spottswoode 等名莊所在地。"
+  },
+  "calistoga": {
+    "grapes": ["Cabernet Sauvignon", "Zinfandel", "Petite Sirah", "Sauvignon Blanc"],
+    "acres": 3800,
+    "elevation": "100–800",
+    "climate": "納帕谷最熱的北端，受兩側山脈包圍，夜晚明顯涼爽",
+    "description": "納帕谷最北端子產區，以飽滿濃郁的紅葡萄酒聞名，著名的鑽石溪（Diamond Creek）和 Schramsberg 起泡酒莊於此。"
+  },
+  "yountville": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Cabernet Franc", "Pinot Noir"],
+    "acres": 8600,
+    "elevation": "40–200",
+    "climate": "位於納帕谷南端，受聖帕布羅灣霧氣影響，相對涼爽",
+    "description": "美食聖地，擁有世界頂級餐廳 The French Laundry，葡萄酒風格優雅細緻，Dominus Estate 位於此區。"
+  },
+  "howell_mountain_19840130": {
+    "grapes": ["Cabernet Sauvignon", "Zinfandel", "Merlot", "Cabernet Franc"],
+    "acres": 1560,
+    "elevation": "1400–2677",
+    "climate": "高海拔，雲霧帶之上，紫外線充足，日夜溫差極大",
+    "description": "納帕谷最古老子產區之一，高海拔賦予極高酸度與礦物感，Dunn Vineyards 的嚴峻卡本內舉世聞名。"
+  },
+  "mt__veeder_19900322": {
+    "grapes": ["Cabernet Sauvignon", "Chardonnay", "Zinfandel", "Cabernet Franc"],
+    "acres": 15000,
+    "elevation": "400–2677",
+    "climate": "涼爽多霧，土壤貧瘠多礫石，強烈光照",
+    "description": "馬雅卡瑪斯山脈納帕側，葡萄酒結構緊密、酸度高，Hess Collection、Mount Veeder Winery 是代表性酒莊。"
+  },
+  "spring_mountain_district": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Cabernet Franc", "Chardonnay"],
+    "acres": 8600,
+    "elevation": "400–2600",
+    "climate": "涼爽山地，常在霧帶之上，日照充足，土壤多礫石",
+    "description": "馬雅卡瑪斯山脈西坡，葡萄酒濃縮度高、骨架結實，Pride Mountain、Keenan 等名莊於此出品複雜的混調紅酒。"
+  },
+  "diamond_mountain_district": {
+    "grapes": ["Cabernet Sauvignon", "Cabernet Franc", "Merlot"],
+    "acres": 500,
+    "elevation": "800–2200",
+    "climate": "山地涼爽，玄武岩與礫石土壤，土壤礦物豐富",
+    "description": "面積極小的山地精品產區，Diamond Creek Vineyards 出品的單一園卡本內是加州葡萄酒傳奇之一。"
+  },
+  "atlas_peak": {
+    "grapes": ["Cabernet Sauvignon", "Sangiovese", "Cabernet Franc"],
+    "acres": 11400,
+    "elevation": "1600–2700",
+    "climate": "高海拔涼爽，雲霧帶之上，土壤以火山岩為主",
+    "description": "納帕谷最高海拔子產區，火山土壤富含礦物質，Antinori 家族曾在此嘗試種植 Sangiovese。"
+  },
+  "coombsville": {
+    "grapes": ["Cabernet Sauvignon", "Pinot Noir", "Chardonnay", "Merlot"],
+    "acres": 11000,
+    "elevation": "40–600",
+    "climate": "受南部灣區霧氣影響，相對涼爽，適合多種品種",
+    "description": "2011年認定的新興產區，位於納帕市郊東部，風格較為細緻優雅，是近年加州最受矚目的新興區域。"
+  },
+  "los_carneros_19830919": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Merlot", "Pinot Gris"],
+    "acres": 9000,
+    "elevation": "0–400",
+    "climate": "極涼爽，持續受聖帕布羅灣海風影響，常有晨霧",
+    "description": "跨納帕與索諾馬兩郡的涼爽產區，以精緻黑皮諾與夏多內著稱，也是加州 Cava/Champagne 式起泡酒重鎮，Domaine Carneros 等名莊於此。"
+  },
+  "oak_knoll_district_of_napa_valley": {
+    "grapes": ["Chardonnay", "Riesling", "Merlot", "Cabernet Sauvignon"],
+    "acres": 9000,
+    "elevation": "40–140",
+    "climate": "納帕谷南端，受海灣影響相對涼爽，土壤肥沃",
+    "description": "品種多樣化，涼爽氣候同時適合麗絲玲等芳香品種與梅洛，Trefethen Vineyards 是代表性酒莊。"
+  },
+  "chiles_valley": {
+    "grapes": ["Zinfandel", "Cabernet Sauvignon", "Sauvignon Blanc"],
+    "acres": 1800,
+    "elevation": "600–1600",
+    "climate": "高海拔偏遠山谷，日夜溫差顯著，涼爽夜晚",
+    "description": "納帕谷東側的偏遠山谷，以古藤金芬黛著稱，Robert Foley、Nichelini 等酒莊在此出品風格樸實自然的好酒。"
+  },
+  "north_coast_19831021": {
+    "grapes": ["Cabernet Sauvignon", "Pinot Noir", "Chardonnay", "Zinfandel"],
+    "acres": 3000000,
+    "elevation": "0–4000",
+    "climate": "多元，涵蓋太平洋沿岸涼爽到內陸谷地溫暖各種氣候",
+    "description": "加州北部沿海大型法定產區，囊括納帕、索諾馬、門多西諾、萊克、馬林等郡的著名產地。"
+  },
+  "wild_horse_valley": {
+    "grapes": ["Chardonnay", "Pinot Noir"],
+    "acres": 3300,
+    "elevation": "400–1800",
+    "climate": "涼爽，山地地形，受太平洋海洋影響",
+    "description": "跨納帕與索拉諾郡的小型山地產區，以涼爽氣候白葡萄酒為主，面積小但頗具特色。"
+  },
+  "crystal_springs_of_napa_valley": {
+    "grapes": ["Cabernet Sauvignon", "Merlot"],
+    "acres": 2000,
+    "elevation": "200–800",
+    "climate": "山地涼爽，礫石土壤",
+    "description": "納帕谷新興子產區，以山地地形提供的天然涼爽條件著稱。"
+  },
+  "russian_river_valley_19831121": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Zinfandel"],
+    "acres": 96600,
+    "elevation": "0–1000",
+    "climate": "夏季早晨霧氣濃厚，午後陽光轉晴，涼爽海洋性氣候",
+    "description": "加州頂級黑皮諾與夏多內聖地，Roederer Estate、Williams Selyem、Kosta Browne 等名莊雲集，以清晨濃霧造就絕佳涼爽生長環境著稱。"
+  },
+  "alexander_valley_19841123": {
+    "grapes": ["Cabernet Sauvignon", "Zinfandel", "Merlot", "Chardonnay"],
+    "acres": 76000,
+    "elevation": "30–1400",
+    "climate": "溫暖乾燥，比索諾馬海岸暖和，日夜溫差明顯",
+    "description": "索諾馬郡北部溫暖產區，以豐富圓潤的卡本內蘇維濃和古藤金芬黛著稱，Alexander Valley Vineyards、Silver Oak 等名莊在此。"
+  },
+  "dry_creek_valley": {
+    "grapes": ["Zinfandel", "Cabernet Sauvignon", "Sauvignon Blanc", "Petite Sirah"],
+    "acres": 16000,
+    "elevation": "50–1000",
+    "climate": "溫暖，夏季受太平洋霧氣調節，含礫石的黏土壤土",
+    "description": "加州金芬黛的精華產區，Dry Creek Vineyard、Ridge Vineyards 等以古藤釀製的濃郁辛辣金芬黛享有盛名，也出產優質白蘇維濃。"
+  },
+  "sonoma_valley": {
+    "grapes": ["Cabernet Sauvignon", "Zinfandel", "Chardonnay", "Pinot Noir"],
+    "acres": 13000,
+    "elevation": "0–2000",
+    "climate": "多元，南部受灣區涼爽影響，北部較溫暖，品種跨度大",
+    "description": "加州葡萄酒歷史搖籃，1857年 Buena Vista 建立加州第一家商業酒莊，Kenwood、Chateau St. Jean 皆在此。"
+  },
+  "sonoma_coast": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Syrah"],
+    "acres": 500000,
+    "elevation": "0–1800",
+    "climate": "涼爽，太平洋海霧頻繁，氣溫低且多變",
+    "description": "廣大的沿海產區，以優雅的黑皮諾與夏多內著稱，Hirsch Vineyards、Littorai 等代表了「真·索諾馬海岸」的頂峰。"
+  },
+  "chalk_hill_19831121": {
+    "grapes": ["Chardonnay", "Sauvignon Blanc", "Cabernet Sauvignon", "Merlot"],
+    "acres": 36000,
+    "elevation": "60–1600",
+    "climate": "溫暖，以白堊質火山灰土壤為特色，日夜溫差明顯",
+    "description": "以白堊質土壤命名，Chalk Hill Estate 出品的濃郁夏多內最具代表性，也出產優質波爾多品種。"
+  },
+  "knights_valley": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Sauvignon Blanc"],
+    "acres": 40000,
+    "elevation": "300–2000",
+    "climate": "溫暖乾燥，索諾馬郡較熱的山谷，受海洋影響少",
+    "description": "偏北的山谷產區，以豐厚卡本內著稱，Beringer 用此地葡萄釀製的 Knights Valley 系列廣受好評。"
+  },
+  "green_valley_of_russian_river_valley": {
+    "grapes": ["Pinot Noir", "Chardonnay"],
+    "acres": 12000,
+    "elevation": "80–800",
+    "climate": "俄羅斯河谷中最涼爽的子區，霧氣停留時間更長",
+    "description": "以精緻的黑皮諾聞名，Iron Horse Vineyards 的頂級起泡酒舉世知名，Barack Obama 歷次國宴皆選用此款。"
+  },
+  "bennett_valley": {
+    "grapes": ["Syrah", "Merlot", "Chardonnay", "Pinot Noir"],
+    "acres": 7000,
+    "elevation": "200–1500",
+    "climate": "涼爽，受 Petaluma Gap 海風影響，土壤以蒙特里頁岩為主",
+    "description": "2003年認定的小型精品產區，以優雅的希哈與梅洛著稱，Matanzas Creek 是代表性酒莊。"
+  },
+  "fort_ross_seaview": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Zinfandel"],
+    "acres": 27500,
+    "elevation": "920–1800",
+    "climate": "高海拔，在日常濃霧帶之上，強風，生長季短暫",
+    "description": "索諾馬海岸最接近太平洋的高地產區，Flowers、Wild Hog 等酒莊以高強度、複雜的黑皮諾著稱。"
+  },
+  "petaluma_gap": {
+    "grapes": ["Pinot Noir", "Syrah", "Chardonnay"],
+    "acres": 200000,
+    "elevation": "0–1200",
+    "climate": "持續強烈太平洋海風穿越山脈缺口，午後極涼",
+    "description": "2017年認定，以穿越海岸山脈缺口的強勁海風著稱，賦予葡萄酒清爽礦物感，Wind Gap 等酒莊代表此風格。"
+  },
+  "moon_mountain_district_sonoma_county": {
+    "grapes": ["Cabernet Sauvignon", "Zinfandel", "Merlot"],
+    "acres": 3000,
+    "elevation": "400–2200",
+    "climate": "山地涼爽，火山岩土壤，日照充足",
+    "description": "馬雅卡瑪斯山脈索諾馬側，Hanzell 以勃根地風格的夏多內與黑皮諾聞名，古藤金芬黛也有佳作。"
+  },
+  "northern_sonoma_19850617": {
+    "grapes": ["Cabernet Sauvignon", "Pinot Noir", "Chardonnay", "Zinfandel"],
+    "acres": 330000,
+    "elevation": "0–2000",
+    "climate": "多元，涵蓋溫暖的亞歷山大谷到涼爽的俄羅斯河谷",
+    "description": "涵蓋俄羅斯河谷、亞歷山大谷等多個重要子產區的大型產區，E. & J. Gallo 的高端酒款基地。"
+  },
+  "west_sonoma_coast": {
+    "grapes": ["Pinot Noir", "Chardonnay"],
+    "acres": 60000,
+    "elevation": "100–1800",
+    "climate": "極涼爽，常年濃霧，強烈太平洋海洋影響",
+    "description": "2023年新認定，代表索諾馬海岸最純粹的涼爽海洋風格，Hirsch、Littorai 等標誌性酒莊坐落其中。"
+  },
+  "sonoma_mountain": {
+    "grapes": ["Cabernet Sauvignon", "Pinot Noir", "Zinfandel", "Chardonnay"],
+    "acres": 5000,
+    "elevation": "400–2000",
+    "climate": "涼爽山地，常在霧帶之上，陽光直射充足",
+    "description": "以精緻平衡著稱，Laurel Glen 出品的山地卡本內是加州陳年佳釀的典範。"
+  },
+  "pine_mountain_cloverdale_peak": {
+    "grapes": ["Cabernet Sauvignon", "Syrah", "Petite Sirah"],
+    "acres": 1700,
+    "elevation": "1600–3000",
+    "climate": "高海拔涼爽，火山岩土壤，雲霧帶之上",
+    "description": "索諾馬郡最高海拔的產區，以濃縮度高、礦物感強的卡本內著稱。"
+  },
+  "rockpile": {
+    "grapes": ["Zinfandel", "Cabernet Sauvignon", "Petite Sirah"],
+    "acres": 15500,
+    "elevation": "800–2200",
+    "climate": "溫暖山地，礫石滿布土壤，強烈日夜溫差",
+    "description": "以「石頭堆」命名，土壤幾乎全是礫石，古藤金芬黛以驚人的濃度與複雜度著稱。"
+  },
+  "fountaingrove_district": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Zinfandel"],
+    "acres": 32000,
+    "elevation": "400–2000",
+    "climate": "溫暖乾燥，山坡地形，日夜溫差明顯",
+    "description": "聖羅薩北部的山坡產區，以強壯的波爾多品種著稱，Jordan Winery 的部分葡萄來自此區。"
+  },
+  "anderson_valley": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Gewurztraminer", "Riesling", "Pinot Gris"],
+    "acres": 50000,
+    "elevation": "200–2000",
+    "climate": "極涼爽，太平洋霧氣深入谷地，適合芳香品種與勃根地品種",
+    "description": "加州最涼爽的產區之一，Roederer Estate（L'Ermitage）、Husch 等酒莊以精緻黑皮諾和格烏茲塔明那聞名，也是優質起泡酒產地。"
+  },
+  "mendocino_19840716": {
+    "grapes": ["Cabernet Sauvignon", "Zinfandel", "Chardonnay", "Pinot Noir", "Petite Sirah"],
+    "acres": 80000,
+    "elevation": "0–3500",
+    "climate": "多元，沿海涼爽到內陸溫暖，有機農法盛行",
+    "description": "加州最大有機認證葡萄酒產縣，多元地形孕育各類風格，Fetzer、Bonterra 是代表性有機葡萄酒品牌。"
+  },
+  "clear_lake_19840607": {
+    "grapes": ["Cabernet Sauvignon", "Sauvignon Blanc", "Zinfandel", "Petite Sirah"],
+    "acres": 430000,
+    "elevation": "1300–1400",
+    "climate": "溫暖，加州最大天然淡水湖調節溫度，日夜溫差明顯",
+    "description": "以加州最大天然淡水湖命名，溫暖氣候適合卡本內與白蘇維濃，Steele Wines、Shannon Ridge 在此釀製高性價比佳釀。"
+  },
+  "red_hills_lake_county_20131101": {
+    "grapes": ["Cabernet Sauvignon", "Zinfandel", "Malbec", "Tempranillo"],
+    "acres": 10000,
+    "elevation": "1500–3000",
+    "climate": "高海拔炎熱白天，清涼夜晚，火山紅土壤",
+    "description": "萊克郡最具特色的子產區，以鮮紅色火山土壤著稱，出產濃郁有深度的卡本內，Brassfield、Shannon Ridge 代表此風格。"
+  },
+  "yorkville_highlands": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Zinfandel", "Sauvignon Blanc"],
+    "acres": 40000,
+    "elevation": "600–2200",
+    "climate": "乾燥溫暖，高海拔帶來涼爽夜晚，日夜溫差顯著",
+    "description": "門多西諾郡東南端山地產區，以優雅的波爾多品種聞名，Yorkville Cellars 是代表酒莊。"
+  },
+  "high_valley": {
+    "grapes": ["Cabernet Sauvignon", "Sauvignon Blanc", "Zinfandel"],
+    "acres": 14000,
+    "elevation": "1700–3100",
+    "climate": "高海拔，強烈日夜溫差，火山土壤，短暫生長季",
+    "description": "萊克郡最高海拔產區，獨特的火山岩與礫石土壤帶來高酸度和礦物感的葡萄酒。"
+  },
+  "big_valley_district_lake_county": {
+    "grapes": ["Sauvignon Blanc", "Cabernet Sauvignon", "Petite Sirah"],
+    "acres": 5000,
+    "elevation": "1350–1500",
+    "climate": "溫暖平坦谷地，清湖調節氣溫",
+    "description": "萊克郡清湖畔的平地產區，以清爽的白蘇維濃和濃郁的小希哈著稱。"
+  },
+  "guenoc_valley": {
+    "grapes": ["Petite Sirah", "Cabernet Sauvignon", "Chardonnay"],
+    "acres": 22000,
+    "elevation": "1000–2500",
+    "climate": "溫暖乾燥，受山脈保護，日照充足",
+    "description": "萊克郡南部偏遠谷地，以飽滿的小希哈著稱，是加州最早獲認定的單一產業所有AVA之一。"
+  },
+  "paso_robles_19831103": {
+    "grapes": ["Cabernet Sauvignon", "Zinfandel", "Syrah", "Grenache", "Roussanne", "Viognier"],
+    "acres": 614000,
+    "elevation": "700–2400",
+    "climate": "強烈日夜溫差（可達50°F），白天炎熱夜晚涼爽，乾燥地中海氣候",
+    "description": "加州成長最快的葡萄酒產區，以強壯的卡本內、金芬黛和隆河品種著稱，Justin、Tablas Creek、Epoch Estate 等名莊彙聚於此。"
+  },
+  "santa_ynez_valley": {
+    "grapes": ["Syrah", "Pinot Noir", "Chardonnay", "Grenache", "Sauvignon Blanc"],
+    "acres": 72000,
+    "elevation": "150–2000",
+    "climate": "受橫向開口山谷引入太平洋冷空氣，多元微氣候",
+    "description": "因電影《杯酒人生》舉世聞名，以希哈、黑皮諾和格那希著稱，Fess Parker、Gainey Vineyard 等是代表酒莊。"
+  },
+  "sta__rita_hills_20010730": {
+    "grapes": ["Pinot Noir", "Chardonnay"],
+    "acres": 31000,
+    "elevation": "200–1200",
+    "climate": "極涼爽，橫向山谷直接迎接太平洋冷風，氣溫低",
+    "description": "2001年認定，以緊實礦物感的黑皮諾聞名，Sanford & Benedict、Sea Smoke、Loring 等頂級酒莊集中在此。"
+  },
+  "santa_maria_valley_19810904": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Syrah"],
+    "acres": 90000,
+    "elevation": "200–1200",
+    "climate": "加州最涼爽的產區之一，橫向山谷持續接受太平洋冷空氣",
+    "description": "加州黑皮諾與夏多內的頂級產地，Bien Nacido Vineyard 是業界最著名的葡萄園之一，Byron、Foxen 等名莊皆與此地深度合作。"
+  },
+  "santa_lucia_highlands_19920615": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Riesling"],
+    "acres": 22000,
+    "elevation": "1200–2200",
+    "climate": "高海拔涼爽，下午強勁風力帶走暑熱，獨特的慢速成熟環境",
+    "description": "以高海拔優質黑皮諾聞名，Garys'、Rosella's、Pisoni 等傳奇葡萄園坐落於此，Siduri、Testarossa 等名莊紛紛競相取用此地葡萄。"
+  },
+  "central_coast_19851125": {
+    "grapes": ["Cabernet Sauvignon", "Chardonnay", "Pinot Noir", "Zinfandel", "Syrah"],
+    "acres": 3000000,
+    "elevation": "0–4000",
+    "climate": "多元，從極涼爽沿海到溫暖內陸，地形複雜",
+    "description": "廣大的加州中部海岸大型法定產區，從蒙特利延伸至聖芭芭拉，是加州葡萄酒最多元的大區之一。"
+  },
+  "monterey_19840615": {
+    "grapes": ["Chardonnay", "Pinot Noir", "Riesling", "Cabernet Sauvignon"],
+    "acres": 45000,
+    "elevation": "0–2000",
+    "climate": "涼爽，強烈蒙特利灣海洋影響，午後強風降溫",
+    "description": "以高品質夏多內、黑皮諾聞名，Hahn、Morgan 等酒莊出品的葡萄酒有出色的清爽酸度。"
+  },
+  "edna_valley": {
+    "grapes": ["Chardonnay", "Pinot Noir", "Pinot Gris"],
+    "acres": 20000,
+    "elevation": "100–1600",
+    "climate": "涼爽，受莫羅灣海洋影響，早晨霧氣頻繁",
+    "description": "聖路易斯奧比斯波縣的精品產區，Edna Valley Vineyard、Wolff Vineyards 出品的夏多內以清爽細膩著稱。"
+  },
+  "arroyo_seco_19830516": {
+    "grapes": ["Riesling", "Chardonnay", "Pinot Noir", "Gewurztraminer"],
+    "acres": 18000,
+    "elevation": "40–2000",
+    "climate": "涼爽，午後強風，沙礫土壤排水極佳",
+    "description": "加州優質德國品種產地，Jekel Vineyards 的麗絲玲曾是加州頂級，獨特的礫石沖積土壤賦予礦物感。"
+  },
+  "livermore_valley_19821001": {
+    "grapes": ["Chardonnay", "Sauvignon Blanc", "Cabernet Sauvignon", "Petite Sirah"],
+    "acres": 10000,
+    "elevation": "300–2000",
+    "climate": "溫暖，受灣區西北風調節，礫石沖積土壤",
+    "description": "加州最古老葡萄酒產區之一，Wente Vineyards 開創了加州夏多內先河，葡萄酒歷史可追溯至1880年代。"
+  },
+  "santa_cruz_mountains": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Cabernet Sauvignon"],
+    "acres": 400000,
+    "elevation": "400–3000",
+    "climate": "多元，西坡涼爽受太平洋影響，東坡較溫暖",
+    "description": "Ridge Vineyards 的 Monte Bello 是加州卡本內傳奇，也出產出色的黑皮諾，酒莊文化注重手工釀造。"
+  },
+  "los_olivos_district": {
+    "grapes": ["Syrah", "Grenache", "Sauvignon Blanc", "Pinot Noir", "Chardonnay"],
+    "acres": 22000,
+    "elevation": "600–1800",
+    "climate": "溫暖，受山谷地形保護，白天乾燥夜晚涼爽",
+    "description": "2016年認定，聖塔依內茲谷的精華核心，以隆河品種著稱，Jonata、Rusack 等酒莊是代表。"
+  },
+  "happy_canyon_of_santa_barbara": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Sauvignon Blanc", "Cabernet Franc"],
+    "acres": 35000,
+    "elevation": "800–2200",
+    "climate": "溫暖乾燥，山地保護減少海洋影響，強日照",
+    "description": "聖塔依內茲谷最溫暖的子區，波爾多品種表現突出，Star Lane Vineyard 是代表性酒莊。"
+  },
+  "ballard_canyon": {
+    "grapes": ["Syrah", "Grenache", "Roussanne"],
+    "acres": 8000,
+    "elevation": "700–1500",
+    "climate": "溫暖日間，涼爽夜晚，日夜溫差達30°F以上",
+    "description": "2013年認定，以世界級希哈著稱，Jonata、Rusack、Stolpman 等酒莊出品的隆河風格紅酒備受矚目。"
+  },
+  "adelaida_district": {
+    "grapes": ["Cabernet Sauvignon", "Syrah", "Roussanne", "Grenache Blanc"],
+    "acres": 20000,
+    "elevation": "800–2400",
+    "climate": "涼爽，受太平洋影響，石灰岩土壤豐富",
+    "description": "帕索羅布勒斯西部涼爽子區，石灰岩土壤帶來獨特礦物感，Tablas Creek 將隆河品種帶進此區，Saxum 以此地葡萄釀製頂級混調。"
+  },
+  "templeton_gap_district": {
+    "grapes": ["Zinfandel", "Rhône varieties", "Cabernet Sauvignon"],
+    "acres": 40000,
+    "elevation": "700–1700",
+    "climate": "受 Templeton Gap 海風影響，比東部涼爽",
+    "description": "帕索羅布勒斯受海洋氣候影響最強的子區，夜晚涼風帶來良好酸度，Peachy Canyon 的金芬黛聞名業界。"
+  },
+  "paso_robles_highlands_district": {
+    "grapes": ["Cabernet Sauvignon", "Zinfandel", "Syrah"],
+    "acres": 50000,
+    "elevation": "1200–2400",
+    "climate": "高海拔，日夜溫差極大，強烈日照",
+    "description": "帕索羅布勒斯海拔最高的子區，以極度濃縮的卡本內和金芬黛著稱。"
+  },
+  "sierra_foothills": {
+    "grapes": ["Zinfandel", "Barbera", "Syrah", "Cabernet Sauvignon", "Petite Sirah"],
+    "acres": 2600000,
+    "elevation": "1000–3500",
+    "climate": "大陸性氣候，夏熱冬冷，日夜溫差顯著，土壤多礫石",
+    "description": "淘金熱時代即有種植歷史，古藤金芬黛與義大利品種是最大特色，保留了19世紀加州的葡萄酒傳統。"
+  },
+  "el_dorado_19831114": {
+    "grapes": ["Zinfandel", "Barbera", "Syrah", "Cabernet Franc", "Tempranillo"],
+    "acres": 50000,
+    "elevation": "1200–3500",
+    "climate": "高海拔，夏季炎熱但夜晚涼爽，多元岩石土壤",
+    "description": "以黃金縣命名，百年老藤金芬黛和義大利品種表現出色，Boeger Winery 是最具歷史的代表酒莊。"
+  },
+  "california_shenandoah_valley": {
+    "grapes": ["Zinfandel", "Barbera", "Amador Foothill Wine", "Syrah", "Sangiovese"],
+    "acres": 10000,
+    "elevation": "1200–2200",
+    "climate": "溫暖，日夜溫差大，礫石與黏土壤土",
+    "description": "阿馬多縣的核心產區，全加州最著名的金芬黛產地之一，Amador Foothill Winery、Renwood 是代表酒莊。"
+  },
+  "fair_play": {
+    "grapes": ["Zinfandel", "Barbera", "Syrah", "Tempranillo"],
+    "acres": 3000,
+    "elevation": "2500–3000",
+    "climate": "高海拔涼爽，明顯日夜溫差，貧瘠礫石土壤",
+    "description": "艾爾多拉多縣的精品高地產區，涼爽環境賦予比低海拔更佳的酸度，Sierra Vista Winery 是代表。"
+  },
+  "fiddletown_19831103": {
+    "grapes": ["Zinfandel", "Barbera"],
+    "acres": 2900,
+    "elevation": "1500–2500",
+    "climate": "高海拔，清涼，夏季涼爽，保留古老品種",
+    "description": "阿馬多縣小型歷史產區，超過100年樹齡的古藤金芬黛釀製的酒款風格深沉複雜，Terre Rouge 是代表酒莊。"
+  },
+  "north_yuba": {
+    "grapes": ["Zinfandel", "Syrah", "Cabernet Sauvignon"],
+    "acres": 14000,
+    "elevation": "1600–3000",
+    "climate": "高海拔山地，熱夏冷冬，日夜溫差顯著",
+    "description": "尤巴縣偏遠山地產區，Renaissance Vineyard 以嚴謹不灌溉的農法聞名業界。"
+  },
+  "lodi_19860317": {
+    "grapes": ["Zinfandel", "Cabernet Sauvignon", "Chardonnay", "Petite Sirah", "Merlot"],
+    "acres": 545000,
+    "elevation": "0–100",
+    "climate": "溫暖，受聖華金三角洲夜間涼風調節，沙質壤土",
+    "description": "加州金芬黛的故鄉，擁有全美最多百年老藤金芬黛，Lodi Rules 永續農業認證體系聞名業界，Michael David Winery 是代表酒莊。"
+  },
+  "clarksburg_19840222": {
+    "grapes": ["Chenin Blanc", "Sauvignon Blanc", "Merlot", "Petite Sirah"],
+    "acres": 30000,
+    "elevation": "0–30",
+    "climate": "受聖帕布羅灣夜間涼風影響，夏季涼爽，三角洲沖積土",
+    "description": "以高品質白詩南（Chenin Blanc）著稱，Dry Creek Vineyard 的年度白詩南是加州最受推崇的白詩南之一。"
+  },
+  "madera_19850107_a": {
+    "grapes": ["Zinfandel", "Barbera", "Portuguese varieties", "Muscat"],
+    "acres": 36500,
+    "elevation": "100–500",
+    "climate": "炎熱乾燥，聖華金谷南端，強烈日照",
+    "description": "以加強型甜葡萄酒（波特風格、Madeira 風格）傳統著稱，Quady Winery 的甜酒系列（Electra、Vya）享譽全球。"
+  },
+  "temecula_valley_19841123": {
+    "grapes": ["Syrah", "Viognier", "Cabernet Sauvignon", "Chardonnay", "Grenache"],
+    "acres": 33000,
+    "elevation": "1000–1500",
+    "climate": "溫暖，受西部山口（Rainbow Gap）太平洋海洋影響，夜晚涼爽",
+    "description": "南加州最重要的葡萄酒產區，距洛杉磯約1.5小時車程，觀光葡萄酒業發達，以希哈和維歐尼著稱，Callaway、Wilson Creek 等是代表酒莊。"
+  },
+  "cucamonga_valley": {
+    "grapes": ["Zinfandel", "Grenache", "Mission", "Mourvèdre"],
+    "acres": 200000,
+    "elevation": "1000–3500",
+    "climate": "乾熱，莫哈維沙漠邊緣，沙質土壤，強日照",
+    "description": "歷史上曾是加州最大產區，部分百年老藤仍存，以古老使命葡萄（Mission）和金芬黛著稱，Galleano Winery 保存了歷史傳統。"
+  },
+  "malibu_coast": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Syrah", "Grenache"],
+    "acres": 10000,
+    "elevation": "0–3000",
+    "climate": "涼爽，太平洋海洋影響強烈，霧氣頻繁",
+    "description": "好萊塢明星偏愛的精品產區，以優雅的黑皮諾和夏多內聞名，Cornell Winery、Semler Wines 是代表酒莊。"
+  },
+  "san_pasqual_valley": {
+    "grapes": ["Chardonnay", "Sauvignon Blanc", "Muscat", "Merlot"],
+    "acres": 3000,
+    "elevation": "800–1800",
+    "climate": "溫暖乾燥，日夜溫差大，地中海式氣候",
+    "description": "聖地亞哥縣北部的小型精品產區，Orfila Vineyards 在此出品多元風格的葡萄酒。"
+  },
+  "ramona_valley": {
+    "grapes": ["Syrah", "Grenache", "Zinfandel", "Tempranillo"],
+    "acres": 150000,
+    "elevation": "1400–3500",
+    "climate": "溫暖乾燥，高海拔減緩暑熱",
+    "description": "聖地亞哥縣東部山地產區，以隆河和伊比利亞品種著稱，近年成為南加州新興精品產區。"
+  },
+  "san_francisco_bay_19990322": {
+    "grapes": ["Chardonnay", "Cabernet Sauvignon", "Pinot Noir", "Petite Sirah"],
+    "acres": 150000,
+    "elevation": "0–3800",
+    "climate": "多元，灣區微氣候調節，霧氣與海風影響各異",
+    "description": "涵蓋舊金山灣周邊阿拉米達、孔特拉科斯塔、聖克拉拉和聖克魯茲等郡的大型產區。"
+  },
+  "contra_costa": {
+    "grapes": ["Zinfandel", "Mourvèdre", "Carignan", "Alicante Bouschet"],
+    "acres": 7000,
+    "elevation": "0–200",
+    "climate": "溫暖，受三角洲夜風涼爽，沙質土壤保護老藤",
+    "description": "以極稀少的百年老藤馬塔羅（慕維得爾）和卡利農著稱，沙質土壤天然阻擋根瘤蚜，保存了珍貴老藤，Rosenblum 是代表酒莊。"
+  },
+  "lamorinda": {
+    "grapes": ["Cabernet Sauvignon", "Chardonnay", "Sauvignon Blanc"],
+    "acres": 5000,
+    "elevation": "200–1800",
+    "climate": "受灣區微氣候調節，溫和適中",
+    "description": "2022年新認定，涵蓋 Lafayette、Moraga、Orinda 三鎮，Moraga Vineyards 的卡本內被視為灣區頂級葡萄酒之一。"
+  },
+  "suisun_valley": {
+    "grapes": ["Petite Sirah", "Cabernet Sauvignon", "Chardonnay", "Merlot"],
+    "acres": 15000,
+    "elevation": "0–400",
+    "climate": "受蘇伊森灣調節，日夜溫差大，黏土壤土",
+    "description": "索拉諾縣小型歷史產區，以強壯的小希哈（Petite Sirah）著稱，Wooden Valley Winery 是代表酒莊。"
+  },
+  "solano_county_green_valley": {
+    "grapes": ["Chardonnay", "Cabernet Sauvignon", "Merlot"],
+    "acres": 3000,
+    "elevation": "0–200",
+    "climate": "受卡爾基納斯海峽影響，涼爽多風",
+    "description": "索拉諾縣的小型產區，需與索諾馬縣的綠谷（Green Valley of Russian River Valley）區分。"
+  },
+  "willow_creek": {
+    "grapes": ["Pinot Noir", "Chardonnay", "Cabernet Sauvignon"],
+    "acres": 3000,
+    "elevation": "1000–3000",
+    "climate": "涼爽山地，受太平洋影響，短暫生長季",
+    "description": "洪堡縣的偏遠山地產區，是加州最北邊的葡萄酒產區之一，以涼爽氣候白葡萄酒著稱。"
+  },
+  "manton_valley": {
+    "grapes": ["Cabernet Sauvignon", "Syrah", "Zinfandel"],
+    "acres": 500,
+    "elevation": "1600–2400",
+    "climate": "高海拔大陸性氣候，日夜溫差顯著，冬季有雪",
+    "description": "特其阿馬縣的高山偏遠谷地，規模極小，以獨特的高地地形孕育濃縮風格葡萄酒。"
+  },
+  "trinity_lakes": {
+    "grapes": ["Cabernet Sauvignon", "Merlot", "Pinot Noir"],
+    "acres": 500,
+    "elevation": "2400–4000",
+    "climate": "極高海拔，嚴寒冬季，短暫生長季，大陸性氣候",
+    "description": "加州最高海拔的葡萄酒產區之一，特立尼達縣的實驗性高山產地，面積極小。"
+  }
+}

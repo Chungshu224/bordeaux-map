@@ -219,7 +219,60 @@
               </button>
             </div>
           </div>
+          <div class="layer-group">
+            <div class="layer-group-label">資料圖層</div>
+            <div class="layer-group-buttons">
+              <button class="btn-layer" :class="{ active: climateEnabled }" @click="toggleClimate">
+                <span class="lbtn-icon">🌡</span>
+                <span class="lbtn-text">氣候熱力</span>
+                <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
+    </transition>
+
+    <transition name="climate-slide">
+      <div v-if="climateEnabled && climateData" class="climate-overlay">
+        <div class="cy-indicator-tabs">
+          <button v-for="ind in CLIMATE_INDICATORS" :key="ind.id"
+            :class="['cy-ind-btn', { active: climateIndicator === ind.id }]"
+            @click="setClimateIndicator(ind.id)">
+            {{ ind.icon }} {{ ind.label }}
+          </button>
+        </div>
+        <div class="climate-header-row">
+          <div class="cy-year-badge">
+            <span class="cy-year">{{ climateYear }}</span>
+            <span v-if="isGoldenVintage" class="cy-golden">🏆 黃金年份</span>
+          </div>
+          <div class="cy-stats">
+            <div v-if="climateCurrentAocLabel" class="cy-aoc-name">{{ climateCurrentAocLabel }}</div>
+            <span v-if="currentYearValue !== null" class="cy-temp">{{ currentYearValue }}{{ currentIndicatorConfig.unit }}</span>
+            <span v-if="currentYearDelta !== null" class="cy-delta" :class="currentYearDeltaPositive ? 'cy-warm' : 'cy-cool'">
+              {{ currentYearDeltaPositive ? '+' : '' }}{{ currentYearDelta }}{{ currentIndicatorConfig.unit }} vs 基準
+            </span>
+          </div>
+          <button class="cy-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
+        </div>
+        <input class="climate-slider" v-model.number="climateYear" type="range"
+          :min="climateYears[0]" :max="climateYears[climateYears.length - 1]" step="1"
+          @input="onClimateYearChange" />
+        <div class="climate-year-axis">
+          <span>{{ climateYears[0] }}</span>
+          <span>{{ climateYears[Math.floor(climateYears.length / 2)] }}</span>
+          <span>{{ climateYears[climateYears.length - 1] }}</span>
+        </div>
+        <div class="climate-legend">
+          <div :class="['legend-gradient', `legend-${climateIndicator}`]"></div>
+          <div class="legend-labels">
+            <span>{{ currentGlobalStats ? currentGlobalStats.min.toFixed(0) : '' }}{{ currentIndicatorConfig.unit }} {{ currentIndicatorConfig.lowLabel }}</span>
+            <span>均值</span>
+            <span>{{ currentIndicatorConfig.highLabel }} {{ currentGlobalStats ? currentGlobalStats.max.toFixed(0) : '' }}{{ currentIndicatorConfig.unit }}</span>
+          </div>
+        </div>
+        <div class="climate-footnote">📊 {{ currentIndicatorConfig.footnote }}</div>
       </div>
     </transition>
 
@@ -277,6 +330,58 @@ const drawerOpen    = ref(false)
 const layersOpen    = ref(false)
 const activeRegion  = ref(null)
 const allRegions    = ref([])
+
+// ── Climate state ──────────────────────────────────────────────────────────
+const climateEnabled   = ref(false)
+const climateYear      = ref(2002)
+const climateData      = ref(null)
+const climateStats     = ref(null)
+const climateStatsSun  = ref(null)
+const climateStatsRain = ref(null)
+const climateYears     = ref([])
+const climateYearAvg   = ref([])
+const climateYearSun   = ref([])
+const climateYearRain  = ref([])
+const climateIndicator = ref('temp')
+
+const CLIMATE_INDICATORS = [
+  { id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C', lowLabel: '涼', highLabel: '熱',
+    footnote: '指標：6–8 月日均溫平均值 | 基準：1981–2010', dataKey: 'temps', baselineKey: 'baseline' },
+  { id: 'sun',  icon: '☀️', label: '日照時數',  unit: 'h',  lowLabel: '少', highLabel: '多',
+    footnote: '指標：6–8 月日照時數總和（小時）| 基準：1981–2010', dataKey: 'sun', baselineKey: 'baselineSun' },
+  { id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm', lowLabel: '乾', highLabel: '濕',
+    footnote: '指標：6–8 月降雨量總和（毫米）| 基準：1981–2010', dataKey: 'rain', baselineKey: 'baselineRain' },
+]
+const GOLDEN_VINTAGES_CA = new Set([1974, 1985, 1991, 1994, 1997, 2001, 2002, 2007, 2012, 2013])
+
+// ── Climate computed ──────────────────────────────────────────────────────
+const currentIndicatorConfig = computed(() => CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value))
+const currentGlobalStats = computed(() => {
+  if (climateIndicator.value === 'sun') return climateStatsSun.value
+  if (climateIndicator.value === 'rain') return climateStatsRain.value
+  return climateStats.value
+})
+const isGoldenVintage = computed(() => GOLDEN_VINTAGES_CA.has(climateYear.value))
+const climateCurrentAocLabel = computed(() => activeRegion.value?.name || '')
+const currentYearValue = computed(() => {
+  if (!activeRegion.value || !climateData.value || !climateYears.value.length) return null
+  const idx = climateYears.value.indexOf(climateYear.value)
+  if (idx < 0) return null
+  const cfg = currentIndicatorConfig.value
+  const arr = climateData.value[activeRegion.value.id]?.[cfg.dataKey]
+  if (!Array.isArray(arr) || idx >= arr.length) return null
+  return Number(arr[idx]).toFixed(cfg.id === 'rain' ? 0 : 1)
+})
+const currentYearDelta = computed(() => {
+  if (!activeRegion.value || !climateData.value || currentYearValue.value === null) return null
+  const cfg = currentIndicatorConfig.value
+  const aoc = climateData.value[activeRegion.value.id]
+  if (!aoc) return null
+  const baseline = aoc[cfg.baselineKey]
+  if (baseline == null) return null
+  return (Number(currentYearValue.value) - Number(baseline)).toFixed(cfg.id === 'rain' ? 0 : 1)
+})
+const currentYearDeltaPositive = computed(() => (Number(currentYearDelta.value) || 0) > 0)
 
 let map       = null
 let hoveredId = null
@@ -670,6 +775,145 @@ async function initMap() {
     mapError.value  = err.message || '地圖載入失敗'
     isLoading.value = false
   }
+}
+
+// ── Climate functions ──────────────────────────────────────────────────────
+function valueToClimateColor(v, indicator) {
+  let stats, stops
+  if (indicator === 'sun') {
+    stats = climateStatsSun.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [[min,[120,81,169]],[mean,[171,217,233]],[mean+20,[254,224,72]],[max,[253,141,60]]]
+  } else if (indicator === 'rain') {
+    stats = climateStatsRain.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [[min,[253,141,60]],[mean,[255,255,191]],[mean+15,[74,144,226]],[max,[44,62,160]]]
+  } else {
+    stats = climateStats.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [[min,[69,117,180]],[mean-1,[171,217,233]],[mean,[255,255,191]],[mean+1.5,[252,141,89]],[max,[215,48,39]]]
+  }
+  const { min, max } = stats
+  const t = Math.max(min, Math.min(max, v))
+  for (let i = 0; i < stops.length - 1; i++) {
+    const [t0,c0] = stops[i]; const [t1,c1] = stops[i+1]
+    if (t <= t1) {
+      const f = (t-t0)/Math.max(t1-t0,0.0001)
+      return `rgb(${Math.round(c0[0]+f*(c1[0]-c0[0]))},${Math.round(c0[1]+f*(c1[1]-c0[1]))},${Math.round(c0[2]+f*(c1[2]-c0[2]))})`
+    }
+  }
+  const last = stops[stops.length-1][1]
+  return `rgb(${last[0]},${last[1]},${last[2]})`
+}
+
+function createDemoClimatePayload(items) {
+  const years = Array.from({ length: 25 }, (_, i) => 2000 + i)
+  const aocs = {}
+  const ySums=[],ySunSums=[],yRainSums=[],yCounts=[],allT=[],allS=[],allR=[]
+  years.forEach(()=>{ ySums.push(0);ySunSums.push(0);yRainSums.push(0);yCounts.push(0) })
+  for (const item of items) {
+    const key = item.id
+    let seed = 0; for (const ch of key) seed += ch.charCodeAt(0)
+    const base = 20.0 + (seed % 60) * 0.06
+    const amp = 0.5 + (seed % 10) * 0.04
+    const trend = 0.02 + (seed % 3) * 0.005
+    const sunBase = 780 + (seed % 100)
+    const rainBase = 80 + (seed % 100)
+    const temps = years.map((y,i) => {
+      const v = Number((base + Math.sin((i+seed%7)*0.55)*amp + (y-2000)*trend).toFixed(2))
+      allT.push(v); ySums[i]+=v; yCounts[i]+=1; return v
+    })
+    const sun = years.map((_,i) => {
+      const v = Number((sunBase + Math.sin((i+seed%5)*0.5)*45).toFixed(1))
+      allS.push(v); ySunSums[i]+=v; return v
+    })
+    const rain = years.map((_,i) => {
+      const v = Number((rainBase + Math.cos((i+seed%6)*0.52)*28).toFixed(1))
+      allR.push(v); yRainSums[i]+=v; return v
+    })
+    aocs[key] = {
+      temps, sun, rain,
+      baseline: Number((temps.reduce((s,v)=>s+v,0)/temps.length).toFixed(2)),
+      baselineSun: Number((sun.reduce((s,v)=>s+v,0)/sun.length).toFixed(1)),
+      baselineRain: Number((rain.reduce((s,v)=>s+v,0)/rain.length).toFixed(1))
+    }
+  }
+  const gMin=v=>Math.min(...v), gMax=v=>Math.max(...v), gMean=v=>v.reduce((s,x)=>s+x,0)/v.length
+  return {
+    aocs,
+    global: { min:Number(gMin(allT).toFixed(2)), max:Number(gMax(allT).toFixed(2)), mean:Number(gMean(allT).toFixed(2)) },
+    globalSun: { min:Number(gMin(allS).toFixed(1)), max:Number(gMax(allS).toFixed(1)), mean:Number(gMean(allS).toFixed(1)) },
+    globalRain: { min:Number(gMin(allR).toFixed(1)), max:Number(gMax(allR).toFixed(1)), mean:Number(gMean(allR).toFixed(1)) },
+    meta: { years, yearAvg: years.map((_,i)=>Number((ySums[i]/Math.max(yCounts[i],1)).toFixed(2))),
+      yearSunAvg: years.map((_,i)=>Number((ySunSums[i]/Math.max(yCounts[i],1)).toFixed(1))),
+      yearRainAvg: years.map((_,i)=>Number((yRainSums[i]/Math.max(yCounts[i],1)).toFixed(1))), generated:true }
+  }
+}
+
+async function loadClimateData() {
+  if (climateData.value && climateYears.value.length) return
+  const apply = (payload) => {
+    climateData.value = payload.aocs || {}
+    climateStats.value = payload.global || null
+    climateStatsSun.value = payload.globalSun || null
+    climateStatsRain.value = payload.globalRain || null
+    climateYears.value = payload.meta?.years || []
+    climateYearAvg.value = payload.meta?.yearAvg || []
+    climateYearSun.value = payload.meta?.yearSunAvg || []
+    climateYearRain.value = payload.meta?.yearRainAvg || []
+    if (climateYears.value.length)
+      climateYear.value = climateYears.value.includes(2002) ? 2002 : climateYears.value[0]
+  }
+  try {
+    const res = await fetch('/data/california-climate.json')
+    if (res.ok) { apply(await res.json()); return }
+  } catch (_) {}
+  apply(createDemoClimatePayload(allRegions.value))
+}
+
+function applyClimateColor(year) {
+  if (!map || !climateEnabled.value || !climateData.value || !climateYears.value.length) return
+  const idx = climateYears.value.indexOf(year)
+  if (idx < 0) return
+  const cfg = currentIndicatorConfig.value
+  const entries = []
+  for (const r of allRegions.value) {
+    const arr = climateData.value[r.id]?.[cfg.dataKey]
+    const value = Array.isArray(arr) && idx < arr.length ? Number(arr[idx]) : null
+    if (Number.isFinite(value)) entries.push(r.id, valueToClimateColor(value, cfg.id))
+  }
+  if (!map.getLayer('ava-climate-fill')) {
+    map.addLayer({ id: 'ava-climate-fill', type: 'fill', source: 'ca-avas',
+      paint: { 'fill-color': '#888', 'fill-opacity': 0 } })
+  }
+  if (entries.length > 0) {
+    map.setPaintProperty('ava-climate-fill', 'fill-color', ['match', ['get', 'ava_id'], ...entries, '#888888'])
+    map.setPaintProperty('ava-climate-fill', 'fill-opacity', 0.55)
+  }
+}
+
+function setClimateIndicator(id) { climateIndicator.value = id; applyClimateColor(climateYear.value) }
+function onClimateYearChange() { applyClimateColor(climateYear.value) }
+
+async function toggleClimate() {
+  if (!map) return
+  if (!climateEnabled.value) {
+    try {
+      await loadClimateData()
+      climateEnabled.value = true
+      applyClimateColor(climateYear.value)
+      mapError.value = null
+    } catch (err) {
+      mapError.value = `氣候資料載入失敗: ${err.message}`
+      climateEnabled.value = false
+    }
+    return
+  }
+  climateEnabled.value = false
+  if (map && map.getLayer('ava-climate-fill')) map.removeLayer('ava-climate-fill')
 }
 
 onMounted(initMap)
@@ -1380,4 +1624,58 @@ onUnmounted(() => {
     border-radius: 20px 20px 14px 14px;
   }
 }
+
+/* ── Climate Overlay ─────────────────────────────────────────────── */
+.climate-overlay {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  left: 20px;
+  width: min(380px, calc(100vw - 44px));
+  background: rgba(20, 30, 48, 0.93);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 1002;
+  padding: 14px 16px 12px;
+  color: #e8eaf6;
+}
+.cy-indicator-tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+.cy-ind-btn {
+  flex: 1; font-size: 0.72rem; padding: 5px 4px; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.07);
+  color: rgba(230,230,255,0.7); cursor: pointer; transition: background 0.2s, color 0.2s; text-align: center;
+}
+.cy-ind-btn.active { background: #4575b4; border-color: #6699cc; color: #fff; font-weight: 700; }
+.cy-ind-btn:not(.active):hover { background: rgba(255,255,255,0.14); color: #fff; }
+.climate-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.cy-year-badge { display: flex; align-items: baseline; gap: 6px; }
+.cy-year { font-size: 1.5rem; font-weight: 700; color: #aed6f1; line-height: 1; }
+.cy-golden { font-size: 0.7rem; color: #f39c12; font-weight: 600; white-space: nowrap; }
+.cy-stats { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-end; }
+.cy-aoc-name { font-size: 0.72rem; color: rgba(200,220,255,0.85); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 170px; }
+.cy-temp { font-size: 1.02rem; font-weight: 700; color: #f8fbff; }
+.cy-delta { font-size: 0.72rem; font-weight: 600; padding: 1px 6px; border-radius: 999px; margin-top: 2px; }
+.cy-warm { background: rgba(215,48,39,0.22); color: #ffc2bb; }
+.cy-cool { background: rgba(69,117,180,0.28); color: #b8d7ff; }
+.cy-close {
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.6); cursor: pointer; font-size: 0.8rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s; flex-shrink: 0;
+}
+.cy-close:hover { background: rgba(255,255,255,0.2); color: #fff; }
+.climate-slider { width: 100%; height: 4px; border-radius: 2px; accent-color: #4575b4; cursor: pointer; margin-bottom: 2px; }
+.climate-year-axis { display: flex; justify-content: space-between; font-size: 0.65rem; color: rgba(200,210,255,0.55); margin-bottom: 10px; padding: 0 2px; }
+.climate-legend { margin-bottom: 6px; }
+.legend-gradient { height: 8px; border-radius: 4px; width: 100%; }
+.legend-gradient.legend-temp { background: linear-gradient(to right, #4575b4, #ffffbf, #d73027); }
+.legend-gradient.legend-sun  { background: linear-gradient(to right, #7851a9, #ffffbf, #fd8d3c); }
+.legend-gradient.legend-rain { background: linear-gradient(to right, #fd8d3c, #ffffbf, #2c3ea0); }
+.legend-labels { display: flex; justify-content: space-between; font-size: 0.63rem; color: rgba(200,210,255,0.6); margin-top: 3px; }
+.climate-footnote { font-size: 0.63rem; color: rgba(180,200,255,0.5); margin-top: 4px; line-height: 1.4; }
+.climate-slide-enter-active, .climate-slide-leave-active { transition: opacity 0.3s ease, transform 0.3s ease; }
+.climate-slide-enter-from, .climate-slide-leave-to { opacity: 0; transform: translateY(12px); }
+@media (max-width: 768px) { .climate-overlay { left: 8px; width: calc(100vw - 16px); } }
 </style>
