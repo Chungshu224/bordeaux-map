@@ -45,6 +45,29 @@
             <span class="stat-value">{{ playCount || 0 }}</span>
           </div>
         </div>
+        <div class="lb-box">
+          <div class="lb-head">
+            <span class="lb-title">🏅 排行榜</span>
+            <div class="lb-tabs">
+              <button :class="{ active: lbTab==='easy' }" @click="setLbTab('easy')">簡單</button>
+              <button :class="{ active: lbTab==='hard' }" @click="setLbTab('hard')">困難</button>
+            </div>
+          </div>
+          <div v-if="lbLoading" class="lb-empty">載入中…</div>
+          <table v-else class="lb-table">
+            <thead><tr><th>#</th><th>選手</th><th>分數</th><th>答對</th><th>日期</th></tr></thead>
+            <tbody>
+              <tr v-for="(r,i) in lbData" :key="r.id" :class="{ 'my-row': r.user_id === myUid }">
+                <td>{{ i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1) }}</td>
+                <td>{{ r.username }}</td>
+                <td class="score-td">{{ r.score }}</td>
+                <td>{{ r.correct_count }}/{{ r.total_questions }}</td>
+                <td class="date-td">{{ fmtDate(r.created_at) }}</td>
+              </tr>
+              <tr v-if="!lbData.length"><td colspan="5" class="lb-empty">尚無紀錄，快來成為第一名！</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -129,6 +152,10 @@
             <div class="wi-answer">→ {{ w.region }}<span v-if="w.regionZh">（{{ w.regionZh }}）</span></div>
           </div>
         </div>
+        <button class="btn-upload" :disabled="uploading || uploaded" @click="submitScore">
+          {{ uploading ? '上傳中…' : uploaded ? '✓ 已上傳' : '📤 上傳成績' }}
+        </button>
+        <div v-if="uploadErr" class="err-msg">{{ uploadErr }}</div>
         <div class="final-actions">
           <button class="btn-retry" @click="backToLobby">再玩一次</button>
           <button class="btn-back"  @click="handleBack">返回選單</button>
@@ -139,7 +166,9 @@
 </template>
 
 <script setup>
-import { ref, computed, onUnmounted } from 'vue'
+import { ref, computed, onUnmounted, onMounted } from 'vue'
+import { supabase } from '@/lib/supabaseClient.js'
+import { authState } from '@/stores/authStore.js'
 
 const emit = defineEmits(['back'])
 
@@ -321,6 +350,13 @@ function buildQuestions(diff) {
 const pageEl        = ref(null)
 const phase         = ref('lobby')
 const difficulty    = ref('easy')
+const lbTab         = ref('easy')
+const lbLoading     = ref(false)
+const lbData        = ref([])
+const uploaded      = ref(false)
+const uploading     = ref(false)
+const uploadErr     = ref('')
+const myUid         = computed(() => authState.user?.id)
 const questions     = ref([])
 const currentIdx    = ref(0)
 const score         = ref(0)
@@ -455,14 +491,44 @@ function endGame() {
   }
 }
 
-function backToLobby() { phase.value = 'lobby' }
+function backToLobby() { phase.value = 'lobby'; uploaded.value = false; loadLeaderboard(lbTab.value) }
 function handleBack() { clearInterval(timerInterval); emit('back') }
 function onKeyDown(e) {
   if (phase.value !== 'playing') return
   const idx = parseInt(e.key) - 1
   if (idx >= 0 && idx < currentOptions.value.length) answer(currentOptions.value[idx].region)
 }
+function fmtDate(iso) { const d = new Date(iso); return `${d.getMonth()+1}/${d.getDate()}` }
+function setLbTab(tab) { lbTab.value = tab; loadLeaderboard(tab) }
+async function loadLeaderboard(diff) {
+  lbLoading.value = true
+  try {
+    const { data } = await supabase.from('game_scores')
+      .select('id,user_id,username,score,correct_count,total_questions,created_at')
+      .eq('game_type', 'pt_flash_card').eq('difficulty', diff)
+      .order('score', { ascending: false }).limit(10)
+    lbData.value = data || []
+  } catch { lbData.value = [] }
+  lbLoading.value = false
+}
+async function submitScore() {
+  if (!authState.user) { uploadErr.value = '請先登入'; return }
+  uploading.value = true; uploadErr.value = ''
+  try {
+    const { error } = await supabase.from('game_scores').insert({
+      game_type: 'pt_flash_card', difficulty: difficulty.value,
+      score: score.value, correct_count: correctCount.value,
+      total_questions: questions.value.length,
+      user_id: authState.user.id,
+      username: authState.user.user_metadata?.display_name || authState.user.email?.split('@')[0] || '玩家',
+    })
+    if (error) throw error
+    uploaded.value = true; loadLeaderboard(difficulty.value)
+  } catch (e) { uploadErr.value = e.message || '上傳失敗' }
+  uploading.value = false
+}
 onUnmounted(() => clearInterval(timerInterval))
+onMounted(() => loadLeaderboard('easy'))
 </script>
 
 <style scoped>
@@ -593,6 +659,23 @@ onUnmounted(() => clearInterval(timerInterval))
 .slide-in-enter-active, .slide-in-leave-active { transition: all 0.2s ease; }
 .slide-in-enter-from { opacity: 0; transform: translateX(30px); }
 .slide-in-leave-to   { opacity: 0; transform: translateX(-30px); }
+/* ── Leaderboard ──────────────────────────────────────────── */
+.lb-box { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 16px; width: 100%; max-width: 560px; }
+.lb-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.lb-title { font-weight: 700; }
+.lb-tabs { display: flex; gap: 6px; }
+.lb-tabs button { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.5); padding: 4px 12px; border-radius: 8px; cursor: pointer; font-size: 0.84rem; transition: all 0.2s; }
+.lb-tabs button.active { background: rgba(255,255,255,0.14); color: #fff; }
+.lb-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.lb-table th { color: rgba(255,255,255,0.4); text-align: left; padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.lb-table td { padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.lb-table tr.my-row td { background: rgba(255,255,255,0.08); }
+.lb-empty { text-align: center; color: rgba(255,255,255,0.3); padding: 12px; }
+.score-td { color: #60a5fa; font-weight: 700; }
+.date-td { color: rgba(255,255,255,0.3); }
+.btn-upload { width: 100%; padding: 12px; background: linear-gradient(135deg, #1d4ed8, #60a5fa); border: none; border-radius: 12px; color: #fff; font-weight: 700; cursor: pointer; margin-top: 12px; transition: opacity 0.2s; }
+.btn-upload:disabled { opacity: 0.5; cursor: not-allowed; }
+.err-msg { color: #ef4444; font-size: 0.85rem; text-align: center; margin-top: 4px; }
 @media (max-width: 480px) {
   .diff-cards { grid-template-columns: 1fr; }
 }
