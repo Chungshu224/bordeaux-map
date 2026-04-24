@@ -1038,7 +1038,7 @@ onUnmounted(() => {
   right: auto;
   transform: translateX(-50%);
   width: min(90vw, 560px);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 170px);
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   border: none;
@@ -1461,7 +1461,7 @@ onUnmounted(() => {
   left: 50%;
   transform: translateX(-50%);
   width: min(90vw, 560px);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
   z-index: 1300;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1614,7 +1614,7 @@ onUnmounted(() => {
   }
   .map-info-bar {
     width: min(94vw, 340px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 100px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 160px);
   }
   .aoc-drawer {
     left: 0;

@@ -264,6 +264,35 @@ export class HungaryAchievementManager {
     if (this._initialized) return
     this._initialized = true
     this._load()
+    this._syncWithCourseProgress()
+  }
+
+  _syncWithCourseProgress() {
+    try {
+      const raw = localStorage.getItem('hungary-wine-academy-progress')
+      if (!raw) return
+      const data = JSON.parse(raw)
+      const completedLessons = data.completedLessons || []
+      if (!completedLessons.length) return
+
+      const s = hungaryAchievementState.userStats
+      // 解析 Level 1 / Level 2 完成情況
+      const l1 = completedLessons.filter(id => id.startsWith('hu-l1-'))
+      const l2 = completedLessons.filter(id => id.startsWith('hu-l2-'))
+      const level1Lessons = 8
+      const level2Lessons = 6
+
+      s.completedLessons = Math.max(s.completedLessons || 0, completedLessons.length)
+      s.level1Completed  = s.level1Completed  || (l1.length >= level1Lessons)
+      s.level2Completed  = s.level2Completed  || (l2.length >= level2Lessons)
+      const totalLessons = level1Lessons + level2Lessons
+      s.totalProgress = Math.max(s.totalProgress || 0,
+        Math.round(completedLessons.length / totalLessons * 100)
+      )
+
+      this._save()
+      this._checkAll()
+    } catch (e) { console.warn('[hungary-ach] syncProgress error', e) }
   }
 
   _load() {

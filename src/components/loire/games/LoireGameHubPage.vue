@@ -122,7 +122,7 @@ function closeGame()  { activeGame.value = null }
 
 <style scoped>
 .lgh-page {
-  width: 100%; min-height: 100vh;
+  width: 100%; height: 100vh;
   background: linear-gradient(160deg, #0a0e1a 0%, #111827 50%, #0d1120 100%);
   color: #fff;
   font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;

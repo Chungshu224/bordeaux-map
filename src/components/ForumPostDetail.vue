@@ -306,4 +306,53 @@ onMounted(async () => {
 .reply-form-section textarea:focus { border-color: #722f37; }
 .form-error { color: #dc2626; font-size: 0.82rem; margin-bottom: 8px; }
 .login-hint { font-size: 0.9rem; color: #7a6a5a; display: flex; align-items: center; gap: 8px; }
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Topbar */
+  .detail-topbar-inner {
+    padding: 0 10px;
+  }
+  .tb-btn {
+    padding: 5px 9px;
+    font-size: 0.72rem;
+  }
+
+  /* Body */
+  .detail-body {
+    padding: 16px 12px 60px;
+  }
+
+  /* Post box */
+  .post-box {
+    padding: 16px;
+    border-radius: 12px;
+  }
+  .post-title {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+  .post-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .del-btn {
+    margin-left: 0;
+  }
+
+  /* Reply card */
+  .reply-card {
+    padding: 12px 14px;
+  }
+  .reply-meta {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* Reply form */
+  .reply-form-section {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
 </style>

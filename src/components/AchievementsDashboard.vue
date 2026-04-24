@@ -656,14 +656,30 @@ async function shareCard() {
   .rarity-card { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
-  .ach-header  { padding: 16px; }
-  .ach-title   { font-size: 1.3rem; }
-  .stats-grid  { grid-template-columns: 1fr; padding: 14px 16px; gap: 12px; }
-  .cat-tabs    { padding: 0 12px 12px; }
-  .ach-grid    { grid-template-columns: 1fr; }
+  .ach-header    { padding: 12px 14px; }
+  .ach-title     { font-size: 1.2rem; }
+  .ach-sub       { font-size: 0.72rem; }
+  /* 2 欄並排：前兩個卡片並列，稀有度分布卡片佔滿整行 */
+  .stats-grid    { grid-template-columns: 1fr 1fr; padding: 12px 14px; gap: 10px; }
+  .rarity-card   { grid-column: 1 / -1; }
+  .stat-card     { padding: 12px 10px; gap: 8px; }
+  .stat-icon-wrap { font-size: 1.5rem; margin-top: 0; }
+  .stat-val      { font-size: 1.15rem; }
+  .stat-lbl      { font-size: 0.68rem; }
+  .rarity-row    { font-size: 0.66rem; padding: 2px 6px; margin-bottom: 2px; }
+  /* Tab 列：縮小按鈕，末項保留間距 */
+  .cat-tabs      { padding: 0 14px 12px; gap: 6px; }
+  .cat-tab       { padding: 6px 10px; font-size: 0.76rem; gap: 4px; }
+  .cat-tabs::after { content: ''; display: block; min-width: 2px; flex-shrink: 0; }
+  /* 成就卡片 */
+  .ach-grid      { grid-template-columns: 1fr; }
   .ach-grid-wrap { padding: 4px 12px 28px; }
-  .near-section { padding: 4px 12px 20px; }
-  .share-wrap  { padding: 8px 12px 24px; }
-  .lv-pill     { display: none; }
+  .ach-card      { padding: 12px; gap: 10px; }
+  .ach-icon      { font-size: 1.8rem; }
+  .ach-name      { font-size: 0.88rem; }
+  .ach-desc      { font-size: 0.72rem; }
+  .near-section  { padding: 4px 12px 20px; }
+  .share-wrap    { padding: 8px 12px 24px; }
+  .lv-pill       { display: none; }
 }
 </style>

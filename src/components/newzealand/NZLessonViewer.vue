@@ -67,170 +67,19 @@
       </div>
     </div>
 
-    <!-- Welcome / Cover Screen（義大利風格） -->
-    <div v-else class="nz-level-selection">
-      <!-- 背景動畫 -->
-      <div class="nz-background-animation">
-        <div class="nz-wine-bubbles">
-          <div v-for="i in 20" :key="i" class="nz-bubble" :style="getBubbleStyle(i)"></div>
-        </div>
-      </div>
+    <!-- Welcome / Cover Screen（共用 courseHome 版型） -->
+    <NZLevelSelector
+      v-else
+      :modules="modules"
+      :completed-lessons="completedLessons"
+      :levels="levels"
+      @enter-level="enterLevel"
+      @open-map="openMap"
+      @open-games="emit('open-game')"
+      @open-notebook="emit('open-notebook')"
+    />
 
-      <div class="nz-main-container">
-        <!-- 頂部品牌區域 -->
-        <header class="nz-brand-header">
-          <div class="nz-brand-logo">
-            <div class="nz-wine-glass-icon">🥝</div>
-            <div class="nz-brand-text">
-              <h1 class="nz-brand-title">侍酒師的筆記本</h1>
-              <p class="nz-brand-subtitle">New Zealand Wine Course</p>
-            </div>
-          </div>
-          <div class="nz-user-panel">
-            <template v-if="authUser">
-              <div class="nz-user-avatar">
-                <img v-if="avatarUrl" :src="avatarUrl" class="nz-avatar-img" />
-                <span v-else class="nz-avatar-initial">{{ avatarInitial }}</span>
-              </div>
-              <div class="nz-user-info">
-                <span class="nz-user-name">{{ displayName }}</span>
-                <div class="nz-tier-badge" :class="`nz-tier-${userTier}`">
-                  <span class="nz-tier-icon">{{ tierInfo.icon }}</span>
-                  <span class="nz-tier-label">{{ tierInfo.label }}</span>
-                </div>
-                <div class="nz-user-btns">
-                  <button class="nz-user-action-btn" @click="router.push('/')">🏠 首頁</button>
-                  <button class="nz-user-action-btn" @click="router.push('/settings')">⚙️ 設定</button>
-                  <button class="nz-user-action-btn nz-logout-btn" @click="handleLogout">登出</button>
-                </div>
-              </div>
-            </template>
-            <template v-else>
-              <button class="nz-user-action-btn" @click="router.push('/login')">🔑 登入</button>
-              <button class="nz-user-action-btn" @click="router.push('/register')">✏️ 註冊</button>
-            </template>
-          </div>
-        </header>
-
-        <!-- 快速功能入口 -->
-        <section class="nz-quick-nav">
-          <div class="nz-quick-nav-grid">
-            <button class="nz-nav-card nz-nav-explore" @click="openMap">
-              <span class="nz-nav-icon">🗺️</span>
-              <span class="nz-nav-title">探索地圖</span>
-              <span class="nz-nav-desc">互動式紐西蘭產區地圖・北島・南島</span>
-              <span class="nz-nav-desc">查看已完成課程與學習記錄</span>
-            </button>
-            <button class="nz-nav-card nz-nav-achievement" @click="showAchievements = true">
-              <span class="nz-nav-icon">🏆</span>
-              <span class="nz-nav-title">成就系統</span>
-              <span class="nz-nav-desc">解鎖成就・累積點數・查看等級</span>
-            </button>
-            <button class="nz-nav-card nz-nav-progress" @click="showProgress = true">
-              <span class="nz-nav-icon">📊</span>
-              <span class="nz-nav-title">學習進度</span>
-              <span class="nz-nav-desc">正確率・學習時長・各課程詳細記錄</span>
-            </button>
-            <button class="nz-nav-card nz-nav-notebook" @click="emit('open-notebook')">
-              <span class="nz-nav-icon">📔</span>
-              <span class="nz-nav-title">品飲筆記</span>
-              <span class="nz-nav-desc">記錄紐西蘭葡萄酒品飲心得</span>
-            </button>
-            <button class="nz-nav-card nz-nav-game" @click="emit('open-game')">
-              <span class="nz-nav-icon">🎮</span>
-              <span class="nz-nav-title">互動練習</span>
-              <span class="nz-nav-desc">產區競答・品種配對・風格閃問</span>
-            </button>
-          </div>
-        </section>
-
-        <!-- 等級選擇卡片 -->
-        <section class="nz-level-selection-grid">
-          <div class="nz-grid-container">
-            <div
-              v-for="lvl of levels"
-              :key="lvl"
-              class="nz-level-card"
-              :class="`nz-lv-${lvl}`"
-              @click="enterLevel(lvl)"
-            >
-              <div class="nz-level-header">
-                <div class="nz-level-badge-wrap">
-                  <span class="nz-level-number">{{ lvl }}</span>
-                  <div class="nz-level-icon-wrap">{{ getNZLevelIcon(lvl) }}</div>
-                </div>
-                <div class="nz-level-title-wrap">
-                  <h3>{{ getLevelTitle(lvl) }}</h3>
-                  <p>Level {{ lvl }}</p>
-                </div>
-              </div>
-              <div class="nz-level-content">
-                <div class="nz-level-description">{{ getLevelDescription(lvl) }}</div>
-                <div class="nz-level-features">
-                  <div v-for="feat in getNZLevelFeatures(lvl)" :key="feat.text" class="nz-feature-item">
-                    <span class="nz-feature-icon">{{ feat.icon }}</span>
-                    <span>{{ feat.text }}</span>
-                  </div>
-                </div>
-                <div class="nz-level-stats">
-                  <div class="nz-stat-item">
-                    <span class="nz-stat-number">{{ statsByLevel[lvl] ? statsByLevel[lvl].lessons : 0 }}</span>
-                    <span class="nz-stat-label">個課程</span>
-                  </div>
-                  <div class="nz-stat-item">
-                    <span class="nz-stat-number">{{ statsByLevel[lvl] ? statsByLevel[lvl].hours : 0 }}</span>
-                    <span class="nz-stat-label">小時</span>
-                  </div>
-                  <div class="nz-stat-item">
-                    <span class="nz-stat-number">{{ statsByLevel[lvl] ? statsByLevel[lvl].progress : 0 }}%</span>
-                    <span class="nz-stat-label">完成度</span>
-                  </div>
-                </div>
-              </div>
-              <div class="nz-level-action">
-                <button class="nz-level-btn">
-                  <span v-if="!statsByLevel[lvl] || statsByLevel[lvl].progress === 0">開始學習</span>
-                  <span v-else-if="statsByLevel[lvl].progress === 100">重新學習</span>
-                  <span v-else>繼續學習</span>
-                  <span class="nz-btn-arrow">→</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 雲端同步提示 -->
-        <div v-if="!authUser" class="nz-sync-hint-bar">
-          📍 登入後可將學習進度同步至雲端
-        </div>
-      </div>
-
-      <!-- 成就彈窗 -->
-      <div v-if="showAchievements" class="nz-modal-overlay" @click="showAchievements = false">
-        <div class="nz-achievement-modal" @click.stop>
-          <div class="nz-modal-header">
-            <h3>🏆 學習成就</h3>
-            <button class="nz-close-btn" @click="showAchievements = false">×</button>
-          </div>
-          <div class="nz-modal-content">
-            <AchievementsDashboard course-key="newzealand" @back="showAchievements = false" />
-          </div>
-        </div>
-      </div>
-
-      <!-- 進度彈窗 -->
-      <div v-if="showProgress" class="nz-modal-overlay" @click="showProgress = false">
-        <div class="nz-progress-modal" @click.stop>
-          <div class="nz-modal-header">
-            <h3>📊 紐西蘭課程學習進度</h3>
-            <button class="nz-close-btn" @click="showProgress = false">×</button>
-          </div>
-          <div class="nz-modal-content">
-            <LearningProgressDashboard course-key="newzealand" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- 舊版首頁區塊已移除，改用 NZLevelSelector（共用 courseHome 版型） -->
   </div>
 </template>
 
@@ -479,7 +328,7 @@ const getReviewConfig = () => {
 </script>
 
 <style scoped>
-.lesson-viewer { flex: 1; width: 100%; background: #f8f9fa; display: flex; flex-direction: column; color: #2d3748; padding-bottom: 60px; overflow-y: auto; overflow-x: hidden; }
+.lesson-viewer { flex: 1; width: 100%; background: #f8f9fa; display: flex; flex-direction: column; color: #2d3748; padding-bottom: 60px; }
 .lesson-content { max-width: 100%; width: 100%; margin: 0; padding: 0; display: flex; flex-direction: column; box-sizing: border-box; }
 .map-lesson { flex: 1; display: flex; flex-direction: column; }
 .map-container { flex: 1; min-height: 600px; }
@@ -554,8 +403,6 @@ const getReviewConfig = () => {
   min-height: 100vh;
   background: linear-gradient(135deg, #00533e 0%, #1a7a56 25%, #40916c 50%, #1e6091 75%, #023e8a 100%);
   position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 /* 背景動畫 */
@@ -837,5 +684,14 @@ const getReviewConfig = () => {
   .nz-quick-nav-grid { grid-template-columns: 1fr; }
   .nz-grid-container { grid-template-columns: 1fr; }
   .nz-level-features { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  /* 成就/進度 modal 改為底部抽屜 */
+  .nz-modal-overlay { padding: 0; align-items: flex-end; }
+  .nz-achievement-modal, .nz-progress-modal {
+    border-radius: 20px 20px 0 0;
+    max-height: 92vh;
+  }
+  .nz-modal-header { border-radius: 0; padding: 0.75rem 1rem; }
 }
 </style>

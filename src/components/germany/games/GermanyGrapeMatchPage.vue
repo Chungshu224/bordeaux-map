@@ -8,6 +8,7 @@
     hardDesc="白 + 紅品種 + 反向配對"
     :easyCount="12"
     :hardCount="18"
+    gameType="germany_grape_match"
     @back="$emit('back')"
   />
 </template>

@@ -401,7 +401,7 @@ const confirmDelete = async () => {
 .lr-color-check { font-size: 0.8rem; color: #fff; font-weight: 900; text-shadow: 0 0 3px rgba(0,0,0,0.7); }
 .lr-color-hint { font-size: 0.78rem; color: #666; margin: 0; }
 .lr-tag-grid { display: flex; flex-wrap: wrap; gap: 6px; }
-.lr-tag-btn { padding: 5px 12px; border-radius: 20px; border: 1.5px solid #e0e0e0; background: #f9f9f9; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+.lr-tag-btn { padding: 5px 12px; border-radius: 20px; border: 1.5px solid #e0e0e0; background: #f9f9f9; color: #1f1f1f; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
 .lr-tag-btn:hover { border-color: #bbb; }
 .lr-tag-btn.tag-active { color: #fff; transform: translateY(-1px); }
 .lr-structure-grid { display: flex; flex-direction: column; gap: 10px; }

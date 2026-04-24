@@ -45,6 +45,31 @@
           <div class="best-value">{{ bestScore }} 分</div>
         </div>
 
+        <!-- 排行榜 -->
+        <div v-if="gameType" class="lb-box">
+          <div class="lb-head">
+            <span class="lb-title">🏆 排行榜</span>
+            <div class="lb-tabs">
+              <button :class="{ active: lbTab === 'easy' }" @click="setLbTab('easy')">簡單</button>
+              <button :class="{ active: lbTab === 'hard' }" @click="setLbTab('hard')">困難</button>
+            </div>
+          </div>
+          <div v-if="lbLoading" class="lb-empty">載入中…</div>
+          <table v-else class="lb-table">
+            <thead><tr><th>#</th><th>選手</th><th>分數</th><th>正確率</th><th>日期</th></tr></thead>
+            <tbody>
+              <tr v-for="(r, i) in lbData" :key="r.id" :class="{ mine: r.user_id === myUid }">
+                <td>{{ i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1) }}</td>
+                <td>{{ r.username }}</td>
+                <td class="lb-gold">{{ r.score }}</td>
+                <td>{{ r.correct_count }}/{{ r.total_questions }}</td>
+                <td class="lb-muted">{{ fmtDate(r.created_at) }}</td>
+              </tr>
+              <tr v-if="!lbData.length"><td colspan="5" class="lb-empty">尚無紀錄</td></tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="rules-box">
           <div class="rules-title">📋 計分規則</div>
           <ul>
@@ -126,6 +151,10 @@
             <span class="review-ans">{{ w.answer }}</span>
           </div>
         </div>
+        <button v-if="gameType" class="btn-upload" :disabled="uploading || uploaded" @click="submitScore">
+          {{ uploading ? '上傳中…' : uploaded ? '✓ 已登錄排行榜' : '📤 上傳成績' }}
+        </button>
+        <div v-if="uploadErr" class="lb-err">{{ uploadErr }}</div>
         <button class="btn-retry" @click="backToLobby">再玩一次</button>
         <button class="btn-back" @click="handleBack">返回遊戲中心</button>
       </div>
@@ -134,7 +163,9 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, onUnmounted, nextTick } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
+import { supabase } from '@/lib/supabaseClient.js'
+import { authState } from '@/stores/authStore.js'
 
 const props = defineProps({
   title:           { type: String,  required: true },
@@ -144,7 +175,8 @@ const props = defineProps({
   easyDesc:        { type: String,  default: '基礎練習模式' },
   hardDesc:        { type: String,  default: '進階挑戰模式' },
   easyCount:       { type: Number,  default: 10 },
-  hardCount:       { type: Number,  default: 15 }
+  hardCount:       { type: Number,  default: 15 },
+  gameType:        { type: String,  default: '' }
 })
 const emit = defineEmits(['back'])
 
@@ -164,7 +196,15 @@ const timeLeft = ref(0)
 const totalQ = ref(0)
 const bestScore = ref(parseInt(localStorage.getItem(`germany-quiz-${props.title}-best`) || '0') || 0)
 const diff = ref('easy')
+const lbTab = ref('easy')
+const lbLoading = ref(false)
+const lbData = ref([])
+const uploading = ref(false)
+const uploaded = ref(false)
+const uploadErr = ref('')
 let timerId = null
+
+const myUid = computed(() => authState.user?.id)
 
 const currentQ = computed(() => questions.value[qIdx.value])
 const timerPct = computed(() => props.timePerQuestion > 0 ? (timeLeft.value / (diff.value === 'easy' ? props.timePerQuestion : Math.round(props.timePerQuestion * 0.6))) * 100 : 100)
@@ -278,7 +318,50 @@ function advance() {
 
 function backToLobby() {
   clearInterval(timerId)
+  uploaded.value = false
+  uploadErr.value = ''
   phase.value = 'lobby'
+  if (props.gameType) loadLeaderboard(lbTab.value)
+}
+
+function fmtDate(iso) {
+  if (!iso) return ''
+  const d = new Date(iso)
+  return `${d.getMonth() + 1}/${d.getDate()}`
+}
+
+function setLbTab(tab) { lbTab.value = tab; loadLeaderboard(tab) }
+
+async function loadLeaderboard(d) {
+  if (!props.gameType || !supabase) return
+  lbLoading.value = true
+  try {
+    const { data } = await supabase.from('quiz_scores')
+      .select('id, user_id, username, score, correct_count, total_questions, created_at')
+      .eq('game_type', props.gameType).eq('difficulty', d)
+      .order('score', { ascending: false }).limit(10)
+    lbData.value = data || []
+  } catch (e) { console.error(e) } finally { lbLoading.value = false }
+}
+
+async function submitScore() {
+  if (!authState.user) { uploadErr.value = '請先登入以上傳成績'; return }
+  if (uploaded.value) return
+  uploading.value = true; uploadErr.value = ''
+  try {
+    const username = authState.user.user_metadata?.full_name
+      || authState.user.user_metadata?.display_name
+      || authState.user.email?.split('@')[0] || '玩家'
+    const { error } = await supabase.from('quiz_scores').insert({
+      user_id: authState.user.id, username,
+      game_type: props.gameType, difficulty: diff.value,
+      score: score.value, correct_count: correctCount.value,
+      total_questions: totalQ.value
+    })
+    if (error) throw error
+    uploaded.value = true
+    loadLeaderboard(diff.value)
+  } catch (e) { uploadErr.value = `上傳失敗：${e.message}` } finally { uploading.value = false }
 }
 
 function handleBack() {
@@ -293,6 +376,7 @@ function onKey(e) {
   if (i >= 0 && currentQ.value?.options[i]) answer(currentQ.value.options[i])
 }
 
+onMounted(() => { if (props.gameType) loadLeaderboard('easy') })
 onUnmounted(() => clearInterval(timerId))
 </script>
 
@@ -399,9 +483,31 @@ onUnmounted(() => clearInterval(timerId))
   display: block; width: 100%; padding: 0.9rem; border-radius: 12px; border: none;
   font-size: 1rem; font-weight: 700; cursor: pointer; margin-bottom: 0.75rem; transition: opacity 0.2s;
 }
+.btn-upload {
+  display: block; width: 100%; padding: 0.9rem; border-radius: 12px; border: none;
+  font-size: 1rem; font-weight: 700; cursor: pointer; margin-bottom: 0.75rem; transition: opacity 0.2s;
+  background: linear-gradient(135deg, #1b5e20, #2e7d32); color: white;
+}
+.btn-upload:disabled { opacity: 0.5; cursor: default; }
 .btn-retry { background: linear-gradient(135deg, #1565c0, #1976d2); color: white; }
 .btn-back { background: rgba(255,255,255,0.1); color: #ddd; }
-.btn-retry:hover, .btn-back:hover { opacity: 0.85; }
+.btn-retry:hover, .btn-back:hover, .btn-upload:not(:disabled):hover { opacity: 0.85; }
+.lb-err { color: #ef9a9a; font-size: 0.85rem; text-align: center; margin-bottom: 0.75rem; }
+
+/* ── Leaderboard ── */
+.lb-box { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 16px; margin-bottom: 1.5rem; }
+.lb-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.lb-title { font-weight: 700; font-size: 0.95rem; }
+.lb-tabs { display: flex; gap: 6px; }
+.lb-tabs button { background: transparent; border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.5); padding: 4px 12px; border-radius: 8px; cursor: pointer; font-size: 0.82rem; transition: all 0.2s; }
+.lb-tabs button.active { background: rgba(255,255,255,0.12); color: #fff; }
+.lb-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+.lb-table th { color: rgba(255,255,255,0.4); text-align: left; padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.07); font-weight: 600; }
+.lb-table td { padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.lb-table tr.mine td { background: rgba(30,136,229,0.15); }
+.lb-gold { color: #FFD700; font-weight: 700; }
+.lb-muted { color: rgba(255,255,255,0.4); }
+.lb-empty { text-align: center; color: rgba(255,255,255,0.3); padding: 12px; font-size: 0.85rem; }
 
 @media (max-width: 480px) {
   .gqb-title { font-size: 1.5rem; }

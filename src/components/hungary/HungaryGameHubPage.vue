@@ -84,7 +84,8 @@ const GAMES = [
 .hu-game-hub {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
   background: linear-gradient(135deg, #12060a 0%, #1e0c12 100%);
   color: #f0e6d3;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

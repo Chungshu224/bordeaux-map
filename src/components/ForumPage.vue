@@ -209,7 +209,8 @@ onMounted(async () => {
 .forum-topbar-right {
   display: flex;
   gap: 8px;
-  min-width: 160px;
+  min-width: 0;
+  flex-shrink: 0;
 }
 .forum-topbar-right { justify-content: flex-end; }
 .forum-title {
@@ -218,6 +219,8 @@ onMounted(async () => {
   font-weight: 700;
   margin: 0;
   white-space: nowrap;
+  flex: 1;
+  text-align: center;
 }
 
 /* ── Buttons ─────────────────────────────────────────────── */
@@ -361,5 +364,78 @@ onMounted(async () => {
   padding: 16px 24px;
   display: flex; justify-content: flex-end; gap: 10px;
   border-top: 1px solid #f0e8dc;
+}
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Topbar */
+  .forum-topbar-inner {
+    padding: 0 10px;
+    gap: 6px;
+  }
+  .forum-title {
+    font-size: 0.9rem;
+  }
+  .tb-btn {
+    padding: 5px 9px;
+    font-size: 0.72rem;
+  }
+
+  /* Body */
+  .forum-body {
+    padding: 14px 12px 60px;
+  }
+
+  /* Category bar — 橫向滾動，不換行 */
+  .category-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .category-bar::-webkit-scrollbar { display: none; }
+  .cat-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /* Post card */
+  .post-card {
+    padding: 12px 14px;
+  }
+  .post-card-title {
+    font-size: 0.92rem;
+  }
+  .post-card-meta {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .post-replies {
+    margin-left: 0;
+  }
+
+  /* Modal — 從底部彈出 */
+  .modal-backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .modal-box {
+    border-radius: 20px 20px 0 0;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .modal-body {
+    padding: 16px 18px;
+  }
+  .modal-header {
+    padding: 16px 18px 0;
+  }
+  .modal-footer {
+    padding: 12px 18px 20px;
+  }
 }
 </style>

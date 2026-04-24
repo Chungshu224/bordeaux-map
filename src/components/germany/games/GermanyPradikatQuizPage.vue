@@ -8,6 +8,7 @@
     hardDesc="進階：採收條件 & Oechsle 度數"
     :easyCount="12"
     :hardCount="18"
+    gameType="germany_pradikat_quiz"
     @back="$emit('back')"
   />
 </template>

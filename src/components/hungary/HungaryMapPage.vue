@@ -90,19 +90,98 @@
       <!-- ── Mapbox 地圖容器 ───────────────────────────────────── -->
       <div ref="mapContainer" class="map"></div>
 
+      <!-- ── 氣候熱力圖控制列 ──────────────────────────────────── -->
+      <transition name="hu-climate-slide">
+      <div v-if="climateEnabled && climateData" class="hu-climate-overlay">
+        <!-- 指標切換 -->
+        <div class="hu-cy-indicator-tabs">
+          <button v-for="ind in HU_CLIMATE_INDICATORS" :key="ind.id"
+            :class="['hu-cy-ind-btn', { active: climateIndicator === ind.id }]"
+            @click="setClimateIndicator(ind.id)">
+            {{ ind.icon }} {{ ind.label }}
+          </button>
+        </div>
+        <div class="hu-climate-header-row">
+          <div class="hu-cy-year-badge">
+            <span class="hu-cy-year">{{ climateYear }}</span>
+            <span v-if="isHungaryGoldenVintage" class="hu-cy-golden">🏆 黃金年份</span>
+          </div>
+          <div class="hu-cy-stats">
+            <div v-if="activeRegion?.folder" class="hu-cy-aoc-name">{{ regionDisplayName(activeRegion.folder) }}</div>
+            <span v-if="huCurrentYearValue !== null" class="hu-cy-temp">
+              {{ huCurrentYearValue }}{{ huCurrentIndicatorConfig.unit }}
+            </span>
+            <span v-if="huCurrentYearDelta !== null" class="hu-cy-delta"
+              :class="huCurrentYearDeltaPositive ? 'hu-cy-warm' : 'hu-cy-cool'">
+              {{ huCurrentYearDeltaPositive ? '+' : '' }}{{ huCurrentYearDelta }}{{ huCurrentIndicatorConfig.unit }} vs 基準
+            </span>
+          </div>
+          <button class="hu-cy-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
+        </div>
+        <input
+          type="range"
+          class="hu-climate-slider"
+          v-model.number="climateYear"
+          min="1980" max="2024" step="1"
+          @input="onClimateYearChange"
+        >
+        <div class="hu-climate-year-axis">
+          <span>1980</span><span>1990</span><span>2000</span><span>2010</span><span>2020</span><span>2024</span>
+        </div>
+        <div class="hu-climate-legend">
+          <div :class="['hu-legend-gradient', `hu-legend-${climateIndicator}`]"></div>
+          <div class="hu-legend-labels">
+            <span>{{ huCurrentGlobalStats ? huCurrentGlobalStats.min.toFixed(0) : '' }}{{ huCurrentIndicatorConfig.unit }} {{ huCurrentIndicatorConfig.lowLabel }}</span>
+            <span>均值</span>
+            <span>{{ huCurrentIndicatorConfig.highLabel }} {{ huCurrentGlobalStats ? huCurrentGlobalStats.max.toFixed(0) : '' }}{{ huCurrentIndicatorConfig.unit }}</span>
+          </div>
+        </div>
+        <div class="hu-climate-footnote">📊 {{ huCurrentIndicatorConfig.footnote }}</div>
+      </div>
+      </transition>
+
+      <!-- ── 圖層面板──浮動 ──────────────────────────────────────── -->
+      <transition name="slide-up">
+        <div v-if="showLayerPanel" class="mobile-layer-panel">
+          <div class="layers-panel-header">
+            <span>圖層與顯示</span>
+            <button class="layers-panel-close" @click="showLayerPanel = false">✕</button>
+          </div>
+          <div class="layer-group">
+            <div class="layer-group-label">視角</div>
+            <div class="layer-group-buttons">
+              <button class="btn-layer"
+                :class="{ active: contoursEnabled }"
+                @click="toggleContours()">
+                <span class="lbtn-icon">〰</span>
+                <span class="lbtn-text">等高線</span>
+                <span class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
+              </button>
+              <button class="btn-layer"
+                :class="{ active: climateEnabled }"
+                @click="toggleClimate()">
+                <span class="lbtn-icon">🌡</span>
+                <span class="lbtn-text">氣候熱力</span>
+                <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </transition>
+
       <!-- ── 底部工具列（永遠顯示，與波爾多一致） ──────────────── -->
       <div v-if="mapReady" class="mobile-map-toolbar">
-        <button class="mobile-tool-btn" :class="{ active: mobileAocDrawerOpen }" @click="mobileAocDrawerOpen = true">
+        <button class="mobile-tool-btn" :class="{ active: mobileAocDrawerOpen }" @click="mobileAocDrawerOpen = true; showLayerPanel = false">
           <span class="mobile-tool-icon">產</span>
           <span>產區</span>
+        </button>
+        <button class="mobile-tool-btn" :class="{ active: showLayerPanel }" @click="showLayerPanel = !showLayerPanel; mobileAocDrawerOpen = false">
+          <span class="mobile-tool-icon">層</span>
+          <span>圖層</span>
         </button>
         <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
           <span class="mobile-tool-icon">3D</span>
           <span>{{ is3D ? '2D' : '3D' }}</span>
-        </button>
-        <button class="mobile-tool-btn" @click="resetMap">
-          <span class="mobile-tool-icon">↺</span>
-          <span>重置</span>
         </button>
         <button class="mobile-tool-btn" :class="{ active: activeRegion?.folder && !infoBarCollapsed }" @click="infoBarCollapsed = !infoBarCollapsed">
           <span class="mobile-tool-icon">資</span>
@@ -166,7 +245,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -200,6 +279,7 @@ const isLoading = ref(false)
 const is3D = ref(false)
 const infoBarCollapsed = ref(true)
 const mobileAocDrawerOpen = ref(false)
+const showLayerPanel = ref(false)
 const search = ref('')
 const activeRegion = ref(null)
 const regionInfo = ref(null)
@@ -207,6 +287,93 @@ const regionsData = ref([])
 const allRegionsGeojson = ref(null)
 let map = null
 const geojsonCache = new Map()
+
+// ── 等高線 / 氣候熱力狀態 ──────────────────────────────────────
+const contoursEnabled   = ref(false)
+const climateEnabled    = ref(false)
+const climateYear       = ref(2003)
+const climateData       = ref(null)
+const climateStats      = ref(null)
+const climateStatsSun   = ref(null)
+const climateStatsRain  = ref(null)
+const climateYears      = ref([])
+const climateYearAvg    = ref([])
+const climateYearSun    = ref([])
+const climateYearRain   = ref([])
+const climateIndicator  = ref('temp')
+
+const HU_CLIMATE_INDICATORS = [
+  {
+    id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C',
+    lowLabel: '涼', highLabel: '熱',
+    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010',
+    dataKey: 'temps', baselineKey: 'baseline',
+  },
+  {
+    id: 'sun', icon: '☀️', label: '日照時數', unit: 'h',
+    lowLabel: '少', highLabel: '多',
+    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010',
+    dataKey: 'sun', baselineKey: 'baselineSun',
+  },
+  {
+    id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm',
+    lowLabel: '乾', highLabel: '濕',
+    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010',
+    dataKey: 'rain', baselineKey: 'baselineRain',
+  },
+]
+
+const HU_GOLDEN_VINTAGES = new Set([1993, 1999, 2000, 2006, 2007, 2008, 2013, 2017])
+
+const huCurrentIndicatorConfig = computed(() =>
+  HU_CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value)
+)
+const huCurrentGlobalStats = computed(() => {
+  const id = climateIndicator.value
+  if (id === 'sun')  return climateStatsSun.value
+  if (id === 'rain') return climateStatsRain.value
+  return climateStats.value
+})
+const huCurrentYearAvgArr = computed(() => {
+  const id = climateIndicator.value
+  if (id === 'sun')  return climateYearSun.value
+  if (id === 'rain') return climateYearRain.value
+  return climateYearAvg.value
+})
+const isHungaryGoldenVintage = computed(() => HU_GOLDEN_VINTAGES.has(climateYear.value))
+
+// 取得目前選取產區在當年的值
+const huCurrentYearValue = computed(() => {
+  if (!climateData.value || !activeRegion.value?.folder) return null
+  const cfg = huCurrentIndicatorConfig.value
+  const idx = climateYears.value.indexOf(climateYear.value)
+  if (idx < 0) return null
+  const d = climateData.value[activeRegion.value.folder]
+  if (!d) return null
+  const val = d[cfg.dataKey]?.[idx]
+  return val != null ? (cfg.id === 'temp' ? val.toFixed(1) : Math.round(val)) : null
+})
+const huCurrentYearDelta = computed(() => {
+  if (!climateData.value || !activeRegion.value?.folder) return null
+  const cfg = huCurrentIndicatorConfig.value
+  const idx = climateYears.value.indexOf(climateYear.value)
+  if (idx < 0) return null
+  const d = climateData.value[activeRegion.value.folder]
+  if (!d) return null
+  const val = d[cfg.dataKey]?.[idx]
+  const base = d[cfg.baselineKey]
+  if (val == null || base == null) return null
+  const delta = val - base
+  return cfg.id === 'temp' ? delta.toFixed(1) : Math.round(delta)
+})
+const huCurrentYearDeltaPositive = computed(() => {
+  const d = huCurrentYearDelta.value
+  if (d === null) return null
+  const id = climateIndicator.value
+  // For rain, more = warmer/wetter (but still "warm" color for 熱)
+  if (id === 'rain') return Number(d) > 0
+  return Number(d) > 0
+})
 
 // ── 名稱→資料夾/群組對照 ─────────────────────────────────────
 const NAME_TO_FOLDER = {
@@ -379,13 +546,16 @@ function playPronunciation() {
 function resetMap() {
   activeRegion.value = null
   regionInfo.value = null
+  infoBarCollapsed.value = true
+  mobileAocDrawerOpen.value = false
+  is3D.value = false
   if (map) {
     if (map.getLayer('hungary-all-fill')) {
       map.setFilter('hungary-all-fill', null)
       map.setFilter('hungary-all-outline', null)
       map.setPaintProperty('hungary-all-fill', 'fill-opacity', 0.38)
     }
-    map.flyTo({ center: [18.5, 47.2], zoom: 6.8, duration: 1000 })
+    map.flyTo({ center: [18.5, 47.2], zoom: 6.8, pitch: 0, bearing: 0, duration: 1000 })
   }
 }
 
@@ -395,9 +565,223 @@ function toggle3D() {
   if (map) map.easeTo({ pitch: is3D.value ? 45 : 0, duration: 800 })
 }
 
+// ── 等高線 / 氣候熱力圖函數 ───────────────────────────────────
+let contoursInitialized = false
+
+function initContourLayers() {
+  if (contoursInitialized || !map) return
+  contoursInitialized = true
+
+  if (!map.getSource('mapbox-dem')) {
+    map.addSource('mapbox-dem', {
+      type: 'raster-dem',
+      url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+      tileSize: 512, maxzoom: 14,
+    })
+  }
+  if (!map.getSource('hu-contours')) {
+    map.addSource('hu-contours', {
+      type: 'vector',
+      url: 'mapbox://mapbox.mapbox-terrain-v2',
+    })
+  }
+  if (!map.getLayer('hu-contours-line')) {
+    map.addLayer({
+      id: 'hu-contours-line', type: 'line',
+      source: 'hu-contours', 'source-layer': 'contour',
+      layout: { 'line-join': 'round', 'line-cap': 'round', visibility: 'none' },
+      paint: {
+        'line-color': [
+          'case',
+          ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFD700',
+          ['==', ['%', ['to-number', ['get', 'ele']], 50],  0], '#FFAA00',
+          '#FF7733'
+        ],
+        'line-width': [
+          'interpolate', ['linear'], ['zoom'],
+          9,  ['case', ['==', ['%', ['to-number', ['get', 'ele']], 50], 0], 0.9, 0.3],
+          11, ['case', ['==', ['%', ['to-number', ['get', 'ele']], 50], 0], 1.6, 0.7],
+          13, ['case', ['==', ['%', ['to-number', ['get', 'ele']], 50], 0], 2.2, 1.0],
+          16, ['case', ['==', ['%', ['to-number', ['get', 'ele']], 50], 0], 3.0, 1.5]
+        ],
+        'line-opacity': ['interpolate', ['linear'], ['zoom'], 9, 0.4, 11, 0.6, 13, 0.8, 16, 0.9]
+      },
+      minzoom: 9,
+    })
+  }
+  if (!map.getLayer('hu-contour-labels')) {
+    map.addLayer({
+      id: 'hu-contour-labels', type: 'symbol',
+      source: 'hu-contours', 'source-layer': 'contour',
+      layout: {
+        'symbol-placement': 'line',
+        'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
+        'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 10, 9, 13, 11, 16, 13],
+        'text-padding': 25, visibility: 'none',
+      },
+      paint: {
+        'text-color': '#FFD700',
+        'text-halo-color': 'rgba(0,0,0,0.8)',
+        'text-halo-width': 2,
+        'text-opacity': ['interpolate', ['linear'], ['zoom'], 10, 0.5, 12, 0.8, 14, 1]
+      },
+      filter: ['==', ['%', ['to-number', ['get', 'ele']], 10], 0],
+      minzoom: 10,
+    })
+  }
+}
+
+function toggleContours() {
+  if (!map) return
+  contoursEnabled.value = !contoursEnabled.value
+  if (contoursEnabled.value) initContourLayers()
+  const vis = contoursEnabled.value ? 'visible' : 'none'
+  if (map.getLayer('hu-contours-line')) map.setLayoutProperty('hu-contours-line', 'visibility', vis)
+  if (map.getLayer('hu-contour-labels')) map.setLayoutProperty('hu-contour-labels', 'visibility', vis)
+}
+
+const loadClimateData = async () => {
+  if (climateData.value) return
+  const res = await fetch('/data/hungary-climate.json')
+  if (!res.ok) throw new Error('無法載入匈牙利氣候資料')
+  const json = await res.json()
+  climateData.value      = json.aocs
+  climateStats.value     = json.global
+  climateStatsSun.value  = json.globalSun  || null
+  climateStatsRain.value = json.globalRain || null
+  climateYears.value     = json.meta.years
+  climateYearAvg.value   = json.meta.yearAvg
+  climateYearSun.value   = json.meta.yearSunAvg  || []
+  climateYearRain.value  = json.meta.yearRainAvg || []
+}
+
+const valueToClimateColor = (val, indicator) => {
+  let stats, stops
+  if (indicator === 'sun') {
+    stats = climateStatsSun.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,       [120,  81, 169]],
+      [mean - 30, [145, 191, 219]],
+      [mean,      [255, 255, 191]],
+      [mean + 30, [254, 224,  72]],
+      [max,       [253, 141,  60]],
+    ]
+  } else if (indicator === 'rain') {
+    stats = climateStatsRain.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,       [253, 174,  97]],
+      [mean - 10, [255, 255, 191]],
+      [mean,      [171, 217, 233]],
+      [mean + 10, [ 74, 144, 226]],
+      [max,       [ 44,  62, 160]],
+    ]
+  } else {
+    stats = climateStats.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [
+      [min,       [ 69, 117, 180]],
+      [mean - 2,  [145, 191, 219]],
+      [mean,      [255, 255, 191]],
+      [mean + 2,  [252, 141,  89]],
+      [max,       [215,  48,  39]],
+    ]
+  }
+  const { min, max } = stats
+  const t = Math.max(min, Math.min(max, val))
+  for (let i = 0; i < stops.length - 1; i++) {
+    const [t0, c0] = stops[i]
+    const [t1, c1] = stops[i + 1]
+    if (t <= t1) {
+      const f = (t - t0) / (t1 - t0)
+      const r = Math.round(c0[0] + f * (c1[0] - c0[0]))
+      const g = Math.round(c0[1] + f * (c1[1] - c0[1]))
+      const b = Math.round(c0[2] + f * (c1[2] - c0[2]))
+      return `rgb(${r},${g},${b})`
+    }
+  }
+  const last = stops[stops.length - 1][1]
+  return `rgb(${last.join(',')})`
+}
+
+const applyClimateColor = (year) => {
+  if (!map || !climateData.value) return
+  if (!map.getLayer('hungary-all-fill')) return
+  const cfg = huCurrentIndicatorConfig.value
+  const idx = climateYears.value.indexOf(year)
+  if (idx < 0) return
+  const stats = huCurrentGlobalStats.value
+  if (!stats) return
+
+  const matchExpr = ['match', ['get', '_folder']]
+  for (const [folderName, d] of Object.entries(climateData.value)) {
+    const arr = d[cfg.dataKey]
+    if (arr?.[idx] != null) {
+      matchExpr.push(folderName)
+      matchExpr.push(valueToClimateColor(arr[idx], cfg.id))
+    }
+  }
+  const globalAvg = huCurrentYearAvgArr.value[idx] ?? stats.mean
+  matchExpr.push(valueToClimateColor(globalAvg, cfg.id))
+
+  map.setPaintProperty('hungary-all-fill', 'fill-color', matchExpr)
+  map.setPaintProperty('hungary-all-fill', 'fill-opacity', 0.80)
+}
+
+const restoreRegionColors = () => {
+  if (!map || !map.getLayer('hungary-all-fill')) return
+  map.setPaintProperty('hungary-all-fill', 'fill-color', [
+    'match', ['get', '_group'],
+    'Tokaj',             '#8B1A1A',
+    'UpperHungary',      '#1B5AA6',
+    'NorthTransdanubia', '#2E7D32',
+    'Balaton',           '#0277BD',
+    'Pannon',            '#6A1B9A',
+    'Duna',              '#BF6900',
+    '#888'
+  ])
+  map.setPaintProperty('hungary-all-fill', 'fill-opacity', 0.38)
+}
+
+const setClimateIndicator = (id) => {
+  climateIndicator.value = id
+  applyClimateColor(climateYear.value)
+}
+
+const onClimateYearChange = () => { applyClimateColor(climateYear.value) }
+
+const toggleClimate = async () => {
+  if (!map) return
+  if (!climateEnabled.value) {
+    isLoading.value = true
+    try {
+      await loadClimateData()
+      climateEnabled.value = true
+      showLayerPanel.value = false  // 關閉圖層面板，讓氣候控制列顯示
+      applyClimateColor(climateYear.value)
+    } catch (err) {
+      mapError.value = `氣候資料載入失敗: ${err.message}`
+    } finally {
+      isLoading.value = false
+    }
+  } else {
+    climateEnabled.value = false
+    restoreRegionColors()
+  }
+}
+
 // ── 初始化地圖 ────────────────────────────────────────────────
 async function initMap(retry = 0) {
   try {
+    if (!mapboxgl.supported()) {
+      mapError.value = '您的瀏覽器不支援 WebGL，請更新瀏覽器或開啟硬體加速後重試'
+      return
+    }
     if (!mapContainer.value) {
       if (retry < 5) { setTimeout(() => initMap(retry + 1), 200); return }
       mapError.value = '無法獲取地圖容器'; return
@@ -412,6 +796,7 @@ async function initMap(retry = 0) {
       bearing: 0
     })
     map.on('load', async () => {
+      map.resize()  // 確保 canvas 符合容器實際尺寸
       map.addControl(new mapboxgl.NavigationControl(), 'top-right')
       map.addControl(new mapboxgl.FullscreenControl(), 'top-right')
       map.fitBounds([[16.1, 45.7], [22.9, 48.6]], { padding: 40, duration: 0 })
@@ -502,6 +887,7 @@ async function loadRegionsData() {
 }
 
 onMounted(async () => {
+  await nextTick()  // 確保容器 DOM 尺寸就緒
   await loadRegionsData()
   await initMap()
 })
@@ -510,13 +896,6 @@ onUnmounted(() => {
   if (map) { map.remove(); map = null }
 })
 </script>
-
-<style>
-html, body {
-  margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden;
-}
-#app { height: 100%; width: 100%; }
-</style>
 
 <style scoped>
 /* ── 整體佈局 ─────────────────────────────────────────────── */
@@ -593,7 +972,7 @@ html, body {
 /* ── 資訊卡（底部置中，與波爾多一致） ──────────────────────── */
 .map-info-bar {
   position: absolute;
-  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 110px), 158px);
+  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 82px), 84px);
   left: 50%;
   transform: translateX(-50%);
   width: min(92vw, 560px);
@@ -774,7 +1153,7 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   width: min(90vw, 560px);
-  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 24px), 72px);
+  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 8px), 12px);
   z-index: 1300;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -949,7 +1328,7 @@ html, body {
     display: flex;
   }
   .map-info-bar {
-    bottom: max(calc(env(safe-area-inset-bottom, 0px) + 110px), 158px);
+    bottom: max(calc(env(safe-area-inset-bottom, 0px) + 82px), 84px);
     width: min(90vw, 560px);
     max-height: min(42vh, 360px);
     padding: 10px 14px 14px;
@@ -970,6 +1349,21 @@ html, body {
   .map-header { padding: 6px 10px; background: rgba(255,255,255,0.72); }
 }
 
+/* ── 電腦版工具列緊湊模式 ────────────────────────────────────── */
+@media (min-width: 769px) {
+  .mobile-tool-btn {
+    min-height: 40px;
+    flex-direction: row;
+    gap: 6px;
+    padding: 0 8px;
+  }
+  .mobile-tool-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.74rem;
+  }
+}
+
 /* ── 抽屜動畫 ─────────────────────────────────────────────────── */
 .mobile-sheet-fade-enter-active,
 .mobile-sheet-fade-leave-active { transition: opacity 0.22s ease; }
@@ -981,4 +1375,126 @@ html, body {
 .mobile-sheet-fade-leave-to { opacity: 0; }
 .mobile-sheet-fade-enter-from .mobile-aoc-drawer,
 .mobile-sheet-fade-leave-to .mobile-aoc-drawer { transform: translateY(40px); }
+
+/* ── 圖層面板 ─────────────────────────────────────────── */
+.mobile-layer-panel {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1003;
+  width: min(90vw, 560px);
+  background: rgba(252,248,244,0.98);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.layers-panel-header {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+  color: #7b241c; text-transform: uppercase;
+  padding: 0 2px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.08); margin-bottom: 10px;
+}
+.layers-panel-close { background: none; border: none; cursor: pointer; color: #7b241c; font-size: 14px; }
+.layer-group { margin-bottom: 4px; }
+.layer-group-label { font-size: 0.65rem; font-weight: 700; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; padding: 0 2px 4px; }
+.layer-group-buttons { display: flex; flex-direction: column; gap: 4px; }
+.btn-layer {
+  display: flex; align-items: center; gap: 7px; width: 100%;
+  padding: 8px 10px; border: 1.5px solid transparent; border-radius: 10px;
+  cursor: pointer; font-size: 0.84rem; font-weight: 600;
+  background: rgba(0,0,0,0.04); color: #444;
+  transition: all 0.18s; text-align: left; font-family: inherit;
+}
+.btn-layer:hover { background: rgba(0,0,0,0.07); }
+.btn-layer.active { background: rgba(139,26,26,0.08); border-color: rgba(139,26,26,0.3); color: #8B1A1A; }
+.lbtn-icon { font-size: 1rem; }
+.lbtn-text { flex: 1; }
+.lbtn-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #ccc; flex-shrink: 0; transition: background 0.2s;
+}
+.lbtn-dot.on { background: #8B1A1A; }
+
+/* slide-up transition */
+.slide-up-enter-active, .slide-up-leave-active { transition: all 0.25s ease; }
+.slide-up-enter-from, .slide-up-leave-to { opacity: 0; transform: translateX(-50%) translateY(12px); }
+
+/* ── 氣候熱力控制列 ─────────────────────────────────────────── */
+.hu-climate-overlay {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(96vw, 560px);
+  z-index: 1002;
+  background: rgba(15, 20, 35, 0.92);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 10px 14px 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  color: #fff;
+}
+.hu-cy-indicator-tabs {
+  display: flex; gap: 6px; margin-bottom: 8px;
+}
+.hu-cy-ind-btn {
+  flex: 1; padding: 4px 0; border-radius: 8px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);
+  font-size: 0.72rem; font-weight: 700; cursor: pointer; transition: all 0.15s;
+}
+.hu-cy-ind-btn.active {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.5); color: #fff;
+}
+.hu-climate-header-row {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 6px;
+}
+.hu-cy-year-badge { display: flex; align-items: center; gap: 5px; }
+.hu-cy-year { font-size: 1.3rem; font-weight: 800; color: #ffd700; }
+.hu-cy-golden { font-size: 0.7rem; background: rgba(255,215,0,0.25); padding: 1px 6px; border-radius: 8px; }
+.hu-cy-stats { flex: 1; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.hu-cy-aoc-name { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+.hu-cy-temp { font-size: 1.1rem; font-weight: 800; color: #fff; }
+.hu-cy-delta { font-size: 0.78rem; font-weight: 700; padding: 1px 6px; border-radius: 6px; }
+.hu-cy-warm { background: rgba(252,141,89,0.35); color: #ffb07c; }
+.hu-cy-cool { background: rgba(145,191,219,0.35); color: #a8d0e6; }
+.hu-cy-close {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(255,255,255,0.15); border: none; color: #fff;
+  cursor: pointer; font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.hu-cy-close:hover { background: rgba(255,255,255,0.28); }
+.hu-climate-slider { width: 100%; accent-color: #ffd700; margin: 2px 0 0; }
+.hu-climate-year-axis {
+  display: flex; justify-content: space-between;
+  font-size: 0.62rem; color: rgba(255,255,255,0.45); margin: 1px 0 6px;
+}
+.hu-climate-legend { margin: 4px 0 2px; }
+.hu-legend-gradient { height: 8px; border-radius: 4px; margin-bottom: 3px; }
+.hu-legend-temp {
+  background: linear-gradient(to right, rgb(69,117,180), rgb(145,191,219), rgb(255,255,191), rgb(252,141,89), rgb(215,48,39));
+}
+.hu-legend-sun {
+  background: linear-gradient(to right, rgb(120,81,169), rgb(145,191,219), rgb(255,255,191), rgb(254,224,72), rgb(253,141,60));
+}
+.hu-legend-rain {
+  background: linear-gradient(to right, rgb(253,174,97), rgb(255,255,191), rgb(171,217,233), rgb(74,144,226), rgb(44,62,160));
+}
+.hu-legend-labels {
+  display: flex; justify-content: space-between;
+  font-size: 0.62rem; color: rgba(255,255,255,0.55);
+}
+.hu-climate-footnote { font-size: 0.62rem; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+/* Climate slide transition */
+.hu-climate-slide-enter-active, .hu-climate-slide-leave-active { transition: all 0.3s ease; }
+.hu-climate-slide-enter-from, .hu-climate-slide-leave-to {
+  opacity: 0; transform: translateX(-50%) translateY(20px);
+}
 </style>

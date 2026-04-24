@@ -10,6 +10,7 @@ import { useProgress as useBurgProgress } from './bourgogne/useProgress.js'
 import { getLevelProgressPct } from '../components/italy/data/courseLevels.js'
 import { getLevelProgressPercent as getSpainLevelPct } from '../components/spain/data/courseLevels.js'
 import { getLevelProgressPct as getGermanyLevelProgressPct } from '../components/germany/data/courseLevels.js'
+import { getLevelProgressPercent as getPortugalLevelPct } from '../components/portugal/data/courseLevels.js'
 
 // ── 靜態階段定義 ──────────────────────────────────────────────────────────
 
@@ -44,6 +45,13 @@ const SPAIN_LEVELS = [
   { key: 'level2', name: '產區深度探索', icon: '🍷' },
   { key: 'level3', name: '釀造工藝與特殊酒款', icon: '🏺' },
   { key: 'level4', name: '大師品鑑', icon: '👑' }
+]
+
+const PORTUGAL_LEVELS = [
+  { key: 'level1', name: '葡萄牙入門',     icon: '🌱' },
+  { key: 'level2', name: '重點產區深度', icon: '🍷' },
+  { key: 'level3', name: '加烈酒工藝',     icon: '🥃' },
+  { key: 'level4', name: '葡萄牙大師',     icon: '🏆' }
 ]
 
 // ── 工具函式 ─────────────────────────────────────────────────────────────
@@ -296,6 +304,43 @@ export function useLearningProgress (courseKey) {
         name:     lv.name,
         icon:     lv.icon,
         progress: getSpainLevelPct(lv.key)
+      }))
+    )
+
+    return { topStats, miniStats, levelProg, weeklyTrend: null, hasWeeklyTrend: false }
+  }
+
+  // ===== 葡萄牙 =====
+  if (courseKey === 'portugal') {
+    const topStats = computed(() => {
+      const progs = PORTUGAL_LEVELS.map(lv => getPortugalLevelPct(lv.key))
+      const overall = Math.round(progs.reduce((s, p) => s + p, 0) / progs.length)
+      return [
+        { icon: '🌟', value: `${overall}%`, label: '總體進度',   colorClass: 'col-overall' },
+        { icon: '📚', value: `${progs.filter(p => p > 0).length}/${PORTUGAL_LEVELS.length}`, label: '進行中階段', colorClass: 'col-lessons' },
+        { icon: '⏱️', value: '--',          label: '累計時長',   colorClass: 'col-time'    },
+        { icon: '🎯', value: '--',          label: '測驗正確率', colorClass: 'col-quiz'    }
+      ]
+    })
+
+    const miniStats = computed(() => {
+      const progs = PORTUGAL_LEVELS.map(lv => getPortugalLevelPct(lv.key))
+      const overall = Math.round(progs.reduce((s, p) => s + p, 0) / progs.length)
+      const doneLevels = progs.filter(p => p === 100).length
+      return [
+        { icon: '📚', value: doneLevels,           label: '已完成階段' },
+        { icon: '🎯', value: PORTUGAL_LEVELS.length, label: '全部階段'   },
+        { icon: '🌟', value: `${overall}%`,        label: '總體進度'   },
+        { icon: '🔥', value: 0,                     label: '連續天數'   }
+      ]
+    })
+
+    const levelProg = computed(() =>
+      PORTUGAL_LEVELS.map(lv => ({
+        id:       lv.key,
+        name:     lv.name,
+        icon:     lv.icon,
+        progress: getPortugalLevelPct(lv.key)
       }))
     )
 

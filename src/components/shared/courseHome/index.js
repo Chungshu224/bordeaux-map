@@ -1,0 +1,11 @@
+// 共用 courseHome 元件桶式匯出
+export { default as CourseHomeLayout } from './CourseHomeLayout.vue'
+export { default as RegionHero } from './RegionHero.vue'
+export { default as ProgressStrip } from './ProgressStrip.vue'
+export { default as QuickNavGrid } from './QuickNavGrid.vue'
+export { default as LevelTrack } from './LevelTrack.vue'
+export { default as LevelCard } from './LevelCard.vue'
+export { default as RegionStoryGrid } from './RegionStoryGrid.vue'
+export { default as ProgressModal } from './ProgressModal.vue'
+export { default as AchievementModal } from './AchievementModal.vue'
+export { REGION_THEMES, getTheme, themeToCssVars } from './regionThemes.js'

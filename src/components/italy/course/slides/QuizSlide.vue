@@ -313,6 +313,7 @@ watch(() => props.slide, () => retryQuiz())
   border: 2px solid #e0e0e0;
   border-radius: 10px;
   background: #fff;
+  color: #1a1a1a;
   cursor: pointer;
   text-align: left;
   transition: border-color 0.15s, background 0.15s;

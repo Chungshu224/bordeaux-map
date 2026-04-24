@@ -134,6 +134,39 @@ export const hungaryLearningLevels = {
   }
 }
 
+// ── localStorage 進度持久化 ───────────────────────────────────
+const HUNGARY_PROGRESS_KEY = 'hungary-wine-academy-progress'
+
+function saveProgressToStorage() {
+  try {
+    localStorage.setItem(HUNGARY_PROGRESS_KEY, JSON.stringify({
+      completedLessons: hungaryLearningState.completedLessons,
+      userProgress: hungaryLearningState.userProgress
+    }))
+  } catch (e) { console.warn('[hungary-learn] save error', e) }
+}
+
+function loadProgressFromStorage() {
+  try {
+    const raw = localStorage.getItem(HUNGARY_PROGRESS_KEY)
+    if (!raw) return
+    const data = JSON.parse(raw)
+    if (Array.isArray(data.completedLessons)) {
+      hungaryLearningState.completedLessons = data.completedLessons
+    }
+    if (data.userProgress) {
+      Object.keys(data.userProgress).forEach(key => {
+        if (hungaryLearningState.userProgress[key]) {
+          hungaryLearningState.userProgress[key].completed = data.userProgress[key].completed || 0
+        }
+      })
+    }
+  } catch (e) { console.warn('[hungary-learn] load error', e) }
+}
+
+// 模組載入時立即恢復進度
+loadProgressFromStorage()
+
 // 匈牙利學習操作
 export const hungaryLearningActions = {
   // 取得指定 Level 最後一課 ID
@@ -178,6 +211,7 @@ export const hungaryLearningActions = {
           hungaryLearningState.userProgress[levelKey].total
         )
       }
+      saveProgressToStorage()
     }
   },
 
@@ -193,6 +227,7 @@ export const hungaryLearningActions = {
     Object.keys(hungaryLearningState.userProgress).forEach(key => {
       hungaryLearningState.userProgress[key].completed = 0
     })
+    saveProgressToStorage()
   }
 }
 

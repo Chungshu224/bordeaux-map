@@ -130,7 +130,7 @@ const props = defineProps({
 
 const { topStats, levelProg, weeklyTrend, hasWeeklyTrend } = useLearningProgress(props.courseKey)
 
-const COURSE_LABEL = { bordeaux: '🍷 侍酒師的筆記本', bourgogne: '🍇 侍酒師的筆記本', italy: '🍾 侍酒師的筆記本', germany: '🇩🇪 侍酒師的筆記本', spain: '🇪🇸 侍酒師的筆記本' }
+const COURSE_LABEL = { bordeaux: '🍷 侍酒師的筆記本', bourgogne: '🍇 侍酒師的筆記本', italy: '🍾 侍酒師的筆記本', germany: '🇩🇪 侍酒師的筆記本', spain: '🇪🇸 侍酒師的筆記本', portugal: '🇵🇹 侍酒師的筆記本' }
 
 function barHeight (studyTime) {
   if (!weeklyTrend?.value) return '4px'

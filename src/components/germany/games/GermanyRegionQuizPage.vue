@@ -8,6 +8,7 @@
     hardDesc="進階地理 & 品種特色"
     :easyCount="10"
     :hardCount="13"
+    gameType="germany_region_quiz"
     @back="$emit('back')"
   />
 </template>

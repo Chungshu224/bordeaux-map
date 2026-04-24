@@ -202,8 +202,6 @@ onMounted(async () => {
 .nz-course-manager {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   background: #f8f9fa;
 }
 /* ── 課程播放標題欄 ── */
