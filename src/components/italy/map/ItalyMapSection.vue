@@ -650,23 +650,46 @@ function applyClimateColor(year) {
   if (idx < 0) return
   const cfg = currentIndicatorConfig.value
 
+  // 氣候熱力只塗在「當前選中的產區（activeAOCInfo）」
+  // 若未選任何產區，則維持原本顏色
+  const activeId = activeAOCInfo.value?.id
+
   for (const aoc of aocData.value) {
     const safe = aocSafeId(aoc.id)
     const fillId = `aoc_fill_${safe}`
     const lineId = `aoc_line_${safe}`
     if (!map.getLayer(fillId)) continue
 
+    // 非選中產區 → 還原為預設樣式
+    if (activeId && aoc.id !== activeId) {
+      map.setPaintProperty(fillId, 'fill-color', props.region.color)
+      map.setPaintProperty(fillId, 'fill-opacity', 0.18)
+      if (map.getLayer(lineId)) {
+        map.setPaintProperty(lineId, 'line-color', '#ffffff')
+        map.setPaintProperty(lineId, 'line-opacity', 0.55)
+        map.setPaintProperty(lineId, 'line-width', 1.0)
+      }
+      continue
+    }
+    // 沒有選中任何產區 → 全部不上氣候色
+    if (!activeId) {
+      map.setPaintProperty(fillId, 'fill-color', props.region.color)
+      map.setPaintProperty(fillId, 'fill-opacity', 0.18)
+      continue
+    }
+
+    // 選中產區 → 套用氣候顏色
     const arr = climateData.value[aoc.id]?.[cfg.dataKey]
     const value = Array.isArray(arr) && idx < arr.length ? Number(arr[idx]) : null
     const color = Number.isFinite(value) ? valueToClimateColor(value, cfg.id) : '#f0f0f0'
-    const opacity = Number.isFinite(value) ? 0.48 : 0.08
+    const opacity = Number.isFinite(value) ? 0.7 : 0.2
 
     map.setPaintProperty(fillId, 'fill-color', color)
     map.setPaintProperty(fillId, 'fill-opacity', opacity)
     if (map.getLayer(lineId)) {
       map.setPaintProperty(lineId, 'line-color', '#ffffff')
-      map.setPaintProperty(lineId, 'line-opacity', 0.55)
-      map.setPaintProperty(lineId, 'line-width', 1.1)
+      map.setPaintProperty(lineId, 'line-opacity', 0.85)
+      map.setPaintProperty(lineId, 'line-width', 1.6)
     }
   }
 }
@@ -868,6 +891,8 @@ async function selectAOC(item) {
   aocListOpen.value = false
   await highlightAOC(item)
   await checkAudio(item)
+  // 重繪氣候熱力（只塗在當前選中的 AOC）
+  if (climateEnabled.value) applyClimateColor(climateYear.value)
 }
 
 function handleMobileAction(action) {
@@ -954,11 +979,11 @@ onUnmounted(() => {
   }
 }
 
-/* ── 桌面側邊工具列 ── */
+/* ── 桌面側邊工具列（左側，與圖層面板同側） ── */
 .desktop-side-toolbar {
   position: absolute;
   top: 80px;
-  right: 16px;
+  left: 16px;
   z-index: 46;
   display: flex;
   flex-direction: column;
@@ -982,7 +1007,7 @@ onUnmounted(() => {
 }
 .desk-tool-btn:hover {
   background: #fff;
-  transform: translateX(-2px);
+  transform: translateX(2px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 .desk-tool-btn.active {

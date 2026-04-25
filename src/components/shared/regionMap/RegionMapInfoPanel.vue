@@ -359,7 +359,34 @@ function styleBadgeColor(style) {
   .rmap-info-bar {
     left: 8px; right: 8px; width: auto;
     bottom: 84px;
+    border-radius: 16px;
   }
-  .rmap-meta-grid { grid-template-columns: 1fr; }
+  .rmap-info-header {
+    padding: 12px 14px;
+  }
+  .rmap-aoc-name { font-size: 15px; }
+  .rmap-aoc-original { font-size: 12px; }
+  .rmap-action-btn { width: 34px; height: 34px; }
+  .rmap-info-content-wrapper {
+    max-height: 55vh;
+  }
+  .rmap-info-content {
+    padding: 14px 16px;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .rmap-meta-grid { grid-template-columns: 1fr 1fr; gap: 7px; }
+  .rmap-meta-item { padding: 7px 10px; }
+  .rmap-meta-label { font-size: 11px; }
+  .rmap-meta-value { font-size: 13px; }
+  .rmap-section-title { font-size: 12px; margin-bottom: 6px; }
+  .rmap-style-tag, .rmap-grape-tag {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+  .rmap-section { margin-bottom: 14px; }
+  .rmap-subregion { padding: 8px 11px; }
+  .rmap-sub-name { font-size: 13px; }
+  .rmap-sub-desc { font-size: 12.5px; }
 }
 </style>
