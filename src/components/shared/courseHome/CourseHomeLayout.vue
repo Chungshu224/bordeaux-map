@@ -17,7 +17,9 @@
         <div class="ch-user">
           <template v-if="authUser">
             <button class="ch-user-pill" @click="userMenuOpen = !userMenuOpen">
-              <span v-if="avatarUrl" class="ch-avatar"><img :src="avatarUrl" alt="" /></span>
+              <span v-if="avatarUrl" class="ch-avatar">
+                <img :src="avatarUrl" alt="" :style="avatarFitStyle" />
+              </span>
               <span v-else class="ch-avatar ch-avatar-fallback">{{ avatarInitial }}</span>
               <span class="ch-user-name">{{ displayName }}</span>
               <span class="ch-user-caret">▾</span>
@@ -74,6 +76,17 @@ const tierInfo = computed(() => TIER_INFO[userTier.value] || TIER_INFO.free)
 const userMenuOpen = ref(false)
 const avatarUrl = ref('')
 const avatarInitial = ref('我')
+const avatarFit = ref({ scale: 100, x: 50, y: 50 })
+
+const avatarFitStyle = computed(() => ({
+  display: 'block',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  transform: `scale(${avatarFit.value.scale / 100})`,
+  transformOrigin: `${avatarFit.value.x}% ${avatarFit.value.y}%`,
+  borderRadius: '50%'
+}))
 
 async function handleLogout() {
   userMenuOpen.value = false
@@ -104,6 +117,14 @@ onMounted(async () => {
       if (data.display_name) avatarInitial.value = [...data.display_name][0] || avatarInitial.value
     }
   }
+  // 讀取大頭貼縮放設定
+  try {
+    const raw = localStorage.getItem(`avatar_fit_${user.id}`)
+    if (raw) {
+      const f = JSON.parse(raw)
+      avatarFit.value = { scale: f.scale ?? 100, x: f.x ?? 50, y: f.y ?? 50 }
+    }
+  } catch {}
 })
 
 onBeforeUnmount(() => {
@@ -195,11 +216,13 @@ body.course-home-active #app {
 }
 .ch-user-pill:hover { border-color: var(--region-primary); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); }
 .ch-avatar {
-  width: 28px; height: 28px; border-radius: 50%; overflow: hidden;
+  width: 28px; height: 28px; min-width: 28px; min-height: 28px;
+  border-radius: 50%; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
   background: var(--region-primary); color: white; font-weight: 700; font-size: 13px;
 }
-.ch-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.ch-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .ch-user-name { color: #1f2937; font-weight: 500; max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ch-user-caret { color: #9ca3af; font-size: 10px; }
 .ch-login-btn {

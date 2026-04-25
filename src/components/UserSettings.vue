@@ -88,6 +88,41 @@
             </div>
             <input ref="avatarInput" type="file" accept="image/jpeg,image/png,image/webp" class="hidden-input" @change="handleAvatarChange" />
             <p v-if="avatarError" class="field-error">{{ avatarError }}</p>
+
+            <!-- ── 大頭貼縮放調整（有圖片才顯示）── -->
+            <div v-if="avatarPreview || form.avatarUrl" class="avatar-fit-editor">
+              <p class="fit-editor-title">🔍 縮放與顯示位置</p>
+              <div class="fit-layout">
+                <div class="fit-preview-circle">
+                  <img :src="avatarPreview || form.avatarUrl"
+                    class="fit-preview-img"
+                    :style="avatarFitStyle"
+                    alt="預覽" />
+                </div>
+                <div class="fit-controls">
+                  <div class="fit-row">
+                    <span class="fit-label">縮放</span>
+                    <input type="range" min="100" max="300" step="5"
+                      v-model.number="avatarFit.scale" class="fit-slider" />
+                    <span class="fit-value">{{ avatarFit.scale }}%</span>
+                  </div>
+                  <div class="fit-row">
+                    <span class="fit-label">水平</span>
+                    <input type="range" min="0" max="100" step="1"
+                      v-model.number="avatarFit.x" class="fit-slider" />
+                    <span class="fit-value">{{ avatarFit.x }}%</span>
+                  </div>
+                  <div class="fit-row">
+                    <span class="fit-label">垂直</span>
+                    <input type="range" min="0" max="100" step="1"
+                      v-model.number="avatarFit.y" class="fit-slider" />
+                    <span class="fit-value">{{ avatarFit.y }}%</span>
+                  </div>
+                  <button class="fit-reset-btn" @click="resetAvatarFit" type="button">重置</button>
+                </div>
+              </div>
+              <p class="fit-hint">儲存後右上角大頭貼會套用此設定</p>
+            </div>
           </div>
 
           <div class="field-group">
@@ -272,6 +307,29 @@ const avatarUploading = ref(false)
 const avatarError    = ref('')
 const avatarInput    = ref(null)
 
+// ── 大頭貼縮放設定 ────────────────────────────
+const avatarFit = reactive({ scale: 100, x: 50, y: 50 })
+const avatarFitStyle = computed(() => ({
+  display: 'block',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  transform: `scale(${avatarFit.scale / 100})`,
+  transformOrigin: `${avatarFit.x}% ${avatarFit.y}%`
+}))
+function resetAvatarFit() { avatarFit.scale = 100; avatarFit.x = 50; avatarFit.y = 50 }
+function loadAvatarFit() {
+  if (!authState.user) return
+  try {
+    const raw = localStorage.getItem(`avatar_fit_${authState.user.id}`)
+    if (raw) { const f = JSON.parse(raw); avatarFit.scale = f.scale ?? 100; avatarFit.x = f.x ?? 50; avatarFit.y = f.y ?? 50 }
+  } catch {}
+}
+function saveAvatarFit() {
+  if (!authState.user) return
+  localStorage.setItem(`avatar_fit_${authState.user.id}`, JSON.stringify({ scale: avatarFit.scale, x: avatarFit.x, y: avatarFit.y }))
+}
+
 // ── 修改密碼 ─────────────────────────────
 const pwForm = reactive({ newPassword: '', confirmPassword: '' })
 const pwErrors = reactive({ newPassword: '', confirmPassword: '' })
@@ -404,6 +462,7 @@ async function loadSettings() {
       quizAccuracy:      data.quiz_accuracy_overall ?? 0
     }
   }
+  loadAvatarFit()
 }
 
 // ── 儲存設定 ──────────────────────────────
@@ -455,6 +514,7 @@ async function handleSave() {
     } })
 
     form.avatarUrl = finalAvatarUrl
+    saveAvatarFit()
     saveSuccess.value = true
     setTimeout(() => { saveSuccess.value = false }, 3000)
   } catch (err) {
@@ -792,6 +852,58 @@ onMounted(loadSettings)
   transition: background 0.2s;
 }
 .avatar-remove-btn:hover { background: rgba(248,113,113,0.1); }
+
+/* ── 大頭貼縮放編輯器 ────────────────────────── */
+.avatar-fit-editor {
+  margin-top: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.fit-editor-title {
+  font-size: 0.82rem; font-weight: 600; color: #d4af37;
+  margin: 0 0 12px;
+}
+.fit-layout {
+  display: flex; align-items: flex-start; gap: 16px;
+}
+.fit-preview-circle {
+  width: 64px; height: 64px; min-width: 64px;
+  border-radius: 50%; overflow: hidden;
+  border: 2px solid rgba(212,175,55,0.5);
+  background: rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+.fit-preview-img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+}
+.fit-controls {
+  flex: 1; display: flex; flex-direction: column; gap: 8px;
+}
+.fit-row {
+  display: flex; align-items: center; gap: 8px;
+}
+.fit-label {
+  font-size: 0.75rem; color: #b0a090; width: 28px; flex-shrink: 0;
+}
+.fit-slider {
+  flex: 1; height: 4px; accent-color: #d4af37; cursor: pointer;
+}
+.fit-value {
+  font-size: 0.72rem; color: #888; width: 38px; text-align: right; flex-shrink: 0;
+}
+.fit-reset-btn {
+  align-self: flex-start;
+  font-size: 0.72rem; color: #a0a0a0;
+  background: none; border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px; padding: 3px 10px; cursor: pointer; margin-top: 2px;
+  transition: background 0.2s;
+}
+.fit-reset-btn:hover { background: rgba(255,255,255,0.07); }
+.fit-hint {
+  font-size: 0.74rem; color: #888; margin: 10px 0 0;
+}
 
 /* ── 統計格 ──────────────────────────────────────── */
 .stats-grid {

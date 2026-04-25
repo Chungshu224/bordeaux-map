@@ -1,187 +1,80 @@
 <template>
   <section class="italy-map-section">
 
-    <!-- Header：透明底，左上角導覽按鈕 -->
-    <div class="map-header">
-      <div class="map-header-left">
-        <button class="map-hdr-btn" @click="emit('back')">← 返回課程</button>
-        <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
-      </div>
-      <h1>{{ region.icon }} {{ region.name }} 葡萄酒產區地圖</h1>
-    </div>
+    <!-- ── 統一頂部導覽列 ── -->
+    <RegionMapHeader
+      region-name="義大利"
+      :title="`${region.name} 葡萄酒產區地圖`"
+      :icon="region.icon"
+      @back="emit('back')"
+    />
 
     <!-- Mapbox 全螢幕地圖 -->
     <div ref="mapContainer" class="map"></div>
 
-    <!-- 資訊卡（布根地 info-header-bar 深紅漸層 + 白底內容） -->
-    <div v-if="activeAOCInfo" class="map-info-bar" :class="{ collapsed: infoCollapsed }">
-      <div class="info-header-bar">
-        <div class="aoc-info-title">
-          <span class="aoc-dot" :style="{ background: region.color }"></span>
-          <span class="aoc-name">{{ activeAOCInfo.name }}</span>
-        </div>
-        <div class="map-action-buttons">
-          <!-- 收合 -->
-          <button class="map-action-btn btn-collapse" @click="infoCollapsed = !infoCollapsed" :title="infoCollapsed ? '展開資訊' : '收合資訊'">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" :style="{ transform: infoCollapsed ? 'rotate(0deg)' : 'rotate(180deg)', transition: 'transform 0.3s' }">
-              <polyline points="18 15 12 9 6 15"></polyline>
-            </svg>
-          </button>
-          <!-- 發音 -->
-          <button class="map-action-btn btn-audio-compact" @click="playAudio"
-            :disabled="!audioAvailable || isPlayingAudio" :title="audioAvailable ? '聽發音' : '無發音檔'">
-            <svg v-if="!audioAvailable" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-              <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
-            </svg>
-            <svg v-else-if="!isPlayingAudio" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
-            </svg>
-            <svg v-else width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
-            </svg>
-          </button>
-          <!-- 重置 -->
-          <button class="map-action-btn btn-reset" @click="resetMap" title="重置地圖">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 2v6h6"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <transition name="info-expand">
-        <div v-show="!infoCollapsed" class="info-content-wrapper">
-          <div class="region-info-content">
-
-            <!-- 額頭：名稱 + 分級類型 -->
-            <div class="info-header">
-              <div>
-                <b>{{ activeAOCInfo.name }}</b>
-                <span class="region-type" v-if="activeAOCInfo.type"> ({{ activeAOCInfo.type }})</span>
-              </div>
-            </div>
-
-            <!-- 基本資料網格 -->
-            <div class="details-grid">
-              <div v-if="activeAOCInfo.province" class="detail-item">
-                <span class="detail-label">省份:</span>
-                <span class="detail-value">{{ activeAOCInfo.province }}</span>
-              </div>
-              <div v-if="activeAOCInfo.region" class="detail-item">
-                <span class="detail-label">大區:</span>
-                <span class="detail-value">{{ activeAOCInfo.region }}</span>
-              </div>
-              <div v-if="activeAOCInfo.zone" class="detail-item full-width">
-                <span class="detail-label">產區範圍:</span>
-                <span class="detail-value">{{ activeAOCInfo.zone }}</span>
-              </div>
-            </div>
-
-            <!-- 酒款類型 -->
-            <div v-if="activeAOCInfo.style?.length" class="wine-types-section">
-              <div class="wine-types-title">酒款類型</div>
-              <div class="wine-types-list">
-                <span v-for="s in (Array.isArray(activeAOCInfo.style) ? activeAOCInfo.style : activeAOCInfo.style ? [activeAOCInfo.style] : [])" :key="s" class="wine-type-tag" :style="styleBadgeColor(s)">{{ s }}</span>
-              </div>
-            </div>
-
-            <!-- 葡萄品種 -->
-            <div v-if="activeAOCInfo.grapes?.length" class="grape-section">
-              <div class="grape-title">主要葡萄品種</div>
-              <div class="grape-badges">
-                <span v-for="g in activeAOCInfo.grapes" :key="g" class="grape-badge">{{ g }}</span>
-              </div>
-            </div>
-
-            <!-- 描述 -->
-            <div v-if="activeAOCInfo.description" class="detail-item full-width">
-              <span class="detail-label">簡介:</span>
-              <span class="detail-value">{{ activeAOCInfo.description }}</span>
-            </div>
-
-            <!-- 氣候 -->
-            <div v-if="activeAOCInfo.details?.climate" class="detail-item full-width">
-              <span class="detail-label">氣候:</span>
-              <span class="detail-value">{{ activeAOCInfo.details.climate }}</span>
-            </div>
-
-            <!-- 小產區 -->
-            <div v-if="activeAOCInfo.details?.subregions && Object.keys(activeAOCInfo.details.subregions).length" class="details-section">
-              <div class="detail-item full-width" v-for="(desc, sub) in activeAOCInfo.details.subregions" :key="sub">
-                <span class="detail-label">{{ sub }}:</span>
-                <span class="detail-value">{{ desc }}</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </transition>
+    <!-- ── 桌面側邊工具列（手機隱藏） ── -->
+    <div class="desktop-side-toolbar">
+      <button
+        class="desk-tool-btn"
+        :class="{ active: aocListOpen }"
+        @click="aocListOpen = !aocListOpen"
+        title="產區清單"
+      >
+        <span class="desk-tool-icon">📋</span>
+        <span class="desk-tool-text">產區清單</span>
+      </button>
+      <button
+        class="desk-tool-btn"
+        :class="{ active: showLayerPanel }"
+        @click="showLayerPanel = !showLayerPanel"
+        title="圖層與顯示"
+      >
+        <span class="desk-tool-icon">🗂</span>
+        <span class="desk-tool-text">圖層</span>
+      </button>
     </div>
 
-    <!-- AOC 產區選擇（波爾多同款居中遮罩） -->
-    <transition name="sheet-fade">
-      <div v-if="aocListOpen" class="aoc-backdrop" @click.self="aocListOpen = false">
-        <div class="aoc-drawer">
-          <div class="aoc-handle"></div>
-          <div class="drawer-header">
-            <span>{{ region.name }} 法定產區</span>
-            <button class="drawer-close" @click="aocListOpen = false">✕</button>
-          </div>
-          <div class="drawer-search-wrap">
-            <span class="search-icon">🔍</span>
-            <input v-model="search" class="search-input" placeholder="搜尋產區…" />
-          </div>
-          <div class="filter-tabs">
-            <button v-for="tab in typeTabs" :key="tab.value"
-              class="filter-tab" :class="{ active: typeFilter === tab.value }"
-              @click="typeFilter = tab.value">{{ tab.label }}</button>
-          </div>
-          <div class="appellation-list">
-            <div v-for="item in filteredAOCs" :key="item.id"
-              class="app-item" :class="{ active: activeAOCInfo?.id === item.id }"
-              @click="selectAOC(item)">
-              <span class="app-badge" :class="item.type?.toLowerCase()">{{ item.type }}</span>
-              <div class="app-text">
-                <span class="app-name">{{ item.name }}</span>
-                <span class="app-styles">{{ (item.style || []).join(' · ') }}</span>
-              </div>
-            </div>
-            <div v-if="filteredAOCs.length === 0" class="no-results">無符合產區</div>
-          </div>
-        </div>
-      </div>
-    </transition>
+    <!-- ── 統一資訊側欄 ── -->
+    <RegionMapInfoPanel
+      v-if="activeAOCInfo"
+      :info="unifiedInfo"
+      :theme-color="region.color"
+      :audio-available="audioAvailable"
+      :is-playing-audio="isPlayingAudio"
+      :collapsed="infoCollapsed"
+      @toggle-collapse="infoCollapsed = !infoCollapsed"
+      @play-audio="playAudio"
+      @reset="resetMap"
+    />
 
-    <!-- 圖層面板──手機版浮動 -->
+    <!-- ── 統一產區清單抽屜 ── -->
+    <RegionMapAppellationDrawer
+      :open="aocListOpen"
+      :region-name="region.name"
+      :items="filteredAOCsUnified"
+      :type-tabs="typeTabs"
+      :type-filter="typeFilter"
+      :search="search"
+      :active-id="activeAOCInfo?.id || ''"
+      @update:open="aocListOpen = $event"
+      @update:type-filter="typeFilter = $event"
+      @update:search="search = $event"
+      @select="selectAOCById"
+    />
+
+    <!-- ── 統一圖層面板（手機版浮動） ── -->
     <transition name="slide-up">
-      <div v-if="showLayerPanel" class="mobile-layer-panel">
-        <div class="layers-panel-header">
-          <span>圖層與顯示</span>
-          <button class="layers-panel-close" @click="showLayerPanel = false">✕</button>
-        </div>
-        <div class="layer-group">
-          <div class="layer-group-label">視角</div>
-          <div class="layer-group-buttons">
-            <button class="btn-layer" :class="{ active: is3D }" @click="toggle3D">
-              <span class="lbtn-icon">🗺</span>
-              <span class="lbtn-text">3D 地形</span>
-              <span class="lbtn-dot" :class="{ on: is3D }"></span>
-            </button>
-            <button class="btn-layer" :class="{ active: showContours }" @click="toggleContours">
-              <span class="lbtn-icon">〰</span>
-              <span class="lbtn-text">等高線</span>
-              <span class="lbtn-dot" :class="{ on: showContours }"></span>
-            </button>
-            <button class="btn-layer" :class="{ active: climateEnabled }" @click="toggleClimate">
-              <span class="lbtn-icon">🌡</span>
-              <span class="lbtn-text">氣候熱力</span>
-              <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
-            </button>
-          </div>
-        </div>
+      <div v-if="showLayerPanel" class="layer-panel-wrapper">
+        <RegionMapLayerPanel
+          :is3D="is3D"
+          :show-contours="showContours"
+          :climate-enabled="climateEnabled"
+          :soil-disabled="true"
+          @toggle-3d="toggle3D"
+          @toggle-contours="toggleContours"
+          @toggle-climate="toggleClimate"
+          @close="showLayerPanel = false"
+        />
       </div>
     </transition>
 
@@ -252,25 +145,16 @@
       </div>
     </transition>
 
-    <!-- 底部 4宮格工具列（布根地 mobile-grid-buttons 同款） -->
-    <div v-if="mapReady" class="mobile-grid-buttons" :class="{ 'merged-with-info': activeAOCInfo && !infoCollapsed }">
-      <button class="m-grid-btn" :class="{ active: aocListOpen }" @click="handleMobileAction('aoc')">
-        <span class="m-grid-icon">產</span>
-        <span class="m-grid-text">產區</span>
-      </button>
-      <button class="m-grid-btn" :class="{ active: showLayerPanel }" @click="handleMobileAction('layer')">
-        <span class="m-grid-icon">層</span>
-        <span class="m-grid-text">圖層</span>
-      </button>
-      <button class="m-grid-btn" :class="{ active: is3D }" @click="handleMobileAction('3d')">
-        <span class="m-grid-icon">3D</span>
-        <span class="m-grid-text">{{ is3D ? '2D' : '3D' }}</span>
-      </button>
-      <button class="m-grid-btn" :class="{ active: activeAOCInfo && !infoCollapsed }" @click="handleMobileAction('info')">
-        <span class="m-grid-icon">資</span>
-        <span class="m-grid-text">資訊</span>
-      </button>
-    </div>
+    <!-- ── 統一手機底部工具列 ── -->
+    <RegionMapMobileToolbar
+      v-if="mapReady"
+      :aoc-open="aocListOpen"
+      :layer-open="showLayerPanel"
+      :is3D="is3D"
+      :info-open="!!activeAOCInfo && !infoCollapsed"
+      :merged-with-info="!!activeAOCInfo && !infoCollapsed"
+      @action="handleMobileAction"
+    />
 
     <div v-if="isLoading" class="loading-overlay">
       <div class="loading-spinner"></div>
@@ -286,6 +170,13 @@ import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
+import {
+  RegionMapHeader,
+  RegionMapLayerPanel,
+  RegionMapInfoPanel,
+  RegionMapAppellationDrawer,
+  RegionMapMobileToolbar
+} from '../../shared/regionMap/index.js'
 
 const props = defineProps({
   region: { type: Object, required: true }
@@ -372,6 +263,40 @@ const filteredAOCs = computed(() => {
   }
   return list
 })
+
+// ── 統一格式：給共用元件使用 ──
+const filteredAOCsUnified = computed(() =>
+  filteredAOCs.value.map(a => ({
+    id: a.id,
+    name: a.name,
+    type: a.type,
+    styles: Array.isArray(a.style) ? a.style : (a.style ? [a.style] : [])
+  }))
+)
+
+const unifiedInfo = computed(() => {
+  const a = activeAOCInfo.value
+  if (!a) return null
+  const meta = []
+  if (a.province) meta.push({ label: '省份', value: a.province })
+  if (a.region) meta.push({ label: '大區', value: a.region })
+  if (a.zone) meta.push({ label: '產區範圍', value: a.zone })
+  return {
+    name: a.name,
+    badges: a.type ? [{ label: a.type, type: a.type }] : [],
+    meta,
+    styles: Array.isArray(a.style) ? a.style : (a.style ? [a.style] : []),
+    grapes: a.grapes || [],
+    climate: a.details?.climate || '',
+    description: a.description || '',
+    subregions: a.details?.subregions || null
+  }
+})
+
+function selectAOCById(item) {
+  const found = aocData.value.find(a => a.id === item.id)
+  if (found) selectAOC(found)
+}
 
 const CLIMATE_INDICATORS = [
   {
@@ -1011,6 +936,63 @@ onUnmounted(() => {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   width: 100%; height: 100%;
+}
+
+/* ── 統一圖層面板浮動容器 ── */
+.layer-panel-wrapper {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 45;
+}
+@media (min-width: 769px) {
+  .layer-panel-wrapper {
+    bottom: 24px;
+    left: 24px;
+    transform: none;
+  }
+}
+
+/* ── 桌面側邊工具列 ── */
+.desktop-side-toolbar {
+  position: absolute;
+  top: 80px;
+  right: 16px;
+  z-index: 46;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.desk-tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  transition: all 0.15s;
+}
+.desk-tool-btn:hover {
+  background: #fff;
+  transform: translateX(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+.desk-tool-btn.active {
+  background: #fff8e1;
+  border-color: #d4af37;
+  color: #8b6f1c;
+}
+.desk-tool-icon { font-size: 16px; }
+@media (max-width: 768px) {
+  .desktop-side-toolbar { display: none; }
 }
 
 /* ── Header：透明底，左上角導覽按鈕 ── */
