@@ -365,6 +365,8 @@ function styleBadgeColor(style) {
     width: min(380px, calc(100vw - 32px));
   }
 }
+
+@media (max-width: 768px) {
   .rmap-info-bar {
     left: 8px; right: 8px; width: auto;
     /* 手機工具列高度約 66px，底部 max(20px,...)，加 8px 縫隙 */
