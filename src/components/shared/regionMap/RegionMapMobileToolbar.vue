@@ -40,7 +40,7 @@ defineEmits(['action'])
 <style scoped>
 .rmap-mobile-toolbar {
   position: absolute;
-  bottom: max(12px, env(safe-area-inset-bottom));
+  bottom: max(20px, calc(env(safe-area-inset-bottom) + 16px));
   left: 12px; right: 12px;
   z-index: 45;
   display: grid;
@@ -53,7 +53,7 @@ defineEmits(['action'])
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 .rmap-mobile-toolbar.with-info {
-  bottom: calc(90px + max(12px, env(safe-area-inset-bottom)));
+  bottom: calc(90px + max(20px, env(safe-area-inset-bottom) + 16px));
 }
 .rmap-tb-btn {
   display: flex; flex-direction: column; align-items: center; gap: 2px;
@@ -75,8 +75,30 @@ defineEmits(['action'])
 .rmap-tb-icon { font-size: 17px; }
 .rmap-tb-text { font-size: 11px; }
 
+/* ── 桌機：置中底部橫向工具列（與手機共用元件） ── */
 @media (min-width: 769px) {
-  /* 桌機隱藏（圖層/清單在桌機改用其他位置） */
-  .rmap-mobile-toolbar { display: none; }
+  .rmap-mobile-toolbar {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: 24px;
+    width: auto;
+    min-width: 420px;
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+    gap: 4px;
+    padding: 6px;
+    border-radius: 12px;
+  }
+  .rmap-mobile-toolbar.with-info {
+    bottom: 24px; /* 桌機資訊欄在左下，工具列不需上移 */
+  }
+  .rmap-tb-btn {
+    flex-direction: row;
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .rmap-tb-icon { font-size: 16px; }
+  .rmap-tb-text { font-size: 13px; }
 }
 </style>

@@ -12,28 +12,6 @@
     <!-- Mapbox 全螢幕地圖 -->
     <div ref="mapContainer" class="map"></div>
 
-    <!-- ── 桌面側邊工具列（手機隱藏） ── -->
-    <div class="desktop-side-toolbar">
-      <button
-        class="desk-tool-btn"
-        :class="{ active: aocListOpen }"
-        @click="aocListOpen = !aocListOpen"
-        title="產區清單"
-      >
-        <span class="desk-tool-icon">📋</span>
-        <span class="desk-tool-text">產區清單</span>
-      </button>
-      <button
-        class="desk-tool-btn"
-        :class="{ active: showLayerPanel }"
-        @click="showLayerPanel = !showLayerPanel"
-        title="圖層與顯示"
-      >
-        <span class="desk-tool-icon">🗂</span>
-        <span class="desk-tool-text">圖層</span>
-      </button>
-    </div>
-
     <!-- ── 統一資訊側欄 ── -->
     <RegionMapInfoPanel
       v-if="activeAOCInfo"
@@ -963,61 +941,20 @@ onUnmounted(() => {
   width: 100%; height: 100%;
 }
 
-/* ── 統一圖層面板浮動容器 ── */
+/* ── 統一圖層面板浮動容器（位於底部工具列上方） ── */
 .layer-panel-wrapper {
   position: absolute;
   bottom: 90px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 45;
+  z-index: 46;
 }
 @media (min-width: 769px) {
   .layer-panel-wrapper {
-    bottom: 24px;
-    left: 24px;
-    transform: none;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
   }
-}
-
-/* ── 桌面側邊工具列（左側，與圖層面板同側） ── */
-.desktop-side-toolbar {
-  position: absolute;
-  top: 80px;
-  left: 16px;
-  z-index: 46;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.desk-tool-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1.5px solid rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(10px);
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-  color: #444;
-  transition: all 0.15s;
-}
-.desk-tool-btn:hover {
-  background: #fff;
-  transform: translateX(2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-}
-.desk-tool-btn.active {
-  background: #fff8e1;
-  border-color: #d4af37;
-  color: #8b6f1c;
-}
-.desk-tool-icon { font-size: 16px; }
-@media (max-width: 768px) {
-  .desktop-side-toolbar { display: none; }
 }
 
 /* ── Header：透明底，左上角導覽按鈕 ── */
