@@ -771,6 +771,25 @@ async function initMap() {
       paint: { 'line-color': '#ff6b35', 'line-width': ['interpolate',['linear'],['zoom'],10,0.5,14,1.5], 'line-opacity': 0.8 },
       filter: ['==', ['get', 'index'], 1]
     })
+    // 等高線高度標籤
+    map.addLayer({ id: 'contour-labels', type: 'symbol', source: 'contours', 'source-layer': 'contour',
+      layout: {
+        visibility: 'none',
+        'symbol-placement': 'line',
+        'text-field': ['concat', ['to-string', ['get', 'ele']], 'm'],
+        'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Regular'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 10, 9, 14, 12],
+        'text-offset': [0, -0.5],
+        'text-max-angle': 30,
+        'symbol-spacing': 300
+      },
+      paint: {
+        'text-color': '#ff6b35',
+        'text-halo-color': 'rgba(255,255,255,0.85)',
+        'text-halo-width': 1.5
+      },
+      filter: ['==', ['get', 'index'], 1]
+    })
     mapReady.value = true
     // 進入探索地圖時只顯示最大範圍框架（region outline）
     await loadRegionOutline({ animate: false })  // 位置已由 bounds 指定，只畫邊界線
@@ -799,7 +818,9 @@ function toggle3D() {
 function toggleContours() {
   showContours.value = !showContours.value
   if (!map || !map.getLayer('contour-lines')) return
-  map.setLayoutProperty('contour-lines', 'visibility', showContours.value ? 'visible' : 'none')
+  const vis = showContours.value ? 'visible' : 'none'
+  map.setLayoutProperty('contour-lines', 'visibility', vis)
+  if (map.getLayer('contour-labels')) map.setLayoutProperty('contour-labels', 'visibility', vis)
 }
 
 async function toggleClimate() {
