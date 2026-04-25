@@ -11,212 +11,50 @@
     </div>
     <div v-if="mapError" class="map-error">⚠️ {{ mapError }}</div>
 
-    <!-- Header -->
-    <div class="map-header">
-      <div class="map-header-left">
-        <button class="map-hdr-btn" @click="emit('back')">← 返回</button>
-        <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
-      </div>
-      <h1>🇦🇺 澳洲葡萄酒產區地圖</h1>
-    </div>
+    <!-- ── 統一頂部導覽列 ── -->
+    <RegionMapHeader
+      region-name="澳洲"
+      title="澳洲葡萄酒產區地圖"
+      icon="🇦🇺"
+      @back="emit('back')"
+    />
 
-    <!-- 資訊卡 -->
-    <div v-if="mapReady" class="map-info-bar" :class="{ collapsed: infoCollapsed }">
-      <div class="aoc-title-row">
-        <span class="aoc-info-title">
-          <span class="aoc-dot" :style="{ background: activeRegion ? activeRegion.color : '#aaa' }"></span>
-          {{ activeRegion ? activeRegion.name : '點選地圖產區查看詳情' }}
-        </span>
-        <div class="title-buttons">
-          <button
-            v-if="selectedRegionName"
-            class="btn-show-all"
-            @click="activeRegion = null; restoreFilter()"
-            title="顯示全部產區"
-          >← 全部</button>
-          <button class="btn-collapse-inline" @click="infoCollapsed = !infoCollapsed">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline :points="infoCollapsed ? '18 15 12 9 6 15' : '6 9 12 15 18 9'"></polyline>
-            </svg>
-            <span class="btn-text">{{ infoCollapsed ? '展開' : '收合' }}</span>
-          </button>
-          <button v-if="activeRegion" class="btn-pronunciation-icon" @click="playPronunciation" :disabled="isPlayingAudio" title="聽發音">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-            </svg>
-          </button>
-          <button class="btn-reset-icon" @click="resetView" title="重置地圖">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 3v6h-6"></path>
-              <path d="M20.49 15A9 9 0 1 1 21 9"></path>
-            </svg>
-          </button>
+    <!-- ── 統一資訊側欄 ── -->
+    <RegionMapInfoPanel
+      v-if="activeRegion"
+      :info="unifiedInfo"
+      theme-color="#e67e22"
+      :audio-available="true"
+      :is-playing-audio="isPlayingAudio"
+      :collapsed="infoCollapsed"
+      @toggle-collapse="infoCollapsed = !infoCollapsed"
+      @play-audio="playPronunciation"
+      @reset="resetView"
+    >
+      <template v-if="activeInfo?.famous_for" #extra-content>
+        <div class="rmap-section">
+          <div class="rmap-section-title">🏆 以…著名</div>
+          <p style="font-size:0.82rem;color:#ccc;margin:0">{{ activeInfo.famous_for }}</p>
         </div>
-      </div>
+      </template>
+    </RegionMapInfoPanel>
 
-      <div v-show="!infoCollapsed" class="info-details">
-        <template v-if="activeRegion && activeInfo">
-          <div class="region-info-content">
-            <div class="info-header">
-              <div class="style-badges">
-                <span class="info-level-badge" :class="activeRegion.gi_level.toLowerCase().replace('-','')">
-                  {{ activeRegion.gi_level }}
-                </span>
-                <span class="info-state-badge">{{ activeRegion.state }}</span>
-                <span v-if="activeRegion.zone" class="info-zone-badge">{{ activeRegion.zone }}</span>
-              </div>
-            </div>
-            <div class="description">{{ activeInfo.description }}</div>
-            <div v-if="activeInfo.famous_for" class="famous-for">
-              <span class="famous-label">🏆 以…著名：</span>{{ activeInfo.famous_for }}
-            </div>
-            <div class="climate-soil-row">
-              <div v-if="activeInfo.climate" class="cs-item">
-                <span class="cs-icon">☁️</span>
-                <span class="cs-text">{{ activeInfo.climate }}</span>
-              </div>
-              <div v-if="activeInfo.soil" class="cs-item">
-                <span class="cs-icon">🌱</span>
-                <span class="cs-text">{{ activeInfo.soil }}</span>
-              </div>
-            </div>
-            <div v-if="activeInfo.grapes?.length" class="grape-section">
-              <div class="grape-title">主要品種：</div>
-              <div class="grape-badges">
-                <div
-                  v-for="g in activeInfo.grapes"
-                  :key="g.name"
-                  class="grape-badge"
-                  :class="g.type"
-                >{{ g.name }}</div>
-              </div>
-            </div>
-            <div v-if="activeInfo.styles?.length" class="wine-types-section">
-              <div class="wine-types-title">酒款類型：</div>
-              <div class="wine-types-list">
-                <span
-                  v-for="s in activeInfo.styles"
-                  :key="s"
-                  class="wine-type-tag"
-                  :class="styleTagClass(s)"
-                >{{ s }}</span>
-              </div>
-            </div>
-          </div>
-        </template>
-        <div v-else-if="activeRegion && !activeInfo" class="no-info">
-          <p><strong>{{ activeRegion.name }}</strong></p>
-          <p>{{ activeRegion.state }}・{{ activeRegion.zone || '（無所屬 Zone）' }}</p>
-          <p style="color:#aaa;font-size:0.78rem;margin-top:8px;">詳細資料建置中</p>
-        </div>
-        <div v-else class="no-info">
-          <p>點選地圖上的彩色產區即可查看詳細資訊</p>
-          <div class="legend-inline">
-            <div v-for="s in STATE_TABS.filter(t=>t.value!=='all')" :key="s.value" class="legend-inline-item">
-              <span class="legend-dot" :style="{ background: s.color }"></span>
-              {{ s.label }}
-            </div>
-          </div>
-          <p class="hint-sub">共 {{ regionCount }} 個 GI 產區</p>
-        </div>
-      </div>
-    </div>
+    <!-- ── 統一產區清單抽屜 ── -->
+    <RegionMapAppellationDrawer
+      :open="drawerOpen"
+      :region-name="initialCluster ? initialCluster.name + ' 產區' : '澳洲產區'"
+      :items="filteredListUnified"
+      :type-tabs="STATE_TABS"
+      :type-filter="drawerStateTab"
+      :search="drawerSearch"
+      :active-id="activeRegion?.name || ''"
+      @update:open="drawerOpen = $event"
+      @update:type-filter="drawerStateTab = $event"
+      @update:search="drawerSearch = $event"
+      @select="selectById"
+    />
 
-    <!-- 產區抽屜 -->
-    <transition name="sheet-fade">
-      <div v-if="drawerOpen" class="aoc-backdrop" @click.self="drawerOpen = false">
-        <div class="aoc-drawer">
-          <div class="aoc-handle"></div>
-          <div class="drawer-header">
-            <span>{{ initialCluster ? initialCluster.name + ' 產區' : '澳洲產區列表' }}</span>
-            <button class="drawer-close" @click="drawerOpen = false">✕</button>
-          </div>
-          <div class="drawer-search-wrap">
-            <span class="search-icon">🔍</span>
-            <input v-model="drawerSearch" class="search-input" placeholder="搜尋產區…" />
-          </div>
-          <!-- Cluster 模式：顯示 cluster 標示；否則顯示州篩選 tabs -->
-          <div v-if="initialCluster" class="cluster-filter-tag">
-            <span class="cluster-dot" :style="{ background: initialCluster.color }"></span>
-            <span>{{ initialCluster.waCluster }}</span>
-            <span class="cluster-count-badge">{{ filteredDrawerList.length }}</span>
-          </div>
-          <div v-else class="filter-tabs">
-            <button
-              v-for="tab in STATE_TABS"
-              :key="tab.value"
-              class="filter-tab"
-              :class="{ active: drawerStateTab === tab.value }"
-              @click="drawerStateTab = tab.value"
-            >{{ tab.label }}</button>
-          </div>
-          <!-- 分組列表：Zone → Region → Sub-Region -->
-          <div class="appellation-list">
-            <template v-for="group in groupedDrawerList" :key="group.level">
-              <div class="gi-group-header">
-                <span class="gi-group-icon">{{ group.icon }}</span>
-                <span class="gi-group-label">{{ group.label }}</span>
-                <span class="gi-group-count">{{ group.items.length }}</span>
-              </div>
-              <div
-                v-for="r in group.items"
-                :key="r.name + r.state"
-                class="app-item"
-                :class="{ active: activeRegion?.name === r.name }"
-                @click="selectFromDrawer(r)"
-              >
-                <span class="app-badge" :style="{ background: stateColor(r.state) }">{{ r.state }}</span>
-                <div class="app-text">
-                  <span class="app-name">{{ r.name }}</span>
-                  <span v-if="r.zone" class="app-sub">{{ r.zone }}</span>
-                </div>
-              </div>
-            </template>
-            <div v-if="!drawerHasResults" class="no-results">無符合產區</div>
-          </div>
-        </div>
-      </div>
-    </transition>
-
-    <!-- 底部工具列 -->
-    <div v-if="mapReady" class="mobile-map-toolbar">
-      <button class="mobile-tool-btn" :class="{ active: drawerOpen }" @click="drawerOpen = !drawerOpen">
-        <span class="mobile-tool-icon">產</span>
-        <span>產區</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: showLayerPanel || showZones || showContour }" @click="showLayerPanel = !showLayerPanel">
-        <span class="mobile-tool-icon">🗂</span>
-        <span>圖層</span>
-      </button>
-
-      <!-- 圖層面板 -->
-      <Transition name="layer-panel">
-        <div v-if="showLayerPanel" class="layer-panel" @click.stop>
-          <div class="layer-panel-title">圖層選擇</div>
-          <button class="layer-toggle-btn" :class="{ active: showZones }" @click="toggleZones">
-            <span class="layer-toggle-icon">🗺️</span>
-            <span class="layer-toggle-label">Zone 層</span>
-            <span class="layer-toggle-status">{{ showZones ? '開' : '關' }}</span>
-          </button>
-          <button class="layer-toggle-btn" :class="{ active: showContour }" @click="toggleContour">
-            <span class="layer-toggle-icon">🌄</span>
-            <span class="layer-toggle-label">等高線</span>
-            <span class="layer-toggle-status">{{ showContour ? '開' : '關' }}</span>
-          </button>
-        </div>
-      </Transition>
-      <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
-        <span class="mobile-tool-icon">3D</span>
-        <span>{{ is3D ? '2D' : '3D' }}</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: mapReady && !infoCollapsed }" @click="toggleInfo">
-        <span class="mobile-tool-icon">資</span>
-        <span>資訊</span>
-      </button>
-    </div>
-
+    <!-- 氣候熱力圖控制列 -->
     <transition name="climate-slide">
       <div v-if="climateEnabled && climateData" class="climate-overlay">
         <div class="cy-indicator-tabs">
@@ -259,12 +97,50 @@
         <div class="climate-footnote">📊 {{ currentIndicatorConfig.footnote }}</div>
       </div>
     </transition>
+
+    <!-- ── 統一圖層面板（含澳洲專用 Zone 層按鈕）── -->
+    <transition name="layer-panel">
+      <div v-if="showLayerPanel" class="layer-panel-wrapper">
+        <RegionMapLayerPanel
+          :is3D="is3D"
+          :show-contours="showContour"
+          :climate-enabled="climateEnabled"
+          :soil-disabled="true"
+          @toggle-3d="toggle3D"
+          @toggle-contours="toggleContour"
+          @toggle-climate="toggleClimate"
+          @close="showLayerPanel = false"
+        />
+        <!-- Zone 層按鈕（澳洲專用）-->
+        <div class="au-zone-toggle" @click="toggleZones">
+          <span class="au-zone-icon">🗺️</span>
+          <span class="au-zone-label">Zone 層</span>
+          <span class="au-zone-status">{{ showZones ? '開' : '關' }}</span>
+        </div>
+      </div>
+    </transition>
+
+    <!-- ── 統一工具列 ── -->
+    <RegionMapMobileToolbar
+      v-if="mapReady"
+      :aoc-open="drawerOpen"
+      :layer-open="showLayerPanel"
+      :is3D="is3D"
+      :info-open="!!activeRegion && !infoCollapsed"
+      @action="handleMobileAction"
+    />
+
   </section>
 </template>
+
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
+import {
+  RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
+  RegionMapAppellationDrawer, RegionMapMobileToolbar
+} from '../../shared/regionMap/index.js'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
@@ -992,6 +868,48 @@ async function toggleClimate() {
 
 onMounted(initMap)
 onUnmounted(() => { if (map) { map.remove(); map = null } })
+
+// ── 統一 adapters ───────────────────────────────────────────────
+const unifiedInfo = computed(() => {
+  const r = activeRegion.value
+  if (!r) return null
+  const data = activeInfo.value || {}
+  const meta = []
+  if (r.state) meta.push({ label: '州', value: r.state })
+  if (r.zone) meta.push({ label: 'Zone', value: r.zone })
+  if (r.gi_level) meta.push({ label: '層級', value: r.gi_level })
+  return {
+    name: r.name,
+    badges: r.gi_level ? [{ label: r.gi_level, type: r.gi_level.toLowerCase().replace(/[-\s]/g, '') }] : [],
+    meta,
+    styles: data.styles || [],
+    grapes: (data.grapes || []).map(g => typeof g === 'object' ? g.name : g),
+    description: data.description || '',
+    climate: data.climate || '',
+    soil: data.soil || '',
+  }
+})
+
+const filteredListUnified = computed(() =>
+  filteredDrawerList.value.map(r => ({
+    id: r.name,
+    name: r.name,
+    type: r.state || r.gi_level || '',
+    styles: []
+  }))
+)
+
+function selectById(item) {
+  const found = allRegions.value.find(r => r.name === item.id)
+  if (found) selectFromDrawer(found)
+}
+
+function handleMobileAction(action) {
+  if (action === 'aoc') { drawerOpen.value = !drawerOpen.value; showLayerPanel.value = false }
+  else if (action === 'layer') { showLayerPanel.value = !showLayerPanel.value; drawerOpen.value = false }
+  else if (action === '3d') { toggle3D() }
+  else if (action === 'info') { toggleInfo() }
+}
 </script>
 
 <style scoped>
@@ -1528,4 +1446,33 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
 .climate-slide-enter-active, .climate-slide-leave-active { transition: opacity 0.3s ease, transform 0.3s ease; }
 .climate-slide-enter-from, .climate-slide-leave-to { opacity: 0; transform: translateY(12px); }
 @media (max-width: 768px) { .climate-overlay { left: 8px; width: calc(100vw - 16px); } }
+
+/* 統一圖層面板包裝 */
+.layer-panel-wrapper {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 46;
+}
+/* Zone 層澳洲專用按鈕 */
+.au-zone-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30,30,40,0.92);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #e0e0e0;
+  font-size: 0.82rem;
+}
+.au-zone-toggle:hover { background: rgba(50,50,60,0.95); }
+.au-zone-status { margin-left: auto; font-size: 0.72rem; color: #aaa; }
+
+/* rmap-section for extra-content slot */
+.rmap-section { margin-top: 8px; }
+.rmap-section-title { font-size: 11px; color: #999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }
 </style>

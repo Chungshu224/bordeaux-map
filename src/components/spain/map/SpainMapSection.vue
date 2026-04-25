@@ -4,14 +4,13 @@
     <!-- 全螢幕地圖 -->
     <div ref="mapContainer" class="map"></div>
 
-    <!-- Header -->
-    <div class="map-header">
-      <div class="map-header-left">
-        <button class="map-hdr-btn" @click="emit('back')">← {{ backLabel }}</button>
-        <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
-      </div>
-      <h1>{{ region.icon }} {{ region.name }} 產區地圖</h1>
-    </div>
+    <!-- ── 統一頂部導覽列 ── -->
+    <RegionMapHeader
+      region-name="西班牙"
+      :title="`${region.name} 產區地圖`"
+      :icon="region.icon"
+      @back="emit('back')"
+    />
 
     <!-- 省份指示 -->
     <transition name="fade-down">
@@ -21,133 +20,48 @@
       </div>
     </transition>
 
-    <!-- 資訊卡 -->
-    <div v-if="activeInfo" class="map-info-bar" :class="{ collapsed: infoCollapsed }">
-      <div class="info-header-bar">
-        <div class="info-title">
-          <span class="info-type-dot" :style="{ background: typeColor(activeInfo.typeLabel) }"></span>
-          <span class="info-name">{{ activeInfo.calDsNom }}</span>
-        </div>
-        <div class="map-action-buttons">
-          <button class="map-action-btn btn-collapse" @click="infoCollapsed = !infoCollapsed" :title="infoCollapsed ? '展開資訊' : '收合資訊'">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-              :style="{ transform: infoCollapsed ? 'rotate(0deg)' : 'rotate(180deg)', transition: 'transform 0.3s' }">
-              <polyline points="18 15 12 9 6 15"></polyline>
-            </svg>
-          </button>
-          <button v-if="activeInfo" class="map-action-btn btn-audio" @click="playPronunciation" :disabled="isPlayingAudio" title="聽發音">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-            </svg>
-          </button>
-          <button class="map-action-btn btn-reset" @click="resetView" title="重置地圖">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 2v6h6"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <transition name="info-expand">
-        <div v-show="!infoCollapsed" class="info-content">
-          <!-- 類型標籤 -->
-          <div class="info-row">
-            <span class="info-type-badge" :class="activeInfo.typeClass">{{ activeInfo.typeLabel }}</span>
-            <span v-if="activeInfo.appData?.autonomia" class="info-autonomia">{{ activeInfo.appData.autonomia }}</span>
-          </div>
-
-          <!-- 酒款類型 -->
-          <div v-if="activeInfo.appData?.styles?.length" class="sp-wine-types-section">
-            <div class="sp-wine-types-title">酒款類型</div>
-            <div class="sp-wine-types-list">
-              <span
-                v-for="s in activeInfo.appData.styles"
-                :key="s"
-                class="sp-wine-type-tag"
-                :style="styleTagColor(s)"
-              >{{ s }}</span>
-            </div>
-          </div>
-
-          <!-- 葡萄品種 -->
-          <div v-if="activeInfo.appData?.grapes?.length" class="sp-grape-section">
-            <div class="sp-grape-title">主要葡萄品種</div>
-            <div class="sp-grape-badges">
-              <span v-for="g in activeInfo.appData.grapes" :key="g" :class="['sp-grape-badge', grapeTypeCls(g)]">{{ g }}</span>
-            </div>
-          </div>
-
-          <!-- 描述 -->
-          <div v-if="activeInfo.appData?.description" class="info-description">
-            {{ activeInfo.appData.description }}
-          </div>
-
-          <!-- 所在省份 -->
-          <div v-if="activeInfo.appData?.provinces?.length" class="info-section">
-            <div class="info-section-label">📍 所在省份</div>
-            <div class="province-list">
-              <button
-                v-for="p in activeInfo.appData.provinces"
-                :key="p"
-                class="province-chip"
-                :class="{ active: selectedProvince === p }"
-                @click="highlightProvince(p)"
-              >{{ p }}</button>
-            </div>
-          </div>
-
-          <!-- 無資料時 -->
-          <div v-if="!activeInfo.appData" class="info-no-data">
-            <span class="info-zon">{{ activeInfo.zonDsNom }}</span>
-            <span class="info-type-text">{{ activeInfo.tprDsDes }}</span>
-          </div>
-        </div>
-      </transition>
-    </div>
-
-    <!-- 產區清單抽屜 -->
-    <transition name="sheet-fade">
-      <div v-if="drawerOpen" class="aoc-backdrop" @click.self="drawerOpen = false">
-        <div class="aoc-drawer">
-          <div class="aoc-handle"></div>
-          <div class="drawer-header">
-            <span>{{ region.name }} 法定產區 ({{ filteredList.length }})</span>
-            <button class="drawer-close" @click="drawerOpen = false">✕</button>
-          </div>
-          <div class="drawer-search-wrap">
-            <span class="search-icon">🔍</span>
-            <input v-model="search" class="search-input" placeholder="搜尋產區…" />
-          </div>
-          <div class="filter-tabs">
+    <!-- ── 統一資訊側欄 ── -->
+    <RegionMapInfoPanel
+      v-if="activeInfo"
+      :info="unifiedInfo"
+      :theme-color="region.color || '#c0392b'"
+      :audio-available="true"
+      :is-playing-audio="isPlayingAudio"
+      :collapsed="infoCollapsed"
+      @toggle-collapse="infoCollapsed = !infoCollapsed"
+      @play-audio="playPronunciation"
+      @reset="resetView"
+    >
+      <template v-if="activeInfo?.appData?.provinces?.length" #extra-content>
+        <div class="rmap-section">
+          <div class="rmap-section-title">📍 所在省份</div>
+          <div class="province-list">
             <button
-              v-for="tab in typeTabs"
-              :key="tab.value"
-              class="filter-tab"
-              :class="{ active: typeFilter === tab.value }"
-              @click="typeFilter = tab.value"
-            >{{ tab.label }}</button>
-          </div>
-          <div class="appellation-list">
-            <div
-              v-for="item in filteredList"
-              :key="item.id"
-              class="app-item"
-              :class="{ active: activeInfo?.id === item.id }"
-              @click="selectFromList(item)"
-            >
-              <span class="app-type-badge" :class="item.typeClass">{{ item.typeLabel }}</span>
-              <div class="app-text">
-                <span class="app-name">{{ item.calDsNom }}</span>
-                <span class="app-styles">{{ (item.appData?.styles || []).join(' · ') }}</span>
-              </div>
-            </div>
-            <div v-if="filteredList.length === 0" class="no-results">無符合產區</div>
+              v-for="p in activeInfo.appData.provinces"
+              :key="p"
+              class="province-chip"
+              :class="{ active: selectedProvince === p }"
+              @click="highlightProvince(p)"
+            >{{ p }}</button>
           </div>
         </div>
-      </div>
-    </transition>
+      </template>
+    </RegionMapInfoPanel>
+
+    <!-- ── 統一產區清單抽屜 ── -->
+    <RegionMapAppellationDrawer
+      :open="drawerOpen"
+      :region-name="region.name"
+      :items="filteredListUnified"
+      :type-tabs="typeTabs"
+      :type-filter="typeFilter"
+      :search="search"
+      :active-id="activeInfo?.id || ''"
+      @update:open="drawerOpen = $event"
+      @update:type-filter="typeFilter = $event"
+      @update:search="search = $event"
+      @select="selectById"
+    />
 
     <!-- 圖例 (左下) -->
     <div v-if="mapReady" class="map-legend">
@@ -161,7 +75,6 @@
     <!-- 氣候熱力圖控制列 -->
     <transition name="sp-climate-slide">
     <div v-if="climateEnabled && climateData" class="sp-climate-overlay">
-      <!-- 指標切換 -->
       <div class="sp-cy-indicator-tabs">
         <button v-for="ind in CLIMATE_INDICATORS" :key="ind.id"
           :class="['sp-cy-ind-btn', { active: climateIndicator === ind.id }]"
@@ -186,13 +99,8 @@
         </div>
         <button class="sp-cy-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
       </div>
-      <input
-        type="range"
-        class="sp-climate-slider"
-        v-model.number="climateYear"
-        min="1980" max="2024" step="1"
-        @input="onClimateYearChange"
-      >
+      <input type="range" class="sp-climate-slider" v-model.number="climateYear"
+        min="1980" max="2024" step="1" @input="onClimateYearChange">
       <div class="sp-climate-year-axis">
         <span>1980</span><span>1990</span><span>2000</span><span>2010</span><span>2020</span><span>2024</span>
       </div>
@@ -208,62 +116,39 @@
     </div>
     </transition>
 
-    <!-- 圖層面板──浮動 -->
+    <!-- ── 統一圖層面板 ── -->
     <transition name="slide-up">
-      <div v-if="showLayerPanel" class="mobile-layer-panel">
-        <div class="layers-panel-header">
-          <span>圖層與顯示</span>
-          <button class="layers-panel-close" @click="showLayerPanel = false">✕</button>
-        </div>
-        <div class="layer-group">
-          <div class="layer-group-label">視角</div>
-          <div class="layer-group-buttons">
-            <button class="btn-layer"
-              :class="{ active: contoursEnabled, locked: !canAccessTier('premium') }"
-              @click="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')">
-              <span class="lbtn-icon">〰</span>
-              <span class="lbtn-text">等高線<span v-if="!canAccessTier('premium')"> 🔒</span></span>
-              <span class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
-            </button>
-            <button class="btn-layer"
-              :class="{ active: climateEnabled, locked: !canAccessTier('premium') }"
-              @click="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')">
-              <span class="lbtn-icon">🌡</span>
-              <span class="lbtn-text">氣候熱力<span v-if="!canAccessTier('premium')"> 🔒</span></span>
-              <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
-            </button>
-          </div>
-        </div>
+      <div v-if="showLayerPanel" class="layer-panel-wrapper">
+        <RegionMapLayerPanel
+          :is3D="is3D"
+          :show-contours="contoursEnabled"
+          :climate-enabled="climateEnabled"
+          :soil-disabled="true"
+          @toggle-3d="toggle3D"
+          @toggle-contours="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')"
+          @toggle-climate="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')"
+          @close="showLayerPanel = false"
+        />
       </div>
     </transition>
 
-    <!-- 底部工具列 -->
-    <div v-if="mapReady" class="mobile-map-toolbar">
-      <button class="mobile-tool-btn" :class="{ active: drawerOpen }" @click="drawerOpen = !drawerOpen; showLayerPanel = false">
-        <span class="mobile-tool-icon">產</span>
-        <span>產區</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: showLayerPanel }" @click="showLayerPanel = !showLayerPanel; drawerOpen = false">
-        <span class="mobile-tool-icon">層</span>
-        <span>圖層</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
-        <span class="mobile-tool-icon">3D</span>
-        <span>{{ is3D ? '2D' : '3D' }}</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: activeInfo && !infoCollapsed }" @click="toggleInfo">
-        <span class="mobile-tool-icon">資</span>
-        <span>資訊</span>
-      </button>
-    </div>
+    <!-- ── 統一工具列 ── -->
+    <RegionMapMobileToolbar
+      v-if="mapReady"
+      :aoc-open="drawerOpen"
+      :layer-open="showLayerPanel"
+      :is3D="is3D"
+      :info-open="!!activeInfo && !infoCollapsed"
+      @action="handleMobileAction"
+    />
 
-    <div v-if="isLoading" class="loading-overlay">
-      <div class="loading-spinner"></div>
-    </div>
+    <div v-if="isLoading" class="loading-overlay"><div class="loading-spinner"></div></div>
     <div v-if="mapError" class="map-error">{{ mapError }}</div>
 
   </section>
 </template>
+
+
 
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
@@ -272,6 +157,10 @@ import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { authActions } from '@/stores/authStore.js'
 import { TIER_WEIGHT } from '@/router/index.js'
+import {
+  RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
+  RegionMapAppellationDrawer, RegionMapMobileToolbar
+} from '../../shared/regionMap/index.js'
 
 const props = defineProps({
   region: { type: Object, required: true },
@@ -1179,6 +1068,43 @@ function toggleInfo() {
   if (!activeInfo.value) return
   infoCollapsed.value = !infoCollapsed.value
 }
+
+// ── 統一 adapters ───────────────────────────────────────────────
+const unifiedInfo = computed(() => {
+  const a = activeInfo.value
+  if (!a) return null
+  const meta = []
+  if (a.appData?.autonomia) meta.push({ label: '自治區', value: a.appData.autonomia })
+  return {
+    name: a.calDsNom,
+    badges: a.typeLabel ? [{ label: a.typeLabel, type: a.typeLabel.toLowerCase().replace(/[^a-z]/g, '') }] : [],
+    meta,
+    styles: a.appData?.styles || [],
+    grapes: a.appData?.grapes || [],
+    description: a.appData?.description || '',
+  }
+})
+
+const filteredListUnified = computed(() =>
+  filteredList.value.map(a => ({
+    id: a.id,
+    name: a.calDsNom,
+    type: a.typeLabel,
+    styles: a.appData?.styles || []
+  }))
+)
+
+function selectById(item) {
+  const found = allRegions.value.find(a => a.id === item.id)
+  if (found) selectFromList(found)
+}
+
+function handleMobileAction(action) {
+  if (action === 'aoc') { drawerOpen.value = !drawerOpen.value; showLayerPanel.value = false }
+  else if (action === 'layer') { showLayerPanel.value = !showLayerPanel.value; drawerOpen.value = false }
+  else if (action === '3d') { toggle3D() }
+  else if (action === 'info') { toggleInfo() }
+}
 </script>
 
 <style scoped>
@@ -1953,4 +1879,17 @@ function toggleInfo() {
   opacity: 0;
   transform: translateX(-50%) translateY(20px);
 }
+
+/* 統一圖層面板包裝 */
+.layer-panel-wrapper {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 46;
+}
+
+/* rmap-section for extra-content slot */
+.rmap-section { margin-top: 8px; }
+.rmap-section-title { font-size: 11px; color: #999; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; }
 </style>

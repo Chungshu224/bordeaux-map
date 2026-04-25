@@ -1,250 +1,80 @@
 ﻿<template>
   <section class="map-section">
-    <div class="map-header">
-      <div class="map-header-left">
-        <button class="map-hdr-btn" @click="emit('request-learning-mode')">← 返回課程</button>
-        <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
-      </div>
-      <h1>{{ props.regionConfig?.name || 'Bourgogne wine map' }} 葡萄酒產區地圖</h1>
-    </div>
-    <div class="map-info-bar" v-if="activeAOC.aoc" :class="{ collapsed: isInfoCollapsed }">
-      <div class="info-header-bar">
-        <div class="aoc-info-title">
-          <span class="aoc-dot" :style="{background: aocColor(activeAOC.group)}"></span>
-          <span class="aoc-name">{{ activeDomaine ? activeDomaine.replace('.geojson', '') : activeAOC.aoc.replace('.geojson','').replace(/_/g,' ') }}</span>
-        </div>
-        
-        <div class="map-buttons-right">
-          <div class="map-action-buttons">
-            <button class="map-action-btn btn-collapse" @click="toggleInfoBar" :title="isInfoCollapsed ? '展開資訊' : '收合資訊'" :aria-label="isInfoCollapsed ? '展開資訊' : '收合資訊'">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" :style="{ transform: isInfoCollapsed ? 'rotate(0deg)' : 'rotate(180deg)', transition: 'transform 0.3s ease' }">
-                <polyline points="18 15 12 9 6 15"></polyline>
-              </svg>
-            </button>
-
-            <button class="map-action-btn btn-audio-compact" @click="playPronunciation" :disabled="!audioPath || isPlayingAudio" :title="audioPath ? '聽發音' : '無發音檔'" :aria-label="audioPath ? '聽發音' : '無發音檔'">
-              <svg v-if="!audioPath" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <line x1="23" y1="9" x2="17" y2="15"></line>
-                <line x1="17" y1="9" x2="23" y2="15"></line>
-              </svg>
-              <svg v-else-if="!isPlayingAudio" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-              </svg>
-              <svg v-else xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-              </svg>
-            </button>
-
-            <button class="map-action-btn btn-reset" @click="resetMap" title="重置地圖" aria-label="重置地圖">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 2v6h6"></path>
-                <path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"></path>
-              </svg>
-            </button>
+    <!-- Header -->
+    <RegionMapHeader
+      regionName="勃根地"
+      :title="`${props.regionConfig?.name || 'Bourgogne wine map'} 葡萄酒產區地圖`"
+      icon="🍷"
+      @back="emit('request-learning-mode')"
+    />
+    <!-- 資訊卡 -->
+    <RegionMapInfoPanel
+      v-if="props.activeAOC?.aoc"
+      :info="unifiedInfo"
+      theme-color="#722f37"
+      :audio-available="!!audioPath"
+      :is-playing-audio="isPlayingAudio"
+      :collapsed="isInfoCollapsed"
+      @toggle-collapse="toggleInfoBar"
+      @play-audio="playPronunciation"
+      @reset="resetMap"
+    >
+      <template #extra-actions>
+        <button v-if="showDomaineButton" class="rmap-action-btn" @click="toggleDomainesMode"
+          :title="domainesMode ? '回上一層' : '顯示酒莊'" style="font-size:13px;padding:4px 6px">
+          {{ domainesMode ? '⬅' : '🏰' }}
+        </button>
+      </template>
+      <template #extra-content>
+        <div v-if="domainesMode" class="domaines-list-container">
+          <div v-if="currentDomaineImage" style="margin-bottom:12px;text-align:center">
+            <img :src="currentDomaineImage" @error="onDomaineImageError" style="max-width:100%;height:auto;border-radius:4px;max-height:150px;object-fit:cover">
           </div>
-          
-          <!-- 桌面版的其餘按鈕保留但不顯示於手機 -->
-          <div class="desktop-only-buttons">
-            <button v-if="showDomaineButton" class="btn-show-domaines" @click="toggleDomainesMode">
-              {{ domainesMode ? '回上一層' : '顯示酒莊' }}
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <transition name="info-expand">
-        <div v-show="!isInfoCollapsed" class="info-content-wrapper">
-      <div v-if="domainesMode" class="domaines-list-container">
-        <div v-if="currentDomaineImage" class="domaine-image-container" style="margin-bottom: 12px; text-align: center;">
-          <img :src="currentDomaineImage" alt="Domaine Image" @error="onDomaineImageError" style="max-width: 100%; height: auto; border-radius: 4px; max-height: 150px; object-fit: cover;">
-        </div>
-        <ul class="domaines-list">
-          <li v-for="domaine in domaines" :key="domaine" @click="loadDomaineLayer(domaine)" :class="{ active: activeDomaine === domaine }">
-            {{ domaine.replace('.geojson', '').replace(/^\d+\s*/, '') }}
-          </li>
-        </ul>
-        
-        <!-- 酒莊詳細資訊 -->
-        <div v-if="activeDomaine && selectedDomaineInfo && selectedDomaineInfo[activeDomaine]" class="domaine-info">
-          <div class="domaine-info-header">
-            <h4>{{ selectedDomaineInfo[activeDomaine].name }}</h4>
-          </div>
-          <div class="domaine-details">
-            <div class="domaine-detail-item">
-              <span class="detail-label">成立時間:</span>
-              <span class="detail-value">{{ selectedDomaineInfo[activeDomaine].founded }}</span>
+          <ul class="domaines-list">
+            <li v-for="domaine in domaines" :key="domaine" @click="loadDomaineLayer(domaine)" :class="{ active: activeDomaine === domaine }">
+              {{ domaine.replace('.geojson', '').replace(/^\d+\s*/, '') }}
+            </li>
+          </ul>
+          <div v-if="activeDomaine && selectedDomaineInfo && selectedDomaineInfo[activeDomaine]" class="domaine-info">
+            <div class="domaine-info-header">
+              <h4>{{ selectedDomaineInfo[activeDomaine].name }}</h4>
             </div>
-            <div class="domaine-detail-item">
-              <span class="detail-label">面積:</span>
-              <span class="detail-value">{{ selectedDomaineInfo[activeDomaine].area }}</span>
+            <div class="domaine-details">
+              <div class="domaine-detail-item"><span class="detail-label">成立時間:</span><span class="detail-value">{{ selectedDomaineInfo[activeDomaine].founded }}</span></div>
+              <div class="domaine-detail-item"><span class="detail-label">面積:</span><span class="detail-value">{{ selectedDomaineInfo[activeDomaine].area }}</span></div>
+              <div class="domaine-detail-item"><span class="detail-label">釀造風格:</span><span class="detail-value">{{ selectedDomaineInfo[activeDomaine].style }}</span></div>
+              <div class="domaine-detail-item full-width"><span class="detail-label">特色:</span><span class="detail-value">{{ selectedDomaineInfo[activeDomaine].characteristics }}</span></div>
+              <div v-if="selectedDomaineInfo[activeDomaine].specialties" class="domaine-detail-item full-width"><span class="detail-label">專長技術:</span><span class="detail-value">{{ selectedDomaineInfo[activeDomaine].specialties.join('、') }}</span></div>
+              <div class="domaine-detail-item full-width"><span class="detail-label">介紹:</span><span class="detail-value domaine-description">{{ selectedDomaineInfo[activeDomaine].description }}</span></div>
             </div>
-            <div class="domaine-detail-item">
-              <span class="detail-label">釀造風格:</span>
-              <span class="detail-value">{{ selectedDomaineInfo[activeDomaine].style }}</span>
-            </div>
-            <div class="domaine-detail-item full-width">
-              <span class="detail-label">特色:</span>
-              <span class="detail-value">{{ selectedDomaineInfo[activeDomaine].characteristics }}</span>
-            </div>
-            <div v-if="selectedDomaineInfo[activeDomaine].specialties" class="domaine-detail-item full-width">
-              <span class="detail-label">專長技術:</span>
-              <span class="detail-value">{{ selectedDomaineInfo[activeDomaine].specialties.join('、') }}</span>
-            </div>
-            <div class="domaine-detail-item full-width">
-              <span class="detail-label">介紹:</span>
-              <span class="detail-value domaine-description">{{ selectedDomaineInfo[activeDomaine].description }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div v-else-if="regionInfo" ref="regionInfoContent" class="region-info-content">
-        <div style="flex: 1; min-width: 0;">
-          <div class="info-header">
-            <div>
-              <b>{{ regionInfo.name }}</b> 
-              <span class="region-type" v-if="regionInfo.classification">({{ regionInfo.classification }})</span>
-            </div>
-          </div>
-
-          <div class="details-grid">
-            <div v-if="regionInfo.area" class="detail-item">
-              <span class="detail-label">面積:</span>
-              <span class="detail-value">{{ regionInfo.area }}</span>
-            </div>
-            <div v-if="regionInfo.altitude" class="detail-item">
-              <span class="detail-label">海拔:</span>
-              <span class="detail-value">{{ regionInfo.altitude }}</span>
-            </div>
-            <div v-if="regionInfo.exposition" class="detail-item">
-              <span class="detail-label">坡向:</span>
-              <span class="detail-value">{{ regionInfo.exposition }}</span>
-            </div>
-            <div v-if="regionInfo.soilStructure" class="detail-item full-width">
-              <span class="detail-label">土壤:</span>
-              <span class="detail-value">{{ regionInfo.soilStructure }}</span>
-            </div>
-            <div v-if="regionInfo.climate" class="detail-item full-width">
-              <span class="detail-label">氣候:</span>
-              <span class="detail-value">{{ regionInfo.climate }}</span>
-            </div>
-            <div v-if="regionInfo.wineStyle" class="detail-item full-width">
-              <span class="detail-label">葡萄酒風格:</span>
-              <span class="detail-value">{{ regionInfo.wineStyle }}</span>
-            </div>
-            <div v-if="regionInfo.tastingNotes" class="detail-item full-width">
-              <span class="detail-label">品酒筆記:</span>
-              <span class="detail-value">{{ regionInfo.tastingNotes }}</span>
-            </div>
-            <div v-if="regionInfo.agingPotential" class="detail-item full-width">
-              <span class="detail-label">陳年潛力:</span>
-              <span class="detail-value">{{ regionInfo.agingPotential }}</span>
-            </div>
-            <div v-if="regionInfo.history" class="detail-item full-width">
-              <span class="detail-label">歷史:</span>
-              <span class="detail-value">{{ regionInfo.history }}</span>
-            </div>
-          </div>
-
-          <div v-if="regionInfo.wineTypes && regionInfo.wineTypes.length" class="wine-types-section">
-            <div class="wine-types-title">酒款類型:</div>
-            <div class="wine-types-list">
-              <span v-for="wineType in regionInfo.wineTypes" :key="wineType" class="wine-type-tag">
-                {{ wineType }}
-              </span>
-            </div>
-          </div>
-
-          <div v-if="regionInfo.grapeVarieties && regionInfo.grapeVarieties.length" class="grape-section">
-            <div class="grape-title">主要葡萄品種:</div>
-            <div class="grape-badges">
-              <div v-for="grape in regionInfo.grapeVarieties" :key="grape" class="grape-badge" :style="grapeBadgeStyle(grape)">
-                {{ grape }}
-              </div>
-            </div>
-          </div>
-
-          <div v-if="regionInfo.famousWineries && regionInfo.famousWineries.length" class="producers-section">
-            <div class="producers-title">知名酒莊:</div>
-            <div class="producers-list">
-              <span v-for="producer in regionInfo.famousWineries" :key="producer" class="producer-tag">
-                {{ producer }}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div v-else class="no-info">無詳細產區資料</div>
-        </div>
-      </transition>
-
-    </div>
-
-    <!-- 手機版底部 4宮格 按鈕 -->
-    <div class="mobile-grid-buttons" v-if="isMobileView" :class="{ 'merged-with-info': activeAOC.aoc }">
-      <button class="m-grid-btn" :class="{ active: mobileAOCListOpen }" @click="handleMobileAction('aoc')">
-        <span class="m-grid-icon">產</span>
-        <span class="m-grid-text">產區</span>
-      </button>
-      <button class="m-grid-btn" :class="{ active: showLayerPanel }" @click="handleMobileAction('layer')">
-        <span class="m-grid-icon">層</span>
-        <span class="m-grid-text">圖層</span>
-      </button>
-      <button class="m-grid-btn" :class="{ active: is3D }" @click="handleMobileAction('3d')">
-        <span class="m-grid-icon">3D</span>
-        <span class="m-grid-text">3D</span>
-      </button>
-      <button class="m-grid-btn" :class="{ active: activeAOC.aoc && !isInfoCollapsed }" @click="handleMobileAction('info')">
-        <span class="m-grid-icon">資</span>
-        <span class="m-grid-text">資訊</span>
-      </button>
-    </div>
-    
-    <!-- 圖層選擇面板（Bordeaux 同款設計） -->
-    <div v-if="isMobileView && showLayerPanel" class="mobile-layer-panel">
-      <!-- 面板標題 -->
-      <div class="layers-panel-header">
-        <span>圖層與顯示</span>
-        <button class="layers-panel-close" @click="showLayerPanel = false" aria-label="關閉">✕</button>
-      </div>
-
-      <!-- 視角群組 -->
-      <div class="layer-group">
-        <div class="layer-group-label">視角</div>
-        <div class="layer-group-buttons">
-          <button class="btn-layer" :class="{ active: showContours, 'color-contours': true }" @click="toggleContours">
-            <span class="lbtn-icon">〰</span>
-            <span class="lbtn-text">等高線</span>
-            <span class="lbtn-dot" :class="{ on: showContours }"></span>
-          </button>
-        </div>
-      </div>
-
-      <!-- 資料圖層群組（桌機/平板才顯示；真實手機 ≤768px 隱藏）-->
-      <template v-if="!isRealMobile">
-        <div class="layer-group">
-          <div class="layer-group-label">資料圖層</div>
-          <div class="layer-group-buttons">
-            <!-- 地質土壤 -->
-            <button v-if="geologyIndex && currentGeologyProvinceCodes.length > 0"
-              class="btn-layer" :class="{ active: geologyVisible, 'color-geology': true }" type="button"
-              @click="() => { if (!geologyVisible) { climateEnabled = false; restoreAocFillColor() } geologyVisible = !geologyVisible }">
-              <span class="lbtn-icon">🪨</span>
-              <span class="lbtn-text">地質土壤</span>
-              <span class="lbtn-dot" :class="{ on: geologyVisible }"></span>
-            </button>
-            <!-- 氣候熱力 -->
-            <button class="btn-layer" :class="{ active: climateEnabled, 'color-climate': true }" type="button" @click="toggleClimate">
-              <span class="lbtn-icon">🌡</span>
-              <span class="lbtn-text">氣候熱力</span>
-              <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
-            </button>
           </div>
         </div>
       </template>
+    </RegionMapInfoPanel>
+    <!-- 底部工具列 -->
+    <RegionMapMobileToolbar
+      v-if="isMobileView"
+      :aoc-open="mobileAOCListOpen"
+      :layer-open="showLayerPanel"
+      :is3D="is3D"
+      :info-open="!!props.activeAOC?.aoc && !isInfoCollapsed"
+      @action="handleMobileAction"
+    />
+
+    <!-- 圖層面板 -->
+    <div v-if="showLayerPanel" class="layer-panel-wrapper">
+      <RegionMapLayerPanel
+        :is3D="is3D"
+        :show-contours="showContours"
+        :climate-enabled="climateEnabled"
+        :soil-enabled="geologyVisible"
+        :soil-disabled="!(geologyIndex && currentGeologyProvinceCodes.length > 0)"
+        @toggle-3d="toggle3D"
+        @toggle-contours="toggleContours"
+        @toggle-climate="toggleClimate"
+        @toggle-soil="() => { if (!geologyVisible) { climateEnabled = false; restoreAocFillColor() } geologyVisible = !geologyVisible }"
+        @close="showLayerPanel = false"
+      />
     </div>
 
     <!-- 地質土壤 浮動面板（Bordeaux 同款，位於左下角） -->
@@ -408,6 +238,10 @@ import {
   getOSMStyle,
   getMapboxStyleUrl
 } from '@/utils/getMapboxToken'
+import {
+  RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
+  RegionMapAppellationDrawer, RegionMapMobileToolbar
+} from '../shared/regionMap/index.js'
 
 const props = defineProps({
   activeAOC: Object,
@@ -1908,6 +1742,36 @@ onUnmounted(() => {
     map = null
   }
 })
+
+// ── 統一 adapters ───────────────────────────────────────────────
+const unifiedInfo = computed(() => {
+  const aoc = props.activeAOC
+  if (!aoc?.aoc) return null
+  if (domainesMode.value) {
+    const domName = activeDomaine.value
+      ? activeDomaine.value.replace('.geojson', '')
+      : aoc.aoc.replace('.geojson', '').replace(/_/g, ' ')
+    return { name: domName, description: '' }
+  }
+  const r = props.regionInfo
+  if (!r) return { name: aoc.aoc.replace('.geojson', '').replace(/_/g, ' '), description: '' }
+  const meta = []
+  if (r.area) meta.push({ label: '面積', value: r.area })
+  if (r.altitude) meta.push({ label: '海拔', value: r.altitude })
+  if (r.exposition) meta.push({ label: '坡向', value: r.exposition })
+  const styles = r.wineTypes || []
+  return {
+    name: r.name || aoc.aoc.replace('.geojson', '').replace(/_/g, ' '),
+    badges: r.classification ? [{ label: r.classification }] : [],
+    meta,
+    styles,
+    grapes: r.grapeVarieties || [],
+    climate: r.climate || '',
+    soil: r.soilStructure || '',
+    description: [r.wineStyle, r.tastingNotes, r.agingPotential].filter(Boolean).join(' ／ '),
+    estates: (r.famousWineries || []).map(w => ({ name: w })),
+  }
+})
 </script>
 
 <style scoped>
@@ -3265,5 +3129,13 @@ onUnmounted(() => {
     max-height: 0;
     opacity: 0;
   }
+}
+/* 統一圖層面板包裝 */
+.layer-panel-wrapper {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 46;
 }
 </style>

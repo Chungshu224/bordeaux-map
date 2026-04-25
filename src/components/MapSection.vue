@@ -1,60 +1,27 @@
 <template>
   <section class="map-section">
-    <div class="map-header">
-      <div class="map-header-left">
-        <button class="map-hdr-btn" @click="router.push('/bordeaux')">← 返回課程</button>
-        <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
-      </div>
-      <h1>Bordeaux Wine Region Map</h1>
-    </div>
-    <div
-      class="map-info-bar"
+
+    <!-- Header -->
+    <RegionMapHeader
+      regionName="波爾多"
+      title="Bordeaux Wine Region Map"
+      icon="🍷"
+      @back="router.push('/bordeaux')"
+    />
+
+    <!-- 資訊卡 -->
+    <RegionMapInfoPanel
       v-if="activeAOC.aoc && (isMobile || (!layersPanelOpen && !climateEnabled && !geologyEnabled))"
-      :class="{
-        collapsed: infoBarCollapsed,
-        'mobile-half': isMobile && mobileInfoSheetState === 'half',
-        'mobile-full': isMobile && mobileInfoSheetState === 'full'
-      }"
+      :info="unifiedInfo"
+      theme-color="#8B0000"
+      :audio-available="true"
+      :is-playing-audio="false"
+      :collapsed="infoBarCollapsed"
+      @toggle-collapse="toggleInfoPanel"
+      @play-audio="playPronunciation(activeAOC.aoc)"
+      @reset="resetMap"
     >
-      <div
-        v-if="isMobile"
-        class="mobile-sheet-handle-wrap"
-        @touchstart.passive="onInfoSheetTouchStart"
-        @touchend="onInfoSheetTouchEnd"
-      >
-        <div class="mobile-sheet-handle"></div>
-      </div>
-      <div class="aoc-title-row">
-        <span class="aoc-info-title">
-          <span class="aoc-dot" :style="{background: aocColor(activeAOC.group)}"></span>
-          {{ activeAOC.aoc.replace('_AOC.geojson','').replace(/-/g,' ').replace(/_/g,' ') }}
-        </span>
-        <div class="title-buttons">
-          <button class="btn-collapse-inline" @click.stop="toggleInfoPanel" :title="infoBarCollapsed ? '展開資訊' : '收合資訊'">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline :points="infoBarCollapsed ? '18 15 12 9 6 15' : '6 9 12 15 18 9'"></polyline>
-            </svg>
-            <span class="btn-text">{{ infoBarCollapsed ? '展開' : '收合' }}</span>
-          </button>
-          <button class="btn-pronunciation" @click="playPronunciation(activeAOC.aoc)" title="點擊聽發音">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-          </svg>
-        </button>
-          <button v-if="isMobile" class="btn-reset-icon" @click="resetMap" title="重置地圖">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 3v6h-6"></path>
-              <path d="M20.49 15A9 9 0 1 1 21 9"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div v-show="!infoBarCollapsed" class="info-details">
-        <div class="map-buttons">
-        <button v-if="!isMobile" class="btn-reset" @click="resetMap">重置地圖</button>
-        <!-- 顯示知名酒莊：premium 以上 -->
+      <template #extra-actions>
         <button
           v-if="hasChateauxFile"
           class="btn-chateaux"
@@ -64,38 +31,8 @@
           <span v-if="!canAccessTier('premium')" class="lock-inline">🔒</span>
           {{ showingChateaux ? '隱藏酒莊' : '顯示知名酒莊' }}
         </button>
-      </div>
-      <div v-if="regionInfo" class="region-info-content">
-        <div class="info-header">
-          <div>
-            <b>{{ regionInfo.name }}</b> <span class="region-type">({{ regionInfo.type }})</span><span v-if="aocComputedHectare || regionInfo.hectare" class="region-hectare"> - {{ aocComputedHectare || regionInfo.hectare }} 公頃</span>
-          </div>
-          <div class="style-badges">
-            <div v-for="style in Array.isArray(regionInfo.style) ? regionInfo.style : [regionInfo.style]" 
-                 :key="style" 
-                 class="style-badge"
-                 :style="{backgroundColor: styleColors[style] || '#999', color: ['白酒', '甜酒'].includes(style) ? '#333' : '#fff'}">
-              {{ style }}
-            </div>
-          </div>
-        </div>
-        <div v-if="regionInfo.grapes" class="grape-section">
-          <div class="grape-title">葡萄品種:</div>
-          <div class="grape-badges">
-            <div v-for="grape in regionInfo.grapes.split(',').map(g => g.trim())" 
-                 :key="grape" 
-                 class="grape-badge"
-                 :style="{backgroundColor: getGrapeIcon(grape).color, color: getGrapeIcon(grape).color === '#FFFFE0' || getGrapeIcon(grape).color === '#F3E5AB' || getGrapeIcon(grape).color === '#FFFFF0' || getGrapeIcon(grape).color === '#F5F5DC' ? '#333' : '#fff'}">
-              <span class="grape-symbol">{{ getGrapeIcon(grape).symbol }}</span>
-              {{ grape }}
-            </div>
-          </div>
-        </div>
-        <div class="description">{{ regionInfo.description }}</div>
-      </div>
-      <div v-else class="no-info">無詳細產區資料</div>
-      </div>
-    </div>
+      </template>
+    </RegionMapInfoPanel>
     <div ref="mapContainer" class="map"></div>
     <!-- 圖層面板收合時的重新展開按鈕 -->
     <button
@@ -289,6 +226,10 @@ import { supabase } from '@/lib/supabaseClient.js'
 import { authState, authActions } from '@/stores/authStore.js'
 import { useDeviceDetection } from '@/utils/deviceDetection.js'
 import { TIER_WEIGHT } from '@/router/index.js'
+import {
+  RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
+  RegionMapAppellationDrawer, RegionMapMobileToolbar
+} from './shared/regionMap/index.js'
 
 const router = useRouter()
 
@@ -2375,6 +2316,29 @@ onUnmounted(() => {
   if (map) {
     map.remove()
     map = null
+  }
+})
+
+// ── 統一 adapters ────────────────────────────────────────────────
+const unifiedInfo = computed(() => {
+  const aoc = props.activeAOC
+  if (!aoc?.aoc) return null
+  const r = props.regionInfo
+  const name = aoc.aoc.replace('_AOC.geojson', '').replace(/-/g, ' ').replace(/_/g, ' ')
+  if (!r) return { name, description: '' }
+  const meta = []
+  const hectare = aocComputedHectare.value || r.hectare
+  if (hectare) meta.push({ label: '面積', value: `${hectare} 公頃` })
+  if (r.type) meta.push({ label: '類型', value: r.type })
+  const stylesRaw = Array.isArray(r.style) ? r.style : (r.style ? [r.style] : [])
+  const grapesRaw = r.grapes ? r.grapes.split(',').map(g => g.trim()) : []
+  return {
+    name: r.name || name,
+    meta,
+    styles: stylesRaw,
+    grapes: grapesRaw,
+    description: r.description || '',
+    estates: [],
   }
 })
 </script>
