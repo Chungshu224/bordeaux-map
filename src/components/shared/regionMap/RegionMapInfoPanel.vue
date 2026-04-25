@@ -197,9 +197,11 @@ function styleBadgeColor(style) {
 </script>
 
 <style scoped>
+/* 工具列高度約 66px，底部間距約 20px，加 8px 縫隙 = 94px
+   資訊欄固定於工具列正上方 */
 .rmap-info-bar {
   position: absolute;
-  bottom: 90px;
+  bottom: calc(max(20px, env(safe-area-inset-bottom) + 16px) + 74px);
   left: 16px;
   width: min(380px, calc(100vw - 32px));
   background: #fff;
@@ -355,10 +357,18 @@ function styleBadgeColor(style) {
   max-height: 60vh; opacity: 1;
 }
 
-@media (max-width: 768px) {
+/* 桌機：工具列在 bottom:24px，高度約52px，加 8px 縫隙 = 84px */
+@media (min-width: 769px) {
+  .rmap-info-bar {
+    bottom: 84px;
+    left: 16px;
+    width: min(380px, calc(100vw - 32px));
+  }
+}
   .rmap-info-bar {
     left: 8px; right: 8px; width: auto;
-    bottom: 84px;
+    /* 手機工具列高度約 66px，底部 max(20px,...)，加 8px 縫隙 */
+    bottom: calc(max(20px, env(safe-area-inset-bottom) + 16px) + 74px);
     border-radius: 16px;
   }
   .rmap-info-header {

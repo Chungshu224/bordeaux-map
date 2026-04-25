@@ -52,9 +52,7 @@ defineEmits(['action'])
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
-.rmap-mobile-toolbar.with-info {
-  bottom: calc(90px + max(20px, env(safe-area-inset-bottom) + 16px));
-}
+/* 工具列固定不移動，資訊欄由自身定位在工具列上方 */
 .rmap-tb-btn {
   display: flex; flex-direction: column; align-items: center; gap: 2px;
   padding: 8px 4px;
@@ -88,9 +86,6 @@ defineEmits(['action'])
     gap: 4px;
     padding: 6px;
     border-radius: 12px;
-  }
-  .rmap-mobile-toolbar.with-info {
-    bottom: 24px; /* 桌機資訊欄在左下，工具列不需上移 */
   }
   .rmap-tb-btn {
     flex-direction: row;
