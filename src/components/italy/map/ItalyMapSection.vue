@@ -624,52 +624,28 @@ function valueToClimateColor(v, indicator = climateIndicator.value) {
 
 function applyClimateColor(year) {
   if (!map || !climateEnabled.value || !climateData.value || !climateYears.value.length || !currentIndicatorConfig.value) return
+  if (!map.getLayer('highlight_fill')) return  // 尚未選任何產區則不動作
   const idx = climateYears.value.indexOf(year)
   if (idx < 0) return
   const cfg = currentIndicatorConfig.value
-
-  // 氣候熱力只塗在「當前選中的產區（activeAOCInfo）」
-  // 若未選任何產區，則維持原本顏色
   const activeId = activeAOCInfo.value?.id
+  if (!activeId) return
 
-  for (const aoc of aocData.value) {
-    const safe = aocSafeId(aoc.id)
-    const fillId = `aoc_fill_${safe}`
-    const lineId = `aoc_line_${safe}`
-    if (!map.getLayer(fillId)) continue
+  // 氣候熱力只塗在已選中產區的 highlight_fill layer
+  const arr = climateData.value[activeId]?.[cfg.dataKey]
+  const value = Array.isArray(arr) && idx < arr.length ? Number(arr[idx]) : null
+  const color = Number.isFinite(value) ? valueToClimateColor(value, cfg.id) : '#f0f0f0'
+  const opacity = Number.isFinite(value) ? 0.72 : 0.2
 
-    // 非選中產區 → 還原為預設樣式
-    if (activeId && aoc.id !== activeId) {
-      map.setPaintProperty(fillId, 'fill-color', props.region.color)
-      map.setPaintProperty(fillId, 'fill-opacity', 0.18)
-      if (map.getLayer(lineId)) {
-        map.setPaintProperty(lineId, 'line-color', '#ffffff')
-        map.setPaintProperty(lineId, 'line-opacity', 0.55)
-        map.setPaintProperty(lineId, 'line-width', 1.0)
-      }
-      continue
-    }
-    // 沒有選中任何產區 → 全部不上氣候色
-    if (!activeId) {
-      map.setPaintProperty(fillId, 'fill-color', props.region.color)
-      map.setPaintProperty(fillId, 'fill-opacity', 0.18)
-      continue
-    }
+  map.setPaintProperty('highlight_fill', 'fill-color', color)
+  map.setPaintProperty('highlight_fill', 'fill-opacity', opacity)
+}
 
-    // 選中產區 → 套用氣候顏色
-    const arr = climateData.value[aoc.id]?.[cfg.dataKey]
-    const value = Array.isArray(arr) && idx < arr.length ? Number(arr[idx]) : null
-    const color = Number.isFinite(value) ? valueToClimateColor(value, cfg.id) : '#f0f0f0'
-    const opacity = Number.isFinite(value) ? 0.7 : 0.2
-
-    map.setPaintProperty(fillId, 'fill-color', color)
-    map.setPaintProperty(fillId, 'fill-opacity', opacity)
-    if (map.getLayer(lineId)) {
-      map.setPaintProperty(lineId, 'line-color', '#ffffff')
-      map.setPaintProperty(lineId, 'line-opacity', 0.85)
-      map.setPaintProperty(lineId, 'line-width', 1.6)
-    }
-  }
+function resetClimateFill() {
+  // 將 highlight_fill 還原為預設產區顏色
+  if (!map || !map.getLayer('highlight_fill')) return
+  map.setPaintProperty('highlight_fill', 'fill-color', props.region.color)
+  map.setPaintProperty('highlight_fill', 'fill-opacity', 0.35)
 }
 
 function setClimateIndicator(id) {
@@ -832,10 +808,11 @@ async function toggleClimate() {
   if (!climateEnabled.value) {
     try {
       await loadClimateData()
-      await loadAllOutlines()
       climateEnabled.value = true
       applyClimateColor(climateYear.value)
       mapError.value = null
+      // 開啟氣候熱力時自動收合資訊欄
+      infoCollapsed.value = true
     } catch (err) {
       mapError.value = `氣候資料載入失敗: ${err.message}`
       climateEnabled.value = false
@@ -844,7 +821,7 @@ async function toggleClimate() {
   }
 
   climateEnabled.value = false
-  clearAllAocLayers()
+  resetClimateFill()
 }
 
 function onClimateYearChange() {
