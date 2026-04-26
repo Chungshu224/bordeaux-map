@@ -84,6 +84,8 @@ import ClimatHierarchySlide from './slides/ClimatHierarchySlide.vue'
 import BourgogneGrapeProfileSlide from './slides/BourgogneGrapeProfileSlide.vue'
 import VintageComparisonSlide from './slides/VintageComparisonSlide.vue'
 import BourgogneSubRegionSlide from './slides/BourgogneSubRegionSlide.vue'
+import GrandCruMonopoleSlide from './slides/GrandCruMonopoleSlide.vue'
+import HospicesBeauneAuctionSlide from './slides/HospicesBeauneAuctionSlide.vue'
 import QuizSlide from '../../italy/course/slides/QuizSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
 
@@ -942,6 +944,8 @@ const getCurrentSlideComponent = computed(() => {
     case 'grape-profile': return BourgogneGrapeProfileSlide
     case 'vintage-comparison': return VintageComparisonSlide
     case 'subregion-overview': return BourgogneSubRegionSlide
+    case 'grand-cru-monopole': return GrandCruMonopoleSlide
+    case 'hospices-beaune-auction': return HospicesBeauneAuctionSlide
     case 'quiz': return QuizSlide
     default: return ContentSlide
   }
