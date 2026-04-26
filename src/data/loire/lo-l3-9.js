@@ -83,6 +83,17 @@ export const lessonContent = [
   },
 
   {
+    component: 'SancerrePouillyDuelSlide',
+    title: '⚔️ Sancerre × Pouilly-Fumé 雙雄對決（互動深度）',
+    componentProps: {
+      slide: {
+        title: '⚔️ Sancerre × Pouilly-Fumé 雙雄對決',
+        description: '從三大土壤類型（Caillottes / Terres Blanches / Silex）到代表酒莊（Cotat / Vacheron / Dagueneau）的全方位互動對比'
+      }
+    }
+  },
+
+  {
     title: 'Sancerre 三土壤系統',
     highlights: [
       { id: 1, icon: '🥌', title: 'Caillottes（白堊石灰）', content: '占 Sancerre 約 40%，年輕易飲、清新柑橘香' },

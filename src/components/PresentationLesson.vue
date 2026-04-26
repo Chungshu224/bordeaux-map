@@ -233,6 +233,8 @@ import LoireGrapeProfileSlide from './loire/course/slides/LoireGrapeProfileSlide
 import LoireSweetnessSpectrumSlide from './loire/course/slides/LoireSweetnessSpectrumSlide.vue'
 import LoireAOCCompareSlide from './loire/course/slides/LoireAOCCompareSlide.vue'
 import LoireSweetWineMethodSlide from './loire/course/slides/LoireSweetWineMethodSlide.vue'
+import SancerrePouillyDuelSlide from './loire/course/slides/SancerrePouillyDuelSlide.vue'
+import LoireCremantMethodsSlide from './loire/course/slides/LoireCremantMethodsSlide.vue'
 import HungaryRegionMapSlide from './hungary/slides/HungaryRegionMapSlide.vue'
 import TokajiAszuLevelsSlide from './hungary/slides/TokajiAszuLevelsSlide.vue'
 import HungaryGrapeProfileSlide from './hungary/slides/HungaryGrapeProfileSlide.vue'
@@ -393,6 +395,8 @@ const slideComponentMap = {
   LoireSweetnessSpectrumSlide,
   LoireAOCCompareSlide,
   LoireSweetWineMethodSlide,
+  SancerrePouillyDuelSlide,
+  LoireCremantMethodsSlide,
   HungaryRegionMapSlide,
   TokajiAszuLevelsSlide,
   HungaryGrapeProfileSlide,

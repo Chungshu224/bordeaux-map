@@ -23,6 +23,16 @@ export const lessonContent = [
     `
   },
   {
+    component: 'LoireCremantMethodsSlide',
+    title: '🥂 Loire 氣泡酒四大 AOC 互動深度',
+    componentProps: {
+      slide: {
+        title: '🥂 Loire 氣泡酒四大 AOC 對比',
+        description: 'Crémant de Loire / Saumur Brut / Vouvray Mousseux / Touraine Mousseux 的工法、品種、Dosage 全方位互動對比，並對照 Méthode Traditionnelle 與 Méthode Ancestrale (Pét-Nat) 兩大工法。'
+      }
+    }
+  },
+  {
     type: 'quiz',
     title: '小測驗',
     questions: [
