@@ -228,6 +228,11 @@ import FirstGrowthsMap from './maps/FirstGrowthsMap.vue'
 import LessonProgressIndicator from './LessonProgressIndicator.vue'
 import QuizSlide from './italy/course/slides/QuizSlide.vue'
 import LoireRegionMapSlide from './loire/course/slides/LoireRegionMapSlide.vue'
+import LoireSubRegionsSlide from './loire/course/slides/LoireSubRegionsSlide.vue'
+import LoireGrapeProfileSlide from './loire/course/slides/LoireGrapeProfileSlide.vue'
+import LoireSweetnessSpectrumSlide from './loire/course/slides/LoireSweetnessSpectrumSlide.vue'
+import LoireAOCCompareSlide from './loire/course/slides/LoireAOCCompareSlide.vue'
+import LoireSweetWineMethodSlide from './loire/course/slides/LoireSweetWineMethodSlide.vue'
 import HungaryRegionMapSlide from './hungary/slides/HungaryRegionMapSlide.vue'
 import CaliforniaRegionMapSlide from './california/slides/CaliforniaRegionMapSlide.vue'
 // 改用 lessonContentLoader 的單例載入器,避免間接層帶來的潛在等待問題
@@ -379,6 +384,11 @@ const slideComponentMap = {
   FirstGrowthsMap,
   QuizSlide,
   LoireRegionMapSlide,
+  LoireSubRegionsSlide,
+  LoireGrapeProfileSlide,
+  LoireSweetnessSpectrumSlide,
+  LoireAOCCompareSlide,
+  LoireSweetWineMethodSlide,
   HungaryRegionMapSlide,
   CaliforniaRegionMapSlide
 }
