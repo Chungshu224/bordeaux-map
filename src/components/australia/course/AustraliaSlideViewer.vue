@@ -108,6 +108,16 @@
           <AustraliaMapSlide :slide="slide" />
         </template>
 
+        <!-- GI 分級互動 -->
+        <template v-else-if="slide.type === 'gi-system'">
+          <AustraliaGISystemSlide :slide="slide" />
+        </template>
+
+        <!-- Shiraz 產區風格圖譜 -->
+        <template v-else-if="slide.type === 'shiraz-styles'">
+          <AustraliaShirazRegionalStylesSlide :slide="slide" />
+        </template>
+
         <!-- 佔位 -->
         <template v-else>
           <div class="slide-placeholder">
@@ -146,6 +156,8 @@
 import { ref, computed, watch } from 'vue'
 import { getAustraliaLessonSlides } from '../data/lessonSlides.js'
 import AustraliaMapSlide from './slides/AustraliaMapSlide.vue'
+import AustraliaGISystemSlide from './slides/AustraliaGISystemSlide.vue'
+import AustraliaShirazRegionalStylesSlide from './slides/AustraliaShirazRegionalStylesSlide.vue'
 
 const props = defineProps({
   lesson:     { type: Object, required: true },

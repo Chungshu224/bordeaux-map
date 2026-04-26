@@ -270,6 +270,11 @@ const SLIDE_MAP = {
       ],
     },
     {
+      type: 'gi-system',
+      title: '🗺️ 澳洲 GI 階層互動詳解',
+      subtitle: '點選 Sub-Region / Region / Zone / State / Country 查看詳細規範',
+    },
+    {
       type: 'quiz',
       question: '若澳洲酒標上標示「Barossa Valley」，這屬於 GI 的哪個層級？',
       options: ['State（州）', 'Zone（大區）', 'Region（次區）', 'Sub-Region（子區）'],
@@ -319,6 +324,11 @@ const SLIDE_MAP = {
         '🔴 Merlot：柔滑、李子風味，常作混釀，Margaret River 最佳',
         '🍷 GSM 混釀（Grenache-Shiraz-Mourvèdre）：南澳的招牌風格',
       ],
+    },
+    {
+      type: 'shiraz-styles',
+      title: '🍷 澳洲 Shiraz 產區風格圖譜',
+      subtitle: '從涼爽 Grampians 到熔熱 Barossa，五大產區風土、風味與名莊互動對比',
     },
     {
       type: 'quiz',
