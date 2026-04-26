@@ -75,6 +75,8 @@ import DOCGPyramidSlide from './slides/DOCGPyramidSlide.vue'
 import ItalianGrapeProfileSlide from './slides/ItalianGrapeProfileSlide.vue'
 import AppellationComparisonSlide from './slides/AppellationComparisonSlide.vue'
 import ItalyRegionsOverviewSlide from './slides/ItalyRegionsOverviewSlide.vue'
+import SuperTuscanEvolutionSlide from './slides/SuperTuscanEvolutionSlide.vue'
+import AmaroneAppassimentoSlide from './slides/AmaroneAppassimentoSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
@@ -102,7 +104,9 @@ const slideComponentMap = {
   'docg-pyramid': DOCGPyramidSlide,
   'italian-grape-profile': ItalianGrapeProfileSlide,
   'appellation-comparison': AppellationComparisonSlide,
-  'italy-regions-overview': ItalyRegionsOverviewSlide
+  'italy-regions-overview': ItalyRegionsOverviewSlide,
+  'super-tuscan-evolution': SuperTuscanEvolutionSlide,
+  'amarone-appassimento': AmaroneAppassimentoSlide
 }
 
 function pickRandom (arr, n) {
