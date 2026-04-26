@@ -126,6 +126,11 @@ const S1M1L2_slides = [
     `,
   },
   {
+    type: 'spain-regions-overview',
+    title: '🌍 西班牙 17 個自治區互動探索',
+    description: '點選任一自治區查看詳細資訊：DO/DOCa 數量、主要品種、氣候、代表酒莊。可依「西北綠色」「北部紅酒帶」「中部高原」「東部地中海」「南部」「外島」6 大區域篩選。'
+  },
+  {
     type: 'quiz',
     question: '以下哪個自治區以大西洋氣候為主，是 Albariño 白酒的故鄉？',
     options: ['安達盧西亞（Andalucía）', '加利西亞（Galicia）', '拉里奧哈（La Rioja）', '巴倫西亞（Valencia）'],
@@ -168,6 +173,11 @@ const S1M2L1_slides = [
       { icon: '🗺️', label: 'IGP (Vino de la Tierra)', desc: '地區餐酒，類似法國 IGP，地理指示但規定比 DO 寬鬆', color: '#3498db' },
       { icon: '🍷', label: 'Vino de Mesa', desc: '普通餐酒，無地理或品種限制，最基本的級別', color: '#95a5a6' },
     ],
+  },
+  {
+    type: 'spain-classification',
+    title: '🏛️ 西班牙分級金字塔互動詳解',
+    description: '點選金字塔任一階查看詳細規範：DOCa 僅有 Rioja 與 Priorat、DO 有 96+ 個、VP 是單一酒莊頂級認證、VC/IGP/Vino de Mesa 等級順序。含每級代表產區、限制條件與價格範圍。'
   },
   {
     type: 'quiz',
@@ -227,6 +237,11 @@ const S1M2L2_slides = [
     `,
   },
   {
+    type: 'rioja-aging',
+    title: '🪵 Rioja 陳年制度互動詳解',
+    description: '點選 Joven / Crianza / Reserva / Gran Reserva 查看完整陳年規範（紅/白/粉紅葡萄酒桶月數 + 瓶中月數）、典型風味變化、建議酒款及「美國橡木 vs 法國橡木」的關鍵差異。',
+  },
+  {
     type: 'quiz',
     question: 'Rioja 的 Gran Reserva 紅酒，最短需要多少年的總陳年時間（橡木桶 + 瓶中）？',
     options: ['2 年', '3 年', '5 年', '7 年'],
@@ -269,6 +284,11 @@ const S1M3L1_slides = [
       { icon: '🌿', label: 'Mencía', desc: 'Bierzo・Ribeira Sacra。板岩土壤。優雅花香、鉛筆芯、輕盈結構', color: '#27ae60' },
       { icon: '🍇', label: 'Bobal', desc: 'Utiel-Requena。高原本地品種。深色水果、高酸，老藤品質卓越', color: '#7d3c98' },
     ],
+  },
+  {
+    type: 'spain-grape-profile',
+    title: '🍇 西班牙五大紅葡萄品種互動檔案',
+    description: '點選 Tempranillo / Garnacha / Monastrell / Mencía / Bobal 查看詳細品種檔案：同義名稱、主要產區、品酣特徵、釀造風格、餐酒搭配、代表酒款與股价區間。'
   },
   {
     type: 'quiz',

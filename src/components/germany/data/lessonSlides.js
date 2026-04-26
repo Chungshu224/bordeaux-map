@@ -176,8 +176,11 @@ export const G1M1L3 = {
       description: '點擊下方按鈕，在衛星地圖上探索 Mosel 的陡峭板岩坡與葡萄園分佈',
       mapRegion: 'mosel'
     },
-    {
-      type: 'quiz',
+    {      type: 'germany-regions-overview',
+      title: '🌍 德國 13 大產區互動詳解',
+      description: '點選任一產區查看詳細資訊。德國葡萄酒產區可分為三大類別：「經典 Riesling 核心」5 區（Mosel/Rheingau/Pfalz/Nahe/Rheinhessen）、「南部溫暖」4 區（Baden/Württemberg/Franken/Hessische Bergstraße）、「北/東部寒涼」4 區（Ahr/Mittelrhein/Saale-Unstrut/Sachsen）。'
+    },
+    {      type: 'quiz',
       title: '快速測驗',
       questions: [
         {
@@ -236,8 +239,11 @@ export const G1M2L1 = {
       title: '⏳ Riesling 的陳年奇蹟',
       content: '頂級 Riesling 擁有驚人的陳年潛力。當年輕的 Riesling 帶著清新的柑橘、桃子香氣，陳年後會發展出「汽油味」（Petrol note）——這是 Riesling 成熟的重要標誌。10 年以上的 Mosel Auslese 可展現出蜂蜜、薑餅、杏桃乾的複雜層次；而 TBA 甚至可陳年 50 年以上。'
     },
-    {
-      type: 'quiz',
+    {      type: 'riesling-terroir',
+      title: '🗺️ Riesling 風土全景探索',
+      description: '點選 5 大產區，互動比較 Mosel 藍灯板巖、Rheingau 多元土壤、Pfalz 玄武巖、Nahe 「土壤博物館」、Rheinhessen 紅色斜坡的土壤 / 氣候 / 香氣 / 著名 Einzellage / 代表酒莊。同一 Riesling 品種在不同風土上的個性差異一目了然。'
+    },
+    {      type: 'quiz',
       title: '快速測驗',
       questions: [
         {
@@ -436,6 +442,11 @@ export const G1M3L2 = {
       ]
     },
     {
+      type: 'qmp-sweetness',
+      title: '🍯 QmP 6 級甜度階梯互動詳解',
+      description: '點選雘形階梯任一層查看詳細資訊：Oechsle°、潛在酒精、殘糖、採收與釀造、香氣、餐酒搭配、經典酒莊代表。從輕盈的 Kabinett（7-9% abv）一路進階到稀世 TBA（200+°Oe、単瓶總華可達£15,000+）。'
+    },
+    {
       type: 'quiz',
       title: '快速測驗',
       questions: [
@@ -493,6 +504,11 @@ export const G1M3L3 = {
         { icon: '🔴', text: 'Ahr：Meyer-Näkel、Jean Stodden' },
         { icon: '🏛️', text: 'Franken：Horst Sauer、Rudolf Fürst' }
       ]
+    },
+    {
+      type: 'vdp-classification',
+      title: '👑 VDP 4 階金字塔互動詳解 + GG 重點解說',
+      description: '點選金字塔任一層看規範 / 葡萄園 / 風格 / 價格與代表酒款。下方 4 卡詳解 Grosses Gewächs（GG）的定義、特色、例外、歷史——VDP 如何以 Burgundy Grand Cru 為藍本，在 2002 年建立德國「葡萄園分級」革命。'
     },
     {
       type: 'quiz',

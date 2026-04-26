@@ -133,6 +133,11 @@ const P1M1L2_slides = [
     ],
   },
   {
+    type: 'portugal-regions-overview',
+    title: '🌍 葡萄牙 14 大 DOC 互動探索',
+    description: '點選任一 DOC 查看詳細資訊：Minho/Douro/Dão/Bairrada/Lisboa/Tejo/Setúbal/Alentejo/Algarve/Madeira/Açores 等。含氣候類型、主要品種、酒款風格、留象酒款與必訪酒莊。'
+  },
+  {
     type: 'quiz',
     question: '以下哪個是葡萄牙最大的 DOC（面積最大的法定產區）？',
     options: ['Douro', 'Alentejo', 'Vinho Verde', 'Dão'],
@@ -457,6 +462,11 @@ const P1M3L1_slides = [
     ],
   },
   {
+    type: 'douro-grapes',
+    title: '🍇 Douro 五大紅品種互動檔案',
+    description: '點選 Touriga Nacional / Touriga Franca / Tinta Roriz / Trincadeira / Baga 查看詳細品種檔案：在 Douro 中的角色、結構、香氣、代表酒款。了解為何這五個品種是葡萄牙高級酒款的靈魂。',
+  },
+  {
     type: 'quiz',
     question: '「Touriga Nacional」主要種植在哪個產區，是波特酒的核心品種？',
     options: ['Alentejo', 'Douro / Porto', 'Vinho Verde', 'Lisboa'],
@@ -680,6 +690,16 @@ const P1M4L1_slides = [
         <li><strong>LBV（Late Bottled Vintage）</strong>：次年份，性價比高</li>
       </ul>
     `,
+  },
+  {
+    type: 'port-styles',
+    title: '🍷 Port 風格金字塔互動詳解',
+    description: '點選任一風格查看詳細規範。主要分為「Ruby 系」「Tawny 系」「White/Rosé」三大家族：Ruby/Reserve、LBV、Vintage、Crusted、Tawny、Tawny with Indication of Age（10/20/30/40年）、Colheita、White/Rosé Port 等。含酒精 / 甜度 / 陳年 / 價格與代表酒莊。',
+  },
+  {
+    type: 'port-aging',
+    title: '⏳ Port 陳年補充：Ruby vs Tawny 靣靣與氧化陳年',
+    description: '互動詳解 Ruby Port 「靣靣陳年」（在瓶中 / 大桁中深色與果香保存）vs Tawny Port 「氧化陳年」（在小桁 pipe 中長期接觸氧氣、複雜堆莽 / 核果 / 咖啡香氣）的差異。包含 10/20/30/40年 Tawny 的實際平均年齡說明與內行選酒重點。',
   },
   {
     type: 'quiz',
