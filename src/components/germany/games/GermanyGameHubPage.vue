@@ -23,18 +23,20 @@
     </template>
 
     <!-- ── 子遊戲 ── -->
-    <GermanyRegionQuizPage   v-else-if="currentGame === 'region'"  @back="currentGame = null" />
-    <GermanyPradikatQuizPage v-else-if="currentGame === 'pradikat'" @back="currentGame = null" />
-    <GermanyGrapeMatchPage   v-else-if="currentGame === 'grape'"    @back="currentGame = null" />
+    <GermanyRegionQuizPage         v-else-if="currentGame === 'region'"        @back="currentGame = null" />
+    <GermanyPradikatQuizPage       v-else-if="currentGame === 'pradikat'"      @back="currentGame = null" />
+    <GermanyGrapeMatchPage         v-else-if="currentGame === 'grape'"         @back="currentGame = null" />
+    <GermanyClassificationQuizPage v-else-if="currentGame === 'classification'" @back="currentGame = null" />
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import SharedGameHub from '../../shared/GameHub.vue'
-import GermanyRegionQuizPage   from './GermanyRegionQuizPage.vue'
-import GermanyPradikatQuizPage from './GermanyPradikatQuizPage.vue'
-import GermanyGrapeMatchPage   from './GermanyGrapeMatchPage.vue'
+import GermanyRegionQuizPage         from './GermanyRegionQuizPage.vue'
+import GermanyPradikatQuizPage       from './GermanyPradikatQuizPage.vue'
+import GermanyGrapeMatchPage         from './GermanyGrapeMatchPage.vue'
+import GermanyClassificationQuizPage from './GermanyClassificationQuizPage.vue'
 
 defineEmits(['back'])
 
@@ -64,6 +66,14 @@ const GAMES = [
     desc: '看到德國葡萄品種，快速選出最著名的 Anbaugebiet 或相關知識',
     tags: ['品種', '配對', '白葡萄 + 紅葡萄'],
     accent: '#a78bfa', accent2: '#7c3aed'
+  },
+  {
+    id: 'classification',
+    icon: '🏷️',
+    name: '分級辨識快答',
+    desc: 'Prädikat 6 等級辨識 + Trocken / Halbtrocken / Lieblich / Süss 干甜分類',
+    tags: ['分級', '簡單 / 困難', 'Prädikat + 干甜'],
+    accent: '#facc15', accent2: '#ca8a04'
   }
 ]
 
@@ -79,12 +89,14 @@ function getBest(gameId) {
 }
 
 const stats = computed(() => {
-  const ids = ['region', 'pradikat', 'grape']
-  const names = ['🗺️ 產區知識快答', '🏅 Prädikat 分級快答', '🍇 品種 × 產區配對']
+  const ids = ['region', 'pradikat', 'grape', 'classification']
+  const names = ['🗺️ 產區知識快答', '🏅 Prädikat 分級快答', '🍇 品種 × 產區配對', null]
+  const extraKeys = [null, null, null, 'de_class_best']
   let played = 0
   let totalBest = 0
   ids.forEach((id, i) => {
-    const v = parseInt(localStorage.getItem(`germany-quiz-${names[i]}-best`) || '0')
+    const key = extraKeys[i] || `germany-quiz-${names[i]}-best`
+    const v = parseInt(localStorage.getItem(key) || '0')
     if (v > 0) { played++; totalBest += v }
   })
   return [

@@ -23,18 +23,20 @@
     </template>
 
     <!-- ══ 子遊戲 ══ -->
-    <HungaryRegionClassifierPage v-else-if="currentGame === 'region'" @back="currentGame = null" />
-    <HungaryGrapeMatchPage       v-else-if="currentGame === 'grape'"  @back="currentGame = null" />
-    <HungaryTokajFlashPage       v-else-if="currentGame === 'tokaj'"  @back="currentGame = null" />
+    <HungaryRegionClassifierPage  v-else-if="currentGame === 'region'"         @back="currentGame = null" />
+    <HungaryGrapeMatchPage        v-else-if="currentGame === 'grape'"          @back="currentGame = null" />
+    <HungaryTokajFlashPage        v-else-if="currentGame === 'tokaj'"          @back="currentGame = null" />
+    <HungaryClassificationQuizPage v-else-if="currentGame === 'classification'" @back="currentGame = null" />
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import SharedGameHub from '../shared/GameHub.vue'
-import HungaryRegionClassifierPage from './HungaryRegionClassifierPage.vue'
-import HungaryGrapeMatchPage       from './HungaryGrapeMatchPage.vue'
-import HungaryTokajFlashPage       from './HungaryTokajFlashPage.vue'
+import HungaryRegionClassifierPage  from './HungaryRegionClassifierPage.vue'
+import HungaryGrapeMatchPage        from './HungaryGrapeMatchPage.vue'
+import HungaryTokajFlashPage        from './HungaryTokajFlashPage.vue'
+import HungaryClassificationQuizPage from './HungaryClassificationQuizPage.vue'
 
 defineEmits(['back'])
 
@@ -68,10 +70,19 @@ const GAMES = [
     accent:  '#7b1fa2',
     accent2: '#9c27b0',
   },
+  {
+    id:      'classification',
+    icon:    '🏷️',
+    name:    '分級辨識快答',
+    desc:    '匈牙利經典酒款辨識 + Tokaji Aszú 3-6 Puttonyos 殘糖等級',
+    tags:    ['分級', '簡單 / 困難', 'Tokaji 等級'],
+    accent:  '#c084fc',
+    accent2: '#9333ea',
+  },
 ]
 
 const stats = computed(() => {
-  const keys = ['hu_region_best', 'hu_grape_best', 'hu_tokaj_best']
+  const keys = ['hu_region_best', 'hu_grape_best', 'hu_tokaj_best', 'hu_class_best']
   let played = 0, totalBest = 0
   keys.forEach(k => { const v = parseInt(localStorage.getItem(k) || '0'); if (v > 0) { played++; totalBest += v } })
   return [

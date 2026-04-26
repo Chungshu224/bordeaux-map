@@ -17,17 +17,19 @@
       </div>
     </template>
   </SharedGameHub>
-  <PortugalRegionQuizPage   v-else-if="currentGame === 'region'"    @back="currentGame = null" />
-  <PortugalPortWineQuizPage v-else-if="currentGame === 'portwine'"  @back="currentGame = null" />
-  <PortugalFlashCardPage    v-else-if="currentGame === 'flashcard'" @back="currentGame = null" />
+  <PortugalRegionQuizPage         v-else-if="currentGame === 'region'"         @back="currentGame = null" />
+  <PortugalPortWineQuizPage       v-else-if="currentGame === 'portwine'"       @back="currentGame = null" />
+  <PortugalFlashCardPage          v-else-if="currentGame === 'flashcard'"      @back="currentGame = null" />
+  <PortugalClassificationQuizPage v-else-if="currentGame === 'classification'" @back="currentGame = null" />
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import SharedGameHub from '../../shared/GameHub.vue'
-import PortugalRegionQuizPage   from './PortugalRegionQuizPage.vue'
-import PortugalPortWineQuizPage from './PortugalPortWineQuizPage.vue'
-import PortugalFlashCardPage    from './PortugalFlashCardPage.vue'
+import PortugalRegionQuizPage         from './PortugalRegionQuizPage.vue'
+import PortugalPortWineQuizPage       from './PortugalPortWineQuizPage.vue'
+import PortugalFlashCardPage          from './PortugalFlashCardPage.vue'
+import PortugalClassificationQuizPage from './PortugalClassificationQuizPage.vue'
 
 const emit = defineEmits(['back'])
 const currentGame = ref(null)
@@ -57,10 +59,18 @@ const GAMES = [
     tags: ['閃卡', '12 DOC', '全 20 DOC'],
     accent: '#60a5fa', accent2: '#1d4ed8'
   },
+  {
+    id: 'classification',
+    icon: '🏷️',
+    name: '分級辨識快答',
+    desc: 'Port 6 種類別辨識 + Tawny 10/20/30/40 年陳年等級 + DOC 制度',
+    tags: ['分級', '簡單 / 困難', 'Port + DOC'],
+    accent: '#f97316', accent2: '#c2410c'
+  },
 ]
 
 const stats = computed(() => {
-  const keys = ['pt_region_quiz_best', 'pt_portwine_best', 'pt_flashcard_best']
+  const keys = ['pt_region_quiz_best', 'pt_portwine_best', 'pt_flashcard_best', 'pt_class_best']
   let played = 0, totalBest = 0
   keys.forEach(k => { const v = parseInt(localStorage.getItem(k) || '0'); if (v > 0) { played++; totalBest += v } })
   return [

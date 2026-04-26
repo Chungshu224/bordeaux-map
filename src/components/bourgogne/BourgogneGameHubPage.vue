@@ -23,20 +23,22 @@
     </template>
 
     <!-- ══ 子遊戲 ══ -->
-    <BourgogneMapQuizPage     v-else-if="currentGame === 'map'"      @back="currentGame = null" />
-    <BourgogneVintageSortPage v-else-if="currentGame === 'vintage'"  @back="currentGame = null" />
-    <BourgogneGrandCruQuizPage v-else-if="currentGame === 'grandcru'" @back="currentGame = null" />
-    <BourgogneColorQuizPage   v-else-if="currentGame === 'colorquiz'" @back="currentGame = null" />
+    <BourgogneMapQuizPage           v-else-if="currentGame === 'map'"            @back="currentGame = null" />
+    <BourgogneVintageSortPage       v-else-if="currentGame === 'vintage'"        @back="currentGame = null" />
+    <BourgogneGrandCruQuizPage      v-else-if="currentGame === 'grandcru'"       @back="currentGame = null" />
+    <BourgogneColorQuizPage         v-else-if="currentGame === 'colorquiz'"      @back="currentGame = null" />
+    <BourgogneClassificationQuizPage v-else-if="currentGame === 'classification'" @back="currentGame = null" />
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import SharedGameHub from '../shared/GameHub.vue'
-import BourgogneMapQuizPage     from './BourgogneMapQuizPage.vue'
-import BourgogneVintageSortPage from './BourgogneVintageSortPage.vue'
-import BourgogneGrandCruQuizPage from './BourgogneGrandCruQuizPage.vue'
-import BourgogneColorQuizPage   from './BourgogneColorQuizPage.vue'
+import BourgogneMapQuizPage           from './BourgogneMapQuizPage.vue'
+import BourgogneVintageSortPage       from './BourgogneVintageSortPage.vue'
+import BourgogneGrandCruQuizPage      from './BourgogneGrandCruQuizPage.vue'
+import BourgogneColorQuizPage         from './BourgogneColorQuizPage.vue'
+import BourgogneClassificationQuizPage from './BourgogneClassificationQuizPage.vue'
 
 defineEmits(['back'])
 
@@ -78,11 +80,20 @@ const GAMES = [
     tags:   ['快答', '簡單 / 中 / 困難', '70+ AOC'],
     accent: '#f87171',
     accent2:'#be185d'
+  },
+  {
+    id:     'classification',
+    icon:   '🏷️',
+    name:   '分級辨識快答',
+    desc:   '4 大等級分類（Régional / Village / 1er Cru / Grand Cru）+ 頂級葡萄園地塊辨識',
+    tags:   ['分級', '簡單 / 困難', '4 等級 + 名園'],
+    accent: '#d4af37',
+    accent2:'#b8860b'
   }
 ]
 
 const stats = computed(() => {
-  const keys = ['bg_map_best', 'bg_vintage_best', 'bg_grandcru_best', 'bg_color_best']
+  const keys = ['bg_map_best', 'bg_vintage_best', 'bg_grandcru_best', 'bg_color_best', 'bg_class_best']
   let played = 0, totalBest = 0
   keys.forEach(k => { const v = parseInt(localStorage.getItem(k) || '0'); if (v > 0) { played++; totalBest += v } })
   return [
