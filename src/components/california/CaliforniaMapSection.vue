@@ -49,7 +49,7 @@
     <RegionMapAppellationDrawer
       :open="drawerOpen"
       region-name="加州"
-      :items="filteredListUnified"
+      :grouped="groupedDrawerUnified"
       :search="drawerSearch"
       :active-id="activeRegion?.id || ''"
       @update:open="drawerOpen = $event"
@@ -716,8 +716,20 @@ function applyClimateColor(year) {
   const idx = climateYears.value.indexOf(year)
   if (idx < 0) return
   const cfg = currentIndicatorConfig.value
+
+  // 只上色目前可見的產區
+  let visibleRegions = allRegions.value
+  let climateFilter = null
+  if (activeRegion.value) {
+    visibleRegions = [activeRegion.value]
+    climateFilter = ['==', ['get', 'ava_id'], activeRegion.value.id]
+  } else if (props.selectedGroup?.id) {
+    visibleRegions = allRegions.value.filter(r => r.group === props.selectedGroup.id)
+    climateFilter = ['==', ['get', 'group'], props.selectedGroup.id]
+  }
+
   const entries = []
-  for (const r of allRegions.value) {
+  for (const r of visibleRegions) {
     const arr = climateData.value[r.id]?.[cfg.dataKey]
     const value = Array.isArray(arr) && idx < arr.length ? Number(arr[idx]) : null
     if (Number.isFinite(value)) entries.push(r.id, valueToClimateColor(value, cfg.id))
@@ -726,6 +738,7 @@ function applyClimateColor(year) {
     map.addLayer({ id: 'ava-climate-fill', type: 'fill', source: 'ca-avas',
       paint: { 'fill-color': '#888', 'fill-opacity': 0 } })
   }
+  map.setFilter('ava-climate-fill', climateFilter)
   if (entries.length > 0) {
     map.setPaintProperty('ava-climate-fill', 'fill-color', ['match', ['get', 'ava_id'], ...entries, '#888888'])
     map.setPaintProperty('ava-climate-fill', 'fill-opacity', 0.55)
@@ -752,6 +765,11 @@ async function toggleClimate() {
   climateEnabled.value = false
   if (map && map.getLayer('ava-climate-fill')) map.removeLayer('ava-climate-fill')
 }
+
+// 選中產區變更時，同步更新氣候圖層
+watch(activeRegion, () => {
+  if (climateEnabled.value) applyClimateColor(climateYear.value)
+})
 
 onMounted(initMap)
 
@@ -784,11 +802,17 @@ const unifiedInfo = computed(() => {
   }
 })
 
-const filteredListUnified = computed(() => {
+const groupedDrawerUnified = computed(() => {
   const q = drawerSearch.value.trim().toLowerCase()
-  return allRegions.value
-    .filter(r => !q || r.name.toLowerCase().includes(q) || (r.county || '').toLowerCase().includes(q))
-    .map(r => ({ id: r.id, name: r.name, type: r.group, styles: [] }))
+  return groupedDrawerList.value
+    .map(g => ({
+      key: g.name.toLowerCase().replace(/[^a-z0-9]/g, '-'),
+      label: g.name,
+      items: g.items
+        .filter(r => !q || r.name.toLowerCase().includes(q) || (r.county || '').toLowerCase().includes(q))
+        .map(r => ({ id: r.id, name: r.name, type: r.group, styles: [] }))
+    }))
+    .filter(g => g.items.length > 0)
 })
 
 function selectById(item) {
