@@ -119,6 +119,26 @@
           <SpainRegionMapSlide :slide="currentSlideData" @openFullMap="(key) => emit('openRegionMap', key)" />
         </template>
 
+        <!-- DOCa/DO/IGP/VdM 分級金字塔 -->
+        <template v-else-if="currentSlideData.type === 'spain-classification'">
+          <DOPyramidSlide :slide="currentSlideData" />
+        </template>
+
+        <!-- 西班牙葡萄品種檔案（Tempranillo / Garnacha / Albariño 等） -->
+        <template v-else-if="currentSlideData.type === 'spain-grape-profile'">
+          <SpainGrapeProfileSlide :slide="currentSlideData" />
+        </template>
+
+        <!-- Rioja 陳年分級（Joven / Crianza / Reserva / Gran Reserva） -->
+        <template v-else-if="currentSlideData.type === 'rioja-aging'">
+          <RiojaAgingSlide :slide="currentSlideData" />
+        </template>
+
+        <!-- 西班牙主要 DO 產區總覽 -->
+        <template v-else-if="currentSlideData.type === 'spain-regions-overview'">
+          <SpainRegionsOverviewSlide :slide="currentSlideData" />
+        </template>
+
         <!-- 預設佔位 -->
         <template v-else>
           <div class="slide-placeholder">
@@ -170,6 +190,10 @@
 import { ref, computed, watch } from 'vue'
 import { getSpainLessonSlides } from '../data/lessonSlides.js'
 import SpainRegionMapSlide from './slides/SpainRegionMapSlide.vue'
+import DOPyramidSlide from './slides/DOPyramidSlide.vue'
+import SpainGrapeProfileSlide from './slides/SpainGrapeProfileSlide.vue'
+import RiojaAgingSlide from './slides/RiojaAgingSlide.vue'
+import SpainRegionsOverviewSlide from './slides/SpainRegionsOverviewSlide.vue'
 
 const props = defineProps({
   lesson: { type: Object, required: true },
