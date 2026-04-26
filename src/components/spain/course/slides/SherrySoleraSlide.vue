@@ -417,4 +417,23 @@ const current = computed(() => styles.find(s => s.key === currentKey.value) || s
 }
 .tip-icon { font-size: 1.1rem; }
 .note-tip p { margin: 0; font-size: 0.85rem; color: #6e2c00; }
+
+@media (max-width: 768px) {
+  .sherry-slide { padding: 16px; }
+  .slide-header h2 { font-size: 1.4rem; }
+  /* Tab 觸控目標大小 */
+  .style-tab { min-height: 64px; padding: 12px 8px; }
+  .style-tab:active { opacity: 0.75; }
+  /* Solera 桌盪最小寬度改為自動 */
+  .solera-cask { min-width: unset; width: 100%; box-sizing: border-box; }
+  .row { flex-wrap: wrap; justify-content: center; }
+  /* 筆記區域自動整寬 */
+  .info-grid { grid-template-columns: 1fr; }
+  .key-insight { padding: 14px 16px; }
+  .key-insight p { font-size: 0.88rem; }
+}
+@media (max-width: 480px) {
+  .style-tabs { grid-template-columns: 1fr; }
+  .solera-pyramid { padding: 14px 8px; }
+}
 </style>

@@ -406,4 +406,24 @@ const current = computed(() => tiers.find(t => t.key === currentKey.value) || ti
 .tip-icon { font-size: 1.1rem; }
 .label-tip strong { color: #1a5276; font-size: 0.9rem; }
 .label-tip p { margin: 4px 0 0; font-size: 0.85rem; color: #21618c; }
+
+@media (max-width: 768px) {
+  .cava-slide { padding: 16px; }
+  .slide-header h2 { font-size: 1.4rem; }
+  /* Tab 觸控目標大小 */
+  .tier-tab { min-height: 64px; padding: 12px 8px; }
+  .tier-tab:active { opacity: 0.75; }
+  /* 時間軸固定網格改為單欄 */
+  .timeline-row { grid-template-columns: 1fr; gap: 6px; }
+  .timeline-year { min-width: unset; width: 100%; text-align: left; }
+  /* 資訊區域 */
+  .info-grid { grid-template-columns: 1fr; }
+  .example-grid { grid-template-columns: repeat(2, 1fr); }
+  .key-insight { padding: 14px 16px; }
+  .key-insight p { font-size: 0.88rem; }
+}
+@media (max-width: 480px) {
+  .tier-tabs { grid-template-columns: 1fr; }
+  .example-grid { grid-template-columns: 1fr; }
+}
 </style>

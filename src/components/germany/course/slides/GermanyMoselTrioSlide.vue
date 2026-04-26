@@ -49,6 +49,7 @@
     <!-- 三流域風格比較表 -->
     <div class="comparison-section">
       <h3>⚖️ 三大河流域 Riesling 風格對比</h3>
+      <div class="table-scroll">
       <div class="comp-table">
         <div class="comp-header">
           <div class="comp-col-label"></div>
@@ -58,6 +59,7 @@
           <div class="comp-row-label">{{ row.label }}</div>
           <div v-for="(v, j) in row.values" :key="j" class="comp-cell" :class="{ highlight: activeIdx === j }">{{ v }}</div>
         </div>
+      </div>
       </div>
     </div>
 
@@ -385,10 +387,33 @@ const slates = [
 .key-insight h4 { margin: 0 0 8px; font-size: 1.1rem; }
 .key-insight p { margin: 0; line-height: 1.8; font-size: 0.95rem; }
 
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  border-radius: 12px;
+  margin-bottom: 22px;
+}
+.table-scroll .comp-table {
+  min-width: 520px;
+  margin-bottom: 0;
+  border-radius: 12px;
+}
+
 @media (max-width: 768px) {
+  .mosel-trio-slide { padding: 16px; }
+  .slide-header h2 { font-size: 1.4rem; }
   .river-tabs { grid-template-columns: 1fr; }
+  .river-tab { min-height: 52px; flex-direction: row; justify-content: flex-start; gap: 10px; padding: 12px 14px; }
+  .river-tab:active { opacity: 0.75; }
   .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-  .comp-header, .comp-row { grid-template-columns: 90px repeat(3, 1fr); }
   .detail-header { flex-direction: column; align-items: flex-start; }
+  .slate-cards { grid-template-columns: 1fr; }
+  .key-insight { padding: 14px 16px; }
+  .key-insight p { font-size: 0.88rem; }
+}
+@media (max-width: 480px) {
+  .metrics-grid { grid-template-columns: 1fr; }
+  .slate-card { flex-direction: column; gap: 8px; }
 }
 </style>
