@@ -323,6 +323,8 @@ function nextQuestion() {
     timerPct.value = 100
     nextTick(() => { pageEl.value?.focus(); startRaf() })
   } else {
+    const _prev = parseInt(localStorage.getItem('nz_island_best') || '0')
+    if (score.value > _prev) localStorage.setItem('nz_island_best', score.value)
     phase.value = 'final'
     stopRaf()
   }
