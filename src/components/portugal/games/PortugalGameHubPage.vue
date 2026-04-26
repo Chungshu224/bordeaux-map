@@ -1,49 +1,20 @@
 <template>
-  <div class="pt-game-hub">
-    <button class="back-btn" @click="emit('back')">← 返回課程</button>
-
-    <!-- 顯示子遊戲 -->
-    <PortugalRegionQuizPage  v-if="currentGame === 'region'"   @back="currentGame = null" />
-    <PortugalPortWineQuizPage v-else-if="currentGame === 'portwine'" @back="currentGame = null" />
-    <PortugalFlashCardPage   v-else-if="currentGame === 'flashcard'"  @back="currentGame = null" />
-
-    <!-- Hub 介面 -->
-    <template v-else>
-      <div class="hub-header">
-        <div class="hub-flag">🇵🇹</div>
-        <h1 class="hub-title">葡萄牙互動練習</h1>
-        <p class="hub-sub">選擇一款小遊戲，鞏固你的葡萄牙葡萄酒知識！</p>
-      </div>
-
-      <div class="game-grid">
-        <div
-          v-for="g in GAMES"
-          :key="g.id"
-          class="game-card"
-          @click="currentGame = g.id"
-        >
-          <div class="gc-icon">{{ g.icon }}</div>
-          <div class="gc-body">
-            <div class="gc-name">{{ g.name }}</div>
-            <div class="gc-desc">{{ g.desc }}</div>
-            <div class="gc-meta">
-              <span class="meta-tag easy">簡單 {{ g.easyLabel }}</span>
-              <span class="meta-tag hard">困難 {{ g.hardLabel }}</span>
-            </div>
-          </div>
-          <div class="gc-arrow">▶</div>
-        </div>
-      </div>
-
-      <div class="hub-footer">
-        <div class="footer-note">🏆 每款遊戲都有計分與最佳紀錄 — 鍵盤 1–6 可快速答題！</div>
-      </div>
-    </template>
-  </div>
+  <SharedGameHub
+    v-if="!currentGame"
+    title="葡萄牙互動練習"
+    subtitle="選擇一款小遊戲，鞏固你的葡萄牙葡萄酒知識！"
+    :games="GAMES"
+    @back="emit('back')"
+    @select="currentGame = $event"
+  />
+  <PortugalRegionQuizPage   v-else-if="currentGame === 'region'"    @back="currentGame = null" />
+  <PortugalPortWineQuizPage v-else-if="currentGame === 'portwine'"  @back="currentGame = null" />
+  <PortugalFlashCardPage    v-else-if="currentGame === 'flashcard'" @back="currentGame = null" />
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import SharedGameHub from '../../shared/GameHub.vue'
 import PortugalRegionQuizPage   from './PortugalRegionQuizPage.vue'
 import PortugalPortWineQuizPage from './PortugalPortWineQuizPage.vue'
 import PortugalFlashCardPage    from './PortugalFlashCardPage.vue'
@@ -57,24 +28,24 @@ const GAMES = [
     icon: '🗺️',
     name: '產區地理競速',
     desc: '看到 DOC 產區名稱，快速判斷所屬地理區域',
-    easyLabel: '3 大區・15 題',
-    hardLabel: '6 細區・20 題',
+    tags: ['地理', '3大區·15題', '6細區·20題'],
+    accent: '#4ade80', accent2: '#16a34a'
   },
   {
     id: 'portwine',
     icon: '🥃',
     name: '加烈酒分類競速',
     desc: '分辨波特酒類型：Ruby / Tawny / LBV / Vintage / Colheita / White',
-    easyLabel: 'Ruby vs Tawny・15 題',
-    hardLabel: '6 種類別・18 題',
+    tags: ['波特酒', 'Ruby vs Tawny', '6 種類別'],
+    accent: '#f59e0b', accent2: '#b45309'
   },
   {
     id: 'flashcard',
     icon: '🃏',
     name: '產區特色閃卡',
     desc: '根據氣候、土壤、品種提示，推理出正確的葡萄牙產區',
-    easyLabel: '12 DOC・4 選項',
-    hardLabel: '全 20 DOC・5 秒',
+    tags: ['閃卡', '12 DOC', '全 20 DOC'],
+    accent: '#60a5fa', accent2: '#1d4ed8'
   },
 ]
 </script>

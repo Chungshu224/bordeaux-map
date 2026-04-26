@@ -1,53 +1,22 @@
 <template>
-  <div class="sgh-page">
-    <button class="back-btn" @click="$emit('back')">← 返回</button>
-
-    <!-- 各遊戲頁面 -->
-    <SpainRegionQuizPage       v-if="activeGame === 'region'"        @back="activeGame = null" />
-    <SpainGrapeMatchPage       v-else-if="activeGame === 'grape'"    @back="activeGame = null" />
-    <SpainSherryQuizPage       v-else-if="activeGame === 'sherry'"   @back="activeGame = null" />
-    <SpainClassificationQuizPage v-else-if="activeGame === 'classification'" @back="activeGame = null" />
-    <SpainVintageSortPage      v-else-if="activeGame === 'vintage'"  @back="activeGame = null" />
-
-    <!-- Hub -->
-    <div v-else class="hub">
-      <div class="hub-inner">
-
-        <header class="hub-header">
-          <div class="hub-icon">🎮</div>
-          <h1 class="hub-title">西班牙互動練習</h1>
-          <p class="hub-sub">5 種遊戲模式・全面掌握西班牙葡萄酒知識</p>
-        </header>
-
-        <div class="games-grid">
-          <div
-            v-for="g in GAMES"
-            :key="g.id"
-            class="game-card"
-            :style="{ '--accent': g.accent, '--accent2': g.accent2 }"
-            @click="activeGame = g.id"
-          >
-            <div class="gc-accent-bar"></div>
-            <div class="gc-icon">{{ g.icon }}</div>
-            <div class="gc-name">{{ g.name }}</div>
-            <div class="gc-desc">{{ g.desc }}</div>
-            <div class="gc-tags">
-              <span v-for="tag in g.tags" :key="tag" class="gc-tag">{{ tag }}</span>
-            </div>
-            <div class="gc-play">開始 →</div>
-          </div>
-        </div>
-
-        <div class="hub-footer">
-          <div class="footer-tip">💡 完成所有練習並上傳成績，可在排行榜上查看排名</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <SharedGameHub
+    v-if="!activeGame"
+    title="西班牙互動練習"
+    subtitle="5 種遊戲模式・全面掌握西班牙葡萄酒知識"
+    :games="GAMES"
+    @back="$emit('back')"
+    @select="activeGame = $event"
+  />
+  <SpainRegionQuizPage         v-else-if="activeGame === 'region'"         @back="activeGame = null" />
+  <SpainGrapeMatchPage         v-else-if="activeGame === 'grape'"          @back="activeGame = null" />
+  <SpainSherryQuizPage         v-else-if="activeGame === 'sherry'"         @back="activeGame = null" />
+  <SpainClassificationQuizPage v-else-if="activeGame === 'classification'" @back="activeGame = null" />
+  <SpainVintageSortPage        v-else-if="activeGame === 'vintage'"        @back="activeGame = null" />
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import SharedGameHub from '../../shared/GameHub.vue'
 import SpainRegionQuizPage          from './SpainRegionQuizPage.vue'
 import SpainGrapeMatchPage          from './SpainGrapeMatchPage.vue'
 import SpainSherryQuizPage          from './SpainSherryQuizPage.vue'

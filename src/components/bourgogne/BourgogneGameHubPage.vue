@@ -3,33 +3,13 @@
 
     <!-- ══ HUB 總覽 ══ -->
     <template v-if="!currentGame">
-      <div class="hub-header">
-        <button class="back-btn" @click="$emit('back')">← 返回</button>
-        <div class="hub-title-block">
-          <h1 class="hub-title">🎮 互動練習</h1>
-          <p class="hub-subtitle">選擇一個遊戲開始挑戰</p>
-        </div>
-      </div>
-
-      <div class="hub-grid">
-        <div
-          v-for="g in GAMES"
-          :key="g.id"
-          class="game-card"
-          :style="{ '--accent': g.accent, '--accent2': g.accent2 }"
-          @click="currentGame = g.id"
-        >
-          <div class="card-icon">{{ g.icon }}</div>
-          <div class="card-body">
-            <div class="card-name">{{ g.name }}</div>
-            <div class="card-desc">{{ g.desc }}</div>
-            <div class="card-tags">
-              <span v-for="t in g.tags" :key="t" class="tag">{{ t }}</span>
-            </div>
-          </div>
-          <div class="card-arrow">›</div>
-        </div>
-      </div>
+      <SharedGameHub
+        title="布根地互動練習"
+        subtitle="選擇一個遊戲開始挑戰"
+        :games="GAMES"
+        @back="$emit('back')"
+        @select="currentGame = $event"
+      />
     </template>
 
     <!-- ══ 子遊戲 ══ -->
@@ -42,6 +22,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import SharedGameHub from '../shared/GameHub.vue'
 import BourgogneMapQuizPage     from './BourgogneMapQuizPage.vue'
 import BourgogneVintageSortPage from './BourgogneVintageSortPage.vue'
 import BourgogneGrandCruQuizPage from './BourgogneGrandCruQuizPage.vue'

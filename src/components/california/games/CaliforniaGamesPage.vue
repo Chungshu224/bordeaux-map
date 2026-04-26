@@ -1,81 +1,53 @@
 <template>
-  <div class="ca-games-page">
-
-    <!-- 返回按鈕 -->
-    <button class="back-btn" @click="emit('back')">← 返回課程</button>
-
-    <!-- ══ HUB ══ -->
-    <div v-if="!currentGame" class="hub">
-      <div class="hub-header">
-        <div class="hub-icon">🎮</div>
-        <h1>加州葡萄酒互動練習</h1>
-        <p>選擇一個遊戲，鞏固你的加州葡萄酒知識！</p>
-      </div>
-
-      <div class="game-cards">
-        <div class="game-card" @click="currentGame = 'region'">
-          <div class="gc-icon">🗺️</div>
-          <div class="gc-content">
-            <div class="gc-title">AVA 產區分類競速</div>
-            <div class="gc-desc">聽到 AVA 名稱，快速判斷它屬於 Napa、Sonoma、Central Coast 還是其他地區！</div>
-            <div class="gc-tags">
-              <span class="tag">⌨️ 鍵盤快捷鍵</span>
-              <span class="tag">⚡ 競速</span>
-              <span class="tag">🔥 連勝加分</span>
-            </div>
-          </div>
-          <div class="gc-arrow">→</div>
-        </div>
-
-        <div class="game-card" @click="currentGame = 'grape'">
-          <div class="gc-icon">🍇</div>
-          <div class="gc-content">
-            <div class="gc-title">葡萄品種配對</div>
-            <div class="gc-desc">看到 AVA 產區，判斷其最代表性的葡萄品種！從 Cabernet 到 Pinot Noir 全都考！</div>
-            <div class="gc-tags">
-              <span class="tag">🍷 8 種品種</span>
-              <span class="tag">⏱ 限時</span>
-              <span class="tag">💡 提示</span>
-            </div>
-          </div>
-          <div class="gc-arrow">→</div>
-        </div>
-
-        <div class="game-card" @click="currentGame = 'trivia'">
-          <div class="gc-icon">🏆</div>
-          <div class="gc-content">
-            <div class="gc-title">知識問答</div>
-            <div class="gc-desc">涵蓋巴黎評判、膜拜酒、氣候風土等深度知識。4 選 1，答完可複習錯題！</div>
-            <div class="gc-tags">
-              <span class="tag">🏆 巴黎審判</span>
-              <span class="tag">💎 膜拜酒</span>
-              <span class="tag">📝 複習錯題</span>
-            </div>
-          </div>
-          <div class="gc-arrow">→</div>
-        </div>
-      </div>
-
-      <div class="hub-footer">
-        <span>所有遊戲均有入門 / 進階兩種難度</span>
-      </div>
-    </div>
-
-    <!-- ══ GAME VIEWS ══ -->
-    <CARegionQuizPage v-else-if="currentGame === 'region'" @back="currentGame = null" />
-    <CAGrapeQuizPage  v-else-if="currentGame === 'grape'"  @back="currentGame = null" />
-    <CATriviaQuizPage v-else-if="currentGame === 'trivia'" @back="currentGame = null" />
-  </div>
+  <SharedGameHub
+    v-if="!currentGame"
+    title="加州葡萄酒互動練習"
+    subtitle="選擇一個遊戲，鞏固你的加州葡萄酒知識！"
+    :games="GAMES"
+    @back="emit('back')"
+    @select="currentGame = $event"
+  />
+  <CARegionQuizPage v-else-if="currentGame === 'region'" @back="currentGame = null" />
+  <CAGrapeQuizPage  v-else-if="currentGame === 'grape'"  @back="currentGame = null" />
+  <CATriviaQuizPage v-else-if="currentGame === 'trivia'" @back="currentGame = null" />
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import SharedGameHub from '../../shared/GameHub.vue'
 import CARegionQuizPage from './CARegionQuizPage.vue'
 import CAGrapeQuizPage  from './CAGrapeQuizPage.vue'
 import CATriviaQuizPage from './CATriviaQuizPage.vue'
 
 const emit = defineEmits(['back'])
 const currentGame = ref(null)
+
+const GAMES = [
+  {
+    id: 'region',
+    icon: '🗺️',
+    name: 'AVA 產區分類競速',
+    desc: '聽到 AVA 名稱，快速判斷它屬於 Napa、Sonoma、Central Coast 還是其他地區！',
+    tags: ['⌨️ 鍵盤快捷鍵', '⚡ 競速', '🔥 連勝加分'],
+    accent: '#f87171', accent2: '#c0392b'
+  },
+  {
+    id: 'grape',
+    icon: '🍇',
+    name: '葡萄品種配對',
+    desc: '看到 AVA 產區，判斷其最代表性的葡萄品種！從 Cabernet 到 Pinot Noir 全都考！',
+    tags: ['🍷 8 種品種', '⏱ 限時', '💡 提示'],
+    accent: '#a78bfa', accent2: '#7c3aed'
+  },
+  {
+    id: 'trivia',
+    icon: '🏆',
+    name: '知識問答',
+    desc: '涵蓋巴黎評判、膜拜酒、氣候風土等深度知識。4 選 1，答完可複習錯題！',
+    tags: ['🏆 巴黎審判', '💎 膜拜酒', '📝 複習錯題'],
+    accent: '#fbbf24', accent2: '#b45309'
+  },
+]
 </script>
 
 <style scoped>

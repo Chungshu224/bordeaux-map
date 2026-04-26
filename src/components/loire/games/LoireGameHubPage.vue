@@ -1,49 +1,23 @@
 <template>
-  <div class="lgh-page">
-    <button class="back-btn" @click="emit('back')">← 返回課程</button>
-
-    <div class="hub-header">
-      <div class="hub-icon">🎮</div>
-      <h1 class="hub-title">羅亞爾河谷 · 互動遊戲</h1>
-      <p class="hub-subtitle">透過遊戲強化記憶，挑戰排行榜！</p>
-    </div>
-
-    <div class="games-grid">
-      <div
-        v-for="game in GAMES"
-        :key="game.id"
-        class="game-card"
-        :style="{ '--accent': game.accent }"
-        @click="openGame(game.id)"
-      >
-        <div class="card-icon">{{ game.icon }}</div>
-        <div class="card-info">
-          <div class="card-title">{{ game.title }}</div>
-          <div class="card-desc">{{ game.desc }}</div>
-          <div class="card-tags">
-            <span v-for="t in game.tags" :key="t" class="tag">{{ t }}</span>
-          </div>
-        </div>
-        <div class="card-arrow">→</div>
-      </div>
-    </div>
-
-    <!-- 遊戲容器 -->
-    <Teleport to="body">
-      <Transition name="game-slide">
-        <div v-if="activeGame" class="game-overlay">
-          <component
-            :is="activeComponent"
-            @back="closeGame"
-          />
-        </div>
-      </Transition>
-    </Teleport>
-  </div>
+  <SharedGameHub
+    v-if="!currentGame"
+    title="羅亞爾河谷互動遊戲"
+    subtitle="透過遊戲強化記憶，挑戰排行榜！"
+    :games="GAMES"
+    @back="emit('back')"
+    @select="currentGame = $event"
+  />
+  <LoireRegionQuizPage    v-else-if="currentGame === 'region_quiz'"    @back="currentGame = null" />
+  <LoireMapQuizPage       v-else-if="currentGame === 'map_quiz'"       @back="currentGame = null" />
+  <LoireGrapeMatchPage    v-else-if="currentGame === 'grape_match'"    @back="currentGame = null" />
+  <LoireSweetnessSortPage v-else-if="currentGame === 'sweetness_sort'" @back="currentGame = null" />
+  <LoireSoilMatchPage     v-else-if="currentGame === 'soil_match'"     @back="currentGame = null" />
+  <LoireFoodPairingPage   v-else-if="currentGame === 'food_pairing'"   @back="currentGame = null" />
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
+import SharedGameHub from '../../shared/GameHub.vue'
 import LoireRegionQuizPage   from './LoireRegionQuizPage.vue'
 import LoireMapQuizPage      from './LoireMapQuizPage.vue'
 import LoireGrapeMatchPage   from './LoireGrapeMatchPage.vue'
@@ -57,7 +31,7 @@ const GAMES = [
   {
     id: 'region_quiz',
     icon: '🗺️',
-    title: '四大產區群競速分類',
+    name: '四大產區群競速分類',
     desc: '快速將羅亞爾河 AOC 分入正確的產區群！',
     tags: ['Pays Nantais', 'Anjou-Saumur', 'Touraine', 'Centre'],
     accent: '#3b82f6',
@@ -65,7 +39,7 @@ const GAMES = [
   {
     id: 'map_quiz',
     icon: '📍',
-    title: '產區地圖競答',
+    name: '產區地圖競答',
     desc: '聽到 AOC 名稱，在地圖上點出正確位置！',
     tags: ['地圖互動', 'Mapbox', '位置記憶'],
     accent: '#0ea5e9',
@@ -73,7 +47,7 @@ const GAMES = [
   {
     id: 'grape_match',
     icon: '🍇',
-    title: '葡萄品種 × AOC 配對',
+    name: '葡萄品種 × AOC 配對',
     desc: '考驗你對白詩南、長相思、品麗珠分佈的掌握！',
     tags: ['Chenin Blanc', 'Sauvignon Blanc', 'Cabernet Franc'],
     accent: '#8b5cf6',
@@ -81,7 +55,7 @@ const GAMES = [
   {
     id: 'sweetness_sort',
     icon: '🍬',
-    title: '甜度光譜排列',
+    name: '甜度光譜排列',
     desc: '將白詩南酒款從最干排到最甜——Sec 到 Liquoreux！',
     tags: ['殘糖量', '甜度排序', '5 輪挑戰'],
     accent: '#f59e0b',
@@ -89,7 +63,7 @@ const GAMES = [
   {
     id: 'soil_match',
     icon: '🪨',
-    title: '土壤 × 產區配對',
+    name: '土壤 × 產區配對',
     desc: '了解每個 AOC 底下的土壤特色！',
     tags: ['Tuffeau', 'Schiste', 'Silex', 'Granite'],
     accent: '#6b7280',
@@ -97,27 +71,14 @@ const GAMES = [
   {
     id: 'food_pairing',
     icon: '🍽️',
-    title: '餐酒配對賽',
+    name: '餐酒配對賽',
     desc: '看到法式料理，快速選出最佳搭配酒款！',
     tags: ['配餐', '山羊起司', '龍蝦', '貴腐甜酒'],
     accent: '#22c55e',
   },
 ]
 
-const COMPONENT_MAP = {
-  region_quiz:    LoireRegionQuizPage,
-  map_quiz:       LoireMapQuizPage,
-  grape_match:    LoireGrapeMatchPage,
-  sweetness_sort: LoireSweetnessSortPage,
-  soil_match:     LoireSoilMatchPage,
-  food_pairing:   LoireFoodPairingPage,
-}
-
-const activeGame = ref(null)
-const activeComponent = computed(() => activeGame.value ? COMPONENT_MAP[activeGame.value] : null)
-
-function openGame(id) { activeGame.value = id }
-function closeGame()  { activeGame.value = null }
+const currentGame = ref(null)
 </script>
 
 <style scoped>

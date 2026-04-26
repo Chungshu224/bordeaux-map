@@ -3,55 +3,23 @@
 
     <!-- ── HUB 總覽 ── -->
     <template v-if="!currentGame">
-      <div class="hub-header">
-        <button class="back-btn" @click="$emit('back')">← 返回</button>
-        <div class="hub-title-block">
-          <h1 class="hub-title">🎮 互動練習</h1>
-          <p class="hub-subtitle">德國葡萄酒挑戰賽 · 測試你的知識</p>
-        </div>
-      </div>
-
-      <!-- 統計列 -->
-      <div class="stats-bar">
-        <div v-for="stat in stats" :key="stat.label" class="stat-item">
-          <span class="stat-icon">{{ stat.icon }}</span>
-          <span class="stat-value">{{ stat.value }}</span>
-          <span class="stat-label">{{ stat.label }}</span>
-        </div>
-      </div>
-
-      <!-- 遊戲卡片 -->
-      <div class="hub-grid">
-        <div
-          v-for="g in GAMES"
-          :key="g.id"
-          class="game-card"
-          :style="{ '--accent': g.accent, '--accent2': g.accent2 }"
-          @click="currentGame = g.id"
-        >
-          <div class="card-glow"></div>
-          <div class="card-icon">{{ g.icon }}</div>
-          <div class="card-body">
-            <div class="card-name">{{ g.name }}</div>
-            <div class="card-desc">{{ g.desc }}</div>
-            <div class="card-tags">
-              <span v-for="t in g.tags" :key="t" class="tag">{{ t }}</span>
+      <SharedGameHub
+        title="德國互動練習"
+        subtitle="德國葡萄酒挑戰賽 · 測試你的知識"
+        :games="GAMES"
+        @back="$emit('back')"
+        @select="currentGame = $event"
+      >
+        <template #extra>
+          <div class="stats-bar">
+            <div v-for="stat in stats" :key="stat.label" class="stat-item">
+              <span class="stat-icon">{{ stat.icon }}</span>
+              <span class="stat-value">{{ stat.value }}</span>
+              <span class="stat-label">{{ stat.label }}</span>
             </div>
           </div>
-          <div class="card-best" v-if="getBest(g.id)">
-            <span class="best-badge">🏅 {{ getBest(g.id) }}</span>
-          </div>
-          <div class="card-arrow">›</div>
-        </div>
-      </div>
-
-      <!-- 學習提示 -->
-      <div class="tip-box">
-        <div class="tip-icon">💡</div>
-        <div class="tip-text">
-          <strong>學習建議：</strong>先完成課程再挑戰遊戲效果最佳！按數字鍵 1-4 可快速選擇選項。
-        </div>
-      </div>
+        </template>
+      </SharedGameHub>
     </template>
 
     <!-- ── 子遊戲 ── -->
@@ -63,6 +31,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import SharedGameHub from '../../shared/GameHub.vue'
 import GermanyRegionQuizPage   from './GermanyRegionQuizPage.vue'
 import GermanyPradikatQuizPage from './GermanyPradikatQuizPage.vue'
 import GermanyGrapeMatchPage   from './GermanyGrapeMatchPage.vue'
