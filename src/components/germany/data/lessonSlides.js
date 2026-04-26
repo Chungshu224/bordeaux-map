@@ -193,8 +193,12 @@ export const G1M1L3 = {
           question: '以下哪條河流對德國葡萄酒最重要？',
           options: ['多瑙河', '易北河', '萊茵河', '奧德河'],
           answer: 2,
-          explanation: '萊茵河（Rhine）是德國最重要的葡萄酒河流，其支流摩澤爾河、那河（Nahe）、美因河等沿岸集中了德國最精華的葡萄酒產區。'
-        }
+          explanation: '萊茵河（Rhine）是德國最重要的葡萄酒河流，其支流摩澤爾河、那河（Nahe）、美因河等沿岸集中了德國最精華的葡萄酒產區。'        },
+        {
+          question: '「germany-regions-overview」互動探索中，以下哪個是屬於「北/東部寢凉」類別的產區？',
+          options: ['Pfalz', 'Baden', 'Sachsen', 'Rheinhessen'],
+          answer: 2,
+          explanation: 'Sachsen（薩克森）位於德國最東、累列為全國高，與 Ahr/Mittelrhein/Saale-Unstrut 同屬「北東部寒涼」4 區。Pfalz 與 Baden 是南部溫曖，Rheinhessen 是經典 Riesling 核心。'        }
       ]
     }
   ]
@@ -256,8 +260,12 @@ export const G1M2L1 = {
           question: '陳年 Riesling 的標誌性香氣是？',
           options: ['草莓果醬', '汽油礦石味', '烤橡木桶', '奶油香草'],
           answer: 1,
-          explanation: '陳年 Riesling 中的「汽油味」（Petrol note）是由 TDN（三甲基二氫萘）化合物形成，被認為是頂級 Riesling 成熟的標誌，並非缺陷。'
-        }
+          explanation: '陳年 Riesling 中的「汽油味」（Petrol note）是由 TDN（三甲基二氫萘）化合物形成，被認為是頂級 Riesling 成熟的標誌，並非缺陷。'        },
+        {
+          question: '「riesling-terroir」探索中，「Mosel 藍色板岩」為 Riesling 帶來什麼關鍵香氣特徵？',
+          options: ['熱帶水果、圓潤豐滿', '礦石、煙燻、高酸輕盈', '蛂蜜、花香、中等酒體', '黄奥、肉桂、售萃感'],
+          answer: 1,
+          explanation: '藍色板岩（Blue Slate）反射熱量、儲熱並提供低 pH 門質變化，讓 Mosel Riesling 產生明顯的礦石、煙燻與刷牿般的高酸，同時酒精低（7–9%）、身體輕盈。'        }
       ]
     }
   ]
@@ -461,6 +469,12 @@ export const G1M3L2 = {
           options: ['Beerenauslese', 'Trockenbeerenauslese', 'Eiswein', 'Auslese'],
           answer: 2,
           explanation: 'Eiswein 的甜度濃縮完全依賴低溫冰凍，不需要貴腐菌。事實上，健康的葡萄反而更利於釀造 Eiswein，因為貴腐菌會破壞葡萄的細胞結構，影響冰凍效果。'
+        },
+        {
+          question: '「qmp-sweetness」階梯中，TBA（Trockenbeerenauslese）采收葡萄的閃長重點在于？',
+          options: ['葡萄冰凍', '進步貴腐菌感染與脳鈴在子兩重豝關', '採尚未熟高酸葡萄', '夜間采收避光'],
+          answer: 1,
+          explanation: 'TBA 采用貴腐菌（Botrytis）總收乾枯葡萄，透過遾遰採收、集水並澌變，推進水變最高，在子 150–154°Oe以上。甊象品專集澌走全手采摄，釁成品子金黃陳年潛力 50+ 年。'
         }
       ]
     }
@@ -519,6 +533,12 @@ export const G1M3L3 = {
           options: ['Grand Cru', 'Grosses Gewächs（GG）', 'Premier Cru', 'Spätlese'],
           answer: 1,
           explanation: 'VDP Grosse Lage（特等葡萄園）釀造的不甜白酒稱為 Grosses Gewächs（GG），相當於法國的 Grand Cru，代表德國最頂級的乾型白酒。'
+        },
+        {
+          question: '「vdp-classification」中，VDP 金字塔 4 階由低到高的正確順序為？',
+          options: ['Erste Lage → Gutswein → Grosse Lage → Ortswein', 'Gutswein → Ortswein → Erste Lage → Grosse Lage', 'Ortswein → Gutswein → Grosse Lage → Erste Lage', 'Grosse Lage → Erste Lage → Ortswein → Gutswein'],
+          answer: 1,
+          explanation: 'VDP 4 階金字塔由底到頂為：Gutswein（酒莊酒）→ Ortswein（村莊酒）→ Erste Lage（頭等葡萄園）→ Grosse Lage（特等葡萄園）。這個結構仿效勃艙第 Village/Premier Cru/Grand Cru 金字塔，從酒莊整體風格到單一頂級葡萄園逐層推進。'
         }
       ]
     }

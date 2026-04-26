@@ -137,6 +137,13 @@ const S1M1L2_slides = [
     answer: 1,
     explanation: '加利西亞位於西班牙西北角，受大西洋影響，氣候涼爽多雨，是 Albariño 葡萄的故鄉。',
   },
+  {
+    type: 'quiz',
+    question: '在「spain-regions-overview」互動探索中，西班牙葡萄園面積最大、橫跨中部高原的自治區是？',
+    options: ['加利西亞（Galicia）', '拉里奥哈（La Rioja）', '卡斯提亞-拉曼恰（Castilla-La Mancha）', '巴斯克（País Vasco）'],
+    answer: 2,
+    explanation: 'Castilla-La Mancha（卡斯提亞-拉曼恰）位於中部高原，是西班牙面積最大的單一葡萄酒自治區，葡萄園面積佔全國近一半，亦是全球單一最大產區。',
+  },
 
   {
     type: 'summary',
@@ -185,6 +192,13 @@ const S1M2L1_slides = [
     options: ['Ribera del Duero 和 Rías Baixas', 'Rioja 和 Priorat', 'Penedès 和 Navarra', 'Sherry 和 Cava'],
     answer: 1,
     explanation: 'Rioja 於 1991 年率先取得 DOCa 認證，Priorat（加泰羅尼亞稱 DOQ）則於 2009 年取得，至今仍是西班牙僅有的兩個 DOCa 產區。',
+  },
+  {
+    type: 'quiz',
+    question: '在「spain-classification」金字塔中，VP（Vino de Pago）代表的是？',
+    options: ['街區葡萄酒', '單一酒莊頂級酒（Single Estate）', '桌酒等級', '長期陳年酒款'],
+    answer: 1,
+    explanation: 'Vino de Pago（VP）是針對「單一酒莊頂級葡萄園」的認證，重視圓區裡的特定地塊品質，代表酒莊如 Dominio de Valdepusa、Pago de Arosñ。與 DO/DOCa「整體產區」認證不同，VP 是「點狀頂級」認證。',
   },
   {
     type: 'summary',
@@ -249,6 +263,13 @@ const S1M2L2_slides = [
     explanation: 'Gran Reserva 紅酒至少需要 5 年總陳年時間，其中在橡木桶中至少 18 個月，其餘在瓶中熟成。',
   },
   {
+    type: 'quiz',
+    question: '在「rioja-aging」互動詳解中，Rioja「Crianza」紅酒最短需要在橡木桶中陳年多久？',
+    options: ['6 個月', '12 個月', '18 個月', '24 個月'],
+    answer: 1,
+    explanation: 'Crianza 紅酒規定：總陳年 ≥2 年，其中橡木桶（225L）陳年 ≥12 個月。與 Reserva（12 月桶陳、總 3 年）、Gran Reserva（18 月桶陳、總 5 年）完整區隔。這是你在超市選酒時最實用的「多長時間關鍵」。',
+  },
+  {
     type: 'summary',
     message: '陳年制度學習完成！',
     keyPoints: [
@@ -296,6 +317,13 @@ const S1M3L1_slides = [
     options: ['Garnacha', 'Tinto Fino（或 Tinta del País）', 'Cencibel', 'Ojo de Liebre'],
     answer: 1,
     explanation: 'Tempranillo 在西班牙各產區有不同名稱：在 Ribera del Duero 稱 "Tinto Fino" 或 "Tinta del País"，在 Castilla-La Mancha 稱 "Cencibel"，在 Catalonia 稱 "Ull de Llebre"。',
+  },
+  {
+    type: 'quiz',
+    question: '在「spain-grape-profile」品種檔案中，Mencía 主要種植在哪個產區並成為該區類似 Pinot Noir 風格的代表品種？',
+    options: ['Ribera del Duero', 'Bierzo 與 Ribeira Sacra', 'Jumilla', 'Penedès'],
+    answer: 1,
+    explanation: 'Mencía 主要種植於 Bierzo（萊昂省）和 Ribeira Sacra（加利西亞），這些產區以板岩（Schist）梯田為典型風土，赋予 Mencía 獨特的礦石鉄筆芜風味與優雅輕盈的結構，被譽為「西班牙的 Pinot Noir」。',
   },
   {
     type: 'summary',

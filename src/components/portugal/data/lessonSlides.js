@@ -145,6 +145,13 @@ const P1M1L2_slides = [
     explanation: 'Vinho Verde 位於葡萄牙西北部的 Minho 大區，是葡萄牙面積最大的 DOC，覆蓋約 34,000 公頃。',
   },
   {
+    type: 'quiz',
+    question: '在「portugal-regions-overview」探索中，以下哪個葡萄牙產區位於大西洋火山島上、以加烈酒關名于世？',
+    options: ['Dão', 'Bairrada', 'Madeira', 'Vinho Verde'],
+    answer: 2,
+    explanation: 'Madeira（馬德拉島）位於葡萄牙以西 1,000 公里的大西洋火山島上，以同名加烈酒 Madeira 聞名全球。獨特的 estufagem 加熱工藝讓 Madeira 產生焦糖、堅果、柑橘皮香氣，並擁有詸異的 100+ 年陳年潛力。另一個島嶼產區 Açores 亦位於大西洋。',
+  },
+  {
     type: 'summary',
     message: '恭喜完成第二課！您已掌握葡萄牙 14 大官方葡萄酒大區的地理分布。',
     keyPoints: [
@@ -474,6 +481,13 @@ const P1M3L1_slides = [
     explanation: 'Touriga Nacional 是葡萄牙最尊貴的品種，主要種植在 Douro 河谷，是波特酒（Porto）最重要的品種之一，也是頂級 Douro DOC 紅酒的靈魂。',
   },
   {
+    type: 'quiz',
+    question: '在「douro-grapes」品種檔案中，葡萄牙的「Tinta Roriz / Aragonez」與西班牙哪個品種是同一個葡萄？',
+    options: ['Garnacha', 'Mencía', 'Tempranillo', 'Monastrell'],
+    answer: 2,
+    explanation: 'Tinta Roriz（Douro 名稱）與 Aragonez（Alentejo 名稱）都是西班牙 Tempranillo 的葡萄牙同名。這是伊比利亞半島最重要的跨國品種之一，在 Douro 貢獻結構與陳年能力，在 Alentejo 則表現為豐富果香、柔和單寧。',
+  },
+  {
     type: 'summary',
     message: '恭喜完成第七課！您已掌握葡萄牙五大核心紅品種。',
     keyPoints: [
@@ -707,6 +721,20 @@ const P1M4L1_slides = [
     options: ['10–12%', '14–16%', '19–22%', '30–35%'],
     answer: 2,
     explanation: '波特酒通過加烈工藝（加入葡萄烈酒）達到 19–22% 的酒精濃度，同時保留了大量殘糖，形成獨特的甜型加烈酒。',
+  },
+  {
+    type: 'quiz',
+    question: '在「port-styles」金字塔中，以下哪一種 Port 是「瓶中陳年」（reductive，保留深色與鮮果香）而非「橡木桁氧化陳年」？',
+    options: ['10 Year Tawny', 'Vintage Port', 'Colheita', '40 Year Tawny'],
+    answer: 1,
+    explanation: 'Vintage Port 只在大桁中陳年 2 年即裝瓶，其後在瓶中長期陳年（可達 50+ 年），屬「靣靣陳年」風格、保有深染色與鮮果香。而 Tawny（10/20/40 Year、Colheita）都是在小 pipe 桁中長期接觸氧氣的「氧化陳年」，出紅棕色、核果與咖啡香。',
+  },
+  {
+    type: 'quiz',
+    question: '在「port-aging」補充詳解中，一瓶標示「20 Years Tawny」的波特酒，其「20 年」代表的是？',
+    options: ['混調中最年輕酒液至少 20 年', '混調中所有酒液都是 20 年份', '混調酒液的「平均類型年齡」約 20 年', '最少裝瓶後需陳年 20 年'],
+    answer: 2,
+    explanation: '「10/20/30/40 Years Tawny」的年齡並非表示出廠日期，而是該酒口感與風格上類似平均類型年齡的陳年狀態。酒莊這明粗制酒師負責混調多個不同年份的桁陳 Tawny，使成品符合「類型 20 Years」的品質幼位。實際裡頻包含 5–40 年不同酒液。',
   },
   {
     type: 'map',
