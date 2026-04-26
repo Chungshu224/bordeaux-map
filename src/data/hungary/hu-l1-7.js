@@ -168,6 +168,12 @@ export const lessonContent = [
   }
 ,
   {
+    component: 'TokajiAszuLevelsSlide',
+    title: '👑 Tokaji 貴腐甜酒分級互動詳解',
+    description: '點選 3 / 5 / 6 Puttonyos 與 Eszencia，查看殘糖規範、釀造、風味、餐搭與代表酒莊'
+  }
+,
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

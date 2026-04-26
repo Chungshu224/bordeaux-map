@@ -163,6 +163,12 @@ export const lessonContent = [
   }
 ,
   {
+    component: 'HungaryGrapeProfileSlide',
+    title: '🍇 匈牙利原生葡萄品種互動詳解',
+    description: '點選 Furmint / Hárslevelű / Kékfrankos / Kadarka，查看產區、風格、香氣、餐搭與知識檔案'
+  }
+,
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

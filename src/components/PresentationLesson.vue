@@ -234,6 +234,8 @@ import LoireSweetnessSpectrumSlide from './loire/course/slides/LoireSweetnessSpe
 import LoireAOCCompareSlide from './loire/course/slides/LoireAOCCompareSlide.vue'
 import LoireSweetWineMethodSlide from './loire/course/slides/LoireSweetWineMethodSlide.vue'
 import HungaryRegionMapSlide from './hungary/slides/HungaryRegionMapSlide.vue'
+import TokajiAszuLevelsSlide from './hungary/slides/TokajiAszuLevelsSlide.vue'
+import HungaryGrapeProfileSlide from './hungary/slides/HungaryGrapeProfileSlide.vue'
 import CaliforniaRegionMapSlide from './california/slides/CaliforniaRegionMapSlide.vue'
 // 改用 lessonContentLoader 的單例載入器,避免間接層帶來的潛在等待問題
 import { loadLessonContent as coreLoadLessonContent } from '../data/lessonContentLoader.js'
@@ -390,6 +392,8 @@ const slideComponentMap = {
   LoireAOCCompareSlide,
   LoireSweetWineMethodSlide,
   HungaryRegionMapSlide,
+  TokajiAszuLevelsSlide,
+  HungaryGrapeProfileSlide,
   CaliforniaRegionMapSlide
 }
 
