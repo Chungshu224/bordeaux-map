@@ -7,6 +7,7 @@
       @openMap="$emit('openMap')"
       @openNotebook="view = 'notebook'"
       @openGames="view = 'games'"
+      @openAchievements="showAchievementsModal = true"
     />
 
     <!-- Tasting Notebook -->
@@ -44,6 +45,33 @@
         @openMap="$emit('openMap')"
       />
     </template>
+
+    <!-- 成就通知 Toast -->
+    <div v-if="achievementNotification" class="it-achievement-toast">
+      <div class="it-toast-content">
+        <span class="it-toast-emoji">🏆</span>
+        <div class="it-toast-info">
+          <strong>成就解鎖！{{ achievementNotification.title }}</strong>
+          <span>+{{ achievementNotification.points }} 點</span>
+        </div>
+        <button class="it-toast-close" @click="achievementNotification = null">×</button>
+      </div>
+    </div>
+
+    <!-- 成就 Modal -->
+    <Teleport to="body">
+      <div v-if="showAchievementsModal" class="it-modal-overlay" @click.self="showAchievementsModal = false">
+        <div class="it-modal">
+          <div class="it-modal-header">
+            <h3>🏆 義大利葡萄酒成就系統</h3>
+            <button class="it-modal-close" @click="showAchievementsModal = false">×</button>
+          </div>
+          <div class="it-modal-body">
+            <AchievementsDashboard course-key="italy" @back="showAchievementsModal = false" />
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
@@ -54,14 +82,22 @@ import ItalySlideViewer from './ItalySlideViewer.vue'
 import ItalyCourseLayout from './ItalyCourseLayout.vue'
 import ItalyTastingNotebookPage from '../notebook/ItalyTastingNotebookPage.vue'
 import ItalyGameHubPage from '../games/ItalyGameHubPage.vue'
+import AchievementsDashboard from '../../AchievementsDashboard.vue'
 import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevels.js'
+import {
+  globalItalyAchievementManager
+} from '../../../stores/italyAchievementSystem.js'
 
 const emit = defineEmits(['openMap'])
+
+globalItalyAchievementManager.init()
 
 const view = ref('levelSelector')
 const selectedLevelKey = ref(null)
 const activeLesson = ref(null)
 const activeLessonMeta = ref(null)
+const showAchievementsModal = ref(false)
+const achievementNotification = ref(null)
 
 // 已完成課程清單（從 localStorage）
 const completedMap = ref({})
@@ -128,6 +164,30 @@ function handleComplete (lessonId) {
   if (selectedLevelKey.value && lessonId) {
     saveProgress(selectedLevelKey.value, lessonId)
     completedMap.value[lessonId] = true
+
+    // 計算整體進度并觸發成就
+    const levelKey = selectedLevelKey.value
+    const levelNum = parseInt(levelKey?.replace('level', '') || '0')
+    const levelDef = courseLevels[levelKey]
+    const allLessons = levelDef?.modules?.flatMap(m => m.lessons) || []
+    const levelCompleted = allLessons.length > 0 &&
+      allLessons.every(l => completedMap.value[l.id] || l.id === lessonId)
+
+    const totalDone = ['level1', 'level2', 'level3'].reduce((sum, lk) => {
+      const prog = getUserProgress(lk)
+      return sum + (prog.completedLessons?.length || 0)
+    }, 0)
+    const totalLessons = 61
+    const totalProgress = Math.round(totalDone / totalLessons * 100)
+
+    const newUnlocks = globalItalyAchievementManager.recordLessonCompleted({
+      levelId: levelCompleted ? levelNum : 0,
+      totalProgress
+    })
+    if (newUnlocks?.length) {
+      achievementNotification.value = newUnlocks[0]
+      setTimeout(() => { achievementNotification.value = null }, 4000)
+    }
   }
   activeLesson.value = null
 }
@@ -137,4 +197,56 @@ function handleComplete (lessonId) {
 .italy-course-manager {
   min-height: 100vh;
 }
+
+/* ── 成就 Toast ── */
+.it-achievement-toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+  animation: it-slide-in 0.3s ease;
+}
+.it-toast-content {
+  display: flex; align-items: center; gap: 12px;
+  background: #1a2535; color: #fff;
+  border-left: 4px solid #f59e0b;
+  border-radius: 12px; padding: 14px 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  min-width: 260px;
+}
+.it-toast-emoji { font-size: 1.8rem; flex-shrink: 0; }
+.it-toast-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.it-toast-info strong { font-size: 0.92rem; }
+.it-toast-info span { font-size: 0.8rem; color: #f59e0b; }
+.it-toast-close {
+  background: none; border: none; color: rgba(255,255,255,0.5);
+  font-size: 1.2rem; cursor: pointer; padding: 0 4px;
+}
+@keyframes it-slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);   opacity: 1; }
+}
+
+/* ── 成就 Modal ── */
+.it-modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  z-index: 9000; display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.it-modal {
+  background: #fff; border-radius: 16px;
+  width: 100%; max-width: 860px; max-height: 88vh;
+  display: flex; flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+.it-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 24px; border-bottom: 1px solid #f0f0f0;
+  background: #1a2535; color: #fff;
+}
+.it-modal-header h3 { margin: 0; font-size: 1.1rem; }
+.it-modal-close {
+  background: rgba(255,255,255,0.15); border: none; color: #fff;
+  width: 32px; height: 32px; border-radius: 8px;
+  font-size: 1.2rem; cursor: pointer;
+}
+.it-modal-body { flex: 1; overflow-y: auto; }
 </style>

@@ -51,7 +51,7 @@ import {
 import { courseLevels, getLevelProgressPct, getUserProgress } from '../data/courseLevels.js'
 import { authActions } from '../../../stores/authStore.js'
 
-const emit = defineEmits(['startLevel', 'openMap', 'openVarieties', 'openNotebook', 'openGames'])
+const emit = defineEmits(['startLevel', 'openMap', 'openAchievements', 'openNotebook', 'openGames'])
 
 const theme = getTheme('italy')
 const showProgress = ref(false)
@@ -115,15 +115,15 @@ const quickNavItems = computed(() => [
   { key: 'games' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedTotal.value} 課` },
   { key: 'notebook' },
-  { key: 'varieties' }
+  { key: 'achievements' }
 ])
 function onQuickNav(key) {
   switch (key) {
-    case 'map':       emit('openMap'); break
-    case 'games':     emit('openGames'); break
-    case 'varieties': emit('openVarieties'); break
-    case 'notebook':  emit('openNotebook'); break
-    case 'progress':  showProgress.value = true; break
+    case 'map':          emit('openMap'); break
+    case 'games':         emit('openGames'); break
+    case 'achievements':  emit('openAchievements'); break
+    case 'notebook':      emit('openNotebook'); break
+    case 'progress':      showProgress.value = true; break
   }
 }
 
