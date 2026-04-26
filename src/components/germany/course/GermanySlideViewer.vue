@@ -63,6 +63,12 @@ import StatsSlide from '../../italy/course/slides/StatsSlide.vue'
 import MapPlaceholderSlide from '../../italy/course/slides/MapPlaceholderSlide.vue'
 import QuizSlide from '../../italy/course/slides/QuizSlide.vue'
 
+// Germany 特化 slide 元件
+import QmPSweetnessLadderSlide from './slides/QmPSweetnessLadderSlide.vue'
+import RieslingTerroirSlide from './slides/RieslingTerroirSlide.vue'
+import VDPClassificationSlide from './slides/VDPClassificationSlide.vue'
+import GermanRegionsOverviewSlide from './slides/GermanRegionsOverviewSlide.vue'
+
 const props = defineProps({
   lesson: { type: Object, required: true },
   isFinalExam: { type: Boolean, default: false }
@@ -84,7 +90,12 @@ const slideComponentMap = {
   chart: ChartSlide,
   stats: StatsSlide,
   map_placeholder: MapPlaceholderSlide,
-  quiz: QuizSlide
+  quiz: QuizSlide,
+  // Germany 特化 slide types
+  'qmp-sweetness': QmPSweetnessLadderSlide,
+  'riesling-terroir': RieslingTerroirSlide,
+  'vdp-classification': VDPClassificationSlide,
+  'germany-regions-overview': GermanRegionsOverviewSlide
 }
 
 function pickRandom(arr, n) {
