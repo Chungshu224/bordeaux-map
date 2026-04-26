@@ -293,6 +293,12 @@ export const lessonContent = [
   },
 
   {
+    component: 'NapaSonomaCompareSlide',
+    title: '⚖️ Napa vs Sonoma 雙雄對比互動詳解',
+    description: '切換「一覽對比 / 子 AVA / 代表酒莊 / 風格總結」4 個面向，詳解 Napa 與 Sonoma 的根本差異'
+  },
+
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

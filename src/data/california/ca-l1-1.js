@@ -327,6 +327,12 @@ export const lessonContent = [
   },
 
   {
+    component: 'AVAHierarchySlide',
+    title: '🗺️ 美國 AVA 階層系統互動詳解',
+    description: '點選 子 AVA / AVA / 郡 / 州 / 美國，查看法定規範、葡萄含量下限、案例與與歐洲系統對照'
+  },
+
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

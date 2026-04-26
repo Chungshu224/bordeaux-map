@@ -236,6 +236,8 @@ import LoireSweetWineMethodSlide from './loire/course/slides/LoireSweetWineMetho
 import HungaryRegionMapSlide from './hungary/slides/HungaryRegionMapSlide.vue'
 import TokajiAszuLevelsSlide from './hungary/slides/TokajiAszuLevelsSlide.vue'
 import HungaryGrapeProfileSlide from './hungary/slides/HungaryGrapeProfileSlide.vue'
+import NapaSonomaCompareSlide from './california/slides/NapaSonomaCompareSlide.vue'
+import AVAHierarchySlide from './california/slides/AVAHierarchySlide.vue'
 import CaliforniaRegionMapSlide from './california/slides/CaliforniaRegionMapSlide.vue'
 // 改用 lessonContentLoader 的單例載入器,避免間接層帶來的潛在等待問題
 import { loadLessonContent as coreLoadLessonContent } from '../data/lessonContentLoader.js'
@@ -394,7 +396,9 @@ const slideComponentMap = {
   HungaryRegionMapSlide,
   TokajiAszuLevelsSlide,
   HungaryGrapeProfileSlide,
-  CaliforniaRegionMapSlide
+  CaliforniaRegionMapSlide,
+  NapaSonomaCompareSlide,
+  AVAHierarchySlide
 }
 
 // 將內容中的 AOC 名稱標準化並附上英文原文（避免重複標註，具備一定的容錯與等幣性）
