@@ -351,6 +351,11 @@ export const G1M2L3 = {
       content: 'Ahr 是德國最著名的紅酒產區，以 Spätburgunder 著稱。儘管地處德國北部（北緯 50.5 度），但陡峭的河谷地形與火山板岩土壤創造出溫暖的微氣候，使黑皮諾能完全成熟。Ahr 的頂級 Spätburgunder 呈現出勃根地般的優雅——鮮紅色澤、紅莓香料、細緻單寧，讓世界為之驚豔。'
     },
     {
+      type: 'spatburgunder-regions',
+      title: '🍷 Spätburgunder 四大產區風土對決',
+      description: '互動深度比較 Ahr（火山板岩輕盈礦物）× Baden（最溫暖豐滿勃根地風）× Pfalz（均衡易飲）× Württemberg（傳統 Muschelkalk 白堊感）——風格光譜、土壤、頂級葡萄園（Ahr: Meyer-Näkel、Baden: Bernhard Huber）、與布根地對比，一張互動圖掌握德國紅酒四大天王。'
+    },
+    {
       type: 'quiz',
       title: '快速測驗',
       questions: [
@@ -635,6 +640,11 @@ export const G2M1L1 = {
       title: 'Mittelmosel vs Saar vs Ruwer',
       left: { label: '🌊 Mittelmosel', items: ['Bernkastel 至 Traben-Trarbach', '板岩，礦物感最強', '頂級葡萄園密集', 'Kabinett 至 TBA 全系列', 'Egon Müller、J.J. Prüm'] },
       right: { label: '💎 Saar & Ruwer', items: ['支流流域，更涼爽', '酸度更高，更緊緻', '好年份才出色', '礦物感尖銳鮮活', 'Egon Müller（Scharzhofberg）'] }
+    },
+    {
+      type: 'mosel-trio',
+      title: '🌊 Mosel 三大河流域互動對決',
+      description: '深度互動比較 Mittelmosel（藍板岩精華核心）× Saar（最涼峭礦物鋒利）× Ruwer（最稀珍透明細膩）——分別展示各河流域的面積、土壤板岩類型、頂級 Grosse Lagen、代表酒莊（Egon Müller / J.J. Prüm / Von Schubert）以及盲品辨識捷徑。'
     },
     {
       type: 'map_placeholder',

@@ -68,6 +68,8 @@ import QmPSweetnessLadderSlide from './slides/QmPSweetnessLadderSlide.vue'
 import RieslingTerroirSlide from './slides/RieslingTerroirSlide.vue'
 import VDPClassificationSlide from './slides/VDPClassificationSlide.vue'
 import GermanRegionsOverviewSlide from './slides/GermanRegionsOverviewSlide.vue'
+import GermanyMoselTrioSlide from './slides/GermanyMoselTrioSlide.vue'
+import GermanySpätburgunderRegionsSlide from './slides/GermanySpätburgunderRegionsSlide.vue'
 
 const props = defineProps({
   lesson: { type: Object, required: true },
@@ -95,7 +97,9 @@ const slideComponentMap = {
   'qmp-sweetness': QmPSweetnessLadderSlide,
   'riesling-terroir': RieslingTerroirSlide,
   'vdp-classification': VDPClassificationSlide,
-  'germany-regions-overview': GermanRegionsOverviewSlide
+  'germany-regions-overview': GermanRegionsOverviewSlide,
+  'mosel-trio': GermanyMoselTrioSlide,
+  'spatburgunder-regions': GermanySpätburgunderRegionsSlide
 }
 
 function pickRandom(arr, n) {
