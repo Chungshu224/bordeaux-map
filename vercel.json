@@ -6,6 +6,14 @@
   "devCommand": "npm run dev",
   "rewrites": [
     {
+      "source": "/ispra/:path*",
+      "destination": "https://sgi2.isprambiente.it/:path*"
+    },
+    {
+      "source": "/brgm/:path*",
+      "destination": "https://geoservices.brgm.fr/:path*"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },

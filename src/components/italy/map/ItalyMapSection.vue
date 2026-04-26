@@ -47,10 +47,13 @@
           :is3D="is3D"
           :show-contours="showContours"
           :climate-enabled="climateEnabled"
-          :soil-disabled="true"
+          :soil-disabled="false"
+          :soil-label="'ISPRA 地質'"
+          :soil-enabled="soilEnabled"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContours"
           @toggle-climate="toggleClimate"
+          @toggle-soil="toggleSoil"
           @close="showLayerPanel = false"
         />
       </div>
@@ -123,6 +126,33 @@
       </div>
     </transition>
 
+    <!-- ── 義大利地質圖層浮動控制面板 ── -->
+    <div v-if="soilEnabled" class="italy-geo-float-panel">
+      <div class="soil-float-title">🗺️ ISPRA 地質岩性圖</div>
+      <div class="soil-float-row">
+        <span class="soil-float-name">透明度</span>
+        <div class="soil-float-right">
+          <input
+            class="soil-opacity-slider"
+            type="range"
+            min="0.1"
+            max="1"
+            step="0.05"
+            v-model.number="soilOpacity"
+          />
+          <span class="soil-opacity-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+        </div>
+      </div>
+      <div class="geo-legend">
+        <div class="geo-legend-item"><span class="geo-dot" style="background:#dce3bc"></span>石灰岩/白雲岩</div>
+        <div class="geo-legend-item"><span class="geo-dot" style="background:#ccdfbf"></span>泥灰岩/砖岩</div>
+        <div class="geo-legend-item"><span class="geo-dot" style="background:#fffacc"></span>黴土/鬆散土</div>
+        <div class="geo-legend-item"><span class="geo-dot" style="background:#e85620"></span>火山岩</div>
+        <div class="geo-legend-item"><span class="geo-dot" style="background:#df96bc"></span>花崗岩/深成岩</div>
+        <div class="geo-legend-item"><span class="geo-dot" style="background:#b07abe"></span>變質岩</div>
+      </div>
+    </div>
+
     <!-- ── 統一手機底部工具列 ── -->
     <RegionMapMobileToolbar
       v-if="mapReady"
@@ -193,6 +223,13 @@ let map = null
 let audioPlayer = null
 let geojsonCache = new Map()
 let regionBounds = null  // 儲存產區邊界 bbox，供 resetMap 使用
+
+// ── Geology/Soil layer ──
+const soilEnabled = ref(false)
+const soilOpacity = ref(0.1)
+let geologyPopup = null
+let geologyClickRegistered = false
+let regionOutlineGeoJSON = null  // 儲存產區邊界，供地質圖訪罩使用
 
 const REGION_OUTLINE_MAP = {
   abruzzo:    'Abruzzo.geojson',
@@ -400,6 +437,185 @@ function clearAllAocLayers() {
   const style = map.getStyle()
   ;(style.layers || []).filter((l) => l.id.startsWith('aoc_')).forEach((l) => map.removeLayer(l.id))
   Object.keys(style.sources || {}).filter((s) => s.startsWith('aoc_')).forEach((s) => map.removeSource(s))
+}
+
+// ── Geology constants ──
+const ITALY_LITHO_CODES = {
+  A1:  { zh: '石灰岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '排水性佳、礦物質豐富，典型於托斯卡納（基安帝）、巴羅洛產區，賦予葡萄酒清爽酸度與石灰質礦感。' },
+  A2:  { zh: '白雲岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '礦物感強且偏鹼性，常見於特倫蒂諾、上阿迪傑高山產區，有助保留葡萄酒的清爽活力。' },
+  A3:  { zh: '泥灰石灰岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '石灰岩與泥灰岩混合，兼具排水與保水性，是巴羅洛 Tortonian 地層的典型，孕育內比歐露的豐富單寧。' },
+  A4:  { zh: '燧石岩（碧玉岩）', cat: 'A：固結沉積岩', icon: '🪨', wine: '矽質含量高、排水極佳，有助提升葡萄酒的礦石香氣與清脆感。' },
+  A5:  { zh: '石英砂岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '砂質地質、保溫性佳，常見於義大利中部地區。' },
+  A6:  { zh: '矽藻岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '微孔結構，保水與排水並兼，有利於根系深扎。' },
+  A7:  { zh: '泥灰岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '黏土與石灰岩混合，典型的巴羅洛 Helvetian 土壤層，賦予內比歐露優雅花香與豐厚結構。' },
+  A8:  { zh: '礫岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '礫石含量高、排水性極佳，常見於威尼托阿馬羅內產區，有利葡萄達到高濃縮度。' },
+  A9:  { zh: '砂岩與砂土', cat: 'A：固結沉積岩', icon: '🪨', wine: '質地疏鬆、排水性佳，釀造出的酒款通常口感清爽輕盈、芬芳易飲。' },
+  A10: { zh: '泥岩砂岩複合層', cat: 'A：固結沉積岩', icon: '🪨', wine: '沉積混合地層，廣泛分布於亞平寧山脈，是義大利中部許多重要產區的基底地質。' },
+  A11: { zh: '灰岩砂岩複合層', cat: 'A：固結沉積岩', icon: '🪨', wine: '石灰與砂岩交互層，同時提供礦物感與良好排水。' },
+  A12: { zh: '蒸發岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '含鹽份礦物，部分地區賦予葡萄酒獨特鹹鮮礦物感。' },
+  A13: { zh: '殘積岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '原地風化殘留的岩石，特性取決於母岩。' },
+  A14: { zh: '膠結礫石', cat: 'A：固結沉積岩', icon: '🪨', wine: '礫石與砂質膠結，排水性佳、地溫較高。' },
+  A15: { zh: '石灰華', cat: 'A：固結沉積岩', icon: '🪨', wine: '石灰質沉積、多孔質地、排水良好，常見於中義大利地熱活躍區域。' },
+  B1:  { zh: '黏土', cat: 'B：鬆散沉積物', icon: '🟫', wine: '保水力強、養分豐富，典型於波河平原，適合梅洛、卡本內等品種生長。' },
+  B3:  { zh: '砂礫土', cat: 'B：鬆散沉積物', icon: '🟫', wine: '排水性極佳、地溫偏高，賦予葡萄酒芬芳果味，常見於弗留利、威尼托平原地區。' },
+  B4:  { zh: '混合砂黏土', cat: 'B：鬆散沉積物', icon: '🟫', wine: '砂土與黏土混合，平衡保水與排水，廣泛適合多種義大利葡萄品種。' },
+  B5:  { zh: '泥炭土', cat: 'B：鬆散沉積物', icon: '🟫', wine: '有機質豐富但多位於沼澤地，通常不適合葡萄園。' },
+  B6:  { zh: '殘積土', cat: 'B：鬆散沉積物', icon: '🟫', wine: '由母岩就地風化形成，礦物特性取決於下方基岩組成。' },
+  B7:  { zh: '未定義土壤', cat: 'B：鬆散沉積物', icon: '🟫', wine: '成分未明確分類的土壤。' },
+  C1:  { zh: '混雜黏土（飛來石）', cat: 'C：混合複雜地層', icon: '⚠️', wine: '泥岩混雜地層，大多為擠壓破碎後的混雜岩，排水性差，不適合高品質葡萄酒產區。' },
+  C2:  { zh: '海相火山沉積複合層', cat: 'C：混合複雜地層', icon: '⚠️', wine: '海洋火山沉積混合，礦物多樣，賦予葡萄酒複雜礦物感。' },
+  D1:  { zh: '酸性熔岩（流紋岩）', cat: 'D：火山岩', icon: '🌋', wine: '流紋岩質熔岩，礦物豐富，是火山產區特有的土壤基質。' },
+  D2:  { zh: '中性熔岩', cat: 'D：火山岩', icon: '🌋', wine: '安山岩系，火山礦物特性顯著。' },
+  D3:  { zh: '玄武岩熔岩', cat: 'D：火山岩', icon: '🌋', wine: '典型的埃特納火山（Etna DOC）土壤，深色玄武岩貧瘠多礦物，賦予葡萄酒獨特火山礦感與高酸度。' },
+  D4:  { zh: '成分未定熔岩', cat: 'D：火山岩', icon: '🌋', wine: '火山熔岩地層，礦物組成有待鑑定。' },
+  D5:  { zh: '火山灰岩、凝灰岩、熔結凝灰岩', cat: 'D：火山岩', icon: '🌋', wine: '多孔火山性土壤，典型於羅馬近郊（弗拉斯卡蒂 DOC）及坎帕尼亞，透氣性佳、保留特殊礦物風味。' },
+  D6:  { zh: '火山灰岩+熔岩混合', cat: 'D：火山岩', icon: '🌋', wine: '火山碎屑與熔岩互層，特性介於玄武岩與凝灰岩之間。' },
+  D7:  { zh: '土壤化凝灰岩', cat: 'D：火山岩', icon: '🌋', wine: '凝灰岩風化後形成較肥沃的土壤，廣泛分布於義大利中部火山活躍區，適合多種葡萄品種。' },
+  D8:  { zh: '火山渣、火山灰與浮石', cat: 'D：火山岩', icon: '🌋', wine: '貧瘠多孔的火山碎屑土壤，是埃特納（Nerello Mascalese）與坎帕尼亞（Aglianico）的特色產區，使葡萄達到極高濃縮度。' },
+  E1:  { zh: '花崗岩類', cat: 'E：深成岩', icon: '⛰️', wine: '貧瘠、排水極佳，典型於薩丁尼亞（Vermentino di Gallura DOCG）與托斯卡納沿海山脈，釀造出礦感鮮明的白葡萄酒。' },
+  E2:  { zh: '中性深成岩', cat: 'E：深成岩', icon: '⛰️', wine: '中性岩體，礦物多樣，排水佳。' },
+  E3:  { zh: '鹼性深成岩', cat: 'E：深成岩', icon: '⛰️', wine: '富含鉀長石的鹼性岩體。' },
+  F1:  { zh: '千枚岩與雲母片岩', cat: 'F：低-中級變質岩', icon: '💎', wine: '排水佳、礦物質豐富，多見於義大利北部阿爾卑斯山麓地帶。' },
+  F2:  { zh: '片麻岩', cat: 'F：低-中級變質岩', icon: '💎', wine: '變質花崗岩，特性類似花崗岩，能賦予葡萄酒細緻的礦物複雜感。' },
+  F3:  { zh: '綠片岩（Prasiniti）', cat: 'F：低-中級變質岩', icon: '💎', wine: '富含鐵鎂礦物的變質岩，常見於義大利西北部山區。' },
+  F4:  { zh: '蛇綠岩套', cat: 'F：低-中級變質岩', icon: '💎', wine: '由古洋殼形成，富含鎂鐵礦物，影響微量元素供應，賦予獨特土壤個性。' },
+  F5:  { zh: '蛇紋岩', cat: 'F：低-中級變質岩', icon: '💎', wine: '富含鎂的超基性岩石，保水性差，在特殊條件下使葡萄酒具有強烈礦物感與低產量特性。' },
+  G1:  { zh: '角岩（接觸變質岩）', cat: 'G：高級變質岩', icon: '💎', wine: '深成岩侵入產生的接觸變質岩，質地堅硬緻密。' },
+  G2:  { zh: '大理岩', cat: 'G：高級變質岩', icon: '💎', wine: '純化石灰岩的高溫變質產物，多孔排水，礦物感顯著。' },
+  G3:  { zh: '變質白雲岩', cat: 'G：高級變質岩', icon: '💎', wine: '白雲岩的變質版本，高礦物質含量。' },
+  G4:  { zh: '石英岩', cat: 'G：高級變質岩', icon: '💎', wine: '矽質岩石、極度貧瘠但礦物感強烈，有利於根系深扎。' },
+  G5:  { zh: '麻粒岩', cat: 'G：高級變質岩', icon: '💎', wine: '高級變質岩，多位於義大利北部深山地帶。' },
+  H1:  { zh: '低級變質岩', cat: 'H：混合變質岩', icon: '💎', wine: '低溫低壓變質岩，礦物成分多樣。' },
+  N1:  { zh: '水體與冰川', cat: 'N：非地質單元', icon: '💧', wine: '水體或冰川覆蓋區域，不適合葡萄栽培。' },
+  N2:  { zh: '人工構築物', cat: 'N：非地質單元', icon: '🏙️', wine: '城市或工業用地。' },
+  N3:  { zh: '垃圾填埋場', cat: 'N：非地質單元', icon: '⚠️', wine: '廢棄物填埋場。' },
+}
+
+// ── Geology functions ──
+function renderGeologyPopupHTML(attrs) {
+  const code = (attrs.cod_lito || attrs.COD_LITO || '').trim()
+  const info = ITALY_LITHO_CODES[code] || {}
+  const zh = info.zh || attrs.litologia || attrs.LITOLOGIA || '未分類地質'
+  const cat = info.cat || ''
+  const wine = info.wine || ''
+  const formName = attrs.nome_ulf || attrs.NOME_FORMAZIONE || ''
+  const ageInfo = attrs.eta_geol || attrs.ETA_GEOLOGICA || ''
+  const litClass = attrs.classi_litologiche || attrs.CLASSI_LITOLOGICHE || ''
+  return `
+    <div class="italy-geology-popup">
+      <div class="geology-popup-header">
+        <span class="soil-type-badge">${info.icon || '🗺️'} ${zh}</span>
+        ${code ? `<span class="geology-popup-code">${code}</span>` : ''}
+      </div>
+      ${cat ? `<div class="geology-popup-zone">${cat}</div>` : ''}
+      ${formName ? `<div class="geology-popup-zone">地層：${formName}</div>` : ''}
+      ${ageInfo ? `<div class="geology-popup-zone">年代：${ageInfo}</div>` : ''}
+      ${litClass ? `<div class="geology-popup-desc">${litClass}</div>` : ''}
+      ${wine ? `<div class="geology-grape-section"><div class="grape-name-row">${wine}</div></div>` : ''}
+      <div class="geology-popup-footer">© ISPRA Carta Litologica 1:100K (CC-BY 4.0)</div>
+    </div>
+  `
+}
+
+async function loadGeologyLayer() {
+  if (!map) return
+  if (map.getLayer('italy-geology-layer')) return
+  if (!map.getSource('italy-geology-wms')) {
+    map.addSource('italy-geology-wms', {
+      type: 'raster',
+      tiles: [
+        '/ispra/arcgis/services/servizi/litologica/MapServer/WMSServer' +
+        '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=0' +
+        '&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256' +
+        '&CRS=EPSG:3857&FORMAT=image/png&TRANSPARENT=TRUE&STYLES='
+      ],
+      tileSize: 256,
+      attribution: '© ISPRA SGI (CC-BY 4.0)'
+    })
+  }
+  const beforeLayer = map.getLayer('region_outline_line') ? 'region_outline_line' : undefined
+  map.addLayer({
+    id: 'italy-geology-layer',
+    type: 'raster',
+    source: 'italy-geology-wms',
+    paint: { 'raster-opacity': soilOpacity.value }
+  }, beforeLayer)
+
+  // 建立產區邊界遠罩（僅顯示產區內的地質圖）
+  if (regionOutlineGeoJSON) {
+    try {
+      const maskData = turf.mask(regionOutlineGeoJSON)
+      if (map.getSource('italy-geo-clip-src')) {
+        map.getSource('italy-geo-clip-src').setData(maskData)
+        if (map.getLayer('italy-geo-clip-mask')) map.setLayoutProperty('italy-geo-clip-mask', 'visibility', 'visible')
+      } else {
+        map.addSource('italy-geo-clip-src', { type: 'geojson', data: maskData })
+        map.addLayer({
+          id: 'italy-geo-clip-mask',
+          type: 'fill',
+          source: 'italy-geo-clip-src',
+          paint: { 'fill-color': '#f5f1eb', 'fill-opacity': 0.92 }
+        })
+      }
+    } catch (e) { console.warn('[ItalyMap] clip mask failed:', e) }
+  }
+
+  if (!geologyClickRegistered) {
+    map.on('click', async (e) => {
+      if (!soilEnabled.value) return
+      const { lng, lat } = e.lngLat
+      console.log('[ItalyMap] geology click at', lng, lat)
+      try {
+        const geomJson = encodeURIComponent(JSON.stringify({ x: lng, y: lat }))
+        const url =
+          '/ispra/arcgis/rest/services/servizi/litologica/MapServer/0/query' +
+          `?geometry=${geomJson}&geometryType=esriGeometryPoint&inSR=4326` +
+          '&spatialRel=esriSpatialRelIntersects' +
+          '&outFields=cod_lito,nome_ulf,eta_geol,litologia,classi_litologiche' +
+          '&returnGeometry=false&f=json'
+        console.log('[ItalyMap] fetching:', url)
+        const res = await fetch(url)
+        console.log('[ItalyMap] response status:', res.status)
+        if (!res.ok) return
+        const data = await res.json()
+        console.log('[ItalyMap] response data:', data)
+        const features = data.features || []
+        if (features.length === 0) return
+        const attrs = features[0].attributes || {}
+        const html = renderGeologyPopupHTML(attrs)
+        if (geologyPopup) geologyPopup.remove()
+        geologyPopup = new mapboxgl.Popup({ className: 'geology-popup-wrap', maxWidth: '340px', closeButton: true })
+          .setLngLat([lng, lat])
+          .setHTML(html)
+          .addTo(map)
+      } catch (err) {
+        console.warn('[ItalyMap] geology identify error:', err)
+      }
+    })
+    geologyClickRegistered = true
+  }
+}
+
+function removeGeologyLayer() {
+  if (!map) return
+  if (geologyPopup) { geologyPopup.remove(); geologyPopup = null }
+  if (map.getLayer('italy-geo-clip-mask')) map.removeLayer('italy-geo-clip-mask')
+  if (map.getSource('italy-geo-clip-src')) map.removeSource('italy-geo-clip-src')
+  if (map.getLayer('italy-geology-layer')) map.removeLayer('italy-geology-layer')
+  if (map.getSource('italy-geology-wms')) map.removeSource('italy-geology-wms')
+}
+
+async function toggleSoil() {
+  if (!map) return
+  if (!soilEnabled.value) {
+    soilEnabled.value = true
+    await loadGeologyLayer()
+  } else {
+    soilEnabled.value = false
+    if (geologyPopup) { geologyPopup.remove(); geologyPopup = null }
+    if (map.getLayer('italy-geo-clip-mask')) map.removeLayer('italy-geo-clip-mask')
+    if (map.getLayer('italy-geology-layer')) map.removeLayer('italy-geology-layer')
+  }
 }
 
 // ── Data ──
@@ -717,6 +933,7 @@ async function loadRegionOutline({ animate = true } = {}) {
     map.addSource('region_outline', { type: 'geojson', data: geojson })
     map.addLayer({ id: 'region_outline_line', type: 'line', source: 'region_outline',
       paint: { 'line-color': '#ffffff', 'line-width': 2.5, 'line-opacity': 0.9 } })
+    regionOutlineGeoJSON = geojson  // 儲存邊界供地質圖遡罩使用
     const bbox = turf.bbox(geojson)
     regionBounds = bbox
     if (animate) {
@@ -851,6 +1068,7 @@ function onClimateYearChange() {
 
 function resetMap() {
   if (!map) return
+  if (geologyPopup) { geologyPopup.remove(); geologyPopup = null }
   if (map.getLayer('highlight_fill')) map.removeLayer('highlight_fill')
   if (map.getLayer('highlight_line')) map.removeLayer('highlight_line')
   if (map.getSource('highlight')) map.removeSource('highlight')
@@ -888,9 +1106,19 @@ function handleMobileAction(action) {
 }
 
 // ── Watch region change ──
+watch(soilOpacity, (val) => {
+  if (map && map.getLayer('italy-geology-layer')) {
+    map.setPaintProperty('italy-geology-layer', 'raster-opacity', val)
+  }
+})
+
 watch(() => props.region, async (newRegion) => {
   search.value = ''; typeFilter.value = 'all'
   activeAOCInfo.value = null; aocData.value = []
+  if (soilEnabled.value) {
+    soilEnabled.value = false
+    geologyClickRegistered = false
+  }
   climateEnabled.value = false
   climateData.value = null
   climateStats.value = null
@@ -906,8 +1134,9 @@ watch(() => props.region, async (newRegion) => {
   await loadRegionData()
   if (map) {
     const style = map.getStyle()
-    ;(style.layers || []).forEach(l => { if (l.id.startsWith('aoc_') || l.id.startsWith('highlight') || l.id === 'region_outline_line') map.removeLayer(l.id) })
-    Object.keys(style.sources || {}).forEach(s => { if (s.startsWith('aoc_') || s === 'highlight' || s === 'region_outline') map.removeSource(s) })
+    ;(style.layers || []).forEach(l => { if (l.id.startsWith('aoc_') || l.id.startsWith('highlight') || l.id === 'region_outline_line' || l.id === 'italy-geology-layer' || l.id === 'italy-geo-clip-mask') map.removeLayer(l.id) })
+    Object.keys(style.sources || {}).forEach(s => { if (s.startsWith('aoc_') || s === 'highlight' || s === 'region_outline' || s === 'italy-geology-wms' || s === 'italy-geo-clip-src') map.removeSource(s) })
+    regionOutlineGeoJSON = null
     // 切換區域時同樣維持只顯示區域框架
     await loadRegionOutline()
   }
@@ -921,6 +1150,7 @@ onMounted(async () => {
 
 onUnmounted(() => {
   if (audioPlayer) { audioPlayer.pause(); audioPlayer = null }
+  if (geologyPopup) { geologyPopup.remove(); geologyPopup = null }
   if (map) { map.remove(); map = null }
 })
 </script>
@@ -1474,5 +1704,143 @@ onUnmounted(() => {
   .aoc-drawer { left: 0; right: 0; transform: none; width: 100%; top: calc(env(safe-area-inset-top, 0px) + 2px); border-radius: 20px 20px 14px 14px; }
   .map-info-bar { left: 8px; right: 8px; width: auto; transform: none; }
   .climate-overlay { left: 8px; width: calc(100vw - 16px); }
+}
+
+/* ── 義大利地質浮動面板 ── */
+.italy-geo-float-panel {
+  position: fixed;
+  top: 60px;
+  right: 16px;
+  background: rgba(255,255,255,0.97);
+  border-radius: 14px;
+  padding: 12px 14px 10px;
+  z-index: 1002;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  min-width: 200px;
+  max-width: 250px;
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.soil-float-title {
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #5a3b3b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 9px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.soil-float-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.soil-float-name {
+  font-size: 0.82rem;
+  color: #444;
+  font-weight: 600;
+  flex: 1;
+}
+.soil-float-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.soil-opacity-slider {
+  width: 76px;
+  accent-color: #8B0000;
+  cursor: pointer;
+}
+.soil-opacity-pct {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #8B0000;
+  min-width: 30px;
+  text-align: right;
+}
+.geo-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 6px;
+}
+.geo-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.70rem;
+  color: #444;
+}
+.geo-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+/* ── 地質 Popup（全域，Mapbox 注入的 DOM）── */
+:global(.geology-popup-wrap .mapboxgl-popup-content) {
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+  min-width: 260px;
+}
+:global(.italy-geology-popup) {
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+:global(.italy-geology-popup .geology-popup-header) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #4a4a4a 0%, #2d2d2d 100%);
+  color: white;
+  padding: 10px 12px 8px;
+  gap: 8px;
+}
+:global(.italy-geology-popup .soil-type-badge) {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+:global(.italy-geology-popup .geology-popup-code) {
+  font-size: 0.72rem;
+  background: rgba(255,255,255,0.18);
+  padding: 2px 7px;
+  border-radius: 6px;
+  color: rgba(255,255,255,0.9);
+  white-space: nowrap;
+}
+:global(.italy-geology-popup .geology-popup-zone) {
+  padding: 5px 12px;
+  font-size: 0.79rem;
+  color: #555;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+:global(.italy-geology-popup .geology-popup-desc) {
+  padding: 6px 12px;
+  font-size: 0.77rem;
+  color: #444;
+  background: #f9f9f9;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+:global(.italy-geology-popup .geology-grape-section) {
+  padding: 8px 12px;
+  background: #fff8f0;
+  border-left: 3px solid #c0392b;
+}
+:global(.italy-geology-popup .grape-name-row) {
+  font-size: 0.80rem;
+  color: #5a2d0c;
+  line-height: 1.5;
+}
+:global(.italy-geology-popup .geology-popup-footer) {
+  padding: 5px 12px;
+  font-size: 0.67rem;
+  color: #999;
+  background: #f5f5f5;
+  border-top: 1px solid rgba(0,0,0,0.06);
 }
 </style>

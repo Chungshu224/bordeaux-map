@@ -38,10 +38,25 @@
       <div v-if="mobileLayersOpen" class="layer-panel-wrapper">
         <RegionMapLayerPanel
           :is3D="is3D"
-          :soil-disabled="true"
+          :brgm-available="true"
+          :brgm-enabled="brgmEnabled"
           @toggle-3d="toggle3D"
+          @toggle-brgm="toggleBRGM(map)"
           @close="mobileLayersOpen = false"
         />
+      </div>
+
+      <!-- BRGM 地質浮動面板 -->
+      <div v-if="brgmEnabled" class="loire-brgm-float-panel">
+        <div class="soil-float-title">🗺️ BRGM 地質圖</div>
+        <div class="soil-float-row">
+          <span class="brgm-float-label">透明度</span>
+          <input class="soil-opacity-slider" type="range" min="0.05" max="0.85" step="0.05"
+            v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
+          <span class="soil-opacity-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
+        </div>
+        <div class="brgm-float-hint">點擊地圖查看岩石資訊</div>
+        <div class="brgm-float-src">© BRGM LITHO_1M (Etalab OL)</div>
       </div>
 
       <!-- 底部工具列 -->
@@ -87,6 +102,7 @@ import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
+import { useBRGMGeology, BRGM_POPUP_STYLES } from '@/composables/useBRGMGeology.js'
 import {
   RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
   RegionMapAppellationDrawer, RegionMapMobileToolbar
@@ -107,6 +123,21 @@ const infoBarCollapsed = ref(false)
 const mobileAocDrawerOpen = ref(false)
 const mobileLayersOpen = ref(false)
 const search = ref('')
+
+// ── 土壤圖層狀態 ─────────────────────────────────────────────
+// ── BRGM 法國地質圖 ──
+const { brgmEnabled, brgmOpacity, toggleBRGM, resetBRGM, updateBRGMOpacity, updateBRGMClip } = useBRGMGeology()
+
+// 當 BRGM 開啟且已有選取的 AOC 時，立即套用遮罩
+watch(brgmEnabled, (enabled) => {
+  if (!map) return
+  if (!enabled) { updateBRGMClip(map, null); return }
+  if (!activeAOC.value?.aoc) return
+  const path = getGeojsonPath(activeAOC.value.group, activeAOC.value.aoc)
+  const geojson = geojsonCache.get(path)
+  if (geojson) updateBRGMClip(map, geojson)
+})
+
 
 // ── 地圖樣式 ──────────────────────────────────────────────────
 const mapStyles = [
@@ -434,6 +465,8 @@ async function showAOCGeojson(group, aocFile) {
     if (map.getSource('loire-aoc')) map.removeSource('loire-aoc')
 
     map.addSource('loire-aoc', { type: 'geojson', data: geojson })
+    // BRGM 地質圖：更新遡罩為目前選取的 AOC 圖形
+    updateBRGMClip(map, geojson)
     map.addLayer({
       id: 'loire-fill',
       type: 'fill',
@@ -448,6 +481,7 @@ async function showAOCGeojson(group, aocFile) {
     })
     try {
       const bbox = turf.bbox(geojson)
+      activeAocBounds.value = { west: bbox[0], south: bbox[1], east: bbox[2], north: bbox[3] }
       map.fitBounds(bbox, { padding: 60, duration: 900 })
     } catch {}
   } catch (err) {
@@ -482,6 +516,7 @@ function resetMap() {
     if (map.getLayer('loire-group-outline')) map.removeLayer('loire-group-outline')
     if (map.getSource('loire-group')) map.removeSource('loire-group')
     map.flyTo({ center: [1.2, 47.5], zoom: 6.5, duration: 1000 })
+    updateBRGMClip(map, null)
   }
 }
 
@@ -529,11 +564,18 @@ async function loadRegionsData() {
 }
 
 onMounted(async () => {
+  if (!document.getElementById('brgm-popup-styles')) {
+    const style = document.createElement('style')
+    style.id = 'brgm-popup-styles'
+    style.textContent = BRGM_POPUP_STYLES
+    document.head.appendChild(style)
+  }
   await loadRegionsData()
   await initMap()
 })
 
 onUnmounted(() => {
+  resetBRGM(map)
   if (map) { map.remove(); map = null }
 })
 
@@ -1186,5 +1228,34 @@ html, body {
 }
 .rmap-section { margin-top: 8px; }
 .rmap-section-title { font-size: 11px; color: #999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }
-</style>
 
+/* ── BRGM 地質圖 浮動面板 ────────────────────── */
+.loire-brgm-float-panel {
+  position: absolute;
+  bottom: 165px;
+  right: 16px;
+  background: rgba(255,255,255,0.96);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  z-index: 29;
+  min-width: 220px;
+  max-width: 260px;
+  backdrop-filter: blur(8px);
+}
+.brgm-float-label { font-size: 11px; color: #555; min-width: 40px; }
+.brgm-float-hint { font-size: 11px; color: #777; font-style: italic; margin-top: 6px; }
+.brgm-float-src  { font-size: 10px; color: #aaa; margin-top: 2px; }
+.soil-float-title {
+  font-size: 12px; font-weight: 700; color: #444;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px;
+}
+.soil-float-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 6px; margin-bottom: 7px;
+}
+.soil-opacity-slider { width: 80px; accent-color: #2d6a4f; }
+.soil-opacity-pct { font-size: 10.5px; color: #666; min-width: 28px; text-align: right; }
+</style>

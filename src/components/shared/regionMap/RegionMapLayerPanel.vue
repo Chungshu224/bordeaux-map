@@ -31,9 +31,18 @@
         :title="soilDisabled ? '即將推出' : ''"
         @click="!soilDisabled && $emit('toggle-soil')">
         <span class="lbtn-icon">🪨</span>
-        <span class="lbtn-text">土壤結構</span>
+        <span class="lbtn-text">{{ soilLabel }}</span>
         <span v-if="soilDisabled" class="lbtn-soon">即將推出</span>
         <span v-else class="lbtn-dot" :class="{ on: soilEnabled }"></span>
+      </button>
+      <button
+        v-if="brgmAvailable"
+        class="rmap-btn-layer"
+        :class="{ active: brgmEnabled }"
+        @click="$emit('toggle-brgm')">
+        <span class="lbtn-icon">🗺️</span>
+        <span class="lbtn-text">BRGM 地質</span>
+        <span class="lbtn-dot" :class="{ on: brgmEnabled }"></span>
       </button>
     </div>
   </div>
@@ -45,10 +54,15 @@ defineProps({
   showContours: { type: Boolean, default: false },
   climateEnabled: { type: Boolean, default: false },
   soilEnabled: { type: Boolean, default: false },
+  /** 按鈕標籤，預設「土壤結構」*/
+  soilLabel: { type: String, default: '土壤結構' },
   /** 該產區尚未實作土壤資料時 disable 此按鈕 */
-  soilDisabled: { type: Boolean, default: true }
+  soilDisabled: { type: Boolean, default: true },
+  /** 是否顯示 BRGM 地質圖按鈕（法國產區用） */
+  brgmAvailable: { type: Boolean, default: false },
+  brgmEnabled: { type: Boolean, default: false },
 })
-defineEmits(['toggle-3d', 'toggle-contours', 'toggle-climate', 'toggle-soil', 'close'])
+defineEmits(['toggle-3d', 'toggle-contours', 'toggle-climate', 'toggle-soil', 'toggle-brgm', 'close'])
 </script>
 
 <style scoped>

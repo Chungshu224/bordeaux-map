@@ -49,6 +49,24 @@ export default defineConfig({
         target: 'https://maps.isric.org',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/isric-proxy/, '')
+      },
+      // ISPRA 義大利地質圖 proxy — 解決 CORS 問題
+      '/ispra': {
+        target: 'https://sgi2.isprambiente.it',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/ispra/, '')
+      },
+      // BRGM 法國地質調查局 proxy — 解決 CORS 問題
+      '/brgm': {
+        target: 'https://geoservices.brgm.fr',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/brgm/, '')
+      },
+      // IGME 西班牙地質調查局 proxy — 解決 CORS 問題
+      '/igme': {
+        target: 'https://mapas.igme.es',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/igme/, '')
       }
     }
   }

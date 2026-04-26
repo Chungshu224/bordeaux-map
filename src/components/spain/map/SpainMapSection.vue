@@ -12,14 +12,6 @@
       @back="emit('back')"
     />
 
-    <!-- 省份指示 -->
-    <transition name="fade-down">
-      <div v-if="selectedProvince" class="province-indicator">
-        <span>📍 {{ selectedProvince }}</span>
-        <button class="province-close" @click="clearSelectedProvince">✕</button>
-      </div>
-    </transition>
-
     <!-- ── 統一資訊側欄 ── -->
     <RegionMapInfoPanel
       v-if="activeInfo"
@@ -32,20 +24,7 @@
       @play-audio="playPronunciation"
       @reset="resetView"
     >
-      <template v-if="activeInfo?.appData?.provinces?.length" #extra-content>
-        <div class="rmap-section">
-          <div class="rmap-section-title">📍 所在省份</div>
-          <div class="province-list">
-            <button
-              v-for="p in activeInfo.appData.provinces"
-              :key="p"
-              class="province-chip"
-              :class="{ active: selectedProvince === p }"
-              @click="highlightProvince(p)"
-            >{{ p }}</button>
-          </div>
-        </div>
-      </template>
+
     </RegionMapInfoPanel>
 
     <!-- ── 統一產區清單抽屜 ── -->
@@ -123,14 +102,30 @@
           :is3D="is3D"
           :show-contours="contoursEnabled"
           :climate-enabled="climateEnabled"
-          :soil-disabled="true"
+          :soil-disabled="false"
+          :soil-label="'IGME 地質'"
+          :soil-enabled="soilEnabled"
           @toggle-3d="toggle3D"
           @toggle-contours="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')"
           @toggle-climate="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')"
+          @toggle-soil="toggleSoil"
           @close="showLayerPanel = false"
         />
       </div>
     </transition>
+
+    <!-- IGME 地質浮動面板 -->
+    <div v-if="soilEnabled" class="spain-geo-float-panel">
+      <div class="soil-float-title">🗺️ IGME 地質圖 1:200,000</div>
+      <div class="soil-float-row">
+        <span class="sp-geo-label">透明度</span>
+        <input class="soil-opacity-slider" type="range" min="0.1" max="1.0" step="0.05"
+          v-model.number="soilOpacity">
+        <span class="soil-opacity-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+      </div>
+      <div class="sp-geo-hint">點擊地圖查看地質資訊</div>
+      <div class="sp-geo-src">© IGME Mapa Geológico 1:200,000 (CC-BY 4.0)</div>
+    </div>
 
     <!-- ── 統一工具列 ── -->
     <RegionMapMobileToolbar
@@ -154,6 +149,7 @@
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
+import * as turf from '@turf/turf'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { authActions } from '@/stores/authStore.js'
 import { TIER_WEIGHT } from '@/router/index.js'
@@ -192,8 +188,6 @@ const typeFilter = ref('all')
 const activeInfo = ref(null)
 const allRegions = ref([])    // all 96 features as normalized objects
 const appellations = ref([])  // spain-appellations.json lookup
-const selectedProvince = ref(null)
-
 // ── 等高線 / 氣候熱力狀態 ──────────────────────────────────────
 const contoursEnabled  = ref(false)
 const climateEnabled   = ref(false)
@@ -230,6 +224,10 @@ const CLIMATE_INDICATORS = [
 ]
 
 const SPAIN_GOLDEN_VINTAGES = new Set([1989, 1994, 1995, 2001, 2004, 2005, 2010, 2015, 2016, 2018, 2021])
+
+// ── IGME 地質圖狀態 ──────────────────────────────────────────────
+const soilEnabled = ref(false)
+const soilOpacity = ref(0.8)
 
 const spCurrentIndicatorConfig = computed(() =>
   CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value)
@@ -286,8 +284,10 @@ const spCurrentYearDelta = computed(() => {
 const spCurrentYearDeltaPositive = computed(() => (spCurrentYearDelta.value ?? 0) > 0)
 
 let map = null
+let geologyPopup = null
+let geologyClickRegistered = false
+let regionOutlineGeoJSON = null
 let hoveredId = null
-let selectedProvinceId = null
 let hoveredProvinceId = null
 let initialBounds = null    // 起始畫面的 bounds，供重置使用
 let baseFilter = null       // addLayers 套用的初始 filter，重置時恢復
@@ -677,6 +677,129 @@ watch(typeFilter, () => {
   applyTypeFilter()
 })
 
+async function loadRegionOutline() {
+  const filterAuto = props.region.filterAutonomiaId
+  if (!filterAuto) return
+  try {
+    const res = await fetch(`/spain/geojson/${filterAuto}.geojson`)
+    if (!res.ok) return
+    regionOutlineGeoJSON = await res.json()
+  } catch (e) {
+    console.warn('[SpainMap] loadRegionOutline failed:', e)
+  }
+}
+
+// ── IGME 西班牙地質圖 ──────────────────────────────────────────────
+function renderSpainGeologyPopupHTML(attrs) {
+  const lito = attrs.LITOLOGIA || attrs.litologia || ''
+  const edad = attrs.EDAD || attrs.edad || attrs.EDADES || attrs.edades || ''
+  const cod  = attrs.COD_LITO || attrs.cod_lito || attrs.COD || ''
+  const form = attrs.FORMACION || attrs.formacion || attrs.NOMBRE || attrs.nombre || ''
+  return `
+    <div class="spain-geology-popup">
+      <div class="geology-popup-header">
+        <span class="soil-type-badge">🪨 ${lito || '未分類'}</span>
+        ${cod ? `<span class="geology-popup-code">${cod}</span>` : ''}
+      </div>
+      ${edad ? `<div class="geology-popup-zone">🕐 地質年代：${edad}</div>` : ''}
+      ${form ? `<div class="geology-popup-zone">📋 地層：${form}</div>` : ''}
+      <div class="geology-popup-footer">© IGME Mapa Geológico 1:200,000 (CC-BY 4.0)</div>
+    </div>
+  `
+}
+
+async function loadSpainGeologyLayer() {
+  if (!map) return
+  if (map.getLayer('spain-geology-layer')) return
+  if (!map.getSource('spain-geology-wms')) {
+    // IGME WMS 不支援 EPSG:3857，改用 ArcGIS REST export endpoint（支援 bboxSR=3857）
+    map.addSource('spain-geology-wms', {
+      type: 'raster',
+      tiles: [
+        '/igme/gis/rest/services/Cartografia_Geologica/IGME_Geologico_200/MapServer/export' +
+        '?bbox={bbox-epsg-3857}&bboxSR=3857&size=256,256&imageSR=3857' +
+        '&format=png32&transparent=true&f=image&layers=show:0'
+      ],
+      tileSize: 256,
+      attribution: '© IGME Mapa Geológico 1:200,000 (CC-BY 4.0)'
+    })
+  }
+  // 將地質圖插入 provinces-fill 之下，使 DO 填色圖層顯示於地質之上（視覺更清晰）
+  const beforeLayerId = map.getLayer('provinces-fill') ? 'provinces-fill' : undefined
+  map.addLayer({
+    id: 'spain-geology-layer',
+    type: 'raster',
+    source: 'spain-geology-wms',
+    paint: { 'raster-opacity': soilOpacity.value }
+  }, beforeLayerId)
+  // 建立自治區邊界裁切遮罩（僅顯示選取自治區內的地質圖；overlay 置於所有圖層之上）
+  if (regionOutlineGeoJSON) {
+    try {
+      const maskData = turf.mask(regionOutlineGeoJSON)
+      if (map.getSource('spain-geo-clip-src')) {
+        map.getSource('spain-geo-clip-src').setData(maskData)
+        if (map.getLayer('spain-geo-clip-overlay')) map.setLayoutProperty('spain-geo-clip-overlay', 'visibility', 'visible')
+      } else {
+        map.addSource('spain-geo-clip-src', { type: 'geojson', data: maskData })
+        map.addLayer({
+          id: 'spain-geo-clip-overlay',
+          type: 'fill',
+          source: 'spain-geo-clip-src',
+          paint: { 'fill-color': '#060a10', 'fill-opacity': 0.72 }
+        })
+      }
+    } catch (e) { console.warn('[SpainMap] clip mask failed:', e) }
+  }
+  if (!geologyClickRegistered) {
+    map.on('click', async (e) => {
+      if (!soilEnabled.value) return
+      const { lng, lat } = e.lngLat
+      try {
+        const url =
+          '/igme/gis/rest/services/Cartografia_Geologica/IGME_Geologico_200/MapServer/0/query' +
+          `?geometry=${lng},${lat}&geometryType=esriGeometryPoint&inSR=4326` +
+          '&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=false&f=json'
+        const res = await fetch(url)
+        if (!res.ok) return
+        const data = await res.json()
+        const features = data.features || []
+        if (features.length === 0) return
+        const attrs = features[0].attributes || {}
+        const html = renderSpainGeologyPopupHTML(attrs)
+        if (geologyPopup) geologyPopup.remove()
+        geologyPopup = new mapboxgl.Popup({ className: 'geology-popup-wrap', maxWidth: '320px', closeButton: true })
+          .setLngLat([lng, lat])
+          .setHTML(html)
+          .addTo(map)
+      } catch (err) {
+        console.warn('[SpainMap] geology identify error:', err)
+      }
+    })
+    geologyClickRegistered = true
+  }
+}
+
+async function toggleSoil() {
+  if (!map) return
+  if (!soilEnabled.value) {
+    soilEnabled.value = true
+    await loadSpainGeologyLayer()
+  } else {
+    soilEnabled.value = false
+    if (geologyPopup) { geologyPopup.remove(); geologyPopup = null }
+    if (map.getLayer('spain-geo-clip-overlay')) map.removeLayer('spain-geo-clip-overlay')
+    if (map.getSource('spain-geo-clip-src')) map.removeSource('spain-geo-clip-src')
+    if (map.getLayer('spain-geology-layer')) map.removeLayer('spain-geology-layer')
+    if (map.getSource('spain-geology-wms')) map.removeSource('spain-geology-wms')
+  }
+}
+
+watch(soilOpacity, (val) => {
+  if (map && map.getLayer('spain-geology-layer')) {
+    map.setPaintProperty('spain-geology-layer', 'raster-opacity', val)
+  }
+})
+
 // ── Map init ──────────────────────────────────────────────────────
 onMounted(async () => {
   try {
@@ -721,6 +844,8 @@ function initMap() {
       }
       isLoading.value = false
       mapReady.value = true
+      // 預載自治區邊界供地質裁切使用
+      await loadRegionOutline()
       // 若從搜尋傳入 targetZonName，自動聚焦該產區
       if (props.region.targetZonName) {
         const target = [...allRegionsMap.values()].find(
@@ -919,9 +1044,6 @@ async function addLayers() {
       }
       hoveredProvinceId = e.features[0].id
       map.setFeatureState({ source: 'provinces', id: hoveredProvinceId }, { hover: true })
-      // 只有在沒有 wine region 的區域才顯示 crosshair
-      const wine = map.queryRenderedFeatures(e.point, { layers: ['wine-regions-fill'] })
-      if (!wine.length) map.getCanvas().style.cursor = 'crosshair'
     }
   })
 
@@ -951,15 +1073,10 @@ async function addLayers() {
     e.originalEvent._spainWineClicked = true
   })
 
-  // 點擊省份（未蓋住 wine region 的區域）或清除選取
+  // 點擊空白處清除選取
   map.on('click', (e) => {
     if (e.originalEvent._spainWineClicked) return
-    const provFeat = map.queryRenderedFeatures(e.point, { layers: ['provinces-fill'] })
-    if (provFeat.length > 0) {
-      selectProvinceByFeature(provFeat[0])
-    } else {
-      activeInfo.value = null
-    }
+    activeInfo.value = null
   })
 }
 
@@ -999,41 +1116,6 @@ function toggleProvinces() {
   const vis = showProvinces.value ? 'visible' : 'none'
   map.setLayoutProperty('provinces-line', 'visibility', vis)
   map.setLayoutProperty('provinces-fill', 'visibility', vis)
-}
-
-function selectProvinceByFeature(feat) {
-  if (!map) return
-  const name = feat.properties.province || feat.properties.name
-  if (selectedProvinceId !== null) {
-    map.setFeatureState({ source: 'provinces', id: selectedProvinceId }, { selected: false })
-  }
-  selectedProvinceId = feat.id
-  map.setFeatureState({ source: 'provinces', id: selectedProvinceId }, { selected: true })
-  selectedProvince.value = name
-  // fitBounds 至省份範圍
-  const coords = feat.geometry.type === 'MultiPolygon'
-    ? feat.geometry.coordinates.flat(2)
-    : feat.geometry.coordinates.flat(1)
-  const lngs = coords.map(c => c[0])
-  const lats = coords.map(c => c[1])
-  map.fitBounds(
-    [[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]],
-    { padding: 60, maxZoom: 10, duration: 700 }
-  )
-}
-
-function highlightProvince(name) {
-  if (!map) return
-  const features = map.querySourceFeatures('provinces')
-  const feat = features.find(f => (f.properties.province || f.properties.name) === name)
-  if (feat) selectProvinceByFeature(feat)
-}
-
-function clearSelectedProvince() {
-  if (!map || selectedProvinceId === null) return
-  map.setFeatureState({ source: 'provinces', id: selectedProvinceId }, { selected: false })
-  selectedProvinceId = null
-  selectedProvince.value = null
 }
 
 function toggle3D() {
@@ -1892,4 +1974,81 @@ function handleMobileAction(action) {
 /* rmap-section for extra-content slot */
 .rmap-section { margin-top: 8px; }
 .rmap-section-title { font-size: 11px; color: #999; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; }
+
+/* IGME 地質浮動面板 */
+.spain-geo-float-panel {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  right: 20px;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.16);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 10px 14px;
+  z-index: 45;
+  min-width: 240px;
+}
+.spain-geo-float-panel .soil-float-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.spain-geo-float-panel .soil-float-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+}
+.sp-geo-label { font-size: 11px; color: #555; min-width: 40px; }
+.sp-geo-hint  { font-size: 11px; color: #777; font-style: italic; margin-top: 4px; }
+.sp-geo-src   { font-size: 10px; color: #aaa; margin-top: 2px; }
+.spain-geo-float-panel .soil-opacity-slider { width: 70px; accent-color: #c0392b; }
+.spain-geo-float-panel .soil-opacity-pct { font-size: 0.78rem; color: #666; min-width: 34px; text-align: right; }
+
+/* IGME 地質 popup */
+.spain-geology-popup {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 2px;
+}
+.spain-geology-popup .geology-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.spain-geology-popup .soil-type-badge {
+  font-weight: 700;
+  color: #333;
+  font-size: 13px;
+}
+.spain-geology-popup .geology-popup-code {
+  background: #f0f0f0;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 11px;
+  color: #666;
+}
+.spain-geology-popup .geology-popup-zone {
+  color: #555;
+  font-size: 12px;
+  margin: 2px 0;
+}
+.spain-geology-popup .geology-popup-footer {
+  font-size: 10px;
+  color: #aaa;
+  margin-top: 8px;
+  border-top: 1px solid #eee;
+  padding-top: 4px;
+}
 </style>
