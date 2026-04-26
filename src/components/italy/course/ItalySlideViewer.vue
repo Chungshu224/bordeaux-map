@@ -71,6 +71,10 @@ import ChartSlide from '../../bourgogne/course/slides/ChartSlide.vue'
 import StatsSlide from './slides/StatsSlide.vue'
 import MapPlaceholderSlide from './slides/MapPlaceholderSlide.vue'
 import QuizSlide from './slides/QuizSlide.vue'
+import DOCGPyramidSlide from './slides/DOCGPyramidSlide.vue'
+import ItalianGrapeProfileSlide from './slides/ItalianGrapeProfileSlide.vue'
+import AppellationComparisonSlide from './slides/AppellationComparisonSlide.vue'
+import ItalyRegionsOverviewSlide from './slides/ItalyRegionsOverviewSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
@@ -94,7 +98,11 @@ const slideComponentMap = {
   chart: ChartSlide,
   stats: StatsSlide,
   map_placeholder: MapPlaceholderSlide,
-  quiz: QuizSlide
+  quiz: QuizSlide,
+  'docg-pyramid': DOCGPyramidSlide,
+  'italian-grape-profile': ItalianGrapeProfileSlide,
+  'appellation-comparison': AppellationComparisonSlide,
+  'italy-regions-overview': ItalyRegionsOverviewSlide
 }
 
 function pickRandom (arr, n) {
