@@ -102,6 +102,13 @@
       "icon": "🌱"
     },
     {
+      "id": 8.5,
+      "type": "marlborough-sub-regions",
+      "title": "Marlborough Sauvignon Blanc 子產區風格",
+      "subtitle": "Wairau / Southern Valleys / Awatere 三大子產區的風土與風味對比",
+      "icon": "🍋"
+    },
+    {
       "id": 9,
       "type": "summary",
       "title": "本課重點總結",

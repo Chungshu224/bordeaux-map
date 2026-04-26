@@ -207,6 +207,16 @@
         <NZMapSlide :slide="currentSlide" />
       </div>
 
+      <!-- Marlborough Sauvignon Sub-regions Slide -->
+      <div v-else-if="currentSlide.type === 'marlborough-sub-regions'" class="slide slide-specialized">
+        <MarlboroughSauvignonSlide :slide="currentSlide" />
+      </div>
+
+      <!-- Central Otago Pinot Sub-regions Slide -->
+      <div v-else-if="currentSlide.type === 'central-otago-sub-regions'" class="slide slide-specialized">
+        <CentralOtagoPinotSlide :slide="currentSlide" />
+      </div>
+
       <!-- Infographic Slide -->
       <div v-else-if="currentSlide.type === 'infographic'" class="slide slide-infographic">
         <div class="slide-header">
@@ -250,6 +260,8 @@ import NZQuizViewer from './NZQuizViewer.vue'
 import NZReviewQuiz from './NZReviewQuiz.vue'
 import NZMapPage from './NZMapPage.vue'
 import NZMapSlide from './NZMapSlide.vue'
+import MarlboroughSauvignonSlide from './slides/MarlboroughSauvignonSlide.vue'
+import CentralOtagoPinotSlide from './slides/CentralOtagoPinotSlide.vue'
 
 const props = defineProps({
   slides: { type: Array, default: () => [] },

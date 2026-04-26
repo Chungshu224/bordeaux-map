@@ -104,6 +104,13 @@
       ]
     },
     {
+      "id": 8.5,
+      "type": "central-otago-sub-regions",
+      "title": "Central Otago Pinot Noir 五大子產區風格地圖",
+      "subtitle": "Bannockburn / Bendigo / Gibbston / Cromwell / Wanaka 的風土對比",
+      "icon": "🍒"
+    },
+    {
       "id": 9,
       "type": "summary",
       "title": "重點總結",
