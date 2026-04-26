@@ -134,7 +134,7 @@ const routes = [
   {
     path: '/california',
     name: 'California',
-    component: () => import('../components/california/CaliforniaMapSection.vue'),
+    component: () => import('../components/california/CaliforniaPage.vue'),
     meta: { requiresAuth: true, minimumTier: 'free', title: '🍷 加州葡萄酒產區 · 侍酒師的筆記本' }
   },
   // ─── 加州葡萄酒課程 ──────────────────────────────────────────────────────────
