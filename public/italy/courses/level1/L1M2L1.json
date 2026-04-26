@@ -163,6 +163,11 @@
       ]
     },
     {
+      "type": "appellation-comparison",
+      "title": "⚖️ Barolo vs Barbaresco 兩大 Nebbiolo 名區互動比較",
+      "description": "點選查看 Barolo（力量型、長陳年、誉為「酒中之王」）與 Barbaresco（優雅型、中陳年、誉為「酒中之后」）的完整對照：土壤、海拔、微氣候、老、陳年規定、酒體與單寧、代表酒莊、推薦佳年與預算區間。"
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

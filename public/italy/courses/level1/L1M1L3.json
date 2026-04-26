@@ -170,8 +170,11 @@
         }
       ]
     },
-    {
-      "type": "content",
+    {      "type": "italy-regions-overview",
+      "title": "🌍 義大利 20 個產區全景互動探索",
+      "description": "點選任一產區查看詳細資訊：氣候類型、主要品種、代表 DOCG/DOC、酒款風格。可依「北部大陸」「中部地中海」「南部地中海」「島嶼」篩選，快速掌握從阿爾卑斯山麓到西西里島的風土差異。"
+    },
+    {      "type": "content",
       "title": "🎓 重點總結",
       "content": "<div class=\"key-takeaways\"><div class=\"takeaway-item\">✓ 南北跨越 10 個緯度，氣候差異巨大</div><div class=\"takeaway-item\">✓ 丘陵地形最適合釀酒葡萄種植</div><div class=\"takeaway-item\">✓ 海拔、朝向、土壤共同決定風土</div><div class=\"takeaway-item\">✓ 北部優雅、中部平衡、南部濃郁</div></div><div class=\"map-prompt\"><p>💡 <strong>建議：</strong>點擊「互動地圖」按鈕，探索義大利 20 個產區的地理分布！</p></div>"
     }

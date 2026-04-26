@@ -803,6 +803,11 @@
           "type": "content",
           "title": "其他品種",
           "content": "除了黑皮諾與夏多內，布根地也種植少量 Aligoté（白葡萄）和 Gamay（紅葡萄，主要在薄酒萊）。Aligoté 用於釀造清新的白酒，也是著名雞尾酒 Kir 的基酒。"
+        },
+        {
+          "type": "bourgogne_grape_profile",
+          "title": "🍇 布根地品種互動檔案：Pinot Noir vs Chardonnay",
+          "description": "點選黑皮諾與夏多內查看完整品種檔案：葡萄果實特徵、在布根地不同次產區（夜丘 vs 伯恩丘 vs 夏布利）的風格差別、入子重點、酒齡變化、餐酒搭配、在其他國家的表現（新西蘭、加州 Pinot 與加州 Chardonnay）。"
         }
       ]
     },
@@ -888,6 +893,11 @@
           "type": "content",
           "title": "Domaine vs Négociant",
           "content": "Domaine（酒莊）擁有自己的葡萄園並釀酒；Négociant（酒商）則是向農民購買葡萄或酒液再裝瓶。兩者各有優勢，許多酒商也擁有自己的葡萄園。"
+        },
+        {
+          "type": "climat_hierarchy",
+          "title": "👑 布根地 4 階分級金字塔 + Climat 園區互動詳解",
+          "description": "點選金字塔任一階（Régionale / Village / Premier Cru / Grand Cru）查看詳細規範：面積佔比、代表酒莊、代表 climat、酒標標示規則與價格區間。同步了解 Climat 如何以「預定葡萄園」狀態被 UNESCO 2015 列為世界遺產，1247 個 climat 如何代表 1500 年來人類對風土的累積認識。"
         }
       ]
     }

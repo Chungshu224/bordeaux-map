@@ -162,6 +162,11 @@
       ]
     },
     {
+      "type": "docg-pyramid",
+      "title": "🏛️ 義大利分級金字塔互動詳解",
+      "description": "點選金字塔任一階（DOCG / DOC / IGT / VdT）查看詳細規範：認證條件、代表酒款、產量佔比與價格區間。了解為何 Super Tuscan 選择 IGT 標示、以及 DOCG 頂金色頭帶與國家台號的個别重點。"
+    },
+    {
       "type": "content",
       "title": "🎓 重點總結",
       "content": "<div class=\"summary-boxes\"><div class=\"summary-box\"><strong>DOCG</strong><br>最高等級，品質保證</div><div class=\"summary-box\"><strong>DOC</strong><br>優質法定產區</div><div class=\"summary-box\"><strong>IGT</strong><br>創新與地區特色</div><div class=\"summary-box\"><strong>VdT</strong><br>日常餐酒</div></div>"
