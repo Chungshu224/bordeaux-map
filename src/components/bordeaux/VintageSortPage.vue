@@ -491,6 +491,8 @@ function nextRound() {
     phase.value   = 'playing'
     nextTick(() => { pageEl.value?.focus(); startRaf() })
   } else {
+    const _prev = parseInt(localStorage.getItem('bdx_vintage_best') || '0')
+    if (score.value > _prev) localStorage.setItem('bdx_vintage_best', score.value)
     phase.value = 'final'
   }
 }

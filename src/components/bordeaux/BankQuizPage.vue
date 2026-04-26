@@ -422,6 +422,8 @@ function processResult(correct, timeout) {
       phase.value = 'playing'
       startRaf()
     } else {
+      const _prev = parseInt(localStorage.getItem('bdx_bank_best') || '0')
+      if (score.value > _prev) localStorage.setItem('bdx_bank_best', score.value)
       phase.value = 'final'
     }
   }, 900)

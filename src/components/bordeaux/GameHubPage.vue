@@ -11,6 +11,14 @@
         </div>
       </div>
 
+      <div class="stats-bar">
+        <div v-for="stat in stats" :key="stat.label" class="stat-item">
+          <span class="stat-icon">{{ stat.icon }}</span>
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      </div>
+
       <div class="hub-grid">
         <div
           v-for="g in GAMES"
@@ -49,7 +57,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import MapQuizPage       from './MapQuizPage.vue'
 import BankQuizPage      from './BankQuizPage.vue'
 import VintageSortPage   from './VintageSortPage.vue'
@@ -135,6 +143,17 @@ const GAMES = [
     accent2:     '#92400e',
     minimumTier: 'basic'
   },]
+
+const stats = computed(() => {
+  const keys = ['bdx_map_best', 'bdx_bank_best', 'bdx_vintage_best', 'bdx_grape_best', 'bdx_label_best']
+  let played = 0, totalBest = 0
+  keys.forEach(k => { const v = parseInt(localStorage.getItem(k) || '0'); if (v > 0) { played++; totalBest += v } })
+  return [
+    { icon: '🎮', value: played,                          label: '已挑戰遲戲' },
+    { icon: '📊', value: keys.length,                     label: '全部遲戲' },
+    { icon: '🏅', value: totalBest > 0 ? totalBest : '—', label: '累計最高分' }
+  ]
+})
 </script>
 
 <style scoped>
@@ -213,11 +232,21 @@ const GAMES = [
   margin: 0;
   line-height: 1.1;
 }
-.hub-subtitle {
-  color: #6e7681;
-  font-size: 0.85rem;
-  margin: 3px 0 0;
+/* ── Stats Bar ─────────────────────────────────────────────── */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255,255,255,0.04);
+  margin: 1.25rem 1.5rem 0;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.07);
 }
+.stat-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.stat-icon { font-size: 1.3rem; }
+.stat-value { font-size: 1.4rem; font-weight: 800; color: #FFD700; }
+.stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); }
 
 /* ── Grid ─────────────────────────────────────────────────── */
 .hub-grid {
