@@ -834,5 +834,19 @@ onUnmounted(() => { observer?.disconnect() })
   .slides-grid { grid-template-columns: 1fr; }
   .filter-bar-inner { padding: 10px 12px; }
   .search-row { padding: 0 12px; flex-direction: column; align-items: stretch; }
+  /* 觸控目標提升 */
+  .chip { min-height: 44px; padding: 8px 12px; }
+  .chip:active { background: #d1d5db; }
+  .chip.active:active { opacity: 0.8; }
+  .goto-btn { min-height: 44px; padding: 12px 16px; display: flex; align-items: center; justify-content: center; }
+  .goto-btn:active { opacity: 0.75; }
+  .search-input { min-height: 44px; padding: 10px 14px; font-size: 1rem; }
+  .reset-btn { min-height: 44px; }
+}
+@media (max-width: 400px) {
+  .chip { font-size: 0.76rem; padding: 8px 8px; min-height: 44px; }
+  .chip-count { padding: 1px 5px; font-size: 0.7rem; }
+  .filter-chips { gap: 4px; }
+  .filter-label { font-size: 0.74rem; }
 }
 </style>
