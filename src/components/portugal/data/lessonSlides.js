@@ -815,6 +815,11 @@ const P1M4L2_slides = [
       '有 9 個子產區，各有特色',
     ],
   },
+  {
+    type: 'vinho-verde-subregions',
+    title: '🌿 Vinho Verde 9 大子產區互動深度',
+    description: 'Vinho Verde 是葡萄牙最大的 DOC（34,000 ha），9 個子產區各有主導品種與風土差異——從頂級 Alvarinho 重鎮 Monção/Melgaço 到深色 Vinhão 紅酒重鎮 Sousa/Baião 的完整互動探索',
+  },
 ]
 
 // P1M4L3 — Alentejo 快覽
@@ -1203,6 +1208,11 @@ const P2M5L1_slides = [
     title: 'Madeira DOC 產區地圖',
     description: '位於大西洋上的火山島，以獨特的加熱氧化工藝釀造出可陳年百年的馬德拉酒',
     mapRegion: 'Madeira',
+  },
+  {
+    type: 'madeira-noble-grapes',
+    title: '🏝️ Madeira 四大貴族品種 × 工藝互動深度',
+    description: 'Sercial / Verdelho / Bual / Malvasia 甜度光譜 + Estufagem（工業）vs Canteiro（自然）工藝對比 + 5 級陳年分級的完整互動探索',
   },
   {
     type: 'summary',

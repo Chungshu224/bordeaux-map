@@ -142,6 +142,16 @@
           <PortugalRegionsOverviewSlide :slide="currentSlideData" />
         </template>
 
+        <!-- Madeira 四大貴族品種 + Estufagem/Canteiro 工藝 互動深度 -->
+        <template v-else-if="currentSlideData.type === 'madeira-noble-grapes'">
+          <MadeiraNobleGrapesSlide :slide="currentSlideData" />
+        </template>
+
+        <!-- Vinho Verde 9 子產區互動深度 -->
+        <template v-else-if="currentSlideData.type === 'vinho-verde-subregions'">
+          <VinhoVerdeSubregionsSlide :slide="currentSlideData" />
+        </template>
+
         <!-- 預設佔位 -->
         <template v-else>
           <div class="slide-placeholder">
@@ -194,6 +204,8 @@ import PortStylesPyramidSlide from './slides/PortStylesPyramidSlide.vue'
 import DouroGrapesSlide from './slides/DouroGrapesSlide.vue'
 import PortAgingTiersSlide from './slides/PortAgingTiersSlide.vue'
 import PortugalRegionsOverviewSlide from './slides/PortugalRegionsOverviewSlide.vue'
+import MadeiraNobleGrapesSlide from './slides/MadeiraNobleGrapesSlide.vue'
+import VinhoVerdeSubregionsSlide from './slides/VinhoVerdeSubregionsSlide.vue'
 
 const props = defineProps({
   lesson: { type: Object, required: true },
