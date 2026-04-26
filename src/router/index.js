@@ -239,6 +239,14 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
 
+  // ─── 互動特化 Slide 索引頁 ────────────────────────────────────────────────
+  {
+    path: '/slides-index',
+    name: 'SpecializedSlideIndex',
+    component: () => import('../components/SpecializedSlideIndex.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🎛️ 互動特化 Slide 全覽 · 侍酒師的筆記本' }
+  },
+
   // ─── 管理員後台（需登入且為 admin 角色）────────────────────────────────────
   {
     path: '/admin',

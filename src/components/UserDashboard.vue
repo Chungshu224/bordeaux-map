@@ -106,6 +106,9 @@
           <button class="qg-btn" v-if="effectiveTier === 'premium'" @click="$router.push('/notebook')">
             <span>📔</span>品飲筆記
           </button>
+          <button class="qg-btn qg-btn-slides" @click="$router.push('/slides-index')">
+            <span>🎛️</span>特化 Slide 庫
+          </button>
         </div>
       </section>
 
@@ -374,4 +377,6 @@ const manageSubscription = async () => {
 }
 .qg-btn span { font-size: 1.6rem; }
 .qg-btn:hover { border-color: rgba(212,175,55,0.4); color: #d4af37; }
+.qg-btn-slides { border-color: rgba(99,179,237,0.3); }
+.qg-btn-slides:hover { border-color: rgba(99,179,237,0.7); color: #63b3ed; }
 </style>
