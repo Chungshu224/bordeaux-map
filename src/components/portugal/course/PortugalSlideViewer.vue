@@ -122,6 +122,26 @@
           />
         </template>
 
+        <!-- Port 風格金字塔（Ruby/Tawny/LBV/Vintage/Colheita） -->
+        <template v-else-if="currentSlideData.type === 'port-styles'">
+          <PortStylesPyramidSlide :slide="currentSlideData" />
+        </template>
+
+        <!-- Douro 五大葡萄品種 -->
+        <template v-else-if="currentSlideData.type === 'douro-grapes'">
+          <DouroGrapesSlide :slide="currentSlideData" />
+        </template>
+
+        <!-- Port 陳年分級（Tawny 10/20/30/40 + LBV/Vintage 對照） -->
+        <template v-else-if="currentSlideData.type === 'port-aging'">
+          <PortAgingTiersSlide :slide="currentSlideData" />
+        </template>
+
+        <!-- Portugal 主要產區總覽（Vinho Verde / Douro / Madeira 等） -->
+        <template v-else-if="currentSlideData.type === 'portugal-regions-overview'">
+          <PortugalRegionsOverviewSlide :slide="currentSlideData" />
+        </template>
+
         <!-- 預設佔位 -->
         <template v-else>
           <div class="slide-placeholder">
@@ -170,6 +190,10 @@
 import { ref, computed, watch } from 'vue'
 import { getPortugalLessonSlides } from '../data/lessonSlides.js'
 import PortugalRegionMapSlide from './slides/PortugalRegionMapSlide.vue'
+import PortStylesPyramidSlide from './slides/PortStylesPyramidSlide.vue'
+import DouroGrapesSlide from './slides/DouroGrapesSlide.vue'
+import PortAgingTiersSlide from './slides/PortAgingTiersSlide.vue'
+import PortugalRegionsOverviewSlide from './slides/PortugalRegionsOverviewSlide.vue'
 
 const props = defineProps({
   lesson: { type: Object, required: true },
