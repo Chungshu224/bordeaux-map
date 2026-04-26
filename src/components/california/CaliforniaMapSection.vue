@@ -16,7 +16,7 @@
       region-name="加州"
       title="加州 AVA 葡萄酒產區地圖"
       icon="🍷"
-      @back="emit('back')"
+      @back="router.push('/california/course')"
     />
 
     <!-- ── 統一資訊側欄 ── -->
