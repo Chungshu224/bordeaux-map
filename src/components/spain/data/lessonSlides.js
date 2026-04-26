@@ -5991,6 +5991,11 @@ const S3M2L3_slides = [
     `,
   },
   {
+    type: 'cava-tiers',
+    title: 'Cava 四大等級互動探索',
+    description: '比較 Guarda / Reserva / Gran Reserva / Paraje Calificado 的酒泥陳年時間、Dosage 規定與代表酒款。',
+  },
+  {
     type: 'quiz',
     question: '「Cava de Paraje Calificado」是 2017 年設立的最高等級，它的最低酒泥陳年時間是多少？',
     options: ['9 個月', '15 個月', '30 個月', '36 個月'],
@@ -6677,6 +6682,11 @@ const S3M3L2_slides = [
         <li>是 Amontillado、Oloroso、PX 等複雜 Sherry 的靈魂</li>
       </ul>
     `,
+  },
+  {
+    type: 'sherry-solera',
+    title: '索雷拉系統 × 六大 Sherry 風格互動探索',
+    description: '從 Criadera 階梯到 Fino / Manzanilla / Amontillado / Oloroso / Palo Cortado / PX 的 Flor 狀態與風味剖析。',
   },
   {
     type: 'quiz',

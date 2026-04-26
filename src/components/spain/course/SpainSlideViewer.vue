@@ -139,6 +139,16 @@
           <SpainRegionsOverviewSlide :slide="currentSlideData" />
         </template>
 
+        <!-- 索雷拉系統 × 六大 Sherry 風格 -->
+        <template v-else-if="currentSlideData.type === 'sherry-solera'">
+          <SherrySoleraSlide :slide="currentSlideData" />
+        </template>
+
+        <!-- Cava 四大等級 × 酒泥陳年 -->
+        <template v-else-if="currentSlideData.type === 'cava-tiers'">
+          <CavaQualityTiersSlide :slide="currentSlideData" />
+        </template>
+
         <!-- 預設佔位 -->
         <template v-else>
           <div class="slide-placeholder">
@@ -194,6 +204,8 @@ import DOPyramidSlide from './slides/DOPyramidSlide.vue'
 import SpainGrapeProfileSlide from './slides/SpainGrapeProfileSlide.vue'
 import RiojaAgingSlide from './slides/RiojaAgingSlide.vue'
 import SpainRegionsOverviewSlide from './slides/SpainRegionsOverviewSlide.vue'
+import SherrySoleraSlide from './slides/SherrySoleraSlide.vue'
+import CavaQualityTiersSlide from './slides/CavaQualityTiersSlide.vue'
 
 const props = defineProps({
   lesson: { type: Object, required: true },
