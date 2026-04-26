@@ -375,6 +375,8 @@ function showFeedback() {
   setTimeout(() => {
     currentIdx.value++
     if (currentIdx.value >= questions.value.length) {
+      const _prev = parseInt(localStorage.getItem('pt_portwine_best') || '0')
+      if (score.value > _prev) localStorage.setItem('pt_portwine_best', score.value)
       phase.value = 'final'
     } else {
       phase.value = 'playing'

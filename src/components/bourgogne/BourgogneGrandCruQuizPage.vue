@@ -397,6 +397,8 @@ function advanceQuestion() {
     phase.value = 'playing'
     nextTick(() => { pageEl.value?.focus(); startRaf() })
   } else {
+    const _prev = parseInt(localStorage.getItem('bg_grandcru_best') || '0')
+    if (score.value > _prev) localStorage.setItem('bg_grandcru_best', score.value)
     phase.value = 'final'
   }
 }

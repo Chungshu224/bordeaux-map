@@ -270,8 +270,11 @@ function handleTimeout() {
 
 function nextQ() {
   if (feedTimer) { clearTimeout(feedTimer); feedTimer = null }
-  if (qIdx.value >= questions.value.length - 1) phase.value = 'final'
-  else { qIdx.value++; phase.value = 'playing'; startTimer(difficulty.value === 'easy' ? 15 : 8) }
+  if (qIdx.value >= questions.value.length - 1) {
+    const _prev = parseInt(localStorage.getItem('it_class_best') || '0')
+    if (score.value > _prev) localStorage.setItem('it_class_best', score.value)
+    phase.value = 'final'
+  } else { qIdx.value++; phase.value = 'playing'; startTimer(difficulty.value === 'easy' ? 15 : 8) }
 }
 
 function backToLobby() {

@@ -326,8 +326,11 @@ function handleTimeout() {
 
 function nextQ() {
   if (feedTimer) { clearTimeout(feedTimer); feedTimer = null }
-  if (qIdx.value >= questions.value.length - 1) { phase.value = 'final' }
-  else { qIdx.value++; phase.value = 'playing'; startTimer(difficulty.value === 'easy' ? 30 : 20) }
+  if (qIdx.value >= questions.value.length - 1) {
+    const _prev = parseInt(localStorage.getItem('it_desc_best') || '0')
+    if (score.value > _prev) localStorage.setItem('it_desc_best', score.value)
+    phase.value = 'final'
+  } else { qIdx.value++; phase.value = 'playing'; startTimer(difficulty.value === 'easy' ? 30 : 20) }
 }
 
 function backToLobby() { stopTimer(); if (feedTimer) clearTimeout(feedTimer); phase.value = 'lobby'; loadLeaderboard(lbTab.value) }

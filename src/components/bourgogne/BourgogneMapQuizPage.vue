@@ -676,6 +676,8 @@ function finishGame() {
   clearTimer()
   clearFeedbackTimeout()
   if (quizMap) { quizMap.remove(); quizMap = null }
+  const _prev = parseInt(localStorage.getItem('bg_map_best') || '0')
+  if (score.value > _prev) localStorage.setItem('bg_map_best', score.value)
   phase.value = 'final'
 }
 

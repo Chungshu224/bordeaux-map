@@ -308,6 +308,8 @@ function doAnswer(key, timeout) {
 function nextQuestion() {
   feedbackClass.value = ''
   if (currentIdx.value + 1 >= questions.value.length) {
+    const _prev = parseInt(localStorage.getItem('ca_region_best') || '0')
+    if (score.value > _prev) localStorage.setItem('ca_region_best', score.value)
     phase.value = 'final'
   } else {
     currentIdx.value++

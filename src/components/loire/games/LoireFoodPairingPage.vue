@@ -491,7 +491,11 @@ function processResult(correct, timeout) {
     if (currentIdx.value < questions.value.length - 1) {
       currentIdx.value++; selectedWrong.value = null; timerPct.value = 100
       phase.value = 'playing'; startRaf()
-    } else { phase.value = 'final' }
+    } else {
+      const _prev = parseInt(localStorage.getItem('lou_food_best') || '0')
+      if (score.value > _prev) localStorage.setItem('lou_food_best', score.value)
+      phase.value = 'final'
+    }
   }, 1400)
 }
 function onKeyDown(e) {

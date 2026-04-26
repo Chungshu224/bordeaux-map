@@ -187,6 +187,31 @@ const emit = defineEmits(['back', 'select'])
 }
 .sgh-tip-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
 
+/* ── Stats bar（slotted via #extra）── */
+:slotted(.stats-bar) {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255,255,255,0.04);
+  margin: 1.25rem 1.5rem 0;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+:slotted(.stat-item) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+:slotted(.stat-icon) { font-size: 1.3rem; }
+:slotted(.stat-value) { font-size: 1.4rem; font-weight: 800; color: #FFD700; }
+:slotted(.stat-label) { font-size: 0.72rem; color: rgba(255,255,255,0.5); }
+@media (max-width: 480px) {
+  :slotted(.stats-bar) { gap: 1.5rem; padding: 1rem; margin: 1rem 1rem 0; }
+  :slotted(.stat-value) { font-size: 1.2rem; }
+}
+
 /* ── 響應式 ── */
 @media (max-width: 640px) {
   .sgh-grid { grid-template-columns: 1fr; padding: 16px; }

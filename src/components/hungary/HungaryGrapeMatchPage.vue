@@ -353,7 +353,11 @@ function nextQuestion() {
   if (currentIdx.value < questions.value.length - 1) {
     currentIdx.value++; phase.value = 'playing'; timerPct.value = 100
     nextTick(() => { pageEl.value?.focus(); startRaf() })
-  } else { phase.value = 'final'; stopRaf() }
+  } else {
+    const _prev = parseInt(localStorage.getItem('hu_grape_best') || '0')
+    if (score.value > _prev) localStorage.setItem('hu_grape_best', score.value)
+    phase.value = 'final'; stopRaf()
+  }
 }
 
 function backToLobby() { stopRaf(); clearTimeout(feedbackTimer); phase.value = 'lobby'; loadLeaderboard(lbTab.value) }

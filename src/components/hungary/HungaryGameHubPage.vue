@@ -9,7 +9,17 @@
         :games="GAMES"
         @back="$emit('back')"
         @select="currentGame = $event"
-      />
+      >
+        <template #extra>
+          <div class="stats-bar">
+            <div v-for="stat in stats" :key="stat.label" class="stat-item">
+              <span class="stat-icon">{{ stat.icon }}</span>
+              <span class="stat-value">{{ stat.value }}</span>
+              <span class="stat-label">{{ stat.label }}</span>
+            </div>
+          </div>
+        </template>
+      </SharedGameHub>
     </template>
 
     <!-- ══ 子遊戲 ══ -->
@@ -20,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import SharedGameHub from '../shared/GameHub.vue'
 import HungaryRegionClassifierPage from './HungaryRegionClassifierPage.vue'
 import HungaryGrapeMatchPage       from './HungaryGrapeMatchPage.vue'
@@ -59,6 +69,17 @@ const GAMES = [
     accent2: '#9c27b0',
   },
 ]
+
+const stats = computed(() => {
+  const keys = ['hu_region_best', 'hu_grape_best', 'hu_tokaj_best']
+  let played = 0, totalBest = 0
+  keys.forEach(k => { const v = parseInt(localStorage.getItem(k) || '0'); if (v > 0) { played++; totalBest += v } })
+  return [
+    { icon: '🎮', value: played,                          label: '已挑戰遲戲' },
+    { icon: '📊', value: keys.length,                     label: '全部遲戲' },
+    { icon: '🏅', value: totalBest > 0 ? totalBest : '—', label: '累計最高分' }
+  ]
+})
 </script>
 
 <style scoped>

@@ -312,6 +312,8 @@ function confirmRound() {
 
 function nextRound() {
   if (roundIdx.value >= 4) {
+    const _prev = parseInt(localStorage.getItem('it_vintage_best') || '0')
+    if (score.value > _prev) localStorage.setItem('it_vintage_best', score.value)
     phase.value = 'final'
   } else {
     roundIdx.value++

@@ -466,6 +466,8 @@ function showFeedback() {
   setTimeout(() => {
     currentIdx.value++
     if (currentIdx.value >= questions.value.length) {
+      const _prev = parseInt(localStorage.getItem('au_variety_best') || '0')
+      if (score.value > _prev) localStorage.setItem('au_variety_best', score.value)
       phase.value = 'final'
     } else {
       setOptions()

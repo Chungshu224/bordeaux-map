@@ -279,8 +279,11 @@ function doFeedback(i) {
 
 function nextQuestion() {
   selectedAnswer.value = -1
-  if (currentIdx.value + 1 >= questions.value.length) { phase.value = 'final' }
-  else { currentIdx.value++; phase.value = 'playing'; startTimer() }
+  if (currentIdx.value + 1 >= questions.value.length) {
+    const _prev = parseInt(localStorage.getItem('ca_trivia_best') || '0')
+    if (score.value > _prev) localStorage.setItem('ca_trivia_best', score.value)
+    phase.value = 'final'
+  } else { currentIdx.value++; phase.value = 'playing'; startTimer() }
 }
 
 function backToLobby() { clearInterval(timerInterval); phase.value = 'lobby' }

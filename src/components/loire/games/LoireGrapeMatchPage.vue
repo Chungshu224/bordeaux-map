@@ -327,6 +327,8 @@ function processResult(correct, timeout) {
       phase.value = 'playing'
       startRaf()
     } else {
+      const _prev = parseInt(localStorage.getItem('lou_grape_best') || '0')
+      if (score.value > _prev) localStorage.setItem('lou_grape_best', score.value)
       phase.value = 'final'
     }
   }, 1200)

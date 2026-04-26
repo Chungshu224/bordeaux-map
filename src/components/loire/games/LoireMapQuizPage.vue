@@ -473,6 +473,8 @@ function finishGame() {
   clearTimer()
   clearFeedbackTimeout()
   if (quizMap) { quizMap.remove(); quizMap = null }
+  const _prev = parseInt(localStorage.getItem('lou_map_best') || '0')
+  if (score.value > _prev) localStorage.setItem('lou_map_best', score.value)
   phase.value = 'final'
 }
 

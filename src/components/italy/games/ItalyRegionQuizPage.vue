@@ -310,6 +310,8 @@ function handleTimeout() {
 function nextQ() {
   if (feedTimer) { clearTimeout(feedTimer); feedTimer = null }
   if (qIdx.value >= questions.value.length - 1) {
+    const _prev = parseInt(localStorage.getItem('it_region_best') || '0')
+    if (score.value > _prev) localStorage.setItem('it_region_best', score.value)
     phase.value = 'final'
   } else {
     qIdx.value++; phase.value = 'playing'

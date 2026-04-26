@@ -378,6 +378,8 @@ function processResult(correct, timeout) {
       phase.value = 'playing'
       startRaf()
     } else {
+      const _prev = parseInt(localStorage.getItem('lou_region_best') || '0')
+      if (score.value > _prev) localStorage.setItem('lou_region_best', score.value)
       phase.value = 'final'
     }
   }, 900)
