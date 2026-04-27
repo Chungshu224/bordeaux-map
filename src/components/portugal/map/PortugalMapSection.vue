@@ -91,14 +91,40 @@
           :is3D="is3D"
           :show-contours="showContour"
           :climate-enabled="climateEnabled"
-          :soil-disabled="true"
+          :soil-disabled="false"
+          :soil-enabled="showGeology"
+          soil-label="LNEG 地質"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContour"
           @toggle-climate="toggleClimate"
+          @toggle-soil="toggleGeology"
           @close="layerPanelOpen = false"
         />
       </div>
     </transition>
+
+    <!-- ── LNEG 地質圖層浮動面板 ── -->
+    <div v-if="showGeology" class="lneg-float-panel">
+      <div class="lneg-popup-header">
+        <span class="lneg-popup-title">🗺 LNEG 地質圖</span>
+        <button class="lneg-close-btn" @click="toggleGeology">✕</button>
+      </div>
+      <div class="lneg-popup-body">
+        <div class="lneg-opacity-row">
+          <span class="lneg-opacity-label">透明度</span>
+          <input
+            type="range" min="0" max="1" step="0.01"
+            v-model.number="ptGeologyOpacity"
+            @input="updateLnegOpacity"
+            class="lneg-opacity-slider"
+          />
+          <span class="lneg-opacity-val">{{ Math.round(ptGeologyOpacity * 100) }}%</span>
+        </div>
+        <div class="lneg-source-row">
+          資料來源：<a href="https://www.lneg.pt" target="_blank" rel="noopener">LNEG 葡萄牙地質調查局</a>
+        </div>
+      </div>
+    </div>
 
     <!-- ── 統一工具列 ── -->
     <RegionMapMobileToolbar
@@ -122,6 +148,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import * as turf from '@turf/turf'
 import {
   RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
   RegionMapAppellationDrawer, RegionMapMobileToolbar
@@ -143,6 +170,8 @@ const showIGP       = ref(true)
 const showContour   = ref(false)
 const layerPanelOpen = ref(false)
 const activeRegion  = ref(null)
+const showGeology   = ref(false)
+const ptGeologyOpacity = ref(0.72)
 
 const allDOC = ref([])   // DOC feature properties list
 const allIGP = ref([])   // IGP feature properties list
@@ -172,6 +201,8 @@ const GOLDEN_VINTAGES_PT = new Set([1994, 1995, 1997, 2000, 2003, 2007, 2011, 20
 
 let map          = null
 let hoveredDocId = null
+let hoveredIgpId = null
+let ptRegionsGeoJSON = null   // 合併的 DOC+IGP GeoJSON，用於 turf.mask clip
 
 const ptGeomMap = {}  // name → [w, s, e, n] for fitBounds
 
@@ -184,10 +215,18 @@ function calcGeomBbox(geometry) {
   walk(geometry.coordinates)
   return [w, s, e, n]
 }
-let hoveredIgpId = null
 
 const PORTUGAL_CENTER = [-8.0, 39.5]
 const PORTUGAL_ZOOM   = 5.8
+
+// ── LNEG WMS 常數 ──────────────────────────────────────────────────────────
+const LNEG_WMS_TILE =
+  '/lneg/server/services/CGP1M/MapServer/WMSServer' +
+  '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
+  '&LAYERS=0&STYLES=' +
+  '&FORMAT=image%2Fpng&TRANSPARENT=TRUE' +
+  '&CRS=EPSG%3A3857&WIDTH=256&HEIGHT=256' +
+  '&BBOX={bbox-epsg-3857}'
 
 // ── Region info data ───────────────────────────────────────────────────────
 const regionData = {
@@ -553,6 +592,67 @@ function toggleContour() {
   if (map.getLayer('contour-labels')) map.setLayoutProperty('contour-labels', 'visibility', vis)
 }
 
+// ── Geology: LNEG 地質圖層 ──────────────────────────────────────────────────
+function addGeologyLayer() {
+  if (!map) return
+
+  // 清除舊圖層
+  if (map.getLayer('pt-geology-clip-overlay')) map.removeLayer('pt-geology-clip-overlay')
+  if (map.getLayer('pt-geology-layer'))        map.removeLayer('pt-geology-layer')
+  if (map.getSource('lneg-wms'))               map.removeSource('lneg-wms')
+  if (map.getSource('pt-geology-clip-source')) map.removeSource('pt-geology-clip-source')
+
+  map.addSource('lneg-wms', {
+    type: 'raster',
+    tiles: [LNEG_WMS_TILE],
+    tileSize: 256,
+    attribution: '© <a href="https://www.lneg.pt" target="_blank">LNEG</a>'
+  })
+
+  map.addLayer({
+    id: 'pt-geology-layer',
+    type: 'raster',
+    source: 'lneg-wms',
+    paint: { 'raster-opacity': ptGeologyOpacity.value }
+  })
+
+  // turf.mask clip：只顯示葡萄牙產區範圍內的地質圖
+  if (ptRegionsGeoJSON && ptRegionsGeoJSON.features.length > 0) {
+    try {
+      const merged = turf.union(...ptRegionsGeoJSON.features)
+      const mask = turf.mask(merged)
+      map.addSource('pt-geology-clip-source', { type: 'geojson', data: mask })
+      map.addLayer({
+        id: 'pt-geology-clip-overlay',
+        type: 'fill',
+        source: 'pt-geology-clip-source',
+        paint: { 'fill-color': '#000', 'fill-opacity': 0.55 }
+      })
+    } catch (_) {
+      // turf.mask 失敗時跳過 clip（仍顯示整個地質圖）
+    }
+  }
+}
+
+function toggleGeology() {
+  showGeology.value = !showGeology.value
+  if (!map) return
+  if (showGeology.value) {
+    addGeologyLayer()
+  } else {
+    if (map.getLayer('pt-geology-clip-overlay')) map.removeLayer('pt-geology-clip-overlay')
+    if (map.getLayer('pt-geology-layer'))        map.removeLayer('pt-geology-layer')
+    if (map.getSource('lneg-wms'))               map.removeSource('lneg-wms')
+    if (map.getSource('pt-geology-clip-source')) map.removeSource('pt-geology-clip-source')
+  }
+}
+
+function updateLnegOpacity() {
+  if (map && map.getLayer('pt-geology-layer')) {
+    map.setPaintProperty('pt-geology-layer', 'raster-opacity', ptGeologyOpacity.value)
+  }
+}
+
 // ── Toggle info panel ──────────────────────────────────────────────────────
 function toggleInfo() {
   if (activeRegion.value) {
@@ -622,6 +722,12 @@ async function initMap() {
     // Build lists for drawer
     allDOC.value = docGeoJSON.features.map(f => f.properties)
     allIGP.value = igpGeoJSON.features.map(f => f.properties)
+
+    // 合併 DOC+IGP features 供 turf.mask clip 使用
+    ptRegionsGeoJSON = {
+      type: 'FeatureCollection',
+      features: [...docGeoJSON.features, ...igpGeoJSON.features].filter(f => f.geometry)
+    }
 
     // Cache bounding boxes for fitBounds on click
     for (const f of docGeoJSON.features) {
@@ -1587,4 +1693,78 @@ function handleMobileAction(action) {
   transform: translateX(-50%);
   z-index: 46;
 }
+
+/* ── LNEG 地質圖層浮動面板 ──────────────────────────── */
+.lneg-float-panel {
+  position: fixed;
+  bottom: 150px;
+  right: 18px;
+  z-index: 50;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+  overflow: hidden;
+  min-width: 230px;
+  max-width: 280px;
+}
+.lneg-popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 10px 14px;
+  background: linear-gradient(135deg, #1b5e20, #388e3c);
+  color: #fff;
+}
+.lneg-popup-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.lneg-close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  opacity: 0.85;
+  transition: opacity .15s;
+}
+.lneg-close-btn:hover { opacity: 1; }
+.lneg-popup-body {
+  padding: 12px 14px 10px;
+}
+.lneg-opacity-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.lneg-opacity-label {
+  font-size: 12px;
+  color: #555;
+  white-space: nowrap;
+}
+.lneg-opacity-slider {
+  flex: 1;
+  accent-color: #388e3c;
+  cursor: pointer;
+}
+.lneg-opacity-val {
+  font-size: 12px;
+  color: #388e3c;
+  font-weight: 600;
+  min-width: 32px;
+  text-align: right;
+}
+.lneg-source-row {
+  font-size: 11px;
+  color: #888;
+}
+.lneg-source-row a {
+  color: #388e3c;
+  text-decoration: none;
+}
+.lneg-source-row a:hover { text-decoration: underline; }
 </style>

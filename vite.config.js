@@ -85,6 +85,12 @@ export default defineConfig({
         target: 'https://www.asris.csiro.au',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/asris/, '')
+      },
+      // LNEG 葡萄牙地質調查局地質圖 proxy — 解決 CORS 問題
+      '/lneg': {
+        target: 'https://sig.lneg.pt',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/lneg/, '')
       }
     }
   }

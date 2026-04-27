@@ -30,6 +30,10 @@
       "destination": "https://www.asris.csiro.au/:path*"
     },
     {
+      "source": "/lneg/:path*",
+      "destination": "https://sig.lneg.pt/:path*"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },
