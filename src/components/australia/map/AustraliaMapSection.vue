@@ -366,6 +366,7 @@ function applySingleFeatureFilter(name) {
 function restoreFilter() {
   selectedRegionName.value = null
   updateStateFilter()
+  updateASRISClip()
 }
 
 // ── 播放發音 ─────────────────────────────────────────────────────────────────
@@ -395,6 +396,7 @@ function resetView() {
   activeRegion.value = null
   if (map.getSource('au-regions')) map.removeFeatureState({ source: 'au-regions' })
   updateStateFilter()
+  updateASRISClip()
 }
 
 // ── Filter by state ────────────────────────────────────────────────────────
@@ -461,18 +463,60 @@ const ASC_INFO = {
 }
 
 function renderASRISPopupHTML(text) {
-  const lines = text.trim().split('\n').map(l => l.trim())
-  const hi = lines.findIndex(l => l.includes('Raster.ASC_ORD'))
-  if (hi < 0) return null
-  const headers = lines[hi].split(';').map(h => h.trim()).filter(Boolean)
-  const dataLine = lines[hi + 1]
-  if (!dataLine) return null
-  const vals = dataLine.split(';').map(v => v.trim())
   const obj = {}
-  headers.forEach((h, i) => { obj[h] = vals[i] || '' })
-  const ascOrd  = obj['Raster.ASC_ORD'] || ''
-  const ascName = obj['Raster.ASC_ORDER_NAME'] || ''
-  if (!ascOrd && !ascName) return null
+
+  // ── Format A: XML ──
+  if (text.trim().startsWith('<')) {
+    const fieldRe = /<Field[^>]+name=["']?([A-Z_]+)["']?[^>]+value=["']?([^"'/>]+)/gi
+    let m
+    while ((m = fieldRe.exec(text)) !== null) obj[m[1].toUpperCase()] = m[2].trim()
+    if (!obj['ASC_ORD']) {
+      const tagRe = /<(ASC_ORD|ASC_ORDER_NAME)>([^<]+)<\/\1>/gi
+      while ((m = tagRe.exec(text)) !== null) obj[m[1].toUpperCase()] = m[2].trim()
+    }
+  }
+
+  // ── Format B/C: 分號格式（ESRI MapServer text/plain）──
+  // 支援兩種情況：header 與 values 在同一行，或分兩行
+  if (!obj['ASC_ORD'] && !obj['ASC_ORDER_NAME']) {
+    const lines = text.trim().split(/\r?\n/).map(l => l.trim()).filter(Boolean)
+    for (let hi = 0; hi < lines.length; hi++) {
+      if (!lines[hi].toUpperCase().includes('ASC_ORD')) continue
+
+      const allTokens = lines[hi].split(';').map(t => t.trim())
+
+      // 找 headers 與 values 的分界：第一個純數字 token 是 values 起點
+      let boundary = allTokens.length
+      for (let k = 1; k < allTokens.length; k++) {
+        if (/^\d+$/.test(allTokens[k])) { boundary = k; break }
+      }
+
+      const hdrs = allTokens.slice(0, boundary)
+        .map(h => h.replace(/^Raster\./i, '').toUpperCase())
+
+      let vals
+      if (boundary < allTokens.length) {
+        // 同一行就有 values
+        vals = allTokens.slice(boundary)
+      } else if (lines[hi + 1]) {
+        // values 在下一行
+        vals = lines[hi + 1].split(';').map(v => v.trim())
+      } else {
+        continue
+      }
+
+      hdrs.forEach((h, i) => { if (h) obj[h] = vals[i] || '' })
+      break
+    }
+  }
+
+  const ascOrd  = obj['ASC_ORD'] || ''
+  const ascName = obj['ASC_ORDER_NAME'] || ''
+  if (!ascOrd && !ascName) {
+    console.warn('[ASRIS] 無法解析土壤欄位，obj:', obj)
+    return null
+  }
+
   const info = ASC_INFO[ascName] || { zh: '', icon: '🌏', cat: '', wine: '' }
   return `<div class="asris-geology-popup">
     <div class="asris-popup-header">
@@ -483,6 +527,38 @@ function renderASRISPopupHTML(text) {
     ${info.wine ? `<div class="asris-popup-wine">${info.wine}</div>` : ''}
     <div class="asris-popup-footer">© CSIRO ASRIS Level 5 (CC-BY 4.0)</div>
   </div>`
+}
+
+// ── ASRIS clip helpers ──────────────────────────────────────────────────────
+function getClipGeoJSON() {
+  if (!auRegionsGeoJSON) return null
+  if (selectedRegionName.value) {
+    const features = auRegionsGeoJSON.features.filter(
+      f => f.properties.name === selectedRegionName.value
+    )
+    if (features.length > 0) return { type: 'FeatureCollection', features }
+  }
+  return auRegionsGeoJSON  // 未選取任何產區時，遮罩範圍為澳洲全境
+}
+
+function updateASRISClip() {
+  if (!map || !showGeology.value) return
+  if (map.getLayer('au-soil-clip-overlay')) map.removeLayer('au-soil-clip-overlay')
+  if (map.getSource('au-soil-clip-src')) map.removeSource('au-soil-clip-src')
+  const clipGeoJSON = getClipGeoJSON()
+  if (!clipGeoJSON) return
+  try {
+    const maskData = turf.mask(clipGeoJSON)
+    map.addSource('au-soil-clip-src', { type: 'geojson', data: maskData })
+    map.addLayer({
+      id: 'au-soil-clip-overlay',
+      type: 'fill',
+      source: 'au-soil-clip-src',
+      paint: { 'fill-color': '#060a10', 'fill-opacity': 0.78 }
+    }, map.getLayer('region-fill') ? 'region-fill' : undefined)
+  } catch (e) {
+    console.warn('[ASRIS] turf.mask clip 失敗:', e)
+  }
 }
 
 // ── Toggle Geology layer ────────────────────────────────────────────────────
@@ -527,21 +603,8 @@ function addGeologyLayer() {
     paint: { 'raster-opacity': asrisOpacity.value }
   }, insertBefore)
 
-  // turf.mask clip — 遮罩產區外的土壤圖，僅顯示已開啟 GeoJSON 範圍內
-  if (auRegionsGeoJSON) {
-    try {
-      const maskData = turf.mask(auRegionsGeoJSON)
-      map.addSource('au-soil-clip-src', { type: 'geojson', data: maskData })
-      map.addLayer({
-        id: 'au-soil-clip-overlay',
-        type: 'fill',
-        source: 'au-soil-clip-src',
-        paint: { 'fill-color': '#060a10', 'fill-opacity': 0.78 }
-      }, map.getLayer('region-fill') ? 'region-fill' : undefined)
-    } catch (e) {
-      console.warn('[ASRIS] turf.mask clip 失敗:', e)
-    }
-  }
+  // turf.mask clip — 遮罩產區外的土壤圖，僅顯示已選取產區範圍內
+  updateASRISClip()
 }
 
 // ── ASRIS 透明度調整 ────────────────────────────────────────────────────────
@@ -666,6 +729,7 @@ function selectFromDrawer(r) {
   // Isolate this feature on the map
   selectedRegionName.value = r.name
   applySingleFeatureFilter(r.name)
+  updateASRISClip()
   // Fit map to the cached full bounding box
   const bbox = featureGeomMap[r.name]
   if (bbox) {
@@ -824,6 +888,7 @@ async function initMap() {
         // Isolate this feature on the map
         selectedRegionName.value = feat.properties.name
         applySingleFeatureFilter(feat.properties.name)
+        updateASRISClip()
         // Fit map to the cached full bounding box
         const bbox = featureGeomMap[feat.properties.name]
         if (bbox) {
@@ -838,23 +903,37 @@ async function initMap() {
         const { lng, lat } = e.lngLat
         map.getCanvas().style.cursor = 'wait'
         try {
-          const d = 0.5
+          const d = 0.15  // 約 15km 精確查詢範圍
           const bbox = `${lat - d},${lng - d},${lat + d},${lng + d}`
-          const url =
-            '/asris/arcgis/services/ASRIS/ASRIS_ASC_MOB/MapServer/WMSServer' +
+          const base = '/asris/arcgis/services/ASRIS/ASRIS_ASC_MOB/MapServer/WMSServer' +
             '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo' +
             '&LAYERS=Australian_Soil_Classification54544' +
             '&QUERY_LAYERS=Australian_Soil_Classification54544' +
-            '&INFO_FORMAT=text%2Fplain' +
             '&CRS=EPSG%3A4326' +
             `&BBOX=${bbox}` +
             '&WIDTH=11&HEIGHT=11&I=5&J=5' +
             '&FEATURE_COUNT=1'
-          const res = await fetch(url)
-          if (!res.ok) return
-          const text = await res.text()
+
+          // 依序嘗試多種 INFO_FORMAT（ESRI 支援程度不一）
+          const formats = ['text/plain', 'text/xml', 'application/vnd.esri.wms_featureinfo_xml']
+          let text = ''
+          for (const fmt of formats) {
+            const res = await fetch(base + '&INFO_FORMAT=' + encodeURIComponent(fmt))
+            if (!res.ok) continue
+            const t = await res.text()
+            console.log(`[ASRIS] GetFeatureInfo (${fmt}):`, t)
+            if (t && t.trim().length > 0 && !t.includes('ServiceExceptionReport')) {
+              text = t
+              break
+            }
+          }
+          if (!text) { console.warn('[ASRIS] 所有格式均無回應'); return }
+
           const html = renderASRISPopupHTML(text)
-          if (!html) return
+          if (!html) {
+            console.warn('[ASRIS] 無法解析回應（詳見上方 log）')
+            return
+          }
           if (asrisPopup) asrisPopup.remove()
           asrisPopup = new mapboxgl.Popup({ className: 'asris-popup-wrap', maxWidth: '300px', closeButton: true })
             .setLngLat([lng, lat])
@@ -1641,7 +1720,7 @@ function handleMobileAction(action) {
 .asris-float-panel {
   position: absolute;
   bottom: 90px;
-  left: 16px;
+  right: 16px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.22);

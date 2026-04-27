@@ -84,12 +84,9 @@
       v-model:open="mobileAocDrawerOpen"
       region-name="Loire Valley"
       :grouped="groupedDrawerUnified"
-      :type-tabs="loireTypeTabs"
-      :type-filter="lTypeFilter"
       :search="search"
       :active-id="activeAOC?.aoc ? `${activeAOC.group}/${activeAOC.aoc}` : null"
       @update:search="search = $event"
-      @update:type-filter="onLoireTypeFilter"
       @select="selectById"
     />
 
@@ -187,11 +184,11 @@ function groupColor(key) { return GROUP_COLORS[key] || '#888' }
 // ── 群組標籤 ──────────────────────────────────────────────────
 const groupLabels = {
   Regional:      'Regional',
-  PayNantes:     'Lv.1 · Pays Nantais',
-  AnjouSaumur:   'Lv.2 · Anjou-Saumur',
-  Touraine:      'Lv.3 · Touraine',
-  Centre:        'Lv.4 · Centre',
-  MassifCentral: 'Lv.5 · Massif Central',
+  PayNantes:     'Pays Nantais',
+  AnjouSaumur:   'Anjou-Saumur',
+  Touraine:      'Touraine',
+  Centre:        'Centre',
+  MassifCentral: 'Massif Central',
 }
 
 // ── 課程 Level → 產區群組對應 ───────────────────────────────
@@ -434,8 +431,15 @@ async function highlightGroupOnMap(groupKey) {
     })
     try {
       const bbox = turf.bbox(combined)
-      map.fitBounds(bbox, { padding: 80, duration: 900 })
-    } catch {}
+      const cam = map.cameraForBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 60, maxZoom: 9 })
+      if (cam) {
+        map.flyTo({ ...cam, duration: 1000, essential: true })
+      } else {
+        const cx = (bbox[0] + bbox[2]) / 2
+        const cy = (bbox[1] + bbox[3]) / 2
+        map.flyTo({ center: [cx, cy], zoom: 7, duration: 1000, essential: true })
+      }
+    } catch (e) { console.warn('camera move failed', e) }
   } catch (err) {
     mapError.value = `群組載入失敗：${err.message}`
     setTimeout(() => { mapError.value = null }, 4000)
@@ -482,8 +486,17 @@ async function showAOCGeojson(group, aocFile) {
     try {
       const bbox = turf.bbox(geojson)
       activeAocBounds.value = { west: bbox[0], south: bbox[1], east: bbox[2], north: bbox[3] }
-      map.fitBounds(bbox, { padding: 60, duration: 900 })
-    } catch {}
+      const cam = map.cameraForBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 60, maxZoom: 13 })
+      if (cam) {
+        map.flyTo({ ...cam, duration: 1000, essential: true })
+      } else {
+        const cx = (bbox[0] + bbox[2]) / 2
+        const cy = (bbox[1] + bbox[3]) / 2
+        const span = Math.max(bbox[2] - bbox[0], (bbox[3] - bbox[1]) * 1.5)
+        const zoom = Math.min(13, Math.max(6, Math.round(Math.log2(5 / span))))
+        map.flyTo({ center: [cx, cy], zoom, duration: 1000, essential: true })
+      }
+    } catch (e) { console.warn('camera move failed', e) }
   } catch (err) {
     mapError.value = `載入失敗：${err.message}`
     setTimeout(() => { mapError.value = null }, 4000)
