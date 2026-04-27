@@ -30,10 +30,13 @@
         :is3D="is3D"
         :show-contours="showContours"
         :climate-enabled="climateEnabled"
-        :soil-disabled="true"
+        :soil-disabled="false"
+        :soil-label="'BGR 土壤'"
+        :soil-enabled="showGeology"
         @toggle-3d="toggle3D"
         @toggle-contours="toggleContours"
         @toggle-climate="toggleClimate"
+        @toggle-soil="toggleGeology"
         @close="showLayerPanel = false"
       />
     </div>
@@ -105,6 +108,18 @@
       </button>
     </div>
 
+    <!-- BGR 土壤圖浮動面板（右側） -->
+    <div v-if="showGeology" class="de-soil-float-panel">
+      <div class="de-soil-title">🌱 BGR BUEK200 土壤圖 1:200,000</div>
+      <div class="de-soil-row">
+        <span class="de-soil-label">透明度</span>
+        <input class="de-soil-slider" type="range" min="0.1" max="1.0" step="0.05"
+          v-model.number="soilOpacity">
+        <span class="de-soil-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+      </div>
+      <div class="de-soil-hint">© BGR Bodenübersichtskarte 1:200,000 (CC-BY 4.0)</div>
+    </div>
+
     <div v-if="isLoading" class="loading-overlay">
       <div class="loading-spinner"></div>
     </div>
@@ -117,6 +132,7 @@
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
+import * as turf from '@turf/turf'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import {
   RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
@@ -143,24 +159,21 @@ const selectedVineyard = ref(null)
 const showGeology = ref(false)
 const isGeologyLoading = ref(false)
 const geologyError = ref(null)
+const soilOpacity = ref(0.8)
 
-// ISRIC SoilGrids WMS — WRB 世界土壤分類
-// 開發環境透過 Vite proxy 轉發（解決 localhost CORS）
-// 生產環境直連（ISRIC 允許跨域存取）
-const isDevProxy = typeof window !== 'undefined' && window.location.hostname === 'localhost'
-const ISRIC_BASE = isDevProxy
-  ? '/isric-proxy/mapserv?map=/map/wrb.map'
-  : 'https://maps.isric.org/mapserv?map=/map/wrb.map'
-const ISRIC_WMS_TILE =
-  ISRIC_BASE +
-  '&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
-  '&LAYERS=MostProbable&STYLES=' +
+// BGR BUEK200 土壤圖 WMS — 開發環境透過 Vite proxy 轉發（解決 localhost CORS）
+const BGR_LAYERS = Array.from({ length: 55 }, (_, i) => i).join(',')
+const BGR_WMS_TILE =
+  '/bgr/wms/boden/buek200/' +
+  '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
+  `&LAYERS=${BGR_LAYERS}&STYLES=` +
   '&FORMAT=image%2Fpng&TRANSPARENT=TRUE' +
   '&CRS=EPSG%3A3857&WIDTH=256&HEIGHT=256' +
   '&BBOX={bbox-epsg-3857}'
 
 let map = null
 let regionBounds = null
+let regionBoundaryGeoJSON = null  // 供土壤圖 clip mask 使用
 
 // ── Climate state ──────────────────────────────────────────────────────────
 const climateEnabled   = ref(false)
@@ -283,8 +296,8 @@ async function initMap() {
     const regionFiles = Array.isArray(props.region.regionFile)
       ? props.region.regionFile
       : [props.region.regionFile]
-    regionGeoJSON = await mergeGeoJSONFiles(regionFiles)
-    const bbox = calcBbox(regionGeoJSON)
+    regionBoundaryGeoJSON = await mergeGeoJSONFiles(regionFiles)
+    const bbox = calcBbox(regionBoundaryGeoJSON)
     regionBounds = bbox
   } catch (e) {
     console.warn('[GermanyMapSection] region GeoJSON load failed:', e)
@@ -326,8 +339,8 @@ async function initMap() {
     })
 
     // Region boundary
-    if (regionGeoJSON) {
-      map.addSource('region-boundary', { type: 'geojson', data: regionGeoJSON })
+    if (regionBoundaryGeoJSON) {
+      map.addSource('region-boundary', { type: 'geojson', data: regionBoundaryGeoJSON })
       map.addLayer({
         id: 'region-fill', type: 'fill', source: 'region-boundary',
         paint: { 'fill-color': props.region.color, 'fill-opacity': 0.08 }
@@ -349,10 +362,13 @@ async function initMap() {
     // tile/source 錯誤有 sourceId — 非致命
     if (e?.sourceId) {
       console.warn('[GermanyMapSection] tile/source error (non-fatal):', e.sourceId, e?.error?.message)
-      if (e.sourceId === 'isric-soil-wms' && showGeology.value) {
+      if (e.sourceId === 'bgr-soil-wms' && showGeology.value) {
         geologyError.value = '土壤圖資料載入失敗，請稍後再試'
         showGeology.value = false
-        if (map.getLayer('bgr-soil-layer')) map.setLayoutProperty('bgr-soil-layer', 'visibility', 'none')
+        if (map.getLayer('de-soil-clip-overlay')) map.removeLayer('de-soil-clip-overlay')
+        if (map.getSource('de-soil-clip-src')) map.removeSource('de-soil-clip-src')
+        if (map.getLayer('bgr-soil-layer')) map.removeLayer('bgr-soil-layer')
+        if (map.getSource('bgr-soil-wms')) map.removeSource('bgr-soil-wms')
       }
       return
     }
@@ -493,51 +509,72 @@ async function toggleGeology() {
     try {
       addGeologyLayer()
     } catch (e) {
-      console.warn('[GermanyMapSection] 地質圖層載入失敗:', e)
-      geologyError.value = '地質圖服務目前無法連線，請稍後再試'
+      console.warn('[GermanyMapSection] 土壤圖層載入失敗:', e)
+      geologyError.value = '土壤圖服務目前無法連線，請稍後再試'
       showGeology.value = false
     } finally {
       isGeologyLoading.value = false
     }
   } else {
-    if (map.getLayer('bgr-soil-layer')) {
-      map.setLayoutProperty('bgr-soil-layer', 'visibility', 'none')
-    }
+    // 移除土壤圖層、clip 遮罩
+    if (map.getLayer('de-soil-clip-overlay')) map.removeLayer('de-soil-clip-overlay')
+    if (map.getSource('de-soil-clip-src')) map.removeSource('de-soil-clip-src')
+    if (map.getLayer('bgr-soil-layer')) map.removeLayer('bgr-soil-layer')
+    if (map.getSource('bgr-soil-wms')) map.removeSource('bgr-soil-wms')
   }
 }
 
-// 建立地質圖層（每次切換產區時重建，帶產區 bounds 范圍）
+// 建立 BGR BUEK200 土壤圖層 + turf.mask clip（僅顯示產區內）
 function addGeologyLayer() {
   if (!map) return
 
   // 移除舊層
+  if (map.getLayer('de-soil-clip-overlay')) map.removeLayer('de-soil-clip-overlay')
+  if (map.getSource('de-soil-clip-src')) map.removeSource('de-soil-clip-src')
   if (map.getLayer('bgr-soil-layer')) map.removeLayer('bgr-soil-layer')
-  if (map.getSource('isric-soil-wms')) map.removeSource('isric-soil-wms')
+  if (map.getSource('bgr-soil-wms')) map.removeSource('bgr-soil-wms')
 
-  // 產區 bbox 辳加少許個空間，避免邊緣 tile 缺失
-  const PAD = 0.3
-  const bounds = regionBounds && regionBounds[0] !== Infinity
-    ? [regionBounds[0] - PAD, regionBounds[1] - PAD, regionBounds[2] + PAD, regionBounds[3] + PAD]
-    : undefined
-
-  map.addSource('isric-soil-wms', {
+  // BGR BUEK200 WMS raster source（透過 /bgr proxy 解決 CORS）
+  map.addSource('bgr-soil-wms', {
     type: 'raster',
-    tiles: [ISRIC_WMS_TILE],
+    tiles: [BGR_WMS_TILE],
     tileSize: 256,
     minzoom: 4,
     maxzoom: 14,
-    ...(bounds ? { bounds } : {}),
-    attribution: '© ISRIC SoilGrids · WRB 土壤分類'
+    attribution: '© BGR Bodenübersichtskarte 1:200,000 (CC-BY 4.0)'
   })
 
+  // 土壤圖層插入 region-fill 之下，保持產區輪廓在最上層
   const insertBefore = map.getLayer('region-fill') ? 'region-fill' : undefined
   map.addLayer({
     id: 'bgr-soil-layer',
     type: 'raster',
-    source: 'isric-soil-wms',
-    paint: { 'raster-opacity': 0.72 }
+    source: 'bgr-soil-wms',
+    paint: { 'raster-opacity': soilOpacity.value }
   }, insertBefore)
+
+  // turf.mask clip — 遮罩產區外的土壤圖
+  if (regionBoundaryGeoJSON) {
+    try {
+      const maskData = turf.mask(regionBoundaryGeoJSON)
+      map.addSource('de-soil-clip-src', { type: 'geojson', data: maskData })
+      map.addLayer({
+        id: 'de-soil-clip-overlay',
+        type: 'fill',
+        source: 'de-soil-clip-src',
+        paint: { 'fill-color': '#060a10', 'fill-opacity': 0.72 }
+      })
+    } catch (e) {
+      console.warn('[GermanyMapSection] clip mask failed:', e)
+    }
+  }
 }
+
+watch(soilOpacity, (val) => {
+  if (map && map.getLayer('bgr-soil-layer')) {
+    map.setPaintProperty('bgr-soil-layer', 'raster-opacity', val)
+  }
+})
 
 // ── 播放發音 ─────────────────────────────────────────────────────────────
 const isPlayingAudio = ref(false)
@@ -1227,5 +1264,56 @@ const unifiedInfo = computed(() => {
   left: 50%;
   transform: translateX(-50%);
   z-index: 46;
+}
+
+/* BGR 土壤圖浮動面板（右側）*/
+.de-soil-float-panel {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  right: 20px;
+  z-index: 45;
+  background: rgba(15, 20, 30, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 12px 16px;
+  min-width: 240px;
+  color: #e8e8e8;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.de-soil-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #a8d8a8;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.de-soil-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.de-soil-label {
+  font-size: 0.72rem;
+  color: #aaa;
+  white-space: nowrap;
+}
+.de-soil-slider {
+  flex: 1;
+  accent-color: #4caf50;
+  height: 4px;
+  cursor: pointer;
+}
+.de-soil-pct {
+  font-size: 0.72rem;
+  color: #ccc;
+  min-width: 32px;
+  text-align: right;
+}
+.de-soil-hint {
+  font-size: 0.65rem;
+  color: #777;
+  margin-top: 4px;
 }
 </style>

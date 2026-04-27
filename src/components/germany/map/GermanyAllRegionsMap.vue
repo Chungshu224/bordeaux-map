@@ -151,11 +151,28 @@
                 <span class="lopt-text">等高線</span>
                 <span class="lopt-dot" :class="{ on: contoursEnabled }"></span>
               </button>
+              <button class="layer-opt-btn" :class="{ active: soilEnabled }" @click="toggleSoil">
+                <span class="lopt-icon">🌱</span>
+                <span class="lopt-text">BGR 土壤</span>
+                <span class="lopt-dot" :class="{ on: soilEnabled }"></span>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </transition>
+
+    <!-- BGR 土壤圖浮動面板（右側） -->
+    <div v-if="soilEnabled" class="de-all-soil-panel">
+      <div class="de-all-soil-title">🌱 BGR BUEK200 土壤圖 1:200,000</div>
+      <div class="de-all-soil-row">
+        <span class="de-all-soil-label">透明度</span>
+        <input class="de-all-soil-slider" type="range" min="0.1" max="1.0" step="0.05"
+          v-model.number="soilOpacity">
+        <span class="de-all-soil-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+      </div>
+      <div class="de-all-soil-hint">© BGR Bodenübersichtskarte 1:200,000 (CC-BY 4.0)</div>
+    </div>
 
     <!-- Loading / Error -->
     <div v-if="isLoading" class="loading-overlay">
@@ -167,9 +184,10 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
+import * as turf from '@turf/turf'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { germanyRegions } from '../data/regions.js'
 
@@ -188,11 +206,245 @@ const layersPanelOpen = ref(false)
 const is3D = ref(false)
 const vineyardEnabled = ref(false)
 const contoursEnabled = ref(false)
+const soilEnabled = ref(false)
+const soilOpacity = ref(0.8)
+
+const BGR_LAYERS = Array.from({ length: 55 }, (_, i) => i).join(',')
+const BGR_WMS_TILE =
+  '/bgr/wms/boden/buek200/' +
+  '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
+  `&LAYERS=${BGR_LAYERS}&STYLES=` +
+  '&FORMAT=image%2Fpng&TRANSPARENT=TRUE' +
+  '&CRS=EPSG%3A3857&WIDTH=256&HEIGHT=256' +
+  '&BBOX={bbox-epsg-3857}'
 
 const regions = germanyRegions
 let map = null
+let currentRegionGeoJSON = null  // 當前選中產區的 GeoJSON，供土壤圖 clip
+let bgrPopup = null              // BGR GetFeatureInfo 土壤 Popup
 
 const GERMANY_BOUNDS = [[5.86, 47.27], [15.04, 55.06]]
+
+// ── BGR 土壤點擊查詢 ─────────────────────────────────────────────────────────
+function lngLatToWebMercator(lng, lat) {
+  const x = lng * 20037508.34 / 180
+  const latRad = lat * Math.PI / 180
+  const y = Math.log(Math.tan(Math.PI / 4 + latRad / 2)) * 20037508.34 / Math.PI
+  return [x, y]
+}
+
+// BGR BUEK200 Legendentext 關鍵字 → 中文（依匹配優先序排列）
+const BGR_SOIL_DESC = [
+  { match: ['parabraunerde'],              zh: '參滲棕壤',    icon: '🟤', cat: '淋溶土',   wine: '參滲棕壤保水性佳、有機質豐，多見於黃土低丘，是普法爾茨、萊茵黑森的優質底土。' },
+  { match: ['braunerde'],                  zh: '棕壤',        icon: '🟤', cat: '淋溶土',   wine: '棕壤礦物豐富、排水良好，是萊茵黑森、薩爾的常見土壤，適合麗絲玲與白皮諾。' },
+  { match: ['podzol', 'podsol'],           zh: '灰化土',      icon: '⚪', cat: '灰化土',   wine: '灰化土酸性較強，礦物淋溶明顯，多見於德國北部砂質地帶。' },
+  { match: ['pseudogley'],                 zh: '潛育迅竭土',  icon: '💧', cat: '濕潤土',   wine: '雨水季滲水層濕潤土，所在平緩黃壤地帶。' },
+  { match: ['gley'],                       zh: '潛育土',      icon: '💧', cat: '濕潤土',   wine: '潛育土地下水位高，常接近河統或低地，一般不用於葡萄園。' },
+  { match: ['pelosol'],                    zh: '裂黎黏土',    icon: '🟫', cat: '黏土壤',   wine: '重黏土壤收縮裂解性強，拒水壁吹風地帶常見。' },
+  { match: ['rendzina'],                   zh: '飴期石灰岩土',icon: '🪨', cat: '岩層小土',  wine: '石灰岩表土富鈣質，法蘭科尼亞踏石地帶常見。' },
+  { match: ['terra fusca'],                zh: '石灰岩殘積棕壤',icon: '🪨', cat: '岩層小土', wine: '石灰岩底岩上的紅棕色殘積土壤，石灰岩縫隙地帶特有。' },
+  { match: ['auenboden', 'auenlehm', 'auen'], zh: '洪泛積積土', icon: '💧', cat: '沖積土', wine: '洪泛平原沖積土，礦物多樣，萊茵、莫塞爾河谷地帶常見。' },
+  { match: ['tonschiefer', 'schieferton'], zh: '黏土頁岩板岩', icon: '🪶', cat: '變質岩',  wine: '板岩吸熱蓄熱，莫塞爾陡坡的麗絲玲主要底岩，帶來標誌性礦石與油脂風味。' },
+  { match: ['schiefer'],                   zh: '片岩/板岩',   icon: '🪶', cat: '變質岩',   wine: '片岩吸熱保溫，莫塞爾第一產區的核心底質。' },
+  { match: ['muschelkalk'],                zh: '貝殼灰岩',    icon: '🪨', cat: '碳酸鹽岩', wine: '貝殼灰岩富含化石殼屑，賦予葡萄酒細膩酸度與礦物感，法蘭科尼亞和符騰堡的特色土壤。' },
+  { match: ['kalk'],                       zh: '石灰岩',      icon: '🪨', cat: '碳酸鹽岩', wine: '石灰岩賦予白堊礦物感與天然酸度，為多個德國產區重要底岩。' },
+  { match: ['lösslehm', 'lößlehm', 'löss', 'löß', 'loess'], zh: '黃土/黃土壤', icon: '🟡', cat: '黃土質', wine: '黃土保水性佳、礦物豐富，萊茵黑森和符騰堡的廣泛土壤，適合麗絲玲與灰皮諾。' },
+  { match: ['buntsandstein'],              zh: '紅砂岩',      icon: '🏜️', cat: '砂岩',    wine: '紅砂岩排水迅速、貧瘠，賦予葡萄酒輕盈礦物感，是巴登北部的特色土壤。' },
+  { match: ['sandstein'],                  zh: '砂岩',        icon: '🏜️', cat: '砂岩',    wine: '砂岩排水快速，葡萄根需深入尋找養分，産出礦物感強烈的葡萄酒。' },
+  { match: ['basalt', 'vulkanit', 'tuff'], zh: '玄武岩/火山岩', icon: '🌋', cat: '火山岩', wine: '火山岩礦物質豐富、保熱性佳，賦予葡萄酒獨特礦石風味。' },
+  { match: ['granit'],                     zh: '花崗岩',      icon: '🗿', cat: '深成岩',   wine: '花崗岩貧瘠排水佳，葡萄根深入尋養，是巴登黑森林地帶礦物感的來源。' },
+  { match: ['gneis'],                      zh: '片麻岩',      icon: '🪶', cat: '變質岩',   wine: '片麻岩礦物組成豐富，巴登南部的重要風土底質。' },
+  { match: ['quarzit', 'quarz'],           zh: '石英岩',      icon: '🔷', cat: '砂質岩',   wine: '石英岩極度貧瘠，賦予葡萄酒極高礦物張力，多見於薩爾產區。' },
+  { match: ['schluff'],                    zh: '粉層土',      icon: '🟡', cat: '粉燃質',   wine: '粉層土質地新細滑，保水性適中，多見於萊茵、普法爾茨黃土地帶。' },
+  { match: ['lehm'],                       zh: '壤土',        icon: '🟤', cat: '壤質土',   wine: '壤土保水性與排水性均衡，適合多種品種。' },
+  { match: ['ton'],                        zh: '黏土',        icon: '🟫', cat: '黏土質',   wine: '黏土保水性強，適合乾燥年份，萊茵多產區有良好表現。' },
+  { match: ['sand'],                       zh: '砂土',        icon: '🏜️', cat: '砂質',    wine: '砂土排水快速，礦物感獨特，德國北部葡萄酒產地可見。' },
+]
+
+function translateBGR(text) {
+  const t = (text || '').toLowerCase()
+  for (const entry of BGR_SOIL_DESC) {
+    if (entry.match.some(k => t.includes(k))) return entry
+  }
+  return { zh: '', icon: '🌱', cat: '', wine: '' }
+}
+
+// BUEK200 Legendentext 德文→中文詞彙替換（長詞優先，避免部分匹配錯誤）
+function translateLegendText(text) {
+  if (!text) return ''
+  const dict = [
+    // 融凍流積土複合詞（最長優先）
+    ['SchlufffließErde',    '粉土融凍流積土'],
+    ['TonfließErde',        '黏土融凍流積土'],
+    ['LehmfließErde',       '壤土融凍流積土'],
+    ['SandfließErde',       '砂質融凍流積土'],
+    ['Schlufffließerde',    '粉土融凍流積土'],
+    ['Tonfließerde',        '黏土融凍流積土'],
+    ['Lehmfließerde',       '壤土融凍流積土'],
+    ['Sandfließerde',       '砂質融凍流積土'],
+    ['Fließerde',           '融凍流積土'],
+    // 土壤類型（複數→單數）
+    ['Parabraunerden',      '擬棕壤'],
+    ['Parabraunerde',       '擬棕壤'],
+    ['Braunerden',          '棕壤'],
+    ['Braunerde',           '棕壤'],
+    ['Pseudogleye',         '假潛育土'],
+    ['Pseudogley',          '假潛育土'],
+    ['Gleye',               '潛育土'],
+    ['Gley',                '潛育土'],
+    ['Pelosole',            '裂黎黏土'],
+    ['Pelosol',             '裂黎黏土'],
+    ['Regosole',            '粗骨土'],
+    ['Regosol',             '粗骨土'],
+    ['Kolluvisole',         '坡積堆積土'],
+    ['Kolluvisol',          '坡積堆積土'],
+    ['Auenböden',           '洪泛土'],
+    ['Auenboden',           '洪泛土'],
+    ['Ranker',              '矽質淺層土'],
+    ['Terra fusca',         '石灰岩殘積棕壤'],
+    ['Rendzinen',           '石灰岩淺層土'],
+    ['Rendzina',            '石灰岩淺層土'],
+    ['Podsole',             '灰化土'],
+    ['Podzole',             '灰化土'],
+    ['Podsol',              '灰化土'],
+    ['Podzol',              '灰化土'],
+    ['Anmoore',             '腐殖質潛育土'],
+    ['Anmoor',              '腐殖質潛育土'],
+    ['Tschernosem',         '黑鈣土'],
+    // 基質複合詞（長詞優先）
+    ['Lösslehm',            '黃土壤'],
+    ['Lößlehm',             '黃土壤'],
+    ['Schwemmlöss',         '水成黃土'],
+    ['Schwemmlöß',          '水成黃土'],
+    ['Lehmschuttfließerde', '壤土崩積融凍流積土'],
+    ['Lehmschutt',          '壤土崩積物'],
+    ['Tonschutt',           '黏土崩積物'],
+    ['Sandschutt',          '砂質崩積物'],
+    ['Kiesschutt',          '礫石崩積物'],
+    ['Löss',                '黃土'],
+    ['Löß',                 '黃土'],
+    ['Kolluvium',           '坡積物'],
+    ['Schutt',              '崩積物'],
+    ['Kies',                '礫石'],
+    ['Grus',                '礫屑'],
+    // 岩石類型（長詞優先）
+    ['Tonschiefer',         '黏土板岩'],
+    ['Schluffstein',        '粉砂岩'],
+    ['Kalkstein',           '石灰岩'],
+    ['Muschelkalk',         '貝殼灰岩'],
+    ['Buntsandstein',       '雜色砂岩'],
+    ['Sandstein',           '砂岩'],
+    ['Tonstein',            '泥岩'],
+    ['Schiefer',            '板岩'],
+    ['Granit',              '花崗岩'],
+    ['Gneis',               '片麻岩'],
+    ['Quarzit',             '石英岩'],
+    ['Quarz',               '石英'],
+    ['Basalt',              '玄武岩'],
+    ['Tuff',                '凝灰岩'],
+    ['Porphyr',             '斑岩'],
+    ['Diorit',              '閃長岩'],
+    ['Diabas',              '輝綠岩'],
+    ['Dolomit',             '白雲岩'],
+    ['Phyllit',             '千枚岩'],
+    // 地質時代
+    ['Unterrotliegendes',   '下紅層'],
+    ['Oberrotliegendes',    '上紅層'],
+    ['Rotliegendes',        '紅層'],
+    ['Devon',               '泥盆紀'],
+    ['Karbon',              '石炭紀'],
+    ['Perm',                '二疊紀'],
+    ['Trias',               '三疊紀'],
+    ['Jura',                '侏羅紀'],
+    ['Kreide',              '白堊紀'],
+    ['Tertiär',             '第三紀'],
+    ['Pleistozän',          '更新世'],
+    ['Holozän',             '全新世'],
+    // 形容詞／副詞（長詞優先）
+    ['Fast ausschließlich', '幾乎完全為'],
+    ['ausschließlich',      '完全為'],
+    ['überwiegend',         '主要為'],
+    ['Überwiegend',         '主要為'],
+    ['weit verbreitet',     '廣泛分布'],
+    ['verbreitet',          '廣泛分布'],
+    ['vorherrschend',       '以…為主'],
+    ['vorwiegend',          '主要'],
+    ['stellenweise',        '局部'],
+    ['gelegentlich',        '偶見'],
+    ['selten',              '罕見'],
+    ['verwittertem',        '風化的'],
+    ['verwitterter',        '風化的'],
+    ['verwittert',          '風化'],
+    ['führender',           '富含…的'],
+    ['führend',             '富含'],
+    ['flacher',             '淺薄的'],
+    ['flach',               '淺'],
+    ['tiefer',              '深層的'],
+    ['tief',                '深層'],
+    ['stark',               '強'],
+    ['mäßig',               '適中'],
+    ['typisch',             '典型的'],
+    ['Silt- und',           '粉砂和'],
+    ['über',                '上覆'],
+    ['aus',                 '源自'],
+    ['und',                 '和'],
+    // 土壤質地（短詞最後）
+    ['Schluff',             '粉土'],
+    ['Lehm',                '壤土'],
+    ['Sand',                '砂'],
+    ['Ton',                 '黏土'],
+    // 其他
+    ['Hanglehm',            '坡積壤土'],
+    ['Auenlehm',            '洪泛壤土'],
+    ['Oberboden',           '表土層'],
+    ['Unterboden',          '底土層'],
+    ['Verwitterungsmaterial','風化物質'],
+    ['des',                 '的'],
+    ['der',                 '的'],
+  ]
+  let result = text
+  for (const [de, zh] of dict) {
+    result = result.split(de).join(zh)
+  }
+  return result
+}
+
+// BGR BUEK200 GetFeatureInfo 回傳 GeoJSON，解析後渲染 Popup
+function renderBGRPopupHTML(geojsonText) {
+  let props = {}
+  try {
+    const fc = JSON.parse(geojsonText)
+    if (!fc?.features?.length) return null
+    props = fc.features[0]?.properties || {}
+  } catch { return null }
+
+  // 實際欄位名（來自 GetFeatureInfo GeoJSON 回應）
+  const legendText = (props['Legendentext'] || '').replace(/\*/g, '').trim()
+  const legende    = (props['Legende'] || '').trim()
+  const layerName  = (props['layerName'] || '').trim()
+  const profile    = (props['Profile'] || '').replace(/&amp;/g, '&').trim()
+  const nrkart     = props['NRKART'] || ''
+
+  if (!legendText && !legende) return null
+
+  const info = translateBGR(legendText || legende)
+  const zhDesc = translateLegendText(legendText)
+
+  return `
+    <div class="bgr-soil-popup">
+      <div class="bgr-popup-header">
+        <span class="bgr-type-badge">${info.icon} ${info.zh || '土壤'}</span>
+        ${nrkart ? `<span class="bgr-popup-code">圖例 ${nrkart}</span>` : ''}
+      </div>
+      ${info.cat ? `<div class="bgr-popup-cat">${info.cat}</div>` : ''}
+      ${zhDesc ? `<div class="bgr-popup-sg">${zhDesc}</div>` : ''}
+      ${layerName ? `<div class="bgr-popup-use">地圖圖幅：${layerName}</div>` : ''}
+      ${info.wine ? `<div class="bgr-popup-wine">${info.wine}</div>` : ''}
+      ${profile ? `<div class="bgr-popup-link"><a href="${profile}" target="_blank" rel="noopener">🔗 查看土壤層次詳情</a></div>` : ''}
+      <div class="bgr-popup-footer">© BGR BUEK200 (CC-BY 4.0)</div>
+    </div>
+  `
+}
 
 async function fetchGeoJSON(url) {
   const res = await fetch(url)
@@ -312,7 +564,9 @@ async function initMap() {
       })
 
       // Click to select region
+      // 點擊選取產區（土壤模式下停用，改為 GetFeatureInfo）
       map.on('click', 'de-region-fill', (e) => {
+        if (soilEnabled.value) return
         if (e.features.length > 0) {
           const rid = e.features[0].properties?.regionId
           if (rid) {
@@ -320,6 +574,46 @@ async function initMap() {
             if (region) selectRegion(region)
           }
         }
+      })
+
+      // BGR WMS GetFeatureInfo — 土壤模式下點擊地圖查詢土壤資訊
+      map.on('click', async (e) => {
+        if (!soilEnabled.value) return
+        const { lng, lat } = e.lngLat
+        map.getCanvas().style.cursor = 'wait'
+        try {
+          const [mx, my] = lngLatToWebMercator(lng, lat)
+          const d = 3000
+          const bbox = `${mx - d},${my - d},${mx + d},${my + d}`
+          const url =
+            '/bgr/wms/boden/buek200/' +
+            '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo' +
+            `&LAYERS=${BGR_LAYERS}&QUERY_LAYERS=${BGR_LAYERS}` +
+            '&INFO_FORMAT=application%2Fgeo%2Bjson' +
+            '&CRS=EPSG%3A3857' +
+            `&BBOX=${bbox}` +
+            '&WIDTH=101&HEIGHT=101&I=50&J=50' +
+            '&FEATURE_COUNT=1'
+          const res = await fetch(url)
+          if (!res.ok) return
+          const text = await res.text()
+          const html = renderBGRPopupHTML(text)
+          if (!html) return
+          if (bgrPopup) bgrPopup.remove()
+          bgrPopup = new mapboxgl.Popup({ className: 'bgr-popup-wrap', maxWidth: '320px', closeButton: true })
+            .setLngLat([lng, lat])
+            .setHTML(html)
+            .addTo(map)
+        } catch (err) {
+          console.warn('[BGR] GetFeatureInfo error:', err)
+        } finally {
+          map.getCanvas().style.cursor = soilEnabled.value ? 'crosshair' : ''
+        }
+      })
+
+      // 土壤模式下滑鼠改為十字準心
+      map.on('mousemove', () => {
+        if (soilEnabled.value) map.getCanvas().style.cursor = 'crosshair'
       })
 
     } catch (e) {
@@ -358,6 +652,9 @@ function selectRegion(region) {
   map.flyTo({ center: region.center, zoom: region.zoom, duration: 900 })
 
   if (vineyardEnabled.value) loadVineyardForRegion(region)
+
+  // 載入產區 GeoJSON 供土壤圖 clip mask
+  loadRegionGeoJSONForSoil(region)
 }
 
 function resetView() {
@@ -365,6 +662,7 @@ function resetView() {
   selectedId.value = null
   activeRegion.value = null
   infoCollapsed.value = true
+  currentRegionGeoJSON = null
 
   map.setFilter('de-region-fill', null)
   map.setFilter('de-region-line', null)
@@ -373,6 +671,8 @@ function resetView() {
   if (map.getSource('de-vineyards')) {
     map.getSource('de-vineyards').setData({ type: 'FeatureCollection', features: [] })
   }
+  // 重置 clip 遮罩（全德國檢視時不迫切）
+  removeSoilClip()
 
   map.fitBounds(GERMANY_BOUNDS, { padding: 50, duration: 900 })
 }
@@ -531,6 +831,91 @@ function toggleContours() {
   if (map.getLayer('de-all-contour-labels')) map.setLayoutProperty('de-all-contour-labels', 'visibility', vis)
 }
 
+// ── BGR 土壤圖 ────────────────────────────────────────────────────────────
+async function loadRegionGeoJSONForSoil(region) {
+  const files = Array.isArray(region.regionFile) ? region.regionFile : [region.regionFile]
+  const allFeatures = []
+  for (const file of files) {
+    try {
+      const gj = await fetchGeoJSON(file)
+      allFeatures.push(...(gj.features || []))
+    } catch (e) { console.warn('[GermanyAllMap] regionGeoJSON load failed:', file) }
+  }
+  currentRegionGeoJSON = { type: 'FeatureCollection', features: allFeatures }
+  // 如果土壤圖已開啟，更新 clip
+  if (soilEnabled.value && map) applySoilClip()
+}
+
+function applySoilClip() {
+  if (!map || !currentRegionGeoJSON) return
+  try {
+    const maskData = turf.mask(currentRegionGeoJSON)
+    if (map.getSource('de-all-soil-clip-src')) {
+      map.getSource('de-all-soil-clip-src').setData(maskData)
+    } else {
+      map.addSource('de-all-soil-clip-src', { type: 'geojson', data: maskData })
+      map.addLayer({
+        id: 'de-all-soil-clip-overlay',
+        type: 'fill',
+        source: 'de-all-soil-clip-src',
+        paint: { 'fill-color': '#060a10', 'fill-opacity': 0.72 }
+      })
+    }
+  } catch (e) { console.warn('[GermanyAllMap] clip mask failed:', e) }
+}
+
+function removeSoilClip() {
+  if (!map) return
+  if (map.getLayer('de-all-soil-clip-overlay')) map.removeLayer('de-all-soil-clip-overlay')
+  if (map.getSource('de-all-soil-clip-src')) map.removeSource('de-all-soil-clip-src')
+}
+
+function addSoilLayer() {
+  if (!map) return
+  if (!map.getSource('de-all-soil-wms')) {
+    map.addSource('de-all-soil-wms', {
+      type: 'raster',
+      tiles: [BGR_WMS_TILE],
+      tileSize: 256,
+      minzoom: 4,
+      maxzoom: 14,
+      attribution: '© BGR Bodenübersichtskarte 1:200,000 (CC-BY 4.0)'
+    })
+  }
+  if (!map.getLayer('de-all-soil-layer')) {
+    const insertBefore = map.getLayer('de-region-fill') ? 'de-region-fill' : undefined
+    map.addLayer({
+      id: 'de-all-soil-layer',
+      type: 'raster',
+      source: 'de-all-soil-wms',
+      paint: { 'raster-opacity': soilOpacity.value }
+    }, insertBefore)
+  }
+  // 如果已選產區，加入 clip
+  if (currentRegionGeoJSON) applySoilClip()
+}
+
+function toggleSoil() {
+  if (!map) return
+  soilEnabled.value = !soilEnabled.value
+  if (soilEnabled.value) {
+    addSoilLayer()
+    map.getCanvas().style.cursor = 'crosshair'
+  } else {
+    if (bgrPopup) { bgrPopup.remove(); bgrPopup = null }
+    map.getCanvas().style.cursor = ''
+    removeSoilClip()
+    if (map.getLayer('de-all-soil-layer')) map.removeLayer('de-all-soil-layer')
+    if (map.getSource('de-all-soil-wms')) map.removeSource('de-all-soil-wms')
+  }
+}
+
+watch(soilOpacity, (val) => {
+  if (map && map.getLayer('de-all-soil-layer')) {
+    map.setPaintProperty('de-all-soil-layer', 'raster-opacity', val)
+  }
+})
+
 let currentAudio = null
 
 function playPronunciation(regionName) {
@@ -547,7 +932,10 @@ function playPronunciation(regionName) {
 }
 
 onMounted(() => { initMap() })
-onUnmounted(() => { if (map) { map.remove(); map = null } })
+onUnmounted(() => {
+  if (bgrPopup) { bgrPopup.remove(); bgrPopup = null }
+  if (map) { map.remove(); map = null }
+})
 </script>
 
 <style scoped>
@@ -1037,5 +1425,118 @@ onUnmounted(() => { if (map) { map.remove(); map = null } })
   .map-info-bar { width: min(96vw, 380px); }
   .mobile-aoc-drawer { width: 100%; left: 0; transform: none; border-radius: 18px 18px 0 0; }
   .map-header h1 { font-size: 1rem; }
+}
+
+/* ══ BGR 土壤浮動面板 ══ */
+.de-all-soil-panel {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  right: 20px;
+  z-index: 45;
+  background: rgba(6, 10, 16, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(100, 200, 120, 0.25);
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-width: 220px;
+  color: #e0f0e8;
+  font-size: 0.8rem;
+}
+.de-all-soil-title {
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: #7ee8a2;
+  margin-bottom: 8px;
+}
+.de-all-soil-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.de-all-soil-label { color: #b0d0b8; font-size: 0.75rem; white-space: nowrap; }
+.de-all-soil-slider { flex: 1; accent-color: #7ee8a2; cursor: pointer; }
+.de-all-soil-pct { font-size: 0.75rem; color: #7ee8a2; min-width: 30px; text-align: right; }
+.de-all-soil-hint { font-size: 0.68rem; color: #6a9070; margin-top: 2px; }
+</style>
+
+<!-- BGR 土壤 Popup 全域樣式（Mapbox popup 在 scoped 外層） -->
+<style>
+.bgr-popup-wrap .mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+  min-width: 240px;
+}
+.bgr-popup-wrap .mapboxgl-popup-close-button {
+  color: #888;
+  font-size: 1.1rem;
+  padding: 4px 8px;
+  top: 4px;
+  right: 4px;
+}
+.bgr-soil-popup {
+  padding: 12px 14px 10px;
+  font-size: 0.82rem;
+  color: #1a2a10;
+  font-family: system-ui, sans-serif;
+}
+.bgr-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.bgr-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #2d5016;
+  color: #fff;
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-weight: 700;
+  font-size: 0.84rem;
+}
+.bgr-popup-code {
+  font-size: 0.7rem;
+  color: #888;
+  background: #f0f0f0;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+.bgr-popup-cat {
+  font-size: 0.74rem;
+  color: #4a7030;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.bgr-popup-sg {
+  font-size: 0.8rem;
+  color: #2a3a1a;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+.bgr-popup-sub,
+.bgr-popup-rsg,
+.bgr-popup-use {
+  font-size: 0.74rem;
+  color: #555;
+  margin-bottom: 3px;
+}
+.bgr-popup-wine {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e0eed8;
+  font-size: 0.76rem;
+  color: #3a2800;
+  line-height: 1.45;
+}
+.bgr-popup-footer {
+  margin-top: 6px;
+  font-size: 0.65rem;
+  color: #aaa;
+  text-align: right;
 }
 </style>

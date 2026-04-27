@@ -690,19 +690,168 @@ async function loadRegionOutline() {
 }
 
 // ── IGME 西班牙地質圖 ──────────────────────────────────────────────
+const IGME_LITO_MAP = [
+  { match: ['caliza', 'calizas', 'calcarenita', 'dolomía', 'dolomías', 'dolomita'],
+    zh: '石灰岩/白雲岩', icon: '🪨', cat: '碳酸鹽岩',
+    wine: '石灰岩賦予葡萄酒天然酸度與礦物張力，是里奧哈、卡斯提亞的核心底質。' },
+  { match: ['marga', 'margas', 'margosa'],
+    zh: '泥灰岩', icon: '🟤', cat: '泥灰岩質',
+    wine: '泥灰岩兼具石灰岩與黏土特性，保水性適中，杜埃羅河岸的丹魄在此表現出色。' },
+  { match: ['granito', 'granitos', 'granodiorita', 'granodioritas'],
+    zh: '花崗岩', icon: '🗿', cat: '深成岩',
+    wine: '花崗岩排水良好、礦物豐富，賦予葡萄酒礦石感與結構感，加利西亞阿爾巴利諾的理想底質。' },
+  { match: ['gneis', 'gneises', 'migmatita'],
+    zh: '片麻岩', icon: '🪶', cat: '變質岩',
+    wine: '片麻岩礦物組成多樣，賦予葡萄酒精緻礦物感，加利西亞山區常見。' },
+  { match: ['pizarra', 'pizarras', 'esquistos', 'esquisto', 'filita', 'filitas'],
+    zh: '板岩/片岩', icon: '🪶', cat: '變質岩',
+    wine: '板岩吸熱保溫，賦予葡萄酒礦石感，下海灣地產（Bierzo）的年輕板岩是門西亞的優質底質。' },
+  { match: ['cuarcita', 'cuarcitas', 'cuarzo'],
+    zh: '石英岩', icon: '🔷', cat: '砂質岩',
+    wine: '石英岩極度貧瘠，迫使葡萄根深入，釀出礦物張力極高的葡萄酒。' },
+  { match: ['arenisca', 'areniscas'],
+    zh: '砂岩', icon: '🏜️', cat: '砂岩',
+    wine: '砂岩排水快速，賦予葡萄酒輕盈感，納瓦拉、索蒙塔諾的常見底質。' },
+  { match: ['arcilla', 'arcillas', 'arcilloso'],
+    zh: '黏土', icon: '🟫', cat: '黏土質',
+    wine: '黏土保水性強，有助乾燥年份維持水分，適合丹魄等品種。' },
+  { match: ['lutita', 'lutitas'],
+    zh: '泥板岩', icon: '🟫', cat: '細粒沉積岩',
+    wine: '泥板岩細粒緻密，多見於海相沉積地層，保水性佳。' },
+  { match: ['conglomerado', 'conglomerados', 'brecha', 'brechas'],
+    zh: '礫岩/角礫岩', icon: '⚪', cat: '碎屑岩',
+    wine: '礫岩排水迅速，白天吸熱夜間散熱，有助葡萄均勻成熟。' },
+  { match: ['basalto', 'basaltos', 'basaltico', 'volcánico', 'volcanico', 'toba', 'tobas', 'traquita'],
+    zh: '玄武岩/火山岩', icon: '🌋', cat: '火山岩',
+    wine: '火山岩礦物質豐富，賦予葡萄酒獨特的礦石與煙燻感，加那利群島的核心底質。' },
+  { match: ['aluvial', 'aluviales', 'aluvión', 'terraza', 'terrazas'],
+    zh: '沖積層', icon: '💧', cat: '沖積物',
+    wine: '河流沖積層礦物多樣，杜埃羅河谷底部常見，土質肥沃。' },
+  { match: ['yeso', 'yesos', 'evaporita', 'evaporitas', 'sal', 'sales'],
+    zh: '蒸發岩/石膏', icon: '🟡', cat: '蒸發岩',
+    wine: '蒸發岩地層土壤礦物含量高，乾旱地區常見，卡斯提亞-拉曼查內陸產區可見。' },
+  { match: ['limo', 'limos', 'loes', 'loess'],
+    zh: '黃土/粉砂', icon: '🟡', cat: '細粒沉積',
+    wine: '黃土保水性佳，適合多種品種生長。' },
+  { match: ['arena', 'arenas'],
+    zh: '砂土', icon: '🏜️', cat: '砂質',
+    wine: '砂土排水快，賦予葡萄酒輕盈礦物感。' },
+]
+
+const IGME_EDAD_MAP = [
+  ['holoceno', '全新世（第四紀）'],
+  ['pleistoceno', '更新世（第四紀）'],
+  ['cuaternario', '第四紀'],
+  ['plioceno', '上新世（新近紀）'],
+  ['mioceno', '中新世（新近紀）'],
+  ['oligoceno', '漸新世（古近紀）'],
+  ['eoceno', '始新世（古近紀）'],
+  ['paleoceno', '古新世（古近紀）'],
+  ['neógeno', '新近紀'],
+  ['paleógeno', '古近紀'],
+  ['terciario', '第三紀'],
+  ['cretácico', '白堊紀'],
+  ['cretáceo', '白堊紀'],
+  ['jurásico', '侏羅紀'],
+  ['triásico', '三疊紀'],
+  ['pérmico', '二疊紀'],
+  ['carbonífero', '石炭紀'],
+  ['devónico', '泥盆紀'],
+  ['silúrico', '志留紀'],
+  ['ordovícico', '奧陶紀'],
+  ['cámbrico', '寒武紀'],
+  ['precámbrico', '前寒武紀'],
+]
+
+function translateIGME(lito) {
+  const t = (lito || '').toLowerCase()
+  for (const entry of IGME_LITO_MAP) {
+    if (entry.match.some(k => t.includes(k))) return entry
+  }
+  return { zh: lito || '地質岩層', icon: '🗺️', cat: '', wine: '' }
+}
+
+// COEDAD 是數值型（年 × 1000，e.g. 5020000000 ≈ 5.02Ma × 1000 = 5,020,000,000）
+function coedadToAge(val) {
+  const n = Number(val)
+  if (isNaN(n) || n <= 0) return ''
+  // 先用精確邊界對照
+  const approxMa = n / 1000000
+  if (approxMa >= 541) return '前寒武紀'
+  if (approxMa >= 485) return '寒武紀'
+  if (approxMa >= 444) return '奧陶紀'
+  if (approxMa >= 419) return '志留紀'
+  if (approxMa >= 359) return '泥盆紀'
+  if (approxMa >= 299) return '石炭紀'
+  if (approxMa >= 252) return '二疊紀'
+  if (approxMa >= 201) return '三疊紀'
+  if (approxMa >= 145) return '侏羅紀'
+  if (approxMa >= 66) return '白堊紀'
+  if (approxMa >= 23) return '古近紀'
+  if (approxMa >= 2.6) return '新近紀'
+  return '第四紀'
+}
+
+function translateEdad(edad) {
+  // 若是數值（COEDAD 欄位），用數值對照表
+  if (typeof edad === 'number' || (typeof edad === 'string' && /^\d+$/.test(edad.trim()))) {
+    return coedadToAge(edad)
+  }
+  const t = (edad || '').toLowerCase()
+  for (const [es, zh] of IGME_EDAD_MAP) {
+    if (t.includes(es)) return zh
+  }
+  return edad
+}
+
+// WGS84 → UTM30N (EPSG:23030) 坐標轉換
+function toUTM30N(lng, lat) {
+  const k0 = 0.9996
+  const a = 6378137.0
+  const e2 = 0.00669437999014
+  const lng0 = -3 * Math.PI / 180  // UTM zone 30N 中央子午線 -3°
+  const phi = lat * Math.PI / 180
+  const lambda = lng * Math.PI / 180
+  const e4 = e2 * e2
+  const e6 = e4 * e2
+  const N = a / Math.sqrt(1 - e2 * Math.sin(phi) ** 2)
+  const T = Math.tan(phi) ** 2
+  const C = e2 / (1 - e2) * Math.cos(phi) ** 2
+  const A = Math.cos(phi) * (lambda - lng0)
+  const M = a * (
+    (1 - e2/4 - 3*e4/64 - 5*e6/256) * phi
+    - (3*e2/8 + 3*e4/32 + 45*e6/1024) * Math.sin(2*phi)
+    + (15*e4/256 + 45*e6/1024) * Math.sin(4*phi)
+    - (35*e6/3072) * Math.sin(6*phi)
+  )
+  const easting = k0 * N * (A + (1-T+C)*A**3/6 + (5-18*T+T**2+72*C-58*(e2/(1-e2)))*A**5/120) + 500000
+  const northing = k0 * (M + N*Math.tan(phi)*(
+    A**2/2 + (5-T+9*C+4*C**2)*A**4/24
+    + (61-58*T+T**2+600*C-330*(e2/(1-e2)))*A**6/720
+  ))
+  return { x: Math.round(easting), y: Math.round(northing) }
+}
+
 function renderSpainGeologyPopupHTML(attrs) {
-  const lito = attrs.LITOLOGIA || attrs.litologia || ''
-  const edad = attrs.EDAD || attrs.edad || attrs.EDADES || attrs.edades || ''
-  const cod  = attrs.COD_LITO || attrs.cod_lito || attrs.COD || ''
-  const form = attrs.FORMACION || attrs.formacion || attrs.NOMBRE || attrs.nombre || ''
+  const lito = attrs.DLO || attrs.LITOLOGIA || attrs.litologia || ''
+  const edad = attrs.COEDAD  // 數值型
+  const cod  = attrs.TRAMA_C || attrs.COD_LITO || ''
+  const form = ''
+
+  const info   = translateIGME(lito)
+  const edadZh = translateEdad(edad)
+
   return `
     <div class="spain-geology-popup">
       <div class="geology-popup-header">
-        <span class="soil-type-badge">🪨 ${lito || '未分類'}</span>
+        <span class="soil-type-badge">${info.icon} ${info.zh}</span>
         ${cod ? `<span class="geology-popup-code">${cod}</span>` : ''}
       </div>
-      ${edad ? `<div class="geology-popup-zone">🕐 地質年代：${edad}</div>` : ''}
+      ${info.cat ? `<div class="geology-popup-cat">${info.cat}</div>` : ''}
+      ${lito ? `<div class="geology-popup-lito">${lito}</div>` : ''}
+      ${edadZh ? `<div class="geology-popup-zone">🕐 地質年代：${edadZh}</div>` : ''}
       ${form ? `<div class="geology-popup-zone">📋 地層：${form}</div>` : ''}
+      ${info.wine ? `<div class="geology-popup-wine">${info.wine}</div>` : ''}
       <div class="geology-popup-footer">© IGME Mapa Geológico 1:200,000 (CC-BY 4.0)</div>
     </div>
   `
@@ -755,10 +904,14 @@ async function loadSpainGeologyLayer() {
       if (!soilEnabled.value) return
       const { lng, lat } = e.lngLat
       try {
+        // 轉換 WGS84 → UTM30N (EPSG:23030)，用 ±2000m envelope 查詢 Layer 9
+        const { x, y } = toUTM30N(lng, lat)
+        const margin = 2000
         const url =
-          '/igme/gis/rest/services/Cartografia_Geologica/IGME_Geologico_200/MapServer/0/query' +
-          `?geometry=${lng},${lat}&geometryType=esriGeometryPoint&inSR=4326` +
-          '&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=false&f=json'
+          '/igme/gis/rest/services/Cartografia_Geologica/IGME_Geologico_200/MapServer/9/query' +
+          `?geometry=${x-margin},${y-margin},${x+margin},${y+margin}` +
+          '&geometryType=esriGeometryEnvelope' +
+          '&spatialRel=esriSpatialRelIntersects&outFields=DLO,COEDAD,TRAMA_C&returnGeometry=false&f=json'
         const res = await fetch(url)
         if (!res.ok) return
         const data = await res.json()
@@ -783,9 +936,11 @@ async function toggleSoil() {
   if (!map) return
   if (!soilEnabled.value) {
     soilEnabled.value = true
+    map.getCanvas().style.cursor = 'crosshair'
     await loadSpainGeologyLayer()
   } else {
     soilEnabled.value = false
+    map.getCanvas().style.cursor = ''
     if (geologyPopup) { geologyPopup.remove(); geologyPopup = null }
     if (map.getLayer('spain-geo-clip-overlay')) map.removeLayer('spain-geo-clip-overlay')
     if (map.getSource('spain-geo-clip-src')) map.removeSource('spain-geo-clip-src')
@@ -1056,6 +1211,8 @@ async function addLayers() {
 
   // ── Click interaction ───────────────────────────────────────
   map.on('click', 'wine-regions-fill', (e) => {
+    // 土壤模式下點擊交由地質查詢處理，不開啟產區資訊
+    if (soilEnabled.value) return
     const feat = e.features[0]
     const info = allRegionsMap.get(feat.id)
     if (info) {
@@ -1073,8 +1230,9 @@ async function addLayers() {
     e.originalEvent._spainWineClicked = true
   })
 
-  // 點擊空白處清除選取
+  // 點擊空白處清除選取（土壤模式下不清除）
   map.on('click', (e) => {
+    if (soilEnabled.value) return
     if (e.originalEvent._spainWineClicked) return
     activeInfo.value = null
   })
@@ -1188,6 +1346,29 @@ function handleMobileAction(action) {
   else if (action === 'info') { toggleInfo() }
 }
 </script>
+
+<!-- IGME popup 全域樣式（mapboxgl popup 容器不支援 scoped） -->
+<style>
+.geology-popup-wrap .mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  min-width: 240px;
+}
+.geology-popup-wrap .mapboxgl-popup-close-button {
+  color: rgba(255,255,255,0.8);
+  font-size: 16px;
+  padding: 4px 8px;
+  right: 2px;
+  top: 2px;
+}
+.geology-popup-wrap .mapboxgl-popup-close-button:hover {
+  color: #fff;
+  background: rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+</style>
 
 <style scoped>
 .spain-map-section {
@@ -2014,41 +2195,67 @@ function handleMobileAction(action) {
 
 /* IGME 地質 popup */
 .spain-geology-popup {
-  font-family: 'Inter', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 13px;
-  line-height: 1.5;
-  padding: 2px;
+  color: #222;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
 }
 .spain-geology-popup .geology-popup-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 6px;
-  flex-wrap: wrap;
-  gap: 4px;
+  gap: 8px;
+  background: linear-gradient(135deg, #a31921 0%, #c0392b 100%);
+  padding: 12px 14px 10px;
+  color: #fff;
 }
 .spain-geology-popup .soil-type-badge {
+  font-size: 14px;
   font-weight: 700;
-  color: #333;
-  font-size: 13px;
+  flex: 1;
+  color: #fff;
 }
 .spain-geology-popup .geology-popup-code {
-  background: #f0f0f0;
-  border-radius: 4px;
-  padding: 1px 6px;
+  font-size: 10px;
+  background: rgba(255,255,255,0.25);
+  padding: 2px 7px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+.spain-geology-popup .geology-popup-cat {
   font-size: 11px;
-  color: #666;
+  color: #a31921;
+  font-weight: 700;
+  padding: 6px 14px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.spain-geology-popup .geology-popup-lito {
+  font-size: 12px;
+  color: #555;
+  font-style: italic;
+  padding: 4px 14px;
 }
 .spain-geology-popup .geology-popup-zone {
-  color: #555;
+  font-size: 11px;
+  color: #888;
+  padding: 2px 14px;
+}
+.spain-geology-popup .geology-popup-wine {
   font-size: 12px;
-  margin: 2px 0;
+  color: #444;
+  line-height: 1.5;
+  padding: 8px 14px;
+  background: #fdf5f5;
+  border-top: 1px solid #f3e0e0;
+  margin-top: 4px;
 }
 .spain-geology-popup .geology-popup-footer {
   font-size: 10px;
   color: #aaa;
-  margin-top: 8px;
+  padding: 5px 14px 8px;
   border-top: 1px solid #eee;
-  padding-top: 4px;
 }
 </style>

@@ -67,6 +67,18 @@ export default defineConfig({
         target: 'https://mapas.igme.es',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/igme/, '')
+      },
+      // BGR 德國聯邦地球科學與自然資源研究所 BUEK200 土壤圖 proxy
+      '/bgr': {
+        target: 'https://services.bgr.de',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/bgr/, '')
+      },
+      // HuGeo 匈牙利地質調查局地質圖 proxy（原 MBFSZ，2025-02 遷移至 hugeo.hu）
+      '/hugeo': {
+        target: 'https://map.hugeo.hu',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/hugeo/, '')
       }
     }
   }

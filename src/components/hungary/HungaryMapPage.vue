@@ -89,10 +89,13 @@
           :is3D="is3D"
           :show-contours="contoursEnabled"
           :climate-enabled="climateEnabled"
-          :soil-disabled="true"
+          :soil-disabled="false"
+          :soil-enabled="geoEnabled"
+          soil-label="地質圖"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContours"
           @toggle-climate="toggleClimate"
+          @toggle-soil="toggleGeo"
           @close="showLayerPanel = false"
         />
       </div>
@@ -181,6 +184,108 @@ const geojsonCache = new Map()
 // ── 等高線 / 氣候熱力狀態 ──────────────────────────────────────
 const contoursEnabled   = ref(false)
 const climateEnabled    = ref(false)
+
+// ── 地質圖層狀態 ───────────────────────────────────────────────
+const geoEnabled  = ref(false)
+const geoOpacity  = ref(0.75)
+let geoPopup = null
+
+// ── HuGeo FDT100 地質 WMS ──────────────────────────────────────
+const HUGEO_WMS_TILE =
+  `/hugeo/arcgis/services/fdt100/fdt_100/MapServer/WMSServer` +
+  `?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=1&STYLES=` +
+  `&FORMAT=image%2Fpng&TRANSPARENT=true&CRS=EPSG%3A3857` +
+  `&WIDTH=256&HEIGHT=256&BBOX={bbox-epsg-3857}`
+
+// ── 匈牙利地質術語翻譯 ─────────────────────────────────────────
+const HU_LITOLOGIA_MAP = [
+  ['homokos aleurit',   '砂質粉砂岩'],
+  ['iszapos homok',     '淤泥砂'],
+  ['kavicsos homok',    '礫石砂'],
+  ['lösz',             '黃土'],
+  ['homok',            '砂岩'],
+  ['kavics',           '礫石'],
+  ['agyag',            '黏土'],
+  ['iszap',            '淤泥'],
+  ['tőzeg',            '泥炭'],
+  ['travertin',        '石灰華'],
+  ['mészkő',          '石灰岩'],
+  ['dolomit',          '白雲岩'],
+  ['agyagmárga',       '黏土泥灰岩'],
+  ['márga',            '泥灰岩'],
+  ['homokkő',         '砂岩'],
+  ['konglomerátum',    '礫岩'],
+  ['andezittufa',      '安山凝灰岩'],
+  ['riolittufa',       '流紋凝灰岩'],
+  ['bazalttufa',       '玄武凝灰岩'],
+  ['tufa',             '凝灰岩'],
+  ['andezit',          '安山岩'],
+  ['riolit',           '流紋岩'],
+  ['bazalt',           '玄武岩'],
+  ['granit',           '花崗岩'],
+  ['gneisz',           '片麻岩'],
+  ['csillámpala',     '雲母片岩'],
+  ['kvarcit',          '石英岩'],
+  ['fillit',           '千枚岩'],
+  ['pala',             '頁岩'],
+  ['aleurit',          '粉砂岩'],
+  ['szenes agyag',     '含炭黏土'],
+  ['alluviális',       '沖積層'],
+  ['deluviális',       '坡積層'],
+]
+
+const HU_GEO_AGE_MAP = {
+  'Qh':   '全新世',  'Qp':  '更新世',   'Q':    '第四紀',
+  'Pl':   '上新世',  'Mi':  '中新世',   'Ol':   '漸新世',
+  'Eo':   '始新世',  'Pa':  '古新世',   'K':    '白堊紀',
+  'J':    '侏羅紀',  'T':   '三疊紀',   'P':    '二疊紀',
+  'C':    '石炭紀',  'D':   '泥盆紀',   'S':    '志留紀',
+  'O':    '奧陶紀',  'Cm':  '寒武紀',   'Pz':   '古生代',
+  'Mz':   '中生代',  'Kz':  '新生代',   'Pz-Mz':'古生代-中生代',
+  'Ng':   '新近紀',  'Pg':  '古近紀',
+}
+
+function translateHuLith(text) {
+  if (!text) return ''
+  let t = text.trim().toLowerCase()
+  for (const [hu, zh] of HU_LITOLOGIA_MAP) {
+    if (t.includes(hu)) return text.replace(new RegExp(hu, 'gi'), zh)
+  }
+  return text
+}
+
+function translateHuGeoIndex(idx) {
+  if (!idx) return ''
+  // 嘗試解析前綴字母（地質時代代號）
+  const m = idx.match(/^([a-zA-Z]+)/)
+  if (m) {
+    const prefix = m[1]
+    for (const [code, name] of Object.entries(HU_GEO_AGE_MAP)) {
+      if (prefix.toLowerCase().startsWith(code.toLowerCase())) return name
+    }
+  }
+  return idx
+}
+
+function renderHungaryGeoPopupHTML(attrs) {
+  const nev      = attrs.NEV || ''
+  const lith     = attrs.LITOLOGIA || ''
+  const geoIdx   = attrs.geo_ndx || attrs.GEO || ''
+  const age      = translateHuGeoIndex(geoIdx)
+  const lithZh   = translateHuLith(lith)
+  const rows = []
+  if (nev) rows.push(`<tr><td class="pl">地層名稱</td><td>${nev}</td></tr>`)
+  if (lith) rows.push(`<tr><td class="pl">岩性</td><td>${lith}${lithZh && lithZh !== lith ? ` <span style="color:#c8a44e">(${lithZh})</span>` : ''}</td></tr>`)
+  if (geoIdx) rows.push(`<tr><td class="pl">地質索引</td><td>${geoIdx}</td></tr>`)
+  if (age && age !== geoIdx) rows.push(`<tr><td class="pl">地質時代</td><td style="color:#c8a44e;font-weight:700">${age}</td></tr>`)
+  if (!rows.length) return null
+  return `
+    <div class="hugeo-popup-inner">
+      <div class="hugeo-popup-title">🪨 匈牙利地質圖</div>
+      <table class="hugeo-popup-table"><tbody>${rows.join('')}</tbody></table>
+      <div class="hugeo-popup-src">資料來源：HuGeo FDT100（1:100,000）</div>
+    </div>`
+}
 const climateYear       = ref(2003)
 const climateData       = ref(null)
 const climateStats      = ref(null)
@@ -531,6 +636,49 @@ function toggleContours() {
   if (map.getLayer('hu-contour-labels')) map.setLayoutProperty('hu-contour-labels', 'visibility', vis)
 }
 
+// ── HuGeo 地質圖層 ─────────────────────────────────────────────
+function addGeoLayer() {
+  if (!map) return
+  if (!map.getSource('hu-geo-wms')) {
+    map.addSource('hu-geo-wms', {
+      type: 'raster',
+      tiles: [HUGEO_WMS_TILE],
+      tileSize: 256,
+      minzoom: 4,
+      maxzoom: 16,
+      attribution: '© HuGeo FDT100 Magyarország földtani térképe (CC-BY 4.0)'
+    })
+  }
+  if (!map.getLayer('hu-geo-layer')) {
+    const insertBefore = map.getLayer('hungary-all-fill') ? 'hungary-all-fill' : undefined
+    map.addLayer({
+      id: 'hu-geo-layer',
+      type: 'raster',
+      source: 'hu-geo-wms',
+      paint: { 'raster-opacity': geoOpacity.value }
+    }, insertBefore)
+  }
+}
+
+function toggleGeo() {
+  if (!map) return
+  geoEnabled.value = !geoEnabled.value
+  if (geoEnabled.value) {
+    addGeoLayer()
+    if (map.getLayer('hu-geo-layer')) {
+      map.setLayoutProperty('hu-geo-layer', 'visibility', 'visible')
+      map.setPaintProperty('hu-geo-layer', 'raster-opacity', geoOpacity.value)
+    }
+    map.getCanvas().style.cursor = 'crosshair'
+  } else {
+    if (map.getLayer('hu-geo-layer')) {
+      map.setLayoutProperty('hu-geo-layer', 'visibility', 'none')
+    }
+    if (geoPopup) { geoPopup.remove(); geoPopup = null }
+    map.getCanvas().style.cursor = ''
+  }
+}
+
 const loadClimateData = async () => {
   if (climateData.value) return
   const res = await fetch('/data/hungary-climate.json')
@@ -756,13 +904,48 @@ async function loadAllRegionsOverlay() {
 
     // 點擊產區選取
     map.on('click', 'hungary-all-fill', (e) => {
+      if (geoEnabled.value) return  // 地質模式下不開啟產區面板
       if (e.features?.length > 0) {
         const f = e.features[0]
         selectRegion(f.properties._group, f.properties._folder)
       }
     })
-    map.on('mouseenter', 'hungary-all-fill', () => { map.getCanvas().style.cursor = 'pointer' })
-    map.on('mouseleave', 'hungary-all-fill', () => { map.getCanvas().style.cursor = '' })
+    map.on('mouseenter', 'hungary-all-fill', () => { map.getCanvas().style.cursor = geoEnabled.value ? 'crosshair' : 'pointer' })
+    map.on('mouseleave', 'hungary-all-fill', () => { map.getCanvas().style.cursor = geoEnabled.value ? 'crosshair' : '' })
+
+    // 地質圖點擊查詢（ArcGIS REST）
+    map.on('click', async (e) => {
+      if (!geoEnabled.value) return
+      const { lng, lat } = e.lngLat
+      const buf = 0.005
+      const url = `/hugeo/arcgis/rest/services/fdt100/fdt_100/MapServer/26/query` +
+        `?geometry=${lng - buf},${lat - buf},${lng + buf},${lat + buf}` +
+        `&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects` +
+        `&outFields=geo_ndx,NEV,LITOLOGIA,GEO,GEO_HU&returnGeometry=false&f=json`
+      map.getCanvas().style.cursor = 'wait'
+      try {
+        const res = await fetch(url)
+        const data = await res.json()
+        const features = data?.features || []
+        if (!features.length) return
+        const attrs = features[0].attributes
+        const html = renderHungaryGeoPopupHTML(attrs)
+        if (!html) return
+        if (geoPopup) geoPopup.remove()
+        geoPopup = new mapboxgl.Popup({ className: 'hugeo-popup-wrap', maxWidth: '340px', closeButton: true })
+          .setLngLat([lng, lat])
+          .setHTML(html)
+          .addTo(map)
+      } catch (err) {
+        console.warn('[HuGeo] query error:', err)
+      } finally {
+        map.getCanvas().style.cursor = geoEnabled.value ? 'crosshair' : ''
+      }
+    })
+
+    map.on('mousemove', () => {
+      if (geoEnabled.value) map.getCanvas().style.cursor = 'crosshair'
+    })
   } catch {}
 }
 
@@ -1437,4 +1620,32 @@ function handleMobileAction(action) {
 }
 .rmap-section { margin-top: 8px; }
 .rmap-section-title { font-size: 11px; color: #999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }
+</style>
+
+<style>
+/* ── HuGeo 地質 Popup（非 scoped，需覆蓋 mapboxgl 樣式） ─────── */
+.hugeo-popup-wrap .mapboxgl-popup-content {
+  background: #1a1a2e;
+  border: 1.5px solid rgba(200,164,78,0.5);
+  border-radius: 10px;
+  padding: 0;
+  color: #eee;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+}
+.hugeo-popup-wrap .mapboxgl-popup-close-button {
+  color: #c8a44e; font-size: 16px; right: 8px; top: 6px;
+}
+.hugeo-popup-inner { padding: 12px 14px 10px; }
+.hugeo-popup-title {
+  font-size: 0.82rem; font-weight: 700; color: #c8a44e;
+  margin-bottom: 8px; letter-spacing: 0.5px;
+}
+.hugeo-popup-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+.hugeo-popup-table td { padding: 3px 6px; vertical-align: top; }
+.hugeo-popup-table td.pl { color: #aaa; white-space: nowrap; font-size: 0.72rem; }
+.hugeo-popup-table tr:nth-child(even) td { background: rgba(255,255,255,0.04); }
+.hugeo-popup-src {
+  font-size: 0.65rem; color: #666; margin-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.08); padding-top: 5px;
+}
 </style>
