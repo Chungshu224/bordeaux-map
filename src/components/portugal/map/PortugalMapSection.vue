@@ -203,6 +203,7 @@ let map          = null
 let hoveredDocId = null
 let hoveredIgpId = null
 let ptRegionsGeoJSON = null   // 合併的 DOC+IGP GeoJSON，用於 turf.mask clip
+let lnegPopup    = null
 
 const ptGeomMap = {}  // name → [w, s, e, n] for fitBounds
 
@@ -644,6 +645,8 @@ function toggleGeology() {
     if (map.getLayer('pt-geology-layer'))        map.removeLayer('pt-geology-layer')
     if (map.getSource('lneg-wms'))               map.removeSource('lneg-wms')
     if (map.getSource('pt-geology-clip-source')) map.removeSource('pt-geology-clip-source')
+    if (lnegPopup) { lnegPopup.remove(); lnegPopup = null }
+    map.getCanvas().style.cursor = ''
   }
 }
 
@@ -901,6 +904,7 @@ async function initMap() {
 
       // ── Click: DOC ──
       map.on('click', 'doc-fill', (e) => {
+        if (showGeology.value) return  // 地質模式下由全局 click handler 處理
         if (!e.features.length) return
         const feat = e.features[0]
         const fid  = feat.id
@@ -920,6 +924,7 @@ async function initMap() {
 
       // ── Click: IGP ──
       map.on('click', 'igp-fill', (e) => {
+        if (showGeology.value) return  // 地質模式下由全局 click handler 處理
         if (!e.features.length) return
         map.removeFeatureState({ source: 'doc-regions' })
         activeRegion.value  = e.features[0].properties
@@ -927,16 +932,65 @@ async function initMap() {
         if (climateEnabled.value) applyClimateColor(climateYear.value)
       })
 
-      // Click on empty area → deselect
-      map.on('click', (e) => {
-        const docFeat = map.queryRenderedFeatures(e.point, { layers: ['doc-fill'] })
-        const igpFeat = map.queryRenderedFeatures(e.point, { layers: ['igp-fill'] })
-        if (!docFeat.length && !igpFeat.length) {
-          map.removeFeatureState({ source: 'doc-regions' })
-          activeRegion.value = null
-          clearSelectionFilter()
-          if (climateEnabled.value) applyClimateColor(climateYear.value)
+      // ── LNEG WMS GetFeatureInfo — 地質模式下點擊查詢地質圖 ──
+      map.on('click', async (e) => {
+        if (!showGeology.value) {
+          // 非地質模式：點擊空白此區取消選取
+          const docFeat = map.queryRenderedFeatures(e.point, { layers: ['doc-fill'] })
+          const igpFeat = map.queryRenderedFeatures(e.point, { layers: ['igp-fill'] })
+          if (!docFeat.length && !igpFeat.length) {
+            map.removeFeatureState({ source: 'doc-regions' })
+            activeRegion.value = null
+            clearSelectionFilter()
+            if (climateEnabled.value) applyClimateColor(climateYear.value)
+          }
+          return
         }
+
+        // 地質模式：跟蹤 LNEG GetFeatureInfo
+        const { lng, lat } = e.lngLat
+        map.getCanvas().style.cursor = 'wait'
+        try {
+          const d = 0.08
+          const bbox = `${lat - d},${lng - d},${lat + d},${lng + d}`
+          const base = '/lneg/server/services/CGP1M/MapServer/WMSServer' +
+            '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo' +
+            '&LAYERS=0&QUERY_LAYERS=0' +
+            '&CRS=EPSG%3A4326' +
+            `&BBOX=${bbox}` +
+            '&WIDTH=11&HEIGHT=11&I=5&J=5' +
+            '&FEATURE_COUNT=1'
+
+          const formats = ['text/plain', 'text/xml', 'application/vnd.esri.wms_featureinfo_xml']
+          let text = ''
+          for (const fmt of formats) {
+            const res = await fetch(base + '&INFO_FORMAT=' + encodeURIComponent(fmt))
+            if (!res.ok) continue
+            const t = await res.text()
+            if (t && t.trim().length > 0 && !t.includes('ServiceExceptionReport')) {
+              text = t; break
+            }
+          }
+          if (!text) return
+
+          const html = renderLNEGPopupHTML(text, { lng, lat })
+          if (!html) return
+
+          if (lnegPopup) lnegPopup.remove()
+          lnegPopup = new mapboxgl.Popup({ className: 'lneg-popup-wrap', maxWidth: '320px', closeButton: true })
+            .setLngLat([lng, lat])
+            .setHTML(html)
+            .addTo(map)
+        } catch (err) {
+          console.warn('[LNEG] GetFeatureInfo error:', err)
+        } finally {
+          map.getCanvas().style.cursor = showGeology.value ? 'crosshair' : ''
+        }
+      })
+
+      // 地質模式下游標轉十字
+      map.on('mousemove', () => {
+        if (map) map.getCanvas().style.cursor = showGeology.value ? 'crosshair' : ''
       })
 
       mapReady.value  = true
@@ -1767,4 +1821,76 @@ function handleMobileAction(action) {
   text-decoration: none;
 }
 .lneg-source-row a:hover { text-decoration: underline; }
+</style>
+
+<style>
+/* ── LNEG Popup（非 scoped，覆蓋 mapboxgl 樣式） ── */
+.lneg-popup-wrap .mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+.lneg-popup-wrap .mapboxgl-popup-close-button {
+  color: #fff;
+  font-size: 16px;
+  top: 6px;
+  right: 8px;
+  background: none;
+  border: none;
+}
+.lneg-geo-popup {
+  font-family: inherit;
+  min-width: 200px;
+  max-width: 300px;
+}
+.lneg-geo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1b5e20, #388e3c);
+  color: #fff;
+  padding: 10px 14px;
+}
+.lneg-geo-badge {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+.lneg-geo-icon {
+  font-size: 20px;
+  margin-left: 6px;
+}
+.lneg-geo-descr {
+  padding: 8px 14px 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1b5e20;
+}
+.lneg-geo-age {
+  padding: 4px 14px 0;
+  font-size: 11.5px;
+  color: #666;
+}
+.lneg-geo-litho {
+  padding: 4px 14px 0;
+  font-size: 12px;
+  color: #444;
+}
+.lneg-geo-wine {
+  margin: 7px 14px;
+  padding: 7px 10px;
+  background: #f1f8e9;
+  border-left: 3px solid #388e3c;
+  font-size: 12px;
+  color: #2e4a1e;
+  border-radius: 0 6px 6px 0;
+}
+.lneg-geo-footer {
+  padding: 6px 14px 9px;
+  font-size: 10.5px;
+  color: #aaa;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 6px;
+}
 </style>
