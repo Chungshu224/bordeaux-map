@@ -144,7 +144,7 @@
 
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -202,7 +202,8 @@ const GOLDEN_VINTAGES_PT = new Set([1994, 1995, 1997, 2000, 2003, 2007, 2011, 20
 let map          = null
 let hoveredDocId = null
 let hoveredIgpId = null
-let ptRegionsGeoJSON = null   // 合併的 DOC+IGP GeoJSON，用於 turf.mask clip
+let ptRegionsGeoJSON = null   // 合併的 DOC+IGP GeoJSON
+let ptDocGeoJSON     = null   // 僅 DOC GeoJSON，供 turf.mask clip 使用
 let lnegPopup    = null
 
 const ptGeomMap = {}  // name → [w, s, e, n] for fitBounds
@@ -668,34 +669,63 @@ function addGeologyLayer() {
   if (map.getSource('lneg-wms'))               map.removeSource('lneg-wms')
   if (map.getSource('pt-geology-clip-source')) map.removeSource('pt-geology-clip-source')
 
+  // 決定顯示範圍：選取的產區 → 只 clip 該產區；否則 → 所有 DOC 產區
+  const baseGeoJSON = ptDocGeoJSON || ptRegionsGeoJSON
+  let clipFeatures = []
+  if (baseGeoJSON?.features.length) {
+    if (activeRegion.value?.name) {
+      const hit = baseGeoJSON.features.find(f => f.properties?.name === activeRegion.value.name)
+      clipFeatures = hit ? [hit] : baseGeoJSON.features
+    } else {
+      clipFeatures = baseGeoJSON.features
+    }
+  }
+
+  // 計算 bounds 限制 WMS 圖磚載入（減少容量）
+  let wmsBounds
+  if (clipFeatures.length) {
+    try {
+      const [w, s, e, n] = turf.bbox({ type: 'FeatureCollection', features: clipFeatures })
+      wmsBounds = [w - 0.15, s - 0.15, e + 0.15, n + 0.15]
+    } catch (_) {}
+  }
+
   map.addSource('lneg-wms', {
     type: 'raster',
     tiles: [LNEG_WMS_TILE],
     tileSize: 256,
+    ...(wmsBounds ? { bounds: wmsBounds } : {}),
     attribution: '© <a href="https://www.lneg.pt" target="_blank">LNEG</a>'
   })
+
+  // 置於 doc-fill 下方（確保產區輪廓 / 標籤在地質圖上方）
+  const beforeLayer = map.getLayer('doc-fill') ? 'doc-fill' : undefined
 
   map.addLayer({
     id: 'pt-geology-layer',
     type: 'raster',
     source: 'lneg-wms',
     paint: { 'raster-opacity': ptGeologyOpacity.value }
-  })
+  }, beforeLayer)
 
-  // turf.mask clip：只顯示葡萄牙產區範圍內的地質圖
-  if (ptRegionsGeoJSON && ptRegionsGeoJSON.features.length > 0) {
+  // turf.mask 精確裁切 — 僅顯示指定產區內的地質圖
+  if (clipFeatures.length) {
     try {
-      const merged = turf.union(...ptRegionsGeoJSON.features)
+      let merged = { type: 'Feature', geometry: clipFeatures[0].geometry, properties: {} }
+      for (let i = 1; i < clipFeatures.length; i++) {
+        if (!clipFeatures[i].geometry) continue
+        merged = turf.union(merged, { type: 'Feature', geometry: clipFeatures[i].geometry, properties: {} })
+      }
       const mask = turf.mask(merged)
       map.addSource('pt-geology-clip-source', { type: 'geojson', data: mask })
       map.addLayer({
         id: 'pt-geology-clip-overlay',
         type: 'fill',
         source: 'pt-geology-clip-source',
-        paint: { 'fill-color': '#000', 'fill-opacity': 0.55 }
-      })
-    } catch (_) {
-      // turf.mask 失敗時跳過 clip（仍顯示整個地質圖）
+        paint: { 'fill-color': '#000', 'fill-opacity': 0.9 }
+      }, beforeLayer)
+    } catch (err) {
+      console.warn('[LNEG] turf.mask failed:', err)
     }
   }
 }
@@ -720,6 +750,11 @@ function updateLnegOpacity() {
     map.setPaintProperty('pt-geology-layer', 'raster-opacity', ptGeologyOpacity.value)
   }
 }
+
+// 選取產區改變時自動重新 clip 地質圖
+watch(activeRegion, () => {
+  if (showGeology.value && map) addGeologyLayer()
+})
 
 // ── Toggle info panel ──────────────────────────────────────────────────────
 function toggleInfo() {
@@ -792,6 +827,7 @@ async function initMap() {
     allIGP.value = igpGeoJSON.features.map(f => f.properties)
 
     // 合併 DOC+IGP features 供 turf.mask clip 使用
+    ptDocGeoJSON = { type: 'FeatureCollection', features: docGeoJSON.features.filter(f => f.geometry) }
     ptRegionsGeoJSON = {
       type: 'FeatureCollection',
       features: [...docGeoJSON.features, ...igpGeoJSON.features].filter(f => f.geometry)
@@ -1012,7 +1048,13 @@ async function initMap() {
           return
         }
 
-        // 地質模式：跟蹤 LNEG GetFeatureInfo
+        // 地質模式：只在 GeoJSON 產區內觸發 GetFeatureInfo
+        const inRegionLayers = ['doc-fill', 'igp-fill'].filter(id => map.getLayer(id))
+        if (inRegionLayers.length) {
+          const inRegion = map.queryRenderedFeatures(e.point, { layers: inRegionLayers })
+          if (!inRegion.length) return
+        }
+
         const { lng, lat } = e.lngLat
         map.getCanvas().style.cursor = 'wait'
         try {
