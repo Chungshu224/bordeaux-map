@@ -134,10 +134,11 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import * as turf from '@turf/turf'
 import {
   RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
   RegionMapAppellationDrawer, RegionMapMobileToolbar
@@ -245,6 +246,25 @@ const HU_GEO_AGE_MAP = {
   'Ng':   '新近紀',  'Pg':  '古近紀',
 }
 
+// ── 匈牙利岩石土壤與葡萄酒介紹 ───────────────────────────────
+const HU_LITHO_WINE_DESC = {
+  'lösz':        '黃土土壤排水良好、保溫性強，多見於 Szekszárd 與 Eger 紅酒產區，適合 Kékfrankos（藍法蘭克）生長。',
+  'bazalt':      '玄武岩風化土礦物質豐富，多見於巴拉頓湖北岸（Badacsony），賦予 Olaszrizling 白酒獨特的礦石感。',
+  'riolittufa':  '流紋凝灰岩分佈於 Tokaj-Hegyalja，富含礦物質，是 Furmint 葡萄的火山基盤，形成 Aszú 甜酒的酸度與複雜度。',
+  'andezittufa': '安山凝灰岩常見於 Eger 產區火山丘，保水性佳，賦予 Egri Bikavér（公牛血）豐富的結構感。',
+  'andezit':     '安山岩風化形成富含鐵質的土壤，多分佈於 Mátra 與 Eger 丘陵，有助於葡萄積累色素與多酚。',
+  'riolit':      '流紋岩為 Tokaj 地區重要的火山岩基，風化後形成富含礦物質的沙質壤土，利於 Furmint 發展細膩酸度。',
+  'mészkő':     '石灰岩偏鹼性、保水性佳，多見於 Villány 丘陵，有利於種植 Cabernet Franc 和 Merlot 等波爾多品種。',
+  'dolomit':     '白雲岩排水良好，分佈於 Balaton-Felvidék，為 Pinot Gris 與 Riesling 提供清新礦石風味的基礎。',
+  'homok':       '砂質土排水極佳，是 Nagy-Alföld（大平原）特色土壤，歷史上因砂質對根瘤蚜（Phylloxera）有防護作用，保存了許多未嫁接老藤。',
+  'agyag':       '黏土保水性強，夏季可緩解水分壓力，多見於 Eger 盆地及 Tolna 地區，適合 Kékfrankos 和 Syrah 等品種。',
+  'kavics':      '礫石土壤白天吸熱、夜間散熱，有助於葡萄果實成熟，多見於 Tokaj 山麓沖積扇地帶。',
+  'márga':       '泥灰岩兼具石灰岩與黏土特性，有助於葡萄根系深入尋水，多見於 Somló 與 Villány 地區。',
+  'homokkő':    '砂岩透水性佳，礦物質含量適中，見於 Pécs 附近與 Mecsek 山麓，常為 Pinot Noir 提供細膩質地。',
+  'travertin':   '石灰華由泉水沉積而成，質地疏鬆多孔、排水良好，礦物質豐富，少量見於溫泉地帶。',
+  'aleurit':     '粉砂岩土壤保肥性良好，富含細粒礦物，多分佈於丘陵麓地，有助於葡萄均衡生長。',
+}
+
 function translateHuLith(text) {
   if (!text) return ''
   let t = text.trim().toLowerCase()
@@ -270,19 +290,25 @@ function translateHuGeoIndex(idx) {
 function renderHungaryGeoPopupHTML(attrs) {
   const nev      = attrs.NEV || ''
   const lith     = attrs.LITOLOGIA || ''
-  const geoIdx   = attrs.geo_ndx || attrs.GEO || ''
+  const geoIdx   = attrs.GEO || attrs.geo_ndx || ''
   const age      = translateHuGeoIndex(geoIdx)
   const lithZh   = translateHuLith(lith)
+  // 查找土壤介紹
+  let wineDesc = ''
+  const lithLower = lith.toLowerCase()
+  for (const [key, desc] of Object.entries(HU_LITHO_WINE_DESC)) {
+    if (lithLower.includes(key)) { wineDesc = desc; break }
+  }
   const rows = []
   if (nev) rows.push(`<tr><td class="pl">地層名稱</td><td>${nev}</td></tr>`)
   if (lith) rows.push(`<tr><td class="pl">岩性</td><td>${lith}${lithZh && lithZh !== lith ? ` <span style="color:#c8a44e">(${lithZh})</span>` : ''}</td></tr>`)
-  if (geoIdx) rows.push(`<tr><td class="pl">地質索引</td><td>${geoIdx}</td></tr>`)
   if (age && age !== geoIdx) rows.push(`<tr><td class="pl">地質時代</td><td style="color:#c8a44e;font-weight:700">${age}</td></tr>`)
   if (!rows.length) return null
   return `
     <div class="hugeo-popup-inner">
       <div class="hugeo-popup-title">🪨 匈牙利地質圖</div>
       <table class="hugeo-popup-table"><tbody>${rows.join('')}</tbody></table>
+      ${wineDesc ? `<div class="hugeo-popup-wine">🍷 ${wineDesc}</div>` : ''}
       <div class="hugeo-popup-src">資料來源：HuGeo FDT100（1:100,000）</div>
     </div>`
 }
@@ -638,26 +664,57 @@ function toggleContours() {
 
 // ── HuGeo 地質圖層 ─────────────────────────────────────────────
 function addGeoLayer() {
-  if (!map) return
-  if (!map.getSource('hu-geo-wms')) {
-    map.addSource('hu-geo-wms', {
-      type: 'raster',
-      tiles: [HUGEO_WMS_TILE],
-      tileSize: 256,
-      minzoom: 4,
-      maxzoom: 16,
-      attribution: '© HuGeo FDT100 Magyarország földtani térképe (CC-BY 4.0)'
-    })
+  if (!map || !allRegionsGeojson.value) return
+  // 決定裁切範圍：若有選取產區則只顯示該區，否則顯示全部
+  const features = activeRegion.value
+    ? allRegionsGeojson.value.features.filter(f => f.properties._folder === activeRegion.value.folder)
+    : allRegionsGeojson.value.features
+  if (!features.length) return
+
+  // 計算 bounds 並外擴 0.15°
+  const combined = { type: 'FeatureCollection', features }
+  const bbox = turf.bbox(combined)
+  const pad = 0.15
+  const wmsBounds = [bbox[0] - pad, bbox[1] - pad, bbox[2] + pad, bbox[3] + pad]
+
+  // 移除舊圖層（重建以套用新 bounds）
+  if (map.getLayer('hu-geo-clip'))  map.removeLayer('hu-geo-clip')
+  if (map.getSource('hu-geo-clip')) map.removeSource('hu-geo-clip')
+  if (map.getLayer('hu-geo-layer')) map.removeLayer('hu-geo-layer')
+  if (map.getSource('hu-geo-wms'))  map.removeSource('hu-geo-wms')
+
+  const insertBefore = map.getLayer('hungary-all-fill') ? 'hungary-all-fill' : undefined
+
+  // WMS source 加 bounds 限制圖磚載入
+  map.addSource('hu-geo-wms', {
+    type: 'raster',
+    tiles: [HUGEO_WMS_TILE],
+    tileSize: 256,
+    minzoom: 4,
+    maxzoom: 16,
+    bounds: wmsBounds,
+    attribution: '© HuGeo FDT100 Magyarország földtani térképe (CC-BY 4.0)'
+  })
+  map.addLayer({
+    id: 'hu-geo-layer',
+    type: 'raster',
+    source: 'hu-geo-wms',
+    paint: { 'raster-opacity': geoOpacity.value }
+  }, insertBefore)
+
+  // turf.mask：建立遮罩，裁切產區外的地質圖層
+  let unionFeature = features[0]
+  for (let i = 1; i < features.length; i++) {
+    try { unionFeature = turf.union(turf.featureCollection([unionFeature, features[i]])) } catch {}
   }
-  if (!map.getLayer('hu-geo-layer')) {
-    const insertBefore = map.getLayer('hungary-all-fill') ? 'hungary-all-fill' : undefined
-    map.addLayer({
-      id: 'hu-geo-layer',
-      type: 'raster',
-      source: 'hu-geo-wms',
-      paint: { 'raster-opacity': geoOpacity.value }
-    }, insertBefore)
-  }
+  const maskGeoJSON = turf.mask(unionFeature)
+  map.addSource('hu-geo-clip', { type: 'geojson', data: maskGeoJSON })
+  map.addLayer({
+    id: 'hu-geo-clip',
+    type: 'fill',
+    source: 'hu-geo-clip',
+    paint: { 'fill-color': '#1a1c2c', 'fill-opacity': 0.90 }
+  }, insertBefore)
 }
 
 function toggleGeo() {
@@ -674,6 +731,8 @@ function toggleGeo() {
     if (map.getLayer('hu-geo-layer')) {
       map.setLayoutProperty('hu-geo-layer', 'visibility', 'none')
     }
+    if (map.getLayer('hu-geo-clip'))  map.removeLayer('hu-geo-clip')
+    if (map.getSource('hu-geo-clip')) map.removeSource('hu-geo-clip')
     if (geoPopup) { geoPopup.remove(); geoPopup = null }
     map.getCanvas().style.cursor = ''
   }
@@ -916,6 +975,9 @@ async function loadAllRegionsOverlay() {
     // 地質圖點擊查詢（ArcGIS REST）
     map.on('click', async (e) => {
       if (!geoEnabled.value) return
+      // 僅在已載入的產區 GeoJSON 內觸發
+      const inRegion = map.queryRenderedFeatures(e.point, { layers: ['hungary-all-fill'] })
+      if (!inRegion.length) return
       const { lng, lat } = e.lngLat
       const buf = 0.005
       const url = `/hugeo/arcgis/rest/services/fdt100/fdt_100/MapServer/26/query` +
@@ -958,6 +1020,11 @@ async function loadRegionsData() {
     console.error('載入 hungary-regions.json 失敗:', err)
   }
 }
+
+// 切換產區時重新裁切地質圖層
+watch(activeRegion, () => {
+  if (geoEnabled.value && map) addGeoLayer()
+})
 
 onMounted(async () => {
   await nextTick()  // 確保容器 DOM 尺寸就緒
@@ -1647,5 +1714,10 @@ function handleMobileAction(action) {
 .hugeo-popup-src {
   font-size: 0.65rem; color: #666; margin-top: 8px;
   border-top: 1px solid rgba(255,255,255,0.08); padding-top: 5px;
+}
+.hugeo-popup-wine {
+  font-size: 0.72rem; color: #d4b97a; margin-top: 8px;
+  background: rgba(200,164,78,0.08); border-radius: 5px;
+  padding: 6px 8px; line-height: 1.55;
 }
 </style>
