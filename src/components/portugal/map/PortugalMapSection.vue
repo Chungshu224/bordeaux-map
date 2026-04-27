@@ -224,7 +224,7 @@ const PORTUGAL_ZOOM   = 5.8
 const LNEG_WMS_TILE =
   '/lneg/server/services/CGP1M/MapServer/WMSServer' +
   '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
-  '&LAYERS=0&STYLES=' +
+  '&LAYERS=Unidades_Geol%C3%B3gicas421&STYLES=' +
   '&FORMAT=image%2Fpng&TRANSPARENT=TRUE' +
   '&CRS=EPSG%3A3857&WIDTH=256&HEIGHT=256' +
   '&BBOX={bbox-epsg-3857}'
@@ -573,6 +573,71 @@ function toggle3D() {
   } else {
     map.setTerrain(null)
   }
+}
+
+// ── LNEG WMS GetFeatureInfo popup ──────────────────────────────────────────
+const LNEG_LITHO_ZH = {
+  'Granito':         { zh: '花崗岩',    icon: '🪨', wine: '花崗岩土壤排水良好、谷物貧乏，發展細膩、高酸度、礦物感明顯的白葡萄酒，是 Vinho Verde 的標誌地質。' },
+  'Xisto':           { zh: '頁岩',      icon: '🪨', wine: '頁岩熱容高且導熱好，將大陽熱輻至地深處，是 Douro 谷 Port 酒和高級不加烈酒的根本地質。' },
+  'Granito e xisto': { zh: '花崗岩與頁岩', icon: '🪨', wine: '花崗岩與頁岩共存，小氣候變化豐富，多採品種均有良好適應性。' },
+  'Calcário':        { zh: '石灰岩',    icon: '🪩', wine: '石灰岩土壤高 pH、白平色，保水性佳，適合 Alentejo 白葡萄酒的單演。' },
+  'Basalto':         { zh: '玄武岩',    icon: '🌋', wine: '火山結構，含鐵鎂高、保水力強，多見於亞索爾群島，發展領人驚豔的酒高精緻度。' },
+  'Aluvião':         { zh: '沖積土',    icon: '🌾', wine: '河流沉積層，深厚鬆軟，保水力極佳，Ribatejo 等平原產區常見。' },
+  'Gabbro':          { zh: '戴布岩',    icon: '🖤', wine: '醫礦結構的基性岩，富鐵鎂、保水佳，產出結構強勁的紅葡萄酒。' },
+}
+
+function renderLNEGPopupHTML(text) {
+  if (!text || text.trim().length === 0) return null
+  if (text.includes('ServiceException')) return null
+
+  // LNEG 回應格式：第一行為標頭（@層名 FIELD1;FIELD2;...），第二行為資料
+  const lines = text.trim().split(/\r?\n/).map(l => l.trim()).filter(Boolean)
+  if (lines.length < 2) return null
+
+  // 找 header 行（包含 Descrição 或 Código）
+  let headerLine = '', dataLine = ''
+  for (let i = 0; i < lines.length - 1; i++) {
+    if (lines[i].includes('Descri') || lines[i].includes('digo') || lines[i].includes('Litol')) {
+      headerLine = lines[i]; dataLine = lines[i + 1]; break
+    }
+  }
+  if (!headerLine || !dataLine) return null
+
+  // 移除開頭 '@LayerName '
+  headerLine = headerLine.replace(/^@\S+ ?/, '')
+
+  const headers = headerLine.split(';').map(h => h.trim())
+  const values  = dataLine.split(';').map(v => v.trim())
+
+  const obj = {}
+  headers.forEach((h, i) => { if (h) obj[h.toUpperCase()] = values[i] || '' })
+
+  const code  = obj['CÓDIGO'] || obj['CODIGO'] || ''
+  const descr = obj['DESCRIÇÃO'] || obj['DESCRICAO'] || obj['DESCRI'] || ''
+  const zone  = obj['ZONA TECTONO ESTRATIGRÁFICA'] || ''
+  const era   = [obj['SISTEMA'] || '', obj['SÉRIE'] || ''].filter(Boolean).join(' / ')
+  const litho = obj['LITOLOGIASPREDOMINANTES'] || obj['LITOLOGIAS PREDOMINANTES'] || ''
+
+  if (!code && !descr) return null
+
+  // 對應中文註解（模糊匹配）
+  const lithoKey = Object.keys(LNEG_LITHO_ZH).find(k =>
+    (litho + ' ' + descr).toLowerCase().includes(k.toLowerCase())
+  )
+  const info = lithoKey ? LNEG_LITHO_ZH[lithoKey] : null
+
+  return `<div class="lneg-geo-popup">
+    <div class="lneg-geo-header">
+      <span class="lneg-geo-badge">${code || '🗺️ 地質圖層'}</span>
+      ${info ? '<span class="lneg-geo-icon">' + info.icon + '</span>' : ''}
+    </div>
+    ${descr ? `<div class="lneg-geo-descr">${descr}${info?.zh ? ' <small>(' + info.zh + ')</small>' : ''}</div>` : ''}
+    ${era   ? `<div class="lneg-geo-age">🗓 ${era}</div>` : ''}
+    ${litho ? `<div class="lneg-geo-litho">🪨 ${litho}</div>` : ''}
+    ${zone  ? `<div class="lneg-geo-zone">🌍 ${zone}</div>` : ''}
+    ${info?.wine ? `<div class="lneg-geo-wine">🍷 ${info.wine}</div>` : ''}
+    <div class="lneg-geo-footer">© LNEG 葡萄牙地質調查局 CGP 1:1M</div>
+  </div>`
 }
 
 // ── Toggle IGP layer ───────────────────────────────────────────────────────
@@ -955,7 +1020,7 @@ async function initMap() {
           const bbox = `${lat - d},${lng - d},${lat + d},${lng + d}`
           const base = '/lneg/server/services/CGP1M/MapServer/WMSServer' +
             '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo' +
-            '&LAYERS=0&QUERY_LAYERS=0' +
+            '&LAYERS=Unidades_Geol%C3%B3gicas421&QUERY_LAYERS=Unidades_Geol%C3%B3gicas421' +
             '&CRS=EPSG%3A4326' +
             `&BBOX=${bbox}` +
             '&WIDTH=11&HEIGHT=11&I=5&J=5' +
@@ -1876,6 +1941,12 @@ function handleMobileAction(action) {
   padding: 4px 14px 0;
   font-size: 12px;
   color: #444;
+}
+.lneg-geo-zone {
+  padding: 4px 14px 0;
+  font-size: 11.5px;
+  color: #666;
+  font-style: italic;
 }
 .lneg-geo-wine {
   margin: 7px 14px;
