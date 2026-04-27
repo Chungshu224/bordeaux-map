@@ -146,6 +146,7 @@ import {
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
+import { getMapboxToken, getMapboxStyleUrl } from '@/utils/getMapboxToken'
 
 const props  = defineProps({
   initialCluster: { type: Object, default: null },
@@ -659,7 +660,8 @@ async function initMap() {
   if (!mapContainer.value) return
   isLoading.value = true
   mapError.value  = null
-  mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
+  const MAPBOX_TOKEN = getMapboxToken()
+  mapboxgl.accessToken = MAPBOX_TOKEN
 
   try {
     const [geoRes, appRes] = await Promise.all([
@@ -701,7 +703,7 @@ async function initMap() {
 
     map = new mapboxgl.Map({
       container: mapContainer.value,
-      style: 'mapbox://styles/mapbox/satellite-streets-v12',
+      style: getMapboxStyleUrl(MAPBOX_TOKEN, 'satellite-streets-v12'),
       center: AUSTRALIA_CENTER,
       zoom: AUSTRALIA_ZOOM,
       attributionControl: false,

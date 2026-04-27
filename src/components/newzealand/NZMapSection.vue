@@ -118,6 +118,7 @@ import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
+import { getMapboxToken, getMapboxStyleUrl } from '@/utils/getMapboxToken'
 import {
   RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
   RegionMapAppellationDrawer, RegionMapMobileToolbar
@@ -536,10 +537,11 @@ const initMap = async (retry = 0) => {
       else mapError.value = '無法獲取地圖容器'
       return
     }
-    mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
+    const MAPBOX_TOKEN = getMapboxToken()
+    mapboxgl.accessToken = MAPBOX_TOKEN
     map = new mapboxgl.Map({
       container: mapContainer.value,
-      style: 'mapbox://styles/mapbox/satellite-streets-v12',
+      style: getMapboxStyleUrl(MAPBOX_TOKEN, 'satellite-streets-v12'),
       center: [174.886, -40.9006],
       zoom: 4,
       pitch: is3D.value ? 45 : 0,
