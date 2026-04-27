@@ -12,6 +12,16 @@
           <button class="rmap-drawer-close" @click="$emit('update:open', false)">✕</button>
         </div>
 
+        <!-- 類型篩選 tab（置於搜尋欄上方） -->
+        <div v-if="typeTabs?.length" class="rmap-filter-tabs">
+          <button v-for="tab in typeTabs" :key="tab.value"
+            class="rmap-filter-tab"
+            :class="['rmap-filter-tab--' + tab.value, { active: typeFilter === tab.value }]"
+            @click="$emit('update:type-filter', tab.value)">
+            {{ tab.label }}
+          </button>
+        </div>
+
         <!-- 搜尋 -->
         <div class="rmap-search-wrap">
           <span class="rmap-search-icon">🔍</span>
@@ -20,15 +30,6 @@
             :value="search"
             @input="$emit('update:search', $event.target.value)"
             placeholder="搜尋產區…" />
-        </div>
-
-        <!-- 類型篩選 -->
-        <div v-if="typeTabs?.length" class="rmap-filter-tabs">
-          <button v-for="tab in typeTabs" :key="tab.value"
-            class="rmap-filter-tab" :class="{ active: typeFilter === tab.value }"
-            @click="$emit('update:type-filter', tab.value)">
-            {{ tab.label }}
-          </button>
         </div>
 
         <!-- 清單（支援階層） -->
@@ -154,7 +155,7 @@ function badgeClass(type) {
 
 .rmap-search-wrap {
   position: relative;
-  margin: 12px 16px 8px;
+  margin: 4px 16px 10px;
 }
 .rmap-search-icon {
   position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
@@ -171,19 +172,41 @@ function badgeClass(type) {
 .rmap-search-input:focus { border-color: #722f37; }
 
 .rmap-filter-tabs {
-  display: flex; gap: 6px; padding: 0 16px 10px;
+  display: flex; gap: 8px;
+  padding: 10px 16px 6px;
   overflow-x: auto;
+  flex-shrink: 0;
 }
 .rmap-filter-tab {
-  padding: 5px 12px;
-  font-size: 12.5px; font-weight: 600;
-  background: #f3f3f3; color: #666;
-  border: 0; border-radius: 14px;
+  padding: 7px 18px;
+  font-size: 13px; font-weight: 700;
+  background: #f0f0f0; color: #555;
+  border: 2px solid transparent;
+  border-radius: 20px;
   cursor: pointer; white-space: nowrap;
-  transition: all 0.15s;
+  transition: all 0.18s;
+  letter-spacing: 0.02em;
 }
+.rmap-filter-tab:hover {
+  background: #e8e8e8;
+  border-color: #ccc;
+}
+/* DOC — 橘紅色 */
+.rmap-filter-tab--doc.active,
+.rmap-filter-tab--DOC.active {
+  background: #d84315; color: #fff;
+  border-color: #d84315;
+}
+/* IGP — 藍綠色 */
+.rmap-filter-tab--igp.active,
+.rmap-filter-tab--IGP.active {
+  background: #00796b; color: #fff;
+  border-color: #00796b;
+}
+/* 通用 active fallback */
 .rmap-filter-tab.active {
   background: #722f37; color: #fff;
+  border-color: #722f37;
 }
 
 .rmap-app-list {
