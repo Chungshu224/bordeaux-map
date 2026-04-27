@@ -44,12 +44,9 @@
       :open="drawerOpen"
       :region-name="initialCluster ? initialCluster.name + ' 產區' : '澳洲產區'"
       :items="filteredListUnified"
-      :type-tabs="STATE_TABS"
-      :type-filter="drawerStateTab"
       :search="drawerSearch"
       :active-id="activeRegion?.name || ''"
       @update:open="drawerOpen = $event"
-      @update:type-filter="drawerStateTab = $event"
       @update:search="drawerSearch = $event"
       @select="selectById"
     />
