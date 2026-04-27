@@ -14,6 +14,22 @@
       "destination": "https://geoservices.brgm.fr/:path*"
     },
     {
+      "source": "/igme/:path*",
+      "destination": "https://mapas.igme.es/:path*"
+    },
+    {
+      "source": "/bgr/:path*",
+      "destination": "https://services.bgr.de/:path*"
+    },
+    {
+      "source": "/hugeo/:path*",
+      "destination": "https://map.hugeo.hu/:path*"
+    },
+    {
+      "source": "/asris/:path*",
+      "destination": "https://www.asris.csiro.au/:path*"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },

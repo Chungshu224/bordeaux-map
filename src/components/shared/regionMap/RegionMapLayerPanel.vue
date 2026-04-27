@@ -25,6 +25,7 @@
         <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
       </button>
       <button
+        v-if="!hideSoil"
         class="rmap-btn-layer"
         :class="{ active: soilEnabled, disabled: soilDisabled }"
         :disabled="soilDisabled"
@@ -58,6 +59,8 @@ defineProps({
   soilLabel: { type: String, default: '土壤結構' },
   /** 該產區尚未實作土壤資料時 disable 此按鈕 */
   soilDisabled: { type: Boolean, default: true },
+  /** 完全隱藏土壤結構按鈕 */
+  hideSoil: { type: Boolean, default: false },
   /** 是否顯示 BRGM 地質圖按鈕（法國產區用） */
   brgmAvailable: { type: Boolean, default: false },
   brgmEnabled: { type: Boolean, default: false },
@@ -81,10 +84,24 @@ defineEmits(['toggle-3d', 'toggle-contours', 'toggle-climate', 'toggle-soil', 't
   margin-bottom: 10px;
 }
 .rmap-layer-close {
-  background: none; border: 0; font-size: 16px; cursor: pointer;
-  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.06);
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  color: #888;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
 }
-.rmap-layer-close:hover { color: #333; }
+.rmap-layer-close:hover {
+  background: rgba(0,0,0,0.14);
+  color: #333;
+}
 .rmap-layer-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;

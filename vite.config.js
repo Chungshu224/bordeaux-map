@@ -79,6 +79,12 @@ export default defineConfig({
         target: 'https://map.hugeo.hu',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/hugeo/, '')
+      },
+      // ASRIS 澳洲土壤資源資訊服務 proxy — 解決 CORS 問題
+      '/asris': {
+        target: 'https://www.asris.csiro.au',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/asris/, '')
       }
     }
   }

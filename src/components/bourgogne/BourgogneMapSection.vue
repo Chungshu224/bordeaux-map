@@ -67,6 +67,7 @@
         :is3D="is3D"
         :show-contours="showContours"
         :climate-enabled="climateEnabled"
+        :hide-soil="true"
         :brgm-available="true"
         :brgm-enabled="brgmEnabled"
         @toggle-3d="toggle3D"
@@ -1195,7 +1196,6 @@ const toggleClimate = async () => {
     try {
       await loadClimateData()
       // 互斥：關閉地質
-      }
       climateEnabled.value = true
       applyClimateColor(climateYear.value)
     } catch (err) {
@@ -1415,6 +1415,7 @@ watch(() => props.activeAOC, (newAOC, oldAOC) => {
   }
 }, { deep: true })
 
+onMounted(async () => {
   window.addEventListener('resize', checkMobile)
   await nextTick()
   setTimeout(async () => {

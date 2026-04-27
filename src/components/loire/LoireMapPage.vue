@@ -97,7 +97,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -546,6 +546,7 @@ async function initMap(retry = 0) {
       map.addControl(new mapboxgl.NavigationControl(), 'top-right')
       map.addControl(new mapboxgl.FullscreenControl(), 'top-right')
       mapReady.value = true
+      selectAOC('Regional', 'Loire-region.geojson')
     })
     map.on('error', e => { mapError.value = `地圖錯誤: ${e.error?.message || ''}` })
   } catch (err) {

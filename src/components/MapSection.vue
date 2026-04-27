@@ -46,7 +46,7 @@
       <!-- 面板標題（桌機 + 行動） -->
       <div class="layers-panel-header">
         <span>圖層與顯示</span>
-        <button v-if="isMobile" class="layers-panel-close" @click="mobileLayersOpen = false" aria-label="關閉">✕</button>
+        <button class="layers-panel-close" @click="isMobile ? mobileLayersOpen = false : layersPanelOpen = false" aria-label="收合">✕</button>
       </div>
 
       <!-- ── 視角 ── -->
@@ -2200,14 +2200,24 @@ const unifiedInfo = computed(() => {
 }
 
 .layers-panel-close {
-  display: none;
-  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(138,106,80,0.1);
   border: none;
   cursor: pointer;
   color: #8a6a50;
-  font-size: 14px;
-  padding: 0 2px;
+  font-size: 13px;
+  padding: 0;
   line-height: 1;
+  transition: background 0.15s;
+}
+.layers-panel-close:hover {
+  background: rgba(138,106,80,0.22);
+  color: #5c3a1e;
 }
 
 /* 分群組 */

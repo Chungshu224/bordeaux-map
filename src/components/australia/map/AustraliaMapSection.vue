@@ -105,10 +105,12 @@
           :is3D="is3D"
           :show-contours="showContour"
           :climate-enabled="climateEnabled"
-          :soil-disabled="true"
+          :soil-disabled="false"
+          :soil-enabled="showGeology"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContour"
           @toggle-climate="toggleClimate"
+          @toggle-soil="toggleGeology"
           @close="showLayerPanel = false"
         />
         <!-- Zone 層按鈕（澳洲專用）-->
@@ -143,6 +145,7 @@ import {
 } from '../../shared/regionMap/index.js'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import * as turf from '@turf/turf'
 
 const props  = defineProps({
   initialCluster: { type: Object, default: null },
@@ -163,6 +166,7 @@ const drawerStateTab= ref('all')
 const activeState   = ref('all')
 const showZones     = ref(false)
 const showContour   = ref(false)
+const showGeology   = ref(false)
 const showLayerPanel = ref(false)
 const activeRegion  = ref(null)
 
@@ -224,10 +228,21 @@ const selectedRegionName = ref(null) // name of single-selected feature
 
 let map         = null
 let hoveredId   = null
+let asrisPopup  = null
+let auRegionsGeoJSON = null  // 儲存全部產區 GeoJSON，用於 turf.mask clip
 const featureGeomMap = {}  // name → merged bbox [w, s, e, n] for fitBounds
 
 const AUSTRALIA_CENTER = [134.0, -26.5]
 const AUSTRALIA_ZOOM   = 3.5
+
+// ASRIS 澳洲土壤分類 WMS tile URL（透過 /asris proxy 解決 CORS）
+const ASRIS_WMS_TILE =
+  '/asris/arcgis/services/ASRIS/ASRIS_ASC_MOB/MapServer/WMSServer' +
+  '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
+  '&LAYERS=Australian_Soil_Classification54544&STYLES=' +
+  '&FORMAT=image%2Fpng&TRANSPARENT=TRUE' +
+  '&CRS=EPSG%3A3857&WIDTH=256&HEIGHT=256' +
+  '&BBOX={bbox-epsg-3857}'
 
 // ── State tabs ─────────────────────────────────────────────────────────────
 const STATE_TABS = [
@@ -412,6 +427,108 @@ function updateStateFilter() {
   map.setFilter('region-labels', combined)
 }
 
+// ── ASRIS popup render ─────────────────────────────────────────────────────
+const ASC_INFO = {
+  Anthroposols: { zh: '人工土',    icon: '🏭', cat: '人為改造土',    wine: '深度人為改造的土壤，農耕管理影響面大於地質本身。' },
+  Calcarosols:  { zh: '石灰土',    icon: '🪨', cat: '突出石灰質',    wine: '富含碳酸鈣，高 pH 幫助維持葡萄的天然酸度，產出細膩清爽的白葡萄酒。' },
+  Chromosols:   { zh: '彩色土',    icon: '🌏', cat: '層次強烈彩色',  wine: '表層與底層色彩對比醒目，排水性良，適合樹正生長，克萊島主要土型。' },
+  Dermosols:    { zh: '皮層土',    icon: '🟤', cat: '發花結構層',    wine: '結構良好、有機質居中，保水與排水平衡，Piccadilly Valley 等山區常見。' },
+  Ferrosols:    { zh: '鐵質土',    icon: '🟠', cat: '鐵性高活性黏土', wine: '鮮紅色含鐵層，保水力極佳，地中海個方亞等臺地產區下層常見的豐潤葡萄園土壤。' },
+  Hydrosols:    { zh: '水成土',    icon: '💧', cat: '長期水分飽和',   wine: '常年潮濕，不適大多數葡萄樹，但在高地白葡萄品種如 Riesling 對冷濕潛水有定要求時可見到。' },
+  Kandosols:    { zh: '高嶺石土',  icon: '🏜️', cat: '低活性漂石質',  wine: '結構較弱，排水良，廣泛分布於澳內陸丘，大尺度樹部建立需明智統水管理。' },
+  Kurosols:     { zh: '黑暗土',    icon: '⚫', cat: '黃淋期層理化',   wine: '表層酸性，子層具道列結構，成熟期長，產出酒結構細致、酸度活潑。' },
+  Organosols:   { zh: '有機土',    icon: '🌿', cat: '高有機質層',    wine: '富含有機質，保水力強，多見於塔斯馬尼亞等潤濕山地，不常用於葡萄園。' },
+  Podosols:     { zh: '灰化土',    icon: '🦴', cat: '漂名灰化 B 層', wine: '表層沙迥細拔，微酸，不保肥，多見於西澳海岸帶，壓力小的古老葡萄樹可產出獨特的應力感。' },
+  Rudosols:     { zh: '原始土',    icon: '🪨', cat: '極少發育度',    wine: '地質國度低，山層或柴灣山頂常見，葡萄樹在此將深根以尋找水分，產出充滿礦物張力的葡萄酒。' },
+  Sodosols:     { zh: '鈉質土',    icon: '🔵', cat: '層間高鈉質',    wine: '子層高鈉導致發掌展流失走，管理難度高；部分牛山酒區有驚人的老藤調配表現。' },
+  Tenosols:     { zh: '薄土',      icon: '⚪', cat: '弱發育水成層',   wine: '崖山或海岸山丘常見，土層矮，葡萄樹需攔挖、富水流磁產酒多重層次礦物感。' },
+  Vertosols:    { zh: '膨脹黏土',  icon: '🔴', cat: '高膨潤發膨脹黏土', wine: '雨季膨脹乾季收縮，保水力極佳，完熟八月，庫納瓦拉 Coonawarra 著名紅土 (Terra Rossa) 下方的基底。' },
+}
+
+function renderASRISPopupHTML(text) {
+  const lines = text.trim().split('\n').map(l => l.trim())
+  const hi = lines.findIndex(l => l.includes('Raster.ASC_ORD'))
+  if (hi < 0) return null
+  const headers = lines[hi].split(';').map(h => h.trim()).filter(Boolean)
+  const dataLine = lines[hi + 1]
+  if (!dataLine) return null
+  const vals = dataLine.split(';').map(v => v.trim())
+  const obj = {}
+  headers.forEach((h, i) => { obj[h] = vals[i] || '' })
+  const ascOrd  = obj['Raster.ASC_ORD'] || ''
+  const ascName = obj['Raster.ASC_ORDER_NAME'] || ''
+  if (!ascOrd && !ascName) return null
+  const info = ASC_INFO[ascName] || { zh: '', icon: '🌏', cat: '', wine: '' }
+  return `<div class="asris-geology-popup">
+    <div class="asris-popup-header">
+      <span class="asris-type-badge">${info.icon} ${ascName}${info.zh ? ' · ' + info.zh : ''}</span>
+      ${ascOrd ? `<span class="asris-popup-code">${ascOrd}</span>` : ''}
+    </div>
+    ${info.cat ? `<div class="asris-popup-cat">${info.cat}</div>` : ''}
+    ${info.wine ? `<div class="asris-popup-wine">${info.wine}</div>` : ''}
+    <div class="asris-popup-footer">© CSIRO ASRIS Level 5 (CC-BY 4.0)</div>
+  </div>`
+}
+
+// ── Toggle Geology layer ────────────────────────────────────────────────────
+function toggleGeology() {
+  if (!map) return
+  showGeology.value = !showGeology.value
+  if (showGeology.value) {
+    addGeologyLayer()
+    map.getCanvas().style.cursor = 'crosshair'
+  } else {
+    if (asrisPopup) { asrisPopup.remove(); asrisPopup = null }
+    // 移除 clip overlay 與 WMS 圖層
+    if (map.getLayer('au-soil-clip-overlay')) map.removeLayer('au-soil-clip-overlay')
+    if (map.getSource('au-soil-clip-src')) map.removeSource('au-soil-clip-src')
+    if (map.getLayer('au-soil-layer')) map.removeLayer('au-soil-layer')
+    if (map.getSource('asris-wms')) map.removeSource('asris-wms')
+    map.getCanvas().style.cursor = ''
+  }
+}
+
+function addGeologyLayer() {
+  if (!map) return
+  // 清除舊層
+  if (map.getLayer('au-soil-clip-overlay')) map.removeLayer('au-soil-clip-overlay')
+  if (map.getSource('au-soil-clip-src')) map.removeSource('au-soil-clip-src')
+  if (map.getLayer('au-soil-layer')) map.removeLayer('au-soil-layer')
+  if (map.getSource('asris-wms')) map.removeSource('asris-wms')
+
+  map.addSource('asris-wms', {
+    type: 'raster',
+    tiles: [ASRIS_WMS_TILE],
+    tileSize: 256,
+    minzoom: 3,
+    maxzoom: 14,
+    attribution: '© CSIRO ASRIS Australian Soil Classification (CC-BY 4.0)'
+  })
+  const insertBefore = map.getLayer('region-fill') ? 'region-fill' : undefined
+  map.addLayer({
+    id: 'au-soil-layer',
+    type: 'raster',
+    source: 'asris-wms',
+    paint: { 'raster-opacity': 0.78 }
+  }, insertBefore)
+
+  // turf.mask clip — 遮罩產區外的土壤圖，僅顯示已開啟 GeoJSON 範圍內
+  if (auRegionsGeoJSON) {
+    try {
+      const maskData = turf.mask(auRegionsGeoJSON)
+      map.addSource('au-soil-clip-src', { type: 'geojson', data: maskData })
+      map.addLayer({
+        id: 'au-soil-clip-overlay',
+        type: 'fill',
+        source: 'au-soil-clip-src',
+        paint: { 'fill-color': '#060a10', 'fill-opacity': 0.78 }
+      }, map.getLayer('region-fill') ? 'region-fill' : undefined)
+    } catch (e) {
+      console.warn('[ASRIS] turf.mask clip 失敗:', e)
+    }
+  }
+}
+
 // ── Toggle Zone layer ──────────────────────────────────────────────────────
 function toggleZones() {
   showZones.value = !showZones.value
@@ -551,6 +668,7 @@ async function initMap() {
     ])
     if (!geoRes.ok) throw new Error('無法載入澳洲產區地理資料')
     const geoJSON = await geoRes.json()
+    auRegionsGeoJSON = geoJSON  // 儲存供 turf.mask clip 使用
     appellations.value = appRes.ok ? await appRes.json() : []
 
     // Build region list for drawer (deduplicate by name+state)
@@ -688,6 +806,46 @@ async function initMap() {
           const [w, s, e2, n] = bbox
           map.fitBounds([[w, s], [e2, n]], { padding: 80, maxZoom: 12, duration: 700 })
         }
+      })
+
+      // ASRIS WMS GetFeatureInfo — 土壤模式下點擊查詢土壤分類
+      map.on('click', async (e) => {
+        if (!showGeology.value) return
+        const { lng, lat } = e.lngLat
+        map.getCanvas().style.cursor = 'wait'
+        try {
+          const d = 0.5
+          const bbox = `${lat - d},${lng - d},${lat + d},${lng + d}`
+          const url =
+            '/asris/arcgis/services/ASRIS/ASRIS_ASC_MOB/MapServer/WMSServer' +
+            '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo' +
+            '&LAYERS=Australian_Soil_Classification54544' +
+            '&QUERY_LAYERS=Australian_Soil_Classification54544' +
+            '&INFO_FORMAT=text%2Fplain' +
+            '&CRS=EPSG%3A4326' +
+            `&BBOX=${bbox}` +
+            '&WIDTH=11&HEIGHT=11&I=5&J=5' +
+            '&FEATURE_COUNT=1'
+          const res = await fetch(url)
+          if (!res.ok) return
+          const text = await res.text()
+          const html = renderASRISPopupHTML(text)
+          if (!html) return
+          if (asrisPopup) asrisPopup.remove()
+          asrisPopup = new mapboxgl.Popup({ className: 'asris-popup-wrap', maxWidth: '300px', closeButton: true })
+            .setLngLat([lng, lat])
+            .setHTML(html)
+            .addTo(map)
+        } catch (err) {
+          console.warn('[ASRIS] GetFeatureInfo error:', err)
+        } finally {
+          map.getCanvas().style.cursor = showGeology.value ? 'crosshair' : ''
+        }
+      })
+
+      // 土壤模式下游標改為十字準心
+      map.on('mousemove', () => {
+        if (showGeology.value) map.getCanvas().style.cursor = 'crosshair'
       })
 
       // Click empty area → deselect (restore cluster filter)
@@ -1475,4 +1633,73 @@ function handleMobileAction(action) {
 /* rmap-section for extra-content slot */
 .rmap-section { margin-top: 8px; }
 .rmap-section-title { font-size: 11px; color: #999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }
+</style>
+
+<style>
+/* ── ASRIS 土壤 Popup（非 scoped，覆蓋 mapboxgl 樣式，參考 BRGM 風格） ── */
+.asris-popup-wrap .mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  min-width: 240px;
+}
+.asris-popup-wrap .mapboxgl-popup-close-button {
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  top: 7px; right: 9px;
+  z-index: 2;
+}
+.asris-geology-popup {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  font-size: 13px;
+  color: #222;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.asris-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #7b4b00 0%, #c97d2e 100%);
+  padding: 12px 14px 10px;
+  color: #fff;
+}
+.asris-type-badge {
+  font-size: 14px;
+  font-weight: 700;
+  flex: 1;
+  line-height: 1.3;
+}
+.asris-popup-code {
+  font-size: 10px;
+  background: rgba(255,255,255,0.25);
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.asris-popup-cat {
+  font-size: 11px;
+  color: #a05a00;
+  font-weight: 700;
+  padding: 7px 14px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.asris-popup-wine {
+  font-size: 12px;
+  color: #444;
+  padding: 5px 14px 0;
+  line-height: 1.55;
+}
+.asris-popup-footer {
+  font-size: 10px;
+  color: #aaa;
+  padding: 6px 14px 10px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 6px;
+}
 </style>
