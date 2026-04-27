@@ -54,6 +54,21 @@
       @select="selectById"
     />
 
+    <!-- ASRIS 土壤圖層浮動面板 -->
+    <div v-if="showGeology" class="asris-float-panel">
+      <div class="asris-float-title">🪨 ASRIS 土壤分類圖</div>
+      <div class="asris-float-row">
+        <span class="asris-float-label">透明度</span>
+        <input class="asris-opacity-slider" type="range" min="0.1" max="1.0" step="0.05"
+          v-model.number="asrisOpacity" @input="updateAsrisOpacity" />
+        <span class="asris-opacity-pct">{{ Math.round(asrisOpacity * 100) }}%</span>
+      </div>
+      <div class="asris-float-footer">
+        <span>資料來源：CSIRO ASRIS (CC-BY 4.0)</span>
+        <span>點擊地圖查看土壤資訊</span>
+      </div>
+    </div>
+
     <!-- 氣候熱力圖控制列 -->
     <transition name="climate-slide">
       <div v-if="climateEnabled && climateData" class="climate-overlay">
@@ -107,6 +122,7 @@
           :climate-enabled="climateEnabled"
           :soil-disabled="false"
           :soil-enabled="showGeology"
+          soil-label="ASRIS 土壤"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContour"
           @toggle-climate="toggleClimate"
@@ -170,6 +186,7 @@ const showContour   = ref(false)
 const showGeology   = ref(false)
 const showLayerPanel = ref(false)
 const activeRegion  = ref(null)
+const asrisOpacity  = ref(0.78)
 
 // ── Climate state ──────────────────────────────────────────────────────────
 const climateEnabled   = ref(false)
@@ -510,7 +527,7 @@ function addGeologyLayer() {
     id: 'au-soil-layer',
     type: 'raster',
     source: 'asris-wms',
-    paint: { 'raster-opacity': 0.78 }
+    paint: { 'raster-opacity': asrisOpacity.value }
   }, insertBefore)
 
   // turf.mask clip — 遮罩產區外的土壤圖，僅顯示已開啟 GeoJSON 範圍內
@@ -527,6 +544,14 @@ function addGeologyLayer() {
     } catch (e) {
       console.warn('[ASRIS] turf.mask clip 失敗:', e)
     }
+  }
+}
+
+// ── ASRIS 透明度調整 ────────────────────────────────────────────────────────
+function updateAsrisOpacity() {
+  if (!map) return
+  if (map.getLayer('au-soil-layer')) {
+    map.setPaintProperty('au-soil-layer', 'raster-opacity', asrisOpacity.value)
   }
 }
 
@@ -1614,6 +1639,56 @@ function handleMobileAction(action) {
   left: 50%;
   transform: translateX(-50%);
   z-index: 46;
+}
+/* ASRIS 浮動面板 */
+.asris-float-panel {
+  position: absolute;
+  bottom: 90px;
+  left: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+  padding: 12px 16px;
+  min-width: 220px;
+  z-index: 30;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.asris-float-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #7b4b00;
+  margin-bottom: 10px;
+}
+.asris-float-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.asris-float-label {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+.asris-opacity-slider {
+  flex: 1;
+  height: 4px;
+  accent-color: #c97d2e;
+}
+.asris-opacity-pct {
+  font-size: 12px;
+  color: #888;
+  min-width: 32px;
+  text-align: right;
+}
+.asris-float-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 10px;
+  color: #aaa;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 6px;
 }
 /* Zone 層澳洲專用按鈕 */
 .au-zone-toggle {
