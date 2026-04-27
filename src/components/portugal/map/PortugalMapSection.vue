@@ -222,13 +222,9 @@ const PORTUGAL_CENTER = [-8.0, 39.5]
 const PORTUGAL_ZOOM   = 5.8
 
 // ── LNEG WMS 常數 ──────────────────────────────────────────────────────────
-const LNEG_WMS_TILE =
-  '/lneg/server/services/CGP1M/MapServer/WMSServer' +
-  '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
-  '&LAYERS=Unidades_Geol%C3%B3gicas421&STYLES=' +
-  '&FORMAT=image%2Fpng&TRANSPARENT=TRUE' +
-  '&CRS=EPSG%3A3857&WIDTH=256&HEIGHT=256' +
-  '&BBOX={bbox-epsg-3857}'
+// ArcGIS tiled cache（LNEG CGP1M, EPSG:3857，zoom 3–15）
+// 使用 XYZ 圖磚格式取代 WMS，避免 Mapbox "Unlisted TLDs" 驗證錯誤
+const LNEG_WMS_TILE = '/lneg/server/rest/services/CGP1M/MapServer/tile/{z}/{y}/{x}'
 
 // ── Region info data ───────────────────────────────────────────────────────
 const regionData = {
@@ -694,6 +690,8 @@ function addGeologyLayer() {
     type: 'raster',
     tiles: [LNEG_WMS_TILE],
     tileSize: 256,
+    minzoom: 3,
+    maxzoom: 15,
     ...(wmsBounds ? { bounds: wmsBounds } : {}),
     attribution: '© <a href="https://www.lneg.pt" target="_blank">LNEG</a>'
   })

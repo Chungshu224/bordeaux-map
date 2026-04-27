@@ -143,14 +143,7 @@
           <span class="soil-opacity-pct">{{ Math.round(soilOpacity * 100) }}%</span>
         </div>
       </div>
-      <div class="geo-legend">
-        <div class="geo-legend-item"><span class="geo-dot" style="background:#dce3bc"></span>石灰岩/白雲岩</div>
-        <div class="geo-legend-item"><span class="geo-dot" style="background:#ccdfbf"></span>泥灰岩/砖岩</div>
-        <div class="geo-legend-item"><span class="geo-dot" style="background:#fffacc"></span>黴土/鬆散土</div>
-        <div class="geo-legend-item"><span class="geo-dot" style="background:#e85620"></span>火山岩</div>
-        <div class="geo-legend-item"><span class="geo-dot" style="background:#df96bc"></span>花崗岩/深成岩</div>
-        <div class="geo-legend-item"><span class="geo-dot" style="background:#b07abe"></span>變質岩</div>
-      </div>
+
     </div>
 
     <!-- ── 統一手機底部工具列 ── -->
@@ -1709,7 +1702,7 @@ onUnmounted(() => {
 /* ── 義大利地質浮動面板 ── */
 .italy-geo-float-panel {
   position: fixed;
-  top: 60px;
+  bottom: 90px;
   right: 16px;
   background: rgba(255,255,255,0.97);
   border-radius: 14px;
