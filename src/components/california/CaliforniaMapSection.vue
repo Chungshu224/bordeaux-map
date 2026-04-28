@@ -183,9 +183,10 @@ const mapError      = ref(null)
 const is3D             = ref(false)
 const infoCollapsed    = ref(true)
 const contoursEnabled  = ref(false)
-const drawerOpen    = ref(false)
-const layersOpen    = ref(false)
-const activeRegion  = ref(null)
+const drawerOpen      = ref(false)
+const layersOpen      = ref(false)
+const activeRegion    = ref(null)
+const isPlayingAudio  = ref(false)
 const allRegions    = ref([])
 
 // ── Climate state ──────────────────────────────────────────────────────────
@@ -413,11 +414,13 @@ function toggleInfo() {
 let currentAudio = null
 function playPronunciation() {
   if (!activeRegion.value?.name) return
-  if (currentAudio) { currentAudio.pause(); currentAudio = null }
+  if (currentAudio) { currentAudio.pause(); currentAudio = null; isPlayingAudio.value = false }
   const audioPath = `/california/sounds/${encodeURIComponent(activeRegion.value.name)}.mp3`
   currentAudio = new Audio(audioPath)
-  currentAudio.play().catch(() => {})
-  currentAudio.onended = () => { currentAudio = null }
+  isPlayingAudio.value = true
+  currentAudio.play().catch(() => { isPlayingAudio.value = false })
+  currentAudio.onended  = () => { isPlayingAudio.value = false; currentAudio = null }
+  currentAudio.onerror  = () => { isPlayingAudio.value = false; currentAudio = null }
 }
 
 // ── Select from drawer ─────────────────────────────────────────────────────
@@ -583,6 +586,7 @@ async function initMap() {
 
       // Click interaction
       map.on('click', 'ava-fill', (e) => {
+        if (soilEnabled.value) return   // 地質圖層開啟時不足操作 AVA
         if (!e.features.length) return
         const props = e.features[0].properties
         const reg = allRegions.value.find(r => r.id === props.ava_id)
@@ -605,6 +609,7 @@ async function initMap() {
       })
 
       map.on('click', (e) => {
+        if (soilEnabled.value) return   // 地質圖層開啟時不清除選擇
         const features = map.queryRenderedFeatures(e.point, { layers: ['ava-fill'] })
         if (!features.length && activeRegion.value) {
           clearSelection()
@@ -788,9 +793,10 @@ async function toggleClimate() {
   if (map && map.getLayer('ava-climate-fill')) map.removeLayer('ava-climate-fill')
 }
 
-// 選中產區變更時，同步更新氣候圖層
+// 選中產區變更時，同步更新氣候圖層與地質裁切
 watch(activeRegion, () => {
   if (climateEnabled.value) applyClimateColor(climateYear.value)
+  if (soilEnabled.value)    updateCAGeoClip()
 })
 
 onMounted(initMap)
@@ -910,16 +916,17 @@ function renderCAGeoPopupHTML(attrs) {
   const name    = attrs.UNITNAME || attrs.unitname || attrs.LABEL || attrs.label || ''
   const age     = attrs.GENERALIZED_AGE  || attrs.generalized_age  || ''
   const info    = getCALithoInfo(ltype, ptype)
+  // 舌壤介紹沒有對應项時，至少顯示山石類型文字
+  const displayType = info?.zh || ltype || ''
   return `
     <div class="ca-geo-popup">
       <div class="ca-geo-popup-header">🗺️ 加州地質</div>
-      ${name  ? `<div class="ca-geo-row"><span class="ca-geo-label">地層名稱</span><span class="ca-geo-val">${name}</span></div>`  : ''}
-      ${ptype ? `<div class="ca-geo-row"><span class="ca-geo-label">地質代號</span><span class="ca-geo-val">${ptype}</span></div>` : ''}
-      ${ltype ? `<div class="ca-geo-row"><span class="ca-geo-label">岩石類型</span><span class="ca-geo-val">${ltype}</span></div>` : ''}
-      ${age   ? `<div class="ca-geo-row"><span class="ca-geo-label">地質年代</span><span class="ca-geo-val">${age}</span></div>`   : ''}
+      ${name         ? `<div class="ca-geo-row"><span class="ca-geo-label">地層名稱</span><span class="ca-geo-val">${name}</span></div>`        : ''}
+      ${displayType  ? `<div class="ca-geo-row"><span class="ca-geo-label">岩石類型</span><span class="ca-geo-val">${displayType}</span></div>` : ''}
+      ${age          ? `<div class="ca-geo-row"><span class="ca-geo-label">地質年代</span><span class="ca-geo-val">${age}</span></div>`           : ''}
       ${info ? `
       <div class="ca-geo-wine-block">
-        <div class="ca-geo-wine-title">${info.icon} ${info.zh}</div>
+        <div class="ca-geo-wine-title">${info.icon} 葡萄酒產區地質與土壤</div>
         <div class="ca-geo-wine-text">${info.wine}</div>
       </div>` : ''}
       <div class="ca-geo-credit">資料來源：CGS Geologic Map of California (Public Domain)</div>
@@ -934,11 +941,9 @@ async function loadCAGeologyLayer() {
   if (map.getLayer('ca-geology-layer'))  map.removeLayer('ca-geology-layer')
   if (map.getSource('ca-geology-wms'))   map.removeSource('ca-geology-wms')
 
+  // ArcGIS REST tile 格式（{z}/{y}/{x}），比 WMS 更難被伺服器拑絕
   const CGS_TILE =
-    '/cgs/server/services/CGS/Geologic_Map_of_California/MapServer/WMSServer' +
-    '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=0' +
-    '&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256' +
-    '&CRS=EPSG:3857&FORMAT=image/png&TRANSPARENT=TRUE&STYLES='
+    '/cgs/server/rest/services/CGS/Geologic_Map_of_California/MapServer/tile/{z}/{y}/{x}'
 
   map.addSource('ca-geology-wms', {
     type: 'raster',
@@ -953,23 +958,8 @@ async function loadCAGeologyLayer() {
     paint: { 'raster-opacity': soilOpacity.value },
   })
 
-  // 裁切 mask：顯示在 AVA 邊界內
-  if (caAvaGeoJSON?.features?.length) {
-    try {
-      let merged = caAvaGeoJSON.features[0]
-      for (let i = 1; i < caAvaGeoJSON.features.length; i++) {
-        try { merged = turf.union(turf.featureCollection([merged, caAvaGeoJSON.features[i]])) } catch (_) {}
-      }
-      const maskData = turf.mask(merged)
-      map.addSource('ca-geo-clip-src', { type: 'geojson', data: maskData })
-      map.addLayer({
-        id: 'ca-geo-clip-mask',
-        type: 'fill',
-        source: 'ca-geo-clip-src',
-        paint: { 'fill-color': '#f5f1eb', 'fill-opacity': 0.92 },
-      })
-    } catch (_) {}
-  }
+  // 裁切 mask：僅顯示目前開啟的 AVA（輕量裁切，不合並全部）
+  updateCAGeoClip()
 
   // Click handler（ArcGIS REST query，仿義大利）
   if (!caGeoClickReg) {
@@ -999,6 +989,27 @@ async function loadCAGeologyLayer() {
       } catch (_) {}
     })
   }
+}
+
+// 更新裁切 mask 至目前開啟的單一 AVA
+function updateCAGeoClip() {
+  if (!map || !soilEnabled.value) return
+  if (map.getLayer('ca-geo-clip-mask')) map.removeLayer('ca-geo-clip-mask')
+  if (map.getSource('ca-geo-clip-src')) map.removeSource('ca-geo-clip-src')
+  const activeId = activeRegion.value?.id
+  if (!activeId || !caAvaGeoJSON?.features?.length) return
+  const feature = caAvaGeoJSON.features.find(f => f.properties?.ava_id === activeId)
+  if (!feature) return
+  try {
+    const maskData = turf.mask(feature)
+    map.addSource('ca-geo-clip-src', { type: 'geojson', data: maskData })
+    map.addLayer({
+      id: 'ca-geo-clip-mask',
+      type: 'fill',
+      source: 'ca-geo-clip-src',
+      paint: { 'fill-color': '#f5f1eb', 'fill-opacity': 0.92 },
+    })
+  } catch (_) {}
 }
 
 function removeCAGeologyLayer() {

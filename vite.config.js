@@ -102,6 +102,7 @@ export default defineConfig({
       '/cgs': {
         target: 'https://maps.conservation.ca.gov',
         changeOrigin: true,
+        headers: { 'Referer': 'https://maps.conservation.ca.gov' },
         rewrite: (path) => path.replace(/^\/cgs/, '')
       }
     }
