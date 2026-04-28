@@ -910,19 +910,114 @@ function getCALithoInfo(ltype, ptype) {
   return null
 }
 
+// ── 地質術語中文對照 ────────────────────────────────────────────────────────
+const LITH_ZH = {
+  'sandstone': '砂岩', 'shale': '頁岩', 'limestone': '石灰岩', 'mudstone': '泥岩',
+  'siltstone': '粉砂岩', 'conglomerate': '礫岩', 'chert': '燧石岩', 'dolostone': '白雲岩',
+  'dolomite': '白雲岩', 'marble': '大理岩', 'slate': '板岩', 'schist': '片岩',
+  'gneiss': '片麻岩', 'phyllite': '千枚岩', 'quartzite': '石英岩',
+  'granite': '花崗岩', 'granodiorite': '花崗閃長岩', 'diorite': '閃長岩',
+  'gabbro': '輝長岩', 'tonalite': '英雲閃長岩', 'rhyolite': '流紋岩',
+  'andesite': '安山岩', 'basalt': '玄武岩', 'tuff': '凝灰岩',
+  'volcanic breccia': '火山角礫岩', 'obsidian': '黑曜岩',
+  'serpentinite': '蛇紋岩', 'peridotite': '橄欖岩', 'dunite': '純橄欖岩',
+  'ultramafic': '超基性岩',
+  'alluvium': '沖積層', 'gravel': '礫石', 'sand': '砂', 'clay': '黏土',
+  'silt': '粉砂', 'mud': '淤泥', 'till': '冰磧物',
+  'mixed': '混合岩', 'undivided': '未分類', 'not reported': '未記錄',
+  'greywacke': '雜砂岩', 'arkose': '長石砂岩', 'turbidite': '濁流岩',
+  'melange': '混雜堆積', 'mélange': '混雜堆積',
+}
+const AGE_ZH = {
+  'hadean': '冥古宙', 'archean': '太古宙', 'proterozoic': '元古宙',
+  'cambrian': '寒武紀', 'ordovician': '奧陶紀', 'silurian': '志留紀',
+  'devonian': '泥盆紀', 'mississippian': '密西西比紀', 'pennsylvanian': '賓夕法尼亞紀',
+  'carboniferous': '石炭紀', 'permian': '二疊紀', 'triassic': '三疊紀',
+  'jurassic': '侏羅紀', 'cretaceous': '白堊紀', 'paleocene': '古新世',
+  'eocene': '始新世', 'oligocene': '漸新世', 'miocene': '中新世',
+  'pliocene': '上新世', 'pleistocene': '更新世', 'holocene': '全新世',
+  'quaternary': '第四紀', 'neogene': '新近紀', 'paleogene': '古近紀',
+  'cenozoic': '新生代', 'mesozoic': '中生代', 'paleozoic': '古生代',
+  'precambrian': '前寒武紀',
+  'early': '早', 'middle': '中', 'late': '晚', 'upper': '晚', 'lower': '早',
+  'turonian': '土侖期', 'campanian': '坎帕期', 'maastrichtian': '馬斯特里赫特期',
+  'aptian': '阿普特期', 'albian': '阿爾比期', 'cenomanian': '賽諾曼期',
+  'oxfordian': '牛津期', 'kimmeridgian': '金默里奇期', 'tithonian': '提通期',
+  'bathonian': '巴通期', 'bajocian': '巴柔期', 'aalenian': '阿連期',
+  'toarcian': '托爾期', 'pliensbachian': '普林斯巴期', 'sinemurian': '錫內穆期',
+  'hettangian': '赫唐期', 'norian': '諾里期', 'carnian': '卡尼期',
+  'ladinian': '拉丁期', 'anisian': '安尼西亞期',
+  'ypresian': '伊普雷斯期', 'lutetian': '盧特期', 'bartonian': '巴頓期',
+  'priabonian': '普里阿邦期', 'rupelian': '呂珀爾期', 'chattian': '夏特期',
+  'aquitanian': '阿基坦期', 'burdigalian': '布爾迪加爾期', 'langhian': '蘭根期',
+  'serravallian': '薩拉瓦利安期', 'tortonian': '托爾托納期', 'messinian': '墨西拿期',
+  'zanclean': '贊克爾期', 'piacenzian': '皮亞琴察期',
+  'gelasian': '傑拉斯期', 'calabrian': '卡拉布里亞期', 'ionian': '愛奧尼亞期',
+}
+
+function translateLith(en) {
+  if (!en) return ''
+  let s = en.trim().toLowerCase()
+  for (const [k, v] of Object.entries(LITH_ZH)) {
+    s = s.replace(new RegExp(`\\b${k}\\b`, 'gi'), v)
+  }
+  return s
+}
+
+function translateAge(en) {
+  if (!en) return ''
+  let s = en.trim()
+  for (const [k, v] of Object.entries(AGE_ZH)) {
+    s = s.replace(new RegExp(`\\b${k}\\b`, 'gi'), v)
+  }
+  // 移除多餘的 to/and，改為「至」
+  s = s.replace(/\s+to\s+/gi, ' 至 ').replace(/\s+and\s+/gi, ' 及 ')
+  return s
+}
+
+// Franciscan Complex 等加州常見地層固有名詞
+const FORMATION_ZH = [
+  [/Franciscan (Coastal|Central|Eastern|Coast Ranges?)\s*Belt/gi, '方濟會混雜岩（$1帶）'],
+  [/Franciscan Complex/gi, '方濟會混雜岩'],
+  [/Franciscan/gi, '方濟會混雜岩'],
+  [/Great Valley (Sequence|Group|Complex)/gi, '大峽谷層序'],
+  [/Great Valley/gi, '大峽谷層序'],
+  [/Salinian (Block|terrane)/gi, '薩利尼安地塊'],
+  [/Salinian/gi, '薩利尼安地塊'],
+  [/Transverse Ranges/gi, '橫貫山脈'],
+  [/Peninsular Ranges/gi, '半島山脈'],
+  [/Sierra Nevada (Batholith)?/gi, '內華達山脈花崗岩體'],
+  [/Modoc Plateau/gi, '摩多克高原'],
+  [/Klamath Mountains?/gi, '克拉馬斯山脈'],
+  [/Coast Ranges?/gi, '海岸山脈'],
+  [/Central Valley/gi, '中央谷地'],
+  [/\bundivided\b/gi, '（未細分）'],
+  [/\bnot reported\b/gi, '（未記錄）'],
+]
+
+function translateFormation(en) {
+  if (!en) return ''
+  let s = en.trim()
+  for (const [pattern, zh] of FORMATION_ZH) {
+    s = s.replace(pattern, zh)
+  }
+  return s
+}
+
 function renderCAGeoPopupHTML(attrs) {
   const ltype   = attrs.lith   || ''
   const name    = attrs.name   || ''
   const age     = attrs.age    || ''
   const info    = getCALithoInfo(ltype, '')
-  // 舌壤介紹沒有對應项時，至少顯示山石類型文字
-  const displayType = info?.zh || ltype || ''
+  const displayType = info?.zh || translateLith(ltype) || ''
+  const displayName = translateFormation(name) || name
+  const displayAge  = translateAge(age)
   return `
     <div class="ca-geo-popup">
       <div class="ca-geo-popup-header">🗺️ 加州地質</div>
-      ${name         ? `<div class="ca-geo-row"><span class="ca-geo-label">地層名稱</span><span class="ca-geo-val">${name}</span></div>`        : ''}
-      ${displayType  ? `<div class="ca-geo-row"><span class="ca-geo-label">岩石類型</span><span class="ca-geo-val">${displayType}</span></div>` : ''}
-      ${age          ? `<div class="ca-geo-row"><span class="ca-geo-label">地質年代</span><span class="ca-geo-val">${age}</span></div>`           : ''}
+      ${displayName  ? `<div class="ca-geo-row"><span class="ca-geo-label">地層名稱</span><span class="ca-geo-val">${displayName}</span></div>`  : ''}
+      ${displayType  ? `<div class="ca-geo-row"><span class="ca-geo-label">岩石類型</span><span class="ca-geo-val">${displayType}</span></div>`  : ''}
+      ${displayAge   ? `<div class="ca-geo-row"><span class="ca-geo-label">地質年代</span><span class="ca-geo-val">${displayAge}</span></div>`    : ''}
       ${info ? `
       <div class="ca-geo-wine-block">
         <div class="ca-geo-wine-title">${info.icon} 葡萄酒產區地質與土壤</div>
