@@ -940,21 +940,24 @@ async function loadCAGeologyLayer() {
   if (map.getLayer('ca-geology-layer'))  map.removeLayer('ca-geology-layer')
   if (map.getSource('ca-geology-wms'))   map.removeSource('ca-geology-wms')
 
-  // ArcGIS REST tile 格式（{z}/{y}/{x}），比 WMS 更難被伺服器拑絕
-  const CGS_TILE =
-    '/cgs/server/rest/services/CGS/Geologic_Map_of_California/MapServer/tile/{z}/{y}/{x}'
-
+  // Macrostrat 公開地質向量圖磚（無需 CORS proxy，CC BY 4.0）
   map.addSource('ca-geology-wms', {
-    type: 'raster',
-    tiles: [CGS_TILE],
-    tileSize: 256,
-    attribution: '© CGS Geologic Map of California (Public Domain)',
+    type: 'vector',
+    tiles: ['https://tiles.macrostrat.org/carto/{z}/{x}/{y}.mvt'],
+    tileSize: 512,
+    minzoom: 0,
+    maxzoom: 15,
+    attribution: '© Macrostrat (CC BY 4.0)',
   })
   map.addLayer({
     id: 'ca-geology-layer',
-    type: 'raster',
+    type: 'fill',
     source: 'ca-geology-wms',
-    paint: { 'raster-opacity': soilOpacity.value },
+    'source-layer': 'units',
+    paint: {
+      'fill-color': ['coalesce', ['get', 'color'], '#cccccc'],
+      'fill-opacity': soilOpacity.value,
+    },
   })
 
   // 裁切 mask：僅顯示目前開啟的 AVA（輕量裁切，不合並全部）
