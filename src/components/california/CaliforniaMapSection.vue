@@ -1849,7 +1849,7 @@ function handleMobileAction(action) {
 :global(.ca-geology-popup-wrap .mapboxgl-popup-content) {
   padding: 0; background: transparent; box-shadow: none; border-radius: 12px;
 }
-.ca-geo-popup {
+:global(.ca-geo-popup) {
   background: rgba(30, 10, 10, 0.96);
   border: 1px solid rgba(200, 80, 80, 0.3);
   border-radius: 12px;
@@ -1858,31 +1858,31 @@ function handleMobileAction(action) {
   min-width: 220px; max-width: 320px;
   font-size: 0.85rem;
 }
-.ca-geo-popup-header {
+:global(.ca-geo-popup-header) {
   font-size: 0.78rem; font-weight: 700; color: #f4b4b4;
   text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;
 }
-.ca-geo-row {
+:global(.ca-geo-row) {
   display: flex; gap: 8px; margin-bottom: 5px; line-height: 1.4;
 }
-.ca-geo-label {
+:global(.ca-geo-label) {
   font-size: 0.72rem; font-weight: 700; color: #e8b0b0;
   min-width: 60px; flex-shrink: 0;
 }
-.ca-geo-val { color: #f5e0e0; font-size: 0.82rem; }
-.ca-geo-wine-block {
+:global(.ca-geo-val) { color: #f5e0e0; font-size: 0.82rem; }
+:global(.ca-geo-wine-block) {
   margin-top: 10px; padding: 10px 12px;
   background: rgba(120, 20, 20, 0.4);
   border-left: 3px solid #c0392b;
   border-radius: 0 8px 8px 0;
 }
-.ca-geo-wine-title {
+:global(.ca-geo-wine-title) {
   font-size: 0.8rem; font-weight: 700; color: #f4b4b4; margin-bottom: 5px;
 }
-.ca-geo-wine-text {
+:global(.ca-geo-wine-text) {
   font-size: 0.78rem; line-height: 1.55; color: #e8c8c8;
 }
-.ca-geo-credit {
+:global(.ca-geo-credit) {
   margin-top: 8px; font-size: 0.68rem; color: #a06060; text-align: right;
 }
 </style>
