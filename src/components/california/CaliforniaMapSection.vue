@@ -911,11 +911,10 @@ function getCALithoInfo(ltype, ptype) {
 }
 
 function renderCAGeoPopupHTML(attrs) {
-  const ptype   = attrs.PTYPE    || attrs.ptype    || ''
-  const ltype   = attrs.GENERALIZED_LTYPE || attrs.generalized_ltype || attrs.LTYPE || ''
-  const name    = attrs.UNITNAME || attrs.unitname || attrs.LABEL || attrs.label || ''
-  const age     = attrs.GENERALIZED_AGE  || attrs.generalized_age  || ''
-  const info    = getCALithoInfo(ltype, ptype)
+  const ltype   = attrs.lith   || ''
+  const name    = attrs.name   || ''
+  const age     = attrs.age    || ''
+  const info    = getCALithoInfo(ltype, '')
   // 舌壤介紹沒有對應项時，至少顯示山石類型文字
   const displayType = info?.zh || ltype || ''
   return `
@@ -929,7 +928,7 @@ function renderCAGeoPopupHTML(attrs) {
         <div class="ca-geo-wine-title">${info.icon} 葡萄酒產區地質與土壤</div>
         <div class="ca-geo-wine-text">${info.wine}</div>
       </div>` : ''}
-      <div class="ca-geo-credit">資料來源：CGS Geologic Map of California (Public Domain)</div>
+      <div class="ca-geo-credit">資料來源：Macrostrat (CC BY 4.0)</div>
     </div>`
 }
 
@@ -961,32 +960,19 @@ async function loadCAGeologyLayer() {
   // 裁切 mask：僅顯示目前開啟的 AVA（輕量裁切，不合並全部）
   updateCAGeoClip()
 
-  // Click handler（ArcGIS REST query，仿義大利）
+  // Click handler（Macrostrat vector tile queryRenderedFeatures）
   if (!caGeoClickReg) {
     caGeoClickReg = true
-    map.on('click', async (e) => {
+    map.on('click', (e) => {
       if (!soilEnabled.value) return
-      const { lng, lat } = e.lngLat
-      try {
-        const geomJson = encodeURIComponent(JSON.stringify({ x: lng, y: lat }))
-        const url =
-          '/cgs/server/rest/services/CGS/Geologic_Map_of_California/MapServer/0/query' +
-          `?geometry=${geomJson}&geometryType=esriGeometryPoint&inSR=4326` +
-          '&spatialRel=esriSpatialRelIntersects' +
-          '&outFields=PTYPE,UNITNAME,LABEL,GENERALIZED_LTYPE,GENERALIZED_AGE' +
-          '&returnGeometry=false&f=json'
-        const res = await fetch(url)
-        if (!res.ok) return
-        const data = await res.json()
-        const features = data.features || []
-        if (!features.length) return
-        const attrs = features[0].attributes || {}
-        if (caGeologyPopup) caGeologyPopup.remove()
-        caGeologyPopup = new mapboxgl.Popup({ className: 'ca-geology-popup-wrap', maxWidth: '340px', closeButton: true })
-          .setLngLat([lng, lat])
-          .setHTML(renderCAGeoPopupHTML(attrs))
-          .addTo(map)
-      } catch (_) {}
+      const features = map.queryRenderedFeatures(e.point, { layers: ['ca-geology-layer'] })
+      if (!features.length) return
+      const attrs = features[0].properties || {}
+      if (caGeologyPopup) caGeologyPopup.remove()
+      caGeologyPopup = new mapboxgl.Popup({ className: 'ca-geology-popup-wrap', maxWidth: '340px', closeButton: true })
+        .setLngLat(e.lngLat)
+        .setHTML(renderCAGeoPopupHTML(attrs))
+        .addTo(map)
     })
   }
 }
@@ -1034,7 +1020,7 @@ async function toggleSoil() {
 
 watch(soilOpacity, val => {
   if (map && map.getLayer('ca-geology-layer')) {
-    map.setPaintProperty('ca-geology-layer', 'raster-opacity', val)
+    map.setPaintProperty('ca-geology-layer', 'fill-opacity', val)
   }
 })
 
