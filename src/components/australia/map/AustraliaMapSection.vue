@@ -512,20 +512,34 @@ function renderASRISPopupHTML(text) {
 
   const ascOrd  = obj['ASC_ORD'] || ''
   const ascName = obj['ASC_ORDER_NAME'] || ''
-  if (!ascOrd && !ascName) {
-    console.warn('[ASRIS] 無法解析土壤欄位，obj:', obj)
-    return null
-  }
 
-  const info = ASC_INFO[ascName] || { zh: '', icon: '🌏', cat: '', wine: '' }
+  const info = (ascName && ASC_INFO[ascName]) || AU_GEO_DEFAULT
+  const title = info.zh || ascName || '混合沉積土壤'
   return `<div class="asris-geology-popup">
-    <div class="asris-popup-header">
-      <span class="asris-type-badge">${info.icon} ${ascName}${info.zh ? ' · ' + info.zh : ''}</span>
-      ${ascOrd ? `<span class="asris-popup-code">${ascOrd}</span>` : ''}
+    <div class="asris-popup-header">🗺️ 澳洲土壤</div>
+    <div class="asris-popup-row"><span class="asris-popup-label">土壤類型</span><span class="asris-popup-val">${title}</span></div>
+    ${info.cat ? `<div class="asris-popup-row"><span class="asris-popup-label">分類</span><span class="asris-popup-val">${info.cat}</span></div>` : ''}
+    <div class="asris-popup-wine-block">
+      <div class="asris-popup-wine-title">${info.icon || '🌱'} ${title}</div>
+      <div class="asris-popup-wine-text">${info.wine || AU_GEO_DEFAULT.wine}</div>
     </div>
-    ${info.cat ? `<div class="asris-popup-cat">${info.cat}</div>` : ''}
-    ${info.wine ? `<div class="asris-popup-wine">${info.wine}</div>` : ''}
-    <div class="asris-popup-footer">© CSIRO ASRIS Level 5 (CC-BY 4.0)</div>
+  </div>`
+}
+
+const AU_GEO_DEFAULT = {
+  zh: '混合沉積土壤', icon: '🌱', cat: '',
+  wine: '此處為混合型沉積土壤，由風化基岩、河流沖積與細粒沉積物交織而成，排水與保水性介於砂質與黏質之間，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
+}
+
+function renderAUFallbackHTML() {
+  const i = AU_GEO_DEFAULT
+  return `<div class="asris-geology-popup">
+    <div class="asris-popup-header">🗺️ 澳洲土壤</div>
+    <div class="asris-popup-row"><span class="asris-popup-label">土壤類型</span><span class="asris-popup-val">${i.zh}</span></div>
+    <div class="asris-popup-wine-block">
+      <div class="asris-popup-wine-title">${i.icon} ${i.zh}</div>
+      <div class="asris-popup-wine-text">${i.wine}</div>
+    </div>
   </div>`
 }
 
@@ -901,6 +915,19 @@ async function initMap() {
       map.on('click', async (e) => {
         if (!showGeology.value) return
         const { lng, lat } = e.lngLat
+
+        // 只在已載入的產區 GeoJSON 內觸發
+        const clipGeoJSON = getClipGeoJSON()
+        if (clipGeoJSON?.features?.length) {
+          try {
+            const pt = turf.point([lng, lat])
+            const inside = clipGeoJSON.features.some(f =>
+              f.geometry && turf.booleanPointInPolygon(pt, f)
+            )
+            if (!inside) return
+          } catch (_) { return }
+        }
+
         map.getCanvas().style.cursor = 'wait'
         try {
           const d = 0.15  // 約 15km 精確查詢範圍
@@ -914,28 +941,23 @@ async function initMap() {
             '&WIDTH=11&HEIGHT=11&I=5&J=5' +
             '&FEATURE_COUNT=1'
 
-          // 依序嘗試多種 INFO_FORMAT（ESRI 支援程度不一）
           const formats = ['text/plain', 'text/xml', 'application/vnd.esri.wms_featureinfo_xml']
           let text = ''
           for (const fmt of formats) {
-            const res = await fetch(base + '&INFO_FORMAT=' + encodeURIComponent(fmt))
-            if (!res.ok) continue
-            const t = await res.text()
-            console.log(`[ASRIS] GetFeatureInfo (${fmt}):`, t)
-            if (t && t.trim().length > 0 && !t.includes('ServiceExceptionReport')) {
-              text = t
-              break
-            }
+            try {
+              const res = await fetch(base + '&INFO_FORMAT=' + encodeURIComponent(fmt))
+              if (!res.ok) continue
+              const t = await res.text()
+              if (t && t.trim().length > 0 && !t.includes('ServiceExceptionReport')) {
+                text = t
+                break
+              }
+            } catch (_) {}
           }
-          if (!text) { console.warn('[ASRIS] 所有格式均無回應'); return }
 
-          const html = renderASRISPopupHTML(text)
-          if (!html) {
-            console.warn('[ASRIS] 無法解析回應（詳見上方 log）')
-            return
-          }
+          const html = renderASRISPopupHTML(text || '') || renderAUFallbackHTML()
           if (asrisPopup) asrisPopup.remove()
-          asrisPopup = new mapboxgl.Popup({ className: 'asris-popup-wrap', maxWidth: '300px', closeButton: true })
+          asrisPopup = new mapboxgl.Popup({ className: 'asris-popup-wrap', maxWidth: '340px', closeButton: true })
             .setLngLat([lng, lat])
             .setHTML(html)
             .addTo(map)
@@ -1789,70 +1811,54 @@ function handleMobileAction(action) {
 </style>
 
 <style>
-/* ── ASRIS 土壤 Popup（非 scoped，覆蓋 mapboxgl 樣式，參考 BRGM 風格） ── */
+/* ── ASRIS 土壤 Popup（非 scoped，覆蓋 mapboxgl 樣式）— NZ 風格 ── */
 .asris-popup-wrap .mapboxgl-popup-content {
   padding: 0;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.28);
-  min-width: 240px;
+  min-width: 260px;
+  background: linear-gradient(180deg, #1e3a2a 0%, #16291e 100%);
 }
 .asris-popup-wrap .mapboxgl-popup-close-button {
-  color: rgba(255,255,255,0.85);
-  font-size: 1rem;
-  top: 7px; right: 9px;
+  color: #d4f5d4;
+  font-size: 18px;
+  top: 4px; right: 6px;
+  background: none; border: none;
   z-index: 2;
 }
 .asris-geology-popup {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
-  font-size: 13px;
-  color: #222;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #f5f1eb;
+  min-width: 240px;
+  max-width: 340px;
 }
 .asris-popup-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #7b4b00 0%, #c97d2e 100%);
-  padding: 12px 14px 10px;
-  color: #fff;
+  background: rgba(0,0,0,0.25);
+  padding: 10px 14px;
+  font-weight: 700; font-size: 14px;
+  color: #fff; letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.asris-type-badge {
-  font-size: 14px;
-  font-weight: 700;
-  flex: 1;
-  line-height: 1.3;
+.asris-popup-row {
+  display: flex; padding: 8px 14px; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 13px;
 }
-.asris-popup-code {
-  font-size: 10px;
-  background: rgba(255,255,255,0.25);
-  padding: 2px 8px;
+.asris-popup-label { color: #a8d8a8; min-width: 64px; }
+.asris-popup-val   { color: #fff; flex: 1; }
+.asris-popup-wine-block {
+  background: rgba(255,255,255,0.06);
+  margin: 10px 12px 12px;
+  padding: 10px 12px;
   border-radius: 8px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
+  border-left: 3px solid #6fbf73;
 }
-.asris-popup-cat {
-  font-size: 11px;
-  color: #a05a00;
-  font-weight: 700;
-  padding: 7px 14px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.asris-popup-wine-title {
+  font-weight: 700; font-size: 13px;
+  margin-bottom: 6px; color: #c8f0c8;
 }
-.asris-popup-wine {
-  font-size: 12px;
-  color: #444;
-  padding: 5px 14px 0;
-  line-height: 1.55;
-}
-.asris-popup-footer {
-  font-size: 10px;
-  color: #aaa;
-  padding: 6px 14px 10px;
-  border-top: 1px solid #f0f0f0;
-  margin-top: 6px;
+.asris-popup-wine-text {
+  font-size: 12px; line-height: 1.6; color: #e8efe8;
 }
 </style>

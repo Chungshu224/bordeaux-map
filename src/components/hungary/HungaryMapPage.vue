@@ -287,30 +287,41 @@ function translateHuGeoIndex(idx) {
   return idx
 }
 
+const HU_GEO_DEFAULT = {
+  zh: '混合沉積土壤',
+  wine: '此處為混合型沉積土壤，由風化基岩、黃土與河流沉積交織而成，排水與保水性均衡，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
+}
+
 function renderHungaryGeoPopupHTML(attrs) {
-  const nev      = attrs.NEV || ''
-  const lith     = attrs.LITOLOGIA || ''
-  const geoIdx   = attrs.GEO || attrs.geo_ndx || ''
+  const lith     = (attrs && attrs.LITOLOGIA) || ''
+  const geoIdx   = (attrs && (attrs.GEO || attrs.geo_ndx)) || ''
   const age      = translateHuGeoIndex(geoIdx)
-  const lithZh   = translateHuLith(lith)
+  const lithZh   = lith ? translateHuLith(lith) : ''
   // 查找土壤介紹
-  let wineDesc = ''
-  const lithLower = lith.toLowerCase()
-  for (const [key, desc] of Object.entries(HU_LITHO_WINE_DESC)) {
-    if (lithLower.includes(key)) { wineDesc = desc; break }
+  let wineDesc = HU_GEO_DEFAULT.wine
+  let wineTitle = HU_GEO_DEFAULT.zh
+  if (lith) {
+    const lithLower = lith.toLowerCase()
+    for (const [key, desc] of Object.entries(HU_LITHO_WINE_DESC)) {
+      if (lithLower.includes(key)) { wineDesc = desc; break }
+    }
   }
+  if (lithZh && lithZh !== lith) wineTitle = lithZh
+
   const rows = []
-  if (nev) rows.push(`<tr><td class="pl">地層名稱</td><td>${nev}</td></tr>`)
-  if (lith) rows.push(`<tr><td class="pl">岩性</td><td>${lith}${lithZh && lithZh !== lith ? ` <span style="color:#c8a44e">(${lithZh})</span>` : ''}</td></tr>`)
-  if (age && age !== geoIdx) rows.push(`<tr><td class="pl">地質時代</td><td style="color:#c8a44e;font-weight:700">${age}</td></tr>`)
-  if (!rows.length) return null
-  return `
-    <div class="hugeo-popup-inner">
-      <div class="hugeo-popup-title">🪨 匈牙利地質圖</div>
-      <table class="hugeo-popup-table"><tbody>${rows.join('')}</tbody></table>
-      ${wineDesc ? `<div class="hugeo-popup-wine">🍷 ${wineDesc}</div>` : ''}
-      <div class="hugeo-popup-src">資料來源：HuGeo FDT100（1:100,000）</div>
-    </div>`
+  rows.push(`<div class="hugeo-popup-row"><span class="hugeo-popup-label">岩石類型</span><span class="hugeo-popup-val">${wineTitle}</span></div>`)
+  if (age && age !== geoIdx) {
+    rows.push(`<div class="hugeo-popup-row"><span class="hugeo-popup-label">地質年代</span><span class="hugeo-popup-val">${age}</span></div>`)
+  }
+
+  return `<div class="hugeo-popup-inner">
+    <div class="hugeo-popup-header">🗺️ 匈牙利地質</div>
+    ${rows.join('')}
+    <div class="hugeo-popup-wine-block">
+      <div class="hugeo-popup-wine-title">🌱 ${wineTitle}</div>
+      <div class="hugeo-popup-wine-text">${wineDesc}</div>
+    </div>
+  </div>`
 }
 const climateYear       = ref(2003)
 const climateData       = ref(null)
@@ -989,10 +1000,8 @@ async function loadAllRegionsOverlay() {
         const res = await fetch(url)
         const data = await res.json()
         const features = data?.features || []
-        if (!features.length) return
-        const attrs = features[0].attributes
+        const attrs = features.length ? features[0].attributes : {}
         const html = renderHungaryGeoPopupHTML(attrs)
-        if (!html) return
         if (geoPopup) geoPopup.remove()
         geoPopup = new mapboxgl.Popup({ className: 'hugeo-popup-wrap', maxWidth: '340px', closeButton: true })
           .setLngLat([lng, lat])
@@ -1690,34 +1699,50 @@ function handleMobileAction(action) {
 </style>
 
 <style>
-/* ── HuGeo 地質 Popup（非 scoped，需覆蓋 mapboxgl 樣式） ─────── */
+/* ── HuGeo 地質 Popup（非 scoped，需覆蓋 mapboxgl 樣式）— NZ 風格 ─── */
 .hugeo-popup-wrap .mapboxgl-popup-content {
-  background: #1a1a2e;
-  border: 1.5px solid rgba(200,164,78,0.5);
-  border-radius: 10px;
+  background: linear-gradient(180deg, #1e3a2a 0%, #16291e 100%);
+  border-radius: 12px;
   padding: 0;
-  color: #eee;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  overflow: hidden;
+  color: #f5f1eb;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  min-width: 260px;
 }
 .hugeo-popup-wrap .mapboxgl-popup-close-button {
-  color: #c8a44e; font-size: 16px; right: 8px; top: 6px;
+  color: #d4f5d4; font-size: 18px; right: 6px; top: 4px;
+  background: none; border: none;
 }
-.hugeo-popup-inner { padding: 12px 14px 10px; }
-.hugeo-popup-title {
-  font-size: 0.82rem; font-weight: 700; color: #c8a44e;
-  margin-bottom: 8px; letter-spacing: 0.5px;
+.hugeo-popup-inner {
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #f5f1eb; min-width: 240px; max-width: 340px;
 }
-.hugeo-popup-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
-.hugeo-popup-table td { padding: 3px 6px; vertical-align: top; }
-.hugeo-popup-table td.pl { color: #aaa; white-space: nowrap; font-size: 0.72rem; }
-.hugeo-popup-table tr:nth-child(even) td { background: rgba(255,255,255,0.04); }
-.hugeo-popup-src {
-  font-size: 0.65rem; color: #666; margin-top: 8px;
-  border-top: 1px solid rgba(255,255,255,0.08); padding-top: 5px;
+.hugeo-popup-header {
+  background: rgba(0,0,0,0.25);
+  padding: 10px 14px;
+  font-weight: 700; font-size: 14px; color: #fff;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.hugeo-popup-wine {
-  font-size: 0.72rem; color: #d4b97a; margin-top: 8px;
-  background: rgba(200,164,78,0.08); border-radius: 5px;
-  padding: 6px 8px; line-height: 1.55;
+.hugeo-popup-row {
+  display: flex; padding: 8px 14px; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 13px;
+}
+.hugeo-popup-label { color: #a8d8a8; min-width: 64px; }
+.hugeo-popup-val   { color: #fff; flex: 1; }
+.hugeo-popup-wine-block {
+  background: rgba(255,255,255,0.06);
+  margin: 10px 12px 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #6fbf73;
+}
+.hugeo-popup-wine-title {
+  font-weight: 700; font-size: 13px;
+  margin-bottom: 6px; color: #c8f0c8;
+}
+.hugeo-popup-wine-text {
+  font-size: 12px; line-height: 1.6; color: #e8efe8;
 }
 </style>

@@ -488,24 +488,23 @@ const ITALY_LITHO_CODES = {
 function renderGeologyPopupHTML(attrs) {
   const code = (attrs.cod_lito || attrs.COD_LITO || '').trim()
   const info = ITALY_LITHO_CODES[code] || {}
-  const zh = info.zh || attrs.litologia || attrs.LITOLOGIA || '未分類地質'
-  const cat = info.cat || ''
-  const wine = info.wine || ''
-  const formName = attrs.nome_ulf || attrs.NOME_FORMAZIONE || ''
+  const ITALY_GEO_DEFAULT = {
+    zh: '混合沉積土壤', icon: '🌱',
+    wine: '此處為混合型沉積土壤，由風化基岩、河流沖積與細粒沉積物交織而成，排水與保水性介於砂質與黏質之間，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
+  }
+  const zh   = info.zh || attrs.litologia || attrs.LITOLOGIA || ITALY_GEO_DEFAULT.zh
+  const wine = info.wine || ITALY_GEO_DEFAULT.wine
+  const icon = info.icon || ITALY_GEO_DEFAULT.icon
   const ageInfo = attrs.eta_geol || attrs.ETA_GEOLOGICA || ''
-  const litClass = attrs.classi_litologiche || attrs.CLASSI_LITOLOGICHE || ''
   return `
     <div class="italy-geology-popup">
-      <div class="geology-popup-header">
-        <span class="soil-type-badge">${info.icon || '🗺️'} ${zh}</span>
-        ${code ? `<span class="geology-popup-code">${code}</span>` : ''}
+      <div class="geology-popup-header">🗺️ 義大利地質</div>
+      <div class="geology-popup-row"><span class="geology-popup-label">岩石類型</span><span class="geology-popup-val">${zh}</span></div>
+      ${ageInfo ? `<div class="geology-popup-row"><span class="geology-popup-label">地質年代</span><span class="geology-popup-val">${ageInfo}</span></div>` : ''}
+      <div class="geology-popup-wine-block">
+        <div class="geology-popup-wine-title">${icon} ${zh}</div>
+        <div class="geology-popup-wine-text">${wine}</div>
       </div>
-      ${cat ? `<div class="geology-popup-zone">${cat}</div>` : ''}
-      ${formName ? `<div class="geology-popup-zone">地層：${formName}</div>` : ''}
-      ${ageInfo ? `<div class="geology-popup-zone">年代：${ageInfo}</div>` : ''}
-      ${litClass ? `<div class="geology-popup-desc">${litClass}</div>` : ''}
-      ${wine ? `<div class="geology-grape-section"><div class="grape-name-row">${wine}</div></div>` : ''}
-      <div class="geology-popup-footer">© ISPRA Carta Litologica 1:100K (CC-BY 4.0)</div>
     </div>
   `
 }
@@ -557,7 +556,14 @@ async function loadGeologyLayer() {
     map.on('click', async (e) => {
       if (!soilEnabled.value) return
       const { lng, lat } = e.lngLat
-      console.log('[ItalyMap] geology click at', lng, lat)
+      // 點擊只限選取產區範圍內
+      if (regionOutlineGeoJSON) {
+        try {
+          const pt = turf.point([lng, lat])
+          if (!turf.booleanPointInPolygon(pt, regionOutlineGeoJSON)) return
+        } catch (_) { return }
+      }
+      let attrs = {}
       try {
         const geomJson = encodeURIComponent(JSON.stringify({ x: lng, y: lat }))
         const url =
@@ -566,24 +572,22 @@ async function loadGeologyLayer() {
           '&spatialRel=esriSpatialRelIntersects' +
           '&outFields=cod_lito,nome_ulf,eta_geol,litologia,classi_litologiche' +
           '&returnGeometry=false&f=json'
-        console.log('[ItalyMap] fetching:', url)
         const res = await fetch(url)
-        console.log('[ItalyMap] response status:', res.status)
-        if (!res.ok) return
-        const data = await res.json()
-        console.log('[ItalyMap] response data:', data)
-        const features = data.features || []
-        if (features.length === 0) return
-        const attrs = features[0].attributes || {}
-        const html = renderGeologyPopupHTML(attrs)
-        if (geologyPopup) geologyPopup.remove()
-        geologyPopup = new mapboxgl.Popup({ className: 'geology-popup-wrap', maxWidth: '340px', closeButton: true })
-          .setLngLat([lng, lat])
-          .setHTML(html)
-          .addTo(map)
+        if (res.ok) {
+          const data = await res.json()
+          const features = data.features || []
+          if (features.length) attrs = features[0].attributes || {}
+        }
       } catch (err) {
         console.warn('[ItalyMap] geology identify error:', err)
       }
+      // 即使無資料也彈出中文 fallback popup
+      const html = renderGeologyPopupHTML(attrs)
+      if (geologyPopup) geologyPopup.remove()
+      geologyPopup = new mapboxgl.Popup({ className: 'geology-popup-wrap', maxWidth: '340px', closeButton: true })
+        .setLngLat([lng, lat])
+        .setHTML(html)
+        .addTo(map)
     })
     geologyClickRegistered = true
   }
@@ -1772,68 +1776,52 @@ onUnmounted(() => {
   border: 1px solid rgba(0,0,0,0.15);
 }
 
-/* ── 地質 Popup（全域，Mapbox 注入的 DOM）── */
+/* ── 地質 Popup（全域，Mapbox 注入的 DOM）── NZ 風格 */
 :global(.geology-popup-wrap .mapboxgl-popup-content) {
   padding: 0;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
   min-width: 260px;
+  background: linear-gradient(180deg, #1e3a2a 0%, #16291e 100%);
+}
+:global(.geology-popup-wrap .mapboxgl-popup-close-button) {
+  color: #d4f5d4; font-size: 18px; padding: 4px 8px;
 }
 :global(.italy-geology-popup) {
-  font-family: inherit;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #f5f1eb;
   font-size: 0.88rem;
   line-height: 1.5;
 }
 :global(.italy-geology-popup .geology-popup-header) {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(135deg, #4a4a4a 0%, #2d2d2d 100%);
-  color: white;
-  padding: 10px 12px 8px;
-  gap: 8px;
-}
-:global(.italy-geology-popup .soil-type-badge) {
+  background: rgba(0,0,0,0.25);
+  padding: 10px 14px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-:global(.italy-geology-popup .geology-popup-code) {
-  font-size: 0.72rem;
-  background: rgba(255,255,255,0.18);
-  padding: 2px 7px;
-  border-radius: 6px;
-  color: rgba(255,255,255,0.9);
-  white-space: nowrap;
+:global(.italy-geology-popup .geology-popup-row) {
+  display: flex; padding: 8px 14px; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 13px;
 }
-:global(.italy-geology-popup .geology-popup-zone) {
-  padding: 5px 12px;
-  font-size: 0.79rem;
-  color: #555;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+:global(.italy-geology-popup .geology-popup-label) { color: #a8d8a8; min-width: 64px; }
+:global(.italy-geology-popup .geology-popup-val)   { color: #fff; flex: 1; }
+:global(.italy-geology-popup .geology-popup-wine-block) {
+  background: rgba(255,255,255,0.06);
+  margin: 10px 12px 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #6fbf73;
 }
-:global(.italy-geology-popup .geology-popup-desc) {
-  padding: 6px 12px;
-  font-size: 0.77rem;
-  color: #444;
-  background: #f9f9f9;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+:global(.italy-geology-popup .geology-popup-wine-title) {
+  font-weight: 700; font-size: 13px;
+  margin-bottom: 6px; color: #c8f0c8;
 }
-:global(.italy-geology-popup .geology-grape-section) {
-  padding: 8px 12px;
-  background: #fff8f0;
-  border-left: 3px solid #c0392b;
-}
-:global(.italy-geology-popup .grape-name-row) {
-  font-size: 0.80rem;
-  color: #5a2d0c;
-  line-height: 1.5;
-}
-:global(.italy-geology-popup .geology-popup-footer) {
-  padding: 5px 12px;
-  font-size: 0.67rem;
-  color: #999;
-  background: #f5f5f5;
-  border-top: 1px solid rgba(0,0,0,0.06);
+:global(.italy-geology-popup .geology-popup-wine-text) {
+  font-size: 12px; line-height: 1.6; color: #e8efe8;
 }
 </style>

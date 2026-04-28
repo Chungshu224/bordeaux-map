@@ -745,26 +745,79 @@ function nzTranslateAge(en) {
   return s.replace(/\s+to\s+/gi, ' 至 ').replace(/\s+and\s+/gi, ' 及 ')
 }
 
+// 預設中文土壤介紹（無對應岩性時的 fallback）
+const NZ_GEO_DEFAULT = {
+  zh: '混合沉積土壤',
+  icon: '🌱',
+  wine: '此處為混合型沉積土壤，通常由風化基岩、河流沖積與細粒沉積物交織而成，排水與保水性介於砂質與黏質之間，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
+}
+
 function renderGNSPopupHTML(props) {
   const lith     = props.lith || ''
-  const name     = props.name || ''
   const age      = props.age  || ''
-  const wineInfo = getNZGeoDesc(lith, '')
-  const displayType = wineInfo?.zh || nzTranslateLith(lith) || ''
+  const wineInfo = getNZGeoDesc(lith, '') || {
+    ...NZ_GEO_DEFAULT,
+    zh: nzTranslateLith(lith) || NZ_GEO_DEFAULT.zh,
+  }
+  const displayType = wineInfo.zh
   const displayAge  = nzTranslateAge(age)
   return `
     <div class="nz-geo-popup">
       <div class="nz-geo-popup-header">🗺️ 紐西蘭地質</div>
-      ${name        ? `<div class="nz-geo-row"><span class="nz-geo-label">地層名稱</span><span class="nz-geo-val">${name}</span></div>`        : ''}
       ${displayType ? `<div class="nz-geo-row"><span class="nz-geo-label">岩石類型</span><span class="nz-geo-val">${displayType}</span></div>` : ''}
       ${displayAge  ? `<div class="nz-geo-row"><span class="nz-geo-label">地質年代</span><span class="nz-geo-val">${displayAge}</span></div>`  : ''}
-      ${wineInfo ? `
       <div class="nz-geo-wine-block">
         <div class="nz-geo-wine-title">${wineInfo.icon} ${wineInfo.zh}</div>
         <div class="nz-geo-wine-text">${wineInfo.wine}</div>
-      </div>` : ''}
-      <div class="nz-geo-credit">資料來源：Macrostrat (CC BY 4.0)</div>
+      </div>
     </div>`
+}
+
+// 目前選取的產區 polygon（用於裁切 mask 與點擊命中測試）
+let activeRegionFeature = null
+
+async function getActiveRegionGeoJSON() {
+  const aocFile = props.activeAOC?.aoc
+  if (!aocFile) return null
+  const url = `/newzealand/geojson/NewZealand/${aocFile}`
+  let geojson = geojsonCache.get(url)
+  if (!geojson) {
+    try {
+      const r = await fetch(url)
+      if (r.ok) { geojson = await r.json(); geojsonCache.set(url, geojson) }
+    } catch (_) {}
+  }
+  if (!geojson) return null
+  if (geojson.type === 'FeatureCollection' && geojson.features?.length) {
+    let merged = geojson.features[0]
+    for (let i = 1; i < geojson.features.length; i++) {
+      try { merged = turf.union(turf.featureCollection([merged, geojson.features[i]])) } catch (_) {}
+    }
+    return merged
+  }
+  if (geojson.type === 'Feature') return geojson
+  return null
+}
+
+async function applyActiveRegionMask() {
+  if (!map) return
+  // 清除舊 mask
+  if (map.getLayer('nz-geo-clip-mask'))  map.removeLayer('nz-geo-clip-mask')
+  if (map.getSource('nz-geo-clip-src'))  map.removeSource('nz-geo-clip-src')
+
+  activeRegionFeature = await getActiveRegionGeoJSON()
+  if (!activeRegionFeature) return
+
+  try {
+    const maskData = turf.mask(activeRegionFeature)
+    map.addSource('nz-geo-clip-src', { type: 'geojson', data: maskData })
+    map.addLayer({
+      id: 'nz-geo-clip-mask',
+      type: 'fill',
+      source: 'nz-geo-clip-src',
+      paint: { 'fill-color': '#000', 'fill-opacity': 1 },
+    })
+  } catch (_) {}
 }
 
 async function loadGNSLayer() {
@@ -795,45 +848,22 @@ async function loadGNSLayer() {
     },
   })
 
-  // 裁切 mask：合併所有已載入的產區 GeoJSON
-  try {
-    const allFeatures = []
-    for (const region of NZ_REGIONS) {
-      const url = `/newzealand/geojson/NewZealand/${region.file}`
-      let geojson = geojsonCache.get(url)
-      if (!geojson) {
-        try {
-          const r = await fetch(url)
-          if (r.ok) { geojson = await r.json(); geojsonCache.set(url, geojson) }
-        } catch (_) {}
-      }
-      if (geojson?.features) allFeatures.push(...geojson.features)
-      else if (geojson?.type === 'Feature') allFeatures.push(geojson)
-    }
-    if (allFeatures.length) {
-      let merged = allFeatures[0]
-      for (let i = 1; i < allFeatures.length; i++) {
-        try { merged = turf.union(turf.featureCollection([merged, allFeatures[i]])) } catch (_) {}
-      }
-      const maskData = turf.mask(merged)
-      map.addSource('nz-geo-clip-src', { type: 'geojson', data: maskData })
-      map.addLayer({
-        id: 'nz-geo-clip-mask',
-        type: 'fill',
-        source: 'nz-geo-clip-src',
-        paint: { 'fill-color': '#000', 'fill-opacity': 1 },
-      })
-    }
-  } catch (_) {}
+  // 裁切 mask：僅以目前選取的產區生成（減少載入量）
+  await applyActiveRegionMask()
 
-  // Click handler（Macrostrat vector tile queryRenderedFeatures）
+  // Click handler（限制在目前選取的產區範圍內才反應）
   if (!gnsClickReg) {
     gnsClickReg = true
     map.on('click', (e) => {
       if (!soilEnabled.value) return
+      if (!activeRegionFeature) return
+      // 點擊只限選取產區範圍內
+      try {
+        const pt = turf.point([e.lngLat.lng, e.lngLat.lat])
+        if (!turf.booleanPointInPolygon(pt, activeRegionFeature)) return
+      } catch (_) { return }
       const features = map.queryRenderedFeatures(e.point, { layers: ['nz-geology-layer'] })
-      if (!features.length) return
-      const attrs = features[0].properties || {}
+      const attrs = features[0]?.properties || {}
       if (gnsPopup) gnsPopup.remove()
       gnsPopup = new mapboxgl.Popup({ maxWidth: '340px', className: 'nz-geology-popup-wrap' })
         .setLngLat(e.lngLat)
@@ -867,6 +897,16 @@ watch(soilOpacity, val => {
   if (map && map.getLayer('nz-geology-layer')) {
     map.setPaintProperty('nz-geology-layer', 'fill-opacity', val)
   }
+})
+
+// 切換選取的產區時：重新生成 mask（地質圖層只顯示新產區範圍內）
+watch(() => props.activeAOC?.aoc, async () => {
+  if (soilEnabled.value && map?.getLayer('nz-geology-layer')) {
+    await applyActiveRegionMask()
+  } else {
+    activeRegionFeature = await getActiveRegionGeoJSON()
+  }
+  if (gnsPopup) { gnsPopup.remove(); gnsPopup = null }
 })
 
 const handleMobileAction = (action) => {

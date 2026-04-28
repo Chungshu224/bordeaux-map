@@ -834,25 +834,26 @@ function toUTM30N(lng, lat) {
 
 function renderSpainGeologyPopupHTML(attrs) {
   const lito = attrs.DLO || attrs.LITOLOGIA || attrs.litologia || ''
-  const edad = attrs.COEDAD  // 數值型
-  const cod  = attrs.TRAMA_C || attrs.COD_LITO || ''
-  const form = ''
+  const edad = attrs.COEDAD
 
-  const info   = translateIGME(lito)
+  const SPAIN_GEO_DEFAULT = {
+    zh: '混合沉積土壤', icon: '🌱',
+    wine: '此處為混合型沉積土壤，由風化基岩、河流沖積與細粒沉積物交織而成，排水與保水性介於砂質與黏質之間，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
+  }
+
+  let info = translateIGME(lito)
+  if (!info?.wine) info = { ...SPAIN_GEO_DEFAULT, zh: info?.zh || SPAIN_GEO_DEFAULT.zh }
   const edadZh = translateEdad(edad)
 
   return `
     <div class="spain-geology-popup">
-      <div class="geology-popup-header">
-        <span class="soil-type-badge">${info.icon} ${info.zh}</span>
-        ${cod ? `<span class="geology-popup-code">${cod}</span>` : ''}
+      <div class="geology-popup-header">🗺️ 西班牙地質</div>
+      <div class="geology-popup-row"><span class="geology-popup-label">岩石類型</span><span class="geology-popup-val">${info.zh}</span></div>
+      ${edadZh ? `<div class="geology-popup-row"><span class="geology-popup-label">地質年代</span><span class="geology-popup-val">${edadZh}</span></div>` : ''}
+      <div class="geology-popup-wine-block">
+        <div class="geology-popup-wine-title">${info.icon} ${info.zh}</div>
+        <div class="geology-popup-wine-text">${info.wine}</div>
       </div>
-      ${info.cat ? `<div class="geology-popup-cat">${info.cat}</div>` : ''}
-      ${lito ? `<div class="geology-popup-lito">${lito}</div>` : ''}
-      ${edadZh ? `<div class="geology-popup-zone">🕐 地質年代：${edadZh}</div>` : ''}
-      ${form ? `<div class="geology-popup-zone">📋 地層：${form}</div>` : ''}
-      ${info.wine ? `<div class="geology-popup-wine">${info.wine}</div>` : ''}
-      <div class="geology-popup-footer">© IGME Mapa Geológico 1:200,000 (CC-BY 4.0)</div>
     </div>
   `
 }
@@ -903,8 +904,15 @@ async function loadSpainGeologyLayer() {
     map.on('click', async (e) => {
       if (!soilEnabled.value) return
       const { lng, lat } = e.lngLat
+      // 點擊只限選取產區範圍內
+      if (regionOutlineGeoJSON) {
+        try {
+          const pt = turf.point([lng, lat])
+          if (!turf.booleanPointInPolygon(pt, regionOutlineGeoJSON)) return
+        } catch (_) { return }
+      }
+      let attrs = {}
       try {
-        // 轉換 WGS84 → UTM30N (EPSG:23030)，用 ±2000m envelope 查詢 Layer 9
         const { x, y } = toUTM30N(lng, lat)
         const margin = 2000
         const url =
@@ -913,20 +921,20 @@ async function loadSpainGeologyLayer() {
           '&geometryType=esriGeometryEnvelope' +
           '&spatialRel=esriSpatialRelIntersects&outFields=DLO,COEDAD,TRAMA_C&returnGeometry=false&f=json'
         const res = await fetch(url)
-        if (!res.ok) return
-        const data = await res.json()
-        const features = data.features || []
-        if (features.length === 0) return
-        const attrs = features[0].attributes || {}
-        const html = renderSpainGeologyPopupHTML(attrs)
-        if (geologyPopup) geologyPopup.remove()
-        geologyPopup = new mapboxgl.Popup({ className: 'geology-popup-wrap', maxWidth: '320px', closeButton: true })
-          .setLngLat([lng, lat])
-          .setHTML(html)
-          .addTo(map)
+        if (res.ok) {
+          const data = await res.json()
+          const features = data.features || []
+          if (features.length) attrs = features[0].attributes || {}
+        }
       } catch (err) {
         console.warn('[SpainMap] geology identify error:', err)
       }
+      const html = renderSpainGeologyPopupHTML(attrs)
+      if (geologyPopup) geologyPopup.remove()
+      geologyPopup = new mapboxgl.Popup({ className: 'geology-popup-wrap', maxWidth: '340px', closeButton: true })
+        .setLngLat([lng, lat])
+        .setHTML(html)
+        .addTo(map)
     })
     geologyClickRegistered = true
   }
@@ -1347,25 +1355,26 @@ function handleMobileAction(action) {
 }
 </script>
 
-<!-- IGME popup 全域樣式（mapboxgl popup 容器不支援 scoped） -->
+<!-- IGME popup 全域樣式（mapboxgl popup 容器不支援 scoped）— NZ 風格 -->
 <style>
 .geology-popup-wrap .mapboxgl-popup-content {
   padding: 0;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-  min-width: 240px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  min-width: 260px;
+  background: linear-gradient(180deg, #2a1414 0%, #1a0c0c 100%);
 }
 .geology-popup-wrap .mapboxgl-popup-close-button {
-  color: rgba(255,255,255,0.8);
-  font-size: 16px;
+  color: #ffd6cc;
+  font-size: 18px;
   padding: 4px 8px;
   right: 2px;
   top: 2px;
 }
 .geology-popup-wrap .mapboxgl-popup-close-button:hover {
   color: #fff;
-  background: rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.1);
   border-radius: 4px;
 }
 </style>
@@ -2193,69 +2202,43 @@ function handleMobileAction(action) {
 .spain-geo-float-panel .soil-opacity-slider { width: 70px; accent-color: #c0392b; }
 .spain-geo-float-panel .soil-opacity-pct { font-size: 0.78rem; color: #666; min-width: 34px; text-align: right; }
 
-/* IGME 地質 popup */
+/* IGME 地質 popup — NZ 風格 */
 .spain-geology-popup {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 13px;
-  color: #222;
-  background: #fff;
+  color: #f5f1eb;
+  background: transparent;
   border-radius: 12px;
   overflow: hidden;
 }
 .spain-geology-popup .geology-popup-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #a31921 0%, #c0392b 100%);
-  padding: 12px 14px 10px;
-  color: #fff;
-}
-.spain-geology-popup .soil-type-badge {
+  background: rgba(0,0,0,0.25);
+  padding: 10px 14px;
+  font-weight: 700;
   font-size: 14px;
-  font-weight: 700;
-  flex: 1;
   color: #fff;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.spain-geology-popup .geology-popup-code {
-  font-size: 10px;
-  background: rgba(255,255,255,0.25);
-  padding: 2px 7px;
+.spain-geology-popup .geology-popup-row {
+  display: flex; padding: 8px 14px; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 13px;
+}
+.spain-geology-popup .geology-popup-label { color: #ffb6a8; min-width: 64px; }
+.spain-geology-popup .geology-popup-val   { color: #fff; flex: 1; }
+.spain-geology-popup .geology-popup-wine-block {
+  background: rgba(255,255,255,0.06);
+  margin: 10px 12px 12px;
+  padding: 10px 12px;
   border-radius: 8px;
-  font-weight: 600;
-  color: #fff;
+  border-left: 3px solid #c0392b;
 }
-.spain-geology-popup .geology-popup-cat {
-  font-size: 11px;
-  color: #a31921;
-  font-weight: 700;
-  padding: 6px 14px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.spain-geology-popup .geology-popup-wine-title {
+  font-weight: 700; font-size: 13px;
+  margin-bottom: 6px; color: #ffd6cc;
 }
-.spain-geology-popup .geology-popup-lito {
-  font-size: 12px;
-  color: #555;
-  font-style: italic;
-  padding: 4px 14px;
-}
-.spain-geology-popup .geology-popup-zone {
-  font-size: 11px;
-  color: #888;
-  padding: 2px 14px;
-}
-.spain-geology-popup .geology-popup-wine {
-  font-size: 12px;
-  color: #444;
-  line-height: 1.5;
-  padding: 8px 14px;
-  background: #fdf5f5;
-  border-top: 1px solid #f3e0e0;
-  margin-top: 4px;
-}
-.spain-geology-popup .geology-popup-footer {
-  font-size: 10px;
-  color: #aaa;
-  padding: 5px 14px 8px;
-  border-top: 1px solid #eee;
+.spain-geology-popup .geology-popup-wine-text {
+  font-size: 12px; line-height: 1.6; color: #f5e8e8;
 }
 </style>

@@ -1076,13 +1076,21 @@ async function initMap() {
               text = t; break
             }
           }
-          if (!text) return
+          if (!text) {
+            // 無資料也顯示中文 fallback popup
+            const html = renderLNEGFallbackHTML()
+            if (lnegPopup) lnegPopup.remove()
+            lnegPopup = new mapboxgl.Popup({ className: 'lneg-popup-wrap', maxWidth: '340px', closeButton: true })
+              .setLngLat([lng, lat])
+              .setHTML(html)
+              .addTo(map)
+            return
+          }
 
-          const html = renderLNEGPopupHTML(text, { lng, lat })
-          if (!html) return
+          const html = renderLNEGPopupHTML(text, { lng, lat }) || renderLNEGFallbackHTML()
 
           if (lnegPopup) lnegPopup.remove()
-          lnegPopup = new mapboxgl.Popup({ className: 'lneg-popup-wrap', maxWidth: '320px', closeButton: true })
+          lnegPopup = new mapboxgl.Popup({ className: 'lneg-popup-wrap', maxWidth: '340px', closeButton: true })
             .setLngLat([lng, lat])
             .setHTML(html)
             .addTo(map)
@@ -1929,79 +1937,57 @@ function handleMobileAction(action) {
 </style>
 
 <style>
-/* ── LNEG Popup（非 scoped，覆蓋 mapboxgl 樣式） ── */
+/* ── LNEG Popup（非 scoped，覆蓋 mapboxgl 樣式）— NZ 風格 ── */
 .lneg-popup-wrap .mapboxgl-popup-content {
   padding: 0;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  min-width: 260px;
+  background: linear-gradient(180deg, #1e3a2a 0%, #16291e 100%);
 }
 .lneg-popup-wrap .mapboxgl-popup-close-button {
-  color: #fff;
-  font-size: 16px;
-  top: 6px;
-  right: 8px;
+  color: #d4f5d4;
+  font-size: 18px;
+  top: 4px;
+  right: 6px;
   background: none;
   border: none;
 }
 .lneg-geo-popup {
-  font-family: inherit;
-  min-width: 200px;
-  max-width: 300px;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #f5f1eb;
+  min-width: 240px;
+  max-width: 340px;
 }
 .lneg-geo-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(135deg, #1b5e20, #388e3c);
-  color: #fff;
+  background: rgba(0,0,0,0.25);
   padding: 10px 14px;
-}
-.lneg-geo-badge {
   font-weight: 700;
   font-size: 14px;
-  letter-spacing: 0.4px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.lneg-geo-icon {
-  font-size: 20px;
-  margin-left: 6px;
+.lneg-geo-row {
+  display: flex; padding: 8px 14px; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 13px;
 }
-.lneg-geo-descr {
-  padding: 8px 14px 0;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: #1b5e20;
+.lneg-geo-label { color: #a8d8a8; min-width: 64px; }
+.lneg-geo-val   { color: #fff; flex: 1; }
+.lneg-geo-wine-block {
+  background: rgba(255,255,255,0.06);
+  margin: 10px 12px 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #6fbf73;
 }
-.lneg-geo-age {
-  padding: 4px 14px 0;
-  font-size: 11.5px;
-  color: #666;
+.lneg-geo-wine-title {
+  font-weight: 700; font-size: 13px;
+  margin-bottom: 6px; color: #c8f0c8;
 }
-.lneg-geo-litho {
-  padding: 4px 14px 0;
-  font-size: 12px;
-  color: #444;
-}
-.lneg-geo-zone {
-  padding: 4px 14px 0;
-  font-size: 11.5px;
-  color: #666;
-  font-style: italic;
-}
-.lneg-geo-wine {
-  margin: 7px 14px;
-  padding: 7px 10px;
-  background: #f1f8e9;
-  border-left: 3px solid #388e3c;
-  font-size: 12px;
-  color: #2e4a1e;
-  border-radius: 0 6px 6px 0;
-}
-.lneg-geo-footer {
-  padding: 6px 14px 9px;
-  font-size: 10.5px;
-  color: #aaa;
-  border-top: 1px solid #f0f0f0;
-  margin-top: 6px;
+.lneg-geo-wine-text {
+  font-size: 12px; line-height: 1.6; color: #e8efe8;
 }
 </style>

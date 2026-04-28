@@ -53,19 +53,26 @@ function getXmlValue(xmlDoc, tagName) {
   )
 }
 
-function renderBRGMPopupHTML(descr, type, codeGeol) {
-  const info = translateBRGM(descr, type)
+// 預設中文土壤介紹（無法對應到特定岩性時的 fallback）
+const BRGM_DEFAULT = {
+  zh: '混合沉積土壤', icon: '🌱', cat: '',
+  wine: '此處為混合型沉積土壤，由風化基岩、河流沖積與細粒沉積物交織而成，排水與保水性介於砂質與黏質之間，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
+}
+
+function renderBRGMPopupHTML(descr, type, _codeGeol) {
+  let info = translateBRGM(descr, type)
+  // 若未轉換成功（讀不到對應關鍵字）提供中文 fallback
+  if (!info.wine) {
+    info = { ...BRGM_DEFAULT, zh: info.zh && info.zh !== descr ? info.zh : BRGM_DEFAULT.zh }
+  }
   return `
     <div class="brgm-geology-popup">
-      <div class="brgm-popup-header">
-        <span class="brgm-type-badge">${info.icon} ${info.zh}</span>
-        ${codeGeol ? `<span class="brgm-popup-code">CODE ${codeGeol}</span>` : ''}
+      <div class="brgm-popup-header">🗺️ 地質資訊</div>
+      <div class="brgm-popup-row"><span class="brgm-popup-label">岩石類型</span><span class="brgm-popup-val">${info.zh}</span></div>
+      <div class="brgm-popup-wine-block">
+        <div class="brgm-popup-wine-title">${info.icon} ${info.zh}</div>
+        <div class="brgm-popup-wine-text">${info.wine}</div>
       </div>
-      ${info.cat ? `<div class="brgm-popup-cat">${info.cat}</div>` : ''}
-      ${descr ? `<div class="brgm-popup-descr">${descr}</div>` : ''}
-      ${type ? `<div class="brgm-popup-type">類型：${type}</div>` : ''}
-      ${info.wine ? `<div class="brgm-popup-wine">${info.wine}</div>` : ''}
-      <div class="brgm-popup-footer">© BRGM Géologie (Etalab OL)</div>
     </div>
   `
 }
@@ -85,6 +92,9 @@ export function useBRGMGeology() {
   let brgmPopup = null
   let brgmClickRegistered = false
 
+  // 目前裁切 mask 對應的產區 polygon（用於限制點擊範圍）
+  let currentClipFeature = null
+
   // ── 遮罩：以 GeoJSON 邊界反轉遮蓋，只顯示邊界內的地質圖 ──────────
   function applyClipMask(map, geojson) {
     if (!map || !geojson) return
@@ -92,6 +102,7 @@ export function useBRGMGeology() {
     try { maskData = turf.mask(geojson) } catch (e) {
       console.warn('[BRGM] turf.mask failed:', e); return
     }
+    currentClipFeature = geojson
     if (map.getSource('brgm-clip-src')) {
       map.getSource('brgm-clip-src').setData(maskData)
       if (map.getLayer('brgm-clip-mask')) map.setLayoutProperty('brgm-clip-mask', 'visibility', 'visible')
@@ -160,6 +171,13 @@ export function useBRGMGeology() {
         if (!brgmEnabled.value) return
         if (map.getLayoutProperty('brgm-geology-layer', 'visibility') === 'none') return
         const { lng, lat } = e.lngLat
+        // 點擊只限選取產區範圍內
+        if (currentClipFeature) {
+          try {
+            const pt = turf.point([lng, lat])
+            if (!turf.booleanPointInPolygon(pt, currentClipFeature)) return
+          } catch (_) { return }
+        }
         try {
           const [mx, my] = lngLatToWebMercator(lng, lat)
           const d = 2000
@@ -174,15 +192,19 @@ export function useBRGMGeology() {
             `&BBOX=${bbox}` +
             '&WIDTH=101&HEIGHT=101&I=50&J=50' +
             '&FEATURE_COUNT=1'
-          const res = await fetch(url)
-          if (!res.ok) return
-          const xmlText = await res.text()
-          const parser = new DOMParser()
-          const xmlDoc = parser.parseFromString(xmlText, 'application/xml')
-          const descr = getXmlValue(xmlDoc, 'DESCR')
-          const type = getXmlValue(xmlDoc, 'TYPE')
-          const codeGeol = getXmlValue(xmlDoc, 'CODE_GEOL')
-          if (!descr && !type) return
+          let descr = '', type = '', codeGeol = ''
+          try {
+            const res = await fetch(url)
+            if (res.ok) {
+              const xmlText = await res.text()
+              const parser = new DOMParser()
+              const xmlDoc = parser.parseFromString(xmlText, 'application/xml')
+              descr = getXmlValue(xmlDoc, 'DESCR')
+              type = getXmlValue(xmlDoc, 'TYPE')
+              codeGeol = getXmlValue(xmlDoc, 'CODE_GEOL')
+            }
+          } catch (_) {}
+          // 即使無資料也顯示中文 fallback popup
           const html = renderBRGMPopupHTML(descr, type, codeGeol)
           if (brgmPopup) brgmPopup.remove()
           brgmPopup = new mapboxgl.Popup({
@@ -319,5 +341,52 @@ export const BRGM_POPUP_STYLES = `
   color: #aaa;
   padding: 5px 14px 8px;
   border-top: 1px solid #eee;
+}
+/* === 新版（NZ 風格）popup 樣式 === */
+.brgm-popup-wrap .mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  min-width: 260px;
+  background: linear-gradient(180deg, #1e3a2a 0%, #16291e 100%);
+}
+.brgm-popup-wrap .mapboxgl-popup-close-button {
+  color: #d4f5d4; font-size: 18px; padding: 4px 8px;
+}
+.brgm-popup-wrap .brgm-geology-popup {
+  background: transparent;
+  color: #f5f1eb;
+}
+.brgm-popup-wrap .brgm-popup-header {
+  background: rgba(0,0,0,0.25);
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  display: block;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.brgm-popup-row {
+  display: flex; padding: 8px 14px; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 13px;
+}
+.brgm-popup-label { color: #a8d8a8; min-width: 64px; }
+.brgm-popup-val   { color: #fff; flex: 1; }
+.brgm-popup-wine-block {
+  background: rgba(255,255,255,0.06);
+  margin: 10px 12px 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #6fbf73;
+}
+.brgm-popup-wine-title {
+  font-weight: 700; font-size: 13px;
+  margin-bottom: 6px; color: #c8f0c8;
+}
+.brgm-popup-wine-text {
+  font-size: 12px; line-height: 1.6; color: #e8efe8;
 }
 `

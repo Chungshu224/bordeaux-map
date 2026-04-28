@@ -1004,26 +1004,31 @@ function translateFormation(en) {
   return s
 }
 
+// 預設中文土壤介紹（無對應岩性時的 fallback）
+const CA_GEO_DEFAULT = {
+  zh: '混合沉積土壤',
+  icon: '🌱',
+  wine: '此處為混合型沉積土壤，由風化基岩、河流沖積與細粒沉積物交織而成，排水與保水性介於砂質與黏質之間，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
+}
+
 function renderCAGeoPopupHTML(attrs) {
   const ltype   = attrs.lith   || ''
-  const name    = attrs.name   || ''
   const age     = attrs.age    || ''
-  const info    = getCALithoInfo(ltype, '')
-  const displayType = info?.zh || translateLith(ltype) || ''
-  const displayName = translateFormation(name) || name
+  const info    = getCALithoInfo(ltype, '') || {
+    ...CA_GEO_DEFAULT,
+    zh: translateLith(ltype) || CA_GEO_DEFAULT.zh,
+  }
+  const displayType = info.zh
   const displayAge  = translateAge(age)
   return `
     <div class="ca-geo-popup">
       <div class="ca-geo-popup-header">🗺️ 加州地質</div>
-      ${displayName  ? `<div class="ca-geo-row"><span class="ca-geo-label">地層名稱</span><span class="ca-geo-val">${displayName}</span></div>`  : ''}
       ${displayType  ? `<div class="ca-geo-row"><span class="ca-geo-label">岩石類型</span><span class="ca-geo-val">${displayType}</span></div>`  : ''}
       ${displayAge   ? `<div class="ca-geo-row"><span class="ca-geo-label">地質年代</span><span class="ca-geo-val">${displayAge}</span></div>`    : ''}
-      ${info ? `
       <div class="ca-geo-wine-block">
-        <div class="ca-geo-wine-title">${info.icon} 葡萄酒產區地質與土壤</div>
+        <div class="ca-geo-wine-title">${info.icon} ${info.zh}</div>
         <div class="ca-geo-wine-text">${info.wine}</div>
-      </div>` : ''}
-      <div class="ca-geo-credit">資料來源：Macrostrat (CC BY 4.0)</div>
+      </div>
     </div>`
 }
 
@@ -1063,9 +1068,17 @@ async function loadCAGeologyLayer() {
     caGeoClickReg = true
     map.on('click', (e) => {
       if (!soilEnabled.value) return
+      // 點擊只限選取的單一 AVA 範圍內
+      const activeId = activeRegion.value?.id
+      if (!activeId || !caAvaGeoJSON?.features?.length) return
+      const regionFeature = caAvaGeoJSON.features.find(f => f.properties?.ava_id === activeId)
+      if (!regionFeature) return
+      try {
+        const pt = turf.point([e.lngLat.lng, e.lngLat.lat])
+        if (!turf.booleanPointInPolygon(pt, regionFeature)) return
+      } catch (_) { return }
       const features = map.queryRenderedFeatures(e.point, { layers: ['ca-geology-layer'] })
-      if (!features.length) return
-      const attrs = features[0].properties || {}
+      const attrs = features[0]?.properties || {}
       if (caGeologyPopup) caGeologyPopup.remove()
       caGeologyPopup = new mapboxgl.Popup({ className: 'ca-geology-popup-wrap', maxWidth: '340px', closeButton: true })
         .setLngLat(e.lngLat)

@@ -409,41 +409,37 @@ function translateLegendText(text) {
   return result
 }
 
+const DE_GEO_DEFAULT = {
+  zh: '混合沉積土壤', icon: '🌱', cat: '',
+  wine: '此處為混合型沉積土壤，由風化基岩、冰河沖積與黃土交織而成，排水與保水性均衡，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
+}
+
 // BGR BUEK200 GetFeatureInfo 回傳 GeoJSON，解析後渲染 Popup
 function renderBGRPopupHTML(geojsonText) {
-  let props = {}
+  let info = DE_GEO_DEFAULT
+  let zhDesc = ''
   try {
     const fc = JSON.parse(geojsonText)
-    if (!fc?.features?.length) return null
-    props = fc.features[0]?.properties || {}
-  } catch { return null }
+    const props = fc?.features?.[0]?.properties || {}
+    const legendText = (props['Legendentext'] || '').replace(/\*/g, '').trim()
+    const legende    = (props['Legende'] || '').trim()
+    if (legendText || legende) {
+      const parsed = translateBGR(legendText || legende)
+      if (parsed?.zh) info = parsed
+      zhDesc = translateLegendText(legendText) || ''
+    }
+  } catch { /* fallback */ }
 
-  // 實際欄位名（來自 GetFeatureInfo GeoJSON 回應）
-  const legendText = (props['Legendentext'] || '').replace(/\*/g, '').trim()
-  const legende    = (props['Legende'] || '').trim()
-  const layerName  = (props['layerName'] || '').trim()
-  const profile    = (props['Profile'] || '').replace(/&amp;/g, '&').trim()
-  const nrkart     = props['NRKART'] || ''
-
-  if (!legendText && !legende) return null
-
-  const info = translateBGR(legendText || legende)
-  const zhDesc = translateLegendText(legendText)
-
-  return `
-    <div class="bgr-soil-popup">
-      <div class="bgr-popup-header">
-        <span class="bgr-type-badge">${info.icon} ${info.zh || '土壤'}</span>
-        ${nrkart ? `<span class="bgr-popup-code">圖例 ${nrkart}</span>` : ''}
-      </div>
-      ${info.cat ? `<div class="bgr-popup-cat">${info.cat}</div>` : ''}
-      ${zhDesc ? `<div class="bgr-popup-sg">${zhDesc}</div>` : ''}
-      ${layerName ? `<div class="bgr-popup-use">地圖圖幅：${layerName}</div>` : ''}
-      ${info.wine ? `<div class="bgr-popup-wine">${info.wine}</div>` : ''}
-      ${profile ? `<div class="bgr-popup-link"><a href="${profile}" target="_blank" rel="noopener">🔗 查看土壤層次詳情</a></div>` : ''}
-      <div class="bgr-popup-footer">© BGR BUEK200 (CC-BY 4.0)</div>
+  return `<div class="bgr-soil-popup">
+    <div class="bgr-popup-header">🗺️ 德國土壤</div>
+    <div class="bgr-popup-row"><span class="bgr-popup-label">土壤類型</span><span class="bgr-popup-val">${info.zh}</span></div>
+    ${info.cat ? `<div class="bgr-popup-row"><span class="bgr-popup-label">分類</span><span class="bgr-popup-val">${info.cat}</span></div>` : ''}
+    ${zhDesc ? `<div class="bgr-popup-row"><span class="bgr-popup-label">說明</span><span class="bgr-popup-val">${zhDesc}</span></div>` : ''}
+    <div class="bgr-popup-wine-block">
+      <div class="bgr-popup-wine-title">${info.icon} ${info.zh}</div>
+      <div class="bgr-popup-wine-text">${info.wine}</div>
     </div>
-  `
+  </div>`
 }
 
 async function fetchGeoJSON(url) {
@@ -580,6 +576,18 @@ async function initMap() {
       map.on('click', async (e) => {
         if (!soilEnabled.value) return
         const { lng, lat } = e.lngLat
+
+        // 只在選取的產區內點擊才觸發
+        if (currentRegionGeoJSON?.features?.length) {
+          try {
+            const pt = turf.point([lng, lat])
+            const inside = currentRegionGeoJSON.features.some(f =>
+              f.geometry && turf.booleanPointInPolygon(pt, f)
+            )
+            if (!inside) return
+          } catch (_) { return }
+        }
+
         map.getCanvas().style.cursor = 'wait'
         try {
           const [mx, my] = lngLatToWebMercator(lng, lat)
@@ -594,13 +602,14 @@ async function initMap() {
             `&BBOX=${bbox}` +
             '&WIDTH=101&HEIGHT=101&I=50&J=50' +
             '&FEATURE_COUNT=1'
-          const res = await fetch(url)
-          if (!res.ok) return
-          const text = await res.text()
-          const html = renderBGRPopupHTML(text)
-          if (!html) return
+          let text = ''
+          try {
+            const res = await fetch(url)
+            if (res.ok) text = await res.text()
+          } catch (_) {}
+          const html = renderBGRPopupHTML(text || '{}')
           if (bgrPopup) bgrPopup.remove()
-          bgrPopup = new mapboxgl.Popup({ className: 'bgr-popup-wrap', maxWidth: '320px', closeButton: true })
+          bgrPopup = new mapboxgl.Popup({ className: 'bgr-popup-wrap', maxWidth: '340px', closeButton: true })
             .setLngLat([lng, lat])
             .setHTML(html)
             .addTo(map)
@@ -1460,83 +1469,59 @@ onUnmounted(() => {
 .de-all-soil-hint { font-size: 0.68rem; color: #6a9070; margin-top: 2px; }
 </style>
 
-<!-- BGR 土壤 Popup 全域樣式（Mapbox popup 在 scoped 外層） -->
+<!-- BGR 土壤 Popup 全域樣式（Mapbox popup 在 scoped 外層）— NZ 風格 -->
 <style>
 .bgr-popup-wrap .mapboxgl-popup-content {
   padding: 0;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.28);
-  min-width: 240px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  min-width: 260px;
+  background: linear-gradient(180deg, #1e3a2a 0%, #16291e 100%);
 }
 .bgr-popup-wrap .mapboxgl-popup-close-button {
-  color: #888;
+  color: #d4f5d4;
   font-size: 1.1rem;
   padding: 4px 8px;
   top: 4px;
   right: 4px;
+  background: none;
+  border: none;
 }
 .bgr-soil-popup {
-  padding: 12px 14px 10px;
-  font-size: 0.82rem;
-  color: #1a2a10;
-  font-family: system-ui, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #f5f1eb;
+  min-width: 240px;
+  max-width: 340px;
 }
 .bgr-popup-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-.bgr-type-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: #2d5016;
-  color: #fff;
-  border-radius: 6px;
-  padding: 3px 9px;
+  background: rgba(0,0,0,0.25);
+  padding: 10px 14px;
   font-weight: 700;
-  font-size: 0.84rem;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.bgr-popup-code {
-  font-size: 0.7rem;
-  color: #888;
-  background: #f0f0f0;
-  border-radius: 4px;
-  padding: 1px 5px;
+.bgr-popup-row {
+  display: flex; padding: 8px 14px; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 13px;
 }
-.bgr-popup-cat {
-  font-size: 0.74rem;
-  color: #4a7030;
-  font-weight: 600;
-  margin-bottom: 4px;
+.bgr-popup-label { color: #a8d8a8; min-width: 64px; }
+.bgr-popup-val   { color: #fff; flex: 1; line-height: 1.5; }
+.bgr-popup-wine-block {
+  background: rgba(255,255,255,0.06);
+  margin: 10px 12px 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #6fbf73;
 }
-.bgr-popup-sg {
-  font-size: 0.8rem;
-  color: #2a3a1a;
-  line-height: 1.4;
-  margin-bottom: 4px;
+.bgr-popup-wine-title {
+  font-weight: 700; font-size: 13px;
+  margin-bottom: 6px; color: #c8f0c8;
 }
-.bgr-popup-sub,
-.bgr-popup-rsg,
-.bgr-popup-use {
-  font-size: 0.74rem;
-  color: #555;
-  margin-bottom: 3px;
-}
-.bgr-popup-wine {
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1px solid #e0eed8;
-  font-size: 0.76rem;
-  color: #3a2800;
-  line-height: 1.45;
-}
-.bgr-popup-footer {
-  margin-top: 6px;
-  font-size: 0.65rem;
-  color: #aaa;
-  text-align: right;
+.bgr-popup-wine-text {
+  font-size: 12px; line-height: 1.6; color: #e8efe8;
 }
 </style>
