@@ -31,4 +31,8 @@ ALTER TABLE public.tasting_notes
 -- ④ 更新 COMMENT
 COMMENT ON COLUMN public.tasting_notes.wine_type IS
   '酒款類型 — 義大利: rosso/bianco/rosato/spumante/dolce/passito/altro；西班牙: tinto/blanco/rosado/cava/vino_generoso/dulce/otro；匈牙利: aszu/furmint/feher/voros/bikaver/rozsa/egyeb';
+
+-- 確保 source 欄位存在後才加 COMMENT（避免欄位未建時報錯）
+ALTER TABLE public.tasting_notes
+  ADD COLUMN IF NOT EXISTS source text;
 COMMENT ON COLUMN public.tasting_notes.source IS '筆記來源: bordeaux / italy / spain / hungary（可繼續擴充）';

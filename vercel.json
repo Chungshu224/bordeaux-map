@@ -34,6 +34,10 @@
       "destination": "https://sig.lneg.pt/:path*"
     },
     {
+      "source": "/gnsgeo/:path*",
+      "destination": "https://data.gns.cri.nz/:path*"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },

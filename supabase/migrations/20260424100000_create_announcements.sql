@@ -24,14 +24,31 @@ CREATE TABLE IF NOT EXISTS public.announcements (
   updated_at   timestamptz NOT NULL DEFAULT now()
 );
 
--- 允許非空欄位合法範圍
-ALTER TABLE public.announcements
-  ADD CONSTRAINT announcements_type_check
-    CHECK (type IN ('info', 'warning', 'promo', 'maintenance')),
-  ADD CONSTRAINT announcements_display_mode_check
-    CHECK (display_mode IN ('banner', 'modal', 'ticker')),
-  ADD CONSTRAINT announcements_target_tier_check
-    CHECK (target_tier IN ('all', 'free', 'basic', 'premium'));
+-- 允許非空欄位合法範圍（幂等：避免 constraint 已存在時報錯）
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_constraint WHERE conname = 'announcements_type_check'
+  ) THEN
+    ALTER TABLE public.announcements
+      ADD CONSTRAINT announcements_type_check
+        CHECK (type IN ('info', 'warning', 'promo', 'maintenance'));
+  END IF;
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_constraint WHERE conname = 'announcements_display_mode_check'
+  ) THEN
+    ALTER TABLE public.announcements
+      ADD CONSTRAINT announcements_display_mode_check
+        CHECK (display_mode IN ('banner', 'modal', 'ticker'));
+  END IF;
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_constraint WHERE conname = 'announcements_target_tier_check'
+  ) THEN
+    ALTER TABLE public.announcements
+      ADD CONSTRAINT announcements_target_tier_check
+        CHECK (target_tier IN ('all', 'free', 'basic', 'premium'));
+  END IF;
+END $$;
 
 -- 自動更新 updated_at
 CREATE OR REPLACE FUNCTION public.set_updated_at()
@@ -42,7 +59,7 @@ BEGIN
 END;
 $$;
 
-CREATE TRIGGER announcements_set_updated_at
+CREATE OR REPLACE TRIGGER announcements_set_updated_at
   BEFORE UPDATE ON public.announcements
   FOR EACH ROW EXECUTE FUNCTION public.set_updated_at();
 
@@ -50,33 +67,47 @@ CREATE TRIGGER announcements_set_updated_at
 ALTER TABLE public.announcements ENABLE ROW LEVEL SECURITY;
 
 -- 所有人（含未登入）可讀取：啟用中且在有效時間內
-CREATE POLICY "announcements_public_read"
-  ON public.announcements
-  FOR SELECT
-  USING (
-    is_active = true
-    AND starts_at <= now()
-    AND (ends_at IS NULL OR ends_at > now())
-  );
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_policies WHERE tablename = 'announcements' AND policyname = 'announcements_public_read'
+  ) THEN
+    CREATE POLICY "announcements_public_read"
+      ON public.announcements
+      FOR SELECT
+      USING (
+        is_active = true
+        AND starts_at <= now()
+        AND (ends_at IS NULL OR ends_at > now())
+      );
+  END IF;
+END $$;
 
 -- 管理員完整操作
-CREATE POLICY "announcements_admin_all"
-  ON public.announcements
-  FOR ALL
-  USING (
-    EXISTS (
-      SELECT 1 FROM public.profiles
-      WHERE profiles.id = auth.uid()
-        AND profiles.role = 'admin'
-    )
-  )
-  WITH CHECK (
-    EXISTS (
-      SELECT 1 FROM public.profiles
-      WHERE profiles.id = auth.uid()
-        AND profiles.role = 'admin'
-    )
-  );
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_policies WHERE tablename = 'announcements' AND policyname = 'announcements_admin_all'
+  ) THEN
+    CREATE POLICY "announcements_admin_all"
+      ON public.announcements
+      FOR ALL
+      USING (
+        EXISTS (
+          SELECT 1 FROM public.profiles
+          WHERE profiles.id = auth.uid()
+            AND profiles.role = 'admin'
+        )
+      )
+      WITH CHECK (
+        EXISTS (
+          SELECT 1 FROM public.profiles
+          WHERE profiles.id = auth.uid()
+            AND profiles.role = 'admin'
+        )
+      );
+  END IF;
+END $$;
 
 -- ── Index ────────────────────────────────────────────────────────────────────
 CREATE INDEX IF NOT EXISTS idx_announcements_active_time

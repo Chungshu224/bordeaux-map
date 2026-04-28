@@ -91,6 +91,12 @@ export default defineConfig({
         target: 'https://sig.lneg.pt',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/lneg/, '')
+      },
+      // GNS Science 紐西蘭地質調查局 proxy — 解決 CORS 問題
+      '/gnsgeo': {
+        target: 'https://data.gns.cri.nz',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/gnsgeo/, '')
       }
     }
   }

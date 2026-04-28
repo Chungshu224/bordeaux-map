@@ -31,13 +31,33 @@
         :is3D="is3D"
         :show-contours="contoursEnabled"
         :climate-enabled="climateEnabled"
-        :soil-disabled="true"
+        :soil-enabled="soilEnabled"
+        :soil-disabled="false"
+        soil-label="地質圖層"
         @toggle-3d="toggle3D"
         @toggle-contours="toggleContours"
         @toggle-climate="toggleClimate"
+        @toggle-soil="toggleSoil"
         @close="layersOpen = false"
       />
     </div>
+
+    <!-- 地質圖層不透明度控制 -->
+    <transition name="nz-geo-slide">
+      <div v-if="soilEnabled" class="nz-geo-float-panel">
+        <div class="nz-geo-panel-row">
+          <span class="nz-geo-panel-label">🗺️ 地質圖層</span>
+          <span class="nz-geo-panel-credit">GNS Science</span>
+          <button class="nz-geo-panel-close" @click="toggleSoil">✕</button>
+        </div>
+        <div class="nz-geo-opacity-row">
+          <span class="nz-geo-opacity-lbl">透明度</span>
+          <input type="range" min="0.1" max="1" step="0.05" v-model.number="soilOpacity" class="nz-geo-slider" />
+          <span class="nz-geo-opacity-val">{{ Math.round(soilOpacity * 100) }}%</span>
+        </div>
+        <div class="nz-geo-hint">點擊地圖可查看地質資訊</div>
+      </div>
+    </transition>
 
     <transition name="climate-slide">
       <div v-if="climateEnabled && climateData" class="climate-overlay">
@@ -606,6 +626,224 @@ const unifiedInfo = computed(() => {
   }
 })
 
+// ── NZ 地質圖層（GNS Science WMS）──────────────────────────────────────────
+const soilEnabled   = ref(false)
+const soilOpacity   = ref(0.6)
+let gnsPopup        = null
+let gnsClickReg     = false
+
+// 紐西蘭主要地質類型 → 葡萄酒產區說明（對應 GNS NZL_GNS_1M name/type 欄位關鍵字）
+const NZ_GEO_DESC = {
+  alluvial: {
+    zh: '沖積礫石／砂礫地層',
+    icon: '🪨',
+    wine: 'Marlborough 的 Wairau Valley 及 Hawke\'s Bay 的 Gimblett Gravels 均以深厚的河流礫石層著稱，礫石排水性極佳，逼使葡萄根系深扎，造就濃縮風味的 Sauvignon Blanc 與 Syrah。'
+  },
+  loess: {
+    zh: '黃土層（Loess）',
+    icon: '🌾',
+    wine: 'Marlborough 台地（Renwick 一帶）覆蓋淺薄黃土，加上底部石礫，形成飽受日照且排水良好的組合，賦予 Sauvignon Blanc 濃烈芬芳與清晰礦物感。'
+  },
+  schist: {
+    zh: '片岩（Schist）',
+    icon: '💎',
+    wine: 'Central Otago 的片岩地形是紐西蘭最獨特的葡萄酒地質。風化的雲母片岩鬆散易碎，熱容量高，白天儲熱、夜晚釋放，協助 Pinot Noir 達到成熟，同時保留高酸度與細膩礦物風味。'
+  },
+  limestone: {
+    zh: '石灰岩／鈣質岩層',
+    icon: '🏔️',
+    wine: 'North Canterbury（Waipara Valley）的石灰岩底土帶來豐富鈣質，有助葡萄藤緩慢吸水，Riesling 與 Pinot Noir 在此發展出優雅複雜度，與布根地風格相近。'
+  },
+  basalt: {
+    zh: '玄武岩（火山熔岩）',
+    icon: '🌋',
+    wine: 'Auckland 火山丘（如 Waiheke Island 及 Kumeu）的玄武岩土壤富含礦物質，排水佳且保溫，適合種植 Cabernet Sauvignon、Merlot 與 Chardonnay，酒款通常飽滿而結構良好。'
+  },
+  granite: {
+    zh: '花崗岩／侵入岩',
+    icon: '⛰️',
+    wine: '紐西蘭南島西部及 Northland 部分區域存在古老花崗質地層，土壤貧瘠且酸性，礦物質豐富，非常適合生長緩慢的白葡萄品種。'
+  },
+  sandstone: {
+    zh: '砂岩／粉砂岩',
+    icon: '🏜️',
+    wine: '砂岩在 Marlborough、Hawke\'s Bay 及 Canterbury 廣泛分布，其鬆疏質地提供良好透水性；與黃土或黏土互層時，能平衡水分保留與排水，適合多種葡萄品種。'
+  },
+  greywacke: {
+    zh: '灰瓦克岩（硬砂岩）',
+    icon: '🗿',
+    wine: 'Greywacke（硬砂岩）是紐西蘭最常見的基岩，構成南阿爾卑斯山的骨架。Marlborough 著名的 Greywacke 酒莊即以此命名。河床上的圓礫多源自此岩，葡萄根系若深達此層，常帶出鮮明礦物鹹感。'
+  },
+  clay: {
+    zh: '黏土／泥岩',
+    icon: '🟤',
+    wine: '部分 Hawke\'s Bay 及 Gisborne 的黏土土壤雖保水性高，但葡萄需精細水分管理。Gisborne 以黏土重壤區種植 Chardonnay，反而生成豐腴圓潤的酒體，風格獨特。'
+  },
+  volcanic: {
+    zh: '火山灰／火山碎屑岩',
+    icon: '🌋',
+    wine: 'Northland 及 Auckland 地區的火山灰土壤質地輕鬆、排水佳，富含微量元素。Waiheke Island 的黏土火山土混合地層賦予 Bordeaux 混調酒款深厚複雜度。'
+  },
+}
+
+function getNZGeoDesc(name, type) {
+  if (!name && !type) return null
+  const combined = `${(name || '')} ${(type || '')}`.toLowerCase()
+  if (/schist|schistose/.test(combined))                        return NZ_GEO_DESC.schist
+  if (/loess|loessial/.test(combined))                          return NZ_GEO_DESC.loess
+  if (/limestone|calcareous|chalk/.test(combined))              return NZ_GEO_DESC.limestone
+  if (/greywacke|graywacke/.test(combined))                     return NZ_GEO_DESC.greywacke
+  if (/basalt|basaltic|lava|volcanic rock/.test(combined))      return NZ_GEO_DESC.basalt
+  if (/volcanic|tephra|tuff|ignimbrite/.test(combined))         return NZ_GEO_DESC.volcanic
+  if (/granite|granodiorite|diorite|gabbro|intrusive/.test(combined)) return NZ_GEO_DESC.granite
+  if (/alluvial|gravel|fluvial|outwash/.test(combined))         return NZ_GEO_DESC.alluvial
+  if (/sandstone|siltstone|mudstone|argillite/.test(combined))  return NZ_GEO_DESC.sandstone
+  if (/clay|clayey|silty/.test(combined))                       return NZ_GEO_DESC.clay
+  return null
+}
+
+function renderGNSPopupHTML(props) {
+  const name    = props.name     || props.UNIT_NAME || props.lithology || ''
+  const type    = props.type     || props.ROCKTYPE  || ''
+  const age     = props.age      || props.AGE       || props.PERIOD    || ''
+  const desc    = props.description || ''
+  const wineInfo = getNZGeoDesc(name, type)
+  return `
+    <div class="nz-geo-popup">
+      <div class="nz-geo-popup-header">🗺️ 紐西蘭地質</div>
+      ${name ? `<div class="nz-geo-row"><span class="nz-geo-label">岩石名稱</span><span class="nz-geo-val">${name}</span></div>` : ''}
+      ${type ? `<div class="nz-geo-row"><span class="nz-geo-label">岩石類型</span><span class="nz-geo-val">${type}</span></div>` : ''}
+      ${age  ? `<div class="nz-geo-row"><span class="nz-geo-label">地質年代</span><span class="nz-geo-val">${age}</span></div>`  : ''}
+      ${desc ? `<div class="nz-geo-row"><span class="nz-geo-label">描述</span><span class="nz-geo-val nz-geo-desc">${desc}</span></div>` : ''}
+      ${wineInfo ? `
+      <div class="nz-geo-wine-block">
+        <div class="nz-geo-wine-title">${wineInfo.icon} ${wineInfo.zh}</div>
+        <div class="nz-geo-wine-text">${wineInfo.wine}</div>
+      </div>` : ''}
+      <div class="nz-geo-credit">資料來源：GNS Science (CC-BY 3.0 NZ)</div>
+    </div>`
+}
+
+async function loadGNSLayer() {
+  if (!map) return
+  // 移除舊圖層
+  if (map.getLayer('nz-geo-clip-mask'))  map.removeLayer('nz-geo-clip-mask')
+  if (map.getSource('nz-geo-clip-src'))  map.removeSource('nz-geo-clip-src')
+  if (map.getLayer('nz-geology-layer'))  map.removeLayer('nz-geology-layer')
+  if (map.getSource('nz-geology-wms'))   map.removeSource('nz-geology-wms')
+
+  const GNS_TILE = `/gnsgeo/webmaps/geology/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap` +
+    `&LAYERS=NZL_GNS_1M_Geological_Units&BBOX={bbox-epsg-3857}` +
+    `&WIDTH=256&HEIGHT=256&CRS=EPSG:3857&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=`
+
+  map.addSource('nz-geology-wms', {
+    type: 'raster',
+    tiles: [GNS_TILE],
+    tileSize: 256,
+    attribution: '© GNS Science (CC-BY 3.0 NZ)',
+  })
+  map.addLayer({
+    id: 'nz-geology-layer',
+    type: 'raster',
+    source: 'nz-geology-wms',
+    paint: { 'raster-opacity': soilOpacity.value },
+  })
+
+  // 裁切 mask：合併所有已載入的產區 GeoJSON
+  try {
+    const allFeatures = []
+    for (const region of NZ_REGIONS) {
+      const url = `/newzealand/geojson/NewZealand/${region.file}`
+      let geojson = geojsonCache.get(url)
+      if (!geojson) {
+        try {
+          const r = await fetch(url)
+          if (r.ok) { geojson = await r.json(); geojsonCache.set(url, geojson) }
+        } catch (_) {}
+      }
+      if (geojson?.features) allFeatures.push(...geojson.features)
+      else if (geojson?.type === 'Feature') allFeatures.push(geojson)
+    }
+    if (allFeatures.length) {
+      let merged = allFeatures[0]
+      for (let i = 1; i < allFeatures.length; i++) {
+        try { merged = turf.union(turf.featureCollection([merged, allFeatures[i]])) } catch (_) {}
+      }
+      const maskData = turf.mask(merged)
+      map.addSource('nz-geo-clip-src', { type: 'geojson', data: maskData })
+      map.addLayer({
+        id: 'nz-geo-clip-mask',
+        type: 'fill',
+        source: 'nz-geo-clip-src',
+        paint: { 'fill-color': '#000', 'fill-opacity': 1 },
+      })
+    }
+  } catch (_) {}
+
+  // Click handler（GeoServer WMS GetFeatureInfo）
+  if (!gnsClickReg) {
+    gnsClickReg = true
+    map.on('click', async (e) => {
+      if (!soilEnabled.value) return
+      const { lng, lat } = e.lngLat
+      const zoom = map.getZoom()
+      const tileSize = 256
+      const scale = Math.pow(2, zoom)
+      const worldX = (lng + 180) / 360 * scale * tileSize
+      const worldY = (1 - Math.log(Math.tan(lat * Math.PI / 180) + 1 / Math.cos(lat * Math.PI / 180)) / Math.PI) / 2 * scale * tileSize
+      const size = tileSize
+      const half = size / 2
+      const minX = worldX - half; const maxX = worldX + half
+      const minY = worldY - half; const maxY = worldY + half
+      const toLng = x => x / (scale * tileSize) * 360 - 180
+      const toLat = y => Math.atan(Math.sinh(Math.PI * (1 - 2 * y / (scale * tileSize)))) * 180 / Math.PI
+      const bbox = `${toLng(minX)},${toLat(maxY)},${toLng(maxX)},${toLat(minY)}`
+      const url = `/gnsgeo/webmaps/geology/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo` +
+        `&LAYERS=NZL_GNS_1M_Geological_Units&QUERY_LAYERS=NZL_GNS_1M_Geological_Units` +
+        `&CRS=EPSG:4326&BBOX=${bbox}&WIDTH=${size}&HEIGHT=${size}&I=${half}&J=${half}` +
+        `&INFO_FORMAT=application%2Fjson&FEATURE_COUNT=1`
+      try {
+        const res = await fetch(url)
+        if (!res.ok) return
+        const data = await res.json()
+        const feat = data?.features?.[0]
+        if (!feat) return
+        if (gnsPopup) gnsPopup.remove()
+        gnsPopup = new mapboxgl.Popup({ maxWidth: '340px', className: 'nz-geology-popup-wrap' })
+          .setLngLat(e.lngLat)
+          .setHTML(renderGNSPopupHTML(feat.properties || {}))
+          .addTo(map)
+      } catch (_) {}
+    })
+  }
+}
+
+function removeGNSLayer() {
+  if (!map) return
+  if (map.getLayer('nz-geo-clip-mask'))  map.removeLayer('nz-geo-clip-mask')
+  if (map.getSource('nz-geo-clip-src'))  map.removeSource('nz-geo-clip-src')
+  if (map.getLayer('nz-geology-layer'))  map.removeLayer('nz-geology-layer')
+  if (map.getSource('nz-geology-wms'))   map.removeSource('nz-geology-wms')
+  if (gnsPopup) { gnsPopup.remove(); gnsPopup = null }
+}
+
+async function toggleSoil() {
+  if (!map) return
+  if (!soilEnabled.value) {
+    soilEnabled.value = true
+    await loadGNSLayer()
+  } else {
+    soilEnabled.value = false
+    removeGNSLayer()
+  }
+}
+
+watch(soilOpacity, val => {
+  if (map && map.getLayer('nz-geology-layer')) {
+    map.setPaintProperty('nz-geology-layer', 'raster-opacity', val)
+  }
+})
+
 const handleMobileAction = (action) => {
   if (action === 'aoc') { emit('openDrawer') }
   else if (action === 'layer') { layersOpen.value = !layersOpen.value }
@@ -971,6 +1209,96 @@ const handleMobileAction = (action) => {
   left: 50%;
   transform: translateX(-50%);
   z-index: 46;
+}
+
+/* ── NZ 地質浮動面板 ──────────────────────────────────────────── */
+.nz-geo-float-panel {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  right: 16px;
+  width: min(280px, calc(100vw - 32px));
+  background: rgba(18, 38, 18, 0.92);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  border: 1px solid rgba(100, 200, 100, 0.25);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+  padding: 12px 14px 10px;
+  color: #e0f0e0;
+}
+.nz-geo-panel-row {
+  display: flex; align-items: center; gap: 6px; margin-bottom: 8px;
+}
+.nz-geo-panel-label {
+  font-size: 0.82rem; font-weight: 700; flex: 1; color: #a8e6a8;
+}
+.nz-geo-panel-credit {
+  font-size: 0.68rem; color: #7ab87a; opacity: 0.8;
+}
+.nz-geo-panel-close {
+  width: 22px; height: 22px; background: rgba(255,255,255,0.1);
+  border: none; border-radius: 50%; cursor: pointer; font-size: 0.75rem;
+  color: #ccc; display: flex; align-items: center; justify-content: center;
+}
+.nz-geo-panel-close:hover { background: rgba(255,255,255,0.2); }
+.nz-geo-opacity-row {
+  display: flex; align-items: center; gap: 8px;
+}
+.nz-geo-opacity-lbl { font-size: 0.75rem; color: #9dcf9d; white-space: nowrap; }
+.nz-geo-slider {
+  flex: 1; height: 4px; accent-color: #4caf50; cursor: pointer;
+}
+.nz-geo-opacity-val { font-size: 0.75rem; color: #a8e6a8; min-width: 34px; text-align: right; }
+.nz-geo-hint {
+  margin-top: 8px; font-size: 0.7rem; color: #7ab87a; text-align: center;
+}
+.nz-geo-slide-enter-active, .nz-geo-slide-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.nz-geo-slide-enter-from, .nz-geo-slide-leave-to {
+  opacity: 0; transform: translateX(20px);
+}
+
+/* ── NZ 地質 Popup ─────────────────────────────────────────────── */
+:global(.nz-geology-popup-wrap .mapboxgl-popup-content) {
+  padding: 0; background: transparent; box-shadow: none; border-radius: 12px;
+}
+.nz-geo-popup {
+  background: rgba(18, 38, 18, 0.96);
+  border: 1px solid rgba(100, 200, 100, 0.3);
+  border-radius: 12px;
+  padding: 14px 16px 10px;
+  color: #e0f0e0;
+  min-width: 220px; max-width: 320px;
+  font-size: 0.85rem;
+}
+.nz-geo-popup-header {
+  font-size: 0.78rem; font-weight: 700; color: #7ac97a;
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;
+}
+.nz-geo-row {
+  display: flex; gap: 8px; margin-bottom: 5px; line-height: 1.4;
+}
+.nz-geo-label {
+  font-size: 0.72rem; font-weight: 700; color: #9dcf9d;
+  min-width: 60px; flex-shrink: 0;
+}
+.nz-geo-val { color: #d8f0d8; font-size: 0.82rem; }
+.nz-geo-desc { font-size: 0.78rem; line-height: 1.5; color: #b8e0b8; }
+.nz-geo-wine-block {
+  margin-top: 10px; padding: 10px 12px;
+  background: rgba(40, 80, 40, 0.5);
+  border-left: 3px solid #4caf50;
+  border-radius: 0 8px 8px 0;
+}
+.nz-geo-wine-title {
+  font-size: 0.8rem; font-weight: 700; color: #a8e6a8; margin-bottom: 5px;
+}
+.nz-geo-wine-text {
+  font-size: 0.78rem; line-height: 1.55; color: #c8e8c8;
+}
+.nz-geo-credit {
+  margin-top: 8px; font-size: 0.68rem; color: #5a9a5a; text-align: right;
 }
 </style>
 
