@@ -97,6 +97,12 @@ export default defineConfig({
         target: 'https://data.gns.cri.nz',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/gnsgeo/, '')
+      },
+      // CGS 加州地質調查局 proxy — 解決 CORS 問題
+      '/cgs': {
+        target: 'https://maps.conservation.ca.gov',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/cgs/, '')
       }
     }
   }

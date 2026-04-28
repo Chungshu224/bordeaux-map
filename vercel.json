@@ -38,6 +38,10 @@
       "destination": "https://data.gns.cri.nz/:path*"
     },
     {
+      "source": "/cgs/:path*",
+      "destination": "https://maps.conservation.ca.gov/:path*"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },

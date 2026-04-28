@@ -108,12 +108,31 @@
           :is3D="is3D"
           :show-contours="contoursEnabled"
           :climate-enabled="climateEnabled"
-          :soil-disabled="true"
+          :soil-enabled="soilEnabled"
+          :soil-disabled="false"
+          soil-label="地質圖層"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContours"
           @toggle-climate="toggleClimate"
+          @toggle-soil="toggleSoil"
           @close="layersOpen = false"
         />
+      </div>
+    </transition>
+
+    <!-- 地質圖層不透明度控制 -->
+    <transition name="ca-geo-slide">
+      <div v-if="soilEnabled" class="ca-geo-float-panel">
+        <div class="ca-geo-panel-row">
+          <span class="ca-geo-panel-label">🗺️ CGS 地質圖層</span>
+          <button class="ca-geo-panel-close" @click="toggleSoil">✕</button>
+        </div>
+        <div class="ca-geo-opacity-row">
+          <span class="ca-geo-opacity-lbl">透明度</span>
+          <input type="range" min="0.1" max="1" step="0.05" v-model.number="soilOpacity" class="ca-geo-slider" />
+          <span class="ca-geo-opacity-val">{{ Math.round(soilOpacity * 100) }}%</span>
+        </div>
+        <div class="ca-geo-hint">點擊地圖查看地質資訊</div>
       </div>
     </transition>
 
@@ -136,6 +155,7 @@ import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import * as turf from '@turf/turf'
 import {
   RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
   RegionMapAppellationDrawer, RegionMapMobileToolbar
@@ -447,6 +467,8 @@ async function initMap() {
         } catch (_) {}
       }
     }
+
+    caAvaGeoJSON = geoJSON  // 儲存備地質圖層裁切用
 
     const initCenter = props.selectedGroup?.center ?? CA_CENTER
     const initZoom   = props.selectedGroup?.zoom   ?? CA_ZOOM
@@ -819,6 +841,191 @@ function selectById(item) {
   const found = allRegions.value.find(r => r.id === item.id)
   if (found) selectFromDrawer(found)
 }
+
+// ── CA 地質圖層（CGS WMS + ArcGIS REST）──────────────────────────────────
+const soilEnabled  = ref(false)
+const soilOpacity  = ref(0.7)
+let caGeologyPopup = null
+let caGeoClickReg  = false
+let caAvaGeoJSON   = null   // 由 initMap 賦值
+
+// California 地質類型 → 葡萄酒產區說明（對應 GENERALIZED_LTYPE / PTYPE 欄位）
+const CA_LITHO_CODES = {
+  alluvial: {
+    zh: '沖積層（Alluvial Deposits）', icon: '🪨',
+    wine: 'Napa Valley 谷底及 Sonoma 河道沿岸的沖積礫石，排水極佳，使葡萄根系深扎。Rutherford Bench 與 Oakville Bench 的礫石扇形地更被視為 Napa Cabernet Sauvignon 的精華地帶，賦予酒款「Rutherford Dust」的獨特塵土感礦物風味。',
+  },
+  marine_sed: {
+    zh: '海相沉積岩（Marine Sedimentary）', icon: '🌊',
+    wine: 'Paso Robles 的石灰質砂岩與頁岩層厚重，保水性適中且富含鈣質，是該產區 GSM 混調（Grenache、Syrah、Mourvèdre）風格醇厚的重要因素。Santa Barbara 的砂岩更因東西走向山谷導引冷海風，讓 Pinot Noir 與 Chardonnay 發展出細膩酸度。',
+  },
+  nonmarine_sed: {
+    zh: '陸相沉積岩（Nonmarine Sedimentary）', icon: '🏜️',
+    wine: 'Central Valley 廣泛的陸相沉積層以深厚黏壤土為主，保水力強，適合大量生產的 Zinfandel 與 Chenin Blanc。Sierra Foothills 丘陵的古老沉積岩風化壤土則孕育出奔放果香的 Old Vine Zinfandel。',
+  },
+  volcanic: {
+    zh: '火山岩（Volcanic Rocks）', icon: '🌋',
+    wine: 'Sonoma 北部 Knights Valley 及 Mendocino 的玄武岩與安山岩土壤礦物質豐富。Mt. Veeder 與 Spring Mountain 的火山岩風化紅土，是 Napa 山地 Cabernet 結構複雜、單寧緊實的地質根源。',
+  },
+  plutonic: {
+    zh: '侵入岩／花崗岩（Plutonic Rocks）', icon: '⛰️',
+    wine: 'Sierra Foothills 的花崗岩地層酸性貧瘠，逼使葡萄藤低產出且深根，Amador County 等地的 Zinfandel 與 Barbera 在此展現出飽滿、辛辣的特色風格。',
+  },
+  metamorphic: {
+    zh: '變質岩（Metamorphic Rocks）', icon: '💎',
+    wine: '加州海岸山脈的片岩與片麻岩帶來良好排水性，在 Mount Harlan（Calera）等高海拔產區，石灰質變質岩孕育出風格接近布根地的 Pinot Noir 與 Chardonnay。',
+  },
+  ultramafic: {
+    zh: '超基性岩（Ultramafic / Serpentinite）', icon: '🟢',
+    wine: '加州特有的蛇紋岩（Serpentinite）含高鎂低鈣，土壤生長環境嚴苛，葡萄藤低產量但果實風味濃縮。Lake County 部分 Cabernet Sauvignon 與 Sauvignon Blanc 因此帶有獨特礦物鹹感。',
+  },
+  limestone: {
+    zh: '石灰岩（Limestone）', icon: '🏔️',
+    wine: 'Santa Ynez Valley 及 Edna Valley 的石灰質土壤提供充足鈣質，使葡萄藤水分吸收均勻，Pinot Noir 發展出更細膩優雅的果香，與同一品種在礫石土壤的粗獷風格形成鮮明對比。',
+  },
+  bay_mud: {
+    zh: '灣區淤泥（Bay Mud / Clay）', icon: '🟤',
+    wine: 'San Francisco Bay 周邊低窪地帶的重黏土保水性強，需精細灌溉管理。Livermore Valley 的礫石黏土混合層（受 Alameda Creek 沖積影響）則是該產區 Chardonnay 與 Petite Sirah 的良好基礎。',
+  },
+}
+
+function getCALithoInfo(ltype, ptype) {
+  const combined = `${(ltype || '')} ${(ptype || '')}`.toLowerCase()
+  if (/alluvial|gravel|fluvial|terrace/.test(combined)) return { code: 'alluvial', ...CA_LITHO_CODES.alluvial }
+  if (/marine sedimentary|limestone|chalk|calcareous/.test(combined)) return { code: 'limestone', ...CA_LITHO_CODES.limestone }
+  if (/nonmarine sedimentary|continental sedim/.test(combined)) return { code: 'nonmarine_sed', ...CA_LITHO_CODES.nonmarine_sed }
+  if (/marine sedimentary/.test(combined)) return { code: 'marine_sed', ...CA_LITHO_CODES.marine_sed }
+  if (/volcanic|lava|basalt|andesite|rhyolite|tuff/.test(combined)) return { code: 'volcanic', ...CA_LITHO_CODES.volcanic }
+  if (/plutonic|granite|granodiorite|diorite|gabbro/.test(combined)) return { code: 'plutonic', ...CA_LITHO_CODES.plutonic }
+  if (/metamorphic|schist|gneiss|marble|slate/.test(combined)) return { code: 'metamorphic', ...CA_LITHO_CODES.metamorphic }
+  if (/ultramafic|serpentinite|peridotite|dunite/.test(combined)) return { code: 'ultramafic', ...CA_LITHO_CODES.ultramafic }
+  if (/sedimentary/.test(combined)) return { code: 'marine_sed', ...CA_LITHO_CODES.marine_sed }
+  if (/bay mud|clay|mud/.test(combined)) return { code: 'bay_mud', ...CA_LITHO_CODES.bay_mud }
+  return null
+}
+
+function renderCAGeoPopupHTML(attrs) {
+  const ptype   = attrs.PTYPE    || attrs.ptype    || ''
+  const ltype   = attrs.GENERALIZED_LTYPE || attrs.generalized_ltype || attrs.LTYPE || ''
+  const name    = attrs.UNITNAME || attrs.unitname || attrs.LABEL || attrs.label || ''
+  const age     = attrs.GENERALIZED_AGE  || attrs.generalized_age  || ''
+  const info    = getCALithoInfo(ltype, ptype)
+  return `
+    <div class="ca-geo-popup">
+      <div class="ca-geo-popup-header">🗺️ 加州地質</div>
+      ${name  ? `<div class="ca-geo-row"><span class="ca-geo-label">地層名稱</span><span class="ca-geo-val">${name}</span></div>`  : ''}
+      ${ptype ? `<div class="ca-geo-row"><span class="ca-geo-label">地質代號</span><span class="ca-geo-val">${ptype}</span></div>` : ''}
+      ${ltype ? `<div class="ca-geo-row"><span class="ca-geo-label">岩石類型</span><span class="ca-geo-val">${ltype}</span></div>` : ''}
+      ${age   ? `<div class="ca-geo-row"><span class="ca-geo-label">地質年代</span><span class="ca-geo-val">${age}</span></div>`   : ''}
+      ${info ? `
+      <div class="ca-geo-wine-block">
+        <div class="ca-geo-wine-title">${info.icon} ${info.zh}</div>
+        <div class="ca-geo-wine-text">${info.wine}</div>
+      </div>` : ''}
+      <div class="ca-geo-credit">資料來源：CGS Geologic Map of California (Public Domain)</div>
+    </div>`
+}
+
+async function loadCAGeologyLayer() {
+  if (!map) return
+  // 移除舊圖層
+  if (map.getLayer('ca-geo-clip-mask'))  map.removeLayer('ca-geo-clip-mask')
+  if (map.getSource('ca-geo-clip-src'))  map.removeSource('ca-geo-clip-src')
+  if (map.getLayer('ca-geology-layer'))  map.removeLayer('ca-geology-layer')
+  if (map.getSource('ca-geology-wms'))   map.removeSource('ca-geology-wms')
+
+  const CGS_TILE =
+    '/cgs/server/services/CGS/Geologic_Map_of_California/MapServer/WMSServer' +
+    '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=0' +
+    '&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256' +
+    '&CRS=EPSG:3857&FORMAT=image/png&TRANSPARENT=TRUE&STYLES='
+
+  map.addSource('ca-geology-wms', {
+    type: 'raster',
+    tiles: [CGS_TILE],
+    tileSize: 256,
+    attribution: '© CGS Geologic Map of California (Public Domain)',
+  })
+  map.addLayer({
+    id: 'ca-geology-layer',
+    type: 'raster',
+    source: 'ca-geology-wms',
+    paint: { 'raster-opacity': soilOpacity.value },
+  })
+
+  // 裁切 mask：顯示在 AVA 邊界內
+  if (caAvaGeoJSON?.features?.length) {
+    try {
+      let merged = caAvaGeoJSON.features[0]
+      for (let i = 1; i < caAvaGeoJSON.features.length; i++) {
+        try { merged = turf.union(turf.featureCollection([merged, caAvaGeoJSON.features[i]])) } catch (_) {}
+      }
+      const maskData = turf.mask(merged)
+      map.addSource('ca-geo-clip-src', { type: 'geojson', data: maskData })
+      map.addLayer({
+        id: 'ca-geo-clip-mask',
+        type: 'fill',
+        source: 'ca-geo-clip-src',
+        paint: { 'fill-color': '#f5f1eb', 'fill-opacity': 0.92 },
+      })
+    } catch (_) {}
+  }
+
+  // Click handler（ArcGIS REST query，仿義大利）
+  if (!caGeoClickReg) {
+    caGeoClickReg = true
+    map.on('click', async (e) => {
+      if (!soilEnabled.value) return
+      const { lng, lat } = e.lngLat
+      try {
+        const geomJson = encodeURIComponent(JSON.stringify({ x: lng, y: lat }))
+        const url =
+          '/cgs/server/rest/services/CGS/Geologic_Map_of_California/MapServer/0/query' +
+          `?geometry=${geomJson}&geometryType=esriGeometryPoint&inSR=4326` +
+          '&spatialRel=esriSpatialRelIntersects' +
+          '&outFields=PTYPE,UNITNAME,LABEL,GENERALIZED_LTYPE,GENERALIZED_AGE' +
+          '&returnGeometry=false&f=json'
+        const res = await fetch(url)
+        if (!res.ok) return
+        const data = await res.json()
+        const features = data.features || []
+        if (!features.length) return
+        const attrs = features[0].attributes || {}
+        if (caGeologyPopup) caGeologyPopup.remove()
+        caGeologyPopup = new mapboxgl.Popup({ className: 'ca-geology-popup-wrap', maxWidth: '340px', closeButton: true })
+          .setLngLat([lng, lat])
+          .setHTML(renderCAGeoPopupHTML(attrs))
+          .addTo(map)
+      } catch (_) {}
+    })
+  }
+}
+
+function removeCAGeologyLayer() {
+  if (!map) return
+  if (caGeologyPopup) { caGeologyPopup.remove(); caGeologyPopup = null }
+  if (map.getLayer('ca-geo-clip-mask'))  map.removeLayer('ca-geo-clip-mask')
+  if (map.getSource('ca-geo-clip-src'))  map.removeSource('ca-geo-clip-src')
+  if (map.getLayer('ca-geology-layer'))  map.removeLayer('ca-geology-layer')
+  if (map.getSource('ca-geology-wms'))   map.removeSource('ca-geology-wms')
+}
+
+async function toggleSoil() {
+  if (!map) return
+  if (!soilEnabled.value) {
+    soilEnabled.value = true
+    await loadCAGeologyLayer()
+  } else {
+    soilEnabled.value = false
+    removeCAGeologyLayer()
+  }
+}
+
+watch(soilOpacity, val => {
+  if (map && map.getLayer('ca-geology-layer')) {
+    map.setPaintProperty('ca-geology-layer', 'raster-opacity', val)
+  }
+})
 
 function handleMobileAction(action) {
   if (action === 'aoc') { drawerOpen.value = !drawerOpen.value; layersOpen.value = false }
@@ -1592,4 +1799,90 @@ function handleMobileAction(action) {
 /* rmap-section for extra-content slot */
 .rmap-section { margin-top: 8px; }
 .rmap-section-title { font-size: 11px; color: #999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }
+
+/* ── CA 地質浮動面板 ──────────────────────────────────────────── */
+.ca-geo-float-panel {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  right: 16px;
+  width: min(276px, calc(100vw - 32px));
+  background: rgba(30, 10, 10, 0.93);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  border: 1px solid rgba(200, 80, 80, 0.25);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+  z-index: 1001;
+  padding: 12px 14px 10px;
+  color: #f0d8d8;
+}
+.ca-geo-panel-row {
+  display: flex; align-items: center; gap: 6px; margin-bottom: 8px;
+}
+.ca-geo-panel-label {
+  font-size: 0.82rem; font-weight: 700; flex: 1; color: #f4b4b4;
+}
+.ca-geo-panel-close {
+  width: 22px; height: 22px; background: rgba(255,255,255,0.1);
+  border: none; border-radius: 50%; cursor: pointer; font-size: 0.75rem;
+  color: #ccc; display: flex; align-items: center; justify-content: center;
+}
+.ca-geo-panel-close:hover { background: rgba(255,255,255,0.2); }
+.ca-geo-opacity-row {
+  display: flex; align-items: center; gap: 8px;
+}
+.ca-geo-opacity-lbl { font-size: 0.75rem; color: #e8b0b0; white-space: nowrap; }
+.ca-geo-slider {
+  flex: 1; height: 4px; accent-color: #c0392b; cursor: pointer;
+}
+.ca-geo-opacity-val { font-size: 0.75rem; color: #f4b4b4; min-width: 34px; text-align: right; }
+.ca-geo-hint {
+  margin-top: 8px; font-size: 0.7rem; color: #c08080; text-align: center;
+}
+.ca-geo-slide-enter-active, .ca-geo-slide-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.ca-geo-slide-enter-from, .ca-geo-slide-leave-to {
+  opacity: 0; transform: translateX(20px);
+}
+
+/* ── CA 地質 Popup ──────────────────────────────────────────────── */
+:global(.ca-geology-popup-wrap .mapboxgl-popup-content) {
+  padding: 0; background: transparent; box-shadow: none; border-radius: 12px;
+}
+.ca-geo-popup {
+  background: rgba(30, 10, 10, 0.96);
+  border: 1px solid rgba(200, 80, 80, 0.3);
+  border-radius: 12px;
+  padding: 14px 16px 10px;
+  color: #f0d8d8;
+  min-width: 220px; max-width: 320px;
+  font-size: 0.85rem;
+}
+.ca-geo-popup-header {
+  font-size: 0.78rem; font-weight: 700; color: #f4b4b4;
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;
+}
+.ca-geo-row {
+  display: flex; gap: 8px; margin-bottom: 5px; line-height: 1.4;
+}
+.ca-geo-label {
+  font-size: 0.72rem; font-weight: 700; color: #e8b0b0;
+  min-width: 60px; flex-shrink: 0;
+}
+.ca-geo-val { color: #f5e0e0; font-size: 0.82rem; }
+.ca-geo-wine-block {
+  margin-top: 10px; padding: 10px 12px;
+  background: rgba(120, 20, 20, 0.4);
+  border-left: 3px solid #c0392b;
+  border-radius: 0 8px 8px 0;
+}
+.ca-geo-wine-title {
+  font-size: 0.8rem; font-weight: 700; color: #f4b4b4; margin-bottom: 5px;
+}
+.ca-geo-wine-text {
+  font-size: 0.78rem; line-height: 1.55; color: #e8c8c8;
+}
+.ca-geo-credit {
+  margin-top: 8px; font-size: 0.68rem; color: #a06060; text-align: right;
+}
 </style>
