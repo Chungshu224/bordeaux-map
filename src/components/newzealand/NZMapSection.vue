@@ -702,25 +702,68 @@ function getNZGeoDesc(name, type) {
   return null
 }
 
+// ── 地質術語中文對照 ──────────────────────────────────────────────────────────
+const NZ_LITH_ZH = {
+  'sandstone': '砂岩', 'shale': '頁岩', 'limestone': '石灰岩', 'mudstone': '泥岩',
+  'siltstone': '粉砂岩', 'conglomerate': '礫岩', 'chert': '燧石岩', 'dolostone': '白雲岩',
+  'dolomite': '白雲岩', 'marble': '大理岩', 'slate': '板岩', 'schist': '片岩',
+  'gneiss': '片麻岩', 'phyllite': '千枚岩', 'quartzite': '石英岩',
+  'granite': '花崗岩', 'granodiorite': '花崗閃長岩', 'diorite': '閃長岩',
+  'gabbro': '輝長岩', 'rhyolite': '流紋岩', 'andesite': '安山岩',
+  'basalt': '玄武岩', 'tuff': '凝灰岩', 'ignimbrite': '熔結凝灰岩',
+  'tephra': '火山碎屑物', 'loess': '黃土',
+  'alluvium': '沖積層', 'gravel': '礫石', 'sand': '砂', 'clay': '黏土',
+  'silt': '粉砂', 'mud': '淤泥',
+  'greywacke': '雜砂岩', 'graywacke': '雜砂岩', 'argillite': '泥質岩',
+  'mixed': '混合岩', 'undivided': '未分類', 'not reported': '未記錄',
+}
+const NZ_AGE_ZH = {
+  'cambrian': '寒武紀', 'ordovician': '奧陶紀', 'silurian': '志留紀',
+  'devonian': '泥盆紀', 'carboniferous': '石炭紀', 'permian': '二疊紀',
+  'triassic': '三疊紀', 'jurassic': '侏羅紀', 'cretaceous': '白堊紀',
+  'paleocene': '古新世', 'eocene': '始新世', 'oligocene': '漸新世',
+  'miocene': '中新世', 'pliocene': '上新世', 'pleistocene': '更新世',
+  'holocene': '全新世', 'quaternary': '第四紀', 'neogene': '新近紀',
+  'paleogene': '古近紀', 'cenozoic': '新生代', 'mesozoic': '中生代',
+  'paleozoic': '古生代', 'precambrian': '前寒武紀',
+  'early': '早', 'middle': '中', 'late': '晚', 'upper': '晚', 'lower': '早',
+}
+function nzTranslateLith(en) {
+  if (!en) return ''
+  let s = en.trim().toLowerCase()
+  for (const [k, v] of Object.entries(NZ_LITH_ZH)) {
+    s = s.replace(new RegExp(`\\b${k}\\b`, 'gi'), v)
+  }
+  return s
+}
+function nzTranslateAge(en) {
+  if (!en) return ''
+  let s = en.trim()
+  for (const [k, v] of Object.entries(NZ_AGE_ZH)) {
+    s = s.replace(new RegExp(`\\b${k}\\b`, 'gi'), v)
+  }
+  return s.replace(/\s+to\s+/gi, ' 至 ').replace(/\s+and\s+/gi, ' 及 ')
+}
+
 function renderGNSPopupHTML(props) {
-  const name    = props.name     || props.UNIT_NAME || props.lithology || ''
-  const type    = props.type     || props.ROCKTYPE  || ''
-  const age     = props.age      || props.AGE       || props.PERIOD    || ''
-  const desc    = props.description || ''
-  const wineInfo = getNZGeoDesc(name, type)
+  const lith     = props.lith || ''
+  const name     = props.name || ''
+  const age      = props.age  || ''
+  const wineInfo = getNZGeoDesc(lith, '')
+  const displayType = wineInfo?.zh || nzTranslateLith(lith) || ''
+  const displayAge  = nzTranslateAge(age)
   return `
     <div class="nz-geo-popup">
       <div class="nz-geo-popup-header">🗺️ 紐西蘭地質</div>
-      ${name ? `<div class="nz-geo-row"><span class="nz-geo-label">岩石名稱</span><span class="nz-geo-val">${name}</span></div>` : ''}
-      ${type ? `<div class="nz-geo-row"><span class="nz-geo-label">岩石類型</span><span class="nz-geo-val">${type}</span></div>` : ''}
-      ${age  ? `<div class="nz-geo-row"><span class="nz-geo-label">地質年代</span><span class="nz-geo-val">${age}</span></div>`  : ''}
-      ${desc ? `<div class="nz-geo-row"><span class="nz-geo-label">描述</span><span class="nz-geo-val nz-geo-desc">${desc}</span></div>` : ''}
+      ${name        ? `<div class="nz-geo-row"><span class="nz-geo-label">地層名稱</span><span class="nz-geo-val">${name}</span></div>`        : ''}
+      ${displayType ? `<div class="nz-geo-row"><span class="nz-geo-label">岩石類型</span><span class="nz-geo-val">${displayType}</span></div>` : ''}
+      ${displayAge  ? `<div class="nz-geo-row"><span class="nz-geo-label">地質年代</span><span class="nz-geo-val">${displayAge}</span></div>`  : ''}
       ${wineInfo ? `
       <div class="nz-geo-wine-block">
         <div class="nz-geo-wine-title">${wineInfo.icon} ${wineInfo.zh}</div>
         <div class="nz-geo-wine-text">${wineInfo.wine}</div>
       </div>` : ''}
-      <div class="nz-geo-credit">資料來源：GNS Science (CC-BY 3.0 NZ)</div>
+      <div class="nz-geo-credit">資料來源：Macrostrat (CC BY 4.0)</div>
     </div>`
 }
 
@@ -732,21 +775,24 @@ async function loadGNSLayer() {
   if (map.getLayer('nz-geology-layer'))  map.removeLayer('nz-geology-layer')
   if (map.getSource('nz-geology-wms'))   map.removeSource('nz-geology-wms')
 
-  const GNS_TILE = `/gnsgeo/webmaps/geology/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap` +
-    `&LAYERS=NZL_GNS_1M_Geological_Units&BBOX={bbox-epsg-3857}` +
-    `&WIDTH=256&HEIGHT=256&CRS=EPSG:3857&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=`
-
+  // Macrostrat 公開地質向量圖磚（無需 CORS proxy，CC BY 4.0）
   map.addSource('nz-geology-wms', {
-    type: 'raster',
-    tiles: [GNS_TILE],
-    tileSize: 256,
-    attribution: '© GNS Science (CC-BY 3.0 NZ)',
+    type: 'vector',
+    tiles: ['https://tiles.macrostrat.org/carto/{z}/{x}/{y}.mvt'],
+    tileSize: 512,
+    minzoom: 0,
+    maxzoom: 15,
+    attribution: '© Macrostrat (CC BY 4.0)',
   })
   map.addLayer({
     id: 'nz-geology-layer',
-    type: 'raster',
+    type: 'fill',
     source: 'nz-geology-wms',
-    paint: { 'raster-opacity': soilOpacity.value },
+    'source-layer': 'units',
+    paint: {
+      'fill-color': ['coalesce', ['get', 'color'], '#cccccc'],
+      'fill-opacity': soilOpacity.value,
+    },
   })
 
   // 裁切 mask：合併所有已載入的產區 GeoJSON
@@ -780,40 +826,19 @@ async function loadGNSLayer() {
     }
   } catch (_) {}
 
-  // Click handler（GeoServer WMS GetFeatureInfo）
+  // Click handler（Macrostrat vector tile queryRenderedFeatures）
   if (!gnsClickReg) {
     gnsClickReg = true
-    map.on('click', async (e) => {
+    map.on('click', (e) => {
       if (!soilEnabled.value) return
-      const { lng, lat } = e.lngLat
-      const zoom = map.getZoom()
-      const tileSize = 256
-      const scale = Math.pow(2, zoom)
-      const worldX = (lng + 180) / 360 * scale * tileSize
-      const worldY = (1 - Math.log(Math.tan(lat * Math.PI / 180) + 1 / Math.cos(lat * Math.PI / 180)) / Math.PI) / 2 * scale * tileSize
-      const size = tileSize
-      const half = size / 2
-      const minX = worldX - half; const maxX = worldX + half
-      const minY = worldY - half; const maxY = worldY + half
-      const toLng = x => x / (scale * tileSize) * 360 - 180
-      const toLat = y => Math.atan(Math.sinh(Math.PI * (1 - 2 * y / (scale * tileSize)))) * 180 / Math.PI
-      const bbox = `${toLng(minX)},${toLat(maxY)},${toLng(maxX)},${toLat(minY)}`
-      const url = `/gnsgeo/webmaps/geology/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo` +
-        `&LAYERS=NZL_GNS_1M_Geological_Units&QUERY_LAYERS=NZL_GNS_1M_Geological_Units` +
-        `&CRS=EPSG:4326&BBOX=${bbox}&WIDTH=${size}&HEIGHT=${size}&I=${half}&J=${half}` +
-        `&INFO_FORMAT=application%2Fjson&FEATURE_COUNT=1`
-      try {
-        const res = await fetch(url)
-        if (!res.ok) return
-        const data = await res.json()
-        const feat = data?.features?.[0]
-        if (!feat) return
-        if (gnsPopup) gnsPopup.remove()
-        gnsPopup = new mapboxgl.Popup({ maxWidth: '340px', className: 'nz-geology-popup-wrap' })
-          .setLngLat(e.lngLat)
-          .setHTML(renderGNSPopupHTML(feat.properties || {}))
-          .addTo(map)
-      } catch (_) {}
+      const features = map.queryRenderedFeatures(e.point, { layers: ['nz-geology-layer'] })
+      if (!features.length) return
+      const attrs = features[0].properties || {}
+      if (gnsPopup) gnsPopup.remove()
+      gnsPopup = new mapboxgl.Popup({ maxWidth: '340px', className: 'nz-geology-popup-wrap' })
+        .setLngLat(e.lngLat)
+        .setHTML(renderGNSPopupHTML(attrs))
+        .addTo(map)
     })
   }
 }
@@ -840,7 +865,7 @@ async function toggleSoil() {
 
 watch(soilOpacity, val => {
   if (map && map.getLayer('nz-geology-layer')) {
-    map.setPaintProperty('nz-geology-layer', 'raster-opacity', val)
+    map.setPaintProperty('nz-geology-layer', 'fill-opacity', val)
   }
 })
 
@@ -1263,7 +1288,7 @@ const handleMobileAction = (action) => {
 :global(.nz-geology-popup-wrap .mapboxgl-popup-content) {
   padding: 0; background: transparent; box-shadow: none; border-radius: 12px;
 }
-.nz-geo-popup {
+:global(.nz-geo-popup) {
   background: rgba(18, 38, 18, 0.96);
   border: 1px solid rgba(100, 200, 100, 0.3);
   border-radius: 12px;
@@ -1272,32 +1297,32 @@ const handleMobileAction = (action) => {
   min-width: 220px; max-width: 320px;
   font-size: 0.85rem;
 }
-.nz-geo-popup-header {
+:global(.nz-geo-popup-header) {
   font-size: 0.78rem; font-weight: 700; color: #7ac97a;
   text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;
 }
-.nz-geo-row {
+:global(.nz-geo-row) {
   display: flex; gap: 8px; margin-bottom: 5px; line-height: 1.4;
 }
-.nz-geo-label {
+:global(.nz-geo-label) {
   font-size: 0.72rem; font-weight: 700; color: #9dcf9d;
   min-width: 60px; flex-shrink: 0;
 }
-.nz-geo-val { color: #d8f0d8; font-size: 0.82rem; }
-.nz-geo-desc { font-size: 0.78rem; line-height: 1.5; color: #b8e0b8; }
-.nz-geo-wine-block {
+:global(.nz-geo-val) { color: #d8f0d8; font-size: 0.82rem; }
+:global(.nz-geo-desc) { font-size: 0.78rem; line-height: 1.5; color: #b8e0b8; }
+:global(.nz-geo-wine-block) {
   margin-top: 10px; padding: 10px 12px;
   background: rgba(40, 80, 40, 0.5);
   border-left: 3px solid #4caf50;
   border-radius: 0 8px 8px 0;
 }
-.nz-geo-wine-title {
+:global(.nz-geo-wine-title) {
   font-size: 0.8rem; font-weight: 700; color: #a8e6a8; margin-bottom: 5px;
 }
-.nz-geo-wine-text {
+:global(.nz-geo-wine-text) {
   font-size: 0.78rem; line-height: 1.55; color: #c8e8c8;
 }
-.nz-geo-credit {
+:global(.nz-geo-credit) {
   margin-top: 8px; font-size: 0.68rem; color: #5a9a5a; text-align: right;
 }
 </style>
