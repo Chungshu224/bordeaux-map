@@ -39,6 +39,20 @@
         @toggle-soil="toggleGeology"
         @close="showLayerPanel = false"
       />
+      <!-- BGR 土壤圖層控制列（啟用時顯示）-->
+      <div v-if="showGeology" class="de-soil-inline-panel">
+        <div class="de-soil-inline-title">🇩🇪 BGR BUEK200 土壤圖</div>
+        <div class="de-soil-inline-row">
+          <span class="de-soil-inline-lbl">透明度</span>
+          <input class="de-soil-inline-slider" type="range" min="0.1" max="1.0" step="0.05"
+            v-model.number="soilOpacity">
+          <span class="de-soil-inline-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+        </div>
+        <div class="de-soil-inline-footer">
+          <span>資料來源：BGR BÖK200 (CC-BY 4.0)</span>
+          <span>點擊地圖查看土壤資訊</span>
+        </div>
+      </div>
     </div>
 
     <transition name="climate-slide">
@@ -174,6 +188,90 @@ const BGR_WMS_TILE =
 let map = null
 let regionBounds = null
 let regionBoundaryGeoJSON = null  // 供土壤圖 clip mask 使用
+let soilClickRegistered = false
+let soilPopup = null
+
+// ── BGR BUEK200 土壤類型翻譯 ────────────────────────────────────────────────
+const BGR_ALL_LAYERS = Array.from({ length: 55 }, (_, i) => i).join(',')
+
+const BGR_SOIL_MAP = [
+  { de: 'Parabraunerde',   zh: '準棕壤',       icon: '🟧', wine: '由棕壤進一步淡溦而成，黏土向下遷移形成明顯層次，排水良好，根系可深扎，有助於釀造結構緊實、具陳年潛力的 Riesling 與 Spätburgunder。' },
+  { de: 'Pseudogley',      zh: '假潛育土',     icon: '🔵', wine: '季節性滞水形成的特殊土壤，兼具乾濕循環，根系受壓力刺激可提升果實濃縮度，版筆酒帶有獨特的土壤矿物感與韵味。' },
+  { de: 'Braunerde',       zh: '棕壤',         icon: '🌿', wine: '德國葡萄酒產區最廣泛的土壤，由森林腐殖質分解形成，保水性佳且矿物質豐富，利於 Riesling 保留細致酸度，赦予葡萄酒清新果香與矿物感。' },
+  { de: 'Rendzina',        zh: '石灰性淣土',   icon: '⚪️', wine: '形成於石灰岩之上，淣薄而含大量活性石灰，排水極佳能減慢葡萄生長節奏，使 Riesling 表現出精絻酸度與貝殼般的石灰矿物韵味。' },
+  { de: 'Ranker',          zh: '矽質淣土',     icon: '⛰️', wine: '薄層土覆蓋在矽質岩石之上，保熱能力強，日夜溫差大，能凝聚葡萄中的精油與香氣，赦予酒體辛香與強烈個性。' },
+  { de: 'Regosol',         zh: '粗骨土',       icon: '🪨', wine: '由砂櫾或岩石碎屑組成的疏鬆土層，排水迅速保熱佳，葡萄根系深入基岩獲取矿物，釀造出的葡萄酒帶有清晰的矿物感與優雅酸度。' },
+  { de: 'Kolluvium',       zh: '坡積土',       icon: '⛰', wine: '山坡侵蝕物堆積形成的坡積土，混合多種母質，矿物來源多元，層次豐富，能赦予葡萄酒複雜而具深度的矿物口感。' },
+  { de: 'Auenboden',       zh: '沖積河岸土',   icon: '💧', wine: '河流沖積形成的濕潤土壤，有機質豐富，保水性強，葡萄在此生長水分穩定，酒體豐满圓潤，果香充沛。' },
+  { de: 'Pelosol',         zh: '膨縮黏土',     icon: '🟤', wine: '富含膨行性黏土矿物，乾濕交替時明顯收縮膨張，葡萄根系深入裂縮同吸取矿物，赦予葡萄酒獨特的土質風味與豐滿酒體。' },
+  { de: 'Schwarzerde',     zh: '黑土',         icon: '⬛', wine: '有機質豐富的黑色土層，保水保肥能力極強，支持葡萄均衡生長，釀出果味豐盈、結構飽滿的紅白葡萄酒。' },
+  { de: 'Gley',            zh: '潛育土',       icon: '📘', wine: '地下水位高形成的還原性土壤，有機質豐富保水性強，提供穩定的水分供應，有助於維持葡萄酒的新鮮果味與清爽酸度。' },
+  { de: 'Podsol',          zh: '灰化土',       icon: '⬜', wine: '強烈淡溦作用形成的酸性土壤，養分貧乏但排水良好，促使葡萄根系深扎，在貧省中蓄取矿物，造就骨架清晰、矿物感鮮明的葡萄酒。' },
+  { de: 'Terra fusca',     zh: '褐色岩溦土',   icon: '🟧', wine: '石灰岩不溦殘率積聚形成的紅棕色土壤，矽鄩氧化物豐富，排水佳酸度適中，有助於釀造具有複雜矿物感的精品白酒。' },
+]
+
+const BGR_BGL_MAP = {
+  '1': '海岸與河口地景', '2': '北德低地', '3': '西北低地',
+  '4': '東北低地', '5': '中德丘陵', '6': '西南丘陵',
+  '7': '阿爾卒斯山前地', '8': '阿爾卒斯山區',
+  '9': '萊茨河谷', '10': '中德高地', '11': '黑森林/萊茨谷地',
+}
+
+function translateBGRSoil(legendentext) {
+  if (!legendentext) return null
+  for (const entry of BGR_SOIL_MAP) {
+    if (legendentext.includes(entry.de)) return entry
+  }
+  return null
+}
+
+function parseBGRXML(xmlText) {
+  if (!xmlText) return null
+  try {
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(xmlText, 'text/xml')
+    const fields = doc.querySelector('FIELDS')
+    if (!fields) return null
+    return {
+      legendentext: fields.getAttribute('Legendentext') || '',
+      legende:      fields.getAttribute('Legende') || '',
+      nrkart:       fields.getAttribute('NRKART') || '',
+      bgl:          fields.getAttribute('BGL') || '',
+      profile:      fields.getAttribute('Profile') || '',
+    }
+  } catch (_) { return null }
+}
+
+function renderBGRSoilPopupHTML(data) {
+  if (!data || !data.legendentext) {
+    return `<div class="de-soil-popup"><div class="dsoil-header"><span class="dsoil-flag">🇩🇪</span><span class="dsoil-title">德國土壤資訊</span></div><div class="dsoil-empty">此位置無土壤資料，請嘗試其他位置。</div></div>`
+  }
+  const soil = translateBGRSoil(data.legendentext)
+  const soilZh = soil?.zh || '混合土壤'
+  const soilIcon = soil?.icon || '🌱'
+  const soilWine = soil?.wine || '此處土壤由多種矿物質混合組成，反映德國複雜的地質多樣性，赦予葡萄酒獨特的風土個性。'
+  const bglKey = String(data.bgl).split('.')[0]
+  const bglZh = BGR_BGL_MAP[bglKey] || (data.bgl ? `土壤地景 ${data.bgl}` : '')
+  const legende = data.legende.length > 55 ? data.legende.slice(0, 55) + '…' : data.legende
+  return `
+    <div class="de-soil-popup">
+      <div class="dsoil-header">
+        <span class="dsoil-flag">🇩🇪</span>
+        <span class="dsoil-title">德國土壤資訊</span>
+      </div>
+      <div class="dsoil-body">
+        <div class="dsoil-row"><span class="dsoil-lbl">土壤類型</span><span class="dsoil-val">${soilIcon} ${soilZh}</span></div>
+        ${bglZh ? `<div class="dsoil-row"><span class="dsoil-lbl">地景分區</span><span class="dsoil-val">${bglZh}</span></div>` : ''}
+        ${legende ? `<div class="dsoil-row"><span class="dsoil-lbl">圖例代號</span><span class="dsoil-val dsoil-mono">${legende}</span></div>` : ''}
+      </div>
+      <div class="dsoil-wine">
+        <div class="dsoil-wine-head">${soilIcon}&ensp;<strong>${soilZh}</strong></div>
+        <p class="dsoil-wine-text">${soilWine}</p>
+        ${data.profile ? `<a class="dsoil-profile-link" href="${data.profile}" target="_blank" rel="noopener">查看土壤剖面 →</a>` : ''}
+      </div>
+    </div>
+  `
+}
 
 // ── Climate state ──────────────────────────────────────────────────────────
 const climateEnabled   = ref(false)
@@ -518,6 +616,7 @@ async function toggleGeology() {
     }
   } else {
     // 移除土壤圖層、clip 遮罩
+    if (soilPopup) { soilPopup.remove(); soilPopup = null }
     if (map.getLayer('de-soil-clip-overlay')) map.removeLayer('de-soil-clip-overlay')
     if (map.getSource('de-soil-clip-src')) map.removeSource('de-soil-clip-src')
     if (map.getLayer('bgr-soil-layer')) map.removeLayer('bgr-soil-layer')
@@ -575,9 +674,54 @@ function addGeologyLayer() {
       console.warn('[GermanyMapSection] clip mask failed:', e)
     }
   }
+  // 建立點擊查詢 handler（只註冊一次）
+  if (!soilClickRegistered) {
+    map.on('click', async (e) => {
+      if (!showGeology.value) return
+      const { lng, lat } = e.lngLat
+      // 點擊只限產區範圍內（支援 FeatureCollection 與單一 Feature）
+      if (regionBoundaryGeoJSON) {
+        try {
+          const pt = turf.point([lng, lat])
+          let inBounds = false
+          if (regionBoundaryGeoJSON.type === 'FeatureCollection') {
+            inBounds = regionBoundaryGeoJSON.features.some(f => {
+              try { return turf.booleanPointInPolygon(pt, f) } catch (_) { return false }
+            })
+          } else {
+            inBounds = turf.booleanPointInPolygon(pt, regionBoundaryGeoJSON)
+          }
+          if (!inBounds) return
+        } catch (_) { return }
+      }
+      // 轉換座標至 EPSG:3857 并構建 GetFeatureInfo 請求
+      const mx = lng * 20037508.34 / 180
+      const myRad = Math.log(Math.tan((90 + lat) * Math.PI / 360)) / (Math.PI / 180)
+      const my = myRad * 20037508.34 / 180
+      const delta = 3000
+      const bbox = `${mx - delta},${my - delta},${mx + delta},${my + delta}`
+      let xmlData = null
+      try {
+        const url = `/bgr/wms/boden/buek200/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo` +
+          `&LAYERS=${BGR_ALL_LAYERS}&QUERY_LAYERS=${BGR_ALL_LAYERS}` +
+          `&CRS=EPSG:3857&BBOX=${bbox}&WIDTH=256&HEIGHT=256&I=128&J=128` +
+          `&INFO_FORMAT=text/xml`
+        const res = await fetch(url)
+        if (res.ok) xmlData = await res.text()
+      } catch (err) {
+        console.warn('[GermanyMap] BGR GetFeatureInfo error:', err)
+      }
+      const parsed = parseBGRXML(xmlData)
+      const html = renderBGRSoilPopupHTML(parsed)
+      if (soilPopup) soilPopup.remove()
+      soilPopup = new mapboxgl.Popup({ className: 'de-soil-popup-wrap', maxWidth: '340px', closeButton: true })
+        .setLngLat([lng, lat])
+        .setHTML(html)
+        .addTo(map)
+    })
+    soilClickRegistered = true
+  }
 }
-
-watch(soilOpacity, (val) => {
   if (map && map.getLayer('bgr-soil-layer')) {
     map.setPaintProperty('bgr-soil-layer', 'raster-opacity', val)
   }
@@ -827,6 +971,97 @@ const unifiedInfo = computed(() => {
   }
 })
 </script>
+
+<!-- BGR 土壤 popup 全域樣式（mapboxgl popup 容器不支援 scoped）-->
+<style>
+.de-soil-popup-wrap .mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.22), 0 1px 4px rgba(0,0,0,0.08);
+  min-width: 270px;
+  max-width: 340px;
+  background: #fff;
+}
+.de-soil-popup-wrap .mapboxgl-popup-tip { border-top-color: #2d5016 !important; }
+.de-soil-popup-wrap .mapboxgl-popup-close-button {
+  color: rgba(255,255,255,0.9);
+  font-size: 20px;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 6px;
+  top: 6px;
+  background: rgba(0,0,0,0.18);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.de-soil-popup-wrap .mapboxgl-popup-close-button:hover {
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+}
+/* ── popup 內容樣式 ── */
+.de-soil-popup { font-family: 'Noto Sans TC', -apple-system, sans-serif; }
+.dsoil-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 40px 12px 16px;
+  background: linear-gradient(120deg, #2d5016 0%, #4a7c2d 100%);
+  color: #fff;
+}
+.dsoil-flag { font-size: 18px; line-height: 1; }
+.dsoil-title { font-size: 14px; font-weight: 700; letter-spacing: 0.4px; }
+.dsoil-body { padding: 4px 0; border-bottom: 1px solid #f0ebe3; }
+.dsoil-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 16px;
+  border-bottom: 1px solid #faf5f0;
+}
+.dsoil-row:last-child { border-bottom: none; }
+.dsoil-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  color: #3a6b1a;
+  white-space: nowrap;
+  min-width: 56px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.dsoil-val { font-size: 13px; color: #2d1a1a; flex: 1; line-height: 1.4; }
+.dsoil-mono { font-size: 11px; font-family: monospace; color: #555; word-break: break-all; }
+.dsoil-wine {
+  margin: 10px 12px 12px;
+  background: #f4faf0;
+  border-left: 3px solid #4a7c2d;
+  border-radius: 0 8px 8px 0;
+  padding: 10px 12px;
+}
+.dsoil-wine-head {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2d5016;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+.dsoil-wine-text { margin: 0; font-size: 12px; line-height: 1.7; color: #3a4a2a; }
+.dsoil-empty { padding: 14px 16px; font-size: 13px; color: #999; text-align: center; }
+.dsoil-profile-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #4a7c2d;
+  text-decoration: none;
+}
+.dsoil-profile-link:hover { text-decoration: underline; }
+</style>
 
 <style scoped>
 .germany-map-section {
