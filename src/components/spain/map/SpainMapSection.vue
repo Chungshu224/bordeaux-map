@@ -42,15 +42,6 @@
       @select="selectById"
     />
 
-    <!-- 圖例 (左下) -->
-    <div v-if="mapReady" class="map-legend">
-      <div class="legend-title">產區認證</div>
-      <div v-for="t in legendTypes" :key="t.label" class="legend-item">
-        <span class="legend-dot" :style="{ background: t.color }"></span>
-        <span>{{ t.label }}</span>
-      </div>
-    </div>
-
     <!-- 氣候熱力圖控制列 -->
     <transition name="sp-climate-slide">
     <div v-if="climateEnabled && climateData" class="sp-climate-overlay">
@@ -1955,44 +1946,6 @@ function handleMobileAction(action) {
 .fade-down-enter-to, .fade-down-leave-from {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
-}
-
-/* ── Legend ──────────────────────────────────────────────────── */
-.map-legend {
-  position: fixed;
-  right: 1rem;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-  z-index: 999;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
-  padding: 0.6rem 0.8rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-  font-size: 0.78rem;
-}
-
-.legend-title {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: #888;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.4rem;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.15rem 0;
-  color: #444;
-}
-
-.legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  flex-shrink: 0;
 }
 
 /* ── Bottom toolbar (Bordeaux style) ─────────────────────────── */
