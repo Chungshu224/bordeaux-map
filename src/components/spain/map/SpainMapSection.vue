@@ -914,11 +914,19 @@ async function loadSpainGeologyLayer() {
     map.on('click', async (e) => {
       if (!soilEnabled.value) return
       const { lng, lat } = e.lngLat
-      // 點擊只限選取產區範圍內
+      // 點擊只限選取產區範圍內（支援 FeatureCollection 與單一 Feature）
       if (regionOutlineGeoJSON) {
         try {
           const pt = turf.point([lng, lat])
-          if (!turf.booleanPointInPolygon(pt, regionOutlineGeoJSON)) return
+          let inBounds = false
+          if (regionOutlineGeoJSON.type === 'FeatureCollection') {
+            inBounds = regionOutlineGeoJSON.features.some(f => {
+              try { return turf.booleanPointInPolygon(pt, f) } catch (_) { return false }
+            })
+          } else {
+            inBounds = turf.booleanPointInPolygon(pt, regionOutlineGeoJSON)
+          }
+          if (!inBounds) return
         } catch (_) { return }
       }
       let attrs = {}
