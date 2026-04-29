@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <section class="australia-map-section">
 
     <!-- 全螢幕地圖 -->
@@ -548,10 +548,44 @@ function getClipGeoJSON() {
   return auRegionsGeoJSON  // 未選取任何產區時，遮罩範圍為澳洲全境
 }
 
+// 計算當前 clip 區域的 bbox（稍微擴充邊界避免裁切）
+function getClipBounds() {
+  const clip = getClipGeoJSON()
+  if (!clip?.features?.length) return null
+  let w = Infinity, s = Infinity, e = -Infinity, n = -Infinity
+  for (const f of clip.features) {
+    if (!f.geometry) continue
+    try {
+      const [fw, fs, fe, fn] = featureBbox(f.geometry)
+      if (fw < w) w = fw; if (fs < s) s = fs
+      if (fe > e) e = fe; if (fn > n) n = fn
+    } catch (_) {}
+  }
+  return isFinite(w) ? [w - 0.3, s - 0.3, e + 0.3, n + 0.3] : null
+}
+
 function updateASRISClip() {
   if (!map || !showGeology.value) return
+  // 移除舊 clip overlay
   if (map.getLayer('au-soil-clip-overlay')) map.removeLayer('au-soil-clip-overlay')
   if (map.getSource('au-soil-clip-src')) map.removeSource('au-soil-clip-src')
+  // 重建 WMS 圖磁 source，套用所選產區的 bounds 限制圖磁請求範圍
+  const bounds = getClipBounds()
+  const insertBefore = map.getLayer('region-fill') ? 'region-fill' : undefined
+  if (map.getLayer('au-soil-layer')) map.removeLayer('au-soil-layer')
+  if (map.getSource('asris-wms')) map.removeSource('asris-wms')
+  const sourceOpts = {
+    type: 'raster', tiles: [ASRIS_WMS_TILE], tileSize: 256,
+    minzoom: 3, maxzoom: 14,
+    attribution: '\u00a9 CSIRO ASRIS Australian Soil Classification (CC-BY 4.0)'
+  }
+  if (bounds) sourceOpts.bounds = bounds
+  map.addSource('asris-wms', sourceOpts)
+  map.addLayer({
+    id: 'au-soil-layer', type: 'raster', source: 'asris-wms',
+    paint: { 'raster-opacity': asrisOpacity.value }
+  }, insertBefore)
+  // 套用 turf.mask 遂罩
   const clipGeoJSON = getClipGeoJSON()
   if (!clipGeoJSON) return
   try {
@@ -562,7 +596,7 @@ function updateASRISClip() {
       type: 'fill',
       source: 'au-soil-clip-src',
       paint: { 'fill-color': '#060a10', 'fill-opacity': 0.78 }
-    }, map.getLayer('region-fill') ? 'region-fill' : undefined)
+    }, insertBefore)
   } catch (e) {
     console.warn('[ASRIS] turf.mask clip 失敗:', e)
   }
@@ -588,29 +622,7 @@ function toggleGeology() {
 
 function addGeologyLayer() {
   if (!map) return
-  // 清除舊層
-  if (map.getLayer('au-soil-clip-overlay')) map.removeLayer('au-soil-clip-overlay')
-  if (map.getSource('au-soil-clip-src')) map.removeSource('au-soil-clip-src')
-  if (map.getLayer('au-soil-layer')) map.removeLayer('au-soil-layer')
-  if (map.getSource('asris-wms')) map.removeSource('asris-wms')
-
-  map.addSource('asris-wms', {
-    type: 'raster',
-    tiles: [ASRIS_WMS_TILE],
-    tileSize: 256,
-    minzoom: 3,
-    maxzoom: 14,
-    attribution: '© CSIRO ASRIS Australian Soil Classification (CC-BY 4.0)'
-  })
-  const insertBefore = map.getLayer('region-fill') ? 'region-fill' : undefined
-  map.addLayer({
-    id: 'au-soil-layer',
-    type: 'raster',
-    source: 'asris-wms',
-    paint: { 'raster-opacity': asrisOpacity.value }
-  }, insertBefore)
-
-  // turf.mask clip — 遮罩產區外的土壤圖，僅顯示已選取產區範圍內
+  // 圖層與 bounds 限制均由 updateASRISClip 統一管理
   updateASRISClip()
 }
 
