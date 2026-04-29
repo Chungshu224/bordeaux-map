@@ -847,12 +847,20 @@ function renderSpainGeologyPopupHTML(attrs) {
 
   return `
     <div class="spain-geology-popup">
-      <div class="geology-popup-header">🗺️ 西班牙地質</div>
-      <div class="geology-popup-row"><span class="geology-popup-label">岩石類型</span><span class="geology-popup-val">${info.zh}</span></div>
-      ${edadZh ? `<div class="geology-popup-row"><span class="geology-popup-label">地質年代</span><span class="geology-popup-val">${edadZh}</span></div>` : ''}
-      <div class="geology-popup-wine-block">
-        <div class="geology-popup-wine-title">${info.icon} ${info.zh}</div>
-        <div class="geology-popup-wine-text">${info.wine}</div>
+      <div class="sgeo-header">
+        <span class="sgeo-header-flag">🇪🇸</span>
+        <span class="sgeo-header-title">西班牙地質資訊</span>
+      </div>
+      <div class="sgeo-body">
+        <div class="sgeo-row">
+          <span class="sgeo-lbl">岩石類型</span>
+          <span class="sgeo-val">${info.zh}</span>
+        </div>
+        ${edadZh ? `<div class="sgeo-row"><span class="sgeo-lbl">地質年代</span><span class="sgeo-val">${edadZh}</span></div>` : ''}
+      </div>
+      <div class="sgeo-wine">
+        <div class="sgeo-wine-head">${info.icon}&ensp;<strong>${info.zh}</strong></div>
+        <p class="sgeo-wine-text">${info.wine}</p>
       </div>
     </div>
   `
@@ -1373,29 +1381,97 @@ function handleMobileAction(action) {
 }
 </script>
 
-<!-- IGME popup 全域樣式（mapboxgl popup 容器不支援 scoped）— 淺色暖調 -->
+<!-- IGME popup 全域樣式（mapboxgl popup 容器不支援 scoped）-->
 <style>
 .geology-popup-wrap .mapboxgl-popup-content {
   padding: 0;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-  min-width: 260px;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.22), 0 1px 4px rgba(0,0,0,0.08);
+  min-width: 270px;
+  max-width: 340px;
   background: #fff;
 }
+.geology-popup-wrap .mapboxgl-popup-tip { border-top-color: #7a1515 !important; }
 .geology-popup-wrap .mapboxgl-popup-close-button {
-  color: #fff;
-  font-size: 18px;
-  padding: 4px 8px;
-  right: 2px;
-  top: 2px;
-  background: none;
+  color: rgba(255,255,255,0.85);
+  font-size: 20px;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 6px;
+  top: 6px;
+  background: rgba(0,0,0,0.18);
   border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .geology-popup-wrap .mapboxgl-popup-close-button:hover {
+  background: rgba(0,0,0,0.35);
   color: #fff;
-  background: rgba(255,255,255,0.25);
-  border-radius: 4px;
+}
+/* ── popup 內容樣式 ── */
+.spain-geology-popup { font-family: 'Noto Sans TC', -apple-system, sans-serif; }
+.sgeo-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 40px 12px 16px;
+  background: linear-gradient(120deg, #7a1515 0%, #b22222 100%);
+  color: #fff;
+}
+.sgeo-header-flag { font-size: 18px; line-height: 1; }
+.sgeo-header-title { font-size: 14px; font-weight: 700; letter-spacing: 0.4px; }
+.sgeo-body {
+  padding: 4px 0;
+  border-bottom: 1px solid #f0e8e0;
+}
+.sgeo-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 16px;
+  border-bottom: 1px solid #faf5f0;
+}
+.sgeo-row:last-child { border-bottom: none; }
+.sgeo-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9b3030;
+  white-space: nowrap;
+  min-width: 56px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.sgeo-val {
+  font-size: 13px;
+  color: #2d1a1a;
+  flex: 1;
+  line-height: 1.4;
+}
+.sgeo-wine {
+  margin: 10px 12px 12px;
+  background: #fdf6f0;
+  border-left: 3px solid #b22222;
+  border-radius: 0 8px 8px 0;
+  padding: 10px 12px;
+}
+.sgeo-wine-head {
+  font-size: 13px;
+  font-weight: 700;
+  color: #7a1515;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+.sgeo-wine-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #4a2a2a;
 }
 </style>
 
@@ -2204,45 +2280,5 @@ function handleMobileAction(action) {
   display: flex; flex-direction: column; gap: 2px;
   font-size: 10px; color: #aaa;
   border-top: 1px solid #f0f0f0; padding-top: 6px;
-}
-
-/* IGME 地質 popup — 淺色暖調 */
-.spain-geology-popup {
-  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 13px;
-  color: #3a2a1a;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.spain-geology-popup .geology-popup-header {
-  background: linear-gradient(135deg, #8B1A1A 0%, #c0392b 100%);
-  padding: 10px 14px;
-  font-weight: 700;
-  font-size: 14px;
-  color: #fff;
-  letter-spacing: 0.5px;
-  border-bottom: none;
-}
-.spain-geology-popup .geology-popup-row {
-  display: flex; padding: 8px 14px; gap: 10px;
-  border-bottom: 1px solid #f0ebe3;
-  font-size: 13px;
-}
-.spain-geology-popup .geology-popup-label { color: #8B1A1A; font-weight: 600; min-width: 64px; }
-.spain-geology-popup .geology-popup-val   { color: #3a2a1a; flex: 1; }
-.spain-geology-popup .geology-popup-wine-block {
-  background: #fdf8f3;
-  margin: 10px 12px 12px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  border-left: 3px solid #c0392b;
-}
-.spain-geology-popup .geology-popup-wine-title {
-  font-weight: 700; font-size: 13px;
-  margin-bottom: 6px; color: #8B1A1A;
-}
-.spain-geology-popup .geology-popup-wine-text {
-  font-size: 12px; line-height: 1.6; color: #5a3a2a;
 }
 </style>
