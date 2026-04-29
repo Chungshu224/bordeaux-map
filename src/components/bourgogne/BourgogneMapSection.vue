@@ -223,7 +223,7 @@ const props = defineProps({
 const emit = defineEmits(['resetMap', 'clear-region-info', 'reselect-aoc', 'request-aoc-list', 'request-learning-mode'])
 
 // ── BRGM 法國地質圖 ──
-const { brgmEnabled, brgmOpacity, toggleBRGM, resetBRGM, updateBRGMOpacity, updateBRGMClip } = useBRGMGeology()
+const { brgmEnabled, brgmOpacity, toggleBRGM, resetBRGM, updateBRGMOpacity, updateBRGMClip } = useBRGMGeology('bourgogne')
 
 // 當 BRGM 開啟且已有選取 AOC 時，立即套用遭罩
 watch(brgmEnabled, (enabled) => {

@@ -123,7 +123,7 @@ const search = ref('')
 
 // ── 土壤圖層狀態 ─────────────────────────────────────────────
 // ── BRGM 法國地質圖 ──
-const { brgmEnabled, brgmOpacity, toggleBRGM, resetBRGM, updateBRGMOpacity, updateBRGMClip } = useBRGMGeology()
+const { brgmEnabled, brgmOpacity, toggleBRGM, resetBRGM, updateBRGMOpacity, updateBRGMClip } = useBRGMGeology('loire')
 
 // 當 BRGM 開啟且已有選取的 AOC 時，立即套用遮罩
 watch(brgmEnabled, (enabled) => {

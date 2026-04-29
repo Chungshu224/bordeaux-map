@@ -29,6 +29,33 @@ const DESCR_MAP = [
   { match: ['tourbe', 'tourbeux'],                   zh: '泥炭土', icon: '🌿', cat: '有機土',  wine: '泥炭土富含有機質，但酸性較高，葡萄種植少見。' },
 ]
 
+// ── 各產區土壤描述覆蓋（key = translateBRGM 返回的 zh 名稱）────────
+const REGION_DESCR_OVERRIDE = {
+  bordeaux: {
+    '黏土':     '黏土保水性強，梅洛（Merlot）在波爾多右岸聖愛美濃（Saint-Émilion）、波美侯（Pomerol）的黏土上展現豐潤柔滑的風格，是右岸風土的靈魂。',
+    '泥灰岩':   '波爾多右岸高地（Saint-Émilion Grand Cru）的泥灰岩台地混合石灰岩與黏土，保水適中，孕育出結構細緻的頂級佳釀。',
+    '沖積土':   '波爾多梅多克沿吉倫特河的礫石沖積土排水極佳，卡本內蘇維翁（Cabernet Sauvignon）在此充分成熟，是左岸各名莊的根基。',
+    '礫石土':   '礫石土壤白天吸熱、夜晚散熱，幫助葡萄均勻成熟。波爾多 Graves（格拉夫）以礫石命名，卡本內蘇維翁與梅洛在此共同展現波爾多風土的深度。',
+    '石灰岩':   '波爾多右岸聖愛美濃高地由石灰岩組成，偏涼且排水良好，賦予頂級酒款精緻的酸度與礦物質感。',
+    '砂岩/砂土': '波爾多部分低窪地帶（如 Lussac、Fronsac 邊緣）出現砂質土壤，排水迅速，適合種植梅洛，釀出輕盈早飲風格的酒款。',
+  },
+  bourgogne: {
+    '黏土':     '勃根地金丘下坡偏黏土的地塊（如 Meursault 部分 Premier Cru）賦予黑皮諾（Pinot Noir）豐潤、絲滑的果感，夏多內（Chardonnay）則展現奶油與榛果風味。',
+    '泥灰岩':   '勃根地金丘的泥灰岩（Calcaire Marneux）是黑皮諾與夏多內最重要的土壤母質，精確的泥灰岩厚度與比例決定每個 Lieu-dit 的個性與層次。',
+    '石灰岩':   '勃根地金丘的石灰岩骨架賦予黑皮諾精緻酸度與礦物骨感；夏布利（Chablis）的啟莫里奇（Kimmeridgian）石灰岩更帶出獨特燧石礦物感與海洋鹹鮮。',
+    '片岩/板岩': '薄酒萊北段（Moulin-à-Vent、Fleurie 等特級莊）花崗岩丘陵邊緣出現片岩，排水良好，賦予佳美（Gamay）細膩的礦物感與陳年潛力。',
+    '花崗岩':   '薄酒萊北端十個特級莊坐落於花崗岩山丘之上，貧瘠且礦物質豐富，佳美（Gamay）在此根系深入，釀出具有結構感與礦物張力的頂級酒款。',
+  },
+  loire: {
+    '片岩/板岩': '羅亞爾河流域的板岩（Ardoise/Schiste）是安茹（Anjou）、希農（Chinon）、薩維涅爾（Savennières）的關鍵土壤，保溫性佳，賦予白詩南（Chenin Blanc）與卡本內弗朗（Cabernet Franc）細緻的礦物張力與陳年深度。',
+    '石灰岩':   '都蘭（Touraine）與索米爾（Saumur）一帶的凝灰岩與石灰岩（Tuffeau）是白詩南（Chenin Blanc）的故鄉，多孔疏鬆質地讓酒款保有爽脆酸度與獨特礦物質感。',
+    '黏土':     '羅亞爾河下游密斯卡得（Muscadet de Sèvre et Maine）的片麻岩與黏土混合地帶，賦予密隆（Melon de Bourgogne）清脆酸度與天然礦物鹹鮮，尤以帶渣培養（Sur Lie）後更為突顯。',
+    '花崗岩':   '羅亞爾河上游（Côte Roannaise、Saint-Pourçain）的花崗岩土壤，讓佳美（Gamay）與黑皮諾（Pinot Noir）展現輕盈清新的礦物風格，是法國中部葡萄酒的精髓。',
+    '砂岩/砂土': '羅亞爾河河床旁的砂質土壤排水迅速，有助卡本內弗朗（Cabernet Franc）保留新鮮果香與草本氣息，是希農（Chinon）年輕酒款清爽風格的典型來源。',
+    '沖積土':   '羅亞爾河沖積平原由多層礫石與粉砂交疊而成，葡萄酒普遍呈現輕盈、果香清新的風格，是每日飲用型普羅旺斯白酒與輕紅酒的重要產地。',
+  },
+}
+
 function translateBRGM(descr, type) {
   const d = (descr || '').toLowerCase()
   for (const entry of DESCR_MAP) {
@@ -59,19 +86,22 @@ const BRGM_DEFAULT = {
   wine: '此處為混合型沉積土壤，由風化基岩、河流沖積與細粒沉積物交織而成，排水與保水性介於砂質與黏質之間，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
 }
 
-function renderBRGMPopupHTML(descr, type, _codeGeol) {
+function renderBRGMPopupHTML(descr, type, _codeGeol, region = '') {
   let info = translateBRGM(descr, type)
   // 若未轉換成功（讀不到對應關鍵字）提供中文 fallback
   if (!info.wine) {
     info = { ...BRGM_DEFAULT, zh: info.zh && info.zh !== descr ? info.zh : BRGM_DEFAULT.zh }
   }
+  // 套用各產區專屬描述（若有）
+  const regionOverride = REGION_DESCR_OVERRIDE[region]
+  const wineText = (regionOverride && regionOverride[info.zh]) ? regionOverride[info.zh] : info.wine
   return `
     <div class="brgm-geology-popup">
       <div class="brgm-popup-header">🗺️ 地質資訊</div>
       <div class="brgm-popup-row"><span class="brgm-popup-label">岩石類型</span><span class="brgm-popup-val">${info.zh}</span></div>
       <div class="brgm-popup-wine-block">
         <div class="brgm-popup-wine-title">${info.icon} ${info.zh}</div>
-        <div class="brgm-popup-wine-text">${info.wine}</div>
+        <div class="brgm-popup-wine-text">${wineText}</div>
       </div>
     </div>
   `
@@ -86,7 +116,7 @@ function lngLatToWebMercator(lng, lat) {
 }
 
 // ── Composable 工廠函數 ──────────────────────────────────────────────
-export function useBRGMGeology() {
+export function useBRGMGeology(region = '') {
   const brgmEnabled = ref(false)
   const brgmOpacity = ref(0.15)
   let brgmPopup = null
@@ -213,7 +243,7 @@ export function useBRGMGeology() {
             }
           } catch (_) {}
           // 即使無資料也顯示中文 fallback popup
-          const html = renderBRGMPopupHTML(descr, type, codeGeol)
+          const html = renderBRGMPopupHTML(descr, type, codeGeol, region)
           if (brgmPopup) brgmPopup.remove()
           brgmPopup = new mapboxgl.Popup({
             className: 'brgm-popup-wrap',

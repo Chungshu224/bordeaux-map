@@ -283,7 +283,7 @@ let resizeHandler = null
 let infoSheetTouchStartY = 0
 
 // ── BRGM 法國地質圖 ──
-const { brgmEnabled, brgmOpacity, toggleBRGM, resetBRGM, updateBRGMOpacity, updateBRGMClip } = useBRGMGeology()
+const { brgmEnabled, brgmOpacity, toggleBRGM, resetBRGM, updateBRGMOpacity, updateBRGMClip } = useBRGMGeology('bordeaux')
 watch(brgmOpacity, () => updateBRGMOpacity(map))
 
 // 當選取的 AOC 變更或 BRGM 開關時，更新地質圖設罩
