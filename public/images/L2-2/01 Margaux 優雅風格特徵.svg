@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bgM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#100808"/>
+      <stop offset="100%" stop-color="#1c1010"/>
+    </linearGradient>
+    <filter id="shM"><feDropShadow dx="1" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bgM)"/>
+  <line x1="40" y1="68" x2="760" y2="68" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#C0952C" font-size="21" font-weight="bold">Margaux　優雅女王的風格密碼</text>
+  <text x="400" y="60" text-anchor="middle" fill="#9A7040" font-size="12">The "Feminine" Village of Médoc · 細砂礫 · 花香 · 絲滑單寧</text>
+
+  <!-- Left: Key style characteristics -->
+  <rect x="40" y="82" width="360" height="340" rx="8" fill="#1A0C10" stroke="#884466" stroke-width="1.5" filter="url(#shM)"/>
+  <rect x="40" y="82" width="360" height="50" rx="8" fill="#5A1828"/>
+  <rect x="40" y="112" width="360" height="20" fill="#5A1828"/>
+  <text x="220" y="108" text-anchor="middle" fill="#FFD0D8" font-size="16" font-weight="bold">🌹 風格特徵</text>
+  <text x="220" y="126" text-anchor="middle" fill="#CC8898" font-size="11">Style Characteristics</text>
+
+  <!-- Style attributes -->
+  <text x="60" y="155" fill="#CC6680" font-size="12" font-weight="bold">香氣輪廓</text>
+  <rect x="60" y="162" width="318" height="72" rx="4" fill="#120810" stroke="#6A3040" stroke-width="0.8"/>
+  <text x="75" y="178" fill="#F0C0CC" font-size="12">🌹 玫瑰 · 紫羅蘭 · 牡丹（花香）</text>
+  <text x="75" y="195" fill="#F0C0CC" font-size="12">🍓 草莓 · 覆盆子 · 紅醋栗（紅果）</text>
+  <text x="75" y="212" fill="#F0C0CC" font-size="12">✏️ 鉛筆芯 · 雪松 · 香根草（成熟）</text>
+  <text x="75" y="227" fill="#F0C0CC" font-size="12">🌿 薄荷 · 微草本氣息（清新）</text>
+
+  <text x="60" y="252" fill="#CC6680" font-size="12" font-weight="bold">口感結構</text>
+  <rect x="60" y="259" width="318" height="56" rx="4" fill="#120810" stroke="#6A3040" stroke-width="0.8"/>
+  <text x="75" y="276" fill="#EDB0BC" font-size="12">• 單寧最細滑柔和（Médoc 中最優雅）</text>
+  <text x="75" y="293" fill="#EDB0BC" font-size="12">• 中等酒體 · 清新酸度 · 長而絲滑的尾韻</text>
+  <text x="75" y="309" fill="#EDB0BC" font-size="12">• 年輕時即有魅力，陳年後更加複雜精妙</text>
+
+  <text x="60" y="334" fill="#CC6680" font-size="12" font-weight="bold">土壤基礎</text>
+  <rect x="60" y="341" width="318" height="42" rx="4" fill="#120810" stroke="#6A3040" stroke-width="0.8"/>
+  <text x="75" y="358" fill="#E0A8B0" font-size="12">細砂礫為主（Margaux 最細緻，排水極佳）</text>
+  <text x="75" y="374" fill="#E0A8B0" font-size="12">砂礫深度適中 · 優雅而非雄壯的風格基礎</text>
+
+  <!-- Right: Key châteaux comparison -->
+  <rect x="420" y="82" width="340" height="340" rx="8" fill="#1A0C10" stroke="#884466" stroke-width="1.5" filter="url(#shM)"/>
+  <rect x="420" y="82" width="340" height="50" rx="8" fill="#5A1828"/>
+  <rect x="420" y="112" width="340" height="20" fill="#5A1828"/>
+  <text x="590" y="108" text-anchor="middle" fill="#FFD0D8" font-size="16" font-weight="bold">🏰 代表酒莊</text>
+  <text x="590" y="126" text-anchor="middle" fill="#CC8898" font-size="11">Key Châteaux of Margaux AOC</text>
+
+  <!-- Château Margaux (1st Growth) -->
+  <rect x="438" y="140" width="305" height="68" rx="5" fill="#3A0818" stroke="#CC4060" stroke-width="1.5"/>
+  <text x="448" y="158" fill="#FFD700" font-size="14" font-weight="bold">Château Margaux　一級莊</text>
+  <text x="448" y="175" fill="#FFB0C0" font-size="11">唯一 Margaux 村的一級莊 · 三個世紀的歷史</text>
+  <text x="448" y="191" fill="#E090A0" font-size="11">Cab. Sauv. 75% · Merlot 20% · 陳年潛力 30–50 年</text>
+  <text x="448" y="205" fill="#C07080" font-size="11">均價 ~€600–1,500 · 副牌 Pavillon Rouge ~€80</text>
+
+  <!-- 2nd growth châteaux -->
+  <rect x="438" y="218" width="305" height="58" rx="5" fill="#2A0C18" stroke="#884450" stroke-width="1"/>
+  <text x="448" y="235" fill="#D4A840" font-size="13" font-weight="bold">二級莊（5 座）</text>
+  <text x="448" y="252" fill="#D0A0A8" font-size="11">Rauzan-Ségla · Rauzan-Gassies · Durfort-Vivens</text>
+  <text x="448" y="267" fill="#D0A0A8" font-size="11">Brane-Cantenac · Lascombes</text>
+
+  <!-- Other notable -->
+  <rect x="438" y="286" width="305" height="58" rx="5" fill="#200810" stroke="#6A3040" stroke-width="1"/>
+  <text x="448" y="303" fill="#C09880" font-size="12" font-weight="bold">三級莊中的明星</text>
+  <text x="448" y="320" fill="#C09090" font-size="11">Château Palmer（常被評為二級水準）</text>
+  <text x="448" y="336" fill="#C09090" font-size="11">Palmer 混釀 Cab. 50% / Merlot 40%，風格特別豐腴</text>
+
+  <!-- Small info -->
+  <rect x="438" y="354" width="305" height="48" rx="5" fill="#180608" stroke="#503040" stroke-width="0.8"/>
+  <text x="590" y="372" text-anchor="middle" fill="#A07080" font-size="12" font-weight="bold">Margaux AOC 產區基本資訊</text>
+  <text x="448" y="389" fill="#907080" font-size="11">面積：1,455 公頃 · 列級酒莊：21 座</text>
+  <text x="448" y="404" fill="#907080" font-size="11">主要品種：Cab. Sauv. 55–75% 為主</text>
+
+  <!-- Bottom: key differentiator -->
+  <rect x="40" y="436" width="720" height="80" rx="8" fill="#120808" stroke="#C0952C" stroke-width="1" stroke-opacity="0.4" filter="url(#shM)"/>
+  <text x="400" y="460" text-anchor="middle" fill="#C0952C" font-size="14" font-weight="bold">Margaux 與其他三大名村最大的不同</text>
+  <line x1="60" y1="467" x2="740" y2="467" stroke="#C0952C" stroke-width="0.4" opacity="0.4"/>
+
+  <!-- 4-column comparison -->
+  <text x="140" y="484" text-anchor="middle" fill="#FF7090" font-size="13" font-weight="bold">Margaux</text>
+  <text x="140" y="500" text-anchor="middle" fill="#EE5070" font-size="11">細砂礫 · 最優雅</text>
+  <text x="140" y="513" text-anchor="middle" fill="#CC3050" font-size="11">花香·絲滑單寧</text>
+
+  <line x1="282" y1="470" x2="282" y2="508" stroke="#3A2020" stroke-width="1"/>
+  <text x="355" y="484" text-anchor="middle" fill="#FF6040" font-size="13" font-weight="bold">Pauillac</text>
+  <text x="355" y="500" text-anchor="middle" fill="#EE5030" font-size="11">深厚砂礫 · 最強勁</text>
+  <text x="355" y="513" text-anchor="middle" fill="#CC3010" font-size="11">黑果·鉛筆芯</text>
+
+  <line x1="450" y1="470" x2="450" y2="508" stroke="#3A2020" stroke-width="1"/>
+  <text x="540" y="484" text-anchor="middle" fill="#8080FF" font-size="13" font-weight="bold">Saint-Julien</text>
+  <text x="540" y="500" text-anchor="middle" fill="#6060EE" font-size="11">砂礫黏土均衡</text>
+  <text x="540" y="513" text-anchor="middle" fill="#5050CC" font-size="11">最平衡·均一</text>
+
+  <line x1="625" y1="470" x2="625" y2="508" stroke="#3A2020" stroke-width="1"/>
+  <text x="698" y="484" text-anchor="middle" fill="#D0A060" font-size="13" font-weight="bold">Saint-Estèphe</text>
+  <text x="698" y="500" text-anchor="middle" fill="#C09050" font-size="11">黏土含量最高</text>
+  <text x="698" y="513" text-anchor="middle" fill="#A07030" font-size="11">最濃郁·單寧強</text>
+
+  <!-- Bottom note -->
+  <line x1="40" y1="526" x2="760" y2="526" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="544" text-anchor="middle" fill="#706050" font-size="11">* 「Margaux」被稱為「波爾多的女王」，以細砂礫賦予的優雅花香與絲滑口感聞名於世</text>
+  <text x="400" y="557" text-anchor="middle" fill="#504030" font-size="11">五個公社（Margaux・Soussans・Cantenac・Labarde・Arsac）共同構成 Margaux AOC</text>
+</svg>

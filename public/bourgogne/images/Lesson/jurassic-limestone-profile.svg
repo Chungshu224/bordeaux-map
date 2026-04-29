@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="580" viewBox="0 0 800 580" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14181E"/> <!-- Dark moss/slate -->
+      <stop offset="100%" stop-color="#0A0B0E"/>
+    </linearGradient>
+
+    <!-- Lithological Gradients -->
+    <!-- Oxfordian (Top, chalky/yellowish marl) -->
+    <linearGradient id="oxfordian" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4D4D8"/> <!-- Light gray -->
+      <stop offset="100%" stop-color="#A1A1AA"/>
+    </linearGradient>
+
+    <!-- Callovian (Oolitic limestone, middle, tan/orange) -->
+    <linearGradient id="callovian" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D97706"/> <!-- Amber -->
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+
+    <!-- Bathonian (Bottom, hard limestone, pinkish/slate) -->
+    <linearGradient id="bathonian" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BE123C"/> <!-- Rose / Crimson dark -->
+      <stop offset="50%" stop-color="#881337"/>
+      <stop offset="100%" stop-color="#4C0519"/>
+    </linearGradient>
+
+    <!-- Patterns for rocks -->
+    <pattern id="limestonePattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0,10 L20,10 M10,0 L10,20" stroke="#FFF" stroke-width="0.5" stroke-opacity="0.15" stroke-dasharray="2,2"/>
+    </pattern>
+    <pattern id="marlPattern" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path d="M0,15 L15,0" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+    </pattern>
+    <pattern id="ooliticPattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="2" fill="none" stroke="#FFF" stroke-width="0.5" stroke-opacity="0.3"/>
+      <circle cx="2" cy="2" r="1.5" fill="none" stroke="#FFF" stroke-width="0.5" stroke-opacity="0.2"/>
+      <circle cx="10" cy="10" r="1" fill="none" stroke="#FFF" stroke-width="0.5" stroke-opacity="0.2"/>
+    </pattern>
+
+    <filter id="shadow"><feDropShadow dx="2" dy="6" stdDeviation="5" flood-color="#000" flood-opacity="0.7"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="800" height="580" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#F8FAFC" font-size="28" font-weight="bold" letter-spacing="1">影響布根地的三大侏羅紀石灰岩</text>
+  <text x="400" y="68" text-anchor="middle" fill="#94A3B8" font-size="14">Jurassic Limestone Formations: The Geological Soul of the Côte d'Or</text>
+
+  <!-- Ground / Surface Profile -->
+  <g transform="translate(50, 150)" filter="url(#shadow)">
+    
+    <!-- Surface Line -->
+    <path d="M0,0 Q180,-10 320,30 T650,150 L650,330 L0,330 Z" fill="none"/>
+
+    <!-- Layer 1: Oxfordian (牛津階) ~1.57 - 1.63 億年 -->
+    <path d="M0,0 Q180,-10 320,30 T430,70 L410,130 Q280,70 150,50 T0,40 Z" fill="url(#oxfordian)"/>
+    <path d="M0,0 Q180,-10 320,30 T430,70 L410,130 Q280,70 150,50 T0,40 Z" fill="url(#marlPattern)"/>
+    
+    <!-- Layer 2: Callovian (卡洛維階) ~1.63 - 1.66 億年 -->
+    <path d="M430,70 T600,130 L585,170 T400,105 L410,130 Z" fill="url(#callovian)"/>
+    <path d="M430,70 T600,130 L585,170 T400,105 L410,130 Z" fill="url(#ooliticPattern)"/>
+
+    <!-- Layer 3: Bathonian (巴通階) ~1.66 - 1.68 億年 - The main block -->
+    <path d="M0,40 Q150,50 280,70 L410,130 L400,105 T585,170 T650,150 L650,330 L0,330 Z" fill="url(#bathonian)"/>
+    <path d="M0,40 Q150,50 280,70 L410,130 L400,105 T585,170 T650,150 L650,330 L0,330 Z" fill="url(#limestonePattern)"/>
+
+    <!-- Divider Lines (Faults/Strata) -->
+    <path d="M0,40 Q150,50 280,70 T410,130" fill="none" stroke="#27272A" stroke-width="2"/>
+    <path d="M410,130 L400,105 T585,170" fill="none" stroke="#27272A" stroke-width="2"/>
+
+    <!-- Surface Vegetation / Vines (Simplified) -->
+    <path d="M0,-2 Q180,-12 320,28 T650,148" fill="none" stroke="#4ADE80" stroke-width="3" stroke-linecap="round"/>
+    
+    <g transform="translate(100, -8)">
+      <line x1="0" y1="0" x2="0" y2="-15" stroke="#166534" stroke-width="3"/>
+      <circle cx="0" cy="-15" r="4" fill="#22C55E"/>
+    </g>
+    <g transform="translate(250, 10)">
+      <line x1="0" y1="0" x2="0" y2="-15" stroke="#166534" stroke-width="3"/>
+      <circle cx="0" cy="-15" r="4" fill="#22C55E"/>
+    </g>
+    <g transform="translate(400, 52)">
+      <line x1="0" y1="0" x2="0" y2="-15" stroke="#166534" stroke-width="3"/>
+      <circle cx="0" cy="-15" r="4" fill="#22C55E"/>
+    </g>
+    <g transform="translate(520, 100)">
+      <line x1="0" y1="0" x2="0" y2="-15" stroke="#166534" stroke-width="3"/>
+      <circle cx="0" cy="-15" r="4" fill="#22C55E"/>
+    </g>
+    <g transform="translate(605, 133)">
+      <line x1="0" y1="0" x2="0" y2="-15" stroke="#166534" stroke-width="3"/>
+      <circle cx="0" cy="-15" r="4" fill="#22C55E"/>
+    </g>
+  </g>
+
+  <!-- Labels and Data Cards -->
+  
+  <!-- Oxfordian Base Info -->
+  <g transform="translate(60, 260)">
+    <rect x="0" y="0" width="220" height="90" rx="6" fill="#18181B" stroke="#A1A1AA" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="15" y="25" fill="#D4D4D8" font-size="18" font-weight="bold">牛津階 (Oxfordian)</text>
+    <text x="15" y="45" fill="#94A3B8" font-size="12">1.57 - 1.63 億年前</text>
+    <text x="15" y="65" fill="#F8FAFC" font-size="12">▪ 白色泥灰岩 (Marl)</text>
+    <text x="15" y="80" fill="#FCA5A5" font-size="12">🍷 代表：Corton 特級園、半山腰</text>
+    <line x1="220" y1="20" x2="280" y2="-50" stroke="#A1A1AA" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <circle cx="280" cy="-50" r="4" fill="#D4D4D8"/>
+  </g>
+
+  <!-- Callovian Base Info -->
+  <g transform="translate(550, 180)">
+    <rect x="0" y="0" width="220" height="90" rx="6" fill="#18181B" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="15" y="25" fill="#FBBF24" font-size="18" font-weight="bold">卡洛維階 (Callovian)</text>
+    <text x="15" y="45" fill="#94A3B8" font-size="12">1.63 - 1.66 億年前</text>
+    <text x="15" y="65" fill="#F8FAFC" font-size="12">▪ 鮞狀石灰岩 (Oolitic)</text>
+    <text x="15" y="80" fill="#FCA5A5" font-size="12">🍷 代表：Vosne-Romanée 山頂附近</text>
+    <line x1="-30" y1="90" x2="0" y2="45" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <circle cx="-30" cy="90" r="4" fill="#FBBF24"/>
+  </g>
+
+  <!-- Bathonian Base Info -->
+  <g transform="translate(290, 400)">
+    <rect x="0" y="0" width="380" height="100" rx="6" fill="#18181B" stroke="#BE123C" stroke-width="2"/>
+    <text x="15" y="25" fill="#FDA4AF" font-size="19" font-weight="bold">巴通階 (Bathonian) - 布根地列級園之母</text>
+    <text x="15" y="45" fill="#94A3B8" font-size="12">1.66 - 1.68 億年前（最古老、最堅硬的地層）</text>
+    
+    <!-- Sub-formations -->
+    <text x="15" y="65" fill="#F8FAFC" font-size="13" font-weight="bold">▪ 普雷莫石灰岩 (Premeaux): <tspan fill="#94A3B8" font-weight="normal">夜丘多數特級園與一級園的基石</tspan></text>
+    <text x="15" y="85" fill="#F8FAFC" font-size="13" font-weight="bold">▪ 康布蘭階石灰岩 (Comblanchien): <tspan fill="#94A3B8" font-weight="normal">極為堅硬，山坡陡峭處，提供強大結構感</tspan></text>
+    
+    <line x1="190" y1="0" x2="190" y2="-40" stroke="#BE123C" stroke-width="2" stroke-dasharray="4,2"/>
+    <circle cx="190" cy="-40" r="4" fill="#FDA4AF"/>
+  </g>
+
+  <!-- Bottom Key Notes -->
+  <rect x="40" y="520" width="720" height="40" rx="6" fill="#09090B" stroke="#27272A" stroke-width="1"/>
+  <text x="400" y="545" text-anchor="middle" fill="#9CA3AF" font-size="13">💡 <tspan fill="#F8FAFC" font-weight="bold">風土奧秘：</tspan>布根地之所以偉大，是因為板塊斷層運動將這些古老海洋地層「立體切開」，讓不同高度的葡萄藤生長在不同年代的土壤斷面上。</text>
+
+</svg>

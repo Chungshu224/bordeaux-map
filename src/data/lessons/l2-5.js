@@ -133,7 +133,7 @@ export const l25Content = [
       { id: 1, icon: '🧱', title: '黏土為主', content: '黏土含量高於其他名村，保水性強' },
       { id: 2, icon: '💪', title: '力量來源', content: '賦予葡萄酒強勁的結構和厚重的酒體' }
     ],
-    content: '<div class="saint-estephe-terroir"><p class="lead-text">如果說Pauillac的心臟是砂礫，那麼Saint-Estèphe的心臟就是黏土。更高比例的黏土是定義該產區風格的關鍵因素。</p><div class="terroir-analysis"><div class="terroir-section soil"><h4>🪨 土壤特徵</h4><div class="soil-analysis"><div class="soil-composition"><h5>🔬 黏土砂礫土</h5><div class="soil-details"><p><strong>特徵：</strong>雖然表層仍有砂礫，但底土的黏土含量（15-25%）顯著高於其他產區。</p><p><strong>影響：</strong>黏土的保水性強，在乾旱年份是優勢，但在濕潤年份則考驗排水。同時，黏土的冷濕特性會進一步延緩成熟，並賦予酒體力量和結構感。</p></div></div></div></div></div></div>',
+    content: '<div class="saint-estephe-terroir"><p class="lead-text">如果說Pauillac的心臟是砂礫，那麼Saint-Estèphe的心臟就是黏土。更高比例的黏土是定義該產區風格的關鍵因素。</p><div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L2-5/01%20Saint-Estèphe%20黏土特性與南北差異.svg" alt="Saint-Estèphe 黏土特性與南北差異" style="max-width: 100%; height: auto; border-radius: 8px;" /></div><div class="terroir-analysis"><div class="terroir-section soil"><h4>🪨 土壤特徵</h4><div class="soil-analysis"><div class="soil-composition"><h5>🔬 黏土砂礫土</h5><div class="soil-details"><p><strong>特徵：</strong>雖然表層仍有砂礫，但底土的黏土含量（15-25%）顯著高於其他產區。</p><p><strong>影響：</strong>黏土的保水性強，在乾旱年份是優勢，但在濕潤年份則考驗排水。同時，黏土的冷濕特性會進一步延緩成熟，並賦予酒體力量和結構感。</p></div></div></div></div></div></div>',
     hasMap: true, 
     mapFocus: 'LeftBank-Medoc-SaintEstephe',
     geojsonPaths: [

@@ -130,6 +130,7 @@ export const l43Content = makeL4Lesson({
             </div>
           </div>
 
+          <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L4-3/01%20法美橡木桶特性對比.svg" alt="法國橡木 vs 美國橡木：材質、風味貢獻、烘烤程度與波爾多使用策略完整對比" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
           <h3>橡木材種與紋理</h3>
           <table class="data-table">
             <thead>

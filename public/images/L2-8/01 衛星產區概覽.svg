@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bgSat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c0a0e"/>
+      <stop offset="100%" stop-color="#161418"/>
+    </linearGradient>
+    <filter id="shSat"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgSat)"/>
+  <line x1="40" y1="68" x2="760" y2="68" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <text x="400" y="40" text-anchor="middle" fill="#C0952C" font-size="21" font-weight="bold">Médoc 衛星產區概覽</text>
+  <text x="400" y="60" text-anchor="middle" fill="#9A7040" font-size="12">Satellite Appellations of Médoc · 七個 AOC · 高 CP 值的隱藏寶庫</text>
+
+  <!-- 7 satellite appellations in a grid layout -->
+  <!-- Row 1: Moulis, Listrac, Haut-Médoc -->
+  <!-- Row 2: Côtes de Bourg, Blaye, Fronsac, Lalande-de-Pomerol -->
+
+  <!-- Moulis -->
+  <rect x="40" y="82" width="235" height="130" rx="8" fill="#1A1020" stroke="#6640A0" stroke-width="1.5" filter="url(#shSat)"/>
+  <rect x="40" y="82" width="235" height="38" rx="8" fill="#3A1A5A"/>
+  <rect x="40" y="106" width="235" height="14" fill="#3A1A5A"/>
+  <text x="157" y="102" text-anchor="middle" fill="#D0A0FF" font-size="14" font-weight="bold">Moulis-en-Médoc</text>
+  <text x="60" y="136" fill="#B888EE" font-size="11" font-weight="bold">🗺️ 位置</text>
+  <text x="60" y="151" fill="#C8B0E0" font-size="11">Haut-Médoc 中部內陸</text>
+  <text x="60" y="166" fill="#B888EE" font-size="11" font-weight="bold">🍷 特色</text>
+  <text x="60" y="180" fill="#C8B0E0" font-size="11">柔和易飲 · 礫石黏土</text>
+  <text x="60" y="196" fill="#C8B0E0" font-size="11">代表：Chasse-Spleen</text>
+
+  <!-- Listrac -->
+  <rect x="285" y="82" width="235" height="130" rx="8" fill="#201018" stroke="#8040A0" stroke-width="1.5" filter="url(#shSat)"/>
+  <rect x="285" y="82" width="235" height="38" rx="8" fill="#4A1A40"/>
+  <rect x="285" y="106" width="235" height="14" fill="#4A1A40"/>
+  <text x="402" y="102" text-anchor="middle" fill="#F0A0D0" font-size="14" font-weight="bold">Listrac-Médoc</text>
+  <text x="305" y="136" fill="#D880B0" font-size="11" font-weight="bold">🗺️ 位置</text>
+  <text x="305" y="151" fill="#E0B0C8" font-size="11">Médoc 海拔最高區域</text>
+  <text x="305" y="166" fill="#D880B0" font-size="11" font-weight="bold">🍷 特色</text>
+  <text x="305" y="180" fill="#E0B0C8" font-size="11">石灰岩 · 清爽酸度</text>
+  <text x="305" y="196" fill="#E0B0C8" font-size="11">代表：Clarke · Fourcas</text>
+
+  <!-- Haut-Médoc -->
+  <rect x="530" y="82" width="230" height="130" rx="8" fill="#0E1A20" stroke="#2060A0" stroke-width="1.5" filter="url(#shSat)"/>
+  <rect x="530" y="82" width="230" height="38" rx="8" fill="#1A3A5A"/>
+  <rect x="530" y="106" width="230" height="14" fill="#1A3A5A"/>
+  <text x="645" y="102" text-anchor="middle" fill="#A0C8FF" font-size="14" font-weight="bold">Haut-Médoc AOC</text>
+  <text x="550" y="136" fill="#7AAAEE" font-size="11" font-weight="bold">🗺️ 位置</text>
+  <text x="550" y="151" fill="#B0C8E8" font-size="11">四大名村之外的精華區</text>
+  <text x="550" y="166" fill="#7AAAEE" font-size="11" font-weight="bold">🍷 特色</text>
+  <text x="550" y="180" fill="#B0C8E8" font-size="11">包含 Château La Lagune</text>
+  <text x="550" y="196" fill="#B0C8E8" font-size="11">及 Château Cantemerle</text>
+
+  <!-- Row 2 -->
+  <!-- Lalande-de-Pomerol -->
+  <rect x="40" y="224" width="173" height="130" rx="8" fill="#101A0E" stroke="#406040" stroke-width="1.5" filter="url(#shSat)"/>
+  <rect x="40" y="224" width="173" height="38" rx="8" fill="#1A3A18"/>
+  <rect x="40" y="248" width="173" height="14" fill="#1A3A18"/>
+  <text x="126" y="243" text-anchor="middle" fill="#A0D880" font-size="12" font-weight="bold">Lalande de Pomerol</text>
+  <text x="55" y="276" fill="#80C060" font-size="10" font-weight="bold">🗺️ 鄰接 Pomerol 北部</text>
+  <text x="55" y="291" fill="#B0D890" font-size="10">Merlot 主導</text>
+  <text x="55" y="305" fill="#B0D890" font-size="10">豐滿柔順 · 早熟</text>
+  <text x="55" y="319" fill="#B0D890" font-size="10">Néac 同屬此 AOC</text>
+  <text x="55" y="343" fill="#80C060" font-size="10" font-weight="bold">💰 €15–35 / 瓶</text>
+
+  <!-- Fronsac -->
+  <rect x="223" y="224" width="173" height="130" rx="8" fill="#1A1208" stroke="#806030" stroke-width="1.5" filter="url(#shSat)"/>
+  <rect x="223" y="224" width="173" height="38" rx="8" fill="#3A2410"/>
+  <rect x="223" y="248" width="173" height="14" fill="#3A2410"/>
+  <text x="309" y="243" text-anchor="middle" fill="#F0C880" font-size="12" font-weight="bold">Fronsac &amp; Canon-Fronsac</text>
+  <text x="238" y="276" fill="#D0A850" font-size="10" font-weight="bold">🗺️ Libourne 西北</text>
+  <text x="238" y="291" fill="#E8D090" font-size="10">石灰岩高台</text>
+  <text x="238" y="305" fill="#E8D090" font-size="10">結構感強 · Cab. Franc 特色</text>
+  <text x="238" y="319" fill="#E8D090" font-size="10">被視為「性價比右岸」</text>
+  <text x="238" y="343" fill="#D0A850" font-size="10" font-weight="bold">💰 €12–40 / 瓶</text>
+
+  <!-- Blaye -->
+  <rect x="406" y="224" width="173" height="130" rx="8" fill="#0E1818" stroke="#408060" stroke-width="1.5" filter="url(#shSat)"/>
+  <rect x="406" y="224" width="173" height="38" rx="8" fill="#1A3828"/>
+  <rect x="406" y="248" width="173" height="14" fill="#1A3828"/>
+  <text x="492" y="243" text-anchor="middle" fill="#80F0B0" font-size="12" font-weight="bold">Blaye Côtes de Bordeaux</text>
+  <text x="421" y="276" fill="#60C090" font-size="10" font-weight="bold">🗺️ Gironde 右岸北部</text>
+  <text x="421" y="291" fill="#A8E0C0" font-size="10">石灰岩黏土</text>
+  <text x="421" y="305" fill="#A8E0C0" font-size="10">清新果味 · 均衡易飲</text>
+  <text x="421" y="319" fill="#A8E0C0" font-size="10">近年品質迅速提升</text>
+  <text x="421" y="343" fill="#60C090" font-size="10" font-weight="bold">💰 €10–25 / 瓶</text>
+
+  <!-- Côtes de Bourg -->
+  <rect x="589" y="224" width="171" height="130" rx="8" fill="#100E1A" stroke="#404090" stroke-width="1.5" filter="url(#shSat)"/>
+  <rect x="589" y="224" width="171" height="38" rx="8" fill="#202050"/>
+  <rect x="589" y="248" width="171" height="14" fill="#202050"/>
+  <text x="674" y="243" text-anchor="middle" fill="#C0C0FF" font-size="12" font-weight="bold">Côtes de Bourg</text>
+  <text x="604" y="276" fill="#9090EE" font-size="10" font-weight="bold">🗺️ Gironde 右岸</text>
+  <text x="604" y="291" fill="#C0C0F0" font-size="10">石灰岩黏土礫石</text>
+  <text x="604" y="305" fill="#C0C0F0" font-size="10">Merlot 主導 · 豐厚</text>
+  <text x="604" y="319" fill="#C0C0F0" font-size="10">可與 Saint-Émilion 比肩</text>
+  <text x="604" y="343" fill="#9090EE" font-size="10" font-weight="bold">💰 €10–30 / 瓶</text>
+
+  <!-- Bottom comparison bar -->
+  <rect x="40" y="368" width="720" height="112" rx="8" fill="#0c0a0e" stroke="#C0952C" stroke-width="1" stroke-opacity="0.4" filter="url(#shSat)"/>
+  <text x="400" y="390" text-anchor="middle" fill="#C0952C" font-size="14" font-weight="bold">衛星產區的價值定位</text>
+  <line x1="60" y1="396" x2="740" y2="396" stroke="#C0952C" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Value vs quality bar -->
+  <text x="80" y="415" fill="#A09080" font-size="12" font-weight="bold">品質</text>
+  <rect x="130" y="406" width="480" height="14" rx="3" fill="#1A1818"/>
+  <rect x="130" y="406" width="350" height="14" rx="3" fill="#8B4040" opacity="0.7"/>
+  <text x="615" y="417" fill="#AA6060" font-size="11">七成名莊水準</text>
+
+  <text x="80" y="438" fill="#A09080" font-size="12" font-weight="bold">價格</text>
+  <rect x="130" y="429" width="480" height="14" rx="3" fill="#1A1818"/>
+  <rect x="130" y="429" width="140" height="14" rx="3" fill="#4070A0" opacity="0.7"/>
+  <text x="615" y="440" fill="#6090CC" font-size="11">三到四成名莊價格</text>
+
+  <text x="80" y="460" fill="#C0952C" font-size="12" font-weight="bold">CP 值</text>
+  <rect x="130" y="451" width="480" height="14" rx="3" fill="#1A1818"/>
+  <rect x="130" y="451" width="460" height="14" rx="3" fill="#4A9040" opacity="0.8"/>
+  <text x="615" y="462" fill="#70B060" font-size="12" font-weight="bold">極高 ★★★★☆</text>
+
+  <text x="400" y="478" text-anchor="middle" fill="#9A7040" font-size="11">→ 衛星產區是「預算有限愛酒人」的最佳入口，以親民價格體驗波爾多正統風土</text>
+
+  <!-- Bottom note -->
+  <line x1="40" y1="490" x2="760" y2="490" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="507" text-anchor="middle" fill="#706050" font-size="11">* 部分衛星產區（如 Fronsac、Côtes de Bourg）的頂級酒莊品質已達中等名莊水準，卻只需三分之一的價格</text>
+</svg>

@@ -11,6 +11,7 @@ export const l310Content = [
         <p class="intro-lead">
           餐酒搭配是葡萄酒文化中最迷人的藝術之一。當波爾多的單寧遇見牛排的油脂，當貴腐甜酒配上鵝肝的豐腴，當老年份的複雜香氣與野味的濃郁風味交織，一個完美的搭配能讓美食與美酒相互提升，創造 1+1>2 的美妙體驗。
         </p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L3-10/01%20波爾多餐酒搭配指南.svg" alt="波爾多葡萄酒餐酒搭配指南：左右岸紅酒、白酒與甜酒的最佳食物組合" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <p class="intro-context">
           本課程將帶您深入探索配餐的科學原理——單寧如何軟化蛋白質、酸度如何平衡油脂、甜度如何對抗辛香。從波爾多紅酒與法國經典料理的傳統組合，到與中餐、日料、泰菜的創新搭配實驗，我們將系統學習配餐的邏輯與技巧，並掌握設計專業多道式餐酒菜單的原則。

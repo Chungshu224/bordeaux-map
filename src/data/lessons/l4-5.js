@@ -21,6 +21,7 @@ export const l45Content = makeL4Lesson({
           </ul>
           <p class="insight">Level 4專家的標誌：<strong>能建立品牌架構、進入國際市場、用數據驅動增長</strong>。</p>
         </div>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L4-5/01%20品牌金字塔與國際市場佈局.svg" alt="品牌金字塔與國際市場佈局" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <div class="business-analogy">
           <h4>🏢 生活化比喻：品牌經營 = 開連鎖餐廳</h4>

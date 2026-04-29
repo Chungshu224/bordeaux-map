@@ -15,6 +15,7 @@ export const l32Content = [
         <p class="intro-context">
           本課程將帶您深入地下，從地質學成因到土壤科學原理，從物理化學特性到生物活性，全面理解土壤如何影響葡萄生長、塑造葡萄酒風格。我們將探索波爾多五大土壤類型的秘密，揭示為何 Château Latour 的礫石、Château Pétrus 的藍黏土能孕育出世界頂級的葡萄酒。
         </p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L3-2/01%20波爾多三大核心土壤科學.svg" alt="波爾多三大核心土壤科學" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <h3 class="section-title">本課程學習目標</h3>
 

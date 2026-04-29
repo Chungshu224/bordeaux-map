@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A1015"/>
+      <stop offset="100%" stop-color="#141C24"/>
+    </linearGradient>
+
+    <!-- Slope Gradient -->
+    <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A2A1A"/>
+      <stop offset="30%" stop-color="#3A2A1A"/>
+      <stop offset="60%" stop-color="#8C7A5E"/>
+      <stop offset="100%" stop-color="#B2A692"/>
+    </linearGradient>
+    
+    <!-- Strata Gradients -->
+    <linearGradient id="limestone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CFD3CE"/>
+      <stop offset="100%" stop-color="#ACB2B2"/>
+    </linearGradient>
+    <linearGradient id="marl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#80624D"/>
+      <stop offset="100%" stop-color="#604938"/>
+    </linearGradient>
+
+    <filter id="shadow"><feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="800" height="540" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#E2E8F0" font-size="24" font-weight="bold" letter-spacing="1">金丘 (Côte d'Or) 黃金坡段地質斷面圖</text>
+  <text x="400" y="65" text-anchor="middle" fill="#8A9BB0" font-size="13">Geological Cross-Section of the "Golden Slope"</text>
+
+  <!-- Ground Profile (From West to East / Left to Right) -->
+  <!-- Left (High altitude / Hautes-Côtes, ~400m) 
+       Sloping down 
+       Mid-slope (Grands Crus, ~250-300m)
+       Right (Plain / Route Nationale 74, ~200m) -->
+       
+  <g transform="translate(0, 40)" filter="url(#shadow)">
+    <!-- Sky backdrop / underlying structure -->
+    <path d="M 50 150 
+             Q 200 150 250 180
+             Q 400 300 500 330
+             Q 600 360 750 360
+             L 750 480 
+             L 50 480 Z" fill="#2E2319" stroke="#1A120A" stroke-width="2"/>
+
+    <!-- Geological Strata 1: Limestone (石灰岩) -->
+    <path d="M 50 180 
+             Q 200 180 250 210
+             Q 380 320 480 340
+             L 470 380
+             Q 370 360 250 250
+             Q 200 220 50 220 Z" fill="url(#limestone)"/>
+    <text x="210" y="240" fill="#2A3030" font-size="14" font-weight="bold" transform="rotate(25, 210, 240)">堅硬石灰岩母岩 (Limestone)</text>
+
+    <!-- Geological Strata 2: Marl (泥灰岩/黏土) -->
+    <path d="M 250 250
+             Q 370 360 470 380
+             L 470 420
+             Q 370 400 250 290 Z" fill="url(#marl)"/>
+    <text x="350" y="375" fill="#C4B4A8" font-size="14" font-weight="bold" transform="rotate(25, 350, 375)">泥灰岩/黏土層 (Marl)</text>
+
+    <!-- Deep soil on plain -->
+    <path d="M 500 330
+             Q 600 360 750 360
+             L 750 420
+             L 470 420
+             L 480 340 Z" fill="#5E4E3A"/>
+    <text x="600" y="400" fill="#E2E8F0" font-size="14">深厚沖積土 / 肥沃土壤</text>
+
+    <!-- Surface/Soil layer -->
+    <path d="M 50 150 
+             Q 200 150 250 180
+             Q 400 300 500 330
+             Q 600 360 750 360
+             L 750 365 
+             Q 600 365 500 335
+             Q 400 305 250 185
+             Q 200 155 50 155 Z" fill="#4B6632"/>
+             
+    <!-- Trees on Top -->
+    <path d="M 60 148 L 50 120 L 70 120 Z" fill="#274D26"/>
+    <path d="M 90 148 L 80 115 L 100 115 Z" fill="#274D26"/>
+    <path d="M 120 148 L 110 110 L 130 110 Z" fill="#1C381B"/>
+    <path d="M 150 149 L 140 120 L 160 120 Z" fill="#274D26"/>
+    <path d="M 180 151 L 170 125 L 190 125 Z" fill="#1C381B"/>
+  </g>
+
+  <!-- Vineyard Indications -->
+  <g transform="translate(0, 40)">
+    <!-- Hautes Côtes -->
+    <rect x="70" y="40" width="130" height="35" rx="4" fill="#0D1E15" stroke="#3A8E5C" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="135" y="62" text-anchor="middle" fill="#82C59D" font-size="14" font-weight="bold">上夜丘 / 林地</text>
+    <!-- Arrow -->
+    <path d="M 135 75 L 135 140" stroke="#3A8E5C" stroke-width="2" stroke-dasharray="2,2"/>
+    <circle cx="135" cy="144" r="4" fill="#82C59D"/>
+    
+    <!-- Top Slope (Villages/1er Cru) -->
+    <rect x="230" y="80" width="110" height="35" rx="4" fill="#20150F" stroke="#E5995E" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="285" y="102" text-anchor="middle" fill="#EFAC7D" font-size="14" font-weight="bold">村莊級 / 一級園</text>
+    <path d="M 285 115 L 285 195" stroke="#E5995E" stroke-width="2" stroke-dasharray="2,2"/>
+    <circle cx="285" cy="200" r="4" fill="#EFAC7D"/>
+    <text x="250" y="180" fill="#CBD5E1" font-size="11">坡陡、土層薄</text>
+    
+    <!-- Mid Slope (Grands Crus - Mi-coteau) - THE GOLDEN ZONE -->
+    <rect x="360" y="140" width="150" height="35" rx="4" fill="#1C1420" stroke="#C45C8F" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="435" y="162" text-anchor="middle" fill="#E8B0CB" font-size="14" font-weight="bold">特級園 (Grands Crus)</text>
+    <path d="M 410 175 L 390 280" stroke="#C45C8F" stroke-width="2" stroke-dasharray="2,2"/>
+    <circle cx="390" cy="285" r="4" fill="#E8B0CB"/>
+    <text x="315" y="275" fill="#E8B0CB" font-size="11" font-weight="bold">黃金中坡段 (Mi-Côteau)</text>
+    
+    <!-- Bottom Slope / Plain (AOC Régionales) -->
+    <rect x="580" y="220" width="130" height="35" rx="4" fill="#0F1823" stroke="#5B9DE5" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="645" y="242" text-anchor="middle" fill="#8DB8E8" font-size="14" font-weight="bold">大區級 (Bourgogne)</text>
+    <path d="M 645 255 L 645 350" stroke="#5B9DE5" stroke-width="2" stroke-dasharray="2,2"/>
+    <circle cx="645" cy="355" r="4" fill="#8DB8E8"/>
+    <text x="645" y="345" text-anchor="middle" fill="#CBD5E1" font-size="11">平原土層過於深厚肥沃</text>
+  </g>
+
+  <!-- Detailed Explanation Boxes at the Bottom -->
+  <rect x="40" y="400" width="220" height="110" rx="6" fill="#111A1B" stroke="#2D4026" stroke-width="1" filter="url(#shadow)"/>
+  <text x="55" y="425" fill="#A0D0A0" font-size="14" font-weight="bold">✔️ 最佳排水性</text>
+  <text x="55" y="450" fill="#CBD5E1" font-size="12">中坡段 (5-15度) 擁有最理想的</text>
+  <text x="55" y="470" fill="#CBD5E1" font-size="12">排水角度。水不會堆積，葡萄</text>
+  <text x="55" y="490" fill="#CBD5E1" font-size="12">藤被迫往地下深扎根尋水。</text>
+
+  <rect x="290" y="400" width="220" height="110" rx="6" fill="#1B1611" stroke="#403026" stroke-width="1" filter="url(#shadow)"/>
+  <text x="305" y="425" fill="#D0B0A0" font-size="14" font-weight="bold">☀️ 最完美日照</text>
+  <text x="305" y="450" fill="#CBD5E1" font-size="12">朝東/東南的斜坡能早早承接</text>
+  <text x="305" y="470" fill="#CBD5E1" font-size="12">晨間陽光，曬乾露水防病害，</text>
+  <text x="305" y="490" fill="#CBD5E1" font-size="12">並避開正午西曬的過度炎熱。</text>
+
+  <rect x="540" y="400" width="220" height="110" rx="6" fill="#1B1116" stroke="#402631" stroke-width="1" filter="url(#shadow)"/>
+  <text x="555" y="425" fill="#D0A0B0" font-size="14" font-weight="bold">🪨 最豐富土壤比例</text>
+  <text x="555" y="450" fill="#CBD5E1" font-size="12">坡頂土壤易沖刷流失；平原土</text>
+  <text x="555" y="470" fill="#CBD5E1" font-size="12">壤沉積過厚。中坡剛好是石灰</text>
+  <text x="555" y="490" fill="#CBD5E1" font-size="12">與黏土的最完美平衡點。</text>
+
+</svg>

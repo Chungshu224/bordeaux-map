@@ -23,6 +23,7 @@ export const l46Content = makeL4Lesson({
             <li><strong>未來趨勢 = 都市更新條例</strong><br>氣候變遷要求建築加裝節能設備、數位化登記取代紙本產權,你需隨法規演進調適。</li>
           </ul>
         </div>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L4-6/01%20原產地法規與產權防護網.svg" alt="原產地法規與產權防護網" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <div class="course-structure">
           <h3>📖 本課程架構</h3>

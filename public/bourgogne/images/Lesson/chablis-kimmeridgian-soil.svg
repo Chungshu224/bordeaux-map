@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="580" viewBox="0 0 800 580" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/> <!-- Slate dark -->
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+
+    <!-- Soil Layers Gradients -->
+    <linearGradient id="portlandian" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+
+    <linearGradient id="kimmeridgian" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94A3B8"/>
+      <stop offset="50%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    
+    <linearGradient id="jurassicBase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+
+    <!-- Ocean overlay for fossil layer -->
+    <linearGradient id="oceanGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#0EA5E9" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="fossilGlow"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#38BDF8" flood-opacity="0.8"/></filter>
+    
+    <pattern id="fossilTexture" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M10,20 C15,10 25,10 30,20 C25,30 15,30 10,20 Z" fill="#E2E8F0" fill-opacity="0.15"/>
+      <path d="M30,35 C33,30 38,30 40,35 C38,40 33,40 30,35 Z" fill="#E2E8F0" fill-opacity="0.1"/>
+      <circle cx="5" cy="5" r="2" fill="#CBD5E1" fill-opacity="0.2"/>
+      <circle cx="25" cy="8" r="1.5" fill="#CBD5E1" fill-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="580" fill="url(#bg)"/>
+
+  <!-- Title Section -->
+  <text x="400" y="45" text-anchor="middle" fill="#E2E8F0" font-size="26" font-weight="bold" letter-spacing="1">夏布利土壤解剖圖：源自遠古海洋的恩賜</text>
+  <text x="400" y="68" text-anchor="middle" fill="#94A3B8" font-size="14">Kimmeridgian Soil Profile: The Marine Terroir of Chablis</text>
+
+  <!-- Main Illustration Group -->
+  <g transform="translate(60, 110)" filter="url(#shadow)">
+    
+    <!-- Horizon / Surface -->
+    <path d="M0,50 Q200,30 400,60 T680,40 L680,60 L0,60 Z" fill="#4ADE80" fill-opacity="0.2"/>
+    <path d="M0,55 Q200,35 400,65 T680,45" fill="none" stroke="#22C55E" stroke-width="2"/>
+
+    <!-- Vines -->
+    <!-- Vine 1 (Petit Chablis side) -->
+    <g transform="translate(150, 52)">
+      <path d="M0,0 Q-5,-20 5,-40 M0,0 Q10,-10 20,-30 M-15,-20 L10,-25" fill="none" stroke="#854D0E" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="5" cy="-40" r="12" fill="#22C55E" fill-opacity="0.8"/>
+      <circle cx="20" cy="-30" r="10" fill="#16A34A" fill-opacity="0.8"/>
+      <circle cx="-10" cy="-25" r="14" fill="#4ADE80" fill-opacity="0.8"/>
+      <circle cx="-2" cy="-15" r="10" fill="#EAB308" /> <!-- Single Grape Bunch -->
+      <!-- Roots -->
+      <path d="M0,0 Q-10,30 -5,60 T-20,120 M0,0 Q20,30 10,70 T25,100" fill="none" stroke="#CA8A04" stroke-width="1.5" stroke-dasharray="3,2"/>
+    </g>
+
+    <!-- Vine 2 (Chablis / Grand Cru side - deeper roots) -->
+    <g transform="translate(450, 60)">
+      <path d="M0,0 Q-8,-20 2,-45 M0,0 Q15,-15 25,-35 M-20,-25 L15,-30" fill="none" stroke="#854D0E" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="2" cy="-45" r="15" fill="#22C55E" fill-opacity="0.8"/>
+      <circle cx="25" cy="-35" r="12" fill="#16A34A" fill-opacity="0.8"/>
+      <circle cx="-15" cy="-30" r="16" fill="#4ADE80" fill-opacity="0.8"/>
+      <circle cx="5" cy="-20" r="12" fill="#EAB308" /> <!-- Single Grape Bunch -->
+      <!-- Deep Roots piercing layers -->
+      <path d="M0,0 Q-10,50 -5,120 T30,220 M20,180 Q10,240 -15,300 M0,0 Q30,60 15,140 T40,250 M15,140 Q-20,200 5,280" fill="none" stroke="#CA8A04" stroke-width="2" stroke-dasharray="3,2"/>
+    </g>
+
+    <!-- Layer 1: Portlandian -->
+    <path d="M0,58 Q200,38 400,68 T680,48 L680,140 L0,110 Z" fill="url(#portlandian)"/>
+    <text x="340" y="105" fill="#334155" font-size="16" font-weight="bold" opacity="0.6">波特蘭階 (Portlandian)</text>
+
+    <!-- Layer 2: Kimmeridgian (The Core) -->
+    <path d="M0,110 L680,140 L680,320 L0,280 Z" fill="url(#kimmeridgian)"/>
+    <path d="M0,110 L680,140 L680,320 L0,280 Z" fill="url(#oceanGlow)"/>
+    <path d="M0,110 L680,140 L680,320 L0,280 Z" fill="url(#fossilTexture)"/>
+    <text x="340" y="220" fill="#E2E8F0" font-size="22" font-weight="bold" letter-spacing="2" opacity="0.85">啟莫里階 (Kimmeridgian)</text>
+
+    <!-- Layer 3: Base -->
+    <path d="M0,280 L680,320 L680,400 L0,400 Z" fill="url(#jurassicBase)"/>
+    
+    <!-- Legend / Annotations side boxes -->
+    <!-- Box 1: Portlandian info -->
+    <g transform="translate(-40, 70)">
+      <line x1="40" y1="20" x2="-20" y2="20" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <rect x="-180" y="0" width="160" height="60" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="-170" y="25" fill="#F8FAFC" font-size="14" font-weight="bold">波特蘭階岩層</text>
+      <text x="-170" y="45" fill="#94A3B8" font-size="12">較年輕的硬質石灰岩</text>
+      <text x="-25" y="45" fill="#38BDF8" font-size="12" font-weight="bold" text-anchor="end">小夏布利產區</text>
+    </g>
+
+    <!-- Box 2: Kimmeridgian info -->
+    <g transform="translate(-40, 190)">
+      <line x1="40" y1="20" x2="-20" y2="20" stroke="#38BDF8" stroke-width="2"/>
+      <rect x="-180" y="-10" width="160" height="85" rx="4" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
+      <text x="-170" y="15" fill="#38BDF8" font-size="15" font-weight="bold">啟莫里階泥灰岩層</text>
+      <text x="-170" y="38" fill="#E2E8F0" font-size="12">1.5億年前海床沉積</text>
+      <text x="-170" y="58" fill="#E2E8F0" font-size="12">富含海洋化石與鈣質</text>
+      <text x="-20" y="58" fill="#FDE047" font-size="12" font-weight="bold" text-anchor="end">特級/一級園</text>
+    </g>
+
+  </g>
+
+  <!-- Magnifying Glass for Fossil Details (Bottom Right) -->
+  <g transform="translate(540, 360)">
+    <!-- Connection Line -->
+    <path d="M-80,-110 C-40,-50 -20,20 40,40" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6"/>
+    
+    <circle cx="80" cy="50" r="95" fill="#0B1120" stroke="#38BDF8" stroke-width="4" filter="url(#shadow)"/>
+    <circle cx="80" cy="50" r="85" fill="none" stroke="#0EA5E9" stroke-width="1" opacity="0.5"/>
+    
+    <text x="80" y="-20" text-anchor="middle" fill="#E2E8F0" font-size="16" font-weight="bold" filter="url(#glow)">🔍 外形微觀</text>
+
+    <!-- Exogyra virgula Drawing -->
+    <g transform="translate(50, -5)" filter="url(#fossilGlow)">
+      <path d="M20,70 C10,50 30,20 60,10 C80,5 90,20 85,35 C80,50 60,70 40,80 C30,85 15,80 20,70 Z" fill="#E2E8F0"/>
+      <path d="M20,70 C10,50 30,20 60,10 C80,5 90,20 85,35 C80,50 60,70 40,80 C30,85 15,80 20,70 Z" fill="none" stroke="#94A3B8" stroke-width="2"/>
+      <!-- Shell lines -->
+      <path d="M60,10 C50,30 30,50 25,65 M70,15 C65,35 40,65 30,75 M80,25 C75,45 55,70 40,80 M85,35 C82,50 68,75 50,80" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Labels inside magnifier -->
+    <rect x="-10" y="80" width="180" height="24" rx="4" fill="#0EA5E9" opacity="0.15"/>
+    <text x="80" y="97" text-anchor="middle" fill="#38BDF8" font-size="14" font-weight="bold">Exogyra virgula (小牡蠣)</text>
+    <text x="80" y="115" text-anchor="middle" fill="#94A3B8" font-size="12">賦予酒液：碘味 / 海水 / 槍石味</text>
+  </g>
+
+  <!-- Bottom Key Notes -->
+  <rect x="40" y="520" width="720" height="40" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="545" text-anchor="middle" fill="#94A3B8" font-size="13">✨ <tspan fill="#F8FAFC" font-weight="bold">關鍵概念：</tspan>夏布利白酒冷冽徹骨的礦物質與「打火石」香氣，皆源自葡萄藤深根扎進這片侏羅紀海洋地層吸收的精華。</text>
+
+</svg>

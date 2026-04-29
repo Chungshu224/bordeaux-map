@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0F14"/>
+      <stop offset="50%" stop-color="#151A24"/>
+      <stop offset="100%" stop-color="#1A2230"/>
+    </linearGradient>
+    
+    <!-- Pyramid Level Gradients -->
+    <linearGradient id="gradL4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7B2C5F"/>
+      <stop offset="100%" stop-color="#4A1938"/>
+    </linearGradient>
+    <linearGradient id="gradL3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D97A35"/>
+      <stop offset="100%" stop-color="#A55418"/>
+    </linearGradient>
+    <linearGradient id="gradL2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3A8E5C"/>
+      <stop offset="100%" stop-color="#1D5634"/>
+    </linearGradient>
+    <linearGradient id="gradL1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3A7ABD"/>
+      <stop offset="100%" stop-color="#234E7B"/>
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glowL4"><feGaussianBlur stdDeviation="6" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="2" dy="5" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="540" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#E2E8F0" font-size="24" font-weight="bold" letter-spacing="1">布根地分級金字塔結構</text>
+  <text x="400" y="65" text-anchor="middle" fill="#8A9BB0" font-size="13">The 4-Tier Classification Pyramid of Bourgogne</text>
+
+  <!-- Pyramid Group -->
+  <g transform="translate(0, 10)" filter="url(#shadow)">
+    <!-- Base / L1 (Regionales) -->
+    <path d="M103,340 L377,340 L440,460 L40,460 Z" fill="url(#gradL1)" stroke="#0B0F14" stroke-width="5"/>
+    <text x="240" y="420" text-anchor="middle" fill="#FFFFFF" opacity="0.8" font-size="34" font-weight="bold">53%</text>
+
+    <!-- L2 (Villages) -->
+    <path d="M156,240 L324,240 L377,340 L103,340 Z" fill="url(#gradL2)" stroke="#0B0F14" stroke-width="5"/>
+    <text x="240" y="310" text-anchor="middle" fill="#FFFFFF" opacity="0.8" font-size="28" font-weight="bold">36%</text>
+
+    <!-- L3 (Premiers Crus) -->
+    <path d="M203,150 L277,150 L324,240 L156,240 Z" fill="url(#gradL3)" stroke="#0B0F14" stroke-width="5"/>
+    <text x="240" y="215" text-anchor="middle" fill="#FFFFFF" opacity="0.8" font-size="22" font-weight="bold">10%</text>
+
+    <!-- L4 (Grands Crus) -->
+    <path d="M240,80 L277,150 L203,150 Z" fill="url(#gradL4)" stroke="#0B0F14" stroke-width="5"/>
+    <text x="240" y="135" text-anchor="middle" fill="#FFFFFF" opacity="0.9" font-size="18" font-weight="bold">1%</text>
+  </g>
+
+  <!-- Connecting Lines -->
+  <!-- Level 4 -->
+  <path d="M255,135 L440,135" fill="none" stroke="#D98CAE" stroke-width="2" stroke-dasharray="4,4" opacity="0.6"/>
+  <!-- Level 3 -->
+  <path d="M280,215 L440,215" fill="none" stroke="#E5995E" stroke-width="2" stroke-dasharray="4,4" opacity="0.6"/>
+  <!-- Level 2 -->
+  <path d="M330,310 L440,310" fill="none" stroke="#6CBB8D" stroke-width="2" stroke-dasharray="4,4" opacity="0.6"/>
+  <!-- Level 1 -->
+  <path d="M390,420 L440,420" fill="none" stroke="#68A5E5" stroke-width="2" stroke-dasharray="4,4" opacity="0.6"/>
+
+  <!-- Info Panels on the Right side -->
+  <!-- L4 Panel -->
+  <g transform="translate(450, 95)" filter="url(#shadow)">
+    <rect x="0" y="0" width="310" height="76" rx="6" fill="#1C1420" stroke="#7B2C5F" stroke-width="1.5"/>
+    <text x="15" y="25" fill="#E8B0CB" font-size="16" font-weight="bold">特級園 (Grands Crus)</text>
+    <text x="285" y="25" text-anchor="end" fill="#E8B0CB" font-size="12" font-weight="bold">Top 1%</text>
+    <circle cx="20" cy="45" r="4" fill="#C45C8F"/>
+    <text x="35" y="50" fill="#CBD5E1" font-size="12">33個最高級別，代表布根地風土的極致高度</text>
+    <circle cx="20" cy="62" r="4" fill="#C45C8F"/>
+    <text x="35" y="67" fill="#8A9BB0" font-size="11">嚴苛規範：最高產量限制 35-37 hl/ha</text>
+  </g>
+
+  <!-- L3 Panel -->
+  <g transform="translate(450, 180)" filter="url(#shadow)">
+    <rect x="0" y="0" width="310" height="76" rx="6" fill="#20150F" stroke="#A55418" stroke-width="1.5"/>
+    <text x="15" y="25" fill="#EFAC7D" font-size="16" font-weight="bold">一級園 (Premiers Crus)</text>
+    <text x="285" y="25" text-anchor="end" fill="#EFAC7D" font-size="12" font-weight="bold">10%</text>
+    <circle cx="20" cy="45" r="4" fill="#D97A35"/>
+    <text x="35" y="50" fill="#CBD5E1" font-size="12">約640個卓越的地塊 (Climat)，擁有極佳聲譽</text>
+    <circle cx="20" cy="62" r="4" fill="#D97A35"/>
+    <text x="35" y="67" fill="#8A9BB0" font-size="11">最高產量限制 40-48 hl/ha，酒標附有園名稱</text>
+  </g>
+
+  <!-- L2 Panel -->
+  <g transform="translate(450, 270)" filter="url(#shadow)">
+    <rect x="0" y="0" width="310" height="76" rx="6" fill="#0D1E15" stroke="#3A8E5C" stroke-width="1.5"/>
+    <text x="15" y="25" fill="#82C59D" font-size="16" font-weight="bold">村莊級 (Villages)</text>
+    <text x="285" y="25" text-anchor="end" fill="#82C59D" font-size="12" font-weight="bold">36%</text>
+    <circle cx="20" cy="45" r="4" fill="#4CAF74"/>
+    <text x="35" y="50" fill="#CBD5E1" font-size="12">44個著名村莊，展現各村獨特個性與典型風格</text>
+    <circle cx="20" cy="62" r="4" fill="#4CAF74"/>
+    <text x="35" y="67" fill="#8A9BB0" font-size="11">最高產量 40-50 hl/ha (如: Meursault, Vosne)</text>
+  </g>
+
+  <!-- L1 Panel -->
+  <g transform="translate(450, 380)" filter="url(#shadow)">
+    <rect x="0" y="0" width="310" height="76" rx="6" fill="#0F1823" stroke="#234E7B" stroke-width="1.5"/>
+    <text x="15" y="25" fill="#8DB8E8" font-size="16" font-weight="bold">大區級 (Régionales)</text>
+    <text x="285" y="25" text-anchor="end" fill="#8DB8E8" font-size="12" font-weight="bold">53%</text>
+    <circle cx="20" cy="45" r="4" fill="#5B9DE5"/>
+    <text x="35" y="50" fill="#CBD5E1" font-size="12">來自大區基礎葡萄園，高品質的日常飲用首選</text>
+    <circle cx="20" cy="62" r="4" fill="#5B9DE5"/>
+    <text x="35" y="67" fill="#8A9BB0" font-size="11">最高產量 55-60 hl/ha，如: Bourgogne Rouge</text>
+  </g>
+
+  <!-- Note Footer -->
+  <rect x="40" y="490" width="720" height="30" rx="4" fill="#0B131E" stroke="#1F3A5A" stroke-width="1"/>
+  <text x="400" y="509" text-anchor="middle" fill="#6498D4" font-size="12">💡 產量規定越往塔頂越嚴格，確保每一滴葡萄汁都能完美濃縮該地塊的「風土 (Terroir)」精華。</text>
+
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>   <!-- Deep slate/blue -->
+      <stop offset="100%" stop-color="#020617"/> <!-- Very dark -->
+    </linearGradient>
+
+    <!-- Terroir Gradients -->
+    <!-- Topsoil (Brown/Clay) -->
+    <linearGradient id="clayGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#92400E"/>   <!-- Amber dark -->
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    
+    <!-- Subsoil (Limestone/Rock) -->
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDE047"/>   <!-- Golden/Yellowish stone -->
+      <stop offset="20%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#9CA3AF"/> <!-- Gray rock -->
+    </linearGradient>
+
+    <!-- Glows mapping wine character -->
+    <filter id="glowGold"><feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#FBBF24" flood-opacity="0.4"/></filter>
+    <filter id="glowSilver"><feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#94A3B8" flood-opacity="0.4"/></filter>
+    <filter id="glowAmber"><feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#B45309" flood-opacity="0.4"/></filter>
+    
+    <pattern id="rockPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M5,5 Q8,2 10,6 T15,8 M2,15 Q5,18 8,14" fill="none" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#bgGrad)"/>
+
+  <!-- Grid overlay -->
+  <path d="M0,100 L800,100 M0,200 L800,200 M0,300 L800,300 M0,400 L800,400" stroke="#FFFFFF" stroke-opacity="0.05" stroke-dasharray="2,4"/>
+
+  <!-- Title section -->
+  <text x="400" y="45" text-anchor="middle" fill="#F8FAFC" font-size="26" font-weight="bold" letter-spacing="2">蒙哈榭 (Montrachet) 白酒皇冠五園剖面</text>
+  <text x="400" y="68" text-anchor="middle" fill="#9CA3AF" font-size="14">The Grand Cru Hierarchy: Slope, Soil Depth &amp; Expression</text>
+
+  <!-- The Hill Profile -->
+  <g transform="translate(60, 100)">
+    
+    <!-- Deep Limestone / Subsoil -->
+    <path d="M0,0 Q150,10 300,100 T650,280 L650,380 L0,380 Z" fill="url(#limeGrad)"/>
+    <path d="M0,0 Q150,10 300,100 T650,280 L650,380 L0,380 Z" fill="url(#rockPattern)"/>
+
+    <!-- Topsoil (Clay & Marl) -> Gets thicker as we go down the slope -->
+    <path d="M0,-2 Q150,8 300,98 T650,278 L650,320 T300,120 Q150,20 0,10 Z" fill="url(#clayGrad)"/>
+    
+    <!-- Surface line (Vines) -->
+    <path d="M0,-2 Q150,8 300,98 T650,278" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Vines placeholders -->
+    <g stroke="#166534" stroke-width="2">
+      <!-- Chevalier area -->
+      <line x1="80" y1="2" x2="80" y2="-12"/> <circle cx="80" cy="-12" r="3" fill="#4ADE80" stroke="none"/>
+      <line x1="140" y1="6" x2="140" y2="-10"/> <circle cx="140" cy="-10" r="3" fill="#4ADE80" stroke="none"/>
+      <!-- Montrachet area -->
+      <line x1="280" y1="80" x2="280" y2="65"/> <circle cx="280" cy="65" r="3" fill="#4ADE80" stroke="none"/>
+      <line x1="330" y1="120" x2="330" y2="105"/> <circle cx="330" cy="105" r="3" fill="#4ADE80" stroke="none"/>
+      <line x1="380" y1="160" x2="380" y2="145"/> <circle cx="380" cy="145" r="3" fill="#4ADE80" stroke="none"/>
+      <!-- Batard area -->
+      <line x1="500" y1="230" x2="500" y2="215"/> <circle cx="500" cy="215" r="3" fill="#4ADE80" stroke="none"/>
+      <line x1="560" y1="250" x2="560" y2="235"/> <circle cx="560" cy="235" r="3" fill="#4ADE80" stroke="none"/>
+      <!-- Criots area -->
+      <line x1="620" y1="270" x2="620" y2="255"/> <circle cx="620" cy="255" r="3" fill="#4ADE80" stroke="none"/>
+    </g>
+
+    <!-- Zone Dividers -->
+    <line x1="200" y1="25" x2="200" y2="350" stroke="#FFFFFF" stroke-opacity="0.3" stroke-dasharray="4,4"/>
+    <line x1="420" y1="193" x2="420" y2="350" stroke="#FFFFFF" stroke-opacity="0.3" stroke-dasharray="4,4"/>
+    <line x1="590" y1="260" x2="590" y2="350" stroke="#FFFFFF" stroke-opacity="0.3" stroke-dasharray="4,4"/>
+
+  </g>
+
+  <!-- Labels and Data Cards -->
+
+  <!-- 1. Chevalier-Montrachet (Upper Slope) -->
+  <g transform="translate(40, 110)">
+    <rect x="0" y="0" width="180" height="95" rx="6" fill="#0F172A" stroke="#94A3B8" stroke-width="1.5" filter="url(#glowSilver)"/>
+    <text x="12" y="22" fill="#E2E8F0" font-size="16" font-weight="bold">騎士 (Chevalier)</text>
+    <text x="12" y="40" fill="#94A3B8" font-size="11">265-290m | 坡度10-15%</text>
+    <text x="12" y="58" fill="#F8FAFC" font-size="12">▪ 表土極薄(20cm)，強石灰岩</text>
+    <text x="12" y="74" fill="#F8FAFC" font-size="12">▪ 最高酸度與礦石張力</text>
+    <text x="12" y="88" fill="#38BDF8" font-size="12" font-style="italic">"極致的優雅與骨架"</text>
+  </g>
+
+  <!-- 2. Montrachet (Mid Slope) -->
+  <g transform="translate(260, 160)">
+    <rect x="0" y="0" width="200" height="100" rx="8" fill="#18181B" stroke="#FBBF24" stroke-width="2" filter="url(#glowGold)"/>
+    <text x="100" y="24" text-anchor="middle" fill="#FDE047" font-size="18" font-weight="bold">🎯 蒙哈榭 (Montrachet)</text>
+    <text x="100" y="42" text-anchor="middle" fill="#FCD34D" font-size="11">255-265m | 完美的中坡</text>
+    <text x="100" y="60" text-anchor="middle" fill="#F8FAFC" font-size="12">▪ 黏土與石灰岩的黃金比例</text>
+    <text x="100" y="76" text-anchor="middle" fill="#F8FAFC" font-size="12">▪ 排水極佳，完美東南向</text>
+    <text x="100" y="92" text-anchor="middle" fill="#FBBF24" font-size="12" font-style="italic">"無死角的王者、複雜度巔峰"</text>
+  </g>
+
+  <!-- 3. Bâtard-Montrachet / Bienvenues (Lower Slope) -->
+  <g transform="translate(480, 240)">
+    <rect x="0" y="0" width="180" height="95" rx="6" fill="#271011" stroke="#D97706" stroke-width="1.5" filter="url(#glowAmber)"/>
+    <text x="12" y="22" fill="#FCD34D" font-size="16" font-weight="bold">巴塔 (Bâtard)</text>
+    <text x="12" y="40" fill="#D97706" font-size="11">240-250m | 坡度平緩</text>
+    <text x="12" y="58" fill="#F8FAFC" font-size="12">▪ 表土深厚(&gt;1m)，黏土偏多</text>
+    <text x="12" y="74" fill="#F8FAFC" font-size="12">▪ 酒體最飽滿、濃郁奶油香</text>
+    <text x="12" y="88" fill="#FBBF24" font-size="12" font-style="italic">"寬廣、力量與豐腴感"</text>
+  </g>
+
+  <!-- 4. Criots-Bâtard (Bottom) -->
+  <g transform="translate(650, 360)">
+    <rect x="0" y="0" width="130" height="60" rx="6" fill="#1C1917" stroke="#71717A" stroke-width="1"/>
+    <text x="65" y="22" text-anchor="middle" fill="#D4D4D8" font-size="14" font-weight="bold">克里歐 (Criots)</text>
+    <text x="65" y="38" text-anchor="middle" fill="#A1A1AA" font-size="11">最下坡，黏土極重</text>
+    <text x="65" y="52" text-anchor="middle" fill="#A1A1AA" font-size="11">產量極少但精緻</text>
+  </g>
+
+  <!-- Legend & Deep Analysis -->
+  <rect x="40" y="450" width="720" height="45" rx="6" fill="#020617" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="470" text-anchor="middle" fill="#94A3B8" font-size="13">💡 <tspan fill="#F8FAFC" font-weight="bold">大師盲飲心法：</tspan>分辨五園的核心在於「垂直張力」與「橫向寬度」。</text>
+  <text x="400" y="488" text-anchor="middle" fill="#94A3B8" font-size="13">高坡 Chevalier 展現<tspan fill="#38BDF8">筆直銳利的礦石酸度</tspan>；低坡 Bâtard 則是<tspan fill="#FBBF24">橫向鋪陳的奶油與核果力量</tspan>；Montrachet 兼具兩者。</text>
+
+</svg>

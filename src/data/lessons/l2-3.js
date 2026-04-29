@@ -122,7 +122,7 @@ export const l23Content = [
       { id: 2, icon: '🏰', title: 'Latour', content: '力量結構的典範' },
       { id: 3, icon: '🏰', title: 'Mouton', content: '藝術創新的象徵' }
     ],
-    content: '<div class="pauillac-estates"><p class="lead-text">Pauillac是唯一擁有三座1855分級一級酒莊的村莊，它們各自代表了Pauillac乃至整個波爾多葡萄酒風格的巔峰。</p><div class="estates-analysis"><div class="estate-section lafite"><h4>Château Lafite Rothschild (拉菲古堡)</h4><p>以其無與倫比的優雅、精緻和細膩而聞名，香氣中常有紫羅蘭和雪松的氣息，被譽為「王者之酒」。</p></div><div class="estate-section latour"><h4>Château Latour (拉圖城堡)</h4><p>風格強勁、結構宏大、單寧厚實，以卓越的陳年潛力著稱，是力量與深度的完美結合。</p></div><div class="estate-section mouton"><h4>Château Mouton Rothschild (木桐酒莊)</h4><p>風格華麗、口感豐富、充滿異國情調。自1945年起，每年邀請一位藝術家為其設計酒標，是藝術與葡萄酒的完美融合。1973年從二級莊晉升為一級莊。</p></div></div></div>',
+    content: '<div class="pauillac-estates"><p class="lead-text">Pauillac是唯一擁有三座1855分級一級酒莊的村莊，它們各自代表了Pauillac乃至整個波爾多葡萄酒風格的巔峰。</p><div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L2-3/01%20三大一級莊風格比較.svg" alt="三大一級莊風格比較" style="max-width: 100%; height: auto; border-radius: 8px;" /></div><div class="estates-analysis"><div class="estate-section lafite"><h4>Château Lafite Rothschild (拉菲古堡)</h4><p>以其無與倫比的優雅、精緻和細膩而聞名，香氣中常有紫羅蘭和雪松的氣息，被譽為「王者之酒」。</p></div><div class="estate-section latour"><h4>Château Latour (拉圖城堡)</h4><p>風格強勁、結構宏大、單寧厚實，以卓越的陳年潛力著稱，是力量與深度的完美結合。</p></div><div class="estate-section mouton"><h4>Château Mouton Rothschild (木桐酒莊)</h4><p>風格華麗、口感豐富、充滿異國情調。自1945年起，每年邀請一位藝術家為其設計酒標，是藝術與葡萄酒的完美融合。1973年從二級莊晉升為一級莊。</p></div></div></div>',
     hasMap: true,
     geojsonPath: '/geojson/LeftBank/Medoc/Pauillac_AOC.geojson',
     showBordeaux: false,

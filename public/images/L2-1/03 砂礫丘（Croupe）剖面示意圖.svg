@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2540"/>
+      <stop offset="60%" stop-color="#2a3550"/>
+      <stop offset="100%" stop-color="#3a4560"/>
+    </linearGradient>
+    <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B7355"/>
+      <stop offset="100%" stop-color="#6B5335"/>
+    </linearGradient>
+    <linearGradient id="gravel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9E8C6A"/>
+      <stop offset="100%" stop-color="#7E6C4A"/>
+    </linearGradient>
+    <linearGradient id="subsoil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B5A3A"/>
+      <stop offset="100%" stop-color="#4B3A1A"/>
+    </linearGradient>
+    <linearGradient id="bedrock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A3020"/>
+      <stop offset="100%" stop-color="#1A1008"/>
+    </linearGradient>
+    <filter id="sh2"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/></filter>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A6A30"/>
+      <stop offset="100%" stop-color="#2A4A18"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="800" height="560" fill="url(#sky)"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="68" fill="#0d1520" opacity="0.7"/>
+  <text x="400" y="38" text-anchor="middle" fill="#C0952C" font-size="21" font-weight="bold">Médoc 砂礫丘（Croupe）剖面圖</text>
+  <text x="400" y="58" text-anchor="middle" fill="#9A7040" font-size="12">Croupe Graveleuse Cross-Section · 排水 · 蓄熱 · 根系深扎</text>
+  <line x1="60" y1="67" x2="740" y2="67" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Sun -->
+  <circle cx="680" cy="120" r="38" fill="#F4D03F" opacity="0.9"/>
+  <circle cx="680" cy="120" r="30" fill="#F7DC6F"/>
+  <!-- sun rays -->
+  <line x1="680" y1="72" x2="680" y2="60" stroke="#F4D03F" stroke-width="2" opacity="0.7"/>
+  <line x1="680" y1="168" x2="680" y2="180" stroke="#F4D03F" stroke-width="2" opacity="0.7"/>
+  <line x1="632" y1="120" x2="620" y2="120" stroke="#F4D03F" stroke-width="2" opacity="0.7"/>
+  <line x1="728" y1="120" x2="740" y2="120" stroke="#F4D03F" stroke-width="2" opacity="0.7"/>
+  <line x1="646" y1="86" x2="637" y2="77" stroke="#F4D03F" stroke-width="2" opacity="0.7"/>
+  <line x1="714" y1="154" x2="723" y2="163" stroke="#F4D03F" stroke-width="2" opacity="0.7"/>
+  <line x1="714" y1="86" x2="723" y2="77" stroke="#F4D03F" stroke-width="2" opacity="0.7"/>
+  <line x1="646" y1="154" x2="637" y2="163" stroke="#F4D03F" stroke-width="2" opacity="0.7"/>
+  <text x="680" y="125" text-anchor="middle" fill="#8B6914" font-size="13" font-weight="bold">太陽</text>
+
+  <!-- Heat arrows down -->
+  <line x1="500" y1="148" x2="500" y2="175" stroke="#FF8C00" stroke-width="2.5" marker-end="url(#arrowHeat)"/>
+  <line x1="540" y1="145" x2="540" y2="170" stroke="#FF8C00" stroke-width="2" marker-end="url(#arrowHeat)"/>
+  <line x1="460" y1="148" x2="460" y2="173" stroke="#FF8C00" stroke-width="2" marker-end="url(#arrowHeat)"/>
+  <text x="500" y="142" text-anchor="middle" fill="#FF8C00" font-size="11">熱輻射吸收</text>
+  <defs>
+    <marker id="arrowHeat" markerWidth="6" markerHeight="6" refX="3" refY="0" orient="auto">
+      <polygon points="3,6 6,0 0,0" fill="#FF8C00"/>
+    </marker>
+    <marker id="arrowNight" markerWidth="6" markerHeight="6" refX="3" refY="6" orient="auto">
+      <polygon points="3,0 6,6 0,6" fill="#66AAFF"/>
+    </marker>
+    <marker id="arrowRain" markerWidth="6" markerHeight="6" refX="3" refY="0" orient="auto">
+      <polygon points="3,6 6,0 0,0" fill="#4488CC"/>
+    </marker>
+    <marker id="arrowRoot" markerWidth="6" markerHeight="6" refX="3" refY="0" orient="auto">
+      <polygon points="3,6 6,0 0,0" fill="#5A7A20"/>
+    </marker>
+  </defs>
+
+  <!-- HILL (Croupe) shape -->
+  <ellipse cx="370" cy="195" rx="310" ry="45" fill="url(#hill)"/>
+  <text x="370" y="200" text-anchor="middle" fill="#C8E080" font-size="13" font-weight="bold">砂礫丘（Croupe）　略高於周邊平原，自然排水極佳</text>
+
+  <!-- SOIL LAYERS (cross section) -->
+  <!-- Surface soil 0–30cm -->
+  <rect x="60" y="225" width="580" height="50" fill="url(#surface)" rx="2"/>
+  <text x="130" y="246" fill="#F5EAD8" font-size="13" font-weight="bold">表土層</text>
+  <text x="130" y="261" fill="#D8C8A0" font-size="11">0 – 30 cm　細砂・少量黏土・透氣良好</text>
+  <!-- small pebbles decoration -->
+  <circle cx="370" cy="245" r="5" fill="#8B7A50" opacity="0.7"/>
+  <circle cx="390" cy="255" r="4" fill="#7A6A40" opacity="0.7"/>
+  <circle cx="410" cy="242" r="6" fill="#9A8A60" opacity="0.7"/>
+  <circle cx="350" cy="258" r="4" fill="#8A7A50" opacity="0.6"/>
+
+  <!-- Gravel layer 30–150cm -->
+  <rect x="60" y="275" width="580" height="100" fill="url(#gravel)" rx="2"/>
+  <text x="130" y="296" fill="#FFF8E0" font-size="13" font-weight="bold">🪨 砂礫層（核心）</text>
+  <text x="130" y="314" fill="#F0E0B0" font-size="11">30 – 150 cm　石英砂礫・鵝卵石・排水迅速・白天蓄熱夜間放熱</text>
+  <text x="130" y="332" fill="#E0D090" font-size="11">Gunz砂礫（第四紀冰河期沖積）·  貧瘠環境迫使根系深扎</text>
+  <text x="130" y="350" fill="#D4C080" font-size="11">熱反射效應 → 加速 Cabernet Sauvignon 成熟</text>
+  <!-- Large pebbles decoration -->
+  <ellipse cx="360" cy="312" rx="10" ry="7" fill="#B8A070" opacity="0.8"/>
+  <ellipse cx="380" cy="326" rx="8" ry="6" fill="#A89060" opacity="0.8"/>
+  <ellipse cx="400" cy="310" rx="12" ry="8" fill="#C0A878" opacity="0.7"/>
+  <ellipse cx="420" cy="330" rx="9" ry="6" fill="#B0A068" opacity="0.8"/>
+  <ellipse cx="340" cy="334" rx="11" ry="7" fill="#A89860" opacity="0.7"/>
+
+  <!-- Sub soil 150–300cm -->
+  <rect x="60" y="375" width="580" height="70" fill="url(#subsoil)" rx="2"/>
+  <text x="130" y="398" fill="#E8D8A8" font-size="13" font-weight="bold">底土層</text>
+  <text x="130" y="416" fill="#C8B888" font-size="11">150 – 300 cm　鐵質黏土・石灰岩基底・濕潤時可蓄水，乾旱時緩慢供水</text>
+
+  <!-- Bedrock -->
+  <rect x="60" y="445" width="580" height="45" fill="url(#bedrock)" rx="2"/>
+  <text x="130" y="468" fill="#A09080" font-size="12" font-weight="bold">基岩層（石灰岩）</text>
+  <text x="130" y="483" fill="#807060" font-size="11">礦物質來源 · 給予葡萄酒礦物感與複雜度</text>
+
+  <!-- Root system -->
+  <path d="M 270 225 L 270 260 L 255 290 L 255 340 L 260 400 L 255 450" stroke="#5A8A20" stroke-width="2.5" fill="none" stroke-dasharray="0"/>
+  <path d="M 270 260 L 240 290 L 220 330" stroke="#4A7A18" stroke-width="1.5" fill="none"/>
+  <path d="M 270 310 L 290 340 L 285 380" stroke="#4A7A18" stroke-width="1.5" fill="none"/>
+  <path d="M 265 370 L 235 390 L 225 430" stroke="#3A6A10" stroke-width="1.5" fill="none"/>
+  <path d="M 265 420 L 280 450 L 275 475" stroke="#3A6A10" stroke-width="1.2" fill="none"/>
+  <!-- vine icon at top of root -->
+  <circle cx="270" cy="215" r="8" fill="#4A7A20"/>
+  <text x="270" y="219" text-anchor="middle" fill="#C8F080" font-size="10">🍇</text>
+  <text x="270" y="207" text-anchor="middle" fill="#80C040" font-size="10" font-weight="bold">葡萄藤</text>
+  <text x="198" y="448" text-anchor="middle" fill="#5A8A20" font-size="10" font-weight="bold">根系深扎</text>
+  <text x="198" y="460" text-anchor="middle" fill="#5A8A20" font-size="10">至 3–4 公尺</text>
+  <line x1="255" y1="450" x2="210" y2="454" stroke="#5A8A20" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Night radiation up -->
+  <line x1="540" y1="272" x2="540" y2="248" stroke="#6699FF" stroke-width="2" marker-end="url(#arrowNight)"/>
+  <line x1="560" y1="280" x2="560" y2="252" stroke="#6699FF" stroke-width="1.5" marker-end="url(#arrowNight)"/>
+  <text x="590" y="265" fill="#6699FF" font-size="10">夜間</text>
+  <text x="590" y="278" fill="#6699FF" font-size="10">放熱</text>
+
+  <!-- Rain arrows down into soil -->
+  <line x1="480" y1="160" x2="480" y2="220" stroke="#4488CC" stroke-width="2" marker-end="url(#arrowRain)" stroke-dasharray="4,3"/>
+  <text x="508" y="178" fill="#4488CC" font-size="10">降雨</text>
+  <text x="508" y="193" fill="#4488CC" font-size="10">迅速</text>
+  <text x="508" y="208" fill="#4488CC" font-size="10">排出</text>
+
+  <!-- Depth labels on right -->
+  <line x1="650" y1="225" x2="660" y2="225" stroke="#888" stroke-width="1"/>
+  <text x="665" y="229" fill="#A09080" font-size="10">0 cm</text>
+  <line x1="650" y1="275" x2="660" y2="275" stroke="#888" stroke-width="1"/>
+  <text x="665" y="279" fill="#A09080" font-size="10">30 cm</text>
+  <line x1="650" y1="375" x2="660" y2="375" stroke="#888" stroke-width="1"/>
+  <text x="665" y="379" fill="#A09080" font-size="10">150 cm</text>
+  <line x1="650" y1="445" x2="660" y2="445" stroke="#888" stroke-width="1"/>
+  <text x="665" y="449" fill="#A09080" font-size="10">300 cm</text>
+  <!-- Depth bar -->
+  <line x1="650" y1="225" x2="650" y2="490" stroke="#666" stroke-width="1" stroke-dasharray="2,2"/>
+
+  <!-- Bottom note -->
+  <line x1="60" y1="500" x2="740" y2="500" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="518" text-anchor="middle" fill="#706050" font-size="11">* 砂礫丘（Croupe）的排水與蓄熱功能，是 Médoc 頂級葡萄酒誕生的核心條件</text>
+  <text x="400" y="535" text-anchor="middle" fill="#504030" font-size="11">越靠近 Gironde 河且砂礫越深厚的 Croupe，釀出的酒款結構越雄偉、陳年潛力越強</text>
+</svg>

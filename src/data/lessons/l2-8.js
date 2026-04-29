@@ -73,7 +73,7 @@ export const l28Content = [
       { id: 2, icon: '💎', title: '風格相似', content: '共享相似的風土，以Merlot為主' },
       { id: 3, icon: '💰', title: '性價比高', content: '以更親民的價格，提供右岸的經典風味' }
     ],
-    content: '<div class="libournais-overview"><p class="lead-text">在Saint-Émilion和Pomerol這兩個巨星的光環之外，環繞著一群被稱為「衛星產區」的優質產區。它們是探索波爾多右岸魅力、尋找高性價比佳釀的絕佳起點。</p><div class="geography-analysis"><div class="geo-section location-overview"><h4>🗺️ 主要衛星產區群</h4><div class="satellite-zones"><ul><li><strong>Saint-Émilion衛星產區：</strong>Montagne, Lussac, Puisseguin, Saint-Georges</li><li><strong>Pomerol周邊產區：</strong>Lalande-de-Pomerol</li><li><strong>歷史悠久的獨立產區：</strong>Fronsac & Canon-Fronsac</li></ul></div></div></div></div>',
+    content: '<div class="libournais-overview"><p class="lead-text">在Saint-Émilion和Pomerol這兩個巨星的光環之外，環繞著一群被稱為「衛星產區」的優質產區。它們是探索波爾多右岸魅力、尋找高性價比佳釀的絕佳起點。</p><div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L2-8/01%20衛星產區概覽.svg" alt="衛星產區概覽" style="max-width: 100%; height: auto; border-radius: 8px;" /></div><div class="geography-analysis"><div class="geo-section location-overview"><h4>🗺️ 主要衛星產區群</h4><div class="satellite-zones"><ul><li><strong>Saint-Émilion衛星產區：</strong>Montagne, Lussac, Puisseguin, Saint-Georges</li><li><strong>Pomerol周邊產區：</strong>Lalande-de-Pomerol</li><li><strong>歷史悠久的獨立產區：</strong>Fronsac & Canon-Fronsac</li></ul></div></div></div></div>',
     hasMap: true,
     mapFocus: 'RightBank-Libournais-Overview',
     geojsonPaths: [

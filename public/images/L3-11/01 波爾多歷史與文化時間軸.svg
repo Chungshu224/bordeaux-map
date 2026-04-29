@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bgHis" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c0404"/>
+      <stop offset="100%" stop-color="#180c0c"/>
+    </linearGradient>
+    <filter id="shH"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgHis)"/>
+  <line x1="40" y1="64" x2="760" y2="64" stroke="#8B0000" stroke-width="0.8" opacity="0.5"/>
+  <text x="400" y="36" text-anchor="middle" fill="#C0952C" font-size="20" font-weight="bold">波爾多 2000 年葡萄酒發展史</text>
+  <text x="400" y="56" text-anchor="middle" fill="#9A7040" font-size="12">Bordeaux Winemaking History · 橫跨六大時期的文化與貿易演進</text>
+
+  <!-- Timeline Central Axis -->
+  <line x1="400" y1="90" x2="400" y2="520" stroke="#C0952C" stroke-width="2" opacity="0.4"/>
+  <polygon points="395,520 405,520 400,530" fill="#C0952C" opacity="0.4"/>
+
+  <!-- Event 1: Roman & Medieval -->
+  <rect x="50" y="90" width="310" height="60" rx="6" fill="#181010" stroke="#C0952C" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="120" r="6" fill="#C0952C" stroke="#281414" stroke-width="2"/>
+  <text x="340" y="115" text-anchor="end" fill="#C0952C" font-size="16" font-weight="bold">🏛️ 羅馬與修道院時期</text>
+  <text x="340" y="135" text-anchor="end" fill="#D0B080" font-size="12">公元 1–11 世紀</text>
+  <line x1="360" y1="120" x2="390" y2="120" stroke="#C0952C" stroke-width="1.5" opacity="0.5"/>
+  <text x="60" y="115" fill="#E8D0A0" font-size="10">• 羅馬人引入高盧品種 (Vitis biturica)</text>
+  <text x="60" y="130" fill="#E8D0A0" font-size="10">• 教會接管生產，確保彌撒用酒</text>
+  <text x="60" y="145" fill="#E8D0A0" font-size="10">• 起初以清淡紅酒（Clairet）為主</text>
+
+  <!-- Event 2: British Rule -->
+  <rect x="440" y="160" width="310" height="60" rx="6" fill="#141820" stroke="#3050A0" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="190" r="6" fill="#3050A0" stroke="#281414" stroke-width="2"/>
+  <text x="460" y="185" text-anchor="start" fill="#80B0F0" font-size="16" font-weight="bold">🇬🇧 英國統治黃金 300 年</text>
+  <text x="460" y="205" text-anchor="start" fill="#A0C0E0" font-size="12">1152–1453 年</text>
+  <line x1="410" y1="190" x2="440" y2="190" stroke="#3050A0" stroke-width="1.5" opacity="0.5"/>
+  <text x="590" y="180" fill="#C0D0E0" font-size="10">• 埃莉諾公主聯姻亨利二世，開啟英國大門</text>
+  <text x="590" y="195" fill="#C0D0E0" font-size="10">• 減免關稅，英法貿易極度繁榮</text>
+  <text x="590" y="210" fill="#C0D0E0" font-size="10">• 奠定波爾多「出口導向」的商業基因</text>
+
+  <!-- Event 3: Dutch & Médoc Drainage -->
+  <rect x="50" y="230" width="310" height="60" rx="6" fill="#182010" stroke="#408040" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="260" r="6" fill="#408040" stroke="#281414" stroke-width="2"/>
+  <text x="340" y="255" text-anchor="end" fill="#80D080" font-size="16" font-weight="bold">🇳🇱 荷蘭治水與Médoc崛起</text>
+  <text x="340" y="275" text-anchor="end" fill="#A0E0A0" font-size="12">17 世紀</text>
+  <line x1="360" y1="260" x2="390" y2="260" stroke="#408040" stroke-width="1.5" opacity="0.5"/>
+  <text x="60" y="255" fill="#C0E0C0" font-size="10">• 荷蘭工程師排乾 Médoc 沼澤濕地</text>
+  <text x="60" y="270" fill="#C0E0C0" font-size="10">• 引入二氧化硫（防腐）與橡木桶運輸</text>
+  <text x="60" y="285" fill="#C0E0C0" font-size="10">• 從此波爾多以深色、能陳年的烈酒聞名</text>
+
+  <!-- Event 4: 1855 Classification -->
+  <rect x="440" y="300" width="310" height="60" rx="6" fill="#201018" stroke="#A04060" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="330" r="6" fill="#A04060" stroke="#281414" stroke-width="2"/>
+  <text x="460" y="325" text-anchor="start" fill="#F080A0" font-size="16" font-weight="bold">🎖️ 1855 巴黎世博會分級</text>
+  <text x="460" y="345" text-anchor="start" fill="#E0A0B0" font-size="12">1855 年</text>
+  <line x1="410" y1="330" x2="440" y2="330" stroke="#A04060" stroke-width="1.5" opacity="0.5"/>
+  <text x="590" y="320" fill="#D0B0C0" font-size="10">• 拿破崙三世下令，依據過往價格排名</text>
+  <text x="590" y="335" fill="#D0B0C0" font-size="10">• 確認 61 家列級名莊 (Grand Cru Classé)</text>
+  <text x="590" y="350" fill="#D0B0C0" font-size="10">• 確立現代波爾多奢侈品牌的最高標竿</text>
+
+  <!-- Event 5: Phylloxera Crisis -->
+  <rect x="50" y="370" width="310" height="60" rx="6" fill="#1a1410" stroke="#806030" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="400" r="6" fill="#806030" stroke="#281414" stroke-width="2"/>
+  <text x="340" y="395" text-anchor="end" fill="#C0A060" font-size="16" font-weight="bold">🐛 根瘤蚜蟲災與重建</text>
+  <text x="340" y="415" text-anchor="end" fill="#B09050" font-size="12">19 世紀末 (約 1870-1900)</text>
+  <line x1="360" y1="400" x2="390" y2="400" stroke="#806030" stroke-width="1.5" opacity="0.5"/>
+  <text x="60" y="395" fill="#A08050" font-size="10">• 蟲害摧毀全法葡萄園，釀酒業瀕臨滅絕</text>
+  <text x="60" y="410" fill="#A08050" font-size="10">• 嫁接美國抗病砧木拯救了產業</text>
+  <text x="60" y="425" fill="#A08050" font-size="10">• 促成波爾多品種選擇的重新洗牌 (CS/Merlot)</text>
+
+  <!-- Event 6: Modern Era -->
+  <rect x="440" y="440" width="310" height="60" rx="6" fill="#101820" stroke="#408080" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="470" r="6" fill="#408080" stroke="#281414" stroke-width="2"/>
+  <text x="460" y="465" text-anchor="start" fill="#80C0C0" font-size="16" font-weight="bold">🔬 現代科學革命與全球化</text>
+  <text x="460" y="485" text-anchor="start" fill="#A0C0C0" font-size="12">20 世紀中葉迄今</text>
+  <line x1="410" y1="470" x2="440" y2="470" stroke="#408080" stroke-width="1.5" opacity="0.5"/>
+  <text x="590" y="460" fill="#90B0B0" font-size="10">• Emile Peynaud 開創現代發酵科學</text>
+  <text x="590" y="475" fill="#90B0B0" font-size="10">• 溫控不鏽鋼槽、光學篩拔技術普及</text>
+  <text x="590" y="490" fill="#90B0B0" font-size="10">• 中國市場崛起與全球資本投資</text>
+
+  <!-- Footer note -->
+  <line x1="40" y1="560" x2="760" y2="560" stroke="#8B0000" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="580" text-anchor="middle" fill="#806060" font-size="10">💡 「波爾多不是一天建成的，它是地理優越、商業敏銳與一千多年貿易歷史共同形塑的全球葡萄酒之都。」</text>
+</svg>

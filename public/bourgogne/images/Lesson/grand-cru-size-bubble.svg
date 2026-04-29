@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+
+    <!-- Glowing effects -->
+    <filter id="glowGold"><feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#F59E0B" flood-opacity="0.3"/></filter>
+    <filter id="glowRed"><feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#E11D48" flood-opacity="0.3"/></filter>
+    <filter id="glowRuby"><feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#7C2D12" flood-opacity="0.4"/></filter>
+    <filter id="glowAmber"><feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#D97706" flood-opacity="0.4"/></filter>
+    
+    <!-- Gradients -->
+    <!-- Vougeot -->
+    <radialGradient id="vougeotGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#BE123C"/>
+      <stop offset="60%" stop-color="#881337"/>
+      <stop offset="100%" stop-color="#4C0519"/>
+    </radialGradient>
+
+    <!-- Chambertin -->
+    <radialGradient id="chambertinGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="60%" stop-color="#BE123C"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </radialGradient>
+
+    <!-- Montrachet -->
+    <radialGradient id="montrachetGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </radialGradient>
+
+    <!-- RC -->
+    <radialGradient id="rcGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FDA4AF"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#9F1239"/>
+    </radialGradient>
+
+    <!-- La Romanee -->
+    <radialGradient id="romaneeGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FCA5A5"/>
+      <stop offset="50%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#F8FAFC" font-size="28" font-weight="bold" letter-spacing="2">特級園規模面積差異</text>
+  <text x="400" y="75" text-anchor="middle" fill="#9CA3AF" font-size="14">Grand Cru Size Comparison: A Tale of Extreme Fragmentation</text>
+
+  <!-- Scale / Visual Axis -->
+  <line x1="80" y1="230" x2="750" y2="230" stroke="#27272A" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="80" y="222" fill="#52525B" font-size="12">面積比例：半徑 ∝ √面積</text>
+
+  <!-- Group: Clos de Vougeot (50.59 ha) => r ~110 -->
+  <g transform="translate(190, 230)">
+    <circle cx="0" cy="0" r="110" fill="url(#vougeotGrad)" filter="url(#glowRuby)"/>
+    <text x="0" y="-125" text-anchor="middle" fill="#FDA4AF" font-size="16" font-weight="bold">Clos de Vougeot</text>
+    <text x="0" y="0" text-anchor="middle" fill="#FFF" font-size="32" font-weight="bold">50.6</text>
+    <text x="0" y="20" text-anchor="middle" fill="#F8FAFC" font-size="12" opacity="0.8">公頃 (ha)</text>
+    <text x="0" y="140" text-anchor="middle" fill="#9CA3AF" font-size="12">最大的封閉式特級園</text>
+    <text x="0" y="156" text-anchor="middle" fill="#9CA3AF" font-size="12">超過 80 家酒莊共同擁有</text>
+  </g>
+
+  <!-- Group: Le Chambertin (12.90 ha) => r ~55 -->
+  <g transform="translate(380, 230)">
+    <circle cx="0" cy="0" r="55" fill="url(#chambertinGrad)" filter="url(#glowRed)"/>
+    <text x="0" y="-70" text-anchor="middle" fill="#FDA4AF" font-size="15" font-weight="bold">Le Chambertin</text>
+    <text x="0" y="5" text-anchor="middle" fill="#FFF" font-size="20" font-weight="bold">12.9</text>
+    <text x="0" y="85" text-anchor="middle" fill="#9CA3AF" font-size="12">拿破崙最愛的</text>
+    <text x="0" y="101" text-anchor="middle" fill="#9CA3AF" font-size="12">王者之酒</text>
+  </g>
+
+  <!-- Group: Montrachet (7.99 ha) => r ~43 -->
+  <g transform="translate(510, 230)">
+    <circle cx="0" cy="0" r="43" fill="url(#montrachetGrad)" filter="url(#glowGold)"/>
+    <text x="0" y="-58" text-anchor="middle" fill="#FCD34D" font-size="14" font-weight="bold">Montrachet</text>
+    <text x="0" y="5" text-anchor="middle" fill="#FFF" font-size="16" font-weight="bold">8.0</text>
+    <text x="0" y="70" text-anchor="middle" fill="#9CA3AF" font-size="12">地表最偉大的</text>
+    <text x="0" y="86" text-anchor="middle" fill="#9CA3AF" font-size="12">白酒特級園</text>
+  </g>
+
+  <!-- Group: Romanée-Conti (1.81 ha) => r ~20 -->
+  <g transform="translate(620, 230)">
+    <circle cx="0" cy="0" r="20" fill="url(#rcGrad)" filter="url(#glowRed)"/>
+    <text x="0" y="-35" text-anchor="middle" fill="#FDA4AF" font-size="13" font-weight="bold">Romanée-Conti</text>
+    <text x="0" y="4" text-anchor="middle" fill="#FFF" font-size="12" font-weight="bold">1.8</text>
+    <!-- Pointer and text -->
+    <path d="M0,20 L0,50" stroke="#71717A" stroke-width="1.5"/>
+    <circle cx="0" cy="50" r="2" fill="#71717A"/>
+    <text x="0" y="65" text-anchor="middle" fill="#9CA3AF" font-size="11">酒王 DRC 獨占園</text>
+    <text x="0" y="79" text-anchor="middle" fill="#9CA3AF" font-size="11">產量極低且天價</text>
+  </g>
+
+  <!-- Group: La Romanée (0.84 ha) => r ~14 -->
+  <g transform="translate(715, 230)">
+    <circle cx="0" cy="0" r="14" fill="url(#romaneeGrad)" filter="url(#glowAmber)"/>
+    <!-- Line pointing up for label to avoid overlap -->
+    <path d="M0,-14 L10,-35 L30,-35" stroke="#71717A" fill="none" stroke-width="1.5"/>
+    <text x="35" y="-32" text-anchor="start" fill="#FDA4AF" font-size="12" font-weight="bold">La Romanée</text>
+    <text x="0" y="4" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">0.8</text>
+    <path d="M0,14 L0,30" stroke="#71717A" stroke-width="1.5"/>
+    <text x="0" y="45" text-anchor="middle" fill="#9CA3AF" font-size="11">法國最小的AOC</text>
+  </g>
+
+  <!-- Info Box -->
+  <g transform="translate(50, 390)">
+    <rect x="0" y="0" width="700" height="60" rx="8" fill="#18181B" stroke="#27272A"/>
+    <text x="350" y="25" text-anchor="middle" fill="#F8FAFC" font-size="13" font-weight="bold">⚖️ 規模對比說明：</text>
+    <text x="350" y="45" text-anchor="middle" fill="#9CA3AF" font-size="13">特級園雖然代表最高品質，但面積大小極端。這導致酒款在市場上的稀缺度與名氣形成巨大的反差。</text>
+  </g>
+</svg>

@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+
+    <!-- Axis Gradients -->
+    <linearGradient id="clayAxis" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#52525B"/>
+      <stop offset="100%" stop-color="#B45309"/> <!-- Amber/Clay color -->
+    </linearGradient>
+
+    <linearGradient id="limeAxis" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#52525B"/>
+      <stop offset="100%" stop-color="#38BDF8"/> <!-- Ice blue/Limestone color -->
+    </linearGradient>
+
+    <!-- Glow Effects -->
+    <filter id="glowGold"><feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#FBBF24" flood-opacity="0.6"/></filter>
+    <filter id="glowBlue"><feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#38BDF8" flood-opacity="0.4"/></filter>
+    <filter id="glowRed"><feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#E11D48" flood-opacity="0.5"/></filter>
+    <filter id="glowAmber"><feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#D97706" flood-opacity="0.4"/></filter>
+    
+    <!-- Quadrant Backgrounds -->
+    <radialGradient id="quadTopRight" cx="100%" cy="0%" r="100%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#18181B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="quadTopLeft" cx="0%" cy="0%" r="100%">
+      <stop offset="0%" stop-color="#B45309" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#18181B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="quadBotRight" cx="100%" cy="100%" r="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#18181B" stop-opacity="0"/>
+    </radialGradient>
+
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bgGrad)"/>
+
+  <!-- Title section -->
+  <text x="400" y="45" text-anchor="middle" fill="#F8FAFC" font-size="26" font-weight="bold" letter-spacing="2">黏土 (Clay) vs 石灰岩 (Limestone) 風味矩陣</text>
+  <text x="400" y="70" text-anchor="middle" fill="#9CA3AF" font-size="14">The Terroir Matrix: Balancing Power and Elegance</text>
+
+  <g transform="translate(100, 120)">
+    <!-- Background Zones -->
+    <rect x="0" y="0" width="300" height="180" fill="url(#quadTopLeft)"/>
+    <rect x="300" y="0" width="300" height="180" fill="url(#quadTopRight)"/>
+    <rect x="300" y="180" width="300" height="180" fill="url(#quadBotRight)"/>
+
+    <!-- Grid Lines -->
+    <line x1="300" y1="0" x2="300" y2="360" stroke="#3F3F46" stroke-dasharray="4,4" stroke-width="1.5"/>
+    <line x1="0" y1="180" x2="600" y2="180" stroke="#3F3F46" stroke-dasharray="4,4" stroke-width="1.5"/>
+
+    <!-- Axes -->
+    <!-- X-Axis (Limestone) -->
+    <path d="M0,360 L620,360 M610,355 L620,360 L610,365" stroke="url(#limeAxis)" stroke-width="3" fill="none"/>
+    <text x="630" y="365" fill="#38BDF8" font-size="16" font-weight="bold">石灰岩 (Limestone) 比例 ↗</text>
+    <text x="630" y="385" fill="#BAE6FD" font-size="12">帶來：酸度、張力、精緻度、礦物鹹感</text>
+
+    <!-- Y-Axis (Clay) -->
+    <path d="M0,360 L0,-20 M-5,-10 L0,-20 L5,-10" stroke="url(#clayAxis)" stroke-width="3" fill="none"/>
+    <text x="-15" y="-35" fill="#F59E0B" font-size="16" font-weight="bold">黏土 (Clay) 比例 ↗</text>
+    <text x="-15" y="-15" fill="#FDE68A" font-size="12">帶來：力量、酒體、顏色深度、肉感</text>
+
+    <!-- Zone Labels -->
+    <text x="150" y="50" text-anchor="middle" fill="#FCA5A5" font-size="18" opacity="0.4" font-weight="bold">🧱 肌肉與力量 (Power)</text>
+    <text x="450" y="310" text-anchor="middle" fill="#BAE6FD" font-size="18" opacity="0.4" font-weight="bold">🌬️ 骨感與張力 (Tension)</text>
+    <text x="450" y="50" text-anchor="middle" fill="#FDE047" font-size="18" opacity="0.3" font-weight="bold">👑 頂級平衡 (Perfect Balance)</text>
+    <text x="150" y="310" text-anchor="middle" fill="#A1A1AA" font-size="15" opacity="0.4" font-weight="bold">🌱 輕盈易飲 (Light)</text>
+
+    <!-- Data Points (Villages and Grand Crus) -->
+
+    <!-- Quad 1: High Clay, Low/Medium Lime -->
+    <g transform="translate(100, 80)">
+      <circle cx="0" cy="0" r="8" fill="#B91C1C" filter="url(#glowRed)"/>
+      <text x="15" y="5" fill="#FECACA" font-size="14" font-weight="bold">Pommard (玻瑪)</text>
+      <text x="15" y="20" fill="#FCA5A5" font-size="11">厚實黏土 → 雄渾、單寧強勁</text>
+    </g>
+
+    <g transform="translate(200, 140)">
+      <circle cx="0" cy="0" r="8" fill="#BE123C" filter="url(#glowRed)"/>
+      <text x="15" y="5" fill="#FDA4AF" font-size="14" font-weight="bold">Nuits-St-Georges (南部)</text>
+      <text x="15" y="20" fill="#FCC1C6" font-size="11">深厚黏土 → 肉感、結構扎實</text>
+    </g>
+
+    <g transform="translate(160, 40)">
+      <circle cx="0" cy="0" r="10" fill="#D97706" filter="url(#glowAmber)"/>
+      <text x="15" y="5" fill="#FDE68A" font-size="14" font-weight="bold">Bâtard-Montrachet</text>
+      <text x="15" y="20" fill="#FCD34D" font-size="11">白酒中最寬廣、最具核果奶油感</text>
+    </g>
+
+    <!-- Quad 4: High Lime, Low/Medium Clay -->
+    <g transform="translate(520, 280)">
+      <circle cx="0" cy="0" r="10" fill="#0EA5E9" filter="url(#glowBlue)"/>
+      <text x="15" y="5" fill="#BAE6FD" font-size="14" font-weight="bold">Chablis Grand Cru</text>
+      <text x="15" y="20" fill="#7DD3FC" font-size="11">Kimmeridgian泥灰岩 → 極致燧石礦物與高酸</text>
+    </g>
+
+    <g transform="translate(420, 220)">
+      <circle cx="0" cy="0" r="8" fill="#EC4899" filter="url(#glowBlue)"/>
+      <text x="-15" y="5" text-anchor="end" fill="#FBCFE8" font-size="14" font-weight="bold">Chambolle-Musigny</text>
+      <text x="-15" y="20" text-anchor="end" fill="#F9A8D4" font-size="11">高石灰岩 → 絲滑、花香、最女性化</text>
+    </g>
+
+    <g transform="translate(480, 160)">
+      <circle cx="0" cy="0" r="9" fill="#0284C7" filter="url(#glowBlue)"/>
+      <text x="15" y="5" fill="#7DD3FC" font-size="14" font-weight="bold">Chevalier-Montrachet</text>
+      <text x="15" y="20" fill="#BAE6FD" font-size="11">表土極薄 → 銳利張力、骨感線條</text>
+    </g>
+
+    <!-- Quad 2: The Golden Zone - High/Perfect balance of both (usually Marl) -->
+    <g transform="translate(420, 60)">
+      <circle cx="0" cy="0" r="12" fill="#F59E0B" filter="url(#glowGold)"/>
+      <text x="-15" y="5" text-anchor="end" fill="#FDE047" font-size="15" font-weight="bold">Le Montrachet</text>
+    </g>
+
+    <g transform="translate(360, 40)">
+      <circle cx="0" cy="0" r="12" fill="#C084FC" filter="url(#glowGold)"/>
+      <text x="15" y="5" fill="#E9D5FF" font-size="15" font-weight="bold">Vosne-Romanée (特級園區)</text>
+      <text x="15" y="22" fill="#D8B4FE" font-size="11">完美泥灰岩(Marl) → 複雜度巔峰的結構與香氣</text>
+    </g>
+
+    <g transform="translate(320, 90)">
+      <circle cx="0" cy="0" r="11" fill="#E11D48" filter="url(#glowGold)"/>
+      <text x="-15" y="5" text-anchor="end" fill="#FECDD3" font-size="15" font-weight="bold">Le Chambertin</text>
+    </g>
+
+    <!-- Quad 3: Low Both (Sand/Silt Alluvial plains) -->
+    <g transform="translate(80, 260)">
+      <circle cx="0" cy="0" r="6" fill="#71717A"/>
+      <text x="15" y="5" fill="#D4D4D8" font-size="13" font-weight="bold">大區級平原 (Bourgogne)</text>
+      <text x="15" y="20" fill="#A1A1AA" font-size="11">沖積土質 → 果香為主、缺乏陳年深度</text>
+    </g>
+  </g>
+
+  <!-- Info Box -->
+  <g transform="translate(50, 520)">
+    <text x="350" y="0" text-anchor="middle" fill="#E2E8F0" font-size="13">💡 <tspan fill="#F8FAFC" font-weight="bold">大師心法：</tspan>布根地最偉大（最貴）的特級園，通常都位在矩陣的「右上角」區域。</text>
+    <text x="350" y="20" text-anchor="middle" fill="#E2E8F0" font-size="13">因為這代表該地塊土壤中同時擁有 <tspan fill="#F59E0B">提供陳年骨架與力量的黏土</tspan>，以及 <tspan fill="#38BDF8">提供精緻香氣與高酸的石灰岩</tspan>（完美泥灰岩 Marl）。</text>
+  </g>
+
+</svg>

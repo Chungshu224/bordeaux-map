@@ -15,6 +15,7 @@ export const l34Content = [
         <p class="intro-context">
           本課程將帶您深入了解波爾多葡萄園全年的工作週期與決策邏輯，更重要的是探索有機農法、生物動力法、永續農業三大體系的科學原理與實踐挑戰。從 Château Pontet-Canet 的生物動力法先鋒實踐，到越來越多列級莊獲得 HVE 認證，可持續農業已成為波爾多的未來方向。
         </p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L3-4/01%20波爾多農季週期與三大永續體系.svg" alt="波爾多農季週期與三大永續體系" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <h3 class="section-title">本課程學習目標</h3>
 

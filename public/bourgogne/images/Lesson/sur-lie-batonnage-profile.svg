@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c1917" /> <!-- Dark stone -->
+      <stop offset="100%" stop-color="#0c0a09" />
+    </linearGradient>
+
+    <!-- Barrel Wood Gradient -->
+    <linearGradient id="woodGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="50%" stop-color="#92400e" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+    
+    <!-- Wine Liquid Gradient -->
+    <radialGradient id="wineGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.8" /> <!-- Pale gold -->
+      <stop offset="80%" stop-color="#facc15" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ca8a04" stop-opacity="0.3" />
+    </radialGradient>
+
+    <!-- Lees (Yeast Sediment) Gradient -->
+    <linearGradient id="leesGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047" stop-opacity="0.4" />
+      <stop offset="60%" stop-color="#d97706" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#78350f" stop-opacity="0.9" />
+    </linearGradient>
+
+    <filter id="glowGold"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#facc15" flood-opacity="0.4"/></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="560" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="bold" letter-spacing="2">橡木桶泡渣與攪桶作用剖面</text>
+  <text x="400" y="68" text-anchor="middle" fill="#9ca3af" font-size="14">Sur lie &amp; Bâtonnage: The Alchemy of Texture and Aroma</text>
+
+  <!-- Central Graphic: Barrel Cross Section -->
+  <g transform="translate(400, 310)">
+    
+    <!-- Barrel Outline (Wood) -->
+    <ellipse cx="0" cy="0" rx="160" ry="180" fill="none" stroke="url(#woodGrad)" stroke-width="24" filter="url(#shadow)"/>
+    <ellipse cx="0" cy="0" rx="148" ry="168" fill="none" stroke="#262626" stroke-width="2"/>
+    
+    <!-- Metal Hoops -->
+    <path d="M-150,-80 Q0,-60 150,-80 M-170,-30 Q0,-10 170,-30 M-170,30 Q0,50 170,30 M-150,80 Q0,100 150,80" fill="none" stroke="#52525b" stroke-width="6" opacity="0.6"/>
+
+    <!-- Wine Liquid inside -->
+    <ellipse cx="0" cy="0" rx="146" ry="166" fill="url(#wineGrad)"/>
+    <!-- Headspace / Ullage (Anges' share) -->
+    <path d="M-60,-152 Q0,-166 60,-152 Q0,-140 -60,-152 Z" fill="#000" opacity="0.4"/>
+    <text x="0" y="-120" text-anchor="middle" fill="#a1a1aa" font-size="11">頂部微氧化空間 (Ouillage)</text>
+
+    <!-- Bottom Lees (Sediment) layer -->
+    <path d="M-125,86 Q0,166 125,86 A146,166 0 0,1 -125,86 Z" fill="url(#leesGrad)"/>
+
+    <!-- Stirring Rod (Bâton) -->
+    <g transform="rotate(20)">
+      <rect x="-4" y="-220" width="8" height="340" rx="4" fill="#a8a29e" stroke="#52525b" filter="url(#shadow)"/>
+      <!-- Submerged scoop end -->
+      <path d="M-12,90 L12,90 L8,130 L-8,130 Z" fill="#71717a"/>
+    </g>
+    <text x="50" y="-195" fill="#e2e8f0" font-size="14" font-weight="bold">攪桶桿 (Bâton)</text>
+    <path d="M45,-200 L-10,-170" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- Swirling Lees Particles -->
+    <g fill="#fde047" opacity="0.6" filter="url(#glowGold)">
+      <!-- Swirl lines -->
+      <path d="M-40,80 Q-80,40 -20,0 T-50,-60" fill="none" stroke="#fde047" stroke-width="2" stroke-dasharray="4,4" opacity="0.4"/>
+      <path d="M40,100 Q80,60 20,20 T70,-40" fill="none" stroke="#fde047" stroke-width="2" stroke-dasharray="4,4" opacity="0.4"/>
+      
+      <!-- Dots representing yeast suspended -->
+      <circle cx="-30" cy="60" r="4"/><circle cx="20" cy="80" r="3"/><circle cx="-10" cy="30" r="5"/><circle cx="-50" cy="20" r="3"/><circle cx="40" cy="40" r="4"/>
+      <circle cx="-20" cy="-10" r="3"/><circle cx="30" cy="0" r="5"/><circle cx="-60" cy="-40" r="4"/><circle cx="10" cy="-30" r="2"/><circle cx="60" cy="-20" r="4"/>
+    </g>
+
+    <!-- Placid Sur lie label -->
+    <text x="-90" y="145" fill="#fef08a" font-size="16" font-weight="bold">死酵母沉澱 (Lees)</text>
+  </g>
+
+  <!-- Left Info: Autolysis & Output -->
+  <g transform="translate(30, 160)">
+    <rect x="0" y="0" width="200" height="150" rx="8" fill="#18181b" stroke="#facc15" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="15" y="25" fill="#fde047" font-size="16" font-weight="bold">🔬 酵母自溶 (Autolysis)</text>
+    
+    <text x="15" y="55" fill="#f8fafc" font-size="12">死去的酵母細胞壁破裂</text>
+    <text x="15" y="75" fill="#f8fafc" font-size="12">釋放兩大化學物質：</text>
+    
+    <text x="25" y="95" fill="#67e8f9" font-size="12" font-weight="bold">1. 甘露糖蛋白 (Mannoproteins)</text>
+    <text x="35" y="115" fill="#a1a1aa" font-size="11">賦予酒體「滑潤、奶油」口感</text>
+    
+    <text x="25" y="135" fill="#67e8f9" font-size="12" font-weight="bold">2. 胺基酸 (Amino Acids)</text>
+    <text x="35" y="155" fill="#a1a1aa" font-size="11">帶來「堅果、烤麵包」複雜香氣</text>
+
+    <!-- Connector to swirl -->
+    <path d="M200,90 Q280,100 320,180" fill="none" stroke="#facc15" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <circle cx="320" cy="180" r="4" fill="#facc15"/>
+  </g>
+
+  <!-- Right Info: Bâtonnage Mechanics -->
+  <g transform="translate(570, 160)">
+    <rect x="0" y="0" width="190" height="130" rx="8" fill="#18181b" stroke="#38bdf8" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="15" y="25" fill="#7dd3fc" font-size="16" font-weight="bold">🌀 攪桶 (Bâtonnage)</text>
+    
+    <text x="15" y="50" fill="#f8fafc" font-size="12" font-weight="bold">提升接觸面積</text>
+    <text x="15" y="65" fill="#a1a1aa" font-size="11">主動將底部的酒泥懸浮至酒液</text>
+
+    <text x="15" y="90" fill="#f8fafc" font-size="12" font-weight="bold">極強的「抗氧化」效果</text>
+    <text x="15" y="105" fill="#a1a1aa" font-size="11">酵母細胞能吸收溶氧，保護白酒</text>
+    <text x="15" y="120" fill="#a1a1aa" font-size="11">避免過早褐變與老化</text>
+
+    <path d="M-10,65 Q-50,60 -80,120" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <circle cx="-80" cy="120" r="4" fill="#38bdf8"/>
+  </g>
+
+  <!-- Bottom Quote -->
+  <g transform="translate(40, 500)">
+    <rect x="0" y="0" width="720" height="40" rx="6" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
+    <text x="360" y="25" text-anchor="middle" fill="#d4d4d8" font-size="13">💡 <tspan fill="#facc15" font-weight="bold">釀酒師的抉擇：</tspan>「多攪桶」創造豐滿奶油感（Meursault風格），「少攪桶/不攪桶」保留極致骨架與礦石感（Chablis 或現代 Coche-Dury後期做法）。</text>
+  </g>
+
+</svg>

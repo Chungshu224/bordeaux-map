@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Pyramid Layer Gradients -->
+    <!-- Tier 1: Domaine -->
+    <linearGradient id="gradT1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="1"/>
+    </linearGradient>
+    
+    <!-- Tier 2: Micro-Nego -->
+    <linearGradient id="gradT2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6d28d9" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Tier 3: Large Nego -->
+    <linearGradient id="gradT3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f766e" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Tier 4: Cooperatives -->
+    <linearGradient id="gradT4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#475569" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#334155" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/></filter>
+    <filter id="glow"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#fcd34d" flood-opacity="0.3"/></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#bgGrad)"/>
+  
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="bold" letter-spacing="2">布根地商業生態金字塔</text>
+  <text x="400" y="70" text-anchor="middle" fill="#94a3b8" font-size="14">The Burgundy Business Ecosystem &amp; Market Structure</text>
+
+  <!-- Central Pyramid -->
+  <g transform="translate(400, 110)">
+    
+    <!-- T4: Cooperatives (Base) -->
+    <!-- y from 210 to 300 (height 90), x width from -250 to 250 at bottom, -175 to 175 at top -->
+    <path d="M-175,210 L175,210 L250,300 L-250,300 Z" fill="url(#gradT4)" filter="url(#shadow)" stroke="#1e293b" stroke-width="2"/>
+    <text x="0" y="250" text-anchor="middle" fill="#cbd5e1" font-size="20" font-weight="bold">釀酒合作社 (Cave Coopérative)</text>
+    <text x="0" y="275" text-anchor="middle" fill="#94a3b8" font-size="13">產量：約 15~20% | 提供穩定且具性價比的酒款</text>
+    <text x="-210" y="285" fill="#f8fafc" font-size="12">La Chablisienne</text>
+    <text x="140" y="285" fill="#f8fafc" font-size="12">Cave de Lugny</text>
+
+    <!-- T3: Large Negociant -->
+    <!-- y from 110 to 200 (height 90), x width from -92 to 92 at top, -167 to 167 at bottom -->
+    <path d="M-92,110 L92,110 L-167,200 Z" fill="#000" opacity="0.3"/> <!-- placeholder trick, doing exact coords -->
+    <path d="M-92,110 L92,110 L167,200 L-167,200 Z" fill="url(#gradT3)" filter="url(#shadow)" stroke="#134e4a" stroke-width="2"/>
+    <text x="0" y="150" text-anchor="middle" fill="#f0fdfa" font-size="22" font-weight="bold">大型酒商 (Maison / Négociant)</text>
+    <text x="0" y="175" text-anchor="middle" fill="#ccfbf1" font-size="13">產量：約 60% | 歷史悠久，掌控全球主要通路與品牌曝光</text>
+    <text x="-140" y="185" fill="#f8fafc" font-size="12">Louis Jadot</text>
+    <text x="80" y="185" fill="#f8fafc" font-size="12">Bouchard P&amp;F</text>
+
+    <!-- T2: Micro-Negociant -->
+    <!-- y from 30 to 100 (height 70), x width -25 to 25 at top, -83 to 83 at bottom -->
+    <path d="M-25,30 L25,30 L83,100 L-83,100 Z" fill="url(#gradT2)" filter="url(#shadow)" stroke="#4c1d95" stroke-width="2"/>
+    <text x="0" y="60" text-anchor="middle" fill="#ede9fe" font-size="18" font-weight="bold">微型酒商 (Micro-Négociant)</text>
+    <text x="0" y="80" text-anchor="middle" fill="#ddd6fe" font-size="12">極低產量 | 專注特級與一級園</text>
+
+    <!-- T1: Domaine (Top) -->
+    <!-- y from -40 to 20 (height 60), x tip 0, bottom -17 to 17 -->
+    <path d="M0,-40 L17,20 L-17,20 Z" fill="url(#gradT1)" filter="url(#glow)" stroke="#b45309" stroke-width="2"/>
+    <circle cx="0" cy="-40" r="10" fill="#fcd34d" filter="url(#glow)"/>
+  </g>
+
+  <!-- Left side callouts for Domaine -->
+  <g transform="translate(100, 110)">
+    <line x1="80" y1="-20" x2="280" y2="-20" stroke="#fcd34d" stroke-dasharray="4,2"/>
+    <rect x="-30" y="-50" width="120" height="60" rx="4" fill="#1e1b4b" stroke="#f59e0b"/>
+    <text x="30" y="-30" text-anchor="middle" fill="#fcd34d" font-size="14" font-weight="bold">獨立酒莊 (Domaine)</text>
+    <text x="30" y="-12" text-anchor="middle" fill="#fef3c7" font-size="11">100% 自有葡萄園</text>
+    
+    <text x="30" y="5" text-anchor="middle" fill="#9ca3af" font-size="10">代表：DRC, Leroy,</text>
+    <text x="30" y="20" text-anchor="middle" fill="#9ca3af" font-size="10">Rousseau, Roumier</text>
+  </g>
+
+  <!-- Side Text explaining evolution -->
+  <g transform="translate(20, 240)">
+    <rect x="0" y="0" width="160" height="150" rx="6" fill="#0f172a" stroke="#334155" filter="url(#shadow)"/>
+    <text x="15" y="25" fill="#f8fafc" font-size="14" font-weight="bold">🌟 權力轉移</text>
+    <text x="15" y="50" fill="#94a3b8" font-size="12">過去：酒商掌控話語權</text>
+    <text x="15" y="65" fill="#94a3b8" font-size="12">小農只能販售原酒</text>
+    
+    <text x="15" y="90" fill="#94a3b8" font-size="12">現在：地價瘋漲</text>
+    <text x="15" y="105" fill="#94a3b8" font-size="12">自行裝瓶（Mis en</text>
+    <text x="15" y="120" fill="#94a3b8" font-size="12">bouteille au Domaine）</text>
+    <text x="15" y="135" fill="#fcd34d" font-size="12" font-weight="bold">成為頂級品質保證</text>
+  </g>
+
+  <g transform="translate(620, 240)">
+    <rect x="0" y="0" width="160" height="150" rx="6" fill="#0f172a" stroke="#334155" filter="url(#shadow)"/>
+    <text x="15" y="25" fill="#f8fafc" font-size="14" font-weight="bold">📈 投資啟示</text>
+    <text x="15" y="50" fill="#ccfbf1" font-size="12">大型酒商的特級園</text>
+    <text x="15" y="65" fill="#ccfbf1" font-size="12">性價比高，穩定</text>
+    
+    <text x="15" y="95" fill="#ddd6fe" font-size="12">微型酒商提供拍賣</text>
+    <text x="15" y="110" fill="#ddd6fe" font-size="12">市場的新星潛力</text>
+    
+    <text x="15" y="135" fill="#94a3b8" font-size="12">(Benjamin Leroux...)</text>
+  </g>
+
+  <!-- Bottom Insight -->
+  <g transform="translate(60, 450)">
+    <rect x="0" y="0" width="680" height="40" rx="6" fill="#020617" stroke="#1e293b"/>
+    <text x="340" y="25" text-anchor="middle" fill="#cbd5e1" font-size="13">💡 <tspan fill="#f59e0b" font-weight="bold">界線模糊：</tspan>如今許多頂級 Domaine（如Leroy, Dujac）也成立 Négociant 部門來擴充產線；而傳統酒商也大量購入葡萄園轉型為 Domaine。</text>
+  </g>
+
+</svg>

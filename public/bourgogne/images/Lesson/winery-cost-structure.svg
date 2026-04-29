@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Colors for donut segments -->
+    <linearGradient id="vineyardGrad"><stop offset="0%" stop-color="#22c55e"/><stop offset="100%" stop-color="#166534"/></linearGradient>
+    <linearGradient id="buildingGrad"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient>
+    <linearGradient id="equipmentGrad"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
+    <linearGradient id="workingCapGrad"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#6b21a8"/></linearGradient>
+    <linearGradient id="adminGrad"><stop offset="0%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#475569"/></linearGradient>
+    
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/></filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="45" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="bold" letter-spacing="1">布根地微型精品酒莊初期資本結構配置分析</text>
+  <text x="400" y="70" text-anchor="middle" fill="#94a3b8" font-size="14">Initial Capital Structure for a Boutique Burgundy Domaine (Base: €2,000,000)</text>
+
+  <!-- Donut Chart -->
+  <g transform="translate(250, 270)">
+    <!-- Base outline -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="#1e293b" stroke-width="60"/>
+
+    <!-- Vineyard Land 55% -> 198 degrees -> r=160, circumference=1005.3 -->
+    <!-- 1005.3 * 0.55 = 552.92 -->
+    <!-- Start at top (-90 deg), go right/down -->
+    <!-- offset logic: stroke-dasharray="value, gap" -->
+    <!-- Segments:
+         1. Vineyard: 55% (552.92) - Green
+         2. Winery Building: 20% (201.06) - Blue
+         3. Winemaking Equipment / Oak Barrels: 12% (120.64) - Orange
+         4. Working Capital (Years 1-3): 10% (100.53) - Purple
+         5. Admin/Legal: 3% (30.16) - Gray
+    -->
+    <!-- rotate -90 starts at 12 o'clock -->
+    
+    <!-- 1. Land (55%) -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="url(#vineyardGrad)" stroke-width="60" 
+            stroke-dasharray="552.92 452.39" stroke-dashoffset="0" transform="rotate(-90)" filter="url(#shadow)"/>
+    
+    <!-- 2. Building (20%) -->
+    <!-- offset = -552.92 -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="url(#buildingGrad)" stroke-width="60" 
+            stroke-dasharray="201.06 804.25" stroke-dashoffset="-552.92" transform="rotate(-90)" filter="url(#shadow)"/>
+
+    <!-- 3. Equipment (12%) -->
+    <!-- offset = -(552.92 + 201.06) = -753.98 -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="url(#equipmentGrad)" stroke-width="60" 
+            stroke-dasharray="120.64 884.67" stroke-dashoffset="-753.98" transform="rotate(-90)" filter="url(#shadow)"/>
+
+    <!-- 4. Working Capital (10%) -->
+    <!-- offset = -(753.98 + 120.64) = -874.62 -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="url(#workingCapGrad)" stroke-width="60" 
+            stroke-dasharray="100.53 904.78" stroke-dashoffset="-874.62" transform="rotate(-90)"/>
+
+    <!-- 5. Admin (3%) -->
+    <!-- offset = -(874.62 + 100.53) = -975.15 -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="url(#adminGrad)" stroke-width="60" 
+            stroke-dasharray="30.16 975.15" stroke-dashoffset="-975.15" transform="rotate(-90)"/>
+
+    <!-- Inner Hole Center Text -->
+    <circle cx="0" cy="0" r="130" fill="#0f172a"/>
+    <text x="0" y="-10" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="bold">€200萬</text>
+    <text x="0" y="15" text-anchor="middle" fill="#94a3b8" font-size="12">小型車庫酒莊</text>
+    <text x="0" y="30" text-anchor="middle" fill="#94a3b8" font-size="12">(1-2公頃村莊級)</text>
+    
+    <!-- Legend Labels Pointing to Donut (Lines) -->
+    <!-- Land (Center Right roughly) -->
+    <line x1="160" y1="10" x2="220" y2="10" stroke="#4ade80" stroke-width="2"/>
+    <text x="230" y="15" fill="#4ade80" font-size="14" font-weight="bold">55% 葡萄園產權</text>
+    
+    <!-- Building (Bottom) -->
+    <line x1="-30" y1="160" x2="-30" y2="200" stroke="#60a5fa" stroke-width="2"/>
+    <text x="-30" y="220" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="bold">20% 釀酒廠與酒窖建設</text>
+
+    <!-- Equipment (Left Bottom) -->
+    <line x1="-140" y1="80" x2="-200" y2="120" stroke="#fbbf24" stroke-width="2"/>
+    <text x="-210" y="130" text-anchor="end" fill="#fbbf24" font-size="14" font-weight="bold">12% 設備與橡木桶</text>
+
+    <!-- Working Capital (Left Top) -->
+    <line x1="-120" y1="-100" x2="-180" y2="-130" stroke="#c084fc" stroke-width="2"/>
+    <text x="-190" y="-140" text-anchor="end" fill="#c084fc" font-size="14" font-weight="bold">10% 營運資金 (前3年)</text>
+
+    <!-- Admin (Top Left) -->
+    <line x1="-30" y1="-160" x2="-50" y2="-190" stroke="#94a3b8" stroke-width="2"/>
+    <text x="-60" y="-200" text-anchor="end" fill="#94a3b8" font-size="14" font-weight="bold">3% 法律及顧問費</text>
+  </g>
+
+  <!-- Side Details Box -->
+  <g transform="translate(560, 110)">
+    <rect width="210" height="320" rx="8" fill="#1e293b" fill-opacity="0.7" stroke="#334155" filter="url(#shadow)"/>
+    <text x="15" y="30" fill="#e2e8f0" font-size="15" font-weight="bold">各項目開銷明細</text>
+
+    <!-- 1 -->
+    <text x="15" y="65" fill="#4ade80" font-size="13" font-weight="bold">🍇 葡萄園產權 (€110萬)</text>
+    <text x="15" y="85" fill="#94a3b8" font-size="11">• 購買 1-2公頃村莊級土地</text>
+    <text x="15" y="100" fill="#94a3b8" font-size="11">• 土壤重整、重置葡萄藤</text>
+
+    <!-- 2 -->
+    <text x="15" y="130" fill="#60a5fa" font-size="13" font-weight="bold">🏭 建築與設施 (€40萬)</text>
+    <text x="15" y="150" fill="#94a3b8" font-size="11">• 基礎品飲室與辦公室</text>
+    <text x="15" y="165" fill="#94a3b8" font-size="11">• 溫控酒窖系統建置</text>
+
+    <!-- 3 -->
+    <text x="15" y="195" fill="#fbbf24" font-size="13" font-weight="bold">⚙️ 設備與橡木桶 (€24萬)</text>
+    <text x="15" y="215" fill="#94a3b8" font-size="11">• 篩選台、壓榨機、不鏽鋼槽</text>
+    <text x="15" y="230" fill="#94a3b8" font-size="11">• 法國新橡木桶 (高昂耗材)</text>
+
+    <!-- 4 -->
+    <text x="15" y="260" fill="#c084fc" font-size="13" font-weight="bold">⏳ 營運週轉金 (€20萬)</text>
+    <text x="15" y="280" fill="#94a3b8" font-size="11">• 支援直到首次裝瓶出售</text>
+    <text x="15" y="295" fill="#94a3b8" font-size="11">• 人員薪資、農藥、瓶塞等</text>
+  </g>
+
+  <!-- Alert Insight -->
+  <g transform="translate(60, 500)">
+    <rect width="680" height="70" rx="8" fill="#09090b" stroke="#475569"/>
+    <text x="340" y="25" text-anchor="middle" fill="#cbd5e1" font-size="13">💡 <tspan fill="#facc15" font-weight="bold">大師級商業洞察：</tspan>布根地寸土寸金，<tspan fill="#f87171" font-weight="bold">「土地取得成本」往往超過總資本的 50% 以上。</tspan></text>
+    <text x="340" y="45" text-anchor="middle" fill="#94a3b8" font-size="12">此外，從買地到第一批酒上市獲得現金回流，中間有長達 3-5 年的「空窗期」(Death Valley)，</text>
+    <text x="340" y="60" text-anchor="middle" fill="#94a3b8" font-size="12">充足的營運週轉金是能否存活到投資回收的「生存關鍵」。</text>
+  </g>
+
+</svg>

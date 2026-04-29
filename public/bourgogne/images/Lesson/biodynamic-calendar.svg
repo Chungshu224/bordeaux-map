@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradient (Night Sky / Cosmos) -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1e1b4b" /> <!-- deep indigo -->
+      <stop offset="60%" stop-color="#0f172a" /> <!-- slate dark -->
+      <stop offset="100%" stop-color="#020617" /> <!-- almost black -->
+    </radialGradient>
+
+    <!-- Quadrant Gradients -->
+    <linearGradient id="gradFire" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="gradEarth" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#854d0e" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ca8a04" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="gradWater" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="gradAir" x1="1" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ffd60a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <filter id="glow"><feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ffffff" flood-opacity="0.3"/></filter>
+    <filter id="shadow"><feDropShadow dx="2" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle background stars/dots -->
+  <g fill="#ffffff" opacity="0.3">
+    <circle cx="100" cy="150" r="1.5"/><circle cx="250" cy="80" r="1"/><circle cx="650" cy="120" r="2"/><circle cx="700" cy="300" r="1"/><circle cx="150" cy="450" r="2"/><circle cx="550" cy="500" r="1.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="bold" letter-spacing="2">自然動力曆法 (Biodynamic Calendar)</text>
+  <text x="400" y="70" text-anchor="middle" fill="#cbd5e1" font-size="14">Maria Thun System: Moon &amp; Constellation Influence</text>
+
+  <!-- Central Graphic -->
+  <g transform="translate(400, 310)">
+    
+    <!-- Outer Border -->
+    <circle cx="0" cy="0" r="200" fill="none" stroke="#334155" stroke-width="2"/>
+    <circle cx="0" cy="0" r="190" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="8,8"/>
+
+    <!-- Quadrant 1: Top Right - Fruit Day (Fire) -->
+    <path d="M0,0 L0,-190 A190,190 0 0,1 190,0 Z" fill="url(#gradFire)" stroke="#000" stroke-width="2"/>
+    <text x="80" y="-80" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold" filter="url(#shadow)">果日 (Fruit)</text>
+    <text x="80" y="-60" text-anchor="middle" fill="#fed7aa" font-size="13" filter="url(#shadow)">火象 (牡羊, 獅子, 射手)</text>
+    <text x="80" y="-40" text-anchor="middle" fill="#fff" font-size="12" filter="url(#shadow)">🌟 採收 / 品酒最佳</text>
+
+    <!-- Quadrant 2: Bottom Right - Root Day (Earth) -->
+    <path d="M0,0 L190,0 A190,190 0 0,1 0,190 Z" fill="url(#gradEarth)" stroke="#000" stroke-width="2"/>
+    <text x="80" y="80" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold" filter="url(#shadow)">根日 (Root)</text>
+    <text x="80" y="100" text-anchor="middle" fill="#fef08a" font-size="13" filter="url(#shadow)">土象 (金牛, 處女, 魔羯)</text>
+    <text x="80" y="120" text-anchor="middle" fill="#fff" font-size="12" filter="url(#shadow)">🌱 翻土 / 剪根最佳</text>
+
+    <!-- Quadrant 3: Bottom Left - Leaf Day (Water) -->
+    <path d="M0,0 L0,190 A190,190 0 0,1 -190,0 Z" fill="url(#gradWater)" stroke="#000" stroke-width="2"/>
+    <text x="-80" y="80" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold" filter="url(#shadow)">葉日 (Leaf)</text>
+    <text x="-80" y="100" text-anchor="middle" fill="#bae6fd" font-size="13" filter="url(#shadow)">水象 (巨蟹, 天蠍, 雙魚)</text>
+    <text x="-80" y="120" text-anchor="middle" fill="#fff" font-size="12" filter="url(#shadow)">💧 澆水 / 葉面噴灑</text>
+
+    <!-- Quadrant 4: Top Left - Flower Day (Air) -->
+    <path d="M0,0 L-190,0 A190,190 0 0,1 0,-190 Z" fill="url(#gradAir)" stroke="#000" stroke-width="2"/>
+    <text x="-80" y="-80" text-anchor="middle" fill="#1c1917" font-size="20" font-weight="bold">花日 (Flower)</text>
+    <text x="-80" y="-60" text-anchor="middle" fill="#44403c" font-size="13">風象 (雙子, 天秤, 水瓶)</text>
+    <text x="-80" y="-40" text-anchor="middle" fill="#292524" font-size="12">🌼 避免干擾 / 靜置</text>
+
+    <!-- Inner Circle representing Moon/Earth connection -->
+    <circle cx="0" cy="0" r="60" fill="#0f172a" stroke="#cbd5e1" stroke-width="3" filter="url(#glow)"/>
+    <text x="0" y="5" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="bold">黃道十二宮</text>
+    <text x="0" y="25" text-anchor="middle" fill="#94a3b8" font-size="11">與月相週期</text>
+  </g>
+
+  <!-- Left Sidebar (Moon Phase Info) -->
+  <g transform="translate(30, 160)">
+    <rect x="0" y="0" width="140" height="260" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="70" y="30" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="bold">月相節律</text>
+    
+    <circle cx="70" cy="65" r="15" fill="#f8fafc" filter="url(#glow)"/>
+    <text x="70" y="100" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">滿月 (Full Moon)</text>
+    <text x="70" y="118" text-anchor="middle" fill="#cbd5e1" font-size="11">汁液上升</text>
+    <text x="70" y="132" text-anchor="middle" fill="#cbd5e1" font-size="11">植物能量向上</text>
+
+    <line x1="20" y1="150" x2="120" y2="150" stroke="#475569" stroke-width="1"/>
+
+    <circle cx="70" cy="180" r="15" fill="#020617" stroke="#64748b" stroke-width="2"/>
+    <text x="70" y="215" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">新月 (New Moon)</text>
+    <text x="70" y="233" text-anchor="middle" fill="#cbd5e1" font-size="11">汁液下降</text>
+    <text x="70" y="247" text-anchor="middle" fill="#cbd5e1" font-size="11">適合埋藏製劑</text>
+  </g>
+
+  <!-- Right Sidebar (Preparation 500 & 501 Info) -->
+  <g transform="translate(630, 200)">
+    <rect x="0" y="0" width="150" height="200" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="75" y="25" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="bold">關鍵製劑噴灑</text>
+    
+    <text x="15" y="55" fill="#facc15" font-size="14" font-weight="bold">🧪 500號 泥糞角</text>
+    <text x="15" y="75" fill="#cbd5e1" font-size="11">施用於土壤 (秋季)</text>
+    <text x="15" y="90" fill="#cbd5e1" font-size="11">對應：根日/新月</text>
+    
+    <line x1="15" y1="110" x2="135" y2="110" stroke="#475569" stroke-width="1"/>
+
+    <text x="15" y="140" fill="#7dd3fc" font-size="14" font-weight="bold">🧪 501號 石英角</text>
+    <text x="15" y="160" fill="#cbd5e1" font-size="11">施用於葉面 (春季)</text>
+    <text x="15" y="175" fill="#cbd5e1" font-size="11">對應：葉日/滿月</text>
+  </g>
+
+  <!-- Bottom Insight Box -->
+  <g transform="translate(60, 530)">
+    <rect x="0" y="0" width="680" height="40" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="340" y="25" text-anchor="middle" fill="#e2e8f0" font-size="13">💡 <tspan fill="#38bdf8" font-weight="bold">品酒實務：</tspan>許多生物動力酒莊建議在「果日」或「花日」品鑑，酒體會展現最開放、平衡的果香與花香結構。</text>
+  </g>
+
+</svg>

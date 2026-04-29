@@ -23,6 +23,7 @@ export const l47Content = makeL4Lesson({
             <li><strong>ESG 韌性 = 綠建築升級</strong><br>裝太陽能板、雨水回收不僅環保,還能降低能源成本與氣候風險,提升房產長期價值。</li>
           </ul>
         </div>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L4-7/01%20酒莊全方位風險管理矩陣.svg" alt="酒莊全方位風險管理矩陣" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <div class="course-structure">
           <h3>📖 本課程架構</h3>

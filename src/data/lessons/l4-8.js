@@ -12,6 +12,7 @@ export const l48Content = makeL4Lesson({
       <div class="intro-section">
         <h2>🌱 永續與碳盤查 = 企業健康管理系統</h2>
         <p>想像你經營一家百年老店,要傳給下一代。永續經營不就是「讓店健康活下去」嗎?</p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L4-8/01%20ESG永續經營與碳盤查路徑.svg" alt="ESG永續經營與碳盤查路徑" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
         <ul>
           <li><strong>🩺 ESG 框架 = 企業全身健檢</strong>: 
             <ul>

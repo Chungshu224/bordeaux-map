@@ -49,6 +49,12 @@
           "content": "特級園的劃分基於數百年的經驗與現代科學驗證：土壤分析、坡向研究、歷史價格、品質穩定性。一旦認定為特級園，地位永久不變，是對風土的最高認可。"
         },
         {
+          "type": "image",
+          "title": "特級園規模懸殊差異",
+          "image": "/bourgogne/images/Lesson/grand-cru-size-bubble.svg",
+          "caption": "不同特級園的面積可以相差數十倍，從約50公頃的「巨無霸」武若園到只有0.8公頃的羅曼尼園。"
+        },
+        {
           "type": "quiz",
           "title": "🧠 特級園制度知識檢測",
           "questions": [

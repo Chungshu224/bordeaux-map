@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111317"/> <!-- Obsidian/Gold hue -->
+      <stop offset="50%" stop-color="#1A1C20"/>
+      <stop offset="100%" stop-color="#14110A"/>
+    </linearGradient>
+
+    <!-- Node Gradients -->
+    <!-- Meursault (Rich Gold) -->
+    <linearGradient id="meursaultGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    
+    <!-- Puligny (Pale, Greenish/Silver Gold - Mineral) -->
+    <linearGradient id="pulignyGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="100%" stop-color="#A16207"/>
+    </linearGradient>
+
+    <!-- Chassagne (Deep Gold/Amber) -->
+    <linearGradient id="chassagneGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/></filter>
+    <filter id="lightGlow"><feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#FDE047" flood-opacity="0.12"/></filter>
+    <filter id="kingGlow"><feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#FCD34D" flood-opacity="0.8"/></filter>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bg)"/>
+  
+  <text x="400" y="45" text-anchor="middle" fill="#FDF6E3" font-size="28" font-weight="bold" letter-spacing="2">伯恩丘「白酒金三角」風格光譜</text>
+  <text x="400" y="70" text-anchor="middle" fill="#A8A29E" font-size="14" letter-spacing="1">The Golden Triangle of Côte de Beaune White Wines</text>
+
+  <!-- Triangle Lines -->
+  <g transform="translate(400, 230)" filter="url(#glow)">
+    <!-- Area Fill -->
+    <polygon points="0,-100 -200,100 200,100" fill="#FDE047" fill-opacity="0.04" filter="url(#lightGlow)"/>
+    
+    <!-- Edge PM to Meursault -->
+    <line x1="0" y1="-100" x2="-200" y2="100" stroke="#FDE047" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="6,4"/>
+    <!-- Edge PM to Chassagne -->
+    <line x1="0" y1="-100" x2="200" y2="100" stroke="#FDE047" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="6,4"/>
+    <!-- Edge Meursault to Chassagne -->
+    <line x1="-200" y1="100" x2="200" y2="100" stroke="#CA8A04" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="6,4"/>
+
+    <!-- Map Context Direction text -->
+    <text x="-65" y="-30" fill="#CA8A04" font-size="12" opacity="0.6" transform="rotate(-45, -100, 0)">往北 (更純淨)</text>
+    <text x="90" y="-30" fill="#CA8A04" font-size="12" opacity="0.6" transform="rotate(45, 100, 0)">往南 (更雄渾)</text>
+  </g>
+
+  <!-- Node 1: Puligny-Montrachet (Top) -->
+  <g transform="translate(400, 130)" filter="url(#shadow)">
+    <!-- Base text (outside node) -->
+    <rect x="-140" y="-60" width="280" height="50" rx="8" fill="#1C1917" stroke="#A16207" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="0" y="-36" text-anchor="middle" fill="#FDF6E3" font-size="14" font-weight="bold">👑 鋼骨柔情 (純淨、礦物、優雅)</text>
+    <text x="0" y="-19" text-anchor="middle" fill="#D6D3D1" font-size="12">清冽酸度・白色花卉・明顯張力</text>
+
+    <circle cx="0" cy="20" r="45" fill="#111317" stroke="url(#pulignyGold)" stroke-width="4"/>
+    <circle cx="0" cy="20" r="41" fill="#1E2024"/>
+    <text x="0" y="14" text-anchor="middle" fill="#FEF08A" font-size="15" font-weight="bold">Puligny</text>
+    <text x="0" y="32" text-anchor="middle" fill="#FEF08A" font-size="15" font-weight="bold">Montrachet</text>
+  </g>
+
+  <!-- Node 2: Meursault (Bottom Left) -->
+  <g transform="translate(200, 330)" filter="url(#shadow)">
+    <!-- Base text -->
+    <rect x="-150" y="70" width="280" height="50" rx="8" fill="#1C1917" stroke="#D97706" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="-10" y="90" text-anchor="middle" fill="#FDF6E3" font-size="14" font-weight="bold">🧈 豐滿華麗 (圓潤、奶油、堅果)</text>
+    <text x="-10" y="107" text-anchor="middle" fill="#D6D3D1" font-size="12">溫暖烤榛果・飽滿酒體・熱乳油木</text>
+
+    <circle cx="0" cy="15" r="45" fill="#111317" stroke="url(#meursaultGold)" stroke-width="4"/>
+    <circle cx="0" cy="15" r="41" fill="#1E2024"/>
+    <text x="0" y="21" text-anchor="middle" fill="#FBBF24" font-size="18" font-weight="bold">Meursault</text>
+  </g>
+
+  <!-- Node 3: Chassagne-Montrachet (Bottom Right) -->
+  <g transform="translate(600, 330)" filter="url(#shadow)">
+    <!-- Base text -->
+    <rect x="-130" y="70" width="280" height="50" rx="8" fill="#1C1917" stroke="#EA580C" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="10" y="90" text-anchor="middle" fill="#FDF6E3" font-size="14" font-weight="bold">💪 剛健有力 (雄厚、蜂蜜、黃果)</text>
+    <text x="10" y="107" text-anchor="middle" fill="#D6D3D1" font-size="12">洋槐蜂蜜・堅實骨架・力量深邃</text>
+
+    <circle cx="0" cy="15" r="45" fill="#111317" stroke="url(#chassagneGold)" stroke-width="4"/>
+    <circle cx="0" cy="15" r="41" fill="#1E2024"/>
+    <text x="0" y="9" text-anchor="middle" fill="#FDE047" font-size="15" font-weight="bold">Chassagne</text>
+    <text x="0" y="27" text-anchor="middle" fill="#FDE047" font-size="15" font-weight="bold">Montrachet</text>
+  </g>
+
+  <!-- The "King" in the middle: Le Montrachet -->
+  <g transform="translate(400, 330)" filter="url(#shadow)">
+    <!-- Connect lines to Puligny & Chassagne indicating border -->
+    <path d="M-155,15 Q0,0 155,15" fill="none" stroke="#FBBF24" stroke-width="6" stroke-opacity="0.3" filter="url(#kingGlow)"/>
+
+    <circle cx="0" cy="-20" r="30" fill="#2C2310" stroke="#FDE047" stroke-width="2"/>
+    <text x="0" y="-12" text-anchor="middle" font-size="22">🍷</text>
+    
+    <text x="0" y="28" text-anchor="middle" fill="#FCD34D" font-size="18" font-weight="bold" filter="url(#kingGlow)">Le Montrachet</text>
+    <text x="0" y="46" text-anchor="middle" fill="#FDE047" font-size="12" font-weight="bold">「白酒之王」</text>
+    <text x="0" y="62" text-anchor="middle" fill="#CA8A04" font-size="12">橫跨普里尼與夏山兩村的完美平衡</text>
+  </g>
+
+  <!-- Spectrum Arrow Summary -->
+  <!-- Left Side -->
+  <g transform="translate(60, 200)">
+    <text x="0" y="0" fill="#FDF6E3" font-size="14" font-weight="bold">風味風格軸</text>
+    <path d="M 10 20 L 10 160 M 5 150 L 10 160 L 15 150 M 5 30 L 10 20 L 15 30" fill="none" stroke="#9CA3AF" stroke-width="2"/>
+    <text x="25" y="30" fill="#9CA3AF" font-size="13">極致純淨、冷冽</text>
+    <text x="25" y="160" fill="#9CA3AF" font-size="13">圓潤、飽滿、力量</text>
+  </g>
+
+  <!-- Bottom Footer Box -->
+  <rect x="40" y="490" width="720" height="40" rx="6" fill="#1C1917" stroke="#3F3F46" stroke-width="1"/>
+  <text x="400" y="515" text-anchor="middle" fill="#D6D3D1" font-size="13">✨ <tspan fill="#FBBF24" font-weight="bold">核心心法：</tspan>若將霞多麗比喻為畫，<tspan fill="#FDE047">Puligny</tspan> 是精密的素描，<tspan fill="#FCD34D">Meursault</tspan> 是華麗的油畫，<tspan fill="#EA580C">Chassagne</tspan> 則是立體的雕塑。</text>
+
+</svg>

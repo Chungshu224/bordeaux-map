@@ -110,7 +110,7 @@ export const l26Content = [
       { id: 1, icon: '💙', title: '藍黏土', content: '極其稀有，Petrus的風土密碼' },
       { id: 2, icon: '💧', title: '完美保水', content: '在乾旱年份為葡萄提供穩定水源' }
     ],
-    content: '<div class="pomerol-terroir"><p class="lead-text">Pomerol的魔力集中在其中心一塊被稱為「高原」的區域，這裡的土壤是獨一無二的藍黏土（blue clay），也是傳奇酒莊Petrus的所在地。</p><div class="terroir-analysis"><div class="terroir-section soil"><h4>🪨 藍黏土的魔力</h4><div class="soil-analysis"><div class="soil-composition"><h5>🔬 獨特土壤</h5><div class="soil-details"><p><strong>特徵：</strong>這種黏土富含礦物質，在乾燥時變得如石頭般堅硬，但在濕潤時又能儲存大量水分。</p><p><strong>功效：</strong>在波爾多的炎熱夏季，藍黏土能像海綿一樣緩慢釋放水分，避免葡萄藤因缺水而停止成熟，從而獲得完美的酚類物質成熟度。這是釀造頂級Merlot的關鍵。</p></div></div></div></div></div></div>',
+    content: '<div class="pomerol-terroir"><p class="lead-text">Pomerol的魔力集中在其中心一塊被稱為「高原」的區域，這裡的土壤是獨一無二的藍黏土（blue clay），也是傳奇酒莊Petrus的所在地。</p><div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L2-6/01%20Crasse%20de%20Fer%20藍黏土示意圖.svg" alt="Crasse de Fer 藍黏土示意圖" style="max-width: 100%; height: auto; border-radius: 8px;" /></div><div class="terroir-analysis"><div class="terroir-section soil"><h4>🪨 藍黏土的魔力</h4><div class="soil-analysis"><div class="soil-composition"><h5>🔬 獨特土壤</h5><div class="soil-details"><p><strong>特徵：</strong>這種黏土富含礦物質，在乾燥時變得如石頭般堅硬，但在濕潤時又能儲存大量水分。</p><p><strong>功效：</strong>在波爾多的炎熱夏季，藍黏土能像海綿一樣緩慢釋放水分，避免葡萄藤因缺水而停止成熟，從而獲得完美的酚類物質成熟度。這是釀造頂級Merlot的關鍵。</p></div></div></div></div></div></div>',
     hasMap: true,
     mapFocus: 'RightBank-Pomerol',
     geojsonPaths: [

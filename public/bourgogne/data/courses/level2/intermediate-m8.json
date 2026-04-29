@@ -203,6 +203,12 @@
           ]
         },
         {
+          "type": "image",
+          "title": "工藝之辨：整串發酵 vs 完全去梗",
+          "image": "/bourgogne/images/Lesson/whole-bunch-vs-destemmed.svg",
+          "caption": "由 DRC (帶梗派) 與 Henri Jayer (去梗派) 引領的兩種布根地黑皮諾經典工藝與風味對決"
+        },
+        {
           "type": "content",
           "title": "風土 vs 釀造技術",
           "content": "頂級釀酒師的共識：釀造是為了表現風土，而非掩蓋風土。最好的酒是在酒窖中干預最少的酒。技術服務於風土表現，而非炫技。"

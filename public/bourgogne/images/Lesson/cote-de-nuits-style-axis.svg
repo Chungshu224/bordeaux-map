@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.3"/> <!-- Deep purple hue -->
+      <stop offset="100%" stop-color="#09090B"/>
+    </radialGradient>
+
+    <!-- Axis Gradient -->
+    <linearGradient id="axisGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EC4899"/>   <!-- Pink/Feminine -->
+      <stop offset="50%" stop-color="#A855F7"/>  <!-- Purple/Balanced -->
+      <stop offset="100%" stop-color="#DC2626"/> <!-- Red/Masculine -->
+    </linearGradient>
+
+    <!-- Node Glows -->
+    <filter id="glowPink"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#EC4899" flood-opacity="0.6"/></filter>
+    <filter id="glowPurple"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#A855F7" flood-opacity="0.6"/></filter>
+    <filter id="glowRuby"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#E11D48" flood-opacity="0.6"/></filter>
+    <filter id="glowRed"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#DC2626" flood-opacity="0.6"/></filter>
+
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bgGrad)"/>
+
+  <!-- Grid / Background elements -->
+  <path d="M100,50 L100,380 M250,50 L250,380 M400,50 L400,380 M550,50 L550,380 M700,50 L700,380" stroke="#FFFFFF" stroke-opacity="0.05" stroke-dasharray="4,4" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#F8FAFC" font-size="26" font-weight="bold" letter-spacing="2">九大名村星系圖 ：夜丘風格軸線</text>
+  <text x="400" y="68" text-anchor="middle" fill="#A1A1AA" font-size="14">Côte de Nuits: The Constellation of Terroir &amp; Style</text>
+
+  <!-- Style Axis (Bottom) -->
+  <rect x="100" y="400" width="600" height="8" rx="4" fill="url(#axisGrad)"/>
+  
+  <text x="100" y="430" text-anchor="middle" fill="#FBCFE8" font-size="15" font-weight="bold">🌸 柔美 / 絲滑 (Elegance)</text>
+  <text x="100" y="450" text-anchor="middle" fill="#9CA3AF" font-size="12">紅色水果、花香、細膩單寧</text>
+
+  <text x="400" y="430" text-anchor="middle" fill="#E9D5FF" font-size="15" font-weight="bold">⚖️ 完美平衡 (Balance &amp; Complex)</text>
+  <text x="400" y="450" text-anchor="middle" fill="#9CA3AF" font-size="12">香料、天鵝絨質地、深邃</text>
+
+  <text x="700" y="430" text-anchor="middle" fill="#FECACA" font-size="15" font-weight="bold">💪 強勁 / 雄渾 (Power)</text>
+  <text x="700" y="450" text-anchor="middle" fill="#9CA3AF" font-size="12">深色水果、野味、緊實單寧</text>
+
+  <polygon points="400,395 395,385 405,385" fill="#A855F7"/>
+  <text x="400" y="375" text-anchor="middle" fill="#A855F7" font-size="11">光譜中點</text>
+
+
+  <!-- Constellation Connections -->
+  <g stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1.5">
+    <line x1="140" y1="210" x2="280" y2="160" /> <!-- Chambolle to Vosne -->
+    <line x1="280" y1="160" x2="360" y2="280" /> <!-- Vosne to Flagey -->
+    <line x1="360" y1="280" x2="420" y2="180" /> <!-- Flagey to Vougeot -->
+    <line x1="420" y1="180" x2="480" y2="280" /> <!-- Vougeot to Morey -->
+    <line x1="480" y1="280" x2="520" y2="140" /> <!-- Morey to Marsannay -->
+    <line x1="520" y1="140" x2="620" y2="250" /> <!-- Marsannay to Nuits -->
+    <line x1="620" y1="250" x2="670" y2="150" /> <!-- Nuits to Gevrey -->
+    <line x1="670" y1="150" x2="710" y2="290" /> <!-- Gevrey to Fixin -->
+  </g>
+
+  <!-- Stars (Nodes) -->
+  
+  <!-- 1. Chambolle-Musigny (x=140, y=210) -->
+  <g transform="translate(140, 210)">
+    <circle cx="0" cy="0" r="12" fill="#F472B6" filter="url(#glowPink)"/>
+    <circle cx="0" cy="0" r="4" fill="#FFF"/>
+    <text x="0" y="-22" text-anchor="middle" fill="#FBCFE8" font-size="14" font-weight="bold">香波-慕西尼</text>
+    <text x="0" y="-36" text-anchor="middle" fill="#F9A8D4" font-size="11">Chambolle-Musigny</text>
+    <rect x="-40" y="15" width="80" height="22" rx="4" fill="#18181B" stroke="#F472B6" stroke-width="1"/>
+    <text x="0" y="30" text-anchor="middle" fill="#FCE7F3" font-size="11">👑 夜丘之后</text>
+  </g>
+
+  <!-- 2. Vosne-Romanée (x=280, y=160) -->
+  <g transform="translate(280, 160)">
+    <circle cx="0" cy="0" r="14" fill="#C084FC" filter="url(#glowPurple)"/>
+    <circle cx="0" cy="0" r="5" fill="#FFF"/>
+    <text x="0" y="-22" text-anchor="middle" fill="#E9D5FF" font-size="15" font-weight="bold">馮內-羅曼尼</text>
+    <text x="0" y="-38" text-anchor="middle" fill="#D8B4FE" font-size="11">Vosne-Romanée</text>
+    <rect x="-45" y="15" width="90" height="22" rx="4" fill="#18181B" stroke="#C084FC" stroke-width="1"/>
+    <text x="0" y="30" text-anchor="middle" fill="#F3E8FF" font-size="11">✨ 皇冠上的珍珠</text>
+  </g>
+
+  <!-- 3. Flagey-Echézeaux (x=360, y=280) -->
+  <g transform="translate(360, 280)">
+    <circle cx="0" cy="0" r="8" fill="#A78BFA" filter="url(#glowPurple)"/>
+    <text x="0" y="24" text-anchor="middle" fill="#E9D5FF" font-size="13" font-weight="bold">弗拉傑-艾瑟索</text>
+    <text x="0" y="38" text-anchor="middle" fill="#C4B5FD" font-size="10">Flagey-Echézeaux</text>
+  </g>
+
+  <!-- 4. Vougeot (x=420, y=180) -->
+  <g transform="translate(420, 180)">
+    <circle cx="0" cy="0" r="10" fill="#E11D48" filter="url(#glowRuby)"/>
+    <circle cx="0" cy="0" r="3" fill="#FFF"/>
+    <text x="0" y="-20" text-anchor="middle" fill="#FECDD3" font-size="13" font-weight="bold">伏舊</text>
+    <text x="0" y="-34" text-anchor="middle" fill="#FDA4AF" font-size="10">Vougeot</text>
+    <text x="0" y="18" text-anchor="middle" fill="#9CA3AF" font-size="11">歷史修道院</text>
+  </g>
+
+  <!-- 5. Morey-Saint-Denis (x=480, y=280) -->
+  <g transform="translate(480, 280)">
+    <circle cx="0" cy="0" r="12" fill="#F43F5E" filter="url(#glowRuby)"/>
+    <circle cx="0" cy="0" r="4" fill="#FFF"/>
+    <text x="0" y="24" text-anchor="middle" fill="#FECDD3" font-size="14" font-weight="bold">莫雷-聖丹尼</text>
+    <text x="0" y="38" text-anchor="middle" fill="#FDA4AF" font-size="11">Morey-Saint-Denis</text>
+    <rect x="-40" y="-35" width="80" height="22" rx="4" fill="#18181B" stroke="#F43F5E" stroke-width="1"/>
+    <text x="0" y="-20" text-anchor="middle" fill="#FFE4E6" font-size="11">🌉 完美的橋樑</text>
+  </g>
+
+  <!-- 6. Marsannay (x=520, y=140) -->
+  <g transform="translate(520, 140)">
+    <circle cx="0" cy="0" r="8" fill="#9D174D" filter="url(#glowRuby)"/>
+    <text x="0" y="-20" text-anchor="middle" fill="#FBCFE8" font-size="12" font-weight="bold">馬沙內</text>
+    <text x="0" y="-34" text-anchor="middle" fill="#F9A8D4" font-size="10">Marsannay</text>
+  </g>
+
+  <!-- 7. Nuits-Saint-Georges (x=620, y=250) -->
+  <g transform="translate(620, 250)">
+    <circle cx="0" cy="0" r="12" fill="#B91C1C" filter="url(#glowRed)"/>
+    <circle cx="0" cy="0" r="4" fill="#FFF"/>
+    <text x="0" y="24" text-anchor="middle" fill="#FECACA" font-size="14" font-weight="bold">夜-聖喬治</text>
+    <text x="0" y="38" text-anchor="middle" fill="#FCA5A5" font-size="11">Nuits-Saint-Georges</text>
+    <rect x="-45" y="-35" width="90" height="22" rx="4" fill="#18181B" stroke="#B91C1C" stroke-width="1"/>
+    <text x="0" y="-20" text-anchor="middle" fill="#FEE2E2" font-size="11">🪵 紮實與泥土感</text>
+  </g>
+
+  <!-- 8. Gevrey-Chambertin (x=670, y=150) -->
+  <g transform="translate(670, 150)">
+    <circle cx="0" cy="0" r="16" fill="#DC2626" filter="url(#glowRed)"/>
+    <circle cx="0" cy="0" r="6" fill="#FFF"/>
+    <text x="0" y="-24" text-anchor="middle" fill="#FECACA" font-size="15" font-weight="bold">熱夫雷-香貝丹</text>
+    <text x="0" y="-40" text-anchor="middle" fill="#FCA5A5" font-size="11">Gevrey-Chambertin</text>
+    <rect x="-40" y="18" width="80" height="22" rx="4" fill="#18181B" stroke="#DC2626" stroke-width="1"/>
+    <text x="0" y="33" text-anchor="middle" fill="#FEE2E2" font-size="11">🤴 夜丘之王</text>
+  </g>
+
+  <!-- 9. Fixin (x=710, y=290) -->
+  <g transform="translate(710, 290)">
+    <circle cx="0" cy="0" r="8" fill="#7F1D1D" filter="url(#glowRed)"/>
+    <text x="0" y="24" text-anchor="middle" fill="#FECACA" font-size="12" font-weight="bold">菲克桑</text>
+    <text x="0" y="38" text-anchor="middle" fill="#FCA5A5" font-size="10">Fixin</text>
+  </g>
+
+</svg>

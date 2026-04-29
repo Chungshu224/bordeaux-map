@@ -11,6 +11,7 @@ export const l36Content = [
         <p class="intro-lead">
           波爾多葡萄酒的偉大，不僅在於其優越的風土，更在於釀酒師精湛的調配藝術。調配（Assemblage）是波爾多最核心的技藝，將不同品種、不同地塊的葡萄酒融合為完美的整體。
         </p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L3-6/01%20左右岸調配品種風格對比.svg" alt="波爾多左右岸調配品種風格對比：左岸Cab.S.主導與右岸Merlot主導比較" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <p class="intro-context">
           一瓶頂級波爾多紅酒往往由 3-5 個品種調配而成：Cabernet Sauvignon 提供骨架與陳年潛力，Merlot 賦予柔順與果味，Cabernet Franc 增添優雅與複雜度。調配比例的微調能創造出截然不同的風格，這正是釀酒師藝術與科學的完美結合。

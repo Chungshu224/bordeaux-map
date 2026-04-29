@@ -21,6 +21,7 @@ export const l44Content = makeL4Lesson({
           </ul>
           <p class="insight">Level 4專家的標誌：<strong>能用數據證明品質投資的價值，讓每一筆支出都有投報邏輯</strong>。</p>
         </div>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L4-4/01%20酒莊財務營運與投報模型.svg" alt="酒莊財務營運與投報模型" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <div class="business-analogy">
           <h4>🏢 生活化比喻：酒莊經營 = 開餐廳</h4>

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#0f0f13" />
+    </linearGradient>
+
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/></filter>
+    
+    <linearGradient id="grandCruGrad"><stop offset="0%" stop-color="#ef4444"/><stop offset="100%" stop-color="#7f1d1d"/></linearGradient>
+    <linearGradient id="premierCruGrad"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
+    <linearGradient id="villageGrad"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="45" text-anchor="middle" fill="#f8fafc" font-size="28" font-weight="bold" letter-spacing="2">布根地葡萄酒陳年曲線與酒窖環境指南</text>
+  <text x="400" y="70" text-anchor="middle" fill="#9ca3b8" font-size="14">Burgundy Aging Curves &amp; Cellar Management</text>
+
+  <!-- Left Side: Aging Curves -->
+  <g transform="translate(60, 120)">
+    <rect width="450" height="360" rx="8" fill="#1e293b" fill-opacity="0.5" stroke="#334155" filter="url(#shadow)"/>
+    <text x="225" y="30" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="bold">各等級紅酒生命週期 (Aging Potential)</text>
+
+    <!-- Axes -->
+    <g stroke="#64748b" stroke-width="2">
+      <!-- Y-Axis (Quality/Enjoyment) -->
+      <line x1="40" y1="320" x2="40" y2="50" />
+      <!-- X-Axis (Years) -->
+      <line x1="40" y1="320" x2="430" y2="320" />
+    </g>
+
+    <text x="25" y="185" text-anchor="middle" fill="#94a3b8" font-size="12" transform="rotate(-90, 25, 185)">風味巔峰度 (Quality)</text>
+    <text x="235" y="340" text-anchor="middle" fill="#94a3b8" font-size="12">陳年時間 / 瓶陳年數 (Years)</text>
+
+    <!-- X Axis Labels -->
+    <g fill="#64748b" font-size="10" text-anchor="middle">
+      <text x="40" y="335">0</text>
+      <text x="110" y="335">5</text>
+      <text x="180" y="335">10</text>
+      <text x="250" y="335">15</text>
+      <text x="320" y="335">20</text>
+      <text x="390" y="335">30+</text>
+    </g>
+
+    <!-- Curves (Path) -->
+    <!-- Village Level (Peaks at 5-8 yrs, declines after 10) -->
+    <path d="M 40 320 C 60 250, 90 180, 140 180 C 180 180, 200 250, 250 320" fill="none" stroke="url(#villageGrad)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Premier Cru (Peaks at 10-15 yrs, smooth decline) -->
+    <path d="M 40 320 Q 50 300, 70 280 T 130 220 C 180 150, 240 120, 280 140 C 320 160, 360 260, 390 320" fill="none" stroke="url(#premierCruGrad)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Grand Cru (Long close-down phase, then peaks at 15-25+ yrs) -->
+    <path d="M 40 320 Q 60 250, 80 270 T 140 250 C 200 150, 280 80, 350 70 C 400 60, 420 120, 430 180" fill="none" stroke="url(#grandCruGrad)" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Labels for curves -->
+    <text x="140" y="170" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="bold">村莊級 (Village)</text>
+    <text x="250" y="125" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="bold">一級園 (Premier Cru)</text>
+    <text x="360" y="55" text-anchor="middle" fill="#f87171" font-size="12" font-weight="bold">特級園 (Grand Cru)</text>
+
+    <!-- Dumbbell zone (The Dumb Phase) for Grand Cru -->
+    <rect x="70" y="235" width="60" height="50" rx="4" fill="#334155" fill-opacity="0.6" stroke="#475569" stroke-dasharray="2,2"/>
+    <text x="100" y="255" text-anchor="middle" fill="#cbd5e1" font-size="10">封閉期</text>
+    <text x="100" y="270" text-anchor="middle" fill="#cbd5e1" font-size="10">(Dumb Phase)</text>
+  </g>
+
+  <!-- Right Side: Temperature Management -->
+  <g transform="translate(540, 120)">
+    <rect width="210" height="360" rx="8" fill="#1e293b" fill-opacity="0.5" stroke="#334155" filter="url(#shadow)"/>
+    <text x="105" y="30" text-anchor="middle" fill="#e2e8f0" font-size="15" font-weight="bold">專業酒窖環境指標</text>
+
+    <!-- Thermometer Visualization -->
+    <rect x="85" y="60" width="40" height="250" rx="20" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    
+    <!-- Colored zones inside thermometer -->
+    <!-- Danger zone (Too Hot > 18) -->
+    <rect x="87" y="62" width="36" height="50" fill="#ef4444" opacity="0.8"/>
+    <!-- Warning (15-18) -->
+    <rect x="87" y="112" width="36" height="40" fill="#f59e0b" opacity="0.8"/>
+    <!-- Perfect (10-14) -->
+    <rect x="87" y="152" width="36" height="60" fill="#22c55e" opacity="0.8"/>
+    <!-- Warning (Too Cold < 10) -->
+    <rect x="87" y="212" width="36" height="80" fill="#3b82f6" opacity="0.8"/>
+    
+    <!-- Bulb -->
+    <circle cx="105" cy="290" r="28" fill="#3b82f6"/>
+
+    <!-- Temp markers -->
+    <text x="75" y="70" text-anchor="end" fill="#fca5a5" font-size="12" font-weight="bold">> 18°C</text>
+    <text x="135" y="75" text-anchor="start" fill="#fca5a5" font-size="11">熱害風險</text>
+
+    <text x="75" y="125" text-anchor="end" fill="#fcd34d" font-size="12" font-weight="bold">15-18°C</text>
+    <text x="135" y="130" text-anchor="start" fill="#fcd34d" font-size="11">熟成加速</text>
+
+    <text x="75" y="185" text-anchor="end" fill="#86efac" font-size="13" font-weight="bold">10-14°C</text>
+    <text x="135" y="185" text-anchor="start" fill="#86efac" font-size="12" font-weight="bold">理想熟成</text>
+
+    <text x="75" y="240" text-anchor="end" fill="#93c5fd" font-size="12" font-weight="bold">< 10°C</text>
+    <text x="135" y="240" text-anchor="start" fill="#93c5fd" font-size="11">熟成停滯</text>
+
+    <!-- Humidity indicator -->
+    <g transform="translate(105, 335)">
+      <text x="0" y="0" text-anchor="middle" fill="#e2e8f0" font-size="12">相對濕度要求</text>
+      <text x="0" y="16" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">💧 70% ±5%</text>
+    </g>
+  </g>
+
+  <!-- Bottom Insight Box -->
+  <g transform="translate(40, 510)">
+    <rect x="0" y="0" width="720" height="60" rx="6" fill="#09090b" stroke="#334155" stroke-width="1"/>
+    <text x="360" y="25" text-anchor="middle" fill="#e2e8f0" font-size="13">💡 <tspan fill="#38bdf8" font-weight="bold">侍酒大師指南：</tspan>頂級布根地常在裝瓶後 3-8 年進入「封閉期」(Dumb Phase)，酒體內斂不展現果香。</text>
+    <text x="360" y="45" text-anchor="middle" fill="#9ca3af" font-size="12">正確的酒窖環境 (12°C/70% 濕度) 對於特級園酒款經歷此階段後迸發的「第三層香氣」至關重要。</text>
+  </g>
+
+</svg>

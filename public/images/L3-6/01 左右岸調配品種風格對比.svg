@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bgBlend" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c0810"/>
+      <stop offset="100%" stop-color="#120e18"/>
+    </linearGradient>
+    <filter id="shB"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bgBlend)"/>
+  <line x1="40" y1="64" x2="760" y2="64" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+  <text x="400" y="36" text-anchor="middle" fill="#C0952C" font-size="20" font-weight="bold">波爾多調配藝術：左岸 vs 右岸</text>
+  <text x="400" y="56" text-anchor="middle" fill="#9A7040" font-size="12">Assemblage · 波爾多混釀的哲學與風格差異</text>
+
+  <!-- Left Bank box -->
+  <rect x="40" y="76" width="340" height="300" rx="8" fill="#0e1018" stroke="#3050A0" stroke-width="1.5" filter="url(#shB)"/>
+  <rect x="40" y="76" width="340" height="46" rx="8" fill="#1A2850"/>
+  <rect x="40" y="108" width="340" height="14" fill="#1A2850"/>
+  <text x="210" y="100" text-anchor="middle" fill="#A0C0F0" font-size="15" font-weight="bold">🏛️ 左岸 Left Bank</text>
+  <text x="210" y="113" text-anchor="middle" fill="#6080A0" font-size="11">Médoc · Graves</text>
+
+  <!-- Left bank pie chart area -->
+  <!-- Cab.S. ~65%, Merlot ~25%, Cab.F. ~7%, PV ~3% -->
+  <!-- Approximate pie in SVG using arcs -->
+  <g transform="translate(140, 210)">
+    <!-- CabS: 65% = 234° arc from 0° -->
+    <path d="M0,0 L70,0 A70,70 0 1,1 -28.5,-63.5 Z" fill="#2050A0" opacity="0.85"/>
+    <!-- Merlot: 25% = 90° -->
+    <path d="M0,0 L-28.5,-63.5 A70,70 0 0,1 -68,-14 Z" fill="#50A050" opacity="0.85"/>
+    <!-- CabF: 7% = 25° -->
+    <path d="M0,0 L-68,-14 A70,70 0 0,1 -63,28 Z" fill="#A05080" opacity="0.85"/>
+    <!-- PV: 3% = 11° -->
+    <path d="M0,0 L-63,28 A70,70 0 0,1 70,0 Z" fill="#A08020" opacity="0.85"/>
+    <circle cx="0" cy="0" r="30" fill="#0e1018"/>
+    <text x="0" y="4" text-anchor="middle" fill="#C0952C" font-size="11" font-weight="bold">左岸</text>
+  </g>
+
+  <!-- Left bank legend -->
+  <rect x="240" y="140" width="12" height="12" rx="2" fill="#2050A0"/>
+  <text x="257" y="151" fill="#A0C0F0" font-size="11">Cabernet Sauvignon</text>
+  <text x="257" y="163" fill="#6080A0" font-size="10">主導品種 · 55–75%</text>
+
+  <rect x="240" y="170" width="12" height="12" rx="2" fill="#50A050"/>
+  <text x="257" y="181" fill="#90D090" font-size="11">Merlot</text>
+  <text x="257" y="193" fill="#608060" font-size="10">柔化骨架 · 15–35%</text>
+
+  <rect x="240" y="200" width="12" height="12" rx="2" fill="#A05080"/>
+  <text x="257" y="211" fill="#D090C0" font-size="11">Cabernet Franc</text>
+  <text x="257" y="223" fill="#806080" font-size="10">增添優雅 · 3–15%</text>
+
+  <rect x="240" y="230" width="12" height="12" rx="2" fill="#A08020"/>
+  <text x="257" y="241" fill="#D0B050" font-size="11">Petit Verdot</text>
+  <text x="257" y="253" fill="#807040" font-size="10">深色調 · 1–5%</text>
+
+  <!-- Left bank wine style -->
+  <rect x="55" y="310" width="310" height="52" rx="5" fill="#0a0e18" stroke="#3050A0" stroke-width="0.8"/>
+  <text x="80" y="329" fill="#C0952C" font-size="11" font-weight="bold">🍷 風格特徵</text>
+  <text x="80" y="345" fill="#C0D0E8" font-size="11">結構強勁 · 單寧緊實 · 雪松黑醋栗香氣</text>
+  <text x="80" y="358" fill="#9090B0" font-size="10">需陳年 10–30 年方顯精彩 · 典型代表：Lafite / Latour</text>
+
+  <!-- Right Bank box -->
+  <rect x="420" y="76" width="340" height="300" rx="8" fill="#0e1208" stroke="#407040" stroke-width="1.5" filter="url(#shB)"/>
+  <rect x="420" y="76" width="340" height="46" rx="8" fill="#1A3018"/>
+  <rect x="420" y="108" width="340" height="14" fill="#1A3018"/>
+  <text x="590" y="100" text-anchor="middle" fill="#90D090" font-size="15" font-weight="bold">🌱 右岸 Right Bank</text>
+  <text x="590" y="113" text-anchor="middle" fill="#507050" font-size="11">Pomerol · Saint-Émilion</text>
+
+  <!-- Right bank pie: Merlot ~75%, CabF ~20%, CabS ~5% -->
+  <g transform="translate(520, 210)">
+    <!-- Merlot: 75% = 270° -->
+    <path d="M0,0 L70,0 A70,70 0 1,1 0,-70 Z" fill="#50A050" opacity="0.85"/>
+    <!-- CabF: 20% = 72° -->
+    <path d="M0,0 L0,-70 A70,70 0 0,1 56,42 Z" fill="#A05080" opacity="0.85"/>
+    <!-- CabS: 5% = 18° -->
+    <path d="M0,0 L56,42 A70,70 0 0,1 70,0 Z" fill="#2050A0" opacity="0.85"/>
+    <circle cx="0" cy="0" r="30" fill="#0e1208"/>
+    <text x="0" y="4" text-anchor="middle" fill="#90D090" font-size="11" font-weight="bold">右岸</text>
+  </g>
+
+  <!-- Right bank legend -->
+  <rect x="615" y="140" width="12" height="12" rx="2" fill="#50A050"/>
+  <text x="632" y="151" fill="#90D090" font-size="11">Merlot</text>
+  <text x="632" y="163" fill="#608060" font-size="10">主導品種 · 60–100%</text>
+
+  <rect x="615" y="170" width="12" height="12" rx="2" fill="#A05080"/>
+  <text x="632" y="181" fill="#D090C0" font-size="11">Cabernet Franc</text>
+  <text x="632" y="193" fill="#806080" font-size="10">花香結構 · 0–40%</text>
+
+  <rect x="615" y="200" width="12" height="12" rx="2" fill="#2050A0"/>
+  <text x="632" y="211" fill="#A0C0F0" font-size="11">Cabernet Sauvignon</text>
+  <text x="632" y="223" fill="#607090" font-size="10">少量補強 · 0–10%</text>
+
+  <!-- Right bank wine style -->
+  <rect x="435" y="310" width="310" height="52" rx="5" fill="#081008" stroke="#407040" stroke-width="0.8"/>
+  <text x="460" y="329" fill="#C0952C" font-size="11" font-weight="bold">🍷 風格特徵</text>
+  <text x="460" y="345" fill="#B0D0A0" font-size="11">豐潤柔順 · 絲滑單寧 · 紅果李子松露香氣</text>
+  <text x="460" y="358" fill="#708060" font-size="10">早熟易飲 · 適飲期 5–20 年 · 典型代表：Pétrus / Cheval Blanc</text>
+
+  <!-- Center comparison divider -->
+  <line x1="400" y1="80" x2="400" y2="372" stroke="#C0952C" stroke-width="1" stroke-dasharray="5,5" opacity="0.4"/>
+  <text x="400" y="224" text-anchor="middle" fill="#C0952C" font-size="12" font-weight="bold" transform="rotate(-90 400 224)">← 左岸   右岸 →</text>
+
+  <!-- Bottom comparison table -->
+  <rect x="40" y="392" width="720" height="148" rx="8" fill="#0a0a0c" stroke="#C0952C" stroke-width="0.8" stroke-opacity="0.4" filter="url(#shB)"/>
+  <text x="400" y="414" text-anchor="middle" fill="#C0952C" font-size="13" font-weight="bold">左岸 vs 右岸 風格對比矩陣</text>
+  <line x1="60" y1="420" x2="740" y2="420" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Table headers -->
+  <text x="140" y="438" text-anchor="middle" fill="#9A7040" font-size="11" font-weight="bold">比較項目</text>
+  <text x="340" y="438" text-anchor="middle" fill="#A0C0F0" font-size="11" font-weight="bold">左岸（Médoc）</text>
+  <text x="590" y="438" text-anchor="middle" fill="#90D090" font-size="11" font-weight="bold">右岸（Pomerol/St-Émilion）</text>
+  <line x1="60" y1="442" x2="740" y2="442" stroke="#333" stroke-width="0.7"/>
+
+  <!-- Row 1 -->
+  <text x="140" y="460" text-anchor="middle" fill="#C0B090" font-size="11">主要土壤</text>
+  <text x="340" y="460" text-anchor="middle" fill="#B0C8E8" font-size="11">礫石（Graves）排水性佳</text>
+  <text x="590" y="460" text-anchor="middle" fill="#A8D0A8" font-size="11">黏土、藍黏土（Crasse de Fer）</text>
+
+  <!-- Row 2 -->
+  <text x="140" y="476" text-anchor="middle" fill="#C0B090" font-size="11">葡萄品種</text>
+  <text x="340" y="476" text-anchor="middle" fill="#B0C8E8" font-size="11">Cabernet Sauvignon 主導</text>
+  <text x="590" y="476" text-anchor="middle" fill="#A8D0A8" font-size="11">Merlot 主導</text>
+
+  <!-- Row 3 -->
+  <text x="140" y="492" text-anchor="middle" fill="#C0B090" font-size="11">酒體結構</text>
+  <text x="340" y="492" text-anchor="middle" fill="#B0C8E8" font-size="11">高單寧、高酸度、強骨架</text>
+  <text x="590" y="492" text-anchor="middle" fill="#A8D0A8" font-size="11">柔順、圓潤、絲滑單寧</text>
+
+  <!-- Row 4 -->
+  <text x="140" y="508" text-anchor="middle" fill="#C0B090" font-size="11">最佳適飲期</text>
+  <text x="340" y="508" text-anchor="middle" fill="#B0C8E8" font-size="11">10–30 年後</text>
+  <text x="590" y="508" text-anchor="middle" fill="#A8D0A8" font-size="11">5–20 年後（較早熟）</text>
+
+  <!-- Row 5 -->
+  <text x="140" y="524" text-anchor="middle" fill="#C0B090" font-size="11">主要香氣</text>
+  <text x="340" y="524" text-anchor="middle" fill="#B0C8E8" font-size="11">黑醋栗・雪松・菸草・礦石</text>
+  <text x="590" y="524" text-anchor="middle" fill="#A8D0A8" font-size="11">李子・松露・巧克力・紫羅蘭</text>
+
+  <line x1="60" y1="530" x2="740" y2="530" stroke="#C0952C" stroke-width="0.5" opacity="0.2"/>
+  <text x="400" y="550" text-anchor="middle" fill="#706050" font-size="10">* 以上為一般規律，頂級酒莊往往超越產區典型，如 Cheval Blanc（右岸）的 Cab.Franc 比例達 40%，風格近乎左岸</text>
+</svg>

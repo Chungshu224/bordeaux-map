@@ -596,6 +596,7 @@
         {
           "type": "content",
           "title": "風土（Terroir）的重要性",
+          "image": "/bourgogne/images/Lesson/bourgogne-terroir-elements.svg",
           "content": "布根地的獨特之處在於「風土」概念 - 同一葡萄品種在不同地塊會展現截然不同的風格，這是由土壤、坡向、海拔與微氣候共同決定的。"
         }
       ]
@@ -771,6 +772,12 @@
           "content": "2015年7月4日，布根地的「Climats」正式被列入聯合國教科文組織世界遺產，這是對布根地千年釀酒文化的最高認可。\n\n**Climats** 指的是 1,247 個被精確劃分的葡萄園地塊，從夏布利延伸到 Maranges，每一塊都有：\n• 獨特的名稱（通常來自中世紀）\n• 特定的土壤組成\n• 明確的邊界（通常由石牆標示）\n• 數百年的歷史記錄\n\n這些 Climats 不只是葡萄園，更是「人與自然互動兩千年的活見證」。"
         },
         {
+          "type": "image",
+          "title": "Climat 與 Lieu-dit 地塊概念解析",
+          "image": "/bourgogne/images/Lesson/climat-vs-lieudit.svg",
+          "caption": "布根地的地貌雙重奏：行政劃分的 Lieu-dit 與代表風土靈魂的官方 Climat"
+        },
+        {
           "type": "list",
           "title": "📚 歷史重點回顧",
           "points": [
@@ -875,6 +882,12 @@
           "type": "content",
           "title": "布根地的單一品種哲學",
           "content": "與波爾多的混釀傳統不同，布根地堅持單一品種釀造。紅酒幾乎全部使用黑皮諾（Pinot Noir），白酒則以夏多內（Chardonnay）為主。"
+        },
+        {
+          "type": "image",
+          "title": "兩大靈魂品種剖析圖解",
+          "image": "/bourgogne/images/Lesson/pinot-vs-chardonnay.svg",
+          "caption": "黑皮諾與夏多內的風土表現與對比光譜"
         },
         {
           "type": "comparison",

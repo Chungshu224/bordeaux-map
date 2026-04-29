@@ -185,6 +185,7 @@ export const lessonContent = [
     ],
     content: `<div class="saint-emilion-style">
       <p class="lead-text">Saint-Émilion的風土極為多樣，但最核心的頂級地塊主要分為兩種類型：石灰岩高原和黏土坡地。</p>
+      <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L2-7/01%20Saint-Émilion%20三大風土區.svg" alt="Saint-Émilion 三大風土區" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
       <div class="terroir-section">
         <h4>🌄 兩大核心風土</h4>
         <ul>

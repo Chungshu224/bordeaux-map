@@ -492,7 +492,7 @@ export const l22Content = [
       { id: 1, icon: '🌸', title: '標誌香氣', content: '以紫羅蘭、玫瑰等花香聞名' },
       { id: 2, icon: '✨', title: '口感質地', content: '絲綢般順滑，單寧精緻' }
     ],
-    content: '<div class="margaux-style"><p class="lead-text">Margaux的葡萄酒風格是力量與優雅的完美結合，以其芬芳的香氣和絲滑的口感，被譽為「葡萄酒中的凡爾賽」。</p><div class="style-analysis"><div class="style-section characteristics"><h4>🎯 Margaux風格特徵分析</h4><div class="style-profile"><div class="profile-aspect sensory"><h5>👃 感官特徵</h5><div class="sensory-breakdown"><div class="sense aroma"><h6>香氣</h6><p>最顯著的特點是<strong>花香</strong>，特別是紫羅蘭和玫瑰。伴隨著細膩的紅色和黑色水果香氣，陳年後會發展出皮革、雪松和森林地表的複雜氣息。</p></div><div class="sense palate"><h6>口感</h6><p>酒體中等到飽滿，但從不顯厚重。單寧結構精緻而緊實，質地如<strong>絲綢或天鵝絨</strong>般順滑。酸度清新，平衡感極佳，餘韻悠長。</p></div></div></div></div></div></div>',
+    content: '<div class="margaux-style"><p class="lead-text">Margaux的葡萄酒風格是力量與優雅的完美結合，以其芬芳的香氣和絲滑的口感，被譽為「葡萄酒中的凡爾賽」。</p><div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L2-2/01%20Margaux%20優雅風格特徵.svg" alt="Margaux 優雅風格特徵" style="max-width: 100%; height: auto; border-radius: 8px;" /></div><div class="style-analysis"><div class="style-section characteristics"><h4>🎯 Margaux風格特徵分析</h4><div class="style-profile"><div class="profile-aspect sensory"><h5>👃 感官特徵</h5><div class="sensory-breakdown"><div class="sense aroma"><h6>香氣</h6><p>最顯著的特點是<strong>花香</strong>，特別是紫羅蘭和玫瑰。伴隨著細膩的紅色和黑色水果香氣，陳年後會發展出皮革、雪松和森林地表的複雜氣息。</p></div><div class="sense palate"><h6>口感</h6><p>酒體中等到飽滿，但從不顯厚重。單寧結構精緻而緊實，質地如<strong>絲綢或天鵝絨</strong>般順滑。酸度清新，平衡感極佳，餘韻悠長。</p></div></div></div></div></div></div>',
     hasMap: false,
     quiz: {
       question: '描述Margaux葡萄酒口感時，最常用的比喻是什麼？',

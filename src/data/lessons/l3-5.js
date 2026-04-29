@@ -101,6 +101,7 @@ export const l35Content = [
     content: `
       <div class="winemaking-overview">
         <p class="lead-text">波爾多紅酒的釀造是一個精密控制的過程，每個步驟都需要釀酒師的專業判斷與技術執行。</p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L3-5/01%20紅酒釀造完整流程圖.svg" alt="波爾多紅酒釀造完整流程圖：從採收到裝瓶的8大步驟" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
         
         <div class="process-steps">
           <div class="step">

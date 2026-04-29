@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <filter id="glow"><feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.3"/></filter>
+    <linearGradient id="lineGrad"><stop offset="0%" stop-color="#ef4444"/><stop offset="100%" stop-color="#b91c1c"/></linearGradient>
+    
+    <!-- Area under the curve -->
+    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <linearGradient id="sp500Grad"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="45" text-anchor="middle" fill="#f8fafc" font-size="28" font-weight="bold" letter-spacing="1">布根地頂級酒莊價格指數增長走勢 (回溯至1998)</text>
+  <text x="400" y="70" text-anchor="middle" fill="#94a3b8" font-size="14">Burgundy Fine Wine Investment Returns vs S&amp;P500</text>
+
+  <!-- Chart Area -->
+  <g transform="translate(70, 120)">
+    <!-- Grid -->
+    <g stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4">
+      <line x1="0" y1="0" x2="650" y2="0" />
+      <line x1="0" y1="70" x2="650" y2="70" />
+      <line x1="0" y1="140" x2="650" y2="140" />
+      <line x1="0" y1="210" x2="650" y2="210" />
+      <line x1="0" y1="280" x2="650" y2="280" />
+      <line x1="0" y1="350" x2="650" y2="350" />
+    </g>
+
+    <!-- Content / Lines -->
+    <g stroke="#475569" stroke-width="2">
+      <!-- X & Y Axis Base -->
+      <line x1="0" y1="350" x2="650" y2="350" />
+      <line x1="0" y1="350" x2="0" y2="0" />
+    </g>
+
+    <!-- Y Labels (Index Value related to DRC / Liv-ex format starting at 100) -->
+    <g fill="#94a3b8" font-size="12" text-anchor="end">
+      <text x="-10" y="355">100</text> <!-- base line -->
+      <text x="-10" y="285">800</text>
+      <text x="-10" y="215">1500</text>
+      <text x="-10" y="145">2200</text>
+      <text x="-10" y="75">2900</text>
+      <text x="-10" y="5">3600</text>
+    </g>
+
+    <!-- X Labels (Years) -> 2000, 2005, 2010, 2015, 2020, 2024 -->
+    <!-- 650 width -->
+    <g fill="#94a3b8" font-size="12" text-anchor="middle">
+      <text x="0" y="370">1998</text>
+      <text x="130" y="370">2005</text>
+      <text x="260" y="370">2010</text>
+      <text x="390" y="370">2015</text>
+      <text x="520" y="370">2020</text>
+      <text x="650" y="370">2024</text>
+    </g>
+
+    <!-- Burgundy Index Growth Path -->
+    <!-- values: 100 -> 210 -> 400 -> 750 -> 1800 -> 3400 -->
+    <!-- Mapped roughly: (0, 350) -> (130, 339) -> (260, 320) -> (390, 285) -> (520, 180) -> (650, 20) -->
+    <path d="M 0 350 L 130 339 L 260 320 L 390 285 L 520 180 L 610 80 L 650 20" fill="none" stroke="url(#lineGrad)" stroke-width="4" stroke-linejoin="round" filter="url(#glow)"/>
+    
+    <!-- Under area -->
+    <path d="M 0 350 L 130 339 L 260 320 L 390 285 L 520 180 L 610 80 L 650 20 L 650 350 Z" fill="url(#areaGrad)"/>
+
+    <!-- Data Points for Burgundy -->
+    <circle cx="260" cy="320" r="5" fill="#ef4444" stroke="#000" stroke-width="2"/>
+    <circle cx="390" cy="285" r="5" fill="#ef4444" stroke="#000" stroke-width="2"/>
+    <circle cx="520" cy="180" r="5" fill="#ef4444" stroke="#000" stroke-width="2"/>
+    <circle cx="650" cy="20" r="5" fill="#ef4444" stroke="#000" stroke-width="2"/>
+
+    <!-- Annotations for Burgundy Trend -->
+    <text x="510" y="150" fill="#fca5a5" font-size="12" font-weight="bold">亞洲資金狂熱期</text>
+    <text x="635" y="12" text-anchor="end" fill="#f87171" font-size="14" font-weight="bold">+3300% 增長</text>
+
+    <!-- S&P 500 equivalent path for benchmark (conservative 300% growth) -->
+    <!-- values: 100 -> 140 -> 120(crash) -> 200 -> 280 -> 400 -->
+    <!-- Mapped: (0, 350)->(130, 345)->(260, 348)->(390, 340)->(520, 332)->(650, 320) -->
+    <path d="M 0 350 L 130 345 L 180 350 L 260 343 L 390 330 L 520 310 L 600 315 L 650 290" fill="none" stroke="url(#sp500Grad)" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="650" y="280" text-anchor="end" fill="#60a5fa" font-size="12" font-weight="bold">S&amp;P 500 (基準)</text>
+  </g>
+
+  <!-- Legend & Insignt Box at Bottom -->
+  <g transform="translate(60, 515)">
+    <rect width="680" height="60" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#334155"/>
+    <!-- Legends -->
+    <line x1="20" y1="20" x2="40" y2="20" stroke="#ef4444" stroke-width="3"/>
+    <text x="50" y="24" fill="#e2e8f0" font-size="12">布根地頂級酒莊指數 (Top 10 Grand Cru)</text>
+
+    <line x1="20" y1="40" x2="40" y2="40" stroke="#3b82f6" stroke-width="3" stroke-dasharray="3,2"/>
+    <text x="50" y="44" fill="#e2e8f0" font-size="12">S&amp;P 500 大盤指數</text>
+
+    <!-- Separator -->
+    <line x1="280" y1="15" x2="280" y2="45" stroke="#475569" stroke-width="1"/>
+
+    <!-- Key Insight -->
+    <text x="300" y="24" fill="#cbd5e1" font-size="12">📉 <tspan fill="#fbbf24">稀缺性溢價：</tspan>布根地因為風土碎化的嚴格產量限制，</text>
+    <text x="300" y="44" fill="#94a3b8" font-size="12">在 2010 年後伴隨亞洲富豪圈的追捧，與全球股市完全脫鉤。</text>
+  </g>
+
+</svg>

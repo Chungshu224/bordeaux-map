@@ -12,6 +12,7 @@ export const l31Content = [
         <p class="intro-lead">
           氣候變遷已成為波爾多葡萄酒產業面臨的最重大挑戰。過去50年，年平均氣溫上升了1.7°C，採收期提前10-15天，降雨模式劇烈變化。這些改變不僅影響葡萄品質，更可能重塑整個產區的格局。
         </p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L3-1/01%20氣候變遷趨勢與採收期.svg" alt="波爾多氣候變遷趨勢：溫度上升與採收期提前的50年數據" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <p class="intro-context">
           本課程將帶您深入了解氣候變遷的科學證據、對葡萄種植與釀酒的具體影響，以及 Château Lafite、Château Margaux 等頂級酒莊如何透過創新策略應對這一全球性挑戰。從精準農業到新品種試驗，從水資源管理到可持續發展，探索波爾多的適應之路。

@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E1217"/>
+      <stop offset="50%" stop-color="#1A202A"/>
+      <stop offset="100%" stop-color="#141C24"/>
+    </linearGradient>
+
+    <!-- Terroir Element Gradients -->
+    <linearGradient id="gradClimate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3FA9F5"/>
+      <stop offset="100%" stop-color="#246EB9"/>
+    </linearGradient>
+    <linearGradient id="gradSoil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E09F3E"/>
+      <stop offset="100%" stop-color="#B06520"/>
+    </linearGradient>
+    <linearGradient id="gradTopo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+    <linearGradient id="gradGrape" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9C27B0"/>
+      <stop offset="100%" stop-color="#6A1B9A"/>
+    </linearGradient>
+    <linearGradient id="gradHuman" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F44336"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadowGlow">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+    <filter id="glowCentral">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="540" fill="url(#bg)"/>
+
+  <!-- Main Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#E2E8F0" font-size="24" font-weight="bold" letter-spacing="1">布根地「風土 (Terroir)」五大核心元素</text>
+  <text x="400" y="65" text-anchor="middle" fill="#8A9BB0" font-size="13">The 5 Core Elements of Bourgogne Terroir</text>
+
+  <!-- Center Circle: TERROIR -->
+  <g transform="translate(400, 270)">
+    <!-- Aura -->
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#2D3748" stroke-width="1" stroke-dasharray="8,8"/>
+    <circle cx="0" cy="0" r="190" fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="4,6"/>
+    
+    <!-- Central Core -->
+    <circle cx="0" cy="0" r="60" fill="#0B1015" stroke="#CBD5E1" stroke-width="3" filter="url(#glowCentral)"/>
+    <text x="0" y="-5" text-anchor="middle" fill="#FFFFFF" font-size="20" font-weight="bold" letter-spacing="1">風土</text>
+    <text x="0" y="18" text-anchor="middle" fill="#94A3B8" font-size="14" font-style="italic">Terroir</text>
+    
+    <!-- Lines connecting center to nodes -->
+    <path d="M 0,-60 L 0,-140" stroke="#475569" stroke-width="2" stroke-dasharray="3,3"/> <!-- Top -->
+    <path d="M 57,-18 L 133,-43" stroke="#475569" stroke-width="2" stroke-dasharray="3,3"/> <!-- Top Right -->
+    <path d="M 35,48 L 82,115" stroke="#475569" stroke-width="2" stroke-dasharray="3,3"/> <!-- Bottom Right -->
+    <path d="M -35,48 L -82,115" stroke="#475569" stroke-width="2" stroke-dasharray="3,3"/> <!-- Bottom Left -->
+    <path d="M -57,-18 L -133,-43" stroke="#475569" stroke-width="2" stroke-dasharray="3,3"/> <!-- Top Left -->
+
+    <!-- Element 1: Climate (Top) -->
+    <g transform="translate(0, -170)">
+      <circle cx="0" cy="0" r="35" fill="url(#gradClimate)" filter="url(#shadowGlow)"/>
+      <text x="0" y="8" text-anchor="middle" fill="#FFF" font-size="24">🌤️</text>
+      <!-- Info Box -->
+      <rect x="-105" y="-95" width="210" height="55" rx="6" fill="#111B28" stroke="#246EB9" stroke-width="1.5"/>
+      <text x="0" y="-73" text-anchor="middle" fill="#A5CFF4" font-size="15" font-weight="bold">氣候 (Climate)</text>
+      <text x="0" y="-53" text-anchor="middle" fill="#CBD5E1" font-size="11">大陸型邊緣氣候，春秋霜凍風險，</text>
+      <text x="0" y="-39" text-anchor="middle" fill="#CBD5E1" font-size="11">長日照帶來緩慢且完美的成熟期。</text>
+    </g>
+
+    <!-- Element 2: Soil (Top Right) -->
+    <g transform="translate(160, -50)">
+      <circle cx="0" cy="0" r="35" fill="url(#gradSoil)" filter="url(#shadowGlow)"/>
+      <text x="0" y="8" text-anchor="middle" fill="#FFF" font-size="24">🪨</text>
+      <!-- Info Box -->
+      <rect x="45" y="-30" width="180" height="70" rx="6" fill="#20170E" stroke="#B06520" stroke-width="1.5"/>
+      <text x="55" y="-5" fill="#E8BD8A" font-size="15" font-weight="bold">土壤 (Soil)</text>
+      <text x="55" y="15" fill="#CBD5E1" font-size="11">侏羅紀深海沉積而成的</text>
+      <text x="55" y="30" fill="#CBD5E1" font-size="11">石灰岩(Limestone) 與</text>
+      <text x="55" y="45" fill="#CBD5E1" font-size="11">泥灰岩(Marl) 交疊。</text>
+    </g>
+
+    <!-- Element 3: Topography (Bottom Right) -->
+    <g transform="translate(100, 140)">
+      <circle cx="0" cy="0" r="35" fill="url(#gradTopo)" filter="url(#shadowGlow)"/>
+      <text x="0" y="8" text-anchor="middle" fill="#FFF" font-size="24">⛰️</text>
+      <!-- Info Box -->
+      <rect x="-10" y="45" width="200" height="55" rx="6" fill="#0D1E15" stroke="#2E7D32" stroke-width="1.5"/>
+      <text x="90" y="65" text-anchor="middle" fill="#A2E2A4" font-size="15" font-weight="bold">地形 (Topography)</text>
+      <text x="90" y="85" text-anchor="middle" fill="#CBD5E1" font-size="11">金丘朝東南的5~15度完美斜坡，</text>
+      <text x="90" y="100" text-anchor="middle" fill="#CBD5E1" font-size="11">創造絕佳的排水與避風微氣候。</text>
+    </g>
+
+    <!-- Element 4: Human History (Bottom Left) -->
+    <g transform="translate(-100, 140)">
+      <circle cx="0" cy="0" r="35" fill="url(#gradHuman)" filter="url(#shadowGlow)"/>
+      <text x="0" y="8" text-anchor="middle" fill="#FFF" font-size="24">⛪</text>
+      <!-- Info Box -->
+      <rect x="-190" y="45" width="200" height="55" rx="6" fill="#2D1111" stroke="#C62828" stroke-width="1.5"/>
+      <text x="-90" y="65" text-anchor="middle" fill="#F49595" font-size="15" font-weight="bold">人文歷史 (History)</text>
+      <text x="-90" y="85" text-anchor="middle" fill="#CBD5E1" font-size="11">千年中世紀修道士觀察傳承，</text>
+      <text x="-90" y="100" text-anchor="middle" fill="#CBD5E1" font-size="11">將地塊極致細分並列入法律保護。</text>
+    </g>
+
+    <!-- Element 5: Grape Varieties (Top Left) -->
+    <g transform="translate(-160, -50)">
+      <circle cx="0" cy="0" r="35" fill="url(#gradGrape)" filter="url(#shadowGlow)"/>
+      <text x="0" y="8" text-anchor="middle" fill="#FFF" font-size="24">🍇</text>
+      <!-- Info Box -->
+      <rect x="-230" y="-30" width="185" height="70" rx="6" fill="#1C0E24" stroke="#6A1B9A" stroke-width="1.5"/>
+      <text x="-45" y="-5" text-anchor="end" fill="#D3A2DF" font-size="15" font-weight="bold">適地品種 (Vine)</text>
+      <text x="-45" y="15" text-anchor="end" fill="#CBD5E1" font-size="11">高度敏感的黑皮諾</text>
+      <text x="-45" y="30" text-anchor="end" fill="#CBD5E1" font-size="11">(Pinot Noir) 吸收並</text>
+      <text x="-45" y="45" text-anchor="end" fill="#CBD5E1" font-size="11">透明地反映了腳下的土地。</text>
+    </g>
+  </g>
+
+  <!-- Note Footer -->
+  <rect x="40" y="490" width="720" height="30" rx="4" fill="#0E1622" stroke="#1F3A5A" stroke-width="1"/>
+  <text x="400" y="509" text-anchor="middle" fill="#78A5D6" font-size="12">💡 布根地的偉大不在於單一因素，而在於這五大元素完美疊加在每塊不超過幾公頃的「Climat」中。</text>
+
+</svg>

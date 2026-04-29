@@ -12,6 +12,7 @@ export const l311Content = [
         <p class="intro-lead">
           波爾多葡萄酒不僅是釀造的藝術，更是歷史與文化的結晶。本課程共六章，從羅馬時代的起源出發，橫跨中世紀、英國統治、1855年分級制度，直至法國文化哲學、現代全球影響力，以及傳統文化在當代的傳承與挑戰。
         </p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L3-11/01%20波爾多歷史與文化時間軸.svg" alt="波爾多葡萄酒歷史與百年文化演進時間軸" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <h3 class="section-title">課程架構：六章內容一覽</h3>
 

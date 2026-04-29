@@ -682,6 +682,12 @@
           ]
         },
         {
+          "type": "image",
+          "title": "蒙哈榭 (Montrachet) 白酒皇冠五園剖面",
+          "image": "/bourgogne/images/Lesson/montrachet-grand-cru-profile.svg",
+          "caption": "從山坡頂端（騎士 Chevalier）的骨感銳利，到最高殿堂（蒙哈榭 Montrachet）的完美平衡，再往下延伸到深層黏土帶來雄厚力量的（巴塔 Bâtard）。坡度決定了白酒的垂直張力與橫向寬度。"
+        },
+        {
           "type": "list",
           "title": "👑 五大白酒特級園排名",
           "points": [

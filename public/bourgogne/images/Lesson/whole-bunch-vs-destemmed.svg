@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140B11"/>
+      <stop offset="50%" stop-color="#1D111A"/>
+      <stop offset="100%" stop-color="#120A0F"/>
+    </linearGradient>
+
+    <!-- Side Gradients -->
+    <linearGradient id="wholeBunchBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E3A2B" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0B1A12" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="destemmedBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4A1420" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1E070D" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Glow/Shadow -->
+    <filter id="shadow"><feDropShadow dx="2" dy="5" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/></filter>
+    <filter id="glowGreen"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowRed"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="800" height="540" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="400" y="45" text-anchor="middle" fill="#F3F4F6" font-size="24" font-weight="bold" letter-spacing="1">釀造哲學對決：整串發酵 vs 100% 去梗</text>
+  <text x="400" y="65" text-anchor="middle" fill="#9CA3AF" font-size="13">Whole-Bunch Fermentation vs 100% Destemming</text>
+
+  <!-- Left Side: Whole Bunch (整串發酵) -->
+  <g transform="translate(30, 95)" filter="url(#shadow)">
+    <rect x="0" y="0" width="350" height="380" rx="10" fill="url(#wholeBunchBg)" stroke="#22C55E" stroke-width="1.5" stroke-dasharray="4,2"/>
+    
+    <!-- Icon/Title -->
+    <circle cx="175" cy="0" r="30" fill="#064E3B" stroke="#22C55E" stroke-width="2" filter="url(#glowGreen)"/>
+    <text x="175" y="8" text-anchor="middle" font-size="22">🌿</text>
+    <text x="175" y="55" text-anchor="middle" fill="#4ADE80" font-size="22" font-weight="bold">整串發酵 (Whole-Bunch)</text>
+    <text x="175" y="75" text-anchor="middle" fill="#86EFAC" font-size="13" font-style="italic">保留果梗直接入槽發酵</text>
+
+    <!-- Stats/Pros/Cons -->
+    <line x1="30" y1="95" x2="320" y2="95" stroke="#166534" stroke-width="1"/>
+    
+    <text x="25" y="125" fill="#F3F4F6" font-size="14" font-weight="bold">✨ 風味特徵：</text>
+    <rect x="135" y="110" width="195" height="25" rx="4" fill="#064E3B" fill-opacity="0.6"/>
+    <text x="145" y="127" fill="#86EFAC" font-size="13">草本植物、白胡椒、辛香料、花香</text>
+    
+    <text x="25" y="155" fill="#F3F4F6" font-size="14" font-weight="bold">👅 口感與結構：</text>
+    <rect x="135" y="140" width="195" height="25" rx="4" fill="#064E3B" fill-opacity="0.6"/>
+    <text x="145" y="157" fill="#86EFAC" font-size="13">增加「骨架」，產生張力與咬勁</text>
+
+    <text x="25" y="185" fill="#F3F4F6" font-size="14" font-weight="bold">🌡️ 釀造作用：</text>
+    <rect x="135" y="170" width="195" height="25" rx="4" fill="#064E3B" fill-opacity="0.6"/>
+    <text x="145" y="187" fill="#86EFAC" font-size="13">降低酒精度、減緩酸度下降</text>
+
+    <!-- Visual Graphic inside left side -->
+    <g transform="translate(175, 230)">
+       <!-- Grape cluster with stems -->
+       <path d="M0,0 L0,50 M-15,15 L15,25 M-20,35 L10,40" stroke="#4ADE80" stroke-width="3" stroke-linecap="round"/>
+       <circle cx="0" cy="50" r="10" fill="#BE185D" fill-opacity="0.7"/>
+       <circle cx="-15" cy="35" r="10" fill="#9D174D" fill-opacity="0.8"/>
+       <circle cx="15" cy="25" r="10" fill="#BE185D" fill-opacity="0.8"/>
+       <circle cx="-20" cy="15" r="10" fill="#831843" fill-opacity="0.9"/>
+       <circle cx="0" cy="20" r="10" fill="#BE185D" fill-opacity="0.9"/>
+    </g>
+
+    <!-- Risks/Condition -->
+    <rect x="25" y="300" width="300" height="60" rx="4" fill="#022C22" stroke="#047857" stroke-width="1"/>
+    <text x="40" y="325" fill="#34D399" font-size="13" font-weight="bold">⚠️ 挑戰與前提：</text>
+    <text x="40" y="345" fill="#A7F3D0" font-size="12">果梗必須「完全成熟」(木質化)，否則帶來生青味。</text>
+
+    <text x="175" y="372" text-anchor="middle" fill="#6EE7B7" font-size="11" font-weight="bold">代表名莊：DRC, Leroy, Dujac</text>
+  </g>
+
+  <!-- Right Side: Destemming (去梗) -->
+  <g transform="translate(420, 95)" filter="url(#shadow)">
+    <rect x="0" y="0" width="350" height="380" rx="10" fill="url(#destemmedBg)" stroke="#F43F5E" stroke-width="1.5" stroke-dasharray="4,2"/>
+    
+    <!-- Icon/Title -->
+    <circle cx="175" cy="0" r="30" fill="#881337" stroke="#F43F5E" stroke-width="2" filter="url(#glowRed)"/>
+    <text x="175" y="8" text-anchor="middle" font-size="22">🍇</text>
+    <text x="175" y="55" text-anchor="middle" fill="#FB7185" font-size="22" font-weight="bold">100% 去梗 (Destemmed)</text>
+    <text x="175" y="75" text-anchor="middle" fill="#FDA4AF" font-size="13" font-style="italic">將果粒與梗分離後發酵</text>
+
+    <!-- Stats/Pros/Cons -->
+    <line x1="30" y1="95" x2="320" y2="95" stroke="#9F1239" stroke-width="1"/>
+    
+    <text x="25" y="125" fill="#F3F4F6" font-size="14" font-weight="bold">✨ 風味特徵：</text>
+    <rect x="135" y="110" width="195" height="25" rx="4" fill="#881337" fill-opacity="0.6"/>
+    <text x="145" y="127" fill="#FDA4AF" font-size="13">純淨紅色莓果、櫻桃、覆盆子</text>
+    
+    <text x="25" y="155" fill="#F3F4F6" font-size="14" font-weight="bold">👅 口感與結構：</text>
+    <rect x="135" y="140" width="195" height="25" rx="4" fill="#881337" fill-opacity="0.6"/>
+    <text x="145" y="157" fill="#FDA4AF" font-size="13">單寧像絲綢般柔滑、天鵝絨質地</text>
+
+    <text x="25" y="185" fill="#F3F4F6" font-size="14" font-weight="bold">🌡️ 釀造作用：</text>
+    <rect x="135" y="170" width="195" height="25" rx="4" fill="#881337" fill-opacity="0.6"/>
+    <text x="145" y="187" fill="#FDA4AF" font-size="13">顏色較深、果味表現更直接早熟</text>
+
+    <!-- Visual Graphic inside right side -->
+    <g transform="translate(175, 220)">
+       <!-- Destemmed grapes only -->
+       <path d="M-30,40 L-40,50 L-25,60" fill="none" stroke="#F43F5E" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2"/>
+       <!-- Stem is separated -->
+       <path d="M-30,10 L-30,40 M-40,20 L-20,30" stroke="#78350F" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+       
+       <circle cx="20" cy="50" r="11" fill="#BE185D"/>
+       <circle cx="5" cy="35" r="11" fill="#9D174D"/>
+       <circle cx="35" cy="25" r="11" fill="#BE185D"/>
+       <circle cx="10" cy="15" r="11" fill="#831843"/>
+       <circle cx="25" cy="10" r="11" fill="#BE185D"/>
+    </g>
+
+    <!-- Risks/Condition -->
+    <rect x="25" y="300" width="300" height="60" rx="4" fill="#4C0519" stroke="#9F1239" stroke-width="1"/>
+    <text x="40" y="325" fill="#FB7185" font-size="13" font-weight="bold">⚠️ 挑戰與前提：</text>
+    <text x="40" y="345" fill="#FECDD3" font-size="12">若過度萃取，酒體可能顯得厚重單調、缺乏層次。</text>
+
+    <text x="175" y="372" text-anchor="middle" fill="#F43F5E" font-size="11" font-weight="bold">代表名莊：Henri Jayer, Meo-Camuzet, Rouget</text>
+  </g>
+
+  <!-- VS Badge -->
+  <g transform="translate(400, 260)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="25" fill="#18181B" stroke="#6B7280" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" fill="#E5E7EB" font-size="18" font-weight="bold" font-style="italic">VS</text>
+  </g>
+
+  <!-- Bottom Key Notes -->
+  <rect x="40" y="490" width="720" height="30" rx="4" fill="#18181B" stroke="#3F3F46" stroke-width="1"/>
+  <text x="400" y="510" text-anchor="middle" fill="#9CA3AF" font-size="12">💡 <tspan fill="#F3F4F6">當代趨勢：</tspan>越來越多「去梗派」在氣候暖化的影響下，開始加入 10~30% 不等的整串葡萄，以增添清新感與酒體張力。</text>
+
+</svg>

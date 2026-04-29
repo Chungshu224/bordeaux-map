@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bgClim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#080c10"/>
+      <stop offset="100%" stop-color="#0e1218"/>
+    </linearGradient>
+    <filter id="shC"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/></filter>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgClim)"/>
+  <line x1="40" y1="64" x2="760" y2="64" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+  <text x="400" y="36" text-anchor="middle" fill="#C0952C" font-size="20" font-weight="bold">氣候變遷對波爾多的影響</text>
+  <text x="400" y="56" text-anchor="middle" fill="#9A7040" font-size="12">Climate Change Impact · 1960s–2020s 六十年的轉變</text>
+
+  <!-- Top row: two charts side by side -->
+  <!-- Left: Temperature rise chart -->
+  <rect x="40" y="76" width="355" height="200" rx="6" fill="#0a0e14" stroke="#3060A0" stroke-width="1" filter="url(#shC)"/>
+  <text x="218" y="96" text-anchor="middle" fill="#80B0E0" font-size="12" font-weight="bold">🌡️ 波爾多年均溫上升趨勢</text>
+  <text x="218" y="109" text-anchor="middle" fill="#506080" font-size="10">（較1961–1990基準期的偏差 °C）</text>
+
+  <!-- Chart axes -->
+  <line x1="65" y1="245" x2="380" y2="245" stroke="#304050" stroke-width="1"/>
+  <line x1="65" y1="245" x2="65" y2="120" stroke="#304050" stroke-width="1"/>
+
+  <!-- Y-axis labels -->
+  <text x="60" y="247" text-anchor="end" fill="#607080" font-size="9">0</text>
+  <text x="60" y="224" text-anchor="end" fill="#607080" font-size="9">+0.5</text>
+  <text x="60" y="200" text-anchor="end" fill="#607080" font-size="9">+1.0</text>
+  <text x="60" y="177" text-anchor="end" fill="#607080" font-size="9">+1.5</text>
+  <text x="60" y="153" text-anchor="end" fill="#607080" font-size="9">+2.0</text>
+  <text x="60" y="130" text-anchor="end" fill="#607080" font-size="9">+2.5</text>
+
+  <!-- Gridlines -->
+  <line x1="65" y1="224" x2="380" y2="224" stroke="#1a2530" stroke-width="0.7" stroke-dasharray="4,3"/>
+  <line x1="65" y1="200" x2="380" y2="200" stroke="#1a2530" stroke-width="0.7" stroke-dasharray="4,3"/>
+  <line x1="65" y1="177" x2="380" y2="177" stroke="#1a2530" stroke-width="0.7" stroke-dasharray="4,3"/>
+  <line x1="65" y1="153" x2="380" y2="153" stroke="#1a2530" stroke-width="0.7" stroke-dasharray="4,3"/>
+
+  <!-- Temperature trend bars: decades -->
+  <!-- 1960s: ~+0.0 -->
+  <rect x="80" y="245" width="36" height="0" fill="#4080C0" opacity="0.7"/>
+  <text x="98" y="258" text-anchor="middle" fill="#506070" font-size="9">1960s</text>
+
+  <!-- 1970s: +0.1 -->
+  <rect x="128" y="240" width="36" height="5" fill="#4080C0" opacity="0.7"/>
+  <text x="146" y="258" text-anchor="middle" fill="#506070" font-size="9">1970s</text>
+
+  <!-- 1980s: +0.5 -->
+  <rect x="176" y="222" width="36" height="23" fill="#60A0C0" opacity="0.8"/>
+  <text x="194" y="258" text-anchor="middle" fill="#608090" font-size="9">1980s</text>
+
+  <!-- 1990s: +1.0 -->
+  <rect x="224" y="200" width="36" height="45" fill="#F09040" opacity="0.8"/>
+  <text x="242" y="258" text-anchor="middle" fill="#808060" font-size="9">1990s</text>
+
+  <!-- 2000s: +1.5 -->
+  <rect x="272" y="177" width="36" height="68" fill="#E06020" opacity="0.85"/>
+  <text x="290" y="258" text-anchor="middle" fill="#908060" font-size="9">2000s</text>
+
+  <!-- 2010s: +2.0 -->
+  <rect x="320" y="153" width="36" height="92" fill="#C04020" opacity="0.9"/>
+  <text x="338" y="258" text-anchor="middle" fill="#A07050" font-size="9">2010s</text>
+
+  <!-- 2003 extreme year marker -->
+  <line x1="290" y1="120" x2="290" y2="177" stroke="#FF4040" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="292" y="130" fill="#FF6060" font-size="9">2003年</text>
+  <text x="292" y="140" fill="#FF6060" font-size="9">極端熱浪</text>
+
+  <!-- Right: Harvest date chart -->
+  <rect x="405" y="76" width="355" height="200" rx="6" fill="#0a100a" stroke="#408040" stroke-width="1" filter="url(#shC)"/>
+  <text x="582" y="96" text-anchor="middle" fill="#80C080" font-size="12" font-weight="bold">📅 採收日期提前趨勢</text>
+  <text x="582" y="109" text-anchor="middle" fill="#405040" font-size="10">（Cabernet Sauvignon 採收起始日）</text>
+
+  <!-- Chart axes -->
+  <line x1="430" y1="245" x2="745" y2="245" stroke="#304030" stroke-width="1"/>
+  <line x1="430" y1="245" x2="430" y2="120" stroke="#304030" stroke-width="1"/>
+
+  <!-- Y-axis labels (days into year: Oct = ~280, Sep = ~250, Aug = ~220) -->
+  <text x="425" y="247" text-anchor="end" fill="#407040" font-size="9">10/15</text>
+  <text x="425" y="224" text-anchor="end" fill="#407040" font-size="9">10/01</text>
+  <text x="425" y="200" text-anchor="end" fill="#407040" font-size="9">09/15</text>
+  <text x="425" y="177" text-anchor="end" fill="#407040" font-size="9">09/01</text>
+  <text x="425" y="153" text-anchor="end" fill="#407040" font-size="9">08/15</text>
+
+  <!-- Gridlines right -->
+  <line x1="430" y1="224" x2="745" y2="224" stroke="#152015" stroke-width="0.7" stroke-dasharray="4,3"/>
+  <line x1="430" y1="200" x2="745" y2="200" stroke="#152015" stroke-width="0.7" stroke-dasharray="4,3"/>
+  <line x1="430" y1="177" x2="745" y2="177" stroke="#152015" stroke-width="0.7" stroke-dasharray="4,3"/>
+  <line x1="430" y1="153" x2="745" y2="153" stroke="#152015" stroke-width="0.7" stroke-dasharray="4,3"/>
+
+  <!-- Harvest date trend line (going DOWN = earlier) -->
+  <!-- 1960s: ~Oct 8 = y≈237 -->
+  <circle cx="460" cy="237" r="4" fill="#60A060" opacity="0.8"/>
+  <text x="460" y="258" text-anchor="middle" fill="#507050" font-size="9">1960s</text>
+
+  <!-- 1970s: ~Oct 5 = y≈231 -->
+  <circle cx="510" cy="231" r="4" fill="#70B070" opacity="0.8"/>
+  <text x="510" y="258" text-anchor="middle" fill="#507050" font-size="9">1970s</text>
+
+  <!-- 1980s: ~Oct 1 = y≈224 -->
+  <circle cx="560" cy="224" r="4" fill="#80C060" opacity="0.8"/>
+  <text x="560" y="258" text-anchor="middle" fill="#608060" font-size="9">1980s</text>
+
+  <!-- 1990s: ~Sep 22 = y≈210 -->
+  <circle cx="610" cy="210" r="4" fill="#A0C040" opacity="0.85"/>
+  <text x="610" y="258" text-anchor="middle" fill="#708050" font-size="9">1990s</text>
+
+  <!-- 2000s: ~Sep 15 = y≈200 -->
+  <circle cx="660" cy="200" r="4" fill="#D0A020" opacity="0.85"/>
+  <text x="660" y="258" text-anchor="middle" fill="#807040" font-size="9">2000s</text>
+
+  <!-- 2010s: ~Sep 5 = y≈183 -->
+  <circle cx="710" cy="183" r="4" fill="#E07020" opacity="0.9"/>
+  <text x="710" y="258" text-anchor="middle" fill="#908050" font-size="9">2010s</text>
+
+  <!-- Trend line connecting dots -->
+  <polyline points="460,237 510,231 560,224 610,210 660,200 710,183" stroke="#90C050" stroke-width="2" fill="none" opacity="0.7" stroke-dasharray="5,3"/>
+
+  <!-- Annotation: 提前約2週 -->
+  <line x1="710" y1="183" x2="460" y2="183" stroke="#E07020" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="580" y="178" text-anchor="middle" fill="#D08030" font-size="10" font-weight="bold">↑ 60年間採收提前約 2–3 週</text>
+
+  <!-- Middle row: 3 impact boxes -->
+  <rect x="40" y="288" width="228" height="100" rx="6" fill="#100808" stroke="#A03020" stroke-width="1.2" filter="url(#shC)"/>
+  <text x="154" y="310" text-anchor="middle" fill="#FF8060" font-size="12" font-weight="bold">🥵 挑戰</text>
+  <text x="60" y="330" fill="#E09080" font-size="11">酒精度過高（&gt;14.5%）</text>
+  <text x="60" y="345" fill="#E09080" font-size="11">酸度下降，結構感失衡</text>
+  <text x="60" y="360" fill="#E09080" font-size="11">葡萄成熟節奏改變</text>
+  <text x="60" y="375" fill="#E09080" font-size="11">乾旱與霜凍風險共存</text>
+
+  <rect x="286" y="288" width="228" height="100" rx="6" fill="#080c10" stroke="#3060A0" stroke-width="1.2" filter="url(#shC)"/>
+  <text x="400" y="310" text-anchor="middle" fill="#80B0E0" font-size="12" font-weight="bold">🌱 應對策略</text>
+  <text x="306" y="330" fill="#A0C0D8" font-size="11">晚摘 → 早摘，保留酸度</text>
+  <text x="306" y="345" fill="#A0C0D8" font-size="11">種植海拔更高的地塊</text>
+  <text x="306" y="360" fill="#A0C0D8" font-size="11">引進 Touriga / Nero 品種試驗</text>
+  <text x="306" y="375" fill="#A0C0D8" font-size="11">灌溉技術（部分 AOC 已允許）</text>
+
+  <rect x="532" y="288" width="228" height="100" rx="6" fill="#081008" stroke="#408040" stroke-width="1.2" filter="url(#shC)"/>
+  <text x="646" y="310" text-anchor="middle" fill="#80D080" font-size="12" font-weight="bold">🌟 潛在機遇</text>
+  <text x="552" y="330" fill="#A0D0A0" font-size="11">涼爽年份品質更穩定</text>
+  <text x="552" y="345" fill="#A0D0A0" font-size="11">Saint-Estèphe 等北部受益</text>
+  <text x="552" y="360" fill="#A0D0A0" font-size="11">Merlot 品質提升機會</text>
+  <text x="552" y="375" fill="#A0D0A0" font-size="11">早採 Cab.F. 展現新風格</text>
+
+  <!-- Bottom: key turning years -->
+  <rect x="40" y="400" width="720" height="100" rx="6" fill="#0c0c08" stroke="#C0952C" stroke-width="0.8" stroke-opacity="0.4" filter="url(#shC)"/>
+  <text x="400" y="422" text-anchor="middle" fill="#C0952C" font-size="13" font-weight="bold">⚡ 關鍵轉折年份</text>
+  <line x1="60" y1="428" x2="740" y2="428" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Year cards -->
+  <rect x="55" y="436" width="88" height="52" rx="4" fill="#201010" stroke="#A03020" stroke-width="1"/>
+  <text x="99" y="454" text-anchor="middle" fill="#FF7050" font-size="13" font-weight="bold">2003</text>
+  <text x="99" y="468" text-anchor="middle" fill="#E09070" font-size="9">極端熱浪</text>
+  <text x="99" y="480" text-anchor="middle" fill="#A06050" font-size="9">+5°C異常，早熟傑作</text>
+
+  <rect x="155" y="436" width="88" height="52" rx="4" fill="#201010" stroke="#804020" stroke-width="1"/>
+  <text x="199" y="454" text-anchor="middle" fill="#E07040" font-size="13" font-weight="bold">2010</text>
+  <text x="199" y="468" text-anchor="middle" fill="#D09070" font-size="9">完美均衡</text>
+  <text x="199" y="480" text-anchor="middle" fill="#A06050" font-size="9">近代最偉大年份之一</text>
+
+  <rect x="255" y="436" width="88" height="52" rx="4" fill="#101420" stroke="#305080" stroke-width="1"/>
+  <text x="299" y="454" text-anchor="middle" fill="#6090D0" font-size="13" font-weight="bold">2012</text>
+  <text x="299" y="468" text-anchor="middle" fill="#8090C0" font-size="9">涼爽困難年</text>
+  <text x="299" y="480" text-anchor="middle" fill="#608090" font-size="9">右岸表現明顯優於左岸</text>
+
+  <rect x="355" y="436" width="88" height="52" rx="4" fill="#201410" stroke="#705020" stroke-width="1"/>
+  <text x="399" y="454" text-anchor="middle" fill="#C08040" font-size="13" font-weight="bold">2015</text>
+  <text x="399" y="468" text-anchor="middle" fill="#C09060" font-size="9">熱而豐盛</text>
+  <text x="399" y="480" text-anchor="middle" fill="#907050" font-size="9">左岸首選，結構宏大</text>
+
+  <rect x="455" y="436" width="88" height="52" rx="4" fill="#101810" stroke="#406040" stroke-width="1"/>
+  <text x="499" y="454" text-anchor="middle" fill="#60B060" font-size="13" font-weight="bold">2016</text>
+  <text x="499" y="468" text-anchor="middle" fill="#80B080" font-size="9">世紀年份</text>
+  <text x="499" y="480" text-anchor="middle" fill="#608060" font-size="9">左右岸均衡，傳奇年份</text>
+
+  <rect x="555" y="436" width="88" height="52" rx="4" fill="#201818" stroke="#804040" stroke-width="1"/>
+  <text x="599" y="454" text-anchor="middle" fill="#D06060" font-size="13" font-weight="bold">2022</text>
+  <text x="599" y="468" text-anchor="middle" fill="#D08080" font-size="9">高溫乾旱</text>
+  <text x="599" y="480" text-anchor="middle" fill="#906060" font-size="9">早採策略成功，明亮果味</text>
+
+  <rect x="655" y="436" width="88" height="52" rx="4" fill="#101820" stroke="#304870" stroke-width="1"/>
+  <text x="699" y="454" text-anchor="middle" fill="#5080C0" font-size="13" font-weight="bold">2023</text>
+  <text x="699" y="468" text-anchor="middle" fill="#6090C0" font-size="9">涼爽偉大年</text>
+  <text x="699" y="480" text-anchor="middle" fill="#507090" font-size="9">優雅酸度，近年最佳之一</text>
+
+  <line x1="40" y1="508" x2="760" y2="508" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="518" text-anchor="middle" fill="#706050" font-size="10">* 數據基於波爾多氣象站長期觀測及頂級酒莊採收記錄整理 · 具體數值依產區略有差異</text>
+</svg>

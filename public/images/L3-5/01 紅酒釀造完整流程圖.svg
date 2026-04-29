@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="640" viewBox="0 0 800 640" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bgWine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c0808"/>
+      <stop offset="100%" stop-color="#180a0a"/>
+    </linearGradient>
+    <linearGradient id="stepGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a1020"/>
+      <stop offset="100%" stop-color="#6a1a30"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#C0952C"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="640" fill="url(#bgWine)"/>
+  <line x1="40" y1="64" x2="760" y2="64" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+  <text x="400" y="36" text-anchor="middle" fill="#C0952C" font-size="20" font-weight="bold">波爾多紅酒釀造完整流程</text>
+  <text x="400" y="56" text-anchor="middle" fill="#9A7040" font-size="12">Red Wine Winemaking · 從葡萄園到酒杯的蛻變之旅</text>
+
+  <!-- Flow: 8 steps in two columns -->
+  <!-- Left column: steps 1-4 -->
+  <!-- Right column: steps 5-8 -->
+  <!-- Arrow connects them -->
+
+  <!-- Step 1: Harvest -->
+  <rect x="40" y="80" width="340" height="68" rx="8" fill="#1A1010" stroke="#8B2040" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="40" y="80" width="56" height="68" rx="8" fill="#8B2040"/>
+  <rect x="78" y="80" width="18" height="68" fill="#8B2040"/>
+  <text x="68" y="118" text-anchor="middle" fill="#F5F0E8" font-size="22">🍇</text>
+  <text x="108" y="104" fill="#C0952C" font-size="13" font-weight="bold">STEP 1 · 採收 Harvest</text>
+  <text x="108" y="120" fill="#E8D8B0" font-size="11">手工採摘或機械採收，依品種成熟度決定時機</text>
+  <text x="108" y="136" fill="#A09070" font-size="10">Cabernet Sauvignon：9月底–10月初 · Merlot：9月中旬</text>
+
+  <!-- Step 2: Sorting & Destemming -->
+  <rect x="40" y="162" width="340" height="68" rx="8" fill="#1A1010" stroke="#702040" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="40" y="162" width="56" height="68" rx="8" fill="#702040"/>
+  <rect x="78" y="162" width="18" height="68" fill="#702040"/>
+  <text x="68" y="200" text-anchor="middle" fill="#F5F0E8" font-size="22">✂️</text>
+  <text x="108" y="186" fill="#C0952C" font-size="13" font-weight="bold">STEP 2 · 篩選去梗 Sorting &amp; Destemming</text>
+  <text x="108" y="202" fill="#E8D8B0" font-size="11">光學分選台去除劣質果粒，去梗機分離果實與梗</text>
+  <text x="108" y="218" fill="#A09070" font-size="10">目的：避免青澀草味，提升果味純淨度</text>
+
+  <!-- Step 3: Crushing & Cold soak -->
+  <rect x="40" y="244" width="340" height="68" rx="8" fill="#1A1010" stroke="#5a1838" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="40" y="244" width="56" height="68" rx="8" fill="#5a1838"/>
+  <rect x="78" y="244" width="18" height="68" fill="#5a1838"/>
+  <text x="68" y="282" text-anchor="middle" fill="#F5F0E8" font-size="22">🔵</text>
+  <text x="108" y="268" fill="#C0952C" font-size="13" font-weight="bold">STEP 3 · 破皮冷浸漬 Cold Maceration</text>
+  <text x="108" y="284" fill="#E8D8B0" font-size="11">5-10°C 低溫浸漬 3-5 天，萃取果香與花青素</text>
+  <text x="108" y="300" fill="#A09070" font-size="10">頂級酒莊常用，可強化色素但保留清新果香</text>
+
+  <!-- Step 4: Alcoholic Fermentation -->
+  <rect x="40" y="326" width="340" height="80" rx="8" fill="#1A1010" stroke="#482850" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="40" y="326" width="56" height="80" rx="8" fill="#482850"/>
+  <rect x="78" y="326" width="18" height="80" fill="#482850"/>
+  <text x="68" y="372" text-anchor="middle" fill="#F5F0E8" font-size="22">🫧</text>
+  <text x="108" y="350" fill="#C0952C" font-size="13" font-weight="bold">STEP 4 · 酒精發酵 Alcoholic Fermentation</text>
+  <text x="108" y="366" fill="#E8D8B0" font-size="11">酵母將糖轉化為酒精，溫度 25-32°C，持續 10-21 天</text>
+  <text x="108" y="382" fill="#E8D8B0" font-size="11">淋皮（Pump Over）或踩皮（Punch Down）萃取色素與單寧</text>
+  <text x="108" y="398" fill="#A09070" font-size="10">殘糖至 &lt;2g/L 視為發酵完成</text>
+
+  <!-- Vertical arrows left column -->
+  <line x1="210" y1="148" x2="210" y2="162" stroke="#C0952C" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="210" y1="230" x2="210" y2="244" stroke="#C0952C" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="210" y1="312" x2="210" y2="326" stroke="#C0952C" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 5: MLF + Press -->
+  <rect x="420" y="80" width="340" height="68" rx="8" fill="#1A1010" stroke="#384870" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="420" y="80" width="56" height="68" rx="8" fill="#384870"/>
+  <rect x="458" y="80" width="18" height="68" fill="#384870"/>
+  <text x="448" y="118" text-anchor="middle" fill="#F5F0E8" font-size="22">🧪</text>
+  <text x="488" y="104" fill="#C0952C" font-size="13" font-weight="bold">STEP 5 · 乳酸發酵 Malolactic Fermentation</text>
+  <text x="488" y="120" fill="#E8D8B0" font-size="11">蘋果酸轉化乳酸，軟化酸度，增加圓潤口感</text>
+  <text x="488" y="136" fill="#A09070" font-size="10">18-22°C · 持續 2-4 週 · 幾乎所有波爾多紅酒必做</text>
+
+  <!-- Step 6: Oak Aging -->
+  <rect x="420" y="162" width="340" height="80" rx="8" fill="#1A1010" stroke="#4a3520" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="420" y="162" width="56" height="80" rx="8" fill="#4a3520"/>
+  <rect x="458" y="162" width="18" height="80" fill="#4a3520"/>
+  <text x="448" y="206" text-anchor="middle" fill="#F5F0E8" font-size="22">🪵</text>
+  <text x="488" y="186" fill="#C0952C" font-size="13" font-weight="bold">STEP 6 · 橡木桶陳釀 Oak Aging</text>
+  <text x="488" y="202" fill="#E8D8B0" font-size="11">法國橡木桶（225L Barrique），12–24 個月陳釀</text>
+  <text x="488" y="218" fill="#E8D8B0" font-size="11">新桶比例：一級莊 80–100%，其他依風格調整</text>
+  <text x="488" y="234" fill="#A09070" font-size="10">目的：增加結構、香草/雪松香氣及緩慢微氧化</text>
+
+  <!-- Step 7: Blending -->
+  <rect x="420" y="256" width="340" height="68" rx="8" fill="#1A1010" stroke="#3a4520" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="420" y="256" width="56" height="68" rx="8" fill="#3a4520"/>
+  <rect x="458" y="256" width="18" height="68" fill="#3a4520"/>
+  <text x="448" y="294" text-anchor="middle" fill="#F5F0E8" font-size="22">🎨</text>
+  <text x="488" y="280" fill="#C0952C" font-size="13" font-weight="bold">STEP 7 · 調配 Assemblage</text>
+  <text x="488" y="296" fill="#E8D8B0" font-size="11">調配不同品種、地塊、酒齡，創造平衡風格</text>
+  <text x="488" y="312" fill="#A09070" font-size="10">波爾多傳統：Cab.S. + Merlot + Cab.F. ± Petit Verdot</text>
+
+  <!-- Step 8: Bottling -->
+  <rect x="420" y="338" width="340" height="68" rx="8" fill="#1A1010" stroke="#403020" stroke-width="1.5" filter="url(#sh)"/>
+  <rect x="420" y="338" width="56" height="68" rx="8" fill="#403020"/>
+  <rect x="458" y="338" width="18" height="68" fill="#403020"/>
+  <text x="448" y="376" text-anchor="middle" fill="#F5F0E8" font-size="22">🍾</text>
+  <text x="488" y="362" fill="#C0952C" font-size="13" font-weight="bold">STEP 8 · 澄清裝瓶 Fining &amp; Bottling</text>
+  <text x="488" y="378" fill="#E8D8B0" font-size="11">蛋清下膠去除懸浮物，輕微過濾後裝瓶</text>
+  <text x="488" y="394" fill="#A09070" font-size="10">裝瓶後仍需瓶中陳年 1-2 年後上市（En Primeur 例外）</text>
+
+  <!-- Cross arrows right column -->
+  <line x1="590" y1="148" x2="590" y2="162" stroke="#C0952C" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="590" y1="242" x2="590" y2="256" stroke="#C0952C" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="590" y1="324" x2="590" y2="338" stroke="#C0952C" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Horizontal arrow connecting step 4 to step 5 -->
+  <path d="M 380 366 Q 400 366 400 80 Q 400 80 420 80" stroke="#C0952C" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="4,3" opacity="0.7"/>
+  <!-- Actually let me use a simpler approach: bottom of step4 to bottom label, then step 5 area -->
+
+  <!-- Timeline bar at bottom -->
+  <rect x="40" y="428" width="720" height="80" rx="8" fill="#0c0808" stroke="#C0952C" stroke-width="0.8" stroke-opacity="0.4" filter="url(#sh)"/>
+  <text x="400" y="450" text-anchor="middle" fill="#C0952C" font-size="13" font-weight="bold">⏱ 典型時間軸（釀造週期）</text>
+  <line x1="60" y1="460" x2="740" y2="460" stroke="#6a4020" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Timeline markers -->
+  <circle cx="80" cy="460" r="4" fill="#8B2040"/>
+  <text x="80" y="477" text-anchor="middle" fill="#D0905060" font-size="9">採收</text>
+  <text x="80" y="487" text-anchor="middle" fill="#A07050" font-size="9">9–10月</text>
+
+  <circle cx="170" cy="460" r="4" fill="#5a1838"/>
+  <text x="170" y="477" text-anchor="middle" fill="#D09050" font-size="9">冷浸漬</text>
+  <text x="170" y="487" text-anchor="middle" fill="#A07050" font-size="9">+5天</text>
+
+  <circle cx="270" cy="460" r="4" fill="#482850"/>
+  <text x="270" y="477" text-anchor="middle" fill="#D09050" font-size="9">酒精發酵</text>
+  <text x="270" y="487" text-anchor="middle" fill="#A07050" font-size="9">+10–21天</text>
+
+  <circle cx="370" cy="460" r="4" fill="#384870"/>
+  <text x="370" y="477" text-anchor="middle" fill="#D09050" font-size="9">乳酸發酵</text>
+  <text x="370" y="487" text-anchor="middle" fill="#A07050" font-size="9">+2–4週</text>
+
+  <circle cx="470" cy="460" r="4" fill="#4a3520"/>
+  <text x="470" y="477" text-anchor="middle" fill="#D09050" font-size="9">橡木桶</text>
+  <text x="470" y="487" text-anchor="middle" fill="#A07050" font-size="9">12–24月</text>
+
+  <circle cx="590" cy="460" r="4" fill="#3a4520"/>
+  <text x="590" y="477" text-anchor="middle" fill="#D09050" font-size="9">調配</text>
+  <text x="590" y="487" text-anchor="middle" fill="#A07050" font-size="9">陳釀中期</text>
+
+  <circle cx="700" cy="460" r="4" fill="#C0952C"/>
+  <text x="700" y="477" text-anchor="middle" fill="#D09050" font-size="9">裝瓶上市</text>
+  <text x="700" y="487" text-anchor="middle" fill="#A07050" font-size="9">採收後2–3年</text>
+
+  <!-- Timeline line connecting dots -->
+  <line x1="80" y1="460" x2="700" y2="460" stroke="#6a4020" stroke-width="1" opacity="0.5"/>
+
+  <!-- Key concepts box -->
+  <rect x="40" y="520" width="720" height="100" rx="8" fill="#100c08" stroke="#C0952C" stroke-width="0.8" stroke-opacity="0.4" filter="url(#sh)"/>
+  <text x="400" y="542" text-anchor="middle" fill="#C0952C" font-size="13" font-weight="bold">🔑 關鍵概念</text>
+  <line x1="60" y1="548" x2="740" y2="548" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+
+  <text x="80" y="568" fill="#A0C880" font-size="11" font-weight="bold">自由淌汁 (Free-run juice)</text>
+  <text x="80" y="582" fill="#C8D8B0" font-size="10">發酵後自然流出的酒，品質最高，單寧細膩</text>
+  <text x="80" y="596" fill="#C8D8B0" font-size="10">約佔總量 70-80%</text>
+
+  <text x="290" y="568" fill="#80C0E0" font-size="11" font-weight="bold">榨汁酒 (Press wine)</text>
+  <text x="290" y="582" fill="#B0D0E8" font-size="10">壓榨殘渣得到，單寧豐厚，</text>
+  <text x="290" y="596" fill="#B0D0E8" font-size="10">可依需求加入混調增加結構</text>
+
+  <text x="490" y="568" fill="#F0C080" font-size="11" font-weight="bold">二軍酒 (Second Wine)</text>
+  <text x="490" y="582" fill="#E8D090" font-size="10">品質未達正牌標準的批次，</text>
+  <text x="490" y="596" fill="#E8D090" font-size="10">以酒莊副牌名義出售，往往也極具性價比</text>
+
+  <line x1="40" y1="624" x2="760" y2="624" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="636" text-anchor="middle" fill="#706050" font-size="10">* 以上為波爾多頂級紅酒（Grand Vin）典型流程 · 各酒莊細節略有差異</text>
+</svg>

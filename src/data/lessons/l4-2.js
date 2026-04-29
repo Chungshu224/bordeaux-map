@@ -8,8 +8,7 @@ export const l42Content = makeL4Lesson({
         <h3>🔬 課程導讀：從經驗到科學</h3>
         <p class="intro-lead">
           在Level 3中，我們學習了釀造的基本流程。但為什麼同樣的葡萄、同樣的設備，<strong>有的酒香氣四溢，有的卻平淡無奇？有的穩定陳年，有的卻快速氧化？</strong>
-        </p>
-        
+        </p>        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L4-2/01%20進階釀造科學三大核心.svg" alt="進階釀造科學三大核心" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>        
         <div class="comparison-intro">
           <div class="before-after">
             <div class="before">

@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="580" viewBox="0 0 800 580" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e0c08"/>
+      <stop offset="100%" stop-color="#181410"/>
+    </linearGradient>
+    <linearGradient id="plateau" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9A8860"/>
+      <stop offset="100%" stop-color="#7A6840"/>
+    </linearGradient>
+    <linearGradient id="cotes" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7A6840"/>
+      <stop offset="100%" stop-color="#5A4820"/>
+    </linearGradient>
+    <linearGradient id="plain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8B868"/>
+      <stop offset="100%" stop-color="#A89848"/>
+    </linearGradient>
+    <filter id="sh5"><feDropShadow dx="1" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="580" fill="url(#bg5)"/>
+  <line x1="40" y1="68" x2="760" y2="68" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#C0952C" font-size="21" font-weight="bold">Saint-Émilion 三大風土區</text>
+  <text x="400" y="60" text-anchor="middle" fill="#9A7040" font-size="12">Three Terroir Zones · 高地 · 坡地 · 平原</text>
+
+  <!-- Zone 1: Plateau Calcaire (高地石灰岩) -->
+  <rect x="40" y="82" width="220" height="310" rx="8" fill="#2A2818" stroke="#9A8850" stroke-width="1.5" filter="url(#sh5)"/>
+  <rect x="40" y="82" width="220" height="52" rx="8" fill="#5A5030"/>
+  <rect x="40" y="114" width="220" height="20" fill="#5A5030"/>
+  <text x="150" y="108" text-anchor="middle" fill="#FFE8A0" font-size="15" font-weight="bold">① 高地（Plateau）</text>
+  <text x="150" y="126" text-anchor="middle" fill="#C8B870" font-size="11">石灰岩高原 Plateau Calcaire</text>
+
+  <!-- Small terrain icon -->
+  <path d="M 60,155 L 100,130 L 140,135 L 180,128 L 220,140 L 260,155" stroke="#A09060" stroke-width="2" fill="none"/>
+  <path d="M 60,155 L 100,130 L 140,135 L 180,128 L 220,140 L 260,155 L 260,162 L 60,162 Z" fill="#7A6840" opacity="0.6"/>
+
+  <text x="60" y="180" fill="#D4B870" font-size="12" font-weight="bold">🪨 土壤</text>
+  <text x="60" y="196" fill="#E8D8A0" font-size="11">淺層石灰岩 · 黏土覆蓋</text>
+  <text x="60" y="211" fill="#E8D8A0" font-size="11">礦物質豐富 · 排水良好</text>
+
+  <text x="60" y="233" fill="#D4B870" font-size="12" font-weight="bold">🍷 典型風格</text>
+  <rect x="55" y="240" width="194" height="70" rx="4" fill="#181408" stroke="#7A6830" stroke-width="0.8"/>
+  <text x="65" y="256" fill="#F0E0A0" font-size="11">• 精緻·礦物感強</text>
+  <text x="65" y="272" fill="#F0E0A0" font-size="11">• 優雅·香料·果乾</text>
+  <text x="65" y="288" fill="#F0E0A0" font-size="11">• 陳年後發展複雜度</text>
+  <text x="65" y="304" fill="#F0E0A0" font-size="11">• 適合長期窖藏</text>
+
+  <text x="60" y="328" fill="#D4B870" font-size="12" font-weight="bold">🏰 代表酒莊</text>
+  <text x="60" y="345" fill="#FFD080" font-size="12" font-weight="bold">Château Ausone</text>
+  <text x="60" y="362" fill="#C0A860" font-size="11">Château Bélair-Monange</text>
+  <text x="60" y="378" fill="#C0A860" font-size="11">Château Canon</text>
+
+  <text x="60" y="395" fill="#A09050" font-size="11">🍇 品種：Cab. Franc 主導</text>
+
+  <!-- Zone 2: Côtes (坡地) -->
+  <rect x="290" y="82" width="220" height="310" rx="8" fill="#201810" stroke="#884430" stroke-width="1.5" filter="url(#sh5)"/>
+  <rect x="290" y="82" width="220" height="52" rx="8" fill="#6A2A18"/>
+  <rect x="290" y="114" width="220" height="20" fill="#6A2A18"/>
+  <text x="400" y="108" text-anchor="middle" fill="#FFD0A0" font-size="15" font-weight="bold">② 坡地（Côtes）</text>
+  <text x="400" y="126" text-anchor="middle" fill="#CC8860" font-size="11">黏土-石灰岩坡面 Côtes Argilo-Calcaires</text>
+
+  <!-- Slope icon -->
+  <path d="M 305,155 L 400,128 L 495,155" stroke="#C87A50" stroke-width="2" fill="none"/>
+  <path d="M 305,162 L 305,155 L 400,128 L 495,155 L 495,162 Z" fill="#8A4A30" opacity="0.6"/>
+
+  <text x="310" y="180" fill="#D47850" font-size="12" font-weight="bold">🪨 土壤</text>
+  <text x="310" y="196" fill="#F0C8A0" font-size="11">黏土與石灰岩混合</text>
+  <text x="310" y="211" fill="#F0C8A0" font-size="11">自然坡度輔助排水</text>
+
+  <text x="310" y="233" fill="#D47850" font-size="12" font-weight="bold">🍷 典型風格</text>
+  <rect x="305" y="240" width="194" height="70" rx="4" fill="#140C08" stroke="#884430" stroke-width="0.8"/>
+  <text x="315" y="256" fill="#F0C080" font-size="11">• 飽滿豐厚 · 果味濃郁</text>
+  <text x="315" y="272" fill="#F0C080" font-size="11">• 黑色水果 · 甘草 · 香料</text>
+  <text x="315" y="288" fill="#F0C080" font-size="11">• 單寧成熟 · 口感圓潤</text>
+  <text x="315" y="304" fill="#F0C080" font-size="11">• 均衡而多層次</text>
+
+  <text x="310" y="328" fill="#D47850" font-size="12" font-weight="bold">🏰 代表酒莊</text>
+  <text x="310" y="345" fill="#FFB060" font-size="12" font-weight="bold">Château Cheval Blanc</text>
+  <text x="310" y="362" fill="#C08050" font-size="11">Château Figeac</text>
+  <text x="310" y="378" fill="#C08050" font-size="11">Château Pavie</text>
+
+  <text x="310" y="395" fill="#A07040" font-size="11">🍇 品種：Merlot + Cab. Franc</text>
+
+  <!-- Zone 3: Plaine (平原) -->
+  <rect x="540" y="82" width="220" height="310" rx="8" fill="#1A1808" stroke="#886620" stroke-width="1.5" filter="url(#sh5)"/>
+  <rect x="540" y="82" width="220" height="52" rx="8" fill="#4A4010"/>
+  <rect x="540" y="114" width="220" height="20" fill="#4A4010"/>
+  <text x="650" y="108" text-anchor="middle" fill="#FFE8A0" font-size="15" font-weight="bold">③ 平原（Plaine）</text>
+  <text x="650" y="126" text-anchor="middle" fill="#B8A848" font-size="11">砂礫平原 Plaine Sablonneuse-Graveleuse</text>
+
+  <!-- Flat terrain icon -->
+  <line x1="556" y1="148" x2="744" y2="148" stroke="#A09040" stroke-width="2.5"/>
+  <text x="560" y="162" fill="#B0A050" font-size="10">平坦地形 · 自然排水依賴土壤</text>
+
+  <text x="560" y="180" fill="#C0A840" font-size="12" font-weight="bold">🪨 土壤</text>
+  <text x="560" y="196" fill="#E8D880" font-size="11">砂土與礫石 · 較貧瘠</text>
+  <text x="560" y="211" fill="#E8D880" font-size="11">排水良好 · 保水性較低</text>
+
+  <text x="560" y="233" fill="#C0A840" font-size="12" font-weight="bold">🍷 典型風格</text>
+  <rect x="555" y="240" width="194" height="70" rx="4" fill="#0E0C04" stroke="#7A6820" stroke-width="0.8"/>
+  <text x="565" y="256" fill="#E8D870" font-size="11">• 果味直接 · 清新易飲</text>
+  <text x="565" y="272" fill="#E8D870" font-size="11">• 紅色果實 · 花香</text>
+  <text x="565" y="288" fill="#E8D870" font-size="11">• 單寧較柔和</text>
+  <text x="565" y="304" fill="#E8D870" font-size="11">• 適合早期飲用</text>
+
+  <text x="560" y="328" fill="#C0A840" font-size="12" font-weight="bold">🏰 代表酒莊</text>
+  <text x="560" y="345" fill="#E8C860" font-size="12" font-weight="bold">La Conseillante 附近</text>
+  <text x="560" y="362" fill="#A89840" font-size="11">Saint-Émilion AOC 通用級</text>
+  <text x="560" y="378" fill="#A89840" font-size="11">各品質層級的 Grand Cru</text>
+
+  <text x="560" y="395" fill="#907820" font-size="11">🍇 品種：Merlot 主導</text>
+
+  <!-- Bottom section: Classification system teaser -->
+  <rect x="40" y="407" width="720" height="115" rx="8" fill="#100E08" stroke="#C0952C" stroke-width="1" stroke-opacity="0.5" filter="url(#sh5)"/>
+  <text x="400" y="432" text-anchor="middle" fill="#C0952C" font-size="15" font-weight="bold">Saint-Émilion 動態分級制度（每 10 年重新評審）</text>
+  <line x1="60" y1="440" x2="740" y2="440" stroke="#C0952C" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Classification tiers in a row -->
+  <rect x="55" y="450" width="155" height="55" rx="5" fill="#3A2808" stroke="#C0952C" stroke-width="1.5"/>
+  <text x="132" y="471" text-anchor="middle" fill="#FFD700" font-size="12" font-weight="bold">A 級</text>
+  <text x="132" y="487" text-anchor="middle" fill="#FFD700" font-size="11">Premiers Grands Crus</text>
+  <text x="132" y="500" text-anchor="middle" fill="#FFB030" font-size="11">Classés A（2 座）</text>
+
+  <text x="238" y="480" text-anchor="middle" fill="#C0952C" font-size="20">→</text>
+
+  <rect x="255" y="450" width="155" height="55" rx="5" fill="#2A2008" stroke="#A07830" stroke-width="1"/>
+  <text x="332" y="471" text-anchor="middle" fill="#D4A840" font-size="12" font-weight="bold">B 級</text>
+  <text x="332" y="487" text-anchor="middle" fill="#D4A840" font-size="11">Premiers Grands Crus</text>
+  <text x="332" y="500" text-anchor="middle" fill="#C09030" font-size="11">Classés B（約 11–13 座）</text>
+
+  <text x="438" y="480" text-anchor="middle" fill="#C0952C" font-size="20">→</text>
+
+  <rect x="455" y="450" width="130" height="55" rx="5" fill="#201C10" stroke="#806040" stroke-width="1"/>
+  <text x="520" y="471" text-anchor="middle" fill="#B09060" font-size="12" font-weight="bold">列級莊</text>
+  <text x="520" y="487" text-anchor="middle" fill="#B09060" font-size="11">Grand Cru Classé</text>
+  <text x="520" y="500" text-anchor="middle" fill="#907040" font-size="11">（約 64–82 座）</text>
+
+  <text x="608" y="480" text-anchor="middle" fill="#C0952C" font-size="20">→</text>
+
+  <rect x="620" y="450" width="135" height="55" rx="5" fill="#181410" stroke="#606040" stroke-width="1"/>
+  <text x="688" y="471" text-anchor="middle" fill="#909080" font-size="12" font-weight="bold">通用</text>
+  <text x="688" y="487" text-anchor="middle" fill="#909080" font-size="11">Saint-Émilion</text>
+  <text x="688" y="500" text-anchor="middle" fill="#707060" font-size="11">Grand Cru AOC</text>
+
+  <!-- Bottom note -->
+  <line x1="40" y1="532" x2="760" y2="532" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="550" text-anchor="middle" fill="#706050" font-size="11">* Château Ausone（高地）與 Château Cheval Blanc（坡地）為僅有的兩座 A 級莊，代表兩種截然不同的風土</text>
+  <text x="400" y="566" text-anchor="middle" fill="#504030" font-size="11">Saint-Émilion 分級每 10 年重新評審 · 是波爾多唯一的動態分級制度</text>
+</svg>

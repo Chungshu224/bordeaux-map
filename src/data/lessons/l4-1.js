@@ -13,6 +13,7 @@ export const l41Content = [
         <p class="intro-lead">
           在Level 3中，我們學習了波爾多不同產區的風土特色。但即使在同一個酒莊內，不同地塊也可能因為<strong>坡度差1-2度、土壤深度差20公分、或排水狀況略有不同</strong>，而產生截然不同的葡萄品質。
         </p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L4-1/01%20高階風土微地塊精準分析.svg" alt="高階風土微地塊精準分析四維度與土壤剖面運作" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
         
         <div class="comparison-box">
           <div class="before">

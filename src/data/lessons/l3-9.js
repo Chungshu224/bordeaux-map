@@ -11,6 +11,7 @@ export const l39Content = [
         <p class="intro-lead">
           波爾多葡萄酒業不僅是釀造藝術的典範，更是成功商業模式的代表。從期酒（En Primeur）系統創造的市場流動性，到列級莊品牌的百年價值積累，從傳統經銷網絡到電商直銷創新，波爾多建構了一個獨特而複雜的商業生態系統。
         </p>
+        <div class="lesson-image" style="margin: 20px 0; text-align: center;"><img src="/images/L3-9/01%20波爾多商業生態與期酒制度.svg" alt="波爾多商業生態系統價值鏈與期酒運作機制" style="max-width: 100%; height: auto; border-radius: 8px;" /></div>
 
         <p class="intro-context">
           本課程將深入分析這個生態系統的運作邏輯，探討市場定位策略、品牌建立方法、國際市場拓展，以及數位化時代的商業創新。從 Château Lafite 如何在中國市場建立奢侈品地位，到中小酒莊如何透過數位行銷找到利基市場，您將全面掌握葡萄酒產業的商業智慧。

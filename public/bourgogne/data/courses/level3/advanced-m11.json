@@ -416,6 +416,13 @@
           ]
         },
         {
+          "type": "slide-image",
+          "title": "自然動力曆法 (Biodynamic Calendar)",
+          "imageUrl": "/bourgogne/images/Lesson/biodynamic-calendar.svg",
+          "altText": "自然動力曆法圖解：展示果、根、葉、花四種節律，以及對應的元素、農事操作和月相影響。",
+          "caption": "Maria Thun農事曆基於月亮運行至不同黃道星座的位置制定。配合月圓、新月的地球能量升降（向心或離心），指導葡萄園與酒窖中的精確操作時間。"
+        },
+        {
           "type": "comparison",
           "title": "滿月 vs 新月",
           "leftTitle": "滿月（Full Moon）",

@@ -606,6 +606,13 @@
           "content": "攪桶是指用木棒攪拌桶底酒泥，讓酒泥重新懸浮，增加與酒液的接觸。傳統上每週攪桶一次，持續6-12個月。現代生產者更謹慎，過度攪桶會降低新鮮度和礦物感。Coche-Dury在前6個月每週攪桶，之後停止讓酒液靜置。"
         },
         {
+          "type": "slide-image",
+          "title": "橡木桶泡渣與攪桶作用剖面",
+          "imageUrl": "/bourgogne/images/Lesson/sur-lie-batonnage-profile.svg",
+          "altText": "橡木桶泡渣與攪桶作用剖面圖：展現酵母自溶與攪桶物理機制的立體切面圖。",
+          "caption": "酵母自溶（Autolysis）釋放甘露糖蛋白與胺基酸，大幅提升酒體圓潤度並帶來堅果香氣。攪桶（Bâtonnage）促使酒泥懸浮，增強與酒液接觸面積且提供強大的抗氧化保護。"
+        },
+        {
           "type": "comparison",
           "title": "多攪桶 vs 少攪桶",
           "leftTitle": "頻繁攪桶",

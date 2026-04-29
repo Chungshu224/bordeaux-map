@@ -61,6 +61,9 @@ export const l29Content = [
             </ul>
           </div>
         </div>
+        <div class="lesson-image" style="margin: 24px 0; text-align: center;">
+          <img src="/images/L2-9/01%20四大名村風格對比雷達圖.svg" alt="四大名村風格對比雷達圖" style="max-width: 100%; height: auto; border-radius: 8px;" />
+        </div>
       </div>
     `,
     quiz: {

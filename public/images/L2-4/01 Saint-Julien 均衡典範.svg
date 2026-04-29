@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bgSJ" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0c14"/>
+      <stop offset="100%" stop-color="#10121e"/>
+    </linearGradient>
+    <filter id="shSJ"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgSJ)"/>
+  <line x1="40" y1="68" x2="760" y2="68" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <text x="400" y="40" text-anchor="middle" fill="#C0952C" font-size="21" font-weight="bold">Saint-Julien　均衡典範</text>
+  <text x="400" y="60" text-anchor="middle" fill="#9A7040" font-size="12">Médoc 的「均衡典範」· 砂礫與黏土完美配比 · 穩定高品質</text>
+
+  <!-- Center balance visualization -->
+  <rect x="40" y="82" width="720" height="100" rx="8" fill="#0E1018" stroke="#4466AA" stroke-width="1.5" filter="url(#shSJ)"/>
+  <text x="400" y="108" text-anchor="middle" fill="#88AAFF" font-size="15" font-weight="bold">⚖️ 為何稱「均衡典範」？</text>
+
+  <!-- Balance scale visual -->
+  <line x1="400" y1="115" x2="400" y2="135" stroke="#8888CC" stroke-width="2"/>
+  <line x1="240" y1="135" x2="560" y2="135" stroke="#8888CC" stroke-width="2.5"/>
+  <!-- Left pan -->
+  <line x1="268" y1="135" x2="250" y2="158" stroke="#6688CC" stroke-width="1.5"/>
+  <rect x="220" y="158" width="60" height="18" rx="4" fill="#2A3868" stroke="#4466AA" stroke-width="1"/>
+  <text x="250" y="171" text-anchor="middle" fill="#A0C0FF" font-size="10">砂礫 45%</text>
+  <!-- Right pan -->
+  <line x1="532" y1="135" x2="550" y2="158" stroke="#6688CC" stroke-width="1.5"/>
+  <rect x="520" y="158" width="60" height="18" rx="4" fill="#2A3868" stroke="#4466AA" stroke-width="1"/>
+  <text x="550" y="171" text-anchor="middle" fill="#A0C0FF" font-size="10">黏土 30%</text>
+  <text x="400" y="163" text-anchor="middle" fill="#6680CC" font-size="11">完美平衡</text>
+
+  <!-- Two columns below -->
+  <rect x="40" y="196" width="350" height="200" rx="8" fill="#0E1018" stroke="#4466AA" stroke-width="1.5" filter="url(#shSJ)"/>
+  <rect x="40" y="196" width="350" height="48" rx="8" fill="#1E3060"/>
+  <rect x="40" y="224" width="350" height="20" fill="#1E3060"/>
+  <text x="215" y="220" text-anchor="middle" fill="#C0D8FF" font-size="15" font-weight="bold">🍷 風格特徵</text>
+
+  <text x="60" y="260" fill="#88AAFF" font-size="12" font-weight="bold">香氣</text>
+  <text x="60" y="276" fill="#C0D0F0" font-size="11">黑醋栗 · 黑莓 · 紫羅蘭</text>
+  <text x="60" y="292" fill="#C0D0F0" font-size="11">雪松 · 香料 · 煙燻</text>
+  <text x="60" y="316" fill="#88AAFF" font-size="12" font-weight="bold">口感</text>
+  <text x="60" y="332" fill="#C0D0F0" font-size="11">中至飽滿酒體 · 成熟圓潤單寧</text>
+  <text x="60" y="348" fill="#C0D0F0" font-size="11">完美酸度 · 悠長尾韻</text>
+  <text x="60" y="372" fill="#88AAFF" font-size="12" font-weight="bold">陳年</text>
+  <text x="60" y="388" fill="#C0D0F0" font-size="11">頂級莊 15–30 年 · 普遍比 Pauillac</text>
+  <text x="60" y="403" fill="#C0D0F0" font-size="11">更早開放，比 Margaux 更耐久</text>
+
+  <rect x="410" y="196" width="350" height="200" rx="8" fill="#0E1018" stroke="#4466AA" stroke-width="1.5" filter="url(#shSJ)"/>
+  <rect x="410" y="196" width="350" height="48" rx="8" fill="#1E3060"/>
+  <rect x="410" y="224" width="350" height="20" fill="#1E3060"/>
+  <text x="585" y="220" text-anchor="middle" fill="#C0D8FF" font-size="15" font-weight="bold">🏰 主要列級酒莊</text>
+
+  <text x="430" y="260" fill="#D4A840" font-size="13" font-weight="bold">Château Léoville Las Cases　二級</text>
+  <text x="430" y="276" fill="#C0A060" font-size="11">被譽為「最偉大的二級莊」· 接近一級水準</text>
+  <text x="430" y="300" fill="#D4A840" font-size="13" font-weight="bold">Château Léoville Barton　二級</text>
+  <text x="430" y="316" fill="#C0A060" font-size="11">家族自釀 · CP 值最高的名莊之一</text>
+  <text x="430" y="340" fill="#D4A840" font-size="13" font-weight="bold">Château Ducru-Beaucaillou　二級</text>
+  <text x="430" y="356" fill="#C0A060" font-size="11">優雅而精緻 · 砂礫最深厚</text>
+  <text x="430" y="380" fill="#B09050" font-size="12">另有：Gruaud Larose · Talbot（四級）</text>
+  <text x="430" y="396" fill="#B09050" font-size="12">Beychevelle · Branaire-Ducru（四級）</text>
+
+  <!-- Bottom info bar -->
+  <rect x="40" y="410" width="720" height="65" rx="8" fill="#0A0C14" stroke="#4466AA" stroke-width="1" stroke-opacity="0.4" filter="url(#shSJ)"/>
+  <text x="400" y="434" text-anchor="middle" fill="#8899CC" font-size="13" font-weight="bold">Saint-Julien AOC 產區基本資訊</text>
+  <line x1="60" y1="440" x2="740" y2="440" stroke="#4466AA" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="160" y="460" text-anchor="middle" fill="#8899BB" font-size="12" font-weight="bold">面積</text>
+  <text x="160" y="474" text-anchor="middle" fill="#C0D0F0" font-size="12">910 公頃</text>
+  <line x1="270" y1="446" x2="270" y2="468" stroke="#2A3860" stroke-width="1"/>
+  <text x="360" y="460" text-anchor="middle" fill="#8899BB" font-size="12" font-weight="bold">列級莊</text>
+  <text x="360" y="474" text-anchor="middle" fill="#C0D0F0" font-size="12">11 座（全部二~四級）</text>
+  <line x1="480" y1="446" x2="480" y2="468" stroke="#2A3860" stroke-width="1"/>
+  <text x="570" y="460" text-anchor="middle" fill="#8899BB" font-size="12" font-weight="bold">特點</text>
+  <text x="570" y="474" text-anchor="middle" fill="#C0D0F0" font-size="12">無一級莊，但品質最穩定均一</text>
+  <line x1="670" y1="446" x2="670" y2="468" stroke="#2A3860" stroke-width="1"/>
+  <text x="720" y="460" text-anchor="middle" fill="#C0952C" font-size="13" font-weight="bold">100%</text>
+  <text x="720" y="474" text-anchor="middle" fill="#907840" font-size="11">均衡指標</text>
+
+  <!-- Bottom note -->
+  <line x1="40" y1="486" x2="760" y2="486" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="503" text-anchor="middle" fill="#706050" font-size="11">* Saint-Julien 雖無一級莊，卻擁有六座二級莊，整體品質均一度是 Médoc 四大名村中最高的</text>
+  <text x="400" y="516" text-anchor="middle" fill="#504030" font-size="11">夾在 Pauillac（力量）與 Margaux（優雅）之間，Saint-Julien 完美融合了兩者的優點</text>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#0f0f13" />
+    </linearGradient>
+
+    <filter id="glow"><feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ffffff" flood-opacity="0.3"/></filter>
+    <filter id="shadow"><feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/></filter>
+    
+    <!-- Legend Colours -->
+    <!-- Burgundy: Red -->
+    <linearGradient id="burgundyGrad"><stop offset="0%" stop-color="#ef4444" stop-opacity="0.2"/><stop offset="100%" stop-color="#b91c1c" stop-opacity="0.4"/></linearGradient>
+    <!-- Oregon: Green -->
+    <linearGradient id="oregonGrad"><stop offset="0%" stop-color="#22c55e" stop-opacity="0.2"/><stop offset="100%" stop-color="#166534" stop-opacity="0.4"/></linearGradient>
+    <!-- Central Otago: Purple -->
+    <linearGradient id="otagoGrad"><stop offset="0%" stop-color="#a855f7" stop-opacity="0.2"/><stop offset="100%" stop-color="#6b21a8" stop-opacity="0.4"/></linearGradient>
+    <!-- Germany (Ahr/Baden): Yellow/Gold -->
+    <linearGradient id="germanyGrad"><stop offset="0%" stop-color="#eab308" stop-opacity="0.2"/><stop offset="100%" stop-color="#854d0e" stop-opacity="0.4"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="45" text-anchor="middle" fill="#f8fafc" font-size="28" font-weight="bold" letter-spacing="2">全球頂級黑皮諾風土雷達圖</text>
+  <text x="400" y="70" text-anchor="middle" fill="#9ca3b8" font-size="14">Global Pinot Noir Style Radar</text>
+
+  <!-- Central Radar Chart -->
+  <!-- Dimensions: cx=320, cy=330, R=180 -->
+  <!-- 5 Axes (Angles): 0(top), 72(right), 144(bottom right), 216(bottom left), 288(left) -->
+  <g transform="translate(350, 330)">
+    <!-- Base grid (Concentric pentagons) -->
+    <g stroke="#334155" stroke-width="1.5" fill="none">
+      <!-- 20% -->
+      <polygon points="0,-36 34.2,-11.1 21.2,29.1 -21.2,29.1 -34.2,-11.1" />
+      <!-- 40% -->
+      <polygon points="0,-72 68.5,-22.2 42.3,58.2 -42.3,58.2 -68.5,-22.2" />
+      <!-- 60% -->
+      <polygon points="0,-108 102.7,-33.4 63.5,87.4 -63.5,87.4 -102.7,-33.4" />
+      <!-- 80% -->
+      <polygon points="0,-144 137,-44.5 84.6,116.5 -84.6,116.5 -137,-44.5" />
+      <!-- 100% -->
+      <polygon points="0,-180 171.2,-55.6 105.8,145.6 -105.8,145.6 -171.2,-55.6" />
+    </g>
+
+    <!-- Axis Lines -->
+    <g stroke="#475569" stroke-width="2">
+      <line x1="0" y1="0" x2="0" y2="-180" /> <!-- Acid/Structure (Top) -->
+      <line x1="0" y1="0" x2="171.2" y2="-55.6" /> <!-- Fruit Purity (Right) -->
+      <line x1="0" y1="0" x2="105.8" y2="145.6" /> <!-- Body/Weight (Bottom Right) -->
+      <line x1="0" y1="0" x2="-105.8" y2="145.6" /> <!-- Aging Pot. (Bottom Left) -->
+      <line x1="0" y1="0" x2="-171.2" y2="-55.6" /> <!-- Earth/Minerality (Left) -->
+    </g>
+
+    <!-- Axis Labels -->
+    <text x="0" y="-195" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">酸度骨架 (Acidity &amp; Structure)</text>
+    <text x="180" y="-60" text-anchor="start" fill="#f8fafc" font-size="14" font-weight="bold">果香純粹度 (Fruit Purity)</text>
+    <text x="110" y="165" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">酒體重量 (Body &amp; Weight)</text>
+    <text x="-110" y="165" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">陳年潛力 (Aging Potential)</text>
+    <text x="-180" y="-60" text-anchor="end" fill="#f8fafc" font-size="14" font-weight="bold">泥土/礦石感 (Earth &amp; Mineral)</text>
+
+    <!-- Data: Burgundy (100, 70, 70, 95, 100) -->
+    <polygon points="0,-180 119.8,-38.9 74,101.9 -100.5,138.3 -171.2,-55.6" fill="url(#burgundyGrad)" stroke="#ef4444" stroke-width="2.5" />
+    
+    <!-- Data: Oregon (85, 80, 80, 75, 85) -->
+    <polygon points="0,-153 136.9,-44.5 84.6,116.5 -79.3,109.2 -145.5,-47.3" fill="url(#oregonGrad)" stroke="#22c55e" stroke-width="2.5" />
+
+    <!-- Data: Central Otago (70, 100, 90, 70, 60) -->
+    <polygon points="0,-126 171.2,-55.6 95.2,131 -74,101.9 -102.7,-33.4" fill="url(#otagoGrad)" stroke="#a855f7" stroke-width="2.5" />
+
+    <!-- Data: Germany/Spätburgunder (80, 75, 75, 70, 80) -->
+    <!-- (144*0.8, 171*0.75...) -->
+    <!-- y1=-144, x2=128,-41.7, x3=79,109, x4=-74,101.9, x5=-136,-44.5 -->
+    <polygon points="0,-144 128.4,-41.7 79.3,109.2 -74,101.9 -136.9,-44.5" fill="none" stroke="#eab308" stroke-width="2" stroke-dasharray="6,4" />
+
+  </g>
+
+  <!-- Legend sidebar -->
+  <g transform="translate(620, 150)">
+    <rect x="0" y="0" width="160" height="260" rx="8" fill="#1e293b" stroke="#334155" filter="url(#shadow)"/>
+    <text x="15" y="30" fill="#f8fafc" font-size="16" font-weight="bold">產區圖例</text>
+    
+    <rect x="15" y="55" width="20" height="20" fill="#ef4444" opacity="0.6" stroke="#ef4444"/>
+    <text x="45" y="70" fill="#fca5a5" font-size="14" font-weight="bold">法國 布根地</text>
+    <text x="45" y="85" fill="#9ca3af" font-size="11">最高陳年與礦石感</text>
+
+    <rect x="15" y="115" width="20" height="20" fill="#22c55e" opacity="0.6" stroke="#22c55e"/>
+    <text x="45" y="130" fill="#86efac" font-size="14" font-weight="bold">美國 俄勒岡</text>
+    <text x="45" y="145" fill="#9ca3af" font-size="11">紅色漿果、泥土氣息</text>
+
+    <rect x="15" y="175" width="20" height="20" fill="#a855f7" opacity="0.6" stroke="#a855f7"/>
+    <text x="45" y="190" fill="#d8b4fe" font-size="14" font-weight="bold">紐西蘭 中奧塔哥</text>
+    <text x="45" y="205" fill="#9ca3af" font-size="11">甜美純粹、酒體豐滿</text>
+
+    <line x1="15" y1="245" x2="35" y2="245" stroke="#eab308" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="45" y="250" fill="#fde047" font-size="14" font-weight="bold">德國 (Ahr/Baden)</text>
+  </g>
+
+  <!-- Insight Bottom -->
+  <g transform="translate(40, 520)">
+    <rect x="0" y="0" width="720" height="50" rx="6" fill="#09090b" stroke="#334155" stroke-width="1"/>
+    <text x="360" y="25" text-anchor="middle" fill="#e2e8f0" font-size="13">💡 <tspan fill="#38bdf8" font-weight="bold">大師盲品秘訣：</tspan>布根地往往在「酸度」與「泥土礦石感」拉到極值；而中奧塔哥則在「果香純度」與「酒體」上最為突出。</text>
+    <text x="360" y="42" text-anchor="middle" fill="#9ca3af" font-size="12">俄勒岡常被認為處於布根地與加州之間的完美平衡點，德國則擁有獨特的香料與辛香特徵。</text>
+  </g>
+
+</svg>

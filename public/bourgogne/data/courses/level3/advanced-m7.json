@@ -69,6 +69,13 @@
           ]
         },
         {
+          "type": "slide-image",
+          "title": "布根地商業生態金字塔",
+          "imageUrl": "/bourgogne/images/Lesson/burgundy-business-pyramid.svg",
+          "altText": "布根地商業生態金字塔：顯示酒莊、微型酒商、大型酒商與釀酒合作社的市場結構。",
+          "caption": "布根地產業高度依賴分工。金字塔底層為釀酒合作社（產量大）；中層為大型酒商（Négociant，掌控市場通路）；中高層為專注風土的微型酒商（Micro-Négociant）；頂端則是自有葡萄園的獨立酒莊（Domaine），產量極少、利潤與品牌價值最高。"
+        },
+        {
           "type": "comparison",
           "title": "布根地 vs 波爾多市場",
           "leftTitle": "布根地",

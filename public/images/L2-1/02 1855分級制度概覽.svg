@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="'Microsoft YaHei','PingFang TC','Noto Sans CJK TC',sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#120a06"/>
+      <stop offset="100%" stop-color="#1e1008"/>
+    </linearGradient>
+    <filter id="sh"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <line x1="60" y1="68" x2="740" y2="68" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" fill="#C0952C" font-size="22" font-weight="bold" letter-spacing="1">1855 列級酒莊分級制度</text>
+  <text x="400" y="62" text-anchor="middle" fill="#9A7040" font-size="12">The 1855 Médoc Classification · 61 Châteaux · 5 Tiers</text>
+
+  <!-- 1er Grand Cru Classé -->
+  <rect x="80" y="85" width="640" height="82" rx="6" fill="#7A0E0E" filter="url(#sh)"/>
+  <rect x="80" y="85" width="6" height="82" rx="3" fill="#FFD700"/>
+  <text x="105" y="113" fill="#FFD700" font-size="15" font-weight="bold">1er Grand Cru Classé　　第一級列級酒莊</text>
+  <text x="105" y="134" fill="#FFECAA" font-size="12">Château Lafite Rothschild（Pauillac）　Château Latour（Pauillac）</text>
+  <text x="105" y="152" fill="#FFECAA" font-size="12">Château Margaux（Margaux）　Château Mouton Rothschild（Pauillac, 1973升一）　Château Haut-Brion（Pessac）</text>
+  <text x="700" y="140" text-anchor="end" fill="#D4A030" font-size="28" font-weight="bold">5</text>
+  <text x="700" y="157" text-anchor="end" fill="#A08020" font-size="11">座</text>
+
+  <!-- 2ème Grand Cru Classé -->
+  <rect x="80" y="178" width="640" height="72" rx="6" fill="#6A1818" filter="url(#sh)"/>
+  <rect x="80" y="178" width="6" height="72" rx="3" fill="#C0952C"/>
+  <text x="105" y="204" fill="#D4A840" font-size="15" font-weight="bold">2ème Grand Cru Classé　　第二級列級酒莊</text>
+  <text x="105" y="225" fill="#E8C888" font-size="12">Rauzan-Ségla · Rauzan-Gassies · Léoville Las Cases · Léoville Poyferré · Léoville Barton</text>
+  <text x="105" y="241" fill="#E8C888" font-size="12">Cos d'Estournel · Montrose · Ducru-Beaucaillou · Gruaud Larose · Brane-Cantenac · Pichon Baron · Pichon Lalande · Durfort-Vivens · Lascombes</text>
+  <text x="700" y="228" text-anchor="end" fill="#C0952C" font-size="28" font-weight="bold">14</text>
+  <text x="700" y="245" text-anchor="end" fill="#906020" font-size="11">座</text>
+
+  <!-- 3ème Grand Cru Classé -->
+  <rect x="80" y="261" width="640" height="68" rx="6" fill="#5A2020" filter="url(#sh)"/>
+  <rect x="80" y="261" width="6" height="68" rx="3" fill="#A08060"/>
+  <text x="105" y="286" fill="#C8A868" font-size="15" font-weight="bold">3ème Grand Cru Classé　　第三級列級酒莊</text>
+  <text x="105" y="307" fill="#D8C090" font-size="12">Kirwan · d'Issan · Lagrange · Langoa Barton · Giscours · Malescot St-Exupéry · Cantenac Brown · Palmer</text>
+  <text x="105" y="323" fill="#D8C090" font-size="12">La Lagune · Desmirail · Calon-Ségur · Ferrière · Marquis d'Alesme Becker</text>
+  <text x="700" y="308" text-anchor="end" fill="#A08060" font-size="28" font-weight="bold">14</text>
+  <text x="700" y="325" text-anchor="end" fill="#806040" font-size="11">座</text>
+
+  <!-- 4ème Grand Cru Classé -->
+  <rect x="80" y="340" width="640" height="65" rx="6" fill="#4A2828" filter="url(#sh)"/>
+  <rect x="80" y="340" width="6" height="65" rx="3" fill="#808080"/>
+  <text x="105" y="365" fill="#B0A080" font-size="15" font-weight="bold">4ème Grand Cru Classé　　第四級列級酒莊</text>
+  <text x="105" y="386" fill="#C8B898" font-size="12">St-Pierre · Talbot · Branaire-Ducru · Duhart-Milon · Pouget · La Tour Carnet</text>
+  <text x="105" y="400" fill="#C8B898" font-size="12">Lafon-Rochet · Beychevelle · Prieuré-Lichine · Marquis de Terme</text>
+  <text x="700" y="387" text-anchor="end" fill="#808080" font-size="28" font-weight="bold">10</text>
+  <text x="700" y="404" text-anchor="end" fill="#606060" font-size="11">座</text>
+
+  <!-- 5ème Grand Cru Classé -->
+  <rect x="80" y="416" width="640" height="68" rx="6" fill="#3A3030" filter="url(#sh)"/>
+  <rect x="80" y="416" width="6" height="68" rx="3" fill="#707080"/>
+  <text x="105" y="441" fill="#A0A0B0" font-size="15" font-weight="bold">5ème Grand Cru Classé　　第五級列級酒莊</text>
+  <text x="105" y="462" fill="#B8B8C0" font-size="12">Pontet-Canet · Batailley · Haut-Batailley · Grand-Puy-Lacoste · Lynch-Bages · Mouton Baronne Philippe</text>
+  <text x="105" y="478" fill="#B8B8C0" font-size="12">du Tertre · Haut-Bages Libéral · Pédesclaux · Belgrave · de Camensac · Cos Labory · Clerc Milon · Croizet-Bages</text>
+  <text x="700" y="462" text-anchor="end" fill="#707080" font-size="28" font-weight="bold">18</text>
+  <text x="700" y="479" text-anchor="end" fill="#505060" font-size="11">座</text>
+
+  <!-- Stats row -->
+  <rect x="80" y="500" width="640" height="52" rx="6" fill="#1e1608" stroke="#C0952C" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="152" y="522" text-anchor="middle" fill="#C0952C" font-size="13" font-weight="bold">創立年份</text>
+  <text x="152" y="540" text-anchor="middle" fill="#E8D8A8" font-size="15" font-weight="bold">1855</text>
+  <line x1="215" y1="508" x2="215" y2="544" stroke="#C0952C" stroke-width="0.5" opacity="0.4"/>
+  <text x="290" y="522" text-anchor="middle" fill="#C0952C" font-size="13" font-weight="bold">涵蓋產區</text>
+  <text x="290" y="540" text-anchor="middle" fill="#E8D8A8" font-size="13">Médoc + Pessac</text>
+  <line x1="375" y1="508" x2="375" y2="544" stroke="#C0952C" stroke-width="0.5" opacity="0.4"/>
+  <text x="448" y="522" text-anchor="middle" fill="#C0952C" font-size="13" font-weight="bold">總莊數</text>
+  <text x="448" y="540" text-anchor="middle" fill="#FFD700" font-size="15" font-weight="bold">61 座</text>
+  <line x1="520" y1="508" x2="520" y2="544" stroke="#C0952C" stroke-width="0.5" opacity="0.4"/>
+  <text x="610" y="522" text-anchor="middle" fill="#C0952C" font-size="13" font-weight="bold">唯一升級</text>
+  <text x="610" y="540" text-anchor="middle" fill="#E8D8A8" font-size="12">Mouton Rothschild 1973</text>
+
+  <!-- Bottom note -->
+  <line x1="60" y1="567" x2="740" y2="567" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="584" text-anchor="middle" fill="#706050" font-size="11">* 分級基準為市場售價與歷史聲譽，1855年至今幾乎未變動，是全球最穩定的葡萄酒分級制度</text>
+</svg>

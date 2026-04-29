@@ -124,6 +124,12 @@
           ]
         },
         {
+          "type": "image",
+          "title": "Kimmeridgian 遠古海洋地層解剖",
+          "image": "/bourgogne/images/Lesson/chablis-kimmeridgian-soil.svg",
+          "caption": "夏布利地層結構：上方波特蘭階與下方富含大量牡蠣化石的啟莫里階(Kimmeridgian)"
+        },
+        {
           "type": "content",
           "title": "Kimmeridgian 土壤的魔力",
           "content": "這種獨特土壤如何影響夏布利的風味？",
