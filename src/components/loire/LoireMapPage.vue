@@ -40,6 +40,7 @@
           :is3D="is3D"
           :brgm-available="true"
           :brgm-enabled="brgmEnabled"
+          :hide-soil="true"
           @toggle-3d="toggle3D"
           @toggle-brgm="toggleBRGM(map)"
           @close="mobileLayersOpen = false"
