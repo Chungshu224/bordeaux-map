@@ -116,6 +116,7 @@ const mapReady = ref(false)
 const mapError = ref(null)
 const isLoading = ref(false)
 const is3D = ref(false)
+const activeAocBounds = ref(null)
 const infoBarCollapsed = ref(false)
 const mobileAocDrawerOpen = ref(false)
 const mobileLayersOpen = ref(false)
@@ -486,15 +487,17 @@ async function showAOCGeojson(group, aocFile) {
     try {
       const bbox = turf.bbox(geojson)
       activeAocBounds.value = { west: bbox[0], south: bbox[1], east: bbox[2], north: bbox[3] }
-      const cam = map.cameraForBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 60, maxZoom: 13 })
-      if (cam) {
-        map.flyTo({ ...cam, duration: 1000, essential: true })
-      } else {
-        const cx = (bbox[0] + bbox[2]) / 2
-        const cy = (bbox[1] + bbox[3]) / 2
-        const span = Math.max(bbox[2] - bbox[0], (bbox[3] - bbox[1]) * 1.5)
-        const zoom = Math.min(13, Math.max(6, Math.round(Math.log2(5 / span))))
-        map.flyTo({ center: [cx, cy], zoom, duration: 1000, essential: true })
+      if (!brgmEnabled.value) {
+        const cam = map.cameraForBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 60, maxZoom: 13 })
+        if (cam) {
+          map.flyTo({ ...cam, duration: 1000, essential: true })
+        } else {
+          const cx = (bbox[0] + bbox[2]) / 2
+          const cy = (bbox[1] + bbox[3]) / 2
+          const span = Math.max(bbox[2] - bbox[0], (bbox[3] - bbox[1]) * 1.5)
+          const zoom = Math.min(13, Math.max(6, Math.round(Math.log2(5 / span))))
+          map.flyTo({ center: [cx, cy], zoom, duration: 1000, essential: true })
+        }
       }
     } catch (e) { console.warn('camera move failed', e) }
   } catch (err) {
