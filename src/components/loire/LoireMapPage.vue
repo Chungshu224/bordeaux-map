@@ -450,9 +450,11 @@ async function highlightGroupOnMap(groupKey) {
 }
 
 // ── 顯示 GeoJSON ─────────────────────────────────────────────
+let showAOCRequestId = 0   // 防競態：每次呼叫給一個新 ID，舊的 fetch 完成後偵測 ID 是否仍是最新
 async function showAOCGeojson(group, aocFile) {
   if (!map) return
   const path = getGeojsonPath(group, aocFile)
+  const myId = ++showAOCRequestId  // 得到本次的序號
   isLoading.value = true
   mapError.value = null
   try {
@@ -465,6 +467,8 @@ async function showAOCGeojson(group, aocFile) {
       geojson = await res.json()
       geojsonCache.set(path, geojson)
     }
+    // 若已有更新的請求（使用者切換到其他產區），棄置本次結果
+    if (myId !== showAOCRequestId) return
     if (map.getLayer('loire-fill')) map.removeLayer('loire-fill')
     if (map.getLayer('loire-outline')) map.removeLayer('loire-outline')
     if (map.getSource('loire-aoc')) map.removeSource('loire-aoc')
@@ -562,7 +566,7 @@ async function initMap(retry = 0) {
       map.addControl(new mapboxgl.NavigationControl(), 'top-right')
       map.addControl(new mapboxgl.FullscreenControl(), 'top-right')
       mapReady.value = true
-      selectAOC('Regional', 'Loire-region.geojson')
+      // 不預先載入 137MB 的 Loire-region.geojson，由使用者選取產區後再載入
     })
     map.on('error', e => { mapError.value = `地圖錯誤: ${e.error?.message || ''}` })
   } catch (err) {
