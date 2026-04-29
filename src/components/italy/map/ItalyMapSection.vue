@@ -56,6 +56,20 @@
           @toggle-soil="toggleSoil"
           @close="showLayerPanel = false"
         />
+        <!-- ISPRA 地質圖層控制列（啟用時顯示）-->
+        <div v-if="soilEnabled" class="italy-geo-inline-panel">
+          <div class="italy-geo-inline-title">🇮🇹 ISPRA 地質圖</div>
+          <div class="italy-geo-inline-row">
+            <span class="italy-geo-inline-lbl">透明度</span>
+            <input class="italy-geo-inline-slider" type="range" min="0.05" max="0.85" step="0.05"
+              v-model.number="soilOpacity">
+            <span class="italy-geo-inline-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+          </div>
+          <div class="italy-geo-inline-footer">
+            <span>資料來源：ISPRA SGI (CC-BY 4.0)</span>
+            <span>點擊地圖查看地質資訊</span>
+          </div>
+        </div>
       </div>
     </transition>
 
@@ -547,11 +561,19 @@ async function loadGeologyLayer() {
     map.on('click', async (e) => {
       if (!soilEnabled.value) return
       const { lng, lat } = e.lngLat
-      // 點擊只限選取產區範圍內
+      // 點擊只限選取產區範圍內（支援 FeatureCollection 與單一 Feature）
       if (regionOutlineGeoJSON) {
         try {
           const pt = turf.point([lng, lat])
-          if (!turf.booleanPointInPolygon(pt, regionOutlineGeoJSON)) return
+          let inBounds = false
+          if (regionOutlineGeoJSON.type === 'FeatureCollection') {
+            inBounds = regionOutlineGeoJSON.features.some(f => {
+              try { return turf.booleanPointInPolygon(pt, f) } catch (_) { return false }
+            })
+          } else {
+            inBounds = turf.booleanPointInPolygon(pt, regionOutlineGeoJSON)
+          }
+          if (!inBounds) return
         } catch (_) { return }
       }
       let attrs = {}
