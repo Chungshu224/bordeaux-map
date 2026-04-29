@@ -507,9 +507,9 @@ async function loadGeologyLayer() {
       type: 'raster',
       tiles: [
         '/ispra/arcgis/services/servizi/litologica/MapServer/WMSServer' +
-        '?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=0' +
+        '?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=0' +
         '&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256' +
-        '&CRS=EPSG:3857&FORMAT=image/png&TRANSPARENT=TRUE&STYLES='
+        '&SRS=EPSG:3857&FORMAT=image/png&TRANSPARENT=TRUE&STYLES='
       ],
       tileSize: 256,
       ...(wmsBounds ? { bounds: wmsBounds } : {}),
