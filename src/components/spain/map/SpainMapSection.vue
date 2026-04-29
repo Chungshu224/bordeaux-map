@@ -1363,14 +1363,16 @@ function handleMobileAction(action) {
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.28);
   min-width: 260px;
-  background: linear-gradient(180deg, #2a1414 0%, #1a0c0c 100%);
+  background: linear-gradient(180deg, #1e3a2a 0%, #16291e 100%);
 }
 .geology-popup-wrap .mapboxgl-popup-close-button {
-  color: #ffd6cc;
+  color: #d4f5d4;
   font-size: 18px;
   padding: 4px 8px;
   right: 2px;
   top: 2px;
+  background: none;
+  border: none;
 }
 .geology-popup-wrap .mapboxgl-popup-close-button:hover {
   color: #fff;
@@ -2225,20 +2227,20 @@ function handleMobileAction(action) {
   border-bottom: 1px solid rgba(255,255,255,0.05);
   font-size: 13px;
 }
-.spain-geology-popup .geology-popup-label { color: #ffb6a8; min-width: 64px; }
+.spain-geology-popup .geology-popup-label { color: #a8d8a8; min-width: 64px; }
 .spain-geology-popup .geology-popup-val   { color: #fff; flex: 1; }
 .spain-geology-popup .geology-popup-wine-block {
   background: rgba(255,255,255,0.06);
   margin: 10px 12px 12px;
   padding: 10px 12px;
   border-radius: 8px;
-  border-left: 3px solid #c0392b;
+  border-left: 3px solid #6fbf73;
 }
 .spain-geology-popup .geology-popup-wine-title {
   font-weight: 700; font-size: 13px;
-  margin-bottom: 6px; color: #ffd6cc;
+  margin-bottom: 6px; color: #c8f0c8;
 }
 .spain-geology-popup .geology-popup-wine-text {
-  font-size: 12px; line-height: 1.6; color: #f5e8e8;
+  font-size: 12px; line-height: 1.6; color: #e8efe8;
 }
 </style>

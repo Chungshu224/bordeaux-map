@@ -1955,42 +1955,58 @@ function handleMobileAction(action) {
 
 /* ── CA 地質 Popup ──────────────────────────────────────────────── */
 :global(.ca-geology-popup-wrap .mapboxgl-popup-content) {
-  padding: 0; background: transparent; box-shadow: none; border-radius: 12px;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  min-width: 260px;
+  background: linear-gradient(180deg, #1e3a2a 0%, #16291e 100%);
+}
+:global(.ca-geology-popup-wrap .mapboxgl-popup-close-button) {
+  color: #d4f5d4; font-size: 18px;
+  top: 4px; right: 6px;
+  background: none; border: none;
 }
 :global(.ca-geo-popup) {
-  background: rgba(30, 10, 10, 0.96);
-  border: 1px solid rgba(200, 80, 80, 0.3);
-  border-radius: 12px;
-  padding: 14px 16px 10px;
-  color: #f0d8d8;
-  min-width: 220px; max-width: 320px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: #f5f1eb;
+  min-width: 240px; max-width: 340px;
   font-size: 0.85rem;
 }
 :global(.ca-geo-popup-header) {
-  font-size: 0.78rem; font-weight: 700; color: #f4b4b4;
-  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;
+  background: rgba(0,0,0,0.25);
+  padding: 10px 14px;
+  font-weight: 700; font-size: 14px;
+  color: #fff; letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-transform: none; margin-bottom: 0;
 }
 :global(.ca-geo-row) {
-  display: flex; gap: 8px; margin-bottom: 5px; line-height: 1.4;
+  display: flex; padding: 8px 14px; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 13px; margin-bottom: 0; line-height: 1.4;
 }
 :global(.ca-geo-label) {
-  font-size: 0.72rem; font-weight: 700; color: #e8b0b0;
-  min-width: 60px; flex-shrink: 0;
+  font-size: 13px; font-weight: normal; color: #a8d8a8;
+  min-width: 64px; flex-shrink: 0;
 }
-:global(.ca-geo-val) { color: #f5e0e0; font-size: 0.82rem; }
+:global(.ca-geo-val) { color: #fff; font-size: 13px; }
 :global(.ca-geo-wine-block) {
-  margin-top: 10px; padding: 10px 12px;
-  background: rgba(120, 20, 20, 0.4);
-  border-left: 3px solid #c0392b;
-  border-radius: 0 8px 8px 0;
+  margin: 10px 12px 12px; padding: 10px 12px;
+  background: rgba(255,255,255,0.06);
+  border-left: 3px solid #6fbf73;
+  border-radius: 8px;
 }
 :global(.ca-geo-wine-title) {
-  font-size: 0.8rem; font-weight: 700; color: #f4b4b4; margin-bottom: 5px;
+  font-size: 13px; font-weight: 700; color: #c8f0c8; margin-bottom: 6px;
 }
 :global(.ca-geo-wine-text) {
-  font-size: 0.78rem; line-height: 1.55; color: #e8c8c8;
+  font-size: 12px; line-height: 1.6; color: #e8efe8;
 }
 :global(.ca-geo-credit) {
-  margin-top: 8px; font-size: 0.68rem; color: #a06060; text-align: right;
+  margin: 4px 14px 10px; font-size: 10px; color: #6faf6f; text-align: right;
 }
 </style>
