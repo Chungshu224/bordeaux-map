@@ -25,35 +25,45 @@
     />
 
     <!-- 圖層面板 -->
-    <div v-if="showLayerPanel" class="layer-panel-wrapper">
-      <RegionMapLayerPanel
-        :is3D="is3D"
-        :show-contours="showContours"
-        :climate-enabled="climateEnabled"
-        :soil-disabled="false"
-        :soil-label="'BGR 土壤'"
-        :soil-enabled="showGeology"
-        @toggle-3d="toggle3D"
-        @toggle-contours="toggleContours"
-        @toggle-climate="toggleClimate"
-        @toggle-soil="toggleGeology"
-        @close="showLayerPanel = false"
-      />
-      <!-- BGR 土壤圖層控制列（啟用時顯示）-->
-      <div v-if="showGeology" class="de-soil-inline-panel">
-        <div class="de-soil-inline-title">🇩🇪 BGR BUEK200 土壤圖</div>
-        <div class="de-soil-inline-row">
-          <span class="de-soil-inline-lbl">透明度</span>
-          <input class="de-soil-inline-slider" type="range" min="0.1" max="1.0" step="0.05"
-            v-model.number="soilOpacity">
-          <span class="de-soil-inline-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+    <transition name="layer-panel">
+      <div v-if="showLayerPanel" class="layer-panel-wrapper">
+        <RegionMapLayerPanel
+          :is3D="is3D"
+          :show-contours="showContours"
+          :climate-enabled="climateEnabled"
+          :soil-disabled="false"
+          :soil-label="'BGR 土壤'"
+          :soil-enabled="showGeology"
+          @toggle-3d="toggle3D"
+          @toggle-contours="toggleContours"
+          @toggle-climate="toggleClimate"
+          @toggle-soil="toggleGeology"
+          @close="showLayerPanel = false"
+        />
+        <!-- 葡萄園圖層開關 -->
+        <div class="de-vine-inline-panel" :class="{ 'is-last': !showGeology }">
+          <button class="de-vine-btn" :class="{ active: showVineyards }" @click="toggleVineyards">
+            <span class="de-vine-icon">🍇</span>
+            <span class="de-vine-text">葡萄園地塊</span>
+            <span class="de-vine-dot" :class="{ on: showVineyards }"></span>
+          </button>
         </div>
-        <div class="de-soil-inline-footer">
-          <span>資料來源：BGR BÖK200 (CC-BY 4.0)</span>
-          <span>點擊地圖查看土壤資訊</span>
+        <!-- BGR 土壤透明度控制列（土壤圖層啟用時顯示）-->
+        <div v-if="showGeology" class="de-soil-inline-panel">
+          <div class="de-soil-inline-title">🇩🇪 BGR BUEK200 土壤圖</div>
+          <div class="de-soil-inline-row">
+            <span class="de-soil-inline-lbl">透明度</span>
+            <input class="de-soil-inline-slider" type="range" min="0.1" max="1.0" step="0.05"
+              v-model.number="soilOpacity">
+            <span class="de-soil-inline-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+          </div>
+          <div class="de-soil-inline-footer">
+            <span>資料來源：BGR BÖK200 (CC-BY 4.0)</span>
+            <span>點擊地圖查看土壤資訊</span>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
 
     <transition name="climate-slide">
       <div v-if="climateEnabled && climateData" class="climate-overlay">
@@ -98,41 +108,17 @@
       </div>
     </transition>
 
-    <!-- 底部工具列 (Bordeaux style: white card, warm colors) -->
-    <div v-if="mapReady" class="mobile-map-toolbar">
-      <button class="mobile-tool-btn" :class="{ active: showVineyards }" @click="toggleVineyards">
-        <span class="mobile-tool-icon">🍇</span>
-        <span>葡萄園</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: showGeology }" @click="toggleGeology" :disabled="isGeologyLoading">
-        <span class="mobile-tool-icon">{{ isGeologyLoading ? '⏳' : '🪨' }}</span>
-        <span>土壤</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: showLayerPanel }" @click="showLayerPanel = !showLayerPanel">
-        <span class="mobile-tool-icon">層</span>
-        <span>圖層</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggle3D">
-        <span class="mobile-tool-icon">3D</span>
-        <span>{{ is3D ? '2D' : '3D' }}</span>
-      </button>
-      <button class="mobile-tool-btn" :class="{ active: !infoCollapsed }" @click="infoCollapsed = !infoCollapsed">
-        <span class="mobile-tool-icon">資</span>
-        <span>資訊</span>
-      </button>
-    </div>
+    <!-- 底部工具列（共用元件）-->
+    <RegionMapMobileToolbar
+      v-if="mapReady"
+      :aoc-open="drawerOpen"
+      :layer-open="showLayerPanel"
+      :is3D="is3D"
+      :info-open="!infoCollapsed"
+      @action="handleMobileAction"
+    />
 
-    <!-- BGR 土壤圖浮動面板（右側） -->
-    <div v-if="showGeology" class="de-soil-float-panel">
-      <div class="de-soil-title">🌱 BGR BUEK200 土壤圖 1:200,000</div>
-      <div class="de-soil-row">
-        <span class="de-soil-label">透明度</span>
-        <input class="de-soil-slider" type="range" min="0.1" max="1.0" step="0.05"
-          v-model.number="soilOpacity">
-        <span class="de-soil-pct">{{ Math.round(soilOpacity * 100) }}%</span>
-      </div>
-      <div class="de-soil-hint">© BGR Bodenübersichtskarte 1:200,000 (CC-BY 4.0)</div>
-    </div>
+
 
     <div v-if="isLoading" class="loading-overlay">
       <div class="loading-spinner"></div>
@@ -169,6 +155,7 @@ const showContours = ref(false)
 const showVineyards = ref(true)
 const infoCollapsed = ref(true)
 const showLayerPanel = ref(false)
+const drawerOpen     = ref(false)
 const selectedVineyard = ref(null)
 const showGeology = ref(false)
 const isGeologyLoading = ref(false)
@@ -571,6 +558,12 @@ function toggleVineyards() {
   })
 }
 
+function handleMobileAction(action) {
+  if (action === 'layer') showLayerPanel.value = !showLayerPanel.value
+  else if (action === '3d') toggle3D()
+  else if (action === 'info') infoCollapsed.value = !infoCollapsed.value
+}
+
 function toggle3D() {
   is3D.value = !is3D.value
   if (!map) return
@@ -722,6 +715,8 @@ function addGeologyLayer() {
     soilClickRegistered = true
   }
 }
+
+watch(soilOpacity, (val) => {
   if (map && map.getLayer('bgr-soil-layer')) {
     map.setPaintProperty('bgr-soil-layer', 'raster-opacity', val)
   }
@@ -1290,107 +1285,53 @@ const unifiedInfo = computed(() => {
 
 /* ── Legend (removed, merged into toolbar) ── */
 
-/* ── Layer Panel ── */
-.mobile-layer-panel {
-  position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-  right: 16px;
-  z-index: 20;
-  background: rgba(252,248,244,0.98);
-  border-radius: 16px;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-  padding: 1rem;
-  min-width: 230px;
-  max-height: 60vh;
-  overflow-y: auto;
-  border: 1px solid rgba(139,0,0,0.1);
+/* ── 圖層面板過渡動畫 ── */
+.layer-panel-enter-active, .layer-panel-leave-active {
+  transition: opacity 0.18s, transform 0.18s;
 }
-.layers-panel-header {
-  display: flex; align-items: center; justify-content: space-between;
-  font-weight: 700; font-size: 0.95rem;
-  color: #6b1212;
-  margin-bottom: 0.75rem;
+.layer-panel-enter-from, .layer-panel-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(6px);
 }
-.layers-panel-close {
-  background: none; border: none; cursor: pointer;
-  font-size: 1rem; color: #666; padding: 2px;
-}
-.layer-group-label {
-  font-size: 0.72rem; text-transform: uppercase;
-  letter-spacing: 0.05em; color: #999;
-  margin-bottom: 0.5rem;
-}
-.layer-group-buttons { display: flex; flex-direction: column; gap: 6px; }
-.btn-layer {
-  display: flex; align-items: center; gap: 8px;
-  background: #f5f5f5; border: none;
-  border-radius: 10px; padding: 0.5rem 0.75rem;
-  cursor: pointer; font-size: 0.85rem;
-  transition: background 0.2s;
-}
-.btn-layer.active { background: #e8f5e9; }
-.btn-layer:hover { background: #eeeeee; }
-.lbtn-icon { font-size: 1rem; }
-.lbtn-text { flex: 1; font-weight: 500; }
-.lbtn-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: #ccc;
-}
-.lbtn-dot.on { background: #8B0000; }
 
-/* ── Bottom toolbar (Bordeaux style) ── */
-.mobile-map-toolbar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
-  z-index: 10;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 8px;
-  padding: 8px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-  width: min(94vw, 420px);
+/* ── 葡萄園圖層內嵌開關（圖層面板中段）── */
+.de-vine-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  padding: 8px 10px;
+  width: min(320px, calc(100vw - 32px));
 }
-.mobile-tool-btn {
-  border-radius: 16px;
-  background: linear-gradient(180deg, #faf5ef 0%, #f1e7dd 100%);
-  color: #4f3422;
-  min-height: 54px;
+.de-vine-inline-panel.is-last {
+  border-radius: 0 0 16px 16px;
+}
+.de-vine-btn {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 3px;
-  font-size: 0.76rem;
-  font-weight: 800;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-  border: none;
+  gap: 6px;
+  background: #f7f7f7;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  padding: 9px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
   cursor: pointer;
-  transition: all 0.2s;
+  width: 100%;
+  transition: all 0.15s;
 }
-.mobile-tool-btn:hover { background: linear-gradient(180deg, #f5ede0 0%, #eadcc8 100%); }
-.mobile-tool-btn.active {
-  background: linear-gradient(180deg, #7b2424 0%, #5f1717 100%);
-  color: #fff;
+.de-vine-btn:hover:not(.active) { background: #efefef; border-color: #ddd; }
+.de-vine-btn.active {
+  background: #fff8e1;
+  border-color: #d4af37;
+  color: #8b6f1c;
 }
-.mobile-tool-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-.mobile-tool-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px; height: 30px;
-  border-radius: 50%;
-  background: rgba(107,31,31,0.08);
-  font-size: 0.8rem;
-  font-weight: 800;
+.de-vine-icon { font-size: 14px; }
+.de-vine-text { flex: 1; text-align: left; }
+.de-vine-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #ccc; flex-shrink: 0;
 }
-.mobile-tool-btn.active .mobile-tool-icon { background: rgba(255,255,255,0.18); }
+.de-vine-dot.on { background: #43a047; }
 
 /* ── Geology WMS ── */
 .geology-error-msg {
