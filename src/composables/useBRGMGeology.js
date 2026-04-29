@@ -171,11 +171,19 @@ export function useBRGMGeology() {
         if (!brgmEnabled.value) return
         if (map.getLayoutProperty('brgm-geology-layer', 'visibility') === 'none') return
         const { lng, lat } = e.lngLat
-        // 點擊只限選取產區範圍內
+        // 點擊只限選取產區範圍內（支援 FeatureCollection 與單一 Feature）
         if (currentClipFeature) {
           try {
             const pt = turf.point([lng, lat])
-            if (!turf.booleanPointInPolygon(pt, currentClipFeature)) return
+            let inBounds = false
+            if (currentClipFeature.type === 'FeatureCollection') {
+              inBounds = currentClipFeature.features.some(f => {
+                try { return turf.booleanPointInPolygon(pt, f) } catch (_) { return false }
+              })
+            } else {
+              inBounds = turf.booleanPointInPolygon(pt, currentClipFeature)
+            }
+            if (!inBounds) return
           } catch (_) { return }
         }
         try {
