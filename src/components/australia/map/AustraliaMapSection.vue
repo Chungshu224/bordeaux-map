@@ -908,11 +908,13 @@ async function initMap() {
         selectedRegionName.value = feat.properties.name
         applySingleFeatureFilter(feat.properties.name)
         updateASRISClip()
-        // Fit map to the cached full bounding box
-        const bbox = featureGeomMap[feat.properties.name]
-        if (bbox) {
-          const [w, s, e2, n] = bbox
-          map.fitBounds([[w, s], [e2, n]], { padding: 80, maxZoom: 12, duration: 700 })
+        // Fit map to the cached full bounding box（土壤模式下不縮放，避免打斷點擊查詢）
+        if (!showGeology.value) {
+          const bbox = featureGeomMap[feat.properties.name]
+          if (bbox) {
+            const [w, s, e2, n] = bbox
+            map.fitBounds([[w, s], [e2, n]], { padding: 80, maxZoom: 12, duration: 700 })
+          }
         }
       })
 
