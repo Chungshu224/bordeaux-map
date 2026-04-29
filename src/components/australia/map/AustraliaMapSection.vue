@@ -1728,6 +1728,7 @@ function handleMobileAction(action) {
   left: 50%;
   transform: translateX(-50%);
   z-index: 46;
+  width: min(320px, calc(100vw - 32px));
 }
 /* ASRIS 土壤分類圖內嵌控制列（圖層面板下方）*/
 .asris-inline-panel {
@@ -1735,7 +1736,7 @@ function handleMobileAction(action) {
   border-top: 1px solid #eee;
   border-radius: 0 0 16px 16px;
   padding: 10px 14px;
-  width: min(320px, calc(100vw - 32px));
+  width: 100%;
   box-sizing: border-box;
 }
 .asris-float-title {
