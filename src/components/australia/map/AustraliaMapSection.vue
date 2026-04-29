@@ -51,21 +51,6 @@
       @select="selectById"
     />
 
-    <!-- ASRIS 土壤圖層浮動面板 -->
-    <div v-if="showGeology" class="asris-float-panel">
-      <div class="asris-float-title">🪨 ASRIS 土壤分類圖</div>
-      <div class="asris-float-row">
-        <span class="asris-float-label">透明度</span>
-        <input class="asris-opacity-slider" type="range" min="0.1" max="1.0" step="0.05"
-          v-model.number="asrisOpacity" @input="updateAsrisOpacity" />
-        <span class="asris-opacity-pct">{{ Math.round(asrisOpacity * 100) }}%</span>
-      </div>
-      <div class="asris-float-footer">
-        <span>資料來源：CSIRO ASRIS (CC-BY 4.0)</span>
-        <span>點擊地圖查看土壤資訊</span>
-      </div>
-    </div>
-
     <!-- 氣候熱力圖控制列 -->
     <transition name="climate-slide">
       <div v-if="climateEnabled && climateData" class="climate-overlay">
@@ -126,11 +111,19 @@
           @toggle-soil="toggleGeology"
           @close="showLayerPanel = false"
         />
-        <!-- Zone 層按鈕（澳洲專用）-->
-        <div class="au-zone-toggle" @click="toggleZones">
-          <span class="au-zone-icon">🗺️</span>
-          <span class="au-zone-label">Zone 層</span>
-          <span class="au-zone-status">{{ showZones ? '開' : '關' }}</span>
+        <!-- ASRIS 土壤分類圖控制列（土壤圖層啟用時顯示）-->
+        <div v-if="showGeology" class="asris-inline-panel">
+          <div class="asris-float-title">🪨 ASRIS 土壤分類圖</div>
+          <div class="asris-float-row">
+            <span class="asris-float-label">透明度</span>
+            <input class="asris-opacity-slider" type="range" min="0.1" max="1.0" step="0.05"
+              v-model.number="asrisOpacity" @input="updateAsrisOpacity" />
+            <span class="asris-opacity-pct">{{ Math.round(asrisOpacity * 100) }}%</span>
+          </div>
+          <div class="asris-float-footer">
+            <span>資料來源：CSIRO ASRIS (CC-BY 4.0)</span>
+            <span>點擊地圖查看土壤資訊</span>
+          </div>
         </div>
       </div>
     </transition>
@@ -989,8 +982,6 @@ async function initMap() {
       // 如果從地區選擇器進入，套用初始 cluster 過濾並飛到該位置
       if (props.initialCluster) {
         const { center, zoom } = props.initialCluster
-        // 有 filterConfig（SA sub-cluster）時顯示 Zone 層以呈現完整層級
-        if (props.initialCluster.filterConfig) showZones.value = true
         activeState.value = props.initialCluster.state
         drawerStateTab.value = props.initialCluster.state
         updateStateFilter()
@@ -1738,18 +1729,14 @@ function handleMobileAction(action) {
   transform: translateX(-50%);
   z-index: 46;
 }
-/* ASRIS 浮動面板 */
-.asris-float-panel {
-  position: absolute;
-  bottom: 90px;
-  right: 16px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
-  padding: 12px 16px;
-  min-width: 220px;
-  z-index: 30;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+/* ASRIS 土壤分類圖內嵌控制列（圖層面板下方）*/
+.asris-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
+  box-sizing: border-box;
 }
 .asris-float-title {
   font-size: 13px;
@@ -1788,22 +1775,7 @@ function handleMobileAction(action) {
   border-top: 1px solid #f0f0f0;
   padding-top: 6px;
 }
-/* Zone 層澳洲專用按鈕 */
-.au-zone-toggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(30,30,40,0.92);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-top: none;
-  border-radius: 0 0 12px 12px;
-  padding: 8px 16px;
-  cursor: pointer;
-  color: #e0e0e0;
-  font-size: 0.82rem;
-}
-.au-zone-toggle:hover { background: rgba(50,50,60,0.95); }
-.au-zone-status { margin-left: auto; font-size: 0.72rem; color: #aaa; }
+
 
 /* rmap-section for extra-content slot */
 .rmap-section { margin-top: 8px; }
