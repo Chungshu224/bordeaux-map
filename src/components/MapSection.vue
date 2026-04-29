@@ -100,23 +100,24 @@
         </div>
       </div>
 
+      <!-- BRGM 地質圖層控制列（BRGM啟用時顯示）-->
+      <div v-if="brgmEnabled && !isPhoneDevice" class="brgm-inline-panel">
+        <div class="brgm-inline-title">🗺️ BRGM 地質圖</div>
+        <div class="brgm-inline-row">
+          <span class="brgm-inline-lbl">透明度</span>
+          <input class="brgm-inline-slider" type="range" min="0.05" max="0.85" step="0.05"
+            v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
+          <span class="brgm-inline-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
+        </div>
+        <div class="brgm-inline-footer">
+          <span>資料來源：BRGM LITHO_1M (Etalab OL)</span>
+          <span>點擊地圖查看岩石資訊</span>
+        </div>
+      </div>
+
     </div>
 
     
-    <!-- BRGM 地質浮動面板 -->
-    <div v-show="brgmEnabled && !isPhoneDevice" class="brgm-float-panel">
-      <div class="brgm-float-title">🗺️ BRGM 地質圖</div>
-      <div class="brgm-float-row">
-        <span class="brgm-float-label">透明度</span>
-        <input class="soil-opacity-slider" type="range" min="0.05" max="0.85" step="0.05"
-          v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
-        <span class="soil-opacity-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
-      </div>
-      <div class="brgm-float-legend">
-        <span class="brgm-float-src">資料來源：BRGM LITHO_1M (Etalab OL)</span>
-        <span class="brgm-float-hint">點擊地圖查看岩石資訊</span>
-      </div>
-    </div>
 
     <div v-if="map" class="mobile-map-toolbar">
       <button class="mobile-tool-btn" :class="{ active: mobileAocDrawerOpen }" @click="toggleMobileTool('aoc')">
@@ -727,11 +728,13 @@ const showAOCGeojson = async (groupName, aocFile) => {
       east: bbox[2],
       north: bbox[3]
     }
-    map.fitBounds(bbox, { 
-      padding: 40, 
-      duration: 1000, 
-      easing: t => t * (2 - t) // easeOutQuad緩動效果
-    })
+    if (!brgmEnabled.value) {
+      map.fitBounds(bbox, { 
+        padding: 40, 
+        duration: 1000, 
+        easing: t => t * (2 - t) // easeOutQuad緩動效果
+      })
+    }
 
 
     // 9. 檢查酒莊檔案（僅對非 Bordeaux_AOC 的區域檢查）
@@ -2352,56 +2355,21 @@ const unifiedInfo = computed(() => {
   color: #222;
 }
 
-/* ══ BRGM 地質圖 浮動面板 ══ */
-.brgm-float-panel {
-  position: absolute;
-  bottom: 80px;
-  left: 20px;
+/* ══ BRGM 地質圖層內嵌控制列（圖層面板下方）══ */
+.brgm-inline-panel {
   background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(12px);
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.16);
-  border: 1px solid rgba(0,0,0,0.06);
+  border-top: 1px solid #eee;
   padding: 10px 14px;
-  z-index: 998;
-  min-width: 260px;
 }
-.brgm-float-title {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #2d5a27;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 8px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-.brgm-float-label {
-  font-size: 0.78rem;
-  color: #555;
-  min-width: 48px;
-}
-.brgm-float-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 2px 0 6px;
-}
-.brgm-float-legend {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding-top: 4px;
-  border-top: 1px solid rgba(0,0,0,0.07);
-}
-.brgm-float-src {
-  font-size: 0.68rem;
-  color: #aaa;
-}
-.brgm-float-hint {
-  font-size: 0.72rem;
-  color: #777;
-  font-style: italic;
+.brgm-inline-title { font-size: 13px; font-weight: 700; color: #2d5a27; margin-bottom: 10px; }
+.brgm-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.brgm-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.brgm-inline-slider { flex: 1; height: 4px; accent-color: #2d5a27; }
+.brgm-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.brgm-inline-footer {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 10px; color: #aaa;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
 .btn-layer.color-brgm.active         { background: #e8f5e9; border-color: #2d5a27; color: #1b5e20; }
 .btn-layer.color-brgm:not(.active):hover { border-color: #81c784; }
