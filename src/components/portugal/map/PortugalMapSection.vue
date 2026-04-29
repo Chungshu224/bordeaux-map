@@ -100,31 +100,20 @@
           @toggle-soil="toggleGeology"
           @close="layerPanelOpen = false"
         />
+        <!-- LNEG 地質圖層控制列（地質圖層啟用時顯示）-->
+        <div v-if="showGeology" class="lneg-inline-panel">
+          <div class="lneg-inline-title">🗺 LNEG 地質圖 <span class="lneg-inline-credit">LNEG</span></div>
+          <div class="lneg-inline-row">
+            <span class="lneg-inline-lbl">透明度</span>
+            <input type="range" min="0" max="1" step="0.01" v-model.number="ptGeologyOpacity" @input="updateLnegOpacity" class="lneg-inline-slider" />
+            <span class="lneg-inline-pct">{{ Math.round(ptGeologyOpacity * 100) }}%</span>
+          </div>
+          <div class="lneg-inline-footer">
+            <span>資料來源：<a href="https://www.lneg.pt" target="_blank" rel="noopener">LNEG 葡萄牙地質調查局</a></span>
+          </div>
+        </div>
       </div>
     </transition>
-
-    <!-- ── LNEG 地質圖層浮動面板 ── -->
-    <div v-if="showGeology" class="lneg-float-panel">
-      <div class="lneg-popup-header">
-        <span class="lneg-popup-title">🗺 LNEG 地質圖</span>
-        <button class="lneg-close-btn" @click="toggleGeology">✕</button>
-      </div>
-      <div class="lneg-popup-body">
-        <div class="lneg-opacity-row">
-          <span class="lneg-opacity-label">透明度</span>
-          <input
-            type="range" min="0" max="1" step="0.01"
-            v-model.number="ptGeologyOpacity"
-            @input="updateLnegOpacity"
-            class="lneg-opacity-slider"
-          />
-          <span class="lneg-opacity-val">{{ Math.round(ptGeologyOpacity * 100) }}%</span>
-        </div>
-        <div class="lneg-source-row">
-          資料來源：<a href="https://www.lneg.pt" target="_blank" rel="noopener">LNEG 葡萄牙地質調查局</a>
-        </div>
-      </div>
-    </div>
 
     <!-- ── 統一工具列 ── -->
     <RegionMapMobileToolbar
@@ -1861,79 +1850,28 @@ function handleMobileAction(action) {
   z-index: 46;
 }
 
-/* ── LNEG 地質圖層浮動面板 ──────────────────────────── */
-.lneg-float-panel {
-  position: fixed;
-  bottom: 150px;
-  right: 18px;
-  z-index: 50;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
-  overflow: hidden;
-  min-width: 230px;
-  max-width: 280px;
+/* ── LNEG 地質圖層內嵌控制列（圖層面板下方）── */
+.lneg-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
 }
-.lneg-popup-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px 10px 14px;
-  background: linear-gradient(135deg, #1b5e20, #388e3c);
-  color: #fff;
+.lneg-inline-title {
+  font-size: 13px; font-weight: 700; color: #1b5e20; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
 }
-.lneg-popup-title {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+.lneg-inline-credit { font-size: 10px; color: #888; font-weight: normal; margin-left: auto; }
+.lneg-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.lneg-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.lneg-inline-slider { flex: 1; accent-color: #388e3c; }
+.lneg-inline-pct { font-size: 12px; color: #388e3c; font-weight: 600; min-width: 32px; text-align: right; }
+.lneg-inline-footer {
+  font-size: 10px; color: #888;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
-.lneg-close-btn {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 15px;
-  cursor: pointer;
-  padding: 0 2px;
-  line-height: 1;
-  opacity: 0.85;
-  transition: opacity .15s;
-}
-.lneg-close-btn:hover { opacity: 1; }
-.lneg-popup-body {
-  padding: 12px 14px 10px;
-}
-.lneg-opacity-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-.lneg-opacity-label {
-  font-size: 12px;
-  color: #555;
-  white-space: nowrap;
-}
-.lneg-opacity-slider {
-  flex: 1;
-  accent-color: #388e3c;
-  cursor: pointer;
-}
-.lneg-opacity-val {
-  font-size: 12px;
-  color: #388e3c;
-  font-weight: 600;
-  min-width: 32px;
-  text-align: right;
-}
-.lneg-source-row {
-  font-size: 11px;
-  color: #888;
-}
-.lneg-source-row a {
-  color: #388e3c;
-  text-decoration: none;
-}
-.lneg-source-row a:hover { text-decoration: underline; }
+.lneg-inline-footer a { color: #388e3c; text-decoration: none; }
 </style>
 
 <style>

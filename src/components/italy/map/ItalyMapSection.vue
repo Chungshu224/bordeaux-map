@@ -127,24 +127,6 @@
     </transition>
 
     <!-- ── 義大利地質圖層浮動控制面板 ── -->
-    <div v-if="soilEnabled" class="italy-geo-float-panel">
-      <div class="soil-float-title">🗺️ ISPRA 地質岩性圖</div>
-      <div class="soil-float-row">
-        <span class="soil-float-name">透明度</span>
-        <div class="soil-float-right">
-          <input
-            class="soil-opacity-slider"
-            type="range"
-            min="0.1"
-            max="1"
-            step="0.05"
-            v-model.number="soilOpacity"
-          />
-          <span class="soil-opacity-pct">{{ Math.round(soilOpacity * 100) }}%</span>
-        </div>
-      </div>
-
-    </div>
 
     <!-- ── 統一手機底部工具列 ── -->
     <RegionMapMobileToolbar
@@ -513,6 +495,14 @@ async function loadGeologyLayer() {
   if (!map) return
   if (map.getLayer('italy-geology-layer')) return
   if (!map.getSource('italy-geology-wms')) {
+    // 計算產區 bounds 以限制 ISPRA WMS 圖磚載入
+    let wmsBounds = null
+    if (regionBounds && regionBounds[0] !== null) {
+      try {
+        const pad = 0.3
+        wmsBounds = [regionBounds[0] - pad, regionBounds[1] - pad, regionBounds[2] + pad, regionBounds[3] + pad]
+      } catch (_) {}
+    }
     map.addSource('italy-geology-wms', {
       type: 'raster',
       tiles: [
@@ -522,6 +512,7 @@ async function loadGeologyLayer() {
         '&CRS=EPSG:3857&FORMAT=image/png&TRANSPARENT=TRUE&STYLES='
       ],
       tileSize: 256,
+      ...(wmsBounds ? { bounds: wmsBounds } : {}),
       attribution: '© ISPRA SGI (CC-BY 4.0)'
     })
   }
@@ -889,7 +880,7 @@ async function highlightAOC(aoc) {
     map.addLayer({ id: 'highlight_fill', type: 'fill', source: 'highlight', paint: { 'fill-color': props.region.color, 'fill-opacity': 0.35 } })
     map.addLayer({ id: 'highlight_line', type: 'line', source: 'highlight', paint: { 'line-color': '#fff', 'line-width': 2.5 } })
     const bbox = turf.bbox(geojson)
-    map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 80, duration: 900 })
+    if (!soilEnabled.value) map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 80, duration: 900 })
   } catch (e) { console.error(e) }
 }
 
@@ -1703,58 +1694,23 @@ onUnmounted(() => {
   .climate-overlay { left: 8px; width: calc(100vw - 16px); }
 }
 
-/* ── 義大利地質浮動面板 ── */
-.italy-geo-float-panel {
-  position: fixed;
-  bottom: 90px;
-  right: 16px;
+/* ── 義大利地質圖層內嵌控制列（圖層面板下方）── */
+.italy-geo-inline-panel {
   background: rgba(255,255,255,0.97);
-  border-radius: 14px;
-  padding: 12px 14px 10px;
-  z-index: 1002;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
-  min-width: 200px;
-  max-width: 250px;
-  border: 1px solid rgba(0,0,0,0.07);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
 }
-.soil-float-title {
-  font-size: 0.73rem;
-  font-weight: 700;
-  color: #5a3b3b;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 9px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-.soil-float-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 10px;
-}
-.soil-float-name {
-  font-size: 0.82rem;
-  color: #444;
-  font-weight: 600;
-  flex: 1;
-}
-.soil-float-right {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.soil-opacity-slider {
-  width: 76px;
-  accent-color: #8B0000;
-  cursor: pointer;
-}
-.soil-opacity-pct {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #8B0000;
-  min-width: 30px;
-  text-align: right;
+.italy-geo-inline-title { font-size: 13px; font-weight: 700; color: #5a3b3b; margin-bottom: 10px; }
+.italy-geo-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.italy-geo-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.italy-geo-inline-slider { flex: 1; height: 4px; accent-color: #8B0000; }
+.italy-geo-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.italy-geo-inline-footer {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 10px; color: #aaa;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
 .geo-legend {
   display: grid;

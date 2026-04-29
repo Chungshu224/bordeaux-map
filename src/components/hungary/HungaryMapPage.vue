@@ -98,6 +98,19 @@
           @toggle-soil="toggleGeo"
           @close="showLayerPanel = false"
         />
+        <!-- HuGeo 地質圖層控制列（地質圖層啟用時顯示）-->
+        <div v-if="geoEnabled" class="hu-geo-inline-panel">
+          <div class="hu-geo-inline-title">🗺️ HuGeo 地質圖層 <span class="hu-geo-inline-credit">MBFSZ</span></div>
+          <div class="hu-geo-inline-row">
+            <span class="hu-geo-inline-lbl">透明度</span>
+            <input type="range" min="0.1" max="1" step="0.05" v-model.number="geoOpacity" class="hu-geo-inline-slider" />
+            <span class="hu-geo-inline-pct">{{ Math.round(geoOpacity * 100) }}%</span>
+          </div>
+          <div class="hu-geo-inline-footer">
+            <span>資料來源：MBFSZ 地質調查局 (CC-BY 4.0)</span>
+            <span>點擊地圖查看地質資訊</span>
+          </div>
+        </div>
       </div>
 
       <!-- 底部工具列 -->
@@ -748,6 +761,13 @@ function toggleGeo() {
     map.getCanvas().style.cursor = ''
   }
 }
+
+// 透明度滑桿即時更新地質圖層不透明度
+watch(geoOpacity, val => {
+  if (map && map.getLayer('hu-geo-layer')) {
+    map.setPaintProperty('hu-geo-layer', 'raster-opacity', val)
+  }
+})
 
 const loadClimateData = async () => {
   if (climateData.value) return
@@ -1693,6 +1713,28 @@ function handleMobileAction(action) {
   left: 50%;
   transform: translateX(-50%);
   z-index: 46;
+}
+/* HuGeo 地質圖層內嵌控制列（圖層面板下方）*/
+.hu-geo-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
+}
+.hu-geo-inline-title {
+  font-size: 13px; font-weight: 700; color: #555; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.hu-geo-inline-credit { font-size: 10px; color: #888; font-weight: normal; margin-left: auto; }
+.hu-geo-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.hu-geo-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.hu-geo-inline-slider { flex: 1; height: 4px; accent-color: #4caf50; }
+.hu-geo-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.hu-geo-inline-footer {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 10px; color: #aaa;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
 .rmap-section { margin-top: 8px; }
 .rmap-section-title { font-size: 11px; color: #999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }

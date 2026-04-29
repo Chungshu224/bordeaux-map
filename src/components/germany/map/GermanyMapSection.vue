@@ -435,6 +435,7 @@ async function loadVineyards() {
 
     // Click to show name
     map.on('click', 'vineyard-fill', (e) => {
+      if (showGeology.value) return
       if (e.features.length > 0) {
         const feat = e.features[0]
         const name = feat.properties?.name || feat.properties?.ref || null
@@ -535,12 +536,18 @@ function addGeologyLayer() {
   if (map.getSource('bgr-soil-wms')) map.removeSource('bgr-soil-wms')
 
   // BGR BUEK200 WMS raster source（透過 /bgr proxy 解決 CORS）
+  // 計算產區 bounds 以限制圖磚載入
+  const pad = 0.2
+  const bgrBounds = (regionBounds && regionBounds[0] !== Infinity)
+    ? [regionBounds[0] - pad, regionBounds[1] - pad, regionBounds[2] + pad, regionBounds[3] + pad]
+    : null
   map.addSource('bgr-soil-wms', {
     type: 'raster',
     tiles: [BGR_WMS_TILE],
     tileSize: 256,
     minzoom: 4,
     maxzoom: 14,
+    ...(bgrBounds ? { bounds: bgrBounds } : {}),
     attribution: '© BGR Bodenübersichtskarte 1:200,000 (CC-BY 4.0)'
   })
 
@@ -1266,54 +1273,21 @@ const unifiedInfo = computed(() => {
   z-index: 46;
 }
 
-/* BGR 土壤圖浮動面板（右側）*/
-.de-soil-float-panel {
-  position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-  right: 20px;
-  z-index: 45;
-  background: rgba(15, 20, 30, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 12px 16px;
-  min-width: 240px;
-  color: #e8e8e8;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+/* BGR 土壤圖層內嵌控制列（圖層面板下方）*/
+.de-soil-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
 }
-.de-soil-title {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: #a8d8a8;
-  margin-bottom: 8px;
-  letter-spacing: 0.02em;
-}
-.de-soil-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-.de-soil-label {
-  font-size: 0.72rem;
-  color: #aaa;
-  white-space: nowrap;
-}
-.de-soil-slider {
-  flex: 1;
-  accent-color: #4caf50;
-  height: 4px;
-  cursor: pointer;
-}
-.de-soil-pct {
-  font-size: 0.72rem;
-  color: #ccc;
-  min-width: 32px;
-  text-align: right;
-}
-.de-soil-hint {
-  font-size: 0.65rem;
-  color: #777;
-  margin-top: 4px;
+.de-soil-inline-title { font-size: 13px; font-weight: 700; color: #555; margin-bottom: 10px; }
+.de-soil-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.de-soil-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.de-soil-inline-slider { flex: 1; height: 4px; accent-color: #4caf50; }
+.de-soil-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.de-soil-inline-footer {
+  font-size: 10px; color: #aaa;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
 </style>

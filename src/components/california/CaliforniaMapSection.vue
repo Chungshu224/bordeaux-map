@@ -117,22 +117,19 @@
           @toggle-soil="toggleSoil"
           @close="layersOpen = false"
         />
-      </div>
-    </transition>
-
-    <!-- 地質圖層不透明度控制 -->
-    <transition name="ca-geo-slide">
-      <div v-if="soilEnabled" class="ca-geo-float-panel">
-        <div class="ca-geo-panel-row">
-          <span class="ca-geo-panel-label">🗺️ CGS 地質圖層</span>
-          <button class="ca-geo-panel-close" @click="toggleSoil">✕</button>
+        <!-- CGS 地質圖層控制列（地質圖層啟用時顯示）-->
+        <div v-if="soilEnabled" class="ca-geo-inline-panel">
+          <div class="ca-geo-inline-title">🗺️ CGS 地質圖層</div>
+          <div class="ca-geo-inline-row">
+            <span class="ca-geo-inline-lbl">透明度</span>
+            <input type="range" min="0.1" max="1" step="0.05" v-model.number="soilOpacity" class="ca-geo-inline-slider" />
+            <span class="ca-geo-inline-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+          </div>
+          <div class="ca-geo-inline-footer">
+            <span>© Macrostrat (CC BY 4.0)</span>
+            <span>點擊地圖查看地質資訊</span>
+          </div>
         </div>
-        <div class="ca-geo-opacity-row">
-          <span class="ca-geo-opacity-lbl">透明度</span>
-          <input type="range" min="0.1" max="1" step="0.05" v-model.number="soilOpacity" class="ca-geo-slider" />
-          <span class="ca-geo-opacity-val">{{ Math.round(soilOpacity * 100) }}%</span>
-        </div>
-        <div class="ca-geo-hint">點擊地圖查看地質資訊</div>
       </div>
     </transition>
 
@@ -796,7 +793,16 @@ async function toggleClimate() {
 // 選中產區變更時，同步更新氣候圖層與地質裁切
 watch(activeRegion, () => {
   if (climateEnabled.value) applyClimateColor(climateYear.value)
-  if (soilEnabled.value)    updateCAGeoClip()
+  if (soilEnabled.value) {
+    // 重建 WMS source（套用新產區 bounds）
+    if (map && map.getLayer('ca-geology-layer')) {
+      map.removeLayer('ca-geology-layer')
+      map.removeSource('ca-geology-wms')
+      loadCAGeologyLayer()
+    } else {
+      updateCAGeoClip()
+    }
+  }
 })
 
 onMounted(initMap)
@@ -1040,6 +1046,20 @@ async function loadCAGeologyLayer() {
   if (map.getLayer('ca-geology-layer'))  map.removeLayer('ca-geology-layer')
   if (map.getSource('ca-geology-wms'))   map.removeSource('ca-geology-wms')
 
+  // 計算所選產區 bounds，限制 Macrostrat 圖磚載入範圍
+  let wmsBounds = null
+  const activeId = activeRegion.value?.id
+  if (activeId && caAvaGeoJSON?.features?.length) {
+    const feature = caAvaGeoJSON.features.find(f => f.properties?.ava_id === activeId)
+    if (feature) {
+      try {
+        const bb = turf.bbox(feature)
+        const pad = 0.2
+        wmsBounds = [bb[0] - pad, bb[1] - pad, bb[2] + pad, bb[3] + pad]
+      } catch (_) {}
+    }
+  }
+
   // Macrostrat 公開地質向量圖磚（無需 CORS proxy，CC BY 4.0）
   map.addSource('ca-geology-wms', {
     type: 'vector',
@@ -1047,6 +1067,7 @@ async function loadCAGeologyLayer() {
     tileSize: 512,
     minzoom: 0,
     maxzoom: 15,
+    ...(wmsBounds ? { bounds: wmsBounds } : {}),
     attribution: '© Macrostrat (CC BY 4.0)',
   })
   map.addLayer({
@@ -1908,49 +1929,23 @@ function handleMobileAction(action) {
 .rmap-section { margin-top: 8px; }
 .rmap-section-title { font-size: 11px; color: #999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }
 
-/* ── CA 地質浮動面板 ──────────────────────────────────────────── */
-.ca-geo-float-panel {
-  position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-  right: 16px;
-  width: min(276px, calc(100vw - 32px));
-  background: rgba(30, 10, 10, 0.93);
-  backdrop-filter: blur(12px);
-  border-radius: 14px;
-  border: 1px solid rgba(200, 80, 80, 0.25);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
-  z-index: 1001;
-  padding: 12px 14px 10px;
-  color: #f0d8d8;
+/* ── CA 地質內嵌控制列（圖層面板下方）── */
+.ca-geo-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
 }
-.ca-geo-panel-row {
-  display: flex; align-items: center; gap: 6px; margin-bottom: 8px;
-}
-.ca-geo-panel-label {
-  font-size: 0.82rem; font-weight: 700; flex: 1; color: #f4b4b4;
-}
-.ca-geo-panel-close {
-  width: 22px; height: 22px; background: rgba(255,255,255,0.1);
-  border: none; border-radius: 50%; cursor: pointer; font-size: 0.75rem;
-  color: #ccc; display: flex; align-items: center; justify-content: center;
-}
-.ca-geo-panel-close:hover { background: rgba(255,255,255,0.2); }
-.ca-geo-opacity-row {
-  display: flex; align-items: center; gap: 8px;
-}
-.ca-geo-opacity-lbl { font-size: 0.75rem; color: #e8b0b0; white-space: nowrap; }
-.ca-geo-slider {
-  flex: 1; height: 4px; accent-color: #c0392b; cursor: pointer;
-}
-.ca-geo-opacity-val { font-size: 0.75rem; color: #f4b4b4; min-width: 34px; text-align: right; }
-.ca-geo-hint {
-  margin-top: 8px; font-size: 0.7rem; color: #c08080; text-align: center;
-}
-.ca-geo-slide-enter-active, .ca-geo-slide-leave-active {
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-.ca-geo-slide-enter-from, .ca-geo-slide-leave-to {
-  opacity: 0; transform: translateX(20px);
+.ca-geo-inline-title { font-size: 13px; font-weight: 700; color: #666; margin-bottom: 10px; }
+.ca-geo-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.ca-geo-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.ca-geo-inline-slider { flex: 1; height: 4px; accent-color: #c0392b; }
+.ca-geo-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.ca-geo-inline-footer {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 10px; color: #aaa;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
 
 /* ── CA 地質 Popup ──────────────────────────────────────────────── */

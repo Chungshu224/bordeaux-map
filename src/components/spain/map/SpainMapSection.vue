@@ -111,21 +111,21 @@
           @toggle-soil="toggleSoil"
           @close="showLayerPanel = false"
         />
+        <!-- IGME 地質圖層控制列（地質圖層啟用時顯示）-->
+        <div v-if="soilEnabled" class="spain-geo-inline-panel">
+          <div class="spain-geo-inline-title">🗺️ IGME 地質圖 1:200,000</div>
+          <div class="spain-geo-inline-row">
+            <span class="spain-geo-inline-lbl">透明度</span>
+            <input class="spain-geo-inline-slider" type="range" min="0.1" max="1.0" step="0.05" v-model.number="soilOpacity">
+            <span class="spain-geo-inline-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+          </div>
+          <div class="spain-geo-inline-footer">
+            <span>© IGME Mapa Geológico 1:200,000 (CC-BY 4.0)</span>
+            <span>點擊地圖查看地質資訊</span>
+          </div>
+        </div>
       </div>
     </transition>
-
-    <!-- IGME 地質浮動面板 -->
-    <div v-if="soilEnabled" class="spain-geo-float-panel">
-      <div class="soil-float-title">🗺️ IGME 地質圖 1:200,000</div>
-      <div class="soil-float-row">
-        <span class="sp-geo-label">透明度</span>
-        <input class="soil-opacity-slider" type="range" min="0.1" max="1.0" step="0.05"
-          v-model.number="soilOpacity">
-        <span class="soil-opacity-pct">{{ Math.round(soilOpacity * 100) }}%</span>
-      </div>
-      <div class="sp-geo-hint">點擊地圖查看地質資訊</div>
-      <div class="sp-geo-src">© IGME Mapa Geológico 1:200,000 (CC-BY 4.0)</div>
-    </div>
 
     <!-- ── 統一工具列 ── -->
     <RegionMapMobileToolbar
@@ -863,6 +863,15 @@ async function loadSpainGeologyLayer() {
   if (map.getLayer('spain-geology-layer')) return
   if (!map.getSource('spain-geology-wms')) {
     // IGME WMS 不支援 EPSG:3857，改用 ArcGIS REST export endpoint（支援 bboxSR=3857）
+    // 計算產區 bounds 以限制圖磚載入
+    let wmsBounds
+    if (regionOutlineGeoJSON) {
+      try {
+        const bb = turf.bbox(regionOutlineGeoJSON)
+        const pad = 0.3
+        wmsBounds = [bb[0] - pad, bb[1] - pad, bb[2] + pad, bb[3] + pad]
+      } catch (_) {}
+    }
     map.addSource('spain-geology-wms', {
       type: 'raster',
       tiles: [
@@ -871,6 +880,7 @@ async function loadSpainGeologyLayer() {
         '&format=png32&transparent=true&f=image&layers=show:0'
       ],
       tileSize: 256,
+      ...(wmsBounds ? { bounds: wmsBounds } : {}),
       attribution: '© IGME Mapa Geológico 1:200,000 (CC-BY 4.0)'
     })
   }
@@ -2167,42 +2177,26 @@ function handleMobileAction(action) {
 .rmap-section { margin-top: 8px; }
 .rmap-section-title { font-size: 11px; color: #999; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; }
 
-/* IGME 地質浮動面板 */
-.spain-geo-float-panel {
-  position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-  right: 20px;
+/* IGME 地質圖層內嵌控制列（圖層面板下方）*/
+.spain-geo-inline-panel {
   background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(12px);
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.16);
-  border: 1px solid rgba(0,0,0,0.06);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
   padding: 10px 14px;
-  z-index: 45;
-  min-width: 240px;
+  width: min(320px, calc(100vw - 32px));
 }
-.spain-geo-float-panel .soil-float-title {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 8px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+.spain-geo-inline-title {
+  font-size: 13px; font-weight: 700; color: #666; margin-bottom: 10px;
 }
-.spain-geo-float-panel .soil-float-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 4px 0;
+.spain-geo-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.spain-geo-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.spain-geo-inline-slider { flex: 1; height: 4px; accent-color: #c0392b; }
+.spain-geo-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.spain-geo-inline-footer {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 10px; color: #aaa;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
-.sp-geo-label { font-size: 11px; color: #555; min-width: 40px; }
-.sp-geo-hint  { font-size: 11px; color: #777; font-style: italic; margin-top: 4px; }
-.sp-geo-src   { font-size: 10px; color: #aaa; margin-top: 2px; }
-.spain-geo-float-panel .soil-opacity-slider { width: 70px; accent-color: #c0392b; }
-.spain-geo-float-panel .soil-opacity-pct { font-size: 0.78rem; color: #666; min-width: 34px; text-align: right; }
 
 /* IGME 地質 popup — NZ 風格 */
 .spain-geology-popup {

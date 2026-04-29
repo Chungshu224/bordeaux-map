@@ -76,19 +76,19 @@
         @toggle-brgm="toggleBRGM(map)"
         @close="showLayerPanel = false"
       />
-    </div>
-
-    <!-- BRGM 地質浮動面板 -->
-    <div v-show="brgmEnabled && !isRealMobile" class="bourg-brgm-float-panel">
-      <div class="soil-float-title">🗺️ BRGM 地質圖</div>
-      <div class="soil-float-row">
-        <span class="brgm-float-label">透明度</span>
-        <input class="soil-opacity-slider" type="range" min="0.05" max="0.85" step="0.05"
-          v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
-        <span class="soil-opacity-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
+      <!-- BRGM 地質圖層控制列（BRGM啟用時顯示）-->
+      <div v-if="brgmEnabled" class="bourg-brgm-inline-panel">
+        <div class="bourg-brgm-inline-title">🗺️ BRGM 地質圖</div>
+        <div class="bourg-brgm-inline-row">
+          <span class="bourg-brgm-inline-lbl">透明度</span>
+          <input class="bourg-brgm-inline-slider" type="range" min="0.05" max="0.85" step="0.05" v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
+          <span class="bourg-brgm-inline-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
+        </div>
+        <div class="bourg-brgm-inline-footer">
+          <span>© BRGM LITHO_1M (Etalab OL)</span>
+          <span>點擊地圖查看岩石資訊</span>
+        </div>
       </div>
-      <div class="brgm-float-hint">點擊地圖查看岩石資訊</div>
-      <div class="brgm-float-src">© BRGM LITHO_1M (Etalab OL)</div>
     </div>
 
     <!-- 氣候熱力 Overlay -->
@@ -887,7 +887,7 @@ const showAOCGeojson = async (groupName, aocFile) => {
     })
 
     const bbox = turf.bbox(geojson)
-    map.fitBounds(bbox, { padding: 40, duration: 800 })
+    if (!brgmEnabled.value) map.fitBounds(bbox, { padding: 40, duration: 800 })
 
   } catch (err) {
     console.error('載入 geojson 失敗:', err)
@@ -2504,42 +2504,24 @@ const unifiedInfo = computed(() => {
     transform: translateY(12px);
   }
 
-  /* BRGM 地質圖 浮動面板 */
-  .bourg-brgm-float-panel {
-    position: fixed;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-    right: 20px;
+  /* BRGM 地質圖層內嵌控制列（圖層面板下方）*/
+  .bourg-brgm-inline-panel {
     background: rgba(255,255,255,0.97);
-    backdrop-filter: blur(12px);
-    border-radius: 14px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.16);
-    border: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid #eee;
+    border-radius: 0 0 16px 16px;
     padding: 10px 14px;
-    z-index: 998;
-    min-width: 240px;
+    width: min(320px, calc(100vw - 32px));
   }
-  .brgm-float-label { font-size: 11px; color: #555; min-width: 40px; }
-  .brgm-float-hint  { font-size: 11px; color: #777; font-style: italic; margin-top: 4px; }
-  .brgm-float-src   { font-size: 10px; color: #aaa; margin-top: 2px; }
-  .soil-float-title {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 8px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+  .bourg-brgm-inline-title { font-size: 13px; font-weight: 700; color: #666; margin-bottom: 10px; }
+  .bourg-brgm-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .bourg-brgm-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+  .bourg-brgm-inline-slider { flex: 1; height: 4px; accent-color: #795548; }
+  .bourg-brgm-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+  .bourg-brgm-inline-footer {
+    display: flex; flex-direction: column; gap: 2px;
+    font-size: 10px; color: #aaa;
+    border-top: 1px solid #f0f0f0; padding-top: 6px;
   }
-  .soil-float-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    padding: 4px 0;
-  }
-  .soil-opacity-slider { width: 70px; accent-color: #795548; }
-  .soil-opacity-pct { font-size: 0.78rem; color: #666; min-width: 34px; text-align: right; }
 
   .btn-reset {
     background: rgba(244, 67, 54, 0.9);

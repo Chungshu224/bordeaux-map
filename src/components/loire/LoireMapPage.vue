@@ -44,19 +44,19 @@
           @toggle-brgm="toggleBRGM(map)"
           @close="mobileLayersOpen = false"
         />
-      </div>
-
-      <!-- BRGM 地質浮動面板 -->
-      <div v-if="brgmEnabled" class="loire-brgm-float-panel">
-        <div class="soil-float-title">🗺️ BRGM 地質圖</div>
-        <div class="soil-float-row">
-          <span class="brgm-float-label">透明度</span>
-          <input class="soil-opacity-slider" type="range" min="0.05" max="0.85" step="0.05"
-            v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
-          <span class="soil-opacity-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
+        <!-- BRGM 地質圖層控制列（BRGM啟用時顯示）-->
+        <div v-if="brgmEnabled" class="loire-brgm-inline-panel">
+          <div class="loire-brgm-inline-title">🗺️ BRGM 地質圖</div>
+          <div class="loire-brgm-inline-row">
+            <span class="loire-brgm-inline-lbl">透明度</span>
+            <input class="loire-brgm-inline-slider" type="range" min="0.05" max="0.85" step="0.05" v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
+            <span class="loire-brgm-inline-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
+          </div>
+          <div class="loire-brgm-inline-footer">
+            <span>© BRGM LITHO_1M (Etalab OL)</span>
+            <span>點擊地圖查看岩石資訊</span>
+          </div>
         </div>
-        <div class="brgm-float-hint">點擊地圖查看岩石資訊</div>
-        <div class="brgm-float-src">© BRGM LITHO_1M (Etalab OL)</div>
       </div>
 
       <!-- 底部工具列 -->
@@ -1244,32 +1244,22 @@ html, body {
 .rmap-section-title { font-size: 11px; color: #999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }
 
 /* ── BRGM 地質圖 浮動面板 ────────────────────── */
-.loire-brgm-float-panel {
-  position: absolute;
-  bottom: 165px;
-  right: 16px;
-  background: rgba(255,255,255,0.96);
-  border-radius: 14px;
-  padding: 12px 14px;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-  z-index: 29;
-  min-width: 220px;
-  max-width: 260px;
-  backdrop-filter: blur(8px);
+/* ── BRGM 地質圖層內嵌控制列（圖層面板下方）── */
+.loire-brgm-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
 }
-.brgm-float-label { font-size: 11px; color: #555; min-width: 40px; }
-.brgm-float-hint { font-size: 11px; color: #777; font-style: italic; margin-top: 6px; }
-.brgm-float-src  { font-size: 10px; color: #aaa; margin-top: 2px; }
-.soil-float-title {
-  font-size: 12px; font-weight: 700; color: #444;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 8px;
+.loire-brgm-inline-title { font-size: 13px; font-weight: 700; color: #666; margin-bottom: 10px; }
+.loire-brgm-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.loire-brgm-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.loire-brgm-inline-slider { flex: 1; height: 4px; accent-color: #2d6a4f; }
+.loire-brgm-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.loire-brgm-inline-footer {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 10px; color: #aaa;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
-.soil-float-row {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 6px; margin-bottom: 7px;
-}
-.soil-opacity-slider { width: 80px; accent-color: #2d6a4f; }
-.soil-opacity-pct { font-size: 10.5px; color: #666; min-width: 28px; text-align: right; }
 </style>

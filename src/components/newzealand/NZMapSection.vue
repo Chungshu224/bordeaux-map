@@ -40,24 +40,20 @@
         @toggle-soil="toggleSoil"
         @close="layersOpen = false"
       />
-    </div>
-
-    <!-- 地質圖層不透明度控制 -->
-    <transition name="nz-geo-slide">
-      <div v-if="soilEnabled" class="nz-geo-float-panel">
-        <div class="nz-geo-panel-row">
-          <span class="nz-geo-panel-label">🗺️ 地質圖層</span>
-          <span class="nz-geo-panel-credit">GNS Science</span>
-          <button class="nz-geo-panel-close" @click="toggleSoil">✕</button>
+      <!-- 地質圖層控制列（地質圖層啟用時顯示）-->
+      <div v-if="soilEnabled" class="nz-geo-inline-panel">
+        <div class="nz-geo-inline-title">🗺️ 地質圖層 <span class="nz-geo-inline-credit">GNS Science</span></div>
+        <div class="nz-geo-inline-row">
+          <span class="nz-geo-inline-lbl">透明度</span>
+          <input type="range" min="0.1" max="1" step="0.05" v-model.number="soilOpacity" class="nz-geo-inline-slider" />
+          <span class="nz-geo-inline-pct">{{ Math.round(soilOpacity * 100) }}%</span>
         </div>
-        <div class="nz-geo-opacity-row">
-          <span class="nz-geo-opacity-lbl">透明度</span>
-          <input type="range" min="0.1" max="1" step="0.05" v-model.number="soilOpacity" class="nz-geo-slider" />
-          <span class="nz-geo-opacity-val">{{ Math.round(soilOpacity * 100) }}%</span>
+        <div class="nz-geo-inline-footer">
+          <span>資料來源：GNS Science (CC-BY 4.0)</span>
+          <span>點擊地圖查看地質資訊</span>
         </div>
-        <div class="nz-geo-hint">點擊地圖可查看地質資訊</div>
       </div>
-    </transition>
+    </div>
 
     <transition name="climate-slide">
       <div v-if="climateEnabled && climateData" class="climate-overlay">
@@ -459,7 +455,7 @@ const showAOCGeojson = async (groupName, aocFile) => {
     map.addLayer({ id: 'aoc-fill', type: 'fill', source: 'aoc', paint: { 'fill-color': aocColor(), 'fill-opacity': 0.10 } })
     map.addLayer({ id: 'aoc-outline', type: 'line', source: 'aoc', paint: { 'line-color': '#fff', 'line-width': 2 } })
     const bbox = turf.bbox(geojson)
-    map.fitBounds(bbox, { padding: 40, duration: 800 })
+    if (!soilEnabled.value) map.fitBounds(bbox, { padding: 40, duration: 800 })
   } catch (err) {
     console.error('載入 geojson 失敗:', err)
     mapError.value = `載入 geojson 失敗: ${err.message}`
@@ -828,6 +824,17 @@ async function loadGNSLayer() {
   if (map.getLayer('nz-geology-layer'))  map.removeLayer('nz-geology-layer')
   if (map.getSource('nz-geology-wms'))   map.removeSource('nz-geology-wms')
 
+  // 計算所選產區 bounds，限制 Macrostrat 圖磚載入範圍
+  let wmsBounds = null
+  const regionFeat = await getActiveRegionGeoJSON()
+  if (regionFeat) {
+    try {
+      const bb = turf.bbox(regionFeat)
+      const pad = 0.3
+      wmsBounds = [bb[0] - pad, bb[1] - pad, bb[2] + pad, bb[3] + pad]
+    } catch (_) {}
+  }
+
   // Macrostrat 公開地質向量圖磚（無需 CORS proxy，CC BY 4.0）
   map.addSource('nz-geology-wms', {
     type: 'vector',
@@ -835,6 +842,7 @@ async function loadGNSLayer() {
     tileSize: 512,
     minzoom: 0,
     maxzoom: 15,
+    ...(wmsBounds ? { bounds: wmsBounds } : {}),
     attribution: '© Macrostrat (CC BY 4.0)',
   })
   map.addLayer({
@@ -899,10 +907,13 @@ watch(soilOpacity, val => {
   }
 })
 
-// 切換選取的產區時：重新生成 mask（地質圖層只顯示新產區範圍內）
+// 切換選取的產區時：以新產區 bounds 重建圖層
 watch(() => props.activeAOC?.aoc, async () => {
-  if (soilEnabled.value && map?.getLayer('nz-geology-layer')) {
-    await applyActiveRegionMask()
+  if (soilEnabled.value && map) {
+    // 重建 WMS source（套用新產區 bounds）+ 重新建立 clip mask
+    if (map.getLayer('nz-geology-layer')) map.removeLayer('nz-geology-layer')
+    if (map.getSource('nz-geology-wms'))  map.removeSource('nz-geology-wms')
+    await loadGNSLayer()
   } else {
     activeRegionFeature = await getActiveRegionGeoJSON()
   }
@@ -1276,52 +1287,27 @@ const handleMobileAction = (action) => {
   z-index: 46;
 }
 
-/* ── NZ 地質浮動面板 ──────────────────────────────────────────── */
-.nz-geo-float-panel {
-  position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-  right: 16px;
-  width: min(280px, calc(100vw - 32px));
-  background: rgba(18, 38, 18, 0.92);
-  backdrop-filter: blur(12px);
-  border-radius: 14px;
-  border: 1px solid rgba(100, 200, 100, 0.25);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
-  z-index: 1001;
-  padding: 12px 14px 10px;
-  color: #e0f0e0;
+/* ── NZ 地質內嵌控制列（圖層面板下方）── */
+.nz-geo-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
 }
-.nz-geo-panel-row {
-  display: flex; align-items: center; gap: 6px; margin-bottom: 8px;
+.nz-geo-inline-title {
+  font-size: 13px; font-weight: 700; color: #2a6640; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
 }
-.nz-geo-panel-label {
-  font-size: 0.82rem; font-weight: 700; flex: 1; color: #a8e6a8;
-}
-.nz-geo-panel-credit {
-  font-size: 0.68rem; color: #7ab87a; opacity: 0.8;
-}
-.nz-geo-panel-close {
-  width: 22px; height: 22px; background: rgba(255,255,255,0.1);
-  border: none; border-radius: 50%; cursor: pointer; font-size: 0.75rem;
-  color: #ccc; display: flex; align-items: center; justify-content: center;
-}
-.nz-geo-panel-close:hover { background: rgba(255,255,255,0.2); }
-.nz-geo-opacity-row {
-  display: flex; align-items: center; gap: 8px;
-}
-.nz-geo-opacity-lbl { font-size: 0.75rem; color: #9dcf9d; white-space: nowrap; }
-.nz-geo-slider {
-  flex: 1; height: 4px; accent-color: #4caf50; cursor: pointer;
-}
-.nz-geo-opacity-val { font-size: 0.75rem; color: #a8e6a8; min-width: 34px; text-align: right; }
-.nz-geo-hint {
-  margin-top: 8px; font-size: 0.7rem; color: #7ab87a; text-align: center;
-}
-.nz-geo-slide-enter-active, .nz-geo-slide-leave-active {
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-.nz-geo-slide-enter-from, .nz-geo-slide-leave-to {
-  opacity: 0; transform: translateX(20px);
+.nz-geo-inline-credit { font-size: 10px; color: #888; font-weight: normal; margin-left: auto; }
+.nz-geo-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.nz-geo-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.nz-geo-inline-slider { flex: 1; height: 4px; accent-color: #4caf50; }
+.nz-geo-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.nz-geo-inline-footer {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 10px; color: #aaa;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
 
 /* ── NZ 地質 Popup ─────────────────────────────────────────────── */
