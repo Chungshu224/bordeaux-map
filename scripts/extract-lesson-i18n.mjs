@@ -29,7 +29,7 @@ const SOURCE_LOCALE = 'zh-TW'
 // region → data 目錄 + lesson id 前綴
 const REGION_CONFIG = {
   california: { dir: 'src/data/california', prefix: 'ca-' },
-  // 之後其他地區可加：bordeaux/bourgogne/...（如有對應 data 目錄）
+  bordeaux: { dir: 'src/data/lessons', prefix: 'l', filter: /^l\d+-\d+(-part\d+)?(-part[12])?\.js$/ },
 }
 
 const args = process.argv.slice(2)
@@ -53,7 +53,11 @@ async function main() {
   console.log()
 
   const files = (await fs.readdir(SRC_DIR))
-    .filter(f => f.endsWith('.js') && f.startsWith(cfg.prefix))
+    .filter(f => {
+      if (!f.endsWith('.js')) return false
+      if (cfg.filter) return cfg.filter.test(f)
+      return f.startsWith(cfg.prefix)
+    })
     .filter(f => !onlyLesson || f === `${onlyLesson}.js`)
     .sort()
 
@@ -76,7 +80,7 @@ async function main() {
       console.warn(`  ⚠ ${id}: 載入失敗 — ${e.message}`)
       continue
     }
-    const slides = mod.lessonContent || mod.default
+    const slides = mod.lessonContent || mod.default || Object.values(mod).find(v => Array.isArray(v) && v.length > 0)
     if (!Array.isArray(slides)) {
       console.warn(`  ⚠ ${id}: 找不到 lessonContent 陣列`)
       continue
