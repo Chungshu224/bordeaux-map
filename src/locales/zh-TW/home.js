@@ -35,6 +35,7 @@ export default {
     ctaViewPlans: '💎 查看訂閱方案',
     ctaViewAll: '查看所有課程 ↓',
     trust: '免費註冊・無需信用卡・ Level 1 內容全面開放',
+    studentFallback: '學員',
     stats: {
       regions: '世界產區',
       levels: '學習等級',
@@ -63,6 +64,7 @@ export default {
     comingSoon: '📅 即將開放',
 
     common: {
+      satellite: '衛星',
       statusAdmin: '🔓 管理員開放',
       statusActive: '✅ 開放中',
       statusPlanning: '📅 課程規劃中',
@@ -72,6 +74,24 @@ export default {
       comingSoon: '📅 即將開放',
     },
 
+    labels: {
+      bordeaux:   '🏰 波爾多',
+      bourgogne:  '🍇 布根地',
+      loire:      '🌿 羅亞爾',
+      italy:      '🇮🇹 義大利',
+      spain:      '🇪🇸 西班牙',
+      germany:    '🇩🇪 德國',
+      portugal:   '🇵🇹 葡萄牙',
+      hungary:    '🇭🇺 匈牙利',
+      australia:  '🦘 澳洲',
+      newzealand: '🥝 紐西蘭',
+      california: '🍷 加州',
+    },
+    groupLabels: {
+      france:   '🇫🇷 法國',
+      europe:   '🌍 歐洲',
+      newworld: '🌏 新世界',
+    },
     bordeaux: {
       title: '波爾多葡萄酒',
       priceHint: '完整課程 NT$290/月起・免費體驗 Level 1・全通行證 NT$590/月解鎖 8 大產區',

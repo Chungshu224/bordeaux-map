@@ -35,6 +35,7 @@ export default {
     ctaViewPlans: '💎 View Plans',
     ctaViewAll: 'View All Courses ↓',
     trust: 'Free sign-up · No credit card · Level 1 fully open',
+    studentFallback: 'Student',
     stats: {
       regions: 'Wine Regions',
       levels: 'Learning Levels',
@@ -63,6 +64,7 @@ export default {
     comingSoon: '📅 Coming Soon',
 
     common: {
+      satellite: 'Sat.',
       statusAdmin: '🔓 Admin Access',
       statusActive: '✅ Now Open',
       statusPlanning: '📅 Coming Soon',
@@ -72,6 +74,24 @@ export default {
       comingSoon: '📅 Coming Soon',
     },
 
+    labels: {
+      bordeaux:   '🏰 Bordeaux',
+      bourgogne:  '🍇 Burgundy',
+      loire:      '🌿 Loire',
+      italy:      '🇮🇹 Italy',
+      spain:      '🇪🇸 Spain',
+      germany:    '🇩🇪 Germany',
+      portugal:   '🇵🇹 Portugal',
+      hungary:    '🇭🇺 Hungary',
+      australia:  '🦘 Australia',
+      newzealand: '🥝 New Zealand',
+      california: '🍷 California',
+    },
+    groupLabels: {
+      france:   '🇫🇷 France',
+      europe:   '🌍 Europe',
+      newworld: '🌏 New World',
+    },
     bordeaux: {
       title: 'Bordeaux Wine',
       priceHint: 'Full course from NT$290/mo · Free Level 1 · All-access NT$590/mo for 8 regions',

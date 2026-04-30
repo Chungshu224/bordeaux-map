@@ -97,11 +97,11 @@
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <div class="hero-tag">🌍 {{ visibleCourseCount }} 大世界產區・全中文深度教學</div>
-        <h1 class="hero-title">用知識<span class="accent">品味</span>每一口</h1>
+        <div class="hero-tag">🌍 {{ $t('home.hero.tag', { count: visibleCourseCount }) }}</div>
+        <h1 class="hero-title">{{ $t('home.hero.title1') }}<span class="accent">{{ $t('home.hero.titleAccent') }}</span>{{ $t('home.hero.title2') }}</h1>
         <p class="hero-desc">
-          系統化學習世界各產區頂級葡萄酒知識，掌握風土、品種與釀造工藝<br>
-          互動地圖・分級課程・品飲筆記，一個平台全搞定
+          {{ $t('home.hero.desc') }}<br>
+          {{ $t('home.hero.descSub') }}
         </p>
         <!-- 已登入：顯示課程入口 -->
         <div v-if="authUser" class="hero-cta logged-in-cta">
@@ -411,7 +411,7 @@
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
-                <span class="cp-num">衛星</span>
+                <span class="cp-num">{{ $t('home.courses.common.satellite') }}</span>
                 <span class="cp-label" v-html="$t('home.courses.germany.s4label')"></span>
               </div>
             </div>
@@ -455,7 +455,7 @@
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
-                <span class="cp-num">衛星</span>
+                <span class="cp-num">{{ $t('home.courses.common.satellite') }}</span>
                 <span class="cp-label" v-html="$t('home.courses.portugal.s4label')"></span>
               </div>
             </div>
@@ -919,7 +919,7 @@ const isAdmin     = computed(() => {
   if (authState.loading) return false
   return authActions.isAdmin()
 })
-const displayName = computed(() => authActions.getDisplayName() || '學員')
+const displayName = computed(() => authActions.getDisplayName() || t('home.hero.studentFallback'))
 
 const handleLogout = async () => {
   await authActions.signOut()
@@ -954,19 +954,19 @@ const handleFreeTier = () => {
 }
 
 // ─── 課程設定清單（順序即為顯示順序）──────────────────────────────────
-const courseConfig = [
-  { id: 'bordeaux',   label: '🏰 波爾多', route: '/bordeaux',          group: 'france'   },
-  { id: 'bourgogne',  label: '🍇 布根地', route: '/bourgogne',         group: 'france'   },
-  { id: 'loire',      label: '🌿 羅亞爾', route: '/loire',             group: 'france'   },
-  { id: 'italy',      label: '🇮🇹 義大利', route: '/italy',            group: 'europe'   },
-  { id: 'spain',      label: '🇪🇸 西班牙', route: '/spain',            group: 'europe'   },
-  { id: 'germany',    label: '🇩🇪 德國',   route: '/germany',          group: 'europe'   },
-  { id: 'portugal',   label: '🇵🇹 葡萄牙', route: '/portugal',         group: 'europe'   },
-  { id: 'hungary',    label: '🇭🇺 匈牙利', route: '/hungary',          group: 'europe'   },
-  { id: 'australia',  label: '🦘 澳洲',   route: '/australia',         group: 'newworld' },
-  { id: 'newzealand', label: '🥝 紐西蘭', route: '/newzealand',        group: 'newworld' },
-  { id: 'california', label: '🍷 加州',   route: '/california/course', group: 'newworld' },
-]
+const courseConfig = computed(() => [
+  { id: 'bordeaux',   label: t('home.courses.labels.bordeaux'), route: '/bordeaux',          group: 'france'   },
+  { id: 'bourgogne',  label: t('home.courses.labels.bourgogne'), route: '/bourgogne',         group: 'france'   },
+  { id: 'loire',      label: t('home.courses.labels.loire'), route: '/loire',             group: 'france'   },
+  { id: 'italy',      label: t('home.courses.labels.italy'), route: '/italy',            group: 'europe'   },
+  { id: 'spain',      label: t('home.courses.labels.spain'), route: '/spain',            group: 'europe'   },
+  { id: 'germany',    label: t('home.courses.labels.germany'), route: '/germany',          group: 'europe'   },
+  { id: 'portugal',   label: t('home.courses.labels.portugal'), route: '/portugal',         group: 'europe'   },
+  { id: 'hungary',    label: t('home.courses.labels.hungary'), route: '/hungary',          group: 'europe'   },
+  { id: 'australia',  label: t('home.courses.labels.australia'), route: '/australia',         group: 'newworld' },
+  { id: 'newzealand', label: t('home.courses.labels.newzealand'), route: '/newzealand',        group: 'newworld' },
+  { id: 'california', label: t('home.courses.labels.california'), route: '/california/course', group: 'newworld' },
+])
 
 // ─── 課程狀態 + 訂閱定價（從 DB 讀取）────────────────────────────────
 const pricing = ref({
@@ -1001,18 +1001,18 @@ async function loadCourseData() {
 // ─── 首頁動態課程 computed ─────────────────────────────────────────────────────────
 // 已上架顯示的課程（管理員可看全部）
 const visibleCourses = computed(() =>
-  courseConfig.filter(c => courseShowHome.value[c.id] || isAdmin.value)
+  courseConfig.value.filter(c => courseShowHome.value[c.id] || isAdmin.value)
 )
 // 實際上架數量（不含管理員 override，用於顯示數字）
 const visibleCourseCount = computed(() =>
-  courseConfig.filter(c => courseShowHome.value[c.id]).length
+  courseConfig.value.filter(c => courseShowHome.value[c.id]).length
 )
 // 依地區分組的已上架課程
 const visibleCoursesByGroup = computed(() => {
   const groupDefs = [
-    { key: 'france',   label: '🇫🇷 法國' },
-    { key: 'europe',   label: '🌍 歐洲' },
-    { key: 'newworld', label: '🌏 新世界' },
+    { key: 'france',   label: t('home.courses.groupLabels.france') },
+    { key: 'europe',   label: t('home.courses.groupLabels.europe') },
+    { key: 'newworld', label: t('home.courses.groupLabels.newworld') },
   ]
   return groupDefs
     .map(g => ({ label: g.label, courses: visibleCourses.value.filter(c => c.group === g.key) }))

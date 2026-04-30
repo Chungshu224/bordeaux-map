@@ -35,6 +35,7 @@ export default {
     ctaViewPlans: '💎 プランを見る',
     ctaViewAll: '全コースを見る ↓',
     trust: '無料登録・クレジットカード不要・Level 1 全コンテンツ無料公開',
+    studentFallback: '受講生',
     stats: {
       regions: '世界の産地',
       levels: '学習レベル',
@@ -63,6 +64,7 @@ export default {
     comingSoon: '📅 近日公開',
 
     common: {
+      satellite: '衛星',
       statusAdmin: '🔓 管理者アクセス',
       statusActive: '✅ 公開中',
       statusPlanning: '📅 近日公開',
@@ -72,6 +74,24 @@ export default {
       comingSoon: '📅 近日公開',
     },
 
+    labels: {
+      bordeaux:   '🏰 ボルドー',
+      bourgogne:  '🍇 ブルゴーニュ',
+      loire:      '🌿 ロワール',
+      italy:      '🇮🇹 イタリア',
+      spain:      '🇪🇸 スペイン',
+      germany:    '🇩🇪 ドイツ',
+      portugal:   '🇵🇹 ポルトガル',
+      hungary:    '🇭🇺 ハンガリー',
+      australia:  '🦘 オーストラリア',
+      newzealand: '🥝 ニュージーランド',
+      california: '🍷 カリフォルニア',
+    },
+    groupLabels: {
+      france:   '🇫🇷 フランス',
+      europe:   '🌍 ヨーロッパ',
+      newworld: '🌏 新世界',
+    },
     bordeaux: {
       title: 'ボルドーワイン',
       priceHint: '完全コース NT$290/月〜・Level 1 無料体験・全アクセス NT$590/月で8産地解錠',
