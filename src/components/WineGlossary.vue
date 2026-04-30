@@ -90,7 +90,10 @@
 
 <script setup>
 import { ref, computed, watch, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { supabase } from '../lib/supabaseClient.js'
+
+const { t } = useI18n()
 
 const SUPPORTED_REGIONS = [
   'bordeaux', 'bourgogne', 'italy',
@@ -106,22 +109,32 @@ const props = defineProps({
   }
 })
 
-// ── Region config ──────────────────────────────────────────
-const regionConfig = computed(() => {
-  const cfg = {
-    bordeaux:   { icon: '🍷', title: '波爾多葡萄酒辭典',     lang3Key: 'fr', lang3Label: 'Français',  placeholder: '搜尋中文、英文或法文名詞…' },
-    bourgogne:  { icon: '🍇', title: '布根地葡萄酒辭典',     lang3Key: 'fr', lang3Label: 'Français',  placeholder: '搜尋中文、英文或法文名詞…' },
-    italy:      { icon: '🍾', title: '義大利葡萄酒辭典',     lang3Key: 'it', lang3Label: 'Italiano', placeholder: '搜尋中文、英文或義大利文名詞…' },
-    spain:      { icon: '🇪🇸', title: '西班牙葡萄酒辭典',     lang3Key: 'es', lang3Label: 'Español',  placeholder: '搜尋中文、英文或西班牙文名詞…' },
-    portugal:   { icon: '🇵🇹', title: '葡萄牙葡萄酒辭典',     lang3Key: 'pt', lang3Label: 'Português', placeholder: '搜尋中文、英文或葡萄牙文名詞…' },
-    germany:    { icon: '🇩🇪', title: '德國葡萄酒辭典',       lang3Key: 'de', lang3Label: 'Deutsch',  placeholder: '搜尋中文、英文或德文名詞…' },
-    hungary:    { icon: '🇭🇺', title: '匈牙利葡萄酒辭典',     lang3Key: 'hu', lang3Label: 'Magyar',   placeholder: '搜尋中文、英文或匈牙利文名詞…' },
-    loire:      { icon: '🏰', title: '羅亞爾河谷葡萄酒辭典', lang3Key: 'fr', lang3Label: 'Français', placeholder: '搜尋中文、英文或法文名詞…' },
-    california: { icon: '🌉', title: '加州葡萄酒辭典',         lang3Key: '',   lang3Label: '',         placeholder: '搜尋中文或英文名詞…' },
-    australia:  { icon: '🦘', title: '澳洲葡萄酒辭典',         lang3Key: '',   lang3Label: '',         placeholder: '搜尋中文或英文名詞…' },
-    newzealand: { icon: '🥝', title: '紐西蘭葡萄酒辭典',       lang3Key: '',   lang3Label: '',         placeholder: '搜尋中文或英文名詞…' },
-  }
-  return cfg[props.region] || cfg.bordeaux
+// ── Region meta（只保留產區固有屬性；文字交給 i18n） ─────
+const REGION_META = {
+  bordeaux:   { icon: '🍷', lang3Key: 'fr', lang3Label: 'Français' },
+  bourgogne:  { icon: '🍇', lang3Key: 'fr', lang3Label: 'Français' },
+  italy:      { icon: '🍾', lang3Key: 'it', lang3Label: 'Italiano' },
+  spain:      { icon: '🇪🇸', lang3Key: 'es', lang3Label: 'Español' },
+  portugal:   { icon: '🇵🇹', lang3Key: 'pt', lang3Label: 'Português' },
+  germany:    { icon: '🇩🇪', lang3Key: 'de', lang3Label: 'Deutsch' },
+  hungary:    { icon: '🇭🇺', lang3Key: 'hu', lang3Label: 'Magyar' },
+  loire:      { icon: '🏰', lang3Key: 'fr', lang3Label: 'Français' },
+  california: { icon: '🌉', lang3Key: '',   lang3Label: '' },
+  australia:  { icon: '🦘', lang3Key: '',   lang3Label: '' },
+  newzealand: { icon: '🥝', lang3Key: '',   lang3Label: '' },
+}
+
+const regionConfig = computed(() => REGION_META[props.region] || REGION_META.bordeaux)
+
+const panelTitle = computed(() =>
+  `${t(`common.regions.${props.region}`)}${t('common.glossary.titleSuffix')}`
+)
+
+const searchPlaceholder = computed(() => {
+  const cfg = regionConfig.value
+  return cfg.lang3Label
+    ? t('common.glossary.searchPlaceholder', { lang3: cfg.lang3Label })
+    : t('common.glossary.searchPlaceholderBilingual')
 })
 
 // ── State ──────────────────────────────────────────────────
@@ -135,21 +148,13 @@ const searchInput   = ref(null)
 const bodyEl        = ref(null)
 
 // ── Categories ─────────────────────────────────────────────
-const categories = [
-  { key: 'all',          label: '全部' },
-  { key: 'grape',        label: '🍇 品種' },
-  { key: 'region',       label: '🗺️ 產區' },
-  { key: 'winemaking',   label: '🍾 釀造' },
-  { key: 'tasting',      label: '👃 品飲' },
-  { key: 'appellation',  label: '📜 法規' },
-  { key: 'general',      label: '📌 一般' },
-]
+const CAT_KEYS = ['all', 'grape', 'region', 'winemaking', 'tasting', 'appellation', 'general']
+const categories = computed(() =>
+  CAT_KEYS.map(key => ({ key, label: t(`common.glossary.cats.${key}`) }))
+)
 
 function catLabel(key) {
-  return {
-    grape: '品種', region: '產區', winemaking: '釀造',
-    tasting: '品飲', appellation: '法規', general: '一般'
-  }[key] || key
+  return t(`common.glossary.catShort.${key}`)
 }
 
 // ── Load all entries from Supabase ─────────────────────────

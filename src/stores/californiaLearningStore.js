@@ -208,3 +208,38 @@ export const californiaLearningProgress = computed(() => {
   const done = Object.values(californiaLearningState.userProgress).reduce((s, v) => s + v.completed, 0)
   return total > 0 ? Math.round(done / total * 100) : 0
 })
+
+// ── i18n: 將 levels 結構套上翻譯後回傳 ──────────────────────
+// 用法：
+//   import { useI18n } from 'vue-i18n'
+//   const { t, te } = useI18n()
+//   const levels = computed(() => getLocalizedCaliforniaLevels(t, te))
+// 缺翻譯時會 fallback 到原始 zh-TW 字串，保證不會空白。
+export function getLocalizedCaliforniaLevels(t, te) {
+  const tr = (key, fallback) => {
+    if (!t) return fallback
+    if (te && !te(key)) return fallback
+    const v = t(key)
+    return (!v || v === key) ? fallback : v
+  }
+  const out = {}
+  for (const lvKey of Object.keys(californiaLearningLevels)) {
+    const lv = californiaLearningLevels[lvKey]
+    const n = lvKey.replace('level', '')
+    out[lvKey] = {
+      ...lv,
+      title: tr(`california.levels.${n}.title`, lv.title),
+      description: tr(`california.levels.${n}.description`, lv.description),
+      modules: (lv.modules || []).map(m => ({
+        ...m,
+        title: tr(`california.modules.${m.id}`, m.title),
+      })),
+      lessons: (lv.lessons || []).map(ls => ({
+        ...ls,
+        title: tr(`california.lessons.${ls.id}.title`, ls.title),
+        description: tr(`california.lessons.${ls.id}.description`, ls.description),
+      })),
+    }
+  }
+  return out
+}

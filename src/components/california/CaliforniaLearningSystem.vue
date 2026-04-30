@@ -37,15 +37,15 @@
     <template v-else>
       <header class="learning-header">
         <div class="lh-row lh-row-1">
-          <button class="lh-btn lh-back-btn" @click="handleBackButton">← 返回</button>
+          <button class="lh-btn lh-back-btn" @click="handleBackButton">← {{ $t('common.actions.back') }}</button>
           <div class="lh-badges">
             <span class="lh-badge lh-progress-badge">{{ totalProgress }}%</span>
           </div>
         </div>
         <div class="lh-row lh-row-2">
-          <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious">◀ 上一頁</button>
+          <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious">◀ {{ $t('common.actions.prev') }}</button>
           <span class="lh-nav-label">{{ currentSlideTitle }}</span>
-          <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext">下一頁 ▶</button>
+          <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext">{{ $t('common.actions.next') }} ▶</button>
         </div>
       </header>
 
@@ -66,11 +66,13 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import {
   californiaLearningState,
   californiaLearningLevels,
   californiaLearningActions,
-  californiaLearningProgress
+  californiaLearningProgress,
+  getLocalizedCaliforniaLevels
 } from '../../stores/californiaLearningStore.js'
 import { authActions } from '../../stores/authStore.js'
 import CaliforniaLevelSelector from './CaliforniaLevelSelector.vue'
@@ -92,6 +94,9 @@ const showLevelSelector = ref(true)
 const showNotebook = ref(false)
 const showGames = ref(false)
 
+const { t, te } = useI18n()
+const localizedLevels = computed(() => getLocalizedCaliforniaLevels(t, te))
+
 function handleStartLevel(levelNum) {
   californiaLearningActions.setLevel(levelNum)
   showLevelSelector.value = false
@@ -99,7 +104,7 @@ function handleStartLevel(levelNum) {
 
 const currentLevel = computed(() => californiaLearningState.currentLevel)
 const currentLesson = computed(() => californiaLearningState.currentLesson)
-const currentLevelData = computed(() => californiaLearningLevels[`level${currentLevel.value}`])
+const currentLevelData = computed(() => localizedLevels.value[`level${currentLevel.value}`])
 
 const totalProgress = computed(() => californiaLearningProgress.value)
 

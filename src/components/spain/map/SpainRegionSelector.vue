@@ -1,7 +1,7 @@
 <template>
   <div class="region-selector">
     <div class="selector-header">
-      <button class="back-btn" @click="emit('back')">&#8592; 返回課程</button>
+      <button class="back-btn" @click="emit('back')">&#8592; {{ $t('common.actions.backToCourse') }}</button>
       <div class="flag-icon">🇪🇸</div>
       <h2>西班牙葡萄酒產區</h2>
       <p class="subtitle">Spain Wine Regions — DO · DOCa · VP</p>

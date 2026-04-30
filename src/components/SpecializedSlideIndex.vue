@@ -3,7 +3,7 @@
     <!-- ── 頁首 ──────────────────────────────────────────────────── -->
     <div class="ssi-hero">
       <div class="ssi-hero-inner">
-        <button class="back-btn" @click="$router.back()">← 返回</button>
+        <button class="back-btn" @click="$router.back()">← {{ $t('common.actions.back') }}</button>
         <h1>🎛️ 互動特化 Slide 全覽</h1>
         <p class="hero-sub">所有產區課程中的深度互動幻燈片一覽，可依產區或主題篩選</p>
         <div class="hero-stats">

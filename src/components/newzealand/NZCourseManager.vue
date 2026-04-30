@@ -4,7 +4,7 @@
     <header v-if="currentLesson" class="nz-learning-header">
       <div class="nz-lh-row nz-lh-row-1">
         <button class="nz-lh-btn nz-lh-back-btn" @click="handleGoBack">
-          {{ selectedLevel === 1 ? '← Level 1' : selectedLevel === 2 ? '← Level 2' : selectedLevel === 3 ? '← Level 3' : '← 返回' }}
+          {{ selectedLevel === 1 ? '← Level 1' : selectedLevel === 2 ? '← Level 2' : selectedLevel === 3 ? '← Level 3' : `← ${$t('common.actions.back')}` }}
         </button>
         <span class="nz-lh-title">{{ currentLesson.title }}</span>
         <button
@@ -12,12 +12,12 @@
           :class="{ completed: isCurrentLessonCompleted }"
           @click="triggerMarkComplete"
           :disabled="isCurrentLessonCompleted"
-        >{{ isCurrentLessonCompleted ? '✓ 已完成' : '標記完成' }}</button>
+        >{{ isCurrentLessonCompleted ? `✓ ${$t('common.actions.completed')}` : $t('common.actions.markComplete') }}</button>
       </div>
       <div class="nz-lh-row nz-lh-row-2" v-if="showSlideControls">
-        <button class="nz-lh-btn nz-lh-nav-btn" @click="handlePrevSlide" :disabled="!canPrevSlide">◀ 上一頁</button>
+        <button class="nz-lh-btn nz-lh-nav-btn" @click="handlePrevSlide" :disabled="!canPrevSlide">◀ {{ $t('common.actions.prev') }}</button>
         <span class="nz-lh-nav-label">{{ currentSlideNum }} / {{ totalSlides }}</span>
-        <button class="nz-lh-btn nz-lh-nav-btn" @click="handleNextSlide" :disabled="!canNextSlide">下一頁 ▶</button>
+        <button class="nz-lh-btn nz-lh-nav-btn" @click="handleNextSlide" :disabled="!canNextSlide">{{ $t('common.actions.next') }} ▶</button>
       </div>
     </header>
 

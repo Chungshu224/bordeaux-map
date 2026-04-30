@@ -7,8 +7,8 @@
     <div class="lc-status-badge" :class="`badge-${status}`">
       <template v-if="status === 'completed'">✓ 100%</template>
       <template v-else-if="status === 'in-progress'">{{ Math.round(progress) }}%</template>
-      <template v-else-if="status === 'locked'">🔒 未解鎖</template>
-      <template v-else>新課程</template>
+      <template v-else-if="status === 'locked'">{{ $t('common.levelCard.statusLocked') }}</template>
+      <template v-else>{{ $t('common.levelCard.statusNew') }}</template>
     </div>
 
     <header class="lc-header">
@@ -30,13 +30,13 @@
 
     <div class="lc-meta">
       <div v-if="level.modules != null" class="lc-meta-item">
-        <span class="m-num">{{ level.modules }}</span><span class="m-lbl">模組</span>
+        <span class="m-num">{{ level.modules }}</span><span class="m-lbl">{{ $t('common.levelCard.modules') }}</span>
       </div>
       <div v-if="level.lessons != null" class="lc-meta-item">
-        <span class="m-num">{{ level.lessons }}</span><span class="m-lbl">課</span>
+        <span class="m-num">{{ level.lessons }}</span><span class="m-lbl">{{ $t('common.levelCard.lessons') }}</span>
       </div>
       <div v-if="level.duration" class="lc-meta-item">
-        <span class="m-num">{{ level.duration }}</span><span class="m-lbl">時長</span>
+        <span class="m-num">{{ level.duration }}</span><span class="m-lbl">{{ $t('common.levelCard.duration') }}</span>
       </div>
     </div>
 
@@ -50,10 +50,10 @@
     </div>
 
     <button class="lc-btn" :disabled="status === 'locked'" @click.stop="onAction">
-      <template v-if="status === 'locked'">{{ level.unlockHint || '完成前一階段解鎖' }}</template>
-      <template v-else-if="status === 'completed'">重新學習</template>
-      <template v-else-if="status === 'in-progress'">繼續學習</template>
-      <template v-else>開始學習</template>
+      <template v-if="status === 'locked'">{{ level.unlockHint || $t('common.levelCard.btnUnlockDefault') }}</template>
+      <template v-else-if="status === 'completed'">{{ $t('common.levelCard.btnRestart') }}</template>
+      <template v-else-if="status === 'in-progress'">{{ $t('common.levelCard.btnContinue') }}</template>
+      <template v-else>{{ $t('common.levelCard.btnStart') }}</template>
       <span v-if="status !== 'locked'" class="arrow">→</span>
     </button>
   </article>
@@ -61,6 +61,9 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   // level: { number, title, subtitle, icon, description, tags[], modules, lessons, duration, unlockHint }

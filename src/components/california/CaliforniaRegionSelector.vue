@@ -1,6 +1,6 @@
 <template>
   <div class="region-selector">
-    <button class="back-btn" @click="$emit('back')">← 返回</button>
+    <button class="back-btn" @click="$emit('back')">← {{ $t('common.actions.back') }}</button>
 
     <div class="selector-header">
       <div class="header-icon">🍷</div>

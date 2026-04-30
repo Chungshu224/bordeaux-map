@@ -1,7 +1,7 @@
 <template>
   <div class="quiz-page">
     <!-- 返回按鈕 -->
-    <button class="quiz-back-btn" @click="handleBack">← 返回</button>
+    <button class="quiz-back-btn" @click="handleBack">← {{ $t('common.actions.back') }}</button>
 
     <!-- ══ LOBBY ══ -->
     <div v-if="phase === 'lobby'" class="quiz-lobby">

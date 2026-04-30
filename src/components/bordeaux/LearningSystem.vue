@@ -29,19 +29,19 @@
       <header class="learning-header">
         <!-- Row 1: 返回按鈕 + 進度徽章 -->
         <div class="lh-row lh-row-1">
-          <button class="lh-btn lh-back-btn" @click="handleBackButton">← 返回</button>
+          <button class="lh-btn lh-back-btn" @click="handleBackButton">← {{ $t('common.actions.back') }}</button>
           <div class="lh-badges">
             <span class="lh-badge lh-progress-badge">{{ totalProgress }}%</span>
-            <span class="lh-badge lh-achievement-badge" @click="showAchievements" title="成就">
+            <span class="lh-badge lh-achievement-badge" @click="showAchievements" :title="$t('common.labels.achievements')">
               🏆 {{ achievementCount }}
             </span>
           </div>
         </div>
         <!-- Row 2: 上一頁 / 下一頁 -->
         <div class="lh-row lh-row-2">
-          <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious" title="上一頁">◀ 上一頁</button>
+          <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious" :title="$t('common.actions.prev')">◀ {{ $t('common.actions.prev') }}</button>
           <span class="lh-nav-label">{{ currentSlideTitle }}</span>
-          <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext" title="下一頁">下一頁 ▶</button>
+          <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext" :title="$t('common.actions.next')">{{ $t('common.actions.next') }} ▶</button>
         </div>
       </header>
 

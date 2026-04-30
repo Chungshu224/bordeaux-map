@@ -1,7 +1,7 @@
 <template>
   <div class="region-selector">
     <button class="back-course-btn" @click="$emit('backToCourse')">
-      ← 返回課程
+      ← {{ $t('common.actions.backToCourse') }}
     </button>
 
     <div class="region-header">

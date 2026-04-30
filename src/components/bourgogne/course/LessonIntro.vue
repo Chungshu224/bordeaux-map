@@ -52,7 +52,7 @@
     <!-- 開始學習按鈕 -->
     <div class="intro-actions">
       <button class="back-btn" @click="$emit('back')">
-        ← 返回課程列表
+        ← {{ $t('common.actions.backToList') }}
       </button>
       <button class="start-btn" @click="$emit('startLesson')">
         <span class="play-icon">▶</span>

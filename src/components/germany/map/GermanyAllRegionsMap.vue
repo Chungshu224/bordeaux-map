@@ -7,7 +7,7 @@
     <!-- Header（波爾多風格：透明背景 + pill 按鈕）-->
     <div class="map-header">
       <div class="map-header-left">
-        <button class="map-hdr-btn" @click="emit('back')">← 返回課程</button>
+        <button class="map-hdr-btn" @click="emit('back')">← {{ $t('common.actions.backToCourse') }}</button>
         <button class="map-hdr-btn ghost" @click="router.push('/')">🏠 首頁</button>
       </div>
       <h1>🇩🇪 德國葡萄酒產區地圖</h1>

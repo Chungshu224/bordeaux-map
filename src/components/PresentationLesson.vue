@@ -3,15 +3,15 @@
     <!-- 載入狀態 -->
     <div v-if="isLoading" class="loading-state">
       <div class="loading-spinner"></div>
-      <p>載入課程內容中...</p>
+      <p>{{ $t('common.lesson.loadingContent') }}</p>
     </div>
 
     <!-- 錯誤狀態 -->
     <div v-else-if="loadError" class="error-state">
       <div class="error-icon">⚠️</div>
-      <h3>載入失敗</h3>
+      <h3>{{ $t('common.lesson.loadFailed') }}</h3>
       <p>{{ loadError }}</p>
-      <button @click="retryLoad" class="retry-btn">重新載入</button>
+      <button @click="retryLoad" class="retry-btn">{{ $t('common.lesson.reload') }}</button>
     </div>
 
     <!-- 主要內容 -->
@@ -30,7 +30,7 @@
                   class="chapter-chip"
                   :class="{ active: ch.index === activeChapterIndex }"
                   @click="goToSlide(ch.index)"
-                  :title="`跳至：${ch.label}`"
+                  :title="$t('common.lesson.jumpTo', { label: ch.label })"
                 >
                   <span v-if="ch.icon" class="icon">{{ ch.icon }}</span>
                   <span class="label">{{ ch.label }}</span>

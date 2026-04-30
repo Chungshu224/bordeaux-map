@@ -2,9 +2,9 @@
   <div class="lesson-viewer">
     <div class="lesson-header">
       <div class="breadcrumb">
-        <span>模組 {{ moduleOrder }}</span>
+        <span>{{ $t('common.lesson.module', { n: moduleOrder }) }}</span>
         <span class="separator">›</span>
-        <span>課程 {{ lessonNumber }}/{{ totalLessons }}</span>
+        <span>{{ $t('common.lesson.lessonProgress', { n: lessonNumber, total: totalLessons }) }}</span>
       </div>
       <h1>{{ lesson.title }}</h1>
       <div class="lesson-meta">
@@ -157,13 +157,13 @@
         class="nav-btn prev-btn"
         @click="$emit('previousLesson')"
       >
-        ← 上一課
+        ← {{ $t('common.lesson.prevLesson') }}
       </button>
       <button 
         class="nav-btn complete-btn"
         @click="completeLesson"
       >
-        {{ lessonNumber < totalLessons ? '完成並繼續 →' : '完成課程' }}
+        {{ lessonNumber < totalLessons ? `${$t('common.lesson.continueAndNext')} →` : $t('common.lesson.completeLesson') }}
       </button>
     </div>
   </div>

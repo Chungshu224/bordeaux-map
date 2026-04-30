@@ -3,7 +3,7 @@
 
     <!-- Header -->
     <div class="it-nb-header">
-      <button class="it-nb-back" @click="emit('back')">← 返回</button>
+      <button class="it-nb-back" @click="emit('back')">← {{ $t('common.actions.back') }}</button>
       <h1 class="it-nb-title">📔 品飲筆記本</h1>
       <button class="it-nb-add" @click="openNewNote" :disabled="!authUser">
         <span>+</span> 新增

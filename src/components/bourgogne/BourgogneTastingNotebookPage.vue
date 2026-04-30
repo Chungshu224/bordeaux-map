@@ -2,7 +2,7 @@
   <div class="burg-nb-page">
     <!-- Header -->
     <div class="burg-nb-header">
-      <button class="burg-nb-back" @click="emit('back')">← 返回</button>
+      <button class="burg-nb-back" @click="emit('back')">← {{ $t('common.actions.back') }}</button>
       <h1 class="burg-nb-title">📔 品飲筆記本</h1>
       <button class="burg-nb-add" @click="openNewNote" :disabled="!authUser">
         <span>+</span> 新增

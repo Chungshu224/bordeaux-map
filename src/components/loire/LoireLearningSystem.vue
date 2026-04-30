@@ -31,7 +31,7 @@
     <template v-else>
       <header class="learning-header">
         <div class="lh-row lh-row-1">
-          <button class="lh-btn lh-back-btn" @click="handleBackButton">← 返回</button>
+          <button class="lh-btn lh-back-btn" @click="handleBackButton">← {{ $t('common.actions.back') }}</button>
           <div class="lh-badges">
             <span class="lh-badge lh-progress-badge">{{ totalProgress }}%</span>
             <span class="lh-badge lh-achievement-badge" @click="showAchievementsModal = true" title="成就">
@@ -40,9 +40,9 @@
           </div>
         </div>
         <div class="lh-row lh-row-2">
-          <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious">◀ 上一頁</button>
+          <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious">◀ {{ $t('common.actions.prev') }}</button>
           <span class="lh-nav-label">{{ currentSlideTitle }}</span>
-          <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext">下一頁 ▶</button>
+          <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext">{{ $t('common.actions.next') }} ▶</button>
         </div>
       </header>
 

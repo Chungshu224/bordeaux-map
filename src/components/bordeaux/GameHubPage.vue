@@ -4,7 +4,7 @@
     <!-- ══ HUB 總覽 ══ -->
     <template v-if="!currentGame">
       <div class="hub-header">
-        <button class="back-btn" @click="$emit('back')">← 返回</button>
+        <button class="back-btn" @click="$emit('back')">← {{ $t('common.actions.back') }}</button>
         <div class="hub-title-block">
           <h1 class="hub-title">🎮 互動練習</h1>
           <p class="hub-subtitle">選擇一個遊戲開始挑戰</p>

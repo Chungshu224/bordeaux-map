@@ -5,7 +5,7 @@
       <!-- Row 1：返回按鈕 + 頁碼 -->
       <div class="nav-row-1">
         <button class="nav-control-btn back-btn" @click="$emit('close')">
-          ← 返回
+          ← {{ $t('common.actions.back') }}
         </button>
         
         <div class="slide-counter">
@@ -46,7 +46,7 @@
         class="nav-control-btn complete-btn full-width" 
         @click="completeLesson"
       >
-        ✓ 完成課程
+        ✓ {{ $t('common.actions.finish') }}
       </button>
     </div>
 

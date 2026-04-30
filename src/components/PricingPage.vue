@@ -3,7 +3,7 @@
 
     <!-- Header -->
     <div class="pricing-header">
-      <button class="back-btn" @click="router.push('/')">← 返回首頁</button>
+      <button class="back-btn" @click="router.push('/')">← {{ $t('common.actions.backToHome') }}</button>
       <div class="header-content">
         <div class="header-eyebrow">透明定價・隨時取消</div>
         <h1>選擇您的學習方案</h1>

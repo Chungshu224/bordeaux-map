@@ -1,7 +1,7 @@
 <template>
   <div class="ca-quiz-page" @keydown.left="answer('napa')" @keydown.right="answer('sonoma')"
        @keydown.up="answer('coast')" @keydown.down="answer('other')" tabindex="0" ref="pageEl">
-    <button class="back-btn" @click="emit('back')">← 返回</button>
+    <button class="back-btn" @click="emit('back')">← {{ $t('common.actions.back') }}</button>
 
     <!-- ══ LOBBY ══ -->
     <div v-if="phase === 'lobby'" class="lobby">

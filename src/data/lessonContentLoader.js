@@ -3,41 +3,67 @@
  * 負責動態載入和快取課程內容
  */
 
+import { applyTranslations } from './lessonI18nUtils.js'
+
+// ── i18n overlay：以 import.meta.glob 預先索引各語系 lesson 翻譯 JSON ──
+// Vite 會把它們打成獨立 chunk（不會全部一次載入）
+const LESSON_TRANSLATIONS = import.meta.glob('../locales/*/lessons/*/*.json')
+
+function findTranslationLoader(locale, lessonId) {
+  // 鍵格式：'../locales/en/lessons/california/ca-l1-1.json'
+  const suffix = `/lessons/`
+  for (const key of Object.keys(LESSON_TRANSLATIONS)) {
+    if (key.includes(`/locales/${locale}/`) && key.endsWith(`/${lessonId}.json`) && key.includes(suffix)) {
+      return LESSON_TRANSLATIONS[key]
+    }
+  }
+  return null
+}
+
+function getCurrentLocale() {
+  if (typeof window === 'undefined') return 'zh-TW'
+  return window.localStorage?.getItem('app_locale') || document.documentElement.getAttribute('lang') || 'zh-TW'
+}
+
 class LessonContentManager {
   constructor() {
-    this.contentCache = new Map()
+    this.contentCache = new Map() // key: `${locale}::${lessonId}`
     this.loadingPromises = new Map()
   }
 
   /**
-   * 載入課程內容
+   * 載入課程內容（自動依當前語系套上翻譯 overlay）
    * @param {string} lessonId - 課程ID (如 'l2-7')
+   * @param {string} [locale] - 強制指定語系；省略則讀取當前語系
    * @returns {Promise<Array>} 課程內容陣列
    */
-  async loadLesson(lessonId) {
+  async loadLesson(lessonId, locale) {
+    const lc = locale || getCurrentLocale()
+    const cacheKey = `${lc}::${lessonId}`
+
     // 檢查快取
-    if (this.contentCache.has(lessonId)) {
-      return this.contentCache.get(lessonId)
+    if (this.contentCache.has(cacheKey)) {
+      return this.contentCache.get(cacheKey)
     }
 
     // 檢查是否正在載入
-    if (this.loadingPromises.has(lessonId)) {
-      return this.loadingPromises.get(lessonId)
+    if (this.loadingPromises.has(cacheKey)) {
+      return this.loadingPromises.get(cacheKey)
     }
 
     // 開始載入
-    const loadPromise = this._loadLessonContent(lessonId)
-    this.loadingPromises.set(lessonId, loadPromise)
+    const loadPromise = this._loadLessonContent(lessonId, lc)
+    this.loadingPromises.set(cacheKey, loadPromise)
 
     try {
       const content = await loadPromise
-      this.contentCache.set(lessonId, content)
+      this.contentCache.set(cacheKey, content)
       return content
     } catch (error) {
       console.error(`Failed to load lesson ${lessonId}:`, error)
       return this._getFallbackContent(lessonId)
     } finally {
-      this.loadingPromises.delete(lessonId)
+      this.loadingPromises.delete(cacheKey)
     }
   }
 
@@ -45,7 +71,7 @@ class LessonContentManager {
    * 動態載入課程內容
    * @private
    */
-  async _loadLessonContent(lessonId) {
+  async _loadLessonContent(lessonId, locale = 'zh-TW') {
     // 顯式載入映射，避免把整個 lessons 目錄都打包成動態 chunk
     const loaders = lessonModuleLoaders
     const loader = loaders[lessonId]
@@ -59,14 +85,38 @@ class LessonContentManager {
       const candidates = [
         'default','lessonContent','l21Content','l22Content','l23Content','l24Content','l25Content','l26Content','l27Content','l28Content','l29Content','l31Content','l32Content','l33Content','l34Content','l35Content','l36Content','l37Content','l38Content','l39Content','l310Content','l311Part1Content','l311Part2Content','l312Content','l313Part1Content','l313Part2Content','l314Content','l3gtcContent'
       ]
+      let baseContent = null
       for (const key of candidates) {
         if (module[key]) {
           const content = module[key]
-          // 僅接受 Array 格式的內容；否則視為錯誤，交由上層 fallback
-          if (Array.isArray(content) && content.length > 0) return content
+          if (Array.isArray(content) && content.length > 0) {
+            baseContent = content
+            break
+          }
         }
       }
-      throw new Error(`[lessonLoader] Invalid or empty content export for ${lessonId}`)
+      if (!baseContent) {
+        throw new Error(`[lessonLoader] Invalid or empty content export for ${lessonId}`)
+      }
+
+      // ── i18n overlay：非中文時嘗試套上翻譯 ─────────────
+      if (locale && locale !== 'zh-TW') {
+        const translationLoader = findTranslationLoader(locale, lessonId)
+        if (translationLoader) {
+          try {
+            const mod = await translationLoader()
+            const flat = mod?.default || mod
+            if (flat && typeof flat === 'object') {
+              return applyTranslations(baseContent, flat)
+            }
+          } catch (e) {
+            console.warn(`[lessonLoader] Translation overlay failed for ${lessonId}/${locale}:`, e.message)
+            // overlay 失敗 → 回退原文，不阻擋課程載入
+          }
+        }
+      }
+
+      return baseContent
     } catch (e) {
       // 往上丟出，讓 loadLesson() 的 catch 返回後備內容
       throw e
@@ -116,6 +166,13 @@ class LessonContentManager {
 
 // 建立單例實例
 export const lessonManager = new LessonContentManager()
+
+// 監聽語系切換事件 → 清除快取，下次載入會套用新語系
+if (typeof window !== 'undefined') {
+  window.addEventListener('app:locale-change', () => {
+    lessonManager.clearCache()
+  })
+}
 
 // 匯出預設載入函數
 export async function loadLessonContent(lessonId) {

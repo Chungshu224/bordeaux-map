@@ -2,7 +2,7 @@
   <div class="region-selector">
     <!-- 返回課程按鈕 -->
     <button class="back-course-btn" @click="$emit('request-learning-mode')">
-      ← 返回課程
+      ← {{ $t('common.actions.backToCourse') }}
     </button>
     <div class="region-header">
       <h2>布根地葡萄酒產區</h2>

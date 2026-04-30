@@ -11,25 +11,28 @@
       <span class="qn-icon">{{ item.icon }}</span>
       <span class="qn-title">{{ item.title }}</span>
       <span class="qn-desc">{{ item.desc }}</span>
-      <span v-if="item.enabled === false" class="qn-soon">即將推出</span>
+      <span v-if="item.enabled === false" class="qn-soon">{{ $t('common.quickNav.comingSoon') }}</span>
     </button>
   </section>
 </template>
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 // 預設項目庫:父元件以 key 引用即可,可完整覆寫或新增自訂 key
-const DEFAULT_ITEMS = {
-  map:          { icon: '🗺️', title: '探索地圖', desc: '互動式產區地圖' },
-  games:        { icon: '🎮', title: '互動練習', desc: '小遊戲・挑戰題' },
-  notebook:     { icon: '📔', title: '品飲筆記', desc: '記錄品飲體驗' },
-  achievements: { icon: '🏆', title: '成就系統', desc: '已解鎖徽章與等級' },
-  progress:     { icon: '📊', title: '學習進度', desc: '完成度總覽' },
-  varieties:    { icon: '🍇', title: '品種指南', desc: '品種圖鑑' },
-  selector:     { icon: '🎯', title: '產區選擇器', desc: '快速跳轉' },
-  port:         { icon: '🍷', title: '波特酒專題', desc: 'Ruby・Tawny・LBV・Vintage' }
-}
+const DEFAULT_ITEMS = computed(() => ({
+  map:          { icon: '🗺️', title: t('common.quickNav.map.title'),   desc: t('common.quickNav.map.desc') },
+  games:        { icon: '🎮', title: t('common.quickNav.games.title'),  desc: t('common.quickNav.games.desc') },
+  notebook:     { icon: '📔', title: t('common.quickNav.notebook.title'), desc: t('common.quickNav.notebook.desc') },
+  achievements: { icon: '🏆', title: t('common.quickNav.achievements.title'), desc: t('common.quickNav.achievements.desc') },
+  progress:     { icon: '📊', title: t('common.quickNav.progress.title'), desc: t('common.quickNav.progress.desc') },
+  varieties:    { icon: '🍇', title: t('common.quickNav.varieties.title'), desc: t('common.quickNav.varieties.desc') },
+  selector:     { icon: '🎯', title: t('common.quickNav.selector.title'), desc: t('common.quickNav.selector.desc') },
+  port:         { icon: '🍷', title: t('common.quickNav.port.title'),    desc: t('common.quickNav.port.desc') },
+}))
 
 const props = defineProps({
   // items: [{ key, icon?, title?, desc?, enabled? }] 順序即顯示順序
@@ -39,7 +42,7 @@ defineEmits(['select'])
 
 const normalizedItems = computed(() => {
   return props.items.map(item => {
-    const def = DEFAULT_ITEMS[item.key] || {}
+    const def = DEFAULT_ITEMS.value[item.key] || {}
     return { ...def, ...item }
   })
 })

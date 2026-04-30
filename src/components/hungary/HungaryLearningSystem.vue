@@ -16,7 +16,7 @@
     <template v-else>
       <header class="learning-header">
         <div class="lh-row lh-row-1">
-          <button class="lh-btn lh-back-btn" @click="handleBackButton">← 返回</button>
+          <button class="lh-btn lh-back-btn" @click="handleBackButton">← {{ $t('common.actions.back') }}</button>
           <div class="lh-badges">
             <span class="lh-badge lh-progress-badge">{{ totalProgress }}%</span>
             <span class="lh-badge lh-achievement-badge" @click="showAchievementsModal = true" title="成就">

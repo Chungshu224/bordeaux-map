@@ -123,7 +123,7 @@
           :disabled="currentSlide === 0"
           class="nav-btn prev-btn"
         >
-          ← 上一頁
+          ← {{ $t('common.actions.prev') }}
         </button>
 
         <div class="slide-indicators">
@@ -141,7 +141,7 @@
           :disabled="currentSlide === totalSlides - 1"
           class="nav-btn next-btn"
         >
-          下一頁 →
+          {{ $t('common.actions.next') }} →
         </button>
       </div>
 

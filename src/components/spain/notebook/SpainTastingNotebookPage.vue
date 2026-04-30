@@ -3,7 +3,7 @@
 
     <!-- Header -->
     <div class="sp-nb-header">
-      <button class="sp-nb-back" @click="emit('back')">← 返回</button>
+      <button class="sp-nb-back" @click="emit('back')">← {{ $t('common.actions.back') }}</button>
       <h1 class="sp-nb-title">📔 西班牙品飲筆記</h1>
       <button class="sp-nb-add" @click="openNewNote" :disabled="!authUser">
         <span>+</span> 新增

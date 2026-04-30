@@ -1,7 +1,7 @@
 <template>
   <div class="lr-nb-page">
     <div class="lr-nb-header">
-      <button class="lr-nb-back" @click="emit('back')">← 返回</button>
+      <button class="lr-nb-back" @click="emit('back')">← {{ $t('common.actions.back') }}</button>
       <h1 class="lr-nb-title">📔 羅亞爾河品飲筆記</h1>
       <button class="lr-nb-add" @click="openNewNote" :disabled="!authUser">+ 新增</button>
     </div>

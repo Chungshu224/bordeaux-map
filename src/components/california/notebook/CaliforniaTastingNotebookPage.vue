@@ -2,7 +2,7 @@
   <div class="ca-nb-page">
     <!-- Header -->
     <div class="ca-nb-header">
-      <button class="ca-nb-back" @click="emit('back')">← 返回</button>
+      <button class="ca-nb-back" @click="emit('back')">← {{ $t('common.actions.back') }}</button>
       <h1 class="ca-nb-title">📔 加州品飲筆記</h1>
       <button class="ca-nb-add" @click="openNewNote" :disabled="!authUser">+ 新增</button>
     </div>

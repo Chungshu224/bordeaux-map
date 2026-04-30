@@ -1,6 +1,6 @@
 <template>
   <div ref="pageEl" class="icq-page" tabindex="-1" @keydown="onKey">
-    <button class="back-btn" @click="handleBack">← 返回</button>
+    <button class="back-btn" @click="handleBack">← {{ $t('common.actions.back') }}</button>
 
     <!-- ══ LOBBY ══ -->
     <div v-if="phase === 'lobby'" class="lobby">

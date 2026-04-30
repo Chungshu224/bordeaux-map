@@ -2,7 +2,7 @@
   <div class="portugal-slide-viewer">
     <!-- Header -->
     <header class="sv-header">
-      <button class="sv-back" @click="emit('close')">← 返回章節列表</button>
+      <button class="sv-back" @click="emit('close')">← {{ $t('common.actions.backToList') }}</button>
       <div class="sv-lesson-title">{{ lesson.title }}</div>
       <div class="sv-progress">{{ currentSlide + 1 }} / {{ slides.length }}</div>
     </header>
@@ -15,7 +15,7 @@
     <!-- 導航列（上一頁 / 下一頁，置於簡報上方） -->
     <nav class="sv-nav-row">
       <button class="sv-nav-btn" :disabled="currentSlide === 0" @click="prevSlide">
-        ← 上一頁
+        ← {{ $t('common.actions.prev') }}
       </button>
       <div class="sv-dots">
         <span
@@ -31,14 +31,14 @@
         class="sv-nav-btn primary"
         @click="nextSlide"
       >
-        下一頁 →
+        {{ $t('common.actions.next') }} →
       </button>
       <button
         v-else
         class="sv-nav-btn complete"
         @click="complete"
       >
-        完成課程 ✓
+        {{ $t('common.actions.finish') }} ✓
       </button>
     </nav>
 

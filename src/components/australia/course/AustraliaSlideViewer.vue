@@ -2,7 +2,7 @@
   <div class="au-slide-viewer">
     <!-- Header -->
     <header class="sv-header">
-      <button class="sv-back" @click="emit('close')">← 返回章節</button>
+      <button class="sv-back" @click="emit('close')">← {{ $t('common.actions.backToList') }}</button>
       <div class="sv-lesson-title">{{ lesson.title }}</div>
       <div class="sv-progress">{{ currentSlide + 1 }} / {{ slides.length }}</div>
     </header>

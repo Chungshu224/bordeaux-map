@@ -144,7 +144,7 @@
           <button class="link-btn" @click="$emit('goToLogin')">立即登入</button>
         </div>
         <div class="form-footer">
-          <button class="link-btn secondary" @click="$router.push('/')">← 返回首頁</button>
+          <button class="link-btn secondary" @click="$router.push('/')">← {{ $t('common.actions.backToHome') }}</button>
         </div>
       </div>
     </div>

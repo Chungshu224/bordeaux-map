@@ -3,7 +3,7 @@
     <!-- 頂部導航欄 -->
     <header class="course-header">
       <div class="header-left">
-        <button class="back-btn" @click="emit('backToLevelSelector')">← 返回</button>
+        <button class="back-btn" @click="emit('backToLevelSelector')">← {{ $t('common.actions.back') }}</button>
         <div class="logo">🌟</div>
       </div>
       <div class="header-center">
@@ -14,7 +14,7 @@
             class="level-tab"
             :class="{ active: props.currentLevel === n, locked: !props.unlockedLevels.includes(n) }"
             :disabled="!props.unlockedLevels.includes(n)"
-            :title="!props.unlockedLevels.includes(n) ? `需完成 Level ${n - 1} 綜合評量才能解鎖` : `Level ${n}`"
+            :title="!props.unlockedLevels.includes(n) ? $t('california.layout.levelLockedTooltip', { n: n - 1 }) : $t('california.layout.levelTooltip', { n })"
             @click="props.unlockedLevels.includes(n) && emit('changeLevel', n)"
           >
             <span v-if="!props.unlockedLevels.includes(n)" class="tab-lock">🔒</span>L{{ n }}
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="header-right">
-        <button class="progress-btn" title="整體進度">
+        <button class="progress-btn" :title="$t('california.layout.progressTitle')">
           <svg class="progress-ring" width="34" height="34" viewBox="0 0 34 34">
             <circle cx="17" cy="17" r="14" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="3"/>
             <circle
@@ -34,7 +34,7 @@
           </svg>
           <span class="progress-pct">{{ overallProgress }}%</span>
         </button>
-        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">≡ 章節</button>
+        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">{{ $t('california.layout.chapterToggle') }}</button>
       </div>
     </header>
 
@@ -42,7 +42,7 @@
     <div class="layout-body">
       <!-- 左側章節導航（桌面） -->
       <aside class="chapter-sidebar">
-        <div class="sidebar-title">章節總覽</div>
+        <div class="sidebar-title">{{ $t('california.layout.chapterOverview') }}</div>
         <nav>
           <button
             v-for="module in resolvedModules"
@@ -79,9 +79,9 @@
           <div class="progress-bar-wrapper">
             <div class="progress-bar-fill" :style="{ width: overallProgress + '%' }"></div>
           </div>
-          <p class="progress-label">{{ completedCount }}/{{ totalCount }} 課程完成</p>
+          <p class="progress-label">{{ $t('california.layout.completedLabel', { done: completedCount, total: totalCount }) }}</p>
           <div v-if="overallProgress > 0 && overallProgress < 100" class="motivation-text">
-            🎯 再完成 {{ totalCount - completedCount }} 課即可完成此階段！
+            {{ $t('california.layout.motivation', { n: totalCount - completedCount }) }}
           </div>
         </div>
 
@@ -99,7 +99,7 @@
               </div>
               <div class="module-section-info">
                 <h3 class="module-section-title">{{ module.title }}</h3>
-                <span class="module-count-chip">{{ moduleDoneCount(module) }}/{{ module.lessons.length }} 完成</span>
+                <span class="module-count-chip">{{ $t('california.layout.moduleCount', { done: moduleDoneCount(module), total: module.lessons.length }) }}</span>
               </div>
             </div>
             <div class="lessons-grid">
@@ -116,11 +116,11 @@
                 </div>
                 <div class="lesson-meta">
                   <div class="lesson-title">{{ lesson.title }}</div>
-                  <div v-if="lesson.duration" class="lesson-duration">{{ lesson.duration }} 分鐘</div>
+                  <div v-if="lesson.duration" class="lesson-duration">{{ $t('california.layout.minutes', { n: lesson.duration }) }}</div>
                 </div>
                 <div class="lesson-action">
-                  <span v-if="completedLessons.includes(lesson.id)" class="tag-done">完成</span>
-                  <span v-else class="tag-start">開始 ▶</span>
+                  <span v-if="completedLessons.includes(lesson.id)" class="tag-done">{{ $t('california.layout.tagDone') }}</span>
+                  <span v-else class="tag-start">{{ $t('california.layout.tagStart') }}</span>
                 </div>
               </div>
             </div>
@@ -135,7 +135,7 @@
       <Transition name="ca-slide-up">
         <div v-if="drawerOpen" class="ca-chapter-drawer">
           <div class="drawer-header">
-            <span>章節導航</span>
+            <span>{{ $t('california.layout.chapterDrawer') }}</span>
             <button class="drawer-close" @click="drawerOpen = false">×</button>
           </div>
           <div class="drawer-body">

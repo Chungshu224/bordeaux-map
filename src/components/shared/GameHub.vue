@@ -3,7 +3,7 @@
 
     <!-- Header -->
     <div class="sgh-header">
-      <button class="sgh-back" @click="emit('back')">← 返回</button>
+      <button class="sgh-back" @click="emit('back')">← {{ $t('common.actions.back') }}</button>
       <div class="sgh-title-block">
         <h1 class="sgh-title">🎮 {{ title }}</h1>
         <p class="sgh-subtitle">{{ subtitle }}</p>

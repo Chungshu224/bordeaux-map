@@ -271,7 +271,7 @@
 
         <!-- 底部連結列 -->
         <div class="bottom-links">
-          <button class="link-btn back" @click="$router.push('/')">← 返回首頁</button>
+          <button class="link-btn back" @click="$router.push('/')">← {{ $t('common.actions.backToHome') }}</button>
           <button class="link-btn logout" @click="handleLogout">登出</button>
         </div>
       </div>

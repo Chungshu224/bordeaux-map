@@ -24,6 +24,10 @@ import zhCommon from './zh-TW/common.js'
 import enCommon from './en/common.js'
 import jaCommon from './ja/common.js'
 
+import zhCalifornia from './zh-TW/california.js'
+import enCalifornia from './en/california.js'
+import jaCalifornia from './ja/california.js'
+
 // ── 支援的語言清單 ───────────────────────────────────────────
 export const SUPPORTED_LOCALES = [
   { code: 'zh-TW', name: '繁體中文', flag: '🇹🇼' },
@@ -53,9 +57,9 @@ function detectInitialLocale() {
 
 // ── 整合各語言檔（將來會有多個 namespace） ──────────────────
 const messages = {
-  'zh-TW': { common: zhCommon },
-  'en':    { common: enCommon },
-  'ja':    { common: jaCommon },
+  'zh-TW': { common: zhCommon, california: zhCalifornia },
+  'en':    { common: enCommon, california: enCalifornia },
+  'ja':    { common: jaCommon, california: jaCalifornia },
 }
 
 // ── 建立 i18n 實例 ───────────────────────────────────────────
@@ -76,6 +80,11 @@ export function setLocale(code) {
   if (typeof window !== 'undefined') {
     window.localStorage?.setItem(STORAGE_KEY, code)
     document.documentElement.setAttribute('lang', code)
+  }
+  // 清除 lesson 內容快取，讓下次載入套用新語系翻譯 overlay
+  // 透過事件解耦：避免 locales/ → data/ 形成循環依賴
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('app:locale-change', { detail: { locale: code } }))
   }
 }
 

@@ -8,15 +8,15 @@
           @click="$emit('previousLesson')"
           :disabled="!hasPreviousLesson"
         >
-          ← 上一課
+          ← {{ $t('common.lesson.prevLesson') }}
         </button>
         
         <div class="lesson-info">
-          <h1 class="lesson-title">{{ lesson?.title || '課程標題' }}</h1>
+          <h1 class="lesson-title">{{ lesson?.title || $t('common.lesson.courseTitle') }}</h1>
           <p class="lesson-description">{{ lesson?.description || '' }}</p>
           <div class="lesson-meta">
-            <span class="duration">⏱ {{ lesson?.duration || 0 }}分鐘</span>
-            <span class="objectives-count">🎯 {{ lesson.objectives?.length || 0 }}個學習目標</span>
+            <span class="duration">⏱ {{ $t('common.lesson.minutes', { n: lesson?.duration || 0 }) }}</span>
+            <span class="objectives-count">🎯 {{ $t('common.lesson.objectivesCount', { n: lesson.objectives?.length || 0 }) }}</span>
           </div>
         </div>
 
@@ -25,7 +25,7 @@
           @click="handleNextLesson"
           :disabled="!canProceed"
         >
-          {{ isCompleted ? '下一課 →' : '完成課程 →' }}
+          {{ isCompleted ? `${$t('common.lesson.nextLesson')} →` : `${$t('common.lesson.completeLesson')} →` }}
         </button>
       </div>
 
@@ -33,7 +33,7 @@
       <div class="objectives-section" v-if="showObjectives">
         <h3 class="objectives-title">
           <button class="toggle-btn" @click="toggleObjectives">
-            {{ objectivesExpanded ? '▼' : '▶' }} 學習目標
+            {{ objectivesExpanded ? '▼' : '▶' }} {{ $t('common.lesson.objectivesTitle') }}
           </button>
         </h3>
         <div v-show="objectivesExpanded" class="objectives-list">

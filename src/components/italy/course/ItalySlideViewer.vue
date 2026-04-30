@@ -3,7 +3,7 @@
     <!-- 頂部導航欄 -->
     <div class="top-navigation">
       <div class="nav-row-1">
-        <button class="nav-control-btn back-btn" @click="$emit('close')">← 返回</button>
+        <button class="nav-control-btn back-btn" @click="$emit('close')">← {{ $t('common.actions.back') }}</button>
         <div class="slide-counter">
           <span class="current-number">{{ currentSlide + 1 }}</span>
           <span class="separator">/</span>
@@ -29,7 +29,7 @@
         v-if="currentSlide === slides.length - 1"
         class="nav-control-btn complete-btn full-width"
         @click="completeLesson"
-      >✓ 完成課程</button>
+      >✓ {{ $t('common.actions.finish') }}</button>
     </div>
 
     <!-- 簡報內容 -->

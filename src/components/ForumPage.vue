@@ -4,7 +4,7 @@
     <div class="forum-topbar">
       <div class="forum-topbar-inner">
         <div class="forum-topbar-left">
-          <button class="tb-btn" @click="router.push('/bordeaux')">← 返回課程</button>
+          <button class="tb-btn" @click="router.push('/bordeaux')">← {{ $t('common.actions.backToCourse') }}</button>
           <button class="tb-btn ghost" @click="router.push('/')">🏠 首頁</button>
         </div>
         <h1 class="forum-title">💬 學員討論區</h1>

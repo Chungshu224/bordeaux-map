@@ -15,7 +15,7 @@
 
       <!-- 類別篩選 -->
       <select v-model="filterCategory" class="ag-select" @change="page = 1">
-        <option value="">全部類別</option>
+        <option value="">{{ $t('common.admin.glossary.filterAllCats') }}</option>
         <option v-for="c in categoryOptions" :key="c.key" :value="c.key">{{ c.label }}</option>
       </select>
 
@@ -24,32 +24,67 @@
         v-model.trim="searchQ"
         class="ag-search"
         type="search"
-        placeholder="搜尋詞條…"
+        :placeholder="$t('common.admin.glossary.searchPlaceholder')"
         @input="page = 1"
       />
 
       <!-- 新增按鈕 -->
-      <button class="ag-btn-add" @click="openForm(null)">＋ 新增詞條</button>
+      <button class="ag-btn-add" @click="openForm(null)">{{ $t('common.admin.glossary.addEntry') }}</button>
+    </div>
+
+    <!-- 批次工具列（選取後出現） -->
+    <div v-if="selectedIds.size > 0 || batchRunning" class="ag-batch-bar">
+      <span class="ag-batch-info">{{ $t('common.admin.glossary.batch.selected', { n: selectedIds.size }) }}</span>
+      <button class="ag-btn-link" @click="clearSelection" :disabled="batchRunning">{{ $t('common.admin.glossary.batch.clearSelection') }}</button>
+      <button v-if="!batchRunning" class="ag-btn-ai" :disabled="selectedIds.size === 0" @click="runBatchTranslate">
+        {{ $t('common.admin.glossary.batch.translateBtn') }}
+      </button>
+      <button v-else class="ag-btn-cancel" @click="batchCancelRequested = true">{{ $t('common.admin.glossary.batch.cancel') }}</button>
+
+      <!-- 進度條 -->
+      <div v-if="batchRunning" class="ag-progress-wrap">
+        <div class="ag-progress-track">
+          <div class="ag-progress-bar" :style="{ width: batchProgressPct + '%' }"></div>
+        </div>
+        <span class="ag-progress-text">{{ $t('common.admin.glossary.batch.progress', { current: batchProgress.current, total: batchProgress.total, term: batchProgress.term || '…' }) }}</span>
+      </div>
+      <span v-else-if="batchSummary" :class="['ag-batch-summary', { 'is-error': batchSummary.startsWith('!') }]">{{ batchSummary.replace(/^!/, '') }}</span>
     </div>
 
     <!-- 表格 -->
-    <div v-if="loading" class="ag-state">載入中…</div>
-    <div v-else-if="pageItems.length === 0" class="ag-state ag-empty">沒有符合的詞條</div>
+    <div v-if="loading" class="ag-state">{{ $t('common.actions.loading') }}</div>
+    <div v-else-if="pageItems.length === 0" class="ag-state ag-empty">{{ $t('common.admin.glossary.noResults') }}</div>
     <div v-else class="ag-table-wrap">
       <table class="ag-table">
         <thead>
           <tr>
-            <th>產區</th>
-            <th>中文</th>
-            <th>English</th>
-            <th>第三語</th>
-            <th>類別</th>
-            <th class="ag-def-col">說明</th>
-            <th>操作</th>
+            <th class="ag-check-col">
+              <input
+                type="checkbox"
+                :checked="isAllOnPageSelected"
+                :indeterminate.prop="isPartialPageSelected"
+                @change="togglePageSelection($event.target.checked)"
+                :title="$t('common.admin.glossary.batch.selectAll')"
+              />
+            </th>
+            <th>{{ $t('common.admin.glossary.th.region') }}</th>
+            <th>{{ $t('common.admin.glossary.th.zh') }}</th>
+            <th>{{ $t('common.admin.glossary.th.en') }}</th>
+            <th>{{ $t('common.admin.glossary.th.lang3') }}</th>
+            <th>{{ $t('common.admin.glossary.th.category') }}</th>
+            <th class="ag-def-col">{{ $t('common.admin.glossary.th.definition') }}</th>
+            <th>{{ $t('common.admin.glossary.th.actions') }}</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in pageItems" :key="item.id">
+          <tr v-for="item in pageItems" :key="item.id" :class="{ 'is-selected': selectedIds.has(item.id) }">
+            <td class="ag-check-col">
+              <input
+                type="checkbox"
+                :checked="selectedIds.has(item.id)"
+                @change="toggleSelection(item.id, $event.target.checked)"
+              />
+            </td>
             <td><span :class="['region-badge', `region-${item.region}`]">{{ regionLabel(item.region) }}</span></td>
             <td class="fw-bold">{{ item.zh }}</td>
             <td class="text-it">{{ item.en }}</td>
@@ -57,8 +92,8 @@
             <td><span :class="['cat-badge', `cat-${item.category}`]">{{ catLabel(item.category) }}</span></td>
             <td class="ag-def-col text-sm text-muted">{{ item.definition.slice(0, 60) }}{{ item.definition.length > 60 ? '…' : '' }}</td>
             <td class="ag-actions">
-              <button class="ag-btn-edit" @click="openForm(item)" title="編輯">✏️</button>
-              <button class="ag-btn-del" @click="confirmDelete(item)" title="刪除">🗑️</button>
+              <button class="ag-btn-edit" @click="openForm(item)" :title="$t('common.admin.glossary.btn.edit')">✏️</button>
+              <button class="ag-btn-del" @click="confirmDelete(item)" :title="$t('common.admin.glossary.btn.delete')">🗑️</button>
             </td>
           </tr>
         </tbody>
@@ -68,10 +103,10 @@
     <!-- 分頁 -->
     <div v-if="totalPages > 1" class="ag-pagination">
       <button :disabled="page <= 1" @click="page--">◀</button>
-      <span>{{ page }} / {{ totalPages }}（共 {{ filtered.length }} 筆）</span>
+      <span>{{ $t('common.admin.glossary.pagination', { page, total: totalPages, count: filtered.length }) }}</span>
       <button :disabled="page >= totalPages" @click="page++">▶</button>
     </div>
-    <div v-else-if="!loading" class="ag-count">共 {{ filtered.length }} 筆</div>
+    <div v-else-if="!loading" class="ag-count">{{ $t('common.admin.glossary.countOnly', { count: filtered.length }) }}</div>
 
     <!-- ── 新增/編輯 Modal ── -->
     <Teleport to="body">
@@ -79,22 +114,22 @@
         <div v-if="showForm" class="ag-overlay" @click.self="showForm = false">
           <div class="ag-modal">
             <div class="ag-modal-header">
-              <h3>{{ editId ? '編輯詞條' : '新增詞條' }}</h3>
-              <button @click="showForm = false">✕</button>
+              <h3>{{ editId ? $t('common.admin.glossary.modal.editTitle') : $t('common.admin.glossary.modal.addTitle') }}</h3>
+              <button @click="showForm = false" :aria-label="$t('common.actions.close')">✕</button>
             </div>
             <div class="ag-modal-body">
 
               <div class="ag-row2">
                 <!-- 產區 -->
                 <div class="ag-field">
-                  <label>產區</label>
+                  <label>{{ $t('common.admin.glossary.field.region') }}</label>
                   <select v-model="form.region" class="ag-input">
                     <option v-for="r in regionOptions" :key="r.key" :value="r.key">{{ r.icon }} {{ r.label }}</option>
                   </select>
                 </div>
                 <!-- 類別 -->
                 <div class="ag-field">
-                  <label>類別</label>
+                  <label>{{ $t('common.admin.glossary.field.category') }}</label>
                   <select v-model="form.category" class="ag-input">
                     <option v-for="c in categoryOptions" :key="c.key" :value="c.key">{{ c.label }}</option>
                   </select>
@@ -104,13 +139,13 @@
               <div class="ag-row3">
                 <!-- 中文 -->
                 <div class="ag-field">
-                  <label>中文 *</label>
-                  <input v-model.trim="form.zh" class="ag-input" type="text" placeholder="例：卡本內蘇維翁" />
+                  <label>{{ $t('common.admin.glossary.field.zh') }}</label>
+                  <input v-model.trim="form.zh" class="ag-input" type="text" :placeholder="$t('common.admin.glossary.field.zhPlaceholder')" />
                 </div>
                 <!-- 英文 -->
                 <div class="ag-field">
-                  <label>English *</label>
-                  <input v-model.trim="form.en" class="ag-input" type="text" placeholder="例：Cabernet Sauvignon" />
+                  <label>{{ $t('common.admin.glossary.field.en') }}</label>
+                  <input v-model.trim="form.en" class="ag-input" type="text" :placeholder="$t('common.admin.glossary.field.enPlaceholder')" />
                 </div>
                 <!-- 第三語：依產區動態選擇欄位 -->
                 <div class="ag-field" v-if="currentLang3().lang3">
@@ -119,24 +154,38 @@
                     v-model.trim="form[currentLang3().lang3]"
                     class="ag-input"
                     type="text"
-                    :placeholder="`例：${currentLang3().lang3Label} 名稱`"
+                    :placeholder="$t('common.admin.glossary.field.lang3Placeholder', { label: currentLang3().lang3Label })"
                   />
                 </div>
                 <div class="ag-field" v-else>
-                  <label>第三語</label>
-                  <input class="ag-input" type="text" disabled placeholder="產區無第三語" />
+                  <label>{{ $t('common.admin.glossary.field.lang3') }}</label>
+                  <input class="ag-input" type="text" disabled :placeholder="$t('common.admin.glossary.field.lang3Disabled')" />
                 </div>
               </div>
 
               <!-- 說明 -->
               <div class="ag-field">
-                <label>中文說明 *</label>
+                <label>{{ $t('common.admin.glossary.field.definition') }}</label>
                 <textarea
                   v-model.trim="form.definition"
                   class="ag-input ag-textarea"
                   rows="4"
-                  placeholder="請輸入對此名詞的說明…"
+                  :placeholder="$t('common.admin.glossary.field.definitionPlaceholder')"
                 ></textarea>
+              </div>
+
+              <!-- AI 自動翻譯 -->
+              <div class="ag-ai-row">
+                <button
+                  type="button"
+                  class="ag-btn-ai"
+                  @click="runAiTranslate"
+                  :disabled="aiTranslating"
+                  :title="$t('common.admin.glossary.ai.hint')"
+                >
+                  {{ aiTranslating ? $t('common.admin.glossary.ai.translating') : $t('common.admin.glossary.ai.button') }}
+                </button>
+                <span v-if="aiMessage" :class="['ag-ai-msg', { 'is-error': aiIsError }]">{{ aiMessage }}</span>
               </div>
 
               <!-- 錯誤提示 -->
@@ -145,9 +194,9 @@
             </div>
             <div class="ag-modal-footer">
               <button class="ag-btn-primary" @click="saveForm" :disabled="saving">
-                {{ saving ? '儲存中…' : (editId ? '更新' : '新增') }}
+                {{ saving ? $t('common.admin.glossary.modal.saving') : (editId ? $t('common.admin.glossary.modal.update') : $t('common.admin.glossary.modal.create')) }}
               </button>
-              <button class="ag-btn-ghost" @click="showForm = false">取消</button>
+              <button class="ag-btn-ghost" @click="showForm = false">{{ $t('common.actions.cancel') }}</button>
             </div>
           </div>
         </div>
@@ -160,17 +209,17 @@
         <div v-if="deleteTarget" class="ag-overlay" @click.self="deleteTarget = null">
           <div class="ag-modal ag-modal-sm">
             <div class="ag-modal-header">
-              <h3>確認刪除</h3>
-              <button @click="deleteTarget = null">✕</button>
+              <h3>{{ $t('common.admin.glossary.modal.deleteTitle') }}</h3>
+              <button @click="deleteTarget = null" :aria-label="$t('common.actions.close')">✕</button>
             </div>
             <div class="ag-modal-body">
-              <p>確定要刪除詞條「<strong>{{ deleteTarget.zh }}</strong>」嗎？此操作無法還原。</p>
+              <p v-html="$t('common.admin.glossary.modal.deleteConfirm', { zh: `<strong>${escapeHtml(deleteTarget.zh)}</strong>` })"></p>
             </div>
             <div class="ag-modal-footer">
               <button class="ag-btn-danger" @click="doDelete" :disabled="saving">
-                {{ saving ? '刪除中…' : '確認刪除' }}
+                {{ saving ? $t('common.admin.glossary.modal.deleting') : $t('common.admin.glossary.modal.confirmDelete') }}
               </button>
-              <button class="ag-btn-ghost" @click="deleteTarget = null">取消</button>
+              <button class="ag-btn-ghost" @click="deleteTarget = null">{{ $t('common.actions.cancel') }}</button>
             </div>
           </div>
         </div>
@@ -182,7 +231,14 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { supabase } from '../lib/supabaseClient.js'
+
+const { t } = useI18n()
+
+function escapeHtml(s) {
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+}
 
 // ── 設定常數 ─────────────────────────────────────────────────
 const regionOptions = [
@@ -313,9 +369,9 @@ function openForm(item) {
 
 async function saveForm() {
   formError.value = ''
-  if (!form.value.zh) { formError.value = '請填寫中文名稱'; return }
-  if (!form.value.en) { formError.value = '請填寫英文名稱'; return }
-  if (!form.value.definition) { formError.value = '請填寫說明'; return }
+  if (!form.value.zh) { formError.value = t('common.admin.glossary.validate.zhRequired'); return }
+  if (!form.value.en) { formError.value = t('common.admin.glossary.validate.enRequired'); return }
+  if (!form.value.definition) { formError.value = t('common.admin.glossary.validate.defRequired'); return }
 
   saving.value = true
   const payload = {
@@ -360,6 +416,193 @@ async function doDelete() {
   saving.value = false
   deleteTarget.value = null
   if (!error) await loadAll()
+}
+
+// ── AI 自動翻譯 ────────────────────────────────────────
+const aiTranslating = ref(false)
+const aiMessage     = ref('')
+const aiIsError     = ref(false)
+
+async function runAiTranslate() {
+  aiMessage.value = ''
+  aiIsError.value = false
+
+  if (!form.value.zh) {
+    aiMessage.value = t('common.admin.glossary.ai.zhRequired')
+    aiIsError.value = true
+    return
+  }
+
+  // 决定要翻譯哪些語言：en + 當前產區的第三語（如果有）
+  const targets = ['en']
+  const lang3 = currentLang3().lang3
+  if (lang3) targets.push(lang3)
+
+  aiTranslating.value = true
+  try {
+    const { data: sessionData } = await supabase.auth.getSession()
+    const accessToken = sessionData?.session?.access_token
+    if (!accessToken) throw new Error('未登入')
+
+    const res = await fetch('/api/translate-glossary', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify({
+        zh: form.value.zh,
+        definition: form.value.definition || '',
+        region: form.value.region,
+        targets,
+      }),
+    })
+    const json = await res.json().catch(() => ({}))
+    if (!res.ok) throw new Error(json?.message || `HTTP ${res.status}`)
+
+    const tr = json.translations || {}
+    // 已填寫的欄位不覆蓋，只補空
+    if (tr.en && !form.value.en) form.value.en = tr.en
+    if (lang3 && tr[lang3] && !form.value[lang3]) form.value[lang3] = tr[lang3]
+
+    aiMessage.value = t('common.admin.glossary.ai.success')
+    aiIsError.value = false
+  } catch (err) {
+    aiMessage.value = t('common.admin.glossary.ai.failed', { msg: err?.message || 'unknown' })
+    aiIsError.value = true
+  } finally {
+    aiTranslating.value = false
+  }
+}
+
+// ── 批次 AI 補齊翻譯 ─────────────────────────────────────
+const selectedIds          = ref(new Set())
+const batchRunning         = ref(false)
+const batchCancelRequested = ref(false)
+const batchProgress        = ref({ current: 0, total: 0, term: '' })
+const batchSummary         = ref('')
+
+const isAllOnPageSelected = computed(() =>
+  pageItems.value.length > 0 && pageItems.value.every(i => selectedIds.value.has(i.id))
+)
+const isPartialPageSelected = computed(() => {
+  const sel = pageItems.value.filter(i => selectedIds.value.has(i.id)).length
+  return sel > 0 && sel < pageItems.value.length
+})
+const batchProgressPct = computed(() => {
+  const { current, total } = batchProgress.value
+  return total > 0 ? Math.round((current / total) * 100) : 0
+})
+
+function toggleSelection(id, checked) {
+  // Vue 3 reactivity: replace Set instance to trigger updates
+  const next = new Set(selectedIds.value)
+  if (checked) next.add(id); else next.delete(id)
+  selectedIds.value = next
+}
+function togglePageSelection(checked) {
+  const next = new Set(selectedIds.value)
+  for (const item of pageItems.value) {
+    if (checked) next.add(item.id); else next.delete(item.id)
+  }
+  selectedIds.value = next
+}
+function clearSelection() {
+  selectedIds.value = new Set()
+  batchSummary.value = ''
+}
+
+// 計算一筆欄位缺失哪些語言
+function missingLangsForItem(item) {
+  const r = regionOptions.find(x => x.key === item.region)
+  const targets = []
+  if (!item.en || !item.en.trim()) targets.push('en')
+  if (r && r.lang3 && (!item[r.lang3] || !item[r.lang3].trim())) targets.push(r.lang3)
+  return targets
+}
+
+async function translateOne(item, targets) {
+  const { data: sessionData } = await supabase.auth.getSession()
+  const accessToken = sessionData?.session?.access_token
+  if (!accessToken) throw new Error('未登入')
+
+  const res = await fetch('/api/translate-glossary', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      zh: item.zh,
+      definition: item.definition || '',
+      region: item.region,
+      targets,
+    }),
+  })
+  const json = await res.json().catch(() => ({}))
+  if (!res.ok) throw new Error(json?.message || `HTTP ${res.status}`)
+  return json.translations || {}
+}
+
+async function runBatchTranslate() {
+  if (selectedIds.value.size === 0) return
+
+  // 篩選出需要翻譯的項目
+  const candidates = allItems.value
+    .filter(i => selectedIds.value.has(i.id))
+    .map(i => ({ item: i, missing: missingLangsForItem(i) }))
+    .filter(x => x.missing.length > 0)
+
+  if (candidates.length === 0) {
+    batchSummary.value = '!' + t('common.admin.glossary.batch.nothingToDo')
+    return
+  }
+
+  if (!confirm(t('common.admin.glossary.batch.confirmRun', { n: candidates.length }))) return
+
+  batchRunning.value = true
+  batchCancelRequested.value = false
+  batchSummary.value = ''
+  batchProgress.value = { current: 0, total: candidates.length, term: '' }
+
+  let ok = 0, fail = 0, skip = 0
+
+  for (let i = 0; i < candidates.length; i++) {
+    if (batchCancelRequested.value) break
+    const { item, missing } = candidates[i]
+    batchProgress.value = { current: i, total: candidates.length, term: item.zh }
+
+    try {
+      const tr = await translateOne(item, missing)
+      const update = {}
+      for (const code of missing) {
+        if (tr[code]) update[code] = tr[code]
+      }
+      if (Object.keys(update).length === 0) {
+        skip++
+      } else {
+        update.updated_at = new Date().toISOString()
+        const { error } = await supabase.from('wine_glossary').update(update).eq('id', item.id)
+        if (error) throw new Error(error.message)
+        // 本地同步（避免重新 fetch）
+        Object.assign(item, update)
+        ok++
+      }
+    } catch (err) {
+      console.warn('[batch translate]', item.zh, err)
+      fail++
+    }
+
+    batchProgress.value = { current: i + 1, total: candidates.length, term: item.zh }
+  }
+
+  batchRunning.value = false
+  if (batchCancelRequested.value) {
+    batchSummary.value = t('common.admin.glossary.batch.cancelled', { n: ok + fail + skip })
+  } else {
+    batchSummary.value = t('common.admin.glossary.batch.completed', { ok, fail, skip })
+  }
+  batchCancelRequested.value = false
 }
 </script>
 
@@ -584,6 +827,94 @@ async function doDelete() {
 .ag-textarea { resize: vertical; min-height: 90px; font-family: inherit; line-height: 1.6; }
 
 .ag-error { color: #c62828; font-size: 0.82rem; margin: 0; }
+
+/* ── AI 自動翻譯 ── */
+.ag-ai-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ag-btn-ai {
+  padding: 7px 16px;
+  background: linear-gradient(135deg, #6a3093, #a044ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.ag-btn-ai:hover:not(:disabled) { opacity: 0.9; }
+.ag-btn-ai:active:not(:disabled) { transform: translateY(1px); }
+.ag-btn-ai:disabled { opacity: 0.55; cursor: not-allowed; }
+.ag-ai-msg { font-size: 0.78rem; color: #2e7d32; }
+.ag-ai-msg.is-error { color: #c62828; }
+
+/* ── 批次工具列 ── */
+.ag-batch-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #faf5ff;
+  border: 1px solid #e0c8f5;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.ag-batch-info {
+  font-weight: 700;
+  color: #6a3093;
+  font-size: 0.85rem;
+}
+.ag-btn-link {
+  background: none;
+  border: none;
+  color: #6a3093;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+.ag-btn-link:disabled { opacity: 0.5; cursor: not-allowed; text-decoration: none; }
+.ag-btn-cancel {
+  padding: 6px 14px;
+  background: #fff;
+  border: 1.5px solid #c62828;
+  color: #c62828;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.ag-progress-wrap {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 240px;
+}
+.ag-progress-track {
+  height: 8px;
+  background: #ece2f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ag-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6a3093, #a044ff);
+  border-radius: 4px;
+  transition: width 0.25s ease;
+}
+.ag-progress-text { font-size: 0.75rem; color: #6a3093; }
+.ag-batch-summary { font-size: 0.82rem; color: #2e7d32; font-weight: 600; }
+.ag-batch-summary.is-error { color: #c62828; }
+
+/* ── 勾選欄 ── */
+.ag-check-col { width: 36px; text-align: center; }
+.ag-check-col input[type="checkbox"] { cursor: pointer; transform: scale(1.1); }
+.ag-table tr.is-selected { background: #faf5ff; }
 
 .ag-btn-primary {
   padding: 9px 22px;

@@ -4,7 +4,7 @@
     <div v-if="showLevelOverview" class="level-overview">
       <div class="overview-container">
         <div class="back-to-levels">
-          <button class="back-to-levels-btn" @click="$emit('back-to-home')">← 返回 Level 選擇</button>
+          <button class="back-to-levels-btn" @click="$emit('back-to-home')">← {{ $t('common.actions.backToLevels') }}</button>
         </div>
         <div class="overview-header">
           <h1>Level {{ selectedLevel }} - {{ getLevelTitle(selectedLevel) }}</h1>

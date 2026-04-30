@@ -3,7 +3,7 @@
     <!-- Header bar -->
     <div class="nb-header">
       <button class="nb-back-btn" @click="emit('back')">
-        <span>←</span> 返回
+        <span>←</span> {{ $t('common.actions.back') }}
       </button>
       <h1 class="nb-title">📔 品飲筆記本</h1>
       <button class="nb-add-btn" @click="openNewNote">

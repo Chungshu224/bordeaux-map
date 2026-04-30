@@ -3,22 +3,22 @@
     <!-- 測驗開始畫面 -->
     <div v-if="quizState === 'ready'" class="quiz-start">
       <div class="quiz-icon">📝</div>
-      <h1>模組測驗</h1>
+      <h1>{{ $t('common.quiz.title') }}</h1>
       <div class="quiz-info">
         <div class="info-item">
-          <span class="label">題目數量</span>
-          <span class="value">{{ quiz.questions.length }} 題</span>
+          <span class="label">{{ $t('common.quiz.questionCount') }}</span>
+          <span class="value">{{ $t('common.quiz.questionsUnit', { n: quiz.questions.length }) }}</span>
         </div>
         <div class="info-item">
-          <span class="label">及格分數</span>
+          <span class="label">{{ $t('common.quiz.passingScore') }}</span>
           <span class="value">{{ quiz.passingScore }}%</span>
         </div>
         <div class="info-item">
-          <span class="label">建議時間</span>
-          <span class="value">15-20 分鐘</span>
+          <span class="label">{{ $t('common.quiz.recommendedTime') }}</span>
+          <span class="value">{{ $t('common.quiz.recommendedTimeValue') }}</span>
         </div>
       </div>
-      <button class="start-btn" @click="startQuiz">開始測驗</button>
+      <button class="start-btn" @click="startQuiz">{{ $t('common.quiz.startQuiz') }}</button>
     </div>
 
     <!-- 測驗進行中 -->
@@ -28,14 +28,14 @@
           <div class="progress-fill" :style="{ width: progressPercentage + '%' }"></div>
         </div>
         <div class="quiz-meta">
-          <span>題目 {{ currentQuestionIndex + 1 }} / {{ quiz.questions.length }}</span>
+          <span>{{ $t('common.quiz.questionLabel', { current: currentQuestionIndex + 1, total: quiz.questions.length }) }}</span>
           <span class="timer">⏱️ {{ formatTime(elapsedTime) }}</span>
         </div>
       </div>
 
       <div class="question-container">
         <div class="question">
-          <div class="question-number">第 {{ currentQuestionIndex + 1 }} 題</div>
+          <div class="question-number">{{ $t('common.quiz.questionNumber', { n: currentQuestionIndex + 1 }) }}</div>
           <h2>{{ currentQuestion.question }}</h2>
         </div>
 
@@ -60,8 +60,8 @@
 
         <div v-if="showAnswer" class="explanation">
           <div class="explanation-header">
-            <span v-if="selectedAnswer === currentQuestion.correctAnswer" class="correct-label">✓ 回答正確！</span>
-            <span v-else class="incorrect-label">✗ 回答錯誤</span>
+            <span v-if="selectedAnswer === currentQuestion.correctAnswer" class="correct-label">✓ {{ $t('common.quiz.correctLabel') }}</span>
+            <span v-else class="incorrect-label">✗ {{ $t('common.quiz.incorrectLabel') }}</span>
           </div>
           <p>{{ currentQuestion.explanation }}</p>
         </div>
@@ -72,21 +72,21 @@
             class="next-btn"
             @click="nextQuestion"
           >
-            下一題 →
+            {{ $t('common.quiz.nextQuestion') }} →
           </button>
           <button
             v-if="showAnswer && currentQuestionIndex === quiz.questions.length - 1"
             class="finish-btn"
             @click="finishQuiz"
           >
-            完成測驗
+            {{ $t('common.quiz.finishQuiz') }}
           </button>
           <button
             v-if="!showAnswer && selectedAnswer !== null"
             class="submit-btn"
             @click="submitAnswer"
           >
-            確認答案
+            {{ $t('common.quiz.confirmAnswer') }}
           </button>
         </div>
       </div>
@@ -97,7 +97,7 @@
       <div class="result-icon" :class="passed ? 'pass' : 'fail'">
         {{ passed ? '🎉' : '📚' }}
       </div>
-      <h1>{{ passed ? '恭喜通過！' : '請再接再厲' }}</h1>
+      <h1>{{ passed ? $t('common.quiz.passed') : $t('common.quiz.failed') }}</h1>
       
       <div class="score-circle">
         <svg width="200" height="200" viewBox="0 0 200 200">
@@ -124,39 +124,39 @@
         </svg>
         <div class="score-text">
           <div class="score-number">{{ score }}%</div>
-          <div class="score-label">得分</div>
+          <div class="score-label">{{ $t('common.quiz.score') }}</div>
         </div>
       </div>
 
       <div class="result-details">
         <div class="detail-item">
-          <span class="detail-label">正確題數</span>
+          <span class="detail-label">{{ $t('common.quiz.correctCount') }}</span>
           <span class="detail-value">{{ correctAnswers }} / {{ quiz.questions.length }}</span>
         </div>
         <div class="detail-item">
-          <span class="detail-label">及格分數</span>
+          <span class="detail-label">{{ $t('common.quiz.passingScore') }}</span>
           <span class="detail-value">{{ quiz.passingScore }}%</span>
         </div>
         <div class="detail-item">
-          <span class="detail-label">完成時間</span>
+          <span class="detail-label">{{ $t('common.quiz.timeSpent') }}</span>
           <span class="detail-value">{{ formatTime(elapsedTime) }}</span>
         </div>
       </div>
 
       <div v-if="passed" class="success-message">
-        <p>✨ 您已成功完成本模組測驗！</p>
+        <p>{{ $t('common.quiz.successMsg') }}</p>
         <p>{{ passMessage }}</p>
       </div>
 
       <div v-else class="retry-message">
-        <p>💪 別氣餒！再次學習課程內容後重試吧</p>
-        <p>建議：回顧您答錯的題目，加強理解相關概念</p>
+        <p>{{ $t('common.quiz.retryMsg') }}</p>
+        <p>{{ $t('common.quiz.retryHint') }}</p>
       </div>
 
       <div class="result-actions">
-        <button v-if="!passed" class="retry-btn" @click="retryQuiz">重新測驗</button>
-        <button v-if="!passed" class="review-btn" @click="reviewLessons">複習課程</button>
-        <button v-if="passed" class="continue-btn" @click="continueToNext">繼續下一模組</button>
+        <button v-if="!passed" class="retry-btn" @click="retryQuiz">{{ $t('common.quiz.retryQuiz') }}</button>
+        <button v-if="!passed" class="review-btn" @click="reviewLessons">{{ $t('common.quiz.reviewLesson') }}</button>
+        <button v-if="passed" class="continue-btn" @click="continueToNext">{{ $t('common.quiz.continueNext') }}</button>
       </div>
     </div>
   </div>
@@ -164,6 +164,9 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, defineProps, defineEmits } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   quiz: {
@@ -210,11 +213,11 @@ const passed = computed(() => {
 
 const passMessage = computed(() => {
   if (score.value === 100) {
-    return '完美！您對本模組的內容掌握得非常好！'
+    return t('common.quiz.passPerfect')
   } else if (score.value >= 85) {
-    return '優秀！您已充分理解本模組的核心概念！'
+    return t('common.quiz.passExcellent')
   } else {
-    return '做得好！您已達到及格標準！'
+    return t('common.quiz.passGood')
   }
 })
 

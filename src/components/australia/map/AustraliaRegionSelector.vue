@@ -7,7 +7,7 @@
       <!-- Header -->
       <header class="selector-header">
         <div class="header-left">
-          <button class="back-btn" @click="$emit('backToCourse')">← 返回課程</button>
+          <button class="back-btn" @click="$emit('backToCourse')">← {{ $t('common.actions.backToCourse') }}</button>
           <div class="brand-logo">
             <span class="flag-icon">🇦🇺</span>
             <div>

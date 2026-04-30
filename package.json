@@ -22,7 +22,12 @@
     "media:optimize": "node scripts/media-optimize.mjs --apply",
     "i18n:translate": "node scripts/translate-locales.mjs",
     "i18n:translate:dry": "node scripts/translate-locales.mjs --dry-run",
-    "i18n:translate:force": "node scripts/translate-locales.mjs --force"
+    "i18n:translate:force": "node scripts/translate-locales.mjs --force",
+    "lessons:extract": "node scripts/extract-lesson-i18n.mjs",
+    "lessons:extract:dry": "node scripts/extract-lesson-i18n.mjs --dry-run",
+    "lessons:translate": "node scripts/translate-lessons.mjs",
+    "lessons:translate:dry": "node scripts/translate-lessons.mjs --dry-run",
+    "lessons:translate:force": "node scripts/translate-lessons.mjs --force"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.101.1",
