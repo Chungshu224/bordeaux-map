@@ -14,28 +14,32 @@
           <span class="ch-logo-icon">🍷</span>
           <span class="ch-logo-text">侍酒師的筆記本</span>
         </div>
-        <div class="ch-user">
-          <template v-if="authUser">
-            <button class="ch-user-pill" @click="userMenuOpen = !userMenuOpen">
-              <span v-if="avatarUrl" class="ch-avatar">
-                <img :src="avatarUrl" alt="" :style="avatarFitStyle" />
-              </span>
-              <span v-else class="ch-avatar ch-avatar-fallback">{{ avatarInitial }}</span>
-              <span class="ch-user-name">{{ displayName }}</span>
-              <span class="ch-user-caret">▾</span>
-            </button>
-            <div v-if="userMenuOpen" class="ch-user-menu" @click.self="userMenuOpen = false">
-              <div class="ch-user-tier">
-                <span>{{ tierInfo.icon }}</span>
-                <span>{{ tierInfo.label }}</span>
+        <!-- 右側區域：使用者 + 語言切換 -->
+        <div class="ch-user-area">
+          <div class="ch-user">
+            <template v-if="authUser">
+              <button class="ch-user-pill" @click="userMenuOpen = !userMenuOpen">
+                <span v-if="avatarUrl" class="ch-avatar">
+                  <img :src="avatarUrl" alt="" :style="avatarFitStyle" />
+                </span>
+                <span v-else class="ch-avatar ch-avatar-fallback">{{ avatarInitial }}</span>
+                <span class="ch-user-name">{{ displayName }}</span>
+                <span class="ch-user-caret">▾</span>
+              </button>
+              <div v-if="userMenuOpen" class="ch-user-menu" @click.self="userMenuOpen = false">
+                <div class="ch-user-tier">
+                  <span>{{ tierInfo.icon }}</span>
+                  <span>{{ tierInfo.label }}</span>
+                </div>
+                <button class="ch-menu-item" @click="goSettings">⚙️ 個人設定</button>
+                <button class="ch-menu-item" @click="handleLogout">🚪 登出</button>
               </div>
-              <button class="ch-menu-item" @click="goSettings">⚙️ 個人設定</button>
-              <button class="ch-menu-item" @click="handleLogout">🚪 登出</button>
-            </div>
-          </template>
-          <template v-else>
-            <button class="ch-login-btn" @click="$router.push('/login')">🔑 登入</button>
-          </template>
+            </template>
+            <template v-else>
+              <button class="ch-login-btn" @click="$router.push('/login')">🔑 登入</button>
+            </template>
+          </div>
+          <LanguageSwitcher class="ch-lang" />
         </div>
       </div>
     </header>
@@ -52,6 +56,7 @@ import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../../stores/authStore.js'
 import { supabase } from '../../../lib/supabaseClient.js'
 import { themeToCssVars } from './regionThemes.js'
+import LanguageSwitcher from '../../LanguageSwitcher.vue'
 
 const props = defineProps({
   theme: { type: Object, required: true },         // { primary, accent, surface }
@@ -148,6 +153,10 @@ body.course-home-active #app {
   min-height: 100vh !important;
   overflow: visible !important;
 }
+/* 課程頁面已在 topbar 內嵌語言切換器，隱藏全域浮動版本 */
+body.course-home-active .global-lang-switcher {
+  display: none !important;
+}
 </style>
 
 <style scoped>
@@ -206,7 +215,13 @@ body.course-home-active #app {
 .ch-logo-icon { font-size: 18px; }
 .ch-logo-text { font-size: 15px; letter-spacing: 0.5px; }
 
-.ch-user { justify-self: end; position: relative; }
+.ch-user-area {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ch-user { position: relative; }
 .ch-user-pill {
   display: flex; align-items: center; gap: 8px;
   background: white; border: 1px solid rgba(0, 0, 0, 0.08);
@@ -265,6 +280,11 @@ body.course-home-active #app {
   .bc-link { padding: 4px 6px; }
   .ch-user-name { display: none; }
   .ch-user-caret { display: none; }
+  .ch-user-area { gap: 6px; }
   .ch-main { padding: 72px 12px 60px; gap: 20px; }
+}
+/* 超小螢幕：麵包屑中間項隱藏，只顯示首頁→當前 */
+@media (max-width: 420px) {
+  .bc-link.bc-static, .bc-sep:nth-of-type(2) { display: none; }
 }
 </style>
