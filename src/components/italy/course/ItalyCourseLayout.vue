@@ -34,7 +34,7 @@
           </svg>
           <span class="progress-pct">{{ overallProgress }}%</span>
         </button>
-        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">≡ 章節</button>
+        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">{{ $t('italy.layout.chapterToggle') }}</button>
         <div class="hdr-avatar" :title="avatarInitial">
           <img v-if="avatarUrl" :src="avatarUrl" class="hdr-avatar-img" />
           <span v-else class="hdr-avatar-initial">{{ avatarInitial }}</span>
@@ -46,7 +46,7 @@
     <div class="layout-body">
       <!-- 左側章節導航（桌面） -->
       <aside class="chapter-sidebar">
-        <div class="sidebar-title">章節總覽</div>
+        <div class="sidebar-title">{{ $t('italy.layout.chapterOverview') }}</div>
         <nav>
           <button
             v-for="module in modules"
@@ -57,7 +57,7 @@
           >
             <span class="sidebar-icon">{{ isModuleCompleted(module) ? '✓' : '○' }}</span>
             <div class="sidebar-info">
-              <div class="sidebar-name">{{ module.title }}</div>
+              <div class="sidebar-name">{{ $t('italy.modules.' + module.id) }}</div>
               <div class="sidebar-dots">
                 <span
                   v-for="lesson in module.lessons"
@@ -83,9 +83,9 @@
           <div class="progress-bar-wrapper">
             <div class="progress-bar-fill" :style="{ width: overallProgress + '%' }"></div>
           </div>
-          <p class="progress-label">{{ completedCount }}/{{ totalCount }} 課程完成</p>
+          <p class="progress-label">{{ $t('italy.layout.completedLabel', { done: completedCount, total: totalCount }) }}</p>
           <div v-if="overallProgress > 0 && overallProgress < 100" class="motivation-text">
-            🎯 再完成 {{ totalCount - completedCount }} 課即可完成此階段！
+            {{ $t('italy.layout.motivation', { n: totalCount - completedCount }) }}
           </div>
         </div>
 
@@ -102,9 +102,9 @@
                 {{ isModuleCompleted(module) ? '✓' : '📖' }}
               </div>
               <div class="module-section-info">
-                <h3 class="module-section-title">{{ module.title }}</h3>
+                <h3 class="module-section-title">{{ $t('italy.modules.' + module.id) }}</h3>
                 <span class="module-count-chip">
-                  {{ moduleDoneCount(module) }}/{{ module.lessons.length }} 完成
+                  {{ $t('italy.layout.moduleCount', { done: moduleDoneCount(module), total: module.lessons.length }) }}
                 </span>
               </div>
             </div>
@@ -120,10 +120,10 @@
                   <span v-if="completedLessons.includes(lesson.id)">✓</span>
                   <span v-else>{{ idx + 1 }}</span>
                 </div>
-                <div class="lesson-title">{{ lesson.title }}</div>
+                <div class="lesson-title">{{ $t('italy.lessons.' + lesson.id) }}</div>
                 <div class="lesson-action">
-                  <span v-if="completedLessons.includes(lesson.id)" class="tag-done">完成</span>
-                  <span v-else class="tag-start">開始 ▶</span>
+                  <span v-if="completedLessons.includes(lesson.id)" class="tag-done">{{ $t('italy.layout.tagDone') }}</span>
+                  <span v-else class="tag-start">{{ $t('italy.layout.tagStart') }}</span>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@
       <Transition name="italy-slide-up">
         <div v-if="drawerOpen" class="italy-chapter-drawer">
           <div class="drawer-header">
-            <span>章節導航</span>
+            <span>{{ $t('italy.layout.chapterDrawer') }}</span>
             <button class="drawer-close" @click="drawerOpen = false">×</button>
           </div>
           <div class="drawer-body">
@@ -151,7 +151,7 @@
             >
               <span class="drawer-status">{{ isModuleCompleted(module) ? '✓' : '○' }}</span>
               <div class="drawer-item-info">
-                <div class="drawer-chapter-name">{{ module.title }}</div>
+                <div class="drawer-chapter-name">{{ $t('italy.modules.' + module.id) }}</div>
                 <div class="drawer-progress">{{ moduleDoneCount(module) }}/{{ module.lessons.length }}</div>
               </div>
             </button>

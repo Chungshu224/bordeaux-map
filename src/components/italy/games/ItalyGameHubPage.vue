@@ -4,8 +4,8 @@
     <!-- ══ HUB 總覽 ══ -->
     <template v-if="!currentGame">
       <SharedGameHub
-        title="義大利互動練習"
-        subtitle="義大利葡萄酒挑戰賽 · 測試你的知識"
+        :title="$t('italy.games.hub.title')"
+        :subtitle="$t('italy.games.hub.subtitle')"
         :games="GAMES"
         @back="$emit('back')"
         @select="currentGame = $event"
@@ -33,6 +33,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import SharedGameHub from '../../shared/GameHub.vue'
 import ItalyRegionQuizPage         from './ItalyRegionQuizPage.vue'
 import ItalyClassificationQuizPage from './ItalyClassificationQuizPage.vue'
@@ -40,61 +41,62 @@ import ItalyGrapeMatchPage         from './ItalyGrapeMatchPage.vue'
 import ItalyVintageSortPage        from './ItalyVintageSortPage.vue'
 import ItalyWineDescQuizPage       from './ItalyWineDescQuizPage.vue'
 
+const { t } = useI18n()
 defineEmits(['back'])
 
 const currentGame = ref(null)
 
-const GAMES = [
+const GAMES = computed(() => [
   {
     id: 'region',
     icon: '🗺️',
-    name: '產區歸屬賽',
-    desc: '看到 DOCG / DOC 名稱，快速選出所屬的義大利大區',
-    tags: ['地理', '簡單 / 困難', '10–15 題'],
+    name: t('italy.games.region.name'),
+    desc: t('italy.games.region.desc'),
+    tags: t('italy.games.region.tags'),
     accent: '#4ade80', accent2: '#16a34a'
   },
   {
     id: 'classification',
     icon: '🏷️',
-    name: '分級辨識快答',
-    desc: '義大利法定產區是 DOCG、DOC 還是 IGT？考驗你的記憶',
-    tags: ['分級制度', '快答', '10–20 題'],
+    name: t('italy.games.classification.name'),
+    desc: t('italy.games.classification.desc'),
+    tags: t('italy.games.classification.tags'),
     accent: '#c8a96e', accent2: '#9b6a1f'
   },
   {
     id: 'grape',
     icon: '🍇',
-    name: '品種 × 產區配對',
-    desc: '給出義大利葡萄品種，快速選出最著名的產區或 DOCG',
-    tags: ['品種', '配對', '簡單 / 困難'],
+    name: t('italy.games.grape.name'),
+    desc: t('italy.games.grape.desc'),
+    tags: t('italy.games.grape.tags'),
     accent: '#a78bfa', accent2: '#7c3aed'
   },
   {
     id: 'vintage',
     icon: '🌡️',
-    name: '年份品質排序',
-    desc: '將義大利重要年份依品質由最佳排到最差，Toscana 或 Piemonte',
-    tags: ['年份', '排序', '5 輪'],
+    name: t('italy.games.vintage.name'),
+    desc: t('italy.games.vintage.desc'),
+    tags: t('italy.games.vintage.tags'),
     accent: '#f87171', accent2: '#be185d'
   },
   {
     id: 'desc',
     icon: '📖',
-    name: '香氣描述競猜',
-    desc: '閱讀葡萄酒風格描述，猜出對應的義大利知名酒款',
-    tags: ['品飲', '描述', '10–15 題'],
+    name: t('italy.games.desc.name'),
+    desc: t('italy.games.desc.desc'),
+    tags: t('italy.games.desc.tags'),
     accent: '#60a5fa', accent2: '#1d4ed8'
   }
-]
+])
 
 const stats = computed(() => {
   const keys = ['it_region_best', 'it_class_best', 'it_grape_best', 'it_vintage_best', 'it_desc_best']
   let played = 0, totalBest = 0
   keys.forEach(k => { const v = parseInt(localStorage.getItem(k) || '0'); if (v > 0) { played++; totalBest += v } })
   return [
-    { icon: '🎮', value: played,                          label: '已挑戰遲戲' },
-    { icon: '📊', value: keys.length,                     label: '全部遲戲' },
-    { icon: '🏅', value: totalBest > 0 ? totalBest : '—', label: '累計最高分' }
+    { icon: '🎮', value: played,                          label: t('italy.games.hub.stats.played') },
+    { icon: '📊', value: keys.length,                     label: t('italy.games.hub.stats.total') },
+    { icon: '🏅', value: totalBest > 0 ? totalBest : '—', label: t('italy.games.hub.stats.best') }
   ]
 })
 </script>

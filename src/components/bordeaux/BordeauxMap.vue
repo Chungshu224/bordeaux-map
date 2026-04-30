@@ -33,7 +33,7 @@
           />
           <!-- free 用戶：顯示鎖定群組的升級提示 -->
           <div v-if="!canAccess('basic')" class="aoc-upgrade-hint">
-            🔒 升級至「初階付費」即可解鎖全部 7 大產區群組
+            {{ $t('bordeaux.map.upgradeMsg') }}
           </div>
         </div>
       </div>
@@ -43,6 +43,7 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import AOCList from './AOCList.vue'
 import MapSection from '../MapSection.vue'
@@ -50,6 +51,7 @@ import { authState, authActions } from '../../stores/authStore.js'
 import { TIER_WEIGHT } from '../../router/index.js'
 
 const router = useRouter()
+const { t } = useI18n()
 
 // ── 訂閱等級工具 ──
 const getUserTier = () => authActions.getEffectiveTier()

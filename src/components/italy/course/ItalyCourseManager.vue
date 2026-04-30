@@ -51,8 +51,8 @@
       <div class="it-toast-content">
         <span class="it-toast-emoji">🏆</span>
         <div class="it-toast-info">
-          <strong>成就解鎖！{{ achievementNotification.title }}</strong>
-          <span>+{{ achievementNotification.points }} 點</span>
+          <strong>{{ $t('italy.manager.toastTitle') }}{{ achievementNotification.title }}</strong>
+          <span>{{ $t('italy.manager.points', { n: achievementNotification.points }) }}</span>
         </div>
         <button class="it-toast-close" @click="achievementNotification = null">×</button>
       </div>
@@ -63,7 +63,7 @@
       <div v-if="showAchievementsModal" class="it-modal-overlay" @click.self="showAchievementsModal = false">
         <div class="it-modal">
           <div class="it-modal-header">
-            <h3>🏆 義大利葡萄酒成就系統</h3>
+            <h3>{{ $t('italy.manager.modalTitle') }}</h3>
             <button class="it-modal-close" @click="showAchievementsModal = false">×</button>
           </div>
           <div class="it-modal-body">
@@ -77,6 +77,7 @@
 
 <script setup>
 import { ref, computed, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import ItalyLevelSelector from './ItalyLevelSelector.vue'
 import ItalySlideViewer from './ItalySlideViewer.vue'
 import ItalyCourseLayout from './ItalyCourseLayout.vue'
@@ -88,6 +89,7 @@ import {
   globalItalyAchievementManager
 } from '../../../stores/italyAchievementSystem.js'
 
+const { t } = useI18n()
 const emit = defineEmits(['openMap'])
 
 globalItalyAchievementManager.init()

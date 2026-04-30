@@ -175,13 +175,33 @@
               <div class="card-region">France · Bordeaux</div>
               <h3 class="card-title">{{ $t('home.courses.bordeaux.title') }}</h3>
               <p class="card-desc">{{ $t('home.courses.bordeaux.desc') }}</p>
-              <button class="course-detail-btn" @click="openCourseDetail('bordeaux')">{{ $t('home.courses.bordeaux.courseDetailBtn') }}</button>
             </div>
-
-            <div class="course-includes">
-              <div class="include-item" v-for="f in bordeauxIncludes" :key="f">
-                <span class="ii-dot">✦</span>{{ f }}
+            <!-- 課程深度預覽 -->
+            <div class="course-preview-strip">
+              <div class="cp-stat">
+                <span class="cp-num">4</span>
+                <span class="cp-label" v-html="$t('home.courses.bordeaux.s1label')"></span>
               </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">80<span class="cp-plus">+</span></span>
+                <span class="cp-label" v-html="$t('home.courses.bordeaux.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">2</span>
+                <span class="cp-label" v-html="$t('home.courses.bordeaux.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">100<span class="cp-plus">+</span></span>
+                <span class="cp-label" v-html="$t('home.courses.bordeaux.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features">
+              <span class="cpf-item">{{ $t('home.courses.bordeaux.f1') }}</span>
+              <span class="cpf-item">{{ $t('home.courses.bordeaux.f2') }}</span>
+              <span class="cpf-item">{{ $t('home.courses.bordeaux.f3') }}</span>
             </div>
 
             <div class="card-pricing-cta">
@@ -1077,8 +1097,6 @@ const activePrelaunchDetail = computed(() => prelaunchCourseDetails.value[active
 const compareRows = computed(() => t('home.modal.bordeaux.compareRows'))
 
 // ─── 靜態資料（locale-aware） ──────────────────────────────────────────────────
-const bordeauxIncludes = computed(() => t('home.courses.bordeaux.includes'))
-
 const features = computed(() => t('home.features.items'))
 
 const faqs = computed(() => t('home.faq.items'))

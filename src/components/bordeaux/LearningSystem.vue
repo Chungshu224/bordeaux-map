@@ -4,10 +4,10 @@
     <div v-if="learningState.testMode" class="test-mode-banner">
       <div class="test-mode-content">
         <span class="test-mode-icon">🧪</span>
-        <span class="test-mode-text">測試模式已啟用 - 所有功能已解鎖</span>
+        <span class="test-mode-text">{{ $t('bordeaux.system.testBanner') }}</span>
         <div class="test-mode-controls">
-          <button class="test-btn" @click="testRandomLesson">隨機測試課程</button>
-          <button class="test-btn reset" @click="resetToNormalMode">退出測試模式</button>
+          <button class="test-btn" @click="testRandomLesson">{{ $t('bordeaux.system.testRandom') }}</button>
+          <button class="test-btn reset" @click="resetToNormalMode">{{ $t('bordeaux.system.testExit') }}</button>
         </div>
       </div>
     </div>
@@ -74,11 +74,13 @@
 
 <script setup>
 import { ref, computed, onMounted, watch, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { learningState, learningLevels, learningActions, learningProgress } from '../../stores/learningStore.js'
 import { authActions } from '../../stores/authStore.js'
 import BordeauxCourseLayout from './BordeauxCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
+const { t } = useI18n()
 
 // Emits
 const emit = defineEmits(['exitLearning'])
@@ -143,8 +145,8 @@ const canGoNext = computed(() => {
 })
 
 const currentSlideTitle = computed(() => {
-  if (!presentationLessonRef.value) return '投影片導航'
-  return presentationLessonRef.value.currentSlideTitle || '投影片導航'
+  if (!presentationLessonRef.value) return t('bordeaux.system.slideNav')
+  return presentationLessonRef.value.currentSlideTitle || t('bordeaux.system.slideNav')
 })
 
 const unlockedLevels = computed(() =>
@@ -187,12 +189,7 @@ const isLevelUnlocked = (level) => {
 }
 
 const getLevelTitle = (level) => {
-  const titles = {
-    1: '基礎入門',
-    2: '中級進階', 
-    3: '高級專業',
-    4: '專家認證'
-  }
+  const titles = t('bordeaux.levels.titles')
   return titles[level]
 }
 
@@ -237,7 +234,7 @@ const testRandomLesson = () => {
 }
 
 const resetToNormalMode = () => {
-  if (confirm('確定要退出測試模式嗎？所有進度將被重置。')) {
+  if (confirm(t('bordeaux.system.testExitConfirm'))) {
     learningActions.disableTestMode()
   }
 }

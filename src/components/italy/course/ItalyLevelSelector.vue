@@ -1,11 +1,11 @@
 <template>
-  <CourseHomeLayout :theme="theme" region-name="Italy" breadcrumb-country="歐洲・西南歐">
+  <CourseHomeLayout :theme="theme" region-name="Italy" :breadcrumb-country="$t('italy.selector.breadcrumbCountry')">
     <RegionHero
       :icon="theme.icon"
-      tagline="義大利葡萄酒・20 個行政區・地中海風土"
-      title="義大利葡萄酒"
-      subtitle="Italian Wine · DOCG · Nebbiolo · Sangiovese · Sicilia"
-      description="從 DOCG 分級制度到南北 20 個行政區、Barolo 與 Brunello 的偉大、Etna 火山與 Sicilia 的新浪潮——系統化掌握義大利葡萄酒。"
+      :tagline="$t('italy.selector.tagline')"
+      :title="$t('italy.selector.title')"
+      :subtitle="$t('italy.selector.subtitle')"
+      :description="$t('italy.selector.description')"
       :stats="heroStats"
     />
 
@@ -24,8 +24,8 @@
     <QuickNavGrid :items="quickNavItems" @select="onQuickNav" />
 
     <LevelTrack
-      title="選擇課程階段"
-      subtitle="從入門到專家認證，循序掌握 20 個產區與義大利葡萄酒的多樣性。"
+      :title="$t('italy.selector.levelTrackTitle')"
+      :subtitle="$t('italy.selector.levelTrackSubtitle')"
       :levels="levelData"
       @enter="onEnterLevel"
     />
@@ -44,6 +44,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import {
   CourseHomeLayout, RegionHero, ProgressStrip, QuickNavGrid,
   LevelTrack, ProgressModal, getTheme
@@ -51,6 +52,7 @@ import {
 import { courseLevels, getLevelProgressPct, getUserProgress } from '../data/courseLevels.js'
 import { authActions } from '../../../stores/authStore.js'
 
+const { t } = useI18n()
 const emit = defineEmits(['startLevel', 'openMap', 'openAchievements', 'openNotebook', 'openGames'])
 
 const theme = getTheme('italy')
@@ -83,19 +85,19 @@ function isLevelUnlocked(key) {
 }
 
 const heroButtonText = computed(() => {
-  if (levelPct('level1') >= 100 && isLevelUnlocked('level2')) return '繼續 Level 2'
-  if (levelPct('level1') > 0) return '繼續 Level 1'
-  return '開始學習'
+  if (levelPct('level1') >= 100 && isLevelUnlocked('level2')) return t('italy.selector.progress.continueLevel2')
+  if (levelPct('level1') > 0) return t('italy.selector.progress.continueLevel1')
+  return t('italy.selector.progress.startBtn')
 })
 const progressHeadline = computed(() => {
-  if (totalProgressPct.value === 0) return '開始你的義大利葡萄酒之旅'
-  if (totalProgressPct.value >= 100) return '🎉 已完成全部課程，恭喜成為義大利葡萄酒達人！'
-  return `已完成 ${completedTotal.value} / ${totalLessonCount.value} 課`
+  if (totalProgressPct.value === 0) return t('italy.selector.progress.start')
+  if (totalProgressPct.value >= 100) return t('italy.selector.progress.complete')
+  return t('italy.selector.progress.progressText', { done: completedTotal.value, total: totalLessonCount.value })
 })
 const progressSubline = computed(() => {
-  if (levelPct('level1') < 100) return '當前階段：Level 1 · 義大利入門'
-  if (levelPct('level2') < 100) return '當前階段：Level 2 · 進階探索'
-  return '當前階段：Level 3 · 專家認證'
+  if (levelPct('level1') < 100) return t('italy.selector.progress.currentStageL1')
+  if (levelPct('level2') < 100) return t('italy.selector.progress.currentStageL2')
+  return t('italy.selector.progress.currentStageL3')
 })
 
 function startJourney() {
@@ -104,16 +106,16 @@ function startJourney() {
 }
 function onEnterLevel(n) { emit('startLevel', `level${n}`) }
 
-const heroStats = [
-  { value: '20',  label: '行政區' },
-  { value: '76',  label: 'DOCG 產區' },
-  { value: '350+', label: '原生品種' }
-]
+const heroStats = computed(() => [
+  { value: '20',   label: t('italy.selector.heroStats.regions') },
+  { value: '76',   label: t('italy.selector.heroStats.docg') },
+  { value: '350+', label: t('italy.selector.heroStats.varieties') },
+])
 
 const quickNavItems = computed(() => [
   { key: 'map' },
   { key: 'games' },
-  { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedTotal.value} 課` },
+  { key: 'progress', desc: t('italy.selector.quickNav.progressDesc', { pct: totalProgressPct.value, done: completedTotal.value }) },
   { key: 'notebook' },
   { key: 'achievements' }
 ])
@@ -129,30 +131,39 @@ function onQuickNav(key) {
 
 const levelData = computed(() => [
   {
-    number: 1, title: '義大利葡萄酒入門', subtitle: '基礎認識', icon: '🌱',
-    description: '建立義大利葡萄酒基礎：DOCG/DOC/IGT 分級、20 個行政區、五大核心品種與餐酒搭配。',
-    tags: ['DOCG/DOC/IGT', '20 行政區', '5 大品種', 'Sangiovese', 'Italy 101'],
+    number: 1,
+    title: t('italy.levels.1.shortTitle'),
+    subtitle: t('italy.levels.1.shortSubtitle'),
+    icon: '🌱',
+    description: t('italy.levels.1.description'),
+    tags: t('italy.levels.1.tags'),
     modules: 4, lessons: 12,
     progress: levelPct('level1'),
     unlocked: true
   },
   {
-    number: 2, title: '進階探索', subtitle: '深度產區', icon: '🍷',
-    description: '深入北中南差異、Barolo / Brunello / Etna、Nebbiolo 與 Aglianico 等進階品種。',
-    tags: ['北義 Barolo', 'Toscana Brunello', '南義島嶼', 'Nebbiolo', 'Etna'],
+    number: 2,
+    title: t('italy.levels.2.shortTitle'),
+    subtitle: t('italy.levels.2.shortSubtitle'),
+    icon: '🍷',
+    description: t('italy.levels.2.description'),
+    tags: t('italy.levels.2.tags'),
     modules: 6, lessons: 23,
     progress: levelPct('level2'),
     unlocked: isLevelUnlocked('level2'),
-    unlockHint: '完成 Level 1 後解鎖'
+    unlockHint: t('italy.selector.unlockHint.level2')
   },
   {
-    number: 3, title: '專家認證', subtitle: '盲品與侍酒', icon: '🏆',
-    description: '系統盲品方法、稀有品種、侍酒師實務、永續與自然酒運動。',
-    tags: ['盲品系統', '稀有品種', '侍酒實務', '自然酒', '永續'],
+    number: 3,
+    title: t('italy.levels.3.shortTitle'),
+    subtitle: t('italy.levels.3.shortSubtitle'),
+    icon: '🏆',
+    description: t('italy.levels.3.description'),
+    tags: t('italy.levels.3.tags'),
     modules: 7, lessons: 26,
     progress: levelPct('level3'),
     unlocked: isLevelUnlocked('level3'),
-    unlockHint: '完成 Level 2 後解鎖'
+    unlockHint: t('italy.selector.unlockHint.level3')
   }
 ])
 

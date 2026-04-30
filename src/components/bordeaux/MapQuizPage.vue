@@ -6,13 +6,13 @@
     <!-- ══ LOBBY ══ -->
     <div v-if="phase === 'lobby'" class="quiz-lobby">
       <div class="lobby-inner">
-        <h1 class="quiz-title">🗺 波爾多產區競答</h1>
-        <p class="quiz-subtitle">看到題目後，在地圖上點出對應的 AOC 產區</p>
+        <h1 class="quiz-title">{{ $t('bordeaux.games.map.title') }}</h1>
+        <p class="quiz-subtitle">{{ $t('bordeaux.games.map.subtitle') }}</p>
 
         <div class="difficulty-cards">
           <div class="diff-card easy" @click="startGame('easy')">
             <div class="diff-icon">🥂</div>
-            <div class="diff-name">簡單模式</div>
+            <div class="diff-name">{{ $t('bordeaux.games.map.easyName') }}</div>
             <ul class="diff-details">
               <li>15 大主要 AOC</li>
               <li>⏱ 每題 30 秒</li>
@@ -22,7 +22,7 @@
           </div>
           <div class="diff-card hard" @click="startGame('hard')">
             <div class="diff-icon">🏆</div>
-            <div class="diff-name">困難模式</div>
+            <div class="diff-name">{{ $t('bordeaux.games.map.hardName') }}</div>
             <ul class="diff-details">
               <li>全部 35 個 AOC</li>
               <li>⏱ 每題 15 秒</li>
@@ -35,16 +35,16 @@
         <!-- Leaderboard -->
         <div class="leaderboard-section">
           <div class="lb-header">
-            <span class="lb-title">🏅 排行榜</span>
+            <span class="lb-title">🏅 {{ $t('bordeaux.games.common.leaderboard') }}</span>
             <div class="lb-tabs">
-              <button :class="{ active: lbTab === 'easy' }" @click="switchLbTab('easy')">簡單</button>
-              <button :class="{ active: lbTab === 'hard' }" @click="switchLbTab('hard')">困難</button>
+              <button :class="{ active: lbTab === 'easy' }" @click="switchLbTab('easy')">{{ $t('bordeaux.games.common.easy') }}</button>
+              <button :class="{ active: lbTab === 'hard' }" @click="switchLbTab('hard')">{{ $t('bordeaux.games.common.hard') }}</button>
             </div>
           </div>
-          <div v-if="lbLoading" class="lb-loading">載入中…</div>
+          <div v-if="lbLoading" class="lb-loading">{{ $t('bordeaux.games.common.loading') }}</div>
           <table v-else class="lb-table">
             <thead>
-              <tr><th>#</th><th>選手</th><th>分數</th><th>答對</th><th>日期</th></tr>
+              <tr><th>#</th><th>{{ $t('bordeaux.games.common.lbPlayer') }}</th><th>{{ $t('bordeaux.games.common.lbScore') }}</th><th>{{ $t('bordeaux.games.common.lbCorrect') }}</th><th>{{ $t('bordeaux.games.common.lbDate') }}</th></tr>
             </thead>
             <tbody>
               <tr
@@ -64,7 +64,7 @@
                 <td class="date-cell">{{ formatDate(row.created_at) }}</td>
               </tr>
               <tr v-if="!leaderboardData.length">
-                <td colspan="5" class="lb-empty">尚無紀錄，快來成為第一名！</td>
+                <td colspan="5" class="lb-empty">{{ $t('bordeaux.games.common.noRecordFirst') }}</td>
               </tr>
             </tbody>
           </table>
@@ -75,7 +75,7 @@
     <!-- ══ LOADING ══ -->
     <div v-else-if="phase === 'loading'" class="quiz-loading">
       <div class="loading-ring"></div>
-      <p>載入地圖資料… {{ loadedCount }}/{{ totalToLoad }}</p>
+      <p>{{ $t('bordeaux.games.map.loading', { loaded: loadedCount, total: totalToLoad }) }}</p>
     </div>
 
     <!-- ══ PLAYING / FEEDBACK ══ -->
@@ -91,9 +91,9 @@
           </div>
         </div>
         <div class="q-text">
-          請點出：<strong>{{ currentQuestion?.label }}</strong>
+          {{ $t('bordeaux.games.map.question') }}<strong>{{ currentQuestion?.label }}</strong>
         </div>
-        <div class="q-score">{{ score }} 分</div>
+        <div class="q-score">{{ score }} {{ $t('bordeaux.games.common.scoreSuffix') }}</div>
       </div>
 
       <!-- 計時器（右上角） -->
@@ -112,12 +112,12 @@
       <transition name="feedback-pop">
         <div v-if="phase === 'feedback'" class="feedback-overlay" :class="lastAnswer?.correct ? 'correct' : 'wrong'">
           <div class="feedback-icon">{{ lastAnswer?.correct ? '✓' : '✗' }}</div>
-          <div class="feedback-text">{{ lastAnswer?.correct ? '答對！' : (lastAnswer?.timeout ? '時間到！' : '答錯') }}</div>
+          <div class="feedback-text">{{ lastAnswer?.correct ? $t('bordeaux.games.common.correct') : (lastAnswer?.timeout ? $t('bordeaux.games.common.timeout') : $t('bordeaux.games.common.wrong')) }}</div>
           <div v-if="lastAnswer?.correct" class="feedback-bonus">+{{ lastAnswer.totalPoints }} 分</div>
           <div v-if="!lastAnswer?.correct && lastAnswer?.clickedLabel" class="feedback-clicked">
             你點的是：{{ lastAnswer.clickedLabel }}
           </div>
-          <div class="feedback-answer">正確答案：<strong>{{ currentQuestion?.label }}</strong></div>
+          <div class="feedback-answer">{{ $t('bordeaux.games.common.correctAnswer') }}<strong>{{ currentQuestion?.label }}</strong></div>
         </div>
       </transition>
     </div>
@@ -126,24 +126,24 @@
     <div v-else-if="phase === 'final'" class="quiz-final">
       <div class="final-card">
         <div class="final-result-icon">{{ correctCount >= 8 ? '🎉' : correctCount >= 5 ? '👍' : '📖' }}</div>
-        <h2>遊戲結束</h2>
+        <h2>{{ $t('bordeaux.games.common.gameOver') }}</h2>
         <div class="final-score">{{ score }}</div>
-        <div class="final-score-label">總分</div>
+        <div class="final-score-label">{{ $t('bordeaux.games.common.totalScore') }}</div>
         <div class="final-stats">
-          <div class="stat-chip">答對 {{ correctCount }}/{{ questions.length }} 題</div>
-          <div class="stat-chip">{{ difficulty === 'easy' ? '🥂 簡單' : '🏆 困難' }}</div>
-          <div class="stat-chip">正確率 {{ Math.round(correctCount/questions.length*100) }}%</div>
+          <div class="stat-chip">{{ $t('bordeaux.games.common.answered', { n: correctCount, total: questions.length }) }}</div>
+          <div class="stat-chip">{{ difficulty === 'easy' ? '🥂 ' + $t('bordeaux.games.common.easy') : '🏆 ' + $t('bordeaux.games.common.hard') }}</div>
+          <div class="stat-chip">{{ $t('bordeaux.games.common.accuracy') }} {{ Math.round(correctCount/questions.length*100) }}%</div>
         </div>
         <button
           class="btn-submit"
           :disabled="uploading || scoreUploaded"
           @click="submitScore"
         >
-          {{ uploading ? '上傳中…' : scoreUploaded ? '✓ 已登錄排行榜' : '📤 上傳成績至排行榜' }}
+          {{ uploading ? $t('bordeaux.games.common.uploading') : scoreUploaded ? $t('bordeaux.games.common.uploaded') : $t('bordeaux.games.common.upload') }}
         </button>
         <div v-if="uploadError" class="upload-error">{{ uploadError }}</div>
         <div class="final-actions">
-          <button class="btn-secondary" @click="backToLobby">再玩一次</button>
+          <button class="btn-secondary" @click="backToLobby">{{ $t('bordeaux.games.common.retry') }}</button>
         </div>
       </div>
     </div>
@@ -152,6 +152,7 @@
 
 <script setup>
 import { ref, computed, onUnmounted, nextTick, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
@@ -160,6 +161,7 @@ import { supabase } from '@/lib/supabaseClient.js'
 import { authState } from '@/stores/authStore.js'
 
 const emit = defineEmits(['back'])
+const { t } = useI18n()
 
 // ── AOC 題庫定義 ──────────────────────────────────────────────
 const EASY_POOL = [
@@ -540,8 +542,8 @@ function switchLbTab(diff) {
 }
 
 async function submitScore() {
-  if (!supabase) { uploadError.value = '未連接資料庫'; return }
-  if (!authState.user) { uploadError.value = '請先登入以上傳成績'; return }
+  if (!supabase) { uploadError.value = t('bordeaux.games.common.noRecord'); return }
+  if (!authState.user) { uploadError.value = t('bordeaux.games.common.noRecordFirst'); return }
   if (scoreUploaded.value) return
 
   uploading.value = true
@@ -550,7 +552,7 @@ async function submitScore() {
     const username =
       authState.user.user_metadata?.full_name ||
       authState.user.email?.split('@')[0] ||
-      '匿名玩家'
+      t('bordeaux.games.common.noRecord')
     const { error } = await supabase.from('quiz_scores').insert({
       user_id:         authState.user.id,
       username,
@@ -562,7 +564,7 @@ async function submitScore() {
     if (error) throw error
     scoreUploaded.value = true
   } catch (e) {
-    uploadError.value = `上傳失敗：${e.message}`
+    uploadError.value = e.message
   } finally {
     uploading.value = false
   }

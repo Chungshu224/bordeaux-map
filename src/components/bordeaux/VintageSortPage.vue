@@ -5,28 +5,24 @@
     <!-- ══ LOBBY ══ -->
     <div v-if="phase === 'lobby'" class="lobby">
       <div class="lobby-inner">
-        <h1 class="title">🌡️ 年份溫度排列</h1>
-        <p class="subtitle">將波爾多年份依<strong>夏季均溫</strong>由最熱排到最冷</p>
+        <h1 class="title">{{ $t('bordeaux.games.vintage.title') }}</h1>
+        <p class="subtitle">{{ $t('bordeaux.games.vintage.subtitle') }}</p>
 
         <div class="diff-cards">
           <div class="diff-card easy" @click="startGame('easy')">
             <div class="diff-icon">🍷</div>
-            <div class="diff-name">簡單</div>
-            <div class="diff-desc">4 個年份 · 20 秒</div>
+            <div class="diff-name">{{ $t('bordeaux.games.vintage.easyName') }}</div>
+            <div class="diff-desc">{{ $t('bordeaux.games.vintage.easyDesc') }}</div>
             <ul class="diff-list">
-              <li>共 5 輪</li>
-              <li>鍵盤 1–4 支援</li>
-              <li>最高 650 分</li>
+              <li v-for="item in $t('bordeaux.games.vintage.easyItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
           <div class="diff-card hard" @click="startGame('hard')">
             <div class="diff-icon">🔥</div>
-            <div class="diff-name">困難</div>
-            <div class="diff-desc">5 個年份 · 12 秒</div>
+            <div class="diff-name">{{ $t('bordeaux.games.vintage.hardName') }}</div>
+            <div class="diff-desc">{{ $t('bordeaux.games.vintage.hardDesc') }}</div>
             <ul class="diff-list">
-              <li>共 5 輪</li>
-              <li>年份更密集</li>
-              <li>最高 650 分</li>
+              <li v-for="item in $t('bordeaux.games.vintage.hardItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
         </div>
@@ -34,15 +30,15 @@
         <!-- Leaderboard -->
         <div class="lb-box">
           <div class="lb-head">
-            <span class="lb-title">🏅 排行榜</span>
+            <span class="lb-title">🏅 {{ $t('bordeaux.games.common.leaderboard') }}</span>
             <div class="lb-tabs">
-              <button :class="{ active: lbTab === 'easy' }" @click="setLbTab('easy')">簡單</button>
-              <button :class="{ active: lbTab === 'hard' }" @click="setLbTab('hard')">困難</button>
+              <button :class="{ active: lbTab === 'easy' }" @click="setLbTab('easy')">{{ $t('bordeaux.games.common.easy') }}</button>
+              <button :class="{ active: lbTab === 'hard' }" @click="setLbTab('hard')">{{ $t('bordeaux.games.common.hard') }}</button>
             </div>
           </div>
-          <div v-if="lbLoading" class="lb-empty">載入中…</div>
+          <div v-if="lbLoading" class="lb-empty">{{ $t('bordeaux.games.common.loading') }}</div>
           <table v-else class="lb-table">
-            <thead><tr><th>#</th><th>選手</th><th>分數</th><th>日期</th></tr></thead>
+            <thead><tr><th>#</th><th>{{ $t('bordeaux.games.common.lbPlayer') }}</th><th>{{ $t('bordeaux.games.common.lbScore') }}</th><th>{{ $t('bordeaux.games.common.lbDate') }}</th></tr></thead>
             <tbody>
               <tr v-for="(r, i) in lbData" :key="r.id" :class="{ mine: r.user_id === myUid }">
                 <td>{{ i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1) }}</td>
@@ -50,7 +46,7 @@
                 <td class="gold">{{ r.score }}</td>
                 <td class="muted">{{ fmtDate(r.created_at) }}</td>
               </tr>
-              <tr v-if="!lbData.length"><td colspan="4" class="lb-empty">尚無紀錄</td></tr>
+              <tr v-if="!lbData.length"><td colspan="4" class="lb-empty">{{ $t('bordeaux.games.common.noRecord') }}</td></tr>
             </tbody>
           </table>
         </div>
@@ -62,7 +58,7 @@
       <div class="top-bar">
         <div class="progress-row">
           <span class="round-lbl">第 {{ roundIdx + 1 }} / 5 輪</span>
-          <span class="score-live">{{ score }} 分</span>
+          <span class="score-live">{{ score }} {{ $t('bordeaux.games.common.scoreSuffix') }}</span>
         </div>
         <div class="timer-row">
           <div class="timer-track">
@@ -74,7 +70,7 @@
       </div>
 
       <div class="instruction">
-        從<strong>最熱</strong>依序點擊到<strong>最冷</strong>
+        {{ $t('bordeaux.games.vintage.instruction') }}
         <span class="key-tip" v-if="cardCount === 4">（鍵盤 1–4）</span>
         <span class="key-tip" v-else>（鍵盤 1–5）</span>
       </div>
@@ -107,7 +103,7 @@
           :class="{ ready: filledCount === cardCount }"
           :disabled="filledCount < cardCount"
           @click="confirmRound"
-        >確認排列</button>
+        >{{ $t('bordeaux.games.vintage.confirm') }}</button>
       </div>
     </div>
 
@@ -116,15 +112,15 @@
       <div class="reveal-header">
         <span class="reveal-pts" :class="{ perfect: roundPts >= maxRoundPts }">
           + {{ roundPts }} 分
-          <span v-if="roundPts >= maxRoundPts" class="perfect-tag">完美！🎊</span>
+          
         </span>
         <span class="round-lbl muted">第 {{ roundIdx + 1 }} 輪結果</span>
       </div>
 
       <div class="reveal-legend">
-        <span class="leg exact">✓ 正確</span>
-        <span class="leg near">△ 差一位</span>
-        <span class="leg wrong">✗ 錯誤</span>
+        <span class="leg exact">{{ $t('bordeaux.games.common.correct') }}</span>
+        <span class="leg near">△</span>
+        <span class="leg wrong">{{ $t('bordeaux.games.common.wrong') }}</span>
       </div>
 
       <div class="reveal-list">
@@ -152,7 +148,7 @@
       </div>
 
       <button class="next-btn" @click="nextRound">
-        {{ roundIdx < 4 ? '下一輪 →' : '查看結果 🏁' }}
+        {{ $t('bordeaux.games.vintage.round', { n: roundIdx + 1 }) }}
       </button>
     </div>
 
@@ -160,22 +156,21 @@
     <div v-else-if="phase === 'final'" class="final">
       <div class="final-card">
         <div class="result-icon">{{ resultEmoji }}</div>
-        <h2>遊戲結束</h2>
+        <h2>{{ $t('bordeaux.games.common.gameOver') }}</h2>
         <div class="final-score">{{ score }}</div>
-        <div class="final-score-label">總分（滿分 650）</div>
+        <div class="final-score-label">{{ $t('bordeaux.games.common.totalScore') }}</div>
         <div class="final-stats">
-          <div class="chip">{{ difficulty === 'easy' ? '🍷 簡單' : '🔥 困難' }}</div>
-          <div class="chip">{{ correctTotal }} / {{ cardCount * 5 }} 正確</div>
-          <div class="chip">{{ perfectRounds }} 輪完美</div>
+          <div class="chip">{{ difficulty === 'easy' ? '🍷 ' + $t('bordeaux.games.common.easy') : '🔥 ' + $t('bordeaux.games.common.hard') }}</div>
+          <div class="chip">{{ $t('bordeaux.games.common.answered', { n: correctTotal, total: cardCount * 5 }) }}</div>
         </div>
         <button class="btn-upload" :disabled="uploading || uploaded" @click="submitScore">
-          {{ uploading ? '上傳中…' : uploaded ? '✓ 已登錄排行榜' : '📤 上傳成績' }}
+          {{ uploading ? $t('bordeaux.games.common.uploading') : uploaded ? $t('bordeaux.games.common.uploaded') : $t('bordeaux.games.common.upload') }}
         </button>
         <div v-if="uploadErr" class="err-msg">{{ uploadErr }}</div>
         <div class="final-actions">
-          <button class="btn-retry" @click="backToLobby">再玩一次</button>
+          <button class="btn-retry" @click="backToLobby">{{ $t('bordeaux.games.common.retry') }}</button>
           <button class="btn-share-game" :disabled="sharingGame" @click="shareGame">
-            {{ sharingGame ? '⏳' : '🖼️ 分享成績' }}
+            {{ sharingGame ? '⏳' : $t('bordeaux.games.common.shareScore') }}
           </button>
         </div>
       </div>
@@ -183,16 +178,15 @@
       <!-- 遊戲分享卡 (隱藏，供截圖用) -->
       <div ref="gameShareEl" class="game-share-card">
         <div class="gsc-header">
-          <span class="gsc-logo">🍷 侍酒師的筆記本</span>
-          <span class="gsc-game">📅 年份排序挑戰</span>
+          <span class="gsc-logo">🍷 {{ $t('bordeaux.games.common.trophy') }}</span>
+          <span class="gsc-game">{{ $t('bordeaux.games.vintage.title') }}</span>
         </div>
         <div class="gsc-result-icon">{{ resultEmoji }}</div>
         <div class="gsc-score">{{ score }}</div>
-        <div class="gsc-score-label">總分（滿分 650）</div>
+        <div class="gsc-score-label">{{ $t('bordeaux.games.common.totalScore') }}</div>
         <div class="gsc-chips">
-          <span class="gsc-chip">{{ difficulty === 'easy' ? '🍷 簡單' : '🔥 困難' }}</span>
-          <span class="gsc-chip">{{ correctTotal }} / {{ cardCount * 5 }} 正確</span>
-          <span class="gsc-chip">{{ perfectRounds }} 輪完美</span>
+          <span class="gsc-chip">{{ difficulty === 'easy' ? '🍷 ' + $t('bordeaux.games.common.easy') : '🔥 ' + $t('bordeaux.games.common.hard') }}</span>
+          <span class="gsc-chip">{{ $t('bordeaux.games.common.answered', { n: correctTotal, total: cardCount * 5 }) }}</span>
         </div>
         <div class="gsc-footer">bordeaux-wine.academy · {{ new Date().toLocaleDateString('zh-TW') }}</div>
       </div>
@@ -202,10 +196,12 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { supabase } from '@/lib/supabaseClient.js'
 import { authState } from '@/stores/authStore.js'
 
 const emit = defineEmits(['back'])
+const { t } = useI18n()
 const pageEl     = ref(null)
 const gameShareEl = ref(null)
 const sharingGame = ref(false)
@@ -533,15 +529,15 @@ function setLbTab(diff) {
 }
 
 async function submitScore() {
-  if (!supabase)      { uploadErr.value = '未連接資料庫'; return }
-  if (!authState.user){ uploadErr.value = '請先登入以上傳成績'; return }
+  if (!supabase)      { uploadErr.value = t('bordeaux.games.common.noRecord'); return }
+  if (!authState.user){ uploadErr.value = t('bordeaux.games.common.noRecordFirst'); return }
   if (uploaded.value) return
   uploading.value = true
   uploadErr.value = ''
   try {
     const username =
       authState.user.user_metadata?.full_name ||
-      authState.user.email?.split('@')[0] || '匿名玩家'
+      authState.user.email?.split('@')[0] || t('bordeaux.games.common.noRecord')
     const { error } = await supabase.from('quiz_scores').insert({
       user_id:         authState.user.id,
       username,
@@ -554,7 +550,7 @@ async function submitScore() {
     if (error) throw error
     uploaded.value = true
   } catch (e) {
-    uploadErr.value = `上傳失敗：${e.message}`
+    uploadErr.value = e.message
   } finally {
     uploading.value = false
   }

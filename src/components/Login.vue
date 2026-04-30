@@ -19,13 +19,13 @@
 
       <!-- 登入卡片 -->
       <div class="login-card">
-        <h2 class="card-title">歡迎回來</h2>
-        <p class="card-subtitle">登入後可跨裝置同步學習進度</p>
+        <h2 class="card-title">{{ $t('common.login.title') }}</h2>
+        <p class="card-subtitle">{{ $t('common.login.subtitle') }}</p>
 
         <form @submit.prevent="handleLogin" novalidate class="login-form">
           <!-- Email -->
           <div class="field-group">
-            <label for="login-email" class="field-label">電子信箱</label>
+            <label for="login-email" class="field-label">{{ $t('common.login.email') }}</label>
             <input
               id="login-email"
               v-model.trim="form.email"
@@ -41,7 +41,7 @@
 
           <!-- 密碼 -->
           <div class="field-group">
-            <label for="login-password" class="field-label">密碼</label>
+            <label for="login-password" class="field-label">{{ $t('common.login.password') }}</label>
             <div class="password-wrapper">
               <input
                 id="login-password"
@@ -49,14 +49,14 @@
                 :type="showPassword ? 'text' : 'password'"
                 class="field-input"
                 :class="{ 'has-error': errors.password }"
-                placeholder="請輸入密碼"
+                :placeholder="$t('common.login.passwordPlaceholder')"
                 autocomplete="current-password"
                 :disabled="isLoading"
               />
               <button
                 type="button"
                 class="toggle-pw"
-                :aria-label="showPassword ? '隱藏密碼' : '顯示密碼'"
+                :aria-label="showPassword ? $t('common.login.hidePassword') : $t('common.login.showPassword')"
                 @click="showPassword = !showPassword"
               >{{ showPassword ? '🙈' : '👁️' }}</button>
             </div>
@@ -64,7 +64,7 @@
             <!-- 忘記密碼 -->
             <div class="forgot-pw-row">
               <button type="button" class="link-btn forgot" @click="handleForgotPassword" :disabled="isSendingReset">
-                {{ isSendingReset ? '寄送中…' : '忘記密碼？' }}
+                {{ isSendingReset ? $t('common.login.sendingReset') : $t('common.login.forgotPassword') }}
               </button>
             </div>
           </div>
@@ -72,7 +72,7 @@
           <!-- 重設密碼成功提示 -->
           <div v-if="resetSent" class="info-notice" role="status">
             <span>✉️</span>
-            <span>密碼重設信已寄出！請至信箱點擊連結完成重設。</span>
+            <span>{{ $t('common.login.resetSent') }}</span>
           </div>
 
           <!-- API 錯誤 -->
@@ -82,8 +82,8 @@
               <span>{{ apiError }}</span>
               <!-- Email 未驗證提示 -->
               <div v-if="isEmailNotConfirmed" class="verify-hint">
-              • 請檢查信箱（包含垃圾郵件）並點擊驗證連結。<br>
-                • 沒收到？請將信箱輸入上方後點擊「<button type="button" class="inline-link" @click="resendVerification">重寄驗證信</button>」。
+                • {{ $t('common.login.emailNotConfirmed.checkInbox') }}<br>
+                • {{ $t('common.login.emailNotConfirmed.resendHint') }}<button type="button" class="inline-link" @click="resendVerification">{{ $t('common.login.emailNotConfirmed.resend') }}</button>{{ $t('common.login.emailNotConfirmed.resendHintSuffix') }}
               </div>
             </div>
           </div>
@@ -91,14 +91,14 @@
           <!-- 提交按鈕 -->
           <button type="submit" class="btn-submit" :disabled="isLoading">
             <span v-if="isLoading" class="loading-spinner" aria-hidden="true"></span>
-            <span>{{ isLoading ? '登入中…' : '登入' }}</span>
+            <span>{{ isLoading ? $t('common.login.submitting') : $t('common.login.submit') }}</span>
           </button>
         </form>
 
         <!-- 底部連結 -->
         <div class="form-footer">
-          <span>還沒有帳號？</span>
-          <button class="link-btn" @click="$emit('goToRegister')">立即註冊</button>
+          <span>{{ $t('common.login.noAccount') }}</span>
+          <button class="link-btn" @click="$emit('goToRegister')">{{ $t('common.login.register') }}</button>
         </div>
         <div class="form-footer">
           <button class="link-btn secondary" @click="$router.push('/')">← {{ $t('common.actions.backToHome') }}</button>
@@ -110,11 +110,14 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { authActions } from '../stores/authStore.js'
 import { supabase } from '../lib/supabaseClient.js'
 
-// ── Emits ────────────────────────────────────────────────
+// ── Emits ─────────────────────────────────────────────────────────────
 const emit = defineEmits(['backToHome', 'goToRegister', 'loginSuccess'])
+
+const { t } = useI18n()
 
 // ── 表單狀態 ───────────────────────────────────────────────
 const form = ref({ email: '', password: '' })
@@ -134,15 +137,15 @@ function validate() {
   let valid = true
 
   if (!form.value.email) {
-    errors.value.email = '請輸入電子信箱'
+    errors.value.email = t('common.login.errors.emailRequired')
     valid = false
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.value.email)) {
-    errors.value.email = '請輸入有效的電子信箱格式'
+    errors.value.email = t('common.login.errors.emailInvalid')
     valid = false
   }
 
   if (!form.value.password) {
-    errors.value.password = '請輸入密碼'
+    errors.value.password = t('common.login.errors.passwordRequired')
     valid = false
   }
 
@@ -173,22 +176,22 @@ async function handleLogin() {
 
 // Supabase 登入錯誤訊息中文化
 function mapSupabaseError(msg) {
-  if (!msg) return '發生未知錯誤，請稍後再試'
+  if (!msg) return t('common.login.errors.unknown')
   const m = msg.toLowerCase()
   if (m.includes('email not confirmed')) {
-    return '帳號尚未驗證，請先點擊信箱中的驗證連結'
+    return t('common.login.errors.emailNotConfirmed')
   }
   if (m.includes('invalid login credentials')) {
-    return '電子信箱或密碼不正確，請確認後再試'
+    return t('common.login.errors.invalidCredentials')
   }
   if (m.includes('too many requests') || m.includes('rate limit')) {
-    return '登入嘗試次數過多，請稍等幾分鐘後再試'
+    return t('common.login.errors.tooManyRequests')
   }
   if (m.includes('user not found')) {
-    return '找不到此帳號，請確認信箱或先行註冊'
+    return t('common.login.errors.userNotFound')
   }
   if (m.includes('auth 服務未初始化')) {
-    return '驗證服務尚未就緒，請確認環境設定'
+    return t('common.login.errors.authNotInitialized')
   }
   return msg
 }
@@ -196,15 +199,15 @@ function mapSupabaseError(msg) {
 // ── 忘記密碼 ──────────────────────────────────────────────
 async function handleForgotPassword() {
   if (!form.value.email) {
-    errors.value.email = '請先輸入電子信箱'
+    errors.value.email = t('common.login.errors.emailRequiredFirst')
     return
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.value.email)) {
-    errors.value.email = '請輸入有效的電子信箱格式'
+    errors.value.email = t('common.login.errors.emailInvalid')
     return
   }
   if (!supabase) {
-    apiError.value = '驗證服務尚未就緒'
+    apiError.value = t('common.login.errors.authNotReady')
     return
   }
 
@@ -217,7 +220,7 @@ async function handleForgotPassword() {
     resetSent.value = true
     apiError.value = ''
   } catch {
-    apiError.value = '密碼重設信寄送失敗，請稍後再試'
+    apiError.value = t('common.login.errors.resetFailed')
   } finally {
     isSendingReset.value = false
   }

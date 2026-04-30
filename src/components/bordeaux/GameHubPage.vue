@@ -6,8 +6,8 @@
       <div class="hub-header">
         <button class="back-btn" @click="$emit('back')">← {{ $t('common.actions.back') }}</button>
         <div class="hub-title-block">
-          <h1 class="hub-title">🎮 互動練習</h1>
-          <p class="hub-subtitle">選擇一個遊戲開始挑戰</p>
+          <h1 class="hub-title">{{ $t('bordeaux.games.hub.title') }}</h1>
+          <p class="hub-subtitle">{{ $t('bordeaux.games.hub.subtitle') }}</p>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
           <!-- 鎖頭遮罩：Tier 不足時顯示 -->
           <div v-if="!canAccess(g.minimumTier)" class="lock-overlay">
             <span class="lock-icon">🔒</span>
-            <span class="lock-label">{{ TIER_LABEL[g.minimumTier] }} 解鎖</span>
+            <span class="lock-label">{{ tierLabel(g.minimumTier) }}</span>
           </div>
 
           <div class="card-icon">{{ g.icon }}</div>
@@ -39,7 +39,7 @@
             <div class="card-name">{{ g.name }}</div>
             <div class="card-desc">{{ g.desc }}</div>
             <div class="card-tags">
-              <span v-for="t in g.tags" :key="t" class="tag">{{ t }}</span>
+              <span v-for="tag in g.tags" :key="tag" class="tag">{{ tag }}</span>
             </div>
           </div>
           <div class="card-arrow">›</div>
@@ -58,6 +58,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import MapQuizPage       from './MapQuizPage.vue'
 import BankQuizPage      from './BankQuizPage.vue'
 import VintageSortPage   from './VintageSortPage.vue'
@@ -67,6 +68,7 @@ import { authState, authActions } from '../../stores/authStore.js'
 import { TIER_WEIGHT } from '../../router/index.js'
 
 defineEmits(['back'])
+const { t } = useI18n()
 
 const currentGame = ref(null)
 
@@ -81,77 +83,30 @@ const canAccess = (minimumTier) => {
 // 點擊遊戲卡：權限不足時提示，足夠時進入
 const handleGameClick = (game) => {
   if (!canAccess(game.minimumTier)) {
-    alert(`🔒 「${game.name}」需要「${TIER_LABEL[game.minimumTier]}」方案才能使用\n\n請升級您的訂閱以解鎖這個遊戲！`)
+    alert(t('bordeaux.games.hub.lockMsg', { name: game.name, tier: tierLabel(game.minimumTier) }))
     return
   }
   currentGame.value = game.id
 }
 
-const TIER_LABEL = {
-  free: '免費',
-  basic: '初階付費',
-  premium: '進階付費'
-}
+const tierLabel = (tier) => t(`bordeaux.games.tier.${tier}`)
 
-const GAMES = [
-  {
-    id:          'map',
-    icon:        '🗺️',
-    name:        '產區競答',
-    desc:        '點擊地圖上的產區，考驗你對波爾多產區位置的認識',
-    tags:        ['地圖互動', '簡單 / 困難', '15–35 題'],
-    accent:      '#f97316',
-    accent2:     '#ef4444',
-    minimumTier: 'basic'
-  },
-  {
-    id:          'bank',
-    icon:        '⚡',
-    name:        '左右岸競速',
-    desc:        '看到 AOC 名稱立刻分類：左岸、右岸，困難模式還加入兩河之間與索甸甜酒帶',
-    tags:        ['快答', '簡單 / 困難', 'Combo 系統'],
-    accent:      '#0ea5e9',
-    accent2:     '#38bdf8',
-    minimumTier: 'basic'
-  },
-  {
-    id:          'vintage',
-    icon:        '🌡️',
-    name:        '年份溫度排列',
-    desc:        '將波爾多年份依夏季均溫由最熱排到最冷，考驗對偉大年份的記憶',
-    tags:        ['排序', '簡單 / 困難', '5 輪 × 4-5 張'],
-    accent:      '#f59e0b',
-    accent2:     '#d97706',
-    minimumTier: 'basic'
-  },
-  {
-    id:          'grape',
-    icon:        '🍇',
-    name:        '葡萄 × 土壤配對',
-    desc:        '快速判斷哪個品種最愛哪種土，困難模式加入逆向題（土壤 → 品種）',
-    tags:        ['配對', '簡單 / 困難', '錯題回顧'],
-    accent:      '#22c55e',
-    accent2:     '#15803d',
-    minimumTier: 'basic'
-  },  {
-    id:          'label',
-    icon:        '🏷️',
-    name:        '酒標辨識賽',
-    desc:        '看酒標圖片判斷左右岸、村莊級 AOC、党數等級，三種難度挑戰',
-    tags:        ['圖片辨識', '簡單 / 中 / 困難', '錯題回顾'],
-    accent:      '#c8a96e',
-    accent2:     '#92400e',
-    minimumTier: 'basic'
-  },]
+const GAMES = computed(() => [
+  { id: 'map',     icon: '🗺️', name: t('bordeaux.games.map.name'),     desc: t('bordeaux.games.map.desc'),     tags: t('bordeaux.games.map.tags'),     accent: '#f97316', accent2: '#ef4444', minimumTier: 'basic' },
+  { id: 'bank',    icon: '⚡',  name: t('bordeaux.games.bank.name'),    desc: t('bordeaux.games.bank.desc'),    tags: t('bordeaux.games.bank.tags'),    accent: '#0ea5e9', accent2: '#38bdf8', minimumTier: 'basic' },
+  { id: 'vintage', icon: '🌡️', name: t('bordeaux.games.vintage.name'), desc: t('bordeaux.games.vintage.desc'), tags: t('bordeaux.games.vintage.tags'), accent: '#f59e0b', accent2: '#d97706', minimumTier: 'basic' },
+  { id: 'grape',   icon: '🍇', name: t('bordeaux.games.grape.name'),   desc: t('bordeaux.games.grape.desc'),   tags: t('bordeaux.games.grape.tags'),   accent: '#22c55e', accent2: '#15803d', minimumTier: 'basic' },
+  { id: 'label',   icon: '🏷️', name: t('bordeaux.games.label.name'),   desc: t('bordeaux.games.label.desc'),   tags: t('bordeaux.games.label.tags'),   accent: '#c8a96e', accent2: '#92400e', minimumTier: 'basic' },
+])
 
 const stats = computed(() => {
   const keys = ['bdx_map_best', 'bdx_bank_best', 'bdx_vintage_best', 'bdx_grape_best', 'bdx_label_best']
   let played = 0, totalBest = 0
   keys.forEach(k => { const v = parseInt(localStorage.getItem(k) || '0'); if (v > 0) { played++; totalBest += v } })
   return [
-    { icon: '🎮', value: played,                          label: '已挑戰遲戲' },
-    { icon: '📊', value: keys.length,                     label: '全部遲戲' },
-    { icon: '🏅', value: totalBest > 0 ? totalBest : '—', label: '累計最高分' }
+    { icon: '🎮', value: played,                          label: t('bordeaux.games.hub.statsPlayed') },
+    { icon: '📊', value: keys.length,                     label: t('bordeaux.games.hub.statsTotal') },
+    { icon: '🏅', value: totalBest > 0 ? totalBest : '—', label: t('bordeaux.games.hub.statsBest') },
   ]
 })
 </script>

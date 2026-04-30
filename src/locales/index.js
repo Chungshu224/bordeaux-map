@@ -32,6 +32,14 @@ import zhHome from './zh-TW/home.js'
 import enHome from './en/home.js'
 import jaHome from './ja/home.js'
 
+import zhBordeaux from './zh-TW/bordeaux.js'
+import enBordeaux from './en/bordeaux.js'
+import jaBordeaux from './ja/bordeaux.js'
+
+import zhItaly from './zh-TW/italy.js'
+import enItaly from './en/italy.js'
+import jaItaly from './ja/italy.js'
+
 // ── 支援的語言清單 ───────────────────────────────────────────
 export const SUPPORTED_LOCALES = [
   { code: 'zh-TW', name: '繁體中文', flag: '🇹🇼' },
@@ -61,9 +69,9 @@ function detectInitialLocale() {
 
 // ── 整合各語言檔（將來會有多個 namespace） ──────────────────
 const messages = {
-  'zh-TW': { common: zhCommon, california: zhCalifornia, home: zhHome },
-  'en':    { common: enCommon, california: enCalifornia, home: enHome },
-  'ja':    { common: jaCommon, california: jaCalifornia, home: jaHome },
+  'zh-TW': { common: zhCommon, california: zhCalifornia, home: zhHome, bordeaux: zhBordeaux, italy: zhItaly },
+  'en':    { common: enCommon, california: enCalifornia, home: enHome, bordeaux: enBordeaux, italy: enItaly },
+  'ja':    { common: jaCommon, california: jaCalifornia, home: jaHome, bordeaux: jaBordeaux, italy: jaItaly },
 }
 
 // ── 建立 i18n 實例 ───────────────────────────────────────────

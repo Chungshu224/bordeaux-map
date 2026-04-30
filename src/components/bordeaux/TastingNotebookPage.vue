@@ -5,9 +5,9 @@
       <button class="nb-back-btn" @click="emit('back')">
         <span>←</span> {{ $t('common.actions.back') }}
       </button>
-      <h1 class="nb-title">📔 品飲筆記本</h1>
+      <h1 class="nb-title">{{ $t('bordeaux.notebook.title') }}</h1>
       <button class="nb-add-btn" @click="openNewNote">
-        <span>+</span> 新增
+        <span>+</span> {{ $t('bordeaux.notebook.addBtn') }}
       </button>
     </div>
 
@@ -15,22 +15,22 @@
     <div class="nb-stats-bar">
       <div class="nb-stat">
         <span class="nb-stat-num">{{ stats.tried }}</span>
-        <span class="nb-stat-label">已品飲</span>
+        <span class="nb-stat-label">{{ $t('bordeaux.notebook.statsTasted') }}</span>
       </div>
       <div class="nb-stat-divider" />
       <div class="nb-stat">
         <span class="nb-stat-num">{{ stats.wishlist }}</span>
-        <span class="nb-stat-label">想喝清單</span>
+        <span class="nb-stat-label">{{ $t('bordeaux.notebook.statsWishlist') }}</span>
       </div>
       <div class="nb-stat-divider" />
       <div class="nb-stat">
         <span class="nb-stat-num">{{ stats.aocs }}</span>
-        <span class="nb-stat-label">產區涵蓋</span>
+        <span class="nb-stat-label">{{ $t('bordeaux.notebook.statsRegions') }}</span>
       </div>
       <div class="nb-stat-divider" />
       <div class="nb-stat">
         <span class="nb-stat-num">{{ stats.vintages }}</span>
-        <span class="nb-stat-label">年份記錄</span>
+        <span class="nb-stat-label">{{ $t('bordeaux.notebook.statsVintages') }}</span>
       </div>
     </div>
 
@@ -60,25 +60,25 @@
           {{ tab.label }}
         </button>
         <div class="nb-search-wrap">
-          <input v-model="searchQuery" class="nb-search" placeholder="搜尋酒莊或產區…" />
+          <input v-model="searchQuery" class="nb-search" :placeholder="$t('bordeaux.notebook.search')" />
         </div>
       </div>
 
       <!-- Loading -->
       <div v-if="loading" class="nb-empty">
         <div class="nb-loading-spinner" />
-        <p>載入中…</p>
+        <p>{{ $t('bordeaux.notebook.loading') }}</p>
       </div>
 
       <!-- Empty state -->
       <div v-else-if="filteredNotes.length === 0" class="nb-empty">
         <p class="nb-empty-icon">📭</p>
         <p class="nb-empty-msg">
-          {{ searchQuery ? '找不到符合的筆記' :
-             filterTab === 'tried' ? '尚無品飲記錄' :
-             filterTab === 'wishlist' ? '想喝清單為空' : '尚無任何筆記' }}
+          {{ searchQuery ? $t('bordeaux.notebook.emptySearch') :
+             filterTab === 'tried' ? $t('bordeaux.notebook.emptyTried') :
+             filterTab === 'wishlist' ? $t('bordeaux.notebook.emptyWishlist') : $t('bordeaux.notebook.emptyAll') }}
         </p>
-        <p class="nb-empty-hint">前往「探索地圖」，點選酒莊標記後快速記錄</p>
+        <p class="nb-empty-hint">{{ $t('bordeaux.notebook.emptyHint') }}</p>
       </div>
 
       <!-- Notes grid -->
@@ -88,7 +88,7 @@
           @click="openNote(note)">
           <div class="nb-card-top">
             <span :class="['nb-status-badge', note.status]">
-              {{ note.status === 'tried' ? '✓ 已品飲' : '♡ 想喝' }}
+              {{ note.status === 'tried' ? $t('bordeaux.notebook.tried') : $t('bordeaux.notebook.wishlist') }}
             </span>
             <span v-if="note.vintage" class="nb-vintage-tag">{{ note.vintage }}</span>
           </div>
@@ -105,7 +105,7 @@
           <!-- 分享按鈕 -->
           <button class="nb-share-btn" :disabled="sharingNoteId === note.id"
             @click.stop="shareNote(note)">
-            {{ sharingNoteId === note.id ? '⏳' : '📤 分享' }}
+            {{ sharingNoteId === note.id ? '⏳' : $t('bordeaux.notebook.shareBtn') }}
           </button>
         </div>
       </div>
@@ -113,9 +113,9 @@
       <!-- 筆記分享用卡片 (隱藏到畫面外，供截圖用) -->
       <div ref="noteShareEl" class="nb-share-card">
         <div class="nsc-header">
-          <div class="nsc-logo">🍷 侍酒師的筆記本</div>
+          <div class="nsc-logo">🍷 {{ $t('bordeaux.notebook.shareCardLogo') }}</div>
           <div :class="['nsc-status', sharingNote?.status]">
-            {{ sharingNote?.status === 'tried' ? '✓ 已品飲' : '♡ 想喝' }}
+            {{ sharingNote?.status === 'tried' ? $t('bordeaux.notebook.tried') : $t('bordeaux.notebook.wishlist') }}
           </div>
         </div>
         <div class="nsc-name">{{ sharingNote?.chateau_name }}</div>
@@ -131,9 +131,9 @@
         </div>
         <div v-if="sharingNote?.notes" class="nsc-text">"{{ (sharingNote?.notes || '').slice(0, 80) }}"</div>
         <div v-if="sharingNote?.tannin" class="nsc-structure">
-          <div class="nsc-str-row"><span>單寧</span><div class="nsc-sbar-w"><div class="nsc-sbar" :style="{width: (sharingNote.tannin/5*100)+'%'}" /></div></div>
-          <div class="nsc-str-row"><span>酸度</span><div class="nsc-sbar-w"><div class="nsc-sbar" :style="{width: (sharingNote.acidity/5*100)+'%'}" /></div></div>
-          <div class="nsc-str-row"><span>酒體</span><div class="nsc-sbar-w"><div class="nsc-sbar" :style="{width: (sharingNote.body/5*100)+'%'}" /></div></div>
+          <div class="nsc-str-row"><span>{{ $t('bordeaux.notebook.tannin') }}</span><div class="nsc-sbar-w"><div class="nsc-sbar" :style="{width: (sharingNote.tannin/5*100)+'%'}" /></div></div>
+          <div class="nsc-str-row"><span>{{ $t('bordeaux.notebook.acid') }}</span><div class="nsc-sbar-w"><div class="nsc-sbar" :style="{width: (sharingNote.acidity/5*100)+'%'}" /></div></div>
+          <div class="nsc-str-row"><span>{{ $t('bordeaux.notebook.body') }}</span><div class="nsc-sbar-w"><div class="nsc-sbar" :style="{width: (sharingNote.body/5*100)+'%'}" /></div></div>
         </div>
         <div class="nsc-footer">bordeaux-wine.academy · {{ new Date().toLocaleDateString('zh-TW') }}</div>
       </div>
@@ -165,6 +165,7 @@
 
 <script setup>
 import { ref, computed, onMounted, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { supabase } from '@/lib/supabaseClient.js'
 import { authState } from '@/stores/authStore.js'
 import { globalAchievementManager } from '@/stores/achievementSystem.js'
@@ -175,6 +176,7 @@ import CourseRecommendation from '../CourseRecommendation.vue'
 
 defineProps({ deviceInfo: Object })
 const emit = defineEmits(['back', 'go-to-course'])
+const { t } = useI18n()
 
 // ── State ─────────────────────────────────────────────────────────
 const notes        = ref([])
@@ -203,7 +205,7 @@ const shareNote = async (note) => {
     const blob = await new Promise(r => canvas.toBlob(r, 'image/png'))
     const file = new File([blob], `${note.chateau_name}-tasting.png`, { type: 'image/png' })
     if (navigator.canShare?.({ files: [file] })) {
-      await navigator.share({ title: note.chateau_name, text: `我的品飲筆記：${note.chateau_name}`, files: [file] })
+      await navigator.share({ title: note.chateau_name, text: t('bordeaux.notebook.shareText', { name: note.chateau_name }), files: [file] })
     } else {
       const url = URL.createObjectURL(blob)
       const a = Object.assign(document.createElement('a'), { href: url, download: `${note.chateau_name}.png` })
@@ -227,17 +229,17 @@ const completedLessons = computed(() => {
   }
 })
 
-const MAIN_TABS = [
-  { key: 'notes',      label: '📝 筆記' },
-  { key: 'collection', label: '🏆 集章' },
-  { key: 'profile',    label: '📊 品味' },
-]
+const MAIN_TABS = computed(() => [
+  { key: 'notes',      label: `📝 ${t('bordeaux.notebook.tabNotes')}` },
+  { key: 'collection', label: `🏆 ${t('bordeaux.notebook.tabCollection')}` },
+  { key: 'profile',    label: `📊 ${t('bordeaux.notebook.tabProfile')}` },
+])
 
-const NOTE_TABS = [
-  { key: 'all',      label: '全部' },
-  { key: 'tried',    label: '已品飲' },
-  { key: 'wishlist', label: '想喝清單' },
-]
+const NOTE_TABS = computed(() => [
+  { key: 'all',      label: t('bordeaux.notebook.filterAll') },
+  { key: 'tried',    label: t('bordeaux.notebook.tried') },
+  { key: 'wishlist', label: t('bordeaux.notebook.wishlist') },
+])
 
 // ── Computed ──────────────────────────────────────────────────────
 const filteredNotes = computed(() => {
