@@ -12,6 +12,36 @@
       <div class="sv-progress-fill" :style="{ width: progressPct + '%' }"></div>
     </div>
 
+    <!-- 導航列（上一頁 / 下一頁，置於簡報上方） -->
+    <nav class="sv-nav-row">
+      <button class="sv-nav-btn" :disabled="currentSlide === 0" @click="prevSlide">
+        ← 上一頁
+      </button>
+      <div class="sv-dots">
+        <span
+          v-for="(_, i) in slides"
+          :key="i"
+          class="sv-dot"
+          :class="{ active: i === currentSlide }"
+          @click="goToSlide(i)"
+        ></span>
+      </div>
+      <button
+        v-if="currentSlide < slides.length - 1"
+        class="sv-nav-btn primary"
+        @click="nextSlide"
+      >
+        下一頁 →
+      </button>
+      <button
+        v-else
+        class="sv-nav-btn complete"
+        @click="complete"
+      >
+        完成課程 ✓
+      </button>
+    </nav>
+
     <!-- 投影片內容 -->
     <div class="sv-content">
       <div class="slide-container">
@@ -164,35 +194,7 @@
       </div>
     </div>
 
-    <!-- 底部導航 -->
-    <footer class="sv-footer">
-      <button class="sv-nav-btn" :disabled="currentSlide === 0" @click="prevSlide">
-        ← 上一頁
-      </button>
-      <div class="sv-dots">
-        <span
-          v-for="(_, i) in slides"
-          :key="i"
-          class="sv-dot"
-          :class="{ active: i === currentSlide }"
-          @click="goToSlide(i)"
-        ></span>
-      </div>
-      <button
-        v-if="currentSlide < slides.length - 1"
-        class="sv-nav-btn primary"
-        @click="nextSlide"
-      >
-        下一頁 →
-      </button>
-      <button
-        v-else
-        class="sv-nav-btn complete"
-        @click="complete"
-      >
-        完成課程 ✓
-      </button>
-    </footer>
+    <WineGlossary region="portugal" />
   </div>
 </template>
 
@@ -206,6 +208,7 @@ import PortAgingTiersSlide from './slides/PortAgingTiersSlide.vue'
 import PortugalRegionsOverviewSlide from './slides/PortugalRegionsOverviewSlide.vue'
 import MadeiraNobleGrapesSlide from './slides/MadeiraNobleGrapesSlide.vue'
 import VinhoVerdeSubregionsSlide from './slides/VinhoVerdeSubregionsSlide.vue'
+import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
   lesson: { type: Object, required: true },
@@ -527,14 +530,14 @@ function complete() {
 .slide-placeholder h2 { font-size: 1.3rem; font-weight: 800; color: #2c3e50; margin: 0 0 10px; }
 .placeholder-desc { color: #888; font-size: 0.9rem; }
 
-/* Footer */
-.sv-footer {
+/* Nav row（簡報上方，原本是 footer） */
+.sv-nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 20px;
+  padding: 12px 20px;
   background: white;
-  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   flex-shrink: 0;
 }
 .sv-nav-btn {

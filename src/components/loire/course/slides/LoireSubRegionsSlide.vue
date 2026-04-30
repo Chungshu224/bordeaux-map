@@ -16,6 +16,9 @@
         @mouseenter="activeKey = r.key"
         @click="activeKey = r.key"
       >
+        <div class="lss-card-image-wrapper">
+          <img :src="`/images/loire/region-${r.key}.svg`" class="lss-img" :alt="r.title" />
+        </div>
         <div class="lss-card-head">
           <span class="lss-emoji">{{ r.emoji }}</span>
           <div class="lss-titles">
@@ -156,6 +159,18 @@ const activeKey = ref(regions.value[0]?.key || '')
 .lss-card:hover, .lss-card.active {
   transform: translateY(-3px);
   box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.lss-card-image-wrapper {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.lss-img {
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+  display: block;
 }
 .lss-card-head { display: flex; align-items: center; gap: 10px; }
 .lss-emoji { font-size: 1.8rem; line-height: 1; }

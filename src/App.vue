@@ -31,6 +31,11 @@
     <!-- 成就通知容器 -->
     <AchievementNotificationsContainer />
 
+    <!-- 全域語言切換器（右上角浮動） -->
+    <div class="global-lang-switcher">
+      <LanguageSwitcher />
+    </div>
+
     <!-- 閒置警告 / 被踢出彈窗 -->
     <IdleWarningModal
       :showIdleWarning="showIdleWarning"
@@ -83,6 +88,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import AchievementNotificationsContainer from './components/AchievementNotificationsContainer.vue'
 import IdleWarningModal from './components/IdleWarningModal.vue'
+import LanguageSwitcher from './components/LanguageSwitcher.vue'
 import { globalAchievementManager } from './stores/achievementSystem.js'
 import { useResponsiveLayout, getPlatformClasses } from './utils/deviceDetection.js'
 import { authState, authActions } from './stores/authStore.js'
@@ -435,5 +441,19 @@ body {
 
 .device-info-panel button:hover {
   background: #45a049;
+}
+
+/* ── 全域語言切換器（右上角浮動） ──────────────────────── */
+.global-lang-switcher {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9998;
+}
+@media (max-width: 768px) {
+  .global-lang-switcher {
+    top: 8px;
+    right: 8px;
+  }
 }
 </style>

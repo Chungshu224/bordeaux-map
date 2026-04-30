@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="bg-gutswein" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A1E"/><stop offset="100%" stop-color="#346034"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="80" rx="10" fill="url(#bg-gutswein)"/>
+  
+  <!-- Rolling estate vineyards -->
+  <path d="M0 55 Q50 42 100 55 Q150 68 200 55 L200 80 L0 80Z" fill="rgba(255,255,255,0.06)"/>
+  <!-- Estate building -->
+  <rect x="80" y="40" width="28" height="20" fill="rgba(255,255,255,0.16)"/>
+  <polygon points="78,40 94,28 110,40" fill="rgba(255,255,255,0.22)"/>
+  <rect x="86" y="48" width="5" height="12" fill="rgba(0,0,0,0.25)"/>
+  <rect x="94" y="48" width="5" height="12" fill="rgba(0,0,0,0.25)"/>
+  <!-- Vineyard rows -->
+  <line x1="5" y1="72" x2="72" y2="67" stroke="rgba(255,255,255,0.16)" stroke-width="1.2"/>
+  <line x1="5" y1="64" x2="70" y2="59" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="120" y1="70" x2="195" y2="64" stroke="rgba(255,255,255,0.16)" stroke-width="1.2"/>
+  <line x1="122" y1="62" x2="194" y2="56" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <rect x="0" y="62" width="200" height="18" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="10" y="73" font-family="Georgia,serif" font-size="9.5" fill="white" font-weight="bold">Gutswein</text>
+  <text x="130" y="73" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.65)">酒莊等級</text>
+</svg>

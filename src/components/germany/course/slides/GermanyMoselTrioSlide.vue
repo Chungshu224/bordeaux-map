@@ -28,6 +28,7 @@
           <h3>{{ active.icon }} {{ active.name }}</h3>
           <span class="detail-tagline">{{ active.tagline }}</span>
         </div>
+        <img :src="`/images/germany/river-${riverKeys[activeIdx]}.svg`" class="river-landscape-img" />
         <div class="detail-badge">{{ active.badge }}</div>
       </div>
       <div class="detail-body">
@@ -155,6 +156,7 @@ const rivers = [
 ]
 
 const active = computed(() => rivers[activeIdx.value])
+const riverKeys = ['mittelmosel', 'saar', 'ruwer']
 
 const compRows = [
   { label: '面積', values: ['~7,800 ha（主體）', '~800 ha', '~200 ha（最小）'] },
@@ -257,6 +259,14 @@ const slates = [
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+.river-landscape-img {
+  width: 110px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.88;
+  flex-shrink: 0;
 }
 .detail-header h3 { margin: 0; font-size: 1.5rem; }
 .detail-tagline { font-size: 0.88rem; opacity: 0.9; margin-top: 4px; display: block; }

@@ -31,6 +31,7 @@
             <h3>{{ activeRegion.emoji }} {{ activeRegion.name }}</h3>
             <span class="card-tagline">{{ activeRegion.tagline }}</span>
           </div>
+          <img :src="`/images/germany/riesling-${activeRegion.key}.svg`" class="riesling-region-img" />
           <div class="header-meta">
             <span><strong>產區規模</strong> {{ activeRegion.size }}</span>
             <span><strong>Riesling 比例</strong> {{ activeRegion.rieslingShare }}</span>
@@ -372,6 +373,16 @@ const activeRegion = computed(() => regions.value.find((r) => r.key === activeKe
   flex-wrap: wrap;
   gap: 0.5rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.riesling-region-img {
+  width: 100px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.9;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .card-header h3 {

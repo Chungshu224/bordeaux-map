@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="bg-ortswein" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E2A10"/><stop offset="100%" stop-color="#5A5020"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="80" rx="10" fill="url(#bg-ortswein)"/>
+  
+  <!-- Village silhouette -->
+  <rect x="60" y="46" width="12" height="14" fill="rgba(255,255,255,0.16)"/>
+  <polygon points="60,46 66,38 72,46" fill="rgba(255,255,255,0.22)"/>
+  <rect x="78" y="48" width="14" height="12" fill="rgba(255,255,255,0.14)"/>
+  <polygon points="77,48 85,40 93,48" fill="rgba(255,255,255,0.20)"/>
+  <rect x="98" y="50" width="10" height="10" fill="rgba(255,255,255,0.13)"/>
+  <!-- Church steeple -->
+  <rect x="115" y="38" width="8" height="22" fill="rgba(255,255,255,0.16)"/>
+  <polygon points="114,38 119,28 124,38" fill="rgba(255,255,255,0.22)"/>
+  <!-- Vineyards on village slope -->
+  <line x1="5" y1="74" x2="55" y2="68" stroke="rgba(255,255,255,0.18)" stroke-width="1.3"/>
+  <line x1="5" y1="66" x2="54" y2="60" stroke="rgba(255,255,255,0.14)" stroke-width="1.1"/>
+  <line x1="130" y1="72" x2="195" y2="66" stroke="rgba(255,255,255,0.16)" stroke-width="1.2"/>
+  <line x1="132" y1="64" x2="194" y2="58" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <rect x="0" y="62" width="200" height="18" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="10" y="73" font-family="Georgia,serif" font-size="9.5" fill="white" font-weight="bold">Ortswein</text>
+  <text x="130" y="73" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.65)">村莊等級</text>
+</svg>

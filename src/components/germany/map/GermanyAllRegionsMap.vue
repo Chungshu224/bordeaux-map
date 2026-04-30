@@ -130,49 +130,59 @@
       </div>
     </transition>
 
-    <!-- 圖層面板（從下方彈出）-->
-    <transition name="mobile-sheet-fade">
-      <div v-if="layersPanelOpen" class="mobile-aoc-backdrop" @click.self="layersPanelOpen = false">
-        <div class="mobile-aoc-drawer layers-drawer">
-          <div class="mobile-aoc-handle"></div>
-          <div class="mobile-aoc-toolbar-header">
-            <h2>圖層</h2>
+    <!-- 圖層面板格式更新（參考澳洲地圖 / RegionMapLayerPanel 風格）-->
+    <transition name="layer-panel">
+      <div v-if="layersPanelOpen" class="layer-panel-wrapper">
+        <div class="rmap-layer-panel">
+          <div class="rmap-layer-header">
+            <span>圖層與顯示</span>
+            <button class="btn-collapse-inline" @click="layersPanelOpen = false" title="收合面板">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+              <span class="btn-text">收合</span>
+            </button>
           </div>
-          <div class="layers-panel-content">
-            <div class="layer-group-label">資料圖層</div>
-            <div class="layer-btn-row">
-              <button class="layer-opt-btn" :class="{ active: vineyardEnabled }" @click="toggleVineyard">
-                <span class="lopt-icon">🍇</span>
-                <span class="lopt-text">葡萄園</span>
-                <span class="lopt-dot" :class="{ on: vineyardEnabled }"></span>
-              </button>
-              <button class="layer-opt-btn" :class="{ active: contoursEnabled, 'contours-btn': true }" @click="toggleContours">
-                <span class="lopt-icon">〰️</span>
-                <span class="lopt-text">等高線</span>
-                <span class="lopt-dot" :class="{ on: contoursEnabled }"></span>
-              </button>
-              <button class="layer-opt-btn" :class="{ active: soilEnabled }" @click="toggleSoil">
-                <span class="lopt-icon">🌱</span>
-                <span class="lopt-text">BGR 土壤</span>
-                <span class="lopt-dot" :class="{ on: soilEnabled }"></span>
-              </button>
-            </div>
+          <div class="rmap-layer-buttons">
+            <button class="rmap-btn-layer" :class="{ active: is3D }" @click="toggle3D">
+              <span class="lbtn-icon">🏔</span>
+              <span class="lbtn-text">3D 地形</span>
+              <span class="lbtn-dot" :class="{ on: is3D }"></span>
+            </button>
+            <button class="rmap-btn-layer" :class="{ active: contoursEnabled }" @click="toggleContours">
+              <span class="lbtn-icon">〰</span>
+              <span class="lbtn-text">等高線</span>
+              <span class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
+            </button>
+            <button class="rmap-btn-layer" :class="{ active: vineyardEnabled }" @click="toggleVineyard">
+              <span class="lbtn-icon">🍇</span>
+              <span class="lbtn-text">葡萄園</span>
+              <span class="lbtn-dot" :class="{ on: vineyardEnabled }"></span>
+            </button>
+            <button class="rmap-btn-layer" :class="{ active: soilEnabled }" @click="toggleSoil">
+              <span class="lbtn-icon">🌱</span>
+              <span class="lbtn-text">BGR 土壤</span>
+              <span class="lbtn-dot" :class="{ on: soilEnabled }"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- BGR 土壤透明度控制列（跟隨在面版下方，參考澳洲格式） -->
+        <div v-if="soilEnabled" class="bgr-inline-panel">
+          <div class="bgr-float-title">🌱 BGR BUEK200 土壤圖 1:200,000</div>
+          <div class="bgr-float-row">
+            <span class="bgr-float-label">透明度</span>
+            <input class="bgr-opacity-slider" type="range" min="0.1" max="1.0" step="0.05"
+              v-model.number="soilOpacity">
+            <span class="bgr-opacity-pct">{{ Math.round(soilOpacity * 100) }}%</span>
+          </div>
+          <div class="bgr-float-footer">
+            <span>© BGR Bodenübersichtskarte 1:200,000 (CC-BY 4.0)</span>
+            <span>點擊地圖查看土壤資訊</span>
           </div>
         </div>
       </div>
     </transition>
-
-    <!-- BGR 土壤圖浮動面板（右側） -->
-    <div v-if="soilEnabled" class="de-all-soil-panel">
-      <div class="de-all-soil-title">🌱 BGR BUEK200 土壤圖 1:200,000</div>
-      <div class="de-all-soil-row">
-        <span class="de-all-soil-label">透明度</span>
-        <input class="de-all-soil-slider" type="range" min="0.1" max="1.0" step="0.05"
-          v-model.number="soilOpacity">
-        <span class="de-all-soil-pct">{{ Math.round(soilOpacity * 100) }}%</span>
-      </div>
-      <div class="de-all-soil-hint">© BGR Bodenübersichtskarte 1:200,000 (CC-BY 4.0)</div>
-    </div>
 
     <!-- Loading / Error -->
     <div v-if="isLoading" class="loading-overlay">
@@ -690,9 +700,11 @@ function toggleTool(type) {
   if (type === 'aoc') {
     layersPanelOpen.value = false
     aocDrawerOpen.value = !aocDrawerOpen.value
+    infoCollapsed.value = true
   } else if (type === 'layers') {
     aocDrawerOpen.value = false
     layersPanelOpen.value = !layersPanelOpen.value
+    infoCollapsed.value = true
   } else if (type === 'info') {
     aocDrawerOpen.value = false
     layersPanelOpen.value = false
@@ -1329,70 +1341,68 @@ onUnmounted(() => {
 .list-item-name { flex: 1; }
 .list-item-ha { font-size: 0.68rem; color: #999; white-space: nowrap; }
 
-/* ══ 圖層抽屜專屬 ══ */
-.layers-drawer .layers-panel-content {
-  flex: 1;
-  overflow-y: auto;
-  padding: 14px 16px;
-}
-
-.layer-group-label {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #999;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.layer-btn-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.layer-opt-btn {
-  flex: 1;
-  min-width: 100px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  border: 1.5px solid rgba(0,0,0,0.1);
-  border-radius: 12px;
-  background: rgba(0,0,0,0.03);
-  color: #444;
-  cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: all 0.18s;
-}
-.layer-opt-btn:hover { background: rgba(21,101,192,0.07); border-color: rgba(21,101,192,0.3); }
-.layer-opt-btn.active {
-  background: #e8f0fe;
-  border-color: #1565c0;
-  color: #1565c0;
-}
-.layer-opt-btn.contours-btn.active {
-  background: #f3e5f5;
-  border-color: #9C27B0;
-  color: #6a1b9a;
-}
-.layer-opt-btn.contours-btn.active .lopt-dot { background: #9C27B0; }
-
-.lopt-icon { font-size: 1.1rem; }
-.lopt-text { flex: 1; }
-.lopt-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: #ddd;
-  transition: background 0.2s;
-}
-.lopt-dot.on { background: #1565c0; }
-
 /* ══ 動畫 ══ */
 .mobile-sheet-fade-enter-active, .mobile-sheet-fade-leave-active { transition: opacity 0.24s ease; }
 .mobile-sheet-fade-enter-from, .mobile-sheet-fade-leave-to { opacity: 0; }
+.layer-panel-enter-active, .layer-panel-leave-active { transition: opacity 0.18s, transform 0.18s; }
+.layer-panel-enter-from, .layer-panel-leave-to { opacity: 0; transform: translateX(-50%) translateY(6px); }
+
+/* ══ 圖層面板格式更新（參考澳洲地圖 RegionMapLayerPanel 風格） ══ */
+.layer-panel-wrapper {
+  position: absolute;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 160px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rmap-layer-panel {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+  width: min(320px, calc(100vw - 32px));
+}
+.bgr-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
+  margin-top: -10px; 
+  padding-top: 20px; 
+  z-index: -1; 
+  position: relative;
+}
+.rmap-layer-header {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; font-weight: 700; color: #555;
+  padding-bottom: 10px; border-bottom: 1px solid #eee; margin-bottom: 10px;
+}
+.rmap-layer-buttons {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+}
+.rmap-btn-layer {
+  display: flex; align-items: center; gap: 6px; background: #f7f7f7;
+  border: 1.5px solid transparent; border-radius: 10px; padding: 9px 10px;
+  font-size: 13px; font-weight: 600; color: #333; cursor: pointer; transition: all 0.15s;
+}
+.rmap-btn-layer:hover { background: #efefef; border-color: #ddd; }
+.rmap-btn-layer.active { background: #fff8e1; border-color: #d4af37; color: #8b6f1c; }
+.lbtn-icon { font-size: 14px; }
+.lbtn-text { flex: 1; text-align: left; }
+.lbtn-dot { width: 8px; height: 8px; border-radius: 50%; background: #ccc; flex-shrink: 0; }
+.lbtn-dot.on { background: #43a047; }
+
+/* BGR inline slider panel */
+.bgr-float-title { font-size: 13px; font-weight: 700; color: #5c7b64; margin-bottom: 10px; }
+.bgr-float-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.bgr-float-label { font-size: 12px; color: #666; white-space: nowrap; }
+.bgr-opacity-slider { flex: 1; height: 4px; accent-color: #7ee8a2; cursor: pointer;}
+.bgr-opacity-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.bgr-float-footer { display: flex; flex-direction: column; gap: 2px; font-size: 10px; color: #aaa; border-top: 1px solid #f0f0f0; padding-top: 6px; }
 
 /* ══ Loading / Error ══ */
 .loading-overlay {
@@ -1436,37 +1446,6 @@ onUnmounted(() => {
   .map-header h1 { font-size: 1rem; }
 }
 
-/* ══ BGR 土壤浮動面板 ══ */
-.de-all-soil-panel {
-  position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
-  right: 20px;
-  z-index: 45;
-  background: rgba(6, 10, 16, 0.92);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(100, 200, 120, 0.25);
-  border-radius: 10px;
-  padding: 10px 14px;
-  min-width: 220px;
-  color: #e0f0e8;
-  font-size: 0.8rem;
-}
-.de-all-soil-title {
-  font-weight: 600;
-  font-size: 0.78rem;
-  color: #7ee8a2;
-  margin-bottom: 8px;
-}
-.de-all-soil-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-.de-all-soil-label { color: #b0d0b8; font-size: 0.75rem; white-space: nowrap; }
-.de-all-soil-slider { flex: 1; accent-color: #7ee8a2; cursor: pointer; }
-.de-all-soil-pct { font-size: 0.75rem; color: #7ee8a2; min-width: 30px; text-align: right; }
-.de-all-soil-hint { font-size: 0.68rem; color: #6a9070; margin-top: 2px; }
 </style>
 
 <!-- BGR 土壤 Popup 全域樣式（Mapbox popup 在 scoped 外層）— NZ 風格 -->

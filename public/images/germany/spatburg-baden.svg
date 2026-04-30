@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
+  <defs>
+    <linearGradient id="bg-baden" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0828"/><stop offset="100%" stop-color="#380E55"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="90" rx="10" fill="url(#bg-baden)"/>
+  
+  <!-- Black Forest silhouette -->
+  <polygon points="140,90 155,42 170,90" fill="rgba(10,30,10,0.3)"/>
+  <polygon points="158,90 175,36 192,90" fill="rgba(10,28,10,0.28)"/>
+  <polygon points="176,90 194,40 212,90" fill="rgba(10,30,10,0.26)"/>
+  <!-- Warm sun (warmest German region) -->
+  <circle cx="60" cy="22" r="20" fill="rgba(255,180,50,0.3)"/>
+  <circle cx="60" cy="22" r="14" fill="rgba(255,195,65,0.22)"/>
+  <circle cx="60" cy="22" r="8" fill="rgba(255,210,80,0.18)"/>
+  <!-- Kaiserstuhl volcanic hill -->
+  <ellipse cx="100" cy="65" rx="55" ry="20" fill="rgba(100,30,100,0.2)"/>
+  <!-- Vineyard rows on gentle slope -->
+  <line x1="50" y1="80" x2="130" y2="74" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/>
+  <line x1="50" y1="70" x2="128" y2="64" stroke="rgba(255,255,255,0.16)" stroke-width="1.2"/>
+  <line x1="52" y1="60" x2="125" y2="54" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <rect x="0" y="70" width="220" height="20" rx="0" fill="rgba(0,0,0,0.3)"/>
+  <text x="12" y="81" font-family="Georgia,serif" font-size="10" fill="white" font-weight="bold">Baden</text>
+  <text x="12" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.62)">黑森林邊緣 · 溫暖豐滿 · 勃根地風</text>
+</svg>

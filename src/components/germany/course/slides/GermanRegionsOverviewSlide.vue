@@ -37,6 +37,7 @@
     </div>
 
     <div class="region-detail" v-if="activeRegion" :style="{ borderColor: zoneColor(activeRegion.zone) }">
+      <img :src="`/images/germany/de-zone-${activeRegion.zone}.svg`" class="de-zone-banner" />
       <div class="detail-header">
         <h3>{{ activeRegion.emoji }} {{ activeRegion.name }} <span class="zh">{{ activeRegion.zhName }}</span></h3>
         <div class="detail-badges">
@@ -359,8 +360,18 @@ const activeRegion = computed(() => regions.value.find((r) => r.key === activeKe
   background: #fff;
   border-radius: 12px;
   border-left: 6px solid;
-  padding: 1.2rem 1.4rem;
+  padding: 0 1.4rem 1.2rem;
   box-shadow: 0 4px 12px rgba(26, 77, 110, 0.12);
+  overflow: hidden;
+}
+
+.de-zone-banner {
+  width: calc(100% + 2.8rem);
+  height: 76px;
+  object-fit: cover;
+  display: block;
+  margin: 0 -1.4rem 1rem;
+  border-radius: 6px 0 0 0;
 }
 
 .detail-header {

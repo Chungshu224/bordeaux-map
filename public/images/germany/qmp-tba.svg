@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80">
+  <defs>
+    <linearGradient id="bg-tba" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A0808"/><stop offset="100%" stop-color="#901810"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="80" rx="8" fill="url(#bg-tba)"/>
+  
+  <!-- Extremely shriveled berries -->
+  <ellipse cx="52" cy="52" rx="9" ry="7" fill="rgba(160,80,20,0.88)"/>
+  <ellipse cx="64" cy="44" rx="8.5" ry="6.5" fill="rgba(150,75,18,0.85)"/>
+  <ellipse cx="44" cy="45" rx="8" ry="6" fill="rgba(145,72,16,0.82)"/>
+  <ellipse cx="55" cy="36" rx="7.5" ry="5.5" fill="rgba(155,78,18,0.80)"/>
+  <ellipse cx="42" cy="58" rx="7" ry="5.5" fill="rgba(140,70,15,0.78)"/>
+  <!-- Heavy botrytis mold -->
+  <ellipse cx="52" cy="52" rx="11" ry="9" fill="rgba(130,120,80,0.25)" stroke="rgba(120,110,70,0.2)" stroke-width="1.5"/>
+  <ellipse cx="64" cy="44" rx="10.5" ry="8.5" fill="rgba(125,115,78,0.22)"/>
+  <!-- Grey rot visual texture -->
+  <circle cx="50" cy="50" r="2" fill="rgba(140,130,90,0.4)"/>
+  <circle cx="56" cy="46" r="1.5" fill="rgba(135,125,85,0.35)"/>
+  <circle cx="62" cy="50" r="2" fill="rgba(130,120,80,0.38)"/>
+  <!-- Maximum concentration meter -->
+  <rect x="96" y="36" width="52" height="36" rx="5" fill="rgba(0,0,0,0.32)"/>
+  <text x="122" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,120,80,0.9)">最高濃縮</text>
+  <text x="122" y="57" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,160,80,0.8)">極稀有</text>
+  <text x="122" y="68" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="rgba(255,200,100,0.95)" font-weight="bold">150°+</text>
+  <!-- Bottom label -->
+  <rect x="0" y="63" width="160" height="17" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="8" y="74" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">TBA</text>
+  <text x="80" y="74" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.62)">乾縮貴腐</text>
+</svg>

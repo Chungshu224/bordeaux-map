@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90">
+  <defs>
+    <linearGradient id="bg-nahe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A1A38"/><stop offset="100%" stop-color="#6A3068"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="90" rx="10" fill="url(#bg-nahe)"/>
+  
+  <!-- Nahe river -->
+  <path d="M0 72 Q60 58 130 68 Q170 74 200 64" stroke="rgba(150,200,255,0.4)" stroke-width="7" fill="none"/>
+  <!-- Volcanic rock formation (Rotenfels) -->
+  <polygon points="100,90 120,30 140,90" fill="rgba(200,80,60,0.35)"/>
+  <polygon points="115,90 135,38 155,90" fill="rgba(180,60,50,0.28)"/>
+  <!-- Basalt/volcanic texture -->
+  <rect x="108" y="55" width="6" height="4" rx="1" fill="rgba(255,100,80,0.4)"/>
+  <rect x="116" y="50" width="8" height="5" rx="1" fill="rgba(240,90,70,0.35)"/>
+  <rect x="125" y="57" width="5" height="4" rx="1" fill="rgba(220,80,60,0.3)"/>
+  <!-- Mixed soil: slate + volcanic -->
+  <rect x="30" y="60" width="6" height="4" rx="1" fill="rgba(100,140,200,0.4)"/>
+  <rect x="40" y="56" width="7" height="4" rx="1" fill="rgba(200,80,60,0.35)"/>
+  <rect x="50" y="61" width="6" height="4" rx="1" fill="rgba(150,120,80,0.38)"/>
+  <!-- Vineyard terraces -->
+  <line x1="5" y1="82" x2="90" y2="75" stroke="rgba(255,255,255,0.16)" stroke-width="1.2"/>
+  <line x1="5" y1="70" x2="88" y2="62" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- Label bar -->
+  <rect x="0" y="68" width="200" height="22" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <rect x="0" y="68" width="200" height="22" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="10" y="80" font-family="Georgia,serif" font-size="9.5" fill="white" font-weight="bold">Nahe</text>
+  <text x="10" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.68)">火山岩混合 Volcanic Mix</text>
+</svg>

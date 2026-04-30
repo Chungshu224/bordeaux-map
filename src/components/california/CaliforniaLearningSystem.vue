@@ -59,6 +59,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="california" />
   </div>
 </template>
 
@@ -77,6 +78,7 @@ import CaliforniaCourseLayout from './CaliforniaCourseLayout.vue'
 import CaliforniaTastingNotebookPage from './notebook/CaliforniaTastingNotebookPage.vue'
 import CaliforniaGamesPage from './games/CaliforniaGamesPage.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import WineGlossary from '../WineGlossary.vue'
 
 const emit = defineEmits(['exitLearning'])
 const router = useRouter()

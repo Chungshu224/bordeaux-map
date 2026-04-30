@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8050a0"/>
+      <stop offset="100%" stop-color="#c8a8e0"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#486838"/>
+      <stop offset="100%" stop-color="#688050"/>
+    </linearGradient>
+  </defs>
+  <!-- 天空 -->
+  <rect width="400" height="280" fill="url(#sky)" rx="12"/>
+  <!-- 雲朵 -->
+  <ellipse cx="80" cy="50" rx="40" ry="14" fill="white" opacity="0.8"/>
+  <ellipse cx="105" cy="43" rx="28" ry="12" fill="white" opacity="0.8"/>
+  <ellipse cx="55" cy="46" rx="22" ry="10" fill="white" opacity="0.7"/>
+  <ellipse cx="300" cy="40" rx="35" ry="12" fill="white" opacity="0.7"/>
+  <ellipse cx="325" cy="34" rx="22" ry="10" fill="white" opacity="0.7"/>
+  <!-- 羅亞爾河 -->
+<path d="M0 148 Q200 140 400 148" stroke="#5898c8" stroke-width="10" fill="none" opacity="0.55"/>
+<path d="M0 150 Q200 143 400 151" stroke="#78b8e0" stroke-width="4" fill="none" opacity="0.5"/>
+<!-- 地勢較平，小丘陵 -->
+<path d="M80 155 Q130 135 180 150 Q230 132 280 148 Q330 133 370 148" stroke="#587040" stroke-width="2" fill="none" opacity="0.7"/>
+<!-- 霧氣感 -->
+<ellipse cx="200" cy="148" rx="200" ry="18" fill="rgba(200,180,240,0.25)"/>
+  <!-- 遠景丘陵 -->
+  <path d="M0 145 Q50 110 100 125 Q150 100 200 118 Q250 105 300 120 Q350 108 400 125 L400 280 L0 280Z" fill="#486838" opacity="0.5"/>
+  <!-- 中景 -->
+  <path d="M0 165 Q60 145 120 155 Q180 142 240 158 Q300 148 360 160 L400 165 L400 280 L0 280Z" fill="#486838" opacity="0.8"/>
+  <!-- 地面 -->
+  <rect x="0" y="185" width="400" height="95" fill="url(#hill)" rx="0"/>
+  <!-- 葡萄藤行列 -->
+  <path d="M20 200 L380 200" stroke="#305020" stroke-width="1.5" opacity="0.5"/>
+    <rect x="20" y="194" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="75" y="194" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="130" y="194" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="185" y="194" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="240" y="194" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="295" y="194" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="350" y="194" width="4" height="6" fill="#305020" opacity="0.7"/>
+  <path d="M25 210 L375 210" stroke="#305020" stroke-width="1.5" opacity="0.56"/>
+    <rect x="25" y="204" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="80" y="204" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="135" y="204" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="190" y="204" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="245" y="204" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="300" y="204" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="355" y="204" width="4" height="6" fill="#305020" opacity="0.7"/>
+  <path d="M30 220 L370 220" stroke="#305020" stroke-width="1.5" opacity="0.62"/>
+    <rect x="30" y="214" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="85" y="214" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="140" y="214" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="195" y="214" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="250" y="214" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="305" y="214" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="360" y="214" width="4" height="6" fill="#305020" opacity="0.7"/>
+  <path d="M35 230 L365 230" stroke="#305020" stroke-width="1.5" opacity="0.6799999999999999"/>
+    <rect x="35" y="224" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="90" y="224" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="145" y="224" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="200" y="224" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="255" y="224" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="310" y="224" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="365" y="224" width="4" height="6" fill="#305020" opacity="0.7"/>
+  <path d="M40 240 L360 240" stroke="#305020" stroke-width="1.5" opacity="0.74"/>
+    <rect x="40" y="234" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="95" y="234" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="150" y="234" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="205" y="234" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="260" y="234" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="315" y="234" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="370" y="234" width="4" height="6" fill="#305020" opacity="0.7"/>
+  <path d="M45 250 L355 250" stroke="#305020" stroke-width="1.5" opacity="0.8"/>
+    <rect x="45" y="244" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="100" y="244" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="155" y="244" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="210" y="244" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="265" y="244" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="320" y="244" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="375" y="244" width="4" height="6" fill="#305020" opacity="0.7"/>
+  <path d="M50 260 L350 260" stroke="#305020" stroke-width="1.5" opacity="0.86"/>
+    <rect x="50" y="254" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="105" y="254" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="160" y="254" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="215" y="254" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="270" y="254" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="325" y="254" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="380" y="254" width="4" height="6" fill="#305020" opacity="0.7"/>
+  <path d="M55 270 L345 270" stroke="#305020" stroke-width="1.5" opacity="0.9199999999999999"/>
+    <rect x="55" y="264" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="110" y="264" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="165" y="264" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="220" y="264" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="275" y="264" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="330" y="264" width="4" height="6" fill="#305020" opacity="0.7"/><rect x="385" y="264" width="4" height="6" fill="#305020" opacity="0.7"/>
+  <!-- 地面裝飾草 -->
+  <path d="M0 185 Q100 182 200 185 Q300 182 400 185" stroke="#4a6830" stroke-width="2" fill="none" opacity="0.5"/>
+  <!-- 底部文字區 -->
+  <rect x="0" y="246" width="400" height="34" fill="rgba(0,0,0,0.45)" rx="0"/>
+  <rect x="0" y="246" width="400" height="34" fill="none"/>
+  <text x="200" y="259" font-family="Georgia, serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">Pouilly-Fumé</text>
+  <text x="200" y="273" font-family="system-ui, sans-serif" font-size="10.5" text-anchor="middle" fill="rgba(255,255,255,0.85)">平坦河岸 · 燧石主導 · 煙燻礦物香</text>
+</svg>

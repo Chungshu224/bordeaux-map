@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80">
+  <defs>
+    <linearGradient id="bg-eiswein" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1A3A"/><stop offset="100%" stop-color="#1A3060"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="80" rx="8" fill="url(#bg-eiswein)"/>
+  
+  <!-- Snow/ice background -->
+  <rect x="0" y="40" width="160" height="40" fill="rgba(200,230,255,0.08)"/>
+  <!-- Frozen grapes on vine - small shrunk -->
+  <circle cx="65" cy="50" r="8" fill="rgba(220,240,255,0.65)"/>
+  <circle cx="75" cy="43" r="7.5" fill="rgba(210,235,255,0.62)"/>
+  <circle cx="57" cy="43" r="7" fill="rgba(215,238,255,0.60)"/>
+  <circle cx="68" cy="34" r="7" fill="rgba(205,232,255,0.58)"/>
+  <!-- Ice crystal overlay -->
+  <circle cx="65" cy="50" r="9" fill="none" stroke="rgba(180,220,255,0.5)" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="75" cy="43" r="8.5" fill="none" stroke="rgba(170,215,255,0.45)" stroke-width="1"/>
+  <!-- Snowflakes -->
+  <text x="110" y="36" font-size="14" font-family="Arial" fill="rgba(200,230,255,0.55)" text-anchor="middle">❄️</text>
+  <text x="128" y="48" font-size="10" font-family="Arial" fill="rgba(200,230,255,0.45)" text-anchor="middle">❄️</text>
+  <!-- Thermometer -->
+  <rect x="138" y="32" width="8" height="26" rx="4" fill="rgba(200,230,255,0.2)" stroke="rgba(200,230,255,0.4)" stroke-width="1.2"/>
+  <rect x="140" y="48" width="4" height="10" rx="2" fill="rgba(100,160,255,0.6)"/>
+  <text x="136" y="68" font-family="Arial,sans-serif" font-size="7" fill="rgba(180,220,255,0.8)">-8°C</text>
+  <!-- Label -->
+  <rect x="94" y="54" width="42" height="22" rx="4" fill="rgba(0,0,0,0.3)"/>
+  <text x="115" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(200,230,255,0.9)">Eiswein</text>
+  <text x="115" y="74" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="white" font-weight="bold">110°+</text>
+  <!-- Bottom label -->
+  <rect x="0" y="63" width="160" height="17" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="8" y="74" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">Eiswein</text>
+  <text x="80" y="74" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.62)">冰酒</text>
+</svg>

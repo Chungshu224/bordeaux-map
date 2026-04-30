@@ -6,7 +6,12 @@
   <div class="rmap-layer-panel">
     <div class="rmap-layer-header">
       <span>圖層與顯示</span>
-      <button class="rmap-layer-close" @click="$emit('close')">✕</button>
+      <button class="btn-collapse-inline" @click="$emit('close')" title="收合面板">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+        <span class="btn-text">收合</span>
+      </button>
     </div>
     <div class="rmap-layer-buttons">
       <button class="rmap-btn-layer" :class="{ active: is3D }" @click="$emit('toggle-3d')">
@@ -83,24 +88,33 @@ defineEmits(['toggle-3d', 'toggle-contours', 'toggle-climate', 'toggle-soil', 't
   border-bottom: 1px solid #eee;
   margin-bottom: 10px;
 }
-.rmap-layer-close {
+.btn-collapse-inline {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.06);
-  border: none;
-  font-size: 13px;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+  color: #555;
   cursor: pointer;
-  color: #888;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s;
   flex-shrink: 0;
-  transition: background 0.15s, color 0.15s;
 }
-.rmap-layer-close:hover {
-  background: rgba(0,0,0,0.14);
-  color: #333;
+.btn-collapse-inline:hover {
+  background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
+  border-color: #1565c0;
+  color: #1565c0;
+}
+.btn-collapse-inline svg {
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+.btn-collapse-inline .btn-text {
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
 .rmap-layer-buttons {
   display: grid;

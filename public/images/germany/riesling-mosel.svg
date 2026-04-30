@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90">
+  <defs>
+    <linearGradient id="bg-mosel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A3A5C"/><stop offset="100%" stop-color="#2B5F8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="90" rx="10" fill="url(#bg-mosel)"/>
+  
+  <!-- Steep slate slopes -->
+  <polygon points="0,90 0,20 60,45 120,18 180,40 200,30 200,90" fill="rgba(60,100,160,0.18)"/>
+  <!-- River -->
+  <path d="M0 70 Q50 58 100 68 Q150 78 200 62" stroke="rgba(100,180,255,0.5)" stroke-width="8" fill="none"/>
+  <!-- Terraced rows -->
+  <line x1="5" y1="78" x2="90" y2="71" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+  <line x1="5" y1="65" x2="85" y2="57" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="10" y1="52" x2="80" y2="44" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="15" y1="40" x2="72" y2="33" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <!-- Blue slate texture blocks -->
+  <rect x="118" y="24" width="8" height="6" rx="1" fill="rgba(100,140,200,0.4)"/>
+  <rect x="128" y="26" width="9" height="5" rx="1" fill="rgba(90,130,190,0.35)"/>
+  <rect x="122" y="32" width="7" height="5" rx="1" fill="rgba(80,120,180,0.3)"/>
+  <!-- Label bar -->
+  <rect x="0" y="68" width="200" height="22" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <rect x="0" y="68" width="200" height="22" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="10" y="80" font-family="Georgia,serif" font-size="9.5" fill="white" font-weight="bold">Mosel</text>
+  <text x="10" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.68)">藍灰板岩 Blue Slate</text>
+</svg>

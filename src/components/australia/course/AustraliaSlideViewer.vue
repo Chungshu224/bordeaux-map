@@ -10,6 +10,26 @@
       <div class="sv-progress-fill" :style="{ width: progressPct + '%' }"></div>
     </div>
 
+    <!-- 導航列（上一頁 / 下一頁，置於簡報上方） -->
+    <nav class="sv-nav-row">
+      <button class="sv-nav-btn" :disabled="currentSlide === 0" @click="prevSlide">← 上一頁</button>
+      <div class="sv-dots">
+        <span
+          v-for="(_, i) in slides"
+          :key="i"
+          class="sv-dot"
+          :class="{ active: i === currentSlide }"
+          @click="goToSlide(i)"
+        ></span>
+      </div>
+      <button v-if="currentSlide < slides.length - 1" class="sv-nav-btn primary" @click="nextSlide">
+        下一頁 →
+      </button>
+      <button v-else class="sv-nav-btn complete" @click="complete">
+        完成課程 ✓
+      </button>
+    </nav>
+
     <!-- 投影片內容 -->
     <div class="sv-content">
       <div class="slide-container">
@@ -130,25 +150,7 @@
       </div>
     </div>
 
-    <!-- 底部導航 -->
-    <footer class="sv-footer">
-      <button class="sv-nav-btn" :disabled="currentSlide === 0" @click="prevSlide">← 上一頁</button>
-      <div class="sv-dots">
-        <span
-          v-for="(_, i) in slides"
-          :key="i"
-          class="sv-dot"
-          :class="{ active: i === currentSlide }"
-          @click="goToSlide(i)"
-        ></span>
-      </div>
-      <button v-if="currentSlide < slides.length - 1" class="sv-nav-btn primary" @click="nextSlide">
-        下一頁 →
-      </button>
-      <button v-else class="sv-nav-btn complete" @click="complete">
-        完成課程 ✓
-      </button>
-    </footer>
+    <WineGlossary region="australia" />
   </div>
 </template>
 
@@ -158,6 +160,7 @@ import { getAustraliaLessonSlides } from '../data/lessonSlides.js'
 import AustraliaMapSlide from './slides/AustraliaMapSlide.vue'
 import AustraliaGISystemSlide from './slides/AustraliaGISystemSlide.vue'
 import AustraliaShirazRegionalStylesSlide from './slides/AustraliaShirazRegionalStylesSlide.vue'
+import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
   lesson:     { type: Object, required: true },
@@ -472,14 +475,14 @@ function complete() {
 }
 .placeholder-emoji { font-size: 2.5rem; margin-bottom: 12px; }
 
-/* Footer */
-.sv-footer {
+/* Nav row（簡報上方，原本是 footer） */
+.sv-nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
   background: #fff;
-  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   flex-shrink: 0;
   gap: 12px;
 }

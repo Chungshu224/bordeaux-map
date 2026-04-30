@@ -28,6 +28,7 @@
           <h3>{{ active.icon }} {{ active.name }}</h3>
           <span class="detail-sub">{{ active.subtitle }}</span>
         </div>
+        <img :src="`/images/germany/spatburg-${spatburgKeys[activeIdx]}.svg`" class="spatburg-region-img" />
         <div class="detail-stars">
           <span v-for="i in active.stars" :key="i">⭐</span>
           <span class="star-label">{{ active.starLabel }}</span>
@@ -212,6 +213,7 @@ const regions = [
 ]
 
 const active = computed(() => regions[activeIdx.value])
+const spatburgKeys = ['ahr', 'baden', 'pfalz', 'wurttemberg']
 
 const compRows = [
   { label: '典型顏色', values: ['透明紅寶石', '深紅石榴石', '中深紅', '深紅紫'] },
@@ -297,6 +299,14 @@ const quotes = [
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+.spatburg-region-img {
+  width: 110px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.88;
+  flex-shrink: 0;
 }
 .detail-header h3 { margin: 0; font-size: 1.4rem; }
 .detail-sub { font-size: 0.85rem; opacity: 0.9; margin-top: 4px; display: block; }

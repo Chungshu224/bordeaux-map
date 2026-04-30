@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100">
+  <defs>
+    <linearGradient id="bg-6putt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5A2A08"/><stop offset="100%" stop-color="#9A5A18"/>
+    </linearGradient>
+    <clipPath id="clip-6putt">
+      <path d="M52 22 L52 30 Q44 32 44 42 L44 76 Q44 80 48 80 L80 80 Q84 80 84 76 L84 42 Q84 32 76 30 L76 22 Z"/>
+    </clipPath>
+  </defs>
+  <rect width="140" height="100" rx="10" fill="url(#bg-6putt)"/>
+  <!-- Bottle outline -->
+  <path d="M58 12 L58 22 L52 22 L52 30 Q44 32 44 42 L44 76 Q44 80 48 80 L80 80 Q84 80 84 76 L84 42 Q84 32 76 30 L76 22 L70 22 L70 12 Z" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.5)" stroke-width="1.4"/>
+  <!-- Wine fill (clipped) -->
+  <rect x="44" y="25" width="40" height="75" fill="#A86018" clip-path="url(#clip-6putt)" opacity="0.92"/>
+  <!-- Wine surface highlight -->
+  <ellipse cx="64" cy="25" rx="18" ry="2" fill="rgba(255,230,160,0.5)" clip-path="url(#clip-6putt)"/>
+  <!-- Cork -->
+  <rect x="58" y="8" width="12" height="8" rx="1" fill="rgba(180,120,60,0.85)"/>
+  <!-- Label band -->
+  <rect x="46" y="50" width="36" height="14" fill="rgba(255,250,235,0.92)"/>
+  <text x="64" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#5A2A08" font-weight="bold">TOKAJI</text>
+  <!-- Sweetness drops indicator -->
+  <path d="M110 22 Q107 26 110 29 Q113 26 110 22Z" fill="rgba(255,210,100,0.7)"/>
+  <path d="M118 22 Q115 26 118 29 Q121 26 118 22Z" fill="rgba(255,210,100,0.7)"/>
+  <path d="M126 22 Q123 26 126 29 Q129 26 126 22Z" fill="rgba(255,210,100,0.7)"/>
+  <path d="M110 34 Q107 38 110 41 Q113 38 110 34Z" fill="rgba(255,210,100,0.7)"/>
+  <path d="M118 34 Q115 38 118 41 Q121 38 118 34Z" fill="rgba(255,210,100,0.7)"/>
+  <path d="M126 34 Q123 38 126 41 Q129 38 126 34Z" fill="rgba(255,210,100,0.7)"/>
+  <!-- Crown for Eszencia -->
+  
+  <!-- Bottom label -->
+  <rect x="0" y="78" width="140" height="22" rx="0" fill="rgba(0,0,0,0.5)"/>
+  <text x="8" y="89" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">6 Puttonyos</text>
+  <text x="8" y="97" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,220,150,0.85)">150 g/L · 濃郁奢華</text>
+</svg>

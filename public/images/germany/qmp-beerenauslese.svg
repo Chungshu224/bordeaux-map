@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80">
+  <defs>
+    <linearGradient id="bg-beerenauslese" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5A1A00"/><stop offset="100%" stop-color="#A03010"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="80" rx="8" fill="url(#bg-beerenauslese)"/>
+  
+  <!-- Individual berries with heavy botrytis -->
+  <circle cx="55" cy="50" r="9" fill="rgba(180,120,50,0.8)"/>
+  <circle cx="67" cy="43" r="8.5" fill="rgba(170,110,45,0.78)"/>
+  <circle cx="45" cy="43" r="8" fill="rgba(160,105,42,0.75)"/>
+  <circle cx="58" cy="34" r="8" fill="rgba(175,115,48,0.72)"/>
+  <!-- Botrytis mold texture -->
+  <circle cx="55" cy="50" r="11" fill="rgba(150,140,100,0.22)" stroke="rgba(140,130,90,0.2)" stroke-width="1"/>
+  <circle cx="67" cy="43" r="10.5" fill="rgba(140,135,95,0.2)"/>
+  <!-- Shriveled/concentrated look -->
+  <ellipse cx="55" cy="50" rx="9" ry="7" fill="rgba(200,130,55,0.6)"/>
+  <ellipse cx="67" cy="43" rx="8.5" ry="7" fill="rgba(190,122,50,0.58)"/>
+  <!-- BA label -->
+  <rect x="96" y="40" width="56" height="32" rx="5" fill="rgba(0,0,0,0.3)"/>
+  <text x="124" y="52" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,180,80,0.9)">逐粒精選</text>
+  <text x="124" y="61" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,200,100,0.8)">+ 貴腐黴</text>
+  <text x="124" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">110-128°</text>
+  <!-- Bottom label -->
+  <rect x="0" y="63" width="160" height="17" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="8" y="74" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">Beerenauslese</text>
+  <text x="80" y="74" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.62)">逐粒精選</text>
+</svg>

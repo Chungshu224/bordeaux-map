@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <defs>
+    <linearGradient id="bg-aglianico" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#250808"/>
+      <stop offset="100%" stop-color="#5C1A28"/>
+    </linearGradient>
+    <radialGradient id="bry-aglianico" cx="32%" cy="28%" r="65%">
+      <stop offset="0%" stop-color="#FF8880" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#250808"/>
+      <stop offset="100%" stop-color="#250808" stop-opacity="0.8"/>
+    </radialGradient>
+  </defs>
+  <!-- 背景 -->
+  <rect width="160" height="160" rx="14" fill="url(#bg-aglianico)"/>
+  <!-- 頂部裝飾橢圓 -->
+  <ellipse cx="80" cy="8" rx="55" ry="8" fill="rgba(255,255,255,0.06)"/>
+  <!-- 葉梗 -->
+  <line x1="80" y1="22" x2="80" y2="40" stroke="rgba(255,255,255,0.65)" stroke-width="3" stroke-linecap="round"/>
+  <!-- 左葉 -->
+  <path d="M80 26 Q66 14 58 22 Q65 30 80 26Z" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+  <!-- 右葉 -->
+  <path d="M80 26 Q94 14 102 22 Q95 30 80 26Z" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.25)" stroke-width="0.5"/>
+  <!-- 漿果 -->
+  <circle cx="70" cy="46" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="90" cy="46" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="62" cy="62" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="80" cy="62" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="98" cy="62" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="56" cy="78" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="72" cy="78" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="88" cy="78" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="104" cy="78" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="64" cy="94" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="80" cy="94" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="96" cy="94" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="70" cy="110" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="90" cy="110" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="80" cy="124" r="9.5" fill="url(#bry-aglianico)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- 光澤點 -->
+  <ellipse cx="66.5" cy="42.5" rx="3" ry="2.2" fill="rgba(255,255,255,0.38)"/>
+  <ellipse cx="86.5" cy="42.5" rx="3" ry="2.2" fill="rgba(255,255,255,0.38)"/>
+  <ellipse cx="58.5" cy="58.5" rx="3" ry="2.2" fill="rgba(255,255,255,0.38)"/>
+  <ellipse cx="76.5" cy="58.5" rx="3" ry="2.2" fill="rgba(255,255,255,0.38)"/>
+  <ellipse cx="94.5" cy="58.5" rx="3" ry="2.2" fill="rgba(255,255,255,0.38)"/>
+  <ellipse cx="52.5" cy="74.5" rx="3" ry="2.2" fill="rgba(255,255,255,0.38)"/>
+  <ellipse cx="68.5" cy="74.5" rx="3" ry="2.2" fill="rgba(255,255,255,0.38)"/>
+  <ellipse cx="84.5" cy="74.5" rx="3" ry="2.2" fill="rgba(255,255,255,0.38)"/>
+  <!-- 產區標籤（頂部） -->
+  <text x="80" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="rgba(255,255,255,0.55)" letter-spacing="1">CAMPANIA</text>
+  <!-- 品種名稱（底部） -->
+  <rect x="6" y="139" width="148" height="17" rx="6" fill="rgba(0,0,0,0.32)"/>
+  <text x="80" y="151" text-anchor="middle" font-family="Georgia, serif" font-size="10.5" fill="white" font-weight="bold" letter-spacing="0.5">Aglianico</text>
+  <!-- 特色標記 -->
+  <rect x="6" y="119" width="74" height="14" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <text x="43" y="129" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" fill="rgba(255,255,255,0.8)">南義之王</text>
+</svg>

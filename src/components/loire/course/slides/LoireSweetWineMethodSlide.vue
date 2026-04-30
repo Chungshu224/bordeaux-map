@@ -14,6 +14,9 @@
         :style="{ '--accent': m.color }"
         @click="activeKey = m.key"
       >
+        <div class="lsm-card-image">
+          <img :src="`/images/loire/method-${m.key}.svg`" class="lsm-img" :alt="m.name" />
+        </div>
         <header class="lsm-card-head">
           <span class="lsm-emoji">{{ m.emoji }}</span>
           <div>
@@ -135,6 +138,16 @@ const activeKey = ref(props.slide?.defaultKey || methods.value[0]?.key || '')
   cursor: pointer;
   transition: all .2s;
   display: flex; flex-direction: column;
+}
+.lsm-card-image {
+  margin-bottom: 12px;
+}
+.lsm-img {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
 }
 .lsm-card:hover, .lsm-card.active {
   border-color: var(--accent);

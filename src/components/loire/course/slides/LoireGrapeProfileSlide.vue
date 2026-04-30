@@ -23,11 +23,17 @@
     <!-- 主要剖面 -->
     <article v-if="current" class="lgp-card" :style="{ '--accent': current.color }">
       <div class="lgp-card-head">
-        <h3 class="lgp-card-title">
-          {{ current.name }}
-          <span class="lgp-card-aliases">{{ current.aliases }}</span>
-        </h3>
-        <p class="lgp-card-tag">{{ current.tagline }}</p>
+        <div class="lgp-card-head-content">
+          <h3 class="lgp-card-title">
+            {{ current.name }}
+            <span class="lgp-card-aliases">{{ current.aliases }}</span>
+          </h3>
+          <p class="lgp-card-tag">{{ current.tagline }}</p>
+        </div>
+        <div class="lgp-card-images">
+          <img :src="`/images/loire/grape-${current.key}.svg`" class="lgp-img-box" :alt="`${current.name} 葡萄`" />
+          <img :src="`/images/loire/bottle-${current.key}.svg`" class="lgp-img-box" :alt="`${current.name} 酒瓶`" />
+        </div>
       </div>
 
       <div class="lgp-grid">
@@ -198,7 +204,29 @@ const current = computed(() => grapes.value.find(g => g.key === currentKey.value
   padding: 18px 20px;
   background: linear-gradient(180deg, #fff 0%, color-mix(in srgb, var(--accent) 5%, #fff) 100%);
 }
-.lgp-card-head { margin-bottom: 14px; }
+.lgp-card-head {
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.lgp-card-head-content {
+  flex: 1;
+}
+.lgp-card-images {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.lgp-img-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
+}
 .lgp-card-title {
   margin: 0; font-size: 1.4rem; color: var(--accent);
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px;

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <defs>
+    <linearGradient id="bg-ripasso" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A04010"/>
+      <stop offset="100%" stop-color="#D06030"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="100" rx="10" fill="url(#bg-ripasso)"/>
+  
+  <!-- 橡木桶 -->
+  <ellipse cx="60" cy="40" rx="22" ry="11" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+  <rect x="38" y="40" width="44" height="34" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+  <ellipse cx="60" cy="74" rx="22" ry="11" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+  <line x1="48" y1="44" x2="48" y2="72" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <line x1="60" y1="43" x2="60" y2="72" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <line x1="72" y1="44" x2="72" y2="72" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <!-- 加號 -->
+  <text x="102" y="55" font-size="22" font-family="Arial" fill="rgba(255,255,255,0.85)" text-anchor="middle">+</text>
+  <!-- 酒渣（小圓） -->
+  <circle cx="128" cy="48" r="7" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="140" cy="54" r="6.5" fill="rgba(255,255,255,0.45)"/>
+  <circle cx="130" cy="64" r="6" fill="rgba(255,255,255,0.42)"/>
+  <circle cx="142" cy="68" r="5.5" fill="rgba(255,255,255,0.38)"/>
+  <!-- 箭頭 -->
+  <path d="M155 56 Q170 48 182 56" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <!-- 倒入動作 -->
+  <path d="M108 44 Q118 50 114 64" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" fill="none" stroke-dasharray="5,3"/>
+  <!-- 底部標籤 -->
+  <rect x="4" y="83" width="192" height="14" rx="5" fill="rgba(0,0,0,0.3)"/>
+  <text x="100" y="93" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="white" font-weight="bold">Ripasso</text>
+</svg>

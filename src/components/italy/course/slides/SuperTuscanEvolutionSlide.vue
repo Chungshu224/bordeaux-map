@@ -39,8 +39,11 @@
 
       <div class="wine-detail" :style="{ borderTopColor: activeWine.color }">
         <div class="wine-header" :style="{ background: `linear-gradient(135deg, ${activeWine.color}, ${activeWine.colorEnd})` }">
-          <h4>{{ activeWine.name }}</h4>
-          <span class="wine-tagline">{{ activeWine.tagline }}</span>
+          <div class="wine-header-text">
+            <h4>{{ activeWine.name }}</h4>
+            <span class="wine-tagline">{{ activeWine.tagline }}</span>
+          </div>
+          <img :src="`/images/italy/bottle-${activeWine.name.toLowerCase()}.svg`" class="super-tuscan-bottle" :alt="activeWine.name" />
         </div>
         <div class="wine-body">
           <div class="wine-row">
@@ -335,7 +338,12 @@ const activeWine = computed(() => wines.value[activeIdx.value] || wines.value[0]
 .wine-header {
   padding: 16px 20px;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
+.wine-header-text { flex: 1; min-width: 0; }
 .wine-header h4 {
   margin: 0;
   font-size: 1.4rem;
@@ -343,6 +351,13 @@ const activeWine = computed(() => wines.value[activeIdx.value] || wines.value[0]
 .wine-tagline {
   font-size: 0.9rem;
   opacity: 0.9;
+}
+.super-tuscan-bottle {
+  width: 60px;
+  height: 110px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
 }
 .wine-body {
   padding: 16px 20px;

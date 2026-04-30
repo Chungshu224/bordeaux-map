@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
+  <defs>
+    <linearGradient id="bg-ruwer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2018"/><stop offset="100%" stop-color="#184830"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="90" rx="10" fill="url(#bg-ruwer)"/>
+  
+  <!-- Small intimate stream -->
+  <path d="M0 72 Q55 62 110 70 Q165 78 220 66" stroke="rgba(100,200,180,0.4)" stroke-width="7" fill="none"/>
+  <!-- Dense forest both sides -->
+  <polygon points="0,90 0,15 30,40 0,90" fill="rgba(10,60,20,0.3)"/>
+  <polygon points="220,90 220,18 190,42 220,90" fill="rgba(10,60,20,0.28)"/>
+  <!-- Intimate vineyard - narrow strip between forest -->
+  <polygon points="30,90 38,28 80,45 140,30 182,48 190,90" fill="rgba(60,120,80,0.18)"/>
+  <!-- Vineyard rows -->
+  <line x1="35" y1="82" x2="185" y2="72" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+  <line x1="38" y1="70" x2="183" y2="60" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <line x1="40" y1="58" x2="180" y2="48" stroke="rgba(255,255,255,0.11)" stroke-width="1"/>
+  <!-- Diamond sparkle: délicatesse -->
+  <text x="100" y="22" font-size="12" font-family="Arial" fill="rgba(180,255,220,0.45)" text-anchor="middle">💎</text>
+  <rect x="0" y="70" width="220" height="20" rx="0" fill="rgba(0,0,0,0.3)"/>
+  <text x="12" y="81" font-family="Georgia,serif" font-size="10" fill="white" font-weight="bold">Ruwer</text>
+  <text x="12" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.62)">最細膩 · 森林清幽 · 礦物純淨</text>
+</svg>

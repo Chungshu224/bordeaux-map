@@ -116,6 +116,15 @@ if (typeof mapboxgl.setRTLTextPlugin === 'function') {
   }
 }
 
+import { i18n, getCurrentLocale } from './locales/index.js'
+
 const app = createApp(App)
 app.use(router)
+app.use(i18n)
+
+// 同步設定 <html lang> 屬性
+if (typeof document !== 'undefined') {
+  document.documentElement.setAttribute('lang', getCurrentLocale())
+}
+
 app.mount('#app')

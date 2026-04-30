@@ -82,6 +82,7 @@
         </div>
       </div>
     </Teleport>
+    <WineGlossary region="loire" />
   </div>
 </template>
 
@@ -100,6 +101,7 @@ import LoireTastingNotebookPage from './notebook/LoireTastingNotebookPage.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
 import { globalLoireAchievementManager, loireAchievementState } from '../../stores/loireAchievementSystem.js'
+import WineGlossary from '../WineGlossary.vue'
 
 const emit = defineEmits(['exitLearning', 'openGames'])
 

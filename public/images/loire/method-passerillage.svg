@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a8820"/>
+      <stop offset="100%" stop-color="#e0d060"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="url(#bg)" rx="12"/>
+  <!-- 頂部標題條 -->
+  <rect x="0" y="0" width="400" height="52" fill="rgba(0,0,0,0.35)" rx="12"/>
+  <rect x="0" y="40" width="400" height="12" fill="rgba(0,0,0,0.35)"/>
+  <text x="200" y="22" font-family="Georgia, serif" font-size="17" font-weight="bold" text-anchor="middle" fill="white">樹上自然風乾 Passerillage</text>
+  <text x="200" y="40" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-style="italic">Sur Souche · 在藤蔓上乾縮</text>
+  <!-- 中央大 Emoji 圖標 -->
+  <text x="200" y="130" font-family="system-ui" font-size="72" text-anchor="middle" dominant-baseline="middle">☀️</text>
+  <!-- 葡萄狀態視覺 -->
+  <!-- 風乾示意 -->
+<path d="M80 100 Q100 90 120 100 Q140 90 160 100" stroke="#c8a030" stroke-width="2" fill="none"/>
+<text x="120" y="125" font-size="26" text-anchor="middle" font-family="system-ui">🍇</text>
+<text x="120" y="150" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif" fill="#3a4800">健康成熟</text>
+<text x="200" y="118" font-size="22" text-anchor="middle" font-family="system-ui">→</text>
+<path d="M240 100 Q260 90 280 100 Q300 90 320 100" stroke="#a08020" stroke-width="2" fill="none"/>
+<text x="280" y="125" font-size="26" text-anchor="middle" font-family="system-ui">🍂</text>
+<text x="280" y="150" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif" fill="#3a4800">自然縮乾</text>
+  <!-- 流程步驟 -->
+  <rect x="18" y="178" width="364" height="92" fill="rgba(255,255,255,0.88)" rx="10"/>
+  <circle cx="36" cy="195" r="8" fill="#6a7818"/>
+  <text x="36" y="198" font-family="system-ui" font-size="9" text-anchor="middle" dominant-baseline="middle" fill="white" font-weight="bold">1</text>
+  <text x="54" y="198" font-family="system-ui, sans-serif" font-size="11" dominant-baseline="middle" fill="#1e293b">採收延後至 10–11 月，葡萄持續在藤上</text>
+  <circle cx="36" cy="217" r="8" fill="#6a7818"/>
+  <text x="36" y="220" font-family="system-ui" font-size="9" text-anchor="middle" dominant-baseline="middle" fill="white" font-weight="bold">2</text>
+  <text x="54" y="220" font-family="system-ui, sans-serif" font-size="11" dominant-baseline="middle" fill="#1e293b">水分緩慢蒸發，糖分、酸度同步濃縮</text>
+  <circle cx="36" cy="239" r="8" fill="#6a7818"/>
+  <text x="36" y="242" font-family="system-ui" font-size="9" text-anchor="middle" dominant-baseline="middle" fill="white" font-weight="bold">3</text>
+  <text x="54" y="242" font-family="system-ui, sans-serif" font-size="11" dominant-baseline="middle" fill="#1e293b">無貴腐，保留更純粹的果實風味</text>
+  <circle cx="36" cy="261" r="8" fill="#6a7818"/>
+  <text x="36" y="264" font-family="system-ui" font-size="9" text-anchor="middle" dominant-baseline="middle" fill="white" font-weight="bold">4</text>
+  <text x="54" y="264" font-family="system-ui, sans-serif" font-size="11" dominant-baseline="middle" fill="#1e293b">成酒：金黃色澤、蜂蠟、榲桲、蘋果乾</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 90">
+  <defs>
+    <linearGradient id="bg-app" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A1275"/>
+      <stop offset="100%" stop-color="#1E4080"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="90" rx="10" fill="url(#bg-app)"/>
+  <!-- 步驟 1: 採收 -->
+  <circle cx="40" cy="40" r="18" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <text x="40" y="38" text-anchor="middle" font-size="16" font-family="Arial">🍇</text>
+  <text x="40" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.8)">9-10 月</text>
+  <text x="40" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.6)">採收</text>
+  <!-- 箭頭 1 -->
+  <line x1="60" y1="40" x2="88" y2="40" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+  <polygon points="88,36 96,40 88,44" fill="rgba(255,255,255,0.45)"/>
+  <!-- 步驟 2: 風乾室 -->
+  <circle cx="116" cy="40" r="18" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <text x="116" y="38" text-anchor="middle" font-size="14" font-family="Arial">🏠</text>
+  <text x="116" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.8)">月 1-2</text>
+  <text x="116" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.6)">風乾室</text>
+  <!-- 箭頭 2 -->
+  <line x1="136" y1="40" x2="164" y2="40" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+  <polygon points="164,36 172,40 164,44" fill="rgba(255,255,255,0.45)"/>
+  <!-- 步驟 3: 失水 -->
+  <circle cx="192" cy="40" r="18" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <text x="192" y="38" text-anchor="middle" font-size="14" font-family="Arial">💧</text>
+  <text x="192" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.8)">月 2-3</text>
+  <text x="192" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.6)">-30~40%</text>
+  <!-- 箭頭 3 -->
+  <line x1="212" y1="40" x2="240" y2="40" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+  <polygon points="240,36 248,40 240,44" fill="rgba(255,255,255,0.45)"/>
+  <!-- 步驟 4: 發酵 -->
+  <circle cx="268" cy="40" r="18" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <text x="268" y="38" text-anchor="middle" font-size="14" font-family="Arial">🫧</text>
+  <text x="268" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.8)">月 4</text>
+  <text x="268" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.6)">緩慢發酵</text>
+  <!-- 箭頭 4 -->
+  <line x1="288" y1="40" x2="316" y2="40" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+  <polygon points="316,36 324,40 316,44" fill="rgba(255,255,255,0.45)"/>
+  <!-- 步驟 5: Amarone -->
+  <circle cx="352" cy="40" r="22" fill="rgba(140,48,168,0.4)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+  <text x="352" y="38" text-anchor="middle" font-size="16" font-family="Arial">🍷</text>
+  <text x="352" y="54" text-anchor="middle" font-family="Georgia,serif" font-size="8.5" fill="rgba(255,255,255,0.9)" font-weight="bold">Amarone</text>
+  <text x="352" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.65)">14-17% ABV</text>
+  <!-- 標題 -->
+  <text x="200" y="84" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="rgba(255,255,255,0.6)" letter-spacing="1">APPASSIMENTO PROCESS — 風乾釀造流程</text>
+</svg>

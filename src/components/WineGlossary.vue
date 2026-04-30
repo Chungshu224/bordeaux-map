@@ -1,8 +1,8 @@
 <template>
   <!-- 浮動按鈕 -->
-  <button class="glossary-fab" @click="open = true" title="三語名詞辭典">
+  <button class="glossary-fab" @click="open = true" :title="$t('common.glossary.fabTitle')">
     📖
-    <span class="fab-label">辭典</span>
+    <span class="fab-label">{{ $t('common.glossary.fabLabel') }}</span>
   </button>
 
   <!-- 覆蓋層 + 面板 -->
@@ -15,10 +15,10 @@
           <div class="gp-header">
             <div class="gp-title">
               <span class="gp-icon">{{ regionConfig.icon }}</span>
-              <span>{{ regionConfig.title }}</span>
-              <span class="gp-langs">中文 · English · {{ regionConfig.lang3Label }}</span>
+              <span>{{ panelTitle }}</span>
+              <span class="gp-langs">{{ $t('common.glossary.langsBase') }}<template v-if="regionConfig.lang3Label"> · {{ regionConfig.lang3Label }}</template></span>
             </div>
-            <button class="gp-close" @click="open = false">✕</button>
+            <button class="gp-close" @click="open = false" :aria-label="$t('common.actions.close')">✕</button>
           </div>
 
           <!-- Search -->
@@ -28,7 +28,7 @@
               v-model.trim="query"
               class="gp-search"
               type="search"
-              :placeholder="regionConfig.placeholder"
+              :placeholder="searchPlaceholder"
               autocomplete="off"
               @keydown.escape="open = false"
             />
@@ -48,9 +48,9 @@
 
           <!-- Results -->
           <div class="gp-body" ref="bodyEl">
-            <div v-if="loading" class="gp-state">載入中…</div>
+            <div v-if="loading" class="gp-state">{{ $t('common.actions.loading') }}</div>
             <div v-else-if="displayItems.length === 0" class="gp-state gp-empty">
-              <span>找不到「{{ query }}」的相關名詞</span>
+              <span>{{ $t('common.glossary.notFound', { q: query }) }}</span>
             </div>
             <template v-else>
               <div
@@ -62,7 +62,7 @@
                   <span class="term-zh" v-html="hl(item.zh)"></span>
                   <span class="term-sep">·</span>
                   <span class="term-en" v-html="hl(item.en)"></span>
-                  <template v-if="item[regionConfig.lang3Key]">
+                  <template v-if="regionConfig.lang3Key && item[regionConfig.lang3Key]">
                     <span class="term-sep">·</span>
                     <span class="term-lang3" v-html="hl(item[regionConfig.lang3Key])"></span>
                   </template>
@@ -74,13 +74,13 @@
 
             <!-- Load more -->
             <div v-if="hasMore" class="gp-more-wrap">
-              <button class="gp-more-btn" @click="limit += 20">顯示更多</button>
+              <button class="gp-more-btn" @click="limit += 20">{{ $t('common.actions.loadMore') }}</button>
             </div>
           </div>
 
           <!-- Footer hint -->
           <div class="gp-footer">
-            共 {{ totalCount }} 筆 · 管理員可在後台新增詞條
+            {{ $t('common.glossary.totalCount', { n: totalCount }) }}
           </div>
         </div>
       </div>
@@ -92,20 +92,34 @@
 import { ref, computed, watch, nextTick } from 'vue'
 import { supabase } from '../lib/supabaseClient.js'
 
+const SUPPORTED_REGIONS = [
+  'bordeaux', 'bourgogne', 'italy',
+  'spain', 'portugal', 'germany', 'hungary',
+  'loire', 'california', 'australia', 'newzealand'
+]
+
 const props = defineProps({
   region: {
     type: String,
     default: 'bordeaux',
-    validator: v => ['bordeaux', 'bourgogne', 'italy'].includes(v)
+    validator: v => ['bordeaux', 'bourgogne', 'italy', 'spain', 'portugal', 'germany', 'hungary', 'loire', 'california', 'australia', 'newzealand'].includes(v)
   }
 })
 
 // ── Region config ──────────────────────────────────────────
 const regionConfig = computed(() => {
   const cfg = {
-    bordeaux:  { icon: '🍷', title: '波爾多葡萄酒辭典',  lang3Key: 'fr', lang3Label: 'Français',  placeholder: '搜尋中文、英文或法文名詞…' },
-    bourgogne: { icon: '🍇', title: '布根地葡萄酒辭典',  lang3Key: 'fr', lang3Label: 'Français',  placeholder: '搜尋中文、英文或法文名詞…' },
-    italy:     { icon: '🍾', title: '義大利葡萄酒辭典', lang3Key: 'it', lang3Label: 'Italiano', placeholder: '搜尋中文、英文或義大利文名詞…' },
+    bordeaux:   { icon: '🍷', title: '波爾多葡萄酒辭典',     lang3Key: 'fr', lang3Label: 'Français',  placeholder: '搜尋中文、英文或法文名詞…' },
+    bourgogne:  { icon: '🍇', title: '布根地葡萄酒辭典',     lang3Key: 'fr', lang3Label: 'Français',  placeholder: '搜尋中文、英文或法文名詞…' },
+    italy:      { icon: '🍾', title: '義大利葡萄酒辭典',     lang3Key: 'it', lang3Label: 'Italiano', placeholder: '搜尋中文、英文或義大利文名詞…' },
+    spain:      { icon: '🇪🇸', title: '西班牙葡萄酒辭典',     lang3Key: 'es', lang3Label: 'Español',  placeholder: '搜尋中文、英文或西班牙文名詞…' },
+    portugal:   { icon: '🇵🇹', title: '葡萄牙葡萄酒辭典',     lang3Key: 'pt', lang3Label: 'Português', placeholder: '搜尋中文、英文或葡萄牙文名詞…' },
+    germany:    { icon: '🇩🇪', title: '德國葡萄酒辭典',       lang3Key: 'de', lang3Label: 'Deutsch',  placeholder: '搜尋中文、英文或德文名詞…' },
+    hungary:    { icon: '🇭🇺', title: '匈牙利葡萄酒辭典',     lang3Key: 'hu', lang3Label: 'Magyar',   placeholder: '搜尋中文、英文或匈牙利文名詞…' },
+    loire:      { icon: '🏰', title: '羅亞爾河谷葡萄酒辭典', lang3Key: 'fr', lang3Label: 'Français', placeholder: '搜尋中文、英文或法文名詞…' },
+    california: { icon: '🌉', title: '加州葡萄酒辭典',         lang3Key: '',   lang3Label: '',         placeholder: '搜尋中文或英文名詞…' },
+    australia:  { icon: '🦘', title: '澳洲葡萄酒辭典',         lang3Key: '',   lang3Label: '',         placeholder: '搜尋中文或英文名詞…' },
+    newzealand: { icon: '🥝', title: '紐西蘭葡萄酒辭典',       lang3Key: '',   lang3Label: '',         placeholder: '搜尋中文或英文名詞…' },
   }
   return cfg[props.region] || cfg.bordeaux
 })
@@ -145,7 +159,7 @@ async function loadGlossary() {
   try {
     const { data, error } = await supabase
       .from('wine_glossary')
-      .select('id, zh, en, fr, it, definition, category')
+      .select('id, zh, en, fr, it, es, pt, de, hu, definition, category')
       .eq('region', props.region)
       .order('zh')
     if (error) throw error
@@ -169,7 +183,7 @@ const filtered = computed(() => {
   return list.filter(i =>
     i.zh.toLowerCase().includes(q) ||
     i.en.toLowerCase().includes(q) ||
-    (i[l3k] || '').toLowerCase().includes(q) ||
+    (l3k && (i[l3k] || '').toLowerCase().includes(q)) ||
     i.definition.toLowerCase().includes(q)
   )
 })

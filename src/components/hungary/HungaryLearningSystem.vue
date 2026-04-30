@@ -68,6 +68,7 @@
         </div>
       </div>
     </Teleport>
+    <WineGlossary region="hungary" />
   </div>
 </template>
 
@@ -84,6 +85,7 @@ import HungaryCourseLayout from './HungaryCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
 import { globalHungaryAchievementManager, hungaryAchievementState } from '../../stores/hungaryAchievementSystem.js'
+import WineGlossary from '../WineGlossary.vue'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 

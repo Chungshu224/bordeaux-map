@@ -25,8 +25,11 @@
 
       <div class="tier-detail" :style="{ borderTopColor: activeTier.color }">
         <div class="tier-header" :style="{ background: `linear-gradient(135deg, ${activeTier.color}, ${activeTier.colorEnd})` }">
-          <h4>{{ activeTier.name }}</h4>
-          <span class="tier-tagline">{{ activeTier.tagline }}</span>
+          <div class="tier-header-text">
+            <h4>{{ activeTier.name }}</h4>
+            <span class="tier-tagline">{{ activeTier.tagline }}</span>
+          </div>
+          <img :src="`/images/italy/amarone-${tierKeys[activeIdx]}.svg`" class="amarone-tier-img" :alt="activeTier.name" />
         </div>
         <div class="tier-body">
           <div class="metric-grid">
@@ -203,6 +206,8 @@ const tiers = computed(() => {
 
 const activeTier = computed(() => tiers.value[activeIdx.value] || tiers.value[0])
 
+const tierKeys = ['valpolicella', 'ripasso', 'amarone', 'recioto']
+
 const process = [
   { month: '第 1 個月', weightLoss: 18, title: '初期蒸散', detail: '果皮起皺、表面水分蒸發、糖度開始上升', color: '#16a085', colorEnd: '#1abc9c' },
   { month: '第 2 個月', weightLoss: 25, title: '緩慢濃縮', detail: '糖分 / 多酚 / 甘油濃縮，定期巡視防止灰黴病', color: '#f39c12', colorEnd: '#f5b041' },
@@ -272,9 +277,22 @@ const process = [
 .tier-header {
   padding: 16px 20px;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
+.tier-header-text { flex: 1; min-width: 0; }
 .tier-header h4 { margin: 0; font-size: 1.4rem; }
 .tier-tagline { font-size: 0.9rem; opacity: 0.9; }
+.amarone-tier-img {
+  width: 120px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.3);
+}
 .tier-body { padding: 16px 20px; }
 .metric-grid {
   display: grid;

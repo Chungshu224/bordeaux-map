@@ -8,6 +8,9 @@
     <!-- 上方雙產區概覽卡 -->
     <div class="duel-overview">
       <div class="duel-card sancerre" :class="{ active: activeRegion === 'sancerre' }" @click="activeRegion = 'sancerre'">
+        <div class="duel-card-image">
+          <img src="/images/loire/sancerre-landscape.svg" class="duel-img" alt="Sancerre 丘陵" />
+        </div>
         <div class="card-flag">🌸</div>
         <h3>Sancerre</h3>
         <div class="card-meta">
@@ -19,6 +22,9 @@
       </div>
       <div class="vs-divider">VS</div>
       <div class="duel-card pouilly" :class="{ active: activeRegion === 'pouilly' }" @click="activeRegion = 'pouilly'">
+        <div class="duel-card-image">
+          <img src="/images/loire/pouilly-landscape.svg" class="duel-img" alt="Pouilly-Fumé 平原" />
+        </div>
         <div class="card-flag">🔥</div>
         <h3>Pouilly-Fumé</h3>
         <div class="card-meta">
@@ -44,6 +50,9 @@
       <h3>🪨 三大土壤類型（兩產區共有，比例不同）</h3>
       <div class="soil-cards">
         <div v-for="(s, i) in soils" :key="i" class="soil-card" :style="{ borderTopColor: s.color }">
+          <div class="soil-image-wrapper">
+            <img :src="`/images/loire/soil-${s.id}.svg`" class="soil-img" :alt="s.name" />
+          </div>
           <div class="soil-icon" :style="{ background: `linear-gradient(135deg, ${s.color}, ${s.colorEnd})` }">{{ s.icon }}</div>
           <h4>{{ s.name }}</h4>
           <p class="soil-fr">{{ s.french }}</p>
@@ -112,6 +121,7 @@ const compareRows = [
 
 const soils = [
   {
+    id: 'caillottes',
     name: 'Caillottes',
     french: '白堊石灰小石塊',
     icon: '🥌',
@@ -123,6 +133,7 @@ const soils = [
     style: '果香奔放、年輕易飲、檸檬與葡萄柚'
   },
   {
+    id: 'terres-blanches',
     name: 'Terres Blanches',
     french: 'Kimmeridgian 泥灰岩（白土）',
     icon: '🧱',
@@ -134,6 +145,7 @@ const soils = [
     style: '結構紮實、礦物張力、陳年潛力佳'
   },
   {
+    id: 'silex',
     name: 'Silex',
     french: '燧石（火石）',
     icon: '🔥',
@@ -200,6 +212,16 @@ const producers = {
   cursor: pointer;
   transition: all 0.3s;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+.duel-card-image {
+  margin-bottom: 12px;
+}
+.duel-img {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
 }
 .duel-card:hover { transform: translateY(-3px); }
 .duel-card.sancerre.active { border-color: #2874a6; }
@@ -283,6 +305,16 @@ const producers = {
   border-radius: 10px;
   padding: 14px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.soil-image-wrapper {
+  margin-bottom: 12px;
+}
+.soil-img {
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
 }
 .soil-icon {
   width: 50px;

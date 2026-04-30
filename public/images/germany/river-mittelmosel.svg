@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
+  <defs>
+    <linearGradient id="bg-mittelmosel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2850"/><stop offset="100%" stop-color="#184080"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="90" rx="10" fill="url(#bg-mittelmosel)"/>
+  
+  <!-- Big river meander -->
+  <path d="M0 65 Q55 45 110 62 Q165 78 220 55" stroke="rgba(100,175,255,0.5)" stroke-width="14" fill="none"/>
+  <path d="M0 65 Q55 45 110 62 Q165 78 220 55" stroke="rgba(150,210,255,0.25)" stroke-width="7" fill="none"/>
+  <!-- Very steep slate slopes (45°+) -->
+  <polygon points="0,90 0,12 55,35 0,90" fill="rgba(60,100,170,0.18)"/>
+  <polygon points="220,90 220,15 165,40 220,90" fill="rgba(60,100,170,0.16)"/>
+  <!-- Slate terraces left bank -->
+  <line x1="4" y1="80" x2="50" y2="66" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/>
+  <line x1="4" y1="68" x2="48" y2="54" stroke="rgba(255,255,255,0.17)" stroke-width="1.2"/>
+  <line x1="4" y1="56" x2="44" y2="42" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <line x1="6" y1="44" x2="40" y2="30" stroke="rgba(255,255,255,0.11)" stroke-width="1"/>
+  <line x1="8" y1="32" x2="35" y2="19" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Bernkastel village -->
+  <rect x="95" y="50" width="8" height="8" fill="rgba(255,255,255,0.2)"/>
+  <polygon points="94,50 99,44 104,50" fill="rgba(255,255,255,0.25)"/>
+  <rect x="0" y="70" width="220" height="20" rx="0" fill="rgba(0,0,0,0.3)"/>
+  <text x="12" y="81" font-family="Georgia,serif" font-size="10" fill="white" font-weight="bold">Mittelmosel</text>
+  <text x="12" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.62)">主軸 · 最陡坡 · 藍板岩</text>
+</svg>

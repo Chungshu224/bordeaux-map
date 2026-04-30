@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80">
+  <defs>
+    <linearGradient id="bg-auslese" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A2800"/><stop offset="100%" stop-color="#8A5010"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="80" rx="8" fill="url(#bg-auslese)"/>
+  
+  <!-- Selected clusters with some botrytis -->
+  <circle cx="68" cy="52" r="10.5" fill="rgba(255,190,80,0.75)"/>
+  <circle cx="80" cy="42" r="10" fill="rgba(245,180,70,0.72)"/>
+  <circle cx="60" cy="41" r="9.5" fill="rgba(240,175,65,0.70)"/>
+  <circle cx="73" cy="32" r="9" fill="rgba(250,185,75,0.68)"/>
+  <!-- Botrytis spots (grey-gold) on some berries -->
+  <circle cx="78" cy="43" r="5" fill="rgba(180,150,80,0.55)"/>
+  <circle cx="62" cy="54" r="5" fill="rgba(170,145,75,0.50)"/>
+  <!-- Hand selecting -->
+  <text x="112" y="46" font-family="Arial" font-size="16" fill="rgba(255,255,255,0.55)" text-anchor="middle">✋</text>
+  <rect x="90" y="54" width="50" height="22" rx="5" fill="rgba(0,0,0,0.25)"/>
+  <text x="115" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,220,100,0.8)">逐串精選</text>
+  <text x="115" y="74" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">83-100°</text>
+  <!-- Bottom label -->
+  <rect x="0" y="63" width="160" height="17" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="8" y="74" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">Auslese</text>
+  <text x="80" y="74" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.62)">精選串</text>
+</svg>

@@ -35,6 +35,7 @@
           <h3>{{ activeTier.symbol }} {{ activeTier.name }} ({{ activeTier.en }})</h3>
           <span class="detail-tagline">{{ activeTier.tagline }}</span>
         </div>
+        <img :src="`/images/germany/vdp-${activeTier.key}.svg`" class="vdp-vineyard-img" />
         <div class="detail-quick">
           <span><strong>類比 Burgundy</strong> {{ activeTier.burgundyEquiv }}</span>
           <span><strong>佔 VDP 產量</strong> {{ activeTier.share }}</span>
@@ -334,6 +335,16 @@ const activeTier = computed(() => vdpTiers.value.find((t) => t.key === activeKey
   flex-wrap: wrap;
   gap: 0.5rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.vdp-vineyard-img {
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.88;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .detail-header h3 {

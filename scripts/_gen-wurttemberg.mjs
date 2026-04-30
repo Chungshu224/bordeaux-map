@@ -1,0 +1,24 @@
+import { writeFileSync } from 'fs'
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A1A10"/><stop offset="100%" stop-color="#6D3B2F"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="90" rx="10" fill="url(#bg)"/>
+  <polygon points="55,72 68,48 81,72" fill="rgba(240,220,190,0.35)"/>
+  <polygon points="72,70 88,44 104,70" fill="rgba(230,210,180,0.28)"/>
+  <polygon points="96,68 115,42 134,68" fill="rgba(235,215,185,0.30)"/>
+  <path d="M0 58 Q55 44 110 56 Q165 68 220 50 L220 90 L0 90Z" fill="rgba(255,255,255,0.06)"/>
+  <ellipse cx="175" cy="50" rx="18" ry="14" fill="rgba(180,120,60,0.22)" stroke="rgba(180,120,60,0.35)" stroke-width="1.5"/>
+  <ellipse cx="175" cy="50" rx="12" ry="9" fill="rgba(160,100,50,0.18)"/>
+  <line x1="5" y1="78" x2="50" y2="70" stroke="rgba(255,255,255,0.2)" stroke-width="1.4"/>
+  <line x1="5" y1="68" x2="48" y2="60" stroke="rgba(255,255,255,0.16)" stroke-width="1.2"/>
+  <line x1="5" y1="58" x2="44" y2="50" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="140" y1="76" x2="155" y2="68" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+  <rect x="0" y="70" width="220" height="20" rx="0" fill="rgba(0,0,0,0.3)"/>
+  <text x="12" y="81" font-family="Georgia,serif" font-size="10" fill="white" font-weight="bold">Württemberg</text>
+  <text x="12" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.62)">Stuttgart 周邊 · 傳統大桶 · Muschelkalk</text>
+</svg>`
+writeFileSync('public/images/germany/spatburg-wurttemberg.svg', svg.trim(), 'utf8')
+console.log('✓ spatburg-wurttemberg.svg')

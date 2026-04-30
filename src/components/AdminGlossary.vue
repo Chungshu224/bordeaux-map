@@ -53,7 +53,7 @@
             <td><span :class="['region-badge', `region-${item.region}`]">{{ regionLabel(item.region) }}</span></td>
             <td class="fw-bold">{{ item.zh }}</td>
             <td class="text-it">{{ item.en }}</td>
-            <td class="text-it text-muted">{{ item.fr || item.it || '—' }}</td>
+            <td class="text-it text-muted">{{ itemLang3(item) || '—' }}</td>
             <td><span :class="['cat-badge', `cat-${item.category}`]">{{ catLabel(item.category) }}</span></td>
             <td class="ag-def-col text-sm text-muted">{{ item.definition.slice(0, 60) }}{{ item.definition.length > 60 ? '…' : '' }}</td>
             <td class="ag-actions">
@@ -112,23 +112,19 @@
                   <label>English *</label>
                   <input v-model.trim="form.en" class="ag-input" type="text" placeholder="例：Cabernet Sauvignon" />
                 </div>
-                <!-- 第三語：法文或義大利文 -->
-                <div class="ag-field">
-                  <label>{{ form.region === 'italy' ? 'Italiano' : 'Français' }}</label>
+                <!-- 第三語：依產區動態選擇欄位 -->
+                <div class="ag-field" v-if="currentLang3().lang3">
+                  <label>{{ currentLang3().lang3Label }}</label>
                   <input
-                    v-if="form.region === 'italy'"
-                    v-model.trim="form.it"
+                    v-model.trim="form[currentLang3().lang3]"
                     class="ag-input"
                     type="text"
-                    placeholder="例：Sangiovese"
+                    :placeholder="`例：${currentLang3().lang3Label} 名稱`"
                   />
-                  <input
-                    v-else
-                    v-model.trim="form.fr"
-                    class="ag-input"
-                    type="text"
-                    placeholder="例：Cabernet Sauvignon"
-                  />
+                </div>
+                <div class="ag-field" v-else>
+                  <label>第三語</label>
+                  <input class="ag-input" type="text" disabled placeholder="產區無第三語" />
                 </div>
               </div>
 
@@ -190,9 +186,17 @@ import { supabase } from '../lib/supabaseClient.js'
 
 // ── 設定常數 ─────────────────────────────────────────────────
 const regionOptions = [
-  { key: 'bordeaux',  label: '波爾多', icon: '🍷' },
-  { key: 'bourgogne', label: '布根地', icon: '🍇' },
-  { key: 'italy',     label: '義大利', icon: '🍾' },
+  { key: 'bordeaux',   label: '波爾多',   icon: '🍷', lang3: 'fr', lang3Label: 'Français' },
+  { key: 'bourgogne',  label: '布根地',   icon: '🍇', lang3: 'fr', lang3Label: 'Français' },
+  { key: 'italy',      label: '義大利',   icon: '🍾', lang3: 'it', lang3Label: 'Italiano' },
+  { key: 'spain',      label: '西班牙',   icon: '🇪🇸', lang3: 'es', lang3Label: 'Español' },
+  { key: 'portugal',   label: '葡萄牙',   icon: '🇵🇹', lang3: 'pt', lang3Label: 'Português' },
+  { key: 'germany',    label: '德國',       icon: '🇩🇪', lang3: 'de', lang3Label: 'Deutsch' },
+  { key: 'hungary',    label: '匈牙利',   icon: '🇭🇺', lang3: 'hu', lang3Label: 'Magyar' },
+  { key: 'loire',      label: '羅亞爾河', icon: '🏰', lang3: 'fr', lang3Label: 'Français' },
+  { key: 'california', label: '加州',       icon: '🌉', lang3: '',   lang3Label: '' },
+  { key: 'australia',  label: '澳洲',       icon: '🦘', lang3: '',   lang3Label: '' },
+  { key: 'newzealand', label: '紐西蘭',   icon: '🥝', lang3: '',   lang3Label: '' },
 ]
 
 const categoryOptions = [
@@ -205,7 +209,16 @@ const categoryOptions = [
 ]
 
 function regionLabel(key) {
-  return { bordeaux: '波爾多', bourgogne: '布根地', italy: '義大利' }[key] || key
+  const r = regionOptions.find(x => x.key === key)
+  return r ? r.label : key
+}
+function currentLang3() {
+  return regionOptions.find(r => r.key === form.value.region) || { lang3: '', lang3Label: '' }
+}
+function itemLang3(item) {
+  const r = regionOptions.find(x => x.key === item.region)
+  if (!r || !r.lang3) return ''
+  return item[r.lang3] || ''
 }
 function catLabel(key) {
   return { grape:'品種', region:'產區', winemaking:'釀造', tasting:'品飲', appellation:'法規', general:'一般' }[key] || key
@@ -219,7 +232,7 @@ async function loadAll() {
   loading.value = true
   const { data, error } = await supabase
     .from('wine_glossary')
-    .select('id, region, zh, en, fr, it, definition, category')
+    .select('id, region, zh, en, fr, it, es, pt, de, hu, definition, category')
     .order('region')
     .order('zh')
   if (!error) allItems.value = data ?? []
@@ -244,6 +257,10 @@ const filtered = computed(() => {
     i.en.toLowerCase().includes(q) ||
     (i.fr || '').toLowerCase().includes(q) ||
     (i.it || '').toLowerCase().includes(q) ||
+    (i.es || '').toLowerCase().includes(q) ||
+    (i.pt || '').toLowerCase().includes(q) ||
+    (i.de || '').toLowerCase().includes(q) ||
+    (i.hu || '').toLowerCase().includes(q) ||
     i.definition.toLowerCase().includes(q)
   )
   return list
@@ -263,7 +280,7 @@ const formError = ref('')
 
 const emptyForm = () => ({
   region: filterRegion.value,
-  zh: '', en: '', fr: '', it: '',
+  zh: '', en: '', fr: '', it: '', es: '', pt: '', de: '', hu: '',
   definition: '',
   category: 'grape',
 })
@@ -280,6 +297,10 @@ function openForm(item) {
       en:         item.en,
       fr:         item.fr || '',
       it:         item.it || '',
+      es:         item.es || '',
+      pt:         item.pt || '',
+      de:         item.de || '',
+      hu:         item.hu || '',
       definition: item.definition,
       category:   item.category,
     }
@@ -303,6 +324,10 @@ async function saveForm() {
     en:         form.value.en,
     fr:         form.value.fr || '',
     it:         form.value.it || '',
+    es:         form.value.es || '',
+    pt:         form.value.pt || '',
+    de:         form.value.de || '',
+    hu:         form.value.hu || '',
     definition: form.value.definition,
     category:   form.value.category,
     updated_at: new Date().toISOString(),
@@ -420,9 +445,17 @@ async function doDelete() {
   font-size: 0.72rem;
   font-weight: 700;
 }
-.region-bordeaux  { background: #fef3e2; color: #a04000; }
-.region-bourgogne { background: #f3e5f5; color: #7b1fa2; }
-.region-italy     { background: #e8f5e9; color: #2e7d32; }
+.region-bordeaux   { background: #fef3e2; color: #a04000; }
+.region-bourgogne  { background: #f3e5f5; color: #7b1fa2; }
+.region-italy      { background: #e8f5e9; color: #2e7d32; }
+.region-spain      { background: #fff3e0; color: #c62828; }
+.region-portugal   { background: #fce4ec; color: #ad1457; }
+.region-germany    { background: #ede7f6; color: #4527a0; }
+.region-hungary    { background: #fffde7; color: #ef6c00; }
+.region-loire      { background: #e0f7fa; color: #006064; }
+.region-california { background: #fff8e1; color: #ef6c00; }
+.region-australia  { background: #ffebee; color: #c62828; }
+.region-newzealand { background: #e8f5e9; color: #1b5e20; }
 
 .cat-badge {
   display: inline-block;

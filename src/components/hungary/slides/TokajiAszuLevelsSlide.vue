@@ -22,12 +22,15 @@
 
     <article v-if="current" class="tas-card" :style="{ '--accent': current.color }">
       <div class="tas-card-head">
-        <h3 class="tas-card-title">
-          <span class="tas-emoji">{{ current.emoji }}</span>
-          {{ current.name }}
-          <span class="tas-card-aliases">{{ current.aliases }}</span>
-        </h3>
-        <p class="tas-card-tag">{{ current.tagline }}</p>
+        <img :src="`/images/hungary/aszu-${current.key}.svg`" class="tas-card-img" :alt="current.name" />
+        <div class="tas-card-head-text">
+          <h3 class="tas-card-title">
+            <span class="tas-emoji">{{ current.emoji }}</span>
+            {{ current.name }}
+            <span class="tas-card-aliases">{{ current.aliases }}</span>
+          </h3>
+          <p class="tas-card-tag">{{ current.tagline }}</p>
+        </div>
       </div>
 
       <div class="tas-grid">
@@ -233,7 +236,16 @@ const current = computed(() => LEVELS.find(l => l.key === currentKey.value))
   padding: 18px 20px;
   background: linear-gradient(180deg, #fff 0%, color-mix(in srgb, var(--accent) 6%, #fff) 100%);
 }
-.tas-card-head { margin-bottom: 14px; }
+.tas-card-head { margin-bottom: 14px; display: flex; align-items: center; gap: 14px; }
+.tas-card-head-text { flex: 1; min-width: 0; }
+.tas-card-img {
+  width: 105px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 .tas-card-title {
   margin: 0; font-size: 1.4rem; color: var(--accent);
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px;

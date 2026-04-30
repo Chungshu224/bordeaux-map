@@ -42,6 +42,7 @@
         <div class="progress-bar" :style="{ width: progressPct + '%' }"></div>
       </div>
     </div>
+    <WineGlossary region="germany" />
   </div>
 </template>
 
@@ -70,6 +71,7 @@ import VDPClassificationSlide from './slides/VDPClassificationSlide.vue'
 import GermanRegionsOverviewSlide from './slides/GermanRegionsOverviewSlide.vue'
 import GermanyMoselTrioSlide from './slides/GermanyMoselTrioSlide.vue'
 import GermanySpätburgunderRegionsSlide from './slides/GermanySpätburgunderRegionsSlide.vue'
+import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
   lesson: { type: Object, required: true },

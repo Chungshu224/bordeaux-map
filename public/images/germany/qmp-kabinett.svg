@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80">
+  <defs>
+    <linearGradient id="bg-kabinett" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A4A3A"/><stop offset="100%" stop-color="#2D7A60"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="80" rx="8" fill="url(#bg-kabinett)"/>
+  
+  <!-- Fresh grape cluster - small, neat -->
+  <circle cx="72" cy="52" r="9" fill="rgba(210,255,210,0.7)"/>
+  <circle cx="82" cy="44" r="9" fill="rgba(200,250,200,0.68)"/>
+  <circle cx="64" cy="43" r="8.5" fill="rgba(190,240,190,0.65)"/>
+  <circle cx="76" cy="34" r="8" fill="rgba(180,230,180,0.62)"/>
+  <circle cx="65" cy="60" r="8.5" fill="rgba(200,245,200,0.65)"/>
+  <circle cx="56" cy="52" r="7.5" fill="rgba(190,235,185,0.60)"/>
+  <!-- Shine -->
+  <circle cx="68" cy="40" r="3" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="78" cy="42" r="2.5" fill="rgba(255,255,255,0.45)"/>
+  <!-- Stem -->
+  <line x1="72" y1="28" x2="72" y2="22" stroke="rgba(255,255,255,0.6)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sun - moderate -->
+  <circle cx="125" cy="25" r="12" fill="rgba(255,220,80,0.22)"/>
+  <circle cx="125" cy="25" r="8" fill="rgba(255,230,100,0.18)"/>
+  <!-- Oechsle meter -->
+  <rect x="104" y="50" width="44" height="22" rx="5" fill="rgba(0,0,0,0.28)"/>
+  <text x="126" y="60" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.7)">Oechsle</text>
+  <text x="126" y="69" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="rgba(255,255,255,0.9)" font-weight="bold">67-82°</text>
+  <!-- Bottom label -->
+  <rect x="0" y="63" width="160" height="17" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="8" y="74" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">Kabinett</text>
+  <text x="80" y="74" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.62)">輕盈</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90">
+  <defs>
+    <linearGradient id="bg-north" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2848"/>
+      <stop offset="100%" stop-color="#184880"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="90" rx="10" fill="url(#bg-north)"/>
+  
+  <!-- 天空漸層 -->
+  <rect x="0" y="0" width="360" height="50" fill="rgba(150,200,255,0.08)"/>
+  <!-- 遠山（阿爾卑斯，三角形）-->
+  <polygon points="0,90 55,20 110,90"  fill="rgba(255,255,255,0.07)"/>
+  <polygon points="45,90 100,15 155,90" fill="rgba(255,255,255,0.06)"/>
+  <polygon points="130,90 185,25 240,90" fill="rgba(255,255,255,0.05)"/>
+  <polygon points="210,90 265,30 320,90" fill="rgba(255,255,255,0.06)"/>
+  <polygon points="280,90 335,22 390,90" fill="rgba(255,255,255,0.05)"/>
+  <!-- 雪帽 -->
+  <polygon points="55,20 75,42 35,42"  fill="rgba(255,255,255,0.22)"/>
+  <polygon points="100,15 120,40 80,40" fill="rgba(255,255,255,0.20)"/>
+  <polygon points="185,25 202,46 168,46" fill="rgba(255,255,255,0.18)"/>
+  <polygon points="265,30 280,50 250,50" fill="rgba(255,255,255,0.17)"/>
+  <!-- 前景葡萄園梯田 -->
+  <line x1="10" y1="80" x2="100" y2="80" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+  <line x1="10" y1="85" x2="100" y2="85" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="120" y1="77" x2="220" y2="77" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+  <line x1="120" y1="83" x2="220" y2="83" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="250" y1="79" x2="350" y2="79" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+  <line x1="250" y1="85" x2="350" y2="85" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- 霧氣（Nebbia） -->
+  <rect x="0" y="68" width="360" height="12" fill="rgba(255,255,255,0.04)" rx="4"/>
+  <!-- 半透明文字底板 -->
+  <rect x="0" y="0" width="360" height="42" fill="rgba(0,0,0,0.18)" rx="10"/>
+  <!-- 大區名稱 -->
+  <text x="18" y="22" font-family="Georgia, serif" font-size="15" fill="rgba(255,255,255,0.92)" font-weight="bold">🏔️ 北義 North</text>
+  <!-- 子產區列表 -->
+  <text x="18" y="36" font-family="Arial, sans-serif" font-size="8" fill="rgba(255,255,255,0.58)" letter-spacing="0.5">Piemonte · Veneto · Lombardia · Trentino · Friuli</text>
+</svg>

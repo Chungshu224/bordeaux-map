@@ -36,6 +36,7 @@
           <h3>{{ activeTier.emoji }} {{ activeTier.name }}</h3>
           <span class="detail-tagline">{{ activeTier.tagline }}</span>
         </div>
+        <img :src="`/images/germany/qmp-${activeTier.key}.svg`" class="qmp-harvest-img" />
         <div class="quick-stats">
           <span><strong>Oechsle</strong> {{ activeTier.oechsleRange }}°</span>
           <span><strong>潛在酒精</strong> {{ activeTier.potentialAlc }}</span>
@@ -393,6 +394,16 @@ const activeTier = computed(() => tiers.value.find((t) => t.key === activeKey.va
   flex-wrap: wrap;
   gap: 0.5rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.qmp-harvest-img {
+  width: 90px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.9;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .detail-header h3 {

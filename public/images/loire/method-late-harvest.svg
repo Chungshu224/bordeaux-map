@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a6830"/>
+      <stop offset="100%" stop-color="#88c860"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="url(#bg)" rx="12"/>
+  <!-- 頂部標題條 -->
+  <rect x="0" y="0" width="400" height="52" fill="rgba(0,0,0,0.35)" rx="12"/>
+  <rect x="0" y="40" width="400" height="12" fill="rgba(0,0,0,0.35)"/>
+  <text x="200" y="22" font-family="Georgia, serif" font-size="17" font-weight="bold" text-anchor="middle" fill="white">晚收 Vendanges Tardives</text>
+  <text x="200" y="40" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-style="italic">過熟採收，糖分自然積累</text>
+  <!-- 中央大 Emoji 圖標 -->
+  <text x="200" y="130" font-family="system-ui" font-size="72" text-anchor="middle" dominant-baseline="middle">🍂</text>
+  <!-- 葡萄狀態視覺 -->
+  <!-- 晚收示意 -->
+<text x="90" y="118" font-size="22" text-anchor="middle" font-family="system-ui">📅</text>
+<text x="90" y="140" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif" fill="#0a3010">9月正常</text>
+<text x="200" y="115" font-size="22" text-anchor="middle" font-family="system-ui">→ ⏳ →</text>
+<text x="310" y="118" font-size="22" text-anchor="middle" font-family="system-ui">🍁</text>
+<text x="310" y="140" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif" fill="#0a3010">11月採收</text>
+<text x="200" y="160" font-size="9" text-anchor="middle" font-family="system-ui, sans-serif" fill="#0a3010">殘糖 30–80 g/L · 保留酸度</text>
+  <!-- 流程步驟 -->
+  <rect x="18" y="178" width="364" height="92" fill="rgba(255,255,255,0.88)" rx="10"/>
+  <circle cx="36" cy="195" r="8" fill="#1a5820"/>
+  <text x="36" y="198" font-family="system-ui" font-size="9" text-anchor="middle" dominant-baseline="middle" fill="white" font-weight="bold">1</text>
+  <text x="54" y="198" font-family="system-ui, sans-serif" font-size="11" dominant-baseline="middle" fill="#1e293b">採收推遲 2–4 週（10 月底至 11 月）</text>
+  <circle cx="36" cy="217" r="8" fill="#1a5820"/>
+  <text x="36" y="220" font-family="system-ui" font-size="9" text-anchor="middle" dominant-baseline="middle" fill="white" font-weight="bold">2</text>
+  <text x="54" y="220" font-family="system-ui, sans-serif" font-size="11" dominant-baseline="middle" fill="#1e293b">葡萄繼續積累糖分，保留充足水份</text>
+  <circle cx="36" cy="239" r="8" fill="#1a5820"/>
+  <text x="36" y="242" font-family="system-ui" font-size="9" text-anchor="middle" dominant-baseline="middle" fill="white" font-weight="bold">3</text>
+  <text x="54" y="242" font-family="system-ui, sans-serif" font-size="11" dominant-baseline="middle" fill="#1e293b">一次採收，不挑選貴腐粒</text>
+  <circle cx="36" cy="261" r="8" fill="#1a5820"/>
+  <text x="36" y="264" font-family="system-ui" font-size="9" text-anchor="middle" dominant-baseline="middle" fill="white" font-weight="bold">4</text>
+  <text x="54" y="264" font-family="system-ui, sans-serif" font-size="11" dominant-baseline="middle" fill="#1e293b">成酒：輕盈花蜜、檸檬皮、酸甜平衡</text>
+</svg>

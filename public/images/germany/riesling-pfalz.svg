@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90">
+  <defs>
+    <linearGradient id="bg-pfalz" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A4A18"/><stop offset="100%" stop-color="#4A7828"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="90" rx="10" fill="url(#bg-pfalz)"/>
+  
+  <!-- Pfälzerwald forest silhouette -->
+  <polygon points="130,90 145,50 160,90" fill="rgba(255,255,255,0.08)"/>
+  <polygon points="148,90 165,42 182,90" fill="rgba(255,255,255,0.07)"/>
+  <polygon points="165,90 184,45 203,90" fill="rgba(255,255,255,0.08)"/>
+  <!-- Warm sun -->
+  <circle cx="165" cy="20" r="16" fill="rgba(255,200,50,0.28)"/>
+  <circle cx="165" cy="20" r="10" fill="rgba(255,215,70,0.22)"/>
+  <!-- Flat vineyard (unlike steep Mosel) -->
+  <line x1="5" y1="76" x2="120" y2="76" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <line x1="5" y1="68" x2="120" y2="68" stroke="rgba(255,255,255,0.16)" stroke-width="1.3"/>
+  <line x1="5" y1="60" x2="118" y2="60" stroke="rgba(255,255,255,0.13)" stroke-width="1.1"/>
+  <line x1="8" y1="52" x2="115" y2="52" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <!-- Soil diversity dots -->
+  <circle cx="50" cy="40" r="5" fill="rgba(200,150,100,0.5)"/>
+  <circle cx="62" cy="38" r="4" fill="rgba(100,140,80,0.5)"/>
+  <circle cx="74" cy="41" r="5" fill="rgba(160,120,80,0.45)"/>
+  <circle cx="86" cy="37" r="4" fill="rgba(130,180,130,0.45)"/>
+  <!-- Label bar -->
+  <rect x="0" y="68" width="200" height="22" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <rect x="0" y="68" width="200" height="22" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="10" y="80" font-family="Georgia,serif" font-size="9.5" fill="white" font-weight="bold">Pfalz</text>
+  <text x="10" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.68)">多元土壤 Diverse Soils</text>
+</svg>

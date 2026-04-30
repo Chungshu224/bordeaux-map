@@ -22,11 +22,14 @@
 
     <article v-if="current" class="hgp-card" :style="{ '--accent': current.color }">
       <div class="hgp-card-head">
-        <h3 class="hgp-card-title">
-          {{ current.name }}
-          <span class="hgp-card-aliases">{{ current.aliases }}</span>
-        </h3>
-        <p class="hgp-card-tag">{{ current.tagline }}</p>
+        <img :src="`/images/hungary/grape-${current.key}.svg`" class="hgp-card-img" :alt="current.name" />
+        <div class="hgp-card-head-text">
+          <h3 class="hgp-card-title">
+            {{ current.name }}
+            <span class="hgp-card-aliases">{{ current.aliases }}</span>
+          </h3>
+          <p class="hgp-card-tag">{{ current.tagline }}</p>
+        </div>
       </div>
 
       <div class="hgp-grid">
@@ -210,7 +213,16 @@ const current = computed(() => GRAPES.find(g => g.key === currentKey.value))
   padding: 18px 20px;
   background: linear-gradient(180deg, #fff 0%, color-mix(in srgb, var(--accent) 5%, #fff) 100%);
 }
-.hgp-card-head { margin-bottom: 14px; }
+.hgp-card-head { margin-bottom: 14px; display: flex; align-items: center; gap: 14px; }
+.hgp-card-head-text { flex: 1; min-width: 0; }
+.hgp-card-img {
+  width: 105px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 .hgp-card-title {
   margin: 0; font-size: 1.4rem; color: var(--accent);
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px;

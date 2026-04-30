@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160">
+  <defs>
+    <linearGradient id="bg-docg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0A05"/>
+      <stop offset="100%" stop-color="#3A1A08"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="160" rx="12" fill="url(#bg-docg)"/>
+  <!-- 金字塔層 -->
+  <polygon points="120,18 178,50 62,50"  fill="#B8860B" opacity="0.9"/>
+  <rect x="52" y="52" width="136" height="22" rx="2" fill="#D4A574" opacity="0.85"/>
+  <rect x="38" y="76" width="164" height="22" rx="2" fill="#C7B299" opacity="0.85"/>
+  <rect x="22" y="100" width="196" height="22" rx="2" fill="#9CAF88" opacity="0.85"/>
+  <!-- 標籤 -->
+  <text x="120" y="40" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="white" font-weight="bold">DOCG</text>
+  <text x="120" y="67" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">DOC</text>
+  <text x="120" y="91" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">IGT</text>
+  <text x="120" y="115" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="white" font-weight="bold">Vino da Tavola</text>
+  <!-- 底部文字 -->
+  <rect x="10" y="132" width="220" height="20" rx="6" fill="rgba(184,134,11,0.25)"/>
+  <text x="120" y="146" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="rgba(255,220,100,0.9)" font-weight="bold">義大利葡萄酒分級制度</text>
+</svg>

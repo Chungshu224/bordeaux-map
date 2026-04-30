@@ -46,10 +46,13 @@
       <!-- 面板標題（桌機 + 行動） -->
       <div class="layers-panel-header">
         <span>圖層與顯示</span>
-        <button class="layers-panel-close" @click="isMobile ? mobileLayersOpen = false : layersPanelOpen = false" aria-label="收合">✕</button>
+        <button class="btn-collapse-inline" @click="isMobile ? mobileLayersOpen = false : layersPanelOpen = false" title="收合面板">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+          <span class="btn-text">收合</span>
+        </button>
       </div>
-
-      <!-- ── 視角 ── -->
       <div class="layer-group" v-if="map">
         <div class="layer-group-label">視角</div>
         <div class="layer-group-buttons">
@@ -2202,25 +2205,32 @@ const unifiedInfo = computed(() => {
   margin-bottom: 8px;
 }
 
-.layers-panel-close {
+.btn-collapse-inline {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: rgba(138,106,80,0.1);
-  border: none;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+  color: #555;
   cursor: pointer;
-  color: #8a6a50;
-  font-size: 13px;
-  padding: 0;
-  line-height: 1;
-  transition: background 0.15s;
+  font-size: 0.82rem;
+  transition: all 0.2s;
+  flex-shrink: 0;
 }
-.layers-panel-close:hover {
-  background: rgba(138,106,80,0.22);
-  color: #5c3a1e;
+.btn-collapse-inline:hover {
+  background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
+  border-color: #8b3c3c;
+  color: #8b3c3c;
+}
+.btn-collapse-inline svg {
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+.btn-collapse-inline .btn-text {
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
 
 /* 分群組 */
@@ -3064,20 +3074,6 @@ const unifiedInfo = computed(() => {
     padding-bottom: 10px;
     margin-bottom: 10px;
     color: #6b1f1f;
-  }
-
-  .layers-panel-close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: rgba(107,31,31,0.1);
-    color: #6b1f1f;
-    font-size: 13px;
-    cursor: pointer;
-    border: none;
   }
 
   /* 行動版 layer-group: 2 欄並排 */

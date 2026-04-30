@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
+  <defs>
+    <linearGradient id="bg-rheingau" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A3A"/><stop offset="100%" stop-color="#303060"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="90" rx="10" fill="url(#bg-rheingau)"/>
+  
+  <!-- Rhine river -->
+  <rect x="0" y="60" width="220" height="30" fill="rgba(80,140,220,0.25)" rx="0"/>
+  <line x1="0" y1="72" x2="220" y2="68" stroke="rgba(150,200,255,0.2)" stroke-width="2"/>
+  <!-- South-facing slope to Rhine -->
+  <polygon points="0,60 0,18 220,15 220,60" fill="rgba(255,255,255,0.06)"/>
+  <!-- Schloss Johannisberg / Rheingau castle -->
+  <rect x="88" y="30" width="24" height="18" fill="rgba(255,255,255,0.2)"/>
+  <polygon points="86,30 100,18 114,30" fill="rgba(255,255,255,0.28)"/>
+  <rect x="94" y="40" width="5" height="8" fill="rgba(0,0,0,0.28)"/>
+  <rect x="102" y="40" width="5" height="8" fill="rgba(0,0,0,0.25)"/>
+  <rect x="112" y="34" width="5" height="14" fill="rgba(255,255,255,0.16)"/>
+  <!-- Vineyard rows on slope -->
+  <line x1="5" y1="72" x2="82" y2="62" stroke="rgba(255,255,255,0.18)" stroke-width="1.3"/>
+  <line x1="5" y1="62" x2="80" y2="52" stroke="rgba(255,255,255,0.15)" stroke-width="1.1"/>
+  <line x1="5" y1="52" x2="78" y2="42" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="120" y1="70" x2="215" y2="60" stroke="rgba(255,255,255,0.16)" stroke-width="1.2"/>
+  <line x1="122" y1="60" x2="214" y2="50" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <rect x="0" y="70" width="220" height="20" rx="0" fill="rgba(0,0,0,0.3)"/>
+  <text x="12" y="81" font-family="Georgia,serif" font-size="10" fill="white" font-weight="bold">Rheingau</text>
+  <text x="12" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.62)">萊茵河 · 城堡 · 精緻優雅</text>
+</svg>

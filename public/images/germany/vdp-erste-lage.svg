@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="bg-erste-lage" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0A40"/><stop offset="100%" stop-color="#3A1880"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="80" rx="10" fill="url(#bg-erste-lage)"/>
+  
+  <!-- Premium vineyard site - steep south-facing -->
+  <polygon points="0,80 0,30 80,50 160,25 200,40 200,80" fill="rgba(255,255,255,0.08)"/>
+  <!-- VDP marker on slope -->
+  <circle cx="120" cy="36" r="10" fill="rgba(255,220,80,0.3)" stroke="rgba(255,220,80,0.5)" stroke-width="1.5"/>
+  <text x="120" y="40" text-anchor="middle" font-size="10" font-family="Arial">🦅</text>
+  <!-- Terraced rows - visible quality -->
+  <line x1="5" y1="76" x2="100" y2="66" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <line x1="5" y1="66" x2="98" y2="56" stroke="rgba(255,255,255,0.16)" stroke-width="1.3"/>
+  <line x1="5" y1="56" x2="95" y2="46" stroke="rgba(255,255,255,0.13)" stroke-width="1.1"/>
+  <line x1="8" y1="46" x2="90" y2="37" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <!-- 1er Cru marker -->
+  <rect x="148" y="50" width="46" height="18" rx="5" fill="rgba(255,220,80,0.2)"/>
+  <text x="171" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="rgba(255,220,80,0.9)" font-weight="bold">Erste Lage</text>
+  <rect x="0" y="62" width="200" height="18" rx="0" fill="rgba(0,0,0,0.28)"/>
+  <text x="10" y="73" font-family="Georgia,serif" font-size="9.5" fill="white" font-weight="bold">Erste Lage</text>
+  <text x="130" y="73" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.65)">一級園（Premier Cru）</text>
+</svg>

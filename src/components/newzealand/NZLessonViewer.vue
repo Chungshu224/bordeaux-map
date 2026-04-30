@@ -80,6 +80,7 @@
     />
 
     <!-- 舊版首頁區塊已移除，改用 NZLevelSelector（共用 courseHome 版型） -->
+    <WineGlossary region="newzealand" />
   </div>
 </template>
 
@@ -94,6 +95,7 @@ import NZReviewQuiz from './NZReviewQuiz.vue'
 import NZLevelSelector from './NZLevelSelector.vue'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
 import LearningProgressDashboard from '../LearningProgressDashboard.vue'
+import WineGlossary from '../WineGlossary.vue'
 
 const props = defineProps({
   currentLesson: { type: Object, default: null },

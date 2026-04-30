@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <defs>
+    <linearGradient id="bg-amarone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A1275"/>
+      <stop offset="100%" stop-color="#7830A8"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="100" rx="10" fill="url(#bg-amarone)"/>
+  
+  <!-- Fruttai 架子 -->
+  <rect x="28" y="32" width="88" height="2.5" rx="1.5" fill="rgba(255,255,255,0.5)"/>
+  <rect x="28" y="52" width="88" height="2.5" rx="1.5" fill="rgba(255,255,255,0.5)"/>
+  <rect x="28" y="72" width="88" height="2.5" rx="1.5" fill="rgba(255,255,255,0.5)"/>
+  <rect x="28" y="92" width="88" height="2.5" rx="1.5" fill="rgba(255,255,255,0.45)"/>
+  <!-- 架柱 -->
+  <rect x="29" y="32" width="2" height="62" fill="rgba(255,255,255,0.25)"/>
+  <rect x="114" y="32" width="2" height="62" fill="rgba(255,255,255,0.25)"/>
+  <!-- 風乾葡萄串（皺縮） -->
+  <circle cx="42" cy="30" r="5.5" fill="rgba(255,255,255,0.55)"/>
+  <circle cx="54" cy="30" r="5.5" fill="rgba(255,255,255,0.52)"/>
+  <circle cx="66" cy="30" r="5" fill="rgba(255,255,255,0.48)"/>
+  <circle cx="78" cy="30" r="5" fill="rgba(255,255,255,0.45)"/>
+  <circle cx="90" cy="30" r="4.5" fill="rgba(255,255,255,0.42)"/>
+  <circle cx="38" cy="50" r="5.5" fill="rgba(255,255,255,0.48)"/>
+  <circle cx="51" cy="50" r="5.5" fill="rgba(255,255,255,0.45)"/>
+  <circle cx="64" cy="50" r="5" fill="rgba(255,255,255,0.42)"/>
+  <circle cx="76" cy="50" r="5" fill="rgba(255,255,255,0.38)"/>
+  <circle cx="88" cy="50" r="4.5" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="100" cy="50" r="4" fill="rgba(255,255,255,0.30)"/>
+  <!-- 空氣流通箭頭 -->
+  <text x="168" y="40" font-size="18" font-family="Arial" fill="rgba(255,255,255,0.55)" text-anchor="middle">🌬️</text>
+  <!-- 時間標籤 -->
+  <rect x="132" y="58" width="66" height="20" rx="5" fill="rgba(0,0,0,0.25)"/>
+  <text x="165" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="rgba(255,255,255,0.85)" font-weight="bold">3-4 個月</text>
+  <!-- 底部標籤 -->
+  <rect x="4" y="83" width="192" height="14" rx="5" fill="rgba(0,0,0,0.3)"/>
+  <text x="100" y="93" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="white" font-weight="bold">Amarone della Valpolicella</text>
+</svg>

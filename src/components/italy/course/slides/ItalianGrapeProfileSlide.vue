@@ -29,6 +29,7 @@
             <h3>{{ activeGrape.emoji }} {{ activeGrape.name }}</h3>
             <span class="card-tagline">{{ activeGrape.tagline }}</span>
           </div>
+          <img :src="`/images/italy/grape-${activeGrape.key}.svg`" class="igp-cluster-img" :alt="activeGrape.name" />
           <div class="quick-stats">
             <span class="stat"><strong>主產區</strong> {{ activeGrape.mainRegion }}</span>
             <span class="stat"><strong>顏色</strong> {{ activeGrape.color_type }}</span>
@@ -409,6 +410,16 @@ const activeGrape = computed(
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.igp-cluster-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  object-fit: cover;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .card-header h3 {

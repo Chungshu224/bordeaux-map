@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
+  <defs>
+    <linearGradient id="bg-ahr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#200810"/><stop offset="100%" stop-color="#4A1828"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="90" rx="10" fill="url(#bg-ahr)"/>
+  
+  <!-- Narrow volcanic valley -->
+  <polygon points="0,90 0,15 40,40 0,90" fill="rgba(80,20,20,0.22)"/>
+  <polygon points="220,90 220,18 180,42 220,90" fill="rgba(80,20,20,0.20)"/>
+  <!-- Ahr river -->
+  <path d="M0 74 Q55 60 110 72 Q165 82 220 65" stroke="rgba(120,180,255,0.4)" stroke-width="8" fill="none"/>
+  <!-- Volcanic basalt outcrops -->
+  <polygon points="80,72 95,45 110,72" fill="rgba(180,60,40,0.35)"/>
+  <polygon points="100,70 118,42 136,70" fill="rgba(160,50,35,0.28)"/>
+  <!-- Red wine color accent -->
+  <circle cx="60" cy="35" r="10" fill="rgba(160,20,40,0.3)"/>
+  <circle cx="160" cy="30" r="8" fill="rgba(140,18,35,0.25)"/>
+  <!-- Rows -->
+  <line x1="8" y1="80" x2="72" y2="70" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+  <line x1="8" y1="68" x2="70" y2="58" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <line x1="140" y1="78" x2="212" y2="67" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+  <line x1="142" y1="66" x2="210" y2="55" stroke="rgba(255,255,255,0.13)" stroke-width="1"/>
+  <rect x="0" y="70" width="220" height="20" rx="0" fill="rgba(0,0,0,0.3)"/>
+  <text x="12" y="81" font-family="Georgia,serif" font-size="10" fill="white" font-weight="bold">Ahr</text>
+  <text x="12" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.62)">火山岩谷 · 北境黑皮諾 · 最涼</text>
+</svg>

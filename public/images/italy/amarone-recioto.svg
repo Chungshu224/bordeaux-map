@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <defs>
+    <linearGradient id="bg-recioto" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A0A18"/>
+      <stop offset="100%" stop-color="#C02838"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="100" rx="10" fill="url(#bg-recioto)"/>
+  
+  <!-- 甜酒杯（琥珀色） -->
+  <path d="M90 22 L112 22 Q116 46 112 68 L90 68 Q86 46 90 22Z" fill="rgba(200,140,20,0.35)" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"/>
+  <line x1="101" y1="68" x2="101" y2="85" stroke="rgba(255,255,255,0.55)" stroke-width="2.5"/>
+  <line x1="87" y1="85" x2="115" y2="85" stroke="rgba(255,255,255,0.55)" stroke-width="2.5"/>
+  <!-- 甜酒液（琥珀） -->
+  <path d="M90 50 Q100 58 112 68 L90 68 Q89 60 90 50Z" fill="rgba(220,160,30,0.6)"/>
+  <!-- 糖分結晶 -->
+  <circle cx="50" cy="38" r="5" fill="rgba(255,210,50,0.7)"/>
+  <circle cx="60" cy="52" r="4" fill="rgba(255,210,50,0.65)"/>
+  <circle cx="50" cy="64" r="4.5" fill="rgba(255,210,50,0.6)"/>
+  <circle cx="62" cy="72" r="3.5" fill="rgba(255,210,50,0.55)"/>
+  <circle cx="40" cy="55" r="3" fill="rgba(255,210,50,0.5)"/>
+  <!-- 甜字標記 -->
+  <text x="140" y="50" font-size="16" font-family="Arial" fill="rgba(255,210,80,0.7)" text-anchor="middle">🍯</text>
+  <text x="143" y="68" font-size="14" font-family="Arial" fill="rgba(255,210,80,0.6)" text-anchor="middle">✨</text>
+  <!-- 底部標籤 -->
+  <rect x="4" y="83" width="192" height="14" rx="5" fill="rgba(0,0,0,0.3)"/>
+  <text x="100" y="93" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="white" font-weight="bold">Recioto della Valpolicella</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
+  <defs>
+    <linearGradient id="bg-saar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102840"/><stop offset="100%" stop-color="#1E4870"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="90" rx="10" fill="url(#bg-saar)"/>
+  
+  <!-- Narrower, cooler valley -->
+  <path d="M0 70 Q55 55 110 68 Q165 80 220 60" stroke="rgba(80,150,230,0.45)" stroke-width="10" fill="none"/>
+  <!-- Steep forested sides -->
+  <polygon points="0,90 0,10 40,35 0,90" fill="rgba(20,60,20,0.25)"/>
+  <polygon points="220,90 220,12 180,38 220,90" fill="rgba(20,60,20,0.22)"/>
+  <!-- Cool temperature effect: more mist -->
+  <ellipse cx="110" cy="55" rx="60" ry="10" fill="rgba(220,235,255,0.08)"/>
+  <!-- Scharzhofberg vineyard profile -->
+  <polygon points="70,90 80,22 130,50 150,90" fill="rgba(60,90,140,0.2)"/>
+  <!-- Rows on steep slope -->
+  <line x1="72" y1="82" x2="128" y2="70" stroke="rgba(255,255,255,0.18)" stroke-width="1.3"/>
+  <line x1="74" y1="72" x2="126" y2="58" stroke="rgba(255,255,255,0.15)" stroke-width="1.1"/>
+  <line x1="76" y1="62" x2="122" y2="48" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <line x1="78" y1="52" x2="118" y2="38" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+  <!-- Ice crystal: cold climate hint -->
+  <text x="185" y="28" font-size="12" font-family="Arial" fill="rgba(180,220,255,0.5)" text-anchor="middle">❄️</text>
+  <rect x="0" y="70" width="220" height="20" rx="0" fill="rgba(0,0,0,0.3)"/>
+  <text x="12" y="81" font-family="Georgia,serif" font-size="10" fill="white" font-weight="bold">Saar</text>
+  <text x="12" y="88" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.62)">最涼峭 · 礦物尖銳 · 鋼鐵酸度</text>
+</svg>
