@@ -7,8 +7,8 @@
         <div class="nav-logo" @click="scrollToTop">
           <span class="logo-icon">🍷</span>
           <div>
-            <div class="logo-title">侍酒師的筆記本</div>
-            <div class="logo-sub">The Sommelier's Notebook</div>
+            <div class="logo-title">{{ $t('home.nav.brand') }}</div>
+            <div class="logo-sub">{{ $t('home.nav.brandSub') }}</div>
           </div>
         </div>
 
@@ -16,28 +16,28 @@
         <div class="nav-actions nav-desktop">
           <template v-if="authUser">
             <span class="nav-greeting">{{ displayName }}</span>
-            <router-link v-if="isAdmin" to="/admin" class="btn-nav admin-nav-btn">⚙️ 管理頁面</router-link>
-            <router-link to="/bordeaux" class="btn-nav primary">進入課程</router-link>
-            <router-link to="/dashboard" class="btn-nav">我的訂單</router-link>
-            <button class="btn-nav ghost" @click="handleLogout">登出</button>
+            <router-link v-if="isAdmin" to="/admin" class="btn-nav admin-nav-btn">{{ $t('home.nav.adminLink') }}</router-link>
+            <router-link to="/bordeaux" class="btn-nav primary">{{ $t('home.nav.enterCourse') }}</router-link>
+            <router-link to="/dashboard" class="btn-nav">{{ $t('home.nav.myOrders') }}</router-link>
+            <button class="btn-nav ghost" @click="handleLogout">{{ $t('home.nav.logout') }}</button>
           </template>
           <template v-else>
-            <router-link to="/login"    class="btn-nav">登入</router-link>
-            <router-link to="/register" class="btn-nav primary">免費開始</router-link>
+            <router-link to="/login"    class="btn-nav">{{ $t('home.nav.login') }}</router-link>
+            <router-link to="/register" class="btn-nav primary">{{ $t('home.nav.startFree') }}</router-link>
           </template>
         </div>
 
         <!-- 手機導覽 -->
         <div class="nav-mobile">
           <template v-if="authUser">
-            <router-link to="/bordeaux" class="btn-nav primary btn-mobile-cta">課程</router-link>
+            <router-link to="/bordeaux" class="btn-nav primary btn-mobile-cta">{{ $t('home.nav.courseMobile') }}</router-link>
             <button class="nav-hamburger" @click="showMobileMenu = !showMobileMenu" :class="{ active: showMobileMenu }">
               <span></span><span></span><span></span>
             </button>
           </template>
           <template v-else>
-            <router-link to="/login" class="btn-nav btn-mobile-login">登入</router-link>
-            <router-link to="/register" class="btn-nav primary btn-mobile-cta">免費開始</router-link>
+            <router-link to="/login" class="btn-nav btn-mobile-login">{{ $t('home.nav.login') }}</router-link>
+            <router-link to="/register" class="btn-nav primary btn-mobile-cta">{{ $t('home.nav.startFree') }}</router-link>
           </template>
         </div>
       </div>
@@ -49,10 +49,10 @@
       <div v-if="showMobileMenu" class="nav-mobile-dropdown" @click="showMobileMenu = false">
         <div class="nmd-inner" @click.stop>
           <div v-if="authUser" class="nmd-user">👤 {{ displayName }}</div>
-          <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">⚙️ 管理頁面</router-link>
-          <router-link to="/bordeaux" class="nmd-item nmd-primary" @click="showMobileMenu = false">📚 進入課程</router-link>
-          <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">📋 我的訂單</router-link>
-          <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">🚪 登出</button>
+          <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.adminLink') }}</router-link>
+          <router-link to="/bordeaux" class="nmd-item nmd-primary" @click="showMobileMenu = false">{{ $t('home.nav.enterCourseMobile') }}</router-link>
+          <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.myOrdersMobile') }}</router-link>
+          <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">{{ $t('home.nav.logoutMobile') }}</button>
         </div>
       </div>
     </transition>
@@ -68,7 +68,7 @@
           <strong v-if="activeBanner.title" class="ann-banner-title">{{ activeBanner.title }}</strong>
           <span class="ann-banner-content">{{ activeBanner.content }}</span>
         </div>
-        <button class="ann-banner-close" @click="dismissBanner(activeBanner.id)" aria-label="關閉公告">✕</button>
+        <button class="ann-banner-close" @click="dismissBanner(activeBanner.id)" :aria-label="$t('home.ann.closeLabel')">✕</button>
       </div>
     </transition>
 
@@ -85,9 +85,9 @@
           <div class="ann-modal-footer">
             <label class="ann-no-today">
               <input type="checkbox" v-model="noTodayCheck" />
-              今日不再顯示
+              {{ $t('home.ann.noToday') }}
             </label>
-            <button class="ann-modal-ok" @click="dismissModal">我知道了</button>
+            <button class="ann-modal-ok" @click="dismissModal">{{ $t('home.ann.ok') }}</button>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@
         </p>
         <!-- 已登入：顯示課程入口 -->
         <div v-if="authUser" class="hero-cta logged-in-cta">
-          <div class="course-entry-title">歡迎回來，{{ displayName }}！選擇課程繼續學習</div>
+          <div class="course-entry-title">{{ $t('home.hero.welcomeBack', { name: displayName }) }}</div>
           <div class="course-entry-groups">
             <div v-for="group in visibleCoursesByGroup" :key="group.label" class="ceg-row">
               <span class="ceg-label">{{ group.label }}</span>
@@ -125,25 +125,25 @@
           </div>
           <div class="cta-btns">
             <button class="cta-primary" @click="handleStartFree">
-              🚀 免費開始學習
+              {{ $t('home.hero.ctaStartFree') }}
             </button>
             <button class="cta-secondary" @click="goToPricing">
-              💎 查看訂閱方案
+              {{ $t('home.hero.ctaViewPlans') }}
             </button>
             <button class="cta-tertiary" @click="scrollToCourses">
-              查看所有課程 ↓
+              {{ $t('home.hero.ctaViewAll') }}
             </button>
           </div>
-          <p class="cta-trust">免費註冊・無需信用卡・ Level 1 內容全面開放</p>
+          <p class="cta-trust">{{ $t('home.hero.trust') }}</p>
         </div>
         <div class="hero-stats">
-          <div class="stat-item"><span class="stat-num">{{ visibleCourseCount }}</span><span class="stat-label">世界產區</span></div>
+          <div class="stat-item"><span class="stat-num">{{ visibleCourseCount }}</span><span class="stat-label">{{ $t('home.hero.stats.regions') }}</span></div>
           <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">學習等級</span></div>
+          <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">{{ $t('home.hero.stats.levels') }}</span></div>
           <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">200+</span><span class="stat-label">互動練習題</span></div>
+          <div class="stat-item"><span class="stat-num">200+</span><span class="stat-label">{{ $t('home.hero.stats.exercises') }}</span></div>
           <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">NT$290</span><span class="stat-label">完整課程起/月</span></div>
+          <div class="stat-item"><span class="stat-num">NT$290</span><span class="stat-label">{{ $t('home.hero.stats.priceFrom') }}</span></div>
         </div>
       </div>
     </section>
@@ -152,15 +152,15 @@
     <section class="courses-section" ref="coursesRef">
       <div class="section-inner">
         <div class="section-header">
-          <h2>探索世界產區</h2>
-          <p>每個產區獨立課程，結合互動衛星地圖・分級測驗・品飲筆記，系統化建立葡萄酒知識</p>
+          <h2>{{ $t('home.courses.sectionTitle') }}</h2>
+          <p>{{ $t('home.courses.sectionDesc') }}</p>
         </div>
 
       <!-- ── 法國 France ── -->
       <div class="region-group">
         <div class="region-group-header">
           <span class="rg-icon">🇫🇷</span>
-          <span class="rg-name">法國</span>
+          <span class="rg-name">{{ $t('home.courses.groups.france') }}</span>
           <span class="rg-en">France</span>
         </div>
         <div class="courses-grid">
@@ -168,14 +168,14 @@
           <!-- ── Bordeaux ── -->
           <div v-if="courseShowHome['bordeaux'] || isAdmin" class="course-card bordeaux">
             <div :class="['card-status', courseStatuses.bordeaux ? 'available' : 'planning']">
-              {{ courseStatuses.bordeaux ? '✅ 現已開放' : '📅 課程規劃中' }}
+              {{ courseStatuses.bordeaux ? $t('home.courses.bordeaux.statusActive') : $t('home.courses.bordeaux.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🏰</div>
               <div class="card-region">France · Bordeaux</div>
-              <h3 class="card-title">波爾多葡萄酒</h3>
-              <p class="card-desc">全方位波爾多產區學習：左岸右岸AOC分級、五大酒莊、年份氣候分析，以及互動式地圖深度探索</p>
-              <button class="course-detail-btn" @click="openCourseDetail('bordeaux')">📋 課程說明</button>
+              <h3 class="card-title">{{ $t('home.courses.bordeaux.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.bordeaux.desc') }}</p>
+              <button class="course-detail-btn" @click="openCourseDetail('bordeaux')">{{ $t('home.courses.bordeaux.courseDetailBtn') }}</button>
             </div>
 
             <div class="course-includes">
@@ -185,10 +185,10 @@
             </div>
 
             <div class="card-pricing-cta">
-              <div class="cpc-hint">完整課程 NT$290/月起・免費體驗 Level 1・全通行證 NT$590/月解鎖 8 大產區</div>
+              <div class="cpc-hint">{{ $t('home.courses.bordeaux.priceHint') }}</div>
               <div class="cpc-actions">
-                <button class="cpc-btn-free" @click="handleFreeTier">免費開始</button>
-                <button class="cpc-btn-plan" @click="goToPricing">查看訂閱方案 →</button>
+                <button class="cpc-btn-free" @click="handleFreeTier">{{ $t('home.courses.bordeaux.startFreeBtn') }}</button>
+                <button class="cpc-btn-plan" @click="goToPricing">{{ $t('home.courses.bordeaux.viewPlansBtn') }} →</button>
               </div>
             </div>
           </div>
@@ -196,44 +196,44 @@
           <!-- ── Bourgogne ── -->
           <div v-if="courseShowHome['bourgogne'] || isAdmin" class="course-card bourgogne">
             <div :class="['card-status', courseStatuses.bourgogne ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.bourgogne ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.bourgogne ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🍇</div>
               <div class="card-region">France · Bourgogne</div>
-              <h3 class="card-title">布根地葡萄酒</h3>
-              <p class="card-desc">從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界（預計2027開放）</p>
+              <h3 class="card-title">{{ $t('home.courses.bourgogne.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.bourgogne.desc') }}</p>
             </div>
             <!-- 課程深度預覽 -->
             <div class="course-preview-strip">
               <div class="cp-stat">
                 <span class="cp-num">4</span>
-                <span class="cp-label">階段課程<br>L1 – L4</span>
+                <span class="cp-label" v-html="$t('home.courses.bourgogne.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">33</span>
-                <span class="cp-label">Grand Cru<br>產區地圖</span>
+                <span class="cp-label" v-html="$t('home.courses.bourgogne.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">2</span>
-                <span class="cp-label">地質·氣候<br>進階圖層</span>
+                <span class="cp-label" v-html="$t('home.courses.bourgogne.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">60<span class="cp-plus">+</span></span>
-                <span class="cp-label">Pinot Noir<br>產區課</span>
+                <span class="cp-label" v-html="$t('home.courses.bourgogne.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features">
-              <span class="cpf-item">✔ 144+ Premier Cru 一級園地圖</span>
-              <span class="cpf-item">✔ 山坡 · 土壤層次分析</span>
-              <span class="cpf-item">✔ 氣候影響與年份差異解讀</span>
+              <span class="cpf-item">✔ {{ $t('home.courses.bourgogne.f1') }}</span>
+              <span class="cpf-item">✔ {{ $t('home.courses.bourgogne.f2') }}</span>
+              <span class="cpf-item">✔ {{ $t('home.courses.bourgogne.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.bourgogne" class="btn-enter-course" @click="router.push('/bourgogne')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.bourgogne" class="btn-enter-course" @click="router.push('/bourgogne')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
 
           </div>
@@ -241,43 +241,43 @@
           <!-- ── Loire ── -->
           <div v-if="courseShowHome['loire'] || isAdmin" class="course-card loire">
             <div :class="['card-status', courseStatuses.loire ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.loire ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.loire ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🌿</div>
               <div class="card-region">France · Loire Valley</div>
-              <h3 class="card-title">羅亞爾河谷葡萄酒</h3>
-              <p class="card-desc">法國最長的葡萄酒產區，從大西洋 Muscadet 到礦石 Sancerre，800 公里的葡萄酒王國，涵蓋氣泡酒、白酒、紅酒到甜酒的完整風格版圖</p>
+              <h3 class="card-title">{{ $t('home.courses.loire.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.loire.desc') }}</p>
             </div>
             <div class="course-preview-strip loire-strip">
               <div class="cp-stat">
                 <span class="cp-num">13</span>
-                <span class="cp-label">主要<br>產區</span>
+                <span class="cp-label" v-html="$t('home.courses.loire.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">800</span>
-                <span class="cp-label">公里<br>河流</span>
+                <span class="cp-label" v-html="$t('home.courses.loire.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">SB</span>
-                <span class="cp-label">旗艦<br>品種</span>
+                <span class="cp-label" v-html="$t('home.courses.loire.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">3+</span>
-                <span class="cp-label">課程<br>等級</span>
+                <span class="cp-label" v-html="$t('home.courses.loire.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features loire-features">
-              <span class="cpf-item loire-tag">✔ 13 產區互動衛星地圖</span>
-              <span class="cpf-item loire-tag">✔ Sancerre / Pouilly-Fumé 礦石白酒</span>
-              <span class="cpf-item loire-tag">✔ Vouvray / Chinon 貴腐甜酒與紅酒</span>
+              <span class="cpf-item loire-tag">✔ {{ $t('home.courses.loire.f1') }}</span>
+              <span class="cpf-item loire-tag">✔ {{ $t('home.courses.loire.f2') }}</span>
+              <span class="cpf-item loire-tag">✔ {{ $t('home.courses.loire.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.loire" class="btn-enter-course" @click="router.push('/loire')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.loire" class="btn-enter-course" @click="router.push('/loire')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
           </div>
 
@@ -288,7 +288,7 @@
       <div class="region-group">
         <div class="region-group-header">
           <span class="rg-icon">🏛️</span>
-          <span class="rg-name">舊世界</span>
+          <span class="rg-name">{{ $t('home.courses.groups.oldWorld') }}</span>
           <span class="rg-en">Old World</span>
         </div>
         <div class="courses-grid">
@@ -296,44 +296,44 @@
           <!-- ── Italy ── -->
           <div v-if="courseShowHome['italy'] || isAdmin" class="course-card italy">
             <div :class="['card-status', courseStatuses.italy ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.italy ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.italy ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🇮🇹</div>
               <div class="card-region">Italy</div>
-              <h3 class="card-title">義大利葡萄酒</h3>
-              <p class="card-desc">探索 Barolo、Brunello、Amarone 等世界頂級義大利葡萄酒，20 個 DOC/DOCG 產區完整解析（預計2027開放）</p>
+              <h3 class="card-title">{{ $t('home.courses.italy.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.italy.desc') }}</p>
             </div>
             <!-- 課程深度預覽 -->
             <div class="course-preview-strip italy-strip">
               <div class="cp-stat">
                 <span class="cp-num">3</span>
-                <span class="cp-label">階段課程<br>L1 – L3</span>
+                <span class="cp-label" v-html="$t('home.courses.italy.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">66</span>
-                <span class="cp-label">堂課內容<br>完整課程</span>
+                <span class="cp-label" v-html="$t('home.courses.italy.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">20</span>
-                <span class="cp-label">大產區<br>DOC/DOCG</span>
+                <span class="cp-label" v-html="$t('home.courses.italy.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">425</span>
-                <span class="cp-label">產區地圖<br></span>
+                <span class="cp-label" v-html="$t('home.courses.italy.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features italy-features">
-              <span class="cpf-item italy-tag">✔ Barolo / Barbaresco 酒區精確邊界</span>
-              <span class="cpf-item italy-tag">✔ Nebbiolo / Sangiovese 品種比較</span>
-              <span class="cpf-item italy-tag">✔ DOC → DOCG 分級演變課</span>
+              <span class="cpf-item italy-tag">✔ {{ $t('home.courses.italy.f1') }}</span>
+              <span class="cpf-item italy-tag">✔ {{ $t('home.courses.italy.f2') }}</span>
+              <span class="cpf-item italy-tag">✔ {{ $t('home.courses.italy.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.italy" class="btn-enter-course" @click="router.push('/italy')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.italy" class="btn-enter-course" @click="router.push('/italy')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
 
           </div>
@@ -341,44 +341,44 @@
           <!-- ── Spain ── -->
           <div v-if="courseShowHome['spain'] || isAdmin" class="course-card spain">
             <div :class="['card-status', courseStatuses.spain ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.spain ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.spain ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🇪🇸</div>
               <div class="card-region">Spain · España</div>
-              <h3 class="card-title">西班牙葡萄酒</h3>
-              <p class="card-desc">探索 Rioja、Ribera del Duero、Rías Baixas 等頂級產區，DO／DOCa／VP 分級完整解析，互動衛星地圖帶你走遍 96 個法定產區</p>
+              <h3 class="card-title">{{ $t('home.courses.spain.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.spain.desc') }}</p>
             </div>
             <!-- 課程深度預覽 -->
             <div class="course-preview-strip spain-strip">
               <div class="cp-stat">
                 <span class="cp-num">4</span>
-                <span class="cp-label">階段課程<br>L1 – L4</span>
+                <span class="cp-label" v-html="$t('home.courses.spain.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">96</span>
-                <span class="cp-label">法定產區<br>DO 地圖</span>
+                <span class="cp-label" v-html="$t('home.courses.spain.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">6</span>
-                <span class="cp-label">種互動<br>練習遊戲</span>
+                <span class="cp-label" v-html="$t('home.courses.spain.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">62</span>
-                <span class="cp-label">產區地圖<br></span>
+                <span class="cp-label" v-html="$t('home.courses.spain.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features spain-features">
-              <span class="cpf-item spain-tag">✔ 96 個 DO 衛星地圖完整標記</span>
-              <span class="cpf-item spain-tag">✔ Tempranillo / Garnacha 深度解析</span>
-              <span class="cpf-item spain-tag">✔ Sherry / Cava 特殊酒型專課</span>
+              <span class="cpf-item spain-tag">✔ {{ $t('home.courses.spain.f1') }}</span>
+              <span class="cpf-item spain-tag">✔ {{ $t('home.courses.spain.f2') }}</span>
+              <span class="cpf-item spain-tag">✔ {{ $t('home.courses.spain.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.spain" class="btn-enter-course" @click="router.push('/spain')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.spain" class="btn-enter-course" @click="router.push('/spain')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
 
           </div>
@@ -386,43 +386,43 @@
           <!-- ── Germany ── -->
           <div v-if="courseShowHome['germany'] || isAdmin" class="course-card germany">
             <div :class="['card-status', courseStatuses.germany ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.germany ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.germany ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🇩🇪</div>
               <div class="card-region">Germany · Deutschland</div>
-              <h3 class="card-title">德國葡萄酒</h3>
-              <p class="card-desc">深入探索 13 個 Anbaugebiete，從 Mosel 的陡峭板岩到 Rheingau 的優雅 Riesling，葡萄園衛星地圖帶你走遍德國頂級 Weinberg</p>
+              <h3 class="card-title">{{ $t('home.courses.germany.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.germany.desc') }}</p>
             </div>
             <div class="course-preview-strip germany-strip">
               <div class="cp-stat">
                 <span class="cp-num">13</span>
-                <span class="cp-label">法定產區<br>Anbaugebiet</span>
+                <span class="cp-label" v-html="$t('home.courses.germany.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">Riesling</span>
-                <span class="cp-label">核心品種<br></span>
+                <span class="cp-label" v-html="$t('home.courses.germany.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">QmP</span>
-                <span class="cp-label">分級系統<br>探索</span>
+                <span class="cp-label" v-html="$t('home.courses.germany.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">衛星</span>
-                <span class="cp-label">葡萄園<br>地圖</span>
+                <span class="cp-label" v-html="$t('home.courses.germany.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features germany-features">
-              <span class="cpf-item germany-tag">✔ 13 個 Anbaugebiete 衛星地圖</span>
-              <span class="cpf-item germany-tag">✔ Mosel 陡坡 Riesling 深度解析</span>
-              <span class="cpf-item germany-tag">✔ Kabinett → TBA 甜度分級</span>
+              <span class="cpf-item germany-tag">✔ {{ $t('home.courses.germany.f1') }}</span>
+              <span class="cpf-item germany-tag">✔ {{ $t('home.courses.germany.f2') }}</span>
+              <span class="cpf-item germany-tag">✔ {{ $t('home.courses.germany.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.germany" class="btn-enter-course" @click="router.push('/germany')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.germany" class="btn-enter-course" @click="router.push('/germany')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
 
           </div>
@@ -430,43 +430,43 @@
           <!-- ── Portugal ── -->
           <div v-if="courseShowHome['portugal'] || isAdmin" class="course-card portugal">
             <div :class="['card-status', courseStatuses.portugal ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.portugal ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.portugal ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🇵🇹</div>
               <div class="card-region">Portugal · Vinho</div>
-              <h3 class="card-title">葡萄牙葡萄酒</h3>
-              <p class="card-desc">探索 31 個 DOC 法定產區，從北部的 Vinho Verde 清爽綠酒到南部的 Alentejo 濃郁紅酒，互動衛星地圖帶你認識波特酒的故鄉</p>
+              <h3 class="card-title">{{ $t('home.courses.portugal.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.portugal.desc') }}</p>
             </div>
             <div class="course-preview-strip portugal-strip">
               <div class="cp-stat">
                 <span class="cp-num">31</span>
-                <span class="cp-label">DOC 法定<br>產區</span>
+                <span class="cp-label" v-html="$t('home.courses.portugal.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">Porto</span>
-                <span class="cp-label">波特酒<br>核心</span>
+                <span class="cp-label" v-html="$t('home.courses.portugal.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">Touriga</span>
-                <span class="cp-label">代表品種<br>探索</span>
+                <span class="cp-label" v-html="$t('home.courses.portugal.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">衛星</span>
-                <span class="cp-label">互動<br>地圖</span>
+                <span class="cp-label" v-html="$t('home.courses.portugal.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features portugal-features">
-              <span class="cpf-item portugal-tag">✔ 全葡 31 個 DOC 互動地圖</span>
-              <span class="cpf-item portugal-tag">✔ Douro 梯田波特酒產區深度解析</span>
-              <span class="cpf-item portugal-tag">✔ Madeira 島嶼加強酒探索</span>
+              <span class="cpf-item portugal-tag">✔ {{ $t('home.courses.portugal.f1') }}</span>
+              <span class="cpf-item portugal-tag">✔ {{ $t('home.courses.portugal.f2') }}</span>
+              <span class="cpf-item portugal-tag">✔ {{ $t('home.courses.portugal.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.portugal" class="btn-enter-course" @click="router.push('/portugal')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.portugal" class="btn-enter-course" @click="router.push('/portugal')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
 
           </div>
@@ -474,43 +474,43 @@
           <!-- ── Hungary ── -->
           <div v-if="courseShowHome['hungary'] || isAdmin" class="course-card hungary">
             <div :class="['card-status', courseStatuses.hungary ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.hungary ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.hungary ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🇭🇺</div>
               <div class="card-region">Hungary · Magyarország</div>
-              <h3 class="card-title">匈牙利葡萄酒</h3>
-              <p class="card-desc">探索 Tokaji Aszú 貴腐酒的傳奇故鄉，從 22 個法定產區到 Furmint 旗艦品種，深入解析匈牙利五級甜度系統與舊世界釀酒文化</p>
+              <h3 class="card-title">{{ $t('home.courses.hungary.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.hungary.desc') }}</p>
             </div>
             <div class="course-preview-strip hungary-strip">
               <div class="cp-stat">
                 <span class="cp-num">22</span>
-                <span class="cp-label">法定<br>產區</span>
+                <span class="cp-label" v-html="$t('home.courses.hungary.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">Tokaji</span>
-                <span class="cp-label">頂級<br>甜酒</span>
+                <span class="cp-label" v-html="$t('home.courses.hungary.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">5</span>
-                <span class="cp-label">甜度<br>等級</span>
+                <span class="cp-label" v-html="$t('home.courses.hungary.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">Furmint</span>
-                <span class="cp-label">旗艦<br>品種</span>
+                <span class="cp-label" v-html="$t('home.courses.hungary.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features hungary-features">
-              <span class="cpf-item hungary-tag">✔ 22 法定產區互動衛星地圖</span>
-              <span class="cpf-item hungary-tag">✔ Tokaji Aszú 貴腐甜酒完整解析</span>
-              <span class="cpf-item hungary-tag">✔ Eger 公牛血紅酒與 Furmint 品種</span>
+              <span class="cpf-item hungary-tag">✔ {{ $t('home.courses.hungary.f1') }}</span>
+              <span class="cpf-item hungary-tag">✔ {{ $t('home.courses.hungary.f2') }}</span>
+              <span class="cpf-item hungary-tag">✔ {{ $t('home.courses.hungary.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.hungary" class="btn-enter-course" @click="router.push('/hungary')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.hungary" class="btn-enter-course" @click="router.push('/hungary')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
           </div>
 
@@ -521,7 +521,7 @@
       <div class="region-group">
         <div class="region-group-header">
           <span class="rg-icon">🌏</span>
-          <span class="rg-name">新世界</span>
+          <span class="rg-name">{{ $t('home.courses.groups.newWorld') }}</span>
           <span class="rg-en">New World</span>
         </div>
         <div class="courses-grid">
@@ -529,43 +529,43 @@
           <!-- ── Australia ── -->
           <div v-if="courseShowHome['australia'] || isAdmin" class="course-card australia">
             <div :class="['card-status', courseStatuses.australia ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.australia ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.australia ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🦘</div>
               <div class="card-region">Australia · Down Under</div>
-              <h3 class="card-title">澳洲葡萄酒</h3>
-              <p class="card-desc">探索 65+ GI 產區，從炎熱的 Barossa Valley 百年老藤到涼爽的 Tasmania 氣泡酒聖地，互動衛星地圖帶你認識新世界葡萄酒巨人</p>
+              <h3 class="card-title">{{ $t('home.courses.australia.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.australia.desc') }}</p>
             </div>
             <div class="course-preview-strip australia-strip">
               <div class="cp-stat">
                 <span class="cp-num">65+</span>
-                <span class="cp-label">GI<br>產區</span>
+                <span class="cp-label" v-html="$t('home.courses.australia.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">6</span>
-                <span class="cp-label">產酒<br>州</span>
+                <span class="cp-label" v-html="$t('home.courses.australia.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">Shiraz</span>
-                <span class="cp-label">旗艦<br>品種</span>
+                <span class="cp-label" v-html="$t('home.courses.australia.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">100+</span>
-                <span class="cp-label">年<br>老藤</span>
+                <span class="cp-label" v-html="$t('home.courses.australia.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features australia-features">
-              <span class="cpf-item australia-tag">✔ 六州 65+ 產區互動衛星地圖</span>
-              <span class="cpf-item australia-tag">✔ Barossa 老藤 Shiraz 深度解析</span>
-              <span class="cpf-item australia-tag">✔ Tasmania 頂級氣泡酒與 Pinot Noir</span>
+              <span class="cpf-item australia-tag">✔ {{ $t('home.courses.australia.f1') }}</span>
+              <span class="cpf-item australia-tag">✔ {{ $t('home.courses.australia.f2') }}</span>
+              <span class="cpf-item australia-tag">✔ {{ $t('home.courses.australia.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.australia" class="btn-enter-course" @click="router.push('/australia')">{{ isAdmin ? '管理員進入' : '進入探索' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.australia" class="btn-enter-course" @click="router.push('/australia')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
 
           </div>
@@ -573,43 +573,43 @@
           <!-- ── New Zealand ── -->
           <div v-if="courseShowHome['newzealand'] || isAdmin" class="course-card newzealand">
             <div :class="['card-status', courseStatuses.newzealand ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.newzealand ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.newzealand ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🥝</div>
               <div class="card-region">New Zealand · Clean & Green</div>
-              <h3 class="card-title">紐西蘭葡萄酒</h3>
-              <p class="card-desc">從 Marlborough 的 Sauvignon Blanc 到 Central Otago 的 Pinot Noir，探索南北兩島 17 個產區，互動衛星地圖帶你深入了解純淨大地的葡萄酒</p>
+              <h3 class="card-title">{{ $t('home.courses.newzealand.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.newzealand.desc') }}</p>
             </div>
             <div class="course-preview-strip newzealand-strip">
               <div class="cp-stat">
                 <span class="cp-num">17</span>
-                <span class="cp-label">葡萄酒<br>產區</span>
+                <span class="cp-label" v-html="$t('home.courses.newzealand.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">2</span>
-                <span class="cp-label">主要<br>島嶼</span>
+                <span class="cp-label" v-html="$t('home.courses.newzealand.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">SB</span>
-                <span class="cp-label">旗艦<br>品種</span>
+                <span class="cp-label" v-html="$t('home.courses.newzealand.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">3+</span>
-                <span class="cp-label">課程<br>等級</span>
+                <span class="cp-label" v-html="$t('home.courses.newzealand.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features newzealand-features">
-              <span class="cpf-item newzealand-tag">✔ 17 產區互動衛星地圖</span>
-              <span class="cpf-item newzealand-tag">✔ Marlborough SB 品種深度解析</span>
-              <span class="cpf-item newzealand-tag">✔ Central Otago Pinot Noir 產區</span>
+              <span class="cpf-item newzealand-tag">✔ {{ $t('home.courses.newzealand.f1') }}</span>
+              <span class="cpf-item newzealand-tag">✔ {{ $t('home.courses.newzealand.f2') }}</span>
+              <span class="cpf-item newzealand-tag">✔ {{ $t('home.courses.newzealand.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.newzealand" class="btn-enter-course" @click="router.push('/newzealand')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.newzealand" class="btn-enter-course" @click="router.push('/newzealand')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
 
           </div>
@@ -617,43 +617,43 @@
           <!-- ── California ── -->
           <div v-if="courseShowHome['california'] || isAdmin" class="course-card california">
             <div :class="['card-status', courseStatuses.california ? 'active' : 'planning']">
-              {{ isAdmin ? '🔓 管理員開放' : courseStatuses.california ? '✅ 開放中' : '📅 課程規劃中' }}
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.california ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🍷</div>
               <div class="card-region">United States · California</div>
-              <h3 class="card-title">加州葡萄酒</h3>
-              <p class="card-desc">從 Napa Valley 的頂級 Cabernet Sauvignon 到 Sonoma 的精緻 Pinot Noir，探索 154+ AVA 產區，深入了解巴黎品酒會震驚世界的葡萄酒大國</p>
+              <h3 class="card-title">{{ $t('home.courses.california.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.california.desc') }}</p>
             </div>
             <div class="course-preview-strip california-strip">
               <div class="cp-stat">
                 <span class="cp-num">154+</span>
-                <span class="cp-label">AVA<br>產區</span>
+                <span class="cp-label" v-html="$t('home.courses.california.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">8</span>
-                <span class="cp-label">課程<br>章節</span>
+                <span class="cp-label" v-html="$t('home.courses.california.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">Cab</span>
-                <span class="cp-label">旗艦<br>品種</span>
+                <span class="cp-label" v-html="$t('home.courses.california.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">2+</span>
-                <span class="cp-label">課程<br>等級</span>
+                <span class="cp-label" v-html="$t('home.courses.california.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features california-features">
-              <span class="cpf-item california-tag">✔ 154+ AVA 互動衛星地圖</span>
-              <span class="cpf-item california-tag">✔ Napa Valley 16 子產區深度解析</span>
-              <span class="cpf-item california-tag">✔ 1976 巴黎品酒會歷史</span>
+              <span class="cpf-item california-tag">✔ {{ $t('home.courses.california.f1') }}</span>
+              <span class="cpf-item california-tag">✔ {{ $t('home.courses.california.f2') }}</span>
+              <span class="cpf-item california-tag">✔ {{ $t('home.courses.california.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.california" class="btn-enter-course" @click="router.push('/california/course')">{{ isAdmin ? '管理員進入' : '進入課程' }} →</button>
-              <span v-else class="planning-cta">📅 即將開放</span>
+              <button v-if="courseStatuses.california" class="btn-enter-course" @click="router.push('/california/course')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
             </div>
 
           </div>
@@ -668,7 +668,7 @@
     <section class="features-section">
       <div class="section-inner">
         <div class="section-header">
-          <h2>為什麼選擇侍酒師的筆記本？</h2>
+          <h2>{{ $t('home.features.sectionTitle') }}</h2>
         </div>
         <div class="features-grid">
           <div class="feature-item" v-for="f in features" :key="f.title">
@@ -684,7 +684,7 @@
     <section class="faq-section">
       <div class="section-inner">
         <div class="section-header">
-          <h2>常見問題</h2>
+          <h2>{{ $t('home.faq.sectionTitle') }}</h2>
         </div>
         <div class="faq-list">
           <div class="faq-item" v-for="(faq, i) in faqs" :key="i" @click="toggleFaq(i)">
@@ -702,12 +702,12 @@
     <section class="forum-preview-section">
       <div class="section-inner">
         <div class="section-heading">
-          <span class="sh-eyebrow">COMMUNITY</span>
-          <h2>💬 學員討論區</h2>
-          <p>與其他學員分享品酒心得，互相解惑、共同進步</p>
+          <span class="sh-eyebrow">{{ $t('home.forum.eyebrow') }}</span>
+          <h2>{{ $t('home.forum.title') }}</h2>
+          <p>{{ $t('home.forum.desc') }}</p>
         </div>
 
-        <div v-if="forumLoading" class="fp-loading">載入中…</div>
+        <div v-if="forumLoading" class="fp-loading">{{ $t('home.forum.loading') }}</div>
         <div v-else-if="recentPosts.length" class="fp-list">
           <div
             v-for="post in recentPosts"
@@ -724,9 +724,9 @@
         </div>
 
         <div class="fp-actions">
-          <button class="fp-btn outline" @click="authUser ? router.push('/forum') : router.push({ path: '/login', query: { redirect: '/forum' } })">查看討論區 →</button>
-          <button v-if="authUser" class="fp-btn primary" @click="router.push('/forum')">＋ 發起討論</button>
-          <button v-else class="fp-btn primary" @click="router.push({ path: '/login', query: { redirect: '/forum' } })">登入後參與討論</button>
+          <button class="fp-btn outline" @click="authUser ? router.push('/forum') : router.push({ path: '/login', query: { redirect: '/forum' } })">{{ $t('home.forum.viewForum') }} →</button>
+          <button v-if="authUser" class="fp-btn primary" @click="router.push('/forum')">{{ $t('home.forum.newPost') }}</button>
+          <button v-else class="fp-btn primary" @click="router.push({ path: '/login', query: { redirect: '/forum' } })">{{ $t('home.forum.loginToJoin') }}</button>
         </div>
       </div>
     </section>
@@ -737,14 +737,14 @@
         <div class="footer-logo">
           <span>🍷</span>
           <div>
-            <div class="fl-title">侍酒師的筆記本</div>
-            <div class="fl-copy">© 2026 侍酒師的筆記本 · 保留所有權利</div>
+            <div class="fl-title">{{ $t('home.footer.brand') }}</div>
+            <div class="fl-copy">{{ $t('home.footer.copy') }}</div>
           </div>
         </div>
         <div class="footer-links">
-          <router-link to="/login">登入</router-link>
-          <router-link to="/register">註冊</router-link>
-          <a href="mailto:support@sommeliersnotebook.tw">聯絡我們</a>
+          <router-link to="/login">{{ $t('home.footer.login') }}</router-link>
+          <router-link to="/register">{{ $t('home.footer.register') }}</router-link>
+          <a href="mailto:support@sommeliersnotebook.tw">{{ $t('home.footer.contact') }}</a>
         </div>
       </div>
     </footer>
@@ -753,7 +753,7 @@
     <div class="checkout-overlay" v-if="checkoutLoading">
       <div class="checkout-box">
         <div class="co-spinner"></div>
-        <p>正在連線到付款頁面…</p>
+        <p>{{ $t('home.checkout.loading') }}</p>
       </div>
     </div>
 
@@ -767,56 +767,40 @@
         <!-- 標題 -->
         <div class="cm-header">
           <div class="cm-icon">🏰</div>
-          <h2 class="cm-title">波爾多葡萄酒完整課程說明</h2>
-          <p class="cm-sub">從入門到大師，全方位掌握波爾多葡萄酒知識</p>
+          <h2 class="cm-title">{{ $t('home.modal.bordeaux.title') }}</h2>
+          <p class="cm-sub">{{ $t('home.modal.bordeaux.sub') }}</p>
         </div>
 
         <!-- 課程總覽 -->
         <div class="cm-section">
-          <h3 class="cm-sec-title">📚 課程內容總覽</h3>
+          <h3 class="cm-sec-title">{{ $t('home.modal.bordeaux.overviewTitle') }}</h3>
           <div class="cm-levels-grid">
             <div class="cm-level">
-              <div class="cm-lv-badge">Level 1</div>
-              <div class="cm-lv-name">基礎入門</div>
+              <div class="cm-lv-badge">{{ $t('home.modal.bordeaux.levels.l1.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.bordeaux.levels.l1.name') }}</div>
               <ul class="cm-lv-list">
-                <li>葡萄酒世界地理</li>
-                <li>波爾多產區介紹</li>
-                <li>主要葡萄品種</li>
-                <li>基礎釀造流程</li>
-                <li>波爾多分級制度</li>
+                <li v-for="item in $t('home.modal.bordeaux.levels.l1.items')" :key="item">{{ item }}</li>
               </ul>
             </div>
             <div class="cm-level">
-              <div class="cm-lv-badge lv2">Level 2</div>
-              <div class="cm-lv-name">進階學習</div>
+              <div class="cm-lv-badge lv2">{{ $t('home.modal.bordeaux.levels.l2.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.bordeaux.levels.l2.name') }}</div>
               <ul class="cm-lv-list">
-                <li>左岸產區深度剖析</li>
-                <li>美多克六大村莊</li>
-                <li>格拉夫與貝沙克</li>
-                <li>土壤與風土關係</li>
-                <li>年份差異解析</li>
+                <li v-for="item in $t('home.modal.bordeaux.levels.l2.items')" :key="item">{{ item }}</li>
               </ul>
             </div>
             <div class="cm-level">
-              <div class="cm-lv-badge lv3">Level 3</div>
-              <div class="cm-lv-name">深度探索</div>
+              <div class="cm-lv-badge lv3">{{ $t('home.modal.bordeaux.levels.l3.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.bordeaux.levels.l3.name') }}</div>
               <ul class="cm-lv-list">
-                <li>右岸聖愛美濃與波美侯</li>
-                <li>知名酒莊歷史故事</li>
-                <li>地質科學深入分析</li>
-                <li>氣候與年份評分</li>
-                <li>甜白酒索甸與巴薩克</li>
+                <li v-for="item in $t('home.modal.bordeaux.levels.l3.items')" :key="item">{{ item }}</li>
               </ul>
             </div>
             <div class="cm-level">
-              <div class="cm-lv-badge lv4">Level 4</div>
-              <div class="cm-lv-name">大師課程</div>
+              <div class="cm-lv-badge lv4">{{ $t('home.modal.bordeaux.levels.l4.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.bordeaux.levels.l4.name') }}</div>
               <ul class="cm-lv-list">
-                <li>頂級酒莊品飲評析</li>
-                <li>波爾多投資與收藏</li>
-                <li>餐酒搭配專業指南</li>
-                <li>期酒制度 En Primeur</li>
-                <li>侍酒師考試準備</li>
+                <li v-for="item in $t('home.modal.bordeaux.levels.l4.items')" :key="item">{{ item }}</li>
               </ul>
             </div>
           </div>
@@ -824,26 +808,25 @@
 
         <!-- 互動工具 -->
         <div class="cm-section">
-          <h3 class="cm-sec-title">🛠️ 學習工具</h3>
+          <h3 class="cm-sec-title">{{ $t('home.modal.bordeaux.toolsTitle') }}</h3>
           <div class="cm-tools-grid">
-            <div class="cm-tool"><span class="ct-icon">🗺️</span><span class="ct-name">互動地圖</span><span class="ct-desc">Mapbox 互動式產區地圖，地質、氣候圖層</span></div>
-            <div class="cm-tool"><span class="ct-icon">🎮</span><span class="ct-name">互動練習</span><span class="ct-desc">4 種遊戲：產區競答、左右岸識別、年份排序、葡萄土壤配對</span></div>
-            <div class="cm-tool"><span class="ct-icon">🏆</span><span class="ct-name">成就系統</span><span class="ct-desc">解鎖徽章、累積積分、追蹤學習進度</span></div>
-            <div class="cm-tool"><span class="ct-icon">📔</span><span class="ct-name">品飲筆記</span><span class="ct-desc">記錄品飲心得，結合年份氣候資料輔助分析</span></div>
-            <div class="cm-tool"><span class="ct-icon">💬</span><span class="ct-name">學員論壇</span><span class="ct-desc">與其他學員交流心得、分享品飲體驗</span></div>
-            <div class="cm-tool"><span class="ct-icon">📊</span><span class="ct-name">學習追蹤</span><span class="ct-desc">正確率、學習時長、各單元詳細進度記錄</span></div>
+            <div class="cm-tool" v-for="tool in $t('home.modal.bordeaux.tools')" :key="tool.name">
+              <span class="ct-icon">{{ tool.icon }}</span>
+              <span class="ct-name">{{ tool.name }}</span>
+              <span class="ct-desc">{{ tool.desc }}</span>
+            </div>
           </div>
         </div>
 
         <!-- 方案比較 -->
         <div class="cm-section">
-          <h3 class="cm-sec-title">💎 方案比較</h3>
+          <h3 class="cm-sec-title">{{ $t('home.modal.bordeaux.compareTitle') }}</h3>
           <div class="cm-compare-table">
             <div class="cm-compare-header">
-              <div class="cc-col feature-col">功能</div>
-              <div class="cc-col free-col">免費體驗<br><span class="cc-price">NT$ 0</span></div>
-              <div class="cc-col basic-col popular-col">完整課程 ⭐<br><span class="cc-price">NT$ {{ pricing.basic.monthly }}/月</span></div>
-              <div class="cc-col premium-col">頂級方案<br><span class="cc-price">NT$ {{ pricing.premium.monthly }}/月</span></div>
+              <div class="cc-col feature-col">{{ $t('home.modal.bordeaux.compareFeature') }}</div>
+              <div class="cc-col free-col" v-html="$t('home.modal.bordeaux.compareFree', { price: 0 })"></div>
+              <div class="cc-col basic-col popular-col" v-html="$t('home.modal.bordeaux.compareBasic', { price: pricing.basic.monthly })"></div>
+              <div class="cc-col premium-col" v-html="$t('home.modal.bordeaux.comparePremium', { price: pricing.premium.monthly })"></div>
             </div>
             <div v-for="row in compareRows" :key="row.feature" class="cm-compare-row">
               <div class="cc-col feature-col">{{ row.feature }}</div>
@@ -856,9 +839,9 @@
 
         <!-- CTA -->
         <div class="cm-cta">
-          <button class="cm-btn free" @click="showCourseModal = false; handleFreeTier()">免費開始體驗</button>
-          <button class="cm-btn basic" @click="showCourseModal = false; handlePurchase('bordeaux','basic')">訂閱完整課程 NT$290/月</button>
-          <button class="cm-btn premium" @click="showCourseModal = false; handlePurchase('bordeaux','premium')">頂級方案 NT$590/月</button>
+          <button class="cm-btn free" @click="showCourseModal = false; handleFreeTier()">{{ $t('home.modal.bordeaux.btnFree') }}</button>
+          <button class="cm-btn basic" @click="showCourseModal = false; handlePurchase('bordeaux','basic')">{{ $t('home.modal.bordeaux.btnBasicPrice', { price: pricing.basic.monthly }) }}</button>
+          <button class="cm-btn premium" @click="showCourseModal = false; handlePurchase('bordeaux','premium')">{{ $t('home.modal.bordeaux.btnPremiumPrice', { price: pricing.premium.monthly }) }}</button>
         </div>
         </template>
 
@@ -867,15 +850,15 @@
             <div class="cm-icon">{{ activePrelaunchDetail.icon }}</div>
             <h2 class="cm-title">{{ activePrelaunchDetail.title }}</h2>
             <p class="cm-sub">{{ activePrelaunchDetail.subtitle }}</p>
-            <div class="cm-badge-preview">⏳ 預計 2027 開放</div>
+            <div class="cm-badge-preview">{{ $t('home.modal.prelaunch.coming') }}</div>
           </div>
 
           <div class="cm-alert">
-            以下為依據目前開發進度整理的預先參考版本，正式課程以最終上線內容為準。
+            {{ $t('home.modal.prelaunch.alert') }}
           </div>
 
           <div class="cm-section">
-            <h3 class="cm-sec-title">🧭 目前開發進度</h3>
+            <h3 class="cm-sec-title">{{ $t('home.modal.prelaunch.devProgressTitle') }}</h3>
             <div class="cm-tools-grid">
               <div class="cm-tool" v-for="item in activePrelaunchDetail.devStatus" :key="item.title">
                 <span class="ct-icon">{{ item.icon }}</span>
@@ -886,7 +869,7 @@
           </div>
 
           <div class="cm-section">
-            <h3 class="cm-sec-title">📚 預計課程架構</h3>
+            <h3 class="cm-sec-title">{{ $t('home.modal.prelaunch.roadmapTitle') }}</h3>
             <div class="cm-preview-grid">
               <div class="cm-preview-card" v-for="lv in activePrelaunchDetail.roadmap" :key="lv.level">
                 <div class="cm-lv-badge">{{ lv.level }}</div>
@@ -900,15 +883,15 @@
           </div>
 
           <div class="cm-section">
-            <h3 class="cm-sec-title">🛠️ 預計開放功能</h3>
+            <h3 class="cm-sec-title">{{ $t('home.modal.prelaunch.featuresTitle') }}</h3>
             <div class="cm-pill-list">
               <span class="cm-pill" v-for="f in activePrelaunchDetail.features" :key="f">{{ f }}</span>
             </div>
           </div>
 
           <div class="cm-cta">
-            <button class="cm-btn basic" @click="showCourseModal = false; handleNotify(activeCourseDetail)">🔔 搶先通知我</button>
-            <button class="cm-btn free" @click="showCourseModal = false">稍後再看</button>
+            <button class="cm-btn basic" @click="showCourseModal = false; handleNotify(activeCourseDetail)">{{ $t('home.modal.prelaunch.notifyBtn') }}</button>
+            <button class="cm-btn free" @click="showCourseModal = false">{{ $t('home.modal.prelaunch.laterBtn') }}</button>
           </div>
         </template>
       </div>
@@ -920,12 +903,14 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { supabase } from '../lib/supabaseClient.js'
 import { authState, authActions } from '../stores/authStore.js'
 import { initiateCheckout } from '../lib/purchaseService.js'
 import { fetchRecentPosts } from '../lib/forumService.js'
 
 const router = useRouter()
+const { t } = useI18n()
 
 // ─── Auth ─────────────────────────────────────────────────────────────────────
 const authUser    = computed(() => authState.user)
@@ -1060,10 +1045,10 @@ const handlePurchase = async (courseId, tier) => {
 }
 
 const handleNotify = (courseId) => {
-  const courseNames = { bourgogne: '勃根地', italy: '義大利' }
-  const name = courseNames[courseId] || courseId
+  const detail = prelaunchCourseDetails.value[courseId]
+  const name = detail?.title || courseId
   if (authUser.value) {
-    alert(`已記錄您的興趣！${name}課程上線時我們會通知您。`)
+    alert(`${name} — ${t('home.modal.prelaunch.notifyBtn')}`)
   } else {
     router.push({ path: '/register', query: { notify: courseId } })
   }
@@ -1082,88 +1067,21 @@ const openCourseDetail = (courseId = 'bordeaux') => {
   showCourseModal.value = true
 }
 
-const prelaunchCourseDetails = {
-  bourgogne: {
-    icon: '🍇',
-    title: '布根地葡萄酒課程預先參考',
-    subtitle: '依照現有開發資料整理的先行版課程說明',
-    devStatus: [
-      { icon: '✅', title: '課程框架', desc: 'Level 1–4 架構與課程模組資料已建立（levels.json）。' },
-      { icon: '✅', title: '探索地圖', desc: '主要產區地圖、AOC 邊界、地質與氣候圖層功能已整合。' },
-      { icon: '✅', title: '互動功能', desc: '練習中心與品飲筆記頁已接入布根地頁面流程。' }
-    ],
-    roadmap: [
-      { level: 'Level 1', name: '基礎入門', meta: '8 模組｜6-8 小時', points: ['地理與風土基礎', '品種與分級制度', '金丘產區入門'] },
-      { level: 'Level 2', name: '中級進階', meta: '8 模組｜8-10 小時', points: ['夜丘與伯恩丘對照', '特級園與一級園', '風格差異品鑑'] },
-      { level: 'Level 3', name: '高級專業', meta: '15 模組｜12-15 小時', points: ['風土深度解析', '市場與投資分析', '頂級酒莊案例'] },
-      { level: 'Level 4', name: '專家認證', meta: '8 模組｜20+ 小時', points: ['專業評估框架', '商業與顧問實務', '整合型認證任務'] }
-    ],
-    features: ['互動地圖探索', '地質圖層', '氣候熱力圖', 'AOC/產區導覽', '互動練習中心', '品飲筆記系統']
-  },
-  italy: {
-    icon: '🇮🇹',
-    title: '義大利葡萄酒課程預先參考',
-    subtitle: '依照現有開發資料整理的先行版課程說明',
-    devStatus: [
-      { icon: '✅', title: '課程框架', desc: 'Level 1–3 共 61 課架構已完成，課程 JSON 已建立。' },
-      { icon: '✅', title: '探索地圖', desc: '18 大產區選擇、AOC 邊界、等高線與氣候熱力顯示已建置。' },
-      { icon: '🛠️', title: '持續優化中', desc: '依最新開發持續調整互動體驗與內容編排。' }
-    ],
-    roadmap: [
-      { level: 'Level 1', name: '入門基礎', meta: '12 課｜3-4 小時', points: ['分級制度與地理氣候', '五大必學產區', '基礎品種與餐酒搭配'] },
-      { level: 'Level 2', name: '進階全覽', meta: '23 課｜6-8 小時', points: ['北中南義產區深度', '品種研究進階', '投資收藏與市場'] },
-      { level: 'Level 3', name: '專家訓練', meta: '26 課｜10-12 小時', points: ['稀有品種與小產區', '盲品與酒標判讀', '產業趨勢與侍酒實務'] }
-    ],
-    features: ['互動地圖探索', '氣候熱力圖', '等高線圖層', 'AOC 產區查詢', '課程簡報學習', '學習進度追蹤']
-  }
-}
+const prelaunchCourseDetails = computed(() => ({
+  bourgogne: t('home.modal.prelaunchCourses.bourgogne'),
+  italy:     t('home.modal.prelaunchCourses.italy'),
+}))
 
-const activePrelaunchDetail = computed(() => prelaunchCourseDetails[activeCourseDetail.value] || null)
+const activePrelaunchDetail = computed(() => prelaunchCourseDetails.value[activeCourseDetail.value] || null)
 
-const compareRows = [
-  { feature: 'Level 1 基礎入門', free: true, basic: true, premium: true },
-  { feature: 'Level 2 進階學習', free: false, basic: true, premium: true },
-  { feature: 'Level 3 深度探索', free: false, basic: true, premium: true },
-  { feature: 'Level 4 大師課程', free: false, basic: true, premium: true },
-  { feature: '基本地圖瀏覽', free: true, basic: true, premium: true },
-  { feature: '全產區地圖探索', free: false, basic: true, premium: true },
-  { feature: '地質圖層', free: false, basic: false, premium: true },
-  { feature: '氣候熱力圖層', free: false, basic: false, premium: true },
-  { feature: '知名酒莊地圖標記', free: false, basic: false, premium: true },
-  { feature: '互動練習（4種遊戲）', free: false, basic: true, premium: true },
-  { feature: '成就系統', free: true, basic: true, premium: true },
-  { feature: '學習進度追蹤', free: true, basic: true, premium: true },
-  { feature: '品飲筆記本', free: false, basic: false, premium: true },
-  { feature: '學員論壇', free: true, basic: true, premium: true },
-]
+const compareRows = computed(() => t('home.modal.bordeaux.compareRows'))
 
-// ─── 靜態資料 ─────────────────────────────────────────────────────────────────
-const bordeauxIncludes = [
-  '4個學習等級・80+ 課程單元',
-  '互動式 Mapbox 地圖（AOC全覆蓋）',
-  '100+ 練習題・成就解鎖系統',
-  '地質、氣候、年份深度分析'
-]
+// ─── 靜態資料（locale-aware） ──────────────────────────────────────────────────
+const bordeauxIncludes = computed(() => t('home.courses.bordeaux.includes'))
 
-const features = [
-  { icon: '🗺️', title: '互動衛星地圖', desc: '結合 Mapbox 的產區地圖，可探索 AOC 分布、地質土壤、氣候熱力圖，8 大產區全溦蓋' },
-  { icon: '🎮', title: '遊戲化練習', desc: '4 種互動遊戲：產區競答、左右岸識別、年份溫度排序、葡萄與土壤配對，持續激勵學習動力' },
-  { icon: '📊', title: '分級學習路徑', desc: 'Level 1–4 循序解鎖，從基础入門到專家認證，每個產區独立課程架構、內容實料豐富' },
-  { icon: '📔', title: '品飲筆記本', desc: '隨時記錄品飲心得，可參考歷史年份氣候資料輔助分析，建立屬於自己的葡萄酒詞典' },
-  { icon: '🔬', title: '科學化內容', desc: '深入地質、氣候科學，用數據理解為何同一產區不同地塊有截然不同的風格與層次' },
-  { icon: '📱', title: '全裝置適配', desc: '桌機、平板、手機皆可流暢使用，隨時隨地學習不中斷' }
-]
+const features = computed(() => t('home.features.items'))
 
-const faqs = [
-  { q: '課程等級如何解鎖？', a: 'Level 1 開放所有學員直接進入。Level 2、3、4 需依序完成前一等級的「綜合評量」（每等級最後一課）才能解鎖，確保您真正掌握前項知識再進階。' },
-  { q: '可以跳過等級直接學進階課程嗎？', a: '本平台採循序解鎖制，需依序完成綜合評量才能解鎖下一等級。' },
-  { q: '訂閱後如何取消？', a: '可以隨時在「我的訂單」頁面點擊「管理訂閱」，前往 Stripe 客戶入口取消。取消後於當期計費週期結束前仍可繼續使用課程。' },
-  { q: '月繳與年繳有什麼差別？', a: `月繳方案每月自動扣款，彈性較高；年繳方案完整課程年省 NT$${(pricing.value.basic.monthly * 12 - pricing.value.basic.yearly).toLocaleString()}，頂級方案年省 NT$${(pricing.value.premium.monthly * 12 - pricing.value.premium.yearly).toLocaleString()}。` },
-  { q: '我不會品酒，可以學嗎？', a: '當然！Level 1 從最基礎的葡萄酒知識開始，循序游進，完全不需要任何先備知識。' },
-  { q: '訂閱方案可以升級嗎？', a: '可以！隨時可從「完整課程」升級為「頂級方案」，只需重新訂閱頂級方案即可。' },
-  { q: '支援哪些付款方式？', a: '透過 Stripe 安全付款，支援 Visa、MasterCard、JCB 等主要信用卡，加密處理。' },
-  { q: '有退款政策嗎？', a: '訂閱後 7 天內如需退款，請聯絡 support@wineacademy.tw，我們將全額退款。' }
-]
+const faqs = computed(() => t('home.faq.items'))
 
 // ─── 公告 ─────────────────────────────────────────────────────────────────────
 const allAnnouncements = ref([])

@@ -28,6 +28,10 @@ import zhCalifornia from './zh-TW/california.js'
 import enCalifornia from './en/california.js'
 import jaCalifornia from './ja/california.js'
 
+import zhHome from './zh-TW/home.js'
+import enHome from './en/home.js'
+import jaHome from './ja/home.js'
+
 // ── 支援的語言清單 ───────────────────────────────────────────
 export const SUPPORTED_LOCALES = [
   { code: 'zh-TW', name: '繁體中文', flag: '🇹🇼' },
@@ -57,9 +61,9 @@ function detectInitialLocale() {
 
 // ── 整合各語言檔（將來會有多個 namespace） ──────────────────
 const messages = {
-  'zh-TW': { common: zhCommon, california: zhCalifornia },
-  'en':    { common: enCommon, california: enCalifornia },
-  'ja':    { common: jaCommon, california: jaCalifornia },
+  'zh-TW': { common: zhCommon, california: zhCalifornia, home: zhHome },
+  'en':    { common: enCommon, california: enCalifornia, home: enHome },
+  'ja':    { common: jaCommon, california: jaCalifornia, home: jaHome },
 }
 
 // ── 建立 i18n 實例 ───────────────────────────────────────────
