@@ -5,7 +5,7 @@
     <nav class="top-nav">
       <div class="nav-inner">
         <div class="nav-logo" @click="scrollToTop">
-          <span class="logo-icon">🍷</span>
+          <img src="/logo.png" class="logo-icon-img" alt="侍酒師的筆記本" />
           <div>
             <div class="logo-title">{{ $t('home.nav.brand') }}</div>
             <div class="logo-sub">{{ $t('home.nav.brandSub') }}</div>
@@ -1379,6 +1379,7 @@ onMounted(async () => {
   cursor: pointer;
 }
 .logo-icon { font-size: 1.6rem; }
+.logo-icon-img { width: 36px; height: 36px; object-fit: contain; border-radius: 50%; flex-shrink: 0; }
 .logo-title { color: #d4af37; font-size: 1rem; font-weight: 700; line-height: 1.2; }
 .logo-sub { color: #a89060; font-size: 0.7rem; }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
@@ -1492,6 +1493,7 @@ onMounted(async () => {
   .nav-mobile  { display: flex; }
   .nav-inner { height: 52px; padding: 0 68px 0 14px; }
   .logo-icon { font-size: 1.3rem; }
+  .logo-icon-img { width: 28px; height: 28px; }
   .logo-title { font-size: 0.88rem; }
   .logo-sub { display: none; }
 }
