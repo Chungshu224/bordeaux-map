@@ -49,6 +49,7 @@
 
 <script setup>
 import { ref, computed, nextTick, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import GermanyLevelSelector from './GermanyLevelSelector.vue'
 import GermanySlideViewer from './GermanySlideViewer.vue'
 import GermanyCourseLayout from './GermanyCourseLayout.vue'
@@ -56,7 +57,13 @@ import GermanyGameHubPage from '../games/GermanyGameHubPage.vue'
 import GermanyTastingNotebookPage from '../notebook/GermanyTastingNotebookPage.vue'
 import { courseLevels, getUserProgress, saveProgress, getLevelProgressPct } from '../data/courseLevels.js'
 import { getLesson } from '../data/lessonSlides.js'
+import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
 import { globalGermanyAchievementManager } from '../../../stores/germanyAchievementSystem.js'
+
+// 自動掃描所有 germany lesson overlay（en/ja）
+const GERMANY_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/germany/*.json')
+
+const { locale } = useI18n()
 
 const emit = defineEmits(['openMap'])
 
@@ -97,9 +104,31 @@ function backToLevelSelector() {
 
 async function startLesson(lessonMeta) {
   activeLessonMeta.value = lessonMeta
-  const data = getLesson(lessonMeta.id)
+  let data = getLesson(lessonMeta.id)
+  // getLesson 回傳的是模組共用物件，先 deep-clone 避免 overlay 污染原始資料
+  data = JSON.parse(JSON.stringify(data))
   if (lessonMeta.mapRegion) data.mapRegion = lessonMeta.mapRegion
   data.levelKey = selectedLevelKey.value
+
+  // 多語言 overlay：locale !== zh-TW 時嘗試載入並套用
+  const currentLocale = locale.value
+  if (currentLocale && currentLocale !== 'zh-TW') {
+    const overlayKey = Object.keys(GERMANY_TRANSLATIONS).find(k =>
+      k.includes(`/${currentLocale}/`) && k.endsWith(`/${lessonMeta.id}.json`)
+    )
+    if (overlayKey) {
+      try {
+        const mod = await GERMANY_TRANSLATIONS[overlayKey]()
+        const flat = mod?.default || mod
+        if (flat && typeof flat === 'object') {
+          data = applyItalyTranslations(data, flat)
+        }
+      } catch (e) {
+        console.warn('[Germany i18n] overlay 載入失敗:', e?.message || e)
+      }
+    }
+  }
+
   activeLesson.value = data
   await nextTick()
   window.scrollTo({ top: 0, behavior: 'instant' })

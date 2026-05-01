@@ -88,8 +88,11 @@ import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevel
 import {
   globalItalyAchievementManager
 } from '../../../stores/italyAchievementSystem.js'
+import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
 
-const { t } = useI18n()
+const ITALY_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/italy/*.json')
+
+const { t, locale } = useI18n()
 const emit = defineEmits(['openMap'])
 
 globalItalyAchievementManager.init()
@@ -139,10 +142,30 @@ async function startLesson (lessonMeta) {
     const levelKey = selectedLevelKey.value
     const res = await fetch(`/italy/courses/${levelKey}/${lessonMeta.id}.json`)
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
-    const data = await res.json()
+    let data = await res.json()
     if (lessonMeta.mapRegion) data.mapRegion = lessonMeta.mapRegion
     // 注入 levelKey 供綜合評量題庫載入使用
     data.levelKey = levelKey
+
+    // 多語言翻譯覆蓋（locale !== zh-TW 時嘗試載入 overlay）
+    const currentLocale = locale.value
+    if (currentLocale !== 'zh-TW') {
+      const overlayKey = Object.keys(ITALY_TRANSLATIONS).find(k =>
+        k.includes(`/${currentLocale}/`) && k.endsWith(`/${lessonMeta.id}.json`)
+      )
+      if (overlayKey) {
+        try {
+          const mod = await ITALY_TRANSLATIONS[overlayKey]()
+          const flat = mod?.default || mod
+          if (flat && typeof flat === 'object') {
+            data = applyItalyTranslations(data, flat)
+          }
+        } catch (e) {
+          console.warn('[Italy i18n] overlay 載入失敗:', e.message)
+        }
+      }
+    }
+
     activeLesson.value = data
     nextTick(() => window.scrollTo({ top: 0, behavior: 'instant' }))
   } catch (e) {

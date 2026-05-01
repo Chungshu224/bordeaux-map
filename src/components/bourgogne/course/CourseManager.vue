@@ -47,6 +47,7 @@
 
 <script setup>
 import { ref, computed, defineEmits } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useProgress } from '../composables/useProgress.js'
 import LevelSelector from './LevelSelector.vue'
 import BourgogneCourseLayout from './BourgogneCourseLayout.vue'
@@ -54,9 +55,13 @@ import LessonViewer from './LessonViewer.vue'
 import SlideViewer from './SlideViewer.vue'
 import QuizEngine from './QuizEngine.vue'
 import CertificateGenerator from './CertificateGenerator.vue'
+import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
+
+const BOURGOGNE_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/bourgogne/*.json')
 
 const emit = defineEmits(['openMap', 'openGameHub', 'openNotebook'])
 const progressStore = useProgress()
+const { locale } = useI18n()
 
 // 當前視圖狀態
 const currentView = ref('levelSelector') // levelSelector, courseContent, certificate
@@ -208,7 +213,28 @@ const loadModuleData = async (levelId, moduleId) => {
       throw new Error(`HTTP ${response.status}: ${response.statusText}`)
     }
     
-    moduleData.value = await response.json()
+    let data = await response.json()
+
+    // 多語言翻譯覆蓋（locale !== zh-TW 時嘗試載入 overlay）
+    const currentLocale = locale.value
+    if (currentLocale && currentLocale !== 'zh-TW') {
+      const overlayKey = Object.keys(BOURGOGNE_TRANSLATIONS).find(k =>
+        k.includes(`/${currentLocale}/`) && k.endsWith(`/${moduleId}.json`)
+      )
+      if (overlayKey) {
+        try {
+          const mod = await BOURGOGNE_TRANSLATIONS[overlayKey]()
+          const flat = mod?.default || mod
+          if (flat && typeof flat === 'object') {
+            data = applyItalyTranslations(data, flat)
+          }
+        } catch (e) {
+          console.warn('[Bourgogne i18n] overlay 載入失敗:', e.message)
+        }
+      }
+    }
+
+    moduleData.value = data
     console.log('✅ 模組資料載入成功:', moduleData.value.title)
   } catch (error) {
     console.error('載入模組資料失敗:', error)

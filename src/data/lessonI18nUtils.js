@@ -100,6 +100,44 @@ export function applyTranslations(slides, flatMap) {
   return cloned
 }
 
+/**
+ * Italy 課程專用：將 flat map 套回完整的 lesson 物件（含 title, quiz, slides）。
+ * 支援任意 dot-path（如 title、slides.0.title、quiz.0.question 等）。
+ * 缺少的 key 自動 fallback 到原文。
+ */
+export function applyItalyTranslations(lesson, flatMap) {
+  if (!lesson || typeof lesson !== 'object') return lesson
+  if (!flatMap || typeof flatMap !== 'object') return lesson
+  const cloned = deepClone(lesson)
+  for (const [key, value] of Object.entries(flatMap)) {
+    if (typeof value !== 'string' || value.length === 0) continue
+    setByPathAny(cloned, key, value)
+  }
+  return cloned
+}
+
+function setByPathAny(root, dotPath, value) {
+  const parts = dotPath.split('.')
+  if (parts.length === 1) {
+    const k = parts[0]
+    if (typeof root[k] === 'string') root[k] = value
+    return
+  }
+  let cur = root
+  for (let i = 0; i < parts.length - 1; i++) {
+    const p = parts[i]
+    const idx = /^\d+$/.test(p) ? Number(p) : p
+    if (cur == null || typeof cur !== 'object') return
+    cur = cur[idx]
+  }
+  if (cur == null || typeof cur !== 'object') return
+  const last = parts[parts.length - 1]
+  const lastIdx = /^\d+$/.test(last) ? Number(last) : last
+  if (typeof cur[lastIdx] === 'string') {
+    cur[lastIdx] = value
+  }
+}
+
 function deepClone(v) {
   if (v == null) return v
   if (Array.isArray(v)) return v.map(deepClone)

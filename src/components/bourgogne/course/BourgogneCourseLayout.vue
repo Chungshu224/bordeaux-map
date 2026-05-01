@@ -194,10 +194,15 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useProgress } from '../composables/useProgress.js'
 import { supabase } from '../../../lib/supabaseClient.js'
 import { authState } from '../../../stores/authStore.js'
+import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
 
+const BOURGOGNE_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/bourgogne/*.json')
+
+const { locale } = useI18n()
 const avatarUrl = ref('')
 const avatarInitial = ref('我')
 
@@ -250,7 +255,27 @@ const loadModuleData = async (moduleId) => {
   try {
     const res = await fetch(`/bourgogne/data/courses/level${props.currentLevel.id}/${moduleId}.json`)
     if (!res.ok) return
-    const data = await res.json()
+    let data = await res.json()
+
+    // 多語言翻譯覆蓋
+    const currentLocale = locale.value
+    if (currentLocale && currentLocale !== 'zh-TW') {
+      const overlayKey = Object.keys(BOURGOGNE_TRANSLATIONS).find(k =>
+        k.includes(`/${currentLocale}/`) && k.endsWith(`/${moduleId}.json`)
+      )
+      if (overlayKey) {
+        try {
+          const mod = await BOURGOGNE_TRANSLATIONS[overlayKey]()
+          const flat = mod?.default || mod
+          if (flat && typeof flat === 'object') {
+            data = applyItalyTranslations(data, flat)
+          }
+        } catch (e) {
+          console.warn('[Bourgogne i18n] overlay 載入失敗:', e.message)
+        }
+      }
+    }
+
     moduleDataCache.value = { ...moduleDataCache.value, [moduleId]: data }
   } catch (e) {
     console.warn(`無法載入 ${moduleId}:`, e)
