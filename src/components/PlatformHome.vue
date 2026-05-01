@@ -1490,7 +1490,7 @@ onMounted(async () => {
 @media (max-width: 640px) {
   .nav-desktop { display: none; }
   .nav-mobile  { display: flex; }
-  .nav-inner { height: 52px; padding: 0 14px; }
+  .nav-inner { height: 52px; padding: 0 68px 0 14px; }
   .logo-icon { font-size: 1.3rem; }
   .logo-title { font-size: 0.88rem; }
   .logo-sub { display: none; }
