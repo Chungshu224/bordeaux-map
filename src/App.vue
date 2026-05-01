@@ -3,7 +3,7 @@
     <!-- 身份驗證中 — loading 畫面 -->
     <div v-if="authState.loading" class="auth-loading">
       <div class="auth-loading-inner">
-        <div class="wine-glass-icon">🍷</div>
+        <img src="/logo.png" class="wine-glass-icon" alt="侍酒師的筆記本" />
         <div class="auth-spinner"></div>
         <p>認證中…</p>
       </div>
@@ -49,7 +49,7 @@
     <div v-if="showAdminChoice" class="admin-choice-overlay" @click.self="showAdminChoice = false">
       <div class="admin-choice-modal">
         <div class="admin-choice-header">
-          <span>🍷</span>
+          <img src="/logo.png" style="width:36px;height:auto;object-fit:contain;" alt="logo" />
           <h2>管理員登入</h2>
           <p>請選擇您要進入的頁面</p>
         </div>
@@ -245,7 +245,9 @@ body {
 }
 
 .auth-loading-inner .wine-glass-icon {
-  font-size: 3rem;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
 }
 
 .auth-spinner {

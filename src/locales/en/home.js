@@ -5,6 +5,7 @@ export default {
   nav: {
     brand: "The Sommelier's Notebook",
     brandSub: '侍酒師的筆記本',
+    homeLink: '🏠 Home',
     adminLink: '⚙️ Admin',
     enterCourse: 'Enter Course',
     myOrders: 'My Orders',
@@ -110,6 +111,7 @@ export default {
       f3: '✔ Grand Crus · Left/Right Bank AOC classifications',
     },
     bourgogne: {
+      title: 'Burgundy Wine',
       desc: 'From Grand Cru to Village level, explore Côte de Nuits, Côte de Beaune, and the world of Pinot Noir and Chardonnay (opening 2027)',
       s1label: 'Course Stages<br>L1 – L4',
       s2label: 'Grand Cru<br>Appellations',
@@ -120,6 +122,7 @@ export default {
       f3: '✔ Climate and vintage variation',
     },
     loire: {
+      title: 'Loire Valley Wine',
       desc: "France's longest wine region — from Atlantic Muscadet to mineral Sancerre, 800 km of wine country covering sparkling, white, red and sweet styles",
       s1label: 'Major<br>Appellations',
       s2label: 'km<br>River',
@@ -130,6 +133,7 @@ export default {
       f3: '✔ Vouvray / Chinon sweet and red wines',
     },
     italy: {
+      title: 'Italian Wine',
       desc: "Explore Barolo, Brunello, Amarone and Italy's finest wines — complete analysis of 20 DOC/DOCG appellations (opening 2027)",
       s1label: 'Course Stages<br>L1 – L3',
       s2label: 'Lessons<br>Full Course',
@@ -140,6 +144,7 @@ export default {
       f3: '✔ DOC → DOCG classification evolution',
     },
     spain: {
+      title: 'Spanish Wine',
       desc: 'Explore Rioja, Ribera del Duero, Rías Baixas and more — full DO/DOCa/VP classification, interactive satellite map across 96 appellations',
       s1label: 'Course Stages<br>L1 – L4',
       s2label: 'Appellations<br>DO Map',
@@ -150,6 +155,7 @@ export default {
       f3: '✔ Sherry / Cava specialty courses',
     },
     germany: {
+      title: 'German Wine',
       desc: 'Explore all 13 Anbaugebiete — from steep slate slopes of Mosel to elegant Rieslings of Rheingau, with vineyard satellite maps',
       s1label: 'Appellations<br>Anbaugebiet',
       s2label: 'Key<br>Variety',
@@ -160,6 +166,7 @@ export default {
       f3: '✔ Kabinett → TBA sweetness classification',
     },
     portugal: {
+      title: 'Portuguese Wine',
       desc: 'Explore 31 DOC appellations — from the crisp Vinho Verde of the north to the full-bodied Alentejo reds of the south, home of Port',
       s1label: 'DOC<br>Appellations',
       s2label: 'Port Wine<br>Core',
@@ -170,6 +177,7 @@ export default {
       f3: '✔ Madeira fortified wine exploration',
     },
     hungary: {
+      title: 'Hungarian Wine',
       desc: 'Explore the legendary home of Tokaji Aszú — 22 appellations, flagship Furmint variety, and the five-level sweetness classification',
       s1label: 'Wine<br>Appellations',
       s2label: 'Iconic<br>Sweet Wine',
@@ -180,6 +188,7 @@ export default {
       f3: "✔ Eger Bull's Blood and Furmint variety",
     },
     australia: {
+      title: 'Australian Wine',
       desc: 'Explore 65+ GI regions — from the century-old vines of hot Barossa Valley to cool-climate Tasmania sparkling wine, the New World giant',
       s1label: 'GI<br>Regions',
       s2label: 'Wine<br>States',
@@ -190,6 +199,7 @@ export default {
       f3: '✔ Tasmania sparkling and Pinot Noir',
     },
     newzealand: {
+      title: 'New Zealand Wine',
       desc: 'From Marlborough Sauvignon Blanc to Central Otago Pinot Noir — 17 regions across both islands, explore the pure and vibrant wine landscape',
       s1label: 'Wine<br>Regions',
       s2label: 'Main<br>Islands',
@@ -200,6 +210,7 @@ export default {
       f3: '✔ Central Otago Pinot Noir regions',
     },
     california: {
+      title: 'California Wine',
       desc: "From Napa Valley's top Cabernet Sauvignon to Sonoma's refined Pinot Noir — explore 154+ AVAs and the wine country that shocked the world at the 1976 Judgment of Paris",
       s1label: 'AVA<br>Regions',
       s2label: 'Course<br>Modules',

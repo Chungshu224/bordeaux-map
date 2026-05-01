@@ -76,7 +76,7 @@
       </div>
 
       <!-- ── 資料圖層 ── -->
-      <div class="layer-group" v-if="map && !isPhoneDevice">
+      <div class="layer-group" v-if="map">
         <div class="layer-group-label">資料圖層</div>
         <div class="layer-group-buttons">
           <!-- 氣候熱力：premium 以上 -->
@@ -1395,6 +1395,11 @@ const initMap = async (retry = 0) => {
       // 註冊 AOC 點選偵測（PostGIS get_aoc_at_point）
       registerAocClickHandler()
 
+      // 手機裝置：預設啟用氣候熱力與地質圖層
+      if (isPhoneDevice.value) {
+        toggleBRGM(map)
+        await toggleClimate()
+      }
 
     })
     

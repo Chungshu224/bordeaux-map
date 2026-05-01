@@ -5,6 +5,7 @@ export default {
   nav: {
     brand: 'ソムリエのノートブック',
     brandSub: "The Sommelier's Notebook",
+    homeLink: '🏠 ホーム',
     adminLink: '⚙️ 管理画面',
     enterCourse: 'コースへ進む',
     myOrders: '注文履歴',
@@ -110,6 +111,7 @@ export default {
       f3: '✔ 五大シャトー・左右岸 AOC 格付け完全解説',
     },
     bourgogne: {
+      title: 'ブルゴーニュワイン',
       desc: 'Grand Cruから村名レベルまで、Côte de Nuits、Côte de Beauneを探索。Pinot NoirとChardonnayの世界（2027年開講予定）',
       s1label: 'コース段階<br>L1 – L4',
       s2label: 'Grand Cru<br>アペラシオン',
@@ -120,6 +122,7 @@ export default {
       f3: '✔ 気候とヴィンテージの違いを解説',
     },
     loire: {
+      title: 'ロワール・ヴァレーワイン',
       desc: 'フランス最長のワイン産地 — 大西洋沿いのMuscadetからミネラル豊かなSancerreまで、800kmのワイン王国でスパークリング、白、赤、甘口を網羅',
       s1label: '主要<br>アペラシオン',
       s2label: 'km<br>河川',
@@ -130,6 +133,7 @@ export default {
       f3: '✔ Vouvray / Chinonの甘口・赤ワイン',
     },
     italy: {
+      title: 'イタリアワイン',
       desc: 'Barolo、Brunello、Amaroneなどイタリアの最高峰ワインを探索 — 20のDOC/DOCG産地を完全解析（2027年開講予定）',
       s1label: 'コース段階<br>L1 – L3',
       s2label: 'レッスン数<br>完全コース',
@@ -140,6 +144,7 @@ export default {
       f3: '✔ DOC → DOCG格付けの変遷',
     },
     spain: {
+      title: 'スペインワイン',
       desc: 'Rioja、Ribera del Duero、Rías Baixasなど主要産地を探索 — DO/DOCa/VP格付けの完全解析、96の法定産地の衛星マップ',
       s1label: 'コース段階<br>L1 – L4',
       s2label: '法定産地<br>DOマップ',
@@ -150,6 +155,7 @@ export default {
       f3: '✔ Sherry / Cavaの特別コース',
     },
     germany: {
+      title: 'ドイツワイン',
       desc: '13のAnbaugebieteを深く探索 — Moselの急斜面からRheingauの優雅なRieslingまで、ヴィンヤード衛星マップでドイツ最高峰を巡る',
       s1label: '法定産地<br>Anbaugebiet',
       s2label: '中心<br>品種',
@@ -160,6 +166,7 @@ export default {
       f3: '✔ Kabinett → TBAの甘口格付け',
     },
     portugal: {
+      title: 'ポルトガルワイン',
       desc: '31のDOC産地を探索 — 北部のVinho Verdeから南部のAlentejoの力強い赤ワインまで、ポートワインの故郷',
       s1label: 'DOC<br>法定産地',
       s2label: 'ポートワイン<br>中心',
@@ -169,8 +176,7 @@ export default {
       f2: '✔ Douro段丘のポートワイン産地深層解説',
       f3: '✔ Madeiraフォーティファイドワイン探索',
     },
-    hungary: {
-      desc: 'Tokaji Aszú貴腐ワインの伝説的故郷を探索 — 22の法定産地、フラッグシップのFurmint品種、5段階甘口格付けシステム',
+    hungary: {      title: 'ハンガリーワイン',      desc: 'Tokaji Aszú貴腐ワインの伝説的故郷を探索 — 22の法定産地、フラッグシップのFurmint品種、5段階甘口格付けシステム',
       s1label: '法定<br>産地',
       s2label: '最高級<br>甘口ワイン',
       s3label: '甘口<br>レベル',
@@ -180,6 +186,7 @@ export default {
       f3: "✔ EgerのBull's Bloodと Furmint品種",
     },
     australia: {
+      title: 'オーストラリアワイン',
       desc: '65以上のGI産地を探索 — 熱いBarossa Valleyの百年古木から涼しいTasmaniaのスパークリングワインの聖地まで',
       s1label: 'GI<br>産地',
       s2label: 'ワイン<br>州',
@@ -189,8 +196,7 @@ export default {
       f2: '✔ Barossa古木Shirazの深層解説',
       f3: '✔ Tasmaniaのスパークリングとピノ・ノワール',
     },
-    newzealand: {
-      desc: 'MarlboroughのSauvignon BlancからCentral OtagoのPinot Noirまで — 南北両島17産地を探索する清潔な大地のワイン',
+    newzealand: {      title: 'ニュージーランドワイン',      desc: 'MarlboroughのSauvignon BlancからCentral OtagoのPinot Noirまで — 南北両島17産地を探索する清潔な大地のワイン',
       s1label: 'ワイン<br>産地',
       s2label: '主要<br>島',
       s3label: 'フラッグシップ<br>品種',
@@ -199,8 +205,7 @@ export default {
       f2: '✔ Marlborough SB品種の深層解説',
       f3: '✔ Central Otago ピノ・ノワール産地',
     },
-    california: {
-      desc: 'Napa ValleyのトップCabernet SauvignonからSonomaの繊細なPinot Noirまで — 154以上のAVAを探索し、1976年パリ審判で世界を驚かせたワイン大国を深く学ぶ',
+    california: {      title: 'カリフォルニアワイン',      desc: 'Napa ValleyのトップCabernet SauvignonからSonomaの繊細なPinot Noirまで — 154以上のAVAを探索し、1976年パリ審判で世界を驚かせたワイン大国を深く学ぶ',
       s1label: 'AVA<br>産地',
       s2label: 'コース<br>モジュール',
       s3label: 'フラッグシップ<br>品種',

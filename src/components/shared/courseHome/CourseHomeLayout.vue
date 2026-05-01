@@ -4,15 +4,15 @@
     <header class="ch-topbar">
       <div class="ch-topbar-inner">
         <div class="ch-breadcrumb">
-          <button class="bc-link" @click="$router.push('/')">🏠 首頁</button>
+          <button class="bc-link" @click="$router.push('/')">{{ $t('home.nav.homeLink') }}</button>
           <span class="bc-sep">/</span>
           <span v-if="breadcrumbCountry" class="bc-link bc-static">{{ breadcrumbCountry }}</span>
           <span v-if="breadcrumbCountry" class="bc-sep">/</span>
           <span class="bc-current">{{ regionName }}</span>
         </div>
         <div class="ch-logo">
-          <span class="ch-logo-icon">🍷</span>
-          <span class="ch-logo-text">侍酒師的筆記本</span>
+          <img src="/favicon.png" class="ch-logo-icon" alt="logo" />
+          <span class="ch-logo-text">{{ $t('home.nav.brand') }}</span>
         </div>
         <!-- 右側區域：使用者 + 語言切換 -->
         <div class="ch-user-area">
@@ -52,6 +52,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../../stores/authStore.js'
 import { supabase } from '../../../lib/supabaseClient.js'
@@ -212,7 +213,7 @@ body.course-home-active .global-lang-switcher {
   justify-self: center;
   font-weight: 700; color: #1f2937;
 }
-.ch-logo-icon { font-size: 18px; }
+.ch-logo-icon { width: 24px; height: 24px; object-fit: contain; border-radius: 50%; }
 .ch-logo-text { font-size: 15px; letter-spacing: 0.5px; }
 
 .ch-user-area {

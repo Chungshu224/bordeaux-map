@@ -45,7 +45,7 @@ const routes = [
     path: '/bordeaux',
     name: 'Home',
     component: () => import('../components/bordeaux/LevelSelection.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free', title: '🍷 波爾多 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '波爾多 · 侍酒師的筆記本' }
   },
 
   // ─── 布根地課程 ─────────────────────────────────────────────────────────────
@@ -135,14 +135,14 @@ const routes = [
     path: '/california',
     name: 'California',
     component: () => import('../components/california/CaliforniaPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free', title: '🍷 加州葡萄酒產區 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '加州葡萄酒產區 · 侍酒師的筆記本' }
   },
   // ─── 加州葡萄酒課程 ──────────────────────────────────────────────────────────
   {
     path: '/california/course',
     name: 'CaliforniaCourse',
     component: () => import('../components/california/CaliforniaLearningSystem.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free', title: '🍷 加州葡萄酒課程 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '加州葡萄酒課程 · 侍酒師的筆記本' }
   },
 
   // ─── 定價方案頁 ──────────────────────────────────────────────────────────────
@@ -348,7 +348,7 @@ router.afterEach((to) => {
     title = `${LEVEL_TITLES[level] || `L${level} 課程`} · 侍酒師的筆記本`
   }
 
-  document.title = title || '🍷 侍酒師的筆記本 · The Sommelier\'s Notebook'
+  document.title = title || '侍酒師的筆記本 · The Sommelier\'s Notebook'
 })
 
 export default router

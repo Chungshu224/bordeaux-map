@@ -10,7 +10,7 @@
     <div class="reset-container">
       <!-- 品牌 Logo -->
       <div class="brand-header">
-        <div class="wine-glass-icon">🍷</div>
+        <img src="/logo.png" class="wine-glass-icon" alt="侍酒師的筆記本" />
         <div class="brand-text">
           <h1 class="brand-title">侍酒師的筆記本</h1>
           <p class="brand-subtitle">The Sommelier's Notebook</p>
@@ -315,7 +315,7 @@ function getBubbleStyle(i) {
   justify-content: center;
   margin-bottom: 24px;
 }
-.wine-glass-icon { font-size: 2.4rem; filter: drop-shadow(0 2px 8px rgba(255,255,255,.3)); }
+.wine-glass-icon { width: 56px; height: 56px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(255,255,255,.3)); }
 .brand-title  { font-size: 1.4rem; font-weight: 800; color: #fff; margin: 0; }
 .brand-subtitle { font-size: .8rem; color: rgba(255,255,255,.6); margin: 2px 0 0; }
 

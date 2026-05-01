@@ -930,7 +930,7 @@ import { initiateCheckout } from '../lib/purchaseService.js'
 import { fetchRecentPosts } from '../lib/forumService.js'
 
 const router = useRouter()
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 // ─── Auth ─────────────────────────────────────────────────────────────────────
 const authUser    = computed(() => authState.user)
@@ -1094,12 +1094,12 @@ const prelaunchCourseDetails = computed(() => ({
 
 const activePrelaunchDetail = computed(() => prelaunchCourseDetails.value[activeCourseDetail.value] || null)
 
-const compareRows = computed(() => t('home.modal.bordeaux.compareRows'))
+const compareRows = computed(() => tm('home.modal.bordeaux.compareRows'))
 
 // ─── 靜態資料（locale-aware） ──────────────────────────────────────────────────
-const features = computed(() => t('home.features.items'))
+const features = computed(() => tm('home.features.items'))
 
-const faqs = computed(() => t('home.faq.items'))
+const faqs = computed(() => tm('home.faq.items'))
 
 // ─── 公告 ─────────────────────────────────────────────────────────────────────
 const allAnnouncements = ref([])

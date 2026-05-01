@@ -5,6 +5,7 @@ export default {
   nav: {
     brand: '侍酒師的筆記本',
     brandSub: "The Sommelier's Notebook",
+    homeLink: '🏠 首頁',
     adminLink: '⚙️ 管理頁面',
     enterCourse: '進入課程',
     myOrders: '我的訂單',
@@ -109,8 +110,7 @@ export default {
       f2: '✔ 地質・氣候・年份深度分析',
       f3: '✔ 五大酒莊・左右岸 AOC 分級完整解析',
     },
-    bourgogne: {
-      desc: '從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界（預計2027開放）',
+    bourgogne: {      title: '布根地葡萄酒',      desc: '從 Grand Cru 到 Village 級，深入了解 Côte de Nuits、Côte de Beaune，以及 Pinot Noir 與 Chardonnay 的世界（預計2027開放）',
       s1label: '階段課程<br>L1 – L4',
       s2label: 'Grand Cru<br>產區地圖',
       s3label: '地質·氣候<br>進階圖層',
@@ -120,6 +120,7 @@ export default {
       f3: '✔ 氣候影響與年份差異解讀',
     },
     loire: {
+      title: '羅亞爾河谷葡萄酒',
       desc: '法國最長的葡萄酒產區，從大西洋 Muscadet 到礦石 Sancerre，800 公里的葡萄酒王國，涵蓋氣泡酒、白酒、紅酒到甜酒的完整風格版圖',
       s1label: '主要<br>產區',
       s2label: '公里<br>河流',
@@ -129,8 +130,7 @@ export default {
       f2: '✔ Sancerre / Pouilly-Fumé 礦石白酒',
       f3: '✔ Vouvray / Chinon 貴腐甜酒與紅酒',
     },
-    italy: {
-      desc: '探索 Barolo、Brunello、Amarone 等世界頂級義大利葡萄酒，20 個 DOC/DOCG 產區完整解析（預計2027開放）',
+    italy: {      title: '義大利葡萄酒',      desc: '探索 Barolo、Brunello、Amarone 等世界頂級義大利葡萄酒，20 個 DOC/DOCG 產區完整解析（預計2027開放）',
       s1label: '階段課程<br>L1 – L3',
       s2label: '堂課內容<br>完整課程',
       s3label: '大產區<br>DOC/DOCG',
@@ -140,6 +140,7 @@ export default {
       f3: '✔ DOC → DOCG 分級演變課',
     },
     spain: {
+      title: '西班牙葡萄酒',
       desc: '探索 Rioja、Ribera del Duero、Rías Baixas 等頂級產區，DO／DOCa／VP 分級完整解析，互動衛星地圖帶你走遍 96 個法定產區',
       s1label: '階段課程<br>L1 – L4',
       s2label: '法定產區<br>DO 地圖',
@@ -149,8 +150,7 @@ export default {
       f2: '✔ Tempranillo / Garnacha 深度解析',
       f3: '✔ Sherry / Cava 特殊酒型專課',
     },
-    germany: {
-      desc: '深入探索 13 個 Anbaugebiete，從 Mosel 的陡峭板岩到 Rheingau 的優雅 Riesling，葡萄園衛星地圖帶你走遍德國頂級 Weinberg',
+    germany: {      title: '德國葡萄酒',      desc: '深入探索 13 個 Anbaugebiete，從 Mosel 的陡峭板岩到 Rheingau 的優雅 Riesling，葡萄園衛星地圖帶你走遍德國頂級 Weinberg',
       s1label: '法定產區<br>Anbaugebiet',
       s2label: '核心品種',
       s3label: '分級系統<br>探索',
@@ -159,8 +159,7 @@ export default {
       f2: '✔ Mosel 陡坡 Riesling 深度解析',
       f3: '✔ Kabinett → TBA 甜度分級',
     },
-    portugal: {
-      desc: '探索 31 個 DOC 法定產區，從北部的 Vinho Verde 清爽綠酒到南部的 Alentejo 濃郁紅酒，互動衛星地圖帶你認識波特酒的故鄉',
+    portugal: {      title: '葡萄牙葡萄酒',      desc: '探索 31 個 DOC 法定產區，從北部的 Vinho Verde 清爽綠酒到南部的 Alentejo 濃郁紅酒，互動衛星地圖帶你認識波特酒的故鄉',
       s1label: 'DOC 法定<br>產區',
       s2label: '波特酒<br>核心',
       s3label: '代表品種<br>探索',
@@ -169,8 +168,7 @@ export default {
       f2: '✔ Douro 梯田波特酒產區深度解析',
       f3: '✔ Madeira 島嶼加強酒探索',
     },
-    hungary: {
-      desc: '探索 Tokaji Aszú 貴腐酒的傳奇故鄉，從 22 個法定產區到 Furmint 旗艦品種，深入解析匈牙利五級甜度系統與舊世界釀酒文化',
+    hungary: {      title: '匈牙利葡萄酒',      desc: '探索 Tokaji Aszú 貴腐酒的傳奇故鄉，從 22 個法定產區到 Furmint 旗艦品種，深入解析匈牙利五級甜度系統與舊世界釀酒文化',
       s1label: '法定<br>產區',
       s2label: '頂級<br>甜酒',
       s3label: '甜度<br>等級',
@@ -179,8 +177,7 @@ export default {
       f2: '✔ Tokaji Aszú 貴腐甜酒完整解析',
       f3: '✔ Eger 公牛血紅酒與 Furmint 品種',
     },
-    australia: {
-      desc: '探索 65+ GI 產區，從炎熱的 Barossa Valley 百年老藤到涼爽的 Tasmania 氣泡酒聖地，互動衛星地圖帶你認識新世界葡萄酒巨人',
+    australia: {      title: '澳洲葡萄酒',      desc: '探索 65+ GI 產區，從炎熱的 Barossa Valley 百年老藤到涼爽的 Tasmania 氣泡酒聖地，互動衛星地圖帶你認識新世界葡萄酒巨人',
       s1label: 'GI<br>產區',
       s2label: '產酒<br>州',
       s3label: '旗艦<br>品種',
@@ -190,7 +187,8 @@ export default {
       f3: '✔ Tasmania 頂級氣泡酒與 Pinot Noir',
     },
     newzealand: {
-      desc: '從 Marlborough 的 Sauvignon Blanc 到 Central Otago 的 Pinot Noir，探索南北兩島 17 個產區，互動衛星地圖帶你深入了解純淨大地的葡萄酒',
+      title: '紐西蘭葡萄酒',
+      desc: '從 Marlborough 的 Sauvignon Blanc 到 Central Otago 的 Pinot Noir，探索南北兩島18 個產區，互動衛星地圖帶你深入了解純淨大地的葡萄酒',
       s1label: '葡萄酒<br>產區',
       s2label: '主要<br>島嶼',
       s3label: '旗艦<br>品種',
@@ -199,8 +197,7 @@ export default {
       f2: '✔ Marlborough SB 品種深度解析',
       f3: '✔ Central Otago Pinot Noir 產區',
     },
-    california: {
-      desc: '從 Napa Valley 的頂級 Cabernet Sauvignon 到 Sonoma 的精緻 Pinot Noir，探索 154+ AVA 產區，深入了解巴黎品酒會震驚世界的葡萄酒大國',
+    california: {      title: '加州葡萄酒',      desc: '從 Napa Valley 的頂級 Cabernet Sauvignon 到 Sonoma 的精緻 Pinot Noir，探索 154+ AVA 產區，深入了解巴黎品酒會震驚世界的葡萄酒大國',
       s1label: 'AVA<br>產區',
       s2label: '課程<br>章節',
       s3label: '旗艦<br>品種',

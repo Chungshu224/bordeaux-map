@@ -137,7 +137,7 @@ const emit = defineEmits(['selectLevel', 'exploreMode', 'gameHubMode', 'notebook
 
 // ── 主題 ────────────────────────────────────────
 const theme = getTheme('bordeaux')
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 // ── Modal 狀態 ──────────────────────────────────
 const showProgressModal = ref(false)
@@ -207,7 +207,7 @@ const progressSubline = computed(() => {
   if (totalProgressPct.value === 0) return t('bordeaux.progress.sublineStart')
   if (totalProgressPct.value >= 100) return ''
   const n = firstActionableLevel()
-  const titles = t('bordeaux.levels.titles')
+  const titles = tm('bordeaux.levels.titles')
   return t('bordeaux.progress.sublineLevel', { n, title: titles[n] })
 })
 
@@ -220,7 +220,7 @@ const achievementCount = computed(() => achievementState?.unlockedAchievements?.
 const currentStreak = computed(() => achievementState?.userStats?.currentStreak || 0)
 
 // ── Hero stats ──────────────────────────────────
-const heroStats = computed(() => t('bordeaux.hero.stats'))
+const heroStats = computed(() => tm('bordeaux.hero.stats'))
 
 // ── Quick Nav 自訂 ──────────────────────────────
 const quickNavItems = computed(() => [
@@ -249,7 +249,7 @@ const levelData = computed(() => [
     subtitle: 'Level 1',
     icon: '🌱',
     description: t('bordeaux.levels.l1.desc'),
-    tags: t('bordeaux.levels.l1.tags'),
+    tags: tm('bordeaux.levels.l1.tags'),
     modules: learningActions._modulesCount?.(1) || 4,
     lessons: learningState.userProgress?.level1?.total || 8,
     progress: levelProgress(1),
@@ -261,7 +261,7 @@ const levelData = computed(() => [
     subtitle: 'Level 2',
     icon: '🌿',
     description: t('bordeaux.levels.l2.desc'),
-    tags: t('bordeaux.levels.l2.tags'),
+    tags: tm('bordeaux.levels.l2.tags'),
     modules: 4,
     lessons: learningState.userProgress?.level2?.total || 9,
     progress: levelProgress(2),
@@ -274,7 +274,7 @@ const levelData = computed(() => [
     subtitle: 'Level 3',
     icon: '🌳',
     description: t('bordeaux.levels.l3.desc'),
-    tags: t('bordeaux.levels.l3.tags'),
+    tags: tm('bordeaux.levels.l3.tags'),
     modules: 5,
     lessons: learningState.userProgress?.level3?.total || 15,
     progress: levelProgress(3),
@@ -287,7 +287,7 @@ const levelData = computed(() => [
     subtitle: 'Level 4',
     icon: '🏆',
     description: t('bordeaux.levels.l4.desc'),
-    tags: t('bordeaux.levels.l4.tags'),
+    tags: tm('bordeaux.levels.l4.tags'),
     modules: 4,
     lessons: learningState.userProgress?.level4?.total || 12,
     progress: levelProgress(4),
@@ -297,7 +297,7 @@ const levelData = computed(() => [
 ])
 
 // ── 概覽卡片 ────────────────────────────────────
-const overviewItems = computed(() => t('bordeaux.storyGrid.items'))
+const overviewItems = computed(() => tm('bordeaux.storyGrid.items'))
 </script>
 
 <style scoped>
