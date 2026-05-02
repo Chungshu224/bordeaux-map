@@ -149,6 +149,12 @@ export default {
       hardDesc:  '4 つの産地帯',
       hardItems: ['全 AOC（ソーテルヌ含む）', '⏱ 2 秒/問', '20 問'],
       keyHint:   '← 左岸 | 右岸 →',
+      leftLabel:  '左岸',
+      leftHint:   'メドック・グラーヴ',
+      rightLabel: '右岸',
+      rightHint:  'サン・テミリオン・ポムロール',
+      edmLabel:   '両岸の間',
+      sauLabel:   'ソーテルヌ地帯',
     },
     vintage: {
       name:       'ヴィンテージ気温ソート',
@@ -277,6 +283,60 @@ export default {
   // ── BordeauxMap ─────────────────────────────────────────────────────────────
   map: {
     upgradeMsg: '🔒 基本プランにアップグレードして全 7 産地グループを解除',
+    regionName: 'ボルドー',
+    layers: {
+      panelTitle:   'レイヤーと表示',
+      collapse:     '閉じる',
+      reopen:       '⊞ レイヤー',
+      reopenTitle:  'レイヤーパネルを開く',
+      groupView:    '視点',
+      groupData:    'データレイヤー',
+      terrain3d:    '3D 地形',
+      contours:     '等高線',
+      climate:      '気候ヒートマップ',
+      geology:      'BRGM 地質',
+    },
+    chateau: {
+      show:   'シャトーを表示',
+      hide:   'シャトーを非表示',
+    },
+    mobile: {
+      aoc:    '産地',
+      layers: 'レイヤー',
+      info:   '情報',
+    },
+    brgm: {
+      title:    '🗺️ BRGM 地質図',
+      opacity:  '不透明度',
+      source:   'データ提供：BRGM LITHO_1M (Etalab OL)',
+      click:    '地図をクリックして岩石情報を表示',
+    },
+    aocPopupHeader: '📍 選択位置の AOC',
+    climate: {
+      goldenVintage: '🏆 黄金ヴィンテージ',
+      vsBaseline:    'vs 基準',
+      mean:          '平均',
+      indicators: {
+        temp:  { label: '夏季平均気温', lowLabel: '涼', highLabel: '暑',
+          footnote: '指標：6〜8月の日平均気温 | 基準：1981〜2010' },
+        sun:   { label: '日照時間', lowLabel: '少', highLabel: '多',
+          footnote: '指標：6〜8月の日照時間合計（時間）| 基準：1981〜2010' },
+        rain:  { label: '夏季降水量', lowLabel: '乾', highLabel: '湿',
+          footnote: '指標：6〜8月の降水量合計（mm）| 基準：1981〜2010' },
+      },
+    },
+    alert: {
+      feature: {
+        chateau:  'シャトーを表示',
+        contours: '等高線',
+        climate:  '気候ヒートマップ',
+      },
+      tier: {
+        basic:   '基本プラン',
+        premium: 'プレミアムプラン',
+      },
+      msg: '🔒 「{feature}」は「{tier}」プランが必要です\n\nこの機能を解除するにはサブスクリプションをアップグレードしてください！',
+    },
     types: {
       red:      '赤ワイン',
       white:    '白ワイン',

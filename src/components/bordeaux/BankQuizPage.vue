@@ -15,7 +15,7 @@
             <div class="diff-name">{{ $t('bordeaux.games.bank.easyName') }}</div>
             <div class="diff-desc">{{ $t('bordeaux.games.bank.easyDesc') }}</div>
             <ul class="diff-list">
-              <li v-for="item in $t('bordeaux.games.bank.easyItems')" :key="item">{{ item }}</li>
+              <li v-for="item in $tm('bordeaux.games.bank.easyItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
           <!-- Hard -->
@@ -24,7 +24,7 @@
             <div class="diff-name">{{ $t('bordeaux.games.bank.hardName') }}</div>
             <div class="diff-desc">{{ $t('bordeaux.games.bank.hardDesc') }}</div>
             <ul class="diff-list">
-              <li v-for="item in $t('bordeaux.games.bank.hardItems')" :key="item">{{ item }}</li>
+              <li v-for="item in $tm('bordeaux.games.bank.hardItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
         </div>
@@ -246,16 +246,16 @@ const SAUTERNAIS = [
 const EASY_POOL = [...LEFT_BANK, ...RIGHT_BANK]
 const HARD_POOL = [...LEFT_BANK, ...RIGHT_BANK, ...ENTRE_DEUX_MERS, ...SAUTERNAIS]
 
-const EASY_BANKS = [
-  { key: 'left',  label: '左岸',   icon: '🏰', hint: '梅多克・格拉夫', cls: 'left-btn' },
-  { key: 'right', label: '右岸',   icon: '⛪', hint: '聖愛美濃・波美侯', cls: 'right-btn' },
-]
-const HARD_BANKS = [
-  { key: 'left',      label: '左岸',       icon: '🏰', hint: '梅多克・格拉夫', cls: 'left-btn' },
-  { key: 'right',     label: '右岸',       icon: '⛪', hint: '聖愛美濃・波美侯', cls: 'right-btn' },
-  { key: 'edm',       label: '兩河之間',   icon: '🌿', hint: 'Entre-Deux-Mers', cls: 'edm-btn' },
-  { key: 'sauternais',label: '索甸甜酒帶', icon: '🍯', hint: 'Sauternes・Barsac', cls: 'sau-btn' },
-]
+const EASY_BANKS = computed(() => [
+  { key: 'left',  label: t('bordeaux.games.bank.leftLabel'),  icon: '🏰', hint: t('bordeaux.games.bank.leftHint'),  cls: 'left-btn' },
+  { key: 'right', label: t('bordeaux.games.bank.rightLabel'), icon: '⛪', hint: t('bordeaux.games.bank.rightHint'), cls: 'right-btn' },
+])
+const HARD_BANKS = computed(() => [
+  { key: 'left',       label: t('bordeaux.games.bank.leftLabel'),  icon: '🏰', hint: t('bordeaux.games.bank.leftHint'),  cls: 'left-btn' },
+  { key: 'right',      label: t('bordeaux.games.bank.rightLabel'), icon: '⛪', hint: t('bordeaux.games.bank.rightHint'), cls: 'right-btn' },
+  { key: 'edm',        label: t('bordeaux.games.bank.edmLabel'),   icon: '🌿', hint: 'Entre-Deux-Mers',                 cls: 'edm-btn' },
+  { key: 'sauternais', label: t('bordeaux.games.bank.sauLabel'),   icon: '🍯', hint: 'Sauternes · Barsac',              cls: 'sau-btn' },
+])
 
 const TIMER_MAP  = { easy: 6000, hard: 4000 }
 const Q_COUNT    = { easy: 15, hard: 20 }
@@ -282,7 +282,7 @@ const uploaded     = ref(false)
 const uploading    = ref(false)
 const uploadErr    = ref('')
 const cardAnim     = ref('slide-in')
-const banks        = ref(EASY_BANKS)
+const banks        = ref(EASY_BANKS.value)
 const lbTab        = ref('easy')
 const lbLoading    = ref(false)
 const lbData       = ref([])
@@ -340,7 +340,7 @@ function fmtDate(iso) {
 }
 
 function bankLabel(key) {
-  const b = [...EASY_BANKS, ...HARD_BANKS].find(x => x.key === key)
+  const b = [...EASY_BANKS.value, ...HARD_BANKS.value].find(x => x.key === key)
   return b ? b.label : key
 }
 
@@ -368,7 +368,7 @@ function stopRaf() {
 function startGame(diff) {
   difficulty.value = diff
   timerMs = TIMER_MAP[diff]
-  banks.value = diff === 'hard' ? HARD_BANKS : EASY_BANKS
+  banks.value = diff === 'hard' ? HARD_BANKS.value : EASY_BANKS.value
   const pool = diff === 'hard' ? HARD_POOL : EASY_POOL
   questions.value = shuffle(pool).slice(0, Q_COUNT[diff])
   currentIdx.value = 0

@@ -149,6 +149,12 @@ export default {
       hardDesc:  '4 個產區帶',
       hardItems: ['全部 AOC（含甜酒帶）', '⏱ 每題 2 秒', '共 20 題'],
       keyHint:   '← 左岸 | 右岸 →',
+      leftLabel:  '左岸',
+      leftHint:   '梅多克・格拉夫',
+      rightLabel: '右岸',
+      rightHint:  '聖愛美濃・波美侯',
+      edmLabel:   '兩河之間',
+      sauLabel:   '索甸甜酒帶',
     },
     vintage: {
       name:      '年份溫度排列',
@@ -276,8 +282,60 @@ export default {
 
   // ── BordeauxMap ─────────────────────────────────────────────────────────────
   map: {
-    upgradeMsg: '🔒 升級至「初階付費」即可解鎖全部 7 大產區群組',
-    types: {
+    upgradeMsg: '🔒 升級至「初階付費」即可解鎖全部 7 大產區群組',    regionName: '波爾多',
+    layers: {
+      panelTitle:   '圖層與顯示',
+      collapse:     '收合',
+      reopen:       '⊕ 圖層',
+      reopenTitle:  '展開圖層面板',
+      groupView:    '視觓',
+      groupData:    '資料圖層',
+      terrain3d:    '3D 地形',
+      contours:     '等高線',
+      climate:      '氣候熱力',
+      geology:      'BRGM 地質',
+    },
+    chateau: {
+      show:   '顯示知名酒莊',
+      hide:   '隱藏酒莊',
+    },
+    mobile: {
+      aoc:    '產區',
+      layers: '圖層',
+      info:   '資訊',
+    },
+    brgm: {
+      title:    '🗺️ BRGM 地質圖',
+      opacity:  '透明度',
+      source:   '資料來源：BRGM LITHO_1M (Etalab OL)',
+      click:    '點擊地圖查看岩石資訊',
+    },
+    aocPopupHeader: '📍 點選位置所在 AOC',
+    climate: {
+      goldenVintage: '🏆 黃金年份',
+      vsBaseline:    'vs 基準',
+      mean:          '均値',
+      indicators: {
+        temp:  { label: '夏季均溫', lowLabel: '涼', highLabel: '熱',
+          footnote: '指標：6–8 月日均溫平均値（夏季均溫）｜ 基準：1981–2010' },
+        sun:   { label: '日照時數', lowLabel: '少', highLabel: '多',
+          footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010' },
+        rain:  { label: '夏季降雨', lowLabel: '乾', highLabel: '濕',
+          footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010' },
+      },
+    },
+    alert: {
+      feature: {
+        chateau:  '顯示知名酒莊',
+        contours: '等高線',
+        climate:  '氣候熱力',
+      },
+      tier: {
+        basic:   '初階付費',
+        premium: '進階付費',
+      },
+      msg: '🔒 「{feature}」需要「{tier}」方案才能使用\n\n請升級您的訂閱以解鎖此功能！',
+    },    types: {
       red:      '紅酒',
       white:    '白酒',
       sweet:    '甜酒',

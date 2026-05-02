@@ -14,7 +14,7 @@
             <div class="diff-name">{{ $t('bordeaux.games.vintage.easyName') }}</div>
             <div class="diff-desc">{{ $t('bordeaux.games.vintage.easyDesc') }}</div>
             <ul class="diff-list">
-              <li v-for="item in $t('bordeaux.games.vintage.easyItems')" :key="item">{{ item }}</li>
+              <li v-for="item in $tm('bordeaux.games.vintage.easyItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
           <div class="diff-card hard" @click="startGame('hard')">
@@ -22,7 +22,7 @@
             <div class="diff-name">{{ $t('bordeaux.games.vintage.hardName') }}</div>
             <div class="diff-desc">{{ $t('bordeaux.games.vintage.hardDesc') }}</div>
             <ul class="diff-list">
-              <li v-for="item in $t('bordeaux.games.vintage.hardItems')" :key="item">{{ item }}</li>
+              <li v-for="item in $tm('bordeaux.games.vintage.hardItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
         </div>

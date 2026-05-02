@@ -14,7 +14,7 @@
             <div class="diff-name">{{ $t('bordeaux.games.grape.easyName') }}</div>
             <div class="diff-desc">{{ $t('bordeaux.games.grape.easyDesc') }}</div>
             <ul class="diff-list">
-              <li v-for="item in $t('bordeaux.games.grape.easyItems')" :key="item">{{ item }}</li>
+              <li v-for="item in $tm('bordeaux.games.grape.easyItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
           <div class="diff-card hard" @click="startGame('hard')">
@@ -22,7 +22,7 @@
             <div class="diff-name">{{ $t('bordeaux.games.grape.hardName') }}</div>
             <div class="diff-desc">{{ $t('bordeaux.games.grape.hardDesc') }}</div>
             <ul class="diff-list">
-              <li v-for="item in $t('bordeaux.games.grape.hardItems')" :key="item">{{ item }}</li>
+              <li v-for="item in $tm('bordeaux.games.grape.hardItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
         </div>

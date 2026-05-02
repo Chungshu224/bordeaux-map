@@ -149,6 +149,12 @@ export default {
       hardDesc:  '4 bank zones',
       hardItems: ['All AOCs (incl. Sauternes)', '⏱ 2 sec/question', '20 questions'],
       keyHint:   '← Left Bank | Right Bank →',
+      leftLabel:  'Left Bank',
+      leftHint:   'Médoc · Graves',
+      rightLabel: 'Right Bank',
+      rightHint:  'St-Émilion · Pomerol',
+      edmLabel:   'Entre-Deux-Mers',
+      sauLabel:   'Sauternes Zone',
     },
     vintage: {
       name:       'Vintage Temperature Sort',
@@ -272,8 +278,60 @@ export default {
 
   // ── BordeauxMap ─────────────────────────────────────────────────────────────
   map: {
-    upgradeMsg: '🔒 Upgrade to Basic to unlock all 7 appellation groups',
-    types: {
+    upgradeMsg: '🔒 Upgrade to Basic to unlock all 7 appellation groups',    regionName: 'Bordeaux',
+    layers: {
+      panelTitle:   'Layers & Display',
+      collapse:     'Collapse',
+      reopen:       '⊕ Layers',
+      reopenTitle:  'Expand layer panel',
+      groupView:    'View',
+      groupData:    'Data Layers',
+      terrain3d:    '3D Terrain',
+      contours:     'Contours',
+      climate:      'Climate Heat',
+      geology:      'BRGM Geology',
+    },
+    chateau: {
+      show:   'Show Châteaux',
+      hide:   'Hide Châteaux',
+    },
+    mobile: {
+      aoc:    'AOC',
+      layers: 'Layers',
+      info:   'Info',
+    },
+    brgm: {
+      title:    '🗺️ BRGM Geological Map',
+      opacity:  'Opacity',
+      source:   'Source: BRGM LITHO_1M (Etalab OL)',
+      click:    'Click map to view rock information',
+    },
+    aocPopupHeader: '📍 AOC at Selected Location',
+    climate: {
+      goldenVintage: '🏆 Golden Vintage',
+      vsBaseline:    'vs Baseline',
+      mean:          'Mean',
+      indicators: {
+        temp:  { label: 'Summer Temp', lowLabel: 'Cool', highLabel: 'Warm',
+          footnote: 'Metric: Jun–Aug daily mean temperature | Baseline: 1981–2010' },
+        sun:   { label: 'Sunshine Hours', lowLabel: 'Low', highLabel: 'High',
+          footnote: 'Metric: Jun–Aug total sunshine hours | Baseline: 1981–2010' },
+        rain:  { label: 'Summer Rainfall', lowLabel: 'Dry', highLabel: 'Wet',
+          footnote: 'Metric: Jun–Aug total precipitation (mm) | Baseline: 1981–2010' },
+      },
+    },
+    alert: {
+      feature: {
+        chateau:  'Show Châteaux',
+        contours: 'Contours',
+        climate:  'Climate Heat',
+      },
+      tier: {
+        basic:   'Basic',
+        premium: 'Premium',
+      },
+      msg: '🔒 "{feature}" requires the "{tier}" plan\n\nPlease upgrade your subscription to unlock this feature!',
+    },    types: {
       red:      'Red',
       white:    'White',
       sweet:    'Sweet',

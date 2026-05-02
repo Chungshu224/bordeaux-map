@@ -3,7 +3,7 @@
 
     <!-- Header -->
     <RegionMapHeader
-      regionName="波爾多"
+      :regionName="$t('bordeaux.map.regionName')"
       title="Bordeaux Wine Region Map"
       icon="🍷"
       @back="router.push('/bordeaux')"
@@ -26,10 +26,10 @@
           v-if="hasChateauxFile"
           class="btn-chateaux"
           :class="{ 'btn-locked': !canAccessTier('basic') }"
-          @click="canAccessTier('basic') ? toggleChateauxMarkers() : alertUpgrade('顯示知名酒莊', 'basic')"
+          @click="canAccessTier('basic') ? toggleChateauxMarkers() : alertUpgrade('chateau', 'basic')"
         >
           <span v-if="!canAccessTier('basic')" class="lock-inline">🔒</span>
-          {{ showingChateaux ? '隱藏酒莊' : '顯示知名酒莊' }}
+          {{ showingChateaux ? $t('bordeaux.map.chateau.hide') : $t('bordeaux.map.chateau.show') }}
         </button>
       </template>
     </RegionMapInfoPanel>
@@ -39,36 +39,36 @@
       v-if="!isMobile && !layersPanelOpen"
       class="layers-reopen-btn"
       @click="layersPanelOpen = true"
-      title="展開圖層面板"
-    >⊞ 圖層</button>
+      :title="$t('bordeaux.map.layers.reopenTitle')"
+    >{{ $t('bordeaux.map.layers.reopen') }}</button>
 
     <div v-show="isMobile || layersPanelOpen" class="map-controls" :class="{ 'mobile-open': mobileLayersOpen }">
       <!-- 面板標題（桌機 + 行動） -->
       <div class="layers-panel-header">
-        <span>圖層與顯示</span>
-        <button class="btn-collapse-inline" @click="isMobile ? mobileLayersOpen = false : layersPanelOpen = false" title="收合面板">
+        <span>{{ $t('bordeaux.map.layers.panelTitle') }}</span>
+        <button class="btn-collapse-inline" @click="isMobile ? mobileLayersOpen = false : layersPanelOpen = false" :title="$t('bordeaux.map.layers.collapse')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
-          <span class="btn-text">收合</span>
+          <span class="btn-text">{{ $t('bordeaux.map.layers.collapse') }}</span>
         </button>
       </div>
       <div class="layer-group" v-if="map">
-        <div class="layer-group-label">視角</div>
+        <div class="layer-group-label">{{ $t('bordeaux.map.layers.groupView') }}</div>
         <div class="layer-group-buttons">
           <button class="btn-layer" :class="{ active: is3D, 'color-3d': true }" @click="toggle3D">
             <span class="lbtn-icon">🗺</span>
-            <span class="lbtn-text">3D 地形</span>
+            <span class="lbtn-text">{{ $t('bordeaux.map.layers.terrain3d') }}</span>
             <span class="lbtn-dot" :class="{ on: is3D }"></span>
           </button>
           <!-- 等高線：premium 以上 -->
           <button
             class="btn-layer"
             :class="{ active: contoursEnabled && canAccessTier('basic'), 'color-contours': true, 'btn-layer-locked': !canAccessTier('basic') }"
-            @click="canAccessTier('basic') ? toggleContours() : alertUpgrade('等高線', 'basic')"
+            @click="canAccessTier('basic') ? toggleContours() : alertUpgrade('contours', 'basic')"
           >
             <span class="lbtn-icon">〰</span>
-            <span class="lbtn-text">等高線</span>
+            <span class="lbtn-text">{{ $t('bordeaux.map.layers.contours') }}</span>
             <span v-if="!canAccessTier('basic')" class="lbtn-lock">🔒</span>
             <span v-else class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
           </button>
@@ -77,16 +77,16 @@
 
       <!-- ── 資料圖層 ── -->
       <div class="layer-group" v-if="map">
-        <div class="layer-group-label">資料圖層</div>
+        <div class="layer-group-label">{{ $t('bordeaux.map.layers.groupData') }}</div>
         <div class="layer-group-buttons">
           <!-- 氣候熱力：premium 以上 -->
           <button
             class="btn-layer"
             :class="{ active: climateEnabled && canAccessTier('basic'), 'color-climate': true, 'btn-layer-locked': !canAccessTier('basic') }"
-            @click="canAccessTier('basic') ? toggleClimate() : alertUpgrade('氣候熱力', 'basic')"
+            @click="canAccessTier('basic') ? toggleClimate() : alertUpgrade('climate', 'basic')"
           >
             <span class="lbtn-icon">🌡</span>
-            <span class="lbtn-text">氣候熱力</span>
+            <span class="lbtn-text">{{ $t('bordeaux.map.layers.climate') }}</span>
             <span v-if="!canAccessTier('basic')" class="lbtn-lock">🔒</span>
             <span v-else class="lbtn-dot" :class="{ on: climateEnabled }"></span>
           </button>
@@ -97,7 +97,7 @@
             @click="toggleBRGM(map)"
           >
             <span class="lbtn-icon">🗺️</span>
-            <span class="lbtn-text">BRGM 地質</span>
+            <span class="lbtn-text">{{ $t('bordeaux.map.layers.geology') }}</span>
             <span class="lbtn-dot" :class="{ on: brgmEnabled }"></span>
           </button>
         </div>
@@ -105,16 +105,16 @@
 
       <!-- BRGM 地質圖層控制列（BRGM啟用時顯示）-->
       <div v-if="brgmEnabled && !isPhoneDevice" class="brgm-inline-panel">
-        <div class="brgm-inline-title">🗺️ BRGM 地質圖</div>
+        <div class="brgm-inline-title">{{ $t('bordeaux.map.brgm.title') }}</div>
         <div class="brgm-inline-row">
-          <span class="brgm-inline-lbl">透明度</span>
+          <span class="brgm-inline-lbl">{{ $t('bordeaux.map.brgm.opacity') }}</span>
           <input class="brgm-inline-slider" type="range" min="0.05" max="0.85" step="0.05"
             v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
           <span class="brgm-inline-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
         </div>
         <div class="brgm-inline-footer">
-          <span>資料來源：BRGM LITHO_1M (Etalab OL)</span>
-          <span>點擊地圖查看岩石資訊</span>
+          <span>{{ $t('bordeaux.map.brgm.source') }}</span>
+          <span>{{ $t('bordeaux.map.brgm.click') }}</span>
         </div>
       </div>
 
@@ -125,11 +125,11 @@
     <div v-if="map" class="mobile-map-toolbar">
       <button class="mobile-tool-btn" :class="{ active: mobileAocDrawerOpen }" @click="toggleMobileTool('aoc')">
         <span class="mobile-tool-icon">產</span>
-        <span>產區</span>
+        <span>{{ $t('bordeaux.map.mobile.aoc') }}</span>
       </button>
       <button class="mobile-tool-btn" :class="{ active: mobileLayersOpen }" @click="toggleMobileTool('layers')">
         <span class="mobile-tool-icon">層</span>
-        <span>圖層</span>
+        <span>{{ $t('bordeaux.map.mobile.layers') }}</span>
       </button>
       <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggleMobileTool('3d')">
         <span class="mobile-tool-icon">3D</span>
@@ -137,7 +137,7 @@
       </button>
       <button class="mobile-tool-btn" :class="{ active: mobileInfoSheetState !== 'peek' }" @click="toggleMobileTool('info')">
         <span class="mobile-tool-icon">資</span>
-        <span>資訊</span>
+        <span>{{ $t('bordeaux.map.mobile.info') }}</span>
       </button>
     </div>
     
@@ -163,7 +163,7 @@
       <div class="climate-header-row">
         <div class="cy-year-badge">
           <span class="cy-year">{{ climateYear }}</span>
-          <span v-if="isGoldenVintage" class="cy-golden">🏆 黃金年份</span>
+          <span v-if="isGoldenVintage" class="cy-golden">{{ $t('bordeaux.map.climate.goldenVintage') }}</span>
         </div>
         <div class="cy-stats">
           <div v-if="climateCurrentAocLabel" class="cy-aoc-name">{{ climateCurrentAocLabel }}</div>
@@ -172,10 +172,10 @@
           </span>
           <span v-if="currentYearDelta !== null" class="cy-delta"
             :class="currentYearDeltaPositive ? 'cy-warm' : 'cy-cool'">
-            {{ currentYearDeltaPositive ? '+' : '' }}{{ currentYearDelta }}{{ currentIndicatorConfig.unit }} vs 基準
+            {{ currentYearDeltaPositive ? '+' : '' }}{{ currentYearDelta }}{{ currentIndicatorConfig.unit }} {{ $t('bordeaux.map.climate.vsBaseline') }}
           </span>
         </div>
-        <button class="cy-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
+        <button class="cy-close" @click="toggleClimate" :title="$t('bordeaux.map.layers.climate') + ' ✕'">✕</button>
       </div>
       <input
         type="range"
@@ -191,7 +191,7 @@
         <div :class="['legend-gradient', `legend-${climateIndicator}`]"></div>
         <div class="legend-labels">
           <span>{{ currentGlobalStats ? currentGlobalStats.min.toFixed(0) : '' }}{{ currentIndicatorConfig.unit }} {{ currentIndicatorConfig.lowLabel }}</span>
-          <span>均值</span>
+          <span>{{ $t('bordeaux.map.climate.mean') }}</span>
           <span>{{ currentIndicatorConfig.highLabel }} {{ currentGlobalStats ? currentGlobalStats.max.toFixed(0) : '' }}{{ currentIndicatorConfig.unit }}</span>
         </div>
       </div>
@@ -203,6 +203,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -225,8 +226,7 @@ import {
 } from './shared/regionMap/index.js'
 
 const router = useRouter()
-
-// 接收來自父組件的屬性
+const { t } = useI18n()
 const props = defineProps({
   activeAOC: Object,
   regionInfo: Object,
@@ -255,9 +255,10 @@ const resolvedTier = computed(() => {
 const canAccessTier = (minimumTier) => TIER_WEIGHT[resolvedTier.value] >= TIER_WEIGHT[minimumTier]
 
 // 點擊鎖定功能時的統一提示
-const alertUpgrade = (featureName, requiredTier) => {
-  const labels = { basic: '初階付費', premium: '進階付費' }
-  alert(`🔒 「${featureName}」需要「${labels[requiredTier]}」方案才能使用\n\n請升級您的訂閱以解鎖此功能！`)
+const alertUpgrade = (featureKey, requiredTier) => {
+  const feature = t(`bordeaux.map.alert.feature.${featureKey}`)
+  const tier = t(`bordeaux.map.alert.tier.${requiredTier}`)
+  alert(`🔒 「${feature}」需要「${tier}」方案才能使用\n\n請升級您的訂閱以解鎖此功能！`)
 }
 
 // 定義要發送到父組件的事件
@@ -317,32 +318,32 @@ const climateYearSun  = ref([])     // 各年夏季日照
 const climateYearRain = ref([])     // 各年夏季降雨
 const climateIndicator= ref('temp') // 'temp' | 'sun' | 'rain'
 
-const CLIMATE_INDICATORS = [
+const CLIMATE_INDICATORS = computed(() => [
   {
-    id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C',
-    lowLabel: '涼', highLabel: '熱',
-    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010',
+    id: 'temp', icon: '🌡', label: t('bordeaux.map.climate.indicators.temp.label'), unit: '°C',
+    lowLabel: t('bordeaux.map.climate.indicators.temp.lowLabel'), highLabel: t('bordeaux.map.climate.indicators.temp.highLabel'),
+    footnote: t('bordeaux.map.climate.indicators.temp.footnote'),
     dataKey: 'temps', baselineKey: 'baseline',
     globalKey: 'global', yearAvgKey: 'yearAvg',
   },
   {
-    id: 'sun', icon: '☀️', label: '日照時數', unit: 'h',
-    lowLabel: '少', highLabel: '多',
-    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010',
+    id: 'sun', icon: '☀️', label: t('bordeaux.map.climate.indicators.sun.label'), unit: 'h',
+    lowLabel: t('bordeaux.map.climate.indicators.sun.lowLabel'), highLabel: t('bordeaux.map.climate.indicators.sun.highLabel'),
+    footnote: t('bordeaux.map.climate.indicators.sun.footnote'),
     dataKey: 'sun', baselineKey: 'baselineSun',
     globalKey: 'globalSun', yearAvgKey: 'yearSunAvg',
   },
   {
-    id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm',
-    lowLabel: '乾', highLabel: '濕',
-    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010',
+    id: 'rain', icon: '🌧', label: t('bordeaux.map.climate.indicators.rain.label'), unit: 'mm',
+    lowLabel: t('bordeaux.map.climate.indicators.rain.lowLabel'), highLabel: t('bordeaux.map.climate.indicators.rain.highLabel'),
+    footnote: t('bordeaux.map.climate.indicators.rain.footnote'),
     dataKey: 'rain', baselineKey: 'baselineRain',
     globalKey: 'globalRain', yearAvgKey: 'yearRainAvg',
   },
-]
+])
 
 const currentIndicatorConfig = computed(() =>
-  CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value)
+  CLIMATE_INDICATORS.value.find(i => i.id === climateIndicator.value)
 )
 const currentGlobalStats = computed(() => {
   const cfg = currentIndicatorConfig.value
@@ -1042,7 +1043,7 @@ const registerAocClickHandler = () => {
     const popupEl = document.createElement('div')
     popupEl.className = 'aoc-point-popup'
     popupEl.innerHTML = `
-      <div class="aoc-point-header">📍 點選位置所在 AOC</div>
+      <div class="aoc-point-header">${t('bordeaux.map.aocPopupHeader')}</div>
       ${rows}
       <div class="aoc-point-coords">${lat.toFixed(5)}°N / ${Math.abs(lng).toFixed(5)}°${lng < 0 ? 'W' : 'E'}</div>
     `

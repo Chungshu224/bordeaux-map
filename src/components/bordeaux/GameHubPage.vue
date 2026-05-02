@@ -68,7 +68,7 @@ import { authState, authActions } from '../../stores/authStore.js'
 import { TIER_WEIGHT } from '../../router/index.js'
 
 defineEmits(['back'])
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 const currentGame = ref(null)
 
@@ -92,11 +92,11 @@ const handleGameClick = (game) => {
 const tierLabel = (tier) => t(`bordeaux.games.tier.${tier}`)
 
 const GAMES = computed(() => [
-  { id: 'map',     icon: '🗺️', name: t('bordeaux.games.map.name'),     desc: t('bordeaux.games.map.desc'),     tags: t('bordeaux.games.map.tags'),     accent: '#f97316', accent2: '#ef4444', minimumTier: 'basic' },
-  { id: 'bank',    icon: '⚡',  name: t('bordeaux.games.bank.name'),    desc: t('bordeaux.games.bank.desc'),    tags: t('bordeaux.games.bank.tags'),    accent: '#0ea5e9', accent2: '#38bdf8', minimumTier: 'basic' },
-  { id: 'vintage', icon: '🌡️', name: t('bordeaux.games.vintage.name'), desc: t('bordeaux.games.vintage.desc'), tags: t('bordeaux.games.vintage.tags'), accent: '#f59e0b', accent2: '#d97706', minimumTier: 'basic' },
-  { id: 'grape',   icon: '🍇', name: t('bordeaux.games.grape.name'),   desc: t('bordeaux.games.grape.desc'),   tags: t('bordeaux.games.grape.tags'),   accent: '#22c55e', accent2: '#15803d', minimumTier: 'basic' },
-  { id: 'label',   icon: '🏷️', name: t('bordeaux.games.label.name'),   desc: t('bordeaux.games.label.desc'),   tags: t('bordeaux.games.label.tags'),   accent: '#c8a96e', accent2: '#92400e', minimumTier: 'basic' },
+  { id: 'map',     icon: '🗺️', name: t('bordeaux.games.map.name'),     desc: t('bordeaux.games.map.desc'),     tags: tm('bordeaux.games.map.tags'),     accent: '#f97316', accent2: '#ef4444', minimumTier: 'basic' },
+  { id: 'bank',    icon: '⚡',  name: t('bordeaux.games.bank.name'),    desc: t('bordeaux.games.bank.desc'),    tags: tm('bordeaux.games.bank.tags'),    accent: '#0ea5e9', accent2: '#38bdf8', minimumTier: 'basic' },
+  { id: 'vintage', icon: '🌡️', name: t('bordeaux.games.vintage.name'), desc: t('bordeaux.games.vintage.desc'), tags: tm('bordeaux.games.vintage.tags'), accent: '#f59e0b', accent2: '#d97706', minimumTier: 'basic' },
+  { id: 'grape',   icon: '🍇', name: t('bordeaux.games.grape.name'),   desc: t('bordeaux.games.grape.desc'),   tags: tm('bordeaux.games.grape.tags'),   accent: '#22c55e', accent2: '#15803d', minimumTier: 'basic' },
+  { id: 'label',   icon: '🏷️', name: t('bordeaux.games.label.name'),   desc: t('bordeaux.games.label.desc'),   tags: tm('bordeaux.games.label.tags'),   accent: '#c8a96e', accent2: '#92400e', minimumTier: 'basic' },
 ])
 
 const stats = computed(() => {

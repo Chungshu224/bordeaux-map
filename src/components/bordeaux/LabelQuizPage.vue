@@ -15,7 +15,7 @@
             <div class="diff-name">{{ $t('bordeaux.games.label.easyName') }}</div>
             <div class="diff-desc">{{ $t('bordeaux.games.label.easyDesc') }}</div>
             <ul class="diff-list">
-              <li v-for="item in $t('bordeaux.games.label.easyItems')" :key="item">{{ item }}</li>
+              <li v-for="item in $tm('bordeaux.games.label.easyItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
           <!-- 中等 -->
@@ -24,7 +24,7 @@
             <div class="diff-name">{{ $t('bordeaux.games.label.medName') }}</div>
             <div class="diff-desc">{{ $t('bordeaux.games.label.medDesc') }}</div>
             <ul class="diff-list">
-              <li v-for="item in $t('bordeaux.games.label.medItems')" :key="item">{{ item }}</li>
+              <li v-for="item in $tm('bordeaux.games.label.medItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
           <!-- 困難 -->
@@ -33,7 +33,7 @@
             <div class="diff-name">{{ $t('bordeaux.games.label.hardName') }}</div>
             <div class="diff-desc">{{ $t('bordeaux.games.label.hardDesc') }}</div>
             <ul class="diff-list">
-              <li v-for="item in $t('bordeaux.games.label.hardItems')" :key="item">{{ item }}</li>
+              <li v-for="item in $tm('bordeaux.games.label.hardItems')" :key="item">{{ item }}</li>
             </ul>
           </div>
         </div>
