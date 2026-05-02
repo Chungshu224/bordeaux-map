@@ -1026,7 +1026,7 @@ export const l47Content = makeL4Lesson({
         options: ['風險發生機率', '恢復業務運作的目標時間', '資料丟失的容忍時間'],
         correct: 1,
         explanation: 'RTO (Recovery Time Objective) 是恢復時間目標,RPO (Recovery Point Objective) 才是資料丟失容忍時間。'
-      }
+      },
     {
         id: 4,
         question: '風險矩陣中「高影響、低發生可能性」的風險（如冰雹全損），最適合的應對策略是？',

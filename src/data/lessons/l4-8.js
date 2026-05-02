@@ -1597,7 +1597,7 @@ export const l48Content = makeL4Lesson({
         options: ['隱藏取捨', '誇大宣稱', '無實質行動'],
         correct: 1,
         explanation: '誇大宣稱是指過度美化產品屬性而與事實不符,需透過第三方查證與透明揭露防範。'
-      }
+      },
     {
         id: 4,
         question: '根據 GHG Protocol，波爾多葡萄酒出廠後玻璃瓶在消費者端廢棄所產生的排放屬於哪個範疇？',

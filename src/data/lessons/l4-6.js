@@ -909,7 +909,7 @@ export const l46Content = makeL4Lesson({
         options: ['完全禁止任何調整', '允許小比例試驗田引入耐熱品種,並追蹤數據', '全面開放所有國際品種'],
         correct: 1,
         explanation: 'INAO 在維護風土特性前提下,允許試驗性調適,平衡傳統與氣候挑戰。'
-      }
+      },
     {
         id: 4,
         question: '酒莊推出的新款混釀含有未獲 AOC 核准的品種 8%，若申請 AOC 認證，最可能的結果是？',

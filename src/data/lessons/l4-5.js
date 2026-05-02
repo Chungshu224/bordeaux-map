@@ -899,7 +899,7 @@ export const l45Content = makeL4Lesson({
         options: ['停止所有 CRM 活動並全力促銷', '重新檢視獲客管道成本與留存策略，強化培育與會員價值', '降低產品品質以減少成本'],
         correct: 1,
         explanation: 'LTV/CAC 偏低代表獲客成本過高或留存不足，需優先調整獲客與培育策略。'
-      }
+      },
     {
         id: 4,
         question: '酒莊旗下有入門款、中階款與頂級款，若三者共用同一品牌名稱，最大潛在風險是？',

@@ -805,7 +805,7 @@ export const l410Content = makeL4Lesson({
           { id: 'c', text: 'ROI = -2%,不划算', explanation: '計算嚴重錯誤,忽略品質溢價效益 (€120K)。' },
           { id: 'd', text: 'ROI = 133%,回本期 3 個月', explanation: '過於樂觀,混淆年度效益與首年 ROI 定義。' }
         ]
-      }
+      },
     {
         id: 4,
         question: '某酒莊建立資料湖整合 IoT 感測器、銷售 ERP 與社群媒體三類資料。以下哪項是最優先需解決的資料治理問題？',

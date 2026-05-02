@@ -911,7 +911,7 @@ export const l411Content = makeL4Lesson({
           { id: 'c', text: '兩者相同', explanation: '錯誤,Liv-ex 佣金顯著低於拍賣行。' },
           { id: 'd', text: 'Liv-ex 淨收多 €594', explanation: '這僅是 Liv-ex 佣金,非兩者差異。正確差異應考慮拍賣佣金 €2,592。' }
         ]
-      }
+      },
     {
         id: 4,
         question: '投資人持有某頂級波爾多期酒，市場傳言該酒莊考慮退出 En Primeur 系統轉為直售。此消息對持有者最主要的風險影響是？',

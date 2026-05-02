@@ -879,7 +879,7 @@ export const l44Content = makeL4Lesson({
         options: ['固定成本過高', '價格與成本比產量更關鍵', '應立即增加產能'],
         correct: 1,
         explanation: '產量變動影響小通常表示固定成本占比較高，需更重視價格與成本管理。'
-      }
+      },
     {
         id: 4,
         question: '若酒莊欲精確識別哪些成本活動「最難壓縮」，應優先採用哪種成本分析工具？',
