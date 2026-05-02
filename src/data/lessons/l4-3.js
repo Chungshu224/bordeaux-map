@@ -776,7 +776,7 @@ export const l43Content = makeL4Lesson({
         options: ['加速升溫至 260°C', '採用脈衝火焰並監控桶板核心溫度', '減少烘烤時間到 30 秒'],
         correct: 1,
         explanation: '脈衝火焰搭配核心溫度監控可維持均勻熱解，避免炭化。'
-      }
+      },
     {
         id: 4,
         question: '評估橡木桶材源品質時，哪個指標最能反映木材通氣性與香氣釋放的一致性？',
