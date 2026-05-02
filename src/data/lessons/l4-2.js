@@ -75,7 +75,8 @@ export const l42Content = makeL4Lesson({
   objectives: [
     { id: 1, text: '掌握關鍵發酵變數與副產物管理', icon: '🧫' },
     { id: 2, text: '設計氧管理策略避免還原/氧化問題', icon: '🫧' },
-    { id: 3, text: '評估穩定化與低酒精技術對風格的影響', icon: '🧪' }
+    { id: 3, text: '建立還原/氧化風險預防SOP與應急決策流程', icon: '⚠️' },
+    { id: 4, text: '評估穩定化與低酒精技術對風格的影響', icon: '🧪' }
   ],
   chapters: [
     {
@@ -416,6 +417,230 @@ export const l42Content = makeL4Lesson({
       `
     },
     {
+      title: '還原/氧化風險根因分析與預防',
+      nav: '風險管理',
+      icon: '⚠️',
+      highlights: [
+        { id: 'h1', icon: '🔍', title: '根因分析', content: '還原與氧化的深層成因、前驅物與敏感窗口。' },
+        { id: 'h2', icon: '🛡️', title: '預防SOP', content: '發酵、陳年、轉罐、裝瓶各階段的預防標準作業程序。' },
+        { id: 'h3', icon: '🚨', title: '應急決策樹', content: '問題發生後的快速診斷流程、優先矯正順序與驗證指標。' }
+      ],
+      html: `
+        <div class="chapter-intro">
+          <h3>🔰 概念入門：為什麼「防患未然」比「亡羊補牢」更重要？</h3>
+          <div class="prevention-philosophy">
+            <p class="lead">
+              在氧管理章節，我們學習了如何監測DO值與判斷問題。但<strong>真正的高階釀造技術是在問題發生前就把它「消滅」</strong>：
+            </p>
+            <div class="cost-comparison">
+              <div class="cost-item reactive">
+                <h4>❌ 事後矯正（亡羊補牢）</h4>
+                <ul>
+                  <li>銅處理可去除H₂S，但可能留下痕跡</li>
+                  <li>早期氧化難以逆轉，只能減損控制</li>
+                  <li>每桶矯正成本：€50–200不等</li>
+                  <li>品質損失：可能是永久性的</li>
+                </ul>
+              </div>
+              <div class="cost-item proactive">
+                <h4>✅ 事前預防（防患未然）</h4>
+                <ul>
+                  <li>精確控制YAN防止H₂S根本不產生</li>
+                  <li>嚴格管理DO使氧化無從發生</li>
+                  <li>每桶預防成本：€5–20不等</li>
+                  <li>品質保全：完整保留</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>還原風險根因分析</h3>
+        <div class="risk-analysis">
+          <p>📊 <strong>還原（Reduction）不是單一成因，而是多條路徑的匯流：</strong></p>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>根本原因</th><th>前驅物/機制</th><th>高風險窗口</th><th>預防措施</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>YAN不足</strong></td>
+              <td>酵母氮源耗盡後轉向含硫胺基酸，釋出H₂S</td>
+              <td>發酵中後期（糖度50–0 g/L）</td>
+              <td>在發酵前及1/3進度補充DAP + 有機氮至目標YAN</td>
+            </tr>
+            <tr>
+              <td><strong>封閉發酵/通氣不足</strong></td>
+              <td>CO₂層積聚，酵母處於極度還原狀態</td>
+              <td>發酵高峰期（活躍泡騰時）</td>
+              <td>每日一次短暫曝氣（白酒）或打泵（紅酒）</td>
+            </tr>
+            <tr>
+              <td><strong>高SO₂殘留</strong></td>
+              <td>元素硫被還原為H₂S；某些酵母菌株高產量</td>
+              <td>調硫後陳年初期</td>
+              <td>選擇低硫化物生產酵母菌株；精確計算SO₂劑量</td>
+            </tr>
+            <tr>
+              <td><strong>酒泥長期接觸</strong></td>
+              <td>死亡酵母分解釋出含硫化合物（DMS前驅物）</td>
+              <td>陳年期過度酒泥培育</td>
+              <td>定期攪拌（白酒）或適時撈渣；監測硫醇指標</td>
+            </tr>
+            <tr>
+              <td><strong>還原菌（乳酸菌）</strong></td>
+              <td>特定乳酸菌株代謝含硫化合物</td>
+              <td>蘋果酸乳酸發酵期間</td>
+              <td>控制MLF菌種；避免過低SO₂讓雜菌繁殖</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>氧化風險根因分析</h3>
+        <table class="data-table">
+          <thead>
+            <tr><th>根本原因</th><th>機制</th><th>高風險窗口</th><th>預防措施</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>游離SO₂不足</strong></td>
+              <td>SO₂是一線抗氧化防線；過低時酚類和香氣直接氧化</td>
+              <td>全程，尤其裝瓶前</td>
+              <td>依pH調整目標游離SO₂（pH 3.2→25 mg/L，pH 3.5→40 mg/L）</td>
+            </tr>
+            <tr>
+              <td><strong>金屬催化（Fe, Cu）</strong></td>
+              <td>Fe²⁺/Fe³⁺和Cu²⁺加速酚類氧化（Fenton反應）</td>
+              <td>操作過程（泵送、接觸金屬設備）</td>
+              <td>使用食品級不鏽鋼；必要時添加植酸（phytic acid）鰲合</td>
+            </tr>
+            <tr>
+              <td><strong>高DO輸入</strong></td>
+              <td>裝填、泵送、過濾引入溶氧直接氧化香氣分子</td>
+              <td>每個操作節點</td>
+              <td>惰性氣體覆蓋（N₂/Ar）；低DO轉移設備；DO即時監測</td>
+            </tr>
+            <tr>
+              <td><strong>酚類酶促氧化</strong></td>
+              <td>多酚氧化酶（PPO）在發酵前氧化酚類</td>
+              <td>採收到接種前（汁液暴露期）</td>
+              <td>採收時防止破損；適當SO₂早期添加；低溫汁液澄清</td>
+            </tr>
+            <tr>
+              <td><strong>不適當容器封存</strong></td>
+              <td>木塞微縫、螺旋蓋品質不佳造成持續微量進氧</td>
+              <td>陳年期與瓶中成熟期</td>
+              <td>瓶封OTR（氧傳遞率）測試；確保裝瓶DO &lt;0.2 mg/L</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>預防SOP：各階段管理要點</h3>
+        <div class="sop-overview">
+          <p>🔧 <strong>預防的精髓是「在正確的時間做正確的事」，而不是事後補救：</strong></p>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>生產階段</th><th>還原風險預防</th><th>氧化風險預防</th><th>監測指標</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>採收→發酵前</strong></td>
+              <td>無（此階段主要為氧化風險）</td>
+              <td>早期SO₂（30–50 mg/L總量）；低溫澄清；避免PPO接觸空氣</td>
+              <td>DO、pH、游離SO₂</td>
+            </tr>
+            <tr>
+              <td><strong>發酵中</strong></td>
+              <td>每次加糖/補氮監測YAN；發酵1/3時補充有機氮；監測H₂S前驅物</td>
+              <td>少量DO補充（0.5–1.0 mg/L）支持酵母健康；避免過度通氣</td>
+              <td>YAN、DO、酵母活力（細胞計數）</td>
+            </tr>
+            <tr>
+              <td><strong>陳年/轉罐</strong></td>
+              <td>白酒：定期攪拌（防DMS積聚）；控制硫醇水平；監測揮發硫化物</td>
+              <td>關鍵節點DO &lt;0.5 mg/L；惰性氣體保護；每2–4周確認游離SO₂</td>
+              <td>DO、游離SO₂、氧化還原電位（ORP）</td>
+            </tr>
+            <tr>
+              <td><strong>裝瓶</strong></td>
+              <td>確認無H₂S/硫醇；低氧填充後感官確認</td>
+              <td>裝瓶DO：白酒 &lt;0.1 mg/L，紅酒 &lt;0.2 mg/L；瓶頸空間氮氣置換</td>
+              <td>DO（線上監測）、總SO₂、感官確認</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>應急決策樹：問題發生後的處理流程</h3>
+        <div class="decision-tree">
+          <div class="decision-branch reduction">
+            <h4>🦨 偵測到還原風味（H₂S/硫醇）</h4>
+            <ol class="decision-steps">
+              <li><strong>第1步：確認程度</strong>
+                <ul>
+                  <li>輕微（打開後消散）→ 溫和通氣，繼續監測</li>
+                  <li>中度（持續存在）→ 進入下一步</li>
+                  <li>嚴重（刺鼻）→ 緊急銅處理</li>
+                </ul>
+              </li>
+              <li><strong>第2步：銅處理（如適用）</strong>
+                <ul>
+                  <li>CuSO₄溶液 0.1–0.3 mg/L（勿超過EU限值 0.5 mg/L）</li>
+                  <li>攪拌均勻靜置24–48小時後過濾去除</li>
+                  <li>驗證：感官測試 + 化學分析確認硫化物下降</li>
+                </ul>
+              </li>
+              <li><strong>第3步：根因排查與後續預防</strong>
+                <ul>
+                  <li>複查YAN記錄、發酵日誌</li>
+                  <li>下一批次增加有機氮比例並加強通氣頻次</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          <div class="decision-branch oxidation">
+            <h4>🍂 偵測到氧化跡象（褐變/香氣衰退）</h4>
+            <ol class="decision-steps">
+              <li><strong>第1步：量化損失程度</strong>
+                <ul>
+                  <li>測量ORP（&gt;350 mV需立即處理）</li>
+                  <li>分析游離SO₂水平</li>
+                  <li>視覺評估色澤（白酒黃化/紅酒磚色）</li>
+                </ul>
+              </li>
+              <li><strong>第2步：緊急SO₂補充</strong>
+                <ul>
+                  <li>計算目標游離SO₂並補充（考量pH與溫度）</li>
+                  <li>惰性氣體覆蓋防止繼續引氧</li>
+                </ul>
+              </li>
+              <li><strong>第3步：評估可行動作</strong>
+                <ul>
+                  <li>輕度氧化：SO₂矯正 + 感官追蹤（可能恢復）</li>
+                  <li>中重度氧化：評估降級或混釀方案</li>
+                  <li>嚴重氧化：蒸餾或轉作醋用</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <h3>案例研究：完整的還原風險預防流程</h3>
+        <p class="subhead">背景</p>
+        <p>2022年份高酯Sauvignon Blanc，前一年份曾出現輕微火柴盒味，本年份決定實施系統性預防。</p>
+        <p class="subhead">預防策略</p>
+        <ul>
+          <li><strong>採收前</strong>：分析葡萄汁YAN，預測目標補充量（測得YAN 95 mg N/L，目標180 mg N/L）。</li>
+          <li><strong>發酵前</strong>：添加25 mg/L有機氮（Fermaid-O）；接種量維持低位（0.35×10⁶ cells/mL）。</li>
+          <li><strong>發酵1/3</strong>：再次添加20 mg/L有機氮；短暫充氧至DO 0.7 mg/L。</li>
+          <li><strong>全程監測</strong>：每48小時檢測H₂S前驅物（硫化物色層法）；DO維持0.3 mg/L以下。</li>
+        </ul>
+        <p class="subhead">結果</p>
+        <p>全程未偵測到H₂S；總酯類比上年份高28%；品評顯示純淨清新花果香，無任何還原特徵。<strong>預防成本較上年份銅處理矯正費用減少75%。</strong></p>
+      `
+    },
+    {
       title: '穩定化與低酒精技術',
       nav: '技術',
       icon: '🧪',
@@ -701,6 +926,13 @@ export const l42Content = makeL4Lesson({
       },
       {
         id: 3,
+        question: '白酒出現硫磺味（H₂S）時，首要確認的根本原因是？',
+        options: ['游離 SO₂ 過高', 'YAN 不足或發酵期間密閉缺氧', '裝瓶 DO 超標'],
+        correct: 1,
+        explanation: '還原異味最常見的根因是發酵期間酵母缺乏氮源（YAN）或高酒泥密閉缺氧；應先確認 YAN 是否充足，再針對性補充或導氣。'
+      },
+      {
+        id: 4,
         question: '哪項穩定化技術初期投資高但可連續化且省能？',
         options: ['冷穩', '接種晶種', '電透析'],
         correct: 2,

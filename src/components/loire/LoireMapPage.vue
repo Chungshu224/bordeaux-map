@@ -529,6 +529,7 @@ function resetMap() {
   activeAOC.value = null
   activeLevelFilter.value = null
   regionInfo.value = null
+  infoBarCollapsed.value = true
   if (map) {
     if (map.getLayer('loire-fill')) map.removeLayer('loire-fill')
     if (map.getLayer('loire-outline')) map.removeLayer('loire-outline')

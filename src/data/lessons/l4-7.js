@@ -1027,6 +1027,28 @@ export const l47Content = makeL4Lesson({
         correct: 1,
         explanation: 'RTO (Recovery Time Objective) 是恢復時間目標,RPO (Recovery Point Objective) 才是資料丟失容忍時間。'
       }
+    {
+        id: 4,
+        question: '風險矩陣中「高影響、低發生可能性」的風險（如冰雹全損），最適合的應對策略是？',
+        options: [
+        '忽略，因發生機率低',
+        '保險轉移為主，並預留應急準備金',
+        '完全自留並建立大量現金儲備'
+        ],
+        correct: 1,
+        explanation: '低頻高損的風險最適合透過保險轉移，將尾部風險外部化；同時保留小額應急準備金應對自留額度與免賠額。'
+      },
+      {
+        id: 5,
+        question: '酒莊整合 ESG 策略後，哪個行動最能同時提升長期韌性並降低融資利率？',
+        options: [
+        '削減 ESG 支出以保留現金',
+        '取得 ISO 14001 或 HVE 認證並向融資方揭露 ESG 績效',
+        '僅在官方網站發布環境宣言'
+        ],
+        correct: 1,
+        explanation: '持有 ESG 認證並透明揭露績效，能符合永續貸款（SLL）條件，使酒莊獲得利率折扣，同時提升機構投資人與銀行的長期信任度。'
+      },
     ],
     passingScore: 60,
     timeLimit: 180

@@ -212,11 +212,11 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'basic', title: '🎮 互動練習 · 侍酒師的筆記本' }
   },
   {
-    // 品飲筆記本：premium 以上
+    // 品飲筆記本：basic 以上
     path: '/notebook',
     name: 'Notebook',
     component: () => import('../components/bordeaux/TastingNotebookPage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'premium', title: '📝 品飲筆記 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, minimumTier: 'basic', title: '📝 品飲筆記 · 侍酒師的筆記本' }
   },
   {
     path: '/upgrade',

@@ -31,8 +31,8 @@
     <!-- 成就通知容器 -->
     <AchievementNotificationsContainer />
 
-    <!-- 全域語言切換器（右上角浮動） -->
-    <div class="global-lang-switcher">
+    <!-- 全域語言切換器（右上角浮動，只在首頁/登入/註冊/定價頁顯示） -->
+    <div v-if="showLangSwitcher" class="global-lang-switcher">
       <LanguageSwitcher />
     </div>
 
@@ -85,7 +85,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import AchievementNotificationsContainer from './components/AchievementNotificationsContainer.vue'
 import IdleWarningModal from './components/IdleWarningModal.vue'
 import LanguageSwitcher from './components/LanguageSwitcher.vue'
@@ -95,6 +95,11 @@ import { authState, authActions } from './stores/authStore.js'
 import { useSessionGuard } from './composables/useSessionGuard.js'
 
 const router = useRouter()
+const route  = useRoute()
+
+// 語言切換器僅在公開頁顯示（首頁、登入、註冊、定價）
+const LANG_SWITCH_ROUTES = new Set(['/', '/login', '/register', '/pricing'])
+const showLangSwitcher = computed(() => LANG_SWITCH_ROUTES.has(route.path))
 
 // Session 安全管理（單裝置 + 閒置 10 分鐘提醒）
 const {

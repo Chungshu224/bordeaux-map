@@ -912,6 +912,26 @@ export const l411Content = makeL4Lesson({
           { id: 'd', text: 'Liv-ex 淨收多 €594', explanation: '這僅是 Liv-ex 佣金,非兩者差異。正確差異應考慮拍賣佣金 €2,592。' }
         ]
       }
+    {
+        id: 4,
+        question: '投資人持有某頂級波爾多期酒，市場傳言該酒莊考慮退出 En Primeur 系統轉為直售。此消息對持有者最主要的風險影響是？',
+        options: [
+        { id: 'a', text: '評分因此下修，影響酒質聲譽', explanation: '釀造模式改變與評分無直接關係。' },
+        { id: 'b', text: '退出 EP 改變稀缺性溢價結構，可能壓低二級市場期酒流通溢價', explanation: '✓ 正確! 退出 En Primeur 使買家喪失傳統期酒定價優勢，釀酒莊直售改變供需結構，歷史案例（如 Latour 2012 年退出）顯示對二級市場流通溢價有結構性下行影響。', correct: true },
+        { id: 'c', text: '歐元匯率波動影響收益', explanation: '匯率是一般性風險，非退出 EP 的特定影響。' },
+        { id: 'd', text: '倉儲保險費用上升', explanation: '保險費與酒莊銷售模式無關。' }
+        ]
+      },
+      {
+        id: 5,
+        question: '葡萄酒投資組合 60% 波爾多一級莊 + 30% 勃根地特級園 + 10% 其他，Sharpe Ratio = 0.85。為提升 Sharpe Ratio，最有效的調整是？',
+        options: [
+        { id: 'a', text: '全集中波爾多一級莊，提高集中度', explanation: '集中持倉提高波動性（σp），Sharpe Ratio = (Rp - Rf) / σp 通常下降。' },
+        { id: 'b', text: '引入低相關性資產（如義大利 Super Tuscan、年份香檳），降低組合波動', explanation: '✓ 正確! 降低 σp 可在相同預期回報下提升 Sharpe Ratio。低相關性資產是教科書級多元化策略，歷史上波爾多與勃根地相關性約 0.65~0.75，引入義大利/香檳資產可顯著降低組合波動。', correct: true },
+        { id: 'c', text: '增加期酒槓桿操作', explanation: '槓桿放大波動和損失，Sharpe Ratio 通常惡化。' },
+        { id: 'd', text: '持倉不動，等待市場回升', explanation: '被動持有不改變組合結構，Sharpe Ratio 由持倉決定。' }
+        ]
+      }
     ]
   }
 })

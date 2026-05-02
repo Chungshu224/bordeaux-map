@@ -1609,13 +1609,14 @@ const normalizeSlide = (s) => {
     case 'objectives': {
       slide.title = s.title || '學習目標'
       const objs = toList(s.objectives)
-      // 支援物件型目標 {title, description, icon}
+      // 支援物件型目標 {title, description, icon} 或 {text, icon}
       slide.content = `
         <ul class="objectives">
           ${objs.map(o => {
             if (o && typeof o === 'object') {
               const icon = o.icon ? `${esc(o.icon)} ` : ''
-              const title = o.title ? `<strong>${esc(o.title)}</strong>` : ''
+              const label = o.text || o.title || ''
+              const title = label ? `<strong>${esc(label)}</strong>` : ''
               const desc = o.description ? `：${esc(o.description)}` : ''
               return `<li>${icon}${title}${desc}</li>`
             }
@@ -1707,6 +1708,7 @@ const normalizeSlide = (s) => {
       `
       break
     }
+    case 'quiz':
     case 'interactive-quiz': {
       // 支援 questions 陣列 → 拆成多頁
       if (Array.isArray(s.questions) && s.questions.length) {

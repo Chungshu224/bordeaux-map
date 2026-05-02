@@ -396,8 +396,8 @@ const userEmail = computed(() => authActions.getEmail() ?? '')
 
 const TIER_INFO = {
   free:    { label: '品飲新手 Explorer',     icon: '🌱', desc: '可免費探索基礎課程與地圖' },
-  basic:   { label: '進階愛好者 Enthusiast', icon: '🍇', desc: '可解鎖 Level 2-4 課程與互動練習' },
-  premium: { label: '專業達人 Professional', icon: '🏆', desc: '完整解鎖所有功能與進階地圖分析' }
+  basic:   { label: '波爾多完整版 Enthusiast', icon: '🍇', desc: 'Level 2-4 全部課程 + 互動練習 + 進階圖層 + 品飲筆記本' },
+  premium: { label: '多產區方案 Professional', icon: '🌍', desc: '自選三大世界產區（即將推出）' }
 }
 const userTier = computed(() => authActions.getEffectiveTier())
 // 原始方案（不含到期降級），用於日期區塊的顯示判斷

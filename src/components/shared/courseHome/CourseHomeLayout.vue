@@ -14,7 +14,7 @@
           <img src="/favicon.png" class="ch-logo-icon" alt="logo" />
           <span class="ch-logo-text">{{ $t('home.nav.brand') }}</span>
         </div>
-        <!-- 右側區域：使用者 + 語言切換 -->
+        <!-- 右側區域：使用者 -->
         <div class="ch-user-area">
           <div class="ch-user">
             <template v-if="authUser">
@@ -39,7 +39,6 @@
               <button class="ch-login-btn" @click="$router.push('/login')">🔑 登入</button>
             </template>
           </div>
-          <LanguageSwitcher class="ch-lang" />
         </div>
       </div>
     </header>
@@ -57,7 +56,6 @@ import { useRouter } from 'vue-router'
 import { authState, authActions } from '../../../stores/authStore.js'
 import { supabase } from '../../../lib/supabaseClient.js'
 import { themeToCssVars } from './regionThemes.js'
-import LanguageSwitcher from '../../LanguageSwitcher.vue'
 
 const props = defineProps({
   theme: { type: Object, required: true },         // { primary, accent, surface }

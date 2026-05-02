@@ -316,7 +316,7 @@ export const learningLevels = {
     features: ['terroir-details', 'vintage-analysis', 'market-positioning', 'food-pairing'],
     modules: [
       { id: 'B3M1', title: '氣候、風土與風險', lessonIds: ['l3-1', 'l3-2', 'l3-3'] },
-      { id: 'B3M2', title: '葵萄園、釀造與調配', lessonIds: ['l3-4', 'l3-5', 'l3-6'] },
+      { id: 'B3M2', title: '葡萄園、釀造與調配', lessonIds: ['l3-4', 'l3-5', 'l3-6'] },
       { id: 'B3M3', title: '商業、文化與配餐', lessonIds: ['l3-9', 'l3-10', 'l3-11'] },
       { id: 'B3M4', title: '深度分析與認證', lessonIds: ['l3-12', 'l3-13', 'l3-14'] }
     ],

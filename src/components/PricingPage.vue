@@ -7,14 +7,14 @@
       <div class="header-content">
         <div class="header-eyebrow">透明定價・隨時取消</div>
         <h1>選擇您的學習方案</h1>
-        <p>從免費體驗開始，升級解鎖 8 大世界產區所有課程</p>
+        <p>從免費體驗開始，升級解鎖波爾多全四級課程・進階圖層・品飲筆記本</p>
       </div>
 
       <!-- 計費週期切換 -->
       <div class="billing-toggle">
         <button :class="['bt-btn', period === 'monthly' ? 'active' : '']" @click="period = 'monthly'">月繳</button>
         <button :class="['bt-btn', period === 'yearly' ? 'active' : '']" @click="period = 'yearly'">
-          年繳 <span class="bt-badge">省最多 49%</span>
+          年繳 <span class="bt-badge">省最多 33%</span>
         </button>
       </div>
     </div>
@@ -46,77 +46,59 @@
           <button class="tier-cta free-cta" @click="handleFree">免費開始</button>
         </div>
 
-        <!-- 單一產區 -->
+        <!-- 波爾多完整版 -->
         <div class="tier-card single-card">
           <div class="tier-top">
-            <div class="tier-label">單一產區</div>
+            <div class="tier-label">波爾多完整版</div>
             <div class="tier-price-wrap">
               <span class="tier-price">
-                NT$ {{ period === 'monthly' ? '290' : '1,800' }}
+                NT$ {{ period === 'monthly' ? '249' : '1,990' }}
               </span>
               <span class="tier-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
             </div>
-            <div class="tier-saving" v-if="period === 'yearly'">相當於 NT$150/月，年省 NT$1,680</div>
-            <div class="tier-desc">適合專精單一產區・命名考生</div>
-          </div>
-
-          <!-- 選擇產區 -->
-          <div class="course-selector">
-            <div class="cs-label">選擇產區：</div>
-            <div class="cs-grid">
-              <button
-                v-for="c in availableCourses"
-                :key="c.id"
-                :class="['cs-btn', selectedCourse === c.id ? 'cs-active' : '', !c.active ? 'cs-locked' : '']"
-                @click="c.active ? selectedCourse = c.id : null"
-              >
-                {{ c.flag }} {{ c.name }}
-                <span v-if="!c.active" class="cs-soon">即將</span>
-              </button>
-            </div>
+            <div class="tier-saving" v-if="period === 'yearly'">相當於 NT$166/月，年省 NT$998</div>
+            <div class="tier-desc">適合備考命名・波爾多深度鑽研</div>
           </div>
 
           <ul class="tier-features">
-            <li class="ok">所選產區全 Level 完整課程</li>
+            <li class="ok">🏰 波爾多 Level 1–4 全部課程</li>
             <li class="ok">4 種互動練習遊戲</li>
             <li class="ok">法定產區完整互動地圖</li>
+            <li class="ok">地質岩層 & 氣候熱力圖進階圖層</li>
+            <li class="ok">品飲筆記本（無限則記錄）</li>
             <li class="ok">學習進度追蹤 & 成就系統</li>
-            <li class="ok">學員討論區</li>
-            <li class="no">其他產區課程</li>
-            <li class="no">地質 / 氣候進階圖層</li>
-            <li class="no">品飲筆記本</li>
+            <li class="no">其他世界產區課程</li>
           </ul>
           <button class="tier-cta single-cta" @click="handleSingle">
-            訂閱{{ selectedCourseName }}課程
+            立即訂閱波爾多完整版
           </button>
         </div>
 
-        <!-- 全通行證 -->
-        <div class="tier-card all-card">
-          <div class="popular-badge">⭐ 最超值</div>
+        <!-- 多產區方案（即將推出） -->
+        <div class="tier-card all-card coming-soon-card">
+          <div class="popular-badge coming-soon-badge">🔮 即將推出</div>
           <div class="tier-top">
-            <div class="tier-label">全通行證</div>
+            <div class="tier-label">多產區方案</div>
             <div class="tier-price-wrap">
               <span class="tier-price">
-                NT$ {{ period === 'monthly' ? '590' : '3,600' }}
+                NT$ {{ period === 'monthly' ? '449' : '3,598' }}
               </span>
               <span class="tier-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
             </div>
-            <div class="tier-saving" v-if="period === 'yearly'">相當於 NT$300/月，年省 NT$3,480</div>
-            <div class="tier-desc">適合從業人員・收藏投資人士・侍酒師考生</div>
+            <div class="tier-saving" v-if="period === 'yearly'">相當於 NT$300/月，年省 NT$1,790</div>
+            <div class="tier-desc">可自選三大世界產區・適合侍酒師進階備考</div>
           </div>
           <ul class="tier-features">
-            <li class="ok">🌍 <strong>8 大世界產區</strong>全部解鎖</li>
-            <li class="ok">所有課程全 Level 完整內容</li>
-            <li class="ok">4 種互動練習遊戲（全產區）</li>
-            <li class="ok">全產區互動衛星地圖</li>
+            <li class="ok">🌍 <strong>自選三大世界產區</strong></li>
+            <li class="ok">所選產區 Level 1–4 完整課程</li>
+            <li class="ok">4 種互動練習遊戲（全選區）</li>
             <li class="ok">地質岩層 & 氣候熱力圖進階圖層</li>
             <li class="ok">品飲筆記本（無限則記錄）</li>
             <li class="ok">酒莊精確位置標記</li>
             <li class="ok">成就系統 & 完整進度追蹤</li>
-            <li class="ok">學員討論區 & 優先支援</li>
+            <li class="ok">優先支援</li>
           </ul>
-          <button class="tier-cta all-cta" @click="handleAll">解鎖全通行證</button>
+          <button class="tier-cta all-cta coming-soon-cta" disabled>敬請期待</button>
         </div>
 
       </div>
@@ -132,16 +114,16 @@
               <tr>
                 <th>產區</th>
                 <th>免費體驗</th>
-                <th>單一產區</th>
-                <th>全通行證</th>
+                <th>波爾多完整版</th>
+                <th>多產區方案</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="c in allCourses" :key="c.id">
                 <td class="ct-course">{{ c.flag }} {{ c.nameFull }}<span v-if="!c.active" class="ct-soon">即將上線</span></td>
                 <td class="ct-cell">{{ c.id === 'bordeaux' ? '🔓 Level 1' : '—' }}</td>
-                <td class="ct-cell">{{ c.active ? '✅ 選擇後全開' : '⏳' }}</td>
-                <td class="ct-cell">{{ c.active ? '✅ 全開' : '⏳ 上線即解鎖' }}</td>
+                <td class="ct-cell">{{ c.id === 'bordeaux' ? '✅ 全部開放' : '—' }}</td>
+                <td class="ct-cell">{{ c.id === 'bordeaux' ? '✅ 全部開放' : (c.active ? '⏳ 開放後可選' : '⏳ 即將') }}</td>
               </tr>
             </tbody>
           </table>
@@ -159,8 +141,8 @@
               <tr>
                 <th>功能</th>
                 <th>免費</th>
-                <th>單一產區</th>
-                <th>全通行證</th>
+                <th>波爾多完整版</th>
+                <th>多產區方案</th>
               </tr>
             </thead>
             <tbody>
@@ -214,20 +196,8 @@ const router = useRouter()
 const authUser = computed(() => authState.user)
 
 const period = ref('monthly')
-const selectedCourse = ref('bordeaux')
 const openFaq = ref(null)
 const checkoutLoading = ref(false)
-
-const availableCourses = [
-  { id: 'bordeaux',   flag: '🏰', name: '波爾多',   active: true  },
-  { id: 'spain',      flag: '🇪🇸', name: '西班牙',   active: true  },
-  { id: 'germany',    flag: '🇩🇪', name: '德國',     active: true  },
-  { id: 'portugal',   flag: '🇵🇹', name: '葡萄牙',   active: true  },
-  { id: 'australia',  flag: '🦘', name: '澳洲',     active: true  },
-  { id: 'newzealand', flag: '🥝', name: '紐西蘭',   active: true  },
-  { id: 'bourgogne',  flag: '🍇', name: '布根地',   active: false },
-  { id: 'italy',      flag: '🇮🇹', name: '義大利',   active: false },
-]
 
 const allCourses = [
   { id: 'bordeaux',   flag: '🏰', nameFull: '波爾多（法國）',   active: true  },
@@ -236,33 +206,28 @@ const allCourses = [
   { id: 'spain',      flag: '🇪🇸', nameFull: '西班牙',           active: true  },
   { id: 'germany',    flag: '🇩🇪', nameFull: '德國',             active: true  },
   { id: 'portugal',   flag: '🇵🇹', nameFull: '葡萄牙',           active: true  },
-  { id: 'australia',  flag: '🦘', nameFull: '澳洲',             active: true  },
+  { id: 'australia',  flag: '🦾', nameFull: '澳洲',             active: true  },
   { id: 'newzealand', flag: '🥝', nameFull: '紐西蘭',           active: true  },
 ]
 
 const featureMatrix = [
-  { name: '互動衛星地圖',         free: true,  single: true,  all: true  },
-  { name: 'Level 1 課程',         free: true,  single: true,  all: true  },
-  { name: 'Level 2–4 課程',       free: false, single: true,  all: true  },
+  { name: '互動衛星地圖',             free: true,  single: true,  all: true  },
+  { name: 'Level 1 課程',           free: true,  single: true,  all: true  },
+  { name: 'Level 2–4 課程',         free: false, single: true,  all: true  },
   { name: '4 種互動練習遊戲',     free: false, single: true,  all: true  },
-  { name: '學習進度追蹤',         free: true,  single: true,  all: true  },
-  { name: '成就徽章系統',         free: true,  single: true,  all: true  },
-  { name: '學員討論區',           free: true,  single: true,  all: true  },
-  { name: '多產區課程',           free: false, single: false, all: true  },
-  { name: '地質岩層進階圖層',     free: false, single: false, all: true  },
-  { name: '氣候熱力圖',           free: false, single: false, all: true  },
-  { name: '品飲筆記本',           free: false, single: false, all: true  },
-  { name: '酒莊精確位置標記',     free: false, single: false, all: true  },
+  { name: '地質岩層進階圖層',     free: false, single: true,  all: true  },
+  { name: '氣候熱力圖',             free: false, single: true,  all: true  },
+  { name: '品飲筆記本',             free: false, single: true,  all: true  },
+  { name: '酒莊精確位置標記',     free: false, single: true,  all: true  },
+  { name: '學習進度追蹤',           free: true,  single: true,  all: true  },
+  { name: '成就徽章系統',           free: true,  single: true,  all: true  },
+  { name: '多產區課程（3產區可選）', free: false, single: false, all: true  },
 ]
 
-const selectedCourseName = computed(() => {
-  return availableCourses.find(c => c.id === selectedCourse.value)?.name ?? ''
-})
-
 const faqs = [
-  { q: '單一產區方案可以換課程嗎？', a: '可以！隨時取消後，重新訂閱選擇其他產區即可。建議直接升級「全通行證」享受更大彈性。' },
+  { q: '波爾多完整版包含哪些內容？', a: '包含波爾多 Level 1 至 Level 4 全部課程（共 43 堂）、4 種互動練習遊戲、5f9c定產區完整互動地圖、地質岩層與氣候熱力圖進階圖層，以及品飲筆記本功能。' },
   { q: '年繳可以退款嗎？', a: '訂閱後 7 天內如需退款，請聯絡我們，我們將全額退款，無任何問題。' },
-  { q: '「即將上線」的產區何時開放？', a: '布根地與義大利課程預計 2027 年初上線。「全通行證」用戶上線即自動解鎖，無需額外付費。' },
+  { q: '多產區方案何時上線？', a: '多產區方案預計近期推出，屆時可自選三大世界產區。您可先訂閱波爾多完整版，多產區方案上線時可隨時升級。' },
   { q: '月繳和年繳可以隨時切換嗎？', a: '可以。在「我的訂單」點擊管理訂閱，切換至 Stripe 客戶入口後升降級。' },
   { q: '免費體驗有時間限制嗎？', a: '沒有！免費方案永久有效，Level 1 波爾多課程完全免費，不需要信用卡。' },
   { q: '付款方式有哪些？', a: '透過 Stripe 安全付款，支援 Visa、MasterCard、JCB 等主要信用卡，全程加密處理。' },
@@ -278,13 +243,13 @@ async function handleFree() {
 
 async function handleSingle() {
   if (!authUser.value) {
-    router.push({ path: '/register', query: { courseId: selectedCourse.value, tier: 'basic' } })
+    router.push({ path: '/register', query: { courseId: 'bordeaux', tier: 'basic' } })
     return
   }
   checkoutLoading.value = true
   try {
     const { sessionUrl } = await initiateCheckout({
-      courseId: selectedCourse.value,
+      courseId: 'bordeaux',
       tier: 'basic',
       billingPeriod: period.value,
       userId: authUser.value.id,
@@ -435,6 +400,23 @@ async function handleAll() {
   padding: 4px 16px;
   border-radius: 20px;
   white-space: nowrap;
+}
+.coming-soon-badge {
+  background: linear-gradient(135deg, #4a4a6a, #6a6a9a) !important;
+  color: #d0d0f0 !important;
+}
+.coming-soon-card {
+  opacity: 0.72;
+}
+.coming-soon-cta {
+  background: rgba(255,255,255,0.06) !important;
+  color: #5a5050 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+.coming-soon-cta:hover {
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .tier-top { margin-bottom: 24px; text-align: center; }

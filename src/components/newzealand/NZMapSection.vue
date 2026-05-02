@@ -362,7 +362,11 @@ function clearAllNZClimateLayers() {
 async function loadAllNZOutlines() {
   if (!map) return
   clearAllNZClimateLayers()
-  for (const region of NZ_REGIONS) {
+  // 僅載入目前選取的 AOC 檔案；未選取時不顯示任何區幬
+  const activeFile = props.activeAOC?.aoc
+  if (!activeFile) return
+  const regionsToLoad = NZ_REGIONS.filter(r => r.file === activeFile)
+  for (const region of regionsToLoad) {
     const url = `/newzealand/geojson/NewZealand/${region.file}`
     try {
       let geojson
@@ -579,12 +583,22 @@ const initMap = async (retry = 0) => {
 
 watch(() => props.activeAOC, (newAOC, oldAOC) => {
   if (newAOC?.aoc) {
-    if (newAOC.aoc !== oldAOC?.aoc) showAOCGeojson(newAOC.group, newAOC.aoc)
-  } else if (map?.getLayer('aoc-fill')) {
-    map.removeLayer('aoc-fill')
-    map.removeLayer('aoc-outline')
-    map.removeSource('aoc')
-    map.flyTo({ center: [174.886, -40.9006], zoom: 4 })
+    if (newAOC.aoc !== oldAOC?.aoc) {
+      showAOCGeojson(newAOC.group, newAOC.aoc)
+      // 切換區幬時，若氣候圖層已開啟則重新載入單一區幬並套色
+      if (climateEnabled.value) {
+        loadAllNZOutlines().then(() => applyClimateColor(climateYear.value))
+      }
+    }
+  } else {
+    if (map?.getLayer('aoc-fill')) {
+      map.removeLayer('aoc-fill')
+      map.removeLayer('aoc-outline')
+      map.removeSource('aoc')
+      map.flyTo({ center: [174.886, -40.9006], zoom: 4 })
+    }
+    // 取消選取時清除氣候圖層
+    if (climateEnabled.value) clearAllNZClimateLayers()
   }
 })
 

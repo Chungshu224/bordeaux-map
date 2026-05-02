@@ -25,10 +25,10 @@
         <button
           v-if="hasChateauxFile"
           class="btn-chateaux"
-          :class="{ 'btn-locked': !canAccessTier('premium') }"
-          @click="canAccessTier('premium') ? toggleChateauxMarkers() : alertUpgrade('顯示知名酒莊', 'premium')"
+          :class="{ 'btn-locked': !canAccessTier('basic') }"
+          @click="canAccessTier('basic') ? toggleChateauxMarkers() : alertUpgrade('顯示知名酒莊', 'basic')"
         >
-          <span v-if="!canAccessTier('premium')" class="lock-inline">🔒</span>
+          <span v-if="!canAccessTier('basic')" class="lock-inline">🔒</span>
           {{ showingChateaux ? '隱藏酒莊' : '顯示知名酒莊' }}
         </button>
       </template>
@@ -64,12 +64,12 @@
           <!-- 等高線：premium 以上 -->
           <button
             class="btn-layer"
-            :class="{ active: contoursEnabled && canAccessTier('premium'), 'color-contours': true, 'btn-layer-locked': !canAccessTier('premium') }"
-            @click="canAccessTier('premium') ? toggleContours() : alertUpgrade('等高線', 'premium')"
+            :class="{ active: contoursEnabled && canAccessTier('basic'), 'color-contours': true, 'btn-layer-locked': !canAccessTier('basic') }"
+            @click="canAccessTier('basic') ? toggleContours() : alertUpgrade('等高線', 'basic')"
           >
             <span class="lbtn-icon">〰</span>
             <span class="lbtn-text">等高線</span>
-            <span v-if="!canAccessTier('premium')" class="lbtn-lock">🔒</span>
+            <span v-if="!canAccessTier('basic')" class="lbtn-lock">🔒</span>
             <span v-else class="lbtn-dot" :class="{ on: contoursEnabled }"></span>
           </button>
         </div>
@@ -82,12 +82,12 @@
           <!-- 氣候熱力：premium 以上 -->
           <button
             class="btn-layer"
-            :class="{ active: climateEnabled && canAccessTier('premium'), 'color-climate': true, 'btn-layer-locked': !canAccessTier('premium') }"
-            @click="canAccessTier('premium') ? toggleClimate() : alertUpgrade('氣候熱力', 'premium')"
+            :class="{ active: climateEnabled && canAccessTier('basic'), 'color-climate': true, 'btn-layer-locked': !canAccessTier('basic') }"
+            @click="canAccessTier('basic') ? toggleClimate() : alertUpgrade('氣候熱力', 'basic')"
           >
             <span class="lbtn-icon">🌡</span>
             <span class="lbtn-text">氣候熱力</span>
-            <span v-if="!canAccessTier('premium')" class="lbtn-lock">🔒</span>
+            <span v-if="!canAccessTier('basic')" class="lbtn-lock">🔒</span>
             <span v-else class="lbtn-dot" :class="{ on: climateEnabled }"></span>
           </button>
           <!-- BRGM 法國官方地質圖 -->

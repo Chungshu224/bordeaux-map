@@ -880,6 +880,28 @@ export const l44Content = makeL4Lesson({
         correct: 1,
         explanation: '產量變動影響小通常表示固定成本占比較高，需更重視價格與成本管理。'
       }
+    {
+        id: 4,
+        question: '若酒莊欲精確識別哪些成本活動「最難壓縮」，應優先採用哪種成本分析工具？',
+        options: [
+        '垂直比率分析（損益表百分比）',
+        '作業成本法（ABC）',
+        '柏拉圖分析'
+        ],
+        correct: 1,
+        explanation: '作業成本法（ABC）按驅動因子分攤成本，能精確定位資源消耗最高的核心作業，辨識固定性強、難以壓縮的成本項目。'
+      },
+      {
+        id: 5,
+        question: '計算葡萄園新投資的 IRR，若結果低於酒莊的加權平均資金成本（WACC），應如何決策？',
+        options: [
+        '專案報酬超過資金成本，應執行',
+        '專案報酬不足以覆蓋資金成本，應拒絕',
+        'IRR 與 WACC 沒有直接關係'
+        ],
+        correct: 1,
+        explanation: 'IRR < WACC 代表投資報酬率低於融資成本，專案在財務上不可行，從資本預算角度應拒絕或重新設計。'
+      },
     ],
     passingScore: 60,
     timeLimit: 180

@@ -196,6 +196,10 @@ export default {
       hardName:  '難しい',
       hardDesc:  '左右岸 ＋ AOC ＋ 1855 格付けを識別',
       hardItems: ['4 択問題', '28 秒', '10 問', '最大 1000 点'],
+      wrongReview:  '📖 間違い直し',
+      questionEasy: '識別：どの岸 ＋ 主要 AOC？',
+      questionMed:  '識別：どの岸 ＋ 村落 AOC？',
+      questionHard: '識別：どの岸 ＋ AOC ＋ 1855 格付け？',
     },
     common: {
       leaderboard:   '🏅 ランキング',

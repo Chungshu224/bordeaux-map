@@ -39,6 +39,8 @@ const RECURSIVE_KEYS = new Set([
   'cards',
   'sections',
   'list',
+  'objectives',
+  'questions',
 ])
 
 /**

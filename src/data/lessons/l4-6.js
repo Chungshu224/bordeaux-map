@@ -910,6 +910,28 @@ export const l46Content = makeL4Lesson({
         correct: 1,
         explanation: 'INAO 在維護風土特性前提下,允許試驗性調適,平衡傳統與氣候挑戰。'
       }
+    {
+        id: 4,
+        question: '酒莊推出的新款混釀含有未獲 AOC 核准的品種 8%，若申請 AOC 認證，最可能的結果是？',
+        options: [
+        '可申請 AOC，超標比例可豁免',
+        '無法取得 AOC，產品需降級為 IGP 或 Vin de France',
+        '向 INAO 提交科學報告即可獲核准'
+        ],
+        correct: 1,
+        explanation: 'AOC 規定對許可品種、混釀比例及產區均有嚴格要求，使用未核准品種即使比例小，仍會導致申請失敗並降級。'
+      },
+      {
+        id: 5,
+        question: '酒莊建立內部合規管理體系時，業界最佳實踐的稽核頻率設計為何？',
+        options: [
+        '每 5 年一次深度外部稽核即可',
+        '每年一次自稽加三年一次外部認證審查',
+        '僅在法規更新時進行稽核'
+        ],
+        correct: 1,
+        explanation: '年度自稽能即時發現合規缺口，三年外部認證提供獨立驗證，兩者結合是 ISO 19600 及 AOC 合規管理體系的標準模式。'
+      },
     ],
     passingScore: 60,
     timeLimit: 180

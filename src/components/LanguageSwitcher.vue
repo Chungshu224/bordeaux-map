@@ -113,7 +113,8 @@ onBeforeUnmount(() => document.removeEventListener('click', handleClickOutside))
 
 /* RWD */
 @media (max-width: 480px) {
-  .ls-name { display: none; }
+  .ls-trigger .ls-name { display: none; }
   .ls-trigger { padding: 6px 10px; }
+  .ls-item .ls-name { display: inline; }   /* 下拉選單保留語言名稱文字 */
 }
 </style>

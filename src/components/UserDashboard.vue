@@ -103,7 +103,7 @@
           <button class="qg-btn" @click="$router.push('/gamehub')">
             <span>🎮</span>互動練習
           </button>
-          <button class="qg-btn" v-if="effectiveTier === 'premium'" @click="$router.push('/notebook')">
+          <button class="qg-btn" v-if="effectiveTier !== 'free'" @click="$router.push('/notebook')">
             <span>📔</span>品飲筆記
           </button>
           <button class="qg-btn qg-btn-slides" @click="$router.push('/slides-index')">
@@ -127,8 +127,8 @@ const effectiveTier = computed(() => authActions.getEffectiveTier())
 
 const TIER_INFO = {
   free:    { icon: '🆓', label: '免費體驗', desc: '已解鎖 Level 1 基礎課程' },
-  basic:   { icon: '📚', label: '完整課程', desc: 'Level 1–4 全部課程 + 互動練習' },
-  premium: { icon: '⭐', label: '頂級方案', desc: '全功能解鎖：進階地圖 + 品飲筆記本' }
+  basic:   { icon: '📚', label: '波爾多完整版', desc: 'Level 1–4 全部課程 + 互動練習 + 進階圖層 + 品飲筆記本' },
+  premium: { icon: '🌍', label: '多產區方案', desc: '自選三大世界產區（即將推出）' }
 }
 const tierInfo = computed(() => TIER_INFO[effectiveTier.value] || TIER_INFO.free)
 
@@ -160,7 +160,7 @@ const COURSE_META = {
 const courseName = (id) => COURSE_META[id]?.name || id
 const courseIcon = (id) => COURSE_META[id]?.icon || '📦'
 
-const TIER_LABELS  = { basic: '完整課程', premium: '頂級方案' }
+const TIER_LABELS  = { basic: '波爾多完整版', premium: '多產區方案' }
 const STATUS_LABELS = { pending: '等待付款', paid: '已付款', active: '訂閱中', refunded: '已退款', cancelled: '已取消' }
 const tierLabel   = (t) => TIER_LABELS[t] || t
 const statusLabel = (s) => STATUS_LABELS[s] || s

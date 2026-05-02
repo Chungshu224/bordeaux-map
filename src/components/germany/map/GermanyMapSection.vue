@@ -738,6 +738,7 @@ function playPronunciation() {
 function resetMap() {
   if (!map) return
   selectedVineyard.value = null
+  infoCollapsed.value = true
   if (regionBounds && regionBounds[0] !== Infinity) {
     map.fitBounds([[regionBounds[0], regionBounds[1]], [regionBounds[2], regionBounds[3]]], {
       padding: 60, duration: 1000

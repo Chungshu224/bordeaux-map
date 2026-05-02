@@ -51,6 +51,7 @@ const TARGET_LANGS = {
 
 const REGION_CONFIG = {
   california: {},
+  bordeaux: {},
 }
 
 const args = process.argv.slice(2)
