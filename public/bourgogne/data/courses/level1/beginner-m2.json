@@ -67,6 +67,47 @@
           ]
         },
         "summary": "AOC制度保證了布根地葡萄酒的品質與產地真實性，分級金字塔清楚展現了風土的細緻差異。"
+      },
+      "quiz": {
+        "title": "🧠 知識檢測",
+        "questions": [
+          {
+            "type": "single",
+            "question": "法國AOC（法定產區）制度創建於哪一年？",
+            "options": [
+              "A. 1919年",
+              "B. 1935年",
+              "C. 1955年",
+              "D. 1978年"
+            ],
+            "correct": 1,
+            "explanation": "AOC制度在1935年由法國創建，透過 INAO（法國國家產地命名管理局）監管，是全球首個系統性葡萄酒法定產區制度。"
+          },
+          {
+            "type": "single",
+            "question": "2009年後，法國AOC在歐盟體系中的等效標誌縮寫是？",
+            "options": [
+              "A. AOP（Appellation d'Origine Protégée）",
+              "B. IGP（Indication Géographique Protégée）",
+              "C. PDO（Protected Designation of Origin）",
+              "D. GI（Geographical Indication）"
+            ],
+            "correct": 0,
+            "explanation": "2009年歐盟法規整合後，法國AOC在歐盟體系中對應的標誌是AOP（保護原產地命名），但法國業界習慣繼續使用AOC稱呼。"
+          },
+          {
+            "type": "multiple",
+            "question": "AOC制度對葡萄酒的哪些方面有嚴格規定？（多選）",
+            "options": [
+              "A. 產地界定與地理範圍",
+              "B. 允許使用的葡萄品種",
+              "C. 釀酒師的國籍資格",
+              "D. 最高產量與種植密度"
+            ],
+            "correct": [0, 1, 3],
+            "explanation": "AOC規定涵蓋：產地範圍劃定、允許品種、最高產量(hl/ha)、種植密度、修剪方式、最低酒精度及陳年要求。釀酒師國籍不是AOC的管制項目。"
+          }
+        ]
       }
     },
     {
@@ -171,6 +212,59 @@
           "💡 大區級酒也有驚喜之作，尤其是知名酒莊出品"
         ],
         "summary": "四級分級體系精準反映了風土差異與葡萄酒的品質層次，但生產者的釀造水平同樣重要。理解這個系統是欣賞布根地葡萄酒的第一步。"
+      },
+      "quiz": {
+        "title": "🧠 知識檢測",
+        "questions": [
+          {
+            "type": "single",
+            "question": "布根地四級分級中，哪個等級佔總產量約53%？",
+            "options": [
+              "A. 大區級 Régionales",
+              "B. 村莊級 Villages",
+              "C. 一級園 Premiers Crus",
+              "D. 特級園 Grands Crus"
+            ],
+            "correct": 0,
+            "explanation": "大區級（Régionales）佔布根地總產量53%，葡萄可來自整個布根地大區約27,000公頃，是最基礎的入門分級。"
+          },
+          {
+            "type": "single",
+            "question": "一級園（Premier Cru）的酒標應如何標示？",
+            "options": [
+              "A. 只標園名，不標村莊",
+              "B. 只標村莊名，無其他標示",
+              "C. 村莊名 + Premier Cru + 園名",
+              "D. Bourgogne + 村莊名"
+            ],
+            "correct": 2,
+            "explanation": "一級園必須同時標注村莊名、'Premier Cru'或'1er Cru'字樣，以及園名（Lieu-dit），三者缺一不可。"
+          },
+          {
+            "type": "single",
+            "question": "布根地特級園（Grand Cru）的最大許可產量約為多少 hl/ha？",
+            "options": [
+              "A. 55–60 hl/ha",
+              "B. 40–48 hl/ha",
+              "C. 35–37 hl/ha",
+              "D. 20–25 hl/ha"
+            ],
+            "correct": 2,
+            "explanation": "特級園的最大許可產量為35–37 hl/ha，是四個分級中最嚴格的，低產量有助於葡萄風味濃縮，創造更高的複雜度。"
+          },
+          {
+            "type": "single",
+            "question": "布根地全區共有多少個特級園（Grands Crus）？",
+            "options": [
+              "A. 10個",
+              "B. 33個",
+              "C. 100個",
+              "D. 640個"
+            ],
+            "correct": 1,
+            "explanation": "布根地共有33個特級園：夏布利1個（Chablis Grand Cru）、夜丘24個、伯恩丘8個。640是一級園的數量，而非特級園。"
+          }
+        ]
       }
     },
     {
@@ -251,6 +345,59 @@
           "🔍 字體大小不代表分級，要看實際文字內容"
         ],
         "summary": "掌握酒標解讀技巧後，您就能在酒架前快速判斷葡萄酒的等級，做出明智的選購決定。"
+      },
+      "quiz": {
+        "title": "🧠 知識檢測",
+        "questions": [
+          {
+            "type": "single",
+            "question": "酒標上只標示 'VOSNE-ROMANÉE'，這是哪個分級？",
+            "options": [
+              "A. 大區級（Régionale）",
+              "B. 村莊級（Village）",
+              "C. 一級園（Premier Cru）",
+              "D. 特級園（Grand Cru）"
+            ],
+            "correct": 1,
+            "explanation": "酒標上只有村莊名而無任何 'Premier Cru' 或 'Grand Cru' 標示，即為村莊級（Village AOC）。Vosne-Romanée 是夜丘著名村莊，也是特級園 Romanée-Conti 所在地。"
+          },
+          {
+            "type": "single",
+            "question": "酒標上只標示 'ROMANÉE-CONTI'，這是哪個分級？",
+            "options": [
+              "A. 大區級（Régionale）",
+              "B. 村莊級（Village）",
+              "C. 一級園（Premier Cru）",
+              "D. 特級園（Grand Cru）"
+            ],
+            "correct": 3,
+            "explanation": "特級園酒標只標注園名本身，不標示村莊名，因為特級園本身即是獨立的AOC。Romanée-Conti 是布根地最著名的特級園，由DRC（Domaine de la Romanée-Conti）獨家擁有。"
+          },
+          {
+            "type": "single",
+            "question": "酒標標示 'POMMARD 1ER CRU Rugiens'，屬於哪個分級？",
+            "options": [
+              "A. 大區級（Régionale）",
+              "B. 村莊級（Village）",
+              "C. 一級園（Premier Cru）",
+              "D. 特級園（Grand Cru）"
+            ],
+            "correct": 2,
+            "explanation": "酒標出現村莊名（Pommard）+ '1er Cru' + 園名（Rugiens）三個元素，即為一級園。Rugiens 是伯恩丘 Pommard 村最著名的一級園之一。"
+          },
+          {
+            "type": "single",
+            "question": "在酒架前如何快速辨識大區級（Régionale）葡萄酒？",
+            "options": [
+              "A. 酒標有 Grand Cru 字樣",
+              "B. 酒標以 'Bourgogne' 開頭",
+              "C. 酒標只標示一個園名",
+              "D. 酒標有 1er Cru 字樣"
+            ],
+            "correct": 1,
+            "explanation": "酒標以 'Bourgogne' 開頭（如 Bourgogne Pinot Noir、Bourgogne Chardonnay）即為大區級，葡萄可來自整個布根地產區，是入門消費的最佳選擇。"
+          }
+        ]
       }
     }
   ],

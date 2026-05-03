@@ -887,6 +887,15 @@ const slides = computed(() => {
     })
   }
 
+  // 10. 知識檢測投影片（舊格式 lesson 使用 lesson.quiz）
+  if (props.lesson.quiz?.questions?.length > 0) {
+    slideArray.push({
+      type: 'quiz',
+      title: props.lesson.quiz.title || '🧠 知識檢測',
+      questions: props.lesson.quiz.questions
+    })
+  }
+
   return slideArray
 })
 
