@@ -146,7 +146,7 @@
         <div class="map-hint">
           🗺️ {{ lesson.content.mapInteraction.instructions }}
         </div>
-        <button class="map-btn" @click="openMap">打開互動地圖</button>
+        <button class="map-btn" @click="openMap">{{ $t('common.lesson.map.openMap') }}</button>
       </div>
     </div>
 

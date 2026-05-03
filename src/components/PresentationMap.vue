@@ -7,15 +7,15 @@
       :class="{ active: mobileControlsOpen }"
       @click="mobileControlsOpen = !mobileControlsOpen"
     >
-      {{ mobileControlsOpen ? '關閉圖層' : '地圖圖層' }}
+      {{ mobileControlsOpen ? $t('common.lesson.map.closeLayers') : $t('common.lesson.map.layers') }}
     </button>
     <div v-if="hasGeologyControls" class="geology-controls" :class="{ 'mobile-open': mobileControlsOpen, 'mobile-layout': isMobile }">
       <div v-if="isMobile" class="geology-mobile-header">
-        <span>地圖圖層</span>
-        <button class="geology-mobile-close" @click="mobileControlsOpen = false">完成</button>
+        <span>{{ $t('common.lesson.map.layers') }}</span>
+        <button class="geology-mobile-close" @click="mobileControlsOpen = false">{{ $t('common.lesson.map.done') }}</button>
       </div>
       <button class="btn-geology" @click="toggleGeology">
-        {{ geologyEnabled ? '隱藏地質' : '顯示地質' }}
+        {{ geologyEnabled ? $t('common.lesson.map.hideGeology') : $t('common.lesson.map.showGeology') }}
       </button>
       <div v-if="geologyEnabled" class="soil-toggle-panel">
         <div
@@ -48,10 +48,10 @@
     </div>
     <div v-if="isLoading" class="loading-overlay">
       <div class="loading-spinner"></div>
-      <p>載入地圖中...</p>
+      <p>{{ $t('common.lesson.map.loading') }}</p>
     </div>
     <div v-else-if="!map" class="error-message">
-      地圖載入失敗，請重新整理頁面
+      {{ $t('common.lesson.map.loadFailed') }}
     </div>
   </div>
 </template>

@@ -230,6 +230,17 @@ export default {
     reload: '重新載入',
     jumpTo: '跳至：{label}',
     courseTitle: '課程標題',
+    map: {
+      layers: '地圖圖層',
+      closeLayers: '關閉圖層',
+      done: '完成',
+      showGeology: '顯示地質',
+      hideGeology: '隱藏地質',
+      loading: '載入地圖中…',
+      loadFailed: '地圖載入失敗，請重新整理頁面',
+      openMap: '打開互動地圖',
+      openFullMap: '開啟完整互動地圖',
+    },
   },
 
   // ── 測驗引擎 ───────────────────────

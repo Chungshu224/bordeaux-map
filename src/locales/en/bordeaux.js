@@ -47,6 +47,98 @@ export default {
     subtitle: 'From fundamentals to expert master — progress step by step through the complete Bordeaux knowledge system.',
   },
 
+  // ── Level overview titles / lesson & module titles (used by BordeauxCourseLayout) ─
+  level1: {
+    title: 'Level 1 — Fundamentals',
+    desc:  'Build the foundational knowledge of Bordeaux wine',
+    modules: {
+      B1M1: 'Geography & Grape Fundamentals',
+      B1M2: 'Appellations & Regulations',
+      B1M3: 'Tasting Techniques & Assessment',
+    },
+    lessons: {
+      l1_1: 'Introduction to Bordeaux Geography',
+      l1_2: 'Bordeaux Climate & Environment Basics',
+      l1_3: 'Key Grape Varieties',
+      l1_4: 'Left Bank vs Right Bank: First Look',
+      l1_5: 'Overview of Bordeaux Wine Styles',
+      l1_6: 'Introduction to the AOC System',
+      l1_7: 'Tasting Techniques Fundamentals',
+      l1_8: 'Level 1 Comprehensive Assessment',
+    },
+  },
+
+  level2: {
+    title: 'Level 2 — Intermediate',
+    desc:  'Explore the character and style of each appellation, and develop professional tasting skills',
+    modules: {
+      B2M1: 'Left Bank — Médoc In Depth',
+      B2M2: 'Right Bank Fine Wine Appellations',
+      B2M3: 'Advanced Comprehensive Assessment',
+    },
+    lessons: {
+      l2_1: 'Médoc: An In-Depth Exploration',
+      l2_2: 'Margaux — The Perfume of Elegance',
+      l2_3: 'Pauillac — Home of the Royal Appellations',
+      l2_4: 'Saint-Julien — The Benchmark of Balance',
+      l2_5: 'Saint-Estèphe — The Northern Gem',
+      l2_6: 'Pomerol — Rare Treasures',
+      l2_7: 'Saint-Émilion In Depth',
+      l2_8: 'Libournais Satellite Appellations',
+      l2_9: 'Level 2 Comprehensive Assessment',
+    },
+  },
+
+  level3: {
+    title: 'Level 3 — Advanced',
+    desc:  'Master complex terroir evaluation, climate science, and market trends',
+    modules: {
+      B3M1: 'Climate, Terroir & Risk',
+      B3M2: 'Vineyard, Winemaking & Blending',
+      B3M3: 'Business, Culture & Food Pairing',
+      B3M4: 'In-Depth Analysis & Certification',
+    },
+    lessons: {
+      l3_1:  'Climate Change: Impact & Response in Bordeaux',
+      l3_2:  'Soil Science & Terroir Expression',
+      l3_3:  'Extreme Vintages & Climate Risk Management',
+      l3_4:  'Vineyard Management & Organic Farming',
+      l3_5:  'Winemaking Craft & Technical Innovation',
+      l3_6:  'The Art of Blending & Winemaker Philosophy',
+      l3_9:  'Business Analysis & Market Strategy',
+      l3_10: 'The Art of Food Pairing with Bordeaux Wines',
+      l3_11: 'Bordeaux Wine Industry: History & Culture',
+      l3_12: 'Vintage Analysis & Ageing Potential Assessment',
+      l3_13: 'Innovative Technology & Future Trends',
+      l3_14: 'Level 3 Comprehensive Assessment',
+    },
+  },
+
+  level4: {
+    title: 'Level 4 — Expert Master',
+    desc:  'Develop professional analytical and advisory capabilities in the Bordeaux wine world',
+    modules: {
+      B4M1: 'Terroir & Winemaking Science',
+      B4M2: 'Business Management & Regulations',
+      B4M3: 'Risk, Sustainability & Sensory Science',
+      B4M4: 'Technology, Investment & Capstone',
+    },
+    lessons: {
+      l4_1:  'Advanced Terroir & Micro-Plot Analysis',
+      l4_2:  'Advanced Winemaking Science & Quality Engineering',
+      l4_3:  'Oak & Container Science 2.0',
+      l4_4:  'Cost Structure, Capex & Return on Investment',
+      l4_5:  'Brand Strategy & International Markets',
+      l4_6:  'Regulations & Appellation Protection',
+      l4_7:  'Risk Management & Insurance',
+      l4_8:  'Sustainability & Carbon Accounting',
+      l4_9:  'Sensory Science & Expert Blind-Tasting Framework',
+      l4_10: 'Data Science & AI in the Wine Industry',
+      l4_11: 'En Primeur & Wine Investment',
+      l4_12: 'Capstone Project & Oral Defence',
+    },
+  },
+
   levels: {
     titles: ['', 'Fundamentals', 'Intermediate', 'Advanced', 'Expert Master'],
     l1: {

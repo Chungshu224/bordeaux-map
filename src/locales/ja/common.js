@@ -204,6 +204,17 @@ export default {
     reload: '再読み込み',
     jumpTo: '移動：{label}',
     courseTitle: 'レッスンタイトル',
+    map: {
+      layers: '地図レイヤー',
+      closeLayers: 'レイヤーを閉じる',
+      done: '完了',
+      showGeology: '地質を表示',
+      hideGeology: '地質を非表示',
+      loading: '地図を読み込み中…',
+      loadFailed: '地図の読み込みに失敗しました。ページを更新してください',
+      openMap: 'インタラクティブマップを開く',
+      openFullMap: '完全なインタラクティブマップを開く',
+    },
   },
   quiz: {
     title: 'モジュールテスト',

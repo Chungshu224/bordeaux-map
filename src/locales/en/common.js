@@ -204,6 +204,17 @@ export default {
     reload: 'Reload',
     jumpTo: 'Jump to: {label}',
     courseTitle: 'Lesson title',
+    map: {
+      layers: 'Map layers',
+      closeLayers: 'Close layers',
+      done: 'Done',
+      showGeology: 'Show geology',
+      hideGeology: 'Hide geology',
+      loading: 'Loading map…',
+      loadFailed: 'Map failed to load, please refresh the page',
+      openMap: 'Open interactive map',
+      openFullMap: 'Open full interactive map',
+    },
   },
   quiz: {
     title: 'Module Quiz',

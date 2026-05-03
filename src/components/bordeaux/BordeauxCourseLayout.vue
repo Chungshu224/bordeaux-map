@@ -59,7 +59,7 @@
           >
             <span class="sidebar-icon">{{ isModuleCompleted(module) ? '✓' : '○' }}</span>
             <div class="sidebar-info">
-              <div class="sidebar-name">{{ module.title }}</div>
+              <div class="sidebar-name">{{ getModuleTitle(module) }}</div>
               <div class="sidebar-dots">
                 <span
                   v-for="lesson in module.lessons"
@@ -79,9 +79,9 @@
         <div class="level-header-card">
           <div class="level-header-top">
             <div class="level-badge">Level {{ props.currentLevel }}</div>
-            <h2 class="level-title">{{ props.currentLevelData?.title }}</h2>
+            <h2 class="level-title">{{ getLevelTitle() }}</h2>
           </div>
-          <p class="level-desc">{{ props.currentLevelData?.description }}</p>
+          <p class="level-desc">{{ getLevelDesc() }}</p>
           <div class="progress-bar-wrapper">
             <div class="progress-bar-fill" :style="{ width: overallProgress + '%' }"></div>
           </div>
@@ -104,7 +104,7 @@
                 {{ isModuleCompleted(module) ? '✓' : '📖' }}
               </div>
               <div class="module-section-info">
-                <h3 class="module-section-title">{{ module.title }}</h3>
+                <h3 class="module-section-title">{{ getModuleTitle(module) }}</h3>
                 <span class="module-count-chip">
                   {{ $t('bordeaux.layout.moduleDone', { done: moduleDoneCount(module), total: module.lessons.length }) }}
                 </span>
@@ -123,7 +123,7 @@
                   <span v-else>{{ idx + 1 }}</span>
                 </div>
                 <div class="lesson-meta">
-                  <div class="lesson-title">{{ lesson.title }}</div>
+                  <div class="lesson-title">{{ getLessonTitle(lesson) }}</div>
                   <div v-if="lesson.duration" class="lesson-duration">{{ $t('bordeaux.layout.lessonDuration', { min: lesson.duration }) }}</div>
                 </div>
                 <div class="lesson-action">
@@ -156,7 +156,7 @@
             >
               <span class="drawer-status">{{ isModuleCompleted(module) ? '✓' : '○' }}</span>
               <div class="drawer-item-info">
-                <div class="drawer-chapter-name">{{ module.title }}</div>
+                <div class="drawer-chapter-name">{{ getModuleTitle(module) }}</div>
                 <div class="drawer-progress">{{ moduleDoneCount(module) }}/{{ module.lessons.length }}</div>
               </div>
             </button>
@@ -198,9 +198,33 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['backToLevelSelector', 'changeLevel', 'startLesson'])
-const { t } = useI18n()
+const { t, te } = useI18n()
 
 const drawerOpen = ref(false)
+
+// 取得 module 的顯示標題（優先使用 i18n 翻譯，否則 fallback 原始標題）
+function getModuleTitle (module) {
+  const key = `bordeaux.level${props.currentLevel}.modules.${module.id}`
+  return te(key) ? t(key) : module.title
+}
+
+// 取得 lesson 的顯示標題（優先使用 i18n 翻譯，否則 fallback 原始標題）
+// lesson.id 如 'l3-1' → key 使用 'l3_1'（連字號轉底線以符合 JS key 規範）
+function getLessonTitle (lesson) {
+  const safeId = lesson.id.replace(/-/g, '_')
+  const key = `bordeaux.level${props.currentLevel}.lessons.${safeId}`
+  return te(key) ? t(key) : lesson.title
+}
+
+// 取得 Level 標題與描述
+function getLevelTitle () {
+  const key = `bordeaux.level${props.currentLevel}.title`
+  return te(key) ? t(key) : (props.currentLevelData?.title || '')
+}
+function getLevelDesc () {
+  const key = `bordeaux.level${props.currentLevel}.desc`
+  return te(key) ? t(key) : (props.currentLevelData?.description || '')
+}
 
 // 將 lessonIds 解析為完整 lesson 物件
 const resolvedModules = computed(() => {
