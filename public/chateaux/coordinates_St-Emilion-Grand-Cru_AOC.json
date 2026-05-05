@@ -203,11 +203,11 @@
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原西坡，緊鄰知名酒莊，黏土石灰岩孕育精細單寧與豐沛果香。",
-    "image": "",
     "description_en": "Western slope of the plateau; clay-limestone soils yield fine tannins and generous fruit.",
     "rank_en": "Saint-Émilion Grand Cru Classé",
     "rank_ja": "サン・テミリオン グラン・クリュ・クラッセ",
-    "description_ja": "プラトー西斜面の粘土石灰岩土壌。繊細なタンニンと豊かな果実感。"
+    "description_ja": "プラトー西斜面の粘土石灰岩土壌。繊細なタンニンと豊かな果実感。",
+    "image": "/images/chateaux/RightBank/Libournais/berliquet.jpg"
   },
   {
     "name": "Château Boutisse",
@@ -301,11 +301,11 @@
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "波美侯邊境，黏土礫石，Merlot 與 Cab. Franc 混釀，果香柔和。",
-    "image": "",
     "description_en": "On the Pomerol border in clay and gravel; Merlot and Cabernet Franc blend with gentle fruit.",
     "rank_en": "Saint-Émilion Grand Cru Classé",
     "rank_ja": "サン・テミリオン グラン・クリュ・クラッセ",
-    "description_ja": "ポムロール境界の粘土砂利。メルロー＋カベルネ・フランのやわらかな果実感。"
+    "description_ja": "ポムロール境界の粘土砂利。メルロー＋カベルネ・フランのやわらかな果実感。",
+    "image": "/images/chateaux/RightBank/Libournais/corbin_michotte.jpg"
   },
   {
     "name": "Château Côte de Baleau",
@@ -441,11 +441,11 @@
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "最東邊的大型莊園，近卡斯蒂雍，由 Silvio Denz 投資打造現代化酒窖，品質穩健。",
-    "image": "",
     "description_en": "The easternmost large estate, near Castillon; modern winery built under Silvio Denz's investment, producing consistently solid wines.",
     "rank_en": "Saint-Émilion Grand Cru Classé",
     "rank_ja": "サン・テミリオン グラン・クリュ・クラッセ",
-    "description_ja": "カスティヨンに近い最東端の大規模シャトー。建築家ポルツァンパルクが設計したモダンワイナリーで安定した実力派。"
+    "description_ja": "カスティヨンに近い最東端の大規模シャトー。建築家ポルツァンパルクが設計したモダンワイナリーで安定した実力派。",
+    "image": "/images/chateaux/RightBank/Libournais/faugeres.jpg"
   },
   {
     "name": "Château Fleur Cardinale",
@@ -469,11 +469,11 @@
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "聖克里斯多夫大型莊園，石灰黏土，Merlot 主導，果香豐富，Bernard Magrez 旗下名莊。",
-    "image": "",
     "description_en": "Large Saint-Christophe estate on clay-limestone; Merlot-dominant, generous fruit, under Bernard Magrez ownership.",
     "rank_en": "Saint-Émilion Grand Cru Classé",
     "rank_ja": "サン・テミリオン グラン・クリュ・クラッセ",
-    "description_ja": "サン・クリストフの大規模シャトー、粘土石灰岩。メルロー主体で豊かな果実感。ベルナール・マグレ所有。"
+    "description_ja": "サン・クリストフの大規模シャトー、粘土石灰岩。メルロー主体で豊かな果実感。ベルナール・マグレ所有。",
+    "image": "/images/chateaux/RightBank/Libournais/fombrauge.jpg"
   },
   {
     "name": "Château Fonplégade",
@@ -483,11 +483,11 @@
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原中心，得名古井泉，採生物動力農法，Merlot 主導，細緻有深度。",
-    "image": "",
     "description_en": "Named for an ancient spring at the plateau centre; biodynamic viticulture, Merlot-dominant, refined and deep.",
     "rank_en": "Saint-Émilion Grand Cru Classé",
     "rank_ja": "サン・テミリオン グラン・クリュ・クラッセ",
-    "description_ja": "プラトー中心部の古い泉にちなんで命名。ビオディナミ農法、メルロー主体で洗練された深みのあるワイン。"
+    "description_ja": "プラトー中心部の古い泉にちなんで命名。ビオディナミ農法、メルロー主体で洗練された深みのあるワイン。",
+    "image": "/images/chateaux/RightBank/Libournais/fonplegade.jpg"
   },
   {
     "name": "Château Fonroque",
@@ -665,11 +665,11 @@
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "緊鄰 Cheval Blanc 和 Pétrus，砂礫黏土，Merlot 主導，風格豐潤，標誌性現代酒窖。",
-    "image": "",
     "description_en": "Adjacent to Cheval Blanc and Pétrus; sandy clay, Merlot-dominant, with a lush style and a landmark modern cellar.",
     "rank_en": "Saint-Émilion Grand Cru Classé",
     "rank_ja": "サン・テミリオン グラン・クリュ・クラッセ",
-    "description_ja": "シュヴァル・ブランとペトリュスの隣接地。砂質粘土でメルロー主体の豊潤なスタイル。建築的なモダンセラーも有名。"
+    "description_ja": "シュヴァル・ブランとペトリュスの隣接地。砂質粘土でメルロー主体の豊潤なスタイル。建築的なモダンセラーも有名。",
+    "image": "/images/chateaux/RightBank/Libournais/la_dominique.jpg"
   },
   {
     "name": "Château La Fleur Morange",
@@ -679,11 +679,11 @@
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "東北砂礫土，珍稀老藤 Merlot，車庫酒風格，果香奔放，極具個性。",
-    "image": "",
     "description_en": "Northeast sandy soils; rare old-vine Merlot in a garage-wine style, exuberant fruit, with a distinctive character.",
     "rank_en": "Saint-Émilion Grand Cru Classé",
     "rank_ja": "サン・テミリオン グラン・クリュ・クラッセ",
-    "description_ja": "北東の砂質土壌の稀な古木メルロー。ガレージワインスタイルで豊かな果実感と独特のキャラクター。"
+    "description_ja": "北東の砂質土壌の稀な古木メルロー。ガレージワインスタイルで豊かな果実感と独特のキャラクター。",
+    "image": "/images/chateaux/RightBank/Libournais/la_fleur_morange.jpg"
   },
   {
     "name": "Château La Marzelle",
@@ -987,11 +987,11 @@
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "北高原石灰岩大型莊園，Merlot 主導，風格傳統紮實，陳年潛力佳，由 La Mondiale 集團管理。",
-    "image": "",
     "description_en": "Large north plateau limestone estate; Merlot-dominant, traditional and firmly structured with good ageing potential, under La Mondiale group ownership.",
     "rank_en": "Saint-Émilion Grand Cru Classé",
     "rank_ja": "サン・テミリオン グラン・クリュ・クラッセ",
-    "description_ja": "大規模な北プラトー石灰岩シャトー。メルロー主体で伝統的かつしっかりとした骨格と良好な熟成力。ラ・モンディアル傘下。"
+    "description_ja": "大規模な北プラトー石灰岩シャトー。メルロー主体で伝統的かつしっかりとした骨格と良好な熟成力。ラ・モンディアル傘下。",
+    "image": "/images/chateaux/RightBank/Libournais/soutard.jpg"
   },
   {
     "name": "Château Tour Baladoz",
@@ -1141,11 +1141,11 @@
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "緊鄰 Ausone 坡地，純石灰岩土壤，Merlot 主導，產量極低，風格精緻純粹，為聖愛美濃最具靈魂的傳統名莊之一。",
-    "image": "",
     "description_en": "Adjacent to Ausone's slope on pure limestone; Merlot-dominant, tiny production, refined and pure — one of Saint-Émilion's most soulful estates.",
     "rank_en": "Premier Grand Cru Classé B",
     "rank_ja": "プルミエ・グラン・クリュ・クラッセ B",
-    "description_ja": "オーゾンヌに隣接する純粋な石灰岩の急斜面。メルロー主体でごく少量生産の洗練された純粋さ。サン＝テミリオン最も魂的なシャトーの一つ。"
+    "description_ja": "オーゾンヌに隣接する純粋な石灰岩の急斜面。メルロー主体でごく少量生産の洗練された純粋さ。サン＝テミリオン最も魂的なシャトーの一つ。",
+    "image": "/images/chateaux/RightBank/Libournais/beausejour_duffau.jpg"
   },
   {
     "name": "Château Bélair-Monange",
@@ -1197,11 +1197,11 @@
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "東側台地延伸坡，石灰黏土，Merlot 主導，採生物動力農法，風格豐厚，與 Pavie 相鄰，由 Nicolas Thienpont 管理。",
-    "image": "",
     "description_en": "Extended east terrace slope on clay-limestone; Merlot-dominant, biodynamic farming, full-bodied style, neighbouring Pavie.",
     "rank_en": "Premier Grand Cru Classé B",
     "rank_ja": "プルミエ・グラン・クリュ・クラッセ B",
-    "description_ja": "粘土石灰岩のパヴィー隣接の東テラス斜面。メルロー主体でビオディナミ農法のフルボディスタイル。"
+    "description_ja": "粘土石灰岩のパヴィー隣接の東テラス斜面。メルロー主体でビオディナミ農法のフルボディスタイル。",
+    "image": "/images/chateaux/RightBank/Libournais/pavie_macquin.jpg"
   },
   {
     "name": "Château Trottevieille",
