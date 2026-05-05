@@ -233,6 +233,9 @@ export default {
     finishQuiz: 'Finish quiz',
     passed: 'Congratulations, you passed!',
     failed: 'Keep going!',
+    slideCheck: 'Knowledge Check',
+    correct: '✅ Correct!',
+    tryAgain: '❌ Try again',
     score: 'Score',
     correctCount: 'Correct answers',
     timeSpent: 'Time spent',
@@ -245,6 +248,11 @@ export default {
     retryQuiz: 'Retry quiz',
     reviewLesson: 'Review lessons',
     continueNext: 'Continue to next module',
+  },
+
+  // ── Block labels ────────────────────
+  blocks: {
+    misconception: 'Common Misconception: ',
   },
 
   // ── Login page ─────────────────────

@@ -7,7 +7,11 @@
     ],
     "rank": "1855一級莊 / 格拉夫列級莊",
     "description": "五大酒莊中唯一不在梅多克的王者，以其無與倫比的煙燻與泥土(Graves)香氣聞名於世。",
-    "image": "/images/chateaux/LeftBank/Graves/haut_brion.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/haut_brion.jpg",
+    "description_en": "One of Bordeaux's five First Growths and the only estate listed in both the 1855 Classification and the Graves Classification; renowned internationally for both red and white wines.",
+    "rank_en": "1st Growth 1855 / Classified Graves Growth",
+    "rank_ja": "1855年 第1級 / グラーヴ格付けシャトー",
+    "description_ja": "ボルドー五大シャトーの一つで、1855年格付けとグラーヴ格付け双方に名を連ねる唯一のシャトー。赤白ともに国際的に高い評価を得る。"
   },
   {
     "name": "Château Pape Clément",
@@ -17,7 +21,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "歷史可追溯至13世紀教宗克勉五世，是波爾多歷史最悠久的酒莊之一，酒體豐滿濃郁。",
-    "image": "/images/chateaux/LeftBank/Graves/pape_clement.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/pape_clement.jpg",
+    "description_en": "Dating back to the 13th century, producing highly representative red and white wines of full body with excellent ageing potential.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "13世紀に起源を持つ歴史的名シャトー。フルボディで熟成力に優れた赤白ワインを生産する。"
   },
   {
     "name": "Château La Mission Haut-Brion",
@@ -27,7 +35,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "與 Haut-Brion 僅一路之隔，風格宏大濃郁，常被視為擁有「一級莊」實力的超級傳奇名莊。",
-    "image": "/images/chateaux/LeftBank/Graves/la_mission_haut_brion.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/la_mission_haut_brion.jpg",
+    "description_en": "A peer of Haut-Brion, celebrated for rich, complex red wines; white wine production is very limited.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "オー・ブリオンと並ぶ存在で、リッチで複雑な赤ワインで名高い。白ワインの生産量は極めて少ない。"
   },
   {
     "name": "Château Smith Haut Lafitte",
@@ -37,7 +49,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "結合了現代科技與傳統工藝，近年來成為佩薩克-雷奧良最具代表性且獲極高評價的耀眼頂級莊。",
-    "image": "/images/chateaux/LeftBank/Graves/smith_haut_lafitte.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/smith_haut_lafitte.jpg",
+    "description_en": "Modern management has greatly elevated quality; both red and white wines now enjoy international acclaim.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "近代的な経営により品質が飛躍的に向上。赤白ともに国際的に高い評価を受ける。"
   },
   {
     "name": "Château Carbonnieux",
@@ -47,7 +63,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "歷史悠久，其白酒風味清新優雅，紅酒則具有極好的陳年能力。",
-    "image": "/images/chateaux/LeftBank/Graves/carbonnieux.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/carbonnieux.jpg",
+    "description_en": "Renowned for both red and white wines; whites are fresh and elegant, reds well-structured.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白ともに名高い格付けシャトー。白はフレッシュでエレガント、赤はしっかりとした骨格を持つ。"
   },
   {
     "name": "Château Malartic-Lagravière",
@@ -57,7 +77,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "擁有獨特風土地貌，近年在重新投資後設備現代化，紅白酒在列級莊中表現極其亮眼。",
-    "image": "/images/chateaux/LeftBank/Graves/malartic_lagraviere.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/malartic_lagraviere.jpg",
+    "description_en": "One of the few estates with classified red and white wines; whites are celebrated for their finesse.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白双方が格付けされた数少ないシャトー。白はその繊細さと優雅さで特に評価が高い。"
   },
   {
     "name": "Château Latour-Martillac",
@@ -67,7 +91,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "位於瑪蒂亞克(Martillac)，以深厚礫石與獨特微氣候著稱，生產極具性格的紅白佳釀。",
-    "image": "/images/chateaux/LeftBank/Graves/latour_martillac.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/latour_martillac.jpg",
+    "description_en": "Both reds and whites are representative; whites are noted for their floral and mineral character.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白ともに代表的な格付けシャトー。白はフローラルでミネラル感が際立つ。"
   },
   {
     "name": "Château Olivier",
@@ -77,7 +105,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "擁有中世紀城堡建築，周圍環繞廣闊的森林，其列級紅白酒皆具細膩花果香與礦物味。",
-    "image": "/images/chateaux/LeftBank/Graves/olivier.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/olivier.jpg",
+    "description_en": "Produces both red and white wines; whites are particularly outstanding in their elegant style.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白ともに生産する格付けシャトー。白はとりわけ優雅なスタイルで高評価。"
   },
   {
     "name": "Château Bouscaut",
@@ -87,7 +119,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "擁有極佳的石灰岩與黏土質，紅白酒皆產，風格傳統而細緻。",
-    "image": "/images/chateaux/LeftBank/Graves/bouscaut.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/bouscaut.jpg",
+    "description_en": "Both reds and whites are classified; whites are round and full, reds firmly structured.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白ともに格付けされ、白は丸みのある豊かなスタイル、赤はしっかりとした骨格を持つ。"
   },
   {
     "name": "Domaine de Chevalier",
@@ -97,7 +133,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "格拉夫列級莊的超級巨星之一，雖然稱作「Domaine」，但位列頂尖等級，紅白酒品質均出類拔萃。",
-    "image": ""
+    "image": "/images/chateaux/LeftBank/Graves/domaine_de_chevalier.jpg",
+    "description_en": "One of the top stars of the Graves classification; though called a 'Domaine', it ranks at the very top — both red and white are exceptional.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "グラーヴ格付けの最高峰の一つ。「ドメーヌ」の名称ながら格付けトップクラスに位置し、赤白双方が傑出している。"
   },
   {
     "name": "Château Haut-Bailly",
@@ -107,7 +147,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "位處優越的高地，出產著結構嚴謹且極度優雅的紅酒，被公認為格拉夫地區的極品名莊。",
-    "image": ""
+    "image": "/images/chateaux/LeftBank/Graves/haut_bailly.jpg",
+    "description_en": "Planted on elevated terrain, producing rigorously structured and supremely elegant reds; widely recognised as the finest estate in the Graves.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "高台に植えられた葡萄から厳格でシュプレム・エレガントな赤ワインを生産。グラーヴ随一との評価も高い。"
   },
   {
     "name": "Château de Fieuzal",
@@ -117,7 +161,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "其紅酒名列格拉夫列級，表現不俗；而未列級的白酒同樣品質超群，風格豐富醇厚。",
-    "image": ""
+    "image": "",
+    "description_en": "Its reds are in the Graves classification and perform admirably; the non-classified whites are equally outstanding — rich and complex.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤はグラーヴ格付けに選ばれ実力十分。格付け外の白も同様に傑出しており、豊かで複雑なスタイル。"
   },
   {
     "name": "Château La Tour Haut-Brion",
@@ -127,7 +175,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "曾是列級莊，2005年被 La Mission Haut-Brion 併購，原先獨立生產的酒款已成絕響。",
-    "image": ""
+    "image": "/images/chateaux/LeftBank/Graves/la_tour_haut_brion.jpg",
+    "description_en": "Once a classified estate, it was absorbed by La Mission Haut-Brion in 2005; wines bottled under the original label are now collector's items.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "かつての格付けシャトー。2005年にラ・ミッション・オー・ブリオンに吸収され、旧ラベルのボトルは今やコレクターズアイテム。"
   },
   {
     "name": "Château Couhins",
@@ -137,7 +189,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "隸屬於法國國家農業研究所(INRA)，以出色的白酒入選格拉夫列級。",
-    "image": ""
+    "image": "",
+    "description_en": "Owned by INRA (France's national agricultural research institute); selected for the Graves classification on the strength of its outstanding whites.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "INRA（フランス農業研究機構）所有。卓越した白ワインでグラーヴ格付けに選ばれた。"
   },
   {
     "name": "Château Couhins-Lurton",
@@ -147,7 +203,11 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "從Couhins分割出來由André Lurton家族管理，生產極具代表性的 100% Sauvignon Blanc 列級白酒。",
-    "image": ""
+    "image": "",
+    "description_en": "Split off from Couhins and managed by the André Lurton family; produces an emblematic 100% Sauvignon Blanc classified white wine.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "クーアンから分離し、アンドレ・ルルトン家が管理。100% ソーヴィニョン・ブランの格付け白ワインを生産する。"
   },
   {
     "name": "Château Laville Haut-Brion",
@@ -157,6 +217,10 @@
     ],
     "rank": "格拉夫列級莊 (Crus Classés de Graves)",
     "description": "以生產傳奇白酒著稱（格拉夫白酒列級），2009年起正式更名為 Château La Mission Haut-Brion Blanc。",
-    "image": ""
+    "image": "",
+    "description_en": "Celebrated for legendary white wines (Graves white wine classification); officially renamed Château La Mission Haut-Brion Blanc in 2009.",
+    "rank_en": "Crus Classés de Graves",
+    "rank_ja": "クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "伝説的な白ワイン（グラーヴ白ワイン格付け）で名高い。2009年よりシャトー・ラ・ミッション・オー・ブリオン・ブランに改称。"
   }
 ]

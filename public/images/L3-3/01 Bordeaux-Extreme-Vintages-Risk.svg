@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bgDisaster" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0f12"/>
+      <stop offset="100%" stop-color="#0d141e"/>
+    </linearGradient>
+    <filter id="shD"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="540" fill="url(#bgDisaster)"/>
+  <line x1="40" y1="64" x2="760" y2="64" stroke="#6080A0" stroke-width="0.8" opacity="0.5"/>
+  <text x="400" y="36" text-anchor="middle" fill="#80B0F0" font-size="20" font-weight="bold">Bordeaux Extreme Vintages & Climate Risks Throughout History</text>
+  <text x="400" y="56" text-anchor="middle" fill="#6080A0" font-size="12">Extreme Vintages · Learning from Historical Disasters to Master Climate Risk Strategies</text>
+
+  <!-- Timeline Base -->
+  <line x1="80" y1="200" x2="720" y2="200" stroke="#304050" stroke-width="4"/>
+  <polygon points="720,195 735,200 720,205" fill="#304050"/>
+
+  <!-- Event 1: 1956 Frost -->
+  <line x1="120" y1="200" x2="120" y2="260" stroke="#80B0F0" stroke-width="2" stroke-dasharray="3,3"/>
+  <circle cx="120" cy="200" r="6" fill="#0a0f12" stroke="#80B0F0" stroke-width="2"/>
+  <text x="120" y="185" text-anchor="middle" fill="#80B0F0" font-size="16" font-weight="bold">1956</text>
+  <rect x="50" y="270" width="140" height="70" rx="4" fill="#0e1828" stroke="#80B0F0" stroke-width="1" filter="url(#shD)"/>
+  <text x="120" y="290" text-anchor="middle" fill="#A0C0F0" font-size="13" font-weight="bold">❄️ Frost of the Century</text>
+  <text x="120" y="310" text-anchor="middle" fill="#C0D0E0" font-size="11">Destroyed vast numbers of old vines</text>
+  <text x="120" y="325" text-anchor="middle" fill="#8090A0" font-size="10">Forced Bordeaux to replant and modernise</text>
+
+  <!-- Event 2: 1991 Frost -->
+  <line x1="250" y1="200" x2="250" y2="140" stroke="#60A0D0" stroke-width="2" stroke-dasharray="3,3"/>
+  <circle cx="250" cy="200" r="6" fill="#0a0f12" stroke="#60A0D0" stroke-width="2"/>
+  <text x="250" y="225" text-anchor="middle" fill="#60A0D0" font-size="16" font-weight="bold">1991</text>
+  <rect x="180" y="60" width="140" height="70" rx="4" fill="#0e1828" stroke="#60A0D0" stroke-width="1" filter="url(#shD)"/>
+  <text x="250" y="80" text-anchor="middle" fill="#80C0F0" font-size="13" font-weight="bold">📉 Late Spring Frost</text>
+  <text x="250" y="100" text-anchor="middle" fill="#C0D0E0" font-size="11">Extreme cold on 21 April</text>
+  <text x="250" y="115" text-anchor="middle" fill="#8090A0" font-size="10">Yields decimated, but surviving fruit exceptional</text>
+
+  <!-- Event 3: 2003 Heatwave -->
+  <line x1="380" y1="200" x2="380" y2="260" stroke="#F06040" stroke-width="2" stroke-dasharray="3,3"/>
+  <circle cx="380" cy="200" r="6" fill="#0a0f12" stroke="#F06040" stroke-width="2"/>
+  <text x="380" y="185" text-anchor="middle" fill="#F06040" font-size="16" font-weight="bold">2003</text>
+  <rect x="310" y="270" width="140" height="70" rx="4" fill="#281410" stroke="#F06040" stroke-width="1" filter="url(#shD)"/>
+  <text x="380" y="290" text-anchor="middle" fill="#F08060" font-size="13" font-weight="bold">🔥 Historic Heatwave</text>
+  <text x="380" y="310" text-anchor="middle" fill="#E0C0B0" font-size="11">Summer temperatures exceeding 40°C</text>
+  <text x="380" y="325" text-anchor="middle" fill="#C08070" font-size="10">Shattered climate assumptions; grapes scorched</text>
+
+  <!-- Event 4: 2013 Rain/Rot -->
+  <line x1="510" y1="200" x2="510" y2="140" stroke="#60D0A0" stroke-width="2" stroke-dasharray="3,3"/>
+  <circle cx="510" cy="200" r="6" fill="#0a0f12" stroke="#60D0A0" stroke-width="2"/>
+  <text x="510" y="225" text-anchor="middle" fill="#60D0A0" font-size="16" font-weight="bold">2013</text>
+  <rect x="440" y="60" width="140" height="70" rx="4" fill="#0e2820" stroke="#60D0A0" stroke-width="1" filter="url(#shD)"/>
+  <text x="510" y="80" text-anchor="middle" fill="#80E0B0" font-size="13" font-weight="bold">🌧️ Rainfall & Grey Rot</text>
+  <text x="510" y="100" text-anchor="middle" fill="#C0E0D0" font-size="11">Nearly summerless cold, wet year</text>
+  <text x="510" y="115" text-anchor="middle" fill="#60A080" font-size="10">One of the most challenging vintages; rigorous sorting essential</text>
+
+  <!-- Event 5: 2017 & 2021 Frost -->
+  <line x1="640" y1="200" x2="640" y2="260" stroke="#B080F0" stroke-width="2" stroke-dasharray="3,3"/>
+  <circle cx="640" cy="200" r="6" fill="#0a0f12" stroke="#B080F0" stroke-width="2"/>
+  <text x="640" y="185" text-anchor="middle" fill="#B080F0" font-size="16" font-weight="bold">2017 / 2021</text>
+  <rect x="570" y="270" width="140" height="70" rx="4" fill="#181028" stroke="#B080F0" stroke-width="1" filter="url(#shD)"/>
+  <text x="640" y="290" text-anchor="middle" fill="#C0A0F0" font-size="13" font-weight="bold">⚔️ Climate Change Test</text>
+  <text x="640" y="310" text-anchor="middle" fill="#D0C0E0" font-size="11">Warm winter early budbreak + black frost in April</text>
+  <text x="640" y="325" text-anchor="middle" fill="#A080C0" font-size="10">Yields severely hit; helicopters deployed for frost protection</text>
+
+  <!-- Risk Management Strategies Section -->
+  <rect x="40" y="370" width="720" height="130" rx="8" fill="#121820" stroke="#305070" stroke-width="1.5" filter="url(#shD)"/>
+  <text x="400" y="398" text-anchor="middle" fill="#80B0F0" font-size="14" font-weight="bold">🛡️ Modern Bordeaux Climate Risk Response & Defence Strategies</text>
+  <line x1="80" y1="408" x2="720" y2="408" stroke="#305070" stroke-width="1"/>
+
+  <rect x="60" y="420" width="210" height="60" rx="6" fill="#182430" stroke="#406080" stroke-width="1"/>
+  <text x="165" y="440" text-anchor="middle" fill="#A0C0F0" font-size="13" font-weight="bold">💨 Physical Defence Equipment</text>
+  <text x="165" y="458" text-anchor="middle" fill="#C0DEFF" font-size="11">Frost candles / wind machines / helicopters</text>
+  <text x="165" y="472" text-anchor="middle" fill="#8090A0" font-size="10">Physically agitate air to prevent cold air from settling</text>
+
+  <rect x="295" y="420" width="210" height="60" rx="6" fill="#281810" stroke="#804030" stroke-width="1"/>
+  <text x="400" y="440" text-anchor="middle" fill="#F09080" font-size="13" font-weight="bold">🌱 Agronomic Adjustments</text>
+  <text x="400" y="458" text-anchor="middle" fill="#FFC0B0" font-size="11">Delayed pruning / canopy management</text>
+  <text x="400" y="472" text-anchor="middle" fill="#A07060" font-size="10">Modifying the microclimate to protect grapes and delay budbreak</text>
+
+  <rect x="530" y="420" width="210" height="60" rx="6" fill="#102818" stroke="#306040" stroke-width="1"/>
+  <text x="635" y="440" text-anchor="middle" fill="#80D0A0" font-size="13" font-weight="bold">💡 Variety Selection & Technology Investment</text>
+  <text x="635" y="458" text-anchor="middle" fill="#B0E0C0" font-size="11">Trialling late-ripening varieties / optical sorting</text>
+  <text x="635" y="472" text-anchor="middle" fill="#709080" font-size="10">Using technology to increase resilience against extreme vintages</text>
+
+  <!-- Footer note -->
+  <line x1="40" y1="520" x2="760" y2="520" stroke="#507090" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="534" text-anchor="middle" fill="#6080A0" font-size="10">💡 "Great châteaux are defined not by what they achieve in perfect vintages, but by the wisdom and resilience they show in extreme ones."</text>
+</svg>

@@ -7,7 +7,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "以東方宮殿式酒莊建築聞名，風格濃郁、結構強勁，是聖埃斯泰夫最具代表性的名莊之一。",
-    "image": "/images/chateaux/LeftBank/Medoc/cos_destournel.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/cos_destournel.jpg",
+    "description_en": "Famous for its oriental-palace façade; rich and powerfully structured — one of Saint-Estèphe's most iconic estates.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "オリエンタルな宮殿様式の外観で有名。リッチで力強い骨格を持つサン＝テステフを代表するアイコン的シャトー。"
   },
   {
     "name": "Château Montrose",
@@ -17,7 +21,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "以強勁結構和陳年潛力著稱，聖埃斯泰夫最頂尖的二級酒莊之一。",
-    "image": "/images/chateaux/LeftBank/Medoc/montrose.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/montrose.jpg",
+    "description_en": "Known for strong structure and ageing potential; one of Saint-Estèphe's top Second Growths.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "強固な骨格と驚異的な熟成力で名高いサン＝テステフのトップ第二特等格付け。"
   },
   {
     "name": "Château Calon-Ségur",
@@ -27,7 +35,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "以心型酒標著稱，風格優雅細膩，陳年後展現迷人複雜度。",
-    "image": "/images/chateaux/LeftBank/Medoc/calon_segur.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/calon_segur.jpg",
+    "description_en": "Famous for its heart-shaped label; refined and elegant, developing captivating complexity with age.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "ハート型ラベルで有名。洗練されたエレガントさを持ち、熟成とともに魅力的な複雑さを発揮する。"
   },
   {
     "name": "Château Lafon-Rochet",
@@ -37,7 +49,11 @@
     ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "以明亮黃色酒莊建築聞名，風格均衡，性價比高。",
-    "image": "/images/chateaux/LeftBank/Medoc/lafon_rochet.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/lafon_rochet.jpg",
+    "description_en": "Known for its bright yellow château building; well-balanced and excellent value.",
+    "rank_en": "4th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第4級格付け",
+    "description_ja": "鮮やかな黄色い城館で知られ、バランスが取れコストパフォーマンスが高い。"
   },
   {
     "name": "Château Meyney",
@@ -47,7 +63,11 @@
     ],
     "rank": "聖埃斯泰夫優質名莊",
     "description": "歷史悠久，風格濃郁，近年品質穩定提升。",
-    "image": "/images/chateaux/LeftBank/Medoc/meyney.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/meyney.jpg",
+    "description_en": "A historic estate; rich in style with consistently improving quality.",
+    "rank_en": "Distinguished Saint-Estèphe Estate",
+    "rank_ja": "サン・テステフ 優良シャトー",
+    "description_ja": "歴史ある修道院由来のシャトー。リッチなスタイルで安定的に品質が向上している。"
   },
   {
     "name": "Château Phélan Ségur",
@@ -57,7 +77,11 @@
     ],
     "rank": "Cru Bourgeois Exceptionnel 標等 / 超級名莊",
     "description": "不參加中級莊評級的「超級名莊」，品質媲美列級，位處 Saint-Estèphe 黃金地帶，以精細複雜的單寧見長。",
-    "image": "/images/chateaux/LeftBank/Medoc/phelan_segur.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/phelan_segur.jpg",
+    "description_en": "An unofficial 'super estate' that opts out of the Cru Bourgeois classification; quality rivals classified growths in Saint-Estèphe's golden zone with refined complexity.",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
+    "description_ja": "クリュ・ブルジョワ格付けを外れたアン・オフィシャルな「スーパーシャトー」。サン＝テステフの黄金地帯に位置し格付けシャトーに匹敵する品質と洗練された複雑さ。"
   },
   {
     "name": "Château Haut-Marbuzet",
@@ -67,7 +91,11 @@
     ],
     "rank": "聖埃斯泰夫優質名莊",
     "description": "以柔順口感和香氣複雜著稱，風格較為圓潤。",
-    "image": "/images/chateaux/LeftBank/Medoc/haut_marbuzet.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/haut_marbuzet.jpg",
+    "description_en": "Known for smooth texture and complex aromatics; a rounder style.",
+    "rank_en": "Distinguished Saint-Estèphe Estate",
+    "rank_ja": "サン・テステフ 優良シャトー",
+    "description_ja": "なめらかなテクスチャーと複雑なアロマで名高い、丸みのあるスタイル。"
   },
   {
     "name": "Château Le Boscq",
@@ -77,7 +105,11 @@
     ],
     "rank": "聖埃斯泰夫優質名莊",
     "description": "位於吉倫特河畔，風格濃郁，單寧結構明顯。",
-    "image": "/images/chateaux/LeftBank/Medoc/le_boscq.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/le_boscq.jpg",
+    "description_en": "Situated along the Gironde; rich in style with notable tannic structure.",
+    "rank_en": "Distinguished Saint-Estèphe Estate",
+    "rank_ja": "サン・テステフ 優良シャトー",
+    "description_ja": "ジロンド川沿いに位置し、リッチで際立ったタンニン骨格のスタイル。"
   },
   {
     "name": "Château Lilian Ladouys",
@@ -87,7 +119,11 @@
     ],
     "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
     "description": "Saint-Estèphe 實力派，近年被 Lorenzetti 家族收購後突飛猛進，果香鮮明口感圓潤， Exceptionnel。",
-    "image": "/images/chateaux/LeftBank/Medoc/lilian_ladouys.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/lilian_ladouys.jpg",
+    "description_en": "A rising Saint-Estèphe star; following acquisition by the Lorenzetti family, quality has surged — vibrant fruit and a round palate.",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
+    "description_ja": "ロレンツェッティ家による買収後に品質が急上昇したサン＝テステフの新星。鮮明な果実感と丸みのあるパレット。"
   },
   {
     "name": "Château Cos Labory",
@@ -97,7 +133,11 @@
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "鄰近 Cos d'Estournel，風格優雅、性價比高。",
-    "image": "/images/chateaux/LeftBank/Medoc/cos_labory.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/cos_labory.jpg",
+    "description_en": "Neighbouring Cos d'Estournel; elegant style with excellent value.",
+    "rank_en": "5th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第5級格付け",
+    "description_ja": "コス・デストゥルネルの隣に位置し、エレガントなスタイルとコストパフォーマンスが魅力。"
   },
   {
     "name": "Château de Pez",
@@ -107,7 +147,11 @@
     ],
     "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
     "description": "Saint-Estèphe 最古老的莊園之一，由名門路易王妃(Roederer)擁有，酒體雄渾，中級莊特等。",
-    "image": ""
+    "image": "/images/chateaux/LeftBank/Medoc/de_pez.jpg",
+    "description_en": "One of the oldest estates in Saint-Estèphe, owned by the prestigious Louis Roederer family; full-bodied, with Cru Bourgeois standing.",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
+    "description_ja": "サン＝テステフ最古のシャトーの一つで、権威あるルイ・ロデレール家が所有。フルボディでクリュ・ブルジョワの代表格。"
   },
   {
     "name": "Château Petit Bocq",
@@ -117,6 +161,10 @@
     ],
     "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
     "description": "位於 Saint-Estèphe，充滿活力的 Exceptionnel，豐富的黑色水果與精緻架構受到廣大讚譽。",
-    "image": ""
+    "image": "",
+    "description_en": "A vibrant Exceptionnel in Saint-Estèphe; rich black fruit and refined structure have earned wide acclaim.",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
+    "description_ja": "サン＝テステフの活気あるエクセプショネル。豊かな黒果実と洗練された骨格で高い評価を得ている。"
   }
 ]

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bgSoil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140A05"/>
+      <stop offset="50%" stop-color="#1A100A"/>
+      <stop offset="100%" stop-color="#24150D"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.8"/></filter>
+    
+    <!-- Gravel Pattern -->
+    <pattern id="gravel" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#2A201A"/>
+      <circle cx="6" cy="6" r="4" fill="#4A3C32"/>
+      <circle cx="15" cy="14" r="5" fill="#3D3025"/>
+      <circle cx="14" cy="5" r="3" fill="#5C4A3D"/>
+    </pattern>
+
+    <!-- Clay Pattern -->
+    <pattern id="clay" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#1A2030"/>
+      <path d="M0 10 Q10 15 20 10" fill="none" stroke="#253550" stroke-width="2"/>
+      <path d="M0 20 Q10 15 20 20" fill="none" stroke="#304060" stroke-width="1.5"/>
+    </pattern>
+
+    <!-- Limestone Pattern -->
+    <pattern id="limestone" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#D0C8B8"/>
+      <path d="M0 5 L20 5 M5 0 L5 20 M15 5 L15 20" fill="none" stroke="#A09888" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="540" fill="url(#bgSoil)"/>
+  
+  <text x="400" y="45" text-anchor="middle" fill="#D0A080" font-size="24" font-weight="bold">Bordeaux's Three Core Soils: Science & Terroir Expression</text>
+  <text x="400" y="65" text-anchor="middle" fill="#A08060" font-size="13">Gravel, Clay &amp; Limestone: The Geological Foundation of Bordeaux</text>
+
+  <!-- Ground Line -->
+  <line x1="40" y1="140" x2="760" y2="140" stroke="#406030" stroke-width="2"/>
+  
+  <!-- Left: Gravel (Left Bank) -->
+  <g transform="translate(60, 140)">
+    <!-- Vine -->
+    <path d="M 110 0 L 110 -40 C 90 -60, 70 -50, 60 -70 M 110 -40 C 130 -60, 150 -50, 160 -70" fill="none" stroke="#503020" stroke-width="4"/>
+    <circle cx="90" cy="-60" r="10" fill="#201020"/>
+    <circle cx="95" cy="-55" r="10" fill="#201020"/>
+    <circle cx="85" cy="-50" r="10" fill="#201020"/>
+    <text x="110" y="-85" text-anchor="middle" fill="#C0A0C0" font-size="12" font-weight="bold">Cabernet Sauvignon (CS)</text>
+
+    <!-- Soil Section -->
+    <rect x="0" y="0" width="220" height="220" rx="4" fill="url(#gravel)" stroke="#504030" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="220" height="40" fill="#302515" fill-opacity="0.8"/>
+    
+    <!-- Roots -->
+    <path d="M 110 0 C 110 50, 80 100, 60 180" fill="none" stroke="#604020" stroke-width="2"/>
+    <path d="M 110 0 C 110 80, 140 120, 160 200" fill="none" stroke="#604020" stroke-width="2"/>
+    <path d="M 110 0 L 110 150" fill="none" stroke="#604020" stroke-width="3"/>
+
+    <text x="110" y="24" text-anchor="middle" fill="#E0C0A0" font-size="14" font-weight="bold">Deep Gravel Layer</text>
+    <text x="110" y="245" text-anchor="middle" fill="#C09070" font-size="12" font-weight="bold">Left Bank (Médoc / Graves)</text>
+    
+    <rect x="0" y="260" width="220" height="70" rx="4" fill="#201815" stroke="#403025" stroke-width="1"/>
+    <text x="110" y="280" text-anchor="middle" fill="#A08060" font-size="11">🌡️ Physical: Excellent drainage, absorbs heat by day, releases at night</text>
+    <text x="110" y="300" text-anchor="middle" fill="#A08060" font-size="11">🧬 Roots: Deep penetration in search of groundwater</text>
+    <text x="110" y="320" text-anchor="middle" fill="#A08060" font-size="11">🍷 Wine Style: Powerful tannins, grand structure, age-worthy</text>
+  </g>
+
+  <!-- Middle: Clay (Right Bank - Pomerol) -->
+  <g transform="translate(290, 140)">
+    <!-- Vine -->
+    <path d="M 110 0 L 110 -40 C 90 -60, 70 -50, 60 -70 M 110 -40 C 130 -60, 150 -50, 160 -70" fill="none" stroke="#503020" stroke-width="4"/>
+    <circle cx="130" cy="-60" r="12" fill="#301525"/>
+    <circle cx="140" cy="-50" r="12" fill="#301525"/>
+    <circle cx="120" cy="-50" r="12" fill="#301525"/>
+    <text x="110" y="-85" text-anchor="middle" fill="#E0A0C0" font-size="12" font-weight="bold">Merlot</text>
+
+    <!-- Soil Section -->
+    <rect x="0" y="0" width="220" height="220" rx="4" fill="url(#clay)" stroke="#304060" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="220" height="40" fill="#202A35" fill-opacity="0.8"/>
+    
+    <!-- Roots -->
+    <path d="M 110 0 C 80 20, 60 40, 40 80 M 110 0 C 130 20, 150 50, 170 100" fill="none" stroke="#604020" stroke-width="2.5"/>
+    <path d="M 110 0 L 110 100" fill="none" stroke="#604020" stroke-width="3"/>
+    <text x="110" y="150" text-anchor="middle" fill="#6080A0" font-size="10">Shallower roots, lateral spread</text>
+
+    <text x="110" y="24" text-anchor="middle" fill="#80A0D0" font-size="14" font-weight="bold">Blue Clay</text>
+    <text x="110" y="245" text-anchor="middle" fill="#7090C0" font-size="12" font-weight="bold">Right Bank (Pomerol Core)</text>
+    
+    <rect x="0" y="260" width="220" height="70" rx="4" fill="#151A20" stroke="#253040" stroke-width="1"/>
+    <text x="110" y="280" text-anchor="middle" fill="#7090B0" font-size="11">💧 Physical: Exceptional water retention and cooling capacity, iron-rich</text>
+    <text x="110" y="300" text-anchor="middle" fill="#7090B0" font-size="11">🧬 Roots: Sponge-like water storage, drought-resilient</text>
+    <text x="110" y="320" text-anchor="middle" fill="#7090B0" font-size="11">🍷 Wine Style: Full-bodied and supple, velvety texture</text>
+  </g>
+
+  <!-- Right: Limestone (Right Bank - St. Emilion) -->
+  <g transform="translate(520, 140)">
+    <!-- Vine -->
+    <path d="M 110 0 L 110 -40 C 90 -60, 70 -50, 60 -70 M 110 -40 C 130 -60, 150 -50, 160 -70" fill="none" stroke="#503020" stroke-width="4"/>
+    <circle cx="90" cy="-60" r="10" fill="#201020"/>
+    <circle cx="95" cy="-55" r="10" fill="#201020"/>
+    <circle cx="130" cy="-60" r="10" fill="#301525"/>
+    <text x="110" y="-85" text-anchor="middle" fill="#D0B0A0" font-size="12" font-weight="bold">Cabernet Franc &amp; Merlot</text>
+
+    <!-- Soil Section -->
+    <rect x="0" y="0" width="220" height="220" rx="4" fill="url(#limestone)" stroke="#A09888" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="220" height="40" fill="#807868" fill-opacity="0.8"/>
+    
+    <!-- Roots penetrating cracks -->
+    <path d="M 110 0 L 110 40 L 90 80 L 100 130 L 70 180" fill="none" stroke="#503525" stroke-width="2"/>
+    <path d="M 110 0 L 120 30 L 150 70 L 140 120 L 170 160" fill="none" stroke="#503525" stroke-width="2"/>
+
+    <text x="110" y="24" text-anchor="middle" fill="#F0E8D8" font-size="14" font-weight="bold">Limestone Plateau</text>
+    <text x="110" y="245" text-anchor="middle" fill="#C0B8A8" font-size="12" font-weight="bold">Right Bank (Saint-Émilion Plateau)</text>
+    
+    <rect x="0" y="260" width="220" height="70" rx="4" fill="#201C18" stroke="#504838" stroke-width="1"/>
+    <text x="110" y="280" text-anchor="middle" fill="#B0A898" font-size="11">🪨 Physical: High calcium, strongly alkaline, acts like a natural capillary for moisture</text>
+    <text x="110" y="300" text-anchor="middle" fill="#B0A898" font-size="11">🧬 Roots: Penetrates fissures seeking nutrients in deep pores</text>
+    <text x="110" y="320" text-anchor="middle" fill="#B0A898" font-size="11">🍷 Wine Style: Bright acidity, elegant aromatics, mineral finish</text>
+  </g>
+
+  <!-- Bottom Message -->
+  <rect x="150" y="485" width="500" height="36" rx="18" fill="#1A2510" stroke="#306020" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="508" text-anchor="middle" fill="#90D080" font-size="13" font-weight="bold">There is no "best" soil — only the most synergistic terroir match for each variety</text>
+
+</svg>

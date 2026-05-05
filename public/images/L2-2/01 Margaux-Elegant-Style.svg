@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bgM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#100808"/>
+      <stop offset="100%" stop-color="#1c1010"/>
+    </linearGradient>
+    <filter id="shM"><feDropShadow dx="1" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bgM)"/>
+  <line x1="40" y1="68" x2="760" y2="68" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#C0952C" font-size="21" font-weight="bold">Margaux　The Style Code of the Elegant Queen</text>
+  <text x="400" y="60" text-anchor="middle" fill="#9A7040" font-size="12">The "Feminine" Village of Médoc · Fine Gravel · Floral Aromas · Silky Tannins</text>
+
+  <!-- Left: Key style characteristics -->
+  <rect x="40" y="82" width="360" height="340" rx="8" fill="#1A0C10" stroke="#884466" stroke-width="1.5" filter="url(#shM)"/>
+  <rect x="40" y="82" width="360" height="50" rx="8" fill="#5A1828"/>
+  <rect x="40" y="112" width="360" height="20" fill="#5A1828"/>
+  <text x="220" y="108" text-anchor="middle" fill="#FFD0D8" font-size="16" font-weight="bold">🌹 Style Profile</text>
+  <text x="220" y="126" text-anchor="middle" fill="#CC8898" font-size="11">Style Characteristics</text>
+
+  <!-- Style attributes -->
+  <text x="60" y="155" fill="#CC6680" font-size="12" font-weight="bold">Aroma Profile</text>
+  <rect x="60" y="162" width="318" height="72" rx="4" fill="#120810" stroke="#6A3040" stroke-width="0.8"/>
+  <text x="75" y="178" fill="#F0C0CC" font-size="12">🌹 Rose · Violet · Peony (Floral)</text>
+  <text x="75" y="195" fill="#F0C0CC" font-size="12">🍓 Strawberry · Raspberry · Red Currant (Red Fruits)</text>
+  <text x="75" y="212" fill="#F0C0CC" font-size="12">✏️ Pencil Shavings · Cedar · Vetiver (Aged)</text>
+  <text x="75" y="227" fill="#F0C0CC" font-size="12">🌿 Mint · Subtle Herbaceous Note (Freshness)</text>
+
+  <text x="60" y="252" fill="#CC6680" font-size="12" font-weight="bold">Palate Structure</text>
+  <rect x="60" y="259" width="318" height="56" rx="4" fill="#120810" stroke="#6A3040" stroke-width="0.8"/>
+  <text x="75" y="276" fill="#EDB0BC" font-size="12">• Finest, most silky tannins (most elegant in Médoc)</text>
+  <text x="75" y="293" fill="#EDB0BC" font-size="12">• Medium body · fresh acidity · long, silky finish</text>
+  <text x="75" y="309" fill="#EDB0BC" font-size="12">• Charming when young, gains complexity with age</text>
+
+  <text x="60" y="334" fill="#CC6680" font-size="12" font-weight="bold">Soil Foundation</text>
+  <rect x="60" y="341" width="318" height="42" rx="4" fill="#120810" stroke="#6A3040" stroke-width="0.8"/>
+  <text x="75" y="358" fill="#E0A8B0" font-size="12">Predominantly fine gravel (finest in Médoc, excellent drainage)</text>
+  <text x="75" y="374" fill="#E0A8B0" font-size="12">Moderate gravel depth · foundation for elegance rather than power</text>
+
+  <!-- Right: Key châteaux comparison -->
+  <rect x="420" y="82" width="340" height="340" rx="8" fill="#1A0C10" stroke="#884466" stroke-width="1.5" filter="url(#shM)"/>
+  <rect x="420" y="82" width="340" height="50" rx="8" fill="#5A1828"/>
+  <rect x="420" y="112" width="340" height="20" fill="#5A1828"/>
+  <text x="590" y="108" text-anchor="middle" fill="#FFD0D8" font-size="16" font-weight="bold">🏰 Key Estates</text>
+  <text x="590" y="126" text-anchor="middle" fill="#CC8898" font-size="11">Key Châteaux of Margaux AOC</text>
+
+  <!-- Château Margaux (1st Growth) -->
+  <rect x="438" y="140" width="305" height="68" rx="5" fill="#3A0818" stroke="#CC4060" stroke-width="1.5"/>
+  <text x="448" y="158" fill="#FFD700" font-size="14" font-weight="bold">Château Margaux　First Growth</text>
+  <text x="448" y="175" fill="#FFB0C0" font-size="11">The only First Growth in Margaux village · three centuries of history</text>
+  <text x="448" y="191" fill="#E090A0" font-size="11">Cab. Sauv. 75% · Merlot 20% · Ageing potential 30–50 years</text>
+  <text x="448" y="205" fill="#C07080" font-size="11">Average price ~€600–1,500 · Second wine Pavillon Rouge ~€80</text>
+
+  <!-- 2nd growth châteaux -->
+  <rect x="438" y="218" width="305" height="58" rx="5" fill="#2A0C18" stroke="#884450" stroke-width="1"/>
+  <text x="448" y="235" fill="#D4A840" font-size="13" font-weight="bold">Second Growths (5 châteaux)</text>
+  <text x="448" y="252" fill="#D0A0A8" font-size="11">Rauzan-Ségla · Rauzan-Gassies · Durfort-Vivens</text>
+  <text x="448" y="267" fill="#D0A0A8" font-size="11">Brane-Cantenac · Lascombes</text>
+
+  <!-- Other notable -->
+  <rect x="438" y="286" width="305" height="58" rx="5" fill="#200810" stroke="#6A3040" stroke-width="1"/>
+  <text x="448" y="303" fill="#C09880" font-size="12" font-weight="bold">Star of the Third Growths</text>
+  <text x="448" y="320" fill="#C09090" font-size="11">Château Palmer (often rated at Second Growth level)</text>
+  <text x="448" y="336" fill="#C09090" font-size="11">Palmer blend: Cab. 50% / Merlot 40%, notably rich style</text>
+
+  <!-- Small info -->
+  <rect x="438" y="354" width="305" height="48" rx="5" fill="#180608" stroke="#503040" stroke-width="0.8"/>
+  <text x="590" y="372" text-anchor="middle" fill="#A07080" font-size="12" font-weight="bold">Margaux AOC Basic Facts</text>
+  <text x="448" y="389" fill="#907080" font-size="11">Area: 1,455 ha · Classified châteaux: 21</text>
+  <text x="448" y="404" fill="#907080" font-size="11">Dominant variety: Cab. Sauv. 55–75%</text>
+
+  <!-- Bottom: key differentiator -->
+  <rect x="40" y="436" width="720" height="80" rx="8" fill="#120808" stroke="#C0952C" stroke-width="1" stroke-opacity="0.4" filter="url(#shM)"/>
+  <text x="400" y="460" text-anchor="middle" fill="#C0952C" font-size="14" font-weight="bold">What sets Margaux apart from the other three villages</text>
+  <line x1="60" y1="467" x2="740" y2="467" stroke="#C0952C" stroke-width="0.4" opacity="0.4"/>
+
+  <!-- 4-column comparison -->
+  <text x="140" y="484" text-anchor="middle" fill="#FF7090" font-size="13" font-weight="bold">Margaux</text>
+  <text x="140" y="500" text-anchor="middle" fill="#EE5070" font-size="11">Fine gravel · Most elegant</text>
+  <text x="140" y="513" text-anchor="middle" fill="#CC3050" font-size="11">Floral · Silky tannins</text>
+
+  <line x1="282" y1="470" x2="282" y2="508" stroke="#3A2020" stroke-width="1"/>
+  <text x="355" y="484" text-anchor="middle" fill="#FF6040" font-size="13" font-weight="bold">Pauillac</text>
+  <text x="355" y="500" text-anchor="middle" fill="#EE5030" font-size="11">Deep gravel · Most powerful</text>
+  <text x="355" y="513" text-anchor="middle" fill="#CC3010" font-size="11">Black fruit · Pencil shavings</text>
+
+  <line x1="450" y1="470" x2="450" y2="508" stroke="#3A2020" stroke-width="1"/>
+  <text x="540" y="484" text-anchor="middle" fill="#8080FF" font-size="13" font-weight="bold">Saint-Julien</text>
+  <text x="540" y="500" text-anchor="middle" fill="#6060EE" font-size="11">Gravel-clay balance</text>
+  <text x="540" y="513" text-anchor="middle" fill="#5050CC" font-size="11">Most balanced · consistent</text>
+
+  <line x1="625" y1="470" x2="625" y2="508" stroke="#3A2020" stroke-width="1"/>
+  <text x="698" y="484" text-anchor="middle" fill="#D0A060" font-size="13" font-weight="bold">Saint-Estèphe</text>
+  <text x="698" y="500" text-anchor="middle" fill="#C09050" font-size="11">Highest clay content</text>
+  <text x="698" y="513" text-anchor="middle" fill="#A07030" font-size="11">Most concentrated · firm tannins</text>
+
+  <!-- Bottom note -->
+  <line x1="40" y1="526" x2="760" y2="526" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="544" text-anchor="middle" fill="#706050" font-size="11">* "Margaux" is known as the "Queen of Bordeaux", celebrated for the elegant floral aromas and silky texture imparted by its fine gravel soils</text>
+  <text x="400" y="557" text-anchor="middle" fill="#504030" font-size="11">Five communes (Margaux · Soussans · Cantenac · Labarde · Arsac) form the Margaux AOC</text>
+</svg>

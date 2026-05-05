@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="580" viewBox="0 0 800 580" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bgFood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#120a0a"/>
+    </linearGradient>
+    <filter id="shF"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="580" fill="url(#bgFood)"/>
+  <line x1="40" y1="64" x2="760" y2="64" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+  <text x="400" y="36" text-anchor="middle" fill="#C0952C" font-size="20" font-weight="bold">Bordeaux Wine & Food Pairing Guide</text>
+  <text x="400" y="56" text-anchor="middle" fill="#9A7040" font-size="12">Food &amp; Wine Pairing · Every bite should enhance the wine</text>
+
+  <!-- 3 wine style categories across the top -->
+  <!-- Left Bank Red / Right Bank Red / Dry White/Sweet -->
+
+  <!-- Card 1: Left Bank Red -->
+  <rect x="30" y="76" width="228" height="260" rx="8" fill="#0e1018" stroke="#3050A0" stroke-width="1.5" filter="url(#shF)"/>
+  <rect x="30" y="76" width="228" height="46" rx="8" fill="#1a2850"/>
+  <rect x="30" y="108" width="228" height="14" fill="#1a2850"/>
+  <text x="144" y="100" text-anchor="middle" fill="#A0C0F0" font-size="13" font-weight="bold">🏛️ Left Bank Red</text>
+  <text x="144" y="113" text-anchor="middle" fill="#506080" font-size="10">Cab. Sauv.-dominant · powerful structure</text>
+
+  <text x="48" y="140" fill="#80A0D0" font-size="11" font-weight="bold">🥩 Best Meat Pairings</text>
+  <text x="48" y="156" fill="#C0D0E8" font-size="11">• Rib-eye steak / roast sirloin</text>
+  <text x="48" y="171" fill="#C0D0E8" font-size="11">• Herb-roasted rack of lamb (classic)</text>
+  <text x="48" y="186" fill="#C0D0E8" font-size="11">• Venison / wild boar and other game</text>
+  <text x="48" y="201" fill="#C0D0E8" font-size="11">• Beef braised in red wine (mirror pairing)</text>
+
+  <text x="48" y="220" fill="#80A0D0" font-size="11" font-weight="bold">🧀 Cheese Pairings</text>
+  <text x="48" y="235" fill="#C0D0E8" font-size="11">Aged Comté / Cheddar</text>
+  <text x="48" y="250" fill="#C0D0E8" font-size="11">Parmigiano-Reggiano</text>
+
+  <text x="48" y="269" fill="#80A0D0" font-size="11" font-weight="bold">❌ Avoid Pairing With</text>
+  <text x="48" y="284" fill="#907090" font-size="11">• Raw fish / seafood</text>
+  <text x="48" y="299" fill="#907090" font-size="11">• Desserts (tannins turn bitter)</text>
+  <text x="48" y="314" fill="#907090" font-size="11">• Spicy dishes (amplifies bitterness)</text>
+
+  <!-- Card 2: Right Bank Red -->
+  <rect x="286" y="76" width="228" height="260" rx="8" fill="#0e1208" stroke="#407040" stroke-width="1.5" filter="url(#shF)"/>
+  <rect x="286" y="76" width="228" height="46" rx="8" fill="#1a3018"/>
+  <rect x="286" y="108" width="228" height="14" fill="#1a3018"/>
+  <text x="400" y="100" text-anchor="middle" fill="#90D090" font-size="13" font-weight="bold">🌱 Right Bank Red</text>
+  <text x="400" y="113" text-anchor="middle" fill="#507050" font-size="10">Merlot-dominant · soft and rounded</text>
+
+  <text x="304" y="140" fill="#70B070" font-size="11" font-weight="bold">🥩 Best Meat Pairings</text>
+  <text x="304" y="156" fill="#A0D0A0" font-size="11">• Roast duck breast / duck confit</text>
+  <text x="304" y="171" fill="#A0D0A0" font-size="11">• Sautéed veal / pork tenderloin</text>
+  <text x="304" y="186" fill="#A0D0A0" font-size="11">• Beef burger / meatballs</text>
+  <text x="304" y="201" fill="#A0D0A0" font-size="11">• Mushroom-braised chicken thighs (highly versatile)</text>
+
+  <text x="304" y="220" fill="#70B070" font-size="11" font-weight="bold">🍄 Vegetarian Pairings</text>
+  <text x="304" y="235" fill="#A0D0A0" font-size="11">Truffle / porcini risotto</text>
+  <text x="304" y="250" fill="#A0D0A0" font-size="11">Roasted root vegetables</text>
+
+  <text x="304" y="269" fill="#70B070" font-size="11" font-weight="bold">🌏 Asian Cuisine</text>
+  <text x="304" y="284" fill="#A0D0A0" font-size="11">• Peking duck (outstanding pairing)</text>
+  <text x="304" y="299" fill="#A0D0A0" font-size="11">• Red-braised pork belly</text>
+  <text x="304" y="314" fill="#A0D0A0" font-size="11">• Japanese sukiyaki</text>
+
+  <!-- Card 3: White and Sweet -->
+  <rect x="542" y="76" width="228" height="260" rx="8" fill="#101008" stroke="#706020" stroke-width="1.5" filter="url(#shF)"/>
+  <rect x="542" y="76" width="228" height="46" rx="8" fill="#302810"/>
+  <rect x="542" y="108" width="228" height="14" fill="#302810"/>
+  <text x="656" y="100" text-anchor="middle" fill="#F0E080" font-size="13" font-weight="bold">🍾 White Wine &amp; Sweet Wine</text>
+  <text x="656" y="113" text-anchor="middle" fill="#807040" font-size="10">Sauternes · Dry Graves · Pessac</text>
+
+  <text x="560" y="140" fill="#D0C060" font-size="11" font-weight="bold">🐟 White Wine (Sauvignon Blanc)</text>
+  <text x="560" y="156" fill="#E8D880" font-size="11">• Oysters / seafood tower</text>
+  <text x="560" y="171" fill="#E8D880" font-size="11">• Steamed sea bass / cod</text>
+  <text x="560" y="186" fill="#E8D880" font-size="11">• Goat's cheese salad</text>
+  <text x="560" y="201" fill="#E8D880" font-size="11">• White asparagus / wild greens starter</text>
+
+  <text x="560" y="220" fill="#D0C060" font-size="11" font-weight="bold">🍯 Sauternes Noble Rot Sweet Wine</text>
+  <text x="560" y="235" fill="#E8D880" font-size="11">• Foie gras (a match made in heaven!)</text>
+  <text x="560" y="250" fill="#E8D880" font-size="11">• Blue cheese (Roquefort)</text>
+  <text x="560" y="265" fill="#E8D880" font-size="11">• French crème brûlée</text>
+  <text x="560" y="280" fill="#E8D880" font-size="11">• Coconut cake / apricot tart</text>
+
+  <text x="560" y="299" fill="#D0C060" font-size="11" font-weight="bold">💡 Special Pairing Trick</text>
+  <text x="560" y="314" fill="#C0A840" font-size="11">Sweet with savoury: sweet wine + foie gras = legendary</text>
+
+  <!-- Bottom: Pairing principles -->
+  <rect x="30" y="348" width="740" height="220" rx="8" fill="#0a0808" stroke="#C0952C" stroke-width="0.8" stroke-opacity="0.4" filter="url(#shF)"/>
+  <text x="400" y="370" text-anchor="middle" fill="#C0952C" font-size="14" font-weight="bold">🎯 Four Core Pairing Principles</text>
+  <line x1="55" y1="376" x2="745" y2="376" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Principle 1 -->
+  <rect x="50" y="384" width="160" height="72" rx="6" fill="#1a1008" stroke="#8B5A1C" stroke-width="1"/>
+  <text x="130" y="400" text-anchor="middle" fill="#E0A040" font-size="12" font-weight="bold">⚖️ Match Weight with Weight</text>
+  <text x="130" y="416" text-anchor="middle" fill="#C08030" font-size="10">Full-bodied red with hearty meat</text>
+  <text x="130" y="430" text-anchor="middle" fill="#C08030" font-size="10">Crisp white with delicate seafood</text>
+  <text x="130" y="444" text-anchor="middle" fill="#A07030" font-size="10">Avoid mismatching weight</text>
+
+  <!-- Principle 2 -->
+  <rect x="225" y="384" width="160" height="72" rx="6" fill="#081818" stroke="#204060" stroke-width="1"/>
+  <text x="305" y="400" text-anchor="middle" fill="#60B0D0" font-size="12" font-weight="bold">🔴 Tannin × Protein</text>
+  <text x="305" y="416" text-anchor="middle" fill="#70A0C0" font-size="10">Meat protein softens tannins</text>
+  <text x="305" y="430" text-anchor="middle" fill="#70A0C0" font-size="10">Creates a smoother mouthfeel</text>
+  <text x="305" y="444" text-anchor="middle" fill="#507090" font-size="10">Steak + Left Bank red = perfect</text>
+
+  <!-- Principle 3 -->
+  <rect x="400" y="384" width="160" height="72" rx="6" fill="#101810" stroke="#405030" stroke-width="1"/>
+  <text x="480" y="400" text-anchor="middle" fill="#90C060" font-size="12" font-weight="bold">🌿 Acidity × Fat</text>
+  <text x="480" y="416" text-anchor="middle" fill="#80B050" font-size="10">High-acid wine cuts through fat</text>
+  <text x="480" y="430" text-anchor="middle" fill="#80B050" font-size="10">Freshness enhances appetite</text>
+  <text x="480" y="444" text-anchor="middle" fill="#608040" font-size="10">Sauv. Blanc + fish fillet = refreshing</text>
+
+  <!-- Principle 4 -->
+  <rect x="575" y="384" width="160" height="72" rx="6" fill="#181010" stroke="#603020" stroke-width="1"/>
+  <text x="655" y="400" text-anchor="middle" fill="#F0A060" font-size="12" font-weight="bold">🍯 Match Sweet with Sweet</text>
+  <text x="655" y="416" text-anchor="middle" fill="#D09050" font-size="10">Sweet wine needs equally sweet food</text>
+  <text x="655" y="430" text-anchor="middle" fill="#D09050" font-size="10">Otherwise the wine tastes bitter</text>
+  <text x="655" y="444" text-anchor="middle" fill="#A07040" font-size="10">Exception: sweet wine + salty food = surprise</text>
+
+  <!-- Asian pairing special section -->
+  <rect x="50" y="465" width="690" height="90" rx="6" fill="#0e0c08" stroke="#C0952C" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="395" y="485" text-anchor="middle" fill="#C0952C" font-size="12" font-weight="bold">🌏 Special Advice: Bordeaux with Asian Cuisine</text>
+  <line x1="70" y1="491" x2="720" y2="491" stroke="#C0952C" stroke-width="0.4" opacity="0.3"/>
+
+  <text x="120" y="509" text-anchor="middle" fill="#C0A060" font-size="11" font-weight="bold">Cantonese Cuisine</text>
+  <text x="120" y="522" text-anchor="middle" fill="#B09050" font-size="10">Steamed fish → white wine</text>
+  <text x="120" y="534" text-anchor="middle" fill="#B09050" font-size="10">Roast goose → Right Bank red</text>
+  <text x="120" y="546" text-anchor="middle" fill="#B09050" font-size="10">Char siu BBQ pork → Right Bank red</text>
+
+  <line x1="190" y1="498" x2="190" y2="550" stroke="#C0952C" stroke-width="0.3" opacity="0.3"/>
+
+  <text x="265" y="509" text-anchor="middle" fill="#A0C060" font-size="11" font-weight="bold">Japanese Cuisine</text>
+  <text x="265" y="522" text-anchor="middle" fill="#90B050" font-size="10">Sukiyaki → Right Bank red</text>
+  <text x="265" y="534" text-anchor="middle" fill="#90B050" font-size="10">Teppanyaki steak → Left Bank red</text>
+  <text x="265" y="546" text-anchor="middle" fill="#90B050" font-size="10">Sushi → white wine</text>
+
+  <line x1="340" y1="498" x2="340" y2="550" stroke="#C0952C" stroke-width="0.3" opacity="0.3"/>
+
+  <text x="420" y="509" text-anchor="middle" fill="#D09080" font-size="11" font-weight="bold">Taiwanese Cuisine</text>
+  <text x="420" y="522" text-anchor="middle" fill="#C08070" font-size="10">Three-cup chicken → Right Bank red (note: spicy)</text>
+  <text x="420" y="534" text-anchor="middle" fill="#C08070" font-size="10">Oyster omelette → off-dry white wine</text>
+  <text x="420" y="546" text-anchor="middle" fill="#C08070" font-size="10">Dongpo pork → mature Right Bank red</text>
+
+  <line x1="510" y1="498" x2="510" y2="550" stroke="#C0952C" stroke-width="0.3" opacity="0.3"/>
+
+  <text x="615" y="509" text-anchor="middle" fill="#80C0C0" font-size="11" font-weight="bold">⚠️ Challenging Pairings</text>
+  <text x="615" y="522" text-anchor="middle" fill="#70A0A0" font-size="10">Sichuan spicy → fruit-forward Right Bank</text>
+  <text x="615" y="534" text-anchor="middle" fill="#70A0A0" font-size="10">Pickled / vinegar dishes → avoid Left Bank</text>
+  <text x="615" y="546" text-anchor="middle" fill="#70A0A0" font-size="10">Heavily salted food → choose high-acidity wine</text>
+
+  <line x1="40" y1="565" x2="760" y2="565" stroke="#C0952C" stroke-width="0.5" opacity="0.2"/>
+  <text x="400" y="576" text-anchor="middle" fill="#706050" font-size="10">💡 Mnemonic: "heavy with heavy, light with light, acid cuts fat, sweet with sweet, tannin loves protein"</text>
+</svg>

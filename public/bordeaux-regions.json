@@ -8,7 +8,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "位於加隆河右岸，專門生產甜白酒，自2014年起僅限甜白酒。與Cadillac、Loupiac、Sainte-Croix-du-Mont等高品質甜酒產區相鄰。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "Located on the right bank of the Garonne, this appellation has focused exclusively on sweet white wines since 2014. It neighbours prestigious appellations such as Cadillac, Loupiac, and Sainte-Croix-du-Mont.",
+    "description_ja": "ガロンヌ川右岸に位置し、まろやかな赤ワインを中心に生産するアペラシオン。粘土石灰質土壌でメルローが主力となる。"
   },
   {
     "id": "Cotes-de-Bordeaux-St-Macaire_AOC",
@@ -19,7 +21,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "位於加隆河右岸，靠近Cadillac，生產乾型、甜型與貴腐白酒。葡萄園面積約43公頃。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "On the right bank of the Garonne near Cadillac, producing dry, semi-sweet, and botrytized white wines across approximately 43 hectares.",
+    "description_ja": "カディヤック近郊のガロンヌ川右岸。ドライ・甘口の白ワインを生産し、ソーヴィニョン・ブランとセミヨンがブレンドの主体。"
   },
   {
     "id": "Cadillac_AOC",
@@ -30,7 +34,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle, Sauvignon Gris",
     "description": "以貴腐甜白酒聞名，位於加隆河右岸，擁有理想的微氣候促進貴腐菌發展。1973年獨立成AOC。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "Renowned for its botrytized sweet whites, Cadillac sits on the right bank of the Garonne with a microclimate ideal for noble rot development. It became an independent AOC in 1973.",
+    "description_ja": "ガロンヌ川右岸に面し、貴腐白ワインで名高いアペラシオン。川霧がボトリティスの発生を促し、華やかで甘美なデザートワインを生む。"
   },
   {
     "id": "Bordeaux Haut-Benauge_AOC",
@@ -41,7 +47,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Sauvignon Gris",
     "description": "位於Entre-Deux-Mers中心地帶，生產乾型與少量甜型白酒。土壤為黏土、石灰岩與礫石混合，海拔85–118公尺。",
     "coordinates": [],
-    "color": "pale yellow"
+    "color": "pale yellow",
+    "description_en": "In the heart of Entre-Deux-Mers, producing dry and a small amount of sweet whites on clay, limestone, and gravel soils at elevations of 85–118 metres.",
+    "description_ja": "アントル＝ドゥ＝メールの中心部に位置し、ドライな白ワインとわずかな甘口白ワインを生産する小規模アペラシオン。"
   },
   {
     "id": "St-Foy-Bordeaux_AOC",
@@ -52,7 +60,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Sauvignon Blanc, Sémillon, Muscadelle",
     "description": "位於多爾多涅河南岸，靠近Bergerac，生產紅、白與甜酒。2016年加入Côtes de Bordeaux聯盟。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "On the south bank of the Dordogne near Bergerac, producing red, white, and sweet wines. It joined the Côtes de Bordeaux alliance in 2016.",
+    "description_ja": "ドルドーニュ川南岸のベルジュラック近郊。赤・白・甘口白ワインを幅広く生産し、オーガニック栽培に取り組む生産者が多い。"
   },
   {
     "id": "Sainte-Croix-du-Mont_AOC",
@@ -63,7 +73,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "位於加隆河右岸，擁有理想的貴腐菌生長條件，生產可陳年數十年的甜白酒，風格類似Sauternes。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "On the right bank of the Garonne with ideal conditions for noble rot development, producing sweet whites capable of ageing for decades in a style comparable to Sauternes.",
+    "description_ja": "ガロンヌ川右岸の急峻な斜面に位置し、ソーテルヌ対岸に面する。川霧によって貴腐菌が発生しやすく、豊かな甘口白ワインを生む。"
   },
   {
     "id": "Loupiac_AOC",
@@ -74,7 +86,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle, Sauvignon Gris",
     "description": "位於加隆河右岸，與Sauternes隔河相望，生產高品質甜白酒，常被視為平價替代品。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "On the right bank of the Garonne facing Sauternes across the river, producing high-quality sweet whites often regarded as a more accessible alternative.",
+    "description_ja": "サント＝クロワ＝デュ＝モンとカディヤックの間に挟まれたガロンヌ川右岸の産地。貴腐甘口白ワインを専門に生産し、リッチな蜂蜜様アロマが特徴。"
   },
   {
     "id": "Graves-of-Vayres_AOC",
@@ -85,7 +99,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc, Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "位於多爾多涅河畔，擁有礫石土壤，生產紅白酒。紅酒以Merlot為主，白酒則以Sémillon與Sauvignon Blanc為主。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "Along the Dordogne River with gravelly soils, producing both red and white wines. Reds are Merlot-led; whites feature Sémillon and Sauvignon Blanc.",
+    "description_ja": "ドルドーニュ川沿いの砂利質土壌の産地。赤白両方のワインを生産し、砂利土壌由来のフレッシュさと果実感が持ち味。"
   },
   {
     "id": "Entre-Deux-Mers_AOC",
@@ -96,7 +112,9 @@
     "grapes": "Sauvignon Blanc, Sémillon, Muscadelle, Ugni Blanc",
     "description": "波爾多最大白酒產區，位於加隆河與多爾多涅河之間，專門生產清爽乾白酒。紅酒則以Bordeaux AOC標示。",
     "coordinates": [],
-    "color": "pale yellow"
+    "color": "pale yellow",
+    "description_en": "Bordeaux's largest white wine appellation, between the Garonne and Dordogne rivers, dedicated to crisp dry whites. Red wines from this territory are labelled under the Bordeaux AOC.",
+    "description_ja": "ガロンヌ川とドルドーニュ川に挟まれたボルドー最大の白ワイン産地。ソーヴィニョン・ブランを中心に、フレッシュで辛口のスタイルが特徴。"
   },
   {
     "id": "Entre-deux-Mers-Haut-Benauge_AOC",
@@ -107,18 +125,25 @@
     "grapes": "Sauvignon Blanc, Sémillon, Muscadelle",
     "description": "此AOC專門生產乾白酒，位於Entre-Deux-Mers中心地帶，土壤以石灰岩為主，氣候涼爽，酒款清新、果香明亮，具柑橘與熱帶水果風味。",
     "coordinates": [],
-    "color": "pale yellow"
+    "color": "pale yellow",
+    "description_en": "Specialising in dry white wines in the heart of Entre-Deux-Mers on predominantly limestone soils, with fresh, bright wines showing citrus and tropical fruit character.",
+    "description_ja": "アントル＝ドゥ＝メールの中核部に位置し、辛口白ワインに特化したサブ・アペラシオン。清涼感のあるソーヴィニョン・ブランが主体。"
   },
   {
     "id": "Côtes-de-Bordeaux-Francs_AOC",
     "name": "Francs-Côtes-de-Bordeaux",
     "type": "Entre-Deux-Mers",
-    "style": ["紅酒", "白酒"],
+    "style": [
+      "紅酒",
+      "白酒"
+    ],
     "hectare": 300,
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc, Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "位於Libourne東北方，地勢較高，土壤為黏土與石灰岩混合，生產紅白酒。紅酒以Merlot為主，白酒則清新平衡，具潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "Northeast of Libourne on elevated clay-limestone terrain, producing both reds and whites. Merlot-driven reds are fresh and balanced; whites show good potential.",
+    "description_ja": "リブルヌ北東の粘土石灰質高台に位置し、果実豊かで凝縮感のある赤ワインと甘口白ワインを生産する。"
   },
   {
     "id": "Côtes-de-Bordeaux-Cadillac_AOC",
@@ -129,7 +154,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "此AOC為Cadillac地區的紅酒產區，與甜白酒的Cadillac AOC不同。紅酒以Merlot為主，風格柔順、果香濃郁，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "The red wine appellation of the Cadillac area, distinct from the sweet-wine Cadillac AOC. Merlot-dominant reds are supple and fruit-forward with good ageing potential.",
+    "description_ja": "カディヤック地区の赤ワイン専用アペラシオン。貴腐甘口ワインを生む「カディヤック」とは別の名称で、メルロー主体の柔らかな赤ワインを生産する。"
   },
   {
     "id": "Côtes-de-Bordeaux-Saint-Macaire_AOC",
@@ -140,7 +167,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "位於加隆河右岸，靠近Cadillac，生產乾型、甜型與貴腐白酒。葡萄園面積約43公頃。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "On the right bank of the Garonne, producing dry, sweet, and botrytized white wines across approximately 43 hectares of vineyards.",
+    "description_ja": "ガロンヌ川右岸に位置し、辛口・甘口・中間的な白ワインを生産する小規模アペラシオン。セミヨンとソーヴィニョン・ブランがメイン品種。"
   },
   {
     "id": "Bordeaux-Cotes-de-Francs_AOC",
@@ -151,7 +180,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc, Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "位於Libourne東北方，地勢較高，土壤為黏土與石灰岩混合，生產紅白酒。紅酒以Merlot為主，白酒則清新平衡，具潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "Northeast of Libourne on elevated clay-limestone terrain, producing both reds and whites. Merlot-driven reds offer freshness and balance with good potential.",
+    "description_ja": "リブルヌ北東の粘土石灰質高台。果実感豊かで凝縮した赤ワインと甘口白ワインを生産し、優れた熟成ポテンシャルを持つ。"
   },
   {
     "id": "Bordeaux-Cotes-de-Castillon_AOC",
@@ -162,7 +193,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "位於加龍河右岸，主要生產紅酒，風格柔順，果香濃郁，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "On the right bank, producing primarily red wines with a supple, fruit-forward style and good ageing potential.",
+    "description_ja": "右岸の産地で、豊かな果実感と柔らかなタンニンのメルロー主体の赤ワインを生産。コスパの高さでも知られる。"
   },
   {
     "id": "Bordeaux-Cotes-de-Fronsac_AOC",
@@ -173,7 +206,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "位於加龍河右岸，主要生產紅酒，風格濃郁，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "On the right bank, producing primarily red wines with a rich, full-bodied style and good ageing potential.",
+    "description_ja": "右岸の産地で、リッチでフルボディの赤ワインを生産。石灰岩・粘土土壌がメルローの濃縮感を後押しする。"
   },
   {
     "id": "Margaux_AOC",
@@ -184,7 +219,9 @@
     "grapes": "Cabernet Sauvignon, Merlot, Petit Verdot",
     "description": "梅多克地區最南端的產區，以優雅風格著稱，香氣複雜，單寧柔順。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "The southernmost commune appellation of the Médoc, celebrated for its elegance, complex perfumed aromas, and silky tannins.",
+    "description_ja": "メドック最南端のコミューン・アペラシオン。エレガンスと複雑な花のアロマ、シルキーなタンニンで世界的に名高く、ボルドー五大シャトーの一つ「マルゴー」の本拠地。"
   },
   {
     "id": "Moulis-en-Medoc_AOC",
@@ -195,7 +232,9 @@
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
     "description": "左岸梅多克地區的AOC，生產紅酒，風格柔順，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A Left Bank Médoc appellation producing supple, aromatic red wines with good ageing potential.",
+    "description_ja": "左岸メドックのアペラシオンで、柔らかくアロマティックな赤ワインを生産。シャトー・シャス＝スプリーンなどの名シャトーが集まる。"
   },
   {
     "id": "Listrac-Medoc_AOC",
@@ -206,7 +245,9 @@
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
     "description": "左岸梅多克地區的AOC，生產紅酒，風格柔順，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A Left Bank Médoc appellation producing structured, fruit-forward red wines with good ageing potential.",
+    "description_ja": "左岸メドックの産地で、構造感のある果実豊かな赤ワインを生産。海抜が高く、砂利・粘土の複合土壌がブドウに凝縮感を与える。"
   },
   {
     "id": "Haut-Medoc_AOC",
@@ -217,7 +258,9 @@
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
     "description": "左岸梅多克地區的AOC，生產紅酒，風格濃郁，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A broad Left Bank Médoc appellation producing rich, full-bodied red wines with excellent ageing potential.",
+    "description_ja": "左岸メドックの広域アペラシオンで、リッチでフルボディの赤ワインを生産。マルゴーからサン＝テステフまでをカバーし、数多くの格付けシャトーを擁する。"
   },
   {
     "id": "Medoc_AOC",
@@ -228,7 +271,9 @@
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc",
     "description": "位於左岸，以Cabernet Sauvignon為主的紅酒產區，擁有獨特的碎石土壤。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "On the Left Bank, a Cabernet Sauvignon-dominant red wine region distinguished by its unique gravelly soils.",
+    "description_ja": "左岸の最北に位置し、カベルネ・ソーヴィニョン主体の赤ワイン産地。砂利・砂質土壌が果実のフレッシュさを引き出す。"
   },
   {
     "id": "St-Estephe_AOC",
@@ -239,7 +284,9 @@
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
     "description": "左岸梅多克地區的AOC，生產紅酒，風格濃郁，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A Left Bank Médoc appellation producing structured, full-bodied red wines with excellent ageing potential.",
+    "description_ja": "左岸メドックの最北端アペラシオン。粘土分が多い土壌からタンニン豊富でフルボディの赤ワインを生み、コス・デストゥルネルやモンローズなどが有名。"
   },
   {
     "id": "Pauillac_AOC",
@@ -250,7 +297,9 @@
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
     "description": "左岸梅多克地區的AOC，生產紅酒，風格優雅，果香豐富，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A prestigious Left Bank Médoc appellation home to three First Growth châteaux, producing elegant, concentrated red wines with great ageing potential.",
+    "description_ja": "左岸メドックの最名門アペラシオン。ラフィット・ロートシルト、ラトゥール、ムートン・ロートシルトの三つの一級シャトーを擁し、力強い骨格と偉大な熟成力を持つ赤ワインを生む。"
   },
   {
     "id": "St-Julien_AOC",
@@ -261,29 +310,41 @@
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
     "description": "左岸梅多克地區的AOC，生產紅酒，風格優雅，果香豐富，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A Left Bank Médoc appellation producing elegant, well-structured red wines with consistent quality and excellent ageing potential.",
+    "description_ja": "左岸メドックのアペラシオン。エレガントでバランスの取れた赤ワインで知られ、レオヴィル三兄弟やデュクリュ＝ボカイユなどが集まる。"
   },
   {
     "id": "Pessac-Leognan_AOC",
     "name": "Pessac-Leognan",
     "type": "LeftBank-Graves",
-    "style": ["紅酒", "白酒"],
+    "style": [
+      "紅酒",
+      "白酒"
+    ],
     "hectare": 1600,
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
     "description": "左岸格拉夫地區的AOC，生產紅酒和白酒，風格多樣，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A Left Bank Graves appellation producing both red and white wines of exceptional quality, home to many classified Graves châteaux.",
+    "description_ja": "左岸グラーヴ地区のアペラシオン。赤白ともに1959年格付けの対象となる唯一の産地で、オー＝ブリオンやドメーヌ・ド・シュヴァリエなどが有名。"
   },
   {
     "id": "Graves_AOC",
     "name": "Graves",
     "type": "LeftBank-Graves",
-    "style": ["紅酒", "白酒"],
+    "style": [
+      "紅酒",
+      "白酒"
+    ],
     "hectare": 3650,
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
     "description": "左岸格拉夫地區的AOC，生產紅酒和白酒，風格多樣，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A broad Left Bank Graves appellation producing both red and white wines in diverse styles with excellent ageing potential.",
+    "description_ja": "左岸の広域グラーヴ・アペラシオン。ペサック＝レオニャンを含む砂利質土壌の産地で、赤白両方の優れたワインを生産する。"
   },
   {
     "id": "Graves-Superieures_AOC",
@@ -294,7 +355,9 @@
     "grapes": "Sémillon, Sauvignon Blanc",
     "description": "左岸格拉夫地區的AOC，專注於甜白酒的生產，風格獨特，具陳年潛力。",
     "coordinates": [],
-    "color": "white"
+    "color": "white",
+    "description_en": "A Left Bank Graves appellation dedicated exclusively to sweet white wine production, with a distinctive, age-worthy character.",
+    "description_ja": "左岸グラーヴ地区の甘口白ワイン専用アペラシオン。セミヨンとソーヴィニョン・ブランから、蜂蜜とアプリコットのアロマを持つ甘口白ワインを生産する。"
   },
   {
     "id": "Cremant-de-Bordeaux_AOC",
@@ -305,7 +368,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "生產起泡酒的AOC，風格清新，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "white"
+    "color": "white",
+    "description_en": "A sparkling wine appellation producing fresh, fruit-forward wines made using the traditional method.",
+    "description_ja": "ボルドー産のスパークリングワイン専用アペラシオン。伝統的製法で造られ、フレッシュな果実感とクリーミーな泡立ちが特徴。"
   },
   {
     "id": "Bordeaux-Medoc_AOC",
@@ -316,7 +381,9 @@
     "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot",
     "description": "生產紅酒的AOC，風格多樣，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A regional AOC producing red wines in diverse styles with good ageing potential.",
+    "description_ja": "メドック地区の広域赤ワインAOC。多様なスタイルを網羅し、コスパの高い日常飲みから格付けシャトーまで幅広い選択肢がある。"
   },
   {
     "id": "Bordeaux-Blaye_AOC",
@@ -327,7 +394,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "生產紅酒的AOC，風格柔順，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A regional AOC producing smooth, fruit-forward red wines with good ageing potential.",
+    "description_ja": "ブライ地区の広域赤ワインAOC。柔らかく果実豊かなメルロー主体のワインを生産し、手頃な価格のボルドーとして人気が高い。"
   },
   {
     "id": "Bordeaux-Cotes-de-Bourg_AOC",
@@ -338,7 +407,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "生產紅酒的AOC，風格濃郁，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A regional AOC producing rich, fruit-forward red wines with good ageing potential.",
+    "description_ja": "ブール地区の広域赤ワインAOC。豊かで果実感あふれる赤ワインを生産し、粘土石灰質・砂利質の複合土壌が個性を生む。"
   },
   {
     "id": "Bordeaux-Cotes-de-Fronsac_AOC",
@@ -349,7 +420,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "生產紅酒的AOC，風格濃郁，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A regional AOC producing rich, full-bodied red wines with good ageing potential.",
+    "description_ja": "右岸の産地で、リッチでフルボディの赤ワインを生産。石灰岩・粘土土壌がメルローの濃縮感を後押しする。"
   },
   {
     "id": "Bordeaux-Cotes-de-Castillon_AOC",
@@ -360,7 +433,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "生產紅酒的AOC，風格柔順，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A regional AOC producing smooth, fruit-forward red wines with good ageing potential.",
+    "description_ja": "右岸の産地で、豊かな果実感と柔らかなタンニンのメルロー主体の赤ワインを生産。コスパの高さでも知られる。"
   },
   {
     "id": "Bordeaux-Cotes-de-Francs_AOC",
@@ -371,7 +446,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "生產紅酒的AOC，風格柔順，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A regional AOC producing smooth, fruit-forward red wines with good ageing potential.",
+    "description_ja": "リブルヌ北東の粘土石灰質高台。果実感豊かで凝縮した赤ワインと甘口白ワインを生産し、優れた熟成ポテンシャルを持つ。"
   },
   {
     "id": "Bordeaux-Cotes-de-Saint-Macaire_AOC",
@@ -382,7 +459,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "生產白酒的AOC，風格清新，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "white"
+    "color": "white",
+    "description_en": "A regional AOC producing fresh, fruit-forward white wines with good ageing potential.",
+    "description_ja": "サン＝マケール地区の広域白ワインAOC。フレッシュでフルーティな白ワインを生産し、デイリーなボルドーとして親しまれる。"
   },
   {
     "id": "Bordeaux-Cotes-de-Sainte-Foy_AOC",
@@ -393,7 +472,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "生產紅酒的AOC，風格柔順，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A regional AOC producing smooth, fruit-forward red wines with good ageing potential.",
+    "description_ja": "サント＝フォワ地区の広域赤ワインAOC。柔らかく果実豊かな赤ワインを生産し、手頃な価格で楽しめる。"
   },
   {
     "id": "Bordeaux-Cotes-de-Libournais_AOC",
@@ -404,7 +485,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "生產紅酒的AOC，風格柔順，果香四溢，具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A regional AOC producing smooth, fruit-forward red wines with good ageing potential.",
+    "description_ja": "リブルヌ地区の広域赤ワインAOC。柔らかく果実豊かなメルロー主体のワインが多く、デイリー向けとして重宝される。"
   },
   {
     "id": "Bordeaux-Cotes-de-Sauternes_AOC",
@@ -415,7 +498,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "生產甜白酒的AOC，風格獨特，具陳年潛力。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "A regional AOC producing distinctive sweet white wines with good ageing potential.",
+    "description_ja": "ソーテルヌ地区の広域甘口白ワインAOC。豊かな甘みとアプリコット・蜂蜜のアロマを持つ個性的な甘口白ワインを生産する。"
   },
   {
     "id": "Bordeaux-Cotes-de-Sainte-Croix-du-Mont_AOC",
@@ -426,7 +511,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "生產甜白酒的AOC，風格獨特，具陳年潛力。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "A regional AOC producing distinctive sweet white wines with good ageing potential.",
+    "description_ja": "サント＝クロワ＝デュ＝モン地区の広域甘口白ワインAOC。貴腐甘口ワインの生産地として知られ、豊かな甘みと酸のバランスが特徴。"
   },
   {
     "id": "Bordeaux-Cotes-de-Loupiac_AOC",
@@ -437,7 +524,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "生產甜白酒的AOC，風格獨特，具陳年潛力。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "A regional AOC producing distinctive sweet white wines with good ageing potential.",
+    "description_ja": "ルピアック地区の広域甘口白ワインAOC。蜂蜜とトロピカルフルーツの香りを持つ甘口白ワインを生産する。"
   },
   {
     "id": "Bordeaux-Cotes-de-Cerons_AOC",
@@ -448,7 +537,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "生產甜白酒的AOC，風格獨特，具陳年潛力。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "A regional AOC producing distinctive sweet white wines with good ageing potential.",
+    "description_ja": "セロン地区の広域甘口白ワインAOC。軽やかな甘みと清涼感を持つ甘口白ワインを生産し、ソーテルヌよりも親しみやすいスタイル。"
   },
   {
     "id": "Bordeaux-Cotes-de-Barsac_AOC",
@@ -459,7 +550,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "生產甜白酒的AOC，風格獨特，具陳年潛力。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "A regional AOC producing distinctive sweet white wines with good ageing potential.",
+    "description_ja": "バルサック地区の広域甘口白ワインAOC。上品で繊細なバルサック産の甘口白ワインを生産する。"
   },
   {
     "id": "Cotes-de-Bordeaux_AOC",
@@ -470,16 +563,24 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "涵蓋多個右岸地區的聯盟AOC，紅酒為主，風格多樣。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "An alliance AOC covering several right-bank subregions, primarily producing diverse red wines.",
+    "description_ja": "複数の右岸サブ産地をまとめたアライアンスAOC。主に赤ワインを生産し、メルロー主体の果実豊かなスタイルが特徴。"
   },
   {
     "id": "Bordeaux_AOC",
     "name": "Bordeaux",
     "type": "Regional",
-    "style": ["紅酒", "白酒", "粉紅酒"],
+    "style": [
+      "紅酒",
+      "白酒",
+      "粉紅酒"
+    ],
     "hectare": 44000,
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc, Malbec",
-    "description": "波爾多最大的AOC，涵蓋整個波爾多產區，包含紅酒、白酒與粉紅酒，產量最大，風格多元。"
+    "description": "波爾多最大的AOC，涵蓋整個波爾多產區，包含紅酒、白酒與粉紅酒，產量最大，風格多元。",
+    "description_en": "Bordeaux's largest AOC, encompassing the entire Bordeaux wine region and producing red, white, and rosé wines in the greatest volumes and most diverse styles.",
+    "description_ja": "ボルドー全域を網羅する最大の広域AOC。赤・白・ロゼワインを生産し、多様なスタイルと生産量の多さで知られる。"
   },
   {
     "id": "Bordeaux-Superior_AOC",
@@ -490,7 +591,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "比一般Bordeaux AOC更嚴格的紅酒AOC，酒體較濃郁，陳年潛力佳。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "Offering stricter production standards than the standard Bordeaux AOC, Bordeaux Supérieur yields fuller-bodied, more structured red wines with better ageing potential.",
+    "description_ja": "通常のボルドーAOCより厳しい生産基準を設けた上位広域AOC。低収量・長期熟成により、より凝縮した複雑さのあるワインを生産する。"
   },
   {
     "id": "Côtes-de-Bordeaux_AOC",
@@ -501,7 +604,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "右岸Côtes de Bordeaux聯盟AOC，紅酒為主，果香濃郁。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A right-bank Côtes de Bordeaux alliance AOC, primarily producing fruit-forward red wines.",
+    "description_ja": "右岸コート・ド・ボルドーのアライアンスAOC。主に赤ワインを生産し、各サブ産地の個性を活かしたメルロー主体のワインが揃う。"
   },
   {
     "id": "Côtes-de-Bordeaux-Blaye_AOC",
@@ -512,7 +617,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "Blaye地區的Côtes de Bordeaux聯盟AOC，紅酒為主，風格新鮮。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "The Blaye area's Côtes de Bordeaux appellation, producing fresh, fruit-driven red wines.",
+    "description_ja": "ブライ地区のコート・ド・ボルドー。フレッシュで果実豊かな赤ワインと白ワインを生産し、コストパフォーマンスの高さが魅力。"
   },
   {
     "id": "Côtes de Blaye_AOC",
@@ -523,7 +630,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "Blaye地區的子產區，紅酒為主，果香明顯。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A subappellation of the Blaye area producing approachable, fruit-forward red wines.",
+    "description_ja": "ブライ地区のサブ・アペラシオン。親しみやすく果実感豊かな白ワインを生産し、デイリーなボルドーとして人気がある。"
   },
   {
     "id": "Cotes-de-Bourg_AOC",
@@ -534,7 +643,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "右岸重要紅酒產區，土壤多樣，酒體豐富，果香濃郁。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "An important right-bank red wine appellation with diverse soils, yielding full-bodied, fruit-forward wines.",
+    "description_ja": "右岸の重要な赤ワイン産地。多様な土壌（砂利・粘土・石灰岩）からリッチで果実感のある赤ワインを生み、隠れた銘醸地として評価が高まっている。"
   },
   {
     "id": "Blaye_AOC",
@@ -545,7 +656,9 @@
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc",
     "description": "位於右岸的AOC，主要生產紅酒，風格柔順，果香四溢。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A right-bank AOC producing primarily red wines with a smooth, fruit-forward character.",
+    "description_ja": "右岸の産地で、主に赤ワインを生産するアペラシオン。柔らかな口当たりとフレッシュな果実感が特徴で、コストパフォーマンスも高い。"
   },
   {
     "id": "St-Georges-St-Emilion_AOC",
@@ -556,7 +669,9 @@
     "grapes": "Merlot, Cabernet Franc, Cabernet Sauvignon",
     "description": "聖愛美濃衛星村之一，紅酒為主，風格優雅。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "One of the Saint-Émilion satellite villages, producing elegant Merlot-dominated red wines.",
+    "description_ja": "サン＝テミリオン衛星村の一つ。エレガントでフルーティなメルロー主体の赤ワインを生産し、本家サン＝テミリオンとよく似たスタイルを持つ。"
   },
   {
     "id": "St-Emilion_AOC",
@@ -567,7 +682,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "波爾多最著名右岸AOC之一，紅酒以Merlot為主，酒體豐厚，陳年潛力佳。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "One of Bordeaux's most celebrated right-bank appellations, producing rich Merlot-dominated red wines with excellent ageing potential.",
+    "description_ja": "ボルドー右岸を代表する名声高いアペラシオン。メルローとカベルネ・フランを主体に、リッチで複雑な赤ワインを生産する。シャトー・ペトリュスやアンジェリュスなどが有名。"
   },
   {
     "id": "St-Emilion-Grand-Cru_AOC",
@@ -578,7 +695,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "聖愛美濃的高階AOC，需更嚴格的生產規範，酒體更集中。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "The higher-tier Saint-Émilion appellation, subject to stricter production standards, yielding more concentrated and age-worthy wines.",
+    "description_ja": "サン＝テミリオンの上位アペラシオン。厳格な審査と年次格付け制度により品質管理が徹底され、凝縮感のある赤ワインを生産する。"
   },
   {
     "id": "Puisseguin-St-Emilion_AOC",
@@ -589,7 +708,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "聖愛美濃衛星村之一，紅酒以Merlot為主，風格柔順。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "One of the Saint-Émilion satellite villages, producing supple Merlot-dominant red wines.",
+    "description_ja": "サン＝テミリオンの衛星村の一つ。柔らかく親しみやすいメルロー主体の赤ワインを生産し、優れたコストパフォーマンスで知られる。"
   },
   {
     "id": "Pomerol_AOC",
@@ -600,7 +721,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "右岸最小但最知名AOC之一，紅酒以Merlot為主，酒體濃郁，極具陳年潛力。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "One of Bordeaux's smallest yet most prestigious appellations, producing Merlot-dominant wines of extraordinary richness and ageing potential.",
+    "description_ja": "ボルドー最小かつ最名声高い産地の一つ。粘土鉄分土壌（クロック）でメルローが最高の表現を見せ、シャトー・ペトリュスをはじめ極めてレアで高価なワインを生む。"
   },
   {
     "id": "Montagne-St-Emilion_AOC",
@@ -611,7 +734,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "聖愛美濃衛星村之一，紅酒以Merlot為主，風格柔順。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "One of the Saint-Émilion satellite villages, producing supple, Merlot-driven red wines.",
+    "description_ja": "サン＝テミリオンの衛星村。柔らかく豊潤なメルロー主体の赤ワインを生産し、親しみやすいスタイルと良好なコスパが特徴。"
   },
   {
     "id": "Lussac-St-Emilion_AOC",
@@ -622,7 +747,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "聖愛美濃衛星村之一，紅酒以Merlot為主，果香明顯。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "One of the Saint-Émilion satellite villages, producing Merlot-dominated reds with vibrant fruit character.",
+    "description_ja": "サン＝テミリオンの衛星村。メルロー主体のフルーティな赤ワインを生産し、デイリーから中級まで幅広い選択肢がある。"
   },
   {
     "id": "Lalande-de-Pomerol_AOC",
@@ -633,7 +760,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "Pomerol北側的AOC，紅酒以Merlot為主，風格柔順。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "North of Pomerol, this appellation produces supple Merlot-dominant reds in a style similar to its prestigious neighbour.",
+    "description_ja": "ポムロール北側に位置し、柔らかなメルロー主体の赤ワインを生産。ポムロールに近いスタイルを持ちながら、より手頃な価格帯で入手できる。"
   },
   {
     "id": "Fronsac_AOC",
@@ -644,7 +773,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "右岸重要紅酒產區，土壤多樣，酒體豐富，果香濃郁。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "An important right-bank red wine appellation with diverse soils, producing rich, full-bodied, fruit-forward wines.",
+    "description_ja": "右岸の重要な赤ワイン産地。多様な土壌からリッチで果実感のある赤ワインを生産し、近年品質向上が目覚ましい隠れた銘醸地。"
   },
   {
     "id": "Castillon-Cotes-de-Bordeaux_AOC",
@@ -655,7 +786,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "Côtes de Bordeaux聯盟成員，紅酒以Merlot為主，風格新鮮。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "A Côtes de Bordeaux alliance member, producing fresh Merlot-dominant red wines with good ageing potential.",
+    "description_ja": "コート・ド・ボルドーのメンバー。フレッシュなメルロー主体の赤ワインを生産し、よりリーズナブルなボルドーとして人気が急上昇している。"
   },
   {
     "id": "Canon-Fronsac_AOC",
@@ -666,7 +799,9 @@
     "grapes": "Merlot, Cabernet Franc",
     "description": "Fronsac旁的AOC，紅酒以Merlot為主，酒體濃郁。",
     "coordinates": [],
-    "color": "red"
+    "color": "red",
+    "description_en": "Adjacent to Fronsac, this appellation produces concentrated Merlot-dominant red wines of good depth and character.",
+    "description_ja": "フロンサック隣接の産地で、より凝縮した濃厚な赤ワインを生産。石灰岩・粘土土壌が豊かなタンニン構造を生む。"
   },
   {
     "id": "Sauternes_AOC",
@@ -677,7 +812,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "世界頂級貴腐甜白酒產區，得益於特殊的微氣候環境，葡萄會感染貴腐菌，造就濃郁甜美的白酒。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "One of the world's greatest sweet wine appellations, benefiting from a unique microclimate that encourages noble rot (Botrytis cinerea), producing luscious, complex sweet whites of extraordinary longevity.",
+    "description_ja": "世界最高峰の甘口白ワイン産地の一つ。ソーテルヌとバルサックの5つのコミューンに広がり、貴腐菌の恩恵を受けた濃厚な甘口白ワインを生む。シャトー・ディケムが頂点に君臨する。"
   },
   {
     "id": "Cerons_AOC",
@@ -688,7 +825,9 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "Sauternes北側的甜白酒AOC，風格清新，果香明顯。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "North of Sauternes, Cérons produces fresh, fruit-forward sweet whites with distinctive character and good ageing potential.",
+    "description_ja": "ソーテルヌ北側のセロン。フレッシュで果実感のある軽やかな甘口白ワインを生産し、ソーテルヌより親しみやすいスタイルが特徴。"
   },
   {
     "id": "Barsac_AOC",
@@ -699,15 +838,23 @@
     "grapes": "Sémillon, Sauvignon Blanc, Muscadelle",
     "description": "Sauternes產區內的AOC，甜白酒以細緻優雅著稱。",
     "coordinates": [],
-    "color": "golden"
+    "color": "golden",
+    "description_en": "Within the Sauternes appellation, Barsac produces elegant, refined sweet whites celebrated for their finesse and age-worthiness.",
+    "description_ja": "ソーテルヌ内のサブ・アペラシオン。エレガントで繊細な甘口白ワインを生産し、ソーテルヌと同等の格付けを持つ。クーテとクリマンが五大格付けシャトーとして有名。"
   },
   {
     "id": "Bordeaux_AOC",
     "name": "Bordeaux",
     "type": "Regional",
-    "style": ["紅酒", "白酒", "粉紅酒"],
+    "style": [
+      "紅酒",
+      "白酒",
+      "粉紅酒"
+    ],
     "hectare": 44000,
     "grapes": "Merlot, Cabernet Sauvignon, Cabernet Franc, Malbec",
-    "description": "波爾多最大的AOC，涵蓋整個波爾多產區，包含紅酒、白酒與粉紅酒，產量最大，風格多元。"
+    "description": "波爾多最大的AOC，涵蓋整個波爾多產區，包含紅酒、白酒與粉紅酒，產量最大，風格多元。",
+    "description_en": "Bordeaux's largest AOC, encompassing the entire Bordeaux wine region and producing red, white, and rosé wines in the greatest volumes and most diverse styles.",
+    "description_ja": "ボルドー全域を網羅する最大の広域AOC。赤・白・ロゼワインを生産し、多様なスタイルと生産量の多さで知られる。"
   }
 ]

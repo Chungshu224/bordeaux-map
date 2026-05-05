@@ -41,6 +41,8 @@ const RECURSIVE_KEYS = new Set([
   'list',
   'objectives',
   'questions',
+  'blocks',
+  'steps',
 ])
 
 /**
@@ -72,10 +74,21 @@ function walk(node, prefix, out) {
         out[childPrefix] = v
       }
     } else if (Array.isArray(v)) {
-      // options（quiz 的字串選項）特殊處理：直接收集字串元素
-      if (k === 'options' && v.every(x => typeof x === 'string')) {
+      // options / headers（字串陣列）特殊處理：直接收集字串元素
+      if ((k === 'options' || k === 'headers') && v.every(x => typeof x === 'string')) {
         v.forEach((s, i) => {
           if (s.trim().length > 0) out[`${childPrefix}.${i}`] = s
+        })
+      } else if (k === 'rows') {
+        // rows: string[][]  →  rows.i.j
+        v.forEach((row, i) => {
+          if (Array.isArray(row)) {
+            row.forEach((cell, j) => {
+              if (typeof cell === 'string' && cell.trim().length > 0) {
+                out[`${childPrefix}.${i}.${j}`] = cell
+              }
+            })
+          }
         })
       } else if (RECURSIVE_KEYS.has(k)) {
         v.forEach((item, i) => walk(item, `${childPrefix}.${i}`, out))

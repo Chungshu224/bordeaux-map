@@ -7,7 +7,11 @@
     ],
     "rank": "一級酒莊 (Premier Grand Cru Classé 1855)",
     "description": "波爾多五大酒莊之一，Margaux 產區的代表，優雅細緻、陳年潛力極佳。",
-    "image": "/images/chateaux/LeftBank/Medoc/margaux.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/margaux.jpg",
+    "description_en": "One of Bordeaux's five First Growths and the benchmark for the Margaux appellation; supremely elegant with exceptional ageing potential.",
+    "rank_en": "1st Growth (Premier Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第1級格付け",
+    "description_ja": "ボルドー五大シャトーの一つ、マルゴーAOCを代表する頂点的存在。最高のエレガンスと驚異的な熟成力を誇る。"
   },
   {
     "name": "Château Rauzan-Ségla",
@@ -17,7 +21,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "Margaux 產區最頂尖的二級酒莊之一，風格細膩優雅。",
-    "image": "/images/chateaux/LeftBank/Medoc/rauzan_segla.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/rauzan_segla.jpg",
+    "description_en": "One of the finest Second Growths in Margaux, with a delicate, refined style.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "マルゴー最高峰の第二特等格付けの一つ。繊細で洗練されたスタイルを体現する。"
   },
   {
     "name": "Château Lascombes",
@@ -27,7 +35,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "以濃郁果香和結構感著稱，陳年後展現複雜層次。",
-    "image": "/images/chateaux/LeftBank/Medoc/lascombes.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/lascombes.jpg",
+    "description_en": "Known for rich, fruity character and structural depth; develops complex layers with age.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "リッチで果実豊かなキャラクターと構造的な深みで知られ、熟成とともに複雑な層を形成する。"
   },
   {
     "name": "Château Brane-Cantenac",
@@ -37,7 +49,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "以優雅、細緻的單寧和花香聞名，Margaux 產區代表性酒莊。",
-    "image": "/images/chateaux/LeftBank/Medoc/brane_cantenac.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/brane_cantenac.jpg",
+    "description_en": "Famed for its elegant, fine tannins and floral notes; a benchmark Margaux estate.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "繊細なタンニンとフローラルなノートで名高いマルゴーの代表的シャトー。"
   },
   {
     "name": "Château Palmer",
@@ -47,7 +63,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "雖為三級酒莊，品質媲美一級，風格濃郁且極具陳年潛力。",
-    "image": "/images/chateaux/LeftBank/Medoc/palmer.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/palmer.jpg",
+    "description_en": "Though classified Third Growth, quality rivals a First Growth — rich, opulent, and with extraordinary ageing potential.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "第三特等格付けながら第一特等に匹敵する品質。リッチで豊潤かつ驚異的な熟成力を持つ。"
   },
   {
     "name": "Château d’Issan",
@@ -57,7 +77,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "以優雅、細膩和花香著稱，歷史悠久的 Margaux 名莊。",
-    "image": "/images/chateaux/LeftBank/Medoc/dissan.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/dissan.jpg",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "description_en": "Celebrated for elegance, finesse, and floral fragrance; a historic Margaux estate.",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "エレガンスと繊細さ、フローラルな香りで名高い歴史あるマルゴーのシャトー。"
   },
   {
     "name": "Château Kirwan",
@@ -67,7 +91,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "果香濃郁、結構良好，適合中長期陳年。",
-    "image": "/images/chateaux/LeftBank/Medoc/kirwan.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/kirwan.jpg",
+    "description_en": "Fruit-forward with good structure; ideal for medium-to-long cellaring.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "果実豊かでしっかりとした骨格を持ち、中〜長期熟成に最適なスタイル。"
   },
   {
     "name": "Château Cantenac-Brown",
@@ -77,7 +105,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "以濃郁果味和單寧結構著稱，風格現代。",
-    "image": "/images/chateaux/LeftBank/Medoc/cantenac_brown.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/cantenac_brown.jpg",
+    "description_en": "Known for rich fruit and tannic structure; a modern-style estate.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "豊かな果実感とタンニンの骨格で知られるモダンスタイルのシャトー。"
   },
   {
     "name": "Château Marquis de Terme",
@@ -87,7 +119,11 @@
     ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "風格均衡，果香與單寧兼具，性價比高的 Margaux 名莊。",
-    "image": "/images/chateaux/LeftBank/Medoc/marquis_de_terme.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/marquis_de_terme.jpg",
+    "description_en": "A well-balanced estate combining fruit and tannin; a reliable Margaux value proposition.",
+    "rank_en": "4th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第4級格付け",
+    "description_ja": "果実とタンニンのバランスに優れた信頼性の高いマルゴー。"
   },
   {
     "name": "Château Boyd-Cantenac",
@@ -97,7 +133,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "風格濃郁、單寧紮實，陳年後展現優雅複雜的層次。",
-    "image": "/images/chateaux/LeftBank/Medoc/Boyd-Cantenac.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Boyd-Cantenac.jpg",
+    "description_en": "Rich and full-bodied with firm tannins; develops elegant, complex layers with age.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "リッチでフルボディ、しっかりとしたタンニン。熟成により優雅な複雑さを発揮する。"
   },
   {
     "name": "Château Cantemerle",
@@ -107,7 +147,11 @@
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "位於 Haut-Médoc 南端，風格優雅細膩，果香豐富。",
-    "image": "/images/chateaux/LeftBank/Medoc/Cantemerle.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Cantemerle.jpg",
+    "description_en": "Located at the southern tip of Haut-Médoc; elegant, refined, and fruit-forward.",
+    "rank_en": "5th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第5級格付け",
+    "description_ja": "オー＝メドック最南端に位置し、エレガントで洗練されたフルーティなスタイルが特徴。"
   },
   {
     "name": "Château Durfort-Vivens",
@@ -117,7 +161,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "歷史悠久的 Margaux 二級酒莊，風格優雅精緻。",
-    "image": "/images/chateaux/LeftBank/Medoc/Durfort-Vivens.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Durfort-Vivens.jpg",
+    "description_en": "A historic Margaux Second Growth known for elegant, refined wines.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "歴史あるマルゴーの第二特等格付けで、エレガントで洗練されたワインを生む。"
   },
   {
     "name": "Château Giscours",
@@ -127,7 +175,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "酒體飽滿、結構紮實，現代化管理下品質穩定提升。",
-    "image": "/images/chateaux/LeftBank/Medoc/Giscours.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Giscours.jpg",
+    "description_en": "Full-bodied and firmly structured; quality has improved consistently under modern management.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "フルボディでしっかりとした骨格。近代的な経営のもと品質が着実に向上している。"
   },
   {
     "name": "Château Malescot Saint-Exupéry",
@@ -137,7 +189,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "以花香與優雅單寧著稱，Margaux 典型風格代表。",
-    "image": "/images/chateaux/LeftBank/Medoc/malescot_st_exupery.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/malescot_st_exupery.jpg",
+    "description_en": "Celebrated for its floral character and elegant tannins; a textbook Margaux style.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "フローラルなキャラクターとエレガントなタンニンでマルゴーらしさを体現する。"
   },
   {
     "name": "Château Pouget",
@@ -147,7 +203,11 @@
     ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "小型精品酒莊，風格濃郁、單寧飽滿。",
-    "image": "/images/chateaux/LeftBank/Medoc/Pouget.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Pouget.jpg",
+    "description_en": "A small boutique estate producing rich, full-tannic wines.",
+    "rank_en": "4th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第4級格付け",
+    "description_ja": "豊かでタンニン感の強いワインを生産する小規模なブティックシャトー。"
   },
   {
     "name": "Château Prieuré-Lichine",
@@ -157,7 +217,11 @@
     ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "以果香豐富、易飲性佳著稱，適合年輕時飲用。",
-    "image": "/images/chateaux/LeftBank/Medoc/Prieuré-Lichine.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Prieuré-Lichine.jpg",
+    "description_en": "Known for fruit-rich, approachable wines that drink well young.",
+    "rank_en": "4th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第4級格付け",
+    "description_ja": "果実豊かで親しみやすく、若いうちから楽しめるスタイル。"
   },
   {
     "name": "Château Rauzan-Gassies",
@@ -167,7 +231,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "與 Rauzan-Ségla 同源，歷史悠久的 Margaux 二級酒莊。",
-    "image": "/images/chateaux/LeftBank/Medoc/rauzan_gassies.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/rauzan_gassies.jpg",
+    "description_en": "Shares its origins with Rauzan-Ségla; a historic Margaux Second Growth.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "ロザン＝セグラと同じ起源を持つ歴史あるマルゴーの第二特等格付け。"
   },
   {
     "name": "Château Desmirail",
@@ -177,7 +245,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "復興中的三級莊，風格精緻細膩。",
-    "image": "/images/chateaux/LeftBank/Medoc/desmirail.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/desmirail.jpg",
+    "description_en": "A reviving Third Growth of delicate, refined character.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "復活を遂げた第三特等格付けで、繊細で洗練されたキャラクターを発揮。"
   },
   {
     "name": "Château Ferrière",
@@ -187,7 +259,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "小型精品酒莊，風格精緻優雅。",
-    "image": "/images/chateaux/LeftBank/Medoc/ferriere.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/ferriere.jpg",
+    "description_en": "A small boutique estate of delicate, elegant wines.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "繊細でエレガントなワインを生む小規模なブティックシャトー。"
   },
   {
     "name": "Château Marquis d'Alesme Becker",
@@ -197,7 +273,11 @@
     ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "小而優雅的三級莊，風格精緻。",
-    "image": "/images/chateaux/LeftBank/Medoc/marquis_dalesme.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/marquis_dalesme.jpg",
+    "description_en": "A small, elegantly refined Third Growth.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "小規模でエレガントなマルゴー第三特等格付けシャトー。繊細で洗練されたキャラクター。"
   },
   {
     "name": "Château du Tertre",
@@ -207,7 +287,11 @@
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "位於 Arsac，風土獨特的五級酒莊。",
-    "image": "/images/chateaux/LeftBank/Medoc/du_tertre.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/du_tertre.jpg",
+    "description_en": "Located in Arsac; a Fifth Growth with distinctive terroir character.",
+    "rank_en": "5th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第5級格付け",
+    "description_ja": "アルサックに位置し、テロワールの個性を体現した第五特等格付け。"
   },
   {
     "name": "Château Dauzac",
@@ -217,7 +301,11 @@
     ],
     "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
     "description": "位於 Labarde，近年品質持續提升。",
-    "image": "/images/chateaux/LeftBank/Medoc/dauzac.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/dauzac.jpg",
+    "description_en": "Based in Labarde; quality has continued to improve in recent years.",
+    "rank_en": "5th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第5級格付け",
+    "description_ja": "ラバルドに拠点を置き、近年着実に品質を向上させている。"
   },
   {
     "name": "Château d'Arsac",
@@ -227,7 +315,11 @@
     ],
     "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
     "description": "座落於 Margaux 產區南端，莊園結合了現代藝術與傳統釀酒，極少數獲得 Exceptionnel 的瑪歌產區中級莊。",
-    "image": ""
+    "image": "",
+    "description_en": "In the southern Margaux appellation, combining contemporary art with traditional winemaking; one of the rare Exceptionnel estates in Margaux.",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
+    "description_ja": "マルゴーAOC南部のエクセプショネル。現代アートとモダン醸造を組み合わせた個性あるシャトー。"
   },
   {
     "name": "Château Paveil de Luze",
@@ -237,6 +329,10 @@
     ],
     "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
     "description": "家族經營的 Margaux 名莊，也是極少數瑪歌區的例外特等中級莊，單寧柔滑如絲。",
-    "image": ""
+    "image": "",
+    "description_en": "A family-run Margaux estate and one of the rare Exceptionnel estates in the appellation, with silky-smooth tannins.",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
+    "description_ja": "家族経営のマルゴーシャトーで、シルクのように滑らかなタンニンが特徴の稀なエクセプショネル。"
   }
 ]

@@ -17,8 +17,11 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
 import PresentationMap from '@/components/PresentationMap.vue'
 import mapboxgl from 'mapbox-gl'
+
+const { locale } = useI18n()
 
 const props = defineProps({
   title: { type: String, required: true },
@@ -50,7 +53,8 @@ const MAIN_RIVERS = [
     width: 3.5,
     labelLng: -0.50,
     labelLat: 44.55,
-    tip: '來自庇里牛斯山脈，流經波爾多市中心，沿岸形成左岸產區，砂礫土壤主要由其沖積而成。'
+    tip: '來自庇里牛斯山脈，流經波爾多市中心，沿岸形成左岸產區，砂礫土壤主要由其沖積而成。',
+    tipEn: 'Rising in the Pyrenees, it flows through central Bordeaux, forming the Left Bank. Its alluvial deposits created the characteristic gravel soils.'
   },
   {
     filename: 'La Dordogne.geojson',
@@ -60,7 +64,8 @@ const MAIN_RIVERS = [
     width: 3.5,
     labelLng: 0.06,
     labelLat: 44.89,
-    tip: '來自法國中央高原，流向吉隆德，形成右岸產區的天然邊界，黏土石灰岩地形由此發展。'
+    tip: '來自法國中央高原，流向吉隆德，形成右岸產區的天然邊界，黏土石灰岩地形由此發展。',
+    tipEn: 'Rising in the Massif Central, it flows toward the Gironde, forming the natural boundary of the Right Bank, where clay-limestone soils prevail.'
   },
   {
     filename: 'La Gironde.geojson',
@@ -70,7 +75,8 @@ const MAIN_RIVERS = [
     width: 5,
     labelLng: -0.82,
     labelLat: 45.30,
-    tip: '歐洲最大河口，由加龍河與多爾多涅河匯合形成，直通大西洋，調節整個產區微氣候。'
+    tip: '歐洲最大河口，由加龍河與多爾多涅河匯合形成，直通大西洋，調節整個產區微氣候。',
+    tipEn: "Europe's largest estuary, formed by the confluence of the Garonne and Dordogne, opening to the Atlantic and moderating the microclimate of the entire region."
   }
 ]
 
@@ -82,6 +88,7 @@ const MINOR_RIVERS = [
 const CONFLUENCE = { lng: -0.535, lat: 45.03 }
 
 const onMapReady = async (map) => {
+  const isEn = locale.value.startsWith('en')
   const markers = []
   try {
     // 清理舊圖層 / 來源
@@ -102,7 +109,7 @@ const onMapReady = async (map) => {
           const geo = await res.json()
           if (geo.type === 'MultiLineString' && Array.isArray(geo.coordinates)) {
             geo.coordinates.forEach(coords => {
-              features.push({ type: 'Feature', properties: { ...river }, geometry: { type: 'LineString', coordinates: coords } })
+              features.push({ type: 'Feature', properties: { ...river, name: isEn ? river.nameEn : river.name, tip: isEn ? (river.tipEn || river.tip) : river.tip }, geometry: { type: 'LineString', coordinates: coords } })
             })
           }
         } catch (e) {
@@ -165,6 +172,8 @@ const onMapReady = async (map) => {
 
     // 三條主河浮動標籤 Marker
     const makeLabelEl = (river) => {
+      const displayName = isEn ? river.nameEn : river.name
+      const subName = isEn ? null : river.nameEn
       const el = document.createElement('div')
       el.innerHTML = `
         <div style="
@@ -175,8 +184,8 @@ const onMapReady = async (map) => {
           white-space:nowrap;pointer-events:none;
           line-height:1.35;text-align:center;
         ">
-          🌊 ${river.name}
-          <div style="font-size:10px;font-weight:normal;opacity:0.85;">${river.nameEn}</div>
+          🌊 ${displayName}
+          ${subName ? `<div style="font-size:10px;font-weight:normal;opacity:0.85;">${subName}</div>` : ''}
         </div>`
       return el
     }
@@ -188,6 +197,11 @@ const onMapReady = async (map) => {
     })
 
     // 三河匯流點 Marker（可點擊展開說明）
+    const cfLabel = isEn ? 'River Confluence' : '三河匯流點'
+    const cfTitle = isEn ? `River Confluence (Bec d'Ambès)` : `三河匯流點 (Bec d'Ambès)`
+    const cfDesc = isEn
+      ? `The Garonne and Dordogne meet here to form Europe's largest estuary — the Gironde — which opens to the Atlantic and moderates the entire Bordeaux region's microclimate.`
+      : `加龍河與多爾多涅河在此匯合，形成歐洲最大的河口——吉隆德河口，直通大西洋，對整個波爾多產區的微氣候起到關鍵調節作用。`
     const cfEl = document.createElement('div')
     cfEl.innerHTML = `
       <div style="
@@ -198,16 +212,14 @@ const onMapReady = async (map) => {
         white-space:nowrap;text-align:center;
         border:2px solid rgba(255,255,255,0.8);
       ">
-        🔀 三河匯流點
+        🔀 ${cfLabel}
         <div style="font-size:9px;font-weight:normal;opacity:0.85;">Bec d'Ambès</div>
       </div>`
     const cfMarker = new mapboxgl.Marker({ element: cfEl, anchor: 'center' })
       .setLngLat([CONFLUENCE.lng, CONFLUENCE.lat])
       .setPopup(new mapboxgl.Popup({ offset: 22 }).setHTML(`
-        <strong>三河匯流點 (Bec d'Ambès)</strong>
-        <p style="margin:4px 0 0;font-size:12px;color:#555;">
-          加龍河與多爾多涅河在此匯合，形成歐洲最大的河口——吉隆德河口，直通大西洋，對整個波爾多產區的微氣候起到關鍵調節作用。
-        </p>`))
+        <strong>${cfTitle}</strong>
+        <p style="margin:4px 0 0;font-size:12px;color:#555;">${cfDesc}</p>`))
       .addTo(map)
     markers.push(cfMarker)
 

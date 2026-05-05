@@ -160,7 +160,7 @@
 
               <!-- 測驗區塊 -->
               <div v-if="currentSlideData.quiz" class="quiz-section">
-                <h3 class="quiz-title">💡 知識檢測</h3>
+                <h3 class="quiz-title">💡 {{ t('quiz.slideCheck') }}</h3>
                 <img 
                   v-if="currentSlideData.quiz.image" 
                   :src="currentSlideData.quiz.image" 
@@ -181,7 +181,7 @@
                 </div>
                 <div v-if="quizAnswered" class="quiz-feedback">
                   <p :class="['feedback-text', quizCorrect ? 'correct' : 'incorrect']">
-                    {{ quizCorrect ? '✅ 答對了！' : '❌ 再想想看' }}
+                    {{ quizCorrect ? t('quiz.correct') : t('quiz.tryAgain') }}
                   </p>
                   <p class="quiz-explanation">{{ enhanceText(currentSlideData.quiz.explanation) }}</p>
                 </div>
@@ -210,6 +210,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import html2pdf from 'html2pdf.js'
 import PresentationMap from './PresentationMap.vue'
 import SlideFranceBordeaux from './slides/SlideFranceBordeaux.vue'
@@ -254,6 +255,8 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['lessonComplete', 'nextLesson', 'openRegionMap'])
+
+const { t } = useI18n()
 
 // 響應式數據
 const currentSlide = ref(0)
@@ -1713,7 +1716,7 @@ const normalizeSlide = (s) => {
       // 支援 questions 陣列 → 拆成多頁
       if (Array.isArray(s.questions) && s.questions.length) {
         return s.questions.map((q, idx) => ({
-          title: `${s.title || '知識檢測'} — 第 ${idx + 1} 題`,
+          title: `${s.title || t('quiz.slideCheck')} — 第 ${idx + 1} 題`,
           quiz: {
             image: q.image,
             question: q.question,
@@ -1726,7 +1729,7 @@ const normalizeSlide = (s) => {
       // 單個 quiz（直接有 question, options, correct, explanation 屬性）
       if (s.question) {
         return {
-          title: s.title || '知識檢測',
+          title: s.title || t('quiz.slideCheck'),
           quiz: {
             image: s.image,
             question: s.question,
@@ -1737,7 +1740,7 @@ const normalizeSlide = (s) => {
         }
       }
       // 保底：如果既沒有 questions 也沒有 question，設置到 slide 上
-      slide.title = s.title || '知識檢測'
+      slide.title = s.title || t('quiz.slideCheck')
       slide.quiz = {
         question: s.question || '',
         options: toList(s.options),
@@ -1865,7 +1868,7 @@ const normalizeSlide = (s) => {
   // ✨ 檢查是否有內嵌 quiz，若有則額外產生一張 quiz 投影片
   if (s.quiz && typeof s.quiz === 'object') {
     const quizSlide = {
-      title: `${slide.title || '知識檢測'}`,
+      title: `${slide.title || t('quiz.slideCheck')}`,
       highlights: undefined,
       content: '',
       hasMap: false,
@@ -2057,8 +2060,8 @@ const currentSlideTitle = computed(() => {
   const slide = currentSlideData.value
   if (!slide) return ''
   // 若此投影片包含測驗（quiz 物件或 component 含 quiz 字樣），顯示「知識檢測」
-  if (slide.quiz && typeof slide.quiz === 'object') return '知識檢測'
-  if (slide.component && /quiz/i.test(slide.component)) return '知識檢測'
+  if (slide.quiz && typeof slide.quiz === 'object') return t('quiz.slideCheck')
+  if (slide.component && /quiz/i.test(slide.component)) return t('quiz.slideCheck')
   return slide.title || ''
 })
 

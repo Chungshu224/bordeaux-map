@@ -7,7 +7,11 @@
     ],
     "rank": "Pomerol 頂級名莊",
     "description": "世界最知名的Pomerol酒莊之一，100% Merlot，極具收藏價值與陳年潛力。",
-    "image": "/images/chateaux/RightBank/Libournais/petrus.jpg"
+    "image": "/images/chateaux/RightBank/Libournais/petrus.jpg",
+    "description_en": "One of the world's most famous Pomerol estates; 100% Merlot, of extraordinary collectability and ageing potential.",
+    "rank_en": "Top Pomerol Estate",
+    "rank_ja": "ポムロール 最高峰シャトー",
+    "description_ja": "世界で最も有名なポムロールのシャトー。100%メルロー、圧倒的なコレクタビリティと熟成ポテンシャルを誇る。"
   },
   {
     "name": "Château Lafleur",
@@ -17,7 +21,11 @@
     ],
     "rank": "Pomerol 頂級名莊",
     "description": "產量極少，風格濃郁複雜，與Pétrus齊名的Pomerol傳奇酒莊。",
-    "image": "/images/chateaux/RightBank/Libournais/lafleur.jpg"
+    "image": "/images/chateaux/RightBank/Libournais/lafleur.jpg",
+    "description_en": "Tiny production; rich, complex style — a legendary Pomerol estate on a par with Pétrus.",
+    "rank_en": "Top Pomerol Estate",
+    "rank_ja": "ポムロール 最高峰シャトー",
+    "description_ja": "極めて少量生産。リッチで複雑なスタイルはペトリュスに並ぶ伝説的なポムロール。"
   },
   {
     "name": "Château Le Pin",
@@ -27,7 +35,11 @@
     ],
     "rank": "Pomerol 頂級名莊",
     "description": "極小產量的精品酒莊，酒款稀有且價格高昂，風格濃郁細膩。",
-    "image": "/images/chateaux/RightBank/Libournais/le_pin.jpg"
+    "image": "/images/chateaux/RightBank/Libournais/le_pin.jpg",
+    "description_en": "Extremely limited production micro-estate; wines are rare and expensive, with a rich, refined style.",
+    "rank_en": "Top Pomerol Estate",
+    "rank_ja": "ポムロール 最高峰シャトー",
+    "description_ja": "超少量生産のマイクロシャトー。希少で高価、リッチで洗練されたスタイル。"
   },
   {
     "name": "Château Trotanoy",
@@ -37,7 +49,11 @@
     ],
     "rank": "Pomerol 頂級名莊",
     "description": "以結構感與陳年潛力著稱，Pomerol 最具代表性的經典酒莊之一。",
-    "image": "/images/chateaux/RightBank/Libournais/trotanoy.jpg"
+    "image": "/images/chateaux/RightBank/Libournais/trotanoy.jpg",
+    "description_en": "Known for its structured character and ageing potential; one of Pomerol's most representative classic estates.",
+    "rank_en": "Top Pomerol Estate",
+    "rank_ja": "ポムロール 最高峰シャトー",
+    "description_ja": "骨格のしっかりとしたキャラクターと熟成ポテンシャルで知られる、ポムロールを代表するクラシックシャトー。"
   },
   {
     "name": "Château La Conseillante",
@@ -47,7 +63,11 @@
     ],
     "rank": "Pomerol 頂級名莊",
     "description": "以優雅細膩風格著稱，Merlot為主，常帶紫羅蘭香氣。",
-    "image": "/images/chateaux/RightBank/Libournais/la_conseillante.jpg"
+    "image": "/images/chateaux/RightBank/Libournais/la_conseillante.jpg",
+    "description_en": "Known for a graceful, refined Merlot-dominant style, often displaying violet aromatics.",
+    "rank_en": "Top Pomerol Estate",
+    "rank_ja": "ポムロール 最高峰シャトー",
+    "description_ja": "優雅で洗練されたメルロー主体のスタイル。しばしばスミレのアロマが感じられる。"
   },
   {
     "name": "Château L'Évangile",
@@ -57,7 +77,11 @@
     ],
     "rank": "Pomerol 頂級名莊",
     "description": "拉菲集團旗下，風格濃郁、單寧細緻，陳年表現優異。",
-    "image": "/images/chateaux/RightBank/Libournais/levangile.jpg"
+    "image": "/images/chateaux/RightBank/Libournais/levangile.jpg",
+    "description_en": "Under the Lafite-Rothschild group; rich and with fine-grained tannins, outstanding in age.",
+    "rank_en": "Top Pomerol Estate",
+    "rank_ja": "ポムロール 最高峰シャトー",
+    "description_ja": "ラフィット＝ロートシルトグループ傘下。リッチでシルキーなタンニン、熟成後は傑出した複雑さを発揮。"
   },
   {
     "name": "Château Clinet",
@@ -67,7 +91,11 @@
     ],
     "rank": "Pomerol 優質名莊",
     "description": "以果香濃郁、結構良好著稱，近年品質大幅提升。",
-    "image": "/images/chateaux/RightBank/Libournais/clinet.jpg"
+    "image": "/images/chateaux/RightBank/Libournais/clinet.jpg",
+    "description_en": "Known for rich fruit and good structure; quality has improved dramatically in recent years.",
+    "rank_en": "Distinguished Pomerol Estate",
+    "rank_ja": "ポムロール 優良シャトー",
+    "description_ja": "豊かな果実感としっかりとした骨格。近年品質が劇的に向上している。"
   },
   {
     "name": "Château Gazin",
@@ -77,7 +105,11 @@
     ],
     "rank": "Pomerol 優質名莊",
     "description": "鄰近Pétrus，風格均衡，性價比高的Pomerol代表。",
-    "image": "/images/chateaux/RightBank/Libournais/gazin.jpg"
+    "image": "/images/chateaux/RightBank/Libournais/gazin.jpg",
+    "description_en": "Neighbouring Pétrus; balanced style and excellent value for a top Pomerol estate.",
+    "rank_en": "Distinguished Pomerol Estate",
+    "rank_ja": "ポムロール 優良シャトー",
+    "description_ja": "ペトリュス隣接のシャトー。バランスの取れたスタイルはポムロールのトップシャトーとしてコスパも高い。"
   },
   {
     "name": "Château Nénin",
@@ -87,7 +119,11 @@
     ],
     "rank": "Pomerol 優質名莊",
     "description": "由Delon家族經營，風格現代，果香明顯，陳年潛力佳。",
-    "image": "/images/chateaux/RightBank/Libournais/nenin.jpg"
+    "image": "/images/chateaux/RightBank/Libournais/nenin.jpg",
+    "description_en": "Managed by the Delon family; modern in style with expressive fruit and good ageing potential.",
+    "rank_en": "Distinguished Pomerol Estate",
+    "rank_ja": "ポムロール 優良シャトー",
+    "description_ja": "ドロン家が経営するモダンスタイル。表現力豊かな果実感と優れた熟成ポテンシャルを持つ。"
   },
   {
     "name": "Château Petit-Village",
@@ -97,7 +133,11 @@
     ],
     "rank": "Pomerol 優質名莊",
     "description": "地處高地中心地帶，三角形葡萄園滿佈深厚礫石，由 AXA Millésimes 管理(後轉手)，風格華潤柔雅。",
-    "image": ""
+    "image": "/images/chateaux/RightBank/Libournais/petit_village.jpg",
+    "description_en": "At the centre of the plateau, its triangular vineyard is covered in deep gravel; managed by AXA Millésimes, with an opulent style.",
+    "rank_en": "Distinguished Pomerol Estate",
+    "rank_ja": "ポムロール 優良シャトー",
+    "description_ja": "プラトー中心部に位置しAXAミレジム管理。深い砂利が覆う三角形の畑から豊潤なスタイルのワインを生む。"
   },
   {
     "name": "Château Certan de May",
@@ -107,7 +147,11 @@
     ],
     "rank": "Pomerol 優質名莊",
     "description": "位於波美侯高地核心，鄰近 Lafleur 與 Pétrus，風格紮實經典且傳統，陳年功力深厚。",
-    "image": ""
+    "image": "",
+    "description_en": "At the heart of the Pomerol plateau, neighbouring Lafleur and Pétrus; firmly classic and traditional with deep ageing capacity.",
+    "rank_en": "Distinguished Pomerol Estate",
+    "rank_ja": "ポムロール 優良シャトー",
+    "description_ja": "プラトーの核心部でラフルールとペトリュスの隣に位置する。深く伝統的なスタイルで長期熟成力を持つ。"
   },
   {
     "name": "Château Hosanna",
@@ -117,7 +161,11 @@
     ],
     "rank": "Pomerol 優質名莊",
     "description": "曾為 Certan-Giraud，被 Moueix 家族收購，位於精華高地，老藤 Cab Franc 比例佳，被譽為波美侯的白馬酒莊。",
-    "image": ""
+    "image": "",
+    "description_en": "Formerly Certan-Giraud, acquired by the Moueix family; located on prime plateau land with old-vine Cabernet Franc in the blend.",
+    "rank_en": "Distinguished Pomerol Estate",
+    "rank_ja": "ポムロール 優良シャトー",
+    "description_ja": "かつてのセルタン＝ジロー。ムエックス家がプラトー最高の土地を取得。ブレンドに古樹カベルネ・フランを使用。"
   },
   {
     "name": "Château Latour à Pomerol",
@@ -127,6 +175,10 @@
     ],
     "rank": "Pomerol 優質名莊",
     "description": "擁有極其多元的土壤組合，風格剛柔並濟，曾經產出過波爾多1961世紀傳奇年份的至高佳釀。",
-    "image": ""
+    "image": "",
+    "description_en": "Extremely diverse soils; elegant yet powerful, and has produced one of the legendary Bordeaux bottles of the 1961 vintage.",
+    "rank_en": "Distinguished Pomerol Estate",
+    "rank_ja": "ポムロール 優良シャトー",
+    "description_ja": "極めて多様な土壌。エレガントかつ力強く、1961年ヴィンテージは伝説的なボルドーの一本として語り継がれる。"
   }
 ]

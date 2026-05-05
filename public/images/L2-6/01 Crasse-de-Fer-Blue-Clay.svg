@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1010"/>
+      <stop offset="100%" stop-color="#151818"/>
+    </linearGradient>
+    <linearGradient id="clay" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3A5A7A"/>
+      <stop offset="100%" stop-color="#2A4A6A"/>
+    </linearGradient>
+    <linearGradient id="ironClay" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1A4060"/>
+      <stop offset="100%" stop-color="#0A2A48"/>
+    </linearGradient>
+    <linearGradient id="sandy" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A08848"/>
+      <stop offset="100%" stop-color="#806828"/>
+    </linearGradient>
+    <linearGradient id="gravel2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8A7850"/>
+      <stop offset="100%" stop-color="#6A5830"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="sh4"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bg4)"/>
+  <line x1="40" y1="68" x2="760" y2="68" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#C0952C" font-size="21" font-weight="bold">Pomerol Blue Clay (Crasse de Fer) Diagram</text>
+  <text x="400" y="60" text-anchor="middle" fill="#9A7040" font-size="12">Crasse de Fer: Iron-rich Blue Clay · The Secret Behind Pétrus</text>
+
+  <!-- Legend -->
+  <rect x="40" y="80" width="14" height="14" rx="2" fill="#2A4A6A"/>
+  <text x="58" y="92" fill="#88AACC" font-size="11">Blue Clay (Crasse de Fer)</text>
+  <rect x="180" y="80" width="14" height="14" rx="2" fill="#3A5A7A"/>
+  <text x="198" y="92" fill="#88AACC" font-size="11">Clay Layer</text>
+  <rect x="270" y="80" width="14" height="14" rx="2" fill="#A08848"/>
+  <text x="288" y="92" fill="#C8A870" font-size="11">Sandy Soil</text>
+  <rect x="380" y="80" width="14" height="14" rx="2" fill="#8A7850"/>
+  <text x="398" y="92" fill="#C0A870" font-size="11">Gravel Soil</text>
+  <circle cx="492" cy="87" r="6" fill="#C04040" opacity="0.7"/>
+  <text x="503" y="92" fill="#F0A0A0" font-size="11">Pétrus Location</text>
+  <circle cx="610" cy="87" r="6" fill="#8888FF" opacity="0.7"/>
+  <text x="621" y="92" fill="#AAAAFF" font-size="11">Other Top Estates</text>
+
+  <!-- Cross-section background -->
+  <rect x="40" y="105" width="720" height="380" rx="6" fill="#0A0C10" stroke="#2A3A4A" stroke-width="1"/>
+
+  <!-- === TERRAIN PROFILE === -->
+  <!-- Pomerol Plateau shape (top terrain) -->
+  <path d="M 40,200 Q 150,175 280,178 Q 360,175 420,172 Q 500,168 580,175 Q 650,182 760,195 L 760,145 L 40,145 Z" fill="#2A3818" opacity="0.8"/>
+  <text x="400" y="165" text-anchor="middle" fill="#80B040" font-size="13" font-weight="bold">Pomerol Plateau</text>
+
+  <!-- Vine symbols -->
+  <text x="200" y="185" text-anchor="middle" font-size="14">🍇</text>
+  <text x="300" y="182" text-anchor="middle" font-size="14">🍇</text>
+  <text x="400" y="178" text-anchor="middle" font-size="14">🍇</text>
+  <text x="500" y="180" text-anchor="middle" font-size="14">🍇</text>
+  <text x="600" y="183" text-anchor="middle" font-size="14">🍇</text>
+
+  <!-- Petrus marker -->
+  <circle cx="410" cy="175" r="20" fill="none" stroke="#C04040" stroke-width="2.5" stroke-dasharray="4,2"/>
+  <text x="410" y="155" text-anchor="middle" fill="#FF6060" font-size="11" font-weight="bold">Pétrus</text>
+  <line x1="410" y1="165" x2="410" y2="175" stroke="#FF6060" stroke-width="1.5"/>
+
+  <!-- SOIL LAYERS (cross-section from y=200 down) -->
+  <!-- Top soil 0-30cm -->
+  <rect x="40" y="200" width="720" height="40" fill="#5A4830" opacity="0.9"/>
+  <text x="60" y="216" fill="#E8D8A8" font-size="12" font-weight="bold">Topsoil (0–30 cm)</text>
+  <text x="60" y="232" fill="#C0B080" font-size="11">Mixed sandy topsoil · organically rich</text>
+
+  <!-- Clay layer 30-80cm -->
+  <rect x="40" y="240" width="720" height="60" fill="url(#clay)" opacity="0.9"/>
+  <text x="60" y="261" fill="#E0F0FF" font-size="12" font-weight="bold">Clay Layer (30–80 cm)</text>
+  <text x="60" y="278" fill="#B8D8F0" font-size="11">Strong water retention · ample moisture supply · Merlot's ideal medium</text>
+
+  <!-- Crasse de Fer (iron blue clay) 80-150cm -->
+  <rect x="40" y="300" width="720" height="80" fill="url(#ironClay)" opacity="0.95" filter="url(#sh4)"/>
+  <!-- Glow effect for the special layer -->
+  <rect x="40" y="300" width="720" height="4" fill="#4A80B0" opacity="0.6"/>
+  <text x="60" y="326" fill="#C0E8FF" font-size="14" font-weight="bold">🔵 Crasse de Fer Iron-rich Blue Clay (80–150 cm)</text>
+  <text x="60" y="345" fill="#A0D0F8" font-size="12">Iron hydroxides · responsible for the distinctive blue-grey colour</text>
+  <text x="60" y="363" fill="#80C0F0" font-size="12">Exceptional water retention · reliable supply even in dry years · the source of Pétrus's velvety texture</text>
+
+  <!-- Iron mineral visualization -->
+  <circle cx="580" cy="336" r="12" fill="#2A5A80" stroke="#4A8AB0" stroke-width="1.5"/>
+  <text x="580" y="340" text-anchor="middle" fill="#A0D0FF" font-size="10">Fe</text>
+  <circle cx="610" cy="326" r="9" fill="#2A4A70" stroke="#3A7AA0" stroke-width="1.5"/>
+  <text x="610" y="330" text-anchor="middle" fill="#A0D0FF" font-size="9">Fe</text>
+  <circle cx="640" cy="345" r="11" fill="#2A5A80" stroke="#4A8AB0" stroke-width="1.5"/>
+  <text x="640" y="349" text-anchor="middle" fill="#A0D0FF" font-size="10">Fe</text>
+  <circle cx="670" cy="328" r="8" fill="#1A3A60" stroke="#3A6A90" stroke-width="1.5"/>
+  <text x="670" y="332" text-anchor="middle" fill="#A0D0FF" font-size="9">Fe</text>
+  <text x="600" y="378" text-anchor="middle" fill="#6090C0" font-size="10">Iron Mineral Nodules</text>
+
+  <!-- Sub soil 150-250cm -->
+  <rect x="40" y="380" width="720" height="60" fill="#3A3020" opacity="0.9"/>
+  <text x="60" y="402" fill="#C8B890" font-size="12" font-weight="bold">Subsoil Gravel (150–250 cm)</text>
+  <text x="60" y="420" fill="#A09870" font-size="11">Gravel base · source of minerality in great vintages · drainage support</text>
+
+  <!-- Bedrock 250cm+ -->
+  <rect x="40" y="440" width="720" height="45" fill="#201810" opacity="0.9"/>
+  <text x="60" y="460" fill="#807060" font-size="11" font-weight="bold">Bedrock (Limestone) 250 cm+</text>
+  <text x="60" y="476" fill="#604840" font-size="11">Mineral reservoir · long-term supply of trace elements</text>
+
+  <!-- Root of Petrus going deep -->
+  <path d="M 410 195 L 410 240 L 405 280 L 408 340 L 405 400 L 408 445" stroke="#60A830" stroke-width="2.5" fill="none"/>
+  <path d="M 408 260 L 390 290 L 378 325" stroke="#507A24" stroke-width="1.5" fill="none"/>
+  <path d="M 407 320 L 430 355 L 425 380" stroke="#507A24" stroke-width="1.5" fill="none"/>
+  <text x="445" y="350" fill="#60A830" font-size="10">Root Penetration</text>
+  <text x="445" y="362" fill="#60A830" font-size="10">Blue Clay Layer</text>
+
+  <!-- Depth bar -->
+  <line x1="770" y1="200" x2="770" y2="485" stroke="#556" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="782" y="204" fill="#708090" font-size="10">0</text>
+  <text x="782" y="244" fill="#708090" font-size="10">30</text>
+  <text x="782" y="304" fill="#708090" font-size="10">80</text>
+  <text x="782" y="384" fill="#708090" font-size="10">150</text>
+  <text x="782" y="444" fill="#708090" font-size="10">250</text>
+  <text x="782" y="490" fill="#708090" font-size="9">cm</text>
+  <line x1="766" y1="200" x2="770" y2="200" stroke="#708090" stroke-width="1"/>
+  <line x1="766" y1="240" x2="770" y2="240" stroke="#708090" stroke-width="1"/>
+  <line x1="766" y1="300" x2="770" y2="300" stroke="#708090" stroke-width="1"/>
+  <line x1="766" y1="380" x2="770" y2="380" stroke="#708090" stroke-width="1"/>
+  <line x1="766" y1="440" x2="770" y2="440" stroke="#708090" stroke-width="1"/>
+
+  <!-- Key info box -->
+  <rect x="40" y="495" width="720" height="50" rx="5" fill="#0a1820" stroke="#2A5A7A" stroke-width="1"/>
+  <text x="400" y="515" text-anchor="middle" fill="#6090B0" font-size="12" font-weight="bold">🔵 Why Does Crasse de Fer Make Pétrus?</text>
+  <text x="400" y="534" text-anchor="middle" fill="#A0C8E8" font-size="11">This iron-rich blue clay lies directly beneath Pétrus, perfectly retaining water · regulating root moisture supply · creating Merlot of velvet-like texture</text>
+</svg>

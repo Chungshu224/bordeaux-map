@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bgBrand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081015"/>
+      <stop offset="50%" stop-color="#122530"/>
+      <stop offset="100%" stop-color="#1A3540"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/></filter>
+  </defs>
+
+  <rect width="800" height="540" fill="url(#bgBrand)"/>
+  
+  <text x="400" y="45" text-anchor="middle" fill="#80D0E0" font-size="24" font-weight="bold">Brand Strategy & International Market Expansion</text>
+  <text x="400" y="65" text-anchor="middle" fill="#60A0B0" font-size="13">Wine Brand Architecture &amp; Global Go-To-Market Strategy</text>
+
+  <!-- Central Pyramid: Brand Architecture & Pricing Stairs -->
+  <g transform="translate(250, 120)">
+    <!-- Flagship -->
+    <polygon points="150,0 120,60 180,60" fill="#D0B050" filter="url(#shadow)"/>
+    <text x="150" y="45" text-anchor="middle" fill="#302008" font-size="12" font-weight="bold">Icon Wine</text>
+    
+    <!-- Reserve / Premium -->
+    <polygon points="120,65 90,125 210,125 180,65" fill="#80A0C0" filter="url(#shadow)"/>
+    <text x="150" y="105" text-anchor="middle" fill="#102030" font-size="12" font-weight="bold">Premium Reserve</text>
+
+    <!-- Classic / Entry -->
+    <polygon points="90,130 50,210 250,210 210,130" fill="#305070" filter="url(#shadow)"/>
+    <text x="150" y="180" text-anchor="middle" fill="#D0E0F0" font-size="12" font-weight="bold">Classic Entry</text>
+
+    <!-- Second Brand / Volume -->
+    <polygon points="50,215 0,315 300,315 250,215" fill="#182A3A" filter="url(#shadow)"/>
+    <text x="150" y="275" text-anchor="middle" fill="#80A0C0" font-size="12" font-weight="bold">Second Wine / Volume Range</text>
+  </g>
+
+  <!-- Left Lines & Annotations for Brand Architecture -->
+  <g transform="translate(140, 120)">
+    <line x1="100" y1="30" x2="60" y2="30" stroke="#80D0E0" stroke-width="1"/>
+    <text x="50" y="34" text-anchor="end" fill="#80D0E0" font-size="11">Establishes the brand's quality ceiling (Icon)</text>
+    <text x="50" y="48" text-anchor="end" fill="#50A0B0" font-size="10">Showcases peak quality and terroir limits</text>
+
+    <line x1="80" y1="95" x2="40" y2="95" stroke="#80D0E0" stroke-width="1"/>
+    <text x="30" y="99" text-anchor="end" fill="#80D0E0" font-size="11">Core segment driving gross margin</text>
+
+    <line x1="60" y1="170" x2="20" y2="170" stroke="#80D0E0" stroke-width="1"/>
+    <text x="10" y="174" text-anchor="end" fill="#80D0E0" font-size="11">Brand foundation (primary cash-flow engine)</text>
+
+    <line x1="30" y1="265" x2="-10" y2="265" stroke="#80D0E0" stroke-width="1"/>
+    <text x="-20" y="269" text-anchor="end" fill="#80D0E0" font-size="11">Young-vine / declassified juice monetised efficiently</text>
+  </g>
+
+  <!-- Right: Market Channels & Target Audiences -->
+  <g transform="translate(560, 130)">
+    <rect x="-10" y="-10" width="220" height="280" rx="8" fill="#14242A" stroke="#305060" stroke-width="1"/>
+    <text x="100" y="20" text-anchor="middle" fill="#A0D0E0" font-size="14" font-weight="bold">Global Distribution & Localisation</text>
+
+    <circle cx="20" cy="65" r="12" fill="#204050"/>
+    <text x="20" y="69" text-anchor="middle" fill="#80D0E0" font-size="12">🌏</text>
+    <text x="45" y="61" fill="#C0E0F0" font-size="11" font-weight="bold">Cultural Adaptation (Localisation)</text>
+    <text x="45" y="75" fill="#7090A0" font-size="10">Large formats for North America; gift-box culture in Asia</text>
+
+    <circle cx="20" cy="125" r="12" fill="#204050"/>
+    <text x="20" y="129" text-anchor="middle" fill="#80D0E0" font-size="12">🏪</text>
+    <text x="45" y="121" fill="#C0E0F0" font-size="11" font-weight="bold">Channel Distribution</text>
+    <text x="45" y="135" fill="#7090A0" font-size="10">Premium tier into restaurants; entry tier into supermarkets</text>
+
+    <circle cx="20" cy="185" r="12" fill="#204050"/>
+    <text x="20" y="189" text-anchor="middle" fill="#80D0E0" font-size="12">📈</text>
+    <text x="45" y="181" fill="#C0E0F0" font-size="11" font-weight="bold">Data-Driven DTC</text>
+    <text x="45" y="195" fill="#7090A0" font-size="10">Leverage CRM to calculate LTV / customer acquisition cost</text>
+
+    <circle cx="20" cy="245" r="12" fill="#204050"/>
+    <text x="20" y="249" text-anchor="middle" fill="#80D0E0" font-size="12">🍷</text>
+    <text x="45" y="241" fill="#C0E0F0" font-size="11" font-weight="bold">Brand Experience & Education</text>
+    <text x="45" y="255" fill="#7090A0" font-size="10">Château tourism, masterclasses and experiential marketing</text>
+  </g>
+
+  <!-- Bottom Core Banner -->
+  <rect x="40" y="475" width="720" height="40" rx="8" fill="#182A3A" stroke="#305070" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="500" text-anchor="middle" fill="#80D0E0" font-size="14" font-weight="bold">A solid pricing pyramid + precise channel alignment = a scalable international brand</text>
+
+</svg>

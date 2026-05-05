@@ -6,10 +6,10 @@
   <div class="rmap-header">
     <div class="rmap-header-left">
       <button class="rmap-hdr-btn" @click="$emit('back')">
-        ← 回到 {{ regionName }} 課程
+        {{ t('bordeaux.map.header.back', { name: regionName }) }}
       </button>
       <button class="rmap-hdr-btn ghost" @click="goHome">
-        🏠 首頁
+        {{ t('bordeaux.map.header.home') }}
       </button>
     </div>
     <h1 v-if="title" class="rmap-header-title">
@@ -21,6 +21,9 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 defineProps({
   /** 課程名稱（會接在「回到 …… 課程」之後） */

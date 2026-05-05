@@ -124,19 +124,19 @@
 
     <div v-if="map" class="mobile-map-toolbar">
       <button class="mobile-tool-btn" :class="{ active: mobileAocDrawerOpen }" @click="toggleMobileTool('aoc')">
-        <span class="mobile-tool-icon">產</span>
+        <span class="mobile-tool-icon">🗺️</span>
         <span>{{ $t('bordeaux.map.mobile.aoc') }}</span>
       </button>
       <button class="mobile-tool-btn" :class="{ active: mobileLayersOpen }" @click="toggleMobileTool('layers')">
-        <span class="mobile-tool-icon">層</span>
+        <span class="mobile-tool-icon">⊕</span>
         <span>{{ $t('bordeaux.map.mobile.layers') }}</span>
       </button>
       <button class="mobile-tool-btn" :class="{ active: is3D }" @click="toggleMobileTool('3d')">
-        <span class="mobile-tool-icon">3D</span>
+        <span class="mobile-tool-icon">🏔️</span>
         <span>{{ is3D ? '2D' : '3D' }}</span>
       </button>
       <button class="mobile-tool-btn" :class="{ active: mobileInfoSheetState !== 'peek' }" @click="toggleMobileTool('info')">
-        <span class="mobile-tool-icon">資</span>
+        <span class="mobile-tool-icon">ℹ️</span>
         <span>{{ $t('bordeaux.map.mobile.info') }}</span>
       </button>
     </div>
@@ -226,7 +226,7 @@ import {
 } from './shared/regionMap/index.js'
 
 const router = useRouter()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const props = defineProps({
   activeAOC: Object,
   regionInfo: Object,
@@ -1030,7 +1030,7 @@ const registerAocClickHandler = () => {
         .replace(/-/g, ' ')
         .replace(/_/g, ' ')
       const areaText = d.area_ha
-        ? `${d.area_ha.toLocaleString('zh-TW')} 公頃`
+        ? `${d.area_ha.toLocaleString(locale.value === 'en' ? 'en-US' : 'zh-TW')} ${t('bordeaux.map.info.hectares')}`
         : ''
       const groupLabel = d.group_name.replace('-', ' / ')
       const isSmallest = i === 0
@@ -1597,18 +1597,24 @@ const showChateauxMarkers = async () => {
       }
       
       // 等級
-      if (chateau.rank) {
+      const rankText = locale.value.startsWith('en') ? (chateau.rank_en || chateau.rank)
+                       : locale.value.startsWith('ja') ? (chateau.rank_ja || chateau.rank_en || chateau.rank)
+                       : chateau.rank
+      if (rankText) {
         const rankDiv = document.createElement('div')
         rankDiv.className = 'rank'
-        rankDiv.textContent = chateau.rank
+        rankDiv.textContent = rankText
         popupContainer.appendChild(rankDiv)
       }
       
       // 簡介
-      if (chateau.description) {
+      const descText = locale.value.startsWith('en') ? (chateau.description_en || chateau.description)
+                       : locale.value.startsWith('ja') ? (chateau.description_ja || chateau.description_en || chateau.description)
+                       : chateau.description
+      if (descText) {
         const descDiv = document.createElement('div')
         descDiv.className = 'desc'
-        descDiv.textContent = chateau.description
+        descDiv.textContent = descText
         popupContainer.appendChild(descDiv)
       }
       
@@ -1625,7 +1631,7 @@ const showChateauxMarkers = async () => {
         const websiteLink = document.createElement('a')
         websiteLink.href = chateau.website
         websiteLink.target = '_blank'
-        websiteLink.textContent = '官方網站'
+        websiteLink.textContent = t('bordeaux.map.chateau.website')
         popupContainer.appendChild(websiteLink)
       }
 
@@ -1639,11 +1645,11 @@ const showChateauxMarkers = async () => {
 
         const triedBtn = document.createElement('button')
         triedBtn.className = 'tasting-btn tried' + (noteState?.status === 'tried' ? ' active' : '')
-        triedBtn.textContent = '✓ 我喝過'
+        triedBtn.textContent = t('bordeaux.map.chateau.tried')
 
         const wishBtn = document.createElement('button')
         wishBtn.className = 'tasting-btn wish' + (noteState?.status === 'wishlist' ? ' active' : '')
-        wishBtn.textContent = '♡ 想喝'
+        wishBtn.textContent = t('bordeaux.map.chateau.wish')
 
         const updateBtnStates = () => {
           triedBtn.className = 'tasting-btn tried' + (noteState?.status === 'tried' ? ' active' : '')
@@ -1756,24 +1762,35 @@ onUnmounted(() => {
 })
 
 // ── 統一 adapters ────────────────────────────────────────────────
+const STYLE_ZH_TO_EN = { '紅酒': 'Red Wine', '白酒': 'Dry White', '甜酒': 'Sweet Wine', '氣泡酒': 'Sparkling', '粉紅酒': 'Rosé' }
+const STYLE_ZH_TO_JA = { '紅酒': '赤ワイン', '白酒': '白ワイン', '甜酒': '甘口', '氣泡酒': 'スパークリング', '粉紅酒': 'ロゼ' }
+
 const unifiedInfo = computed(() => {
   const aoc = props.activeAOC
   if (!aoc?.aoc) return null
   const r = props.regionInfo
   const name = aoc.aoc.replace('_AOC.geojson', '').replace(/-/g, ' ').replace(/_/g, ' ')
   if (!r) return { name, description: '' }
+  const isEn = locale.value.startsWith('en')
+  const isJa = locale.value.startsWith('ja')
   const meta = []
   const hectare = aocComputedHectare.value || r.hectare
-  if (hectare) meta.push({ label: '面積', value: `${hectare} 公頃` })
-  if (r.type) meta.push({ label: '類型', value: r.type })
+  if (hectare) meta.push({ label: t('bordeaux.map.info.area'), value: `${hectare} ${t('bordeaux.map.info.hectares')}` })
+  if (r.type) meta.push({ label: t('bordeaux.map.info.type'), value: r.type })
   const stylesRaw = Array.isArray(r.style) ? r.style : (r.style ? [r.style] : [])
+  const styles = isEn ? stylesRaw.map(s => STYLE_ZH_TO_EN[s] || s)
+               : isJa ? stylesRaw.map(s => STYLE_ZH_TO_JA[s] || s)
+               : stylesRaw
   const grapesRaw = r.grapes ? r.grapes.split(',').map(g => g.trim()) : []
+  const description = isEn ? (r.description_en || r.description || '')
+                    : isJa ? (r.description_ja || r.description_en || r.description || '')
+                    : (r.description || '')
   return {
     name: r.name || name,
     meta,
-    styles: stylesRaw,
+    styles,
     grapes: grapesRaw,
-    description: r.description || '',
+    description,
     estates: [],
   }
 })

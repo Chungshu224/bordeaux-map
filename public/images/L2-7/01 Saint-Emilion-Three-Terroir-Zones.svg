@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="580" viewBox="0 0 800 580" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e0c08"/>
+      <stop offset="100%" stop-color="#181410"/>
+    </linearGradient>
+    <linearGradient id="plateau" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9A8860"/>
+      <stop offset="100%" stop-color="#7A6840"/>
+    </linearGradient>
+    <linearGradient id="cotes" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7A6840"/>
+      <stop offset="100%" stop-color="#5A4820"/>
+    </linearGradient>
+    <linearGradient id="plain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8B868"/>
+      <stop offset="100%" stop-color="#A89848"/>
+    </linearGradient>
+    <filter id="sh5"><feDropShadow dx="1" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="580" fill="url(#bg5)"/>
+  <line x1="40" y1="68" x2="760" y2="68" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#C0952C" font-size="21" font-weight="bold">Saint-Émilion's Three Terroir Zones</text>
+  <text x="400" y="60" text-anchor="middle" fill="#9A7040" font-size="12">Three Terroir Zones · Plateau · Slopes · Plain</text>
+
+  <!-- Zone 1: Plateau Calcaire (高地石灰岩) -->
+  <rect x="40" y="82" width="220" height="310" rx="8" fill="#2A2818" stroke="#9A8850" stroke-width="1.5" filter="url(#sh5)"/>
+  <rect x="40" y="82" width="220" height="52" rx="8" fill="#5A5030"/>
+  <rect x="40" y="114" width="220" height="20" fill="#5A5030"/>
+  <text x="150" y="108" text-anchor="middle" fill="#FFE8A0" font-size="15" font-weight="bold">① Plateau (Plateau)</text>
+  <text x="150" y="126" text-anchor="middle" fill="#C8B870" font-size="11">Limestone Plateau · Plateau Calcaire</text>
+
+  <!-- Small terrain icon -->
+  <path d="M 60,155 L 100,130 L 140,135 L 180,128 L 220,140 L 260,155" stroke="#A09060" stroke-width="2" fill="none"/>
+  <path d="M 60,155 L 100,130 L 140,135 L 180,128 L 220,140 L 260,155 L 260,162 L 60,162 Z" fill="#7A6840" opacity="0.6"/>
+
+  <text x="60" y="180" fill="#D4B870" font-size="12" font-weight="bold">🪨 Soil</text>
+  <text x="60" y="196" fill="#E8D8A0" font-size="11">Shallow limestone · clay cover</text>
+  <text x="60" y="211" fill="#E8D8A0" font-size="11">Mineral-rich · well-drained</text>
+
+  <text x="60" y="233" fill="#D4B870" font-size="12" font-weight="bold">🍷 Typical Style</text>
+  <rect x="55" y="240" width="194" height="70" rx="4" fill="#181408" stroke="#7A6830" stroke-width="0.8"/>
+  <text x="65" y="256" fill="#F0E0A0" font-size="11">• Refined · strong minerality</text>
+  <text x="65" y="272" fill="#F0E0A0" font-size="11">• Elegant · spice · dried fruit</text>
+  <text x="65" y="288" fill="#F0E0A0" font-size="11">• Develops complexity with age</text>
+  <text x="65" y="304" fill="#F0E0A0" font-size="11">• Suited to long cellaring</text>
+
+  <text x="60" y="328" fill="#D4B870" font-size="12" font-weight="bold">🏰 Key Estates</text>
+  <text x="60" y="345" fill="#FFD080" font-size="12" font-weight="bold">Château Ausone</text>
+  <text x="60" y="362" fill="#C0A860" font-size="11">Château Bélair-Monange</text>
+  <text x="60" y="378" fill="#C0A860" font-size="11">Château Canon</text>
+
+  <text x="60" y="395" fill="#A09050" font-size="11">🍇 Varieties: Cab. Franc dominant</text>
+
+  <!-- Zone 2: Côtes (坡地) -->
+  <rect x="290" y="82" width="220" height="310" rx="8" fill="#201810" stroke="#884430" stroke-width="1.5" filter="url(#sh5)"/>
+  <rect x="290" y="82" width="220" height="52" rx="8" fill="#6A2A18"/>
+  <rect x="290" y="114" width="220" height="20" fill="#6A2A18"/>
+  <text x="400" y="108" text-anchor="middle" fill="#FFD0A0" font-size="15" font-weight="bold">② Slopes (Côtes)</text>
+  <text x="400" y="126" text-anchor="middle" fill="#CC8860" font-size="11">Clay-Limestone Slopes · Côtes Argilo-Calcaires</text>
+
+  <!-- Slope icon -->
+  <path d="M 305,155 L 400,128 L 495,155" stroke="#C87A50" stroke-width="2" fill="none"/>
+  <path d="M 305,162 L 305,155 L 400,128 L 495,155 L 495,162 Z" fill="#8A4A30" opacity="0.6"/>
+
+  <text x="310" y="180" fill="#D47850" font-size="12" font-weight="bold">🪨 Soil</text>
+  <text x="310" y="196" fill="#F0C8A0" font-size="11">Clay and limestone mixed</text>
+  <text x="310" y="211" fill="#F0C8A0" font-size="11">Natural slope aids drainage</text>
+
+  <text x="310" y="233" fill="#D47850" font-size="12" font-weight="bold">🍷 Typical Style</text>
+  <rect x="305" y="240" width="194" height="70" rx="4" fill="#140C08" stroke="#884430" stroke-width="0.8"/>
+  <text x="315" y="256" fill="#F0C080" font-size="11">• Full-bodied · richly fruited</text>
+  <text x="315" y="272" fill="#F0C080" font-size="11">• Black fruits · liquorice · spice</text>
+  <text x="315" y="288" fill="#F0C080" font-size="11">• Ripe tannins · rounded palate</text>
+  <text x="315" y="304" fill="#F0C080" font-size="11">• Balanced and multi-layered</text>
+
+  <text x="310" y="328" fill="#D47850" font-size="12" font-weight="bold">🏰 Key Estates</text>
+  <text x="310" y="345" fill="#FFB060" font-size="12" font-weight="bold">Château Cheval Blanc</text>
+  <text x="310" y="362" fill="#C08050" font-size="11">Château Figeac</text>
+  <text x="310" y="378" fill="#C08050" font-size="11">Château Pavie</text>
+
+  <text x="310" y="395" fill="#A07040" font-size="11">🍇 Varieties: Merlot + Cab. Franc</text>
+
+  <!-- Zone 3: Plaine (平原) -->
+  <rect x="540" y="82" width="220" height="310" rx="8" fill="#1A1808" stroke="#886620" stroke-width="1.5" filter="url(#sh5)"/>
+  <rect x="540" y="82" width="220" height="52" rx="8" fill="#4A4010"/>
+  <rect x="540" y="114" width="220" height="20" fill="#4A4010"/>
+  <text x="650" y="108" text-anchor="middle" fill="#FFE8A0" font-size="15" font-weight="bold">③ Plain (Plaine)</text>
+  <text x="650" y="126" text-anchor="middle" fill="#B8A848" font-size="11">Sandy-Gravel Plain · Plaine Sablonneuse-Graveleuse</text>
+
+  <!-- Flat terrain icon -->
+  <line x1="556" y1="148" x2="744" y2="148" stroke="#A09040" stroke-width="2.5"/>
+  <text x="560" y="162" fill="#B0A050" font-size="10">Flat terrain · drainage depends on soil</text>
+
+  <text x="560" y="180" fill="#C0A840" font-size="12" font-weight="bold">🪨 Soil</text>
+  <text x="560" y="196" fill="#E8D880" font-size="11">Sand and gravel · relatively poor</text>
+  <text x="560" y="211" fill="#E8D880" font-size="11">Good drainage · lower water retention</text>
+
+  <text x="560" y="233" fill="#C0A840" font-size="12" font-weight="bold">🍷 Typical Style</text>
+  <rect x="555" y="240" width="194" height="70" rx="4" fill="#0E0C04" stroke="#7A6820" stroke-width="0.8"/>
+  <text x="565" y="256" fill="#E8D870" font-size="11">• Direct fruit · fresh and approachable</text>
+  <text x="565" y="272" fill="#E8D870" font-size="11">• Red fruits · floral notes</text>
+  <text x="565" y="288" fill="#E8D870" font-size="11">• Softer tannins</text>
+  <text x="565" y="304" fill="#E8D870" font-size="11">• Best enjoyed young</text>
+
+  <text x="560" y="328" fill="#C0A840" font-size="12" font-weight="bold">🏰 Key Estates</text>
+  <text x="560" y="345" fill="#E8C860" font-size="12" font-weight="bold">Near La Conseillante</text>
+  <text x="560" y="362" fill="#A89840" font-size="11">Saint-Émilion AOC (generic)</text>
+  <text x="560" y="378" fill="#A89840" font-size="11">Grand Cru across quality tiers</text>
+
+  <text x="560" y="395" fill="#907820" font-size="11">🍇 Varieties: Merlot dominant</text>
+
+  <!-- Bottom section: Classification system teaser -->
+  <rect x="40" y="407" width="720" height="115" rx="8" fill="#100E08" stroke="#C0952C" stroke-width="1" stroke-opacity="0.5" filter="url(#sh5)"/>
+  <text x="400" y="432" text-anchor="middle" fill="#C0952C" font-size="15" font-weight="bold">Saint-Émilion Dynamic Classification (revised every 10 years)</text>
+  <line x1="60" y1="440" x2="740" y2="440" stroke="#C0952C" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Classification tiers in a row -->
+  <rect x="55" y="450" width="155" height="55" rx="5" fill="#3A2808" stroke="#C0952C" stroke-width="1.5"/>
+  <text x="132" y="471" text-anchor="middle" fill="#FFD700" font-size="12" font-weight="bold">Tier A</text>
+  <text x="132" y="487" text-anchor="middle" fill="#FFD700" font-size="11">Premiers Grands Crus</text>
+  <text x="132" y="500" text-anchor="middle" fill="#FFB030" font-size="11">Classés A (2 châteaux)</text>
+
+  <text x="238" y="480" text-anchor="middle" fill="#C0952C" font-size="20">→</text>
+
+  <rect x="255" y="450" width="155" height="55" rx="5" fill="#2A2008" stroke="#A07830" stroke-width="1"/>
+  <text x="332" y="471" text-anchor="middle" fill="#D4A840" font-size="12" font-weight="bold">Tier B</text>
+  <text x="332" y="487" text-anchor="middle" fill="#D4A840" font-size="11">Premiers Grands Crus</text>
+  <text x="332" y="500" text-anchor="middle" fill="#C09030" font-size="11">Classés B (~11–13 châteaux)</text>
+
+  <text x="438" y="480" text-anchor="middle" fill="#C0952C" font-size="20">→</text>
+
+  <rect x="455" y="450" width="130" height="55" rx="5" fill="#201C10" stroke="#806040" stroke-width="1"/>
+  <text x="520" y="471" text-anchor="middle" fill="#B09060" font-size="12" font-weight="bold">Classified Growths</text>
+  <text x="520" y="487" text-anchor="middle" fill="#B09060" font-size="11">Grand Cru Classé</text>
+  <text x="520" y="500" text-anchor="middle" fill="#907040" font-size="11">(~64–82 châteaux)</text>
+
+  <text x="608" y="480" text-anchor="middle" fill="#C0952C" font-size="20">→</text>
+
+  <rect x="620" y="450" width="135" height="55" rx="5" fill="#181410" stroke="#606040" stroke-width="1"/>
+  <text x="688" y="471" text-anchor="middle" fill="#909080" font-size="12" font-weight="bold">Generic</text>
+  <text x="688" y="487" text-anchor="middle" fill="#909080" font-size="11">Saint-Émilion</text>
+  <text x="688" y="500" text-anchor="middle" fill="#707060" font-size="11">Grand Cru AOC</text>
+
+  <!-- Bottom note -->
+  <line x1="40" y1="532" x2="760" y2="532" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="550" text-anchor="middle" fill="#706050" font-size="11">* Château Ausone (Plateau) and Château Cheval Blanc (Slopes) are the only two Tier A estates, representing two entirely different terroir types</text>
+  <text x="400" y="566" text-anchor="middle" fill="#504030" font-size="11">Saint-Émilion's classification is revised every 10 years — the only dynamic classification in Bordeaux</text>
+</svg>

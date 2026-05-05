@@ -7,7 +7,11 @@
     ],
     "rank": "中級酒莊 (Cru Bourgeois)",
     "description": "Rothschild 家族旗下酒莊，現代化管理、品質穩定。",
-    "image": "/images/chateaux/LeftBank/Medoc/Clarke.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Clarke.jpg",
+    "description_en": "Owned by the Rothschild family, with modern management and consistent quality.",
+    "rank_en": "Cru Bourgeois",
+    "rank_ja": "クリュ・ブルジョワ",
+    "description_ja": "ロスチャイルド家が所有し、近代的な管理のもとで安定した品質を維持する。"
   },
   {
     "name": "Château Fourcas Dupré",
@@ -17,7 +21,11 @@
     ],
     "rank": "中級酒莊 (Cru Bourgeois)",
     "description": "家族世代經營，風格傳統、單寧結構良好。",
-    "image": "/images/chateaux/LeftBank/Medoc/fourcas_dupre.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/fourcas_dupre.jpg",
+    "description_en": "A family-run estate with a traditional, well-structured style.",
+    "rank_en": "Cru Bourgeois",
+    "rank_ja": "クリュ・ブルジョワ",
+    "description_ja": "伝統的でしっかりとした骨格のスタイルを守る家族経営のシャトー。"
   },
   {
     "name": "Château Fourcas-Hosten",
@@ -27,7 +35,11 @@
     ],
     "rank": "中級酒莊 (Cru Bourgeois)",
     "description": "以均衡風格和穩定品質著稱，性價比高。",
-    "image": "/images/chateaux/LeftBank/Medoc/Fourcas-Hosten.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Fourcas-Hosten.jpg",
+    "description_en": "Celebrated for balanced style and consistent quality, offering excellent value.",
+    "rank_en": "Cru Bourgeois",
+    "rank_ja": "クリュ・ブルジョワ",
+    "description_ja": "バランスの取れたスタイルと安定した品質でコストパフォーマンスが高い。"
   },
   {
     "name": "Château Lestage",
@@ -37,6 +49,10 @@
     ],
     "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
     "description": "位於 Listrac-Médoc 的最高點，以優雅的拿破崙三世城堡聞名，酒款充滿奔放黑果與胡椒香，中級莊特等。",
-    "image": ""
+    "image": "",
+    "description_en": "Perched at the highest point of Listrac-Médoc in an elegant Napoléon III château; exuberant black fruit and pepper notes with mid-weight structure.",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
+    "description_ja": "リストラック＝メドック最高地点に位置する壮麗なナポレオン3世様式のシャトー。黒果実とペッパーの香りが豊かなミドルウェイトスタイル。"
   }
 ]

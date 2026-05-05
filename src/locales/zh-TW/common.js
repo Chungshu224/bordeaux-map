@@ -261,6 +261,17 @@ export default {
     finishQuiz: '完成測驗',
     passed: '恭喜通過！',
     failed: '請再接再勵',
+    slideCheck: '知識檢測',
+    correct: '✅ 答對了！',
+    tryAgain: '❌ 再想想看',
+  },
+
+  // ── Block labels ────────────────────
+  blocks: {
+    misconception: '常見誤解：',
+  },
+
+  quiz2: {
     score: '得分',
     correctCount: '正確題數',
     timeSpent: '完成時間',

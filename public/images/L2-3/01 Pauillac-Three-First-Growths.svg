@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="580" viewBox="0 0 820 580" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#100808"/>
+      <stop offset="100%" stop-color="#1c1010"/>
+    </linearGradient>
+    <linearGradient id="col1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1A3A"/>
+      <stop offset="100%" stop-color="#101028"/>
+    </linearGradient>
+    <linearGradient id="col2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A0A0A"/>
+      <stop offset="100%" stop-color="#180606"/>
+    </linearGradient>
+    <linearGradient id="col3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1408"/>
+      <stop offset="100%" stop-color="#100C04"/>
+    </linearGradient>
+    <filter id="sh3"><feDropShadow dx="2" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.7"/></filter>
+  </defs>
+
+  <rect width="820" height="580" fill="url(#bg3)"/>
+  <line x1="40" y1="68" x2="780" y2="68" stroke="#C0952C" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="410" y="42" text-anchor="middle" fill="#C0952C" font-size="21" font-weight="bold">Pauillac's Three First Growths　Style Comparison</text>
+  <text x="410" y="62" text-anchor="middle" fill="#9A7040" font-size="12">Three First Growth Châteaux of Pauillac · 1er Grand Cru Classé</text>
+
+  <!-- Column headers -->
+  <!-- Latour -->
+  <rect x="48" y="80" width="228" height="440" rx="8" fill="url(#col1)" stroke="#446688" stroke-width="1.5" filter="url(#sh3)"/>
+  <rect x="48" y="80" width="228" height="56" rx="8" fill="#2A4A70"/>
+  <rect x="48" y="116" width="228" height="20" fill="#2A4A70"/>
+  <text x="162" y="110" text-anchor="middle" fill="#C8E8FF" font-size="18" font-weight="bold">Château Latour</text>
+  <text x="162" y="128" text-anchor="middle" fill="#88AACC" font-size="13">Power & Eternity</text>
+  <text x="162" y="148" text-anchor="middle" fill="#6688AA" font-size="11">Southern Pauillac · Clay-gravel mix</text>
+
+  <!-- Latour details -->
+  <text x="62" y="175" fill="#4A8ACA" font-size="12" font-weight="bold">🪨 Terroir</text>
+  <text x="62" y="192" fill="#C0D8F0" font-size="11">Gravel with slight clay → greater</text>
+  <text x="62" y="207" fill="#C0D8F0" font-size="11">structure and mineral depth</text>
+
+  <text x="62" y="232" fill="#4A8ACA" font-size="12" font-weight="bold">🍷 Style Keywords</text>
+  <rect x="62" y="240" width="200" height="74" rx="4" fill="#1A2838" stroke="#446688" stroke-width="0.8"/>
+  <text x="72" y="256" fill="#80C0FF" font-size="12">• Most powerful tannic structure</text>
+  <text x="72" y="272" fill="#80C0FF" font-size="12">• Deep minerality · black fruits</text>
+  <text x="72" y="288" fill="#80C0FF" font-size="12">• Cedar · graphite · cigar box</text>
+  <text x="72" y="304" fill="#80C0FF" font-size="12">• Tightly coiled when young</text>
+
+  <text x="62" y="335" fill="#4A8ACA" font-size="12" font-weight="bold">⏳ Ageing Potential</text>
+  <rect x="62" y="342" width="200" height="32" rx="4" fill="#0A1828"/>
+  <text x="72" y="358" fill="#60AAEE" font-size="12">Top vintages can age</text>
+  <text x="72" y="373" fill="#60AAEE" font-size="12">40–60+ years</text>
+
+  <text x="62" y="400" fill="#4A8ACA" font-size="12" font-weight="bold">🍇 Variety Breakdown</text>
+  <!-- Cab Sauv bar -->
+  <text x="72" y="416" fill="#A0C0E0" font-size="11">Cab. Sauv.</text>
+  <rect x="150" y="407" width="100" height="12" rx="2" fill="#2A3A50"/>
+  <rect x="150" y="407" width="76" height="12" rx="2" fill="#4A7AAA"/>
+  <text x="255" y="417" fill="#80AACC" font-size="11">76%</text>
+  <text x="72" y="435" fill="#A0C0E0" font-size="11">Merlot</text>
+  <rect x="150" y="426" width="100" height="12" rx="2" fill="#2A3A50"/>
+  <rect x="150" y="426" width="22" height="12" rx="2" fill="#3A6888"/>
+  <text x="255" y="436" fill="#80AACC" font-size="11">22%</text>
+
+  <text x="62" y="465" fill="#4A8ACA" font-size="12" font-weight="bold">💰 Typical Price Range</text>
+  <text x="62" y="482" fill="#80C0FF" font-size="14" font-weight="bold">~ €300–600 / bottle</text>
+  <text x="62" y="500" fill="#4888AA" font-size="11">Le Fort de Latour (2nd wine) €50–80</text>
+
+  <!-- Crown / badge -->
+  <text x="252" y="98" text-anchor="end" fill="#3A6A9A" font-size="18">🏰</text>
+
+  <!-- Lafite -->
+  <rect x="296" y="80" width="228" height="440" rx="8" fill="url(#col2)" stroke="#884444" stroke-width="1.5" filter="url(#sh3)"/>
+  <rect x="296" y="80" width="228" height="56" rx="8" fill="#6A1A1A"/>
+  <rect x="296" y="116" width="228" height="20" fill="#6A1A1A"/>
+  <text x="410" y="110" text-anchor="middle" fill="#FFCCCC" font-size="18" font-weight="bold">Château Lafite</text>
+  <text x="410" y="128" text-anchor="middle" fill="#CC8888" font-size="11">Rothschild</text>
+  <text x="410" y="128" text-anchor="middle" fill="#CC8888" font-size="13" dy="0">Elegance &amp; Refinement</text>
+  <text x="410" y="148" text-anchor="middle" fill="#886666" font-size="11">Northern Pauillac · fine gravel soils</text>
+
+  <text x="310" y="175" fill="#CC6666" font-size="12" font-weight="bold">🪨 Terroir</text>
+  <text x="310" y="192" fill="#F0D0D0" font-size="11">Fine gravel · delicate texture → most refined</text>
+  <text x="310" y="207" fill="#F0D0D0" font-size="11">style profile and aromatic complexity</text>
+
+  <text x="310" y="232" fill="#CC6666" font-size="12" font-weight="bold">🍷 Style Keywords</text>
+  <rect x="310" y="240" width="200" height="74" rx="4" fill="#200A0A" stroke="#884444" stroke-width="0.8"/>
+  <text x="320" y="256" fill="#FFAAAA" font-size="12">• Most elegant · silky texture</text>
+  <text x="320" y="272" fill="#FFAAAA" font-size="12">• Red fruits · rose petals</text>
+  <text x="320" y="288" fill="#FFAAAA" font-size="12">• Pencil shavings · cedar · spice</text>
+  <text x="320" y="304" fill="#FFAAAA" font-size="12">• Fine tannins · lingering finish</text>
+
+  <text x="310" y="335" fill="#CC6666" font-size="12" font-weight="bold">⏳ Ageing Potential</text>
+  <rect x="310" y="342" width="200" height="32" rx="4" fill="#180606"/>
+  <text x="320" y="358" fill="#EE8888" font-size="12">Top vintages can age</text>
+  <text x="320" y="373" fill="#EE8888" font-size="12">30–50+ years</text>
+
+  <text x="310" y="400" fill="#CC6666" font-size="12" font-weight="bold">🍇 Variety Breakdown</text>
+  <text x="320" y="416" fill="#F0C0C0" font-size="11">Cab. Sauv.</text>
+  <rect x="398" y="407" width="100" height="12" rx="2" fill="#3A1A1A"/>
+  <rect x="398" y="407" width="82" height="12" rx="2" fill="#AA4444"/>
+  <text x="503" y="417" fill="#CC8888" font-size="11">82%</text>
+  <text x="320" y="435" fill="#F0C0C0" font-size="11">Merlot</text>
+  <rect x="398" y="426" width="100" height="12" rx="2" fill="#3A1A1A"/>
+  <rect x="398" y="426" width="16" height="12" rx="2" fill="#884444"/>
+  <text x="503" y="436" fill="#CC8888" font-size="11">~16%</text>
+
+  <text x="310" y="465" fill="#CC6666" font-size="12" font-weight="bold">💰 Typical Price Range</text>
+  <text x="310" y="482" fill="#FFAAAA" font-size="14" font-weight="bold">~ €500–1,500 / bottle</text>
+  <text x="310" y="500" fill="#AA6666" font-size="11">Carruades de Lafite (2nd wine) €80–120</text>
+  <text x="500" y="98" text-anchor="end" fill="#884444" font-size="18">🌹</text>
+
+  <!-- Mouton -->
+  <rect x="544" y="80" width="228" height="440" rx="8" fill="url(#col3)" stroke="#886622" stroke-width="1.5" filter="url(#sh3)"/>
+  <rect x="544" y="80" width="228" height="56" rx="8" fill="#5A4010"/>
+  <rect x="544" y="116" width="228" height="20" fill="#5A4010"/>
+  <text x="658" y="110" text-anchor="middle" fill="#FFE8A0" font-size="18" font-weight="bold">Château Mouton</text>
+  <text x="658" y="128" text-anchor="middle" fill="#CCAA60" font-size="11">Rothschild</text>
+  <text x="658" y="128" text-anchor="middle" fill="#CCAA60" font-size="13" dy="0">Opulence &amp; Art</text>
+  <text x="658" y="148" text-anchor="middle" fill="#AA8840" font-size="11">Central Pauillac · deep quartz gravel</text>
+
+  <text x="558" y="175" fill="#D4A840" font-size="12" font-weight="bold">🪨 Terroir</text>
+  <text x="558" y="192" fill="#F5EAC8" font-size="11">Deepest gravel · highest quartz content</text>
+  <text x="558" y="207" fill="#F5EAC8" font-size="11">→ most full-bodied, concentrated structure</text>
+
+  <text x="558" y="232" fill="#D4A840" font-size="12" font-weight="bold">🍷 Style Keywords</text>
+  <rect x="558" y="240" width="200" height="74" rx="4" fill="#181008" stroke="#886622" stroke-width="0.8"/>
+  <text x="568" y="256" fill="#FFE080" font-size="12">• Most opulent, full-bodied style</text>
+  <text x="568" y="272" fill="#FFE080" font-size="12">• Blackcurrant · blueberry · cocoa</text>
+  <text x="568" y="288" fill="#FFE080" font-size="12">• Toasted oak · vanilla · coffee</text>
+  <text x="568" y="304" fill="#FFE080" font-size="12">• Each vintage features a unique artist label</text>
+
+  <text x="558" y="335" fill="#D4A840" font-size="12" font-weight="bold">⏳ Ageing Potential</text>
+  <rect x="558" y="342" width="200" height="32" rx="4" fill="#100A00"/>
+  <text x="568" y="358" fill="#D4A840" font-size="12">Top vintages can age</text>
+  <text x="568" y="373" fill="#D4A840" font-size="12">25–45+ years</text>
+
+  <text x="558" y="400" fill="#D4A840" font-size="12" font-weight="bold">🍇 Variety Breakdown</text>
+  <text x="568" y="416" fill="#F5E8B0" font-size="11">Cab. Sauv.</text>
+  <rect x="646" y="407" width="100" height="12" rx="2" fill="#2A2008"/>
+  <rect x="646" y="407" width="80" height="12" rx="2" fill="#AA8820"/>
+  <text x="751" y="417" fill="#D4A840" font-size="11">80%</text>
+  <text x="568" y="435" fill="#F5E8B0" font-size="11">Merlot</text>
+  <rect x="646" y="426" width="100" height="12" rx="2" fill="#2A2008"/>
+  <rect x="646" y="426" width="16" height="12" rx="2" fill="#886810"/>
+  <text x="751" y="436" fill="#D4A840" font-size="11">~16%</text>
+
+  <text x="558" y="465" fill="#D4A840" font-size="12" font-weight="bold">💰 Typical Price Range</text>
+  <text x="558" y="482" fill="#FFE080" font-size="14" font-weight="bold">~ €300–800 / bottle</text>
+  <text x="558" y="500" fill="#AA8840" font-size="11">Le Petit Mouton (2nd wine) €60–100</text>
+  <text x="748" y="98" text-anchor="end" fill="#886622" font-size="18">🎨</text>
+
+  <!-- Bottom note -->
+  <line x1="40" y1="532" x2="780" y2="532" stroke="#C0952C" stroke-width="0.5" opacity="0.3"/>
+  <text x="410" y="550" text-anchor="middle" fill="#706050" font-size="11">* All three First Growths are in Pauillac and Cabernet Sauvignon-dominant, yet subtle terroir differences create distinctly contrasting styles</text>
+  <text x="410" y="566" text-anchor="middle" fill="#504030" font-size="11">Mouton was elevated from Second to First Growth in 1973 by Baron Philippe de Rothschild — the only reclassification in history</text>
+</svg>

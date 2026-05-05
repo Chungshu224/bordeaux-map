@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bgLaw" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081020"/>
+      <stop offset="50%" stop-color="#122440"/>
+      <stop offset="100%" stop-color="#183050"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="540" fill="url(#bgLaw)"/>
+  
+  <text x="400" y="45" text-anchor="middle" fill="#A0C0E0" font-size="24" font-weight="bold">Regulations & Origin: The AOC/PDO Intellectual Property Shield</text>
+  <text x="400" y="65" text-anchor="middle" fill="#80A0C0" font-size="13">Appellation Legal Framework &amp; Protection System</text>
+
+  <!-- Central Temple/Bank Concept (Legal Institution) -->
+  <g transform="translate(150, 110)">
+    <!-- Pediment -->
+    <polygon points="250,0 0,60 500,60" fill="#203045" stroke="#406080" stroke-width="2" filter="url(#shadow)"/>
+    <text x="250" y="40" text-anchor="middle" fill="#A0C0E0" font-size="18" font-weight="bold">AOC / PDO Protected Designation of Origin System</text>
+    
+    <!-- Columns -->
+    <rect x="40" y="60" width="60" height="240" fill="#182838" stroke="#305070" stroke-width="1" filter="url(#shadow)"/>
+    <rect x="150" y="60" width="60" height="240" fill="#182838" stroke="#305070" stroke-width="1" filter="url(#shadow)"/>
+    <rect x="290" y="60" width="60" height="240" fill="#182838" stroke="#305070" stroke-width="1" filter="url(#shadow)"/>
+    <rect x="400" y="60" width="60" height="240" fill="#182838" stroke="#305070" stroke-width="1" filter="url(#shadow)"/>
+
+    <!-- Base -->
+    <rect x="0" y="300" width="500" height="40" fill="#203045" stroke="#406080" stroke-width="2" filter="url(#shadow)"/>
+    <text x="250" y="325" text-anchor="middle" fill="#80A0C0" font-size="14" font-weight="bold">Compliance Management &amp; Risk Mitigation Mechanism</text>
+
+    <!-- Column Texts -->
+    <g transform="translate(70, 80)">
+      <circle cx="0" cy="0" r="15" fill="#102030" stroke="#5080A0"/>
+      <text x="0" y="5" text-anchor="middle" fill="#50A0D0" font-size="14">📜</text>
+      <text x="0" y="40" text-anchor="middle" fill="#A0C0E0" font-size="11" font-weight="bold">Title Deed</text>
+      <line x1="-20" y1="50" x2="20" y2="50" stroke="#305070"/>
+      <text x="0" y="65" text-anchor="middle" fill="#7090B0" font-size="10">Defines Terroir</text>
+      <text x="0" y="80" text-anchor="middle" fill="#7090B0" font-size="10">Historical Heritage</text>
+      <text x="0" y="95" text-anchor="middle" fill="#7090B0" font-size="10">Exclusive Naming Rights</text>
+    </g>
+
+    <g transform="translate(180, 80)">
+      <circle cx="0" cy="0" r="15" fill="#102030" stroke="#5080A0"/>
+      <text x="0" y="5" text-anchor="middle" fill="#50A0D0" font-size="14">📐</text>
+      <text x="0" y="40" text-anchor="middle" fill="#A0C0E0" font-size="11" font-weight="bold">Production Rules</text>
+      <line x1="-20" y1="50" x2="20" y2="50" stroke="#305070"/>
+      <text x="0" y="65" text-anchor="middle" fill="#7090B0" font-size="10">Cahier des</text>
+      <text x="0" y="80" text-anchor="middle" fill="#7090B0" font-size="10">Charges</text>
+      <text x="0" y="95" text-anchor="middle" fill="#7090B0" font-size="10">Variety & Technique Restrictions</text>
+    </g>
+
+    <g transform="translate(320, 80)">
+      <circle cx="0" cy="0" r="15" fill="#102030" stroke="#5080A0"/>
+      <text x="0" y="5" text-anchor="middle" fill="#50A0D0" font-size="14">🛡️</text>
+      <text x="0" y="40" text-anchor="middle" fill="#A0C0E0" font-size="11" font-weight="bold">Infringement Monitoring</text>
+      <line x1="-20" y1="50" x2="20" y2="50" stroke="#305070"/>
+      <text x="0" y="65" text-anchor="middle" fill="#7090B0" font-size="10">Anti-Counterfeiting</text>
+      <text x="0" y="80" text-anchor="middle" fill="#7090B0" font-size="10">International Customs Registration</text>
+      <text x="0" y="95" text-anchor="middle" fill="#7090B0" font-size="10">Remedies</text>
+    </g>
+
+    <g transform="translate(430, 80)">
+      <circle cx="0" cy="0" r="15" fill="#102030" stroke="#5080A0"/>
+      <text x="0" y="5" text-anchor="middle" fill="#50A0D0" font-size="14">⚖️</text>
+      <text x="0" y="40" text-anchor="middle" fill="#A0C0E0" font-size="11" font-weight="bold">International Framework</text>
+      <line x1="-20" y1="50" x2="20" y2="50" stroke="#305070"/>
+      <text x="0" y="65" text-anchor="middle" fill="#7090B0" font-size="10">EU Certification</text>
+      <text x="0" y="80" text-anchor="middle" fill="#7090B0" font-size="10">Lisbon Agreement</text>
+      <text x="0" y="95" text-anchor="middle" fill="#7090B0" font-size="10">TRIPS Agreement</text>
+    </g>
+  </g>
+
+  <!-- Floating Legal Elements / Connectors -->
+  <path d="M 50 250 C 100 250, 100 150, 150 150" fill="none" stroke="#406080" stroke-width="2" stroke-dasharray="4,4"/>
+  <rect x="20" y="235" width="100" height="30" rx="15" fill="#102030" stroke="#5080A0" stroke-width="1"/>
+  <text x="70" y="254" text-anchor="middle" fill="#80C0E0" font-size="10">INAO Domestic Review</text>
+
+  <path d="M 750 250 C 700 250, 700 150, 650 150" fill="none" stroke="#406080" stroke-width="2" stroke-dasharray="4,4"/>
+  <rect x="680" y="235" width="100" height="30" rx="15" fill="#102030" stroke="#5080A0" stroke-width="1"/>
+  <text x="730" y="254" text-anchor="middle" fill="#80C0E0" font-size="10">WIPO International Registration</text>
+
+  <!-- Bottom Analogy Box -->
+  <rect x="80" y="470" width="640" height="50" rx="8" fill="#142434" stroke="#406080" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="492" text-anchor="middle" fill="#E0E0E0" font-size="13" font-weight="bold">⚖️ Core Concept: Protected designation is the "title deed" of premium real estate</text>
+  <text x="400" y="510" text-anchor="middle" fill="#90B0D0" font-size="11">Without a title deed, anyone can claim ownership; production rules ensure the cultural heritage of this terroir is never diluted.</text>
+
+</svg>

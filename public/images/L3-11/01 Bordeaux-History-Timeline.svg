@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="'Segoe UI','Helvetica Neue','Arial',sans-serif">
+  <defs>
+    <linearGradient id="bgHis" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c0404"/>
+      <stop offset="100%" stop-color="#180c0c"/>
+    </linearGradient>
+    <filter id="shH"><feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgHis)"/>
+  <line x1="40" y1="64" x2="760" y2="64" stroke="#8B0000" stroke-width="0.8" opacity="0.5"/>
+  <text x="400" y="36" text-anchor="middle" fill="#C0952C" font-size="20" font-weight="bold">2,000 Years of Bordeaux Wine History</text>
+  <text x="400" y="56" text-anchor="middle" fill="#9A7040" font-size="12">Bordeaux Winemaking History · Six Eras of Culture and Trade</text>
+
+  <!-- Timeline Central Axis -->
+  <line x1="400" y1="90" x2="400" y2="520" stroke="#C0952C" stroke-width="2" opacity="0.4"/>
+  <polygon points="395,520 405,520 400,530" fill="#C0952C" opacity="0.4"/>
+
+  <!-- Event 1: Roman & Medieval -->
+  <rect x="50" y="90" width="310" height="60" rx="6" fill="#181010" stroke="#C0952C" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="120" r="6" fill="#C0952C" stroke="#281414" stroke-width="2"/>
+  <text x="340" y="115" text-anchor="end" fill="#C0952C" font-size="16" font-weight="bold">🏛️ Roman & Monastic Period</text>
+  <text x="340" y="135" text-anchor="end" fill="#D0B080" font-size="12">AD 1st–11th Century</text>
+  <line x1="360" y1="120" x2="390" y2="120" stroke="#C0952C" stroke-width="1.5" opacity="0.5"/>
+  <text x="60" y="115" fill="#E8D0A0" font-size="10">• Romans introduced the Gallic variety (Vitis biturica)</text>
+  <text x="60" y="130" fill="#E8D0A0" font-size="10">• Church took over production to ensure wine for Mass</text>
+  <text x="60" y="145" fill="#E8D0A0" font-size="10">• Production initially focused on light red wine (Clairet)</text>
+
+  <!-- Event 2: British Rule -->
+  <rect x="440" y="160" width="310" height="60" rx="6" fill="#141820" stroke="#3050A0" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="190" r="6" fill="#3050A0" stroke="#281414" stroke-width="2"/>
+  <text x="460" y="185" text-anchor="start" fill="#80B0F0" font-size="16" font-weight="bold">🇬🇧 Three Centuries of English Rule (Golden Era)</text>
+  <text x="460" y="205" text-anchor="start" fill="#A0C0E0" font-size="12">1152–1453</text>
+  <line x1="410" y1="190" x2="440" y2="190" stroke="#3050A0" stroke-width="1.5" opacity="0.5"/>
+  <text x="590" y="180" fill="#C0D0E0" font-size="10">• Eleanor of Aquitaine's marriage to Henry II opened English markets</text>
+  <text x="590" y="195" fill="#C0D0E0" font-size="10">• Reduced tariffs fuelled booming Anglo-French trade</text>
+  <text x="590" y="210" fill="#C0D0E0" font-size="10">• Established Bordeaux's export-oriented commercial identity</text>
+
+  <!-- Event 3: Dutch & Médoc Drainage -->
+  <rect x="50" y="230" width="310" height="60" rx="6" fill="#182010" stroke="#408040" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="260" r="6" fill="#408040" stroke="#281414" stroke-width="2"/>
+  <text x="340" y="255" text-anchor="end" fill="#80D080" font-size="16" font-weight="bold">🇳🇱 Dutch Drainage & Rise of Médoc</text>
+  <text x="340" y="275" text-anchor="end" fill="#A0E0A0" font-size="12">17th Century</text>
+  <line x1="360" y1="260" x2="390" y2="260" stroke="#408040" stroke-width="1.5" opacity="0.5"/>
+  <text x="60" y="255" fill="#C0E0C0" font-size="10">• Dutch engineers drained the Médoc marshlands</text>
+  <text x="60" y="270" fill="#C0E0C0" font-size="10">• Introduced sulphur dioxide (preservation) and oak barrel transport</text>
+  <text x="60" y="285" fill="#C0E0C0" font-size="10">• Bordeaux became renowned for dark, age-worthy wines</text>
+
+  <!-- Event 4: 1855 Classification -->
+  <rect x="440" y="300" width="310" height="60" rx="6" fill="#201018" stroke="#A04060" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="330" r="6" fill="#A04060" stroke="#281414" stroke-width="2"/>
+  <text x="460" y="325" text-anchor="start" fill="#F080A0" font-size="16" font-weight="bold">🎖️ 1855 Paris Exposition Classification</text>
+  <text x="460" y="345" text-anchor="start" fill="#E0A0B0" font-size="12">1855</text>
+  <line x1="410" y1="330" x2="440" y2="330" stroke="#A04060" stroke-width="1.5" opacity="0.5"/>
+  <text x="590" y="320" fill="#D0B0C0" font-size="10">• Napoleon III ordered a ranking based on historical prices</text>
+  <text x="590" y="335" fill="#D0B0C0" font-size="10">• Confirmed 61 classified estates (Grand Cru Classé)</text>
+  <text x="590" y="350" fill="#D0B0C0" font-size="10">• Established the ultimate benchmark for modern Bordeaux luxury brands</text>
+
+  <!-- Event 5: Phylloxera Crisis -->
+  <rect x="50" y="370" width="310" height="60" rx="6" fill="#1a1410" stroke="#806030" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="400" r="6" fill="#806030" stroke="#281414" stroke-width="2"/>
+  <text x="340" y="395" text-anchor="end" fill="#C0A060" font-size="16" font-weight="bold">🐛 Phylloxera Disaster & Reconstruction</text>
+  <text x="340" y="415" text-anchor="end" fill="#B09050" font-size="12">Late 19th Century (c. 1870–1900)</text>
+  <line x1="360" y1="400" x2="390" y2="400" stroke="#806030" stroke-width="1.5" opacity="0.5"/>
+  <text x="60" y="395" fill="#A08050" font-size="10">• Blight destroyed vineyards across France, threatening the industry</text>
+  <text x="60" y="410" fill="#A08050" font-size="10">• Grafting onto American disease-resistant rootstocks saved the industry</text>
+  <text x="60" y="425" fill="#A08050" font-size="10">• Led to reshuffling of variety selection in Bordeaux (CS/Merlot)</text>
+
+  <!-- Event 6: Modern Era -->
+  <rect x="440" y="440" width="310" height="60" rx="6" fill="#101820" stroke="#408080" stroke-width="1.5" filter="url(#shH)"/>
+  <circle cx="400" cy="470" r="6" fill="#408080" stroke="#281414" stroke-width="2"/>
+  <text x="460" y="465" text-anchor="start" fill="#80C0C0" font-size="16" font-weight="bold">🔬 Modern Scientific Revolution & Globalisation</text>
+  <text x="460" y="485" text-anchor="start" fill="#A0C0C0" font-size="12">Mid-20th Century to Present</text>
+  <line x1="410" y1="470" x2="440" y2="470" stroke="#408080" stroke-width="1.5" opacity="0.5"/>
+  <text x="590" y="460" fill="#90B0B0" font-size="10">• Emile Peynaud pioneered modern fermentation science</text>
+  <text x="590" y="475" fill="#90B0B0" font-size="10">• Temperature-controlled stainless steel tanks and optical sorting became widespread</text>
+  <text x="590" y="490" fill="#90B0B0" font-size="10">• Rise of the Chinese market and global capital investment</text>
+
+  <!-- Footer note -->
+  <line x1="40" y1="560" x2="760" y2="560" stroke="#8B0000" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="580" text-anchor="middle" fill="#806060" font-size="10">💡 "Bordeaux was not built in a day — it is shaped by geographic advantage, commercial acumen, and over a millennium of trade history, forming the world's wine capital."</text>
+</svg>

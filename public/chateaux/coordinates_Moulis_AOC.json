@@ -1,23 +1,44 @@
 [
   {
     "name": "Château Chasse-Spleen",
-    "coordinates": [-0.80123, 45.06789],
+    "coordinates": [
+      -0.80123,
+      45.06789
+    ],
     "rank": "中級酒莊 (Cru Bourgeois Exceptionnel)",
     "description": "Moulis 產區代表酒莊，風格濃郁、品質卓越，媲美列級酒莊。",
-    "image": "/images/chateaux/LeftBank/Medoc/Chasse-Spleen.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Chasse-Spleen.jpg",
+    "description_en": "The benchmark estate of Moulis, producing rich, outstanding wines that rival classified growths.",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
+    "description_ja": "ムーリスのベンチマーク的シャトー。格付け並みの品質のリッチで秀逸なワインを生産する。"
   },
   {
     "name": "Château Maucaillou",
-    "coordinates": [-0.81234, 45.06234],
+    "coordinates": [
+      -0.81234,
+      45.06234
+    ],
     "rank": "中級酒莊 (Cru Bourgeois)",
     "description": "家族經營的優質酒莊，風格均衡、果香豐富。",
-    "image": "/images/chateaux/LeftBank/Medoc/Maucaillou.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Maucaillou.jpg",
+    "description_en": "A family-run quality estate; balanced style with generous fruit.",
+    "rank_en": "Cru Bourgeois",
+    "rank_ja": "クリュ・ブルジョワ",
+    "description_ja": "家族経営の優良シャトー。バランスの取れた果実豊かなスタイルが特徴。"
   },
   {
     "name": "Château Poujeaux",
-    "coordinates": [-0.80789, 45.06567],
+    "coordinates": [
+      -0.80789,
+      45.06567
+    ],
     "rank": "中級酒莊 (Cru Bourgeois Exceptionnel)",
     "description": "Moulis 產區頂級酒莊，風格強勁、陳年潛力佳。",
-    "image": "/images/chateaux/LeftBank/Medoc/Poujeaux.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/Poujeaux.jpg",
+    "description_en": "A top Moulis estate; powerful in style with excellent ageing potential.",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
+    "description_ja": "ムーリスのトップシャトー。力強いスタイルで優れた熟成ポテンシャルを持つ。"
   }
 ]

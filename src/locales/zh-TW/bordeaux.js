@@ -296,8 +296,15 @@ export default {
       geology:      'BRGM 地質',
     },
     chateau: {
-      show:   '顯示知名酒莊',
-      hide:   '隱藏酒莊',
+      show:    '顯示知名酒莊',
+      hide:    '隱藏酒莊',
+      tried:   '✓ 我喝過',
+      wish:    '♡ 想喝',
+      website: '官方網站',
+    },
+    header: {
+      back: '← 回到 {name} 課程',
+      home: '🏠 首頁',
     },
     mobile: {
       aoc:    '產區',
@@ -341,6 +348,18 @@ export default {
       sweet:    '甜酒',
       sparkling:'氣泡酒',
       rose:     '粉紅酒',
+    },
+    info: {
+      area:        '面積',
+      hectares:    '公頃',
+      type:        '類型',
+      styles:      '酒款類型',
+      grapes:      '主要葡萄品種',
+      climate:     '氣候',
+      soil:        '土壤結構',
+      description: '介紹',
+      subregions:  '子產區',
+      estates:     '代表酒莊／名家',
     },
   },
 }

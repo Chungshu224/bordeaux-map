@@ -1,0 +1,667 @@
+=== KEY: slides.4.content ===
+<div class="chapter-content">
+          <h3>ΦæíΦÉäΘàÆσ«Üσâ╣τÜäσñÜσàâσ¢áσ¡É</h3>
+          <p>ΦæíΦÉäΘàÆσâ╣µá╝Θ¥₧σû«Σ╕Çσ¢áτ┤áµ▒║σ«Ü,ΦÇîµÿ»σñÜΘçìΦ«èΘçÅΣ║ñΣ║ÆΣ╜£τö¿:</p>
+          <table class="data-table">
+            <thead>
+              <tr><th>σ¢áσ¡ÉΘí₧σ₧ï</th><th>Φ«èΘçÅ</th><th>σ╜▒Θƒ┐µ¼èΘçì</th><th>µò╕µôÜΣ╛åµ║É</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>σôüΦ│¬Φ⌐òσêå</td><td>Parker/Decanter/JR Φ⌐òσêå</td><td>30~50%</td><td>Wine Advocate, Decanter</td></tr>
+              <tr><td>σ╣┤Σ╗╜σôüΦ│¬</td><td>µ░úσÇÖµó¥Σ╗╢,τöóΘçÅ</td><td>20~30%</td><td>Liv-ex Vintage Chart</td></tr>
+              <tr><td>σôüτëîΦü▓Φ¡╜</td><td>σêåτ┤Ü (1855, St-Emilion)</td><td>15~25%</td><td>µ¡╖σÅ▓σêåτ┤Ü,µïìΦ│úτ┤ÇΘîä</td></tr>
+              <tr><td>τ¿Çτ╝║µÇº</td><td>τöóΘçÅ,ΘàìΘíìΘÖÉσê╢</td><td>10~20%</td><td>ΘàÆΦÄèσà¼σæè,σ║½σ¡ÿµò╕µôÜ</td></tr>
+              <tr><td>σ╕éσá┤µâàτ╖Æ</td><td>µö╢ΦùÅσ«╢Θ£Çµ▒é,µèòµ⌐ƒτå▒σ║ª</td><td>5~15%</td><td>τñ╛τ╛ñσ¬ÆΘ½ö,µïìΦ│úτå▒σ║ª</td></tr>
+              <tr><td>ΘÖ│σ╣┤µ╜¢σè¢</td><td>Θü⌐Θú▓τ¬ùσÅú,σ╖öσ│░µ£ƒ</td><td>5~10%</td><td>σ░êσ«╢ΘáÉµ╕¼,µ¡╖σÅ▓Φí¿τÅ╛</td></tr>
+            </tbody>
+          </table>
+          <h3>σñÜσàâτ╖ÜµÇºσ¢₧µ¡╕σ«Üσâ╣µ¿íσ₧ï</h3>
+          <p><strong>σƒ║µ£¼σà¼σ╝Å</strong>:</p>
+          <p>Price = ╬▓ΓéÇ + ╬▓Γéü├ùScore + ╬▓Γéé├ùVintage + ╬▓Γéâ├ùBrand + ╬▓Γéä├ùScarcity + ╬╡</p>
+          <p><strong>Φ«èΘçÅσ«Üτ╛⌐</strong>:</p>
+          <ul>
+            <li><strong>Score</strong>: Parker Φ⌐òσêå (0~100)πÇé</li>
+            <li><strong>Vintage</strong>: σ╣┤Σ╗╜Φ⌐òτ┤Ü (1~5 µÿƒ,µêûµ░úσÇÖµîçµò╕)πÇé</li>
+            <li><strong>Brand</strong>: σôüτëîΦÖ¢µô¼Φ«èΘçÅ (Σ╕Çτ┤ÜΦÄè=1, σà╢Σ╗û=0) µêûµïìΦ│úµ¡╖σÅ▓σ¥çσâ╣πÇé</li>
+            <li><strong>Scarcity</strong>: τöóΘçÅσÇÆµò╕ (1/τöóΘçÅ) µêûΘàìΘíìµ»öΣ╛ïπÇé</li>
+            <li><strong>╬╡</strong>: Φ¬ñσ╖«Θáà (σ╕éσá┤µ│óσïòπÇüµâàτ╖Æτ¡ë)πÇé</li>
+          </ul>
+          <h3>σ»ªΦ¡ëµíêΣ╛ï: µ│óτê╛σñÜσ╖ªσ▓╕σ«Üσâ╣µ¿íσ₧ï</h3>
+          <div class="pricing-model-widget">
+            <input type="radio" id="model-simple" name="pricing-model" class="opt-simple" checked>
+            <input type="radio" id="model-advanced" name="pricing-model" class="opt-advanced">
+            <input type="radio" id="model-ml" name="pricing-model" class="opt-ml">
+            <div class="selectors">
+              <label for="model-simple">τ░íµÿôµ¿íσ₧ï</label>
+              <label for="model-advanced">ΘÇ▓ΘÜÄµ¿íσ₧ï</label>
+              <label for="model-ml">µ⌐ƒσÖ¿σ¡╕τ┐Æ</label>
+            </div>
+            <div class="panels">
+              <div class="panel" data-model="simple">
+                <h4>τ░íµÿôτ╖ÜµÇºµ¿íσ₧ï (Single-Factor)</h4>
+                <p><strong>σà¼σ╝Å</strong>: Price = ╬▓ΓéÇ + ╬▓Γéü ├ù Parker Score</p>
+                <p><strong>µò╕µôÜ</strong>: 2015~2020 σ╣┤µ│óτê╛σñÜσ╖ªσ▓╕ 200 µ¼╛ΘàÆ,Parker Φ⌐òσêå 85~100πÇé</p>
+                <p><strong>σ¢₧µ¡╕τ╡Éµ₧£</strong>:</p>
+                <ul>
+                  <li>╬▓ΓéÇ = -450 (µê¬Φ╖¥)</li>
+                  <li>╬▓Γéü = 8.5 (µ»Å 1 σêåσó₧σèá Γé¼8.5)</li>
+                  <li>R┬▓ = 0.62 (ΦºúΘçï 62% σâ╣µá╝Φ«èτò░)</li>
+                </ul>
+                <p><strong>ΘáÉµ╕¼τ»äΣ╛ï</strong>:</p>
+                <ul>
+                  <li>Parker 95 σêå ΓåÆ Price = -450 + 8.5├ù95 = Γé¼357.5/τô╢</li>
+                  <li>Parker 88 σêå ΓåÆ Price = -450 + 8.5├ù88 = Γé¼298/τô╢</li>
+                </ul>
+                <p><strong>ΘÖÉσê╢</strong>:</p>
+                <ul>
+                  <li>σ┐╜τòÑσ╣┤Σ╗╜πÇüσôüτëîπÇüτöóσìÇσ╖«τò░ ΓåÆ Φ¬ñσ╖«σñºπÇé</li>
+                  <li>Σ╕Çτ┤ÜΦÄè vs Σ╕¡ΘÜÄΦÄèµû£τÄçΣ╕ìσÉî (Σ╕Çτ┤ÜΦÄèµ»Åσêåσâ╣σÇ╝µ¢┤Θ½ÿ)πÇé</li>
+                </ul>
+                <p class="note">Θü⌐τö¿: σ┐½ΘÇƒΣ╝░τ«ù,σê¥µ¡Ñτ»⌐Θü╕,Σ╜åµèòΦ│çµ▒║τ¡ûΘ£Çµ¢┤τ▓╛τ┤░µ¿íσ₧ïπÇé</p>
+              </div>
+              <div class="panel" data-model="advanced">
+                <h4>σñÜσ¢áσ¡Éτ╖ÜµÇºµ¿íσ₧ï</h4>
+                <p><strong>σà¼σ╝Å</strong>:</p>
+                <p>Price = ╬▓ΓéÇ + ╬▓Γéü├ùScore + ╬▓Γéé├ùVintage + ╬▓Γéâ├ùFirstGrowth + ╬▓Γéä├ùProduction</p>
+                <p><strong>Φ«èΘçÅΦ¬¬µÿÄ</strong>:</p>
+                <ul>
+                  <li><strong>Score</strong>: Parker Φ⌐òσêå (85~100)πÇé</li>
+                  <li><strong>Vintage</strong>: Liv-ex σ╣┤Σ╗╜Φ⌐òτ┤Ü (1~5,σªé 2016=5, 2013=2)πÇé</li>
+                  <li><strong>FirstGrowth</strong>: Σ╕Çτ┤ÜΦÄèΦÖ¢µô¼Φ«èΘçÅ (1=µÿ», 0=σÉª)πÇé</li>
+                  <li><strong>Production</strong>: Log(τöóΘçÅ) µÄºσê╢τ¿Çτ╝║µÇºπÇé</li>
+                </ul>
+                <p><strong>σ¢₧µ¡╕τ╡Éµ₧£</strong> (N=500, 2010~2022):</p>
+                <table class="data-table compact">
+                  <thead>
+                    <tr><th>Φ«èΘçÅ</th><th>Σ┐éµò╕ (╬▓)</th><th>µ¿Öµ║ûΦ¬ñ</th><th>PσÇ╝</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>µê¬Φ╖¥ (╬▓ΓéÇ)</td><td>-620</td><td>85</td><td>< 0.001</td></tr>
+                    <tr><td>Score (╬▓Γéü)</td><td>6.8</td><td>0.9</td><td>< 0.001</td></tr>
+                    <tr><td>Vintage (╬▓Γéé)</td><td>45</td><td>8</td><td>< 0.001</td></tr>
+                    <tr><td>FirstGrowth (╬▓Γéâ)</td><td>280</td><td>35</td><td>< 0.001</td></tr>
+                    <tr><td>Log(Production) (╬▓Γéä)</td><td>-25</td><td>6</td><td>< 0.001</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>µ¿íσ₧ïτ╕╛µòê</strong>:</p>
+                <ul>
+                  <li>R┬▓ = 0.84 (ΦºúΘçï 84% σâ╣µá╝Φ«èτò░,Θí»ΦæùµÅÉσìç)</li>
+                  <li>RMSE = Γé¼42/τô╢ (σ¥çµû╣µá╣Φ¬ñσ╖«)</li>
+                </ul>
+                <p><strong>ΘáÉµ╕¼τ»äΣ╛ï</strong>: Ch├óteau Margaux 2020</p>
+                <ul>
+                  <li>Score = 98, Vintage = 4, FirstGrowth = 1, Production = 130,000 τô╢</li>
+                  <li>Price = -620 + 6.8├ù98 + 45├ù4 + 280├ù1 - 25├ùlog(130000)</li>
+                  <li>Price = -620 + 666.4 + 180 + 280 - 25├ù11.78 Γëê Γé¼211.5/τô╢</li>
+                  <li>(σ»ªΘÜ¢µ£ƒΘàÆσâ╣ Γé¼420 ΓåÆ µ¿íσ₧ïΣ╜ÄΣ╝░,σ¢áµ£¬µìòµìëσôüτëîµ║óσâ╣σà¿Φ▓î)</li>
+                </ul>
+                <p class="note">µö╣ΘÇ▓µû╣σÉæ: σèáσàÑσôüτëîΣ║ñΣ║ÆΘáàπÇüµïìΦ│úµ¡╖σÅ▓πÇüσ╕éσá┤µâàτ╖Æµîçµ¿ÖπÇé</p>
+              </div>
+              <div class="panel" data-model="ml">
+                <h4>µ⌐ƒσÖ¿σ¡╕τ┐Æσ«Üσâ╣µ¿íσ₧ï</h4>
+                <p><strong>µ╝öτ«ùµ│ò</strong>: Gradient Boosting (XGBoost / LightGBM)</p>
+                <p><strong>τë╣σ╛╡σ╖Ñτ¿ï</strong> (30+ Φ«èΘçÅ):</p>
+                <ul>
+                  <li><strong>σôüΦ│¬</strong>: Parker/Decanter/JR σñÜΦ⌐òσêå,τ£╛µò╕/Σ╕¡Σ╜ìµò╕/µ£ÇΘ½ÿσêåπÇé</li>
+                  <li><strong>σ╣┤Σ╗╜</strong>: µ░úσÇÖµîçµò╕ (GDD, ΘÖìΘ¢¿), Liv-ex Φ⌐òτ┤Ü,µ¡╖σÅ▓σ╣┤Σ╗╜τ¢╕Σ╝╝σ║ªπÇé</li>
+                  <li><strong>σôüτëî</strong>: 1855 σêåτ┤Ü,µïìΦ│úσ¥çσâ╣ (ΘüÄσÄ╗ 5 σ╣┤),τñ╛τ╛ñσ¬ÆΘ½öµÅÉσÅèµò╕πÇé</li>
+                  <li><strong>τ¿Çτ╝║µÇº</strong>: τöóΘçÅ,ΘàìΘíìµ»öΣ╛ï,Σ║îτ┤Üσ╕éσá┤σ║½σ¡ÿπÇé</li>
+                  <li><strong>σ╕éσá┤</strong>: Liv-ex 100 µîçµò╕,σÉîµ£ƒσà╢Σ╗ûΘàÆΦÄèσâ╣µá╝,µÉ£σ░ïτå▒σ║ªπÇé</li>
+                  <li><strong>µÖéΘûô</strong>: Θçïσâ╣µÖéΘûô (Tranche 1/2/3),Φ╖¥Θ¢óΦú¥τô╢µÖéΘûôπÇé</li>
+                </ul>
+                <p><strong>µ¿íσ₧ïτ╕╛µòê</strong>:</p>
+                <table class="data-table compact">
+                  <tbody>
+                    <tr><td>Φ¿ôτ╖┤Θ¢å R┬▓</td><td>0.93</td></tr>
+                    <tr><td>µ╕¼Φ⌐ªΘ¢å R┬▓</td><td>0.89</td></tr>
+                    <tr><td>RMSE</td><td>Γé¼28/τô╢ (µ»öτ╖ÜµÇºΘÖìΣ╜Ä 33%)</td></tr>
+                    <tr><td>MAPE</td><td>8.5% (σ╣│σ¥çτ╡òσ░ìτÖ╛σêåµ»öΦ¬ñσ╖«)</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>τë╣σ╛╡ΘçìΦªüµÇº (SHAP σêåµ₧É)</strong>:</p>
+                <ol>
+                  <li>Parker Φ⌐òσêå: 32%</li>
+                  <li>Σ╕Çτ┤ÜΦÄèµ¿ÖΦ¿ÿ: 24%</li>
+                  <li>σ╣┤Σ╗╜Φ⌐òτ┤Ü: 18%</li>
+                  <li>µïìΦ│úµ¡╖σÅ▓σ¥çσâ╣: 12%</li>
+                  <li>τöóΘçÅ: 8%</li>
+                  <li>σà╢Σ╗û: 6%</li>
+                </ol>
+                <p><strong>ΘáÉµ╕¼τ»äΣ╛ï</strong>: 2022 σ╣┤Σ╗╜ Pauillac Σ║îτ┤ÜΦÄè</p>
+                <ul>
+                  <li>Φ╝╕σàÑ 30 Θáàτë╣σ╛╡ ΓåÆ µ¿íσ₧ïΘáÉµ╕¼: Γé¼95~Γé¼110/τô╢ (95% Σ┐íΦ│┤σìÇΘûô)</li>
+                  <li>σ»ªΘÜ¢Θçïσâ╣: Γé¼105 ΓåÆ ΦÉ╜σ£¿σìÇΘûôσàº,µ¿íσ₧ïµ£ëµòêπÇé</li>
+                </ul>
+                <p class="note">σä¬σïó: µìòµìëΘ¥₧τ╖ÜµÇºΘù£Σ┐é,ΦÖòτÉåΣ║ñΣ║Æµòêµçë;σèúσïó: Θ╗æτ«▒,Θ£ÇσñºΘçÅµò╕µôÜ (>1000 µ¿úµ£¼)πÇé</p>
+              </div>
+            </div>
+          </div>
+          <h3>Σ╝░σÇ╝µ»öΦ╝âµ│ò (Comparable Analysis)</h3>
+          <p><strong>ΘéÅΦ╝»</strong>: σÅâΦÇâσÉîτ┤ÜΘàÆΦÄèπÇüσÉîσ╣┤Σ╗╜πÇüσÉîΦ⌐òσêåτÜäµ¡╖σÅ▓σ«Üσâ╣πÇé</p>
+          <p><strong>µ¡ÑΘ⌐ƒ</strong>:</p>
+          <ol>
+            <li>Θü╕σ«Üµ¿ÖτÜä (σªé 2023 σ╣┤Σ╗╜ Ch├óteau Lynch-Bages)πÇé</li>
+            <li>µë╛ 3~5 σÇïσÅ»µ»öΘàÆΦÄè (σÉîτöóσìÇπÇüσÉîσêåτ┤ÜπÇüτ¢╕Φ┐æΦ⌐òσêå):
+              <ul>
+                <li>Pichon-Longueville Baron, Ducru-Beaucaillou, Cos d'Estournel τ¡ëπÇé</li>
+              </ul>
+            </li>
+            <li>µ»öΦ╝â 2022/2021/2020 σ╣┤Σ╗╜µ£ƒΘàÆσâ╣ΦêçΦ⌐òσêåΘù£Σ┐éπÇé</li>
+            <li>Φ¬┐µò┤σ╖«τò░ (τöóΘçÅπÇüσ╕éσá┤τå▒σ║ª)πÇé</li>
+            <li>ΘáÉµ╕¼σÉêτÉåσâ╣µá╝σìÇΘûôπÇé</li>
+          </ol>
+          <p><strong>µíêΣ╛ï</strong>:</p>
+          <table class="data-table compact">
+            <thead>
+              <tr><th>ΘàÆΦÄè</th><th>2022 Φ⌐òσêå</th><th>2022 µ£ƒΘàÆσâ╣</th><th>Γé¼/σêå</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Pichon Baron</td><td>96</td><td>Γé¼144</td><td>Γé¼1.50</td></tr>
+              <tr><td>Ducru-Beaucaillou</td><td>97</td><td>Γé¼155</td><td>Γé¼1.60</td></tr>
+              <tr><td>Cos d'Estournel</td><td>95</td><td>Γé¼138</td><td>Γé¼1.45</td></tr>
+              <tr><td><strong>Lynch-Bages (2023ΘáÉµ╕¼)</strong></td><td><strong>96 (ΘáÉΣ╝░)</strong></td><td><strong>?</strong></td><td><strong>Γé¼1.50 (Σ╕¡Σ╜ìµò╕)</strong></td></tr>
+            </tbody>
+          </table>
+          <p><strong>ΘáÉµ╕¼</strong>: Lynch-Bages 2023 σÉêτÉåσâ╣ = 96 ├ù Γé¼1.50 = Γé¼144/τô╢ (┬▒10% σìÇΘûô Γé¼130~Γé¼158)πÇé</p>
+          <h3>σ«Üσâ╣µ¿íσ₧ïτÜäΘÖÉσê╢ΦêçΘó¿ΘÜ¬</h3>
+          <ul>
+            <li><strong>Θ╗æσñ⌐Θ╡¥Σ║ïΣ╗╢</strong>: COVID-19πÇüτ╢ôµ┐ƒσì▒µ⌐ƒ ΓåÆ µ¿íσ₧ïσñ▒µòêπÇé</li>
+            <li><strong>σ╕éσá┤µâàτ╖Æ</strong>: µèòµ⌐ƒµ│íµ▓½ (2011) µêûµüÉµàîµïïσö« ΓåÆ σüÅΘ¢óσƒ║µ£¼Θ¥óπÇé</li>
+            <li><strong>Φ⌐òσêåτê¡Φ¡░</strong>: Parker ΘÇÇΣ╝æσ╛îΦ⌐òσêåΘ½öτ│╗µö╣Φ«è,σ╜▒Θƒ┐σÅâΦÇâµÇºπÇé</li>
+            <li><strong>µò╕µôÜµ╗»σ╛î</strong>: µ¡╖σÅ▓µò╕µôÜτäíµ│òΘáÉµ╕¼τ¬üτá┤µÇºσ╣┤Σ╗╜ (σªé 2000/2009)πÇé</li>
+          </ul>
+        </div>
+      
+
+=== KEY: slides.6.content ===
+<div class="chapter-content">
+          <h3>ΦæíΦÉäΘàÆµèòΦ│çΘó¿ΘÜ¬Θí₧σ₧ï</h3>
+          <div class="risk-assessment-widget">
+            <input type="radio" id="risk-market" name="risk-type" class="opt-market" checked>
+            <input type="radio" id="risk-vintage" name="risk-type" class="opt-vintage">
+            <input type="radio" id="risk-operational" name="risk-type" class="opt-operational">
+            <input type="radio" id="risk-fraud" name="risk-type" class="opt-fraud">
+            <div class="selectors">
+              <label for="risk-market">σ╕éσá┤Θó¿ΘÜ¬</label>
+              <label for="risk-vintage">σ╣┤Σ╗╜Θó¿ΘÜ¬</label>
+              <label for="risk-operational">τçƒΘüïΘó¿ΘÜ¬</label>
+              <label for="risk-fraud">σüçΘàÆΘó¿ΘÜ¬</label>
+            </div>
+            <div class="panels">
+              <div class="panel" data-risk="market">
+                <h4>σ╕éσá┤Θó¿ΘÜ¬ (Market Risk)</h4>
+                <p><strong>σ«Üτ╛⌐</strong>: µò┤Θ½öσ╕éσá┤σâ╣µá╝µ│óσïò,σ╜▒Θƒ┐µèòΦ│çτ╡äσÉêσâ╣σÇ╝πÇé</p>
+                <p><strong>ΦííΘçÅµîçµ¿Ö</strong>:</p>
+                <ul>
+                  <li><strong>µ│óσïòτÄç (Volatility)</strong>: σ╣┤σîûµ¿Öµ║ûσ╖«,Liv-ex Fine Wine 100 τ┤ä 12~18%πÇé</li>
+                  <li><strong>Beta</strong>: τ¢╕σ░ìµû╝Φéíσ╕éτÜäµòÅµäƒσ║ª,ΦæíΦÉäΘàÆ ╬▓ Γëê 0.2~0.4 (Σ╜Äτ¢╕Θù£)πÇé</li>
+                  <li><strong>µ£Çσñºσ¢₧µÆñ (Max Drawdown)</strong>: 2011~2015 µ│óτê╛σñÜµîçµò╕ -35%πÇé</li>
+                </ul>
+                <p><strong>σ╜▒Θƒ┐σ¢áτ┤á</strong>:</p>
+                <ul>
+                  <li><strong>τ╢ôµ┐ƒΘÇ▒µ£ƒ</strong>: Φí░ΘÇÇ ΓåÆ σÑóΣ╛êσôüΘ£Çµ▒éΣ╕ïΘÖì ΓåÆ σâ╣µá╝µë┐σúôπÇé</li>
+                  <li><strong>σî»τÄçµ│óσïò</strong>: µ¡Éσàâ/Φï▒ΘÄè/Σ║║µ░æσ╣ú vs τ╛Äσàâ,σ╜▒Θƒ┐σ£ïΘÜ¢Φ▓╖σ«╢Φ│╝Φ▓╖σè¢πÇé</li>
+                  <li><strong>µ¢┐Σ╗úµèòΦ│ç</strong>: Φéíσ╕é/σèáσ»åΦ▓¿σ╣úτë¢σ╕é ΓåÆ Φ│çΘçæµ╡üσç║ΦæíΦÉäΘàÆσ╕éσá┤πÇé</li>
+                </ul>
+                <p><strong>µ¡╖σÅ▓µíêΣ╛ï</strong>:</p>
+                <table class="data-table compact">
+                  <tbody>
+                    <tr><td><strong>2008 ΘçæΦ₧ìσì▒µ⌐ƒ</strong></td><td>Liv-ex 100 Σ╕ïΦ╖î -22% (2008~2009)</td></tr>
+                    <tr><td><strong>2011-2015 τåèσ╕é</strong></td><td>Σ╕¡σ£ïΘ£Çµ▒éΘÖìµ║½,µ│óτê╛σñÜ -35%,σïâµá╣σ£░τ¢╕σ░ìµèùΦ╖î</td></tr>
+                    <tr><td><strong>2020 COVID</strong></td><td>τƒ¡µ£ƒµ│óσïò ┬▒15%,Θáéτ┤ÜΦÄèσ┐½ΘÇƒσÅìσ╜ê</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>σ░ìµ▓ûτ¡ûτòÑ</strong>:</p>
+                <ul>
+                  <li>σñÜτöóσìÇσêåµòú (µ│óτê╛σñÜ 40% + σïâµá╣σ£░ 30% + τ╛⌐σñºσê⌐ 20% + ΘªÖµ¬│ 10%)πÇé</li>
+                  <li>µ╖╖σÉêσ╣┤Σ╗╜ (µêÉτåƒσ╣┤Σ╗╜ 60% + σ╣┤Φ╝òσ╣┤Σ╗╜ 40%)πÇé</li>
+                  <li>Θâ¿σêåΘàìτ╜«µèùΦ╖îΘàÆµ¼╛ (σªé DRC, Petrus)πÇé</li>
+                </ul>
+              </div>
+              <div class="panel" data-risk="vintage">
+                <h4>σ╣┤Σ╗╜Θó¿ΘÜ¬ (Vintage Risk)</h4>
+                <p><strong>σ«Üτ╛⌐</strong>: µ£ƒΘàÆΦ│╝Φ▓╖µÖéσôüΦ│¬Σ╕ìτó║σ«Ü,µùÑσ╛îΦí¿τÅ╛σÅ»Φâ╜Σ╕ìσªéΘáÉµ£ƒπÇé</p>
+                <p><strong>Θó¿ΘÜ¬Σ╛åµ║É</strong>:</p>
+                <ul>
+                  <li><strong>µí╢ΘéèΦ⌐ªΘú▓Φ¬ñσêñ</strong>: Φú¥τô╢σ╛îΘó¿µá╝µö╣Φ«è (σªéσû«σ»ºµò┤σÉêΣ╕ìσªéΘáÉµ£ƒ)πÇé</li>
+                  <li><strong>Φ⌐òσêåΣ╕ïΣ┐«</strong>: Parker σê¥Φ⌐ò 95 σêå,5 σ╣┤σ╛îΦñçΦ⌐òΘÖìΦç│ 91 σêåπÇé</li>
+                  <li><strong>ΘÖ│σ╣┤µ╜¢σè¢Σ╜ÄΣ╝░</strong>: σÄƒΘáÉµ£ƒ 20 σ╣┤σ╖öσ│░,σ»ªΘÜ¢ 10 σ╣┤σ╖▓ΘüÄσ╖öσ│░πÇé</li>
+                </ul>
+                <p><strong>µ¡╖σÅ▓µòÖΦ¿ô</strong>:</p>
+                <table class="data-table compact">
+                  <tbody>
+                    <tr><td><strong>2011 σ╣┤Σ╗╜</strong></td><td>µ£ƒΘàÆσ«Üσâ╣ΘüÄΘ½ÿ (ΘàÆΦÄèΦ▓¬σ⌐¬),µùÑσ╛îτÅ╛Φ▓¿Σ╜Äµû╝µ£ƒΘàÆσâ╣ -20~30%</td></tr>
+                    <tr><td><strong>2013 σ╣┤Σ╗╜</strong></td><td>σ╝▒σ╣┤Σ╗╜,µ£ƒΘàÆµ╗»Θè╖,τÅ╛Φ▓¿µèÿµëú -40%</td></tr>
+                    <tr><td><strong>2003 σ╣┤Σ╗╜</strong></td><td>σê¥µ£ƒΘ½ÿΦ⌐òσêå,Σ╜åΘ½ÿΘàÆτ▓╛πÇüΣ╜ÄΘà╕,ΘÖ│σ╣┤Φí¿τÅ╛Σ╕ìΣ╜│</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>ΘÖìΣ╜ÄΘó¿ΘÜ¬µû╣µ│ò</strong>:</p>
+                <ol>
+                  <li><strong>τ¡ëσ╛àσñÜµû╣Φ⌐òσêå</strong>: Σ╕ìσÅ¬τ£ï Parker,σÅâΦÇâ Decanter, JR, Galloni τ¡ëπÇé</li>
+                  <li><strong>Θù£µ│¿µ░úσÇÖµò╕µôÜ</strong>: GDD (τöƒΘò╖σ║ªµùÑ)πÇüΘÖìΘ¢¿πÇüΘ££σçìΦ¿ÿΘîäπÇé</li>
+                  <li><strong>Σ┐¥σ«êσ╣┤Σ╗╜Φ╖│ΘüÄµ£ƒΘàÆ</strong>: 2021/2013 τ¡ëτê¡Φ¡░σ╣┤Σ╗╜,τ¡ëτÅ╛Φ▓¿σ╕éσá┤σâ╣µá╝τ⌐⌐σ«ÜπÇé</li>
+                  <li><strong>Θáéτ┤ÜσÉìΦÄèσä¬σàê</strong>: Σ╕Çτ┤ÜΦÄè/DRC σôüΦ│¬τ⌐⌐σ«ÜµÇºΘ½ÿ,σ╝▒σ╣┤Σ╗╜Σ╣ƒµ£ëΣ┐¥σ║òσâ╣σÇ╝πÇé</li>
+                </ol>
+                <p class="note">Θ╗âΘçæµ│òσëç: σâàσ£¿Θáéτ┤Üσ╣┤Σ╗╜ (4~5 µÿƒ) Φ│╝Φ▓╖µ£ƒΘàÆ,σ╣│σ║╕σ╣┤Σ╗╜τ¡ëτÅ╛Φ▓¿πÇé</p>
+              </div>
+              <div class="panel" data-risk="operational">
+                <h4>τçƒΘüïΘó¿ΘÜ¬ (Operational Risk)</h4>
+                <p><strong>Σ┐¥τ«íΘó¿ΘÜ¬</strong>:</p>
+                <ul>
+                  <li><strong>σÇëσä▓µó¥Σ╗╢</strong>: µ║½σ║ªµ│óσïòπÇüµ┐òσ║ªΣ╕ìτò╢ ΓåÆ ΘàÆΦ│¬σèúσîû,µ¿Öτ▒ñµÉìσú₧πÇé</li>
+                  <li><strong>σÇëσä▓σà¼σÅ╕σÇÆΘûë</strong>: 2012 σ╣┤Φï▒σ£ï Octavian Vaults Φ▓íσïÖσì▒µ⌐ƒ,σ«óµê╢ΘàÆµ¼╛σÅùσ╜▒Θƒ┐πÇé</li>
+                  <li><strong>Σ┐¥ΘÜ¬Σ╕ìΦ╢│</strong>: τü½τü╜/µ░┤τü╜/τ¢£τ½è,µ£¬µèòΣ┐¥µêûτÉåΦ│áτê¡Φ¡░πÇé</li>
+                </ul>
+                <p><strong>µ£ÇΣ╜│σ»ªΦ╕É</strong>:</p>
+                <ul>
+                  <li>Θü╕µôç Tier 1 σÇëσä▓ (σªé London City Bond, Octavian, Vins de Garde):
+                    <ul>
+                      <li>µüåµ║½µüåµ┐ò (12~14┬░C, 65~75% RH)πÇé</li>
+                      <li>24/7 τ¢úµÄº,Σ┐¥ΘÜ¬µ╢╡Φôï (ΘÇÜσ╕╕µ»Å ┬ú100K ΘàÆµ¼╛Σ┐¥Φ▓╗ ┬ú200~┬ú500/σ╣┤)πÇé</li>
+                      <li>τì¿τ½ïσ»⌐Φ¿ê,Φ▓íσïÖΘÇÅµÿÄπÇé</li>
+                    </ul>
+                  </li>
+                  <li>σ«Üµ£ƒµƒÑσ║½σ¡ÿσá▒σæè,µ¬óµƒÑσ░üµó¥σ«îµò┤µÇºπÇé</li>
+                </ul>
+                <p><strong>µ╡üσïòµÇºΘó¿ΘÜ¬</strong>:</p>
+                <ul>
+                  <li><strong>σå╖ΘûÇΘàÆµ¼╛</strong>: Σ╕¡ΘÜÄ St-Emilion, σ╝▒σ╣┤Σ╗╜ ΓåÆ Φ▓╖σ«╢σ░æ,Φ│úσç║Θ£Çµèÿσâ╣ -20%πÇé</li>
+                  <li><strong>σ░Åτ£╛τöóσìÇ</strong>: Cahors, Madiran ΓåÆ Σ║îτ┤Üσ╕éσá┤Φûäσ╝▒πÇé</li>
+                  <li><strong>τ╖èµÇÑΦ«èτÅ╛</strong>: µïìΦ│úΦíîΣ╜úΘçæ 15~25%,µÇÑσö«µèÿσâ╣ -10~15%πÇé</li>
+                </ul>
+                <p><strong>µö╣σûäµ╡üσïòµÇº</strong>:</p>
+                <ul>
+                  <li>ΦüÜτäªΦùìτ▒îΘàÆµ¼╛ (Σ╕Çτ┤ÜΦÄèπÇüDRCπÇüMasseto) ΓåÆ Bid-Ask spread < 5%πÇé</li>
+                  <li>Σ┐¥µîüσÄƒτ«▒µ£¬Θûï (OWC) ΓåÆ µ║óσâ╣ +5~10%πÇé</li>
+                  <li>ΘÇÅΘüÄ Liv-ex σ╣│σÅ░Σ║ñµÿô ΓåÆ σ┐½ΘÇƒµÆ«σÉê (< 7 σñ⌐)πÇé</li>
+                </ul>
+                <p class="note">µêÉµ£¼: σÇëσä▓ ┬ú12~┬ú20/τ«▒/σ╣┤,Σ┐¥ΘÜ¬ 0.2~0.5%,Σ║ñµÿôΣ╜úΘçæ 5~10%πÇé</p>
+              </div>
+              <div class="panel" data-risk="fraud">
+                <h4>σüçΘàÆΘó¿ΘÜ¬ (Fraud Risk)</h4>
+                <p><strong>σüçΘàÆΦªÅµ¿í</strong>: Σ╝░Φ¿êσà¿τÉâΘ½ÿτ½»ΦæíΦÉäΘàÆσ╕éσá┤ 5~10% τé║σüçΘàÆ,µÉìσñ▒µò╕σìüσääτ╛ÄσàâπÇé</p>
+                <p><strong>σ╕╕Φªïµëïµ│ò</strong>:</p>
+                <ul>
+                  <li><strong>Θçìµû░µ¿Öτ▒ñ</strong>: Σ╜ÄΘÜÄΘàÆµÅ¢Φ▓╝σÉìΦÄèµ¿Öτ▒ñ (σªé 2005 µ¥æΦÄèτ┤Üµö╣ Grand Cru)πÇé</li>
+                  <li><strong>σü╜ΘÇáΦÇüΘàÆ</strong>: 1947/1961 τ¡ëσé│σÑçσ╣┤Σ╗╜,Σ╛åµ║ÉσÅ»τûæπÇé</li>
+                  <li><strong>µ╖╖σÉêτüîΦú¥</strong>: Θâ¿σêåτ£ƒΘàÆ + σ╗ëσâ╣ΘàÆµ╖╖Φú¥πÇé</li>
+                  <li><strong>σü╜ΘÇáτöóσ£░Φ¡ëµÿÄ</strong>: σüçΘÇáΘàÆΦÄèΦ¡ëµ¢╕πÇüµ╡╖Θù£µûçΣ╗╢πÇé</li>
+                </ul>
+                <p><strong>Θ½ÿΘó¿ΘÜ¬ΘàÆµ¼╛</strong>:</p>
+                <table class="data-table compact">
+                  <tbody>
+                    <tr><td>σïâµá╣σ£░Θáéτ┤Üσ£Æ</td><td>DRC, Leroy, Rousseau (τ¿Çτ╝║,σâ╣Θ½ÿ,Σ╗┐σåÆσñÜ)</td></tr>
+                    <tr><td>µ│óτê╛σñÜΦÇüΘàÆ</td><td>1961/1982/1990 P├⌐trus, Lafite (Θ£ÇΣ╛åµ║ÉΦ¡ëµÿÄ)</td></tr>
+                    <tr><td>τ╛⌐σñºσê⌐</td><td>Sassicaia, Masseto (µ¿Öτ▒ñµÿôΣ╗┐)</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>Θææσ«Üµû╣µ│ò</strong>:</p>
+                <ol>
+                  <li><strong>Σ╛åµ║ÉΦ┐╜µ║» (Provenance)</strong>:
+                    <ul>
+                      <li>ΘàÆΦÄèτ¢┤Φ│╝ > τƒÑσÉìµïìΦ│úΦíî (Christie's, Sotheby's) > τºüΣ║║Φ│úσ«╢πÇé</li>
+                      <li>Φªüµ▒éτÖ╝τÑ¿πÇüσÇëσä▓Φ¿ÿΘîäπÇüσÄƒτ«▒Φ¡ëµÿÄπÇé</li>
+                    </ul>
+                  </li>
+                  <li><strong>σñûΦºÇµ¬óµƒÑ</strong>:
+                    <ul>
+                      <li>µ¿Öτ▒ñσì░σê╖σôüΦ│¬πÇüσ¡ùΘ½öπÇüΘíÅΦë▓πÇüτ┤Öσ╝╡Φ│¬µäƒπÇé</li>
+                      <li>τô╢σ░ü (capsule) σ╣┤Σ╗úΣ╕ÇΦç┤µÇºπÇüτú¿µÉìτ¿ïσ║ªπÇé</li>
+                      <li>µ╢▓Θ¥óΘ½ÿσ║ª (ullage) τ¼ªσÉêΘÖ│σ╣┤ΘáÉµ£ƒ (30 σ╣┤ΦÇüΘàÆ mid-shoulder µ¡úσ╕╕)πÇé</li>
+                    </ul>
+                  </li>
+                  <li><strong>τºæµèÇΘææσ«Ü</strong>:
+                    <ul>
+                      <li>σìÇσíèΘÅêµ║»µ║É (σªé Everledger, Chai Vault)πÇé</li>
+                      <li>NFC Θÿ▓σü╜µ¿Öτ▒ñ (ΘàÆΦÄèµñìσàÑ)πÇé</li>
+                      <li>τó│-14 µ╕¼σ╣┤ (Θææσ«ÜΘàÆµ╢▓σ╣┤Σ╗ú,µêÉµ£¼ $500~$1000)πÇé</li>
+                    </ul>
+                  </li>
+                  <li><strong>σ░êσ«╢Θææσ«Ü</strong>: Maureen Downey, Jamie Goode τ¡ëσüçΘàÆσü╡µÄóπÇé</li>
+                </ol>
+                <p><strong>Σ┐¥Φ¡╖µÄ¬µû╜</strong>:</p>
+                <ul>
+                  <li>σâàσÉæΣ┐íΦ¡╜Φë»σÑ╜τÜäΘàÆσòåΦ│╝Φ▓╖ (σªé BBR, Farr Vintners, Millesima)πÇé</li>
+                  <li>Θü┐σàìµïìΦ│úµ£âΣ╛åµ║ÉΣ╕ìµÿÄµë╣µ¼íπÇé</li>
+                  <li>Φ│╝Φ▓╖σüçΘàÆΣ┐¥ΘÜ¬ (Θâ¿σêåΘ½ÿτ½»σÇëσä▓µÅÉΣ╛¢)πÇé</li>
+                </ul>
+                <p class="note">µíêΣ╛ï: Rudy Kurniawan 2012 σ╣┤σ¢áσü╜ΘÇáµò╕σìâΦÉ¼τ╛ÄσàâσüçΘàÆΦó½σêñσêæ 10 σ╣┤πÇé</p>
+              </div>
+            </div>
+          </div>
+          <h3>µèòΦ│çτ╡äσÉêµ│óσïòΦêçτ¢╕Θù£µÇºσêåµ₧É</h3>
+          <p><strong>Sharpe Ratio (σñÅµÖ«µ»öτÄç)</strong>:</p>
+          <p>Sharpe = (σ╣┤σîûσ¢₧σá▒ - τäíΘó¿ΘÜ¬σê⌐τÄç) / σ╣┤σîûµ│óσïòτÄç</p>
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Φ│çτöóΘí₧σêÑ</th><th>σ╣┤σîûσ¢₧σá▒</th><th>σ╣┤σîûµ│óσïòτÄç</th><th>Sharpe Ratio</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>µ│óτê╛σñÜΣ╕Çτ┤ÜΦÄè (2010-2023)</td><td>7.2%</td><td>14.5%</td><td>0.38</td></tr>
+              <tr><td>σïâµá╣σ£░ DRC (2010-2023)</td><td>12.5%</td><td>18.2%</td><td>0.62</td></tr>
+              <tr><td>Liv-ex 100 µîçµò╕</td><td>5.8%</td><td>12.3%</td><td>0.30</td></tr>
+              <tr><td>S&P 500 (σÉîµ£ƒ)</td><td>11.2%</td><td>16.8%</td><td>0.58</td></tr>
+              <tr><td>Θ╗âΘçæ (σÉîµ£ƒ)</td><td>4.1%</td><td>15.5%</td><td>0.13</td></tr>
+            </tbody>
+          </table>
+          <p class="note">σïâµá╣σ£░Θáéτ┤ÜΘàÆµ¼╛Θó¿ΘÜ¬Φ¬┐µò┤σ¢₧σá▒σä¬µû╝µ│óτê╛σñÜ,Σ╜åµ╡üσïòµÇºΦ╝âΣ╜ÄπÇé</p>
+          <h3>Φêçσé│τ╡▒Φ│çτöóτÜäτ¢╕Θù£µÇº</h3>
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Φ│çτöóΘàìσ░ì</th><th>τ¢╕Θù£Σ┐éµò╕</th><th>σêåµòúµòêµ₧£</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ΦæíΦÉäΘàÆ vs S&P 500</td><td>0.25</td><td>Σ╜Äτ¢╕Θù£,Φë»σÑ╜σêåµòú</td></tr>
+              <tr><td>ΦæíΦÉäΘàÆ vs Θ╗âΘçæ</td><td>0.18</td><td>Σ╜Äτ¢╕Θù£</td></tr>
+              <tr><td>ΦæíΦÉäΘàÆ vs µê┐σ£░τöó</td><td>0.32</td><td>Σ╕¡Σ╜Äτ¢╕Θù£</td></tr>
+              <tr><td>µ│óτê╛σñÜ vs σïâµá╣σ£░</td><td>0.45</td><td>Σ╕¡σ║ªτ¢╕Θù£</td></tr>
+              <tr><td>ΦæíΦÉäΘàÆ vs Φù¥Φíôσôü</td><td>0.38</td><td>Σ╕¡σ║ªτ¢╕Θù£</td></tr>
+            </tbody>
+          </table>
+          <p><strong>µèòΦ│çσòƒτñ║</strong>: ΦæíΦÉäΘàÆσÅ»Σ╜£τé║µèòΦ│çτ╡äσÉêσêåµòúσ╖Ñσà╖,σ╗║Φ¡░Θàìτ╜« 5~15%πÇé</p>
+        </div>
+      
+
+=== KEY: slides.8.content ===
+<div class="chapter-content">
+          <h3>ΦæíΦÉäΘàÆΣ║îτ┤Üσ╕éσá┤τöƒµàï</h3>
+          <p><strong>σ╕éσá┤ΦªÅµ¿í</strong>: σà¿τÉâτ▓╛σôüΦæíΦÉäΘàÆΣ║îτ┤Üσ╕éσá┤σ╣┤Σ║ñµÿôΘíìτ┤ä Γé¼4~6 billion (2023)πÇé</p>
+          <p><strong>Σ╕╗Φªüσ╣│σÅ░Θí₧σ₧ï</strong>:</p>
+          <table class="data-table">
+            <thead>
+              <tr><th>σ╣│σÅ░Θí₧σ₧ï</th><th>Σ╗úΦí¿</th><th>σä¬σïó</th><th>σèúσïó</th><th>Σ╜úΘçæ</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Σ║ñµÿôµëÇ</td><td>Liv-ex, Cavex</td><td>σì│µÖéµÆ«σÉê,σâ╣µá╝ΘÇÅµÿÄ</td><td>Θ£Çµ£âσôíΦ│çµá╝</td><td>Φ▓╖Φ│úσÉä 2~3%</td></tr>
+              <tr><td>µïìΦ│úΦíî</td><td>Christie's, Sotheby's, Acker</td><td>τ¿Çµ£ëΦÇüΘàÆ,σôüτëîΣ┐íΦ¡╜</td><td>ΘÇ▒µ£ƒΘò╖ (3~6 µ£ê),Θ½ÿΣ╜úΘçæ</td><td>Φ▓╖µû╣ 20~25%</td></tr>
+              <tr><td>ΘàÆσòå</td><td>BBR, Farr Vintners, Cult Wines</td><td>σ░êµÑ¡σ╗║Φ¡░,Σ╛åµ║ÉΣ┐¥Φ¡ë</td><td>Bid-Ask spread σñº</td><td>5~15% markup</td></tr>
+              <tr><td>P2P σ╣│σÅ░</td><td>WineBid, Vinovest</td><td>Σ╜ÄΘûÇµ¬╗,Σ╛┐σê⌐</td><td>Σ╛åµ║ÉΘó¿ΘÜ¬,µ╡üσïòµÇºσ╖«</td><td>10~18%</td></tr>
+            </tbody>
+          </table>
+          <h3>Liv-ex Σ║ñµÿôµëÇµ╖▒σ║ªΦºúµ₧É</h3>
+          <div class="livex-platform-widget">
+            <input type="radio" id="livex-mechanism" name="livex-feature" class="opt-mechanism" checked>
+            <input type="radio" id="livex-indices" name="livex-feature" class="opt-indices">
+            <input type="radio" id="livex-data" name="livex-feature" class="opt-data">
+            <div class="selectors">
+              <label for="livex-mechanism">Σ║ñµÿôµ⌐ƒσê╢</label>
+              <label for="livex-indices">µîçµò╕τ│╗τ╡▒</label>
+              <label for="livex-data">µò╕µôÜµ£ìσïÖ</label>
+            </div>
+            <div class="panels">
+              <div class="panel" data-feature="mechanism">
+                <h4>Liv-ex Σ║ñµÿôµ⌐ƒσê╢</h4>
+                <p><strong>µ£âσôíσê╢</strong>: σâàσ░êµÑ¡ΘàÆσòåσÅ»Σ║ñµÿô (σ╣┤Φ▓╗ ┬ú1,500~┬ú5,000),σÇïΣ║║µèòΦ│çΦÇàΘÇÅΘüÄΘàÆσòåΘûôµÄÑσÅâΦêçπÇé</p>
+                <p><strong>Σ║ñµÿôµ╡üτ¿ï</strong>:</p>
+                <ol>
+                  <li>Φ│úµû╣µÄ¢σû« (Offer): ΘàÆµ¼╛πÇüµò╕ΘçÅπÇüσâ╣µá╝πÇüΣ║ñΣ╗ÿσ£░Θ╗₧πÇé</li>
+                  <li>Φ▓╖µû╣Σ╕ïσû« (Bid): σÅ»µÄÑσÅùµÄ¢σû«µêûσç║σâ╣πÇé</li>
+                  <li>µÆ«σÉêµêÉΣ║ñ: τ│╗τ╡▒Φç¬σïòΘàìσ░ì,τöƒµêÉσÉêτ┤äπÇé</li>
+                  <li>τ╡Éτ«ù: T+7 (7 σÇïσ╖ÑΣ╜£µùÑ),ΘÇÅΘüÄ LCB µêûσà╢Σ╗ûσÇëσä▓Φ╜ëτº╗πÇé</li>
+                </ol>
+                <p><strong>σâ╣µá╝ΘÇÅµÿÄσ║ª</strong>:</p>
+                <ul>
+                  <li>σ»ªµÖé Bid/Offer Θí»τñ║ (σªé Lafite 2010: Bid Γé¼820, Offer Γé¼850)πÇé</li>
+                  <li>µ¡╖σÅ▓µêÉΣ║ñσâ╣πÇüµêÉΣ║ñΘçÅσÅ»µƒÑπÇé</li>
+                  <li>Bid-Ask spread Θáéτ┤ÜΘàÆµ¼╛ < 3%,σå╖ΘûÇΘàÆµ¼╛ 10~20%πÇé</li>
+                </ul>
+                <p><strong>Σ╜úΘçæτ╡Éµºï</strong>:</p>
+                <table class="data-table compact">
+                  <tbody>
+                    <tr><td>Φ▓╖µû╣Σ╜úΘçæ</td><td>2.75% (µ£ÇΣ╜Ä ┬ú15)</td></tr>
+                    <tr><td>Φ│úµû╣Σ╜úΘçæ</td><td>2.75% (µ£ÇΣ╜Ä ┬ú15)</td></tr>
+                    <tr><td>τ╕╜Σ║ñµÿôµêÉµ£¼</td><td>~5.5% (µ»öµïìΦ│úΣ╜Ä 70%)</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>σä¬σïó</strong>:</p>
+                <ul>
+                  <li>Θ½ÿµ╡üσïòµÇº: Φùìτ▒îΘàÆµ¼╛ 1~3 σñ⌐µêÉΣ║ñπÇé</li>
+                  <li>σâ╣µá╝τÖ╝τÅ╛: σ╕éσá┤σà▒Φ¡ÿσâ╣µá╝,Θü┐σàìΦó½σ¥æπÇé</li>
+                  <li>Σ╛åµ║ÉσÅ»Θ¥á: µ£âσôíΘ£Çσ»⌐µá╕,σüçΘàÆΘó¿ΘÜ¬Σ╜ÄπÇé</li>
+                </ul>
+                <p class="note">µíêΣ╛ï: µèòΦ│çΣ║║µ¼▓Φ│ú 6 τô╢ P├⌐trus 2015,Liv-ex µêÉΣ║ñσâ╣ Γé¼3,600/τô╢,Σ╜úΘçæ Γé¼594,µ╖¿µö╢ Γé¼21,006πÇéΦïÑΦ╡░µïìΦ│úΦíî,Σ╜úΘçæσÅ»Φâ╜Θ½ÿΘüö Γé¼5,400πÇé</p>
+              </div>
+              <div class="panel" data-feature="indices">
+                <h4>Liv-ex µîçµò╕τ│╗τ╡▒</h4>
+                <p><strong>Liv-ex 100</strong>: µ£Çσ╗úµ│¢Φ┐╜Φ╣ñτÜäτ▓╛σôüΘàÆµîçµò╕πÇé</p>
+                <ul>
+                  <li><strong>µêÉσêå</strong>: 100 µ¼╛µ£ÇΣ║ñµÿôµ┤╗Φ║ìΘàÆµ¼╛ (µ│óτê╛σñÜτé║Σ╕╗ 80%,σïâµá╣σ£░/ΘªÖµ¬│ 20%)πÇé</li>
+                  <li><strong>µ¼èΘçì</strong>: Σ╛¥Σ║ñµÿôΘçÅσïòµàïΦ¬┐µò┤πÇé</li>
+                  <li><strong>σƒ║µ£ƒ</strong>: 2003/12 = 100πÇé</li>
+                  <li><strong>τò╢σëì</strong>: τ┤ä 310 (2023/12),20 σ╣┤σ╣┤σîûσ¢₧σá▒ 5.8%πÇé</li>
+                </ul>
+                <p><strong>σà╢Σ╗ûµîçµò╕</strong>:</p>
+                <table class="data-table compact">
+                  <tbody>
+                    <tr><td><strong>Liv-ex 50</strong></td><td>µ│óτê╛σñÜΣ╕Çτ┤ÜΦÄè 10 µ¼╛ (5 ΦÄè ├ù µ£ÇΦ┐æ 2 σ╣┤Σ╗╜),Σ┐¥σ«êΦùìτ▒î</td></tr>
+                    <tr><td><strong>Bordeaux 500</strong></td><td>µ│óτê╛σñÜ 500 µ¼╛,µ╢╡Φôïσ╖ªσÅ│σ▓╕σà¿τöóσìÇ</td></tr>
+                    <tr><td><strong>Burgundy 150</strong></td><td>σïâµá╣σ£░Θáéτ┤Ü 150 µ¼╛,Φ┐æ 5 σ╣┤Φí¿τÅ╛µ£Çσ╝╖</td></tr>
+                    <tr><td><strong>Champagne 50</strong></td><td>ΘªÖµ¬│ 50 µ¼╛,τ⌐⌐σ«ÜΣ╜Äµ│óσïò</td></tr>
+                    <tr><td><strong>Italy 100</strong></td><td>τ╛⌐σñºσê⌐ 100 µ¼╛,µû░ΦêêµèòΦ│çµ¿ÖτÜä</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>µîçµò╕τ╕╛µòê (2019-2023 σ╣┤σîûσ¢₧σá▒)</strong>:</p>
+                <ul>
+                  <li>Burgundy 150: <strong>+12.3%</strong> (Θáÿσàê)</li>
+                  <li>Champagne 50: <strong>+8.5%</strong></li>
+                  <li>Liv-ex 100: <strong>+6.2%</strong></li>
+                  <li>Bordeaux 500: <strong>+4.1%</strong></li>
+                  <li>Italy 100: <strong>+9.8%</strong></li>
+                </ul>
+                <p class="note">Φ╢¿σïó: σïâµá╣σ£░µîüτ║îΦ╖æΦ┤Åµ│óτê╛σñÜ,τ╛⌐σñºσê⌐/ΘªÖµ¬│µêÉΘò╖µ╜¢σè¢σñºπÇé</p>
+              </div>
+              <div class="panel" data-feature="data">
+                <h4>Liv-ex µò╕µôÜµ£ìσïÖ</h4>
+                <p><strong>σâ╣µá╝σ╖Ñσà╖</strong>:</p>
+                <ul>
+                  <li><strong>Mid Price</strong>: Bid Φêç Offer Σ╕¡Θûôσâ╣,σ╕éσá┤σà▒Φ¡ÿπÇé</li>
+                  <li><strong>Market Price</strong>: µ£ÇΦ┐æµêÉΣ║ñσâ╣,σ»ªΘÜ¢Σ║ñµÿôσÅâΦÇâπÇé</li>
+                  <li><strong>Price Movement</strong>: µ£êσ║ª/σ╣┤σ║ªµ╝▓Φ╖îσ╣àπÇé</li>
+                </ul>
+                <p><strong>µ╡üσïòµÇºµîçµ¿Ö</strong>:</p>
+                <ul>
+                  <li><strong>Trading Frequency</strong>: σ╣┤Σ║ñµÿôµ¼íµò╕,> 50 µ¼íτé║Θ½ÿµ╡üσïòµÇºπÇé</li>
+                  <li><strong>Spread</strong>: Bid-Ask σâ╣σ╖«,< 5% τé║Σ╜│πÇé</li>
+                  <li><strong>Volume</strong>: µ£êµêÉΣ║ñΘçÅ (τô╢µò╕/τ«▒µò╕)πÇé</li>
+                </ul>
+                <p><strong>σêåµ₧Éσá▒σæè</strong>:</p>
+                <ul>
+                  <li>µ£êσ║ªσ╕éσá┤σá▒σæè: σâ╣µá╝Φ╢¿σïóπÇüµêÉΣ║ñΘçÅπÇüτå▒ΘûÇΘàÆµ¼╛πÇé</li>
+                  <li>σ╣┤Σ╗╜σêåµ₧É: σÉäσ╣┤Σ╗╜Φí¿τÅ╛πÇüΘü⌐Θú▓τ¬ùσÅúΘáÉµ╕¼πÇé</li>
+                  <li>τöóσìÇΦüÜτäª: µ│óτê╛σñÜ/σïâµá╣σ£░/τ╛⌐σñºσê⌐µ╖▒σ║ªσêåµ₧ÉπÇé</li>
+                </ul>
+                <p><strong>API µò╕µôÜΦ¿éΘû▒</strong>: µ⌐ƒµºïµèòΦ│çΦÇàσÅ»Φ│╝Φ▓╖σ»ªµÖéµò╕µôÜ feed (┬ú10K~┬ú50K/σ╣┤)πÇé</p>
+                <p class="note">µèòΦ│çσ╗║Φ¡░: σ«Üµ£ƒΦ┐╜Φ╣ñ Liv-ex Power 100 (µ£Çσà╖σ╜▒Θƒ┐σè¢ΘàÆµ¼╛),ΦüÜτäªΘ½ÿµ╡üσïòµÇºµ¿ÖτÜäπÇé</p>
+              </div>
+            </div>
+          </div>
+          <h3>µïìΦ│úσ╕éσá┤σïòµàï</h3>
+          <p><strong>σà¿τÉâµïìΦ│úΘíì</strong>: 2023 σ╣┤τ┤ä Γé¼450 million (Christie's Γé¼180M, Sotheby's Γé¼150M, Acker Γé¼120M)πÇé</p>
+          <p><strong>µïìΦ│úσä¬σïó</strong>:</p>
+          <ul>
+            <li>τ¿Çµ£ëΦÇüΘàÆ (1947, 1961 τ¡ëσé│σÑçσ╣┤Σ╗╜) Σ╕╗ΦªüΘÇÜΦ╖»πÇé</li>
+            <li>µò┤µë╣µïìΦ│ú (ΘàÆτ¬ûµ╕àσÇë) σÅ»τì▓µ║óσâ╣πÇé</li>
+            <li>σôüτëîΦâîµ¢╕,Σ╛åµ║Éτ¢╕σ░ìσÅ»Θ¥áπÇé</li>
+          </ul>
+          <p><strong>µïìΦ│úσèúσïó</strong>:</p>
+          <ul>
+            <li>Θ½ÿΣ╜úΘçæ: Φ▓╖µû╣ 20~25%,Φ│úµû╣ 10~15%,τ╕╜µêÉµ£¼ 30~40%πÇé</li>
+            <li>ΘÇ▒µ£ƒΘò╖: σ╛╡Θ¢å ΓåÆ Σ╝░σâ╣ ΓåÆ µïìΦ│ú ΓåÆ τ╡Éτ«ùΘ£Ç 3~6 µ£êπÇé</li>
+            <li>σâ╣µá╝µ│óσïò: τ½╢σâ╣σ┐âτÉå,σÅ»Φâ╜Θ½ÿµû╝/Σ╜Äµû╝σ╕éσá┤σâ╣πÇé</li>
+          </ul>
+          <p><strong>µïìΦ│úΦ¿ÿΘîä</strong> (µ¡╖σÅ▓Θ½ÿσâ╣):</p>
+          <table class="data-table compact">
+            <tbody>
+              <tr><td>DRC Roman├⌐e-Conti 1945</td><td>$558,000 (1 τô╢,Sotheby's 2018)</td></tr>
+              <tr><td>Ch├óteau Lafite 1869</td><td>$230,000 (3 τô╢,Sotheby's 2010)</td></tr>
+              <tr><td>Screaming Eagle 1992 (6L)</td><td>$500,000 (µàêσûäµïìΦ│ú 2000)</td></tr>
+            </tbody>
+          </table>
+          <h3>µèòΦ│çΘÇÇσç║τ¡ûτòÑ</h3>
+          <table class="data-table compact">
+            <thead>
+              <tr><th>ΘÇÇσç║τ«íΘüô</th><th>Θü⌐τö¿µâàσóâ</th><th>µÖéµòê</th><th>τ╕╜µêÉµ£¼</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Liv-ex Φ│úσç║</td><td>Φùìτ▒îΘàÆµ¼╛,σ┐½ΘÇƒΦ«èτÅ╛</td><td>1~3 σñ⌐</td><td>5.5%</td></tr>
+              <tr><td>ΘàÆσòåσ¢₧Φ│╝</td><td>Σ╕¡ΘÜÄΘàÆµ¼╛,σì│µÖéΘ£Çµ▒é</td><td>σì│µÖé</td><td>10~15% (µèÿσâ╣)</td></tr>
+              <tr><td>µïìΦ│ú</td><td>τ¿Çµ£ëΦÇüΘàÆ,µò┤µë╣ΘàÆτ¬û</td><td>3~6 µ£ê</td><td>30~40%</td></tr>
+              <tr><td>τºüΣ║║Σ║ñµÿô</td><td>σñºσ«ùΣ║ñµÿô,τåƒΦ¡ÿΦ▓╖σ«╢</td><td>σìöσòå</td><td>0~5% (τ£üΣ╜úΘçæ)</td></tr>
+            </tbody>
+          </table>
+          <p class="note">µ£ÇΣ╜│σ»ªΦ╕É: Φùìτ▒îΘàÆΦ╡░ Liv-ex,τ¿Çµ£ëΦÇüΘàÆΦ╡░µïìΦ│ú,Σ╕¡ΘÜÄΘàÆµë╛ΘàÆσòå,τ╖èµÇÑΦ«èτÅ╛µÄÑσÅùµèÿσâ╣πÇé</p>
+        </div>
+      
+
+=== KEY: slides.10.content ===
+<div class="chapter-content">
+          <h3>µèòΦ│çτ╡äσÉêΘàìτ╜«τ¡ûτòÑ</h3>
+          <div class="portfolio-strategy-widget">
+            <input type="radio" id="portfolio-conservative" name="portfolio-type" class="opt-conservative" checked>
+            <input type="radio" id="portfolio-balanced" name="portfolio-type" class="opt-balanced">
+            <input type="radio" id="portfolio-aggressive" name="portfolio-type" class="opt-aggressive">
+            <div class="selectors">
+              <label for="portfolio-conservative">Σ┐¥σ«êσ₧ï</label>
+              <label for="portfolio-balanced">σ╣│Φííσ₧ï</label>
+              <label for="portfolio-aggressive">ΘÇ▓σÅûσ₧ï</label>
+            </div>
+            <div class="panels">
+              <div class="panel" data-type="conservative">
+                <h4>Σ┐¥σ«êσ₧ïτ╡äσÉê (Σ╜ÄΘó¿ΘÜ¬)</h4>
+                <p><strong>τ¢«µ¿Ö</strong>: Φ│çµ£¼Σ┐¥σÇ╝,τ⌐⌐σ«Üσó₧σÇ╝,σ╣┤σîûσ¢₧σá▒ 4~6%πÇé</p>
+                <p><strong>Θàìτ╜«</strong>:</p>
+                <table class="data-table compact">
+                  <thead>
+                    <tr><th>Θí₧σêÑ</th><th>µ»öΣ╛ï</th><th>µ¿ÖτÜä</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>µ│óτê╛σñÜΣ╕Çτ┤ÜΦÄè</td><td>50%</td><td>Lafite, Latour, Margaux (µêÉτåƒσ╣┤Σ╗╜ 2010/2015)</td></tr>
+                    <tr><td>ΘªÖµ¬│</td><td>25%</td><td>Krug, Dom P├⌐rignon, Bollinger (σ╣┤Σ╗╜ΘªÖµ¬│)</td></tr>
+                    <tr><td>σïâµá╣σ£░ Grand Cru</td><td>15%</td><td>DRC, Leroy, Rousseau (σ░æΘçÅΘàìτ╜«)</td></tr>
+                    <tr><td>τ╛⌐σñºσê⌐ Super Tuscan</td><td>10%</td><td>Sassicaia, Ornellaia, Masseto</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>τë╣µÇº</strong>:</p>
+                <ul>
+                  <li>Θ½ÿµ╡üσïòµÇº: 90% ΘàÆµ¼╛σÅ»σ£¿ Liv-ex σ┐½ΘÇƒΣ║ñµÿôπÇé</li>
+                  <li>Σ╜Äµ│óσïò: σ╣┤σîûµ│óσïòτÄç 10~12%πÇé</li>
+                  <li>σôüτëîΣ┐¥Φ¡╖: Σ╕Çτ┤ÜΦÄèµèùΦ╖îµÇºσ╝╖,2008/2020 σ¢₧µÆñ < 15%πÇé</li>
+                </ul>
+                <p><strong>Θü⌐σÉêσ░ìΦ▒í</strong>: ΘÇÇΣ╝æΣ║║σú½πÇüΦ│çµ£¼Σ┐¥σÇ╝Θ£Çµ▒éπÇüΘó¿ΘÜ¬σÄ¡µâíΦÇàπÇé</p>
+                <p class="note">µíêΣ╛ï: Γé¼100K µèòΦ│ç,5 σ╣┤σ╛îΘáÉµ£ƒ Γé¼125K~Γé¼135K (25~35% τ╕╜σ¢₧σá▒)πÇé</p>
+              </div>
+              <div class="panel" data-type="balanced">
+                <h4>σ╣│Φííσ₧ïτ╡äσÉê (Σ╕¡τ¡ëΘó¿ΘÜ¬)</h4>
+                <p><strong>τ¢«µ¿Ö</strong>: σ╣│Φííσó₧σÇ╝ΦêçΘó¿ΘÜ¬,σ╣┤σîûσ¢₧σá▒ 7~10%πÇé</p>
+                <p><strong>Θàìτ╜«</strong>:</p>
+                <table class="data-table compact">
+                  <thead>
+                    <tr><th>Θí₧σêÑ</th><th>µ»öΣ╛ï</th><th>µ¿ÖτÜä</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>µ│óτê╛σñÜΣ╕Çτ┤ÜΦÄè</td><td>30%</td><td>µá╕σ┐âµîüσÇë,µêÉτåƒσ╣┤Σ╗╜</td></tr>
+                    <tr><td>σïâµá╣σ£░Θáéτ┤Ü</td><td>35%</td><td>DRC, Leroy, Dujac, Roumier (µêÉΘò╖σ╝òµôÄ)</td></tr>
+                    <tr><td>ΘÜåµ▓│/τ╛⌐σñºσê⌐</td><td>20%</td><td>Guigal La La, Gaja, Solaia (µû░Φêêµ╜¢σè¢)</td></tr>
+                    <tr><td>ΘªÖµ¬│</td><td>10%</td><td>τ⌐⌐σ«ÜΘàìµü»µÇºΦ│¬</td></tr>
+                    <tr><td>µ£ƒΘàÆ</td><td>5%</td><td>Θáéτ┤Üσ╣┤Σ╗╜µ£ƒΘàÆ (2019/2022)</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>τë╣µÇº</strong>:</p>
+                <ul>
+                  <li>µêÉΘò╖µ╜¢σè¢: σïâµá╣σ£░Φ┐æ 5 σ╣┤σ╣┤σîû +12%πÇé</li>
+                  <li>σêåµòúΘó¿ΘÜ¬: Φ╖¿τöóσìÇπÇüσ╣┤Σ╗╜πÇüΘó¿µá╝πÇé</li>
+                  <li>Θü⌐σ║ªµèòµ⌐ƒ: 5% µ£ƒΘàÆσìÜσÅûΦ╢àΘíìσ¢₧σá▒πÇé</li>
+                </ul>
+                <p><strong>σåìσ╣│Φíí</strong>: µ»Åσ╣┤µ¬óΦªû,σïâµá╣σ£░ΦïÑµ╝▓Φ╢à 40% ΓåÆ Θâ¿σêåτì▓σê⌐Σ║åτ╡É,σåìµèòΦ│çΣ╜ÄΣ╝░µ¿ÖτÜäπÇé</p>
+                <p><strong>Θü⌐σÉêσ░ìΦ▒í</strong>: Σ╕¡σ╣┤µèòΦ│çΦÇàπÇü10~15 σ╣┤µèòΦ│çµ£ƒπÇüσÅ»µë┐σÅùΣ╕¡σ║ªµ│óσïòπÇé</p>
+                <p class="note">µíêΣ╛ï: Γé¼100K µèòΦ│ç,5 σ╣┤σ╛îΘáÉµ£ƒ Γé¼140K~Γé¼160K (40~60% τ╕╜σ¢₧σá▒)πÇé</p>
+              </div>
+              <div class="panel" data-type="aggressive">
+                <h4>ΘÇ▓σÅûσ₧ïτ╡äσÉê (Θ½ÿΘó¿ΘÜ¬)</h4>
+                <p><strong>τ¢«µ¿Ö</strong>: Φ┐╜µ▒éµ£Çσñºσó₧σÇ╝,σ╣┤σîûσ¢₧σá▒ 12~20%πÇé</p>
+                <p><strong>Θàìτ╜«</strong>:</p>
+                <table class="data-table compact">
+                  <thead>
+                    <tr><th>Θí₧σêÑ</th><th>µ»öΣ╛ï</th><th>µ¿ÖτÜä</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>σïâµá╣σ£░ DRC/Leroy</td><td>40%</td><td>Θáéτ┤Üσû«Σ╕Çσ£Æ,Φ┐æσ╣┤σ╣┤Σ╗╜</td></tr>
+                    <tr><td>Φ╗èσ║½ΘàÆ/Φå£µï£ΘàÆ</td><td>25%</td><td>Le Pin, Valandraud, Screaming Eagle</td></tr>
+                    <tr><td>µ£ƒΘàÆ</td><td>20%</td><td>Θáéτ┤Üσ╣┤Σ╗╜ (2018/2019/2022)</td></tr>
+                    <tr><td>µû░ΦêêτöóσìÇ</td><td>10%</td><td>Napa Cult, Barolo τÅ╛Σ╗úµ┤╛ (Conterno, Gaja)</td></tr>
+                    <tr><td>µ│óτê╛σñÜΣ╕Çτ┤ÜΦÄè</td><td>5%</td><td>σ░æΘçÅΘü┐ΘÜ¬</td></tr>
+                  </tbody>
+                </table>
+                <p><strong>τë╣µÇº</strong>:</p>
+                <ul>
+                  <li>Θ½ÿµ│óσïò: σ╣┤σîûµ│óσïòτÄç 20~25%πÇé</li>
+                  <li>µ╡üσïòµÇºΘó¿ΘÜ¬: Θâ¿σêåΦ╗èσ║½ΘàÆ Bid-Ask spread > 15%πÇé</li>
+                  <li>τêåτÖ╝µ╜¢σè¢: DRC Φ┐æ 10 σ╣┤µ╝▓σ╣à > 300%πÇé</li>
+                </ul>
+                <p><strong>Θó¿ΘÜ¬</strong>:</p>
+                <ul>
+                  <li>σ╕éσá┤σ¢₧Φ¬┐σÅ»Φâ╜ΦÖºµÉì -30~50%πÇé</li>
+                  <li>σüçΘàÆΘó¿ΘÜ¬Φ╝âΘ½ÿ (Θ£ÇσÜ┤µá╝Σ╛åµ║Éτ«íµÄº)πÇé</li>
+                  <li>Θ£Çσ░êµÑ¡τƒÑΦ¡ÿΦêçσ╕éσá┤µòÅΘè│σ║ªπÇé</li>
+                </ul>
+                <p><strong>Θü⌐σÉêσ░ìΦ▒í</strong>: σ╣┤Φ╝òΘ½ÿµö╢σàÑΦÇàπÇüσ░êµÑ¡µèòΦ│çΦÇàπÇüσÅ»µë┐σÅùΘ½ÿµ│óσïòΦêçµ╜¢σ£¿ΦÖºµÉìπÇé</p>
+                <p class="note">µíêΣ╛ï: Γé¼100K µèòΦ│ç,5 σ╣┤σ╛îσÅ»Φâ╜ Γé¼180K~Γé¼250K (τë¢σ╕é) µêû Γé¼70K~Γé¼90K (τåèσ╕é)πÇé</p>
+              </div>
+            </div>
+          </div>
+          <h3>µèòΦ│çµ£ƒΘÖÉΦêçµîüµ£ëτ¡ûτòÑ</h3>
+          <table class="data-table compact">
+            <thead>
+              <tr><th>µ£ƒΘÖÉ</th><th>τ¡ûτòÑ</th><th>µ¿ÖτÜä</th><th>ΘáÉµ£ƒσ¢₧σá▒</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>τƒ¡µ£ƒ (1~3 σ╣┤)</td><td>µ£ƒΘàÆσÑùσê⌐,σ╕éσá┤µ│óσïòΣ║ñµÿô</td><td>Θáéτ┤Üσ╣┤Σ╗╜µ£ƒΘàÆ,τå▒ΘûÇµû░ΘàÆ</td><td>10~30% (Θ½ÿΘó¿ΘÜ¬)</td></tr>
+              <tr><td>Σ╕¡µ£ƒ (5~10 σ╣┤)</td><td>Φ▓╖σàÑµîüµ£ë,Θü⌐Θú▓τ¬ùσÅúσëìσç║σö«</td><td>Σ╕Çτ┤ÜΦÄè,σïâµá╣σ£░ Grand Cru</td><td>50~100%</td></tr>
+              <tr><td>Θò╖µ£ƒ (15+ σ╣┤)</td><td>ΘÖ│σ╣┤σó₧σÇ╝,σé│µë┐µö╢ΦùÅ</td><td>DRC, P├⌐trus, σé│σÑçσ╣┤Σ╗╜</td><td>150~400%</td></tr>
+            </tbody>
+          </table>
+          <h3>σà¿τÉâΣ╕╗Φªüσ╕éσá┤τ¿àσïÖΦÇâΘçÅ</h3>
+          <table class="data-table">
+            <thead>
+              <tr><th>σ£ïσ«╢/σ£░σìÇ</th><th>Φ│çµ£¼σê⌐σ╛ùτ¿à</th><th>ΘÇ▓σÅúΘù£τ¿à</th><th>σó₧σÇ╝τ¿à (VAT)</th><th>σä¬σîûτ¡ûτòÑ</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Φï▒σ£ï</td><td>σàìτ¿à (ΘàÆτé║ "wasting asset")</td><td>σàì (2021 σ╛î)</td><td>20% (σÅ»σ╗╢τ¿à)</td><td>Σ┐¥τ¿àσÇëσä▓ (LCB),σ╗╢σ╛îµÅÉΘàÆ</td></tr>
+              <tr><td>τ╛Äσ£ï</td><td>Θò╖µ£ƒ (>1 σ╣┤) 0~20%</td><td>σÉäσ╖₧Σ╕ìσÉî</td><td>τäíΦü»Θéª VAT</td><td>Delaware/Oregon σàìσ╖₧τ¿à</td></tr>
+              <tr><td>ΘªÖµ╕»</td><td>σàìτ¿à</td><td>σàì</td><td>τäí</td><td>σà¿τÉâµ£Çσä¬,Φç¬τö▒µ╕»σ£░Σ╜ì</td></tr>
+              <tr><td>µû░σèáσ¥í</td><td>σàìτ¿à</td><td>σàì (2008 σ╛î)</td><td>7% (σÅ»ΘÇÇ)</td><td>Σ┐¥τ¿àσÇë,Σ║₧µ┤▓µ¿₧τ┤É</td></tr>
+              <tr><td>Σ╕¡σ£ï</td><td>20% (σÇïΣ║║)</td><td>14% + µ╢êΦ▓╗τ¿à 10%</td><td>13%</td><td>ΘÇÅΘüÄΘªÖµ╕»Φ╜ëΘüï,Θü┐σàìτ¢┤µÄÑΘÇ▓σÅú</td></tr>
+              <tr><td>µ│òσ£ï</td><td>19% (+ 17.2% τñ╛µ£âτ¿à)</td><td>σàì (µ¡Éτ¢ƒσàº)</td><td>20%</td><td>µ¡Éτ¢ƒσàºµ╡üΘÇÜσàìΘù£τ¿à</td></tr>
+            </tbody>
+          </table>
+          <h3>Σ┐¥τ¿àσÇëσä▓ (Bonded Warehouse) τ¡ûτòÑ</h3>
+          <p><strong>µ⌐ƒσê╢</strong>: ΘàÆσ¡ÿµû╝Σ┐¥τ¿àσÇë,VAT/Θù£τ¿àµÜ½τ╖⌐,σâàµÅÉΘàÆµÖéτ╣│τ┤ìπÇé</p>
+          <p><strong>σä¬σïó</strong>:</p>
+          <ul>
+            <li>σ╗╢σ╛îτ╣│τ¿à,µö╣σûäτÅ╛Θçæµ╡üπÇé</li>
+            <li>Φ╜ëσö«µÖéτäíΘ£Çτ╣│τ¿à (σÇëσ░ìσÇëΣ║ñµÿô)πÇé</li>
+            <li>σ£ïΘÜ¢µ╡üΘÇÜΣ╛┐σê⌐ (σªé LCB σÅ»Φ╜ëΦç│ΘªÖµ╕»/µû░σèáσ¥í)πÇé</li>
+          </ul>
+          <p><strong>µíêΣ╛ï</strong>: Φï▒σ£ïµèòΦ│çΦÇàΦ│╝Φ▓╖ Γé¼10,000 µ│óτê╛σñÜΘàÆ</p>
+          <ul>
+            <li>Θü╕Θáà A: τ¢┤µÄÑµÅÉΘàÆ ΓåÆ τ½ïσì│τ╣│ 20% VAT (Γé¼2,000)πÇé</li>
+            <li>Θü╕Θáà B: Σ┐¥τ¿àσÇëσä▓ ΓåÆ σ╗╢σ╛îτ╣│τ¿à,5 σ╣┤σ╛îΦ╜ëσö« Γé¼18,000 ΓåÆ σÇëσ░ìσÇëΣ║ñµÿô,τäíΘ£Çτ╣│τ¿à,µ╖¿Φ│║ Γé¼8,000πÇé</li>
+          </ul>
+          <h3>Θü║τöóΦªÅσèâΦêçσé│µë┐</h3>
+          <p><strong>µîæµê░</strong>:</p>
+          <ul>
+            <li>Σ╝░σÇ╝σ¢░Θ¢ú: τ¿Çµ£ëΦÇüΘàÆτäíσà¼Θûïσ╕éσá┤σâ╣πÇé</li>
+            <li>Θü║τöóτ¿à: Φï▒σ£ï 40% (Φ╢àΘüÄ ┬ú325K),τ╛Äσ£ïΦü»Θéª 40% (Φ╢àΘüÄ $13.6M)πÇé</li>
+            <li>σ»ªτë⌐σêåσë▓: ΘàÆΘ¢úΣ╗Ñσ¥çσêå,σ╝òτÖ╝σ«╢µùÅτ│╛τ┤¢πÇé</li>
+          </ul>
+          <p><strong>σä¬σîûµû╣µíê</strong>:</p>
+          <ol>
+            <li><strong>Σ┐íΦ¿ùτ╡Éµºï</strong>: σ░çΘàÆΦùÅτ╜«σàÑσ«╢µùÅΣ┐íΦ¿ù,Θü┐σàìΘü║τöóτ¿àπÇé</li>
+            <li><strong>Σ┐¥ΘÜ¬ΦªÅσèâ</strong>: Φ│╝Φ▓╖Σ║║σú╜Σ┐¥ΘÜ¬,ΦªåΦôïµ╜¢σ£¿τ¿àΦ▓áπÇé</li>
+            <li><strong>µÅÉσëìΦ┤êΦêç</strong>: Φï▒σ£ïµ»Åσ╣┤ ┬ú3,000 σàìτ¿àΘíì,ΘÇÉσ╣┤Φ╜ëτº╗πÇé</li>
+            <li><strong>µàêσûäµìÉΦ┤ê</strong>: µìÉΦ┤êσìÜτë⌐Θñ¿/µïìΦ│úµàêσûä,σÅ»µè╡τ¿àπÇé</li>
+          </ol>
+          <p class="note">σ╗║Φ¡░: ΘàÆΦùÅσâ╣σÇ╝ > Γé¼500K µçëΦ½«Φ⌐óσ░êµÑ¡τ¿àσïÖΘíºσòÅΦêçΦ▓íσ»îΦªÅσèâσ╕½πÇé</p>
+        </div>
+      
+

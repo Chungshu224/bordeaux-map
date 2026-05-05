@@ -1,65 +1,128 @@
 [
   {
     "name": "Château Haut-Brion",
-    "coordinates": [-0.6087, 44.8167],
+    "coordinates": [
+      -0.6087,
+      44.8167
+    ],
     "rank": "一級酒莊 (Premier Grand Cru Classé, Graves)",
     "description": "波爾多五大酒莊之一，唯一同時列名於1855年分級與Graves分級的頂級酒莊，紅白酒皆享譽國際。",
-    "image": "/images/chateaux/LeftBank/Graves/haut_brion.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/haut_brion.jpg",
+    "description_en": "One of Bordeaux's five First Growths and the only estate listed in both the 1855 Classification and the Graves Classification; renowned internationally for both red and white wines.",
+    "rank_en": "Premier Grand Cru Classé (Graves)",
+    "rank_ja": "プルミエ・グラン・クリュ・クラッセ（グラーヴ）",
+    "description_ja": "ボルドー五大シャトーの一つで、1855年格付けとグラーヴ格付け双方に名を連ねる唯一のシャトー。赤白ともに国際的に高い評価を得る。"
   },
   {
     "name": "Château Pape Clément",
-    "coordinates": [-0.64683, 44.80571],
+    "coordinates": [
+      -0.64683,
+      44.80571
+    ],
     "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
     "description": "歷史可追溯至13世紀，紅白酒均極具代表性，風格濃郁且具陳年潛力。",
-    "image": "/images/chateaux/LeftBank/Graves/pape_clement.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/pape_clement.jpg",
+    "description_en": "Dating back to the 13th century, producing highly representative red and white wines of full body with excellent ageing potential.",
+    "rank_en": "Grand Cru Classé de Graves",
+    "rank_ja": "グラン・クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "13世紀に起源を持つ歴史的名シャトー。フルボディで熟成力に優れた赤白ワインを生産する。"
   },
   {
     "name": "Château La Mission Haut-Brion",
-    "coordinates": [-0.60565, 44.81539],
+    "coordinates": [
+      -0.60565,
+      44.81539
+    ],
     "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
     "description": "與Haut-Brion齊名的頂級酒莊，紅酒以濃郁與複雜著稱，白酒產量稀少。",
-    "image": "/images/chateaux/LeftBank/Graves/la_mission_haut_brion.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/la_mission_haut_brion.jpg",
+    "description_en": "A peer of Haut-Brion, celebrated for rich, complex red wines; white wine production is very limited.",
+    "rank_en": "Grand Cru Classé de Graves",
+    "rank_ja": "グラン・クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "オー・ブリオンと並ぶ存在で、リッチで複雑な赤ワインで名高い。白ワインの生産量は極めて少ない。"
   },
   {
     "name": "Château Carbonnieux",
-    "coordinates": [-0.56894, 44.74533],
+    "coordinates": [
+      -0.56894,
+      44.74533
+    ],
     "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
     "description": "同時以紅、白酒聞名，白酒清新優雅，紅酒結構良好。",
-    "image": "/images/chateaux/LeftBank/Graves/carbonnieux.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/carbonnieux.jpg",
+    "description_en": "Renowned for both red and white wines; whites are fresh and elegant, reds well-structured.",
+    "rank_en": "Grand Cru Classé de Graves",
+    "rank_ja": "グラン・クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白ともに名高い格付けシャトー。白はフレッシュでエレガント、赤はしっかりとした骨格を持つ。"
   },
   {
     "name": "Château Smith Haut Lafitte",
-    "coordinates": [-0.55857, 44.73251],
+    "coordinates": [
+      -0.55857,
+      44.73251
+    ],
     "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
     "description": "現代化管理下品質大幅提升，紅白酒均具國際聲譽。",
-    "image": "/images/chateaux/LeftBank/Graves/smith_haut_lafitte.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/smith_haut_lafitte.jpg",
+    "description_en": "Modern management has greatly elevated quality; both red and white wines now enjoy international acclaim.",
+    "rank_en": "Grand Cru Classé de Graves",
+    "rank_ja": "グラン・クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "近代的な経営により品質が飛躍的に向上。赤白ともに国際的に高い評価を受ける。"
   },
   {
     "name": "Château Malartic-Lagravière",
-    "coordinates": [-0.6026, 44.7223],
+    "coordinates": [
+      -0.6026,
+      44.7223
+    ],
     "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
     "description": "少數紅白酒皆獲分級的酒莊，白酒以清新細緻著稱。",
-    "image": "/images/chateaux/LeftBank/Graves/malartic_lagraviere.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/malartic_lagraviere.jpg",
+    "description_en": "One of the few estates with classified red and white wines; whites are celebrated for their finesse.",
+    "rank_en": "Grand Cru Classé de Graves",
+    "rank_ja": "グラン・クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白双方が格付けされた数少ないシャトー。白はその繊細さと優雅さで特に評価が高い。"
   },
   {
     "name": "Château Olivier",
-    "coordinates": [-0.59779, 44.74791],
+    "coordinates": [
+      -0.59779,
+      44.74791
+    ],
     "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
     "description": "同時生產紅、白酒，白酒表現尤為出色，風格優雅。",
-    "image": "/images/chateaux/LeftBank/Graves/olivier.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/olivier.jpg",
+    "description_en": "Produces both red and white wines; whites are particularly outstanding in their elegant style.",
+    "rank_en": "Grand Cru Classé de Graves",
+    "rank_ja": "グラン・クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白ともに生産する格付けシャトー。白はとりわけ優雅なスタイルで高評価。"
   },
   {
     "name": "Château Latour-Martillac",
-    "coordinates": [-0.53931, 44.71156],
+    "coordinates": [
+      -0.53931,
+      44.71156
+    ],
     "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
     "description": "紅白酒皆具代表性，白酒以花香與礦石感著稱。",
-    "image": "/images/chateaux/LeftBank/Graves/latour_martillac.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/latour_martillac.jpg",
+    "description_en": "Both reds and whites are representative; whites are noted for their floral and mineral character.",
+    "rank_en": "Grand Cru Classé de Graves",
+    "rank_ja": "グラン・クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白ともに代表的な格付けシャトー。白はフローラルでミネラル感が際立つ。"
   },
   {
     "name": "Château Bouscaut",
-    "coordinates": [-0.54842, 44.7468],
+    "coordinates": [
+      -0.54842,
+      44.7468
+    ],
     "rank": "Graves 分級酒莊 (Grand Cru Classé de Graves)",
     "description": "紅白酒皆獲分級，白酒圓潤飽滿，紅酒結構紮實。",
-    "image": "/images/chateaux/LeftBank/Graves/bouscaut.jpg"
+    "image": "/images/chateaux/LeftBank/Graves/bouscaut.jpg",
+    "description_en": "Both reds and whites are classified; whites are round and full, reds firmly structured.",
+    "rank_en": "Grand Cru Classé de Graves",
+    "rank_ja": "グラン・クリュ・クラッセ・ド・グラーヴ",
+    "description_ja": "赤白ともに格付けされ、白は丸みのある豊かなスタイル、赤はしっかりとした骨格を持つ。"
   }
 ]

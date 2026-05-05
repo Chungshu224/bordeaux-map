@@ -384,8 +384,15 @@ export default {
       geology:      'BRGM Geology',
     },
     chateau: {
-      show:   'Show Châteaux',
-      hide:   'Hide Châteaux',
+      show:    'Show Châteaux',
+      hide:    'Hide Châteaux',
+      tried:   '✓ Tried It',
+      wish:    '♡ Wish List',
+      website: 'Official Website',
+    },
+    header: {
+      back: '← Back to {name} Course',
+      home: '🏠 Home',
     },
     mobile: {
       aoc:    'AOC',
@@ -429,6 +436,18 @@ export default {
       sweet:    'Sweet',
       sparkling:'Sparkling',
       rose:     'Rosé',
+    },
+    info: {
+      area:        'Area',
+      hectares:    'ha',
+      type:        'Type',
+      styles:      'Wine Styles',
+      grapes:      'Main Grape Varieties',
+      climate:     'Climate',
+      soil:        'Soil',
+      description: 'About',
+      subregions:  'Sub-appellations',
+      estates:     'Notable Châteaux',
     },
   },
 }

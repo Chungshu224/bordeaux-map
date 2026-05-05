@@ -7,7 +7,11 @@
     ],
     "rank": "一級酒莊 (Premier Cru Classé)",
     "description": "Barsac 五大一級酒莊之一，歷史悠久，以高品質貴腐甜白酒著稱。",
-    "image": "/images/chateaux/Sauternais/coutet.jpg"
+    "image": "/images/chateaux/Sauternais/coutet.jpg",
+    "description_en": "One of the five First Growths of Barsac, with a long history of producing high-quality botrytized sweet whites.",
+    "rank_en": "Premier Cru Classé",
+    "rank_ja": "プルミエ・クリュ・クラッセ",
+    "description_ja": "バルサック第一特等格付けの一つ。長年にわたり高品質な貴腐甘口白ワインを生産し続ける歴史的名シャトー。"
   },
   {
     "name": "Château Climens",
@@ -16,9 +20,13 @@
       44.5935
     ],
     "rank": "一級酒莊 (Premier Cru Classé)",
-  "description": "Barsac 五大一級酒莊之一，風格細膩優雅，被譽為Barsac的女王。",
-  "image": "/images/chateaux/Sauternais/climens.jpg"
-},
+    "description": "Barsac 五大一級酒莊之一，風格細膩優雅，被譽為Barsac的女王。",
+    "image": "/images/chateaux/Sauternais/climens.jpg",
+    "description_en": "One of the five First Growths of Barsac, celebrated for its delicate, refined character — often called the Queen of Barsac.",
+    "rank_en": "Premier Cru Classé",
+    "rank_ja": "プルミエ・クリュ・クラッセ",
+    "description_ja": "バルサック第一特等格付け。繊細で上品なスタイルから「バルサックの女王」とも称される。"
+  },
   {
     "name": "Château Doisy-Daëne",
     "coordinates": [
@@ -27,7 +35,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Cru Classé)",
     "description": "以純淨、細緻的貴腐甜白酒聞名，家族經營歷史悠久。",
-    "image": "/images/chateaux/Sauternais/doisy_daene.jpg"
+    "image": "/images/chateaux/Sauternais/doisy_daene.jpg",
+    "description_en": "Renowned for pure, refined botrytized sweet whites; a long-established family estate.",
+    "rank_en": "Deuxième Cru Classé",
+    "rank_ja": "ドゥジェム・クリュ・クラッセ",
+    "description_ja": "純粋で洗練された貴腐甘口白ワインで名高い、長い歴史を持つ家族経営のシャトー。"
   },
   {
     "name": "Château Doisy-Védrines",
@@ -36,8 +48,12 @@
       44.5859
     ],
     "rank": "二級酒莊 (Deuxième Cru Classé)",
-  "description": "Barsac 面積最大的二級酒莊，酒體濃郁，陳年潛力佳。",
-  "image": "/images/chateaux/Sauternais/doisy_vedrines.jpg"
+    "description": "Barsac 面積最大的二級酒莊，酒體濃郁，陳年潛力佳。",
+    "image": "/images/chateaux/Sauternais/doisy_vedrines.jpg",
+    "description_en": "The largest Second Growth in Barsac; full-bodied with excellent ageing potential.",
+    "rank_en": "Deuxième Cru Classé",
+    "rank_ja": "ドゥジェム・クリュ・クラッセ",
+    "description_ja": "バルサック最大の第二特等格付け。豊かなボディと優れた熟成ポテンシャルが特徴。"
   },
   {
     "name": "Château de Myrat",
@@ -47,7 +63,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Cru Classé)",
     "description": "歷史悠久的 Barsac 酒莊，風格優雅細膩。",
-    "image": "/images/chateaux/Sauternais/de_myrat.jpg"
+    "image": "/images/chateaux/Sauternais/de_myrat.jpg",
+    "description_en": "A historic Barsac estate of elegant, refined character.",
+    "rank_en": "Deuxième Cru Classé",
+    "rank_ja": "ドゥジェム・クリュ・クラッセ",
+    "description_ja": "優雅で上品なスタイルを持つ歴史あるバルサックのシャトー。"
   },
   {
     "name": "Château Nairac",
@@ -57,7 +77,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Cru Classé)",
     "description": "以優雅、細膩的甜白酒著稱，具備良好陳年能力。",
-    "image": "/images/chateaux/Sauternais/nairac.jpg"
+    "image": "/images/chateaux/Sauternais/nairac.jpg",
+    "description_en": "Celebrated for elegant, refined sweet whites with good ageing capacity.",
+    "rank_en": "Deuxième Cru Classé",
+    "rank_ja": "ドゥジェム・クリュ・クラッセ",
+    "description_ja": "繊細でエレガントな甘口白ワインと高い熟成力で知られる。"
   },
   {
     "name": "Château Gravas",
@@ -66,7 +90,11 @@
       44.59724
     ],
     "rank": "二級酒莊 (Deuxième Cru Classé)",
-    "description": "家族經營的二級酒莊，風格清新細緻，甜度適中。"
+    "description": "家族經營的二級酒莊，風格清新細緻，甜度適中。",
+    "description_en": "A family-run Second Growth estate producing fresh, refined wines with balanced sweetness.",
+    "rank_en": "Deuxième Cru Classé",
+    "rank_ja": "ドゥジェム・クリュ・クラッセ",
+    "description_ja": "フレッシュで洗練されたバランスの取れた甘口ワインを生む家族経営の第二特等格付けシャトー。"
   },
   {
     "name": "Château Caillou",
@@ -76,7 +104,11 @@
     ],
     "rank": "二級酒莊 (Deuxième Cru Classé)",
     "description": "以傳統工藝釀造，展現Barsac產區典型的優雅與新鮮感。",
-    "image": "/images/chateaux/Sauternais/caillou.jpg"
+    "image": "/images/chateaux/Sauternais/caillou.jpg",
+    "description_en": "Crafted using traditional methods, showcasing Barsac's signature elegance and freshness.",
+    "rank_en": "Deuxième Cru Classé",
+    "rank_ja": "ドゥジェム・クリュ・クラッセ",
+    "description_ja": "伝統的な製法を守り、バルサック特有のエレガンスとフレッシュさを体現した甘口白ワイン。"
   },
   {
     "name": "Château Simon",
@@ -86,6 +118,10 @@
     ],
     "rank": "Barsac 地區優質酒莊",
     "description": "家族經營，產量不大但品質穩定，甜白酒風格純淨。",
-    "image": "/images/chateaux/Sauternais/simon.jpg"
+    "image": "/images/chateaux/Sauternais/simon.jpg",
+    "description_en": "A small family estate producing consistent, pure sweet whites.",
+    "rank_en": "Distinguished Barsac Estate",
+    "rank_ja": "バルサック 優良シャトー",
+    "description_ja": "純粋で安定した甘口白ワインを生産する小規模家族経営シャトー。"
   }
 ]

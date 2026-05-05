@@ -1,72 +1,142 @@
 [
   {
     "name": "Château Léoville Las Cases",
-    "coordinates": [-0.74041, 45.16371],
+    "coordinates": [
+      -0.74041,
+      45.16371
+    ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "聖朱利安最具代表性的二級酒莊，風格嚴謹、陳年潛力極佳，常被譽為“超一級”。",
-    "image": "/images/chateaux/LeftBank/Medoc/leoville_las_cases.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/leoville_las_cases.jpg",
+    "description_en": "The most representative Second Growth of Saint-Julien; rigorous in structure and with extraordinary ageing potential — often called a 'Super Second'.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "サン＝ジュリアンを代表する第二特等格付け。厳格な骨格と驚異的な熟成力から「スーパーセコン」と呼ばれる。"
   },
   {
     "name": "Château Léoville Barton",
-    "coordinates": [-0.73925, 45.15739],
+    "coordinates": [
+      -0.73925,
+      45.15739
+    ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "以傳統釀造與穩定品質著稱，風格經典、結構感強。",
-    "image": "/images/chateaux/LeftBank/Medoc/leoville_barton.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/leoville_barton.jpg",
+    "description_en": "Known for traditional winemaking and consistent quality; classic, firmly structured style.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "伝統的な醸造法と安定した品質で知られる。クラシックでしっかりとした骨格のスタイル。"
   },
   {
     "name": "Château Léoville Poyferré",
-    "coordinates": [-0.74048, 45.16409],
+    "coordinates": [
+      -0.74048,
+      45.16409
+    ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "以濃郁果香和柔順單寧著稱，近年品質大幅提升。",
-    "image": "/images/chateaux/LeftBank/Medoc/leoville_poyferre.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/leoville_poyferre.jpg",
+    "description_en": "Known for rich fruit and smooth tannins; quality has greatly improved in recent years.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "豊かな果実感と滑らかなタンニンで名高い。近年品質が大幅に向上している。"
   },
   {
     "name": "Château Ducru-Beaucaillou",
-    "coordinates": [-0.7324, 45.14912],
+    "coordinates": [
+      -0.7324,
+      45.14912
+    ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "以礫石土壤和優雅風格聞名，酒體細緻、陳年潛力佳。",
-    "image": "/images/chateaux/LeftBank/Medoc/ducru_beaucaillou.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/ducru_beaucaillou.jpg",
+    "description_en": "Known for its gravelly terroir and elegant style; refined in texture with excellent ageing potential.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "砂利テロワールと優雅なスタイルで名高い。洗練されたテクスチャーと優れた熟成力。"
   },
   {
     "name": "Château Gruaud Larose",
-    "coordinates": [-0.75083, 45.14444],
+    "coordinates": [
+      -0.75083,
+      45.14444
+    ],
     "rank": "二級酒莊 (Deuxième Grand Cru Classé 1855)",
     "description": "風格濃郁、結構感強，適合長期陳年。",
-    "image": "/images/chateaux/LeftBank/Medoc/gruaud_larose.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/gruaud_larose.jpg",
+    "description_en": "Rich, full-bodied, and firmly structured; ideal for long-term cellaring.",
+    "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第2級格付け",
+    "description_ja": "リッチでフルボディ、しっかりとした骨格。長期熟成に最適なスタイル。"
   },
   {
     "name": "Château Lagrange",
-    "coordinates": [-0.77325, 45.14947],
+    "coordinates": [
+      -0.77325,
+      45.14947
+    ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "以均衡風格和穩定品質著稱，性價比高。",
-    "image": "/images/chateaux/LeftBank/Medoc/lagrange.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/lagrange.jpg",
+    "description_en": "Known for balanced style and consistent quality; excellent value.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "バランスの取れたスタイルと安定した品質が魅力。コストパフォーマンスが高い。"
   },
   {
     "name": "Château Talbot",
-    "coordinates": [-0.7557, 45.1593],
+    "coordinates": [
+      -0.7557,
+      45.1593
+    ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "聖朱利安最大酒莊之一，風格圓潤、果香明顯。",
-    "image": "/images/chateaux/LeftBank/Medoc/talbot.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/talbot.jpg",
+    "description_en": "One of Saint-Julien's largest estates; round and fruit-forward.",
+    "rank_en": "4th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第4級格付け",
+    "description_ja": "サン＝ジュリアン最大規模のシャトーの一つ。丸みのある果実豊かなスタイル。"
   },
   {
     "name": "Château Branaire-Ducru",
-    "coordinates": [-0.735, 45.146],
+    "coordinates": [
+      -0.735,
+      45.146
+    ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "以細膩果香和優雅風格著稱，近年品質穩定提升。",
-    "image": "/images/chateaux/LeftBank/Medoc/branaire_ducru.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/branaire_ducru.jpg",
+    "description_en": "Known for its delicate fruit and refined style; quality has improved consistently.",
+    "rank_en": "4th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第4級格付け",
+    "description_ja": "デリケートな果実感と洗練されたスタイルで名高い。着実に品質向上中。"
   },
   {
     "name": "Château Beychevelle",
-    "coordinates": [-0.733, 45.145],
+    "coordinates": [
+      -0.733,
+      45.145
+    ],
     "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
     "description": "以帆船酒標著稱，風格柔順、易飲，深受市場歡迎。",
-    "image": "/images/chateaux/LeftBank/Medoc/beychevelle.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/beychevelle.jpg",
+    "description_en": "Famous for its ship-on-sail label; smooth, approachable, and widely popular.",
+    "rank_en": "4th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第4級格付け",
+    "description_ja": "船の帆をモチーフにした有名なラベル。滑らかで親しみやすく幅広い人気を持つ。"
   },
   {
     "name": "Château Langoa Barton",
-    "coordinates": [-0.73912, 45.15812],
+    "coordinates": [
+      -0.73912,
+      45.15812
+    ],
     "rank": "三級酒莊 (Troisième Grand Cru Classé 1855)",
     "description": "與 Léoville Barton 同屬 Barton 家族，風格經典、性價比優異。",
-    "image": "/images/chateaux/LeftBank/Medoc/langoa_barton.jpg"
+    "image": "/images/chateaux/LeftBank/Medoc/langoa_barton.jpg",
+    "description_en": "Sister château to Léoville Barton under the Barton family; classic style with excellent value.",
+    "rank_en": "3rd Growth (Troisième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第3級格付け",
+    "description_ja": "レオヴィル・バルトンの姉妹シャトーとしてバルトン家が経営。クラシックスタイルとコストパフォーマンス。"
   }
 ]
