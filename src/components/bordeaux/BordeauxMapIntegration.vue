@@ -294,7 +294,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch, nextTick } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 
 const props = defineProps({
   lessonFocus: {
@@ -830,6 +830,11 @@ function onFsChange() {
 if (typeof document !== 'undefined') {
   document.addEventListener('fullscreenchange', onFsChange)
 }
+
+onUnmounted(() => {
+  document.removeEventListener('fullscreenchange', onFsChange)
+  document.body.style.overflow = ''
+})
 
 </script>
 
