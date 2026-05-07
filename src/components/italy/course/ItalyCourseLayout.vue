@@ -77,9 +77,9 @@
         <div class="level-header-card">
           <div class="level-header-top">
             <div class="level-badge">{{ levelBadge }}</div>
-            <h2 class="level-title">{{ props.currentLevelDef?.title }}</h2>
+            <h2 class="level-title">{{ $t('italy.levels.' + levelNum + '.title') }}</h2>
           </div>
-          <p class="level-desc">{{ props.currentLevelDef?.subtitle }}</p>
+          <p class="level-desc">{{ $t('italy.levels.' + levelNum + '.subtitle') }}</p>
           <div class="progress-bar-wrapper">
             <div class="progress-bar-fill" :style="{ width: overallProgress + '%' }"></div>
           </div>
@@ -164,8 +164,11 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { supabase } from '../../../lib/supabaseClient.js'
 import { authState } from '../../../stores/authStore.js'
+
+const { t } = useI18n()
 
 const avatarUrl = ref('')
 const avatarInitial = ref('我')
@@ -197,10 +200,9 @@ const levelKeys = ['level1', 'level2', 'level3']
 
 const modules = computed(() => props.currentLevelDef?.modules || [])
 
-const levelBadge = computed(() => {
-  const n = props.currentLevelKey?.replace('level', '') || '1'
-  return `Level ${n}`
-})
+const levelNum = computed(() => props.currentLevelKey?.replace('level', '') || '1')
+
+const levelBadge = computed(() => `Level ${levelNum.value}`)
 
 const completedCount = computed(() =>
   modules.value.flatMap(m => m.lessons).filter(l => props.completedLessons.includes(l.id)).length

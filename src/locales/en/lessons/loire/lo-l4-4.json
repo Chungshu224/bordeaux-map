@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "Course Introduction",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">Vertical Tasting — Reading Aging Potential — This course covers Savennières, Chinon, and Vouvray, exploring how Loire's key red and white wines evolve across vintages and how to read aging potential from structure, acidity, and terroir.</p></div>",
+
+  "slides.1.title": "Vertical Tasting — Reading Aging Potential",
+  "slides.1.content": "<div class=\"lesson-content\"><p>This course systematically explores the terroir characteristics of Savennières, Chinon, and Vouvray, with a focus on vertical tasting methodology. Understanding how Chenin Blanc (Savennières/Vouvray) and Cabernet Franc (Chinon) develop across 5-, 10-, and 20-year windows is the key to unlocking Loire's true value proposition.</p><p>Through systematic study, you will be able to identify the typical styles of these AOCs and accurately describe their characteristics during tasting.</p></div>",
+
+  "slides.2.title": "Quiz",
+  "slides.2.questions.0.question": "Which of the following AOCs is the primary focus of this course?",
+  "slides.2.questions.0.options.0": "Savennières",
+  "slides.2.questions.0.options.1": "Bordeaux",
+  "slides.2.questions.0.options.2": "Champagne",
+  "slides.2.questions.0.options.3": "Bourgogne",
+  "slides.2.questions.0.explanation": "Savennières is a key Loire AOC studied in this course alongside Chinon and Vouvray. Located on the north bank of the Loire in Anjou, it produces 100% Chenin Blanc dry white wines from volcanic schist soils. Its famously austere, high-acid young wines can age 10–30 years, evolving from mineral and citrus notes into complex layers of beeswax, dried apricot, and toasted hazelnut."
+}

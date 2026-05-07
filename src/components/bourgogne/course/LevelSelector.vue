@@ -1,11 +1,11 @@
 <template>
-  <CourseHomeLayout :theme="theme" region-name="Bourgogne" breadcrumb-country="法國・布根地">
+  <CourseHomeLayout :theme="theme" region-name="Bourgogne" :breadcrumb-country="$t('bourgogne.selector.breadcrumbCountry')">
     <RegionHero
       :icon="theme.icon"
-      tagline="布根地・Climats・1247 個風土地塊"
-      title="布根地葡萄酒"
-      subtitle="Bourgogne · Pinot Noir · Chardonnay · Climats"
-      description="從金丘 Côte d'Or 到夏布利、馬貢內、薄酒萊——透過 Climats 風土系統認識世界最複雜的葡萄酒拼圖。"
+      :tagline="$t('bourgogne.selector.tagline')"
+      :title="$t('bourgogne.selector.title')"
+      :subtitle="$t('bourgogne.selector.subtitle')"
+      :description="$t('bourgogne.selector.description')"
       :stats="heroStats"
     />
 
@@ -24,8 +24,8 @@
     <QuickNavGrid :items="quickNavItems" @select="onQuickNav" />
 
     <LevelTrack
-      title="選擇課程階段"
-      subtitle="4 階段、從基礎入門到 Climats 專家認證。"
+      :title="$t('bourgogne.selector.levelTrackTitle')"
+      :subtitle="$t('bourgogne.selector.levelTrackSubtitle')"
       :levels="levelData"
       @enter="(n) => emit('startLevel', n)"
     />
@@ -45,12 +45,15 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import {
   CourseHomeLayout, RegionHero, ProgressStrip, QuickNavGrid,
   LevelTrack, ProgressModal, AchievementModal, getTheme
 } from '../../shared/courseHome/index.js'
 import { useProgress } from '../composables/useProgress.js'
 import { authActions } from '../../../stores/authStore.js'
+
+const { t } = useI18n()
 
 const emit = defineEmits(['startLevel', 'openMap', 'openGameHub', 'openNotebook'])
 
@@ -108,34 +111,36 @@ function isUnlocked(id) {
 
 const heroButtonText = computed(() => {
   const next = levels.value.find(l => l.unlocked && getProgress(l.id) < 100)
-  if (!next) return '重新探索'
-  return getProgress(next.id) > 0 ? `繼續 Level ${next.id}` : `開始 Level ${next.id}`
+  if (!next) return t('bourgogne.selector.progress.restart')
+  return getProgress(next.id) > 0
+    ? t('bourgogne.selector.progress.continueLevel', { n: next.id })
+    : t('bourgogne.selector.progress.startLevel', { n: next.id })
 })
 const progressHeadline = computed(() => {
-  if (totalProgress.value === 0) return '開始你的布根地 Climats 之旅'
-  if (totalProgress.value >= 100) return '🎉 已完成全部布根地課程'
-  return `已完成 ${completedLevels.value} / 4 階段`
+  if (totalProgress.value === 0) return t('bourgogne.selector.progress.start')
+  if (totalProgress.value >= 100) return t('bourgogne.selector.progress.complete')
+  return t('bourgogne.selector.progress.done', { done: completedLevels.value })
 })
 const progressSubline = computed(() => {
   const next = levels.value.find(l => l.unlocked && getProgress(l.id) < 100)
-  return next ? `當前階段：${next.name}` : ''
+  return next ? t('bourgogne.selector.progress.currentStage', { name: next.name }) : ''
 })
 function startJourney() {
   const next = levels.value.find(l => l.unlocked && getProgress(l.id) < 100) || levels.value[0]
   if (next) emit('startLevel', next.id)
 }
 
-const heroStats = [
-  { value: '84',   label: 'AOCs' },
-  { value: '1247', label: 'Climats' },
-  { value: '4',    label: '階段' }
-]
+const heroStats = computed(() => [
+  { value: '84',   label: t('bourgogne.selector.heroStats.aocs') },
+  { value: '1247', label: t('bourgogne.selector.heroStats.climats') },
+  { value: '4',    label: t('bourgogne.selector.heroStats.stages') },
+])
 
 const quickNavItems = computed(() => [
-  { key: 'map', desc: 'Climats 風土地圖' },
+  { key: 'map', desc: t('bourgogne.selector.quickNav.mapDesc') },
   { key: 'games' },
   { key: 'achievements' },
-  { key: 'progress', desc: `${totalProgress.value}% 完成・${completedLevels.value}/4 階段` },
+  { key: 'progress', desc: t('bourgogne.selector.quickNav.progressDesc', { pct: totalProgress.value, done: completedLevels.value }) },
   { key: 'notebook' }
 ])
 function onQuickNav(key) {
@@ -150,16 +155,16 @@ function onQuickNav(key) {
 
 const levelData = computed(() => levels.value.map(l => ({
   number: l.id,
-  title: l.name,
-  subtitle: l.nameEn || `Level ${l.id}`,
+  title: t(`bourgogne.levels.${l.id}.title`),
+  subtitle: t(`bourgogne.levels.${l.id}.subtitle`),
   icon: l.icon || '🍇',
-  description: l.description || '',
-  tags: (l.features || []).slice(0, 5).map(f => f.text),
+  description: t(`bourgogne.levels.${l.id}.description`),
+  tags: t(`bourgogne.levels.${l.id}.tags`),
   modules: l.modules ?? 0,
   lessons: l.hours ? `${l.hours}h` : 0,
   progress: getProgress(l.id),
   unlocked: !!l.unlocked,
-  unlockHint: l.prerequisite || `完成 Level ${l.id - 1} 後解鎖`
+  unlockHint: l.id === 1 ? '' : t(`bourgogne.selector.unlockHint.level${l.id}`)
 })))
 
 const modalLevels = computed(() =>

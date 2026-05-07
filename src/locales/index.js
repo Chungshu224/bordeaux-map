@@ -40,6 +40,14 @@ import zhItaly from './zh-TW/italy.js'
 import enItaly from './en/italy.js'
 import jaItaly from './ja/italy.js'
 
+import zhBourgogne from './zh-TW/bourgogne.js'
+import enBourgogne from './en/bourgogne.js'
+import jaBourgogne from './ja/bourgogne.js'
+
+import zhLoire from './zh-TW/loire.js'
+import enLoire from './en/loire.js'
+import jaLoire from './ja/loire.js'
+
 // ── 支援的語言清單 ───────────────────────────────────────────
 export const SUPPORTED_LOCALES = [
   { code: 'zh-TW', name: '繁體中文', flag: '🇹🇼' },
@@ -69,9 +77,9 @@ function detectInitialLocale() {
 
 // ── 整合各語言檔（將來會有多個 namespace） ──────────────────
 const messages = {
-  'zh-TW': { common: zhCommon, california: zhCalifornia, home: zhHome, bordeaux: zhBordeaux, italy: zhItaly },
-  'en':    { common: enCommon, california: enCalifornia, home: enHome, bordeaux: enBordeaux, italy: enItaly },
-  'ja':    { common: jaCommon, california: jaCalifornia, home: jaHome, bordeaux: jaBordeaux, italy: jaItaly },
+  'zh-TW': { common: zhCommon, california: zhCalifornia, home: zhHome, bordeaux: zhBordeaux, italy: zhItaly, bourgogne: zhBourgogne, loire: zhLoire },
+  'en':    { common: enCommon, california: enCalifornia, home: enHome, bordeaux: enBordeaux, italy: enItaly, bourgogne: enBourgogne, loire: enLoire },
+  'ja':    { common: jaCommon, california: jaCalifornia, home: jaHome, bordeaux: jaBordeaux, italy: jaItaly, bourgogne: jaBourgogne, loire: jaLoire },
 }
 
 // ── 建立 i18n 實例 ───────────────────────────────────────────

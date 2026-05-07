@@ -27,7 +27,7 @@
         </button>
         
         <div class="nav-progress-info">
-          {{ slides[currentSlide]?.title || `頁面 ${currentSlide + 1} / ${slides.length}` }}
+          {{ slides[currentSlide]?.title || $t('bourgogne.layout.slidePage', { n: currentSlide + 1, total: slides.length }) }}
         </div>
         
         <button 
@@ -70,6 +70,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import IntroSlide from './slides/IntroSlide.vue'
 import TitleSlide from './slides/TitleSlide.vue'
 import ContentSlide from './slides/ContentSlide.vue'
@@ -97,6 +98,7 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['complete', 'close'])
+const { t } = useI18n()
 
 const currentSlide = ref(0)
 const finalQuizBank = ref([])
@@ -133,8 +135,9 @@ const slides = computed(() => {
   // 0. 課程導讀投影片（第一頁）
   slideArray.push({
     type: 'intro',
-    title: '課程導讀',
-    description: props.lesson.content?.introduction || props.lesson.description || `本課程將深入探討${props.lesson.title}的各個面向，建立扎實的知識基礎。`,
+    title: t('bourgogne.layout.courseIntro'),
+    description: props.lesson.content?.introduction || props.lesson.description || t('bourgogne.layout.introFallback', { title: props.lesson.title }),
+
     objectives: props.lesson.objectives || generateDefaultObjectives()
   })
   
@@ -145,7 +148,7 @@ const slides = computed(() => {
     if (props.lesson.isFinalExam && finalQuizBank.value.length > 0) {
       slideArray.push({
         type: 'quiz',
-        title: props.lesson.finalExamTitle || '📋 綜合評量',
+        title: props.lesson.finalExamTitle || t('bourgogne.layout.finalExam'),
         isFinalExam: true,
         passScore: 80,
         questions: pickRandom(finalQuizBank.value, Math.min(20, finalQuizBank.value.length))
@@ -167,7 +170,7 @@ const slides = computed(() => {
   if (props.lesson.content?.mapSlide) {
     slideArray.push({
       type: 'map',
-      title: props.lesson.content.mapSlide.title || '產區地圖',
+      title: props.lesson.content.mapSlide.title || t('bourgogne.layout.regionMap'),
       content: props.lesson.content.mapSlide.content,
       mapConfig: props.lesson.content.mapSlide.mapConfig,
       geojsonFiles: props.lesson.content.mapSlide.geojsonFiles,
@@ -182,7 +185,7 @@ const slides = computed(() => {
       console.log(`添加地圖 ${index + 1}:`, mapSlide.title)
       slideArray.push({
         type: 'map',
-        title: mapSlide.title || '產區地圖',
+        title: mapSlide.title || t('bourgogne.layout.regionMap'),
         content: mapSlide.content,
         mapConfig: mapSlide.mapConfig,
         geojsonFiles: mapSlide.geojsonFiles,
@@ -573,7 +576,7 @@ const slides = computed(() => {
             if (section.interactiveMap && typeof section.interactiveMap === 'object') {
               slideArray.push({
                 type: 'map',
-                title: section.interactiveMap.title || '產區地圖',
+                title: section.interactiveMap.title || t('bourgogne.layout.regionMap'),
                 mapConfig: section.interactiveMap.mapConfig,
                 geojsonFiles: [
                   { 

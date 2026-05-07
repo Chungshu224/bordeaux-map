@@ -1,0 +1,13 @@
+{
+  "slides.0.title": "Course Introduction",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">We close Level 2 with one of the Loire's most celebrated food-and-wine marriages: Chinon and rillettes de Tours. This final lesson also serves as a comprehensive review of all Level 2 AOCs — testing your mastery of Anjou-Saumur geology, the red wine hierarchy, rosé styles, and the Touraine's diverse appellations.</p><h3 class=\"section-title\">AOCs Covered in This Lesson</h3><p class=\"aoc-list\">All Level 2 AOCs</p></div>",
+  "slides.1.title": "Chinon × Rillettes and Level 2 Comprehensive Review",
+  "slides.1.content": "<div class=\"lesson-content\"><h4>🍖 Chinon × Rillettes de Tours: A Perfect Loire Pairing</h4><p>Rillettes de Tours (slow-cooked, potted shredded pork) is one of the Loire Valley's most iconic charcuterie products. Why does Chinon pair so perfectly?</p><ul><li>Chinon's <strong>high natural acidity</strong> cuts through the richness of the fatty rillettes</li><li>Its <strong>fresh red-fruit character</strong> provides a bright contrast to the savory, earthy pork</li><li>The wine's <strong>light tannins</strong> don't clash with the delicate, slow-cooked texture</li><li>Both are products of the same terroir — the classic \"what grows together goes together\" principle</li></ul><h4>📋 Level 2 AOC Summary</h4><table class=\"summary-table\"><tr><th>Sub-region</th><th>Key AOCs</th><th>Main Grapes</th></tr><tr><td>Anjou-Saumur</td><td>Saumur-Champigny, Anjou-Villages, Anjou-Brissac</td><td>Cabernet Franc</td></tr><tr><td>Anjou Rosé</td><td>Cabernet d'Anjou, Rosé d'Anjou, Rosé de Loire</td><td>Cabernet Franc, Grolleau</td></tr><tr><td>Touraine reds</td><td>Chinon, Bourgueil, Saint-Nicolas-de-Bourgueil</td><td>Cabernet Franc</td></tr><tr><td>Touraine specials</td><td>Touraine-Amboise, Touraine-Noble-Joué</td><td>Cot, Pineau d'Aunis / Pinot blend</td></tr><tr><td>Touraine tributaries</td><td>Coteaux du Loir, Coteaux du Vendômois, Orléans, Orléans-Cléry</td><td>Pineau d'Aunis, Cabernet Franc</td></tr></table></div>",
+  "slides.2.title": "Quiz",
+  "slides.2.questions.0.question": "Which best describes the scope of AOCs covered in this lesson?",
+  "slides.2.questions.0.options.0": "All Level 2 AOCs",
+  "slides.2.questions.0.options.1": "Champagne",
+  "slides.2.questions.0.options.2": "Bordeaux",
+  "slides.2.questions.0.options.3": "Bourgogne",
+  "slides.2.questions.0.explanation": "This final Level 2 lesson is a comprehensive review covering all AOCs studied in Level 2 — from Tuffeau geology and Anjou-Saumur reds, through Anjou rosé, the Touraine Cabernet Franc trio, and the tributary valley appellations. The Chinon × rillettes pairing demonstrates the Loire's terroir-driven gastronomy."
+}

@@ -1,0 +1,18 @@
+{
+  "title": "総合ケーススタディ",
+  "lessons.0.title": "ケース1：ドメーヌ訪問計画",
+  "lessons.0.duration": "18分",
+  "lessons.0.slides.0.subtitle": "Lesson 1 - 18分",
+  "lessons.1.title": "ケース2：コレクションポートフォリオ構築",
+  "lessons.1.duration": "18分",
+  "lessons.1.slides.0.subtitle": "Lesson 2 - 18分",
+  "lessons.2.title": "ケース3：レストランワインリスト設計",
+  "lessons.2.duration": "18分",
+  "lessons.2.slides.0.subtitle": "Lesson 3 - 18分",
+  "lessons.3.title": "Level 3 総復習",
+  "lessons.3.duration": "18分",
+  "lessons.3.slides.0.subtitle": "Lesson 4 - 18分",
+  "lessons.4.title": "認定試験準備",
+  "lessons.4.duration": "18分",
+  "lessons.4.slides.0.subtitle": "Lesson 5 - 18分"
+}

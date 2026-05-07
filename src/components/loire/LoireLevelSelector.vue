@@ -1,11 +1,11 @@
 <template>
-  <CourseHomeLayout :theme="theme" region-name="Loire" breadcrumb-country="法國・羅亞爾河">
+  <CourseHomeLayout :theme="theme" region-name="Loire" :breadcrumb-country="t('loire.selector.breadcrumb')">
     <RegionHero
       :icon="theme.icon"
-      tagline="羅亞爾河谷・法國花園・五大子產區"
-      title="羅亞爾河谷葡萄酒"
-      subtitle="Loire Valley · Sancerre · Vouvray · Muscadet · Chinon"
-      description="從南特碘香 Muscadet、安茹白詩南、都漢氣泡，到中央產區的桑塞爾雙雄——掌握法國最多元的葡萄酒河谷。"
+      :tagline="t('loire.selector.tagline')"
+      :title="t('loire.selector.title')"
+      :subtitle="t('loire.selector.subtitle')"
+      :description="t('loire.selector.description')"
       :stats="heroStats"
     />
 
@@ -23,8 +23,8 @@
     <QuickNavGrid :items="quickNavItems" @select="onQuickNav" />
 
     <LevelTrack
-      title="選擇課程階段"
-      subtitle="4 階段、由西向東遊歷羅亞爾河谷各子產區。"
+      :title="t('loire.selector.levelTrackTitle')"
+      :subtitle="t('loire.selector.levelTrackSubtitle')"
       :levels="levelData"
       @enter="(n) => emit('startLevel', n)"
     />
@@ -43,6 +43,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import {
   CourseHomeLayout, RegionHero, ProgressStrip, QuickNavGrid,
   LevelTrack, ProgressModal, getTheme
@@ -52,6 +53,7 @@ import { authActions } from '../../stores/authStore.js'
 
 const emit = defineEmits(['startLevel', 'openMap', 'openQuiz', 'openNotes', 'openGames', 'backToPage'])
 
+const { t } = useI18n()
 const theme = getTheme('loire')
 const showProgress = ref(false)
 
@@ -88,19 +90,19 @@ function isLevelUnlocked(n) {
 const heroButtonText = computed(() => {
   for (const n of LEVEL_KEYS) {
     if (isLevelUnlocked(n) && levelProgress(n) < 100) {
-      return levelProgress(n) > 0 ? `繼續 Level ${n}` : `開始 Level ${n}`
+      return levelProgress(n) > 0 ? t('loire.selector.progress.continue', { n }) : t('loire.selector.progress.begin', { n })
     }
   }
-  return '重新學習'
+  return t('loire.selector.progress.restart')
 })
 const progressHeadline = computed(() => {
-  if (totalProgressPct.value === 0) return '開始你的羅亞爾河谷之旅'
-  if (totalProgressPct.value >= 100) return '🎉 已遊歷羅亞爾河谷全部 AOC'
-  return `已完成 ${completedLessons.value.length} / ${totalLessonCount.value} 課`
+  if (totalProgressPct.value === 0) return t('loire.selector.progress.start')
+  if (totalProgressPct.value >= 100) return t('loire.selector.progress.complete')
+  return t('loire.selector.progress.inProgress', { done: completedLessons.value.length, total: totalLessonCount.value })
 })
 const progressSubline = computed(() => {
   for (const n of LEVEL_KEYS) {
-    if (levelProgress(n) < 100) return `當前階段：${loireLearningLevels[`level${n}`]?.title || ''}`
+    if (levelProgress(n) < 100) return t('loire.selector.progress.currentStage', { title: t(`loire.levels.${n}.title`) })
   }
   return ''
 })
@@ -112,9 +114,9 @@ function startJourney() {
 }
 
 const heroStats = [
-  { value: '5',   label: '子產區' },
-  { value: '87',  label: 'AOC 法定產區' },
-  { value: '10+', label: '主要品種' }
+  { value: '5',   label: t('loire.selector.stats.subregions') },
+  { value: '87',  label: t('loire.selector.stats.aoc') },
+  { value: '10+', label: t('loire.selector.stats.varieties') }
 ]
 
 const quickNavItems = computed(() => [
@@ -122,7 +124,7 @@ const quickNavItems = computed(() => [
   { key: 'games' },
   { key: 'achievements' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` },
-  { key: 'notebook', icon: '📔', title: '品飲筆記', desc: '記錄品飲體驗' }
+  { key: 'notebook', icon: '📔', title: t('common.nav.notebook'), desc: t('common.nav.notebookDesc') }
 ])
 function onQuickNav(key) {
   switch (key) {
@@ -138,16 +140,16 @@ const levelData = computed(() => LEVEL_KEYS.map(n => {
   const def = loireLearningLevels[`level${n}`] || {}
   return {
     number: n,
-    title: def.title?.replace(/Level \d+ — /, '') || `Level ${n}`,
-    subtitle: def.region || '',
+    title: t(`loire.levels.${n}.title`).replace(/Level \d+ — /, ''),
+    subtitle: t(`loire.levels.${n}.region`),
     icon: def.emoji || '🍇',
-    description: def.description || '',
+    description: t(`loire.levels.${n}.description`),
     tags: (def.keyAOC || []).slice(0, 5),
     modules: (def.modules || []).length,
     lessons: (def.lessons || []).length,
     progress: levelProgress(n),
     unlocked: isLevelUnlocked(n),
-    unlockHint: `完成 Level ${n - 1} 後解鎖`
+    unlockHint: t('loire.selector.unlockHint', { prev: n - 1 })
   }
 }))
 

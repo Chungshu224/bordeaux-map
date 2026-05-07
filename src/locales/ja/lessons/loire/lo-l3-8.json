@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "コース導入",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">ロワール河支流ロワール川の白ワイン — 本コースはJasnières、Coteaux-du-Loir（白）、Coteaux-du-Vendômois（白）、Orléans（白）、Touraine（白）を網羅します。注：ロワール川（Loir）はロワール川（Loire）の支流で、語尾に「e」がありません。</p></div>",
+
+  "slides.1.title": "ロワール川（Loir）の白ワイン",
+  "slides.1.content": "<div class=\"lesson-content\"><p>本コースでは、Jasnières、Coteaux-du-Loir（白）、Coteaux-du-Vendômois（白）、Orléans（白）、Touraine（白）のテロワール特性を体系的に学び、ロワール渓谷の確固とした知識体系を構築します。</p><p>体系的な学習を通じて、これらのAOCの典型的なスタイルを識別し、テイスティング時にその特徴を正確に表現できるようになります。</p></div>",
+
+  "slides.2.title": "小テスト",
+  "slides.2.questions.0.question": "次のうち、本コースの範囲に含まれるAOCはどれですか？",
+  "slides.2.questions.0.options.0": "Jasnières",
+  "slides.2.questions.0.options.1": "Bordeaux",
+  "slides.2.questions.0.options.2": "Champagne",
+  "slides.2.questions.0.options.3": "Bourgogne",
+  "slides.2.questions.0.explanation": "JasnièresはロワールLoir川（語尾に「e」なし）沿いの小さいながら権威あるAOCで、100%シュナン・ブランの辛口白ワインを生産します。サルト県に位置し、ロワール系統の中でシリアスな辛口シュナン・ブランの最北端を代表し、涼しいヴィンテージでは際立って高い酸味とミネラル感のあるスタイルを示します。"
+}

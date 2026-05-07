@@ -96,11 +96,27 @@ const allLessonsCompleted = computed(() => {
 })
 
 // 處理選擇階段
-const handleSelectLevel = async (level) => {
-  console.log('🎓 選擇 Level:', level.id, level.name)
-  selectedLevel.value = level
+const handleSelectLevel = async (levelIdOrObj) => {
+  // LevelCard emits a number (level.number), handleChangeLevel may pass a full object
+  const levelId = typeof levelIdOrObj === 'object' ? levelIdOrObj.id : levelIdOrObj
+  console.log('🎓 選擇 Level:', levelId)
+
+  try {
+    const response = await fetch('/bourgogne/data/courses/levels.json')
+    const data = await response.json()
+    const targetLevel = data.levels.find(l => l.id === levelId)
+    if (targetLevel) {
+      selectedLevel.value = targetLevel
+    } else {
+      // fallback: construct a minimal level object
+      selectedLevel.value = { id: levelId, name: `Level ${levelId}` }
+    }
+  } catch {
+    selectedLevel.value = { id: levelId, name: `Level ${levelId}` }
+  }
+
   currentView.value = 'courseContent'
-  console.log('✅ currentView 已設為 courseContent，CourseLayout 應該渲染')
+  console.log('✅ currentView 已設為 courseContent，selectedLevel.id:', selectedLevel.value?.id)
 }
 
 // 處理 Level 切換

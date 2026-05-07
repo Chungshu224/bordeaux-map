@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "Course Introduction",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">Fine Dining Design + Asian Cuisine Pairing + Level 4 Assessment — This final Level 4 lesson covers all 58 Loire Valley AOCs, synthesizing Loire's full range of styles into practical food-pairing applications for both European fine dining and Asian cuisine contexts.</p></div>",
+
+  "slides.1.title": "Fine Dining Design + Asian Cuisine Pairing + Level 4 Assessment",
+  "slides.1.content": "<div class=\"lesson-content\"><p>This course systematically reviews all 58 Loire Valley AOC terroir characteristics, with a focus on practical wine-pairing applications. Key pairing principles: Muscadet × shellfish (classic); Savennières × aged goat cheese; Vouvray Moelleux × foie gras; Sancerre × sashimi / Cantonese steamed fish; Chinon × Peking duck; Crémant-de-Loire × dim sum.</p><p>Through systematic study, you will be able to identify the typical styles of these AOCs and accurately describe their characteristics in both tasting and service contexts.</p></div>",
+
+  "slides.2.title": "Level 4 Final Assessment",
+  "slides.2.questions.0.question": "Which best describes the scope of Loire Level 4?",
+  "slides.2.questions.0.options.0": "All 58 Loire Valley AOCs — integrating geography, terroir, vintages, aging, and food pairing",
+  "slides.2.questions.0.options.1": "Bordeaux red wine regions only",
+  "slides.2.questions.0.options.2": "Champagne sparkling wine production only",
+  "slides.2.questions.0.options.3": "Burgundy single-vineyard classification only",
+  "slides.2.questions.0.explanation": "Loire Level 4 is the advanced capstone module, covering all ~58 Loire Valley AOCs across four sub-regions (Pays Nantais, Anjou-Saumur, Touraine, Centre-Loire), plus satellite regions such as Côtes-d'Auvergne. The module integrates geographic visualization, climate analysis, vertical tasting, blind tasting soil diagnosis, and fine dining pairing into a comprehensive advanced certification framework."
+}

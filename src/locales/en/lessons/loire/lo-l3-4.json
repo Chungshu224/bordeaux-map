@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "Course Introduction",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">Top Sweet Wines — Quarts-de-Chaume &amp; Bonnezeaux — This course covers Quarts-de-Chaume and Bonnezeaux, exploring the geography, soils, varieties, and style characteristics of these prestigious AOCs.</p></div>",
+
+  "slides.1.title": "Top Sweet Wines — Quarts-de-Chaume &amp; Bonnezeaux",
+  "slides.1.content": "<div class=\"lesson-content\"><p>This course provides a systematic study of the terroir of Quarts-de-Chaume and Bonnezeaux, helping you build a solid knowledge framework for the Loire Valley.</p><p>Through systematic learning, you will be able to identify the typical styles of these AOCs and accurately describe their characteristics during tasting.</p></div>",
+
+  "slides.2.title": "Quiz",
+  "slides.2.questions.0.question": "Which of the following AOCs is covered in this course?",
+  "slides.2.questions.0.options.0": "Quarts-de-Chaume",
+  "slides.2.questions.0.options.1": "Bordeaux",
+  "slides.2.questions.0.options.2": "Champagne",
+  "slides.2.questions.0.options.3": "Bourgogne",
+  "slides.2.questions.0.explanation": "Quarts-de-Chaume is an important AOC in the Loire Valley and the core subject of this course. It is Loire's only Grand Cru AOC, recognized in 2011."
+}

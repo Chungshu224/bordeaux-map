@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "コース導入",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">ロワール・クレマン＆ソーミュール・スパークリング — 本コースはクレマン・ド・ロワールとソーミュール（スパークリング）を取り上げ、これらのAOCの地理・土壌・品種・スタイル特性を深く探求します。</p></div>",
+
+  "slides.1.title": "ロワール・クレマン＆ソーミュール・スパークリング",
+  "slides.1.content": "<div class=\"lesson-content\"><p>本コースではクレマン・ド・ロワールとソーミュール（スパークリング）のテロワールを体系的に学び、ロワール渓谷の確かな知識の基盤を築きます。</p><p>体系的な学習を通じて、これらのAOCの典型的なスタイルを識別し、テイスティング時にその特徴を正確に説明できるようになります。</p></div>",
+
+  "slides.3.title": "小テスト",
+  "slides.3.questions.0.question": "以下のどのAOCが本コースの対象ですか？",
+  "slides.3.questions.0.options.0": "クレマン・ド・ロワール",
+  "slides.3.questions.0.options.1": "ボルドー",
+  "slides.3.questions.0.options.2": "シャンパーニュ",
+  "slides.3.questions.0.options.3": "ブルゴーニュ",
+  "slides.3.questions.0.explanation": "クレマン・ド・ロワールはロワール渓谷の重要なAOCで、本コースの核心的な学習対象です。ロワール全域で伝統的製法を用いたスパークリングワインを生産しています。"
+}

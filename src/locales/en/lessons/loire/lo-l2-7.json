@@ -1,0 +1,13 @@
+{
+  "slides.0.title": "Course Introduction",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">One of the most important choices a Loire Cabernet Franc producer makes is whether to age in stainless steel or oak barrels. Each choice transforms the same grape's aromatic profile dramatically. This lesson uses Chinon and Bourgueil as case studies to train your palate to distinguish tank-aged from barrel-aged Cabernet Franc — a critical skill for blind tasting and wine service.</p><h3 class=\"section-title\">AOCs Covered in This Lesson</h3><p class=\"aoc-list\">Chinon, Bourgueil</p></div>",
+  "slides.1.title": "Tank vs. Oak: Cabernet Franc Tasting Training",
+  "slides.1.content": "<div class=\"lesson-content\"><h4>🥶 Stainless Steel Tank Aging</h4><p><strong>Philosophy</strong>: Preserve the primary fruit and freshness of the grape; minimize oxidation; maintain natural acidity.</p><p><strong>Aromatic profile</strong>: Bright red fruit (raspberry, strawberry, red currant), fresh violet, a herbal green note, crisp acidity, light body. The wine feels energetic and immediate.</p><p><strong>When to use</strong>: Lighter vintages; gravel-soil Chinon; wines intended for early drinking (within 3–5 years).</p><p><strong>Serving</strong>: Best at 13–14°C to showcase freshness.</p><h4>🪵 Oak Barrel Aging</h4><p><strong>Philosophy</strong>: Add structure, complexity, and oxidative nuance; support ageing potential; integrate tannin.</p><p><strong>Aromatic profile</strong>: Darker fruit (black cherry, cassis), vanilla, cedar, spice, leather — the fruit becomes more concentrated and layered. Tannins are more present but integrated.</p><p><strong>When to use</strong>: Richer vintages; tuffeau plateau Chinon; wines intended for 8–15+ year ageing.</p><p><strong>Serving</strong>: 15–17°C to open up complexity.</p><h4>🔍 Blind Tasting Clues</h4><ul><li>Steel: Brighter red fruit, higher perceived acidity, no oak-derived vanilla/spice, lighter color</li><li>Oak: Darker fruit, vanilla/cedar undertones, softer acidity (micro-ox), deeper color, more body</li></ul></div>",
+  "slides.2.title": "Quiz",
+  "slides.2.questions.0.question": "Which AOC is covered in this lesson?",
+  "slides.2.questions.0.options.0": "Chinon",
+  "slides.2.questions.0.options.1": "Champagne",
+  "slides.2.questions.0.options.2": "Bordeaux",
+  "slides.2.questions.0.options.3": "Bourgogne",
+  "slides.2.questions.0.explanation": "Chinon is the Loire's benchmark for comparing stainless-steel vs. oak-aged Cabernet Franc. Its range from gravel-terrace (fresh, tank-aged) to tuffeau plateau (structured, barrel-aged) makes it the ideal classroom for this stylistic comparison."
+}

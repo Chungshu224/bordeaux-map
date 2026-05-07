@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "コース導入",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">トップ甘口ワイン — カール・ド・ショーム＆ボンヌゾー — 本コースはカール・ド・ショームとボンヌゾーを取り上げ、これらの格付けAOCの地理・土壌・品種・スタイル特性を深く探求します。</p></div>",
+
+  "slides.1.title": "トップ甘口ワイン — カール・ド・ショーム＆ボンヌゾー",
+  "slides.1.content": "<div class=\"lesson-content\"><p>本コースではカール・ド・ショームとボンヌゾーのテロワールを体系的に学び、ロワール渓谷の確かな知識の基盤を築きます。</p><p>体系的な学習を通じて、これらのAOCの典型的なスタイルを識別し、テイスティング時にその特徴を正確に説明できるようになります。</p></div>",
+
+  "slides.2.title": "小テスト",
+  "slides.2.questions.0.question": "以下のどのAOCが本コースの対象ですか？",
+  "slides.2.questions.0.options.0": "カール・ド・ショーム",
+  "slides.2.questions.0.options.1": "ボルドー",
+  "slides.2.questions.0.options.2": "シャンパーニュ",
+  "slides.2.questions.0.options.3": "ブルゴーニュ",
+  "slides.2.questions.0.explanation": "カール・ド・ショームはロワール渓谷の重要なAOCで、本コースの核心的な学習対象です。2011年に認定されたロワール唯一のグラン・クリュAOCです。"
+}

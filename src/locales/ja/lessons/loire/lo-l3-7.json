@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "コース導入",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">トゥーレーヌ白ワインの四角地帯 — 本コースはCheverny、Cour-Cheverny、Valençay、Touraine-Amboise（白）、Touraine-Azay-le-Rideau を網羅し、各AOCの地理、土壌、品種、スタイル特性を深く掘り下げます。</p></div>",
+
+  "slides.1.title": "トゥーレーヌ白ワインの四角地帯",
+  "slides.1.content": "<div class=\"lesson-content\"><p>本コースでは、Cheverny、Cour-Cheverny、Valençay、Touraine-Amboise（白）、Touraine-Azay-le-Rideau のテロワール特性を体系的に学び、ロワール渓谷の確固とした知識体系を構築します。</p><p>体系的な学習を通じて、これらのAOCの典型的なスタイルを識別し、テイスティング時にその特徴を正確に表現できるようになります。</p></div>",
+
+  "slides.2.title": "小テスト",
+  "slides.2.questions.0.question": "次のうち、本コースの範囲に含まれるAOCはどれですか？",
+  "slides.2.questions.0.options.0": "Cheverny",
+  "slides.2.questions.0.options.1": "Bordeaux",
+  "slides.2.questions.0.options.2": "Champagne",
+  "slides.2.questions.0.options.3": "Bourgogne",
+  "slides.2.questions.0.explanation": "ChevernyはロワールバレーのAOCの中で重要な位置を占め、本コースの中核テーマです。ブロワの南に位置し、主にソーヴィニヨン・ブランとシャルドネのブレンド白ワイン、およびガメイとピノ・ノワールの赤ワインを生産します。Cour-Chevernyは希少なロモランタン品種のみを使用するサブAOCです。"
+}

@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "Course Introduction",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">Loire Crémant &amp; Saumur Sparkling — This course covers Crémant-de-Loire and Saumur (sparkling), exploring the geography, soils, varieties, and style characteristics of these AOCs.</p></div>",
+
+  "slides.1.title": "Loire Crémant &amp; Saumur Sparkling",
+  "slides.1.content": "<div class=\"lesson-content\"><p>This course provides a systematic study of the terroir of Crémant-de-Loire and Saumur (sparkling), helping you build a solid knowledge framework for the Loire Valley.</p><p>Through systematic learning, you will be able to identify the typical styles of these AOCs and accurately describe their characteristics during tasting.</p></div>",
+
+  "slides.3.title": "Quiz",
+  "slides.3.questions.0.question": "Which of the following AOCs is covered in this course?",
+  "slides.3.questions.0.options.0": "Crémant-de-Loire",
+  "slides.3.questions.0.options.1": "Bordeaux",
+  "slides.3.questions.0.options.2": "Champagne",
+  "slides.3.questions.0.options.3": "Bourgogne",
+  "slides.3.questions.0.explanation": "Crémant-de-Loire is an important AOC in the Loire Valley and the core subject of this course. It produces sparkling wines using the traditional method across the Loire region."
+}

@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "Course Introduction",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">Climate Change — Harvest Date and Alcohol Level Analysis — This course covers cross-region climate research for the Loire Valley, analyzing how global warming has shifted harvest dates earlier and raised alcohol levels across all Loire sub-regions and varieties.</p></div>",
+
+  "slides.1.title": "Climate Change — Harvest Date and Alcohol Level Analysis",
+  "slides.1.content": "<div class=\"lesson-content\"><p>This course systematically examines cross-region climate research for the Loire Valley, helping you build a solid knowledge framework. Key findings: since the 1980s, Loire harvest dates have advanced by an average of 2–3 weeks; average alcohol levels have increased by 1–1.5%; and the frequency of extreme vintages (frost, drought, heat) has risen significantly.</p><p>Through systematic study, you will be able to identify the typical styles of these AOCs and accurately describe their characteristics during tasting.</p></div>",
+
+  "slides.2.title": "Quiz",
+  "slides.2.questions.0.question": "Which of the following best describes this course's research scope?",
+  "slides.2.questions.0.options.0": "Cross-region Loire Valley climate research",
+  "slides.2.questions.0.options.1": "Bordeaux vintage analysis",
+  "slides.2.questions.0.options.2": "Champagne climate data",
+  "slides.2.questions.0.options.3": "Burgundy harvest statistics",
+  "slides.2.questions.0.explanation": "This course focuses on cross-region climate research for the Loire Valley, studying the impact of global warming on harvest timing, alcohol levels, acidity, and sweetness across all Loire sub-regions. Loire, as one of France's northernmost quality wine regions, is particularly sensitive to climate change — warming brings earlier ripeness but also frost risk, drought stress, and new challenges for producing traditional styles."
+}

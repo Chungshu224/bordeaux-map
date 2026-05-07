@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "Course Introduction",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">Loir River Whites — This course covers Jasnières, Coteaux-du-Loir (white), Coteaux-du-Vendômois (white), Orléans (white), and Touraine (white), exploring the geography, soils, varieties, and stylistic characteristics of each AOC. Note: The Loir River is a tributary of the Loire — without the final \"e.\"</p></div>",
+
+  "slides.1.title": "Loir River Whites",
+  "slides.1.content": "<div class=\"lesson-content\"><p>This course systematically explores the terroir characteristics of Jasnières, Coteaux-du-Loir (white), Coteaux-du-Vendômois (white), Orléans (white), and Touraine (white), helping you build a solid knowledge framework for the Loire Valley.</p><p>Through systematic study, you will be able to identify the typical styles of these AOCs and accurately describe their characteristics during tasting.</p></div>",
+
+  "slides.2.title": "Quiz",
+  "slides.2.questions.0.question": "Which of the following AOCs is covered in this course?",
+  "slides.2.questions.0.options.0": "Jasnières",
+  "slides.2.questions.0.options.1": "Bordeaux",
+  "slides.2.questions.0.options.2": "Champagne",
+  "slides.2.questions.0.options.3": "Bourgogne",
+  "slides.2.questions.0.explanation": "Jasnières is a small but prestigious AOC on the Loir River (a tributary without the final \"e\"), producing 100% Chenin Blanc dry whites. Located in the Sarthe department, it represents the northernmost extreme for serious dry Chenin Blanc in the Loire system, with a notably high-acid, mineral style in cool vintages."
+}

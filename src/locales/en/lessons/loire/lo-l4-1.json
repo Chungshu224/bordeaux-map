@@ -1,0 +1,15 @@
+{
+  "slides.0.title": "Course Introduction",
+  "slides.0.content": "<div class=\"intro-content\"><p class=\"intro-lead\">Côtes d'Auvergne — Volcanic Terroir Gems — This course covers Côtes-d'Auvergne, Côtes-d'Auvergne-Boudes, Côtes-d'Auvergne-Chateaugay, Côtes-d'Auvergne-Corent, and Côtes-d'Auvergne-Madargues, exploring the unique volcanic terroir of the Loire Valley's southernmost quality wine region.</p></div>",
+
+  "slides.1.title": "Côtes d'Auvergne — Volcanic Terroir Gems",
+  "slides.1.content": "<div class=\"lesson-content\"><p>This course systematically explores the terroir characteristics of Côtes-d'Auvergne, Côtes-d'Auvergne-Boudes, Côtes-d'Auvergne-Chateaugay, Côtes-d'Auvergne-Corent, and Côtes-d'Auvergne-Madargues, helping you build a solid knowledge framework for the Loire Valley. Located in the Massif Central, these volcanic-soil wines represent a completely different character from the rest of the Loire.</p><p>Through systematic study, you will be able to identify the typical styles of these AOCs and accurately describe their characteristics during tasting.</p></div>",
+
+  "slides.2.title": "Quiz",
+  "slides.2.questions.0.question": "Which of the following AOCs is covered in this course?",
+  "slides.2.questions.0.options.0": "Côtes-d'Auvergne",
+  "slides.2.questions.0.options.1": "Bordeaux",
+  "slides.2.questions.0.options.2": "Champagne",
+  "slides.2.questions.0.options.3": "Bourgogne",
+  "slides.2.questions.0.explanation": "Côtes-d'Auvergne is an important AOC in the Loire Valley and a core subject of this course. Located in the Massif Central (Puy-de-Dôme department), it produces primarily Gamay and Pinot Noir reds/rosés on volcanic basalt and granite soils. Its five named crus — Boudes, Chateaugay, Corent, Madargues, and Châteaumeillant — each have distinct volcanic terroir characteristics."
+}

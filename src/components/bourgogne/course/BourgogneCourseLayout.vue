@@ -22,7 +22,7 @@
       </div>
 
       <div class="header-right">
-        <button class="progress-btn" title="整體進度">
+        <button class="progress-btn" :title="$t('bourgogne.layout.progressTitle')">
           <svg class="progress-ring" width="34" height="34" viewBox="0 0 34 34">
             <circle cx="17" cy="17" r="14" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="3"/>
             <circle
@@ -34,7 +34,7 @@
           </svg>
           <span class="progress-pct">{{ overallProgress }}%</span>
         </button>
-        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">≡ 章節</button>
+        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">{{ $t('bourgogne.layout.chapterToggle') }}</button>
         <div class="hdr-avatar" :title="avatarInitial">
           <img v-if="avatarUrl" :src="avatarUrl" class="hdr-avatar-img" />
           <span v-else class="hdr-avatar-initial">{{ avatarInitial }}</span>
@@ -46,7 +46,7 @@
     <div class="layout-body">
       <!-- 左側章節導航（桌面） -->
       <aside class="chapter-sidebar">
-        <div class="sidebar-title">章節總覽</div>
+        <div class="sidebar-title">{{ $t('bourgogne.layout.chapterOverview') }}</div>
         <nav>
           <template v-if="loadingModules">
             <div v-for="n in 6" :key="n" class="sidebar-skeleton"></div>
@@ -61,7 +61,7 @@
           >
             <span class="sidebar-icon">{{ module.completed ? '✓' : '○' }}</span>
             <div class="sidebar-info">
-              <div class="sidebar-name">{{ module.title }}</div>
+                <div class="sidebar-name">{{ getModuleTitle(module) }}</div>
               <div class="sidebar-dots">
                 <span
                   v-for="lesson in (moduleDataCache[module.id]?.lessons || [])"
@@ -87,15 +87,15 @@
         <div class="level-header-card">
           <div class="level-header-top">
             <div class="level-badge">Level {{ props.currentLevel.id }}</div>
-            <h2 class="level-title">{{ props.currentLevel.name }}</h2>
+            <h2 class="level-title">{{ $t(`bourgogne.levels.${props.currentLevel.id}.title`) }}</h2>
           </div>
-          <p class="level-desc">{{ props.currentLevel.description }}</p>
+          <p class="level-desc">{{ $t(`bourgogne.levels.${props.currentLevel.id}.description`) }}</p>
           <div class="progress-bar-wrapper">
             <div class="progress-bar-fill" :style="{ width: overallProgress + '%' }"></div>
           </div>
-          <p class="progress-label">{{ completedLessonsCount }}/{{ totalLessonsCount }} 課程完成</p>
+          <p class="progress-label">{{ $t('bourgogne.layout.completedLabel', { done: completedLessonsCount, total: totalLessonsCount }) }}</p>
           <div v-if="overallProgress > 0 && overallProgress < 100" class="motivation-text">
-            🎯 再完成 {{ totalLessonsCount - completedLessonsCount }} 課即可完成此階段！
+            {{ $t('bourgogne.layout.motivation', { n: totalLessonsCount - completedLessonsCount }) }}
           </div>
         </div>
 
@@ -120,10 +120,10 @@
                 {{ module.completed ? '✓' : (module.icon || '📖') }}
               </div>
               <div class="module-section-info">
-                <h3 class="module-section-title">{{ module.title }}</h3>
+                <h3 class="module-section-title">{{ getModuleTitle(module) }}</h3>
                 <span class="module-meta-chip">
-                  {{ module.duration }} ·
-                  {{ moduleDoneCount(module) }}/{{ moduleDataCache[module.id]?.lessons?.length ?? module.lessons }} 完成
+                  {{ getModuleDuration(module) }} ·
+                  {{ moduleDoneCount(module) }}/{{ moduleDataCache[module.id]?.lessons?.length ?? module.lessons }} {{ $t('bourgogne.layout.moduleDone') }}
                 </span>
               </div>
             </div>
@@ -150,8 +150,8 @@
                   <div v-if="lesson.duration" class="lesson-duration">{{ lesson.duration }}</div>
                 </div>
                 <div class="lesson-action">
-                  <span v-if="isLessonCompleted(module.id, lesson.id)" class="tag-done">完成</span>
-                  <span v-else class="tag-start">開始 ▶</span>
+                  <span v-if="isLessonCompleted(module.id, lesson.id)" class="tag-done">{{ $t('bourgogne.layout.tagDone') }}</span>
+                  <span v-else class="tag-start">{{ $t('bourgogne.layout.tagStart') }}</span>
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@
       <Transition name="burg-slide-up">
         <div v-if="drawerOpen" class="burg-chapter-drawer">
           <div class="drawer-header">
-            <span>章節導航</span>
+            <span>{{ $t('bourgogne.layout.chapterDrawer') }}</span>
             <button class="drawer-close" @click="drawerOpen = false">×</button>
           </div>
           <div class="drawer-body">
@@ -179,7 +179,7 @@
             >
               <span class="drawer-status">{{ module.completed ? '✓' : '○' }}</span>
               <div class="drawer-item-info">
-                <div class="drawer-chapter-name">{{ module.title }}</div>
+                <div class="drawer-chapter-name">{{ getModuleTitle(module) }}</div>
                 <div class="drawer-progress">
                   {{ moduleDoneCount(module) }}/{{ moduleDataCache[module.id]?.lessons?.length ?? module.lessons }}
                 </div>
@@ -202,7 +202,7 @@ import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
 
 const BOURGOGNE_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/bourgogne/*.json')
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const avatarUrl = ref('')
 const avatarInitial = ref('我')
 
@@ -284,6 +284,7 @@ const loadModuleData = async (moduleId) => {
 
 onMounted(loadModules)
 watch(() => props.currentLevel?.id, loadModules)
+watch(locale, loadModules)
 
 // Progress
 const isLessonCompleted = (moduleId, lessonId) => {
@@ -317,6 +318,32 @@ function scrollToModule (moduleId) {
 function scrollToModuleAndClose (moduleId) {
   scrollToModule(moduleId)
   drawerOpen.value = false
+}
+
+// Module title/duration i18n helpers (all levels)
+const MODULE_LEVEL_MAP = {
+  'beginner':    'L1',
+  'intermediate':'L2',
+  'advanced':    'L3',
+  'master':      'L4',
+}
+function getModuleLevelKey(id) {
+  const prefix = id.split('-m')[0]
+  const lvl = MODULE_LEVEL_MAP[prefix] ?? 'L4'
+  const num = id.replace(/^.*-m/, 'm')
+  return { ns: `bourgogne.modules${lvl}`, num }
+}
+function getModuleTitle(module) {
+  const { ns, num } = getModuleLevelKey(module.id)
+  const i18nKey = `${ns}.${num}.title`
+  const translated = t(i18nKey)
+  return translated !== i18nKey ? translated : module.title
+}
+function getModuleDuration(module) {
+  const { ns, num } = getModuleLevelKey(module.id)
+  const i18nKey = `${ns}.${num}.duration`
+  const translated = t(i18nKey)
+  return translated !== i18nKey ? translated : module.duration
 }
 </script>
 

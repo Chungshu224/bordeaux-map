@@ -15,7 +15,7 @@
             class="level-tab"
             :class="{ active: props.currentLevel === n, locked: !props.unlockedLevels.includes(n) }"
             :disabled="!props.unlockedLevels.includes(n)"
-            :title="!props.unlockedLevels.includes(n) ? `需完成 Level ${n - 1} 綜合評量才能解鎖` : `Level ${n}`"
+            :title="!props.unlockedLevels.includes(n) ? $t('loire.layout.lockHint', { prev: n - 1 }) : `Level ${n}`"
             @click="props.unlockedLevels.includes(n) && emit('changeLevel', n)"
           >
             <span v-if="!props.unlockedLevels.includes(n)" class="tab-lock">🔒</span>L{{ n }}
@@ -36,7 +36,7 @@
           </svg>
           <span class="progress-pct">{{ overallProgress }}%</span>
         </button>
-        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">≡ 章節</button>
+        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">{{ $t('loire.layout.chapterToggle') }}</button>
       </div>
     </header>
 
@@ -44,7 +44,7 @@
     <div class="layout-body">
       <!-- 左側章節導航（桌面） -->
       <aside class="chapter-sidebar">
-        <div class="sidebar-title">章節總覽</div>
+        <div class="sidebar-title">{{ $t('loire.layout.sidebarTitle') }}</div>
         <nav>
           <button
             v-for="module in resolvedModules"
@@ -55,7 +55,7 @@
           >
             <span class="sidebar-icon">{{ isModuleCompleted(module) ? '✓' : '○' }}</span>
             <div class="sidebar-info">
-              <div class="sidebar-name">{{ module.title }}</div>
+              <div class="sidebar-name">{{ getModuleTitle(module) }}</div>
               <div class="sidebar-dots">
                 <span
                   v-for="lesson in module.lessons"
@@ -75,15 +75,15 @@
         <div class="level-header-card">
           <div class="level-header-top">
             <div class="level-badge">Level {{ props.currentLevel }}</div>
-            <h2 class="level-title">{{ props.currentLevelData?.title }}</h2>
+            <h2 class="level-title">{{ $t(`loire.levels.${props.currentLevel}.title`) }}</h2>
           </div>
-          <p class="level-desc">{{ props.currentLevelData?.description }}</p>
+          <p class="level-desc">{{ $t(`loire.levels.${props.currentLevel}.description`) }}</p>
           <div class="progress-bar-wrapper">
             <div class="progress-bar-fill" :style="{ width: overallProgress + '%' }"></div>
           </div>
-          <p class="progress-label">{{ completedCount }}/{{ totalCount }} 課程完成</p>
+          <p class="progress-label">{{ $t('loire.layout.lessonsComplete', { done: completedCount, total: totalCount }) }}</p>
           <div v-if="overallProgress > 0 && overallProgress < 100" class="motivation-text">
-            🎯 再完成 {{ totalCount - completedCount }} 課即可完成此階段！
+            {{ $t('loire.layout.motivation', { remaining: totalCount - completedCount }) }}
           </div>
         </div>
 
@@ -100,9 +100,9 @@
                 {{ isModuleCompleted(module) ? '✓' : '📖' }}
               </div>
               <div class="module-section-info">
-                <h3 class="module-section-title">{{ module.title }}</h3>
+                <h3 class="module-section-title">{{ getModuleTitle(module) }}</h3>
                 <span class="module-count-chip">
-                  {{ moduleDoneCount(module) }}/{{ module.lessons.length }} 完成
+                  {{ $t('loire.layout.lessonsComplete', { done: moduleDoneCount(module), total: module.lessons.length }) }}
                 </span>
               </div>
             </div>
@@ -119,12 +119,12 @@
                   <span v-else>{{ idx + 1 }}</span>
                 </div>
                 <div class="lesson-meta">
-                  <div class="lesson-title">{{ lesson.title }}</div>
-                  <div v-if="lesson.duration" class="lesson-duration">{{ lesson.duration }} 分鐘</div>
+                  <div class="lesson-title">{{ getLessonTitle(lesson) }}</div>
+                  <div v-if="lesson.duration" class="lesson-duration">{{ getLessonDuration(lesson) }} {{ $t('loire.layout.minutes') }}</div>
                 </div>
                 <div class="lesson-action">
-                  <span v-if="completedLessons.includes(lesson.id)" class="tag-done">完成</span>
-                  <span v-else class="tag-start">開始 ▶</span>
+                  <span v-if="completedLessons.includes(lesson.id)" class="tag-done">{{ $t('loire.layout.tagDone') }}</span>
+                  <span v-else class="tag-start">{{ $t('loire.layout.tagStart') }}</span>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@
       <Transition name="lo-slide-up">
         <div v-if="drawerOpen" class="lo-chapter-drawer">
           <div class="drawer-header">
-            <span>章節導航</span>
+            <span>{{ $t('loire.layout.drawerTitle') }}</span>
             <button class="drawer-close" @click="drawerOpen = false">×</button>
           </div>
           <div class="drawer-body">
@@ -152,7 +152,7 @@
             >
               <span class="drawer-status">{{ isModuleCompleted(module) ? '✓' : '○' }}</span>
               <div class="drawer-item-info">
-                <div class="drawer-chapter-name">{{ module.title }}</div>
+                <div class="drawer-chapter-name">{{ getModuleTitle(module) }}</div>
                 <div class="drawer-progress">{{ moduleDoneCount(module) }}/{{ module.lessons.length }}</div>
               </div>
             </button>
@@ -165,6 +165,9 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   currentLevel: { type: Number, required: true },
@@ -197,6 +200,22 @@ const totalCount = computed(() =>
 const overallProgress = computed(() =>
   totalCount.value > 0 ? Math.round(completedCount.value / totalCount.value * 100) : 0
 )
+
+function getLessonTitle (lesson) {
+  const key = `loire.lessons.${lesson.id}.title`
+  const translated = t(key)
+  return translated !== key ? translated : lesson.title
+}
+function getLessonDuration (lesson) {
+  const key = `loire.lessons.${lesson.id}.duration`
+  const translated = t(key)
+  return (translated && translated !== key) ? translated : lesson.duration
+}
+function getModuleTitle (module) {
+  const key = `loire.modules.${module.id}`
+  const translated = t(key)
+  return translated !== key ? translated : module.title
+}
 
 function moduleDoneCount (module) {
   return module.lessons.filter(l => props.completedLessons.includes(l.id)).length

@@ -1,7 +1,7 @@
 <template>
   <div class="intro-slide">
     <div class="intro-header">
-      <h1 class="intro-title">課程導讀</h1>
+      <h1 class="intro-title">{{ slide.title }}</h1>
     </div>
 
     <div class="intro-content">
@@ -15,6 +15,8 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 const props = defineProps({
   slide: {
@@ -25,7 +27,7 @@ const props = defineProps({
 
 // 課程描述
 const description = computed(() => {
-  return props.slide.description || props.slide.content || '本課程將帶您深入了解布根地葡萄酒的精髓。'
+  return props.slide.description || props.slide.content || t('bourgogne.layout.introFallback', { title: props.slide.title ?? '' })
 })
 </script>
 
