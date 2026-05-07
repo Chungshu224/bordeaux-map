@@ -54,7 +54,19 @@
           "Domaine Jacqueson",
           "Maison Joseph Drouhin"
         ],
-        "color": "#F5F5DC"
+        "color": "#F5F5DC",
+        "ja": {
+          "exposition": "東・南東・南",
+          "wineTypes": [
+            "白ワイン",
+            "赤ワイン"
+          ],
+          "climate": "大陸性気候、温和なマイクロクライメート",
+          "soilStructure": "ジュラ紀石灰岩、泥灰岩と粘土の表土",
+          "wineStyle": "白：爽やかでミネラリー、優雅なシャルドネ。赤：軽快でフルーティー",
+          "tastingNotes": "白：柑橘・白い花・ミネラル。赤：チェリー・ラズベリー・スパイス",
+          "agingPotential": "白：5-10年、赤：5-8年"
+        }
       }
     },
     "premier_crus": {
@@ -79,7 +91,10 @@
           "Domaine de Villaine",
           "Domaine Paul et Marie Jacqueson"
         ],
-        "color": "#B22222"
+        "color": "#B22222",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "agneux": {
         "name": "Agneux",
@@ -102,7 +117,10 @@
           "Domaine Jacqueson",
           "Domaine Dureuil-Janthial"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "champs-cloux": {
         "name": "Champs Cloux",
@@ -125,7 +143,10 @@
           "Domaine Paul et Marie Jacqueson",
           "Château de Rully"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "chapitre": {
         "name": "Chapitre",
@@ -148,7 +169,10 @@
           "Domaine de Villaine",
           "Domaine Belleville"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "clos-du-chaigne": {
         "name": "Clos du Chaigne",
@@ -171,7 +195,10 @@
           "Domaine Jacqueson",
           "Antonin Rodet"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "clos-st-jacques": {
         "name": "Clos St Jacques",
@@ -194,7 +221,10 @@
           "Domaine Vincent Dureuil-Janthial",
           "Château de Rully"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "cloux": {
         "name": "Cloux",
@@ -217,7 +247,10 @@
           "Domaine Vincent Dureuil-Janthial",
           "Château de Rully"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "gresigny": {
         "name": "Grésigny",
@@ -240,7 +273,10 @@
           "Domaine de Villaine",
           "Domaine Paul et Marie Jacqueson"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "la-bressande": {
         "name": "La Bressande",
@@ -263,7 +299,10 @@
           "Domaine Jacqueson",
           "Domaine Dureuil-Janthial"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "la-fosse": {
         "name": "La Fosse",
@@ -286,7 +325,10 @@
           "Domaine Jacqueson",
           "Domaine Dureuil-Janthial"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "la-pucelle": {
         "name": "La Pucelle",
@@ -309,7 +351,10 @@
           "Domaine de Villaine",
           "Domaine Paul et Marie Jacqueson"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "la-renarde": {
         "name": "La Renarde",
@@ -332,7 +377,10 @@
           "Domaine de la Renarde",
           "Domaine Belleville"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "le-meix-cadot": {
         "name": "Le Meix Cadot",
@@ -355,7 +403,10 @@
           "Domaine Vincent Dureuil-Janthial",
           "Château de Rully"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "le-meix-caillet": {
         "name": "Le Meix Caillet",
@@ -378,7 +429,10 @@
           "Domaine Paul et Marie Jacqueson",
           "Château de Rully"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-pierres": {
         "name": "Les Pierres",
@@ -401,7 +455,10 @@
           "Domaine Paul et Marie Jacqueson",
           "Domaine de Villaine"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "margotes": {
         "name": "Margotés",
@@ -424,7 +481,10 @@
           "Domaine Jacqueson",
           "Antonin Rodet"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "marissou": {
         "name": "Marissou",
@@ -447,7 +507,10 @@
           "Domaine Dureuil-Janthial",
           "Domaine Belleville"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "molesme": {
         "name": "Molesme",
@@ -470,7 +533,10 @@
           "Domaine de Villaine",
           "Château de Rully"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "montpalais": {
         "name": "Montpalais",
@@ -493,7 +559,10 @@
           "Domaine Vincent Dureuil-Janthial",
           "Domaine Paul et Marie Jacqueson"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "pillot": {
         "name": "Pillot",
@@ -516,7 +585,10 @@
           "Domaine Jacqueson",
           "Domaine de Villaine"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "preaux": {
         "name": "Préaux",
@@ -539,7 +611,10 @@
           "Domaine Dureuil-Janthial",
           "Antonin Rodet"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "rabource": {
         "name": "Rabourcé",
@@ -562,7 +637,10 @@
           "Domaine Paul et Marie Jacqueson",
           "Château de Rully"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "raclot": {
         "name": "Raclot",
@@ -585,7 +663,10 @@
           "Domaine Paul et Marie Jacqueson",
           "Domaine de Villaine"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "vauvry": {
         "name": "Vauvry",
@@ -608,9 +689,20 @@
           "Domaine de Villaine",
           "Domaine Vincent Dureuil-Janthial"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       }
     },
     "grand_crus": {}
+  },
+  "ja": {
+    "wineTypes": [
+      "白ワイン",
+      "赤ワイン",
+      "スパークリングワイン"
+    ],
+    "exposition": "東・南東"
   }
 }

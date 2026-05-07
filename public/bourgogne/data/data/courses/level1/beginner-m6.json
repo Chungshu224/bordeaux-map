@@ -162,7 +162,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.65, 46.15],
+            "center": [
+              4.65,
+              46.15
+            ],
             "zoom": 10.5,
             "pitch": 0,
             "bearing": 0

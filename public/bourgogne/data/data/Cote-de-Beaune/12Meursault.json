@@ -4,16 +4,30 @@
   "area": "約 395 公頃",
   "altitude": "230-370m",
   "exposition": "東向",
-  "grapeVarieties": ["Chardonnay", "Pinot Noir"],
-  "wineTypes": ["白酒", "紅酒 (少量)"],
+  "grapeVarieties": [
+    "Chardonnay",
+    "Pinot Noir"
+  ],
+  "wineTypes": [
+    "白酒",
+    "紅酒 (少量)"
+  ],
   "climate": "理想的東向坡，日照充足",
   "soilStructure": "富含石灰質的泥灰岩",
   "wineStyle": "豐滿、圓潤、口感油潤，帶有奶油、榛果風味",
   "tastingNotes": "檸檬、蘋果、桃子、奶油、烤麵包、榛果",
   "agingPotential": "5-15年",
-  "famousWineries": ["Domaine Coche-Dury", "Domaine des Comtes Lafon", "Domaine Roulot"],
+  "famousWineries": [
+    "Domaine Coche-Dury",
+    "Domaine des Comtes Lafon",
+    "Domaine Roulot"
+  ],
   "grandCrus": [],
-  "premierCrus": ["Perrières", "Charmes", "Genevrières"],
+  "premierCrus": [
+    "Perrières",
+    "Charmes",
+    "Genevrières"
+  ],
   "history": "Meursault的市政廳是電影《虎口脫險》的取景地。",
   "geojson": {
     "village": {
@@ -26,13 +40,30 @@
         "altitude": "230-280m",
         "exposition": "東",
         "soilStructure": "較深厚的粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：豐滿、圓潤，帶有明顯的奶油、榛果和烤麵包香氣，口感油潤。",
         "tastingNotes": "黃蘋果、桃子、奶油、榛果、香草。",
         "agingPotential": "4-10年",
         "history": "Meursault村莊級葡萄酒是體驗其經典豐腴風格的最佳入門。許多優秀的單一園（Lieux-dits）如Les Narvaux, Les Tillets等，品質可媲美一級園。",
-        "famousWineries": ["Domaine Coche-Dury", "Domaine Roulot", "Domaine Arnaud Ente"],
-        "color": "#8FBC8F"
+        "famousWineries": [
+          "Domaine Coche-Dury",
+          "Domaine Roulot",
+          "Domaine Arnaud Ente"
+        ],
+        "color": "#8FBC8F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "climate": "大陸性気候、温暖で良く保護された条件",
+          "soilStructure": "泥灰岩と石灰岩、ミネラル豊富で複雑な土壌",
+          "wineStyle": "豊かでまろやか、バターとナッツのニュアンス、偉大なミネラル感",
+          "tastingNotes": "白桃・ヘーゼルナッツ・バター・スパイス・ミネラル",
+          "agingPotential": "10-20年"
+        }
       },
       "meursault-cote-de-beaune": {
         "name": "Meursault Côte de Beaune",
@@ -43,12 +74,18 @@
         "altitude": "230-280m",
         "exposition": "東",
         "soilStructure": "較深厚的粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：豐滿、圓潤，帶有明顯的奶油、榛果和烤麵包香氣，口感油潤。",
         "tastingNotes": "黃蘋果、桃子、奶油、榛果、香草。",
         "agingPotential": "4-10年",
         "history": "Meursault村莊級葡萄酒是體驗其經典豐腴風格的最佳入門。許多優秀的單一園（Lieux-dits）如Les Narvaux, Les Tillets等，品質可媲美一級園。",
-        "famousWineries": ["Domaine Coche-Dury", "Domaine Roulot", "Domaine Arnaud Ente"],
+        "famousWineries": [
+          "Domaine Coche-Dury",
+          "Domaine Roulot",
+          "Domaine Arnaud Ente"
+        ],
         "color": "#8FBC8F"
       }
     },
@@ -62,12 +99,18 @@
         "altitude": "260-280m",
         "exposition": "東",
         "soilStructure": "非常貧瘠、多石的石灰岩土壤",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：極致的純淨、礦物感和集中度，結構緊密，酸度活潑，陳年潛力巨大。",
         "tastingNotes": "檸檬、白花、燧石、濕石、海鹽。",
         "agingPotential": "10-30年",
         "history": "被公認為Meursault最頂級的一級園，品質被認為達到特級園水準。'Perrières'意為採石場，其強烈的礦物風格是Meursault的巔峰之作。",
-        "famousWineries": ["Domaine Coche-Dury", "Domaine des Comtes Lafon", "Domaine Roulot"],
+        "famousWineries": [
+          "Domaine Coche-Dury",
+          "Domaine des Comtes Lafon",
+          "Domaine Roulot"
+        ],
         "color": "#CD853F"
       },
       "charmes": {
@@ -79,12 +122,18 @@
         "altitude": "240-260m",
         "exposition": "東",
         "soilStructure": "較深厚的粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：豐滿、圓潤、口感油潤，果味濃郁，風格最為經典的Meursault。",
         "tastingNotes": "桃子、杏、奶油、榛果、蜂蜜。",
         "agingPotential": "7-20年",
         "history": "Meursault面積最大、最著名的一級園之一。風格最為豐腴，展現了Meursault溫暖、迷人的一面。",
-        "famousWineries": ["Domaine des Comtes Lafon", "Domaine Roulot", "Domaine François Mikulski"],
+        "famousWineries": [
+          "Domaine des Comtes Lafon",
+          "Domaine Roulot",
+          "Domaine François Mikulski"
+        ],
         "color": "#CD853F"
       },
       "genevrieres": {
@@ -96,12 +145,18 @@
         "altitude": "250-270m",
         "exposition": "東",
         "soilStructure": "石灰岩和泥灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：兼具Perrières的礦物感和Charmes的豐腴感，香氣極為複雜，帶有異國情調的香料氣息。",
         "tastingNotes": "白花、香料、柑橘、礦物質。",
         "agingPotential": "8-25年",
         "history": "與Perrières和Charmes並列為Meursault三大頂級一級園，以其無與倫比的香氣複雜性而聞名。",
-        "famousWineries": ["Domaine des Comtes Lafon", "Domaine Roulot", "Domaine Antoine Jobard"],
+        "famousWineries": [
+          "Domaine des Comtes Lafon",
+          "Domaine Roulot",
+          "Domaine Antoine Jobard"
+        ],
         "color": "#CD853F"
       },
       "les-gouttes-d-or": {
@@ -113,12 +168,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "富含鐵質的紅色粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：酒體飽滿，口感豐富，風格強勁。",
         "tastingNotes": "蜂蜜、香料、成熟水果。",
         "agingPotential": "7-20年",
         "history": "名字意為'黃金滴'，形容其酒液色澤金黃，風格豐腴。",
-        "famousWineries": ["Domaine Arnaud Ente", "Domaine des Comtes Lafon"],
+        "famousWineries": [
+          "Domaine Arnaud Ente",
+          "Domaine des Comtes Lafon"
+        ],
         "color": "#CD853F"
       },
       "le-porusot": {
@@ -130,12 +190,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格豐滿，結構良好，果味濃郁。",
         "tastingNotes": "蘋果、梨、香料。",
         "agingPotential": "6-18年",
         "history": "一個品質優秀的一級園，風格經典。",
-        "famousWineries": ["Domaine Roulot", "Domaine Jobard-Morey"],
+        "famousWineries": [
+          "Domaine Roulot",
+          "Domaine Jobard-Morey"
+        ],
         "color": "#CD853F"
       },
       "les-boucheres": {
@@ -147,12 +212,17 @@
         "altitude": "270m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，礦物感突出，口感細膩。",
         "tastingNotes": "白花、檸檬、礦石。",
         "agingPotential": "7-20年",
         "history": "位於Genevrières上方，風格更為細膩和礦物。",
-        "famousWineries": ["Domaine Roulot", "Domaine Vincent Dancer"],
+        "famousWineries": [
+          "Domaine Roulot",
+          "Domaine Vincent Dancer"
+        ],
         "color": "#CD853F"
       },
       "les-santenots-du-milieu": {
@@ -164,12 +234,17 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "深厚的粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：酒體飽滿，結構宏大，口感豐腴，風格強勁。",
         "tastingNotes": "黑莓、李子、巧克力、香料。",
         "agingPotential": "10-30年",
         "history": "位於Meursault村內的Santenots地塊，生產的紅酒標示為Volnay Santenots 1er Cru，而白酒則標示為Meursault Santenots 1er Cru。這裡是Santenots的核心部分。",
-        "famousWineries": ["Domaine des Comtes Lafon", "Domaine Jacques Prieur"],
+        "famousWineries": [
+          "Domaine des Comtes Lafon",
+          "Domaine Jacques Prieur"
+        ],
         "color": "#CD853F"
       },
       "blagny": {
@@ -181,12 +256,17 @@
         "altitude": "340-370m",
         "exposition": "東",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：礦物感強，結構緊實，酸度活潑。",
         "tastingNotes": "檸檬、燧石、白花。",
         "agingPotential": "8-20年",
         "history": "位於Blagny小村莊周圍，這裡的白酒標示為Meursault-Blagny 1er Cru，風格純淨而礦物。",
-        "famousWineries": ["Domaine Antoine Jobard", "Domaine Matrot"],
+        "famousWineries": [
+          "Domaine Antoine Jobard",
+          "Domaine Matrot"
+        ],
         "color": "#CD853F"
       },
       "clos-des-perrieres": {
@@ -198,12 +278,16 @@
         "altitude": "260m",
         "exposition": "東",
         "soilStructure": "非常貧瘠、多石的石灰岩土壤",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：極致的純淨、礦物感和集中度，結構緊密，酸度活潑，陳年潛力巨大。",
         "tastingNotes": "檸檬、白花、燧石、濕石、海鹽。",
         "agingPotential": "12-35年",
         "history": "位於Perrières內部的圍牆園，為Albert Grivault的獨佔園（Monopole），被認為是Perrières中的精華，品質無與倫比。",
-        "famousWineries": ["Domaine Albert Grivault"],
+        "famousWineries": [
+          "Domaine Albert Grivault"
+        ],
         "color": "#CD853F"
       },
       "la-jeunellotte": {
@@ -215,12 +299,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，果味與礦物感結合。",
         "tastingNotes": "蘋果、香料。",
         "agingPotential": "6-18年",
         "history": "位於Blagny村附近，品質優良。",
-        "famousWineries": ["Domaine Buisson-Charles"],
+        "famousWineries": [
+          "Domaine Buisson-Charles"
+        ],
         "color": "#CD853F"
       },
       "la-piece-sous-le-bois": {
@@ -232,12 +320,16 @@
         "altitude": "350-370m",
         "exposition": "東",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：礦物感強，酸度高，風格純淨。",
         "tastingNotes": "檸檬、青蘋果、燧石。",
         "agingPotential": "8-20年",
         "history": "位於Blagny村的最高處，風格清冽，礦物感十足。",
-        "famousWineries": ["Domaine Matrot"],
+        "famousWineries": [
+          "Domaine Matrot"
+        ],
         "color": "#CD853F"
       },
       "les-caillerets": {
@@ -249,12 +341,16 @@
         "altitude": "260m",
         "exposition": "東",
         "soilStructure": "多石的石灰岩土壤",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：礦物感強，風格純淨。",
         "tastingNotes": "柑橘、燧石。",
         "agingPotential": "8-20年",
         "history": "與Volnay的Caillerets相鄰，但Meursault這邊種植的是夏多內，風格礦物。",
-        "famousWineries": ["Domaine Coche-Dury"],
+        "famousWineries": [
+          "Domaine Coche-Dury"
+        ],
         "color": "#CD853F"
       },
       "les-cras": {
@@ -266,12 +362,17 @@
         "altitude": "270m",
         "exposition": "東",
         "soilStructure": "非常貧瘠、多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：礦物感極強，酸度活潑，風格緊實。",
         "tastingNotes": "檸檬、燧石、濕石。",
         "agingPotential": "8-20年",
         "history": "名字意為'石頭'，反映其土壤特性，出產的酒以其鮮明的礦物風格而聞名。",
-        "famousWineries": ["Domaine Roulot", "Domaine Antoine Jobard"],
+        "famousWineries": [
+          "Domaine Roulot",
+          "Domaine Antoine Jobard"
+        ],
         "color": "#CD853F"
       },
       "les-plures": {
@@ -283,12 +384,16 @@
         "altitude": "N/A",
         "exposition": "N/A",
         "soilStructure": "N/A",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "N/A",
         "tastingNotes": "N/A",
         "agingPotential": "N/A",
         "history": "這是一個歷史上的地塊名，現在通常被包含在其他一級園內，很少單獨標示。",
-        "famousWineries": ["N/A"],
+        "famousWineries": [
+          "N/A"
+        ],
         "color": "#CD853F"
       },
       "les-ravelles": {
@@ -300,12 +405,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，礦物感與果味平衡。",
         "tastingNotes": "蘋果、白花、礦石。",
         "agingPotential": "6-18年",
         "history": "一個較小的一級園，品質優良。",
-        "famousWineries": ["Domaine Buisson-Charles"],
+        "famousWineries": [
+          "Domaine Buisson-Charles"
+        ],
         "color": "#CD853F"
       },
       "les-santenots-blancs": {
@@ -317,12 +426,17 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：豐滿、圓潤，結構感好。",
         "tastingNotes": "桃子、奶油、香料。",
         "agingPotential": "7-20年",
         "history": "Santenots地塊中種植夏多內的部分，標示為Meursault Santenots 1er Cru。風格豐腴。",
-        "famousWineries": ["Domaine des Comtes Lafon", "Domaine Jacques Prieur"],
+        "famousWineries": [
+          "Domaine des Comtes Lafon",
+          "Domaine Jacques Prieur"
+        ],
         "color": "#CD853F"
       },
       "porusot": {
@@ -334,12 +448,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格豐滿，結構良好，果味濃郁。",
         "tastingNotes": "蘋果、梨、香料。",
         "agingPotential": "6-18年",
         "history": "一個品質優秀的一級園，風格經典。",
-        "famousWineries": ["Domaine Roulot", "Domaine Jobard-Morey"],
+        "famousWineries": [
+          "Domaine Roulot",
+          "Domaine Jobard-Morey"
+        ],
         "color": "#CD853F"
       },
       "sous-le-dos-d-ane": {
@@ -351,12 +470,16 @@
         "altitude": "340m",
         "exposition": "東",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：礦物感強，酸度活潑，風格純淨。",
         "tastingNotes": "檸檬、燧石。",
         "agingPotential": "8-20年",
         "history": "位於Blagny村附近的高坡上，名字意為'驢背下'，風格清冽。",
-        "famousWineries": ["Domaine Leflaive"],
+        "famousWineries": [
+          "Domaine Leflaive"
+        ],
         "color": "#CD853F"
       },
       "overview": {
@@ -368,14 +491,29 @@
         "altitude": "240-280m",
         "exposition": "東",
         "soilStructure": "富含石灰質的泥灰岩",
-        "grapeVarieties": ["Chardonnay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：風格多樣，從豐滿圓潤到純淨礦物，是世界上最偉大的白酒之一。紅酒（來自Santenots）：結構宏大，風格強勁。",
         "tastingNotes": "白酒：柑橘、白花、燧石、奶油、榛果、蜂蜜。紅酒：黑色水果、香料。",
         "agingPotential": "白酒：8-25年，紅酒：10-30年",
         "history": "Meursault擁有19個一級園，雖然沒有特級園，但其頂級一級園（如Perrières, Charmes, Genevrières）的品質和聲譽堪比特級園，是夏多內葡萄酒的標竿。",
-        "famousWineries": ["Domaine Coche-Dury", "Domaine des Comtes Lafon", "Domaine Roulot", "Domaine Arnaud Ente", "Domaine Pierre-Yves Colin-Morey"],
+        "famousWineries": [
+          "Domaine Coche-Dury",
+          "Domaine des Comtes Lafon",
+          "Domaine Roulot",
+          "Domaine Arnaud Ente",
+          "Domaine Pierre-Yves Colin-Morey"
+        ],
         "color": "#B22222"
       }
     }
+  },
+  "ja": {
+    "wineTypes": [
+      "白ワイン",
+      "紅酒 (少量)"
+    ]
   }
 }

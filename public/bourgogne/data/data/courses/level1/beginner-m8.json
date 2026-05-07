@@ -260,11 +260,13 @@
         {
           "type": "content",
           "title": "總結",
-          "content": "年份是品鑑布根地的關鍵，了解氣候對酒質的影響，才能選擇最適合自己需求的酒款。世紀年份值得收藏，普通年份性價比更高。記住：沒有完美的年份，只有最適合你的年份。"        },
+          "content": "年份是品鑑布根地的關鍵，了解氣候對酒質的影響，才能選擇最適合自己需求的酒款。世紀年份值得收藏，普通年份性價比更高。記住：沒有完美的年份，只有最適合你的年份。"
+        },
         {
           "type": "vintage_comparison",
           "title": "🗓️ 布根地近 10 年份互動比較",
-          "description": "點選近 10 年份（2015–2024）查看詳細評價：氣候摘要、紅酒 / 白酒品質評分、儲存潛力、代表為何「佳」或「難」、今日適合「即飲」或「長期收藏」的建議、以及該年份下頂級酒莊代表酒款。推薦「2020 = 紅酒佳、白酒中議」「2022 = 白酒佳」「2019 = 世紀年份」。"        }
+          "description": "點選近 10 年份（2015–2024）查看詳細評價：氣候摘要、紅酒 / 白酒品質評分、儲存潛力、代表為何「佳」或「難」、今日適合「即飲」或「長期收藏」的建議、以及該年份下頂級酒莊代表酒款。推薦「2020 = 紅酒佳、白酒中議」「2022 = 白酒佳」「2019 = 世紀年份」。"
+        }
       ]
     },
     {
@@ -846,49 +848,84 @@
       {
         "id": "q1",
         "question": "以下哪個年份被認為是近期的世紀年份？",
-        "options": ["2017", "2015", "2021", "2019"],
+        "options": [
+          "2017",
+          "2015",
+          "2021",
+          "2019"
+        ],
         "correctAnswer": 1,
         "explanation": "2015 年是公認的世紀年份，紅白酒都表現卓越，陳年潛力佳。"
       },
       {
         "id": "q2",
         "question": "Domaine de la Romanée-Conti (DRC) 位於哪個產區？",
-        "options": ["伯恩丘", "夜丘", "夏布利", "馬貢內"],
+        "options": [
+          "伯恩丘",
+          "夜丘",
+          "夏布利",
+          "馬貢內"
+        ],
         "correctAnswer": 1,
         "explanation": "DRC 位於夜丘的 Vosne-Romanée，擁有多個頂級特級園。"
       },
       {
         "id": "q3",
         "question": "Domaine Leflaive 以哪個村莊的白酒聞名？",
-        "options": ["Meursault", "Chassagne-Montrachet", "Puligny-Montrachet", "Corton"],
+        "options": [
+          "Meursault",
+          "Chassagne-Montrachet",
+          "Puligny-Montrachet",
+          "Corton"
+        ],
         "correctAnswer": 2,
         "explanation": "Domaine Leflaive 是 Puligny-Montrachet 白酒的頂級生產者。"
       },
       {
         "id": "q4",
         "question": "夏布利的標竿酒莊是？",
-        "options": ["Domaine Raveneau", "Domaine Coche-Dury", "Domaine Leroy", "Domaine Dujac"],
+        "options": [
+          "Domaine Raveneau",
+          "Domaine Coche-Dury",
+          "Domaine Leroy",
+          "Domaine Dujac"
+        ],
         "correctAnswer": 0,
         "explanation": "Domaine Raveneau 是夏布利特級園的標竿，以純淨礦物質風格著稱。"
       },
       {
         "id": "q5",
         "question": "布根地特級園紅酒的適飲期通常是？",
-        "options": ["1-5年", "3-8年", "10-30年以上", "50年以上"],
+        "options": [
+          "1-5年",
+          "3-8年",
+          "10-30年以上",
+          "50年以上"
+        ],
         "correctAnswer": 2,
         "explanation": "特級園紅酒結構紮實，陳年潛力佳，通常需要10-30年以上才能達到最佳狀態。"
       },
       {
         "id": "q6",
         "question": "2022 年份的特色是？",
-        "options": ["霜害嚴重", "炎熱乾燥，白酒出色", "產量極高", "品質平庸"],
+        "options": [
+          "霜害嚴重",
+          "炎熱乾燥，白酒出色",
+          "產量極高",
+          "品質平庸"
+        ],
         "correctAnswer": 1,
         "explanation": "2022 年炎熱乾燥，葡萄集中度高，白酒尤其表現出色。"
       },
       {
         "id": "q7",
         "question": "酒窖的理想溫度是？",
-        "options": ["8-10°C", "12-14°C", "16-18°C", "20-22°C"],
+        "options": [
+          "8-10°C",
+          "12-14°C",
+          "16-18°C",
+          "20-22°C"
+        ],
         "correctAnswer": 1,
         "explanation": "12-14°C 是理想的酒窖恆溫，能讓葡萄酒緩慢而穩定地陳年。"
       }

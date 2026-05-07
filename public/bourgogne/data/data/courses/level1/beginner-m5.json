@@ -13,7 +13,10 @@
           "title": "🗺️ 夏布利產區地圖",
           "content": "探索夏布利的地理位置與四個分級",
           "mapConfig": {
-            "center": [3.8, 47.82],
+            "center": [
+              3.8,
+              47.82
+            ],
             "zoom": 11.5,
             "pitch": 0,
             "bearing": 0
@@ -60,7 +63,10 @@
           "title": "🗺️ 夏布利產區地圖",
           "interactive": false,
           "mapConfig": {
-            "center": [3.8, 47.82],
+            "center": [
+              3.8,
+              47.82
+            ],
             "zoom": 11.5,
             "pitch": 0,
             "bearing": 0
@@ -159,19 +165,40 @@
           "title": "📊 夏布利 vs 金丘霞多麗風格對比",
           "content": "同樣的霞多麗品種，不同風土造就截然不同的風格",
           "data": {
-            "dimensions": ["酒體", "酸度", "礦物感", "果味濃度", "橡木桶", "陳年潛力"],
+            "dimensions": [
+              "酒體",
+              "酸度",
+              "礦物感",
+              "果味濃度",
+              "橡木桶",
+              "陳年潛力"
+            ],
             "datasets": [
               {
                 "label": "夏布利 Chablis",
                 "color": "#4CAF50",
                 "opacity": 0.3,
-                "values": [5, 9, 10, 6, 2, 7]
+                "values": [
+                  5,
+                  9,
+                  10,
+                  6,
+                  2,
+                  7
+                ]
               },
               {
                 "label": "金丘白酒 Côte d'Or",
                 "color": "#FFD700",
                 "opacity": 0.3,
-                "values": [8, 7, 5, 8, 9, 9]
+                "values": [
+                  8,
+                  7,
+                  5,
+                  8,
+                  9,
+                  9
+                ]
               }
             ]
           },
@@ -262,7 +289,10 @@
             }
           ],
           "mapConfig": {
-            "center": [3.8, 47.82],
+            "center": [
+              3.8,
+              47.82
+            ],
             "zoom": 11.5,
             "pitch": 0,
             "bearing": 0
@@ -477,7 +507,10 @@
             }
           ],
           "mapConfig": {
-            "center": [3.815, 47.815],
+            "center": [
+              3.815,
+              47.815
+            ],
             "zoom": 13.5,
             "pitch": 0,
             "bearing": 0

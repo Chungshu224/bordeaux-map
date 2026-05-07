@@ -609,7 +609,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "過去50年（1970-2020）布根地平均氣溫上升約多少？",
-        "options": ["0.5°C", "1.0°C", "1.8°C", "3.0°C"],
+        "options": [
+          "0.5°C",
+          "1.0°C",
+          "1.8°C",
+          "3.0°C"
+        ],
         "correctAnswer": 2,
         "explanation": "1970-2020年間，布根地平均氣溫上升約1.8°C，高於全球平均1.1°C。"
       },
@@ -617,7 +622,12 @@
         "id": "q2",
         "type": "multiple-choice",
         "question": "相比1980年代，2020年代布根地平均採收期提早了約多久？",
-        "options": ["1週", "2週", "3週", "4週以上"],
+        "options": [
+          "1週",
+          "2週",
+          "3週",
+          "4週以上"
+        ],
         "correctAnswer": 3,
         "explanation": "採收期從9月底提早至8月底，約提早30天（4週以上）。"
       },
@@ -645,7 +655,12 @@
         "id": "q5",
         "type": "multiple-choice",
         "question": "以下哪個產區最可能是氣候變遷的受益者？",
-        "options": ["Pommard南坡", "Chablis", "Corton低海拔", "Volnay平原"],
+        "options": [
+          "Pommard南坡",
+          "Chablis",
+          "Corton低海拔",
+          "Volnay平原"
+        ],
         "correctAnswer": 1,
         "explanation": "Chablis過去常成熟度不足，暖化後達到理想成熟且保留高酸度，品質飛躍。"
       },
@@ -673,7 +688,12 @@
         "id": "q8",
         "type": "multiple-choice",
         "question": "根據IPCC預測，2050年布根地可能再升溫多少（中度情境）？",
-        "options": ["0.3-0.5°C", "1-1.5°C", "2-3°C", "4-5°C"],
+        "options": [
+          "0.3-0.5°C",
+          "1-1.5°C",
+          "2-3°C",
+          "4-5°C"
+        ],
         "correctAnswer": 1,
         "explanation": "中度排放情境下，2050年可能再升溫1-1.5°C，總計相比1970年升溫約3°C。"
       },

@@ -186,6 +186,7 @@ function grapeBadgeStyle(grape) {
 }
 import { ref, onMounted, onUnmounted, nextTick, watch, computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
@@ -221,6 +222,22 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['resetMap', 'clear-region-info', 'reselect-aoc', 'request-aoc-list', 'request-learning-mode'])
+
+const { locale } = useI18n()
+
+// 依目前語系取得多語系欄位（優先取 ja 翻譯，回退至預設中文）
+function getLocaleField(r, field) {
+  if (!r) return ''
+  const lang = locale.value
+  if (lang === 'ja' && r.ja?.[field]) return r.ja[field]
+  return r[field] || ''
+}
+function getLocaleArray(r, field) {
+  if (!r) return []
+  const lang = locale.value
+  if (lang === 'ja' && r.ja?.[field]) return r.ja[field]
+  return r[field] || []
+}
 
 // ── BRGM 法國地質圖 ──
 const { brgmEnabled, brgmOpacity, toggleBRGM, resetBRGM, updateBRGMOpacity, updateBRGMClip } = useBRGMGeology('bourgogne')
@@ -1444,20 +1461,31 @@ const unifiedInfo = computed(() => {
   }
   const r = props.regionInfo
   if (!r) return { name: aoc.aoc.replace('.geojson', '').replace(/_/g, ' '), description: '' }
+
+  const isJa = locale.value === 'ja'
+  const metaLabels = isJa
+    ? { area: '面積', altitude: '標高', exposition: '向き' }
+    : { area: '面積', altitude: '海拔', exposition: '坡向' }
+
   const meta = []
-  if (r.area) meta.push({ label: '面積', value: r.area })
-  if (r.altitude) meta.push({ label: '海拔', value: r.altitude })
-  if (r.exposition) meta.push({ label: '坡向', value: r.exposition })
-  const styles = r.wineTypes || []
+  if (r.area)       meta.push({ label: metaLabels.area,       value: r.area })
+  if (r.altitude)   meta.push({ label: metaLabels.altitude,   value: r.altitude })
+  if (r.exposition) meta.push({ label: metaLabels.exposition, value: getLocaleField(r, 'exposition') })
+
+  const styles = getLocaleArray(r, 'wineTypes')
+  const wineStyle   = getLocaleField(r, 'wineStyle')
+  const tastingNotes = getLocaleField(r, 'tastingNotes')
+  const agingPotential = getLocaleField(r, 'agingPotential')
+
   return {
-    name: r.name || aoc.aoc.replace('.geojson', '').replace(/_/g, ' '),
+    name: getLocaleField(r, 'name') || aoc.aoc.replace('.geojson', '').replace(/_/g, ' '),
     badges: r.classification ? [{ label: r.classification }] : [],
     meta,
     styles,
     grapes: r.grapeVarieties || [],
-    climate: r.climate || '',
-    soil: r.soilStructure || '',
-    description: [r.wineStyle, r.tastingNotes, r.agingPotential].filter(Boolean).join(' ／ '),
+    climate: getLocaleField(r, 'climate'),
+    soil: getLocaleField(r, 'soilStructure'),
+    description: [wineStyle, tastingNotes, agingPotential].filter(Boolean).join(' ／ '),
     estates: (r.famousWineries || []).map(w => ({ name: w })),
   }
 })

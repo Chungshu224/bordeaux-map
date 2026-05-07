@@ -50,13 +50,33 @@
         "altitude": "200-400m",
         "exposition": "東、東南",
         "soilStructure": "石灰岩和黏土",
-        "grapeVarieties": ["Chardonnay", "Gamay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Gamay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：清新易飲、果香直接；紅酒：輕盈柔順",
         "tastingNotes": "白酒：青蘋果、檸檬、白花；紅酒：紅櫻桃、草莓",
         "agingPotential": "白酒：1-3年，紅酒：1-2年",
         "history": "馬貢內最基礎的地區級 AOC，性價比極高",
-        "famousWineries": ["Cave de Lugny", "Cave de Viré", "眾多小型生產者"],
-        "color": "#F5DEB3"
+        "famousWineries": [
+          "Cave de Lugny",
+          "Cave de Viré",
+          "眾多小型生產者"
+        ],
+        "color": "#F5DEB3",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン",
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、温和で適度な雨量",
+          "soilStructure": "石灰岩と粘土",
+          "wineStyle": "白：爽やかで飲みやすく、果実味が直接的。赤：軽快で柔らか",
+          "tastingNotes": "白：柑橘・白桃・白い花・ミネラル。赤：チェリー・スパイス",
+          "agingPotential": "2-5年"
+        }
       },
       "aoc-macon-villages": {
         "name": "AOC Mâcon-Villages",
@@ -66,13 +86,30 @@
         "altitude": "200-450m",
         "exposition": "東、東南、南",
         "soilStructure": "石灰岩和泥灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "比 AOC Mâcon 更有深度、礦物感更明顯",
         "tastingNotes": "白桃、杏仁、白花、礦物質、奶油氣息",
         "agingPotential": "2-5年",
         "history": "僅限白酒，涵蓋26個村莊，可標註村莊名稱（如 Mâcon-Lugny）",
-        "famousWineries": ["Domaine de la Bongran", "Domaine Guillot-Broux", "Domaine Saumaize-Michelin"],
-        "color": "#DEB887"
+        "famousWineries": [
+          "Domaine de la Bongran",
+          "Domaine Guillot-Broux",
+          "Domaine Saumaize-Michelin"
+        ],
+        "color": "#DEB887",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "climate": "半大陸性気候、良好な傾斜地の向き",
+          "soilStructure": "石灰岩と泥灰岩",
+          "wineStyle": "AOC Mâcon より深みがあり、ミネラル感が明瞭",
+          "tastingNotes": "柑橘・白桃・蜂蜜・白い花・ミネラル",
+          "agingPotential": "3-7年"
+        }
       },
       "aoc-pouilly-fuisse": {
         "name": "AOC Pouilly-Fuissé",
@@ -82,13 +119,31 @@
         "altitude": "200-450m",
         "exposition": "東、東南、南",
         "soilStructure": "侏羅紀石灰岩和泥灰岩，含有豐富化石",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "豐滿圓潤、結構良好、礦物質豐富、陳年潛力佳",
         "tastingNotes": "白桃、榛果、奶油、烤麵包、蜂蜜、礦物質",
         "agingPotential": "5-10年（頂級園可達15年）",
         "history": "馬貢內最知名的 AOC，2020年開始引入22個一級園制度",
-        "famousWineries": ["Château de Fuissé", "Domaine Ferret", "Domaine J.A. Ferret", "Domaine Saumaize-Michelin"],
-        "color": "#D2B48C"
+        "famousWineries": [
+          "Château de Fuissé",
+          "Domaine Ferret",
+          "Domaine J.A. Ferret",
+          "Domaine Saumaize-Michelin"
+        ],
+        "color": "#D2B48C",
+        "ja": {
+          "exposition": "東・南東・南",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "climate": "半大陸性気候、ソリュトレとヴェルジッソンの岩盤が特別な保護を提供",
+          "soilStructure": "ジュラ紀石灰岩と泥灰岩、化石を豊富に含む",
+          "wineStyle": "豊満で丸みがあり、構造良好、ミネラル豊富、熟成ポテンシャルあり",
+          "tastingNotes": "白桃・蜂蜜・バター・ヘーゼルナッツ・ミネラル",
+          "agingPotential": "8-15年"
+        }
       },
       "aoc-pouilly-loche": {
         "name": "AOC Pouilly-Loché",
@@ -98,13 +153,30 @@
         "altitude": "250-400m",
         "exposition": "東、東南",
         "soilStructure": "石灰岩和泥灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "清新優雅、礦物感明顯、風格較為細膩",
         "tastingNotes": "柑橘、白花、礦物質、檸檬皮",
         "agingPotential": "3-6年",
         "history": "小而精的 AOC，與 Pouilly-Fuissé 相鄰，風格相似但更為親民",
-        "famousWineries": ["Cave de Viré", "Domaine des Poncétys", "本地小型生產者"],
-        "color": "#DAA520"
+        "famousWineries": [
+          "Cave de Viré",
+          "Domaine des Poncétys",
+          "本地小型生產者"
+        ],
+        "color": "#DAA520",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "climate": "半大陸性気候、プイイ・フュイッセに隣接した同様の条件",
+          "soilStructure": "石灰岩と泥灰岩",
+          "wineStyle": "爽やかでエレガント、ミネラル感が明瞭、繊細なスタイル",
+          "tastingNotes": "柑橘・白桃・白い花・ミネラル",
+          "agingPotential": "5-10年"
+        }
       },
       "aoc-pouilly-vinzelles": {
         "name": "AOC Pouilly-Vinzelles",
@@ -114,13 +186,30 @@
         "altitude": "250-400m",
         "exposition": "東、東南",
         "soilStructure": "石灰岩和泥灰岩，含砂質土",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "平衡優雅、果香豐富、酸度活潑",
         "tastingNotes": "青蘋果、檸檬、白桃、礦物質、花香",
         "agingPotential": "3-7年",
         "history": "與 Pouilly-Loché 類似，小面積精品 AOC，性價比高",
-        "famousWineries": ["Cave de Viré", "Domaine Mathias", "Château de Vinzelles"],
-        "color": "#F0E68C"
+        "famousWineries": [
+          "Cave de Viré",
+          "Domaine Mathias",
+          "Château de Vinzelles"
+        ],
+        "color": "#F0E68C",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "climate": "半大陸性気候、良好な傾斜地の向き",
+          "soilStructure": "石灰岩と泥灰岩、砂質土を含む",
+          "wineStyle": "バランス良くエレガント、果実味豊か、活発な酸味",
+          "tastingNotes": "柑橘・白桃・蜂蜜・ミネラル",
+          "agingPotential": "5-10年"
+        }
       },
       "aoc-saint-veran": {
         "name": "AOC Saint-Véran",
@@ -130,13 +219,30 @@
         "altitude": "200-450m",
         "exposition": "東、東南、南",
         "soilStructure": "石灰岩和黏土混合",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "清新活潑、果味豐富、礦物感明顯、性價比極高",
         "tastingNotes": "檸檬、青蘋果、榛果、白花、礦物質",
         "agingPotential": "3-6年",
         "history": "1971年獲得 AOC 認證，環繞 Pouilly-Fuissé，是性價比最高的馬貢內白酒",
-        "famousWineries": ["Domaine des Deux Roches", "Domaine de la Croix Senaillet", "Domaine Saumaize-Michelin"],
-        "color": "#FFF8DC"
+        "famousWineries": [
+          "Domaine des Deux Roches",
+          "Domaine de la Croix Senaillet",
+          "Domaine Saumaize-Michelin"
+        ],
+        "color": "#FFF8DC",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "climate": "半大陸性気候、プイイ・フュイッセに隣接した温暖な条件",
+          "soilStructure": "石灰岩と粘土の混合",
+          "wineStyle": "爽やかで生き生き、果実味豊か、ミネラル感明瞭、コスパ最高",
+          "tastingNotes": "柑橘・青りんご・白桃・ミネラル・さわやかな酸",
+          "agingPotential": "4-8年"
+        }
       },
       "aoc-vire-clesse": {
         "name": "AOC Viré-Clessé",
@@ -146,14 +252,38 @@
         "altitude": "200-400m",
         "exposition": "東、東南",
         "soilStructure": "石灰岩和泥灰岩，富含化石",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "豐滿圓潤、奶油質感、結構良好、陳年潛力佳",
         "tastingNotes": "白桃、杏仁、蜂蜜、烤榛果、奶油、礦物質",
         "agingPotential": "4-8年（特級可達12年）",
         "history": "2002年獲得村莊級 AOC，由 Viré 和 Clessé 兩村合併，以豐滿風格和陳年潛力著稱",
-        "famousWineries": ["Domaine de la Bongran", "Domaine Thévenet", "Cave de Viré"],
-        "color": "#FFE4B5"
+        "famousWineries": [
+          "Domaine de la Bongran",
+          "Domaine Thévenet",
+          "Cave de Viré"
+        ],
+        "color": "#FFE4B5",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "climate": "半大陸性気候、石灰岩台地の良好な日照条件",
+          "soilStructure": "石灰岩と泥灰岩、化石を豊富に含む",
+          "wineStyle": "豊満で丸みがあり、クリーミーな質感、構造良好、熟成ポテンシャルあり",
+          "tastingNotes": "白桃・蜂蜜・バター・ヘーゼルナッツ・ミネラル",
+          "agingPotential": "5-12年"
+        }
       }
     }
+  },
+  "ja": {
+    "wineTypes": [
+      "白ワイン",
+      "赤ワイン"
+    ],
+    "exposition": "東・南東"
   }
 }

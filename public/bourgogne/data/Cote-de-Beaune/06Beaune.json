@@ -4,16 +4,31 @@
   "area": "約 450 公頃",
   "altitude": "220-300m",
   "exposition": "東、東南",
-  "grapeVarieties": ["Pinot Noir", "Chardonnay"],
-  "wineTypes": ["紅酒", "白酒"],
+  "grapeVarieties": [
+    "Pinot Noir",
+    "Chardonnay"
+  ],
+  "wineTypes": [
+    "紅酒",
+    "白酒"
+  ],
   "climate": "溫和的大陸性氣候",
   "soilStructure": "多樣的石灰岩和粘土",
   "wineStyle": "紅酒：平衡、結構良好。白酒：圓潤、帶有花香。",
   "tastingNotes": "紅酒：紅色水果、泥土。白酒：蘋果、杏仁、蜂蜜。",
   "agingPotential": "紅酒：5-20年，白酒：3-15年",
-  "famousWineries": ["Joseph Drouhin", "Bouchard Père & Fils", "Louis Jadot"],
+  "famousWineries": [
+    "Joseph Drouhin",
+    "Bouchard Père & Fils",
+    "Louis Jadot"
+  ],
   "grandCrus": [],
-  "premierCrus": ["Les Grèves", "Clos des Mouches", "Les Bressandes", "Les Fèves"],
+  "premierCrus": [
+    "Les Grèves",
+    "Clos des Mouches",
+    "Les Bressandes",
+    "Les Fèves"
+  ],
   "history": "著名的濟貧院（Hospices de Beaune）每年舉辦的慈善拍賣會是布根地的盛事。",
   "geojson": {
     "village": {
@@ -26,13 +41,32 @@
         "altitude": "220-250m",
         "exposition": "東、東南",
         "soilStructure": "石灰質粘土和沙質土壤",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：果味濃郁，口感柔順，易於入口。白酒：清新，帶有花香和水果香氣。",
         "tastingNotes": "紅酒：紅色水果、櫻桃。白酒：白花、青蘋果。",
         "agingPotential": "紅酒：3-8年，白酒：2-5年",
         "history": "伯恩村莊級葡萄酒是了解伯恩丘風格的經典入門，展現了產區的平衡與魅力。",
-        "famousWineries": ["Joseph Drouhin", "Bouchard Père & Fils", "Louis Jadot"],
-        "color": "#8FBC8F"
+        "famousWineries": [
+          "Joseph Drouhin",
+          "Bouchard Père & Fils",
+          "Louis Jadot"
+        ],
+        "color": "#8FBC8F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン",
+            "白ワイン"
+          ],
+          "climate": "大陸性気候、コート・ド・ボーヌの温暖な条件",
+          "soilStructure": "石灰岩と粘土の混合、一部に泥灰岩",
+          "wineStyle": "赤：エレガントで果実味豊か、素晴らしいバランス。白：まろやかでミネラリー",
+          "tastingNotes": "赤：チェリー・花・スパイス。白：柑橘・白桃・バター・ミネラル",
+          "agingPotential": "赤：10-20年、白：8-12年"
+        }
       }
     },
     "premier_crus": {
@@ -45,13 +79,30 @@
         "altitude": "240-280m",
         "exposition": "東南",
         "soilStructure": "沙質土壤和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：極為優雅、結構精緻、單寧絲滑，香氣複雜。",
         "tastingNotes": "紅酒：覆盆子、紫羅蘭、香料、礦物質。",
         "agingPotential": "10-25年",
         "history": "被廣泛認為是Beaune最好的一級園，以其無與倫比的優雅和複雜性著稱。'Vigne de l'Enfant Jésus'是其中最著名的地塊，為Bouchard Père & Fils獨佔。",
-        "famousWineries": ["Bouchard Père & Fils", "Domaine des Croix", "Maison Louis Jadot"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Bouchard Père & Fils",
+          "Domaine des Croix",
+          "Maison Louis Jadot"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と砂利（Grève = 砂利の意）",
+          "wineStyle": "エレガントで芳香豊か、ボーヌ最高の一級園",
+          "tastingNotes": "チェリー・バラ・スパイス・ミネラル",
+          "agingPotential": "12-20年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "le-clos-des-mouches": {
         "name": "Le Clos des Mouches",
@@ -62,13 +113,31 @@
         "altitude": "280-300m",
         "exposition": "東南",
         "soilStructure": "貧瘠的石灰岩和泥灰岩",
-        "grapeVarieties": ["Chardonnay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：豐富、飽滿，帶有蜂蜜和堅果香氣，陳年潛力極佳。紅酒：優雅，果味純正。",
         "tastingNotes": "白酒：蜂蜜、杏仁、白桃、礦石。紅酒：櫻桃、花香。",
         "agingPotential": "白酒：8-25年，紅酒：8-20年",
         "history": "Beaune最著名的一級園之一，尤其以Joseph Drouhin生產的白酒聞名於世，品質堪比頂級白酒。",
-        "famousWineries": ["Joseph Drouhin", "Bouchard Père & Fils"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Joseph Drouhin",
+          "Bouchard Père & Fils"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン",
+            "白ワイン"
+          ],
+          "soilStructure": "石灰岩と泥灰岩（白）、石灰岩と粘土（赤）",
+          "wineStyle": "赤：エレガントで果実味豊か。白：豊かでミネラリー",
+          "tastingNotes": "赤：チェリー・花・スパイス。白：白桃・蜂蜜・ミネラル",
+          "agingPotential": "10-20年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "les-bressandes": {
         "name": "Les Bressandes",
@@ -79,13 +148,29 @@
         "altitude": "280-320m",
         "exposition": "東",
         "soilStructure": "富含鐵質的粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構強勁，風格接近Corton特級園，單寧明顯。",
         "tastingNotes": "黑色水果、泥土、甘草。",
         "agingPotential": "10-25年",
         "history": "位於坡頂，緊鄰Corton特級園，出產的酒風格強勁。",
-        "famousWineries": ["Domaine des Croix", "Maison Louis Jadot"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine des Croix",
+          "Maison Louis Jadot"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と粘土",
+          "wineStyle": "力強く個性的",
+          "tastingNotes": "黒い果実・スパイス・ミネラル",
+          "agingPotential": "10-18年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "les-feves": {
         "name": "Les Fèves",
@@ -96,13 +181,29 @@
         "altitude": "250m",
         "exposition": "東南",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：集中、優雅且結構良好。",
         "tastingNotes": "紅色水果、香料。",
         "agingPotential": "8-20年",
         "history": "一個被圍牆包圍的小園，品質極高，其中一部分為Domaine Chanson的獨佔園'Clos des Fèves'。",
-        "famousWineries": ["Domaine Chanson", "Bouchard Père & Fils"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Chanson",
+          "Bouchard Père & Fils"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と粘土",
+          "wineStyle": "エレガントで複雑、優れた品質",
+          "tastingNotes": "チェリー・花・スパイス・ミネラル",
+          "agingPotential": "10-18年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "clos-du-roi": {
         "name": "Clos du Roi",
@@ -113,12 +214,17 @@
         "altitude": "260-300m",
         "exposition": "東",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構堅實，帶有礦物感和野性氣息。",
         "tastingNotes": "黑色水果、皮革、香料。",
         "agingPotential": "10-25年",
         "history": "歷史悠久的地塊，曾為皇家所有，風格強勁。",
-        "famousWineries": ["Domaine Tollot-Beaut", "Maison Louis Jadot"],
+        "famousWineries": [
+          "Domaine Tollot-Beaut",
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-teurons": {
@@ -130,13 +236,29 @@
         "altitude": "250-300m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：酒體飽滿，結構堅實，果味與單寧平衡得很好。",
         "tastingNotes": "黑櫻桃、李子、泥土。",
         "agingPotential": "8-20年",
         "history": "Beaune最大的一級園之一，品質穩定，風格經典。",
-        "famousWineries": ["Bouchard Père & Fils", "Domaine Rossignol-Trapet"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Bouchard Père & Fils",
+          "Domaine Rossignol-Trapet"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と粘土",
+          "wineStyle": "エレガントで構造良好",
+          "tastingNotes": "チェリー・スパイス・ミネラル",
+          "agingPotential": "10-18年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "clos-des-ursules": {
         "name": "Clos des Ursules",
@@ -147,12 +269,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：優雅、柔順，帶有複雜的香氣。",
         "tastingNotes": "紅色水果、玫瑰花瓣、香料。",
         "agingPotential": "8-20年",
         "history": "位於Les Vignes Franches內的獨佔園，由Maison Louis Jadot擁有，是其標誌性酒款之一。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "a-l-ecu": {
@@ -164,12 +290,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構良好，果味集中。",
         "tastingNotes": "櫻桃、香料。",
         "agingPotential": "7-15年",
         "history": "一個高品質的一級園，常與Clos de l'Ecu合併討論。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "aux-coucherias": {
@@ -181,13 +311,21 @@
         "altitude": "300-350m",
         "exposition": "東南",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：風格優雅，帶有礦物感。白酒：清新，酸度活潑。",
         "tastingNotes": "紅酒：紅色水果、花香。白酒：柑橘、礦石。",
         "agingPotential": "6-15年",
         "history": "位於坡頂，海拔較高，出產的酒風格細膩。",
-        "famousWineries": ["Maison Louis Jadot"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "aux-cras": {
         "name": "Aux Cras",
@@ -198,12 +336,17 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "非常多石的石灰岩土壤",
-        "grapeVarieties": ["Chardonnay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：礦物感極強，風格純淨。紅酒：結構緊實。",
         "tastingNotes": "白酒：燧石、檸檬。紅酒：酸櫻桃。",
         "agingPotential": "白酒：7-18年，紅酒：7-15年",
         "history": "名字意為'石頭'，以其出產的優質白酒而聞名。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "champs-pimont": {
@@ -215,12 +358,17 @@
         "altitude": "280-350m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "風格多樣，取決於具體地塊。",
         "tastingNotes": "紅色水果、花香。",
         "agingPotential": "6-15年",
         "history": "一個較大的一級園，位於Pommard邊界。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "clos-de-l-ecu": {
@@ -232,12 +380,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構強勁，單寧明顯。",
         "tastingNotes": "黑色水果、香料。",
         "agingPotential": "8-20年",
         "history": "一個歷史悠久的圍牆園，為Faiveley的獨佔園。",
-        "famousWineries": ["Domaine Faiveley"],
+        "famousWineries": [
+          "Domaine Faiveley"
+        ],
         "color": "#CD853F"
       },
       "clos-de-la-mousse": {
@@ -249,12 +401,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格柔順，果味濃郁。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "6-15年",
         "history": "Bouchard Père & Fils的獨佔園，風格較為柔和。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "clos-des-avaux": {
@@ -266,12 +422,16 @@
         "altitude": "230m",
         "exposition": "東",
         "soilStructure": "沙質和礫石",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格輕盈，果味直接。",
         "tastingNotes": "紅色水果。",
         "agingPotential": "5-12年",
         "history": "位於坡底，風格較為輕快。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "clos-saint-landry": {
@@ -283,12 +443,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格圓潤，帶有異國水果香氣。",
         "tastingNotes": "鳳梨、芒果、香草。",
         "agingPotential": "5-12年",
         "history": "Bouchard Père & Fils的獨佔園，專門生產白酒。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "les-aigrots": {
@@ -300,12 +464,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒和白酒均有生產，風格均衡。",
         "tastingNotes": "紅色水果、白花。",
         "agingPotential": "5-12年",
         "history": "一個品質穩定的一級園。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-avaux": {
@@ -317,12 +486,16 @@
         "altitude": "230m",
         "exposition": "東",
         "soilStructure": "沙質和礫石",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格柔和，單寧細膩。",
         "tastingNotes": "紅色水果、花香。",
         "agingPotential": "5-12年",
         "history": "位於坡底，風格較為優雅易飲。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "les-boucherottes": {
@@ -334,12 +507,16 @@
         "altitude": "230m",
         "exposition": "東",
         "soilStructure": "富含鐵質的粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：酒體飽滿，結構感強，風格接近Pommard。",
         "tastingNotes": "黑櫻桃、泥土、香料。",
         "agingPotential": "8-20年",
         "history": "位於Beaune南端，靠近Pommard，風格強勁。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-cents-vignes": {
@@ -351,12 +528,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "沙質和礫石",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格優雅，果味純正。",
         "tastingNotes": "覆盆子、櫻桃。",
         "agingPotential": "6-15年",
         "history": "一個較大的一級園，風格細膩。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-chouacheux": {
@@ -368,12 +549,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格柔順，口感圓潤。",
         "tastingNotes": "紅色水果。",
         "agingPotential": "5-12年",
         "history": "一個風格較為柔和的一級園。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-epenotes": {
@@ -385,12 +570,16 @@
         "altitude": "230m",
         "exposition": "東",
         "soilStructure": "深厚的粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：酒體飽滿，結構強勁，風格接近Pommard Epenots。",
         "tastingNotes": "黑色水果、泥土、甘草。",
         "agingPotential": "8-20年",
         "history": "位於Pommard邊界，風格強勁，常與Beaune Boucherottes相提並論。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-marconnets": {
@@ -402,12 +591,17 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：結構堅實。白酒：礦物感強。",
         "tastingNotes": "紅色水果、礦石。",
         "agingPotential": "7-18年",
         "history": "橫跨Beaune和Savigny-lès-Beaune，品質優秀。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "les-montrevenots": {
@@ -419,12 +613,17 @@
         "altitude": "300-350m",
         "exposition": "東",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "風格細膩，帶有礦物感。",
         "tastingNotes": "紅色水果、花香。",
         "agingPotential": "6-15年",
         "history": "位於坡頂，風格優雅。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "les-perrieres": {
@@ -436,12 +635,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "非常多石的石灰岩土壤",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：礦物感強，結構緊實。",
         "tastingNotes": "酸櫻桃、燧石。",
         "agingPotential": "8-20年",
         "history": "名字意為'採石場'，以其強烈的礦物風格著稱。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-reverses": {
@@ -453,12 +656,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格均衡，果味與結構感並存。",
         "tastingNotes": "紅色水果、香料。",
         "agingPotential": "6-15年",
         "history": "一個品質穩定的一級園。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "les-sizies": {
@@ -470,12 +677,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格柔順，果味濃郁。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "5-12年",
         "history": "一個風格較為柔和的一級園。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-vignes-franches": {
@@ -487,12 +698,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：優雅、柔順，帶有複雜的香氣。",
         "tastingNotes": "紅色水果、玫瑰花瓣、香料。",
         "agingPotential": "8-20年",
         "history": "一個高品質的一級園，包含了著名的Clos des Ursules。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "montee-rouge": {
@@ -504,12 +719,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "富含鐵質的紅色粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：酒體飽滿，結構感強。",
         "tastingNotes": "黑櫻桃、香料。",
         "agingPotential": "7-18年",
         "history": "位於Pommard邊界，風格強勁。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "pertuisots": {
@@ -521,12 +740,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格豐滿，果味成熟。",
         "tastingNotes": "李子、黑櫻桃。",
         "agingPotential": "7-15年",
         "history": "位於Beaune南端，風格較為豐腴。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "belissand": {
@@ -538,12 +761,16 @@
         "altitude": "260m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格優雅，結構均衡。",
         "tastingNotes": "紅色水果、花香。",
         "agingPotential": "6-15年",
         "history": "一個較小但品質優良的一級園。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "blanches-fleurs": {
@@ -555,12 +782,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，帶有花香。",
         "tastingNotes": "白花、柑橘。",
         "agingPotential": "4-10年",
         "history": "一個主要生產白酒的一級園。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "clos-de-la-feguine": {
@@ -572,12 +803,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格強勁，單寧顯著。",
         "tastingNotes": "黑色水果、香料。",
         "agingPotential": "8-20年",
         "history": "位於Pommard邊界，風格接近Pommard。",
-        "famousWineries": ["Jacques Prieur"],
+        "famousWineries": [
+          "Jacques Prieur"
+        ],
         "color": "#CD853F"
       },
       "en-genet": {
@@ -589,12 +824,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格圓潤，果味豐富。",
         "tastingNotes": "蘋果、杏仁。",
         "agingPotential": "5-12年",
         "history": "一個生產優質白酒的地塊。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "en-l-orme": {
@@ -606,12 +845,16 @@
         "altitude": "230m",
         "exposition": "東",
         "soilStructure": "沙質土壤",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格輕盈，果味直接。",
         "tastingNotes": "紅色水果。",
         "agingPotential": "4-10年",
         "history": "一個較小的一級園。",
-        "famousWineries": ["Domaine des Croix"],
+        "famousWineries": [
+          "Domaine des Croix"
+        ],
         "color": "#CD853F"
       },
       "la-mignotte": {
@@ -623,12 +866,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格柔順，口感圓潤。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "5-12年",
         "history": "一個風格較為柔和的一級園。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "le-bas-des-teurons": {
@@ -640,12 +887,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構良好，風格均衡。",
         "tastingNotes": "紅色水果、香料。",
         "agingPotential": "7-18年",
         "history": "位於Les Teurons的下坡處，品質優秀。",
-        "famousWineries": ["Domaine des Croix"],
+        "famousWineries": [
+          "Domaine des Croix"
+        ],
         "color": "#CD853F"
       },
       "les-sceaux": {
@@ -657,12 +908,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格堅實，帶有礦物感。",
         "tastingNotes": "酸櫻桃、礦石。",
         "agingPotential": "7-15年",
         "history": "一個品質穩定的一級園。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-seurey": {
@@ -674,12 +929,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格優雅，結構細膩。",
         "tastingNotes": "紅色水果、花香。",
         "agingPotential": "6-15年",
         "history": "一個較小的一級園。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "les-toussaints": {
@@ -691,12 +950,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格均衡，果味與結構感並存。",
         "tastingNotes": "紅色水果、香料。",
         "agingPotential": "6-15年",
         "history": "一個品質穩定的一級園。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "les-tuvilains": {
@@ -708,12 +971,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格堅實，單寧明顯。",
         "tastingNotes": "黑色水果、泥土。",
         "agingPotential": "7-18年",
         "history": "一個品質優秀的一級園。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "sur-les-greves-clos-saint-anne": {
@@ -725,12 +992,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "沙質和礫石",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格極為優雅和複雜。",
         "tastingNotes": "覆盆子、紫羅蘭、香料。",
         "agingPotential": "8-20年",
         "history": "位於Les Grèves內的一個小圍牆園，為Jadot所有，但由Domaine Gagey釀造。",
-        "famousWineries": ["Domaine Gagey"],
+        "famousWineries": [
+          "Domaine Gagey"
+        ],
         "color": "#CD853F"
       },
       "sur-les-greves": {
@@ -742,12 +1013,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "沙質和礫石",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格優雅、柔順，帶有複雜的香氣。",
         "tastingNotes": "覆盆子、紫羅蘭、香料。",
         "agingPotential": "8-20年",
         "history": "與Les Grèves相鄰，品質非常接近。",
-        "famousWineries": ["Maison Louis Jadot"],
+        "famousWineries": [
+          "Maison Louis Jadot"
+        ],
         "color": "#CD853F"
       },
       "overview": {
@@ -759,14 +1034,41 @@
         "altitude": "220-300m",
         "exposition": "東、東南",
         "soilStructure": "多樣的石灰岩和粘土",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：風格多樣，從優雅到強勁。白酒：圓潤，帶有花香和礦物感。",
         "tastingNotes": "紅酒：紅色和黑色水果、泥土、香料。白酒：蘋果、杏仁、蜂蜜、燧石。",
         "agingPotential": "紅酒：5-20年，白酒：3-15年",
         "history": "Beaune擁有多達42個一級園，是伯恩丘最大的AOC，風土極其多樣，展現了布根地的複雜性。",
-        "famousWineries": ["Joseph Drouhin", "Bouchard Père & Fils", "Louis Jadot", "Domaine des Croix"],
-        "color": "#B22222"
+        "famousWineries": [
+          "Joseph Drouhin",
+          "Bouchard Père & Fils",
+          "Louis Jadot",
+          "Domaine des Croix"
+        ],
+        "color": "#B22222",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン",
+            "白ワイン"
+          ],
+          "soilStructure": "石灰岩と粘土の混合",
+          "wineStyle": "村名より複雑でエレガント",
+          "tastingNotes": "チェリー・花・スパイス・ミネラル",
+          "agingPotential": "10-20年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       }
     }
+  },
+  "ja": {
+    "wineTypes": [
+      "赤ワイン",
+      "白ワイン"
+    ],
+    "exposition": "東・南東"
   }
 }

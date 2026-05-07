@@ -4,16 +4,34 @@
   "area": "約 350 公頃",
   "altitude": "220-340m",
   "exposition": "東南向",
-  "grapeVarieties": ["Chardonnay", "Pinot Noir"],
-  "wineTypes": ["白酒", "紅酒"],
+  "grapeVarieties": [
+    "Chardonnay",
+    "Pinot Noir"
+  ],
+  "wineTypes": [
+    "白酒",
+    "紅酒"
+  ],
   "climate": "氣候溫暖，日照充足",
   "soilStructure": "多樣的土壤，從石灰岩到較重的粘土",
   "wineStyle": "白酒豐腴、結構感強；紅酒果味濃郁、單寧柔和",
   "tastingNotes": "白酒：成熟水果、杏仁、香料；紅酒：紅色水果、櫻桃、泥土",
   "agingPotential": "8-20年",
-  "famousWineries": ["Domaine Ramonet", "Domaine Bernard Moreau", "Domaine Jean-Noël Gagnard"],
-  "grandCrus": ["Montrachet (部分)", "Bâtard-Montrachet (部分)", "Criots-Bâtard-Montrachet"],
-  "premierCrus": ["Morgeot", "Clos de la Boudriotte", "Les Caillerets"],
+  "famousWineries": [
+    "Domaine Ramonet",
+    "Domaine Bernard Moreau",
+    "Domaine Jean-Noël Gagnard"
+  ],
+  "grandCrus": [
+    "Montrachet (部分)",
+    "Bâtard-Montrachet (部分)",
+    "Criots-Bâtard-Montrachet"
+  ],
+  "premierCrus": [
+    "Morgeot",
+    "Clos de la Boudriotte",
+    "Les Caillerets"
+  ],
   "history": "歷史上以生產紅酒為主，如今以白酒更為出名。",
   "geojson": {
     "village": {
@@ -26,13 +44,32 @@
         "altitude": "220-250m",
         "exposition": "東、東南",
         "soilStructure": "多樣，從北部的石灰岩到南部的粘土和泥灰岩",
-        "grapeVarieties": ["Chardonnay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：比Puligny更豐滿、圓潤，帶有成熟水果和堅果的風味。紅酒：結構良好，果味濃郁，帶有泥土氣息。",
         "tastingNotes": "白酒：黃蘋果、杏、榛果、香料。紅酒：櫻桃、李子、甘草、皮革。",
         "agingPotential": "白酒：5-15年，紅酒：7-18年",
         "history": "Chassagne-Montrachet是金丘唯一一個紅白酒產量相當且品質都很高的村莊，展現了其風土的多樣性。",
-        "famousWineries": ["Domaine Ramonet", "Domaine Bernard Moreau", "Domaine Jean-Noël Gagnard"],
-        "color": "#A52A2A"
+        "famousWineries": [
+          "Domaine Ramonet",
+          "Domaine Bernard Moreau",
+          "Domaine Jean-Noël Gagnard"
+        ],
+        "color": "#A52A2A",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン",
+            "赤ワイン"
+          ],
+          "climate": "大陸性気候、温暖で適度な保護",
+          "soilStructure": "石灰岩と泥灰岩、粘土質の表土",
+          "wineStyle": "白：豊かでまろやか、力強いミネラル感。赤：エレガントで果実味豊か",
+          "tastingNotes": "白：白桃・ヘーゼルナッツ・バター・ミネラル。赤：チェリー・スパイス",
+          "agingPotential": "白：10-20年、赤：8-15年"
+        }
       }
     },
     "grand_crus": {
@@ -45,13 +82,30 @@
         "altitude": "255-270m",
         "exposition": "東南",
         "soilStructure": "非常貧瘠、多石的石灰岩，表土極薄",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：力量、複雜度和優雅的完美結合，口感極為濃縮、多層次，餘味無窮無盡。被公認為世界上最偉大的干白葡萄酒。",
         "tastingNotes": "蜂蜜、奶油、異國水果、香料、礦物質的複雜香氣。",
         "agingPotential": "15-50年+",
         "history": "傳奇中的傳奇，'Montrachet'這個名字本身就是頂級白酒的代名詞。大仲馬曾說過，喝Montrachet時應該'脫帽下跪'。",
-        "famousWineries": ["Domaine de la Romanée-Conti", "Domaine Leflaive", "Domaine Ramonet"],
-        "color": "#FFD700"
+        "famousWineries": [
+          "Domaine de la Romanée-Conti",
+          "Domaine Leflaive",
+          "Domaine Ramonet"
+        ],
+        "color": "#FFD700",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "soilStructure": "石灰岩と泥灰岩の完璧な組み合わせ",
+          "wineStyle": "世界最高の白ワイン、力と優雅さの完璧な融合",
+          "tastingNotes": "白い花・白桃・蜂蜜・スモーキー・強烈なミネラル",
+          "agingPotential": "20-50年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       },
       "batard-montrachet": {
         "name": "Bâtard-Montrachet Grand Cru",
@@ -62,13 +116,30 @@
         "altitude": "240-250m",
         "exposition": "東南",
         "soilStructure": "較深厚的粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格最為豐滿、強勁和雄壯，酒體飽滿，口感油潤，力量感十足。",
         "tastingNotes": "成熟的熱帶水果、蜂蜜、香料、奶油。",
         "agingPotential": "12-35年",
         "history": "位於Montrachet下方，土壤更肥沃，風格更為豐腴。'Bâtard'意為私生子，傳說是一位領主私生子的封地。",
-        "famousWineries": ["Domaine Leflaive", "Domaine Ramonet", "Domaine Pierre-Yves Colin-Morey"],
-        "color": "#FFD700"
+        "famousWineries": [
+          "Domaine Leflaive",
+          "Domaine Ramonet",
+          "Domaine Pierre-Yves Colin-Morey"
+        ],
+        "color": "#FFD700",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "soilStructure": "石灰岩と泥灰岩、ミネラル豊富",
+          "wineStyle": "力強く豊か、卓越したミネラル感、長熟型",
+          "tastingNotes": "白桃・蜂蜜・スモーキー・ミネラル・ヘーゼルナッツ",
+          "agingPotential": "15-25年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       },
       "criots-batard-montrachet": {
         "name": "Criots-Bâtard-Montrachet Grand Cru",
@@ -79,13 +150,30 @@
         "altitude": "240m",
         "exposition": "東南",
         "soilStructure": "石灰岩和泥灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格比Bâtard更為精緻，帶有更多的花香和礦物感，是五大特級園中面積最小、最罕見的。",
         "tastingNotes": "白花、柑橘、香料、礦石。",
         "agingPotential": "10-25年",
         "history": "完全位於Chassagne-Montrachet境內，'Criots'可能來自'crai'，意為多石的地方。",
-        "famousWineries": ["Domaine d'Auvenay", "Fontaine-Gagnard", "Hubert Lamy"],
-        "color": "#FFD700"
+        "famousWineries": [
+          "Domaine d'Auvenay",
+          "Fontaine-Gagnard",
+          "Hubert Lamy"
+        ],
+        "color": "#FFD700",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "soilStructure": "石灰岩と泥灰岩",
+          "wineStyle": "エレガントで純粋、バランス良好",
+          "tastingNotes": "白桃・蜂蜜・花・ミネラル",
+          "agingPotential": "12-20年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       }
     },
     "premier_crus": {
@@ -98,13 +186,32 @@
         "altitude": "230-250m",
         "exposition": "東南",
         "soilStructure": "深厚的粘土和石灰岩，富含鐵質",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：結構宏大，口感豐腴，是Chassagne最著名的紅酒一級園。白酒：豐滿、油潤，力量感強。",
         "tastingNotes": "紅酒：黑櫻桃、李子、皮革、香料。白酒：成熟蘋果、奶油、蜂蜜。",
         "agingPotential": "紅酒：10-25年，白酒：8-20年",
         "history": "Morgeot是Chassagne最大的氣候區，其名源自一個古老的修道院，歷史悠久。",
-        "famousWineries": ["Domaine Bernard Moreau", "Domaine Ramonet", "Domaine Vincent Dancer"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Bernard Moreau",
+          "Domaine Ramonet",
+          "Domaine Vincent Dancer"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン",
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と粘土",
+          "wineStyle": "最大の一級園、豊かで複雑",
+          "tastingNotes": "白：白桃・蜂蜜・ミネラル。赤：チェリー・スパイス",
+          "agingPotential": "10-20年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       },
       "cailleret": {
         "name": "Cailleret",
@@ -115,13 +222,22 @@
         "altitude": "260-280m",
         "exposition": "東南",
         "soilStructure": "非常多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格純淨、礦物感強烈，結構緊實，與Puligny的Cailleret風格相似，被認為是Chassagne最好的白酒一級園之一。",
         "tastingNotes": "檸檬、燧石、白花、海鹽。",
         "agingPotential": "10-30年",
         "history": "與特級園接壤，品質極高。'Cailleret'意為小石頭，反映其土壤特性。",
-        "famousWineries": ["Domaine Ramonet", "Domaine Vincent Girardin", "Domaine Jean-Noël Gagnard"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Ramonet",
+          "Domaine Vincent Girardin",
+          "Domaine Jean-Noël Gagnard"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "clos-saint-jean": {
         "name": "Clos Saint-Jean",
@@ -132,12 +248,18 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "紅色粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格優雅、果味純正，單寧細膩，是Chassagne最頂級的紅酒一級園之一。",
         "tastingNotes": "覆盆子、櫻桃、紫羅蘭、香料。",
         "agingPotential": "8-20年",
         "history": "一個歷史悠久的圍牆園，以其出產的優雅紅酒而聞名。",
-        "famousWineries": ["Domaine Guy Amiot", "Domaine Paul Pillot", "Domaine Ramonet"],
+        "famousWineries": [
+          "Domaine Guy Amiot",
+          "Domaine Paul Pillot",
+          "Domaine Ramonet"
+        ],
         "color": "#CD853F"
       },
       "en-remilly": {
@@ -149,13 +271,30 @@
         "altitude": "280-300m",
         "exposition": "南",
         "soilStructure": "非常貧瘠、多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：礦物感極強，風格純淨、銳利，帶有明顯的燧石氣息。",
         "tastingNotes": "燧石、檸檬皮、白堊、海風。",
         "agingPotential": "10-25年",
         "history": "緊鄰Saint-Aubin的同名一級園，並與Chevalier-Montrachet特級園相鄰，風土極佳。",
-        "famousWineries": ["Domaine Lamy-Caillat", "Domaine Morey-Coffinet", "Domaine Philippe Colin"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Lamy-Caillat",
+          "Domaine Morey-Coffinet",
+          "Domaine Philippe Colin"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "soilStructure": "石灰岩と泥灰岩",
+          "wineStyle": "ピュリニーに隣接、エレガントでミネラリー",
+          "tastingNotes": "白い花・白桃・ミネラル・フリント",
+          "agingPotential": "8-15年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       },
       "les-grandes-ruchottes": {
         "name": "Les Grandes Ruchottes",
@@ -166,13 +305,29 @@
         "altitude": "270m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：結構宏大，兼具力量感和礦物感，品質極高。",
         "tastingNotes": "梨、香料、礦石、奶油。",
         "agingPotential": "10-25年",
         "history": "位於特級園Criots-Bâtard-Montrachet的正上方，被認為是Chassagne最頂級的白酒一級園之一。",
-        "famousWineries": ["Domaine Ramonet", "Domaine Vincent Dancer"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Ramonet",
+          "Domaine Vincent Dancer"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "soilStructure": "石灰岩と泥灰岩",
+          "wineStyle": "エレガントで純粋、強いミネラル感",
+          "tastingNotes": "白桃・白い花・フリント・ミネラル",
+          "agingPotential": "10-18年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       },
       "la-romanee": {
         "name": "La Romanée",
@@ -183,13 +338,21 @@
         "altitude": "300-320m",
         "exposition": "東南",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，礦物感突出，酸度活潑。",
         "tastingNotes": "白花、檸檬、礦石。",
         "agingPotential": "8-20年",
         "history": "與Vosne-Romanée的特級園同名，但兩者並無關聯。這是一個高海拔的優質地塊。",
-        "famousWineries": ["Domaine Vincent Dancer", "Domaine Jean-Noël Gagnard"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Vincent Dancer",
+          "Domaine Jean-Noël Gagnard"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "abbaye-de-morgeot": {
         "name": "Abbaye de Morgeot",
@@ -200,13 +363,22 @@
         "altitude": "230-250m",
         "exposition": "東南",
         "soilStructure": "深厚的粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：結構宏大，口感豐腴。白酒：豐滿、油潤，力量感強。",
         "tastingNotes": "紅酒：黑櫻桃、皮革。白酒：成熟蘋果、奶油。",
         "agingPotential": "10-25年",
         "history": "Morgeot修道院的歷史核心地塊，被認為是Morgeot中品質最優的部分。",
-        "famousWineries": ["Domaine Bernard Moreau", "Domaine Ramonet"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Bernard Moreau",
+          "Domaine Ramonet"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "blanchot-dessus": {
         "name": "Blanchot dessus",
@@ -217,12 +389,17 @@
         "altitude": "260m",
         "exposition": "東",
         "soilStructure": "白色泥灰岩、石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格純淨，礦物感強，帶有花香。",
         "tastingNotes": "白花、檸檬、礦石。",
         "agingPotential": "8-20年",
         "history": "緊鄰Montrachet特級園，風土優異。",
-        "famousWineries": ["Domaine Bernard Moreau", "Domaine Jean-Claude Bachelet"],
+        "famousWineries": [
+          "Domaine Bernard Moreau",
+          "Domaine Jean-Claude Bachelet"
+        ],
         "color": "#CD853F"
       },
       "bois-de-chassagne": {
@@ -234,12 +411,16 @@
         "altitude": "300-320m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，帶有礦物感和柑橘風味。",
         "tastingNotes": "檸檬、青蘋果、濕石。",
         "agingPotential": "7-15年",
         "history": "位於山坡上部，靠近森林，風格較為冷涼。",
-        "famousWineries": ["Domaine Lamy-Pillot"],
+        "famousWineries": [
+          "Domaine Lamy-Pillot"
+        ],
         "color": "#CD853F"
       },
       "champs-jendreau": {
@@ -251,12 +432,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格圓潤，果味豐富。",
         "tastingNotes": "黃蘋果、梨、奶油。",
         "agingPotential": "6-15年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Guy Amiot"],
+        "famousWineries": [
+          "Domaine Guy Amiot"
+        ],
         "color": "#CD853F"
       },
       "chassagne-du-clos-saint-jean": {
@@ -268,12 +453,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "紅色粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格優雅，單寧細膩。",
         "tastingNotes": "覆盆子、櫻桃、香料。",
         "agingPotential": "8-20年",
         "history": "Clos Saint-Jean的一部分，品質極高。",
-        "famousWineries": ["Domaine Guy Amiot", "Domaine Paul Pillot"],
+        "famousWineries": [
+          "Domaine Guy Amiot",
+          "Domaine Paul Pillot"
+        ],
         "color": "#CD853F"
       },
       "chassagne": {
@@ -285,12 +475,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：結構感好。白酒：風格豐滿。",
         "tastingNotes": "紅酒：黑櫻桃。白酒：黃蘋果。",
         "agingPotential": "8-18年",
         "history": "與村莊同名的一級園，位於Morgeot和La Maltroie之間。",
-        "famousWineries": ["Domaine Ramonet"],
+        "famousWineries": [
+          "Domaine Ramonet"
+        ],
         "color": "#CD853F"
       },
       "clos-chareau": {
@@ -302,13 +497,20 @@
         "altitude": "280m",
         "exposition": "東南",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，帶有礦物感。",
         "tastingNotes": "檸檬、白花、礦石。",
         "agingPotential": "8-18年",
         "history": "位於La Romanée下方的一個小圍牆園。",
-        "famousWineries": ["Domaine Morey-Coffinet"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Morey-Coffinet"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "clos-pitois": {
         "name": "Clos Pitois",
@@ -319,13 +521,22 @@
         "altitude": "240m",
         "exposition": "東南",
         "soilStructure": "深厚的粘土",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：酒體飽滿，結構強勁。白酒：風格豐腴。",
         "tastingNotes": "紅酒：黑李子、香料。白酒：成熟的熱帶水果。",
         "agingPotential": "10-20年",
         "history": "Morgeot的一個子地塊，以其力量感著稱。",
-        "famousWineries": ["Domaine Bernard Moreau", "Domaine Lamy-Pillot"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Bernard Moreau",
+          "Domaine Lamy-Pillot"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "dent-de-chien": {
         "name": "Dent de Chien",
@@ -336,12 +547,17 @@
         "altitude": "290m",
         "exposition": "南",
         "soilStructure": "非常貧瘠的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：極致的礦物感和張力，風格銳利。",
         "tastingNotes": "燧石、檸檬皮、海鹽。",
         "agingPotential": "12-30年",
         "history": "意為'狗牙'，指露出地表的尖銳岩石。緊鄰Chevalier-Montrachet，被認為有特級園潛力。",
-        "famousWineries": ["Domaine Ramonet", "Domaine Morey-Coffinet"],
+        "famousWineries": [
+          "Domaine Ramonet",
+          "Domaine Morey-Coffinet"
+        ],
         "color": "#CD853F"
       },
       "en-cailleret": {
@@ -353,13 +569,21 @@
         "altitude": "260m",
         "exposition": "東南",
         "soilStructure": "非常多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：強烈的礦物感，結構緊實。",
         "tastingNotes": "燧石、檸檬、濕石。",
         "agingPotential": "10-25年",
         "history": "Cailleret的一部分，品質極高。",
-        "famousWineries": ["Domaine Ramonet", "Domaine Vincent Girardin"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Ramonet",
+          "Domaine Vincent Girardin"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "en-virondot": {
         "name": "En Virondot",
@@ -370,13 +594,21 @@
         "altitude": "320-340m",
         "exposition": "東南",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：高海拔帶來極致的清新度和礦物感。",
         "tastingNotes": "檸檬皮、白堊、薄荷。",
         "agingPotential": "10-25年",
         "history": "Chassagne海拔最高的地塊之一，風格冷峻。",
-        "famousWineries": ["Domaine Lamy-Caillat", "Domaine Marc Morey"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Lamy-Caillat",
+          "Domaine Marc Morey"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "ez-crets": {
         "name": "Ez Crets",
@@ -387,12 +619,17 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：果味濃郁。白酒：風格圓潤。",
         "tastingNotes": "紅酒：櫻桃。白酒：黃蘋果。",
         "agingPotential": "7-15年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Bernard Moreau"],
+        "famousWineries": [
+          "Domaine Bernard Moreau"
+        ],
         "color": "#CD853F"
       },
       "ez-crottes": {
@@ -404,12 +641,17 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：果味濃郁。白酒：風格圓潤。",
         "tastingNotes": "紅酒：櫻桃。白酒：黃蘋果。",
         "agingPotential": "7-15年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Bernard Moreau"],
+        "famousWineries": [
+          "Domaine Bernard Moreau"
+        ],
         "color": "#CD853F"
       },
       "francemont": {
@@ -421,12 +663,16 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，帶有礦物感。",
         "tastingNotes": "檸檬、青蘋果。",
         "agingPotential": "7-15年",
         "history": "一個較少見的高海拔一級園。",
-        "famousWineries": ["Domaine Thomas Morey"],
+        "famousWineries": [
+          "Domaine Thomas Morey"
+        ],
         "color": "#CD853F"
       },
       "guerchere": {
@@ -438,12 +684,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感好，果味集中。",
         "tastingNotes": "黑櫻桃、香料。",
         "agingPotential": "8-18年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Vincent et François Jouard"],
+        "famousWineries": [
+          "Domaine Vincent et François Jouard"
+        ],
         "color": "#CD853F"
       },
       "la-boudriotte": {
@@ -455,13 +705,22 @@
         "altitude": "240m",
         "exposition": "東南",
         "soilStructure": "深厚的粘土",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：酒體飽滿，結構強勁。白酒：風格豐腴，口感油潤。",
         "tastingNotes": "紅酒：黑李子、皮革。白酒：成熟蘋果、蜂蜜。",
         "agingPotential": "10-25年",
         "history": "位於Morgeot下方，土壤更為肥沃，風格豐滿。",
-        "famousWineries": ["Domaine Ramonet", "Domaine Gagnard-Delagrange"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Ramonet",
+          "Domaine Gagnard-Delagrange"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "la-cardeuse": {
         "name": "La Cardeuse",
@@ -472,12 +731,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感好，果味集中。",
         "tastingNotes": "黑櫻桃、香料。",
         "agingPotential": "8-18年",
         "history": "Morgeot的一個子地塊。",
-        "famousWineries": ["Domaine Coffinet-Duvernay"],
+        "famousWineries": [
+          "Domaine Coffinet-Duvernay"
+        ],
         "color": "#CD853F"
       },
       "la-chapelle": {
@@ -489,12 +752,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：風格優雅。白酒：果味與礦物感平衡。",
         "tastingNotes": "紅酒：櫻桃。白酒：梨、杏仁。",
         "agingPotential": "8-18年",
         "history": "Morgeot的一個子地塊，得名於附近的一個小教堂。",
-        "famousWineries": ["Domaine Pillot"],
+        "famousWineries": [
+          "Domaine Pillot"
+        ],
         "color": "#CD853F"
       },
       "la-grande-borne": {
@@ -506,12 +774,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格圓潤，果味豐富。",
         "tastingNotes": "黃蘋果、梨。",
         "agingPotential": "6-15年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Coffinet-Duvernay"],
+        "famousWineries": [
+          "Domaine Coffinet-Duvernay"
+        ],
         "color": "#CD853F"
       },
       "la-grande-montagne": {
@@ -523,13 +795,21 @@
         "altitude": "300-340m",
         "exposition": "東南",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：高海拔帶來清新的酸度和礦物感。",
         "tastingNotes": "檸檬、青蘋果、燧石。",
         "agingPotential": "8-20年",
         "history": "位於山坡高處，風格冷峻。",
-        "famousWineries": ["Domaine Jean-Noël Gagnard", "Domaine Lamy-Pillot"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Jean-Noël Gagnard",
+          "Domaine Lamy-Pillot"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "la-maltroie": {
         "name": "La Maltroie",
@@ -540,12 +820,18 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格豐滿，結構感強。紅酒：果味濃郁。",
         "tastingNotes": "白酒：成熟蘋果、香料。紅酒：櫻桃、李子。",
         "agingPotential": "8-20年",
         "history": "Chassagne村中心的一個重要一級園，品質優良。",
-        "famousWineries": ["Domaine Bernard Moreau", "Domaine Jean-Noël Gagnard"],
+        "famousWineries": [
+          "Domaine Bernard Moreau",
+          "Domaine Jean-Noël Gagnard"
+        ],
         "color": "#CD853F"
       },
       "la-roquemaure": {
@@ -557,12 +843,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感好，果味集中。",
         "tastingNotes": "黑櫻桃、香料。",
         "agingPotential": "8-18年",
         "history": "Clos Saint-Jean內的一個子地塊。",
-        "famousWineries": ["Domaine Guy Amiot"],
+        "famousWineries": [
+          "Domaine Guy Amiot"
+        ],
         "color": "#CD853F"
       },
       "les-baudines": {
@@ -574,13 +864,21 @@
         "altitude": "320-340m",
         "exposition": "東南",
         "soilStructure": "貧瘠的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：高海拔帶來清新的酸度和礦物感，風格精緻。",
         "tastingNotes": "檸檬、青蘋果、白花。",
         "agingPotential": "8-20年",
         "history": "位於Chassagne最南端，靠近Santenay，風格冷涼。",
-        "famousWineries": ["Domaine Bernard Moreau", "Domaine Jean-Noël Gagnard"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Bernard Moreau",
+          "Domaine Jean-Noël Gagnard"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "les-boirettes": {
         "name": "Les Boirettes",
@@ -591,12 +889,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格圓潤，果味豐富。",
         "tastingNotes": "黃蘋果、梨。",
         "agingPotential": "6-15年",
         "history": "La Maltroie的一個子地塊。",
-        "famousWineries": ["Domaine Bernard Moreau"],
+        "famousWineries": [
+          "Domaine Bernard Moreau"
+        ],
         "color": "#CD853F"
       },
       "les-bondues": {
@@ -608,12 +910,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感好，果味集中。",
         "tastingNotes": "黑櫻桃、香料。",
         "agingPotential": "8-18年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Ramonet"],
+        "famousWineries": [
+          "Domaine Ramonet"
+        ],
         "color": "#CD853F"
       },
       "les-brussonnes": {
@@ -625,12 +931,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感好，果味集中。",
         "tastingNotes": "黑櫻桃、香料。",
         "agingPotential": "8-18年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Morey-Coffinet"],
+        "famousWineries": [
+          "Domaine Morey-Coffinet"
+        ],
         "color": "#CD853F"
       },
       "les-champs-gain": {
@@ -642,12 +952,17 @@
         "altitude": "280-300m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，帶有花香和礦物感。",
         "tastingNotes": "白花、梨、杏仁。",
         "agingPotential": "8-20年",
         "history": "位於山坡中段，品質優良。",
-        "famousWineries": ["Domaine Bernard Moreau", "Domaine Jean-Noël Gagnard"],
+        "famousWineries": [
+          "Domaine Bernard Moreau",
+          "Domaine Jean-Noël Gagnard"
+        ],
         "color": "#CD853F"
       },
       "les-chaumes": {
@@ -659,12 +974,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：果味濃郁。白酒：風格圓潤。",
         "tastingNotes": "紅酒：櫻桃。白酒：黃蘋果。",
         "agingPotential": "7-15年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Morey-Coffinet"],
+        "famousWineries": [
+          "Domaine Morey-Coffinet"
+        ],
         "color": "#CD853F"
       },
       "les-chaumees": {
@@ -676,12 +996,17 @@
         "altitude": "260m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格純淨，礦物感強。",
         "tastingNotes": "檸檬、燧石、白花。",
         "agingPotential": "8-20年",
         "history": "位於村莊北部，靠近Puligny，風格也較為接近。",
-        "famousWineries": ["Domaine Morey-Coffinet", "Domaine Philippe Colin"],
+        "famousWineries": [
+          "Domaine Morey-Coffinet",
+          "Domaine Philippe Colin"
+        ],
         "color": "#CD853F"
       },
       "les-chenevottes": {
@@ -693,12 +1018,17 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格豐滿，果味濃郁，口感圓潤。",
         "tastingNotes": "桃子、杏、奶油。",
         "agingPotential": "7-18年",
         "history": "位於村莊北部，靠近Bâtard-Montrachet，風格豐腴。",
-        "famousWineries": ["Domaine Bernard Moreau", "Domaine Jean-Marc Pillot"],
+        "famousWineries": [
+          "Domaine Bernard Moreau",
+          "Domaine Jean-Marc Pillot"
+        ],
         "color": "#CD853F"
       },
       "les-combards": {
@@ -710,12 +1040,16 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，帶有礦物感。",
         "tastingNotes": "檸檬、青蘋果。",
         "agingPotential": "7-15年",
         "history": "一個較少見的高海拔一級園。",
-        "famousWineries": ["Domaine Lamy-Pillot"],
+        "famousWineries": [
+          "Domaine Lamy-Pillot"
+        ],
         "color": "#CD853F"
       },
       "les-commes": {
@@ -727,12 +1061,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，帶有花香和礦物感。",
         "tastingNotes": "白花、梨、杏仁。",
         "agingPotential": "8-18年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Jean-Noël Gagnard"],
+        "famousWineries": [
+          "Domaine Jean-Noël Gagnard"
+        ],
         "color": "#CD853F"
       },
       "les-embazees": {
@@ -744,12 +1082,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格豐滿，結構感強。",
         "tastingNotes": "成熟蘋果、香料。",
         "agingPotential": "8-20年",
         "history": "位於Bâtard-Montrachet下方，風格豐腴。",
-        "famousWineries": ["Domaine Bernard Moreau"],
+        "famousWineries": [
+          "Domaine Bernard Moreau"
+        ],
         "color": "#CD853F"
       },
       "les-fairendes": {
@@ -761,12 +1103,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：果味濃郁。白酒：風格圓潤。",
         "tastingNotes": "紅酒：櫻桃。白酒：黃蘋果。",
         "agingPotential": "7-15年",
         "history": "Morgeot的一個子地塊。",
-        "famousWineries": ["Domaine Lamy-Pillot"],
+        "famousWineries": [
+          "Domaine Lamy-Pillot"
+        ],
         "color": "#CD853F"
       },
       "les-grands-clos": {
@@ -778,12 +1125,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感好，果味集中。",
         "tastingNotes": "黑櫻桃、香料。",
         "agingPotential": "8-18年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Morey-Coffinet"],
+        "famousWineries": [
+          "Domaine Morey-Coffinet"
+        ],
         "color": "#CD853F"
       },
       "les-macherelles": {
@@ -795,12 +1146,17 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格豐滿，果味濃郁。",
         "tastingNotes": "桃子、杏、奶油。",
         "agingPotential": "7-18年",
         "history": "位於村莊北部，靠近Puligny。",
-        "famousWineries": ["Domaine Jean-Noël Gagnard", "Domaine Thomas Morey"],
+        "famousWineries": [
+          "Domaine Jean-Noël Gagnard",
+          "Domaine Thomas Morey"
+        ],
         "color": "#CD853F"
       },
       "les-murees": {
@@ -812,12 +1168,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格圓潤，果味豐富。",
         "tastingNotes": "黃蘋果、梨。",
         "agingPotential": "6-15年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Fontaine-Gagnard"],
+        "famousWineries": [
+          "Domaine Fontaine-Gagnard"
+        ],
         "color": "#CD853F"
       },
       "les-pasquelles": {
@@ -829,12 +1189,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，單寧柔和。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "7-15年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Lamy-Pillot"],
+        "famousWineries": [
+          "Domaine Lamy-Pillot"
+        ],
         "color": "#CD853F"
       },
       "les-petites-fairendes": {
@@ -846,12 +1210,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格圓潤，果味豐富。",
         "tastingNotes": "黃蘋果、梨。",
         "agingPotential": "6-15年",
         "history": "Les Fairendes的一部分。",
-        "famousWineries": ["Domaine Lamy-Pillot"],
+        "famousWineries": [
+          "Domaine Lamy-Pillot"
+        ],
         "color": "#CD853F"
       },
       "les-petits-clos": {
@@ -863,12 +1231,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感好，果味集中。",
         "tastingNotes": "黑櫻桃、香料。",
         "agingPotential": "8-18年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Fernand et Laurent Pillot"],
+        "famousWineries": [
+          "Domaine Fernand et Laurent Pillot"
+        ],
         "color": "#CD853F"
       },
       "les-places": {
@@ -880,12 +1252,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，帶有礦物感。",
         "tastingNotes": "檸檬、白花。",
         "agingPotential": "8-18年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Jean-Marc Pillot"],
+        "famousWineries": [
+          "Domaine Jean-Marc Pillot"
+        ],
         "color": "#CD853F"
       },
       "les-rebichets": {
@@ -897,12 +1273,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，帶有礦物感。",
         "tastingNotes": "檸檬、白花。",
         "agingPotential": "8-18年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Thomas Morey"],
+        "famousWineries": [
+          "Domaine Thomas Morey"
+        ],
         "color": "#CD853F"
       },
       "les-vergers": {
@@ -914,12 +1294,17 @@
         "altitude": "260m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，果味與礦物感平衡得很好。",
         "tastingNotes": "梨、杏仁、礦石。",
         "agingPotential": "8-20年",
         "history": "一個品質非常穩定的一級園，意為'果園'。",
-        "famousWineries": ["Domaine Ramonet", "Domaine Guy Amiot"],
+        "famousWineries": [
+          "Domaine Ramonet",
+          "Domaine Guy Amiot"
+        ],
         "color": "#CD853F"
       },
       "petingeret": {
@@ -931,12 +1316,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，單寧柔和。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "7-15年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Jean-Noël Gagnard"],
+        "famousWineries": [
+          "Domaine Jean-Noël Gagnard"
+        ],
         "color": "#CD853F"
       },
       "tonton-marcel": {
@@ -948,12 +1337,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：非常罕見。",
         "tastingNotes": "紅色水果。",
         "agingPotential": "7-15年",
         "history": "一個極小且罕見的一級園。",
-        "famousWineries": ["Domaine Vincent Bachelet"],
+        "famousWineries": [
+          "Domaine Vincent Bachelet"
+        ],
         "color": "#CD853F"
       },
       "tete-du-clos": {
@@ -965,12 +1358,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感好，果味集中。",
         "tastingNotes": "黑櫻桃、香料。",
         "agingPotential": "8-18年",
         "history": "Morgeot的一個子地塊。",
-        "famousWineries": ["Domaine Vincent et François Jouard"],
+        "famousWineries": [
+          "Domaine Vincent et François Jouard"
+        ],
         "color": "#CD853F"
       },
       "vide-bourse": {
@@ -982,13 +1379,21 @@
         "altitude": "260m",
         "exposition": "東南",
         "soilStructure": "非常多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：強烈的礦物感，結構緊實。",
         "tastingNotes": "燧石、檸檬、濕石。",
         "agingPotential": "10-25年",
         "history": "意為'空錢包'，可能指其貧瘠的土壤難以耕種。與Cailleret相鄰，品質極高。",
-        "famousWineries": ["Domaine Lamy-Caillat", "Domaine Thomas Morey"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Lamy-Caillat",
+          "Domaine Thomas Morey"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "vigne-blanche": {
         "name": "Vigne Blanche",
@@ -999,12 +1404,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "白色泥灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格純淨，帶有花香和礦物感。",
         "tastingNotes": "白花、檸檬、礦石。",
         "agingPotential": "8-18年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Jean-Chartron"],
+        "famousWineries": [
+          "Domaine Jean-Chartron"
+        ],
         "color": "#CD853F"
       },
       "vigne-derriere": {
@@ -1016,12 +1425,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，單寧柔和。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "7-15年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Jean-Noël Gagnard"],
+        "famousWineries": [
+          "Domaine Jean-Noël Gagnard"
+        ],
         "color": "#CD853F"
       },
       "overview": {
@@ -1033,14 +1446,40 @@
         "altitude": "230-340m",
         "exposition": "東、東南",
         "soilStructure": "多樣，從石灰岩到粘土",
-        "grapeVarieties": ["Chardonnay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：風格豐腴，結構感強，帶有成熟水果風味。紅酒：果味濃郁，單寧柔和，帶有泥土氣息。",
         "tastingNotes": "白酒：黃蘋果、杏仁、香料。紅酒：櫻桃、甘草。",
         "agingPotential": "白酒：8-20年，紅酒：10-25年",
         "history": "Chassagne擁有超過50個一級園，是金丘一級園數量最多的村莊，風土極為多樣。",
-        "famousWineries": ["Domaine Ramonet", "Domaine Bernard Moreau", "Domaine Lamy-Caillat", "Domaine Guy Amiot"],
-        "color": "#B22222"
+        "famousWineries": [
+          "Domaine Ramonet",
+          "Domaine Bernard Moreau",
+          "Domaine Lamy-Caillat",
+          "Domaine Guy Amiot"
+        ],
+        "color": "#B22222",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン",
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と泥灰岩、粘土質の表土",
+          "wineStyle": "村名より複雑でミネラリー",
+          "tastingNotes": "白桃・蜂蜜・ミネラル・ヘーゼルナッツ",
+          "agingPotential": "10-20年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       }
     }
+  },
+  "ja": {
+    "wineTypes": [
+      "白ワイン",
+      "赤ワイン"
+    ]
   }
 }

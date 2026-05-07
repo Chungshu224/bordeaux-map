@@ -20,7 +20,10 @@
           "title": "布根地在哪裡？",
           "content": "布根地位於法國東部，從巴黎東南方約 300 公里處開始，南北延伸約 230 公里，是世界上最負盛名的葡萄酒產區之一。",
           "mapConfig": {
-            "center": [2.5, 46.5],
+            "center": [
+              2.5,
+              46.5
+            ],
             "zoom": 6,
             "pitch": 0,
             "bearing": 0
@@ -36,15 +39,30 @@
               "showLabels": true
             }
           ],
-          "bounds": [[3.5, 46.8], [5.5, 48.0]],
+          "bounds": [
+            [
+              3.5,
+              46.8
+            ],
+            [
+              5.5,
+              48.0
+            ]
+          ],
           "markers": [
             {
               "name": "Dijon",
-              "coordinates": [5.0415, 47.3220]
+              "coordinates": [
+                5.0415,
+                47.322
+              ]
             },
             {
               "name": "Beaune",
-              "coordinates": [4.8378, 47.0247]
+              "coordinates": [
+                4.8378,
+                47.0247
+              ]
             }
           ]
         },
@@ -112,7 +130,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.5, 47.0],
+            "center": [
+              4.5,
+              47.0
+            ],
             "zoom": 8.2,
             "pitch": 0,
             "bearing": 0
@@ -475,7 +496,16 @@
               "showLabels": true
             }
           ],
-          "bounds": [[3.8, 45.8], [5.2, 48.0]]
+          "bounds": [
+            [
+              3.8,
+              45.8
+            ],
+            [
+              5.2,
+              48.0
+            ]
+          ]
         },
         {
           "type": "list",
@@ -755,25 +785,53 @@
           "title": "📊 三大品種特性雷達圖",
           "content": "直觀對比黑皮諾、霞多麗和加美的風味特性與風格差異",
           "data": {
-            "dimensions": ["酒體", "酸度", "單寧", "果味", "陳年潛力", "價格"],
+            "dimensions": [
+              "酒體",
+              "酸度",
+              "單寧",
+              "果味",
+              "陳年潛力",
+              "價格"
+            ],
             "datasets": [
               {
                 "label": "黑皮諾 Pinot Noir",
                 "color": "#8B0000",
                 "opacity": 0.3,
-                "values": [6, 8, 5, 7, 9, 8]
+                "values": [
+                  6,
+                  8,
+                  5,
+                  7,
+                  9,
+                  8
+                ]
               },
               {
                 "label": "霞多麗 Chardonnay",
                 "color": "#FFD700",
                 "opacity": 0.3,
-                "values": [7, 8, 0, 6, 8, 7]
+                "values": [
+                  7,
+                  8,
+                  0,
+                  6,
+                  8,
+                  7
+                ]
               },
               {
                 "label": "加美 Gamay",
                 "color": "#DC143C",
                 "opacity": 0.3,
-                "values": [5, 7, 4, 9, 4, 5]
+                "values": [
+                  5,
+                  7,
+                  4,
+                  9,
+                  4,
+                  5
+                ]
               }
             ]
           },

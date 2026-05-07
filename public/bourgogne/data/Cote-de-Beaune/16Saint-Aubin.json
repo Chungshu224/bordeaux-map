@@ -4,16 +4,30 @@
   "area": "約 160 公頃",
   "altitude": "300-350m",
   "exposition": "東、東南",
-  "grapeVarieties": ["Chardonnay", "Pinot Noir"],
-  "wineTypes": ["白酒", "紅酒"],
+  "grapeVarieties": [
+    "Chardonnay",
+    "Pinot Noir"
+  ],
+  "wineTypes": [
+    "白酒",
+    "紅酒"
+  ],
   "climate": "較涼爽，受益於較高的海拔",
   "soilStructure": "石灰岩和泥灰岩",
   "wineStyle": "白酒：清新、純淨、礦物感強。紅酒：輕盈、果味為主。",
   "tastingNotes": "白酒：檸檬、青蘋果、白花、礦石。紅酒：紅色水果。",
   "agingPotential": "白酒：5-15年，紅酒：3-10年",
-  "famousWineries": ["Domaine Hubert Lamy", "Domaine Pierre-Yves Colin-Morey", "Domaine Marc Colin"],
+  "famousWineries": [
+    "Domaine Hubert Lamy",
+    "Domaine Pierre-Yves Colin-Morey",
+    "Domaine Marc Colin"
+  ],
   "grandCrus": [],
-  "premierCrus": ["En Remilly", "Les Murgers des Dents de Chien", "La Chatenière"],
+  "premierCrus": [
+    "En Remilly",
+    "Les Murgers des Dents de Chien",
+    "La Chatenière"
+  ],
   "history": "Saint-Aubin的葡萄園多分佈在陡峭的山坡上。",
   "geojson": {
     "village": {
@@ -26,13 +40,32 @@
         "altitude": "300-350m",
         "exposition": "東、東南",
         "soilStructure": "石灰岩和泥灰岩",
-        "grapeVarieties": ["Chardonnay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：清新、活潑，帶有柑橘和礦物風味。紅酒：輕盈，紅色水果為主。",
         "tastingNotes": "白酒：檸檬、青蘋果、白花。紅酒：櫻桃、覆盆子。",
         "agingPotential": "白酒：3-8年，紅酒：2-7年",
         "history": "Saint-Aubin村級葡萄園通常位於山谷底部或坡度較緩的地方，風格較為平易近人。",
-        "famousWineries": ["Domaine Hubert Lamy", "Domaine Larue", "Domaine Henri Prudhon"],
-        "color": "#A52A2A"
+        "famousWineries": [
+          "Domaine Hubert Lamy",
+          "Domaine Larue",
+          "Domaine Henri Prudhon"
+        ],
+        "color": "#A52A2A",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン",
+            "赤ワイン"
+          ],
+          "climate": "大陸性気候、やや冷涼で一部は森に保護される",
+          "soilStructure": "石灰岩と泥灰岩、比較的痩せた土壌",
+          "wineStyle": "白：爽やかでミネラリー、良コスパ。赤：爽やかでフルーティー",
+          "tastingNotes": "白：柑橘・白い花・ミネラル・バター。赤：チェリー・スパイス",
+          "agingPotential": "白：5-12年、赤：5-10年"
+        }
       }
     },
     "premier_crus": {
@@ -45,13 +78,30 @@
         "altitude": "300-320m",
         "exposition": "南、東南",
         "soilStructure": "非常貧瘠、多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：極致的礦物感、純淨度和張力，風格接近Chevalier-Montrachet，是Saint-Aubin最頂級的一級園。",
         "tastingNotes": "燧石、檸檬皮、海鹽、白堊。",
         "agingPotential": "8-20年",
         "history": "緊鄰Chassagne-Montrachet的同名地塊和Chevalier-Montrachet特級園，風土條件極其優越。",
-        "famousWineries": ["Domaine Hubert Lamy", "Domaine Pierre-Yves Colin-Morey", "Domaine Marc Colin"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Hubert Lamy",
+          "Domaine Pierre-Yves Colin-Morey",
+          "Domaine Marc Colin"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "soilStructure": "石灰岩と泥灰岩",
+          "wineStyle": "特級園に隣接、最高品質のサン・トーバン",
+          "tastingNotes": "白桃・蜂蜜・ミネラル・フリント",
+          "agingPotential": "8-15年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       },
       "les-murgers-des-dents-de-chien": {
         "name": "Les Murgers des Dents de Chien",
@@ -62,13 +112,30 @@
         "altitude": "320-350m",
         "exposition": "東南",
         "soilStructure": "非常貧瘠、多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：強烈的礦物感，結構緊實，酸度活潑，風格純淨。",
         "tastingNotes": "檸檬、濕石、白花。",
         "agingPotential": "7-18年",
         "history": "'狗牙石上的石牆'，形容其土壤多石。與En Remilly並列為Saint-Aubin最頂級的地塊之一。",
-        "famousWineries": ["Domaine Hubert Lamy", "Domaine Pierre-Yves Colin-Morey", "Domaine Thomas Morey"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Hubert Lamy",
+          "Domaine Pierre-Yves Colin-Morey",
+          "Domaine Thomas Morey"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "soilStructure": "石灰岩、薄い表土",
+          "wineStyle": "ミネラリーで純粋、ムルソー/ピュリニーに近い品質",
+          "tastingNotes": "柑橘・白い花・ミネラル・チョーク",
+          "agingPotential": "6-12年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       },
       "la-chateniere": {
         "name": "La Chatenière",
@@ -79,12 +146,18 @@
         "altitude": "300-330m",
         "exposition": "東",
         "soilStructure": "石灰岩和泥灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：兼具果味和礦物感，口感圓潤，香氣開放。",
         "tastingNotes": "梨、白桃、杏仁、礦石。",
         "agingPotential": "6-15年",
         "history": "一個非常受歡迎的一級園，以其平衡和易飲的風格而聞名。",
-        "famousWineries": ["Domaine Marc Colin", "Domaine Hubert Lamy", "Domaine Larue"],
+        "famousWineries": [
+          "Domaine Marc Colin",
+          "Domaine Hubert Lamy",
+          "Domaine Larue"
+        ],
         "color": "#CD853F"
       },
       "les-frionnes": {
@@ -96,13 +169,22 @@
         "altitude": "300m",
         "exposition": "東南",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格較為豐滿，果味濃郁，結構良好。",
         "tastingNotes": "黃蘋果、香料、奶油。",
         "agingPotential": "5-12年",
         "history": "位於Puligny-Montrachet一級園Les Chalumaux附近，風格也略帶Puligny的影子。",
-        "famousWineries": ["Domaine Hubert Lamy", "Domaine Marc Colin", "Françoise et Denis Clair"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Hubert Lamy",
+          "Domaine Marc Colin",
+          "Françoise et Denis Clair"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "sur-le-sentier-du-clou": {
         "name": "Sur le Sentier du Clou",
@@ -113,12 +195,18 @@
         "altitude": "310-340m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，礦物感和花香並存。",
         "tastingNotes": "白花、柑橘、礦石。",
         "agingPotential": "6-15年",
         "history": "一個面積較大且品質優秀的一級園。",
-        "famousWineries": ["Domaine Hubert Lamy", "Domaine Larue", "Domaine Henri Prudhon"],
+        "famousWineries": [
+          "Domaine Hubert Lamy",
+          "Domaine Larue",
+          "Domaine Henri Prudhon"
+        ],
         "color": "#CD853F"
       },
       "bas-de-vermarain-a-l-est": {
@@ -130,12 +218,17 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "石灰岩、泥灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，帶有柑橘和礦物風味。",
         "tastingNotes": "檸檬、青蘋果、濕石。",
         "agingPotential": "5-12年",
         "history": "位於山谷中，風格較為輕盈。",
-        "famousWineries": ["Domaine Henri Prudhon", "Domaine Gérard Thomas"],
+        "famousWineries": [
+          "Domaine Henri Prudhon",
+          "Domaine Gérard Thomas"
+        ],
         "color": "#CD853F"
       },
       "derriere-chez-edouard": {
@@ -147,13 +240,22 @@
         "altitude": "320m",
         "exposition": "東南",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：結構良好，兼具果香和礦物感。紅酒：優雅，帶有紅色水果香氣。",
         "tastingNotes": "白酒：梨、杏仁、礦石。紅酒：櫻桃、覆盆子。",
         "agingPotential": "6-15年",
         "history": "一個品質優良且穩定的一級園，得名於曾經的園主Edouard。",
-        "famousWineries": ["Domaine Hubert Lamy", "Domaine Marc Colin"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Hubert Lamy",
+          "Domaine Marc Colin"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "derriere-la-tour": {
         "name": "Derrière la Tour",
@@ -164,12 +266,16 @@
         "altitude": "310m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，礦物感突出。",
         "tastingNotes": "檸檬、濕石。",
         "agingPotential": "5-12年",
         "history": "位於村莊一座古塔的後面。",
-        "famousWineries": ["Domaine Henri Prudhon"],
+        "famousWineries": [
+          "Domaine Henri Prudhon"
+        ],
         "color": "#CD853F"
       },
       "echaille": {
@@ -181,12 +287,16 @@
         "altitude": "330m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：高海拔帶來良好的酸度和礦物感。",
         "tastingNotes": "青蘋果、檸檬皮。",
         "agingPotential": "6-14年",
         "history": "一個較少見的高海拔地塊。",
-        "famousWineries": ["Domaine Roux"],
+        "famousWineries": [
+          "Domaine Roux"
+        ],
         "color": "#CD853F"
       },
       "en-creot": {
@@ -198,12 +308,18 @@
         "altitude": "300m",
         "exposition": "南",
         "soilStructure": "紅色粘土、石灰岩",
-        "grapeVarieties": ["Pinot Noir", "Chardonnay"],
+        "grapeVarieties": [
+          "Pinot Noir",
+          "Chardonnay"
+        ],
         "wineStyle": "紅酒：果味濃郁，結構感好。白酒：風格較為豐滿。",
         "tastingNotes": "紅酒：黑櫻桃、香料。白酒：黃蘋果、奶油。",
         "agingPotential": "紅酒：6-15年，白酒：5-12年",
         "history": "位於Gamay村附近，以出產優質紅酒而聞名。",
-        "famousWineries": ["Domaine Henri Prudhon", "Domaine Sylvain Langoureau"],
+        "famousWineries": [
+          "Domaine Henri Prudhon",
+          "Domaine Sylvain Langoureau"
+        ],
         "color": "#CD853F"
       },
       "en-la-ranche": {
@@ -215,12 +331,16 @@
         "altitude": "320m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，帶有礦物感。",
         "tastingNotes": "檸檬、青蘋果。",
         "agingPotential": "5-12年",
         "history": "一個較少見的高海拔地塊。",
-        "famousWineries": ["Domaine Roux"],
+        "famousWineries": [
+          "Domaine Roux"
+        ],
         "color": "#CD853F"
       },
       "en-montceau": {
@@ -232,12 +352,16 @@
         "altitude": "310m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，果香與礦物感平衡。",
         "tastingNotes": "梨、白花、礦石。",
         "agingPotential": "6-15年",
         "history": "一個品質穩定的一級園。",
-        "famousWineries": ["Domaine Larue"],
+        "famousWineries": [
+          "Domaine Larue"
+        ],
         "color": "#CD853F"
       },
       "en-vollon-a-l-est": {
@@ -249,12 +373,17 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格較為圓潤，果味豐富。",
         "tastingNotes": "黃蘋果、梨。",
         "agingPotential": "5-12年",
         "history": "位於山坡下部，風格較為豐滿。",
-        "famousWineries": ["Domaine Roux", "Domaine Henri Prudhon"],
+        "famousWineries": [
+          "Domaine Roux",
+          "Domaine Henri Prudhon"
+        ],
         "color": "#CD853F"
       },
       "es-champs": {
@@ -266,12 +395,16 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格圓潤，易於入口。",
         "tastingNotes": "蘋果、梨。",
         "agingPotential": "4-10年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Gérard Thomas"],
+        "famousWineries": [
+          "Domaine Gérard Thomas"
+        ],
         "color": "#CD853F"
       },
       "le-bas-de-gamay-a-l-est": {
@@ -283,12 +416,16 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "紅色粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，單寧柔和。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "5-12年",
         "history": "位於Gamay村東側的坡地上。",
-        "famousWineries": ["Domaine Henri Prudhon"],
+        "famousWineries": [
+          "Domaine Henri Prudhon"
+        ],
         "color": "#CD853F"
       },
       "le-charmois": {
@@ -300,12 +437,17 @@
         "altitude": "310m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格優雅，帶有花香和細膩的礦物感。",
         "tastingNotes": "白花、梨、杏仁。",
         "agingPotential": "6-15年",
         "history": "一個備受讚譽的一級園，品質穩定。",
-        "famousWineries": ["Domaine Jean-Claude Bachelet", "Domaine Larue"],
+        "famousWineries": [
+          "Domaine Jean-Claude Bachelet",
+          "Domaine Larue"
+        ],
         "color": "#CD853F"
       },
       "le-puits": {
@@ -317,12 +459,16 @@
         "altitude": "320m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，礦物感突出。",
         "tastingNotes": "檸檬、濕石。",
         "agingPotential": "6-14年",
         "history": "得名於地塊中的一口井。",
-        "famousWineries": ["Domaine Sylvain Langoureau"],
+        "famousWineries": [
+          "Domaine Sylvain Langoureau"
+        ],
         "color": "#CD853F"
       },
       "les-castets": {
@@ -334,12 +480,17 @@
         "altitude": "330m",
         "exposition": "南",
         "soilStructure": "非常貧瘠、多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：強烈的礦物感和張力，風格純淨、銳利。",
         "tastingNotes": "燧石、檸檬皮、白堊。",
         "agingPotential": "7-18年",
         "history": "位於陡峭的南向坡上，日照充足，風格強勁。",
-        "famousWineries": ["Domaine Hubert Lamy", "Domaine Marc Colin"],
+        "famousWineries": [
+          "Domaine Hubert Lamy",
+          "Domaine Marc Colin"
+        ],
         "color": "#CD853F"
       },
       "les-champlots": {
@@ -351,13 +502,21 @@
         "altitude": "320m",
         "exposition": "東南",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：兼具良好的成熟度和清新的酸度，平衡感佳。",
         "tastingNotes": "梨、白桃、礦石。",
         "agingPotential": "6-15年",
         "history": "一個品質優良的一級園。",
-        "famousWineries": ["Domaine Larue", "Domaine Philippe Colin"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Larue",
+          "Domaine Philippe Colin"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "les-combes-au-sud": {
         "name": "Les Combes au Sud",
@@ -368,12 +527,16 @@
         "altitude": "300m",
         "exposition": "南",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格較為圓潤，果味豐富。",
         "tastingNotes": "黃蘋果、梨。",
         "agingPotential": "5-12年",
         "history": "Les Combes地塊的南向部分。",
-        "famousWineries": ["Domaine Henri Prudhon"],
+        "famousWineries": [
+          "Domaine Henri Prudhon"
+        ],
         "color": "#CD853F"
       },
       "les-combes": {
@@ -385,12 +548,17 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，帶有柑橘和礦物風味，性價比高。",
         "tastingNotes": "檸檬、青蘋果、濕石。",
         "agingPotential": "5-12年",
         "history": "一個面積較大且受歡迎的一級園。",
-        "famousWineries": ["Domaine Pierre-Yves Colin-Morey", "Domaine Larue"],
+        "famousWineries": [
+          "Domaine Pierre-Yves Colin-Morey",
+          "Domaine Larue"
+        ],
         "color": "#CD853F"
       },
       "les-cortons": {
@@ -402,12 +570,16 @@
         "altitude": "310m",
         "exposition": "東",
         "soilStructure": "紅色粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感好，帶有泥土和香料氣息。",
         "tastingNotes": "黑櫻桃、甘草。",
         "agingPotential": "6-15年",
         "history": "名字與特級園Corton相似，但並無關聯。",
-        "famousWineries": ["Domaine Henri Prudhon"],
+        "famousWineries": [
+          "Domaine Henri Prudhon"
+        ],
         "color": "#CD853F"
       },
       "les-perrieres": {
@@ -419,12 +591,17 @@
         "altitude": "320m",
         "exposition": "東",
         "soilStructure": "多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：強烈的礦物感，風格純淨、緊實。",
         "tastingNotes": "燧石、檸檬、濕石。",
         "agingPotential": "7-18年",
         "history": "與Meursault、Puligny的同名地塊一樣，以其多石土壤和礦物風格著稱。",
-        "famousWineries": ["Domaine Henri Prudhon", "Domaine Larue"],
+        "famousWineries": [
+          "Domaine Henri Prudhon",
+          "Domaine Larue"
+        ],
         "color": "#CD853F"
       },
       "les-travers-de-marinot": {
@@ -436,12 +613,16 @@
         "altitude": "320m",
         "exposition": "東",
         "soilStructure": "紅色粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，單寧柔和。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "5-12年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Henri Prudhon"],
+        "famousWineries": [
+          "Domaine Henri Prudhon"
+        ],
         "color": "#CD853F"
       },
       "marinot": {
@@ -453,12 +634,16 @@
         "altitude": "320m",
         "exposition": "東",
         "soilStructure": "紅色粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，單寧柔和。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "5-12年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Sylvain Langoureau"],
+        "famousWineries": [
+          "Domaine Sylvain Langoureau"
+        ],
         "color": "#CD853F"
       },
       "pitangeret": {
@@ -470,12 +655,16 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，單寧柔和。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "5-12年",
         "history": "一個較少見的紅酒一級園。",
-        "famousWineries": ["Domaine Larue"],
+        "famousWineries": [
+          "Domaine Larue"
+        ],
         "color": "#CD853F"
       },
       "sous-roche-dumay": {
@@ -487,13 +676,22 @@
         "altitude": "330m",
         "exposition": "東南",
         "soilStructure": "非常貧瘠、多石的石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：強烈的礦物感和張力，風格純淨、銳利。",
         "tastingNotes": "燧石、檸檬皮、白堊。",
         "agingPotential": "7-18年",
         "history": "位於一塊名為'Roche Dumay'的巨大岩石下方，風土優異。",
-        "famousWineries": ["Domaine Hubert Lamy", "Domaine Larue", "Domaine Philippe Colin"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Hubert Lamy",
+          "Domaine Larue",
+          "Domaine Philippe Colin"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "sur-gamay": {
         "name": "Sur Gamay",
@@ -504,13 +702,22 @@
         "altitude": "320m",
         "exposition": "東南",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Chardonnay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：兼具果香和礦物感。紅酒：果味濃郁。",
         "tastingNotes": "白酒：梨、礦石。紅酒：櫻桃。",
         "agingPotential": "6-15年",
         "history": "位於Gamay村上方的坡地上。",
-        "famousWineries": ["Domaine Antoine Jobard", "Domaine Larue"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Antoine Jobard",
+          "Domaine Larue"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "vignes-moingeon": {
         "name": "Vignes Moingeon",
@@ -521,12 +728,16 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格圓潤，果味豐富。",
         "tastingNotes": "黃蘋果、梨。",
         "agingPotential": "5-12年",
         "history": "一個較少見的一級園。",
-        "famousWineries": ["Domaine Larue"],
+        "famousWineries": [
+          "Domaine Larue"
+        ],
         "color": "#CD853F"
       },
       "village": {
@@ -538,12 +749,16 @@
         "altitude": "300m",
         "exposition": "東",
         "soilStructure": "粘土-石灰岩",
-        "grapeVarieties": ["Chardonnay"],
+        "grapeVarieties": [
+          "Chardonnay"
+        ],
         "wineStyle": "白酒：風格清新，易於入口。",
         "tastingNotes": "檸檬、蘋果。",
         "agingPotential": "4-10年",
         "history": "這是一個特殊的地塊，雖然被劃為一級園，但名字卻是'Village'。",
-        "famousWineries": ["Domaine Roux"],
+        "famousWineries": [
+          "Domaine Roux"
+        ],
         "color": "#CD853F"
       },
       "overview": {
@@ -555,14 +770,41 @@
         "altitude": "300-350m",
         "exposition": "東、東南",
         "soilStructure": "石灰岩和泥灰岩",
-        "grapeVarieties": ["Chardonnay", "Pinot Noir"],
+        "grapeVarieties": [
+          "Chardonnay",
+          "Pinot Noir"
+        ],
         "wineStyle": "白酒：清新、純淨、礦物感強，是布根地性價比最高的白酒之一。紅酒：輕盈、果味為主，單寧柔和。",
         "tastingNotes": "白酒：檸檬、青蘋果、燧石、白花。紅酒：櫻桃、覆盆子。",
         "agingPotential": "白酒：5-15年，紅酒：3-10年",
         "history": "Saint-Aubin擁有30個一級園，大部分位於陡峭的山坡上，風土優越，近年來聲譽鵲起，被譽為'下一個Puligny'。",
-        "famousWineries": ["Domaine Hubert Lamy", "Domaine Pierre-Yves Colin-Morey", "Domaine Marc Colin", "Domaine Larue"],
-        "color": "#B22222"
+        "famousWineries": [
+          "Domaine Hubert Lamy",
+          "Domaine Pierre-Yves Colin-Morey",
+          "Domaine Marc Colin",
+          "Domaine Larue"
+        ],
+        "color": "#B22222",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン",
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と泥灰岩",
+          "wineStyle": "村名より複雑、コスパ高い",
+          "tastingNotes": "白：柑橘・白い花・ミネラル。赤：チェリー・スパイス",
+          "agingPotential": "白：6-12年、赤：5-10年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの南部"
+        }
       }
     }
+  },
+  "ja": {
+    "wineTypes": [
+      "白ワイン",
+      "赤ワイン"
+    ],
+    "exposition": "東・南東"
   }
 }

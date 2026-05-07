@@ -24,11 +24,31 @@
           "type": "timeline",
           "title": "DRC的歷史里程碑",
           "events": [
-            {"year": "13世紀", "title": "修道院時期", "description": "聖維旺修道院（Saint-Vivant）開始耕種此地，建立葡萄園基礎"},
-            {"year": "1760年", "title": "康帝親王收購", "description": "與龐巴度夫人競價8萬里弗爾買下，改名Romanée-Conti"},
-            {"year": "1869年", "title": "酒莊正式成立", "description": "Jacques-Marie Duvault-Blochet購入並整合多個地塊"},
-            {"year": "1942年", "title": "現代DRC誕生", "description": "de Villaine與Leroy家族共同接手管理"},
-            {"year": "1985年", "title": "生物動力革命", "description": "全面實施生物動力法，成為產區先驅"}
+            {
+              "year": "13世紀",
+              "title": "修道院時期",
+              "description": "聖維旺修道院（Saint-Vivant）開始耕種此地，建立葡萄園基礎"
+            },
+            {
+              "year": "1760年",
+              "title": "康帝親王收購",
+              "description": "與龐巴度夫人競價8萬里弗爾買下，改名Romanée-Conti"
+            },
+            {
+              "year": "1869年",
+              "title": "酒莊正式成立",
+              "description": "Jacques-Marie Duvault-Blochet購入並整合多個地塊"
+            },
+            {
+              "year": "1942年",
+              "title": "現代DRC誕生",
+              "description": "de Villaine與Leroy家族共同接手管理"
+            },
+            {
+              "year": "1985年",
+              "title": "生物動力革命",
+              "description": "全面實施生物動力法，成為產區先驅"
+            }
           ]
         },
         {
@@ -150,11 +170,31 @@
           "type": "timeline",
           "title": "Romanée-Conti價格演變史",
           "events": [
-            {"year": "1985年", "title": "精品酒起步", "description": "市場價格約$500/瓶，開始受到收藏家關注"},
-            {"year": "2000年", "title": "進入黃金期", "description": "價格突破$2,000/瓶，亞洲市場崛起"},
-            {"year": "2010年", "title": "投資級酒款", "description": "價格達$10,000+/瓶，成為投資標的"},
-            {"year": "2018年", "title": "拍賣紀錄", "description": "1945年份在蘇富比以$558,000成交，創單瓶紀錄"},
-            {"year": "2025年", "title": "持續攀升", "description": "新年份市價$20,000-50,000/瓶，需求仍遠超供應"}
+            {
+              "year": "1985年",
+              "title": "精品酒起步",
+              "description": "市場價格約$500/瓶，開始受到收藏家關注"
+            },
+            {
+              "year": "2000年",
+              "title": "進入黃金期",
+              "description": "價格突破$2,000/瓶，亞洲市場崛起"
+            },
+            {
+              "year": "2010年",
+              "title": "投資級酒款",
+              "description": "價格達$10,000+/瓶，成為投資標的"
+            },
+            {
+              "year": "2018年",
+              "title": "拍賣紀錄",
+              "description": "1945年份在蘇富比以$558,000成交，創單瓶紀錄"
+            },
+            {
+              "year": "2025年",
+              "title": "持續攀升",
+              "description": "新年份市價$20,000-50,000/瓶，需求仍遠超供應"
+            }
           ]
         },
         {
@@ -236,23 +276,51 @@
           "title": "🎯 三大名莊特色對比雷達圖",
           "content": "DRC、Leroy、Rousseau三大名莊在6個維度的全面對比。DRC價格最高但平衡性最佳，Leroy濃度極致，Rousseau性價比優秀。",
           "data": {
-            "dimensions": ["價格/稀有性", "品質穩定性", "風堺聲譽", "願其根芯", "陳年潛力", "濃度/強度"],
+            "dimensions": [
+              "價格/稀有性",
+              "品質穩定性",
+              "風堺聲譽",
+              "願其根芯",
+              "陳年潛力",
+              "濃度/強度"
+            ],
             "datasets": [
               {
                 "label": "DRC",
-                "values": [10, 10, 10, 9, 10, 8],
+                "values": [
+                  10,
+                  10,
+                  10,
+                  9,
+                  10,
+                  8
+                ],
                 "color": "#8B4789",
                 "opacity": 0.3
               },
               {
                 "label": "Domaine Leroy",
-                "values": [9, 9, 9, 10, 10, 10],
+                "values": [
+                  9,
+                  9,
+                  9,
+                  10,
+                  10,
+                  10
+                ],
                 "color": "#9C27B0",
                 "opacity": 0.3
               },
               {
                 "label": "Rousseau",
-                "values": [7, 8, 8, 8, 9, 9],
+                "values": [
+                  7,
+                  8,
+                  8,
+                  8,
+                  9,
+                  9
+                ],
                 "color": "#3F51B5",
                 "opacity": 0.3
               }
@@ -295,11 +363,31 @@
           "type": "timeline",
           "title": "Lalou Bize-Leroy的職業生涯",
           "events": [
-            {"year": "1955年", "title": "進入家族酒業", "description": "加入父親的Maison Leroy，學習葡萄酒貿易"},
-            {"year": "1974年", "title": "共同管理DRC", "description": "代表Leroy家族成為DRC共同經營者"},
-            {"year": "1988年", "title": "創立Domaine Leroy", "description": "離開DRC後購入Charles Noëllat酒莊，開始自己的事業"},
-            {"year": "1989年", "title": "全面生物動力", "description": "將所有葡萄園轉為生物動力法管理"},
-            {"year": "2000年代", "title": "登峰造極", "description": "酒款品質與價格達到與DRC同級的高度"}
+            {
+              "year": "1955年",
+              "title": "進入家族酒業",
+              "description": "加入父親的Maison Leroy，學習葡萄酒貿易"
+            },
+            {
+              "year": "1974年",
+              "title": "共同管理DRC",
+              "description": "代表Leroy家族成為DRC共同經營者"
+            },
+            {
+              "year": "1988年",
+              "title": "創立Domaine Leroy",
+              "description": "離開DRC後購入Charles Noëllat酒莊，開始自己的事業"
+            },
+            {
+              "year": "1989年",
+              "title": "全面生物動力",
+              "description": "將所有葡萄園轉為生物動力法管理"
+            },
+            {
+              "year": "2000年代",
+              "title": "登峰造極",
+              "description": "酒款品質與價格達到與DRC同級的高度"
+            }
           ]
         },
         {
@@ -457,11 +545,31 @@
           "type": "timeline",
           "title": "Chambertin與拿破崙的傳奇",
           "events": [
-            {"year": "630年", "title": "Bèze修道院", "description": "本篤會修士首次在Clos de Bèze種植葡萄"},
-            {"year": "7世紀", "title": "Chambertin誕生", "description": "農夫Bertin在Bèze旁開墾葡萄園，稱為Champ de Bertin"},
-            {"year": "1219年", "title": "首次文獻記載", "description": "正式文獻中出現Chambertin地名"},
-            {"year": "1789-1815", "title": "拿破崙時代", "description": "拿破崙隨軍攜帶Chambertin，稱'只有Chambertin配得上勝利'"},
-            {"year": "1937年", "title": "AOC分級", "description": "Chambertin與Clos de Bèze被評為特級園"}
+            {
+              "year": "630年",
+              "title": "Bèze修道院",
+              "description": "本篤會修士首次在Clos de Bèze種植葡萄"
+            },
+            {
+              "year": "7世紀",
+              "title": "Chambertin誕生",
+              "description": "農夫Bertin在Bèze旁開墾葡萄園，稱為Champ de Bertin"
+            },
+            {
+              "year": "1219年",
+              "title": "首次文獻記載",
+              "description": "正式文獻中出現Chambertin地名"
+            },
+            {
+              "year": "1789-1815",
+              "title": "拿破崙時代",
+              "description": "拿破崙隨軍攜帶Chambertin，稱'只有Chambertin配得上勝利'"
+            },
+            {
+              "year": "1937年",
+              "title": "AOC分級",
+              "description": "Chambertin與Clos de Bèze被評為特級園"
+            }
           ]
         }
       ]
@@ -521,11 +629,31 @@
           "type": "timeline",
           "title": "Coche-Dury白酒釀造時間軸（18個月週期）",
           "events": [
-            {"year": "9月", "title": "精準採收", "description": "清晨手工採收，多次挑選，確保完美成熟度"},
-            {"year": "9-10月", "title": "野生酵母發酵", "description": "橡木桶內緩慢發酵15-20天，溫度控制在18-20°C"},
-            {"year": "11月-次年3月", "title": "酒泥陳年第一階段", "description": "每週攪桶（bâtonnage）2次，增加複雜度與油潤感"},
-            {"year": "4-8月", "title": "靜置熟成", "description": "停止攪桶，讓酒液自然澄清，發展深度"},
-            {"year": "次年9-12月", "title": "裝瓶前整合", "description": "繼續橡木桶陳年，不過濾，重力裝瓶"}
+            {
+              "year": "9月",
+              "title": "精準採收",
+              "description": "清晨手工採收，多次挑選，確保完美成熟度"
+            },
+            {
+              "year": "9-10月",
+              "title": "野生酵母發酵",
+              "description": "橡木桶內緩慢發酵15-20天，溫度控制在18-20°C"
+            },
+            {
+              "year": "11月-次年3月",
+              "title": "酒泥陳年第一階段",
+              "description": "每週攪桶（bâtonnage）2次，增加複雜度與油潤感"
+            },
+            {
+              "year": "4-8月",
+              "title": "靜置熟成",
+              "description": "停止攪桶，讓酒液自然澄清，發展深度"
+            },
+            {
+              "year": "次年9-12月",
+              "title": "裝瓶前整合",
+              "description": "繼續橡木桶陳年，不過濾，重力裝瓶"
+            }
           ]
         },
         {
@@ -636,11 +764,31 @@
           "type": "timeline",
           "title": "Vogüé的品質革命歷程",
           "events": [
-            {"year": "1925-1985", "title": "黃金時代", "description": "Vogüé維持頂級酒莊地位，品質卓越"},
-            {"year": "1970-1985", "title": "品質下滑期", "description": "產量過高，釀造管理鬆散，評價下降"},
-            {"year": "1986年", "title": "François Millet接手", "description": "新釀酒師上任，開始全面改革"},
-            {"year": "1990年", "title": "品質顯著提升", "description": "新釀造哲學成效顯現，重獲好評"},
-            {"year": "2015-2020", "title": "Musigny Blanc停產", "description": "為提升品質，暫停釀造白Musigny，重新種植"}
+            {
+              "year": "1925-1985",
+              "title": "黃金時代",
+              "description": "Vogüé維持頂級酒莊地位，品質卓越"
+            },
+            {
+              "year": "1970-1985",
+              "title": "品質下滑期",
+              "description": "產量過高，釀造管理鬆散，評價下降"
+            },
+            {
+              "year": "1986年",
+              "title": "François Millet接手",
+              "description": "新釀酒師上任，開始全面改革"
+            },
+            {
+              "year": "1990年",
+              "title": "品質顯著提升",
+              "description": "新釀造哲學成效顯現，重獲好評"
+            },
+            {
+              "year": "2015-2020",
+              "title": "Musigny Blanc停產",
+              "description": "為提升品質，暫停釀造白Musigny，重新種植"
+            }
           ]
         },
         {
@@ -741,11 +889,31 @@
           "type": "timeline",
           "title": "Henri Jayer的影響力演變",
           "events": [
-            {"year": "1945年", "title": "開始釀酒生涯", "description": "二戰後開始在Vosne-Romanée釀酒"},
-            {"year": "1978年", "title": "Cros Parantoux首年份", "description": "開墾荒地種植，創造傳奇一級園"},
-            {"year": "1988年", "title": "指導Méo-Camuzet", "description": "Jean-Nicolas Méo邀請Jayer擔任顧問"},
-            {"year": "2001年", "title": "最後一個年份", "description": "79歲退休，2001成為最後釀造年份"},
-            {"year": "2006年", "title": "辭世與傳承", "description": "逝世，但釀造哲學持續影響整個產區"}
+            {
+              "year": "1945年",
+              "title": "開始釀酒生涯",
+              "description": "二戰後開始在Vosne-Romanée釀酒"
+            },
+            {
+              "year": "1978年",
+              "title": "Cros Parantoux首年份",
+              "description": "開墾荒地種植，創造傳奇一級園"
+            },
+            {
+              "year": "1988年",
+              "title": "指導Méo-Camuzet",
+              "description": "Jean-Nicolas Méo邀請Jayer擔任顧問"
+            },
+            {
+              "year": "2001年",
+              "title": "最後一個年份",
+              "description": "79歲退休，2001成為最後釀造年份"
+            },
+            {
+              "year": "2006年",
+              "title": "辭世與傳承",
+              "description": "逝世，但釀造哲學持續影響整個產區"
+            }
           ]
         },
         {

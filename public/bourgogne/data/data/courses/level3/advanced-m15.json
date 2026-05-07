@@ -716,7 +716,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "布根地共有多少個特級園（Grand Cru）？",
-        "options": ["24個", "33個", "42個", "50個"],
+        "options": [
+          "24個",
+          "33個",
+          "42個",
+          "50個"
+        ],
         "correctAnswer": 1,
         "explanation": "布根地共有33個特級園：Côte de Nuits 24個（紅酒）、Côte de Beaune 8個白酒+1個紅酒（Corton）、Chablis 7個（白酒）。"
       },
@@ -724,7 +729,12 @@
         "id": "q2",
         "type": "multiple-choice",
         "question": "DRC的Romanée-Conti獨占園面積約為？",
-        "options": ["0.8公頃", "1.8公頃", "3.8公頃", "5.8公頃"],
+        "options": [
+          "0.8公頃",
+          "1.8公頃",
+          "3.8公頃",
+          "5.8公頃"
+        ],
         "correctAnswer": 1,
         "explanation": "Romanée-Conti獨占園面積約1.8公頃，年產約6,000瓶，是世界上最昂貴的葡萄酒之一。"
       },
@@ -739,7 +749,12 @@
         "id": "q4",
         "type": "multiple-choice",
         "question": "建立平衡的布根地收藏組合時，投資級酒款應佔總預算的多少比例？",
-        "options": ["10-15%", "20-30%", "40-50%", "60-70%"],
+        "options": [
+          "10-15%",
+          "20-30%",
+          "40-50%",
+          "60-70%"
+        ],
         "correctAnswer": 1,
         "explanation": "投資級酒款建議佔20-30%預算，50%為日常與特殊場合用酒，保持金字塔結構平衡。"
       },
@@ -780,7 +795,12 @@
         "id": "q8",
         "type": "multiple-choice",
         "question": "餐廳酒單定價時，中階酒款（成本NT$5-10K）的建議售價倍數是？",
-        "options": ["2.0-2.5倍", "2.8-3.0倍", "3.0-3.2倍", "3.5-4.0倍"],
+        "options": [
+          "2.0-2.5倍",
+          "2.8-3.0倍",
+          "3.0-3.2倍",
+          "3.5-4.0倍"
+        ],
         "correctAnswer": 2,
         "explanation": "中階酒款建議售價為成本的3.0-3.2倍，可達到67-69%毛利率，既有競爭力又能維持合理利潤。"
       },
@@ -808,7 +828,12 @@
         "id": "q11",
         "type": "multiple-choice",
         "question": "Chablis特級園共有幾個？",
-        "options": ["4個", "7個", "10個", "15個"],
+        "options": [
+          "4個",
+          "7個",
+          "10個",
+          "15個"
+        ],
         "correctAnswer": 1,
         "explanation": "Chablis共有7個特級園：Blanchot、Bougros、Les Clos、Grenouilles、Preuses、Valmur、Vaudésir。"
       },
@@ -836,7 +861,12 @@
         "id": "q14",
         "type": "multiple-choice",
         "question": "拍賣會中的'Buyer's Premium'（買家佣金）通常為錘價的多少？",
-        "options": ["5-10%", "15-25%", "30-40%", "50%"],
+        "options": [
+          "5-10%",
+          "15-25%",
+          "30-40%",
+          "50%"
+        ],
         "correctAnswer": 1,
         "explanation": "買家佣金通常為15-25%，是買家除了錘價外需要額外支付給拍賣行的費用，價格越高比例可能略低。"
       },

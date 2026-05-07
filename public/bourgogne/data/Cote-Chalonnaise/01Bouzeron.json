@@ -44,10 +44,27 @@
           "Domaine de Villaine",
           "Domaine A. et P. de Villaine"
         ],
-        "color": "#FFFFE0"
+        "color": "#FFFFE0",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "climate": "大陸性気候、傾斜地による良好な日照",
+          "soilStructure": "白色泥灰岩と石灰岩、アリゴテに非常に適した土壌",
+          "wineStyle": "爽やかで溌剌、ミネラル感と柑橘の香り",
+          "tastingNotes": "レモン・青りんご・アカシア・フリント",
+          "agingPotential": "3-7年"
+        }
       }
     },
     "premier_crus": {},
     "grand_crus": {}
+  },
+  "ja": {
+    "wineTypes": [
+      "白ワイン"
+    ],
+    "exposition": "東・南東"
   }
 }

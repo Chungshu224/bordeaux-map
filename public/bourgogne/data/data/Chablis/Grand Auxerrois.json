@@ -1,57 +1,118 @@
-
 [
   {
     "id": "AOC Irancy.geojson",
-  "fullName": "AOC Irancy",
+    "fullName": "AOC Irancy",
     "classification": "Village",
     "description": "約納省唯一的村莊級紅酒產區，以優雅細膩的黑皮諾聞名，具有獨特的礦物風格和陳年潛力。",
     "area": "約 310 公頃",
     "altitude": "150-300m",
     "exposition": "東、東南、南、西南",
-    "grapeVarieties": ["Pinot Noir", "César", "Pinot Gris"],
-    "wineTypes": ["紅酒", "玫瑰紅酒"],
+    "grapeVarieties": [
+      "Pinot Noir",
+      "César",
+      "Pinot Gris"
+    ],
+    "wineTypes": [
+      "紅酒",
+      "玫瑰紅酒"
+    ],
     "climate": "大陸性氣候，溫和的微氣候",
     "soilStructure": "石灰岩基底，表層為泥灰岩和黏土，含有豐富化石",
     "wineStyle": "優雅細膩，結構良好，具有明顯的礦物感",
     "tastingNotes": "紅色水果、櫻桃、紫羅蘭、香料、泥土氣息、礦物質",
     "agingPotential": "8-15年",
-    "famousWineries": ["Domaine Cantin", "Domaine Bienvenu", "Domaine de la Folie"],
-    "history": "1999年獲得AOC認證，是約納省葡萄酒的驕傲，展現了北部勃艮第紅酒的優雅風格。"
+    "famousWineries": [
+      "Domaine Cantin",
+      "Domaine Bienvenu",
+      "Domaine de la Folie"
+    ],
+    "history": "1999年獲得AOC認證，是約納省葡萄酒的驕傲，展現了北部勃艮第紅酒的優雅風格。",
+    "ja": {
+      "exposition": "東・南東・南・南西",
+      "wineTypes": [
+        "赤ワイン",
+        "ロゼワイン"
+      ],
+      "climate": "大陸性気候、温和なマイクロクライメート",
+      "soilStructure": "石灰岩基盤、表層は泥灰岩と粘土、化石を豊富に含む",
+      "wineStyle": "優雅で繊細、良好な構造、明瞭なミネラル感",
+      "tastingNotes": "赤い果実・チェリー・スミレ・スパイス・土の香り・ミネラル",
+      "agingPotential": "8-15年"
+    }
   },
   {
     "id": "AOC Saint-Bris.geojson",
-  "fullName": "AOC Saint-Bris",
+    "fullName": "AOC Saint-Bris",
     "classification": "Village",
     "description": "勃艮第唯一的白蘇維濃產區，以清新活潑的白蘇維濃白酒聞名，具有獨特的香草和礦物風格。",
     "area": "約 130 公頃",
     "altitude": "150-280m",
     "exposition": "東、東南、南",
-    "grapeVarieties": ["Sauvignon Blanc", "Sauvignon Gris"],
-    "wineTypes": ["白酒"],
+    "grapeVarieties": [
+      "Sauvignon Blanc",
+      "Sauvignon Gris"
+    ],
+    "wineTypes": [
+      "白酒"
+    ],
     "climate": "大陸性氣候，涼爽乾燥的條件",
     "soilStructure": "啟莫里階石灰岩，富含貝殼化石和礦物質",
     "wineStyle": "清新活潑，酸度明亮，具有典型的白蘇維濃特色",
     "tastingNotes": "柑橘、醋栗、青草、礦物質、煙燻氣息",
     "agingPotential": "3-8年",
-    "famousWineries": ["Domaine Goisot", "Domaine Brocard", "Domaine Sorin"],
-    "history": "2003年獲得AOC認證，是勃艮第地區唯一種植白蘇維濃的AOC產區，展現了獨特的地域風格。"
+    "famousWineries": [
+      "Domaine Goisot",
+      "Domaine Brocard",
+      "Domaine Sorin"
+    ],
+    "history": "2003年獲得AOC認證，是勃艮第地區唯一種植白蘇維濃的AOC產區，展現了獨特的地域風格。",
+    "ja": {
+      "exposition": "東・南東・南",
+      "wineTypes": [
+        "白ワイン"
+      ],
+      "climate": "大陸性気候、冷涼乾燥な条件",
+      "soilStructure": "キモリアン石灰岩、貝殻化石とミネラルが豊富",
+      "wineStyle": "爽やかで溌剌、明るい酸味、典型的なソーヴィニョン・ブランの特色",
+      "tastingNotes": "柑橘系・スグリ・青草・ミネラル・スモーキーな香り",
+      "agingPotential": "3-8年"
+    }
   },
   {
     "id": "AOC Vézelay.geojson",
-  "fullName": "AOC Vézelay",
+    "fullName": "AOC Vézelay",
     "classification": "Village",
     "description": "位於歷史聖地韋茲萊的山坡產區，以純淨優雅的夏多內白酒聞名，具有強烈的礦物特色和修道院釀酒傳統。",
     "area": "約 95 公頃",
     "altitude": "200-350m",
     "exposition": "東、東南、南、西南",
-    "grapeVarieties": ["Chardonnay"],
-    "wineTypes": ["白酒"],
+    "grapeVarieties": [
+      "Chardonnay"
+    ],
+    "wineTypes": [
+      "白酒"
+    ],
     "climate": "大陸性氣候，較高海拔帶來涼爽的微氣候",
     "soilStructure": "侏羅紀石灰岩基底，表層為泥灰岩，含有豐富的化石和礦物質",
     "wineStyle": "純淨優雅，礦物感強烈，酸度活潑，具有出色的陳年潛力",
     "tastingNotes": "白花、柑橘、白桃、蜂蜜、礦石、鹹味礦物質",
     "agingPotential": "8-15年",
-    "famousWineries": ["Domaine de la Cadette", "Domaine Montanet-Thoden", "Domaine de Reuilly"],
-    "history": "2017年獲得村莊級AOC認證，延續了韋茲萊修道院千年的釀酒傳統，是勃艮第最新的村莊級產區。"
+    "famousWineries": [
+      "Domaine de la Cadette",
+      "Domaine Montanet-Thoden",
+      "Domaine de Reuilly"
+    ],
+    "history": "2017年獲得村莊級AOC認證，延續了韋茲萊修道院千年的釀酒傳統，是勃艮第最新的村莊級產區。",
+    "ja": {
+      "exposition": "東・南東・南・南西",
+      "wineTypes": [
+        "白ワイン"
+      ],
+      "climate": "大陸性気候、高標高による冷涼なマイクロクライメート",
+      "soilStructure": "ジュラ紀石灰岩基盤、表層は泥灰岩、化石とミネラルが豊富",
+      "wineStyle": "純粋でエレガント、強いミネラル感、活発な酸味、優れた熟成ポテンシャル",
+      "tastingNotes": "白い花・柑橘系・白桃・蜂蜜・岩石・塩気のあるミネラル",
+      "agingPotential": "8-15年"
+    }
   }
 ]

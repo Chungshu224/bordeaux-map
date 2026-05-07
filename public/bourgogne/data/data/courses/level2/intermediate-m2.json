@@ -25,29 +25,177 @@
           "title": "伯恩丘重要村莊地圖",
           "description": "點擊按鈕查看各村莊位置與範圍",
           "regions": [
-            {"name": "阿羅克斯-科爾通", "nameFr": "Aloxe-Corton", "id": "aloxe-corton", "fillColor": "#D4AF37"},
-            {"name": "薩維尼", "nameFr": "Savigny-lès-Beaune", "id": "savigny", "fillColor": "#E6DAA6"},
-            {"name": "伯恩", "nameFr": "Beaune", "id": "beaune", "fillColor": "#DAA520"},
-            {"name": "波瑪", "nameFr": "Pommard", "id": "pommard", "fillColor": "#8B0000"},
-            {"name": "沃爾奈", "nameFr": "Volnay", "id": "volnay", "fillColor": "#DC143C"},
-            {"name": "默爾索", "nameFr": "Meursault", "id": "meursault", "fillColor": "#FFD700"},
-            {"name": "普里尼-蒙哈榭", "nameFr": "Puligny-Montrachet", "id": "puligny-montrachet", "fillColor": "#FFFF00"},
-            {"name": "夏山-蒙哈榭", "nameFr": "Chassagne-Montrachet", "id": "chassagne-montrachet", "fillColor": "#F5DEB3"},
-            {"name": "聖歐班", "nameFr": "Saint-Aubin", "id": "saint-aubin", "fillColor": "#EEE8AA"},
-            {"name": "桑特內", "nameFr": "Santenay", "id": "santenay", "fillColor": "#BC8F8F"}
+            {
+              "name": "阿羅克斯-科爾通",
+              "nameFr": "Aloxe-Corton",
+              "id": "aloxe-corton",
+              "fillColor": "#D4AF37"
+            },
+            {
+              "name": "薩維尼",
+              "nameFr": "Savigny-lès-Beaune",
+              "id": "savigny",
+              "fillColor": "#E6DAA6"
+            },
+            {
+              "name": "伯恩",
+              "nameFr": "Beaune",
+              "id": "beaune",
+              "fillColor": "#DAA520"
+            },
+            {
+              "name": "波瑪",
+              "nameFr": "Pommard",
+              "id": "pommard",
+              "fillColor": "#8B0000"
+            },
+            {
+              "name": "沃爾奈",
+              "nameFr": "Volnay",
+              "id": "volnay",
+              "fillColor": "#DC143C"
+            },
+            {
+              "name": "默爾索",
+              "nameFr": "Meursault",
+              "id": "meursault",
+              "fillColor": "#FFD700"
+            },
+            {
+              "name": "普里尼-蒙哈榭",
+              "nameFr": "Puligny-Montrachet",
+              "id": "puligny-montrachet",
+              "fillColor": "#FFFF00"
+            },
+            {
+              "name": "夏山-蒙哈榭",
+              "nameFr": "Chassagne-Montrachet",
+              "id": "chassagne-montrachet",
+              "fillColor": "#F5DEB3"
+            },
+            {
+              "name": "聖歐班",
+              "nameFr": "Saint-Aubin",
+              "id": "saint-aubin",
+              "fillColor": "#EEE8AA"
+            },
+            {
+              "name": "桑特內",
+              "nameFr": "Santenay",
+              "id": "santenay",
+              "fillColor": "#BC8F8F"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "aloxe-corton", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson", "displayName": "Aloxe-Corton", "fillColor": "#D4AF37", "fillOpacity": 0.7, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": true},
-            {"id": "savigny", "url": "/geojson/Cote-de-Beaune/04Savigny-lès-Beaune/AOC Savigny-lès-Beaune ou Savigny-lès-Beaune Côte de Beaune.geojson", "displayName": "Savigny-lès-Beaune", "fillColor": "#E6DAA6", "fillOpacity": 0.7, "lineColor": "#9B870C", "lineWidth": 2, "showLabels": true},
-            {"id": "beaune", "url": "/geojson/Cote-de-Beaune/06Beaune/AOC Beaune Village.geojson", "displayName": "Beaune", "fillColor": "#DAA520", "fillOpacity": 0.7, "lineColor": "#8B6914", "lineWidth": 2, "showLabels": true},
-            {"id": "pommard", "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson", "displayName": "Pommard", "fillColor": "#8B0000", "fillOpacity": 0.7, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
-            {"id": "volnay", "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson", "displayName": "Volnay", "fillColor": "#DC143C", "fillOpacity": 0.7, "lineColor": "#8B0A50", "lineWidth": 2, "showLabels": true},
-            {"id": "meursault", "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson", "displayName": "Meursault", "fillColor": "#FFD700", "fillOpacity": 0.7, "lineColor": "#B8860B", "lineWidth": 2, "showLabels": true},
-            {"id": "puligny-montrachet", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson", "displayName": "Puligny-Montrachet", "fillColor": "#FFFF00", "fillOpacity": 0.7, "lineColor": "#CCCC00", "lineWidth": 2, "showLabels": true},
-            {"id": "chassagne-montrachet", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson", "displayName": "Chassagne-Montrachet", "fillColor": "#F5DEB3", "fillOpacity": 0.7, "lineColor": "#D2B48C", "lineWidth": 2, "showLabels": true},
-            {"id": "saint-aubin", "url": "/geojson/Cote-de-Beaune/16Saint-Aubin/AOC Saint-Aubin Village.geojson", "displayName": "Saint-Aubin", "fillColor": "#EEE8AA", "fillOpacity": 0.7, "lineColor": "#BDB76B", "lineWidth": 2, "showLabels": true},
-            {"id": "santenay", "url": "/geojson/Cote-de-Beaune/17Santenay/AOC Santenay Village.geojson", "displayName": "Santenay", "fillColor": "#BC8F8F", "fillOpacity": 0.7, "lineColor": "#8B6969", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "aloxe-corton",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson",
+              "displayName": "Aloxe-Corton",
+              "fillColor": "#D4AF37",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "savigny",
+              "url": "/geojson/Cote-de-Beaune/04Savigny-lès-Beaune/AOC Savigny-lès-Beaune ou Savigny-lès-Beaune Côte de Beaune.geojson",
+              "displayName": "Savigny-lès-Beaune",
+              "fillColor": "#E6DAA6",
+              "fillOpacity": 0.7,
+              "lineColor": "#9B870C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "beaune",
+              "url": "/geojson/Cote-de-Beaune/06Beaune/AOC Beaune Village.geojson",
+              "displayName": "Beaune",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B6914",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "pommard",
+              "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson",
+              "displayName": "Pommard",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "volnay",
+              "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson",
+              "displayName": "Volnay",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B0A50",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "meursault",
+              "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson",
+              "displayName": "Meursault",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.7,
+              "lineColor": "#B8860B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "puligny-montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson",
+              "displayName": "Puligny-Montrachet",
+              "fillColor": "#FFFF00",
+              "fillOpacity": 0.7,
+              "lineColor": "#CCCC00",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chassagne-montrachet",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson",
+              "displayName": "Chassagne-Montrachet",
+              "fillColor": "#F5DEB3",
+              "fillOpacity": 0.7,
+              "lineColor": "#D2B48C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "saint-aubin",
+              "url": "/geojson/Cote-de-Beaune/16Saint-Aubin/AOC Saint-Aubin Village.geojson",
+              "displayName": "Saint-Aubin",
+              "fillColor": "#EEE8AA",
+              "fillOpacity": 0.7,
+              "lineColor": "#BDB76B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "santenay",
+              "url": "/geojson/Cote-de-Beaune/17Santenay/AOC Santenay Village.geojson",
+              "displayName": "Santenay",
+              "fillColor": "#BC8F8F",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B6969",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -120,25 +268,149 @@
           "title": "蒙哈榭家族特級園地圖",
           "description": "點擊按鈕查看蒙哈榭及其周邊特級園",
           "regions": [
-            {"name": "普里尼村莊級", "nameFr": "Puligny Village", "id": "puligny-village", "fillColor": "#FFFACD"},
-            {"name": "夏山村莊級", "nameFr": "Chassagne Village", "id": "chassagne-village", "fillColor": "#FFEFD5"},
-            {"name": "蒙哈榭", "nameFr": "Montrachet", "id": "montrachet", "fillColor": "#FFD700"},
-            {"name": "騎士-蒙哈榭", "nameFr": "Chevalier-Montrachet", "id": "chevalier-montrachet", "fillColor": "#F0E68C"},
-            {"name": "巴塔-蒙哈榭", "nameFr": "Bâtard-Montrachet", "id": "batard-montrachet", "fillColor": "#DAA520"},
-            {"name": "比恩維尼-巴塔", "nameFr": "Bienvenues-Bâtard", "id": "bienvenues-batard", "fillColor": "#B8860B"},
-            {"name": "克里奧-巴塔", "nameFr": "Criots-Bâtard", "id": "criots-batard", "fillColor": "#CD853F"}
+            {
+              "name": "普里尼村莊級",
+              "nameFr": "Puligny Village",
+              "id": "puligny-village",
+              "fillColor": "#FFFACD"
+            },
+            {
+              "name": "夏山村莊級",
+              "nameFr": "Chassagne Village",
+              "id": "chassagne-village",
+              "fillColor": "#FFEFD5"
+            },
+            {
+              "name": "蒙哈榭",
+              "nameFr": "Montrachet",
+              "id": "montrachet",
+              "fillColor": "#FFD700"
+            },
+            {
+              "name": "騎士-蒙哈榭",
+              "nameFr": "Chevalier-Montrachet",
+              "id": "chevalier-montrachet",
+              "fillColor": "#F0E68C"
+            },
+            {
+              "name": "巴塔-蒙哈榭",
+              "nameFr": "Bâtard-Montrachet",
+              "id": "batard-montrachet",
+              "fillColor": "#DAA520"
+            },
+            {
+              "name": "比恩維尼-巴塔",
+              "nameFr": "Bienvenues-Bâtard",
+              "id": "bienvenues-batard",
+              "fillColor": "#B8860B"
+            },
+            {
+              "name": "克里奧-巴塔",
+              "nameFr": "Criots-Bâtard",
+              "id": "criots-batard",
+              "fillColor": "#CD853F"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "puligny-village", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson", "displayName": "Puligny-Montrachet Village", "fillColor": "#FFFACD", "fillOpacity": 0.5, "lineColor": "#B8860B", "lineWidth": 2, "showLabels": true},
-            {"id": "chassagne-village", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson", "displayName": "Chassagne-Montrachet Village", "fillColor": "#FFEFD5", "fillOpacity": 0.5, "lineColor": "#D2B48C", "lineWidth": 2, "showLabels": true},
-            {"id": "montrachet-puligny", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Puligny).geojson", "displayName": "Montrachet (Puligny)", "fillColor": "#FFD700", "fillOpacity": 0.8, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": true},
-            {"id": "montrachet-chassagne", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Chassagne).geojson", "displayName": "Montrachet (Chassagne)", "fillColor": "#FFD700", "fillOpacity": 0.8, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": false},
-            {"id": "chevalier-montrachet", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Chevalier-Montrachet Grand Cru.geojson", "displayName": "Chevalier-Montrachet", "fillColor": "#F0E68C", "fillOpacity": 0.8, "lineColor": "#9B870C", "lineWidth": 2, "showLabels": true},
-            {"id": "batard-puligny", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Puligny).geojson", "displayName": "Bâtard-Montrachet (Puligny)", "fillColor": "#DAA520", "fillOpacity": 0.8, "lineColor": "#8B6914", "lineWidth": 2, "showLabels": true},
-            {"id": "batard-chassagne", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Chassagne).geojson", "displayName": "Bâtard-Montrachet (Chassagne)", "fillColor": "#DAA520", "fillOpacity": 0.8, "lineColor": "#8B6914", "lineWidth": 2, "showLabels": false},
-            {"id": "bienvenues-batard", "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bienvenues-Bâtard-Montrachet Grand Cru .geojson", "displayName": "Bienvenues-Bâtard-Montrachet", "fillColor": "#B8860B", "fillOpacity": 0.8, "lineColor": "#8B6508", "lineWidth": 2, "showLabels": true},
-            {"id": "criots-batard", "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Criots-Bâtard-Montrachet Grand Cru.geojson", "displayName": "Criots-Bâtard-Montrachet", "fillColor": "#CD853F", "fillOpacity": 0.8, "lineColor": "#8B5A2B", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "puligny-village",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson",
+              "displayName": "Puligny-Montrachet Village",
+              "fillColor": "#FFFACD",
+              "fillOpacity": 0.5,
+              "lineColor": "#B8860B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chassagne-village",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson",
+              "displayName": "Chassagne-Montrachet Village",
+              "fillColor": "#FFEFD5",
+              "fillOpacity": 0.5,
+              "lineColor": "#D2B48C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "montrachet-puligny",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Puligny).geojson",
+              "displayName": "Montrachet (Puligny)",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "montrachet-chassagne",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Chassagne).geojson",
+              "displayName": "Montrachet (Chassagne)",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "chevalier-montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Chevalier-Montrachet Grand Cru.geojson",
+              "displayName": "Chevalier-Montrachet",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.8,
+              "lineColor": "#9B870C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "batard-puligny",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Puligny).geojson",
+              "displayName": "Bâtard-Montrachet (Puligny)",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B6914",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "batard-chassagne",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Chassagne).geojson",
+              "displayName": "Bâtard-Montrachet (Chassagne)",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B6914",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "bienvenues-batard",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bienvenues-Bâtard-Montrachet Grand Cru .geojson",
+              "displayName": "Bienvenues-Bâtard-Montrachet",
+              "fillColor": "#B8860B",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B6508",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "criots-batard",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Criots-Bâtard-Montrachet Grand Cru.geojson",
+              "displayName": "Criots-Bâtard-Montrachet",
+              "fillColor": "#CD853F",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B5A2B",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -200,11 +472,31 @@
           "content": "五大白酒特級園面積與價格關係",
           "data": {
             "items": [
-              {"label": "Bâtard-Montrachet\n12公頃", "value": 12, "color": "#DAA520"},
-              {"label": "Montrachet\n8公頃", "value": 8, "color": "#FFD700"},
-              {"label": "Chevalier-Montrachet\n7.4公頃", "value": 7.4, "color": "#F0E68C"},
-              {"label": "Bienvenues-Bâtard\n3.7公頃", "value": 3.7, "color": "#B8860B"},
-              {"label": "Criots-Bâtard\n1.6公頃", "value": 1.6, "color": "#CD853F"}
+              {
+                "label": "Bâtard-Montrachet\n12公頃",
+                "value": 12,
+                "color": "#DAA520"
+              },
+              {
+                "label": "Montrachet\n8公頃",
+                "value": 8,
+                "color": "#FFD700"
+              },
+              {
+                "label": "Chevalier-Montrachet\n7.4公頃",
+                "value": 7.4,
+                "color": "#F0E68C"
+              },
+              {
+                "label": "Bienvenues-Bâtard\n3.7公頃",
+                "value": 3.7,
+                "color": "#B8860B"
+              },
+              {
+                "label": "Criots-Bâtard\n1.6公頃",
+                "value": 1.6,
+                "color": "#CD853F"
+              }
             ],
             "unit": "公頃"
           },
@@ -261,11 +553,33 @@
           "title": "默爾索村莊地圖",
           "description": "點擊按鈕查看默爾索村莊範圍",
           "regions": [
-            {"name": "默爾索村莊級", "nameFr": "Meursault Village", "id": "meursault-village", "fillColor": "#FFD700"}
+            {
+              "name": "默爾索村莊級",
+              "nameFr": "Meursault Village",
+              "id": "meursault-village",
+              "fillColor": "#FFD700"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "meursault-village", "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson", "displayName": "Meursault Village", "fillColor": "#FFD700", "fillOpacity": 0.7, "lineColor": "#B8860B", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "meursault-village",
+              "url": "/geojson/Cote-de-Beaune/12Meursault/AOC Meursault Village.geojson",
+              "displayName": "Meursault Village",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.7,
+              "lineColor": "#B8860B",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -342,17 +656,81 @@
           "title": "科爾通山特級園地圖",
           "description": "點擊按鈕查看科爾通紅白特級園",
           "regions": [
-            {"name": "阿羅克斯村莊級", "nameFr": "Aloxe Village", "id": "aloxe-village", "fillColor": "#FFEFD5"},
-            {"name": "科爾通紅酒", "nameFr": "Corton (Rouge)", "id": "corton-rouge", "fillColor": "#8B0000"},
-            {"name": "科爾通-查理曼", "nameFr": "Corton-Charlemagne", "id": "corton-charlemagne", "fillColor": "#FFD700"},
-            {"name": "查理曼", "nameFr": "Charlemagne", "id": "charlemagne", "fillColor": "#F0E68C"}
+            {
+              "name": "阿羅克斯村莊級",
+              "nameFr": "Aloxe Village",
+              "id": "aloxe-village",
+              "fillColor": "#FFEFD5"
+            },
+            {
+              "name": "科爾通紅酒",
+              "nameFr": "Corton (Rouge)",
+              "id": "corton-rouge",
+              "fillColor": "#8B0000"
+            },
+            {
+              "name": "科爾通-查理曼",
+              "nameFr": "Corton-Charlemagne",
+              "id": "corton-charlemagne",
+              "fillColor": "#FFD700"
+            },
+            {
+              "name": "查理曼",
+              "nameFr": "Charlemagne",
+              "id": "charlemagne",
+              "fillColor": "#F0E68C"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "aloxe-village", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson", "displayName": "Aloxe-Corton Village", "fillColor": "#FFEFD5", "fillOpacity": 0.5, "lineColor": "#D2B48C", "lineWidth": 2, "showLabels": true},
-            {"id": "corton-rouge", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton Grand Cru(Aloxe).geojson", "displayName": "Corton (Rouge)", "fillColor": "#8B0000", "fillOpacity": 0.8, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
-            {"id": "corton-charlemagne", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson", "displayName": "Corton-Charlemagne", "fillColor": "#FFD700", "fillOpacity": 0.8, "lineColor": "#8B7500", "lineWidth": 2, "showLabels": true},
-            {"id": "charlemagne", "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Charlemagne Grand Cru (Aloxe).geojson", "displayName": "Charlemagne", "fillColor": "#F0E68C", "fillOpacity": 0.8, "lineColor": "#9B870C", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "aloxe-village",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson",
+              "displayName": "Aloxe-Corton Village",
+              "fillColor": "#FFEFD5",
+              "fillOpacity": 0.5,
+              "lineColor": "#D2B48C",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "corton-rouge",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton Grand Cru(Aloxe).geojson",
+              "displayName": "Corton (Rouge)",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "corton-charlemagne",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson",
+              "displayName": "Corton-Charlemagne",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "charlemagne",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Charlemagne Grand Cru (Aloxe).geojson",
+              "displayName": "Charlemagne",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.8,
+              "lineColor": "#9B870C",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -419,13 +797,49 @@
           "title": "波瑪與沃爾奈地圖",
           "description": "點擊按鈕查看兩個紅酒村莊的位置",
           "regions": [
-            {"name": "波瑪", "nameFr": "Pommard", "id": "pommard", "fillColor": "#8B0000"},
-            {"name": "沃爾奈", "nameFr": "Volnay", "id": "volnay", "fillColor": "#DC143C"}
+            {
+              "name": "波瑪",
+              "nameFr": "Pommard",
+              "id": "pommard",
+              "fillColor": "#8B0000"
+            },
+            {
+              "name": "沃爾奈",
+              "nameFr": "Volnay",
+              "id": "volnay",
+              "fillColor": "#DC143C"
+            }
           ],
           "geojsonFiles": [
-            {"url": "/geojson/AOC Bourgogne map.geojson", "isBase": true, "fillColor": "#E6E6FA", "fillOpacity": 0.1, "lineColor": "#9370DB", "lineWidth": 1, "showLabels": false},
-            {"id": "pommard", "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson", "displayName": "Pommard", "fillColor": "#8B0000", "fillOpacity": 0.7, "lineColor": "#5A0000", "lineWidth": 2, "showLabels": true},
-            {"id": "volnay", "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson", "displayName": "Volnay", "fillColor": "#DC143C", "fillOpacity": 0.7, "lineColor": "#8B0A50", "lineWidth": 2, "showLabels": true}
+            {
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "pommard",
+              "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson",
+              "displayName": "Pommard",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "volnay",
+              "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson",
+              "displayName": "Volnay",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B0A50",
+              "lineWidth": 2,
+              "showLabels": true
+            }
           ]
         },
         {
@@ -494,7 +908,12 @@
         "id": "q1",
         "question": "伯恩丘共有多少個白酒特級園？",
         "type": "single",
-        "options": ["5個", "6個", "7個", "8個"],
+        "options": [
+          "5個",
+          "6個",
+          "7個",
+          "8個"
+        ],
         "correctAnswer": 3,
         "explanation": "伯恩丘共有8個白酒特級園，包括蒙哈榭、騎士-蒙哈榭、巴塔-蒙哈榭等。"
       },
@@ -515,7 +934,12 @@
         "id": "q3",
         "question": "默爾索白酒最典型的香氣是什麼？",
         "type": "single",
-        "options": ["柑橘", "榛果奶油", "青蘋果", "礦物"  ],
+        "options": [
+          "柑橘",
+          "榛果奶油",
+          "青蘋果",
+          "礦物"
+        ],
         "correctAnswer": 1,
         "explanation": "默爾索白酒以榛果、奶油、烤杏仁等香氣著稱，口感豐滿如黃油般滑順。"
       },
@@ -523,7 +947,12 @@
         "id": "q4",
         "question": "科爾通山橫跨幾個村莊？",
         "type": "single",
-        "options": ["1個", "2個", "3個", "4個"],
+        "options": [
+          "1個",
+          "2個",
+          "3個",
+          "4個"
+        ],
         "correctAnswer": 2,
         "explanation": "科爾通山橫跨三個村莊：Aloxe-Corton、Pernand-Vergelesses和Ladoix。"
       },
@@ -531,7 +960,12 @@
         "id": "q5",
         "question": "以下哪個村莊以優雅細膩的紅酒著稱？",
         "type": "single",
-        "options": ["波瑪", "沃爾奈", "伯恩", "桑特內"],
+        "options": [
+          "波瑪",
+          "沃爾奈",
+          "伯恩",
+          "桑特內"
+        ],
         "correctAnswer": 1,
         "explanation": "沃爾奈是伯恩丘最優雅的紅酒村莊，被稱為「紅酒中的香波-慕西尼」。"
       }

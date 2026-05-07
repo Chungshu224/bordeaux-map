@@ -19,7 +19,10 @@
           "type": "map",
           "title": "🗺️ 夜丘產區地圖",
           "mapConfig": {
-            "center": [4.95, 47.15],
+            "center": [
+              4.95,
+              47.15
+            ],
             "zoom": 10.5,
             "pitch": 0,
             "bearing": 0
@@ -301,7 +304,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.96, 47.23],
+            "center": [
+              4.96,
+              47.23
+            ],
             "zoom": 11.5,
             "pitch": 0,
             "bearing": 0
@@ -498,7 +504,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.965, 47.17],
+            "center": [
+              4.965,
+              47.17
+            ],
             "zoom": 12,
             "pitch": 0,
             "bearing": 0
@@ -633,7 +642,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.955, 47.13],
+            "center": [
+              4.955,
+              47.13
+            ],
             "zoom": 12,
             "pitch": 0,
             "bearing": 0
@@ -783,7 +795,12 @@
         "id": "q1",
         "question": "夜丘共有多少個特級園？",
         "type": "single-choice",
-        "options": ["18個", "24個", "30個", "33個"],
+        "options": [
+          "18個",
+          "24個",
+          "30個",
+          "33個"
+        ],
         "correctAnswer": 1,
         "explanation": "夜丘擁有24個特級園，佔布根地33個特級園的絕大部分。"
       },
@@ -791,7 +808,12 @@
         "id": "q2",
         "question": "哪個村莊擁有最多特級園（9個）？",
         "type": "single-choice",
-        "options": ["Vosne-Romanée", "Gevrey-Chambertin", "Morey-Saint-Denis", "Chambolle-Musigny"],
+        "options": [
+          "Vosne-Romanée",
+          "Gevrey-Chambertin",
+          "Morey-Saint-Denis",
+          "Chambolle-Musigny"
+        ],
         "correctAnswer": 1,
         "explanation": "Gevrey-Chambertin 擁有9個特級園，是夜丘特級園最多的村莊。"
       },
@@ -799,7 +821,12 @@
         "id": "q3",
         "question": "Romanée-Conti 特級園的面積是多少？",
         "type": "single-choice",
-        "options": ["0.85公頃", "1.81公頃", "6.06公頃", "8.03公頃"],
+        "options": [
+          "0.85公頃",
+          "1.81公頃",
+          "6.06公頃",
+          "8.03公頃"
+        ],
         "correctAnswer": 1,
         "explanation": "Romanée-Conti 僅1.81公頃，是全球最貴的葡萄酒產地之一。"
       },
@@ -807,7 +834,12 @@
         "id": "q4",
         "question": "哪個村莊以「女性化」風格聞名？",
         "type": "single-choice",
-        "options": ["Gevrey-Chambertin", "Chambolle-Musigny", "Nuits-Saint-Georges", "Fixin"],
+        "options": [
+          "Gevrey-Chambertin",
+          "Chambolle-Musigny",
+          "Nuits-Saint-Georges",
+          "Fixin"
+        ],
         "correctAnswer": 1,
         "explanation": "Chambolle-Musigny 以絲綢般質地、花香四溢、精緻細膩的「女性化」風格著稱。"
       },
@@ -815,7 +847,12 @@
         "id": "q5",
         "question": "布根地最大的特級園是哪一個？",
         "type": "single-choice",
-        "options": ["Chambertin", "Clos de Vougeot", "Échézeaux", "Charmes-Chambertin"],
+        "options": [
+          "Chambertin",
+          "Clos de Vougeot",
+          "Échézeaux",
+          "Charmes-Chambertin"
+        ],
         "correctAnswer": 1,
         "explanation": "Clos de Vougeot 是布根地最大的特級園，面積達50.6公頃。"
       },
@@ -823,7 +860,12 @@
         "id": "q6",
         "question": "Nuits-Saint-Georges 有多少個特級園？",
         "type": "single-choice",
-        "options": ["0個", "2個", "5個", "8個"],
+        "options": [
+          "0個",
+          "2個",
+          "5個",
+          "8個"
+        ],
         "correctAnswer": 0,
         "explanation": "Nuits-Saint-Georges 沒有特級園，但擁有41個一級園，品質極高。"
       },
@@ -831,7 +873,12 @@
         "id": "q7",
         "question": "哪個村莊是夜丘唯一可釀造紅、白、粉紅三色酒的？",
         "type": "single-choice",
-        "options": ["Marsannay", "Fixin", "Vougeot", "Morey-Saint-Denis"],
+        "options": [
+          "Marsannay",
+          "Fixin",
+          "Vougeot",
+          "Morey-Saint-Denis"
+        ],
         "correctAnswer": 0,
         "explanation": "Marsannay 是夜丘唯一可以釀造紅、白、粉紅三色酒的村莊。"
       },
@@ -852,7 +899,12 @@
         "id": "q9",
         "question": "Morey-Saint-Denis 擁有多少個特級園？",
         "type": "single-choice",
-        "options": ["2個", "3個", "5個", "7個"],
+        "options": [
+          "2個",
+          "3個",
+          "5個",
+          "7個"
+        ],
         "correctAnswer": 2,
         "explanation": "Morey-Saint-Denis 擁有5個特級園：Clos de la Roche、Clos Saint-Denis、Clos des Lambrays、Clos de Tart 和 Bonnes-Mares（部分）。"
       },
@@ -860,7 +912,12 @@
         "id": "q10",
         "question": "夜丘的主要土壤類型是？",
         "type": "single-choice",
-        "options": ["花崗岩", "侏羅紀石灰岩與泥灰岩", "火山岩", "沙質土"],
+        "options": [
+          "花崗岩",
+          "侏羅紀石灰岩與泥灰岩",
+          "火山岩",
+          "沙質土"
+        ],
         "correctAnswer": 1,
         "explanation": "夜丘的主要土壤是侏羅紀石灰岩與泥灰岩，這種土壤造就了黑皮諾的優雅風格。"
       }

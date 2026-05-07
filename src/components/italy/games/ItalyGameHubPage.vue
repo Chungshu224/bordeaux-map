@@ -110,7 +110,7 @@ const stats = computed(() => {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .hub-header {
@@ -139,7 +139,8 @@ const stats = computed(() => {
 .hub-grid {
   flex: 1;
   overflow-y: auto;
-  padding: 20px 24px 40px;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 24px max(40px, env(safe-area-inset-bottom, 0px));
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -164,7 +165,7 @@ const stats = computed(() => {
 }
 
 .card-icon  { font-size: 2rem; flex-shrink: 0; }
-.card-body  { flex: 1; }
+.card-body  { flex: 1; min-width: 0; }
 .card-name  { font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
 .card-desc  { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.4; }
 .card-tags  { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }

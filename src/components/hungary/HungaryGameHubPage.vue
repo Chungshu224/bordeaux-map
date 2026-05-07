@@ -98,12 +98,13 @@ const stats = computed(() => {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow-y: auto;
+  height: 100dvh;
   background: linear-gradient(135deg, #12060a 0%, #1e0c12 100%);
   color: #f0e6d3;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .hub-header {
@@ -134,7 +135,9 @@ const stats = computed(() => {
 
 .hub-grid {
   flex: 1;
-  padding: 24px 20px 40px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 24px 20px max(40px, env(safe-area-inset-bottom, 0px));
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -178,11 +181,12 @@ const stats = computed(() => {
 
 .card-body {
   flex: 1;
+  min-width: 0;
   position: relative;
   z-index: 1;
 }
 
-.card-name { font-size: 1.1rem; font-weight: 800; color: #f0e6d3; margin-bottom: 4px; }
+.card-name { font-size: 1.1rem; font-weight: 800; color: #f0e6d3; margin-bottom: 4px; line-height: 1.3; padding-top: 2px; }
 .card-desc { font-size: 0.84rem; color: #9a8070; line-height: 1.4; margin-bottom: 8px; }
 
 .card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -203,4 +207,26 @@ const stats = computed(() => {
   transition: color 0.2s, transform 0.2s;
 }
 .game-card:hover .card-arrow { color: var(--accent); transform: translateX(3px); }
+
+@media (max-width: 480px) {
+  .hub-header {
+    padding: 14px 16px 0;
+    gap: 10px;
+  }
+  .hub-title { font-size: 1.3rem; }
+  .hub-subtitle { font-size: 0.78rem; }
+  .hub-grid {
+    padding: 12px 14px max(20px, env(safe-area-inset-bottom, 0px) + 12px);
+    gap: 10px;
+  }
+  .game-card {
+    padding: 14px 16px;
+    gap: 12px;
+    border-radius: 16px;
+  }
+  .card-icon { font-size: 2rem; }
+  .card-name { font-size: 1rem; }
+  .card-desc { font-size: 0.76rem; }
+  .game-card:hover { transform: none; }
+}
 </style>

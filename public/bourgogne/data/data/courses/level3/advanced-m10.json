@@ -486,7 +486,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "Chablis與生蠔的經典搭配基於什麼原理？",
-        "options": ["互補原則", "對比原則（高酸切海洋鹹鮮）", "風味呼應", "產地呼應"],
+        "options": [
+          "互補原則",
+          "對比原則（高酸切海洋鹹鮮）",
+          "風味呼應",
+          "產地呼應"
+        ],
         "correctAnswer": 1,
         "explanation": "Chablis的高酸度與礦物感能平衡生蠔的海洋鹹鮮和油膩，屬於對比搭配原理。"
       },
@@ -514,7 +519,12 @@
         "id": "q4",
         "type": "multiple-choice",
         "question": "布根地經典料理「Coq au Vin」最適合搭配？",
-        "options": ["Chablis", "Meursault", "Gevrey-Chambertin", "Sauternes"],
+        "options": [
+          "Chablis",
+          "Meursault",
+          "Gevrey-Chambertin",
+          "Sauternes"
+        ],
         "correctAnswer": 2,
         "explanation": "Coq au Vin（紅酒燉雞）傳統上用Gevrey紅酒烹調，也最適合配同款紅酒。"
       },
@@ -522,7 +532,12 @@
         "id": "q5",
         "type": "multiple-choice",
         "question": "壽司和生魚片最適合搭配哪款布根地酒？",
-        "options": ["Pommard", "Meursault", "Chablis Grand Cru", "Gevrey村莊級"],
+        "options": [
+          "Pommard",
+          "Meursault",
+          "Chablis Grand Cru",
+          "Gevrey村莊級"
+        ],
         "correctAnswer": 2,
         "explanation": "Chablis的礦物感和高酸度與生魚的海洋鮮味完美契合，已成為經典搭配。"
       },
@@ -550,7 +565,12 @@
         "id": "q8",
         "type": "multiple-choice",
         "question": "Époisses乳酪（洗皮乳酪）最適合搭配？",
-        "options": ["Chablis", "年輕Gevrey", "甜白酒或Marc", "清酒"],
+        "options": [
+          "Chablis",
+          "年輕Gevrey",
+          "甜白酒或Marc",
+          "清酒"
+        ],
         "correctAnswer": 2,
         "explanation": "Époisses味道強烈，需要甜白酒的甜度或Marc的酒精度來平衡。"
       },

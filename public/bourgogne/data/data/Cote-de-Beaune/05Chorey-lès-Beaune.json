@@ -4,14 +4,21 @@
   "area": "約 135 公頃",
   "altitude": "220-250m",
   "exposition": "平坦",
-  "grapeVarieties": ["Pinot Noir"],
-  "wineTypes": ["紅酒"],
+  "grapeVarieties": [
+    "Pinot Noir"
+  ],
+  "wineTypes": [
+    "紅酒"
+  ],
   "climate": "大陸性氣候",
   "soilStructure": "石灰質粘土和礫石",
   "wineStyle": "輕盈、果味主導、單寧柔和",
   "tastingNotes": "櫻桃、覆盆子、草莓",
   "agingPotential": "3-8年",
-  "famousWineries": ["Domaine Tollot-Beaut", "Domaine Maillard Père et Fils"],
+  "famousWineries": [
+    "Domaine Tollot-Beaut",
+    "Domaine Maillard Père et Fils"
+  ],
   "grandCrus": [],
   "premierCrus": [],
   "history": "歷史上是供應伯恩市日常飲用酒的產區。",
@@ -26,14 +33,36 @@
         "altitude": "220-250m",
         "exposition": "平坦",
         "soilStructure": "石灰質粘土和礫石，部分地區為沙質土壤",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：輕盈、果味主導、單寧柔和，易於入口。",
         "tastingNotes": "紅酒：櫻桃、覆盆子、草莓等新鮮紅色水果香氣。",
         "agingPotential": "紅酒：3-8年",
         "history": "Chorey-lès-Beaune的葡萄園大部分位於平地上，這在伯恩丘是比較少見的。其葡萄酒以高性價比和迷人的果味而聞名。",
-        "famousWineries": ["Domaine Tollot-Beaut", "Domaine Maillard Père et Fils", "Arnoux Père et Fils"],
-        "color": "#8FBC8F"
+        "famousWineries": [
+          "Domaine Tollot-Beaut",
+          "Domaine Maillard Père et Fils",
+          "Arnoux Père et Fils"
+        ],
+        "color": "#8FBC8F",
+        "ja": {
+          "exposition": "東・北東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "大陸性気候、平坦地の冷涼な条件",
+          "soilStructure": "沖積土、砂質と粘土の混合、石灰岩が少なめ",
+          "wineStyle": "軽快で果実味豊か、早飲みスタイル、コスト・パフォーマンス高い",
+          "tastingNotes": "フレッシュなチェリー・ラズベリー・スパイス・軽やかなタンニン",
+          "agingPotential": "5-10年"
+        }
       }
     }
+  },
+  "ja": {
+    "wineTypes": [
+      "赤ワイン"
+    ]
   }
 }

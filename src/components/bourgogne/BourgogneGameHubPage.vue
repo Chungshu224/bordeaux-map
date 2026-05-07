@@ -109,6 +109,7 @@ const stats = computed(() => {
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   background: #0d1117;
   color: #f0f6fc;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -157,7 +158,8 @@ const stats = computed(() => {
 .hub-grid {
   flex: 1;
   overflow-y: auto;
-  padding: 20px 20px 32px;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 20px max(32px, env(safe-area-inset-bottom, 0px));
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -201,6 +203,7 @@ const stats = computed(() => {
 
 .card-body {
   flex: 1;
+  min-width: 0;
   position: relative;
   z-index: 1;
 }
@@ -210,6 +213,8 @@ const stats = computed(() => {
   font-weight: 800;
   color: #f0f6fc;
   margin-bottom: 4px;
+  line-height: 1.3;
+  padding-top: 2px;
 }
 .card-desc {
   font-size: 0.8rem;
@@ -239,4 +244,33 @@ const stats = computed(() => {
   transition: color 0.2s, transform 0.2s;
 }
 .game-card:hover .card-arrow { color: var(--accent); transform: translateX(4px); }
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .hub-header {
+    padding: 14px 16px 0;
+    gap: 10px;
+  }
+  .hub-title {
+    font-size: 1.3rem;
+  }
+  .hub-subtitle {
+    font-size: 0.78rem;
+  }
+  .hub-grid {
+    padding: 12px 14px max(20px, env(safe-area-inset-bottom, 0px) + 12px);
+    gap: 10px;
+  }
+  .game-card {
+    padding: 14px 16px;
+    gap: 12px;
+    border-radius: 16px;
+  }
+  .card-icon { font-size: 2rem; }
+  .card-name { font-size: 1rem; }
+  .card-desc { font-size: 0.76rem; }
+  .game-card:hover {
+    transform: none;
+  }
+}
 </style>

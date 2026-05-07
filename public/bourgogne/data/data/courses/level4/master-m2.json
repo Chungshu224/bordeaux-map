@@ -153,31 +153,85 @@
           "title": "🎯 全球五大頂級黑皮諾產區風格雷達對比",
           "content": "布根地在優雅、複雜、陳年潛力上最高，但果味濃度中等。中奧塔哥果味最濃郁。奧勒岡最接近布根地。德國最優雅但酒體最輕。加州最飽滿但礦物感較弱。",
           "data": {
-            "labels": ["果味濃度", "酸度", "單寧質地", "酒體結構", "礦物感", "陳年潛力", "複雜度", "優雅度"],
+            "labels": [
+              "果味濃度",
+              "酸度",
+              "單寧質地",
+              "酒體結構",
+              "礦物感",
+              "陳年潛力",
+              "複雜度",
+              "優雅度"
+            ],
             "datasets": [
               {
                 "label": "布根地 Burgundy",
-                "data": [75, 95, 90, 80, 95, 100, 100, 100],
+                "data": [
+                  75,
+                  95,
+                  90,
+                  80,
+                  95,
+                  100,
+                  100,
+                  100
+                ],
                 "color": "#8B0000"
               },
               {
                 "label": "中奧塔哥 Central Otago",
-                "data": [95, 90, 85, 85, 80, 85, 80, 75],
+                "data": [
+                  95,
+                  90,
+                  85,
+                  85,
+                  80,
+                  85,
+                  80,
+                  75
+                ],
                 "color": "#000080"
               },
               {
                 "label": "奧勒岡 Willamette",
-                "data": [80, 90, 85, 75, 85, 90, 85, 90],
+                "data": [
+                  80,
+                  90,
+                  85,
+                  75,
+                  85,
+                  90,
+                  85,
+                  90
+                ],
                 "color": "#228B22"
               },
               {
                 "label": "德國 Germany",
-                "data": [70, 95, 80, 65, 90, 85, 85, 95],
+                "data": [
+                  70,
+                  95,
+                  80,
+                  65,
+                  90,
+                  85,
+                  85,
+                  95
+                ],
                 "color": "#000000"
               },
               {
                 "label": "加州索諾瑪 Sonoma",
-                "data": [90, 80, 85, 90, 70, 80, 75, 70],
+                "data": [
+                  90,
+                  80,
+                  85,
+                  90,
+                  70,
+                  80,
+                  75,
+                  70
+                ],
                 "color": "#C41E3A"
               }
             ]
@@ -325,21 +379,57 @@
           "data": {
             "leftTitle": "Bannockburn (最溫暖)",
             "leftItems": [
-              {"label": "氣候", "value": "最溫暖，成熟度高"},
-              {"label": "風格", "value": "濃郁、飽滿、強勁"},
-              {"label": "果實", "value": "深色果實、黑櫻桃"},
-              {"label": "酒精度", "value": "14-14.5%"},
-              {"label": "代表酒莊", "value": "Felton Road, Burn Cottage"},
-              {"label": "價格", "value": "NZ$60-120"}
+              {
+                "label": "氣候",
+                "value": "最溫暖，成熟度高"
+              },
+              {
+                "label": "風格",
+                "value": "濃郁、飽滿、強勁"
+              },
+              {
+                "label": "果實",
+                "value": "深色果實、黑櫻桃"
+              },
+              {
+                "label": "酒精度",
+                "value": "14-14.5%"
+              },
+              {
+                "label": "代表酒莊",
+                "value": "Felton Road, Burn Cottage"
+              },
+              {
+                "label": "價格",
+                "value": "NZ$60-120"
+              }
             ],
             "rightTitle": "Gibbston (最涼爽)",
             "rightItems": [
-              {"label": "氣候", "value": "最涼爽，生長季長"},
-              {"label": "風格", "value": "優雅、精緻、細膩"},
-              {"label": "果實", "value": "紅色果實、酸櫻桃"},
-              {"label": "酒精度", "value": "13-13.5%"},
-              {"label": "代表酒莊", "value": "Amisfield, Rockburn"},
-              {"label": "價格", "value": "NZ$50-100"}
+              {
+                "label": "氣候",
+                "value": "最涼爽，生長季長"
+              },
+              {
+                "label": "風格",
+                "value": "優雅、精緻、細膩"
+              },
+              {
+                "label": "果實",
+                "value": "紅色果實、酸櫻桃"
+              },
+              {
+                "label": "酒精度",
+                "value": "13-13.5%"
+              },
+              {
+                "label": "代表酒莊",
+                "value": "Amisfield, Rockburn"
+              },
+              {
+                "label": "價格",
+                "value": "NZ$50-100"
+              }
             ]
           },
           "note": "中奧塔哥內部差異：Bannockburn最溫暖（年均溫14°C）vs Gibbston最涼爽（年均溫11°C），溫差達30%！其他子產區：Bendigo（平衡、結構，代表：Mt Difficulty）、Wanaka（高海拔400m，精緻，代表：Rippon）、Cromwell Basin（果味奔放）。土壤差異：古老片岩（Schist）是共同點，但土層厚度影響風格。價格對比：所有子產區價格相近，主要看酒莊聲譽。Felton Road/Burn Cottage為頂級（NZ$100-200）。盲品識別：Bannockburn有Napa感（濃郁、飽滿），Gibbston最接近布根地（優雅、高酸）。"
@@ -422,23 +512,65 @@
           "data": {
             "leftTitle": "Oregon Willamette Valley",
             "leftItems": [
-              {"label": "氣候", "value": "涼爽海洋性，年均13°C"},
-              {"label": "風格", "value": "優雅、高酸、布根地靈魂"},
-              {"label": "果實", "value": "紅色果實、森林底層"},
-              {"label": "酒精度", "value": "13-14%"},
-              {"label": "陳年", "value": "需5-10年，優雅演化"},
-              {"label": "代表酒莊", "value": "Domaine Drouhin, Beaux Frères"},
-              {"label": "價格", "value": "$40-100（村莊級品質）"}
+              {
+                "label": "氣候",
+                "value": "涼爽海洋性，年均13°C"
+              },
+              {
+                "label": "風格",
+                "value": "優雅、高酸、布根地靈魂"
+              },
+              {
+                "label": "果實",
+                "value": "紅色果實、森林底層"
+              },
+              {
+                "label": "酒精度",
+                "value": "13-14%"
+              },
+              {
+                "label": "陳年",
+                "value": "需5-10年，優雅演化"
+              },
+              {
+                "label": "代表酒莊",
+                "value": "Domaine Drouhin, Beaux Frères"
+              },
+              {
+                "label": "價格",
+                "value": "$40-100（村莊級品質）"
+              }
             ],
             "rightTitle": "California (Sonoma/Santa Barbara)",
             "rightItems": [
-              {"label": "氣候", "value": "溫暖地中海，年均15-16°C"},
-              {"label": "風格", "value": "濃郁、飽滿、新世界魅力"},
-              {"label": "果實", "value": "深色果實、甜香料"},
-              {"label": "酒精度", "value": "14-15%"},
-              {"label": "陳年", "value": "年輕時已討喜，3-8年"},
-              {"label": "代表酒莊", "value": "Williams Selyem, Kosta Browne"},
-              {"label": "價格", "value": "$50-150（高評分導向）"}
+              {
+                "label": "氣候",
+                "value": "溫暖地中海，年均15-16°C"
+              },
+              {
+                "label": "風格",
+                "value": "濃郁、飽滿、新世界魅力"
+              },
+              {
+                "label": "果實",
+                "value": "深色果實、甜香料"
+              },
+              {
+                "label": "酒精度",
+                "value": "14-15%"
+              },
+              {
+                "label": "陳年",
+                "value": "年輕時已討喜，3-8年"
+              },
+              {
+                "label": "代表酒莊",
+                "value": "Williams Selyem, Kosta Browne"
+              },
+              {
+                "label": "價格",
+                "value": "$50-150（高評分導向）"
+              }
             ]
           },
           "note": "美國黑皮諾兩大流派：奧勒岡威拉美特谷（涼爽優雅派）vs 加州索諾瑪/聖塔芭芭拉（溫暖濃郁派）。氣候差異：奧勒岡年均13°C（與布根地45度緯度相似，海洋性）vs 加州15-16°C（地中海氣候，日照充足）。土壤：奧勒岡Jory火山紅土+沉積岩（泥土氣息、礦物感）vs 加州多樣化（Goldridge沙質、石灰岩）。釀造哲學：奧勒岡追求布根地優雅（整串發酵、少新桶）vs 加州追求濃郁果味（去梗、新桶比例高）。市場定位：奧勒岡主打布根地愛好者（性價比高）vs 加州主打Parker高分（價格昂貴）。頂級酒款：奧勒岡Evening Land Seven Springs $150（媲美布根地一級園）vs 加州Kosta Browne $200+（RP 95+常客）。產量：奧勒岡1.2萬噸/年（精品小規模）vs 加州8萬噸/年（規模化+精品並存）。盲品識別：奧勒岡泥土氣息重、酸度明亮 vs 加州甜香料、酒精感。"
@@ -543,7 +675,8 @@
         {
           "type": "content",
           "title": "💡 盲品識別要點",
-          "content": "德國黑皮諾特徵：1) 中等石榴紅色；2) 精緻的紅色果實、花香（玫瑰、紫羅蘭）；3) 高酸度，清爽；4) 細膩絲滑的單寧；5) 中等酒體；6) 礦物感明顯（石灰岩或板岩）；7) 優雅而不張揚。關鍵詞是「純淨」、「精緻」、「礦物」。"        },
+          "content": "德國黑皮諾特徵：1) 中等石榴紅色；2) 精緻的紅色果實、花香（玫瑰、紫羅蘭）；3) 高酸度，清爽；4) 細膩絲滑的單寧；5) 中等酒體；6) 礦物感明顯（石灰岩或板岩）；7) 優雅而不張揚。關鍵詞是「純淨」、「精緻」、「礦物」。"
+        },
         {
           "type": "chart",
           "chartType": "timeline",
@@ -588,7 +721,8 @@
               }
             ]
           },
-          "note": "35年品質躍進：1990s甜型入門級 → 2025年婲美布根地村莊級。關鍵轉折點：2000年Bernhard Huber、Friedrich Becker等釀酒師引入現代技術（溫控發酵、精準萎取、法國橡木桶）。2010年VDP（頂級酒莊聯盟）建立類似布根地的四級分級：Grosses Gewächs（GG，特級園）是最高等級。2015年Allen Meadows給Baden一級園評95+分，與布根地一級園相當。盲品結果：2018年Decanter盲品，德國Baden GG擊敗多款布根地一級園。CP值爆棚：德國頂級GG價格€40-80，僅為布根地相當品質一級園（€100-300）的1/3！代表酒莊：Bernhard Huber、Friedrich Becker、Meyer-Näkel。"        }
+          "note": "35年品質躍進：1990s甜型入門級 → 2025年婲美布根地村莊級。關鍵轉折點：2000年Bernhard Huber、Friedrich Becker等釀酒師引入現代技術（溫控發酵、精準萎取、法國橡木桶）。2010年VDP（頂級酒莊聯盟）建立類似布根地的四級分級：Grosses Gewächs（GG，特級園）是最高等級。2015年Allen Meadows給Baden一級園評95+分，與布根地一級園相當。盲品結果：2018年Decanter盲品，德國Baden GG擊敗多款布根地一級園。CP值爆棚：德國頂級GG價格€40-80，僅為布根地相當品質一級園（€100-300）的1/3！代表酒莊：Bernhard Huber、Friedrich Becker、Meyer-Näkel。"
+        }
       ]
     },
     {

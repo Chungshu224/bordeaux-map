@@ -96,7 +96,7 @@ const stats = computed(() => {
   min-height: 100vh;
   background: linear-gradient(160deg, #001a33 0%, #003366 100%);
   color: #fff;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem max(1.5rem, env(safe-area-inset-bottom, 0px));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,7 +166,7 @@ const stats = computed(() => {
 }
 
 .card-icon { font-size: 2.2rem; flex-shrink: 0; }
-.card-body { flex: 1; }
+.card-body { flex: 1; min-width: 0; }
 .card-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem; }
 .card-desc { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.4; margin-bottom: 0.6rem; }
 .card-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }

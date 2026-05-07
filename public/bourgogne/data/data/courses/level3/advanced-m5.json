@@ -35,11 +35,31 @@
           "type": "timeline",
           "title": "整串發酵技術演變史",
           "events": [
-            {"year": "19世紀前", "title": "傳統時代", "description": "全部100%整串，因無去梗機可用，質地粗糙但複雜"},
-            {"year": "1950-1980", "title": "去梗革命", "description": "機械化後100%去梗成主流，追求純淨果味"},
-            {"year": "1990年代", "title": "重新發現", "description": "頂級酒莊開始實驗部分整串，發現複雜度優勢"},
-            {"year": "2000年代", "title": "哲學分歧", "description": "DRC/Dujac 100%整串 vs Henri Jayer 100%去梗對決"},
-            {"year": "2020年代", "title": "彈性策略", "description": "大部分生產者採用彈性比例（30-70%），視年份調整"}
+            {
+              "year": "19世紀前",
+              "title": "傳統時代",
+              "description": "全部100%整串，因無去梗機可用，質地粗糙但複雜"
+            },
+            {
+              "year": "1950-1980",
+              "title": "去梗革命",
+              "description": "機械化後100%去梗成主流，追求純淨果味"
+            },
+            {
+              "year": "1990年代",
+              "title": "重新發現",
+              "description": "頂級酒莊開始實驗部分整串，發現複雜度優勢"
+            },
+            {
+              "year": "2000年代",
+              "title": "哲學分歧",
+              "description": "DRC/Dujac 100%整串 vs Henri Jayer 100%去梗對決"
+            },
+            {
+              "year": "2020年代",
+              "title": "彈性策略",
+              "description": "大部分生產者採用彈性比例（30-70%），視年份調整"
+            }
           ]
         },
         {
@@ -180,11 +200,31 @@
           "type": "timeline",
           "title": "橡木桶製作工藍流程（3年週期）",
           "events": [
-            {"year": "第1年", "title": "伐木與裁切", "description": "冬季伐木，選擇80-200年老樹，裁切成板材（厚度27mm）"},
-            {"year": "第2-3年", "title": "自然風乾", "description": "室外堆甡2-3年，雨水沖洗去除苦渋物質，木材轉柔"},
-            {"year": "製桶第1天", "title": "組裝桶身", "description": "精選板材（27-35片），組裝成桶狀，用鐵箍固定"},
-            {"year": "製桶第2天", "title": "烘烤定型", "description": "火烘彎曲板材，温57-65°C，15-30分鐘，決定風味特徵"},
-            {"year": "製桶第3天", "title": "打磨完成", "description": "內外打磨、安裝桶蓋、檢查漏水，一個桶完成"}
+            {
+              "year": "第1年",
+              "title": "伐木與裁切",
+              "description": "冬季伐木，選擇80-200年老樹，裁切成板材（厚度27mm）"
+            },
+            {
+              "year": "第2-3年",
+              "title": "自然風乾",
+              "description": "室外堆甡2-3年，雨水沖洗去除苦渋物質，木材轉柔"
+            },
+            {
+              "year": "製桶第1天",
+              "title": "組裝桶身",
+              "description": "精選板材（27-35片），組裝成桶狀，用鐵箍固定"
+            },
+            {
+              "year": "製桶第2天",
+              "title": "烘烤定型",
+              "description": "火烘彎曲板材，温57-65°C，15-30分鐘，決定風味特徵"
+            },
+            {
+              "year": "製桶第3天",
+              "title": "打磨完成",
+              "description": "內外打磨、安裝桶蓋、檢查漏水，一個桶完成"
+            }
           ]
         },
         {
@@ -207,21 +247,57 @@
           "data": {
             "leftTitle": "輕度烘烤 Light Toast",
             "leftItems": [
-              {"label": "溫度", "value": "<200°C"},
-              {"label": "時間", "value": "15-20分鐘"},
-              {"label": "香氣", "value": "花香、香草、白胡椒"},
-              {"label": "風格", "value": "精緻、優雅、風土主導"},
-              {"label": "適用", "value": "頂級白酒（Montrachet）"},
-              {"label": "代表", "value": "Leflaive, Raveneau"}
+              {
+                "label": "溫度",
+                "value": "<200°C"
+              },
+              {
+                "label": "時間",
+                "value": "15-20分鐘"
+              },
+              {
+                "label": "香氣",
+                "value": "花香、香草、白胡椒"
+              },
+              {
+                "label": "風格",
+                "value": "精緻、優雅、風土主導"
+              },
+              {
+                "label": "適用",
+                "value": "頂級白酒（Montrachet）"
+              },
+              {
+                "label": "代表",
+                "value": "Leflaive, Raveneau"
+              }
             ],
             "rightTitle": "重度烘烤 Heavy Toast",
             "rightItems": [
-              {"label": "溫度", "value": ">230°C"},
-              {"label": "時間", "value": "35-45分鐘"},
-              {"label": "香氣", "value": "煙燻、炙烤、焦肉"},
-              {"label": "風格", "value": "濃郁、強勁、木味主導"},
-              {"label": "適用", "value": "濃郁紅酒（少用）"},
-              {"label": "代表", "value": "新世界風格"}
+              {
+                "label": "溫度",
+                "value": ">230°C"
+              },
+              {
+                "label": "時間",
+                "value": "35-45分鐘"
+              },
+              {
+                "label": "香氣",
+                "value": "煙燻、炙烤、焦肉"
+              },
+              {
+                "label": "風格",
+                "value": "濃郁、強勁、木味主導"
+              },
+              {
+                "label": "適用",
+                "value": "濃郁紅酒（少用）"
+              },
+              {
+                "label": "代表",
+                "value": "新世界風格"
+              }
             ]
           },
           "note": "布根地主流：中度（200-220°C，25-30分鐘）→ 香草、烤麵包、焦糖。中重度（220-230°C，30-35分鐘）→ 焦糖、咖啡、可可。DRC/Méo-Camuzet 使用中重度，Coche-Dury 偏好中度。過度烘烤（>230°C）會掩蓋Pinot Noir的紅色水果精緻感。"
@@ -522,11 +598,31 @@
           "type": "timeline",
           "title": "紅酒浸皮溫度曲線（典型28天週期）",
           "events": [
-            {"year": "Day 1-5", "title": "冷浸漬", "description": "5-10°C，萎取香氣和花青素，無酒精不溶出單寧"},
-            {"year": "Day 6-8", "title": "發酵起動", "description": "18-25°C，酵母開始作用，溫度緩慢上升"},
-            {"year": "Day 9-12", "title": "高峰期", "description": "28-32°C，發酵最強烈，主要萎取階段"},
-            {"year": "Day 13-16", "title": "發酵結束", "description": "25-28°C，糖分耗盡，溫度下降"},
-            {"year": "Day 17-28", "title": "後浸皮", "description": "20-25°C，緩慢冷卻，柔和單寧持續萎取"}
+            {
+              "year": "Day 1-5",
+              "title": "冷浸漬",
+              "description": "5-10°C，萎取香氣和花青素，無酒精不溶出單寧"
+            },
+            {
+              "year": "Day 6-8",
+              "title": "發酵起動",
+              "description": "18-25°C，酵母開始作用，溫度緩慢上升"
+            },
+            {
+              "year": "Day 9-12",
+              "title": "高峰期",
+              "description": "28-32°C，發酵最強烈，主要萎取階段"
+            },
+            {
+              "year": "Day 13-16",
+              "title": "發酵結束",
+              "description": "25-28°C，糖分耗盡，溫度下降"
+            },
+            {
+              "year": "Day 17-28",
+              "title": "後浸皮",
+              "description": "20-25°C，緩慢冷卻，柔和單寧持續萎取"
+            }
           ]
         },
         {
@@ -671,7 +767,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "DRC使用的整串發酵比例是？",
-        "options": ["0%", "50%", "80%", "100%"],
+        "options": [
+          "0%",
+          "50%",
+          "80%",
+          "100%"
+        ],
         "correctAnswer": 3,
         "explanation": "DRC採用100%整串發酵，認為這能帶來最大的複雜度和陳年潛力。"
       },
@@ -686,7 +787,12 @@
         "id": "q3",
         "type": "multiple-choice",
         "question": "Coche-Dury的白酒使用約多少比例的新橡木桶？",
-        "options": ["0%", "20-30%", "50-60%", "100%"],
+        "options": [
+          "0%",
+          "20-30%",
+          "50-60%",
+          "100%"
+        ],
         "correctAnswer": 1,
         "explanation": "Coche-Dury僅使用20-30%新橡木桶，避免木味掩蓋白酒精緻的礦物感。"
       },
@@ -694,7 +800,12 @@
         "id": "q4",
         "type": "multiple-choice",
         "question": "勃根地標準橡木桶的容量是？",
-        "options": ["225公升", "228公升", "300公升", "500公升"],
+        "options": [
+          "225公升",
+          "228公升",
+          "300公升",
+          "500公升"
+        ],
         "correctAnswer": 1,
         "explanation": "勃根地標準橡木桶（pièce）容量為228公升，略大於波爾多桶的225公升。"
       },

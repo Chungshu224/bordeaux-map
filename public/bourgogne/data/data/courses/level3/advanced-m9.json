@@ -292,7 +292,8 @@
           "title": "陳年的線索",
           "content": "隨著陳年，酒液展現演化：顏色從紫紅→磚紅→棕褐；香氣從果味→植物→動物；單寧從生澀→柔順→融合。5年內：果味主導、單寧明顯；10-15年：複雜度提升、二級香氣（森林、菌菇）；20年+：三級香氣（皮革、煙草、泥土）、單寧完全融合。"
         },
-        {          "type": "timeline",
+        {
+          "type": "timeline",
           "title": "🌡️ 經典年份氣候與風格對比（2000-2020）",
           "events": [
             {
@@ -327,7 +328,8 @@
             }
           ]
         },
-        {          "type": "list",
+        {
+          "type": "list",
           "title": "🕐 陳年階段判斷",
           "points": [
             "青春期（0-5年）：鮮明果味、單寧緊實、紫紅色",
@@ -723,7 +725,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "系統化盲品的第一步是觀察什麼？",
-        "options": ["香氣強度", "外觀和顏色", "口感和酸度", "餘韻長度"],
+        "options": [
+          "香氣強度",
+          "外觀和顏色",
+          "口感和酸度",
+          "餘韻長度"
+        ],
         "correctAnswer": 1,
         "explanation": "系統化盲品遵循「外觀→香氣→口感→結論」的順序，首先觀察顏色、清澈度和粘度。"
       },
@@ -751,7 +758,12 @@
         "id": "q4",
         "type": "multiple-choice",
         "question": "陳年15年的布根地紅酒通常會呈現什麼顏色？",
-        "options": ["深紫紅", "寶石紅", "磚紅色", "棕褐色"],
+        "options": [
+          "深紫紅",
+          "寶石紅",
+          "磚紅色",
+          "棕褐色"
+        ],
         "correctAnswer": 2,
         "explanation": "15年陳年的布根地會從寶石紅演化為磚紅色，邊緣開始出現橙褐色調。"
       },
@@ -759,7 +771,12 @@
         "id": "q5",
         "type": "multiple-choice",
         "question": "以下哪位生產者以高比例新橡木桶和現代風格聞名？",
-        "options": ["Rousseau", "Roumier", "Méo-Camuzet", "Dujac"],
+        "options": [
+          "Rousseau",
+          "Roumier",
+          "Méo-Camuzet",
+          "Dujac"
+        ],
         "correctAnswer": 2,
         "explanation": "Méo-Camuzet以較高比例新桶（50-100%）和拋光的現代風格聞名，立即誘人。"
       },
@@ -774,7 +791,12 @@
         "id": "q7",
         "type": "multiple-choice",
         "question": "頂級布根地紅酒的陳年高峰期通常持續多久？",
-        "options": ["2-5年", "5-10年", "10-15年", "20-30年"],
+        "options": [
+          "2-5年",
+          "5-10年",
+          "10-15年",
+          "20-30年"
+        ],
         "correctAnswer": 2,
         "explanation": "頂級布根地的高峰期（所有元素完美平衡）通常可持續10-15年，之後緩慢衰退。"
       },
@@ -782,7 +804,12 @@
         "id": "q8",
         "type": "multiple-choice",
         "question": "100分制評分中，90-94分通常代表什麼品質等級？",
-        "options": ["良好（Good）", "優秀（Very Good）", "傑出（Outstanding）", "完美（Perfect）"],
+        "options": [
+          "良好（Good）",
+          "優秀（Very Good）",
+          "傑出（Outstanding）",
+          "完美（Perfect）"
+        ],
         "correctAnswer": 1,
         "explanation": "在100分制中：85-89=Good, 90-94=Very Good, 95-100=Outstanding/Exceptional。"
       },

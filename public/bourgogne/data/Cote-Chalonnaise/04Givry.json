@@ -52,7 +52,19 @@
           "Domaine Joblot",
           "Maison Joseph Drouhin"
         ],
-        "color": "#FFE4E1"
+        "color": "#FFE4E1",
+        "ja": {
+          "exposition": "東・南東・南",
+          "wineTypes": [
+            "赤ワイン",
+            "白ワイン"
+          ],
+          "climate": "大陸性気候、温和なマイクロクライメート",
+          "soilStructure": "石灰岩と泥灰岩、粘土質の表土",
+          "wineStyle": "赤：エレガントで繊細なピノ・ノワール、素晴らしい熟成ポテンシャル。白：爽やかでミネラリー",
+          "tastingNotes": "赤：チェリー・ラズベリー・スミレ・スパイス。白：柑橘・白い花・ミネラル",
+          "agingPotential": "赤：8-15年、白：5-8年"
+        }
       }
     },
     "premier_crus": {
@@ -78,7 +90,10 @@
           "Domaine Thenard",
           "Clos Salomon"
         ],
-        "color": "#B22222"
+        "color": "#B22222",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "a-vigne-rouge": {
         "name": "A Vigne Rouge",
@@ -102,7 +117,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-charle": {
         "name": "Clos Charlé",
@@ -126,7 +144,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-de-la-baraude": {
         "name": "Clos de la Baraude",
@@ -150,7 +171,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-du-cellier-aux-moines": {
         "name": "Clos du Cellier aux Moines",
@@ -174,7 +198,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-du-cras-long": {
         "name": "Clos du Cras long",
@@ -198,7 +225,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-du-vernoy": {
         "name": "Clos du Vernoy",
@@ -222,7 +252,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-jus": {
         "name": "Clos Jus",
@@ -246,7 +279,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-marceaux": {
         "name": "Clos Marceaux",
@@ -270,7 +306,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-marole": {
         "name": "Clos Marole",
@@ -294,7 +333,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-salomon": {
         "name": "Clos Salomon",
@@ -318,7 +360,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-saint-paul": {
         "name": "Clos Saint Paul",
@@ -342,7 +387,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-saint-pierre": {
         "name": "Clos Saint Pierre",
@@ -366,7 +414,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "crausot": {
         "name": "Crausot",
@@ -390,7 +441,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "cremillons": {
         "name": "Crémillons",
@@ -414,7 +468,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "en-choue": {
         "name": "En Choué",
@@ -438,7 +495,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-brulee": {
         "name": "La Brûlée",
@@ -462,7 +522,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-grande-berge": {
         "name": "La Grande Berge",
@@ -486,7 +549,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-matrosse": {
         "name": "La Matrosse",
@@ -510,7 +576,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-petite-berge": {
         "name": "La Petite Berge",
@@ -534,7 +603,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-plante": {
         "name": "La Plante",
@@ -558,7 +630,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "le-champ-lalot": {
         "name": "Le Champ Lalot",
@@ -582,7 +657,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "le-medenchot": {
         "name": "Le Médenchot",
@@ -606,7 +684,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "le-paradis": {
         "name": "Le Paradis",
@@ -630,7 +711,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "le-petit-pretan": {
         "name": "Le Petit Prétan",
@@ -654,7 +738,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "le-pied-de-chaume": {
         "name": "Le Pied de Chaume",
@@ -678,7 +765,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "le-pied-du-clou": {
         "name": "Le Pied du Clou",
@@ -702,7 +792,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "le-vigron": {
         "name": "Le Vigron",
@@ -726,7 +819,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-bois-chevaux": {
         "name": "Les Bois Chevaux",
@@ -750,7 +846,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-bois-gautiers": {
         "name": "Les Bois Gautiers",
@@ -774,7 +873,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-combes": {
         "name": "Les Combes",
@@ -798,7 +900,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-galaffres": {
         "name": "Les Galaffres",
@@ -822,7 +927,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-grandes-vignes": {
         "name": "Les Grandes Vignes",
@@ -846,7 +954,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-grands-pretans": {
         "name": "Les Grands Prétans",
@@ -870,7 +981,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "petit-marole": {
         "name": "Petit Marole",
@@ -894,7 +1008,10 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "servoisine": {
         "name": "Servoisine",
@@ -918,9 +1035,19 @@
           "Domaine Besson",
           "Domaine François Lumpp"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       }
     },
     "grand_crus": {}
+  },
+  "ja": {
+    "wineTypes": [
+      "赤ワイン",
+      "白ワイン"
+    ],
+    "exposition": "東・南東"
   }
 }

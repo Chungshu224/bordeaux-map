@@ -500,7 +500,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "全球年交易額最大的葡萄酒拍賣行是？",
-        "options": ["Christie's", "Sotheby's", "Acker Merrall & Condit", "Bonhams"],
+        "options": [
+          "Christie's",
+          "Sotheby's",
+          "Acker Merrall & Condit",
+          "Bonhams"
+        ],
         "correctAnswer": 2,
         "explanation": "Acker Merrall & Condit是美國最大的葡萄酒拍賣行，年交易額達1.5-2億美元。"
       },
@@ -508,7 +513,12 @@
         "id": "q2",
         "type": "multiple-choice",
         "question": "國際拍賣行的買家佣金（Buyer's Premium）通常為？",
-        "options": ["5-10%", "15-25%", "30-40%", "50%"],
+        "options": [
+          "5-10%",
+          "15-25%",
+          "30-40%",
+          "50%"
+        ],
         "correctAnswer": 1,
         "explanation": "買家佣金通常為15-25%，價格越高比例可能略低，這是買家需額外支付的費用。"
       },
@@ -536,7 +546,12 @@
         "id": "q5",
         "type": "multiple-choice",
         "question": "完美瓶況相比一般瓶況，價格可能溢價多少？",
-        "options": ["5-10%", "20-50%", "100%", "200%"],
+        "options": [
+          "5-10%",
+          "20-50%",
+          "100%",
+          "200%"
+        ],
         "correctAnswer": 1,
         "explanation": "完美瓶況（液位IN/BN、標籤完整）相比一般瓶況可溢價20-50%，是價格的重要因素。"
       },

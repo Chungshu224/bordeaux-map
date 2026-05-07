@@ -53,7 +53,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.70, 46.80],
+            "center": [
+              4.7,
+              46.8
+            ],
             "zoom": 10,
             "pitch": 0,
             "bearing": 0
@@ -335,7 +338,10 @@
             }
           ],
           "mapConfig": {
-            "center": [4.75, 46.30],
+            "center": [
+              4.75,
+              46.3
+            ],
             "zoom": 10.5,
             "pitch": 0,
             "bearing": 0
@@ -914,35 +920,60 @@
       {
         "id": "q1",
         "question": "夏隆內丘最大的村莊是？",
-        "options": ["Bouzeron", "Rully", "Mercurey", "Givry"],
+        "options": [
+          "Bouzeron",
+          "Rully",
+          "Mercurey",
+          "Givry"
+        ],
         "correctAnswer": 2,
         "explanation": "Mercurey 是夏隆內丘最大的村莊，以紅酒為主，產量占整個產區約60%。"
       },
       {
         "id": "q2",
         "question": "Bouzeron 產區的特色是？",
-        "options": ["只產黑皮諾", "只產霞多麗", "只產 Aligoté", "只產氣泡酒"],
+        "options": [
+          "只產黑皮諾",
+          "只產霞多麗",
+          "只產 Aligoté",
+          "只產氣泡酒"
+        ],
         "correctAnswer": 2,
         "explanation": "Bouzeron 是布根地唯一只產 Aligoté 白酒的村莊級AOC。"
       },
       {
         "id": "q3",
         "question": "馬貢內最頂級的產區是？",
-        "options": ["Mâcon-Villages", "Pouilly-Fuissé", "Saint-Véran", "Viré-Clessé"],
+        "options": [
+          "Mâcon-Villages",
+          "Pouilly-Fuissé",
+          "Saint-Véran",
+          "Viré-Clessé"
+        ],
         "correctAnswer": 1,
         "explanation": "Pouilly-Fuissé 是馬貢內品質最高的產區，礦物質感強，陳年潛力佳。"
       },
       {
         "id": "q4",
         "question": "夏隆內丘相比金丘的價格差異約為？",
-        "options": ["10-20%", "30-50%", "60-80%", "幾乎相同"],
+        "options": [
+          "10-20%",
+          "30-50%",
+          "60-80%",
+          "幾乎相同"
+        ],
         "correctAnswer": 1,
         "explanation": "夏隆內丘的酒比金丘便宜30-50%，是性價比之選。"
       },
       {
         "id": "q5",
         "question": "Montagny 產區的特色是？",
-        "options": ["只產紅酒", "只產白酒", "紅白兼產", "產氣泡酒"],
+        "options": [
+          "只產紅酒",
+          "只產白酒",
+          "紅白兼產",
+          "產氣泡酒"
+        ],
         "correctAnswer": 1,
         "explanation": "Montagny 是夏隆內丘唯一只產白酒的村莊，以霞多麗為主。"
       }

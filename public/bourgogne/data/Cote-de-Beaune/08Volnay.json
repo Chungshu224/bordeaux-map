@@ -4,16 +4,29 @@
   "area": "約 220 公頃",
   "altitude": "230-370m",
   "exposition": "東南向",
-  "grapeVarieties": ["Pinot Noir"],
-  "wineTypes": ["紅酒"],
+  "grapeVarieties": [
+    "Pinot Noir"
+  ],
+  "wineTypes": [
+    "紅酒"
+  ],
   "climate": "受山丘保護，氣候較為溫和",
   "soilStructure": "較輕的石灰岩和泥灰岩",
   "wineStyle": "優雅、精緻、絲滑、香氣芬芳",
   "tastingNotes": "紫羅蘭、玫瑰、櫻桃、覆盆子",
   "agingPotential": "8-20年",
-  "famousWineries": ["Domaine Marquis d'Angerville", "Domaine de Montille", "Domaine Michel Lafarge"],
+  "famousWineries": [
+    "Domaine Marquis d'Angerville",
+    "Domaine de Montille",
+    "Domaine Michel Lafarge"
+  ],
   "grandCrus": [],
-  "premierCrus": ["Clos des Ducs", "Les Caillerets", "Champans", "Taillepieds"],
+  "premierCrus": [
+    "Clos des Ducs",
+    "Les Caillerets",
+    "Champans",
+    "Taillepieds"
+  ],
   "history": "Volnay的葡萄酒在中世紀就已享有盛譽。",
   "geojson": {
     "village": {
@@ -26,13 +39,30 @@
         "altitude": "230-280m",
         "exposition": "東、東南",
         "soilStructure": "石灰質粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果香濃郁，口感柔和，單寧細膩，展現Volnay優雅的入門風格。",
         "tastingNotes": "紅色水果、櫻桃、覆盆子、花香。",
         "agingPotential": "4-10年",
         "history": "Volnay村莊級葡萄酒是體驗其經典優雅風格的最佳選擇，以其魅力和細膩的口感而聞名。",
-        "famousWineries": ["Domaine Michel Lafarge", "Domaine Henri Boillot", "Domaine Jean-Marc Bouley"],
-        "color": "#8FBC8F"
+        "famousWineries": [
+          "Domaine Michel Lafarge",
+          "Domaine Henri Boillot",
+          "Domaine Jean-Marc Bouley"
+        ],
+        "color": "#8FBC8F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "大陸性気候、温暖な傾斜地の向き",
+          "soilStructure": "石灰岩と軽い粘土、ミネラル豊富な軽い土壌",
+          "wineStyle": "繊細でエレガント、シルクのようなタンニン、ボーヌ最高の優雅さ",
+          "tastingNotes": "チェリー・スミレ・バラ・スパイス・絹のようなテクスチャー",
+          "agingPotential": "10-20年"
+        }
       }
     },
     "premier_crus": {
@@ -45,13 +75,28 @@
         "altitude": "280-320m",
         "exposition": "東南",
         "soilStructure": "非常貧瘠的白色鈣質土壤，坡度陡峭",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：極致的優雅、複雜度和礦物感，結構緊密，單寧如絲，陳年潛力巨大。",
         "tastingNotes": "紫羅蘭、櫻桃、松露、香料、濕石。",
         "agingPotential": "15-40年",
         "history": "被公認為Volnay最頂級的一級園，品質堪比特級園。為Marquis d'Angerville的獨佔園（Monopole），是優雅風格的典範。",
-        "famousWineries": ["Domaine Marquis d'Angerville"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Marquis d'Angerville"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と粘土",
+          "wineStyle": "力強く個性的、Marquis d'Angerville のモノポール",
+          "tastingNotes": "チェリー・バラ・スパイス・革・ミネラル",
+          "agingPotential": "12-25年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "les-caillerets": {
         "name": "Les Caillerets",
@@ -62,13 +107,30 @@
         "altitude": "260-300m",
         "exposition": "東南",
         "soilStructure": "多石的石灰岩土壤",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格純淨，礦物感極強，結構精緻，口感如絲。",
         "tastingNotes": "紅色水果、花香、燧石、礦物質。",
         "agingPotential": "12-35年",
         "history": "與Clos des Ducs和Champans並列為Volnay最頂級的一級園之一，以其強烈的礦物風格和精緻度著稱。",
-        "famousWineries": ["Domaine de Montille", "Domaine Michel Lafarge", "Bouchard Père & Fils"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine de Montille",
+          "Domaine Michel Lafarge",
+          "Bouchard Père & Fils"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と小石、薄い表土",
+          "wineStyle": "ヴォルネイ最高の一級園、特級園に匹敵する優雅さ",
+          "tastingNotes": "チェリー・スミレ・バラ・スパイス・絹のようなタンニン",
+          "agingPotential": "12-25年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "champans": {
         "name": "Champans",
@@ -79,13 +141,30 @@
         "altitude": "250-280m",
         "exposition": "東南",
         "soilStructure": "上坡為石灰岩，下坡為富含鐵質的紅色粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：兼具Volnay的優雅和Pommard的力量，結構感強，果味濃郁。",
         "tastingNotes": "黑櫻桃、覆盆子、香料、泥土。",
         "agingPotential": "10-30年",
         "history": "Volnay最著名的一級園之一，展現了力量與優雅的完美結合，品質極高。",
-        "famousWineries": ["Domaine Marquis d'Angerville", "Domaine de Montille", "Domaine des Comtes Lafon"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Marquis d'Angerville",
+          "Domaine de Montille",
+          "Domaine des Comtes Lafon"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と粘土",
+          "wineStyle": "エレガントで複雑、優れたバランス",
+          "tastingNotes": "チェリー・バラ・スパイス・ミネラル",
+          "agingPotential": "12-20年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "taille-pieds": {
         "name": "Taille Pieds",
@@ -96,13 +175,30 @@
         "altitude": "260-280m",
         "exposition": "東南",
         "soilStructure": "非常多石的石灰岩土壤，表土極薄",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：礦物感強烈，結構堅實，風格純淨，單寧精細。",
         "tastingNotes": "酸櫻桃、礦石、花香。",
         "agingPotential": "12-35年",
         "history": "名字意為'砍腳'，形容其陡峭多石的坡地難以行走。以其鮮明的礦物特徵和結構感而聞名。",
-        "famousWineries": ["Domaine Marquis d'Angerville", "Domaine de Montille", "Bouchard Père & Fils"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Marquis d'Angerville",
+          "Domaine de Montille",
+          "Bouchard Père & Fils"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と粘土",
+          "wineStyle": "エレガントで繊細、花のアロマ",
+          "tastingNotes": "チェリー・スミレ・花・スパイス",
+          "agingPotential": "10-18年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "clos-des-chenes": {
         "name": "Clos des Chênes",
@@ -113,13 +209,30 @@
         "altitude": "280-340m",
         "exposition": "東南",
         "soilStructure": "貧瘠的石灰岩和泥灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構堅實，單寧明顯，帶有力量感，陳年後展現出極大的複雜性。",
         "tastingNotes": "黑色水果、甘草、香料、礦物質。",
         "agingPotential": "12-30年",
         "history": "位於Volnay的最高處，風格較為強勁，是Volnay中最接近Pommard風格的酒款之一。",
-        "famousWineries": ["Domaine Michel Lafarge", "Domaine des Comtes Lafon", "Bitouzet-Prieur"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Michel Lafarge",
+          "Domaine des Comtes Lafon",
+          "Bitouzet-Prieur"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と粘土",
+          "wineStyle": "力強く優雅、深みのある果実味",
+          "tastingNotes": "黒い果実・スミレ・スパイス・ミネラル",
+          "agingPotential": "12-20年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       },
       "santenots": {
         "name": "Santenots",
@@ -130,12 +243,18 @@
         "altitude": "230-260m",
         "exposition": "東",
         "soilStructure": "深厚的粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：酒體飽滿，結構宏大，口感豐腴，風格強勁，更接近Pommard。",
         "tastingNotes": "黑莓、李子、巧克力、香料。",
         "agingPotential": "10-30年",
         "history": "一個特殊的地塊，雖然位於Meursault村內，但其生產的紅酒標示為Volnay Santenots 1er Cru。風格非常強勁，是Volnay中的一個例外。",
-        "famousWineries": ["Domaine des Comtes Lafon", "Domaine Henri Boillot", "Domaine Jacques Prieur"],
+        "famousWineries": [
+          "Domaine des Comtes Lafon",
+          "Domaine Henri Boillot",
+          "Domaine Jacques Prieur"
+        ],
         "color": "#CD853F"
       },
       "les-mitans": {
@@ -147,12 +266,17 @@
         "altitude": "260m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格柔順，果味濃郁，口感圓潤。",
         "tastingNotes": "櫻桃、覆盆子、香料。",
         "agingPotential": "8-20年",
         "history": "一個品質優秀的一級園，以其柔和的口感和濃郁的果香而受到喜愛。",
-        "famousWineries": ["Domaine de Montille", "Domaine Michel Lafarge"],
+        "famousWineries": [
+          "Domaine de Montille",
+          "Domaine Michel Lafarge"
+        ],
         "color": "#CD853F"
       },
       "fremiets": {
@@ -164,12 +288,17 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "富含鐵質的紅色粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感與優雅感並存，帶有礦物氣息。",
         "tastingNotes": "紅色水果、鐵鏽、礦物質。",
         "agingPotential": "10-25年",
         "history": "位於Pommard邊界，風格介於兩者之間，品質非常高。",
-        "famousWineries": ["Domaine Marquis d'Angerville", "Domaine Henri Boillot"],
+        "famousWineries": [
+          "Domaine Marquis d'Angerville",
+          "Domaine Henri Boillot"
+        ],
         "color": "#CD853F"
       },
       "en-chevret": {
@@ -181,12 +310,17 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格柔順，果味豐富，口感圓潤。",
         "tastingNotes": "櫻桃、李子。",
         "agingPotential": "7-18年",
         "history": "位於Santenots下方，風格較為豐腴。",
-        "famousWineries": ["Domaine Henri Boillot", "Domaine Nicolas Rossignol"],
+        "famousWineries": [
+          "Domaine Henri Boillot",
+          "Domaine Nicolas Rossignol"
+        ],
         "color": "#CD853F"
       },
       "clos-de-la-bousse-d-or": {
@@ -198,13 +332,20 @@
         "altitude": "260m",
         "exposition": "東南",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構與優雅並存，香氣複雜。",
         "tastingNotes": "紅色和黑色水果、香料。",
         "agingPotential": "10-25年",
         "history": "Domaine de la Pousse d'Or的獨佔園（Monopole），品質極高。",
-        "famousWineries": ["Domaine de la Pousse d'Or"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine de la Pousse d'Or"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "clos-des-60-ouvrees": {
         "name": "Clos des 60 ouvrées",
@@ -215,13 +356,20 @@
         "altitude": "260m",
         "exposition": "東南",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構與優雅並存，香氣複雜。",
         "tastingNotes": "紅色和黑色水果、香料。",
         "agingPotential": "10-25年",
         "history": "Domaine de la Pousse d'Or的獨佔園（Monopole），與Clos de la Bousse d'Or相鄰。",
-        "famousWineries": ["Domaine de la Pousse d'Or"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine de la Pousse d'Or"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "carelle-sous-la-chapelle": {
         "name": "Carelle sous la Chapelle",
@@ -232,12 +380,16 @@
         "altitude": "260m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格優雅，果味純正。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "7-18年",
         "history": "位於Chapelle地塊下方，品質優良。",
-        "famousWineries": ["Domaine Jean-Marc Bouley"],
+        "famousWineries": [
+          "Domaine Jean-Marc Bouley"
+        ],
         "color": "#CD853F"
       },
       "clos-de-l-audignac": {
@@ -249,12 +401,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：非常罕見，風格優雅。",
         "tastingNotes": "紅色水果、花香。",
         "agingPotential": "8-20年",
         "history": "一個非常小的圍牆園，為La Pousse d'Or所有。",
-        "famousWineries": ["Domaine de la Pousse d'Or"],
+        "famousWineries": [
+          "Domaine de la Pousse d'Or"
+        ],
         "color": "#CD853F"
       },
       "clos-de-la-barre": {
@@ -266,12 +422,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，口感圓潤。",
         "tastingNotes": "櫻桃、李子。",
         "agingPotential": "6-15年",
         "history": "一個被圍牆包圍的小園。",
-        "famousWineries": ["Louis Boillot"],
+        "famousWineries": [
+          "Louis Boillot"
+        ],
         "color": "#CD853F"
       },
       "clos-de-la-cave-des-ducs": {
@@ -283,13 +443,20 @@
         "altitude": "280m",
         "exposition": "東南",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：極為罕見，礦物感強，結構精緻。",
         "tastingNotes": "櫻桃、礦石。",
         "agingPotential": "10-25年",
         "history": "一個非常小的圍牆園，緊鄰Clos des Ducs，品質卓越。",
-        "famousWineries": ["Domaine Benjamin Leroux"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Benjamin Leroux"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "clos-de-la-chapelle": {
         "name": "Clos de la Chapelle",
@@ -300,12 +467,16 @@
         "altitude": "265m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格優雅，結構精緻。",
         "tastingNotes": "紅色水果、花香。",
         "agingPotential": "8-20年",
         "history": "Domaine du Clos de la Chapelle的獨佔園（Monopole）。",
-        "famousWineries": ["Domaine du Clos de la Chapelle"],
+        "famousWineries": [
+          "Domaine du Clos de la Chapelle"
+        ],
         "color": "#CD853F"
       },
       "clos-de-la-rougeotte": {
@@ -317,12 +488,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "富含鐵質的粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感與優雅感並存。",
         "tastingNotes": "紅色水果、鐵鏽。",
         "agingPotential": "10-25年",
         "history": "位於Frémiets內部的一個獨佔園（Monopole），由Bouchard Père & Fils擁有。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "clos-du-chateau-des-ducs": {
@@ -334,13 +509,20 @@
         "altitude": "270m",
         "exposition": "東南",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：非常罕見，風格優雅，礦物感強。",
         "tastingNotes": "櫻桃、花香、礦石。",
         "agingPotential": "10-25年",
         "history": "一個被圍牆包圍的小園，曾為勃根地公爵所有，現在是Domaine Michel Lafarge的獨佔園。",
-        "famousWineries": ["Domaine Michel Lafarge"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Michel Lafarge"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "clos-du-verseuil": {
         "name": "Clos du Verseuil",
@@ -351,12 +533,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，口感柔和。",
         "tastingNotes": "紅色水果、櫻桃。",
         "agingPotential": "6-15年",
         "history": "一個被圍牆包圍的小園。",
-        "famousWineries": ["Domaine Y. Clerget"],
+        "famousWineries": [
+          "Domaine Y. Clerget"
+        ],
         "color": "#CD853F"
       },
       "fremiets-clos-de-la-rougeotte": {
@@ -368,12 +554,16 @@
         "altitude": "250m",
         "exposition": "東",
         "soilStructure": "富含鐵質的粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感與優雅感並存。",
         "tastingNotes": "紅色水果、鐵鏽。",
         "agingPotential": "10-25年",
         "history": "這是Frémiets地塊中Clos de la Rougeotte部分的另一種標示方式。",
-        "famousWineries": ["Bouchard Père & Fils"],
+        "famousWineries": [
+          "Bouchard Père & Fils"
+        ],
         "color": "#CD853F"
       },
       "la-gigotte": {
@@ -385,12 +575,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格柔和，果味直接。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "5-12年",
         "history": "一個較小的一級園。",
-        "famousWineries": ["N/A"],
+        "famousWineries": [
+          "N/A"
+        ],
         "color": "#CD853F"
       },
       "lassolle": {
@@ -402,12 +596,16 @@
         "altitude": "280m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：非常罕見，風格優雅。",
         "tastingNotes": "紅色水果、花香。",
         "agingPotential": "7-18年",
         "history": "一個非常小的一級園。",
-        "famousWineries": ["N/A"],
+        "famousWineries": [
+          "N/A"
+        ],
         "color": "#CD853F"
       },
       "le-ronceret": {
@@ -419,12 +617,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格豐腴，果味成熟。",
         "tastingNotes": "李子、黑櫻桃。",
         "agingPotential": "7-18年",
         "history": "位於Santenots附近，風格較為豐滿。",
-        "famousWineries": ["Domaine de la Pousse d'Or"],
+        "famousWineries": [
+          "Domaine de la Pousse d'Or"
+        ],
         "color": "#CD853F"
       },
       "le-village": {
@@ -436,12 +638,16 @@
         "altitude": "N/A",
         "exposition": "N/A",
         "soilStructure": "N/A",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "風格優雅細緻，常用於釀造高品質 Pinot Noir 紅酒",
         "tastingNotes": "風格典型布根地紅酒，帶有櫻桃、樹莓、草莓、烘焙香料與皮革等風味。",
         "agingPotential": "N/A",
         "history": "Le Village 為 Volnay AOC 中官方認可的 Premier Cru 地塊之一，位於中坡地段。",
-        "famousWineries": ["N/A"],
+        "famousWineries": [
+          "N/A"
+        ],
         "color": "#CD853F"
       },
       "les-angles": {
@@ -453,12 +659,16 @@
         "altitude": "270m",
         "exposition": "東",
         "soilStructure": "石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格優雅，香氣芬芳。",
         "tastingNotes": "紫羅蘭、櫻桃。",
         "agingPotential": "7-18年",
         "history": "一個品質優良的一級園。",
-        "famousWineries": ["Domaine Nicolas Rossignol"],
+        "famousWineries": [
+          "Domaine Nicolas Rossignol"
+        ],
         "color": "#CD853F"
       },
       "les-brouillards": {
@@ -470,13 +680,20 @@
         "altitude": "250m",
         "exposition": "東南",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：兼具果味和結構感。",
         "tastingNotes": "櫻桃、香料。",
         "agingPotential": "8-20年",
         "history": "位於Champans旁邊，品質穩定。",
-        "famousWineries": ["Domaine Jean-Marc Bouley"],
-        "color": "#CD853F"
+        "famousWineries": [
+          "Domaine Jean-Marc Bouley"
+        ],
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "南東"
+        }
       },
       "les-lurets": {
         "name": "Les Lurets",
@@ -487,12 +704,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：風格柔和，果味直接。",
         "tastingNotes": "紅色水果、櫻桃。",
         "agingPotential": "6-15年",
         "history": "一個風格平易近人的一級園。",
-        "famousWineries": ["Domaine Y. Clerget"],
+        "famousWineries": [
+          "Domaine Y. Clerget"
+        ],
         "color": "#CD853F"
       },
       "pitures-dessus": {
@@ -504,12 +725,16 @@
         "altitude": "260m",
         "exposition": "東",
         "soilStructure": "粘土和石灰岩",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：結構感強，風格接近Pommard。",
         "tastingNotes": "黑櫻桃、泥土。",
         "agingPotential": "8-20年",
         "history": "位於Pommard邊界，風格較為強勁。",
-        "famousWineries": ["Domaine Jean-Marc Bouley"],
+        "famousWineries": [
+          "Domaine Jean-Marc Bouley"
+        ],
         "color": "#CD853F"
       },
       "robardelle": {
@@ -521,12 +746,16 @@
         "altitude": "240m",
         "exposition": "東",
         "soilStructure": "粘土",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：果味濃郁，口感柔和。",
         "tastingNotes": "櫻桃、覆盆子。",
         "agingPotential": "6-15年",
         "history": "一個較小的一級園。",
-        "famousWineries": ["N/A"],
+        "famousWineries": [
+          "N/A"
+        ],
         "color": "#CD853F"
       },
       "overview": {
@@ -538,14 +767,37 @@
         "altitude": "230-370m",
         "exposition": "東、東南",
         "soilStructure": "多樣，以石灰岩和泥灰岩為主",
-        "grapeVarieties": ["Pinot Noir"],
+        "grapeVarieties": [
+          "Pinot Noir"
+        ],
         "wineStyle": "紅酒：極致優雅、結構精緻、香氣芬芳，是黑皮諾女性化風格的典範。",
         "tastingNotes": "紫羅蘭、玫瑰、櫻桃、覆盆子、礦物質。",
         "agingPotential": "8-25年",
         "history": "Volnay擁有29個一級園，以其絲滑的口感和芬芳的香氣聞名於世，與鄰近的Pommard形成鮮明對比。",
-        "famousWineries": ["Domaine Marquis d'Angerville", "Domaine de Montille", "Domaine Michel Lafarge", "Domaine des Comtes Lafon"],
-        "color": "#B22222"
+        "famousWineries": [
+          "Domaine Marquis d'Angerville",
+          "Domaine de Montille",
+          "Domaine Michel Lafarge",
+          "Domaine des Comtes Lafon"
+        ],
+        "color": "#B22222",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "soilStructure": "石灰岩と軽い粘土、ミネラル豊富",
+          "wineStyle": "村名より繊細でエレガント",
+          "tastingNotes": "チェリー・スミレ・花・スパイス",
+          "agingPotential": "10-20年",
+          "climate": "半大陸性気候、コート・ド・ボーヌの中心部"
+        }
       }
     }
+  },
+  "ja": {
+    "wineTypes": [
+      "赤ワイン"
+    ]
   }
 }

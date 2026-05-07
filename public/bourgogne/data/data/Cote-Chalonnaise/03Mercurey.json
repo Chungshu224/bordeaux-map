@@ -52,7 +52,19 @@
           "Domaine Faiveley",
           "Maison Louis Jadot"
         ],
-        "color": "#F0E68C"
+        "color": "#F0E68C",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン",
+            "白ワイン"
+          ],
+          "climate": "大陸性気候、丘陵による保護",
+          "soilStructure": "石灰岩と粘土の混合、鉄分を含む",
+          "wineStyle": "赤：力強く果実味豊か、一級園は複雑でエレガント。白：爽やかでミネラリー",
+          "tastingNotes": "赤：黒い果実・チェリー・スパイス・土の香り。白：柑橘・白い花・ミネラル",
+          "agingPotential": "赤：8-15年、白：5-8年"
+        }
       }
     },
     "premier_crus": {
@@ -78,7 +90,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#B22222"
+        "color": "#B22222",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "clos-de-paradis": {
         "name": "Clos de Paradis",
@@ -102,7 +117,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-des-barraults": {
         "name": "Clos des Barraults",
@@ -126,7 +144,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-des-grands-voyens": {
         "name": "Clos des grands Voyens",
@@ -150,7 +171,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-des-montaigus": {
         "name": "Clos des Montaigus",
@@ -174,7 +198,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-des-myglands": {
         "name": "Clos des Myglands",
@@ -198,7 +225,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-du-chateau-de-montaigu": {
         "name": "Clos du Château de Montaigu",
@@ -222,7 +252,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-marcilly": {
         "name": "Clos Marcilly",
@@ -246,7 +279,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-tonnerre": {
         "name": "Clos Tonnerre",
@@ -270,7 +306,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "clos-voyens": {
         "name": "Clos Voyens",
@@ -294,7 +333,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "grand-clos-fortoul": {
         "name": "Grand Clos Fortoul",
@@ -318,7 +360,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "grifferes": {
         "name": "Griffères",
@@ -342,7 +387,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-bondue": {
         "name": "La Bondue",
@@ -366,7 +414,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-cailloute": {
         "name": "La Cailloute",
@@ -390,7 +441,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-chassiere": {
         "name": "La Chassière",
@@ -414,7 +468,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-levriere": {
         "name": "La Levrière",
@@ -438,7 +495,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "la-mission": {
         "name": "La Mission",
@@ -462,7 +522,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "le-clos-du-roy": {
         "name": "Le Clos du Roy",
@@ -486,7 +549,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "le-clos-leveque": {
         "name": "Le Clos l'Evêque",
@@ -510,7 +576,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-byots": {
         "name": "Les Byots",
@@ -534,7 +603,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-champs-martin": {
         "name": "Les Champs Martin",
@@ -558,7 +630,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-combins": {
         "name": "Les Combins",
@@ -582,7 +657,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-crets": {
         "name": "Les Crêts",
@@ -606,7 +684,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-croichots": {
         "name": "Les Croichots",
@@ -630,7 +711,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-fourneaux": {
         "name": "Les Fourneaux",
@@ -654,7 +738,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-montaigus": {
         "name": "Les Montaigus",
@@ -678,7 +765,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-naugues": {
         "name": "Les Naugues",
@@ -702,7 +792,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-puillets": {
         "name": "Les Puillets",
@@ -726,7 +819,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-ruelles": {
         "name": "Les Ruelles",
@@ -750,7 +846,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-saumonts": {
         "name": "Les Saumonts",
@@ -774,7 +873,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-vasees": {
         "name": "Les Vasées",
@@ -798,7 +900,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "les-velley": {
         "name": "Les Velley",
@@ -822,7 +927,10 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       },
       "sazenay": {
         "name": "Sazenay",
@@ -846,9 +954,19 @@
           "Château de Chamirey",
           "Domaine Michel Juillot"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       }
     },
     "grand_crus": {}
+  },
+  "ja": {
+    "wineTypes": [
+      "赤ワイン",
+      "白ワイン"
+    ],
+    "exposition": "東・南東・南"
   }
 }

@@ -195,7 +195,8 @@
             "8. Mazoyères-Chambertin - 通常標為Charmes"
           ]
         },
-        {          "type": "timeline",
+        {
+          "type": "timeline",
           "title": "🏔️ 九大特級園位置與土壤（北到南）",
           "events": [
             {
@@ -235,7 +236,8 @@
             }
           ]
         },
-        {          "type": "comparison",
+        {
+          "type": "comparison",
           "title": "Chambertin vs Latricières-Chambertin",
           "leftTitle": "Chambertin",
           "leftPoints": [
@@ -565,7 +567,8 @@
           "title": "Musigny：布根地最優雅的紅酒",
           "content": "Musigny（10.8ha）被譽為布根地最優雅、最精緻的紅酒特級園。70%由Comte de Vogüé持有，土壤以石灰岩為主、極薄、排水完美。產出的酒款如絲綢般柔滑，花香四溢，是優雅的極致體現。還有0.65ha種植霞多麗（Musigny Blanc），極度稀有。"
         },
-        {          "type": "timeline",
+        {
+          "type": "timeline",
           "title": "🏆 Comte de Vogué Musigny品質演變",
           "events": [
             {
@@ -595,7 +598,8 @@
             }
           ]
         },
-        {          "type": "comparison",
+        {
+          "type": "comparison",
           "title": "Musigny vs Bonnes-Mares",
           "leftTitle": "Musigny",
           "leftPoints": [
@@ -703,7 +707,8 @@
           "title": "拍賣數據分析",
           "content": "根據近20年拍賣數據，DRC的Romanée-Conti年均增值約12%，La Tâche約10%，Leroy的Musigny約11%。Montrachet家族白酒增值更快（15-20%）但波動也更大。Morey-Saint-Denis的特級園被嚴重低估，增值潛力可觀。"
         },
-        {          "type": "timeline",
+        {
+          "type": "timeline",
           "title": "📈 特級園投資報酬率（2000-2024）",
           "events": [
             {
@@ -738,7 +743,8 @@
             }
           ]
         },
-        {          "type": "list",
+        {
+          "type": "list",
           "title": "📊 特級園價格梯度（2024）",
           "points": [
             "超頂級（$2,000+）：Romanée-Conti, La Tâche, Montrachet",
@@ -761,7 +767,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "Clos de Vougeot特級園被多少個生產者擁有？",
-        "options": ["約20個", "約50個", "約80個", "約100個"],
+        "options": [
+          "約20個",
+          "約50個",
+          "約80個",
+          "約100個"
+        ],
         "correctAnswer": 2,
         "explanation": "Clos de Vougeot被80多個生產者擁有，是布根地所有權最分散的特級園。"
       },
@@ -776,7 +787,12 @@
         "id": "q3",
         "type": "multiple-choice",
         "question": "Gevrey-Chambertin有多少個特級園？",
-        "options": ["5個", "7個", "9個", "11個"],
+        "options": [
+          "5個",
+          "7個",
+          "9個",
+          "11個"
+        ],
         "correctAnswer": 2,
         "explanation": "Gevrey-Chambertin有9個特級園，包括Chambertin、Clos de Bèze和7個帶Chambertin後綴的特級園。"
       },
@@ -797,7 +813,12 @@
         "id": "q5",
         "type": "multiple-choice",
         "question": "Montrachet家族有多少個白酒特級園？",
-        "options": ["3個", "4個", "5個", "6個"],
+        "options": [
+          "3個",
+          "4個",
+          "5個",
+          "6個"
+        ],
         "correctAnswer": 2,
         "explanation": "Montrachet家族有5個白酒特級園：Le Montrachet、Chevalier、Bâtard、Bienvenues-Bâtard和Criots-Bâtard。"
       },
@@ -812,7 +833,12 @@
         "id": "q7",
         "type": "multiple-choice",
         "question": "Comte de Vogüé擁有Musigny特級園的多少比例？",
-        "options": ["30%", "50%", "70%", "100%"],
+        "options": [
+          "30%",
+          "50%",
+          "70%",
+          "100%"
+        ],
         "correctAnswer": 2,
         "explanation": "Comte de Vogüé擁有Musigny 10.8公頃中的約7公頃，約佔70%，是Musigny的代名詞。"
       },

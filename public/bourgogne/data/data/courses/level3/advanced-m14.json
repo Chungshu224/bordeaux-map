@@ -420,7 +420,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "Parker評分系統的滿分是？",
-        "options": ["20分", "100分", "5星", "10分"],
+        "options": [
+          "20分",
+          "100分",
+          "5星",
+          "10分"
+        ],
         "correctAnswer": 1,
         "explanation": "Robert Parker使用100分制，實際評分範圍為50-100分，但多數酒款在85-100分區間。"
       },
@@ -428,7 +433,12 @@
         "id": "q2",
         "type": "multiple-choice",
         "question": "描述布根地紅酒顏色時，'Garnet'是指？",
-        "options": ["紫色", "石榴紅色", "茶色", "橙色"],
+        "options": [
+          "紫色",
+          "石榴紅色",
+          "茶色",
+          "橙色"
+        ],
         "correctAnswer": 1,
         "explanation": "Garnet（石榴紅）是布根地Pinot Noir進入適飲期的典型顏色，介於年輕的Ruby與陳年的Tawny之間。"
       },
@@ -476,7 +486,12 @@
         "id": "q7",
         "type": "multiple-choice",
         "question": "品鑑筆記中，'Long finish'通常指尾韻持續多久？",
-        "options": ["3秒以下", "3-6秒", "6-12秒", "15秒以上"],
+        "options": [
+          "3秒以下",
+          "3-6秒",
+          "6-12秒",
+          "15秒以上"
+        ],
         "correctAnswer": 3,
         "explanation": "Long finish通常指15秒以上。Short finish <3秒，Medium finish 6-12秒。"
       },
@@ -484,7 +499,12 @@
         "id": "q8",
         "type": "multiple-choice",
         "question": "描述酒體時，布根地特級園通常是？",
-        "options": ["Light", "Medium", "Medium+ to Full", "Heavy"],
+        "options": [
+          "Light",
+          "Medium",
+          "Medium+ to Full",
+          "Heavy"
+        ],
         "correctAnswer": 2,
         "explanation": "布根地特級園通常是Medium+到Full body，比村級的Medium body更有架構和濃度。"
       },

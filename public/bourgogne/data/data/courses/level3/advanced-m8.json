@@ -292,7 +292,8 @@
           "title": "假酒問題的嚴重性",
           "content": "精品葡萄酒市場的假酒問題猖獗。2012年Rudy Kurniawan案揭露假酒產業鏈，涉案金額超過數千萬美元。DRC、Pétrus、Screaming Eagle等頂級酒款最常被仿冒。專家估計市場上10-20%的精品酒有真偽疑慮。2018年一批聲稱來自Thomas Jefferson的老酒被證實為假酒，買家損失數百萬美元。"
         },
-        {          "type": "timeline",
+        {
+          "type": "timeline",
           "title": "🕵️ 假酒技術與防偽演變史",
           "events": [
             {
@@ -327,7 +328,8 @@
             }
           ]
         },
-        {          "type": "list",
+        {
+          "type": "list",
           "title": "🔍 假酒高危酒款",
           "points": [
             "DRC全系列：最常被仿冒，特別是RC和La Tâche",
@@ -531,7 +533,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "理想酒窖的溫度應維持在？",
-        "options": ["10-12°C", "12-14°C", "14-16°C", "16-18°C"],
+        "options": [
+          "10-12°C",
+          "12-14°C",
+          "14-16°C",
+          "16-18°C"
+        ],
         "correctAnswer": 1,
         "explanation": "專業酒窖應維持在12-14°C的恆溫，波動不應超過±1°C，這是葡萄酒長期陳年的最佳溫度。"
       },
@@ -539,7 +546,12 @@
         "id": "q2",
         "type": "multiple-choice",
         "question": "酒窖的理想濕度範圍是？",
-        "options": ["40-50%", "60-75%", "80-90%", "90-95%"],
+        "options": [
+          "40-50%",
+          "60-75%",
+          "80-90%",
+          "90-95%"
+        ],
         "correctAnswer": 1,
         "explanation": "酒窖濕度應保持在60-75%，既能防止軟木塞乾裂，又不會導致標籤發霉。"
       },
@@ -554,7 +566,12 @@
         "id": "q4",
         "type": "multiple-choice",
         "question": "專家估計市場上精品酒有真偽疑慮的比例約為？",
-        "options": ["1-5%", "10-20%", "30-40%", "50%以上"],
+        "options": [
+          "1-5%",
+          "10-20%",
+          "30-40%",
+          "50%以上"
+        ],
         "correctAnswer": 1,
         "explanation": "據估計，市場上約10-20%的精品酒有真偽疑慮，特別是DRC等頂級酒莊，購買時需謹慎。"
       },
@@ -562,7 +579,12 @@
         "id": "q5",
         "type": "multiple-choice",
         "question": "專業葡萄酒保險的年度保費約為藏酒價值的？",
-        "options": ["0.1-0.3%", "0.5-1.5%", "2-3%", "5%以上"],
+        "options": [
+          "0.1-0.3%",
+          "0.5-1.5%",
+          "2-3%",
+          "5%以上"
+        ],
         "correctAnswer": 1,
         "explanation": "專業葡萄酒保險的年度保費通常為藏酒價值的0.5-1.5%，視保險範圍和風險而定。"
       },
@@ -590,7 +612,12 @@
         "id": "q8",
         "type": "multiple-choice",
         "question": "30年老酒的液位在什麼程度是可接受的？",
-        "options": ["IN/BN", "BN/TS", "TS/HS", "HS/MS"],
+        "options": [
+          "IN/BN",
+          "BN/TS",
+          "TS/HS",
+          "HS/MS"
+        ],
         "correctAnswer": 2,
         "explanation": "30年老酒的液位在TS（Top Shoulder）到HS（High Shoulder）之間是可接受的，自然蒸發屬正常現象。"
       },
@@ -605,7 +632,12 @@
         "id": "q10",
         "type": "multiple-choice",
         "question": "Rudy Kurniawan假酒案發生在哪一年？",
-        "options": ["2008年", "2010年", "2012年", "2015年"],
+        "options": [
+          "2008年",
+          "2010年",
+          "2012年",
+          "2015年"
+        ],
         "correctAnswer": 2,
         "explanation": "2012年Rudy Kurniawan假酒案是葡萄酒史上最大的造假醜聞，揭露了精品酒市場的假酒問題。"
       }

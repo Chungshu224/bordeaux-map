@@ -25,7 +25,10 @@
           "Maison Antonin Rodet",
           "Domaine Michel Juillot"
         ],
-        "color": "#D2B48C"
+        "color": "#D2B48C",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "aoc-bourgogne-cotes-du-couchois": {
         "name": "Bourgogne Côtes du Couchois",
@@ -49,7 +52,10 @@
           "Domaine de la Combe aux Jacques",
           "Cave de Buxy"
         ],
-        "color": "#EEE8AA"
+        "color": "#EEE8AA",
+        "ja": {
+          "exposition": "東・南東・南"
+        }
       }
     }
   }

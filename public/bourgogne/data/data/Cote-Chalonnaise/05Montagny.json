@@ -49,7 +49,18 @@
           "Maison Louis Latour",
           "Cave de Buxy"
         ],
-        "color": "#FFFFF0"
+        "color": "#FFFFF0",
+        "ja": {
+          "exposition": "東・南東・南",
+          "wineTypes": [
+            "白ワイン"
+          ],
+          "climate": "大陸性気候、温暖なマイクロクライメート",
+          "soilStructure": "石灰岩と泥灰岩、ミネラル豊富",
+          "wineStyle": "豊かでまろやか、ミネラル感強く、コスト・パフォーマンスが高い",
+          "tastingNotes": "柑橘系・白桃・蜂蜜・ミネラル・バターのニュアンス",
+          "agingPotential": "5-10年"
+        }
       }
     },
     "premier_crus": {
@@ -73,7 +84,10 @@
           "Domaine Stéphane Aladame",
           "Domaine Feuillat-Juillot"
         ],
-        "color": "#B22222"
+        "color": "#B22222",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "champ-toizeau": {
         "name": "Champ Toizeau",
@@ -96,7 +110,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "chazelle": {
         "name": "Chazelle",
@@ -119,7 +136,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "cornevent": {
         "name": "Cornevent",
@@ -142,7 +162,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "creux-de-beaux-champs": {
         "name": "Creux de Beaux Champs",
@@ -165,7 +188,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "lepaule": {
         "name": "L'Epaule",
@@ -188,7 +214,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "la-condemine-du-vieux-chateau": {
         "name": "La Condemine du Vieux Château",
@@ -211,7 +240,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "la-grande-piece": {
         "name": "La Grande Pièce",
@@ -234,7 +266,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "la-moulliere": {
         "name": "La Moullière",
@@ -257,7 +292,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "le-clos-chaudron": {
         "name": "Le Clos Chaudron",
@@ -280,7 +318,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "le-cloux": {
         "name": "Le Cloux",
@@ -303,7 +344,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "le-clouzot": {
         "name": "Le Clouzot",
@@ -326,7 +370,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "le-vieux-chateau": {
         "name": "Le Vieux Château",
@@ -349,7 +396,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-bassets": {
         "name": "Les Bassets",
@@ -372,7 +422,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-beaux-champs": {
         "name": "Les Beaux Champs",
@@ -395,7 +448,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-bonneveaux": {
         "name": "Les Bonneveaux",
@@ -418,7 +474,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-bordes": {
         "name": "Les Bordes",
@@ -441,7 +500,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-bouchots": {
         "name": "Les Bouchots",
@@ -464,7 +526,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-burnins": {
         "name": "Les Burnins",
@@ -487,7 +552,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-chaniots": {
         "name": "Les Chaniots",
@@ -510,7 +578,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-chaumelottes": {
         "name": "Les Chaumelottes",
@@ -533,7 +604,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-coeres": {
         "name": "Les Coères",
@@ -556,7 +630,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-combes": {
         "name": "Les Combes",
@@ -579,7 +656,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-coudrettes": {
         "name": "Les Coudrettes",
@@ -602,7 +682,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-craboulettes": {
         "name": "Les Craboulettes",
@@ -625,7 +708,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-garcheres": {
         "name": "Les Garchères",
@@ -648,7 +734,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-gouresses": {
         "name": "Les Gouresses",
@@ -671,7 +760,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-jardins": {
         "name": "Les Jardins",
@@ -694,7 +786,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-las": {
         "name": "Les Las",
@@ -717,7 +812,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-macles": {
         "name": "Les Macles",
@@ -740,7 +838,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-maroques": {
         "name": "Les Maroques",
@@ -763,7 +864,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-paquiers": {
         "name": "Les Paquiers",
@@ -786,7 +890,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-perrieres": {
         "name": "Les Perrières",
@@ -809,7 +916,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-pidances": {
         "name": "Les Pidances",
@@ -832,7 +942,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-platieres": {
         "name": "Les Platières",
@@ -855,7 +968,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-resses": {
         "name": "Les Resses",
@@ -878,7 +994,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-treufferes": {
         "name": "Les Treuffères",
@@ -901,7 +1020,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-vignes-derriere": {
         "name": "Les Vignes Derrière",
@@ -924,7 +1046,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-vignes-des-pres": {
         "name": "Les Vignes des Prés",
@@ -947,7 +1072,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "les-vignes-longues": {
         "name": "Les Vignes longues",
@@ -970,7 +1098,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "mont-laurent": {
         "name": "Mont Laurent",
@@ -993,7 +1124,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "montcuchot": {
         "name": "Montcuchot",
@@ -1016,7 +1150,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "montorge": {
         "name": "Montorge",
@@ -1039,7 +1176,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "saint-ytages": {
         "name": "Saint Ytages",
@@ -1062,7 +1202,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "sainte-morille": {
         "name": "Sainte Morille",
@@ -1085,7 +1228,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "sous-les-feilles": {
         "name": "Sous les Feilles",
@@ -1108,7 +1254,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "vigne-du-soleil": {
         "name": "Vigne du soleil",
@@ -1131,7 +1280,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "vignes-couland": {
         "name": "Vignes Couland",
@@ -1154,7 +1306,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "vignes-saint-pierre": {
         "name": "Vignes Saint Pierre",
@@ -1177,7 +1332,10 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       },
       "vignes-sur-le-cloux": {
         "name": "Vignes sur le Cloux",
@@ -1200,9 +1358,18 @@
           "Château de la Saule",
           "Stéphane Aladame"
         ],
-        "color": "#CD853F"
+        "color": "#CD853F",
+        "ja": {
+          "exposition": "東・南東"
+        }
       }
     },
     "grand_crus": {}
+  },
+  "ja": {
+    "wineTypes": [
+      "白ワイン"
+    ],
+    "exposition": "東・南東"
   }
 }

@@ -4,14 +4,24 @@
   "area": "約 150 公頃",
   "altitude": "220-360m",
   "exposition": "東-東南向",
-  "grapeVarieties": ["Pinot Noir", "Chardonnay"],
-  "wineTypes": ["紅酒", "白酒（極少量）"],
+  "grapeVarieties": [
+    "Pinot Noir",
+    "Chardonnay"
+  ],
+  "wineTypes": [
+    "紅酒",
+    "白酒（極少量）"
+  ],
   "climate": "大陸性氣候，受夜丘坡地保護",
   "soilStructure": "石灰岩和泥灰岩混合，部分區域含砂礫，土壤類似相鄰的村莊AOC",
   "wineStyle": "紅酒：果味濃郁、結構良好、易於飲用，展現夜丘的典型特質",
   "tastingNotes": "紅果、櫻桃、花香、香料、礦物質",
   "agingPotential": "5-12年",
-  "famousWineries": ["Domaine Berthaut-Gerbet", "Domaine Jean-Claude Boisset", "Domaine Philippe Rossignol"],
+  "famousWineries": [
+    "Domaine Berthaut-Gerbet",
+    "Domaine Jean-Claude Boisset",
+    "Domaine Philippe Rossignol"
+  ],
   "grandCrus": [],
   "premierCrus": [],
   "history": "Côte de Nuits-Villages AOC於1964年創立，為沒有獨立村莊AOC的夜丘村莊提供了一個品質認證。這5個村莊位於夜丘南北兩端，生產的葡萄酒性價比高，是了解夜丘風格的好選擇。",
@@ -25,14 +35,27 @@
         "altitude": "220-360m",
         "exposition": "主要東-東南向",
         "soilStructure": "石灰岩和粘土混合",
-        "grapeVarieties": ["黑皮諾", "夏多內"],
+        "grapeVarieties": [
+          "黑皮諾",
+          "夏多內"
+        ],
         "wineStyle": "夜丘風格的入門之選，果味明顯、結構良好",
         "tastingNotes": "紅果、櫻桃、香料、礦物質",
         "agingPotential": "5-12年",
         "history": "涵蓋5個村莊的區域性村莊AOC",
-        "famousWineries": ["Domaine Berthaut-Gerbet", "Domaine Jean-Claude Boisset"],
+        "famousWineries": [
+          "Domaine Berthaut-Gerbet",
+          "Domaine Jean-Claude Boisset"
+        ],
         "color": "#90EE90"
       }
     }
+  },
+  "ja": {
+    "wineTypes": [
+      "赤ワイン",
+      "白ワイン（極少量）"
+    ],
+    "exposition": "東〜南東向き"
   }
 }

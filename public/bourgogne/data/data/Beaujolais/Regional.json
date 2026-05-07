@@ -56,13 +56,30 @@
         "altitude": "200-450m",
         "exposition": "東、東南",
         "soilStructure": "石灰岩和黏土（南部）",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "輕盈易飲、果香新鮮、適合年輕時飲用",
         "tastingNotes": "紅櫻桃、草莓、香蕉、泡泡糖",
         "agingPotential": "1-2年",
         "history": "薄酒萊地區級 AOC，占產區總面積約一半",
-        "famousWineries": ["Georges Duboeuf", "Louis Tête", "Maison des Vignerons"],
-        "color": "#FF69B4"
+        "famousWineries": [
+          "Georges Duboeuf",
+          "Louis Tête",
+          "Maison des Vignerons"
+        ],
+        "color": "#FF69B4",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、地中海と大西洋の影響を受けた温和な条件",
+          "soilStructure": "石灰岩と粘土（南部）",
+          "wineStyle": "軽快で飲みやすく、フレッシュな果実味、早飲みスタイル",
+          "tastingNotes": "フレッシュなチェリー・いちご・バナナ・泡・ガム（新酒）",
+          "agingPotential": "1-2年"
+        }
       },
       "aoc-beaujolais-villages": {
         "name": "AOC Beaujolais Villages",
@@ -72,13 +89,30 @@
         "altitude": "250-500m",
         "exposition": "東、東南",
         "soilStructure": "花崗岩和片岩（北部）",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "比 AOC Beaujolais 更有結構、果味更濃郁",
         "tastingNotes": "黑櫻桃、覆盆子、紫羅蘭、礦物質",
         "agingPotential": "2-4年",
         "history": "涵蓋38個村莊的地區級 AOC，品質高於 AOC Beaujolais",
-        "famousWineries": ["Domaine des Nugues", "Château Thivin", "Domaine de la Madone"],
-        "color": "#FF1493"
+        "famousWineries": [
+          "Domaine des Nugues",
+          "Château Thivin",
+          "Domaine de la Madone"
+        ],
+        "color": "#FF1493",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、丘陵地による保護",
+          "soilStructure": "花崗岩と片岩（北部）",
+          "wineStyle": "AOC Beaujolais より構造的、より濃密な果実味",
+          "tastingNotes": "黒チェリー・ラズベリー・スミレ・ミネラル",
+          "agingPotential": "2-4年"
+        }
       },
       "aoc-morgon": {
         "name": "AOC Morgon",
@@ -88,13 +122,30 @@
         "altitude": "250-450m",
         "exposition": "東南、南",
         "soilStructure": "片岩風化土壤（Côte du Py），富含錳和鐵",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "強勁有力、結構緊實、具有'Morgonner'（隨時間變得更像布根地黑皮諾）的特點",
         "tastingNotes": "黑櫻桃、李子、桃子、礦物質、陳年後帶有櫻桃核香氣",
         "agingPotential": "5-10年（優質年份可達15年）",
         "history": "薄酒萊最具陳年潛力的 Cru，以 Côte du Py 山坡最為著名",
-        "famousWineries": ["Domaine Marcel Lapierre", "Jean Foillard", "Domaine Jean-Paul Thévenet"],
-        "color": "#DC143C"
+        "famousWineries": [
+          "Domaine Marcel Lapierre",
+          "Jean Foillard",
+          "Domaine Jean-Paul Thévenet"
+        ],
+        "color": "#DC143C",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、Côte du Py の独特のマイクロクライメート",
+          "soilStructure": "片岩風化土壌（Côte du Py）、マンガンと鉄を豊富に含む",
+          "wineStyle": "最も力強い Cru、豊かな構造、優れた熟成ポテンシャル",
+          "tastingNotes": "カシス・チェリー・モレロ・スパイス・土の香り・鉄分",
+          "agingPotential": "5-15年"
+        }
       },
       "aoc-fleurie": {
         "name": "AOC Fleurie",
@@ -104,13 +155,30 @@
         "altitude": "250-450m",
         "exposition": "東、東南",
         "soilStructure": "粉紅色花崗岩風化土壤",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "優雅細膩、花香濃郁、被稱為'薄酒萊之后'",
         "tastingNotes": "紫羅蘭、鳶尾花、玫瑰、紅色水果、絲滑口感",
         "agingPotential": "3-8年",
         "history": "以其花香和優雅著稱，最受歡迎的薄酒萊 Cru 之一",
-        "famousWineries": ["Domaine du Clos du Fief", "Domaine Chignard", "Domaine de la Grand'Cour"],
-        "color": "#FF6EB4"
+        "famousWineries": [
+          "Domaine du Clos du Fief",
+          "Domaine Chignard",
+          "Domaine de la Grand'Cour"
+        ],
+        "color": "#FF6EB4",
+        "ja": {
+          "exposition": "東・南東・南",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、花崗岩の丘が特別なマイクロクライメートを生む",
+          "soilStructure": "ピンク花崗岩の風化土壌",
+          "wineStyle": "最もエレガントな Cru、花のアロマ、絹のようなテクスチャー",
+          "tastingNotes": "チェリー・スミレ・バラ・花・絹のようなタンニン",
+          "agingPotential": "4-8年"
+        }
       },
       "aoc-moulin-a-vent": {
         "name": "AOC Moulin-à-Vent",
@@ -120,13 +188,30 @@
         "altitude": "240-350m",
         "exposition": "東、東南",
         "soilStructure": "粉紅色花崗岩和錳礦層",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "結構最複雜、最具布根地風格、被稱為'薄酒萊之王'",
         "tastingNotes": "櫻桃、黑莓、鳶尾花、香料、陳年後帶有松露和野味氣息",
         "agingPotential": "5-15年（頂級可達20年）",
         "history": "以一座17世紀風車命名，土壤富含錳，賦予酒體強勁結構",
-        "famousWineries": ["Château des Jacques", "Domaine Diochon", "Domaine de la Tour du Bief"],
-        "color": "#8B0000"
+        "famousWineries": [
+          "Château des Jacques",
+          "Domaine Diochon",
+          "Domaine de la Tour du Bief"
+        ],
+        "color": "#8B0000",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、丘の上の独特のマイクロクライメート",
+          "soilStructure": "ピンク花崗岩とマンガン鉱層",
+          "wineStyle": "薄酒萊の王、最も複雑で構造的、長熟型",
+          "tastingNotes": "カシス・黒チェリー・スパイス・革・ミネラル・複雑な香り",
+          "agingPotential": "8-20年"
+        }
       },
       "aoc-brouilly": {
         "name": "AOC Brouilly",
@@ -136,13 +221,30 @@
         "altitude": "200-400m",
         "exposition": "全方位",
         "soilStructure": "多樣化：花崗岩、閃長岩、沖積土",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "果味豐富、柔順易飲、風格多樣",
         "tastingNotes": "紅色水果、桃子、礦物質、花香",
         "agingPotential": "2-5年",
         "history": "面積最大的薄酒萊 Cru，圍繞 Mont Brouilly 山",
-        "famousWineries": ["Château de la Chaize", "Domaine de Combillaty", "Château Thivin"],
-        "color": "#CD5C5C"
+        "famousWineries": [
+          "Château de la Chaize",
+          "Domaine de Combillaty",
+          "Château Thivin"
+        ],
+        "color": "#CD5C5C",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、ブルイイ山が特別な保護を提供",
+          "soilStructure": "多様な土壌：花崗岩・閃長岩・沖積土",
+          "wineStyle": "フルーティーで生き生き、バランス良くエレガント",
+          "tastingNotes": "赤い果実・チェリー・スミレ・フルーティーな香り",
+          "agingPotential": "3-6年"
+        }
       },
       "aoc-cote-de-brouilly": {
         "name": "AOC Côte de Brouilly",
@@ -152,13 +254,30 @@
         "altitude": "300-480m",
         "exposition": "全方位（山坡四周）",
         "soilStructure": "藍色火山閃長岩（獨特）",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "比 Brouilly 更集中、礦物感更強、結構更緊實",
         "tastingNotes": "紫羅蘭、礦石、黑櫻桃、藍莓、火山礦物氣息",
         "agingPotential": "4-8年",
         "history": "位於 Mont Brouilly 山坡上，獨特的火山土壤賦予特殊風味",
-        "famousWineries": ["Château Thivin", "Domaine de Combillaty", "Domaine Lapierre"],
-        "color": "#B22222"
+        "famousWineries": [
+          "Château Thivin",
+          "Domaine de Combillaty",
+          "Domaine Lapierre"
+        ],
+        "color": "#B22222",
+        "ja": {
+          "exposition": "東・南東・南",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、山の斜面による良好な保護と日照",
+          "soilStructure": "青色火山閃長岩（独特の土壌）",
+          "wineStyle": "力強く個性的、独特の火山性テロワールを表現",
+          "tastingNotes": "黒い果実・スパイス・ミネラル・独特の鉄分のニュアンス",
+          "agingPotential": "5-10年"
+        }
       },
       "aoc-julienas": {
         "name": "AOC Juliénas",
@@ -168,13 +287,30 @@
         "altitude": "230-400m",
         "exposition": "東、東南",
         "soilStructure": "花崗岩和沖積土混合",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "結構良好、果味濃郁、帶有花香",
         "tastingNotes": "牡丹、紅色水果、香料、有時帶有礦物質",
         "agingPotential": "3-7年",
         "history": "傳說以羅馬統帥凱撒（Julius Caesar）命名，是最北的 Cru",
-        "famousWineries": ["Domaine du Clos du Fief", "Château de Juliénas", "Domaine Michel Tête"],
-        "color": "#C71585"
+        "famousWineries": [
+          "Domaine du Clos du Fief",
+          "Château de Juliénas",
+          "Domaine Michel Tête"
+        ],
+        "color": "#C71585",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、丘陵に守られた穏やかな条件",
+          "soilStructure": "花崗岩と沖積土の混合",
+          "wineStyle": "力強くスパイシー、豊かな構造、熟成とともに複雑さが増す",
+          "tastingNotes": "赤い果実・スパイス・スミレ・腐葉土のニュアンス",
+          "agingPotential": "5-10年"
+        }
       },
       "aoc-saint-amour": {
         "name": "AOC Saint-Amour",
@@ -184,13 +320,30 @@
         "altitude": "250-400m",
         "exposition": "東、東南",
         "soilStructure": "花崗岩和黏土",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "優雅柔順、果香怡人、帶有花香",
         "tastingNotes": "櫻桃、桃子、杏子、鳶尾花、柔和單寧",
         "agingPotential": "3-6年",
         "history": "以'聖愛'命名，常在情人節暢銷，是最北且最小的 Cru 之一",
-        "famousWineries": ["Domaine des Billards", "Domaine de la Cave Lamartine", "Domaine du Clos de la Brosse"],
-        "color": "#FF1493"
+        "famousWineries": [
+          "Domaine des Billards",
+          "Domaine de la Cave Lamartine",
+          "Domaine du Clos de la Brosse"
+        ],
+        "color": "#FF1493",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、薄酒萊最北端の冷涼な条件",
+          "soilStructure": "花崗岩と粘土",
+          "wineStyle": "繊細でエレガント、フルーティーで軽快、花のアロマ",
+          "tastingNotes": "チェリー・スミレ・花・軽やかなスパイス",
+          "agingPotential": "4-8年"
+        }
       },
       "aoc-chenas": {
         "name": "AOC Chénas",
@@ -200,13 +353,30 @@
         "altitude": "250-350m",
         "exposition": "東、東南",
         "soilStructure": "花崗岩和石英砂",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "強勁有力、結構緊實、帶有花香",
         "tastingNotes": "牡丹、紫羅蘭、黑櫻桃、香料、陳年後帶有野味",
         "agingPotential": "4-8年",
         "history": "面積最小的薄酒萊 Cru，以橡樹林（chênes）命名",
-        "famousWineries": ["Domaine Champagnon", "Château de Chénas", "Domaine des Mûriers"],
-        "color": "#A52A2A"
+        "famousWineries": [
+          "Domaine Champagnon",
+          "Château de Chénas",
+          "Domaine des Mûriers"
+        ],
+        "color": "#A52A2A",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、森に囲まれた穏やかなマイクロクライメート",
+          "soilStructure": "花崗岩と石英砂",
+          "wineStyle": "力強くスパイシー、個性的で深み豊か",
+          "tastingNotes": "黒い果実・スパイス・ピオニー・木の香り",
+          "agingPotential": "5-12年"
+        }
       },
       "aoc-chiroubles": {
         "name": "AOC Chiroubles",
@@ -216,13 +386,30 @@
         "altitude": "300-500m",
         "exposition": "東、東南",
         "soilStructure": "花崗岩砂土，排水良好",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "最輕盈優雅、花香濃郁、適合年輕時飲用",
         "tastingNotes": "紫羅蘭、紅色水果、精緻細膩、絲滑口感",
         "agingPotential": "2-5年",
         "history": "海拔最高的 Cru，以其優雅和細膩著稱",
-        "famousWineries": ["Domaine de la Grosse Pierre", "Domaine Cheysson", "Domaine Émile Cheysson"],
-        "color": "#FF6EB4"
+        "famousWineries": [
+          "Domaine de la Grosse Pierre",
+          "Domaine Cheysson",
+          "Domaine Émile Cheysson"
+        ],
+        "color": "#FF6EB4",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、高標高による冷涼な条件",
+          "soilStructure": "花崗岩砂土、排水良好",
+          "wineStyle": "最も繊細でフレッシュな Cru、軽やかでエレガント",
+          "tastingNotes": "フレッシュなチェリー・スミレ・花・軽やかなタンニン",
+          "agingPotential": "3-6年"
+        }
       },
       "aoc-regnie": {
         "name": "AOC Régnié",
@@ -232,14 +419,39 @@
         "altitude": "300-450m",
         "exposition": "東、東南",
         "soilStructure": "粉紅色花崗岩和砂土",
-        "grapeVarieties": ["Gamay"],
+        "grapeVarieties": [
+          "Gamay"
+        ],
         "wineStyle": "果味豐富、柔順易飲、介於 Villages 和其他 Cru 之間",
         "tastingNotes": "紅色水果、黑醋栗、花香、清新易飲",
         "agingPotential": "2-5年",
         "history": "1988年成為最新的薄酒萊 Cru，最年輕的列級村莊",
-        "famousWineries": ["Domaine de la Madone", "Domaine des Buyats", "Domaine Joel Rochette"],
-        "color": "#DB7093"
+        "famousWineries": [
+          "Domaine de la Madone",
+          "Domaine des Buyats",
+          "Domaine Joel Rochette"
+        ],
+        "color": "#DB7093",
+        "ja": {
+          "exposition": "東・南東",
+          "wineTypes": [
+            "赤ワイン"
+          ],
+          "climate": "半大陸性気候、温和なマイクロクライメート",
+          "soilStructure": "ピンク花崗岩と砂土",
+          "wineStyle": "軽快でフルーティー、フレッシュなスタイル",
+          "tastingNotes": "赤い果実・チェリー・スグリ・花のアロマ",
+          "agingPotential": "3-6年"
+        }
       }
     }
+  },
+  "ja": {
+    "wineTypes": [
+      "赤ワイン",
+      "白ワイン（極少量）",
+      "ロゼ"
+    ],
+    "exposition": "東・南東"
   }
 }

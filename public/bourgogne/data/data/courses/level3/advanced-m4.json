@@ -35,11 +35,31 @@
           "type": "timeline",
           "title": "侮羅紀地質演變時間軸（2億年史詩）",
           "events": [
-            {"year": "2億年前", "title": "淺海形成", "description": "溫暖淺海覆蓋歐洲大陸，海洋生物繁盛，水深50-200米"},
-            {"year": "1.75億年前", "title": "石灰岩沉積", "description": "珊瑚礁興盛，碳酸鈉沉積加速，形成厚層石灰岩"},
-            {"year": "1.55億年前", "title": "Kimmeridgian時代", "description": "小牡蠣（Exogyra virgula）大量繁殖，每平方米數千隻化石"},
-            {"year": "6500萬年前", "title": "造山運動", "description": "阿爾卑斯造山，海床隆起成陸地，形成東向坡地"},
-            {"year": "200萬年前", "title": "冰河侵蝕", "description": "冰河侵蝕雕瞢地形，形成現代地表層和河谷"}
+            {
+              "year": "2億年前",
+              "title": "淺海形成",
+              "description": "溫暖淺海覆蓋歐洲大陸，海洋生物繁盛，水深50-200米"
+            },
+            {
+              "year": "1.75億年前",
+              "title": "石灰岩沉積",
+              "description": "珊瑚礁興盛，碳酸鈉沉積加速，形成厚層石灰岩"
+            },
+            {
+              "year": "1.55億年前",
+              "title": "Kimmeridgian時代",
+              "description": "小牡蠣（Exogyra virgula）大量繁殖，每平方米數千隻化石"
+            },
+            {
+              "year": "6500萬年前",
+              "title": "造山運動",
+              "description": "阿爾卑斯造山，海床隆起成陸地，形成東向坡地"
+            },
+            {
+              "year": "200萬年前",
+              "title": "冰河侵蝕",
+              "description": "冰河侵蝕雕瞢地形，形成現代地表層和河谷"
+            }
           ]
         },
         {
@@ -506,7 +526,12 @@
         "id": "q1",
         "type": "multiple-choice",
         "question": "布根地的土壤主要形成於哪個地質時期？",
-        "options": ["白堊紀", "侏羅紀", "三疊紀", "新生代"],
+        "options": [
+          "白堊紀",
+          "侏羅紀",
+          "三疊紀",
+          "新生代"
+        ],
         "correctAnswer": 1,
         "explanation": "布根地土壤主要形成於侏羅紀時期（2億-1.45億年前），當時是溫暖的淺海環境。"
       },
@@ -547,7 +572,12 @@
         "id": "q5",
         "type": "multiple-choice",
         "question": "理想的布根地土壤pH值範圍是？",
-        "options": ["6-6.5", "7-8", "8.5-9", "5.5-6"],
+        "options": [
+          "6-6.5",
+          "7-8",
+          "8.5-9",
+          "5.5-6"
+        ],
         "correctAnswer": 1,
         "explanation": "布根地最理想的土壤pH值在7-8之間（微鹼性），這有助於保持葡萄的高酸度和養分有效性。"
       },
@@ -562,7 +592,12 @@
         "id": "q7",
         "type": "multiple-choice",
         "question": "Le Montrachet的土壤深度約為？",
-        "options": ["10-20cm", "30-40cm", "80-100cm", "150cm以上"],
+        "options": [
+          "10-20cm",
+          "30-40cm",
+          "80-100cm",
+          "150cm以上"
+        ],
         "correctAnswer": 1,
         "explanation": "Le Montrachet的土壤深度僅30-40cm，下層為堅硬石灰岩，這種淺薄土層是其優雅風格的關鍵。"
       },
@@ -570,7 +605,12 @@
         "id": "q8",
         "type": "multiple-choice",
         "question": "Kimmeridgian和Portlandian土壤的年代差異約為？",
-        "options": ["500萬年", "1000萬年", "5000萬年", "1億年"],
+        "options": [
+          "500萬年",
+          "1000萬年",
+          "5000萬年",
+          "1億年"
+        ],
         "correctAnswer": 0,
         "explanation": "Kimmeridgian（約1.55億年前）和Portlandian（約1.5億年前）相差約500萬年，但造就了不同的土壤特性。"
       },
