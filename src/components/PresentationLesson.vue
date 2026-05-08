@@ -160,7 +160,7 @@
 
               <!-- 測驗區塊 -->
               <div v-if="currentSlideData.quiz" class="quiz-section">
-                <h3 class="quiz-title">💡 {{ t('quiz.slideCheck') }}</h3>
+                <h3 class="quiz-title">💡 {{ t('common.quiz.slideCheck') }}</h3>
                 <img 
                   v-if="currentSlideData.quiz.image" 
                   :src="currentSlideData.quiz.image" 
@@ -181,7 +181,7 @@
                 </div>
                 <div v-if="quizAnswered" class="quiz-feedback">
                   <p :class="['feedback-text', quizCorrect ? 'correct' : 'incorrect']">
-                    {{ quizCorrect ? t('quiz.correct') : t('quiz.tryAgain') }}
+                    {{ quizCorrect ? t('common.quiz.correct') : t('common.quiz.tryAgain') }}
                   </p>
                   <p class="quiz-explanation">{{ enhanceText(currentSlideData.quiz.explanation) }}</p>
                 </div>
@@ -256,7 +256,7 @@ const props = defineProps({
 
 const emit = defineEmits(['lessonComplete', 'nextLesson', 'openRegionMap'])
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 // 響應式數據
 const currentSlide = ref(0)
@@ -283,7 +283,8 @@ function pickRandom(arr, n) {
 
 async function loadQuizBank() {
   try {
-    const res = await fetch('/data/bordeaux-l1-quiz-bank.json')
+    const lang = locale.value === 'en' ? '-en' : ''
+    const res = await fetch(`/data/bordeaux-l1-quiz-bank${lang}.json`)
     if (!res.ok) return
     const data = await res.json()
     finalQuizBank.value = data.questions || []
@@ -1516,17 +1517,17 @@ const normalizeSlide = (s) => {
       break
     }
     case 'reflection-questions': {
-      slide.title = s.title || '思考與討論'
+      slide.title = s.title || t('common.lesson.reflectionTitle')
       const questions = toList(s.questions)
       slide.content = `
         <div class="reflection-container">
           ${questions.map((q, idx) => `
             <div class="question-card">
-              <div class="question-number">問題 ${idx + 1}</div>
+              <div class="question-number">${t('common.lesson.questionNumber', { n: idx + 1 })}</div>
               <div class="question-text">${esc(q.question || '')}</div>
               ${q.prompts && q.prompts.length ? `
                 <div class="prompts">
-                  <div class="prompts-title">思考方向：</div>
+                  <div class="prompts-title">${t('common.lesson.thinkingDirection')}</div>
                   <ul>
                     ${q.prompts.map(p => `<li>${esc(p)}</li>`).join('')}
                   </ul>
@@ -1583,7 +1584,7 @@ const normalizeSlide = (s) => {
       break
     }
     case 'intro': {
-      slide.title = s.title || '課程導讀'
+      slide.title = s.title || t('common.lesson.objectivesTitle')
       let content = `<p>${esc(s.content)}</p>`
       if (s.duration) {
         content += `<div class="meta">⏱ ${esc(s.duration)}</div>`
@@ -1592,7 +1593,7 @@ const normalizeSlide = (s) => {
       if (s.objectives && s.objectives.length > 0) {
         const objs = toList(s.objectives)
         content += `
-          <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #667eea;">📋 學習目標</h3>
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #667eea;">📋 ${t('common.lesson.objectivesTitle')}</h3>
           <ul class="objectives">
             ${objs.map(o => {
               if (o && typeof o === 'object') {
@@ -1610,7 +1611,7 @@ const normalizeSlide = (s) => {
       break
     }
     case 'objectives': {
-      slide.title = s.title || '學習目標'
+      slide.title = s.title || t('common.lesson.objectivesTitle')
       const objs = toList(s.objectives)
       // 支援物件型目標 {title, description, icon} 或 {text, icon}
       slide.content = `
@@ -1716,7 +1717,7 @@ const normalizeSlide = (s) => {
       // 支援 questions 陣列 → 拆成多頁
       if (Array.isArray(s.questions) && s.questions.length) {
         return s.questions.map((q, idx) => ({
-          title: `${s.title || t('quiz.slideCheck')} — 第 ${idx + 1} 題`,
+          title: `${s.title || t('common.quiz.slideCheck')} — ${t('common.quiz.questionNumber', { n: idx + 1 })}`,  
           quiz: {
             image: q.image,
             question: q.question,
@@ -1729,7 +1730,7 @@ const normalizeSlide = (s) => {
       // 單個 quiz（直接有 question, options, correct, explanation 屬性）
       if (s.question) {
         return {
-          title: s.title || t('quiz.slideCheck'),
+          title: s.title || t('common.quiz.slideCheck'),
           quiz: {
             image: s.image,
             question: s.question,
@@ -1740,7 +1741,7 @@ const normalizeSlide = (s) => {
         }
       }
       // 保底：如果既沒有 questions 也沒有 question，設置到 slide 上
-      slide.title = s.title || t('quiz.slideCheck')
+      slide.title = s.title || t('common.quiz.slideCheck')
       slide.quiz = {
         question: s.question || '',
         options: toList(s.options),
@@ -1868,7 +1869,7 @@ const normalizeSlide = (s) => {
   // ✨ 檢查是否有內嵌 quiz，若有則額外產生一張 quiz 投影片
   if (s.quiz && typeof s.quiz === 'object') {
     const quizSlide = {
-      title: `${slide.title || t('quiz.slideCheck')}`,
+      title: `${slide.title || t('common.quiz.slideCheck')}`,
       highlights: undefined,
       content: '',
       hasMap: false,
@@ -2039,7 +2040,8 @@ const slides = computed(() => {
       component: 'QuizSlide',
       componentProps: {
         slide: {
-          title: '📋 Level 1 綜合評量',
+          title: `📋 ${t('common.lesson.level1FinalExam')}`,
+
           isFinalExam: true,
           passScore: 80,
           questions: pickRandom(finalQuizBank.value, Math.min(20, finalQuizBank.value.length))
@@ -2060,8 +2062,8 @@ const currentSlideTitle = computed(() => {
   const slide = currentSlideData.value
   if (!slide) return ''
   // 若此投影片包含測驗（quiz 物件或 component 含 quiz 字樣），顯示「知識檢測」
-  if (slide.quiz && typeof slide.quiz === 'object') return t('quiz.slideCheck')
-  if (slide.component && /quiz/i.test(slide.component)) return t('quiz.slideCheck')
+  if (slide.quiz && typeof slide.quiz === 'object') return t('common.quiz.slideCheck')
+  if (slide.component && /quiz/i.test(slide.component)) return t('common.quiz.slideCheck')
   return slide.title || ''
 })
 

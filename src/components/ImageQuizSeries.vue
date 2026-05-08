@@ -1,9 +1,9 @@
 <template>
   <div class="quiz-section">
-    <h3 class="quiz-title">{{ enhanceText(title || '連發小測：圖片辨識') }}</h3>
+    <h3 class="quiz-title">{{ enhanceText(title || t('common.quiz.slideCheck')) }}</h3>
 
     <div v-if="!completed">
-      <p class="quiz-question">第 {{ currentIndex + 1 }} / {{ totalCount }} 題</p>
+      <p class="quiz-question">{{ t('common.quiz.questionLabel', { current: currentIndex + 1, total: totalCount }) }}</p>
       <img v-if="current.image" :src="current.image" alt="quiz image" class="quiz-image"/>
       <p class="quiz-question">{{ enhanceText(current.question) }}</p>
       <div class="quiz-options">
@@ -20,25 +20,25 @@
       </div>
       <div v-if="answered" class="quiz-feedback">
         <p :class="['feedback-text', isCorrect ? 'correct' : 'incorrect']">
-          {{ isCorrect ? '✅ 答對了！' : '❌ 再想想看' }}
+          {{ isCorrect ? t('common.quiz.correct') : t('common.quiz.tryAgain') }}
         </p>
         <p class="quiz-explanation">{{ enhanceText(current.explanation) }}</p>
         <div style="margin-top:8px;">
-          <button class="next-btn" @click="next" :disabled="!answered">{{ isLast ? '完成' : '下一題 →' }}</button>
+          <button class="next-btn" @click="next" :disabled="!answered">{{ isLast ? t('common.quiz.finishQuiz') : t('common.quiz.nextQuestion') }}</button>
         </div>
       </div>
     </div>
 
     <div v-else>
-      <p class="quiz-question">作答完成：{{ score }} / {{ totalCount }}</p>
+      <p class="quiz-question">{{ t('common.quiz.quizComplete') }}：{{ score }} / {{ totalCount }}</p>
       <div class="quiz-options" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
-        <div class="info-card">題庫大小：{{ items.length }} 題</div>
-        <div class="info-card">抽題數：{{ totalCount }} 題</div>
-        <div class="info-card">正確率：{{ Math.round((score/totalCount)*100) }}%</div>
+        <div class="info-card">{{ t('common.quiz.questionBank') }}：{{ items.length }}</div>
+        <div class="info-card">{{ t('common.quiz.selectedCount') }}：{{ totalCount }}</div>
+        <div class="info-card">{{ t('common.quiz.accuracy') }}：{{ Math.round((score/totalCount)*100) }}%</div>
       </div>
       <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
-        <button class="next-btn" @click="restart">再練一次</button>
-        <button class="next-btn" @click="reviewWrongOnly" :disabled="wrongCount===0" title="只重練錯題">只練錯題（{{ wrongCount }}）</button>
+        <button class="next-btn" @click="restart">{{ t('common.quiz.retryQuiz') }}</button>
+        <button class="next-btn" @click="reviewWrongOnly" :disabled="wrongCount===0" :title="t('common.quiz.wrongOnlyBtn', { n: wrongCount })">{{ t('common.quiz.wrongOnlyBtn', { n: wrongCount }) }}</button>
       </div>
     </div>
   </div>
@@ -46,8 +46,10 @@
 
 <script setup>
 import { computed, reactive, ref, watch, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { enhanceText as enhanceTextUtil } from '../utils/textEnhancers.js'
 
+const { t } = useI18n()
 function enhanceText(text) { return enhanceTextUtil(text) }
 
 const props = defineProps({

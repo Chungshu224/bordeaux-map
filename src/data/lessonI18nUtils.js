@@ -29,6 +29,10 @@ const TRANSLATABLE_KEYS = new Set([
   'text',
   'note',
   'summary',
+  'duration',
+  'point',
+  'detail',
+  'value',
 ])
 
 // 哪些 key 在 highlights/quiz options 等陣列底下需要遞迴
@@ -43,6 +47,8 @@ const RECURSIVE_KEYS = new Set([
   'questions',
   'blocks',
   'steps',
+  'takeaways',
+  'categories',
 ])
 
 /**
@@ -54,8 +60,38 @@ export function extractTranslatable(slides) {
   if (!Array.isArray(slides)) return out
   slides.forEach((slide, i) => {
     if (!slide || typeof slide !== 'object') return
-    // component slides: 跳過（讓 Vue 元件自己 i18n）
-    if (slide.component) return
+    // component slides: translate title, componentProps.title/items, and presenterNotes
+    if (slide.component) {
+      if (typeof slide.title === 'string' && slide.title.trim()) {
+        out[`slides.${i}.title`] = slide.title
+      }
+      if (slide.componentProps && typeof slide.componentProps === 'object') {
+        const cp = slide.componentProps
+        if (typeof cp.title === 'string' && cp.title.trim()) {
+          out[`slides.${i}.componentProps.title`] = cp.title
+        }
+        if (Array.isArray(cp.items)) {
+          cp.items.forEach((item, j) => {
+            if (!item || typeof item !== 'object') return
+            if (typeof item.question === 'string') out[`slides.${i}.componentProps.items.${j}.question`] = item.question
+            if (typeof item.explanation === 'string') out[`slides.${i}.componentProps.items.${j}.explanation`] = item.explanation
+            if (Array.isArray(item.options)) {
+              item.options.forEach((opt, k) => {
+                if (typeof opt === 'string') out[`slides.${i}.componentProps.items.${j}.options.${k}`] = opt
+              })
+            }
+          })
+        }
+      }
+      if (Array.isArray(slide.presenterNotes)) {
+        slide.presenterNotes.forEach((note, j) => {
+          if (typeof note === 'string' && note.trim()) {
+            out[`slides.${i}.presenterNotes.${j}`] = note
+          }
+        })
+      }
+      return
+    }
     walk(slide, `slides.${i}`, out)
   })
   return out
@@ -74,8 +110,8 @@ function walk(node, prefix, out) {
         out[childPrefix] = v
       }
     } else if (Array.isArray(v)) {
-      // options / headers（字串陣列）特殊處理：直接收集字串元素
-      if ((k === 'options' || k === 'headers') && v.every(x => typeof x === 'string')) {
+      // options / headers / prompts（字串陣列）特殊處理：直接收集字串元素
+      if ((k === 'options' || k === 'headers' || k === 'prompts') && v.every(x => typeof x === 'string')) {
         v.forEach((s, i) => {
           if (s.trim().length > 0) out[`${childPrefix}.${i}`] = s
         })

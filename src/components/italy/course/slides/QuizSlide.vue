@@ -4,7 +4,7 @@
       <h2>{{ slide.title }}</h2>
       <div class="quiz-meta" v-if="!showResult">
         <span class="quiz-type-badge" :class="slide.isFinalExam ? 'final' : 'check'">
-          {{ slide.isFinalExam ? '📋 綜合評量' : '🧠 知識檢測' }}
+          {{ slide.isFinalExam ? t('common.quiz.finalExamBadge') : t('common.quiz.slideCheck') }}
         </span>
         <span class="quiz-progress-text">{{ currentIdx + 1 }} / {{ questions.length }}</span>
       </div>
@@ -20,7 +20,7 @@
       <!-- 題目 -->
       <div class="question-card">
         <div class="question-type-tag" :class="currentQ.type">
-          {{ currentQ.type === 'single' ? '單選題' : '多選題（可複選）' }}
+          {{ currentQ.type === 'single' ? t('common.quiz.singleChoice') : t('common.quiz.multiChoice') }}
         </div>
         <p class="question-text">{{ currentQ.question }}</p>
 
@@ -55,16 +55,16 @@
             <span class="option-text">{{ opt }}</span>
           </button>
           <button v-if="!answered" class="submit-multi-btn" @click="submitMulti" :disabled="selectedMulti.length === 0">
-            確認作答
+            {{ t('common.quiz.confirmAnswer') }}
           </button>
         </div>
 
         <!-- 即時回饋 -->
         <div v-if="answered" class="feedback-box" :class="lastCorrect ? 'correct' : 'wrong'">
-          <div class="feedback-icon">{{ lastCorrect ? '✅ 正確！' : '❌ 錯誤' }}</div>
+          <div class="feedback-icon">{{ lastCorrect ? t('common.quiz.correct') : t('common.quiz.wrongFeedback') }}</div>
           <p class="feedback-explanation">{{ currentQ.explanation }}</p>
           <button class="next-btn" @click="nextQuestion">
-            {{ currentIdx < questions.length - 1 ? '下一題 →' : '查看結果 →' }}
+            {{ currentIdx < questions.length - 1 ? t('common.quiz.nextQ') : t('common.quiz.viewResult') }}
           </button>
         </div>
       </div>
@@ -78,10 +78,10 @@
 
       <!-- 綜合評量才有及格判斷 -->
       <div v-if="slide.isFinalExam" class="result-verdict" :class="passed ? 'pass' : 'fail'">
-        {{ passed ? '🎉 通過！恭喜完成 Level 1 評量' : '📚 尚未通過，建議複習後重試' }}
+        {{ passed ? t('common.quiz.examPassed') : t('common.quiz.examFailed') }}
       </div>
       <div v-else class="result-verdict neutral">
-        {{ scorePct >= 80 ? '太棒了！掌握得很好 🌟' : scorePct >= 60 ? '不錯！可以繼續加油 👍' : '建議複習本課重點 📖' }}
+        {{ scorePct >= 80 ? t('common.quiz.quizGoodJob') : scorePct >= 60 ? t('common.quiz.quizKeepGoing') : t('common.quiz.quizNeedReview') }}
       </div>
 
       <!-- 答題明細 -->
@@ -97,13 +97,16 @@
         </div>
       </div>
 
-      <button v-if="slide.isFinalExam && !passed" class="retry-btn" @click="retryQuiz">重新作答</button>
+      <button v-if="slide.isFinalExam && !passed" class="retry-btn" @click="retryQuiz">{{ t('common.quiz.retryQuiz') }}</button>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   slide: { type: Object, required: true }

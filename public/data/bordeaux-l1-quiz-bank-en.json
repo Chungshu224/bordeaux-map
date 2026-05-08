@@ -1,0 +1,366 @@
+{
+  "level": "l1",
+  "title": "Level 1 Bordeaux Wine Fundamentals — Question Bank",
+  "questions": [
+    {
+      "type": "single",
+      "question": "Where in France is Bordeaux located?",
+      "options": [
+        "A. Northeast",
+        "B. Southwest",
+        "C. Center",
+        "D. Southeast"
+      ],
+      "correct": 1,
+      "explanation": "Bordeaux is located in southwest France, between 44–45°N, approximately 60 km from the Atlantic Ocean. Its privileged geography brings a temperate oceanic climate ideal for viticulture."
+    },
+    {
+      "type": "single",
+      "question": "What two rivers combine to form the Gironde estuary?",
+      "options": [
+        "A. Seine and Loire",
+        "B. Garonne and Dordogne",
+        "C. Rhône and Saône",
+        "D. Rhine and Moselle"
+      ],
+      "correct": 1,
+      "explanation": "The Gironde is the broad estuary formed by the southern Garonne and the northern Dordogne rivers — a natural boundary between Bordeaux's Left Bank and Right Bank."
+    },
+    {
+      "type": "single",
+      "question": "What does \"Entre-Deux-Mers\" (Between Two Seas) refer to?",
+      "options": [
+        "A. The area between the Gironde and the Atlantic",
+        "B. The area between the Garonne and Dordogne rivers",
+        "C. The area between the Gironde and the Garonne",
+        "D. The area between the Dordogne and the Saône"
+      ],
+      "correct": 1,
+      "explanation": "Entre-Deux-Mers is the triangular region between the Garonne and Dordogne rivers, known for crisp, dry white wines and Bordeaux's largest dry white AOC."
+    },
+    {
+      "type": "single",
+      "question": "What type of climate does Bordeaux have?",
+      "options": [
+        "A. Mediterranean",
+        "B. Temperate oceanic",
+        "C. Continental",
+        "D. Semi-arid"
+      ],
+      "correct": 1,
+      "explanation": "Influenced by the Atlantic Ocean and warm currents, Bordeaux has a temperate oceanic climate with mild winters, cool summers, and even year-round rainfall — ideal growing conditions for grapes."
+    },
+    {
+      "type": "single",
+      "question": "Which natural phenomenon, under the right conditions, helps produce Sauternes sweet wine?",
+      "options": [
+        "A. Hail",
+        "B. Spring frost",
+        "C. Botrytis (Noble Rot)",
+        "D. Flash flooding"
+      ],
+      "correct": 2,
+      "explanation": "Noble Rot (Botrytis cinerea), after morning mist followed by warm dry afternoons, penetrates the grape skin causing water evaporation and sugar concentration — the key to Sauternes' legendary sweet whites."
+    },
+    {
+      "type": "single",
+      "question": "What is the dominant red grape variety on the Left Bank of Bordeaux?",
+      "options": [
+        "A. Merlot",
+        "B. Cabernet Franc",
+        "C. Cabernet Sauvignon",
+        "D. Syrah"
+      ],
+      "correct": 2,
+      "explanation": "Cabernet Sauvignon thrives on the Left Bank's gravelly soils, known for high tannins, high acidity, and long ageing potential — the core variety of Médoc First Growth estates."
+    },
+    {
+      "type": "single",
+      "question": "What is the dominant variety on the Right Bank (Pomerol, Saint-Émilion)?",
+      "options": [
+        "A. Cabernet Sauvignon",
+        "B. Merlot",
+        "C. Pinot Noir",
+        "D. Grenache"
+      ],
+      "correct": 1,
+      "explanation": "Merlot performs best on the Right Bank's clay-limestone soils, ripening earlier, with soft tannins and a generous palate — the dominant variety at Pomerol's Château Pétrus."
+    },
+    {
+      "type": "multiple",
+      "question": "Which of the following are approved red grape varieties in Bordeaux? (Select all that apply)",
+      "options": [
+        "A. Cabernet Sauvignon",
+        "B. Merlot",
+        "C. Cabernet Franc",
+        "D. Petit Verdot"
+      ],
+      "correct": [0, 1, 2, 3],
+      "explanation": "Bordeaux's approved red varieties include the three main ones: Cabernet Sauvignon, Merlot, Cabernet Franc — plus supporting varieties: Petit Verdot, Malbec, and Carménère."
+    },
+    {
+      "type": "single",
+      "question": "What is the key white grape combination in Bordeaux's top white wines?",
+      "options": [
+        "A. Chardonnay and Pinot Gris",
+        "B. Sauvignon Blanc and Sémillon",
+        "C. Riesling and Muscat",
+        "D. Viognier and Marsanne"
+      ],
+      "correct": 1,
+      "explanation": "Sauvignon Blanc (fresh, grassy) and Sémillon (rich, complex, excellent ageing potential) are the main varieties for Bordeaux dry and sweet whites alike, including Sauternes."
+    },
+    {
+      "type": "multiple",
+      "question": "Which of the following are characteristics of the Left Bank? (Select all that apply)",
+      "options": [
+        "A. Gravelly soils with excellent drainage",
+        "B. Cabernet Sauvignon dominant",
+        "C. The 1855 Classification primarily covers this area",
+        "D. Clay soils with Merlot dominant"
+      ],
+      "correct": [0, 1, 2],
+      "explanation": "Left Bank (Médoc, Graves) characteristics: gravelly, well-drained soils favour late-ripening Cab Sauv; most 1855 First Growths are here. Clay soils + Merlot is a Right Bank characteristic."
+    },
+    {
+      "type": "single",
+      "question": "Why are Right Bank clay soils better suited to Merlot?",
+      "options": [
+        "A. Clay contains more minerals",
+        "B. Clay retains water well, allowing early-ripening Merlot to mature evenly",
+        "C. Regulations require only Merlot on the Right Bank",
+        "D. Clay prevents pests and disease"
+      ],
+      "correct": 1,
+      "explanation": "Right Bank clay retains moisture; its slightly lower temperatures versus Left Bank gravel allow early-ripening Merlot to mature perfectly without over-ripening. Merlot needs less ripening time than Cab Sauv — clay soils are ideal."
+    },
+    {
+      "type": "single",
+      "question": "What type of wine is Sauternes renowned for?",
+      "options": [
+        "A. Rich dry red",
+        "B. Premium sparkling",
+        "C. Noble rot sweet white",
+        "D. Oak-aged dry white"
+      ],
+      "correct": 2,
+      "explanation": "Sauternes is famous for Botrytis-affected sweet white wines. Château d'Yquem is its pinnacle — sweet orange, apricot and ginger aromas, beautifully balanced acidity, capable of ageing for decades."
+    },
+    {
+      "type": "single",
+      "question": "What is the concept of a Bordeaux \"Second Wine\"?",
+      "options": [
+        "A. A wine overseen by the assistant winemaker",
+        "B. Wine made from young vines or batches not meeting the Grand Vin standard",
+        "C. Wine sold only within Bordeaux",
+        "D. The legal term for Sauternes sweet wine"
+      ],
+      "correct": 1,
+      "explanation": "Second wines maintain top estates' quality standards: batches not meeting the Grand Vin threshold are bottled separately, offering consistent quality at more accessible prices. Example: Carruades de Lafite (Second Wine of Château Lafite Rothschild)."
+    },
+    {
+      "type": "single",
+      "question": "How many First Growths were in the original 1855 Classification (excluding the 1973 promotion)?",
+      "options": [
+        "A. 3",
+        "B. 4",
+        "C. 5",
+        "D. 10"
+      ],
+      "correct": 1,
+      "explanation": "The original 1855 First Growths numbered four: Lafite, Latour, and Margaux (Left Bank) plus Haut-Brion (Graves). Mouton Rothschild was only promoted to First Growth status in 1973."
+    },
+    {
+      "type": "single",
+      "question": "What is the highest tier in the Saint-Émilion classification?",
+      "options": [
+        "A. Grand Cru Classé",
+        "B. Premier Grand Cru Classé A",
+        "C. Grand Vin Classé",
+        "D. Cru Exceptionnel"
+      ],
+      "correct": 1,
+      "explanation": "The highest tier in Saint-Émilion is Premier Grand Cru Classé A (PGCCA), currently including Ausone, Cheval Blanc, Angélus, and Pavie."
+    },
+    {
+      "type": "single",
+      "question": "What is distinctive about the Pomerol classification system?",
+      "options": [
+        "A. Uses the same 1855 system",
+        "B. Has no official classification — status determined by market and reputation",
+        "C. Has its own Grand Cru Classé",
+        "D. Revised periodically by CIVB"
+      ],
+      "correct": 1,
+      "explanation": "Pomerol is the only major Bordeaux appellation with no official classification. Status is determined entirely by market reputation. Pétrus, with no official First Growth title, commands prices surpassing all classified estates."
+    },
+    {
+      "type": "single",
+      "question": "What is the main function of the AOC system?",
+      "options": [
+        "A. To protect specific geographic names and production regulations",
+        "B. To set minimum prices",
+        "C. To approve export quotas for wineries",
+        "D. To monitor annual climate conditions"
+      ],
+      "correct": 0,
+      "explanation": "AOC (now AOP) is a geographical protection system ensuring 'Bordeaux AOC' can only come from specific areas, using specific varieties and production methods — protecting both producers and consumers."
+    },
+    {
+      "type": "single",
+      "question": "What are the three main steps in wine tasting?",
+      "options": [
+        "A. Buy, store, drink",
+        "B. Observe → Smell → Taste",
+        "C. Select, decant, pair",
+        "D. Identify variety, vintage, origin"
+      ],
+      "correct": 1,
+      "explanation": "Standard tasting: Observe (colour/clarity/viscosity) → Smell (primary fruit / secondary fermentation / tertiary aged aromas) → Taste (acidity/tannin/body/finish) — the foundation of systematic wine evaluation."
+    },
+    {
+      "type": "single",
+      "question": "What are the most typical tertiary aromas of an aged Bordeaux red?",
+      "options": [
+        "A. Fresh blackcurrant and blueberry",
+        "B. Grass and vegetables",
+        "C. Leather, cigar box, cedar, truffle",
+        "D. Butter and vanilla (oak influence)"
+      ],
+      "correct": 2,
+      "explanation": "Tertiary aromas are the soul of old Bordeaux: leather, cigar box, cedar, earth, truffle — developing slowly in bottle through reductive ageing. These rewards are why collectors wait 10–20 years for great vintage First Growths."
+    },
+    {
+      "type": "multiple",
+      "question": "What elements are assessed in the palate evaluation? (Select all that apply)",
+      "options": [
+        "A. Acidity",
+        "B. Tannin",
+        "C. Body",
+        "D. Finish"
+      ],
+      "correct": [0, 1, 2, 3],
+      "explanation": "Complete palate: Acidity (backbone/freshness), Tannin (structure/astringency), Body (light/medium/full), Finish (long/medium/short, complexity) — forming a comprehensive quality assessment."
+    },
+    {
+      "type": "single",
+      "question": "What is the main reason Bordeaux uses multi-variety blending?",
+      "options": [
+        "A. Blends command higher prices",
+        "B. To balance varieties' strengths and weaknesses, increasing complexity and consistency",
+        "C. Regulations require at least three varieties",
+        "D. A single variety cannot grow in Bordeaux"
+      ],
+      "correct": 1,
+      "explanation": "Blending allows varieties to complement each other: Cab Sauv's high tannin + Merlot's richness; early-ripening varieties provide a safety net while late-ripening add depth. It also helps maintain consistent house style across variable vintages."
+    },
+    {
+      "type": "single",
+      "question": "What does Bordeaux's \"En Primeur\" (Futures) system refer to?",
+      "options": [
+        "A. Wine sold before harvest",
+        "B. Pre-ordering wine while it is still ageing in barrel",
+        "C. A batch sold only to restaurants",
+        "D. Bordeaux's cheapest entry-level wines"
+      ],
+      "correct": 1,
+      "explanation": "En Primeur is a unique Bordeaux system: each spring, wines still in barrel are offered for pre-order, shipped ~18 months after harvest. Buyers may secure great vintages at lower prices but take on quality and market risk."
+    },
+    {
+      "type": "single",
+      "question": "What does \"Château\" mean in the Bordeaux wine context?",
+      "options": [
+        "A. Must be a castle building",
+        "B. An estate with its own vineyards that produces and bottles wine on-site",
+        "C. The highest title in the classification",
+        "D. Equivalent to Burgundy's Domaine — just a brand name"
+      ],
+      "correct": 1,
+      "explanation": "\"Château\" in Bordeaux refers to a wine estate: specific land, specific buildings (not necessarily a castle), own vineyards, own production and bottling. Central to Bordeaux brand identity — there are over 7,000 Châteaux."
+    },
+    {
+      "type": "single",
+      "question": "Which four village AOCs are most famous in the Médoc?",
+      "options": [
+        "A. Pauillac, Saint-Julien, Margaux, Saint-Estèphe",
+        "B. Pomerol, Fronsac, Blaye, Bourg",
+        "C. Sauternes, Barsac, Loupiac, Cadillac",
+        "D. Pessac-Léognan, Graves, Langon, Cérons"
+      ],
+      "correct": 0,
+      "explanation": "The four famous Médoc village AOCs: Pauillac (three First Growths — Lafite, Latour, Mouton), Saint-Julien (most refined), Margaux (most elegant floral), Saint-Estèphe (most tannic). These four contain most 1855 classified estates."
+    },
+    {
+      "type": "single",
+      "question": "What is distinctive about the Graves region of Bordeaux?",
+      "options": [
+        "A. Produces sweet wines only",
+        "B. The only area producing both top red and top dry white wines",
+        "C. Purely Right Bank in style",
+        "D. Uses no oak barrels"
+      ],
+      "correct": 1,
+      "explanation": "Graves (especially northern Pessac-Léognan) is the only area in Bordeaux equally renowned for top dry reds and whites. Château Haut-Brion is the only non-Médoc estate in the 1855 First Growth classification, and its white wine is equally legendary."
+    },
+    {
+      "type": "multiple",
+      "question": "Which statements about Château Pétrus are correct? (Select all that apply)",
+      "options": [
+        "A. Located in Pomerol, Right Bank",
+        "B. Primarily Merlot (>90%)",
+        "C. A First Growth in the 1855 Classification",
+        "D. No official classification but market standing exceeds most First Growths"
+      ],
+      "correct": [0, 1, 3],
+      "explanation": "Pétrus is in Pomerol on the Right Bank, made from nearly pure Merlot (up to 95%+), with unique blue clay providing unparalleled concentration. Pomerol has no official classification; Pétrus achieves legendary status through reputation and scarcity (~3,000 cases/year)."
+    },
+    {
+      "type": "single",
+      "question": "What is the main purpose of ageing Bordeaux dry red wines in oak barrels?",
+      "options": [
+        "A. To quickly strip all fruit aromas",
+        "B. To soften tannins, add complexity, and assist stability through micro-oxygenation",
+        "C. To increase sweetness",
+        "D. It is purely traditional with no practical effect"
+      ],
+      "correct": 1,
+      "explanation": "Oak ageing uses micro-oxygenation to help tannins polymerise and soften; barrel compounds (tannins, vanillin) impart vanilla and toasted oak aromas; gentle evaporation naturally concentrates flavour, improving structure and ageing potential."
+    },
+    {
+      "type": "single",
+      "question": "What is \"Decanting\" and what does it do for young Bordeaux reds?",
+      "options": [
+        "A. Removes sugar from the wine",
+        "B. Opens closed aromas and softens tannins through air contact",
+        "C. Reduces the alcohol level",
+        "D. Quickly heats wine to serving temperature"
+      ],
+      "correct": 1,
+      "explanation": "Decanting pours wine into a decanter, allowing air contact. Young Bordeaux typically has firm tannins and closed aromas — decanting 1–2 hours lets aromas open and tannins soften slightly. Mature reds can also be decanted to separate sediment."
+    },
+    {
+      "type": "single",
+      "question": "Which Bordeaux sub-appellation is mainly known for crisp Sauvignon Blanc-based dry whites?",
+      "options": [
+        "A. Sauternes",
+        "B. Entre-Deux-Mers",
+        "C. Médoc",
+        "D. Pomerol"
+      ],
+      "correct": 1,
+      "explanation": "Entre-Deux-Mers is Bordeaux's largest dry white AOC, primarily Sauvignon Blanc (sometimes blended with Sémillon) — fresh, herbal, citrus and white flower aromas, crisp finish, early-drinking, and excellent value."
+    },
+    {
+      "type": "single",
+      "question": "Compared to which European regions does Bordeaux show significant vintage variation?",
+      "options": [
+        "A. Southern Spain (stable high temperatures)",
+        "B. Southern Italy (stable drought conditions)",
+        "C. Burgundy also has significant vintage variation",
+        "D. Same as all wine regions worldwide"
+      ],
+      "correct": 2,
+      "explanation": "Burgundy similarly experiences significant vintage variation due to its continental/oceanic climate. By contrast, southern Spain (south of Rioja) and southern Italy (Puglia, Sicily) have more stable Mediterranean climates, producing smaller vintage differences."
+    }
+  ]
+}
