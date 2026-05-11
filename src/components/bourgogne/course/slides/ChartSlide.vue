@@ -71,19 +71,39 @@
       
       <!-- 条形图 -->
       <div v-if="slide.chartType === 'bar'" class="bar-chart">
+        <!-- 刻度線 -->
+        <div class="bar-scale-row">
+          <div class="bar-scale-spacer"></div>
+          <div class="bar-scale-track">
+            <span v-for="n in [0,2.5,5,7.5,10]" :key="n" class="scale-mark" :style="{left: n*10+'%'}">{{ n }}</span>
+          </div>
+          <div class="bar-score-spacer"></div>
+        </div>
         <div class="bar-chart-grid">
           <div v-for="item in slide.data.items" :key="item.label" class="bar-item">
-            <div class="bar-label">{{ item.label }}</div>
+            <div class="bar-label">
+              <span class="bar-label-name">{{ item.label }}</span>
+            </div>
             <div class="bar-wrapper">
+              <!-- 參考線 -->
+              <div class="bar-grid-lines">
+                <div class="bar-grid-line" style="left:25%"></div>
+                <div class="bar-grid-line" style="left:50%"></div>
+                <div class="bar-grid-line" style="left:75%"></div>
+              </div>
               <div 
                 class="bar-fill" 
                 :style="{ 
-                  width: `${item.value}%`, 
-                  backgroundColor: item.color || '#8B4789' 
+                  width: `${item.value}%`,
+                  background: `linear-gradient(90deg, ${item.color}99, ${item.color})`
                 }"
-              >
-                <span class="bar-value">{{ item.displayValue || item.value }}</span>
-              </div>
+              ></div>
+            </div>
+            <div class="bar-score-cell">
+              <span class="bar-score-num" :style="{color: item.color}">{{ (item.value/10).toFixed(1) }}</span>
+              <span v-if="item.displayValue && item.displayValue.includes(' ')" class="bar-keyword">
+                {{ item.displayValue.split(' ').slice(1).join(' ') }}
+              </span>
             </div>
           </div>
         </div>
@@ -448,6 +468,7 @@ const aromaWheelSegments = computed(() => {
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .slide-title {
@@ -490,50 +511,112 @@ const aromaWheelSegments = computed(() => {
   fill: #333;
 }
 
-/* 条形图 */
+/* 条形图 — 全新設計 */
+.bar-chart {
+  width: 100%;
+}
+
+.bar-scale-row {
+  display: grid;
+  grid-template-columns: 160px 1fr 64px;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.bar-scale-spacer,
+.bar-score-spacer {
+  /* 占位 */
+}
+
+.bar-scale-track {
+  position: relative;
+  height: 18px;
+}
+
+.scale-mark {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 500;
+}
+
 .bar-chart-grid {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .bar-item {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 160px 1fr 64px;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .bar-label {
-  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bar-label-name {
+  font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: #2c3e50;
+  letter-spacing: 0.01em;
   text-align: right;
+  line-height: 1.2;
 }
 
 .bar-wrapper {
-  background: #f0f0f0;
-  border-radius: 8px;
-  height: 32px;
+  background: #f3f0f8;
+  border-radius: 6px;
+  height: 28px;
   position: relative;
   overflow: hidden;
 }
 
-.bar-fill {
-  height: 100%;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 12px;
-  transition: width 0.8s ease;
+.bar-grid-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-.bar-value {
-  color: white;
-  font-weight: 700;
-  font-size: 13px;
+.bar-grid-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,0.9);
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bar-score-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.bar-score-num {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bar-keyword {
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 /* 饼图 */

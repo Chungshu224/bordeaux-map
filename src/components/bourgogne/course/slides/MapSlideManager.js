@@ -106,11 +106,10 @@ export class MapSlideManager {
     // 載入所有產區圖層
     await this.loadAllRegionLayers()
 
-    // 不再自動隱藏圖層，讓所有產區在初始時就顯示
-    // 如果配置了regions（新版互動式）或interactive標記，初始隱藏所有產區圖層
-    // if (this.config.regions || this.config.interactive) {
-    //   this.hideAllLayers()
-    // }
+    // 如果配置了 regions（按鈕互動式）或 interactive 標記，初始隱藏所有產區圖層，只留底圖
+    if (this.config.regions || this.config.interactive) {
+      this.hideAllLayers()
+    }
 
     // 添加標記
     this.addMarkers()
@@ -162,8 +161,13 @@ export class MapSlideManager {
    */
   async loadGeoJSONLayer(geojsonFile) {
     try {
-      console.log('載入 GeoJSON:', geojsonFile.url)
-      const response = await fetch(geojsonFile.url)
+      // 修正相對路徑：/geojson/... → /bourgogne/geojson/...
+      let url = geojsonFile.url
+      if (url && url.startsWith('/geojson/')) {
+        url = '/bourgogne' + url
+      }
+      console.log('載入 GeoJSON:', url)
+      const response = await fetch(url)
       
       if (!response.ok) {
         console.error(`載入失敗: ${geojsonFile.url}, 狀態: ${response.status}`)

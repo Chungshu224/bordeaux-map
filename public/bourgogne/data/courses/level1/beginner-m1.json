@@ -597,7 +597,22 @@
           "type": "content",
           "title": "風土（Terroir）的重要性",
           "image": "/bourgogne/images/Lesson/bourgogne-terroir-elements.svg",
-          "content": "布根地的獨特之處在於「風土」概念 - 同一葡萄品種在不同地塊會展現截然不同的風格，這是由土壤、坡向、海拔與微氣候共同決定的。"
+          "content": "布根地的獨特之處在於「風土」概念 - 同一葡萄品種在不同地塊會展現截然不同的風格，這是由土壤、坡向、海拔與微氣候共同決定的。",
+          "sections": [
+            {
+              "title": "🌱 土壤",
+              "text": "石灰岩與黏土的比例因地塊不同而異，直接影響葡萄酒的礦物感與結構"
+            },
+            {
+              "title": "☀️ 坡向與海拔",
+              "text": "東向緩坡接受最佳日照，特級園幾乎都在坡中段，高度 200–350 公尺之間"
+            },
+            {
+              "title": "🌬️ 微氣候",
+              "text": "山丘與森林帶來的屏障與空氣流動，造就同一村莊內截然不同的小環境"
+            }
+          ],
+          "note": "📌 我們將在第二模組「風土與品種」中深入探索各產區的土壤組成與 AOC 分級制度"
         }
       ]
     },
@@ -683,19 +698,16 @@
         {
           "type": "content",
           "title": "🏛️ 羅馬時代的起源（312年起）",
-          "image": "/images/Lesson/roman-burgundy.jpg",
           "content": "羅馬帝國征服高盧後，在布根地地區引入了葡萄種植技術。羅馬人發現這裡的石灰岩土壤和大陸性氣候非常適合種植葡萄，並建立了最早的葡萄園。許多現今的頂級葡萄園位置，在羅馬時代就已經被認定為優質地塊。"
         },
         {
           "type": "content",
           "title": "⛪ 中世紀修道院時期（910-1789年）",
-          "image": "/images/Lesson/monastery-vineyard.jpg",
           "content": "中世紀時期，天主教修道院成為葡萄酒釀造的核心。修道士們需要葡萄酒用於彌撒儀式，同時也將釀酒視為榮耀上帝的工作。他們有充足的時間和資源進行長期觀察和實驗，逐步建立了科學化的葡萄種植與釀造體系。"
         },
         {
           "type": "content",
           "title": "🏰 西篤會修道士的貢獻",
-          "image": "/images/Lesson/cistercian-monks.jpg",
           "content": "西篤會修道士（Cistercian Monks）對布根地葡萄酒發展貢獻巨大。1098年從本篤會分離出來的西篤會，秉持「勞動即祈禱」的理念，親自耕作葡萄園。他們以科學精神仔細觀察不同地塊的差異，首創「風土」（Terroir）概念，並建立了嚴格的品質標準。"
         },
         {
@@ -712,7 +724,7 @@
         {
           "type": "image",
           "title": "傳奇酒莊：Clos de Vougeot",
-          "image": "/images/Lesson/clos-de-vougeot.jpg",
+          "image": "/bourgogne/images/Lesson/Grand Cru Clos de Vougeot .jpg",
           "caption": "Clos de Vougeot 建於 1110 年，是西篤會修道士最偉大的作品。這座 50 公頃的葡萄園被石牆完整圍繞，至今仍是布根地的地標。雖然現在由 80 多位酒農分別擁有，但依然保持著統一的「Clos」身份。"
         },
         {
@@ -734,13 +746,11 @@
         {
           "type": "content",
           "title": "📜 1395年的歷史性決定",
-          "image": "/images/Lesson/philippe-le-hardi.jpg",
           "content": "1395年7月6日，勃艮第公爵菲利普二世（Philippe le Hardi，勇敢者菲利普）頒布了一道改變布根地命運的法令：\n\n**「禁止種植加美葡萄（Gamay），違者將受到嚴厲懲罰」**\n\n他稱加美為「非常惡劣且不忠的葡萄」（très déloyal plant），認為高產量的加美破壞了布根地葡萄酒的品質與聲譽。這個決定強制種植黑皮諾，奠定了布根地紅酒追求品質勝過產量的傳統。"
         },
         {
           "type": "content",
           "title": "⚔️ 法國大革命的深遠影響（1789年）",
-          "image": "/images/Lesson/french-revolution-vineyard.jpg",
           "content": "1789年法國大革命爆發，教會和貴族財產被沒收國有化。1790-1791年間，這些葡萄園被分割成小塊拍賣給平民，形成了布根地獨特的土地所有權結構。"
         },
         {
@@ -757,7 +767,6 @@
         {
           "type": "content",
           "title": "👥 布根地的「小農經濟」奇觀",
-          "image": "/images/Lesson/vineyard-ownership.jpg",
           "content": "布根地的土地所有權極度分散，這在全球葡萄酒產區中獨樹一幟：\n\n• **Clos de Vougeot** - 50公頃由 80 多位酒農共同擁有\n• **Grand Cru Charlemagne** - 平均每位地主只擁有 0.5 公頃\n• 同一塊特級園可能產出 30 多種不同的酒\n\n這種格局解釋了為什麼布根地有數千家小型酒莊，也是為什麼同一個葡萄園名稱下，品質和價格可能差異巨大。"
         },
         {
@@ -768,7 +777,6 @@
         {
           "type": "content",
           "title": "🌍 UNESCO 世界遺產：Climats（2015年）",
-          "image": "/images/Lesson/climats-unesco.jpg",
           "content": "2015年7月4日，布根地的「Climats」正式被列入聯合國教科文組織世界遺產，這是對布根地千年釀酒文化的最高認可。\n\n**Climats** 指的是 1,247 個被精確劃分的葡萄園地塊，從夏布利延伸到 Maranges，每一塊都有：\n• 獨特的名稱（通常來自中世紀）\n• 特定的土壤組成\n• 明確的邊界（通常由石牆標示）\n• 數百年的歷史記錄\n\n這些 Climats 不只是葡萄園，更是「人與自然互動兩千年的活見證」。"
         },
         {
@@ -1142,13 +1150,13 @@
         {
           "type": "image",
           "title": "🍷 特級園酒標實例：Chambertin Grand Cru",
-          "image": "/images/Lesson/Chambertin Grand Cru.jpg",
+          "image": "/bourgogne/images/Lesson/Chambertin Grand Cru.jpg",
           "caption": "特級園酒標只標示葡萄園名稱「Chambertin」，不需標示村莊名"
         },
         {
           "type": "image",
           "title": "🍷 一級園酒標實例：Gevrey-Chambertin 1er Cru",
-          "image": "/images/Lesson/Gevrey-Chambertin 1er Cru Les Cazetiers.jpg",
+          "image": "/bourgogne/images/Lesson/Gevrey-Chambertin 1er Cru Les Cazetiers.jpg",
           "caption": "一級園酒標標示「村莊名 + 1er Cru + 葡萄園名」：Gevrey-Chambertin 1er Cru Les Cazetiers"
         },
         {

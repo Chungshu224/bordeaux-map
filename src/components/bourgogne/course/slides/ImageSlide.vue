@@ -5,7 +5,7 @@
     </div>
     <div class="slide-body">
       <div class="image-wrapper" @click="openLightbox" title="點擊放大">
-        <img :src="slide.image" :alt="slide.title" class="slide-image" />
+        <img :src="encodeSrc(slide.image)" :alt="slide.title" class="slide-image" />
         <div class="zoom-hint">
           <span class="zoom-icon">🔍</span>
           <span class="zoom-text">點擊放大</span>
@@ -22,7 +22,7 @@
             <button class="lightbox-close" @click="closeLightbox" aria-label="關閉">✕</button>
             <div class="lightbox-image-wrap">
               <img
-                :src="slide.image"
+                :src="encodeSrc(slide.image)"
                 :alt="slide.title"
                 class="lightbox-image"
                 :style="{ transform: `scale(${zoomLevel}) translate(${panX}px, ${panY}px)` }"
@@ -57,6 +57,12 @@ defineProps({
     required: true
   }
 })
+
+function encodeSrc(src) {
+  if (!src) return src
+  // 只對空格做編碼，避免雙重編碼
+  return src.replace(/ /g, '%20')
+}
 
 const lightboxOpen = ref(false)
 const zoomLevel = ref(1)
@@ -174,6 +180,7 @@ onUnmounted(() => {
   flex-direction: column;
   padding: 48px 60px;
   border-radius: 24px;
+  box-sizing: border-box;
 }
 
 .slide-header {

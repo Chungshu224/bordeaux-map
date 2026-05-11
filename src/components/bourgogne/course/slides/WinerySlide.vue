@@ -36,6 +36,7 @@ const props = defineProps({
   flex-direction: column;
   padding: 48px 56px;
   border-radius: 24px;
+  box-sizing: border-box;
 }
 
 .slide-header {

@@ -13,7 +13,7 @@
     <div v-else-if="currentView === 'courseContent'" class="course-container">
       <!-- 新版統一側邊欄架構 -->
       <BourgogneCourseLayout
-        v-if="viewMode !== 'lesson'"
+        v-if="viewMode === 'overview' || viewMode === 'list'"
         :currentLevel="selectedLevel"
         @backToLevelSelector="backToLevelSelector"
         @changeLevel="handleChangeLevel"
@@ -23,12 +23,27 @@
       <!-- 課程內容 - 全螢幕簡報模式 -->
       <SlideViewer
         v-else-if="viewMode === 'lesson' && currentLesson"
+        :key="currentLesson.id"
         :lesson="currentLesson"
         :lessonNumber="currentLessonIndex + 1"
         :totalLessons="moduleData.lessons.length"
         @close="backToOverview"
         @complete="completeLesson"
       />
+
+      <!-- 模組測驗 -->
+      <QuizEngine
+        v-else-if="viewMode === 'quiz' && quizData"
+        :quiz="quizData"
+        :moduleId="selectedModule.id"
+        @quizComplete="handleQuizComplete"
+        @reviewLessons="reviewLessons"
+        @continueNext="continueToNextModule"
+      />
+      <div v-else-if="viewMode === 'quiz' && !quizData" class="quiz-loading">
+        <div class="loading-spinner">⏳</div>
+        <p>載入測驗中...</p>
+      </div>
     </div>
 
     <!-- 證書展示 -->
@@ -76,6 +91,9 @@ const moduleData = ref(null)
 const currentLessonIndex = ref(0)
 const completedLessons = ref([])
 const lessonStartTime = ref(0)
+
+// 測驗資料
+const quizData = ref(null)
 
 // 證書資料
 const certificateData = ref(null)
@@ -308,8 +326,33 @@ const completeLesson = (lessonId) => {
   if (currentLessonIndex.value < moduleData.value.lessons.length - 1) {
     currentLessonIndex.value++
   } else {
-    // 所有課程完成，進入測驗
+    // 所有課程完成，載入模組測驗
+    quizData.value = null
     viewMode.value = 'quiz'
+    loadModuleQuiz()
+  }
+}
+
+// 載入模組測驗（從 Level 題庫隨機抽題）
+const loadModuleQuiz = async () => {
+  const levelId = selectedLevel.value?.id
+  if (!levelId) { viewMode.value = 'overview'; return }
+  try {
+    const res = await fetch(`/bourgogne/data/courses/level${levelId}/quiz-bank.json`)
+    if (!res.ok) throw new Error('no quiz bank')
+    const data = await res.json()
+    // 轉換格式：correct → correctAnswer，去掉選項前綴字母
+    const allQ = data.questions.map(q => ({
+      ...q,
+      correctAnswer: q.correct ?? q.correctAnswer,
+      options: q.options.map(opt => opt.replace(/^[A-Za-z][\.\)、]\s*/, ''))
+    }))
+    // 隨機抽取 10 題
+    const shuffled = allQ.sort(() => Math.random() - 0.5).slice(0, 10)
+    quizData.value = { questions: shuffled, passingScore: 70 }
+  } catch {
+    // 無題庫時直接回到概覽
+    viewMode.value = 'overview'
   }
 }
 
@@ -495,6 +538,27 @@ const handleOpenNotebook = () => {
 .course-container,
 .certificate-container {
   min-height: 100vh;
+}
+
+.quiz-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 16px;
+  color: #667eea;
+  font-size: 1.1rem;
+}
+
+.loading-spinner {
+  font-size: 2.5rem;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* 模組總覽 */

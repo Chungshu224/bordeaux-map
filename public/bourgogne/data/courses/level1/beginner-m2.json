@@ -29,43 +29,6 @@
             "labelCaption": "布根地四級分級金字塔結構"
           }
         ],
-        "pyramid": {
-          "title": "布根地分級金字塔",
-          "levels": [
-            {
-              "level": 4,
-              "name": "Grands Crus 特級園",
-              "percentage": "1%",
-              "description": "最頂級的33個特級園",
-              "color": "#9C27B0",
-              "maxYield": "35-37 hl/ha"
-            },
-            {
-              "level": 3,
-              "name": "Premiers Crus 一級園",
-              "percentage": "10%",
-              "description": "約640個優質一級園",
-              "color": "#FF9800",
-              "maxYield": "40-48 hl/ha"
-            },
-            {
-              "level": 2,
-              "name": "Villages 村莊級",
-              "percentage": "36%",
-              "description": "44個村莊級產區",
-              "color": "#4CAF50",
-              "maxYield": "40-50 hl/ha"
-            },
-            {
-              "level": 1,
-              "name": "Régionales 大區級",
-              "percentage": "53%",
-              "description": "整個布根地大區",
-              "color": "#2196F3",
-              "maxYield": "55-60 hl/ha"
-            }
-          ]
-        },
         "summary": "AOC制度保證了布根地葡萄酒的品質與產地真實性，分級金字塔清楚展現了風土的細緻差異。"
       },
       "quiz": {
@@ -134,7 +97,7 @@
               "Bourgogne Aligoté",
               "Bourgogne Hautes-Côtes de Nuits"
             ],
-            "labelImage": "/images/Lesson/Bourgogne Blanc.jpg",
+            "labelImage": "/bourgogne/images/Lesson/Bourgogne Blanc.jpg",
             "labelCaption": "大區級酒標範例：Bourgogne Blanc"
           },
           {
@@ -153,7 +116,7 @@
               "Meursault（奶油質感、榛果香）",
               "Pommard（強勁有力、需陳年）"
             ],
-            "labelImage": "/images/Lesson/Gevrey Chambertin .jpg",
+            "labelImage": "/bourgogne/images/Lesson/Gevrey Chambertin .jpg",
             "labelCaption": "村莊級酒標範例：Gevrey-Chambertin"
           },
           {
@@ -172,7 +135,7 @@
               "Vosne-Romanée 1er Cru 'Les Suchots'",
               "Volnay 1er Cru 'Clos des Chênes'"
             ],
-            "labelImage": "/images/Lesson/Morey st denis 1er Cru Les Genavrieres.jpg",
+            "labelImage": "/bourgogne/images/Lesson/Morey st denis 1er Cru Les Genavrieres.jpg",
             "labelCaption": "一級園酒標範例：Morey-Saint-Denis 1er Cru Les Genavrières"
           },
           {
@@ -191,7 +154,7 @@
               "Montrachet（白酒之王）",
               "Clos de Vougeot（最大的特級園，50公頃）"
             ],
-            "labelImage": "/images/Lesson/Richebourg Grand Cru.jpg",
+            "labelImage": "/bourgogne/images/Lesson/Richebourg Grand Cru.jpg",
             "labelCaption": "特級園酒標範例：Richebourg Grand Cru"
           }
         ],

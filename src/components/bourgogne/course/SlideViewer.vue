@@ -39,15 +39,6 @@
           ▶
         </button>
       </div>
-
-      <!-- Row 3：完成課程按鈕（全寬，僅最後一張顯示） -->
-      <button 
-        v-if="currentSlide === slides.length - 1"
-        class="nav-control-btn complete-btn full-width" 
-        @click="completeLesson"
-      >
-        ✓ {{ $t('common.actions.finish') }}
-      </button>
     </div>
 
     <!-- 簡報主區域 -->

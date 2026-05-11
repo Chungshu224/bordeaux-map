@@ -452,6 +452,7 @@
         {
           "type": "content",
           "title": "Marsannay：多彩的入門",
+          "image": "/bourgogne/images/Lesson/Marsannay Les Longeroies.jpg",
           "content": "Marsannay 是夜丘最北的村莊，也是唯一可以釀造紅、白、粉紅三色酒的產區。沒有特級園，但村莊級和一級園品質優秀，性價比高。",
           "keyPoints": [
             "特色：三色酒（紅、白、粉紅）",
@@ -463,6 +464,7 @@
         {
           "type": "content",
           "title": "Fixin：Gevrey 的兄弟",
+          "image": "/bourgogne/images/Lesson/Fixin.jpg",
           "content": "Fixin 緊鄰 Gevrey-Chambertin，土壤相似，風格也接近，但價格更親民。擁有5個一級園，酒體結構扎實，需要陳年。",
           "keyPoints": [
             "風格：強勁、結構緊實、單寧明顯",
@@ -474,6 +476,8 @@
         {
           "type": "content",
           "title": "Gevrey-Chambertin：夜丘之王",
+          "image": "/bourgogne/images/Lesson/Gevrey-Chambertin.jpg",
+          "imagePosition": "bottom",
           "content": "Gevrey-Chambertin 擁有9個特級園，是夜丘最大、最富盛名的村莊。這裡的酒強勁有力、複雜度高、陳年潛力極強，是布根地紅酒的典範。"
         },
         {
