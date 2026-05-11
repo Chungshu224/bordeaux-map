@@ -141,10 +141,10 @@ export async function getUserPurchases(userId) {
 }
 
 /**
- * 建立 Stripe Checkout Session（訂閱模式）
+ * 建立 ECPay 付款表單（一次性付款）
  * @param {{ courseId, tier, billingPeriod }} params
  *   userId / userEmail 不再由前端傳送，伺服器端依 JWT 取得
- * @returns {Promise<{ sessionUrl: string, sessionId: string }>}
+ * @returns {Promise<{ formHtml: string, merchantTradeNo: string, ecpayUrl: string }>}
  */
 export async function initiateCheckout({ courseId, tier, billingPeriod }) {
   if (!supabase) throw new Error('Supabase 未初始化')
@@ -152,7 +152,7 @@ export async function initiateCheckout({ courseId, tier, billingPeriod }) {
   const accessToken = sessionData?.session?.access_token
   if (!accessToken) throw new Error('請先登入')
 
-  const res = await fetch('/api/stripe-checkout', {
+  const res = await fetch('/api/ecpay-checkout', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -165,6 +165,19 @@ export async function initiateCheckout({ courseId, tier, billingPeriod }) {
     throw new Error(err.message || `Checkout failed (${res.status})`)
   }
   return await res.json()
+}
+
+/**
+ * 將 ECPay 回傳的 formHtml 注入 DOM 並提交
+ * @param {string} formHtml
+ */
+export function submitEcpayForm(formHtml) {
+  const container = document.createElement('div')
+  container.style.display = 'none'
+  container.innerHTML = formHtml
+  document.body.appendChild(container)
+  const form = container.querySelector('#ecpay-form')
+  if (form) form.submit()
 }
 
 /**

@@ -190,7 +190,7 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState } from '../stores/authStore.js'
-import { initiateCheckout } from '../lib/purchaseService.js'
+import { initiateCheckout, submitEcpayForm } from '../lib/purchaseService.js'
 
 const router = useRouter()
 const authUser = computed(() => authState.user)
@@ -228,9 +228,9 @@ const faqs = [
   { q: '波爾多完整版包含哪些內容？', a: '包含波爾多 Level 1 至 Level 4 全部課程（共 43 堂）、4 種互動練習遊戲、5f9c定產區完整互動地圖、地質岩層與氣候熱力圖進階圖層，以及品飲筆記本功能。' },
   { q: '年繳可以退款嗎？', a: '訂閱後 7 天內如需退款，請聯絡我們，我們將全額退款，無任何問題。' },
   { q: '多產區方案何時上線？', a: '多產區方案預計近期推出，屆時可自選三大世界產區。您可先訂閱波爾多完整版，多產區方案上線時可隨時升級。' },
-  { q: '月繳和年繳可以隨時切換嗎？', a: '可以。在「我的訂單」點擊管理訂閱，切換至 Stripe 客戶入口後升降級。' },
+  { q: '月繳和年繳可以隨時切換嗎？', a: '可以。月繳與年繳為一次性付款，如需切換方案請聯絡我們，客服將協助您辦理。' },
   { q: '免費體驗有時間限制嗎？', a: '沒有！免費方案永久有效，Level 1 波爾多課程完全免費，不需要信用卡。' },
-  { q: '付款方式有哪些？', a: '透過 Stripe 安全付款，支援 Visa、MasterCard、JCB 等主要信用卡，全程加密處理。' },
+  { q: '付款方式有哪些？', a: '透過綠界科技（ECPay）安全付款，支援信用卡（Visa、MasterCard、JCB）、ATM 轉帳、超商代碼等多種方式，全程加密處理。' },
 ]
 
 async function handleFree() {
@@ -248,14 +248,12 @@ async function handleSingle() {
   }
   checkoutLoading.value = true
   try {
-    const { sessionUrl } = await initiateCheckout({
+    const { formHtml } = await initiateCheckout({
       courseId: 'bordeaux',
       tier: 'basic',
       billingPeriod: period.value,
-      userId: authUser.value.id,
-      userEmail: authUser.value.email,
     })
-    window.location.href = sessionUrl
+    submitEcpayForm(formHtml)
   } catch (err) {
     checkoutLoading.value = false
     alert(`付款初始化失敗：${err.message || '請稍後再試'}`)
@@ -269,14 +267,12 @@ async function handleAll() {
   }
   checkoutLoading.value = true
   try {
-    const { sessionUrl } = await initiateCheckout({
+    const { formHtml } = await initiateCheckout({
       courseId: 'bordeaux',
       tier: 'premium',
       billingPeriod: period.value,
-      userId: authUser.value.id,
-      userEmail: authUser.value.email,
     })
-    window.location.href = sessionUrl
+    submitEcpayForm(formHtml)
   } catch (err) {
     checkoutLoading.value = false
     alert(`付款初始化失敗：${err.message || '請稍後再試'}`)

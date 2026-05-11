@@ -926,7 +926,7 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { supabase } from '../lib/supabaseClient.js'
 import { authState, authActions } from '../stores/authStore.js'
-import { initiateCheckout } from '../lib/purchaseService.js'
+import { initiateCheckout, submitEcpayForm } from '../lib/purchaseService.js'
 import { fetchRecentPosts } from '../lib/forumService.js'
 
 const router = useRouter()
@@ -1050,14 +1050,12 @@ const handlePurchase = async (courseId, tier) => {
   }
   checkoutLoading.value = true
   try {
-    const { sessionUrl } = await initiateCheckout({
+    const { formHtml } = await initiateCheckout({
       courseId,
       tier,
       billingPeriod: billingPeriod.value,
-      userId:    authUser.value.id,
-      userEmail: authUser.value.email
     })
-    window.location.href = sessionUrl
+    submitEcpayForm(formHtml)
   } catch (err) {
     checkoutLoading.value = false
     alert(`付款初始化失敗：${err.message || '請稍後再試'}`)
