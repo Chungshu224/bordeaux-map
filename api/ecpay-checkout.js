@@ -18,6 +18,7 @@
 import crypto from 'crypto'
 import { verifyAuth } from './_lib/auth.js'
 import { getUserClient } from './_lib/supabase.js'
+import { getAdminClient } from './_lib/auth.js'
 import { getServerPrice } from './_lib/pricing.js'
 import { escapeHtml, maskId } from './_lib/security.js'
 import { checkUserCheckoutRate } from './_lib/ratelimit.js'
@@ -103,7 +104,7 @@ export default async function handler(req, res) {
     return res.status(429).json({ message: '請稍後再試' })
   }
 
-  const { courseId, tier, billingPeriod = 'monthly' } = req.body || {}
+  const { courseId, tier, billingPeriod = 'monthly', couponCode } = req.body || {}
 
   // 基本驗證
   if (!courseId || !tier) {
@@ -120,9 +121,42 @@ export default async function handler(req, res) {
   }
 
   // ── C1: 金額一律以伺服器端定價為準，忽略 req.body.amount ─────────────
-  const amount = getServerPrice(courseId, tier, billingPeriod)
+  let amount = getServerPrice(courseId, tier, billingPeriod)
   if (!amount) {
     return res.status(400).json({ message: '無法取得有效定價' })
+  }
+
+  // ── 驗證折扣碼（discount / affiliate 型）───────────────────────────
+  let couponReferrerId = null
+  let validatedCoupon  = null
+
+  if (couponCode) {
+    const code  = String(couponCode).trim().toUpperCase().slice(0, 50)
+    const admin = getAdminClient()
+    if (admin) {
+      const { data: coupon } = await admin
+        .from('coupon_codes')
+        .select('*')
+        .eq('code', code)
+        .eq('active', true)
+        .single()
+
+      if (coupon && (coupon.type === 'discount' || coupon.type === 'affiliate')) {
+        const now = new Date()
+        const notExpired =
+          (!coupon.valid_from  || new Date(coupon.valid_from)  <= now) &&
+          (!coupon.valid_until || new Date(coupon.valid_until) >= now)
+        const notOverLimit =
+          coupon.max_uses === null || (coupon.used_count || 0) < coupon.max_uses
+
+        if (notExpired && notOverLimit && coupon.discount_pct > 0) {
+          // 套用折扣，不得低於 NT$1
+          amount = Math.max(1, Math.round(amount * (1 - coupon.discount_pct / 100)))
+          couponReferrerId = coupon.referrer_id || null
+          validatedCoupon  = code
+        }
+      }
+    }
   }
 
   const merchantId   = process.env.ECPAY_MERCHANT_ID
@@ -147,15 +181,17 @@ export default async function handler(req, res) {
   const { error: insertErr } = await supabaseUser
     .from('purchases')
     .insert({
-      user_id: userId,
-      course_id: courseId,
+      user_id:          userId,
+      course_id:        courseId,
       tier,
-      amount,                       // 伺服器端權威金額
-      currency: 'TWD',
-      status: 'pending',
+      amount,
+      currency:         'TWD',
+      status:           'pending',
       payment_provider: 'ecpay',
-      billing_period: billingPeriod,
-      merchant_trade_no: merchantTradeNo
+      billing_period:   billingPeriod,
+      merchant_trade_no: merchantTradeNo,
+      coupon_code:      validatedCoupon  || null,
+      referrer_id:      couponReferrerId || null,
     })
 
   if (insertErr) {

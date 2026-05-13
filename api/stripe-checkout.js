@@ -22,6 +22,7 @@
 import Stripe from 'stripe'
 import crypto from 'crypto'
 import { verifyAuth } from './_lib/auth.js'
+import { getAdminClient } from './_lib/auth.js'
 import { resolveOrigin } from './_lib/security.js'
 import { checkUserCheckoutRate } from './_lib/ratelimit.js'
 
@@ -52,7 +53,7 @@ export default async function handler(req, res) {
     return res.status(429).json({ message: '請稍後再試' })
   }
 
-  const { courseId, tier, billingPeriod } = req.body || {}
+  const { courseId, tier, billingPeriod, couponCode } = req.body || {}
 
   // 驗證必填欄位
   if (!courseId || !tier || !billingPeriod) {
@@ -66,6 +67,40 @@ export default async function handler(req, res) {
   }
   if (!['monthly', 'yearly'].includes(billingPeriod)) {
     return res.status(400).json({ message: '無效計費週期' })
+  }
+
+  // ── 驗證優惠碼（可選）───────────────────────────────────────
+  let trialDays       = 0
+  let couponReferrerId = null
+  let validatedCoupon  = null
+
+  if (couponCode) {
+    const code  = String(couponCode).trim().toUpperCase().slice(0, 50)
+    const admin = getAdminClient()
+    if (admin) {
+      const { data: coupon } = await admin
+        .from('coupon_codes')
+        .select('*')
+        .eq('code', code)
+        .eq('active', true)
+        .single()
+
+      if (coupon) {
+        const now = new Date()
+        const valid =
+          (!coupon.valid_from  || new Date(coupon.valid_from)  <= now) &&
+          (!coupon.valid_until || new Date(coupon.valid_until) >= now) &&
+          (coupon.max_uses === null || (coupon.used_count || 0) < coupon.max_uses)
+
+        if (valid) {
+          if (coupon.type === 'free_trial') {
+            trialDays = coupon.trial_days || 30
+          }
+          couponReferrerId = coupon.referrer_id || null
+          validatedCoupon  = code
+        }
+      }
+    }
   }
 
   const secretKey = process.env.STRIPE_SECRET_KEY
@@ -110,15 +145,20 @@ export default async function handler(req, res) {
         userId,
         courseId,
         tier,
-        billingPeriod
+        billingPeriod,
+        couponCode:  validatedCoupon  || '',
+        referrerId:  couponReferrerId || '',
       },
       subscription_data: {
         metadata: {
           userId,
           courseId,
           tier,
-          billingPeriod
-        }
+          billingPeriod,
+          couponCode:  validatedCoupon  || '',
+          referrerId:  couponReferrerId || '',
+        },
+        ...(trialDays > 0 ? { trial_period_days: trialDays } : {}),
       },
       payment_method_types: ['card'],
       locale: 'zh-TW',

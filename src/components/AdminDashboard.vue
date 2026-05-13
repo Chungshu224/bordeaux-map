@@ -359,9 +359,117 @@
         </div>
       </section>
 
-    </main>
+      <!-- ── 優惠碼管理 ── -->
+      <section v-if="activeTab === 'coupons'" class="tab-panel">
+        <div class="section-header">
+          <h2 class="section-title">🎟️ 優惠碼管理</h2>
+          <button class="btn-primary" @click="openNewCoupon">＋ 新增優惠碼</button>
+        </div>
 
-    <!-- 公告編輯彈窗 -->
+        <!-- KPI -->
+        <div class="kpi-grid" style="margin-bottom:24px">
+          <div class="kpi-card">
+            <div class="kpi-value">{{ couponList.length }}</div>
+            <div class="kpi-label">優惠碼總數</div>
+          </div>
+          <div class="kpi-card kpi-green">
+            <div class="kpi-value">{{ couponList.filter(c => c.active).length }}</div>
+            <div class="kpi-label">有效中</div>
+          </div>
+          <div class="kpi-card kpi-orange">
+            <div class="kpi-value">{{ couponList.reduce((s,c) => s + (c.used_count||0), 0) }}</div>
+            <div class="kpi-label">累計使用次數</div>
+          </div>
+          <div class="kpi-card" style="border-top-color:#8e44ad">
+            <div class="kpi-value">{{ affiliateCoupons.length }}</div>
+            <div class="kpi-label">合作夥伴碼</div>
+          </div>
+        </div>
+
+        <div v-if="couponLoading" class="loading-state">載入中…</div>
+        <div v-else>
+          <div v-if="couponList.length === 0" class="empty-state">尚無優惠碼，點擊「新增優惠碼」建立第一個</div>
+          <div v-else class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>優惠碼</th>
+                  <th>類型</th>
+                  <th>效果</th>
+                  <th>合作夥伴</th>
+                  <th>使用 / 上限</th>
+                  <th>到期日</th>
+                  <th>狀態</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="c in couponList" :key="c.code">
+                  <td><code class="code-tag">{{ c.code }}</code></td>
+                  <td>{{ couponTypeLabel(c.type) }}</td>
+                  <td>
+                    <span v-if="c.type === 'free_trial'">免費 {{ c.trial_days || 30 }} 天</span>
+                    <span v-else-if="c.discount_pct > 0">折扣 {{ c.discount_pct }}%</span>
+                    <span v-else>—</span>
+                  </td>
+                  <td>
+                    <span v-if="c.referrer_name" class="tag-pill tag-purple">{{ c.referrer_name }}</span>
+                    <span v-else class="text-muted">—</span>
+                  </td>
+                  <td>{{ c.used_count || 0 }}<span v-if="c.max_uses" class="text-muted"> / {{ c.max_uses }}</span></td>
+                  <td class="date-cell">
+                    <span v-if="c.valid_until">{{ formatDate(c.valid_until) }}</span>
+                    <span v-else class="text-muted">永久</span>
+                  </td>
+                  <td>
+                    <span :class="['status-pill', c.active ? 'status-on' : 'status-off']">
+                      {{ c.active ? '有效' : '停用' }}
+                    </span>
+                  </td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn-xs" @click="editCouponItem(c)">編輯</button>
+                      <button
+                        :class="['btn-xs', c.active ? 'btn-deactivate' : 'btn-activate']"
+                        :disabled="togglingCoupon === c.code"
+                        @click="toggleCoupon(c)"
+                      >{{ togglingCoupon === c.code ? '…' : c.active ? '停用' : '啟用' }}</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 合作夥伴分紅試算 -->
+          <div v-if="affiliateCoupons.length > 0" class="referral-section">
+            <h3 class="section-subtitle">💸 合作夥伴分紅試算</h3>
+            <p class="referral-note">以下為應計分紅金額試算（以月費 NT$249 × 使用次數 × 分紅% 計算），請依實際合約條款調整</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>合作單位</th>
+                  <th>優惠碼</th>
+                  <th>分紅%</th>
+                  <th>使用次數</th>
+                  <th>估計應付分紅</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="a in affiliateCoupons" :key="a.code">
+                  <td>{{ a.referrer_name }}</td>
+                  <td><code class="code-tag">{{ a.code }}</code></td>
+                  <td>{{ a.commission_pct }}%</td>
+                  <td>{{ a.used_count || 0 }}</td>
+                  <td class="amount-cell">NT$ {{ Math.round((a.used_count || 0) * 249 * (a.commission_pct / 100)).toLocaleString() }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
     <div v-if="editingAnn" class="modal-overlay" @click.self="editingAnn = null">
       <div class="modal modal-wide">
         <div class="modal-header">
@@ -471,6 +579,88 @@
       </div>
     </div>
 
+    <!-- 優惠碼編輯彈窗 -->
+    <div v-if="editingCoupon" class="modal-overlay" @click.self="editingCoupon = null">
+      <div class="modal modal-wide">
+        <div class="modal-header">
+          <h3>{{ editingCoupon._isNew ? '新增優惠碼' : `編輯：${editingCoupon.code}` }}</h3>
+          <button @click="editingCoupon = null">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>優惠碼 <span class="req">*</span></label>
+              <input v-model="editingCoupon.code" :disabled="!editingCoupon._isNew" type="text" class="field-input" placeholder="EXAMPLE2026" style="text-transform:uppercase" maxlength="30" />
+            </div>
+            <div class="form-group">
+              <label>類型 <span class="req">*</span></label>
+              <select v-model="editingCoupon.type" class="field-select">
+                <option value="free_trial">免費試用（free_trial）</option>
+                <option value="discount">折扣碼（discount）</option>
+                <option value="affiliate">合作夥伴（affiliate）</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>免費天數（free_trial 用）</label>
+              <input v-model.number="editingCoupon.trial_days" type="number" min="0" max="365" class="field-input" placeholder="30" />
+            </div>
+            <div class="form-group">
+              <label>折扣百分比（0~100，discount 用）</label>
+              <input v-model.number="editingCoupon.discount_pct" type="number" min="0" max="100" class="field-input" placeholder="0" />
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>合作夥伴 ID</label>
+              <input v-model="editingCoupon.referrer_id" type="text" class="field-input" placeholder="PARTNER_TCW" />
+            </div>
+            <div class="form-group">
+              <label>合作夥伴顯示名稱</label>
+              <input v-model="editingCoupon.referrer_name" type="text" class="field-input" placeholder="台灣侍酒師公會" />
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>分紅百分比（%，affiliate 用）</label>
+              <input v-model.number="editingCoupon.commission_pct" type="number" min="0" max="100" step="0.5" class="field-input" placeholder="0" />
+            </div>
+            <div class="form-group">
+              <label>最大使用次數（空白 = 無限）</label>
+              <input v-model.number="editingCoupon.max_uses" type="number" min="1" class="field-input" placeholder="無限制" />
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>生效時間（空白 = 立即）</label>
+              <input v-model="editingCoupon.valid_from" type="datetime-local" class="field-input" />
+            </div>
+            <div class="form-group">
+              <label>到期時間（空白 = 永久）</label>
+              <input v-model="editingCoupon.valid_until" type="datetime-local" class="field-input" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>備註（內部用，使用者不可見）</label>
+            <input v-model="editingCoupon.note" type="text" class="field-input" placeholder="內部備註…" />
+          </div>
+          <div class="form-group form-check">
+            <label class="check-label">
+              <input type="checkbox" v-model="editingCoupon.active" />
+              立即啟用
+            </label>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-primary" @click="saveCoupon" :disabled="savingCoupon">
+              {{ savingCoupon ? '儲存中…' : '儲存' }}
+            </button>
+            <button class="btn-ghost" @click="editingCoupon = null">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 課程價格編輯彈窗 -->
     <div v-if="editingCourse" class="modal-overlay" @click.self="editingCourse = null">
       <div class="modal modal-wide">
@@ -537,6 +727,7 @@ const tabs = [
   { id: 'achievements',  label: '成就紀錄', icon: '🏆' },
   { id: 'glossary',      label: '辭典管理', icon: '📖' },
   { id: 'announcements', label: '公告管理', icon: '📢' },
+  { id: 'coupons',       label: '優惠碼',   icon: '🎟️' },
 ]
 const activeTab = ref('overview')
 
@@ -779,6 +970,7 @@ watch(activeTab, (tab) => {
   if (tab === 'progress'       && progressList.value.length === 0)       loadProgress(true)
   if (tab === 'achievements'   && achievementsList.value.length === 0)   loadAchievements()
   if (tab === 'announcements'  && announcements.value.length === 0)      loadAnnouncements()
+  if (tab === 'coupons'        && couponList.value.length === 0)          loadCoupons()
 })
 
 // ── 公告管理 ────────────────────────────────────────────────
@@ -897,6 +1089,118 @@ async function deleteAnn(ann) {
 
 function annTypeLabel(t) {
   return { info: '資訊', warning: '警示', promo: '促銷', maintenance: '維護' }[t] ?? t
+}
+
+// ── 優惠碼管理 ────────────────────────────────────────────────
+const couponLoading  = ref(false)
+const couponList     = ref([])
+const editingCoupon  = ref(null)
+const savingCoupon   = ref(false)
+const togglingCoupon = ref(null)
+
+const affiliateCoupons = computed(() =>
+  couponList.value.filter(c => c.referrer_id && Number(c.commission_pct) > 0)
+)
+
+async function loadCoupons() {
+  couponLoading.value = true
+  try {
+    const { data, error } = await supabase
+      .from('coupon_codes')
+      .select('*')
+      .order('created_at', { ascending: false })
+    if (error) throw error
+    couponList.value = data ?? []
+  } finally {
+    couponLoading.value = false
+  }
+}
+
+function openNewCoupon() {
+  editingCoupon.value = {
+    _isNew:         true,
+    code:           '',
+    type:           'free_trial',
+    trial_days:     30,
+    discount_pct:   0,
+    referrer_id:    '',
+    referrer_name:  '',
+    commission_pct: 0,
+    max_uses:       null,
+    valid_from:     '',
+    valid_until:    '',
+    active:         true,
+    note:           '',
+  }
+}
+
+function editCouponItem(c) {
+  const toLocal = (iso) => {
+    if (!iso) return ''
+    const d   = new Date(iso)
+    const pad = n => String(n).padStart(2, '0')
+    return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`
+  }
+  editingCoupon.value = {
+    ...c,
+    _isNew:      false,
+    valid_from:  toLocal(c.valid_from),
+    valid_until: toLocal(c.valid_until),
+  }
+}
+
+async function saveCoupon() {
+  const c = editingCoupon.value
+  if (!c.code?.trim()) { alert('請輸入優惠碼'); return }
+  if (!c.type)         { alert('請選擇類型');   return }
+  savingCoupon.value = true
+  try {
+    const payload = {
+      type:           c.type,
+      trial_days:     c.trial_days     || 0,
+      discount_pct:   c.discount_pct   || 0,
+      referrer_id:    c.referrer_id    || null,
+      referrer_name:  c.referrer_name  || null,
+      commission_pct: c.commission_pct || 0,
+      max_uses:       c.max_uses       || null,
+      valid_from:     c.valid_from     || null,
+      valid_until:    c.valid_until    || null,
+      active:         c.active,
+      note:           c.note           || null,
+    }
+    if (c._isNew) {
+      payload.code = c.code.trim().toUpperCase()
+      const { error } = await supabase.from('coupon_codes').insert(payload)
+      if (error) throw error
+    } else {
+      const { error } = await supabase.from('coupon_codes').update(payload).eq('code', c.code)
+      if (error) throw error
+    }
+    editingCoupon.value = null
+    await loadCoupons()
+  } catch (err) {
+    alert('儲存失敗：' + (err.message || JSON.stringify(err)))
+  } finally {
+    savingCoupon.value = false
+  }
+}
+
+async function toggleCoupon(c) {
+  togglingCoupon.value = c.code
+  try {
+    const { error } = await supabase
+      .from('coupon_codes')
+      .update({ active: !c.active })
+      .eq('code', c.code)
+    if (error) throw error
+    await loadCoupons()
+  } finally {
+    togglingCoupon.value = null
+  }
+}
+
+function couponTypeLabel(t) {
+  return { free_trial: '免費試用', discount: '折扣碼', affiliate: '合作夥伴' }[t] ?? t
 }
 function annModeLabel(m) {
   return { banner: 'Banner', modal: 'Modal', ticker: 'Ticker' }[m] ?? m
@@ -1304,4 +1608,25 @@ function formatStudyTime(sec) {
 .req { color: #e74c3c; }
 .btn-danger { background: #fde8e8 !important; color: #c0392b !important; }
 .btn-danger:hover { background: #f5c6c6 !important; }
+
+/* ── 優惠碼管理 ── */
+.table-wrap { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.data-table th { text-align: left; padding: 10px 14px; background: #f9f5f0; color: #6b1220; font-weight: 700; font-size: .78rem; border-bottom: 2px solid #e9e3da; white-space: nowrap; }
+.data-table td { padding: 10px 14px; border-bottom: 1px solid #f0ece6; color: #444; vertical-align: middle; }
+.data-table tr:hover td { background: #fdfaf6; }
+.code-tag { background: #f0ebe5; border: 1px solid #e0d8d0; border-radius: 5px; padding: 2px 8px; font-size: .82rem; color: #5a3020; letter-spacing: .5px; }
+.tag-pill  { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: .75rem; font-weight: 600; }
+.tag-purple { background: #f3e5f5; color: #8e44ad; }
+.status-pill { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: .75rem; font-weight: 700; }
+.status-on  { background: #e8f8f0; color: #27ae60; }
+.status-off { background: #f0f0f0; color: #aaa; }
+.text-muted { color: #bbb; }
+.row-actions { display: flex; gap: 6px; }
+.amount-cell { font-weight: 700; color: #27ae60; }
+.section-subtitle { font-size: 1.05rem; font-weight: 700; color: #6b1220; margin: 28px 0 8px; }
+.referral-section { margin-top: 32px; }
+.referral-note { font-size: .82rem; color: #888; margin-bottom: 14px; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 600px) { .form-row-2 { grid-template-columns: 1fr; } }
 </style>

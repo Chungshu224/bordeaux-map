@@ -146,11 +146,14 @@ export async function getUserPurchases(userId) {
  *   userId / userEmail 不再由前端傳送，伺服器端依 JWT 取得
  * @returns {Promise<{ formHtml: string, merchantTradeNo: string, ecpayUrl: string }>}
  */
-export async function initiateCheckout({ courseId, tier, billingPeriod }) {
+export async function initiateCheckout({ courseId, tier, billingPeriod, couponCode }) {
   if (!supabase) throw new Error('Supabase 未初始化')
   const { data: sessionData } = await supabase.auth.getSession()
   const accessToken = sessionData?.session?.access_token
   if (!accessToken) throw new Error('請先登入')
+
+  const body = { courseId, tier, billingPeriod }
+  if (couponCode) body.couponCode = couponCode
 
   const res = await fetch('/api/ecpay-checkout', {
     method: 'POST',
@@ -158,7 +161,7 @@ export async function initiateCheckout({ courseId, tier, billingPeriod }) {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${accessToken}`
     },
-    body: JSON.stringify({ courseId, tier, billingPeriod })
+    body: JSON.stringify(body)
   })
   if (!res.ok) {
     const err = await res.json().catch(() => ({}))
@@ -178,6 +181,34 @@ export function submitEcpayForm(formHtml) {
   document.body.appendChild(container)
   const form = container.querySelector('#ecpay-form')
   if (form) form.submit()
+}
+
+/**
+ * 驗證優惠碼並套用
+ *   - free_trial 型：直接對對用戶啟用試用期，不需付款
+ *   - discount/affiliate 型：回傳折扣資訊，繼續結帳流程
+ * @param {{ couponCode: string, courseId: string, tier: string, billingPeriod: string }} params
+ * @returns {Promise<{ type: string, trial_days?: number, discount_pct?: number }>}
+ */
+export async function validateAndApplyCoupon({ couponCode, courseId = 'bordeaux', tier = 'basic', billingPeriod = 'monthly' }) {
+  if (!supabase) throw new Error('Supabase 未初始化')
+  const { data: sessionData } = await supabase.auth.getSession()
+  const accessToken = sessionData?.session?.access_token
+  if (!accessToken) throw new Error('請先登入')
+
+  const res = await fetch('/api/apply-coupon', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${accessToken}`
+    },
+    body: JSON.stringify({ couponCode, courseId, tier, billingPeriod })
+  })
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}))
+    throw new Error(err.message || `優惠碼驗證失敗 (${res.status})`)
+  }
+  return await res.json()
 }
 
 /**

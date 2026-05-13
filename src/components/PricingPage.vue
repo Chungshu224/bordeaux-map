@@ -14,7 +14,7 @@
       <div class="billing-toggle">
         <button :class="['bt-btn', period === 'monthly' ? 'active' : '']" @click="period = 'monthly'">月繳</button>
         <button :class="['bt-btn', period === 'yearly' ? 'active' : '']" @click="period = 'yearly'">
-          年繳 <span class="bt-badge">省最多 33%</span>
+          年繳 <span class="bt-badge">訂一年・送四個月</span>
         </button>
       </div>
     </div>
@@ -56,7 +56,7 @@
               </span>
               <span class="tier-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
             </div>
-            <div class="tier-saving" v-if="period === 'yearly'">相當於 NT$166/月，年省 NT$998</div>
+            <div class="tier-saving" v-if="period === 'yearly'">訂一年等同多送 4 個月・折合 NT$166 / 月</div>
             <div class="tier-desc">適合備考命名・波爾多深度鑽研</div>
           </div>
 
@@ -69,36 +69,43 @@
             <li class="ok">學習進度追蹤 & 成就系統</li>
             <li class="no">其他世界產區課程</li>
           </ul>
-          <button class="tier-cta single-cta" @click="handleSingle">
-            立即訂閱波爾多完整版
+          <!-- 優惠碼 -->
+          <div class="coupon-row">
+            <input
+              v-model="couponCode"
+              class="coupon-input"
+              placeholder="輸入優惠碼（選填）"
+              maxlength="30"
+              autocomplete="off"
+            />
+            <span v-if="couponMsg" :class="['coupon-msg', couponMsgOk ? 'coupon-ok' : 'coupon-err']">{{ couponMsg }}</span>
+          </div>
+          <button class="tier-cta single-cta" :disabled="checkoutLoading" @click="handleSingle">
+            {{ checkoutLoading ? '處理中…' : '立即訂閱波爾多完整版' }}
           </button>
         </div>
 
-        <!-- 多產區方案（即將推出） -->
-        <div class="tier-card all-card coming-soon-card">
-          <div class="popular-badge coming-soon-badge">🔮 即將推出</div>
+        <!-- 全球產區通行證（等待名單） -->
+        <div class="tier-card waitlist-card">
+          <div class="popular-badge waitlist-badge">🌍 即將推出</div>
           <div class="tier-top">
-            <div class="tier-label">多產區方案</div>
+            <div class="tier-label">全球產區通行證</div>
             <div class="tier-price-wrap">
-              <span class="tier-price">
-                NT$ {{ period === 'monthly' ? '449' : '3,598' }}
-              </span>
-              <span class="tier-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
+              <span class="tier-price waitlist-price">即將公佈</span>
             </div>
-            <div class="tier-saving" v-if="period === 'yearly'">相當於 NT$300/月，年省 NT$1,790</div>
-            <div class="tier-desc">可自選三大世界產區・適合侍酒師進階備考</div>
+            <div class="tier-desc">更多世界產區課程陸續製作中<br>搶先登記享早鳥優惠</div>
           </div>
           <ul class="tier-features">
-            <li class="ok">🌍 <strong>自選三大世界產區</strong></li>
-            <li class="ok">所選產區 Level 1–4 完整課程</li>
-            <li class="ok">4 種互動練習遊戲（全選區）</li>
-            <li class="ok">地質岩層 & 氣候熱力圖進階圖層</li>
-            <li class="ok">品飲筆記本（無限則記錄）</li>
-            <li class="ok">酒莊精確位置標記</li>
-            <li class="ok">成就系統 & 完整進度追蹤</li>
-            <li class="ok">優先支援</li>
+            <li class="ok">🇫🇷 布根地（即將上線）</li>
+            <li class="ok">🇮🇹 義大利（規劃中）</li>
+            <li class="ok">🇪🇸 西班牙 / 🇩🇪 德國 / 🇵🇹 葡萄牙…</li>
+            <li class="ok">早鳥專屬優惠碼優先通知</li>
+            <li class="ok">已訂閱學員可享升級優惠</li>
           </ul>
-          <button class="tier-cta all-cta coming-soon-cta" disabled>敬請期待</button>
+          <div class="waitlist-bottom">
+            <div class="waitlist-note">已訂閱波爾多完整版，上線後享優先升級</div>
+            <button class="tier-cta waitlist-cta" @click="handleWaitlist">📩 加入早鳥等待名單</button>
+          </div>
         </div>
 
       </div>
@@ -115,7 +122,6 @@
                 <th>產區</th>
                 <th>免費體驗</th>
                 <th>波爾多完整版</th>
-                <th>多產區方案</th>
               </tr>
             </thead>
             <tbody>
@@ -123,7 +129,6 @@
                 <td class="ct-course">{{ c.flag }} {{ c.nameFull }}<span v-if="!c.active" class="ct-soon">即將上線</span></td>
                 <td class="ct-cell">{{ c.id === 'bordeaux' ? '🔓 Level 1' : '—' }}</td>
                 <td class="ct-cell">{{ c.id === 'bordeaux' ? '✅ 全部開放' : '—' }}</td>
-                <td class="ct-cell">{{ c.id === 'bordeaux' ? '✅ 全部開放' : (c.active ? '⏳ 開放後可選' : '⏳ 即將') }}</td>
               </tr>
             </tbody>
           </table>
@@ -142,7 +147,6 @@
                 <th>功能</th>
                 <th>免費</th>
                 <th>波爾多完整版</th>
-                <th>多產區方案</th>
               </tr>
             </thead>
             <tbody>
@@ -150,7 +154,6 @@
                 <td>{{ f.name }}</td>
                 <td class="ct-cell"><span :class="f.free ? 'yes' : 'no'">{{ f.free ? '✓' : '✗' }}</span></td>
                 <td class="ct-cell"><span :class="f.single ? 'yes' : 'no'">{{ f.single ? '✓' : '✗' }}</span></td>
-                <td class="ct-cell"><span :class="f.all ? 'yes' : 'no'">{{ f.all ? '✓' : '✗' }}</span></td>
               </tr>
             </tbody>
           </table>
@@ -190,7 +193,7 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState } from '../stores/authStore.js'
-import { initiateCheckout, submitEcpayForm } from '../lib/purchaseService.js'
+import { initiateCheckout, submitEcpayForm, validateAndApplyCoupon } from '../lib/purchaseService.js'
 
 const router = useRouter()
 const authUser = computed(() => authState.user)
@@ -198,6 +201,9 @@ const authUser = computed(() => authState.user)
 const period = ref('monthly')
 const openFaq = ref(null)
 const checkoutLoading = ref(false)
+const couponCode  = ref('')
+const couponMsg   = ref('')
+const couponMsgOk = ref(false)
 
 const allCourses = [
   { id: 'bordeaux',   flag: '🏰', nameFull: '波爾多（法國）',   active: true  },
@@ -221,13 +227,13 @@ const featureMatrix = [
   { name: '酒莊精確位置標記',     free: false, single: true,  all: true  },
   { name: '學習進度追蹤',           free: true,  single: true,  all: true  },
   { name: '成就徽章系統',           free: true,  single: true,  all: true  },
-  { name: '多產區課程（3產區可選）', free: false, single: false, all: true  },
 ]
 
 const faqs = [
-  { q: '波爾多完整版包含哪些內容？', a: '包含波爾多 Level 1 至 Level 4 全部課程（共 43 堂）、4 種互動練習遊戲、5f9c定產區完整互動地圖、地質岩層與氣候熱力圖進階圖層，以及品飲筆記本功能。' },
+  { q: '波爾多完整版包含哪些內容？', a: '包含波爾多 Level 1 至 Level 4 全部課程（共 43 堂）、4 種互動練習遊戲、法定產區完整互動地圖、地質岩層與氣候熱力圖進階圖層，以及品飲筆記本功能。' },
   { q: '年繳可以退款嗎？', a: '訂閱後 7 天內如需退款，請聯絡我們，我們將全額退款，無任何問題。' },
-  { q: '多產區方案何時上線？', a: '多產區方案預計近期推出，屆時可自選三大世界產區。您可先訂閱波爾多完整版，多產區方案上線時可隨時升級。' },
+  { q: '優惠碼怎麼使用？', a: '在「波爾多完整版」訂閱卡片下方輸入優惠碼，再點擊訂閱按鈕即可。免費試用碼將直接啟用訂閱；折扣碼會在結帳時自動套用。' },
+  { q: '未來會有更多產區嗎？', a: '是的！布根地、義大利等更多世界產區課程正在製作中。訂閱波爾多完整版的學員，待更多產區上線後可享優先升級優惠。歡迎加入早鳥等待名單。' },
   { q: '月繳和年繳可以隨時切換嗎？', a: '可以。月繳與年繳為一次性付款，如需切換方案請聯絡我們，客服將協助您辦理。' },
   { q: '免費體驗有時間限制嗎？', a: '沒有！免費方案永久有效，Level 1 波爾多課程完全免費，不需要信用卡。' },
   { q: '付款方式有哪些？', a: '透過綠界科技（ECPay）安全付款，支援信用卡（Visa、MasterCard、JCB）、ATM 轉帳、超商代碼等多種方式，全程加密處理。' },
@@ -247,16 +253,47 @@ async function handleSingle() {
     return
   }
   checkoutLoading.value = true
+  couponMsg.value = ''
+  const code = couponCode.value.trim().toUpperCase()
+
+  if (code) {
+    try {
+      const result = await validateAndApplyCoupon({
+        couponCode: code,
+        courseId: 'bordeaux',
+        tier: 'basic',
+        billingPeriod: period.value,
+      })
+      if (result.type === 'free_trial') {
+        couponMsg.value = `✓ 已啟用！免費體驗 ${result.trial_days} 天，請重新整理頁面查看訂閱狀態`
+        couponMsgOk.value = true
+        checkoutLoading.value = false
+        return
+      }
+      if (result.type === 'discount' || result.type === 'affiliate') {
+        couponMsg.value = `✓ 折扣 ${result.discount_pct}% 將在結帳時自動套用`
+        couponMsgOk.value = true
+      }
+    } catch (err) {
+      couponMsg.value = err.message || '優惠碼無效'
+      couponMsgOk.value = false
+      checkoutLoading.value = false
+      return
+    }
+  }
+
   try {
     const { formHtml } = await initiateCheckout({
       courseId: 'bordeaux',
       tier: 'basic',
       billingPeriod: period.value,
+      couponCode: code || undefined,
     })
     submitEcpayForm(formHtml)
   } catch (err) {
+    couponMsg.value = err.message || '付款初始化失敗，請稍後再試'
+    couponMsgOk.value = false
     checkoutLoading.value = false
-    alert(`付款初始化失敗：${err.message || '請稍後再試'}`)
   }
 }
 
@@ -277,6 +314,10 @@ async function handleAll() {
     checkoutLoading.value = false
     alert(`付款初始化失敗：${err.message || '請稍後再試'}`)
   }
+}
+
+function handleWaitlist() {
+  window.open('mailto:hello@wineacademy.tw?subject=全球產區通行證早鳥等待名單&body=您好，我想加入早鳥等待名單，課程上線時請優先通知我。%0a%0a總計，', '_blank')
 }
 </script>
 
@@ -590,4 +631,53 @@ async function handleAll() {
   transition: transform .2s, box-shadow .2s;
 }
 .bc-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(114,47,55,0.65); }
+
+/* ── Coupon input ─────────────────────────────────────────────────────── */
+.coupon-row { margin-bottom: 12px; }
+.coupon-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  color: #f5f0e8;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+  box-sizing: border-box;
+}
+.coupon-input:focus { border-color: #d4af37; }
+.coupon-input::placeholder { text-transform: none; letter-spacing: 0; color: #6a5a4a; }
+.coupon-msg { display: block; font-size: 0.8rem; margin-top: 6px; }
+.coupon-ok  { color: #48bb78; }
+.coupon-err { color: #f56565; }
+
+/* ── Waitlist card ────────────────────────────────────────────────────── */
+.waitlist-card {
+  border-color: rgba(100,120,200,0.3) !important;
+  background: rgba(100,120,200,0.04) !important;
+}
+.waitlist-badge {
+  background: linear-gradient(135deg, #3a3a7a, #5a5aaa) !important;
+  color: #c8c8f0 !important;
+}
+.waitlist-price { font-size: 1.4rem !important; color: #8888cc !important; }
+.waitlist-bottom { text-align: center; }
+.waitlist-note {
+  font-size: 0.78rem;
+  color: #7a7090;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.waitlist-cta {
+  background: rgba(100,120,200,0.15) !important;
+  color: #b0b0e0 !important;
+  border: 1px solid rgba(100,120,200,0.3) !important;
+}
+.waitlist-cta:hover {
+  background: rgba(100,120,200,0.28) !important;
+  transform: translateY(-1px) !important;
+}
 </style>
