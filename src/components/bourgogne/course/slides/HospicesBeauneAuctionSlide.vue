@@ -225,6 +225,9 @@ const yearTotals = [
   max-width: 1100px;
   margin: 0 auto;
   color: #2c3e50;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 .slide-header h2 {
   margin: 0 0 8px;
