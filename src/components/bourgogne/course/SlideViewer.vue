@@ -1145,8 +1145,16 @@ onUnmounted(() => {
   box-shadow: 0 12px 48px rgba(0,0,0,0.45),
               0 2px 0 rgba(102,126,234,0.3);
   animation: slideIn 0.4s ease-out;
-  overflow: auto;
+  overflow: hidden;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide > * {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 @keyframes slideIn {
