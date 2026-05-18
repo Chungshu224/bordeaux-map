@@ -48,7 +48,7 @@
         </div>
         <p class="result-note">
           如有疑問請聯絡：
-          <a href="mailto:support@wineacademy.tw">support@wineacademy.tw</a>
+          <a href="mailto:chungshu224@gmail.com">chungshu224@gmail.com</a>
         </p>
         <div class="result-actions">
           <button class="btn-primary" @click="$router.push('/')">返回課程選購</button>

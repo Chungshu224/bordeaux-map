@@ -317,7 +317,7 @@ async function handleAll() {
 }
 
 function handleWaitlist() {
-  window.open('mailto:hello@wineacademy.tw?subject=全球產區通行證早鳥等待名單&body=您好，我想加入早鳥等待名單，課程上線時請優先通知我。%0a%0a總計，', '_blank')
+  window.open('mailto:chungshu224@gmail.com?subject=全球產區通行證早鳥等待名單&body=您好，我想加入早鳥等待名單，課程上線時請優先通知我。%0a%0a總計，', '_blank')
 }
 </script>
 

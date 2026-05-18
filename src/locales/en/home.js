@@ -244,7 +244,7 @@ export default {
       { q: "What's the difference between monthly and annual billing?", a: 'Monthly is NT$249 for flexibility; annual at NT$1,990 (equivalent to NT$166/month) saves NT$998 per year — ideal for long-term learners.' },
       { q: "I'm not a wine expert. Can I still learn?", a: 'Absolutely! Level 1 starts from the very basics with a step-by-step approach. No prior knowledge required.' },
       { q: 'When will the Multi-region plan launch?', a: 'The Multi-region plan (NT$449/month) is coming soon, allowing you to choose 3 major world wine regions. Current Bordeaux Complete subscribers can upgrade anytime after launch.' },
-      { q: 'What is your refund policy?', a: 'If you need a refund within 7 days of subscribing, contact support@wineacademy.tw and we will issue a full refund.' },
+      { q: 'What is your refund policy?', a: 'If you need a refund within 7 days of subscribing, contact chungshu224@gmail.com and we will issue a full refund.' },
     ],
   },
 
