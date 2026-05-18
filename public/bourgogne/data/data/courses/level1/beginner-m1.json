@@ -859,13 +859,13 @@
         {
           "type": "image",
           "title": "🍷 特級園酒標實例：Chambertin Grand Cru",
-          "image": "/images/Lesson/Chambertin Grand Cru.jpg",
+          "image": "/bourgogne/images/Lesson/Chambertin Grand Cru.jpg",
           "caption": "特級園酒標只標示葡萄園名稱「Chambertin」，不需標示村莊名"
         },
         {
           "type": "image",
           "title": "🍷 一級園酒標實例：Gevrey-Chambertin 1er Cru",
-          "image": "/images/Lesson/Gevrey-Chambertin 1er Cru Les Cazetiers.jpg",
+          "image": "/bourgogne/images/Lesson/Gevrey-Chambertin 1er Cru Les Cazetiers.jpg",
           "caption": "一級園酒標標示「村莊名 + 1er Cru + 葡萄園名」：Gevrey-Chambertin 1er Cru Les Cazetiers"
         },
         {

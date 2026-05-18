@@ -764,7 +764,7 @@
         <div class="footer-links">
           <router-link to="/login">{{ $t('home.footer.login') }}</router-link>
           <router-link to="/register">{{ $t('home.footer.register') }}</router-link>
-          <a href="mailto:support@sommeliersnotebook.tw">{{ $t('home.footer.contact') }}</a>
+          <a href="mailto:chungshu224@gmail.com">{{ $t('home.footer.contact') }}</a>
         </div>
       </div>
     </footer>
