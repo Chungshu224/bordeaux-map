@@ -205,6 +205,56 @@
               "lineColor": "#B87A2A",
               "lineWidth": 2,
               "showLabels": true
+            },
+            {
+              "id": "vaupulent",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Vaupulent.geojson",
+              "displayName": "Vaupulent",
+              "fillColor": "#FFD27F",
+              "fillOpacity": 0.8,
+              "lineColor": "#CC8800",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "vaugiraut",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Vaugiraut.geojson",
+              "displayName": "Vaugiraut",
+              "fillColor": "#FFC44D",
+              "fillOpacity": 0.8,
+              "lineColor": "#CC7700",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "les-beauregards",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Les Beauregards.geojson",
+              "displayName": "Les Beauregards",
+              "fillColor": "#FFB060",
+              "fillOpacity": 0.8,
+              "lineColor": "#CC6600",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "cote-de-jouan",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Côte de Jouan.geojson",
+              "displayName": "Côte de Jouan",
+              "fillColor": "#EDA04A",
+              "fillOpacity": 0.8,
+              "lineColor": "#BB6000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chaume-de-talvat",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Chaume de Talvat.geojson",
+              "displayName": "Chaume de Talvat",
+              "fillColor": "#E09035",
+              "fillOpacity": 0.8,
+              "lineColor": "#B05A00",
+              "lineWidth": 2,
+              "showLabels": true
             }
           ]
         },
