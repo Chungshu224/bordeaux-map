@@ -376,7 +376,7 @@ const addChateauxMarkers = () => {
     const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
       <div class="chateau-popup">
         <h3 style="margin: 0 0 0.5rem 0; color: ${color};">${icon} ${chateau.name}</h3>
-        ${chateau.image ? `<div class="popup-image" style="margin:0.4rem 0; text-align:center;"><img src="${chateau.image}" alt="${chateau.name} 標" style="max-width:140px; max-height:80px; object-fit:contain; border-radius:4px;" onerror="this.style.display='none'"/></div>` : ''}
+        ${chateau.image ? `<div class="popup-image" style="margin:0.4rem 0; text-align:center;"><img src="${chateau.image}" alt="${chateau.name} 標" loading="lazy" style="max-width:140px; max-height:80px; object-fit:contain; border-radius:4px;" onerror="this.style.display='none'"/></div>` : ''}
         <div style="margin-bottom: 0.5rem;">
           <strong>等級：</strong>${getRankName(chateau.rank)}
         </div>

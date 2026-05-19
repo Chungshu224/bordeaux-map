@@ -6,18 +6,38 @@
     {
       "id": "map-overview",
       "title": "🗺️ 夏布利產區地圖總覽",
-      "duration": "2分鐘",
-      "type": "map-only",
-      "content": {
-        "mapSlide": {
-          "title": "🗺️ 夏布利產區地圖",
-          "content": "探索夏布利的地理位置與四個分級",
+      "duration": "8分鐘",
+      "type": "presentation",
+      "description": "透過系統地圖探索，深入了解夏布利四大分級的地理分佈、七大特級園位置與地圖判讀要點",
+      "slides": [
+        {
+          "type": "title",
+          "title": "🗺️ 夏布利產區地圖總覽",
+          "subtitle": "8分鐘",
+          "description": "透過系統地圖探索，建立夏布利四大分級的地理空間感，精確掌握七大特級園的位置與特色"
+        },
+        {
+          "type": "content",
+          "title": "📍 夏布利的地理位置",
+          "content": "夏布利（Chablis）位於布根地最北端，約訥省（Yonne）境內，Serein 河蜿蜒穿流而過，形成獨特的山谷微氣候。這裡距離巴黎僅150公里，但風土氣候與南方金丘截然不同。",
+          "keyPoints": [
+            "📍 位置：法國北緯47.8°，布根地最北端",
+            "🏞️ 地形：Serein 河谷，緩坡梯田地形",
+            "🌡️ 氣候：大陸性，冷涼乾燥，日夜溫差大",
+            "❄️ 威脅：春季霜凍（4-5月）是最大挑戰",
+            "🚂 交通：巴黎東站 TGV 僅1.5小時",
+            "🍇 品種：唯一法定品種為霞多麗（Chardonnay）",
+            "🏔️ Serein 河右岸：特級園坡向朝西南，日照最佳"
+          ]
+        },
+        {
+          "type": "map",
+          "title": "🗺️ 四大分級全覽",
+          "content": "從外圍到核心，顏色越深代表等級越高。綠色為Petit Chablis，黃色為Chablis，橙色為1er Cru，金色為Grand Cru",
+          "interactive": false,
           "mapConfig": {
-            "center": [
-              3.8,
-              47.82
-            ],
-            "zoom": 11.5,
+            "center": [3.8, 47.82],
+            "zoom": 11.0,
             "pitch": 0,
             "bearing": 0
           },
@@ -33,18 +53,355 @@
               "showLabels": false
             },
             {
+              "id": "petit-chablis",
+              "url": "/geojson/Chablis/AOC Petit Chablis.geojson",
+              "displayName": "Petit Chablis",
+              "fillColor": "#90EE90",
+              "fillOpacity": 0.55,
+              "lineColor": "#228B22",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
               "id": "chablis",
               "url": "/geojson/Chablis/AOC Chablis.geojson",
               "displayName": "Chablis",
               "fillColor": "#F0E68C",
-              "fillOpacity": 0.6,
+              "fillOpacity": 0.65,
               "lineColor": "#DAA520",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "premier-cru",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru.geojson",
+              "displayName": "1er Cru",
+              "fillColor": "#FFA500",
+              "fillOpacity": 0.75,
+              "lineColor": "#CC6600",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "grand-cru",
+              "url": "/geojson/Chablis/Chablis Grand Cru/AOC Chablis Grand Cru.geojson",
+              "displayName": "Grand Cru",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.9,
+              "lineColor": "#8B6508",
+              "lineWidth": 3,
+              "showLabels": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "📊 四大分級制度解析",
+          "content": "夏布利的分級制度形如金字塔，越往頂端面積越小，品質越精，土壤中Kimmeridgian含量也越高。",
+          "keyPoints": [
+            "🟢 Petit Chablis（小夏布利）",
+            "  • 面積：約800公頃，位於最外圍高原",
+            "  • 土壤：石灰岩為主，Kimmeridgian含量較少",
+            "  • 風格：清爽易飲，適合早期飲用",
+            "  • 價格：€10-20",
+            "",
+            "🟡 Chablis（村莊級）",
+            "  • 面積：約3,600公頃，最大主體",
+            "  • 土壤：Kimmeridgian與石灰岩混合",
+            "  • 風格：清爽礦物，最具代表性",
+            "  • 價格：€18-40",
+            "",
+            "🟠 Chablis 1er Cru（一級園）",
+            "  • 面積：約740公頃，40個氣候區",
+            "  • 土壤：純Kimmeridgian泥灰岩",
+            "  • 風格：複雜細緻，具陳年潛力",
+            "  • 價格：€25-80",
+            "",
+            "🥇 Chablis Grand Cru（特級園）",
+            "  • 面積：僅100公頃，7個特級園",
+            "  • 土壤：最精華Kimmeridgian",
+            "  • 風格：極致複雜深邃，可陳20年以上",
+            "  • 價格：€60-200+"
+          ]
+        },
+        {
+          "type": "map",
+          "title": "🗺️ 一級園（Premier Cru）分佈",
+          "content": "夏布利共有40個官方認可的一級園氣候區，分佈在Serein河兩岸山坡，以河北岸的Fourchaume與河南岸的Montée de Tonnerre最負盛名",
+          "interactive": false,
+          "mapConfig": {
+            "center": [3.8, 47.82],
+            "zoom": 12.0,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "base-burgundy",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "chablis-bg",
+              "url": "/geojson/Chablis/AOC Chablis.geojson",
+              "displayName": "Chablis",
+              "fillColor": "#F5F5DC",
+              "fillOpacity": 0.4,
+              "lineColor": "#CCCCCC",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "fourchaume",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Fourchaume.geojson",
+              "displayName": "Fourchaume",
+              "fillColor": "#FF8C00",
+              "fillOpacity": 0.8,
+              "lineColor": "#CC5500",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "mont-de-milieu",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Mont de Milieu.geojson",
+              "displayName": "Mont de Milieu",
+              "fillColor": "#FFA040",
+              "fillOpacity": 0.8,
+              "lineColor": "#CC6000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "vaucoupin",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Vaucoupin.geojson",
+              "displayName": "Vaucoupin",
+              "fillColor": "#FFB347",
+              "fillOpacity": 0.8,
+              "lineColor": "#CC6600",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "vosgros",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Vosgros.geojson",
+              "displayName": "Vosgros",
+              "fillColor": "#FFCB6B",
+              "fillOpacity": 0.8,
+              "lineColor": "#CC8000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "les-fourneaux",
+              "url": "/geojson/Chablis/Chablis 1er cru/AOC Chablis 1er Cru Les Fourneaux.geojson",
+              "displayName": "Les Fourneaux",
+              "fillColor": "#E8B86D",
+              "fillOpacity": 0.8,
+              "lineColor": "#B87A2A",
               "lineWidth": 2,
               "showLabels": true
             }
           ]
+        },
+        {
+          "type": "content",
+          "title": "🍷 重要一級園介紹",
+          "content": "夏布利的40個一級園分佈在Serein河兩岸，以下是最重要的幾個氣候區及其特色：",
+          "keyPoints": [
+            "🏆 Montée de Tonnerre（雷聲坡）",
+            "  • 位置：Serein河右岸，緊鄰Grand Cru",
+            "  • 特色：最接近Grand Cru品質，礦物感最強",
+            "  • 風格：優雅緊致，陳年後驚豔",
+            "",
+            "🥈 Fourchaume（叉形溝）",
+            "  • 位置：河北岸，面積最大的1er Cru",
+            "  • 特色：豐潤易飲，果味充沛",
+            "  • 包含：Vaupulent、Côte de Fontenay等子區",
+            "",
+            "🥉 Vaillons（峽谷）",
+            "  • 位置：Serein河左岸",
+            "  • 特色：細緻優雅，礦物感均衡",
+            "  • 包含：Châtains、Séché等子區",
+            "",
+            "📍 其他重要一級園",
+            "  • Mont de Milieu：正南坡向，陽光充足",
+            "  • Butteaux：左岸最精華地塊之一",
+            "  • Les Fourneaux：東側，清爽風格"
+          ]
+        },
+        {
+          "type": "map",
+          "title": "👑 七大特級園詳圖",
+          "content": "七個特級園由西向東連續分佈在Serein河右岸的同一坡面，朝向西南至南，總面積僅100公頃",
+          "interactive": false,
+          "mapConfig": {
+            "center": [3.815, 47.815],
+            "zoom": 13.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "base-burgundy",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.05,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "bougros",
+              "url": "/geojson/Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Bougros.geojson",
+              "displayName": "Bougros",
+              "fillColor": "#8B4513",
+              "fillOpacity": 0.85,
+              "lineColor": "#654321",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "preuses",
+              "url": "/geojson/Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Preuses.geojson",
+              "displayName": "Preuses",
+              "fillColor": "#B8860B",
+              "fillOpacity": 0.85,
+              "lineColor": "#8B6508",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "vaudesir",
+              "url": "/geojson/Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Vaudésir.geojson",
+              "displayName": "Vaudésir",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.85,
+              "lineColor": "#B8860B",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "grenouilles",
+              "url": "/geojson/Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Grenouilles.geojson",
+              "displayName": "Grenouilles",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.85,
+              "lineColor": "#DAA520",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "valmur",
+              "url": "/geojson/Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Valmur.geojson",
+              "displayName": "Valmur",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.85,
+              "lineColor": "#BDB76B",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "les-clos",
+              "url": "/geojson/Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Les Clos.geojson",
+              "displayName": "Les Clos",
+              "fillColor": "#CD853F",
+              "fillOpacity": 0.85,
+              "lineColor": "#8B6508",
+              "lineWidth": 3,
+              "showLabels": true
+            },
+            {
+              "id": "blanchot",
+              "url": "/geojson/Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Blanchot.geojson",
+              "displayName": "Blanchot",
+              "fillColor": "#DEB887",
+              "fillOpacity": 0.85,
+              "lineColor": "#D2691E",
+              "lineWidth": 2.5,
+              "showLabels": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "👑 七大特級園由西向東",
+          "content": "七大特級園沿同一坡面由西向東排列，各有鮮明個性，但共同擁有最深厚的Kimmeridgian泥灰岩土壤",
+          "keyPoints": [
+            "① Bougros（布格侯）",
+            "  • 最西端，面積15.5ha，風格最輕盈清爽",
+            "",
+            "② Preuses（普瑞士）",
+            "  • 面積11.4ha，細緻精巧，均衡和諧",
+            "",
+            "③ Vaudésir（沃德西）⭐",
+            "  • 面積14.7ha，最知名特級園",
+            "  • 特色：La Moutonne跨越此園，豐盛圓潤",
+            "",
+            "④ Grenouilles（格諾依）",
+            "  • 最小特級園，面積約9.3ha",
+            "  • 風格：最肥美豐腴，帶蜂蜜感",
+            "",
+            "⑤ Valmur（瓦爾穆）",
+            "  • 面積13.2ha，礦物感最強",
+            "  • 風格：緊致有力，鹹鮮礦石感突出",
+            "",
+            "⑥ Les Clos（萊克羅）👑",
+            "  • 最大特級園26.9ha，特級園之王",
+            "  • 風格：最複雜深邃，陳年潛力最強",
+            "",
+            "⑦ Blanchot（布朗修）",
+            "  • 最東端12.7ha，最細緻優雅",
+            "  • 風格：飄逸花香，白桃礦石"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "💡 地圖讀圖要點",
+          "points": [
+            "📍 Serein 河右岸（西南坡）= 特級園與重要一級園集中地",
+            "🔼 坡度越陡越精華，排水良好且日照充足",
+            "🟢→🥇 顏色由淺到深 = 等級由低到高",
+            "🪨 坡地越高，Kimmeridgian含量越高，礦物感越強",
+            "🌡️ 朝向西南至南坡 = 日照最佳 = Grand Cru的秘訣",
+            "📏 面積越小 = 越稀少珍貴（Grand Cru只有100ha）",
+            "🔍 記憶技巧：由西向東記7大特級園——布、普、沃、格、瓦、萊、布",
+            "🍾 實戰：看到Grand Cru標籤，確認是否為7個正牌特級園之一"
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "🧠 地圖知識檢測",
+          "questions": [
+            {
+              "id": "map_q1",
+              "question": "夏布利的七大特級園位於 Serein 河的哪一側坡面？",
+              "options": ["左岸（東北坡）", "右岸（西南坡）", "兩岸均有", "河谷底部平地"],
+              "correct": 1,
+              "explanation": "七大特級園全部位於 Serein 河右岸的西南坡面，朝向西南至南，日照充足，是夏布利最精華的地塊。"
+            },
+            {
+              "id": "map_q2",
+              "question": "以下哪個特級園是七大特級園中面積最大的「特級園之王」？",
+              "options": ["Vaudésir", "Grenouilles", "Les Clos", "Bougros"],
+              "correct": 2,
+              "explanation": "Les Clos（萊克羅）是七大特級園中面積最大的，約26.9公頃，也是公認風格最複雜、陳年潛力最強的特級園。"
+            },
+            {
+              "id": "map_q3",
+              "question": "夏布利四大分級中，面積最小（僅100公頃）、等級最高的是？",
+              "options": ["Petit Chablis", "Chablis 1er Cru", "Chablis Grand Cru", "Chablis AOC"],
+              "correct": 2,
+              "explanation": "Chablis Grand Cru（特級園）只有100公頃、7個特級園，是夏布利金字塔的頂端，也是最稀少珍貴的等級。"
+            }
+          ]
         }
-      }
+      ]
     },
     {
       "id": "lesson1",
@@ -246,11 +603,11 @@
         },
         {
           "type": "quiz",
-          "title": "🧠 知識檢測",
+          "title": "🧠 風土知識檢測",
           "questions": [
             {
               "type": "single",
-              "question": "夏布利（Chablis）葡萄酒的核心特徵是？",
+              "question": "夏布利（Chablis）葡萄酒的核心風味特徵是？",
               "options": [
                 "A. 豐盛奶油感，成熟熱帶水果",
                 "B. 高酸礦物感，帶獨特火石（Flinty）氣息",
@@ -265,52 +622,48 @@
               "question": "夏布利獨特的 Kimmeridgian 土壤有什麼特色？",
               "options": [
                 "A. 富含鐵質，賦予紅酒濃郁色澤",
-                "B. 白堊紀石灰岩，含古牡蠣化石，賦予獨特礦物感",
+                "B. 侏羅紀晚期泥灰岩，含古牡蠣化石（Exogyra virgula），賦予獨特礦物感",
                 "C. 火山崩積土，帶有煙燻礦石味",
                 "D. 砂礫混合土，適合早熟品種"
               ],
               "correct": 1,
-              "explanation": "Kimmeridgian（Kimméridgien）是侏羅紀晚期的白堊質石灰岩，含有微小的牡蠣化石，是夏布利最珍貴的土壤，也是夏布利礦物感和獨特個性的地質基礎，只在夜丘和夏布利最佳地塊出現。"
+              "explanation": "Kimmeridgian 是侏羅紀晚期形成的泥灰岩，含有微小的牡蠣化石（Exogyra virgula），是夏布利礦物感的地質根源。這種地層得名自英國 Dorset 郡的 Kimmeridge 村，在香檳區（Aube）和英格蘭南部也有出現。"
             },
             {
               "type": "single",
-              "question": "夏布利最高等級的白酒叫做？",
+              "question": "夏布利春季最大的自然威脅是什麼？最傳統的防治方式為何？",
               "options": [
-                "A. Petit Chablis",
-                "B. Chablis",
-                "C. Chablis Premier Cru",
-                "D. Chablis Grand Cru"
-              ],
-              "correct": 3,
-              "explanation": "Chablis 的 AOC 分四個等級：Petit Chablis（入門）< Chablis < Chablis Premier Cru（17 個一級園）< Chablis Grand Cru（7 個特級園，如 Blanchot、Les Clos 等，最為頂尖）。"
-            },
-            {
-              "type": "multiple",
-              "question": "夏布利的 Grand Cru 特級園有哪些？（舉例多選）",
-              "options": [
-                "A. Les Clos",
-                "B. Blanchot",
-                "C. Valmur",
-                "D. Chambertin"
-              ],
-              "correct": [
-                0,
-                1,
-                2
-              ],
-              "explanation": "Chablis Grand Cru 有 7 個：Les Clos、Blanchot、Valmur、Grenouilles、Bougros、Les Preuses、Vaudésir，全都在 Chablis 北部山坡。Chambertin 是夜丘的 Pinot Noir 特級園，不屬於夏布利。"
-            },
-            {
-              "type": "single",
-              "question": "關於夏布利使用橡木桶的做法，現代主流是？",
-              "options": [
-                "A. 所有夏布利都必須用橡木桶陳年",
-                "B. 傳統派用橡木桶，但現代多用不銹鋼桶保持純淨礦物感",
-                "C. 夏布利法規禁止使用橡木桶",
-                "D. 只有 Petit Chablis 才用不銹鋼，其他等級都用橡木"
+                "A. 乾旱，以滴灌系統補水",
+                "B. 霜凍，以暖爐（Bougies）加熱空氣",
+                "C. 冰雹，以防雹網覆蓋葡萄藤",
+                "D. 颶風，以防風林圍繞葡萄園"
               ],
               "correct": 1,
-              "explanation": "夏布利有派別之爭：傳統派（如 Raveneau、Dauvissat）使用舊橡木桶增加圓潤層次；現代派（多數）用不銹鋼桶釀造，保留純淨的礦物風味和高酸度。兩種做法各有擁護者。"
+              "explanation": "每年4-5月的春季霜凍是夏布利最大威脅，新芽極脆弱，嚴重時可摧毀超過50%產量（如2017、2018年）。最傳統的防護方式是點燃暖爐（Bougies，燃燒蠟燭或石油桶），現代也使用灑水結冰法和電力風扇。"
+            },
+            {
+              "type": "single",
+              "question": "夏布利與金丘（Côte d'Or）霞多麗白酒最大的風格差異在於？",
+              "options": [
+                "A. 夏布利酒體更飽滿，橡木桶味更明顯",
+                "B. 夏布利更清爽礦物、少用橡木桶；金丘更圓潤奶油、常過桶",
+                "C. 兩者風格幾乎相同，只有酒精度不同",
+                "D. 夏布利甜度更高，金丘完全乾型"
+              ],
+              "correct": 1,
+              "explanation": "夏布利的涼爽氣候與 Kimmeridgian 土壤造就清爽高酸的礦物風格，現代釀法多用不鏽鋼桶保持純淨。金丘（如 Meursault、Puligny-Montrachet）氣候溫暖，多以橡木桶發酵/陳年，風格圓潤豐厚，帶奶油、榛果、熱帶水果香。"
+            },
+            {
+              "type": "single",
+              "question": "Kimmeridgian 地層除了夏布利，在哪些地區也有相同地質出現？",
+              "options": [
+                "A. 波爾多的梅多克和聖愛美濃",
+                "B. 香檳區（Aube）和英格蘭南部（Dorset）",
+                "C. 阿爾薩斯的花崗岩台地",
+                "D. 隆河谷的片岩坡地"
+              ],
+              "correct": 1,
+              "explanation": "Kimmeridgian 得名自英國 Dorset 郡的 Kimmeridge 村，同樣的侏羅紀泥灰岩地層也在香檳區 Aube（Bar-sur-Aube 附近）和英格蘭南部出現，這些地區都以清爽礦物感的白酒/氣泡酒著稱。"
             }
           ]
         },
@@ -833,71 +1186,67 @@
         },
         {
           "type": "quiz",
-          "title": "🧠 知識檢測",
+          "title": "🧠 分級知識檢測",
           "questions": [
             {
               "type": "single",
-              "question": "夏布利（Chablis）葡萄酒的核心特徵是？",
+              "question": "夏布利四大分級從最低到最高的正確順序是？",
               "options": [
-                "A. 豐盛奶油感，成熟熱帶水果",
-                "B. 高酸礦物感，帶獨特火石（Flinty）氣息",
-                "C. 甜型，口感圓潤甜美",
-                "D. 低酸高酒精，容易入口"
+                "A. Chablis → Petit Chablis → Premier Cru → Grand Cru",
+                "B. Petit Chablis → Chablis → Premier Cru → Grand Cru",
+                "C. Chablis → Premier Cru → Petit Chablis → Grand Cru",
+                "D. Premier Cru → Chablis → Petit Chablis → Grand Cru"
               ],
               "correct": 1,
-              "explanation": "夏布利位於布根地最北、最涼爽的地方，加上 Kimmeridgian 石灰岩土壤（含古牡蠣化石），Chardonnay 在此展現出高酸、清瘦、礦物感和獨特的「打火石」（Flinty）氣息，與南部 Côte de Beaune 的奶油風格截然不同。"
+              "explanation": "夏布利的四大分級由低到高為：Petit Chablis（小夏布利，800ha）→ Chablis（村莊級，3,600ha）→ Chablis Premier Cru（一級園，740ha，40個氣候區）→ Chablis Grand Cru（特級園，100ha，7個特級園）。面積越小、等級越高。"
             },
             {
               "type": "single",
-              "question": "夏布利獨特的 Kimmeridgian 土壤有什麼特色？",
+              "question": "Petit Chablis 與 Chablis 最主要的差異在於？",
               "options": [
-                "A. 富含鐵質，賦予紅酒濃郁色澤",
-                "B. 白堊紀石灰岩，含古牡蠣化石，賦予獨特礦物感",
-                "C. 火山崩積土，帶有煙燻礦石味",
-                "D. 砂礫混合土，適合早熟品種"
+                "A. 種植品種不同，Petit Chablis 使用 Aligoté",
+                "B. 土壤不同：Petit Chablis 以 Portlandien 石灰岩為主，Kimmeridgian 含量較少",
+                "C. 年份不同，Petit Chablis 只能用當年採收的葡萄釀製",
+                "D. 兩者土壤完全相同，只是生產者不同"
               ],
               "correct": 1,
-              "explanation": "Kimmeridgian（Kimméridgien）是侏羅紀晚期的白堊質石灰岩，含有微小的牡蠣化石，是夏布利最珍貴的土壤，也是夏布利礦物感和獨特個性的地質基礎，只在夜丘和夏布利最佳地塊出現。"
+              "explanation": "Petit Chablis 種植在外圍平原和高原，土壤以 Portlandien 石灰岩為主，Kimmeridgian 泥灰岩含量較少，礦物感較淡，風格輕盈簡單，建議1-3年內飲用。Chablis 等級則種植在 Kimmeridgian 含量更高的坡地，礦物感更明顯。"
             },
             {
               "type": "single",
-              "question": "夏布利最高等級的白酒叫做？",
+              "question": "七大特級園中面積最大（約26公頃）、被稱為「特級園之王」的是？",
               "options": [
-                "A. Petit Chablis",
-                "B. Chablis",
-                "C. Chablis Premier Cru",
-                "D. Chablis Grand Cru"
+                "A. Vaudésir",
+                "B. Grenouilles",
+                "C. Les Clos",
+                "D. Bougros"
               ],
-              "correct": 3,
-              "explanation": "Chablis 的 AOC 分四個等級：Petit Chablis（入門）< Chablis < Chablis Premier Cru（17 個一級園）< Chablis Grand Cru（7 個特級園，如 Blanchot、Les Clos 等，最為頂尖）。"
-            },
-            {
-              "type": "multiple",
-              "question": "夏布利的 Grand Cru 特級園有哪些？（舉例多選）",
-              "options": [
-                "A. Les Clos",
-                "B. Blanchot",
-                "C. Valmur",
-                "D. Chambertin"
-              ],
-              "correct": [
-                0,
-                1,
-                2
-              ],
-              "explanation": "Chablis Grand Cru 有 7 個：Les Clos、Blanchot、Valmur、Grenouilles、Bougros、Les Preuses、Vaudésir，全都在 Chablis 北部山坡。Chambertin 是夜丘的 Pinot Noir 特級園，不屬於夏布利。"
+              "correct": 2,
+              "explanation": "Les Clos（萊克羅）是七大特級園中面積最大（約26.9公頃），位於坡面核心，擁有最深厚的 Kimmeridgian 土壤，風格最強勁複雜，陳年潛力最強（15-25年），公認是夏布利特級園之王。代表酒莊有 Raveneau 和 Dauvissat。"
             },
             {
               "type": "single",
-              "question": "關於夏布利使用橡木桶的做法，現代主流是？",
+              "question": "La Moutonne 有何特殊之處？",
               "options": [
-                "A. 所有夏布利都必須用橡木桶陳年",
-                "B. 傳統派用橡木桶，但現代多用不銹鋼桶保持純淨礦物感",
-                "C. 夏布利法規禁止使用橡木桶",
-                "D. 只有 Petit Chablis 才用不銹鋼，其他等級都用橡木"
+                "A. 是夏布利面積最大的一級園（Premier Cru）",
+                "B. 是獨占園（Monopole），橫跨 Preuses 和 Vaudésir，可標示 Grand Cru，但非官方第八特級園",
+                "C. 是七大特級園中唯一通過有機認證的園區",
+                "D. 是夏布利最古老的 AOC 法定認證產區"
               ],
               "correct": 1,
-              "explanation": "夏布利有派別之爭：傳統派（如 Raveneau、Dauvissat）使用舊橡木桶增加圓潤層次；現代派（多數）用不銹鋼桶釀造，保留純淨的礦物風味和高酸度。兩種做法各有擁護者。"
+              "explanation": "La Moutonne 是 Domaine Long-Depaquit（屬 Albert Bichot）的獨占園，面積僅2.35公頃，橫跨 Preuses 和 Vaudésir 兩個特級園之間。雖非官方認定的第八特級園，但可在酒標上標示 Grand Cru，品質媲美七大特級園。"
+            },
+            {
+              "type": "single",
+              "question": "Chablis Premier Cru 共有多少個官方認可的 Climat（氣候區）？分佈在河的哪兩側？",
+              "options": [
+                "A. 7個，全在 Serein 河右岸",
+                "B. 17個，全在 Serein 河左岸",
+                "C. 40個，分佈在 Serein 河兩岸山坡（右岸17個，左岸23個）",
+                "D. 100個，散佈在整個約訥省"
+              ],
+              "correct": 2,
+              "explanation": "Chablis Premier Cru 共有40個官方認可的 Climat（氣候區），分佈在 Serein 河兩岸的山坡上，其中右岸17個（以 Montée de Tonnerre 最著名），左岸23個（以 Fourchaume 最著名）。總面積約740公頃，佔夏布利總產量約15%。"
             }
           ]
         },
@@ -1165,71 +1514,67 @@
         },
         {
           "type": "quiz",
-          "title": "🧠 知識檢測",
+          "title": "🧠 品鑑與配餐知識檢測",
           "questions": [
             {
               "type": "single",
-              "question": "夏布利（Chablis）葡萄酒的核心特徵是？",
+              "question": "夏布利與生蠔是「天作之合」，最主要的原因是？",
               "options": [
-                "A. 豐盛奶油感，成熟熱帶水果",
-                "B. 高酸礦物感，帶獨特火石（Flinty）氣息",
-                "C. 甜型，口感圓潤甜美",
-                "D. 低酸高酒精，容易入口"
+                "A. 兩者都是法國特產，純屬文化傳統習慣",
+                "B. 夏布利的高酸度和礦物感（牡蠣殼風味）與生蠔海洋鮮味完美呼應",
+                "C. 夏布利的甜度可以平衡生蠔的鹹苦味",
+                "D. 兩者都有較高酒精度，便於佐餐消化"
               ],
               "correct": 1,
-              "explanation": "夏布利位於布根地最北、最涼爽的地方，加上 Kimmeridgian 石灰岩土壤（含古牡蠣化石），Chardonnay 在此展現出高酸、清瘦、礦物感和獨特的「打火石」（Flinty）氣息，與南部 Côte de Beaune 的奶油風格截然不同。"
+              "explanation": "夏布利的高酸度能清爽地平衡生蠔的豐腴鮮味，而 Kimmeridgian 土壤賦予的礦物感（牡蠣殼、海鹽、礁石氣息）與生蠔海洋風味形成自然共鳴。這是風土與食材最純粹的連結，也是 Chablis 配餐的最高境界。"
             },
             {
               "type": "single",
-              "question": "夏布利獨特的 Kimmeridgian 土壤有什麼特色？",
+              "question": "品鑑陳年 Chablis Grand Cru 建議的侍酒溫度是？",
               "options": [
-                "A. 富含鐵質，賦予紅酒濃郁色澤",
-                "B. 白堊紀石灰岩，含古牡蠣化石，賦予獨特礦物感",
-                "C. 火山崩積土，帶有煙燻礦石味",
-                "D. 砂礫混合土，適合早熟品種"
+                "A. 4-6°C（非常冰涼，如冰水）",
+                "B. 8-10°C（清爽微涼）",
+                "C. 12-14°C（略低於室溫）",
+                "D. 18-20°C（接近室溫）"
               ],
-              "correct": 1,
-              "explanation": "Kimmeridgian（Kimméridgien）是侏羅紀晚期的白堊質石灰岩，含有微小的牡蠣化石，是夏布利最珍貴的土壤，也是夏布利礦物感和獨特個性的地質基礎，只在夜丘和夏布利最佳地塊出現。"
+              "correct": 2,
+              "explanation": "Grand Cru 夏布利的複雜香氣需要在 12-14°C 才能充分展現。過冷會壓制香氣、讓酒感覺封閉；Petit Chablis 則適合8-10°C 以突出清爽個性。一般規律：等級越高，侍酒溫度越高（但仍低於紅酒）。"
             },
             {
               "type": "single",
-              "question": "夏布利最高等級的白酒叫做？",
+              "question": "傳統派（不鏽鋼桶）vs 現代派（橡木桶）夏布利，風格最主要的差異是？",
               "options": [
-                "A. Petit Chablis",
-                "B. Chablis",
-                "C. Chablis Premier Cru",
-                "D. Chablis Grand Cru"
+                "A. 傳統派酸度低、現代派酸度高",
+                "B. 傳統派純淨礦物、緊緻；現代派更圓潤奶油、複雜度稍高",
+                "C. 兩者在盲品下幾乎無法區分，差異極微",
+                "D. 傳統派必然更昂貴，品質更好"
               ],
-              "correct": 3,
-              "explanation": "Chablis 的 AOC 分四個等級：Petit Chablis（入門）< Chablis < Chablis Premier Cru（17 個一級園）< Chablis Grand Cru（7 個特級園，如 Blanchot、Les Clos 等，最為頂尖）。"
-            },
-            {
-              "type": "multiple",
-              "question": "夏布利的 Grand Cru 特級園有哪些？（舉例多選）",
-              "options": [
-                "A. Les Clos",
-                "B. Blanchot",
-                "C. Valmur",
-                "D. Chambertin"
-              ],
-              "correct": [
-                0,
-                1,
-                2
-              ],
-              "explanation": "Chablis Grand Cru 有 7 個：Les Clos、Blanchot、Valmur、Grenouilles、Bougros、Les Preuses、Vaudésir，全都在 Chablis 北部山坡。Chambertin 是夜丘的 Pinot Noir 特級園，不屬於夏布利。"
+              "correct": 1,
+              "explanation": "傳統派（如 Dauvissat、Raveneau、Louis Michel）堅持不鏽鋼桶，保留純淨礦物感和清爽高酸，最適合搭配生蠔、清蒸海鮮。現代派（如 William Fèvre、Droin）用橡木桶帶來圓潤奶油感，更適合搭配奶油醬汁料理。兩種風格各有擁護者，並無優劣。"
             },
             {
               "type": "single",
-              "question": "關於夏布利使用橡木桶的做法，現代主流是？",
+              "question": "龍蝦配奶油醬（Lobster with butter sauce）最適合搭配哪個等級的夏布利？",
               "options": [
-                "A. 所有夏布利都必須用橡木桶陳年",
-                "B. 傳統派用橡木桶，但現代多用不銹鋼桶保持純淨礦物感",
-                "C. 夏布利法規禁止使用橡木桶",
-                "D. 只有 Petit Chablis 才用不銹鋼，其他等級都用橡木"
+                "A. Petit Chablis（€8-15）",
+                "B. Chablis 村莊級（€12-25）",
+                "C. Chablis Premier Cru 或 Grand Cru",
+                "D. 夏布利不適合搭配這道菜"
+              ],
+              "correct": 2,
+              "explanation": "龍蝦配奶油醬是豐富濃郁的料理，需要足夠酒體和複雜度的酒款來平衡。Premier Cru（特別是微桶款）或 Grand Cru 擁有足夠的豐潤感和結構，而 Petit Chablis 或普通 Chablis 酒體太輕，容易被醬汁蓋過。"
+            },
+            {
+              "type": "single",
+              "question": "關於夏布利的醒酒建議，以下何者最正確？",
+              "options": [
+                "A. 所有等級都不需醒酒，開瓶立即飲用最佳",
+                "B. Petit Chablis 開瓶即飲；Grand Cru 可醒酒 30-60 分鐘讓香氣展開",
+                "C. 夏布利應醒酒 3-4 小時，與紅酒相同",
+                "D. 醒酒只對紅酒有效，白酒不需要"
               ],
               "correct": 1,
-              "explanation": "夏布利有派別之爭：傳統派（如 Raveneau、Dauvissat）使用舊橡木桶增加圓潤層次；現代派（多數）用不銹鋼桶釀造，保留純淨的礦物風味和高酸度。兩種做法各有擁護者。"
+              "explanation": "不同等級醒酒需求不同：Petit Chablis 開瓶即飲；Chablis 村莊級等15-30分鐘；Premier Cru 和 Grand Cru 建議醒酒30分鐘至1小時，讓複雜香氣逐漸展開；陳年酒款可延長至1-2小時。避免過度冰鎮，讓酒溫在品飲時慢慢回升。"
             }
           ]
         },

@@ -180,5 +180,19 @@
     "rank_en": "Distinguished Pomerol Estate",
     "rank_ja": "ポムロール 優良シャトー",
     "description_ja": "極めて多様な土壌。エレガントかつ力強く、1961年ヴィンテージは伝説的なボルドーの一本として語り継がれる。"
+  },
+  {
+    "name": "Vieux Château Certan",
+    "coordinates": [
+      -0.19833,
+      44.92780
+    ],
+    "rank": "Pomerol 頂級名莊",
+    "description": "Pomerol 歷史最悠久的酒莊之一，以多品種調配（Merlot + Cabernet Franc + Cabernet Sauvignon）聞名，風格平衡而經典，被認為是產區最穩定的頂級酒莊之一。",
+    "image": "/images/chateaux/RightBank/Libournais/Vieuxchateaucertan.jpg",
+    "description_en": "One of Pomerol's oldest estates, celebrated for its multi-variety blend (Merlot + Cabernet Franc + Cabernet Sauvignon); balanced, classical style — regarded as one of the most consistent top estates in the appellation.",
+    "rank_en": "Top Pomerol Estate",
+    "rank_ja": "ポムロール 最高峰シャトー",
+    "description_ja": "ポムロールで最も歴史あるシャトーの一つ。メルロー、カベルネ・フラン、カベルネ・ソーヴィニヨンのマルチ品種ブレンドで有名。バランスとクラシックなスタイルが魅力。"
   }
 ]

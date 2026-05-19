@@ -202,8 +202,9 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 20px;
   min-height: 0;
+  padding: 12px 0;
 }
 
 /* 圖片包裝器 - 可點擊放大 */
@@ -215,8 +216,10 @@ onUnmounted(() => {
   cursor: zoom-in;
   border-radius: 16px;
   overflow: hidden;
-  flex: 1;
-  width: 100%;
+  flex: 0 1 auto;
+  width: 85%;
+  max-width: 640px;
+  max-height: 50vh;
   min-height: 0;
 }
 
@@ -226,7 +229,7 @@ onUnmounted(() => {
 
 .slide-image {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 50vh;
   width: auto;
   height: auto;
   border-radius: 16px;
@@ -263,11 +266,14 @@ onUnmounted(() => {
 }
 
 .image-caption {
-  font-size: 16px;
-  color: #7f8c8d;
+  font-size: 15px;
+  color: #5a6a7b;
   text-align: center;
   font-style: italic;
   flex-shrink: 0;
+  line-height: 1.6;
+  max-width: 640px;
+  padding: 0 8px;
 }
 
 /* ===== Lightbox ===== */

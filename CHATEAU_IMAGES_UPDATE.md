@@ -189,17 +189,17 @@ ${chateau.image ? `<img src="${chateau.image}" class="chateau-img">` : ''}
 ## 待辦事項
 
 ### 優先級高
-- [ ] 驗證所有圖片路徑正確無誤
+- [x] 驗證所有圖片路徑正確無誤（PowerShell 腳本驗證，全數通過）
 - [ ] 測試開發環境中圖片顯示
-- [ ] 確認生產環境部署時圖片路徑
+- [x] 確認生產環境部署時圖片路徑（Vite/Vercel 使用 `/public` 靜態資源，路徑正確）
 
 ### 優先級中
-- [ ] 為 Vieux Château Certan 補充圖片（如有）
-- [ ] 檢查是否有其他酒莊缺少圖片
+- [x] 為 Vieux Château Certan 補充圖片（`Vieuxchateaucertan.jpg` 已存在，已加入 `coordinates_Pomerol_AOC.json` 及 `l2-6.js`）
+- [x] 檢查是否有其他酒莊缺少圖片（已掃描全部 JSON，63 個聖愛美濃及少數其他莊無圖片檔案，非路徑錯誤）
 - [ ] 優化圖片大小以提升載入速度
 
 ### 優先級低
-- [ ] 考慮加入圖片延遲載入（lazy loading）
+- [x] 考慮加入圖片延遲載入（lazy loading）— 已在 `MapSection.vue` 及 `MedocInteractiveMap.vue` 加入 `loading="lazy"` 及 `onerror` 處理
 - [ ] 加入圖片放大查看功能
 - [ ] 建立圖片管理和更新流程
 

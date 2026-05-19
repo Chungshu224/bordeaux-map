@@ -1593,6 +1593,8 @@ const showChateauxMarkers = async () => {
         img.src = chateau.image
         img.className = 'chateau-img'
         img.alt = chateau.name
+        img.loading = 'lazy'
+        img.onerror = () => { img.style.display = 'none' }
         popupContainer.appendChild(img)
       }
       
