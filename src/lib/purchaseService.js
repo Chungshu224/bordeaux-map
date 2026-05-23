@@ -22,7 +22,7 @@ export const COURSES = {
     nameEn: 'Bourgogne Wine',
     flag: '🍇',
     region: 'France · Bourgogne',
-    available: false
+    available: true
   },
   italy: {
     id: 'italy',
@@ -30,7 +30,7 @@ export const COURSES = {
     nameEn: 'Italian Wine',
     flag: '🇮🇹',
     region: 'Italy',
-    available: false
+    available: true
   },
   loire: {
     id: 'loire',

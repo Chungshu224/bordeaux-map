@@ -107,8 +107,8 @@
             <div class="tier-desc">更多世界產區課程陸續製作中<br>搶先登記享早鳥優惠</div>
           </div>
           <ul class="tier-features">
-            <li class="ok">🇫🇷 布根地（即將上線）</li>
-            <li class="ok">🇮🇹 義大利（規劃中）</li>
+            <li class="ok">� 布根地（已正式上線！）</li>
+            <li class="ok">🇮🇹 義大利（已正式上線！）</li>
             <li class="ok">🇪🇸 西班牙 / 🇩🇪 德國 / 🇵🇹 葡萄牙…</li>
             <li class="ok">早鳥專屬優惠碼優先通知</li>
             <li class="ok">已訂閱學員可享升級優惠</li>
@@ -122,6 +122,77 @@
       </div>
     </div>
 
+  <!-- ── 其他世界產區課程 ───────────────────────────────────────────────── -->
+  <div class="other-section">
+    <div class="other-inner">
+      <div class="other-head">
+        <h2>其他世界產區課程</h2>
+        <p>布根地、義大利已正式上線，使用相同付款方式即可訂閱</p>
+      </div>
+      <div class="other-grid">
+
+        <!-- 布根地 -->
+        <div class="other-card bourg-card">
+          <div class="oc-badge">🍇 France · Bourgogne</div>
+          <h3 class="oc-title">布根地葡萄酒</h3>
+          <div class="oc-price-row">
+            <span class="oc-price">NT$ {{ period === 'monthly' ? '390' : '2,400' }}</span>
+            <span class="oc-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
+          </div>
+          <div class="oc-saving" v-if="period === 'yearly'">年繳等同多送 5 個月・折合 NT$200 / 月</div>
+          <ul class="oc-features">
+            <li>4 大學習模組・33 個 AOC 法定產區</li>
+            <li>特級園 &amp; 一級園精確 GeoJSON 地圖</li>
+            <li>夏布利 / 夜丘 / 伯恩丘 / 馬貢完整涵蓋</li>
+            <li>互動練習遊戲 &amp; 成就徽章系統</li>
+          </ul>
+          <div class="pm-row">
+            <div class="pm-title">付款方式</div>
+            <div class="pm-btns">
+              <button
+                v-for="pm in paymentMethodOptions" :key="pm.value"
+                :class="['pm-btn', paymentMethod === pm.value ? 'pm-active' : '']"
+                @click="paymentMethod = pm.value">{{ pm.icon }} {{ pm.label }}</button>
+            </div>
+          </div>
+          <button class="tier-cta oc-cta bourg-cta" :disabled="checkoutLoading" @click="handleCoursePurchase('bourgogne')">
+            {{ checkoutLoading ? '處理中…' : '立即訂閱布根地課程' }}
+          </button>
+        </div>
+
+        <!-- 義大利 -->
+        <div class="other-card italy-oc-card">
+          <div class="oc-badge">🇮🇹 Italy</div>
+          <h3 class="oc-title">義大利葡萄酒</h3>
+          <div class="oc-price-row">
+            <span class="oc-price">NT$ {{ period === 'monthly' ? '290' : '1,800' }}</span>
+            <span class="oc-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
+          </div>
+          <div class="oc-saving" v-if="period === 'yearly'">年繳等同多送 4 個月・折合 NT$150 / 月</div>
+          <ul class="oc-features">
+            <li>3 大學習模組・66 個 DOC / DOCG</li>
+            <li>20 大產區互動地圖</li>
+            <li>托斯卡尼 / 皮蒙特 / 威尼托完整涵蓋</li>
+            <li>互動練習遊戲 &amp; 成就徽章系統</li>
+          </ul>
+          <div class="pm-row">
+            <div class="pm-title">付款方式</div>
+            <div class="pm-btns">
+              <button
+                v-for="pm in paymentMethodOptions" :key="pm.value"
+                :class="['pm-btn', paymentMethod === pm.value ? 'pm-active' : '']"
+                @click="paymentMethod = pm.value">{{ pm.icon }} {{ pm.label }}</button>
+            </div>
+          </div>
+          <button class="tier-cta oc-cta italy-cta" :disabled="checkoutLoading" @click="handleCoursePurchase('italy')">
+            {{ checkoutLoading ? '處理中…' : '立即訂閱義大利課程' }}
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
     <!-- 產區涵蓋矩陣 -->
     <div class="coverage-section">
       <div class="cs-inner">
@@ -133,6 +204,7 @@
                 <th>產區</th>
                 <th>免費體驗</th>
                 <th>波爾多完整版</th>
+                <th>獨立訂閱</th>
               </tr>
             </thead>
             <tbody>
@@ -140,6 +212,7 @@
                 <td class="ct-course">{{ c.flag }} {{ c.nameFull }}<span v-if="!c.active" class="ct-soon">即將上線</span></td>
                 <td class="ct-cell">{{ c.id === 'bordeaux' ? '🔓 Level 1' : '—' }}</td>
                 <td class="ct-cell">{{ c.id === 'bordeaux' ? '✅ 全部開放' : '—' }}</td>
+                <td class="ct-cell">{{ c.id === 'bourgogne' || c.id === 'italy' ? '✅ 可訂閱' : c.id === 'bordeaux' ? '—' : '準備中' }}</td>
               </tr>
             </tbody>
           </table>
@@ -225,8 +298,8 @@ const couponMsgOk = ref(false)
 
 const allCourses = [
   { id: 'bordeaux',   flag: '🏰', nameFull: '波爾多（法國）',   active: true  },
-  { id: 'bourgogne',  flag: '🍇', nameFull: '布根地（法國）',   active: false },
-  { id: 'italy',      flag: '🇮🇹', nameFull: '義大利',           active: false },
+  { id: 'bourgogne',  flag: '🍇', nameFull: '布根地（法國）',   active: true  },
+  { id: 'italy',      flag: '🇮🇹', nameFull: '義大利',           active: true  },
   { id: 'spain',      flag: '🇪🇸', nameFull: '西班牙',           active: true  },
   { id: 'germany',    flag: '🇩🇪', nameFull: '德國',             active: true  },
   { id: 'portugal',   flag: '🇵🇹', nameFull: '葡萄牙',           active: true  },
@@ -251,7 +324,8 @@ const faqs = [
   { q: '波爾多完整版包含哪些內容？', a: '包含波爾多 Level 1 至 Level 4 全部課程（共 43 堂）、4 種互動練習遊戲、法定產區完整互動地圖、地質岩層與氣候熱力圖進階圖層，以及品飲筆記本功能。' },
   { q: '年繳可以退款嗎？', a: '訂閱後 7 天內如需退款，請聯絡我們，我們將全額退款，無任何問題。' },
   { q: '優惠碼怎麼使用？', a: '在「波爾多完整版」訂閱卡片下方輸入優惠碼，再點擊訂閱按鈕即可。免費試用碼將直接啟用訂閱；折扣碼會在結帳時自動套用。' },
-  { q: '未來會有更多產區嗎？', a: '是的！布根地、義大利等更多世界產區課程正在製作中。訂閱波爾多完整版的學員，待更多產區上線後可享優先升級優惠。歡迎加入早鳥等待名單。' },
+  { q: '布根地和義大利課程已上線了嗎？', a: '是的！布根地和義大利課程已正式上線，可於本頁面「其他世界產區課程」區塊直接訂閱。' },
+  { q: '未來會有更多產區嗎？', a: '是的！西班牙、德國、葡萄牙等更多世界產區課程正在製作中。訂閱任一課程的學員，歡迎加入早鳥等待名單以享優先通知。' },
   { q: '月繳和年繳可以隨時切換嗎？', a: '可以。月繳與年繳為一次性付款，如需切換方案請聯絡我們，客服將協助您辦理。' },
   { q: '免費體驗有時間限制嗎？', a: '沒有！免費方案永久有效，Level 1 波爾多課程完全免費，不需要信用卡。' },
   { q: '付款方式有哪些？', a: '透過綠界科技（ECPay）安全付款，支援信用卡（Visa、MasterCard、JCB）、ATM 轉帳、超商代碼等多種方式，全程加密處理。' },
@@ -338,6 +412,26 @@ async function handleAll() {
 
 function handleWaitlist() {
   window.open('mailto:chungshu224@gmail.com?subject=全球產區通行證早鳥等待名單&body=您好，我想加入早鳥等待名單，課程上線時請優先通知我。%0a%0a總計，', '_blank')
+}
+
+async function handleCoursePurchase(courseId) {
+  if (!authUser.value) {
+    router.push({ path: '/register', query: { courseId, tier: 'basic' } })
+    return
+  }
+  checkoutLoading.value = true
+  try {
+    const { formHtml } = await initiateCheckout({
+      courseId,
+      tier: 'basic',
+      billingPeriod: period.value,
+      paymentMethod: paymentMethod.value,
+    })
+    submitEcpayForm(formHtml)
+  } catch (err) {
+    checkoutLoading.value = false
+    alert(`付款初始化失敗：${err.message || '請稍後再試'}`)
+  }
 }
 </script>
 
@@ -724,4 +818,62 @@ function handleWaitlist() {
   background: rgba(100,120,200,0.28) !important;
   transform: translateY(-1px) !important;
 }
+
+/* ── 其他世界產區課程區塊 ─────────────────────────────────────────────── */
+.other-section {
+  padding: 56px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.15);
+}
+.other-inner { max-width: 860px; margin: 0 auto; }
+.other-head { text-align: center; margin-bottom: 40px; }
+.other-head h2 { font-size: 1.6rem; color: #f5f0e8; margin: 0 0 8px; font-weight: 700; }
+.other-head p { color: #8a7a6a; font-size: 0.95rem; }
+.other-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 680px) { .other-grid { grid-template-columns: 1fr; } }
+.other-card {
+  background: #1a0810;
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+.bourg-card { border-color: rgba(134,91,168,0.35); }
+.italy-oc-card  { border-color: rgba(194,90,60,0.35); }
+.oc-badge {
+  display: inline-block;
+  font-size: 0.76rem;
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  color: #9a8878;
+  margin-bottom: 10px;
+}
+.oc-title { font-size: 1.3rem; color: #f5f0e8; margin: 0 0 16px; font-weight: 700; }
+.oc-price-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
+.oc-price { font-size: 1.9rem; font-weight: 700; color: #d4af37; }
+.oc-period { font-size: 0.85rem; color: #9a8878; }
+.oc-saving { font-size: 0.82rem; color: #4ade80; margin-bottom: 18px; }
+.oc-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.oc-features li {
+  font-size: 0.88rem;
+  color: #b8a898;
+  padding-left: 1.2em;
+  position: relative;
+  line-height: 1.4;
+}
+.oc-features li::before { content: '✔'; position: absolute; left: 0; color: #d4af37; font-size: 0.8em; }
+.oc-cta { margin-top: 8px; }
+.bourg-cta { background: linear-gradient(135deg, #4a2060, #6b2d8a) !important; }
+.italy-cta  { background: linear-gradient(135deg, #7a2820, #a83828) !important; }
 </style>

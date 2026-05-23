@@ -251,9 +251,12 @@
               <span class="cpf-item">✔ {{ $t('home.courses.bourgogne.f2') }}</span>
               <span class="cpf-item">✔ {{ $t('home.courses.bourgogne.f3') }}</span>
             </div>
-            <div class="card-enter-cta">
-              <button v-if="courseStatuses.bourgogne" class="btn-enter-course" @click="router.push('/bourgogne')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
-              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
+            <div class="card-pricing-cta">
+              <div class="cpc-hint">NT$390 起 / 月・完整課程全開放</div>
+              <div class="cpc-actions">
+                <button class="cpc-btn-plan" @click="goToPricing">查看方案 →</button>
+                <button v-if="isAdmin" class="cpc-btn-free" @click="router.push('/bourgogne')">管理員進入</button>
+              </div>
             </div>
 
           </div>
@@ -351,9 +354,12 @@
               <span class="cpf-item italy-tag">✔ {{ $t('home.courses.italy.f2') }}</span>
               <span class="cpf-item italy-tag">✔ {{ $t('home.courses.italy.f3') }}</span>
             </div>
-            <div class="card-enter-cta">
-              <button v-if="courseStatuses.italy" class="btn-enter-course" @click="router.push('/italy')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
-              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
+            <div class="card-pricing-cta">
+              <div class="cpc-hint">NT$290 起 / 月・完整課程全開放</div>
+              <div class="cpc-actions">
+                <button class="cpc-btn-plan" @click="goToPricing">查看方案 →</button>
+                <button v-if="isAdmin" class="cpc-btn-free" @click="router.push('/italy')">管理員進入</button>
+              </div>
             </div>
 
           </div>
@@ -994,9 +1000,9 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: false, italy: false, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: false, italy: false, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false })
 
 async function loadCourseData() {
   try {
