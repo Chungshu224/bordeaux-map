@@ -104,7 +104,7 @@ export default async function handler(req, res) {
     return res.status(429).json({ message: '請稍後再試' })
   }
 
-  const { courseId, tier, billingPeriod = 'monthly', couponCode } = req.body || {}
+  const { courseId, tier, billingPeriod = 'monthly', couponCode, paymentMethod = 'ALL' } = req.body || {}
 
   // 基本驗證
   if (!courseId || !tier) {
@@ -118,6 +118,10 @@ export default async function handler(req, res) {
   }
   if (!['monthly', 'yearly'].includes(billingPeriod)) {
     return res.status(400).json({ message: '無效計費週期' })
+  }
+  const ALLOWED_PAYMENT_METHODS = ['ALL', 'Credit', 'ATM', 'CVS', 'BARCODE', 'WebATM']
+  if (!ALLOWED_PAYMENT_METHODS.includes(paymentMethod)) {
+    return res.status(400).json({ message: '無效付款方式' })
   }
 
   // ── C1: 金額一律以伺服器端定價為準，忽略 req.body.amount ─────────────
@@ -217,7 +221,7 @@ export default async function handler(req, res) {
     ItemName:            itemName,
     ReturnURL:           returnUrl,
     OrderResultURL:      orderResultUrl || '',
-    ChoosePayment:       'Credit',
+    ChoosePayment:       paymentMethod,
     EncryptType:         '1'
   }
 

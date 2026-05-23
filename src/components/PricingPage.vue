@@ -80,6 +80,17 @@
             />
             <span v-if="couponMsg" :class="['coupon-msg', couponMsgOk ? 'coupon-ok' : 'coupon-err']">{{ couponMsg }}</span>
           </div>
+          <!-- 付款方式選擇 -->
+          <div class="pm-row">
+            <div class="pm-title">付款方式</div>
+            <div class="pm-btns">
+              <button
+                v-for="pm in paymentMethodOptions" :key="pm.value"
+                :class="['pm-btn', paymentMethod === pm.value ? 'pm-active' : '']"
+                @click="paymentMethod = pm.value"
+              >{{ pm.icon }} {{ pm.label }}</button>
+            </div>
+          </div>
           <button class="tier-cta single-cta" :disabled="checkoutLoading" @click="handleSingle">
             {{ checkoutLoading ? '處理中…' : '立即訂閱波爾多完整版' }}
           </button>
@@ -198,6 +209,13 @@ import { initiateCheckout, submitEcpayForm, validateAndApplyCoupon } from '../li
 const router = useRouter()
 const authUser = computed(() => authState.user)
 
+const paymentMethod = ref('Credit')
+const paymentMethodOptions = [
+  { value: 'Credit', icon: '💳', label: '信用卡' },
+  { value: 'ATM',    icon: '🏦', label: 'ATM 轉帳' },
+  { value: 'CVS',    icon: '🏣', label: '超商繳費' },
+]
+
 const period = ref('monthly')
 const openFaq = ref(null)
 const checkoutLoading = ref(false)
@@ -288,6 +306,7 @@ async function handleSingle() {
       tier: 'basic',
       billingPeriod: period.value,
       couponCode: code || undefined,
+      paymentMethod: paymentMethod.value,
     })
     submitEcpayForm(formHtml)
   } catch (err) {
@@ -308,6 +327,7 @@ async function handleAll() {
       courseId: 'bordeaux',
       tier: 'premium',
       billingPeriod: period.value,
+      paymentMethod: paymentMethod.value,
     })
     submitEcpayForm(formHtml)
   } catch (err) {
@@ -653,6 +673,30 @@ function handleWaitlist() {
 .coupon-msg { display: block; font-size: 0.8rem; margin-top: 6px; }
 .coupon-ok  { color: #48bb78; }
 .coupon-err { color: #f56565; }
+
+/* ── Payment method selector ──────────────────────────────────────────── */
+.pm-row { margin-bottom: 14px; }
+.pm-title { font-size: 0.8rem; color: #8a7a6a; margin-bottom: 8px; }
+.pm-btns { display: flex; gap: 8px; }
+.pm-btn {
+  flex: 1;
+  padding: 8px 4px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  color: #9a8878;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all .2s;
+  text-align: center;
+}
+.pm-btn:hover { border-color: rgba(212,175,55,0.3); color: #c8a850; }
+.pm-btn.pm-active {
+  background: rgba(212,175,55,0.15);
+  border-color: #d4af37;
+  color: #d4af37;
+  font-weight: 600;
+}
 
 /* ── Waitlist card ────────────────────────────────────────────────────── */
 .waitlist-card {

@@ -1054,6 +1054,7 @@ const handlePurchase = async (courseId, tier) => {
       courseId,
       tier,
       billingPeriod: billingPeriod.value,
+      paymentMethod: 'ALL',
     })
     submitEcpayForm(formHtml)
   } catch (err) {

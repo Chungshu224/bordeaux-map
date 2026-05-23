@@ -93,6 +93,49 @@ export default async function handler(req, res) {
 
   const { RtnCode, MerchantTradeNo, TradeNo } = body
 
+  // RtnCode === "2" 代表 ATM 虛擬帳號已產生（尚未付款）
+  if (RtnCode === '2') {
+    const { BankCode = '', vAccount = '', ExpireDate = '', TradeAmt = '' } = body
+    try {
+      const supabaseAdmin = createClient(
+        process.env.SUPABASE_URL,
+        process.env.SUPABASE_SERVICE_ROLE_KEY
+      )
+      await supabaseAdmin.from('purchases')
+        .update({
+          status: 'awaiting_payment',
+          payment_info: { type: 'ATM', bankCode: BankCode, vAccount, expireDate: ExpireDate, amount: TradeAmt }
+        })
+        .eq('merchant_trade_no', MerchantTradeNo)
+      console.log(`[ecpay-callback] ATM 虛擬帳號產生 trade=${MerchantTradeNo} bank=${BankCode} account=${vAccount}`)
+    } catch (err) {
+      console.error('[ecpay-callback] 儲存 ATM info 失敗:', err)
+    }
+    return res.status(200).send('1|OK')
+  }
+
+  // CVS 超商繳費代碼已產生（各家超商 RtnCode 不同，統一以 PaymentType 含 CVS 判斷）
+  const paymentTypeVal = body.PaymentType || ''
+  if (paymentTypeVal.startsWith('CVS_') && RtnCode !== '1') {
+    const { PaymentNo = '', ExpireDate = '', TradeAmt = '' } = body
+    try {
+      const supabaseAdmin = createClient(
+        process.env.SUPABASE_URL,
+        process.env.SUPABASE_SERVICE_ROLE_KEY
+      )
+      await supabaseAdmin.from('purchases')
+        .update({
+          status: 'awaiting_payment',
+          payment_info: { type: 'CVS', paymentNo: PaymentNo, expireDate: ExpireDate, amount: TradeAmt, paymentType: paymentTypeVal }
+        })
+        .eq('merchant_trade_no', MerchantTradeNo)
+      console.log(`[ecpay-callback] CVS 繳費代碼產生 trade=${MerchantTradeNo} code=${PaymentNo}`)
+    } catch (err) {
+      console.error('[ecpay-callback] 儲存 CVS info 失敗:', err)
+    }
+    return res.status(200).send('1|OK')
+  }
+
   // RtnCode === "1" 代表付款成功
   if (RtnCode !== '1') {
     console.log(`[ecpay-callback] 付款未成功，RtnCode=${RtnCode}, TradeNo=${MerchantTradeNo}`)

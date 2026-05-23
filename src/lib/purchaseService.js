@@ -146,13 +146,13 @@ export async function getUserPurchases(userId) {
  *   userId / userEmail 不再由前端傳送，伺服器端依 JWT 取得
  * @returns {Promise<{ formHtml: string, merchantTradeNo: string, ecpayUrl: string }>}
  */
-export async function initiateCheckout({ courseId, tier, billingPeriod, couponCode }) {
+export async function initiateCheckout({ courseId, tier, billingPeriod, couponCode, paymentMethod = 'ALL' }) {
   if (!supabase) throw new Error('Supabase 未初始化')
   const { data: sessionData } = await supabase.auth.getSession()
   const accessToken = sessionData?.session?.access_token
   if (!accessToken) throw new Error('請先登入')
 
-  const body = { courseId, tier, billingPeriod }
+  const body = { courseId, tier, billingPeriod, paymentMethod }
   if (couponCode) body.couponCode = couponCode
 
   const res = await fetch('/api/ecpay-checkout', {
