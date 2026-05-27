@@ -36,8 +36,8 @@ export function getAdminClient() {
 // 內部用：JWT 驗證 client（anon key 即可，無需 service role）
 function getVerifyClient() {
   if (_verifyClient) return _verifyClient
-  const url = process.env.SUPABASE_URL
-  const anonKey = process.env.SUPABASE_ANON_KEY
+  const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL
+  const anonKey = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY
   if (!url || !anonKey) return null
   _verifyClient = createClient(url, anonKey, {
     auth: { autoRefreshToken: false, persistSession: false }
