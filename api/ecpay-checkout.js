@@ -164,12 +164,16 @@ export default async function handler(req, res) {
     }
   }
 
-  const merchantId   = process.env.ECPAY_MERCHANT_ID
-  const hashKey      = process.env.ECPAY_HASH_KEY
-  const hashIV       = process.env.ECPAY_HASH_IV
-  const returnUrl    = process.env.ECPAY_RETURN_URL
-  const orderResultUrl = process.env.ECPAY_ORDER_RESULT_URL
-  const isStage      = process.env.ECPAY_STAGE === 'true'
+  const merchantId   = String(process.env.ECPAY_MERCHANT_ID || '').trim()
+  const hashKey      = String(process.env.ECPAY_HASH_KEY || '').trim()
+  const hashIV       = String(process.env.ECPAY_HASH_IV || '').trim()
+  const returnUrl    = String(process.env.ECPAY_RETURN_URL || '').trim()
+  const orderResultUrl = String(process.env.ECPAY_ORDER_RESULT_URL || '').trim()
+  const stageRaw = String(process.env.ECPAY_STAGE || '')
+    .trim()
+    .replace(/^"|"$/g, '')
+    .toLowerCase()
+  const isStage = ['1', 'true', 'yes', 'y', 'on'].includes(stageRaw) || merchantId === '3002607'
 
   if (!merchantId || !hashKey || !hashIV || !returnUrl) {
     return res.status(500).json({ message: 'ECPay 環境變數未設定' })
