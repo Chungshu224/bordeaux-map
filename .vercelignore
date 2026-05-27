@@ -7,3 +7,4 @@ public/optimized
 raw.b64
 *.py
 *.csv
+public/geojson/Loire/Regional/
