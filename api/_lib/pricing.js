@@ -13,7 +13,8 @@ const PRICING = {
   italy:      { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
   spain:      { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
   loire:      { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
-  california: { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } }
+  california: { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
+  global:     { basic: { monthly: 690, yearly: 4990 } }
 }
 
 /**

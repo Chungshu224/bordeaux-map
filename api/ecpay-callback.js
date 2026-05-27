@@ -150,7 +150,7 @@ export default async function handler(req, res) {
   // 1. 查出訂單資訊（以取得 user_id 與 tier）
   const { data: purchase, error: fetchErr } = await supabaseAdmin
     .from('purchases')
-    .select('id, user_id, course_id, tier, amount, status')
+    .select('id, user_id, course_id, tier, amount, status, billing_period')
     .eq('merchant_trade_no', MerchantTradeNo)
     .single()
 
@@ -211,6 +211,31 @@ export default async function handler(req, res) {
     // 不阻斷流程，訂單已標記 paid，管理員可手動更新 tier
   }
 
-  // 4. 回傳 ECPay 要求的成功字串
+  // 5. 全球產區通行證：為各個課程插入個別 paid 記錄，使現有存取控制正常運作
+  if (purchase.course_id === 'global') {
+    const subCourses = ['bordeaux', 'bourgogne', 'italy']
+    const billingPeriod = purchase.billing_period || 'monthly'
+    const subInserts = subCourses.map((cid, i) => ({
+      user_id:          purchase.user_id,
+      course_id:        cid,
+      tier:             'basic',
+      amount:           0,
+      currency:         'TWD',
+      status:           'paid',
+      payment_provider: 'ecpay',
+      billing_period:   billingPeriod,
+      merchant_trade_no: `${MerchantTradeNo}_${cid.slice(0, 3)}`,
+      payment_ref:      `global:${TradeNo}`,
+      paid_at:          new Date().toISOString(),
+    }))
+    try {
+      await supabaseAdmin.from('purchases').upsert(subInserts, { onConflict: 'merchant_trade_no', ignoreDuplicates: true })
+      console.log(`[ecpay-callback] 全球通行證 sub-purchases 已插入 user=${maskId(purchase.user_id)}`)
+    } catch (subErr) {
+      console.error('[ecpay-callback] 插入 global sub-purchases 失敗:', subErr)
+    }
+  }
+
+  // 6. 回傳 ECPay 要求的成功字串
   return res.status(200).send('1|OK')
 }

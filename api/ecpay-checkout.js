@@ -81,7 +81,8 @@ const ITEM_NAMES = {
   'bourgogne-basic': '勃根地葡萄酒 完整課程',
   'bourgogne-premium': '勃根地葡萄酒 頂級方案',
   'italy-basic': '義大利葡萄酒 完整課程',
-  'italy-premium': '義大利葡萄酒 頂級方案'
+  'italy-premium': '義大利葡萄酒 頂級方案',
+  'global-basic': '全球產區通行證（波爾多 + 布根地 + 義大利）'
 }
 
 // ─── Handler ──────────────────────────────────────────────────────────────────
@@ -110,7 +111,7 @@ export default async function handler(req, res) {
   if (!courseId || !tier) {
     return res.status(400).json({ message: '缺少必要參數' })
   }
-  if (!['bordeaux', 'bourgogne', 'italy', 'spain', 'loire', 'california'].includes(courseId)) {
+  if (!['bordeaux', 'bourgogne', 'italy', 'spain', 'loire', 'california', 'global'].includes(courseId)) {
     return res.status(400).json({ message: '無效課程 ID' })
   }
   if (!['basic', 'premium'].includes(tier)) {

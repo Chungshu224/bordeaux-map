@@ -96,27 +96,42 @@
           </button>
         </div>
 
-        <!-- 全球產區通行證（等待名單） -->
-        <div class="tier-card waitlist-card">
-          <div class="popular-badge waitlist-badge">🌍 即將推出</div>
+        <!-- 全球產區通行證 -->
+        <div class="tier-card global-card">
+          <div class="popular-badge global-badge">🌍 最超值</div>
           <div class="tier-top">
             <div class="tier-label">全球產區通行證</div>
             <div class="tier-price-wrap">
-              <span class="tier-price waitlist-price">即將公佈</span>
+              <span class="tier-price">
+                NT$ {{ period === 'monthly' ? '690' : '4,990' }}
+              </span>
+              <span class="tier-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
             </div>
-            <div class="tier-desc">更多世界產區課程陸續製作中<br>搶先登記享早鳥優惠</div>
+            <div class="tier-saving" v-if="period === 'yearly'">訂一年省 NT$3,290・相當於 4.8 個月免費</div>
+            <div class="tier-desc">波爾多 + 布根地 + 義大利<br>一次解鎖所有已上線課程</div>
           </div>
           <ul class="tier-features">
-            <li class="ok">� 布根地（已正式上線！）</li>
-            <li class="ok">🇮🇹 義大利（已正式上線！）</li>
-            <li class="ok">🇪🇸 西班牙 / 🇩🇪 德國 / 🇵🇹 葡萄牙…</li>
-            <li class="ok">早鳥專屬優惠碼優先通知</li>
-            <li class="ok">已訂閱學員可享升級優惠</li>
+            <li class="ok">🍷 波爾多完整課程</li>
+            <li class="ok">🍇 布根地完整課程</li>
+            <li class="ok">🇮🇹 義大利完整課程</li>
+            <li class="ok">🗺️ 三大產區互動地圖</li>
+            <li class="ok">學習進度追蹤 & 成就系統</li>
+            <li class="ok">後續新增產區自動解鎖</li>
           </ul>
-          <div class="waitlist-bottom">
-            <div class="waitlist-note">已訂閱波爾多完整版，上線後享優先升級</div>
-            <button class="tier-cta waitlist-cta" @click="handleWaitlist">📩 加入早鳥等待名單</button>
+          <!-- 付款方式選擇 -->
+          <div class="pm-row">
+            <div class="pm-title">付款方式</div>
+            <div class="pm-btns">
+              <button
+                v-for="pm in paymentMethodOptions" :key="pm.value"
+                :class="['pm-btn', paymentMethod === pm.value ? 'pm-active' : '']"
+                @click="paymentMethod = pm.value"
+              >{{ pm.icon }} {{ pm.label }}</button>
+            </div>
           </div>
+          <button class="tier-cta global-cta" :disabled="checkoutLoading" @click="handleAll">
+            {{ checkoutLoading ? '處理中…' : '立即訂閱全球產區通行證' }}
+          </button>
         </div>
 
       </div>
@@ -392,14 +407,14 @@ async function handleSingle() {
 
 async function handleAll() {
   if (!authUser.value) {
-    router.push({ path: '/register', query: { tier: 'premium' } })
+    router.push({ path: '/register', query: { tier: 'basic', courseId: 'global' } })
     return
   }
   checkoutLoading.value = true
   try {
     const { formHtml } = await initiateCheckout({
-      courseId: 'bordeaux',
-      tier: 'premium',
+      courseId: 'global',
+      tier: 'basic',
       billingPeriod: period.value,
       paymentMethod: paymentMethod.value,
     })
@@ -792,31 +807,22 @@ async function handleCoursePurchase(courseId) {
   font-weight: 600;
 }
 
-/* ── Waitlist card ────────────────────────────────────────────────────── */
-.waitlist-card {
-  border-color: rgba(100,120,200,0.3) !important;
-  background: rgba(100,120,200,0.04) !important;
+/* ── Global pass card ─────────────────────────────────────────────────── */
+.global-card {
+  border-color: rgba(52,199,89,0.4) !important;
+  background: rgba(52,199,89,0.04) !important;
 }
-.waitlist-badge {
-  background: linear-gradient(135deg, #3a3a7a, #5a5aaa) !important;
-  color: #c8c8f0 !important;
+.global-badge {
+  background: linear-gradient(135deg, #1a6e35, #2ea85a) !important;
+  color: #d0f5e0 !important;
 }
-.waitlist-price { font-size: 1.4rem !important; color: #8888cc !important; }
-.waitlist-bottom { text-align: center; }
-.waitlist-note {
-  font-size: 0.78rem;
-  color: #7a7090;
-  margin-bottom: 12px;
-  line-height: 1.5;
+.global-cta {
+  background: linear-gradient(135deg, #1a6e35, #2ea85a) !important;
+  color: #fff !important;
 }
-.waitlist-cta {
-  background: rgba(100,120,200,0.15) !important;
-  color: #b0b0e0 !important;
-  border: 1px solid rgba(100,120,200,0.3) !important;
-}
-.waitlist-cta:hover {
-  background: rgba(100,120,200,0.28) !important;
-  transform: translateY(-1px) !important;
+.global-cta:hover:not(:disabled) {
+  background: linear-gradient(135deg, #25904a, #3ac870) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* ── 其他世界產區課程區塊 ─────────────────────────────────────────────── */
