@@ -44,7 +44,7 @@
     <!-- 簡報主區域 -->
     <div class="slide-container">
       <!-- 當前投影片 -->
-      <div class="slide" :key="currentSlide">
+      <div ref="slideRef" class="slide" :key="currentSlide">
         <component :is="getCurrentSlideComponent" :slide="slides[currentSlide]" />
       </div>
     </div>
@@ -60,7 +60,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import IntroSlide from './slides/IntroSlide.vue'
 import TitleSlide from './slides/TitleSlide.vue'
@@ -93,6 +93,27 @@ const { t } = useI18n()
 
 const currentSlide = ref(0)
 const finalQuizBank = ref([])
+const slideRef = ref(null)
+
+function resetSlideScrollPositions() {
+  nextTick(() => {
+    const root = slideRef.value
+    if (!root) return
+
+    root.scrollTop = 0
+    root.scrollLeft = 0
+
+    const nodes = root.querySelectorAll('*')
+    nodes.forEach((node) => {
+      if (node.scrollHeight > node.clientHeight + 1) {
+        node.scrollTop = 0
+      }
+      if (node.scrollWidth > node.clientWidth + 1) {
+        node.scrollLeft = 0
+      }
+    })
+  })
+}
 
 function pickRandom(arr, n) {
   const copy = [...arr]
@@ -984,10 +1005,15 @@ const handleKeydown = (e) => {
 onMounted(() => {
   window.addEventListener('keydown', handleKeydown)
   if (props.lesson.isFinalExam) loadQuizBank()
+  resetSlideScrollPositions()
 })
 
 onUnmounted(() => {
   window.removeEventListener('keydown', handleKeydown)
+})
+
+watch(currentSlide, () => {
+  resetSlideScrollPositions()
 })
 </script>
 

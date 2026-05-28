@@ -3,7 +3,7 @@
     <div class="slide-header">
       <h2>{{ slide.title }}</h2>
     </div>
-    <div class="slide-body">
+    <div ref="slideBodyRef" class="slide-body">
       <!-- 圖文並排：有圖片且有 keyPoints 時 -->
       <template v-if="slide.image && slide.keyPoints">
         <div class="main-content" v-html="formattedContent"></div>
@@ -90,7 +90,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 
 const props = defineProps({
   slide: {
@@ -98,6 +98,16 @@ const props = defineProps({
     required: true
   }
 })
+
+const slideBodyRef = ref(null)
+
+function resetSlideBodyScroll() {
+  nextTick(() => {
+    if (slideBodyRef.value) {
+      slideBodyRef.value.scrollTop = 0
+    }
+  })
+}
 
 // Lightbox state
 const lightboxOpen = ref(false)
@@ -162,6 +172,17 @@ function onKeydown(e) {
 onMounted(() => window.addEventListener('keydown', onKeydown))
 onUnmounted(() => { window.removeEventListener('keydown', onKeydown); document.body.style.overflow = '' })
 
+watch(
+  () => props.slide,
+  () => {
+    resetSlideBodyScroll()
+  }
+)
+
+onMounted(() => {
+  resetSlideBodyScroll()
+})
+
 // 將簡單的 Markdown 轉換為 HTML
 const formattedContent = computed(() => {
   if (!props.slide.content) return ''
@@ -202,7 +223,7 @@ const formattedContent = computed(() => {
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0 20px;
+  padding: 4px 20px 0;
 }
 
 .main-content {
