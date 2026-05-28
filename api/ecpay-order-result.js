@@ -59,8 +59,8 @@ export default async function handler(req, res) {
     return res.redirect(302, '/payment/result?ecpay=1&type=failed&msg=invalid_method')
   }
 
-  const hashKey = process.env.ECPAY_HASH_KEY
-  const hashIV  = process.env.ECPAY_HASH_IV
+  const hashKey = String(process.env.ECPAY_HASH_KEY || '').trim()
+  const hashIV  = String(process.env.ECPAY_HASH_IV || '').trim()
 
   let body = req.body
   if (typeof body === 'string') body = parseFormBody(body)
