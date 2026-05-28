@@ -38,14 +38,14 @@
           <div class="spinner"></div>載入中…
         </div>
 
-        <div v-else-if="purchases.length === 0" class="empty-state">
+        <div v-else-if="displayedPurchases.length === 0" class="empty-state">
           <div class="es-icon">🛒</div>
           <div class="es-text">您尚未購買任何課程</div>
           <button class="es-btn" @click="$router.push('/')">瀏覽課程</button>
         </div>
 
         <div v-else class="purchase-list">
-          <div class="purchase-item" v-for="p in purchases" :key="p.id">
+          <div class="purchase-item" v-for="p in displayedPurchases" :key="p.id">
             <div class="pi-left">
               <div class="pi-icon">{{ courseIcon(p.course_id) }}</div>
               <div>
@@ -56,13 +56,16 @@
               </div>
             </div>
             <div class="pi-right">
-              <div class="pi-status" :class="p.status">{{ statusLabel(p.status) }}</div>
-              <div class="pi-date">{{ formatDate(p.paid_at || p.created_at) }}</div>
+              <div class="pi-status" :class="normalizedStatus(p)">{{ statusLabel(normalizedStatus(p)) }}</div>
+              <div class="pi-date">{{ formatDate(p.paid_at || p.expires_at || p.created_at) }}</div>
               <div class="pi-billing" v-if="p.billing_period">{{ p.billing_period === 'yearly' ? '年繳' : '月繳' }}</div>
               <div class="pi-amount">{{ formatPrice(p.amount) }}</div>
-              <button class="enter-btn" @click="enterCourse(p.course_id)">進入課程 →</button>
-              <button class="manage-btn" v-if="p.status === 'active' && p.stripe_subscription_id" @click="manageSubscription">⚙️ 管理訂閱</button>
+              <button class="enter-btn" v-if="canEnterCourse(p)" @click="enterCourse(p.course_id)">進入課程 →</button>
+              <button class="manage-btn" v-if="normalizedStatus(p) === 'active' && p.stripe_subscription_id" @click="manageSubscription">⚙️ 管理訂閱</button>
             </div>
+          </div>
+          <div v-if="pendingPurchases.length > 0" class="pending-note">
+            另有 {{ pendingPurchases.length }} 筆未完成付款紀錄（等待付款/付款中）已自動隱藏。
           </div>
         </div>
       </section>
@@ -127,7 +130,7 @@ const effectiveTier = computed(() => authActions.getEffectiveTier())
 
 const TIER_INFO = {
   free:    { icon: '🆓', label: '免費體驗', desc: '已解鎖 Level 1 基礎課程' },
-  basic:   { icon: '📚', label: '波爾多完整版', desc: 'Level 1–4 全部課程 + 互動練習 + 進階圖層 + 品飲筆記本' },
+  basic:   { icon: '📚', label: '完整課程方案', desc: '已解鎖完整課程與付費學習功能' },
   premium: { icon: '🌍', label: '多產區方案', desc: '自選三大世界產區（即將推出）' }
 }
 const tierInfo = computed(() => TIER_INFO[effectiveTier.value] || TIER_INFO.free)
@@ -155,20 +158,52 @@ onMounted(async () => {
 const COURSE_META = {
   bordeaux:  { name: '波爾多葡萄酒', icon: '🏰', route: '/bordeaux' },
   bourgogne: { name: '勃根地葡萄酒', icon: '🍇', route: '/bourgogne' },
-  italy:     { name: '義大利葡萄酒', icon: '🇮🇹', route: '/italy' }
+  italy:     { name: '義大利葡萄酒', icon: '🇮🇹', route: '/italy' },
+  spain:     { name: '西班牙葡萄酒', icon: '🇪🇸', route: '/spain' },
+  loire:     { name: '羅亞爾河葡萄酒', icon: '🌿', route: '/loire' },
+  california:{ name: '加州葡萄酒', icon: '🇺🇸', route: '/california' },
+  global:    { name: '全球產區通行證', icon: '🌍', route: '/bordeaux' }
 }
 const courseName = (id) => COURSE_META[id]?.name || id
 const courseIcon = (id) => COURSE_META[id]?.icon || '📦'
 
-const TIER_LABELS  = { basic: '波爾多完整版', premium: '多產區方案' }
-const STATUS_LABELS = { pending: '等待付款', paid: '已付款', active: '訂閱中', refunded: '已退款', cancelled: '已取消' }
+const TIER_LABELS  = { basic: '完整課程方案', premium: '多產區方案' }
+const STATUS_LABELS = {
+  pending: '等待付款',
+  awaiting_payment: '付款中',
+  paid: '已付款',
+  active: '訂閱中',
+  expired: '已到期',
+  refunded: '已退款',
+  cancelled: '已取消'
+}
 const tierLabel   = (t) => TIER_LABELS[t] || t
 const statusLabel = (s) => STATUS_LABELS[s] || s
 
+const isExpiredSubscription = (purchase) => {
+  if (purchase?.status !== 'active') return false
+  if (!purchase?.expires_at) return false
+  return new Date(purchase.expires_at) < new Date()
+}
+
+const normalizedStatus = (purchase) => {
+  if (isExpiredSubscription(purchase)) return 'expired'
+  return purchase?.status
+}
+
+const displayedPurchases = computed(() =>
+  purchases.value.filter((p) => !['pending', 'awaiting_payment'].includes(normalizedStatus(p)))
+)
+
+const pendingPurchases = computed(() =>
+  purchases.value.filter((p) => ['pending', 'awaiting_payment'].includes(normalizedStatus(p)))
+)
+
+const canEnterCourse = (purchase) => ['paid', 'active'].includes(normalizedStatus(purchase))
+
 const enterCourse = (courseId) => {
   const route = COURSE_META[courseId]?.route || '/'
-  // eslint-disable-next-line no-undef
-  useRouter()?.push(route) // fallback included in template via $router
+  router.push(route)
 }
 
 import { useRouter } from 'vue-router'
@@ -312,6 +347,7 @@ const manageSubscription = async () => {
 .pi-status { font-size: 0.75rem; }
 .pi-status.paid { color: #4ade80; }
 .pi-status.pending { color: #fbbf24; }
+.pi-status.awaiting_payment { color: #fbbf24; }
 .pi-status.refunded { color: #9a8878; }
 .pi-date { color: #7a6858; font-size: 0.78rem; }
 .pi-amount { color: #d4af37; font-size: 0.88rem; font-weight: 600; }
@@ -338,7 +374,13 @@ const manageSubscription = async () => {
 .manage-btn:hover { border-color: #d4af37; color: #d4af37; }
 .pi-billing { color: #7a9a60; font-size: 0.78rem; }
 .pi-status.active { color: #4ade80; }
+.pi-status.expired { color: #f59e0b; }
 .pi-status.cancelled { color: #9a8878; }
+.pending-note {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: #9a8878;
+}
 
 /* ─── Free Content ────────────────────────────────────────────────────────── */
 .free-content-list { display: flex; flex-direction: column; gap: 10px; }
