@@ -60,6 +60,7 @@
                 <div class="pi-name">{{ courseName(p.course_id) }}</div>
                 <div class="pi-tier">
                   <span class="tier-badge" :class="p.tier">{{ tierLabel(p.tier) }}</span>
+                  <span v-if="p.recordCount > 1" class="tier-badge record-count">{{ p.recordCount }} 筆紀錄</span>
                 </div>
               </div>
             </div>
@@ -86,6 +87,7 @@
                     <div class="pi-name">{{ courseName(p.course_id) }}</div>
                     <div class="pi-tier">
                       <span class="tier-badge" :class="p.tier">{{ tierLabel(p.tier) }}</span>
+                      <span v-if="p.recordCount > 1" class="tier-badge record-count">{{ p.recordCount }} 筆紀錄</span>
                     </div>
                   </div>
                 </div>
@@ -212,6 +214,49 @@ const STATUS_LABELS = {
 const tierLabel   = (t) => TIER_LABELS[t] || t
 const statusLabel = (s) => STATUS_LABELS[s] || s
 
+const STATUS_PRIORITY = {
+  paid: 4,
+  active: 4,
+  expired: 3,
+  awaiting_payment: 2,
+  pending: 1,
+  refunded: 0,
+  cancelled: 0
+}
+
+const getTimeValue = (value) => {
+  const time = value ? new Date(value).getTime() : NaN
+  return Number.isFinite(time) ? time : 0
+}
+
+const comparePurchases = (left, right) => {
+  const statusDiff = (STATUS_PRIORITY[normalizedStatus(left)] || 0) - (STATUS_PRIORITY[normalizedStatus(right)] || 0)
+  if (statusDiff !== 0) return statusDiff
+
+  const leftPaid = Math.max(getTimeValue(left.paid_at), getTimeValue(left.expires_at), getTimeValue(left.created_at))
+  const rightPaid = Math.max(getTimeValue(right.paid_at), getTimeValue(right.expires_at), getTimeValue(right.created_at))
+  if (leftPaid !== rightPaid) return leftPaid - rightPaid
+
+  return getTimeValue(left.created_at) - getTimeValue(right.created_at)
+}
+
+const groupPurchasesByCourse = (items) => {
+  const grouped = new Map()
+  for (const item of items) {
+    const current = grouped.get(item.course_id)
+    if (!current) {
+      grouped.set(item.course_id, { ...item, recordCount: 1 })
+      continue
+    }
+
+    const nextCount = (current.recordCount || 1) + 1
+    const better = comparePurchases(item, current) > 0 ? item : current
+    grouped.set(item.course_id, { ...better, recordCount: nextCount })
+  }
+
+  return Array.from(grouped.values()).sort((a, b) => comparePurchases(b, a))
+}
+
 const isExpiredSubscription = (purchase) => {
   if (purchase?.status !== 'active') return false
   if (!purchase?.expires_at) return false
@@ -224,11 +269,15 @@ const normalizedStatus = (purchase) => {
 }
 
 const displayedPurchases = computed(() =>
-  purchases.value.filter((p) => !['pending', 'awaiting_payment'].includes(normalizedStatus(p)))
+  groupPurchasesByCourse(
+    purchases.value.filter((p) => !['pending', 'awaiting_payment'].includes(normalizedStatus(p)))
+  )
 )
 
 const pendingPurchases = computed(() =>
-  purchases.value.filter((p) => ['pending', 'awaiting_payment'].includes(normalizedStatus(p)))
+  groupPurchasesByCourse(
+    purchases.value.filter((p) => ['pending', 'awaiting_payment'].includes(normalizedStatus(p)))
+  )
 )
 
 const canEnterCourse = (purchase) => ['paid', 'active'].includes(normalizedStatus(purchase))
@@ -375,6 +424,7 @@ const manageSubscription = async () => {
 .tier-badge { font-size: 0.68rem; padding: 2px 8px; border-radius: 8px; }
 .tier-badge.basic   { background: rgba(114,47,55,0.3); color: #f0a0a0; }
 .tier-badge.premium { background: rgba(212,175,55,0.2); color: #d4af37; }
+.tier-badge.record-count { background: rgba(255,255,255,0.06); color: #c8b08a; }
 .pi-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .pi-status { font-size: 0.75rem; }
 .pi-status.paid { color: #4ade80; }

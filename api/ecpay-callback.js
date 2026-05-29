@@ -52,6 +52,26 @@ function higherTier(a, b) {
   return (TIER_WEIGHT[a] ?? 0) >= (TIER_WEIGHT[b] ?? 0) ? a : b
 }
 
+function addBillingPeriod(baseDate, billingPeriod = 'monthly') {
+  const next = new Date(baseDate)
+  if (billingPeriod === 'yearly') {
+    next.setFullYear(next.getFullYear() + 1)
+  } else {
+    next.setMonth(next.getMonth() + 1)
+  }
+  // 與 Stripe 續費一樣保留 2 天緩衝，避免時差/支付延遲造成提前失效
+  next.setDate(next.getDate() + 2)
+  return next
+}
+
+function pickLaterDate(a, b) {
+  const aTime = a ? new Date(a).getTime() : NaN
+  const bTime = b ? new Date(b).getTime() : NaN
+  if (!Number.isFinite(aTime)) return b || null
+  if (!Number.isFinite(bTime)) return a || null
+  return aTime >= bTime ? a : b
+}
+
 // ─── 解析 POST application/x-www-form-urlencoded ──────────────────────────────
 
 function parseFormBody(raw) {
@@ -177,13 +197,30 @@ export default async function handler(req, res) {
     return res.status(200).send('1|OK')
   }
 
+  const billingPeriod = purchase.billing_period || 'monthly'
+  const { data: latestAccess } = await supabaseAdmin
+    .from('purchases')
+    .select('expires_at')
+    .eq('user_id', purchase.user_id)
+    .eq('course_id', purchase.course_id)
+    .in('status', ['paid', 'active'])
+    .not('expires_at', 'is', null)
+    .order('expires_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+
+  const now = new Date().toISOString()
+  const renewalBase = pickLaterDate(latestAccess?.expires_at, now) || now
+  const expiresAt = addBillingPeriod(renewalBase, billingPeriod).toISOString()
+
   // 2. 更新訂單為 paid
   const { error: updateErr } = await supabaseAdmin
     .from('purchases')
     .update({
       status: 'paid',
       payment_ref: TradeNo,
-      paid_at: new Date().toISOString()
+      paid_at: now,
+      expires_at: expiresAt
     })
     .eq('id', purchase.id)
 
@@ -197,11 +234,13 @@ export default async function handler(req, res) {
     const { data: userData } = await supabaseAdmin.auth.admin.getUserById(purchase.user_id)
     const currentTier = userData?.user?.app_metadata?.subscription_tier || 'free'
     const newTier = higherTier(currentTier, purchase.tier)
+    const currentExpiresAt = userData?.user?.app_metadata?.subscription_expires_at || null
+    const nextExpiresAt = pickLaterDate(currentExpiresAt, expiresAt) || expiresAt
 
     await supabaseAdmin.auth.admin.updateUserById(purchase.user_id, {
       app_metadata: {
         subscription_tier: newTier,
-        subscription_expires_at: null // 永久方案不設到期
+        subscription_expires_at: nextExpiresAt
       }
     })
 
@@ -214,7 +253,6 @@ export default async function handler(req, res) {
   // 5. 全球產區通行證：為各個課程插入個別 paid 記錄，使現有存取控制正常運作
   if (purchase.course_id === 'global') {
     const subCourses = ['bordeaux', 'bourgogne', 'italy']
-    const billingPeriod = purchase.billing_period || 'monthly'
     const subInserts = subCourses.map((cid, i) => ({
       user_id:          purchase.user_id,
       course_id:        cid,
@@ -226,7 +264,8 @@ export default async function handler(req, res) {
       billing_period:   billingPeriod,
       merchant_trade_no: `${MerchantTradeNo}_${cid.slice(0, 3)}`,
       payment_ref:      `global:${TradeNo}`,
-      paid_at:          new Date().toISOString(),
+      paid_at:          now,
+      expires_at:       expiresAt,
     }))
     try {
       await supabaseAdmin.from('purchases').upsert(subInserts, { onConflict: 'merchant_trade_no', ignoreDuplicates: true })
