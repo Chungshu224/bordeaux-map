@@ -444,7 +444,7 @@
           <!-- 合作夥伴分紅試算 -->
           <div v-if="affiliateCoupons.length > 0" class="referral-section">
             <h3 class="section-subtitle">💸 合作夥伴分紅試算</h3>
-            <p class="referral-note">以下為應計分紅金額試算（以月費 NT$249 × 使用次數 × 分紅% 計算），請依實際合約條款調整</p>
+            <p class="referral-note">以下為應計分紅金額試算（以月費 NT$290 × 使用次數 × 分紅% 計算），請依實際合約條款調整</p>
             <table class="data-table">
               <thead>
                 <tr>
@@ -461,7 +461,7 @@
                   <td><code class="code-tag">{{ a.code }}</code></td>
                   <td>{{ a.commission_pct }}%</td>
                   <td>{{ a.used_count || 0 }}</td>
-                  <td class="amount-cell">NT$ {{ Math.round((a.used_count || 0) * 249 * (a.commission_pct / 100)).toLocaleString() }}</td>
+                  <td class="amount-cell">NT$ {{ Math.round((a.used_count || 0) * 290 * (a.commission_pct / 100)).toLocaleString() }}</td>
                 </tr>
               </tbody>
             </table>

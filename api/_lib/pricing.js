@@ -8,7 +8,7 @@
  */
 
 const PRICING = {
-  bordeaux:   { basic: { monthly: 249, yearly: 1990 }, premium: { monthly: 449, yearly: 3598 } },
+  bordeaux:   { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
   bourgogne:  { basic: { monthly: 390, yearly: 2400 }, premium: { monthly: 690, yearly: 4200 } },
   italy:      { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
   spain:      { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },

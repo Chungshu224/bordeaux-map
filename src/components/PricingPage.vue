@@ -52,11 +52,11 @@
             <div class="tier-label">波爾多完整版</div>
             <div class="tier-price-wrap">
               <span class="tier-price">
-                NT$ {{ period === 'monthly' ? '249' : '1,990' }}
+                NT$ {{ period === 'monthly' ? '290' : '1,800' }}
               </span>
               <span class="tier-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
             </div>
-            <div class="tier-saving" v-if="period === 'yearly'">訂一年等同多送 4 個月・折合 NT$166 / 月</div>
+            <div class="tier-saving" v-if="period === 'yearly'">訂一年等同多送 4 個月・折合 NT$150 / 月</div>
             <div class="tier-desc">適合備考命名・波爾多深度鑽研</div>
           </div>
 
@@ -292,7 +292,6 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState } from '../stores/authStore.js'
-import { initiateCheckout, submitEcpayForm, validateAndApplyCoupon } from '../lib/purchaseService.js'
 
 const router = useRouter()
 const authUser = computed(() => authState.user)
@@ -355,74 +354,33 @@ async function handleFree() {
 }
 
 async function handleSingle() {
+  const code = couponCode.value.trim().toUpperCase()
+  const query = {
+    courseId: 'bordeaux',
+    billingPeriod: period.value,
+    paymentMethod: paymentMethod.value
+  }
+  if (code) query.couponCode = code
+
   if (!authUser.value) {
-    router.push({ path: '/register', query: { courseId: 'bordeaux', tier: 'basic' } })
+    router.push({ path: '/register', query: { redirect: `/checkout/cart?${new URLSearchParams(query).toString()}` } })
     return
   }
-  checkoutLoading.value = true
-  couponMsg.value = ''
-  const code = couponCode.value.trim().toUpperCase()
-
-  if (code) {
-    try {
-      const result = await validateAndApplyCoupon({
-        couponCode: code,
-        courseId: 'bordeaux',
-        tier: 'basic',
-        billingPeriod: period.value,
-      })
-      if (result.type === 'free_trial') {
-        couponMsg.value = `✓ 已啟用！免費體驗 ${result.trial_days} 天，請重新整理頁面查看訂閱狀態`
-        couponMsgOk.value = true
-        checkoutLoading.value = false
-        return
-      }
-      if (result.type === 'discount' || result.type === 'affiliate') {
-        couponMsg.value = `✓ 折扣 ${result.discount_pct}% 將在結帳時自動套用`
-        couponMsgOk.value = true
-      }
-    } catch (err) {
-      couponMsg.value = err.message || '優惠碼無效'
-      couponMsgOk.value = false
-      checkoutLoading.value = false
-      return
-    }
-  }
-
-  try {
-    const { formHtml } = await initiateCheckout({
-      courseId: 'bordeaux',
-      tier: 'basic',
-      billingPeriod: period.value,
-      couponCode: code || undefined,
-      paymentMethod: paymentMethod.value,
-    })
-    submitEcpayForm(formHtml)
-  } catch (err) {
-    couponMsg.value = err.message || '付款初始化失敗，請稍後再試'
-    couponMsgOk.value = false
-    checkoutLoading.value = false
-  }
+  router.push({ path: '/checkout/cart', query })
 }
 
 async function handleAll() {
+  const query = {
+    courseId: 'global',
+    billingPeriod: period.value,
+    paymentMethod: paymentMethod.value
+  }
+
   if (!authUser.value) {
-    router.push({ path: '/register', query: { tier: 'basic', courseId: 'global' } })
+    router.push({ path: '/register', query: { redirect: `/checkout/cart?${new URLSearchParams(query).toString()}` } })
     return
   }
-  checkoutLoading.value = true
-  try {
-    const { formHtml } = await initiateCheckout({
-      courseId: 'global',
-      tier: 'basic',
-      billingPeriod: period.value,
-      paymentMethod: paymentMethod.value,
-    })
-    submitEcpayForm(formHtml)
-  } catch (err) {
-    checkoutLoading.value = false
-    alert(`付款初始化失敗：${err.message || '請稍後再試'}`)
-  }
+  router.push({ path: '/checkout/cart', query })
 }
 
 function handleWaitlist() {
@@ -430,23 +388,17 @@ function handleWaitlist() {
 }
 
 async function handleCoursePurchase(courseId) {
+  const query = {
+    courseId,
+    billingPeriod: period.value,
+    paymentMethod: paymentMethod.value
+  }
+
   if (!authUser.value) {
-    router.push({ path: '/register', query: { courseId, tier: 'basic' } })
+    router.push({ path: '/register', query: { redirect: `/checkout/cart?${new URLSearchParams(query).toString()}` } })
     return
   }
-  checkoutLoading.value = true
-  try {
-    const { formHtml } = await initiateCheckout({
-      courseId,
-      tier: 'basic',
-      billingPeriod: period.value,
-      paymentMethod: paymentMethod.value,
-    })
-    submitEcpayForm(formHtml)
-  } catch (err) {
-    checkoutLoading.value = false
-    alert(`付款初始化失敗：${err.message || '請稍後再試'}`)
-  }
+  router.push({ path: '/checkout/cart', query })
 }
 </script>
 

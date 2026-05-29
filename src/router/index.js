@@ -153,6 +153,13 @@ const routes = [
     component: () => import('../components/PricingPage.vue'),
   },
 
+  {
+    path: '/checkout/cart',
+    name: 'CheckoutCart',
+    component: () => import('../components/CheckoutCartPage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free' }
+  },
+
   // ─── 使用者儀表板 ───────────────────────────────────────────────────────────
   {
     path: '/dashboard',
