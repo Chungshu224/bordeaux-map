@@ -10,6 +10,33 @@ export const authState = reactive({
 
 export let authInitPromise = Promise.resolve()
 
+async function refreshAuthUser() {
+  if (!supabase) return null
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    authState.user = user ?? authState.user
+    return user ?? null
+  } catch {
+    return null
+  }
+}
+
+async function syncExpiredSubscription(accessToken) {
+  if (!accessToken) return false
+  try {
+    const res = await fetch('/api/sync-subscription-status', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accessToken}`
+      }
+    })
+    return res.ok
+  } catch {
+    return false
+  }
+}
+
 // 初始化：先讀取現有 session，再監聽後續變化
 if (supabase) {
   // 安全超時保險：6 秒內無論如何都解除 loading
@@ -21,8 +48,12 @@ if (supabase) {
   }, 6000)
 
   authInitPromise = supabase.auth.getSession()
-    .then(({ data: { session } }) => {
+    .then(async ({ data: { session } }) => {
       authState.user = session?.user ?? null
+      if (session?.access_token) {
+        await syncExpiredSubscription(session.access_token)
+        await refreshAuthUser()
+      }
       authState.loading = false
     })
     .catch((err) => {
@@ -33,6 +64,9 @@ if (supabase) {
 
   supabase.auth.onAuthStateChange((_event, session) => {
     authState.user = session?.user ?? null
+    if (session?.access_token) {
+      void syncExpiredSubscription(session.access_token).then(() => refreshAuthUser())
+    }
   })
 } else {
   authState.loading = false

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { authState, authInitPromise, authActions } from '../stores/authStore.js'
+import { getCourseAccess } from '../lib/purchaseService.js'
 
 // ============================================================
 //  訂閱層級功能對照表 (Tier Access Map)
@@ -269,6 +270,27 @@ const router = createRouter({
   routes
 })
 
+const COURSE_ACCESS_RULES = {
+  Home: { courseId: 'bordeaux', minimumTier: 'free' },
+  Bourgogne: { courseId: 'bourgogne', minimumTier: 'basic' },
+  Italy: { courseId: 'italy', minimumTier: 'basic' },
+  Spain: { courseId: 'spain', minimumTier: 'free' },
+  Germany: { courseId: 'germany', minimumTier: 'free' },
+  Portugal: { courseId: 'portugal', minimumTier: 'free' },
+  Australia: { courseId: 'australia', minimumTier: 'free' },
+  NewZealand: { courseId: 'newzealand', minimumTier: 'free' },
+  Loire: { courseId: 'loire', minimumTier: 'free' },
+  LoireCourse: { courseId: 'loire', minimumTier: 'basic' },
+  Hungary: { courseId: 'hungary', minimumTier: 'free' },
+  California: { courseId: 'california', minimumTier: 'free' },
+  CaliforniaCourse: { courseId: 'california', minimumTier: 'basic' },
+  Learning: { courseId: 'bordeaux' },
+  Explore: { courseId: 'bordeaux', minimumTier: 'free' },
+  GameHub: { courseId: 'bordeaux', minimumTier: 'basic' },
+  Notebook: { courseId: 'bordeaux', minimumTier: 'basic' },
+  SpecializedSlideIndex: { courseId: 'bordeaux', minimumTier: 'free' }
+}
+
 // 訂閱等級的數值權重
 export const TIER_WEIGHT = {
   free: 0,
@@ -293,6 +315,7 @@ router.beforeEach(async (to, from, next) => {
   // 管理員信箱自動賦予 premium；否則讀 user_metadata
   const isAdmin = authActions.isAdmin?.() || false
   const userTier = authActions.getEffectiveTier()
+  const routeRule = COURSE_ACCESS_RULES[to.name]
 
   // 1. 檢查是否需要登入
   if (to.meta.requiresAuth && !user) {
@@ -307,7 +330,13 @@ router.beforeEach(async (to, from, next) => {
 
   // 2. 課程路由的動態 Tier 判斷
   //    /learning?level=1 → free；其餘 level 2~4 → basic
-  let requiredTier = to.meta.minimumTier
+  let requiredTier = routeRule?.minimumTier ?? to.meta.minimumTier
+  let accessTier = userTier
+
+  if (routeRule?.courseId) {
+    accessTier = await getCourseAccess(user.id, routeRule.courseId)
+  }
+
   if (to.name === 'Learning') {
     const level = parseInt(to.query.level) || 1
     requiredTier = level >= 2 ? 'basic' : 'free'
@@ -316,10 +345,10 @@ router.beforeEach(async (to, from, next) => {
   // 3. 比對 Tier 權重
   if (requiredTier) {
     const requiredWeight = TIER_WEIGHT[requiredTier]
-    const currentWeight = TIER_WEIGHT[userTier]
+    const currentWeight = TIER_WEIGHT[accessTier]
 
     if (currentWeight < requiredWeight) {
-      console.warn(`[權限阻擋] 此路由需要 "${requiredTier}"，目前為 "${userTier}"`)
+      console.warn(`[權限阻擋] 此路由需要 "${requiredTier}"，目前為 "${accessTier}"`)
       const msg = UPGRADE_MESSAGES[requiredTier] || '🔒 此功能為付費訂閱專屬，請升級您的方案解鎖！'
       alert(msg)
       // 退回前一頁；若無前一頁則回首頁

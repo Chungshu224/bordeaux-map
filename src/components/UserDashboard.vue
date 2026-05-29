@@ -38,10 +38,18 @@
           <div class="spinner"></div>載入中…
         </div>
 
-        <div v-else-if="displayedPurchases.length === 0" class="empty-state">
+        <div v-else-if="displayedPurchases.length === 0 && pendingPurchases.length === 0" class="empty-state">
           <div class="es-icon">🛒</div>
           <div class="es-text">您尚未購買任何課程</div>
           <button class="es-btn" @click="$router.push('/')">瀏覽課程</button>
+        </div>
+
+        <div v-else-if="displayedPurchases.length === 0 && pendingPurchases.length > 0" class="pending-empty-state">
+          <div class="es-icon">⏳</div>
+          <div class="es-text">目前只有未完成付款紀錄</div>
+          <button class="pending-toggle" @click="showPendingPurchases = !showPendingPurchases">
+            {{ showPendingPurchases ? '收合未完成付款' : `展開未完成付款（${pendingPurchases.length}）` }}
+          </button>
         </div>
 
         <div v-else class="purchase-list">
@@ -64,8 +72,31 @@
               <button class="manage-btn" v-if="normalizedStatus(p) === 'active' && p.stripe_subscription_id" @click="manageSubscription">⚙️ 管理訂閱</button>
             </div>
           </div>
-          <div v-if="pendingPurchases.length > 0" class="pending-note">
-            另有 {{ pendingPurchases.length }} 筆未完成付款紀錄（等待付款/付款中）已自動隱藏。
+
+          <div v-if="pendingPurchases.length > 0" class="pending-section">
+            <button class="pending-toggle" @click="showPendingPurchases = !showPendingPurchases">
+              <span>未完成付款</span>
+              <span>{{ showPendingPurchases ? '收合' : `展開（${pendingPurchases.length}）` }}</span>
+            </button>
+            <div v-if="showPendingPurchases" class="pending-list">
+              <div class="purchase-item pending-item" v-for="p in pendingPurchases" :key="p.id">
+                <div class="pi-left">
+                  <div class="pi-icon">{{ courseIcon(p.course_id) }}</div>
+                  <div>
+                    <div class="pi-name">{{ courseName(p.course_id) }}</div>
+                    <div class="pi-tier">
+                      <span class="tier-badge" :class="p.tier">{{ tierLabel(p.tier) }}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="pi-right">
+                  <div class="pi-status" :class="normalizedStatus(p)">{{ statusLabel(normalizedStatus(p)) }}</div>
+                  <div class="pi-date">{{ formatDate(p.created_at) }}</div>
+                  <div class="pi-billing" v-if="p.billing_period">{{ p.billing_period === 'yearly' ? '年繳' : '月繳' }}</div>
+                  <div class="pi-amount">{{ formatPrice(p.amount) }}</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -145,6 +176,7 @@ const expiresText = computed(() => {
 // 購買記錄
 const purchases = ref([])
 const loading   = ref(true)
+const showPendingPurchases = ref(false)
 
 onMounted(async () => {
   const userId = authState.user?.id
@@ -381,6 +413,43 @@ const manageSubscription = async () => {
   font-size: 0.78rem;
   color: #9a8878;
 }
+.pending-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 16px;
+  border: 1px dashed rgba(212,175,55,0.22);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+}
+.pending-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.pending-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(212,175,55,0.22);
+  color: #f2d27d;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.pending-toggle:hover { border-color: rgba(212,175,55,0.45); }
+.pending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+.pending-item { opacity: 0.92; }
 
 /* ─── Free Content ────────────────────────────────────────────────────────── */
 .free-content-list { display: flex; flex-direction: column; gap: 10px; }
