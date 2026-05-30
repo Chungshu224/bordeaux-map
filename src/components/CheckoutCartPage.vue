@@ -46,8 +46,12 @@
             </button>
           </div>
 
-          <div v-if="selectedCourseIds.length > 1 && !isGlobalSelected" class="hint warning">
-            已選 {{ selectedCourseIds.length }} 門課。綠界目前一次只能建立一筆課程訂單，請改選全球通行證或分次付款。
+          <div v-if="isTwoCourseSplitPayment" class="hint warning">
+            已選 2 門課。綠界目前一次只能建立一筆課程訂單，本次會先建立「{{ firstSelectedCourseName }}」訂單，付款完成後請再回來支付第二門。
+          </div>
+
+          <div v-if="isThreeCourseSelection" class="hint warning">
+            已選 3 門課。建議改用全球通行證，一次完成結帳；若仍要單課購買，請分 3 次付款。
             <button class="inline-btn" @click="switchToGlobal">改選全球通行證</button>
           </div>
         </section>
@@ -108,6 +112,11 @@
             <strong>{{ selectedDisplayNames.join(' + ') }}</strong>
           </div>
 
+          <div class="summary-row" v-if="isTwoCourseSplitPayment">
+            <span>本次先付款</span>
+            <strong>{{ firstSelectedCourseName }}</strong>
+          </div>
+
           <div class="summary-row">
             <span>方案時長</span>
             <strong>{{ billingPeriod === 'monthly' ? '月繳' : '年繳' }}</strong>
@@ -119,8 +128,13 @@
           </div>
 
           <div class="summary-row">
-            <span>小計</span>
+            <span>{{ isTwoCourseSplitPayment ? '本次小計' : '小計' }}</span>
             <strong>NT$ {{ formatInt(subtotalAmount) }}</strong>
+          </div>
+
+          <div class="summary-row" v-if="isTwoCourseSplitPayment">
+            <span>第二筆預估</span>
+            <strong>NT$ {{ formatInt(secondOrderAmount) }}</strong>
           </div>
 
           <div class="summary-row" v-if="discountAmount > 0">
@@ -136,7 +150,7 @@
           <div class="hint" v-if="checkoutWarning">{{ checkoutWarning }}</div>
 
           <button class="checkout-btn" :disabled="checkoutDisabled" @click="startCheckout">
-            {{ checkoutLoading ? '建立綠界訂單中...' : '前往綠界付款' }}
+            {{ checkoutLoading ? '建立綠界訂單中...' : checkoutButtonText }}
           </button>
         </section>
       </div>
@@ -214,8 +228,20 @@ const selectedDisplayNames = computed(() => {
     .map((c) => c.name)
 })
 
+const selectedIndividualCount = computed(() => selectedCourseIds.value.length)
+const isTwoCourseSplitPayment = computed(() => !isGlobalSelected.value && selectedIndividualCount.value === 2)
+const isThreeCourseSelection = computed(() => !isGlobalSelected.value && selectedIndividualCount.value >= 3)
+const firstSelectedCourseId = computed(() => selectedCourseIds.value[0] || null)
+const secondSelectedCourseId = computed(() => selectedCourseIds.value[1] || null)
+const firstSelectedCourseName = computed(() => {
+  const found = INDIVIDUAL_COURSES.find((c) => c.id === firstSelectedCourseId.value)
+  return found?.name || '第一門課程'
+})
+
 const checkoutCourseId = computed(() => {
   if (isGlobalSelected.value) return 'global'
+  if (isThreeCourseSelection.value) return null
+  if (isTwoCourseSplitPayment.value) return firstSelectedCourseId.value
   if (selectedCourseIds.value.length === 1) return selectedCourseIds.value[0]
   return null
 })
@@ -225,7 +251,15 @@ const subtotalAmount = computed(() => {
     return PRICES.global.basic[billingPeriod.value]
   }
   if (!selectedCourseIds.value.length) return 0
-  return selectedCourseIds.value.reduce((sum, id) => sum + (PRICES[id]?.basic?.[billingPeriod.value] || 0), 0)
+  if (isTwoCourseSplitPayment.value) {
+    return PRICES[firstSelectedCourseId.value]?.basic?.[billingPeriod.value] || 0
+  }
+  return PRICES[selectedCourseIds.value[0]]?.basic?.[billingPeriod.value] || 0
+})
+
+const secondOrderAmount = computed(() => {
+  if (!isTwoCourseSplitPayment.value) return 0
+  return PRICES[secondSelectedCourseId.value]?.basic?.[billingPeriod.value] || 0
 })
 
 const discountAmount = computed(() => {
@@ -237,12 +271,18 @@ const totalAmount = computed(() => Math.max(0, subtotalAmount.value - discountAm
 
 const checkoutWarning = computed(() => {
   if (!selectedDisplayNames.value.length) return '請先選擇至少一個課程或通行證。'
+  if (isThreeCourseSelection.value) return '已選 3 門課程，建議改選全球通行證；若要單課購買，請分 3 次付款。'
   if (!checkoutCourseId.value) return '目前一次只能建立一筆課程訂單。請改選單一課程或全球通行證。'
   if (!userLoggedIn.value) return '請先登入才能結帳。'
   return ''
 })
 
 const checkoutDisabled = computed(() => !!checkoutWarning.value || checkoutLoading.value)
+
+const checkoutButtonText = computed(() => {
+  if (isTwoCourseSplitPayment.value) return `前往綠界付款（第 1 筆 / 共 2 筆）`
+  return '前往綠界付款'
+})
 
 watch([billingPeriod, checkoutCourseId], () => {
   couponType.value = null
