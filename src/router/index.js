@@ -46,7 +46,7 @@ const routes = [
     path: '/bordeaux',
     name: 'Home',
     component: () => import('../components/bordeaux/LevelSelection.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free', title: '波爾多 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, minimumTier: 'basic', title: '波爾多 · 侍酒師的筆記本' }
   },
 
   // ─── 布根地課程 ─────────────────────────────────────────────────────────────
@@ -203,7 +203,7 @@ const routes = [
     path: '/learning',
     name: 'Learning',
     component: () => import('../components/bordeaux/LearningSystem.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free', title: '📖 波爾多課程 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, minimumTier: 'basic', title: '📖 波爾多課程 · 侍酒師的筆記本' }
   },
   {
     // 地圖探索：free 以上均可進入 (AOC 群組與圖層由元件內部依 Tier 控管)
@@ -278,7 +278,7 @@ const router = createRouter({
 })
 
 const COURSE_ACCESS_RULES = {
-  Home: { courseId: 'bordeaux', minimumTier: 'free' },
+  Home: { courseId: 'bordeaux', minimumTier: 'basic' },
   Bourgogne: { courseId: 'bourgogne', minimumTier: 'basic' },
   Italy: { courseId: 'italy', minimumTier: 'basic' },
   Spain: { courseId: 'spain', minimumTier: 'free' },
@@ -291,7 +291,7 @@ const COURSE_ACCESS_RULES = {
   Hungary: { courseId: 'hungary', minimumTier: 'free' },
   California: { courseId: 'california', minimumTier: 'free' },
   CaliforniaCourse: { courseId: 'california', minimumTier: 'basic' },
-  Learning: { courseId: 'bordeaux' },
+  Learning: { courseId: 'bordeaux', minimumTier: 'basic' },
   Explore: { courseId: 'bordeaux', minimumTier: 'free' },
   GameHub: { courseId: 'bordeaux', minimumTier: 'basic' },
   Notebook: { courseId: 'bordeaux', minimumTier: 'basic' },
@@ -336,7 +336,6 @@ router.beforeEach(async (to, from, next) => {
   }
 
   // 2. 課程路由的動態 Tier 判斷
-  //    /learning?level=1 → free；其餘 level 2~4 → basic
   let requiredTier = routeRule?.minimumTier ?? to.meta.minimumTier
   let accessTier = userTier
 
@@ -345,8 +344,7 @@ router.beforeEach(async (to, from, next) => {
   }
 
   if (to.name === 'Learning') {
-    const level = parseInt(to.query.level) || 1
-    requiredTier = level >= 2 ? 'basic' : 'free'
+    requiredTier = 'basic'
   }
 
   // 3. 比對 Tier 權重
