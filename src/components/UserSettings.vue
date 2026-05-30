@@ -285,6 +285,7 @@ import { useRouter } from 'vue-router'
 import { supabase } from '../lib/supabaseClient.js'
 import { authState, authActions } from '../stores/authStore.js'
 import { globalAchievementManager } from '../stores/achievementSystem.js'
+import { getUserPurchases } from '../lib/purchaseService.js'
 
 const router = useRouter()
 const emit = defineEmits(['backToHome'])
@@ -394,15 +395,78 @@ async function handleChangePassword() {
 // ── 帳號資訊 ─────────────────────────────
 const userEmail = computed(() => authActions.getEmail() ?? '')
 
+const COURSE_META = {
+  bordeaux:  { name: '波爾多課程' },
+  bourgogne: { name: '布根地課程' },
+  italy:     { name: '義大利課程' },
+  spain:     { name: '西班牙課程' },
+  loire:     { name: '羅亞爾河課程' },
+  california:{ name: '加州課程' },
+  global:    { name: '全球產區通行證' }
+}
+
+const purchases = ref([])
+
 const TIER_INFO = {
   free:    { label: '品飲新手 Explorer',     icon: '🌱', desc: '可免費探索基礎課程與地圖' },
-  basic:   { label: '波爾多完整版 Enthusiast', icon: '🍇', desc: 'Level 2-4 全部課程 + 互動練習 + 進階圖層 + 品飲筆記本' },
+  basic:   { label: '完整課程方案 Enthusiast', icon: '🍇', desc: '已解鎖已購買課程的完整內容與學習功能' },
   premium: { label: '多產區方案 Professional', icon: '🌍', desc: '自選三大世界產區（即將推出）' }
 }
 const userTier = computed(() => authActions.getEffectiveTier())
 // 原始方案（不含到期降級），用於日期區塊的顯示判斷
 const rawTier = computed(() => authActions.getSubscriptionTier())
-const currentTierInfo = computed(() => TIER_INFO[userTier.value])
+
+const normalizedStatus = (purchase) => {
+  if (purchase?.status === 'active' && purchase?.expires_at && new Date(purchase.expires_at) < new Date()) {
+    return 'expired'
+  }
+  return purchase?.status || 'pending'
+}
+
+const activeCourseNames = computed(() => {
+  const activePurchases = purchases.value.filter((p) => {
+    const status = normalizedStatus(p)
+    if (!['paid', 'active'].includes(status)) return false
+    if (p.expires_at && new Date(p.expires_at) < new Date()) return false
+    return true
+  })
+
+  const courseIds = Array.from(new Set(activePurchases.map((p) => p.course_id)))
+  return courseIds
+    .map((id) => COURSE_META[id]?.name)
+    .filter(Boolean)
+})
+
+const currentTierInfo = computed(() => {
+  if (userTier.value === 'free') return TIER_INFO.free
+
+  const courseNames = activeCourseNames.value
+  if (courseNames.includes(COURSE_META.global.name)) {
+    return {
+      label: '全球產區通行證 Professional',
+      icon: '🌍',
+      desc: '可使用全球通行證涵蓋課程（依訂單有效期）'
+    }
+  }
+
+  if (courseNames.length === 1) {
+    return {
+      label: `${courseNames[0]} Enthusiast`,
+      icon: '🍇',
+      desc: `已開通 ${courseNames[0]} 完整內容（依訂單有效期）`
+    }
+  }
+
+  if (courseNames.length > 1) {
+    return {
+      label: `${courseNames.length} 門課程方案 Enthusiast`,
+      icon: '🧩',
+      desc: `已開通：${courseNames.join('、')}`
+    }
+  }
+
+  return TIER_INFO[userTier.value] || TIER_INFO.free
+})
 
 // ── 訂閱日期 ─────────────────────────────
 const formatDate = (iso) => {
@@ -441,6 +505,7 @@ const stats = ref(null)   // { totalStudySeconds, completedLevels, quizAccuracy 
 // ── 載入現有設定 ──────────────────────────
 async function loadSettings() {
   if (!supabase || !authState.user) return
+  purchases.value = await getUserPurchases(authState.user.id)
   const { data, error } = await supabase
     .from('profiles')
     .select('display_name, learning_goal, experience_level, total_study_seconds, completed_levels, quiz_accuracy_overall, avatar_url, bio')
