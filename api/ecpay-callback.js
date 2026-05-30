@@ -13,6 +13,7 @@
 import crypto from 'crypto'
 import { createClient } from '@supabase/supabase-js'
 import { maskId } from './_lib/security.js'
+import { couponBonusDays, isCouponActiveNow } from './_lib/coupon.js'
 
 // ─── ECPay CheckMacValue 驗證 ─────────────────────────────────────────────────
 
@@ -61,6 +62,12 @@ function addBillingPeriod(baseDate, billingPeriod = 'monthly') {
   }
   // 與 Stripe 續費一樣保留 2 天緩衝，避免時差/支付延遲造成提前失效
   next.setDate(next.getDate() + 2)
+  return next
+}
+
+function addDays(baseDate, days) {
+  const next = new Date(baseDate)
+  next.setDate(next.getDate() + Number(days || 0))
   return next
 }
 
@@ -170,7 +177,7 @@ export default async function handler(req, res) {
   // 1. 查出訂單資訊（以取得 user_id 與 tier）
   const { data: purchase, error: fetchErr } = await supabaseAdmin
     .from('purchases')
-    .select('id, user_id, course_id, tier, amount, status, billing_period')
+    .select('id, user_id, course_id, tier, amount, status, billing_period, coupon_code')
     .eq('merchant_trade_no', MerchantTradeNo)
     .single()
 
@@ -211,7 +218,29 @@ export default async function handler(req, res) {
 
   const now = new Date().toISOString()
   const renewalBase = pickLaterDate(latestAccess?.expires_at, now) || now
-  const expiresAt = addBillingPeriod(renewalBase, billingPeriod).toISOString()
+  let expiresDate = addBillingPeriod(renewalBase, billingPeriod)
+
+  if (purchase.coupon_code) {
+    try {
+      const { data: coupon } = await supabaseAdmin
+        .from('coupon_codes')
+        .select('*')
+        .eq('code', purchase.coupon_code)
+        .single()
+
+      const activeCheck = isCouponActiveNow(coupon, new Date())
+      if (activeCheck.ok) {
+        const bonusDays = couponBonusDays(coupon)
+        if (bonusDays > 0) {
+          expiresDate = addDays(expiresDate, bonusDays)
+        }
+      }
+    } catch (couponErr) {
+      console.error('[ecpay-callback] 讀取優惠碼加贈資訊失敗:', couponErr)
+    }
+  }
+
+  const expiresAt = expiresDate.toISOString()
 
   // 2. 更新訂單為 paid
   const { error: updateErr } = await supabaseAdmin
@@ -227,6 +256,10 @@ export default async function handler(req, res) {
   if (updateErr) {
     console.error('[ecpay-callback] 更新訂單狀態失敗:', updateErr)
     return res.status(500).send('0|ERR')
+  }
+
+  if (purchase.coupon_code) {
+    await supabaseAdmin.rpc('increment_coupon_used', { p_code: purchase.coupon_code }).catch(() => {})
   }
 
   // 3. 更新 auth.users 的 subscription_tier（取已有tier與此次購買的較高者）

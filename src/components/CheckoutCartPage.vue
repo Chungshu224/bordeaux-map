@@ -197,6 +197,7 @@ const couponMessage = ref('')
 const couponOk = ref(false)
 const couponType = ref(null)
 const couponDiscountPct = ref(0)
+const couponBonusDays = ref(0)
 const freeTrialActivated = ref(false)
 
 const checkoutLoading = ref(false)
@@ -246,6 +247,7 @@ const checkoutDisabled = computed(() => !!checkoutWarning.value || checkoutLoadi
 watch([billingPeriod, checkoutCourseId], () => {
   couponType.value = null
   couponDiscountPct.value = 0
+  couponBonusDays.value = 0
   couponMessage.value = ''
   couponOk.value = false
   freeTrialActivated.value = false
@@ -285,6 +287,7 @@ async function applyCoupon() {
   couponOk.value = false
   couponType.value = null
   couponDiscountPct.value = 0
+  couponBonusDays.value = 0
   freeTrialActivated.value = false
 
   if (!code) return
@@ -312,10 +315,18 @@ async function applyCoupon() {
 
     if (result.type === 'discount' || result.type === 'affiliate') {
       couponDiscountPct.value = Number(result.discount_pct || 0)
-      couponOk.value = couponDiscountPct.value > 0
-      couponMessage.value = couponOk.value
-        ? `已套用 ${couponDiscountPct.value}% 折扣。`
-        : '此優惠碼可用，但目前無折扣。'
+      couponBonusDays.value = Number(result.bonus_days || 0)
+      couponOk.value = couponDiscountPct.value > 0 || couponBonusDays.value > 0
+
+      if (couponDiscountPct.value > 0 && couponBonusDays.value > 0) {
+        couponMessage.value = `已套用 ${couponDiscountPct.value}% 折扣，且付款成功後加贈 ${couponBonusDays.value} 天。`
+      } else if (couponDiscountPct.value > 0) {
+        couponMessage.value = `已套用 ${couponDiscountPct.value}% 折扣。`
+      } else if (couponBonusDays.value > 0) {
+        couponMessage.value = `此優惠碼可用：付款成功後加贈 ${couponBonusDays.value} 天。`
+      } else {
+        couponMessage.value = '此優惠碼可用，但目前無折扣。'
+      }
       return
     }
 

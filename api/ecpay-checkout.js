@@ -22,6 +22,12 @@ import { getAdminClient } from './_lib/auth.js'
 import { getServerPrice } from './_lib/pricing.js'
 import { escapeHtml, maskId } from './_lib/security.js'
 import { checkUserCheckoutRate } from './_lib/ratelimit.js'
+import {
+  couponBonusDays,
+  isCouponActiveNow,
+  normalizeCouponCode,
+  validateCouponPolicy
+} from './_lib/coupon.js'
 
 // ─── ECPay 工具 ────────────────────────────────────────────────────────────────
 
@@ -136,27 +142,28 @@ export default async function handler(req, res) {
   let validatedCoupon  = null
 
   if (couponCode) {
-    const code  = String(couponCode).trim().toUpperCase().slice(0, 50)
+    const code  = normalizeCouponCode(couponCode)
     const admin = getAdminClient()
     if (admin) {
       const { data: coupon } = await admin
         .from('coupon_codes')
         .select('*')
         .eq('code', code)
-        .eq('active', true)
         .single()
 
       if (coupon && (coupon.type === 'discount' || coupon.type === 'affiliate')) {
-        const now = new Date()
-        const notExpired =
-          (!coupon.valid_from  || new Date(coupon.valid_from)  <= now) &&
-          (!coupon.valid_until || new Date(coupon.valid_until) >= now)
-        const notOverLimit =
-          coupon.max_uses === null || (coupon.used_count || 0) < coupon.max_uses
+        const activeCheck = isCouponActiveNow(coupon, new Date())
+        const policyCheck = validateCouponPolicy({ coupon, courseId, billingPeriod })
+        const bonusDays = couponBonusDays(coupon)
+        const discountPct = Number(coupon.discount_pct || 0)
+        const hasDiscount = discountPct > 0
+        const hasBonus = bonusDays > 0
 
-        if (notExpired && notOverLimit && coupon.discount_pct > 0) {
+        if (activeCheck.ok && policyCheck.ok && (hasDiscount || hasBonus)) {
+          if (hasDiscount) {
           // 套用折扣，不得低於 NT$1
-          amount = Math.max(1, Math.round(amount * (1 - coupon.discount_pct / 100)))
+            amount = Math.max(1, Math.round(amount * (1 - discountPct / 100)))
+          }
           couponReferrerId = coupon.referrer_id || null
           validatedCoupon  = code
         }

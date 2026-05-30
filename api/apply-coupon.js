@@ -14,6 +14,12 @@ import { verifyAuth } from './_lib/auth.js'
 import { getAdminClient } from './_lib/auth.js'
 import { checkUserCheckoutRate } from './_lib/ratelimit.js'
 import { maskId } from './_lib/security.js'
+import {
+  couponBonusDays,
+  isCouponActiveNow,
+  normalizeCouponCode,
+  validateCouponPolicy
+} from './_lib/coupon.js'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -33,12 +39,12 @@ export default async function handler(req, res) {
     return res.status(429).json({ message: '請稍後再試' })
   }
 
-  const { couponCode, courseId = 'bordeaux', tier = 'basic' } = req.body || {}
+  const { couponCode, courseId = 'bordeaux', tier = 'basic', billingPeriod = 'monthly' } = req.body || {}
   if (!couponCode) {
     return res.status(400).json({ message: '缺少優惠碼' })
   }
 
-  const code  = String(couponCode).trim().toUpperCase().slice(0, 50)
+  const code  = normalizeCouponCode(couponCode)
   const admin = getAdminClient()
   if (!admin) {
     return res.status(500).json({ message: 'Supabase 未設定' })
@@ -56,26 +62,27 @@ export default async function handler(req, res) {
   }
 
   // 基本有效性檢查
-  if (!coupon.active) {
-    return res.status(400).json({ message: '此優惠碼已停用' })
-  }
   const now = new Date()
-  if (coupon.valid_from && new Date(coupon.valid_from) > now) {
-    return res.status(400).json({ message: '優惠碼尚未生效' })
+  const activeCheck = isCouponActiveNow(coupon, now)
+  if (!activeCheck.ok) {
+    return res.status(400).json({ message: activeCheck.message })
   }
-  if (coupon.valid_until && new Date(coupon.valid_until) < now) {
-    return res.status(400).json({ message: '優惠碼已過期' })
-  }
-  if (coupon.max_uses !== null && (coupon.used_count || 0) >= coupon.max_uses) {
-    return res.status(400).json({ message: '優惠碼使用次數已達上限' })
+
+  const policyCheck = validateCouponPolicy({ coupon, courseId, billingPeriod })
+  if (!policyCheck.ok) {
+    return res.status(400).json({ message: policyCheck.message })
   }
 
   // ── discount / affiliate：只回傳折扣資訊，不寫入 DB ─────────────────────
   if (coupon.type === 'discount' || coupon.type === 'affiliate') {
+    const bonusDays = couponBonusDays(coupon)
+    const discountPct = Number(coupon.discount_pct || 0)
     return res.status(200).json({
       type:          coupon.type,
       activated:     false,
-      discount_pct:  coupon.discount_pct || 0,
+      discount_pct:  discountPct,
+      bonus_days:    bonusDays,
+      needs_ecpay:   true,
       referrer_name: coupon.referrer_name || null,
     })
   }
@@ -91,7 +98,7 @@ export default async function handler(req, res) {
     .select('id')
     .eq('user_id', userId)
     .eq('course_id', courseId)
-    .eq('status', 'succeeded')
+    .in('status', ['paid', 'active', 'succeeded'])
     .not('payment_provider', 'eq', 'coupon')  // 排除其他試用紀錄
     .limit(1)
 
@@ -111,8 +118,10 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: '此優惠碼您已使用過' })
   }
 
-  const trialDays  = coupon.trial_days || 30
+  const trialDays  = couponBonusDays(coupon) || 30
   const trialUntil = new Date(now.getTime() + trialDays * 24 * 60 * 60 * 1000)
+  const paidAt = now.toISOString()
+  const expiresAt = trialUntil.toISOString()
 
   // 寫入 purchases 紀錄
   const { error: insertErr } = await admin
@@ -123,11 +132,13 @@ export default async function handler(req, res) {
       tier,
       amount:           0,
       currency:         'TWD',
-      status:           'succeeded',
+      status:           'paid',
       payment_provider: 'coupon',
       billing_period:   'monthly',
       coupon_code:      code,
       referrer_id:      coupon.referrer_id || null,
+      paid_at:          paidAt,
+      expires_at:       expiresAt,
     })
 
   if (insertErr) {
@@ -139,9 +150,49 @@ export default async function handler(req, res) {
   await admin
     .from('profiles')
     .upsert(
-      { user_id: userId, tier, subscription_exp: trialUntil.toISOString() },
+      { user_id: userId, tier, subscription_exp: expiresAt },
       { onConflict: 'user_id' }
     )
+
+  try {
+    const { data: userData } = await admin.auth.admin.getUserById(userId)
+    const currentTier = userData?.user?.app_metadata?.subscription_tier || 'free'
+    const currentExpires = userData?.user?.app_metadata?.subscription_expires_at || null
+    const tierWeight = { free: 0, basic: 1, premium: 2 }
+    const nextTier = (tierWeight[currentTier] ?? 0) >= (tierWeight[tier] ?? 0) ? currentTier : tier
+    const nextExpires = currentExpires && new Date(currentExpires) > trialUntil ? currentExpires : expiresAt
+
+    await admin.auth.admin.updateUserById(userId, {
+      app_metadata: {
+        subscription_tier: nextTier,
+        subscription_expires_at: nextExpires
+      }
+    })
+  } catch (metaErr) {
+    console.error('[apply-coupon] update app_metadata failed for user', maskId(userId), ':', metaErr)
+  }
+
+  if (courseId === 'global') {
+    const subCourses = ['bordeaux', 'bourgogne', 'italy']
+    const rows = subCourses.map((cid) => ({
+      user_id: userId,
+      course_id: cid,
+      tier: 'basic',
+      amount: 0,
+      currency: 'TWD',
+      status: 'paid',
+      payment_provider: 'coupon',
+      billing_period: 'monthly',
+      coupon_code: code,
+      referrer_id: coupon.referrer_id || null,
+      paid_at: paidAt,
+      expires_at: expiresAt
+    }))
+    const { error: subErr } = await admin.from('purchases').insert(rows)
+    if (subErr) {
+      console.error('[apply-coupon] global sub purchases insert failed for user', maskId(userId), ':', subErr)
+    }
+  }
 
   // 遞增優惠碼使用次數
   await admin.rpc('increment_coupon_used', { p_code: code }).catch(() => {})
@@ -149,13 +200,13 @@ export default async function handler(req, res) {
   console.log('[apply-coupon] Trial activated for user', maskId(userId),
     '| code:', code,
     '| referrer:', coupon.referrer_id || 'none',
-    '| until:', trialUntil.toISOString())
+    '| until:', expiresAt)
 
   return res.status(200).json({
     type:          'free_trial',
     activated:     true,
     trial_days:    trialDays,
-    trial_until:   trialUntil.toISOString(),
+    trial_until:   expiresAt,
     referrer_name: coupon.referrer_name || null,
   })
 }
