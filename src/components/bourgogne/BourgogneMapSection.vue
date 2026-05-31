@@ -1415,7 +1415,14 @@ watch(() => props.activeAOC, (newAOC, oldAOC) => {
   }
 }, { deep: true })
 
+function resetMapOverlayState() {
+  climateEnabled.value = false
+  climateIndicator.value = 'temp'
+  resetBRGM(map)
+}
+
 onMounted(async () => {
+  resetMapOverlayState()
   window.addEventListener('resize', checkMobile)
   await nextTick()
   setTimeout(async () => {

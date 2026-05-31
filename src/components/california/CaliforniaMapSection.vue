@@ -805,7 +805,16 @@ watch(activeRegion, () => {
   }
 })
 
-onMounted(initMap)
+function resetMapOverlayState() {
+  climateEnabled.value = false
+  climateIndicator.value = 'temp'
+  soilEnabled.value = false
+}
+
+onMounted(() => {
+  resetMapOverlayState()
+  initMap()
+})
 
 onUnmounted(() => {
   if (map) {

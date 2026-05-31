@@ -980,9 +980,17 @@ watch(soilOpacity, (val) => {
   }
 })
 
+function resetMapOverlayState() {
+  climateEnabled.value = false
+  climateIndicator.value = 'temp'
+  soilEnabled.value = false
+  if (geologyPopup) { geologyPopup.remove(); geologyPopup = null }
+}
+
 // ── Map init ──────────────────────────────────────────────────────
 onMounted(async () => {
   try {
+    resetMapOverlayState()
     await nextTick()          // 確保容器 DOM 尺寸就緒
     await loadAppellations()
     await initMap()

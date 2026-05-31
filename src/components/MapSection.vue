@@ -1733,7 +1733,14 @@ watch(() => props.activeAOC, async (newAOC, oldAOC) => {
 watch(isPhoneDevice, (isPhone) => {
 })
 
+function resetMapOverlayState() {
+  climateEnabled.value = false
+  climateIndicator.value = 'temp'
+  resetBRGM(map)
+}
+
 onMounted(async () => {
+  resetMapOverlayState()
   // 注入 BRGM popup 全域樣式
   if (!document.getElementById('brgm-popup-styles')) {
     const style = document.createElement('style')

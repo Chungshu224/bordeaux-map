@@ -938,7 +938,16 @@ watch(() => props.region, async () => {
   }
 }, { deep: true })
 
+function resetMapOverlayState() {
+  showGeology.value = false
+  climateEnabled.value = false
+  climateIndicator.value = 'temp'
+  geologyError.value = null
+  if (soilPopup) { soilPopup.remove(); soilPopup = null }
+}
+
 onMounted(async () => {
+  resetMapOverlayState()
   await nextTick()
   initMap()
 })

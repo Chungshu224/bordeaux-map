@@ -1251,7 +1251,17 @@ async function toggleClimate() {
   if (map && map.getLayer('doc-climate-fill')) map.removeLayer('doc-climate-fill')
 }
 
-onMounted(initMap)
+function resetMapOverlayState() {
+  climateEnabled.value = false
+  climateIndicator.value = 'temp'
+  showGeology.value = false
+  if (lnegPopup) { lnegPopup.remove(); lnegPopup = null }
+}
+
+onMounted(() => {
+  resetMapOverlayState()
+  initMap()
+})
 onUnmounted(() => { if (map) { map.remove(); map = null } })
 
 // ── 統一 adapters ───────────────────────────────────────────────

@@ -1055,7 +1055,14 @@ watch(activeRegion, () => {
   if (geoEnabled.value && map) addGeoLayer()
 })
 
+function resetMapOverlayState() {
+  climateEnabled.value = false
+  geoEnabled.value = false
+  if (geoPopup) { geoPopup.remove(); geoPopup = null }
+}
+
 onMounted(async () => {
+  resetMapOverlayState()
   await nextTick()  // 確保容器 DOM 尺寸就緒
   await loadRegionsData()
   await initMap()

@@ -1154,7 +1154,17 @@ async function toggleClimate() {
   if (map && map.getLayer('au-climate-fill')) map.removeLayer('au-climate-fill')
 }
 
-onMounted(initMap)
+function resetMapOverlayState() {
+  climateEnabled.value = false
+  climateIndicator.value = 'temp'
+  showGeology.value = false
+  if (asrisPopup) { asrisPopup.remove(); asrisPopup = null }
+}
+
+onMounted(() => {
+  resetMapOverlayState()
+  initMap()
+})
 onUnmounted(() => { if (map) { map.remove(); map = null } })
 
 // ── 統一 adapters ───────────────────────────────────────────────
