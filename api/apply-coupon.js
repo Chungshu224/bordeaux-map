@@ -21,6 +21,28 @@ import {
   validateCouponPolicy
 } from './_lib/coupon.js'
 
+async function consumeCouponUse(admin, code) {
+  // 新版：原子扣用（max_uses / used_count 競態安全）
+  const { data, error } = await admin.rpc('consume_coupon_use', { p_code: code })
+  if (!error) return { ok: data === true, mode: 'atomic' }
+
+  // 相容舊資料庫：若尚未套 migration，退回舊版遞增（不阻斷服務）
+  const msg = String(error?.message || '')
+  const rpcMissing = msg.includes('consume_coupon_use') || msg.includes('42883')
+  if (!rpcMissing) {
+    console.error('[apply-coupon] consume_coupon_use RPC error:', error)
+    return { ok: false, mode: 'atomic_error' }
+  }
+
+  console.warn('[apply-coupon] consume_coupon_use not found; fallback to increment_coupon_used')
+  const { error: incErr } = await admin.rpc('increment_coupon_used', { p_code: code })
+  if (incErr) {
+    console.error('[apply-coupon] increment_coupon_used fallback error:', incErr)
+    return { ok: false, mode: 'fallback_error' }
+  }
+  return { ok: true, mode: 'fallback' }
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' })
@@ -39,9 +61,15 @@ export default async function handler(req, res) {
     return res.status(429).json({ message: '請稍後再試' })
   }
 
-  const { couponCode, courseId = 'bordeaux', tier = 'basic', billingPeriod = 'monthly' } = req.body || {}
+  const { couponCode, courseId = 'bordeaux', tier: requestedTier = 'basic', billingPeriod = 'monthly' } = req.body || {}
   if (!couponCode) {
     return res.status(400).json({ message: '缺少優惠碼' })
+  }
+
+  // C1: free_trial 一律由伺服器強制 basic，避免客戶端偽造 premium
+  const tier = 'basic'
+  if (requestedTier !== 'basic') {
+    console.warn('[apply-coupon] ignore non-basic trial tier request:', requestedTier)
   }
 
   const code  = normalizeCouponCode(couponCode)
@@ -106,6 +134,20 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: '您已有付費訂閱紀錄，無法使用試用優惠碼' })
   }
 
+  // H2: 全站只允許一次 free_trial（避免換不同 code 反覆試用）
+  const { data: anyTrialUsed } = await admin
+    .from('purchases')
+    .select('id')
+    .eq('user_id', userId)
+    .eq('payment_provider', 'coupon')
+    .eq('amount', 0)
+    .in('status', ['paid', 'active', 'succeeded'])
+    .limit(1)
+
+  if (anyTrialUsed && anyTrialUsed.length > 0) {
+    return res.status(400).json({ message: '您已使用過試用優惠，無法再次啟用。' })
+  }
+
   // 確認未重複使用同一試用碼
   const { data: usedBefore } = await admin
     .from('purchases')
@@ -123,8 +165,8 @@ export default async function handler(req, res) {
   const paidAt = now.toISOString()
   const expiresAt = trialUntil.toISOString()
 
-  // 寫入 purchases 紀錄
-  const { error: insertErr } = await admin
+  // 先寫入 purchases，再原子扣用優惠碼；若扣用失敗會回滾該試用紀錄
+  const { data: insertedPurchase, error: insertErr } = await admin
     .from('purchases')
     .insert({
       user_id:          userId,
@@ -140,10 +182,18 @@ export default async function handler(req, res) {
       paid_at:          paidAt,
       expires_at:       expiresAt,
     })
+    .select('id')
+    .single()
 
   if (insertErr) {
     console.error('[apply-coupon] DB insert error for user', maskId(userId), ':', insertErr)
     return res.status(500).json({ message: '建立試用訂閱失敗，請聯絡客服' })
+  }
+
+  const consumeResult = await consumeCouponUse(admin, code)
+  if (!consumeResult.ok) {
+    await admin.from('purchases').delete().eq('id', insertedPurchase.id)
+    return res.status(400).json({ message: '優惠碼使用次數已達上限' })
   }
 
   // 更新 profiles 訂閱到期日（upsert）
@@ -194,11 +244,9 @@ export default async function handler(req, res) {
     }
   }
 
-  // 遞增優惠碼使用次數
-  await admin.rpc('increment_coupon_used', { p_code: code }).catch(() => {})
-
   console.log('[apply-coupon] Trial activated for user', maskId(userId),
     '| code:', code,
+    '| consume_mode:', consumeResult.mode,
     '| referrer:', coupon.referrer_id || 'none',
     '| until:', expiresAt)
 

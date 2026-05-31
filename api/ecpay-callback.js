@@ -15,6 +15,26 @@ import { createClient } from '@supabase/supabase-js'
 import { maskId } from './_lib/security.js'
 import { couponBonusDays, isCouponActiveNow } from './_lib/coupon.js'
 
+async function consumeCouponUse(admin, code) {
+  const { data, error } = await admin.rpc('consume_coupon_use', { p_code: code })
+  if (!error) return { ok: data === true, mode: 'atomic' }
+
+  const msg = String(error?.message || '')
+  const rpcMissing = msg.includes('consume_coupon_use') || msg.includes('42883')
+  if (!rpcMissing) {
+    console.error('[ecpay-callback] consume_coupon_use RPC error:', error)
+    return { ok: false, mode: 'atomic_error' }
+  }
+
+  console.warn('[ecpay-callback] consume_coupon_use not found; fallback to increment_coupon_used')
+  const { error: incErr } = await admin.rpc('increment_coupon_used', { p_code: code })
+  if (incErr) {
+    console.error('[ecpay-callback] increment_coupon_used fallback error:', incErr)
+    return { ok: false, mode: 'fallback_error' }
+  }
+  return { ok: true, mode: 'fallback' }
+}
+
 // ─── ECPay CheckMacValue 驗證 ─────────────────────────────────────────────────
 
 function verifyCheckMacValue(params, hashKey, hashIV) {
@@ -199,7 +219,7 @@ export default async function handler(req, res) {
     return res.status(200).send('1|OK')
   }
 
-  // Idempotency：若已是 paid 狀態，直接回 OK，不重複開通
+  // Idempotency fast-path：已完成訂單直接略過
   if (purchase.status === 'paid' || purchase.status === 'active') {
     return res.status(200).send('1|OK')
   }
@@ -242,8 +262,8 @@ export default async function handler(req, res) {
 
   const expiresAt = expiresDate.toISOString()
 
-  // 2. 更新訂單為 paid
-  const { error: updateErr } = await supabaseAdmin
+  // 2. 原子更新訂單狀態：只有 pending/awaiting_payment 才能轉 paid
+  const { data: updatedRows, error: updateErr } = await supabaseAdmin
     .from('purchases')
     .update({
       status: 'paid',
@@ -252,14 +272,26 @@ export default async function handler(req, res) {
       expires_at: expiresAt
     })
     .eq('id', purchase.id)
+    .in('status', ['pending', 'awaiting_payment'])
+    .select('id')
 
   if (updateErr) {
     console.error('[ecpay-callback] 更新訂單狀態失敗:', updateErr)
     return res.status(500).send('0|ERR')
   }
 
+  // 若 0 rows，代表已被其他 callback 完成（冪等）
+  if (!updatedRows || updatedRows.length === 0) {
+    return res.status(200).send('1|OK')
+  }
+
   if (purchase.coupon_code) {
-    await supabaseAdmin.rpc('increment_coupon_used', { p_code: purchase.coupon_code }).catch(() => {})
+    const consumeResult = await consumeCouponUse(supabaseAdmin, purchase.coupon_code)
+    if (!consumeResult.ok) {
+      console.warn(
+        `[ecpay-callback] coupon consume failed trade=${MerchantTradeNo} code=${purchase.coupon_code} mode=${consumeResult.mode}`
+      )
+    }
   }
 
   // 3. 更新 auth.users 的 subscription_tier（取已有tier與此次購買的較高者）
