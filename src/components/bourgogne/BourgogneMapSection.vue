@@ -1478,6 +1478,14 @@ const unifiedInfo = computed(() => {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .map-section {
+    height: 100dvh;
+    min-height: 100svh;
+    overscroll-behavior: none;
+  }
+}
+
 .map {
   position: absolute;
   top: 0;

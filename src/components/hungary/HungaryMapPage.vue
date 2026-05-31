@@ -1129,6 +1129,19 @@ function handleMobileAction(action) {
   height: 100%;
   overflow: hidden;
 }
+
+@media (max-width: 768px) {
+  .main-layout {
+    height: 100dvh;
+    min-height: 100svh;
+    overscroll-behavior: none;
+  }
+
+  .map-section {
+    height: 100dvh;
+    min-height: 100svh;
+  }
+}
 .map {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;

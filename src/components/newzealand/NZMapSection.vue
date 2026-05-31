@@ -956,6 +956,10 @@ const handleMobileAction = (action) => {
 .map-section { flex: 1; position: relative; height: 100%; overflow: hidden; }
 .map { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+@media (max-width: 768px) {
+  .map-section { height: 100dvh; min-height: 100svh; overscroll-behavior: none; }
+}
+
 /* ── Header (Bordeaux style) ──────────────────────────────────── */
 .map-header {
   position: absolute;

@@ -1483,6 +1483,14 @@ function handleMobileAction(action) {
   background: #eee;
 }
 
+@media (max-width: 768px) {
+  .spain-map-section {
+    height: 100dvh;
+    min-height: 100svh;
+    overscroll-behavior: none;
+  }
+}
+
 .map {
   position: absolute;
   inset: 0;

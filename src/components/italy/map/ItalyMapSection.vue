@@ -1181,6 +1181,13 @@ onUnmounted(() => {
   height: 100vh;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .italy-map-section {
+    height: 100dvh;
+    min-height: 100svh;
+    overscroll-behavior: none;
+  }
+}
 .map {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;

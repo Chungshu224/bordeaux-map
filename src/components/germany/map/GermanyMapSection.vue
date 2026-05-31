@@ -1077,6 +1077,14 @@ const unifiedInfo = computed(() => {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
+@media (max-width: 768px) {
+  .germany-map-section {
+    height: 100dvh;
+    min-height: 100svh;
+    overscroll-behavior: none;
+  }
+}
+
 .map {
   position: absolute;
   inset: 0;

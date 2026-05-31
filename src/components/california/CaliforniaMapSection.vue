@@ -1182,6 +1182,14 @@ function handleMobileAction(action) {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .california-map-section {
+    height: 100dvh;
+    min-height: 100svh;
+    overscroll-behavior: none;
+  }
+}
+
 /* ── Map ── */
 .map {
   position: absolute;

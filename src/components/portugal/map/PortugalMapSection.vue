@@ -1313,6 +1313,14 @@ function handleMobileAction(action) {
   overflow: hidden;
   font-family: 'Noto Sans TC', sans-serif;
 }
+
+@media (max-width: 768px) {
+  .portugal-map-section {
+    height: 100dvh;
+    min-height: 100svh;
+    overscroll-behavior: none;
+  }
+}
 .map {
   position: absolute;
   inset: 0;
