@@ -339,7 +339,7 @@ router.beforeEach(async (to, from, next) => {
   let requiredTier = routeRule?.minimumTier ?? to.meta.minimumTier
   let accessTier = userTier
 
-  if (routeRule?.courseId) {
+  if (routeRule?.courseId && !isAdmin) {
     accessTier = await getCourseAccess(user.id, routeRule.courseId)
   }
 
