@@ -49,7 +49,7 @@ import {
   CourseHomeLayout, RegionHero, ProgressStrip, QuickNavGrid,
   LevelTrack, ProgressModal, getTheme
 } from '../../shared/courseHome/index.js'
-import { courseLevels, getLevelProgressPct, getUserProgress } from '../data/courseLevels.js'
+import { courseLevels, getLevelProgressPct, isItalyLevelUnlocked } from '../data/courseLevels.js'
 import { authActions } from '../../../stores/authStore.js'
 
 const { t } = useI18n()
@@ -78,10 +78,7 @@ function levelPct(key) { return getLevelProgressPct(key) }
 
 function isLevelUnlocked(key) {
   if (authActions.isAdmin && authActions.isAdmin()) return true
-  if (key === 'level1') return true
-  if (key === 'level2') return getUserProgress('level1').completedLessons.includes('L1M4L2')
-  if (key === 'level3') return getUserProgress('level2').completedLessons.includes('L2FinalExam')
-  return false
+  return isItalyLevelUnlocked(key)
 }
 
 const heroButtonText = computed(() => {

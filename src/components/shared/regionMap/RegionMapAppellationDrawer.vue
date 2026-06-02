@@ -129,7 +129,7 @@ function badgeClass(type) {
   padding: 20px;
 }
 .rmap-aoc-drawer {
-  width: min(440px, 100%);
+  width: min(100%, var(--rmap-toolbar-width, min(560px, calc(100vw - 24px))));
   max-height: 80vh;
   background: #fff;
   border-radius: 16px;
@@ -302,7 +302,8 @@ function badgeClass(type) {
 @media (max-width: 768px) {
   .rmap-aoc-backdrop { padding: 0; align-items: flex-end; }
   .rmap-aoc-drawer {
-    width: 100%; max-height: 90vh;
+    width: min(100%, var(--rmap-toolbar-width, min(560px, calc(100vw - 24px))));
+    max-height: 90vh;
     border-radius: 16px 16px 0 0;
   }
 }

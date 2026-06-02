@@ -35,12 +35,14 @@
     <!-- 簡報內容 -->
     <div class="slide-container">
       <div class="slide" :key="currentSlide">
-        <component
-          :is="currentComponent"
-          :slide="slides[currentSlide]"
-          :mapRegion="lesson.mapRegion || null"
-          @openMap="$emit('openMap')"
-        />
+        <div class="slide-scroll">
+          <component
+            :is="currentComponent"
+            :slide="slides[currentSlide]"
+            :mapRegion="lesson.mapRegion || null"
+            @openMap="$emit('openMap')"
+          />
+        </div>
       </div>
     </div>
 
@@ -271,6 +273,16 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
   overflow: hidden;
   /* 防止 Tailwind reset 造成 box-sizing 問題 */
   box-sizing: border-box;
+}
+
+/* 統一由這層接管垂直捲動，避免不同 slide 元件滾動行為不一致 */
+.slide-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 @keyframes slideIn {

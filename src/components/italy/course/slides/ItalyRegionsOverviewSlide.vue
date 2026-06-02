@@ -18,26 +18,13 @@
       </button>
     </div>
 
-    <div class="regions-grid">
-      <div
-        v-for="region in filteredRegions"
-        :key="region.key"
-        class="region-card"
-        :class="{ active: activeKey === region.key }"
-        :style="{ borderTopColor: zoneColor(region.zone), '--zone-color': zoneColor(region.zone) }"
-        @click="activeKey = region.key"
-      >
-        <div class="region-flag">{{ region.emoji }}</div>
-        <h3>{{ region.name }}</h3>
-        <span class="region-zh">{{ region.zhName }}</span>
-        <div class="region-stats">
-          <span class="stat-tag">{{ region.docgCount }} DOCG</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="region-detail" v-if="activeRegion" :style="{ borderColor: zoneColor(activeRegion.zone) }">
-      <img :src="`/images/italy/zone-${activeRegion.zone}.svg`" class="zone-banner" :alt="zoneLabel(activeRegion.zone)" />
+    <div
+      class="region-detail"
+      :class="{ flash: flashDetail }"
+      v-if="activeRegion"
+      :style="{ borderColor: zoneColor(activeRegion.zone) }"
+      :key="activeRegion.key"
+    >
       <div class="detail-header">
         <h3>{{ activeRegion.emoji }} {{ activeRegion.name }} <span class="zh">{{ activeRegion.zhName }}</span></h3>
         <span class="zone-badge" :style="{ backgroundColor: zoneColor(activeRegion.zone) }">
@@ -47,28 +34,40 @@
 
       <p class="detail-tagline">{{ activeRegion.tagline }}</p>
 
-      <div class="detail-grid">
+      <div class="detail-grid compact">
         <div class="detail-block">
-          <h4>🍇 招牌品種</h4>
+          <h4>🌤️ 氣候類型</h4>
+          <p>{{ climateText(activeRegion) }}</p>
+        </div>
+        <div class="detail-block">
+          <h4>🍇 主要品種</h4>
           <p>{{ activeRegion.signature }}</p>
         </div>
         <div class="detail-block">
-          <h4>🏆 代表 DOCG</h4>
-          <ul>
-            <li v-for="(d, i) in activeRegion.topDOCG" :key="i">{{ d }}</li>
-          </ul>
+          <h4>🏆 代表 DOCG / DOC</h4>
+          <p>{{ activeRegion.topDOCG.join('、') }}</p>
         </div>
         <div class="detail-block">
-          <h4>🪨 風土特色</h4>
-          <p>{{ activeRegion.terroir }}</p>
-        </div>
-        <div class="detail-block">
-          <h4>🍷 風格特徵</h4>
+          <h4>🍷 酒款風格</h4>
           <p>{{ activeRegion.style }}</p>
         </div>
-        <div class="detail-block full-width">
-          <h4>💡 重點知識</h4>
-          <p>{{ activeRegion.keyFact }}</p>
+      </div>
+    </div>
+
+    <div class="regions-grid">
+      <div
+        v-for="region in filteredRegions"
+        :key="region.key"
+        class="region-card"
+        :class="{ active: activeKey === region.key }"
+        :style="{ borderTopColor: zoneColor(region.zone), '--zone-color': zoneColor(region.zone) }"
+        @click="selectRegion(region.key)"
+      >
+        <div class="region-flag">{{ region.emoji }}</div>
+        <h3>{{ region.name }}</h3>
+        <span class="region-zh">{{ region.zhName }}</span>
+        <div class="region-stats">
+          <span class="stat-tag">{{ region.docgCount }} DOCG</span>
         </div>
       </div>
     </div>
@@ -76,7 +75,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch, nextTick } from 'vue'
 
 const props = defineProps({
   slide: { type: Object, default: () => ({}) }
@@ -261,6 +260,35 @@ const activeKey = ref(props.slide.defaultKey || regions.value[0]?.key || 'piemon
 const activeRegion = computed(
   () => regions.value.find((r) => r.key === activeKey.value) || regions.value[0]
 )
+const flashDetail = ref(false)
+
+function climateText(region) {
+  if (!region) return ''
+  const byZone = {
+    north: '冷涼到溫和的大陸性 / 山地氣候，日夜溫差明顯。',
+    center: '溫和地中海與丘陵過渡氣候，日照充足且海風影響適中。',
+    south: '溫暖地中海氣候，日照強、成熟度高、夏季較乾燥。'
+  }
+  return region.climate || byZone[region.zone] || '地中海型氣候'
+}
+
+function selectRegion(regionKey) {
+  activeKey.value = regionKey
+  nextTick(() => {
+    flashDetail.value = false
+    requestAnimationFrame(() => {
+      flashDetail.value = true
+      setTimeout(() => { flashDetail.value = false }, 700)
+    })
+  })
+}
+
+// 篩選分類後，若目前選取的產區不在該分類內，改選該分類第一筆，避免下方詳情與上方列表不一致。
+watch(filteredRegions, (list) => {
+  if (!list.length) return
+  const stillVisible = list.some((r) => r.key === activeKey.value)
+  if (!stillVisible) activeKey.value = list[0].key
+}, { immediate: true })
 </script>
 
 <style scoped>
@@ -383,18 +411,14 @@ const activeRegion = computed(
   background: #fff;
   border-radius: 12px;
   border-left: 6px solid;
-  padding: 0 1.4rem 1.2rem;
+  padding: 1rem 1.2rem;
   box-shadow: 0 4px 12px rgba(123, 31, 42, 0.12);
-  overflow: hidden;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
-
-.zone-banner {
-  width: calc(100% + 2.8rem);
-  height: 80px;
-  object-fit: cover;
-  display: block;
-  margin: 0 -1.4rem 1rem;
-  border-radius: 12px 6px 0 0;
+.region-detail.flash {
+  box-shadow: 0 0 0 3px rgba(123, 31, 42, 0.18), 0 8px 20px rgba(123, 31, 42, 0.24);
+  transform: translateY(-2px);
 }
 
 .detail-header {
@@ -442,6 +466,11 @@ const activeRegion = computed(
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+}
+
+.detail-grid.compact {
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
 }
 
 .detail-block.full-width {

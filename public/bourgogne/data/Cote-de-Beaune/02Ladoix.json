@@ -50,6 +50,23 @@
         "history": "一個特定的村莊級lieu-dit，有時會單獨標示。",
         "famousWineries": ["Domaine Gaston et Pierre Ravaut"],
         "color": "#8FBC8F"
+      },
+      "ladoix-ou-ladoix-cote-de-beaune": {
+        "name": "Ladoix ou Ladoix Côte de Beaune",
+        "file": "Ladoix 1er cru/AOC Ladoix ou Ladoix Côte de Beaune.geojson",
+        "fullName": "AOC Ladoix ou Ladoix Côte de Beaune",
+        "classification": "Village",
+        "area": "N/A",
+        "altitude": "230-300m",
+        "exposition": "東",
+        "soilStructure": "石灰岩",
+        "grapeVarieties": ["Pinot Noir"],
+        "wineStyle": "通常比標準的Ladoix村莊級更具結構感。",
+        "tastingNotes": "紅色水果、香料。",
+        "agingPotential": "4-10年",
+        "history": "對應 GeoJSON 檔名中的 ou 命名變體。",
+        "famousWineries": ["Domaine Gaston et Pierre Ravaut"],
+        "color": "#8FBC8F"
       }
     },
     "grand_crus": {

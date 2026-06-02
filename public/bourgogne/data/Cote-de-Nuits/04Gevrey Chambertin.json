@@ -919,6 +919,26 @@
         "眾多生產者"
       ],
       "color": "#CD853F"
+    },
+    "gevrey-chambertin": {
+      "name": "Gevrey-Chambertin",
+      "fullName": "AOC Gevrey-Chambertin (Gevrey-Chambertin)",
+      "classification": "Village",
+      "area": "約400 ha",
+      "altitude": "220-280m",
+      "exposition": "主要朝東",
+      "soilStructure": "多樣化土壤，以粘土石灰岩為主",
+      "grapeVarieties": [
+        "黑皮諾 100%"
+      ],
+      "wineStyle": "果味豐富、結構良好、易於親近",
+      "tastingNotes": "櫻桃、草莓、香料、土壤氣息",
+      "agingPotential": "5-12年",
+      "history": "對應 AOC Gevrey-Chambertin (Gevrey-Chambertin) 的村莊級命名。",
+      "famousWineries": [
+        "眾多生產者"
+      ],
+      "color": "#CD853F"
     }
   }
   }

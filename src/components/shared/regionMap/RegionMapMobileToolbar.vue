@@ -39,9 +39,14 @@ defineEmits(['action'])
 
 <style scoped>
 .rmap-mobile-toolbar {
+  --rmap-toolbar-width: min(560px, calc(100vw - 24px));
   position: absolute;
   bottom: max(20px, calc(env(safe-area-inset-bottom) + 16px));
-  left: 12px; right: 12px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: var(--rmap-toolbar-width);
+  max-width: calc(100vw - 24px);
   z-index: 45;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -76,12 +81,8 @@ defineEmits(['action'])
 /* ── 桌機：置中底部橫向工具列（與手機共用元件） ── */
 @media (min-width: 769px) {
   .rmap-mobile-toolbar {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
     bottom: 24px;
-    width: auto;
-    min-width: 420px;
+    width: var(--rmap-toolbar-width);
     grid-template-columns: repeat(4, minmax(80px, 1fr));
     gap: 4px;
     padding: 6px;

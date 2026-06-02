@@ -145,58 +145,6 @@
         </div>
       </section>
 
-      <!-- ── 課程管理 ── -->
-      <section v-if="activeTab === 'courses'" class="tab-panel">
-        <h2 class="section-title">課程管理</h2>
-        <div class="courses-grid">
-          <div v-for="c in courses" :key="c.id" class="course-card">
-            <div class="course-flag">{{ courseFlag(c.id) }}</div>
-            <h3>{{ c.name_zh }}</h3>
-            <p class="course-desc">{{ c.description }}</p>
-            <!-- 訂閱定價表格 -->
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>月費</th>
-                  <th>年費</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="pt-tier basic">完整課程</td>
-                  <td>NT$ {{ (c.price_basic_monthly ?? c.price_basic ?? 290).toLocaleString() }}</td>
-                  <td>NT$ {{ (c.price_basic_yearly ?? 1800).toLocaleString() }}</td>
-                </tr>
-                <tr>
-                  <td class="pt-tier premium">頂級方案</td>
-                  <td>NT$ {{ (c.price_premium_monthly ?? c.price_premium ?? 590).toLocaleString() }}</td>
-                  <td>NT$ {{ (c.price_premium_yearly ?? 3600).toLocaleString() }}</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="course-actions">
-              <button class="btn-sm" @click="editCourse(c)">編輯價格</button>
-              <button
-                :class="['btn-sm', c.active ? 'btn-deactivate' : 'btn-activate']"
-                :disabled="togglingCourse === c.id"
-                @click="toggleCourseActive(c)">
-                {{ togglingCourse === c.id ? '處理中…' : c.active ? '下架' : '上架' }}
-              </button>
-              <button
-                :class="['btn-sm', c.show_on_home !== false ? 'btn-show-on' : 'btn-show-off']"
-                :disabled="togglingShowHome === c.id"
-                @click="toggleCourseShowHome(c)">
-                {{ togglingShowHome === c.id ? '處理中…' : c.show_on_home !== false ? '🏠 首頁顯示' : '🚫 首頁隱藏' }}
-              </button>
-              <span :class="['status-dot', c.active ? 'on' : 'off']">
-                {{ c.active ? '上架中' : '已下架' }}
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ── 營收報表 ── -->
       <section v-if="activeTab === 'revenue'" class="tab-panel">
         <div class="section-header">
@@ -721,7 +669,6 @@ const router = useRouter()
 const tabs = [
   { id: 'overview',      label: '總覽',     icon: '📊' },
   { id: 'students',      label: '學員管理', icon: '👥' },
-  { id: 'courses',       label: '課程管理', icon: '📚' },
   { id: 'revenue',       label: '營收報表', icon: '💰' },
   { id: 'progress',      label: '學習進度', icon: '📈' },
   { id: 'achievements',  label: '成就紀錄', icon: '🏆' },
@@ -962,7 +909,7 @@ onMounted(async () => {
     router.replace('/')
     return
   }
-  await Promise.all([loadStats(), loadStudents(), loadCourses(), loadRevenue()])
+  await Promise.all([loadStats(), loadStudents(), loadRevenue()])
 })
 
 // 切換 tab 時自動載入

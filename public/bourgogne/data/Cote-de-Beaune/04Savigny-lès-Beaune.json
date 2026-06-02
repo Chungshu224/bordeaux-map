@@ -50,6 +50,23 @@
         "history": "一個特定的村莊級lieu-dit，品質較高。",
         "famousWineries": ["Domaine Simon Bize"],
         "color": "#8FBC8F"
+      },
+      "savigny-les-beaune-ou-savigny-les-beaune-cote-de-beaune": {
+        "name": "Savigny-lès-Beaune ou Savigny-lès-Beaune Côte de Beaune",
+        "file": "AOC Savigny-lès-Beaune ou Savigny-lès-Beaune Côte de Beaune.geojson",
+        "fullName": "AOC Savigny-lès-Beaune ou Savigny-lès-Beaune Côte de Beaune",
+        "classification": "Village",
+        "area": "N/A",
+        "altitude": "250-350m",
+        "exposition": "東、東南",
+        "soilStructure": "石灰岩",
+        "grapeVarieties": ["Pinot Noir"],
+        "wineStyle": "比普通的村莊級更具結構和複雜性。",
+        "tastingNotes": "紅色水果、香料、礦物質。",
+        "agingPotential": "5-12年",
+        "history": "對應 GeoJSON 檔名中的 ou 命名變體。",
+        "famousWineries": ["Domaine Simon Bize"],
+        "color": "#8FBC8F"
       }
     },
     "premier_crus": {

@@ -30,6 +30,7 @@
         :currentLevelKey="selectedLevelKey"
         :currentLevelDef="currentLevelDef"
         :completedLessons="completedLessonsArray"
+        :unlockedLevels="unlockedLevels"
         @backToLevelSelector="backToLevelSelector"
         @changeLevel="handleSelectLevel"
         @startLesson="startLesson"
@@ -84,11 +85,12 @@ import ItalyCourseLayout from './ItalyCourseLayout.vue'
 import ItalyTastingNotebookPage from '../notebook/ItalyTastingNotebookPage.vue'
 import ItalyGameHubPage from '../games/ItalyGameHubPage.vue'
 import AchievementsDashboard from '../../AchievementsDashboard.vue'
-import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevels.js'
+import { courseLevels, getUserProgress, saveProgress, isItalyLevelUnlocked } from '../data/courseLevels.js'
 import {
   globalItalyAchievementManager
 } from '../../../stores/italyAchievementSystem.js'
 import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
+import { authActions } from '../../../stores/authStore.js'
 
 const ITALY_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/italy/*.json')
 
@@ -111,6 +113,15 @@ const completedLessonsArray = computed(() =>
   Object.keys(completedMap.value).filter(k => completedMap.value[k])
 )
 
+const unlockedLevels = computed(() => {
+  const isAdmin = authActions.isAdmin && authActions.isAdmin()
+  return {
+    level1: true,
+    level2: isAdmin || isItalyLevelUnlocked('level2'),
+    level3: isAdmin || isItalyLevelUnlocked('level3')
+  }
+})
+
 function loadCompleted (levelKey) {
   const progress = getUserProgress(levelKey)
   progress.completedLessons.forEach(id => { completedMap.value[id] = true })
@@ -125,6 +136,13 @@ const currentLevelDef = computed(() => {
 })
 
 function handleSelectLevel (levelKey) {
+  if (!unlockedLevels.value[levelKey]) {
+    const hint = levelKey === 'level2'
+      ? t('italy.selector.unlockHint.level2')
+      : t('italy.selector.unlockHint.level3')
+    window.alert(hint)
+    return
+  }
   selectedLevelKey.value = levelKey
   loadCompleted(levelKey)
   view.value = 'courseContent'

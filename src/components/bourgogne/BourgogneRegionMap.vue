@@ -18,6 +18,38 @@ const activeAOC = ref({ group: '', aoc: '' })
 const regionInfo = ref(null)
 const dataCache = new Map()
 
+const normalizeLookupKey = (value) => {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/\.geojson$/i, '')
+    .replace(/^aoc\s+/i, '')
+    .replace(/[àâä]/g, 'a')
+    .replace(/[éèêë]/g, 'e')
+    .replace(/[ôö]/g, 'o')
+    .replace(/[ùûü]/g, 'u')
+    .replace(/[îï]/g, 'i')
+    .replace(/ç/g, 'c')
+    .replace(/œ/g, 'oe')
+    .replace(/æ/g, 'ae')
+    .replace(/[’']/g, '-')
+    .replace(/[^a-z0-9\s-]/g, ' ')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+const buildLookupCandidates = (value) => {
+  const base = normalizeLookupKey(value)
+  const withoutArticle = base.replace(/^(le|la|les|l)-/, '')
+  const set = new Set([
+    base,
+    withoutArticle,
+    base.replace(/-/g, ''),
+    withoutArticle.replace(/-/g, '')
+  ])
+  return [...set].filter(Boolean)
+}
+
 const TOUCH_LAYOUT_MAX_WIDTH = 4096
 const useTouchCompactLayout = () => {
   return typeof window !== 'undefined' && window.innerWidth <= TOUCH_LAYOUT_MAX_WIDTH
@@ -195,35 +227,30 @@ const showAOCGeojson = async (group, aoc) => {
         searchKey = match ? match[1] : searchKey.replace(/^AOC /, '');
       }
       
-      // 標準化搜尋鍵
-      searchKey = searchKey.toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[àâä]/g, 'a')
-        .replace(/[éèêë]/g, 'e')
-        .replace(/[ôö]/g, 'o')
-        .replace(/[ùûü]/g, 'u')
-        .replace(/ç/g, 'c')
-        .replace(/[îï]/g, 'i');
+      const candidateKeys = buildLookupCandidates(searchKey)
       
       let foundInfo = null;
       
       if (targetCategory) {
-        // 嘗試直接匹配
-        foundInfo = targetCategory[searchKey];
-        
-        // 如果沒找到，嘗試其他可能的變體
-        if (!foundInfo) {
-          // 嘗試不帶連字符的版本
-          const noHyphens = searchKey.replace(/-/g, '');
-          foundInfo = targetCategory[noHyphens];
+        // 1) 先用 key 直接比對
+        for (const key of candidateKeys) {
+          if (targetCategory[key]) {
+            foundInfo = targetCategory[key]
+            break
+          }
         }
-        
+
+        // 2) 再比對每筆資料的 key / name / fullName
         if (!foundInfo) {
-          // 嘗試首字母大寫的版本 (例如 "Clos de la Perrière" 可能用原始大小寫作為 key)
-          for (const key of Object.keys(targetCategory)) {
-            if (key.toLowerCase().replace(/\s+/g, '-') === searchKey) {
-              foundInfo = targetCategory[key];
-              break;
+          for (const [rawKey, info] of Object.entries(targetCategory)) {
+            const probes = buildLookupCandidates(rawKey)
+            if (info?.name) probes.push(...buildLookupCandidates(info.name))
+            if (info?.fullName) probes.push(...buildLookupCandidates(info.fullName))
+            const probeSet = new Set(probes)
+            const matched = candidateKeys.some(key => probeSet.has(key))
+            if (matched) {
+              foundInfo = info
+              break
             }
           }
         }
@@ -233,14 +260,14 @@ const showAOCGeojson = async (group, aoc) => {
         regionInfo.value = foundInfo;
         console.log('[RegionMap] Region info found:', foundInfo.name);
       } else {
-        // 如果找不到，嘗試使用第一個資訊（預設）
-        if (targetCategory && Object.keys(targetCategory).length > 0) {
+        // 如果找不到，僅在分類只有一筆資料時使用預設，避免誤配到「總覽」
+        if (targetCategory && Object.keys(targetCategory).length === 1) {
           const firstKey = Object.keys(targetCategory)[0];
           regionInfo.value = targetCategory[firstKey];
-          console.warn(`[RegionMap] Using first entry for: "${aoc}", searched for: "${searchKey}"`);
+          console.warn(`[RegionMap] Using only available entry for: "${aoc}", searched for:`, candidateKeys);
         } else {
           regionInfo.value = null;
-          console.error(`[RegionMap] No info found for: "${aoc}", searched for: "${searchKey}" in category:`, targetCategory ? Object.keys(targetCategory) : 'undefined');
+          console.error(`[RegionMap] No info found for: "${aoc}", searched for:`, candidateKeys, 'in category:', targetCategory ? Object.keys(targetCategory) : 'undefined');
         }
       }
     } else {
@@ -310,6 +337,7 @@ watch(() => props.regionConfig?.id, () => {
 
 <style scoped>
 .main-layout {
+  --rmap-toolbar-width: min(560px, calc(100vw - 24px));
   display: flex;
   width: 100%;
   height: 100dvh; /* dynamic viewport height */
@@ -330,12 +358,13 @@ watch(() => props.regionConfig?.id, () => {
   :deep(.aoc-list.mobile-overlay) {
     position: fixed;
     top: 12px;
-    left: 5px;
+    left: 50%;
     right: auto;
     bottom: 96px;
     height: auto;
-    width: calc(100vw - 10px);
-    max-width: calc(100vw - 10px);
+    width: min(100%, var(--rmap-toolbar-width));
+    max-width: var(--rmap-toolbar-width);
+    transform: translateX(-50%);
     z-index: 1000;
     background: white;
     border-radius: 16px;
@@ -346,8 +375,8 @@ watch(() => props.regionConfig?.id, () => {
 
 @media (min-width: 1024px) {
   :deep(.aoc-list.mobile-overlay) {
-    width: min(52vw, 760px);
-    max-width: min(52vw, 760px);
+    width: var(--rmap-toolbar-width);
+    max-width: var(--rmap-toolbar-width);
     left: 50%;
     right: auto;
     transform: translateX(-50%);

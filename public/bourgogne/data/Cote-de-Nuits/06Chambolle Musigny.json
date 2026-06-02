@@ -163,6 +163,22 @@
       "famousWineries": ["Ghislaine Barthod", "Denis Mortet"],
       "color": "#CD853F"
     },
+    "les-combottes": {
+      "name": "Les Combottes",
+      "fullName": "AOC Chambolle-Musigny 1er Cru Les Combottes",
+      "classification": "1er Cru",
+      "area": "2.2 ha",
+      "altitude": "270-290m",
+      "exposition": "東南向",
+      "soilStructure": "石灰岩基底，含粘土",
+      "grapeVarieties": ["黑皮諾 100%"],
+      "wineStyle": "結構良好、香氣複雜",
+      "tastingNotes": "紅果、花香、香料、礦物質",
+      "agingPotential": "12-18年",
+      "history": "與 Aux Combottes 為常見異名，位於村莊北部，土壤富含石灰岩。",
+      "famousWineries": ["Ghislaine Barthod", "Denis Mortet"],
+      "color": "#CD853F"
+    },
     "aux-beaux-bruns": {
       "name": "Aux Beaux Bruns",
       "fullName": "AOC Chambolle-Musigny 1er Cru Aux Beaux Bruns",
@@ -320,6 +336,22 @@
       "tastingNotes": "紅莓、花香、礦物質、香料",
       "agingPotential": "12-20年",
       "history": "位於較高海拔，涼爽微氣候",
+      "famousWineries": ["Hubert Lignier", "Denis Mortet"],
+      "color": "#CD853F"
+    },
+    "les-feusselottes-ou-les-feusselotes": {
+      "name": "Les Feusselottes",
+      "fullName": "AOC Chambolle-Musigny 1er Cru Les Feusselottes ou Les Feusselotes",
+      "classification": "1er Cru",
+      "area": "4.1 ha",
+      "altitude": "280-310m",
+      "exposition": "東向",
+      "soilStructure": "石灰岩為主，含少量粘土",
+      "grapeVarieties": ["黑皮諾 100%"],
+      "wineStyle": "清新優雅、酸度活潑",
+      "tastingNotes": "紅莓、花香、礦物質、香料",
+      "agingPotential": "12-20年",
+      "history": "同一 climat 的雙拼寫（Feusselottes / Feusselotes）常見於官方檔名。",
       "famousWineries": ["Hubert Lignier", "Denis Mortet"],
       "color": "#CD853F"
     },

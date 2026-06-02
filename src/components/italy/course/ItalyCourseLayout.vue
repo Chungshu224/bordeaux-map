@@ -13,7 +13,8 @@
             v-for="lv in levelKeys"
             :key="lv"
             class="level-tab"
-            :class="{ active: props.currentLevelKey === lv }"
+            :class="{ active: props.currentLevelKey === lv, locked: !isUnlockedLevel(lv) }"
+            :disabled="!isUnlockedLevel(lv)"
             @click="emit('changeLevel', lv)"
           >
             L{{ lv.replace('level', '') }}
@@ -190,7 +191,11 @@ onMounted(async () => {
 const props = defineProps({
   currentLevelKey: { type: String, required: true },
   currentLevelDef: { type: Object, required: true },
-  completedLessons: { type: Array, default: () => [] }
+  completedLessons: { type: Array, default: () => [] },
+  unlockedLevels: {
+    type: Object,
+    default: () => ({ level1: true, level2: true, level3: true })
+  }
 })
 
 const emit = defineEmits(['backToLevelSelector', 'changeLevel', 'startLesson'])
@@ -216,6 +221,9 @@ const overallProgress = computed(() =>
 
 function moduleDoneCount (module) {
   return module.lessons.filter(l => props.completedLessons.includes(l.id)).length
+}
+function isUnlockedLevel (levelKey) {
+  return !!props.unlockedLevels[levelKey]
 }
 function isModuleCompleted (module) {
   return module.lessons.length > 0 && module.lessons.every(l => props.completedLessons.includes(l.id))
@@ -311,6 +319,14 @@ function scrollToModuleAndClose (moduleId) {
 }
 .level-tab:hover { color: white; background: rgba(255, 255, 255, 0.14); }
 .level-tab.active { background: white; color: var(--primary); }
+.level-tab.locked {
+  color: rgba(255, 255, 255, 0.35);
+  cursor: not-allowed;
+}
+.level-tab.locked:hover {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.35);
+}
 .header-right { display: flex; align-items: center; gap: 10px; }
 .hdr-avatar {
   width: 34px; height: 34px; border-radius: 50%;

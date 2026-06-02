@@ -4,7 +4,7 @@
 
       <!-- 頂部 -->
       <div class="dash-header">
-        <button class="back-btn" @click="$router.push('/bordeaux')">← {{ $t('common.actions.backToCourse') }}</button>
+        <button class="back-btn" @click="$router.push('/')">← {{ $t('common.actions.backToHome') }}</button>
         <div class="dash-title-row">
           <h1>🎓 我的學習中心</h1>
           <p>{{ displayName }}・{{ userEmail }}</p>

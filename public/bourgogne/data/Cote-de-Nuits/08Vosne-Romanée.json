@@ -115,6 +115,22 @@
     }
   },
   "premier_crus": {
+    "vosne-romanee-1er-cru-overview": {
+      "name": "Vosne-Romanée 一級園總覽",
+      "fullName": "AOC Vosne-Romanée 1er Cru",
+      "classification": "Premier Cru",
+      "area": "約 57 ha",
+      "altitude": "240-300m",
+      "exposition": "東南向",
+      "soilStructure": "石灰岩粘土為主，含不同深度礫石層",
+      "grapeVarieties": ["黑皮諾 100%"],
+      "wineStyle": "優雅與力量兼具，香氣層次深，具優秀陳年潛力",
+      "tastingNotes": "櫻桃、黑莓、玫瑰、香料、礦物質",
+      "agingPotential": "12-25年",
+      "history": "Vosne-Romanée 的一級園緊鄰多個傳奇特級園，被視為最接近 Grand Cru 風格的村莊之一。",
+      "famousWineries": ["Domaine Méo-Camuzet", "Sylvain Cathiard", "Domaine Lamarche"],
+      "color": "#CD853F"
+    },
     "aux-malconsorts": {
       "name": "Aux Malconsorts",
       "fullName": "AOC Vosne-Romanée 1er Cru Aux Malconsorts",
@@ -208,6 +224,22 @@
       "tastingNotes": "黑果、香料、礦物質、皮革",
       "agingPotential": "12-20年",
       "history": "位於山坡高處，風土條件優越",
+      "famousWineries": ["Emmanuel Rouget", "Domaine Lamarche"],
+      "color": "#CD853F"
+    },
+    "les-petis-monts": {
+      "name": "Les Petits Monts",
+      "fullName": "AOC Vosne-Romanée 1er Cru Les Petits Monts",
+      "classification": "Premier Cru",
+      "area": "3.7 ha",
+      "altitude": "280-300m",
+      "exposition": "東南向",
+      "soilStructure": "石灰岩粘土，多石",
+      "grapeVarieties": ["黑皮諾 100%"],
+      "wineStyle": "濃郁集中、結構堅實、陳年潛力佳",
+      "tastingNotes": "黑果、香料、礦物質、皮革",
+      "agingPotential": "12-20年",
+      "history": "常見拼寫誤植為 Petis，內容對應 Les Petits Monts 同一 climat。",
       "famousWineries": ["Emmanuel Rouget", "Domaine Lamarche"],
       "color": "#CD853F"
     },

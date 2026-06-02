@@ -221,3 +221,25 @@ export function getLevelProgressPct (levelKey) {
   const completed = progress.completedLessons.length
   return totalLessons > 0 ? Math.round((completed / totalLessons) * 100) : 0
 }
+
+/**
+ * 單一來源的解鎖規則，避免選階段頁與課程頁判斷不一致。
+ * 兼容舊資料：若過去只寫入最終評量 lessonId，仍視為已解鎖下一級。
+ */
+export function isItalyLevelUnlocked (levelKey) {
+  if (levelKey === 'level1') return true
+
+  if (levelKey === 'level2') {
+    const l1Progress = getUserProgress('level1')
+    const l1Done = l1Progress.completedLessons || []
+    return getLevelProgressPct('level1') >= 100 || l1Done.includes('L1M4L2')
+  }
+
+  if (levelKey === 'level3') {
+    const l2Progress = getUserProgress('level2')
+    const l2Done = l2Progress.completedLessons || []
+    return getLevelProgressPct('level2') >= 100 || l2Done.includes('L2FinalExam')
+  }
+
+  return false
+}

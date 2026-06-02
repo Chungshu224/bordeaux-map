@@ -79,7 +79,8 @@ defineEmits(['toggle-3d', 'toggle-contours', 'toggle-climate', 'toggle-soil', 't
   border-radius: 16px;
   padding: 14px;
   box-shadow: 0 12px 36px rgba(0,0,0,0.18);
-  width: min(320px, calc(100vw - 32px));
+  width: var(--rmap-toolbar-width, min(560px, calc(100vw - 24px)));
+  max-width: calc(100vw - 24px);
 }
 .rmap-layer-header {
   display: flex; justify-content: space-between; align-items: center;

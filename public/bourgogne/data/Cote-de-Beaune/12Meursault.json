@@ -50,6 +50,23 @@
         "history": "Meursault村莊級葡萄酒是體驗其經典豐腴風格的最佳入門。許多優秀的單一園（Lieux-dits）如Les Narvaux, Les Tillets等，品質可媲美一級園。",
         "famousWineries": ["Domaine Coche-Dury", "Domaine Roulot", "Domaine Arnaud Ente"],
         "color": "#8FBC8F"
+      },
+      "meursault-ou-meursault-cote-de-beaune": {
+        "name": "Meursault ou Meursault Côte de Beaune",
+        "file": "AOC Meursault ou Meursault Côte de Beaune.geojson",
+        "fullName": "AOC Meursault ou Meursault Côte de Beaune",
+        "classification": "Village",
+        "area": "約 290 公頃",
+        "altitude": "230-280m",
+        "exposition": "東",
+        "soilStructure": "較深厚的粘土和石灰岩",
+        "grapeVarieties": ["Chardonnay"],
+        "wineStyle": "白酒：豐滿、圓潤，帶有明顯的奶油、榛果和烤麵包香氣，口感油潤。",
+        "tastingNotes": "黃蘋果、桃子、奶油、榛果、香草。",
+        "agingPotential": "4-10年",
+        "history": "對應 GeoJSON 檔名中的 ou 命名變體。",
+        "famousWineries": ["Domaine Coche-Dury", "Domaine Roulot", "Domaine Arnaud Ente"],
+        "color": "#8FBC8F"
       }
     },
     "premier_crus": {

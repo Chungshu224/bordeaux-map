@@ -176,14 +176,14 @@
                     :class="getQuizOptionClass(index)"
                     :disabled="quizAnswered"
                   >
-                    {{ enhanceText(option) }}
+                    {{ enhanceText(getQuizOptionText(option)) }}
                   </button>
                 </div>
                 <div v-if="quizAnswered" class="quiz-feedback">
                   <p :class="['feedback-text', quizCorrect ? 'correct' : 'incorrect']">
                     {{ quizCorrect ? t('common.quiz.correct') : t('common.quiz.tryAgain') }}
                   </p>
-                  <p class="quiz-explanation">{{ enhanceText(currentSlideData.quiz.explanation) }}</p>
+                  <p class="quiz-explanation">{{ enhanceText(quizFeedbackExplanation) }}</p>
                 </div>
               </div>
             </div>
@@ -2108,6 +2108,27 @@ const getQuizOptionClass = computed(() => {
   }
 })
 
+function getQuizOptionText(option) {
+  if (typeof option === 'string') return option
+  if (option && typeof option === 'object') {
+    if (typeof option.text === 'string') return option.text
+    if (typeof option.label === 'string') return option.label
+  }
+  return ''
+}
+
+const quizFeedbackExplanation = computed(() => {
+  const quiz = currentSlideData.value?.quiz
+  if (!quiz) return ''
+
+  const picked = quizOptionsShuffled.value[selectedAnswer.value]
+  if (picked && typeof picked === 'object' && typeof picked.explanation === 'string' && picked.explanation.trim()) {
+    return picked.explanation
+  }
+
+  return typeof quiz.explanation === 'string' ? quiz.explanation : ''
+})
+
 // 載入課程內容（加入逾時保護）
 const withTimeout = (p, ms = 8000) => {
   return new Promise((resolve, reject) => {
@@ -2223,6 +2244,10 @@ function shuffleQuizForCurrentSlide() {
     return
   }
   const options = quiz.options.slice()
+  let correctIndex = Number.isInteger(quiz.correct) ? quiz.correct : -1
+  if (correctIndex < 0) {
+    correctIndex = options.findIndex(opt => opt && typeof opt === 'object' && opt.correct === true)
+  }
   const indices = options.map((_, i) => i)
   // Fisher-Yates 洗牌
   for (let i = indices.length - 1; i > 0; i--) {
@@ -2230,7 +2255,7 @@ function shuffleQuizForCurrentSlide() {
     ;[indices[i], indices[j]] = [indices[j], indices[i]]
   }
   quizOptionsShuffled.value = indices.map(i => options[i])
-  quizCorrectIndexShuffled.value = indices.indexOf(quiz.correct)
+  quizCorrectIndexShuffled.value = indices.indexOf(correctIndex)
 }
 
 const resetQuiz = () => {

@@ -130,6 +130,22 @@
       "history": "Côte de Nuits 最大的特級園，面積達 50.59 公頃。這個由熙篤會修士在 12 世紀建立的葡萄園，至今仍被石牆圍繞，是勃艮地最具象徵性的葡萄園之一。園內有超過 80 個不同的擁有者，因此品質可能有所差異。由熙篤會修士在 12 世紀建立，被認為是勃艮地最古老的葡萄園之一。分為上坡、中坡、下坡三個風土區。",
       "famousWineries": ["Domaine de la Vougeraie", "Domaine Leroy", "Domaine Méo-Camuzet", "Château de la Tour", "Domaine Anne Gros", "Domaine Gros Frère et Soeur"],
       "color": "#8B0000"
+    },
+    "clos-de-vougeot-ou-clos-vougeot": {
+      "name": "Clos de Vougeot",
+      "fullName": "AOC Clos de Vougeot ou Clos Vougeot Grand Cru",
+      "classification": "Grand Cru",
+      "area": "50.59 公頃（Côte de Nuits 最大的特級園）",
+      "altitude": "240-270m",
+      "exposition": "東-東南向",
+      "soilStructure": "從上坡的石灰岩到下坡的深層黏土，土壤多樣化",
+      "grapeVarieties": ["黑皮諾 (Pinot Noir)"],
+      "wineStyle": "風格因地塊而異，最佳地塊產出深沉、複雜、有力的葡萄酒",
+      "tastingNotes": "黑櫻桃、黑莓、香料、松露、皮革、礦物質、泥土、野味",
+      "agingPotential": "20-40年以上",
+      "history": "檔名常見寫法為 Clos de Vougeot ou Clos Vougeot，實際對應同一特級園。",
+      "famousWineries": ["Domaine de la Vougeraie", "Domaine Leroy", "Domaine Méo-Camuzet", "Château de la Tour", "Domaine Anne Gros", "Domaine Gros Frère et Soeur"],
+      "color": "#8B0000"
     }
   }
   }
