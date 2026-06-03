@@ -271,6 +271,399 @@ const formattedContent = computed(() => {
   font-weight: 700;
 }
 
+/* ═══════════════════════════════════════════════════
+   簡報通用卡片排版系統（Italy / Bourgogne 共用）
+   ═══════════════════════════════════════════════════ */
+
+/* ── 通用標題 ── */
+.main-content :deep(h3) {
+  font-size: 1.15rem; font-weight: 800; color: #1a1a2e;
+  margin: 0 0 14px; padding-bottom: 8px;
+  border-bottom: 2px solid #e8ecf0;
+}
+.main-content :deep(h4) {
+  font-size: 1rem; font-weight: 700; color: #2c3e50; margin: 0 0 8px;
+}
+.main-content :deep(ul) {
+  padding-left: 1.4em; margin: 6px 0;
+}
+.main-content :deep(li) {
+  margin-bottom: 4px; line-height: 1.65;
+}
+.main-content :deep(p) {
+  margin: 0 0 10px; line-height: 1.7;
+}
+
+/* ── 雙欄區域對比（.dual-region） ── */
+.main-content :deep(.dual-region) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.main-content :deep(.region-half) {
+  background: #f8f9fa;
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid #e2e8f0;
+}
+.main-content :deep(.region-half.alto-adige) {
+  border-top: 4px solid #3b82f6;
+  background: linear-gradient(135deg, #eff6ff 0%, #f8f9fa 100%);
+}
+.main-content :deep(.region-half.trentino) {
+  border-top: 4px solid #10b981;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f8f9fa 100%);
+}
+.main-content :deep(.region-half h3) {
+  font-size: 1rem; font-weight: 800; margin: 0 0 4px; border: none; padding: 0;
+}
+.main-content :deep(.region-name) {
+  font-size: 0.8rem; color: #6b7280; margin: 0 0 12px; font-style: italic;
+}
+.main-content :deep(.region-info p) {
+  font-size: 0.9rem; margin: 4px 0;
+}
+.main-content :deep(.key-fact) {
+  background: #fef3c7; border-left: 4px solid #f59e0b;
+  border-radius: 0 10px 10px 0; padding: 12px 16px; font-size: 0.92rem;
+}
+
+/* ── 葡萄品種展示（.grape-showcase） ── */
+.main-content :deep(.grape-showcase) {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.main-content :deep(.grape-item) {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: white; border-radius: 12px; padding: 14px 16px;
+  border: 1px solid #e8ecf0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.grape-rank) {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white; font-weight: 800; font-size: 0.85rem;
+  width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.main-content :deep(.grape-item h4) {
+  font-size: 1rem; font-weight: 700; color: #1a1a2e; margin: 0 0 4px;
+}
+.main-content :deep(.grape-desc) {
+  font-size: 0.88rem; color: #4b5563; margin: 0 0 6px; line-height: 1.55;
+}
+.main-content :deep(.grape-style) {
+  font-size: 0.8rem; background: #f1f5f9; color: #475569;
+  padding: 4px 10px; border-radius: 20px; display: inline-block;
+}
+
+/* ── 亮點卡片（.highlight-card / .trentino-highlights） ── */
+.main-content :deep(.trentino-highlights) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.main-content :deep(.highlight-card) {
+  background: white; border-radius: 14px; padding: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.main-content :deep(.highlight-card h3) {
+  font-size: 1.05rem; font-weight: 800; color: #1a1a2e;
+  margin: 0 0 12px; border: none; padding: 0;
+}
+.main-content :deep(.doc-badge) {
+  display: inline-block; font-size: 0.72rem; font-weight: 700;
+  background: #dbeafe; color: #1d4ed8;
+  padding: 3px 10px; border-radius: 20px; margin-bottom: 8px;
+}
+.main-content :deep(.wine-details p) {
+  font-size: 0.88rem; margin: 5px 0;
+}
+.main-content :deep(.price-point) {
+  margin-top: 12px; font-size: 0.82rem; color: #6b7280;
+  background: #f8f9fa; padding: 6px 10px; border-radius: 8px;
+}
+
+/* ── 配餐格（.pairing-grid / .pairing-card） ── */
+.main-content :deep(.pairing-grid) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+}
+.main-content :deep(.pairing-card) {
+  background: linear-gradient(135deg, #fafafa, #f0fdf4);
+  border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px;
+}
+.main-content :deep(.pairing-card h4) {
+  font-size: 0.95rem; font-weight: 700; color: #065f46; margin: 0 0 10px;
+}
+.main-content :deep(.pairing-card li) {
+  font-size: 0.88rem; color: #374151;
+}
+
+/* ── 比較表格（.comparison-table table） ── */
+.main-content :deep(.comparison-table) { overflow-x: auto; }
+.main-content :deep(.comparison-table table) {
+  width: 100%; border-collapse: collapse;
+  display: table; font-size: 0.9rem;
+}
+.main-content :deep(.comparison-table th) {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white; padding: 10px 14px; font-weight: 700;
+  text-align: left; white-space: nowrap;
+}
+.main-content :deep(.comparison-table td) {
+  padding: 9px 14px; border-bottom: 1px solid #e8ecf0;
+  vertical-align: top; line-height: 1.5;
+}
+.main-content :deep(.comparison-table tr:nth-child(even) td) {
+  background: #f8f9fa;
+}
+
+/* ── 時間軸（.timeline-container） ── */
+.main-content :deep(.timeline-container) {
+  display: flex; flex-direction: column; gap: 0;
+  padding-left: 16px;
+  border-left: 3px solid #e2e8f0;
+}
+.main-content :deep(.timeline-item) {
+  display: flex; gap: 14px; padding: 10px 0;
+  position: relative;
+}
+.main-content :deep(.timeline-item)::before {
+  content: '';
+  position: absolute; left: -20px; top: 18px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #667eea; border: 2px solid white;
+  box-shadow: 0 0 0 2px #667eea;
+}
+.main-content :deep(.timeline-badge) {
+  flex-shrink: 0; font-size: 0.72rem; font-weight: 700;
+  background: #dbeafe; color: #1e40af;
+  padding: 3px 10px; border-radius: 20px; height: fit-content;
+  margin-top: 2px; white-space: nowrap;
+}
+.main-content :deep(.timeline-badge.ancient)  { background: #fef9c3; color: #92400e; }
+.main-content :deep(.timeline-badge.medieval) { background: #ede9fe; color: #5b21b6; }
+.main-content :deep(.timeline-badge.austria)  { background: #fce7f3; color: #9d174d; }
+.main-content :deep(.timeline-badge.modern)   { background: #dcfce7; color: #166534; }
+.main-content :deep(.timeline-badge.sparkling){ background: #e0f2fe; color: #0369a1; }
+.main-content :deep(.timeline-badge.doc)      { background: #fef3c7; color: #92400e; }
+.main-content :deep(.timeline-content h4) {
+  font-size: 0.92rem; font-weight: 700; color: #1a1a2e; margin: 0 0 4px;
+}
+.main-content :deep(.timeline-content p) {
+  font-size: 0.87rem; color: #4b5563; margin: 0; line-height: 1.6;
+}
+
+/* ── 四格好處卡片（.terroir-benefits / .reason-grid） ── */
+.main-content :deep(.terroir-benefits),
+.main-content :deep(.reason-grid) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+.main-content :deep(.benefit-card),
+.main-content :deep(.reason-card) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0; text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.benefit-icon),
+.main-content :deep(.reason-icon) {
+  font-size: 2rem; margin-bottom: 8px; display: block;
+}
+.main-content :deep(.benefit-card h4),
+.main-content :deep(.reason-card h4) {
+  font-size: 0.92rem; font-weight: 700; color: #1a1a2e; margin: 0 0 6px;
+}
+.main-content :deep(.benefit-card p),
+.main-content :deep(.reason-card p) {
+  font-size: 0.83rem; color: #6b7280; margin: 0; line-height: 1.55;
+}
+
+/* ── 文化融合格（.fusion-grid） ── */
+.main-content :deep(.fusion-grid) {
+  display: flex; align-items: stretch; gap: 8px; flex-wrap: wrap;
+}
+.main-content :deep(.fusion-card) {
+  flex: 1 1 160px; background: #f8f9fa; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0;
+}
+.main-content :deep(.fusion-card h4) {
+  font-size: 0.9rem; font-weight: 700; margin: 0 0 8px;
+}
+.main-content :deep(.fusion-card li) { font-size: 0.83rem; }
+.main-content :deep(.fusion-symbol),
+.main-content :deep(.fusion-result) {
+  font-size: 1.8rem; font-weight: 700; color: #9ca3af;
+  display: flex; align-items: center; align-self: center;
+}
+.main-content :deep(.fusion-card.result) {
+  border-top: 3px solid #10b981;
+  background: linear-gradient(135deg, #ecfdf5, #f8f9fa);
+}
+.main-content :deep(.political-note) {
+  margin-top: 14px; background: #fef9c3; padding: 12px 14px;
+  border-radius: 10px; font-size: 0.87rem; border-left: 3px solid #f59e0b;
+}
+
+/* ── 品種深度解析（.varieties-deep / .variety-detailed） ── */
+.main-content :deep(.variety-header) {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 10px; flex-wrap: wrap;
+}
+.main-content :deep(.variety-badge) {
+  font-size: 0.7rem; font-weight: 700; padding: 3px 10px;
+  border-radius: 20px; white-space: nowrap;
+}
+.main-content :deep(.variety-badge.indigenous) { background: #fce7f3; color: #9d174d; }
+.main-content :deep(.variety-badge.local)      { background: #dbeafe; color: #1d4ed8; }
+.main-content :deep(.variety-detailed) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0; margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.characteristics ul) {
+  margin-top: 4px; padding-left: 1.4em;
+}
+.main-content :deep(.characteristics li) { font-size: 0.88rem; }
+.main-content :deep(.lagrein-styles) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px;
+}
+.main-content :deep(.style-box) {
+  background: #f8f9fa; border-radius: 8px; padding: 10px 12px;
+  font-size: 0.83rem; border: 1px solid #e2e8f0;
+}
+.main-content :deep(.style-box h5) {
+  font-size: 0.88rem; font-weight: 700; color: #1a1a2e; margin: 0 0 4px;
+}
+
+/* ── Trento DOC歷史格（.history-grid） ── */
+.main-content :deep(.history-grid) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+.main-content :deep(.hist-card) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #f59e0b;
+}
+.main-content :deep(.hist-card .year) {
+  font-size: 1.3rem; font-weight: 900; color: #d97706; margin-bottom: 4px;
+}
+.main-content :deep(.hist-card h4) { margin: 0 0 6px; font-size: 0.9rem; }
+.main-content :deep(.hist-card p) { font-size: 0.85rem; color: #4b5563; line-height: 1.55; }
+
+/* ── 酒莊展示（.winery-detailed / .winery-header） ── */
+.main-content :deep(.winery-header) {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap;
+}
+.main-content :deep(.winery-badge) {
+  font-size: 0.7rem; font-weight: 700; padding: 3px 10px;
+  border-radius: 20px;
+}
+.main-content :deep(.winery-badge.legendary)   { background: #fef3c7; color: #92400e; }
+.main-content :deep(.winery-badge.cooperative) { background: #dbeafe; color: #1d4ed8; }
+.main-content :deep(.winery-detailed) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0; margin-bottom: 12px;
+}
+.main-content :deep(.wine-item) {
+  background: #f8f9fa; border-radius: 8px; padding: 10px 12px;
+  margin-bottom: 8px; font-size: 0.87rem;
+}
+.main-content :deep(.wine-item.flagship) {
+  background: linear-gradient(135deg, #fef9c3, #fef3c7);
+  border: 1px solid #fbbf24;
+}
+.main-content :deep(.wine-item h5) {
+  font-size: 0.9rem; font-weight: 700; margin: 0 0 4px;
+}
+.main-content :deep(.wine-item p) { margin: 2px 0; font-size: 0.84rem; color: #4b5563; }
+.main-content :deep(.winery-grid) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px;
+}
+.main-content :deep(.winery-card) {
+  background: white; border-radius: 10px; padding: 14px;
+  border: 1px solid #e2e8f0; font-size: 0.87rem;
+}
+.main-content :deep(.winery-card h4) { margin: 0 0 4px; font-size: 0.92rem; }
+.main-content :deep(.winery-card .tag) {
+  font-size: 0.72rem; background: #e0f2fe; color: #0369a1;
+  padding: 2px 8px; border-radius: 10px; margin-bottom: 6px; display: inline-block;
+}
+
+/* ── 子產區格（.sub-card） ── */
+.main-content :deep(.trentino-sub-grid),
+.main-content :deep(.alto-sub-grid) {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.main-content :deep(.sub-card) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0; border-left: 4px solid #667eea;
+}
+.main-content :deep(.sub-card h4) { font-size: 0.95rem; font-weight: 700; margin: 0 0 8px; }
+.main-content :deep(.sub-card p) { font-size: 0.87rem; margin: 4px 0; line-height: 1.55; }
+
+/* ── 海拔帶（.alt-level） ── */
+.main-content :deep(.altitude-profile) { display: flex; flex-direction: column; gap: 8px; }
+.main-content :deep(.alt-level) {
+  display: grid; grid-template-columns: 100px 1fr 2fr;
+  gap: 12px; align-items: start;
+  background: white; border-radius: 10px; padding: 12px 14px;
+  border: 1px solid #e2e8f0; font-size: 0.87rem;
+}
+.main-content :deep(.alt-number) { font-weight: 800; color: #1e40af; }
+.main-content :deep(.alt-zone)   { font-weight: 600; color: #374151; }
+.main-content :deep(.alt-style)  { color: #6b7280; }
+
+/* ── Trento DOC 對比理由格 ── */
+.main-content :deep(.rival-reasons) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+.main-content :deep(.rival-card) {
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0; text-align: center;
+}
+.main-content :deep(.rival-icon) { font-size: 1.8rem; margin-bottom: 6px; display: block; }
+.main-content :deep(.rival-card h4) { font-size: 0.88rem; font-weight: 700; margin: 0 0 6px; }
+.main-content :deep(.rival-card p) { font-size: 0.82rem; color: #4b5563; margin: 0; }
+
+/* ── 購買指南（.guide-grid） ── */
+.main-content :deep(.guide-grid) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+.main-content :deep(.guide-card) {
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0;
+}
+.main-content :deep(.guide-card h4) { font-size: 0.88rem; font-weight: 700; margin: 0 0 8px; }
+.main-content :deep(.guide-card li) { font-size: 0.82rem; }
+.main-content :deep(.guide-card .rec) {
+  font-size: 0.78rem; color: #6b7280; background: #f8f9fa;
+  padding: 6px 8px; border-radius: 6px; margin-top: 8px;
+}
+.main-content :deep(.guide-card.budget) { border-top: 3px solid #10b981; }
+.main-content :deep(.guide-card.mid)    { border-top: 3px solid #3b82f6; }
+.main-content :deep(.guide-card.premium){ border-top: 3px solid #f59e0b; }
+
+/* ── 響應式：手機版全部改單欄 ── */
+@media (max-width: 700px) {
+  .main-content :deep(.dual-region),
+  .main-content :deep(.trentino-highlights),
+  .main-content :deep(.terroir-benefits),
+  .main-content :deep(.reason-grid),
+  .main-content :deep(.history-grid),
+  .main-content :deep(.pairing-grid),
+  .main-content :deep(.lagrein-styles),
+  .main-content :deep(.rival-reasons),
+  .main-content :deep(.winery-grid) {
+    grid-template-columns: 1fr;
+  }
+  .main-content :deep(.guide-grid) {
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-content :deep(.alt-level) {
+    grid-template-columns: 80px 1fr;
+  }
+  .main-content :deep(.alt-style) { grid-column: 1 / -1; }
+  .main-content :deep(.fusion-grid) { flex-direction: column; }
+}
+
 .slide-image {
   max-width: 100%;
   max-height: 240px;
