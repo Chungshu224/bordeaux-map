@@ -47,7 +47,8 @@
         </div>
 
         <!-- 波爾多完整版 -->
-        <div class="tier-card single-card">
+        <div class="tier-card single-card" :class="{ 'subscribed-card': singleCtaState.state === 'subscribed' }">
+          <div v-if="singleCtaState.state === 'subscribed'" class="subscribed-badge">✓ 已訂閱</div>
           <div class="tier-top">
             <div class="tier-label">波爾多完整版</div>
             <div class="tier-price-wrap">
@@ -91,13 +92,14 @@
               >{{ pm.icon }} {{ pm.label }}</button>
             </div>
           </div>
-          <button class="tier-cta single-cta" :disabled="checkoutLoading" @click="handleSingle">
-            {{ checkoutLoading ? '處理中…' : '立即訂閱波爾多完整版' }}
+          <button class="tier-cta single-cta" :disabled="checkoutLoading || singleCtaState.disabled" @click="handleSingle">
+            {{ checkoutLoading ? '處理中…' : singleCtaState.text }}
           </button>
         </div>
 
         <!-- 全球產區通行證 -->
-        <div class="tier-card global-card">
+        <div class="tier-card global-card" :class="{ 'subscribed-card': globalCtaState.state === 'subscribed' }">
+          <div v-if="globalCtaState.state === 'subscribed'" class="subscribed-badge">✓ 已訂閱</div>
           <div class="popular-badge global-badge">🌍 最超值</div>
           <div class="tier-top">
             <div class="tier-label">全球產區通行證</div>
@@ -129,8 +131,8 @@
               >{{ pm.icon }} {{ pm.label }}</button>
             </div>
           </div>
-          <button class="tier-cta global-cta" :disabled="checkoutLoading" @click="handleAll">
-            {{ checkoutLoading ? '處理中…' : '立即訂閱全球產區通行證' }}
+          <button class="tier-cta global-cta" :disabled="checkoutLoading || globalCtaState.disabled" @click="handleAll">
+            {{ checkoutLoading ? '建立訂單中…' : globalCtaState.text }}
           </button>
         </div>
 
@@ -141,13 +143,14 @@
   <div class="other-section">
     <div class="other-inner">
       <div class="other-head">
-        <h2>其他世界產區課程</h2>
-        <p>布根地、義大利已正式上線，使用相同付款方式即可訂閱</p>
+        <h2>個別課程訂閱</h2>
+        <p>波爾多、布根地、義大利已正式上線，可單獨訂閱或選擇全球通行證</p>
       </div>
       <div class="other-grid">
 
         <!-- 布根地 -->
-        <div class="other-card bourg-card">
+        <div class="other-card bourg-card" :class="{ 'subscribed-card': bourgogneCtaState.state === 'subscribed' }">
+          <div v-if="bourgogneCtaState.state === 'subscribed'" class="subscribed-badge">✓ 已訂閱</div>
           <div class="oc-badge">🍇 France · Bourgogne</div>
           <h3 class="oc-title">布根地葡萄酒</h3>
           <div class="oc-price-row">
@@ -170,13 +173,14 @@
                 @click="paymentMethod = pm.value">{{ pm.icon }} {{ pm.label }}</button>
             </div>
           </div>
-          <button class="tier-cta oc-cta bourg-cta" :disabled="checkoutLoading" @click="handleCoursePurchase('bourgogne')">
-            {{ checkoutLoading ? '處理中…' : '立即訂閱布根地課程' }}
+          <button class="tier-cta oc-cta bourg-cta" :disabled="checkoutLoading || bourgogneCtaState.disabled" @click="handleCoursePurchase('bourgogne')">
+            {{ checkoutLoading ? '處理中…' : bourgogneCtaState.text }}
           </button>
         </div>
 
         <!-- 義大利 -->
-        <div class="other-card italy-oc-card">
+        <div class="other-card italy-oc-card" :class="{ 'subscribed-card': italyCtaState.state === 'subscribed' }">
+          <div v-if="italyCtaState.state === 'subscribed'" class="subscribed-badge">✓ 已訂閱</div>
           <div class="oc-badge">🇮🇹 Italy</div>
           <h3 class="oc-title">義大利葡萄酒</h3>
           <div class="oc-price-row">
@@ -199,8 +203,8 @@
                 @click="paymentMethod = pm.value">{{ pm.icon }} {{ pm.label }}</button>
             </div>
           </div>
-          <button class="tier-cta oc-cta italy-cta" :disabled="checkoutLoading" @click="handleCoursePurchase('italy')">
-            {{ checkoutLoading ? '處理中…' : '立即訂閱義大利課程' }}
+          <button class="tier-cta oc-cta italy-cta" :disabled="checkoutLoading || italyCtaState.disabled" @click="handleCoursePurchase('italy')">
+            {{ checkoutLoading ? '處理中…' : italyCtaState.text }}
           </button>
         </div>
 
@@ -208,58 +212,30 @@
     </div>
   </div>
 
-    <!-- 產區涵蓋矩陣 -->
-    <div class="coverage-section">
-      <div class="cs-inner">
-        <h2>各方案課程涵蓋</h2>
-        <div class="coverage-table-wrap">
-          <table class="coverage-table">
-            <thead>
-              <tr>
-                <th>產區</th>
-                <th>免費體驗</th>
-                <th>波爾多完整版</th>
-                <th>獨立訂閱</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="c in allCourses" :key="c.id">
-                <td class="ct-course">{{ c.flag }} {{ c.nameFull }}<span v-if="!c.active" class="ct-soon">即將上線</span></td>
-                <td class="ct-cell">{{ c.id === 'bordeaux' ? '🔓 Level 1' : '—' }}</td>
-                <td class="ct-cell">{{ c.id === 'bordeaux' ? '✅ 全部開放' : '—' }}</td>
-                <td class="ct-cell">{{ c.id === 'bourgogne' || c.id === 'italy' ? '✅ 可訂閱' : c.id === 'bordeaux' ? '—' : '準備中' }}</td>
-              </tr>
-            </tbody>
-          </table>
+  <!-- 功能對比 (卡片式) -->
+  <div class="compare-section">
+    <div class="cs-inner">
+      <h2>功能對比</h2>
+      <p class="cs-subtitle">不同方案包含的功能</p>
+      
+      <div class="feature-cards-grid">
+        <div v-for="f in featureMatrix" :key="f.name" class="feature-card">
+          <div class="fc-name">{{ f.name }}</div>
+          <div class="fc-checks">
+            <div class="fc-check" :class="f.free ? 'included' : 'excluded'">
+              <span>{{ f.free ? '✓' : '✗' }}</span>
+              <span class="fc-tier">免費</span>
+            </div>
+            <div class="fc-check" :class="f.single ? 'included' : 'excluded'">
+              <span>{{ f.single ? '✓' : '✗' }}</span>
+              <span class="fc-tier">完整版</span>
+            </div>
+            <div class="fc-check" :class="f.all ? 'included' : 'excluded'">
+              <span>{{ f.all ? '✓' : '✗' }}</span>
+              <span class="fc-tier">通行證</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- 功能比較 -->
-    <div class="compare-section">
-      <div class="cs-inner">
-        <h2>功能比較</h2>
-        <div class="compare-table-wrap">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                <th>功能</th>
-                <th>免費</th>
-                <th>波爾多完整版</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="f in featureMatrix" :key="f.name">
-                <td>{{ f.name }}</td>
-                <td class="ct-cell"><span :class="f.free ? 'yes' : 'no'">{{ f.free ? '✓' : '✗' }}</span></td>
-                <td class="ct-cell"><span :class="f.single ? 'yes' : 'no'">{{ f.single ? '✓' : '✗' }}</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
     <!-- FAQ -->
     <div class="faq-section">
       <div class="cs-inner">
@@ -289,12 +265,43 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { authState } from '../stores/authStore.js'
+import { getCourseAccess } from '../lib/purchaseService.js'
 
 const router = useRouter()
 const authUser = computed(() => authState.user)
+
+// 訂閱狀態
+const userCourseAccess = ref({
+  bordeaux: 'free',
+  bourgogne: 'free',
+  italy: 'free',
+  global: false
+})
+
+// 在組件掛載時取得訂閱狀態
+onMounted(async () => {
+  if (!authUser.value?.id) return
+  
+  try {
+    const [bordeauxTier, bourgogneTier, italyTier] = await Promise.all([
+      getCourseAccess(authUser.value.id, 'bordeaux'),
+      getCourseAccess(authUser.value.id, 'bourgogne'),
+      getCourseAccess(authUser.value.id, 'italy')
+    ])
+    
+    userCourseAccess.value = {
+      bordeaux: bordeauxTier,
+      bourgogne: bourgogneTier,
+      italy: italyTier,
+      global: bordeauxTier === 'basic' && bourgogneTier === 'basic' && italyTier === 'basic'
+    }
+  } catch (err) {
+    console.error('[Pricing] 無法取得訂閱狀態:', err)
+  }
+})
 
 const paymentMethod = ref('Credit')
 const paymentMethodOptions = [
@@ -337,13 +344,40 @@ const featureMatrix = [
 const faqs = [
   { q: '波爾多完整版包含哪些內容？', a: '包含波爾多 Level 1 至 Level 4 全部課程（共 43 堂）、4 種互動練習遊戲、法定產區完整互動地圖、地質岩層與氣候熱力圖進階圖層，以及品飲筆記本功能。' },
   { q: '年繳可以退款嗎？', a: '訂閱後 7 天內如需退款，請聯絡我們，我們將全額退款，無任何問題。' },
-  { q: '優惠碼怎麼使用？', a: '在「波爾多完整版」訂閱卡片下方輸入優惠碼，再點擊訂閱按鈕即可。免費試用碼將直接啟用訂閱；折扣碼會在結帳時自動套用。' },
-  { q: '布根地和義大利課程已上線了嗎？', a: '是的！布根地和義大利課程已正式上線，可於本頁面「其他世界產區課程」區塊直接訂閱。' },
+  { q: '優惠碼怎麼使用？', a: '在訂閱卡片下方輸入優惠碼後點擊訂閱按鈕即可。免費試用碼將直接啟用訂閱；折扣碼會在結帳時自動套用。' },
+  { q: '布根地和義大利課程已上線了嗎？', a: '是的！布根地和義大利課程已正式上線，可於本頁面「個別課程訂閱」區塊直接訂閱。' },
   { q: '未來會有更多產區嗎？', a: '是的！西班牙、德國、葡萄牙等更多世界產區課程正在製作中。訂閱任一課程的學員，歡迎加入早鳥等待名單以享優先通知。' },
   { q: '月繳和年繳可以隨時切換嗎？', a: '可以。月繳與年繳為一次性付款，如需切換方案請聯絡我們，客服將協助您辦理。' },
   { q: '免費體驗有時間限制嗎？', a: '沒有！免費方案永久有效，Level 1 波爾多課程完全免費，不需要信用卡。' },
   { q: '付款方式有哪些？', a: '透過綠界科技（ECPay）安全付款，支援信用卡（Visa、MasterCard、JCB）、ATM 轉帳、超商代碼等多種方式，全程加密處理。' },
 ]
+
+// CTA 按鈕狀態 computed
+const singleCtaState = computed(() => {
+  const tier = userCourseAccess.value.bordeaux
+  if (tier === 'basic' || tier === 'premium') return { text: '✓ 已訂閱', disabled: true, state: 'subscribed' }
+  return { text: '立即訂閱波爾多完整版', disabled: false, state: 'unsubscribed' }
+})
+
+const globalCtaState = computed(() => {
+  const hasAll = userCourseAccess.value.bordeaux === 'basic' && 
+                 userCourseAccess.value.bourgogne === 'basic' && 
+                 userCourseAccess.value.italy === 'basic'
+  if (hasAll) return { text: '✓ 已訂閱全部課程', disabled: true, state: 'subscribed' }
+  return { text: '立即訂閱全球產區通行證', disabled: false, state: 'unsubscribed' }
+})
+
+const bourgogneCtaState = computed(() => {
+  const tier = userCourseAccess.value.bourgogne
+  if (tier === 'basic' || tier === 'premium') return { text: '✓ 已訂閱', disabled: true, state: 'subscribed' }
+  return { text: '立即訂閱布根地課程', disabled: false, state: 'unsubscribed' }
+})
+
+const italyCtaState = computed(() => {
+  const tier = userCourseAccess.value.italy
+  if (tier === 'basic' || tier === 'premium') return { text: '✓ 已訂閱', disabled: true, state: 'subscribed' }
+  return { text: '立即訂閱義大利課程', disabled: false, state: 'unsubscribed' }
+})
 
 async function handleFree() {
   if (authUser.value) {
@@ -623,55 +657,99 @@ async function handleCoursePurchase(courseId) {
 .all-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(212,175,55,0.4); }
 
 /* ── Tables ──────────────────────────────────────────────────────────── */
-.coverage-section, .compare-section {
+.compare-section {
   padding: 56px 24px;
+  background: #0e0406;
   border-top: 1px solid rgba(255,255,255,0.06);
 }
-.coverage-section { background: #0a0204; }
-.compare-section  { background: #0e0406; }
 .cs-inner { max-width: 900px; margin: 0 auto; }
 .cs-inner h2 {
   font-size: 1.6rem;
   font-weight: 700;
   color: #f5f0e8;
-  margin: 0 0 32px;
+  margin: 0 0 8px;
   text-align: center;
 }
-.coverage-table-wrap, .compare-table-wrap { overflow-x: auto; }
-.coverage-table, .compare-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.88rem;
-}
-.coverage-table th, .compare-table th {
+.cs-subtitle {
   text-align: center;
-  padding: 12px 16px;
-  background: rgba(212,175,55,0.08);
-  color: #d4af37;
-  font-weight: 700;
-  font-size: 0.82rem;
-  border-bottom: 1px solid rgba(212,175,55,0.2);
+  color: #9a8878;
+  font-size: 0.95rem;
+  margin: 0 0 40px;
 }
-.coverage-table th:first-child, .compare-table th:first-child { text-align: left; }
-.coverage-table td, .compare-table td {
-  padding: 11px 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  color: #c0b098;
-  vertical-align: middle;
+
+/* 功能比較卡片網格 */
+.feature-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
-.coverage-table tr:hover td, .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
-.ct-course { font-weight: 600; color: #f5f0e8; display: flex; align-items: center; gap: 8px; }
-.ct-soon {
-  font-size: 0.68rem;
-  background: rgba(255,200,0,0.1);
-  border: 1px solid rgba(255,200,0,0.2);
-  color: #c9a84c;
+@media (max-width: 680px) { .feature-cards-grid { grid-template-columns: 1fr; } }
+
+.feature-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 18px 16px;
+  transition: all .2s;
+}
+.feature-card:hover { 
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(212,175,55,0.2);
+}
+
+.fc-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #f0e8d8;
+  margin-bottom: 14px;
+  min-height: 2.4em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.fc-checks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.fc-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
   border-radius: 8px;
-  padding: 1px 7px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  min-height: 80px;
 }
-.ct-cell { text-align: center; }
-.yes { color: #48bb78; font-weight: 700; font-size: 1rem; }
-.no  { color: #5a4040; font-size: 1rem; }
+
+.fc-check.included {
+  background: rgba(72,187,120,0.08);
+  border-color: rgba(72,187,120,0.2);
+}
+
+.fc-check.excluded {
+  background: rgba(255,255,255,0.02);
+  border-color: rgba(255,255,255,0.06);
+}
+
+.fc-check span:first-child {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.fc-check.included span:first-child { color: #48bb78; }
+.fc-check.excluded span:first-child { color: #5a4a3a; opacity: 0.5; }
+
+.fc-tier {
+  font-size: 0.73rem;
+  color: #9a8878;
+  font-weight: 600;
+  text-align: center;
+}
 
 /* ── FAQ ─────────────────────────────────────────────────────────────── */
 .faq-section { padding: 56px 24px; background: #0a0204; border-top: 1px solid rgba(255,255,255,0.06); }
@@ -775,6 +853,31 @@ async function handleCoursePurchase(courseId) {
 .global-cta:hover:not(:disabled) {
   background: linear-gradient(135deg, #25904a, #3ac870) !important;
   transform: translateY(-2px) !important;
+}
+
+/* ── 訂閱徽章和已訂閱卡片 ────────────────────────────────────────────── */
+.subscribed-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #48bb78;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+.subscribed-card {
+  opacity: 0.92;
+  border-color: rgba(72, 187, 120, 0.4) !important;
+  background: rgba(72, 187, 120, 0.04) !important;
+}
+
+.tier-cta:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 /* ── 其他世界產區課程區塊 ─────────────────────────────────────────────── */
