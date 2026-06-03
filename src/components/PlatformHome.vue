@@ -17,7 +17,7 @@
           <template v-if="authUser">
             <span class="nav-greeting">{{ displayName }}</span>
             <router-link v-if="isAdmin" to="/admin" class="btn-nav admin-nav-btn">{{ $t('home.nav.adminLink') }}</router-link>
-            <router-link to="/bordeaux" class="btn-nav primary">{{ $t('home.nav.enterCourse') }}</router-link>
+            <router-link :to="entryCoursePath" class="btn-nav primary">{{ $t('home.nav.enterCourse') }}</router-link>
             <router-link to="/dashboard" class="btn-nav">{{ $t('home.nav.myOrders') }}</router-link>
             <button class="btn-nav ghost" @click="handleLogout">{{ $t('home.nav.logout') }}</button>
           </template>
@@ -30,7 +30,7 @@
         <!-- 手機導覽 -->
         <div class="nav-mobile">
           <template v-if="authUser">
-            <router-link to="/bordeaux" class="btn-nav primary btn-mobile-cta">{{ $t('home.nav.courseMobile') }}</router-link>
+            <router-link :to="entryCoursePath" class="btn-nav primary btn-mobile-cta">{{ $t('home.nav.courseMobile') }}</router-link>
             <button class="nav-hamburger" @click="showMobileMenu = !showMobileMenu" :class="{ active: showMobileMenu }">
               <span></span><span></span><span></span>
             </button>
@@ -50,7 +50,7 @@
         <div class="nmd-inner" @click.stop>
           <div v-if="authUser" class="nmd-user">👤 {{ displayName }}</div>
           <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.adminLink') }}</router-link>
-          <router-link to="/bordeaux" class="nmd-item nmd-primary" @click="showMobileMenu = false">{{ $t('home.nav.enterCourseMobile') }}</router-link>
+          <router-link :to="entryCoursePath" class="nmd-item nmd-primary" @click="showMobileMenu = false">{{ $t('home.nav.enterCourseMobile') }}</router-link>
           <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.myOrdersMobile') }}</router-link>
           <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">{{ $t('home.nav.logoutMobile') }}</button>
         </div>
@@ -927,12 +927,12 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { supabase } from '../lib/supabaseClient.js'
 import { authState, authActions } from '../stores/authStore.js'
-import { initiateCheckout, submitEcpayForm } from '../lib/purchaseService.js'
+import { initiateCheckout, submitEcpayForm, getCourseAccess } from '../lib/purchaseService.js'
 import { fetchRecentPosts } from '../lib/forumService.js'
 
 const router = useRouter()
@@ -978,6 +978,56 @@ const handleFreeTier = () => {
     router.push({ path: '/register', query: { plan: 'free' } })
   }
 }
+
+// ─── 用戶訂閱課程檢測 ────────────────────────────────────────────────────────────
+const userPurchasedCourses = ref({})
+const entryCoursePath = ref('/bordeaux') // 預設進入波爾多
+
+async function loadUserPurchasedCourses() {
+  if (!authUser.value?.id) {
+    entryCoursePath.value = '/bordeaux'
+    return
+  }
+
+  try {
+    // 檢查用戶在各課程的訂閱狀態
+    const coursesToCheck = ['bordeaux', 'bourgogne', 'italy', 'spain']
+    const purchases = {}
+    
+    for (const courseId of coursesToCheck) {
+      const tier = await getCourseAccess(authUser.value.id, courseId)
+      purchases[courseId] = tier
+    }
+    
+    userPurchasedCourses.value = purchases
+    
+    // 決定進入課程的邏輯
+    // 優先順序：已購課程 > 免費課程（波爾多）
+    // 如果有購買 basic/premium，進入第一個已購課程
+    for (const courseId of coursesToCheck) {
+      if (purchases[courseId] === 'basic' || purchases[courseId] === 'premium') {
+        entryCoursePath.value = courseId === 'california' ? '/california/course' : `/${courseId}`
+        return
+      }
+    }
+    
+    // 沒有購買任何課程，進入免費課程
+    entryCoursePath.value = '/bordeaux'
+  } catch (err) {
+    console.error('[Home] 無法取得訂閱狀態:', err)
+    entryCoursePath.value = '/bordeaux'
+  }
+}
+
+// 監聽用戶登入狀態變化
+onMounted(() => {
+  loadUserPurchasedCourses()
+})
+
+// 當用戶登入/登出時重新加載課程訂閱狀態
+watch(() => authUser.value?.id, () => {
+  loadUserPurchasedCourses()
+})
 
 // ─── 課程設定清單（順序即為顯示順序）──────────────────────────────────
 const courseConfig = computed(() => [
