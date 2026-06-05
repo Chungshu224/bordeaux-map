@@ -1733,6 +1733,156 @@ const formattedContent = computed(() => {
 .main-content :deep(.other-pairings)      { font-size: 0.88rem; }
 .main-content :deep(.other-pairings li)   { margin-bottom: 4px; }
 
+/* ═══════════════════════════════════════════════════
+   Umbria 專屬樣式
+   ═══════════════════════════════════════════════════ */
+
+/* ── 地區簡介（.region-intro / .umbria-facts）── */
+.main-content :deep(.region-intro) {
+  display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start;
+}
+.main-content :deep(.intro-text p) { font-size: 0.95rem; line-height: 1.7; margin: 0 0 10px; }
+.main-content :deep(.intro-text .highlight) {
+  background: linear-gradient(135deg, #f3e5f5, #ede7f6);
+  border-radius: 10px; padding: 12px 16px;
+  border-left: 4px solid #9c27b0; font-size: 0.93rem; line-height: 1.6;
+}
+.main-content :deep(.umbria-facts) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; min-width: 200px;
+}
+.main-content :deep(.fact-box) {
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #9c27b0;
+  text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.main-content :deep(.fact-icon) { font-size: 1.6rem; display: block; margin-bottom: 6px; }
+.main-content :deep(.fact-text) { font-size: 0.82rem; color: #374151; line-height: 1.4; }
+
+/* ── Sagrantino 單寧比較（.sagrantino-section / .tannin-bars）── */
+.main-content :deep(.sagrantino-section) { margin-top: 10px; }
+.main-content :deep(.sagrantino-intro) {
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  border-radius: 14px; padding: 16px 20px; margin-bottom: 16px;
+  border-left: 5px solid #c62828;
+}
+.main-content :deep(.sagrantino-intro h3) { margin: 0 0 10px; color: #b71c1c; font-size: 1rem; }
+.main-content :deep(.sagrantino-intro p)  { margin: 0 0 10px; font-size: 0.93rem; }
+.main-content :deep(.tannin-comparison)   { margin-top: 12px; }
+.main-content :deep(.tannin-comparison h4){ margin: 0 0 10px; font-size: 0.92rem; }
+.main-content :deep(.tannin-bars)         { display: flex; flex-direction: column; gap: 8px; }
+.main-content :deep(.tannin-bar)          { display: flex; align-items: center; gap: 10px; }
+.main-content :deep(.tannin-bar span)     { width: 140px; font-size: 0.85rem; flex-shrink: 0; text-align: right; }
+.main-content :deep(.bar) {
+  height: 28px; border-radius: 14px; display: flex; align-items: center;
+  padding: 0 12px; font-size: 0.82rem; font-weight: 700; color: white;
+  background: #9ca3af;
+}
+.main-content :deep(.tannin-bar.sagrantino .bar) { background: linear-gradient(90deg, #c62828, #e53935); }
+.main-content :deep(.tannin-bar.nebbiolo .bar)   { background: linear-gradient(90deg, #6a1b9a, #9c27b0); }
+.main-content :deep(.tannin-bar.cabernet .bar)   { background: linear-gradient(90deg, #1b5e20, #388e3c); }
+.main-content :deep(.tannin-bar.sangiovese .bar) { background: linear-gradient(90deg, #e65100, #f57c00); }
+.main-content :deep(.sagrantino-docg) {
+  background: white; border-radius: 14px; padding: 16px 20px;
+  border: 1px solid #fecaca; border-top: 4px solid #dc2626;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.main-content :deep(.sagrantino-docg h3) { margin: 0 0 12px; font-size: 1rem; color: #991b1b; }
+.main-content :deep(.docg-details p)     { font-size: 0.88rem; margin: 5px 0; }
+
+/* ── Sagrantino 兩種風格（.sagrantino-styles）── */
+.main-content :deep(.sagrantino-styles) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.main-content :deep(.sagrantino-styles .style-card) {
+  border-radius: 14px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.main-content :deep(.sagrantino-styles .style-card.dry) {
+  background: linear-gradient(135deg, #1e1e2e, #2d1b3d); color: #e2e8f0;
+}
+.main-content :deep(.sagrantino-styles .style-card.dry h3) { color: #f8bbd0; margin: 0 0 14px; }
+.main-content :deep(.sagrantino-styles .style-card.sweet) {
+  background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+}
+.main-content :deep(.sagrantino-styles .style-card.sweet h3) { color: #e65100; margin: 0 0 14px; }
+.main-content :deep(.style-badge) {
+  display: inline-block; border-radius: 20px; padding: 3px 14px;
+  font-size: 0.82rem; font-weight: 700; margin-bottom: 12px;
+}
+.main-content :deep(.dry-badge)   { background: #c62828; color: white; }
+.main-content :deep(.sweet-badge) { background: #f57c00; color: white; }
+.main-content :deep(.sagrantino-styles .style-details p) { font-size: 0.88rem; margin: 5px 0; }
+
+/* ── Orvieto（.orvieto-section）── */
+.main-content :deep(.orvieto-section) { margin-top: 10px; }
+.main-content :deep(.orvieto-intro) {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+  border-left: 5px solid #00acc1;
+}
+.main-content :deep(.orvieto-intro h3) { margin: 0 0 8px; color: #006064; font-size: 1rem; }
+.main-content :deep(.orvieto-intro p)  { margin: 0; font-size: 0.93rem; color: #004d40; }
+.main-content :deep(.orvieto-details) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+.main-content :deep(.orvieto-card) {
+  background: white; border-radius: 12px; padding: 14px 16px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #0097a7;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.main-content :deep(.orvieto-card h4) { margin: 0 0 10px; font-size: 0.93rem; color: #006064; }
+.main-content :deep(.orvieto-card li) { font-size: 0.87rem; margin-bottom: 3px; }
+.main-content :deep(.orvieto-card p)  { font-size: 0.87rem; margin: 4px 0; }
+.main-content :deep(.orvieto-card hr) { border: none; border-top: 1px solid #e2e8f0; margin: 8px 0; }
+
+/* ── Montefalco Rosso（.montefalco-rosso）── */
+.main-content :deep(.montefalco-rosso) { margin-top: 10px; }
+.main-content :deep(.rosso-intro) {
+  background: linear-gradient(135deg, #fce4ec, #ffe0e0);
+  border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+  border-left: 5px solid #c62828;
+}
+.main-content :deep(.rosso-intro h3) { margin: 0 0 8px; font-size: 1rem; color: #b71c1c; }
+.main-content :deep(.rosso-intro p)  { margin: 0; font-size: 0.93rem; }
+.main-content :deep(.rosso-details table) { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.main-content :deep(.rosso-details th),
+.main-content :deep(.rosso-details td) {
+  padding: 8px 12px; border: 1px solid #e2e8f0; vertical-align: top;
+}
+.main-content :deep(.rosso-details th) { background: #fce4ec; font-weight: 700; color: #9b1c1c; }
+.main-content :deep(.rosso-details tbody tr:nth-child(even) td) { background: #fafafa; }
+
+/* ── 其他 Umbria 葡萄酒（.other-wines）── */
+.main-content :deep(.other-wines) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+.main-content :deep(.wine-card) {
+  background: white; border-radius: 14px; padding: 16px 18px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #9c27b0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.main-content :deep(.wine-card h3) { font-size: 0.95rem; margin: 0 0 10px; color: #4c1d95; }
+.main-content :deep(.wine-info p)  { font-size: 0.87rem; margin: 4px 0; }
+
+/* ── 美食文化（.cuisine-section）── */
+.main-content :deep(.cuisine-section) { margin-top: 10px; }
+.main-content :deep(.cuisine-intro) {
+  background: linear-gradient(135deg, #e8f5e9, #dcedc8);
+  border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+  border-left: 5px solid #43a047;
+}
+.main-content :deep(.cuisine-intro h3) { margin: 0 0 8px; font-size: 1rem; color: #1b5e20; }
+.main-content :deep(.cuisine-intro p)  { margin: 0; font-size: 0.93rem; color: #2e7d32; }
+.main-content :deep(.cuisine-section .food-pairing) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+.main-content :deep(.cuisine-section .pairing-card) {
+  background: white; border-radius: 12px; padding: 14px 16px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #43a047;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.main-content :deep(.cuisine-section .pairing-card h4) { margin: 0 0 10px; font-size: 0.93rem; color: #1b5e20; }
+.main-content :deep(.cuisine-section .pairing-card li)  { font-size: 0.87rem; margin-bottom: 3px; }
+
 /* ── 響應式：手機版全部改單欄 ── */
 @media (max-width: 700px) {
   .main-content :deep(.dual-region),
@@ -1787,7 +1937,14 @@ const formattedContent = computed(() => {
   .main-content :deep(.techniques-grid),
   .main-content :deep(.geography-grid),
   .main-content :deep(.regulations-content),
-  .main-content :deep(.aging-stages) {
+  .main-content :deep(.aging-stages),
+  /* Umbria */
+  .main-content :deep(.region-intro),
+  .main-content :deep(.umbria-facts),
+  .main-content :deep(.sagrantino-styles),
+  .main-content :deep(.orvieto-details),
+  .main-content :deep(.other-wines),
+  .main-content :deep(.cuisine-section .food-pairing) {
     grid-template-columns: 1fr;
   }
   .main-content :deep(.guide-grid) { grid-template-columns: 1fr 1fr; }
