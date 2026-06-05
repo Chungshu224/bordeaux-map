@@ -1974,6 +1974,11 @@ const formattedContent = computed(() => {
 }
 .main-content :deep(.lz-two-col > *) { flex: 1 1 0; min-width: 0; }
 
+/* Lazio：其他 Lazio DOC 4 張 card 用 2×2 配置 */
+.main-content :deep(.lz-traits-grid) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+
 /* ── Lazio 深度頁共用元件 ── */
 /* 標注欄（.highlight-box） */
 .main-content :deep(.highlight-box) {
@@ -2117,6 +2122,7 @@ const formattedContent = computed(() => {
   .main-content :deep(.umbria-mini-grid),
   .main-content :deep(.cuisine-section .food-pairing),
   /* Lazio */
+  .main-content :deep(.lz-traits-grid),
   .main-content :deep(.card-container) {
     grid-template-columns: 1fr;
   }
