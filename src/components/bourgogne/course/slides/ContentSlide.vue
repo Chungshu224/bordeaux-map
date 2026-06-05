@@ -1968,6 +1968,89 @@ const formattedContent = computed(() => {
 .main-content :deep(.um-prices p) { margin: 2px 0; font-size: 0.8rem; }
 .main-content :deep(.um-age) { font-size: 0.8rem; font-weight: 600; color: #6b21a8; margin: 6px 0 0; }
 
+/* ── Lazio：並排雙欄（flex，不受 700px 響應式影響） ── */
+.main-content :deep(.lz-two-col) {
+  display: flex; gap: 14px; margin-bottom: 14px;
+}
+.main-content :deep(.lz-two-col > *) { flex: 1 1 0; min-width: 0; }
+
+/* ── Lazio 深度頁共用元件 ── */
+/* 標注欄（.highlight-box） */
+.main-content :deep(.highlight-box) {
+  background: linear-gradient(135deg, #fff8e1, #fef3c7);
+  border-radius: 12px; padding: 14px 18px; margin-bottom: 14px;
+  border-left: 5px solid #f59e0b; font-size: 0.88rem; line-height: 1.6;
+}
+/* 卡片網格（.card-container 2×2, .card） */
+.main-content :deep(.card-container) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;
+}
+.main-content :deep(.card) {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-radius: 12px; padding: 14px;
+  border-top: 3px solid #3b82f6; box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+.main-content :deep(.card-title) {
+  font-size: 0.9rem; font-weight: 700; margin: 0 0 8px; color: #1d4ed8;
+}
+.main-content :deep(.card-content) { font-size: 0.86rem; line-height: 1.6; }
+.main-content :deep(.card-content strong) { color: #1d4ed8; display: block; margin-top: 6px; margin-bottom: 2px; }
+/* 歷史時間軸 v2（.timeline wrapper, .timeline-date badge） */
+.main-content :deep(.timeline) {
+  border-left: 3px solid #e2e8f0; padding-left: 16px;
+  display: flex; flex-direction: column; gap: 0; margin-bottom: 14px;
+}
+.main-content :deep(.timeline-date) {
+  flex-shrink: 0; font-size: 0.75rem; font-weight: 700;
+  background: #dbeafe; color: #1e40af;
+  padding: 3px 10px; border-radius: 20px; height: fit-content;
+  margin-bottom: 4px; display: inline-block; white-space: nowrap;
+}
+.main-content :deep(.timeline .timeline-content p)  { font-size: 0.86rem; margin: 4px 0; }
+/* 統計數字格（.stat-grid 4 欄, .stat-number 大字） */
+.main-content :deep(.stat-grid) {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px;
+}
+.main-content :deep(.stat-number) {
+  display: block; font-size: 1.25rem; font-weight: 900; color: #0369a1;
+}
+/* 附注（.note）、副標（p.subtitle） */
+.main-content :deep(.note) {
+  background: #f1f5f9; border-radius: 10px; padding: 10px 14px;
+  font-size: 0.82rem; color: #475569;
+  border-left: 3px solid #94a3b8; margin-top: 10px; line-height: 1.6;
+}
+.main-content :deep(p.subtitle) {
+  font-size: 0.88rem; color: #6b7280; margin: 0 0 12px; font-style: italic;
+}
+/* 裸表格（深度頁 table 未被 .comparison-table 包覆時） */
+.main-content :deep(table) {
+  width: 100%; border-collapse: collapse; font-size: 0.84rem; margin-bottom: 14px;
+}
+.main-content :deep(th) {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white; padding: 8px 12px; font-weight: 700; text-align: left;
+}
+.main-content :deep(td) {
+  padding: 8px 12px; border-bottom: 1px solid #e8ecf0;
+  vertical-align: top; line-height: 1.5;
+}
+.main-content :deep(tr:nth-child(even) td) { background: #f8f9fa; }
+
+/* ── Lazio 深度頁補強 ── */
+/* stat-grid 內的 stat-box 應垂直置中（修正繼承自 region-stats 的水平 flex）*/
+.main-content :deep(.stat-grid .stat-box) {
+  flex-direction: column; align-items: center; text-align: center; padding: 10px 6px;
+}
+/* 歷史時間軸 v2：content 填滿剩餘寬度 */
+.main-content :deep(.timeline .timeline-content) {
+  flex: 1; min-width: 0; font-size: 0.86rem; line-height: 1.6;
+}
+.main-content :deep(.timeline .timeline-content strong) { color: #1e40af; }
+/* 時間軸項目底部分隔線 */
+.main-content :deep(.timeline .timeline-item) { border-bottom: 1px solid #f0f4f8; }
+.main-content :deep(.timeline .timeline-item:last-child) { border-bottom: none; }
+
 /* ── 響應式：手機版全部改單欄 ── */
 @media (max-width: 700px) {
   .main-content :deep(.dual-region),
@@ -2032,9 +2115,12 @@ const formattedContent = computed(() => {
   .main-content :deep(.mf-zones),
   .main-content :deep(.umbria-producer),
   .main-content :deep(.umbria-mini-grid),
-  .main-content :deep(.cuisine-section .food-pairing) {
+  .main-content :deep(.cuisine-section .food-pairing),
+  /* Lazio */
+  .main-content :deep(.card-container) {
     grid-template-columns: 1fr;
   }
+  .main-content :deep(.stat-grid) { grid-template-columns: repeat(2, 1fr); }
   .main-content :deep(.guide-grid) { grid-template-columns: 1fr 1fr; }
   .main-content :deep(.alt-level)  { grid-template-columns: 80px 1fr; }
   .main-content :deep(.alt-style)  { grid-column: 1 / -1; }
