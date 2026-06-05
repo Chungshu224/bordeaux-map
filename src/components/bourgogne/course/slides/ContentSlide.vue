@@ -1883,6 +1883,91 @@ const formattedContent = computed(() => {
 .main-content :deep(.cuisine-section .pairing-card h4) { margin: 0 0 10px; font-size: 0.93rem; color: #1b5e20; }
 .main-content :deep(.cuisine-section .pairing-card li)  { font-size: 0.87rem; margin-bottom: 3px; }
 
+/* ── 歷史時間軸補充：文藝復興 badge ── */
+.main-content :deep(.timeline-badge.renaissance) { background: #ffedd5; color: #c2410c; }
+
+/* ── Montefalco 子產區（.mf-zones / .mf-zone）── */
+.main-content :deep(.mf-zones) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px;
+}
+.main-content :deep(.mf-zone) {
+  background: white; border-radius: 12px; padding: 16px 18px;
+  border: 1px solid #e2e8f0; border-left: 5px solid #9c27b0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.main-content :deep(.mf-zone.center) { border-left-color: #c0392b; }
+.main-content :deep(.mf-zone.warm)   { border-left-color: #e67e22; }
+.main-content :deep(.mf-zone.cool)   { border-left-color: #3498db; }
+.main-content :deep(.mf-zone.plain)  { border-left-color: #27ae60; }
+.main-content :deep(.mf-zone h4) { font-size: 0.95rem; margin: 0 0 8px; }
+.main-content :deep(.mf-zone.center h4) { color: #c0392b; }
+.main-content :deep(.mf-zone.warm h4)   { color: #d68910; }
+.main-content :deep(.mf-zone.cool h4)   { color: #2980b9; }
+.main-content :deep(.mf-zone.plain h4)  { color: #1e8449; }
+.main-content :deep(.mf-zone p) { font-size: 0.85rem; margin: 4px 0; line-height: 1.5; }
+.main-content :deep(.mf-zone .mf-style) {
+  border-radius: 8px; padding: 9px 12px; margin: 9px 0;
+  font-size: 0.83rem; line-height: 1.5; background: #f5f3ff;
+}
+.main-content :deep(.mf-zone.center .mf-style) { background: #fdeaea; }
+.main-content :deep(.mf-zone.warm .mf-style)   { background: #fef5e7; }
+.main-content :deep(.mf-zone.cool .mf-style)   { background: #eaf2fb; }
+.main-content :deep(.mf-zone.plain .mf-style)  { background: #e8f8ef; }
+.main-content :deep(.mf-zone .mf-prod) { font-size: 0.82rem; color: #6b7280; margin: 6px 0 0; }
+
+/* ── Umbria 名莊大卡（.umbria-producers / .umbria-producer）── */
+.main-content :deep(.umbria-producers) {
+  display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px;
+}
+.main-content :deep(.umbria-producer) {
+  background: white; border-radius: 12px; padding: 16px 18px;
+  border: 1px solid #e2e8f0; border-left: 5px solid #c0392b;
+  display: grid; grid-template-columns: auto 1fr; gap: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.main-content :deep(.umbria-producer.bio) { border-left-color: #27ae60; }
+.main-content :deep(.up-avatar) { text-align: center; }
+.main-content :deep(.up-badge) {
+  width: 58px; height: 58px; border-radius: 50%;
+  background: #c0392b; color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.35rem; font-weight: 800; margin: 0 auto 6px;
+}
+.main-content :deep(.umbria-producer.bio .up-badge) { background: #27ae60; }
+.main-content :deep(.up-est) { font-size: 0.76rem; color: #7f8c8d; margin: 0; white-space: nowrap; }
+.main-content :deep(.up-body h4) { font-size: 1rem; margin: 0 0 8px; color: #c0392b; }
+.main-content :deep(.umbria-producer.bio .up-body h4) { color: #1e8449; }
+.main-content :deep(.up-body p) { font-size: 0.85rem; margin: 4px 0; line-height: 1.5; }
+.main-content :deep(.up-wines) {
+  background: #fef5e7; border-radius: 8px; padding: 10px 12px; margin: 10px 0 8px;
+}
+.main-content :deep(.umbria-producer.bio .up-wines) { background: #eafaf1; }
+.main-content :deep(.up-wines p) { margin: 3px 0; font-size: 0.83rem; }
+.main-content :deep(.up-tip) { font-size: 0.83rem; font-weight: 600; line-height: 1.5; color: #c0392b; margin: 0; }
+.main-content :deep(.umbria-producer.bio .up-tip) { color: #1e8449; }
+
+/* ── Umbria 名莊小卡（.umbria-mini-grid / .umbria-mini）── */
+.main-content :deep(.umbria-mini-grid) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px;
+}
+.main-content :deep(.umbria-mini) {
+  background: white; border-radius: 12px; padding: 14px 16px;
+  border: 1px solid #e2e8f0; border-left: 4px solid #8e44ad;
+}
+.main-content :deep(.umbria-mini.c2) { border-left-color: #e67e22; }
+.main-content :deep(.umbria-mini.c3) { border-left-color: #9b59b6; }
+.main-content :deep(.umbria-mini.c4) { border-left-color: #3498db; }
+.main-content :deep(.umbria-mini h4) { font-size: 0.93rem; margin: 0 0 8px; color: #6b21a8; }
+.main-content :deep(.umbria-mini.c2 h4) { color: #d68910; }
+.main-content :deep(.umbria-mini.c3 h4) { color: #8e44ad; }
+.main-content :deep(.umbria-mini.c4 h4) { color: #2980b9; }
+.main-content :deep(.umbria-mini p) { font-size: 0.82rem; margin: 3px 0; line-height: 1.5; }
+.main-content :deep(.um-prices) {
+  background: #f5f3ff; border-radius: 6px; padding: 8px 10px; margin: 8px 0;
+}
+.main-content :deep(.um-prices p) { margin: 2px 0; font-size: 0.8rem; }
+.main-content :deep(.um-age) { font-size: 0.8rem; font-weight: 600; color: #6b21a8; margin: 6px 0 0; }
+
 /* ── 響應式：手機版全部改單欄 ── */
 @media (max-width: 700px) {
   .main-content :deep(.dual-region),
@@ -1944,6 +2029,9 @@ const formattedContent = computed(() => {
   .main-content :deep(.sagrantino-styles),
   .main-content :deep(.orvieto-details),
   .main-content :deep(.other-wines),
+  .main-content :deep(.mf-zones),
+  .main-content :deep(.umbria-producer),
+  .main-content :deep(.umbria-mini-grid),
   .main-content :deep(.cuisine-section .food-pairing) {
     grid-template-columns: 1fr;
   }
