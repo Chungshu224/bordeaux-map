@@ -909,6 +909,501 @@ const formattedContent = computed(() => {
 .main-content :deep(.pairing-match h4) { font-size: 0.92rem; font-weight: 700; margin: 0 0 8px; color: #065f46; }
 .main-content :deep(.pairing-match li) { font-size: 0.85rem; color: #374151; }
 
+/* ═══════════════════════════════════════════════════
+   Liguria 利古里亞 專屬樣式
+   ═══════════════════════════════════════════════════ */
+
+/* ── 時間軸格（.timeline-grid，Liguria 版） ── */
+.main-content :deep(.timeline-grid) {
+  display: flex; flex-direction: column; gap: 0;
+  padding-left: 16px; border-left: 3px solid #e2e8f0; margin: 12px 0;
+}
+.main-content :deep(.timeline-grid .timeline-item) {
+  display: flex; gap: 14px; padding: 10px 0; position: relative;
+}
+.main-content :deep(.timeline-grid .timeline-item)::before {
+  content: ''; position: absolute; left: -22px; top: 18px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #667eea; border: 2px solid white;
+  box-shadow: 0 0 0 2px #667eea;
+}
+.main-content :deep(.timeline-icon) {
+  flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; color: white; margin-top: 2px;
+}
+.main-content :deep(.timeline-grid .timeline-content h4) {
+  font-size: 0.92rem; font-weight: 700; color: #1a1a2e; margin: 0 0 4px;
+}
+.main-content :deep(.timeline-grid .timeline-content p) {
+  font-size: 0.87rem; color: #4b5563; margin: 2px 0; line-height: 1.6;
+}
+
+/* ── 文化地位格（.cultural-position / .position-grid） ── */
+.main-content :deep(.cultural-position) {
+  margin-top: 20px; background: #f8f9fa; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0;
+}
+.main-content :deep(.position-grid) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 10px;
+}
+.main-content :deep(.position-card) {
+  background: white; border-radius: 10px; padding: 14px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #667eea;
+}
+.main-content :deep(.position-card h5) { font-size: 0.88rem; font-weight: 700; margin: 0 0 6px; }
+.main-content :deep(.position-card p)  { font-size: 0.83rem; color: #4b5563; margin: 0; }
+
+/* ── 地區介紹 v2（.intro-section / .region-stats / .stat-box） ── */
+.main-content :deep(.intro-section) {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.main-content :deep(.intro-section .intro-text) {
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+  border-radius: 12px; padding: 16px 20px; border: 1px solid #bae6fd;
+}
+.main-content :deep(.intro-section .intro-text p) { margin: 0; font-size: 0.95rem; }
+.main-content :deep(.region-stats) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+.main-content :deep(.stat-box) {
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #bae6fd; display: flex; align-items: center; gap: 12px;
+}
+.main-content :deep(.stat-icon) { font-size: 1.8rem; flex-shrink: 0; }
+.main-content :deep(.stat-num) {
+  display: block; font-size: 1.3rem; font-weight: 900; color: #0369a1;
+}
+.main-content :deep(.stat-label) {
+  display: block; font-size: 0.75rem; color: #6b7280; margin-top: 2px;
+}
+.main-content :deep(.challenge-note) {
+  background: #fef3c7; border-radius: 12px; padding: 14px 16px;
+  border-left: 4px solid #f59e0b;
+}
+.main-content :deep(.challenge-note h4) { font-size: 0.92rem; margin: 0 0 6px; color: #92400e; }
+.main-content :deep(.challenge-note p)  { font-size: 0.88rem; margin: 0; color: #78350f; }
+
+/* ── 英雄式葡萄種植（.heroic-viticulture / .terrace-grid） ── */
+.main-content :deep(.heroic-intro) {
+  background: linear-gradient(135deg, #fef9c3, #fef3c7);
+  border-radius: 12px; padding: 16px 20px; margin-bottom: 16px;
+  border: 1px solid #fde68a;
+}
+.main-content :deep(.heroic-intro h3) { margin: 0 0 8px; color: #92400e; border: none; padding: 0; }
+.main-content :deep(.heroic-intro p)  { margin: 0; font-size: 0.92rem; color: #78350f; }
+.main-content :deep(.terrace-grid) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 10px;
+}
+.main-content :deep(.terrace-card) {
+  background: white; border-radius: 12px; padding: 16px; text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.terrace-stat) { font-size: 2rem; font-weight: 900; line-height: 1.2; }
+.main-content :deep(.terrace-label) {
+  font-size: 0.8rem; color: #6b7280; margin: 4px 0 8px; display: block;
+}
+.main-content :deep(.terrace-desc) { font-size: 0.83rem; color: #4b5563; margin: 0; }
+.main-content :deep(.wall-technique) {
+  background: #f8f9fa; border-radius: 10px; padding: 14px 16px;
+  margin-top: 14px; border-left: 3px solid #92400e;
+}
+.main-content :deep(.wall-technique h5) { margin: 0 0 8px; font-size: 0.9rem; color: #92400e; }
+.main-content :deep(.technique-points) { display: flex; flex-direction: column; gap: 6px; }
+.main-content :deep(.tech-point) {
+  font-size: 0.85rem; color: #4b5563;
+  padding: 6px 10px; background: white; border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+/* ── 手工作業（.work-challenges / .challenge-card） ── */
+.main-content :deep(.work-challenges) { display: flex; flex-direction: column; gap: 10px; }
+.main-content :deep(.challenge-card) {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0; border-left: 4px solid #e74c3c;
+}
+.main-content :deep(.challenge-icon) { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+.main-content :deep(.challenge-card h5) { font-size: 0.9rem; font-weight: 700; margin: 0 0 4px; }
+.main-content :deep(.challenge-card p)  { font-size: 0.85rem; color: #4b5563; margin: 0; }
+
+/* ── 三大葡萄品種（.grape-profiles / .grape-item） ── */
+.main-content :deep(.grape-profiles) { display: flex; flex-direction: column; gap: 12px; }
+.main-content :deep(.grape-item) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.grape-item.main) {
+  border-top: 4px solid #16a085;
+  background: linear-gradient(135deg, #e8f8f5, white);
+}
+.main-content :deep(.grape-item h3) { font-size: 1rem; font-weight: 800; margin: 0 0 8px; border: none; padding: 0; }
+.main-content :deep(.grape-badge) {
+  display: inline-block; font-size: 0.7rem; font-weight: 700;
+  background: #d1fae5; color: #065f46;
+  padding: 2px 8px; border-radius: 10px; margin-bottom: 6px;
+}
+.main-content :deep(.grape-item.main .grape-badge) { background: #a7f3d0; }
+.main-content :deep(.grape-details p) { font-size: 0.87rem; margin: 4px 0; }
+
+/* ── Vermentino 深度（.varieties-deep-dive / .origin-grid） ── */
+.main-content :deep(.vermentino-section) { display: flex; flex-direction: column; gap: 16px; }
+.main-content :deep(.origin-grid) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px;
+}
+.main-content :deep(.origin-theory) {
+  background: #fff7ed; border-radius: 12px; padding: 14px;
+  border: 1px solid #fed7aa; border-top: 3px solid #ea580c;
+}
+.main-content :deep(.theory-badge) {
+  display: inline-block; font-size: 0.7rem; font-weight: 700;
+  color: white; padding: 3px 10px; border-radius: 10px; margin-bottom: 8px;
+}
+.main-content :deep(.theory-note) {
+  font-size: 0.8rem; color: #9ca3af; margin-top: 8px; font-style: italic;
+}
+.main-content :deep(.alias-system) {
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0;
+}
+.main-content :deep(.alias-list) { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.main-content :deep(.alias-item) {
+  background: #f8f9fa; border-radius: 8px; padding: 10px 12px;
+  font-size: 0.85rem; border-left: 3px solid #3b82f6;
+}
+.main-content :deep(.alias-item strong) { font-size: 0.9rem; }
+.main-content :deep(.alias-item p) { margin: 4px 0 0; color: #6b7280; font-size: 0.82rem; }
+
+/* ── 品種比較表格（.variety-comparison） ── */
+.main-content :deep(.pigato-vs-vermentino) { margin-top: 14px; }
+.main-content :deep(.variety-comparison) {
+  width: 100%; border-collapse: collapse; font-size: 0.88rem;
+}
+.main-content :deep(.variety-comparison th) {
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+  color: white; padding: 10px 14px; text-align: left;
+}
+.main-content :deep(.variety-comparison td) {
+  padding: 8px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: middle;
+}
+.main-content :deep(.variety-comparison tr:nth-child(even) td) { background: #f8f9fa; }
+
+/* ── 風味分類（.flavor-categories / .flavor-cat） ── */
+.main-content :deep(.flavor-categories) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px;
+}
+.main-content :deep(.flavor-cat) {
+  background: white; border-radius: 10px; padding: 12px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #10b981; font-size: 0.83rem;
+}
+.main-content :deep(.flavor-cat h5) { font-size: 0.85rem; font-weight: 700; margin: 0 0 6px; }
+.main-content :deep(.flavor-cat li) { font-size: 0.82rem; }
+
+/* ── Cinque Terre（.ct-wines / .wine-card） ── */
+.main-content :deep(.cinque-terre-section) { display: flex; flex-direction: column; gap: 14px; }
+.main-content :deep(.ct-intro) {
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+  border-radius: 12px; padding: 16px 20px; border: 1px solid #bae6fd;
+}
+.main-content :deep(.ct-intro h3) { margin: 0 0 8px; color: #0369a1; border: none; padding: 0; }
+.main-content :deep(.ct-intro p)  { margin: 0; font-size: 0.92rem; }
+.main-content :deep(.ct-wines) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+}
+.main-content :deep(.wine-card) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.wine-card.white) { border-top: 4px solid #3b82f6; }
+.main-content :deep(.wine-card.sweet) { border-top: 4px solid #d97706; background: linear-gradient(135deg, #fffbeb, white); }
+.main-content :deep(.wine-card h4)    { font-size: 0.95rem; font-weight: 700; margin: 0 0 8px; }
+.main-content :deep(.wine-card p)     { font-size: 0.87rem; margin: 4px 0; }
+.main-content :deep(.ct-fact) {
+  background: #fef9c3; border-radius: 10px; padding: 12px 14px;
+  font-size: 0.87rem; border-left: 3px solid #f59e0b; color: #78350f;
+}
+
+/* ── Sciacchetrà 深度（.sciacch-intro / .history-cards / .hist-icon / .production-timeline / .prod-phase） ── */
+.main-content :deep(.sciacchetra-deep) { display: flex; flex-direction: column; gap: 16px; }
+.main-content :deep(.sciacch-intro) {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-radius: 12px; padding: 16px 20px; border: 1px solid #fbbf24;
+}
+.main-content :deep(.sciacch-intro h3) { margin: 0 0 8px; color: #92400e; border: none; padding: 0; }
+.main-content :deep(.sciacch-intro p)  { margin: 0; font-size: 0.92rem; color: #78350f; }
+.main-content :deep(.history-cards) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 10px;
+}
+.main-content :deep(.sciacch-history .hist-card) {
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #d97706;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.main-content :deep(.hist-icon) {
+  font-size: 1.5rem; margin-bottom: 2px;
+}
+.main-content :deep(.sciacch-history .hist-card h5) { font-size: 0.9rem; font-weight: 700; margin: 0; }
+.main-content :deep(.sciacch-history .hist-card p)  { font-size: 0.84rem; margin: 0; color: #4b5563; }
+.main-content :deep(.production-timeline) {
+  display: flex; flex-direction: column; gap: 10px; margin-top: 10px;
+}
+.main-content :deep(.prod-phase) {
+  background: white; border-radius: 10px; padding: 14px;
+  border: 1px solid #e2e8f0; border-left: 4px solid #e74c3c;
+}
+.main-content :deep(.prod-phase h5) { font-size: 0.9rem; font-weight: 700; margin: 0 0 6px; }
+.main-content :deep(.prod-phase p)  { font-size: 0.85rem; color: #4b5563; margin: 0; }
+.main-content :deep(.style-table) {
+  width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 10px;
+}
+.main-content :deep(.style-table th) {
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  color: white; padding: 8px 12px; text-align: left;
+}
+.main-content :deep(.style-table td) {
+  padding: 7px 12px; border-bottom: 1px solid #e2e8f0;
+}
+.main-content :deep(.style-table tr:nth-child(even) td) { background: #fef9c3; }
+
+/* ── 海洋影響四格（.maritime-influence / .influence-card） ── */
+.main-content :deep(.maritime-influence) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+}
+.main-content :deep(.influence-card) {
+  background: white; border-radius: 12px; padding: 16px; text-align: center;
+  border: 1px solid #bae6fd; border-top: 3px solid #0ea5e9;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.influence-icon) { font-size: 2rem; margin-bottom: 8px; display: block; }
+.main-content :deep(.influence-card h4) { font-size: 0.92rem; font-weight: 700; color: #0369a1; margin: 0 0 6px; }
+.main-content :deep(.influence-card p)  { font-size: 0.85rem; color: #4b5563; margin: 0; }
+
+/* ── 氣候統計格（.climate-stats-grid / .climate-stat） ── */
+.main-content :deep(.climate-stats-grid) {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px;
+}
+.main-content :deep(.climate-stat) {
+  background: white; border-radius: 10px; padding: 14px; text-align: center;
+  border: 1px solid #e2e8f0;
+}
+.main-content :deep(.stat-value) { font-size: 1.2rem; font-weight: 900; line-height: 1.2; }
+.main-content :deep(.climate-stat p) { font-size: 0.78rem; color: #6b7280; margin: 6px 0 0; }
+
+/* ── 海洋機制卡（.mechanism-cards / .mech-card） ── */
+.main-content :deep(.mechanism-cards) {
+  display: flex; flex-direction: column; gap: 12px; margin-top: 12px;
+}
+.main-content :deep(.mech-card) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #0ea5e9;
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.main-content :deep(.mech-icon) { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+.main-content :deep(.mech-details h5) { font-size: 0.9rem; font-weight: 700; margin: 0 0 6px; }
+.main-content :deep(.mech-details p)  { font-size: 0.85rem; color: #4b5563; margin: 3px 0; }
+
+/* ── 土壤格（.soil-grid / .soil-card） ── */
+.main-content :deep(.soil-grid) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px;
+}
+.main-content :deep(.soil-card) {
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0; border-left: 4px solid #10b981;
+}
+.main-content :deep(.soil-card h5) { font-size: 0.88rem; font-weight: 700; margin: 0 0 8px; }
+.main-content :deep(.soil-card p)  { font-size: 0.83rem; margin: 3px 0; color: #4b5563; }
+
+/* ── 其他 DOC 卡（.other-docs / .doc-card） ── */
+.main-content :deep(.other-docs) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+.main-content :deep(.doc-card) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #3b82f6;
+}
+.main-content :deep(.doc-card h4) { font-size: 0.92rem; font-weight: 800; margin: 0 0 4px; }
+.main-content :deep(.doc-location) {
+  font-size: 0.78rem; color: #6b7280; font-style: italic; margin: 0 0 10px;
+}
+.main-content :deep(.doc-info p) { font-size: 0.85rem; margin: 4px 0; }
+
+/* ── 酒莊卡片（Liguria 版 .winery-cards / .winery-type / .winery-info） ── */
+.main-content :deep(.region-wineries h3) { border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+.main-content :deep(.winery-cards) { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.main-content :deep(.winery-type) {
+  font-size: 0.75rem; color: #6b7280; font-style: italic; margin: 2px 0 8px;
+}
+.main-content :deep(.winery-info p)  { font-size: 0.87rem; margin: 4px 0; }
+.main-content :deep(.winery-info li) { font-size: 0.85rem; }
+
+/* ── 飲食文化（.food-culture / .food-pairing / .pairing-item） ── */
+.main-content :deep(.culture-intro) {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-radius: 12px; padding: 14px 16px; margin-bottom: 14px;
+  border: 1px solid #bbf7d0;
+}
+.main-content :deep(.culture-intro h3) { margin: 0 0 6px; color: #065f46; border: none; padding: 0; }
+.main-content :deep(.culture-intro p)  { margin: 0; font-size: 0.92rem; }
+.main-content :deep(.food-pairing) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+.main-content :deep(.pairing-item) {
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #059669;
+}
+.main-content :deep(.pairing-item h4) { font-size: 0.9rem; font-weight: 700; margin: 0 0 6px; color: #065f46; }
+.main-content :deep(.pairing-item p)  { font-size: 0.84rem; color: #4b5563; margin: 0; }
+
+/* ═══════════════════════════════════════════════════
+   Emilia-Romagna 專屬樣式
+   ═══════════════════════════════════════════════════ */
+
+/* ── 地區總覽（.region-overview） ── */
+.main-content :deep(.region-overview) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.main-content :deep(.overview-text) {
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  border-radius: 14px; padding: 18px 20px;
+  border: 1px solid #fed7aa;
+}
+.main-content :deep(.overview-text p) { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+.main-content :deep(.famous-foods) {
+  background: white; border-radius: 14px; padding: 16px 18px;
+  border: 1px solid #e2e8f0; border-top: 4px solid #f59e0b;
+}
+.main-content :deep(.famous-foods h4) { margin: 0 0 10px; font-size: 0.95rem; }
+.main-content :deep(.food-grid) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+}
+.main-content :deep(.food-item) {
+  background: #fff7ed; border-radius: 8px; padding: 7px 10px;
+  font-size: 0.84rem; color: #374151;
+  border: 1px solid #fed7aa;
+}
+
+/* ── Lambrusco 風格三卡（.lambrusco-types / .type-card） ── */
+.main-content :deep(.lambrusco-intro) {
+  background: linear-gradient(135deg, #fdf4ff, #f5f3ff);
+  border-radius: 12px; padding: 16px 18px;
+  border: 1px solid #e9d5ff; margin-bottom: 14px;
+}
+.main-content :deep(.lambrusco-intro h3) { color: #7c3aed; border: none; padding: 0; margin: 0 0 6px; }
+.main-content :deep(.lambrusco-intro p) { font-size: 0.92rem; margin: 0; }
+.main-content :deep(.lambrusco-types) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+.main-content :deep(.type-card) {
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.type-card.dry)      { border-top: 4px solid #7c3aed; }
+.main-content :deep(.type-card.semi-dry) { border-top: 4px solid #a78bfa; }
+.main-content :deep(.type-card.sweet)    { border-top: 4px solid #c4b5fd; }
+.main-content :deep(.type-card h4)       { font-size: 0.95rem; font-weight: 700; margin: 0 0 4px; }
+.main-content :deep(.type-desc)          { font-size: 0.78rem; color: #7c3aed; font-weight: 600; margin: 0 0 8px; }
+.main-content :deep(.type-card p)        { font-size: 0.85rem; margin: 4px 0; }
+
+/* ── Lambrusco 三大 DOC（.lambrusco-docs / .doc-item / .doc-rank） ── */
+.main-content :deep(.lambrusco-docs) {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.main-content :deep(.doc-item) {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: white; border-radius: 12px; padding: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.doc-item.top) {
+  border-left: 4px solid #7c3aed;
+  background: linear-gradient(135deg, #faf5ff, white);
+}
+.main-content :deep(.doc-rank) {
+  flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: white; font-weight: 800; font-size: 0.9rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.main-content :deep(.doc-item h3) {
+  font-size: 0.98rem; font-weight: 700; margin: 0 0 8px;
+  border: none; padding: 0;
+}
+.main-content :deep(.doc-details p) { font-size: 0.87rem; margin: 3px 0; }
+
+/* ── 白葡萄酒（.white-wines-section / .white-wine-card / .doc-badge） ── */
+.main-content :deep(.white-wines-section) {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+}
+.main-content :deep(.white-wine-card) {
+  background: white; border-radius: 12px; padding: 18px;
+  border: 1px solid #e2e8f0; border-top: 4px solid #10b981;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.main-content :deep(.white-wine-card h3) {
+  font-size: 1rem; font-weight: 800; margin: 0 0 6px;
+  border: none; padding: 0;
+}
+.main-content :deep(.doc-badge) {
+  display: inline-block; font-size: 0.72rem; font-weight: 700;
+  background: #d1fae5; color: #065f46;
+  padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+}
+.main-content :deep(.wine-info p) { font-size: 0.87rem; margin: 4px 0; }
+
+/* ── Sangiovese 比較表（.sangiovese-romagna / .sr-intro / .sr-comparison） ── */
+.main-content :deep(.sr-intro) {
+  background: linear-gradient(135deg, #fff1f2, #ffe4e6);
+  border-radius: 12px; padding: 16px 18px; margin-bottom: 14px;
+  border: 1px solid #fecdd3;
+}
+.main-content :deep(.sr-intro h3) { color: #be123c; border: none; padding: 0; margin: 0 0 6px; }
+.main-content :deep(.sr-intro p)  { font-size: 0.92rem; margin: 0; }
+.main-content :deep(.sr-comparison) { overflow-x: auto; }
+.main-content :deep(.sr-comparison table) {
+  width: 100%; border-collapse: collapse;
+  display: table; font-size: 0.88rem; background: white;
+  border-radius: 10px; overflow: hidden;
+}
+.main-content :deep(.sr-comparison th) {
+  background: linear-gradient(135deg, #be123c, #e11d48);
+  color: white; padding: 10px 14px; font-weight: 700; text-align: left;
+}
+.main-content :deep(.sr-comparison td) {
+  padding: 9px 14px; border-bottom: 1px solid #e8ecf0; vertical-align: top;
+}
+.main-content :deep(.sr-comparison tr:nth-child(even) td) { background: #fff1f2; }
+
+/* ── 配餐哲學（.food-pairing-section / .pairing-philosophy / .reasons） ── */
+.main-content :deep(.pairing-philosophy) {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-radius: 12px; padding: 16px 18px; margin-bottom: 14px;
+  border: 1px solid #bfdbfe;
+}
+.main-content :deep(.pairing-philosophy h3) { color: #1d4ed8; margin: 0 0 10px; border: none; padding: 0; }
+.main-content :deep(.reasons) {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+}
+.main-content :deep(.reason) {
+  background: white; border-radius: 8px; padding: 9px 12px;
+  font-size: 0.87rem; color: #1e3a8a; border: 1px solid #bfdbfe;
+}
+.main-content :deep(.classic-pairings h4) { margin: 0 0 10px; }
+.main-content :deep(.classic-pairings .pairing-grid) {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+.main-content :deep(.classic-pairings .pairing-card) {
+  background: white; border-radius: 12px; padding: 14px;
+  border: 1px solid #e2e8f0; border-top: 3px solid #7c3aed;
+}
+.main-content :deep(.classic-pairings .pairing-card h5) {
+  font-size: 0.9rem; font-weight: 700; margin: 0 0 8px; color: #5b21b6;
+}
+.main-content :deep(.classic-pairings .pairing-card li) { font-size: 0.84rem; }
+
 /* ── 響應式：手機版全部改單欄 ── */
 @media (max-width: 700px) {
   .main-content :deep(.dual-region),
@@ -927,20 +1422,36 @@ const formattedContent = computed(() => {
   .main-content :deep(.grape-collection),
   .main-content :deep(.village-grid),
   .main-content :deep(.docg-grid),
-  .main-content :deep(.pairing-section) {
+  .main-content :deep(.pairing-section),
+  /* Liguria */
+  .main-content :deep(.position-grid),
+  .main-content :deep(.region-stats),
+  .main-content :deep(.terrace-grid),
+  .main-content :deep(.origin-grid),
+  .main-content :deep(.flavor-categories),
+  .main-content :deep(.ct-wines),
+  .main-content :deep(.history-cards),
+  .main-content :deep(.maritime-influence),
+  .main-content :deep(.soil-grid),
+  .main-content :deep(.other-docs),
+  .main-content :deep(.food-pairing),
+  /* Emilia-Romagna */
+  .main-content :deep(.region-overview),
+  .main-content :deep(.white-wines-section),
+  .main-content :deep(.reasons),
+  .main-content :deep(.lambrusco-types),
+  .main-content :deep(.classic-pairings .pairing-grid) {
     grid-template-columns: 1fr;
   }
-  .main-content :deep(.guide-grid) {
-    grid-template-columns: 1fr 1fr;
-  }
-  .main-content :deep(.alt-level) {
-    grid-template-columns: 80px 1fr;
-  }
-  .main-content :deep(.alt-style) { grid-column: 1 / -1; }
+  .main-content :deep(.guide-grid) { grid-template-columns: 1fr 1fr; }
+  .main-content :deep(.alt-level)  { grid-template-columns: 80px 1fr; }
+  .main-content :deep(.alt-style)  { grid-column: 1 / -1; }
   .main-content :deep(.fusion-grid) { flex-direction: column; }
   .main-content :deep(.process-steps) { flex-direction: column; align-items: stretch; }
   .main-content :deep(.step-arrow) { transform: rotate(90deg); text-align: center; }
   .main-content :deep(.pyramid-level) { grid-template-columns: 50px 1fr 40px; }
+  .main-content :deep(.climate-stats-grid) { grid-template-columns: 1fr 1fr; }
+  .main-content :deep(.mech-card) { flex-direction: column; }
 }
 
 .slide-image {
