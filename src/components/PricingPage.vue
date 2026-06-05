@@ -236,8 +236,12 @@
             </div>
           </div>
         </div>
-    <!-- FAQ -->
-    <div class="faq-section">
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
       <div class="cs-inner">
         <h2>常見問題</h2>
         <div class="faq-list">
