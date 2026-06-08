@@ -1,154 +1,157 @@
 {
   "lessonId": "L2M5L1",
-  "title": "義大利菜系與配餐原則",
+  "title": "義大利精品酒莊投資指南",
   "quiz": [
     {
-      "question": "義大利配餐最高原則是什麼？",
+      "question": "義大利哪款葡萄酒在國際拍賣市場最具投資價值？",
       "options": [
-        "重的配重的、輕的配輕的",
-        "同產區的葡萄酒配同產區的料理",
-        "紅酒配肉、白酒配魚",
-        "貴的酒配貴的料理"
+        "Prosecco DOC",
+        "Barolo Riserva 頂級名莊",
+        "Pinot Grigio",
+        "Chianti 普通款"
       ],
       "answer": 1,
-      "explanation": "義大利配餐最高原則：\"What grows together, goes together\"——同產區的葡萄酒配同產區的料理。當地氣候、土壤塑造了當地食材與葡萄品種，千年演化的配對經驗。"
+      "explanation": "頂尖酒莊（如 Giacomo Conterno、Bruno Giacosa）的 Barolo Riserva 在國際拍賣場表現最佳，陳年潛力 30-50 年，稀缺性極高，長期升值潛力強。"
     },
     {
-      "question": "為什麼番茄料理需要高酸葡萄酒？",
+      "question": "傳統派 Barolo 使用的橡木桶類型是？",
       "options": [
-        "番茄是紅色的",
-        "番茄酸度高（pH 4.3-4.9），低酸葡萄酒會被壓垮顯得平淡",
-        "番茄很貴",
-        "傳統習慣"
+        "法式小橡木桶（Barriques 225L）",
+        "美式橡木桶",
+        "大型斯拉沃尼亞橡木桶（Botti）",
+        "不使用橡木桶"
       ],
-      "answer": 1,
-      "explanation": "番茄酸度極高（pH 4.3-4.9），需要高酸葡萄酒（Sangiovese、Barbera）匹配，否則低酸葡萄酒會被番茄的酸度壓垮，顯得平淡、鬆散、缺乏結構。"
+      "answer": 2,
+      "explanation": "傳統派（Tradizionalisti）使用大型斯拉沃尼亞橡木桶（Botti，10,000-50,000L），讓酒緩慢演化，單寧整合需 25-50 年，是老酒收藏家的首選。"
     },
     {
-      "question": "為什麼油膩肉類需要高單寧紅酒？",
+      "question": "Brunello di Montalcino 的創始酒莊是？",
       "options": [
-        "顏色搭配",
-        "單寧與蛋白質、脂肪結合會變柔軟，達到平衡",
-        "價格匹配",
-        "傳統習慣"
+        "Gaja",
+        "Biondi-Santi",
+        "Giacomo Conterno",
+        "Dal Forno Romano"
       ],
       "answer": 1,
-      "explanation": "單寧（多酚）與蛋白質結合形成沉澱，減少口腔收斂感，同時脂肪稀釋單寧，達到平衡。因此 Bistecca（牛排）配 Barolo、Brunello 等高單寧紅酒完美。"
+      "explanation": "Biondi-Santi 是 Brunello di Montalcino 的創始者，19 世紀末由 Ferruccio Biondi-Santi 確立以 Sangiovese Grosso 釀造陳年紅酒的傳統，舊年份屢創拍賣紀錄。"
     },
     {
-      "question": "甜點配酒的正確法則是？",
+      "question": "入門收藏者最適合從哪種酒開始投資？",
       "options": [
-        "料理甜度 > 葡萄酒甜度",
-        "葡萄酒甜度 ≥ 料理甜度",
-        "完全不相關",
-        "越甜越好"
+        "直接買最老年份 Barolo",
+        "Chianti Classico Gran Selezione 知名酒莊",
+        "只買超市特價酒",
+        "只買 Prosecco 氣泡酒"
       ],
       "answer": 1,
-      "explanation": "甜點配酒法則：葡萄酒甜度 ≥ 料理甜度。如果料理比酒甜，葡萄酒會顯得極度酸澀、苦味加倍。例如：Tiramisu 配 Vin Santo、Panna Cotta 配 Moscato d'Asti。"
+      "explanation": "入門收藏建議從 Chianti Classico Gran Selezione 知名酒莊開始：價格合理（€50-150）、品質穩定、陳年潛力 10-20 年，可逐步建立鑑賞能力再升級到 Barolo/Brunello。"
     }
   ],
   "slides": [
     {
       "type": "title",
-      "title": "🍝 義大利菜系與配餐原則",
-      "subtitle": "掌握義大利餐酒搭配的黃金法則"
+      "title": "義大利精品酒莊投資指南",
+      "subtitle": "掌握 Barolo、Brunello、Amarone 的收藏投資核心策略"
     },
     {
       "type": "content",
-      "title": "🍷 義大利配餐哲學：地域主義",
-      "content": "<div class=\"philosophy-section\"><div class=\"philosophy-intro\"><h3>🏔️ \"What grows together, goes together\"</h3><p>義大利配餐最高原則：<strong>同產區的葡萄酒配同產區的料理</strong>。這不是巧合，而是千年演化的結果——當地氣候、土壤、水源塑造了當地的食材與葡萄品種。</p><div class=\"principle-highlight\"><p><strong>🍇 為什麼同產區配對有效？</strong></p><ul><li><strong>酸度匹配：</strong>高酸土壤→高酸食材（番茄）→高酸葡萄酒（Sangiovese）</li><li><strong>油脂平衡：</strong>油膩料理區域（Piemonte）→高酸葡萄酒（Barbera、Dolcetto）切油膩</li><li><strong>鹹度調和：</strong>海岸料理（Liguria、Sardinia）→礦物感白酒（Vermentino）</li><li><strong>文化傳承：</strong>數百年的飲食搭配經驗累積</li></ul></div></div><div class=\"regional-matching\"><h3>📍 經典同產區配對</h3><div class=\"matching-grid\"><div class=\"match-card piemonte\"><h4>🏔️ Piemonte</h4><div class=\"match-content\"><p class=\"dish\"><strong>料理：</strong>松露、Brasato al Barolo（Barolo 燉牛肉）、Agnolotti（肉餃）</p><p class=\"wine\"><strong>配酒：</strong>Barolo、Barbaresco、Barbera d'Alba</p><p class=\"why\"><strong>原理：</strong>油膩肉類需要 Nebbiolo 的高單寧 + 高酸度切油膩，Barbera 超高酸度配番茄醬汁</p></div></div><div class=\"match-card tuscany\"><h4>🌻 Tuscany</h4><div class=\"match-content\"><p class=\"dish\"><strong>料理：</strong>Bistecca alla Fiorentina（佛羅倫斯牛排）、Ribollita（蔬菜湯）、野豬</p><p class=\"wine\"><strong>配酒：</strong>Chianti Classico、Brunello di Montalcino</p><p class=\"why\"><strong>原理：</strong>Sangiovese 的酸度 + 單寧配炭烤牛排、草本風味配 Tuscany 香草料理</p></div></div><div class=\"match-card campania\"><h4>🌋 Campania</h4><div class=\"match-content\"><p class=\"dish\"><strong>料理：</strong>Pizza Margherita、Pasta al Pomodoro、海鮮、Mozzarella di Bufala</p><p class=\"wine\"><strong>配酒：</strong>Fiano di Avellino、Greco di Tufo、Falanghina</p><p class=\"why\"><strong>原理：</strong>番茄高酸度需要高酸白酒平衡，火山土白酒的礦物感配海鮮完美</p></div></div><div class=\"match-card veneto\"><h4>🍇 Veneto</h4><div class=\"match-content\"><p class=\"dish\"><strong>料理：</strong>Risotto、Baccalà（鹽鱈魚）、Fegato alla Veneziana（威尼斯肝）</p><p class=\"wine\"><strong>配酒：</strong>Soave、Valpolicella Ripasso、Amarone</p><p class=\"why\"><strong>原理：</strong>Soave 的檸檬酸配鹽鱈魚、Amarone 濃郁配威尼斯甜鹹風格料理</p></div></div><div class=\"match-card sicily\"><h4>🏝️ Sicily</h4><div class=\"match-content\"><p class=\"dish\"><strong>料理：</strong>劍魚、Caponata（茄子甜酸菜）、Cassata（甜點）、Arancini（炸飯糰）</p><p class=\"wine\"><strong>配酒：</strong>Etna Bianco、Nero d'Avola、Marsala、Passito di Pantelleria</p><p class=\"why\"><strong>原理：</strong>海鮮配 Etna 火山白酒、甜酸菜配 Nero d'Avola 果香、甜點配 Marsala 甜酒</p></div></div><div class=\"match-card emilia\"><h4>🧀 Emilia-Romagna</h4><div class=\"match-content\"><p class=\"dish\"><strong>料理：</strong>Parmigiano Reggiano、Prosciutto di Parma、Tortellini、Ragù</p><p class=\"wine\"><strong>配酒：</strong>Lambrusco（干型）、Sangiovese di Romagna</p><p class=\"why\"><strong>原理：</strong>Lambrusco 的氣泡 + 酸度切 Parmigiano 鹹度、Sangiovese 配肉醬</p></div></div></div></div></div>"
+      "title": "為什麼投資義大利頂級葡萄酒？",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">義大利頂級葡萄酒是全球最具投資價值的農業資產之一：稀缺性、陳年潛力、品牌聲譽三者共同推動頂尖酒款長期升值。</p><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">+380%</div><div class=\"stat-label\">Barolo 頂級款<br>2010→2024 漲幅</div></div><div class=\"stat-box\"><div class=\"stat-number\">€10,000+</div><div class=\"stat-label\">Giacomo Conterno<br>Monfortino 均價</div></div><div class=\"stat-box\"><div class=\"stat-number\">50 年+</div><div class=\"stat-label\">頂級 Barolo<br>最長陳年潛力</div></div><div class=\"stat-box\"><div class=\"stat-number\">55</div><div class=\"stat-label\">DOCG 產區<br>確保品質管控</div></div></div><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>稀缺性：</strong>頂級單一園（MGA）年產量僅數千瓶，市場供不應求</div><div class=\"kp-box\"><strong>陳年潛力：</strong>Barolo / Brunello 可陳年 30-50 年，複雜度持續增加</div><div class=\"kp-box\"><strong>品牌效應：</strong>Giacomo Conterno、Gaja 等頂莊享有全球知名度，二手溢價顯著</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "⚖️ 義大利配餐六大原則",
-      "content": "<div class=\"principles-section\"><div class=\"principle-card\"><div class=\"principle-header\"><span class=\"principle-number\">1</span><h3>重量匹配（Weight Matching）</h3></div><div class=\"principle-content\"><p class=\"rule\"><strong>法則：</strong>料理重量 = 酒體重量</p><div class=\"examples\"><div class=\"example\"><p><strong>✓ 輕盈料理 → 輕盈酒體：</strong></p><ul><li>海鮮沙拉 → Vermentino、Soave</li><li>清蒸魚 → Pinot Grigio、Gavi</li><li>Caprese 沙拉 → Verdicchio</li></ul></div><div class=\"example\"><p><strong>✓ 中等料理 → 中等酒體：</strong></p><ul><li>義大利麵配番茄醬 → Chianti、Valpolicella</li><li>烤雞 → Dolcetto、Barbera</li></ul></div><div class=\"example\"><p><strong>✓ 重量級料理 → 飽滿酒體：</strong></p><ul><li>Bistecca Fiorentina → Brunello、Barolo</li><li>野豬燉肉 → Amarone、Taurasi</li><li>Osso Buco → Barbaresco</li></ul></div></div></div></div><div class=\"principle-card\"><div class=\"principle-header\"><span class=\"principle-number\">2</span><h3>酸度平衡（Acidity Balance）</h3></div><div class=\"principle-content\"><p class=\"rule\"><strong>法則：</strong>高酸料理需要高酸葡萄酒，否則酒會顯得平淡無味</p><div class=\"examples\"><div class=\"example acid-pairing\"><p><strong>🍅 番茄料理：</strong></p><ul><li>Pasta al Pomodoro → Sangiovese（TA 6-7 g/L）</li><li>Pizza Margherita → Barbera（TA 7-9 g/L）</li><li>Panzanella → Verdicchio（TA 7-9 g/L）</li></ul><p class=\"why-box\"><strong>為什麼？</strong>番茄酸度高（pH 4.3-4.9），低酸葡萄酒會被番茄壓垮，顯得平淡鬆散。</p></div><div class=\"example acid-pairing\"><p><strong>🍋 檸檬料理：</strong></p><ul><li>Piccata al Limone → Vermentino、Greco di Tufo</li><li>Spaghetti al Limone → Fiano di Avellino</li></ul></div></div></div></div><div class=\"principle-card\"><div class=\"principle-header\"><span class=\"principle-number\">3</span><h3>單寧 vs 油脂（Tannin vs Fat）</h3></div><div class=\"principle-content\"><p class=\"rule\"><strong>法則：</strong>單寧與蛋白質、脂肪結合會變柔軟，油膩料理需要高單寧紅酒</p><div class=\"mechanism\"><p><strong>🔬 化學原理：</strong>單寧（多酚）與蛋白質結合形成沉澱，減少口腔收斂感，同時脂肪稀釋單寧，達到平衡。</p></div><div class=\"examples\"><div class=\"example\"><p><strong>✓ 高脂肪肉類 → 高單寧紅酒：</strong></p><ul><li>Bistecca（牛排）→ Barolo、Brunello（單寧 &gt;3000 mg/L）</li><li>Brasato（燉牛肉）→ Barbaresco、Chianti Classico Riserva</li><li>Porchetta（烤豬）→ Sagrantino、Taurasi</li></ul></div><div class=\"example warning\"><p><strong>❌ 避免：</strong></p><ul><li>海鮮 + 高單寧紅酒 → 金屬味、苦澀（單寧與海鮮蛋白質反應不良）</li><li>沙拉 + Barolo → 單寧過重、沙拉過輕</li></ul></div></div></div></div><div class=\"principle-card\"><div class=\"principle-header\"><span class=\"principle-number\">4</span><h3>甜度匹配（Sweetness Matching）</h3></div><div class=\"principle-content\"><p class=\"rule\"><strong>法則：</strong>料理甜度 ≤ 葡萄酒甜度，否則酒會顯得酸澀</p><div class=\"examples\"><div class=\"example\"><p><strong>✓ 甜點配甜酒（酒比料理甜）：</strong></p><ul><li>Tiramisu → Vin Santo（殘糖 80-150 g/L）</li><li>Panna Cotta → Moscato d'Asti（殘糖 80-100 g/L）</li><li>Cannoli → Marsala Dolce、Passito di Pantelleria</li><li>巧克力甜點 → Recioto della Valpolicella、Sagrantino Passito</li></ul></div><div class=\"example\"><p><strong>✓ 甜鹹料理配微甜酒：</strong></p><ul><li>Prosciutto e Melone → Prosecco（微甜）</li><li>Gorgonzola → Moscato d'Asti</li></ul></div><div class=\"example warning\"><p><strong>❌ 常見錯誤：</strong></p><p>巧克力蛋糕 + 干型紅酒 → 酒會顯得極度酸澀、苦味加倍</p></div></div></div></div><div class=\"principle-card\"><div class=\"principle-header\"><span class=\"principle-number\">5</span><h3>風味橋接（Flavor Bridging）</h3></div><div class=\"principle-content\"><p class=\"rule\"><strong>法則：</strong>找出料理與葡萄酒的共同風味元素，建立連結</p><div class=\"examples\"><div class=\"bridge-example\"><p><strong>🍄 松露料理：</strong></p><p class=\"dish-wine\">料理：Tajarin al Tartufo（松露細麵）</p><p class=\"dish-wine\">葡萄酒：Barolo（15+ 年陳年）</p><p class=\"bridge\"><strong>風味橋：</strong>陳年 Barolo 的土壤、森林地面、松露風味 ↔ 料理的松露香氣</p></div><div class=\"bridge-example\"><p><strong>🌿 草本料理：</strong></p><p class=\"dish-wine\">料理：Pesto alla Genovese（羅勒醬）</p><p class=\"dish-wine\">葡萄酒：Vermentino、Pigato</p><p class=\"bridge\"><strong>風味橋：</strong>Vermentino 的草本、地中海香草風味 ↔ 羅勒、大蒜、松子</p></div><div class=\"bridge-example\"><p><strong>🍊 柑橘料理：</strong></p><p class=\"dish-wine\">料理：Pollo al Limone（檸檬雞）</p><p class=\"dish-wine\">葡萄酒：Greco di Tufo、Fiano di Avellino</p><p class=\"bridge\"><strong>風味橋：</strong>Greco 的檸檬、柑橘皮風味 ↔ 檸檬汁、檸檬皮</p></div></div></div></div><div class=\"principle-card\"><div class=\"principle-header\"><span class=\"principle-number\">6</span><h3>烹飪方式考量（Cooking Method）</h3></div><div class=\"principle-content\"><p class=\"rule\"><strong>法則：</strong>烹飪方式影響料理風味強度，需調整配酒</p><div class=\"cooking-grid\"><div class=\"cooking-method\"><h4>🔥 炭烤（Grilled）</h4><p><strong>風味：</strong>焦糖化、煙燻、苦味</p><p><strong>配酒：</strong>橡木桶陳年紅酒（Barolo Riserva、Brunello）、煙燻風味匹配</p></div><div class=\"cooking-method\"><h4>🍳 油炸（Fried）</h4><p><strong>風味：</strong>油膩、香脆</p><p><strong>配酒：</strong>高酸度 + 氣泡酒（Lambrusco、Franciacorta）切油膩</p></div><div class=\"cooking-method\"><h4>🥘 燉煮（Braised）</h4><p><strong>風味：</strong>濃郁、複雜、多層次</p><p><strong>配酒：</strong>陳年紅酒（Amarone、Taurasi Riserva）、複雜度匹配</p></div><div class=\"cooking-method\"><h4>🌊 清蒸（Steamed）</h4><p><strong>風味：</strong>清淡、原味</p><p><strong>配酒：</strong>清爽白酒（Soave、Verdicchio）、不搶味</p></div></div></div></div></div>"
+      "title": "三大頂級投資酒款",
+      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Barolo DOCG — 義大利之王</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">品種：Nebbiolo 100%｜最短陳年：38 個月（Riserva 62 個月）</div><div class=\"orvieto-card\">頂級投資酒莊：Giacomo Conterno（Monfortino）、Gaja、Bruno Giacosa、Bartolo Mascarello</div><div class=\"orvieto-card\">投資亮點：陳年潛力 30-50 年、MGA 單一園稀缺、Parker 評分 98-100 分的傳奇年份高溢價</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Brunello di Montalcino DOCG — 托斯卡納傳奇</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">品種：Sangiovese Grosso（Brunello）100%｜最短陳年：5 年（Riserva 6 年）</div><div class=\"orvieto-card\">頂級投資酒莊：Biondi-Santi（鼻祖）、Soldera、Poggio di Sotto、Ciacci Piccolomini</div><div class=\"orvieto-card\">投資亮點：全球知名度高、拍賣成交頻繁、Biondi-Santi 舊年份屢創拍賣紀錄</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Amarone della Valpolicella DOCG — 濃郁之王</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">品種：Corvina 主體、Rondinella｜風乾葡萄法（Appassimento）釀造，歷時 90-120 天</div><div class=\"orvieto-card\">頂級投資酒莊：Dal Forno Romano（年產極少）、Quintarelli、Bertani 舊年份</div><div class=\"orvieto-card\">投資亮點：稀缺性極高、酒精度 16%+ 延長保存壽命、Dal Forno 二手市場溢價極高</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍝 義大利麵醬汁配酒指南",
-      "content": "<div class=\"pasta-section\"><div class=\"sauce-grid\"><div class=\"sauce-card red\"><h3>🍅 番茄醬汁（Pomodoro）</h3><div class=\"sauce-details\"><p><strong> karakteristik：</strong>高酸度、清爽、番茄主導</p><p><strong>代表：</strong>Marinara、Arrabbiata、Amatriciana</p><p><strong>配酒：</strong></p><ul><li><strong>最佳：</strong>Chianti、Sangiovese di Romagna、Barbera</li><li><strong>原理：</strong>高酸葡萄酒匹配番茄酸度</li><li><strong>避免：</strong>低酸紅酒（Primitivo）、橡木桶重的酒（會衝突）</li></ul></div></div><div class=\"sauce-card cream\"><h3>🧈 奶油醬汁（Cream）</h3><div class=\"sauce-details\"><p><strong>特性：</strong>濃郁、油膩、奶香</p><p><strong>代表：</strong>Carbonara、Alfredo、Quattro Formaggi</p><p><strong>配酒：</strong></p><ul><li><strong>最佳：</strong>Soave、Verdicchio、Gavi、Franciacorta</li><li><strong>原理：</strong>高酸白酒 + 氣泡切油膩、清爽口腔</li><li><strong>避免：</strong>橡木桶 Chardonnay（奶油疊奶油太膩）</li></ul></div></div><div class=\"sauce-card meat\"><h3>🍖 肉醬（Ragù）</h3><div class=\"sauce-details\"><p><strong>特性：</strong>濃郁、肉香、番茄、燉煮</p><p><strong>代表：</strong>Bolognese、Ragù Napoletano</p><p><strong>配酒：</strong></p><ul><li><strong>最佳：</strong>Chianti Classico、Valpolicella Ripasso、Montepulciano d'Abruzzo</li><li><strong>原理：</strong>中至飽滿酒體配肉香、單寧配油脂</li><li><strong>頂級版本：</strong>Barolo、Brunello（長時間燉煮的 Ragù）</li></ul></div></div><div class=\"sauce-card seafood\"><h3>🦐 海鮮醬汁（Seafood）</h3><div class=\"sauce-details\"><p><strong>特性：</strong>清淡、海鮮鮮味、大蒜、白酒</p><p><strong>代表：</strong>Alle Vongole、Frutti di Mare、Scampi</p><p><strong>配酒：</strong></p><ul><li><strong>最佳：</strong>Vermentino、Greco di Tufo、Etna Bianco</li><li><strong>原理：</strong>礦物感、海鹽風味匹配海鮮、高酸度配檸檬</li><li><strong>避免：</strong>任何紅酒（單寧 + 海鮮 = 金屬味）</li></ul></div></div><div class=\"sauce-card pesto\"><h3>🌿 青醬（Pesto）</h3><div class=\"sauce-details\"><p><strong>特性：</strong>草本、大蒜、堅果、橄欖油</p><p><strong>代表：</strong>Pesto alla Genovese、Pesto Trapanese</p><p><strong>配酒：</strong></p><ul><li><strong>最佳：</strong>Vermentino（Liguria 同產區）、Pigato</li><li><strong>原理：</strong>草本風味呼應羅勒、礦物感配橄欖油</li><li><strong>替代：</strong>Soave、Gavi（草本品種）</li></ul></div></div><div class=\"sauce-card truffles\"><h3>🍄 松露醬汁（Tartufo）</h3><div class=\"sauce-details\"><p><strong>特性：</strong>土壤、森林、奢華</p><p><strong>代表：</strong>Tajarin al Tartufo、Fonduta al Tartufo</p><p><strong>配酒：</strong></p><ul><li><strong>最佳：</strong>Barolo（15+ 年陳年）、Barbaresco Riserva</li><li><strong>原理：</strong>陳年 Nebbiolo 的松露、土壤風味呼應</li><li><strong>白松露：</strong>也可配 Roero Arneis（清淡不搶味）</li></ul></div></div></div></div>"
+      "title": "酒莊評估：傳統派 vs 現代派",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">選擇投資酒莊時，需理解義大利兩大釀酒哲學——傳統派與現代派在風格、陳年潛力上截然不同，市場偏好亦有週期性變化。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>傳統派（Tradizionalisti）</h3><ul><li><strong>代表：</strong>Giacomo Conterno、Bartolo Mascarello、Bruno Giacosa</li><li><strong>橡木桶：</strong>大型斯拉沃尼亞橡木桶（Botti），緩慢氧化演化</li><li><strong>浸皮：</strong>30-60 天長時間浸皮，萃取最大單寧</li><li><strong>陳年：</strong>25-50 年巔峰期，老酒收藏家首選</li><li><strong>市場：</strong>拍賣市場常勝將軍，稀缺老年份高溢價</li></ul></div><div class=\"method-card modern\"><h3>現代派（Barolo Boys）</h3><ul><li><strong>代表：</strong>Gaja、Elio Altare、Roberto Voerzio、Luciano Sandrone</li><li><strong>橡木桶：</strong>法式小橡木桶（Barriques 225L），賦予香草、咖啡風味</li><li><strong>浸皮：</strong>短時間浸皮（7-15 天），提早適飲</li><li><strong>陳年：</strong>10-20 年達適飲期，果香豐富</li><li><strong>市場：</strong>Gaja 國際知名度極高，新興收藏家入門選擇</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🧀 義大利起司配酒速查",
-      "content": "<div class=\"cheese-guide\"><div class=\"cheese-grid\"><div class=\"cheese-card fresh\"><h3>🥛 新鮮起司（Fresh）</h3><div class=\"cheese-content\"><p><strong>代表：</strong>Mozzarella、Burrata、Ricotta、Mascarpone</p><p><strong>特性：</strong>清淡、奶香、高水分、低鹽度</p><p><strong>配酒：</strong></p><ul><li>Soave、Vermentino、Pinot Grigio</li><li>Prosecco、Franciacorta（氣泡清爽）</li></ul></div></div><div class=\"cheese-card semisoft\"><h3>🧀 半軟質起司（Semi-Soft）</h3><div class=\"cheese-content\"><p><strong>代表：</strong>Taleggio、Fontina、Robiola</p><p><strong>特性：</strong>奶油質地、溫和、堅果香</p><p><strong>配酒：</strong></p><ul><li>Dolcetto、Barbera（Piemonte 同產區）</li><li>Nebbiolo d'Alba（年輕版本）</li></ul></div></div><div class=\"cheese-card hard\"><h3>🧀 硬質起司（Hard）</h3><div class=\"cheese-content\"><p><strong>代表：</strong>Parmigiano Reggiano、Grana Padano、Pecorino Romano</p><p><strong>特性：</strong>顆粒質地、鹹度高、鮮味（Umami）</p><p><strong>配酒：</strong></p><ul><li><strong>年輕 Parmigiano（12-24 個月）：</strong>Lambrusco、Barbera</li><li><strong>陳年 Parmigiano（36+ 個月）：</strong>Amarone、Brunello</li><li><strong>Pecorino Romano：</strong>Vermentino di Sardegna（Sardinia 同產區）</li></ul></div></div><div class=\"cheese-card blue\"><h3>💙 藍紋起司（Blue）</h3><div class=\"cheese-content\"><p><strong>代表：</strong>Gorgonzola Dolce、Gorgonzola Piccante、Castelmagno</p><p><strong>特性：</strong>鹹度高、霉菌風味、刺激</p><p><strong>配酒：</strong></p><ul><li><strong>Gorgonzola Dolce：</strong>Moscato d'Asti（甜配鹹）</li><li><strong>Gorgonzola Piccante：</strong>Amarone、Recioto（甜型）</li><li><strong>原理：</strong>甜度平衡鹹度、糖分中和霉菌刺激</li></ul></div></div></div></div>"
+      "title": "投資三大層次策略",
+      "content": "<div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">入門收藏</div><h3>年預算 5-15 萬</h3><ul><li>Chianti Classico Gran Selezione、Barolo 普通款、Brunello 一般年份</li><li>選 3-5 個年份橫向比較，購買恆溫酒櫃（12°C）</li><li>保值期 5-15 年，逐步建立鑑賞能力</li></ul></div><div class=\"style-card mid\"><div class=\"style-badge\">中階收藏</div><h3>年預算 15-50 萬</h3><ul><li>Barolo MGA 單一園、Brunello Riserva、Amarone Dal Forno</li><li>垂直收藏（同一酒莊多個年份）+ 評分家評分追蹤</li><li>直接向酒莊訂購或信譽拍賣行，保值期 15-30 年</li></ul></div><div class=\"style-card premium\"><div class=\"style-badge\">頂級投資</div><h3>年預算 50 萬+</h3><ul><li>Giacomo Conterno Monfortino、Biondi-Santi Riserva 老年份、Quintarelli Amarone</li><li>稀缺老年份（1960-1990）完整箱裝（OWC），出處文件齊全</li><li>透過 Christie's、Sotheby's 拍賣行操作，保值期 30-50 年</li></ul></div></div></div>"
     },
     {
       "type": "list",
-      "title": "🎓 重點回顧",
+      "title": "重點回顧",
       "points": [
-        "✓ 義大利配餐最高原則：同產區的葡萄酒配同產區的料理（\"What grows together, goes together\"）",
-        "✓ 六大配餐原則：重量匹配、酸度平衡、單寧 vs 油脂、甜度匹配、風味橋接、烹飪方式考量",
-        "✓ 番茄料理需要高酸葡萄酒（Sangiovese、Barbera），否則酒會顯得平淡無味",
-        "✓ 油膩肉類需要高單寧紅酒（Barolo、Brunello），單寧與蛋白質結合會變柔軟",
-        "✓ 甜點配甜酒法則：葡萄酒甜度 ≥ 料理甜度，否則酒會顯得酸澀",
-        "✓ 義大利麵醬汁：番茄醬配高酸紅酒、奶油醬配高酸白酒、海鮮避免紅酒（金屬味）"
+        "義大利頂級葡萄酒投資三大驅動力：稀缺性（MGA 單一園）、陳年潛力（30-50 年）、品牌效應",
+        "三大頂級投資酒款：Barolo DOCG（義大利之王）、Brunello di Montalcino DOCG、Amarone della Valpolicella DOCG",
+        "Barolo 頂級款 2010-2024 漲幅達 380%，Giacomo Conterno Monfortino 均價 €10,000+",
+        "傳統派（大型橡木桶 Botti、30-60 天浸皮）陳年 25-50 年，是老酒收藏家首選",
+        "現代派（Barriques、短浸皮）提早適飲（10-20 年），Gaja 國際知名度最高",
+        "Biondi-Santi 是 Brunello 創始酒莊，舊年份屢創拍賣紀錄；Dal Forno Amarone 年產極少溢價高",
+        "入門收藏（5-15 萬/年）：從 Chianti Classico Gran Selezione 建立鑑賞基礎",
+        "中階收藏（15-50 萬/年）：Barolo MGA 單一園 + 垂直收藏策略",
+        "頂級投資（50 萬+/年）：老年份稀缺酒款搭配完整 OWC 木箱，透過國際拍賣行操作"
       ]
     },
     {
       "type": "quiz",
-      "title": "🧠 餐酒搭配知識檢測",
+      "title": "投資收藏知識檢測",
       "_marker": "// inject-italy-l2-quiz",
       "questions": [
         {
           "type": "single",
-          "question": "義大利配餐最高原則是什麼？",
+          "question": "義大利哪款葡萄酒在國際拍賣市場最具投資價值？",
           "options": [
-            "重的配重的、輕的配輕的",
-            "同產區的葡萄酒配同產區的料理",
-            "紅酒配肉、白酒配魚",
-            "貴的酒配貴的料理"
+            "Prosecco DOC",
+            "Barolo Riserva 頂級名莊",
+            "Pinot Grigio",
+            "Chianti 普通款"
           ],
           "correct": 1,
-          "explanation": "義大利配餐最高原則：\"What grows together, goes together\"——同產區的葡萄酒配同產區的料理。當地氣候、土壤塑造了當地食材與葡萄品種，千年演化的配對經驗。"
+          "explanation": "頂尖酒莊（如 Giacomo Conterno、Bruno Giacosa）的 Barolo Riserva 在國際拍賣場表現最佳，陳年潛力 30-50 年，稀缺性極高，長期升值潛力強。"
         },
         {
           "type": "single",
-          "question": "為什麼番茄料理需要高酸葡萄酒？",
+          "question": "傳統派 Barolo 使用的橡木桶類型是？",
           "options": [
-            "番茄是紅色的",
-            "番茄酸度高（pH 4.3-4.9），低酸葡萄酒會被壓垮顯得平淡",
-            "番茄很貴",
-            "傳統習慣"
+            "法式小橡木桶（Barriques 225L）",
+            "美式橡木桶",
+            "大型斯拉沃尼亞橡木桶（Botti）",
+            "不使用橡木桶"
           ],
-          "correct": 1,
-          "explanation": "番茄酸度極高（pH 4.3-4.9），需要高酸葡萄酒（Sangiovese、Barbera）匹配，否則低酸葡萄酒會被番茄的酸度壓垮，顯得平淡、鬆散、缺乏結構。"
+          "correct": 2,
+          "explanation": "傳統派（Tradizionalisti）使用大型斯拉沃尼亞橡木桶（Botti，10,000-50,000L），讓酒緩慢演化，是老酒收藏家的首選。"
         },
         {
           "type": "single",
-          "question": "為什麼油膩肉類需要高單寧紅酒？",
+          "question": "Brunello di Montalcino 的創始酒莊是？",
           "options": [
-            "顏色搭配",
-            "單寧與蛋白質、脂肪結合會變柔軟，達到平衡",
-            "價格匹配",
-            "傳統習慣"
+            "Gaja",
+            "Biondi-Santi",
+            "Giacomo Conterno",
+            "Dal Forno Romano"
           ],
           "correct": 1,
-          "explanation": "單寧（多酚）與蛋白質結合形成沉澱，減少口腔收斂感，同時脂肪稀釋單寧，達到平衡。因此 Bistecca（牛排）配 Barolo、Brunello 等高單寧紅酒完美。"
+          "explanation": "Biondi-Santi 是 Brunello di Montalcino 的創始者，19 世紀末由 Ferruccio Biondi-Santi 確立以 Sangiovese Grosso 釀造陳年紅酒的傳統。"
         },
         {
           "type": "single",
-          "question": "甜點配酒的正確法則是？",
+          "question": "入門收藏者最適合從哪種酒開始投資？",
           "options": [
-            "料理甜度 > 葡萄酒甜度",
-            "葡萄酒甜度 ≥ 料理甜度",
-            "完全不相關",
-            "越甜越好"
+            "直接買最老年份 Barolo",
+            "Chianti Classico Gran Selezione 知名酒莊",
+            "只買超市特價酒",
+            "只買 Prosecco 氣泡酒"
           ],
           "correct": 1,
-          "explanation": "甜點配酒法則：葡萄酒甜度 ≥ 料理甜度。如果料理比酒甜，葡萄酒會顯得極度酸澀、苦味加倍。例如：Tiramisu 配 Vin Santo、Panna Cotta 配 Moscato d'Asti。"
+          "explanation": "入門收藏建議從 Chianti Classico Gran Selezione 知名酒莊開始：價格合理（€50-150）、品質穩定、陳年潛力 10-20 年，可逐步建立鑑賞能力。"
         },
         {
           "type": "single",
-          "question": "義大利配餐的「地域性原則」核心概念是？",
+          "question": "MGA 在 Barolo 中代表什麼？",
           "options": [
-            "A. 進口酒款更適合義大利料理",
-            "B. 同一產區的酒與當地食材最搭",
-            "C. 紅酒永遠勝過白酒",
-            "D. 酒體越重越好"
+            "Marketing Grade Assessment",
+            "Menzione Geografica Aggiuntiva（法定單一園名稱）",
+            "Master Grower Alliance",
+            "Minimum Grade Approval"
           ],
           "correct": 1,
-          "explanation": "義大利配餐遵循「地域性原則」：特定產區的葡萄酒與當地傳統料理因長期共同演化而最為契合。"
+          "explanation": "MGA（Menzione Geografica Aggiuntiva）是義大利法規允許在酒標上標示的官方單一園名稱，Barolo 有 170+ 個 MGA，如 Cannubi、Brunate 等，稀缺性極高，是頂級投資的核心指標。"
         }
       ]
     }

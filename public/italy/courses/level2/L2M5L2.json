@@ -1,164 +1,162 @@
 {
   "lessonId": "L2M5L2",
-  "title": "義大利起司配酒專題",
+  "title": "年份評鑑與收藏策略",
   "quiz": [
     {
-      "question": "為什麼 Burrata 適合配氣泡酒？",
+      "question": "對義大利頂級葡萄酒投資影響力最大的評分系統是？",
       "options": [
-        "顏色搭配",
-        "氣泡切 Burrata 的濃郁奶油感、酸度清爽口腔",
-        "價格匹配",
-        "傳統習慣"
+        "Wine Advocate（Robert Parker 100 分制）",
+        "Gambero Rosso 三杯制",
+        "Gault & Millau",
+        "英國葡萄酒協會評分"
       ],
-      "answer": 1,
-      "explanation": "Burrata 內層是流動奶油（Stracciatella + 鮮奶油），極度濃郁。氣泡酒（Franciacorta、Prosecco）的氣泡可以切開奶油感、酸度清爽口腔，同時奢華感匹配。"
+      "answer": 0,
+      "explanation": "Wine Advocate（由 Robert Parker 創辦）的 100 分制評分對義大利頂級葡萄酒的市場價格影響力最強，特別是 Barolo 與 Brunello，98-100 分的高評可使酒款價格暴漲 200-400%。"
     },
     {
-      "question": "60+ 個月陳年 Parmigiano Reggiano 的最佳配酒是？",
+      "question": "Piemonte 2016 年份被葡萄酒評論家定位為？",
       "options": [
-        "Prosecco",
-        "Soave",
-        "Amarone della Valpolicella Riserva",
-        "Pinot Grigio"
-      ],
-      "answer": 2,
-      "explanation": "60+ 個月 Parmigiano（Stravecchio）極度濃郁、鹹鮮、複雜，需要極度複雜的陳年酒款匹配。Amarone Riserva（15+ 年）的複雜度、濃郁度、殘糖可以完美平衡。"
-    },
-    {
-      "question": "Gorgonzola Dolce 為什麼配 Moscato d'Asti？",
-      "options": [
-        "顏色搭配",
-        "甜度平衡鹹度、低酒精度不搶味、花香呼應奶油感",
-        "產區相同",
-        "價格匹配"
+        "普通年份",
+        "傳奇年份（Wine Advocate 100 分）",
+        "挑戰年份",
+        "不佳年份"
       ],
       "answer": 1,
-      "explanation": "Gorgonzola Dolce 鹹度高、霉菌風味刺激，Moscato d'Asti 的甜度可以平衡鹹度、低酒精度（5.5%）不搶味、花香呼應奶油感，這是義大利經典配對。"
+      "explanation": "2016 是 Piemonte 近幾十年最偉大的年份之一，Wine Advocate 評為 100 分。生長季氣候完美，Nebbiolo 達到理想的成熟度與酸度平衡，陳年潛力 50 年以上。"
     },
     {
-      "question": "Pecorino Romano 最佳配酒同產區原則選擇？",
+      "question": "垂直收藏（Vertical Collection）的定義是？",
       "options": [
-        "Chianti Classico",
-        "Vermentino di Sardegna",
-        "Barolo",
-        "Prosecco"
+        "把酒瓶垂直擺放儲存",
+        "同一酒莊多個連續年份的系列收藏",
+        "多個不同酒莊的同一年份比較",
+        "按照酒精度高低排列的收藏"
       ],
       "answer": 1,
-      "explanation": "70% Pecorino Romano 產自 Sardinia（雖然名稱是 Romano），同產區原則選擇 Vermentino di Sardegna，高酸度 + 礦物感可以平衡 Pecorino Romano 的極度鹹味。"
+      "explanation": "垂直收藏是指收集同一酒莊多個連續年份（如 Giacomo Conterno Monfortino 1990-2016），可觀察同一風土在不同氣候條件下的表現差異，完整垂直系列在拍賣市場極受追捧。"
+    },
+    {
+      "question": "義大利精品葡萄酒的理想儲存溫度是？",
+      "options": [
+        "0-5°C（接近冷凍）",
+        "12-14°C（恆溫酒窖標準）",
+        "20-25°C（室溫）",
+        "隨環境溫度即可"
+      ],
+      "answer": 1,
+      "explanation": "精品葡萄酒理想儲存溫度為 12-14°C，絕不超過 18°C，不低於 7°C。溫度波動比偏高更危險——每次 ±5°C 的溫差都會加速老化，需要專業恆溫酒櫃或恆溫酒窖。"
     }
   ],
   "slides": [
     {
       "type": "title",
-      "title": "🧀 義大利起司配酒專題",
-      "subtitle": "掌握 400+ 種義大利起司的配酒秘訣"
+      "title": "年份評鑑與收藏策略",
+      "subtitle": "掌握 Piemonte、Tuscany 關鍵年份與垂直 / 水平收藏法"
     },
     {
       "type": "content",
-      "title": "🧀 義大利起司概覽",
-      "content": "<div class=\"cheese-overview\"><div class=\"overview-intro\"><h3>🇮🇹 全球起司種類最多的國家</h3><p>義大利擁有<strong>超過 400 種起司</strong>（法國約 365 種），其中<strong>55 種受 DOP/PDO 保護</strong>（原產地保護認證）。起司是義大利飲食文化的核心\n\n，每種起司都有最佳配酒。</p></div><div class=\"dop-stats\"><div class=\"stat-card\"><div class=\"stat-icon\">🧀</div><div class=\"stat-content\"><div class=\"stat-number\">55</div><div class=\"stat-label\">DOP/PDO 認證起司</div></div></div><div class=\"stat-card\"><div class=\"stat-icon\">🐄</div><div class=\"stat-content\"><div class=\"stat-number\">4</div><div class=\"stat-label\">主要奶源<br>（牛、羊、水牛、山羊）</div></div></div><div class=\"stat-card\"><div class=\"stat-icon\">🏆</div><div class=\"stat-content\"><div class=\"stat-number\">1.4M</div><div class=\"stat-label\">噸/年<br>Parmigiano Reggiano 產量</div></div></div></div><div class=\"pairing-philosophy\"><h3>🍷 起司配酒三大原則</h3><div class=\"philosophy-grid\"><div class=\"philosophy-item\"><h4>1️⃣ 強度匹配</h4><p>溫和起司配清淡酒款、強烈起司配濃郁酒款</p></div><div class=\"philosophy-item\"><h4>2️⃣ 質地考量</h4><p>奶油質地配氣泡酒（切油膩）、硬質起司配陳年酒（複雜度匹配）</p></div><div class=\"philosophy-item\"><h4>3️⃣ 地域主義</h4><p>同產區的起司配同產區的酒（Parmigiano + Lambrusco、Pecorino Sardo + Vermentino）</p></div></div></div></div>"
+      "title": "年份評分標準與主要評論系統",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">年份（Vintage）是義大利投資酒評估的核心要素。氣候條件直接影響品質、陳年潛力與市場價格，掌握主要評分系統是投資收藏的必備技能。</p><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">Wine Advocate</div><div class=\"stat-label\">Robert Parker 100 分制<br>Barolo 最具影響力</div></div><div class=\"stat-box\"><div class=\"stat-number\">Vinous</div><div class=\"stat-label\">Antonio Galloni<br>Barolo / Brunello 專家</div></div><div class=\"stat-box\"><div class=\"stat-number\">Gambero Rosso</div><div class=\"stat-label\">義大利本土<br>最具影響力評鑑</div></div><div class=\"stat-box\"><div class=\"stat-number\">Wine Spectator</div><div class=\"stat-label\">100 分制<br>美國市場首選</div></div></div><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>傳奇年份（98-100 分）：</strong>氣候完美，酸度與成熟度理想平衡，陳年 40-60 年潛力，投資價值最高</div><div class=\"kp-box\"><strong>優秀年份（93-97 分）：</strong>高品質，略有瑕疵，陳年 20-30 年，二手市場溢價 30-50%</div><div class=\"kp-box\"><strong>挑戰年份（85-92 分）：</strong>氣候異常（過熱 / 過濕），需謹慎選擇頂級酒莊，一般不建議投資</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🥛 新鮮起司（Fresh Cheese）",
-      "content": "<div class=\"fresh-cheese-section\"><div class=\"cheese-category-intro\"><h3>特性：高水分、溫和、奶香、低鹽度、不陳年</h3><p>新鮮起司未經陳年，保留牛奶或水牛奶的清新風味，質地柔軟、水分高、風味溫和，需要<strong>清淡、清爽的酒款</strong>避免搶味。</p></div><div class=\"cheese-deep-grid\"><div class=\"cheese-deep-card\"><h3>🧀 Mozzarella di Bufala Campana DOP</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Campania（Salerno、Caserta 省）</p><p><strong>奶源：</strong>水牛奶（Buffalo milk）</p><p><strong>質地：</strong>柔軟、彈性、高水分（60%）</p><p><strong>風味：</strong>溫和奶香、微酸、清新、奶油味</p><p><strong>特點：</strong>撕開有 \"絲狀結構\"（pasta filata），擠壓時流出乳清</p></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"wine-pairing-options\"><div class=\"pairing-option best\"><p class=\"pairing-label\">🏆 最佳配對</p><p class=\"wine-name\">Fiano di Avellino DOCG（Campania 同產區）</p><p class=\"pairing-reason\"><strong>原理：</strong>高酸度配 Mozzarella 的微酸、礦物感配水牛奶的清新、同產區完美匹配</p></div><div class=\"pairing-option\"><p class=\"pairing-label\">⭐ 優秀配對</p><p class=\"wine-name\">Greco di Tufo DOCG、Falanghina、Prosecco</p><p class=\"pairing-reason\"><strong>原理：</strong>氣泡酒切奶油感、清爽不搶味</p></div><div class=\"pairing-option avoid\"><p class=\"pairing-label\">❌ 避免</p><p class=\"wine-name\">橡木桶 Chardonnay、Barolo</p><p class=\"pairing-reason\"><strong>原因：</strong>過於濃郁、搶走 Mozzarella 細緻風味</p></div></div></div></div></div><div class=\"cheese-deep-card\"><h3>🧀 Ricotta</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>全義大利（各產區版本）</p><p><strong>奶源：</strong>牛奶、羊奶、山羊奶（乳清起司）</p><p><strong>製作：</strong>起司製作後的<strong>乳清再加熱</strong>（\"Ricotta\" = re-cooked）</p><p><strong>質地：</strong>顆粒狀、濕潤、綿密</p><p><strong>風味：</strong>極溫和、微甜、奶香</p></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"wine-pairing-options\"><div class=\"pairing-option best\"><p class=\"pairing-label\">🏆 最佳配對</p><p class=\"wine-name\">Soave、Verdicchio、Pinot Grigio</p><p class=\"pairing-reason\"><strong>原理：</strong>清淡酒體配 Ricotta 溫和風味、高酸度配微甜、不搶味</p></div><div class=\"pairing-option\"><p class=\"pairing-label\">🍰 甜食版本</p><p class=\"wine-name\">Cannoli（Ricotta 甜餡）→ Moscato d'Asti、Passito di Pantelleria</p></div></div></div></div></div><div class=\"cheese-deep-card\"><h3>🧀 Burrata</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Apulia（發源地 Andria）</p><p><strong>奶源：</strong>牛奶（或水牛奶）</p><p><strong>結構：</strong>Mozzarella 外殼 + Stracciatella（撕碎 Mozzarella + 鮮奶油）內餡</p><p><strong>質地：</strong>外層 Q 彈、內層流動奶油</p><p><strong>風味：</strong>濃郁奶油、溫和、奢華</p></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"wine-pairing-options\"><div class=\"pairing-option best\"><p class=\"pairing-label\">🏆 最佳配對</p><p class=\"wine-name\">Franciacorta（氣泡酒）、Prosecco Superiore</p><p class=\"pairing-reason\"><strong>原理：</strong>氣泡切 Burrata 的濃郁奶油感、酸度清爽口腔、奢華感匹配</p></div><div class=\"pairing-option\"><p class=\"pairing-label\">⭐ 區域配對</p><p class=\"wine-name\">Locorotondo DOC（Apulia 同產區）</p></div></div></div></div></div></div></div>"
+      "title": "Piemonte 關鍵年份分級",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>傳奇年份</h3><p class=\"mf-style\">2016、2010、1996、1985、1978、1971</p><p class=\"mf-prod\">Wine Advocate 98-100 分。生長季完美，Nebbiolo 達理想成熟度與酸度平衡，陳年 40-60 年潛力。頂級酒莊價格持續攀升，2016 Barolo 已成近年最強投資年份。</p></div><div class=\"mf-zone warm\"><h3>優秀年份</h3><p class=\"mf-style\">2019、2015、2013、2001、1989</p><p class=\"mf-prod\">Wine Advocate 93-97 分。高品質，部分酒莊可達傳奇等級，整體水準穩定。二手市場溢價 30-50%，適合中階收藏預算。</p></div><div class=\"mf-zone cool\"><h3>良好年份</h3><p class=\"mf-style\">2020、2017、2012、2004、1999</p><p class=\"mf-prod\">Wine Advocate 89-93 分。氣候略有挑戰，頂級酒莊仍可得到優質作品。適合入門收藏，以合理價格建立基礎庫存。</p></div><div class=\"mf-zone plain\"><h3>挑戰年份</h3><p class=\"mf-style\">2014、2011、2008、2002</p><p class=\"mf-prod\">Wine Advocate 85-89 分。氣候異常（過熱或雨季過長），一般不建議投資，除非特定頂莊表現超群，具稀缺研究價值。</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🧀 半軟質起司（Semi-Soft Cheese）",
-      "content": "<div class=\"semisoft-section\"><div class=\"cheese-category-intro\"><h3>特性：奶油質地、溫和至中等強度、陳年 1-6 個月</h3><p>半軟質起司質地滑順、可塗抹，風味從溫和到濃郁，適合<strong>中等酒體、果香豐富</strong>的酒款。</p></div><div class=\"cheese-deep-grid\"><div class=\"cheese-deep-card\"><h3>🧀 Taleggio DOP</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Lombardy（Val Taleggio 山谷）</p><p><strong>奶源：</strong>牛奶</p><p><strong>陳年：</strong>40 天（最少）</p><p><strong>外觀：</strong>粉紅橘色外皮（可食用）</p><p><strong>質地：</strong>奶油狀、可塗抹、內部柔軟</p><p><strong>風味：</strong>溫和、奶油、堅果、果香、微微酵母味</p></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"wine-pairing-options\"><div class=\"pairing-option best\"><p class=\"pairing-label\">🏆 最佳配對</p><p class=\"wine-name\">Franciacorta Satèn、Oltrepò Pavese Metodo Classico</p><p class=\"pairing-reason\"><strong>原理：</strong>Lombardy 同產區、氣泡切奶油質地、Satèn 柔滑匹配 Taleggio 柔順</p></div><div class=\"pairing-option\"><p class=\"pairing-label\">⭐ 紅酒配對</p><p class=\"wine-name\">Valtellina Superiore（Nebbiolo）、Barbera d'Alba</p><p class=\"pairing-reason\"><strong>原理：</strong>高酸度配奶油感、果香呼應 Taleggio 的果香</p></div></div></div></div></div><div class=\"cheese-deep-card\"><h3>🧀 Fontina Valle d'Aosta DOP</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Valle d'Aosta（阿爾卑斯山區）</p><p><strong>奶源：</strong>Valdostana 牛（高山放牧）</p><p><strong>陳年：</strong>3 個月+</p><p><strong>質地：</strong>半軟至半硬、可融化（Fonduta 起司火鍋）</p><p><strong>風味：</strong>堅果、奶油、草本、高山花香</p></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"wine-pairing-options\"><div class=\"pairing-option best\"><p class=\"pairing-label\">🏆 最佳配對</p><p class=\"wine-name\">Valle d'Aosta DOC（Petite Arvine、Pinot Gris）</p><p class=\"pairing-reason\"><strong>原理：</strong>同產區完美匹配、高山葡萄酒配高山起司、草本風味呼應</p></div><div class=\"pairing-option\"><p class=\"pairing-label\">🍄 搭配松露 Fonduta</p><p class=\"wine-name\">Barolo（陳年）、Barbaresco</p><p class=\"pairing-reason\"><strong>原理：</strong>松露風味橋接、奢華感匹配</p></div></div></div></div></div><div class=\"cheese-deep-card\"><h3>🧀 Robiola</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Piemonte、Lombardy</p><p><strong>奶源：</strong>牛奶、羊奶、山羊奶（單一或混合）</p><p><strong>陳年：</strong>幾天至幾週（極短）</p><p><strong>質地：</strong>奶油狀、可塗抹、綿密</p><p><strong>風味：</strong>溫和、奶香、微酸（山羊奶版本）</p></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"wine-pairing-options\"><div class=\"pairing-option best\"><p class=\"pairing-label\">🏆 最佳配對</p><p class=\"wine-name\">Roero Arneis、Gavi di Gavi（Piemonte 同產區）</p><p class=\"pairing-reason\"><strong>原理：</strong>清新白酒配 Robiola 溫和風味、高酸度配微酸</p></div><div class=\"pairing-option\"><p class=\"pairing-label\">⭐ 氣泡配對</p><p class=\"wine-name\">Alta Langa DOCG（Piemonte 氣泡酒）</p></div></div></div></div></div></div></div>"
+      "title": "Tuscany 關鍵年份分級",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>傳奇年份</h3><p class=\"mf-style\">2015、2010、2001、1997、1990、1985</p><p class=\"mf-prod\">Wine Advocate 98-100 分。2015 被評為近 30 年最偉大年份，Brunello / Chianti Classico 兼具力量與優雅，陳年 40-50 年潛力。</p></div><div class=\"mf-zone warm\"><h3>優秀年份</h3><p class=\"mf-style\">2019、2016、2013、2007、2004</p><p class=\"mf-prod\">Wine Advocate 93-97 分。整體水準出色，Sangiovese 熟成度高，結構均衡。二手市場需求穩定，保值性佳。</p></div><div class=\"mf-zone cool\"><h3>良好年份</h3><p class=\"mf-style\">2021、2018、2012、2006、1998</p><p class=\"mf-prod\">Wine Advocate 89-93 分。可飲性佳，部分酒莊達優秀水準。適合早飲，投資性低於傳奇與優秀年份，但性價比高。</p></div><div class=\"mf-zone plain\"><h3>挑戰年份</h3><p class=\"mf-style\">2014、2011、2002、1992</p><p class=\"mf-prod\">Wine Advocate 85-89 分。2014 受降雨影響，Sangiovese 成熟度不足。選擇嚴格品管的知名酒莊，投資需謹慎評估。</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🧀 硬質起司（Hard Cheese）",
-      "content": "<div class=\"hard-cheese-section\"><div class=\"cheese-category-intro\"><h3>特性：顆粒質地、鹹度高、鮮味（Umami）、陳年 12-60+ 個月</h3><p>義大利硬質起司是全球最著名的起司類型，Parmigiano Reggiano、Grana Padano、Pecorino 等都屬於此類，需要<strong>複雜度高、陳年潛力強</strong>的酒款匹配。</p></div><div class=\"cheese-deep-grid\"><div class=\"cheese-deep-card parmigiano\"><h3>🧀 Parmigiano Reggiano DOP</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Emilia-Romagna（Parma、Reggio Emilia、Modena、Bologna、Mantova）</p><p><strong>奶源：</strong>牛奶（禁止飼料添加物）</p><p><strong>製作：</strong>部分脫脂、自然發酵、大型輪狀（38-40 kg）</p><p><strong>陳年：</strong>最少 12 個月，分級 12/24/36/60+ 月</p><p><strong>質地：</strong>顆粒狀、硬質、可刨片或碎塊</p><p><strong>風味演變：</strong></p><ul><li><strong>12-18 個月：</strong>奶香、堅果、微鹹</li><li><strong>24-30 個月：</strong>焦糖、鮮味（Umami）增強</li><li><strong>36+ 個月：</strong>結晶（Tyrosine）、濃郁鹹度、複雜香料</li><li><strong>60+ 個月：</strong>極度濃郁、顆粒感強、氨基酸結晶</li></ul></div><div class=\"pairing-box\"><h4>🍷 配酒建議（依陳年時間）</h4><div class=\"age-pairing-grid\"><div class=\"age-tier\"><p class=\"age-label\">🧀 12-24 個月（年輕）</p><p class=\"wine-name\">Lambrusco（干型）、Barbera</p><p class=\"pairing-reason\"><strong>原理：</strong>Emilia-Romagna 同產區、高酸度 + 氣泡切鹹度、輕盈果香配溫和起司</p></div><div class=\"age-tier\"><p class=\"age-label\">🧀 30-36 個月（中等陳年）</p><p class=\"wine-name\">Chianti Classico Riserva、Valpolicella Ripasso</p><p class=\"pairing-reason\"><strong>原理：</strong>中等複雜度匹配、單寧配鮮味（Umami）、果香平衡鹹度</p></div><div class=\"age-tier pinnacle\"><p class=\"age-label\">🧀 60+ 個月（Stravecchio）</p><p class=\"wine-name\">Amarone della Valpolicella、Brunello di Montalcino Riserva</p><p class=\"pairing-reason\"><strong>原理：</strong>極度複雜起司需要極度複雜酒款、濃郁度匹配、陳年 vs 陳年</p></div></div></div><div class=\"special-pairing\"><h4>🍯 經典組合：Parmigiano + Balsamic Vinegar + Lambrusco</h4><p>Emilia-Romagna 傳統三重奏：36+ 個月 Parmigiano 碎塊淋 25 年 Aceto Balsamico Tradizionale，配干型 Lambrusco Grasparossa。酸甜鹹完美平衡。</p></div></div></div><div class=\"cheese-deep-card\"><h3>🧀 Grana Padano DOP</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Po River 流域（Lombardy、Veneto、Piemonte、Emilia-Romagna、Trentino）</p><p><strong>奶源：</strong>牛奶（允許添加 Lysozyme 防腐）</p><p><strong>陳年：</strong>最少 9 個月（Riserva 20+ 月）</p><p><strong>vs Parmigiano：</strong>更溫和、鹹度稍低、價格更親民</p></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"wine-pairing-options\"><div class=\"pairing-option best\"><p class=\"pairing-label\">🏆 最佳配對</p><p class=\"wine-name\">Soave Classico、Lugana</p><p class=\"pairing-reason\"><strong>原理：</strong>Veneto/Lombardy 同產區、高酸度配鹹度、溫和酒款配溫和起司</p></div><div class=\"pairing-option\"><p class=\"pairing-label\">⭐ Riserva（20+ 月）</p><p class=\"wine-name\">Valpolicella Classico、Bardolino Superiore</p></div></div></div></div></div><div class=\"cheese-deep-card\"><h3>🧀 Pecorino Romano DOP</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Lazio、Sardinia、Grosseto（Tuscany）</p><p><strong>奶源：</strong>羊奶</p><p><strong>陳年：</strong>最少 5 個月（通常 8-12 月）</p><p><strong>質地：</strong>極硬、顆粒狀</p><p><strong>風味：</strong>極度鹹、羊奶風味濃郁、辛辣、刺激</p><p><strong>用途：</strong>主要用於磨碎配義大利麵（Carbonara、Cacio e Pepe、Amatriciana）</p></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"wine-pairing-options\"><div class=\"pairing-option best\"><p class=\"pairing-label\">🏆 最佳配對</p><p class=\"wine-name\">Vermentino di Sardegna、Vermentino di Gallura DOCG</p><p class=\"pairing-reason\"><strong>原理：</strong>Sardinia 同產區（70% Pecorino Romano 產自 Sardinia）、高酸度 + 礦物感平衡極度鹹味</p></div><div class=\"pairing-option\"><p class=\"pairing-label\">⭐ 紅酒配對</p><p class=\"wine-name\">Cannonau di Sardegna、Cesanese del Piglio（Lazio）</p><p class=\"pairing-reason\"><strong>原理：</strong>同產區、高酸度配鹹度</p></div></div></div></div></div></div></div>"
+      "title": "垂直 vs 水平收藏策略",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">收藏策略的核心選擇：垂直收藏追蹤同一酒莊的年份演化，水平收藏比較同一年份不同酒莊的風土差異——兩種策略各有優勢，可依預算組合運用。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>垂直收藏（Vertical）</h3><ul><li>同一酒莊、多個連續年份（如 Giacomo Conterno Monfortino 1990-2016）</li><li>優點：觀察同一風土在不同氣候下的演化，建立深度認識</li><li>適合：想深入了解單一頂級酒莊的進階收藏家</li><li>市場：完整垂直系列在拍賣市場極受追捧，溢價顯著</li><li>策略：以 5-10 個年份為一組，重點鎖定傳奇 + 優秀年份</li></ul></div><div class=\"method-card modern\"><h3>水平收藏（Horizontal）</h3><ul><li>同一年份、多個頂級酒莊（如 2016 Barolo 各名莊橫向比較）</li><li>優點：比較同一年份不同風土、釀酒哲學，適合學習研究</li><li>適合：希望廣泛了解義大利葡萄酒全貌的收藏家</li><li>市場：傳奇年份水平系列流動性高，易於轉手</li><li>策略：選定 1 個傳奇年份，精選 5-8 個頂級酒莊作品</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "💙 藍紋起司（Blue Cheese）",
-      "content": "<div class=\"blue-cheese-section\"><div class=\"cheese-category-intro\"><h3>特性：霉菌風味、鹹度高、刺激、奶油或顆粒質地</h3><p>藍紋起司以 <em>Penicillium roqueforti</em> 或 <em>P. glaucum</em> 霉菌接種，產生藍綠色紋路、辛辣風味、高鹹度，需要<strong>甜度平衡或高酸度</strong>的酒款。</p></div><div class=\"cheese-deep-grid\"><div class=\"cheese-deep-card\"><h3>🧀 Gorgonzola DOP</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Lombardy、Piemonte</p><p><strong>奶源：</strong>牛奶</p><p><strong>兩種類型：</strong></p><ul><li><strong>Gorgonzola Dolce（甜型）：</strong>陳年 50 天、奶油質地、溫和、藍紋少</li><li><strong>Gorgonzola Piccante（辛辣型）：</strong>陳年 80+ 天、顆粒質地、辛辣、藍紋多</li></ul></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"gorgonzola-pairing\"><div class=\"dolce-pairing\"><h5>🧀 Gorgonzola Dolce</h5><p class=\"wine-name\"><strong>最佳：</strong>Moscato d'Asti DOCG</p><p class=\"pairing-reason\"><strong>原理：</strong>甜度平衡鹹度、低酒精度（5.5%）不搶味、花香呼應奶油感</p><p class=\"wine-name\"><strong>替代：</strong>Brachetto d'Acqui、Late Harvest Erbaluce</p></div><div class=\"piccante-pairing\"><h5>🧀 Gorgonzola Piccante</h5><p class=\"wine-name\"><strong>最佳：</strong>Amarone della Valpolicella、Recioto della Valpolicella（甜型）</p><p class=\"pairing-reason\"><strong>原理：</strong>極度濃郁酒款配極度濃郁起司、甜度中和辛辣刺激、複雜度匹配</p><p class=\"wine-name\"><strong>替代：</strong>Passito di Pantelleria、Sforzato di Valtellina</p></div></div></div><div class=\"special-pairing\"><h4>🍯 經典組合：Gorgonzola + 蜂蜜 + 核桃 + Passito</h4><p>義大利傳統甜點盤：Gorgonzola Dolce 淋栗子蜂蜜、撒核桃，配 Passito di Pantelleria 或 Recioto。甜度 + 甜度 + 鹹度和諧平衡。</p></div></div></div><div class=\"cheese-deep-card\"><h3>🧀 Castelmagno DOP</h3><div class=\"cheese-info-section\"><div class=\"cheese-basics\"><p><strong>產地：</strong>Piemonte（Cuneo 省 Castelmagno 村）</p><p><strong>奶源：</strong>牛奶（可混少量羊奶、山羊奶）</p><p><strong>陳年：</strong>最少 2 個月（頂級 5-12 月）</p><p><strong>質地：</strong>半硬至硬、易碎</p><p><strong>藍紋：</strong>自然形成（非接種），不規則藍綠紋</p><p><strong>風味：</strong>複雜、辛辣、草本、高山花香、鹹度高</p></div><div class=\"pairing-box\"><h4>🍷 配酒建議</h4><div class=\"wine-pairing-options\"><div class=\"pairing-option best\"><p class=\"pairing-label\">🏆 最佳配對</p><p class=\"wine-name\">Barolo Chinato（加香料、奎寧的 Barolo）</p><p class=\"pairing-reason\"><strong>原理：</strong>Piemonte 傳統配對、香料風味呼應、苦味 + 鹹味平衡</p></div><div class=\"pairing-option\"><p class=\"pairing-label\">⭐ 現代配對</p><p class=\"wine-name\">Barolo Riserva（15+ 年）、Barbaresco Riserva</p><p class=\"pairing-reason\"><strong>原理：</strong>陳年 Nebbiolo 的複雜度配 Castelmagno 複雜風味</p></div></div></div></div></div></div></div>"
-    },
-    {
-      "type": "content",
-      "title": "🧀 陳年起司（Aged Cheese）",
-      "content": "<div class=\"aged-cheese-section\"><div class=\"cheese-category-intro\"><h3>特性：極度濃郁、結晶、鮮味爆炸、陳年 24+ 個月</h3><p>超長陳年起司（24-60+ 個月）發展出氨基酸結晶、極度濃郁的鮮味（Umami）、複雜香料風味，需要<strong>最高等級、陳年潛力最強</strong>的酒款匹配。</p></div><div class=\"aged-pairing-grid\"><div class=\"aged-pairing-card\"><h3>🧀 Parmigiano Reggiano 60+ 月（Stravecchio）</h3><div class=\"pairing-content\"><p><strong>風味：</strong>顆粒強烈、Tyrosine 結晶、極度鹹鮮、堅果、焦糖、香料</p><h4>🍷 完美配對</h4><div class=\"perfect-match\"><p class=\"wine-name\">Amarone della Valpolicella Riserva（15+ 年）</p><p class=\"pairing-reason\"><strong>原理：</strong></p><ul><li>極度陳年 vs 極度陳年（複雜度匹配）</li><li>Amarone 的乾果、香料呼應 Parmigiano 的焦糖、香料</li><li>高酒精度（16%）平衡極度鹹度</li><li>殘糖（8-12 g/L）柔化鹹味</li></ul></div><div class=\"alternative-match\"><p><strong>替代：</strong>Brunello di Montalcino Riserva、Barolo Riserva（15+ 年）、Sforzato di Valtellina Riserva</p></div></div></div><div class=\"aged-pairing-card\"><h3>🧀 Pecorino Toscano DOP Stagionato（陳年）</h3><div class=\"pairing-content\"><p><strong>陳年：</strong>6+ 個月</p><p><strong>風味：</strong>羊奶濃郁、辛辣、草本</p><h4>🍷 完美配對</h4><div class=\"perfect-match\"><p class=\"wine-name\">Brunello di Montalcino（Tuscany 同產區）</p><p class=\"pairing-reason\"><strong>原理：</strong></p><ul><li>Tuscany 同產區完美匹配</li><li>Sangiovese 的草本、茶葉風味呼應 Pecorino 草本</li><li>高酸度 + 高單寧平衡羊奶油脂</li></ul></div></div></div><div class=\"aged-pairing-card\"><h3>🧀 Castelmagno d'Alpeggio（高山放牧版）</h3><div class=\"pairing-content\"><p><strong>陳年：</strong>5-12 個月</p><p><strong>風味：</strong>高山花香、草本、複雜、自然藍紋</p><h4>🍷 完美配對</h4><div class=\"perfect-match\"><p class=\"wine-name\">Barolo（單一園 MGA，15+ 年）</p><p class=\"pairing-reason\"><strong>原理：</strong></p><ul><li>Piemonte 最高等級起司配最高等級葡萄酒</li><li>複雜度完美匹配</li><li>陳年 Barolo 的松露、森林地面呼應高山草本</li></ul></div></div></div></div></div>"
+      "title": "陳年條件與地窖管理",
+      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">溫度、濕度與光線控制</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">理想溫度：12-14°C，絕不超過 18°C，不低於 7°C；溫度波動比偏高更危險，每次 ±5°C 溫差加速老化</div><div class=\"orvieto-card\">理想濕度：65-75%（低於 50% 軟木塞乾縮氧化；高於 85% 易發霉，酒標受損影響拍賣估價）</div><div class=\"orvieto-card\">避免光線與振動：UV 光加速氧化，振動干擾沉澱物；Barolo 等高單寧酒飲前 48 小時豎立靜置</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">擺放方式與保存期限</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">水平擺放：保持軟木塞濕潤防止乾縮氧化（螺旋蓋可直立放置）</div><div class=\"orvieto-card\">頂級 Barolo / Brunello 可保存 40-60 年；一般 Chianti 建議 10-20 年內飲用</div><div class=\"orvieto-card\">定期檢查：每 2-3 年確認軟木塞狀態，液面高度，出現滲漏即早處理</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">投資酒的保存文件</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">保留原木箱（OWC, Original Wooden Case）：完整 OWC 可提升拍賣估價 15-25%</div><div class=\"orvieto-card\">購買憑證與出處（Provenance）：正規來源是拍賣行接受入場的關鍵條件</div><div class=\"orvieto-card\">評分貼紙與酒標完整：Wine Advocate 高分貼紙保留完整可提升市場信心與成交價格</div></div></div></div>"
     },
     {
       "type": "list",
-      "title": "🎓 重點回顧",
+      "title": "重點回顧",
       "points": [
-        "✓ 義大利擁有 400+ 種起司、55 種 DOP/PDO 認證，是全球起司種類最多的國家之一",
-        "✓ 起司配酒三大原則：強度匹配、質地考量（奶油質地配氣泡酒）、地域主義（同產區配對）",
-        "✓ 新鮮起司（Mozzarella、Burrata）配清淡白酒或氣泡酒，避免過於濃郁的酒款搶味",
-        "✓ Parmigiano Reggiano 依陳年時間配酒：12-24 月配 Lambrusco、30-36 月配 Chianti Riserva、60+ 月配 Amarone",
-        "✓ Gorgonzola Dolce 配 Moscato d'Asti（甜度平衡鹹度）、Piccante 配 Amarone（極度濃郁匹配）",
-        "✓ 超長陳年起司（60+ 月）需要最高等級陳年酒款匹配（Amarone Riserva、Brunello Riserva、Barolo Riserva）"
+        "Wine Advocate（Robert Parker 100 分制）對 Barolo / Brunello 市場影響力最強，98-100 分可使酒款暴漲 200-400%",
+        "年份品質三級：傳奇年份（98-100分）、優秀年份（93-97分）、挑戰年份（85-92分），影響陳年潛力與投資價值",
+        "Piemonte 傳奇年份：2016、2010、1996、1985——2016 被評為近年最強，陳年潛力 50 年以上",
+        "Tuscany 傳奇年份：2015、2010、2001、1997、1990——2015 是近 30 年最偉大 Brunello 年份",
+        "垂直收藏（同一酒莊多個年份）在拍賣市場極受追捧；水平收藏（同年份多酒莊）學習與流動性並重",
+        "理想儲存：12-14°C 恆溫、65-75% 濕度、避光、避震，水平擺放保持軟木塞濕潤",
+        "保留 OWC 原木箱可提升拍賣估價 15-25%；出處文件（Provenance）是拍賣行入場必要條件",
+        "頂級 Barolo / Brunello 保存期限 40-60 年，需定期檢查軟木塞狀態與液面高度",
+        "收藏策略：以傳奇年份為核心，垂直收藏 5-10 個年份，或水平收藏 1 個頂級年份的多酒莊作品"
       ]
     },
     {
       "type": "quiz",
-      "title": "🧠 收藏投資知識檢測",
+      "title": "年份評鑑知識檢測",
       "_marker": "// inject-italy-l2-quiz",
       "questions": [
         {
           "type": "single",
-          "question": "為什麼 Burrata 適合配氣泡酒？",
+          "question": "對義大利頂級葡萄酒投資影響力最大的評分系統是？",
           "options": [
-            "顏色搭配",
-            "氣泡切 Burrata 的濃郁奶油感、酸度清爽口腔",
-            "價格匹配",
-            "傳統習慣"
+            "Wine Advocate（Robert Parker 100 分制）",
+            "Gambero Rosso 三杯制",
+            "Gault & Millau",
+            "英國葡萄酒協會評分"
           ],
-          "correct": 1,
-          "explanation": "Burrata 內層是流動奶油（Stracciatella + 鮮奶油），極度濃郁。氣泡酒（Franciacorta、Prosecco）的氣泡可以切開奶油感、酸度清爽口腔，同時奢華感匹配。"
+          "correct": 0,
+          "explanation": "Wine Advocate（由 Robert Parker 創辦）的 100 分制評分對義大利頂級葡萄酒的市場價格影響力最強，特別是 Barolo 與 Brunello，98-100 分的高評可使酒款價格暴漲。"
         },
         {
           "type": "single",
-          "question": "60+ 個月陳年 Parmigiano Reggiano 的最佳配酒是？",
+          "question": "Piemonte 2016 年份被葡萄酒評論家定位為？",
           "options": [
-            "Prosecco",
-            "Soave",
-            "Amarone della Valpolicella Riserva",
-            "Pinot Grigio"
+            "普通年份",
+            "傳奇年份（Wine Advocate 100 分）",
+            "挑戰年份",
+            "不佳年份"
+          ],
+          "correct": 1,
+          "explanation": "2016 是 Piemonte 近幾十年最偉大的年份之一，Wine Advocate 評為 100 分。生長季氣候完美，Nebbiolo 達到理想的成熟度與酸度平衡，陳年潛力 50 年以上。"
+        },
+        {
+          "type": "single",
+          "question": "垂直收藏（Vertical Collection）的定義是？",
+          "options": [
+            "把酒瓶垂直擺放儲存",
+            "同一酒莊多個連續年份的系列收藏",
+            "多個不同酒莊的同一年份比較",
+            "按照酒精度高低排列的收藏"
+          ],
+          "correct": 1,
+          "explanation": "垂直收藏是指收集同一酒莊多個連續年份（如 Giacomo Conterno Monfortino 1990-2016），可觀察同一風土在不同氣候下的表現差異，完整垂直系列在拍賣市場極受追捧。"
+        },
+        {
+          "type": "single",
+          "question": "義大利精品葡萄酒的理想儲存溫度是？",
+          "options": [
+            "0-5°C（接近冷凍）",
+            "12-14°C（恆溫酒窖標準）",
+            "20-25°C（室溫）",
+            "隨環境溫度即可"
+          ],
+          "correct": 1,
+          "explanation": "精品葡萄酒理想儲存溫度為 12-14°C，絕不超過 18°C，不低於 7°C。溫度波動比偏高更危險——每次 ±5°C 的溫差都會加速老化，需要專業恆溫酒櫃或恆溫酒窖。"
+        },
+        {
+          "type": "single",
+          "question": "Tuscany 哪個年份被評為近 30 年最偉大的 Brunello 年份？",
+          "options": [
+            "2011",
+            "2007",
+            "2015",
+            "2014"
           ],
           "correct": 2,
-          "explanation": "60+ 個月 Parmigiano（Stravecchio）極度濃郁、鹹鮮、複雜，需要極度複雜的陳年酒款匹配。Amarone Riserva（15+ 年）的複雜度、濃郁度、殘糖可以完美平衡。"
-        },
-        {
-          "type": "single",
-          "question": "Gorgonzola Dolce 為什麼配 Moscato d'Asti？",
-          "options": [
-            "顏色搭配",
-            "甜度平衡鹹度、低酒精度不搶味、花香呼應奶油感",
-            "產區相同",
-            "價格匹配"
-          ],
-          "correct": 1,
-          "explanation": "Gorgonzola Dolce 鹹度高、霉菌風味刺激，Moscato d'Asti 的甜度可以平衡鹹度、低酒精度（5.5%）不搶味、花香呼應奶油感，這是義大利經典配對。"
-        },
-        {
-          "type": "single",
-          "question": "Pecorino Romano 最佳配酒同產區原則選擇？",
-          "options": [
-            "Chianti Classico",
-            "Vermentino di Sardegna",
-            "Barolo",
-            "Prosecco"
-          ],
-          "correct": 1,
-          "explanation": "70% Pecorino Romano 產自 Sardinia（雖然名稱是 Romano），同產區原則選擇 Vermentino di Sardegna，高酸度 + 礦物感可以平衡 Pecorino Romano 的極度鹹味。"
-        },
-        {
-          "type": "single",
-          "question": "義大利葡萄酒拍賣市場中，哪款酒通常最保值？",
-          "options": [
-            "A. Prosecco DOC",
-            "B. Barolo Riserva 特定酒莊",
-            "C. Pinot Grigio",
-            "D. Chianti Classico 普通款"
-          ],
-          "correct": 1,
-          "explanation": "頂尖酒莊（如 Giacomo Conterno、Bruno Giacosa）的 Barolo Riserva 在國際拍賣場表現最佳，長期升值。"
+          "explanation": "2015 是 Tuscany 近 30 年最偉大的年份之一，Brunello di Montalcino 與 Chianti Classico 兼具力量與優雅，Wine Advocate 評為 100 分，陳年潛力達 40-50 年。"
         }
       ]
     }
