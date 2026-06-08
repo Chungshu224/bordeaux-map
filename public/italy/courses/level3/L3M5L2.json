@@ -1,140 +1,113 @@
 {
-  "id": "L3M5L2",
-  "title": "投資級葡萄酒分析",
-  "description": "探討義大利頂級葡萄酒（如 Super Tuscans, Barolo, Brunello）在二級市場與拍賣會上的表現，分析影響其投資價值的關鍵因素（年份、酒評家分數、稀缺性）。",
+  "lessonId": "L3M5L2",
+  "title": "出口市場分析",
+  "quiz": [
+    {
+      "question": "按出口「金額」計算，義大利葡萄酒最大的單一市場是？",
+      "options": ["德國", "美國", "英國", "日本"],
+      "answer": 1,
+      "explanation": "美國是義大利葡萄酒最大的價值市場，對 Super Tuscans、Barolo 以及 Prosecco 和 Pinot Grigio 有龐大需求，年均進口額遠超其他國家。"
+    },
+    {
+      "question": "義大利出口量最大的氣泡酒品類是？",
+      "options": ["Asti Spumante", "Franciacorta", "Prosecco", "Lambrusco"],
+      "answer": 2,
+      "explanation": "Prosecco 是義大利出口量最大的氣泡酒，也是全球最暢銷的氣泡酒之一，主要產自 Veneto 大區的 Conegliano Valdobbiadene 產區。"
+    },
+    {
+      "question": "按出口「體積」計算，哪個國家通常是義大利葡萄酒最大的進口國？",
+      "options": ["美國", "德國", "英國", "法國"],
+      "answer": 1,
+      "explanation": "德國是義大利葡萄酒最大的體積市場，主要進口平價散裝酒和日常餐酒，體積佔比龐大，但平均單價較低。"
+    },
+    {
+      "question": "義大利哪個大區是全球最暢銷氣泡酒 Prosecco 的主要產地？",
+      "options": ["Piemonte", "Toscana", "Veneto", "Sicilia"],
+      "answer": 2,
+      "explanation": "Veneto 大區是 Prosecco 的主要產地，特別是 Conegliano Valdobbiadene Prosecco Superiore DOCG 是最頂級的產區，也是義大利氣泡酒出口的核心引擎。"
+    }
+  ],
   "slides": [
     {
-      "type": "content",
-      "title": "義大利精品酒的崛起 (Fine Wine Market)",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">過去，全球精品葡萄酒投資市場幾乎由法國波爾多 (Bordeaux) 和勃根地 (Burgundy) 壟斷。然而，在過去二十年裡，義大利頂級酒款在二級市場 (Secondary Market) 和拍賣會上的地位迅速攀升，成為投資者與收藏家的新寵。</p><div class=\"grid grid-cols-1 md:grid-cols-2 gap-8 mb-8\"><div class=\"bg-indigo-50 p-6 rounded-xl border border-indigo-100\"><h4 class=\"text-indigo-800 font-bold mb-4 flex items-center text-xl\"><span class=\"material-icons mr-2\">trending_up</span> 為什麼投資義大利酒？</h4><ul class=\"space-y-3 text-gray-700\"><li><strong>相對價值 (Relative Value)：</strong> 即使是頂級的 Barolo 或 Super Tuscan，其價格通常仍遠低於同等級的勃根地特級園 (Grand Cru) 或波爾多一級莊 (First Growth)。</li><li><strong>陳年潛力 (Aging Potential)：</strong> Nebbiolo, Sangiovese, Aglianico 等品種具有極強的結構，能在瓶中陳年數十年，這是投資級葡萄酒的必備條件。</li><li><strong>品質穩定提升：</strong> 現代釀酒技術的進步與對風土的深入理解，使得義大利頂級酒的品質在過去三十年達到前所未有的高度。</li></ul></div><div class=\"bg-amber-50 p-6 rounded-xl border border-amber-100\"><h4 class=\"text-amber-800 font-bold mb-4 flex items-center text-xl\"><span class=\"material-icons mr-2\">star</span> 投資級別的「三巨頭」</h4><ul class=\"space-y-3 text-gray-700\"><li><strong>Super Tuscans (超級托斯卡納)：</strong> 義大利最早進入國際拍賣市場的酒款，如 Sassicaia, Masseto, Ornellaia, Solaia。</li><li><strong>Barolo & Barbaresco：</strong> 來自皮埃蒙特，特別是單一園 (MGA) 的頂級生產者，如 Giacomo Conterno, Bruno Giacosa, Gaja。</li><li><strong>Brunello di Montalcino：</strong> 托斯卡納的傳統王者，如 Biondi-Santi, Soldera (100% Sangiovese 但常被視為 Super Tuscan 級別)。</li></ul></div></div><div class=\"bg-gray-50 p-6 rounded-xl border-l-4 border-gray-500\"><h4 class=\"text-gray-800 font-bold mb-2\">Liv-ex Italy 100 指數</h4><p class=\"text-gray-700\">倫敦國際葡萄酒交易所 (Liv-ex) 設立了專門追蹤義大利頂級酒價格的「Italy 100」指數。該指數近年來的表現經常跑贏波爾多 500 指數，顯示出市場對義大利精品酒的強勁需求。</p></div></div>"
+      "type": "title",
+      "title": "出口市場分析",
+      "subtitle": "義大利葡萄酒的全球版圖：主力市場、熱銷產品與未來機遇"
     },
     {
       "type": "content",
-      "title": "影響投資價值的四大要素",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">在評估一款義大利葡萄酒是否具備投資價值時，收藏家與投資機構通常會考量以下四個核心要素：</p><div class=\"space-y-6\"><div class=\"bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col md:flex-row gap-6 items-center\"><div class=\"w-16 h-16 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0\"><span class=\"material-icons text-3xl text-red-600\">calendar_month</span></div><div class=\"flex-1\">><h4 class=\"text-xl font-bold text-gray-800 mb-2\">1. 偉大年份 (Great Vintages)</h4><p class=\"text-gray-600 mb-2\">年份對義大利酒的價格影響極大。一個被公認為「世紀年份」的酒款，其價格可能是一般年份的兩倍以上。</p><p class=\"text-sm text-gray-500\"><strong>近期經典年份：</strong><br>Piedmont: 2010, 2013, 2016, 2019<br>Tuscany: 2010, 2015, 2016, 2019</p></div></div><div class=\"bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col md:flex-row gap-6 items-center\"><div class=\"w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0\"><span class=\"material-icons text-3xl text-yellow-600\">military_tech</span></div><div class=\"flex-1\">><h4 class=\"text-xl font-bold text-gray-800 mb-2\">2. 酒評家分數 (Critic Scores)</h4><p class=\"text-gray-600 mb-2\">國際權威酒評家（如 Robert Parker's Wine Advocate, Antonio Galloni, James Suckling, Vinous）的評分是市場定價的風向標。獲得 100 分滿分的酒款，價格通常會在一夜之間飆升。</p><p class=\"text-sm text-gray-500\"><strong>影響力：</strong> 95 分以上是進入投資級別的門檻，98-100 分則是價格爆發的關鍵。</p></div></div><div class=\"bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col md:flex-row gap-6 items-center\"><div class=\"w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0\"><span class=\"material-icons text-3xl text-blue-600\">diamond</span></div><div class=\"flex-1\">><h4 class=\"text-xl font-bold text-gray-800 mb-2\">3. 稀缺性與產量 (Scarcity & Production)</h4><p class=\"text-gray-600 mb-2\">物以稀為貴。許多頂級的單一園 Barolo 或限量版 Super Tuscans 年產量僅有數千瓶。當全球需求遠大於供給時，價格自然水漲船高。</p><p class=\"text-sm text-gray-500\"><strong>例子：</strong> Giacomo Conterno 的 Monfortino Riserva 僅在極佳年份生產，且產量極少，是拍賣會上的夢幻逸品。</p></div></div><div class=\"bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col md:flex-row gap-6 items-center\"><div class=\"w-16 h-16 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0\"><span class=\"material-icons text-3xl text-green-600\">verified_user</span></div><div class=\"flex-1\">><h4 class=\"text-xl font-bold text-gray-800 mb-2\">4. 來源與保存狀況 (Provenance & Condition)</h4><p class=\"text-gray-600 mb-2\">在二級市場交易時，酒款的「履歷」至關重要。一直保存在專業溫控酒窖（如 OWC - Original Wooden Case 原裝木箱）中的酒，其價值遠高於來源不明的酒款。</p><p class=\"text-sm text-gray-500\"><strong>防偽：</strong> 許多頂級酒莊已開始使用區塊鏈、NFC 晶片或特殊防偽標籤來確保真實性。</p></div></div></div></div>"
+      "title": "義大利葡萄酒出口概覽",
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利是全球葡萄酒出口大國，超過一半的產量銷往國際市場。出口版圖從成熟的歐美市場延伸至快速成長的亞洲，形成多元化的全球佈局。理解各市場特性是掌握義大利酒業全球競爭力的關鍵。</p></div><div class=\"stat-grid\"><div class=\"stat-box\"><span class=\"stat-number\">>70億€</span><span class=\"stat-label\">年出口總值，多年排名全球前二</span></div><div class=\"stat-box\"><span class=\"stat-number\">~54%</span><span class=\"stat-label\">產量用於出口，高度依賴國際市場</span></div><div class=\"stat-box\"><span class=\"stat-number\">美國</span><span class=\"stat-label\">最大「金額」出口市場</span></div><div class=\"stat-box\"><span class=\"stat-number\">德國</span><span class=\"stat-label\">最大「體積」出口市場</span></div></div>"
     },
     {
       "type": "content",
-      "title": "案例分析：Sassicaia 的投資神話",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">Tenuta San Guido 酒莊生產的 Sassicaia 是義大利最著名的 Super Tuscan，也是研究義大利精品酒投資的最佳案例。</p><div class=\"bg-white p-8 rounded-xl shadow-sm border border-gray-200 mb-8\"><div class=\"flex flex-col md:flex-row gap-8\"><div class=\"w-full md:w-1/3 flex flex-col items-center justify-center border-r border-gray-200 pr-6\"><div class=\"w-32 h-48 bg-gray-800 rounded-t-xl rounded-b-sm relative flex items-center justify-center shadow-lg\"><div class=\"absolute top-4 w-full h-8 bg-red-900 opacity-50\"></div><div class=\"w-20 h-24 bg-yellow-100 rounded flex flex-col items-center justify-center p-2 border border-yellow-300\"><div class=\"w-8 h-8 rounded-full bg-blue-900 mb-1 flex items-center justify-center\"><span class=\"text-white text-xs font-serif\">★</span></div><span class=\"text-xs font-serif font-bold text-gray-800\">SASSICAIA</span><span class=\"text-[10px] text-gray-600\">Bolgheri</span></div></div><h3 class=\"text-xl font-bold text-gray-800 mt-4\">Sassicaia</h3><p class=\"text-gray-500\">西施佳雅</p></div><div class=\"w-full md:w-2/3\"><h4 class=\"text-lg font-bold text-gray-800 mb-4 border-b pb-2\">投資亮點 (Investment Highlights)</h4><ul class=\"space-y-4 text-gray-700\"><li><strong>歷史地位：</strong> 1968 年首個商業年份，打破了義大利酒的傳統，證明了在托斯卡納沿海 (Bolgheri) 種植 Cabernet Sauvignon 的潛力。</li><li><strong>1985 年份的奇蹟：</strong> 獲得 Robert Parker 100 分滿分，震驚全球酒界，確立了其世界級名酒的地位。</li><li><strong>2015 與 2016 年份：</strong> 2015 年份被《Wine Spectator》選為年度百大第一名；2016 年份獲得 Wine Advocate 100 分。這兩個年份發布後，價格在短短幾年內翻倍。</li><li><strong>流動性 (Liquidity)：</strong> Sassicaia 是 Liv-ex 上交易最頻繁的義大利酒款，買賣容易，被視為義大利酒投資的「藍籌股 (Blue Chip)」。</li></ul><div class=\"bg-blue-50 p-4 rounded-lg border border-blue-200 mt-6\"><p class=\"text-sm text-blue-800\"><strong>💡 投資策略：</strong> 購買剛發布 (En Primeur / Release) 的極佳年份 Sassicaia，並在專業酒窖中存放 10-15 年，通常能獲得穩定的資本增值。</p></div></div></div></div></div>"
+      "title": "四大主力出口市場",
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🇺🇸 美國（最大金額市場）</h3><p class=\"mf-style\">年均進口逾 20 億歐元</p><p class=\"mf-prod\">偏好 Pinot Grigio、Prosecco、Chianti 及頂級 Super Tuscans；高端精品消費強勁；是義大利最重要的精品酒出口目的地</p></div><div class=\"mf-zone warm\"><h3>🇩🇪 德國（最大體積市場）</h3><p class=\"mf-style\">體積第一，但平均單價較低</p><p class=\"mf-prod\">主要進口平價散裝酒與日常餐酒；以量取勝；德國超市貨架上義大利酒的佔比極高</p></div><div class=\"mf-zone cool\"><h3>🇬🇧 英國（成熟穩定市場）</h3><p class=\"mf-style\">對 Prosecco 與傳統紅酒需求強勁</p><p class=\"mf-prod\">Brexit 後進口手續增加但基本需求穩固；侍酒師文化成熟，義大利精品酒受到高度重視</p></div><div class=\"mf-zone plain\"><h3>🌏 亞洲（最具潛力新興市場）</h3><p class=\"mf-style\">中日韓快速成長</p><p class=\"mf-prod\">對義大利文化與美食高度認同；目前佔比不如歐美，但增速最快；義大利酒業正積極推廣本土品種與餐酒文化</p></div></div>"
     },
     {
       "type": "content",
-      "title": "新興投資標的：Etna 與 Alto Piemonte",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">除了傳統的三巨頭，精明的收藏家與投資者正將目光轉向義大利的「新興經典 (Emerging Classics)」。這些產區目前的價格相對親民，但具備極高的增值潛力。</p><div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\"><div class=\"bg-orange-50 p-6 rounded-xl border border-orange-100\"><h4 class=\"text-orange-800 font-bold mb-3 flex items-center\"><span class=\"material-icons mr-2\">volcano</span> 西西里島 Etna (埃特納火山)</h4><p class=\"text-gray-700 text-sm mb-3\">被譽為「地中海的勃根地」。這裡的 Nerello Mascalese 品種在火山灰土壤與高海拔的加持下，展現出極致的優雅、複雜度與陳年潛力。</p><ul class=\"text-sm text-gray-600 list-disc list-inside\"><li><strong>投資亮點：</strong> 單一園 (Contrada) 概念興起，產量極少。</li><li><strong>代表酒莊：</strong> Tenuta delle Terre Nere, Passopisciaro, Frank Cornelissen。</li></ul></div><div class=\"bg-blue-50 p-6 rounded-xl border border-blue-100\"><h4 class=\"text-blue-800 font-bold mb-3 flex items-center\"><span class=\"material-icons mr-2\">landscape</span> 北皮埃蒙特 (Alto Piemonte)</h4><p class=\"text-gray-700 text-sm mb-3\">位於 Barolo 北方靠近阿爾卑斯山脈的產區（如 Gattinara, Ghemme）。同樣種植 Nebbiolo，但氣候更冷涼，土壤富含火山岩與斑岩。</p><ul class=\"text-sm text-gray-600 list-disc list-inside\"><li><strong>投資亮點：</strong> 氣候變遷下，冷涼產區的 Nebbiolo 越來越受重視。價格僅為頂級 Barolo 的一小部分。</li><li><strong>代表酒莊：</strong> Nervi-Conterno, Antoniolo, Proprietà Sperino。</li></ul></div></div></div>"
+      "title": "義大利出口的四大主力產品",
+      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">義大利出口成功的核心在於幾個「全球明星產品」，各自定位鮮明、覆蓋不同消費層次</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🥂 Prosecco（Veneto）：</strong>全球最暢銷氣泡酒之一，以 Charmat 法釀造，風格清爽易飲，價格親民。帶動義大利整體氣泡酒出口形象，Aperol Spritz 文化的核心</div><div class=\"orvieto-card\"><strong>🍋 Pinot Grigio（北義）：</strong>全球最受歡迎的輕盈白酒品項之一，美國市場尤其強勁。Santa Margherita 成功將其推廣為高端日常白酒的代名詞</div><div class=\"orvieto-card\"><strong>🍷 Chianti（Toscana）：</strong>義大利葡萄酒的「親善大使」，中價位段最具普及度。黑公雞（Gallo Nero）標誌的 Chianti Classico 是進入義大利酒世界的入門款</div><div class=\"orvieto-card\"><strong>👑 Barolo / Super Tuscans：</strong>高端精品市場的標竿，推動義大利酒的品牌升級。Sassicaia、Ornellaia 在國際拍賣市場活躍，Barolo MGA 單一園是收藏家追逐的標的</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "市場挑戰與機遇",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利葡萄酒在全球市場雖然地位穩固，但仍面臨結構性挑戰與新興機遇並存的複雜局面。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>⚠️ 主要挑戰</h3><ul><li><strong>成熟市場增速放緩：</strong>美德英等傳統市場趨於飽和，競爭來自法國、西班牙、智利、阿根廷等國</li><li><strong>國內消費持續下滑：</strong>義大利本土人均消費量從 1970s 的 100 公升降至約 40 公升，酒業高度依賴出口</li><li><strong>品牌碎片化：</strong>數萬家小型酒莊各自為戰，缺乏系統性的國家級行銷推廣，難以在全球建立統一形象</li><li><strong>名稱難記問題：</strong>Denominazione 系統（DOCG/DOC）複雜，消費者難以記憶，影響購買決策</li></ul></div><div class=\"method-card modern\"><h3>✅ 核心機遇</h3><ul><li><strong>亞洲市場崛起：</strong>中日韓對義大利飲食文化的高度認同，是未來十年最具潛力的成長市場</li><li><strong>Premium 化趨勢：</strong>全球中產階級願意為優質義大利酒支付更高溢價，精品酒市場持續擴大</li><li><strong>有機永續趨勢：</strong>義大利有機葡萄酒比例全球領先，契合消費者健康意識，是差異化競爭優勢</li><li><strong>Aperitivo 文化輸出：</strong>Aperol Spritz、Negroni 雞尾酒文化風靡全球，帶動 Prosecco 與苦杏仁酒出口</li></ul></div></div></div></div>"
+    },
+    {
+      "type": "list",
+      "title": "重點回顧",
+      "points": [
+        "義大利年出口總值超過 70 億歐元，超過一半的產量銷往國際市場",
+        "美國是義大利最大「金額市場」，對 Prosecco、Pinot Grigio、Super Tuscans 需求龐大",
+        "德國是義大利最大「體積市場」，主要進口平價日常餐酒和散裝酒",
+        "英國市場成熟穩定，Prosecco 和 Chianti 是兩大主力；Brexit 後手續增加但需求穩固",
+        "亞洲（中日韓）是增速最快的新興市場，對義大利飲食文化認同度高",
+        "Prosecco 是出口量最大的氣泡酒，主產自 Veneto 大區；Pinot Grigio 是最受歡迎的輕盈白酒",
+        "Chianti 是最大眾化出口紅酒；Barolo 和 Super Tuscans 是精品市場的旗艦形象產品",
+        "義大利酒業最大結構性挑戰是品牌碎片化，最大機遇是亞洲市場與 Premium 化趨勢"
+      ]
     },
     {
       "type": "quiz",
-      "title": "🧠 出口市場知識檢測",
+      "title": "出口市場分析知識檢測",
       "_marker": "// inject-italy-l3-quiz",
       "questions": [
         {
           "type": "single",
-          "question": "在義大利投資級葡萄酒市場中，哪一個類別是最早進入國際拍賣市場，且被視為「藍籌股」的代表？",
-          "options": [
-            "Prosecco",
-            "Super Tuscans (超級托斯卡納)",
-            "Amarone della Valpolicella",
-            "Chianti Classico"
-          ],
+          "question": "按出口「金額」計算，義大利葡萄酒最大的單一市場是？",
+          "options": ["德國", "美國", "英國", "日本"],
           "correct": 1,
-          "explanation": "Super Tuscans（如 Sassicaia, Ornellaia）是最早獲得國際酒評家極高評價並進入全球拍賣市場的義大利酒款，至今仍是交易最熱絡的標的。"
+          "explanation": "美國是義大利葡萄酒最大的價值市場，年均進口逾 20 億歐元，對 Super Tuscans、Barolo 以及 Prosecco 和 Pinot Grigio 有龐大需求。"
         },
         {
           "type": "single",
-          "question": "評估一款義大利精品酒的投資價值時，下列哪一項因素通常「最不」重要？",
-          "options": [
-            "國際權威酒評家的分數 (如 100 分滿分)",
-            "該年份的氣候條件與整體評價",
-            "酒標設計的顏色與字體",
-            "酒款的來源證明與保存狀況 (Provenance)"
-          ],
+          "question": "義大利出口量最大的氣泡酒品類是？",
+          "options": ["Asti Spumante", "Franciacorta", "Prosecco", "Lambrusco"],
           "correct": 2,
-          "explanation": "投資價值主要取決於酒質（年份、評分）、稀缺性以及保存狀況。酒標的藝術設計雖然有時能增加收藏趣味，但通常不是決定投資價值的核心要素。"
+          "explanation": "Prosecco 是義大利出口量最大的氣泡酒，也是全球最暢銷的氣泡酒之一，主要產自 Veneto 大區，是 Aperol Spritz 雞尾酒文化的核心材料。"
         },
         {
           "type": "single",
-          "question": "Sassicaia 1985 年份在拍賣市場上享有傳奇地位，主要原因為何？",
-          "options": [
-            "它是義大利第一款使用螺旋蓋的紅酒",
-            "它獲得了 Robert Parker 100 分滿分，震驚全球酒界",
-            "它是唯一一款 100% 使用 Sangiovese 釀造的 Super Tuscan",
-            "該年份產量高達一百萬瓶"
-          ],
+          "question": "按出口「體積」計算，哪個國家通常是義大利葡萄酒最大的進口國？",
+          "options": ["美國", "德國", "英國", "法國"],
           "correct": 1,
-          "explanation": "Sassicaia 1985 獲得了 Robert Parker 的 100 分滿分評價，這在當時的義大利酒界是極其罕見的成就，確立了其世界級名酒的地位。"
+          "explanation": "德國是義大利葡萄酒最大的體積市場，主要進口平價散裝酒和日常餐酒，體積佔比龐大，但平均單價較低——與美國「金額最大」形成對比。"
         },
         {
           "type": "single",
-          "question": "近年來，哪一個西西里島的產區因為其優雅的風格與單一園概念，被投資者譽為「地中海的勃根地」，成為新興的投資標的？",
-          "options": [
-            "Marsala",
-            "Pantelleria",
-            "Etna (埃特納火山)",
-            "Vittoria"
-          ],
+          "question": "義大利哪個大區是全球最暢銷氣泡酒 Prosecco 的主要產地？",
+          "options": ["Piemonte", "Toscana", "Veneto", "Sicilia"],
           "correct": 2,
-          "explanation": "Etna 火山產區憑藉高海拔與獨特的火山灰土壤，釀造出極具優雅度與陳年潛力的 Nerello Mascalese 紅酒，加上單一園 (Contrada) 的稀缺性，成為備受矚目的新興投資標的。"
+          "explanation": "Veneto 大區是 Prosecco 的主要產地，特別是 Conegliano Valdobbiadene Prosecco Superiore DOCG，是義大利氣泡酒出口的核心引擎。"
         },
         {
           "type": "single",
-          "question": "義大利葡萄酒最大的單一出口目的國是？",
-          "options": [
-            "A. 中國",
-            "B. 美國",
-            "C. 德國",
-            "D. 英國"
-          ],
-          "correct": 1,
-          "explanation": "美國是義大利葡萄酒長期最大的出口市場（按金額），對 Prosecco、Pinot Grigio、Chianti 的需求龐大。德國按量可能更高，但美國按金額排名第一。"
+          "question": "哪個地區被義大利酒業視為最具潛力的「新興市場」？",
+          "options": ["亞洲（中日韓）", "南美洲", "非洲", "澳大利亞"],
+          "correct": 0,
+          "explanation": "亞洲（特別是中國、日本、韓國）對義大利文化和美食高度認同，增速在所有市場中最快，是義大利酒業未來最看重的成長市場。"
         }
       ]
-    }
-  ],
-  "quiz": [
-    {
-      "question": "在義大利投資級葡萄酒市場中，哪一個類別是最早進入國際拍賣市場，且被視為「藍籌股」的代表？",
-      "options": [
-        "Prosecco",
-        "Super Tuscans (超級托斯卡納)",
-        "Amarone della Valpolicella",
-        "Chianti Classico"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Super Tuscans（如 Sassicaia, Ornellaia）是最早獲得國際酒評家極高評價並進入全球拍賣市場的義大利酒款，至今仍是交易最熱絡的標的。"
-    },
-    {
-      "question": "評估一款義大利精品酒的投資價值時，下列哪一項因素通常「最不」重要？",
-      "options": [
-        "國際權威酒評家的分數 (如 100 分滿分)",
-        "該年份的氣候條件與整體評價",
-        "酒標設計的顏色與字體",
-        "酒款的來源證明與保存狀況 (Provenance)"
-      ],
-      "correctAnswer": 2,
-      "explanation": "投資價值主要取決於酒質（年份、評分）、稀缺性以及保存狀況。酒標的藝術設計雖然有時能增加收藏趣味，但通常不是決定投資價值的核心要素。"
-    },
-    {
-      "question": "Sassicaia 1985 年份在拍賣市場上享有傳奇地位，主要原因為何？",
-      "options": [
-        "它是義大利第一款使用螺旋蓋的紅酒",
-        "它獲得了 Robert Parker 100 分滿分，震驚全球酒界",
-        "它是唯一一款 100% 使用 Sangiovese 釀造的 Super Tuscan",
-        "該年份產量高達一百萬瓶"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Sassicaia 1985 獲得了 Robert Parker 的 100 分滿分評價，這在當時的義大利酒界是極其罕見的成就，確立了其世界級名酒的地位。"
-    },
-    {
-      "question": "近年來，哪一個西西里島的產區因為其優雅的風格與單一園概念，被投資者譽為「地中海的勃根地」，成為新興的投資標的？",
-      "options": [
-        "Marsala",
-        "Pantelleria",
-        "Etna (埃特納火山)",
-        "Vittoria"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Etna 火山產區憑藉高海拔與獨特的火山灰土壤，釀造出極具優雅度與陳年潛力的 Nerello Mascalese 紅酒，加上單一園 (Contrada) 的稀缺性，成為備受矚目的新興投資標的。"
     }
   ]
 }

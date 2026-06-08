@@ -1,140 +1,113 @@
 {
-  "id": "L3M5L4",
-  "title": "氣候變遷的影響",
-  "description": "探討全球暖化與極端氣候對義大利葡萄種植與釀酒風格的深遠影響，以及酒莊如何透過改變品種、海拔與葡萄園管理技術來適應這些挑戰。",
+  "lessonId": "L3M5L4",
+  "title": "未來趨勢與氣候變遷",
+  "quiz": [
+    {
+      "question": "全球暖化對義大利葡萄酒風格最直接、最普遍的影響是什麼？",
+      "options": ["葡萄酒的顏色變得越來越淺", "葡萄酒的酸度變得極高，難以入口", "葡萄提早成熟，導致酒精度升高，果香變得更加成熟或果醬化 (Jammy)", "葡萄酒中出現強烈的橡木桶香草味"],
+      "answer": 2,
+      "explanation": "氣溫升高導致葡萄糖分累積過快，發酵後轉化為更高的酒精度；同時酸度流失，果香從清新的新鮮水果轉變為成熟甚至果醬般的氣息。"
+    },
+    {
+      "question": "為了應對氣候變遷帶來的炎熱，義大利酒莊在葡萄園管理上最常採取的適應策略之一是？",
+      "options": ["大量砍伐葡萄藤周圍的樹木以增加日照", "改變樹冠管理 (Canopy Management)，保留更多葉片來為葡萄遮陽，防止烈日灼傷", "全面改種需要大量水分的國際品種如 Chardonnay", "將葡萄園全部遷移到溫室內種植"],
+      "answer": 1,
+      "explanation": "過去為了讓葡萄成熟會剪去葉子，現在為了防止極端高溫灼傷葡萄 (Sunburn)，農夫會保留更多葉片作為「遮陽傘」。"
+    },
+    {
+      "question": "在傳統 Barolo 產區，過去最昂貴的葡萄園通常是哪一個坡向？在氣候變遷下，酒莊開始重新評估哪些坡向？",
+      "options": ["過去是朝北；現在重新評估朝南", "過去是朝東；現在重新評估朝西", "過去是朝南 (South-facing) 以獲取最多陽光；現在重新評估朝東或朝北以避免過度曝曬", "過去是平地；現在重新評估山谷底部"],
+      "answer": 2,
+      "explanation": "傳統上，Nebbiolo 需要充足的陽光才能成熟，因此朝南的坡地最為珍貴。但在極端炎熱的年份，朝南坡地容易導致葡萄過熟或灼傷，因此較涼爽的朝東或朝北坡地開始受到重視。"
+    },
+    {
+      "question": "面對氣候變遷，義大利酒莊在釀造技術上做出調整。下列哪一項「不是」常見的應對策略？",
+      "options": ["提早採收 (Early Harvest) 以保留葡萄的天然酸度", "減少使用全新小橡木桶 (Barrique)，改用大型舊木桶或水泥槽以保持果香清新", "在紅酒發酵時保留部分果梗 (Whole Bunch Fermentation) 以增加清新感與結構", "在發酵前大量添加人工糖分 (Chaptalization) 以提高酒精度"],
+      "answer": 3,
+      "explanation": "氣候變遷已經導致葡萄糖分過高、酒精度飆升，因此酒莊的目標是「降低」酒精度並保留酸度，絕不會再額外添加糖分（加糖在義大利多數產區也是非法的）。"
+    }
+  ],
   "slides": [
     {
-      "type": "content",
-      "title": "氣候變遷：義大利酒業的最大挑戰",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">全球暖化不再是未來的預測，而是義大利葡萄農每天必須面對的現實。氣溫升高、降雨模式改變以及極端天氣事件的頻發，正在重塑義大利葡萄酒的版圖與風格。</p><div class=\"grid grid-cols-1 md:grid-cols-3 gap-6 mb-8\"><div class=\"bg-red-50 p-6 rounded-xl border border-red-100 text-center\"><span class=\"material-icons text-4xl text-red-500 mb-2\">thermostat</span><h4 class=\"text-red-800 font-bold mb-2\">氣溫升高</h4><p class=\"text-sm text-gray-600\">過去 30 年，義大利夏季平均氣溫顯著上升，導致葡萄提早成熟，糖分累積過快，酸度流失。</p></div><div class=\"bg-orange-50 p-6 rounded-xl border border-orange-100 text-center\"><span class=\"material-icons text-4xl text-orange-500 mb-2\">water_drop</span><h4 class=\"text-orange-800 font-bold mb-2\">乾旱與缺水</h4><p class=\"text-sm text-gray-600\">冬季降雪減少，夏季長時間無雨，導致葡萄藤面臨嚴重的水分脅迫 (Water Stress)，影響產量與品質。</p></div><div class=\"bg-yellow-50 p-6 rounded-xl border border-yellow-100 text-center\"><span class=\"material-icons text-4xl text-yellow-500 mb-2\">storm</span><h4 class=\"text-yellow-800 font-bold mb-2\">極端天氣</h4><p class=\"text-sm text-gray-600\">春季晚霜 (Spring Frost)、夏季強烈冰雹 (Hail) 與暴雨變得更加頻繁且難以預測，常在一夜之間摧毀整年收成。</p></div></div><div class=\"bg-gray-50 p-6 rounded-xl border-l-4 border-gray-500\"><h4 class=\"text-gray-800 font-bold mb-2\">風格的改變 (Style Shift)</h4><p class=\"text-gray-700\">最直接的影響是葡萄酒的<strong>酒精度越來越高</strong>（許多 Barolo 或 Amarone 輕易達到 15% 甚至 16%），且<strong>果香變得更加成熟、果醬化 (Jammy)</strong>，失去了傳統的清新感與優雅度。</p></div></div>"
+      "type": "title",
+      "title": "未來趨勢與氣候變遷",
+      "subtitle": "暖化時代：義大利葡萄酒的轉型策略與未來版圖"
     },
     {
       "type": "content",
-      "title": "產區版圖的重繪：向高處與冷處移動",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">為了尋找更涼爽的氣候以保持葡萄的酸度與優雅，義大利的葡萄園正經歷一場「大遷徙」。</p><div class=\"space-y-6\"><div class=\"bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col md:flex-row gap-6 items-center\"><div class=\"w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0\"><span class=\"material-icons text-3xl text-blue-600\">landscape</span></div><div class=\"flex-1\">><h4 class=\"text-xl font-bold text-gray-800 mb-2\">1. 往高海拔移動 (Altitude)</h4><p class=\"text-gray-600 mb-2\">海拔每上升 100 公尺，氣溫約下降 0.6°C。許多酒莊開始在阿爾卑斯山腳下（如 Alto Adige, Valle d'Aosta）、亞平寧山脈高處，甚至西西里島的 Etna 火山高海拔坡地開墾新葡萄園。</p><p class=\"text-sm text-gray-500\"><strong>案例：</strong> 傳統上種植在平原的 Prosecco (Glera)，現在越來越多生產者尋求 Valdobbiadene 陡峭高坡上的葡萄，以確保氣泡酒的清脆酸度。</p></div></div><div class=\"bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col md:flex-row gap-6 items-center\"><div class=\"w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0\"><span class=\"material-icons text-3xl text-teal-600\">explore</span></div><div class=\"flex-1\">><h4 class=\"text-xl font-bold text-gray-800 mb-2\">2. 往北方與冷涼坡向移動 (Latitude & Aspect)</h4><p class=\"text-gray-600 mb-2\">過去被認為「太冷、葡萄無法成熟」的產區（如北皮埃蒙特 Alto Piemonte），現在反而成為種植 Nebbiolo 的黃金地段。此外，酒莊也開始重新評估葡萄園的坡向 (Aspect)。</p><p class=\"text-sm text-gray-500\"><strong>案例：</strong> 在 Barolo，傳統上最昂貴的葡萄園都是朝南 (South-facing) 以獲取最多陽光。現在，越來越多酒莊開始重視朝東或甚至朝北的坡地，以避免葡萄被過度曝曬 (Sunburn)。</p></div></div></div></div>"
+      "title": "氣候變遷的四大直接衝擊",
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🌡️ 氣溫持續升高</h3><p class=\"mf-style\">最直接的結構性威脅</p><p class=\"mf-prod\">過去 30 年義大利夏季平均氣溫顯著上升；葡萄提早成熟，糖分累積過快，酸度流失；許多 Barolo 或 Amarone 輕易達到 15-16% 酒精度</p></div><div class=\"mf-zone warm\"><h3>💧 乾旱與缺水</h3><p class=\"mf-style\">Water Stress 威脅</p><p class=\"mf-prod\">冬季降雪減少，夏季長時間無雨；葡萄藤面臨嚴重水分脅迫，影響產量與品質；過去嚴格禁止灌溉的頂級產區開始重新討論允許緊急滴灌</p></div><div class=\"mf-zone cool\"><h3>⛈️ 極端天氣頻繁</h3><p class=\"mf-style\">無法預測的災害性風險</p><p class=\"mf-prod\">春季晚霜 (Spring Frost)、夏季強烈冰雹 (Hail) 與暴雨更加頻繁且難以預測；常在一夜之間摧毀整年收成，保險費用大幅攀升</p></div><div class=\"mf-zone plain\"><h3>🍷 風格與品牌衝擊</h3><p class=\"mf-style\">威脅義大利酒的核心形象</p><p class=\"mf-prod\">酒精度越來越高＋果香越來越成熟果醬化 (Jammy)；傳統的清新感與優雅度正在消失；消費者期待的「義大利典型風格」面臨重新定義</p></div></div>"
     },
     {
       "type": "content",
-      "title": "葡萄園管理與釀造技術的適應",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">除了改變種植地點，酒莊也積極調整葡萄園的管理方式與釀酒技術，以減緩氣候變遷帶來的衝擊。</p><div class=\"bg-white p-8 rounded-xl shadow-sm border border-gray-200 mb-8\"><div class=\"grid grid-cols-1 md:grid-cols-2 gap-8\"><div class=\"space-y-4\"><h4 class=\"text-lg font-bold text-green-800 border-b border-green-200 pb-2 flex items-center\"><span class=\"material-icons mr-2\">grass</span> 葡萄園管理 (Viticulture)</h4><ul class=\"space-y-3 text-gray-700\"><li><strong>樹冠管理 (Canopy Management)：</strong> 過去農夫會剪去葉子讓葡萄曬太陽；現在則保留更多葉片，像「遮陽傘」一樣保護葡萄免受烈日灼傷。</li><li><strong>晚熟品種的復興：</strong> 重新種植那些成熟期較晚、耐旱且能保持高酸度的義大利原生品種（如南部的 Aglianico, 白葡萄 Fiano, Carricante）。</li><li><strong>灌溉系統：</strong> 過去許多歐洲頂級產區（如 Barolo）嚴格禁止灌溉。現在，面對極端乾旱，法規已開始放寬，允許在緊急情況下進行滴灌 (Drip Irrigation)。</li></ul></div><div class=\"space-y-4\"><h4 class=\"text-lg font-bold text-purple-800 border-b border-purple-200 pb-2 flex items-center\"><span class=\"material-icons mr-2\">science</span> 釀造技術 (Winemaking)</h4><ul class=\"space-y-3 text-gray-700\"><li><strong>提早採收 (Early Harvest)：</strong> 為了保留酸度並避免酒精度過高，許多酒莊選擇比過去提早 1-2 週採收葡萄。</li><li><strong>減少橡木桶萃取：</strong> 避免使用過多全新小橡木桶 (Barrique)，改用大型舊木桶 (Botti) 或水泥槽、陶甕，以保持果香的清新感，避免酒體過於沉重。</li><li><strong>整串發酵 (Whole Bunch Fermentation)：</strong> 在紅酒發酵時保留果梗，可以增加酒液的清新感與單寧結構，平衡過高的酒精度。</li></ul></div></div></div></div>"
+      "title": "產區版圖重繪：往高處與冷處移動",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">為了尋找更涼爽的氣候以保持葡萄的酸度與優雅，義大利的葡萄園正經歷一場「大遷徙」，改寫傳統產區版圖。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>⬆️ 往高海拔移動 (Altitude)</h3><ul><li><strong>原理：</strong>海拔每升高 100 公尺，氣溫約下降 0.6°C</li><li><strong>案例：</strong>Alto Adige（阿爾卑斯山脈）、Valle d'Aosta（義大利最高葡萄園）、Etna 火山高坡（海拔 800-1,000m）</li><li><strong>策略：</strong>酒莊開始在過去被認為太冷的高海拔地段開墾新葡萄園</li><li><strong>Prosecco 案例：</strong>越來越多生產者尋求 Valdobbiadene 陡峭高坡，以確保氣泡酒的清脆酸度</li></ul></div><div class=\"method-card modern\"><h3>↖️ 往冷涼坡向移動 (Aspect)</h3><ul><li><strong>坡向革命：</strong>傳統上 Barolo 最昂貴的葡萄園都是朝南，以獲取最多陽光</li><li><strong>現在：</strong>過度曝曬導致葡萄灼傷（Sunburn），酒莊開始重視朝東或朝北的坡地</li><li><strong>緯度改變：</strong>過去被認為「太冷」的 Alto Piemonte（Gattinara, Ghemme）現在反而成為種植 Nebbiolo 的黃金地段</li><li><strong>冷涼紅利：</strong>氣候暖化使高緯度/高海拔產區能種植過去無法成熟的品種</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "法規的挑戰與未來",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">氣候變遷不僅是農業問題，也對義大利嚴格的葡萄酒法規 (DOC/DOCG) 提出了嚴峻的挑戰。</p><div class=\"bg-gray-900 p-6 rounded-xl text-white mb-8\"><div class=\"flex flex-col space-y-4\"><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-yellow-400 font-bold mb-2\">傳統法規的僵化</h4><p class=\"text-sm text-gray-300\">DOC/DOCG 法規嚴格規定了每個產區允許種植的葡萄品種、最高產量與最低酒精度。然而，當氣候改變導致傳統品種無法適應時，法規的修改往往曠日廢時。</p></div><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-green-400 font-bold mb-2\">實驗性品種的引入</h4><p class=\"text-sm text-gray-300\">一些產區（如波爾多已允許種植 Touriga Nacional 等抗旱品種）開始實驗性地引入非傳統品種。義大利部分產區也開始討論是否應該放寬品種限制，以應對未來的極端氣候。</p></div><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-blue-400 font-bold mb-2\">永續認證的普及</h4><p class=\"text-sm text-gray-300\">除了有機與生物動力，義大利推出了國家級的永續認證標準（如 Equalitas, VIVA），不僅關注環境保護，也涵蓋了碳足跡計算、水資源管理與社會經濟責任，成為酒莊應對氣候變遷的綜合指南。</p></div></div></div></div>"
+      "title": "葡萄園管理的三大適應策略",
+      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">除了搬遷葡萄園，酒莊也積極調整葡萄園的管理方式以減緩氣候衝擊</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>☂️ 樹冠管理 (Canopy Management)：</strong>過去農夫會剪去葉子讓葡萄曬太陽；現在則保留更多葉片，像「遮陽傘」一樣保護葡萄免受烈日灼傷 (Sunburn)。夏季保留葉片可降低葡萄果粒溫度 3-5°C，有效延緩過熟</div><div class=\"orvieto-card\"><strong>🌿 晚熟品種的復興：</strong>重新種植那些成熟期較晚、耐旱且能保持高酸度的義大利原生品種——南部的 Aglianico（極晚熟）、白葡萄 Fiano 和 Carricante（西西里 Etna）都因氣候暖化而身價大漲</div><div class=\"orvieto-card\"><strong>💧 灌溉系統解禁：</strong>過去許多歐洲頂級產區（如 Barolo）嚴格禁止灌溉，認為水分脅迫能讓根系更深入土層。現在，面對極端乾旱，法規已開始放寬，允許在緊急情況下進行低量滴灌 (Drip Irrigation)</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "釀酒技術調整與法規挑戰",
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>⏰ 提早採收（Early Harvest）</h3><p class=\"mf-style\">保留酸度的關鍵決策</p><p class=\"mf-prod\">為了保留酸度並避免酒精度過高，許多酒莊選擇比傳統提早 1-2 週採收；犧牲部分果味成熟度，換取更清新的酒體結構</p></div><div class=\"mf-zone warm\"><h3>🪣 少用新小橡木桶</h3><p class=\"mf-style\">從 Barrique 轉向大型容器</p><p class=\"mf-prod\">避免過多全新小橡木桶 (Barrique)，改用大型舊木桶 (Botti)、水泥槽或陶甕；減少橡木萃取以保持果香清新感，避免酒體過於沉重</p></div><div class=\"mf-zone cool\"><h3>🍇 整串發酵（Whole Bunch）</h3><p class=\"mf-style\">增加清新感的現代技法</p><p class=\"mf-prod\">在紅酒發酵時保留果梗，利用果梗的單寧結構和天然清涼感平衡過高的酒精度；Barolo 現代派酒莊廣泛採用</p></div><div class=\"mf-zone plain\"><h3>📜 法規困境與未來</h3><p class=\"mf-style\">DOC/DOCG 的適應挑戰</p><p class=\"mf-prod\">傳統法規限制品種、產量、最低酒精度，但氣候改變讓舊規則難以為繼。義大利已推出 Equalitas、VIVA 等永續認證，涵蓋碳足跡與水資源管理</p></div></div>"
+    },
+    {
+      "type": "list",
+      "title": "重點回顧",
+      "points": [
+        "氣候變遷四大衝擊：氣溫升高→早熟高酒精、乾旱缺水、極端天氣（冰雹/晚霜）、風格果醬化",
+        "義大利酒精度攀升（Barolo、Amarone 常達 15-16%），清新感與優雅度面臨挑戰",
+        "應對策略一：往高海拔（如 Etna 800-1000m）或冷涼坡向（朝東北）移動",
+        "Barolo 傳統最貴坡向是朝南，現在開始重新評估朝東/朝北以避免過度曝曬",
+        "樹冠管理：保留更多葉片作遮陽傘，可降低果粒溫度 3-5°C 延緩過熟",
+        "晚熟原生品種（Aglianico、Fiano）因氣候暖化而越來越受重視",
+        "釀酒調整：提早採收保酸、少用新木桶、整串發酵（Whole Bunch）增加清新感",
+        "注意：加糖 (Chaptalization) 絕不是應對策略，氣候暖化下酒精已太高，義大利多數產區禁止加糖"
+      ]
     },
     {
       "type": "quiz",
-      "title": "🧠 氣候變遷知識檢測",
+      "title": "未來趨勢與氣候變遷知識檢測",
       "_marker": "// inject-italy-l3-quiz",
       "questions": [
         {
           "type": "single",
           "question": "全球暖化對義大利葡萄酒風格最直接、最普遍的影響是什麼？",
-          "options": [
-            "葡萄酒的顏色變得越來越淺",
-            "葡萄酒的酸度變得極高，難以入口",
-            "葡萄提早成熟，導致酒精度升高，果香變得更加成熟或果醬化 (Jammy)",
-            "葡萄酒中出現強烈的橡木桶香草味"
-          ],
+          "options": ["葡萄酒的顏色變得越來越淺", "葡萄酒的酸度變得極高，難以入口", "葡萄提早成熟，導致酒精度升高，果香變得更加成熟或果醬化 (Jammy)", "葡萄酒中出現強烈的橡木桶香草味"],
           "correct": 2,
-          "explanation": "氣溫升高導致葡萄糖分累積過快，發酵後轉化為更高的酒精度；同時酸度流失，果香從清新的新鮮水果轉變為成熟甚至果醬般的氣息。"
+          "explanation": "氣溫升高導致葡萄糖分累積過快，發酵後轉化為更高的酒精度；同時酸度流失，果香從清新的新鮮水果轉變為成熟甚至果醬般的氣息，威脅義大利酒的傳統清新風格。"
         },
         {
           "type": "single",
-          "question": "為了應對氣候變遷帶來的炎熱與乾旱，義大利酒莊在「葡萄園管理 (Viticulture)」上最常採取的適應策略之一是什麼？",
-          "options": [
-            "大量砍伐葡萄藤周圍的樹木以增加日照",
-            "改變樹冠管理 (Canopy Management)，保留更多葉片來為葡萄遮陽，防止烈日灼傷",
-            "全面改種需要大量水分的國際品種如 Chardonnay",
-            "將葡萄園全部遷移到溫室內種植"
-          ],
+          "question": "為了應對氣候變遷帶來的炎熱與乾旱，義大利酒莊在葡萄園管理上最常採取的適應策略之一是？",
+          "options": ["大量砍伐葡萄藤周圍的樹木以增加日照", "改變樹冠管理 (Canopy Management)，保留更多葉片來為葡萄遮陽，防止烈日灼傷", "全面改種需要大量水分的國際品種如 Chardonnay", "將葡萄園全部遷移到溫室內種植"],
           "correct": 1,
-          "explanation": "過去為了讓葡萄成熟會剪去葉子，現在為了防止極端高溫灼傷葡萄 (Sunburn)，農夫會保留更多葉片作為「遮陽傘」。"
+          "explanation": "過去為了讓葡萄成熟會剪去葉子，現在為了防止極端高溫灼傷葡萄 (Sunburn)，農夫會保留更多葉片作為「遮陽傘」，可有效降低果粒溫度 3-5°C。"
         },
         {
           "type": "single",
-          "question": "在傳統的 Barolo 產區，過去最昂貴、最受追捧的葡萄園通常是哪一個坡向 (Aspect)？而在氣候變遷下，酒莊開始重新評估哪些坡向的價值？",
-          "options": [
-            "過去是朝北；現在重新評估朝南",
-            "過去是朝東；現在重新評估朝西",
-            "過去是朝南 (South-facing) 以獲取最多陽光；現在重新評估朝東或朝北以避免過度曝曬",
-            "過去是平地；現在重新評估山谷底部"
-          ],
+          "question": "在傳統 Barolo 產區，過去最昂貴的葡萄園通常是哪一個坡向？在氣候變遷下，酒莊開始重新評估哪些坡向的價值？",
+          "options": ["過去是朝北；現在重新評估朝南", "過去是朝東；現在重新評估朝西", "過去是朝南 (South-facing) 以獲取最多陽光；現在重新評估朝東或朝北以避免過度曝曬", "過去是平地；現在重新評估山谷底部"],
           "correct": 2,
           "explanation": "傳統上，Nebbiolo 需要充足的陽光才能成熟，因此朝南的坡地最為珍貴。但在極端炎熱的年份，朝南坡地容易導致葡萄過熟或灼傷，因此較涼爽的朝東或朝北坡地開始受到重視。"
         },
         {
           "type": "single",
-          "question": "面對氣候變遷，義大利許多酒莊在「釀造技術 (Winemaking)」上做出了調整。下列哪一項「不是」常見的應對策略？",
-          "options": [
-            "提早採收 (Early Harvest) 以保留葡萄的天然酸度",
-            "減少使用全新小橡木桶 (Barrique)，改用大型舊木桶或水泥槽以保持果香清新",
-            "在紅酒發酵時保留部分果梗 (Whole Bunch Fermentation) 以增加清新感與結構",
-            "在發酵前大量添加人工糖分 (Chaptalization) 以提高酒精度"
-          ],
+          "question": "面對氣候變遷，義大利酒莊在釀造技術上做出了調整。下列哪一項「不是」常見的應對策略？",
+          "options": ["提早採收 (Early Harvest) 以保留葡萄的天然酸度", "減少使用全新小橡木桶 (Barrique)，改用大型舊木桶或水泥槽以保持果香清新", "在紅酒發酵時保留部分果梗 (Whole Bunch Fermentation) 以增加清新感與結構", "在發酵前大量添加人工糖分 (Chaptalization) 以提高酒精度"],
           "correct": 3,
           "explanation": "氣候變遷已經導致葡萄糖分過高、酒精度飆升，因此酒莊的目標是「降低」酒精度並保留酸度，絕不會再額外添加糖分（加糖在義大利多數產區也是非法的）。"
         },
         {
           "type": "single",
-          "question": "氣候變遷對北義高緯度產區（如 Alto Adige）最正面的短期影響是？",
-          "options": [
-            "A. 完全破壞葡萄質量",
-            "B. 葡萄成熟度提升，可種植過去無法成熟的品種",
-            "C. 降雨增加解決旱害",
-            "D. 夜間溫度降低改善酸度"
-          ],
+          "question": "氣候變遷對北義高緯度高海拔產區（如 Alto Adige、Alto Piemonte）最顯著的短期「正面」影響是？",
+          "options": ["完全破壞葡萄品質，所有酒莊被迫關閉", "葡萄成熟度改善，可種植過去氣候過冷而難以成熟的品種", "降雨大幅增加，解決了旱害問題", "夜間溫度降低，酸度自動提升"],
           "correct": 1,
           "explanation": "對北義高緯度/高海拔產區而言，氣候暖化短期帶來的正面效果是葡萄成熟度改善，甚至可嘗試種植過去氣候過冷而難以成熟的品種（但長期風險仍然存在）。"
         }
       ]
-    }
-  ],
-  "quiz": [
-    {
-      "question": "全球暖化對義大利葡萄酒風格最直接、最普遍的影響是什麼？",
-      "options": [
-        "葡萄酒的顏色變得越來越淺",
-        "葡萄酒的酸度變得極高，難以入口",
-        "葡萄提早成熟，導致酒精度升高，果香變得更加成熟或果醬化 (Jammy)",
-        "葡萄酒中出現強烈的橡木桶香草味"
-      ],
-      "correctAnswer": 2,
-      "explanation": "氣溫升高導致葡萄糖分累積過快，發酵後轉化為更高的酒精度；同時酸度流失，果香從清新的新鮮水果轉變為成熟甚至果醬般的氣息。"
-    },
-    {
-      "question": "為了應對氣候變遷帶來的炎熱與乾旱，義大利酒莊在「葡萄園管理 (Viticulture)」上最常採取的適應策略之一是什麼？",
-      "options": [
-        "大量砍伐葡萄藤周圍的樹木以增加日照",
-        "改變樹冠管理 (Canopy Management)，保留更多葉片來為葡萄遮陽，防止烈日灼傷",
-        "全面改種需要大量水分的國際品種如 Chardonnay",
-        "將葡萄園全部遷移到溫室內種植"
-      ],
-      "correctAnswer": 1,
-      "explanation": "過去為了讓葡萄成熟會剪去葉子，現在為了防止極端高溫灼傷葡萄 (Sunburn)，農夫會保留更多葉片作為「遮陽傘」。"
-    },
-    {
-      "question": "在傳統的 Barolo 產區，過去最昂貴、最受追捧的葡萄園通常是哪一個坡向 (Aspect)？而在氣候變遷下，酒莊開始重新評估哪些坡向的價值？",
-      "options": [
-        "過去是朝北；現在重新評估朝南",
-        "過去是朝東；現在重新評估朝西",
-        "過去是朝南 (South-facing) 以獲取最多陽光；現在重新評估朝東或朝北以避免過度曝曬",
-        "過去是平地；現在重新評估山谷底部"
-      ],
-      "correctAnswer": 2,
-      "explanation": "傳統上，Nebbiolo 需要充足的陽光才能成熟，因此朝南的坡地最為珍貴。但在極端炎熱的年份，朝南坡地容易導致葡萄過熟或灼傷，因此較涼爽的朝東或朝北坡地開始受到重視。"
-    },
-    {
-      "question": "面對氣候變遷，義大利許多酒莊在「釀造技術 (Winemaking)」上做出了調整。下列哪一項「不是」常見的應對策略？",
-      "options": [
-        "提早採收 (Early Harvest) 以保留葡萄的天然酸度",
-        "減少使用全新小橡木桶 (Barrique)，改用大型舊木桶或水泥槽以保持果香清新",
-        "在紅酒發酵時保留部分果梗 (Whole Bunch Fermentation) 以增加清新感與結構",
-        "在發酵前大量添加人工糖分 (Chaptalization) 以提高酒精度"
-      ],
-      "correctAnswer": 3,
-      "explanation": "氣候變遷已經導致葡萄糖分過高、酒精度飆升，因此酒莊的目標是「降低」酒精度並保留酸度，絕不會再額外添加糖分（加糖在義大利多數產區也是非法的）。"
     }
   ]
 }

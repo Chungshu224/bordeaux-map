@@ -1,182 +1,162 @@
 {
   "lessonId": "L3M1L4",
-  "title": "隱藏寶石產區 (Carema, Boca, Gattinara)",
+  "title": "隱藏寶石產區",
   "quiz": [
     {
-      "question": "Alto Piemonte 在 19 世紀末的葡萄園面積是多少？",
+      "question": "Alto Piemonte 在 19 世紀全盛期的葡萄園面積約有多少公頃？",
       "options": [
-        "5,000 公頃",
-        "15,000 公頃",
+        "10,000 公頃",
+        "20,000 公頃",
         "40,000 公頃",
-        "80,000 公頃"
+        "5,000 公頃"
       ],
       "answer": 2,
-      "explanation": "Alto Piemonte 在 19 世紀末達到巔峰，葡萄園面積高達 40,000 公頃，遠超今日的 Langhe 產區。"
+      "explanation": "Alto Piemonte 在 19 世紀末達到全盛期，葡萄園面積高達 40,000 公頃。後因根瘤蚜災害、一戰二戰和工業化，面積大幅縮減至今日的約 1,000 公頃。"
     },
     {
-      "question": "Carema 使用哪種特殊的葡萄培型系統？",
+      "question": "Carema DOC 的傳統培型系統有何特色？",
       "options": [
-        "Guyot",
-        "Alberello",
-        "Pergola（石柱支撐）",
-        "Cordone Speronato"
-      ],
-      "answer": 2,
-      "explanation": "Carema 使用獨特的石柱 Pergola 系統來支撐葡萄藤，以抵抗山谷的強風。"
-    },
-    {
-      "question": "Gattinara 的火山岩土壤主要是什麼岩石？",
-      "options": [
-        "玄武岩",
-        "斑岩",
-        "石灰岩",
-        "片岩"
+        "大型棚架（Tendone）平展式",
+        "石柱支撐的 Pergola 系統（Topie）",
+        "Guyot 單側延伸系統",
+        "Alberello 灌木式"
       ],
       "answer": 1,
-      "explanation": "Gattinara 的土壤主要是斑岩（火成岩），由數百萬年前的火山活動形成，賦予酒款獨特的礦物感和煙燻氣息。"
+      "explanation": "Carema DOC 採用傳統的 Pergola 架型（稱 Topie），由手工打造的石柱支撐，讓葡萄藤在山坡陡峭地形中生長，是 Carema 最具特色的文化景觀。"
     },
     {
-      "question": "Boca DOC 的總葡萄園面積約為多少？",
+      "question": "Gattinara DOCG 的土壤特色是？",
+      "options": [
+        "黏土石灰岩",
+        "斑岩（Porphyry，火成岩），礦物感強烈",
+        "沙質土壤",
+        "凝灰岩"
+      ],
+      "answer": 1,
+      "explanation": "Gattinara DOCG 的土壤以斑岩（Porphyry）為主，這是一種由火成岩演化的岩石，賦予 Gattinara 獨特的礦物感和鐵鏽質地，是與 Barolo 風土的最大差異。"
+    },
+    {
+      "question": "Boca DOC 的葡萄園面積大約是多少？",
       "options": [
         "12 公頃",
         "50 公頃",
-        "100 公頃",
+        "200 公頃",
         "500 公頃"
       ],
       "answer": 0,
-      "explanation": "Boca 是全義大利最小產區之一，總面積僅約 12 公頃，年產量僅約 40,000 瓶。"
+      "explanation": "Boca DOC 是義大利最稀有的產區之一，總葡萄園面積僅約 12 公頃，每年產量極為有限，是真正的「義大利最稀有葡萄酒」之一。"
     }
   ],
   "slides": [
     {
       "type": "title",
-      "title": "💎 隱藏寶石產區",
-      "subtitle": "Carema, Boca, Gattinara - Alto Piemonte 的被遺忘傳奇"
+      "title": "隱藏寶石產區",
+      "subtitle": "Carema · Gattinara · Boca — Alto Piemonte 被遺忘的偉大"
     },
     {
       "type": "content",
-      "title": "🗺️ Alto Piemonte - 歷史變遷",
-      "content": "<div class=\"history-panel\"><div class=\"historical-context\"><h4>📖 興衰史</h4><div class=\"timeline-events\"><div class=\"event golden-age\"><span class=\"period\">19世紀末</span><h5>黃金年代</h5><p>Alto Piemonte 是義大利最重要的葡萄酒產區之一，葡萄園面積達 <strong>40,000 公頃</strong>，遠超今日的 Langhe。</p></div><div class=\"event decline\"><span class=\"period\">1900-1970</span><h5>衰退期</h5><ul><li>根瘤蚜蟲病蟲害摧毀葡萄園</li><li>工業化吸引勞工離開農村</li><li>面積縮減至僅剩 <strong>500 公頃</strong></li></ul></div><div class=\"event renaissance\"><span class=\"period\">2000-現在</span><h5>文藝復興</h5><p>新一代釀酒師重新發現這些產區的潛力，<strong>Gaja 等名莊投資</strong>帶來國際關注。</p></div></div></div><div class=\"map-comparison\"><h4>🗺️ Barolo vs Alto Piemonte</h4><table class=\"comparison-table\"><tbody><tr><th>特性</th><th>Barolo/Barbaresco</th><th>Alto Piemonte</th></tr><tr><td><strong>位置</strong></td><td>Langhe 丘陵</td><td>阿爾卑斯山腳</td></tr><tr><td><strong>海拔</strong></td><td>200-500m</td><td>300-700m（更高）</td></tr><tr><td><strong>氣候</strong></td><td>溫暖、霧氣</td><td>涼爽、日夜溫差大</td></tr><tr><td><strong>土壤</strong></td><td>石灰岩、砂岩</td><td>花崗岩、火山岩</td></tr><tr><td><strong>Nebbiolo 風格</strong></td><td>強勁、飽滿</td><td>優雅、芳香、酸度更高</td></tr></tbody></table></div></div>"
+      "title": "Alto Piemonte — 失落黃金年代的復興",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Alta Piemonte（Novara 和 Vercelli 丘陵）是皮埃蒙特的隱藏明珠，19 世紀曾是義大利最重要的葡萄酒產區之一。百年磨難後，今日正在悄悄復興。</p><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">19 世紀末</div><div class=\"timeline-content\"><strong>黃金全盛期：</strong>葡萄園面積達 40,000 公頃，Gattinara 享譽歐洲，出口遠至英、法、德</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1900-1950</div><div class=\"timeline-content\"><strong>三重打擊：</strong>根瘤蚜蟲（Phylloxera）毀滅葡萄園、一戰二戰奪走勞動力、工業化吸引農民離鄉</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1967-1990</div><div class=\"timeline-content\"><strong>法律保護：</strong>Carema（1967）、Gattinara DOCG（1990）、Boca DOC 獲得法律保護，開始重建</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">2010 至今</div><div class=\"timeline-content\"><strong>文藝復興：</strong>國際評論家發現性價比極高，面積縮減至 1,000 公頃，稀缺性大增，尋找「下一個 Barolo」</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "⛰️ Carema DOC - 阿爾卑斯的 Nebbiolo",
-      "content": "<div class=\"region-profile\"><div class=\"region-header\"><div class=\"location-badge\">Piedmont 最北端 - Valle d'Aosta 邊界</div><h3>Carema DOC</h3><div class=\"hero-fact\">義大利最高海拔的 Nebbiolo ⛰️</div></div><div class=\"extreme-terroir\"><h4>🏔️ 極端風土</h4><div class=\"terroir-cards\"><div class=\"terroir-card altitude\"><div class=\"icon\">⛰️</div><h5>極限海拔</h5><p><strong>400-700 公尺</strong></p><p>Nebbiolo 的最高種植極限</p></div><div class=\"terroir-card pillars\"><div class=\"icon\">🏛️</div><h5>石柱培型</h5><p><strong>Pergola</strong> 系統</p><p>石柱支撐葡萄藤抵抗山谷風</p></div><div class=\"terroir-card granit\"><div class=\"icon\">🪨</div><h5>花崗岩主導</h5><p>古老冰河侵蝕</p><p>賦予礦物感和酸度</p></div><div class=\"terroir-card alpine\"><div class=\"icon\">❄️</div><h5>高山氣候</h5><p>生長季短</p><p>僅特殊年份能完全成熟</p></div></div></div><div class=\"wine-characteristics\"><h4>🍷 Carema 風格特徵</h4><div class=\"style-description\"><div class=\"descriptor\"><span class=\"label\">顏色</span><p>淺石榴紅（比 Barolo 更淺）</p></div><div class=\"descriptor\"><span class=\"label\">香氣</span><p>玫瑰花瓣、紅櫻桃、高山草本</p></div><div class=\"descriptor\"><span class=\"label\">單寧</span><p>細膩、絲滑（比 Barolo 柔和）</p></div><div class=\"descriptor\"><span class=\"label\">酸度</span><p>極高（冷涼氣候）</p></div><div class=\"descriptor\"><span class=\"label\">酒體</span><p>中等、優雅（非強勁型）</p></div><div class=\"descriptor\"><span class=\"label\">陳年</span><p>10-20 年（需要耐心）</p></div></div></div><div class=\"key-producers\"><h4>🏅 關鍵生產者</h4><div class=\"producers-list\"><div class=\"producer-item\"><h5>Produttori Nebbiolo di Carema</h5><p class=\"producer-type\">合作社 - 傳統守護者</p><p class=\"flagship\">代表酒款：Carema Riserva Etichetta Nera</p><p class=\"price\">€30-50</p></div><div class=\"producer-item\"><h5>Luigi Ferrando &amp; Figli</h5><p class=\"producer-type\">家族酒莊 - 品質先驅</p><p class=\"flagship\">代表酒款：Carema Etichetta Bianca</p><p class=\"price\">€35-60</p></div></div></div></div>"
+      "title": "Carema DOC — 山嶺之上的 Nebbiolo",
+      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">風土特色</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Valle d'Aosta 邊界的 Carema 村｜海拔：350-500 公尺｜土壤：片麻岩和砂岩（酸性）</div><div class=\"orvieto-card\">最具特色：傳統 Pergola 石柱培型（Topie）——手工打造的石柱支撐葡萄藤，是義大利最古老的栽培傳統之一</div><div class=\"orvieto-card\">氣候：阿爾卑斯山影響，長生長季、溫差極大（日夜溫差 20°C+），保留極高酸度</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">風格與生產者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">風味：清瘦優雅的 Nebbiolo——玫瑰花瓣、紅色漿果、礦物感、藥草｜酸度極高、單寧細緻</div><div class=\"orvieto-card\">陳年潛力：10-25 年，比 Barolo 更清瘦優雅，類似「山嶺版 Barolo」</div><div class=\"orvieto-card\">頂級酒莊：Luigi Ferrando（Etichetta Nera）、Cantina Produttori Nebbiolo di Carema｜€25-55</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Gattinara DOCG — 被遺忘的偉大",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>斑岩土壤塑造的礦物靈魂</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Gattinara 生長在以斑岩（Porphyry）為主的火成岩土壤上，賦予葡萄酒獨特的鐵鏽礦物感和鹹礦物質，是義大利最具礦物個性的紅葡萄酒之一。法規要求至少 90% Nebbiolo（稱為 Spanna），可混入少量 Bonarda 和 Vespolina。</p><div class=\"science-card\">DOCG 認證：1990｜最低陳年：3 年（Riserva 4 年）｜Nebbiolo 最低比例：90%</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">品種特徵與生產者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">風味：玫瑰、焦油、鐵鏽礦物感、乾燥香草、成熟紅莓｜比 Barolo 更纖細，比 Carema 更飽滿</div><div class=\"orvieto-card\">陳年潛力：15-30 年，Riserva 可達 40 年，近年再度受到帕克學派的重視</div><div class=\"orvieto-card\">頂級酒莊：Antoniolo（Osso San Grato 單一園）、Travaglini（Tre Vigne）、Nervi-Conterno｜€30-100</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Boca DOC — 義大利最稀有葡萄酒",
+      "content": "<div class=\"variety-deep-section\"><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">12 公頃</div><div class=\"stat-label\">總葡萄園面積<br>全義大利最小之一</div></div><div class=\"stat-box\"><div class=\"stat-number\">70-100%</div><div class=\"stat-label\">Nebbiolo（Spanna）<br>法定最低比例</div></div><div class=\"stat-box\"><div class=\"stat-number\">3 年</div><div class=\"stat-label\">最低橡木桶陳年<br>（Riserva 4 年）</div></div><div class=\"stat-box\"><div class=\"stat-number\">1969</div><div class=\"stat-label\">獲得 DOC 認證<br>沉寂 40 年後復興</div></div></div><div class=\"dna-research\"><h3>混釀配方：Nebbiolo + Vespolina + Uva Rara</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Boca DOC 法規允許加入 Vespolina（增加花香）和 Uva Rara（增加柔軟度），創造出比 Gattinara 更輕盈芬芳的風格，被稱為「Alto Piemonte 的優雅表達」。代表酒莊：Le Piane（Christoph Künzli）是現代復興的先驅。</p></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "三大隱藏寶石產區全方位對比",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Carema DOC</h3><p class=\"mf-style\">阿爾卑斯邊境｜片麻岩砂岩｜Pergola 石柱培型</p><p class=\"mf-prod\">清瘦優雅 Nebbiolo / 玫瑰、礦物感 / 陳年 10-25 年 / €25-55 / 山嶺版 Barolo</p></div><div class=\"mf-zone warm\"><h3>Gattinara DOCG</h3><p class=\"mf-style\">Novara 丘陵｜斑岩火成岩｜法定 DOCG 1990</p><p class=\"mf-prod\">礦物鐵鏽感 / 焦油、玫瑰 / 陳年 15-40 年 / €30-100 / 三大 AOC 中最具投資潛力</p></div><div class=\"mf-zone cool\"><h3>Boca DOC</h3><p class=\"mf-style\">Novara 丘陵｜花崗岩｜僅 12 公頃</p><p class=\"mf-prod\">輕盈芬芳 / Nebbiolo + Vespolina 混釀 / 陳年 10-20 年 / €35-80 / 義大利最稀有酒款</p></div></div></div>"
     },
     {
       "type": "list",
-      "title": "🏛️ Gattinara DOCG - 被遺忘的偉大",
+      "title": "重點回顧",
       "points": [
-        "🌹 芳香度：玫瑰、紫羅蘭、乾草、茶葉",
-        "⚫ 顏色：深石榴紅帶磚紅邊緣",
-        "💪 結構：強勁單寧但比 Barolo 細緻",
-        "⚡ 酸度：高（火山土賦予）",
-        "🔥 礦物感：煙燻、火山岩、鐵質",
-        "⏰ 陳年：15-30 年（頂級年份）"
-      ]
-    },
-    {
-      "type": "content",
-      "title": "🌹 Boca DOC - 稀有中的稀有",
-      "content": "<div class=\"region-profile\"><div class=\"region-header\"><div class=\"location-badge\">Alto Piemonte - Novara 省</div><h3>Boca DOC</h3><div class=\"rarity-badge\">全義大利最小產區之一 ⭐⭐⭐⭐⭐</div></div><div class=\"extreme-rarity\"><h4>📊 驚人的稀有度</h4><div class=\"statistics-panel\"><div class=\"stat-card\"><div class=\"stat-number\">12 公頃</div><div class=\"stat-label\">總葡萄園面積</div><div class=\"comparison\">vs Barolo 2,000 公頃</div></div><div class=\"stat-card\"><div class=\"stat-number\">5 家</div><div class=\"stat-label\">活躍生產者</div><div class=\"comparison\">vs Barolo 200+ 家</div></div><div class=\"stat-card\"><div class=\"stat-number\">40,000 瓶</div><div class=\"stat-label\">年產量</div><div class=\"comparison\">vs Barolo 1500 萬瓶</div></div></div><p class=\"rarity-note\">💡 <strong>要找到一瓶 Boca 比找到頂級 Burgundy 還難！</strong></p></div><div class=\"blend-composition\"><h4>🍇 獨特的混釀配方</h4><div class=\"blend-formula\"><div class=\"grape-component main\"><span class=\"percentage\">70-90%</span><h5>Nebbiolo</h5><p>主體結構</p></div><div class=\"grape-component support\"><span class=\"percentage\">10-20%</span><h5>Vespolina</h5><p>增加香氣和細緻度</p></div><div class=\"grape-component support\"><span class=\"percentage\">10-20%</span><h5>Uva Rara</h5><p>柔化單寧、增添果味</p></div></div><div class=\"blend-insight\"><p><strong>為什麼混釀：</strong>Boca 的極端海拔和涼爽氣候使純 Nebbiolo 過於酸澀，混入 Vespolina 和 Uva Rara 能平衡結構並增加複雜度。</p></div></div><div class=\"wine-style\"><h4>🍷 Boca 風格特點</h4><div class=\"style-comparison-panel\"><div class=\"compared-to\"><h6>相比 Barolo</h6><ul><li>✓ 更優雅、細緻</li><li>✓ 香氣更複雜（花香主導）</li><li>✓ 單寧更柔軟</li><li>✓ 酒體較輕盈</li></ul></div><div class=\"compared-to\"><h6>相比 Gattinara</h6><ul><li>✓ 更稀有（產量少 10 倍）</li><li>✓ 更芳香（Vespolina 影響）</li><li>✓ 價格更高</li><li>✓ 更難找到</li></ul></div></div></div><div class=\"top-producer\"><h4>🏆 傳奇生產者</h4><div class=\"producer-spotlight\"><div class=\"producer-header\"><h5>Le Piane</h5><div class=\"badges\"><span class=\"badge cult\">Cult Producer</span><span class=\"badge natural\">自然派先驅</span></div></div><div class=\"producer-story\"><p>莊主 <strong>Christoph Künzli</strong> 於 1997 年從瑞士移居至此，復興了幾近荒廢的 Boca 產區。採用<strong>生物動力法</strong>，釀造出義大利最優雅的 Nebbiolo 之一。</p></div><div class=\"wines-lineup\"><div class=\"wine-card\"><h6>Boca DOC</h6><p class=\"price\">€60-90</p><p class=\"note\">經典混釀、優雅芳香</p></div><div class=\"wine-card\"><h6>Maggiorina</h6><p class=\"price\">€80-120</p><p class=\"note\">單一園、極度稀有</p></div></div></div></div></div>"
-    },
-    {
-      "type": "content",
-      "title": "📊 三大產區全面比較",
-      "content": "<div class=\"comprehensive-comparison\"><table class=\"detailed-table\"><thead><tr><th>特性</th><th>Carema</th><th>Gattinara</th><th>Boca</th></tr></thead><tbody><tr><td><strong>DOCG 狀態</strong></td><td>DOC（1967）</td><td>DOCG（1990）</td><td>DOC（1969）</td></tr><tr><td><strong>面積</strong></td><td>~15 公頃</td><td>~100 公頃</td><td>~12 公頃</td></tr><tr><td><strong>海拔</strong></td><td>400-700m（最高）</td><td>250-450m</td><td>300-500m</td></tr><tr><td><strong>土壤</strong></td><td>花崗岩</td><td>火山岩（斑岩）</td><td>火山岩、花崗岩</td></tr><tr><td><strong>品種比例</strong></td><td>100% Nebbiolo</td><td>90-100% Nebbiolo</td><td>70-90% Nebbiolo</td></tr><tr><td><strong>陳年要求</strong></td><td>36 個月（Riserva）</td><td>35個月</td><td>34 個月</td></tr><tr><td><strong>風格特點</strong></td><td>優雅、高酸、輕盈</td><td>結構、礦物、煙燻</td><td>芳香、細緻、複雜</td></tr><tr><td><strong>陳年潛力</strong></td><td>10-20 年</td><td>15-30 年</td><td>15-25 年</td></tr><tr><td><strong>價格範圍</strong></td><td>€30-60</td><td>€35-100</td><td>€60-120</td></tr><tr><td><strong>可獲得性</strong></td><td>極稀有</td><td>稀有</td><td>極極稀有</td></tr></tbody></table></div>"
-    },
-    {
-      "type": "content",
-      "title": "🍴 配餐與侍酒",
-      "content": "<div class=\"pairing-service-guide\"><div class=\"pairing-section\"><h4>🍽️ 配餐建議</h4><div class=\"pairing-by-region\"><div class=\"region-pairing\"><h5>Carema - 輕盈優雅</h5><div class=\"dishes\"><div class=\"dish\">🦆 <strong>燻鴨胸</strong> - 不過於厚重</div><div class=\"dish\">🍄 <strong>牛肝菌燉飯</strong> - 土壤氣息呼應</div><div class=\"dish\">🧀 <strong>Fontina 起司</strong> - Valle d'Aosta 特產</div><div class=\"dish\">🥘 <strong>野味燉菜</strong> - 山區傳統</div></div></div><div class=\"region-pairing\"><h5>Gattinara - 結構強勁</h5><div class=\"dishes\"><div class=\"dish\">🥩 <strong>Brasato 紅酒燉牛肉</strong> - 皮埃蒙特經典</div><div class=\"dish\">🦌 <strong>鹿肉</strong> - 野味配老酒</div><div class=\"dish\">🍖 <strong>烤羊腿</strong> - 單寧匹配油脂</div><div class=\"dish\">🧀 <strong>Gorgonzola 藍紋起司</strong> - 區域配對</div></div></div><div class=\"region-pairing\"><h5>Boca - 優雅複雜</h5><div class=\"dishes\"><div class=\"dish\">🦆 <strong>鴨胸配莓果醬</strong> - 花香呼應</div><div class=\"dish\">🍄 <strong>白松露料理</strong> - 複雜配複雜</div><div class=\"dish\">🐇 <strong>兔肉燉菜</strong> - 細緻肉類</div><div class=\"dish\">🧀 <strong>陳年 Parmigiano</strong> - 增強餘韻</div></div></div></div></div><div class=\"serving-guide\"><h4>🌡️ 侍酒建議</h4><div class=\"service-tips\"><div class=\"tip-card\"><h6>溫度</h6><p><strong>年輕酒（&lt;5年）：</strong>16-17°C</p><p><strong>陳年酒（5-15年）：</strong>17-18°C</p><p><strong>老酒（15年+）：</strong>18-19°C</p></div><div class=\"tip-card\"><h6>醒酒</h6><p><strong>年輕酒：</strong>2-3 小時（需要柔化）</p><p><strong>中年酒：</strong>1-2 小時</p><p><strong>老酒：</strong>30分鐘或現開現喝（避免過度氧化）</p></div><div class=\"tip-card\"><h6>杯型</h6><p>大型勃根地杯（Burgundy glass）</p><p>大開口幫助香氣發展</p></div><div class=\"tip-card\"><h6>最佳飲用</h6><p><strong>Carema：</strong>5-15 年</p><p><strong>Gattinara：</strong>8-25 年</p><p><strong>Boca：</strong>7-20 年</p></div></div></div></div>"
-    },
-    {
-      "type": "list",
-      "title": "💎 投資與收藏建議",
-      "points": [
-        "✅ 投資優勢極度稀有性（產量極低）價格遠低於品質相當的 Barolo國際認知度上升中名莊（如 Gaja）投資帶動關注陳年潛力強",
-        "⚠️ 風險因素市場流動性低（難轉手）知名度仍限於專業圈產區極小、產量不穩定需要長時間陳年（資金占用）"
-      ]
-    },
-    {
-      "type": "list",
-      "title": "🎓 專家重點回顧",
-      "points": [
-        "✓ Alto Piemonte 在 19 世紀是義大利最重要產區，面積達 40,000 公頃",
-        "✓ Carema 是義大利最高海拔的 Nebbiolo 產區（400-700m）",
-        "✓ Carema 使用獨特的石柱 Pergola 培型系統",
-        "✓ Gattinara 在1990年成為 Alto Piemonte 首個 DOCG",
-        "✓ Gattinara 的火山岩土壤賦予獨特的礦物感和煙燻氣息",
-        "✓ Boca 是全義大利最小產區之一，僅 12 公頃",
-        "✓ Boca 使用獨特的三品種混釀（Nebbiolo + Vespolina + Uva Rara）",
-        "✓ Le Piane 是 Boca 的傳奇生產者，採用生物動力法",
-        "✓ 這些產區的價格遠低於品質相當的 Barolo，投資潛力巨大"
+        "Alto Piemonte 19 世紀全盛期葡萄園面積達 40,000 公頃，因根瘤蚜、兩次大戰和工業化而萎縮至今約 1,000 公頃",
+        "三大產區的共同點：全用 Nebbiolo（當地稱 Spanna）釀造，風格比 Barolo 更清瘦優雅",
+        "Carema DOC：阿爾卑斯邊境，片麻岩土壤，傳統 Pergola 石柱（Topie）培型是最大特色",
+        "Carema 風格清瘦優雅，玫瑰花瓣和礦物感，酸度極高，陳年 10-25 年，稱「山嶺版 Barolo」",
+        "Gattinara DOCG（1990）：斑岩（Porphyry）火成岩土壤賦予獨特鐵鏽礦物感，Nebbiolo 最低 90%",
+        "Gattinara 陳年潛力 15-40 年，Antoniolo 和 Nervi-Conterno 是最具代表性酒莊，近年再度受矚目",
+        "Boca DOC：義大利最稀有產區之一，僅 12 公頃，Nebbiolo + Vespolina + Uva Rara 混釀",
+        "Boca 代表酒莊 Le Piane（Christoph Künzli）是現代復興先驅，被稱為「Alto Piemonte 的優雅表達」",
+        "三大產區性價比遠高於 Barolo，是尋找「下一個偉大義大利紅酒」的最佳選擇"
       ]
     },
     {
       "type": "quiz",
-      "title": "🧠 Friuli 橘酒革命知識檢測",
+      "title": "隱藏寶石產區知識檢測",
       "_marker": "// inject-italy-l3-quiz",
       "questions": [
         {
           "type": "single",
-          "question": "Alto Piemonte 在 19 世紀末的葡萄園面積是多少？",
+          "question": "Alto Piemonte 在 19 世紀全盛期的葡萄園面積約有多少公頃？",
           "options": [
-            "5,000 公頃",
-            "15,000 公頃",
+            "10,000 公頃",
+            "20,000 公頃",
             "40,000 公頃",
-            "80,000 公頃"
+            "5,000 公頃"
           ],
           "correct": 2,
-          "explanation": "Alto Piemonte 在 19 世紀末達到巔峰，葡萄園面積高達 40,000 公頃，遠超今日的 Langhe 產區。"
+          "explanation": "Alto Piemonte 在 19 世紀末達到全盛期，葡萄園面積高達 40,000 公頃。後因根瘤蚜、兩次大戰和工業化，面積大幅縮減至今日的約 1,000 公頃。"
         },
         {
           "type": "single",
-          "question": "Carema 使用哪種特殊的葡萄培型系統？",
+          "question": "Carema DOC 的傳統培型系統有何特色？",
           "options": [
-            "Guyot",
-            "Alberello",
-            "Pergola（石柱支撐）",
-            "Cordone Speronato"
-          ],
-          "correct": 2,
-          "explanation": "Carema 使用獨特的石柱 Pergola 系統來支撐葡萄藤，以抵抗山谷的強風。"
-        },
-        {
-          "type": "single",
-          "question": "Gattinara 的火山岩土壤主要是什麼岩石？",
-          "options": [
-            "玄武岩",
-            "斑岩",
-            "石灰岩",
-            "片岩"
+            "大型棚架（Tendone）平展式",
+            "石柱支撐的 Pergola 系統（Topie）",
+            "Guyot 單側延伸系統",
+            "Alberello 灌木式"
           ],
           "correct": 1,
-          "explanation": "Gattinara 的土壤主要是斑岩（火成岩），由數百萬年前的火山活動形成，賦予酒款獨特的礦物感和煙燻氣息。"
+          "explanation": "Carema DOC 採用傳統的 Pergola 架型（稱 Topie），由手工打造的石柱支撐，讓葡萄藤在山坡陡峭地形中生長，是 Carema 最具特色的文化景觀。"
         },
         {
           "type": "single",
-          "question": "Boca DOC 的總葡萄園面積約為多少？",
+          "question": "Gattinara DOCG 的土壤特色是？",
+          "options": [
+            "黏土石灰岩",
+            "斑岩（Porphyry，火成岩），礦物感強烈",
+            "沙質土壤",
+            "凝灰岩"
+          ],
+          "correct": 1,
+          "explanation": "Gattinara DOCG 的土壤以斑岩（Porphyry）為主，這是一種由火成岩演化的岩石，賦予 Gattinara 獨特的礦物感和鐵鏽質地。"
+        },
+        {
+          "type": "single",
+          "question": "Boca DOC 的葡萄園面積大約是多少？",
           "options": [
             "12 公頃",
             "50 公頃",
-            "100 公頃",
+            "200 公頃",
             "500 公頃"
           ],
           "correct": 0,
-          "explanation": "Boca 是全義大利最小產區之一，總面積僅約 12 公頃，年產量僅約 40,000 瓶。"
+          "explanation": "Boca DOC 是義大利最稀有的產區之一，總葡萄園面積僅約 12 公頃，每年產量極為有限，是真正的「義大利最稀有葡萄酒」之一。"
         },
         {
           "type": "single",
-          "question": "Josko Gravner 對橘酒運動的核心貢獻是？",
+          "question": "Boca DOC 的法定混釀品種組合是？",
           "options": [
-            "A. 發明了 appassimento 工法",
-            "B. 在 Friuli 復興陶甕（anfora）帶皮浸漬白葡萄釀法",
-            "C. 創立了第一個 DOCG 橘酒規範",
-            "D. 將 Ribolla Gialla 引進美國"
+            "100% Nebbiolo",
+            "Nebbiolo + Vespolina + Uva Rara",
+            "Nebbiolo + Barbera",
+            "Nebbiolo + Sangiovese"
           ],
           "correct": 1,
-          "explanation": "Gravner 在 1990 年代末訪問喬治亞後，開始使用傳統陶甕（qvevri/anfora）以帶皮浸漬方式釀造 Ribolla Gialla，引領全球橘酒現代復興運動。"
+          "explanation": "Boca DOC 法規允許在 Nebbiolo（Spanna，70-100%）的基礎上加入 Vespolina（增加花香）和 Uva Rara（增加柔軟度），創造出輕盈芬芳的獨特風格。"
         }
       ]
     }

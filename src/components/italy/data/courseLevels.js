@@ -146,23 +146,23 @@ export const courseLevels = {
         id: 'L3M1',
         title: '第一章：稀有品種與小產區',
         lessons: [
-          { id: 'L3M1L1', title: 'Valle d\'Aosta 瓦萊達奧斯塔' },
-          { id: 'L3M1L2', title: '北義稀有品種' },
-          { id: 'L3M1L3', title: '南義稀有品種與本土品種' },
-          { id: 'L3M1L4', title: 'Friuli 白酒革命' }
+          { id: 'L3M1L1', title: '北義稀有品種寶藏' },
+          { id: 'L3M1L2', title: '中義稀有品種' },
+          { id: 'L3M1L3', title: '南義原生品種寶庫' },
+          { id: 'L3M1L4', title: '隱藏寶石產區' }
         ]
       },
       { id: 'L3M2', title: '第二章：酒標解讀專家課', lessons: [
-        { id: 'L3M2L1', title: 'DOCG 酒標深度解析' },
-        { id: 'L3M2L2', title: '年份與生產者資訊' },
-        { id: 'L3M2L3', title: '偽標識別技巧' },
-        { id: 'L3M2L4', title: 'IGT 超級托斯卡納指南' }
+        { id: 'L3M2L1', title: 'MGA 與 Cru 系統詳解' },
+        { id: 'L3M2L2', title: '標示術語完全指南' },
+        { id: 'L3M2L3', title: '生產者風格辨識' },
+        { id: 'L3M2L4', title: '分級制度深度解析' }
       ]},
       { id: 'L3M3', title: '第三章：年份與陳年', lessons: [
-        { id: 'L3M3L1', title: '義大利年份指南' },
-        { id: 'L3M3L2', title: '陳年條件與地窖管理' },
-        { id: 'L3M3L3', title: '適飲期判斷' },
-        { id: 'L3M3L4', title: '投資級年份分析' }
+        { id: 'L3M3L1', title: 'Barolo 年份指南' },
+        { id: 'L3M3L2', title: 'Brunello & Chianti 年份解析' },
+        { id: 'L3M3L3', title: 'Amarone 陳年演變' },
+        { id: 'L3M3L4', title: '陳年潛力判斷' }
       ]},
       { id: 'L3M4', title: '第四章：盲品訓練', lessons: [
         { id: 'L3M4L1', title: '系統化盲品方法論' },

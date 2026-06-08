@@ -1,166 +1,152 @@
 {
   "lessonId": "L3M1L2",
-  "title": "中義稀有品種 (Ciliegiolo, Cesanese)",
+  "title": "中義稀有品種",
   "quiz": [
     {
-      "question": "Ciliegiolo 這個名字的由來是什麼？",
+      "question": "Ciliegiolo 名字的由來是什麼？",
       "options": [
-        "產區名稱",
-        "櫻桃(Ciliegia)",
-        "發現者名字",
-        "羅馬神話人物"
+        "義大利語「草原」",
+        "義大利語「櫻桃」（Ciliegia）",
+        "古羅馬地名",
+        "種植者的姓氏"
       ],
       "answer": 1,
-      "explanation": "Ciliegiolo 源自義大利文 'Ciliegia'（櫻桃），因其明顯的櫻桃風味而得名。"
+      "explanation": "Ciliegiolo 名字來自義大利語「Ciliegia（櫻桃）」，因其濃郁的新鮮櫻桃香氣而得名。"
     },
     {
-      "question": "哪位古羅馬學者在著作中提及 Cesanese 葡萄？",
+      "question": "哪位古羅馬學者最早詳細記載 Cesanese 葡萄？",
       "options": [
-        "Julius Caesar",
-        "Pliny the Elder",
-        "Cicero",
-        "Virgil"
+        "Virgil（維吉爾）",
+        "Pliny the Elder（老普林尼）",
+        "Julius Caesar（凱撒大帝）",
+        "Cato（加圖）"
       ],
       "answer": 1,
-      "explanation": "古羅馬博物學家 Pliny the Elder 在其著作中提及了 Cesanese，證明這個品種有超過 2000 年的歷史。"
+      "explanation": "老普林尼（Pliny the Elder）在《自然史》中詳細記載了 Cesanese 葡萄，證明此品種在拉吉歐（Lazio）有超過 2000 年的歷史。"
     },
     {
-      "question": "Cesanese del Piglio 在哪一年獲得 DOCG 認證？",
+      "question": "Cesanese del Piglio DOCG 在哪一年獲得認證？",
       "options": [
-        "1996",
         "2003",
+        "1988",
         "2008",
         "2015"
       ],
       "answer": 2,
-      "explanation": "Cesanese del Piglio 在 2008 年獲得 DOCG 認證，成為拉齊奧大區第一個也是唯一的 DOCG。"
+      "explanation": "Cesanese del Piglio 在 2008 年成為 Lazio 唯一的 DOCG，確立了其在義大利葡萄酒中的頂尖地位。"
     },
     {
-      "question": "哪個酒莊是 Ciliegiolo 自然酒的代表？",
+      "question": "以下哪位釀酒師最代表 Ciliegiolo 自然酒風格？",
       "options": [
-        "Gaja",
-        "Paolo Bea",
-        "Antinori",
-        "Frescobaldi"
+        "Angelo Gaja",
+        "Paolo Bea（Umbria）",
+        "Giacomo Conterno",
+        "Bruno Giacosa"
       ],
       "answer": 1,
-      "explanation": "Paolo Bea 是翁布里亞的自然酒先驅，其 Rosso de Veo（100% Ciliegiolo）是國際知名的自然酒代表。"
+      "explanation": "Paolo Bea 位於 Umbria 的 Montefalco，以自然農法釀造 Ciliegiolo，是該品種自然酒風格的代表人物。"
     }
   ],
   "slides": [
     {
       "type": "title",
-      "title": "🍒 中義稀有品種",
-      "subtitle": "Ciliegiolo & Cesanese - 被遺忘的托斯卡納與拉齊奧瑰寶"
+      "title": "中義稀有品種",
+      "subtitle": "Ciliegiolo · Cesanese — 托斯卡納與拉吉歐的隱藏瑰寶"
     },
     {
       "type": "content",
-      "title": "🍒 Ciliegiolo - 櫻桃之酒",
-      "content": "<div class=\"grape-profile\"><div class=\"profile-header\"><div class=\"origin-badge\">Tuscany &amp; Umbria</div><h3>Ciliegiolo (奇列焦洛)</h3><div class=\"name-meaning\"><strong>名字由來：</strong>Ciliegia = 櫻桃（義大利文）</div></div><div class=\"grape-story\"><h4>📖 身世之謎</h4><p>長期被認為是 <strong>Sangiovese 的祖先</strong>之一，但 DNA 研究顯示並無直接關聯。真正的起源仍是謎團，但在托斯卡納和翁布里亞有數百年歷史。</p></div><div class=\"characteristics-grid\"><div class=\"char-card primary\"><h5>🍷 核心特徵</h5><ul><li><strong>顏色：</strong>淺至中等的紅寶石色</li><li><strong>酒精度：</strong>12-13.5%（中等）</li><li><strong>酸度：</strong>中等（比 Sangiovese 低）</li><li><strong>單寧：</strong>柔軟、絲滑</li><li><strong>酒體：</strong>中等、優雅</li></ul></div><div class=\"char-card flavor\"><h5>🍇 風味圖譜</h5><div class=\"flavor-category\"><h6>🔴 紅色水果主導</h6><ul><li>櫻桃（新鮮與煮熟）</li><li>草莓</li><li>覆盆莓</li></ul></div><div class=\"flavor-category\"><h6>🌸 花香與香料</h6><ul><li>紫羅蘭</li><li>玫瑰花瓣</li><li>白胡椒</li></ul></div></div></div><div class=\"regional-styles\"><h4>🗺️ 三大產區風格</h4><div class=\"regions-grid\"><div class=\"region-card maremma\"><div class=\"region-badge\">Maremma</div><h5>托斯卡納海岸</h5><ul><li><strong>風格：</strong>果味濃郁、現代</li><li><strong>釀造：</strong>常與 Sangiovese 混釀</li><li><strong>酒莊：</strong>Fattoria Le Pupille</li><li><strong>特色：</strong>溫暖氣候、成熟度高</li></ul></div><div class=\"region-card umbria\"><div class=\"region-badge\">Umbria</div><h5>翁布里亞</h5><ul><li><strong>風格：</strong>傳統、優雅</li><li><strong>釀造：</strong>單一品種為主</li><li><strong>酒莊：</strong>Paolo Bea（自然酒先驅）</li><li><strong>特色：</strong>純淨、礦物感</li></ul></div><div class=\"region-card chianti\"><div class=\"region-badge\">Chianti Classico</div><h5>奇揚地經典區</h5><ul><li><strong>風格：</strong>配角、增添香氣</li><li><strong>釀造：</strong>混釀（&lt;5%）</li><li><strong>角色：</strong>柔化單寧、增香</li><li><strong>歷史：</strong>傳統配方成分</li></ul></div></div></div></div>"
+      "title": "Ciliegiolo — 義大利的「小櫻桃」",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>身世之謎：Sangiovese 的親代品種</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">DNA 研究確認 Ciliegiolo 是 Sangiovese 的親代品種之一，雖然在托斯卡納歷史悠久，但長期作為調配角色。近年在 Maremma 和 Umbria 以單品釀造贏得國際讚譽。</p><div class=\"science-card\">主要產區：Maremma Toscana DOC、Ciliegiolo d'Umbria IGT｜最早記錄：16 世紀托斯卡納文獻</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">品種特徵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">風味：新鮮櫻桃（最核心）、草莓、紫羅蘭、輕微香料感｜低單寧、高酸度、清新果味</div><div class=\"orvieto-card\">釀酒風格：多元——自然酒、有機農法、法式小橡木桶熟成均有出色作品</div><div class=\"orvieto-card\">頂級酒莊：Sassotondo（Maremma）、Paolo Bea（Umbria）、Mocali｜€15-40</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🏛️ Cesanese - 羅馬的古老遺產",
-      "content": "<div class=\"grape-profile\"><div class=\"profile-header\"><div class=\"origin-badge\">Lazio - Cesanese del Piglio DOCG</div><h3>Cesanese (切薩內塞)</h3><div class=\"rarity-badge\">區域特產 ⭐⭐⭐⭐</div></div><div class=\"ancient-story\"><div class=\"timeline-header\">📜 2000年的歷史</div><div class=\"timeline\"><div class=\"timeline-item\"><div class=\"year\">羅馬時代</div><p>古羅馬詩人 <strong>Pliny the Elder</strong> 在著作中提及此葡萄</p></div><div class=\"timeline-item\"><div class=\"year\">中世紀</div><p>教皇宮廷的御用葡萄酒品種</p></div><div class=\"timeline-item\"><div class=\"year\">20世紀</div><p>幾近被遺忘，僅剩老農種植</p></div><div class=\"timeline-item\"><div class=\"year\">2008</div><p><strong>Cesanese del Piglio</strong> 獲得 DOCG 認證</p></div></div></div><div class=\"varieties-section\"><h4>🍇 兩個主要克隆</h4><div class=\"clones-comparison\"><div class=\"clone-card\"><h5>Cesanese Comune</h5><div class=\"clone-details\"><p><strong>特點：</strong>產量高、品質中等</p><p><strong>風格：</strong>果味簡單、適合日常飲用</p><p><strong>使用：</strong>傳統 frizzante 風格</p></div></div><div class=\"clone-card premium\"><h5>Cesanese d'Affile ⭐</h5><div class=\"clone-details\"><p><strong>特點：</strong>產量低、品質優異</p><p><strong>風格：</strong>複雜、結構、陳年潛力</p><p><strong>使用：</strong>頂級 DOCG 干型紅酒</p></div></div></div></div><div class=\"characteristics-grid\"><div class=\"char-card\"><h5>🍷 干型風格 (Secco)</h5><ul><li>深紫紅色</li><li>黑櫻桃、黑莓</li><li>藥草、香料（月桂葉）</li><li>中高酸度、強單寧</li><li>陳年潛力 8-15 年</li></ul></div><div class=\"char-card\"><h5>🍾 甜型氣泡 (Dolce)</h5><ul><li>傳統農家風格</li><li>低酒精（7-9%）</li><li>櫻桃、草莓甜美</li><li>輕盈氣泡</li><li>適合甜點搭配</li></ul></div></div></div>"
+      "title": "Cesanese — 羅馬的葡萄酒傳奇",
+      "content": "<div class=\"variety-deep-section\"><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">2000 年前</div><div class=\"timeline-content\">老普林尼在《自然史》記載 Cesanese，拉吉歐地區 2000+ 年栽培歷史，古羅馬帝王御用葡萄酒</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">中世紀</div><div class=\"timeline-content\">維持 Lazio 主要品種地位，供應羅馬教廷，但知名度僅限義大利境內</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">2008</div><div class=\"timeline-content\">Cesanese del Piglio 獲 DOCG 認證，成為 Lazio 唯一 DOCG，確立世界級地位</div></div></div><div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Cesanese d'Affile（高品質克隆）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">濃郁、結構強、陳年潛力 10-20 年｜黑莓、石榴、野花香氣｜橡木桶熟成複雜度高</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Cesanese Comune（大眾克隆）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">果味清新、較易飲｜年輕時即可享用｜適合日常佐餐，產量較大</div></div></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🔬 兩大品種深度對比",
-      "content": "<div class=\"detailed-comparison\"><table class=\"pro-table\"><thead><tr><th class=\"category\">特性</th><th class=\"ciliegiolo-col\">Ciliegiolo</th><th class=\"cesanese-col\">Cesanese</th></tr></thead><tbody><tr><td><strong>起源</strong></td><td>托斯卡納/翁布里亞（中世紀）</td><td>拉齊奧（羅馬時代）</td></tr><tr><td><strong>DNA親緣</strong></td><td>可能與 Sangiovese 有間接關係</td><td>獨立品種、無明確親緣</td></tr><tr><td><strong>顏色深度</strong></td><td>淺至中等紅寶石</td><td>深紫紅（Affile 克隆）</td></tr><tr><td><strong>主要風味</strong></td><td>新鮮櫻桃、草莓、紫羅蘭</td><td>黑櫻桃、藥草、月桂葉</td></tr><tr><td><strong>單寧結構</strong></td><td>柔軟、絲滑</td><td>強勁、需要陳年</td></tr><tr><td><strong>酸度</strong></td><td>中等</td><td>中高</td></tr><tr><td><strong>酒體</strong></td><td>中等、優雅</td><td>中飽滿、結構感強</td></tr><tr><td><strong>最佳飲用</strong></td><td>年輕飲用（2-5年）</td><td>陳年後飲用（5-15年）</td></tr><tr><td><strong>主要產區</strong></td><td>Maremma, Umbria</td><td>Piglio, Olevano Romano</td></tr><tr><td><strong>DOCG認證</strong></td><td>無專屬 DOCG</td><td>Cesanese del Piglio DOCG (2008)</td></tr><tr><td><strong>價格帶</strong></td><td>€€-€€€</td><td>€€-€€€€</td></tr></tbody></table></div>"
-    },
-    {
-      "type": "content",
-      "title": "🏅 頂級生產者推薦",
-      "content": "<div class=\"producers-showcase\"><div class=\"producer-section ciliegiolo-producers\"><h4>🍒 Ciliegiolo 精選酒莊</h4><div class=\"producers-grid\"><div class=\"winery-card\"><h5>Paolo Bea</h5><div class=\"winery-badge natural\">自然酒先驅</div><p class=\"location\">📍 Umbria - Montefalco</p><div class=\"wine-details\"><p><strong>代表酒款：</strong>Rosso de Veo</p><p><strong>風格：</strong>100% Ciliegiolo, 自然釀造</p><p><strong>特色：</strong>零添加、野生酵母</p><p><strong>價格：</strong>€40-60</p></div></div><div class=\"winery-card\"><h5>Fattoria Le Pupille</h5><div class=\"winery-badge\">Maremma 代表</div><p class=\"location\">📍 Tuscany - Maremma</p><div class=\"wine-details\"><p><strong>代表酒款：</strong>Poggio Valente</p><p><strong>風格：</strong>Ciliegiolo 主導混釀</p><p><strong>特色：</strong>現代風格、果味濃郁</p><p><strong>價格：</strong>€25-35</p></div></div><div class=\"winery-card\"><h5>Collecapretta</h5><div class=\"winery-badge\">傳統風格</div><p class=\"location\">📍 Tuscany</p><div class=\"wine-details\"><p><strong>代表酒款：</strong>Ciliegiolo Superiore</p><p><strong>風格：</strong>100% 單一品種</p><p><strong>特色：</strong>傳統釀造、優雅</p><p><strong>價格：</strong>€18-25</p></div></div></div></div><div class=\"producer-section cesanese-producers\"><h4>🏛️ Cesanese 精選酒莊</h4><div class=\"producers-grid\"><div class=\"winery-card\"><h5>Casale della Ioria</h5><div class=\"winery-badge docg\">DOCG 先鋒</div><p class=\"location\">📍 Lazio - Piglio</p><div class=\"wine-details\"><p><strong>代表酒款：</strong>Cesanese del Piglio Superiore</p><p><strong>風格：</strong>Affile 克隆、干型</p><p><strong>陳年：</strong>橡木桶 18 個月</p><p><strong>價格：</strong>€30-45</p></div></div><div class=\"winery-card\"><h5>Coletti Conti</h5><div class=\"winery-badge\">現代先驅</div><p class=\"location\">📍 Lazio - Anagni</p><div class=\"wine-details\"><p><strong>代表酒款：</strong>Hernicus</p><p><strong>風格：</strong>國際化釀造</p><p><strong>特色：</strong>法國橡木桶、現代</p><p><strong>價格：</strong>€35-50</p></div></div><div class=\"winery-card\"><h5>Corte dei Papi</h5><div class=\"winery-badge\">傳統守護者</div><p class=\"location\">📍 Lazio - Piglio</p><div class=\"wine-details\"><p><strong>代表酒款：</strong>Le Mura Saracene</p><p><strong>風格：</strong>傳統釀造</p><p><strong>特色：</strong>老藤、手工採收</p><p><strong>價格：</strong>€20-30</p></div></div></div></div></div>"
-    },
-    {
-      "type": "content",
-      "title": "🍴 專家配餐指南",
-      "content": "<div class=\"expert-pairing\"><div class=\"pairing-column\"><div class=\"pairing-title ciliegiolo-title\"><h4>🍒 Ciliegiolo 配餐</h4><p class=\"pairing-philosophy\">輕盈、果味主導 → 簡單、新鮮的料理</p></div><div class=\"dishes-list\"><div class=\"dish-item\"><div class=\"dish-emoji\">🍕</div><div class=\"dish-content\"><h5>瑪格麗特披薩</h5><p>經典搭配，酸度平衡番茄</p></div></div><div class=\"dish-item\"><div class=\"dish-emoji\">🍝</div><div class=\"dish-content\"><h5>Amatriciana 義大利麵</h5><p>番茄培根麵，羅馬經典</p></div></div><div class=\"dish-item\"><div class=\"dish-emoji\">🧀</div><div class=\"dish-content\"><h5>Pecorino 起司</h5><p>中度陳年，托斯卡納特產</p></div></div><div class=\"dish-item\"><div class=\"dish-emoji\">🍖</div><div class=\"dish-content\"><h5>烤豬排</h5><p>簡單調味，凸顯果味</p></div></div></div></div><div class=\"pairing-column\"><div class=\"pairing-title cesanese-title\"><h4>🏛️ Cesanese 配餐</h4><p class=\"pairing-philosophy\">結構強勁 → 厚重、傳統的羅馬料理</p></div><div class=\"dishes-list\"><div class=\"dish-item\"><div class=\"dish-emoji\">🍝</div><div class=\"dish-content\"><h5>Carbonara</h5><p>經典羅馬麵，濃郁蛋黃醬</p></div></div><div class=\"dish-item\"><div class=\"dish-emoji\">🥩</div><div class=\"dish-content\"><h5>Abbacchio（烤羊羔）</h5><p>羅馬傳統，完美地域配對</p></div></div><div class=\"dish-item\"><div class=\"dish-emoji\">🍖</div><div class=\"dish-content\"><h5>Coda alla Vaccinara</h5><p>燉牛尾，羅馬名菜</p></div></div><div class=\"dish-item\"><div class=\"dish-emoji\">🧀</div><div class=\"dish-content\"><h5>陳年 Pecorino Romano</h5><p>強烈風味的硬質起司</p></div></div></div></div></div><div class=\"temperature-guide\"><h4>🌡️ 侍酒溫度</h4><div class=\"temp-bars\"><div class=\"temp-bar\"><span class=\"wine-name\">Ciliegiolo</span><div class=\"temp-range\" style=\"background:linear-gradient(90deg, #transparent 0%, #ff6b6b 55%, #ff6b6b 75%, transparent 100%)\"><span class=\"temp-mark\" style=\"left:55%\">14°C</span><span class=\"temp-mark\" style=\"left:75%\">16°C</span></div></div><div class=\"temp-bar\"><span class=\"wine-name\">Cesanese (年輕)</span><div class=\"temp-range\" style=\"background:linear-gradient(90deg, transparent 0%, #c92a2a 60%, #c92a2a 80%, transparent 100%)\"><span class=\"temp-mark\" style=\"left:60%\">16°C</span><span class=\"temp-mark\" style=\"left:80%\">18°C</span></div></div><div class=\"temp-bar\"><span class=\"wine-name\">Cesanese (陳年)</span><div class=\"temp-range\" style=\"background:linear-gradient(90deg, transparent 0%, #7f1d1d 65%, #7f1d1d 85%, transparent 100%)\"><span class=\"temp-mark\" style=\"left:65%\">18°C</span><span class=\"temp-mark\" style=\"left:85%\">20°C</span></div></div></div></div>"
-    },
-    {
-      "type": "content",
-      "title": "🎯 市場洞察與投資建議",
-      "content": "<div class=\"market-insights\"><div class=\"insight-card trend\"><div class=\"card-icon\">📈</div><h4>市場趨勢</h4><ul><li><strong>Ciliegiolo：</strong>自然酒運動推動下復興中</li><li><strong>Cesanese：</strong>DOCG 認證後知名度提升</li><li>國際市場認知度仍低，價格被低估</li><li>頂級酒款有升值潛力</li></ul></div><div class=\"insight-card availability\"><div class=\"card-icon\">🌍</div><h4>可獲得性</h4><ul><li>義大利本地：容易找到</li><li>歐洲其他國家：專業酒商</li><li>亞洲/美洲：極稀有</li><li>網路購買是主要管道</li></ul></div><div class=\"insight-card investment\"><div class=\"card-icon\">💎</div><h4>收藏建議</h4><div class=\"recommendation\"><p><strong>值得收藏：</strong></p><ul><li>Paolo Bea Rosso de Veo (Ciliegiolo)</li><li>Casale della Ioria Superiore (Cesanese)</li><li>Coletti Conti Hernicus (Cesanese)</li></ul><p><strong>陳年潛力：</strong>Cesanese d'Affile 干型可達 15 年</p></div></div></div>"
+      "title": "兩大品種全方位對比",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Ciliegiolo 與 Cesanese 同為中義稀有品種，卻在風格上形成鮮明對比——一個清新果香，一個古老厚重。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Ciliegiolo（清新派）</h3><ul><li><strong>產區：</strong>Maremma Toscana DOC、Umbria IGT</li><li><strong>風格：</strong>清新櫻桃、清爽、低單寧</li><li><strong>陳年：</strong>1-8 年，早飲為主</li><li><strong>適合：</strong>托斯卡納牛排、番茄料理</li><li><strong>代表：</strong>Sassotondo、Paolo Bea</li><li><strong>價格：</strong>€15-40，性價比高</li></ul></div><div class=\"method-card modern\"><h3>Cesanese（古老派）</h3><ul><li><strong>產區：</strong>Cesanese del Piglio DOCG（Lazio 唯一 DOCG）</li><li><strong>風格：</strong>黑莓、石榴、深厚單寧</li><li><strong>陳年：</strong>5-20 年，Riserva 陳年潛力強</li><li><strong>適合：</strong>羊肉燉菜、Amatriciana 料理</li><li><strong>代表：</strong>Petrucca、Casale della Ioria</li><li><strong>價格：</strong>€20-60，頂尖款可達 €100</li></ul></div></div></div></div>"
     },
     {
       "type": "list",
-      "title": "🎓 專家重點回顧",
+      "title": "重點回顧",
       "points": [
-        "✓ Ciliegiolo 名字源自「櫻桃」，以新鮮櫻桃和紫羅蘭香氣為特色",
-        "✓ Ciliegiolo 適合年輕飲用，單寧柔軟，不適合長期陳年",
-        "✓ Paolo Bea 是 Ciliegiolo 自然酒的先驅，國際知名",
-        "✓ Cesanese 有 2000 年歷史，古羅馬時代已被記載",
-        "✓ Cesanese d'Affile 克隆品質遠優於 Comune 克隆",
-        "✓ Cesanese del Piglio DOCG (2008) 是頂級認證",
-        "✓ Cesanese 干型風格需要陳年，有強勁單寧和藥草風味",
-        "✓ 兩者都是被低估的品種，有投資潛力"
+        "Ciliegiolo 名稱來自義大利語「Ciliegia（櫻桃）」，DNA 研究確認是 Sangiovese 的親代品種",
+        "Ciliegiolo 主要產區：Maremma Toscana DOC 和 Umbria，低單寧、高酸度、新鮮櫻桃風味",
+        "Ciliegiolo 釀酒風格多元：自然酒、有機農法、橡木桶均有出色詮釋，代表：Sassotondo",
+        "Cesanese 是 Lazio 最重要品種，老普林尼在 2000 年前的《自然史》中即有記載",
+        "Cesanese 有兩種主要克隆：d'Affile（高品質，結構強）和 Comune（清新易飲，產量大）",
+        "Cesanese del Piglio 在 2008 年獲 DOCG 認證，是 Lazio 唯一的 DOCG 產區",
+        "Cesanese 黑莓、石榴、野花香氣，陳年潛力 5-20 年，適合搭配羅馬式羊肉料理",
+        "兩者對比：Ciliegiolo 清新早飲（€15-40）vs Cesanese 結構厚重陳年（€20-100）",
+        "中義稀有品種的共同特色：代表在地風土，風格獨特，近年受到國際市場重視"
       ]
     },
     {
       "type": "quiz",
-      "title": "🧠 北義特殊品種知識檢測",
+      "title": "中義稀有品種知識檢測",
       "_marker": "// inject-italy-l3-quiz",
       "questions": [
         {
           "type": "single",
-          "question": "Ciliegiolo 這個名字的由來是什麼？",
+          "question": "Ciliegiolo 名字的由來是什麼？",
           "options": [
-            "產區名稱",
-            "櫻桃(Ciliegia)",
-            "發現者名字",
-            "羅馬神話人物"
+            "義大利語「草原」",
+            "義大利語「櫻桃」（Ciliegia）",
+            "古羅馬地名",
+            "種植者的姓氏"
           ],
           "correct": 1,
-          "explanation": "Ciliegiolo 源自義大利文 'Ciliegia'（櫻桃），因其明顯的櫻桃風味而得名。"
+          "explanation": "Ciliegiolo 名字來自義大利語「Ciliegia（櫻桃）」，因其濃郁的新鮮櫻桃香氣而得名。"
         },
         {
           "type": "single",
-          "question": "哪位古羅馬學者在著作中提及 Cesanese 葡萄？",
+          "question": "哪位古羅馬學者最早詳細記載 Cesanese 葡萄？",
           "options": [
-            "Julius Caesar",
-            "Pliny the Elder",
-            "Cicero",
-            "Virgil"
+            "Virgil（維吉爾）",
+            "Pliny the Elder（老普林尼）",
+            "Julius Caesar（凱撒大帝）",
+            "Cato（加圖）"
           ],
           "correct": 1,
-          "explanation": "古羅馬博物學家 Pliny the Elder 在其著作中提及了 Cesanese，證明這個品種有超過 2000 年的歷史。"
+          "explanation": "老普林尼（Pliny the Elder）在《自然史》中詳細記載了 Cesanese 葡萄，證明此品種在拉吉歐（Lazio）有超過 2000 年的歷史。"
         },
         {
           "type": "single",
-          "question": "Cesanese del Piglio 在哪一年獲得 DOCG 認證？",
+          "question": "Cesanese del Piglio DOCG 在哪一年獲得認證？",
           "options": [
-            "1996",
             "2003",
+            "1988",
             "2008",
             "2015"
           ],
           "correct": 2,
-          "explanation": "Cesanese del Piglio 在 2008 年獲得 DOCG 認證，成為拉齊奧大區第一個也是唯一的 DOCG。"
+          "explanation": "Cesanese del Piglio 在 2008 年成為 Lazio 唯一的 DOCG，確立了其在義大利葡萄酒中的頂尖地位。"
         },
         {
           "type": "single",
-          "question": "哪個酒莊是 Ciliegiolo 自然酒的代表？",
+          "question": "以下哪位釀酒師最代表 Ciliegiolo 自然酒風格？",
           "options": [
-            "Gaja",
-            "Paolo Bea",
-            "Antinori",
-            "Frescobaldi"
+            "Angelo Gaja",
+            "Paolo Bea（Umbria）",
+            "Giacomo Conterno",
+            "Bruno Giacosa"
           ],
           "correct": 1,
-          "explanation": "Paolo Bea 是翁布里亞的自然酒先驅，其 Rosso de Veo（100% Ciliegiolo）是國際知名的自然酒代表。"
+          "explanation": "Paolo Bea 位於 Umbria 的 Montefalco，以自然農法釀造 Ciliegiolo，是該品種自然酒風格的代表人物。"
         },
         {
           "type": "single",
-          "question": "Nosiola 是哪個產區最具代表性的白品種？",
+          "question": "Cesanese 的兩個主要克隆中，哪一個品質更高、結構更強？",
           "options": [
-            "A. Friuli",
-            "B. Trentino",
-            "C. Veneto",
-            "D. Lombardy"
+            "Cesanese Comune",
+            "Cesanese d'Affile",
+            "Cesanese Rotondo",
+            "Cesanese Classico"
           ],
           "correct": 1,
-          "explanation": "Nosiola 是 Trentino 的原生白品種，以清爽的榛果（noce=榛果）香氣著稱，也是當地傳統 Vin Santo Trentino 的原料。"
+          "explanation": "Cesanese d'Affile 是品質較高的克隆，具有更濃郁的黑莓、石榴風味和更強的結構感，陳年潛力可達 10-20 年。"
         }
       ]
     }

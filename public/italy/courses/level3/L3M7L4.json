@@ -1,58 +1,111 @@
 {
-  "id": "L3M7L4",
+  "lessonId": "L3M7L4",
   "title": "餐酒搭配實戰：設計完整套餐酒單",
-  "description": "整合本章所有知識，學習如何為一套 4-6 道的義大利套餐設計完整配酒，掌握從餐前酒到甜點酒的進階邏輯，並練習在有限預算、特殊飲食限制與賓客偏好等複雜條件下靈活應對。",
+  "quiz": [
+    {
+      "question": "完整套餐配酒設計的基本原則是？",
+      "options": ["從最強勁的紅酒開場，以展現主人的品味", "全程使用同一款酒，方便管理且不會產生配對矛盾", "由淡至濃、由乾至甜、從年輕到陳年，每款酒不能壓過下一道", "第一道用白酒，第二道用紅酒，第三道用甜酒，甜酒必須最後"],
+      "answer": 2,
+      "explanation": "套餐配酒設計的核心邏輯是進階感：味蕾從清淡喚醒，逐漸適應更複雜的風味。若第一道就喝 Barolo，其後所有較輕盈的酒款都會顯得平淡乏味。由淡至濃確保每道菜都能在最佳狀態下被感受。"
+    },
+    {
+      "question": "皮埃蒙特晚宴中的「白松露燉飯」最適合搭配以下哪款義大利酒？",
+      "options": ["Soave Classico（Veneto，清淡礦物感白酒）", "Amarone della Valpolicella（濃郁強勁紅酒）", "Barbaresco DOCG（Nebbiolo，帶泥土蘑菇香氣）", "Asti Spumante（皮埃蒙特微甜氣泡酒）"],
+      "answer": 2,
+      "explanation": "白松露燉飯是皮埃蒙特晚宴的關鍵菜色。Barbaresco（Nebbiolo）帶有泥土、蘑菇、枯葉的二次香氣，與白松露的香氣形成完美互補（都屬於「大地系」風味）。Barbaresco 通常比 Barolo 輕巧，更適合在主菜之前的燉飯位置。"
+    },
+    {
+      "question": "客人對紅酒不感興趣，但今晚主菜是烤羔羊排。侍酒師最合適的建議是？",
+      "options": ["讓客人直接喝水，葡萄酒搭配必須遵守規則", "推薦一款飽滿的南義白酒（如 Fiano di Avellino），其高酸度和豐厚酒體能平衡羔羊的油脂", "建議一瓶烈酒（Grappa）搭配，因為不喝紅酒就喝烈酒", "推薦 Moscato d'Asti，甜味中和羊肉的膻味"],
+      "answer": 1,
+      "explanation": "餐酒搭配的核心是服務賓客的體驗，而非強迫遵守規則。飽滿的南義白酒（Fiano di Avellino）具有足夠的酒體、高酸度和礦物感，能與烤羔羊排抗衡。侍酒師的任務是找到賓客喜歡且能搭配料理的方案。"
+    },
+    {
+      "question": "套餐配酒中，甜點酒的選擇有什麼關鍵原則？",
+      "options": ["甜點酒的甜度必須低於甜點，以避免過度甜膩", "甜點酒的甜度必須高於或等於甜點甜度，否則酒會顯得又酸又苦", "甜點酒必須是氣泡酒，氣泡能解救甜點的厚重感", "甜點酒應選擇義大利以外的產區，以提供風味對比"],
+      "answer": 1,
+      "explanation": "這是甜點配酒最重要的結構原則：酒的甜度必須 ≥ 甜點的甜度。若甜點比酒還甜，喝起來酒會顯得又酸又苦，完全失衡。例如搭配濃郁巧克力蛋糕，必須選擇比 Moscato d'Asti 更甜的 Passito 或 Vin Santo。"
+    }
+  ],
   "slides": [
     {
-      "type": "content",
-      "title": "設計完整套餐酒單的邏輯框架",
-      "content": "<div class='prose max-w-none'><p class='text-lg text-gray-700 mb-6'>完整套餐的配酒設計遵循<strong>「由淡至濃、由乾至甜、從年輕到陳年」</strong>的基本進階邏輯。每款酒都不能壓過下一道酒的風味層次。</p><div class='bg-gray-900 rounded-xl overflow-hidden mb-8'><div class='bg-gray-800 px-6 py-3'><h4 class='text-white font-bold'>🍽️ 套餐配酒進階圖</h4></div><div class='p-6 space-y-4'><div class='flex items-stretch gap-4'><div class='w-28 flex-shrink-0 flex items-center justify-center bg-sky-800 rounded-lg py-3'><div class='text-center'><div class='text-white text-xs font-bold'>餐前酒</div><div class='text-sky-200 text-xs'>Aperitivo</div></div></div><div class='flex-1 bg-gray-800 rounded-lg p-3'><p class='text-sm text-gray-200'><strong class='text-sky-300'>選擇：</strong>Prosecco Brut / Franciacorta Brut / Campari Spritz 基底</p><p class='text-xs text-gray-400 mt-1'>目的：刺激食慾、清爽開場。避免甜膩或過重</p></div></div><div class='flex items-stretch gap-4'><div class='w-28 flex-shrink-0 flex items-center justify-center bg-green-800 rounded-lg py-3'><div class='text-center'><div class='text-white text-xs font-bold'>頭盤</div><div class='text-green-200 text-xs'>Antipasto</div></div></div><div class='flex-1 bg-gray-800 rounded-lg p-3'><p class='text-sm text-gray-200'><strong class='text-green-300'>選擇：</strong>清淡白酒（Verdicchio、Pinot Grigio）/ 輕酒體粉紅酒</p><p class='text-xs text-gray-400 mt-1'>典型菜色：仙腿、新鮮莫扎瑞拉、生魚片冷盤</p></div></div><div class='flex items-stretch gap-4'><div class='w-28 flex-shrink-0 flex items-center justify-center bg-yellow-700 rounded-lg py-3'><div class='text-center'><div class='text-white text-xs font-bold'>第一道</div><div class='text-yellow-200 text-xs'>Primo Piatto</div></div></div><div class='flex-1 bg-gray-800 rounded-lg p-3'><p class='text-sm text-gray-200'><strong class='text-yellow-300'>選擇：</strong>中等白酒（Greco di Tufo）/ 輕中等紅酒（Barbera、Chianti）</p><p class='text-xs text-gray-400 mt-1'>典型菜色：義大利麵、燉飯、湯品</p></div></div><div class='flex items-stretch gap-4'><div class='w-28 flex-shrink-0 flex items-center justify-center bg-red-800 rounded-lg py-3'><div class='text-center'><div class='text-white text-xs font-bold'>主菜</div><div class='text-red-200 text-xs'>Secondo</div></div></div><div class='flex-1 bg-gray-800 rounded-lg p-3'><p class='text-sm text-gray-200'><strong class='text-red-300'>選擇：</strong>強勁紅酒（Barolo、Brunello、Amarone）/ 飽滿白酒（Fiano）</p><p class='text-xs text-gray-400 mt-1'>典型菜色：大牛排、烤小羊排、豬腳燉鍋</p></div></div><div class='flex items-stretch gap-4'><div class='w-28 flex-shrink-0 flex items-center justify-center bg-amber-700 rounded-lg py-3'><div class='text-center'><div class='text-white text-xs font-bold'>起司</div><div class='text-amber-200 text-xs'>Formaggi</div></div></div><div class='flex-1 bg-gray-800 rounded-lg p-3'><p class='text-sm text-gray-200'><strong class='text-amber-300'>選擇：</strong>依起司類型（見第 2 課），最後可開甜酒配藍起司</p></div></div><div class='flex items-stretch gap-4'><div class='w-28 flex-shrink-0 flex items-center justify-center bg-pink-800 rounded-lg py-3'><div class='text-center'><div class='text-white text-xs font-bold'>甜點</div><div class='text-pink-200 text-xs'>Dolce</div></div></div><div class='flex-1 bg-gray-800 rounded-lg p-3'><p class='text-sm text-gray-200'><strong class='text-pink-300'>選擇：</strong>Vin Santo / Passito / Moscato d'Asti（甜度必須 ≥ 甜點）</p></div></div></div></div></div>"
+      "type": "title",
+      "title": "餐酒搭配實戰：設計完整套餐酒單",
+      "subtitle": "整合所有知識：為義大利 5 道式套餐設計完美的配酒進階之路"
     },
     {
       "type": "content",
-      "title": "實戰案例：設計皮埃蒙特晚宴配酒",
-      "content": "<div class='prose max-w-none'><div class='bg-amber-50 border border-amber-200 rounded-xl p-6 mb-6'><h4 class='font-bold text-amber-800 mb-1'>🏔️ 場景設定</h4><p class='text-sm text-gray-600'>秋季皮埃蒙特松露季晚宴，6 位賓客，預算每位 TWD 3,500（酒水），重要場合，希望展現皮埃蒙特在地特色</p></div><div class='space-y-4'><div class='bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden'><div class='bg-sky-700 px-5 py-2'><h5 class='text-white font-bold text-sm'>餐前酒 Aperitivo</h5></div><div class='p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm'><div><strong>菜色：</strong>Canapés 配 Lardo di Colonnata、Grana Padano 起司脆餅、生火腿卷哈密瓜</div><div><strong class='text-sky-700'>選酒：</strong>Alta Langa DOCG Brut（皮埃蒙特傳統法氣泡酒，Pinot Nero + Chardonnay）<p class='text-gray-500 mt-1'>邏輯：在地氣泡酒開場，酸度切割生火腿油脂，展現皮埃蒙特在地性</p></div></div></div><div class='bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden'><div class='bg-green-700 px-5 py-2'><h5 class='text-white font-bold text-sm'>頭盤 Antipasto</h5></div><div class='p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm'><div><strong>菜色：</strong>生牛肉塔塔 Carne Cruda all'Albese（檸檬橄欖油生牛肉，頂級白松露刨片）</div><div><strong class='text-green-700'>選酒：</strong>Gavi di Gavi DOCG（Cortese 白酒）<p class='text-gray-500 mt-1'>邏輯：Gavi 清爽的礦物感不搶白松露的香氣風采，高酸度清潔生牛肉的油脂感</p></div></div></div><div class='bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden'><div class='bg-yellow-700 px-5 py-2'><h5 class='text-white font-bold text-sm'>第一道 Primo</h5></div><div class='p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm'><div><strong>菜色：</strong>白松露起司燉飯 Risotto al Tartufo Bianco e Fontina</div><div><strong class='text-yellow-700'>選酒：</strong>Barbaresco DOCG（Nebbiolo，5-8 年份）<p class='text-gray-500 mt-1'>邏輯：Nebbiolo 的蘑菇泥土香氣與白松露最經典的互補；Fontina 起司的奶脂被酸度與單寧化解</p></div></div></div><div class='bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden'><div class='bg-red-800 px-5 py-2'><h5 class='text-white font-bold text-sm'>主菜 Secondo</h5></div><div class='p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm'><div><strong>菜色：</strong>皮埃蒙特燉牛肉 Brasato al Barolo（以 Barolo 燉煮的牛肉）</div><div><strong class='text-red-700'>選酒：</strong>Barolo DOCG Riserva（Nebbiolo，10-12 年份）<p class='text-gray-500 mt-1'>邏輯：以 Barolo 燉煮的料理，配上更陳年的 Barolo，料理中已滲入葡萄酒香氣，形成完美的風味統一</p></div></div></div><div class='bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden'><div class='bg-pink-800 px-5 py-2'><h5 class='text-white font-bold text-sm'>甜點 Dolce</h5></div><div class='p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm'><div><strong>菜色：</strong>Panna Cotta 配焦糖堅果醬、Cantucci 杏仁脆餅</div><div><strong class='text-pink-700'>選酒：</strong>Moscato d'Asti DOCG（低酒精微甜氣泡）+ Vin Santo（配 Cantucci）<p class='text-gray-500 mt-1'>邏輯：Moscato 的桃子蜂蜜香氣與 Panna Cotta 互補；Vin Santo 浸 Cantucci 是致敬傳統收尾</p></div></div></div></div></div>"
+      "title": "套餐配酒設計四大原則",
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>📈 原則一：由淡至濃</h3><p class=\"mf-style\">Aperitivo → Antipasto → Primo → Secondo → Dolce</p><p class=\"mf-prod\">味蕾從清淡喚醒，逐漸適應更複雜的風味；若第一道就喝 Barolo，其後所有較輕盈的酒款都會顯得平淡乏味——這是最不可違反的原則</p></div><div class=\"mf-zone warm\"><h3>🍯 原則二：由乾至甜</h3><p class=\"mf-style\">干型 → 半甜 → 甜型（甜度遞增）</p><p class=\"mf-prod\">甜酒幾乎永遠在最後；甜點配酒的關鍵原則：酒的甜度必須 ≥ 甜點甜度，否則酒在口中顯得又酸又苦；不能在濃郁巧克力蛋糕旁邊倒 Moscato d'Asti</p></div><div class=\"mf-zone cool\"><h3>📅 原則三：從年輕到陳年</h3><p class=\"mf-style\">新鮮活潑 → 複雜陳年（複雜度遞增）</p><p class=\"mf-prod\">陳年複雜的酒（如 Barolo Riserva）應保留到重要的主菜階段；讓賓客在味覺和認知上同步進階；在頭盤飲用 Gavi，在主菜飲用 Brunello，構成完整的風味旅程</p></div><div class=\"mf-zone plain\"><h3>⚖️ 原則四：每道不壓過下一道</h3><p class=\"mf-style\">強度遞增，但不能跳躍</p><p class=\"mf-prod\">每款酒的強度不能讓下一道酒顯得黯然失色；若主菜後有起司課，不要在主菜時已開出最濃郁的陳年 Amarone；為最後的高潮保留空間是配酒設計的藝術</p></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "從餐前到主菜：配酒架構詳解",
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">義大利套餐通常分為五個階段。每個階段的配酒都有其邏輯，侍酒師需要根據菜單、場合與賓客偏好靈活組合。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🥂 餐前酒 Aperitivo</h4><p><strong>目的：</strong>刺激食慾、清爽開場，切勿甜膩或過重</p><p><strong>選酒：</strong>Prosecco Brut、Franciacorta Brut、Alta Langa；偶爾也用 Campari Spritz（含 Prosecco）</p></div><div class=\"orvieto-card\"><h4>🥗 頭盤 Antipasto</h4><p><strong>典型菜色：</strong>仙腿 / 新鮮莫扎瑞拉 / 生魚片冷盤 / Carpaccio</p><p><strong>選酒：</strong>清淡白酒（Verdicchio、Pinot Grigio）或輕酒體粉紅酒；酸度清爽，不壓食材本身的鮮甜</p></div><div class=\"orvieto-card\"><h4>🍝 第一道 Primo Piatto</h4><p><strong>典型菜色：</strong>義大利麵 / 燉飯 / 湯品（通常含醬汁，決定選酒方向）</p><p><strong>選酒：</strong>中等白酒（Greco di Tufo）/ 輕中等紅酒（Barbera、Chianti）；依醬汁類型：番茄醬→紅酒；奶油/海鮮→白酒</p></div><div class=\"orvieto-card\"><h4>🥩 主菜 Secondo Piatto</h4><p><strong>典型菜色：</strong>大牛排 / 烤小羊排 / 豬腳燉鍋 / 海鮮主菜</p><p><strong>選酒：</strong>強勁紅酒（Barolo、Brunello、Amarone）/ 飽滿白酒（Fiano，適合海鮮主菜）；這是整場宴席的配酒高潮</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "起司與甜點：收尾的藝術",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">套餐最後兩個階段（起司 + 甜點）通常在主菜紅酒的餘韻中進行，需要判斷是否換酒，以及如何優雅收尾。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>🧀 起司階段（Formaggi）</h3><ul><li><strong>延續主菜紅酒（若是中等強度）：</strong>Chianti Classico 可繼續陪伴硬質起司（Pecorino）</li><li><strong>若有藍起司：</strong>先供應干型酒款配其他起司，最後才開甜酒（Passito/Vin Santo）配藍起司——視為戲劇性「壓軸」</li><li><strong>起司拼盤的萬用選擇：</strong>Franciacorta Extra Brut 或 Barbera d'Alba（兼顧最多起司類型）</li></ul></div><div class=\"method-card modern\"><h3>🍰 甜點階段（Dolce）</h3><ul><li><strong>核心原則：甜度必須 ≥ 甜點甜度</strong>，否則酒顯得又酸又苦</li><li><strong>輕量甜點（奶酪/水果塔）：</strong>Moscato d'Asti（低酒精 5.5%，細緻花果香）</li><li><strong>中量甜點（Cantucci/烤水果）：</strong>Vin Santo 或 Passito di Pantelleria</li><li><strong>濃郁甜點（巧克力/焦糖）：</strong>陳年 Vin Santo 或 Recioto di Soave（高甜度）</li><li><strong>收尾傳統：</strong>Grappa 或 Amaro 作為最後的消化酒</li></ul></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "實戰案例：皮埃蒙特秋季晚宴完整配酒",
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">場景：秋季松露季晚宴，6 位賓客，重要場合，希望展現皮埃蒙特在地特色。以下是一份完整的「在地搭配」配酒提案。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🥂 餐前酒</h4><p><strong>菜色：</strong>Canapés 配 Lardo di Colonnata、Grana Padano 脆餅</p><p><strong>選酒：</strong>Alta Langa DOCG Brut（皮埃蒙特傳統法氣泡，Pinot Nero + Chardonnay）</p><p><em>邏輯：在地氣泡酒開場，酸度切割生火腿油脂，展現皮埃蒙特在地性</em></p></div><div class=\"orvieto-card\"><h4>🥗 頭盤</h4><p><strong>菜色：</strong>生牛肉塔塔 Carne Cruda all'Albese（頂級白松露刨片）</p><p><strong>選酒：</strong>Gavi di Gavi DOCG（Cortese 白酒）</p><p><em>邏輯：Gavi 清爽礦物感不搶白松露的風采，高酸度清潔生牛肉的油脂感</em></p></div><div class=\"orvieto-card\"><h4>🍝 第一道</h4><p><strong>菜色：</strong>白松露起司燉飯 Risotto al Tartufo Bianco e Fontina</p><p><strong>選酒：</strong>Barbaresco DOCG（Nebbiolo，5–8 年份）</p><p><em>邏輯：Nebbiolo 的蘑菇泥土香氣與白松露最經典的互補；Fontina 起司的奶脂被酸度與單寧化解</em></p></div><div class=\"orvieto-card\"><h4>🥩 主菜 ＆ 甜點</h4><p><strong>菜色：</strong>皮埃蒙特燉牛肉 Brasato al Barolo（以 Barolo 燉煮）</p><p><strong>選酒：</strong>Barolo DOCG Riserva（10–12 年份）</p><p><em>邏輯：以 Barolo 燉的料理配陳年 Barolo——料理中已滲入葡萄酒香氣，形成完美統一</em></p><p><strong>甜點：</strong>Panna Cotta → Moscato d'Asti；Cantucci → Vin Santo（致敬傳統收尾）</p></div></div></div>"
+    },
+    {
+      "type": "list",
+      "title": "重點回顧",
+      "points": [
+        "套餐配酒四大原則：由淡至濃 / 由乾至甜 / 從年輕到陳年 / 每款酒不壓過下一道",
+        "甜點配酒的鐵律：酒的甜度必須 ≥ 甜點甜度，否則酒在口中顯得又酸又苦",
+        "餐前酒（Aperitivo）：選清爽氣泡酒（Prosecco/Franciacorta），刺激食慾，避免甜膩",
+        "頭盤（Antipasto）：清淡白酒或粉紅酒，不壓食材本身的鮮甜",
+        "第一道（Primo）：依醬汁類型決定——番茄醬→輕中等紅酒；奶油/海鮮→白酒",
+        "主菜（Secondo）：配酒高潮，強勁紅酒（Barolo/Brunello/Amarone）或飽滿白酒（Fiano for 海鮮）",
+        "起司階段可延續主菜紅酒；有藍起司時，最後才開甜酒（Passito/Vin Santo）作壓軸",
+        "皮埃蒙特晚宴範例：Alta Langa → Gavi → Barbaresco → Barolo Riserva → Moscato + Vin Santo"
+      ]
     },
     {
       "type": "quiz",
-      "title": "🧠 餐酒搭配綜合實戰測試",
+      "title": "餐酒搭配實戰知識檢測",
       "_marker": "// inject-italy-l3-quiz",
       "questions": [
         {
           "type": "single",
           "question": "完整套餐配酒設計的基本原則是？",
-          "options": [
-            "從最強勁的紅酒開場，以展現主人的品味",
-            "全程使用同一款酒，方便管理且不會產生配對矛盾",
-            "由淡至濃、由乾至甜、從年輕到陳年，每款酒不能壓過下一道",
-            "第一道用白酒，第二道用紅酒，第三道用甜酒，甜酒必須最後"
-          ],
+          "options": ["從最強勁的紅酒開場，以展現主人的品味", "全程使用同一款酒，方便管理且不會產生配對矛盾", "由淡至濃、由乾至甜、從年輕到陳年，每款酒不能壓過下一道", "第一道用白酒，第二道用紅酒，第三道用甜酒，甜酒必須最後"],
           "correct": 2,
           "explanation": "套餐配酒設計的核心邏輯是進階感：味蕾從清淡喚醒，逐漸適應更複雜的風味。若第一道就喝 Barolo，其後所有較輕盈的酒款都會顯得平淡乏味。由淡至濃確保每道菜都能在最佳狀態下被感受。"
         },
         {
           "type": "single",
-          "question": "皮埃蒙特晚宴中的「白松露燉飯」最適合搭配以下哪款義大利酒？",
-          "options": [
-            "Soave Classico（Veneto，清淡礦物感白酒）",
-            "Amarone della Valpolicella（濃郁強勁紅酒）",
-            "Barbaresco DOCG（Nebbiolo，帶泥土蘑菇香氣）",
-            "Asti Spumante（皮埃蒙特微甜氣泡酒）"
-          ],
+          "question": "皮埃蒙特晚宴中的「白松露燉飯」最適合搭配哪款義大利酒？",
+          "options": ["Soave Classico（Veneto，清淡礦物感白酒）", "Amarone della Valpolicella（濃郁強勁紅酒）", "Barbaresco DOCG（Nebbiolo，帶泥土蘑菇香氣）", "Asti Spumante（皮埃蒙特微甜氣泡酒）"],
           "correct": 2,
-          "explanation": "白松露燉飯是設計皮埃蒙特晚宴時的關鍵菜色。Barbaresco（Nebbiolo）帶有泥土、蘑菇、枯葉的二次香氣，與白松露的香氣形成完美互補（都屬於「大地系」風味）。Barolo 也可以選擇，但 Barbaresco 通常較輕巧，更適合在主菜之前的燉飯位置。"
+          "explanation": "白松露燉飯是皮埃蒙特晚宴的關鍵菜色。Barbaresco（Nebbiolo）帶有泥土、蘑菇、枯葉的二次香氣，與白松露的香氣形成完美互補（都屬於「大地系」風味）。Barbaresco 通常較 Barolo 輕巧，更適合在主菜之前的燉飯位置。"
         },
         {
           "type": "single",
           "question": "客人對紅酒不感興趣，但今晚主菜是烤羔羊排。侍酒師最合適的建議是？",
-          "options": [
-            "讓客人直接喝水，葡萄酒搭配必須遵守規則",
-            "推薦一款飽滿的南義白酒（如 Fiano di Avellino），其高酸度和豐厚酒體能平衡羔羊的油脂",
-            "建議一瓶烈酒（Grappa）搭配，因為不喝紅酒就喝烈酒",
-            "推薦一款 Moscato d'Asti，甜味中和羊肉的膻味"
-          ],
+          "options": ["讓客人直接喝水，葡萄酒搭配必須遵守規則", "推薦一款飽滿的南義白酒（如 Fiano di Avellino），其高酸度和豐厚酒體能平衡羔羊的油脂", "建議一瓶烈酒（Grappa）搭配，因為不喝紅酒就喝烈酒", "推薦 Moscato d'Asti，甜味中和羊肉的膻味"],
           "correct": 1,
-          "explanation": "餐酒搭配的核心是服務賓客的體驗，而非强迫遵守規則。飽滿的南義白酒（Fiano di Avellino）具有足夠的酒體、高酸度和礦物感，能與烤羔羊排抗衡。某些研究甚至顯示高酸度白酒比單寧型紅酒更能切割羊肉脂肪。侍酒師的任務是找到賓客喜歡且能搭配料理的方案。"
+          "explanation": "餐酒搭配的核心是服務賓客的體驗，而非強迫遵守規則。飽滿的南義白酒（Fiano di Avellino）具有足夠的酒體、高酸度和礦物感，能與烤羔羊排抗衡。侍酒師的任務是找到賓客喜歡且能搭配料理的方案。"
+        },
+        {
+          "type": "single",
+          "question": "套餐配酒中，甜點酒的選擇有什麼關鍵原則？",
+          "options": ["甜點酒的甜度必須低於甜點，以避免過度甜膩", "甜點酒的甜度必須高於或等於甜點甜度，否則酒會顯得又酸又苦", "甜點酒必須是氣泡酒，氣泡能解救甜點的厚重感", "甜點酒應選擇義大利以外的產區，以提供風味對比"],
+          "correct": 1,
+          "explanation": "這是甜點配酒最重要的結構原則：酒的甜度必須 ≥ 甜點的甜度。若甜點比酒還甜，喝起來酒會顯得又酸又苦，完全失衡。例如搭配濃郁巧克力蛋糕，必須選擇比 Moscato d'Asti 更甜的 Passito 或 Vin Santo。"
+        },
+        {
+          "type": "single",
+          "question": "為什麼皮埃蒙特晚宴中，「Brasato al Barolo（以 Barolo 燉的牛肉）」最適合搭配陳年 Barolo？",
+          "options": ["因為同一產區的酒一定要搭配同一產區的料理", "料理在烹調過程中已滲入 Barolo 的香氣，陳年 Barolo 能延伸並強化這個風味連結，創造完美的「風味統一」", "因為 Barolo 是最貴的義大利酒，搭配最重要的主菜是禮貌", "Barolo 的單寧在燉煮過程中會完全消失，所以任何酒都可以"],
+          "correct": 1,
+          "explanation": "Brasato al Barolo 使用 Barolo 燉煮牛肉，整道料理已充滿 Nebbiolo 的香氣（玫瑰、焦油、皮革）。陳年 Barolo 能直接延伸並強化這個風味連結，讓料理和酒在口中形成完美的「風味統一」，是義大利高端套餐配酒的最高境界。"
         }
       ]
     }

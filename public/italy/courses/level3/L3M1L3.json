@@ -3,169 +3,155 @@
   "title": "南義原生品種寶庫",
   "quiz": [
     {
-      "question": "Aglianico del Vulture 為什麼被稱為「南義的 Barolo」？",
+      "question": "Aglianico del Vulture 被稱為「南義 Barolo」的主要原因是？",
       "options": [
-        "價格相同",
+        "產於同一個地區",
         "都需要長時間陳年且單寧強勁",
-        "使用相同葡萄品種",
-        "產區海拔相同"
+        "品種相同",
+        "葡萄園面積相似"
       ],
       "answer": 1,
-      "explanation": "Aglianico del Vulture 因其極高的單寧、酸度和需要 10 年以上陳年的特性，被稱為南義的 Barolo。"
+      "explanation": "Aglianico del Vulture 和 Barolo 都以 100% 單一品種釀造、極高單寧、高酸度和長時間陳年需求聞名，兩者都需要至少 20-30 年才能展現最佳狀態。"
     },
     {
-      "question": "Greco di Tufo 的 'Tufo' 指的是什麼？",
+      "question": "Greco di Tufo DOCG 的「Tufo」是指什麼？",
       "options": [
-        "村莊名稱",
-        "凝灰岩（火山灰沉積岩）",
-        "葡萄克隆",
-        "釀酒師名字"
+        "一個釀酒師的姓氏",
+        "凝灰岩（火山岩），賦予獨特礦物感",
+        "義大利語「古老」",
+        "一個村莊的名稱"
       ],
       "answer": 1,
-      "explanation": "Tufo 是義大利文的凝灰岩（火山灰沉積岩），Greco di Tufo 的葡萄園必須位於這種土壤上。"
+      "explanation": "Tufo 是指凝灰岩（Tufa），一種由火山灰沉積形成的岩石。Campania 的 Greco di Tufo 產區土壤以凝灰岩為主，賦予葡萄酒獨特的礦物感和鹹味。"
     },
     {
-      "question": "Primitivo 與哪個品種 DNA 完全相同？",
+      "question": "DNA 研究證實 Primitivo 與哪個國際著名品種完全相同？",
       "options": [
-        "Syrah",
+        "Cabernet Sauvignon",
+        "Merlot",
         "Zinfandel",
-        "Grenache",
-        "Tempranillo"
+        "Syrah"
       ],
-      "answer": 1,
-      "explanation": "1968 年科學研究證實 Primitivo 與美國加州的 Zinfandel DNA 完全相同，是同一品種的不同名稱。"
+      "answer": 2,
+      "explanation": "1990 年代的 DNA 研究確認 Primitivo 和美國加州的 Zinfandel 是完全相同的品種，兩者均源自克羅埃西亞的 Crljenak Kaštelanski。"
     },
     {
-      "question": "哪個酒莊是 Aglianico del Vulture 的生物動力法代表？",
+      "question": "Elena Fucci 的 Titolo 代表哪種南義葡萄酒？",
       "options": [
-        "Gaja",
-        "Elena Fucci",
-        "Antinori",
-        "Feudi di San Gregorio"
+        "Greco di Tufo DOCG",
+        "Aglianico del Vulture DOC（生物動力農法）",
+        "Primitivo di Manduria DOC",
+        "Fiano di Avellino DOCG"
       ],
       "answer": 1,
-      "explanation": "Elena Fucci 是 Basilicata 的生物動力法先驅，其旗艦酒款 Titolo 獲得 Wine Advocate 96+ 高分。"
+      "explanation": "Elena Fucci 的 Titolo 是 Aglianico del Vulture DOC 的代表作，採用生物動力農法，是南義最受矚目的女性釀酒師之一，展現了 Aglianico 的優雅潛力。"
     }
   ],
   "slides": [
     {
       "type": "title",
-      "title": "☀️ 南義原生品種寶庫",
-      "subtitle": "探索 Campania, Basilicata, Puglia 的稀有珍寶"
+      "title": "南義原生品種寶庫",
+      "subtitle": "Aglianico · Greco · Fiano · Primitivo — 南義的四大原生珍寶"
     },
     {
       "type": "content",
-      "title": "🍇 Aglianico del Vulture - 火山之王",
-      "content": "<div class=\"grape-profile\"><div class=\"profile-header\"><div class=\"origin-badge\">Basilicata - Aglianico del Vulture DOCG</div><h3>Aglianico del Vulture Superiore</h3><div class=\"prestige-badge\">南義 Barolo ⭐⭐⭐⭐⭐</div></div><div class=\"volcanic-story\"><h4>🌋 Vulture 火山風土</h4><div class=\"volcano-facts\"><div class=\"fact-card\"><span class=\"icon\">🏔️</span><h5>死火山優勢</h5><p>Vulture 火山已休眠 13 萬年，火山土壤富含礦物質，排水性極佳。</p></div><div class=\"fact-card\"><span class=\"icon\">⛰️</span><h5>極端海拔</h5><p>葡萄園位於 <strong>200-900公尺</strong>，是義大利最高海拔的 Aglianico 產區。</p></div><div class=\"fact-card\"><span class=\"icon\">🌡️</span><h5>巨大日夜溫差</h5><p>白天炎熱（35°C+），夜晚涼爽（15°C），完美平衡成熟度與酸度。</p></div></div></div><div class=\"characteristics-grid\"><div class=\"char-card\"><h5>🍷 風味特徵（年輕時）</h5><ul><li>深邃的紫黑色</li><li>黑櫻桃、黑莓</li><li>煙燻、焦油</li><li><strong>極高單寧</strong>（封閉、粗獷）</li><li>火山礦物感（石墨、火藥）</li></ul></div><div class=\"char-card\"><h5>🏺 陳年後演變</h5><ul><li>石榴紅帶磚紅邊緣</li><li>乾玫瑰、菸草、皮革</li><li>黑松露、森林地表</li><li><strong>單寧柔化、絲滑</strong></li><li>複雜的礦物與香料層次</li></ul></div></div><div class=\"aging-requirement\"><h4>⏳ 陳年必需性</h4><div class=\"aging-timeline\"><div class=\"timeline-stage young\"><span class=\"year\">0-5 年</span><p class=\"status\">❌ 不適合飲用</p><p>單寧過於封閉粗獷</p></div><div class=\"timeline-stage developing\"><span class=\"year\">5-10 年</span><p class=\"status\">⚠️ 開始進入適飲期</p><p>單寧開始柔化</p></div><div class=\"timeline-stage prime\"><span class=\"year\">10-20 年</span><p class=\"status\">✅ 巔峰期</p><p>複雜度爆發</p></div><div class=\"timeline-stage veteran\"><span class=\"year\">20+ 年</span><p class=\"status\">🏆 傳奇級</p><p>頂級年份可達 40 年</p></div></div></div></div>"
+      "title": "Aglianico del Vulture — 南義的 Barolo",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>火山土壤孕育的南義之王</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Aglianico 生長在 Basilicata 的 Vulture 死火山（高度 1326 公尺）山坡上，火山土壤賦予獨特礦物感，是義大利南部最有陳年潛力的紅葡萄品種，並稱「南義 Barolo」。</p><div class=\"science-card\">產區：Aglianico del Vulture DOC｜土壤：火山岩、凝灰岩｜海拔 300-700m</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">品種特徵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">風味：黑莓、深色李子、黑巧克力、皮革、礦物煙燻感｜陳年後：松露、雪松、菸草</div><div class=\"orvieto-card\">結構：極高單寧、高酸度、高酒精（14-15%）｜陳年需求：最少 10-15 年，優秀年份 25-30 年</div><div class=\"orvieto-card\">頂級酒莊：Elena Fucci（Titolo）、Paternoster（Don Anselmo）、D'Angelo｜€25-80</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍷 Greco di Tufo - 白葡萄傳奇",
-      "content": "<div class=\"grape-profile\"><div class=\"profile-header\"><div class=\"origin-badge\">Campania - Greco di Tufo DOCG</div><h3>Greco (格雷科)</h3><div class=\"ancient-badge\">古希臘遺產 🏛️</div></div><div class=\"origin-story\"><h4>📖 2500年的故事</h4><p class=\"history-text\">品種名稱 'Greco' 源自希臘，<strong>公元前 8 世紀</strong>由希臘殖民者帶入義大利南部。DNA 研究證實與希臘原生品種有親緣關係。</p><div class=\"tufo-meaning\"><h5>🏔️ 'Tufo' 的意義</h5><p><strong>Tufo = 凝灰岩</strong>（火山灰沉積岩）</p><p>Greco di Tufo 的葡萄園必須位於 Tufo 凝灰岩土壤上，這種土壤賦予獨特的礦物感和鹹度。</p></div></div><div class=\"characteristics-grid\"><div class=\"char-card\"><h5>🍷 風味圖譜</h5><div class=\"flavor-layers\"><div class=\"layer primary\">🍋 <strong>柑橘類主導：</strong>檸檬、葡萄柚、青檸</div><div class=\"layer secondary\">🍑 <strong>核果香氣：</strong>白桃、杏桃、黃李</div><div class=\"layer mineral\">🪨 <strong>礦物特徵：</strong>打火石、濕石頭、海洋鹹度</div><div class=\"layer herbal\">🌿 <strong>草本元素：</strong>白花、杏仁、蜂蜜</div></div></div><div class=\"char-card\"><h5>🔬 結構特點</h5><ul><li><strong>酸度：</strong>極高（義大利最高之一）</li><li><strong>酒精度：</strong>12.5-14%</li><li><strong>酒體：</strong>中飽滿、有重量感</li><li><strong>陳年潛力：</strong>10-20 年（頂級）</li><li><strong>獨特性：</strong>高酸 + 高酒精的罕見組合</li></ul></div></div><div class=\"expert-insight\"><h4>💡 專家洞察</h4><p>Greco di Tufo 是<strong>少數能與勃根地特級園白酒匹敵</strong>的義大利白葡萄酒。陳年 10 年以上的頂級酒款會發展出蜂蠟、汽油、蜂蜜等複雜香氣，類似老年份 Riesling。</p></div></div>"
+      "title": "Greco di Tufo ✕ Fiano di Avellino — Campania 雙白",
+      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Greco di Tufo DOCG</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Campania 的 Tufo 村｜土壤：凝灰岩（火山灰岩），賦予鹹礦物感</div><div class=\"orvieto-card\">風味：白桃、杏桃、柑橘皮、礦物鹹感｜中高酸度、飽滿酒體｜陳年潛力 8-12 年</div><div class=\"orvieto-card\">頂級：Feudi di San Gregorio、Benito Ferrara｜€18-45</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Fiano di Avellino DOCG</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Irpinia 山區（高海拔）｜義大利最古老白葡萄品種之一，古羅馬稱為「Apianum」</div><div class=\"orvieto-card\">風味：更芳香、奶油感、橄欖油質地｜榛果、蜂蜡、熱帶果香｜陳年潛力 10-15 年</div><div class=\"orvieto-card\">頂級：Mastroberardino（Radici）、Ciro Picariello｜€20-55</div></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍷 Fiano di Avellino - 芳香女王",
-      "content": "<div class=\"grape-profile\"><div class=\"profile-header\"><div class=\"origin-badge\">Campania - Fiano di Avellino DOCG</div><h3>Fiano (菲亞諾)</h3><div class=\"quality-badge\">Campania 三大白葡萄之一</div></div><div class=\"characteristics-grid\"><div class=\"char-card aromatic\"><h5>🌸 芳香炸彈</h5><div class=\"aroma-profile\"><div class=\"aroma-group\"><h6>🌼 花香</h6><ul><li>金合歡花</li><li>橙花</li><li>茉莉</li></ul></div><div class=\"aroma-group\"><h6>🍯 蜂蜜與堅果</h6><ul><li>蜂蜜</li><li>榛果</li><li>杏仁糖</li></ul></div><div class=\"aroma-group\"><h6>🍐 水果</h6><ul><li>西洋梨</li><li>烤蘋果</li><li>熱帶水果</li></ul></div></div></div><div class=\"char-card structure\"><h5>📊 結構分析</h5><ul><li><strong>酸度：</strong>中高（比 Greco 略低）</li><li><strong>酒體：</strong>飽滿、圓潤</li><li><strong>酒精度：</strong>13-14%</li><li><strong>質地：</strong>絲滑、油質感</li><li><strong>陳年：</strong>5-15 年</li></ul><div class=\"comparison-note\">💡 比 Greco 更豐富飽滿，但酸度稍低</div></div></div><div class=\"terroir-section\"><h4>🗺️ Avellino 山區風土</h4><div class=\"terroir-grid\"><div class=\"terroir-item\"><span class=\"icon\">⛰️</span><h6>海拔</h6><p>400-700 公尺</p></div><div class=\"terroir-item\"><span class=\"icon\">🌡️</span><h6>氣候</h6><p>內陸涼爽、日夜溫差大</p></div><div class=\"terroir-item\"><span class=\"icon\">🪨</span><h6>土壤</h6><p>火山土、凝灰岩、石灰岩</p></div><div class=\"terroir-item\"><span class=\"icon\">💨</span><h6>風</h6><p>來自 Apennines 山的涼風</p></div></div></div></div>"
+      "title": "Primitivo di Manduria — 南義的「義大利 Zinfandel」",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>DNA 謎題解開：Primitivo = Zinfandel</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">1990 年代 DNA 研究震驚葡萄酒界：Primitivo 與美國 Napa Valley 的 Zinfandel 完全相同，兩者均源自克羅埃西亞的 Crljenak Kaštelanski。義大利版本更為結構感強，美國版本更濃郁豐厚。</p></div></div></div><div class=\"winemaking-section\"><p class=\"winemaking-intro\">Primitivo 與 Zinfandel 的風格對比</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Primitivo di Manduria DOC</h3><ul><li>產區：Puglia 的 Manduria</li><li>風格：黑櫻桃、黑巧克力、甘草、泥土感</li><li>酒精：14-16%（天然高糖分）</li><li>頂級：Gianfranco Fino（Es）、Morella</li><li>價格：€15-60</li></ul></div><div class=\"method-card modern\"><h3>California Zinfandel</h3><ul><li>產區：Sonoma、Napa、Paso Robles</li><li>風格：黑莓醬、覆盆莓果醬、煙燻香料</li><li>酒精：14.5-17%（更高糖度）</li><li>頂級：Ridge、Turley、Seghesio</li><li>價格：€25-100</li></ul></div></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍷 Primitivo di Manduria - Puglia 的力量",
-      "content": "<div class=\"grape-profile\"><div class=\"profile-header\"><div class=\"origin-badge\">Puglia - Primitivo di Manduria DOCG</div><h3>Primitivo (普里米蒂沃)</h3><div class=\"dna-badge\">= Zinfandel (DNA 相同)</div></div><div class=\"identity-crisis\"><h4>🧬 身份之謎</h4><div class=\"identity-timeline\"><div class=\"identity-event\"><span class=\"year\">1968</span><p>美國加州大學發現 <strong>Primitivo = Zinfandel</strong>（DNA 完全相同）</p></div><div class=\"identity-event\"><span class=\"year\">2002</span><p>進一步研究發現原始品種是克羅埃西亞的 <strong>Crljenak Kaštelanski</strong></p></div><div class=\"identity-event\"><span class=\"year\">現在</span><p>三個名字代表三種不同的風格解讀</p></div></div></div><div class=\"style-comparison\"><h4>🌍 Primitivo vs Zinfandel 風格差異</h4><table class=\"comparison-table\"><tbody><tr><th>特性</th><th>Primitivo (義大利)</th><th>Zinfandel (加州)</th></tr><tr><td><strong>氣候</strong></td><td>地中海炎熱乾燥</td><td>溫暖但海洋影響</td></tr><tr><td><strong>酒精度</strong></td><td>14-16%（極高）</td><td>14-15.5%</td></tr><tr><td><strong>風格</strong></td><td>濃郁、甜美、果醬感</td><td>更fresh、香料更明顯</td></tr><tr><td><strong>單寧</strong></td><td>柔軟、圓潤</td><td>稍粗獷</td></tr><tr><td><strong>主要風味</strong></td><td>李子乾、無花果、巧克力</td><td>黑莓、黑胡椒、香料</td></tr><tr><td><strong>陳年潛力</strong></td><td>5-10 年（DOCG）</td><td>5-15 年（頂級）</td></tr></tbody></table></div><div class=\"manduria-speciality\"><h4>🏆 Primitivo di Manduria 特殊性</h4><div class=\"speciality-points\"><div class=\"point-card\"><h6>🍇 超成熟採收</h6><p>Primitivo 名稱源自「提早成熟」，但在 Manduria 經常<strong>過度成熟採收</strong>，產生葡萄乾般的濃縮風味。</p></div><div class=\"point-card\"><h6>🌞 極端炎熱</h6><p>Manduria 是義大利最熱的產區之一，夏季常超過 40°C，造就極高糖分和酒精度。</p></div><div class=\"point-card\"><h6>🍷 Dolce Naturale</h6><p>傳統甜型版本（Dolce Naturale）使用半風乾葡萄，酒精度可達 16-18%，殘糖 50-100 g/L。</p></div></div></div></div>"
-    },
-    {
-      "type": "content",
-      "title": "📊 四大南義品種全面對比",
-      "content": "<div class=\"mega-comparison\"><table class=\"professional-table\"><thead><tr><th rowspan=\"2\" class=\"category-header\">特性</th><th colspan=\"2\">Basilicata</th><th colspan=\"2\">Campania</th></tr><tr><th>Aglianico del Vulture</th><th>-</th><th>Greco di Tufo</th><th>Fiano di Avellino</th></tr></thead><tbody><tr><td><strong>顏色</strong></td><td>🔴 紅葡萄</td><td>-</td><td>⚪ 白葡萄</td><td>⚪ 白葡萄</td></tr><tr><td><strong>DOCG年份</strong></td><td>2011</td><td>-</td><td>2003</td><td>2003</td></tr><tr><td><strong>氣候影響</strong></td><td>火山、極端溫差</td><td>-</td><td>火山土、內陸</td><td>山區、涼爽</td></tr><tr><td><strong>酸度</strong></td><td>極高</td><td>-</td><td>極高</td><td>中高</td></tr><tr><td><strong>酒體</strong></td><td>飽滿、結構強</td><td>-</td><td>中飽滿、緊實</td><td>飽滿、圓潤</td></tr><tr><td><strong>陳年需求</strong></td><td>必須（10+ 年）</td><td>-</td><td>可陳年（5-20 年）</td><td>可陳年（5-15 年）</td></tr><tr><td><strong>價格帶</strong></td><td>€€€-€€€€€</td><td>-</td><td>€€-€€€€</td><td>€€-€€€€</td></tr><tr><td><strong>國際認可度</strong></td><td>高（南義 Barolo）</td><td>-</td><td>中高（專業圈）</td><td>中高（專業圈）</td></tr></tbody></table><div class=\"apulia-section\"><h5>Puglia 代表</h5><div class=\"primitivo-row\"><div class=\"wine-name\"><strong>Primitivo di Manduria DOCG</strong></div><div class=\"wine-specs\"><span>🔴 紅葡萄</span><span>2011 DOCG</span><span>極高糖分/酒精</span><span>5-10 年陳年</span><span>€€-€€€€</span><span>大眾認可度高</span></div></div></div></div>"
-    },
-    {
-      "type": "content",
-      "title": "🏅 頂級生產者指南",
-      "content": "<div class=\"producers-by-region\"><div class=\"region-producers\"><div class=\"region-header vulture-header\"><h4>🌋 Basilicata - Aglianico del Vulture</h4></div><div class=\"winery-showcase\"><div class=\"winery\"><h5>Elena Fucci</h5><div class=\"badges\"><span class=\"badge biodynamic\">生物動力法</span><span class=\"badge critic\">WA 96+</span></div><p class=\"flagship\">旗艦酒款：Titolo</p><p class=\"price\">€80-120</p></div><div class=\"winery\"><h5>Cantine del Notaio</h5><div class=\"badges\"><span class=\"badge traditional\">傳統 Superiore</span></div><p class=\"flagship\">旗艦酒款：Il Repertorio</p><p class=\"price\">€40-60</p></div><div class=\"winery\"><h5>Paternoster</h5><div class=\"badges\"><span class=\"badge historic\">歷史酒莊</span></div><p class=\"flagship\">旗艦酒款：Don Anselmo</p><p class=\"price\">€50-80</p></div></div></div><div class=\"region-producers\"><div class=\"region-header campania-header\"><h4>🏛️ Campania - Greco &amp; Fiano</h4></div><div class=\"winery-showcase\"><div class=\"winery\"><h5>Feudi di San Gregorio</h5><div class=\"badges\"><span class=\"badge modern\">現代先驅</span><span class=\"badge international\">國際知名</span></div><p class=\"flagship\">Greco: Cutizzi | Fiano: Pietracalda</p><p class=\"price\">€25-50</p></div><div class=\"winery\"><h5>Mastroberardino</h5><div class=\"badges\"><span class=\"badge legendary\">傳奇家族</span></div><p class=\"flagship\">Greco: Nova Serra | Fiano: Radici</p><p class=\"price\">€30-60</p></div><div class=\"winery\"><h5>Benito Ferrara</h5><div class=\"badges\"><span class=\"badge terroir\">風土至上</span></div><p class=\"flagship\">Fiano: Vigna Cicogna</p><p class=\"price\">€35-55</p></div></div></div><div class=\"region-producers\"><div class=\"region-header puglia-header\"><h4>☀️ Puglia - Primitivo</h4></div><div class=\"winery-showcase\"><div class=\"winery\"><h5>A-Mano</h5><div class=\"badges\"><span class=\"badge value\">超值首選</span></div><p class=\"flagship\">Primitivo di Manduria</p><p class=\"price\">€12-18</p></div><div class=\"winery\"><h5>Gianfranco Fino</h5><div class=\"badges\"><span class=\"badge cult\">Cult Producer</span><span class=\"badge critic\">WA 98+</span></div><p class=\"flagship\">ES | Primitivo di Manduria</p><p class=\"price\">€80-150</p></div><div class=\"winery\"><h5>Masseria Li Veli</h5><div class=\"badges\"><span class=\"badge organic\">有機認證</span></div><p class=\"flagship\">Orion | Askos</p><p class=\"price\">€25-45</p></div></div></div></div>"
-    },
-    {
-      "type": "content",
-      "title": "🍴 南義風土配餐",
-      "content": "<div class=\"regional-pairing\"><div class=\"pairing-region\"><h4>🌋 Aglianico del Vulture 配餐</h4><div class=\"pairing-principle\">原則：強勁單寧需要油脂和蛋白質</div><div class=\"dishes\"><div class=\"dish\">🥩 <strong>Tagliata 牛排</strong> - 單寧切開油脂</div><div class=\"dish\">🍖 <strong>燉羊肉</strong> - 長時間烹調匹配陳年酒</div><div class=\"dish\">🧀 <strong>Pecorino 陳年起司</strong> - 鹹度匹配礦物感</div><div class=\"dish\">🍝 <strong>Ragù Lucano</strong> - Basilicata 傳統肉醬</div></div></div><div class=\"pairing-region\"><h4>🏛️ Greco di Tufo 配餐</h4><div class=\"pairing-principle\">原則：高酸度搭配油脂和海鮮</div><div class=\"dishes\"><div class=\"dish\">🦪 <strong>生蠔</strong> - 礦物感完美匹配</div><div class=\"dish\">🐙 <strong>章魚沙拉</strong> - 檸檬酸度呼應</div><div class=\"dish\">🍝 <strong>Vongole 蛤蜊麵</strong> - Campania 經典</div><div class=\"dish\">🧀 <strong>Burrata</strong> - 奶油感平衡酸度</div></div></div><div class=\"pairing-region\"><h4>🌸 Fiano di Avellino 配餐</h4><div class=\"pairing-principle\">原則：芳香與飽滿度需要風味豐富的菜餚</div><div class=\"dishes\"><div class=\"dish\">🦐 <strong>龍蝦</strong> - 豐富甲殼類</div><div class=\"dish\">🍄 <strong>松露燉飯</strong> - 複雜香氣匹配</div><div class=\"dish\">🐟 <strong>烤鱸魚</strong> - 油質魚類</div><div class=\"dish\">🥘 <strong>海鮮湯</strong> - Campania 傳統</div></div></div><div class=\"pairing-region\"><h4>☀️ Primitivo 配餐</h4><div class=\"pairing-principle\">原則：高酒精和甜美果味搭配辛香料理</div><div class=\"dishes\"><div class=\"dish\">🍖 <strong>BBQ 烤肉</strong> - 焦糖化風味</div><div class=\"dish\">🍕 <strong>辣味披薩</strong> - 酒精平衡辣度</div><div class=\"dish\">🥘 <strong>Orecchiette 耳朵麵</strong> - Puglia 傳統</div><div class=\"dish\">🧀 <strong>Burrata + 番茄</strong> - 地域配對</div></div></div></div>"
+      "title": "四大南義原生品種全面對比",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Aglianico</h3><p class=\"mf-style\">紅葡萄｜Basilicata 火山區｜南義之王</p><p class=\"mf-prod\">極高單寧和酸度 / 陳年 20-30 年 / €25-80 / 搭配羊肉、鹿肉</p></div><div class=\"mf-zone warm\"><h3>Greco di Tufo</h3><p class=\"mf-style\">白葡萄｜Campania DOCG｜凝灰岩土壤</p><p class=\"mf-prod\">鹹礦物感、清新桃香 / 陳年 8-12 年 / €18-45 / 搭配海鮮</p></div><div class=\"mf-zone cool\"><h3>Fiano di Avellino</h3><p class=\"mf-style\">白葡萄｜Campania DOCG｜高海拔山區</p><p class=\"mf-prod\">芳香奶油感、油質地 / 陳年 10-15 年 / €20-55 / 搭配白肉</p></div><div class=\"mf-zone plain\"><h3>Primitivo</h3><p class=\"mf-style\">紅葡萄｜Puglia DOC｜= Zinfandel</p><p class=\"mf-prod\">濃郁黑果、高酒精 / 陳年 5-15 年 / €15-60 / 搭配燒烤</p></div></div></div>"
     },
     {
       "type": "list",
-      "title": "🎓 專家重點回顧",
+      "title": "重點回顧",
       "points": [
-        "✓ Aglianico del Vulture 是南義的「Barolo」，需要 10+ 年陳年",
-        "✓ Vulture 火山土壤賦予獨特的礦物感和火藥香氣",
-        "✓ Greco di Tufo 擁有義大利白酒中最高的酸度之一",
-        "✓ Greco 的名字源自古希臘，有 2500 年歷史",
-        "✓ Fiano 以芳香著稱，比 Greco 更飽滿圓潤",
-        "✓ Primitivo = Zinfandel (DNA 相同），但風格差異明顯",
-        "✓ Primitivo di Manduria 是義大利酒精度最高的干型紅酒之一",
-        "✓ 南義品種都受益於火山土和極端氣候"
+        "Aglianico del Vulture 生長在 Basilicata 死火山山坡，火山土壤賦予獨特礦物感，稱「南義 Barolo」",
+        "Aglianico 極高單寧與酸度，需 10-15 年以上才適飲，優秀年份可陳年 25-30 年",
+        "Greco di Tufo DOCG：Tufo（凝灰岩）土壤賦予獨特鹹礦物感，白桃、杏桃、柑橘皮風味",
+        "Fiano di Avellino DOCG：義大利最古老白葡萄品種之一（古羅馬稱 Apianum），芳香奶油油質感",
+        "Greco 更鹹礦物感（清爽型），Fiano 更芳香奶油（飽滿型），兩者陳年潛力都在 10 年以上",
+        "DNA 研究確認 Primitivo（義大利）= Zinfandel（美國），均源自克羅埃西亞的 Crljenak Kaštelanski",
+        "Primitivo di Manduria DOC：黑櫻桃、黑巧克力、甘草，酒精 14-16%，Gianfranco Fino 是標竿",
+        "四大品種皆為南義在地原生品種，代表不同風土——火山、凝灰岩、山區、沿海平原",
+        "南義葡萄酒的未來：品質持續提升、性價比極高，是尋求物超所值好酒的最佳選擇"
       ]
     },
     {
       "type": "quiz",
-      "title": "🧠 南義稀有品種知識檢測",
+      "title": "南義原生品種知識檢測",
       "_marker": "// inject-italy-l3-quiz",
       "questions": [
         {
           "type": "single",
-          "question": "Aglianico del Vulture 為什麼被稱為「南義的 Barolo」？",
+          "question": "Aglianico del Vulture 被稱為「南義 Barolo」的主要原因是？",
           "options": [
-            "價格相同",
+            "產於同一個地區",
             "都需要長時間陳年且單寧強勁",
-            "使用相同葡萄品種",
-            "產區海拔相同"
+            "品種相同",
+            "葡萄園面積相似"
           ],
           "correct": 1,
-          "explanation": "Aglianico del Vulture 因其極高的單寧、酸度和需要 10 年以上陳年的特性，被稱為南義的 Barolo。"
+          "explanation": "Aglianico del Vulture 和 Barolo 都以 100% 單一品種釀造、極高單寧、高酸度和長時間陳年需求聞名，兩者都需要至少 20-30 年才能展現最佳狀態。"
         },
         {
           "type": "single",
-          "question": "Greco di Tufo 的 'Tufo' 指的是什麼？",
+          "question": "Greco di Tufo DOCG 的「Tufo」是指什麼？",
           "options": [
-            "村莊名稱",
-            "凝灰岩（火山灰沉積岩）",
-            "葡萄克隆",
-            "釀酒師名字"
+            "一個釀酒師的姓氏",
+            "凝灰岩（火山岩），賦予獨特礦物感",
+            "義大利語「古老」",
+            "一個村莊的名稱"
           ],
           "correct": 1,
-          "explanation": "Tufo 是義大利文的凝灰岩（火山灰沉積岩），Greco di Tufo 的葡萄園必須位於這種土壤上。"
+          "explanation": "Tufo 是指凝灰岩（Tufa），一種由火山灰沉積形成的岩石。Campania 的 Greco di Tufo 產區土壤以凝灰岩為主，賦予葡萄酒獨特的礦物感和鹹味。"
         },
         {
           "type": "single",
-          "question": "Primitivo 與哪個品種 DNA 完全相同？",
+          "question": "DNA 研究證實 Primitivo 與哪個國際著名品種完全相同？",
           "options": [
-            "Syrah",
+            "Cabernet Sauvignon",
+            "Merlot",
             "Zinfandel",
-            "Grenache",
-            "Tempranillo"
+            "Syrah"
           ],
-          "correct": 1,
-          "explanation": "1968 年科學研究證實 Primitivo 與美國加州的 Zinfandel DNA 完全相同，是同一品種的不同名稱。"
+          "correct": 2,
+          "explanation": "1990 年代的 DNA 研究確認 Primitivo 和美國加州的 Zinfandel 是完全相同的品種，兩者均源自克羅埃西亞的 Crljenak Kaštelanski。"
         },
         {
           "type": "single",
-          "question": "哪個酒莊是 Aglianico del Vulture 的生物動力法代表？",
+          "question": "Elena Fucci 的 Titolo 代表哪種南義葡萄酒？",
           "options": [
-            "Gaja",
-            "Elena Fucci",
-            "Antinori",
-            "Feudi di San Gregorio"
+            "Greco di Tufo DOCG",
+            "Aglianico del Vulture DOC（生物動力農法）",
+            "Primitivo di Manduria DOC",
+            "Fiano di Avellino DOCG"
           ],
           "correct": 1,
-          "explanation": "Elena Fucci 是 Basilicata 的生物動力法先驅，其旗艦酒款 Titolo 獲得 Wine Advocate 96+ 高分。"
+          "explanation": "Elena Fucci 的 Titolo 是 Aglianico del Vulture DOC 的代表作，採用生物動力農法，是南義最受矚目的女性釀酒師之一。"
         },
         {
           "type": "single",
-          "question": "Negroamaro 品種名稱的字面意義是什麼？",
+          "question": "Fiano di Avellino 與 Greco di Tufo 相比，最大的風格差異是？",
           "options": [
-            "A. 黑色甜美",
-            "B. 黑色苦澀（nero + amaro）",
-            "C. 黑色海洋",
-            "D. 深色鈴鐺"
+            "酸度更低",
+            "更芳香、奶油質感（油質地）",
+            "單寧更強",
+            "顏色更深"
           ],
           "correct": 1,
-          "explanation": "Negroamaro 由 nero（黑）+ amaro（苦）組成，反映了品種天然帶有的苦感單寧，是 Puglia Salento 半島最重要的本土紅品種。"
+          "explanation": "Fiano di Avellino 相比 Greco di Tufo 更為芳香飽滿，帶有奶油般的油質感（榛果、蜂蠟、熱帶果香），而 Greco 則以鹹礦物感和清爽桃香為主。"
         }
       ]
     }

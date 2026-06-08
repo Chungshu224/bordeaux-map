@@ -1,140 +1,113 @@
 {
-  "id": "L3M6L2",
+  "lessonId": "L3M6L2",
   "title": "老酒的侍酒與醒酒藝術",
-  "description": "學習如何正確處理陳年義大利葡萄酒（如老 Barolo、Brunello 或 Amarone），掌握開瓶、換瓶 (Decanting) 與醒酒 (Aeration) 的專業技巧，以喚醒沉睡的香氣並避免破壞脆弱的酒體。",
+  "quiz": [
+    {
+      "question": "在準備開啟一瓶平躺儲存了 20 年的 Barolo 之前，最重要的第一步準備工作是什麼？",
+      "options": ["立刻放入冰箱冷凍庫快速降溫", "將酒瓶直立靜置至少 24 到 48 小時，讓沉澱物沉降到瓶底", "用力搖晃酒瓶以喚醒沉睡的香氣", "直接使用螺旋開瓶器快速拔出軟木塞"],
+      "answer": 1,
+      "explanation": "老酒中含有大量沉澱物，如果沒有直立靜置讓其沉降，倒酒時沉澱物會混入酒液中，帶來苦澀感並破壞口感。"
+    },
+    {
+      "question": "開啟老酒時，為什麼建議使用「Ah-So 老酒開瓶器（雙叉型）」而不是傳統螺旋開瓶器？",
+      "options": ["因為老酒開瓶器比較便宜", "因為老酒開瓶器可以順便過濾沉澱物", "因為老酒的軟木塞通常非常脆弱、濕軟，螺旋開瓶器容易將其鑽碎並掉入酒中", "因為老酒開瓶器可以同時注入氧氣"],
+      "answer": 2,
+      "explanation": "Ah-So 利用兩片金屬薄片夾住軟木塞的兩側將其完整拔出，避免了螺旋鑽破壞脆弱軟木塞結構的風險。"
+    },
+    {
+      "question": "關於老酒的「換瓶 (Decanting)」與「醒酒 (Aeration)」，下列哪一個觀念是正確的？",
+      "options": ["極老的老酒（30年以上）通常需要倒入寬底大肚的醒酒器中靜置數小時，以充分接觸氧氣", "換瓶的主要目的是為了讓酒液接觸大量氧氣", "處理有大量沉澱物的老酒時，應選擇窄底、細長的醒酒器，以最小化與空氣接觸的面積，防止過度氧化", "年輕、單寧強勁的紅酒不需要醒酒，直接喝最好"],
+      "answer": 2,
+      "explanation": "老酒非常脆弱，過度接觸氧氣會讓香氣迅速消散甚至變質。因此，老酒的換瓶主要是為了「分離沉澱物」，必須使用窄底醒酒器來減少氧化。"
+    },
+    {
+      "question": "品飲陳年 Nebbiolo（如老 Barolo）時，最適合使用哪一種形狀的酒杯？",
+      "options": ["細長的香檳笛杯 (Flute)，以保持氣泡", "杯肚寬大、杯口內收的勃根地杯 (Burgundy Glass)，以展開並集中複雜的第三層香氣", "杯口外翻的甜酒杯，以強調甜度", "沒有杯梗的平底水杯"],
+      "answer": 1,
+      "explanation": "陳年 Nebbiolo 擁有極其複雜的香氣（如玫瑰、松露、皮革），寬大的杯肚能提供足夠的空間讓香氣揮發，內收的杯口則能將這些珍貴的香氣集中送入鼻腔。"
+    }
+  ],
   "slides": [
     {
-      "type": "content",
-      "title": "老酒的脆弱與珍貴",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">陳年超過 15 年甚至 20 年的義大利頂級紅酒（如 Barolo, Barbaresco, Brunello di Montalcino, Amarone della Valpolicella）是時間的藝術品。隨著歲月流逝，它們的果香會轉化為複雜的第三層香氣（泥土、皮革、松露、乾樹葉），單寧會變得柔滑，但同時，<strong>酒體也變得極度脆弱</strong>。</p><div class=\"bg-amber-50 p-6 rounded-xl border border-amber-200 mb-8\"><h4 class=\"text-amber-800 font-bold mb-4 flex items-center\"><span class=\"material-icons mr-2\">warning</span> 處理老酒的兩大挑戰</h4><div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\"><div class=\"bg-white p-4 rounded-lg shadow-sm\"><h5 class=\"font-bold text-gray-800 mb-2\">1. 沉澱物 (Sediment)</h5><p class=\"text-sm text-gray-600\">隨著時間推移，酒中的色素（花青素）與單寧會結合並沉澱在瓶底。這些沉澱物雖然無害，但如果混入酒液中，會帶來苦澀感並破壞口感的滑順度。</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm\"><h5 class=\"font-bold text-gray-800 mb-2\">2. 氧化的風險 (Oxidation)</h5><p class=\"text-sm text-gray-600\">老酒已經在瓶中經歷了漫長的微氧化過程。突然接觸大量氧氣（過度醒酒）可能會讓脆弱的香氣在幾分鐘內消散殆盡，甚至讓酒液迅速氧化變質（變成醋味或醬油味）。</p></div></div></div></div>"
+      "type": "title",
+      "title": "老酒的侍酒與醒酒藝術",
+      "subtitle": "時間的藝術品：如何保護與喚醒陳年義大利名酒"
     },
     {
       "type": "content",
-      "title": "開瓶前的準備：靜置與工具",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">侍奉一瓶老酒，準備工作從開瓶前幾天就開始了。</p><div class=\"space-y-6\"><div class=\"bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col md:flex-row gap-6 items-center\"><div class=\"w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0\"><span class=\"material-icons text-3xl text-blue-600\">hourglass_empty</span></div><div class=\"flex-1\">><h4 class=\"text-xl font-bold text-gray-800 mb-2\">1. 直立靜置 (Standing Up)</h4><p class=\"text-gray-600 mb-2\">如果老酒一直平躺儲存，開瓶前必須將其<strong>直立靜置至少 24 到 48 小時</strong>。這能讓懸浮在酒液中的細小沉澱物完全沉降到瓶底。</p></div></div><div class=\"bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col md:flex-row gap-6 items-center\"><div class=\"w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0\"><span class=\"material-icons text-3xl text-teal-600\">build</span></div><div class=\"flex-1\">><h4 class=\"text-xl font-bold text-gray-800 mb-2\">2. 選擇正確的開瓶器 (The Ah-So)</h4><p class=\"text-gray-600 mb-2\">老酒的軟木塞通常已經變得非常脆弱、濕軟甚至碎裂。傳統的螺旋開瓶器 (Corkscrew) 很容易將軟木塞鑽碎並掉入酒中。</p><p class=\"text-sm text-gray-500\"><strong>解決方案：</strong> 使用<strong>老酒開瓶器 (Ah-So / Two-Prong Cork Puller)</strong>。它利用兩片金屬薄片插入軟木塞與玻璃瓶頸之間的縫隙，將整個軟木塞完整夾出，避免碎裂。</p></div></div></div></div>"
+      "title": "老酒的兩大挑戰：沉澱物與氧化風險",
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">陳年超過 15-20 年的義大利頂級紅酒（Barolo、Brunello、Amarone）是時間的藝術品——果香已轉化為複雜的第三層香氣，單寧柔滑。但隨之而來的，是極度脆弱的酒體，需要最謹慎的侍酒處理。</p></div><div class=\"winemaking-section\"><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>🪨 沉澱物 (Sediment)</h3><ul><li>花青素與單寧結合後沉澱在瓶底——正常的陳年現象，非酒壞掉的跡象</li><li>雖然無害，但混入酒液會帶來苦澀感，破壞口感的滑順度</li><li>解決：開瓶前直立靜置 24-48 小時，讓沉澱物完全沉降</li><li>換瓶時用燭光/手電筒觀察沉澱物位置，及時停止倒酒</li></ul></div><div class=\"method-card modern\"><h3>💨 氧化風險 (Oxidation)</h3><ul><li>老酒已在瓶中歷經漫長的微氧化，酒體極度脆弱</li><li>突然接觸大量氧氣（過度醒酒）可能讓複雜香氣在數分鐘內消散殆盡</li><li>嚴重時迅速變質：出現醋味或醬油味，無法挽回</li><li>30 年以上老酒原則：只換瓶，不醒酒；換瓶後立即倒杯，在杯中緩慢甦醒</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "換瓶 (Decanting) vs. 醒酒 (Aeration)",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">這兩個名詞經常被混淆，但在處理老酒時，它們的目的完全不同，且必須極度謹慎。</p><div class=\"grid grid-cols-1 md:grid-cols-2 gap-8 mb-8\"><div class=\"bg-gray-50 p-6 rounded-xl border border-gray-200\"><h4 class=\"text-gray-800 font-bold mb-4 flex items-center\"><span class=\"material-icons mr-2\">filter_alt</span> 換瓶 (Decanting for Sediment)</h4><p class=\"text-gray-700 mb-4\"><strong>目的：</strong> 將清澈的酒液與瓶底的沉澱物分離。</p><ul class=\"space-y-2 text-sm text-gray-600\"><li><strong>適用對象：</strong> 有大量沉澱物的老酒（如 20 年以上的 Barolo 或年份波特）。</li><li><strong>操作方式：</strong> 在光源（如蠟燭或手電筒）的照射下，緩慢、平穩地將酒液倒入醒酒器中。當看到沉澱物接近瓶頸時，立即停止倒酒。</li><li><strong>醒酒器選擇：</strong> 選擇<strong>窄底、細長</strong>的醒酒器（如鴨舌型），以<strong>最小化</strong>酒液與空氣接觸的表面積，防止過度氧化。</li></ul></div><div class=\"bg-blue-50 p-6 rounded-xl border border-blue-200\"><h4 class=\"text-blue-800 font-bold mb-4 flex items-center\"><span class=\"material-icons mr-2\">air</span> 醒酒 (Aeration for Breathing)</h4><p class=\"text-gray-700 mb-4\"><strong>目的：</strong> 讓酒液接觸氧氣，柔化單寧，散發香氣（特別是去除還原味 Reduction）。</p><ul class=\"space-y-2 text-sm text-gray-600\"><li><strong>適用對象：</strong> 年輕、單寧強勁、香氣封閉的紅酒（如年輕的 Brunello 或 Super Tuscans）。</li><li><strong>操作方式：</strong> 將酒倒入醒酒器中，靜置數小時。</li><li><strong>醒酒器選擇：</strong> 選擇<strong>寬底、大肚</strong>的醒酒器（如船長型），以<strong>最大化</strong>酒液與空氣接觸的表面積。</li></ul></div></div><div class=\"bg-red-100 p-4 rounded-lg border-l-4 border-red-500\"><p class=\"text-red-800 font-bold\">⚠️ 核心原則：極老的老酒（30年以上）通常「只需要換瓶，不需要醒酒」。過度接觸空氣會讓它們瞬間死亡。最好的方式是換瓶後立刻倒入杯中，讓它在杯中慢慢甦醒。</p></div></div>"
+      "title": "開瓶前準備：四個關鍵步驟",
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>⏰ 直立靜置 24-48 小時</h3><p class=\"mf-style\">最重要的第一步，不可省略</p><p class=\"mf-prod\">平躺存放的老酒，開瓶前必須直立靜置至少 24-48 小時；讓懸浮在酒液中的細小沉澱物完全沉降到瓶底；越老的酒所需時間越長，切勿急著開瓶</p></div><div class=\"mf-zone warm\"><h3>🔧 Ah-So 老酒開瓶器</h3><p class=\"mf-style\">脆弱軟木塞的救星</p><p class=\"mf-prod\">老酒軟木塞通常非常脆弱、濕軟，螺旋開瓶器容易將其鑽碎掉入酒中；Ah-So（雙叉型）利用兩片金屬薄片插入縫隙，夾住軟木塞兩側完整拔出，避免碎裂</p></div><div class=\"mf-zone cool\"><h3>🕯️ 燭光換瓶技術</h3><p class=\"mf-style\">分離沉澱物的精密操作</p><p class=\"mf-prod\">在燭光或手電筒照射下，緩慢平穩地將酒液倒入醒酒器；當光線透過瓶頸看到第一絲沉澱物接近時，立即停止倒酒；寧可損失少量清澈酒液，也不讓沉澱物混入</p></div><div class=\"mf-zone plain\"><h3>🫙 選用窄底細長醒酒器</h3><p class=\"mf-style\">最小化空氣接觸面積</p><p class=\"mf-prod\">老酒換瓶應選用窄底、細長的醒酒器（如鴨舌型 Duck Decanter），而非寬底大肚款；以最小化酒液與空氣接觸的表面積，防止過度氧化導致香氣迅速消散</p></div></div>"
     },
     {
       "type": "content",
-      "title": "杯型的選擇與溫度控制",
-      "content": "<div class=\"prose max-w-none\"><p class=\"text-lg text-gray-700 mb-6\">最後的呈現同樣重要。正確的酒杯與溫度能將老酒的魅力發揮到極致。</p><div class=\"bg-gray-900 p-6 rounded-xl text-white mb-8\"><div class=\"flex flex-col space-y-4\"><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-purple-400 font-bold mb-2\">酒杯的選擇 (Glassware)</h4><p class=\"text-sm text-gray-300\">對於香氣複雜、單寧已柔化的老酒（特別是 Nebbiolo 或 Sangiovese），應選擇<strong>杯肚寬大、杯口內收的勃根地杯 (Burgundy Glass)</strong>。寬大的杯肚能讓複雜的第三層香氣充分展開，內收的杯口則能將香氣集中送入鼻腔。</p></div><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-blue-400 font-bold mb-2\">侍酒溫度 (Serving Temperature)</h4><p class=\"text-sm text-gray-300\">老酒的侍酒溫度應比年輕紅酒<strong>稍微低一點（約 16°C - 18°C）</strong>。過高的溫度會讓酒精感變得刺鼻，掩蓋脆弱的香氣；稍微涼爽的溫度能讓酒體顯得更緊實、更有活力。</p></div><div class=\"bg-gray-800 p-4 rounded-lg border border-gray-700\"><h4 class=\"text-green-400 font-bold mb-2\">品飲的節奏 (Pacing)</h4><p class=\"text-sm text-gray-300\">老酒在杯中的變化非常迅速。不要急著喝完，也不要一次倒太多。觀察它從剛開瓶的封閉（甚至帶點霉味），到接觸空氣後綻放出的花香與松露香，再到最後香氣逐漸衰退的整個生命週期，這才是品飲老酒最大的樂趣。</p></div></div></div></div>"
+      "title": "換瓶 vs 醒酒：目的完全不同",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">「換瓶」與「醒酒」這兩個名詞經常被混淆，但在目的、適用對象和工具選擇上完全不同——正確區分是處理老酒的核心知識。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>🫙 換瓶 (Decanting) for Sediment</h3><ul><li><strong>目的：</strong>將清澈酒液與瓶底沉澱物分離</li><li><strong>適用：</strong>有大量沉澱物的老酒（20 年以上 Barolo、Brunello、年份波特）</li><li><strong>醒酒器：</strong>窄底細長型（鴨舌型），最小化空氣接觸面積</li><li><strong>時間：</strong>換瓶後盡快飲用；30 年以上老酒換瓶後立即倒杯，在杯中慢慢甦醒</li><li>⚠️ 核心：換瓶是為了「濾渣」，不是讓酒接觸空氣</li></ul></div><div class=\"method-card modern\"><h3>💨 醒酒 (Aeration) for Breathing</h3><ul><li><strong>目的：</strong>讓酒液接觸氧氣，柔化單寧，散發香氣，去除還原味</li><li><strong>適用：</strong>年輕、單寧強勁、香氣封閉的紅酒（年輕 Brunello、Super Tuscans）</li><li><strong>醒酒器：</strong>寬底大肚型（船長型 Captain Decanter），最大化空氣接觸面積</li><li><strong>時間：</strong>靜置 1-3 小時（依酒款年份調整）</li><li>✅ 核心：醒酒是為了「呼吸」，讓年輕酒展開香氣</li></ul></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "酒杯選擇、侍酒溫度與品飲節奏",
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🍷 酒杯選擇</h3><p class=\"mf-style\">勃根地杯（Burgundy Glass）</p><p class=\"mf-prod\">陳年 Nebbiolo / Sangiovese 應選杯肚寬大、杯口內收的勃根地杯；寬肚讓複雜的第三層香氣（松露、玫瑰、皮革）充分展開；內收杯口將珍貴香氣集中送入鼻腔</p></div><div class=\"mf-zone warm\"><h3>🌡️ 侍酒溫度</h3><p class=\"mf-style\">16°C - 18°C（比一般紅酒稍低）</p><p class=\"mf-prod\">過高溫度讓酒精感刺鼻，掩蓋脆弱香氣；稍低溫度讓酒體更緊實、更有活力；建議飲前 30 分鐘從地窖（12-14°C）取出，讓酒在室溫中自然升溫</p></div><div class=\"mf-zone cool\"><h3>👁️ 品飲節奏</h3><p class=\"mf-style\">少量多次，觀察香氣演變全過程</p><p class=\"mf-prod\">一次倒少量，不要急著喝完；觀察老酒從剛開瓶的封閉（甚至帶還原味）→ 逐漸綻放花香與松露 → 香氣開始衰退的完整生命週期，這才是品飲老酒最大的樂趣</p></div><div class=\"mf-zone plain\"><h3>⏳ 老酒的脆弱窗口</h3><p class=\"mf-style\">30 年以上老酒可能在 30-60 分鐘後衰退</p><p class=\"mf-prod\">極老的老酒複雜香氣可能在開瓶後 30-60 分鐘內消失；這不是酒壞了，而是時間的紀念碑完成了使命；邀請賓客一起準時在座，不要讓老酒獨自等待</p></div></div>"
+    },
+    {
+      "type": "list",
+      "title": "重點回顧",
+      "points": [
+        "老酒兩大挑戰：沉澱物（苦澀感）與氧化風險（香氣消散），兩者需用不同策略應對",
+        "第一步：平躺老酒開瓶前直立靜置 24-48 小時，讓沉澱物完全沉降到瓶底",
+        "開瓶工具：Ah-So（雙叉型）老酒開瓶器，避免螺旋鑽碎脆弱的軟木塞",
+        "換瓶（Decanting）= 分離沉澱物；醒酒（Aeration）= 接觸氧氣柔化單寧——目的完全不同",
+        "老酒換瓶：用燭光輔助，選窄底細長醒酒器（鴨舌型），最小化空氣接觸面積",
+        "年輕酒醒酒：選寬底大肚醒酒器（船長型），最大化空氣接觸，靜置 1-3 小時",
+        "30 年以上老酒：只換瓶，不醒酒——換瓶後立即倒杯，讓它在杯中緩慢甦醒",
+        "陳年 Nebbiolo/Sangiovese 最適合勃根地杯；侍酒溫度 16-18°C（比一般紅酒稍低）"
+      ]
     },
     {
       "type": "quiz",
-      "title": "🧠 選酒顧問知識檢測",
+      "title": "老酒的侍酒與醒酒藝術知識檢測",
       "_marker": "// inject-italy-l3-quiz",
       "questions": [
         {
           "type": "single",
           "question": "在準備開啟一瓶平躺儲存了 20 年的 Barolo 之前，最重要的第一步準備工作是什麼？",
-          "options": [
-            "立刻放入冰箱冷凍庫快速降溫",
-            "將酒瓶直立靜置至少 24 到 48 小時，讓沉澱物沉降到瓶底",
-            "用力搖晃酒瓶以喚醒沉睡的香氣",
-            "直接使用螺旋開瓶器快速拔出軟木塞"
-          ],
+          "options": ["立刻放入冰箱冷凍庫快速降溫", "將酒瓶直立靜置至少 24 到 48 小時，讓沉澱物沉降到瓶底", "用力搖晃酒瓶以喚醒沉睡的香氣", "直接使用螺旋開瓶器快速拔出軟木塞"],
           "correct": 1,
-          "explanation": "老酒中含有大量沉澱物，如果沒有直立靜置讓其沉降，倒酒時沉澱物會混入酒液中，帶來苦澀感並破壞口感。"
+          "explanation": "老酒中含有大量沉澱物，如果沒有直立靜置讓其沉降，倒酒時沉澱物會混入酒液中，帶來苦澀感並破壞口感的滑順度。"
         },
         {
           "type": "single",
-          "question": "開啟老酒時，為什麼強烈建議使用「老酒開瓶器 (Ah-So / Two-Prong Cork Puller)」而不是傳統的螺旋開瓶器？",
-          "options": [
-            "因為老酒開瓶器比較便宜",
-            "因為老酒開瓶器可以順便過濾沉澱物",
-            "因為老酒的軟木塞通常非常脆弱、濕軟，螺旋開瓶器容易將其鑽碎並掉入酒中",
-            "因為老酒開瓶器可以同時注入氧氣"
-          ],
+          "question": "開啟老酒時，為什麼建議使用「Ah-So 老酒開瓶器（雙叉型）」而不是傳統螺旋開瓶器？",
+          "options": ["因為老酒開瓶器比較便宜", "因為老酒開瓶器可以順便過濾沉澱物", "因為老酒的軟木塞通常非常脆弱、濕軟，螺旋開瓶器容易將其鑽碎並掉入酒中", "因為老酒開瓶器可以同時注入氧氣"],
           "correct": 2,
           "explanation": "Ah-So 利用兩片金屬薄片夾住軟木塞的兩側將其完整拔出，避免了螺旋鑽破壞脆弱軟木塞結構的風險。"
         },
         {
           "type": "single",
           "question": "關於老酒的「換瓶 (Decanting)」與「醒酒 (Aeration)」，下列哪一個觀念是正確的？",
-          "options": [
-            "極老的老酒（30年以上）通常需要倒入寬底大肚的醒酒器中靜置數小時，以充分接觸氧氣",
-            "換瓶的主要目的是為了讓酒液接觸大量氧氣",
-            "處理有大量沉澱物的老酒時，應選擇窄底、細長的醒酒器進行換瓶，以最小化與空氣接觸的面積，防止過度氧化",
-            "年輕、單寧強勁的紅酒不需要醒酒，直接喝最好"
-          ],
+          "options": ["極老的老酒（30年以上）通常需要倒入寬底大肚的醒酒器中靜置數小時，以充分接觸氧氣", "換瓶的主要目的是為了讓酒液接觸大量氧氣", "處理有大量沉澱物的老酒時，應選擇窄底、細長的醒酒器，以最小化與空氣接觸的面積，防止過度氧化", "年輕、單寧強勁的紅酒不需要醒酒，直接喝最好"],
           "correct": 2,
           "explanation": "老酒非常脆弱，過度接觸氧氣會讓香氣迅速消散甚至變質。因此，老酒的換瓶主要是為了「分離沉澱物」，必須使用窄底醒酒器來減少氧化。"
         },
         {
           "type": "single",
-          "question": "品飲陳年 Nebbiolo (如老 Barolo) 時，最適合使用哪一種形狀的酒杯？",
-          "options": [
-            "細長的香檳笛杯 (Flute)，以保持氣泡",
-            "杯肚寬大、杯口內收的勃根地杯 (Burgundy Glass)，以展開並集中複雜的第三層香氣",
-            "杯口外翻的甜酒杯，以強調甜度",
-            "沒有杯梗的平底水杯"
-          ],
+          "question": "品飲陳年 Nebbiolo（如老 Barolo）時，最適合使用哪一種形狀的酒杯？",
+          "options": ["細長的香檳笛杯 (Flute)，以保持氣泡", "杯肚寬大、杯口內收的勃根地杯 (Burgundy Glass)，以展開並集中複雜的第三層香氣", "杯口外翻的甜酒杯，以強調甜度", "沒有杯梗的平底水杯"],
           "correct": 1,
           "explanation": "陳年 Nebbiolo 擁有極其複雜的香氣（如玫瑰、松露、皮革），寬大的杯肚能提供足夠的空間讓香氣揮發，內收的杯口則能將這些珍貴的香氣集中送入鼻腔。"
         },
         {
           "type": "single",
           "question": "侍酒師建議顧客選酒時，最有效的開場問題是？",
-          "options": [
-            "A. 「您的預算是多少？」",
-            "B. 「今晚準備點什麼菜？這是給特別場合嗎？」",
-            "C. 「您喜歡哪個波爾多酒莊？」",
-            "D. 「需要我推薦最貴的紅酒嗎？」"
-          ],
+          "options": ["「您的預算是多少？」", "「今晚準備點什麼菜？這是給特別場合嗎？」", "「您喜歡哪個波爾多酒莊？」", "「需要我推薦最貴的紅酒嗎？」"],
           "correct": 1,
-          "explanation": "最好的顧問式問題要了解「用餐情境+料理內容」，從而推薦最契合的搭配，而非從預算或品牌偏好出發。這也能建立顧客信任，提升整體用餐體驗。"
+          "explanation": "最好的顧問式問題要了解「用餐情境＋料理內容」，從而推薦最契合的搭配，而非從預算或品牌偏好出發。這也能建立顧客信任，提升整體用餐體驗。"
         }
       ]
-    }
-  ],
-  "quiz": [
-    {
-      "question": "在準備開啟一瓶平躺儲存了 20 年的 Barolo 之前，最重要的第一步準備工作是什麼？",
-      "options": [
-        "立刻放入冰箱冷凍庫快速降溫",
-        "將酒瓶直立靜置至少 24 到 48 小時，讓沉澱物沉降到瓶底",
-        "用力搖晃酒瓶以喚醒沉睡的香氣",
-        "直接使用螺旋開瓶器快速拔出軟木塞"
-      ],
-      "correctAnswer": 1,
-      "explanation": "老酒中含有大量沉澱物，如果沒有直立靜置讓其沉降，倒酒時沉澱物會混入酒液中，帶來苦澀感並破壞口感。"
-    },
-    {
-      "question": "開啟老酒時，為什麼強烈建議使用「老酒開瓶器 (Ah-So / Two-Prong Cork Puller)」而不是傳統的螺旋開瓶器？",
-      "options": [
-        "因為老酒開瓶器比較便宜",
-        "因為老酒開瓶器可以順便過濾沉澱物",
-        "因為老酒的軟木塞通常非常脆弱、濕軟，螺旋開瓶器容易將其鑽碎並掉入酒中",
-        "因為老酒開瓶器可以同時注入氧氣"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Ah-So 利用兩片金屬薄片夾住軟木塞的兩側將其完整拔出，避免了螺旋鑽破壞脆弱軟木塞結構的風險。"
-    },
-    {
-      "question": "關於老酒的「換瓶 (Decanting)」與「醒酒 (Aeration)」，下列哪一個觀念是正確的？",
-      "options": [
-        "極老的老酒（30年以上）通常需要倒入寬底大肚的醒酒器中靜置數小時，以充分接觸氧氣",
-        "換瓶的主要目的是為了讓酒液接觸大量氧氣",
-        "處理有大量沉澱物的老酒時，應選擇窄底、細長的醒酒器進行換瓶，以最小化與空氣接觸的面積，防止過度氧化",
-        "年輕、單寧強勁的紅酒不需要醒酒，直接喝最好"
-      ],
-      "correctAnswer": 2,
-      "explanation": "老酒非常脆弱，過度接觸氧氣會讓香氣迅速消散甚至變質。因此，老酒的換瓶主要是為了「分離沉澱物」，必須使用窄底醒酒器來減少氧化。"
-    },
-    {
-      "question": "品飲陳年 Nebbiolo (如老 Barolo) 時，最適合使用哪一種形狀的酒杯？",
-      "options": [
-        "細長的香檳笛杯 (Flute)，以保持氣泡",
-        "杯肚寬大、杯口內收的勃根地杯 (Burgundy Glass)，以展開並集中複雜的第三層香氣",
-        "杯口外翻的甜酒杯，以強調甜度",
-        "沒有杯梗的平底水杯"
-      ],
-      "correctAnswer": 1,
-      "explanation": "陳年 Nebbiolo 擁有極其複雜的香氣（如玫瑰、松露、皮革），寬大的杯肚能提供足夠的空間讓香氣揮發，內收的杯口則能將這些珍貴的香氣集中送入鼻腔。"
     }
   ]
 }
