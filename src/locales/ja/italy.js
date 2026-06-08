@@ -136,10 +136,10 @@ export default {
     L2M3L4: 'Calabria',
     L2M3L5: 'Sardinia',
     // Level 2 - Module 4
-    L2M4L1: 'Nebbiolo: 深掘り',
-    L2M4L2: 'Sangiovese: 深掘り',
-    L2M4L3: '南イタリアの在来品種',
-    L2M4L4: '上級白ワイン品種',
+    L2M4L1: '北イタリア経典品種の深掘り',
+    L2M4L2: '中部イタリア品種とテロワール',
+    L2M4L3: '南イタリア在来品種の宝庫',
+    L2M4L4: 'イタリア品種の国際的表現',
     // Level 2 - Module 5
     L2M5L1: 'イタリア高級ワイン投資ガイド',
     L2M5L2: 'ヴィンテージ評価とコレクション戦略',

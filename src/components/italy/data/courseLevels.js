@@ -105,10 +105,10 @@ export const courseLevels = {
         id: 'L2M4',
         title: '第四章：進階品種研究',
         lessons: [
-          { id: 'L2M4L1', title: 'Nebbiolo 深度解析' },
-          { id: 'L2M4L2', title: 'Sangiovese 深度解析' },
-          { id: 'L2M4L3', title: '南義本土品種' },
-          { id: 'L2M4L4', title: '白葡萄品種進階' }
+          { id: 'L2M4L1', title: '北義經典品種深度研究' },
+          { id: 'L2M4L2', title: '中義品種與風土' },
+          { id: 'L2M4L3', title: '南義本土品種寶庫' },
+          { id: 'L2M4L4', title: '義大利品種的國際表現' }
         ]
       },
       {

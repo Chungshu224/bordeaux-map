@@ -143,10 +143,10 @@ export default {
     L2M3L4: 'Calabria 卡拉布里亞',
     L2M3L5: 'Sardinia 薩丁尼亞',
     // Level 2 - Module 4
-    L2M4L1: 'Nebbiolo 深度解析',
-    L2M4L2: 'Sangiovese 深度解析',
-    L2M4L3: '南義本土品種',
-    L2M4L4: '白葡萄品種進階',
+    L2M4L1: '北義經典品種深度研究',
+    L2M4L2: '中義品種與風土',
+    L2M4L3: '南義本土品種寶庫',
+    L2M4L4: '義大利品種的國際表現',
     // Level 2 - Module 5
     L2M5L1: '義大利精品酒莊投資指南',
     L2M5L2: '年份評鑑與收藏策略',

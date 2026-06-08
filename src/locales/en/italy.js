@@ -136,10 +136,10 @@ export default {
     L2M3L4: 'Calabria',
     L2M3L5: 'Sardinia',
     // Level 2 - Module 4
-    L2M4L1: 'Nebbiolo: In-Depth',
-    L2M4L2: 'Sangiovese: In-Depth',
-    L2M4L3: 'Southern Native Varieties',
-    L2M4L4: 'Advanced White Varieties',
+    L2M4L1: 'Northern Italy Classic Varieties',
+    L2M4L2: 'Central Italy Varieties & Terroir',
+    L2M4L3: 'Southern Italy Native Variety Treasury',
+    L2M4L4: 'Italian Varieties on the World Stage',
     // Level 2 - Module 5
     L2M5L1: 'Italian Fine Wine Investment Guide',
     L2M5L2: 'Vintage Assessment & Collecting Strategy',
