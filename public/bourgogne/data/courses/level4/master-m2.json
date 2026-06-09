@@ -927,8 +927,8 @@
         {
           "type": "chart",
           "chartType": "timeline",
-          "title": "🇩🇪 德國黑皮諾品質革命：從甘甜入門級到婲美布根地",
-          "content": "1990s傳統甜型風格 → 2000s品質革命（現代釀造技術）→ 2010s國際認可 → 2020s婲美布根地村莊級。價格僅布根地的1/3，CP值極高！",
+          "title": "🇩🇪 德國黑皮諾品質革命：從甘甜入門級到媲美布根地",
+          "content": "1990s傳統甜型風格 → 2000s品質革命（現代釀造技術）→ 2010s國際認可 → 2020s媲美布根地村莊級。價格僅布根地的1/3，CP值極高！",
           "data": {
             "items": [
               {
@@ -959,16 +959,16 @@
               {
                 "year": "2020年",
                 "score": 95,
-                "label": "婲美布根地 - 盲品擊敗一級園"
+                "label": "媲美布根地 - 盲品擊敗一級園"
               },
               {
                 "year": "2025年",
                 "score": 100,
-                "label": "主流認可 - CP值爆棚，價格仅1/3"
+                "label": "主流認可 - CP值爆棚，價格僅1/3"
               }
             ]
           },
-          "note": "35年品質躍進：1990s甜型入門級 → 2025年婲美布根地村莊級。關鍵轉折點：2000年Bernhard Huber、Friedrich Becker等釀酒師引入現代技術（溫控發酵、精準萎取、法國橡木桶）。2010年VDP（頂級酒莊聯盟）建立類似布根地的四級分級：Grosses Gewächs（GG，特級園）是最高等級。2015年Allen Meadows給Baden一級園評95+分，與布根地一級園相當。盲品結果：2018年Decanter盲品，德國Baden GG擊敗多款布根地一級園。CP值爆棚：德國頂級GG價格€40-80，僅為布根地相當品質一級園（€100-300）的1/3！代表酒莊：Bernhard Huber、Friedrich Becker、Meyer-Näkel。"
+          "note": "35年品質躍進：1990s甜型入門級 → 2025年媲美布根地村莊級。關鍵轉折點：2000年Bernhard Huber、Friedrich Becker等釀酒師引入現代技術（溫控發酵、精準萃取、法國橡木桶）。2010年VDP（頂級酒莊聯盟）建立類似布根地的四級分級：Grosses Gewächs（GG，特級園）是最高等級。2015年Allen Meadows給Baden一級園評95+分，與布根地一級園相當。盲品結果：2018年Decanter盲品，德國Baden GG擊敗多款布根地一級園。CP值爆棚：德國頂級GG價格€40-80，僅為布根地相當品質一級園（€100-300）的1/3！代表酒莊：Bernhard Huber、Friedrich Becker、Meyer-Näkel。"
         },
         {
           "type": "quiz",
