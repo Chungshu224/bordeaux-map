@@ -523,65 +523,43 @@
         {
           "type": "chart",
           "chartType": "comparison",
-          "title": "🏔️ 中奧塔哥四大子產區風格對比（溫暖vs涼爽光譜）",
+          "title": "🏔️ 中奧塔哥四大子產區風格對比（溫暖→涼爽光譜）",
           "content": "Bannockburn最溫暖濃郁，Gibbston最涼爽優雅，Bendigo平衡，Wanaka高海拔精緻。同一產區內風格差異巨大！",
           "data": {
-            "leftTitle": "Bannockburn (最溫暖)",
-            "leftItems": [
+            "rowHeader": "比較項目",
+            "columns": ["Bannockburn（最溫暖）", "Bendigo（平衡）", "Wanaka（高海拔）", "Gibbston（最涼爽）"],
+            "rows": [
               {
-                "label": "氣候",
-                "value": "最溫暖，成熟度高"
+                "label": "年均溫",
+                "values": ["14°C", "13°C", "13°C", "11°C"]
               },
               {
-                "label": "風格",
-                "value": "濃郁、飽滿、強勁"
+                "label": "風格特色",
+                "values": ["濃郁、飽滿、強勁", "平衡、結構感佳", "高海拔精緻細膩", "優雅、精緻、高酸"]
               },
               {
-                "label": "果實",
-                "value": "深色果實、黑櫻桃"
-              },
-              {
-                "label": "酒精度",
-                "value": "14-14.5%"
-              },
-              {
-                "label": "代表酒莊",
-                "value": "Felton Road, Burn Cottage"
-              },
-              {
-                "label": "價格",
-                "value": "NZ$60-120"
-              }
-            ],
-            "rightTitle": "Gibbston (最涼爽)",
-            "rightItems": [
-              {
-                "label": "氣候",
-                "value": "最涼爽，生長季長"
-              },
-              {
-                "label": "風格",
-                "value": "優雅、精緻、細膩"
-              },
-              {
-                "label": "果實",
-                "value": "紅色果實、酸櫻桃"
+                "label": "主要果實",
+                "values": ["深色果實、黑櫻桃", "紅黑果均衡", "紅色果實、花香", "紅色果實、酸櫻桃"]
               },
               {
                 "label": "酒精度",
-                "value": "13-13.5%"
+                "values": ["14–14.5%", "13.5–14%", "13–13.5%", "13–13.5%"]
               },
               {
                 "label": "代表酒莊",
-                "value": "Amisfield, Rockburn"
+                "values": ["Felton Road、Burn Cottage", "Mt Difficulty", "Rippon", "Amisfield、Rockburn"]
               },
               {
-                "label": "價格",
-                "value": "NZ$50-100"
+                "label": "參考價格",
+                "values": ["NZ$60–200", "NZ$40–80", "NZ$60–120", "NZ$50–100"]
+              },
+              {
+                "label": "盲品風格",
+                "values": ["近Napa（濃郁飽滿）", "均衡易飲", "礦物感花香", "最近布根地（高酸優雅）"]
               }
             ]
           },
-          "note": "中奧塔哥內部差異：Bannockburn最溫暖（年均溫14°C）vs Gibbston最涼爽（年均溫11°C），溫差達30%！其他子產區：Bendigo（平衡、結構，代表：Mt Difficulty）、Wanaka（高海拔400m，精緻，代表：Rippon）、Cromwell Basin（果味奔放）。土壤差異：古老片岩（Schist）是共同點，但土層厚度影響風格。價格對比：所有子產區價格相近，主要看酒莊聲譽。Felton Road/Burn Cottage為頂級（NZ$100-200）。盲品識別：Bannockburn有Napa感（濃郁、飽滿），Gibbston最接近布根地（優雅、高酸）。"
+          "note": "中奧塔哥內部差異：Bannockburn最溫暖（年均溫14°C）vs Gibbston最涼爽（年均溫11°C），溫差達30%！土壤：古老片岩（Schist）是共同點，但土層厚度影響風格。價格相近，主要看酒莊聲譽。Cromwell Basin（果味奔放）也是重要子產區。Felton Road/Burn Cottage頂級款可達NZ$100–200。"
         },
         {
           "type": "list",
