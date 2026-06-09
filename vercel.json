@@ -46,7 +46,7 @@
       "destination": "/api/$1"
     },
     {
-      "source": "/((?!api/).*)",
+      "source": "/((?!api/|geojson/).*)",
       "destination": "/index.html"
     }
   ],

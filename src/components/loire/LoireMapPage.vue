@@ -206,10 +206,6 @@ const activeLevelFilter = ref(null)
 
 // ── AOC 群組清單 ───────────────────────────────────────────────
 const aocGroups = {
-  Regional: [
-    'Loire-region.geojson',
-    'Loire.geojson'
-  ],
   PayNantes: [
     'Muscadet.geojson',
     'Muscadet-Sèvre-et-Maine.geojson',
@@ -305,7 +301,6 @@ const aocGroups = {
 }
 
 const expandedGroups = ref({
-  Regional: true,
   PayNantes: false,
   AnjouSaumur: false,
   Touraine: false,
