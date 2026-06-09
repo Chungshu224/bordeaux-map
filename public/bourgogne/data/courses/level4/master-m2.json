@@ -708,70 +708,48 @@
           "title": "🇺🇸 奧勒岡 vs 加州黑皮諾風格詳細對比（涼爽vs溫暖）",
           "content": "奧勒岡威拉美特谷涼爽優雅接近布根地，加州索諾瑪/聖塔芭芭拉更溫暖濃郁。選擇取決於個人偏好！",
           "data": {
-            "leftTitle": "Oregon Willamette Valley",
-            "leftItems": [
+            "rowHeader": "比較項目",
+            "columns": ["Oregon Willamette Valley（涼爽）", "California Sonoma/SB（溫暖）"],
+            "rows": [
               {
                 "label": "氣候",
-                "value": "涼爽海洋性，年均13°C"
+                "values": ["涼爽海洋性，年均13°C", "溫暖地中海，年均15–16°C"]
               },
               {
                 "label": "風格",
-                "value": "優雅、高酸、布根地靈魂"
+                "values": ["優雅、高酸、布根地靈魂", "濃郁、飽滿、新世界魅力"]
               },
               {
-                "label": "果實",
-                "value": "紅色果實、森林底層"
-              },
-              {
-                "label": "酒精度",
-                "value": "13-14%"
-              },
-              {
-                "label": "陳年",
-                "value": "需5-10年，優雅演化"
-              },
-              {
-                "label": "代表酒莊",
-                "value": "Domaine Drouhin, Beaux Frères"
-              },
-              {
-                "label": "價格",
-                "value": "$40-100（村莊級品質）"
-              }
-            ],
-            "rightTitle": "California (Sonoma/Santa Barbara)",
-            "rightItems": [
-              {
-                "label": "氣候",
-                "value": "溫暖地中海，年均15-16°C"
-              },
-              {
-                "label": "風格",
-                "value": "濃郁、飽滿、新世界魅力"
-              },
-              {
-                "label": "果實",
-                "value": "深色果實、甜香料"
+                "label": "主要果實",
+                "values": ["紅色果實、森林底層", "深色果實、甜香料"]
               },
               {
                 "label": "酒精度",
-                "value": "14-15%"
+                "values": ["13–14%", "14–15%"]
               },
               {
-                "label": "陳年",
-                "value": "年輕時已討喜，3-8年"
+                "label": "陳年潛力",
+                "values": ["需5–10年，優雅演化", "年輕時已討喜，3–8年"]
+              },
+              {
+                "label": "釀造哲學",
+                "values": ["整串發酵、少新桶（布根地取向）", "去梗、新桶比例高（Parker取向）"]
               },
               {
                 "label": "代表酒莊",
-                "value": "Williams Selyem, Kosta Browne"
+                "values": ["Domaine Drouhin、Beaux Frères、Evening Land", "Williams Selyem、Kosta Browne"]
               },
               {
-                "label": "價格",
-                "value": "$50-150（高評分導向）"
+                "label": "參考價格",
+                "values": ["$40–150（性價比高）", "$50–200+（高評分導向）"]
+              },
+              {
+                "label": "盲品識別",
+                "values": ["泥土氣息重、酸度明亮", "甜香料、酒精感明顯"]
               }
             ]
           },
-          "note": "美國黑皮諾兩大流派：奧勒岡威拉美特谷（涼爽優雅派）vs 加州索諾瑪/聖塔芭芭拉（溫暖濃郁派）。氣候差異：奧勒岡年均13°C（與布根地45度緯度相似，海洋性）vs 加州15-16°C（地中海氣候，日照充足）。土壤：奧勒岡Jory火山紅土+沉積岩（泥土氣息、礦物感）vs 加州多樣化（Goldridge沙質、石灰岩）。釀造哲學：奧勒岡追求布根地優雅（整串發酵、少新桶）vs 加州追求濃郁果味（去梗、新桶比例高）。市場定位：奧勒岡主打布根地愛好者（性價比高）vs 加州主打Parker高分（價格昂貴）。頂級酒款：奧勒岡Evening Land Seven Springs $150（媲美布根地一級園）vs 加州Kosta Browne $200+（RP 95+常客）。產量：奧勒岡1.2萬噸/年（精品小規模）vs 加州8萬噸/年（規模化+精品並存）。盲品識別：奧勒岡泥土氣息重、酸度明亮 vs 加州甜香料、酒精感。"
+          "note": "美國黑皮諾兩大流派：奧勒岡威拉美特谷（涼爽優雅派）vs 加州索諾瑪/聖塔芭芭拉（溫暖濃郁派）。土壤：奧勒岡Jory火山紅土+沉積岩（礦物感）vs 加州多樣化（Goldridge沙質、石灰岩）。市場定位：奧勒岡主打布根地愛好者（性價比高）vs 加州主打Parker高分。頂級酒款：Evening Land Seven Springs $150（媲美布根地一級園）vs Kosta Browne $200+（RP 95+常客）。"
         },
         {
           "type": "content",
