@@ -71,10 +71,9 @@
           "note": "25年漲幅：$500 → $15,000（30倍），年均複合增長率15%，遠超股市、房地產、黃金。2018年Sotheby's拍賣會上，1945年份DRC以$558,000成交創紀錄，引爆全球關注。2020疫情僅造成短暫回調（-15%），2021-2022年報復性反彈。配額制（每瓶DRC需搭售10-15瓶其他酒款）進一步推高價格。未來預測：2030年DRC均價可能突破$30,000。"
         },
         {
-          "type": "slide-image",
+          "type": "image",
           "title": "布根地頂級酒莊指數成長走勢圖",
-          "imageUrl": "/bourgogne/images/Lesson/burgundy-investment-trend.svg",
-          "altText": "比較布根地頂級酒莊指數與SP500在過去25年的投資回報率，凸顯布根地葡萄酒作為資產的驚人增長。",
+          "image": "/bourgogne/images/Lesson/burgundy-investment-trend.svg",
           "caption": "由於「特級園面積不可擴張」的硬性供給限制，加上新興市場（尤其亞洲）需求激增，布根地頂級酒款在金融危機與經濟增長期中，長期展現出強大的抗跌與超額增長能力。"
         },
         {
