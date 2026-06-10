@@ -79,6 +79,7 @@ import AppellationComparisonSlide from './slides/AppellationComparisonSlide.vue'
 import ItalyRegionsOverviewSlide from './slides/ItalyRegionsOverviewSlide.vue'
 import SuperTuscanEvolutionSlide from './slides/SuperTuscanEvolutionSlide.vue'
 import AmaroneAppassimentoSlide from './slides/AmaroneAppassimentoSlide.vue'
+import PiemonteDocgMapSlide from './slides/PiemonteDocgMapSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
@@ -108,7 +109,8 @@ const slideComponentMap = {
   'appellation-comparison': AppellationComparisonSlide,
   'italy-regions-overview': ItalyRegionsOverviewSlide,
   'super-tuscan-evolution': SuperTuscanEvolutionSlide,
-  'amarone-appassimento': AmaroneAppassimentoSlide
+  'amarone-appassimento': AmaroneAppassimentoSlide,
+  'piemonte-docg-map': PiemonteDocgMapSlide
 }
 
 function pickRandom (arr, n) {

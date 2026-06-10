@@ -69,6 +69,10 @@
       "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">👑 S級 — 世界頂級 Legendary</div><div class=\"mf-prod\">Barolo DOCG — 100% Nebbiolo，力量型「酒中之王」，陳年10-30年 | Barbaresco DOCG — 100% Nebbiolo，優雅型「酒中之后」，陳年8-25年</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">⭐ A級 — 優質精品 Premium</div><div class=\"mf-prod\">Barbera d'Asti DOCG — 高酸低單寧，適口性極佳 | Gavi DOCG — Cortese白酒，礦物清爽 | Roero DOCG — 對岸的Nebbiolo親民版，紅白均有</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">💎 B級 — 高品質 Quality</div><div class=\"mf-prod\">Dolcetto di Dogliani Superiore DOCG — 果香豐富易飲 | Gattinara DOCG — 北部Nebbiolo，礦物感強 | Ghemme DOCG — 近Gattinara，較少見</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🍾 氣泡甜酒 Sparkling</div><div class=\"mf-prod\">Moscato d'Asti DOCG — 微甜微氣泡（5-6.5%），全球最受歡迎甜白 | Asti DOCG — 充分氣泡甜酒（6-9%），節慶代表</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">18</div><div class=\"stat-label\">DOCG產區數</div></div><div class=\"stat-box\"><div class=\"stat-number\">42</div><div class=\"stat-label\">DOC產區數</div></div><div class=\"stat-box\"><div class=\"stat-number\">45,000</div><div class=\"stat-label\">公頃葡萄園</div></div><div class=\"stat-box\"><div class=\"stat-number\">#1</div><div class=\"stat-label\">義大利品質產區</div></div></div>"
     },
     {
+      "type": "piemonte-docg-map",
+      "title": "🗺️ Piemonte 9 大重要 DOCG 互動地圖"
+    },
+    {
       "type": "appellation-comparison",
       "title": "⚖️ Barolo vs Barbaresco 兩大 Nebbiolo 名區互動比較",
       "description": "點選查看 Barolo（力量型、長陳年、誉為「酒中之王」）與 Barbaresco（優雅型、中陳年、誉為「酒中之后」）的完整對照：土壤、海拔、微氣候、老、陳年規定、酒體與單寧、代表酒莊、推薦佳年與預算區間。"
