@@ -107,18 +107,7 @@ const DOCG_ZONES = [
     desc: '義大利最偉大的紅酒之一，Biondi-Santi 家族在 19 世紀末確立此款酒的傳奇地位。Galestro 片岩土壤賦予無可替代的礦物骨架，充足陽光造就飽滿成熟度。',
     pairing: '野豬肉 Cinghiale、陳年 Pecorino 起司、松露料理、紅燒野味',
     price: '€40-200+ / Riserva €80-400+',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [11.378, 42.908], [11.438, 42.888], [11.532, 42.902],
-          [11.628, 42.935], [11.648, 42.985], [11.618, 43.048],
-          [11.545, 43.078], [11.445, 43.062], [11.372, 43.025],
-          [11.358, 42.968], [11.378, 42.908]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Brunello di Montalcino DOCG.geojson'
   },
   {
     id: 'chianti-classico',
@@ -140,20 +129,7 @@ const DOCG_ZONES = [
     desc: '佛羅倫斯與錫耶納之間的「古典核心區」，Galestro 片岩賦予獨特礦物感，Gran Selezione（2014 新設）代表單一葡萄園最高表達。黑公雞徽章象徵最傳統的風格承諾。',
     pairing: 'Bistecca alla Fiorentina T 骨牛排、番茄肉醬麵、野豬燉肉',
     price: 'Annata €12-22 / Riserva €18-45 / Gran Selezione €35-80+',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [11.002, 43.268], [11.088, 43.238], [11.205, 43.252],
-          [11.355, 43.298], [11.488, 43.358], [11.548, 43.445],
-          [11.538, 43.568], [11.482, 43.688], [11.375, 43.775],
-          [11.228, 43.812], [11.082, 43.788], [10.968, 43.715],
-          [10.928, 43.598], [10.948, 43.478], [11.002, 43.375],
-          [11.002, 43.268]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Chianti Classico DOCG.geojson'
   },
   {
     id: 'vino-nobile',
@@ -175,18 +151,7 @@ const DOCG_ZONES = [
     desc: '托斯卡納三強中的「隱藏寶石」，Tufo 凝灰岩與砂質黏土混合土壤賦予獨特礦物複雜度。Avignonesi、Poliziano 是代表性酒莊，性價比勝過 Brunello。',
     pairing: 'Piccione（鴿肉）料理、Tagliatelle 野豬醬麵、陳年起司',
     price: '€15-40 / Riserva €25-60',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [11.705, 43.052], [11.748, 43.038], [11.818, 43.045],
-          [11.858, 43.072], [11.862, 43.112], [11.838, 43.148],
-          [11.788, 43.158], [11.738, 43.148], [11.705, 43.118],
-          [11.698, 43.082], [11.705, 43.052]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Vino Nobile di Montepulciano DOCG.geojson'
   },
   {
     id: 'morellino',
@@ -208,19 +173,7 @@ const DOCG_ZONES = [
     desc: '托斯卡納地中海海岸的 Sangiovese（當地稱 Morellino），溫暖氣候造就柔順的果香風格，是 Brunello 的親民替代選擇。Erik Banti 等酒莊在此建立優良聲譽。',
     pairing: '海鮮料理（烤魚、淡菜）、野豬、烤羊、輕食義大利麵',
     price: '€10-20 / Riserva €15-30',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [11.102, 42.548], [11.238, 42.512], [11.412, 42.528],
-          [11.568, 42.578], [11.625, 42.648], [11.618, 42.748],
-          [11.542, 42.828], [11.388, 42.858], [11.218, 42.838],
-          [11.088, 42.782], [11.038, 42.688], [11.068, 42.598],
-          [11.102, 42.548]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Morellino di Scansano DOCG.geojson'
   },
   {
     id: 'vernaccia',
@@ -242,18 +195,7 @@ const DOCG_ZONES = [
     desc: '托斯卡納唯一的白葡萄酒 DOCG，也是義大利獲得 DOCG 認證的第一款白酒（1993年）。San Gimignano 的中世紀塔樓城市是著名觀光地標，Vernaccia 的苦杏仁尾韻獨具辨識度。',
     pairing: '海鮮前菜、沙拉、白肉料理、地方小食（Bruschetta）',
     price: '€12-22 / Riserva €18-35',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [10.968, 43.418], [11.008, 43.405], [11.068, 43.412],
-          [11.108, 43.428], [11.118, 43.458], [11.105, 43.495],
-          [11.068, 43.518], [11.018, 43.518], [10.978, 43.498],
-          [10.955, 43.468], [10.962, 43.438], [10.968, 43.418]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Vernaccia di San Gimignano DOCG.geojson'
   }
 ]
 
@@ -278,18 +220,7 @@ const DOC_ZONES = [
     desc: '許多頂尖 Brunello 酒莊（Biondi-Santi、Casanova di Neri、Poggio di Sotto）都會生產 Rosso di Montalcino 作為入門款，在品質欠佳的年份，部分 Brunello 園地的葡萄也會降級釀製 Rosso，以維護 Brunello 的品質標準。',
     pairing: '燉肉料理、義大利麵、日常牛排',
     price: '€15-30，CP 值極高的 Brunello 前導款',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [11.365, 42.900], [11.448, 42.878], [11.545, 42.892],
-          [11.640, 42.928], [11.658, 42.982], [11.628, 43.055],
-          [11.552, 43.088], [11.448, 43.072], [11.362, 43.032],
-          [11.345, 42.968], [11.365, 42.900]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/tuscany/geojson/DOC/Rosso di Montalcino DOC.geojson'
   },
   {
     id: 'bolgheri',
@@ -311,18 +242,7 @@ const DOC_ZONES = [
     desc: '超級托斯卡納的誕生地。Sassicaia（1968）和 Ornellaia 在此確立義大利最頂尖的波爾多式紅酒。海岸砂質土壤 + 地中海氣候造就出色的 Cabernet 成熟度。2013年，Bolgheri Sassicaia 成為義大利唯一的單一酒莊 DOC。',
     pairing: '烤羊排、牛排、陳年起司、黑松露',
     price: 'Bolgheri Rosso €20-45 / Sassicaia €150-250 / Ornellaia €180-300',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [10.422, 43.142], [10.488, 43.122], [10.568, 43.128],
-          [10.648, 43.158], [10.692, 43.208], [10.688, 43.278],
-          [10.642, 43.325], [10.568, 43.342], [10.482, 43.325],
-          [10.418, 43.280], [10.398, 43.215], [10.422, 43.142]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/tuscany/geojson/DOC/Bolgheri DOC.geojson'
   }
 ]
 
@@ -347,17 +267,36 @@ const selectedInfo = computed(() =>
   selected.value ? ALL_ZONES.find(z => z.id === selected.value) : null
 )
 
+// ── GeoJSON 非同步載入 ────────────────────────────────────────
+async function fetchGeojson (z) {
+  try {
+    const res = await fetch(z.geojsonPath)
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const data = await res.json()
+    if (!data.geometry && !data.features) throw new Error('empty geometry')
+    return data
+  } catch (e) {
+    console.warn(`Failed to load GeoJSON for ${z.id}:`, e)
+    return null
+  }
+}
+
 // ── 地圖操作 ─────────────────────────────────────────────────
-function highlightAll () {
+async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
 
+  const geojsonData = await Promise.all(ALL_ZONES.map(z => fetchGeojson(z)))
+
   ALL_ZONES.forEach((z, i) => {
+    const gj = geojsonData[i]
+    if (!gj) return
+
     const fillId = `fill-${z.id}`
     const lineId = `line-${z.id}`
     const ts = TIER_STYLE[z.tier]
 
     if (!map.getSource(z.id)) {
-      map.addSource(z.id, { type: 'geojson', data: z.geojson })
+      map.addSource(z.id, { type: 'geojson', data: gj })
     }
     if (!map.getLayer(fillId)) {
       map.addLayer({ id: fillId, type: 'fill', source: z.id,
@@ -431,7 +370,7 @@ function initMap () {
   })
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
-  map.on('load', () => { highlightAll(); loading.value = false })
+  map.on('load', async () => { await highlightAll(); loading.value = false })
   map.on('error', e => { mapError.value = `地圖錯誤：${e.error?.message || '未知'}`; loading.value = false })
 }
 
