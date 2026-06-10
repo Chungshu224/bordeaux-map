@@ -84,6 +84,10 @@
       "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">從歐洲最高活火山坡地到地中海平原，Sicily三大代表性產區各有風格，展現Island多元葡萄酒面貌</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🌋 Etna DOC</strong><p>歐洲最活躍火山坡地，海拔400-1,100m。Nerello Mascalese（紅）+ Carricante（白）。優雅高酸礦物感，Contrada分區文化。被譽為「地中海的勃艮第」。€15-200+。</p></div><div class=\"orvieto-card\"><strong>🏅 Cerasuolo di Vittoria DOCG</strong><p>Sicily唯一DOCG（2005年），東南部Vittoria地區。Nero d'Avola 50-70% + Frappato 30-50%混釀。中等酒體、成熟櫻桃、均衡優雅。COS / Arianna Occhipinti名莊。€15-45。</p></div><div class=\"orvieto-card\"><strong>🍷 Marsala DOC</strong><p>西島Marsala港，1773年英國商人發明。Grillo/Catarratto加入中性烈酒。Fine（1年）至Vergine Riserva（10年+）多種分級。乾型至甜型均有，烹飪+飲用兩用。€8-60+。</p></div></div></div>"
     },
     {
+      "type": "sicily-docg-map",
+      "title": "🗺️ Sicily 重要產區互動地圖"
+    },
+    {
       "type": "content",
       "title": "🌋 Etna 四坡面深度",
       "content": "<div class=\"history-section\"><p class=\"history-intro\">Etna火山四面坡展現截然不同的微氣候 —— <span class=\"intro-highlight\">北坡是全球最受矚目的新星產區，Contrada精細分區如勃艮第Climat般受國際追捧</span></p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🧭 北坡（Versante Nord）— 頂級核心</div><div class=\"mf-prod\">海拔600-1,000m+，最涼爽降雨充足，年輕火山岩礦物質豐富，優雅高酸礦物感，Passopisciaro / Terre Nere等名莊集中</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🧭 南坡（Versante Sud）— 溫暖果香</div><div class=\"mf-prod\">海拔400-600m，較溫暖日照充足，古老火山岩沙質土壤，果味濃郁酒體飽滿，風格圓潤易飲，Benanti等酒莊</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🧭 東坡（Versante Est）— 海洋清新</div><div class=\"mf-prod\">海洋影響較大，濕度較高，清新感和海洋礦物氣息明顯，果味清爽，不同於北坡的緊張礦物感</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🧭 西坡（Versante Ovest）— 乾燥集中</div><div class=\"mf-prod\">乾燥陽光充足，集中度高、結構感強，風格介於北坡與南坡之間，獨特乾燥草本礦物香氣</div></div></div>"

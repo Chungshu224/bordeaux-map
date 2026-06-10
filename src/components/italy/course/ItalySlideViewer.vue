@@ -82,6 +82,7 @@ import AmaroneAppassimentoSlide from './slides/AmaroneAppassimentoSlide.vue'
 import PiemonteDocgMapSlide from './slides/PiemonteDocgMapSlide.vue'
 import TuscanyDocgMapSlide from './slides/TuscanyDocgMapSlide.vue'
 import VenetoDocgMapSlide from './slides/VenetoDocgMapSlide.vue'
+import SicilyDocgMapSlide from './slides/SicilyDocgMapSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
@@ -114,7 +115,8 @@ const slideComponentMap = {
   'amarone-appassimento': AmaroneAppassimentoSlide,
   'piemonte-docg-map': PiemonteDocgMapSlide,
   'tuscany-docg-map': TuscanyDocgMapSlide,
-  'veneto-docg-map': VenetoDocgMapSlide
+  'veneto-docg-map': VenetoDocgMapSlide,
+  'sicily-docg-map': SicilyDocgMapSlide
 }
 
 function pickRandom (arr, n) {
