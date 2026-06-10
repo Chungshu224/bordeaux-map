@@ -273,7 +273,7 @@ async function fetchGeojson (z) {
     const res = await fetch(z.geojsonPath)
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     const data = await res.json()
-    if (!data.geometry && !data.features) throw new Error('empty geometry')
+    if (!data.type || (data.type === 'Feature' && !data.geometry)) throw new Error('empty geometry')
     return data
   } catch (e) {
     console.warn(`Failed to load GeoJSON for ${z.id}:`, e)

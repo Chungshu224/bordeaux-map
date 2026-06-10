@@ -63,6 +63,7 @@
       "title": "🗺️ 雙重身份的產區",
       "content": "<div class=\"dual-region\"><div class=\"region-half alto-adige\"><h3>Alto Adige (Südtirol)</h3><p class=\"region-name\">上阿迪傑 / 南蒂羅爾</p><div class=\"region-info\"><p><strong>語言：</strong>德語為主（70%）</p><p><strong>文化：</strong>奧地利影響深厚</p><p><strong>海拔：</strong>200-1,000 公尺</p><p><strong>風格：</strong>國際品種、精緻白酒</p><p><strong>代表：</strong>Pinot Grigio, Gewürztraminer</p></div></div><div class=\"region-half trentino\"><h3>Trentino</h3><p class=\"region-name\">特倫蒂諾</p><div class=\"region-info\"><p><strong>語言：</strong>義大利語為主</p><p><strong>文化：</strong>義大利風格</p><p><strong>海拔：</strong>200-800 公尺</p><p><strong>風格：</strong>氣泡酒、Teroldego 紅酒</p><p><strong>代表：</strong>Trento DOC, Teroldego Rotaliano</p></div></div></div><div class=\"key-fact\"><p>💡 這是義大利最北的產區，1919 年之前屬於奧匈帝國，因此保留濃厚的德語文化。</p></div>"
     },
+    {"type":"trentino-doc-map","title":"🗺️ Trentino DOC 互動地圖"},
     {
       "type": "content",
       "title": "�️ 歷史與文化地位",

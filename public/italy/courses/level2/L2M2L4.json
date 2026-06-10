@@ -44,6 +44,10 @@
       "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Abruzzo（阿布魯佐）位於義大利中部，西有<strong>Apennine 山脈</strong>，東臨<strong>Adriatic 海</strong>，以<strong>Montepulciano d'Abruzzo 紅酒</strong>和<strong>Trebbiano d'Abruzzo 白酒</strong>聞名全球。</p><p class=\"highlight\">Abruzzo 是義大利葡萄酒產量<strong>第五大</strong>的產區，以高性價比著稱，擁有 33,252 公頃葡萄園，年產 3.2 億公升。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🏔️</div><div class=\"fact-text\"><strong>2,912m</strong>Gran Sasso 最高峰</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>第 5</strong>全國產量排名</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌊</div><div class=\"fact-text\"><strong>130km</strong>Adriatic 海岸線</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>1</strong>DOCG 產區</div></div></div></div>"
     },
     {
+      "type": "abruzzo-docg-map",
+      "title": "🗺️ Abruzzo DOCG & DOC 互動地圖"
+    },
+    {
       "type": "content",
       "title": "🍇 Montepulciano d'Abruzzo DOC",
       "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🍷 義大利性價比之王</h3><p><strong>⚠️ 名稱辨識：</strong>Montepulciano d'Abruzzo（Montepulciano <u>品種</u> + Abruzzo）≠ Vino Nobile di Montepulciano（Sangiovese 品種 + Tuscany 地名），兩款酒完全不同！</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🍇 品種與風格</h4><p><strong>品種：</strong>Montepulciano（85%+），可混 Sangiovese</p><p><strong>風格：</strong>果香豐富・柔順・中至飽滿酒體</p><p><strong>風味：</strong>黑櫻桃・李子・紫羅蘭・香料・草本</p><p><strong>酸度：</strong>中等・<strong>單寧：</strong>柔順成熟</p><p><strong>酒精度：</strong>12–13.5%</p></div><div class=\"orvieto-card\"><h4>🏆 品質分級</h4><p><strong>Montepulciano d'Abruzzo DOC：</strong>基本款</p><hr><p><strong>Colline Teramane DOCG：</strong></p><ul><li>Teramo 省高品質子產區</li><li>2003 年升級為 DOCG</li><li>陳年要求：2 年（Riserva 3 年）</li><li>最低酒精度 12.5%</li></ul></div><div class=\"orvieto-card\"><h4>🍽️ 配餐</h4><ul><li>🐑 Arrosticini 羊肉串</li><li>🍝 肉醬吉他麵</li><li>🥩 烤紅肉・野味</li><li>🧀 陳年 Pecorino 起司</li><li>🍄 野菇燉飯</li></ul></div></div></div>"

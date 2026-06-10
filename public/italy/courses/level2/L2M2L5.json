@@ -64,6 +64,10 @@
       "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Molise（莫利塞）是義大利<strong>第二小的大區</strong>，位於 Abruzzo 南方，直到 <strong>1963 年</strong>才從 Abruzzo 分離獨立。產量極小，但擁有獨特的本土品種 Tintilia 和質樸的農村飲食文化。</p><p class=\"highlight\">🔑 關鍵事實：葡萄酒產量佔義大利總量不到 <strong>0.5%</strong>，是真正的秘境產區。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🗺️</div><div class=\"fact-text\"><strong>4,438 km²</strong>義大利第二小大區</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>4 個 DOC</strong>葡萄酒產區</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍇</div><div class=\"fact-text\"><strong>2,180 公頃</strong>葡萄園面積</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌊</div><div class=\"fact-text\"><strong>35 km</strong>Adriatic 海岸線</div></div></div></div>"
     },
     {
+      "type": "molise-doc-map",
+      "title": "🗺️ Molise DOC 互動地圖"
+    },
+    {
       "type": "content",
       "title": "🍇 Molise 的本土品種",
       "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🍇 多樣的本土葡萄品種</h3><p>Molise 以 <strong>Tintilia</strong> 為招牌本土紅品種，同時種植 Falanghina、Greco Bianco 等白品種，以及共享鄰區的 Montepulciano 和 Aglianico。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🔴 Tintilia（紅）</h4><p><strong>地位：</strong>Molise 的靈魂品種，本土獨有</p><p><strong>來源：</strong>西班牙統治期引入，200 年以上本土演化</p><p><strong>風味：</strong>黑櫻桃、黑莓、紫羅蘭、香料、甘草</p><p><strong>特色：</strong>深紫紅色、單寧柔順、陳年潛力 5–10 年</p></div><div class=\"orvieto-card\"><h4>⚪ Falanghina（白）</h4><p><strong>特點：</strong>Molise 版本風格與 Campania 不同</p><p><strong>土壤：</strong>黏土-石灰岩，酒體更飽滿圓潤</p><p><strong>風味：</strong>黃蘋果、杏桃、金銀花、奶油質地</p><p><strong>陳年：</strong>5–8 年，發展蜂蜜、堅果複雜度</p></div><div class=\"orvieto-card\"><h4>⚪ Greco Bianco（白）</h4><p><strong>起源：</strong>古老品種，可能源自希臘</p><p><strong>風味：</strong>白桃、杏桃、柑橘、蜂蜜、礦物</p><p><strong>特色：</strong>酒體飽滿，陳年可發展堅果、蜂蠟複雜度</p><p><strong>配餐：</strong>白松露料理、陳年起司</p></div></div></div>"

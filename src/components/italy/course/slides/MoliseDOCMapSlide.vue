@@ -1,40 +1,43 @@
 <template>
   <div class="docg-map-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🗺️ Sicily 重要產區互動地圖' }}</h2>
-      <p class="slide-subtitle">點選按鈕查看各產區位置與詳細資訊</p>
+      <h2>{{ slide.title || '🗺️ Molise DOC 互動地圖' }}</h2>
+      <p class="slide-subtitle">點選按鈕查看各產區位置與詳細資訊（Molise 無 DOCG，全為 DOC 等級）</p>
     </div>
 
-    <!-- 按鈕列 -->
     <div class="zone-buttons">
-      <button
-        v-for="z in ALL_ZONES"
-        :key="z.id"
-        class="zone-btn"
-        :class="[`tier-${z.tier}`, { active: selected === z.id }]"
-        @click="selectZone(z.id)"
-      >{{ z.emoji }} {{ z.shortName }}</button>
+      <div class="btn-group">
+        <span class="btn-group-label">⭐ 旗艦 DOC</span>
+        <button
+          v-for="z in STAR_ZONES" :key="z.id"
+          class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
+          @click="selectZone(z.id)"
+        >{{ z.emoji }} {{ z.shortName }}</button>
+      </div>
+      <div class="btn-group">
+        <span class="btn-group-label">🍷 其他 DOC</span>
+        <button
+          v-for="z in OTHER_ZONES" :key="z.id"
+          class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
+          @click="selectZone(z.id)"
+        >{{ z.emoji }} {{ z.shortName }}</button>
+      </div>
       <button v-if="selected" class="reset-btn" @click="resetView">🔄 全覽</button>
     </div>
 
-    <!-- 地圖 + 資訊 -->
     <div class="map-info-row">
       <div class="map-wrapper">
         <div ref="mapContainer" class="mapbox-container"></div>
         <div v-if="loading" class="map-loading">地圖載入中…</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
-          <div class="legend-row"><span class="legend-dot tier-s"></span>頂級 — Etna 火山產區</div>
-          <div class="legend-row"><span class="legend-dot tier-a"></span>重要 DOCG / 歷史 DOC</div>
-          <div class="legend-row"><span class="legend-dot tier-b"></span>特色 DOC</div>
+          <div class="legend-row"><span class="legend-dot tier-a"></span>旗艦 DOC（Tintilia / Biferno）</div>
+          <div class="legend-row"><span class="legend-dot tier-b"></span>其他 DOC（Pentro / Molise）</div>
         </div>
       </div>
 
-      <!-- 資訊面板 -->
       <div class="info-panel" v-if="selectedInfo">
-        <div class="info-badge" :class="`tier-${selectedInfo.tier}`">
-          {{ selectedInfo.tierLabel }}
-        </div>
+        <div class="info-badge" :class="`tier-${selectedInfo.tier}`">{{ selectedInfo.tierLabel }}</div>
         <h3 class="info-name">{{ selectedInfo.name }}</h3>
         <div class="info-rows">
           <div class="info-row" v-for="row in selectedInfo.details" :key="row.label">
@@ -51,7 +54,7 @@
         </div>
       </div>
       <div class="info-panel info-empty" v-else>
-        <div class="empty-icon">🌋</div>
+        <div class="empty-icon">🔍</div>
         <p>點選上方按鈕或地圖上的產區<br>查看位置與詳細資訊</p>
         <div class="empty-hint">
           <div class="hint-row" v-for="z in ALL_ZONES" :key="z.id">
@@ -71,127 +74,103 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({ slide: { type: Object, default: () => ({}) } })
 
-// ── 產區資料 ─────────────────────────────────────────────────
-const ALL_ZONES = [
+const STAR_ZONES = [
   {
-    id: 'etna',
-    name: 'Etna DOC',
-    shortName: 'Etna',
-    emoji: '🌋',
-    tier: 's',
-    tierLabel: '👑 頂級 DOC — 地中海的勃艮第',
-    center: [15.003, 37.728],
-    zoom: 11,
-    color: '#5D1A00',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Etna DOC.geojson',
-    details: [
-      { label: '品種', value: '紅：Nerello Mascalese 80%+；白：Carricante 60%+' },
-      { label: '海拔', value: '400-1,100m，歐洲種植海拔最高的產區之一' },
-      { label: '土壤', value: '火山岩漿土（Basalto），礦物質豐富，幾乎無根瘤蚜病害' },
-      { label: '風格', value: '優雅高酸礦物感，Contrada 分區如 Burgundy Climat，越北坡越精緻' },
-      { label: '位置', value: 'Catania 省，Etna 火山四面坡，北坡為頂級核心' }
-    ],
-    desc: '被稱為「地中海的勃艮第」，Etna 的 Nerello Mascalese 在火山黑岩土上展現出類似 Pinot Noir 的細膩風格。Contrada（分區）文化反映不同坡面、海拔、土壤的風格差異，百年老藤（Pre-Phylloxera）更是珍寶。',
-    pairing: '烤魚、地中海燉蔬菜、野菇燉飯、羊肉料理',
-    price: '入門 €15-30 / Contrada 頂級 €50-200+'
-  },
-  {
-    id: 'cerasuolo',
-    name: 'Cerasuolo di Vittoria DOCG',
-    shortName: 'Cerasuolo',
-    emoji: '🏅',
+    id: 'tintilia-molise',
+    name: 'Tintilia del Molise DOC',
+    shortName: 'Tintilia del Molise',
+    emoji: '🌿',
     tier: 'a',
-    tierLabel: '⭐ Sicily 唯一 DOCG（2005年）',
-    center: [14.540, 36.955],
-    zoom: 11,
-    color: '#B71C1C',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Vittoria DOC.geojson',
+    tierLabel: '🌿 旗艦 DOC — Molise 靈魂品種',
+    center: [14.638, 41.555],
+    zoom: 9.5,
+    geojsonPath: '/italy/regions/molise/geojson/DOC/Tintilia del Molise DOC.geojson',
     details: [
-      { label: '品種', value: 'Nero d\'Avola 50-70% + Frappato 30-50%，黃金混釀' },
-      { label: '認證', value: 'Sicily 唯一 DOCG，2005 年升格，Classico 次等級更嚴格' },
-      { label: '風格', value: '中等酒體、成熟櫻桃紅色（Cerasuolo 意為「櫻桃色」）、均衡優雅' },
-      { label: '代表酒莊', value: 'COS、Arianna Occhipinti、Valle dell\'Acate' },
-      { label: '位置', value: 'Ragusa 省，東南部 Vittoria 平原，石灰岩紅土' }
+      { label: 'DOC 年份', value: '2011 年升格，Molise 最重要的 DOC，也是最新建立的' },
+      { label: '品種', value: 'Tintilia 95%+，Molise 獨有本土紅品種，名稱源自西班牙語「Tinto」（紅色）' },
+      { label: '歷史', value: '西班牙統治（1442-1707）引入，1980-90 年代瀕臨消失，近 20 年成功復興' },
+      { label: '等級', value: 'Rosso / Rosato / Riserva（陳年 24 個月，含 6 個月橡木桶）' },
+      { label: '範圍', value: 'Molise 全區（Campobasso + Isernia 兩省），海拔 200-800m 山地' }
     ],
-    desc: 'Nero d\'Avola 帶來結構深度，Frappato 帶來清新草莓花香，兩者的混釀創造出 Sicily 最具個性的紅酒。COS 酒莊（1980年）和 Arianna Occhipinti 是自然農法的先驅，將此產區推向國際視野。',
-    pairing: '烤雞、豬里肌、地中海燉菜（Caponata）、中等陳年起司',
-    price: '€15-45 / Classico €20-60'
+    desc: 'Molise 最具代表性的 DOC，守護一個曾幾乎消失的本土靈魂品種。Tintilia 在 1980-90 年代被大量拔除換種更商業化的品種，瀕臨滅絕。過去 20 年，以 Di Majo Norante 為首的生產者重新發掘老藤、申請 DOC 認證，讓這個深紫紅色、柔順果香的品種重見天日。',
+    pairing: 'Cavatelli 手工貝殼麵配羊肉醬、炭烤羊腿（Agnello alla Brace）、Caciocavallo Molisano 起司',
+    price: '€10-20 / Riserva €18-35，Molise 最具收藏價值、最能代表產區個性的選擇'
   },
   {
-    id: 'marsala',
-    name: 'Marsala DOC',
-    shortName: 'Marsala',
-    emoji: '🔶',
+    id: 'biferno',
+    name: 'Biferno DOC',
+    shortName: 'Biferno',
+    emoji: '🏔️',
     tier: 'a',
-    tierLabel: '⭐ 歷史 DOC — 1773 年英國發明',
-    center: [12.435, 37.800],
-    zoom: 11,
-    color: '#E65100',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Marsala DOC.geojson',
+    tierLabel: '🏔️ 旗艦 DOC — Molise 第一個 DOC',
+    center: [14.820, 41.580],
+    zoom: 10,
+    geojsonPath: '/italy/regions/molise/geojson/DOC/Biferno DOC.geojson',
     details: [
-      { label: '品種', value: '白：Grillo / Catarratto；紅：Pignatello / Calabrese（Nero d\'Avola）' },
-      { label: '工藝', value: '加入 Mistella（中性葡萄烈酒）+ Concia（濃縮葡萄液）' },
-      { label: '等級', value: 'Fine（1年）→ Superiore（2年）→ Superiore Riserva（4年）→ Vergine / Stravecchio（10年+）' },
-      { label: '甜度', value: 'Secco（干型）/ Semisecco / Dolce（甜型）' },
-      { label: '位置', value: 'Trapani 省，西岸 Marsala 港，鹽田與地中海微氣候' }
+      { label: 'DOC 年份', value: '1983 年，Molise 第一個 DOC，以 Biferno 河命名' },
+      { label: '範圍', value: 'Campobasso 省 Biferno 河流域，從內陸山地延伸至 Adriatic 海岸' },
+      { label: '紅酒', value: 'Montepulciano 70-80% + Aglianico，類似 Abruzzo 但更輕盈清爽' },
+      { label: '白酒', value: 'Trebbiano 65-70% + Bombino Bianco，清爽易飲的海岸風格' },
+      { label: '特色', value: '橫跨山地到 Adriatic 海岸（Termoli 城），地形多元，風土組合豐富' }
     ],
-    desc: '1773 年英國商人 John Woodhouse 在 Marsala 港意外發現加烈葡萄酒的保存特性，開創義大利最著名的加烈酒傳統。Vergine 等級（無添加）代表最純粹的 Marsala 表達，陳年 Solera 系統賦予核果氧化風格。',
-    pairing: '烹飪（Chicken Marsala、Zabaione）/ 飲用：陳年起司、堅果、焦糖甜點',
-    price: 'Fine €8-15 / Vergine Riserva €25-60+'
-  },
-  {
-    id: 'pantelleria',
-    name: 'Pantelleria DOC',
-    shortName: 'Pantelleria',
-    emoji: '🏝️',
-    tier: 'b',
-    tierLabel: '💎 火山島 DOC — 風之島',
-    center: [11.953, 36.780],
-    zoom: 11.5,
-    color: '#F57F17',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Pantelleria DOC.geojson',
-    details: [
-      { label: '品種', value: 'Zibibbo（Muscat of Alexandria）100%，葡萄乾甜酒' },
-      { label: '工藝', value: 'Passito 風乾工藝，葡萄風乾後釀製甜白酒，糖分極高' },
-      { label: '最高等級', value: 'Passito di Pantelleria（UNESCO 非物質文化遺產）' },
-      { label: '風格', value: '濃郁杏桃、蜂蜜、柑橘蜜餞、琥珀色，甜而不膩' },
-      { label: '位置', value: '突尼西亞對岸火山島，強烈 Sirocco 風，藤蔓匍匐地面' }
-    ],
-    desc: '位於突尼西亞北方 70km 的火山島，強烈 Sirocco 沙漠熱風迫使藤蔓以 Alberello（矮灌木）姿態貼地生長。Passito di Pantelleria 是義大利最頂級的甜白酒之一，Marco de Bartoli 是最具代表性的釀酒師。',
-    pairing: '杏仁甜點（Cassata）、烤無花果、藍起司（Gorgonzola）、餐後獨享',
-    price: 'Passito di Pantelleria €20-80 / 頂級 €100+'
-  },
-  {
-    id: 'noto',
-    name: 'Noto DOC',
-    shortName: 'Noto（Nero d\'Avola）',
-    emoji: '🍇',
-    tier: 'b',
-    tierLabel: '💎 特色 DOC — Nero d\'Avola 故鄉',
-    center: [15.072, 36.888],
-    zoom: 11,
-    color: '#1A237E',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Noto DOC.geojson',
-    details: [
-      { label: '品種', value: 'Nero d\'Avola 100%，Sicily 最重要的紅葡萄' },
-      { label: '風格', value: '深紫黑色、高單寧、飽滿酒體，黑莓、巧克力、甜香料' },
-      { label: '土壤', value: '石灰岩白土（Calcareo），炎熱乾燥，陽光充足' },
-      { label: '類比', value: '性格類似 Syrah / Cabernet，被稱為「南方的 Barolo」' },
-      { label: '位置', value: 'Siracusa 省，Avola / Noto 周邊，東南海岸炎熱區' }
-    ],
-    desc: 'Nero d\'Avola 的發源地，Avola 小鎮是這個品種的命名地。炎熱石灰岩土壤造就深邃的色澤與飽滿酒體。頂級版可陳年 10-15 年，展現皮革、乾果的複雜熟成香氣。Planeta、Donnafugata 是在此扎根的知名酒莊。',
-    pairing: '烤羊肉、燉牛肉（Ragù）、野豬肉、陳年硬質起司',
-    price: '€10-25 / 頂級 Nero d\'Avola €25-60'
+    desc: 'Molise 第一個也是最大的 DOC，以 Biferno 河為名。以 Montepulciano 為主力紅品種，風格比鄰近的 Abruzzo 稍微輕盈清爽，同時在 Termoli 海岸出產適合搭配海鮮的白酒。Di Majo Norante 是全 Molise 最重要的優質酒莊，其 Biferno Rosso Riserva 是全區指標。',
+    pairing: 'Brodetto alla Termolese 海鮮湯（白酒配）、烤鯛魚、Cavatelli 配番茄醬（紅酒配）',
+    price: '€8-18 / Riserva €15-28，親民而有品質的 Molise 入門款'
   }
 ]
 
+const OTHER_ZONES = [
+  {
+    id: 'pentro-isernia',
+    name: 'Pentro di Isernia DOC',
+    shortName: 'Pentro di Isernia',
+    emoji: '⛰️',
+    tier: 'b',
+    tierLabel: '💎 山地 DOC — 古代部落遺名',
+    center: [14.228, 41.595],
+    zoom: 10.5,
+    geojsonPath: '/italy/regions/molise/geojson/DOC/Pentro di Isernia DOC.geojson',
+    details: [
+      { label: 'DOC 年份', value: '1983 年，與 Biferno DOC 同年建立' },
+      { label: '名稱', value: '「Pentro」源自古代 Samnite 部落（Pentri）的名稱，保留了前羅馬時代記憶' },
+      { label: '位置', value: 'Isernia 省，Molise 西部山區，Apennine 山脈高地，海拔較高' },
+      { label: '品種', value: 'Montepulciano + Sangiovese（各約 45-55%）；白：Trebbiano + Bombino Bianco' },
+      { label: '特色', value: '產量極小，幾乎只在當地市場流通，幾乎無出口，是義大利最難找的 DOC 之一' }
+    ],
+    desc: '義大利最罕見、最難買到的 DOC 之一。以古代山區部落「Pentri」命名，位於 Isernia 省西部高地，冬季嚴寒、夏季清爽的山地氣候讓葡萄酒保有獨特的清新酸度。年產量極少，幾乎從未出現在義大利以外的市場，是葡萄酒探索者的聖杯級秘境。',
+    pairing: '烤羊肉、山區燉野豬、Caciocavallo 硬質起司、手工義大利麵',
+    price: '€8-15，如果能找到，絕對是 Molise 最物超所值的珍稀選擇'
+  },
+  {
+    id: 'molise-doc',
+    name: 'Molise DOC',
+    shortName: 'Molise DOC',
+    emoji: '🌾',
+    tier: 'b',
+    tierLabel: '💎 通用 DOC — Molise 全區',
+    center: [14.700, 41.555],
+    zoom: 9.5,
+    geojsonPath: '/italy/regions/molise/geojson/DOC/Molise del Molise DOC.geojson',
+    details: [
+      { label: 'DOC 年份', value: '2014 年建立，Molise 最新的 DOC，也是最靈活的' },
+      { label: '範圍', value: 'Molise 全大區（Campobasso + Isernia 兩省），是通用大傘型 DOC' },
+      { label: '品種', value: 'Montepulciano、Aglianico、Tintilia、Falanghina、Greco Bianco 等多品種皆允許' },
+      { label: '目的', value: '讓生產者有更大彈性試驗不同品種和釀造風格，同時保有法定認證' },
+      { label: '特色', value: '同一個酒莊可同時申請 Tintilia del Molise DOC 和 Molise DOC，靈活運用不同許可品種' }
+    ],
+    desc: 'Molise 最年輕的 DOC（2014），設計初衷是讓生產者能在通用 DOC 框架下靈活試驗各種品種和風格。可使用 Falanghina、Greco Bianco 釀白酒，或以 Aglianico 釀濃郁紅酒，為 Molise 這個小產區提供更寬廣的品種表達空間。',
+    pairing: '配餐視品種而定：Falanghina 配海鮮、Aglianico 配羊肉、Greco 配輕食',
+    price: '€8-15，Molise 葡萄酒風格多元探索的起點'
+  }
+]
+
+const ALL_ZONES = [...STAR_ZONES, ...OTHER_ZONES]
+
 const TIER_STYLE = {
-  s: { fill: '#5D1A00', line: '#FF6D00', fillOpacity: 0.32, lineWidth: 2.5 },
-  a: { fill: '#B71C1C', line: '#EF9A9A', fillOpacity: 0.28, lineWidth: 2.2 },
-  b: { fill: '#1A237E', line: '#90CAF9', fillOpacity: 0.25, lineWidth: 1.8 }
+  a: { fill: '#4A148C', line: '#CE93D8', fillOpacity: 0.32, lineWidth: 2.5 },
+  b: { fill: '#1B5E20', line: '#A5D6A7', fillOpacity: 0.24, lineWidth: 1.8 }
 }
 
-// ── 狀態 ─────────────────────────────────────────────────────
 const mapContainer = ref(null)
 const loading = ref(true)
 const mapError = ref(null)
@@ -203,7 +182,6 @@ const selectedInfo = computed(() =>
   selected.value ? ALL_ZONES.find(z => z.id === selected.value) : null
 )
 
-// ── GeoJSON 非同步載入 ────────────────────────────────────────
 async function fetchGeojson (z) {
   try {
     const res = await fetch(z.geojsonPath)
@@ -217,16 +195,15 @@ async function fetchGeojson (z) {
   }
 }
 
-// ── 地圖操作 ─────────────────────────────────────────────────
 async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
   const geojsonData = await Promise.all(ALL_ZONES.map(z => fetchGeojson(z)))
   ALL_ZONES.forEach((z, i) => {
     const gj = geojsonData[i]
     if (!gj) return
+    const ts = TIER_STYLE[z.tier]
     const fillId = `fill-${z.id}`
     const lineId = `line-${z.id}`
-    const ts = TIER_STYLE[z.tier]
     if (!map.getSource(z.id)) map.addSource(z.id, { type: 'geojson', data: gj })
     if (!map.getLayer(fillId)) {
       map.addLayer({ id: fillId, type: 'fill', source: z.id,
@@ -240,11 +217,10 @@ async function highlightAll () {
     map.on('mouseenter', fillId, () => { map.getCanvas().style.cursor = 'pointer' })
     map.on('mouseleave', fillId, () => { map.getCanvas().style.cursor = '' })
   })
-  // emoji 標記
   ALL_ZONES.forEach(z => {
     const el = document.createElement('div')
     el.innerHTML = z.emoji
-    el.style.cssText = `font-size:16px;cursor:pointer;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));transition:transform 0.15s;`
+    el.style.cssText = 'font-size:16px;cursor:pointer;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));transition:transform 0.15s;'
     el.addEventListener('mouseenter', () => { el.style.transform = 'scale(1.3)' })
     el.addEventListener('mouseleave', () => { el.style.transform = 'scale(1)' })
     el.addEventListener('click', () => selectZone(z.id))
@@ -277,7 +253,7 @@ function resetView () {
     if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', ts.fillOpacity)
     if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', ts.lineWidth)
   })
-  map.flyTo({ center: [13.80, 37.55], zoom: 7.8, duration: 900 })
+  map.flyTo({ center: [14.60, 41.56], zoom: 8.5, duration: 900 })
 }
 
 function initMap () {
@@ -288,8 +264,8 @@ function initMap () {
   map = new mapboxgl.Map({
     container: mapContainer.value,
     style: 'mapbox://styles/mapbox/outdoors-v12',
-    center: [13.80, 37.55],
-    zoom: 7.8,
+    center: [14.60, 41.56],
+    zoom: 8.5,
     attributionControl: false
   })
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
@@ -311,7 +287,6 @@ onBeforeUnmount(() => {
   display: flex; flex-direction: column;
   padding: 18px 26px 14px; box-sizing: border-box; gap: 8px;
 }
-
 .slide-header { flex-shrink: 0; }
 .slide-header h2 {
   font-size: 1.38rem; font-weight: 700; color: #2c3e50;
@@ -322,16 +297,17 @@ onBeforeUnmount(() => {
 .zone-buttons {
   display: flex; flex-wrap: wrap; gap: 6px; align-items: center; flex-shrink: 0;
 }
+.btn-group { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.btn-group-label { font-size: 0.72rem; font-weight: 700; color: #888; white-space: nowrap; }
+
 .zone-btn {
-  padding: 4px 11px; border-radius: 16px; border: 1.5px solid transparent;
+  padding: 4px 10px; border-radius: 16px; border: 1.5px solid transparent;
   font-size: 0.76rem; font-weight: 600; cursor: pointer; transition: all 0.15s; white-space: nowrap;
 }
-.zone-btn.tier-s   { background: #fdf3ee; border-color: #5D1A00; color: #5D1A00; }
-.zone-btn.tier-a   { background: #fdf0f0; border-color: #B71C1C; color: #B71C1C; }
-.zone-btn.tier-b   { background: #f0f0ff; border-color: #1A237E; color: #1A237E; }
-.zone-btn.active.tier-s { background: #5D1A00; color: #fff; }
-.zone-btn.active.tier-a { background: #B71C1C; color: #fff; }
-.zone-btn.active.tier-b { background: #1A237E; color: #fff; }
+.zone-btn.tier-a   { background: #f3e5f5; border-color: #4A148C; color: #4A148C; }
+.zone-btn.tier-b   { background: #f1f8e9; border-color: #1B5E20; color: #1B5E20; }
+.zone-btn.active.tier-a { background: #4A148C; color: #fff; }
+.zone-btn.active.tier-b { background: #1B5E20; color: #fff; }
 .zone-btn:hover:not(.active) { opacity: 0.75; transform: translateY(-1px); }
 
 .reset-btn {
@@ -342,7 +318,6 @@ onBeforeUnmount(() => {
 .reset-btn:hover { background: #e8e8e8; }
 
 .map-info-row { flex: 1; min-height: 0; display: flex; gap: 10px; }
-
 .map-wrapper {
   flex: 1 1 58%; min-height: 0; position: relative;
   border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.12);
@@ -362,9 +337,8 @@ onBeforeUnmount(() => {
 }
 .legend-row { display: flex; align-items: center; gap: 5px; }
 .legend-dot { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
-.legend-dot.tier-s { background: #5D1A00; }
-.legend-dot.tier-a { background: #B71C1C; }
-.legend-dot.tier-b { background: #1A237E; }
+.legend-dot.tier-a { background: #4A148C; }
+.legend-dot.tier-b { background: #1B5E20; }
 
 .info-panel {
   flex: 0 0 40%; overflow-y: auto; background: #fafafa; border-radius: 12px;
@@ -380,22 +354,20 @@ onBeforeUnmount(() => {
 }
 .hint-row { display: flex; align-items: center; gap: 6px; }
 .hint-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-.hint-dot.tier-s { background: #5D1A00; }
-.hint-dot.tier-a { background: #B71C1C; }
-.hint-dot.tier-b { background: #1A237E; }
+.hint-dot.tier-a { background: #4A148C; }
+.hint-dot.tier-b { background: #1B5E20; }
 
 .info-badge {
   display: inline-block; padding: 2px 10px; border-radius: 10px;
   font-size: 0.72rem; font-weight: 700; color: #fff; align-self: flex-start;
 }
-.info-badge.tier-s { background: #5D1A00; }
-.info-badge.tier-a { background: #B71C1C; }
-.info-badge.tier-b { background: #1A237E; }
+.info-badge.tier-a { background: #4A148C; }
+.info-badge.tier-b { background: #1B5E20; }
 
 .info-name { font-size: 1rem; font-weight: 700; color: #2c3e50; margin: 0; }
 .info-rows { display: flex; flex-direction: column; gap: 4px; }
 .info-row { display: flex; gap: 6px; font-size: 0.77rem; line-height: 1.4; }
-.info-label { flex: 0 0 54px; font-weight: 600; color: #888; font-size: 0.72rem; }
+.info-label { flex: 0 0 60px; font-weight: 600; color: #888; font-size: 0.72rem; }
 .info-val { color: #333; flex: 1; }
 
 .info-desc {
@@ -406,7 +378,7 @@ onBeforeUnmount(() => {
   font-size: 0.76rem; color: #555; border-radius: 7px; padding: 7px 11px; line-height: 1.45;
 }
 .info-pair { background: #fff8e8; }
-.info-price { background: #e8f5e9; }
+.info-price { background: #f3e5f5; }
 .pair-label, .price-label { font-weight: 700; margin-right: 4px; }
 
 @media (max-width: 680px) {

@@ -83,6 +83,21 @@ import PiemonteDocgMapSlide from './slides/PiemonteDocgMapSlide.vue'
 import TuscanyDocgMapSlide from './slides/TuscanyDocgMapSlide.vue'
 import VenetoDocgMapSlide from './slides/VenetoDocgMapSlide.vue'
 import SicilyDocgMapSlide from './slides/SicilyDocgMapSlide.vue'
+import LombardyDocgMapSlide from './slides/LombardyDocgMapSlide.vue'
+import CampaniaDocgMapSlide from './slides/CampaniaDocgMapSlide.vue'
+import PugliaDocgMapSlide from './slides/PugliaDocgMapSlide.vue'
+import BasilicataDocgMapSlide from './slides/BasilicataDocgMapSlide.vue'
+import CalabriaDocgMapSlide from './slides/CalabriaDocgMapSlide.vue'
+import SardiniaDocgMapSlide from './slides/SardiniaDocgMapSlide.vue'
+import MoliseDOCMapSlide from './slides/MoliseDOCMapSlide.vue'
+import AbruzzoDocgMapSlide from './slides/AbruzzoDocgMapSlide.vue'
+import LazioDocgMapSlide from './slides/LazioDocgMapSlide.vue'
+import UmbriaDocgMapSlide from './slides/UmbriaDocgMapSlide.vue'
+import MarcheDocgMapSlide from './slides/MarcheDocgMapSlide.vue'
+import EmiliaDocgMapSlide from './slides/EmiliaDocgMapSlide.vue'
+import LiguriaDocMapSlide from './slides/LiguriaDocMapSlide.vue'
+import FriuliDocgMapSlide from './slides/FriuliDocgMapSlide.vue'
+import TrentinoDocMapSlide from './slides/TrentinoDocMapSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
@@ -116,7 +131,22 @@ const slideComponentMap = {
   'piemonte-docg-map': PiemonteDocgMapSlide,
   'tuscany-docg-map': TuscanyDocgMapSlide,
   'veneto-docg-map': VenetoDocgMapSlide,
-  'sicily-docg-map': SicilyDocgMapSlide
+  'sicily-docg-map': SicilyDocgMapSlide,
+  'lombardy-docg-map': LombardyDocgMapSlide,
+  'campania-docg-map': CampaniaDocgMapSlide,
+  'puglia-docg-map': PugliaDocgMapSlide,
+  'basilicata-docg-map': BasilicataDocgMapSlide,
+  'calabria-docg-map': CalabriaDocgMapSlide,
+  'sardinia-docg-map': SardiniaDocgMapSlide,
+  'molise-doc-map': MoliseDOCMapSlide,
+  'abruzzo-docg-map': AbruzzoDocgMapSlide,
+  'lazio-docg-map': LazioDocgMapSlide,
+  'umbria-docg-map': UmbriaDocgMapSlide,
+  'marche-docg-map': MarcheDocgMapSlide,
+  'emilia-docg-map': EmiliaDocgMapSlide,
+  'liguria-doc-map': LiguriaDocMapSlide,
+  'friuli-docg-map': FriuliDocgMapSlide,
+  'trentino-doc-map': TrentinoDocMapSlide
 }
 
 function pickRandom (arr, n) {

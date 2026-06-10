@@ -63,6 +63,7 @@
       "title": "🗺️ 義大利的美食首都",
       "content": "<div class=\"region-overview\"><div class=\"overview-text\"><p>Emilia-Romagna 橫跨義大利北部，以<strong>Lambrusco 氣泡紅酒</strong>、<strong>Parmigiano-Reggiano 起司</strong>、<strong>Parma 火腿</strong>和<strong>Balsamic 醋</strong>聞名世界。</p></div><div class=\"famous-foods\"><h4>🧀 世界級美食</h4><div class=\"food-grid\"><div class=\"food-item\">🧀 Parmigiano-Reggiano</div><div class=\"food-item\">🥓 Prosciutto di Parma</div><div class=\"food-item\">🥫 Modena Balsamic 醋</div><div class=\"food-item\">🍝 Tagliatelle al Ragù（肉醬麵）</div><div class=\"food-item\">🥩 Mortadella 香腸</div><div class=\"food-item\">🫓 Piadina 薄餅</div></div></div></div>"
     },
+    {"type":"emilia-docg-map","title":"🗺️ Emilia-Romagna DOC 互動地圖"},
     {
       "type": "content",
       "title": "🍾 Lambrusco - 被誤解的氣泡紅酒",

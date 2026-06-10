@@ -44,6 +44,10 @@
       "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Campania（坎帕尼亞）位於義大利南部，<strong>Napoli（那不勒斯）</strong>是首府，擁有超過 <strong>2500 年的葡萄酒歷史</strong>。古羅馬詩人 Virgil 和 Pliny 都盛讚此地的 <strong>Falernian 葡萄酒</strong>，譽為當時世界最頂級。</p><p class=\"highlight\">🌋 Campania 以<strong>火山土壤</strong>與<strong>古老本土品種</strong>聞名，4 個 DOCG 代表南義最高等級。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🗓️</div><div class=\"fact-text\"><strong>2500+</strong><span>年葡萄酒歷史</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>4個</strong><span>DOCG頂級認證</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌍</div><div class=\"fact-text\"><strong>20,000</strong><span>公頃葡萄園</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>75+</strong><span>DOC/DOCG/IGT</span></div></div></div></div>"
     },
     {
+      "type": "campania-docg-map",
+      "title": "🗺️ Campania 重要 DOCG & DOC 互動地圖"
+    },
+    {
       "type": "content",
       "title": "🍷 Aglianico - 南義之王",
       "content": "<div class=\"variety-deep-section\"><h3>👑「南義的 Nebbiolo」</h3><p>Aglianico 是義大利最高貴的紅葡萄品種之一，由古希臘人引進（公元前 8 世紀），名稱來自 <strong>「Hellenico」（希臘的）</strong>。陳年潛力驚人，可達 20-30 年。</p><div class=\"aging-science\"><div class=\"science-explanation\"><div class=\"science-card\"><h5>⚫ 高單寧</h5><p>單寧含量 4200 mg/L，年輕時極為緊閉堅實，需長期陳年才能軟化展現優雅。</p><div class=\"science-note\">需陳年 8-12 年達巔峰</div></div><div class=\"science-card\"><h5>🍋 高酸度</h5><p>天然高酸度（pH 3.30-3.40）保持酒款活力，是陳年 20-30 年的保鮮關鍵。</p><div class=\"science-note\">30 年後仍有驚人活力</div></div><div class=\"science-card\"><h5>🌋 晚熟品種</h5><p>10 月底至 11 月初採收，海拔 300-600m 為最佳種植區，火山土壤增添礦物感。</p><div class=\"science-note\">義大利採收最晚的品種</div></div></div></div></div>"

@@ -68,6 +68,7 @@
       "title": "🏖️ 義大利的「里維耶拉」",
       "content": "<div class=\"intro-section\"><div class=\"intro-text\"><p>Liguria 是義大利西北部的新月形海岸產區，以<strong>Cinque Terre</strong>（五漁村）的陡峭梯田葡萄園聞名。產量小但獨特性高。</p></div><div class=\"region-stats\"><div class=\"stat-box\"><span class=\"stat-icon\">🏖️</span><div class=\"stat-content\"><span class=\"stat-num\">300 km</span><span class=\"stat-label\">海岸線長度</span></div></div><div class=\"stat-box\"><span class=\"stat-icon\">⛰️</span><div class=\"stat-content\"><span class=\"stat-num\">45°+</span><span class=\"stat-label\">葡萄園坡度</span></div></div><div class=\"stat-box\"><span class=\"stat-icon\">🍷</span><div class=\"stat-content\"><span class=\"stat-num\">8</span><span class=\"stat-label\">DOC 產區</span></div></div></div><div class=\"challenge-note\"><h4>🏔️ 英雄般的葡萄種植</h4><p>Liguria 的葡萄園大多建在<strong>陡峭的海岸懸崖</strong>上，需要手工採收，勞動強度極高，因此產量少、價格高。</p></div></div>"
     },
+    {"type":"liguria-doc-map","title":"🗺️ Liguria DOC 互動地圖"},
     {
       "type": "content",
       "title": "⛰️ 英雄式葡萄種植深度解析",

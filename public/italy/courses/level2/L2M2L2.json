@@ -64,6 +64,10 @@
       "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Umbria（翁布里亞）是義大利唯一<strong>沒有海岸線的中部大區</strong>，被稱為<strong>「義大利的綠色心臟」</strong>（Cuore Verde d'Italia）。</p><p class=\"highlight\">Umbria 以<strong>Sagrantino di Montefalco</strong>（義大利單寧最高的紅酒之一）和<strong>Orvieto 白酒</strong>聞名。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🏔️</div><div class=\"fact-text\">丘陵地形為主<br>海拔 200-500m</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌳</div><div class=\"fact-text\">森林覆蓋率高<br>自然生態豐富</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\">2 DOCG<br>13 DOC</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏛️</div><div class=\"fact-text\">歷史名城<br>Assisi, Perugia</div></div></div></div>"
     },
     {
+      "type": "umbria-docg-map",
+      "title": "🗺️ Umbria DOCG & DOC 互動地圖"
+    },
+    {
       "type": "content",
       "title": "🍇 Sagrantino - 義大利的單寧之王",
       "content": "<div class=\"sagrantino-section\"><div class=\"sagrantino-intro\"><h3>💪 世界上單寧含量最高的葡萄品種之一</h3><p>Sagrantino 是 Umbria 獨有的紅葡萄品種，<strong>單寧含量極高、酒體強勁、陳年潛力驚人</strong>，與 Barolo、Barbaresco 齊名。</p><div class=\"tannin-comparison\"><h4>單寧含量比較（mg/L）</h4><div class=\"tannin-bars\"><div class=\"tannin-bar sagrantino\"><span>Sagrantino</span><div class=\"bar\" style=\"width:100%\">5000-6000</div></div><div class=\"tannin-bar nebbiolo\"><span>Nebbiolo</span><div class=\"bar\" style=\"width:65%\">3000-4000</div></div><div class=\"tannin-bar cabernet\"><span>Cabernet Sauvignon</span><div class=\"bar\" style=\"width:50%\">2500-3000</div></div><div class=\"tannin-bar sangiovese\"><span>Sangiovese</span><div class=\"bar\" style=\"width:45%\">2000-2500</div></div></div></div></div><div class=\"sagrantino-docg\"><h3>Sagrantino di Montefalco DOCG</h3><div class=\"docg-details\"><p><strong>位置：</strong>Montefalco 小鎮周圍</p><p><strong>品種：</strong>Sagrantino（100%）</p><p><strong>風格：</strong>極濃郁、高單寧、高酒精度（14-16%）</p><p><strong>風味：</strong>黑櫻桃、黑莓、李子、皮革、巧克力、野味、香料</p><p><strong>陳年要求：</strong>33 個月（含 12 個月橡木桶）</p><p><strong>陳年潛力：</strong>15-30 年</p></div></div></div>"

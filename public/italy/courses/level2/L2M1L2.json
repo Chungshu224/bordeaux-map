@@ -63,6 +63,7 @@
       "title": "🗺️ 東北邊境的葡萄酒寶庫",
       "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Friuli Venezia Giulia（簡稱 Friuli）位於義大利東北角，與斯洛維尼亞接壤，是義大利<strong>白葡萄酒品質最高</strong>的產區之一。</p><div class=\"highlight-stats\"><div class=\"stat-item\"><span class=\"stat-number\">80%</span><span class=\"stat-label\">白葡萄酒產量</span></div><div class=\"stat-item\"><span class=\"stat-number\">20%</span><span class=\"stat-label\">紅葡萄酒產量</span></div><div class=\"stat-item\"><span class=\"stat-number\">43</span><span class=\"stat-label\">DOC 產區</span></div></div></div><div class=\"geography-info\"><h4>🌍 地理特色</h4><ul><li><strong>位置：</strong>東北角，與斯洛維尼亞、奧地利接壤</li><li><strong>氣候：</strong>受 Adriatic 海洋調節 + 阿爾卑斯冷風</li><li><strong>土壤：</strong>Ponca（泥灰岩）、沖積土、石灰岩</li><li><strong>特色：</strong>多語言文化（義、德、斯洛維尼亞語）</li></ul></div></div>"
     },
+    {"type":"friuli-docg-map","title":"🗺️ Friuli Venezia Giulia DOCG & DOC 互動地圖"},
     {
       "type": "content",
       "title": "�️ 歷史與文化地位",

@@ -63,6 +63,7 @@
       "title": "🗺️ 義大利中部的隱藏寶石",
       "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Marche（馬爾凱）位於義大利中部東海岸，面對 <strong>Adriatic 海</strong>，以<strong>Verdicchio 白葡萄品種</strong>和<strong>高品質紅酒 Rosso Conero</strong> 聞名。</p><p class=\"highlight\">Marche 的葡萄酒產業雖然不如 Tuscany 或 Piedmont 知名，但品質優異，性價比極高。</p></div><div class=\"marche-stats\"><div class=\"stat-box\"><div class=\"stat-num\">80%</div><div class=\"stat-label\">白葡萄酒產量</div></div><div class=\"stat-box\"><div class=\"stat-num\">20%</div><div class=\"stat-label\">紅葡萄酒產量</div></div><div class=\"stat-box\"><div class=\"stat-num\">2</div><div class=\"stat-label\">DOCG 產區</div></div><div class=\"stat-box\"><div class=\"stat-num\">15</div><div class=\"stat-label\">DOC 產區</div></div></div></div>"
     },
+    {"type":"marche-docg-map","title":"🗺️ Marche DOCG & DOC 互動地圖"},
     {
       "type": "content",
       "title": "🍇 Verdicchio - Marche 之星",

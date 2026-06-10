@@ -297,11 +297,12 @@ async function fetchGeojson (d) {
       const res = await fetch(d.geojsonPath)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await res.json()
-      // 若檔案 geometry 為 null，改用備用
-      if (!data.geometry && !data.features) {
+      // Feature with null geometry → 改用備用；raw Geometry 物件（type=Polygon 等）視為有效
+      if (data.type === 'Feature' && !data.geometry) {
         console.warn(`${d.id}: geometry null, using fallback`)
         return d.geojsonFallback || null
       }
+      if (!data.type) return d.geojsonFallback || null
       return data
     } catch (e) {
       console.warn(`Failed to load GeoJSON for ${d.id}:`, e)

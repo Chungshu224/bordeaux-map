@@ -44,6 +44,10 @@
       "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Apulia（義大利文：Puglia）位於義大利「靴子」的<strong>鞋跟</strong>部分，是義大利<strong>產量第 1-2 大的葡萄酒產區</strong>（與 Veneto 競爭）。歷史上以散裝酒為主，近 20 年精品化革命讓 Primitivo 和 Negroamaro 成為國際明星品種。</p><p class=\"highlight\">🌞 年日照 3000+ 小時、800km 雙海岸線、Terra Rossa 紅土，孕育出濃郁飽滿的地中海風格紅酒。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🌅</div><div class=\"fact-text\"><strong>3000+</strong><span>年葡萄酒歷史</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>4個</strong><span>DOCG頂級認證</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌍</div><div class=\"fact-text\"><strong>106,000</strong><span>公頃葡萄園</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌊</div><div class=\"fact-text\"><strong>800km</strong><span>雙海岸線</span></div></div></div></div>"
     },
     {
+      "type": "puglia-docg-map",
+      "title": "🗺️ Puglia 重要 DOCG & DOC 互動地圖"
+    },
+    {
       "type": "content",
       "title": "🍇 Primitivo — Puglia 之星",
       "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">🧬 DNA 研究確認，Primitivo 與美國加州的 <strong>Zinfandel</strong> 是同一品種，原產自克羅埃西亞（Crljenak Kaštelanski），18 世紀引進 Puglia。名稱「Primitivo」來自義大利文「Primo」（第一），因為是最早成熟的品種之一（8 月底 - 9 月初）。</p></div></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🏔️ 優雅傳統風格</h4><div class=\"style-details\"><p><strong>代表：</strong>Gioia del Colle DOCG（內陸丘陵，海拔 350-500m）</p><p><strong>風味：</strong>紅色莓果、香料、草本、礦物感</p><p><strong>酒精度：</strong>13-14.5%</p><p><strong>釀造：</strong>不鏽鋼桶或舊橡木桶，低干預</p><p><strong>風格：</strong>更清爽、優雅、酸度明顯，接近「南義 Barolo」</p></div><div class=\"dry-badge\">Riserva 陳年 2 年</div></div><div class=\"style-card sweet\"><h4>🍷 現代果醬風格</h4><div class=\"style-details\"><p><strong>代表：</strong>Primitivo di Manduria DOP / Dolce Naturale DOCG</p><p><strong>風味：</strong>黑莓果醬、李子乾、巧克力、甘草</p><p><strong>酒精度：</strong>14-18%（Dolce Naturale 可達 18%）</p><p><strong>釀造：</strong>法國/美國橡木桶，現代化工藝或 Appassimento</p><p><strong>風格：</strong>果香爆炸、酒體飽滿、甜美豐郁</p></div><div class=\"sweet-badge\">國際最知名款</div></div></div>"

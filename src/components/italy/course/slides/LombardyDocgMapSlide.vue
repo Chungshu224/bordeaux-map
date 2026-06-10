@@ -1,7 +1,7 @@
 <template>
   <div class="docg-map-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🗺️ Veneto 重要 DOCG & DOC 互動地圖' }}</h2>
+      <h2>{{ slide.title || '🗺️ Lombardy 重要 DOCG & DOC 互動地圖' }}</h2>
       <p class="slide-subtitle">點選按鈕查看各產區位置與詳細資訊</p>
     </div>
 
@@ -37,9 +37,9 @@
         <div v-if="loading" class="map-loading">地圖載入中…</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
-          <div class="legend-row"><span class="legend-dot tier-s"></span>頂級 DOCG（Amarone）</div>
-          <div class="legend-row"><span class="legend-dot tier-a"></span>重要 DOCG</div>
-          <div class="legend-row"><span class="legend-dot tier-doc"></span>重要 DOC</div>
+          <div class="legend-row"><span class="legend-dot tier-s"></span>頂級 DOCG（Franciacorta / Valtellina 頂峰）</div>
+          <div class="legend-row"><span class="legend-dot tier-a"></span>重要 DOCG / DOC</div>
+          <div class="legend-row"><span class="legend-dot tier-b"></span>特色 DOC</div>
         </div>
       </div>
 
@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="info-panel info-empty" v-else>
-        <div class="empty-icon">👆</div>
+        <div class="empty-icon">🥂</div>
         <p>點選上方按鈕或地圖上的產區<br>查看位置與詳細資訊</p>
         <div class="empty-hint">
           <div class="hint-row" v-for="z in ALL_ZONES" :key="z.id">
@@ -84,154 +84,152 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({ slide: { type: Object, default: () => ({}) } })
 
-// ── 產區資料 ─────────────────────────────────────────────────
 const DOCG_ZONES = [
   {
-    id: 'amarone',
-    name: 'Amarone della Valpolicella DOCG',
-    shortName: 'Amarone',
-    emoji: '🍷',
-    tier: 's',
-    tierLabel: '👑 頂級 DOCG — Legendary',
-    center: [10.930, 45.545],
-    zoom: 11,
-    color: '#8B0000',
-    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Amarone della Valpolicella DOCG.geojson',
-    details: [
-      { label: '品種', value: 'Corvina 45-95%，Corvinone 可替代 50%，Rondinella 5-30%' },
-      { label: '工藝', value: '100% Appassimento 風乾 3-4 個月，失水 30-40%' },
-      { label: '陳年', value: '最少 2 年（含 2 年橡木桶）；Riserva 4 年+' },
-      { label: '風格', value: '15-17% ABV，乾果、巧克力、皮革、菸草，近乎干型' },
-      { label: '位置', value: 'Verona 省西北，Valpolicella 谷地，3 個核心村莊' }
-    ],
-    desc: '義大利最強勁的紅酒。Corvina 葡萄風乾後糖分翻倍，發酵至接近干型，造就義大利酒精最高的紅酒。Classico 子區（Negrar、Marano、Sant\'Ambrogio）品質最佳。',
-    pairing: '野味燉肉、陳年 Parmigiano、牛骨髓料理、黑巧克力甜點',
-    price: '€25-600+，Riserva 可達 €200+'
-  },
-  {
-    id: 'prosecco-docg',
-    name: 'Conegliano Valdobbiadene Prosecco DOCG',
-    shortName: 'Prosecco DOCG',
+    id: 'franciacorta',
+    name: 'Franciacorta DOCG',
+    shortName: 'Franciacorta',
     emoji: '🥂',
-    tier: 'a',
-    tierLabel: '⭐ 頂級 DOCG — Prosecco 精華',
-    center: [12.148, 45.890],
-    zoom: 10.5,
-    color: '#1565C0',
-    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Conegliano Valdobbiadene Prosecco DOCG.geojson',
+    tier: 's',
+    tierLabel: '👑 頂級 DOCG — 義大利香檳',
+    center: [10.030, 45.618],
+    zoom: 11,
+    color: '#1A237E',
+    geojsonPath: '/italy/regions/lombardy/geojson/DOCG/Franciacorta DOCG.geojson',
     details: [
-      { label: '品種', value: 'Glera 85%+，其餘當地白品種輔助' },
-      { label: '工藝', value: 'Charmat 法（大罐二次發酵），保留清新果香' },
-      { label: '等級', value: 'Conegliano（較圓潤）/ Valdobbiadene（較精緻）/ Rive（單一園）/ Cartizze（頂峰）' },
-      { label: '風格', value: '細緻氣泡，白桃、梨子、杏花，10.5-11.5% ABV' },
-      { label: '位置', value: 'Treviso 省，Conegliano 至 Valdobbiadene 陡峭丘陵，UNESCO 遺址' }
+      { label: '品種', value: 'Chardonnay（主力）+ Pinot Nero + Pinot Bianco（Satèn 限定）' },
+      { label: '工藝', value: 'Metodo Classico 傳統法，瓶中二次發酵，與香檳完全相同' },
+      { label: '陳年', value: 'Non-Vintage 18 個月 / Satèn & Rosé 24 個月 / Vintage 30 個月 / Riserva 60 個月' },
+      { label: '特色', value: 'Satèn 為 Franciacorta 獨創風格，低氣壓絲滑口感' },
+      { label: '位置', value: 'Brescia 省南部，Iseo 湖南岸，冰川礫石丘陵，海拔 200-500m' }
     ],
-    desc: 'Prosecco 的精華核心，Cartizze（僅 107 公頃）是最頂級的單一園，坡度達 45 度的陡峭山坡造就微甜版本最高表達。2019 年列入 UNESCO 世界遺產。',
-    pairing: '開胃菜、生火腿 Prosciutto、淡海鮮、草莓甜點',
-    price: 'Brut €10-25 / Rive €18-40 / Cartizze €25-60+'
+    desc: '義大利唯一以傳統法（Metodo Classico）達到 DOCG 等級的氣泡酒，釀造規範比香檳更嚴格。Iseo 湖調節氣候帶來日夜溫差，冰川礫石土壤賦予礦物感，Bellavista、Ca\' del Bosco 是最頂尖的酒莊。',
+    pairing: '生蠔、龍蝦、魚子醬、白松露燉飯、開胃菜全程搭配',
+    price: 'Non-Vintage €20-35 / Vintage €35-70 / Riserva €60-150+'
   },
   {
-    id: 'soave-sup',
-    name: 'Soave Superiore DOCG',
-    shortName: 'Soave Sup.',
-    emoji: '🤍',
-    tier: 'a',
-    tierLabel: '⭐ 頂級 DOCG — 玄武岩白酒',
-    center: [11.248, 45.427],
-    zoom: 11.5,
-    color: '#4A148C',
-    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Soave Superiore DOCG.geojson',
+    id: 'valtellina-sup',
+    name: 'Valtellina Superiore DOCG',
+    shortName: 'Valtellina Sup.',
+    emoji: '🏔️',
+    tier: 's',
+    tierLabel: '👑 頂級 DOCG — 阿爾卑斯 Nebbiolo',
+    center: [10.150, 46.175],
+    zoom: 10.5,
+    color: '#B71C1C',
+    geojsonPath: '/italy/regions/lombardy/geojson/DOCG/Valtellina Superiore DOCG.geojson',
     details: [
-      { label: '品種', value: 'Garganega 70%+，Trebbiano di Soave / Pinot Bianco 補充' },
-      { label: '土壤', value: '玄武岩火山土 + 石灰岩，老藤帶來礦物複雜度' },
-      { label: '陳年', value: 'Superiore：最少 12 個月；Riserva：24 個月+' },
-      { label: '風格', value: '礦物感十足，杏仁、白花、蜂蜜（老藤），3-20 年陳年潛力' },
-      { label: '位置', value: 'Verona 省東部，Soave 鎮周邊，Classico 核心區品質最佳' }
+      { label: '品種', value: 'Nebbiolo（當地稱 Chiavennasca）90%+' },
+      { label: '五子產區', value: 'Sassella / Grumello / Inferno / Valgella / Maroggia' },
+      { label: '坡度', value: '30-60 度陡峭梯田，義大利最陡，維護成本是平地 5-10 倍' },
+      { label: '陳年', value: '最少 2 年（含 1 年木桶）；Riserva 3 年+' },
+      { label: '位置', value: 'Sondrio 省，Adda 河谷北坡，海拔 300-700m，鄰近瑞士' }
     ],
-    desc: 'Classico 核心區的玄武岩土壤是 Soave 的靈魂，老藤 Garganega（樹齡 60-100 年以上）帶來無可複製的礦物複雜度。Pieropan、Gini 等家族酒莊定義了真正的 Soave 風格。',
-    pairing: '海鮮料理、Vitello Tonnato、清淡白肉、奶油海鮮義大利麵',
-    price: 'Superiore €12-35 / Riserva €20-55'
+    desc: '阿爾卑斯山谷的 Nebbiolo，比 Barolo 更清新輕盈，高酸優雅礦物感。Sassella 和 Grumello 是最受推崇的子產區。極端環境（-15°C 冬季、30 度坡面人工梯田）造就獨一無二的風格個性。',
+    pairing: '野味（鹿肉、山豬）、Pizzoccheri 蕎麥麵、陳年硬質起司、燉牛肉',
+    price: '€20-60 / Riserva €35-100+'
+  },
+  {
+    id: 'sforzato',
+    name: 'Sforzato / Sfursat di Valtellina DOCG',
+    shortName: 'Sforzato',
+    emoji: '🍇',
+    tier: 'a',
+    tierLabel: '⭐ 特色 DOCG — Valtellina 的 Amarone',
+    center: [10.050, 46.160],
+    zoom: 10.5,
+    color: '#4A148C',
+    geojsonPath: '/italy/regions/lombardy/geojson/DOCG/Sforzato di Valtellina  Sfursat di Valtellina DOCG.geojson',
+    details: [
+      { label: '品種', value: 'Nebbiolo（Chiavennasca）100%，採用 Appassimento 風乾工藝' },
+      { label: '工藝', value: '葡萄風乾 90-120 天，失水 30%+，類似 Amarone 工藝' },
+      { label: '酒精', value: '最低 14% ABV，濃縮飽滿' },
+      { label: '陳年', value: '最少 20 個月（含 12 個月木桶）' },
+      { label: '風格', value: '比 Valtellina Superiore 更飽滿濃郁，乾果、皮革、香料' }
+    ],
+    desc: '以 Appassimento 風乾工藝釀製的 Valtellina 頂峰，被稱為「山地 Amarone」。在海拔 300-700m 的阿爾卑斯山坡上風乾 Nebbiolo，造就義大利最獨特的複合風格——優雅山地礦物與風乾濃縮的完美結合。',
+    pairing: '野味燉肉、Bresaola（醃牛肉）、陳年起司、冬日暖鍋',
+    price: '€30-80，Valtellina Superiore 的風乾升級版'
   }
 ]
 
 const DOC_ZONES = [
   {
-    id: 'valpolicella',
-    name: 'Valpolicella DOC',
-    shortName: 'Valpolicella',
+    id: 'rosso-valtellina',
+    name: 'Rosso di Valtellina DOC',
+    shortName: 'Rosso Valtellina',
     emoji: '🍒',
-    tier: 'doc',
-    tierLabel: '🍷 重要 DOC — Amarone 的基礎',
-    center: [10.930, 45.560],
-    zoom: 11,
-    color: '#B71C1C',
-    geojsonPath: '/italy/regions/veneto/geojson/DOC/Valpolicella DOC.geojson',
-    details: [
-      { label: '品種', value: 'Corvina 45-95%，Rondinella 5-30%，同 Amarone 品種' },
-      { label: '風格', value: '輕盈、新鮮，無風乾工藝，鮮活酸度，容易親近' },
-      { label: '陳年', value: '普通款：6 個月+；Superiore：1 年+' },
-      { label: '關係', value: 'Amarone 的基礎，同葡萄園不同工藝的入門版' },
-      { label: '位置', value: '與 Amarone 相同區域，部分 Ripasso 再使用 Amarone 酒渣' }
-    ],
-    desc: '同一葡萄園、同樣品種，不用風乾工藝就是 Valpolicella。Ripasso 工藝（過 Amarone 酒渣二次浸泡）介於兩者之間，獲得更高酒體與複雜度，是 CP 值最高的選擇。',
-    pairing: '日常義大利麵、沙拉米、烤雞、薄餅',
-    price: 'Valpolicella €8-18 / Ripasso €15-35'
-  },
-  {
-    id: 'valpolicella-ripasso',
-    name: 'Valpolicella Ripasso DOC',
-    shortName: 'Ripasso',
-    emoji: '🔁',
-    tier: 'doc',
-    tierLabel: '🍷 重要 DOC — 窮人的 Amarone',
-    center: [10.920, 45.548],
-    zoom: 11,
+    tier: 'a',
+    tierLabel: '🍷 重要 DOC — Valtellina 入門款',
+    center: [10.100, 46.155],
+    zoom: 10.2,
     color: '#C62828',
-    geojsonPath: '/italy/regions/veneto/geojson/DOC/Valpolicella ripasso DOC.geojson',
+    geojsonPath: '/italy/regions/lombardy/geojson/DOC/Valtellina rosso Rosso di Valtellina DOC.geojson',
     details: [
-      { label: '工藝', value: 'Ripasso：將 Valpolicella 過 Amarone 或 Recioto 酒渣再次浸泡' },
-      { label: '效果', value: '獲得更多顏色、單寧、酒體，果香更複雜，酒精升至 13-14%' },
-      { label: '陳年', value: '最少 1 年（含 6 個月橡木桶）；Superiore 2 年+' },
-      { label: '風格', value: '介於 Valpolicella 和 Amarone 之間，黑醋栗、香料、皮革' },
-      { label: '定位', value: '被稱為「窮人的 Amarone」，性價比極高的中價位選擇' }
+      { label: '品種', value: 'Nebbiolo（Chiavennasca）70%+，同谷地 Valtellina Superiore' },
+      { label: '陳年', value: '最少 6 個月，無強制木桶要求，比 Superiore 更早飲用' },
+      { label: '風格', value: '輕盈清新，新鮮紅果、花香，比 Superiore 更友善易飲' },
+      { label: '定位', value: 'Valtellina Superiore 的親民入門版，同產區不同等級' },
+      { label: '位置', value: '覆蓋整個 Valtellina 谷地，包含 Superiore 核心區' }
     ],
-    desc: 'Ripasso 是 Veneto 最聰明的工藝：將基礎 Valpolicella 葡萄酒過 Amarone 酒渣（pomace）再次浸泡發酵，獲得額外的顏色、單寧與複雜度，又不需要 Amarone 的漫長風乾工藝。Masi、Bertani 是代表酒莊。',
-    pairing: '燉牛肉、烤羊、陳年硬質起司、蘑菇料理',
-    price: '€15-35，全 Veneto 最佳 CP 值'
+    desc: '與 Valtellina Superiore 同一谷地、同樣品種，但不分子產區、陳年要求較低，造就更親民的入門款。是認識 Valtellina Nebbiolo 風土的最佳起點，性價比優異。',
+    pairing: '日常義大利麵、Pizzoccheri 蕎麥麵、沙拉米、輕食料理',
+    price: '€12-25，Valtellina 最親民的 Nebbiolo'
   },
   {
-    id: 'prosecco-doc',
-    name: 'Prosecco DOC',
-    shortName: 'Prosecco DOC',
-    emoji: '🫧',
-    tier: 'doc',
-    tierLabel: '🍷 重要 DOC — 廣域 Prosecco',
-    center: [12.100, 45.820],
-    zoom: 8.8,
-    color: '#1976D2',
-    geojsonPath: '/italy/regions/veneto/geojson/DOC/Prosecco DOC.geojson',
+    id: 'lugana',
+    name: 'Lugana DOC',
+    shortName: 'Lugana',
+    emoji: '🌊',
+    tier: 'b',
+    tierLabel: '💎 特色 DOC — Garda 湖畔白酒',
+    center: [10.670, 45.480],
+    zoom: 11.5,
+    color: '#00695C',
+    geojsonPath: '/italy/regions/lombardy/geojson/DOC/Lugana DOC.geojson',
     details: [
-      { label: '品種', value: 'Glera 85%+，大量生產的親民版 Prosecco' },
-      { label: '範圍', value: 'Veneto + Friuli Venezia Giulia 九個省，比 DOCG 大得多' },
-      { label: '工藝', value: 'Charmat 法，清新果香，不講究土地個性' },
-      { label: '風格', value: '白桃、梨子，輕盈易飲，Brut / Extra Dry / Dry 多種甜度' },
-      { label: '定位', value: '全球銷量第一氣泡酒，日常場合首選' }
+      { label: '品種', value: 'Turbiana（Trebbiano di Lugana）100%，Garda 湖畔特有白品種' },
+      { label: '風格', value: '清爽礦物、柑橘、杏仁、白花，中高酸度，3-10 年陳年潛力' },
+      { label: '等級', value: '普通款 / Superiore（1年）/ Riserva（2年）/ Vendemmia Tardiva（晚摘）' },
+      { label: '位置', value: 'Garda 湖南岸（跨 Lombardy 和 Veneto），冰川黏土礦物土壤' },
+      { label: '特點', value: 'Lombardy 最重要的白酒 DOC，產量近年快速提升' }
     ],
-    desc: '廣域 Prosecco DOC 跨越 Veneto 和 Friuli 兩個大區，是年產超過 6 億瓶的全球最暢銷氣泡酒。DOC 版品質穩定親民，DOCG 版（Conegliano Valdobbiadene）才是精品表達。',
-    pairing: '開胃菜、午餐輕食、派對場合、brunch',
-    price: '€6-15，全球最實惠的精品氣泡酒'
+    desc: 'Garda 湖南岸的精緻白酒，Turbiana（Trebbiano 的基因變種）在湖畔黏土上展現出驚人的礦物複雜度。Riserva 等級陳年後呈現杏仁蜂蜜風格，是義大利最被低估的白酒之一。',
+    pairing: '淡水魚（Garda 湖白魚）、海鮮、白肉料理、奶油醬義大利麵',
+    price: '€10-20 / Riserva €18-40'
+  },
+  {
+    id: 'oltrepo',
+    name: 'Oltrepò Pavese DOC',
+    shortName: "Oltrepò Pavese",
+    emoji: '🍾',
+    tier: 'b',
+    tierLabel: '💎 特色 DOC — Po 河南岸多元產區',
+    center: [9.220, 44.985],
+    zoom: 10.5,
+    color: '#1565C0',
+    geojsonPath: '/italy/regions/lombardy/geojson/DOC/Oltrepò Pavese DOC.geojson',
+    details: [
+      { label: '位置', value: 'Po 河南岸，Pavia 省南部，Apennine 山麓，義大利最北的「南方」產區' },
+      { label: '品種', value: 'Pinot Nero（義大利最大面積）、Barbera、Croatina、Riesling' },
+      { label: '重要性', value: 'Pinot Nero 面積全義最大，大量作為 Franciacorta 的基酒來源' },
+      { label: '風格', value: '多元：紅酒、白酒、氣泡酒、甜酒均有，CP 值高' },
+      { label: '特色', value: 'Metodo Classico DOCG（Pinot Nero 氣泡）是此區最高等級' }
+    ],
+    desc: 'Lombardy 最被低估的多元產區，Pinot Nero 種植面積為全義第一，但大多被用作香檳、Franciacorta 的基酒而非獨立裝瓶。近年開始出現高品質本土裝瓶，展現出優雅的本地風土個性。',
+    pairing: '義大利麵、薩拉米冷盤、豬肉料理、清淡紅燒菜',
+    price: '€8-20，義大利最超值的 Pinot Nero 之一'
   }
 ]
 
 const ALL_ZONES = [...DOCG_ZONES, ...DOC_ZONES]
 
 const TIER_STYLE = {
-  s:   { fill: '#8B0000', line: '#EF5350', fillOpacity: 0.30, lineWidth: 2.5 },
-  a:   { fill: '#1565C0', line: '#64B5F6', fillOpacity: 0.25, lineWidth: 2.2 },
-  doc: { fill: '#4A148C', line: '#CE93D8', fillOpacity: 0.22, lineWidth: 1.8 }
+  s:   { fill: '#1A237E', line: '#90CAF9', fillOpacity: 0.28, lineWidth: 2.5 },
+  a:   { fill: '#B71C1C', line: '#EF9A9A', fillOpacity: 0.25, lineWidth: 2.2 },
+  b:   { fill: '#1B5E20', line: '#81C784', fillOpacity: 0.22, lineWidth: 1.8 }
 }
 
-// ── 狀態 ─────────────────────────────────────────────────────
 const mapContainer = ref(null)
 const loading = ref(true)
 const mapError = ref(null)
@@ -243,7 +241,6 @@ const selectedInfo = computed(() =>
   selected.value ? ALL_ZONES.find(z => z.id === selected.value) : null
 )
 
-// ── GeoJSON 非同步載入 ────────────────────────────────────────
 async function fetchGeojson (z) {
   try {
     const res = await fetch(z.geojsonPath)
@@ -257,21 +254,16 @@ async function fetchGeojson (z) {
   }
 }
 
-// ── 地圖操作 ─────────────────────────────────────────────────
 async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
-
   const geojsonData = await Promise.all(ALL_ZONES.map(z => fetchGeojson(z)))
-
   ALL_ZONES.forEach((z, i) => {
     const gj = geojsonData[i]
     if (!gj) return
     const fillId = `fill-${z.id}`
     const lineId = `line-${z.id}`
     const ts = TIER_STYLE[z.tier]
-    if (!map.getSource(z.id)) {
-      map.addSource(z.id, { type: 'geojson', data: gj })
-    }
+    if (!map.getSource(z.id)) map.addSource(z.id, { type: 'geojson', data: gj })
     if (!map.getLayer(fillId)) {
       map.addLayer({ id: fillId, type: 'fill', source: z.id,
         paint: { 'fill-color': ts.fill, 'fill-opacity': ts.fillOpacity } })
@@ -284,8 +276,6 @@ async function highlightAll () {
     map.on('mouseenter', fillId, () => { map.getCanvas().style.cursor = 'pointer' })
     map.on('mouseleave', fillId, () => { map.getCanvas().style.cursor = '' })
   })
-
-  // emoji 標記
   ALL_ZONES.forEach(z => {
     const el = document.createElement('div')
     el.innerHTML = z.emoji
@@ -293,8 +283,7 @@ async function highlightAll () {
     el.addEventListener('mouseenter', () => { el.style.transform = 'scale(1.3)' })
     el.addEventListener('mouseleave', () => { el.style.transform = 'scale(1)' })
     el.addEventListener('click', () => selectZone(z.id))
-    const m = new mapboxgl.Marker({ element: el }).setLngLat(z.center).addTo(map)
-    markersArr.push(m)
+    markersArr.push(new mapboxgl.Marker({ element: el }).setLngLat(z.center).addTo(map))
   })
 }
 
@@ -323,7 +312,7 @@ function resetView () {
     if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', ts.fillOpacity)
     if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', ts.lineWidth)
   })
-  map.flyTo({ center: [11.50, 45.62], zoom: 8.2, duration: 900 })
+  map.flyTo({ center: [10.00, 45.80], zoom: 8.0, duration: 900 })
 }
 
 function initMap () {
@@ -334,8 +323,8 @@ function initMap () {
   map = new mapboxgl.Map({
     container: mapContainer.value,
     style: 'mapbox://styles/mapbox/outdoors-v12',
-    center: [11.50, 45.62],
-    zoom: 8.2,
+    center: [10.00, 45.80],
+    zoom: 8.0,
     attributionControl: false
   })
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
@@ -357,7 +346,6 @@ onBeforeUnmount(() => {
   display: flex; flex-direction: column;
   padding: 18px 26px 14px; box-sizing: border-box; gap: 8px;
 }
-
 .slide-header { flex-shrink: 0; }
 .slide-header h2 {
   font-size: 1.38rem; font-weight: 700; color: #2c3e50;
@@ -375,12 +363,12 @@ onBeforeUnmount(() => {
   padding: 4px 10px; border-radius: 16px; border: 1.5px solid transparent;
   font-size: 0.76rem; font-weight: 600; cursor: pointer; transition: all 0.15s; white-space: nowrap;
 }
-.zone-btn.tier-s   { background: #fdf0f0; border-color: #8B0000; color: #8B0000; }
-.zone-btn.tier-a   { background: #f0f4ff; border-color: #1565C0; color: #1565C0; }
-.zone-btn.tier-doc { background: #f5f0ff; border-color: #6A1B9A; color: #6A1B9A; }
-.zone-btn.active.tier-s   { background: #8B0000; color: #fff; }
-.zone-btn.active.tier-a   { background: #1565C0; color: #fff; }
-.zone-btn.active.tier-doc { background: #6A1B9A; color: #fff; }
+.zone-btn.tier-s   { background: #f0f0ff; border-color: #1A237E; color: #1A237E; }
+.zone-btn.tier-a   { background: #fdf0f0; border-color: #B71C1C; color: #B71C1C; }
+.zone-btn.tier-b   { background: #f0fdf4; border-color: #1B5E20; color: #1B5E20; }
+.zone-btn.active.tier-s { background: #1A237E; color: #fff; }
+.zone-btn.active.tier-a { background: #B71C1C; color: #fff; }
+.zone-btn.active.tier-b { background: #1B5E20; color: #fff; }
 .zone-btn:hover:not(.active) { opacity: 0.75; transform: translateY(-1px); }
 
 .reset-btn {
@@ -391,7 +379,6 @@ onBeforeUnmount(() => {
 .reset-btn:hover { background: #e8e8e8; }
 
 .map-info-row { flex: 1; min-height: 0; display: flex; gap: 10px; }
-
 .map-wrapper {
   flex: 1 1 58%; min-height: 0; position: relative;
   border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.12);
@@ -411,9 +398,9 @@ onBeforeUnmount(() => {
 }
 .legend-row { display: flex; align-items: center; gap: 5px; }
 .legend-dot { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
-.legend-dot.tier-s   { background: #8B0000; }
-.legend-dot.tier-a   { background: #1565C0; }
-.legend-dot.tier-doc { background: #6A1B9A; }
+.legend-dot.tier-s { background: #1A237E; }
+.legend-dot.tier-a { background: #B71C1C; }
+.legend-dot.tier-b { background: #1B5E20; }
 
 .info-panel {
   flex: 0 0 40%; overflow-y: auto; background: #fafafa; border-radius: 12px;
@@ -429,20 +416,19 @@ onBeforeUnmount(() => {
 }
 .hint-row { display: flex; align-items: center; gap: 6px; }
 .hint-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-.hint-dot.tier-s   { background: #8B0000; }
-.hint-dot.tier-a   { background: #1565C0; }
-.hint-dot.tier-doc { background: #6A1B9A; }
+.hint-dot.tier-s { background: #1A237E; }
+.hint-dot.tier-a { background: #B71C1C; }
+.hint-dot.tier-b { background: #1B5E20; }
 
 .info-badge {
   display: inline-block; padding: 2px 10px; border-radius: 10px;
   font-size: 0.72rem; font-weight: 700; color: #fff; align-self: flex-start;
 }
-.info-badge.tier-s   { background: #8B0000; }
-.info-badge.tier-a   { background: #1565C0; }
-.info-badge.tier-doc { background: #6A1B9A; }
+.info-badge.tier-s { background: #1A237E; }
+.info-badge.tier-a { background: #B71C1C; }
+.info-badge.tier-b { background: #1B5E20; }
 
 .info-name { font-size: 1rem; font-weight: 700; color: #2c3e50; margin: 0; }
-
 .info-rows { display: flex; flex-direction: column; gap: 4px; }
 .info-row { display: flex; gap: 6px; font-size: 0.77rem; line-height: 1.4; }
 .info-label { flex: 0 0 54px; font-weight: 600; color: #888; font-size: 0.72rem; }
