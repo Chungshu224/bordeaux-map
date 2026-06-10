@@ -82,7 +82,20 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({ slide: { type: Object, default: () => ({}) } })
 
-// ── 9 大 DOCG 資料 ───────────────────────────────────────────
+// Ghemme 的備用內嵌多邊形（官方檔案 geometry 為 null）
+const GHEMME_FALLBACK = {
+  type: 'Feature',
+  geometry: {
+    type: 'Polygon',
+    coordinates: [[
+      [8.372, 45.585], [8.415, 45.580], [8.450, 45.590], [8.470, 45.610],
+      [8.464, 45.642], [8.432, 45.657], [8.393, 45.654], [8.368, 45.632],
+      [8.362, 45.608], [8.372, 45.585]
+    ]]
+  }
+}
+
+// ── 9 大 DOCG 資料（geojsonPath 對應 public/ 下的真實邊界檔案）──
 const DOCG_LIST = [
   {
     id: 'barolo',
@@ -101,17 +114,7 @@ const DOCG_LIST = [
     center: [7.923, 44.610],
     zoom: 12,
     color: '#8B0000',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [7.847, 44.561], [7.866, 44.548], [7.920, 44.553], [7.983, 44.576],
-          [7.998, 44.608], [7.960, 44.650], [7.903, 44.660], [7.851, 44.645],
-          [7.828, 44.610], [7.847, 44.561]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/piedmont/geojson/DOCG/Barolo DOCG.geojson'
   },
   {
     id: 'barbaresco',
@@ -130,17 +133,7 @@ const DOCG_LIST = [
     center: [8.070, 44.688],
     zoom: 12.5,
     color: '#C2185B',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [8.025, 44.658], [8.048, 44.650], [8.092, 44.658], [8.113, 44.675],
-          [8.117, 44.705], [8.092, 44.722], [8.048, 44.720], [8.022, 44.702],
-          [8.025, 44.658]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/piedmont/geojson/DOCG/Barbaresco DOCG.geojson'
   },
   {
     id: 'barbera-asti',
@@ -159,17 +152,7 @@ const DOCG_LIST = [
     center: [8.240, 44.850],
     zoom: 9.5,
     color: '#7B1FA2',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [7.950, 44.710], [8.080, 44.680], [8.230, 44.690], [8.420, 44.720],
-          [8.520, 44.815], [8.480, 44.960], [8.320, 45.020], [8.080, 45.005],
-          [7.920, 44.930], [7.870, 44.820], [7.950, 44.710]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/piedmont/geojson/DOCG/Barbera d\'Asti DOCG.geojson'
   },
   {
     id: 'gavi',
@@ -188,17 +171,7 @@ const DOCG_LIST = [
     center: [8.810, 44.690],
     zoom: 11.5,
     color: '#2E7D32',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [8.672, 44.628], [8.752, 44.618], [8.852, 44.635], [8.935, 44.660],
-          [8.942, 44.730], [8.892, 44.785], [8.792, 44.800], [8.698, 44.780],
-          [8.658, 44.728], [8.660, 44.678], [8.672, 44.628]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/piedmont/geojson/DOCG/Cortese di Gavi Gavi DOCG.geojson'
   },
   {
     id: 'roero',
@@ -217,17 +190,7 @@ const DOCG_LIST = [
     center: [7.910, 44.710],
     zoom: 11.5,
     color: '#1565C0',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [7.785, 44.645], [7.858, 44.640], [7.960, 44.660], [8.042, 44.680],
-          [8.050, 44.720], [7.982, 44.762], [7.895, 44.782], [7.820, 44.762],
-          [7.768, 44.718], [7.775, 44.670], [7.785, 44.645]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/piedmont/geojson/DOCG/Roero DOCG.geojson'
   },
   {
     id: 'dogliani',
@@ -246,17 +209,7 @@ const DOCG_LIST = [
     center: [7.928, 44.533],
     zoom: 12,
     color: '#4A148C',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [7.872, 44.498], [7.902, 44.490], [7.958, 44.498], [7.988, 44.520],
-          [7.992, 44.560], [7.952, 44.578], [7.898, 44.572], [7.860, 44.548],
-          [7.872, 44.498]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/piedmont/geojson/DOCG/Dogliani DOCG.geojson'
   },
   {
     id: 'gattinara',
@@ -275,17 +228,7 @@ const DOCG_LIST = [
     center: [8.367, 45.627],
     zoom: 12.5,
     color: '#E65100',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [8.308, 45.590], [8.348, 45.583], [8.390, 45.590], [8.422, 45.608],
-          [8.427, 45.642], [8.398, 45.667], [8.348, 45.670], [8.308, 45.650],
-          [8.292, 45.618], [8.308, 45.590]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/piedmont/geojson/DOCG/Gattinara DOCG.geojson'
   },
   {
     id: 'ghemme',
@@ -304,17 +247,8 @@ const DOCG_LIST = [
     center: [8.413, 45.620],
     zoom: 13,
     color: '#BF360C',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [8.372, 45.585], [8.415, 45.580], [8.450, 45.590], [8.470, 45.610],
-          [8.464, 45.642], [8.432, 45.657], [8.393, 45.654], [8.368, 45.632],
-          [8.362, 45.608], [8.372, 45.585]
-        ]]
-      }
-    }
+    geojsonFallback: GHEMME_FALLBACK
+    // 無 geojsonPath：官方檔案 geometry 為 null，使用內嵌備用邊界
   },
   {
     id: 'moscato-asti',
@@ -333,17 +267,7 @@ const DOCG_LIST = [
     center: [8.290, 44.740],
     zoom: 10,
     color: '#F9A825',
-    geojson: {
-      type: 'Feature',
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[
-          [8.085, 44.612], [8.205, 44.618], [8.320, 44.640], [8.422, 44.682],
-          [8.522, 44.728], [8.512, 44.842], [8.370, 44.878], [8.200, 44.870],
-          [8.082, 44.822], [8.018, 44.742], [8.022, 44.672], [8.085, 44.612]
-        ]]
-      }
-    }
+    geojsonPath: '/italy/regions/piedmont/geojson/DOCG/Asti DOCG.geojson'
   }
 ]
 
@@ -366,14 +290,43 @@ const selectedInfo = computed(() =>
   selected.value ? DOCG_LIST.find(d => d.id === selected.value) : null
 )
 
+// ── GeoJSON 非同步載入 ────────────────────────────────────────
+async function fetchGeojson (d) {
+  if (d.geojsonPath) {
+    try {
+      const res = await fetch(d.geojsonPath)
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      const data = await res.json()
+      // 若檔案 geometry 為 null，改用備用
+      if (!data.geometry && !data.features) {
+        console.warn(`${d.id}: geometry null, using fallback`)
+        return d.geojsonFallback || null
+      }
+      return data
+    } catch (e) {
+      console.warn(`Failed to load GeoJSON for ${d.id}:`, e)
+      return d.geojsonFallback || null
+    }
+  }
+  return d.geojsonFallback || null
+}
+
 // ── 地圖操作 ─────────────────────────────────────────────────
-function highlightAll () {
+async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
-  DOCG_LIST.forEach(d => {
+
+  // 並行載入所有 GeoJSON
+  const geojsonData = await Promise.all(DOCG_LIST.map(d => fetchGeojson(d)))
+
+  DOCG_LIST.forEach((d, i) => {
+    const gj = geojsonData[i]
+    if (!gj) return
+
     const fillId = `fill-${d.id}`
     const lineId = `line-${d.id}`
+
     if (!map.getSource(d.id)) {
-      map.addSource(d.id, { type: 'geojson', data: d.geojson })
+      map.addSource(d.id, { type: 'geojson', data: gj })
     }
     const tc = TIER_COLORS[d.tier]
     if (!map.getLayer(fillId)) {
@@ -384,13 +337,12 @@ function highlightAll () {
       map.addLayer({ id: lineId, type: 'line', source: d.id,
         paint: { 'line-color': tc.line, 'line-width': 2 } })
     }
-    // 地圖點擊 layer 選取
     map.on('click', fillId, () => selectDocg(d.id))
     map.on('mouseenter', fillId, () => { map.getCanvas().style.cursor = 'pointer' })
     map.on('mouseleave', fillId, () => { map.getCanvas().style.cursor = '' })
   })
 
-  // 標記數字標籤
+  // 數字標記
   DOCG_LIST.forEach((d, i) => {
     const el = document.createElement('div')
     el.className = 'docg-marker'
@@ -409,7 +361,6 @@ function selectDocg (id) {
   const info = DOCG_LIST.find(d => d.id === id)
   if (!info || !map) return
 
-  // 重置所有圖層透明度
   DOCG_LIST.forEach(d => {
     const tc = TIER_COLORS[d.tier]
     if (map.getLayer(`fill-${d.id}`)) {
@@ -421,17 +372,6 @@ function selectDocg (id) {
   })
 
   map.flyTo({ center: info.center, zoom: info.zoom, duration: 900, essential: true })
-}
-
-function resetView () {
-  selected.value = null
-  if (!map) return
-  DOCG_LIST.forEach(d => {
-    const tc = TIER_COLORS[d.tier]
-    if (map.getLayer(`fill-${d.id}`)) map.setPaintProperty(`fill-${d.id}`, 'fill-opacity', tc.opacity)
-    if (map.getLayer(`line-${d.id}`)) map.setPaintProperty(`line-${d.id}`, 'line-width', 2)
-  })
-  map.flyTo({ center: [8.10, 44.85], zoom: 8.5, duration: 900 })
 }
 
 function initMap () {
@@ -448,8 +388,8 @@ function initMap () {
   })
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
-  map.on('load', () => {
-    highlightAll()
+  map.on('load', async () => {
+    await highlightAll()
     loading.value = false
   })
   map.on('error', e => { mapError.value = `地圖錯誤：${e.error?.message || '未知'}`; loading.value = false })
