@@ -54,15 +54,42 @@
           ]
         },
         {
+          "type": "content",
+          "title": "Domaine Armand Rousseau：香貝丹之王",
+          "content": "Armand Rousseau 是 Gevrey-Chambertin 最具代表性的酒莊，擁有 Chambertin、Chambertin Clos de Bèze 等頂尖特級園，以及 Clos Saint-Jacques 一級園（被許多人認為媲美特級園）。\n\nRobert Rousseau 建立的風格：優雅而不失力量，絲滑質地配上深邃果香，是最能代表夜丘精髓的酒莊之一。現由第三代 Éric Rousseau 主持，維持極高品質。其酒款極難取得，市場價格逐年攀升。"
+        },
+        {
+          "type": "content",
+          "title": "Henri Jayer：布根地最偉大的傳奇",
+          "content": "Henri Jayer（1922–2006）是布根地歷史上影響最深遠的釀酒師。他在 Vosne-Romanée 小批量釀造的酒款，如今在拍賣市場上創下天價，一瓶 Cros Parantoux（一級園）常達 10–30 萬美元。\n\nJayer 革命性的貢獻：去梗發酵（徹底去梗，當時的異端）、低溫冷浸漬、使用更高比例新橡木桶——這套方法成為「現代布根地」的基礎，影響了整整一代釀酒師。他已逝世，但姪兒 Méo-Camuzet 繼承了部分地塊，堪稱現世的 Henri Jayer 精神傳承。"
+        },
+        {
+          "type": "content",
+          "title": "Domaine Leflaive：白酒世界的最高殿堂",
+          "content": "Domaine Leflaive 是 Puligny-Montrachet 最重要的酒莊，擁有 Chevalier-Montrachet、Bâtard-Montrachet、Bienvenues-Bâtard-Montrachet 三個白酒特級園，以及多個一級園。\n\n已故的 Anne-Claude Leflaive（2015 年辭世）是生物動力農法的熱烈倡導者，她在 1990 年代全面轉換為生物動力耕作，使酒款更加純淨、礦物感更鮮明。現任由 Brice de La Morandière 主持，繼續維持生物動力法的農作標準。Leflaive 的霞多麗是全球公認白酒的最高標準之一。"
+        },
+        {
           "type": "list",
-          "title": "🏰 酒商（Négociant）",
+          "title": "🏰 酒商（Négociant）深度認識",
           "points": [
-            "Joseph Drouhin - 大型優質酒商",
-            "Louis Jadot - 穩定品質保證",
-            "Bouchard Père et Fils - 歷史悠久",
-            "Faiveley - 產區廣泛",
-            "酒商特色：購買葡萄或酒液釀造/調配",
-            "頂級酒商品質不輸酒莊"
+            "📦 酒商模式：向果農購買葡萄、果汁或已發酵的酒液，再進行釀造或調配裝瓶",
+            "Joseph Drouhin：品質穩定、涵蓋全布根地，旗下 Marquis de Laguiche 的 Montrachet 是頂峰",
+            "Louis Jadot：最知名的大型酒商，同時擁有自有葡萄園，Beaune Clos des Ursules 是其代表作",
+            "Bouchard Père et Fils：歷史最悠久之一（1731年），擁有超過 130 公頃葡萄園",
+            "Maison Faiveley：以夜丘 Gevrey-Chambertin 聞名，近年品質大幅提升",
+            "💡 辨別：酒標寫「Domaine」是酒莊自有葡萄；寫「Maison」是酒商"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "🔎 如何評估一個布根地酒莊",
+          "points": [
+            "① 農法：有機/生物動力 > 傳統農藥 > 化學集約",
+            "② 葡萄園年齡：老藤（30年+）產量低但風味更集中",
+            "③ 釀造干預程度：越少干預 = 越純粹的風土表達",
+            "④ 一致性：同一地塊跨年份的品質穩定度",
+            "⑤ 評論家評分：參考 Burghound（布根地專門）、Vinous、WA",
+            "⑥ 親自品嚐：最終判斷還是要靠自己的味蕾"
           ]
         },
         {
@@ -339,6 +366,28 @@
             "優質酒商 - 流動性好、價格合理",
             "策略：70%經典+30%新興",
             "長期持有：至少10-15年"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "🍃 自然酒（Vin Nature）在布根地的興起",
+          "content": "2010 年代以來，「自然酒」運動在薄酒萊和馬貢延伸至全布根地。自然酒的核心：有機或生物動力葡萄園 + 野生酵母 + 極少甚至零 SO₂ 添加 + 不過濾不澄清。\n\n代表人物：Marcel Lapierre（薄酒萊自然酒先驅，已故）、Domaine Prieuré Roch（夜丘自然酒旗手，Pinault 家族投資）。爭議：自然酒有時出現氧化、混濁或揮發酸等缺陷，被傳統派批評。支持者認為這些「雜質」正是個性與生命力的體現。消費者建議：親自嘗試，形成自己的觀點。"
+        },
+        {
+          "type": "content",
+          "title": "📱 數位時代的布根地：資訊與購酒新途徑",
+          "content": "布根地資訊的最佳來源：\n\n• Burghound.com（Allen Meadows）：最專精的布根地評分，訂閱制\n• Vinous（Antonio Galloni）：全面高品質的布根地報導\n• Wine-searcher.com：全球價格比較，找到最低價庫存\n• Idealwine.com：法國最大二手布根地拍賣平台\n\n購酒新途徑：\n• 直接向酒莊申請酒單（en primeur 期酒制度）\n• 加入在地品酒社群（如台灣各大布根地愛好者群組）\n• 布根地 Hospices de Beaune 拍賣（每年 11 月，也接受網路競標）"
+        },
+        {
+          "type": "list",
+          "title": "💰 有限預算探索布根地的策略",
+          "points": [
+            "從大區級開始：選知名酒莊的 Bourgogne Rouge/Blanc，€15–25 認識風格",
+            "目標村莊級：Marsannay、Fixin 等「被低估」村莊，€25–40 物超所值",
+            "找新興酒莊：David Duband、Sylvain Cathiard 等，品質高但知名度尚低",
+            "善用涼爽年份：2014、2017 等被市場低估，但品質極佳、價格合理",
+            "酒商入門：Louis Jadot、Drouhin 的基礎款是認識風土的低風險起點",
+            "最終目標：建立自己的「口味地圖」，再針對最喜愛的村莊深入投資"
           ]
         },
         {

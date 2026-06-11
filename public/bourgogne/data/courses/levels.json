@@ -50,7 +50,7 @@
       "icon": "🏆",
       "color": "#F3E5F5",
       "primaryColor": "#9C27B0",
-      "duration": "12-15 小時",
+      "duration": "20-25 小時",
       "description": "掌握頂級風土條件差異與著名酒莊，深入理解氣候年份以及市場趨勢",
       "features": [
         { "icon": "🍃", "text": "風土深度解析" },
@@ -59,7 +59,7 @@
         { "icon": "📊", "text": "市場投資分析" }
       ],
       "modules": 15,
-      "hours": 8,
+      "hours": 20,
       "requiredScore": 75,
       "certificate": "布根地專家證書",
       "unlocked": false,
