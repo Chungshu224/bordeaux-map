@@ -16,6 +16,44 @@
           "description": "理解同一特級園內地塊位置如何影響品質"
         },
         {
+          "type": "map",
+          "title": "🗺️ Clos de Vougeot 地塊互動地圖",
+          "content": "Clos de Vougeot (50.59公頃) 由石牆圍繞，橫跨三個品質帶：上坡（靠近Musigny）品質最優，中坡居中，下坡（靠近RN74）品質接近一級園。",
+          "mapConfig": {
+            "center": [
+              4.9584,
+              47.172
+            ],
+            "zoom": 14,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "vougeot-village-base",
+              "url": "/geojson/Cote-de-Nuits/09Vougeot/AOC Vougeot.geojson",
+              "isBase": true,
+              "fillColor": "#F5E6D0",
+              "fillOpacity": 0.25,
+              "lineColor": "#A0522D",
+              "lineWidth": 1.5,
+              "displayName": "Vougeot 村莊",
+              "showLabels": false
+            },
+            {
+              "id": "clos-de-vougeot",
+              "url": "/geojson/Cote-de-Nuits/09Vougeot/Grand Crus/AOC Clos de Vougeot ou Clos Vougeot Grand Cru.geojson",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.65,
+              "lineColor": "#4A0000",
+              "lineWidth": 2.5,
+              "displayName": "Clos de Vougeot Grand Cru",
+              "showLabels": true
+            }
+          ],
+          "interactive": false
+        },
+        {
           "type": "content",
           "title": "布根地最大的矛盾",
           "content": "Clos de Vougeot是布根地最大的特級園（50.59公頃），但也是品質最不一致的。被80多個生產者擁有，從上坡到下坡海拔差距60米，土壤、坡向、排水性差異巨大。同樣標示Clos de Vougeot Grand Cru，價格可差距5-10倍。"
@@ -215,6 +253,123 @@
           "title": "Chambertin與七個鄰居",
           "subtitle": "Lesson 2 - 20分鐘",
           "description": "深入了解Gevrey-Chambertin的九個特級園"
+        },
+        {
+          "type": "map",
+          "title": "🗺️ Gevrey-Chambertin 九大特級園互動地圖",
+          "content": "Gevrey-Chambertin九個特級園由北至南：Ruchottes（最高海拔）→ Mazis → Clos de Bèze → Chambertin（核心，深紅）→ Latricières → Charmes（最大）。注意各園顏色差異代表不同風格特質。",
+          "mapConfig": {
+            "center": [
+              4.9655,
+              47.2144
+            ],
+            "zoom": 13.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "gevrey-village-base",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/AOC Gevrey-Chambertin (Gevrey-Chambertin).geojson",
+              "isBase": true,
+              "fillColor": "#F0E6F0",
+              "fillOpacity": 0.2,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chambertin Grand Cru.geojson",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.75,
+              "lineColor": "#4A0000",
+              "lineWidth": 2.5,
+              "displayName": "Chambertin GC",
+              "showLabels": true
+            },
+            {
+              "id": "chambertin-cdb",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chambertin Clos de Bèze Grand Cru.geojson",
+              "fillColor": "#A52A2A",
+              "fillOpacity": 0.75,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "displayName": "Clos de Bèze GC",
+              "showLabels": true
+            },
+            {
+              "id": "ruchottes-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Ruchottes Chambertin Grand Cru.geojson",
+              "fillColor": "#C71585",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B0057",
+              "lineWidth": 2,
+              "displayName": "Ruchottes-Chambertin",
+              "showLabels": true
+            },
+            {
+              "id": "mazis-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Mazis Chambertin Grand Cru.geojson",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.7,
+              "lineColor": "#8B0000",
+              "lineWidth": 2,
+              "displayName": "Mazis-Chambertin",
+              "showLabels": true
+            },
+            {
+              "id": "mazoyeres-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Mazoyères Chambertin Grand Cru.geojson",
+              "fillColor": "#E9967A",
+              "fillOpacity": 0.7,
+              "lineColor": "#B05A3A",
+              "lineWidth": 2,
+              "displayName": "Mazoyères-Chambertin",
+              "showLabels": true
+            },
+            {
+              "id": "charmes-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Charmes Chambertin Grand Cru.geojson",
+              "fillColor": "#FF8C00",
+              "fillOpacity": 0.7,
+              "lineColor": "#CC7000",
+              "lineWidth": 2,
+              "displayName": "Charmes-Chambertin",
+              "showLabels": true
+            },
+            {
+              "id": "latricieres-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Latricières Chambertin Grand Cru.geojson",
+              "fillColor": "#DAA520",
+              "fillOpacity": 0.7,
+              "lineColor": "#9A7510",
+              "lineWidth": 2,
+              "displayName": "Latricières-Chambertin",
+              "showLabels": true
+            },
+            {
+              "id": "chapelle-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chapelle Chambertin Grand Cru.geojson",
+              "fillColor": "#228B22",
+              "fillOpacity": 0.7,
+              "lineColor": "#145214",
+              "lineWidth": 2,
+              "displayName": "Chapelle-Chambertin",
+              "showLabels": true
+            },
+            {
+              "id": "griotte-chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Griotte Chambertin Grand Cru.geojson",
+              "fillColor": "#4169E1",
+              "fillOpacity": 0.7,
+              "lineColor": "#2020A0",
+              "lineWidth": 2,
+              "displayName": "Griotte-Chambertin",
+              "showLabels": true
+            }
+          ],
+          "interactive": false
         },
         {
           "type": "content",
@@ -688,6 +843,115 @@
           "caption": "從山坡頂端（騎士 Chevalier）的骨感銳利，到最高殿堂（蒙哈榭 Montrachet）的完美平衡，再往下延伸到深層黏土帶來雄厚力量的（巴塔 Bâtard）。坡度決定了白酒的垂直張力與橫向寬度。"
         },
         {
+          "type": "map",
+          "title": "🗺️ Montrachet 家族特級園互動地圖",
+          "content": "五個Montrachet家族特級園橫跨Puligny與Chassagne兩村。Chevalier在最高坡（金色），Le Montrachet居中（深紅）為白酒之王，Bâtard在下坡（橘紅），Bienvenues（藍）與Criots（紫）為側翼小園。",
+          "mapConfig": {
+            "center": [
+              4.7388,
+              46.9459
+            ],
+            "zoom": 14.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "puligny-village-base",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/AOC Puligny-Montrachet Village.geojson",
+              "isBase": true,
+              "fillColor": "#FFF8E7",
+              "fillOpacity": 0.2,
+              "lineColor": "#C8A850",
+              "lineWidth": 1,
+              "displayName": "Puligny-Montrachet",
+              "showLabels": false
+            },
+            {
+              "id": "chassagne-village-base",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/AOC Chassagne-Montrachet Village.geojson",
+              "isBase": true,
+              "fillColor": "#FFF0E0",
+              "fillOpacity": 0.2,
+              "lineColor": "#D09040",
+              "lineWidth": 1,
+              "displayName": "Chassagne-Montrachet",
+              "showLabels": false
+            },
+            {
+              "id": "chevalier-montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Chevalier-Montrachet Grand Cru.geojson",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.75,
+              "lineColor": "#B8960C",
+              "lineWidth": 2.5,
+              "displayName": "Chevalier-Montrachet",
+              "showLabels": true
+            },
+            {
+              "id": "montrachet-puligny",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Puligny).geojson",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#4A0000",
+              "lineWidth": 3,
+              "displayName": "Le Montrachet (Puligny)",
+              "showLabels": true
+            },
+            {
+              "id": "montrachet-chassagne",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Chassagne).geojson",
+              "fillColor": "#9B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#4A0000",
+              "lineWidth": 3,
+              "displayName": "Le Montrachet (Chassagne)",
+              "showLabels": false
+            },
+            {
+              "id": "bienvenues-batard",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bienvenues-Bâtard-Montrachet Grand Cru .geojson",
+              "fillColor": "#4169E1",
+              "fillOpacity": 0.7,
+              "lineColor": "#2030A0",
+              "lineWidth": 2,
+              "displayName": "Bienvenues-Bâtard-Montrachet",
+              "showLabels": true
+            },
+            {
+              "id": "batard-puligny",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Puligny).geojson",
+              "fillColor": "#FF6347",
+              "fillOpacity": 0.7,
+              "lineColor": "#C04030",
+              "lineWidth": 2,
+              "displayName": "Bâtard-Montrachet (Puligny)",
+              "showLabels": true
+            },
+            {
+              "id": "batard-chassagne",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Chassagne).geojson",
+              "fillColor": "#FF7060",
+              "fillOpacity": 0.7,
+              "lineColor": "#C04030",
+              "lineWidth": 2,
+              "displayName": "Bâtard-Montrachet (Chassagne)",
+              "showLabels": false
+            },
+            {
+              "id": "criots-batard",
+              "url": "/geojson/Cote-de-Beaune/15Chassagne-Montrachet/Grand Cru/AOC Criots-Bâtard-Montrachet Grand Cru.geojson",
+              "fillColor": "#9932CC",
+              "fillOpacity": 0.7,
+              "lineColor": "#5A0080",
+              "lineWidth": 2,
+              "displayName": "Criots-Bâtard-Montrachet",
+              "showLabels": true
+            }
+          ],
+          "interactive": false
+        },
+        {
           "type": "list",
           "title": "👑 五大白酒特級園排名",
           "points": [
@@ -852,6 +1116,54 @@
           "title": "Chambolle的雙子星",
           "subtitle": "Lesson 5 - 16分鐘",
           "description": "比較Chambolle-Musigny的兩個特級園"
+        },
+        {
+          "type": "map",
+          "title": "🗺️ Musigny & Bonnes-Mares 互動地圖",
+          "content": "Chambolle-Musigny的兩個特級園：Musigny（金色，10.8ha，北側，石灰岩，優雅）與Bonnes-Mares（紫色，15.1ha，橫跨Chambolle與Morey邊界）。兩者距離僅數百公尺，卻代表截然不同的風格。",
+          "mapConfig": {
+            "center": [
+              4.9541,
+              47.1773
+            ],
+            "zoom": 14,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "chambolle-village-base",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/AOC Chambolle-Musigny.geojson",
+              "isBase": true,
+              "fillColor": "#F0F0FF",
+              "fillOpacity": 0.2,
+              "lineColor": "#7070C0",
+              "lineWidth": 1,
+              "displayName": "Chambolle-Musigny",
+              "showLabels": false
+            },
+            {
+              "id": "musigny-gc",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/Grand Crus/AOC Musigny Grand Cru.geojson",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.75,
+              "lineColor": "#B8960C",
+              "lineWidth": 2.5,
+              "displayName": "Musigny Grand Cru",
+              "showLabels": true
+            },
+            {
+              "id": "bonnes-mares-gc",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/Grand Crus/AOC Bonnes-Mares Grand Cru.geojson",
+              "fillColor": "#8B008B",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0050",
+              "lineWidth": 2.5,
+              "displayName": "Bonnes-Mares Grand Cru",
+              "showLabels": true
+            }
+          ],
+          "interactive": false
         },
         {
           "type": "content",

@@ -185,6 +185,172 @@
           "description": "理解地形因素如何決定葡萄酒的品質與風格"
         },
         {
+          "type": "map",
+          "title": "🗺️ 夜丘黃金坡帶 - 特級園地理分布",
+          "content": "夜丘的特級園全部集中在海拔250-350m的黃金坡帶上，如珍珠般從北到南串成一線。各村莊的特級園（紅色）幾乎完美對齊在坡腳中段，這不是巧合，而是最佳坡向、排水性、土壤深度三者的交叉點。",
+          "mapConfig": {
+            "center": [
+              4.965,
+              47.18
+            ],
+            "zoom": 11.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "marsannay-base",
+              "url": "/geojson/Cote-de-Nuits/01Marsannay/AOC Marsannay (Marsannay-la-côte).geojson",
+              "isBase": true,
+              "fillColor": "#F5E6E6",
+              "fillOpacity": 0.3,
+              "lineColor": "#C09090",
+              "lineWidth": 1,
+              "displayName": "Marsannay",
+              "showLabels": false
+            },
+            {
+              "id": "fixin-base",
+              "url": "/geojson/Cote-de-Nuits/02Fixin/AOC Fixin (Fixin).geojson",
+              "isBase": true,
+              "fillColor": "#F5E6E6",
+              "fillOpacity": 0.3,
+              "lineColor": "#C09090",
+              "lineWidth": 1,
+              "displayName": "Fixin",
+              "showLabels": false
+            },
+            {
+              "id": "gevrey-base",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/AOC Gevrey-Chambertin (Gevrey-Chambertin).geojson",
+              "isBase": true,
+              "fillColor": "#F5E6E6",
+              "fillOpacity": 0.3,
+              "lineColor": "#C09090",
+              "lineWidth": 1,
+              "displayName": "Gevrey-Chambertin",
+              "showLabels": false
+            },
+            {
+              "id": "morey-base",
+              "url": "/geojson/Cote-de-Nuits/05Morey-Saint-Denis/AOC Morey-Saint-Denis.geojson",
+              "isBase": true,
+              "fillColor": "#F5E6E6",
+              "fillOpacity": 0.3,
+              "lineColor": "#C09090",
+              "lineWidth": 1,
+              "displayName": "Morey-Saint-Denis",
+              "showLabels": false
+            },
+            {
+              "id": "chambolle-base",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/AOC Chambolle-Musigny.geojson",
+              "isBase": true,
+              "fillColor": "#F5E6E6",
+              "fillOpacity": 0.3,
+              "lineColor": "#C09090",
+              "lineWidth": 1,
+              "displayName": "Chambolle-Musigny",
+              "showLabels": false
+            },
+            {
+              "id": "vougeot-base",
+              "url": "/geojson/Cote-de-Nuits/09Vougeot/AOC Vougeot.geojson",
+              "isBase": true,
+              "fillColor": "#F5E6E6",
+              "fillOpacity": 0.3,
+              "lineColor": "#C09090",
+              "lineWidth": 1,
+              "displayName": "Vougeot",
+              "showLabels": false
+            },
+            {
+              "id": "flagey-base",
+              "url": "/geojson/Cote-de-Nuits/07Flagey-Echézeaux/Flagey-Echézeaux.geojson",
+              "isBase": true,
+              "fillColor": "#F5E6E6",
+              "fillOpacity": 0.3,
+              "lineColor": "#C09090",
+              "lineWidth": 1,
+              "displayName": "Flagey-Échézeaux",
+              "showLabels": false
+            },
+            {
+              "id": "vosne-base",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/AOC Vosne-Romanée.geojson",
+              "isBase": true,
+              "fillColor": "#F5E6E6",
+              "fillOpacity": 0.3,
+              "lineColor": "#C09090",
+              "lineWidth": 1,
+              "displayName": "Vosne-Romanée",
+              "showLabels": false
+            },
+            {
+              "id": "nsg-base",
+              "url": "/geojson/Cote-de-Nuits/10Nuits-Saint-Georges/AOC Nuits-Saint-Georges.geojson",
+              "isBase": true,
+              "fillColor": "#F5E6E6",
+              "fillOpacity": 0.3,
+              "lineColor": "#C09090",
+              "lineWidth": 1,
+              "displayName": "Nuits-Saint-Georges",
+              "showLabels": false
+            },
+            {
+              "id": "chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chambertin Grand Cru.geojson",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "displayName": "Chambertin GC",
+              "showLabels": true
+            },
+            {
+              "id": "clos-de-vougeot",
+              "url": "/geojson/Cote-de-Nuits/09Vougeot/Grand Crus/AOC Clos de Vougeot ou Clos Vougeot Grand Cru.geojson",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.75,
+              "lineColor": "#8B0000",
+              "lineWidth": 2,
+              "displayName": "Clos de Vougeot GC",
+              "showLabels": true
+            },
+            {
+              "id": "musigny-gc",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/Grand Crus/AOC Musigny Grand Cru.geojson",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.8,
+              "lineColor": "#B8960C",
+              "lineWidth": 2,
+              "displayName": "Musigny GC",
+              "showLabels": true
+            },
+            {
+              "id": "romanee-conti",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC Romanée-Conti Grand Cru.geojson",
+              "fillColor": "#9932CC",
+              "fillOpacity": 0.8,
+              "lineColor": "#5A0080",
+              "lineWidth": 2,
+              "displayName": "Romanée-Conti GC",
+              "showLabels": true
+            },
+            {
+              "id": "la-tache",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC La Tâche Grand Cru.geojson",
+              "fillColor": "#8A2BE2",
+              "fillOpacity": 0.75,
+              "lineColor": "#4A0080",
+              "lineWidth": 2,
+              "displayName": "La Tâche GC",
+              "showLabels": true
+            }
+          ],
+          "interactive": false
+        },
+        {
           "type": "content",
           "title": "為什麼坡向如此重要？",
           "content": "布根地的頂級葡萄園幾乎都位於東向或東南向的坡地，海拔在250-350米之間。這種方位提供清晨第一道陽光，避免午後過度曝曬，同時確保良好的排水性。"
