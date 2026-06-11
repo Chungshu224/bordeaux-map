@@ -10,7 +10,10 @@
         <span class="btn-group-label">⭐ 明星 DOC</span>
         <button
           v-for="z in STAR_ZONES" :key="z.id"
-          class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
+          class="zone-btn"
+          :style="selected === z.id
+            ? { background: z.color, borderColor: z.color, color: '#fff' }
+            : { background: z.color + '18', borderColor: z.color, color: z.color }"
           @click="selectZone(z.id)"
         >{{ z.emoji }} {{ z.shortName }}</button>
       </div>
@@ -18,7 +21,10 @@
         <span class="btn-group-label">🌿 特色 DOC</span>
         <button
           v-for="z in OTHER_ZONES" :key="z.id"
-          class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
+          class="zone-btn"
+          :style="selected === z.id
+            ? { background: z.color, borderColor: z.color, color: '#fff' }
+            : { background: z.color + '18', borderColor: z.color, color: z.color }"
           @click="selectZone(z.id)"
         >{{ z.emoji }} {{ z.shortName }}</button>
       </div>
@@ -31,13 +37,14 @@
         <div v-if="loading" class="map-loading">地圖載入中…</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
-          <div class="legend-row"><span class="legend-dot tier-a"></span>明星 DOC（Trento / Teroldego Rotaliano / Trentino）</div>
-          <div class="legend-row"><span class="legend-dot tier-b"></span>特色 DOC（Valdadige / Casteller / Terradeiforti）</div>
+          <div class="legend-row" v-for="z in ALL_ZONES" :key="z.id">
+            <span class="legend-dot" :style="{ background: z.color }"></span>{{ z.emoji }} {{ z.shortName }}
+          </div>
         </div>
       </div>
 
       <div class="info-panel" v-if="selectedInfo">
-        <div class="info-badge" :class="`tier-${selectedInfo.tier}`">{{ selectedInfo.tierLabel }}</div>
+        <div class="info-badge" :style="{ background: selectedInfo.color }">{{ selectedInfo.tierLabel }}</div>
         <h3 class="info-name">{{ selectedInfo.name }}</h3>
         <div class="info-rows">
           <div class="info-row" v-for="row in selectedInfo.details" :key="row.label">
@@ -58,7 +65,7 @@
         <p>點選上方按鈕或地圖上的產區<br>查看位置與詳細資訊</p>
         <div class="empty-hint">
           <div class="hint-row" v-for="z in ALL_ZONES" :key="z.id">
-            <span class="hint-dot" :class="`tier-${z.tier}`"></span>
+            <span class="hint-dot" :style="{ background: z.color }"></span>
             <span>{{ z.emoji }} {{ z.name }}</span>
           </div>
         </div>
@@ -81,6 +88,7 @@ const STAR_ZONES = [
     shortName: 'Trento DOC',
     emoji: '🍾',
     tier: 'a',
+    color: '#1565C0', lineColor: '#90CAF9', fillOpacity: 0.28, lineWidth: 2.5,
     tierLabel: '🍾 明星 DOC — 義大利頂級傳統法氣泡酒',
     center: [11.118, 46.010],
     zoom: 9.5,
@@ -102,6 +110,7 @@ const STAR_ZONES = [
     shortName: 'Teroldego Rotaliano',
     emoji: '🍷',
     tier: 'a',
+    color: '#C62828', lineColor: '#EF9A9A', fillOpacity: 0.35, lineWidth: 2.5,
     tierLabel: '🍷 明星 DOC — Trentino 最偉大的本土紅酒',
     center: [11.080, 46.225],
     zoom: 12,
@@ -123,6 +132,7 @@ const STAR_ZONES = [
     shortName: 'Trentino DOC',
     emoji: '🌄',
     tier: 'a',
+    color: '#00838F', lineColor: '#80CBC4', fillOpacity: 0.20, lineWidth: 2.0,
     tierLabel: '🌄 廣域 DOC — Trentino 多品種全方位旗艦',
     center: [11.105, 46.050],
     zoom: 8.5,
@@ -147,6 +157,7 @@ const OTHER_ZONES = [
     shortName: 'Valdadige',
     emoji: '🏔️',
     tier: 'b',
+    color: '#7B1FA2', lineColor: '#CE93D8', fillOpacity: 0.25, lineWidth: 1.8,
     tierLabel: '🏔️ 特色 DOC — 阿迪傑河谷的跨區清爽白酒',
     center: [11.050, 46.380],
     zoom: 9.5,
@@ -168,6 +179,7 @@ const OTHER_ZONES = [
     shortName: 'Casteller',
     emoji: '🍒',
     tier: 'b',
+    color: '#E65100', lineColor: '#FFAB91', fillOpacity: 0.30, lineWidth: 1.8,
     tierLabel: '🍒 特色 DOC — Trento 南部的清爽本土紅',
     center: [11.095, 45.975],
     zoom: 11,
@@ -189,6 +201,7 @@ const OTHER_ZONES = [
     shortName: 'Terradeiforti',
     emoji: '🏰',
     tier: 'b',
+    color: '#F57F17', lineColor: '#FFE082', fillOpacity: 0.30, lineWidth: 1.8,
     tierLabel: '🏰 特色 DOC — 堡壘之地的邊境紅白酒',
     center: [10.892, 45.755],
     zoom: 11.5,
@@ -208,10 +221,6 @@ const OTHER_ZONES = [
 
 const ALL_ZONES = [...STAR_ZONES, ...OTHER_ZONES]
 
-const TIER_STYLE = {
-  a: { fill: '#1565C0', line: '#90CAF9', fillOpacity: 0.32, lineWidth: 2.5 },
-  b: { fill: '#2E7D32', line: '#A5D6A7', fillOpacity: 0.22, lineWidth: 1.8 }
-}
 
 const mapContainer = ref(null)
 const loading = ref(true)
@@ -243,17 +252,16 @@ async function highlightAll () {
   ALL_ZONES.forEach((z, i) => {
     const gj = geojsonData[i]
     if (!gj) return
-    const ts = TIER_STYLE[z.tier]
     const fillId = `fill-${z.id}`
     const lineId = `line-${z.id}`
     if (!map.getSource(z.id)) map.addSource(z.id, { type: 'geojson', data: gj })
     if (!map.getLayer(fillId)) {
       map.addLayer({ id: fillId, type: 'fill', source: z.id,
-        paint: { 'fill-color': ts.fill, 'fill-opacity': ts.fillOpacity } })
+        paint: { 'fill-color': z.color, 'fill-opacity': z.fillOpacity } })
     }
     if (!map.getLayer(lineId)) {
       map.addLayer({ id: lineId, type: 'line', source: z.id,
-        paint: { 'line-color': ts.line, 'line-width': ts.lineWidth } })
+        paint: { 'line-color': z.lineColor, 'line-width': z.lineWidth } })
     }
     map.on('click', fillId, () => selectZone(z.id))
     map.on('mouseenter', fillId, () => { map.getCanvas().style.cursor = 'pointer' })
@@ -275,13 +283,12 @@ function selectZone (id) {
   const info = ALL_ZONES.find(z => z.id === id)
   if (!info || !map) return
   ALL_ZONES.forEach(z => {
-    const ts = TIER_STYLE[z.tier]
     const active = z.id === id
     if (map.getLayer(`fill-${z.id}`)) {
-      map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', active ? ts.fillOpacity * 2.2 : ts.fillOpacity * 0.35)
+      map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', active ? Math.min(z.fillOpacity * 2.2, 0.75) : z.fillOpacity * 0.35)
     }
     if (map.getLayer(`line-${z.id}`)) {
-      map.setPaintProperty(`line-${z.id}`, 'line-width', active ? ts.lineWidth * 1.8 : ts.lineWidth * 0.6)
+      map.setPaintProperty(`line-${z.id}`, 'line-width', active ? z.lineWidth * 1.8 : z.lineWidth * 0.6)
     }
   })
   map.flyTo({ center: info.center, zoom: info.zoom, duration: 900, essential: true })
@@ -291,9 +298,8 @@ function resetView () {
   selected.value = null
   if (!map) return
   ALL_ZONES.forEach(z => {
-    const ts = TIER_STYLE[z.tier]
-    if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', ts.fillOpacity)
-    if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', ts.lineWidth)
+    if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', z.fillOpacity)
+    if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', z.lineWidth)
   })
   map.flyTo({ center: [11.10, 46.10], zoom: 9.0, duration: 900 })
 }
@@ -346,10 +352,6 @@ onBeforeUnmount(() => {
   padding: 4px 10px; border-radius: 16px; border: 1.5px solid transparent;
   font-size: 0.76rem; font-weight: 600; cursor: pointer; transition: all 0.15s; white-space: nowrap;
 }
-.zone-btn.tier-a   { background: #e3f2fd; border-color: #1565C0; color: #1565C0; }
-.zone-btn.tier-b   { background: #f1f8e9; border-color: #2E7D32; color: #2E7D32; }
-.zone-btn.active.tier-a { background: #1565C0; color: #fff; }
-.zone-btn.active.tier-b { background: #2E7D32; color: #fff; }
 .zone-btn:hover:not(.active) { opacity: 0.75; transform: translateY(-1px); }
 
 .reset-btn {
@@ -379,8 +381,6 @@ onBeforeUnmount(() => {
 }
 .legend-row { display: flex; align-items: center; gap: 5px; }
 .legend-dot { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
-.legend-dot.tier-a { background: #1565C0; }
-.legend-dot.tier-b { background: #2E7D32; }
 
 .info-panel {
   flex: 0 0 40%; overflow-y: auto; background: #fafafa; border-radius: 12px;
@@ -396,15 +396,11 @@ onBeforeUnmount(() => {
 }
 .hint-row { display: flex; align-items: center; gap: 6px; }
 .hint-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-.hint-dot.tier-a { background: #1565C0; }
-.hint-dot.tier-b { background: #2E7D32; }
 
 .info-badge {
   display: inline-block; padding: 2px 10px; border-radius: 10px;
   font-size: 0.72rem; font-weight: 700; color: #fff; align-self: flex-start;
 }
-.info-badge.tier-a { background: #1565C0; }
-.info-badge.tier-b { background: #2E7D32; }
 
 .info-name { font-size: 1rem; font-weight: 700; color: #2c3e50; margin: 0; }
 .info-rows { display: flex; flex-direction: column; gap: 4px; }
