@@ -95,6 +95,19 @@
       "completed": false,
       "locked": true,
       "description": "認識重要酒莊、傳奇釀酒師與現代釀造技術的演變"
+    },
+    {
+      "id": "intermediate-m9",
+      "order": 9,
+      "title": "L2 綜合評量",
+      "icon": "📋",
+      "duration": "30分鐘",
+      "lessons": 1,
+      "progress": 0,
+      "completed": false,
+      "locked": true,
+      "isFinalExamModule": true,
+      "description": "整合中級進階課程 M1–M8 的全部學習內容，隨機抽取 20 題進行綜合測驗，通過 80 分即可解鎖 Level 3"
     }
   ]
 }

@@ -1,0 +1,55 @@
+{
+  "moduleId": "intermediate-m9",
+  "title": "L2 綜合評量",
+  "description": "整合中級進階課程 M1–M8 的全部學習內容，隨機抽取 20 題進行綜合測驗",
+  "lessons": [
+    {
+      "id": "m9-l1",
+      "title": "L2 中級進階 綜合評量",
+      "duration": "30分鐘",
+      "type": "exam",
+      "isFinalExam": true,
+      "quizBankPath": "/bourgogne/data/courses/level2/quiz-bank.json",
+      "finalExamTitle": "📋 L2 中級進階 綜合評量",
+      "slides": [
+        {
+          "type": "title",
+          "title": "L2 中級進階 綜合評量",
+          "subtitle": "布根地中級進階 - 知識總驗收",
+          "description": "整合 M1 至 M8 全部課程內容，測試您對布根地中級知識的掌握程度"
+        },
+        {
+          "type": "content",
+          "title": "📋 評量涵蓋範圍",
+          "content": "本次綜合評量涵蓋 L2 中級進階課程的所有模組：\n\n• M1 夜丘產區深度解析\n• M2 伯恩丘白酒聖地\n• M3 風土與土壤科學\n• M4 特級園完整導覽\n• M5 一級園精選分析\n• M6 氣候年份解讀\n• M7 進階品鑑技術\n• M8 酒莊與釀酒師\n\n題庫共 31 題，系統隨機抽取 20 題。通過標準：80 分以上。"
+        },
+        {
+          "type": "list",
+          "title": "🎯 考前重點提示",
+          "points": [
+            "夜丘：9 個村莊、特級園分布、頂級酒莊（DRC、Leroy、Rousseau）",
+            "伯恩丘：Montrachet 家族 5 個白酒特級園、Corton 特色",
+            "土壤：石灰岩 vs 泥灰岩的風格影響、Kimmeridgian 地質",
+            "分級制度：33 個特級園、Premier Cru 酒標規則、Clos de Vougeot 所有權",
+            "年份：2005、2010、2015 重點年份差異",
+            "品鑑：整串發酵、生物動力法、陳年香氣識別",
+            "酒莊：DRC、Leroy、Rousseau、Leflaive、Coche-Dury 的特色",
+            "⚠️ 本測驗結果 80 分以上可解鎖 Level 3 高級專業課程"
+          ]
+        }
+      ],
+      "quiz": {
+        "id": "intermediate-m9-quiz",
+        "title": "L2 中級進階 綜合評量",
+        "passingScore": 80,
+        "questions": []
+      }
+    }
+  ],
+  "quiz": {
+    "id": "intermediate-m9-final",
+    "title": "L2 中級進階 綜合評量",
+    "passingScore": 80,
+    "questions": []
+  }
+}

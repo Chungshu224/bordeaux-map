@@ -466,10 +466,7 @@
           ],
           "_marker": "_inject_bourgogne_l2_quiz"
         }
-      ],
-      "isFinalExam": true,
-      "quizBankPath": "/bourgogne/data/courses/level2/quiz-bank.json",
-      "finalExamTitle": "📋 Level 2 綜合評量"
+      ]
     }
   ],
   "quiz": {
