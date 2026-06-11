@@ -96,12 +96,15 @@ function renderBRGMPopupHTML(descr, type, _codeGeol, region = '') {
   const regionOverride = REGION_DESCR_OVERRIDE[region]
   const wineText = (regionOverride && regionOverride[info.zh]) ? regionOverride[info.zh] : info.wine
   return `
-    <div class="brgm-geology-popup">
-      <div class="brgm-popup-header">🗺️ 地質資訊</div>
-      <div class="brgm-popup-row"><span class="brgm-popup-label">岩石類型</span><span class="brgm-popup-val">${info.zh}</span></div>
-      <div class="brgm-popup-wine-block">
-        <div class="brgm-popup-wine-title">${info.icon} ${info.zh}</div>
-        <div class="brgm-popup-wine-text">${wineText}</div>
+    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#1e3a2a 0%,#16291e 100%);color:#f5f1eb;min-width:240px;">
+      <div style="padding:10px 14px;font-weight:700;font-size:14px;background:rgba(0,0,0,0.25);border-bottom:1px solid rgba(255,255,255,0.08);color:#fff;">🗺️ 地質資訊</div>
+      <div style="display:flex;padding:8px 14px;gap:10px;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;">
+        <span style="color:#a8d8a8;min-width:64px;">岩石類型</span>
+        <span style="color:#fff;flex:1;">${info.zh}</span>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);margin:10px 12px 12px;padding:10px 12px;border-radius:8px;border-left:3px solid #6fbf73;">
+        <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:#c8f0c8;">${info.icon} ${info.zh}</div>
+        <div style="font-size:12px;line-height:1.6;color:#e8efe8;">${wineText}</div>
       </div>
     </div>
   `
@@ -113,6 +116,16 @@ function lngLatToWebMercator(lng, lat) {
   const latRad = lat * Math.PI / 180
   const y = Math.log(Math.tan(Math.PI / 4 + latRad / 2)) * 20037508.34 / Math.PI
   return [x, y]
+}
+
+// 注入最小 popup 結構樣式（打消 Mapbox 預設 padding，僅執行一次）
+function injectBRGMPopupBase() {
+  if (typeof document === 'undefined') return
+  if (document.getElementById('brgm-popup-base-style')) return
+  const el = document.createElement('style')
+  el.id = 'brgm-popup-base-style'
+  el.textContent = `.brgm-popup-wrap .mapboxgl-popup-content{padding:0;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.35);background:transparent;} .brgm-popup-wrap .mapboxgl-popup-close-button{color:#d4f5d4;font-size:18px;padding:4px 8px;z-index:1;}`
+  document.head.appendChild(el)
 }
 
 // ── Composable 工廠函數 ──────────────────────────────────────────────
@@ -172,6 +185,7 @@ export function useBRGMGeology(region = '') {
 
   async function loadBRGMLayer(map) {
     if (!map) return
+    injectBRGMPopupBase()
     if (map.getLayer('brgm-geology-layer')) return
     if (!map.getSource('brgm-geology-wms')) {
       map.addSource('brgm-geology-wms', {
