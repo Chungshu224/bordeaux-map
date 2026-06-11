@@ -32,18 +32,21 @@
             <span class="zoom-text">點擊放大</span>
           </div>
         </div>
-        <div class="main-content" v-html="formattedContent"></div>
+        <!-- 有 bottom 圖片：文字與圖片並排，避免卷軸 -->
+        <div v-if="slide.image && slide.imagePosition === 'bottom'" class="content-image-side-row">
+          <div class="main-content" v-html="formattedContent"></div>
+          <div class="image-wrapper image-side" @click="openLightbox" title="點擊放大">
+            <img :src="slide.image" class="slide-image" alt="" />
+            <div class="zoom-hint">
+              <span class="zoom-icon">🔍</span>
+              <span class="zoom-text">點擊放大</span>
+            </div>
+          </div>
+        </div>
+        <div v-else class="main-content" v-html="formattedContent"></div>
         <div v-if="slide.keyPoints" class="key-points">
           <div v-for="(point, index) in slide.keyPoints" :key="index" class="point-item">
             {{ point }}
-          </div>
-        </div>
-        <!-- 圖片在下方置中 -->
-        <div v-if="slide.image && slide.imagePosition === 'bottom'" class="image-wrapper image-bottom" @click="openLightbox" title="點擊放大">
-          <img :src="slide.image" class="slide-image" alt="" />
-          <div class="zoom-hint">
-            <span class="zoom-icon">🔍</span>
-            <span class="zoom-text">點擊放大</span>
           </div>
         </div>
       </template>
@@ -2186,15 +2189,44 @@ const formattedContent = computed(() => {
   align-self: center;
 }
 
-/* 圖片在文字下方置中 */
-.image-bottom {
-  margin-top: 24px;
-  margin-bottom: 0;
-  align-self: center;
+/* 文字 + 底部圖片並排（避免卷軸） */
+.content-image-side-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex: 1;
+  min-height: 0;
 }
 
-.image-bottom .slide-image {
-  max-height: 300px;
+.content-image-side-row .main-content {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.image-side {
+  flex: 0 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.image-side .slide-image {
+  width: 160px;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .content-image-side-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .image-side {
+    align-self: center;
+  }
+  .image-side .slide-image {
+    width: 120px;
+    max-height: 200px;
+  }
 }
 
 .image-wrapper:hover .slide-image {
