@@ -53,7 +53,7 @@ import {
 import { useProgress } from '../composables/useProgress.js'
 import { authActions } from '../../../stores/authStore.js'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 const emit = defineEmits(['startLevel', 'openMap', 'openGameHub', 'openNotebook'])
 
@@ -159,7 +159,7 @@ const levelData = computed(() => levels.value.map(l => ({
   subtitle: t(`bourgogne.levels.${l.id}.subtitle`),
   icon: l.icon || '🍇',
   description: t(`bourgogne.levels.${l.id}.description`),
-  tags: t(`bourgogne.levels.${l.id}.tags`),
+  tags: tm(`bourgogne.levels.${l.id}.tags`),
   modules: l.modules ?? 0,
   lessons: l.hours ? `${l.hours}h` : 0,
   progress: getProgress(l.id),

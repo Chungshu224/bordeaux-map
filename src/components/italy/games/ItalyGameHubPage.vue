@@ -41,7 +41,7 @@ import ItalyGrapeMatchPage         from './ItalyGrapeMatchPage.vue'
 import ItalyVintageSortPage        from './ItalyVintageSortPage.vue'
 import ItalyWineDescQuizPage       from './ItalyWineDescQuizPage.vue'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
 defineEmits(['back'])
 
 const currentGame = ref(null)
@@ -52,7 +52,7 @@ const GAMES = computed(() => [
     icon: '🗺️',
     name: t('italy.games.region.name'),
     desc: t('italy.games.region.desc'),
-    tags: t('italy.games.region.tags'),
+    tags: tm('italy.games.region.tags'),
     accent: '#4ade80', accent2: '#16a34a'
   },
   {
@@ -60,7 +60,7 @@ const GAMES = computed(() => [
     icon: '🏷️',
     name: t('italy.games.classification.name'),
     desc: t('italy.games.classification.desc'),
-    tags: t('italy.games.classification.tags'),
+    tags: tm('italy.games.classification.tags'),
     accent: '#c8a96e', accent2: '#9b6a1f'
   },
   {
@@ -68,7 +68,7 @@ const GAMES = computed(() => [
     icon: '🍇',
     name: t('italy.games.grape.name'),
     desc: t('italy.games.grape.desc'),
-    tags: t('italy.games.grape.tags'),
+    tags: tm('italy.games.grape.tags'),
     accent: '#a78bfa', accent2: '#7c3aed'
   },
   {
@@ -76,7 +76,7 @@ const GAMES = computed(() => [
     icon: '🌡️',
     name: t('italy.games.vintage.name'),
     desc: t('italy.games.vintage.desc'),
-    tags: t('italy.games.vintage.tags'),
+    tags: tm('italy.games.vintage.tags'),
     accent: '#f87171', accent2: '#be185d'
   },
   {
@@ -84,7 +84,7 @@ const GAMES = computed(() => [
     icon: '📖',
     name: t('italy.games.desc.name'),
     desc: t('italy.games.desc.desc'),
-    tags: t('italy.games.desc.tags'),
+    tags: tm('italy.games.desc.tags'),
     accent: '#60a5fa', accent2: '#1d4ed8'
   }
 ])
