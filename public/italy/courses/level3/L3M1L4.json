@@ -3,94 +3,136 @@
   "title": "隱藏寶石產區",
   "quiz": [
     {
-      "question": "Alto Piemonte 在 19 世紀全盛期的葡萄園面積約有多少公頃？",
+      "question": "Alto Piemonte 的「Alta」反映了什麼地理特徵？",
       "options": [
-        "10,000 公頃",
-        "20,000 公頃",
-        "40,000 公頃",
-        "5,000 公頃"
-      ],
-      "answer": 2,
-      "explanation": "Alto Piemonte 在 19 世紀末達到全盛期，葡萄園面積高達 40,000 公頃。後因根瘤蚜災害、一戰二戰和工業化，面積大幅縮減至今日的約 1,000 公頃。"
-    },
-    {
-      "question": "Carema DOC 的傳統培型系統有何特色？",
-      "options": [
-        "大型棚架（Tendone）平展式",
-        "石柱支撐的 Pergola 系統（Topie）",
-        "Guyot 單側延伸系統",
-        "Alberello 灌木式"
+        "緯度偏北，是義大利最北的葡萄酒產區",
+        "海拔較高，位於 Piemonte 北部山丘，靠近 Monte Rosa 阿爾卑斯山麓",
+        "地處高地台，高於 Barolo 和 Barbaresco",
+        "「Alta」是歷史地名，與海拔無關"
       ],
       "answer": 1,
-      "explanation": "Carema DOC 採用傳統的 Pergola 架型（稱 Topie），由手工打造的石柱支撐，讓葡萄藤在山坡陡峭地形中生長，是 Carema 最具特色的文化景觀。"
+      "explanation": "Alto Piemonte（北皮埃蒙特）位於 Piemonte 大區北部，靠近 Monte Rosa 阿爾卑斯山麓，氣候更冷涼，土壤富含石英和花崗岩，這與南部 Barolo/Barbaresco 的石灰岩黏土截然不同，造就了 Nebbiolo 在這裡完全不同的風格。"
     },
     {
-      "question": "Gattinara DOCG 的土壤特色是？",
+      "question": "Carema DOC 的「Carema 石柱」是什麼？",
       "options": [
-        "黏土石灰岩",
-        "斑岩（Porphyry，火成岩），礦物感強烈",
-        "沙質土壤",
-        "凝灰岩"
+        "古羅馬時代留下的建築遺址",
+        "葡萄藤攀爬的花崗岩石柱棚架，當地稱「Pilun」，兼具農業功能和文化景觀意義",
+        "現代藝術裝置，吸引旅遊",
+        "酒桶陳年的石窖柱子"
       ],
       "answer": 1,
-      "explanation": "Gattinara DOCG 的土壤以斑岩（Porphyry）為主，這是一種由火成岩演化的岩石，賦予 Gattinara 獨特的礦物感和鐵鏽質地，是與 Barolo 風土的最大差異。"
+      "explanation": "Carema 的傳統種植系統使用花崗岩石柱（當地語稱「Pilun」）搭建棚架讓藤蔓攀爬——石柱白天吸收陽光的熱量，夜晚緩慢釋放，幫助葡萄在寒冷的阿爾卑斯山麓達到完全成熟。這個系統既是農業智慧，也是 Carema 最具代表性的文化景觀。"
     },
     {
-      "question": "Boca DOC 的葡萄園面積大約是多少？",
+      "question": "Gattinara DOCG 和 Ghemme DOCG 被稱為什麼？",
       "options": [
-        "12 公頃",
-        "50 公頃",
-        "200 公頃",
-        "500 公頃"
+        "「Alto Piemonte 雙生 DOCG」",
+        "「北義雙星」",
+        "「Barolo 的替代品」",
+        "「Barbaresco 的兄弟產區」"
       ],
       "answer": 0,
-      "explanation": "Boca DOC 是義大利最稀有的產區之一，總葡萄園面積僅約 12 公頃，每年產量極為有限，是真正的「義大利最稀有葡萄酒」之一。"
+      "explanation": "Gattinara DOCG 和 Ghemme DOCG 被稱為「Alto Piemonte 雙生 DOCG」——兩者皆在 Novara 丘陵以 Nebbiolo（當地稱 Spanna）為核心，同樣是 Alto Piemonte 最高等級的 DOCG 認證，卻在知名度上遠遠落後於 Barolo/Barbaresco，是進階愛好者和精明收藏家的最愛。"
+    },
+    {
+      "question": "Nervi-Conterno 在 Alto Piemonte 的意義是什麼？",
+      "options": [
+        "這是 Alto Piemonte 最古老的酒莊，成立於 1906 年",
+        "Giacomo Conterno 酒莊（Barolo 最傳奇名廠）的 Roberto Conterno 於 2018 年收購 Nervi 酒莊，帶來超高關注度",
+        "Nervi 和 Conterno 是兩個競爭的 Gattinara 酒莊",
+        "Nervi-Conterno 是 Alto Piemonte 的葡萄酒公會名稱"
+      ],
+      "answer": 1,
+      "explanation": "2018 年，Barolo 最傳奇酒莊 Giacomo Conterno 的繼承人 Roberto Conterno 收購了 Gattinara 最老牌的 Nervi 酒莊，帶來國際媒體的強烈關注，也引發精品酒市場對整個 Alto Piemonte 的重新評估。"
+    },
+    {
+      "question": "Lessona DOC 為何是 Alto Piemonte 最神秘的產區？",
+      "options": [
+        "因為它是秘密的酒莊，不對外開放",
+        "因為總面積只有 8-10 公頃，年產量極少，幾乎只有義大利本地才買得到",
+        "因為它的酒不對外銷售，只供私人收藏",
+        "因為它的風格與所有其他義大利葡萄酒完全不同"
+      ],
+      "answer": 1,
+      "explanation": "Lessona DOC 總面積只有 8–10 公頃，是義大利面積最小的 DOC 之一，年產量極為有限。最重要的生產者 Proprietà Sperino 和 Sella 的酒款幾乎全部在義大利國內消化，進入國際市場的數量極少，使它成為 Alto Piemonte 最神秘的產區。"
+    },
+    {
+      "question": "Boca DOC 的 Le Piane 酒莊有什麼特殊意義？",
+      "options": [
+        "它是 Boca DOC 面積最大的酒莊",
+        "德國人 Christoph Künzli 移居 Boca 創立 Le Piane，幾乎憑一己之力讓 Boca DOC 重回國際視野",
+        "Le Piane 是 Boca 最古老的歷史酒莊，建立於 15 世紀",
+        "Le Piane 是義大利第一個獲得有機認證的 DOCG 酒莊"
+      ],
+      "answer": 1,
+      "explanation": "德國人 Christoph Künzli 在 1998 年移居 Boca，購買老藤並創立 Le Piane 酒莊，幾乎以一己之力讓幾近消失的 Boca DOC 重回國際精品酒市場視野。他的旗艦款 Boca（Nebbiolo/Vespolina 混調）和 Piane（100% Vespolina）成為 Boca 的標竿代表。"
+    },
+    {
+      "question": "Alto Piemonte 作為投資標的，相比 Barolo/Barbaresco 最大的優勢是？",
+      "options": [
+        "Alto Piemonte 的葡萄酒品質遠高於 Barolo",
+        "價格仍遠低於 Barolo/Barbaresco（約 1/3–1/5），但陳年潛力相當，具有明顯的「估值窪地」機會",
+        "Alto Piemonte 的葡萄酒可以更快成熟，不需要等待",
+        "Alto Piemonte 的政府補貼使價格穩定"
+      ],
+      "answer": 1,
+      "explanation": "Alto Piemonte 頂級款（Gattinara Riserva、Boca Le Piane）均價 €30–80，同等品質的 Barolo Riserva 要 €100–300+。陳年潛力相當（15–25 年），但價格僅有 1/3–1/5。Nervi-Conterno 的加入更為市場提供了強大信號，是精明收藏家的「估值窪地」機會。"
     }
   ],
   "slides": [
     {
       "type": "title",
       "title": "隱藏寶石產區",
-      "subtitle": "Carema · Gattinara · Boca — Alto Piemonte 被遺忘的偉大"
+      "subtitle": "Carema · Gattinara · Ghemme · Boca · Lessona — 被 Barolo 光環遮蔽的 Alto Piemonte 精品小產區"
     },
     {
       "type": "content",
-      "title": "Alto Piemonte — 失落黃金年代的復興",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">Alta Piemonte（Novara 和 Vercelli 丘陵）是皮埃蒙特的隱藏明珠，19 世紀曾是義大利最重要的葡萄酒產區之一。百年磨難後，今日正在悄悄復興。</p><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">19 世紀末</div><div class=\"timeline-content\"><strong>黃金全盛期：</strong>葡萄園面積達 40,000 公頃，Gattinara 享譽歐洲，出口遠至英、法、德</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1900-1950</div><div class=\"timeline-content\"><strong>三重打擊：</strong>根瘤蚜蟲（Phylloxera）毀滅葡萄園、一戰二戰奪走勞動力、工業化吸引農民離鄉</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1967-1990</div><div class=\"timeline-content\"><strong>法律保護：</strong>Carema（1967）、Gattinara DOCG（1990）、Boca DOC 獲得法律保護，開始重建</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">2010 至今</div><div class=\"timeline-content\"><strong>文藝復興：</strong>國際評論家發現性價比極高，面積縮減至 1,000 公頃，稀缺性大增，尋找「下一個 Barolo」</div></div></div></div>"
+      "title": "Alto Piemonte — 被遺忘的北皮埃蒙特",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>為什麼 Alto Piemonte 被遺忘了？</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Alto Piemonte（北皮埃蒙特）曾是19世紀義大利葡萄酒最知名的地區之一——Gattinara 在 1800 年代的聲望甚至高於 Barolo。然而二次世界大戰後，工業化帶走了農村人口，葡萄園被廢棄，生產者從 1,500 家銳減至不足 100 家。如今這片幾乎被遺忘的土地，正因少數充滿使命感的酒農和 Nervi-Conterno 等精品品牌的加入，再度引起全球收藏家的注意。</p><div class=\"science-card\">位置：Piemonte 北部，Monte Rosa 阿爾卑斯山麓｜氣候：大陸性，比 Langhe 更冷涼｜土壤：花崗岩、石英、酸性礦質土</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">與 Barolo/Barbaresco 的根本差異</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>土壤：</strong>Barolo/Barbaresco 是石灰岩黏土（鹼性）；Alto Piemonte 是花崗岩 + 石英（酸性）——同樣是 Nebbiolo，酸性花崗岩土壤賦予更高的酸度、更精緻的單寧、更突出的礦物感，風格更接近勃根地</div><div class=\"orvieto-card\"><strong>海拔：</strong>Alto Piemonte 葡萄園海拔 300–700m，比 Langhe 丘陵整體更高，晝夜溫差更大，生長季更長，這有助於保留酸度和香氣複雜度</div><div class=\"orvieto-card\"><strong>混調：</strong>Alto Piemonte 的 Nebbiolo（當地稱「Spanna」）通常與 Vespolina（香料辛辣感）和 Bonarda（圓潤果香）混調，法規允許各 DOC/DOCG 混入 10–30% 不等的其他品種，風格更多元</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "Carema DOC — 山嶺之上的 Nebbiolo",
-      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">風土特色</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Valle d'Aosta 邊界的 Carema 村｜海拔：350-500 公尺｜土壤：片麻岩和砂岩（酸性）</div><div class=\"orvieto-card\">最具特色：傳統 Pergola 石柱培型（Topie）——手工打造的石柱支撐葡萄藤，是義大利最古老的栽培傳統之一</div><div class=\"orvieto-card\">氣候：阿爾卑斯山影響，長生長季、溫差極大（日夜溫差 20°C+），保留極高酸度</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">風格與生產者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">風味：清瘦優雅的 Nebbiolo——玫瑰花瓣、紅色漿果、礦物感、藥草｜酸度極高、單寧細緻</div><div class=\"orvieto-card\">陳年潛力：10-25 年，比 Barolo 更清瘦優雅，類似「山嶺版 Barolo」</div><div class=\"orvieto-card\">頂級酒莊：Luigi Ferrando（Etichetta Nera）、Cantina Produttori Nebbiolo di Carema｜€25-55</div></div></div></div>"
+      "title": "Carema DOC — 阿爾卑斯山腳的石柱棚架傳奇",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>花崗岩石柱上的 Nebbiolo</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Carema 是義大利最極端的葡萄酒產區之一——位於 Aosta Valley 邊境，海拔 350–600m，是 Nebbiolo 的最北種植極限之一。葡萄農在花崗岩斜坡上搭建傳統石柱棚架（Pilun），讓石柱在白天吸收陽光熱量，夜晚釋放，幫助葡萄在如此寒冷的環境中達到成熟。年產量僅約 60,000 瓶，是全義大利最小量的 DOC 之一。</p><div class=\"science-card\">DOC（1967）｜海拔：350–600m｜土壤：花崗岩、酸性礦質土｜年產量：約 60,000 瓶</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Carema 品種特徵與生產者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>法規：</strong>Nebbiolo（當地稱 Picotener）最低 85%，可混 Vespolina、Bonarda；最低陳年 4 年（Riserva 5 年）</div><div class=\"orvieto-card\"><strong>風格：</strong>相較 Barolo 更輕盈、更精緻；紅色漿果（草莓、覆盆莓）+ 玫瑰 + 高酸度 + 花崗岩礦物感；陳年 10–20 年</div><div class=\"orvieto-card\"><strong>頂級生產者：</strong>Luigi Ferrando（Black Label / White Label，年產量極少，是 Carema 最傳奇的酒莊，Black Label 均價 €40–80）</div><div class=\"orvieto-card\"><strong>Cantina Produttori di Carema：</strong>合作社（1960 年成立），保留了大多數小農的老藤，是 Carema 產量最大的生產者，風格更易飲，均價 €15–30</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "Gattinara DOCG — 被遺忘的偉大",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>斑岩土壤塑造的礦物靈魂</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Gattinara 生長在以斑岩（Porphyry）為主的火成岩土壤上，賦予葡萄酒獨特的鐵鏽礦物感和鹹礦物質，是義大利最具礦物個性的紅葡萄酒之一。法規要求至少 90% Nebbiolo（稱為 Spanna），可混入少量 Bonarda 和 Vespolina。</p><div class=\"science-card\">DOCG 認證：1990｜最低陳年：3 年（Riserva 4 年）｜Nebbiolo 最低比例：90%</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">品種特徵與生產者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">風味：玫瑰、焦油、鐵鏽礦物感、乾燥香草、成熟紅莓｜比 Barolo 更纖細，比 Carema 更飽滿</div><div class=\"orvieto-card\">陳年潛力：15-30 年，Riserva 可達 40 年，近年再度受到帕克學派的重視</div><div class=\"orvieto-card\">頂級酒莊：Antoniolo（Osso San Grato 單一園）、Travaglini（Tre Vigne）、Nervi-Conterno｜€30-100</div></div></div></div>"
+      "title": "Gattinara DOCG & Ghemme DOCG — 雙生 DOCG",
+      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Gattinara DOCG — 曾比 Barolo 更有名</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>歷史：</strong>19 世紀 Gattinara 在歐洲的聲望高於 Barolo，皮埃蒙特政治家 Camillo Cavour 是其擁躉。1967 年獲 DOC，1990 年升格 DOCG，是 Alto Piemonte 第一個 DOCG</div><div class=\"orvieto-card\"><strong>法規：</strong>Nebbiolo（Spanna）最低 90%，可混 Vespolina 最多 4% + Bonarda 最多 10%；最低陳年 35 個月（Riserva 47 個月）</div><div class=\"orvieto-card\"><strong>頂級生產者：</strong>Nervi-Conterno（Riserva Vigna Valferana + Vigna Molsino，均價 €80–180）、Antoniolo（Osso San Grato + San Francesco 單一園，均價 €40–100）、Travaglini（Tre Vigne，均價 €25–60）</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Ghemme DOCG — Gattinara 的姊妹 DOCG</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>地位：</strong>Gattinara 以北約 10 公里，1997 年獲 DOCG，是 Alto Piemonte 第二個 DOCG，兩者合稱「雙生 DOCG」</div><div class=\"orvieto-card\"><strong>法規：</strong>Nebbiolo（Spanna）最低 75%，Vespolina 10-15%，Bonarda 最多 15%；最低陳年 37 個月（Riserva 49 個月）</div><div class=\"orvieto-card\"><strong>風格差異：</strong>Ghemme 的 Vespolina 比例通常更高（辛香料感更突出），Bonarda 帶來更多圓潤感，整體比 Gattinara 更柔和、更易飲，是 Alto Piemonte 的「易懂版」</div><div class=\"orvieto-card\"><strong>頂級生產者：</strong>Cantalupo（Ghemme Il Mimo / Collis Breclemae，均價 €20–50）、Antoniolo</div></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "Boca DOC — 義大利最稀有葡萄酒",
-      "content": "<div class=\"variety-deep-section\"><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">12 公頃</div><div class=\"stat-label\">總葡萄園面積<br>全義大利最小之一</div></div><div class=\"stat-box\"><div class=\"stat-number\">70-100%</div><div class=\"stat-label\">Nebbiolo（Spanna）<br>法定最低比例</div></div><div class=\"stat-box\"><div class=\"stat-number\">3 年</div><div class=\"stat-label\">最低橡木桶陳年<br>（Riserva 4 年）</div></div><div class=\"stat-box\"><div class=\"stat-number\">1969</div><div class=\"stat-label\">獲得 DOC 認證<br>沉寂 40 年後復興</div></div></div><div class=\"dna-research\"><h3>混釀配方：Nebbiolo + Vespolina + Uva Rara</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Boca DOC 法規允許加入 Vespolina（增加花香）和 Uva Rara（增加柔軟度），創造出比 Gattinara 更輕盈芬芳的風格，被稱為「Alto Piemonte 的優雅表達」。代表酒莊：Le Piane（Christoph Künzli）是現代復興的先驅。</p></div></div></div></div>"
+      "title": "Nervi-Conterno — 改變 Alto Piemonte 命運的一筆交易",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>2018 年：義大利葡萄酒界最重要的收購事件之一</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">2018 年，Barolo 最傳奇名廠——Giacomo Conterno 酒莊（旗艦款 Monfortino 在二手市場均價 €1,200+/瓶）的掌門人 Roberto Conterno，收購了 Gattinara 最具歷史底蘊的 Nervi 酒莊（成立於 1906 年）。這筆收購不只讓 Nervi 獲得 Conterno 家族的釀造哲學和國際品牌力，更引發全球精品酒市場對整個 Alto Piemonte 的重新評估——「如果 Barolo 最頂尖的釀酒師相信 Gattinara，那麼這裡一定有我們忽略的東西」。</p><div class=\"science-card\">Nervi（1906）+ Conterno（Monfortino）= Alto Piemonte 的最強信號</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Nervi-Conterno 旗艦款</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Gattinara Riserva（Vigna Valferana）：</strong>Nervi 的歷史單一園 Valferana，花崗岩土壤老藤。Roberto Conterno 接手後採用更精準的釀造管理（低溫長時間發酵、大橡木桶陳年），2018 年份起全面提升品質，Wine Advocate 93–96 分，均價 €100–180</div><div class=\"orvieto-card\"><strong>Gattinara Riserva（Vigna Molsino）：</strong>另一單一園 Molsino，酸性花崗岩 + 更多石英，風格比 Valferana 更礦物精緻，適合長期陳年 20+ 年。Wine Advocate 94–97 分，均價 €120–200</div><div class=\"orvieto-card\"><strong>市場影響：</strong>Nervi-Conterno 旗艦款上市後，整個 Gattinara DOCG 的市場關注度提升 300%+，即使是 Antoniolo、Travaglini 等其他酒莊的酒款也同步升值</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "三大隱藏寶石產區全方位對比",
-      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Carema DOC</h3><p class=\"mf-style\">阿爾卑斯邊境｜片麻岩砂岩｜Pergola 石柱培型</p><p class=\"mf-prod\">清瘦優雅 Nebbiolo / 玫瑰、礦物感 / 陳年 10-25 年 / €25-55 / 山嶺版 Barolo</p></div><div class=\"mf-zone warm\"><h3>Gattinara DOCG</h3><p class=\"mf-style\">Novara 丘陵｜斑岩火成岩｜法定 DOCG 1990</p><p class=\"mf-prod\">礦物鐵鏽感 / 焦油、玫瑰 / 陳年 15-40 年 / €30-100 / 三大 AOC 中最具投資潛力</p></div><div class=\"mf-zone cool\"><h3>Boca DOC</h3><p class=\"mf-style\">Novara 丘陵｜花崗岩｜僅 12 公頃</p><p class=\"mf-prod\">輕盈芬芳 / Nebbiolo + Vespolina 混釀 / 陳年 10-20 年 / €35-80 / 義大利最稀有酒款</p></div></div></div>"
+      "title": "Boca DOC & Lessona DOC — 最極致的稀有產區",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Boca DOC — 復活產區</h3><p class=\"mf-style\">Novara 丘陵｜DOC（1969）</p><p class=\"mf-prod\"><strong>歷史低谷：</strong>1990 年代幾乎完全廢棄，葡萄園面積縮減至僅 10 公頃以下，生產者僅剩 2–3 家<br><strong>復興英雄：</strong>德國人 Christoph Künzli（Le Piane，1998 年移居 Boca），幾乎憑一己之力讓 Boca DOC 重回國際視野<br><strong>Le Piane 旗艦款：</strong>Boca（Nebbiolo/Vespolina 混調，均價 €40–70）、Piane（100% Vespolina，均價 €25–45）<br><strong>Vespolina 特色：</strong>Boca 法規中 Nebbiolo 最低 40%、Vespolina 最多 40%，Vespolina 的辛香料感（白胡椒、丁香）是 Boca 最獨特的風味標誌</p></div><div class=\"mf-zone warm\"><h3>Lessona DOC — 最神秘的微型 DOC</h3><p class=\"mf-style\">Vercelli 丘陵｜DOC（1976）</p><p class=\"mf-prod\"><strong>極度稀缺：</strong>總面積僅 8–10 公頃，是義大利面積最小的 DOC 之一<br><strong>法規：</strong>Nebbiolo（Spanna）最低 75%，Vespolina 最多 25%；最低陳年 24 個月（Riserva 36 個月）<br><strong>頂級生產者：</strong>Proprietà Sperino（Paolo De Marchi 的 Lessona 計畫，均價 €35–70）、Sella（Alta Alta Lessona，1671 年創立，義大利最古老的葡萄酒家族之一）<br><strong>為何神秘：</strong>年產量僅數千瓶，幾乎全部在義大利國內消化，進入國際市場的數量極少</p></div><div class=\"mf-zone cool\"><h3>Bramaterra DOC — 最平衡的隱藏寶石</h3><p class=\"mf-style\">Vercelli 丘陵｜DOC（1979）</p><p class=\"mf-prod\"><strong>法規：</strong>Nebbiolo 50–70%，Croatina 20–30%，Vespolina 10–20%｜最低陳年 24 個月（Riserva 36 個月）<br><strong>風格：</strong>Bramaterra 是 Alto Piemonte 混調比例最複雜的 DOC，三種品種的融合賦予它既有 Nebbiolo 的結構，又有 Croatina 的果香，Vespolina 的辛香——是最「好喝」的 Alto Piemonte<br><strong>頂級：</strong>Sella（Bramaterra）、Luigi Ferrando</p></div><div class=\"mf-zone plain\"><h3>Alto Piemonte 小 DOC 總覽</h3><p class=\"mf-prod\"><strong>Sizzano DOC：</strong>Nebbiolo 40–60%，Vespolina，Bonarda；Novara 丘陵中最易飲的 DOC<br><strong>Fara DOC：</strong>Spanna 30–50%，Vespolina，Bonarda；量少，幾乎只在本地流通<br><strong>Coste della Sesia DOC：</strong>涵蓋多種 Alta Piemonte 品種的地區性 DOC，是最容易入門的選項</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Alto Piemonte 投資邏輯 — 估值窪地的最後機會？",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">在 Barolo 頂款均價突破 €300–500/瓶、Barbaresco Riserva 動輒 €150–250 的今天，Alto Piemonte 提供了可能是義大利精品酒市場最後一片尚未完全被市場定價的「估值窪地」。</p><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">📊 價格對比：同等品質，天壤之別</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Barolo Riserva（頂級）：</strong>€150–500/瓶（Giacomo Conterno Monfortino €1,200+）｜陳年潛力：20–30 年</div><div class=\"orvieto-card\"><strong>Gattinara Riserva（頂級）：</strong>€50–180/瓶（Nervi-Conterno Vigna Molsino €180）｜陳年潛力：15–25 年｜風格：接近</div><div class=\"orvieto-card\"><strong>Boca Le Piane：</strong>€40–70/瓶｜Lessona Proprietà Sperino：€35–70/瓶｜陳年潛力：10–20 年</div><div class=\"orvieto-card\"><strong>結論：</strong>Alto Piemonte 頂款以 Barolo 的 1/3–1/5 價格，提供 70–90% 的品質體驗和相近的陳年潛力</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">🚀 近年升值信號</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">Nervi-Conterno 加入（2018）後，Gattinara 整體市場關注度提升 300%+，連 Antoniolo 等其他酒莊都同步受益</div><div class=\"orvieto-card\">Wine Advocate / Vinous 對 Alto Piemonte 的關注度從 2015 年後大幅提升，頂款分數持續 90–96 分</div><div class=\"orvieto-card\">Liv-ex 數據：Alto Piemonte 交易量 2020–2025 年增長 180%，但均價仍遠低於 Langhe 產區</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">⚠️ 投資風險提示</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>流動性：</strong>Alto Piemonte 在 Liv-ex 的掛牌量仍遠少於 Barolo，快速變現可能面臨折價風險</div><div class=\"orvieto-card\"><strong>穩定性：</strong>部分小 DOC（Boca、Lessona）生產者數量極少，酒莊易主或停產都會影響價值</div><div class=\"orvieto-card\"><strong>建議策略：</strong>聚焦 Nervi-Conterno（流動性最佳）+ Antoniolo 單一園（性價比）+ Boca Le Piane（稀有性溢價），各佔投資組合的 1/3</div></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Alto Piemonte 六大 DOC/DOCG 全攻略",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Gattinara DOCG</h3><p class=\"mf-style\">Nebbiolo 90%+ ｜ 最低陳年 35 個月</p><p class=\"mf-prod\">Alto Piemonte 最知名產區 / Nervi-Conterno 帶來革命 / 均價 €30–180 / 投資首選</p></div><div class=\"mf-zone warm\"><h3>Ghemme DOCG</h3><p class=\"mf-style\">Nebbiolo 75%+ / Vespolina 10–15%</p><p class=\"mf-prod\">Gattinara 姊妹 DOCG / 更圓潤易飲 / Cantalupo 旗艦 / 均價 €20–50</p></div><div class=\"mf-zone cool\"><h3>Carema DOC</h3><p class=\"mf-style\">Nebbiolo 85%+ ｜ 石柱棚架（Pilun）</p><p class=\"mf-prod\">阿爾卑斯邊境極限 Nebbiolo / Luigi Ferrando Black Label / 年產量 60,000 瓶 / €15–80</p></div><div class=\"mf-zone plain\"><h3>Boca / Lessona / Bramaterra</h3><p class=\"mf-style\">各有法規混調比例</p><p class=\"mf-prod\">Boca：Le Piane 復活（€40–70）/ Lessona：8–10 公頃微型 DOC（€35–70）/ Bramaterra：三品種最平衡（€20–50）</p></div></div></div>"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
-        "Alto Piemonte 19 世紀全盛期葡萄園面積達 40,000 公頃，因根瘤蚜、兩次大戰和工業化而萎縮至今約 1,000 公頃",
-        "三大產區的共同點：全用 Nebbiolo（當地稱 Spanna）釀造，風格比 Barolo 更清瘦優雅",
-        "Carema DOC：阿爾卑斯邊境，片麻岩土壤，傳統 Pergola 石柱（Topie）培型是最大特色",
-        "Carema 風格清瘦優雅，玫瑰花瓣和礦物感，酸度極高，陳年 10-25 年，稱「山嶺版 Barolo」",
-        "Gattinara DOCG（1990）：斑岩（Porphyry）火成岩土壤賦予獨特鐵鏽礦物感，Nebbiolo 最低 90%",
-        "Gattinara 陳年潛力 15-40 年，Antoniolo 和 Nervi-Conterno 是最具代表性酒莊，近年再度受矚目",
-        "Boca DOC：義大利最稀有產區之一，僅 12 公頃，Nebbiolo + Vespolina + Uva Rara 混釀",
-        "Boca 代表酒莊 Le Piane（Christoph Künzli）是現代復興先驅，被稱為「Alto Piemonte 的優雅表達」",
-        "三大產區性價比遠高於 Barolo，是尋找「下一個偉大義大利紅酒」的最佳選擇"
+        "Alto Piemonte 位置：Piemonte 北部靠近 Monte Rosa，花崗岩酸性土（vs Langhe 石灰岩），Nebbiolo（當地稱 Spanna）風格更精緻礦物，通常混調 Vespolina 和 Bonarda",
+        "Carema DOC：Nebbiolo 最北極限，石柱棚架（Pilun）文化景觀；Luigi Ferrando Black Label 是標竿；年產量極小（60,000 瓶）",
+        "Gattinara DOCG（1990）：Alto Piemonte 第一個 DOCG，19 世紀聲望曾高於 Barolo；Nervi-Conterno 收購（2018）引爆市場關注",
+        "Nervi-Conterno：Roberto Conterno（Barolo Monfortino 傳奇）買下 Nervi，Vigna Valferana + Vigna Molsino 均價 €100–200；整個 Gattinara 市場關注度提升 300%+",
+        "Ghemme DOCG（1997）：Gattinara 的「姊妹 DOCG」，Vespolina 比例更高，風格更圓潤，Cantalupo 是頂級代表",
+        "Boca DOC：德國人 Christoph Künzli（Le Piane）1998 年復活近廢棄產區；Vespolina 白胡椒辛香是特色",
+        "Lessona DOC：8–10 公頃面積最小的 DOC 之一，年產量僅數千瓶；Proprietà Sperino + Sella（1671 年！）是生產者",
+        "投資邏輯：Gattinara Riserva 頂款 €50–180 vs Barolo Riserva €150–500，品質相近但價格僅 1/3–1/5；Liv-ex 交易量 2020–2025 年增長 180% 但仍被低估"
       ]
     },
     {
@@ -100,63 +142,87 @@
       "questions": [
         {
           "type": "single",
-          "question": "Alto Piemonte 在 19 世紀全盛期的葡萄園面積約有多少公頃？",
+          "question": "Carema DOC 的花崗岩石柱棚架（Pilun）有什麼功能？",
           "options": [
-            "10,000 公頃",
-            "20,000 公頃",
-            "40,000 公頃",
-            "5,000 公頃"
-          ],
-          "correct": 2,
-          "explanation": "Alto Piemonte 在 19 世紀末達到全盛期，葡萄園面積高達 40,000 公頃。後因根瘤蚜、兩次大戰和工業化，面積大幅縮減至今日的約 1,000 公頃。"
-        },
-        {
-          "type": "single",
-          "question": "Carema DOC 的傳統培型系統有何特色？",
-          "options": [
-            "大型棚架（Tendone）平展式",
-            "石柱支撐的 Pergola 系統（Topie）",
-            "Guyot 單側延伸系統",
-            "Alberello 灌木式"
+            "只是裝飾性景觀，沒有實際功能",
+            "白天吸收陽光熱量、夜晚緩慢釋放，幫助葡萄在寒冷環境達到成熟",
+            "用於雨水收集和灌溉",
+            "支撐重型採收機械"
           ],
           "correct": 1,
-          "explanation": "Carema DOC 採用傳統的 Pergola 架型（稱 Topie），由手工打造的石柱支撐，讓葡萄藤在山坡陡峭地形中生長，是 Carema 最具特色的文化景觀。"
+          "explanation": "Carema 的花崗岩石柱（Pilun）在白天吸收大量陽光熱量，夜晚緩慢釋放熱能，幫助葡萄在阿爾卑斯邊境寒冷氣候下達到完全成熟。這是農業智慧與文化景觀的完美結合。"
         },
         {
           "type": "single",
-          "question": "Gattinara DOCG 的土壤特色是？",
+          "question": "Gattinara DOCG 和 Ghemme DOCG 的主要風格差異是？",
           "options": [
-            "黏土石灰岩",
-            "斑岩（Porphyry，火成岩），礦物感強烈",
-            "沙質土壤",
-            "凝灰岩"
+            "Gattinara 是白酒，Ghemme 是紅酒",
+            "Gattinara Nebbiolo 比例更高（90%+），更結構感強；Ghemme Vespolina 更多，更圓潤易飲",
+            "兩者風格幾乎相同",
+            "Ghemme 比 Gattinara 有更強的陳年潛力"
           ],
           "correct": 1,
-          "explanation": "Gattinara DOCG 的土壤以斑岩（Porphyry）為主，這是一種由火成岩演化的岩石，賦予 Gattinara 獨特的礦物感和鐵鏽質地。"
+          "explanation": "Gattinara 要求 Nebbiolo 最低 90%，結構更強勁精緻；Ghemme 允許 Vespolina 10–15% 和更多 Bonarda，辛香料感更突出且整體更圓潤，是 Alto Piemonte 的「易懂版」。"
         },
         {
           "type": "single",
-          "question": "Boca DOC 的葡萄園面積大約是多少？",
+          "question": "Nervi-Conterno 的成立背景是什麼？",
           "options": [
-            "12 公頃",
-            "50 公頃",
-            "200 公頃",
-            "500 公頃"
-          ],
-          "correct": 0,
-          "explanation": "Boca DOC 是義大利最稀有的產區之一，總葡萄園面積僅約 12 公頃，每年產量極為有限，是真正的「義大利最稀有葡萄酒」之一。"
-        },
-        {
-          "type": "single",
-          "question": "Boca DOC 的法定混釀品種組合是？",
-          "options": [
-            "100% Nebbiolo",
-            "Nebbiolo + Vespolina + Uva Rara",
-            "Nebbiolo + Barbera",
-            "Nebbiolo + Sangiovese"
+            "一位新移民在 Gattinara 創立的全新酒莊",
+            "Roberto Conterno（Barolo Monfortino）2018 年收購 Nervi 老牌酒莊，引爆國際市場對 Alto Piemonte 的重新評估",
+            "義大利政府補助計畫支持的合作社酒莊",
+            "Nervi 家族與 Conterno 家族的世代聯姻創立的聯合品牌"
           ],
           "correct": 1,
-          "explanation": "Boca DOC 法規允許在 Nebbiolo（Spanna，70-100%）的基礎上加入 Vespolina（增加花香）和 Uva Rara（增加柔軟度），創造出輕盈芬芳的獨特風格。"
+          "explanation": "2018 年，Barolo 最傳奇名廠 Giacomo Conterno 的掌門人 Roberto Conterno 收購 Gattinara 老牌 Nervi 酒莊（1906 年），組合成 Nervi-Conterno，引發全球精品酒市場對整個 Alto Piemonte 的重新評估。"
+        },
+        {
+          "type": "single",
+          "question": "Boca DOC 的 Le Piane 酒莊有什麼特殊故事？",
+          "options": [
+            "是 Boca 最古老的貴族酒莊，建立於 1600 年代",
+            "德國人 Christoph Künzli 1998 年移居 Boca，幾乎憑一己之力復活近廢棄的 Boca DOC",
+            "是 Antoniolo 家族的第二品牌",
+            "是義大利第一個有機認證的 DOC 酒莊"
+          ],
+          "correct": 1,
+          "explanation": "1998 年德國人 Christoph Künzli 移居 Boca，購買老藤並創立 Le Piane，幾乎以一己之力讓幾近消失的 Boca DOC 重回國際精品酒市場，他的 Boca 和 Piane（100% Vespolina）是產區標竿。"
+        },
+        {
+          "type": "single",
+          "question": "Lessona DOC 為何是「Alto Piemonte 最神秘的產區」？",
+          "options": [
+            "因為它完全不對外銷售",
+            "總面積僅 8–10 公頃，年產量僅數千瓶，幾乎全在義大利國內消化",
+            "因為它的位置在地圖上看不見",
+            "因為它的生產方法是機密"
+          ],
+          "correct": 1,
+          "explanation": "Lessona DOC 總面積只有 8–10 公頃，是義大利面積最小的 DOC 之一，年產量僅數千瓶，幾乎全部在義大利國內消化，進入國際市場的數量極少，使它成為 Alto Piemonte 最難找到的稀有產區。"
+        },
+        {
+          "type": "single",
+          "question": "Alto Piemonte 的土壤特性與 Langhe（Barolo/Barbaresco）的根本差異是？",
+          "options": [
+            "Langhe 是花崗岩，Alto Piemonte 是石灰岩",
+            "Alto Piemonte 是花崗岩酸性礦質土，Langhe 是石灰岩黏土鹼性土——造就同為 Nebbiolo 卻截然不同的風格",
+            "兩者土壤完全相同",
+            "Alto Piemonte 是沙土，Langhe 是黏土"
+          ],
+          "correct": 1,
+          "explanation": "Alto Piemonte 的花崗岩酸性礦質土（vs Langhe 的石灰岩黏土鹼性土）是最根本的差異，造就了同樣的 Nebbiolo 品種卻展現截然不同的風格——更高酸度、更精緻單寧、更突出的礦物感，風格更接近勃根地。"
+        },
+        {
+          "type": "single",
+          "question": "Alto Piemonte 作為投資標的的核心優勢是？",
+          "options": [
+            "品質遠高於 Barolo，但市場尚未認識到",
+            "頂款均價僅為 Barolo 的 1/3–1/5，陳年潛力相近，具有明顯「估值窪地」機會",
+            "義大利政府提供投資補貼",
+            "産量比 Barolo 更大，更容易取得"
+          ],
+          "correct": 1,
+          "explanation": "Gattinara Riserva 頂款均價 €50–180，對比同等品質 Barolo Riserva 的 €150–500，只有約 1/3–1/5 的價格，但陳年潛力（15–25 年）相近。Nervi-Conterno 加入後更提供了強大的市場信號，是精明收藏家的「估值窪地」機會。"
         }
       ]
     }

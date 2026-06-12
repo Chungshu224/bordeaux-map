@@ -54,11 +54,6 @@
       "subtitle": "Sagrantino 的力量與綠色心臟"
     },
     {
-      "type": "map_placeholder",
-      "title": "🍇 Umbria 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🍇 Umbria 產區地圖 地圖。"
-    },
-    {
       "type": "content",
       "title": "💚 義大利的綠色心臟",
       "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Umbria（翁布里亞）是義大利唯一<strong>沒有海岸線的中部大區</strong>，被稱為<strong>「義大利的綠色心臟」</strong>（Cuore Verde d'Italia）。</p><p class=\"highlight\">Umbria 以<strong>Sagrantino di Montefalco</strong>（義大利單寧最高的紅酒之一）和<strong>Orvieto 白酒</strong>聞名。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🏔️</div><div class=\"fact-text\">丘陵地形為主<br>海拔 200-500m</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌳</div><div class=\"fact-text\">森林覆蓋率高<br>自然生態豐富</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\">2 DOCG<br>13 DOC</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏛️</div><div class=\"fact-text\">歷史名城<br>Assisi, Perugia</div></div></div></div>"

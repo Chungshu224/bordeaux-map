@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "Piemonte 最著名的紅葡萄品種是？",
-      "options": ["Sangiovese", "Nebbiolo", "Barbera", "Montepulciano"],
+      "options": [
+        "Sangiovese",
+        "Nebbiolo",
+        "Barbera",
+        "Montepulciano"
+      ],
       "answer": 1,
       "explanation": "Nebbiolo 是皮埃蒙特最著名的品種，用於釀造 Barolo 和 Barbaresco 等頂級酒款。"
     },
     {
       "question": "被稱為「葡萄酒之王」的是？",
-      "options": ["Barbaresco", "Barolo", "Brunello di Montalcino", "Chianti"],
+      "options": [
+        "Barbaresco",
+        "Barolo",
+        "Brunello di Montalcino",
+        "Chianti"
+      ],
       "answer": 1,
       "explanation": "Barolo 被譽為「葡萄酒之王」（King of Wines），是義大利最頂級的紅酒之一。"
     },
     {
       "question": "Barolo 和 Barbaresco 的主要風格差異是？",
-      "options": ["Barolo 優雅，Barbaresco 強勁", "Barolo 強勁，Barbaresco 優雅", "兩者完全相同", "Barolo 是白酒"],
+      "options": [
+        "Barolo 優雅，Barbaresco 強勁",
+        "Barolo 強勁，Barbaresco 優雅",
+        "兩者完全相同",
+        "Barolo 是白酒"
+      ],
       "answer": 1,
       "explanation": "Barolo 是力量型（強勁、單寧堅實），Barbaresco 是優雅型（細膩、柔順），兩者風格不同。"
     },
     {
       "question": "Barbera 的主要特色是？",
-      "options": ["高單寧、低酸度", "低單寧、高酸度", "高單寧、高酸度", "低單寧、低酸度"],
+      "options": [
+        "高單寧、低酸度",
+        "低單寧、高酸度",
+        "高單寧、高酸度",
+        "低單寧、低酸度"
+      ],
       "answer": 1,
       "explanation": "Barbera 的獨特之處在於低單寧配合高酸度，使其非常適合日常飲用和配餐。"
     }
@@ -32,11 +52,6 @@
       "type": "title",
       "title": "👑 Piemonte 皮埃蒙特",
       "subtitle": "Barolo 與 Barbaresco 的故鄉"
-    },
-    {
-      "type": "map_placeholder",
-      "title": "👑 Piedmont 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 👑 Piedmont 產區地圖 地圖。"
     },
     {
       "type": "content",
@@ -113,7 +128,11 @@
             "C. 均產自皮埃蒙特",
             "D. 均為甜型酒款"
           ],
-          "correct": [0, 1, 2],
+          "correct": [
+            0,
+            1,
+            2
+          ],
           "explanation": "Barolo 和 Barbaresco 都是用 Nebbiolo 釀造的 DOCG 頂級紅酒，均產自皮埃蒙特。兩者都是干型酒，非甜酒。"
         },
         {
@@ -149,7 +168,11 @@
             "C. Dolcetto",
             "D. Sangiovese"
           ],
-          "correct": [0, 1, 2],
+          "correct": [
+            0,
+            1,
+            2
+          ],
           "explanation": "Nebbiolo（王者）、Barbera（日常高酸）和 Dolcetto（易飲）是皮埃蒙特三大紅葡萄品種。Sangiovese 主要種植在托斯卡納，皮埃蒙特罕見。"
         }
       ]

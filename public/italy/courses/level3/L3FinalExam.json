@@ -1,30 +1,467 @@
 {
   "lessonId": "L3FinalExam",
   "title": "Level 3 綜合評量",
+  "quiz": [
+    {
+      "question": "Timorasso 是義大利哪個大區的稀有白葡萄品種，近年因哪位生產者而重獲國際關注？",
+      "options": [
+        "Campania，由 Antonio Caggiano 復興",
+        "Piemonte 的 Colli Tortonesi，由 Walter Massa 復興",
+        "Friuli，由 Josko Gravner 復興",
+        "Tuscany，由 Antinori 家族復興"
+      ],
+      "answer": 1,
+      "explanation": "Timorasso 是 Piemonte 東部 Colli Tortonesi 的古老白葡萄品種，曾瀕臨滅絕，由 Walter Massa 自 1980 年代起致力復興。釀成的白酒以高酸度、礦物感和長陳年潛力著稱，被譽為「義大利的 Riesling」。"
+    },
+    {
+      "question": "Ruché（或 Ruchè）是義大利哪個大區的稀有紅品種，以什麼香氣特色著稱？",
+      "options": [
+        "Veneto，以黑色水果和巧克力著稱",
+        "Piemonte 的 Castagnole Monferrato，以芳香玫瑰花瓣和香料著稱",
+        "Sicily，以火山礦物感著稱",
+        "Lombardy，以帶煙燻感的單寧著稱"
+      ],
+      "answer": 1,
+      "explanation": "Ruché（Ruchè）是 Piemonte 的 Monferrato 丘陵原生紅葡萄品種，2010 年獲得 DOCG 認證（Ruchè di Castagnole Monferrato DOCG），以獨特的玫瑰花瓣、紫羅蘭香氣和辛香料聞名，風格介於 Pinot Noir 的優雅與 Gewürztraminer 的芳香之間。"
+    },
+    {
+      "question": "Erbaluce di Caluso DOCG 位於哪裡？以什麼特殊酒款著稱？",
+      "options": [
+        "Friuli，以橙酒聞名",
+        "Piemonte 的 Canavese，以 Caluso Passito（風乾甜白）和干型白酒著稱",
+        "Trentino-Alto Adige，以氣泡酒聞名",
+        "Umbria，以高酸甜白聞名"
+      ],
+      "answer": 1,
+      "explanation": "Erbaluce di Caluso DOCG 位於 Piemonte 的 Canavese 丘陵，都靈以北。Erbaluce 品種釀成的 Caluso Passito（以風乾葡萄製成的金黃甜白酒）是 Piemonte 最珍貴的甜白酒之一，干型版則以高酸礦物感著稱。"
+    },
+    {
+      "question": "Nosiola 葡萄品種最重要的代表性酒款 Vino Santo（義大利聖酒）產自哪裡？",
+      "options": [
+        "Tuscany 的 Val d'Arbia",
+        "Trentino 的 Valle dei Laghi（湖泊谷）",
+        "Campania 的 Cilento 海岸",
+        "Sardinia 的 Campidano 平原"
+      ],
+      "answer": 1,
+      "explanation": "Nosiola 是 Trentino 最重要的原生白品種，在 Valle dei Laghi（Lago di Garda 北端）表現最突出。以 Nosiola 釀造的 Vino Santo Trentino（聖酒）採用 Appassimento，風乾至次年復活節（4–5 個月），再陳年 6–10 年，是義大利最罕見的甜白珍稀酒款之一。"
+    },
+    {
+      "question": "橙酒（Orange Wine / Skin-Contact White Wine）的現代復興，最重要的先驅人物和地點是？",
+      "options": [
+        "Angelo Gaja，Barbaresco，1980 年代",
+        "Josko Gravner，Friuli 的 Oslavia，1990 年代末",
+        "Gianfranco Soldera，Brunello di Montalcino，2000 年代",
+        "Bartolo Mascarello，Barolo，1970 年代"
+      ],
+      "answer": 1,
+      "explanation": "Josko Gravner 是現代橙酒運動的先驅，1990 年代末在 Friuli 的 Oslavia 開始以陶甕（Qvevri / Amphora）長時間帶皮浸漬白葡萄（6 個月以上），復興古喬治亞釀造傳統，引發全球橙酒革命。"
+    },
+    {
+      "question": "橙酒（浸皮白酒）的核心釀造原則是？",
+      "options": [
+        "使用紅葡萄品種混入白葡萄汁，萃取粉紅色澤",
+        "白葡萄帶皮（浸漬）發酵，萃取單寧、多酚和橙黃色素",
+        "以陳年波特酒桶陳年白酒，賦予橙黃色澤",
+        "在釀造結束後加入天然食用色素調色"
+      ],
+      "answer": 1,
+      "explanation": "橙酒的核心是白葡萄帶皮（連果皮和種子）浸漬發酵，萃取單寧、花青素前驅物和多酚，賦予酒款橙黃至琥珀色澤，並帶來類似紅酒的結構感和氧化複雜度，是白酒中最具爭議也最受關注的新興風格。"
+    },
+    {
+      "question": "Barolo DOCG 的 MGA 系統中，Serralunga d'Alba 村的 Cannubi 和 La Morra 村的 Brunate，代表什麼不同的風土特色？",
+      "options": [
+        "兩者土壤相同，只是地理位置標示不同",
+        "Serralunga（Helvetian 地層）: 堅硬石灰岩，單寧強勁需長陳年；La Morra（Tortonian 地層）: 較軟石灰岩黏土，芳香優雅較早開放",
+        "Cannubi 在平地，Brunate 在山頂，海拔差異是唯一差別",
+        "La Morra 只能生產 Riserva，Serralunga 只能生產普通款"
+      ],
+      "answer": 1,
+      "explanation": "Barolo 最重要的地質分野：Serralunga d'Alba（Helvetian 地層，堅硬石灰岩 + 海洋礦物）→ 骨架強勁、單寧緊實、需要 15–25 年陳年；La Morra、Barolo 村（Tortonian 地層，較疏鬆石灰岩黏土）→ 芳香、柔順、相對早開放。這是 MGA 系統的核心地質意義。"
+    },
+    {
+      "question": "義大利 DOCG 瓶頸防偽貼紙（Fascetta）的主要功能是？",
+      "options": [
+        "標示酒莊的有機認證",
+        "政府核發的唯一性編號貼紙，防止偽造 DOCG，並記錄生產批次",
+        "標示酒款的最佳飲用年份",
+        "進出口關稅繳清的憑證"
+      ],
+      "answer": 1,
+      "explanation": "Fascetta（政府防偽貼紙）是義大利 DOCG 的核心識別工具，每瓶都有唯一序號，由義大利政府（ICQRF）核發，跨越瓶蓋封口，難以偽造或重複使用，是消費者辨識 DOCG 真偽最可靠的外部標誌。"
+    },
+    {
+      "question": "義大利酒標上的「Riserva」代表什麼法定含義？",
+      "options": [
+        "只在最好的年份才生產，品質由釀酒師主觀決定",
+        "比普通款符合更長的最低陳年要求（橡木桶 + 瓶陳），各 DOC/DOCG 規定不同",
+        "只用精選葡萄園最老的藤（60 年以上）釀造",
+        "每個 DOCG 統一規定：至少 5 年才能上市"
+      ],
+      "answer": 1,
+      "explanation": "「Riserva」在義大利法規中有明確最低陳年要求，但各 DOC/DOCG 規定不同：Barolo Riserva 需 62 個月、Barbaresco Riserva 需 50 個月、Brunello di Montalcino Riserva 需 6 年以上。共同點是 Riserva 必須比普通款更長的陳年時間。"
+    },
+    {
+      "question": "義大利年份評估中，哪個氣候因素對晚熟品種（如 Nebbiolo、Aglianico）影響最大？",
+      "options": [
+        "1–3 月的冬季降雪量",
+        "7–8 月的高溫熱浪（加速成熟）",
+        "9–10 月採收前的秋雨（稀釋糖分並引發黴菌）",
+        "4–5 月的春霜（影響掛果率）"
+      ],
+      "answer": 2,
+      "explanation": "Nebbiolo 和 Aglianico 屬於極晚熟品種，採收通常在 10 月中至 11 月。秋雨是最大風險：9–10 月持續降雨會稀釋果汁（降低糖分和多酚濃度）並引發灰黴菌（Botrytis），是決定這類品種年份好壞的最關鍵氣候因素。"
+    },
+    {
+      "question": "Barolo 最著名的頂級年份（接近「五顆星」評鑑）中，下列哪個最被收藏家認可？",
+      "options": [
+        "2002 和 2005（因為氣候穩定）",
+        "2010 和 2016（以精準平衡著稱）",
+        "2007 和 2009（最溫暖年份，最高酒精度）",
+        "1998 和 2000（新千禧年份）"
+      ],
+      "answer": 1,
+      "explanation": "2010 和 2016 是近年 Barolo 公認的最偉大年份，兩者都提供了完美的 Nebbiolo 成熟度加上清新酸度和精準結構，陳年潛力可達 30–50 年以上，被 Gambero Rosso、Wine Advocate 等評為五顆星年份。"
+    },
+    {
+      "question": "Brunello di Montalcino 最具傳奇性的年份 1997 的特殊意義是？",
+      "options": [
+        "義大利葡萄酒史上首個達到 100 分的年份",
+        "炎熱乾燥年份帶來豐富成熟果味，被 Wine Spectator 評為「年度十大」頭名，確立 Brunello 的國際地位",
+        "政府第一次允許 Brunello 添加 15% 其他品種",
+        "因嚴重黴菌，幾乎所有莊主決定不生產 Brunello"
+      ],
+      "answer": 1,
+      "explanation": "1997 年是炎熱乾燥年份，Brunello 達到極高成熟度，Wine Spectator 將 Biondi-Santi 1997 Brunello 評為當年十大頭名，是確立 Brunello di Montalcino 作為義大利（乃至全球）頂級收藏酒款地位的歷史性時刻。"
+    },
+    {
+      "question": "理想的葡萄酒地窖儲存條件是？",
+      "options": [
+        "溫度 18–22°C，濕度 50–60%，強光照射加速熟成",
+        "溫度 12–14°C，濕度 70–75%，無溫差波動，避光，無強烈振動",
+        "溫度 5–8°C（接近冰箱），濕度 90% 以上",
+        "溫度越低越好（0–4°C），完全密封不需要濕度控制"
+      ],
+      "answer": 1,
+      "explanation": "理想窖藏條件：溫度 12–14°C（穩定最重要，劇烈波動比偏高溫度更有害）、濕度 70–75%（防軟木塞乾裂，但過高易發黴）、完全避光（紫外線破壞酚類物質）、無振動（影響酒石酸沉積）、橫臥存放（軟木塞保濕）。"
+    },
+    {
+      "question": "為什麼葡萄酒通常應該橫臥（臥瓶）儲存？",
+      "options": [
+        "節省空間，方便地窖管理",
+        "讓軟木塞保持與酒液接觸，防止乾燥收縮導致漏氣氧化",
+        "便於搖瓶（Remuage）讓沉澱物集中",
+        "只有氣泡酒需要橫臥，靜態酒無所謂"
+      ],
+      "answer": 1,
+      "explanation": "橫臥儲存讓軟木塞內側保持濕潤，防止因乾燥導致的收縮和微氧化。乾燥的軟木塞會失去密封性，加速酒的氧化老化。使用螺旋蓋（Stelvin）的酒不需要橫臥，直立放也不影響品質。"
+    },
+    {
+      "question": "SAT 盲品法（Sight / Aroma / Taste）的正確系統順序是？",
+      "options": [
+        "先品嚐味道，再觀察顏色，最後聞香氣",
+        "先觀察外觀（顏色、清澈度、黏度）→ 嗅聞香氣（一次靜止，二次旋轉）→ 品嚐味道（入口、中段、尾韻、回味）",
+        "先嗅聞，再品嚐，最後觀察顏色",
+        "SAT 法沒有固定順序，依個人習慣"
+      ],
+      "answer": 1,
+      "explanation": "SAT 盲品法標準順序：S（Sight 外觀）→ A（Aroma 嗅覺）→ T（Taste 味覺）。外觀評估顏色深淺、色調、黏度（掛杯）、清澈度；嗅覺先靜止後旋轉，分辨一級（品種）、二級（發酵）、三級（陳年）香氣；味覺評估酸甜單寧酒精，最後下結論（品種、產區、年份）。"
+    },
+    {
+      "question": "盲品時，Nebbiolo 品種最典型的識別特徵組合是？",
+      "options": [
+        "深紫色、黑醋栗 + 菸草、高酒精",
+        "淡石榴紅色 + 橙紅邊緣、焦油 + 玫瑰 + 枯葉、高酸高單寧",
+        "深寶石紅、黑莓 + 薄荷、中等酸度",
+        "淡黃金色、梨花 + 礦石、低單寧（白酒）"
+      ],
+      "answer": 1,
+      "explanation": "Nebbiolo 的三大識別碼：1) 視覺：淡石榴紅、橙色邊緣（即使年輕）；2) 嗅覺：焦油（Tar）＋ 玫瑰（Rose）＋ 枯葉（Dried Leaves）是 Barolo/Barbaresco 的經典香氣；3) 口感：極高酸度＋極高單寧是整個義大利紅品種中最高的組合。"
+    },
+    {
+      "question": "盲品中，如何區分 Sangiovese（Chianti Classico）和 Barbera d'Asti？",
+      "options": [
+        "兩者完全無法區分，需要查酒標",
+        "Sangiovese：高酸 + 中等單寧 + 草本番茄葉香；Barbera：更高酸度 + 更低單寧 + 純粹鮮紅果味",
+        "Barbera 永遠比 Sangiovese 顏色更淺",
+        "Sangiovese 酒精度永遠比 Barbera 高 2% 以上"
+      ],
+      "answer": 1,
+      "explanation": "關鍵區別：Barbera 單寧極低（有時幾乎感覺不到），但酸度甚至高於 Sangiovese，帶純粹的酸鮮紅果（酸櫻桃、覆盆子）；Sangiovese 有明顯單寧，帶 Chianti 的番茄葉、乾香草、皮革香氣。單寧是最快速的口感分辨點。"
+    },
+    {
+      "question": "Pinot Grigio 在盲品中，如何區分 Alto Adige 高品質版與工業級 Veneto 版？",
+      "options": [
+        "無法區分，兩者完全相同",
+        "Alto Adige：更濃縮，帶礦物感、杏仁、蜂蜜香，有時帶銅色（Ramato 皮接觸版）；工業 Veneto 版：薄弱中性，清水感，缺乏特色",
+        "Alto Adige 版本永遠是甜型，Veneto 版永遠是干型",
+        "工業版酒精度一定超過 14%，高品質版一定在 12% 以下"
+      ],
+      "answer": 1,
+      "explanation": "Alto Adige Pinot Grigio 在高海拔日夜溫差大的環境下，保留更多天然酸度和風味濃縮度，帶礦物感、杏仁和成熟果香；部分生產者採用短暫皮接觸（Ramato 風格）呈現銅粉色澤。工業 Veneto 版在高產量壓力下風味稀薄，是 Pinot Grigio 聲譽低落的根源。"
+    },
+    {
+      "question": "義大利生物動力法（Biodynamic / Biodinamica）的核心準備劑 500 是什麼？",
+      "options": [
+        "加入 500 種礦物質的特製肥料噴劑",
+        "將牛糞填入牛角埋入土壤，冬季發酵後挖出，稀釋攪動噴灑於土地",
+        "每公頃使用剛好 500 升有機堆肥",
+        "每年 5 月（第 5 個月）施灑的有機液肥"
+      ],
+      "answer": 1,
+      "explanation": "準備劑 500（Horn Manure）是 Rudolf Steiner 生物動力法的核心：將牛糞填入母牛牛角中，埋入土壤越冬（約 6 個月）讓其在地力作用下發酵轉化，挖出後以少量（10–25 克）加入 40 升水中攪動 1 小時形成「活化」準備劑，再噴灑於葡萄園土壤，旨在活化土壤微生物生態。"
+    },
+    {
+      "question": "氣候暖化對義大利北部高海拔葡萄園（如 Alto Adige、Valtellina）的短期影響是？",
+      "options": [
+        "立即導致葡萄品質下降，高海拔受影響最大",
+        "短期可能有益：溫度提升讓晚熟品種更穩定成熟，擴展可種植的海拔上限",
+        "完全沒有影響，高山氣候隔絕了全球暖化效應",
+        "只影響灌溉需求，不影響品質"
+      ],
+      "answer": 1,
+      "explanation": "短期（10–30 年視角）：暖化對高海拔北義有部分正面效果，成熟度更穩定（特別是晚熟品種），可種植海拔上限提高，讓過去太冷的地塊開始適合葡萄種植。長期（50+ 年）風險：夏季高溫極端化、水資源壓力、品種更換需求才是核心威脅。"
+    },
+    {
+      "question": "氣候暖化對義大利南部（Sicily、Puglia）葡萄種植的長期挑戰是？",
+      "options": [
+        "南部將因暖化受益，葡萄品質大幅提升",
+        "持續升溫加劇水資源短缺、過高酒精度、酸度流失，影響頂級酒品質",
+        "暖化讓南部開始種植以前無法種植的 Nebbiolo",
+        "幾乎無影響，南義本來就熱，已適應高溫"
+      ],
+      "answer": 1,
+      "explanation": "南義長期暖化風險：水資源更稀缺（Puglia 已面臨嚴重乾旱）、酒精度越來越難控制在合理範圍（已有酒款達 17–18%）、天然酸度持續流失（影響平衡感和陳年潛力）、傳統低海拔產區可能在 2050–2100 年面臨種植困難，高海拔轉移是主要應對策略。"
+    },
+    {
+      "question": "義大利天然酒（Vino Naturale）最具爭議的釀造原則是什麼？",
+      "options": [
+        "不使用任何農藥，完全有機種植",
+        "釀造過程不添加或極低量添加二氧化硫（SO₂），接受葡萄酒的自然演化與不穩定性",
+        "只使用義大利本土原生品種",
+        "必須在陶甕（Amphora）中釀造"
+      ],
+      "answer": 1,
+      "explanation": "天然酒的核心爭議點在於二氧化硫使用，天然酒生產者主張不加硫或極低添加（裝瓶前僅加 10–20 mg/L 甚至完全不加），讓葡萄酒自然發展，接受酒款的不穩定性和多樣性；批評者認為缺乏 SO₂ 保護容易氧化和產生異味（如 Brett、揮發酸）。"
+    },
+    {
+      "question": "侍酒師在餐廳開瓶一瓶 2010 Barolo Riserva，正確的醒酒做法是？",
+      "options": [
+        "直接倒入杯中，完全不需要醒酒",
+        "提前 2–3 小時開瓶，使用寬口醒酒瓶緩慢倒入，可能需要醒酒 3–4 小時",
+        "將整瓶直接放入 60°C 熱水中加速醒酒",
+        "醒酒會破壞老年份的香氣，應盡快倒入小杯後立刻飲用"
+      ],
+      "answer": 1,
+      "explanation": "2010 Barolo Riserva 雖已 10+ 年，但 Nebbiolo 的高單寧結構仍需充分醒酒。建議：提前 2–3 小時開瓶，使用寬口醒酒瓶（如 Magnum 型大口醒酒器）緩慢倒入，保留酒渣在原瓶中，醒酒時間 2–4 小時視個人偏好。過老的年份（30 年以上）則需謹慎，長時間醒酒反而可能加速崩塌。"
+    },
+    {
+      "question": "餐廳酒單設計中，選擇「杯賣酒（Wine by the Glass）」的最重要標準是？",
+      "options": [
+        "選擇最昂貴的酒款以提高利潤",
+        "選擇開瓶後能穩定保持 3–5 天品質、能搭配多種菜式的酒款",
+        "只選本地產區的酒，避免國際品種",
+        "只選甜型酒，因為最多顧客接受"
+      ],
+      "answer": 1,
+      "explanation": "杯賣酒的核心選擇標準：開瓶後穩定性（Vermentino、Pinot Grigio 等高酸白酒比低酸酒更耐存；Barbera、Valpolicella 等中等單寧紅酒比高單寧陳年款更穩定）、菜單搭配廣度（能搭配前菜到主菜的多用途酒款）、進貨穩定性（不能是一次性小批次）。"
+    },
+    {
+      "question": "餐廳侍酒師處理義大利 Franciacorta DOCG 氣泡酒時，正確的服務溫度是？",
+      "options": [
+        "直接室溫（18–20°C）飲用，讓氣泡自然融合",
+        "冰鎮至 6–8°C，保留細緻氣泡和清爽酸度",
+        "加冰塊稀釋，適合夏季飲用",
+        "先溫至 15°C 再逐漸降溫，模擬香檳飲用條件"
+      ],
+      "answer": 1,
+      "explanation": "Franciacorta 與香檳相同，最佳服務溫度為 6–8°C。低溫能保留細緻氣泡（CO₂ 在低溫下溶解度更高）、突出清爽酸度、讓酵母陳年香氣（奶油、餅乾）更優雅呈現。使用冰桶（冰水混合）而非直接放入冰箱，降溫更均勻。"
+    },
+    {
+      "question": "高單寧紅酒（如 Barolo、Amarone）配餐時，以下哪個說法最準確？",
+      "options": [
+        "高單寧紅酒與所有海鮮都很搭，因為酸度能平衡腥味",
+        "高單寧紅酒與油脂豐富的紅肉最搭（油脂軟化單寧），與清淡魚鮮或單寧相剋",
+        "高單寧紅酒配甜點最理想",
+        "高單寧紅酒只適合搭配乳酪，不適合配任何料理"
+      ],
+      "answer": 1,
+      "explanation": "高單寧紅酒的配餐邏輯：油脂能包裹單寧、軟化澀感，油脂豐富的紅肉（牛排、烤羊排、燉牛肉）是最佳搭配；清淡海鮮（生魚片、蛤蠣）與高單寧相遇，單寧會被強化顯得更澀，魚鮮也會帶出金屬腥味，是經典的「排斥反應」。"
+    },
+    {
+      "question": "義大利 Vin Santo（聖酒）傳統上的釀造和陳年特色是？",
+      "options": [
+        "使用 Moscato 品種，在不鏽鋼桶快速釀造，以保留新鮮果香",
+        "以風乾 Trebbiano 和 Malvasia 釀造，在小型橡木桶（Caratello）陳年 3–10 年，形成氧化複雜度",
+        "加入蒸餾酒提高酒精度，類似 Marsala",
+        "每年秋天放血，需等 25 年才能裝瓶"
+      ],
+      "answer": 1,
+      "explanation": "Vin Santo（聖酒）是 Tuscany 傳統甜白酒：以風乾 Trebbiano 和 Malvasia 葡萄在小型木桶 Caratello（50–200 升）中陳年 3–10 年，形成堅果、焦糖、蜂蠟等氧化複雜香氣，是傳統配 Cantucci（義式杏仁餅乾）的佐點佳釀，屬於半氧化陳年型。"
+    },
+    {
+      "question": "Grappa（格拉帕）義大利白蘭地的定義是？",
+      "options": [
+        "以任何義大利葡萄酒為基礎蒸餾的白蘭地",
+        "以葡萄酒渣（Vinacce，壓榨後的皮、梗、種子）為原料蒸餾的義大利白蘭地",
+        "以 Muscat 葡萄釀製的甜型加烈酒",
+        "以橄欖渣為原料蒸餾的傳統農家烈酒"
+      ],
+      "answer": 1,
+      "explanation": "Grappa 是義大利法定地理標示蒸餾酒，必須以義大利的葡萄酒渣（Vinacce：壓榨後的皮、梗、種子）為原料蒸餾，酒精度 37.5–60%，只能在義大利境內生產。Monovitigno（單一品種）Grappa 如 Grappa di Moscato、Grappa di Nebbiolo 是品質最高的類別。"
+    },
+    {
+      "question": "Vermouth di Torino（杜林苦艾酒）在義大利的意義是？",
+      "options": [
+        "一種 Piemonte 的餐後甜點酒，不含草藥",
+        "以 Piedmont 白酒為基底，加入艾草（Wormwood）等草本植物浸漬的加烈開胃酒，Torino 是現代 Vermouth 發源地",
+        "一種 Tuscany 的干型雪莉酒風格",
+        "只在聖誕節才生產的季節限定酒款"
+      ],
+      "answer": 1,
+      "explanation": "Vermouth di Torino IGP 以皮埃蒙特白酒（如 Cortese、Moscato）為基底，加入艾草（義語 Vermut，德語 Wermut 艾草）及多種草本香料浸漬後加烈，分甜型（Rosso）、干型（Bianco/Extra Dry）、半干。都靈（Torino）是 18 世紀現代 Vermouth 的發明地，也是 Martini & Rossi、Cinzano 的故鄉。"
+    },
+    {
+      "question": "義大利「自然酒」先驅 Stanko Radikon（Friuli，已故）對橙酒風格的核心貢獻是？",
+      "options": [
+        "率先使用不鏽鋼桶低溫發酵保留白酒清新",
+        "與 Gravner 同期在 Oslavia 實踐極長時間皮接觸（數個月）+ 大型橡木桶陳年（3–6 年），奠定 Friuli 橙酒的「史詩」風格",
+        "創立第一個有機認證葡萄園認證機構",
+        "發明以二氧化碳保護橙酒避免氧化的現代技術"
+      ],
+      "answer": 1,
+      "explanation": "Stanko Radikon（Radikon 酒莊）與 Josko Gravner 是 Oslavia（Friuli-Collio 邊界）橙酒雙雄，Radikon 以極長時間皮接觸（Ribolla Gialla 帶皮發酵至 3–6 個月）加上大型橡木桶陳年 3–6 年，釀成風格最強勁、最需要時間開放的橙酒，成為全球自然酒收藏家的聖杯之一。"
+    },
+    {
+      "question": "在義大利葡萄酒投資中，哪類酒款的二手市場流動性最高？",
+      "options": [
+        "南義日常 IGT 紅酒，因產量大、價格低",
+        "Barolo Riserva（頂級酒莊）、Brunello di Montalcino、超級托斯卡納（Sassicaia、Ornellaia、Masseto）",
+        "Prosecco DOCG，因為氣泡酒最受大眾喜愛",
+        "Soave 和 Verdicchio，因為白酒陳年潛力最被低估"
+      ],
+      "answer": 1,
+      "explanation": "義大利酒拍賣市場流動性最高的是：Barolo Riserva（特別是 Giacomo Conterno Monfortino、Bartolo Mascarello、G.B. Burlotto）、Brunello Riserva（Biondi-Santi、Soldera）、超級托斯卡納（Sassicaia、Ornellaia、Masseto）。這些酒在 Wine-Searcher、Liv-ex 等平台有活躍的二手市場和清晰的价格曲線。"
+    },
+    {
+      "question": "關於 Friuli 橙酒與 Veneto 傳統橙酒（Ramato）的區別，下列哪個最準確？",
+      "options": [
+        "兩者釀造方式和風格完全相同，只是名稱不同",
+        "Ramato：Pinot Grigio 輕短皮接觸（1–3 天），粉銅色澤，清爽易飲；Friuli 橙酒（Gravner/Radikon 等）：長時間皮接觸（數月），深琥珀色，高單寧、氧化複雜",
+        "Ramato 只能在 Friuli 生產，是地理保護標示",
+        "Friuli 橙酒必須使用陶甕，Ramato 必須使用橡木桶"
+      ],
+      "answer": 1,
+      "explanation": "Ramato（義語「銅色的」）是 Veneto/Friuli 的傳統 Pinot Grigio 輕皮接觸（1–3 天）釀法，呈粉銅色，風格清爽，無需陳年；Oslavia 風格橙酒（Gravner、Radikon）是數月浸皮、大型橡木桶或陶甕陳年多年，深琥珀色、高單寧、強氧化風格，屬於完全不同的風格類別。"
+    },
+    {
+      "question": "義大利「超級托斯卡納」在 1970–80 年代的誕生，反映了義大利 DOC 體系的什麼問題？",
+      "options": [
+        "DOC 規定太嚴格，連最優質的傳統酒款都無法通過",
+        "DOC 允許過低品質的葡萄產量和非優質品種，優質釀酒師轉而在 IGT 框架下突破創新",
+        "政府強制要求所有優質酒必須出口，無法在義大利國內銷售",
+        "DOC 系統在 1970 年代尚未建立，超級托斯卡納是在法規真空中誕生"
+      ],
+      "answer": 1,
+      "explanation": "超級托斯卡納的誕生有雙重動機：1) 規避限制（DOC 規定往往反映過時標準，如 Chianti 要求加入白葡萄品種）；2) 主動創新（Antinori 的 Tignanello 1971 以 Sangiovese + Cabernet 釀造，自願降級 IGT 以突破規定）。這揭示了義大利 DOC 系統過於保守，優質創新往往被迫走向「法外」路徑。"
+    },
+    {
+      "question": "義大利當代葡萄酒法規中，「Classico」（如 Chianti Classico、Soave Classico）的含義是？",
+      "options": [
+        "代表「傳統方法」釀造，不使用任何現代設備",
+        "代表歷史核心產區（比外圍產區更古老、條件更優越的原始種植地帶）",
+        "代表酒款至少 10 年陳年，適合長期收藏",
+        "代表只使用有機農法的葡萄園"
+      ],
+      "answer": 1,
+      "explanation": "「Classico」在義大利法規中代表歷史核心產區，即 DOC/DOCG 名稱在擴大前的原始種植地帶，如 Chianti Classico（Greve、Gaiole、Castelnuovo Berardenga 等核心村莊）歷史上比外圍 Chianti 更早建立，土壤氣候條件通常更優越，因此保有獨立的 Classico 認證框架。"
+    },
+    {
+      "question": "Brunello di Montalcino 的「Brunello Gate」醜聞（2008 年）對義大利酒業的影響是？",
+      "options": [
+        "幾乎摧毀了 Brunello 的國際聲譽，至今仍未恢復",
+        "促使 DOCG 加強品種溯源抽驗機制，長期強化了義大利酒品質監控體系",
+        "美國市場因此全面禁止進口義大利酒長達 5 年",
+        "僅影響參與摻假的 3 個酒莊，對整體市場無影響"
+      ],
+      "answer": 1,
+      "explanation": "「Brunello Gate」爆發後，ICQRF（義大利農糧品質保障局）大規模抽驗，發現部分酒莊混入 Merlot 等外來品種（違反 100% Sangiovese Grosso 規定）。醜聞短期震動市場，但長期促使義大利加強 DOC/DOCG 品種 DNA 抽驗制度，反而強化了整個義大利酒的溯源可信度，是一個「危機轉機」的典型案例。"
+    },
+    {
+      "question": "義大利 Level 3 課程中「稀有品種」的保育意義，下列哪個描述最深刻？",
+      "options": [
+        "稀有品種只是行銷噱頭，品質上無法與主流品種競爭",
+        "稀有品種是數千年義大利農業文化的基因庫，提供應對氣候變遷的多樣性韌性，也是差異化市場定位的關鍵",
+        "稀有品種應全部統一改植現代高產品種，提高義大利整體產量",
+        "稀有品種保育完全是學術問題，對實際葡萄酒業沒有商業意義"
+      ],
+      "answer": 1,
+      "explanation": "稀有品種保育的多重意義：1) 文化遺產（每個品種都是數百年人類選育和農業智慧的結晶）；2) 氣候韌性（原生品種往往比商業引種更適應當地極端氣候，如 Timorasso 的耐旱性、Nosiola 的耐冷性）；3) 市場差異化（稀有性本身創造高端市場定位，如 Ruché 的國際收藏熱）。"
+    },
+    {
+      "question": "完成 Level 3 學習後，描述義大利葡萄酒在全球精品市場的正確定位是？",
+      "options": [
+        "義大利酒始終只是法國酒的次級替代品",
+        "義大利酒以原生品種多樣性、產區地域表現力、悠久農業文化，在全球精品市場確立了不可替代的獨特地位",
+        "義大利酒的最大優勢是低價格大量生產",
+        "義大利酒在亞洲市場地位遠超法國，是最主要的高端酒來源"
+      ],
+      "answer": 1,
+      "explanation": "義大利在全球精品酒市場的定位核心：超過 350 個原生品種（無與倫比的多樣性）、20 個大區各自獨特的風土表現、3000 年葡萄種植文化傳承，加上近 30 年的品質革命，使義大利酒以「歷史深度 × 品種廣度 × 地域精準度」在全球精品市場確立了與法國、西班牙並列的不可替代地位。"
+    },
+    {
+      "question": "關於義大利葡萄酒服務，以下哪個侍酒師行為最專業？",
+      "options": [
+        "為節省時間，將所有類型的葡萄酒統一倒入標準 ISO 品嚐杯",
+        "根據酒款類型選擇不同杯型（Barolo 選大肚 Nebbiolo 杯、Brunello 選 Burgundy 杯、氣泡酒選細長笛型杯），並在服務前簡要介紹酒款背景",
+        "所有義大利酒都應該提前 5 小時醒酒，不管年份和酒款類型",
+        "向顧客推薦酒款時，永遠只推薦最貴的酒款以提高業績"
+      ],
+      "answer": 1,
+      "explanation": "專業侍酒服務的核心是「酒杯選擇 × 醒酒判斷 × 客戶溝通」：大肚寬口杯（Burgundy / Nebbiolo 型）適合需要氧化展開的 Barolo、Barbaresco；笛型杯保留氣泡；醒酒時間需根據酒款年份和風格判斷（不是一刀切）；介紹酒款背景讓顧客更好地欣賞並建立信任。"
+    }
+  ],
   "slides": [
     {
       "type": "title",
       "title": "📋 Level 3 綜合評量",
-      "subtitle": "義大利葡萄酒 Level 3 · 專家完整測驗"
+      "subtitle": "義大利葡萄酒 Level 3 · 專家完整測驗 · 40 題"
+    },
+    {
+      "type": "content",
+      "title": "📚 考試範圍與說明",
+      "content": "<div class='exam-intro'><p>本評量涵蓋 Level 3 全部課程的專家級知識，共 40 題。</p><div class='exam-scope'><div class='scope-item'><strong>🍇 稀有品種</strong>：Timorasso、Ruché、Erbaluce、Nosiola 及橙酒革命</div><div class='scope-item'><strong>🗺️ 分級深探</strong>：MGA 系統、Fascetta、Riserva、Classico 法定含義</div><div class='scope-item'><strong>📅 年份評估</strong>：氣候因素分析、Barolo/Brunello 頂級年份</div><div class='scope-item'><strong>👁️ 盲品技術</strong>：SAT 方法、品種識別碼、風格比較</div><div class='scope-item'><strong>🏭 產業深度</strong>：投資市場、天然酒、氣候暖化、法規演變</div><div class='scope-item'><strong>🍽️ 服務實務</strong>：醒酒、配餐原則、杯型選擇、餐廳策略</div></div><p class='exam-note'>建議時間：60 分鐘 ｜ 及格標準：70 分（28 題以上答對）</p></div>"
     },
     {
       "type": "list",
       "title": "🎯 Level 3 重點回顧",
       "points": [
-        "🍇 北義稀有品種：Timorasso（Piemonte）、Ruché、Erbaluce、Nosiola（Trentino）",
-        "🍊 橘酒革命：Josko Gravner 在 Friuli 以陶甕帶皮浸漬復興古法",
-        "🗺️ MGA 系統：Barolo/Barbaresco 的葡萄園分級（Menzione Geografica Aggiuntiva）",
-        "🔍 酒標解讀：政府防偽貼紙（fascetta）是 DOCG 最難偽造的識別標誌",
-        "👑 Sassicaia：唯一以單一酒莊命名的義大利 DOC（Bolgheri Sassicaia）",
-        "📅 年份評估：採收季氣候是決定性因素，晚熟品種受夏末秋雨影響最大",
-        "🏠 理想窖藏：12-14°C，70-75% 濕度，避免溫差劇烈波動",
-        "👁️ SAT 盲品法：Sight（視覺）→ Aroma（嗅覺）→ Taste（味覺）",
-        "🎯 品種辨識：Nebbiolo 特徵碼「焦油＋玫瑰＋枯葉」+ 橙色邊緣",
-        "🏭 合作社模式貢獻義大利超過 50% 總產量，規模效益顯著",
-        "🌍 美國是義大利葡萄酒最大出口市場（按金額）",
-        "🌿 生物動力法準備劑 500：牛角牛糞發酵後噴灑活化土壤",
-        "🌡️ 氣候暖化：北義高海拔短期受益（成熟度提升），長期風險仍存",
-        "🍽️ 杯賣酒策略：選開瓶後穩定性佳、能搭配多道菜式的酒款"
+        "🍇 稀有白品種：Timorasso（Piemonte，Walter Massa 復興）→「義大利 Riesling」",
+        "🌹 稀有紅品種：Ruché（Castagnole Monferrato DOCG，玫瑰花瓣香氣）",
+        "🌄 Erbaluce di Caluso DOCG：Piemonte Canavese，Passito 甜白珍稀款",
+        "🍯 Nosiola：Trentino Valle dei Laghi，Vino Santo（聖酒）6–10 年陳年甜白",
+        "🍊 橙酒先驅：Josko Gravner（Oslavia）1990 年代末復興陶甕帶皮浸漬古法",
+        "🧡 Stanko Radikon：Oslavia 橙酒另一巨匠，Ribolla Gialla 數月浸皮多年陳年",
+        "🗺️ MGA（Menzioni Geografiche Aggiuntive）：2010 年 Barolo/Barbaresco 葡萄園分級系統",
+        "🌍 Barolo 地質分野：Serralunga（Helvetian 堅硬石灰岩，強勁）vs. La Morra（Tortonian 軟石灰，芳香）",
+        "🔒 Fascetta：DOCG 唯一性政府防偽貼紙，含序號可追溯",
+        "📜 Riserva：比普通款更長的法定陳年（各 DOC 規定不同）",
+        "📅 頂級 Barolo 年份：2010、2016（五顆星）",
+        "📅 Brunello 傳奇年份：1997（Wine Spectator 十大頭名）",
+        "🏠 窖藏條件：12–14°C、70–75% 濕度、避光避振、橫臥軟木塞",
+        "👁️ SAT 盲品：Sight（外觀）→ Aroma（靜止後旋轉）→ Taste（入口中段尾韻）",
+        "🎯 Nebbiolo 識別碼：石榴紅 + 橙色邊緣 + 焦油/玫瑰/枯葉 + 高酸高單寧",
+        "⚗️ 生物動力準備劑 500：牛角牛糞越冬發酵，稀釋攪動噴灑土地",
+        "🌡️ 暖化：北義高海拔短期受益；南義長期水資源和酸度危機",
+        "🍷 天然酒：不加硫或極低量 SO₂，接受自然演化不穩定性",
+        "🥃 Grappa：葡萄酒渣（Vinacce）蒸餾，義大利法定 GI 烈酒",
+        "🥂 Vermouth di Torino IGP：Piemonte 白酒 + 艾草 + 草本，都靈是現代苦艾酒發源地",
+        "🍯 Vin Santo：風乾 Trebbiano/Malvasia + Caratello 小桶氧化陳年 3–10 年",
+        "💰 投資明星：Barolo Riserva（Conterno Monfortino）、Brunello Riserva（Biondi-Santi）、超級托斯卡納",
+        "🏺 Ramato（銅色輕皮接觸）vs. Oslavia 深橙酒（長浸皮多年陳年）：兩種完全不同的橙酒哲學",
+        "⚖️ Super Tuscan 誕生邏輯：DOC 規定過時 → 主動降級 IGT 突破創新",
+        "🔍 Brunello Gate（2008）：短期震動 → 長期強化 DNA 溯源抽驗制度",
+        "🎓 恭喜完成 Level 3！您已具備義大利葡萄酒專家級知識"
       ]
     }
   ]

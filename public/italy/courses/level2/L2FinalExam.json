@@ -1,30 +1,421 @@
 {
   "lessonId": "L2FinalExam",
   "title": "Level 2 綜合評量",
+  "quiz": [
+    {
+      "question": "Trentino-Alto Adige 的 Alto Adige（南提洛）最著名的葡萄品種特色是？",
+      "options": [
+        "以 Nebbiolo 為主的濃郁紅酒",
+        "以德奧芳香品種（如 Gewürztraminer、Riesling）為主的清冽白酒",
+        "以 Chardonnay 為主的木桶發酵白酒",
+        "以 Sangiovese 為主的傳統紅酒"
+      ],
+      "answer": 1,
+      "explanation": "Alto Adige（Südtirol）歷史上屬於奧地利，德語為官方語言，以德奧芳香品種著稱，特別是 Gewürztraminer（Traminer Aromatico）、Riesling、Pinot Bianco，風格清冽帶礦物感，反映阿爾卑斯山地氣候。"
+    },
+    {
+      "question": "Gewürztraminer 的名稱源自哪個義大利村莊？",
+      "options": [
+        "Barolo 村（Piemonte）",
+        "Montalcino 村（Tuscany）",
+        "Tramin 村（Alto Adige，現稱 Termeno）",
+        "Bolgheri 村（Tuscany）"
+      ],
+      "answer": 2,
+      "explanation": "Gewürztraminer 的名稱來自 Alto Adige 的 Tramin（德語）/ Termeno（義語）村，「Gewürz」是德語香料之意，該品種正是源於此地，再傳播到阿爾薩斯和全球。"
+    },
+    {
+      "question": "Friuli Venezia Giulia 的 Collio DOC 以何著稱？",
+      "options": [
+        "義大利最濃郁的巴羅洛風格紅酒",
+        "義大利最精緻的白酒之一，特別是 Friulano 和浸皮白酒",
+        "義大利最大的 Prosecco 氣泡酒產區",
+        "義大利唯一的冰酒（Icewine）產區"
+      ],
+      "answer": 1,
+      "explanation": "Collio DOC（Brda 丘陵）是義大利白酒的頂尖產區，以 Friulano（前身 Tocai Friulano）、Ribolla Gialla 和浸皮白酒（Orange Wine）聞名，Josko Gravner 等生產商在此開創現代橙酒運動。"
+    },
+    {
+      "question": "Tocai Friulano 被迫改名為 Friulano 的原因是？",
+      "options": [
+        "品種 DNA 研究發現它與 Sauvignon Blanc 相同",
+        "EU 裁定名稱與匈牙利 Tokaj 易生混淆，2007 年起強制改名",
+        "義大利政府推動品種名稱統一化政策",
+        "酒莊主人自願改名以擺脫與甜酒的聯想"
+      ],
+      "answer": 1,
+      "explanation": "Tocai Friulano 因 EU 裁定名稱與匈牙利 Tokaj 易生混淆（儘管是完全不同的酒），於 2007 年起必須改名為 Friulano，是義大利葡萄酒史上著名的命名政治事件。"
+    },
+    {
+      "question": "Emilia-Romagna 的 Lambrusco 是什麼類型的葡萄酒？",
+      "options": [
+        "干型濃縮紅酒，酒精度 15% 以上",
+        "微氣泡紅酒，從干型到甜型皆有，清爽易飲",
+        "傳統法氣泡白酒，類似香檳",
+        "加烈紅酒，適合餐後飲用"
+      ],
+      "answer": 1,
+      "explanation": "Lambrusco 是 Emilia-Romagna 的微氣泡紅酒，風格從干型到甜型皆有，清爽多果味，是當地搭配義式火腿（Prosciutto di Parma）和帕馬森起司的傳統佐餐酒。"
+    },
+    {
+      "question": "Emilia-Romagna 被稱為義大利「食品穀倉」，下列哪項食品不屬於此大區？",
+      "options": [
+        "Prosciutto di Parma（帕爾馬火腿）",
+        "Parmigiano-Reggiano（帕馬森起司）",
+        "Mozzarella di Bufala（水牛莫扎瑞拉）",
+        "Aceto Balsamico di Modena（摩德納巴薩米克醋）"
+      ],
+      "answer": 2,
+      "explanation": "Mozzarella di Bufala Campana PDO 源自 Campania（坎帕尼亞），而非 Emilia-Romagna。帕爾馬火腿、帕馬森起司、巴薩米克醋（摩德納）才是此大區的代表食品 PDO。"
+    },
+    {
+      "question": "Liguria（利古里亞）的 Cinque Terre DOC 面臨最大的農業挑戰是？",
+      "options": [
+        "土壤過於肥沃，葡萄過度生長品質低",
+        "年雨量極低，幾乎無法灌溉",
+        "坡度超過 60% 的懸崖梯田，必須人工採收，成本極高",
+        "病蟲害頻繁，難以推行有機農法"
+      ],
+      "answer": 2,
+      "explanation": "Cinque Terre 的葡萄種植在地中海沿岸幾乎垂直的懸崖梯田上，坡度超過 60%，完全無法機械操作，必須依賴人工採收和小型纜車搬運，是世界上成本最高的葡萄園之一。"
+    },
+    {
+      "question": "Verdicchio dei Castelli di Jesi DOC（Marche）最著名的感官特色是？",
+      "options": [
+        "高單寧、低酸，帶濃郁橡木香",
+        "清爽高酸、尾韻帶苦杏仁，礦物感強",
+        "甜型，有荔枝和玫瑰的芳香",
+        "中性風格，是大量生產的日常餐酒"
+      ],
+      "answer": 1,
+      "explanation": "Verdicchio 以清爽的高酸度和獨特的苦杏仁尾韻著稱，是 Marche 最重要的白葡萄品種，特別適合搭配亞得里亞海鮮，是義大利出口最成功的地方白品種之一。"
+    },
+    {
+      "question": "Sagrantino di Montefalco DOCG（Umbria）最突出的特色是？",
+      "options": [
+        "義大利單寧含量最低的品種，早飲易入口",
+        "義大利單寧含量最高的品種之一，最低陳年 37 個月",
+        "義大利唯一允許加入外國品種的 DOCG",
+        "以 Passito（風乾甜型）為唯一法定形式"
+      ],
+      "answer": 1,
+      "explanation": "Sagrantino 被認為是義大利（乃至全球）多酚和單寧含量最高的葡萄品種，Sagrantino di Montefalco DOCG 規定最低陳年 37 個月（含 12 個月橡木桶），年輕時非常封閉，需 10–20 年才能完全開放。"
+    },
+    {
+      "question": "Frascati DOC（Lazio）傳統上在羅馬人心中代表什麼？",
+      "options": [
+        "羅馬的頂級收藏酒，只在特殊場合飲用",
+        "日常家常白酒，幾百年來是羅馬人的「桌上白酒」",
+        "義大利最重要的 DOCG 白酒，足以媲美 Barolo",
+        "傳統上只用於宗教儀式的聖酒"
+      ],
+      "answer": 1,
+      "explanation": "Frascati 位於 Lazio 的 Castelli Romani 丘陵，羅馬以南約 20 公里，以 Malvasia 和 Trebbiano 為主，清爽易飲，幾百年來是羅馬人最親民的日常白酒，是城市與周邊鄉村酒文化的象徵。"
+    },
+    {
+      "question": "Montepulciano d'Abruzzo 和 Vino Nobile di Montepulciano DOCG 最容易被混淆，正確說明是？",
+      "options": [
+        "完全相同的品種，只是產地名稱不同",
+        "前者使用 Montepulciano 品種（Abruzzo），後者使用 Sangiovese（Tuscany 的 Montepulciano 鎮）",
+        "前者是後者的古老親本品種",
+        "兩者都是 Sangiovese 的地方變異，只是名字不同"
+      ],
+      "answer": 1,
+      "explanation": "常見混淆！Montepulciano d'Abruzzo 使用 Montepulciano 品種；Vino Nobile di Montepulciano DOCG 雖然產自 Tuscany 的 Montepulciano 鎮，卻使用 Sangiovese（Prugnolo Gentile）—— 名稱相似但品種完全不同。"
+    },
+    {
+      "question": "Campania 的 Taurasi DOCG 使用哪個品種，被稱為什麼？",
+      "options": [
+        "Fiano，「南義白酒之王」",
+        "Aglianico，「南義的 Barolo」",
+        "Primitivo，「南義的 Amarone」",
+        "Greco，「南義的 Riesling」"
+      ],
+      "answer": 1,
+      "explanation": "Taurasi DOCG 使用 Aglianico 釀造，最低陳年 3 年（Riserva 4 年），以高酸、高單寧和長陳年潛力被稱為「南義的 Barolo」，在 Campania 的 Irpinia 火山土地表現最出色。"
+    },
+    {
+      "question": "Fiano di Avellino DOCG 和 Greco di Tufo DOCG 都來自哪個大區的哪個省份？",
+      "options": [
+        "Puglia 的 Bari 省",
+        "Campania 的 Avellino 省（Irpinia 地區）",
+        "Basilicata 的 Potenza 省",
+        "Calabria 的 Cosenza 省"
+      ],
+      "answer": 1,
+      "explanation": "Fiano di Avellino 和 Greco di Tufo 都來自 Campania 的 Avellino 省（Irpinia 火山丘陵），是南義最重要的頂級白酒 DOCG，以礦物感、複雜度和陳年潛力著稱。"
+    },
+    {
+      "question": "Primitivo（Puglia）與哪個美國品種 DNA 相同？它們的共同原鄉是哪裡？",
+      "options": [
+        "Merlot，源自法國 Bordeaux",
+        "Zinfandel，源自克羅埃西亞的 Tribidrag",
+        "Syrah，源自法國 Rhône Valley",
+        "Cabernet Franc，源自西班牙"
+      ],
+      "answer": 1,
+      "explanation": "2001 年 DNA 檢測確認 Primitivo 與加州 Zinfandel 完全相同，兩者都源自克羅埃西亞的古老品種 Tribidrag（或 Crljenak Kaštelanski）。Primitivo 名稱來自義語「第一個成熟」。"
+    },
+    {
+      "question": "Puglia 的 Primitivo di Manduria DOC 風格特徵是？",
+      "options": [
+        "義大利最輕盈的紅酒，適合冰鎮飲用",
+        "義大利最重要的粉紅酒產區",
+        "溫暖氣候造就的濃郁紅酒，高酒精（14–17%），黑色水果和巧克力",
+        "義大利高產量的有機白酒"
+      ],
+      "answer": 2,
+      "explanation": "Primitivo di Manduria 在 Puglia 陽光強烈的地中海氣候下，達到極高成熟度，釀成酒精度 14–17% 的濃郁紅酒，充滿黑色水果、巧克力和香料，是南義最具代表性的高酒精濃郁紅酒。"
+    },
+    {
+      "question": "Basilicata 的 Aglianico del Vulture DOC 的「Vulture」指什麼？",
+      "options": [
+        "酒莊創始人的家族徽章",
+        "當地一種猛禽象徵",
+        "Monte Vulture 古熄火火山，火山土壤是品質關鍵",
+        "義語「濃郁」的舊稱"
+      ],
+      "answer": 2,
+      "explanation": "Vulture 指 Monte Vulture 古熄火火山，Aglianico 種植在海拔 300–700 公尺的火山土壤（玄武岩、凝灰岩）上，火山礦物質賦予葡萄酒獨特的鐵礦感和清新酸度。"
+    },
+    {
+      "question": "Calabria 的 Cirò DOC（使用 Gaglioppo 品種）在歷史上與什麼傳說有關？",
+      "options": [
+        "羅馬帝國皇帝的御用宮廷酒",
+        "古希臘奧林匹克運動員的勝利獻酒",
+        "中世紀修道院的釀酒秘方",
+        "威尼斯商人的貿易路線必備物資"
+      ],
+      "answer": 1,
+      "explanation": "Cirò（古稱 Cremissa）相傳是古希臘時代獻給奧林匹克競技勝利者的葡萄酒，有「義大利最古老葡萄酒」之稱，反映義大利南部的馬格納格雷西亞（大希臘）歷史，也是 Calabria 最知名的 DOC。"
+    },
+    {
+      "question": "Sardinia 的 Cannonau DOC 使用的品種 Cannonau 與哪個國際品種 DNA 相同？",
+      "options": [
+        "Grenache / Garnacha",
+        "Syrah / Shiraz",
+        "Merlot",
+        "Cabernet Sauvignon"
+      ],
+      "answer": 0,
+      "explanation": "Cannonau 就是 Grenache / Garnacha，DNA 研究甚至顯示薩丁尼亞可能是該品種的原鄉，再從島上傳播到西班牙（Garnacha）和法國南部（Grenache）。"
+    },
+    {
+      "question": "Vermentino di Sardegna DOC 的風味特色是？",
+      "options": [
+        "濃郁重口紅酒，適合燉牛肉",
+        "清爽白酒，帶蜂蜜、茴香和杏仁的地中海風味",
+        "甜型加烈白酒，類似雪莉酒",
+        "粉紅氣泡酒，義大利最有名的 Rosé"
+      ],
+      "answer": 1,
+      "explanation": "Vermentino di Sardegna 是薩丁尼亞的代表白酒，帶蜂蜜、茴香、蘆薈和杏仁，微苦的尾韻是品種特徵，是搭配地中海海鮮料理的完美選擇，也是薩丁尼亞人最引以為傲的白酒。"
+    },
+    {
+      "question": "傳統派（Tradizionalisti）釀造 Barolo 的主要方式是？",
+      "options": [
+        "短浸皮（3–5 天），法國小橡木桶（Barrique）陳年",
+        "長浸皮（30–60 天），大型斯洛維尼亞橡木桶（Botti Grandi）陳年",
+        "去梗冷浸皮，控溫精準釀造",
+        "添加 Barbera 增加顏色和果味"
+      ],
+      "answer": 1,
+      "explanation": "傳統派（Giacomo Conterno, Bartolo Mascarello 等）堅持長浸皮 30–60 天萃取最大單寧，使用大型 Slavonian 橡木桶（Botti，1000–2000 升）陳年 3–5 年以上，賦予酒款沉雄、複雜的陳年潛力。"
+    },
+    {
+      "question": "現代派（Modernisti）釀造 Barolo 的主要方式是？",
+      "options": [
+        "旋轉發酵槽（Rotary Fermenter）快速萃取，法國小橡木桶陳年，果香豐富早開放",
+        "在陶甕（Amphora）中不加硫釀造",
+        "整串葡萄碳酸浸漬法",
+        "添加蒸餾酒提高酒精度"
+      ],
+      "answer": 0,
+      "explanation": "現代派（Elio Altare, Roberto Voerzio 等）採用旋轉發酵槽快速萃取（浸皮 7–15 天），使用法國小橡木桶（Barrique，225 升）增加甜香草和摩卡風味，酒款更早開放，適合較年輕飲用。"
+    },
+    {
+      "question": "Angelo Gaja 對義大利葡萄酒的最大革命性貢獻是？",
+      "options": [
+        "率先引入有機農法",
+        "在 Barbaresco 引入法國小橡木桶和單一葡萄園（MGA）概念，打開義大利酒的國際舞台",
+        "發明 Appassimento 風乾技術",
+        "創立義大利第一個葡萄酒評分系統"
+      ],
+      "answer": 1,
+      "explanation": "Angelo Gaja 於 1970–80 年代在 Barbaresco 引入法國小橡木桶（Barrique）和單一葡萄園概念（Sorì Tildìn、Sorì San Lorenzo、Costa Russi），並積極將義大利酒推向國際高端市場，被譽為改變義大利酒命運的關鍵人物。"
+    },
+    {
+      "question": "Sassicaia 最初為什麼只能標示 Vino da Tavola？",
+      "options": [
+        "酒莊主人刻意選擇最低等級以表示謙遜",
+        "使用 Cabernet Sauvignon 等非法定品種，不符合任何 DOC 規定",
+        "1968 年 Bolgheri 產區尚未成立",
+        "以上皆是"
+      ],
+      "answer": 1,
+      "explanation": "Sassicaia 使用波爾多品種（Cabernet Sauvignon + Cabernet Franc）釀造，因不符合任何義大利 DOC/DOCG 規定，1968 年商業發售時只能標示 Vino da Tavola，直到 1994 年才獲得專屬的 Bolgheri Sassicaia DOC。"
+    },
+    {
+      "question": "Ripasso 技術在 Valpolicella（Veneto）的作用是？",
+      "options": [
+        "將葡萄汁過濾去除色素釀造粉紅酒",
+        "將 Valpolicella 基酒倒回 Amarone 壓榨後的濕潤酒渣，二次發酵增加複雜度",
+        "用旋轉發酵槽快速萃取單寧",
+        "高壓將葡萄汁從舊橡木桶抽入新橡木桶"
+      ],
+      "answer": 1,
+      "explanation": "Ripasso（「再次通過」）技術：將 Valpolicella Classico 基酒倒在製作完 Amarone 後殘留的濕潤酒渣上，再次發酵 10–15 天，吸收殘糖、單寧和風味物質，釀成介於 Valpolicella 和 Amarone 之間的中間款，被稱為「窮人的 Amarone」。"
+    },
+    {
+      "question": "Recioto della Valpolicella DOCG 與 Amarone della Valpolicella DOCG 最主要的區別是？",
+      "options": [
+        "Recioto 使用不同的葡萄品種",
+        "Recioto 停止發酵保留殘糖（甜型），Amarone 發酵至全乾（干型）",
+        "Recioto 在不鏽鋼桶陳年，Amarone 在木桶陳年",
+        "Recioto 只在特定年份生產"
+      ],
+      "answer": 1,
+      "explanation": "兩者都使用風乾葡萄（Appassimento），但 Recioto 在發酵完成前停止（保留殘糖）是甜型；Amarone 讓發酵完全進行至干型（「Amaro」= 苦）。據說 Amarone 源於某次 Recioto 發酵過頭的意外發現。"
+    },
+    {
+      "question": "義大利葡萄酒合作社（Cantina Cooperativa）的重要性是？",
+      "options": [
+        "只生產低品質日常酒，不產任何 DOCG 等級",
+        "占義大利葡萄酒總產量約 55–60%，是農村小農的主要出路",
+        "只在 Sicily 和 Sardinia 存在",
+        "近年已大幅萎縮，占產量不到 10%"
+      ],
+      "answer": 1,
+      "explanation": "義大利合作社占全國葡萄酒產量約 55–60%，是農村小農生存的關鍵結構。部分高品質合作社甚至生產優質 DOCG，如 Trentino 的合作社幾乎主導當地 DOC 總產量，不能一概認為品質低。"
+    },
+    {
+      "question": "義大利葡萄酒出口按金額計算，前三大目的地市場是？",
+      "options": [
+        "中國、日本、韓國",
+        "美國、德國、英國（或瑞士）",
+        "法國、西班牙、葡萄牙",
+        "澳洲、加拿大、巴西"
+      ],
+      "answer": 1,
+      "explanation": "美國、德國、英國（有時排名微調）是義大利葡萄酒最大出口市場（按金額）。美國市場對高端 DOCG 和超級托斯卡納需求旺盛，德國則是 Pinot Grigio 等日常白酒的主要市場。"
+    },
+    {
+      "question": "Sardinia 的 Cannonau 與「藍色地帶（Blue Zone）」長壽研究的關連是？",
+      "options": [
+        "沒有科學根據，是旅遊行銷",
+        "薩丁尼亞是全球五大藍色地帶之一，研究者指出 Cannonau 富含多酚可能有心血管健康效益",
+        "Cannonau 被 WHO 認定為唯一有益心臟健康的葡萄酒",
+        "科學已完全確認每日飲用 Cannonau 可延壽 10 年"
+      ],
+      "answer": 1,
+      "explanation": "薩丁尼亞 Barbagia 山區是全球五大藍色地帶（Blue Zone）之一，百歲老人比例極高。研究者注意到當地人每日適量飲用 Cannonau（富含多酚花青素）可能有心血管保護效果，但仍是研究方向而非確定結論。"
+    },
+    {
+      "question": "關於南義大利葡萄酒的歷史脈絡，下列哪個描述最準確？",
+      "options": [
+        "南義在義大利統一前葡萄酒產量極低，幾乎不出口",
+        "南義長期以高酒精濃郁紅酒提供給北義（甚至法國南部）作為調色拼配用酒",
+        "南義因病蟲害嚴重，直到 20 世紀才開始種葡萄",
+        "南義葡萄酒一直以清淡白酒聞名，比北義更受歐洲市場歡迎"
+      ],
+      "answer": 1,
+      "explanation": "南義（特別是 Puglia、Sicily）因陽光強烈，傳統上生產大量高酒精、高濃度的紅酒，長期作為北義 DOC/DOCG 酒款的拼配補強用酒，甚至出口法國南部提升薄弱年份紅酒的顏色和酒精度。這個「匿名調色」時代在 1980–90 年代後隨著南義自我意識覺醒才逐漸改變。"
+    },
+    {
+      "question": "下列哪個大區不屬於 Level 2 北部（Trentino-Alto Adige、Friuli、Liguria、Emilia-Romagna）課程範疇？",
+      "options": [
+        "Trentino-Alto Adige",
+        "Friuli Venezia Giulia",
+        "Campania",
+        "Liguria"
+      ],
+      "answer": 2,
+      "explanation": "Campania 是南義大區（坎帕尼亞），屬於 Level 2 南義課程範疇，以 Taurasi DOCG（Aglianico）和 Fiano / Greco 白酒著稱；Trentino-Alto Adige、Friuli Venezia Giulia、Liguria 才是 Level 2 北部課程的三個大區。"
+    },
+    {
+      "question": "Nero d'Avola 和 Nerello Mascalese 同為西西里代表品種，最主要的風格差異是？",
+      "options": [
+        "Nerello 比 Nero d'Avola 更濃郁，顏色更深，單寧更高",
+        "Nero d'Avola 濃郁飽滿（類似 Syrah），Nerello 輕盈優雅高酸礦物（類似 Pinot Noir）",
+        "兩者釀成的酒幾乎無法區分",
+        "Nerello 只能釀造粉紅酒，Nero d'Avola 只能釀造紅酒"
+      ],
+      "answer": 1,
+      "explanation": "Nero d'Avola 在西西里平原溫暖環境下，釀成濃郁、飽滿的紅酒類似 Syrah；Nerello Mascalese 在 Etna 火山高海拔（600–1000 公尺）冷涼環境中，釀成輕盈、高酸、礦物感強的優雅紅酒，常被比擬為義大利的 Pinot Noir。"
+    },
+    {
+      "question": "關於 Barolo MGA（Menzioni Geografiche Aggiuntive）系統，下列說明正確的是？",
+      "options": [
+        "是有機認證標準，MGA 代表土地無農藥",
+        "是 2010 年建立的葡萄園地理標示系統，義大利版 Premier Cru 概念",
+        "只適用於 Barbaresco DOCG，不包括 Barolo",
+        "是義大利出口法規的縮寫，限制 Barolo 的出口配額"
+      ],
+      "answer": 1,
+      "explanation": "MGA（Menzioni Geografiche Aggiuntive）是 2010 年 Barolo 和 Barbaresco 官方建立的葡萄園地理標示系統，將各村莊重要葡萄園命名並標準化，類似勃艮第的 Premier Cru 概念，標示在酒標上代表特定地塊出產，如 Barolo MGA Cannubi、Brunate 等。"
+    },
+    {
+      "question": "義大利 En Primeur（期酒）制度最活躍的產區是？",
+      "options": [
+        "Veneto，因 Amarone 需長時間陳年",
+        "Tuscany 高端酒款（Sassicaia、Ornellaia、Brunello）",
+        "Piemonte，因 Barolo 期酒交易最早",
+        "Sicily，因 Etna 火山酒近年最熱門"
+      ],
+      "answer": 1,
+      "explanation": "Tuscany 的高端酒款（Sassicaia、Ornellaia、Masseto 等超級托斯卡納，以及 Brunello di Montalcino）是義大利期酒交易最活躍的，這些酒的期酒交易在波爾多期酒系統的影響下運作，吸引全球收藏家和投資者。"
+    },
+    {
+      "question": "Umbria 的 Orvieto DOC（以 Grechetto 和 Trebbiano 為主）傳統上以哪種風格最著名？",
+      "options": [
+        "干型重口紅酒，陳年超過 10 年",
+        "清爽干型或半干型白酒，是義大利最著名的中部地區白酒之一",
+        "甜型加烈紅酒，類似 Porto",
+        "粉紅氣泡酒，義大利中部最重要的 Rosé"
+      ],
+      "answer": 1,
+      "explanation": "Orvieto DOC 是 Umbria 乃至中部義大利最重要的白酒之一，以 Grechetto 和 Trebbiano 為主，傳統上有干型（Secco）和半干型（Abboccato），清爽易飲，是中世紀教皇廷（Orvieto 曾是教廷臨時駐地）最愛的餐酒。"
+    }
+  ],
   "slides": [
     {
       "type": "title",
       "title": "📋 Level 2 綜合評量",
-      "subtitle": "義大利葡萄酒 Level 2 · 進階完整測驗"
+      "subtitle": "義大利葡萄酒 Level 2 · 進階完整測驗 · 35 題"
+    },
+    {
+      "type": "content",
+      "title": "📚 考試範圍與說明",
+      "content": "<div class='exam-intro'><p>本評量涵蓋 Level 2 全部課程的進階知識，共 35 題。</p><div class='exam-scope'><div class='scope-item'><strong>🏔️ 北義四大區</strong>：Trentino-Alto Adige、Friuli、Liguria、Emilia-Romagna</div><div class='scope-item'><strong>🌿 中義五大區</strong>：Marche、Umbria、Lazio、Abruzzo、Molise</div><div class='scope-item'><strong>☀️ 南義五大區</strong>：Campania、Puglia、Basilicata、Calabria、Sardinia</div><div class='scope-item'><strong>🍇 品種深探</strong>：Aglianico、Primitivo / Zinfandel、Cannonau / Grenache</div><div class='scope-item'><strong>📈 市場與投資</strong>：期酒、合作社、出口市場</div></div><p class='exam-note'>建議時間：45 分鐘 ｜ 及格標準：70 分（25 題以上答對）</p></div>"
     },
     {
       "type": "list",
       "title": "🎯 Level 2 重點回顧",
       "points": [
-        "🏔️ 北義：Trentino、Friuli、Liguria、Emilia-Romagna 各具特色",
-        "🌿 Trentino-Alto Adige 超過 98% 葡萄酒達 DOC/DOCG 等級",
-        "🍷 Friuli 以 Tocai Friulano、Ribolla Gialla 等原生白品種著稱",
-        "🌊 Liguria 的 Vermentino 帶有鹽味礦物感，與海鮮絕配",
-        "🫧 Lambrusco 是 Emilia-Romagna 最具代表性的微氣泡紅酒",
-        "🗺️ 中義：Marche 的 Verdicchio、Umbria 的 Sagrantino、Lazio 的 Frascati",
-        "🍇 Sagrantino di Montefalco 含義大利最高單寧量，需至少 37 個月熟成",
-        "☀️ 南義：Campania、Puglia、Basilicata、Calabria、Sardinia",
-        "🌋 Aglianico 生長於火山土壤，被稱為「南義的 Nebbiolo」",
-        "🔄 Primitivo 與美國 Zinfandel 基因相同，均源自克羅埃西亞",
-        "👑 Nebbiolo → Barolo（傳統派大桶 vs 現代派小桶之爭）",
-        "🍇 Sangiovese → Brunello di Montalcino（5 年才能上市）",
-        "🍽️ 配餐地域性原則：同產區酒食最搭",
-        "💰 Barolo Riserva 頂尖酒莊在拍賣市場最保值"
+        "🏔️ Alto Adige：德奧芳香品種（Gewürztraminer 源自 Tramin / Termeno 村）",
+        "🍸 Friuli：Tocai Friulano → 改名 Friulano（EU 與匈牙利 Tokaj 命名爭議）",
+        "🍊 Friuli Collio DOC：精品白酒重鎮 + 現代橙酒先驅（Josko Gravner）",
+        "⛵ Liguria：Cinque Terre 懸崖梯田，坡度 60%+，人工採收成本極高",
+        "🍖 Emilia-Romagna：Lambrusco 微氣泡紅酒 + 義大利食品穀倉",
+        "🌊 Marche：Verdicchio 苦杏仁尾韻 + 亞得里亞海鮮黃金組合",
+        "🏛️ Umbria：Sagrantino（義大利單寧王，37 個月最低陳年）",
+        "🏛️ Lazio：Frascati 羅馬千年日常白酒（Malvasia + Trebbiano）",
+        "⚠️ 名稱陷阱：Montepulciano d'Abruzzo（品種）≠ Vino Nobile di Montepulciano（Tuscany 產地，用 Sangiovese）",
+        "🔥 Campania：Taurasi DOCG（Aglianico）= 南義 Barolo",
+        "🤍 Campania 雙白：Fiano di Avellino + Greco di Tufo（Avellino 省火山丘陵）",
+        "🌞 Puglia：Primitivo = Zinfandel（克羅埃西亞 Tribidrag 起源，2001 DNA 確認）",
+        "🌋 Basilicata：Aglianico del Vulture（Monte Vulture 火山土）",
+        "⚔️ Calabria：Cirò DOC Gaglioppo（古希臘奧運獻酒傳說）",
+        "🏖️ Sardinia：Cannonau = Grenache（薩丁尼亞可能是原鄉）",
+        "🌿 Sardinia：Vermentino 地中海清爽白酒 + 藍色地帶長壽研究",
+        "⚖️ Barolo 之爭：傳統派（長浸皮 + 大 Botti）vs. 現代派（短浸皮 + Barrique）",
+        "🦁 Gaja 革命：Barbaresco 單一葡萄園 + 法國小橡木桶 → 義大利酒國際化",
+        "📜 Sassicaia：超級托斯卡納鼻祖，1994 年成唯一以酒莊命名 DOC",
+        "🍷 Ripasso = Valpolicella 倒回 Amarone 酒渣二次發酵",
+        "🍯 Recioto（甜型）vs. Amarone（全干型）— 同技術，不同發酵終點",
+        "🏭 合作社占義大利總產量約 55-60%",
+        "📊 出口前三大市場：美國、德國、英國",
+        "📈 期酒最活躍：Tuscany 高端（Sassicaia、Ornellaia、Brunello）"
       ]
     }
   ]

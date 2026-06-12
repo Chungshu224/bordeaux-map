@@ -3,89 +3,121 @@
   "title": "南義原生品種寶庫",
   "quiz": [
     {
-      "question": "Aglianico del Vulture 被稱為「南義 Barolo」的主要原因是？",
+      "question": "Nerello Mascalese 被稱為「義大利的 Pinot Noir」，主要因為？",
       "options": [
-        "產於同一個地區",
-        "都需要長時間陳年且單寧強勁",
-        "品種相同",
-        "葡萄園面積相似"
+        "兩者都是黑皮諾品種的變種",
+        "Nerello Mascalese 具有輕盈優雅的風格、細膩的單寧和極強的風土表達力",
+        "兩者都主要產於北義的寒冷氣候",
+        "兩者都以氣泡酒著稱"
       ],
       "answer": 1,
-      "explanation": "Aglianico del Vulture 和 Barolo 都以 100% 單一品種釀造、極高單寧、高酸度和長時間陳年需求聞名，兩者都需要至少 20-30 年才能展現最佳狀態。"
+      "explanation": "Nerello Mascalese 雖然種植於西西里島埃特納火山（義大利最南端），但釀出的酒卻展現出類似勃根地 Pinot Noir 的輕盈優雅——淺寶石紅色澤、細膩單寧、高酸度，和極強的風土表達力（火山土壤的礦物感），因此被稱為「義大利的 Pinot Noir」。"
     },
     {
-      "question": "Greco di Tufo DOCG 的「Tufo」是指什麼？",
+      "question": "Aglianico del Vulture DOC 的「Vulture」是指什麼？",
       "options": [
-        "一個釀酒師的姓氏",
-        "凝灰岩（火山岩），賦予獨特礦物感",
-        "義大利語「古老」",
-        "一個村莊的名稱"
+        "義大利語「禿鷹」，代表高品質",
+        "Basilicata 的 Monte Vulture 死火山，Aglianico 葡萄種植於火山斜坡",
+        "一位釀酒師的名字",
+        "拉丁語「力量」，描述 Aglianico 的強勁結構"
       ],
       "answer": 1,
-      "explanation": "Tufo 是指凝灰岩（Tufa），一種由火山灰沉積形成的岩石。Campania 的 Greco di Tufo 產區土壤以凝灰岩為主，賦予葡萄酒獨特的礦物感和鹹味。"
+      "explanation": "Vulture 是 Basilicata 大區境內的死火山 Monte Vulture（海拔 1,327m）。Aglianico 葡萄種植於火山斜坡（海拔 300-700m），火山土壤賦予這款酒獨特的礦物感和結構感。"
     },
     {
-      "question": "DNA 研究證實 Primitivo 與哪個國際著名品種完全相同？",
+      "question": "Gaglioppo 是哪個大區的代表性品種？",
+      "options": ["Campania", "Basilicata", "Calabria", "Sicilia"],
+      "answer": 2,
+      "explanation": "Gaglioppo 是義大利南端 Calabria 大區的代表品種，主要產區為 Cirò DOC（Calabria 最重要的 DOC）。Cirò 被認為是義大利最古老的葡萄酒之一，歷史可追溯至古希臘殖民時代。"
+    },
+    {
+      "question": "Negroamaro 的名稱含義是什麼？",
       "options": [
-        "Cabernet Sauvignon",
-        "Merlot",
-        "Zinfandel",
-        "Syrah"
+        "「紅色苦味」，描述品種特性",
+        "「黑色苦澀」，以深色和明顯苦澀收尾著稱",
+        "「南方黑色」，描述種植地區",
+        "「古老黑色」，描述葡萄的歷史"
+      ],
+      "answer": 1,
+      "explanation": "Negroamaro 的名稱由「Negro（黑色）+ Amaro（苦澀）」組成，直接描述品種最大特色：深黑色的果皮和釀成酒後明顯的苦澀收尾，這正是品種的「個性標誌」。"
+    },
+    {
+      "question": "Primitivo 和 Zinfandel 的關係是什麼？",
+      "options": [
+        "完全沒有關係，只是外形相似",
+        "Zinfandel 是 Primitivo 的後代品種",
+        "兩者是同一品種，起源於克羅地亞（Tribidrag/Crljenak），分別在義大利和美國發展",
+        "Primitivo 是 Zinfandel 的改良版本"
       ],
       "answer": 2,
-      "explanation": "1990 年代的 DNA 研究確認 Primitivo 和美國加州的 Zinfandel 是完全相同的品種，兩者均源自克羅埃西亞的 Crljenak Kaštelanski。"
+      "explanation": "DNA 比對（2001 年 UC Davis 研究）確認 Primitivo 和 Zinfandel 是同一品種，共同起源於克羅地亞的 Tribidrag（Crljenak Kaštelanski）。18 世紀分別傳入義大利南部和美國加州，在不同風土下發展出不同個性。"
     },
     {
-      "question": "Elena Fucci 的 Titolo 代表哪種南義葡萄酒？",
+      "question": "Nerello Mascalese 在 Etna DOC 釀造中，哪個地理因素是最關鍵的風土元素？",
       "options": [
-        "Greco di Tufo DOCG",
-        "Aglianico del Vulture DOC（生物動力農法）",
-        "Primitivo di Manduria DOC",
-        "Fiano di Avellino DOCG"
+        "地中海海洋氣候帶來的溫暖",
+        "埃特納火山的高海拔（500-1000m）和火山玄武岩土壤",
+        "西西里島的低降雨量",
+        "人工灌溉系統帶來的穩定水分"
       ],
       "answer": 1,
-      "explanation": "Elena Fucci 的 Titolo 是 Aglianico del Vulture DOC 的代表作，採用生物動力農法，是南義最受矚目的女性釀酒師之一，展現了 Aglianico 的優雅潛力。"
+      "explanation": "Etna DOC 的核心優勢是埃特納火山的高海拔（500-1,000m），帶來冷涼氣候（晝夜溫差 20°C+）、超長的生長季，和富含礦物質的火山玄武岩土壤——這三者共同造就了 Nerello Mascalese 的輕盈優雅與深邃礦物感。"
+    },
+    {
+      "question": "南義原生品種中，哪一個是 Puglia 最廣泛種植的品種，以飽滿深色和易飲著稱？",
+      "options": ["Gaglioppo", "Primitivo", "Negroamaro", "Nerello Cappuccio"],
+      "answer": 2,
+      "explanation": "Negroamaro 是 Puglia 種植面積最廣的品種，主要產區 Salice Salentino DOC（薩蘭托半島），以深黑色澤、飽滿果味和苦澀收尾著稱，是 Puglia 大區的「量產主力」也是「精品代表」。"
     }
   ],
   "slides": [
     {
       "type": "title",
       "title": "南義原生品種寶庫",
-      "subtitle": "Aglianico · Greco · Fiano · Primitivo — 南義的四大原生珍寶"
+      "subtitle": "Nerello Mascalese · Aglianico · Gaglioppo · Negroamaro · Primitivo · Greco · Fiano — 火山、太陽與海洋的偉大品種"
     },
     {
       "type": "content",
-      "title": "Aglianico del Vulture — 南義的 Barolo",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>火山土壤孕育的南義之王</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Aglianico 生長在 Basilicata 的 Vulture 死火山（高度 1326 公尺）山坡上，火山土壤賦予獨特礦物感，是義大利南部最有陳年潛力的紅葡萄品種，並稱「南義 Barolo」。</p><div class=\"science-card\">產區：Aglianico del Vulture DOC｜土壤：火山岩、凝灰岩｜海拔 300-700m</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">品種特徵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">風味：黑莓、深色李子、黑巧克力、皮革、礦物煙燻感｜陳年後：松露、雪松、菸草</div><div class=\"orvieto-card\">結構：極高單寧、高酸度、高酒精（14-15%）｜陳年需求：最少 10-15 年，優秀年份 25-30 年</div><div class=\"orvieto-card\">頂級酒莊：Elena Fucci（Titolo）、Paternoster（Don Anselmo）、D'Angelo｜€25-80</div></div></div></div>"
+      "title": "Nerello Mascalese — 埃特納火山的「義大利 Pinot Noir」",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>為什麼叫「義大利 Pinot Noir」？</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Nerello Mascalese 種植於西西里島活火山埃特納（Mt. Etna）的斜坡上，是義大利最令人驚嘆的矛盾品種——它生長在南義最炎熱的環境，卻釀出極度輕盈、細膩、高酸的紅酒，風格更接近北義或勃根地，而非典型南義風格。這種反差正是埃特納火山的魔力所在。</p><div class=\"science-card\">產區：Etna DOC（西西里島）｜海拔：500–1,000m｜土壤：火山玄武岩｜氣候：高海拔冷涼 + 火山礦物</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">品種特徵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>外觀：</strong>淺寶石紅色到中等深度（遠淺於典型南義紅酒）</div><div class=\"orvieto-card\"><strong>香氣：</strong>新鮮紅色漿果（草莓、覆盆莓）、玫瑰、紫羅蘭、血橙、火山礦物感（火山岩石、煙燻、燧石）</div><div class=\"orvieto-card\"><strong>口感：</strong>細膩精緻單寧、高酸度、中等酒體｜絕非「沉重南義風格」，而是「輕盈勃根地氣質」</div><div class=\"orvieto-card\"><strong>陳年：</strong>頂級款陳年 10–20 年，老藤（老藤樹齡 60–100 年以上在埃特納極常見）版本複雜度更高</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "Greco di Tufo ✕ Fiano di Avellino — Campania 雙白",
-      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Greco di Tufo DOCG</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Campania 的 Tufo 村｜土壤：凝灰岩（火山灰岩），賦予鹹礦物感</div><div class=\"orvieto-card\">風味：白桃、杏桃、柑橘皮、礦物鹹感｜中高酸度、飽滿酒體｜陳年潛力 8-12 年</div><div class=\"orvieto-card\">頂級：Feudi di San Gregorio、Benito Ferrara｜€18-45</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Fiano di Avellino DOCG</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Irpinia 山區（高海拔）｜義大利最古老白葡萄品種之一，古羅馬稱為「Apianum」</div><div class=\"orvieto-card\">風味：更芳香、奶油感、橄欖油質地｜榛果、蜂蜡、熱帶果香｜陳年潛力 10-15 年</div><div class=\"orvieto-card\">頂級：Mastroberardino（Radici）、Ciro Picariello｜€20-55</div></div></div></div></div>"
+      "title": "Etna DOC — 義大利最熱新星產區",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>產區結構：North vs South</h3><p class=\"mf-prod\"><strong>Etna Rosso DOC（北坡）：</strong>北坡（Contrada del Nord）是公認最優秀的方向，以 Solicchiata 為核心，老藤密集，礦物複雜度最高。代表：Cornelissen、Benanti、Terre Nere、Passopisciaro<br><strong>Etna Rosso（南坡）：</strong>陽光更充沛，酒體稍飽滿，礦物感稍弱，適合早飲款</p></div><div class=\"mf-zone warm\"><h3>頂級生產者深度檔案</h3><p class=\"mf-prod\"><strong>Frank Cornelissen：</strong>比利時移民，自然酒先驅。旗艦款 Magma（老藤，極低產量）和 Munjebel 系列，幾乎不添加硫，陶甕發酵，是 Etna 自然酒的最高峰，均價 €80–400+<br><strong>Benanti：</strong>Etna 現代精品酒的奠基者（1988 年），以 Serra della Contessa（北坡 Rovittello）和 Bianco Superiore（白酒）確立 Etna 國際聲譽，均價 €25–80<br><strong>Terre Nere（黑土地）：</strong>Marc de Grazia（美籍義裔進口商轉型酒農），首創 Etna 的「MGA 概念」，以各 Contrada 單一地塊分裝，均價 €40–120</p></div><div class=\"mf-zone cool\"><h3>Etna 投資潛力</h3><p class=\"mf-prod\"><strong>2010 年前：</strong>Etna 酒幾乎無人問津，一瓶頂款不到 €20<br><strong>2015–2020 年：</strong>Wine Spectator、Wine Advocate 連續給出 95+ 高分，引爆國際關注<br><strong>2020–2026 年：</strong>頂款均價上漲 300–500%，Cornelissen Magma 已進入拍賣市場（€300–500+/瓶）<br><strong>機會：</strong>仍有大量老藤、低調酒農尚未被主流市場發現，Etna 北坡新 Contrada 款是下一波焦點</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "Primitivo di Manduria — 南義的「義大利 Zinfandel」",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>DNA 謎題解開：Primitivo = Zinfandel</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">1990 年代 DNA 研究震驚葡萄酒界：Primitivo 與美國 Napa Valley 的 Zinfandel 完全相同，兩者均源自克羅埃西亞的 Crljenak Kaštelanski。義大利版本更為結構感強，美國版本更濃郁豐厚。</p></div></div></div><div class=\"winemaking-section\"><p class=\"winemaking-intro\">Primitivo 與 Zinfandel 的風格對比</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Primitivo di Manduria DOC</h3><ul><li>產區：Puglia 的 Manduria</li><li>風格：黑櫻桃、黑巧克力、甘草、泥土感</li><li>酒精：14-16%（天然高糖分）</li><li>頂級：Gianfranco Fino（Es）、Morella</li><li>價格：€15-60</li></ul></div><div class=\"method-card modern\"><h3>California Zinfandel</h3><ul><li>產區：Sonoma、Napa、Paso Robles</li><li>風格：黑莓醬、覆盆莓果醬、煙燻香料</li><li>酒精：14.5-17%（更高糖度）</li><li>頂級：Ridge、Turley、Seghesio</li><li>價格：€25-100</li></ul></div></div></div></div></div>"
+      "title": "Aglianico — 南義最偉大的紅品種",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>「南義的 Barolo」</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Aglianico 是南義公認最偉大的紅品種，以其驚人的單寧結構、高酸度和超長陳年潛力（20–30 年）著稱，被評論家封為「南義的 Barolo」。它有兩個核心 DOCG：Taurasi DOCG（Campania 大區）和 Aglianico del Vulture DOC（Basilicata 大區）。兩者風格各有特色，形成義大利葡萄酒世界最有趣的同品種 Terroir 對比之一。</p><div class=\"science-card\">核心 DOCG/DOC：Taurasi DOCG（Campania）vs Aglianico del Vulture DOC（Basilicata）</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Taurasi vs Aglianico del Vulture 深度對比</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Taurasi DOCG（Campania）：</strong>海拔 400-700m 火山丘陵，黏土石灰岩土壤。法定最低陳年 3 年（Riserva 4 年）。風格更厚重、單寧更強、黑色水果 + 焦油 + 皮革複雜度，陳年 20-30 年潛力。頂級：Mastroberardino（Radici）、Feudi di San Gregorio、Terredora di Paolo</div><div class=\"orvieto-card\"><strong>Aglianico del Vulture DOC（Basilicata）：</strong>Monte Vulture 死火山斜坡（海拔 300-700m），火山凝灰岩土壤。法定最低陳年 1 年（Superiore Riserva 5 年）。風格更優雅、礦物感更突出（火山特質）、紅色漿果 + 火山灰的獨特煙燻感，陳年 15-25 年</div><div class=\"orvieto-card\"><strong>品種共同點：</strong>義大利最晚採收的品種之一（10 月底到 11 月初），高單寧、高酸度、低 pH，年輕時極難親近，需要大量時間才能展現複雜度</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "四大南義原生品種全面對比",
-      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Aglianico</h3><p class=\"mf-style\">紅葡萄｜Basilicata 火山區｜南義之王</p><p class=\"mf-prod\">極高單寧和酸度 / 陳年 20-30 年 / €25-80 / 搭配羊肉、鹿肉</p></div><div class=\"mf-zone warm\"><h3>Greco di Tufo</h3><p class=\"mf-style\">白葡萄｜Campania DOCG｜凝灰岩土壤</p><p class=\"mf-prod\">鹹礦物感、清新桃香 / 陳年 8-12 年 / €18-45 / 搭配海鮮</p></div><div class=\"mf-zone cool\"><h3>Fiano di Avellino</h3><p class=\"mf-style\">白葡萄｜Campania DOCG｜高海拔山區</p><p class=\"mf-prod\">芳香奶油感、油質地 / 陳年 10-15 年 / €20-55 / 搭配白肉</p></div><div class=\"mf-zone plain\"><h3>Primitivo</h3><p class=\"mf-style\">紅葡萄｜Puglia DOC｜= Zinfandel</p><p class=\"mf-prod\">濃郁黑果、高酒精 / 陳年 5-15 年 / €15-60 / 搭配燒烤</p></div></div></div>"
+      "title": "Gaglioppo & Negroamaro — 義大利靴尖的驕傲",
+      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Gaglioppo — Calabria 的古希臘遺產</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>歷史：</strong>Cirò DOC 是義大利最古老的葡萄酒之一，古希臘殖民者（Magna Graecia）在 Calabria 海岸種植，相傳是奧林匹克運動員的勝利之酒，歷史超過 2,700 年</div><div class=\"orvieto-card\"><strong>品種特徵：</strong>深寶石紅色、黑莓 + 紅醋栗 + 白胡椒 + 地中海草本（迷迭香、百里香）、中高單寧、高酸度｜陳年 8–15 年</div><div class=\"orvieto-card\"><strong>頂級生產者：</strong>Librandi（Duca Sanfelice Riserva）、A. Caparra & C. Siciliani（古法發酵）｜均價 €12–35</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Negroamaro — Puglia 最廣泛的黑色苦澀</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>名稱含義：</strong>Negro（黑色）+ Amaro（苦澀）——深黑色果皮和明顯苦澀收尾是品種最大特色，也是品種的「風味指紋」</div><div class=\"orvieto-card\"><strong>主產區：</strong>Salice Salentino DOC（Puglia 薩蘭托半島）｜深紫黑色、黑李子、黑巧克力、茴香、地中海香草 + 苦澀收尾</div><div class=\"orvieto-card\"><strong>兩種風格：</strong>Rosso（飽滿型，12–18 個月橡木桶，陳年 10–15 年）vs Rosato（以深色 Rosé 聞名，是義大利最佳粉紅酒之一）｜頂級：Leone de Castris（Five Roses Rosato）、Candido｜均價 €10–30</div></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Primitivo、Greco 與 Fiano — 南義多面向",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Primitivo = Zinfandel</h3><p class=\"mf-style\">Puglia｜Primitivo di Manduria DOC/DOCG</p><p class=\"mf-prod\"><strong>DNA 同源：</strong>2001 年 UC Davis 研究確認與 Zinfandel（美）、Tribidrag（克羅地亞）同一品種<br><strong>風格差異：</strong>義大利 Primitivo 比加州 Zinfandel 更乾燥、黑色水果更純淨、單寧更緊；加州 Zin 更熱帶果香、酒精更高（15–16%）<br><strong>Dolce Naturale（甜型）：</strong>不添加任何甜化劑，以葡萄自然高糖分在低溫發酵中保留殘糖（13–14%酒精，殘糖 60g/L），是 Primitivo 的精品甜酒，均價 €25–60</p></div><div class=\"mf-zone warm\"><h3>Greco di Tufo DOCG</h3><p class=\"mf-style\">Campania｜DOCG</p><p class=\"mf-prod\"><strong>Tufo 地名：</strong>「Tufo」是義大利語的凝灰岩（火山沉積石），正是 Irpinia 產區的典型土壤，賦予 Greco 白酒獨特的鹹礦物感和煙燻感<br><strong>風味：</strong>白桃、杏桃、柑橘皮、礦石 + 特有的硫磺礦物感（「打火石」的氣息）<br><strong>頂級：</strong>Feudi di San Gregorio（Cutizzi 單一園）、Mastroberardino（Novaserra）｜均價 €15–35</p></div><div class=\"mf-zone cool\"><h3>Fiano di Avellino DOCG</h3><p class=\"mf-style\">Campania｜DOCG</p><p class=\"mf-prod\"><strong>命名由來：</strong>「Fiano」被認為與古羅馬蜂巢（apis）有關，指葡萄的蜂蜜香氣<br><strong>風味：</strong>蜂蜜、梨子、榛果、白花、白蘑菇 + 奶油感餘韻｜是 Greco 的優雅對照——Greco 更礦物緊緻，Fiano 更圓潤奶滑<br><strong>頂級：</strong>Feudi di San Gregorio（Pietracalda）、Di Meo（Cenerentola 單一園）｜均價 €18–45</p></div><div class=\"mf-zone plain\"><h3>南義白酒雙雄對比</h3><p class=\"mf-prod\"><strong>Greco di Tufo：</strong>礦物感重、酸度緊、硫磺燧石氣息｜搭配生蠔、海鮮<br><strong>Fiano di Avellino：</strong>圓潤奶滑、蜂蜜榛果｜搭配龍蝦燉飯、軟殼蟹<br><strong>共同點：</strong>兩者都有超強的陳年潛力（8–15 年），是義大利最低估的頂級白酒之一</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "南義五大品種全方位對比",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Nerello Mascalese</h3><p class=\"mf-style\">紅｜Etna DOC（西西里火山）</p><p class=\"mf-prod\">輕盈優雅 / 火山礦物感 / 義大利 Pinot Noir / 陳年 10–20 年 / €30–400+ / 近年漲幅最驚人</p></div><div class=\"mf-zone warm\"><h3>Aglianico</h3><p class=\"mf-style\">紅｜Taurasi DOCG / Aglianico del Vulture DOC</p><p class=\"mf-prod\">南義最偉大 / 高單寧高酸 / 陳年 20–30 年 / 南義 Barolo / 晚採收 10 月底</p></div><div class=\"mf-zone cool\"><h3>Gaglioppo / Negroamaro</h3><p class=\"mf-style\">紅｜Cirò DOC（Calabria）/ Salice Salentino（Puglia）</p><p class=\"mf-prod\">古希臘遺產 / 地中海香草 / Negroamaro 以 Rosato 聞名 / 高性價比 €10–35</p></div><div class=\"mf-zone plain\"><h3>Greco di Tufo / Fiano di Avellino</h3><p class=\"mf-style\">白｜Campania DOCG 雙雄</p><p class=\"mf-prod\">Greco：礦物燧石 / Fiano：圓潤蜂蜜 / 兩者陳年潛力均 8–15 年 / 義大利最低估頂級白酒</p></div></div></div>"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
-        "Aglianico del Vulture 生長在 Basilicata 死火山山坡，火山土壤賦予獨特礦物感，稱「南義 Barolo」",
-        "Aglianico 極高單寧與酸度，需 10-15 年以上才適飲，優秀年份可陳年 25-30 年",
-        "Greco di Tufo DOCG：Tufo（凝灰岩）土壤賦予獨特鹹礦物感，白桃、杏桃、柑橘皮風味",
-        "Fiano di Avellino DOCG：義大利最古老白葡萄品種之一（古羅馬稱 Apianum），芳香奶油油質感",
-        "Greco 更鹹礦物感（清爽型），Fiano 更芳香奶油（飽滿型），兩者陳年潛力都在 10 年以上",
-        "DNA 研究確認 Primitivo（義大利）= Zinfandel（美國），均源自克羅埃西亞的 Crljenak Kaštelanski",
-        "Primitivo di Manduria DOC：黑櫻桃、黑巧克力、甘草，酒精 14-16%，Gianfranco Fino 是標竿",
-        "四大品種皆為南義在地原生品種，代表不同風土——火山、凝灰岩、山區、沿海平原",
-        "南義葡萄酒的未來：品質持續提升、性價比極高，是尋求物超所值好酒的最佳選擇"
+        "Nerello Mascalese：埃特納火山（500–1,000m 海拔），輕盈優雅，義大利 Pinot Noir；Frank Cornelissen、Benanti、Terre Nere 為頂級生產者；近年漲幅 300–500%",
+        "Etna DOC：北坡優於南坡；老藤 Contrada 款是最高複雜度；已進入拍賣市場",
+        "Aglianico：南義最偉大紅品種，「南義 Barolo」；Taurasi DOCG（Campania）vs Aglianico del Vulture DOC（Basilicata）形成最精彩的同品種風土對比",
+        "Gaglioppo / Cirò DOC：古希臘殖民時代超過 2,700 年歷史；地中海香草 + 黑莓風味",
+        "Negroamaro：義語「黑色苦澀」；Puglia 最廣泛品種；Leone de Castris 的 Five Roses Rosato 是義大利最佳粉紅酒之一",
+        "Primitivo = Zinfandel = Tribidrag（DNA 2001 年確認）；Primitivo di Manduria 的 Dolce Naturale 是精品甜型代表款",
+        "Greco di Tufo DOCG：凝灰岩土壤 → 礦物燧石感；Fiano di Avellino DOCG：圓潤蜂蜜榛果；兩者均有 8–15 年陳年潛力",
+        "配餐建議：Nerello Mascalese 配烤金槍魚 / Aglianico 配 Neapolitan 慢燉牛肉 / Negroamaro Rosato 配章魚沙拉 / Fiano 配龍蝦"
       ]
     },
     {
@@ -95,63 +127,87 @@
       "questions": [
         {
           "type": "single",
-          "question": "Aglianico del Vulture 被稱為「南義 Barolo」的主要原因是？",
+          "question": "Nerello Mascalese 被稱為「義大利 Pinot Noir」的原因是？",
           "options": [
-            "產於同一個地區",
-            "都需要長時間陳年且單寧強勁",
-            "品種相同",
-            "葡萄園面積相似"
+            "它是 Pinot Noir 的基因後代",
+            "輕盈優雅、細膩單寧和極強的火山風土表達力",
+            "主要產於北義寒冷氣候",
+            "以氣泡酒聞名"
           ],
           "correct": 1,
-          "explanation": "Aglianico del Vulture 和 Barolo 都以 100% 單一品種釀造、極高單寧、高酸度和長時間陳年需求聞名，兩者都需要至少 20-30 年才能展現最佳狀態。"
+          "explanation": "Nerello Mascalese 雖種植於南義西西里火山，卻展現類似勃根地 Pinot Noir 的輕盈優雅——淺寶石紅、細膩單寧、高酸度和極強的火山風土表達力（礦物感），因此得名「義大利 Pinot Noir」。"
         },
         {
           "type": "single",
-          "question": "Greco di Tufo DOCG 的「Tufo」是指什麼？",
+          "question": "Taurasi DOCG 和 Aglianico del Vulture DOC 的主要風格差異是？",
           "options": [
-            "一個釀酒師的姓氏",
-            "凝灰岩（火山岩），賦予獨特礦物感",
-            "義大利語「古老」",
-            "一個村莊的名稱"
+            "完全相同，是同一產區的不同命名",
+            "Taurasi 更厚重、黑色水果 + 焦油；Aglianico del Vulture 更優雅、火山礦物感更突出",
+            "Taurasi 是白酒產區，Vulture 是紅酒產區",
+            "Vulture 酒體更厚重，Taurasi 更輕盈"
           ],
           "correct": 1,
-          "explanation": "Tufo 是指凝灰岩（Tufa），一種由火山灰沉積形成的岩石。Campania 的 Greco di Tufo 產區土壤以凝灰岩為主，賦予葡萄酒獨特的礦物感和鹹味。"
+          "explanation": "Taurasi（Campania，黏土石灰岩）風格更厚重、黑色水果 + 焦油；Aglianico del Vulture（Basilicata，火山凝灰岩）風格更優雅、火山礦物煙燻感更突出——是同品種最精彩的風土對比之一。"
         },
         {
           "type": "single",
-          "question": "DNA 研究證實 Primitivo 與哪個國際著名品種完全相同？",
+          "question": "Gaglioppo 的 Cirò DOC 有什麼歷史意義？",
           "options": [
-            "Cabernet Sauvignon",
-            "Merlot",
-            "Zinfandel",
-            "Syrah"
+            "義大利第一個獲得 DOC 的葡萄酒",
+            "義大利最大的葡萄酒產區",
+            "歷史超過 2,700 年的古希臘殖民時代葡萄酒，相傳是奧林匹克運動員的勝利之酒",
+            "義大利最貴的葡萄酒"
           ],
           "correct": 2,
-          "explanation": "1990 年代的 DNA 研究確認 Primitivo 和美國加州的 Zinfandel 是完全相同的品種，兩者均源自克羅埃西亞的 Crljenak Kaštelanski。"
+          "explanation": "Cirò DOC 是義大利最古老的葡萄酒之一，古希臘殖民者（Magna Graecia）在 Calabria 海岸種植 Gaglioppo，歷史超過 2,700 年，相傳是古代奧林匹克運動員的勝利獎酒。"
         },
         {
           "type": "single",
-          "question": "Elena Fucci 的 Titolo 代表哪種南義葡萄酒？",
+          "question": "Primitivo 和 Zinfandel 是什麼關係？",
           "options": [
-            "Greco di Tufo DOCG",
-            "Aglianico del Vulture DOC（生物動力農法）",
-            "Primitivo di Manduria DOC",
-            "Fiano di Avellino DOCG"
+            "完全不同的品種",
+            "Zinfandel 是 Primitivo 的後代",
+            "兩者是同一品種，DNA 2001 年確認均源自克羅地亞 Tribidrag",
+            "Primitivo 是 Zinfandel 的改良品種"
           ],
-          "correct": 1,
-          "explanation": "Elena Fucci 的 Titolo 是 Aglianico del Vulture DOC 的代表作，採用生物動力農法，是南義最受矚目的女性釀酒師之一。"
+          "correct": 2,
+          "explanation": "2001 年 UC Davis DNA 比對確認 Primitivo（義大利 Puglia）和 Zinfandel（美國加州）是同一品種，共同起源於克羅地亞的 Tribidrag（Crljenak Kaštelanski）。"
         },
         {
           "type": "single",
-          "question": "Fiano di Avellino 與 Greco di Tufo 相比，最大的風格差異是？",
+          "question": "Greco di Tufo 和 Fiano di Avellino 最主要的風格差異是？",
           "options": [
-            "酸度更低",
-            "更芳香、奶油質感（油質地）",
-            "單寧更強",
-            "顏色更深"
+            "Greco 是紅品種，Fiano 是白品種",
+            "Greco 礦物感強、硫磺燧石感；Fiano 圓潤奶滑、蜂蜜榛果",
+            "兩者風格幾乎相同",
+            "Greco 甜型，Fiano 干型"
           ],
           "correct": 1,
-          "explanation": "Fiano di Avellino 相比 Greco di Tufo 更為芳香飽滿，帶有奶油般的油質感（榛果、蜂蠟、熱帶果香），而 Greco 則以鹹礦物感和清爽桃香為主。"
+          "explanation": "Greco di Tufo DOCG 以凝灰岩土壤賦予礦物感和硫磺燧石氣息；Fiano di Avellino DOCG 以圓潤奶滑、蜂蜜和榛果著稱——兩者是 Campania 白酒雙雄，風格形成完美互補。"
+        },
+        {
+          "type": "single",
+          "question": "Negroamaro 名稱的含義和最著名的酒款類型是？",
+          "options": [
+            "「南方黑色」；以紅酒聞名",
+            "「黑色苦澀」；以 Rosato 粉紅酒聞名（Leone de Castris 的 Five Roses）",
+            "「古老黑色」；以甜型酒聞名",
+            "「濃縮黑色」；以氣泡酒聞名"
+          ],
+          "correct": 1,
+          "explanation": "Negroamaro 的名稱由「Negro（黑色）+ Amaro（苦澀）」組成；Leone de Castris 的 Five Roses Rosato（1943 年，義大利第一款商業粉紅酒）是這個品種最著名的代表款。"
+        },
+        {
+          "type": "single",
+          "question": "Etna DOC 近年投資熱度的主要驅動力是？",
+          "options": [
+            "義大利政府補貼",
+            "Wine Spectator / Wine Advocate 連續 95+ 高分引爆國際關注，加上老藤稀缺性",
+            "埃特納火山爆發提升知名度",
+            "西西里島成為旅遊勝地帶動葡萄酒銷售"
+          ],
+          "correct": 1,
+          "explanation": "2015–2020 年間，Wine Spectator 和 Wine Advocate 連續給 Etna Rosso 95+ 高分，引爆國際收藏家關注。加上埃特納老藤（樹齡 60–100 年）的極度稀缺性，頂款均價 2010 年至今漲幅 300–500%。"
         }
       ]
     }

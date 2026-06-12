@@ -224,27 +224,39 @@ export class MapSlideManager {
         })
       }
 
-      // 添加標籤圖層
-      if (geojsonFile.showLabels && geojsonData.features && geojsonData.features.length > 0) {
-        const feature = geojsonData.features[0]
-        if (feature.properties && feature.properties.name) {
-          if (!this.map.getLayer(`${layerId}-label`)) {
-            this.map.addLayer({
-              id: `${layerId}-label`,
-              type: 'symbol',
-              source: sourceId,
-              layout: {
-                'text-field': ['get', 'name'],
-                'text-size': 14,
-                'text-anchor': 'center'
-              },
-              paint: {
-                'text-color': '#333',
-                'text-halo-color': '#fff',
-                'text-halo-width': 2
+      // 添加標籤圖層（使用 displayName 與計算的多邊形重心）
+      if (geojsonFile.showLabels && geojsonFile.displayName && geojsonData.features && geojsonData.features.length > 0) {
+        const centroid = this._calcCentroid(geojsonData)
+        if (centroid && !this.map.getLayer(`${layerId}-label`)) {
+          const labelSourceId = `${sourceId}-label-pt`
+          if (!this.map.getSource(labelSourceId)) {
+            this.map.addSource(labelSourceId, {
+              type: 'geojson',
+              data: {
+                type: 'Feature',
+                geometry: { type: 'Point', coordinates: centroid },
+                properties: { label: geojsonFile.displayName }
               }
             })
           }
+          this.map.addLayer({
+            id: `${layerId}-label`,
+            type: 'symbol',
+            source: labelSourceId,
+            layout: {
+              'text-field': ['get', 'label'],
+              'text-size': 12,
+              'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+              'text-anchor': 'center',
+              'text-allow-overlap': false,
+              'text-ignore-placement': false
+            },
+            paint: {
+              'text-color': '#FFFFFF',
+              'text-halo-color': '#1a1a1a',
+              'text-halo-width': 1.5
+            }
+          })
         }
       }
 
@@ -256,6 +268,24 @@ export class MapSlideManager {
       console.error(`載入 GeoJSON 失敗:`, error)
       return null
     }
+  }
+
+  /**
+   * 計算 GeoJSON 多邊形的近似重心（平均所有頂點座標）
+   */
+  _calcCentroid(geojsonData) {
+    let lngSum = 0, latSum = 0, count = 0
+    const add = (coords) => {
+      if (!Array.isArray(coords)) return
+      if (typeof coords[0] === 'number') {
+        lngSum += coords[0]; latSum += coords[1]; count++
+      } else {
+        coords.forEach(add)
+      }
+    }
+    const features = geojsonData.features || (geojsonData.type === 'Feature' ? [geojsonData] : [])
+    features.forEach(f => { if (f.geometry?.coordinates) add(f.geometry.coordinates) })
+    return count > 0 ? [lngSum / count, latSum / count] : null
   }
 
   /**

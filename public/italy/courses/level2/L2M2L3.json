@@ -54,11 +54,6 @@
       "subtitle": "Roma 的葡萄酒與 Frascati 傳統"
     },
     {
-      "type": "map_placeholder",
-      "title": "🏛️ Lazio 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🏛️ Lazio 產區地圖 地圖。"
-    },
-    {
       "type": "content",
       "title": "🏛️ 永恆之城的葡萄酒",
       "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Lazio（拉齊奧）是<strong>羅馬（Roma）的所在地</strong>，葡萄酒歷史可追溯至<strong>古羅馬時期</strong>。以<strong>Frascati 白酒</strong>和<strong>Est! Est!! Est!!! di Montefiascone</strong> 的傳說聞名。</p><p class=\"highlight\">Lazio 以<strong>白酒為主（85%）</strong>，主要供應羅馬的龐大餐飲市場，是義大利歷史最悠久的葡萄酒產區之一。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>85%</strong>白葡萄酒產量</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏛️</div><div class=\"fact-text\"><strong>27</strong>DOC 產區</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌋</div><div class=\"fact-text\"><strong>火山</strong>土壤為主</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>3</strong>DOCG 認證</div></div></div></div>"

@@ -133,6 +133,244 @@ export const lessonContent = [
     }
   },
   {
+    title: '大西洋的守護：暖流與蘭德斯森林',
+    highlights: [
+      { id: 1, icon: '🌊', title: '北大西洋暖流', content: '墨西哥灣流延伸至歐洲西岸，將冬季均溫維持在 7–9°C，防止葡萄樹凍害' },
+      { id: 2, icon: '🌲', title: '蘭德斯松林', content: '寬達 100 公里的人工林帶，阻擋大西洋強風與鹽霧，形成天然微氣候緩衝帶' },
+      { id: 3, icon: '🌧️', title: '雨量分布', content: '年均降雨約 900 mm，集中於冬春季；夏季相對乾燥，有利成熟期積累糖分' },
+      { id: 4, icon: '🌡️', title: '溫和年較差', content: '年平均溫差約 16°C（1 月 7°C～7 月 23°C），比同緯度內陸小 8–10°C' }
+    ],
+    content: `
+      <div class="chapter-content">
+        <h3>為什麼波爾多不像其他北緯 45° 產區那樣寒冷？</h3>
+        <p>北緯 45° 大約是加拿大蒙特婁或羅馬尼亞的緯度——這些地方冬天可達 -15°C。然而波爾多的冬天僅 7-9°C，這一切要歸功於兩個地理屏障的協同效應。</p>
+
+        <h3>① 北大西洋暖流（Gulf Stream 的延伸）</h3>
+        <p>北大西洋暖流將加勒比海的溫暖海水送至歐洲西岸，使整個西歐的溫度比同緯度的亞洲或美洲溫暖 5–10°C。</p>
+        <table class="data-table compact">
+          <thead><tr><th>季節</th><th>暖流效應</th><th>對葡萄樹的實際意義</th></tr></thead>
+          <tbody>
+            <tr><td>冬季</td><td>防止低溫凍害</td><td>芽點存活率高，翌年不需大量補植</td></tr>
+            <tr><td>春季</td><td>溫暖的海水加速升溫</td><td>萌芽期提早，避開三月晚霜窗口</td></tr>
+            <tr><td>夏季</td><td>海洋吸熱，調節極端高溫</td><td>成熟期較長，多酚與香氣化合物有更多時間累積</td></tr>
+            <tr><td>秋季</td><td>緩慢降溫，維持採收期的均衡氣溫</td><td>採收窗口通常長達 4–6 週，不需匆促採收</td></tr>
+          </tbody>
+        </table>
+
+        <h3>② 蘭德斯松林 (Forêt des Landes)：天然防風牆</h3>
+        <p>波爾多正西方是一片面積超過 <strong>13,000 平方公里</strong>的人工松林，是西歐面積最大的人工林。它扮演的角色不只是防風：</p>
+        <ul>
+          <li><strong>阻擋鹽霧</strong>：直接來自大西洋的鹽分氣流會傷害葡萄葉面，松林過濾後只留下濕潤的清風。</li>
+          <li><strong>緩衝降雨</strong>：強對流暴雨在通過林帶後強度減弱，梅多克半島接收的雨量比松林西側少約 15%。</li>
+          <li><strong>穩定溫度</strong>：龐大的植被生物量具有熱慣性，使梅多克日夜溫差比毗鄰的農業平原小 2–3°C。</li>
+        </ul>
+
+        <h3>雨量節律：「冬濕夏乾」的理想模式</h3>
+        <p>波爾多的年降雨量約 900 mm，但節律比總量更重要：</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:0.8rem">
+          <div style="background:rgba(59,130,246,0.08);border-radius:8px;padding:0.8rem">
+            <strong>冬春（11月－4月）</strong><br/>
+            佔全年降雨約 55%，補充土壤水分，滋養根系越冬。
+          </div>
+          <div style="background:rgba(251,146,60,0.08);border-radius:8px;padding:0.8rem">
+            <strong>夏季（6月－8月）</strong><br/>
+            相對乾燥，迫使葡萄根系向深層土壤延伸，增強礦物風味的汲取。
+          </div>
+        </div>
+        <p style="margin-top:0.8rem">秋季（採收期）的降雨變數最大，過多雨水可能造成稀釋或腐爛——這也是波爾多年份差異顯著的核心原因之一。</p>
+      </div>
+    `,
+    quiz: {
+      question: '蘭德斯松林對梅多克葡萄園最直接的保護作用是什麼？',
+      options: [
+        '增加土壤含水量',
+        '阻擋大西洋鹽霧與強風',
+        '提供葡萄釀造所需的木材',
+        '吸引更多降雨滋潤葡萄園'
+      ],
+      correct: 1,
+      explanation: '蘭德斯松林的主要作用是阻擋直接來自大西洋的強風與鹽霧，為梅多克半島提供天然防護，同時緩衝暴雨強度，形成穩定的微氣候。'
+    }
+  },
+
+  {
+    title: '波爾多 vs. 勃艮第：兩種氣候，兩種命運',
+    highlights: [
+      { id: 1, icon: '🌊', title: '波爾多：海洋性氣候', content: '溫和穩定，年份波動相對小，有利混釀平衡風格' },
+      { id: 2, icon: '🏔️', title: '勃艮第：大陸性氣候', content: '冷熱分明，年份差異顯著，單一品種直接反映土地個性' },
+      { id: 3, icon: '🌡️', title: '溫差關鍵', content: '波爾多年溫差 16°C vs. 勃艮第 19°C，看似相近，實際造就截然不同的釀酒哲學' }
+    ],
+    content: `
+      <div class="chapter-content">
+        <h3>同樣是法國頂級產區，氣候為何如此不同？</h3>
+        <p>波爾多與勃艮第都是世界最頂級的葡萄酒產區，但它們面對的氣候挑戰截然不同。理解這個差異，是理解為什麼這兩個產區的葡萄品種、釀酒哲學和酒款風格完全不同的關鍵。</p>
+
+        <h3>氣候數據對比</h3>
+        <table class="data-table">
+          <thead>
+            <tr><th>指標</th><th>波爾多（海洋性氣候）</th><th>勃艮第（大陸性氣候）</th><th>差異意義</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>年平均氣溫</strong></td>
+              <td>13.5°C</td>
+              <td>11.5°C</td>
+              <td>波爾多較暖，有利完熟單寧厚實的 Cabernet Sauvignon</td>
+            </tr>
+            <tr>
+              <td><strong>年均溫差</strong></td>
+              <td>~16°C</td>
+              <td>~19°C</td>
+              <td>勃艮第冬夏更分明，夏季熱量衝刺更集中</td>
+            </tr>
+            <tr>
+              <td><strong>冬季最低溫</strong></td>
+              <td>約 -3°C 以上</td>
+              <td>可達 -15°C</td>
+              <td>勃艮第凍害風險更高，Pinot Noir 較耐寒</td>
+            </tr>
+            <tr>
+              <td><strong>年降雨量</strong></td>
+              <td>約 900 mm</td>
+              <td>約 700 mm</td>
+              <td>波爾多較濕，霜黴病和腐爛風險較高</td>
+            </tr>
+            <tr>
+              <td><strong>夏季高溫</strong></td>
+              <td>受海洋緩衝，極端熱浪少</td>
+              <td>熱浪來臨時升溫迅速</td>
+              <td>2003 年熱浪對勃艮第衝擊更劇烈</td>
+            </tr>
+            <tr>
+              <td><strong>採收期天氣</strong></td>
+              <td>秋雨不穩定，年份差異大</td>
+              <td>秋季常有穩定晴天</td>
+              <td>波爾多「壞年份」多因秋雨，勃艮第多因夏季不足</td>
+            </tr>
+            <tr>
+              <td><strong>年份穩定性</strong></td>
+              <td>相對穩定（10 年中 6-7 個好年份）</td>
+              <td>較不穩定（10 年中 4-5 個好年份）</td>
+              <td>波爾多年份評分跨度較窄，勃艮第頂峰更高但谷底更深</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>氣候如何決定葡萄品種選擇？</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0">
+          <div style="border:1.5px solid rgba(59,130,246,0.3);border-radius:10px;padding:1rem">
+            <h4 style="margin:0 0 0.5rem;color:#3b82f6">🌊 波爾多：混釀的智慧</h4>
+            <p><strong>為何混釀？</strong> 溫帶海洋性氣候年份變化雖溫和，但仍有春霜、秋雨等風險。混釀不同成熟期的品種（Cab. Sauv. 晚熟 + Merlot 早熟）分散風險。</p>
+            <p><strong>主要品種</strong>：Cabernet Sauvignon（需充足熱量完熟）、Merlot（適應黏土，早熟緩衝秋雨風險）</p>
+          </div>
+          <div style="border:1.5px solid rgba(168,85,247,0.3);border-radius:10px;padding:1rem">
+            <h4 style="margin:0 0 0.5rem;color:#a855f7">🏔️ 勃艮第：單一品種的純粹</h4>
+            <p><strong>為何單一品種？</strong> 大陸性氣候雖有極端風險，但好年份的日夜溫差極大，有利香氣累積。Pinot Noir 的薄皮特性完整展現這種精緻表達。</p>
+            <p><strong>主要品種</strong>：Pinot Noir（極度敏感，完美表達土地個性）、Chardonnay（適應石灰岩，充分利用日照）</p>
+          </div>
+        </div>
+
+        <h3>氣候差異的哲學影響：調配 vs. 地塊</h3>
+        <p>海洋性氣候的相對穩定性，讓波爾多酒莊有能力關注「跨年份一致性」——透過調配比例調整，維持品牌風格的穩定性。大陸性氣候的高變異性，則讓勃艮第生產者傾向強調「年份個性」與「地塊表達」，每瓶酒都是特定一年、特定土壤的唯一紀錄。</p>
+      </div>
+    `,
+    quiz: {
+      question: '波爾多以混釀為主要釀酒策略，最根本的氣候原因是什麼？',
+      options: [
+        '海洋性氣候使單一品種無法達到足夠酒精度',
+        '混釀不同成熟期品種，可分散秋雨等氣候風險',
+        '法規強制要求波爾多必須使用至少三種葡萄品種',
+        '勃艮第壟斷了 Pinot Noir，波爾多只能混釀其他品種'
+      ],
+      correct: 1,
+      explanation: '混釀的核心邏輯是風險分散：Merlot 早熟，若秋雨提早來臨仍能採收完熟果實；Cabernet Sauvignon 晚熟，若秋天天氣好則能達到最佳成熟度。兩者互補，降低了海洋性氣候年份波動帶來的損失。'
+    }
+  },
+
+  {
+    title: '土壤成因入門：大地如何造就葡萄酒個性',
+    highlights: [
+      { id: 1, icon: '🪨', title: '沖積砂礫（左岸）', content: '冰河期河流帶來的礫石層，排水極佳，迫使根系深鑽，吸收深層水分與礦物' },
+      { id: 2, icon: '🪸', title: '石灰岩（右岸高原）', content: '古代海洋生物骨骼沉積而成，富含鈣質，賦予葡萄酒明顯的礦物感與清新酸度' },
+      { id: 3, icon: '🟤', title: '黏土（右岸平原）', content: '保水性強，Merlot 的理想土壤；過濕時通氣差，排水管理是關鍵' },
+      { id: 4, icon: '🌍', title: '土壤成因 = 風土基礎', content: '了解土壤如何形成，就能預測葡萄酒的礦物、酸度與口感結構' }
+    ],
+    content: `
+      <div class="chapter-content">
+        <h3>土壤不是偶然，是地質歷史的積累</h3>
+        <p>波爾多的土壤類型豐富多樣，且左岸與右岸差異顯著。這些差異不是隨機的，而是數萬年乃至數百萬年地質演化的結果。了解土壤的「出身」，才能真正理解酒款特色的根源。</p>
+
+        <h3>① 左岸砂礫土的形成：河流的搬運工</h3>
+        <p>梅多克和格拉夫的砂礫層主要來自 <strong>庇里牛斯山脈</strong>，歷經數十萬年的冰河時期，每次冰川融化都攜帶大量礫石沿加龍河向下沖積，最終在低平的梅多克半島堆積成厚達數公尺的礫石層。</p>
+        <table class="data-table compact">
+          <thead><tr><th>礫石特性</th><th>對葡萄樹的影響</th><th>對酒款的影響</th></tr></thead>
+          <tbody>
+            <tr><td>排水性極佳</td><td>雨後快速排乾，避免根系泡水</td><td>年份雨量再多，品質仍可控</td></tr>
+            <tr><td>白天吸熱、夜晚放熱</td><td>葡萄周圍溫度更均衡，有助成熟</td><td>果實成熟度更完整，單寧更圓潤</td></tr>
+            <tr><td>養分貧瘠</td><td>根系需向深層（6-8 公尺）延伸</td><td>礦物感更豐富，風味更集中複雜</td></tr>
+            <tr><td>顆粒大小各異</td><td>持水量因地塊而異</td><td>同一村莊內不同小塊地風格有差異</td></tr>
+          </tbody>
+        </table>
+        <p><strong>代表性地塊</strong>：Château Latour 的「The Enclos」礫石層深達 5 公尺，被認為是 Pauillac 最完美的砂礫構成，賦予其酒款的強勁骨架與驚人陳年潛力。</p>
+
+        <h3>② 右岸石灰岩高原的形成：古代海洋的遺留</h3>
+        <p>聖愛美濃的石灰岩高原（Calcaires à Astéries）形成於 <strong>約 3500 萬年前的始新世</strong>，當時整個吉倫特地區曾是淺海。大量海洋生物（珊瑚、貝殼、海膽）死亡後，骨骼中的碳酸鈣沉積固化，形成今日的石灰岩台地。</p>
+        <ul>
+          <li><strong>高 pH 值土壤（7.5-8.2）</strong>：抑制葡萄根系的部分礦物吸收，使葡萄自然調節生長勢，結出集中的果實。</li>
+          <li><strong>天然排水裂隙</strong>：石灰岩的節理和裂縫提供良好的垂直排水路徑，同時保留深層毛細水分。</li>
+          <li><strong>獨特的礦物風味</strong>：石灰岩中豐富的鈣、鎂、磷酸鹽滲入葡萄汁，賦予酒款清新的石灰感和明顯酸度。</li>
+        </ul>
+        <p><strong>代表性地塊</strong>：Château Ausone 坐落在聖愛美濃南坡的石灰岩懸崖，酒窖甚至直接鑿入岩壁，酒款以礦物感和骨架著稱，風格與梅多克的砂礫礦物感截然不同。</p>
+
+        <h3>③ 右岸平原黏土的特性：保水的雙面刃</h3>
+        <p>波美侯和部分聖愛美濃低地的黏土土壤，保水能力是砂礫土的 5-10 倍。這對 Merlot 品種特別有利——Merlot 的根系活力稍遜，不像 Cabernet Sauvignon 那樣適合深鑽砂礫，而黏土可以在乾燥夏季提供充足水分。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:0.8rem 0">
+          <div style="background:rgba(34,197,94,0.08);border-radius:8px;padding:0.8rem">
+            <strong>✅ 黏土的優勢</strong>
+            <ul style="margin:0.5rem 0 0;padding-left:1.2rem">
+              <li>乾旱年份保留水分，維持葡萄樹生命力</li>
+              <li>礦物質豐富（鐵、錳），貢獻酒款深度</li>
+              <li>Pétrus 的藍黏土（Blue Clay）被認為是 Merlot 的絕佳搭配</li>
+            </ul>
+          </div>
+          <div style="background:rgba(239,68,68,0.08);border-radius:8px;padding:0.8rem">
+            <strong>⚠️ 黏土的挑戰</strong>
+            <ul style="margin:0.5rem 0 0;padding-left:1.2rem">
+              <li>排水不良時根系窒息，葡萄樹壓力過大</li>
+              <li>冷年份升溫慢，延遲成熟</li>
+              <li>機械耕作困難（泥濘、重壓）</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>左岸 vs. 右岸：土壤決定品種，品種塑造風格</h3>
+        <table class="data-table compact">
+          <thead>
+            <tr><th>特徵</th><th>左岸砂礫</th><th>右岸石灰岩/黏土</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>最適品種</td><td>Cabernet Sauvignon（深根，耐熱）</td><td>Merlot（淺根，適保水土）</td></tr>
+            <tr><td>酒款單寧</td><td>高單寧，需時間軟化</td><td>圓潤單寧，年輕時即可享</td></tr>
+            <tr><td>主要礦物感</td><td>燧石、煙燻石頭感</td><td>白堊、石灰、鐵礦感</td></tr>
+            <tr><td>陳年潛力</td><td>頂莊可陳年 30-50 年</td><td>頂莊可陳年 20-40 年</td></tr>
+          </tbody>
+        </table>
+      </div>
+    `,
+    quiz: {
+      question: '左岸梅多克的砂礫土主要來自何處，透過什麼地質過程形成？',
+      options: [
+        '大西洋海浪侵蝕形成的海岸沙丘',
+        '冰河時期庇里牛斯山礫石隨加龍河沖積堆積',
+        '古代火山噴發留下的礫石堆積',
+        '人工從河床挖掘移植用作改善排水'
+      ],
+      correct: 1,
+      explanation: '梅多克的礫石層來自數十萬年前冰河時期，庇里牛斯山的礫石隨加龍河洪流向北沖積，在地勢低平的梅多克半島沉積形成厚達數公尺的礫石層。這種土壤排水極佳、導熱性強，是 Cabernet Sauvignon 在此地表現卓越的關鍵。'
+    }
+  },
+
+  {
     component: 'SlideLeftRightBanks',
     title: '左岸與右岸的劃分',
     highlights: [

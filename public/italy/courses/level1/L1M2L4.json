@@ -54,11 +54,6 @@
       "subtitle": "火山土壤上的千年酒文化"
     },
     {
-      "type": "map_placeholder",
-      "title": "🌋 Sicily 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🌋 Sicily 產區地圖 地圖。"
-    },
-    {
       "type": "content",
       "title": "🏝️ 產區概況",
       "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利最大的島嶼，地中海中心，北以Messina海峽與本土相望。<span class=\"highlight\">義大利產量第一大區</span>（約105,000公頃），Etna火山、300天日照、多元移民文化共同造就地中海最豐富的品種寶庫。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>地中海最大島嶼，北部Etna火山（3,329m），南端距突尼西亞140km，首府巴勒莫（Palermo）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園規模</strong><br>約105,000公頃，義大利產量最大島，年均日照300天+，地中海氣候炎熱乾燥，海風調節</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>法定認證</strong><br>1 DOCG（Cerasuolo di Vittoria）+ 23 DOC，義大利原生品種寶庫，本土品種數十種</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌋</div><div class=\"fact-text\"><strong>火山奇蹟</strong><br>Etna是歐洲最活躍火山，唯一火山土壤DOC，近年被國際評酒界譽為「地中海的勃艮第」</div></div></div>"
@@ -169,7 +164,11 @@
             "C. Sangiovese",
             "D. Carricante"
           ],
-          "correct": [0, 1, 3],
+          "correct": [
+            0,
+            1,
+            3
+          ],
           "explanation": "Grillo（常用於 Marsala 和干型白酒）、Catarratto（西西里種植最廣）和 Carricante（Etna 白酒）都是西西里原生白葡萄。Sangiovese 是托斯卡納紅葡萄。"
         },
         {
@@ -193,7 +192,11 @@
             "C. 近年在國際上受到高度關注",
             "D. 所有酒款都是甜型"
           ],
-          "correct": [0, 1, 2],
+          "correct": [
+            0,
+            1,
+            2
+          ],
           "explanation": "Etna DOC 位於西西里 Etna 活火山斜坡，以 Nerello Mascalese 釀造細膩紅酒，近年被 Wine Spectator、Decanter 等媒體高度評價。Etna 主要釀造干型酒，非甜酒產區。"
         }
       ]

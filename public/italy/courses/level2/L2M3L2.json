@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "Primitivo 與美國加州的哪個品種是同一品種？",
-      "options": ["Cabernet Sauvignon", "Merlot", "Zinfandel", "Syrah"],
+      "options": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Zinfandel",
+        "Syrah"
+      ],
       "answer": 2,
       "explanation": "DNA 研究證明 Primitivo 與美國加州的 Zinfandel 是同一品種，原產自克羅埃西亞。"
     },
     {
       "question": "Negroamaro 名稱的意思是？",
-      "options": ["黑山", "雙重黑色", "黑海", "黑色愛情"],
+      "options": [
+        "黑山",
+        "雙重黑色",
+        "黑海",
+        "黑色愛情"
+      ],
       "answer": 1,
       "explanation": "Negroamaro 來自拉丁文「Niger」（黑）+ 希臘文「Mavro」（黑）= 雙重黑色，形容葡萄顏色極深。"
     },
     {
       "question": "Primitivo di Manduria Dolce Naturale DOCG 的酒精度通常是？",
-      "options": ["10-12%", "12-14%", "14-16%", "16-18%"],
+      "options": [
+        "10-12%",
+        "12-14%",
+        "14-16%",
+        "16-18%"
+      ],
       "answer": 3,
       "explanation": "Primitivo di Manduria Dolce Naturale 是甜型版本，酒精度高達 16-18%，使用過熟或風乾葡萄釀造。"
     },
     {
       "question": "Orecchiette 是什麼？",
-      "options": ["一種起司", "耳朵形狀的手工義大利麵", "一種葡萄品種", "一種甜點"],
+      "options": [
+        "一種起司",
+        "耳朵形狀的手工義大利麵",
+        "一種葡萄品種",
+        "一種甜點"
+      ],
       "answer": 1,
       "explanation": "Orecchiette（小耳朵）是 Apulia 的代表性手工義大利麵，經典搭配是蕪菁菜（Cime di Rapa）。"
     }
@@ -32,11 +52,6 @@
       "type": "title",
       "title": "🌞 Apulia (Puglia)",
       "subtitle": "義大利的「酒窖」與 Primitivo 之鄉"
-    },
-    {
-      "type": "map_placeholder",
-      "title": "🌞 Puglia 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🌞 Puglia 產區地圖 地圖。"
     },
     {
       "type": "content",
@@ -137,35 +152,60 @@
         {
           "type": "single",
           "question": "Primitivo 與美國加州的哪個品種是同一品種？",
-          "options": ["Cabernet Sauvignon", "Merlot", "Zinfandel", "Syrah"],
+          "options": [
+            "Cabernet Sauvignon",
+            "Merlot",
+            "Zinfandel",
+            "Syrah"
+          ],
           "correct": 2,
           "explanation": "DNA 研究證明 Primitivo 與美國加州的 Zinfandel 是同一品種，原產自克羅埃西亞。"
         },
         {
           "type": "single",
           "question": "Negroamaro 名稱的意思是？",
-          "options": ["黑山", "雙重黑色", "黑海", "黑色愛情"],
+          "options": [
+            "黑山",
+            "雙重黑色",
+            "黑海",
+            "黑色愛情"
+          ],
           "correct": 1,
           "explanation": "Negroamaro 來自拉丁文「Niger」（黑）+ 希臘文「Mavro」（黑）= 雙重黑色，形容葡萄顏色極深。"
         },
         {
           "type": "single",
           "question": "Primitivo di Manduria Dolce Naturale DOCG 的酒精度通常是？",
-          "options": ["10-12%", "12-14%", "14-16%", "16-18%"],
+          "options": [
+            "10-12%",
+            "12-14%",
+            "14-16%",
+            "16-18%"
+          ],
           "correct": 3,
           "explanation": "Primitivo di Manduria Dolce Naturale 是甜型版本，酒精度高達 16-18%，使用過熟或風乾葡萄釀造。"
         },
         {
           "type": "single",
           "question": "Orecchiette 是什麼？",
-          "options": ["一種起司", "耳朵形狀的手工義大利麵", "一種葡萄品種", "一種甜點"],
+          "options": [
+            "一種起司",
+            "耳朵形狀的手工義大利麵",
+            "一種葡萄品種",
+            "一種甜點"
+          ],
           "correct": 1,
           "explanation": "Orecchiette（小耳朵）是 Apulia 的代表性手工義大利麵，經典搭配是蕪菁菜（Cime di Rapa）。"
         },
         {
           "type": "single",
           "question": "Primitivo 與哪個美國品種基因相同？",
-          "options": ["Cabernet Franc", "Malbec", "Zinfandel", "Petite Sirah"],
+          "options": [
+            "Cabernet Franc",
+            "Malbec",
+            "Zinfandel",
+            "Petite Sirah"
+          ],
           "correct": 2,
           "explanation": "DNA 研究（2001 年確認）證明 Primitivo 與 Zinfandel 基因完全相同，兩者都源自克羅埃西亞的 Crljenak Kaštelanski。"
         }

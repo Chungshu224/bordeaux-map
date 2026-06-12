@@ -4,167 +4,216 @@
   "quiz": [
     {
       "question": "優質的 Lambrusco 主流風格是？",
-      "options": [
-        "甜型（Dolce）",
-        "不甜（Secco）",
-        "加烈酒",
-        "橘酒"
-      ],
+      "options": ["甜型（Dolce）", "不甜（Secco）", "加烈酒", "橘酒"],
       "answer": 1,
       "explanation": "現代高品質 Lambrusco 主流是不甜（Secco）風格，清爽、果香豐富，改變了過去甜型廉價酒的印象。"
     },
     {
       "question": "三種 Lambrusco DOC 中，哪個最優雅、酒體最輕？",
-      "options": [
-        "Lambrusco Grasparossa",
-        "Lambrusco di Sorbara",
-        "Reggiano Lambrusco",
-        "都一樣"
-      ],
+      "options": ["Lambrusco Grasparossa", "Lambrusco di Sorbara", "Reggiano Lambrusco", "都一樣"],
       "answer": 1,
       "explanation": "Lambrusco di Sorbara 是最優雅的品種，酒體最輕，呈現玫瑰粉紅色，高酸度、細膩氣泡。"
     },
     {
       "question": "義大利第一個白酒 DOCG 是？",
-      "options": [
-        "Soave",
-        "Gavi",
-        "Albana di Romagna",
-        "Vernaccia di San Gimignano"
-      ],
+      "options": ["Soave", "Gavi", "Albana di Romagna", "Vernaccia di San Gimignano"],
       "answer": 2,
       "explanation": "Albana di Romagna 在 1987 年成為義大利第一個白酒 DOCG，主要產自 Romagna 地區。"
     },
     {
-      "question": "為什麼 Lambrusco 適合搭配 Emilia 的油膩料理？",
+      "question": "Aceto Balsamico Tradizionale di Modena DOCG 最少需要陳年幾年？",
+      "options": ["3 年", "5 年", "12 年", "25 年"],
+      "answer": 2,
+      "explanation": "Tradizionale DOCG 傳統巴薩米克醋最低陳年 12 年（銀蓋），25 年以上為 Extra Vecchio（金蓋）。葡萄汁在一系列不同木材的小桶中逐年轉移、濃縮，是義大利最複雜的農產品之一。"
+    },
+    {
+      "question": "Lambrusco 最主要的工業釀造起泡方法是什麼，頂級精品款又是什麼方法？",
       "options": [
-        "低酒精度",
-        "高酸度 + 氣泡可切割油膩",
-        "甜味平衡",
-        "顏色搭配"
+        "傳統法（Metodo Classico）工業；Charmat 法精品",
+        "Charmat 法（密閉加壓桶二次發酵）工業；Ancestrale 古法（瓶中二次發酵不除渣）精品",
+        "兩者都是 Charmat 法，差別只在糖度",
+        "兩者都是傳統法，差別在酵母種類"
       ],
       "answer": 1,
-      "explanation": "Lambrusco 的高酸度和氣泡能有效切割 Parmigiano、Prosciutto 等油膩料理的油脂，清爽口腔。"
+      "explanation": "大量工業 Lambrusco 使用 Charmat 法（密閉加壓桶中二次發酵，成本低、速度快）；頂級精品款採用 Ancestrale 古法（瓶中發酵不除渣，保留沉澱物，風格更複雜原始），代表如 Alberto Paltrinieri 的 Radice 款。"
+    },
+    {
+      "question": "Romagna 大區的代表性紅品種是？",
+      "options": ["Lambrusco", "Sangiovese di Romagna", "Terrano（Cagnina）", "Albana"],
+      "answer": 1,
+      "explanation": "Sangiovese di Romagna DOC 是 Romagna 地區最重要的紅品種，風格比 Tuscany 的 Sangiovese 更果香柔順易飲，以 San Patrignano 為代表的精品款已達 Level 2 複雜度。"
+    },
+    {
+      "question": "Pignoletto 白酒在哪個地區最重要？升格 DOCG 是哪年？",
+      "options": [
+        "Bologna 周邊丘陵（Colli Bolognesi），2010 年升格 DOCG",
+        "Modena 平原，2005 年升格 DOCG",
+        "Romagna 海岸，2015 年升格 DOCG",
+        "Parma 北部，1990 年升格 DOCG"
+      ],
+      "answer": 0,
+      "explanation": "Pignoletto（學名 Grechetto Gentile）是 Bologna 周邊丘陵（Colli Bolognesi）的代表白品種，2010 年 Colli Bolognesi Pignoletto DOCG 正式獲認，是 Emilia 重要的精品白酒產區。"
     }
   ],
   "slides": [
     {
       "type": "title",
-      "title": "🍾 Emilia-Romagna",
-      "subtitle": "Lambrusco 氣泡酒與美食天堂"
-    },
-    {
-      "type": "map_placeholder",
-      "title": "🍾 Emilia 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🍾 Emilia 產區地圖 地圖。"
+      "title": "Emilia-Romagna 艾米利亞-羅馬涅",
+      "subtitle": "Lambrusco 氣泡酒 · Albana DOCG · Balsamic 醋 · 義大利的美食首都"
     },
     {
       "type": "content",
-      "title": "🗺️ 義大利的美食首都",
-      "content": "<div class=\"region-overview\"><div class=\"overview-text\"><p>Emilia-Romagna 橫跨義大利北部，以<strong>Lambrusco 氣泡紅酒</strong>、<strong>Parmigiano-Reggiano 起司</strong>、<strong>Parma 火腿</strong>和<strong>Balsamic 醋</strong>聞名世界。</p></div><div class=\"famous-foods\"><h4>🧀 世界級美食</h4><div class=\"food-grid\"><div class=\"food-item\">🧀 Parmigiano-Reggiano</div><div class=\"food-item\">🥓 Prosciutto di Parma</div><div class=\"food-item\">🥫 Modena Balsamic 醋</div><div class=\"food-item\">🍝 Tagliatelle al Ragù（肉醬麵）</div><div class=\"food-item\">🥩 Mortadella 香腸</div><div class=\"food-item\">🫓 Piadina 薄餅</div></div></div></div>"
+      "title": "義大利的美食首都 — Emilia vs Romagna",
+      "content": "<div class=\"region-overview\"><div class=\"overview-text\"><p>Emilia-Romagna 橫跨義大利北部，以 <strong>Lambrusco 氣泡紅酒</strong>、<strong>Parmigiano-Reggiano</strong>、<strong>Parma 火腿</strong>和 <strong>Balsamic 醋</strong>聞名世界。但「Emilia」和「Romagna」其實是兩個性格截然不同的地區。</p></div><div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Emilia（西部）</h3><p class=\"mf-prod\"><strong>首府：</strong>Bologna（美食之都），延伸至 Parma、Modena、Reggio Emilia<br><strong>文化：</strong>工業化的 Po 河平原農業；Lambrusco 氣泡紅酒、Parmigiano-Reggiano、Prosciutto di Parma、Balsamic 醋、Mortadella 的故鄉<br><strong>地形：</strong>主要是平原，葡萄園多在平原或低丘陵<br><strong>代表 DOC：</strong>Lambrusco di Sorbara、Lambrusco Grasparossa、Colli Bolognesi</p></div><div class=\"mf-zone warm\"><h3>Romagna（東部）</h3><p class=\"mf-prod\"><strong>首府：</strong>Forlì-Cesena、Ravenna，延伸至海岸線（亞得里亞海）<br><strong>文化：</strong>更農業傳統、丘陵地形，拜占庭文化影響（Ravenna 鑲嵌藝術）；Sangiovese 紅酒和 Albana 白酒的故鄉<br><strong>地形：</strong>Apennines 丘陵（海拔 150-400m），土壤石灰岩黏土<br><strong>代表 DOC：</strong>Albana di Romagna DOCG、Romagna DOC Sangiovese</p></div></div></div><div class=\"famous-foods\"><h4>世界級美食地圖</h4><div class=\"food-grid\"><div class=\"food-item\">Parmigiano-Reggiano（Parma/Reggio）</div><div class=\"food-item\">Prosciutto di Parma DOP（Parma）</div><div class=\"food-item\">Aceto Balsamico Tradizionale（Modena/Reggio）</div><div class=\"food-item\">Tagliatelle al Ragù（Bologna 肉醬麵）</div><div class=\"food-item\">Mortadella IGP（Bologna 香腸）</div><div class=\"food-item\">Piadina Romagnola（Romagna 薄餅）</div></div></div></div>"
     },
-    {"type":"emilia-docg-map","title":"🗺️ Emilia-Romagna DOC 互動地圖"},
     {
-      "type": "content",
-      "title": "🍾 Lambrusco - 被誤解的氣泡紅酒",
-      "content": "<div class=\"lambrusco-section\"><div class=\"lambrusco-intro\"><h3>🍷 Lambrusco 的真相</h3><p>Lambrusco 因1970-80 年代的<strong>甜型廉價出口酒</strong>而名聲受損，但其實<strong>真正的 Lambrusco 是不甜、優質、複雜</strong>的氣泡紅酒。</p></div><div class=\"lambrusco-types\"><div class=\"type-card dry\"><h4>🍷 Secco（不甜）</h4><p class=\"type-desc\">現代高品質 Lambrusco 主流</p><p><strong>風格：</strong>清爽、果香、單寧柔順</p><p><strong>殘糖：</strong>&lt; 15 g/L</p><p><strong>配餐：</strong>義式料理、油炸食物、起司</p></div><div class=\"type-card semi-dry\"><h4>🍷 Amabile（微甜）</h4><p class=\"type-desc\">傳統風格</p><p><strong>風格：</strong>果香豐富、易飲</p><p><strong>殘糖：</strong>15-50 g/L</p><p><strong>配餐：</strong>BBQ、辣食</p></div><div class=\"type-card sweet\"><h4>🍷 Dolce（甜型）</h4><p class=\"type-desc\">出口市場版本</p><p><strong>風格：</strong>甜美、葡萄汁風味</p><p><strong>殘糖：</strong>&gt; 50 g/L</p><p><strong>配餐：</strong>甜點、水果</p></div></div></div>"
+      "type": "emilia-docg-map",
+      "title": "Emilia-Romagna DOC 互動地圖"
     },
     {
       "type": "content",
-      "title": "🍇 Lambrusco 三大 DOC",
-      "content": "<div class=\"lambrusco-docs\"><div class=\"doc-item top\"><div class=\"doc-rank\">#1</div><h3>Lambrusco di Sorbara DOC</h3><div class=\"doc-details\"><p><strong>位置：</strong>Modena 省</p><p><strong>品種：</strong>Lambrusco di Sorbara（100%）</p><p><strong>風格：</strong>最優雅、酒體最輕、玫瑰粉紅色</p><p><strong>風味：</strong>紅櫻桃、覆盆莓、紫羅蘭、草本</p><p><strong>特點：</strong>高酸度、清爽、細膩氣泡</p></div></div><div class=\"doc-item\"><div class=\"doc-rank\">#2</div><h3>Lambrusco Grasparossa di Castelvetro DOC</h3><div class=\"doc-details\"><p><strong>位置：</strong>Modena 省南部丘陵</p><p><strong>品種：</strong>Lambrusco Grasparossa（85%+）</p><p><strong>風格：</strong>最濃郁、酒體最飽滿、深紫紅色</p><p><strong>風味：</strong>黑莓、李子、紫羅蘭、巧克力</p><p><strong>特點：</strong>單寧較高、結構感強</p></div></div><div class=\"doc-item\"><div class=\"doc-rank\">#3</div><h3>Reggiano Lambrusco DOC</h3><div class=\"doc-details\"><p><strong>位置：</strong>Reggio Emilia 省</p><p><strong>品種：</strong>多種 Lambrusco 混釀</p><p><strong>風格：</strong>平衡型、寶石紅色</p><p><strong>風味：</strong>紅色水果、香料、花香</p><p><strong>特點：</strong>產量大、性價比高</p></div></div></div>"
+      "title": "Lambrusco — 從廉價甜酒到精品氣泡紅酒",
+      "content": "<div class=\"lambrusco-section\"><div class=\"dna-research\"><h3>Lambrusco 的命運逆轉</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">1970-80 年代，美國市場對 Lambrusco 的需求催生了大量甜型廉價出口版本（Riunite 品牌），嚴重損害了品種的聲譽。然而在 Modena 和 Reggio Emilia 本地，農民從未改變釀造優質 Secco 不甜 Lambrusco 的傳統。1990 年代後，精品酒莊開始重新以本地傳統風格行銷，推動了 Lambrusco 的全球精品化復興。</p></div></div></div><div class=\"lambrusco-types\"><div class=\"type-card dry\"><h4>Secco（不甜）</h4><p class=\"type-desc\">現代高品質主流</p><p><strong>殘糖：</strong>&lt; 15 g/L</p><p><strong>風格：</strong>清爽、果香、單寧柔順、氣泡細膩</p></div><div class=\"type-card semi-dry\"><h4>Amabile（微甜）</h4><p class=\"type-desc\">傳統地方風格</p><p><strong>殘糖：</strong>15-50 g/L</p><p><strong>風格：</strong>果香豐富、平衡易飲</p></div><div class=\"type-card sweet\"><h4>Dolce（甜型）</h4><p class=\"type-desc\">出口市場形象版本</p><p><strong>殘糖：</strong>&gt; 50 g/L</p><p><strong>風格：</strong>甜美、葡萄汁氣息，已式微</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "⚪ Emilia-Romagna 白葡萄酒",
-      "content": "<div class=\"white-wines-section\"><div class=\"white-wine-card\"><h3>Albana di Romagna DOCG</h3><p class=\"doc-badge\">義大利第一個白酒 DOCG（1987）</p><div class=\"wine-info\"><p><strong>品種：</strong>Albana（100%）</p><p><strong>類型：</strong>不甜 Secco / 微甜 Amabile / 甜型 Passito</p><p><strong>風格（Secco）：</strong>杏桃、白桃、杏仁、中等酒體</p><p><strong>風格（Passito）：</strong>蜂蜜、杏桃乾、堅果、甜美</p><p><strong>配餐：</strong>Secco 配魚、Passito 配甜點</p></div></div><div class=\"white-wine-card\"><h3>Pignoletto DOC / DOCG</h3><div class=\"wine-info\"><p><strong>品種：</strong>Pignoletto（Grechetto Gentile）</p><p><strong>類型：</strong>靜態酒 / Frizzante 微氣泡 / Spumante 氣泡酒</p><p><strong>風格：</strong>白花、青蘋果、杏仁、清爽</p><p><strong>特點：</strong>Bologna 地區的日常白酒</p></div></div></div>"
+      "title": "Lambrusco 釀造方法論 — Charmat vs Ancestrale",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Charmat 法（密閉桶二次發酵）</h3><p class=\"mf-style\">工業主流 / 大量生產</p><p class=\"mf-prod\"><strong>工藝：</strong>基酒 + 酵母 + 糖在密閉不鏽鋼加壓桶中進行二次發酵，完成後過濾、裝瓶<br><strong>特點：</strong>成本低、速度快（1–3 個月）、風格一致性高、氣泡較大<br><strong>代表：</strong>Cantine Riunite（出口大廠）、Cavicchioli<br><strong>適合：</strong>年輕即飲、性價比款（€5–15）</p></div><div class=\"mf-zone warm\"><h3>Ancestrale 古法（瓶中發酵不除渣）</h3><p class=\"mf-style\">精品艱難工藝</p><p class=\"mf-prod\"><strong>工藝：</strong>未發酵完成的基酒直接裝瓶，在瓶中完成二次發酵，保留沉澱物（不除渣、不補液）<br><strong>特點：</strong>氣泡更細緻、風格更原始複雜、每瓶輕微差異屬正常<br><strong>外觀：</strong>瓶底有沉澱，酒液通常略混濁——這是品質標誌，非缺陷<br><strong>代表：</strong>Alberto Paltrinieri（Radice Lambrusco di Sorbara）、Cleto Chiarli（Villa Cialdini）<br><strong>適合：</strong>精品愛好者、自然酒入門（€20–45）</p></div><div class=\"mf-zone cool\"><h3>傳統法 Metodo Classico</h3><p class=\"mf-style\">極少數精品款</p><p class=\"mf-prod\"><strong>工藝：</strong>瓶中二次發酵 + 酵母陳年 + 除渣補液（與 Champagne 相同工藝）<br><strong>特點：</strong>最複雜、最昂貴，但並非 Lambrusco 主流方向<br><strong>代表：</strong>極少數實驗款（Cantina Garuti 等）<br><strong>市場：</strong>利基收藏市場</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍷 Sangiovese di Romagna DOC",
-      "content": "<div class=\"sangiovese-romagna\"><div class=\"sr-intro\"><h3>🍇 不同於 Tuscany 的 Sangiovese</h3><p>Romagna（羅馬涅）產區的 Sangiovese 風格與 Tuscany 不同：<strong>更果香、更柔順、更易飲</strong>，適合年輕時飲用。</p></div><div class=\"sr-comparison\"><table><tbody><tr><th>特徵</th><th>Sangiovese di Romagna</th><th>Chianti / Brunello</th></tr><tr><td><strong>風格</strong></td><td>果香豐富、柔順</td><td>結構感強、單寧高</td></tr><tr><td><strong>單寧</strong></td><td>中等、柔順</td><td>高、堅實</td></tr><tr><td><strong>適飲期</strong></td><td>年輕時（2-5 年）</td><td>陳年後（5-20 年）</td></tr><tr><td><strong>酒精度</strong></td><td>12-13%</td><td>13-14.5%</td></tr><tr><td><strong>價格</strong></td><td>€-€€</td><td>€€-€€€€</td></tr></tbody></table></div></div>"
+      "title": "四大 Lambrusco DOC/DOCG 完整版",
+      "content": "<div class=\"lambrusco-docs\"><div class=\"doc-item top\"><div class=\"doc-rank\">#1</div><h3>Lambrusco di Sorbara DOC</h3><div class=\"doc-details\"><p><strong>位置：</strong>Modena 省 Sorbara 村（Secchia 和 Panaro 河谷平原）</p><p><strong>土壤：</strong>沖積砂質土，排水良好</p><p><strong>風格：</strong>最優雅、酒體最輕、呈現淡玫瑰粉紅色至寶石紅</p><p><strong>風味：</strong>紅櫻桃、覆盆莓、紫羅蘭、新鮮草本</p><p><strong>特點：</strong>高酸度 + 細膩氣泡，是最適合搭配海鮮和輕食的 Lambrusco</p><p><strong>頂級：</strong>Alberto Paltrinieri（Radice，Ancestrale 法，€25–40）、Cleto Chiarli（Vigneto Enrico Cialdini，€15–25）</p></div></div><div class=\"doc-item\"><div class=\"doc-rank\">#2</div><h3>Lambrusco Grasparossa di Castelvetro DOC</h3><div class=\"doc-details\"><p><strong>位置：</strong>Modena 省南部丘陵（Castelvetro）</p><p><strong>土壤：</strong>石灰岩黏土丘陵，比平原更緊緻</p><p><strong>風格：</strong>最濃郁、酒體最飽滿、深紫紅色</p><p><strong>風味：</strong>黑莓、李子、紫羅蘭、黑巧克力、可可</p><p><strong>特點：</strong>單寧較高、結構感強，最適合搭配紅肉和陳年起司</p><p><strong>頂級：</strong>Cantina Garuti（€15–30）、Barbolini</p></div></div><div class=\"doc-item\"><div class=\"doc-rank\">#3</div><h3>Lambrusco Salamino di Santa Croce DOC</h3><div class=\"doc-details\"><p><strong>位置：</strong>Modena 和 Reggio Emilia 省交界</p><p><strong>品種名來源：</strong>「Salamino」因葡萄串形狀酷似小香腸而得名</p><p><strong>風格：</strong>中等酒體，介於 Sorbara 和 Grasparossa 之間</p><p><strong>風味：</strong>紅色漿果、草莓、輕微紫羅蘭、辛香料</p><p><strong>特點：</strong>平衡易飲，是 Reggio Emilia 地區日常餐酒首選</p></div></div><div class=\"doc-item\"><div class=\"doc-rank\">#4</div><h3>Reggiano Lambrusco DOC</h3><div class=\"doc-details\"><p><strong>位置：</strong>Reggio Emilia 省全境</p><p><strong>品種：</strong>多種 Lambrusco 混釀（Salamino、Marani、Montericco 等）</p><p><strong>風格：</strong>平衡型、寶石紅色、果香豐富</p><p><strong>特點：</strong>產量最大，是外銷市場的主力款；大合作社（Riunite & CIV）主導</p><p><strong>均價：</strong>€5–15（最親民的入門款）</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🧀 Lambrusco 與 Emilia 美食配對",
-      "content": "<div class=\"food-pairing-section\"><div class=\"pairing-philosophy\"><h3>💡 為什麼 Lambrusco 是 Emilia 料理的完美搭檔？</h3><div class=\"reasons\"><div class=\"reason\"><strong>1. 高酸度</strong> - 切割油膩的起司和肉類</div><div class=\"reason\"><strong>2. 氣泡</strong> - 清爽口腔，去除油脂</div><div class=\"reason\"><strong>3. 低酒精</strong> - 不會壓過料理風味</div><div class=\"reason\"><strong>4. 單寧柔順</strong> - 與起司不衝突</div></div></div><div class=\"classic-pairings\"><h4>🍽️ 經典配對</h4><div class=\"pairing-grid\"><div class=\"pairing-card\"><h5>Lambrusco Secco</h5><ul><li>🧀 Parmigiano-Reggiano（36個月陳年）</li><li>🥓 Prosciutto di Parma 生火腿</li><li>🍝 Tagliatelle al Ragù（波隆那肉醬麵）</li><li>🥩 Cotechino 香腸配扁豆</li></ul></div><div class=\"pairing-card\"><h5>Lambrusco Grasparossa</h5><ul><li>🥩 Zampone（豬腳香腸）</li><li>🍖 烤紅肉</li><li>🧀 陳年 Parmigiano</li><li>🍕 厚餅 Pizza</li></ul></div><div class=\"pairing-card\"><h5>Lambrusco di Sorbara</h5><ul><li>🐟 炸海鮮</li><li>🥗 沙拉</li><li>🍤 蝦類料理</li><li>🫓 Piadina 薄餅</li></ul></div></div></div></div>"
+      "title": "Lambrusco 頂級生產者深度檔案",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Cleto Chiarli — 1860 年的傳奇老廠</h3><p class=\"mf-prod\"><strong>成立：</strong>1860 年，是義大利歷史最悠久的 Lambrusco 酒莊之一<br><strong>旗艦款：</strong>Vigneto Enrico Cialdini（Lambrusco di Sorbara，單一園，乾型，精品方向）<br><strong>哲學：</strong>堅持傳統 Modena Secco 風格，拒絕走廉價甜型路線，是品種復興的精神象徵<br><strong>均價：</strong>€10–25，性價比在精品 Lambrusco 中最高</p></div><div class=\"mf-zone warm\"><h3>Alberto Paltrinieri — 自然精品先鋒</h3><p class=\"mf-prod\"><strong>成立：</strong>家族酒農，第三代 Alberto Paltrinieri 主導精品轉型<br><strong>旗艦款：</strong>Radice（Lambrusco di Sorbara，Ancestrale 法，不過濾，略混濁，瓶底有沉澱）<br><strong>哲學：</strong>以 Ancestrale 古法捕捉 Sorbara 最原始的果香和礦物感，拒絕加糖和穩定劑<br><strong>評價：</strong>Wine Advocate、Vinous 和 Gambero Rosso 一致推薦，是自然酒界的 Lambrusco 標竿<br><strong>均價：</strong>€20–40</p></div><div class=\"mf-zone cool\"><h3>Cantina Garuti — 丘陵精品</h3><p class=\"mf-prod\"><strong>成立：</strong>Castelvetro 丘陵的精品酒農<br><strong>旗艦款：</strong>Lambrusco Grasparossa di Castelvetro Secco（丘陵風土，單寧更結實）<br><strong>哲學：</strong>探索丘陵石灰岩土壤對 Grasparossa 的影響，展現 Lambrusco 的地塊差異性<br><strong>均價：</strong>€15–30</p></div><div class=\"mf-zone plain\"><h3>Cavicchioli — 大廠中的精品線</h3><p class=\"mf-prod\"><strong>成立：</strong>1928 年，Modena 省，後被 Gruppo Italiano Vini 收購<br><strong>產量：</strong>義大利最大 Lambrusco 品牌之一<br><strong>精品線：</strong>Vigna del Cristo（單一園 Lambrusco di Sorbara）代表大廠也能做精品的嘗試<br><strong>均價：</strong>€8–20，最佳「主流中的例外」</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Albana di Romagna DOCG — 義大利第一個白酒 DOCG",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>1987 年：有爭議的「第一」</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">1987 年，Albana di Romagna 成為義大利第一個白葡萄酒 DOCG，此舉在當時引發巨大爭議——評論家認為「比 Barolo 更早獲得 DOCG 的資格值得質疑」，批評這是政治妥協而非品質認可。然而今日，頂級 Albana Passito（尤其是 Fattoria Zerbina 的 Araba Fenice）已被公認為義大利最偉大的甜白酒之一，足以媲美法國 Sauternes。</p><div class=\"science-card\">1987 年：義大利第一個白酒 DOCG ｜產地：Romagna 丘陵（Faenza / Forlì 周邊）</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">四種風格</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Secco（干型）：</strong>白桃、杏桃、杏仁、中等酒體｜清爽但缺乏陳年動力，適合年輕 1–3 年飲用｜配魚類、貝類、白肉</div><div class=\"orvieto-card\"><strong>Amabile（微甜）：</strong>果香更豐富，殘糖 15–30g/L，是傳統地方宴席用酒</div><div class=\"orvieto-card\"><strong>Passito（甜型風乾）：</strong>葡萄在竹架上晾乾 2–3 個月，濃縮糖分後釀造；蜂蜜、杏桃乾、橘皮蜜餞、堅果；陳年潛力 8–15 年</div><div class=\"orvieto-card\"><strong>Passito Riserva + 貴腐（Botrytis）：</strong>Fattoria Zerbina 的 Araba Fenice——選取有貴腐黴感染的風乾葡萄，極複雜的蜂蠟、薑、橘花蜂蜜；均價 €40–80（375ml）；Wine Advocate 93–96 分；是義大利最頂級的甜白酒之一</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Sangiovese di Romagna & Romagna DOC",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Romagna 的靈魂紅品種</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Romagna 的 Sangiovese 與 Tuscany 的 Sangiovese 基因相同，但在 Apennines 丘陵的不同土壤和釀造哲學下，展現出完全不同的個性——更多紅色漿果果香、更柔順的單寧、更早飲用。2011 年「Romagna DOC」法規整合了區域內多個 DOC，Sangiovese 分為普通款、Superiore、Riserva 三個等級，頂級款可與 Chianti Classico Riserva 媲美。</p><div class=\"science-card\">2011 年：Romagna DOC 法規整合｜三等級：Sangiovese / Superiore / Riserva</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">與 Tuscany Sangiovese 比較</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Romagna 風格：</strong>更豐富的紅色漿果（草莓、覆盆莓、紅李）、更柔順的單寧、更早適飲（2-5 年）、整體更平易近人、均價 €8-35</div><div class=\"orvieto-card\"><strong>Chianti/Brunello 風格：</strong>更強的結構感、高酸度、緊實單寧、明顯的風乾玫瑰和皮革香氣，需要陳年 5-20 年才完全展現</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">頂級生產者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>San Patrignano：</strong>義大利最著名的社會企業酒莊——一所藥物成癮康復社區（容納 1,300+ 人），旗艦款 Avi Sangiovese di Romagna Superiore Riserva（均價 €25–45）已達精品等級，收益全部用於社區運作，是義大利最有故事的酒莊之一</div><div class=\"orvieto-card\"><strong>Tre Monti：</strong>Imola 丘陵的有機農法精品酒莊，旗艦 Thea Sangiovese di Romagna Riserva（均價 €20–35），以丘陵石灰岩賦予的礦物感著稱</div><div class=\"orvieto-card\"><strong>Leone Conti：</strong>自然農法先鋒，Sangiovese 老藤版本（均價 €15–30），是自然酒圈的 Romagna 代表</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Trebbiano Romagnolo 與 Aceto Balsamico 的深層連結",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">Trebbiano Romagnolo 是 Romagna 地區種植面積最廣的白葡萄品種，日常白酒（Romagna DOC Trebbiano）的原料，但它還有一個更重要的角色——作為 Aceto Balsamico Tradizionale（傳統巴薩米克醋）的主要葡萄原料之一。</p><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Aceto Balsamico Tradizionale DOCG — 義大利最複雜的農產品</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>原料：</strong>Trebbiano di Modena（主）+ Lambrusco 葡萄（次），必須在 Modena 或 Reggio Emilia 境內生產</div><div class=\"orvieto-card\"><strong>釀造工藝：</strong>新鮮葡萄汁（Mosto Cotto）緩慢熬煮濃縮 → 放入木桶最大桶開始陳年 → 每年在不同木材（橡木/栗木/桑木/櫻桃木/杜松木）的逐漸縮小的木桶序列中轉移（Rincalzo 系統），同時蒸發濃縮</div><div class=\"orvieto-card\"><strong>兩個等級：</strong>Affinato（銀蓋）：最少 12 年｜Extra Vecchio（金蓋）：最少 25 年</div><div class=\"orvieto-card\"><strong>商業醋 vs 傳統醋：</strong>超市常見的「Aceto Balsamico di Modena IGP」（商業款）只需在 Modena 裝瓶即可，無木桶陳年要求，完全不同等級。真正的 Tradizionale DOCG 極為珍稀，100ml 小瓶 Affinato 約 €40–80，Extra Vecchio 可達 €150–300</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Romagna DOC Trebbiano — 葡萄酒本身</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">以葡萄酒形式飲用時：清爽輕盈、白花、青蘋果、輕微杏仁，是 Romagna 最普遍的日常白酒（餐廳桌酒），均價 €6–12</div><div class=\"orvieto-card\">不同於 Trebbiano Toscano（Tuscany 廣泛種植的中性白品種），Trebbiano Romagnolo 有更明顯的品種特性和礦物感</div></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Colli Bolognesi & Pignoletto DOCG",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>波隆那丘陵——被忽視的精品白酒產區</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Colli Bolognesi（波隆那丘陵）是 Emilia 精品白酒最重要的產區，以 Pignoletto 品種為核心。Pignoletto 的學名是 Grechetto Gentile，與 Umbria 的 Grechetto 有關係，但在 Bologna 丘陵的沙礫石灰岩土壤下，展現出獨特的青蘋果和杏仁礦物風格。2010 年，Colli Bolognesi Pignoletto DOCG 正式獲認，是 Emilia 地區第一個且唯一的白酒 DOCG。</p><div class=\"science-card\">Colli Bolognesi Pignoletto DOCG（2010）｜Bologna 周邊丘陵｜Pignoletto（Grechetto Gentile）</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Pignoletto 品種特徵與風格</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>干型靜態酒（Tranquillo）：</strong>白花、青蘋果、白桃、杏仁苦尾、礦物感；中等酸度；適合年輕 1–4 年飲用；是 Bologna 最流行的餐廳開胃酒選項</div><div class=\"orvieto-card\"><strong>Frizzante（微氣泡）：</strong>輕盈氣泡加強清爽度，是夏日餐前酒的完美選項；在 Bologna 的戶外餐廳（Osteria）最常見</div><div class=\"orvieto-card\"><strong>Spumante（完全氣泡）：</strong>傳統法或 Charmat 法均有；複雜度最高，適合慶祝場合</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Colli Bolognesi 其他葡萄品種</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Barbera：</strong>從 Piemonte 引入，在 Bologna 丘陵展現更柔順的版本，是 Pignoletto 的紅酒搭配</div><div class=\"orvieto-card\"><strong>Cabernet Sauvignon / Merlot：</strong>Bologna 丘陵對國際品種的在地詮釋，風格較輕盈，不走 Super Tuscan 路線</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Cagnina di Romagna & 傳統新酒節",
+      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Cagnina di Romagna DOC — Romagna 的「新酒節」主角</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>品種：</strong>Cagnina 是 Terrano 的別名，基因同為 Refosco dal Peduncolo Rosso（Friuli 名種的親戚），在 Romagna 稱為 Cagnina</div><div class=\"orvieto-card\"><strong>風格：</strong>鮮豔的深紫紅色、高酸度、新鮮紅色漿果（覆盆莓、草莓）和輕微苦澀收尾；甜型（Dolce）為主，殘糖通常在 40–80g/L，但高酸度平衡了甜感</div><div class=\"orvieto-card\"><strong>傳統文化：</strong>每年秋天採收後新酒上市（10–11 月），整個 Romagna 會有 Sagra（節慶市集）慶祝 Cagnina 新酒上市，傳統上配 Caldarroste（炒栗子）一起享用，是 Romagna 秋天最標誌性的味覺記憶</div><div class=\"orvieto-card\"><strong>適飲：</strong>年輕即飲（採收後 6–12 個月），不追求陳年，均價 €6–12；是最具 Romagna 地方文化色彩的酒款</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Lambrusco 與 Emilia 美食配對",
+      "content": "<div class=\"food-pairing-section\"><div class=\"pairing-philosophy\"><h3>為什麼 Lambrusco 是 Emilia 料理的完美搭檔？</h3><div class=\"reasons\"><div class=\"reason\"><strong>高酸度</strong> — 切割 Parmigiano、Mortadella、Prosciutto 等油脂豐富料理</div><div class=\"reason\"><strong>氣泡</strong> — 清爽口腔，重置味覺，讓每一口都像第一口</div><div class=\"reason\"><strong>低酒精（9.5–11.5%）</strong> — 不會壓過料理風味，適合全天候餐酒</div><div class=\"reason\"><strong>單寧柔順</strong> — 與起司的蛋白質不衝突</div></div></div><div class=\"classic-pairings\"><h4>經典配對</h4><div class=\"pairing-grid\"><div class=\"pairing-card\"><h5>Lambrusco di Sorbara（最輕盈）</h5><ul><li>炸海鮮（Fritto di mare）</li><li>Prosciutto di Parma 生火腿</li><li>Piadina 薄餅</li><li>輕食沙拉</li></ul></div><div class=\"pairing-card\"><h5>Lambrusco Salamino / Reggiano（中等）</h5><ul><li>Tagliatelle al Ragù（波隆那肉醬麵）</li><li>Parmigiano-Reggiano 24 個月</li><li>Mortadella 香腸拼盤</li><li>Pizza</li></ul></div><div class=\"pairing-card\"><h5>Lambrusco Grasparossa（最飽滿）</h5><ul><li>Zampone / Cotechino 香腸</li><li>Parmigiano-Reggiano 36 個月陳年</li><li>燒烤紅肉</li><li>Parmigiana di Melanzane（茄子焗烤）</li></ul></div></div></div></div>"
     },
     {
       "type": "list",
-      "title": "🎓 重點回顧",
+      "title": "重點回顧",
       "points": [
-        "✓ Emilia-Romagna 是義大利的美食首都",
-        "✓ Lambrusco 的優質版本是不甜、清爽的氣泡紅酒",
-        "✓ Lambrusco di Sorbara 最優雅，Grasparossa 最濃郁",
-        "✓ Albana di Romagna 是義大利第一個白酒 DOCG",
-        "✓ Lambrusco 與 Emilia 料理（起司、火腿）完美配對",
-        "✓ Sangiovese di Romagna 比 Tuscany 版本更果香柔順"
+        "Emilia（西）= Lambrusco / Parmigiano / Balsamic 醋的故鄉；Romagna（東）= Sangiovese 紅酒 / Albana 白酒 / Piadina 薄餅",
+        "Lambrusco 復興：1970–80 年代廉價甜型出口形象，1990 年後精品 Secco 不甜風格帶動全球重評",
+        "四大 Lambrusco DOC：Sorbara（最優雅輕盈）/ Grasparossa（最飽滿）/ Salamino（葡萄串似香腸而得名）/ Reggiano（量最大）",
+        "釀造方法：Charmat 法（工業主流）vs Ancestrale 古法（精品，保留沉澱，略混濁是品質標誌）",
+        "頂級生產者：Cleto Chiarli（1860 老廠）/ Alberto Paltrinieri（Radice Ancestrale）/ Cantina Garuti（丘陵精品）",
+        "Albana di Romagna DOCG（1987）：義大利第一個白酒 DOCG；Fattoria Zerbina 的 Araba Fenice（Passito + Botrytis）是義大利最頂級甜白酒之一",
+        "Trebbiano Romagnolo：日常白酒 + Aceto Balsamico Tradizionale DOCG 的原料葡萄；傳統醋最少 12 年（銀蓋）/ 25 年（金蓋）陳年",
+        "San Patrignano：最有故事的義大利酒莊（藥物成癮康復社區），頂級 Sangiovese di Romagna Riserva",
+        "Cagnina di Romagna DOC：甜型紅酒（Terrano/Refosco），秋收新酒節 + 炒栗子是 Romagna 最標誌性的文化記憶",
+        "Colli Bolognesi Pignoletto DOCG（2010）：波隆那丘陵白酒，Emilia 唯一白酒 DOCG"
       ]
     },
     {
       "type": "quiz",
-      "title": "🧠 Emilia-Romagna 知識檢測",
+      "title": "Emilia-Romagna 知識檢測",
       "_marker": "// inject-italy-l2-quiz",
       "questions": [
         {
           "type": "single",
-          "question": "優質的 Lambrusco 主流風格是？",
-          "options": [
-            "甜型（Dolce）",
-            "不甜（Secco）",
-            "加烈酒",
-            "橘酒"
-          ],
+          "question": "優質 Lambrusco 的主流現代風格是？",
+          "options": ["甜型（Dolce）", "不甜（Secco）", "加烈酒", "橘酒"],
           "correct": 1,
-          "explanation": "現代高品質 Lambrusco 主流是不甜（Secco）風格，清爽、果香豐富，改變了過去甜型廉價酒的印象。"
+          "explanation": "現代高品質 Lambrusco 主流是不甜（Secco）風格，清爽果香，改變過去廉價甜型形象。1970–80 年代的出口甜型版本已逐漸式微。"
         },
         {
           "type": "single",
-          "question": "三種 Lambrusco DOC 中，哪個最優雅、酒體最輕？",
+          "question": "Lambrusco di Sorbara、Grasparossa、Salamino 三款風格排序，由最輕盈到最飽滿是？",
           "options": [
-            "Lambrusco Grasparossa",
-            "Lambrusco di Sorbara",
-            "Reggiano Lambrusco",
-            "都一樣"
+            "Grasparossa → Salamino → Sorbara",
+            "Sorbara → Salamino → Grasparossa",
+            "Salamino → Sorbara → Grasparossa",
+            "三者風格相同"
           ],
           "correct": 1,
-          "explanation": "Lambrusco di Sorbara 是最優雅的品種，酒體最輕，呈現玫瑰粉紅色，高酸度、細膩氣泡。"
+          "explanation": "Sorbara 最優雅輕盈（淡粉紅色）；Salamino 居中；Grasparossa 最飽滿深色（丘陵石灰岩土壤帶來更多結構）。"
         },
         {
           "type": "single",
-          "question": "義大利第一個白酒 DOCG 是？",
+          "question": "Lambrusco Ancestrale 古法最顯著的外觀特徵是？",
           "options": [
-            "Soave",
-            "Gavi",
-            "Albana di Romagna",
-            "Vernaccia di San Gimignano"
+            "酒液清澈透明，無任何沉澱",
+            "深金黃色，帶橡木香",
+            "瓶底有沉澱，酒液略混濁——這是品質標誌",
+            "紅色標籤代表古法"
           ],
           "correct": 2,
-          "explanation": "Albana di Romagna 在 1987 年成為義大利第一個白酒 DOCG，主要產自 Romagna 地區。"
+          "explanation": "Ancestrale 古法在瓶中完成二次發酵且不除渣，保留酵母沉澱物，酒液略混濁——這正是精品 Lambrusco 的品質標誌，不是缺陷。代表：Alberto Paltrinieri 的 Radice。"
         },
         {
           "type": "single",
-          "question": "為什麼 Lambrusco 適合搭配 Emilia 的油膩料理？",
-          "options": [
-            "低酒精度",
-            "高酸度 + 氣泡可切割油膩",
-            "甜味平衡",
-            "顏色搭配"
-          ],
-          "correct": 1,
-          "explanation": "Lambrusco 的高酸度和氣泡能有效切割 Parmigiano、Prosciutto 等油膩料理的油脂，清爽口腔。"
+          "question": "Aceto Balsamico Tradizionale DOCG 的最低陳年要求是？",
+          "options": ["3 年", "5 年", "12 年（銀蓋），25 年為 Extra Vecchio（金蓋）", "50 年以上"],
+          "correct": 2,
+          "explanation": "Tradizionale DOCG 最低陳年 12 年（銀蓋），25 年以上為 Extra Vecchio（金蓋）。葡萄汁在一系列不同木材的縮小木桶中逐年轉移濃縮，是義大利最複雜的農產品之一。"
         },
         {
           "type": "single",
-          "question": "Lambrusco 最重要的 DOCG 產區位於哪裡？",
+          "question": "Albana di Romagna DOCG 的歷史意義是什麼？",
           "options": [
-            "A. Bologna 附近",
-            "B. Modena 與 Reggio Emilia",
-            "C. Parma 以北",
-            "D. Ferrara 平原"
+            "義大利第一個有機認證 DOCG",
+            "1987 年成為義大利第一個白酒 DOCG",
+            "義大利第一個甜型酒 DOCG",
+            "義大利第一個氣泡酒 DOCG"
           ],
           "correct": 1,
-          "explanation": "Lambrusco 主要 DOCG（Lambrusco di Sorbara、Lambrusco Grasparossa）均位於 Modena 與 Reggio Emilia 一帶。"
+          "explanation": "1987 年 Albana di Romagna 成為義大利第一個白葡萄酒 DOCG，引發爭議但今日頂級 Passito 款（Fattoria Zerbina 的 Araba Fenice）已被公認為義大利最偉大的甜白酒之一。"
+        },
+        {
+          "type": "single",
+          "question": "San Patrignano 酒莊有什麼特殊背景故事？",
+          "options": [
+            "義大利最古老的家族酒莊，建立於 1600 年代",
+            "一所藥物成癮康復社區（1,300+ 人），以生產頂級 Sangiovese di Romagna 聞名，收益全用於社區運作",
+            "由法國釀酒師創立的跨國精品品牌",
+            "義大利第一個女性主導的酒莊"
+          ],
+          "correct": 1,
+          "explanation": "San Patrignano 是義大利最著名的社會企業酒莊，同時也是容納 1,300+ 人的藥物成癮康復社區。旗艦款 Avi Sangiovese di Romagna Riserva 達到精品等級，收益全部支持社區運作。"
+        },
+        {
+          "type": "single",
+          "question": "Cagnina di Romagna DOC 的傳統文化配對是？",
+          "options": [
+            "烤牛排 + Parmigiano",
+            "秋收新酒 + Caldarroste（炒栗子），是 Romagna 秋天最標誌性的節慶記憶",
+            "聖誕節焗烤料理",
+            "春季海鮮配對"
+          ],
+          "correct": 1,
+          "explanation": "Cagnina 是 Romagna 的秋收新酒（Terrano/Refosco 品種，甜型），每年 10–11 月新酒節（Sagra）上市，傳統配 Caldarroste（炒栗子）是 Romagna 秋天最深刻的文化記憶。"
         }
       ]
     }

@@ -10,9 +10,9 @@ export const learningState = reactive({
   testMode: false, // 測試模式（預設關閉，可手動開啟）
   userProgress: {
     level1: { completed: 0, total: 8 },
-    level2: { completed: 0, total: 9 },
+    level2: { completed: 0, total: 10 },
     level3: { completed: 0, total: 15 },
-    level4: { completed: 0, total: 12 }
+    level4: { completed: 0, total: 13 }
   },
   currentQuiz: null,
   quizScores: {
@@ -176,7 +176,8 @@ export const learningLevels = {
     modules: [
       { id: 'B2M1', title: '左岸 Médoc 深度探索', lessonIds: ['l2-1', 'l2-2', 'l2-3', 'l2-4', 'l2-5'] },
       { id: 'B2M2', title: '右岸精品產區', lessonIds: ['l2-6', 'l2-7', 'l2-8'] },
-      { id: 'B2M3', title: '進階綜合評量', lessonIds: ['l2-9'] }
+      { id: 'B2M3', title: '蘇玳甜酒帶', lessonIds: ['l2-10'] },
+      { id: 'B2M4', title: '進階綜合評量', lessonIds: ['l2-9'] }
     ],
     lessons: [
       {
@@ -290,6 +291,21 @@ export const learningLevels = {
         ],
         interactiveElements: ['satellite-region-map', 'value-analysis-tool', 'quality-comparison', 'investment-calculator'],
         duration: 35
+      },
+      {
+        id: 'l2-10',
+        title: '蘇玳與巴薩克：貴腐甜酒傳奇',
+        description: '深入蘇玳的微氣候奇蹟與貴腐菌科學，掌握世界最偉大甜酒的產區、分級與品鑑',
+        mapFocus: { group: 'Sauternais' },
+        objectives: [
+          '理解西隆河霧氣與加倫河創造的獨特貴腐微氣候',
+          '掌握 Botrytis cinerea 貴腐菌的作用機制與脫水濃縮過程',
+          '認識賽美容、白蘇維濃、蜜思卡黛三品種在甜酒中的角色',
+          '了解1855年蘇玳分級與 Château d\'Yquem 的至高地位',
+          '比較法國蘇玳、德國TBA、匈牙利托卡伊三大貴腐產區'
+        ],
+        interactiveElements: ['sauternes-microclimate', 'botrytis-simulation', 'classification-explorer', 'pairing-guide'],
+        duration: 40
       },
       {
         id: 'l2-9',
@@ -515,7 +531,7 @@ export const learningLevels = {
       { id: 'B4M1', title: '風土與釀造科學', lessonIds: ['l4-1', 'l4-2', 'l4-3'] },
       { id: 'B4M2', title: '商業管理與法規', lessonIds: ['l4-4', 'l4-5', 'l4-6'] },
       { id: 'B4M3', title: '風險、永續與感官', lessonIds: ['l4-7', 'l4-8', 'l4-9'] },
-      { id: 'B4M4', title: '科技、投資與專題', lessonIds: ['l4-10', 'l4-11', 'l4-12'] }
+      { id: 'B4M4', title: '科技、投資與專題', lessonIds: ['l4-10', 'l4-11', 'l4-13', 'l4-12'] }
     ],
     lessons: [
       {
@@ -661,6 +677,21 @@ export const learningLevels = {
         ],
         interactiveElements: ['pricing-simulator', 'portfolio-analyzer'],
         duration: 60
+      },
+      {
+        id: 'l4-13',
+        title: '組織領導與家族酒莊治理',
+        description: '三環模型、所有權架構、接班傳承、人才管理，以波爾多名莊案例建立家族企業領導力框架',
+        mapFocus: null,
+        objectives: [
+          '掌握家族企業三環模型與治理架構設計',
+          '運用 SAS/SCI/GFV 與 Pacte Dutreil 保護所有權',
+          '建立家族成員就業政策與非家族人才激勵體系',
+          '制定系統化的 10 年接班計畫與代際傳承路徑',
+          '分析 Mouton、Latour、Angélus 等名莊的治理演化'
+        ],
+        interactiveElements: ['three-circle-model', 'succession-planner', 'governance-design', 'case-study-explorer'],
+        duration: 65
       },
       {
         id: 'l4-12',
@@ -817,9 +848,9 @@ export const learningActions = {
     // 更新進度
     learningState.userProgress = {
       level1: { completed: 8, total: 8 },
-      level2: { completed: 9, total: 9 }, 
+      level2: { completed: 9, total: 9 },
       level3: { completed: 3, total: 15 },
-      level4: { completed: 0, total: 12 }
+      level4: { completed: 0, total: 13 }
     }
   },
 
@@ -838,9 +869,9 @@ export const learningActions = {
     learningState.completedLessons = []
     learningState.userProgress = {
       level1: { completed: 0, total: 8 },
-      level2: { completed: 0, total: 12 },
-      level3: { completed: 0, total: 15 }, 
-      level4: { completed: 0, total: 12 }
+      level2: { completed: 0, total: 10 },
+      level3: { completed: 0, total: 15 },
+      level4: { completed: 0, total: 13 }
     }
     learningState.achievements = []
     learningState.quizScores = {}

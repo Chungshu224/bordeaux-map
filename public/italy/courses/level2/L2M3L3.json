@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "Aglianico del Vulture 產自哪種地質環境？",
-      "options": ["石灰岩", "已滅絕火山斜坡", "海岸平原", "冰川地形"],
+      "options": [
+        "石灰岩",
+        "已滅絕火山斜坡",
+        "海岸平原",
+        "冰川地形"
+      ],
       "answer": 1,
       "explanation": "Aglianico del Vulture 產自 Monte Vulture 已滅絕火山斜坡，火山土壤賦予獨特礦物感。"
     },
     {
       "question": "Aglianico del Vulture Superiore Riserva 需陳年多久？",
-      "options": ["1 年", "3 年", "5 年", "10 年"],
+      "options": [
+        "1 年",
+        "3 年",
+        "5 年",
+        "10 年"
+      ],
       "answer": 2,
       "explanation": "Aglianico del Vulture Superiore Riserva 需陳年至少 5 年（含 2 年橡木桶）才能釋出。"
     },
     {
       "question": "Aglianico del Vulture 與 Taurasi 的主要差異是？",
-      "options": ["使用不同品種", "Vulture 更礦物、更優雅", "Taurasi 在 Basilicata", "酒精度差異大"],
+      "options": [
+        "使用不同品種",
+        "Vulture 更礦物、更優雅",
+        "Taurasi 在 Basilicata",
+        "酒精度差異大"
+      ],
       "answer": 1,
       "explanation": "兩者都用 Aglianico 品種，但 Vulture 因火山土壤和高海拔，風格更礦物、更優雅、更緊緻。"
     },
     {
       "question": "Basilicata 料理的特色香料是？",
-      "options": ["羅勒", "辣椒（Peperoncino）", "番紅花", "肉桂"],
+      "options": [
+        "羅勒",
+        "辣椒（Peperoncino）",
+        "番紅花",
+        "肉桂"
+      ],
       "answer": 1,
       "explanation": "Basilicata 料理以辣椒（Peperoncino）為特色，Peperoni Cruschi（酥脆辣椒）是當地特產。"
     }
@@ -32,11 +52,6 @@
       "type": "title",
       "title": "🌋 Basilicata",
       "subtitle": "Aglianico del Vulture 的唯一家鄉"
-    },
-    {
-      "type": "map_placeholder",
-      "title": "🌋 Basilicata 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🌋 Basilicata 產區地圖 地圖。"
     },
     {
       "type": "content",
@@ -127,35 +142,60 @@
         {
           "type": "single",
           "question": "Aglianico del Vulture 產自哪種地質環境？",
-          "options": ["石灰岩", "已滅絕火山斜坡", "海岸平原", "冰川地形"],
+          "options": [
+            "石灰岩",
+            "已滅絕火山斜坡",
+            "海岸平原",
+            "冰川地形"
+          ],
           "correct": 1,
           "explanation": "Aglianico del Vulture 產自 Monte Vulture 已滅絕火山斜坡，火山土壤賦予獨特礦物感。"
         },
         {
           "type": "single",
           "question": "Aglianico del Vulture Superiore Riserva 需陳年多久？",
-          "options": ["1 年", "3 年", "5 年", "10 年"],
+          "options": [
+            "1 年",
+            "3 年",
+            "5 年",
+            "10 年"
+          ],
           "correct": 2,
           "explanation": "Aglianico del Vulture Superiore Riserva 需陳年至少 5 年（含 2 年橡木桶）才能釋出。"
         },
         {
           "type": "single",
           "question": "Aglianico del Vulture 與 Taurasi 的主要差異是？",
-          "options": ["使用不同品種", "Vulture 更礦物、更優雅", "Taurasi 在 Basilicata", "酒精度差異大"],
+          "options": [
+            "使用不同品種",
+            "Vulture 更礦物、更優雅",
+            "Taurasi 在 Basilicata",
+            "酒精度差異大"
+          ],
           "correct": 1,
           "explanation": "兩者都用 Aglianico 品種，但 Vulture 因火山土壤和高海拔，風格更礦物、更優雅、更緊緻。"
         },
         {
           "type": "single",
           "question": "Basilicata 料理的特色香料是？",
-          "options": ["羅勒", "辣椒（Peperoncino）", "番紅花", "肉桂"],
+          "options": [
+            "羅勒",
+            "辣椒（Peperoncino）",
+            "番紅花",
+            "肉桂"
+          ],
           "correct": 1,
           "explanation": "Basilicata 料理以辣椒（Peperoncino）為特色，Peperoni Cruschi（酥脆辣椒）是當地特產。"
         },
         {
           "type": "single",
           "question": "Aglianico del Vulture DOCG 的葡萄園位於哪種地形上？",
-          "options": ["沿海平原", "火山熔岩土壤山坡", "石灰岩丘陵", "河谷沖積地"],
+          "options": [
+            "沿海平原",
+            "火山熔岩土壤山坡",
+            "石灰岩丘陵",
+            "河谷沖積地"
+          ],
           "correct": 1,
           "explanation": "Aglianico del Vulture 生長於 Monte Vulture 已絕的火山熔岩土壤，這賦予葡萄酒獨特的礦物感與酸度。"
         }

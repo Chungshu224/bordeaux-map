@@ -4,54 +4,67 @@
   "quiz": [
     {
       "question": "誰是 Timorasso 葡萄復興的先驅者？",
-      "options": [
-        "Angelo Gaja",
-        "Walter Massa",
-        "Bruno Giacosa",
-        "Paolo Scavino"
-      ],
+      "options": ["Angelo Gaja", "Walter Massa", "Bruno Giacosa", "Paolo Scavino"],
       "answer": 1,
       "explanation": "Walter Massa 在 1987 年開始 Timorasso 的復興計畫，將這個幾近絕種的品種重新帶回市場，如今成為義大利最昂貴白葡萄酒之一。"
     },
     {
       "question": "Ruché 葡萄最獨特的風味特徵是什麼？",
-      "options": [
-        "黑莓和巧克力",
-        "玫瑰精油和紫羅蘭",
-        "青草和醋栗",
-        "無花果和蜂蜜"
-      ],
+      "options": ["黑莓和巧克力", "玫瑰精油和紫羅蘭", "青草和醋栗", "無花果和蜂蜜"],
       "answer": 1,
-      "explanation": "Ruché 以其極濃郁的玫瑰精油和紫羅蘭香氣聞名，這是其最顯著的特徵，2010 年獲得 DOCG 認證。"
+      "explanation": "Ruché 以其極濃郁的玫瑰精油和紫羅蘭香氣聞名，2010 年獲得 DOCG 認證，是義大利最芳香的紅葡萄品種之一。"
     },
     {
       "question": "Freisa 葡萄可以釀造成幾種不同的風格？",
-      "options": [
-        "1 種",
-        "2 種",
-        "3 種",
-        "4 種"
-      ],
+      "options": ["1 種", "2 種", "3 種", "4 種"],
       "answer": 2,
       "explanation": "Freisa 可以釀造成三種風格：干型（Secco）、微甜（Amabile）和氣泡（Frizzante）。"
     },
     {
       "question": "Timorasso 的陳年潛力通常是多久？",
-      "options": [
-        "1-3 年",
-        "5-8 年",
-        "15-20 年",
-        "30 年以上"
-      ],
+      "options": ["1-3 年", "5-8 年", "15-20 年", "30 年以上"],
       "answer": 2,
-      "explanation": "Timorasso 具有極高的陳年潛力，通常可以陳年 15-20 年，是義大利最耐久的白葡萄酒之一。"
+      "explanation": "Timorasso 具有極高的陳年潛力，通常可以陳年 15-20 年，是義大利最耐久的白葡萄酒之一，陳年後發展出汽油、蜂蠟、烤杏仁的複雜香氣。"
+    },
+    {
+      "question": "Erbaluce di Caluso DOCG 最珍稀的酒款 Caluso Passito 使用什麼釀造方法？",
+      "options": [
+        "冰凍法（Cryo-extraction），萃取冷凍果汁",
+        "Appassimento 風乾法，葡萄晾乾至聖誕節前後才壓榨",
+        "貴腐黴菌（Botrytis）自然感染",
+        "添加蒸餾酒提高酒精度"
+      ],
+      "answer": 1,
+      "explanation": "Caluso Passito 使用 Appassimento 風乾法，Erbaluce 葡萄在通風架上晾乾至 12 月甚至翌年 1 月，糖分高度濃縮後才壓榨，再在小型橡木桶陳年 3–5 年以上，是 Piemonte 最珍貴的甜白酒之一。"
+    },
+    {
+      "question": "Pelaverga Piccolo 是什麼類型的稀有品種？它的獨特之處是？",
+      "options": [
+        "Piemonte 稀有白品種，以極高酸度著稱",
+        "Piemonte 稀有紅品種，以白胡椒辛香和輕盈身形著稱，僅產於 Verduno 村",
+        "Campania 的稀有品種，以火山礦物感著稱",
+        "Venetio 的氣泡酒專用品種"
+      ],
+      "answer": 1,
+      "explanation": "Pelaverga Piccolo 是 Piemonte 極稀有的紅品種，幾乎僅產於 Verduno 村（Verduno Pelaverga DOC），以獨特的白胡椒辛香、清新玫瑰香氣和輕盈身形著稱，是 Barolo 重鎮 Verduno 村的「秘密武器」。"
+    },
+    {
+      "question": "稀有品種保育的最大系統性威脅是什麼？",
+      "options": [
+        "義大利政府禁止種植非 DOCG 認可的品種",
+        "農民選擇高產量商業品種（如 Merlot、Chardonnay）替換，造成基因多樣性流失",
+        "氣候暖化讓北義無法種植稀有品種",
+        "稀有品種口感不佳，消費者不接受"
+      ],
+      "answer": 1,
+      "explanation": "稀有品種最大威脅是商業化壓力：農民為了穩定高產量，傾向改植市場接受度高的國際品種（Merlot、Chardonnay、Cabernet）。每個滅絕的品種代表不可復原的數千年基因多樣性損失，也是義大利農業文化傳承的永久斷裂。"
     }
   ],
   "slides": [
     {
       "type": "title",
       "title": "北義稀有品種寶藏",
-      "subtitle": "Timorasso · Ruché · Freisa — 皮埃蒙特被遺忘的稀有珍寶"
+      "subtitle": "Timorasso · Ruché · Freisa · Erbaluce · Pelaverga — 皮埃蒙特被遺忘的稀有珍寶"
     },
     {
       "type": "content",
@@ -60,27 +73,47 @@
     },
     {
       "type": "content",
+      "title": "Timorasso 三大頂級生產者深度檔案",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Walter Massa — 復興之父</h3><p class=\"mf-style\">Monleale, Colli Tortonesi DOC</p><p class=\"mf-prod\"><strong>旗艦款 Derthona：</strong>以古羅馬地名「Derthona」（今 Tortona）命名，每年約 30,000 瓶。不鏽鋼桶發酵保留純粹品種風味，裝瓶前極短時間橡木桶接觸。年輕時緊閉，5–8 年後開始展現礦物複雜度，20 年老酒可達媲美 Meursault 的深度。<br><strong>哲學：</strong>「Timorasso 是義大利被遺忘的最偉大白品種，它不需要橡木桶，只需要時間。」</p></div><div class=\"mf-zone warm\"><h3>La Colombera — 單一園先驅</h3><p class=\"mf-style\">Tortona, Colli Tortonesi DOC</p><p class=\"mf-prod\"><strong>旗艦款 Derthona Montino：</strong>Elisa 和 Piercarlo Semino 父女酒莊，以「Montino」單一老藤園命名。葡萄樹樹齡 50+ 年，低產量造就極度濃縮的礦物感。與 Massa 風格比較：更有稜角、鹹礦物更突出、陳年更慢。<br><strong>市場價格：</strong>€90–130/瓶，近年二手市場開始出現溢價。</p></div><div class=\"mf-zone cool\"><h3>Claudio Mariotto — 自然酒詮釋</h3><p class=\"mf-style\">Viguzzolo, Colli Tortonesi DOC</p><p class=\"mf-prod\"><strong>旗艦款 Cavallina：</strong>自然農法（無添加硫、野生酵母發酵），風格最接近陶甕橙酒——帶皮短暫接觸賦予銅黃色澤，氧化風味複雜度高。是三家中風格最獨特、市場最小眾的詮釋，受自然酒愛好者熱烈追捧。<br><strong>配餐：</strong>搭配生蠔、白松露燉飯、龍蝦等高端食材均表現優異。</p></div></div></div>"
+    },
+    {
+      "type": "content",
       "title": "Ruché 芳香女王 ✕ Freisa 古老皮埃蒙特",
-      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Ruché DOCG — 芳香女王</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Ruché di Castagnole Monferrato DOCG（2010 年獲認）</div><div class=\"orvieto-card\">最獨特香氣：玫瑰精油、紫羅蘭（極濃郁）+ 草莓、覆盆莓、丁香、白胡椒</div><div class=\"orvieto-card\">最佳飲用：年輕 1-5 年、稍冰鎮 12-14°C｜頂級：Montalbera（Laccento）｜€15-35</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Freisa DOC — 古老皮埃蒙特紅酒</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Freisa d'Asti DOC / Freisa di Chieri DOC｜Nebbiolo 崛起前的主角</div><div class=\"orvieto-card\">三種風格：干型（Secco，5-10 年陳年）/ 微甜（Amabile）/ 氣泡（Frizzante）</div><div class=\"orvieto-card\">共同特徵：高酸度、紅色漿果、玫瑰花香｜頂級：Vajra、Cavallotto｜€12-30</div></div></div></div></div>"
+      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Ruché DOCG — 芳香女王</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Ruché di Castagnole Monferrato DOCG（2010 年獲認）</div><div class=\"orvieto-card\">最獨特香氣：玫瑰精油、紫羅蘭（極濃郁）+ 草莓、覆盆莓、丁香、白胡椒</div><div class=\"orvieto-card\">最佳飲用：年輕 1-5 年、稍冰鎮 12-14°C｜頂級：Montalbera（Laccento）、Dacapo｜€15-35</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Freisa DOC — 古老皮埃蒙特紅酒</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">產區：Freisa d'Asti DOC / Freisa di Chieri DOC｜Nebbiolo 崛起前的主角</div><div class=\"orvieto-card\">三種風格：干型（Secco，5-10 年陳年）/ 微甜（Amabile）/ 氣泡（Frizzante）</div><div class=\"orvieto-card\">共同特徵：高酸度、紅色漿果、玫瑰花香｜頂級：Vajra、Cavallotto｜€12-30</div></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Erbaluce di Caluso DOCG — 皮埃蒙特的甜白珍寶",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>都靈北方的白葡萄遺珠</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Erbaluce 是 Piemonte 北部 Canavese 丘陵（都靈以北約 50 公里）的原生白葡萄品種，2010 年升格 DOCG。品種名稱可能源自義語「erbaceo（草本）」或凱爾特語「herb（清新）」，是一個多面向的品種：可釀造清爽干型、優雅氣泡、和極珍稀的 Passito 甜型。</p><div class=\"science-card\">DOCG 產區：Canavese 丘陵（Torino 省）｜海拔：300-700m 冰川沉積土</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">三種面向</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Erbaluce di Caluso（干型）：</strong>清爽、高酸度、帶蘋果、白花和礦物感，是皮埃蒙特最清新的白酒，搭配湖鮮、蔬菜料理，均價 €12–20</div><div class=\"orvieto-card\"><strong>Erbaluce di Caluso Spumante（氣泡）：</strong>傳統法（Metodo Classico）釀造，是 Piemonte 少數高品質傳統法氣泡白酒，酵母陳年複雜度媲美 Franciacorta，但知名度尚低，均價 €18–35</div><div class=\"orvieto-card\"><strong>Caluso Passito DOCG（甜型）：</strong>葡萄在通風架上晾乾至 12 月以後，糖分高度濃縮後釀造，再陳年 3–5 年以上。金黃色澤、蜂蜜、榛果、杏桃乾、焦糖的複雜甜型，是 Piemonte 最珍貴的甜白酒之一，年產量僅數千瓶，均價 €40–80（375ml）</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">頂級生產者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">Luigi Ferrando：Erbaluce di Caluso 最重要的旗手，旗艦款 Canavese Bianco（干型）和 La Torrazza Passito（甜型）都是業界標竿</div><div class=\"orvieto-card\">Cieck：Canavese 精品酒莊，以 Spumante 和 Passito 雙雙獲得 Gambero Rosso 三杯評鑑</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Pelaverga Piccolo — Verduno 村的秘密武器",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Pelaverga Piccolo 是 Piemonte 最神秘的稀有紅品種之一，幾乎只在 Barolo 核心產區 Verduno 村周邊種植，以其獨特的白胡椒辛香和輕盈身形在同類品種中鶴立雞群。</p><div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🌶️ 品種特色</h3><p class=\"mf-prod\">Pelaverga Piccolo 最標誌性的香氣是<strong>白胡椒</strong>——強烈、清新、幾乎像是把現磨胡椒撒入玫瑰花束中。此外還有新鮮草莓、覆盆莓和紫羅蘭。口感方面，單寧極低，酸度高，酒體輕盈，像是「不帶重量感的 Nebbiolo」——有人說它是義大利版的 Pinot Noir。</p></div><div class=\"mf-zone warm\"><h3>🗺️ 產區：Verduno Pelaverga DOC</h3><p class=\"mf-prod\"><strong>法定產區：</strong>Verduno 村（Barolo 最北的核心村），總面積不足 50 公頃<br><strong>法規：</strong>Pelaverga Piccolo 最低 85%，可混少量 Nebbiolo<br><strong>最佳年份：</strong>整體不追求陳年，年輕 2–5 年是甜蜜點，涼飲（14–16°C）效果最佳<br><strong>價格：</strong>€18–35，是整個 Barolo 地區最具性價比的酒款之一</p></div><div class=\"mf-zone cool\"><h3>🏆 頂級生產者</h3><p class=\"mf-prod\"><strong>G.B. Burlotto：</strong>Verduno 最古老的酒莊（創立 1850 年），其 Pelaverga Piccolo Verduno Pelaverga DOC 是業界標竿，以清新胡椒香和絕對的易飲性聞名<br><strong>Fratelli Alessandria：</strong>Verduno 世家酒莊，以 Pian Scarso 單一園版本展現更多礦物複雜度<br><strong>Castello di Verduno：</strong>歷史古城堡改建酒莊，旗艦款 Basodino 為業界傳奇</p></div><div class=\"mf-zone plain\"><h3>🍽️ 為何重要？</h3><p class=\"mf-prod\">Pelaverga Piccolo 在 Barolo 地區作為「第二配角」默默存在數百年，近年隨著自然酒和輕盈紅酒趨勢興起，它的稀缺性和獨特辛香風格引起國際評論家（Wine Advocate、Vinous）注意。在「重到飛起來的 Barolo」旁邊，一瓶白胡椒清爽的 Pelaverga 往往成為餐桌上最受討論的驚喜。</p></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "三大稀有品種全方位對比",
-      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Timorasso</h3><p class=\"mf-style\">白葡萄｜Colli Tortonesi DOC｜極度稀有（復興中）</p><p class=\"mf-prod\">飽滿、礦物感強烈 / 酸度極高 / 陳年 15-20 年 / €80-150 / 可媲美勃根地特級園白酒</p></div><div class=\"mf-zone warm\"><h3>Ruché</h3><p class=\"mf-style\">紅葡萄｜Ruché DOCG（2010）｜稀有</p><p class=\"mf-prod\">芳香、玫瑰精油獨特 / 年輕飲用 1-5 年 / 12-14°C 冰鎮 / €15-35 / 夏日餐酒首選</p></div><div class=\"mf-zone cool\"><h3>Freisa</h3><p class=\"mf-style\">紅葡萄｜Freisa d'Asti DOC｜傳統品種</p><p class=\"mf-prod\">多變（干型/微甜/氣泡）/ 高酸度 / 干型 5-10 年陳年 / €12-30 / 皮埃蒙特日常餐酒</p></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Timorasso</h3><p class=\"mf-style\">白葡萄｜Colli Tortonesi DOC｜極度稀有（復興中）</p><p class=\"mf-prod\">飽滿、礦物感強烈 / 酸度極高 / 陳年 15-20 年 / €80-150 / 可媲美勃根地特級園白酒</p></div><div class=\"mf-zone warm\"><h3>Ruché</h3><p class=\"mf-style\">紅葡萄｜Ruché DOCG（2010）｜稀有</p><p class=\"mf-prod\">芳香、玫瑰精油獨特 / 年輕飲用 1-5 年 / 12-14°C 冰鎮 / €15-35 / 夏日餐酒首選</p></div><div class=\"mf-zone cool\"><h3>Erbaluce di Caluso</h3><p class=\"mf-style\">白葡萄｜DOCG（2010）｜三種風格</p><p class=\"mf-prod\">干型清爽 / Spumante 傳統法 / Passito 甜型珍稀 / €12–80 / Piemonte 白酒最大驚喜</p></div><div class=\"mf-zone plain\"><h3>Pelaverga Piccolo</h3><p class=\"mf-style\">紅葡萄｜Verduno Pelaverga DOC｜極稀有</p><p class=\"mf-prod\">白胡椒辛香 / 輕盈低單寧 / 年輕 2–5 年 / 涼飲 / €18–35 / Barolo 地區最佳性價比</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "為什麼稀有品種值得深入認識？",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">稀有品種不只是葡萄酒愛好者的獵奇選項，它們代表的是義大利農業文化最深厚的根——數千年與土地的共同演化。理解稀有品種，才能真正讀懂義大利葡萄酒的靈魂。</p><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">🌱 生物多樣性與氣候韌性</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>基因庫：</strong>義大利 350+ 原生品種中，每一個都攜帶獨特的基因特性——耐旱性、耐病性、特定土壤適應能力。氣候暖化使得部分國際品種在傳統產區開始面臨壓力，而本土稀有品種往往有更強的在地氣候適應力</div><div class=\"orvieto-card\"><strong>不可替代性：</strong>一旦品種在農業中消失，即使保留種子，也很難恢復原有的「老藤風土」（Vecchie Vigne），那種土壤與植物共同演化數十年的複雜關係是無法人工複製的</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">💰 市場差異化與收藏潛力</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>稀缺性溢價：</strong>Timorasso 過去 10 年均價上漲 250%+，因為產量受限但國際認知度快速提升。Boca DOC（12 公頃）等極稀有產區的頂級款，在二手市場幾乎沒有固定參考價——物以稀為貴</div><div class=\"orvieto-card\"><strong>故事溢價：</strong>每個稀有品種都有獨特的復興故事（Walter Massa / Timorasso、Le Piane / Boca）。在精品葡萄酒市場，「品種背後的人的故事」是重要的溢價來源，也是吸引新世代收藏家的核心敘事</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">🎓 Level 3 的學習意義</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">Level 3 學習稀有品種的核心目標不只是「記住更多品種名稱」，而是建立判斷力：能夠識別一個品種在什麼風土條件下表現最佳、它的風格獨特性來自哪裡、以及在當代葡萄酒市場中它有什麼不可替代的位置</div><div class=\"orvieto-card\">這種判斷力，正是侍酒師、葡萄酒顧問和精品酒收藏家與普通愛好者最核心的差異</div></div></div></div></div>"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
-        "Timorasso 由 Walter Massa 於 1987 年復興，從瀕絕品種躍升為義大利最昂貴白葡萄酒之一",
-        "Timorasso 酸度極高、酒精 15-16%、陳年 15-20 年，可媲美勃根地特級園白酒",
-        "Timorasso 風土：Colli Tortonesi DOC 花崗岩黏土，賦予獨特鹹礦物感與汽油陳年香",
-        "Ruché 以極濃郁玫瑰精油和紫羅蘭著稱，是義大利最芳香的紅葡萄品種之一",
-        "Ruché 2010 年獲 DOCG 認證，適合年輕飲用並稍冰鎮，是夏日戶外餐飲絕佳選擇",
-        "Freisa 是 Nebbiolo 崛起前的皮埃蒙特主角，可釀成干型、微甜、氣泡三種風格",
-        "Freisa 干型需 5-10 年陳年，與 Nebbiolo 有高酸度和花香的相似特質",
-        "三者均是皮埃蒙特稀有品種，Timorasso 投資價值最高，Ruché 性價比佳",
-        "配餐：Timorasso 配龍蝦燉飯 / Ruché 配番茄莫札瑞拉 / Freisa 配番茄肉醬麵"
+        "Timorasso 由 Walter Massa 於 1987 年復興，產區 Colli Tortonesi DOC，花崗岩黏土，陳年 15-20 年，均價 €80–150",
+        "三大 Timorasso 生產者：Walter Massa（Derthona，復興之父）、La Colombera（Montino 單一園）、Claudio Mariotto（自然酒風格）",
+        "Ruché 以玫瑰精油和紫羅蘭著稱，2010 年獲 DOCG，適合年輕飲用冰鎮，均價 €15–35",
+        "Freisa 是 Nebbiolo 崛起前的 Piemonte 主角，可釀成干型 / 微甜 / 氣泡三種風格",
+        "Erbaluce di Caluso DOCG：干型 / Spumante / Caluso Passito（甜型）三面向，Passito 晾乾至 12 月才壓榨，珍稀程度極高",
+        "Pelaverga Piccolo：Verduno 村秘密武器，白胡椒辛香 + 輕盈低單寧，Barolo 地區性價比最高（€18–35），G.B. Burlotto 是標竿酒莊",
+        "稀有品種保育三大意義：氣候韌性基因庫、不可替代的老藤風土、稀缺性溢價（Timorasso 10 年漲幅 250%+）",
+        "Level 3 學習稀有品種的核心：建立品種-風土-市場的三維判斷力，不只是記名稱",
+        "配餐：Timorasso 配龍蝦燉飯 / Ruché 配番茄莫札瑞拉 / Erbaluce Passito 配 Gorgonzola / Pelaverga 配鮮蘑菇義大利麵"
       ]
     },
     {
@@ -91,62 +124,61 @@
         {
           "type": "single",
           "question": "誰是 Timorasso 葡萄復興的先驅者？",
-          "options": [
-            "Angelo Gaja",
-            "Walter Massa",
-            "Bruno Giacosa",
-            "Paolo Scavino"
-          ],
+          "options": ["Angelo Gaja", "Walter Massa", "Bruno Giacosa", "Paolo Scavino"],
           "correct": 1,
-          "explanation": "Walter Massa 在 1987 年開始 Timorasso 的復興計畫，將這個幾近絕種的品種重新帶回市場，如今成為義大利最昂貴白葡萄酒之一。"
+          "explanation": "Walter Massa 在 1987 年開始 Timorasso 的復興計畫，如今成為義大利最昂貴白葡萄酒之一。"
         },
         {
           "type": "single",
-          "question": "Ruché 葡萄最獨特的風味特徵是什麼？",
-          "options": [
-            "黑莓和巧克力",
-            "玫瑰精油和紫羅蘭",
-            "青草和醋栗",
-            "無花果和蜂蜜"
-          ],
+          "question": "Ruché di Castagnole Monferrato 在哪一年獲得 DOCG 認證？",
+          "options": ["2003", "2010", "1996", "2018"],
           "correct": 1,
-          "explanation": "Ruché 以其極濃郁的玫瑰精油和紫羅蘭香氣聞名，這是其最顯著的特徵，2010 年獲得 DOCG 認證。"
+          "explanation": "Ruché di Castagnole Monferrato 在 2010 年獲得 DOCG 認證，確認了這個芳香紅品種在皮埃蒙特的重要地位。"
         },
         {
           "type": "single",
           "question": "Freisa 葡萄可以釀造成幾種不同的風格？",
-          "options": [
-            "1 種",
-            "2 種",
-            "3 種",
-            "4 種"
-          ],
+          "options": ["1 種", "2 種", "3 種", "4 種"],
           "correct": 2,
           "explanation": "Freisa 可以釀造成三種風格：干型（Secco）、微甜（Amabile）和氣泡（Frizzante）。"
         },
         {
           "type": "single",
-          "question": "Timorasso 的陳年潛力通常是多久？",
+          "question": "Erbaluce di Caluso 的 Caluso Passito 使用什麼釀造方法？",
           "options": [
-            "1-3 年",
-            "5-8 年",
-            "15-20 年",
-            "30 年以上"
+            "冰凍法萃取",
+            "Appassimento 風乾法，晾乾至聖誕節前後才壓榨",
+            "貴腐黴菌自然感染",
+            "添加蒸餾酒提高酒精度"
           ],
-          "correct": 2,
-          "explanation": "Timorasso 具有極高的陳年潛力，通常可以陳年 15-20 年，是義大利最耐久的白葡萄酒之一。"
+          "correct": 1,
+          "explanation": "Caluso Passito 使用 Appassimento 風乾法，葡萄在通風架上晾乾至 12 月甚至翌年 1 月，糖分高度濃縮後壓榨，再在小型橡木桶陳年 3–5 年以上。"
         },
         {
           "type": "single",
-          "question": "Ruché di Castagnole Monferrato 在哪一年獲得 DOCG 認證？",
+          "question": "Pelaverga Piccolo 最獨特的香氣特徵是？",
+          "options": ["焦油和玫瑰", "白胡椒辛香和清新玫瑰香氣", "黑莓和巧克力", "燧石礦物感"],
+          "correct": 1,
+          "explanation": "Pelaverga Piccolo 最標誌性的香氣是白胡椒——強烈清新，還有草莓、覆盆莓和紫羅蘭。是義大利最獨特的辛香紅品種，幾乎只產於 Verduno 村。"
+        },
+        {
+          "type": "single",
+          "question": "Timorasso 的陳年潛力通常是多久？",
+          "options": ["1-3 年", "5-8 年", "15-20 年", "30 年以上"],
+          "correct": 2,
+          "explanation": "Timorasso 陳年潛力 15-20 年，陳年後發展出汽油、蜂蠟、烤杏仁的複雜香氣，可媲美勃根地頂級白酒。"
+        },
+        {
+          "type": "single",
+          "question": "稀有品種保育的最大系統性威脅是什麼？",
           "options": [
-            "2003",
-            "2010",
-            "1996",
-            "2018"
+            "義大利政府禁止種植非 DOCG 認可的品種",
+            "農民選擇高產量商業品種替換，造成基因多樣性流失",
+            "氣候暖化讓北義無法種植稀有品種",
+            "稀有品種口感不佳，消費者不接受"
           ],
           "correct": 1,
-          "explanation": "Ruché di Castagnole Monferrato 在 2010 年獲得 DOCG 認證，確認了這個芳香紅品種在皮埃蒙特的重要地位。"
+          "explanation": "稀有品種最大威脅是商業化壓力：農民為了穩定高產量，傾向改植國際品種。每個滅絕的品種代表不可復原的數千年基因多樣性損失。"
         }
       ]
     }

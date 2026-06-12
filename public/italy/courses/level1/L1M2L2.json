@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "托斯卡納最重要的紅葡萄品種是？",
-      "options": ["Nebbiolo", "Sangiovese", "Barbera", "Primitivo"],
+      "options": [
+        "Nebbiolo",
+        "Sangiovese",
+        "Barbera",
+        "Primitivo"
+      ],
       "answer": 1,
       "explanation": "Sangiovese 是托斯卡納的靈魂品種，種植面積佔該產區 90% 以上。"
     },
     {
       "question": "Brunello di Montalcino 必須使用哪個品種釀造？",
-      "options": ["100% Sangiovese", "100% Cabernet", "Sangiovese + Merlot", "任何紅葡萄品種"],
+      "options": [
+        "100% Sangiovese",
+        "100% Cabernet",
+        "Sangiovese + Merlot",
+        "任何紅葡萄品種"
+      ],
       "answer": 0,
       "explanation": "Brunello di Montalcino DOCG 規定必須使用 100% Sangiovese（當地稱為 Brunello）釀造。"
     },
     {
       "question": "「超級托斯卡納」通常標示為什麼等級？",
-      "options": ["DOCG", "DOC", "IGT", "VdT"],
+      "options": [
+        "DOCG",
+        "DOC",
+        "IGT",
+        "VdT"
+      ],
       "answer": 2,
       "explanation": "超級托斯卡納因使用國際品種或非傳統混釀，通常只能標示為 Toscana IGT。"
     },
     {
       "question": "Chianti Classico 的標誌是什麼？",
-      "options": ["白鷹", "黑公雞", "紅獅", "金塔"],
+      "options": [
+        "白鷹",
+        "黑公雞",
+        "紅獅",
+        "金塔"
+      ],
       "answer": 1,
       "explanation": "Chianti Classico 的官方標誌是黑公雞（Gallo Nero），代表傳統核心產區。"
     }
@@ -32,11 +52,6 @@
       "type": "title",
       "title": "🌿 Toscana 托斯卡納",
       "subtitle": "Sangiovese 的故鄉，超托的搖籃"
-    },
-    {
-      "type": "map_placeholder",
-      "title": "🌿 Tuscany 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🌿 Tuscany 產區地圖 地圖。"
     },
     {
       "type": "content",
@@ -122,14 +137,24 @@
         {
           "type": "single",
           "question": "黑公雞（Gallo Nero）標誌是哪個產區的象徵？",
-          "options": ["A. Brunello di Montalcino", "B. Barolo", "C. Chianti Classico", "D. Vino Nobile di Montepulciano"],
+          "options": [
+            "A. Brunello di Montalcino",
+            "B. Barolo",
+            "C. Chianti Classico",
+            "D. Vino Nobile di Montepulciano"
+          ],
           "correct": 2,
           "explanation": "黑公雞（Gallo Nero）是 Chianti Classico DOCG 的官方標誌，象徵佛羅倫斯與錫耶納之間的傳統核心產區。"
         },
         {
           "type": "single",
           "question": "Brunello di Montalcino DOCG 的最短陳年要求是幾年？",
-          "options": ["A. 2 年", "B. 3 年", "C. 5 年", "D. 7 年"],
+          "options": [
+            "A. 2 年",
+            "B. 3 年",
+            "C. 5 年",
+            "D. 7 年"
+          ],
           "correct": 2,
           "explanation": "Brunello di Montalcino 法規要求最少陳年 5 年（含 2 年橡木桶），是義大利陳年要求最長的 DOCG 之一。"
         },
@@ -142,13 +167,22 @@
             "C. 誕生於 1970-80 年代的創新嘗試",
             "D. 法規規定必須使用 100% Sangiovese"
           ],
-          "correct": [0, 1, 2],
+          "correct": [
+            0,
+            1,
+            2
+          ],
           "explanation": "超級托斯卡納使用國際品種或非傳統混釀，因不符合傳統DOC規定，最初只能標示VdT或後來的IGT，誕生於1968-1970年代的創新嘗試。"
         },
         {
           "type": "single",
           "question": "Sangiovese 在義大利葡萄種植上的地位是？",
-          "options": ["A. 僅限托斯卡納種植", "B. 義大利種植面積最廣的紅葡萄品種", "C. 新引進的國際品種", "D. 主要用於白酒"],
+          "options": [
+            "A. 僅限托斯卡納種植",
+            "B. 義大利種植面積最廣的紅葡萄品種",
+            "C. 新引進的國際品種",
+            "D. 主要用於白酒"
+          ],
           "correct": 1,
           "explanation": "Sangiovese 是義大利種植面積最廣的紅葡萄品種，不只在托斯卡納，在翁布里亞、馬凱、艾米利亞-羅馬涅等地也廣泛種植。"
         },
@@ -161,7 +195,11 @@
             "C. Barolo",
             "D. Vino Nobile di Montepulciano"
           ],
-          "correct": [0, 1, 3],
+          "correct": [
+            0,
+            1,
+            3
+          ],
           "explanation": "Brunello di Montalcino、Chianti Classico、Vino Nobile di Montepulciano 都是托斯卡納的 DOCG 紅酒。Barolo 是皮埃蒙特的 DOCG。"
         }
       ]

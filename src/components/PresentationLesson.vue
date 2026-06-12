@@ -661,6 +661,18 @@ const lessonDataMap = {
       '完成口頭簡報與答辯'
     ]
   },
+  'l4-13': {
+    title: '組織領導與家族酒莊治理',
+    subtitle: '三環模型・接班傳承・所有權保護・名莊治理案例',
+    duration: '65分鐘',
+    difficulty: 'Level 4',
+    objectives: [
+      '掌握家族企業三環模型與治理架構設計',
+      '運用 SAS/SCI/GFV 與 Pacte Dutreil 保護所有權',
+      '制定系統化的接班計畫與代際傳承路徑',
+      '分析 Mouton、Latour、Angélus 等名莊的治理演化'
+    ]
+  },
   'l1-2': {
     title: '波爾多氣候與環境基礎',
     subtitle: '探索影響波爾多葡萄酒品質的自然環境因素',
@@ -853,6 +865,19 @@ const lessonDataMap = {
       '掌握產區間的風土差異與風格對比',
       '理解各產區代表性酒莊的特點',
       '通過綜合評量，驗證進階L3的準備度'
+    ]
+  },
+  'l2-10': {
+    title: '蘇玳與巴薩克：貴腐甜酒傳奇',
+    subtitle: '微氣候奇蹟・貴腐菌科學・d\'Yquem 至高傳奇',
+    duration: '40分鐘',
+    difficulty: 'Level 2',
+    objectives: [
+      '理解西隆河霧氣與加倫河創造的獨特貴腐微氣候',
+      '掌握 Botrytis cinerea 貴腐菌的脫水濃縮作用機制',
+      '認識賽美容、白蘇維濃、蜜思卡黛三品種的分工角色',
+      '了解1855年蘇玳分級與 Château d\'Yquem 的至高地位',
+      '比較法國蘇玳、德國TBA、匈牙利托卡伊三大貴腐產區'
     ]
   }
   ,

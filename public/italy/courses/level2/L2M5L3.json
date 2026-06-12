@@ -45,6 +45,39 @@
       ],
       "answer": 1,
       "explanation": "隨著亞洲高淨值消費者（HNWI）增加，Barolo、Brunello 等頂級 DOCG 酒款在香港、新加坡、中國大陸的需求大幅成長，成為亞洲拍賣市場的主要標的。"
+    },
+    {
+      "question": "Wine-Searcher 和 Vivino 對義大利葡萄酒投資者的主要用途是？",
+      "options": [
+        "進行線上期酒申購的唯一平台",
+        "查詢全球市場現貨均價和歷史價格趨勢，作為買賣決策的數據參考",
+        "只適合普通消費者找餐廳配酒，不適合投資用途",
+        "取代拍賣行的二手交易平台"
+      ],
+      "answer": 1,
+      "explanation": "Wine-Searcher 整合全球 8 萬+ 零售商的即時報價，可查詢特定酒款的全球均價分佈和歷史價格曲線；Vivino 則提供用戶評分、市場趨勢和庫存分佈，兩者合用是投資者評估市場價值的免費數據工具。"
+    },
+    {
+      "question": "台灣市場對義大利葡萄酒的特殊偏好是？",
+      "options": [
+        "偏好廉價 Prosecco 和日常 Pinot Grigio",
+        "偏好 Barolo、Brunello 等高陳年潛力酒款，以及 Amarone，愛好者以學習型收藏為主",
+        "只接受有機和天然酒，拒絕使用橡木桶的傳統款",
+        "偏好南義濃郁紅酒，不關注北義 DOCG"
+      ],
+      "answer": 1,
+      "explanation": "台灣義大利酒市場以高素養愛好者為主，WSET 和侍酒師認證普及率在亞洲名列前茅，消費者對 Barolo、Brunello、Amarone 等具陳年潛力的頂級酒款有強烈偏好，且有系統性學習和收藏習慣，是亞洲少數以「知識型購買」為主的市場。"
+    },
+    {
+      "question": "保稅倉（Bonded Warehouse）對葡萄酒投資最主要的優勢是？",
+      "options": [
+        "可以免費無限期儲存所有葡萄酒",
+        "在保稅倉內轉售時可延遲關稅和增值稅，降低跨境流通成本",
+        "只有拍賣行才能使用保稅倉，個人不可申請",
+        "保稅倉儲存的酒款自動獲得 100% 真偽保證"
+      ],
+      "answer": 1,
+      "explanation": "保稅倉（Bonded Warehouse）是指貨物在未繳納進口關稅和增值稅前存放的專業倉庫。葡萄酒在保稅倉內轉手交易可以「貨物不出倉」的方式完成，延遲稅務義務，大幅降低跨境投資的交易成本，是頂級葡萄酒投資者的標準操作模式。"
     }
   ],
   "slides": [
@@ -70,8 +103,23 @@
     },
     {
       "type": "content",
+      "title": "亞太細分市場深度分析：台灣、日本、東南亞",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">亞太地區除香港、新加坡兩大樞紐外，台灣、日本、東南亞新興市場各具特色，是義大利葡萄酒擴展的重要戰場。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>🇹🇼 台灣市場</h3><ul><li><strong>規模：</strong>義大利葡萄酒進口約佔台灣進口總量 12–15%，是亞洲最成熟的義大利酒市場之一</li><li><strong>偏好：</strong>WSET 和 AIS（義大利侍酒師協會）認證普及，消費者對 Barolo、Brunello、Amarone 有深度知識，以「學習型收藏」為主</li><li><strong>機會：</strong>高教育水準＋穩定的中產葡萄酒消費群，對精品酒莊拜訪（酒莊旅遊）和直接進口有強烈興趣</li><li><strong>挑戰：</strong>進口商壟斷部分頂級酒款，消費者直接酒莊採購渠道有限</li></ul></div><div class=\"method-card modern\"><h3>🇯🇵 日本市場</h3><ul><li><strong>規模：</strong>義大利葡萄酒日本進口額年增 8–12%，米其林餐廳密度全球最高，侍酒師素質頂尖</li><li><strong>偏好：</strong>日本消費者對「食材搭配文化」的重視使他們成為義大利葡萄酒天然夥伴；偏愛優雅白酒（Soave、Friulano）和精緻紅酒（Barolo、Amarone）</li><li><strong>機會：</strong>義大利酒莊進入日本市場，與日本料理（和食）搭配的文化創新吸引大量媒體和消費者關注</li><li><strong>挑戰：</strong>法國酒文化根深蒂固，義大利酒需透過侍酒師教育體系持續推廣</li></ul></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">🌏 東南亞新興市場</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>泰國：</strong>曼谷精品餐飲業發展迅速，義大利餐廳密度亞洲第三，進口酒市場年增 15%+；偏好 Pinot Grigio、Prosecco 和性價比高的 Chianti Classico</div><div class=\"orvieto-card\"><strong>越南：</strong>富裕中產崛起，胡志明市精品酒商快速成長；法語殖民地遺產使法國酒具優勢，但義大利酒憑藉性價比和品牌辨識快速追趕</div><div class=\"orvieto-card\"><strong>印尼 / 菲律賓：</strong>主要市場在高端酒店和企業宴請場合；Barolo、Brunello 等具品牌識別的頂級酒款，是商務禮品的首選</div></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "數位葡萄酒市場平台：投資者工具箱",
+      "content": "<div class=\"variety-deep-section\"><p style=\"margin-bottom:16px\">數位平台改變了頂級葡萄酒的價格透明度和交易方式，是現代投資者必備的信息工具。</p><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>📊 Wine-Searcher</h3><p class=\"mf-style\">全球最大葡萄酒零售商價格比較平台</p><p class=\"mf-prod\"><strong>功能：</strong>整合全球 8 萬+ 零售商即時報價、查詢任一酒款的全球均價和最低價、歷史價格趨勢圖（Pro 版）、庫存地理分佈。<strong>投資應用：</strong>評估特定酒款的合理入場價位，識別套利機會（地區價格差異），監控自己藏酒的市場估值。</p></div><div class=\"mf-zone warm\"><h3>🍷 Vivino</h3><p class=\"mf-style\">全球最大葡萄酒 App 社群平台</p><p class=\"mf-prod\"><strong>功能：</strong>5,500 萬+用戶評分資料、標籤掃描即時查詢、市場熱度追蹤、Vivino Market 二手買賣功能。<strong>投資應用：</strong>追蹤特定酒款的大眾評分趨勢，發現「被低估」的優質小眾酒款（評分高但知名度尚低，投資機會窗口）。</p></div><div class=\"mf-zone cool\"><h3>📈 Liv-ex</h3><p class=\"mf-style\">全球頂級精品酒專業交易所</p><p class=\"mf-prod\"><strong>功能：</strong>Fine Wine 100 / Italy 100 指數追蹤、B2B 保稅倉交易、實時市場數據和成交記錄。<strong>投資應用：</strong>機構級精品酒交易平台（個人需透過會員酒商接入），是判斷義大利酒整體市場趨勢的核心工具。Liv-ex Italy 100 指數 2019–2023 年漲幅達 65%+。</p></div><div class=\"mf-zone plain\"><h3>🔨 線上拍賣平台</h3><p class=\"mf-style\">Winebid、Acker、Zachys Wine Auctions</p><p class=\"mf-prod\"><strong>Winebid：</strong>美國最大線上葡萄酒拍賣平台，每週一拍，不設底價，Barolo / Brunello 成交量大，是個人買賣義大利酒的高效通道。<strong>Acker Merrall & Condit：</strong>紐約老牌拍賣行，義大利 Cult Wines（Dal Forno、Quintarelli）是強項。<strong>Zachys：</strong>紐約 / 香港雙中心，Super Tuscans 和 Brunello 交易活躍。</p></div></div></div>"
+    },
+    {
+      "type": "content",
       "title": "拍賣操作實務：買方 vs 賣方",
       "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">無論是在拍賣場購入珍貴年份，或將手中藏酒委託拍賣，掌握拍賣行運作規則是保護投資利益的關鍵。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>買方（Buyer）注意事項</h3><ul><li><strong>買家佣金：</strong>成交價額外加 15-25%（視拍賣行），需計入總成本</li><li><strong>出處審核：</strong>確認 Provenance 文件，向拍賣行索取儲存歷史紀錄</li><li><strong>OWC 確認：</strong>盡量選擇完整原木箱，保值性提升 15-25%</li><li><strong>保稅倉服務：</strong>直接存入保稅倉（Bonded Warehouse）可延遲關稅，降低資金壓力</li><li><strong>事前估價：</strong>參考 Liv-ex 現貨市場價，避免高估成交</li></ul></div><div class=\"method-card modern\"><h3>賣方（Seller）注意事項</h3><ul><li><strong>賣家佣金：</strong>成交額的 8-15% 手續費，高價酒可議</li><li><strong>最低估價保護：</strong>設定 Reserve Price（底價），低於底價無需成交</li><li><strong>時機選擇：</strong>傳奇年份（2016 Barolo）新發布評分後 6-12 個月為最佳賣出時機</li><li><strong>文件準備：</strong>提供完整購買憑證、評分貼紙、儲存記錄可提升信心</li><li><strong>批次操作：</strong>6 瓶或 12 瓶完整箱裝比單瓶委託溢價更高</li></ul></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "稅務、法律與跨境合規",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">葡萄酒投資的跨境操作涉及複雜的稅務和法律議題，不同市場的規定差異顯著，提前了解可大幅降低合規風險和隱性成本。</p><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">🏦 保稅倉與稅務延遲策略</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>保稅倉（Bonded Warehouse）原理：</strong>貨物（葡萄酒）在政府監管的保稅倉儲存期間，不需繳納進口關稅和增值稅（VAT），直到「提貨出倉」才觸發稅務義務</div><div class=\"orvieto-card\"><strong>投資效益：</strong>英國 London City Bond、香港 Crown Wine Cellars、台灣保稅倉等，讓投資者在保稅倉內完成多次轉手交易而無需重複繳稅，是高頻次投資者的標準操作</div><div class=\"orvieto-card\"><strong>費用：</strong>約 €8–15/箱/月（12 瓶），儲存期間有保險，儲存記錄具法律效力，拍賣行直接接受</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">📋 台灣市場法規</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>進口稅率：</strong>葡萄酒進口關稅 20%（WTO 最惠國待遇），另加菸酒稅（每公升 NT$7）和貨物稅（15%）。實際落地成本比歐洲售價高 35–45%</div><div class=\"orvieto-card\"><strong>個人攜帶免稅：</strong>入境台灣攜帶酒類限量 1 公升，超過須申報並繳稅，投資級大批量進貨必須透過正規進口商</div><div class=\"orvieto-card\"><strong>投資工具：</strong>台灣目前無直接的葡萄酒投資基金，但高端收藏可以「藝術品 / 收藏品」名義處理，長期持有後轉售的資本利得稅務處理建議諮詢專業會計師</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">⚖️ 鑑定與真偽爭議</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>第三方鑑定：</strong>發生真偽爭議時，可委託 WineVault（香港）、Cellartracker 社群資料庫或直接向酒莊確認批次號</div><div class=\"orvieto-card\"><strong>仿冒品法律責任：</strong>銷售仿冒 DOCG 葡萄酒在義大利和歐盟屬刑事責任，台灣依商標法和食品安全法有相應罰則</div><div class=\"orvieto-card\"><strong>保險建議：</strong>頂級藏酒建議投保「Fine Wine Insurance」，由 Hiscox、AXA 等保險公司提供，覆蓋竊盜、火災、水災、運輸損壞，費率約藏酒估值的 0.3–0.5%/年</div></div></div></div></div>"
     },
     {
       "type": "list",
@@ -80,12 +128,13 @@
         "義大利葡萄酒年出口額超 €70 億，美國佔 25%（€18 億+），為最大單一市場",
         "亞洲市場（香港、新加坡）頂級 DOCG 需求年增 40%+，香港 2008 年取消進口稅後成為亞洲拍賣樞紐",
         "三大頂級拍賣行：Christie's（倫敦/紐約）、Sotheby's（全球含香港）、Hart Davis Hart（芝加哥）",
-        "Liv-ex Fine Wine 100 指數追蹤頂級精品酒市場交易價格，是投資者評估市場走勢的核心工具",
-        "Super Tuscans（Sassicaia、Ornellaia、Tignanello）在北美市場品牌辨識度極高，Robert Parker 評分影響力最強",
-        "買方注意：成交價額外加 15-25% 買家佣金，確認 Provenance 文件與 OWC 原木箱完整性",
-        "賣方注意：設定 Reserve Price 底價保護，傳奇年份發布評分後 6-12 個月為最佳出售時機",
-        "完整 12 瓶箱裝（OWC）比單瓶委託拍賣溢價更高，儲存記錄完整可提升買家信心",
-        "保稅倉（Bonded Warehouse）儲存可延遲關稅，適合跨市場流通的長期投資佈局"
+        "台灣：亞洲最成熟的義大利酒市場之一，WSET/AIS 認證普及，以「學習型收藏」為主，偏好 Barolo/Brunello/Amarone",
+        "日本：全球米其林餐廳密度最高，侍酒師素質頂尖，偏愛優雅白酒（Soave、Friulano）和精緻紅酒",
+        "數位工具四件組：Wine-Searcher（價格查詢）、Vivino（社群評分）、Liv-ex（機構交易）、Winebid（線上拍賣）",
+        "Liv-ex Italy 100 指數 2019–2023 年漲幅達 65%+，是義大利酒整體市場趨勢的核心指標",
+        "保稅倉（Bonded Warehouse）：延遲關稅和增值稅，費用約 €8–15/箱/月，儲存記錄具法律效力",
+        "台灣進口義大利酒實際落地成本比歐洲售價高 35–45%（關稅 20% + 菸酒稅 + 貨物稅）",
+        "頂級藏酒建議投保 Fine Wine Insurance（Hiscox/AXA），費率約估值的 0.3–0.5%/年"
       ]
     },
     {
@@ -103,7 +152,7 @@
             "中國"
           ],
           "correct": 2,
-          "explanation": "美國是義大利葡萄酒最大的出口市場，年進口金額超過 18 億歐元，佔義大利葡萄酒出口總額約 25%，Pinot Grigio、Prosecco、Barolo 在美國均有極高品牌認知度。"
+          "explanation": "美國是義大利葡萄酒最大的出口市場，年進口金額超過 18 億歐元，佔出口總額約 25%。"
         },
         {
           "type": "single",
@@ -115,7 +164,7 @@
             "北京與上海"
           ],
           "correct": 1,
-          "explanation": "Christie's 與 Sotheby's 的主要葡萄酒拍賣中心在倫敦與紐約，Hart Davis Hart 則以芝加哥為基地，這三個城市構成全球頂級義大利葡萄酒的主要流通市場。"
+          "explanation": "Christie's 與 Sotheby's 的主要葡萄酒拍賣中心在倫敦與紐約，Hart Davis Hart 則以芝加哥為基地。"
         },
         {
           "type": "single",
@@ -127,7 +176,7 @@
             "酒莊農業土地的地產價格"
           ],
           "correct": 1,
-          "explanation": "Liv-ex Fine Wine 100 是全球頂級精品葡萄酒市場的主要價格指數，追蹤 100 款頂級酒款的交易價格（含義大利 Barolo、Brunello），是投資者評估市場走勢的核心工具。"
+          "explanation": "Liv-ex Fine Wine 100 追蹤 100 款頂級酒款的交易價格，是投資者評估市場走勢的核心工具。Liv-ex Italy 100 指數 2019–2023 年漲幅達 65%+。"
         },
         {
           "type": "single",
@@ -139,7 +188,7 @@
             "調味 Vermouth"
           ],
           "correct": 1,
-          "explanation": "隨著亞洲高淨值消費者（HNWI）增加，Barolo、Brunello 等頂級 DOCG 酒款在香港、新加坡、中國大陸的需求大幅成長，成為亞洲拍賣市場的主要標的，年增 40%+。"
+          "explanation": "隨著亞洲高淨值消費者（HNWI）增加，Barolo、Brunello 等頂級 DOCG 酒款的需求大幅成長，是亞洲拍賣市場主要標的，年增 40%+。"
         },
         {
           "type": "single",
@@ -151,7 +200,19 @@
             "Outstanding Wine Collection（精選酒款目錄）"
           ],
           "correct": 1,
-          "explanation": "OWC（Original Wooden Case，原廠木箱）是酒莊原裝出貨的木箱，保留完整 OWC 代表儲存條件受到保護、出處可信，在拍賣市場可提升估價 15-25%，買家信心大幅增加。"
+          "explanation": "OWC（Original Wooden Case）是酒莊原裝出貨的木箱，保留完整 OWC 代表儲存條件受保護、出處可信，在拍賣市場可提升估價 15-25%。"
+        },
+        {
+          "type": "single",
+          "question": "台灣進口義大利葡萄酒的實際落地成本，比歐洲售價高多少？",
+          "options": [
+            "約 10–15%（進口稅率低）",
+            "約 35–45%（進口關稅 20% + 菸酒稅 + 貨物稅累積）",
+            "幾乎相同，台灣有 FTA 優惠",
+            "高達 100%，台灣對歐洲酒課重稅"
+          ],
+          "correct": 1,
+          "explanation": "台灣進口葡萄酒關稅 20%（WTO 最惠國待遇），另加菸酒稅（每公升 NT$7）和貨物稅（15%），三稅累積後實際落地成本比歐洲售價高出約 35–45%，是台灣消費者面臨的重要定價因素。"
         }
       ]
     }

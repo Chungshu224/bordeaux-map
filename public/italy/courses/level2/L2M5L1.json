@@ -45,6 +45,39 @@
       ],
       "answer": 1,
       "explanation": "入門收藏建議從 Chianti Classico Gran Selezione 知名酒莊開始：價格合理（€50-150）、品質穩定、陳年潛力 10-20 年，可逐步建立鑑賞能力再升級到 Barolo/Brunello。"
+    },
+    {
+      "question": "Giacomo Conterno Monfortino 的年產量約為多少瓶？",
+      "options": [
+        "約 10 萬瓶",
+        "約 5 萬瓶",
+        "約 8,000 至 15,000 瓶（視年份）",
+        "固定每年 50,000 瓶"
+      ],
+      "answer": 2,
+      "explanation": "Monfortino 是 Giacomo Conterno 的旗艦酒款，在表現突出的年份才生產，年產量僅 8,000–15,000 瓶，稀缺性極高。不少年份甚至不出版（non-vintage），造就其拍賣市場的高溢價。"
+    },
+    {
+      "question": "Super Tuscans（超級托斯卡納）最早誕生的時代背景是？",
+      "options": [
+        "1950 年代，義大利開始仿效法國種植國際品種",
+        "1970 年代，釀酒師不滿 DOC 規定的過時限制，自行突破創新",
+        "1990 年代，全球化帶動義大利葡萄酒國際化",
+        "2000 年代，有機農法運動推動品種多樣化"
+      ],
+      "answer": 1,
+      "explanation": "超級托斯卡納誕生於 1970 年代。Antinori 的 Tignanello（1971 年首釀）以 Sangiovese + Cabernet Sauvignon，不符合 Chianti DOC 規定只能標 IGT；Sassicaia（Tenuta San Guido）也在同期崛起。正是不滿傳統規定的釀酒師主動降格，才催生了這個改變義大利酒歷史的品類。"
+    },
+    {
+      "question": "評估義大利頂級酒收藏時，「Provenance（出處）」最重要的意義是？",
+      "options": [
+        "代表酒款是義大利本土生產，非進口品",
+        "記錄酒款自酒莊出廠到現在的完整儲存歷史，是拍賣行評估真偽與品質的核心依據",
+        "標示葡萄園的歷史文件，越古老越有價值",
+        "指酒款在義大利本地的銷售許可證"
+      ],
+      "answer": 1,
+      "explanation": "Provenance（出處）指酒款的完整流通歷史：從酒莊出廠、中間經手商、儲存條件記錄，到現在持有者。缺乏清晰 Provenance 的酒款，即使是真品，拍賣行也可能拒絕接受或大幅降低估價，是防範仿冒和品質問題的核心機制。"
     }
   ],
   "slides": [
@@ -70,6 +103,21 @@
     },
     {
       "type": "content",
+      "title": "頂級名莊深度檔案",
+      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">🏆 Giacomo Conterno — Barolo 之巔</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>旗艦酒：</strong>Barolo Monfortino Riserva｜產地：Serralunga d'Alba Cascina Francia 葡萄園</div><div class=\"orvieto-card\"><strong>稀缺性：</strong>年產 8,000–15,000 瓶（視年份），部分年份完全不生產，如 2003、2006</div><div class=\"orvieto-card\"><strong>陳年哲學：</strong>大型 Botti 桶 7 年以上，裝瓶後再陳年，釋出後平均酒齡已 10 年</div><div class=\"orvieto-card\"><strong>拍賣表現：</strong>2010 Monfortino 均價 €1,200+/瓶；1971、1978 等傳奇年份每瓶可達 €3,000–5,000</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">🌹 Biondi-Santi — Brunello 的起源</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>旗艦酒：</strong>Brunello di Montalcino Riserva｜創立：1888 年，Ferruccio Biondi-Santi</div><div class=\"orvieto-card\"><strong>歷史意義：</strong>義大利葡萄酒歷史上第一個可陳年數十年的頂級紅酒品牌，Annata（普通款）也可陳年 30 年</div><div class=\"orvieto-card\"><strong>拍賣表現：</strong>1955、1964、1975 Riserva 每瓶可達 €5,000–15,000；2020 年 EPI Group 收購後國際曝光大增</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">🍇 Dal Forno Romano — Amarone 的聖杯</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>旗艦酒：</strong>Amarone della Valpolicella｜地點：Illasi Valley（Verona 以東）</div><div class=\"orvieto-card\"><strong>稀缺性：</strong>年產僅約 15,000 瓶，幾乎全部透過酒莊直購分配，市面流通極少</div><div class=\"orvieto-card\"><strong>拍賣表現：</strong>市面現貨均價 €500–800/瓶，稀缺年份（2000、2003）可達 €1,500+；二手溢價高達 200%+</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "超級托斯卡納的投資邏輯",
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">超級托斯卡納（Super Tuscans）誕生於 1970 年代的規則突破，今日已成為義大利最受國際市場認可的投資等級酒款，與 Barolo / Brunello 形成三足鼎立格局。</p><div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Sassicaia（Tenuta San Guido）</h3><p class=\"mf-style\">Bolgheri Sassicaia DOC · Cabernet Sauvignon 85% + Cabernet Franc</p><p class=\"mf-prod\">義大利唯一以單一酒莊命名的 DOC（1994 年）。1972 年在 Decanter 盲品超越法國頂級酒後聲名大噪。目前市場均價 €250–400/瓶，傳奇年份（1985、2000、2016）二手市場溢價 150–300%。Liv-ex 持續追蹤為義大利酒投資風向標。</p></div><div class=\"mf-zone warm\"><h3>Ornellaia（Marchese Lodovico Antinori）</h3><p class=\"mf-style\">Bolgheri Superiore DOC · Cabernet Sauvignon 主體，混入 Merlot、Cabernet Franc</p><p class=\"mf-prod\">波爾多混釀風格，以每年「Vendemmia d'Artista（藝術家年份）」為主題推出限量版，是收藏圈最受關注的藝術投資酒款。市場均價 €200–350/瓶，藝術家限量版可達 €1,000+。</p></div><div class=\"mf-zone cool\"><h3>Masseto（Tenuta dell'Ornellaia）</h3><p class=\"mf-style\">Toscana IGT · 100% Merlot，波爾多右岸風格</p><p class=\"mf-prod\">義大利最昂貴的 Merlot，「義大利的 Pétrus」。年產量約 30,000 瓶，市場均價 €600–900/瓶，頂級年份（2015、2016）可達 €1,200+。2021 年 Masseto 正式獨立成獨立酒莊，投資者信心大增。</p></div><div class=\"mf-zone plain\"><h3>Tignanello（Marchesi Antinori）</h3><p class=\"mf-style\">Toscana IGT · Sangiovese 80% + Cabernet Sauvignon + Cabernet Franc</p><p class=\"mf-prod\">超級托斯卡納的歷史鼻祖（1971 年首釀），也是最具性價比的入門級投資酒款。市場均價 €100–180/瓶，完整舊年份箱裝（1990 年代）二手市場溢價 80–150%，是建立收藏組合的理想核心。</p></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "風險管理與避雷指南",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">葡萄酒投資風險不容忽視——仿冒品、儲存失當、市場流動性不足是三大核心風險。掌握防範策略，才能保護投資組合的長期價值。</p><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">⚠️ 仿冒品風險</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>高風險酒款：</strong>Giacomo Conterno Monfortino、Biondi-Santi Riserva、Dal Forno Amarone — 市場最常見仿冒對象</div><div class=\"orvieto-card\"><strong>防範工具：</strong>① 向有信譽的進口商或拍賣行購買；② 確認 DOCG 防偽貼紙（Fascetta）序號；③ 核對酒莊原廠 OWC 木箱與出廠批次記錄</div><div class=\"orvieto-card\"><strong>鑑別要點：</strong>酒標印刷品質、軟木塞品牌壓印、瓶頸鋁箔封套的版本年份對應，必要時委託第三方鑑定機構</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">🌡️ 儲存失當風險</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>最常見失誤：</strong>溫差波動（>±5°C/天）比持續偏高溫更傷害酒，特別是軟木塞品質的長期受損</div><div class=\"orvieto-card\"><strong>解決方案：</strong>使用認證保稅倉（Bonded Warehouse）儲存投資級酒款，費用約 €8–15/箱/月，儲存記錄具法律效力，拍賣行直接接受</div><div class=\"orvieto-card\"><strong>自存注意：</strong>投資級酒款自家儲存須留存溫濕度記錄，拍賣前需提供至少 5 年的儲存歷史，否則估價大打折扣</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">📊 市場流動性風險</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>流動性差的酒款：</strong>非主流產區、評分偏低、知名度不足或產量極大的酒款，難以在二手市場快速變現</div><div class=\"orvieto-card\"><strong>策略建議：</strong>70% 預算集中在「有 Liv-ex 追蹤、有二手市場記錄」的核心酒款（Barolo、Brunello、Super Tuscans TOP 10）</div><div class=\"orvieto-card\"><strong>分散原則：</strong>不同品種（Barolo + Brunello + Super Tuscan）、不同年份（傳奇年份 + 優秀年份）、不同價位（旗艦款 + 副牌）三維分散</div></div></div></div></div>"
+    },
+    {
+      "type": "content",
       "title": "投資三大層次策略",
       "content": "<div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">入門收藏</div><h3>年預算 5-15 萬</h3><ul><li>Chianti Classico Gran Selezione、Barolo 普通款、Brunello 一般年份</li><li>選 3-5 個年份橫向比較，購買恆溫酒櫃（12°C）</li><li>保值期 5-15 年，逐步建立鑑賞能力</li></ul></div><div class=\"style-card mid\"><div class=\"style-badge\">中階收藏</div><h3>年預算 15-50 萬</h3><ul><li>Barolo MGA 單一園、Brunello Riserva、Amarone Dal Forno</li><li>垂直收藏（同一酒莊多個年份）+ 評分家評分追蹤</li><li>直接向酒莊訂購或信譽拍賣行，保值期 15-30 年</li></ul></div><div class=\"style-card premium\"><div class=\"style-badge\">頂級投資</div><h3>年預算 50 萬+</h3><ul><li>Giacomo Conterno Monfortino、Biondi-Santi Riserva 老年份、Quintarelli Amarone</li><li>稀缺老年份（1960-1990）完整箱裝（OWC），出處文件齊全</li><li>透過 Christie's、Sotheby's 拍賣行操作，保值期 30-50 年</li></ul></div></div></div>"
     },
@@ -80,12 +128,12 @@
         "義大利頂級葡萄酒投資三大驅動力：稀缺性（MGA 單一園）、陳年潛力（30-50 年）、品牌效應",
         "三大頂級投資酒款：Barolo DOCG（義大利之王）、Brunello di Montalcino DOCG、Amarone della Valpolicella DOCG",
         "Barolo 頂級款 2010-2024 漲幅達 380%，Giacomo Conterno Monfortino 均價 €10,000+",
-        "傳統派（大型橡木桶 Botti、30-60 天浸皮）陳年 25-50 年，是老酒收藏家首選",
-        "現代派（Barriques、短浸皮）提早適飲（10-20 年），Gaja 國際知名度最高",
-        "Biondi-Santi 是 Brunello 創始酒莊，舊年份屢創拍賣紀錄；Dal Forno Amarone 年產極少溢價高",
-        "入門收藏（5-15 萬/年）：從 Chianti Classico Gran Selezione 建立鑑賞基礎",
-        "中階收藏（15-50 萬/年）：Barolo MGA 單一園 + 垂直收藏策略",
-        "頂級投資（50 萬+/年）：老年份稀缺酒款搭配完整 OWC 木箱，透過國際拍賣行操作"
+        "Monfortino 年產 8,000–15,000 瓶，不少年份不生產，稀缺性是核心投資理由",
+        "Biondi-Santi 舊年份（1955、1964、1975）拍賣價可達 €5,000–15,000/瓶，2020 年被 EPI 集團收購後國際知名度提升",
+        "Dal Forno Romano Amarone：年產僅 15,000 瓶，幾乎全部酒莊直購，二手溢價 200%+",
+        "超級托斯卡納三大投資酒款：Sassicaia（DOC 地位）、Masseto（義大利 Pétrus）、Ornellaia（藝術家限量版）",
+        "Tignanello 是超級托斯卡納鼻祖，均價 €100–180，性價比最高的入門投資組合核心",
+        "三大風險：仿冒（用 Fascetta + OWC + Provenance 防範）、儲存失當（用認證保稅倉）、流動性不足（70% 資金集中在 Liv-ex 追蹤酒款）"
       ]
     },
     {
@@ -115,7 +163,7 @@
             "不使用橡木桶"
           ],
           "correct": 2,
-          "explanation": "傳統派（Tradizionalisti）使用大型斯拉沃尼亞橡木桶（Botti，10,000-50,000L），讓酒緩慢演化，是老酒收藏家的首選。"
+          "explanation": "傳統派（Tradizionalisti）使用大型斯拉沃尼亞橡木桶（Botti），讓酒緩慢演化，是老酒收藏家的首選。"
         },
         {
           "type": "single",
@@ -131,27 +179,39 @@
         },
         {
           "type": "single",
-          "question": "入門收藏者最適合從哪種酒開始投資？",
+          "question": "Masseto 被稱為「義大利的 Pétrus」，使用什麼品種釀造？",
           "options": [
-            "直接買最老年份 Barolo",
-            "Chianti Classico Gran Selezione 知名酒莊",
-            "只買超市特價酒",
-            "只買 Prosecco 氣泡酒"
+            "100% Sangiovese",
+            "100% Nebbiolo",
+            "100% Merlot",
+            "Cabernet Sauvignon + Merlot"
           ],
-          "correct": 1,
-          "explanation": "入門收藏建議從 Chianti Classico Gran Selezione 知名酒莊開始：價格合理（€50-150）、品質穩定、陳年潛力 10-20 年，可逐步建立鑑賞能力。"
+          "correct": 2,
+          "explanation": "Masseto 使用 100% Merlot 釀造，在 Bolgheri 黏土地塊上展現出媲美波爾多右岸（Pomerol/Pétrus）的風格，是義大利最昂貴的單一品種紅酒之一，均價 €600–900/瓶。"
         },
         {
           "type": "single",
-          "question": "MGA 在 Barolo 中代表什麼？",
+          "question": "評估義大利頂級酒收藏時，DOCG 防偽貼紙（Fascetta）的作用是？",
           "options": [
-            "Marketing Grade Assessment",
-            "Menzione Geografica Aggiuntiva（法定單一園名稱）",
-            "Master Grower Alliance",
-            "Minimum Grade Approval"
+            "標示酒款的最佳飲用年份",
+            "政府核發唯一序號，是驗證 DOCG 真偽最可靠的外部標誌",
+            "標示有機農法認證",
+            "標示出口關稅已繳清"
           ],
           "correct": 1,
-          "explanation": "MGA（Menzione Geografica Aggiuntiva）是義大利法規允許在酒標上標示的官方單一園名稱，Barolo 有 170+ 個 MGA，如 Cannubi、Brunate 等，稀缺性極高，是頂級投資的核心指標。"
+          "explanation": "Fascetta 是義大利政府（ICQRF）為每瓶 DOCG 核發的防偽貼紙，含唯一序號，跨越瓶蓋封口，是辨識 DOCG 真偽最可靠的外部工具，也是拍賣行評估出處的重要依據。"
+        },
+        {
+          "type": "single",
+          "question": "Dal Forno Romano Amarone 的稀缺性主要來自？",
+          "options": [
+            "政府限制其出口數量",
+            "年產量極少（約 15,000 瓶），幾乎全部透過酒莊直購分配，市面流通極少",
+            "葡萄樹樹齡超過 200 年，產量自然極低",
+            "只在奇數年份生產"
+          ],
+          "correct": 1,
+          "explanation": "Dal Forno Romano 年產量僅約 15,000 瓶，Romano Dal Forno 嚴格控制分銷，幾乎全部透過酒莊官方管道直購，市面二手流通量極少，造就其 200%+ 的拍賣溢價。"
         }
       ]
     }

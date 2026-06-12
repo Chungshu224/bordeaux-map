@@ -54,11 +54,6 @@
       "subtitle": "地中海陽光下的陡峭葡萄園"
     },
     {
-      "type": "map_placeholder",
-      "title": "🌊 Liguria 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🌊 Liguria 產區地圖 地圖。"
-    },
-    {
       "type": "content",
       "title": "�️ 歷史與文化地位",
       "content": "<div class=\"history-section\"><div class=\"history-intro\"><p>Liguria 葡萄酒擁有悠久的歷史，從古羅馬時期到熱那亞共和國的海洋貿易，塑造了這個地區獨特的葡萄酒文化。</p></div><div class=\"timeline-grid\"><div class=\"timeline-item\"><div class=\"timeline-icon\" style=\"background:#e74c3c\">🏺</div><div class=\"timeline-content\"><h4>古羅馬時期（前 218 年-）</h4><p>Liguria 葡萄酒透過地中海貿易路線輸出至羅馬帝國各地。古羅馬作家 Pliny the Elder 記載了 Liguria 沿海葡萄園的存在。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-icon\" style=\"background:#e67e22\">⛪</div><div class=\"timeline-content\"><h4>中世紀（11-15 世紀）</h4><p>修道院開始在山坡建立葡萄園，特別是 <strong>Monte Raggio</strong> 和 Cinque Terre 地區。修士們發展了陡坡梯田技術和 Sciacchetrà 甜酒釀造法。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-icon\" style=\"background:#f39c12\">⚓</div><div class=\"timeline-content\"><h4>熱那亞共和國（1005-1797）</h4><p><strong>熱那亞共和國</strong>作為地中海主要海洋貿易強權，將 Liguria 葡萄酒輸出至全歐洲及地中海各港口。Cinque Terre 梯田在 11-13 世紀大規模建造。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-icon\" style=\"background:#27ae60\">🏔️</div><div class=\"timeline-content\"><h4>1973 年</h4><p><strong>Cinque Terre DOC</strong> 正式成立，保護這個獨特的陡坡葡萄酒產區。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-icon\" style=\"background:#3498db\">🏆</div><div class=\"timeline-content\"><h4>1997 年</h4><p>Cinque Terre 與其梯田葡萄園被列入 <strong>UNESCO 世界文化遺產</strong>，認可其獨特的文化與農業景觀價值。總長 7000 公里的乾石牆是人類工程的奇蹟。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-icon\" style=\"background:#9b59b6\">🌊</div><div class=\"timeline-content\"><h4>2011 年洪災與重建</h4><p>嚴重洪災摧毀了部分 Cinque Terre 梯田和葡萄園。當地社群與葡萄農共同努力重建，彰顯這片土地的韌性與對傳統的堅持。</p></div></div></div><div class=\"cultural-position\"><h4>🌟 Liguria 的文化地位</h4><div class=\"position-grid\"><div class=\"position-card\"><h5>🇮🇹 義大利 Riviera</h5><p>Liguria 被稱為「義大利 Riviera」，是義大利最美麗的海岸線之一，吸引無數藝術家、作家和旅人。</p></div><div class=\"position-card\"><h5>🌍 世界遺產</h5><p>Cinque Terre 是全球少數將葡萄種植與人文景觀完美結合的地方，代表人類與自然和諧共存的典範。</p></div><div class=\"position-card\"><h5>🍷 葡萄酒傳承</h5><p>儘管產量極少，Liguria 葡萄酒代表著義大利<strong>「質勝於量」</strong>的釀酒哲學，體現了對傳統工藝的尊重。</p></div></div></div></div>"
@@ -68,7 +63,10 @@
       "title": "🏖️ 義大利的「里維耶拉」",
       "content": "<div class=\"intro-section\"><div class=\"intro-text\"><p>Liguria 是義大利西北部的新月形海岸產區，以<strong>Cinque Terre</strong>（五漁村）的陡峭梯田葡萄園聞名。產量小但獨特性高。</p></div><div class=\"region-stats\"><div class=\"stat-box\"><span class=\"stat-icon\">🏖️</span><div class=\"stat-content\"><span class=\"stat-num\">300 km</span><span class=\"stat-label\">海岸線長度</span></div></div><div class=\"stat-box\"><span class=\"stat-icon\">⛰️</span><div class=\"stat-content\"><span class=\"stat-num\">45°+</span><span class=\"stat-label\">葡萄園坡度</span></div></div><div class=\"stat-box\"><span class=\"stat-icon\">🍷</span><div class=\"stat-content\"><span class=\"stat-num\">8</span><span class=\"stat-label\">DOC 產區</span></div></div></div><div class=\"challenge-note\"><h4>🏔️ 英雄般的葡萄種植</h4><p>Liguria 的葡萄園大多建在<strong>陡峭的海岸懸崖</strong>上，需要手工採收，勞動強度極高，因此產量少、價格高。</p></div></div>"
     },
-    {"type":"liguria-doc-map","title":"🗺️ Liguria DOC 互動地圖"},
+    {
+      "type": "liguria-doc-map",
+      "title": "🗺️ Liguria DOC 互動地圖"
+    },
     {
       "type": "content",
       "title": "⛰️ 英雄式葡萄種植深度解析",

@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "Cirò DOC 的傳說與什麼有關？",
-      "options": ["羅馬皇帝", "古希臘奧運選手", "中世紀騎士", "文藝復興藝術家"],
+      "options": [
+        "羅馬皇帝",
+        "古希臘奧運選手",
+        "中世紀騎士",
+        "文藝復興藝術家"
+      ],
       "answer": 1,
       "explanation": "傳說古希臘奧運選手在比賽後會飲用 Cirò 葡萄酒慶祝，當時稱為 Cremissa。"
     },
     {
       "question": "Gaglioppo 為什麼被稱為「南義的 Pinot Noir」？",
-      "options": ["產量相同", "顏色較淡、單寧柔順、風味細膩", "價格相同", "都產自法國"],
+      "options": [
+        "產量相同",
+        "顏色較淡、單寧柔順、風味細膩",
+        "價格相同",
+        "都產自法國"
+      ],
       "answer": 1,
       "explanation": "Gaglioppo 與 Pinot Noir 類似，顏色相對較淡、單寧柔順、風味細膩，因此被稱為「南義的 Pinot Noir」。"
     },
     {
       "question": "Greco di Bianco DOC 的酒精度通常是？",
-      "options": ["10-12%", "12-14%", "14-16%", "17%+"],
+      "options": [
+        "10-12%",
+        "12-14%",
+        "14-16%",
+        "17%+"
+      ],
       "answer": 3,
       "explanation": "Greco di Bianco 是甜白酒，使用風乾葡萄釀造，酒精度極高（17%+），是義大利最甜、最濃郁的甜白酒之一。"
     },
     {
       "question": "'Nduja 是什麼？",
-      "options": ["一種葡萄品種", "Calabria 超辣抹醬香腸", "一種甜點", "一個 DOC 產區"],
+      "options": [
+        "一種葡萄品種",
+        "Calabria 超辣抹醬香腸",
+        "一種甜點",
+        "一個 DOC 產區"
+      ],
       "answer": 1,
       "explanation": "'Nduja 是 Calabria 的超辣抹醬香腸，主要成分是豬肉和大量辣椒，可塗麵包食用，搭配 Cirò Rosso 完美。"
     }
@@ -32,11 +52,6 @@
       "type": "title",
       "title": "🌊 Calabria",
       "subtitle": "義大利「腳尖」的古老品種寶庫"
-    },
-    {
-      "type": "map_placeholder",
-      "title": "🌊 Calabria 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🌊 Calabria 產區地圖 地圖。"
     },
     {
       "type": "content",
@@ -127,35 +142,60 @@
         {
           "type": "single",
           "question": "Cirò DOC 的傳說與什麼有關？",
-          "options": ["羅馬皇帝", "古希臘奧運選手", "中世紀騎士", "文藝復興藝術家"],
+          "options": [
+            "羅馬皇帝",
+            "古希臘奧運選手",
+            "中世紀騎士",
+            "文藝復興藝術家"
+          ],
           "correct": 1,
           "explanation": "傳說古希臘奧運選手在比賽後會飲用 Cirò 葡萄酒慶祝，當時稱為 Cremissa。"
         },
         {
           "type": "single",
           "question": "Gaglioppo 為什麼被稱為「南義的 Pinot Noir」？",
-          "options": ["產量相同", "顏色較淡、單寧柔順、風味細膩", "價格相同", "都產自法國"],
+          "options": [
+            "產量相同",
+            "顏色較淡、單寧柔順、風味細膩",
+            "價格相同",
+            "都產自法國"
+          ],
           "correct": 1,
           "explanation": "Gaglioppo 與 Pinot Noir 類似，顏色相對較淡、單寧柔順、風味細膩，因此被稱為「南義的 Pinot Noir」。"
         },
         {
           "type": "single",
           "question": "Greco di Bianco DOC 的酒精度通常是？",
-          "options": ["10-12%", "12-14%", "14-16%", "17%+"],
+          "options": [
+            "10-12%",
+            "12-14%",
+            "14-16%",
+            "17%+"
+          ],
           "correct": 3,
           "explanation": "Greco di Bianco 是甜白酒，使用風乾葡萄釀造，酒精度極高（17%+），是義大利最甜、最濃郁的甜白酒之一。"
         },
         {
           "type": "single",
           "question": "'Nduja 是什麼？",
-          "options": ["一種葡萄品種", "Calabria 超辣抹醬香腸", "一種甜點", "一個 DOC 產區"],
+          "options": [
+            "一種葡萄品種",
+            "Calabria 超辣抹醬香腸",
+            "一種甜點",
+            "一個 DOC 產區"
+          ],
           "correct": 1,
           "explanation": "'Nduja 是 Calabria 的超辣抹醬香腸，主要成分是豬肉和大量辣椒，可塗麵包食用，搭配 Cirò Rosso 完美。"
         },
         {
           "type": "single",
           "question": "Cirò DOC 以哪個品種為主要原料？",
-          "options": ["A. Nerello Mascalese", "B. Gaglioppo", "C. Greco Nero", "D. Magliocco"],
+          "options": [
+            "A. Nerello Mascalese",
+            "B. Gaglioppo",
+            "C. Greco Nero",
+            "D. Magliocco"
+          ],
           "correct": 1,
           "explanation": "Cirò 是 Calabria 最著名的 DOC，以原生品種 Gaglioppo 釀造，風格強勁帶有泥土氣息。"
         }

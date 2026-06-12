@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "Aglianico 為什麼被稱為「南義的 Nebbiolo」？",
-      "options": ["產量相同", "高單寧、高酸度、陳年潛力驚人", "顏色相同", "價格相同"],
+      "options": [
+        "產量相同",
+        "高單寧、高酸度、陳年潛力驚人",
+        "顏色相同",
+        "價格相同"
+      ],
       "answer": 1,
       "explanation": "Aglianico 與 Nebbiolo 類似，擁有極高單寧、高酸度和驚人的陳年潛力（20-30 年），是南義最高貴的紅葡萄品種。"
     },
     {
       "question": "Campania 的白葡萄三劍客是？",
-      "options": ["Chardonnay, Sauvignon Blanc, Pinot Grigio", "Fiano, Greco, Falanghina", "Trebbiano, Verdicchio, Malvasia", "Garganega, Cortese, Timorasso"],
+      "options": [
+        "Chardonnay, Sauvignon Blanc, Pinot Grigio",
+        "Fiano, Greco, Falanghina",
+        "Trebbiano, Verdicchio, Malvasia",
+        "Garganega, Cortese, Timorasso"
+      ],
       "answer": 1,
       "explanation": "Fiano di Avellino、Greco di Tufo、Falanghina 是 Campania 的代表性白葡萄品種，都是古老的本土品種。"
     },
     {
       "question": "Vesuvio DOC 的特點是？",
-      "options": ["沒有火山", "歐洲唯一仍活躍的火山葡萄園", "海拔最低的產區", "只產紅酒"],
+      "options": [
+        "沒有火山",
+        "歐洲唯一仍活躍的火山葡萄園",
+        "海拔最低的產區",
+        "只產紅酒"
+      ],
       "answer": 1,
       "explanation": "Vesuvio（維蘇威火山）是歐洲唯一仍活躍的火山，葡萄園位於火山斜坡，賦予葡萄酒獨特火山礦物感。"
     },
     {
       "question": "Taurasi DOCG 的最低陳年要求是？",
-      "options": ["1 年", "2 年", "3 年", "5 年"],
+      "options": [
+        "1 年",
+        "2 年",
+        "3 年",
+        "5 年"
+      ],
       "answer": 2,
       "explanation": "Taurasi DOCG 需陳年至少 3 年（含 1 年橡木桶），Riserva 需 4 年（含 18 個月橡木桶）。"
     }
@@ -32,11 +52,6 @@
       "type": "title",
       "title": "🌋 Campania",
       "subtitle": "古老品種與火山土壤的交響曲"
-    },
-    {
-      "type": "map_placeholder",
-      "title": "🌋 Campania 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🌋 Campania 產區地圖 地圖。"
     },
     {
       "type": "content",
@@ -127,35 +142,60 @@
         {
           "type": "single",
           "question": "Aglianico 為什麼被稱為「南義的 Nebbiolo」？",
-          "options": ["產量相同", "高單寧、高酸度、陳年潛力驚人", "顏色相同", "價格相同"],
+          "options": [
+            "產量相同",
+            "高單寧、高酸度、陳年潛力驚人",
+            "顏色相同",
+            "價格相同"
+          ],
           "correct": 1,
           "explanation": "Aglianico 與 Nebbiolo 類似，擁有極高單寧、高酸度和驚人的陳年潛力（20-30 年），是南義最高貴的紅葡萄品種。"
         },
         {
           "type": "single",
           "question": "Campania 的白葡萄三劍客是？",
-          "options": ["Chardonnay, Sauvignon Blanc, Pinot Grigio", "Fiano, Greco, Falanghina", "Trebbiano, Verdicchio, Malvasia", "Garganega, Cortese, Timorasso"],
+          "options": [
+            "Chardonnay, Sauvignon Blanc, Pinot Grigio",
+            "Fiano, Greco, Falanghina",
+            "Trebbiano, Verdicchio, Malvasia",
+            "Garganega, Cortese, Timorasso"
+          ],
           "correct": 1,
           "explanation": "Fiano di Avellino、Greco di Tufo、Falanghina 是 Campania 的代表性白葡萄品種，都是古老的本土品種。"
         },
         {
           "type": "single",
           "question": "Vesuvio DOC 的特點是？",
-          "options": ["沒有火山", "歐洲唯一仍活躍的火山葡萄園", "海拔最低的產區", "只產紅酒"],
+          "options": [
+            "沒有火山",
+            "歐洲唯一仍活躍的火山葡萄園",
+            "海拔最低的產區",
+            "只產紅酒"
+          ],
           "correct": 1,
           "explanation": "Vesuvio（維蘇威火山）是歐洲唯一仍活躍的火山，葡萄園位於火山斜坡，賦予葡萄酒獨特火山礦物感。"
         },
         {
           "type": "single",
           "question": "Taurasi DOCG 的最低陳年要求是？",
-          "options": ["1 年", "2 年", "3 年", "5 年"],
+          "options": [
+            "1 年",
+            "2 年",
+            "3 年",
+            "5 年"
+          ],
           "correct": 2,
           "explanation": "Taurasi DOCG 需陳年至少 3 年（含 1 年橡木桶），Riserva 需 4 年（含 18 個月橡木桶）。"
         },
         {
           "type": "single",
           "question": "Fiano di Avellino DOCG 的風格特色是？",
-          "options": ["清淡易飲，無陳年潛力", "具礦物感與榛果香，陳年潛力佳", "甜而濃郁，類似 Passito", "以氣泡著名"],
+          "options": [
+            "清淡易飲，無陳年潛力",
+            "具礦物感與榛果香，陳年潛力佳",
+            "甜而濃郁，類似 Passito",
+            "以氣泡著名"
+          ],
           "correct": 1,
           "explanation": "Fiano di Avellino 以獨特的礦物感、榛果與煙燻香氣著稱，優質年份可陳年 10 年以上。"
         }

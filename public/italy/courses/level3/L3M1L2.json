@@ -1,86 +1,128 @@
 {
   "lessonId": "L3M1L2",
-  "title": "中義稀有品種",
+  "title": "中義稀有品種深探",
   "quiz": [
     {
-      "question": "Ciliegiolo 名字的由來是什麼？",
+      "question": "Vernaccia di San Gimignano 在義大利葡萄酒法規史上有什麼歷史地位？",
       "options": [
-        "義大利語「草原」",
-        "義大利語「櫻桃」（Ciliegia）",
-        "古羅馬地名",
-        "種植者的姓氏"
+        "第一個獲得 DOCG 認證的白葡萄酒（1993）",
+        "第一個獲得 DOC 認證的義大利葡萄酒（1966），後升格 DOCG",
+        "第一個在國際拍賣會出現的義大利白酒",
+        "第一個進入美國市場的義大利葡萄酒"
       ],
       "answer": 1,
-      "explanation": "Ciliegiolo 名字來自義大利語「Ciliegia（櫻桃）」，因其濃郁的新鮮櫻桃香氣而得名。"
+      "explanation": "Vernaccia di San Gimignano 於 1966 年成為義大利第一個獲得 DOC 認證的葡萄酒，1993 年升格 DOCG，是義大利法規史上具有里程碑意義的產區。"
     },
     {
-      "question": "哪位古羅馬學者最早詳細記載 Cesanese 葡萄？",
+      "question": "Ciliegiolo 最主要的種植區域是哪裡？",
       "options": [
-        "Virgil（維吉爾）",
-        "Pliny the Elder（老普林尼）",
-        "Julius Caesar（凱撒大帝）",
-        "Cato（加圖）"
+        "Piemonte 北部丘陵",
+        "Toscana 馬雷瑪海岸（Maremma）和 Umbria",
+        "Campania 南部火山丘陵",
+        "Friuli 東北邊境"
       ],
       "answer": 1,
-      "explanation": "老普林尼（Pliny the Elder）在《自然史》中詳細記載了 Cesanese 葡萄，證明此品種在拉吉歐（Lazio）有超過 2000 年的歷史。"
+      "explanation": "Ciliegiolo（義大利語「小櫻桃」）主要種植於 Toscana 南部馬雷瑪海岸（Maremma Toscana DOC）和 Umbria，以其鮮明的野生櫻桃和玫瑰花香著稱，傳統上作為 Chianti 的小比例混調。"
     },
     {
-      "question": "Cesanese del Piglio DOCG 在哪一年獲得認證？",
+      "question": "Cesanese del Piglio 是哪個城市的傳統特產？",
       "options": [
-        "2003",
-        "1988",
-        "2008",
-        "2015"
+        "佛羅倫斯（Firenze）",
+        "羅馬（Roma）",
+        "波隆納（Bologna）",
+        "那不勒斯（Napoli）"
       ],
+      "answer": 1,
+      "explanation": "Cesanese del Piglio DOCG 是羅馬南方 Frosinone 省的傳統紅酒，歷史上是梵蒂岡教廷的官方用酒，也是羅馬傳統餐館（trattoria）最常見的地方紅酒，是拉齊奧最重要的紅品種。"
+    },
+    {
+      "question": "Vernaccia di San Gimignano 和 Verdicchio 的最大風格差異是？",
+      "options": [
+        "Vernaccia 酒體更重、Verdicchio 更清爽",
+        "Vernaccia 以微苦結尾和礦物感著稱、Verdicchio 以高酸度和杏仁風味著稱",
+        "Vernaccia 是紅品種、Verdicchio 是白品種",
+        "兩者風格幾乎相同"
+      ],
+      "answer": 1,
+      "explanation": "Vernaccia di San Gimignano 最標誌性特徵是收尾的微苦（杏仁苦）和礦物感；Verdicchio di Matelica 則以清脆高酸度、新鮮青蘋果和特有的苦杏仁核尾韻著稱——兩個皆有苦杏仁元素，但表現方式不同。"
+    },
+    {
+      "question": "Colorino 在 Chianti Classico 中扮演什麼角色？",
+      "options": [
+        "主要品種，佔混調 80% 以上",
+        "提供深色澤和結構的混調輔助品種",
+        "賦予清新酸度的白品種",
+        "法規禁止加入 Chianti Classico"
+      ],
+      "answer": 1,
+      "explanation": "Colorino（義大利語「賦予色彩者」）是 Toscana 傳統混調輔助品種，以深濃的顏色（接近紫黑色）和豐富的單寧為 Chianti 混調提供顏色深度和結構感，通常佔混調比例 5–10%。"
+    },
+    {
+      "question": "自然酒運動（Natural Wine Movement）對 Ciliegiolo 有什麼影響？",
+      "options": [
+        "自然酒運動使 Ciliegiolo 被禁止商業生產",
+        "自然酒生產者看到 Ciliegiolo 的個性潛力，以低干預方式讓品種特性完全展現，助推了它的復興",
+        "自然酒運動讓 Ciliegiolo 轉為氣泡酒生產",
+        "自然酒運動對 Ciliegiolo 幾乎沒有影響"
+      ],
+      "answer": 1,
+      "explanation": "自然酒運動提倡低干預、無添加硫，讓葡萄的個性完全展現——Ciliegiolo 的鮮豔野生漿果和玫瑰香氣在低干預釀造下表現特別突出，推動了它從「配角品種」升格為「主角品種」的身份轉變。"
+    },
+    {
+      "question": "中義稀有品種中，哪個品種在義大利法規史上具有「第一」的地位且風格以微苦結尾著稱？",
+      "options": ["Ciliegiolo", "Cesanese", "Vernaccia di San Gimignano", "Colorino"],
       "answer": 2,
-      "explanation": "Cesanese del Piglio 在 2008 年成為 Lazio 唯一的 DOCG，確立了其在義大利葡萄酒中的頂尖地位。"
-    },
-    {
-      "question": "以下哪位釀酒師最代表 Ciliegiolo 自然酒風格？",
-      "options": [
-        "Angelo Gaja",
-        "Paolo Bea（Umbria）",
-        "Giacomo Conterno",
-        "Bruno Giacosa"
-      ],
-      "answer": 1,
-      "explanation": "Paolo Bea 位於 Umbria 的 Montefalco，以自然農法釀造 Ciliegiolo，是該品種自然酒風格的代表人物。"
+      "explanation": "Vernaccia di San Gimignano 是義大利 DOC 法規史上第一個獲認的酒款（1966），並以收尾的微苦杏仁感和礦物感著稱，是 Toscana 最重要的白品種之一。"
     }
   ],
   "slides": [
     {
       "type": "title",
-      "title": "中義稀有品種",
-      "subtitle": "Ciliegiolo · Cesanese — 托斯卡納與拉吉歐的隱藏瑰寶"
+      "title": "中義稀有品種深探",
+      "subtitle": "Vernaccia · Ciliegiolo · Cesanese · Verdicchio · Colorino — 托斯卡納到拉齊奧的被遺忘珍珠"
     },
     {
       "type": "content",
-      "title": "Ciliegiolo — 義大利的「小櫻桃」",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>身世之謎：Sangiovese 的親代品種</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">DNA 研究確認 Ciliegiolo 是 Sangiovese 的親代品種之一，雖然在托斯卡納歷史悠久，但長期作為調配角色。近年在 Maremma 和 Umbria 以單品釀造贏得國際讚譽。</p><div class=\"science-card\">主要產區：Maremma Toscana DOC、Ciliegiolo d'Umbria IGT｜最早記錄：16 世紀托斯卡納文獻</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">品種特徵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">風味：新鮮櫻桃（最核心）、草莓、紫羅蘭、輕微香料感｜低單寧、高酸度、清新果味</div><div class=\"orvieto-card\">釀酒風格：多元——自然酒、有機農法、法式小橡木桶熟成均有出色作品</div><div class=\"orvieto-card\">頂級酒莊：Sassotondo（Maremma）、Paolo Bea（Umbria）、Mocali｜€15-40</div></div></div></div>"
+      "title": "Vernaccia di San Gimignano — 義大利第一個 DOC",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>法規里程碑：義大利 DOC 系統的起點</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">1966 年，義大利推行 DOC 葡萄酒法規時，Vernaccia di San Gimignano 成為全義大利第一個獲得 DOC 認證的葡萄酒。1993 年進一步升格 DOCG，確認其在義大利白酒中的歷史地位。這個「第一」代表的不只是榮譽，更是整個義大利葡萄酒法規體系誕生的見證者。</p><div class=\"science-card\">1966 年：義大利第一個 DOC ｜ 1993 年：升格 DOCG ｜ 產地：San Gimignano 石塔小鎮，Toscana</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">品種特徵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>顏色：</strong>淡金黃色，有時帶綠色光澤</div><div class=\"orvieto-card\"><strong>香氣：</strong>柑橘花（金合歡、橙花）、白桃、礦石、淡淡鳳梨｜陳年後：蜂蠟、烤麵包、蘑菇</div><div class=\"orvieto-card\"><strong>口感標誌：</strong>收尾有獨特的微苦（杏仁皮苦）+ 礦物感餘韻，這是 Vernaccia 最辨識的風味指紋</div><div class=\"orvieto-card\"><strong>結構：</strong>中等酒體、爽脆酸度、適合年輕飲用（1–5 年）；Riserva 款橡木桶陳年 11 個月以上，可陳 5–10 年</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "Cesanese — 羅馬的葡萄酒傳奇",
-      "content": "<div class=\"variety-deep-section\"><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">2000 年前</div><div class=\"timeline-content\">老普林尼在《自然史》記載 Cesanese，拉吉歐地區 2000+ 年栽培歷史，古羅馬帝王御用葡萄酒</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">中世紀</div><div class=\"timeline-content\">維持 Lazio 主要品種地位，供應羅馬教廷，但知名度僅限義大利境內</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">2008</div><div class=\"timeline-content\">Cesanese del Piglio 獲 DOCG 認證，成為 Lazio 唯一 DOCG，確立世界級地位</div></div></div><div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Cesanese d'Affile（高品質克隆）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">濃郁、結構強、陳年潛力 10-20 年｜黑莓、石榴、野花香氣｜橡木桶熟成複雜度高</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Cesanese Comune（大眾克隆）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">果味清新、較易飲｜年輕時即可享用｜適合日常佐餐，產量較大</div></div></div></div></div></div>"
+      "title": "Vernaccia 深度：生產者對比與風格流派",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>現代派：清爽礦物風格</h3><p class=\"mf-style\">San Gimignano 現代派</p><p class=\"mf-prod\"><strong>Panizzi 酒莊：</strong>Sergio Panizzi 的旗艦款 Vernaccia di San Gimignano Riserva，不鏽鋼桶 + 極短橡木桶接觸，保留花香清新與礦物輪廓的同時，加入微妙深度。是這個品種最平衡的詮釋之一，Gambero Rosso 三杯常客，均價 €22–35。</p></div><div class=\"mf-zone warm\"><h3>傳統派：橡木陳年複雜風格</h3><p class=\"mf-style\">San Gimignano 傳統派</p><p class=\"mf-prod\"><strong>Montenidoli 酒莊：</strong>Elisabetta Fagiuoli 採用老式長浸皮技術（幾乎是橙酒邊緣），旗艦款 Fiore 和 Carato 帶有強烈的蜂蠟、堅果、氧化複雜度。是 Vernaccia 最有個性的詮釋，適合喜愛複雜陳年白酒的進階愛好者，均價 €25–55。</p></div><div class=\"mf-zone cool\"><h3>自然派：低干預詮釋</h3><p class=\"mf-style\">San Gimignano 自然派</p><p class=\"mf-prod\"><strong>Poggiarello 酒莊：</strong>採用野生酵母、無添加硫（或極低），帶皮接觸讓 Vernaccia 展現天然橙酒特質——銅黃色澤、氧化蜂蠟和橙皮香氣。是 Vernaccia 在自然酒運動中最前衛的嘗試，均價 €18–30。</p></div><div class=\"mf-zone plain\"><h3>Vernaccia vs Verdicchio 風格對比</h3><p class=\"mf-prod\"><strong>Vernaccia：</strong>微苦收尾（杏仁皮苦）、礦物感強、San Gimignano 砂岩土壤的鹽礦特質<br><strong>Verdicchio di Matelica：</strong>清脆高酸度、新鮮青蘋果、苦杏仁核收尾、Marche 山區冷涼氣候造就更緊緻的酸度架構<br><strong>共同點：</strong>兩者都以苦杏仁風味收尾，都可媲美 Pinot Gris 或 Chenin Blanc 的陳年複雜度</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "兩大品種全方位對比",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Ciliegiolo 與 Cesanese 同為中義稀有品種，卻在風格上形成鮮明對比——一個清新果香，一個古老厚重。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Ciliegiolo（清新派）</h3><ul><li><strong>產區：</strong>Maremma Toscana DOC、Umbria IGT</li><li><strong>風格：</strong>清新櫻桃、清爽、低單寧</li><li><strong>陳年：</strong>1-8 年，早飲為主</li><li><strong>適合：</strong>托斯卡納牛排、番茄料理</li><li><strong>代表：</strong>Sassotondo、Paolo Bea</li><li><strong>價格：</strong>€15-40，性價比高</li></ul></div><div class=\"method-card modern\"><h3>Cesanese（古老派）</h3><ul><li><strong>產區：</strong>Cesanese del Piglio DOCG（Lazio 唯一 DOCG）</li><li><strong>風格：</strong>黑莓、石榴、深厚單寧</li><li><strong>陳年：</strong>5-20 年，Riserva 陳年潛力強</li><li><strong>適合：</strong>羊肉燉菜、Amatriciana 料理</li><li><strong>代表：</strong>Petrucca、Casale della Ioria</li><li><strong>價格：</strong>€20-60，頂尖款可達 €100</li></ul></div></div></div></div>"
+      "title": "Ciliegiolo — 從配角到主角的轉身",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>名字來自「小櫻桃」</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Ciliegiolo（義大利語「小櫻桃」）的名字直接描述了它的核心風味特徵——鮮豔的野生酸櫻桃、野生草莓。它曾長期作為 Chianti 的混調輔助品種（為 Sangiovese 提供圓潤感），近年在馬雷瑪海岸（Maremma Toscana）和 Umbria，越來越多生產者開始以它釀造純飲款，展現出超乎預期的深度。</p><div class=\"science-card\">主產區：Maremma Toscana DOC（海岸丘陵）、Umbria / Toscana 南部｜角色轉變：配角 → 主角</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">品種特徵與釀造風格</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>核心香氣：</strong>野生酸櫻桃、野生草莓、玫瑰花瓣、紫羅蘭｜中度單寧、爽脆酸度、輕至中等酒體</div><div class=\"orvieto-card\"><strong>兩種釀法詮釋：</strong>傳統重桶（12–18 個月法國橡木桶，結構更厚重）vs 現代輕干預（不鏽鋼桶或大橡木桶，保留鮮美果味）</div><div class=\"orvieto-card\"><strong>自然酒推手：</strong>Lorenzo Corino（Umbria）、Brancatelli（Toscana）等自然酒莊以 Ciliegiolo 為核心品種，低干預讓野生漿果爆發，是夏日紅酒的完美選項</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">在 Chianti 中的傳統角色</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">傳統 Chianti 配方（修道士 Bettino Ricasoli 19 世紀配方）：Sangiovese 70% + Canaiolo 15% + Malvasia Bianca 15%，Ciliegiolo 後來取代部分 Canaiolo 提供圓潤果香</div><div class=\"orvieto-card\">當代 Chianti Classico 已基本不強制混調，但農場自有老藤 Ciliegiolo 成為單飲款的重要原料</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Cesanese del Piglio — 羅馬的紅酒靈魂",
+      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">梵蒂岡教廷的官方用酒</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>歷史淵源：</strong>Cesanese 葡萄歷史記載可追溯至羅馬帝國時期，中世紀時是梵蒂岡教廷和羅馬貴族宴席的常客。今日 Cesanese del Piglio DOCG 是拉齊奧（Lazio）唯一的 DOCG 認證，是整個羅馬周邊地區最高等級的葡萄酒</div><div class=\"orvieto-card\"><strong>產區：</strong>Frosinone 省 Piglio 村（羅馬南方 80 公里），Apennines 山脈丘陵｜海拔 300-600m</div></div></div></div><div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>品種特徵</h3><p class=\"mf-prod\"><strong>兩個子品種：</strong>Cesanese di Affile（更野性、高酸度）和 Cesanese Comune（更圓潤、易飲）<br><strong>核心香氣：</strong>黑莓、覆盆莓、紫羅蘭、黑胡椒、菸草葉<br><strong>口感：</strong>中高單寧、中高酸度、飽滿酒體｜干型 or 微甜 or 氣泡<br><strong>陳年：</strong>干型 Riserva 可達 8-12 年</p></div><div class=\"mf-zone warm\"><h3>羅馬 Trattoria 文化</h3><p class=\"mf-prod\"><strong>餐酒搭配傳統：</strong>羅馬傳統餐館必備的「桌酒（vino della casa）」往往就是 Cesanese，搭配 Cacio e Pepe（起司胡椒義大利麵）、Carbonara、Supplì（炸飯球）等羅馬在地料理<br><strong>現代精品化：</strong>Coletti Conti 和 Casale della Ioria 酒莊近年推動 Cesanese 的精品化，走入 Roma 高端餐廳市場</p></div><div class=\"mf-zone cool\"><h3>DOCG 規格對比</h3><p class=\"mf-prod\"><strong>Cesanese del Piglio DOCG（2008）：</strong>拉齊奧唯一 DOCG，風格最精緻<br><strong>Cesanese di Affile DOC：</strong>更小產區，Cesanese di Affile 品種，風格更野性原始<br><strong>Cesanese di Olevano Romano DOC：</strong>羅馬近郊，量產易飲款為主<br><strong>頂級生產者：</strong>Coletti Conti（Romanico）、Casale della Ioria（Torre del Piano）</p></div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "Colorino 與 Toscana 的傳統混調體系",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>義大利葡萄酒的「隱藏調色師」</h3><div class=\"research-content\"><div class=\"aging-science\"><p class=\"science-explanation\">Colorino（義大利語：「賦予色彩者」）顧名思義——這個品種的皮超濃，花青素極高，釀出的酒呈現接近紫黑色的深色澤。它幾乎從不單飲，而是作為 Chianti 混調的「調色師」，以 5–10% 的比例賦予混調更深的顏色和更厚的單寧結構。它是義大利葡萄酒世界最低調卻最不可或缺的配角之一。</p><div class=\"science-card\">角色：Chianti 系列混調輔助品種｜產區：Toscana 全境｜風格：深色、高單寧、高花青素</div></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Toscana 傳統混調體系中的稀有品種</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Colorino del Valdarno：</strong>Chianti 傳統混調的古老配方成員，主要種植於 Arno 河谷（Valdarno），以濃縮的紫黑色和豐富花青素著稱</div><div class=\"orvieto-card\"><strong>Canaiolo：</strong>另一傳統輔助品種，與 Sangiovese 互補提供圓潤感和果香，曾在 Bettino Ricasoli 19 世紀 Chianti 配方中佔 15% 比重，今日種植面積大幅縮減</div><div class=\"orvieto-card\"><strong>Mammolo：</strong>帶有紫羅蘭香氣（Mammolo = 紫羅蘭）的稀有 Toscana 品種，偶爾混入 Vino Nobile di Montepulciano 為主的混調提供花香，是最接近滅絕危機的 Toscana 品種之一</div><div class=\"orvieto-card\"><strong>總結：</strong>Toscana 傳統混調體系依賴十幾個稀有本土品種各司其職——顏色、香氣、酸度、單寧分別由不同品種提供。現代法規鬆綁後，Sangiovese 獨立主義讓這些配角品種的種植面積急劇縮減，保育意義重大</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "中義稀有品種全方位對比",
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Vernaccia di San Gimignano</h3><p class=\"mf-style\">白葡萄｜DOCG｜1966 義大利第一個 DOC</p><p class=\"mf-prod\">微苦杏仁結尾 / 礦物感強 / 清爽但可陳年 5–10 年（Riserva）/ €15–55 / 搭配白肉、海鮮、松露料理</p></div><div class=\"mf-zone warm\"><h3>Ciliegiolo</h3><p class=\"mf-style\">紅葡萄｜Maremma Toscana DOC / Umbria</p><p class=\"mf-prod\">野生酸櫻桃核心香氣 / 輕至中等酒體 / 夏日紅酒完美選項 / 自然酒界寵兒 / €12–30</p></div><div class=\"mf-zone cool\"><h3>Cesanese del Piglio</h3><p class=\"mf-style\">紅葡萄｜DOCG（2008）｜Lazio 唯一 DOCG</p><p class=\"mf-prod\">黑莓 + 黑胡椒 + 紫羅蘭 / 梵蒂岡歷史用酒 / 羅馬 Trattoria 文化代表 / 干型 Riserva 可陳 8–12 年 / €15–40</p></div><div class=\"mf-zone plain\"><h3>Colorino / 傳統混調品種群</h3><p class=\"mf-style\">紅葡萄｜Toscana 全境 / 混調輔助</p><p class=\"mf-prod\">深色澤 + 高花青素 / 從不單飲（5–10% 混調比例）/ 賦予 Chianti 顏色深度 / 瀕臨種植面積萎縮風險</p></div></div></div>"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
-        "Ciliegiolo 名稱來自義大利語「Ciliegia（櫻桃）」，DNA 研究確認是 Sangiovese 的親代品種",
-        "Ciliegiolo 主要產區：Maremma Toscana DOC 和 Umbria，低單寧、高酸度、新鮮櫻桃風味",
-        "Ciliegiolo 釀酒風格多元：自然酒、有機農法、橡木桶均有出色詮釋，代表：Sassotondo",
-        "Cesanese 是 Lazio 最重要品種，老普林尼在 2000 年前的《自然史》中即有記載",
-        "Cesanese 有兩種主要克隆：d'Affile（高品質，結構強）和 Comune（清新易飲，產量大）",
-        "Cesanese del Piglio 在 2008 年獲 DOCG 認證，是 Lazio 唯一的 DOCG 產區",
-        "Cesanese 黑莓、石榴、野花香氣，陳年潛力 5-20 年，適合搭配羅馬式羊肉料理",
-        "兩者對比：Ciliegiolo 清新早飲（€15-40）vs Cesanese 結構厚重陳年（€20-100）",
-        "中義稀有品種的共同特色：代表在地風土，風格獨特，近年受到國際市場重視"
+        "Vernaccia di San Gimignano：1966 年義大利第一個 DOC（1993 升格 DOCG），微苦杏仁收尾 + 礦物感是品種指紋，產地 San Gimignano 石塔小鎮",
+        "Vernaccia 三流派：現代派（Panizzi，清爽礦物）、傳統派（Montenidoli，橡木氧化複雜）、自然派（Poggiarello，帶皮橙酒）",
+        "Vernaccia vs Verdicchio：兩者皆有苦杏仁收尾；Vernaccia 礦物感強，Verdicchio 高酸更緊緻",
+        "Ciliegiolo：義語「小櫻桃」，野生酸櫻桃核心香氣；傳統作 Chianti 配角，近年自然酒莊推動升格主角",
+        "Cesanese del Piglio DOCG（2008）：拉齊奧唯一 DOCG，歷史梵蒂岡用酒，羅馬 Trattoria 餐酒文化代表；搭配 Cacio e Pepe / Carbonara 完美",
+        "Colorino（調色師）：深紫黑色澤 + 高花青素，從不單飲，以 5–10% 比例賦予 Chianti 顏色深度",
+        "Toscana 傳統混調體系：Colorino（色）+ Canaiolo（圓潤）+ Mammolo（紫羅蘭香）各司其職，現代化後面臨消失危機",
+        "配餐建議：Vernaccia 配龍蝦燉飯 / Ciliegiolo 配番茄沙拉烤雞 / Cesanese 配 Cacio e Pepe / Colorino 混調酒配羊排"
       ]
     },
     {
@@ -90,63 +132,77 @@
       "questions": [
         {
           "type": "single",
-          "question": "Ciliegiolo 名字的由來是什麼？",
+          "question": "Vernaccia di San Gimignano 在義大利法規史上有什麼特殊地位？",
           "options": [
-            "義大利語「草原」",
-            "義大利語「櫻桃」（Ciliegia）",
-            "古羅馬地名",
-            "種植者的姓氏"
+            "義大利第一個 DOCG",
+            "1966 年義大利第一個 DOC 認證葡萄酒",
+            "義大利第一個進入美國市場的白酒",
+            "義大利第一個有機認證葡萄酒"
           ],
           "correct": 1,
-          "explanation": "Ciliegiolo 名字來自義大利語「Ciliegia（櫻桃）」，因其濃郁的新鮮櫻桃香氣而得名。"
+          "explanation": "Vernaccia di San Gimignano 於 1966 年成為義大利第一個獲得 DOC 認證的葡萄酒，1993 年升格 DOCG，是義大利法規史上的里程碑。"
         },
         {
           "type": "single",
-          "question": "哪位古羅馬學者最早詳細記載 Cesanese 葡萄？",
-          "options": [
-            "Virgil（維吉爾）",
-            "Pliny the Elder（老普林尼）",
-            "Julius Caesar（凱撒大帝）",
-            "Cato（加圖）"
-          ],
+          "question": "Vernaccia di San Gimignano 最標誌性的風味特徵是？",
+          "options": ["甜美的熱帶果香", "收尾的微苦（杏仁皮苦）和礦物感", "濃郁的橡木香草風味", "強烈的醋栗和青草香"],
           "correct": 1,
-          "explanation": "老普林尼（Pliny the Elder）在《自然史》中詳細記載了 Cesanese 葡萄，證明此品種在拉吉歐（Lazio）有超過 2000 年的歷史。"
+          "explanation": "Vernaccia di San Gimignano 最辨識的風味指紋是收尾的微苦（杏仁皮苦）和礦物感餘韻，這源自 San Gimignano 砂岩土壤的特殊礦物特性。"
         },
         {
           "type": "single",
-          "question": "Cesanese del Piglio DOCG 在哪一年獲得認證？",
+          "question": "Ciliegiolo 名稱的意思和核心香氣是？",
           "options": [
-            "2003",
-            "1988",
-            "2008",
-            "2015"
+            "「小花朵」，以白花香著稱",
+            "「小橄欖」，以油脂感著稱",
+            "「小櫻桃」，以野生酸櫻桃和玫瑰花香著稱",
+            "「小葡萄」，以甜美果香著稱"
           ],
           "correct": 2,
-          "explanation": "Cesanese del Piglio 在 2008 年成為 Lazio 唯一的 DOCG，確立了其在義大利葡萄酒中的頂尖地位。"
+          "explanation": "Ciliegiolo 在義大利語中意為「小櫻桃」，核心香氣是鮮豔的野生酸櫻桃和草莓，配合玫瑰花瓣香氣，是義大利最芳香的紅品種之一。"
         },
         {
           "type": "single",
-          "question": "以下哪位釀酒師最代表 Ciliegiolo 自然酒風格？",
+          "question": "Cesanese del Piglio DOCG 的歷史文化地位是？",
           "options": [
-            "Angelo Gaja",
-            "Paolo Bea（Umbria）",
-            "Giacomo Conterno",
-            "Bruno Giacosa"
+            "托斯卡納最古老的葡萄酒，佛羅倫斯共和國的代表",
+            "梵蒂岡教廷的官方用酒，拉齊奧唯一的 DOCG",
+            "北義最具代表性的紅品種",
+            "威尼斯貿易時代的出口主力紅酒"
           ],
           "correct": 1,
-          "explanation": "Paolo Bea 位於 Umbria 的 Montefalco，以自然農法釀造 Ciliegiolo，是該品種自然酒風格的代表人物。"
+          "explanation": "Cesanese del Piglio DOCG（2008）是拉齊奧唯一的 DOCG 認證，歷史上是梵蒂岡教廷和羅馬貴族的宴席用酒，至今仍是羅馬 Trattoria 的靈魂紅酒。"
         },
         {
           "type": "single",
-          "question": "Cesanese 的兩個主要克隆中，哪一個品質更高、結構更強？",
+          "question": "Colorino 在 Chianti 混調中的主要功能是？",
           "options": [
-            "Cesanese Comune",
-            "Cesanese d'Affile",
-            "Cesanese Rotondo",
-            "Cesanese Classico"
+            "提供清爽酸度",
+            "賦予深色澤和豐富花青素",
+            "降低酒精度",
+            "增加甜感和柔順度"
           ],
           "correct": 1,
-          "explanation": "Cesanese d'Affile 是品質較高的克隆，具有更濃郁的黑莓、石榴風味和更強的結構感，陳年潛力可達 10-20 年。"
+          "explanation": "Colorino（義語「賦予色彩者」）以超高花青素和深紫黑色澤著稱，以 5–10% 比例混入 Chianti 賦予顏色深度，是義大利葡萄酒世界最重要的「調色師」品種。"
+        },
+        {
+          "type": "single",
+          "question": "自然酒運動為何有助於推動 Ciliegiolo 的地位提升？",
+          "options": [
+            "自然酒運動規定必須使用本土品種",
+            "低干預釀造讓 Ciliegiolo 的野生漿果個性完全展現，從配角升格主角",
+            "自然酒運動讓 Ciliegiolo 獲得 DOCG 認證",
+            "自然酒運動使 Ciliegiolo 的價格大幅上漲"
+          ],
+          "correct": 1,
+          "explanation": "自然酒提倡低干預，讓葡萄個性主導風格——Ciliegiolo 的鮮豔野生漿果和玫瑰香在低干預下特別突出，推動了它從 Chianti 配角升格為單飲主角的身份轉變。"
+        },
+        {
+          "type": "single",
+          "question": "哪個中義白品種以「苦杏仁核收尾」和「冷涼山區高酸架構」著稱，是 Vernaccia 的中義對照品種？",
+          "options": ["Greco di Tufo", "Fiano di Avellino", "Verdicchio di Matelica", "Trebbiano Toscano"],
+          "correct": 2,
+          "explanation": "Verdicchio di Matelica 來自 Marche 山區，以清脆高酸度、新鮮青蘋果和苦杏仁核收尾著稱，是中義最重要的白品種之一，與 Vernaccia 的微苦收尾遙相呼應但風格更緊緻。"
         }
       ]
     }

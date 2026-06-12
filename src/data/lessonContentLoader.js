@@ -83,7 +83,7 @@ class LessonContentManager {
       const module = await loader()
       // 統一尋找可能的匯出鍵
       const candidates = [
-        'default','lessonContent','l21Content','l22Content','l23Content','l24Content','l25Content','l26Content','l27Content','l28Content','l29Content','l31Content','l32Content','l33Content','l34Content','l35Content','l36Content','l37Content','l38Content','l39Content','l310Content','l311Part1Content','l311Part2Content','l312Content','l313Part1Content','l313Part2Content','l314Content','l3gtcContent'
+        'default','lessonContent','l21Content','l22Content','l23Content','l24Content','l25Content','l26Content','l27Content','l28Content','l29Content','l210Content','l31Content','l32Content','l33Content','l34Content','l35Content','l36Content','l37Content','l38Content','l39Content','l310Content','l311Part1Content','l311Part2Content','l312Content','l313Part1Content','l313Part2Content','l314Content','l3gtcContent','l410Content','l411Content','l412Content','l413Content'
       ]
       let baseContent = null
       for (const key of candidates) {
@@ -207,6 +207,7 @@ export const lessonModuleLoaders = {
   'l2-7': () => import('./lessons/l2-7.js'),
   'l2-8': () => import('./lessons/l2-8.js'),
   'l2-9': () => import('./lessons/l2-9.js'), // Level 2 綜合評量
+  'l2-10': () => import('./lessons/l2-10.js'), // 蘇玳與巴薩克：貴腐甜酒傳奇
   // Level 3 (現存模組)
   'l3-1': () => import('./lessons/l3-1.js'),
   'l3-2': () => import('./lessons/l3-2.js'),
@@ -296,7 +297,8 @@ export const lessonModuleLoaders = {
   'l4-9': () => import('./lessons/l4-9.js'),
   'l4-10': () => import('./lessons/l4-10.js'),
   'l4-11': () => import('./lessons/l4-11.js'),
-  'l4-12': () => import('./lessons/l4-12.js')
+  'l4-12': () => import('./lessons/l4-12.js'),
+  'l4-13': () => import('./lessons/l4-13.js') // 組織領導與家族酒莊治理
 }
 
 // 開發期健檢：列出未映射但存在的 lessons（不會阻塞）

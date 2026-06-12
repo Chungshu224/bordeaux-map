@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "Cannonau 與哪個國際品種是同一品種？",
-      "options": ["Cabernet Sauvignon", "Grenache / Garnacha", "Merlot", "Syrah"],
+      "options": [
+        "Cabernet Sauvignon",
+        "Grenache / Garnacha",
+        "Merlot",
+        "Syrah"
+      ],
       "answer": 1,
       "explanation": "DNA 研究證明 Cannonau 與西班牙的 Garnacha、法國的 Grenache 是同一品種，但 Sardinia 版本風格獨特。"
     },
     {
       "question": "Vermentino di Gallura 有什麼特別之處？",
-      "options": ["產量最大", "Sardinia 唯一的 DOCG", "酒精度最低", "只產紅酒"],
+      "options": [
+        "產量最大",
+        "Sardinia 唯一的 DOCG",
+        "酒精度最低",
+        "只產紅酒"
+      ],
       "answer": 1,
       "explanation": "Vermentino di Gallura 在 1996 年升級為 DOCG，是 Sardinia 唯一的 DOCG 產區。"
     },
     {
       "question": "Carignano del Sulcis 的特點是？",
-      "options": ["沒有老藤", "擁有自根老藤（未嫁接、100+ 年）", "只產白酒", "產量極大"],
+      "options": [
+        "沒有老藤",
+        "擁有自根老藤（未嫁接、100+ 年）",
+        "只產白酒",
+        "產量極大"
+      ],
       "answer": 1,
       "explanation": "Sulcis 的沙質土壤抗根瘤蚜蟲，許多葡萄園保留自根老藤（ungrafted），樹齡 100+ 年。"
     },
     {
       "question": "Bottarga 是什麼？",
-      "options": ["一種起司", "鯔魚卵", "一種葡萄品種", "一種甜點"],
+      "options": [
+        "一種起司",
+        "鯔魚卵",
+        "一種葡萄品種",
+        "一種甜點"
+      ],
       "answer": 1,
       "explanation": "Bottarga 是鯔魚卵，是 Sardinia 的高級食材，通常刨絲配義大利麵或麵包，搭配 Vermentino 白酒完美。"
     }
@@ -32,11 +52,6 @@
       "type": "title",
       "title": "🏝️ Sardinia (Sardegna)",
       "subtitle": "地中海第二大島的古老品種寶庫"
-    },
-    {
-      "type": "map_placeholder",
-      "title": "🏝️ Sardinia 產區地圖",
-      "content": "此頁面包含互動式產區地圖。請前往「探索地圖」頁面查看完整的 🏝️ Sardinia 產區地圖 地圖。"
     },
     {
       "type": "content",
@@ -127,35 +142,60 @@
         {
           "type": "single",
           "question": "Cannonau 與哪個國際品種是同一品種？",
-          "options": ["Cabernet Sauvignon", "Grenache / Garnacha", "Merlot", "Syrah"],
+          "options": [
+            "Cabernet Sauvignon",
+            "Grenache / Garnacha",
+            "Merlot",
+            "Syrah"
+          ],
           "correct": 1,
           "explanation": "DNA 研究證明 Cannonau 與西班牙的 Garnacha、法國的 Grenache 是同一品種，但 Sardinia 版本風格獨特。"
         },
         {
           "type": "single",
           "question": "Vermentino di Gallura 有什麼特別之處？",
-          "options": ["產量最大", "Sardinia 唯一的 DOCG", "酒精度最低", "只產紅酒"],
+          "options": [
+            "產量最大",
+            "Sardinia 唯一的 DOCG",
+            "酒精度最低",
+            "只產紅酒"
+          ],
           "correct": 1,
           "explanation": "Vermentino di Gallura 在 1996 年升級為 DOCG，是 Sardinia 唯一的 DOCG 產區。"
         },
         {
           "type": "single",
           "question": "Carignano del Sulcis 的特點是？",
-          "options": ["沒有老藤", "擁有自根老藤（未嫁接、100+ 年）", "只產白酒", "產量極大"],
+          "options": [
+            "沒有老藤",
+            "擁有自根老藤（未嫁接、100+ 年）",
+            "只產白酒",
+            "產量極大"
+          ],
           "correct": 1,
           "explanation": "Sulcis 的沙質土壤抗根瘤蚜蟲，許多葡萄園保留自根老藤（ungrafted），樹齡 100+ 年。"
         },
         {
           "type": "single",
           "question": "Bottarga 是什麼？",
-          "options": ["一種起司", "鯔魚卵", "一種葡萄品種", "一種甜點"],
+          "options": [
+            "一種起司",
+            "鯔魚卵",
+            "一種葡萄品種",
+            "一種甜點"
+          ],
           "correct": 1,
           "explanation": "Bottarga 是鯔魚卵，是 Sardinia 的高級食材，通常刨絲配義大利麵或麵包，搭配 Vermentino 白酒完美。"
         },
         {
           "type": "single",
           "question": "Vermentino di Gallura DOCG 是哪裡的唯一 DOCG？",
-          "options": ["A. Sicily", "B. Sardinia", "C. Calabria", "D. Campania"],
+          "options": [
+            "A. Sicily",
+            "B. Sardinia",
+            "C. Calabria",
+            "D. Campania"
+          ],
           "correct": 1,
           "explanation": "Vermentino di Gallura DOCG 是 Sardinia 全島唯一的 DOCG 等級，以北部 Gallura 地區的優質 Vermentino 為主。"
         }
