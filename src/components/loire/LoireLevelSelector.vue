@@ -124,7 +124,7 @@ const quickNavItems = computed(() => [
   { key: 'games' },
   { key: 'achievements' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` },
-  { key: 'notebook', icon: '📔', title: t('common.nav.notebook'), desc: t('common.nav.notebookDesc') }
+  { key: 'notebook' }
 ])
 function onQuickNav(key) {
   switch (key) {
