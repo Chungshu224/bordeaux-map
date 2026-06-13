@@ -54,9 +54,9 @@
       "subtitle": "DOCG · DOC · IGT · VdT 完全解析"
     },
     {
-      "type": "content",
-      "title": "📋 金字塔分級體系",
-      "content": "<div class=\"pyramid\"><div class=\"pyramid-level level-1\"><div class=\"level-name\">DOCG</div><div class=\"level-desc\">Denominazione di Origine Controllata e Garantita</div><div class=\"level-count\">74 個產區 · 最高等級</div></div><div class=\"pyramid-level level-2\"><div class=\"level-name\">DOC</div><div class=\"level-desc\">Denominazione di Origine Controllata</div><div class=\"level-count\">334 個產區 · 優質法定產區</div></div><div class=\"pyramid-level level-3\"><div class=\"level-name\">IGT</div><div class=\"level-desc\">Indicazione Geografica Tipica</div><div class=\"level-count\">118 個產區 · 地區餐酒</div></div><div class=\"pyramid-level level-4\"><div class=\"level-name\">VdT</div><div class=\"level-desc\">Vino da Tavola</div><div class=\"level-count\">日常餐酒</div></div></div>"
+      "type": "docg-pyramid",
+      "title": "義大利葡萄酒分級金字塔",
+      "description": "點選各等級查看詳細規範、代表酒款與價格定位"
     },
     {
       "type": "content",
