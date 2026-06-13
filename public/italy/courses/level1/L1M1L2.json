@@ -84,9 +84,9 @@
       "content": "<div class=\"igt-features\"><div class=\"feature-box\"><h3>✨ 創新的空間</h3><p>允許使用國際品種（Cabernet、Merlot 等）</p><p>促成了「超級托斯卡納」的誕生</p></div><div class=\"feature-box success\"><h3>📍 著名 IGT 範例</h3><ul><li><strong>Toscana IGT</strong> - 超級托斯卡納的家</li><li><strong>Veneto IGT</strong> - 創新白酒天堂</li><li><strong>Sicilia IGT</strong> - 高品質島嶼酒</li></ul></div></div>"
     },
     {
-      "type": "content",
-      "title": "💡 如何閱讀酒標",
-      "content": "<div class=\"label-guide\"><div class=\"label-item\"><span class=\"label-number\">1</span><div class=\"label-text\"><strong>酒莊名稱</strong><br>Producer Name</div></div><div class=\"label-item\"><span class=\"label-number\">2</span><div class=\"label-text\"><strong>產區等級</strong><br>DOCG / DOC / IGT</div></div><div class=\"label-item\"><span class=\"label-number\">3</span><div class=\"label-text\"><strong>年份</strong><br>Vintage</div></div><div class=\"label-item\"><span class=\"label-number\">4</span><div class=\"label-text\"><strong>酒精濃度</strong><br>Alcohol %</div></div><div class=\"label-item\"><span class=\"label-number\">5</span><div class=\"label-text\"><strong>容量</strong><br>Volume (ml)</div></div></div>"
+      "type": "wine-label-guide",
+      "title": "如何閱讀義大利酒標",
+      "description": "掌握這 5 個關鍵元素，輕鬆解讀任何義大利葡萄酒"
     },
     {
       "type": "quiz",
