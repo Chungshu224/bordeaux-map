@@ -80,6 +80,7 @@ import ItalyRegionsOverviewSlide from './slides/ItalyRegionsOverviewSlide.vue'
 import SuperTuscanEvolutionSlide from './slides/SuperTuscanEvolutionSlide.vue'
 import AmaroneAppassimentoSlide from './slides/AmaroneAppassimentoSlide.vue'
 import WineLabelGuideSlide from './slides/WineLabelGuideSlide.vue'
+import ItalyGeoClimateMapSlide from './slides/ItalyGeoClimateMapSlide.vue'
 import PiemonteDocgMapSlide from './slides/PiemonteDocgMapSlide.vue'
 import TuscanyDocgMapSlide from './slides/TuscanyDocgMapSlide.vue'
 import VenetoDocgMapSlide from './slides/VenetoDocgMapSlide.vue'
@@ -125,6 +126,7 @@ const slideComponentMap = {
   quiz: QuizSlide,
   'docg-pyramid': DOCGPyramidSlide,
   'wine-label-guide': WineLabelGuideSlide,
+  'italy-geo-climate-map': ItalyGeoClimateMapSlide,
   'italian-grape-profile': ItalianGrapeProfileSlide,
   'appellation-comparison': AppellationComparisonSlide,
   'italy-regions-overview': ItalyRegionsOverviewSlide,

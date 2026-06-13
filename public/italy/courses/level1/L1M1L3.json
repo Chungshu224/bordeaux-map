@@ -49,9 +49,7 @@
   ],
   "slides": [
     {
-      "type": "title",
-      "title": "🗺️ 義大利地理與氣候",
-      "subtitle": "從阿爾卑斯山到西西里島的風土之旅"
+      "type": "italy-geo-climate-map"
     },
     {
       "type": "stats",
