@@ -86,7 +86,8 @@ export default {
     'lo-l2-5': { title: 'トゥーレーヌ赤ワイン産地全景', duration: 18 },
     'lo-l2-6': { title: 'トゥーレーヌ支流の赤ワイン', duration: 18 },
     'lo-l2-7': { title: 'ステンレスタンク vs 木樽 カベルネ・フラン テイスティング', duration: 20 },
-    'lo-l2-8': { title: 'シノン × リエット + Level 2 総合評価', duration: 28 },
+    'lo-l2-8': { title: 'シノン × リエット フードペアリング', duration: 22 },
+    'lo-l2-9': { title: 'Level 2 総合評価', duration: 20 },
     'lo-l3-1': { title: 'シュナン・ブラン入門——アンジュー辛口白とソミュール', duration: 16 },
     'lo-l3-2': { title: 'サヴニエール三部作', duration: 20 },
     'lo-l3-3': { title: 'レイヨン川 貴腐甘口ワインのピラミッド', duration: 22 },
@@ -97,12 +98,14 @@ export default {
     'lo-l3-8': { title: 'ロワール川支流の白ワイン', duration: 18 },
     'lo-l3-9': { title: '中央産地の双璧——サンセール & プイィ・フュメ', duration: 22 },
     'lo-l3-10': { title: '中央産地の隠れた銘品', duration: 20 },
-    'lo-l3-11': { title: 'ヴーヴレイ甘口 × チーズ；サンセール × ヤギのチーズ + Level 3 評価', duration: 30 },
+    'lo-l3-11': { title: 'ヴーヴレイ甘口 × チーズ；サンセール × ヤギのチーズ', duration: 22 },
+    'lo-l3-12': { title: 'Level 3 総合評価', duration: 20 },
     'lo-l4-1': { title: 'コート・ドーヴェルニュ——火山性土壌の精品', duration: 20 },
     'lo-l4-2': { title: 'インタラクティブマップ実践——GeoJSON ビジュアライゼーション', duration: 25 },
     'lo-l4-3': { title: '気候変動——収穫時期とアルコール度数の分析', duration: 22 },
     'lo-l4-4': { title: '垂直テイスティング——熟成ポテンシャルの読み解き', duration: 25 },
     'lo-l4-5': { title: 'ブラインドテイスティング診断——土壌の違い', duration: 25 },
-    'lo-l4-6': { title: '高級料理設計 + アジア料理ペアリング + Level 4 評価', duration: 35 }
+    'lo-l4-6': { title: '高級料理設計 + アジア料理ペアリング', duration: 28 },
+    'lo-l4-7': { title: 'Level 4 マスター評価', duration: 30 }
   }
 }

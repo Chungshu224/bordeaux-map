@@ -86,7 +86,8 @@ export default {
     'lo-l2-5': { title: '都漢紅酒產區全景', duration: 18 },
     'lo-l2-6': { title: '都漢支流紅酒', duration: 18 },
     'lo-l2-7': { title: '鋼桶 vs 木桶品麗珠品飲訓練', duration: 20 },
-    'lo-l2-8': { title: 'Chinon × Rillettes + Level 2 綜合評量', duration: 28 },
+    'lo-l2-8': { title: 'Chinon × Rillettes 餐酒配對', duration: 22 },
+    'lo-l2-9': { title: 'Level 2 綜合評量', duration: 20 },
     'lo-l3-1': { title: '白詩南工藝入門——安茹干白與索米爾白酒', duration: 16 },
     'lo-l3-2': { title: '薩弗尼耶爾三部曲', duration: 20 },
     'lo-l3-3': { title: '萊揚河貴腐甜酒金字塔', duration: 22 },
@@ -97,12 +98,14 @@ export default {
     'lo-l3-8': { title: 'Loir 河白酒', duration: 18 },
     'lo-l3-9': { title: '中央產區雙雄——桑塞爾 & 普依', duration: 22 },
     'lo-l3-10': { title: '中央產區隱藏版精品', duration: 20 },
-    'lo-l3-11': { title: 'Vouvray 甜白 × 起司；Sancerre × 山羊起司 + Level 3 評量', duration: 30 },
+    'lo-l3-11': { title: 'Vouvray 甜白 × 起司；Sancerre × 山羊起司', duration: 22 },
+    'lo-l3-12': { title: 'Level 3 綜合評量', duration: 20 },
     'lo-l4-1': { title: '奧弗涅丘——火山土壤精品', duration: 20 },
     'lo-l4-2': { title: '互動地圖實戰——GeoJSON 視覺化', duration: 25 },
     'lo-l4-3': { title: '氣候變遷——採收期與酒精濃度分析', duration: 22 },
     'lo-l4-4': { title: '垂直品飲——陳年潛力判讀', duration: 25 },
     'lo-l4-5': { title: '盲飲診斷——土質差異', duration: 25 },
-    'lo-l4-6': { title: '高端餐飲設計 + 亞洲料理配對 + Level 4 評量', duration: 35 }
+    'lo-l4-6': { title: '高端餐飲設計 + 亞洲料理配對', duration: 28 },
+    'lo-l4-7': { title: 'Level 4 大師評量', duration: 30 }
   }
 }

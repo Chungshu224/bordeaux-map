@@ -9,9 +9,9 @@ export const loireLearningState = reactive({
   testMode: false,
   userProgress: {
     level1: { completed: 0, total: 7 },
-    level2: { completed: 0, total: 8 },
-    level3: { completed: 0, total: 11 },
-    level4: { completed: 0, total: 6 }
+    level2: { completed: 0, total: 9 },
+    level3: { completed: 0, total: 12 },
+    level4: { completed: 0, total: 7 }
   },
   achievements: []
 })
@@ -97,7 +97,7 @@ export const loireLearningLevels = {
     modules: [
       { id: 'LO2M1', title: '安茹索米爾紅酒群', lessonIds: ['lo-l2-1', 'lo-l2-2', 'lo-l2-3'] },
       { id: 'LO2M2', title: '都漢 Cabernet Franc 王國', lessonIds: ['lo-l2-4', 'lo-l2-5', 'lo-l2-6'] },
-      { id: 'LO2M3', title: '品飲實習與 Level 2 評量', lessonIds: ['lo-l2-7', 'lo-l2-8'] }
+      { id: 'LO2M3', title: '品飲實習與 Level 2 評量', lessonIds: ['lo-l2-7', 'lo-l2-8', 'lo-l2-9'] }
     ],
     lessons: [
       {
@@ -151,9 +151,16 @@ export const loireLearningLevels = {
       },
       {
         id: 'lo-l2-8',
-        title: 'Chinon × Rillettes + Level 2 綜合評量',
-        description: '經典都漢鄉村料理 Rillettes 與 Chinon 的搭配原理；完成 Level 2 測驗，涵蓋 19 個紅/粉紅 AOC',
-        duration: 28,
+        title: 'Chinon × Rillettes 餐酒配對',
+        description: '經典都漢鄉村料理 Rillettes 與 Chinon 的搭配原理；Level 2 知識地圖總複習',
+        duration: 22,
+        locked: true
+      },
+      {
+        id: 'lo-l2-9',
+        title: 'Level 2 綜合評量',
+        description: '整合 Level 2 全部知識，完成測驗取得認證，涵蓋 19 個紅/粉紅 AOC',
+        duration: 20,
         locked: true
       }
     ]
@@ -174,7 +181,7 @@ export const loireLearningLevels = {
     modules: [
       { id: 'LO3M1', title: '安茹白詩南工藝', lessonIds: ['lo-l3-1', 'lo-l3-2', 'lo-l3-3', 'lo-l3-4', 'lo-l3-5'] },
       { id: 'LO3M2', title: '都漢白酒全景', lessonIds: ['lo-l3-6', 'lo-l3-7', 'lo-l3-8'] },
-      { id: 'LO3M3', title: '中央產區燧石雙雄', lessonIds: ['lo-l3-9', 'lo-l3-10', 'lo-l3-11'] }
+      { id: 'LO3M3', title: '中央產區燧石雙雄', lessonIds: ['lo-l3-9', 'lo-l3-10', 'lo-l3-11', 'lo-l3-12'] }
     ],
     lessons: [
       {
@@ -249,9 +256,16 @@ export const loireLearningLevels = {
       },
       {
         id: 'lo-l3-11',
-        title: 'Vouvray 甜白 × 起司；Sancerre × 山羊起司 + Level 3 評量',
-        description: '白詩南甜白酒與洗皮起司的搭配原理、Sancerre 與新鮮山羊起司的本地配對傳統；完成 Level 3 測驗，涵蓋 32 個白/氣泡 AOC',
-        duration: 30,
+        title: 'Vouvray 甜白 × 起司；Sancerre × 山羊起司',
+        description: '白詩南甜白酒與洗皮起司的搭配原理、Sancerre 與新鮮山羊起司的本地配對傳統；Muscadet × 生蠔的大西洋交響',
+        duration: 22,
+        locked: true
+      },
+      {
+        id: 'lo-l3-12',
+        title: 'Level 3 綜合評量',
+        description: '整合 Level 3 全部知識，完成測驗取得認證，涵蓋 32 個白酒/氣泡 AOC',
+        duration: 20,
         locked: true
       }
     ]
@@ -272,7 +286,7 @@ export const loireLearningLevels = {
     modules: [
       { id: 'LO4M1', title: 'MassifCentral 火山精品', lessonIds: ['lo-l4-1'] },
       { id: 'LO4M2', title: '進階技術與策略', lessonIds: ['lo-l4-2', 'lo-l4-3', 'lo-l4-4', 'lo-l4-5'] },
-      { id: 'LO4M3', title: '專業實務與大師評量', lessonIds: ['lo-l4-6'] }
+      { id: 'LO4M3', title: '專業實務與大師評量', lessonIds: ['lo-l4-6', 'lo-l4-7'] }
     ],
     lessons: [
       {
@@ -312,9 +326,16 @@ export const loireLearningLevels = {
       },
       {
         id: 'lo-l4-6',
-        title: '高端餐飲設計 + 亞洲料理配對 + Level 4 評量',
-        description: '設計羅亞爾河谷主題餐酒配對菜單；探索 Vouvray 甜白 × 亞洲料理的創意配對；完成跨越 58 AOC 的大師認證評量',
-        duration: 35,
+        title: '高端餐飲設計 + 亞洲料理配對',
+        description: '設計羅亞爾河谷主題餐酒配對菜單；探索台灣、日本、廣東料理 × 羅亞爾葡萄酒的創意配對',
+        duration: 28,
+        locked: true
+      },
+      {
+        id: 'lo-l4-7',
+        title: 'Level 4 大師評量',
+        description: '跨越 L1–L4 全部 58 AOC 的大師認證評量（7 道綜合題），通過後獲得 Loire Wine Master 認證',
+        duration: 30,
         locked: true
       }
     ]

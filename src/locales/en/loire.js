@@ -86,7 +86,8 @@ export default {
     'lo-l2-5': { title: 'Touraine Reds Panorama', duration: 18 },
     'lo-l2-6': { title: 'Touraine Tributary Reds', duration: 18 },
     'lo-l2-7': { title: 'Steel vs. Oak Cabernet Franc Tasting', duration: 20 },
-    'lo-l2-8': { title: 'Chinon × Rillettes + Level 2 Final Exam', duration: 28 },
+    'lo-l2-8': { title: 'Chinon × Rillettes Food Pairing', duration: 22 },
+    'lo-l2-9': { title: 'Level 2 Final Exam', duration: 20 },
     'lo-l3-1': { title: 'Chenin Blanc Introduction—Anjou Dry Whites & Saumur', duration: 16 },
     'lo-l3-2': { title: 'Savennières Trilogy', duration: 20 },
     'lo-l3-3': { title: 'Layon Sweet Wine Pyramid', duration: 22 },
@@ -97,12 +98,14 @@ export default {
     'lo-l3-8': { title: 'Loir River Whites', duration: 18 },
     'lo-l3-9': { title: 'Central Vineyards Duo—Sancerre & Pouilly-Fumé', duration: 22 },
     'lo-l3-10': { title: 'Central Vineyards Hidden Gems', duration: 20 },
-    'lo-l3-11': { title: 'Vouvray × Cheese; Sancerre × Goat Cheese + Level 3 Exam', duration: 30 },
+    'lo-l3-11': { title: 'Vouvray Sweet White × Cheese; Sancerre × Goat Cheese', duration: 22 },
+    'lo-l3-12': { title: 'Level 3 Final Exam', duration: 20 },
     'lo-l4-1': { title: 'Côtes d\'Auvergne—Volcanic Terroir Gems', duration: 20 },
     'lo-l4-2': { title: 'Interactive Map Practice—GeoJSON Visualization', duration: 25 },
     'lo-l4-3': { title: 'Climate Change—Harvest Timing & Alcohol Analysis', duration: 22 },
     'lo-l4-4': { title: 'Vertical Tasting—Reading Aging Potential', duration: 25 },
     'lo-l4-5': { title: 'Blind Tasting Diagnosis—Soil Differences', duration: 25 },
-    'lo-l4-6': { title: 'Fine Dining Design + Asian Pairing + Level 4 Exam', duration: 35 }
+    'lo-l4-6': { title: 'Fine Dining Design + Asian Pairing', duration: 28 },
+    'lo-l4-7': { title: 'Level 4 Master Exam', duration: 30 }
   }
 }
