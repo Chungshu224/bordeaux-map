@@ -338,7 +338,7 @@ function scrollToModuleAndClose (moduleId) {
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  display: none;
+  display: block;
 }
 
 /* Layout Body */
@@ -348,8 +348,14 @@ function scrollToModuleAndClose (moduleId) {
   min-height: 0;
 }
 
-/* Sidebar */
+/* Level tabs: hidden by default on mobile */
+.level-tabs {
+  display: none;
+}
+
+/* Sidebar: hidden by default on mobile */
 .chapter-sidebar {
+  display: none;
   width: 256px;
   flex-shrink: 0;
   background: white;
@@ -555,12 +561,32 @@ function scrollToModuleAndClose (moduleId) {
 .lo-slide-up-enter-active, .lo-slide-up-leave-active { transition: transform 0.3s ease; }
 .lo-slide-up-enter-from, .lo-slide-up-leave-to { transform: translateY(100%); }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .chapter-sidebar { display: none; }
-  .drawer-toggle { display: block; }
-  .main-area { padding: 16px; }
-  .level-tabs { display: none; }
+/* ===========================
+   Responsive — Desktop only
+   =========================== */
+@media (min-width: 1025px) {
+  .chapter-sidebar { display: flex; flex-direction: column; }
+  .drawer-toggle { display: none; }
+  .level-tabs { display: flex; }
+}
+
+/* ===========================
+   Mobile / Tablet adjustments
+   =========================== */
+@media (max-width: 1024px) {
   .course-header { padding: 10px 16px; }
+  .main-area { padding: 16px; }
+  .level-header-card { padding: 18px 20px; }
+  .lesson-card { padding: 12px 14px; gap: 10px; }
+  .lesson-title { font-size: 0.85rem; }
+  .module-section-header { padding: 14px 18px; }
+  .lessons-grid { padding: 12px 14px; gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  .lesson-card { padding: 10px 12px; gap: 8px; }
+  .lesson-num { width: 30px; height: 30px; font-size: 0.8rem; }
+  .tag-start, .tag-done { padding: 4px 9px; font-size: 0.7rem; }
+  .level-title { font-size: 1.15rem; }
 }
 </style>
