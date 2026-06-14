@@ -71,6 +71,8 @@ import VDPClassificationSlide from './slides/VDPClassificationSlide.vue'
 import GermanRegionsOverviewSlide from './slides/GermanRegionsOverviewSlide.vue'
 import GermanyMoselTrioSlide from './slides/GermanyMoselTrioSlide.vue'
 import GermanySpätburgunderRegionsSlide from './slides/GermanySpätburgunderRegionsSlide.vue'
+import GermanyGrapeProfileSlide from './slides/GermanyGrapeProfileSlide.vue'
+import RieslingPairingMatrixSlide from './slides/RieslingPairingMatrixSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
@@ -101,7 +103,9 @@ const slideComponentMap = {
   'vdp-classification': VDPClassificationSlide,
   'germany-regions-overview': GermanRegionsOverviewSlide,
   'mosel-trio': GermanyMoselTrioSlide,
-  'spatburgunder-regions': GermanySpätburgunderRegionsSlide
+  'spatburgunder-regions': GermanySpätburgunderRegionsSlide,
+  'germany-grape-profile': GermanyGrapeProfileSlide,
+  'riesling-pairing-matrix': RieslingPairingMatrixSlide
 }
 
 function pickRandom(arr, n) {

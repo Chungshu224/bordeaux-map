@@ -37,6 +37,21 @@
     />
 
     <AchievementModal :open="showAchievements" course-key="spain" @close="showAchievements = false" />
+
+    <!-- 學習進度彈窗 -->
+    <Teleport to="body">
+      <div v-if="showProgress" class="sp-modal-backdrop" @click.self="showProgress = false">
+        <div class="sp-progress-modal">
+          <div class="sp-modal-header">
+            <h3>📊 學習進度</h3>
+            <button class="sp-modal-close" @click="showProgress = false">✕</button>
+          </div>
+          <div class="sp-modal-body">
+            <LearningProgressDashboard course-key="spain" />
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </CourseHomeLayout>
 </template>
 
@@ -47,11 +62,13 @@ import {
   LevelTrack, RegionStoryGrid, AchievementModal, getTheme
 } from '../../shared/courseHome/index.js'
 import { globalSpainAchievementManager } from '../../../stores/spainAchievementSystem.js'
+import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
 
 const emit = defineEmits(['openMap', 'openSelector', 'startLevel', 'openNotebook', 'openGames'])
 
 const theme = getTheme('spain')
 const showAchievements = ref(false)
+const showProgress = ref(false)
 
 const totalLessonCount = 62 // 13 + 18 + 17 + 14
 const achievementCount = computed(
@@ -69,15 +86,15 @@ const quickNavItems = [
   { key: 'games' },
   { key: 'achievements' },
   { key: 'notebook' },
-  { key: 'selector', icon: '🎯', title: '產區選擇器', desc: '快速跳轉到產區' }
+  { key: 'progress' }
 ]
 function onQuickNav(key) {
   switch (key) {
     case 'map':          emit('openMap'); break
     case 'games':        emit('openGames'); break
-    case 'selector':     emit('openSelector'); break
     case 'notebook':     emit('openNotebook'); break
     case 'achievements': showAchievements.value = true; break
+    case 'progress':     showProgress.value = true; break
   }
 }
 
@@ -117,3 +134,34 @@ const overviewItems = [
   { icon: '💧', title: 'Albariño 海洋白酒',  desc: 'Rías Baixas 大西洋海風造就芳香高酸的旗艦白酒品種。' }
 ]
 </script>
+
+<style scoped>
+.sp-modal-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+.sp-progress-modal {
+  background: white; border-radius: 20px;
+  width: 100%; max-width: 1100px; height: 90vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  margin: 0 16px;
+}
+.sp-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 24px; border-bottom: 1px solid #f3f4f6;
+  flex-shrink: 0;
+}
+.sp-modal-header h3 { margin: 0; font-size: 1.2rem; color: #111827; }
+.sp-modal-close {
+  background: none; border: 0; font-size: 22px;
+  color: #6b7280; cursor: pointer; line-height: 1;
+  width: 36px; height: 36px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.sp-modal-close:hover { background: #f3f4f6; }
+.sp-modal-body { flex: 1; overflow-y: auto; padding: 16px 0; }
+</style>

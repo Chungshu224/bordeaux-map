@@ -129,7 +129,8 @@ const metricLabel = (key) => ({
   tannin: '單寧',
   body: '酒體',
   fruit: '果香強度',
-  ageing: '陳年潛力'
+  ageing: '陳年潛力',
+  mineral: '礦物感'
 }[key] || key)
 
 const defaultGrapes = [
@@ -245,74 +246,75 @@ const defaultGrapes = [
     ]
   },
   {
-    key: 'albarino',
-    name: 'Albariño',
-    emoji: '🐟',
-    color: '#5BA89F',
-    colorType: '白葡萄',
-    mainRegion: 'Galicia / Rías Baixas',
-    tagline: '大西洋的禮物——西班牙最頂級白葡萄',
-    spainRole: '加利西亞（Galicia）西北角 Rías Baixas DO 的招牌白葡萄。受大西洋強烈影響，產出酸度極高、礦物張力強、果香明亮的清新白酒。被視為西班牙最頂級的白葡萄品種。在葡萄牙稱 Alvarinho（Vinho Verde 主要品種）。',
+    key: 'mencia',
+    name: 'Mencía',
+    emoji: '🌿',
+    color: '#1E8449',
+    colorType: '紅葡萄',
+    mainRegion: 'Bierzo / Ribeira Sacra',
+    tagline: '板岩上的花香精靈——西班牙最優雅紅葡萄',
+    spainRole: 'Galicia 與 León 交界板岩土壤上的旗艦紅葡萄。Bierzo DO 與 Ribeira Sacra DO（懸崖梯田）是主要舞台。以優雅花香、鉛筆芯礦物感、輕盈結構聞名，被喻為「西班牙的 Pinot Noir」。近年由 Álvaro Palacios 等名莊引入，在國際上聲名大噪。',
     mainAreas: [
-      { name: 'Rías Baixas DO（Galicia）', note: '主舞台，分 5 個子區（Val do Salnés 最古老）' },
-      { name: 'Ribeiro DO', note: '內陸版本，較花香' },
-      { name: 'Monterrei DO', note: '南部山谷' }
+      { name: 'Bierzo DO（León）', note: '主舞台，板岩老藤，結構更豐富' },
+      { name: 'Ribeira Sacra DO（Galicia）', note: '懸崖梯田，更精緻優雅，手工採收' },
+      { name: 'Valdeorras DO', note: '較少見，花崗岩土壤版本' }
     ],
-    cluster: '小而緊密、厚皮（適應潮濕氣候）',
-    ripening: '中等（9 月底至 10 月初）',
-    soils: '花崗岩、片岩、海岸沙質',
-    climate: '海洋性、雨量多（年雨量 1500-2000mm）、涼爽',
-    metrics: { acidity: 5, tannin: 0, body: 3, fruit: 5, ageing: 3 },
-    aromas: ['桃子', '杏桃', '青蘋果', '檸檬皮', '柚子', '白花', '海風礦物', '杏仁'],
-    style: '極高酸度、清新明亮、桃杏果香、海風鹹味與礦物張力。年輕時奔放果香、適合即飲；近年部分頂級酒莊嘗試橡木桶陳年或皮渣浸漬，產出可陳年 5-10 年的複雜版本。完美搭配大西洋海鮮。',
-    ageing: '一般款 1–3 年；橡木桶陳年款 5–15 年',
+    cluster: '中等大小、薄皮',
+    ripening: '中等（9 月中旬）',
+    soils: '板岩（llicorella）、花崗岩、片岩',
+    climate: '大西洋調節的大陸氣候，涼爽夜晚保留酸度',
+    metrics: { acidity: 4, tannin: 3, body: 3, fruit: 4, ageing: 3 },
+    aromas: ['紫羅蘭', '藍莓', '黑莓', '鉛筆芯', '礦物', '草本', '皮革', '紅色水果'],
+    style: '輕至中等酒體、高酸度、細緻單寧、明顯花香與礦物感。老藤版本（Bierzo 灌木老藤）結構更豐富。Ribeira Sacra 懸崖梯田版本更精緻、礦物感突出。陳年後展現皮革與香料深度。',
+    ageing: '一般款 2–5 年；老藤頂級款 8–15 年',
     pairings: [
-      '加利西亞海鮮（章魚 Pulpo a la Gallega）',
-      '生蠔、扇貝',
-      'Tapas 海鮮類',
-      '烤魚、海鮮飯',
-      '輕度白肉料理'
+      '烤乳豬（Cochinillo）',
+      '野菇燉飯',
+      '烤鱒魚（Bierzo 傳統）',
+      'Pulpo a la Gallega（章魚）',
+      '輕熟成 Tetilla 乳酪'
     ],
     examples: [
-      { name: 'Pazo de Señoráns', note: 'Rías Baixas 經典' },
-      { name: 'Do Ferreiro Cepas Vellas', note: '老藤頂級' },
-      { name: 'Forjas del Salnés', note: '新派橡木桶版本' },
-      { name: 'Bodegas Zárate', note: 'Val do Salnés 標竿' }
+      { name: 'Descendientes de J. Palacios（Pétalos）', note: 'Bierzo 頂尖，復興功臣' },
+      { name: 'Dominio de Tares', note: 'Bierzo 現代派標竿' },
+      { name: 'Vinos Pittacum（Aurea）', note: '老藤單一園' },
+      { name: 'Raúl Pérez（Ultreia St. Jacques）', note: '自然酒派頂級' }
     ]
   },
   {
-    key: 'verdejo',
-    name: 'Verdejo',
-    emoji: '🌿',
-    color: '#9CAF40',
-    colorType: '白葡萄',
-    mainRegion: 'Castilla y León / Rueda',
-    tagline: '草本清新——Rueda 的標誌白葡萄',
-    spainRole: '西班牙中北部 Rueda DO 的招牌品種，11 世紀已記載於當地。曾被廢棄改種 Sauvignon Blanc，1970 年代復興後成為西班牙最受歡迎的白酒品種之一。風格介於 Sauvignon Blanc 的草本與 Albariño 的果香之間。',
+    key: 'bobal',
+    name: 'Bobal',
+    emoji: '🍇',
+    color: '#6C3483',
+    colorType: '紅葡萄',
+    mainRegion: 'Utiel-Requena（Valencia）',
+    tagline: '高原之力——被低估的西班牙本土紅寶',
+    spainRole: 'Valencia 內陸 Utiel-Requena DO 的代表性本土品種，種植面積約 90,000 公頃（全西班牙第二大紅葡萄，僅次於 Tempranillo）。長期被用於大量生產基酒，近年精品化浪潮下被重新發現，海拔 700-1000m 高原老藤版本品質卓越，性價比極高。',
     mainAreas: [
-      { name: 'Rueda DO（Valladolid）', note: '主舞台，2008 年起 Rueda Verdejo 須含 ≥85% Verdejo' },
-      { name: 'Cigales DO', note: '較少見、混釀使用' }
+      { name: 'Utiel-Requena DO（Valencia）', note: '主舞台，高原老藤，精品化先驅' },
+      { name: 'Manchuela DO', note: '新興產區，老藤老樹版本受矚目' },
+      { name: 'Valencia DO', note: '平原版本，較日常易飲' }
     ],
-    cluster: '中等大小',
-    ripening: '中等（9 月）、夜採以保留香氣',
-    soils: '砂質、礫石、石灰岩',
-    climate: '大陸型、極大日夜溫差（白日 35°C、夜間 15°C）',
-    metrics: { acidity: 4, tannin: 0, body: 3, fruit: 4, ageing: 2 },
-    aromas: ['茴香', '草本', '青蘋果', '葡萄柚', '燧石', '青草', '苦杏仁尾韻'],
-    style: '中等酒體、酸度偏高、明顯草本與柑橘香、苦杏仁尾韻是品種特徵。多數使用不鏽鋼槽釀造保留新鮮度。Rueda Superior 等級含 ≥85% Verdejo，而部分頂級酒莊（如 José Pariente）以橡木桶陳年產出可陳年版本。',
-    ageing: '一般款 1–3 年；橡木桶陳年款 5–10 年',
+    cluster: '大而緊密、厚皮',
+    ripening: '晚熟（10 月初至中旬）',
+    soils: '石灰岩紅黏土、砂質壤土',
+    climate: '大陸型高原氣候、日夜溫差大（15-20°C）、乾燥少雨',
+    metrics: { acidity: 4, tannin: 4, body: 4, fruit: 4, ageing: 3 },
+    aromas: ['黑莓', '黑李', '紫羅蘭', '甘草', '香料', '礦物', '泥土', '皮革（陳年）'],
+    style: '深色、高酸度、單寧豐富、中至飽滿酒體。年輕時果香奔放、紫羅蘭花香；老藤版本發展皮革、礦物、香料複雜深度。高海拔保留清新酸度，是西班牙性價比最高的紅酒品種之一。',
+    ageing: '一般款 2–5 年；老藤頂級款 8–15 年',
     pairings: [
-      '海鮮 Tapas',
-      'Croquetas（西班牙炸丸子）',
-      'Boquerones（醃鯷魚）',
-      '清淡白肉料理',
-      'Manchego 乳酪（年輕版）'
+      'Paella Valenciana（傳統瓦倫西亞燉飯）',
+      '烤紅肉、燒烤串燒',
+      '香腸拼盤（Embutidos）',
+      '辛辣紅醬燉肉',
+      '陳年 Manchego'
     ],
     examples: [
-      { name: 'José Pariente', note: 'Rueda Verdejo 標竿' },
-      { name: 'Bodegas Naia', note: '老藤頂級' },
-      { name: 'Marqués de Riscal', note: '商業大廠經典' },
-      { name: 'Belondrade y Lurton', note: '橡木桶陳年版本' }
+      { name: 'Mustiguillo（Quincha Corral）', note: 'Bobal 精品化先驅' },
+      { name: 'Vera de Estenas', note: '老藤標竿酒莊' },
+      { name: 'Pago de Tharsys', note: 'VP 單一酒莊認證' },
+      { name: 'Vegalfaro', note: '有機老藤、現代風格' }
     ]
   }
 ]

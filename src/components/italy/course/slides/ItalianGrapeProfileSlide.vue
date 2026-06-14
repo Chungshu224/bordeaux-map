@@ -131,7 +131,8 @@ const metricLabel = (key) => {
     tannin: '單寧',
     body: '酒體',
     fruit: '果香強度',
-    ageing: '陳年潛力'
+    ageing: '陳年潛力',
+    mineral: '礦物感'
   }
   return map[key] || key
 }

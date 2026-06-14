@@ -365,6 +365,7 @@ const formattedContent = computed(() => {
   display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
 }
 .main-content :deep(.highlight-card) {
+  display: block;
   background: white; border-radius: 14px; padding: 20px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -2427,6 +2428,44 @@ const formattedContent = computed(() => {
 
   .sections-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* ── 手機：葡萄品種列表 (grape-showcase) ── */
+  .main-content :deep(.grape-item) {
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+  .main-content :deep(.grape-item h4) {
+    flex: 1 1 0;
+    min-width: 0;
+    word-break: break-word;
+    align-self: center;
+    margin: 0;
+  }
+  .main-content :deep(.grape-desc) {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+  .main-content :deep(.grape-style) {
+    flex: 1 1 100%;
+  }
+
+  /* ── 手機：多欄 grid → 單欄 ── */
+  .main-content :deep(.trentino-highlights),
+  .main-content :deep(.fusion-grid),
+  .main-content :deep(.reason-grid),
+  .main-content :deep(.comuni-grid),
+  .main-content :deep(.white-grid),
+  .main-content :deep(.variety-comparison table),
+  .main-content :deep(.pg-comparison),
+  .main-content :deep(.three-way-table),
+  .main-content :deep(.variety-table) {
+    overflow-x: auto;
+    display: block;
+  }
+  .main-content :deep(.trentino-highlights) {
+    grid-template-columns: 1fr;
+    display: grid;
   }
 }
 </style>

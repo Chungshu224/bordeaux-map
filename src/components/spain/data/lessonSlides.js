@@ -846,6 +846,191 @@ const S1M3L2_slides = [
     ],
   },
   {
+    type: 'spain-grape-profile',
+    title: '🥂 西班牙五大白葡萄品種互動檔案',
+    description: '點選 Albariño / Verdejo / Macabeo / Xarel·lo / Palomino 查看詳細品種檔案：主要產區、品種特性、酸度礦物指標、典型香氣、釀造風格與代表酒款。',
+    grapes: [
+      {
+        key: 'albarino',
+        name: 'Albariño',
+        emoji: '🌊',
+        color: '#1A7A6B',
+        colorType: '白葡萄',
+        mainRegion: 'Galicia / Rías Baixas',
+        tagline: '大西洋的禮物——西班牙最頂級白葡萄',
+        spainRole: '加利西亞西北角 Rías Baixas DO 的招牌白葡萄。受大西洋強烈影響，產出酸度極高、礦物張力強、果香明亮的清新白酒。被視為西班牙最頂級的白葡萄品種。在葡萄牙稱 Alvarinho（Vinho Verde 主要品種）。',
+        mainAreas: [
+          { name: 'Rías Baixas DO（Galicia）', note: '主舞台，分 5 個子區，Val do Salnés 最古老' },
+          { name: 'Ribeiro DO', note: '內陸版本，較花香細緻' },
+          { name: 'Monterrei DO', note: '南部山谷，較飽滿' }
+        ],
+        cluster: '小而緊密、厚皮（適應潮濕氣候）',
+        ripening: '中等（9 月底至 10 月初）',
+        soils: '花崗岩、片岩、海岸沙質',
+        climate: '海洋性、雨量多（年雨量 1500-2000mm）、涼爽多霧',
+        metrics: { acidity: 5, mineral: 4, body: 3, fruit: 5, ageing: 3 },
+        aromas: ['桃子', '杏桃', '青蘋果', '檸檬皮', '柚子', '白花', '海風礦物', '杏仁'],
+        style: '極高酸度、清新明亮、桃杏果香、海風鹹味與礦物張力。年輕時奔放果香適合即飲；近年頂級酒莊嘗試橡木桶陳年或皮渣浸漬，產出可陳年 5-10 年的複雜版本。',
+        ageing: '一般款 1–3 年；橡木桶陳年款 5–15 年',
+        pairings: [
+          '章魚 Pulpo a la Gallega（加利西亞招牌）',
+          '生蠔、扇貝、貽貝',
+          '烤海鱸、清蒸鱈魚',
+          '加利西亞海鮮拼盤',
+          '壽司與日式清蒸料理'
+        ],
+        examples: [
+          { name: 'Pazo de Señoráns', note: 'Rías Baixas 最具代表性的傳統酒莊' },
+          { name: 'Do Ferreiro Cepas Vellas', note: '80+ 年老藤，頂級深度' },
+          { name: 'Forjas del Salnés（Leirana）', note: '新派橡木桶陳年版本' },
+          { name: 'Bodegas Zárate（El Palomar）', note: 'Val do Salnés 單一園標竿' }
+        ]
+      },
+      {
+        key: 'verdejo',
+        name: 'Verdejo',
+        emoji: '🌿',
+        color: '#7DAF30',
+        colorType: '白葡萄',
+        mainRegion: 'Castilla y León / Rueda',
+        tagline: '草本清新——Rueda 高原的靈魂白葡萄',
+        spainRole: '中北部 Rueda DO 招牌品種，11 世紀已記載於當地。曾幾乎滅絕，1970 年代復興後成為西班牙最受歡迎的白酒品種之一。苦杏仁尾韻是獨特品種特徵，風格介於 Sauvignon Blanc 的草本與 Albariño 的果香之間。',
+        mainAreas: [
+          { name: 'Rueda DO（Valladolid）', note: '主舞台，2008 年起 Rueda Verdejo 須含 ≥85% Verdejo' },
+          { name: 'Rueda Superior DO', note: '≥85% Verdejo，較高品質標準' }
+        ],
+        cluster: '中等大小',
+        ripening: '中等（9 月），常夜採以保留香氣',
+        soils: '砂質礫石、石灰岩',
+        climate: '大陸型、極大日夜溫差（白日 35°C、夜間 15°C）、乾燥',
+        metrics: { acidity: 4, mineral: 3, body: 3, fruit: 4, ageing: 2 },
+        aromas: ['草本（茴香）', '青蘋果', '葡萄柚', '接骨木花', '燧石', '苦杏仁尾韻'],
+        style: '中等酒體、酸度偏高、明顯草本與柑橘香，苦杏仁尾韻是品種標誌。多數不鏽鋼槽釀造保留新鮮度。部分頂級酒莊以橡木桶陳年產出可陳年複雜版本（Jose Pariente、Belondrade）。',
+        ageing: '一般款 1–3 年；橡木桶陳年款 5–10 年',
+        pairings: [
+          '海鮮 Tapas、Croquetas',
+          'Boquerones（醃漬鯷魚）',
+          '烤蔬菜料理',
+          '清淡白肉（烤雞）',
+          '年輕 Manchego 乳酪'
+        ],
+        examples: [
+          { name: 'José Pariente（單一園橡木桶版）', note: 'Rueda Verdejo 標竿' },
+          { name: 'Bodegas Naia（Las Brisas）', note: '老藤頂級，礦物感深邃' },
+          { name: 'Belondrade y Lurton', note: '橡木桶陳年代表' },
+          { name: 'Marqués de Riscal（Rueda）', note: '商業廣度最大、性價比佳' }
+        ]
+      },
+      {
+        key: 'macabeo',
+        name: 'Macabeo（Viura）',
+        emoji: '🍾',
+        color: '#8E9AA0',
+        colorType: '白葡萄',
+        mainRegion: 'Cataluña（Cava）/ Rioja（Viura）',
+        tagline: 'Cava 的脊梁——西班牙種植最廣白葡萄',
+        spainRole: '西班牙種植最廣的白葡萄（約 60,000 公頃）。加泰羅尼亞稱 Macabeo，Rioja 稱 Viura。Cava 三大基礎品種之首，也是 Rioja 白酒的主力。風格中性清爽，適合作起泡酒基酒；但老藤或特定風土版本（Terra Alta）展現令人意外的複雜深度。',
+        mainAreas: [
+          { name: 'Cava DO（Cataluña）', note: 'Cava 三大基礎品種第一位，比例最高' },
+          { name: 'Rioja DOCa（白酒 Viura）', note: '傳統 Rioja 白酒主體，陳年款堪稱傳奇' },
+          { name: 'Terra Alta DO', note: '老藤版本，發展意外深度' }
+        ],
+        cluster: '大而鬆散、厚皮',
+        ripening: '中熟（9 月中旬）',
+        soils: '石灰岩黏土、砂質，適應力強',
+        climate: '地中海至大陸型氣候均可',
+        metrics: { acidity: 3, mineral: 2, body: 2, fruit: 3, ageing: 2 },
+        aromas: ['蘋果', '梨子', '白花', '柑橘皮', '草本', '蜂蠟（老藤）', '堅果（陳年）'],
+        style: '中等酸度、輕至中等酒體、風味偏中性——正是 Cava 需要的特性。老藤或特殊土壤版本發展蜂蠟、礦物深度。Rioja 老式陳年 Viura（López de Heredia）更是白酒中的傳奇，可陳年 20-30 年，展現獨特氧化堅果複雜度。',
+        ageing: '一般款 1–2 年；Rioja Viura 老式陳年款 10–30 年',
+        pairings: [
+          '海鮮 Tapas、生蠔（作 Cava）',
+          '清爽義大利麵',
+          '白肉料理',
+          '年輕乳酪',
+          '傳統西班牙烤乳豬'
+        ],
+        examples: [
+          { name: 'López de Heredia Viña Tondonia Blanco', note: 'Rioja Viura 的傳奇，陳年 20-30 年' },
+          { name: 'CVNE Monopole', note: 'Rioja 白酒現代化代表' },
+          { name: 'Gramona（Cava）', note: 'Macabeo 為主的頂級 Cava' },
+          { name: 'Celler de Capçanes', note: 'Terra Alta 老藤深度版本' }
+        ]
+      },
+      {
+        key: 'xarello',
+        name: 'Xarel·lo',
+        emoji: '🌾',
+        color: '#4A7C2F',
+        colorType: '白葡萄',
+        mainRegion: 'Cataluña（Penedès / Cava）',
+        tagline: 'Cava 的骨架——加泰羅尼亞最具個性本土白葡萄',
+        spainRole: '加泰羅尼亞最具地方個性的本土白葡萄，Cava 三大基礎品種中負責提供結構、酸度與酒體。近年精品酒莊以 100% Xarel·lo 釀造靜態白酒，徹底顛覆「Cava 基酒」的刻板印象，展現鮮明礦物感與令人驚艷的陳年潛力。',
+        mainAreas: [
+          { name: 'Cava DO（Penedès）', note: 'Cava 三大基礎品種，提供結構與陳年潛力' },
+          { name: 'Penedès DO', note: '單一品種靜態白酒，近年精品化浪潮' },
+          { name: 'Corpinnat', note: '精品 Cava 的核心品種，最高品質版本' }
+        ],
+        cluster: '中等大小、緊密',
+        ripening: '晚熟（10 月初），保留酸度',
+        soils: '石灰岩黏土（Penedès）',
+        climate: '地中海氣候，涼爽夜晚保留酸度',
+        metrics: { acidity: 4, mineral: 4, body: 3, fruit: 3, ageing: 4 },
+        aromas: ['蘋果', '梨子', '橙皮', '草本', '燧石礦物', '白花', '蜂蠟（陳年）', '堅果（陳年）'],
+        style: '中高酸度、明顯礦物感與草本清新。在 Cava 中提供骨架與陳年結構；單一品種靜態白酒（Blanc de Xarel·lo）備受國際矚目，可陳年 5-10 年，發展蜂蠟、燧石礦物複雜度。',
+        ageing: 'Cava 中貢獻陳年潛力；靜態白酒 3–10 年',
+        pairings: [
+          '加泰羅尼亞傳統 Xató 沙拉',
+          '鱈魚 Esqueixada 沙拉',
+          '海鮮與白肉',
+          '山羊乳酪',
+          '蔬菜 Tapas'
+        ],
+        examples: [
+          { name: 'Gramona（III Lustros Reserva）', note: 'Corpinnat 旗艦，Xarel·lo 比例高' },
+          { name: 'Recaredo（Terrers）', note: '老藤 Xarel·lo 精品 Cava' },
+          { name: 'Can Feixes（Blanc Selecció）', note: '靜態 Xarel·lo 先驅' },
+          { name: 'Albet i Noya', note: '有機農法，Xarel·lo 單一品種' }
+        ]
+      },
+      {
+        key: 'palomino',
+        name: 'Palomino',
+        emoji: '🥃',
+        color: '#B5860A',
+        colorType: '白葡萄',
+        mainRegion: 'Andalucía（Jerez）',
+        tagline: 'Sherry 的靈魂基酒——本身中性，靠工藝蛻變成傳奇',
+        spainRole: 'Jerez（雪莉酒）唯一核心基酒品種，佔 Jerez 葡萄園 85% 以上。Palomino 本身風味中性、低酸，作靜態白酒平淡無奇——但透過 Solera 索雷拉系統的生物熟成（Fino、Manzanilla）或氧化熟成（Oloroso），蛻變為世界最複雜的加強型葡萄酒。',
+        mainAreas: [
+          { name: 'Jerez-Xérès-Sherry DO', note: '主舞台，Albariza 白堊土，分 Fino/Oloroso 兩大風格' },
+          { name: 'Manzanilla-Sanlúcar de Barrameda DO', note: '涼爽海洋微氣候，Flor 最旺盛，Manzanilla 更清爽鹹鮮' }
+        ],
+        cluster: '大而鬆散',
+        ripening: '早熟（8 月底至 9 月初）',
+        soils: 'Albariza（白堊質石灰岩）—— Sherry 最關鍵土壤，保水並反射陽光',
+        climate: '炎熱地中海、Poniente 海風調節（Manzanilla 關鍵因子）',
+        metrics: { acidity: 2, mineral: 3, body: 2, fruit: 2, ageing: 5 },
+        aromas: ['杏仁', '麵包皮', '酵母', '鹽漬礦物', '堅果（Oloroso）', '蜂蠟', '太妃糖（Oloroso）'],
+        style: '靜態白酒：低酸、中性。但作為 Sherry 基酒展現截然不同的兩種面貌：Fino/Manzanilla（Flor 酵母保護）：杏仁、麵包皮、鹹鮮礦物、極乾清爽；Oloroso（氧化熟成）：堅果、焦糖、太妃糖、深棕色、濃郁複雜。Solera 系統賦予超凡深度。',
+        ageing: 'Fino/Manzanilla Solera 3-7 年；Amontillado 8-20 年；Oloroso 10-30 年；VORS 30 年+',
+        pairings: [
+          'Fino → 生蠔、鮮蝦、Jamón Ibérico',
+          'Manzanilla → 炸海鮮、鯷魚',
+          'Amontillado → 蘑菇湯、堅果',
+          'Oloroso → 燉牛尾、陳年 Manchego',
+          'PX（甜型）→ 巧克力、冰淇淋、藍紋乳酪'
+        ],
+        examples: [
+          { name: 'González Byass Tío Pepe', note: 'Fino 全球標竿，150+ 年歷史' },
+          { name: 'La Gitana（Hidalgo）', note: 'Manzanilla 最具代表性' },
+          { name: 'Lustau（Almacenista）', note: '精品小批次系列，品種風格全覆蓋' },
+          { name: 'Williams & Humbert（Dry Sack）', note: '經典陳年 Oloroso' }
+        ]
+      }
+    ]
+  },
+  {
     type: 'quiz',
     question: 'Rías Baixas 最著名的白葡萄品種是哪個？它在葡萄牙有什麼不同名稱？',
     options: [
