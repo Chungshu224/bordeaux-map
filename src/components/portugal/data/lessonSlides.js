@@ -3464,6 +3464,1406 @@ const P4FinalExam_slides = [
 ]
 
 // ───────────────────────────────────────────────────────────────
+//  Level 3 投影片 — 加強酒與特殊風格深探
+// ───────────────────────────────────────────────────────────────
+
+// P3M1L1 — 波特酒釀造工藝：加烈時機與 Lagar 踩皮
+const P3M1L1_slides = [
+  {
+    type: 'cover',
+    icon: '🏺',
+    gradient: 'linear-gradient(135deg, #5c2a0a, #8B4513)',
+    title: '波特酒釀造工藝：加烈時機與 Lagar 踩皮',
+    subtitle: 'Level 3 · 波特酒深度解析',
+    points: [
+      { icon: '⏱️', label: '加烈時機是關鍵', text: '在發酵至酒精 7–8% 時加入烈酒，中止發酵，保留甜分' },
+      { icon: '🦶', label: 'Lagar 傳統踩皮', text: '石槽中人力踩皮，歷史逾千年，仍是頂級 Vintage Port 的首選工藝' },
+      { icon: '🔬', label: '現代機械化', text: 'Autovinificators 和 Robotic Lagares 讓大量生產與頂級品質兼顧' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '⏱️',
+    title: '加烈時機：殘糖與酒精的精密平衡',
+    html: `
+      <p>波特酒的獨特甜度來自<strong>加烈時機的精確控制</strong>。釀酒師必須在正確時機加入葡萄烈酒，中止發酵。</p>
+      <h4>🔬 發酵監控流程</h4>
+      <ul>
+        <li>葡萄採收後，在 Lagar 或發酵桶中開始發酵</li>
+        <li>每 2–4 小時測量一次<strong>糖度（Baumé）</strong>和<strong>酒精度</strong></li>
+        <li>當自然酒精達到 <strong>6–8%</strong>（殘糖約 80–120 g/L）時，加入 77% 中性葡萄烈酒</li>
+        <li>烈酒殺死酵母，發酵立即停止，最終酒精 <strong>19–22%</strong></li>
+      </ul>
+      <h4>🎯 加烈比例</h4>
+      <ul>
+        <li>通常每 4 份葡萄汁（must）加入 <strong>1 份烈酒</strong>（1:4 比例）</li>
+        <li>最終混合物酒精達到 19–22%，抑制所有微生物活動</li>
+      </ul>
+      <h4>⚖️ 甜度控制</h4>
+      <ul>
+        <li><strong>較早加烈</strong>（低酒精 6%）→ 殘糖更高，更甜（適合 Vintage Port）</li>
+        <li><strong>較晚加烈</strong>（酒精 8%）→ 殘糖較低，相對較干（適合 Tawny）</li>
+        <li>釀酒師依預期風格精確決定加烈時機</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🦶',
+    title: 'Lagar：傳統石槽踩皮的藝術',
+    html: `
+      <p><strong>Lagar</strong>（拉格爾）是 Douro 傳統的低矮花崗岩石槽，人力踩皮是波特酒歷史上最重要的工藝之一。</p>
+      <h4>🏺 Lagar 的結構與尺寸</h4>
+      <ul>
+        <li>低矮花崗岩石槽，深約 <strong>60–90 cm</strong>，寬約 3–5 m</li>
+        <li>低高度設計讓工人可以輕鬆站立踩踏，不傷及葡萄籽</li>
+        <li>每個 Lagar 容量約 <strong>5,000–15,000 升</strong></li>
+      </ul>
+      <h4>🦶 踩皮程序</h4>
+      <ul>
+        <li><strong>第一階段（2 小時切割）</strong>：工人並排，有節奏地踩踏，充分破皮</li>
+        <li><strong>第二階段（靜置階段）</strong>：讓葡萄皮自由上浮，定期踩壓保持皮帽濕潤</li>
+        <li>整個過程持續 <strong>2–3 天</strong>直到加烈</li>
+      </ul>
+      <h4>💎 Lagar 的品質優勢</h4>
+      <ul>
+        <li><strong>最溫和的提取</strong>：人腳的重量和柔軟性不會壓碎種籽（種籽含粗澀單寧）</li>
+        <li><strong>高效色素提取</strong>：在短發酵期（2–3 天）內最大化花青素提取</li>
+        <li><strong>精細單寧</strong>：頂級 Vintage Port 的細膩口感有賴 Lagar 踩皮</li>
+        <li>Symington 集團（Graham's・Dow's・Warre's）旗下的頂級 Quinta 仍堅持 Lagar</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '傳統 Lagar 踩皮 vs. 現代機械踩皮',
+    items: [
+      { icon: '🦶', label: '傳統 Lagar（人力）', desc: '最溫和提取，不壓碎種籽，精細單寧，色素豐富。頂級 Vintage Port 必選。成本高，只適合小批量', color: '#5c2a0a' },
+      { icon: '🤖', label: 'Robotic Lagar（機械腳）', desc: '以矽膠機械腳模擬人腳踩踏，2000 年代由 Niepoort 和 Churchill 率先引入，品質接近傳統 Lagar，可大批量生產', color: '#8B4513' },
+      { icon: '⚙️', label: 'Autovinificator（自動泵循環）', desc: '傳統大量生產設備：發酵產生的 CO₂ 壓力將酒液泵送到皮帽頂部，循環浸漬。效率高但提取力不及踩皮', color: '#795548' },
+      { icon: '🌀', label: 'Piston System（活塞壓皮）', desc: '液壓活塞定時下壓葡萄皮帽，較 Autovinificator 更溫柔，是中等品質波特酒的常見選擇', color: '#6d4c41' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '波特酒在釀造過程中，加入葡萄烈酒（加烈）的時機通常是何時？',
+    options: ['葡萄發酵完全結束後', '葡萄剛採摘壓榨後立即加入', '發酵進行到自然酒精約 7–8% 時', '裝瓶前才加入'],
+    answer: 2,
+    explanation: '波特酒的加烈時機是在葡萄發酵進行到自然酒精達到 7–8% 時（約發酵 2–3 天）。此時加入 77% 的葡萄烈酒，殺死酵母，中止發酵，保留大量殘糖（約 80–120 g/L），形成波特酒獨特的甜型加烈風格。',
+  },
+  {
+    type: 'quiz',
+    question: 'Lagar 傳統踩皮相比現代機械發酵，最主要的品質優勢是什麼？',
+    options: ['踩皮速度更快', '人腳踩踏最溫和，不壓碎種籽，提取精細單寧和豐富色素', '可以提取更多酒精', '完全無氧環境'],
+    answer: 1,
+    explanation: 'Lagar 的核心優勢在於：人腳的重量和柔軟性恰好適合破皮但不壓碎葡萄種籽。種籽含有粗澀的青澀單寧，一旦壓碎會降低波特酒品質。因此 Lagar 踩皮能在短發酵期（2–3 天）內最大化色素提取，同時保持單寧細膩，是頂級 Vintage Port 的必選工藝。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成波特酒釀造工藝課程！',
+    keyPoints: [
+      '加烈時機：發酵至自然酒精 7–8% 時，加入 77% 烈酒（1:4 比例），中止發酵保留甜分',
+      '加烈越早 → 更甜（Vintage）；加烈越晚 → 較干（Tawny）',
+      'Lagar 踩皮：傳統花崗岩石槽，人腳最溫和，不壓碎種籽，頂級 Vintage Port 必選',
+      '現代 Robotic Lagar 以矽膠機械腳模擬，可大批量生產，品質接近傳統',
+    ],
+  },
+]
+
+// P3M1L2 — Ruby 系列：Ruby・LBV・Vintage・Single Quinta
+const P3M1L2_slides = [
+  {
+    type: 'cover',
+    icon: '🔴',
+    gradient: 'linear-gradient(135deg, #8B0000, #c0392b)',
+    title: 'Ruby 系列深度解析',
+    subtitle: 'Level 3 · Ruby・LBV・Vintage・Single Quinta',
+    points: [
+      { icon: '🍓', label: 'Ruby 家族', text: '以果香主導、瓶中還原陳年為共同特色，從基礎款到頂級 Vintage 跨越巨大' },
+      { icon: '🔍', label: 'LBV 的分類陷阱', text: '有過濾 LBV（可即飲）vs. 無過濾 LBV（需換瓶）：同名不同品質' },
+      { icon: '🏆', label: 'Single Quinta Vintage', text: '單一酒莊 Vintage：非宣布年份的精品，常常超越官方 Vintage 的性價比' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍓',
+    title: 'Ruby 家族：從基礎到頂級',
+    html: `
+      <h4>🍓 Ruby（基礎款）</h4>
+      <ul>
+        <li>在大型橡木桶中陳年 <strong>2–3 年</strong>，保持深紅寶石色和鮮果香</li>
+        <li>黑莓、藍莓、黑醋栗果香，甜度明顯，酒精 19–20%</li>
+        <li>立即可飲，不需陳年，一般無年份</li>
+      </ul>
+      <h4>🏅 Ruby Reserve（Reserva）</h4>
+      <ul>
+        <li>品質高於基礎 Ruby：嚴選葡萄，更長桶陳（通常 3–4 年）</li>
+        <li>各大酒莊有自家品牌名稱：如 Graham's <em>Six Grapes</em>、Dow's <em>Trademark</em>、Ramos Pinto <em>Adriano</em></li>
+        <li>複雜度更高，帶巧克力、香料和黑色水果</li>
+      </ul>
+      <h4>🍷 Crusted Port</h4>
+      <ul>
+        <li>未過濾的混年份紅波特，在瓶中陳年至少 <strong>3 年</strong>，形成沉澱（crust）</li>
+        <li>需要換瓶（decant），介於 LBV 和 Vintage 之間，性價比高</li>
+        <li>現代不常見，主要由 Churchill's 等酒莊維持傳統</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🏆',
+    title: 'LBV vs. Single Quinta vs. Vintage：頂級 Ruby 系列',
+    html: `
+      <h4>🍷 LBV（Late Bottled Vintage）— 兩種版本！</h4>
+      <ul>
+        <li><strong>過濾 LBV（Filtered）</strong>：桶陳 4–6 年後過濾裝瓶，可立即飲用，無沉澱，價格較低。大量生產，品質均一</li>
+        <li><strong>未過濾 LBV（Unfiltered）</strong>：⭐ 桶陳 4–6 年後不過濾裝瓶，需換瓶，保留更多沉澱物，複雜度更高。代表：Graham's・Ramos Pinto・Niepoort 的 LBV</li>
+      </ul>
+      <h4>🌟 Single Quinta Vintage（單一酒莊年份）</h4>
+      <ul>
+        <li>在<strong>未宣布年份</strong>的次佳年份，來自單一最優秀的 Quinta 生產</li>
+        <li>桶陳 2 年後裝瓶，需瓶中長期陳年（10–20 年）</li>
+        <li>常常性價比超越官方 Vintage Port：同等品質但價格更低</li>
+        <li>範例：Quinta do Vesúvio（Symington）、Quinta do Crasto、Quinta do Vale Meão</li>
+      </ul>
+      <h4>🥇 Vintage Port（頂級）</h4>
+      <ul>
+        <li>只在官方宣布的最佳年份生產（約每 3–4 年一次）</li>
+        <li>桶陳 <strong>2 年</strong>後裝瓶，之後在瓶中陳年 <strong>20–50 年</strong></li>
+        <li>最高品質，最高價格，最長陳年潛力</li>
+        <li>頂級年份：2011・2007・2000・1994・1985・1977</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Ruby 系列由低至高：完整比較',
+    items: [
+      { icon: '🍓', label: 'Ruby / Ruby Reserve', desc: '無年份，大桶陳年 2–4 年，深紅果香，立即可飲，最基礎的波特酒', color: '#c0392b' },
+      { icon: '🍷', label: 'LBV（過濾）', desc: '單一年份，桶陳 4–6 年，立即可飲，大量生產，高性價比的年份波特酒', color: '#922B21' },
+      { icon: '💎', label: 'LBV（未過濾）', desc: '單一年份，桶陳 4–6 年，需換瓶，複雜度明顯提升，是真正的品飲體驗', color: '#7B241C' },
+      { icon: '🏆', label: 'Vintage / Single Quinta', desc: '最頂級，桶陳 2 年 + 瓶中陳年 20–50 年，每瓶都是獨特的時間旅行', color: '#5c2a0a' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'LBV（Late Bottled Vintage）「未過濾版本」和「過濾版本」最主要的差異是什麼？',
+    options: [
+      '未過濾版陳年更短，過濾版陳年更長',
+      '未過濾版保留沉澱複雜度更高需換瓶，過濾版立即可飲無沉澱',
+      '未過濾版只用 Touriga Nacional，過濾版用混調品種',
+      '未過濾版只在頂級年份生產'
+    ],
+    answer: 1,
+    explanation: '這是 LBV 最容易混淆的知識點：過濾版 LBV 裝瓶前過濾清澈，可立即飲用，無沉澱，大量生產；未過濾版 LBV 保留天然沉澱，需要換瓶（decant），複雜度更高，通常來自知名酒莊，是真正值得收藏的 LBV。',
+  },
+  {
+    type: 'quiz',
+    question: 'Single Quinta Vintage Port 通常在哪種情況下生產？',
+    options: [
+      '每年都生產，來自最好的單一酒莊',
+      '在未宣布為官方 Vintage 的次佳年份，來自單一最優秀的 Quinta',
+      '只在最頂級年份，與官方 Vintage 同時生產',
+      '由多個酒莊聯合生產的特殊款式'
+    ],
+    answer: 1,
+    explanation: 'Single Quinta Vintage 通常在未宣布為官方 Vintage Port 的「次佳年份」生產，來自單一最優秀的 Quinta（酒莊）。這類酒常常性價比超越官方 Vintage：同等品質但價格更低，是行家的首選。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Ruby 系列深度課程！',
+    keyPoints: [
+      'Ruby → Ruby Reserve → Crusted → LBV → Single Quinta → Vintage：品質遞進',
+      'LBV 分兩種：過濾版（立即可飲）vs. 未過濾版（需換瓶，複雜度更高）',
+      'Single Quinta Vintage：次佳年份 + 單一酒莊，常超越官方 Vintage 性價比',
+      'Vintage Port：桶陳 2 年 + 瓶中陳年 20–50 年，只在最佳年份宣布',
+    ],
+  },
+]
+
+// P3M1L3 — Tawny 系列：10/20/30/40 年與 Colheita
+const P3M1L3_slides = [
+  {
+    type: 'cover',
+    icon: '🟤',
+    gradient: 'linear-gradient(135deg, #8B4513, #A0522D)',
+    title: 'Tawny 系列深度解析',
+    subtitle: 'Level 3 · 10/20/30/40 年 Tawny 與 Colheita',
+    points: [
+      { icon: '🪣', label: 'Pipe 桶的魔法', text: '在 550L 的 Pipe 小桶中長期氧化陳年，是 Tawny 從紅轉金棕的秘密' },
+      { icon: '🔢', label: '年份標示的意義', text: '10/20/30/40 年代表平均陳年風格，非特定年份——這是最重要的知識點' },
+      { icon: '📅', label: 'Colheita 的獨特性', text: '單一年份 Tawny，桶陳至少 7 年，兼具氧化複雜度與年份個性' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🪣',
+    title: 'Tawny 的氧化陳年科學：Pipe 桶裡的轉化',
+    html: `
+      <p>Tawny Port 的一切魅力來自在<strong>Pipe 桶</strong>中長期氧化陳年的化學轉化。</p>
+      <h4>🪣 Pipe 桶的規格</h4>
+      <ul>
+        <li>傳統<strong>Pipe</strong>：容量約 <strong>550–630 升</strong>（小型橡木桶）</li>
+        <li>小型桶增加酒液與橡木的接觸面積，加速氧化</li>
+        <li>桶材主要用葡萄牙當地橡木或美國橡木</li>
+      </ul>
+      <h4>🔄 氧化陳年的化學轉化</h4>
+      <ul>
+        <li><strong>顏色轉化</strong>：花青素（深紅）→ 氧化分解 → 琥珀棕橙，失去紅色</li>
+        <li><strong>香氣演化</strong>：新鮮紅果 → 乾果（葡萄乾、無花果）→ 堅果（杏仁、核桃）→ 焦糖太妃糖 → 咖啡巧克力（極老年份）</li>
+        <li><strong>揮發</strong>：每年約蒸發 <strong>2–3%</strong> 的酒液（Angels' Share），進一步濃縮風味</li>
+        <li><strong>糖分轉化</strong>：部分糖分在長期桶陳中進一步發酵，甜度略降</li>
+      </ul>
+      <h4>🌡️ Gaia 城的熟化環境</h4>
+      <ul>
+        <li>大多數 Tawny 在波爾圖對岸的 <strong>Vila Nova de Gaia</strong> 陳年</li>
+        <li>濕潤海洋環境減緩揮發，有利緩慢氧化</li>
+        <li>與 Douro 河谷的自然陳年相比，Gaia 城溫度更穩定</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🔢',
+    title: '10 / 20 / 30 / 40 年 Tawny：實際內容解密',
+    html: `
+      <p>Tawny Port 的年份標示是葡萄牙葡萄酒中最容易誤解的概念之一。</p>
+      <h4>📋 年份標示 ≠ 特定採收年份</h4>
+      <ul>
+        <li>「20 Years Tawny」<strong>並非</strong>指 2004 年（往回推 20 年）採收的葡萄</li>
+        <li>而是指：調配中多個不同年份酒液的<strong>「風格類型年齡」約 20 年</strong></li>
+        <li>酒師（Blender）混調 5–60 年不等的多年份 Tawny，確保成品呈現「類型 20 年」的風格</li>
+      </ul>
+      <table style="width:100%;border-collapse:collapse;font-size:0.87em;margin-top:8px">
+        <tr style="background:#8B4513;color:white">
+          <th style="padding:7px">標示</th><th style="padding:7px">典型混調年齡</th><th style="padding:7px">顏色</th><th style="padding:7px">主要香氣</th><th style="padding:7px">最佳搭配</th>
+        </tr>
+        <tr style="background:#fff3e0">
+          <td style="padding:6px;font-weight:700">10 年</td><td style="padding:6px">7–15 年混調</td><td style="padding:6px">深橙棕</td><td style="padding:6px">橙皮・杏仁・乾果</td><td style="padding:6px">輕起司・果乾</td>
+        </tr>
+        <tr>
+          <td style="padding:6px;font-weight:700">20 年</td><td style="padding:6px">15–30 年混調</td><td style="padding:6px">金棕色</td><td style="padding:6px">太妃糖・核桃・焦糖</td><td style="padding:6px">藍紋起司・核桃蛋糕</td>
+        </tr>
+        <tr style="background:#fff3e0">
+          <td style="padding:6px;font-weight:700">30 年</td><td style="padding:6px">25–45 年混調</td><td style="padding:6px">淡琥珀金</td><td style="padding:6px">咖啡・陳年橙皮・蘭姆酒</td><td style="padding:6px">巧克力甜點・雪茄</td>
+        </tr>
+        <tr>
+          <td style="padding:6px;font-weight:700">40 年</td><td style="padding:6px">35–60+ 年混調</td><td style="padding:6px">極淡黃金</td><td style="padding:6px">黑巧克力・菸草・木香・乾玫瑰</td><td style="padding:6px">頂級巧克力・濃縮咖啡</td>
+        </tr>
+      </table>
+      <p style="margin-top:8px;font-size:0.88em;color:#6b7280">⭐ <strong>Colheita</strong>：單一年份的 Tawny，桶陳至少 <strong>7 年</strong>，標示實際採收年份。是 Tawny 家族中最精緻的類型。</p>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '一瓶標示「30 Years Tawny」的波特酒，代表什麼意思？',
+    options: [
+      '所有酒液都是 30 年份（1994 年）採收',
+      '混調中最年輕的酒液至少 30 年',
+      '混調多個年份酒液，整體呈現「風格類型年齡約 30 年」的複雜度',
+      '在瓶中額外陳年 30 年後才出售'
+    ],
+    answer: 2,
+    explanation: 'Tawny Port 的年份標示（10/20/30/40 年）代表混調酒液整體呈現的「風格類型年齡」，而非特定採收年份。酒師混調多個不同年份（可能 15–45 年）的 Tawny，確保成品在顏色、香氣和甜度上符合「30 Years」的風格特徵。',
+  },
+  {
+    type: 'quiz',
+    question: 'Colheita 與一般「20 Years Tawny」最主要的差異是什麼？',
+    options: [
+      'Colheita 是多年份調配，20 Years Tawny 是單一年份',
+      'Colheita 是單一年份的 Tawny（桶陳至少 7 年，標示採收年份），20 Years Tawny 是多年份調配',
+      'Colheita 酒精度更高',
+      'Colheita 只用白葡萄品種釀造'
+    ],
+    answer: 1,
+    explanation: 'Colheita 是 Tawny 家族的精品：單一採收年份，在木桶中陳年至少 7 年（通常更長），酒標標示實際採收年份。這使 Colheita 兼具 Tawny 的氧化複雜度和 Vintage Port 的年份個性，是最精緻的 Tawny 類型。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Tawny 系列深度課程！',
+    keyPoints: [
+      'Pipe 桶（550L）中長期氧化：顏色從深紅 → 金棕，香氣從果香 → 堅果太妃糖 → 咖啡巧克力',
+      '年份標示（10/20/30/40 年）= 風格類型年齡，非特定採收年份，是多年份調配',
+      'Colheita = 單一年份 Tawny，桶陳至少 7 年，標示採收年份，是 Tawny 的精品',
+      'Angels\' Share：每年蒸發 2–3%，進一步濃縮風味',
+    ],
+  },
+]
+
+// P3M1L4 — 波特酒與佳餚：甜點・起司・巧克力配對
+const P3M1L4_slides = [
+  {
+    type: 'cover',
+    icon: '🍽️',
+    gradient: 'linear-gradient(135deg, #4a148c, #6a1b9a)',
+    title: '波特酒與佳餚：完美配對指南',
+    subtitle: 'Level 3 · 甜點・起司・巧克力',
+    points: [
+      { icon: '🧀', label: '藍紋起司 × Tawny', text: '甜配鹹的傳統組合，Stilton × 20 Year Tawny 是英國傳統聖誕配對' },
+      { icon: '🍫', label: '巧克力 × Ruby', text: '甜度越高的巧克力，需要更甜更濃的波特酒來匹配' },
+      { icon: '🍮', label: '甜點配對原則', text: '酒的甜度必須 ≥ 食物甜度，否則酒顯苦澀失衡' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🧀',
+    title: '起司配對：波特酒最完美的搭檔',
+    html: `
+      <p>起司是波特酒最重要的配對食物，不同類型的波特酒對應不同的起司風格。</p>
+      <h4>🧀 藍紋起司 × Tawny（甜配鹹的黃金法則）</h4>
+      <ul>
+        <li><strong>Stilton × 20 Year Tawny</strong>：英國最傳統的聖誕配對。藍紋起司的鹹鮮強度正好需要 Tawny 的太妃糖甜度來平衡</li>
+        <li><strong>Roquefort × 30 Year Tawny</strong>：法國藍紋的辛辣感與咖啡巧克力香完美共鳴</li>
+        <li><strong>Gorgonzola × LBV</strong>：義大利藍紋較溫和，LBV 的果香甜度足夠匹配</li>
+      </ul>
+      <h4>🧀 硬質陳年起司 × Ruby Reserve</h4>
+      <ul>
+        <li>陳年 Manchego、Parmigiano Reggiano：油脂感被 Ruby 的高酸度和黑果香切穿</li>
+        <li>葡萄牙 Serra da Estrela（羊奶軟質起司）× 10 Year Tawny：葡萄牙傳統組合</li>
+      </ul>
+      <h4>🧀 起司配對禁忌</h4>
+      <ul>
+        <li><strong>新鮮軟質起司（Mozzarella/Ricotta）</strong>：太清淡，被波特酒掩蓋</li>
+        <li><strong>洗浸起司（Époisses）</strong>：發酵氣味太強，與波特酒競爭</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '波特酒 × 食物配對全攻略',
+    items: [
+      { icon: '🧀', label: '藍紋起司 × Tawny', desc: 'Stilton/Roquefort × 20–30 Year Tawny：甜配鹹，堅果太妃糖香與鹹鮮黴香完美平衡。全球公認最佳配對之一', color: '#8B4513' },
+      { icon: '🍫', label: '黑巧克力（70%+）× Vintage', desc: '高可可黑巧克力 × Vintage Port：苦甜中和，果乾香草與黑莓濃郁共鳴。需要酒的甜度 ≥ 巧克力甜度', color: '#8B0000' },
+      { icon: '🍮', label: '葡式蛋撻（Pastel de nata）× LBV', desc: '奶油蛋撻的甜香 × LBV 的黑果甜度，既有葡萄牙靈魂又有完美甜度匹配', color: '#D4820A' },
+      { icon: '🌰', label: '堅果甜點 × 30–40 Year Tawny', desc: '核桃派、杏仁脆餅 × 30–40 Year Tawny：酒本身就有濃郁堅果香，與堅果甜點形成共鳴而非對抗', color: '#5d4037' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '波特酒配對甜點的最重要原則是什麼？',
+    options: [
+      '酒的甜度必須低於食物，形成對比',
+      '只能配無糖甜點',
+      '酒的甜度必須大於或等於食物甜度，否則酒顯苦澀失衡',
+      '只有 Vintage Port 能配甜點'
+    ],
+    answer: 2,
+    explanation: '「酒甜 ≥ 食甜」是甜酒配對的黃金法則：如果食物比酒更甜，酒的殘糖會顯得不足，反而凸顯了酒的苦澀和酸度，造成難喝的失衡感。因此甜蜜的巧克力蛋糕需要更甜的 Vintage 或 30 Year Tawny 來匹配。',
+  },
+  {
+    type: 'quiz',
+    question: '英國最著名的聖誕傳統波特酒配對是？',
+    options: ['Ruby Port × 黑巧克力', '20 Year Tawny × Stilton 藍紋起司', 'Vintage Port × Brie 布里起司', 'LBV × 草莓蛋糕'],
+    answer: 1,
+    explanation: 'Stilton 藍紋起司 × 20 Year Tawny 是英國最傳統的聖誕配對，兩者的甜配鹹相輔相成：Stilton 的強烈鹹鮮藍紋風味正好需要 Tawny 的太妃糖甜度來平衡，共同展現出無與倫比的和諧感。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成波特酒配對課程！',
+    keyPoints: [
+      '黃金法則：酒的甜度 ≥ 食物甜度，否則酒顯苦澀',
+      '藍紋起司 × Tawny：Stilton × 20 Year Tawny 是英國傳統聖誕配對',
+      '黑巧克力（70%+）× Vintage Port：苦甜平衡的完美配對',
+      '葡式蛋撻 × LBV：葡萄牙靈魂組合',
+    ],
+  },
+]
+
+// P3M2L1 — 馬德拉的 Estufagem 加熱氧化工藝
+const P3M2L1_slides = [
+  {
+    type: 'cover',
+    icon: '🌡️',
+    gradient: 'linear-gradient(135deg, #8e44ad, #6c3483)',
+    title: 'Madeira 的加熱氧化工藝深度解析',
+    subtitle: 'Level 3 · Estufagem vs. Canteiro',
+    points: [
+      { icon: '🌡️', label: 'Estufagem 工業法', text: '不鏽鋼桶中加熱至 45–50°C，至少 90 天——大量生產的標準工藝' },
+      { icon: '🏠', label: 'Canteiro 自然法', text: '酒莊頂樓自然熟化，可達數十年——頂級馬德拉的唯一選擇' },
+      { icon: '♾️', label: '馬德拉化的本質', text: '充分氧化後的酒不再怕氧、怕熱——這就是馬德拉可陳年百年的科學秘密' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🌡️',
+    title: 'Estufagem：工業加熱氧化的科學',
+    html: `
+      <p><strong>Estufagem</strong>（加熱工藝）是 Madeira 酒獨特的加速氧化工藝，也是 Madeira 能陳年百年的核心秘密。</p>
+      <h4>🏭 工業 Estufagem（大量生產款）</h4>
+      <ul>
+        <li>將加烈後的 Madeira 酒置於<strong>不鏽鋼槽（Estufas）</strong>中</li>
+        <li>緩慢加熱至 <strong>45–50°C</strong>，維持至少 <strong>90 天（3 個月）</strong></li>
+        <li>此過程加速了「馬德拉化（Maderization）」——正常需要數十年的氧化在 3 個月內完成</li>
+        <li>產生的特徵香氣：焦糖・烘烤・燉煮水果・咖啡</li>
+        <li>冷卻後靜置至少 <strong>90 天</strong>，讓沉澱穩定，再過濾裝瓶</li>
+      </ul>
+      <h4>🔬 馬德拉化的化學反應</h4>
+      <ul>
+        <li><strong>梅納反應（Maillard Reaction）</strong>：糖+氨基酸在高溫下產生焦糖、烘烤香氣</li>
+        <li><strong>氧化反應</strong>：酒液接觸微量氧氣，多酚氧化形成複雜化合物</li>
+        <li><strong>酯化反應</strong>：酸與醇反應生成酯，增加芳香複雜度</li>
+        <li>這些反應使酒液完全穩定，之後再接觸熱或氧氣也不會進一步腐壞</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🏠',
+    title: 'Canteiro：自然頂樓熟化的藝術',
+    html: `
+      <p><strong>Canteiro</strong> 是頂級 Madeira 酒的自然熟化方式，以木架（Canteiro）支撐酒桶存放在酒莊最高樓層。</p>
+      <h4>🏠 Canteiro 的工藝細節</h4>
+      <ul>
+        <li>加烈後的酒置於 <strong>600L 橡木桶（Pipes）</strong>中，存放在酒莊頂樓閣樓</li>
+        <li>利用 Madeira 島的<strong>自然氣候</strong>：全年溫暖（20–25°C），大西洋海風帶來適當濕度</li>
+        <li>桶頂留有小縫（微氧接觸），讓酒緩慢與氧氣接觸，同時蒸發水分濃縮風味</li>
+        <li>最少陳年 <strong>2 年</strong>，頂級款可達 <strong>20–100 年</strong>以上</li>
+      </ul>
+      <h4>💎 Canteiro 的品質優勢</h4>
+      <ul>
+        <li><strong>更複雜的層次</strong>：緩慢自然熟化，風味比 Estufagem 更精緻立體</li>
+        <li><strong>更長陳年潛力</strong>：真正的百年 Madeira 都是 Canteiro 工藝</li>
+        <li><strong>更細膩的酸度平衡</strong>：不像 Estufagem 那樣急劇的焦糖化</li>
+      </ul>
+      <h4>🏆 頂級 Canteiro 馬德拉</h4>
+      <ul>
+        <li><strong>Blandy's</strong>、<strong>Henriques & Henriques</strong>、<strong>Barbeito</strong>：三大頂級 Canteiro 生產商</li>
+        <li>Blandy's 的百年老 Madeira（1900、1920 年份）仍在市場流通，是世界最長壽葡萄酒</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Estufagem vs. Canteiro：兩種工藝全面對比',
+    items: [
+      { icon: '🏭', label: 'Estufagem（工業）', desc: '不鏽鋼桶，45–50°C 加熱 90 天。快速馬德拉化，焦糖烘烤香突出。大量生產，3–5 年陳年後裝瓶', color: '#5d4037' },
+      { icon: '🏠', label: 'Canteiro（自然）⭐', desc: '閣樓木桶，自然溫度（20–25°C），陳年 2–100 年。緩慢熟化，層次精緻，可陳年百年。頂級 Madeira 唯一方式', color: '#8e44ad' },
+      { icon: '⏱️', label: '時間成本差異', desc: 'Estufagem = 90 天；Canteiro = 2–100 年。兩者品質差距與時間成本差距相對應', color: '#37474f' },
+      { icon: '💰', label: '價格差異', desc: '5 年 Estufagem ≈ €10–20；10 年 Canteiro ≈ €50–100；50 年 Canteiro ≈ €500+；百年老 Madeira ≈ 數千歐元', color: '#1565c0' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Canteiro 和 Estufagem 最根本的工藝差異是什麼？',
+    options: [
+      'Canteiro 使用不鏽鋼桶，Estufagem 使用橡木桶',
+      'Canteiro 是在酒莊頂樓自然溫度緩慢熟化（年至數十年），Estufagem 是不鏽鋼桶工業加熱至 45–50°C（90 天）',
+      'Canteiro 只用於干型 Madeira，Estufagem 只用於甜型',
+      'Canteiro 在西班牙進行，Estufagem 在葡萄牙進行'
+    ],
+    answer: 1,
+    explanation: 'Canteiro（自然法）是頂級 Madeira 的工藝：酒置於酒莊閣樓橡木桶中，利用島嶼自然氣候（20–25°C）緩慢熟化，可達 2–100 年以上。Estufagem（工業法）是大量生產方式：在不鏽鋼桶中加熱至 45–50°C 維持 90 天，快速完成馬德拉化。',
+  },
+  {
+    type: 'quiz',
+    question: 'Madeira 的「馬德拉化（Maderization）」過程中，哪個化學反應產生了焦糖和烘烤香氣？',
+    options: ['酒精發酵', '梅納反應（糖 + 氨基酸在高溫下）', '蘋果乳酸發酵', '酒石酸沉澱'],
+    answer: 1,
+    explanation: '梅納反應（Maillard Reaction）是 Madeira 加熱工藝中最重要的化學反應：糖分與氨基酸在高溫下發生非酶促褐變反應，產生大量焦糖、烘烤、咖啡、堅果等特徵香氣，這是 Madeira 獨特風味的核心。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Madeira 工藝深度課程！',
+    keyPoints: [
+      'Estufagem（工業）：不鏽鋼桶 45–50°C × 90 天，大量生產，快速馬德拉化',
+      'Canteiro（自然）⭐：閣樓自然熟化 2–100 年，頂級 Madeira 唯一方式',
+      '馬德拉化 = 梅納反應 + 氧化 + 酯化，使酒完全穩定，不再怕熱怕氧',
+      '百年 Madeira 只可能是 Canteiro，Blandy\'s 等頂級酒莊保有 1900 年份仍在銷售',
+    ],
+  },
+]
+
+// P3M2L2 — 四大品種風格：Sercial（極干）→ Malvasia（極甜）
+const P3M2L2_slides = [
+  {
+    type: 'cover',
+    icon: '🍋',
+    gradient: 'linear-gradient(135deg, #0288d1, #8B2252)',
+    title: 'Madeira 四大品種：甜度光譜全解析',
+    subtitle: 'Level 3 · Sercial → Verdelho → Bual → Malvasia',
+    points: [
+      { icon: '🍋', label: 'Sercial（極干）', text: '最高酸度、最低甜度的馬德拉，礦物鹹鮮感，作餐前酒最佳' },
+      { icon: '🌿', label: 'Verdelho（中干）', text: '煙燻香草，中等甜度，可搭配湯品和海鮮' },
+      { icon: '🟤', label: 'Bual（中甜）', desc: '深色焦糖無花果，明顯甜度，搭配起司最佳' },
+      { icon: '🍯', label: 'Malvasia（極甜）', text: '最濃郁最甜，蜂蜜杏桃熱帶水果，最受市場歡迎的餐後甜酒' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍋',
+    title: 'Sercial 與 Verdelho：干型馬德拉',
+    html: `
+      <h4>🍋 Sercial（極干）</h4>
+      <ul>
+        <li>種植在 Madeira 島<strong>最高海拔（700–900m）</strong>的葡萄園，是島上最涼爽的地帶</li>
+        <li>晚熟，採收時仍帶極高酸度，殘糖低</li>
+        <li><strong>風格</strong>：極干（殘糖 18–65 g/L），最高酸度，清爽礦物，帶杏仁・鹽水・碘・煙熏香氣</li>
+        <li><strong>最佳飲用方式</strong>：冰涼（8–10°C）作餐前酒，搭配橄欖・堅果・海鮮濃湯</li>
+        <li>陳年潛力：10–50 年的 Sercial 可展現驚人複雜度</li>
+      </ul>
+      <h4>🌿 Verdelho（中干）</h4>
+      <ul>
+        <li>種植在中海拔（400–700m）地帶，成熟度略高於 Sercial</li>
+        <li><strong>風格</strong>：中干（殘糖 65–85 g/L），微甜酸度高，帶獨特的<strong>煙燻・香草・金黃蘋果</strong>香氣</li>
+        <li><strong>最佳飲用方式</strong>：微冰（10–12°C），可搭配清燉海鮮・蔬菜湯品</li>
+        <li>歷史上曾是最受英國市場喜愛的馬德拉風格</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🍯',
+    title: 'Bual 與 Malvasia：甜型馬德拉',
+    html: `
+      <h4>🟤 Bual（= Boal）（中甜）</h4>
+      <ul>
+        <li>種植在中低海拔（200–400m），溫暖地帶，更早成熟</li>
+        <li><strong>風格</strong>：中甜（殘糖 85–130 g/L），深金棕色，帶<strong>無花果・太妃糖・焦糖・可可</strong>複雜風味</li>
+        <li>酸度仍足夠支撐甜度，不顯膩重</li>
+        <li><strong>最佳飲用方式</strong>：室溫（16–18°C），搭配藍紋起司・核桃甜點・巧克力</li>
+      </ul>
+      <h4>🍯 Malvasia（= Malmsey）（極甜）</h4>
+      <ul>
+        <li>種植在<strong>最低海拔（0–200m）</strong>的沿海地帶，最溫暖，糖分最高</li>
+        <li><strong>風格</strong>：極甜（殘糖 130–200 g/L），深琥珀色，帶<strong>蜂蜜・杏桃・熱帶水果・柳橙果醬</strong></li>
+        <li>儘管極甜，馬德拉的高酸度讓它不覺膩口，而是絲滑甜潤</li>
+        <li><strong>最佳飲用方式</strong>：微溫（16°C），作餐後甜酒，搭配蛋撻・甜蜜糕點・鵝肝</li>
+        <li>是市場最受歡迎的馬德拉風格，也是入門首選</li>
+      </ul>
+      <h4>📋 非品種標示的 Madeira</h4>
+      <ul>
+        <li>大多數平價 Madeira 不標示品種，使用 Tinta Negra Mole 混調（本島最廣泛種植的品種）</li>
+        <li>可標示甜度：Seco（極干）・Medium Dry・Medium Rich・Rich（極甜）</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Madeira 四大品種甜度光譜',
+    items: [
+      { icon: '🍋', label: 'Sercial（極干）', desc: '殘糖 18–65 g/L，最高酸，礦物鹽水，餐前酒，8–10°C', color: '#c9b45c' },
+      { icon: '🌿', label: 'Verdelho（中干）', desc: '殘糖 65–85 g/L，煙燻香草，搭配湯品，10–12°C', color: '#7a8c3a' },
+      { icon: '🟤', label: 'Bual（中甜）', desc: '殘糖 85–130 g/L，無花果太妃糖，起司甜點，室溫', color: '#8B4513' },
+      { icon: '🍯', label: 'Malvasia（極甜）', desc: '殘糖 130–200 g/L，蜂蜜杏桃，餐後甜酒，16°C，市場最受歡迎', color: '#B8860B' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Madeira 四大品種中，種植在最高海拔（700–900m）、酸度最高、甜度最低的是哪個品種？',
+    options: ['Malvasia', 'Bual', 'Verdelho', 'Sercial'],
+    answer: 3,
+    explanation: 'Sercial 種植在 Madeira 島最高海拔（700–900m）的葡萄園，是最涼爽、最晚熟的品種。因此酸度最高、甜度最低，呈現極干風格，帶礦物鹽水杏仁香氣，是最適合作餐前酒的馬德拉風格。',
+  },
+  {
+    type: 'quiz',
+    question: 'Malvasia（Malmsey）在 Madeira 四大品種中甜度最高，但為什麼不覺得膩口？',
+    options: [
+      '因為酒精度低（11%），比較清爽',
+      '因為 Madeira 的馬德拉化工藝降低了糖分',
+      '因為 Madeira 的天然高酸度（即使在最甜款中）平衡了甜度，使其不顯膩口',
+      '因為 Malvasia 葡萄本身含苦味物質'
+    ],
+    answer: 2,
+    explanation: 'Madeira 以極高的天然酸度著稱，即使是最甜的 Malvasia（殘糖 130–200 g/L）也因為馬德拉化工藝保留了豐富的酸度，使甜味有足夠的酸度骨架支撐，口感絲滑甜潤而不膩口，這是 Madeira 甜型款與其他甜酒最大的差異。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Madeira 四大品種課程！',
+    keyPoints: [
+      'Sercial（極干）：最高海拔，礦物鹽水，餐前酒首選',
+      'Verdelho（中干）：煙燻香草，英國市場歷史最愛',
+      'Bual（中甜）：無花果太妃糖，搭配起司和巧克力',
+      'Malvasia（極甜）：蜂蜜熱帶水果，市場最受歡迎，高酸平衡甜度不膩口',
+    ],
+  },
+]
+
+// P3M2L3 — 馬德拉陳年：百年老酒的秘密
+const P3M2L3_slides = [
+  {
+    type: 'cover',
+    icon: '⏳',
+    gradient: 'linear-gradient(135deg, #4a148c, #311b92)',
+    title: 'Madeira 陳年：百年老酒的秘密',
+    subtitle: 'Level 3 · 五個陳年等級與永恆馬德拉',
+    points: [
+      { icon: '⏳', label: '五個陳年等級', text: 'Finest（3年）→ Reserva（5年）→ Special Reserve（10年）→ Extra Reserve（15年）→ Frasqueira（20年+）' },
+      { icon: '♾️', label: '為何可陳年百年？', text: '三重保護：充分氧化 + 高酒精（17–22%）+ 高酸度，是世界最穩定的葡萄酒' },
+      { icon: '📅', label: '百年老酒', text: 'Blandy\'s 等酒莊保有 1920、1900 年份仍可購買，是有確實記錄的最長壽葡萄酒' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '📊',
+    title: 'Madeira 五個官方陳年等級',
+    html: `
+      <p>葡萄牙 IVBAM（Madeira、Banyuls 及 Pico 葡萄酒研究院）制定了 Madeira 的官方陳年分級。</p>
+      <table style="width:100%;border-collapse:collapse;font-size:0.87em">
+        <tr style="background:#4a148c;color:white">
+          <th style="padding:7px">等級</th><th style="padding:7px">最低陳年</th><th style="padding:7px">方式</th><th style="padding:7px">特色</th>
+        </tr>
+        <tr style="background:#f3e5f5">
+          <td style="padding:6px"><strong>Finest（Selecionado）</strong></td>
+          <td style="padding:6px">3 年</td>
+          <td style="padding:6px">Estufagem</td>
+          <td style="padding:6px">基礎款，烹飪用途或入門飲用</td>
+        </tr>
+        <tr>
+          <td style="padding:6px"><strong>Reserva（Reserve）</strong></td>
+          <td style="padding:6px">5 年</td>
+          <td style="padding:6px">Estufagem / Canteiro</td>
+          <td style="padding:6px">日常飲用，性價比高</td>
+        </tr>
+        <tr style="background:#f3e5f5">
+          <td style="padding:6px"><strong>Special Reserve</strong></td>
+          <td style="padding:6px">10 年</td>
+          <td style="padding:6px">Canteiro 為主</td>
+          <td style="padding:6px">複雜度明顯，品種特色開始展現</td>
+        </tr>
+        <tr>
+          <td style="padding:6px"><strong>Extra Reserve</strong></td>
+          <td style="padding:6px">15 年</td>
+          <td style="padding:6px">Canteiro</td>
+          <td style="padding:6px">精緻深邃，收藏入門</td>
+        </tr>
+        <tr style="background:#f3e5f5">
+          <td style="padding:6px"><strong>Frasqueira（Vintage）⭐</strong></td>
+          <td style="padding:6px">20 年以上</td>
+          <td style="padding:6px">Canteiro 唯一</td>
+          <td style="padding:6px">單一年份，最頂級，陳年潛力無限</td>
+        </tr>
+      </table>
+      <p style="margin-top:8px;font-size:0.88em"><strong>Frasqueira</strong> 是葡萄牙語中「玻璃瓶」的意思，也是頂級 Madeira 的代名詞。需至少 Canteiro 陳年 20 年以上，品質最頂，可繼續陳年 50–100 年。</p>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '♾️',
+    title: '為何 Madeira 可陳年百年？三重保護機制',
+    html: `
+      <p>Madeira 是世界上最長壽的葡萄酒，這得益於三個相互加強的保護機制：</p>
+      <h4>1️⃣ 充分氧化（已穩定）</h4>
+      <ul>
+        <li>Estufagem / Canteiro 工藝使酒充分氧化，所有容易腐敗的化合物已轉化</li>
+        <li>「已氧化完畢」的酒不會再因接觸氧氣而進一步劣化</li>
+        <li>類比：鐵完全生鏽後不會再生更多銹</li>
+      </ul>
+      <h4>2️⃣ 高酒精（17–22%）</h4>
+      <ul>
+        <li>高酒精抑制所有微生物（醋酸菌、乳酸菌、野生酵母）活動</li>
+        <li>在 18% 以上，任何微生物都無法生存</li>
+      </ul>
+      <h4>3️⃣ 高酸度</h4>
+      <ul>
+        <li>Madeira 的天然酸度極高（pH 3.0–3.2），抑制細菌</li>
+        <li>同時提供支撐骨架，使酒在百年陳年後仍有活力不顯老態</li>
+      </ul>
+      <h4>🏆 有記錄的百年老 Madeira</h4>
+      <ul>
+        <li>Blandy's <strong>1900 Vintage Malmsey</strong>：1900 年採收，仍可購買飲用，狀態驚人</li>
+        <li>D'Oliveiras <strong>1850 Verdelho</strong>：最老之一，極少量仍在市場流通</li>
+        <li>拿破崙時代（1815 年前）的 Madeira 被發現於美國白宮地窖，品飲後仍令人驚嘆</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: 'Madeira 最高等級「Frasqueira（Vintage）」的最低陳年要求是？',
+    options: ['桶陳至少 5 年', '桶陳至少 10 年', '以 Canteiro 自然法陳年至少 20 年', '以 Estufagem 加熱至少 2 年'],
+    answer: 2,
+    explanation: 'Frasqueira（Vintage Madeira）是最頂級的 Madeira 等級，必須使用 Canteiro 自然法（不可用 Estufagem 工業法），在橡木桶中陳年至少 20 年，並為單一年份。裝瓶後還可繼續陳年 50–100 年以上。',
+  },
+  {
+    type: 'quiz',
+    question: 'Madeira 能陳年百年的三重保護機制包括哪些？',
+    options: [
+      '低酒精 + 低糖 + 低溫',
+      '充分氧化（已穩定）+ 高酒精（17–22%）+ 高酸度',
+      '加入防腐劑 + 真空密封 + 冷藏',
+      '低產量 + 特殊品種 + 手工採收'
+    ],
+    answer: 1,
+    explanation: 'Madeira 的百年陳年秘密在於三重保護：①充分氧化（Estufagem/Canteiro 工藝使酒完全穩定，不再因氧氣劣化）②高酒精（17–22%，抑制所有微生物）③高酸度（pH 3.0–3.2，抑制細菌並維持結構活力），三者共同造就了世界最長壽的葡萄酒。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Madeira 陳年課程！',
+    keyPoints: [
+      '五個等級：Finest（3年）→ Reserva（5年）→ Special Reserve（10年）→ Extra Reserve（15年）→ Frasqueira（20年+）',
+      'Frasqueira 是頂級，Canteiro 唯一，單一年份，陳年潛力無限',
+      '三重保護：充分氧化 + 高酒精（17–22%）+ 高酸度',
+      'Blandy\'s 的 1900 Vintage 仍在銷售，是世界最長壽葡萄酒的活證明',
+    ],
+  },
+]
+
+// P3M3L1 — Espumante：Bairrada・Vinho Verde 氣泡酒
+const P3M3L1_slides = [
+  {
+    type: 'cover',
+    icon: '🫧',
+    gradient: 'linear-gradient(135deg, #1565c0, #0288d1)',
+    title: 'Espumante：葡萄牙氣泡酒全解析',
+    subtitle: 'Level 3 · Bairrada・Vinho Verde・Távora-Varosa',
+    points: [
+      { icon: '🫧', label: 'Espumante 三大產地', text: 'Bairrada（傳統法紅白）・Vinho Verde（自然微氣泡）・Távora-Varosa（最高海拔）' },
+      { icon: '🥂', label: '傳統法 vs. 自然氣泡', text: '傳統法（瓶中二次發酵）vs. Vinho Verde 的天然 CO₂ 殘留——兩種截然不同的氣泡酒哲學' },
+      { icon: '🏆', label: '葡萄牙氣泡酒的地位', text: '近年在世界大賽屢獲大獎，Bairrada Espumante 已進入世界頂級氣泡酒的行列' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🫧',
+    title: 'Bairrada Espumante：葡萄牙最偉大的氣泡酒',
+    html: `
+      <p><strong>Bairrada DOC</strong> 是葡萄牙最重要的傳統法氣泡酒（Espumante Bruto Natural）產地。</p>
+      <h4>🥂 釀造規範</h4>
+      <ul>
+        <li>使用<strong>傳統法（Método Clássico）</strong>：在瓶中進行二次發酵</li>
+        <li>白色 Espumante 主要品種：<strong>Bical・Maria Gomes・Arinto・Cerceal</strong></li>
+        <li>紅色/粉紅 Espumante：<strong>Baga</strong>（葡萄牙最特殊的紅色氣泡酒）</li>
+        <li>酒泥陳年：標準款 <strong>9 個月</strong>，Reserva 款 <strong>18 個月</strong>，Extra Brut 頂級款 <strong>36+ 個月</strong></li>
+      </ul>
+      <h4>💎 Baga 紅色 Espumante 的獨特性</h4>
+      <ul>
+        <li>Baga 天然高酸正好適合傳統法氣泡酒（高酸是氣泡酒的基礎）</li>
+        <li>帶紅漿果、野玫瑰香氣，細緻氣泡，是全世界最特殊的紅色傳統法氣泡酒之一</li>
+        <li>Luís Pato・Filipa Pato・Sidral Mundet 等酒莊的紅色 Espumante 獲國際大獎</li>
+      </ul>
+      <h4>🏆 代表酒莊</h4>
+      <ul>
+        <li><strong>Luís Pato</strong>：Bairrada 傳奇，白色和紅色 Espumante 均屬標竿</li>
+        <li><strong>Filipa Pato</strong>：現代精品，荷蘭市場特別受歡迎</li>
+        <li><strong>Caves Aliança / Caves São João</strong>：大型傳統酒莊，性價比</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '葡萄牙三大氣泡酒風格對比',
+    items: [
+      { icon: '🏅', label: 'Bairrada Espumante（傳統法）', desc: '瓶中二次發酵，酒泥陳年 9–36 個月，細緻持久氣泡，礦物感強。有白色（Bical）和獨特紅色（Baga）', color: '#1565c0' },
+      { icon: '🌿', label: 'Vinho Verde 微氣泡（天然殘留）', desc: '在不鏽鋼桶中保留天然 CO₂，輕微氣泡（1–2 bar vs. 傳統法 6 bar），清爽怡人，適合海鮮', color: '#006600' },
+      { icon: '🏔️', label: 'Távora-Varosa Espumante（傳統法）', desc: '葡萄牙第一個氣泡酒 DOC（1989），最高海拔（500–900m），酒泥陳年 18+ 個月，以 Malvasia Fina 為主', color: '#37474f' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Bairrada Espumante 使用哪種釀造方法？最短酒泥陳年時間是多久？',
+    options: ['查瑪特法，3 個月', '傳統法（Método Clássico），9 個月', '自然碳酸充氣法，無需陳年', '傳統法，3 個月'],
+    answer: 1,
+    explanation: 'Bairrada Espumante 使用傳統法（Método Clássico）——在瓶中進行二次發酵，與法國香檳相同的方式。標準款最少在酒泥上陳年 9 個月，Reserva 款 18 個月，Extra Brut 頂級款可達 36 個月以上。',
+  },
+  {
+    type: 'quiz',
+    question: 'Vinho Verde 的「微氣泡」與 Bairrada Espumante 的氣泡最主要的差異是什麼？',
+    options: [
+      '兩者完全相同，都是傳統法製造',
+      'Vinho Verde 是在桶中保留天然 CO₂（約 1–2 bar），Bairrada 是瓶中二次發酵（約 6 bar），後者氣泡更持久精緻',
+      'Vinho Verde 比 Bairrada 的氣泡更多',
+      'Vinho Verde 不含氣泡，只有 Bairrada 有'
+    ],
+    answer: 1,
+    explanation: 'Vinho Verde 的微氣泡來自在不鏽鋼桶中保留的天然 CO₂（發酵副產物），壓力約 1–2 bar，氣泡細緻短暫。Bairrada Espumante 是瓶中二次發酵（傳統法），壓力約 5–6 bar（與香檳相同），氣泡更持久精緻，兩者是截然不同的工藝。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成葡萄牙氣泡酒課程！',
+    keyPoints: [
+      'Bairrada：最重要的傳統法氣泡酒，酒泥陳年 9–36 個月，有白色（Bical）和獨特紅色（Baga）',
+      'Vinho Verde：在桶中保留天然 CO₂，輕微氣泡（1–2 bar），清爽適合海鮮',
+      'Távora-Varosa：葡萄牙第一個氣泡酒 DOC（1989），最高海拔，酒泥陳年 18+ 個月',
+      'Baga 紅色傳統法氣泡酒是世界最獨特的氣泡酒之一',
+    ],
+  },
+]
+
+// P3M3L2 — Moscatel de Setúbal 與葡萄牙甜酒世界
+const P3M3L2_slides = [
+  {
+    type: 'cover',
+    icon: '🍯',
+    gradient: 'linear-gradient(135deg, #e65100, #bf360c)',
+    title: '葡萄牙甜酒世界全景',
+    subtitle: 'Level 3 · Moscatel・Carcavelos・Abafado',
+    points: [
+      { icon: '🍯', label: 'Moscatel de Setúbal', text: '新鮮葡萄皮浸皮工藝，麝香花香極致，可陳年 50–100 年' },
+      { icon: '🥃', label: 'Carcavelos', text: '接近滅絕的里斯本半甜加烈酒 DOC，僅存一家生產商' },
+      { icon: '🍇', label: 'Abafado', text: '葡萄牙傳統釀酒技術：加入烈酒中止發酵，比 Porto 更古老的加烈工藝' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍯',
+    title: 'Moscatel de Setúbal 深度：Roxo 與陳年版本',
+    html: `
+      <p><strong>Moscatel de Setúbal DOC</strong> 是葡萄牙最著名的甜酒之一，因其獨特的皮接觸工藝而聞名。</p>
+      <h4>🌸 兩大品種版本</h4>
+      <ul>
+        <li><strong>Moscatel de Setúbal（黃色）</strong>：使用 Muscat of Alexandria（= Moscatel Graúdo），更常見，帶橙花・杏桃・蜂蜜</li>
+        <li><strong>Moscatel Roxo（紫色）⭐</strong>：使用稀有紫色品種，帶玫瑰・覆盆子・紫羅蘭，數量極稀少，是葡萄牙最珍稀的甜酒</li>
+      </ul>
+      <h4>⏳ 陳年演化</h4>
+      <ul>
+        <li><strong>5–10 年</strong>：深金黃，麝香花香濃郁，橙花杏桃，絲滑甜潤</li>
+        <li><strong>20–30 年</strong>：深琥珀，太妃糖橙皮堅果，甜度依然豐盈但更複雜</li>
+        <li><strong>50+ 年</strong>：José Maria da Fonseca 的頂級老年份，顏色極深，咖啡焦糖稠密，甜度依舊，令人震撼</li>
+      </ul>
+      <h4>🔬 獨特的皮浸泡工藝</h4>
+      <ul>
+        <li>加烈後，將新鮮的 Moscatel 葡萄皮加入酒中浸泡 <strong>3–6 個月</strong>（其他加烈酒無此步驟）</li>
+        <li>這步驟大幅增加麝香花香的濃郁度和口感的絲滑感</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '葡萄牙甜酒類型全景比較',
+    items: [
+      { icon: '🍯', label: 'Moscatel de Setúbal', desc: '麝香葡萄加烈 + 皮浸泡，花香極致，可陳年 50–100 年，設圖巴爾半島', color: '#e65100' },
+      { icon: '🥃', label: 'Porto（Ruby/Tawny）', desc: '多品種混調加烈，果香或氧化型，20–50 年陳年，杜羅河谷', color: '#8B0000' },
+      { icon: '🏝️', label: 'Madeira（Bual/Malvasia）', desc: '加熱氧化工藝，最長壽，百年陳年，馬德拉島', color: '#8e44ad' },
+      { icon: '🏰', label: 'Carcavelos', desc: '半甜加烈酒，里斯本郊區，幾乎滅絕，僅 Quinta dos Pesos 生產，帶堅果太妃糖', color: '#5d4037' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Moscatel de Setúbal 釀造中「浸泡新鮮葡萄皮」的步驟有什麼作用？',
+    options: [
+      '增加酒的顏色使其更深',
+      '增加酒精濃度',
+      '大幅提升麝香花香的濃郁度，是 Moscatel de Setúbal 與其他加烈甜酒最大的區別',
+      '降低酸度，使口感更圓潤'
+    ],
+    answer: 2,
+    explanation: 'Moscatel de Setúbal 在加烈後額外進行 3–6 個月的新鮮葡萄皮浸泡，這個獨特步驟（其他加烈酒沒有）讓 Moscatel 的天然芳香物質（萜烯類）大量溶入酒中，使麝香橙花香氣極致濃郁，是 Moscatel de Setúbal 最核心的風格特徵。',
+  },
+  {
+    type: 'quiz',
+    question: '「Moscatel Roxo」是葡萄牙哪個產區最稀有的甜酒，使用什麼顏色的葡萄品種？',
+    options: [
+      'Douro 產區，白色品種',
+      'Setúbal 半島，紫色 Moscatel 品種，帶玫瑰覆盆子香',
+      'Alentejo 產區，紅色品種',
+      'Madeira 島，橙色葡萄'
+    ],
+    answer: 1,
+    explanation: 'Moscatel Roxo（紫色 Moscatel）是 Setúbal 半島 DOC 中最稀有的甜酒，使用一種極稀少的紫色果皮 Muscatel 品種，釀成的酒帶有玫瑰・覆盆子・紫羅蘭的獨特香氣，與一般金色 Moscatel de Setúbal 完全不同，數量極少，是葡萄牙最珍稀的甜酒之一。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成葡萄牙甜酒世界課程！',
+    keyPoints: [
+      'Moscatel de Setúbal：皮浸泡工藝，麝香花香極致，可陳年 50–100 年',
+      'Moscatel Roxo：紫色品種，玫瑰覆盆子香，葡萄牙最稀有甜酒',
+      '四大甜酒：Moscatel（花香型）・Porto（果香/氧化型）・Madeira（加熱氧化型）・Carcavelos（幾乎滅絕）',
+      'José Maria da Fonseca 的老年份 Moscatel 是葡萄牙甜酒的極致代表',
+    ],
+  },
+]
+
+// P3M3L3 — Vinho Verde 中的微氣泡：Pétillant 風格
+const P3M3L3_slides = [
+  {
+    type: 'cover',
+    icon: '💧',
+    gradient: 'linear-gradient(135deg, #2e7d32, #00695c)',
+    title: 'Vinho Verde 的微氣泡與 Pétillant 風格',
+    subtitle: 'Level 3 · 天然微氣泡與現代自然酒運動',
+    points: [
+      { icon: '💧', label: 'CO₂ 的傳統', text: '葡萄牙釀酒師數百年來習慣在不鏽鋼桶中保留天然 CO₂，微氣泡是 Vinho Verde 的 DNA' },
+      { icon: '🌿', label: 'Pét-Nat 現代運動', text: 'Pétillant Naturel（自然起泡）：只進行一次發酵，裝瓶後利用殘糖完成氣泡，無添加，自然酒先鋒' },
+      { icon: '🌍', label: '從傳統到全球潮流', text: '葡萄牙 Vinho Verde 的微氣泡傳統，正在通過 Pét-Nat 形式引領全球自然氣泡酒潮流' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '💧',
+    title: 'Vinho Verde 微氣泡的傳統與科學',
+    html: `
+      <p>Vinho Verde 的微氣泡（<em>Pétillant</em>）不是刻意添加的，而是傳統釀造的自然結果。</p>
+      <h4>🔬 微氣泡的來源</h4>
+      <ul>
+        <li>傳統 Vinho Verde 在不鏽鋼桶中完成發酵，<strong>不進行蘋果乳酸發酵（MLF）</strong></li>
+        <li>保留部分 CO₂（蘋果酸轉化為乳酸的副產品）在酒液中</li>
+        <li>壓力通常僅 <strong>1–2 bar</strong>（傳統法香檳約 6 bar），氣泡細緻短暫</li>
+        <li>開瓶後氣泡很快消散，留下一種「刺激感」而非明顯氣泡</li>
+      </ul>
+      <h4>📅 歷史背景</h4>
+      <ul>
+        <li>葡萄牙西北部葡萄酒歷史上因<strong>高酸度</strong>被認為「太粗澀」</li>
+        <li>農民喝年輕的 Vinho Verde 時，酒中天然保留的 CO₂ 使口感更清爽可口</li>
+        <li>這個「缺陷」逐漸成為 Vinho Verde 的標誌性特色</li>
+      </ul>
+      <h4>🌿 現代趨勢：Alvarinho 無氣泡化</h4>
+      <ul>
+        <li>頂級 Monção/Melgaço 的 Alvarinho 生產商（如 Soalheiro）越來越多地釀造<strong>無氣泡版本</strong></li>
+        <li>希望讓品飲者專注於 Alvarinho 的品種特色，而非被微氣泡影響感知</li>
+        <li>這反映了市場對 Alvarinho 作為嚴肅精品白酒的認可</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🌿',
+    title: 'Pétillant Naturel（Pét-Nat）：自然酒的氣泡革命',
+    html: `
+      <p><strong>Pétillant Naturel</strong>（法語：天然微氣泡）簡稱 <strong>Pét-Nat</strong>，是全球自然酒運動中最受矚目的氣泡酒風格。</p>
+      <h4>🔬 Pét-Nat 的釀造原理</h4>
+      <ul>
+        <li>葡萄汁在<strong>發酵尚未完全結束時裝瓶</strong>（Méthode Ancestrale/古法）</li>
+        <li>瓶中殘餘酵母繼續消耗殘糖，產生 CO₂ 形成氣泡</li>
+        <li>只有<strong>一次發酵</strong>（傳統法有兩次），是最古老的氣泡酒製作方式</li>
+        <li>不需添加糖（liqueur de tirage）、不需去泥（無 dégorgement），直接裝瓶</li>
+      </ul>
+      <h4>🌿 Pét-Nat 的特色</h4>
+      <ul>
+        <li>通常<strong>帶少量沉澱（酵母菌体）</strong>，外觀微濁</li>
+        <li>氣泡不規則，比傳統法更活潑輕盈</li>
+        <li>風味：帶麵包酵母感，新鮮果香，自然活潑，常帶輕微甜感（若發酵未完全）</li>
+        <li>酒精通常較低（10–12%），適合日常飲用</li>
+      </ul>
+      <h4>🇵🇹 葡萄牙 Pét-Nat 代表</h4>
+      <ul>
+        <li><strong>Anselmo Mendes（Vinho Verde）</strong>：頂級 Alvarinho Pét-Nat 先驅</li>
+        <li><strong>Niepoort Nat Cool</strong>：自然酒大師 Dirk Niepoort 的 Pét-Nat，以 Douro 白品種釀造</li>
+        <li><strong>Aphros（Vinho Verde）</strong>：生物動力法 Pét-Nat，精品自然酒市場新星</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: 'Vinho Verde 傳統的微氣泡（Pétillant）主要來自哪個過程？',
+    options: [
+      '釀酒師在裝瓶前人工充入 CO₂',
+      '傳統法瓶中二次發酵',
+      '不鏽鋼桶中保留天然 CO₂（未進行蘋果乳酸發酵的副產品）',
+      '使用特殊的起泡葡萄品種'
+    ],
+    answer: 2,
+    explanation: 'Vinho Verde 的微氣泡是傳統釀造的自然結果：酒在不鏽鋼桶中完成發酵，不進行蘋果乳酸發酵（MLF），保留了 CO₂ 在酒液中，壓力約 1–2 bar。這不是刻意製造的氣泡，而是延續數百年的傳統「缺陷」，後來成為 Vinho Verde 的標誌特色。',
+  },
+  {
+    type: 'quiz',
+    question: 'Pétillant Naturel（Pét-Nat）與傳統法（Método Clássico）最根本的釀造差異是什麼？',
+    options: [
+      'Pét-Nat 使用更貴的葡萄品種',
+      'Pét-Nat 只有一次發酵（在瓶中完成），傳統法有兩次發酵（額外添加糖和酵母進行二次發酵）',
+      'Pét-Nat 需要更長的酒泥陳年',
+      'Pét-Nat 必須去除酒泥，傳統法可以保留'
+    ],
+    answer: 1,
+    explanation: 'Pét-Nat 使用古法（Méthode Ancestrale）：在發酵未完全結束時裝瓶，瓶中殘餘酵母繼續產生 CO₂，全程只有一次發酵。傳統法有兩次發酵（第一次完成後添加「tirage liqueur」進行瓶中二次發酵），並需要最後去泥（dégorgement）。Pét-Nat 更自然，更古老。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Vinho Verde 微氣泡課程！',
+    keyPoints: [
+      'Vinho Verde 微氣泡：不鏽鋼桶保留天然 CO₂，壓力僅 1–2 bar，是傳統結果',
+      '頂級 Alvarinho 趨向無氣泡，以展現品種純粹特色',
+      'Pét-Nat：發酵未完成時裝瓶，只有一次發酵，最古老的氣泡酒方式',
+      'Pét-Nat 特色：微濁、活潑、帶酵母感，是自然酒運動的代表款式',
+    ],
+  },
+]
+
+// P3M4L1 — 花崗岩 vs. 片岩 vs. 石灰岩：風土影響分析
+const P3M4L1_slides = [
+  {
+    type: 'cover',
+    icon: '🪨',
+    gradient: 'linear-gradient(135deg, #37474f, #546e7a)',
+    title: '葡萄牙三大土壤：風土影響深度分析',
+    subtitle: 'Level 3 · 花崗岩・片岩・石灰岩',
+    points: [
+      { icon: '⚪', label: '花崗岩', text: 'Minho・Dão：清爽礦物感，賦予 Alvarinho 和 Encruzado 細膩結構' },
+      { icon: '⚫', label: '片岩（Xisto）', text: 'Douro：保熱強、逼深根、礦物煙燻感，是波特酒的靈魂' },
+      { icon: '🟡', label: '石灰岩', text: 'Bairrada・Bucelas・Lisboa：高酸結構，賦予 Baga 和 Arinto 紮實骨架' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '⚪',
+    title: '花崗岩：礦物清爽的精緻土壤',
+    html: `
+      <p><strong>花崗岩（Granito）</strong>是葡萄牙北部和中部山地最重要的土壤，廣布於 Minho・Dão・Trás-os-Montes。</p>
+      <h4>🔬 花崗岩的物理化學特性</h4>
+      <ul>
+        <li><strong>礦物組成</strong>：石英 + 長石 + 雲母，酸性土（pH 4.5–5.5）</li>
+        <li><strong>排水性極佳</strong>：花崗岩風化後形成粗砂質土，水分快速滲透，葡萄藤需深根尋水</li>
+        <li><strong>貧瘠低產</strong>：低肥沃度使葡萄自然低產，但果實集中度高</li>
+        <li><strong>保熱性低</strong>：白色反光，比片岩涼爽，有利保留葡萄天然酸度</li>
+      </ul>
+      <h4>🍾 對葡萄酒的影響</h4>
+      <ul>
+        <li><strong>礦物質感</strong>：燧石、白堊、礦泉水的清爽礦物感</li>
+        <li><strong>高酸度保留</strong>：涼爽排水土壤讓葡萄緩慢成熟，保留天然酸度</li>
+        <li><strong>輕盈精緻</strong>：花崗岩上的葡萄酒通常酒體更輕，口感更細膩</li>
+        <li><strong>代表案例</strong>：Monção Alvarinho（花崗岩礦物白）、Dão Encruzado（花崗岩複雜白）、Dão Touriga Nacional（優雅細膩）</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '三大土壤 × 產區 × 酒款風格對照表',
+    items: [
+      { icon: '⚪', label: '花崗岩（Granito）', desc: 'Minho・Dão：涼爽礦物，清爽高酸，精緻輕盈。Alvarinho 礦物白酒、Encruzado 複雜白酒、Touriga Nacional 優雅紅酒', color: '#78909c' },
+      { icon: '⚫', label: '片岩（Xisto/Schist）', desc: 'Douro：深色保熱，葡萄根深扎，礦物煙燻、深色果香。波特酒、頂級 Douro 紅酒（Barca Velha・Quinta do Crasto）', color: '#424242' },
+      { icon: '🟡', label: '黏土石灰岩', desc: 'Bairrada・Bucelas：保水性佳，高酸結構骨架，Baga 的高單寧酸度、Arinto 的礦物清爽白酒', color: '#8D6E63' },
+      { icon: '🟠', label: '花崗岩・片麻岩（Alentejo）', desc: 'Alentejo（特別是 Portalegre）：介於花崗岩精緻和炎熱之間，出產結構均衡、有礦物感的南方紅酒', color: '#6D4C41' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '為什麼 Douro 的片岩（Xisto）土壤讓葡萄根能長達 20 公尺？',
+    options: [
+      '片岩含有特殊的植物生長激素',
+      '片岩有垂直裂縫，葡萄根可沿裂縫向下穿透尋找深層地下水',
+      '片岩土壤特別鬆散，根系容易生長',
+      '片岩中的礦物成分吸引葡萄根生長'
+    ],
+    answer: 1,
+    explanation: 'Douro 的片岩（Schist）以垂直層狀裂縫著稱，葡萄根可沿這些自然裂縫向下穿透，深達 10–20 公尺尋找深層地下水。這種強迫性的深根使葡萄藤在夏季乾旱中仍能獲得充足水分，同時增加了礦物質的吸收，是波特酒複雜礦物感的根源。',
+  },
+  {
+    type: 'quiz',
+    question: '在葡萄牙三大主要土壤中，哪種土壤的保熱性最強，對葡萄成熟度貢獻最大？',
+    options: ['花崗岩', '石灰岩', '片岩（Xisto）', '砂土'],
+    answer: 2,
+    explanation: '片岩（Xisto/Schist）是深灰黑色的薄層變質岩，顏色深吸熱強，白天大量吸收太陽輻射，夜間緩慢釋放，形成獨特的「地熱效應」。這種極強的保熱性使 Douro 夏季即使高溫下葡萄也能充分成熟，是波特酒高糖分和濃郁果香的重要因素。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成葡萄牙土壤風土課程！',
+    keyPoints: [
+      '花崗岩（Minho/Dão）：涼爽礦物，清爽高酸，精緻輕盈，Alvarinho 和 Encruzado 的靈魂',
+      '片岩（Douro）：深色保熱，逼深根，礦物煙燻，波特酒和頂級 Douro 紅酒的基礎',
+      '石灰岩（Bairrada/Bucelas）：保水高酸，紮實骨架，Baga 和 Arinto 的結構來源',
+      '土壤決定了風格方向，但氣候和品種同樣重要——三者共同構成「風土（Terroir）」',
+    ],
+  },
+]
+
+// P3M4L2 — 葡萄牙橡木桶：Balseiro 大桶傳統與法國桶現代派
+const P3M4L2_slides = [
+  {
+    type: 'cover',
+    icon: '🛢️',
+    gradient: 'linear-gradient(135deg, #4e342e, #6d4c41)',
+    title: '葡萄牙橡木桶：傳統 vs. 現代',
+    subtitle: 'Level 3 · Balseiro 大桶 vs. 法國 Barrique',
+    points: [
+      { icon: '🏺', label: 'Balseiro 大桶傳統', text: '1,000–5,000L 的大型舊桶，讓葡萄酒緩慢微氧化，同時保留品種和風土特色' },
+      { icon: '🛢️', label: '法國 Barrique 現代派', text: '225L 小桶，給予明顯的橡木香草和煙燻香，是 1990 年代國際化浪潮的工具' },
+      { icon: '🔄', label: '當今趨勢', text: '越來越多的葡萄牙酒莊回歸大桶傳統，強調品種純粹性，減少橡木遮蓋' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🏺',
+    title: 'Balseiro：葡萄牙橡木桶的傳統',
+    html: `
+      <p><strong>Balseiro</strong> 是葡萄牙傳統的大型舊橡木桶（也稱 Tonel），是葡萄牙陳年傳統的核心。</p>
+      <h4>🏺 Balseiro 的規格</h4>
+      <ul>
+        <li>容量：<strong>1,000–10,000 升</strong>（相比之下，法國 barrique 僅 225L）</li>
+        <li>通常已使用多年，橡木新桶味（new oak）已消失</li>
+        <li>主要材質：葡萄牙橡木（Quercus faginea）或法國橡木舊桶</li>
+      </ul>
+      <h4>🍷 Balseiro 對葡萄酒的影響</h4>
+      <ul>
+        <li><strong>微氧化（Micro-oxygenation）</strong>：透過桶板的微細孔隙，極緩慢地接觸少量氧氣</li>
+        <li>軟化單寧，讓葡萄酒更柔順，但<strong>不添加橡木香草/煙燻風味</strong></li>
+        <li><strong>保留品種特色</strong>：Touriga Nacional 的紫羅蘭花香和 Encruzado 的礦物感不被木桶掩蓋</li>
+        <li>傳統 Douro・Dão・Bairrada 酒莊使用 Balseiro 陳年 12–36 個月</li>
+      </ul>
+      <h4>🇵🇹 葡萄牙傳統橡木品種</h4>
+      <ul>
+        <li><strong>Quercus faginea</strong>（葡萄牙橡木）：孔隙更大，微氧化速度更快，但賦予的單寧較粗</li>
+        <li>現代酒莊多改用法國或美國舊橡木桶（Balseiro 形式）</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Balseiro 大桶 vs. 法國 Barrique 小桶',
+    items: [
+      { icon: '🏺', label: 'Balseiro（舊大桶）傳統', desc: '1,000–5,000L，多年使用無木味，緩慢微氧化，保留品種純粹性。代表：傳統 Dão/Douro 酒莊', color: '#4e342e' },
+      { icon: '🛢️', label: 'Barrique（新小桶）現代', desc: '225L 法國新橡木桶，強烈木香（香草、煙燻、焦糖），6–18 個月陳年，影響力大。代表：Alentejo 1990 年代新浪潮', color: '#8B4513' },
+      { icon: '🪣', label: '中型舊桶（500L）折衷', desc: '500L 舊桶或兩三次使用桶，輕微木香但不遮蓋品種。近年最流行的選擇，平衡傳統與現代', color: '#6d4c41' },
+      { icon: '🌀', label: '不鏽鋼桶（無木影響）', desc: '完全無橡木影響，保留最純粹的品種和果香。用於 Vinho Verde・年輕 Alvarinho 和高端白酒初始發酵', color: '#37474f' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Balseiro 大型舊橡木桶（1,000–5,000L）相比法國新小桶（225L Barrique），最主要的葡萄酒釀造差異是什麼？',
+    options: [
+      'Balseiro 讓酒陳年更快，barrique 需要更長時間',
+      'Balseiro 的微氧化更緩和，不添加木香，保留品種風土特色；Barrique 給予明顯橡木香草煙燻風味',
+      'Balseiro 只能用於紅酒，barrique 可用於白酒',
+      'Balseiro 比 Barrique 更貴'
+    ],
+    answer: 1,
+    explanation: 'Balseiro 的關鍵優勢：大容量 + 多年使用（無新木味），讓葡萄酒透過桶板微孔隙緩慢微氧化，軟化單寧，但不添加任何橡木香氣。相比之下，225L 法國新桶（Barrique）因接觸面積大且桶材新鮮，賦予明顯的香草・煙燻・椰子木桶風味，容易掩蓋品種特色。',
+  },
+  {
+    type: 'quiz',
+    question: '葡萄牙 1990 年代引進法國小桶（Barrique）的主要目的是什麼？',
+    options: [
+      '降低釀酒成本',
+      '配合國際市場口味，使葡萄牙酒更符合當時流行的橡木風格，提升出口競爭力',
+      '為了保護葡萄牙傳統葡萄酒風格',
+      '因為葡萄牙橡木資源枯竭'
+    ],
+    answer: 1,
+    explanation: '1990 年代葡萄牙（特別是 Alentejo）大量引進法國 Barrique 小桶，是為了迎合當時國際市場（特別是美國英國市場）偏愛的重橡木、高濃縮風格（Parker 式評分導向）。這提升了葡萄牙酒的出口競爭力，但也使部分傳統風土特色被橡木遮蓋。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成葡萄牙橡木桶課程！',
+    keyPoints: [
+      'Balseiro（舊大桶）：葡萄牙傳統，緩慢微氧化不添加木香，保留品種純粹性',
+      '法國 Barrique（新小桶）：1990 年代引進，強烈木香，迎合國際口味',
+      '當今趨勢：回歸大桶或 500L 中型舊桶，減少橡木影響，強調風土表達',
+      '葡萄牙橡木（Quercus faginea）孔隙較大，微氧化更快，但單寧較粗',
+    ],
+  },
+]
+
+// P3M4L3 — 老藤葡萄酒：Colares Ramisco 與 Douro 百年老藤
+const P3M4L3_slides = [
+  {
+    type: 'cover',
+    icon: '🌿',
+    gradient: 'linear-gradient(135deg, #1b5e20, #2e7d32)',
+    title: '老藤葡萄酒：百年植株的珍稀風味',
+    subtitle: 'Level 3 · Colares・Douro・Vinho Verde 的老藤傳奇',
+    points: [
+      { icon: '🌳', label: '老藤的定義', text: '通常指 30 年以上的葡萄藤，各國標準不同，有些「老藤（Vieilles Vignes）」已超過 100 年' },
+      { icon: '🏖️', label: 'Colares 未嫁接老藤', text: '砂丘保護，從未受根瘤蚜侵害，部分藤株超過 200–300 年，是世界葡萄酒界最珍貴的活遺產' },
+      { icon: '⛰️', label: 'Douro 老藤', text: '片岩梯田上的百年老藤 Touriga Nacional，是 Barca Velha 和頂級 Vintage Port 的靈魂' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🌳',
+    title: '老藤的科學：為什麼老藤釀出更好的葡萄酒？',
+    html: `
+      <p>「老藤（Old Vines / Vieilles Vignes / Velhas Vinhas）」並非法定術語，但業界普遍認為老藤能帶來更高的品質。</p>
+      <h4>🔬 老藤 vs. 年輕藤的差異</h4>
+      <ul>
+        <li><strong>深根系統</strong>：30+ 年的老藤根系可達 15–30 公尺深（特別在片岩和花崗岩中），吸取深層地下水和礦物質</li>
+        <li><strong>自然低產</strong>：老藤自動降低產量，每株葡萄藤的果實量極少，但<strong>集中度和複雜度</strong>顯著更高</li>
+        <li><strong>根系記憶</strong>：深根使葡萄藤受地表氣候影響更小，年份差異更穩定</li>
+        <li><strong>更豐富的礦物質</strong>：深層礦物質通過根系吸收，反映在酒的礦物感上</li>
+      </ul>
+      <h4>📅 葡萄牙老藤的分級（非官方）</h4>
+      <ul>
+        <li><strong>老藤（Vinha Velha）</strong>：30–60 年，自然低產，品質提升</li>
+        <li><strong>超老藤</strong>：60–100 年，稀有，果實複雜度大幅提升</li>
+        <li><strong>百年老藤（Centenária）</strong>：100+ 年，極稀有，代表頂級釀酒葡萄</li>
+        <li><strong>未嫁接老藤（Ramisco de Colares）</strong>：200–300+ 年，世界最珍稀</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '葡萄牙最重要的老藤產地',
+    items: [
+      { icon: '🏖️', label: 'Colares（砂丘老藤）', desc: 'Ramisco 未嫁接老藤 200–300+ 年，砂丘保護，根系直入砂層深處。世界最稀有，每年產量可能不超過幾千瓶', color: '#1565c0' },
+      { icon: '⛰️', label: 'Douro 老藤（片岩梯田）', desc: 'Touriga Nacional・Touriga Franca 百年老藤，根深片岩 20 公尺，濃縮礦物感。Barca Velha・Quinta do Crasto 老藤版是最頂級 Douro 紅酒', color: '#8B0000' },
+      { icon: '🌿', label: 'Vinho Verde 老藤 Alvarinho', desc: 'Monção/Melgaço 花崗岩上 50–80 年老藤，礦物感更深，酸度更復雜。產量極低但品質極優', color: '#2e7d32' },
+      { icon: '🍒', label: 'Bairrada 老藤 Baga', desc: 'Bairrada 黏土石灰岩上 50–100 年 Baga 老藤，高酸單寧的集中版，需陳年 20+ 年，是世界最被低估的老藤紅酒之一', color: '#1b5e20' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Colares 的老藤 Ramisco 為何能保存 200–300 年，成為世界最古老的未嫁接老藤之一？',
+    options: [
+      '因為 Colares 氣候特別寒冷，葡萄生長緩慢',
+      '因為當地法律規定不得嫁接',
+      '因為葡萄藤種植在大西洋沿岸砂丘中，根瘤蚜無法在砂土中生存，從未受 19 世紀根瘤蚜病害影響',
+      '因為使用了特殊的基因改造品種'
+    ],
+    answer: 2,
+    explanation: 'Colares 的 Ramisco 老藤能保存數百年，關鍵在於砂丘土壤：根瘤蚜（Phylloxera）無法在鬆散砂土中生存，因此 19 世紀摧毀歐洲葡萄酒業的根瘤蚜災害沒有影響 Colares。藤株無需嫁接到抗根瘤蚜砧木，得以保留原根生長，部分植株已存活 200–300 年以上。',
+  },
+  {
+    type: 'quiz',
+    question: '老藤（30 年以上）相比年輕藤最主要的品質優勢是什麼？',
+    options: [
+      '老藤能生產更多果實',
+      '老藤葡萄酒可以立即飲用，不需陳年',
+      '老藤根系更深，自然低產，果實集中度和複雜度更高，吸取更多深層礦物質',
+      '老藤葡萄酒酒精度更低'
+    ],
+    answer: 2,
+    explanation: '老藤的核心優勢：①深根（可達 15–30 公尺）吸取深層礦物質，②自然低產（老藤自動減少產量），每串葡萄集中了更多精華，③深根使藤株受氣候影響更穩定，年份差異更小。這些因素共同造就了老藤葡萄酒更高的集中度、複雜度和礦物感。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成老藤葡萄酒課程！',
+    keyPoints: [
+      '老藤的優勢：深根（15–30m）+ 自然低產 + 礦物質吸收 + 年份穩定性',
+      'Colares 砂丘未嫁接老藤（200–300+ 年）：世界最珍稀，根瘤蚜從未觸及',
+      'Douro 百年老藤 Touriga Nacional：Barca Velha 和頂級 Vintage Port 的靈魂',
+      'Vinho Verde 老藤 Alvarinho・Bairrada 老藤 Baga：被低估的老藤寶藏',
+    ],
+  },
+]
+
+// P3FinalExam — Level 3 綜合評量
+const P3FinalExam_slides = [
+  {
+    type: 'cover',
+    icon: '🏆',
+    gradient: 'linear-gradient(135deg, #1a6b9b, #2980b9)',
+    title: 'Level 3 綜合評量',
+    subtitle: '測試您的加強酒、特殊工藝與風土深度知識',
+    points: [
+      { icon: '📝', label: '12 道進階題目', text: '涵蓋波特酒工藝・Madeira 技術・氣泡酒・風土橡木桶・老藤' },
+      { icon: '🏆', label: 'Level 3 專業挑戰', text: '這些知識讓您能與世界頂級侍酒師對話' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '波特酒釀造中，加烈（加入葡萄烈酒）的最佳時機是？',
+    options: ['完全發酵結束後', '葡萄壓榨後立即', '自然酒精達 7–8% 時（發酵進行約 2–3 天）', '裝瓶前一天'],
+    answer: 2,
+    explanation: '波特酒在葡萄發酵進行到自然酒精約 7–8% 時加入 77% 葡萄烈酒，中止發酵，保留殘糖 80–120 g/L，最終酒精 19–22%。加烈越早甜度越高（Vintage），越晚則較干（某些 Tawny）。',
+  },
+  {
+    type: 'quiz',
+    question: 'Lagar 傳統踩皮相比現代 Autovinificator 機械，最大的優勢是什麼？',
+    options: ['踩皮更快完成', '人腳重量適中，不壓碎種籽，提取精細單寧和豐富色素', '可以大批量生產', '完全無氧'],
+    answer: 1,
+    explanation: 'Lagar 的核心優勢：人腳重量恰好破皮但不壓碎種籽（種籽含粗澀青澀單寧）。在只有 2–3 天的短發酵期內，Lagar 踩皮能最大化色素（花青素）提取，同時保持單寧細膩，是頂級 Vintage Port 的必選工藝。',
+  },
+  {
+    type: 'quiz',
+    question: '「未過濾 LBV」和「Vintage Port」最主要的差異是什麼？',
+    options: [
+      '完全相同，只是名稱不同',
+      'LBV 桶陳 4–6 年後裝瓶（較早）；Vintage Port 桶陳 2 年後裝瓶（較短），但只在官方宣布的頂級年份生產',
+      'LBV 只用 Touriga Nacional，Vintage 用多品種',
+      'Vintage Port 是非過濾的，LBV 一定要過濾'
+    ],
+    answer: 1,
+    explanation: 'LBV（Late Bottled Vintage）：單一年份，桶陳 4–6 年後裝瓶，非官方年份也可生產。Vintage Port：只在官方宣布的最佳年份（約每 3–4 年一次）生產，桶陳僅 2 年後裝瓶，之後在瓶中陳年 20–50 年才達最佳狀態。',
+  },
+  {
+    type: 'quiz',
+    question: '「30 Years Tawny」標示代表什麼？',
+    options: [
+      '酒莊在 1994 年（30 年前）採收的葡萄',
+      '混調中最老的酒液已 30 年',
+      '混調多個年份酒液，整體呈現「風格類型年齡約 30 年」的氧化複雜度',
+      '在瓶中額外陳年 30 年'
+    ],
+    answer: 2,
+    explanation: 'Tawny Port 的年份標示（10/20/30/40 年）代表混調酒液呈現的「風格類型年齡」，而非特定採收年份。酒師混調 15–45 年不等的多年份 Tawny，使成品在顏色、香氣（咖啡・陳年橙皮・蘭姆酒）和口感上符合「30 Years」的風格特徵。',
+  },
+  {
+    type: 'quiz',
+    question: 'Madeira 的 Canteiro 工藝最少需要在橡木桶中陳年多久才能標示為 Frasqueira（頂級 Vintage Madeira）？',
+    options: ['5 年', '10 年', '20 年', '50 年'],
+    answer: 2,
+    explanation: 'Frasqueira（Vintage Madeira）是 Madeira 最高等級，必須使用 Canteiro 自然法（不可用 Estufagem），在橡木桶中陳年至少 20 年，並為單一年份。這是官方 IVBAM 規定。裝瓶後可繼續陳年 50–100 年。',
+  },
+  {
+    type: 'quiz',
+    question: 'Madeira 的四大品種中，種植在最低海拔（0–200m）、甜度最高的是哪個品種？',
+    options: ['Sercial', 'Verdelho', 'Bual', 'Malvasia（Malmsey）'],
+    answer: 3,
+    explanation: 'Malvasia（Malmsey）種植在 Madeira 島最低海拔（0–200m）的溫暖沿海地帶，是糖分最高的品種，釀造極甜風格（殘糖 130–200 g/L）。儘管甜度極高，Madeira 天然高酸使其不顯膩口，帶蜂蜜・杏桃・熱帶水果香，是市場最受歡迎的 Madeira 風格。',
+  },
+  {
+    type: 'quiz',
+    question: 'Bairrada Espumante 和 Vinho Verde 微氣泡最根本的製作方式差異是什麼？',
+    options: [
+      '兩者都使用傳統法，差異在品種',
+      'Bairrada 使用傳統法（瓶中二次發酵），Vinho Verde 是在桶中保留天然 CO₂',
+      'Vinho Verde 使用查瑪特法，Bairrada 保留天然氣泡',
+      '兩者完全相同'
+    ],
+    answer: 1,
+    explanation: 'Bairrada Espumante 使用傳統法（Método Clássico），在瓶中進行二次發酵，壓力約 6 bar，酒泥陳年 9–36 個月。Vinho Verde 的微氣泡是在不鏽鋼桶中保留天然 CO₂（蘋果乳酸發酵的副產品），壓力約 1–2 bar，是完全不同的工藝。',
+  },
+  {
+    type: 'quiz',
+    question: '葡萄牙老藤 Ramisco（Colares）為何從未受根瘤蚜侵害，至今仍有 200–300 年未嫁接老藤？',
+    options: [
+      '使用了抗根瘤蚜砧木',
+      '葡萄牙法律禁止根瘤蚜進入',
+      '砂丘砂土讓根瘤蚜無法在其中生存，從未蔓延至 Colares',
+      '大西洋海風阻止了根瘤蚜擴散'
+    ],
+    answer: 2,
+    explanation: 'Colares 的 Ramisco 葡萄藤種植在大西洋沿岸砂丘的深層砂土中，根瘤蚜無法在鬆散砂土中生存，因此 19 世紀摧毀歐洲葡萄酒業的根瘤蚜從未影響 Colares。藤株保留原根，部分已超過 200–300 年，是世界最珍貴的葡萄酒活化石。',
+  },
+  {
+    type: 'quiz',
+    question: 'Balseiro（傳統大型舊橡木桶）相比 225L 法國新桶（Barrique），最主要的葡萄酒釀造優勢是？',
+    options: [
+      '成本更低廉',
+      '緩慢微氧化，軟化單寧，但不添加橡木香草煙燻風味，保留品種風土純粹性',
+      '使酒陳年速度更快',
+      '適合所有葡萄品種'
+    ],
+    answer: 1,
+    explanation: 'Balseiro（大型舊桶）透過桶板微孔隙讓酒緩慢微氧化，單寧軟化，口感更柔順，但不添加任何橡木香氣（桶材已多次使用，木香消耗殆盡）。這使 Touriga Nacional 的紫羅蘭花香和 Encruzado 的礦物感完整保留，是葡萄牙傳統風土表達的關鍵工具。',
+  },
+  {
+    type: 'quiz',
+    question: '葡萄牙 Douro 片岩（Xisto）土壤中，葡萄根可深達 10–20 公尺，原因是？',
+    options: [
+      '片岩非常鬆軟，根容易穿透',
+      '片岩含有特殊的根系生長激素',
+      '片岩具有垂直層狀裂縫，葡萄根沿裂縫向下穿透尋找深層地下水',
+      '片岩土壤特別濕潤，根不需要向下尋水'
+    ],
+    answer: 2,
+    explanation: 'Douro 片岩（Schist）最重要的物理特性是其垂直層狀裂縫。葡萄根沿這些自然裂縫向下穿透，深達 10–20 公尺尋找深層地下水，在夏季乾旱中保持水分供應，同時吸取深層礦物質，這是 Douro 葡萄酒礦物感和複雜度的根源。',
+  },
+  {
+    type: 'quiz',
+    question: 'Moscatel de Setúbal 在加烈後進行的「新鮮葡萄皮浸泡 3–6 個月」，主要增加了葡萄酒的哪個特性？',
+    options: [
+      '酒精度',
+      '深色酒色',
+      '麝香花香（萜烯類芳香物質）的濃郁度',
+      '單寧結構'
+    ],
+    answer: 2,
+    explanation: 'Moscatel de Setúbal 獨特的新鮮葡萄皮浸泡工藝（其他加烈酒沒有此步驟）讓葡萄皮中的天然萜烯類芳香物質大量溶入酒中，大幅提升麝香橙花香氣的濃郁度，是 Moscatel de Setúbal 香氣最突出、與其他甜酒最不同的核心特徵。',
+  },
+  {
+    type: 'quiz',
+    question: 'Pétillant Naturel（Pét-Nat）與傳統法氣泡酒（Bairrada Espumante）最根本的差異是？',
+    options: [
+      'Pét-Nat 使用更昂貴的品種',
+      'Pét-Nat 只有一次發酵（裝瓶時發酵未完成），傳統法有兩次發酵（額外二次發酵）',
+      'Pét-Nat 氣泡更多更持久',
+      'Pét-Nat 必須去泥（dégorgement），傳統法不需要'
+    ],
+    answer: 1,
+    explanation: 'Pét-Nat（Pétillant Naturel）使用古法（Méthode Ancestrale）：在第一次發酵尚未完成時裝瓶，瓶中殘餘酵母消耗殘糖產生 CO₂，全程只有一次發酵，通常帶輕微酵母沉澱。傳統法（Bairrada Espumante）有兩次發酵：第一次完整發酵後，添加 tirage liqueur 進行瓶中二次發酵，最後去泥（dégorgement）。',
+  },
+  {
+    type: 'summary',
+    message: '🎉 恭喜完成葡萄牙葡萄酒 Level 3 所有課程！您已掌握頂級加強酒與特殊工藝的深度知識。',
+    keyPoints: [
+      '✅ 波特酒工藝：加烈時機（7–8% 酒精）・Lagar 踩皮・Ruby vs. Tawny 系列',
+      '✅ 馬德拉技術：Estufagem（工業）vs. Canteiro（自然）・四大品種甜度光譜・五個陳年等級',
+      '✅ 葡萄牙氣泡酒：Bairrada 傳統法・Vinho Verde 天然 CO₂・Pét-Nat 自然酒',
+      '✅ 風土深度：花崗岩・片岩・石灰岩的土壤影響分析',
+      '✅ 橡木桶哲學：Balseiro 大桶傳統（保留風土）vs. 法國 Barrique（添加木香）',
+      '✅ 老藤珍寶：Colares 未嫁接 200–300 年老藤・Douro 百年老藤 Touriga Nacional',
+    ],
+  },
+]
+
+// ───────────────────────────────────────────────────────────────
 //  投影片對照表（Slide Map）
 // ───────────────────────────────────────────────────────────────
 
@@ -3500,6 +4900,21 @@ const SLIDE_MAP = {
   P2FinalExam: P2FinalExam_slides,
   P2M5L1: P2M5L1_slides,
   P2M5L2: P2M5L2_slides,
+  // Level 3 — 加強酒與特殊風格深探
+  P3M1L1: P3M1L1_slides,
+  P3M1L2: P3M1L2_slides,
+  P3M1L3: P3M1L3_slides,
+  P3M1L4: P3M1L4_slides,
+  P3M2L1: P3M2L1_slides,
+  P3M2L2: P3M2L2_slides,
+  P3M2L3: P3M2L3_slides,
+  P3M3L1: P3M3L1_slides,
+  P3M3L2: P3M3L2_slides,
+  P3M3L3: P3M3L3_slides,
+  P3M4L1: P3M4L1_slides,
+  P3M4L2: P3M4L2_slides,
+  P3M4L3: P3M4L3_slides,
+  P3FinalExam: P3FinalExam_slides,
   // Level 4 — 大師品鑑與垂直年份
   P4M1L1: P4M1L1_slides,
   P4M1L2: P4M1L2_slides,
