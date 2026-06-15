@@ -637,6 +637,145 @@ export const G1M4L1 = {
   ]
 }
 
+export const G1FinalExam = {
+  lessonId: 'G1FinalExam',
+  title: 'Level 1 綜合評量',
+  description: '測驗 Level 1 所有核心知識：產區地理、Prädikat 分級、品種認識、酒標解讀與餐酒搭配',
+  objectives: ['驗證 Level 1 全部學習成果', '準備進入 Level 2 進階產區探索'],
+  isFinalExam: true,
+  slides: [
+    {
+      type: 'title',
+      title: 'Level 1 綜合評量',
+      subtitle: '德國葡萄酒入門知識全面測驗',
+      background: '#2c3e50'
+    },
+    {
+      type: 'list',
+      title: '📋 評量範圍',
+      items: [
+        { icon: '🌍', text: '第一章：德國葡萄酒概論（地位、分級制度、13 大產區）' },
+        { icon: '🍇', text: '第二章：核心品種認識（Riesling、白葡萄品種、紅葡萄品種）' },
+        { icon: '🏷️', text: '第三章：德國酒標解讀（酒標要素、Prädikat 甜度六級、VDP）' },
+        { icon: '🍽️', text: '第四章：德式餐酒搭配入門（配對原則、甜度矩陣）' }
+      ]
+    },
+    {
+      type: 'quiz',
+      title: '📋 第一部分：產區與分級制度（5 題）',
+      questions: [
+        {
+          question: '德國共有幾個法定葡萄酒產區（Anbaugebiete）？',
+          options: ['9 個', '11 個', '13 個', '17 個'],
+          answer: 2,
+          explanation: '德國共有 13 個官方法定葡萄酒產區（Anbaugebiete），從北到南橫跨不同氣候帶，以萊茵河及其支流流域為主。'
+        },
+        {
+          question: '德國 QbA 等級葡萄酒允許哪項釀造操作，而 QmP 等級不允許？',
+          options: ['橡木桶陳年', '加糖（Chaptalization）', '混調不同品種', '提早採收'],
+          answer: 1,
+          explanation: 'QbA（特定產區優質葡萄酒）允許加糖（Chaptalization）以提高酒精度，而 QmP（Qualitätswein mit Prädikat）嚴格禁止加糖，完全依賴葡萄自然糖分。'
+        },
+        {
+          question: 'Prädikat 系統中，哪個等級的採收葡萄必須完全天然冰凍（不能使用貴腐菌）？',
+          options: ['Beerenauslese', 'Trockenbeerenauslese', 'Eiswein', 'Auslese'],
+          answer: 2,
+          explanation: 'Eiswein（冰酒）必須使用健康、未受貴腐菌感染的葡萄，在 -8°C 以下天然冰凍後採收。事實上，貴腐菌（Botrytis）對 Eiswein 有害，會破壞冰凍效果。TBA 才是需要貴腐菌的等級。'
+        },
+        {
+          question: '以下哪個德國產區以種植 Spätburgunder（黑皮諾）紅酒聞名，且地處德國最北？',
+          options: ['Pfalz', 'Baden', 'Ahr', 'Württemberg'],
+          answer: 2,
+          explanation: 'Ahr 位於德國北部（北緯 50.5 度），以頂級 Spätburgunder 紅酒著稱，是世界最北緯的優質紅酒產區之一。陡峭 V 字型峽谷創造出溫暖微氣候，使黑皮諾能夠完全成熟。'
+        },
+        {
+          question: '德國面積最大的葡萄酒產區是？',
+          options: ['Pfalz', 'Baden', 'Rheinhessen', 'Mosel'],
+          answer: 2,
+          explanation: 'Rheinhessen 是德國面積最大的葡萄酒產區，超過 27,000 公頃，種植品種最為多元。雖然過去以大量生產日常白酒聞名，但近年來新生代酒莊（Keller、Wittmann 等）徹底改變了形象。'
+        }
+      ]
+    },
+    {
+      type: 'quiz',
+      title: '📋 第二部分：品種與酒標（5 題）',
+      questions: [
+        {
+          question: 'Riesling 陳年後出現的「汽油礦石香氣」是由哪種化合物形成？',
+          options: ['乙酸乙酯', 'TDN（三甲基二氫萘）', '硫化氫', '丁二酸二乙酯'],
+          answer: 1,
+          explanation: 'TDN（1,1,6-三甲基-1,2-二氫萘）是 Riesling 陳年後特有的「汽油礦石香氣」來源，被視為頂級 Riesling 成熟的標誌而非缺陷。在 Mosel 板岩土壤的 Riesling 中尤為明顯。'
+        },
+        {
+          question: 'Silvaner 在 Franken 產區最具代表性的包裝特色是什麼？',
+          options: ['綠色高瓶（Alsace 瓶型）', '扁圓形 Bocksbeutel 瓶', '黑色磨砂玻璃瓶', '紅蠟封口傳統'],
+          answer: 1,
+          explanation: 'Franken 產區的 Silvaner 使用獨特的扁圓形 Bocksbeutel 瓶，這是歐盟保護的地理標誌，僅限 Franken 及少數其他產區使用。Silvaner 在此展現最佳的礦物感與大地氣息。'
+        },
+        {
+          question: '德國酒標上「Erzeugerabfüllung」或「Gutsabfüllung」表示什麼？',
+          options: ['這款酒使用橡木桶陳年', '酒莊自行採收並裝瓶（品質保證）', '這款酒通過有機認證', '產自單一葡萄園'],
+          answer: 1,
+          explanation: '「Erzeugerabfüllung」（生產者裝瓶）或「Gutsabfüllung」（莊園裝瓶）表示這款酒由釀造者本身裝瓶，而非交由大型酒商裝瓶，是品質的重要保證標誌。'
+        },
+        {
+          question: 'Dornfelder 在德國主要種植於哪個產區？',
+          options: ['Mosel', 'Ahr', 'Pfalz 和 Rheinhessen', 'Rheingau'],
+          answer: 2,
+          explanation: 'Dornfelder 是 1956 年育成的德國本土紅品種，以深色澤（幾乎不透光）和黑莓可可香氣著稱，主要集中在 Pfalz 和 Rheinhessen 兩大產區。'
+        },
+        {
+          question: 'VDP 的最高等級葡萄園（Grosse Lage）釀造的乾型白酒稱為？',
+          options: ['Auslese Trocken', 'Grosses Gewächs（GG）', 'Grand Cru Sec', 'Kabinett GG'],
+          answer: 1,
+          explanation: 'VDP Grosse Lage（頂級葡萄園）的乾型白酒稱為 Grosses Gewächs（簡稱 GG），是德國乾型白酒的最高等級，相當於布根地的 Grand Cru，手工採收、低產量（Riesling ≤50 hL/ha）。'
+        }
+      ]
+    },
+    {
+      type: 'quiz',
+      title: '📋 第三部分：產區特色與餐酒搭配（5 題）',
+      questions: [
+        {
+          question: 'Mosel 板岩土壤最重要的功能是？',
+          options: ['提供豐富氮磷養分', '白天吸熱夜晚緩慢釋放並反射光線', '保持大量水分防止乾旱', '增加土壤 pH 值'],
+          answer: 1,
+          explanation: 'Mosel 的板岩（Schiefer）土壤導熱性好，白天強烈吸收太陽熱能，夜晚緩慢釋放，配合河水反射的陽光，讓葡萄在北緯 50 度也能優雅成熟——這正是 Mosel Riesling 極低酒精（7-9%）卻充分成熟的秘密。'
+        },
+        {
+          question: 'Rheingau 的 Schloss Johannisberg 在 1775 年因信使延誤創造了什麼歷史？',
+          options: ['德國第一瓶氣泡酒', '史上第一瓶有記錄的 Spätlese', '第一瓶 TBA 甜酒', '第一個 VDP 認證'],
+          answer: 1,
+          explanation: '1775 年，Schloss Johannisberg 的採收許可信使延誤，葡萄因此過熟，修道院照常採收後，意外釀出了史上第一瓶有文獻記錄的 Spätlese，開創了德國晚採葡萄酒的傳統。'
+        },
+        {
+          question: 'Franken 最具代表性的白葡萄品種是？',
+          options: ['Riesling', 'Müller-Thurgau', 'Silvaner', 'Grauburgunder'],
+          answer: 2,
+          explanation: 'Silvaner 是 Franken 的靈魂品種，以貝殼石灰岩（Muschelkalk）土壤賦予的礦物感著稱。頂級老藤 Silvaner GG 是德國最被低估的頂級白酒之一，以扁圓形 Bocksbeutel 瓶裝瓶。'
+        },
+        {
+          question: '搭配德國白蘆筍（Weißer Spargel）最傳統的葡萄酒選擇是？',
+          options: ['Mosel Riesling TBA', 'Ahr Spätburgunder 紅酒', 'Franken Silvaner Trocken', 'Pfalz Gewürztraminer'],
+          answer: 2,
+          explanation: 'Franken Silvaner Trocken 是德國白蘆筍的傳統配對，兩者同為 Franken 文化象徵。Silvaner 的乾爽礦物感與白蘆筍的苦甘滋味相得益彰，是德國飲食文化中最具代表性的地方配對。'
+        },
+        {
+          question: '搭配泰式麻辣料理，Riesling 甜度應選擇哪個等級最適合？',
+          options: ['Kabinett（極輕甜或不甜）', 'Auslese（中高甜度）', 'Trocken（完全不甜）', 'Eiswein（極甜）'],
+          answer: 1,
+          explanation: '搭配辛辣料理時，Riesling Auslese 的甜度能有效中和口腔辣感灼熱，高酸度清洗味蕾，豐潤果香與泰式香料形成美妙共鳴。這也是亞洲頂級餐廳侍酒師的常用技巧。'
+        }
+      ]
+    },
+    {
+      type: 'content',
+      title: '🎉 Level 1 評量完成！',
+      content: '恭喜完成德國葡萄酒 Level 1 全部課程與評量！\n\n您已掌握：\n• 德國 13 個 Anbaugebiete 產區地理概覽\n• QbA / QmP / Prädikat 六級分級制度\n• Riesling 的風土差異與陳年特性\n• Müller-Thurgau、Silvaner、Grauburgunder 等白葡萄品種\n• Spätburgunder、Dornfelder、Lemberger 等紅葡萄品種\n• 德國酒標解讀與 VDP 分級\n• Riesling 甜度配餐矩陣\n\n現在解鎖 Level 2——深入 13 大 Anbaugebiete 每個產區的風土、Einzellage 頂級葡萄園與名莊年份！'
+    }
+  ]
+}
+
 // ── Level 2 代表性 slide（其他課使用 fallback） ─────────────────────────────
 
 export const G2M1L1 = {
@@ -2447,7 +2586,7 @@ export function getLesson(lessonId) {
     G1M1L1, G1M1L2, G1M1L3,
     G1M2L1, G1M2L2, G1M2L3,
     G1M3L1, G1M3L2, G1M3L3,
-    G1M4L1,
+    G1M4L1, G1FinalExam,
     G2M1L1,
     G2M1L2, G2M1L3, G2M1L4,
     G2M2L1, G2M2L2, G2M2L3, G2M2L4,

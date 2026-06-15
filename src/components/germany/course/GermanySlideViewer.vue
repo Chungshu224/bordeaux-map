@@ -143,6 +143,9 @@ const slides = computed(() => {
         passScore: 80,
         questions: pickRandom(bank, Math.min(20, bank.length))
       })
+    } else {
+      // quiz-bank.json 不存在時，使用課程內嵌的 quiz / content 投影片
+      arr.push(...lessonSlides.filter(s => s.type !== 'title' && s.type !== 'list'))
     }
     return arr
   }
