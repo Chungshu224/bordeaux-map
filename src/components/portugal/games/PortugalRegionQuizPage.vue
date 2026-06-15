@@ -20,6 +20,17 @@
               <li>3 個選項</li>
             </ul>
           </div>
+          <div class="diff-card medium" @click="startGame('medium')">
+            <div class="diff-icon">🍇</div>
+            <div class="diff-name">中等</div>
+            <div class="diff-desc">北部 / 中部 / Alentejo / 南+島</div>
+            <ul class="diff-list">
+              <li>含 Alentejo 8 子產區</li>
+              <li>⏱ 每題 3.5 秒</li>
+              <li>共 18 題</li>
+              <li>4 個選項</li>
+            </ul>
+          </div>
           <div class="diff-card hard" @click="startGame('hard')">
             <div class="diff-icon">🔥</div>
             <div class="diff-name">困難</div>
@@ -50,6 +61,7 @@
             <span class="lb-title">🏅 排行榜</span>
             <div class="lb-tabs">
               <button :class="{ active: lbTab==='easy' }" @click="setLbTab('easy')">簡單</button>
+              <button :class="{ active: lbTab==='medium' }" @click="setLbTab('medium')">中等</button>
               <button :class="{ active: lbTab==='hard' }" @click="setLbTab('hard')">困難</button>
             </div>
           </div>
@@ -141,7 +153,7 @@
           <div class="chip">{{ correctCount }}/{{ questions.length }} 答對</div>
           <div class="chip">正確率 {{ Math.round(correctCount / questions.length * 100) }}%</div>
           <div class="chip">最高連勝 {{ maxStreak }}</div>
-          <div class="chip">{{ difficulty === 'easy' ? '🥂 簡單' : '🔥 困難' }}</div>
+          <div class="chip">{{ difficulty === 'easy' ? '🥂 簡單' : difficulty === 'medium' ? '🍇 中等' : '🔥 困難' }}</div>
         </div>
         <div v-if="wrongList.length" class="wrong-review">
           <h4>📋 複習一下</h4>
@@ -176,6 +188,13 @@ const EASY_ZONES = [
   { key: 'south',  label: '南部',   icon: '☀️', cls: 'south'  },
 ]
 
+const MEDIUM_ZONES = [
+  { key: 'norte',    label: '北部',     icon: '🌿', cls: 'north'    },
+  { key: 'centro',   label: '中部',     icon: '🏔️', cls: 'center'   },
+  { key: 'alentejo', label: '阿連特茹', icon: '☀️', cls: 'alentejo' },
+  { key: 'sul_ilha', label: '南部+島嶼', icon: '🌊', cls: 'islands'  },
+]
+
 const HARD_ZONES = [
   { key: 'minho',      label: '米尼奧',     icon: '🌿', cls: 'minho'    },
   { key: 'douro',      label: '杜羅河谷',   icon: '🍷', cls: 'douro'    },
@@ -207,6 +226,41 @@ const REGIONS_EASY = [
   // 島嶼（簡單模式歸南部）
   { namePt: 'Madeira',              nameZh: '馬德拉',     zone: 'south',  hint: '大西洋島嶼，氧化加熱工藝傳奇' },
   { namePt: 'Açores',               nameZh: '亞速爾',     zone: 'south',  hint: '火山玄武岩土壤，全球最特殊產地' },
+]
+
+// ── Medium 題庫：Norte / Centro / Alentejo（含子產區）/ Sul+Ilhas ──────────
+const REGIONS_MEDIUM = [
+  // Norte
+  { namePt: 'Vinho Verde',        nameZh: '綠酒',         zone: 'norte',    hint: '最大 DOC，9 個子產區，微氣泡清爽' },
+  { namePt: 'Monção e Melgaço',   nameZh: '蒙桑梅爾加索', zone: 'norte',    hint: 'Alvarinho 頂級子產區，豐富複雜' },
+  { namePt: 'Lima',               nameZh: '利馬（VV）',   zone: 'norte',    hint: 'Loureiro 花香白酒，利馬河流域' },
+  { namePt: 'Cávado',             nameZh: '卡瓦多（VV）', zone: 'norte',    hint: '布拉加周邊，Arinto/Pedernã 高酸白酒' },
+  { namePt: 'Ave',                nameZh: '阿維（VV）',   zone: 'norte',    hint: 'Azal Branco，柑橘高酸，Guimarães 附近' },
+  { namePt: 'Baião',              nameZh: '拜昂（VV）',   zone: 'norte',    hint: 'Avesso 品種，豐厚蜂蜜感，杜羅河北岸' },
+  { namePt: 'Douro',              nameZh: '杜羅',         zone: 'norte',    hint: '世界文化遺產梯田，波特酒與干型紅酒' },
+  { namePt: 'Trás-os-Montes',     nameZh: '特拉斯山地',  zone: 'norte',    hint: '東北偏遠山區，大陸型氣候，古老土著品種' },
+  // Centro
+  { namePt: 'Dão',                nameZh: '道',           zone: 'centro',   hint: '花崗岩土壤，優雅 Touriga Nacional 與 Encruzado' },
+  { namePt: 'Bairrada',           nameZh: '拜哈達',       zone: 'centro',   hint: '黏土石灰岩，高酸 Baga，傳統法 Espumante' },
+  { namePt: 'Lisboa',             nameZh: '里斯本',       zone: 'centro',   hint: '首都附近，9 個子產區，大西洋涼風' },
+  { namePt: 'Tejo',               nameZh: '特茹',         zone: 'centro',   hint: '泰加斯河流域，Fernão Pires 白酒' },
+  { namePt: 'Bucelas',            nameZh: '布塞拉斯',     zone: 'centro',   hint: '里斯本北方，Arinto 高酸白酒，威靈頓公爵最愛' },
+  { namePt: 'Colares',            nameZh: '科拉雷斯',     zone: 'centro',   hint: '大西洋砂丘，未嫁接老藤 Ramisco，超稀有' },
+  { namePt: 'Setúbal',            nameZh: '塞圖巴爾半島', zone: 'centro',   hint: 'Moscatel de Setúbal 加烈甜酒，橙花蜂蜜香' },
+  // Alentejo 主體 + 8 個子產區
+  { namePt: 'Alentejo',           nameZh: '阿連特茹',     zone: 'alentejo', hint: '南部廣袤高原，現代農莊紅酒，最大出口產區' },
+  { namePt: 'Borba',              nameZh: '波爾巴',       zone: 'alentejo', hint: '大理石小鎮，石灰岩土壤，Alentejo 中部' },
+  { namePt: 'Évora',              nameZh: '埃武拉',       zone: 'alentejo', hint: 'UNESCO 世界遺產古城，Alentejo 首府，Esporão 酒莊' },
+  { namePt: 'Portalegre',         nameZh: '波塔萊格里',   zone: 'alentejo', hint: '花崗岩土壤，最涼爽子產區，優雅紅酒' },
+  { namePt: 'Reguengos',          nameZh: '雷格若斯',     zone: 'alentejo', hint: 'Esporão 有機葡萄園，Alicante Bouschet 佳作' },
+  { namePt: 'Vidigueira',         nameZh: '維迪蓋拉',     zone: 'alentejo', hint: '達伽馬故鄉，白酒表現最佳，大西洋海風降溫' },
+  { namePt: 'Moura',              nameZh: '莫拉',         zone: 'alentejo', hint: '最炎熱子產區，Talha 陶甕古法，橄欖油產地' },
+  { namePt: 'Redondo',            nameZh: '雷東多',       zone: 'alentejo', hint: '埃武拉南方，Aragonez 主產，合作社性價比高' },
+  { namePt: 'Grândola',           nameZh: '格蘭多拉',     zone: 'alentejo', hint: '最接近大西洋，革命歌曲故鄉，白酒和粉紅酒' },
+  // Sul + Ilhas
+  { namePt: 'Algarve',            nameZh: '阿爾加維',     zone: 'sul_ilha', hint: '最南端，四個 DOC，地中海氣候，觀光勝地' },
+  { namePt: 'Madeira',            nameZh: '馬德拉',       zone: 'sul_ilha', hint: '大西洋島嶼，Estufagem 加熱氧化，百年陳年' },
+  { namePt: 'Açores',             nameZh: '亞速爾',       zone: 'sul_ilha', hint: '火山玄武岩土壤，Pico 島 UNESCO，Arinto dos Açores' },
 ]
 
 const REGIONS_HARD = [
@@ -267,7 +321,11 @@ const playCount    = ref(parseInt(localStorage.getItem('pt_region_quiz_count') |
 
 let timerInterval = null
 
-const zones = computed(() => difficulty.value === 'easy' ? EASY_ZONES : HARD_ZONES)
+const zones = computed(() =>
+  difficulty.value === 'easy' ? EASY_ZONES
+  : difficulty.value === 'medium' ? MEDIUM_ZONES
+  : HARD_ZONES
+)
 const currentQ = computed(() => questions.value[currentIdx.value])
 const timerPct = computed(() => (timer.value / timerMax.value) * 100)
 const timerColor = computed(() => {
@@ -296,7 +354,7 @@ const resultEmoji = computed(() => {
 })
 
 function zoneLabel(key) {
-  return [...EASY_ZONES, ...HARD_ZONES].find(z => z.key === key)?.label || key
+  return [...EASY_ZONES, ...MEDIUM_ZONES, ...HARD_ZONES].find(z => z.key === key)?.label || key
 }
 
 function feedbackBtnClass(key) {
@@ -315,8 +373,8 @@ function shuffle(arr) {
 
 function startGame(diff) {
   difficulty.value = diff
-  const pool = diff === 'easy' ? REGIONS_EASY : REGIONS_HARD
-  const count = diff === 'easy' ? 15 : 20
+  const pool = diff === 'easy' ? REGIONS_EASY : diff === 'medium' ? REGIONS_MEDIUM : REGIONS_HARD
+  const count = diff === 'easy' ? 15 : diff === 'medium' ? 18 : 20
   questions.value = shuffle(pool).slice(0, count)
   currentIdx.value = 0
   score.value = 0
@@ -324,7 +382,7 @@ function startGame(diff) {
   maxStreak.value = 0
   correctCount.value = 0
   wrongList.value = []
-  timerMax.value = diff === 'easy' ? 4 : 3
+  timerMax.value = diff === 'easy' ? 4 : diff === 'medium' ? 3.5 : 3
   phase.value = 'playing'
   startTimer()
 }
@@ -461,7 +519,7 @@ onMounted(() => loadLeaderboard('easy'))
 .title { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 700; text-align: center; }
 .subtitle { color: rgba(255,255,255,0.7); text-align: center; }
 
-.diff-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: 100%; }
+.diff-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; width: 100%; }
 .diff-card {
   border-radius: 16px; padding: 1.5rem; cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -469,6 +527,7 @@ onMounted(() => loadLeaderboard('easy'))
 }
 .diff-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
 .diff-card.easy { background: linear-gradient(135deg, #1a5c1a, #2d8f2d); }
+.diff-card.medium { background: linear-gradient(135deg, #5c4a1a, #8B6520); }
 .diff-card.hard { background: linear-gradient(135deg, #5c1a1a, #8B2020); }
 .diff-icon { font-size: 2.5rem; }
 .diff-name { font-size: 1.3rem; font-weight: 700; }
@@ -476,6 +535,7 @@ onMounted(() => loadLeaderboard('easy'))
 .diff-list { list-style: none; padding: 0; margin: 0.5rem 0 0; text-align: left; }
 .diff-list li { font-size: 0.85rem; padding: 2px 0; }
 .diff-list li::before { content: '• '; color: #e8c060; }
+@media (max-width: 600px) { .diff-cards { grid-template-columns: 1fr; } }
 
 .stats-preview {
   display: flex; gap: 2rem;

@@ -20,6 +20,17 @@
               <li>含提示說明</li>
             </ul>
           </div>
+          <div class="diff-card medium" @click="startGame('medium')">
+            <div class="diff-icon">🍇</div>
+            <div class="diff-name">中等</div>
+            <div class="diff-desc">VV 子產區 + Alentejo 子產區</div>
+            <ul class="diff-list">
+              <li>4 個選項</li>
+              <li>⏱ 每題 6 秒</li>
+              <li>共 14 題</li>
+              <li>Alvarinho 風土互動</li>
+            </ul>
+          </div>
           <div class="diff-card hard" @click="startGame('hard')">
             <div class="diff-icon">🔥</div>
             <div class="diff-name">困難</div>
@@ -50,6 +61,7 @@
             <span class="lb-title">🏅 排行榜</span>
             <div class="lb-tabs">
               <button :class="{ active: lbTab==='easy' }" @click="setLbTab('easy')">簡單</button>
+              <button :class="{ active: lbTab==='medium' }" @click="setLbTab('medium')">中等</button>
               <button :class="{ active: lbTab==='hard' }" @click="setLbTab('hard')">困難</button>
             </div>
           </div>
@@ -143,7 +155,7 @@
           <div class="chip">{{ correctCount }}/{{ questions.length }} 答對</div>
           <div class="chip">正確率 {{ Math.round(correctCount / questions.length * 100) }}%</div>
           <div class="chip">最高連勝 {{ maxStreak }}</div>
-          <div class="chip">{{ difficulty === 'easy' ? '🌊 簡單' : '🔥 困難' }}</div>
+          <div class="chip">{{ difficulty === 'easy' ? '🌊 簡單' : difficulty === 'medium' ? '🍇 中等' : '🔥 困難' }}</div>
         </div>
         <div v-if="wrongList.length" class="wrong-review">
           <h4>📋 複習一下</h4>
@@ -327,14 +339,121 @@ const ALL_CARDS = [
       { icon: '💎', text: 'Alvarinho 在此呈現豐富複雜、濃縮風格' },
     ],
   },
+  // ── Medium 專屬：Alvarinho / Vinho Verde 子產區 + Alentejo 子產區 ──────────
+  {
+    region: 'Monção e Melgaço', regionZh: '蒙桑梅爾加索', medium: true,
+    clues: [
+      { icon: '💎', text: 'VV 最貴子產區，Alvarinho 豐富複雜，陳年潛力強' },
+      { icon: '🌊', text: 'Minho 河南岸，西班牙 Rías Baixas 隔河相望' },
+      { icon: '🌡️', text: '比 VV 其他子產區更溫暖且乾燥，Alvarinho 成熟度更高' },
+    ],
+  },
+  {
+    region: 'Lima', regionZh: '利馬（VV）', medium: true,
+    clues: [
+      { icon: '🌸', text: 'Loureiro 葡萄的核心產地，玫瑰花香、草本、茴香' },
+      { icon: '🌊', text: '利馬河流域，大西洋影響最強，VV 最潮濕子產區之一' },
+      { icon: '🏘️', text: 'Viana do Castelo 港城附近，Minho 省南部' },
+    ],
+  },
+  {
+    region: 'Cávado', regionZh: '卡瓦多（VV）', medium: true,
+    clues: [
+      { icon: '🏙️', text: '布拉加（Braga）大城周邊，VV 產量前三的子產區' },
+      { icon: '🍇', text: 'Arinto/Pedernã 為主，礦物清爽，高酸度白酒' },
+      { icon: '🌧️', text: '葡萄牙年降雨量最高的產酒區之一，超過 1,500mm' },
+    ],
+  },
+  {
+    region: 'Ave', regionZh: '阿維（VV）', medium: true,
+    clues: [
+      { icon: '🍋', text: 'Azal Branco 品種，柑橘綠檸檬香氣，酸度極高' },
+      { icon: '🏭', text: '紡織工業重鎮 Guimarães（葡萄牙發源地）周邊' },
+      { icon: '💧', text: '清爽輕盈，微氣泡保留得比其他子產區更明顯' },
+    ],
+  },
+  {
+    region: 'Baião', regionZh: '拜昂（VV）', medium: true,
+    clues: [
+      { icon: '🍯', text: 'Avesso 品種，豐厚帶蜂蜜柑橘，酒體最重的 VV 子產區' },
+      { icon: '🏔️', text: '杜羅河北岸山地，海拔 200–400m，大陸氣候影響更明顯' },
+      { icon: '🌟', text: '近年精品酒莊崛起，被視為最具潛力的特色 VV 子產區' },
+    ],
+  },
+  {
+    region: 'Borba', regionZh: '波爾巴（Alentejo）', medium: true,
+    clues: [
+      { icon: '⬜', text: '大理石小鎮，土壤含高比例白色石灰岩，Alentejo 中部' },
+      { icon: '🍷', text: 'Aragonez 和 Alicante Bouschet 主產，豐厚紅酒' },
+      { icon: '🏰', text: '與 Estremoz、Évora 相鄰，Alentejo 歷史文化核心地帶' },
+    ],
+  },
+  {
+    region: 'Évora', regionZh: '埃武拉（Alentejo）', medium: true,
+    clues: [
+      { icon: '🏛️', text: 'UNESCO 世界遺產城市，古羅馬神廟聳立其中' },
+      { icon: '🌿', text: '阿連特茹首府，橄欖樹與葡萄藤交錯的典型景觀' },
+      { icon: '🏆', text: 'Esporão 總部所在地，Alentejo 最具代表性酒莊' },
+    ],
+  },
+  {
+    region: 'Portalegre', regionZh: '波塔萊格里（Alentejo）', medium: true,
+    clues: [
+      { icon: '🏔️', text: '聖曼曼德山（Serra de S. Mamede）山腳，Alentejo 最涼爽子產區' },
+      { icon: '⚪', text: '花崗岩土壤（其他 Alentejo 多為黏土石英），風格截然不同' },
+      { icon: '🍷', text: '可釀出優雅細膩紅酒，不同於典型 Alentejo 濃郁風格' },
+    ],
+  },
+  {
+    region: 'Reguengos', regionZh: '雷格若斯（Alentejo）', medium: true,
+    clues: [
+      { icon: '🌡️', text: 'Alentejo 最炎熱子產區之一，夏季動輒 40+°C' },
+      { icon: '🏆', text: 'Herdade do Esporão 酒莊主力葡萄園，葡萄牙有機酒標竿' },
+      { icon: '🍇', text: 'Alicante Bouschet 在此表現絕佳，深色果香，酒體飽滿' },
+    ],
+  },
+  {
+    region: 'Vidigueira', regionZh: '維迪蓋拉（Alentejo）', medium: true,
+    clues: [
+      { icon: '🌬️', text: 'Alentejo 最南方，大西洋海風降溫，氣候比內陸涼爽' },
+      { icon: '⬜', text: '石灰岩和片岩並存，白酒和粉紅酒表現尤為優秀' },
+      { icon: '🔭', text: '航海家達伽馬（Vasco da Gama）的出生地' },
+    ],
+  },
+  {
+    region: 'Moura', regionZh: '莫拉（Alentejo）', medium: true,
+    clues: [
+      { icon: '🌡️', text: 'Alentejo 最炎熱最乾燥的子產區，夏季可達 45°C' },
+      { icon: '🏺', text: 'Talha（陶甕）古法釀造復興運動的重要據點' },
+      { icon: '🫒', text: '橄欖油重要產地，葡萄與橄欖並重，近阿爾加維邊界' },
+    ],
+  },
+  {
+    region: 'Redondo', regionZh: '雷東多（Alentejo）', medium: true,
+    clues: [
+      { icon: '🏛️', text: '埃武拉南方石礦古鎮，花崗岩與片岩相間土壤' },
+      { icon: '🍇', text: 'Aragonez（Tempranillo）為主，豐厚深色果味紅酒' },
+      { icon: '🤝', text: 'Adega de Redondo 合作社出產許多性價比極佳的優質酒款' },
+    ],
+  },
+  {
+    region: 'Grândola', regionZh: '格蘭多拉（Alentejo）', medium: true,
+    clues: [
+      { icon: '🌊', text: '最接近大西洋的 Alentejo 子產區，受海風顯著降溫' },
+      { icon: '🌡️', text: '比 Alentejo 內陸涼爽，白酒和粉紅酒的明日之星' },
+      { icon: '🎵', text: '1974 年康乃馨革命訊號曲《Grândola Vila Morena》的故鄉' },
+    ],
+  },
 ]
 
 // 每題從同一難度的產區裡隨機抽 3 個錯誤選項
 function buildQuestions(diff) {
   const pool = diff === 'easy'
     ? ALL_CARDS.filter(c => c.easy)
-    : ALL_CARDS
-  const count = diff === 'easy' ? 12 : 16
+    : diff === 'medium'
+      ? ALL_CARDS.filter(c => c.medium)
+      : ALL_CARDS
+  const count = diff === 'easy' ? 12 : diff === 'medium' ? 14 : 16
   const shuffled = shuffle([...pool]).slice(0, count)
   return shuffled.map(card => {
     const distractors = shuffle(pool.filter(c => c.region !== card.region)).slice(0, 3)
@@ -424,7 +543,7 @@ function startGame(diff) {
   maxStreak.value = 0
   correctCount.value = 0
   wrongList.value = []
-  timerMax.value = diff === 'easy' ? 8 : 5
+  timerMax.value = diff === 'easy' ? 8 : diff === 'medium' ? 6 : 5
   phase.value = 'playing'
   startTimer()
 }
@@ -555,7 +674,7 @@ onMounted(() => loadLeaderboard('easy'))
 .title { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 700; text-align: center; }
 .subtitle { color: rgba(255,255,255,0.7); text-align: center; }
 
-.diff-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: 100%; }
+.diff-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; width: 100%; }
 .diff-card {
   border-radius: 16px; padding: 1.5rem; cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -563,6 +682,7 @@ onMounted(() => loadLeaderboard('easy'))
 }
 .diff-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
 .diff-card.easy { background: linear-gradient(135deg, #0d3b6e, #1a5276); }
+.diff-card.medium { background: linear-gradient(135deg, #1a5c2e, #0d7a3e); }
 .diff-card.hard { background: linear-gradient(135deg, #4a0a0a, #8B1010); }
 .diff-icon { font-size: 2.5rem; }
 .diff-name { font-size: 1.3rem; font-weight: 700; }
@@ -570,6 +690,7 @@ onMounted(() => loadLeaderboard('easy'))
 .diff-list { list-style: none; padding: 0; margin: 0.5rem 0 0; text-align: left; }
 .diff-list li { font-size: 0.85rem; padding: 2px 0; }
 .diff-list li::before { content: '• '; color: #e8c060; }
+@media (max-width: 600px) { .diff-cards { grid-template-columns: 1fr; } }
 
 .stats-preview {
   display: flex; gap: 2rem;
