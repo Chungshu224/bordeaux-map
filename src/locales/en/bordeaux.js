@@ -294,6 +294,10 @@ export default {
       hardName:  'Hard',
       hardDesc:  'Identify Bank + AOC + 1855 Classification',
       hardItems: ['4 combo options', '28 seconds', '10 questions', 'Max 1000 pts'],
+      wrongReview:  '📖 Wrong Answer Review',
+      questionEasy: 'Identify: Which Bank + Major AOC?',
+      questionMed:  'Identify: Which Bank + Village AOC?',
+      questionHard: 'Identify: Which Bank + AOC + 1855 Classification?',
     },
     common: {
       leaderboard:   '🏅 Leaderboard',
