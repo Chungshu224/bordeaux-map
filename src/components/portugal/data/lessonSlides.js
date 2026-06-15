@@ -1287,6 +1287,1225 @@ const P2M5L2_slides = [
   },
 ]
 
+// P2M1L3 — Vinho Verde 深度：Alvarinho 與 9 個子產區
+const P2M1L3_slides = [
+  {
+    type: 'cover',
+    icon: '🌿',
+    gradient: 'linear-gradient(135deg, #006600, #27ae60)',
+    title: 'Vinho Verde 深度：Alvarinho 與 9 個子產區',
+    subtitle: 'Level 2 · 北部產區',
+    points: [
+      { icon: '⭐', label: 'Alvarinho 聖地', text: 'Monção 與 Melgaço 是 Alvarinho 最頂級子產區，品質可比加利西亞 Rías Baixas' },
+      { icon: '🗺️', label: '9 個子產區', text: '各有主導品種，從花香 Loureiro 到深色 Vinhão，風格迥異' },
+      { icon: '💧', label: '微氣泡特色', text: '傳統上保留少量 CO₂ 增鮮活感，是 Vinho Verde 標誌性特色' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '⭐',
+    title: 'Monção 與 Melgaço：Alvarinho 的巔峰之地',
+    html: `
+      <p><strong>Monção</strong> 和 <strong>Melgaço</strong> 是 Vinho Verde DOC 中最頂級的兩個子產區，緊鄰西班牙 Rías Baixas（Albariño 的故鄉）。</p>
+      <h4>🌡️ 微氣候優勢</h4>
+      <ul>
+        <li>位於 Minho 河沿岸，受山脈阻擋，夏季較其他 Vinho Verde 子產區更<strong>溫暖乾燥</strong></li>
+        <li>年雨量 800–1,000mm（低於 Minho 其他地區），有利 Alvarinho 充分成熟</li>
+        <li>花崗岩土壤：賦予礦物質感和清爽酸度</li>
+      </ul>
+      <h4>🍾 Alvarinho 的頂級表現</h4>
+      <ul>
+        <li>比一般 Vinho Verde 更<strong>濃郁豐滿</strong>，酒精度通常達 12–13%</li>
+        <li>香氣：桃子、杏桃、柑橘、熱帶水果，帶明顯礦物質感</li>
+        <li>可以<strong>橡木桶陳年</strong>，發展奶油核果複雜度（高端款）</li>
+        <li>陳年潛力 3–8 年，頂級款可達 10 年以上</li>
+      </ul>
+      <h4>🏆 知名酒莊</h4>
+      <ul>
+        <li><strong>Soalheiro</strong>：Monção 最知名，Alvarinho 單品種標竿</li>
+        <li><strong>Anselmo Mendes</strong>：現代風格先驅，亦生產橡木桶版</li>
+        <li><strong>Quinta de Santiago</strong>：傳統風格代表</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Vinho Verde 9 個子產區概覽',
+    html: `
+      <table style="width:100%;border-collapse:collapse;font-size:0.88em">
+        <tr style="background:#006600;color:white">
+          <th style="padding:7px;text-align:left">子產區</th>
+          <th style="padding:7px;text-align:left">主要品種</th>
+          <th style="padding:7px;text-align:left">風格特色</th>
+        </tr>
+        <tr style="background:#f0f9f0">
+          <td style="padding:6px"><strong>Monção / Melgaço</strong> ⭐</td>
+          <td style="padding:6px">Alvarinho</td>
+          <td style="padding:6px">最濃郁、最可陳年的頂級白酒</td>
+        </tr>
+        <tr>
+          <td style="padding:6px"><strong>Lima</strong></td>
+          <td style="padding:6px">Loureiro・Arinto</td>
+          <td style="padding:6px">花香突出，帶月桂樹和蜂蜜</td>
+        </tr>
+        <tr style="background:#f0f9f0">
+          <td style="padding:6px"><strong>Cávado</strong></td>
+          <td style="padding:6px">Arinto・Loureiro</td>
+          <td style="padding:6px">清爽高酸，典型大西洋風格</td>
+        </tr>
+        <tr>
+          <td style="padding:6px"><strong>Ave</strong></td>
+          <td style="padding:6px">Trajadura・Loureiro</td>
+          <td style="padding:6px">輕盈芳香，柑橘調性</td>
+        </tr>
+        <tr style="background:#f0f9f0">
+          <td style="padding:6px"><strong>Amarante</strong></td>
+          <td style="padding:6px">Azal・Arinto</td>
+          <td style="padding:6px">最高酸度之一，礦物質突出</td>
+        </tr>
+        <tr>
+          <td style="padding:6px"><strong>Baião</strong></td>
+          <td style="padding:6px">Arinto・Vinhão（紅）</td>
+          <td style="padding:6px">深色紅 Vinho Verde 重鎮</td>
+        </tr>
+        <tr style="background:#f0f9f0">
+          <td style="padding:6px"><strong>Basto</strong></td>
+          <td style="padding:6px">Azal・Rabo de Ovelha</td>
+          <td style="padding:6px">較厚重，多果香</td>
+        </tr>
+        <tr>
+          <td style="padding:6px"><strong>Sousa</strong></td>
+          <td style="padding:6px">Vinhão・Espadeiro（紅）</td>
+          <td style="padding:6px">深色單寧紅酒為主</td>
+        </tr>
+        <tr style="background:#f0f9f0">
+          <td style="padding:6px"><strong>Paiva</strong></td>
+          <td style="padding:6px">混調白品種</td>
+          <td style="padding:6px">最南端，輕盈易飲</td>
+        </tr>
+      </table>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Alvarinho vs. Loureiro vs. Arinto：三大白品種比較',
+    items: [
+      { icon: '⭐', label: 'Alvarinho（Monção）', desc: '最濃郁，桃子杏桃熱帶果香，礦物感，高酸度，陳年佳。葡萄牙最知名白品種', color: '#006600' },
+      { icon: '🌸', label: 'Loureiro（Lima）', desc: '月桂樹花香、蜂蜜、橙花，輕盈優雅，清爽易飲。Lima 子產區的靈魂品種', color: '#27ae60' },
+      { icon: '🍋', label: 'Arinto（全區）', desc: '最高酸度，礦物質感強，清爽刺激，常作混調骨幹。遍及全 Vinho Verde 及全葡萄牙', color: '#7a8c3a' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Vinho Verde DOC 中，哪個子產區以頂級 Alvarinho 白酒著稱，被視為整個 DOC 的精華地帶？',
+    options: ['Lima', 'Cávado', 'Monção / Melgaço', 'Sousa'],
+    answer: 2,
+    explanation: 'Monção 和 Melgaço 是 Vinho Verde DOC 中最頂級的子產區，Alvarinho 品種在此表現最佳。受山脈保護，夏季較其他子產區溫暖乾燥，Alvarinho 可充分成熟，比一般 Vinho Verde 更濃郁、更適合陳年。',
+  },
+  {
+    type: 'quiz',
+    question: 'Vinho Verde 傳統上保留少量 CO₂ 的原因是什麼？',
+    options: ['法規規定必須有氣泡', '增加鮮活感，彌補高酸度帶來的清爽特性', '掩蓋酒的缺陷', '降低酒精度'],
+    answer: 1,
+    explanation: 'Vinho Verde 保留少量天然 CO₂（微氣泡），是傳統釀造工藝的結果——在不鏽鋼桶中保留蘋果乳酸發酵產生的少量二氧化碳。這種微氣泡增加了鮮活感和清爽度，成為 Vinho Verde 的標誌性特色，特別適合搭配海鮮。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Vinho Verde 深度課程！',
+    keyPoints: [
+      'Monção/Melgaço 是最頂級子產區，Alvarinho 在此最濃郁可陳年',
+      '9 個子產區各有主導品種：Loureiro（Lima）・Arinto（全區）・Vinhão（紅酒）',
+      'Alvarinho = 最濃郁；Loureiro = 最花香；Arinto = 最高酸',
+      '微氣泡是 Vinho Verde 的標誌，增加鮮活感',
+    ],
+  },
+]
+
+// P2M1L4 — Trás-os-Montes：東北偏遠山區的古老風土
+const P2M1L4_slides = [
+  {
+    type: 'cover',
+    icon: '🏔️',
+    gradient: 'linear-gradient(135deg, #5d4037, #8d6e63)',
+    title: 'Trás-os-Montes：東北偏遠山區',
+    subtitle: 'Level 2 · 北部產區',
+    points: [
+      { icon: '🏔️', label: '山脈之後', text: '字面意思「山脈背後」，是葡萄牙最偏遠、最極端大陸型氣候的產區' },
+      { icon: '🌡️', label: '極端溫差', text: '夏季可超過 40°C，冬季可降至 -10°C，是葡萄牙最極端的大陸氣候' },
+      { icon: '🍇', label: '古老品種', text: '保存了許多葡萄牙中南部罕見的古老本土品種' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Trás-os-Montes 的地理與氣候',
+    html: `
+      <p><strong>Trás-os-Montes</strong>（字意：山脈之後）位於葡萄牙東北角，毗鄰西班牙，被 Marão 和 Alvão 山脈與沿海隔絕。</p>
+      <h4>🌡️ 極端大陸型氣候</h4>
+      <ul>
+        <li>葡萄牙<strong>最極端的大陸型氣候</strong>：「九個月冬天，三個月地獄」</li>
+        <li>夏季高溫達 <strong>40°C 以上</strong>，冬季可達 <strong>-10°C</strong></li>
+        <li>年雨量低（400–700mm），主要集中在冬季</li>
+        <li>日夜溫差可達 <strong>20–25°C</strong>，有利保留葡萄酸度</li>
+      </ul>
+      <h4>🪨 土壤</h4>
+      <ul>
+        <li>花崗岩（北部）與片岩（南部及 Valpaços 地區）為主</li>
+        <li>土壤貧瘠，葡萄藤產量低但果實集中</li>
+      </ul>
+      <h4>🗺️ 三個子產區</h4>
+      <ul>
+        <li><strong>Chaves</strong>：最北，接近西班牙，略受大西洋影響</li>
+        <li><strong>Valpaços</strong>：中央，最典型的大陸型氣候</li>
+        <li><strong>Planalto Mirandês</strong>：最東，高原地帶，葡萄-橄欖-杏仁的農業組合</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Trás-os-Montes 三個 DOC 子產區',
+    items: [
+      { icon: '🏔️', label: 'Chaves DOC', desc: '最北，最靠近西班牙 Galicia，白酒（Gouveio）較清爽，紅酒多果香', color: '#795548' },
+      { icon: '🌋', label: 'Valpaços DOC', desc: '中部高原，最典型大陸型。Touriga Nacional 和 Tinta Amarela 表現出色', color: '#5d4037' },
+      { icon: '🌾', label: 'Planalto Mirandês DOC', desc: '東部高原，接近西班牙。Fernão Pires 和 Trincadeira 混種，是葡萄牙最偏遠的 DOC', color: '#4e342e' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: '「Trás-os-Montes」的葡萄牙語字面意思是什麼？',
+    options: ['綠色山谷', '山脈之後', '河谷梯田', '古老大地'],
+    answer: 1,
+    explanation: 'Trás-os-Montes 在葡萄牙語中意為「山脈之後」，因為這個產區被 Marão 和 Alvão 山脈與西部沿海地區隔絕。正是這種地理隔絕造就了葡萄牙最極端的大陸型氣候——夏熱冬寒，年溫差極大。',
+  },
+  {
+    type: 'quiz',
+    question: 'Trás-os-Montes 的氣候特色是？',
+    options: ['大西洋型，涼爽潮濕', '地中海型，乾熱夏季', '極端大陸型，夏熱冬寒，溫差大', '高山型，全年涼爽'],
+    answer: 2,
+    explanation: 'Trás-os-Montes 是葡萄牙氣候最極端的大陸型產區，夏季可超過 40°C，冬季可降至 -10°C，被形容為「九個月冬天，三個月地獄」。這種極端溫差使葡萄可以達到充分成熟，同時保留較高的天然酸度。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Trás-os-Montes 課程！',
+    keyPoints: [
+      '字意「山脈之後」，被山脈隔絕，葡萄牙最偏遠的產區',
+      '極端大陸型氣候：夏季 40°C，冬季 -10°C，全國溫差最大',
+      '三個子產區：Chaves・Valpaços・Planalto Mirandês，各有特色',
+      '保存了珍貴的古老葡萄牙本土品種，是葡萄酒探索者的隱藏寶地',
+    ],
+  },
+]
+
+// P2M2L1 — Dão：花崗岩土壤與優雅 Touriga Nacional
+const P2M2L1_slides = [
+  {
+    type: 'cover',
+    icon: '⛰️',
+    gradient: 'linear-gradient(135deg, #546e7a, #2c3e50)',
+    title: 'Dão：花崗岩高地的優雅紅酒',
+    subtitle: 'Level 2 · 中部山地產區',
+    points: [
+      { icon: '🪨', label: '花崗岩高原', text: '海拔 400–600m 的花崗岩高原，三面被山脈保護，形成獨特微氣候' },
+      { icon: '🏆', label: 'Touriga Nacional 原鄉', text: 'Touriga Nacional 的原產地即 Dão，在此展現最細膩優雅的一面' },
+      { icon: '🍾', label: 'Encruzado 白酒明星', text: 'Encruzado 是 Dão 的旗艦白品種，複雜度堪比布根地白酒' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Dão 的地理、氣候與土壤',
+    html: `
+      <p>Dão DOC 位於葡萄牙中部山地，三面被 Serra da Estrela（埃斯特雷拉山脈）、Serra do Caramulo 和 Serra da Açor 包圍。</p>
+      <h4>🌡️ 受保護的微氣候</h4>
+      <ul>
+        <li>山脈阻擋了大西洋的潮濕氣流和西班牙的乾熱氣流</li>
+        <li>夏季比海岸溫暖，但比 Douro 涼爽，年均溫 12–14°C</li>
+        <li>年雨量 800–1,000mm，相對充沛，有助葡萄緩慢成熟</li>
+        <li>「溫和的大陸型氣候」：夏乾燥但不酷熱，冬涼爽</li>
+      </ul>
+      <h4>🪨 花崗岩土壤</h4>
+      <ul>
+        <li>主要為<strong>花崗岩和沙質土</strong>，排水性極佳</li>
+        <li>貧瘠土壤使葡萄低產，但賦予礦物質感和細膩口感</li>
+        <li>酸性土壤（pH 4.5–5.5）有助維持葡萄的天然酸度</li>
+      </ul>
+      <h4>📊 基本數字</h4>
+      <ul>
+        <li>DOC 面積：約 <strong>20,000 公頃</strong>葡萄藤（已種植）</li>
+        <li>海拔：<strong>400–800m</strong>，部分頂級葡萄園超過 700m</li>
+        <li>Dão 歷史上曾受私人酒廠壟斷（1950–90年代），1990 後獨立酒莊崛起</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🍇',
+    title: 'Dão 的核心品種：Touriga Nacional 與 Encruzado',
+    html: `
+      <h4>🔴 紅品種：以 Touriga Nacional 為王</h4>
+      <ul>
+        <li><strong>Touriga Nacional</strong>：Dão 是其<strong>原產地</strong>。在此展現最<em>優雅細膩</em>的一面（比 Douro 版本更輕盈，紫羅蘭花香更突出）</li>
+        <li><strong>Tinta Roriz（Tempranillo）</strong>：常與 Touriga Nacional 混調，增加果香</li>
+        <li><strong>Alfrocheiro</strong>：Dão 特有紅品種，帶黑莓和香料感，結構均衡</li>
+        <li><strong>Jaen（= Mencía）</strong>：西班牙 Mencía 的葡萄牙名稱，酒體輕盈，果香清新</li>
+      </ul>
+      <h4>⚪ 白品種：Encruzado 的璀璨星光</h4>
+      <ul>
+        <li><strong>Encruzado</strong>：Dão 的旗艦白品種，被譽為「葡萄牙的 Chardonnay」</li>
+        <li>花崗岩土壤賦予清爽礦物質感，加上優雅的桃子、橙花香氣</li>
+        <li>經橡木桶陳年後：奶油、燧石、蜂蜜，複雜度顯著提升</li>
+        <li>陳年潛力強：頂級款可達 10–15 年</li>
+      </ul>
+      <h4>🏆 代表酒莊</h4>
+      <ul>
+        <li><strong>Quinta dos Roques</strong>：Encruzado 白酒標竿，也生產頂級 Touriga Nacional 紅酒</li>
+        <li><strong>Quinta da Pellada</strong>：自然農法，優雅風格</li>
+        <li><strong>Alvaro Castro（Quinta da Pellada）</strong>：Dão 復興的重要推手</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Dão vs. Douro：兩大葡萄牙紅酒的對比',
+    items: [
+      { icon: '⛰️', label: 'Dão（優雅派）', desc: '花崗岩，海拔 400–800m，涼爽緩慢成熟。Touriga Nacional 展現細膩紫羅蘭花香，酒體中等，尾韻絲滑', color: '#546e7a' },
+      { icon: '🌋', label: 'Douro（力量派）', desc: '片岩，極端大陸型，炎熱成熟。Touriga Nacional 展現深紫色果香，酒體飽滿，單寧更強健，可陳年 20+ 年', color: '#8B0000' },
+      { icon: '🍾', label: 'Dão 白酒（Encruzado）', desc: '礦物清爽 → 橡木桶後奶油複雜，可媲美布根地。葡萄牙最可陳年的干型白酒之一', color: '#7a8c3a' },
+      { icon: '🌊', label: 'Douro 白酒', desc: '以 Rabigato・Gouveio 等品種為主，礦物清爽，但比 Encruzado 結構輕盈，陳年潛力略低', color: '#c9b45c' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Dão 最重要的旗艦白葡萄品種是什麼，常被比喻為「葡萄牙的 Chardonnay」？',
+    options: ['Arinto', 'Alvarinho', 'Encruzado', 'Fernão Pires'],
+    answer: 2,
+    explanation: 'Encruzado 是 Dão DOC 的旗艦白品種，在花崗岩土壤和涼爽氣候下展現礦物清爽感，經橡木桶陳年後發展奶油、燧石複雜度，陳年潛力強，被譽為「葡萄牙的 Chardonnay」。',
+  },
+  {
+    type: 'quiz',
+    question: 'Touriga Nacional 的原產地是哪個葡萄牙產區？',
+    options: ['Douro', 'Dão', 'Alentejo', 'Bairrada'],
+    answer: 1,
+    explanation: 'Touriga Nacional 原產於 Dão 產區，後來擴植到 Douro、Alentejo 等地。在 Dão 的花崗岩高地和涼爽氣候下，Touriga Nacional 展現最細膩優雅的一面，與 Douro 的飽滿強健風格形成鮮明對比。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Dão 課程！',
+    keyPoints: [
+      'Dão 是花崗岩高原（400–800m），三面山脈保護，溫和大陸型氣候',
+      'Touriga Nacional 的原產地，在此展現最優雅細膩的紫羅蘭花香',
+      'Encruzado 是旗艦白品種，媲美布根地，陳年潛力強',
+      '1990 年後獨立酒莊崛起，Dão 紅白酒品質大幅提升',
+    ],
+  },
+]
+
+// P2M2L2 — Bairrada：高酸 Baga 紅酒與葡萄牙氣泡酒
+const P2M2L2_slides = [
+  {
+    type: 'cover',
+    icon: '🫧',
+    gradient: 'linear-gradient(135deg, #1565c0, #283593)',
+    title: 'Bairrada：Baga 紅酒與葡萄牙氣泡酒',
+    subtitle: 'Level 2 · 中部山地產區',
+    points: [
+      { icon: '🍒', label: 'Baga 的王國', text: '高酸高單寧的 Baga 品種是 Bairrada 的靈魂，陳年後展現傳奇複雜度' },
+      { icon: '🫧', label: '葡萄牙最佳氣泡酒', text: 'Bairrada 的 Espumante 是葡萄牙頂級氣泡酒，以傳統法釀造' },
+      { icon: '🌊', label: '大西洋影響', text: '受大西洋影響，黏土石灰岩土壤，保留了 Baga 的天然高酸' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍒',
+    title: 'Baga：葡萄牙最挑戰性的品種',
+    html: `
+      <p><strong>Baga</strong> 是 Bairrada DOC 的代表品種，也是葡萄牙酸度和單寧最高的品種之一。</p>
+      <h4>🔬 品種特性</h4>
+      <ul>
+        <li><strong>極高酸度</strong>：可媲美 Sangiovese 或 Nebbiolo，pH 值通常低於 3.2</li>
+        <li><strong>高澀感單寧</strong>：果皮厚，單寧豐富但年輕時粗澀</li>
+        <li><strong>中等酒精</strong>：12–13%（因高酸度顯得均衡）</li>
+        <li><strong>晚熟品種</strong>：需要到 10 月下旬才能達到最佳成熟度，雨季風險高</li>
+      </ul>
+      <h4>🍷 陳年演化（Baga 的真正魅力）</h4>
+      <ul>
+        <li><strong>年輕時（0–5 年）</strong>：緊澀難喝，高酸高單寧，紅漿果香但未展開</li>
+        <li><strong>中期（5–15 年）</strong>：單寧軟化，展現玫瑰乾花、皮革、泥土香</li>
+        <li><strong>成熟期（15–30 年）</strong>：絲滑複雜，菌菇、焦油、茶葉，頂級老年份可媲美 Barolo</li>
+      </ul>
+      <h4>🌿 現代釀酒趨勢</h4>
+      <ul>
+        <li>傳統派：長時間浸皮，重單寧，需陳年 10+ 年</li>
+        <li>現代派（Luis Pato 等）：更短浸皮，更早採收，軟化單寧，適合早飲</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🫧',
+    title: 'Bairrada Espumante：葡萄牙的香檳！',
+    html: `
+      <p>Bairrada 不只有 Baga 紅酒，它也是葡萄牙<strong>最著名的氣泡酒（Espumante）</strong>產地。</p>
+      <h4>🥂 為什麼 Bairrada 適合氣泡酒？</h4>
+      <ul>
+        <li><strong>大西洋氣候</strong>：高酸度，是優質氣泡酒的基礎</li>
+        <li><strong>石灰岩黏土土壤</strong>：賦予礦物質感，類似香檳區的白堊土</li>
+        <li><strong>Baga 品種</strong>：高酸，帶紅漿果的優雅氣泡紅酒</li>
+        <li><strong>Bical / Maria Gomes</strong>：主要白品種，清爽礦物感，適合傳統法氣泡酒</li>
+      </ul>
+      <h4>📋 Bairrada Espumante 規定</h4>
+      <ul>
+        <li>傳統法（Método Clássico）：瓶中二次發酵，需在酒泥上陳年至少 <strong>9 個月</strong></li>
+        <li>頂級款（Reserva）：酒泥陳年 <strong>18+ 個月</strong></li>
+        <li>主要品種：Bical、Maria Gomes（白）；Baga（紅）</li>
+      </ul>
+      <h4>🏆 代表酒莊</h4>
+      <ul>
+        <li><strong>Luís Pato</strong>：Bairrada 最知名的現代派大師，Baga 與 Espumante 均卓越</li>
+        <li><strong>Filipa Pato</strong>：Luís 之女，更現代風格，獲國際高評分</li>
+        <li><strong>Sidónio de Sousa</strong>：傳統派 Baga，需陳年 10+ 年顯魅力</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Baga 傳統風格 vs. 現代風格',
+    items: [
+      { icon: '🏺', label: '傳統 Baga（陳年派）', desc: '長浸皮，高單寧高酸，需陳年 10–20 年，展現皮革・菌菇・茶葉複雜度。代表：Sidónio de Sousa', color: '#37474f' },
+      { icon: '🍒', label: '現代 Baga（早飲派）', desc: '短浸皮或全果發酵，軟化單寧，更多果香，3–8 年可飲。代表：Filipa Pato', color: '#c0392b' },
+      { icon: '🫧', label: 'Baga 氣泡酒（Espumante）', desc: '傳統法，高酸紅漿果香，細緻氣泡，酒泥陳年 9–18 個月。是葡萄牙最特殊的紅色氣泡酒', color: '#8B0000' },
+      { icon: '⚪', label: 'Bical 白色 Espumante', desc: '以 Bical 和 Maria Gomes 釀造的傳統法白色氣泡酒，礦物清爽，性價比極高', color: '#1565c0' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Baga 品種最著名的陳年特色是什麼？',
+    options: ['年輕時即圓潤易飲，無需陳年', '年輕時緊澀，但陳年後展現皮革・菌菇等複雜風味', '以花香濃郁著稱，不適合陳年', '高酒精低酸，類似 Alentejo 紅酒'],
+    answer: 1,
+    explanation: 'Baga 是葡萄牙酸度和單寧最高的品種之一，年輕時高度緊澀難飲，但陳年 10–20 年後可展現玫瑰乾花、皮革、泥土、菌菇等複雜香氣，頂級老年份可媲美 Barolo。',
+  },
+  {
+    type: 'quiz',
+    question: 'Bairrada 氣泡酒（Espumante）使用什麼釀造方法？',
+    options: ['查瑪特法（Charmat/Tank Method）', '傳統法（Método Clássico/Traditional Method）', '碳酸充氣法', '自然氣泡（Pétillant Naturel）'],
+    answer: 1,
+    explanation: 'Bairrada Espumante 使用傳統法（Método Clássico），即在瓶中進行二次發酵，最低需在酒泥上陳年 9 個月（頂級款 18+ 個月），類似法國香檳的製作方式。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Bairrada 課程！',
+    keyPoints: [
+      'Baga 是葡萄牙最高酸、最高單寧的品種，年輕難飲，陳年後展現複雜度',
+      'Bairrada Espumante 是葡萄牙最著名氣泡酒，傳統法，酒泥陳年 9–18 個月',
+      '傳統派（長陳年）vs. 現代派（早飲）是 Bairrada 的重要風格對立',
+      'Luís Pato 和 Filipa Pato 是推動 Bairrada 國際知名度的重要人物',
+    ],
+  },
+]
+
+// P2M2L3 — Terras da Beira / Beira Interior：山地極端氣候
+const P2M2L3_slides = [
+  {
+    type: 'cover',
+    icon: '🏔️',
+    gradient: 'linear-gradient(135deg, #4e342e, #6d4c41)',
+    title: 'Beira Interior：葡萄牙的高山葡萄酒',
+    subtitle: 'Level 2 · 中部山地產區',
+    points: [
+      { icon: '🏔️', label: '高山產區', text: '緊鄰 Serra da Estrela（葡萄牙最高峰），海拔 400–900m，是葡萄牙最高的 DOC 之一' },
+      { icon: '🇪🇸', label: '西班牙邊界', text: '毗鄰西班牙，受大陸型氣候影響，夏熱冬寒，溫差極大' },
+      { icon: '🍇', label: '本土品種保存', text: 'Rufete・Marufo 等罕見本土品種在此保存，是葡萄牙品種多樣性的活化石' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Beira Interior：三個子 DOC',
+    html: `
+      <p><strong>Beira Interior DOC</strong> 是葡萄牙中部山地的主要產區，緊鄰 Serra da Estrela（2,000m 以上）和西班牙邊界。</p>
+      <h4>🗺️ 三個子產區 DOC</h4>
+      <ul>
+        <li><strong>Castelo Rodrigo</strong>：最北端，接近西班牙 Castilla。大陸型氣候最極端，以 Touriga Nacional 和 Marufo 為主，酒色深、濃郁</li>
+        <li><strong>Pinhel</strong>：中部，花崗岩土壤，較涼爽，白酒（Fonte Cal、Siria）清爽突出</li>
+        <li><strong>Cova da Beira</strong>：最南端，谷地地形，受 Serra da Estrela 保護，是最大子產區，紅白酒均有生產</li>
+      </ul>
+      <h4>🌡️ 氣候特色</h4>
+      <ul>
+        <li>大陸型氣候主導：夏季高溫 35–38°C，冬季可至 -5°C</li>
+        <li>年雨量 500–700mm，比 Dão 乾燥</li>
+        <li>強烈溫差有利保留葡萄的天然酸度</li>
+      </ul>
+      <h4>🍇 主要品種</h4>
+      <ul>
+        <li>紅：<strong>Touriga Nacional・Rufete・Marufo・Tinta Amarela</strong></li>
+        <li>白：<strong>Siria（= Roupeiro）・Fonte Cal・Arinto</strong></li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: 'Beira Interior DOC 包含哪三個子產區？',
+    options: ['Dão・Bairrada・Chaves', 'Castelo Rodrigo・Pinhel・Cova da Beira', 'Valpaços・Planalto Mirandês・Chaves', 'Borba・Redondo・Reguengos'],
+    answer: 1,
+    explanation: 'Beira Interior DOC 包含三個子產區：Castelo Rodrigo（最北，最極端大陸型）、Pinhel（中部，花崗岩，白酒優秀）、Cova da Beira（最南，谷地，最大）。三者都緊鄰 Serra da Estrela 和西班牙邊界。',
+  },
+  {
+    type: 'quiz',
+    question: '在 Beira Interior，哪個品種是罕見的本土紅品種，在其他產區幾乎看不到？',
+    options: ['Touriga Nacional', 'Aragonez', 'Rufete', 'Trincadeira'],
+    answer: 2,
+    explanation: 'Rufete 是 Beira Interior（特別是 Castelo Rodrigo）特有的本土紅品種，酒體中等，帶紅漿果和香料感，在其他葡萄牙產區極為罕見。它是葡萄牙品種多樣性的珍貴遺產。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Beira Interior 課程！',
+    keyPoints: [
+      'Beira Interior 緊鄰 Serra da Estrela 和西班牙，是葡萄牙最高海拔產區之一',
+      '三個子 DOC：Castelo Rodrigo（紅酒）・Pinhel（白酒）・Cova da Beira（混合）',
+      '大陸型氣候，夏熱冬寒，溫差大，有助保留酸度',
+      'Rufete・Marufo 等稀有本土品種在此保存，是葡萄牙的品種活化石',
+    ],
+  },
+]
+
+// P2M2L4 — Terras de Cister：Távora-Varosa 高海拔氣泡酒
+const P2M2L4_slides = [
+  {
+    type: 'cover',
+    icon: '🏰',
+    gradient: 'linear-gradient(135deg, #37474f, #546e7a)',
+    title: 'Távora-Varosa：葡萄牙最高海拔氣泡酒',
+    subtitle: 'Level 2 · Terras de Cister',
+    points: [
+      { icon: '🏔️', label: '葡萄牙最高海拔 DOC', text: '海拔 500–900m，是全葡萄牙海拔最高的葡萄酒產區' },
+      { icon: '🫧', label: '氣泡酒傳統', text: '1989 年成為葡萄牙第一個官方認可的氣泡酒 DOC（Espumante Bruto）' },
+      { icon: '⛪', label: '西多會修道院', text: 'Terras de Cister（西多之地），葡萄酒文化源自西多會 Salzedas 修道院' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Távora-Varosa DOC 的特色',
+    html: `
+      <p><strong>Távora-Varosa DOC</strong> 位於葡萄牙中北部，是全葡萄牙海拔最高的葡萄酒產區，也是第一個法定氣泡酒 DOC。</p>
+      <h4>🏔️ 地理與氣候</h4>
+      <ul>
+        <li>位於 <strong>Douro 以南，Dão 以北</strong>的山地，海拔 500–900m</li>
+        <li>大陸型氣候，夏涼冬寒，日夜溫差大</li>
+        <li>土壤：花崗岩和片岩，貧瘠排水良好</li>
+        <li>高海拔確保了葡萄緩慢成熟，保留高酸度——是釀造優質氣泡酒的理想條件</li>
+      </ul>
+      <h4>🫧 氣泡酒 DOC 的誕生</h4>
+      <ul>
+        <li>1989 年，Távora-Varosa 成為葡萄牙<strong>第一個官方氣泡酒 DOC</strong></li>
+        <li>傳統法（Método Clássico），瓶中二次發酵</li>
+        <li>酒泥陳年最少 <strong>18 個月</strong>（比 Bairrada 標準更高）</li>
+        <li>主要品種：<strong>Malvasia Fina・Gouveio（Verdelho）・Cerceal・Arinto</strong></li>
+      </ul>
+      <h4>🍾 代表酒莊</h4>
+      <ul>
+        <li><strong>Murganheira</strong>：葡萄牙最大的傳統法氣泡酒生產商，Távora-Varosa 的標竿</li>
+        <li><strong>Caves Aliança</strong>：大型酒商，重要的 Espumante 生產商</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: 'Távora-Varosa DOC 在葡萄牙氣泡酒歷史上的特殊地位是？',
+    options: ['葡萄牙產量最大的氣泡酒產區', '葡萄牙第一個官方認可的氣泡酒 DOC（1989 年）', '葡萄牙海拔最低的氣泡酒產區', '使用查瑪特法的代表性氣泡酒產區'],
+    answer: 1,
+    explanation: '1989 年，Távora-Varosa 成為葡萄牙第一個官方認可的氣泡酒（Espumante）DOC。高海拔（500–900m）和大陸型氣候確保了高酸度，使用傳統法（Método Clássico），酒泥陳年最少 18 個月。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Terras de Cister / Távora-Varosa 課程！',
+    keyPoints: [
+      'Távora-Varosa 是葡萄牙最高海拔 DOC（500–900m），也是最涼爽的產區之一',
+      '1989 年成為葡萄牙第一個官方氣泡酒 DOC，使用傳統法',
+      '酒泥陳年最少 18 個月，品質標準高於 Bairrada',
+      '西多會修道院（Terras de Cister）是此地葡萄酒文化的歷史根源',
+    ],
+  },
+]
+
+// P2M3L1 — Lisboa：九大子產區的多元風格
+const P2M3L1_slides = [
+  {
+    type: 'cover',
+    icon: '🏙️',
+    gradient: 'linear-gradient(135deg, #1976d2, #0288d1)',
+    title: 'Lisboa：里斯本周邊的多元葡萄酒',
+    subtitle: 'Level 2 · 里斯本周邊產區',
+    points: [
+      { icon: '🗺️', label: '九大子產區', text: '涵蓋里斯本北方至塔古斯河口，地形多樣，各子產區風格迥異' },
+      { icon: '🌊', label: '大西洋影響', text: '受大西洋影響，比 Alentejo 更涼爽，土壤從沙土到石灰岩多樣' },
+      { icon: '🍾', label: '多樣性代名詞', text: '從極輕盈的 Colares 砂丘白酒到飽滿的 Torres Vedras 紅酒，葡萄牙縮影' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Lisboa：九個子 DOC 產區',
+    html: `
+      <p><strong>Lisboa</strong>（里斯本）葡萄酒產區是葡萄牙最多樣的大區，包含九個子 DOC，延伸自里斯本北部到塔古斯河下游。</p>
+      <h4>🗺️ 九個子 DOC</h4>
+      <table style="width:100%;border-collapse:collapse;font-size:0.85em">
+        <tr style="background:#1976d2;color:white">
+          <th style="padding:6px;text-align:left">子 DOC</th>
+          <th style="padding:6px;text-align:left">特色</th>
+          <th style="padding:6px;text-align:left">主要品種</th>
+        </tr>
+        <tr style="background:#f5f5f5">
+          <td style="padding:5px"><strong>Arruda</strong></td>
+          <td style="padding:5px">石灰岩丘陵，海洋性氣候</td>
+          <td style="padding:5px">Fernão Pires、Aragonez</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Alenquer</strong></td>
+          <td style="padding:5px">里斯本北部，多樣土壤，近代品質飛升</td>
+          <td style="padding:5px">Castelão、Touriga Nacional</td>
+        </tr>
+        <tr style="background:#f5f5f5">
+          <td style="padding:5px"><strong>Torres Vedras</strong></td>
+          <td style="padding:5px">傳統大量生產區，正在轉型精品</td>
+          <td style="padding:5px">Touriga Nacional、Vital</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Óbidos</strong></td>
+          <td style="padding:5px">石灰岩，大西洋影響，芳香白酒</td>
+          <td style="padding:5px">Arinto、Fernão Pires</td>
+        </tr>
+        <tr style="background:#f5f5f5">
+          <td style="padding:5px"><strong>Lourinhã</strong></td>
+          <td style="padding:5px">以白蘭地（Aguardente）著名</td>
+          <td style="padding:5px">Malvasia Rei（白蘭地品種）</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Encostas d'Aire</strong></td>
+          <td style="padding:5px">石灰岩，海拔較高，清爽白酒</td>
+          <td style="padding:5px">Fernão Pires、Arinto</td>
+        </tr>
+        <tr style="background:#f5f5f5">
+          <td style="padding:5px"><strong>Bucelas</strong> ⭐</td>
+          <td style="padding:5px">Arinto 高酸白酒的聖地，歷史名區</td>
+          <td style="padding:5px">Arinto（至少 75%）</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Colares</strong> ⭐</td>
+          <td style="padding:5px">沙丘砂土，未嫁接 Ramisco，世界罕見</td>
+          <td style="padding:5px">Ramisco（紅）、Malvasia（白）</td>
+        </tr>
+        <tr style="background:#f5f5f5">
+          <td style="padding:5px"><strong>Carcavelos</strong></td>
+          <td style="padding:5px">幾乎滅絕的半甜加烈酒 DOC</td>
+          <td style="padding:5px">Galego Dourado 等稀有品種</td>
+        </tr>
+      </table>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Lisboa 大區：海岸 vs. 內陸風格對比',
+    items: [
+      { icon: '🌊', label: '海岸產區（Colares / Bucelas）', desc: '大西洋冷風直吹，砂土或石灰岩，清爽高酸，輕盈礦物，Arinto 和 Ramisco 的精華地帶', color: '#1976d2' },
+      { icon: '🏔️', label: '內陸丘陵（Alenquer / Arruda）', desc: '距海較遠，夏季較溫暖，石灰岩紅土，出產更豐滿的紅酒，Touriga Nacional 和 Castelão 為主', color: '#37474f' },
+      { icon: '🏭', label: '傳統大量產區（Torres Vedras）', desc: '歷史上以大量廉價酒為主，近年轉型精品，引入 Touriga Nacional，品質開始提升', color: '#795548' },
+      { icon: '🍾', label: '特殊風格（Carcavelos/Lourinhã）', desc: '加烈甜酒（Carcavelos）和白蘭地（Lourinhã），是 Lisboa 中的獨特珍品', color: '#8e44ad' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Lisboa 大區共有幾個子 DOC 產區？',
+    options: ['5 個', '7 個', '9 個', '12 個'],
+    answer: 2,
+    explanation: 'Lisboa 大區共有九個子 DOC 產區：Arruda・Alenquer・Torres Vedras・Óbidos・Lourinhã・Encostas d\'Aire・Bucelas・Colares・Carcavelos，各有不同的土壤、氣候和主要品種。',
+  },
+  {
+    type: 'quiz',
+    question: '以下哪個 Lisboa 子 DOC 以「砂丘土壤上的未嫁接老藤 Ramisco」著名，是世界葡萄酒界的活化石？',
+    options: ['Bucelas', 'Alenquer', 'Torres Vedras', 'Colares'],
+    answer: 3,
+    explanation: 'Colares 是世界上最罕見的葡萄酒產區之一，其葡萄藤種植在大西洋沿岸的沙丘上，根系直接扎入深層沙土。因為砂土防禦了根瘤蚜（Phylloxera），Colares 的 Ramisco 葡萄藤從未需要嫁接，是全球少數仍有大量未嫁接老藤的產區。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Lisboa 大區課程！',
+    keyPoints: [
+      'Lisboa 有九個子 DOC，是葡萄牙最多樣的大區',
+      '海岸產區（Colares/Bucelas）：清爽高酸，礦物感突出',
+      '內陸丘陵（Alenquer/Arruda）：豐滿紅酒，Touriga Nacional 為主',
+      'Colares 的未嫁接老藤 Ramisco 是世界級珍品',
+    ],
+  },
+]
+
+// P2M3L2 — Bucelas・Colares・Carcavelos：里斯本三寶
+const P2M3L2_slides = [
+  {
+    type: 'cover',
+    icon: '🏛️',
+    gradient: 'linear-gradient(135deg, #4a148c, #6a1b9a)',
+    title: 'Bucelas・Colares・Carcavelos：里斯本三寶',
+    subtitle: 'Level 2 · 里斯本三個歷史 DOC',
+    points: [
+      { icon: '🍋', label: 'Bucelas', text: 'Arinto 高酸白酒，拿破崙時代即享有盛名的歷史名區' },
+      { icon: '🌊', label: 'Colares', text: '砂丘老藤 Ramisco，世界最稀有的葡萄酒之一，幾乎從地球上消失' },
+      { icon: '🥃', label: 'Carcavelos', text: '半甜加烈酒，曾以出口英國聞名，現僅剩一個酒莊生產' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍋',
+    title: 'Bucelas：Arinto 高酸白酒的守護者',
+    html: `
+      <p><strong>Bucelas DOC</strong> 是葡萄牙最重要的白酒歷史 DOC 之一，以 Arinto 品種的高酸白酒著名。</p>
+      <h4>📜 歷史</h4>
+      <ul>
+        <li>1911 年成為法定產區（葡萄牙最早的 DOC 之一）</li>
+        <li>17–19 世紀是英國市場的寵兒，被 Wellington 公爵帶到歐洲</li>
+        <li>位於里斯本北方約 30 公里，石灰岩土壤</li>
+      </ul>
+      <h4>🍋 Arinto 的魅力</h4>
+      <ul>
+        <li><strong>法規</strong>：Bucelas DOC 白酒必須使用至少 <strong>75% Arinto</strong></li>
+        <li>石灰岩土壤賦予礦物質感和結構骨架</li>
+        <li>高酸度（pH 3.0–3.2），可陳年 5–15 年</li>
+        <li>風格：清爽的青檸、白葡萄柚、礦物質，帶輕微苦澀收尾</li>
+      </ul>
+      <h4>🏆 代表酒莊</h4>
+      <ul>
+        <li><strong>Quinta da Murta</strong>：Bucelas 的代表，Arinto 純粹主義者</li>
+        <li><strong>Quinta de Sant'Ana</strong>：有機農法，單一葡萄園 Arinto</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🌊',
+    title: 'Colares：瀕危的砂丘活化石',
+    html: `
+      <p><strong>Colares DOC</strong> 是葡萄牙——甚至全球——最瀕危的葡萄酒產區之一，卻同時擁有世界上最獨特的風土。</p>
+      <h4>🪨 砂丘與未嫁接老藤</h4>
+      <ul>
+        <li>葡萄藤種植在<strong>大西洋海岸砂丘</strong>（沙漠般的砂土）上</li>
+        <li>根瘤蚜無法在砂土中生存 → Colares 的葡萄藤<strong>從未嫁接過</strong></li>
+        <li>樹齡達 100–200 年的真正老藤，部分超過 300 年</li>
+        <li>每株葡萄藤的產量極低（不超過 1–2 瓶酒）</li>
+      </ul>
+      <h4>🍷 Ramisco 品種</h4>
+      <ul>
+        <li>Colares 紅酒使用 Ramisco，一個只在此地存在的本土品種</li>
+        <li>高酸、高單寧，帶海洋鹽風和鐵鏽礦物感，年輕時粗澀</li>
+        <li>陳年後（10–30 年）展現獨一無二的鹽海風、皮革和泥土</li>
+      </ul>
+      <h4>⚠️ 瀕危現狀</h4>
+      <ul>
+        <li>20 世紀後半葉，海邊度假村大量建設，葡萄園面積從 4,000 公頃縮小至不足 <strong>20 公頃</strong></li>
+        <li>目前只有<strong>少數生產商</strong>繼續生產 Colares DOC（最著名：Viúva Gomes 合作社、António Bernardino）</li>
+        <li>這些葡萄酒是真正的世界瀕危品——每年產量可能不到幾千瓶</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '里斯本三寶：Bucelas / Colares / Carcavelos 對比',
+    items: [
+      { icon: '🍋', label: 'Bucelas', desc: 'Arinto 高酸白酒，石灰岩，礦物清爽，可陳年 15 年。葡萄牙最重要的歷史白酒 DOC', color: '#7a8c3a' },
+      { icon: '🌊', label: 'Colares', desc: '砂丘未嫁接老藤 Ramisco，鹽海礦物感，世界最稀有，產量極少，已成功收藏珍品', color: '#1565c0' },
+      { icon: '🥃', label: 'Carcavelos', desc: '半甜加烈酒（類似 Sherry），曾出口英國，現幾乎滅絕，僅 Quinta dos Pesos 仍生產', color: '#8B4513' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Colares 葡萄藤為何從未需要嫁接（仍使用原根葡萄藤）？',
+    options: ['法規禁止嫁接', '砂丘砂土環境中根瘤蚜（Phylloxera）無法生存', '使用特殊抗根瘤蚜砧木', '氣候過於涼爽，根瘤蚜無法繁殖'],
+    answer: 1,
+    explanation: 'Colares 的葡萄藤種植在大西洋海岸的深層砂土（沙丘）中，根瘤蚜（Phylloxera）無法在鬆散砂土中生存和傳播，因此 Colares 的葡萄藤從未受到 19 世紀根瘤蚜病害的影響，得以保留原根未嫁接老藤。',
+  },
+  {
+    type: 'quiz',
+    question: 'Bucelas DOC 的主要葡萄品種及最低比例規定是？',
+    options: ['Alvarinho，60%', 'Encruzado，70%', 'Arinto，75%', 'Loureiro，50%'],
+    answer: 2,
+    explanation: 'Bucelas DOC 規定白酒必須使用至少 75% 的 Arinto 品種。Arinto 在 Bucelas 的石灰岩土壤中表現出色，展現清爽高酸和礦物質感，是葡萄牙最重要的白酒歷史 DOC 之一。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成里斯本三寶課程！',
+    keyPoints: [
+      'Bucelas：Arinto 高酸白酒，石灰岩，75% Arinto 法規要求，可陳年 15 年',
+      'Colares：砂丘未嫁接老藤 Ramisco，世界最稀有，根瘤蚜無法在砂土生存',
+      'Carcavelos：半甜加烈酒，現幾乎滅絕，僅剩一家生產商',
+      '三者都是里斯本郊區的歷史名區，代表葡萄牙葡萄酒的活化石',
+    ],
+  },
+]
+
+// P2M3L3 — Tejo：泰加斯河谷的豐沛葡萄園
+const P2M3L3_slides = [
+  {
+    type: 'cover',
+    icon: '🌊',
+    gradient: 'linear-gradient(135deg, #2e7d32, #388e3c)',
+    title: 'Tejo：泰加斯河谷的葡萄酒',
+    subtitle: 'Level 2 · 泰加斯河谷',
+    points: [
+      { icon: '🌊', label: '泰加斯河灌溉', text: '葡萄牙最長的河流（也流經西班牙），肥沃沖積平原與内陸高地並存' },
+      { icon: '🍇', label: '豐沛高產', text: '歷史上是葡萄牙最重要的大量生產 DOC，以豐沛的紅酒供應里斯本市場' },
+      { icon: '🔄', label: '現代轉型', text: '1990 年代後引入國際品種（Cabernet Sauvignon、Syrah），開始精品化' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Tejo DOC：里斯本的糧倉',
+    html: `
+      <p><strong>Tejo DOC</strong>（舊稱 Ribatejo）沿著泰加斯河（Tejo）兩岸延伸，從西班牙邊界一直到里斯本以東的入海口。</p>
+      <h4>🗺️ 地理分區</h4>
+      <ul>
+        <li><strong>河谷地帶（Campo do Tejo）</strong>：沖積平原，土壤肥沃，高產，傳統大量生產區</li>
+        <li><strong>丘陵地帶（Charneca）</strong>：砂岩、黏土，較乾旱，品質更高，近代精品酒莊集中此區</li>
+        <li><strong>北部山地</strong>：靠近 Serra de São Mamede，海拔較高，保留酸度</li>
+      </ul>
+      <h4>🌡️ 氣候</h4>
+      <ul>
+        <li>地中海型和大陸型混合，夏季熱（30–35°C），冬季溫和</li>
+        <li>比 Alentejo 略涼爽，但比 Lisboa 更乾燥</li>
+        <li>泰加斯河調節了局部氣候，帶來夜間涼爽</li>
+      </ul>
+      <h4>🍇 主要品種</h4>
+      <ul>
+        <li>紅：<strong>Castelão（= Fernão Pires 的紅酒版）・Trincadeira・Aragonez・Touriga Nacional</strong></li>
+        <li>白：<strong>Fernão Pires（最廣泛）・Arinto・Sauvignon Blanc</strong></li>
+        <li>國際品種：Cabernet Sauvignon、Syrah、Merlot（IGP 標示）</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Tejo 河谷 vs. 丘陵：兩種葡萄酒風格',
+    items: [
+      { icon: '🌾', label: 'Campo（河谷平原）', desc: '沖積土，肥沃，高產。Castelão 芳香紅酒，Fernão Pires 易飲白酒。大量生產，性價比型', color: '#8B6914' },
+      { icon: '🏔️', label: 'Charneca（丘陵高地）', desc: '砂岩黏土，較貧瘠，低產。Touriga Nacional 和 Syrah 展現更多結構，是 Tejo 精品的核心', color: '#4e342e' },
+      { icon: '🍾', label: '現代精品（IGP Tejo）', desc: 'Cabernet Sauvignon、Syrah 等國際品種在此表現出色，以 IGP 標示靈活釀造', color: '#2e7d32' },
+      { icon: '🌿', label: '有機農法新浪潮', desc: '越來越多的 Tejo 酒莊轉向有機認證，利用河谷的自然資源，生產更可持續的葡萄酒', color: '#388e3c' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Tejo DOC 的舊名稱是什麼？',
+    options: ['Ribatejo', 'Estremadura', 'Centro', 'Minho'],
+    answer: 0,
+    explanation: 'Tejo DOC 的舊名稱是 Ribatejo，意為「塔古斯河旁」。2009 年更名為 Tejo，更清楚地反映了這個產區的地理核心——沿泰加斯河（Tejo）的葡萄酒生產區。',
+  },
+  {
+    type: 'quiz',
+    question: 'Tejo 最廣泛種植的白葡萄品種是什麼？',
+    options: ['Arinto', 'Alvarinho', 'Fernão Pires', 'Loureiro'],
+    answer: 2,
+    explanation: 'Fernão Pires 是 Tejo（和整個 Lisboa 大區）最廣泛種植的白葡萄品種，芳香易飲，帶茴香和柑橘花香，是 Tejo 日常白酒的骨幹。它在葡萄牙全國的種植面積也名列前茅。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Tejo 課程！',
+    keyPoints: [
+      'Tejo 舊稱 Ribatejo，沿泰加斯河兩岸，2009 年更名',
+      '河谷平原（高產）vs. 丘陵高地（精品）是 Tejo 的兩種截然不同風格',
+      'Fernão Pires 是最廣泛種植的白品種，Castelão 和 Touriga Nacional 是主要紅品種',
+      '1990 年代後引入國際品種，Tejo 的 IGP 等級允許更靈活的混調',
+    ],
+  },
+]
+
+// P2M4L1 — Alentejo 深度：八大子產區與土壤多樣性
+const P2M4L1_slides = [
+  {
+    type: 'cover',
+    icon: '☀️',
+    gradient: 'linear-gradient(135deg, #e65100, #bf360c)',
+    title: 'Alentejo 深度：八大子產區',
+    subtitle: 'Level 2 · 南部產區',
+    points: [
+      { icon: '🗺️', label: '八大子產區', text: 'Portalegre・Borba・Redondo・Reguengos・Vidigueira・Évora・Granja-Amareleja・Moura' },
+      { icon: '🪨', label: '土壤多樣性', text: '從北部 Portalegre 的花崗岩到南部 Vidigueira 的片岩，土壤類型豐富' },
+      { icon: '🚀', label: '崛起之路', text: '1990 年後葡萄牙最快速發展的產區，現為葡萄牙出口量最大的 DOC' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Alentejo 八大子產區詳解',
+    html: `
+      <p>Alentejo DOC 覆蓋葡萄牙南部 1/3 的土地，共有八個子產區，各有不同的土壤和微氣候。</p>
+      <table style="width:100%;border-collapse:collapse;font-size:0.85em">
+        <tr style="background:#e65100;color:white">
+          <th style="padding:6px;text-align:left">子產區</th>
+          <th style="padding:6px;text-align:left">位置</th>
+          <th style="padding:6px;text-align:left">土壤</th>
+          <th style="padding:6px;text-align:left">特色</th>
+        </tr>
+        <tr style="background:#fff3e0">
+          <td style="padding:5px"><strong>Portalegre</strong></td>
+          <td style="padding:5px">最北（500–800m）</td>
+          <td style="padding:5px">花崗岩</td>
+          <td style="padding:5px">最涼爽，優雅白酒，近年轉型明星</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Borba</strong></td>
+          <td style="padding:5px">中北部</td>
+          <td style="padding:5px">大理石・石灰岩</td>
+          <td style="padding:5px">大型酒廠重鎮（Borba 合作社），圓潤紅酒</td>
+        </tr>
+        <tr style="background:#fff3e0">
+          <td style="padding:5px"><strong>Redondo</strong></td>
+          <td style="padding:5px">中部</td>
+          <td style="padding:5px">花崗岩・頁岩</td>
+          <td style="padding:5px">海拔較高，比平均更涼爽，精緻風格</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Reguengos</strong></td>
+          <td style="padding:5px">中南部</td>
+          <td style="padding:5px">花崗岩・黏土</td>
+          <td style="padding:5px">Reguengos 合作社（最大），Esporão 酒莊</td>
+        </tr>
+        <tr style="background:#fff3e0">
+          <td style="padding:5px"><strong>Évora</strong></td>
+          <td style="padding:5px">中部（省會）</td>
+          <td style="padding:5px">多樣</td>
+          <td style="padding:5px">Alentejo 省會，UNESCO 世界遺產城市</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Vidigueira</strong></td>
+          <td style="padding:5px">南部</td>
+          <td style="padding:5px">片岩・石灰岩</td>
+          <td style="padding:5px">白酒最著名（Antão Vaz），Soares da Silva</td>
+        </tr>
+        <tr style="background:#fff3e0">
+          <td style="padding:5px"><strong>Granja-Amareleja</strong></td>
+          <td style="padding:5px">最東南</td>
+          <td style="padding:5px">砂岩・石灰岩</td>
+          <td style="padding:5px">最乾熱，接近西班牙，烈日加烈型風格</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Moura</strong></td>
+          <td style="padding:5px">最南端</td>
+          <td style="padding:5px">片岩・砂土</td>
+          <td style="padding:5px">最接近 Algarve，熱帶水果風格</td>
+        </tr>
+      </table>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🚀',
+    title: 'Alentejo 的酒莊革命：1990 年代後的崛起',
+    html: `
+      <p>1990 年代前，Alentejo 的葡萄酒主要由合作社生產，品質粗糙。1990 年代後，一場革命開始了。</p>
+      <h4>🔑 崛起的三個關鍵因素</h4>
+      <ol>
+        <li><strong>私人酒莊投資</strong>：大量資金投入，引進不鏽鋼發酵桶和法國橡木桶，現代化釀造設備</li>
+        <li><strong>溫控技術</strong>：大西洋夏季高溫曾是最大障礙，溫控發酵讓白酒保持清爽</li>
+        <li><strong>Alicante Bouschet 的重新發現</strong>：這個來自法國的染色品種在 Alentejo 展現了超預期的品質</li>
+      </ol>
+      <h4>🏆 代表性酒莊</h4>
+      <ul>
+        <li><strong>Esporão</strong>：Reguengos 子區，葡萄牙出口量最大的酒莊，有機農法先鋒</li>
+        <li><strong>Herdade do Mouchão</strong>：古典風格，Alicante Bouschet 標竿，需陳年 10+ 年</li>
+        <li><strong>Cartuxa（Fundação Eugénio de Almeida）</strong>：Évora 的歷史品牌，旗艦 Pera Manca 是 Alentejo 的 Pétrus</li>
+        <li><strong>Cortes de Cima</strong>：丹麥移民酒莊，Syrah 先驅，接近 Vidigueira</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '以下哪個 Alentejo 子產區以海拔最高（500–800m）和最涼爽的氣候著稱，近年轉型為精品白酒新星？',
+    options: ['Reguengos', 'Portalegre', 'Granja-Amareleja', 'Moura'],
+    answer: 1,
+    explanation: 'Portalegre 是 Alentejo 最北、海拔最高（500–800m）的子產區，氣候比其他子產區涼爽。這裡的花崗岩土壤和較低溫度使白酒保留更多清爽酸度和礦物感，近年成為 Alentejo 精品白酒的新星。',
+  },
+  {
+    type: 'quiz',
+    question: 'Alentejo 最知名的旗艦酒款「Pera Manca」由哪個酒莊生產，被稱為 Alentejo 的「Pétrus」？',
+    options: ['Esporão', 'Herdade do Mouchão', 'Cartuxa（Fundação Eugénio de Almeida）', 'Cortes de Cima'],
+    answer: 2,
+    explanation: 'Pera Manca 由位於 Évora 的 Cartuxa（Fundação Eugénio de Almeida）生產，是 Alentejo 最具傳奇性的旗艦酒款，被稱為「Alentejo 的 Pétrus」。只在最優秀的年份發布，同時有紅酒和白酒版本。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Alentejo 深度課程！',
+    keyPoints: [
+      '八大子產區：從最涼的 Portalegre（花崗岩，北）到最熱的 Granja-Amareleja（最東南）',
+      'Vidigueira：白酒明星，Antão Vaz 品種表現最佳',
+      'Reguengos：最大子產區，Esporão 酒莊在此',
+      '1990 年代的酒莊革命讓 Alentejo 成為葡萄牙出口量最大的 DOC',
+    ],
+  },
+]
+
+// P2M4L2 — Península de Setúbal：Moscatel 甜酒傳奇
+const P2M4L2_slides = [
+  {
+    type: 'cover',
+    icon: '🍯',
+    gradient: 'linear-gradient(135deg, #f57f17, #e65100)',
+    title: 'Península de Setúbal：Moscatel 傳奇',
+    subtitle: 'Level 2 · 南部半島產區',
+    points: [
+      { icon: '🍯', label: 'Moscatel de Setúbal', text: '世界最著名的 Moscatel 加烈甜酒之一，可陳年逾百年' },
+      { icon: '🍇', label: 'Palmela DOC', text: '同半島上的紅酒 DOC，以 Castelão 品種著名' },
+      { icon: '🌊', label: '大西洋半島', text: '夾在泰加斯河口和大西洋之間，氣候受大西洋影響，比 Alentejo 涼爽' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍯',
+    title: 'Moscatel de Setúbal DOC：液態蜂蜜',
+    html: `
+      <p><strong>Moscatel de Setúbal</strong> 是葡萄牙最偉大的甜酒之一，以半島北部的石灰岩土壤和獨特的工藝釀造。</p>
+      <h4>🔬 釀造工藝</h4>
+      <ul>
+        <li>使用 Muscat 品種（葡萄牙稱 Moscatel）：主要是 Moscatel de Setúbal（= Muscat of Alexandria）和 Moscatel Roxo（紫色品種）</li>
+        <li><strong>加烈時機</strong>：發酵中途加入葡萄烈酒，保留殘糖，最終酒精 17–18%</li>
+        <li><strong>麝香葡萄皮浸皮</strong>：裝瓶前在葡萄酒中浸泡額外的新鮮葡萄皮 3–6 個月，增加濃郁花香和麝香氣息——這是 Moscatel de Setúbal 的獨特步驟</li>
+      </ul>
+      <h4>🌸 風格類型</h4>
+      <ul>
+        <li><strong>年輕款（5–10 年）</strong>：深金色，麝香花香、橙花、杏桃、無花果，絲滑甜潤</li>
+        <li><strong>陳年款（20–40 年）</strong>：深琥珀色，太妃糖、核桃、烘烤咖啡、橙皮，極其複雜</li>
+        <li><strong>Moscatel Roxo</strong>：紫色品種，更深色，帶玫瑰、覆盆子和香料的獨特香氣</li>
+      </ul>
+      <h4>🏰 代表酒莊</h4>
+      <ul>
+        <li><strong>José Maria da Fonseca</strong>：最重要的 Moscatel de Setúbal 生產商，歷史可追溯至 1834 年，有逾百年老年份的陳年 Moscatel</li>
+        <li><strong>Bacalhôa Vinhos de Portugal</strong>：大型集團，JP（José Pinto）的 Azeitão 莊園也產優質 Moscatel</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Moscatel de Setúbal vs. 其他葡萄牙甜酒',
+    items: [
+      { icon: '🍯', label: 'Moscatel de Setúbal', desc: '最獨特：帶新鮮葡萄皮浸皮工藝，麝香花香最突出。可陳年 50–100 年。來自 Setúbal 石灰岩半島', color: '#f57f17' },
+      { icon: '🥃', label: 'Vintage Port（甜）', desc: '深紫黑色，黑莓、巧克力、菸草，高單寧結構。杜羅河片岩梯田的加烈甜酒，陳年 20–50 年', color: '#8B0000' },
+      { icon: '🏝️', label: 'Malvasia（Madeira）', desc: '氧化加烈，焦糖蜂蜜熱帶水果，獨特的 Estufagem 加熱工藝。最甜的 Madeira 風格', color: '#8e44ad' },
+      { icon: '🔮', label: 'Moscatel Roxo', desc: 'Setúbal 特有紫色 Muscatel 品種，玫瑰覆盆子香，是葡萄牙最珍稀的甜酒之一，產量極少', color: '#c0392b' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Moscatel de Setúbal 在釀造過程中有一個獨特的步驟，是其他葡萄牙加烈甜酒沒有的，是什麼？',
+    options: ['加入焦糖增甜', '在不鏽鋼桶中加熱至 50°C', '裝瓶前浸泡額外的新鮮葡萄皮 3–6 個月', '二次發酵產生氣泡'],
+    answer: 2,
+    explanation: 'Moscatel de Setúbal 的獨特步驟是在加烈後、裝瓶前，將新鮮的 Moscatel 葡萄皮加入酒中浸泡 3–6 個月。這個額外的皮接觸工藝大幅提升了麝香花香的濃郁度，是其他葡萄牙加烈甜酒（如波特酒、Madeira）所沒有的。',
+  },
+  {
+    type: 'quiz',
+    question: '哪家酒莊是 Moscatel de Setúbal 最重要的生產商，歷史可追溯至 1834 年，並保存有逾百年的老年份陳年 Moscatel？',
+    options: ['Quinta do Crasto', 'José Maria da Fonseca', 'Esporão', 'Niepoort'],
+    answer: 1,
+    explanation: 'José Maria da Fonseca 創立於 1834 年，是 Moscatel de Setúbal 最重要的歷史生產商，保存了多個逾百年的陳年老 Moscatel，是葡萄牙酒業最珍貴的活歷史之一。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Setúbal 半島課程！',
+    keyPoints: [
+      'Moscatel de Setúbal：獨特的新鮮葡萄皮浸皮工藝，麝香花香最突出',
+      '可陳年 50–100 年，José Maria da Fonseca 保有逾百年老年份',
+      'Moscatel Roxo 是紫色品種，玫瑰覆盆子香，稀少珍貴',
+      'Palmela DOC 位於同半島，以 Castelão 紅酒著名',
+    ],
+  },
+]
+
+// P2M4L3 — Algarve：葡萄牙最南端四大 DOC
+const P2M4L3_slides = [
+  {
+    type: 'cover',
+    icon: '🏖️',
+    gradient: 'linear-gradient(135deg, #0288d1, #0097a7)',
+    title: 'Algarve：葡萄牙最南端的葡萄酒',
+    subtitle: 'Level 2 · 南部產區',
+    points: [
+      { icon: '🏖️', label: '旅遊勝地', text: '全葡萄牙最南端，地中海型氣候，以觀光聞名，葡萄酒產業正在快速提升' },
+      { icon: '🗺️', label: '四個 DOC', text: 'Lagos・Portimão・Lagoa・Tavira，沿海岸線由西向東分布' },
+      { icon: '🌞', label: '最長日照', text: '葡萄牙最南端，年日照超過 3,000 小時，出產豐腴圓潤的紅酒' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🗺️',
+    title: 'Algarve 四個 DOC 產區',
+    html: `
+      <p><strong>Algarve</strong> 是葡萄牙最南端的葡萄酒大區，共有四個 DOC 產區，沿 Atlantic 海岸線由西向東分布。</p>
+      <h4>🗺️ 四個 DOC</h4>
+      <table style="width:100%;border-collapse:collapse;font-size:0.88em">
+        <tr style="background:#0288d1;color:white">
+          <th style="padding:6px;text-align:left">DOC</th>
+          <th style="padding:6px;text-align:left">位置</th>
+          <th style="padding:6px;text-align:left">特色</th>
+        </tr>
+        <tr style="background:#e1f5fe">
+          <td style="padding:5px"><strong>Lagos</strong></td>
+          <td style="padding:5px">最西端，大西洋沿岸</td>
+          <td style="padding:5px">紅岩海岸，砂岩石灰岩，傳統釀造，最接近大西洋</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Portimão</strong></td>
+          <td style="padding:5px">中西部</td>
+          <td style="padding:5px">現代設施，國際旅遊業帶動品質提升</td>
+        </tr>
+        <tr style="background:#e1f5fe">
+          <td style="padding:5px"><strong>Lagoa</strong></td>
+          <td style="padding:5px">中部</td>
+          <td style="padding:5px">歷史最古老的 Algarve 葡萄酒中心，石灰岩高地，Lagoa 合作社</td>
+        </tr>
+        <tr>
+          <td style="padding:5px"><strong>Tavira</strong></td>
+          <td style="padding:5px">最東端，靠近西班牙</td>
+          <td style="padding:5px">最乾熱，接近 Andalucía 風土，Negra Mole 和 Periquita 為主</td>
+        </tr>
+      </table>
+      <h4>🍇 主要品種</h4>
+      <ul>
+        <li>紅：<strong>Negra Mole・Castelão（= Periquita）・Touriga Nacional・Syrah</strong></li>
+        <li>白：<strong>Síria（Roupeiro）・Arinto・Crato Branco</strong></li>
+        <li>近年也種植 Viognier、Grenache 等國際品種（以 IGP Algarve 標示）</li>
+      </ul>
+    `,
+  },
+  {
+    type: 'compare',
+    title: 'Algarve vs. Alentejo：兩個南方大區的差異',
+    items: [
+      { icon: '🏖️', label: 'Algarve（最南）', desc: '海岸線沿線，大西洋和地中海雙重影響，日照最強，旅遊業帶動發展，以清爽紅酒為主', color: '#0288d1' },
+      { icon: '☀️', label: 'Alentejo（南部大地）', desc: '廣大內陸平原，純地中海型，更乾熱。八大子產區，多元土壤，是葡萄牙出口量最大的 DOC', color: '#e65100' },
+      { icon: '🌿', label: '共同點', desc: '都是地中海型氣候，年日照超過 3,000 小時，出產圓潤豐腴的紅酒，主要品種有重疊', color: '#2e7d32' },
+      { icon: '⬆️', label: '發展趨勢', desc: 'Algarve 受氣候變遷威脅（夏季更熱），釀酒師開始探索高海拔內陸（Serra de Monchique）', color: '#795548' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Algarve 最獨特的本土紅葡萄品種是？',
+    options: ['Touriga Nacional', 'Aragonez', 'Negra Mole', 'Trincadeira'],
+    answer: 2,
+    explanation: 'Negra Mole 是 Algarve 最獨特的本土品種，幾乎只在葡萄牙南部生長。名字意為「柔軟的黑色」，釀造的紅酒酒色深，帶紅漿果和香料，口感柔順，是 Algarve 的標誌性品種。',
+  },
+  {
+    type: 'quiz',
+    question: 'Algarve 共有幾個 DOC？由西向東它們分別是？',
+    options: ['三個：Lagos・Lagoa・Tavira', '四個：Lagos・Portimão・Lagoa・Tavira', '五個：Lagos・Portimão・Silves・Lagoa・Tavira', '兩個：Lagoa・Tavira'],
+    answer: 1,
+    explanation: 'Algarve 共有四個 DOC 產區，由西向東分別是：Lagos（最西）・Portimão・Lagoa（歷史最古老）・Tavira（最東，靠近西班牙）。四個 DOC 沿 Algarve 海岸線分布。',
+  },
+  {
+    type: 'summary',
+    message: '恭喜完成 Algarve 課程！',
+    keyPoints: [
+      'Algarve 是葡萄牙最南端，四個 DOC：Lagos・Portimão・Lagoa・Tavira',
+      '地中海型氣候，年日照超 3,000 小時，出產豐腴圓潤紅酒',
+      'Negra Mole 是最獨特的本土品種，幾乎只在 Algarve 生長',
+      '旅遊業推動品質提升，釀酒師也開始探索內陸高海拔（Serra de Monchique）以應對氣候變遷',
+    ],
+  },
+]
+
+// P2FinalExam — Level 2 綜合評量
+const P2FinalExam_slides = [
+  {
+    type: 'cover',
+    icon: '📝',
+    gradient: 'linear-gradient(135deg, #8B0000, #4a1010)',
+    title: 'Level 2 綜合評量',
+    subtitle: '測試您的葡萄牙重點產區知識',
+    points: [
+      { icon: '📝', label: '10 道綜合題目', text: '涵蓋 Douro・Porto・Vinho Verde・Dão・Bairrada・Lisboa・Tejo・Alentejo・Setúbal・Algarve' },
+      { icon: '🍷', label: 'Level 2 精華', text: '從波特酒類型到各大產區的品種與工藝' },
+    ],
+  },
+  {
+    type: 'quiz',
+    question: 'Douro 三大子產區中，哪一個是「頂級 Vintage Port 的核心產地」？',
+    options: ['Baixo Corgo', 'Cima Corgo', 'Douro Superior', '三個子產區同等重要'],
+    answer: 1,
+    explanation: 'Cima Corgo 是 Douro 的精華核心，著名的 Quinta do Crasto・Quinta do Vale Meão・Niepoort 等頂級酒莊集中在此，也是 Vintage Port 最高品質的主要來源。',
+  },
+  {
+    type: 'quiz',
+    question: 'Tawny Port 的「20 Years」標示代表什麼？',
+    options: ['混調中最年輕的酒液至少 20 年', '所有酒液都是 20 年份的單一年份', '混調酒液的平均陳年年數約 20 年', '最少裝瓶後需再陳年 20 年'],
+    answer: 2,
+    explanation: 'Tawny Port 的年份標示（10/20/30/40 年）代表調配中葡萄酒的平均陳年年數，而非某一特定年份。實際混調可能包含 5–40 年不同酒液，由酒師確保成品符合對應「類型年齡」的風格。',
+  },
+  {
+    type: 'quiz',
+    question: 'Vinho Verde DOC 中最頂級的 Alvarinho 子產區是？',
+    options: ['Lima', 'Sousa', 'Monção / Melgaço', 'Baião'],
+    answer: 2,
+    explanation: 'Monção 和 Melgaço 是 Vinho Verde DOC 最頂級的子產區，Alvarinho 在此受山脈保護、夏季較溫暖，可充分成熟，展現最濃郁的桃子杏桃芳香，是整個 Vinho Verde DOC 中最具陳年潛力的白酒。',
+  },
+  {
+    type: 'quiz',
+    question: 'Dão DOC 的旗艦白葡萄品種 Encruzado，常被比喻為哪個法國著名白葡萄品種？',
+    options: ['Sauvignon Blanc', 'Riesling', 'Chenin Blanc', 'Chardonnay'],
+    answer: 3,
+    explanation: 'Encruzado 是 Dão 的旗艦白品種，在花崗岩土壤和涼爽氣候下展現礦物感，經橡木桶陳年後發展奶油、燧石複雜度，陳年潛力強，與布根地的 Chardonnay 風格最相近，被稱為「葡萄牙的 Chardonnay」。',
+  },
+  {
+    type: 'quiz',
+    question: 'Bairrada DOC 以 Baga 品種著名，Baga 最顯著的特徵是？',
+    options: ['低酸、豐腴、早飲型', '高酸、高單寧，年輕難飲但陳年後複雜', '芳香花香，適合年輕飲用', '淺色、輕盈、低單寧'],
+    answer: 1,
+    explanation: 'Baga 是葡萄牙酸度和單寧最高的品種，年輕時緊澀難喝，但陳年 10–20 年後可展現玫瑰乾花、皮革、菌菇等複雜香氣，頂級老年份可媲美 Barolo。這是 Baga 最重要的特徵。',
+  },
+  {
+    type: 'quiz',
+    question: 'Colares DOC 的葡萄藤為何從未需要嫁接，仍使用原根生長？',
+    options: ['使用特殊防根瘤蚜砧木', '大西洋海風殺死了根瘤蚜', '砂丘砂土環境讓根瘤蚜（Phylloxera）無法生存', '法規禁止嫁接'],
+    answer: 2,
+    explanation: 'Colares 的葡萄藤種植在大西洋沿岸的深層砂丘中，根瘤蚜（Phylloxera）無法在鬆散砂土中生存，因此 Colares 從未受到 19 世紀根瘤蚜病害侵害，保留了珍貴的原根未嫁接老藤。',
+  },
+  {
+    type: 'quiz',
+    question: 'Alentejo DOC 八大子產區中，哪一個以「最涼爽、最高海拔（500–800m）、白酒精品」著稱？',
+    options: ['Reguengos', 'Vidigueira', 'Portalegre', 'Granja-Amareleja'],
+    answer: 2,
+    explanation: 'Portalegre 是 Alentejo 最北、海拔最高（500–800m）的子產區，受山脈影響氣候較涼爽，花崗岩土壤賦予礦物感，近年成為 Alentejo 精品白酒的新星，與其他炎熱子產區形成鮮明對比。',
+  },
+  {
+    type: 'quiz',
+    question: 'Moscatel de Setúbal 在釀造過程中，與其他葡萄牙加烈酒最不同的獨特步驟是？',
+    options: ['在陽光下曬乾葡萄再發酵', '裝瓶前浸泡新鮮葡萄皮 3–6 個月增加麝香花香', '加熱氧化工藝（類似 Madeira）', '冷泡法提取香氣'],
+    answer: 1,
+    explanation: 'Moscatel de Setúbal 的獨特工藝是在加烈後、裝瓶前，將新鮮 Moscatel 葡萄皮加入酒中浸泡 3–6 個月，大幅提升麝香花香濃郁度。這是其他葡萄牙加烈甜酒（波特酒、Madeira）所沒有的步驟。',
+  },
+  {
+    type: 'quiz',
+    question: 'Madeira 馬德拉酒「Canteiro」工藝和「Estufagem」工藝的根本差異是？',
+    options: ['Canteiro 使用外加葡萄糖增甜，Estufagem 不加', 'Canteiro 是在酒莊頂樓自然加熱陳年（頂級），Estufagem 是工業不鏽鋼桶加熱（45–50°C）', 'Canteiro 比 Estufagem 更快完成', 'Canteiro 只用於 Sercial，Estufagem 只用於 Malvasia'],
+    answer: 1,
+    explanation: 'Canteiro 是頂級 Madeira 的自然加熱方式，將酒桶存放在酒莊頂樓，利用大西洋氣候自然熟化，過程可達數十年，品質更複雜細膩。Estufagem 是工業加熱法，在不鏽鋼桶中加熱至 45–50°C 維持至少 3 個月，用於大量生產款。',
+  },
+  {
+    type: 'quiz',
+    question: 'Algarve 共有幾個 DOC 產區，最東邊的 DOC 是？',
+    options: ['三個，Lagoa 最東', '四個，Tavira 最東', '五個，Faro 最東', '兩個，Portimão 最東'],
+    answer: 1,
+    explanation: 'Algarve 共有四個 DOC 產區，由西向東分別是：Lagos・Portimão・Lagoa・Tavira。Tavira 是最東端的 DOC，位置靠近西班牙，也是最乾熱的子產區，以 Negra Mole 和 Castelão（Periquita）著名。',
+  },
+  {
+    type: 'summary',
+    message: '🎉 恭喜完成 Level 2 所有課程與評量！您已掌握葡萄牙重點產區的深度知識。',
+    keyPoints: [
+      '北部：Douro（片岩梯田波特酒）・Vinho Verde（Alvarinho/Loureiro 清爽白酒）・Trás-os-Montes（極端大陸型）',
+      '中部山地：Dão（花崗岩，Touriga Nacional + Encruzado）・Bairrada（Baga 高酸 + Espumante）',
+      '里斯本周邊：Lisboa 九子產區・Bucelas（Arinto）・Colares（砂丘老藤）・Tejo（泰加斯河谷）',
+      '南部：Alentejo 八子產區・Setúbal（Moscatel 甜酒）・Algarve 四 DOC',
+      '島嶼：Madeira（Estufagem/Canteiro 工藝）・Açores（玄武岩石牆）',
+    ],
+  },
+]
+
 // ───────────────────────────────────────────────────────────────
 //  Level 4 投影片 — 大師品鑑與垂直年份
 // ───────────────────────────────────────────────────────────────
@@ -2263,9 +3482,22 @@ const SLIDE_MAP = {
   P1M4L2: P1M4L2_slides,
   P1M4L3: P1M4L3_slides,
   P1FinalExam: P1FinalExam_slides,
-  // Level 2 - 已製作課程
+  // Level 2
   P2M1L1: P2M1L1_slides,
   P2M1L2: P2M1L2_slides,
+  P2M1L3: P2M1L3_slides,
+  P2M1L4: P2M1L4_slides,
+  P2M2L1: P2M2L1_slides,
+  P2M2L2: P2M2L2_slides,
+  P2M2L3: P2M2L3_slides,
+  P2M2L4: P2M2L4_slides,
+  P2M3L1: P2M3L1_slides,
+  P2M3L2: P2M3L2_slides,
+  P2M3L3: P2M3L3_slides,
+  P2M4L1: P2M4L1_slides,
+  P2M4L2: P2M4L2_slides,
+  P2M4L3: P2M4L3_slides,
+  P2FinalExam: P2FinalExam_slides,
   P2M5L1: P2M5L1_slides,
   P2M5L2: P2M5L2_slides,
   // Level 4 — 大師品鑑與垂直年份
