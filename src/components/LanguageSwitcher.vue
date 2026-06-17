@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isAdmin" class="lang-switcher" :class="{ open: isOpen }" @click.stop>
+  <div class="lang-switcher" :class="{ open: isOpen }" @click.stop>
     <button
       class="ls-trigger"
       :title="$t('common.labels.language')"
@@ -31,11 +31,9 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { SUPPORTED_LOCALES, setLocale } from '../locales/index.js'
-import { authActions } from '../stores/authStore.js'
 
 const { locale } = useI18n()
 const isOpen = ref(false)
-const isAdmin = computed(() => authActions.isAdmin())
 
 const currentLang = computed(
   () => SUPPORTED_LOCALES.find(l => l.code === locale.value) || SUPPORTED_LOCALES[0]
