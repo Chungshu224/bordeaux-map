@@ -67,7 +67,7 @@ export const courseLevels = {
     difficulty: '進階',
     icon: '🍷',
     color: '#FF9800',
-    totalLessons: 24,
+    totalLessons: 27,
     modules: [
       {
         id: 'L2M1',
@@ -122,7 +122,16 @@ export const courseLevels = {
       },
       {
         id: 'L2M6',
-        title: '第六章：Level 2 綜合評量',
+        title: '第六章：產區餐酒搭配實戰',
+        lessons: [
+          { id: 'L2M6L1', title: '北義產區餐酒搭配實戰' },
+          { id: 'L2M6L2', title: '中南義與島嶼餐酒搭配實戰' },
+          { id: 'L2M6L3', title: '特殊酒款配對：氣泡酒、甜酒與加烈酒' }
+        ]
+      },
+      {
+        id: 'L2M7',
+        title: '第七章：Level 2 綜合評量',
         isFinalExamModule: true,
         lessons: [
           { id: 'L2FinalExam', title: 'Level 2 綜合評量', isFinalExam: true }
