@@ -118,6 +118,42 @@
       "content": "<div class=\"variety-intro\"><p>從1385年創立的Antinori到改寫葡萄酒史的革命者，托斯卡納頂級酒莊矩陣</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">AN</div><div class=\"up-badge\">超托創始人</div><div class=\"up-body\"><div class=\"up-est\">Marchesi Antinori — Est. 1385</div><p>630年26代家族傳承，1971年創造Tignanello開啟超托時代。遍布Chianti Classico、Montalcino、Bolgheri等所有核心產區。</p><div class=\"up-wines\">🍷 Tignanello（Sangiovese+Cabernet）€50-70 / Solaia（Cabernet主導旗艦）€150-200 / Pèppoli Chianti Classico €18-25</div><div class=\"up-tip\">遍布全托斯卡納主要產區 × 傳統與創新並存 × 義大利葡萄酒的國際化先驅</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">FR</div><div class=\"up-badge\">700年家族傳奇</div><div class=\"up-body\"><div class=\"up-est\">Frescobaldi — Est. 1300年代</div><p>文藝復興時期已供應教皇與皇室，11個莊園橫跨托斯卡納，2005年取得Ornellaia控股。</p><div class=\"up-wines\">🍷 Ornellaia（頂級超托）€150-300 / Castelgiocondo Brunello di Montalcino €50-80 / Nipozzano Chianti Rufina Riserva €20-30</div><div class=\"up-tip\">11個莊園 × 主要DOCG全涵蓋 × 傳統風土與現代精釀結合</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Tenuta San Guido（Sassicaia）</strong><p>義大利唯一單一酒莊DOC，第一款超托誕生地，1968首年份改寫歷史</p><div class=\"um-prices\">Sassicaia（85% Cabernet Sauvignon）<br>Bolgheri Sassicaia DOC（2013年獨立）</div><div class=\"um-age\">€150-250 / 超托之王</div></div><div class=\"umbria-mini c2\"><strong>Castello Banfi</strong><p>1978年美國資本進駐Montalcino，現代化科技農業，將Brunello推向美國市場</p><div class=\"um-prices\">Brunello di Montalcino<br>Poggio alle Mura Riserva</div><div class=\"um-age\">€40-120 / 現代精釀風格</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>€10-25</h4><p>Chianti / Morellino di Scansano / Rosso di Montalcino，日常托斯卡納果香型</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>€25-70</h4><p>Chianti Classico Gran Selezione / Vino Nobile / Brunello，深度陳年表達</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 收藏</div><h4>€80-300+</h4><p>Brunello Riserva / Sassicaia / Ornellaia / Solaia，義大利葡萄酒頂峰之作</p></div></div></div>"
     },
     {
+      "type": "appellation-comparison",
+      "title": "⚖️ Brunello vs Vino Nobile 托斯卡納姊妹對比",
+      "description": "同為 Sangiovese 主導的托斯卡納 DOCG，相距僅 30 km，風格與市場定位截然不同。Brunello 國際聞名、Vino Nobile 性價比之選。",
+      "pairs": [
+        {
+          "title": "Brunello vs Vino Nobile——托斯卡尼姊妹",
+          "intro": "同為 Sangiovese 為主的托斯卡尼 DOCG、相距僅 30 km，但風格與市場定位截然不同。Brunello 國際聞名、Vino Nobile 性價比之選。",
+          "left": {
+            "name": "Brunello di Montalcino DOCG", "region": "Toscana / Montalcino", "color": "#7B1F2A",
+            "grape": "100% Sangiovese Grosso（BBS-11 無性系）",
+            "soil": "多元——Galestro 片岩泥灰、Alberese 石灰岩、海岸黏土",
+            "climate": "溫暖乾燥、海岸影響、Mt. Amiata 屏障",
+            "elevation": "120–600 m",
+            "ageing": "50 個月（含 24 個月木桶 + 4 個月瓶陳）；Riserva 62 個月",
+            "style": "結構厚實、單寧成熟、果香集中、極高陳年潛力",
+            "aromas": "黑櫻桃、皮革、雪茄、香料、無花果乾、巧克力",
+            "price": "€50 – €2,000+",
+            "producers": "Biondi-Santi、Soldera Case Basse、Salvioni、Poggio di Sotto"
+          },
+          "right": {
+            "name": "Vino Nobile di Montepulciano DOCG", "region": "Toscana / Montepulciano", "color": "#A8324A",
+            "grape": "70%+ Sangiovese（當地稱 Prugnolo Gentile）+ 可加 Canaiolo、Colorino 等",
+            "soil": "中新世海洋沉積（黏土、砂、石灰）",
+            "climate": "較內陸、夏熱冬冷",
+            "elevation": "250–600 m",
+            "ageing": "24 個月（含 12 個月木桶）；Riserva 36 個月",
+            "style": "較易飲、果香奔放、酒體中等偏飽滿",
+            "aromas": "紅櫻桃、紫羅蘭、菸草、皮革、香料",
+            "price": "€20 – €100",
+            "producers": "Avignonesi、Boscarelli、Salcheto、Poliziano"
+          },
+          "keyDifference": "Brunello 強制 100% Sangiovese 純粹，並有 50 個月超長陳年，使其成為 Sangiovese 的「終極表達」。Vino Nobile 允許混釀並只需 24 個月陳年，更接近日常飲用的高品質紅酒。價格落差約 3-5 倍，但 Vino Nobile 性價比經常超越 Brunello 入門款。"
+        }
+      ]
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

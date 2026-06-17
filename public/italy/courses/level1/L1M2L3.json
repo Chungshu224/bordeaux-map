@@ -113,6 +113,42 @@
       "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Veneto美食與葡萄酒的完美邂逅 —— 水都威尼斯的海鮮風情、Verona的燉肉傳統、以及以Amarone作食材的頂級料理文化</p><div class=\"food-pairing\"><div class=\"pairing-card\"><strong>🥂 Prosecco Brut DOCG</strong><p><strong>搭配：Sarde in Saor（威尼斯醋漬沙丁魚）</strong><br>威尼斯最古老的傳統菜，洋蔥醋漬沙丁魚配松子葡萄乾。Prosecco清爽氣泡去油解膩，杏花香平衡酸甜，典型威尼斯開胃搭配。</p></div><div class=\"pairing-card\"><strong>🤍 Soave Classico DOCG</strong><p><strong>搭配：Baccalà alla Vicentina（維琴察鹽漬鱈魚）</strong><br>鹽漬鱈魚以牛奶和洋蔥燉煮，維琴察的驕傲。Garganega的礦物感和杏仁花香完美搭配鱈魚鮮甜，高酸清口不膩。</p></div><div class=\"pairing-card\"><strong>🌿 Valpolicella Ripasso</strong><p><strong>搭配：Pasta e Fagioli（豆子義大利麵）</strong><br>Veneto農民傳統菜，濃郁豆類湯底。Ripasso中等複雜的果味和單寧搭配豆類厚重感，互相提升，溫暖身心。</p></div><div class=\"pairing-card\"><strong>🍷 Amarone della Valpolicella DOCG</strong><p><strong>搭配：Risotto all'Amarone（Amarone紅酒燉飯）</strong><br>最高境界的酒食搭配：以Amarone本身入菜釀製的燉飯，再以Amarone佐餐。酒食同源，濃郁對濃郁，Veneto頂級料理文化。</p></div></div></div>"
     },
     {
+      "type": "appellation-comparison",
+      "title": "⚖️ Amarone vs Valpolicella Superiore 同葡萄・不同工藝",
+      "description": "兩者都來自 Veneto Valpolicella、使用相同葡萄組合（Corvina+Rondinella+Molinara），但釀造工藝決定了天差地別的風格。",
+      "pairs": [
+        {
+          "title": "Amarone vs Valpolicella Superiore——同葡萄、不同工藝",
+          "intro": "兩者都來自 Veneto Valpolicella、使用相同葡萄組合（Corvina+Rondinella+Molinara），但釀造工藝決定了天差地別的風格。",
+          "left": {
+            "name": "Amarone della Valpolicella DOCG", "region": "Veneto / Valpolicella", "color": "#5C2334",
+            "grape": "45-95% Corvina + Corvinone、Rondinella、其他",
+            "soil": "Valpolicella 石灰質黏土",
+            "climate": "溫和大陸、Lake Garda 調節",
+            "elevation": "150–500 m",
+            "ageing": "24 個月（含木桶陳年）；Riserva 4 年",
+            "style": "採收後葡萄風乾 100-120 天（appassimento）→ 糖度集中，酒精 14-16%、酒體飽滿、甜潤但不甜",
+            "aromas": "黑櫻桃、無花果乾、葡萄乾、巧克力、咖啡、皮革、香料",
+            "price": "€30 – €500+",
+            "producers": "Quintarelli、Dal Forno、Bertani、Allegrini、Masi"
+          },
+          "right": {
+            "name": "Valpolicella Superiore DOC", "region": "Veneto / Valpolicella", "color": "#A8324A",
+            "grape": "相同混釀（Corvina+Rondinella+Molinara）",
+            "soil": "相同",
+            "climate": "相同",
+            "elevation": "相同",
+            "ageing": "12 個月以上",
+            "style": "新鮮葡萄直接釀造（無風乾）；酒精 12-13%、酒體中等、果香奔放、易飲",
+            "aromas": "紅櫻桃、覆盆子、紫羅蘭、香料、淡苦杏仁",
+            "price": "€10 – €30",
+            "producers": "Allegrini、Tedeschi、Zenato、Zýme"
+          },
+          "keyDifference": "工藝決定一切：Amarone 將葡萄風乾 3-4 個月使糖分濃縮、釀出 14-16% 酒精的飽滿酒款；Valpolicella Superiore 使用新鮮葡萄、產出輕快易飲。值得注意：Ripasso 是中間版本——將 Valpolicella 倒入剛壓榨的 Amarone 酒渣上二次發酵，被稱為「窮人的 Amarone」。"
+        }
+      ]
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

@@ -1,4 +1,4 @@
-{
+﻿{
   "lessonId": "L2M2L1",
   "title": "Marche 馬爾凱",
   "quiz": [
@@ -121,6 +121,42 @@
       "type": "content",
       "title": "🏰 酒莊與選購指南",
       "content": "<div class=\"wineries-section\"><div class=\"wineries-intro\"><p class=\"intro-highlight\">Marche 擁有<strong>優質酒莊群</strong>，從百年傳統到現代創新，三級價格對應不同需求。</p></div><div class=\"verdicchio-producers\"><h3>🍾 Verdicchio 15+ 名莊</h3><div class=\"producers-grid\"><div class=\"producer-card top-tier\"><div class=\"tier-badge\">S 級</div><h4>Bucci</h4><p class=\"producer-desc\">Castelli di Jesi 的<strong>精神領袖</strong>，有機生物動力</p><div class=\"flagship\"><strong>旗艦酒款：</strong><ul><li>Villa Bucci Riserva（€35-50）- 陳年 15-20 年</li><li>Pongelli Riserva（€60-80）- 單一園，酒王等級</li></ul></div><p class=\"producer-note\">🌟 <strong>亮點：</strong>老藤 Verdicchio，生物動力法，深度與優雅並存</p></div><div class=\"producer-card top-tier\"><div class=\"tier-badge\">S 級</div><h4>Sartarelli</h4><p class=\"producer-desc\">100% Verdicchio 專家，<strong>Castelli di Jesi 標竿</strong></p><div class=\"flagship\"><strong>旗艦酒款：</strong><ul><li>Tralivio（€25-35）- 經典 Riserva</li><li>Balciana（€50-70）- 老藤單一園</li></ul></div><p class=\"producer-note\">🌟 <strong>亮點：</strong>家族經營，只做 Verdicchio，品質穩定</p></div><div class=\"producer-card top-tier\"><div class=\"tier-badge\">S 級</div><h4>Bisci</h4><p class=\"producer-desc\"><strong>Matelica 之王</strong>，陳年潛力最強</p><div class=\"flagship\"><strong>旗艦酒款：</strong><ul><li>Vigneto Fogliano（€40-60）- 單一園</li><li>Verdicchio di Matelica Riserva（€30-45）</li></ul></div><p class=\"producer-note\">🌟 <strong>亮點：</strong>高海拔，老藤，能陳年 20 年+</p></div><div class=\"producer-card a-tier\"><div class=\"tier-badge\">A 級</div><h4>Umani Ronchi</h4><p class=\"producer-desc\">Marche <strong>最大精品酒莊</strong>，Verdicchio 與 Conero 雙強</p><div class=\"flagship\"><strong>推薦酒款：</strong><ul><li>Casal di Serra Verdicchio（€18-28）</li><li>Plenio Verdicchio Riserva（€25-35）</li></ul></div></div><div class=\"producer-card a-tier\"><div class=\"tier-badge\">A 級</div><h4>Garofoli</h4><p class=\"producer-desc\">1871 年創立，<strong>傳統與創新</strong>平衡</p><div class=\"flagship\"><strong>推薦酒款：</strong><ul><li>Podium Verdicchio Riserva（€20-30）</li><li>Serra Fiorese Riserva（€25-35）</li></ul></div></div><div class=\"producer-card a-tier\"><div class=\"tier-badge\">A 級</div><h4>Fazi Battaglia</h4><p class=\"producer-desc\">魚形瓶的創造者，<strong>Verdicchio 國際化推手</strong></p><div class=\"flagship\"><strong>推薦酒款：</strong><ul><li>Le Mole Riserva（€18-25）</li><li>San Sisto Riserva（€25-35）</li></ul></div></div></div><div class=\"other-verdicchio\"><strong>其他優質 Verdicchio 酒莊：</strong><div class=\"other-list\"><span class=\"other-producer\">Moncaro</span><span class=\"other-producer\">Marotti Campi</span><span class=\"other-producer\">Colonnara</span><span class=\"other-producer\">Pievalta</span><span class=\"other-producer\">Andrea Felici</span><span class=\"other-producer\">Sparapani</span><span class=\"other-producer\">Bonci</span><span class=\"other-producer\">Santa Barbara</span><span class=\"other-producer\">Tavignano</span></div></div></div><div class=\"conero-producers\"><h3>🍷 Conero 紅酒名莊</h3><div class=\"producers-grid-red\"><div class=\"producer-card-red top\"><div class=\"tier-badge red\">S 級</div><h4>Umani Ronchi - Cumaro</h4><p class=\"producer-desc\">Conero <strong>標竿之作</strong>，100% Montepulciano</p><p><strong>價格：</strong>€40-60</p><p class=\"wine-note\">🍷 18 個月法國橡木桶，陳年 10-15 年</p></div><div class=\"producer-card-red top\"><div class=\"tier-badge red\">S 級</div><h4>Moroder</h4><p class=\"producer-desc\">小產量<strong>精品 Conero</strong>，有機栽培</p><p><strong>價格：</strong>€30-50</p><p class=\"wine-note\">🍷 傳統風格，優雅細膩</p></div><div class=\"producer-card-red mid\"><div class=\"tier-badge red\">A 級</div><h4>Lanari</h4><p class=\"producer-desc\">家族經營，<strong>性價比</strong>極高</p><p><strong>價格：</strong>€15-35</p></div><div class=\"producer-card-red mid\"><div class=\"tier-badge red\">A 級</div><h4>Le Terrazze</h4><p class=\"producer-desc\">小批量，<strong>老藤 Montepulciano</strong></p><p><strong>價格：</strong>€20-40</p></div></div></div><div class=\"emerging-producers\"><h3>🌸 新興品種酒莊</h3><div class=\"producers-grid-emerging\"><div class=\"producer-card-emerging\"><h4>Velenosi</h4><p class=\"producer-desc\"><strong>Pecorino 復興先驅</strong>，Offida DOCG 推手</p><div class=\"wines-list\"><p><strong>Pecorino：</strong>Vellenosi Pecorino（€15-22）</p><p><strong>Lacrima：</strong>Lacrima di Morro d'Alba（€14-20）</p></div></div><div class=\"producer-card-emerging\"><h4>Aurora</h4><p class=\"producer-desc\">新生代酒莊，<strong>生物動力法</strong></p><div class=\"wines-list\"><p><strong>Pecorino：</strong>Aurora Pecorino（€18-28）</p><p><strong>Passerina：</strong>Spumante（€16-24）</p></div></div><div class=\"producer-card-emerging\"><h4>Oasi degli Angeli</h4><p class=\"producer-desc\"><strong>Lacrima 專家</strong>，精品路線</p><div class=\"wines-list\"><p><strong>Kurni：</strong>頂級 Lacrima（€30-45）</p></div></div></div></div><div class=\"price-guide\"><h3>💰 三級價格選購指南</h3><div class=\"price-tiers\"><div class=\"price-tier entry\"><h4>入門級 €8-18</h4><div class=\"tier-desc\"><p><strong>適合：</strong>日常飲用、初識 Marche</p><p><strong>推薦：</strong></p><ul><li>Umani Ronchi Verdicchio DOC（€10-15）</li><li>Garofoli Macrina Verdicchio（€12-16）</li><li>Fazi Battaglia Anfora（€8-12）</li><li>Lanari Rosso Conero（€10-14）</li></ul></div></div><div class=\"price-tier mid\"><h4>中階級 €18-40</h4><div class=\"tier-desc\"><p><strong>適合：</strong>特殊餐會、短期收藏</p><p><strong>推薦：</strong></p><ul><li>Sartarelli Tralivio Riserva（€25-35）</li><li>Bucci Villa Bucci Riserva（€35-40）</li><li>Garofoli Podium Riserva（€20-30）</li><li>Umani Ronchi Plenio（€25-35）</li><li>Velenosi Pecorino（€15-22）</li></ul></div></div><div class=\"price-tier premium\"><h4>頂級 €40-80+</h4><div class=\"tier-desc\"><p><strong>適合：</strong>長期收藏、特殊慶典</p><p><strong>推薦：</strong></p><ul><li>Bucci Pongelli Riserva（€60-80）</li><li>Sartarelli Balciana（€50-70）</li><li>Bisci Vigneto Fogliano（€40-60）</li><li>Umani Ronchi Cumaro（€40-60）</li></ul></div></div></div></div><div class=\"collecting-guide\"><h3>📦 陳年收藏建議</h3><div class=\"collecting-tips\"><div class=\"tip-card\"><h4>🍾 適合收藏的 Verdicchio</h4><ul><li><strong>必選：</strong>Matelica Riserva（陳年 10-20 年）</li><li><strong>推薦：</strong>Castelli di Jesi Classico Riserva（5-15 年）</li><li><strong>避免：</strong>一般 DOC（喝年輕的）</li></ul><p class=\"tip-note\">🌡️ <strong>儲存條件：</strong>12-15°C，濕度 70%，避光</p></div><div class=\"tip-card\"><h4>🍷 適合收藏的 Conero</h4><ul><li>Conero Riserva DOCG（5-15 年）</li><li>頂級單一園（10-15 年）</li></ul></div><div class=\"tip-card\"><h4>📅 最佳購入與飲用時機</h4><p><strong>購入：</strong>新年份發布時（價格較低）</p><p><strong>飲用：</strong></p><ul><li>Verdicchio Riserva：5-7 年後達高峰</li><li>Conero Riserva：6-10 年後達高峰</li></ul></div></div></div></div>"
+    },
+    {
+      "type": "appellation-comparison",
+      "title": "⚖️ Verdicchio 兩大產區對比",
+      "description": "Marche 兩大 Verdicchio 產區，僅相隔 60 km，但因海洋與山脈影響截然不同。Castelli di Jesi 海風柔和、Matelica 山谷凜冽。",
+      "pairs": [
+        {
+          "title": "Verdicchio dei Castelli di Jesi vs di Matelica——海與山",
+          "intro": "Marche 兩大 Verdicchio 產區，僅相隔 60 km，但因海洋與山脈影響截然不同。Castelli di Jesi 海風柔和、Matelica 山谷凜冽。",
+          "left": {
+            "name": "Verdicchio dei Castelli di Jesi DOC", "region": "Marche / 海岸丘陵", "color": "#5BA89F",
+            "grape": "85%+ Verdicchio",
+            "soil": "黏土、砂質、海洋沉積石灰岩",
+            "climate": "受 Adriatic 海洋調節、溫和",
+            "elevation": "50–400 m",
+            "ageing": "基礎款無；Riserva 18 個月（DOCG 等級）",
+            "style": "較柔軟、果香明亮、礦物中等、適合早飲",
+            "aromas": "青蘋果、檸檬、白花、杏仁、鹽味（海風）",
+            "price": "€10 – €40",
+            "producers": "Bucci、Sartarelli、Garofoli、Umani Ronchi"
+          },
+          "right": {
+            "name": "Verdicchio di Matelica DOC", "region": "Marche / Apennine 山谷", "color": "#3070A0",
+            "grape": "85%+ Verdicchio",
+            "soil": "海洋化石石灰岩、白堊質黏土",
+            "climate": "山谷大陸氣候、日夜溫差大、無海洋影響",
+            "elevation": "300–500 m",
+            "ageing": "基礎款無；Riserva 18 個月",
+            "style": "骨感緊瘦、極高酸度、礦物張力強、極佳陳年潛力",
+            "aromas": "青檸、白花、燧石、煙燻、白胡椒、堅果（陳年）",
+            "price": "€15 – €80",
+            "producers": "Belisario、La Monacesca、Bisci、Borgo Paglianetto"
+          },
+          "keyDifference": "Castelli di Jesi 在海風影響下展現柔和果香與輕度鹽味；Matelica 山谷無海風、晝夜溫差大，產生極高酸度與礦物深度。Matelica 雖產量小（僅 Castelli di Jesi 的 1/10）卻擁有更佳陳年潛力——5-15 年後可發展驚人複雜度。"
+        }
+      ]
     },
     {
       "type": "list",

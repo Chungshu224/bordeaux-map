@@ -90,7 +90,38 @@
     {
       "type": "appellation-comparison",
       "title": "⚖️ Barolo vs Barbaresco 兩大 Nebbiolo 名區互動比較",
-      "description": "點選查看 Barolo（力量型、長陳年、誉為「酒中之王」）與 Barbaresco（優雅型、中陳年、誉為「酒中之后」）的完整對照：土壤、海拔、微氣候、老、陳年規定、酒體與單寧、代表酒莊、推薦佳年與預算區間。"
+      "description": "點選查看 Barolo（力量型、長陳年、誉為「酒中之王」）與 Barbaresco（優雅型、中陳年、誉為「酒中之后」）的完整對照：土壤、海拔、微氣候、陳年規定、酒體與單寧、代表酒莊、推薦佳年與預算區間。",
+      "pairs": [
+        {
+          "title": "Barolo vs Barbaresco——皮蒙特雙王",
+          "intro": "同樣 100% Nebbiolo、相距僅 16 km，卻是義大利最常被比較的兩個 DOCG。Barolo 結構紮實如鋼鐵，Barbaresco 優雅細膩如絲綢。",
+          "left": {
+            "name": "Barolo DOCG", "region": "Piemonte / Langhe", "color": "#7B1F2A",
+            "grape": "100% Nebbiolo",
+            "soil": "11 個村莊：La Morra/Barolo 為 Tortonian 藍灰泥灰；Serralunga/Monforte/Castiglione 為 Helvetian 紅褐砂質",
+            "climate": "大陸性、霧氣多、秋季長",
+            "elevation": "200–500 m",
+            "ageing": "38 個月（含 18 個月木桶）；Riserva 62 個月",
+            "style": "結構紮實、單寧粗獷、高酸、需 10+ 年才開瓶。男性化、力量型",
+            "aromas": "焦油、玫瑰、皮革、松露、甘草、黑櫻桃、雪茄",
+            "price": "€40 – €1,500+",
+            "producers": "Conterno、Bartolo Mascarello、Vietti、Roagna、Burlotto"
+          },
+          "right": {
+            "name": "Barbaresco DOCG", "region": "Piemonte / Langhe", "color": "#A8324A",
+            "grape": "100% Nebbiolo",
+            "soil": "較單一，主要為 Tortonian 鈣質泥灰岩（calcareous marl）",
+            "climate": "較 Barolo 略溫暖、海拔較低",
+            "elevation": "180–350 m",
+            "ageing": "26 個月（含 9 個月木桶）；Riserva 50 個月",
+            "style": "較優雅、單寧細緻、酒體中等、可較早飲用。女性化、優雅型",
+            "aromas": "紅櫻桃、玫瑰、覆盆子、絲質單寧、優雅花香",
+            "price": "€35 – €800+",
+            "producers": "Bruno Giacosa、Gaja、Produttori del Barbaresco、Roagna"
+          },
+          "keyDifference": "Barolo 因 Helvetian 砂質土帶來鋼鐵骨架，Barbaresco 的鈣質泥灰岩則賦予優雅單寧。Barolo 法定陳年 38 個月、Barbaresco 僅 26 個月——這 12 個月的差異反映兩者單寧結構的本質不同。"
+        }
+      ]
     },
     {
       "type": "list",
