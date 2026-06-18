@@ -29,7 +29,7 @@
       <div class="slide" :key="currentSlide">
         <component
           :is="currentComponent"
-          :slide="slides[currentSlide]"
+          :slide="currentSlideData"
           :mapRegion="lesson.mapRegion || null"
           @openMap="$emit('openMap')"
         />
@@ -162,6 +162,27 @@ const slides = computed(() => {
   arr.push(...lessonSlides.filter(s => s.type !== 'title'))
   return arr
 })
+
+function normalizeSlide(s) {
+  if (!s) return s
+  // list: items [{icon, text}] → points [string]
+  if (s.type === 'list' && s.items && !s.points) {
+    return { ...s, points: s.items.map(item => `${item.icon || ''} ${item.text || item}`.trim()) }
+  }
+  // comparison: left/right → leftTitle/leftPoints/rightTitle/rightPoints
+  if (s.type === 'comparison' && s.left && !s.leftTitle) {
+    return {
+      ...s,
+      leftTitle: s.left.label,
+      leftPoints: s.left.items,
+      rightTitle: s.right?.label,
+      rightPoints: s.right?.items
+    }
+  }
+  return s
+}
+
+const currentSlideData = computed(() => normalizeSlide(slides.value[currentSlide.value]))
 
 const currentComponent = computed(() => {
   const type = slides.value[currentSlide.value]?.type || 'content'
