@@ -1,4 +1,4 @@
-{
+﻿{
   "lessonId": "L2M3L4",
   "title": "Calabria 卡拉布里亞",
   "quiz": [
@@ -100,7 +100,7 @@
     {
       "type": "content",
       "title": "🍇 Gaglioppo 品種科學深度解析",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🧬 DNA與起源</h4><p><strong>古希臘品種後裔</strong>，2500年以上栽培史</p><p>薄皮淺色基因，抗旱能力極強（耐40°C+高溫）</p><p>芳香物：酯類（乙酸乙酯=櫻桃）、萜烯類（香葉醇=玫瑰紫羅蘭）</p></div><div class=\"research-content\"><h4>📊 三品種風格對比</h4><p><strong>Gaglioppo</strong>：淺至中深 / 中等柔順單寧 / 中高酸度 / 13-14% / €12-35</p><p><strong>Pinot Noir</strong>：淺色 / 中等柔順單寧 / 高酸度 / 12-13.5% / €30-150+</p><p><strong>Nebbiolo</strong>：淺至中深 / 高強勁單寧 / 極高酸度 / 13-15% / €25-200+</p></div></div></div><div class=\"aging-science\"><p class=\"science-explanation\">Gaglioppo陳年演化：從清新果香到複雜皮革</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🌸 年輕期（1-3年）</h5><p>紅櫻桃、新鮮草莓、玫瑰花瓣、活潑酸度</p><p class=\"science-note\">最佳搭配：海鮮、沙拉、輕食</p></div><div class=\"science-card\"><h5>🍷 成熟期（4-8年）</h5><p>乾燥香草、皮革、雪松、礦物鹽感</p><p class=\"science-note\">最佳搭配：Classico Superiore配烤雞</p></div><div class=\"science-card\"><h5>🏆 陳年期（9年以上）</h5><p>皮革、煙草、泥土、焦糖、複雜礦物</p><p class=\"science-note\">最佳搭配：Riserva配烤羊排</p></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🧬 DNA與起源</h4><p><strong>古希臘品種後裔</strong>，2500年以上栽培史</p><p>薄皮淺色基因，抗旱能力極強（耐40°C+高溫）</p><p>芳香物：酯類（乙酸乙酯=櫻桃）、萜烯類（香葉醇=玫瑰紫羅蘭）</p></div><div class=\"research-content\"><h4>📊 三品種風格對比</h4><p><strong>Gaglioppo</strong>：淺至中深 / 中等柔順單寧 / 中高酸度 / 13-14% / €12-35</p><p><strong>Pinot Noir</strong>：淺色 / 中等柔順單寧 / 高酸度 / 12-13.5% / €30-150+</p><p><strong>Nebbiolo</strong>：淺至中深 / 高強勁單寧 / 極高酸度 / 13-15% / €25-200+</p></div></div></div><div class=\"aging-science\"><p>Gaglioppo陳年演化：從清新果香到複雜皮革</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🌸 年輕期（1-3年）</h5><p>紅櫻桃、新鮮草莓、玫瑰花瓣、活潑酸度</p><p class=\"science-note\">最佳搭配：海鮮、沙拉、輕食</p></div><div class=\"science-card\"><h5>🍷 成熟期（4-8年）</h5><p>乾燥香草、皮革、雪松、礦物鹽感</p><p class=\"science-note\">最佳搭配：Classico Superiore配烤雞</p></div><div class=\"science-card\"><h5>🏆 陳年期（9年以上）</h5><p>皮革、煙草、泥土、焦糖、複雜礦物</p><p class=\"science-note\">最佳搭配：Riserva配烤羊排</p></div></div></div>"
     },
     {
       "type": "content",

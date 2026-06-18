@@ -1,4 +1,4 @@
-{
+﻿{
   "lessonId": "L1M2L2",
   "title": "Tuscany 托斯卡納 - 經典之美",
   "quiz": [
@@ -100,7 +100,7 @@
     {
       "type": "content",
       "title": "🚀 超級托斯卡納深度探索",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>⚔️ 叛逆的誕生背景</h4><p><strong>1960年代限制：</strong>DOC法規要求Chianti必須混入白葡萄（Malvasia / Trebbiano）</p><p><strong>禁止：</strong>使用Cabernet Sauvignon等非傳統國際品種</p><p><strong>困境：</strong>高品質創新酒被迫標示為最低等級VdT餐酒</p><p><strong>諷刺：</strong>「最低等級」賣出全義大利最高價格</p></div><div class=\"research-content\"><h4>📜 IGT制度解放（1992年）</h4><p><strong>1992年：</strong>IGT（Indicazione Geografica Tipica）制度建立</p><p><strong>Toscana IGT：</strong>超托終於獲得適合的法律身份</p><p><strong>2013年：</strong>Bolgheri Sassicaia升格為義大利唯一單一酒莊DOC</p><p><strong>現狀：</strong>超托是義大利最昂貴酒款的代名詞</p></div></div></div><div class=\"aging-science\"><p class=\"science-explanation\">超級托斯卡納三大風格流派</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🇫🇷 純國際品種型</h5><p>Sassicaia / Ornellaia / Masseto（100% Merlot）</p><p class=\"science-note\">Cabernet / Merlot主導，Bolgheri海岸，波爾多風格</p></div><div class=\"science-card\"><h5>🌹 Sangiovese混釀型</h5><p>Tignanello / Sammarco / Solaia</p><p class=\"science-note\">Sangiovese + Cabernet，本土 × 國際完美融合</p></div><div class=\"science-card\"><h5>🍷 純Sangiovese精品型</h5><p>Percarlo / Flaccianello della Pieve</p><p class=\"science-note\">100% Sangiovese，超越DOC框架的極致工藝</p></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>⚔️ 叛逆的誕生背景</h4><p><strong>1960年代限制：</strong>DOC法規要求Chianti必須混入白葡萄（Malvasia / Trebbiano）</p><p><strong>禁止：</strong>使用Cabernet Sauvignon等非傳統國際品種</p><p><strong>困境：</strong>高品質創新酒被迫標示為最低等級VdT餐酒</p><p><strong>諷刺：</strong>「最低等級」賣出全義大利最高價格</p></div><div class=\"research-content\"><h4>📜 IGT制度解放（1992年）</h4><p><strong>1992年：</strong>IGT（Indicazione Geografica Tipica）制度建立</p><p><strong>Toscana IGT：</strong>超托終於獲得適合的法律身份</p><p><strong>2013年：</strong>Bolgheri Sassicaia升格為義大利唯一單一酒莊DOC</p><p><strong>現狀：</strong>超托是義大利最昂貴酒款的代名詞</p></div></div></div><div class=\"aging-science\"><p>超級托斯卡納三大風格流派</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🇫🇷 純國際品種型</h5><p>Sassicaia / Ornellaia / Masseto（100% Merlot）</p><p class=\"science-note\">Cabernet / Merlot主導，Bolgheri海岸，波爾多風格</p></div><div class=\"science-card\"><h5>🌹 Sangiovese混釀型</h5><p>Tignanello / Sammarco / Solaia</p><p class=\"science-note\">Sangiovese + Cabernet，本土 × 國際完美融合</p></div><div class=\"science-card\"><h5>🍷 純Sangiovese精品型</h5><p>Percarlo / Flaccianello della Pieve</p><p class=\"science-note\">100% Sangiovese，超越DOC框架的極致工藝</p></div></div></div>"
     },
     {
       "type": "super-tuscan-evolution",
