@@ -179,6 +179,27 @@ function normalizeSlide(s) {
       rightPoints: s.right?.items
     }
   }
+  // quiz: answer → correct, add type:'single' if missing
+  if (s.type === 'quiz' && Array.isArray(s.questions)) {
+    return {
+      ...s,
+      questions: s.questions.map(q => ({
+        ...q,
+        type: q.type || 'single',
+        correct: q.correct ?? q.answer
+      }))
+    }
+  }
+  // timeline: desc → description
+  if (s.type === 'timeline' && Array.isArray(s.events)) {
+    return {
+      ...s,
+      events: s.events.map(e => ({
+        ...e,
+        description: e.description ?? e.desc
+      }))
+    }
+  }
   return s
 }
 
