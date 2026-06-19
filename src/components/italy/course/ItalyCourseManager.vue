@@ -3,6 +3,7 @@
     <!-- Level Selector -->
     <ItalyLevelSelector
       v-if="view === 'levelSelector'"
+      :key="progressVersion"
       @startLevel="handleSelectLevel"
       @openMap="$emit('openMap')"
       @openNotebook="view = 'notebook'"
@@ -77,7 +78,7 @@
 </template>
 
 <script setup>
-import { ref, computed, nextTick } from 'vue'
+import { ref, computed, nextTick, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ItalyLevelSelector from './ItalyLevelSelector.vue'
 import ItalySlideViewer from './ItalySlideViewer.vue'
@@ -90,7 +91,8 @@ import {
   globalItalyAchievementManager
 } from '../../../stores/italyAchievementSystem.js'
 import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
-import { authActions } from '../../../stores/authStore.js'
+import { authActions, authState, authInitPromise } from '../../../stores/authStore.js'
+import { saveItalyLessonToSupabase, loadAndMergeItalyProgress } from '../../../lib/italyProgressSync.js'
 
 const ITALY_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/italy/*.json')
 
@@ -109,16 +111,29 @@ const achievementNotification = ref(null)
 // 已完成課程清單（從 localStorage）
 const completedMap = ref({})
 
+// 每次 Supabase 同步後遞增，強制重新讀取 localStorage
+const progressVersion = ref(0)
+
 const completedLessonsArray = computed(() =>
   Object.keys(completedMap.value).filter(k => completedMap.value[k])
 )
 
 const unlockedLevels = computed(() => {
+  progressVersion.value // reactive dependency — sync 後觸發重算
   const isAdmin = authActions.isAdmin && authActions.isAdmin()
   return {
     level1: true,
     level2: isAdmin || isItalyLevelUnlocked('level2'),
     level3: isAdmin || isItalyLevelUnlocked('level3')
+  }
+})
+
+onMounted(async () => {
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    const didUpdate = await loadAndMergeItalyProgress(userId)
+    if (didUpdate) progressVersion.value++
   }
 })
 
@@ -207,6 +222,10 @@ function handleComplete (lessonId) {
   if (selectedLevelKey.value && lessonId) {
     saveProgress(selectedLevelKey.value, lessonId)
     completedMap.value[lessonId] = true
+
+    // 同步至 Supabase（跨裝置同步）
+    const userId = authState.user?.id
+    if (userId) saveItalyLessonToSupabase(userId, lessonId)
 
     // 計算整體進度并觸發成就
     const levelKey = selectedLevelKey.value
