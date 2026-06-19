@@ -5,16 +5,16 @@
     <div class="pricing-header">
       <button class="back-btn" @click="router.push('/')">← {{ $t('common.actions.backToHome') }}</button>
       <div class="header-content">
-        <div class="header-eyebrow">透明定價・隨時取消</div>
-        <h1>選擇您的學習方案</h1>
-        <p>從免費體驗開始，升級解鎖波爾多全四級課程・進階圖層・品飲筆記本</p>
+        <div class="header-eyebrow">{{ $t('pricing.header.eyebrow') }}</div>
+        <h1>{{ $t('pricing.header.title') }}</h1>
+        <p>{{ $t('pricing.header.subtitle') }}</p>
       </div>
 
       <!-- 計費週期切換 -->
       <div class="billing-toggle">
-        <button :class="['bt-btn', period === 'monthly' ? 'active' : '']" @click="period = 'monthly'">月繳</button>
+        <button :class="['bt-btn', period === 'monthly' ? 'active' : '']" @click="period = 'monthly'">{{ $t('pricing.billing.monthly') }}</button>
         <button :class="['bt-btn', period === 'yearly' ? 'active' : '']" @click="period = 'yearly'">
-          年繳 <span class="bt-badge">訂一年・送四個月</span>
+          {{ $t('pricing.billing.yearly') }} <span class="bt-badge">{{ $t('pricing.billing.yearlyBadge') }}</span>
         </button>
       </div>
     </div>
@@ -26,56 +26,44 @@
         <!-- 免費 -->
         <div class="tier-card free-card">
           <div class="tier-top">
-            <div class="tier-label">免費體驗</div>
+            <div class="tier-label">{{ $t('pricing.tiers.free.label') }}</div>
             <div class="tier-price-wrap">
               <span class="tier-price">NT$ 0</span>
             </div>
-            <div class="tier-desc">適合初次探索・先試再買</div>
+            <div class="tier-desc">{{ $t('pricing.tiers.free.desc') }}</div>
           </div>
           <ul class="tier-features">
-            <li class="ok">🏰 波爾多 Level 1 完整開放（12 堂）</li>
-            <li class="ok">57 個 AOC 法定產區互動地圖</li>
-            <li class="ok">左右岸基礎地理認識</li>
-            <li class="ok">成就系統 & 學習進度追蹤</li>
-            <li class="no">Level 2–4 進階課程</li>
-            <li class="no">互動練習中心（4 種遊戲）</li>
-            <li class="no">其他 7 個世界產區</li>
-            <li class="no">地質 / 氣候進階圖層</li>
-            <li class="no">品飲筆記本</li>
+            <li v-for="feat in $tm('pricing.tiers.free.featuresOk')" :key="feat" class="ok">{{ feat }}</li>
+            <li v-for="feat in $tm('pricing.tiers.free.featuresNo')" :key="feat" class="no">{{ feat }}</li>
           </ul>
-          <button class="tier-cta free-cta" @click="handleFree">免費開始</button>
+          <button class="tier-cta free-cta" @click="handleFree">{{ $t('pricing.tiers.free.cta') }}</button>
         </div>
 
         <!-- 波爾多完整版 -->
         <div class="tier-card single-card" :class="{ 'subscribed-card': singleCtaState.state === 'subscribed' }">
-          <div v-if="singleCtaState.state === 'subscribed'" class="subscribed-badge">✓ 已訂閱</div>
+          <div v-if="singleCtaState.state === 'subscribed'" class="subscribed-badge">{{ $t('pricing.tiers.subscribed') }}</div>
           <div class="tier-top">
-            <div class="tier-label">波爾多完整版</div>
+            <div class="tier-label">{{ $t('pricing.tiers.single.label') }}</div>
             <div class="tier-price-wrap">
               <span class="tier-price">
                 NT$ {{ period === 'monthly' ? '290' : '1,800' }}
               </span>
-              <span class="tier-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
+              <span class="tier-period">{{ period === 'monthly' ? $t('pricing.billing.perMonth') : $t('pricing.billing.perYear') }}</span>
             </div>
-            <div class="tier-saving" v-if="period === 'yearly'">訂一年等同多送 4 個月・折合 NT$150 / 月</div>
-            <div class="tier-desc">適合備考命名・波爾多深度鑽研</div>
+            <div class="tier-saving" v-if="period === 'yearly'">{{ $t('pricing.tiers.single.yearlySaving') }}</div>
+            <div class="tier-desc">{{ $t('pricing.tiers.single.desc') }}</div>
           </div>
 
           <ul class="tier-features">
-            <li class="ok">🏰 波爾多 Level 1–4 全部課程</li>
-            <li class="ok">4 種互動練習遊戲</li>
-            <li class="ok">法定產區完整互動地圖</li>
-            <li class="ok">地質岩層 & 氣候熱力圖進階圖層</li>
-            <li class="ok">品飲筆記本（無限則記錄）</li>
-            <li class="ok">學習進度追蹤 & 成就系統</li>
-            <li class="no">其他世界產區課程</li>
+            <li v-for="feat in $tm('pricing.tiers.single.featuresOk')" :key="feat" class="ok">{{ feat }}</li>
+            <li v-for="feat in $tm('pricing.tiers.single.featuresNo')" :key="feat" class="no">{{ feat }}</li>
           </ul>
           <!-- 優惠碼 -->
           <div class="coupon-row">
             <input
               v-model="couponCode"
               class="coupon-input"
-              placeholder="輸入優惠碼（選填）"
+              :placeholder="$t('pricing.payment.couponPlaceholder')"
               maxlength="30"
               autocomplete="off"
             />
@@ -83,7 +71,7 @@
           </div>
           <!-- 付款方式選擇 -->
           <div class="pm-row">
-            <div class="pm-title">付款方式</div>
+            <div class="pm-title">{{ $t('pricing.payment.title') }}</div>
             <div class="pm-btns">
               <button
                 v-for="pm in paymentMethodOptions" :key="pm.value"
@@ -93,36 +81,31 @@
             </div>
           </div>
           <button class="tier-cta single-cta" :disabled="checkoutLoading || singleCtaState.disabled" @click="handleSingle">
-            {{ checkoutLoading ? '處理中…' : singleCtaState.text }}
+            {{ checkoutLoading ? $t('pricing.tiers.processing') : singleCtaState.text }}
           </button>
         </div>
 
         <!-- 全球產區通行證 -->
         <div class="tier-card global-card" :class="{ 'subscribed-card': globalCtaState.state === 'subscribed' }">
-          <div v-if="globalCtaState.state === 'subscribed'" class="subscribed-badge">✓ 已訂閱</div>
-          <div class="popular-badge global-badge">🌍 最超值</div>
+          <div v-if="globalCtaState.state === 'subscribed'" class="subscribed-badge">{{ $t('pricing.tiers.subscribed') }}</div>
+          <div class="popular-badge global-badge">{{ $t('pricing.tiers.global.badge') }}</div>
           <div class="tier-top">
-            <div class="tier-label">全球產區通行證</div>
+            <div class="tier-label">{{ $t('pricing.tiers.global.label') }}</div>
             <div class="tier-price-wrap">
               <span class="tier-price">
                 NT$ {{ period === 'monthly' ? '690' : '4,990' }}
               </span>
-              <span class="tier-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
+              <span class="tier-period">{{ period === 'monthly' ? $t('pricing.billing.perMonth') : $t('pricing.billing.perYear') }}</span>
             </div>
-            <div class="tier-saving" v-if="period === 'yearly'">訂一年省 NT$3,290・相當於 4.8 個月免費</div>
-            <div class="tier-desc">波爾多 + 布根地 + 義大利<br>一次解鎖所有已上線課程</div>
+            <div class="tier-saving" v-if="period === 'yearly'">{{ $t('pricing.tiers.global.yearlySaving') }}</div>
+            <div class="tier-desc" v-html="$t('pricing.tiers.global.desc')"></div>
           </div>
           <ul class="tier-features">
-            <li class="ok">🍷 波爾多完整課程</li>
-            <li class="ok">🍇 布根地完整課程</li>
-            <li class="ok">🇮🇹 義大利完整課程</li>
-            <li class="ok">🗺️ 三大產區互動地圖</li>
-            <li class="ok">學習進度追蹤 & 成就系統</li>
-            <li class="ok">後續新增產區自動解鎖</li>
+            <li v-for="feat in $tm('pricing.tiers.global.features')" :key="feat" class="ok">{{ feat }}</li>
           </ul>
           <!-- 付款方式選擇 -->
           <div class="pm-row">
-            <div class="pm-title">付款方式</div>
+            <div class="pm-title">{{ $t('pricing.payment.title') }}</div>
             <div class="pm-btns">
               <button
                 v-for="pm in paymentMethodOptions" :key="pm.value"
@@ -132,7 +115,7 @@
             </div>
           </div>
           <button class="tier-cta global-cta" :disabled="checkoutLoading || globalCtaState.disabled" @click="handleAll">
-            {{ checkoutLoading ? '建立訂單中…' : globalCtaState.text }}
+            {{ checkoutLoading ? $t('pricing.tiers.processingOrder') : globalCtaState.text }}
           </button>
         </div>
 
@@ -143,29 +126,26 @@
   <div class="other-section">
     <div class="other-inner">
       <div class="other-head">
-        <h2>個別課程訂閱</h2>
-        <p>波爾多、布根地、義大利已正式上線，可單獨訂閱或選擇全球通行證</p>
+        <h2>{{ $t('pricing.other.title') }}</h2>
+        <p>{{ $t('pricing.other.subtitle') }}</p>
       </div>
       <div class="other-grid">
 
         <!-- 布根地 -->
         <div class="other-card bourg-card" :class="{ 'subscribed-card': bourgogneCtaState.state === 'subscribed' }">
-          <div v-if="bourgogneCtaState.state === 'subscribed'" class="subscribed-badge">✓ 已訂閱</div>
+          <div v-if="bourgogneCtaState.state === 'subscribed'" class="subscribed-badge">{{ $t('pricing.tiers.subscribed') }}</div>
           <div class="oc-badge">🍇 France · Bourgogne</div>
-          <h3 class="oc-title">布根地葡萄酒</h3>
+          <h3 class="oc-title">{{ $t('pricing.other.bourgogne.title') }}</h3>
           <div class="oc-price-row">
             <span class="oc-price">NT$ {{ period === 'monthly' ? '390' : '2,400' }}</span>
-            <span class="oc-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
+            <span class="oc-period">{{ period === 'monthly' ? $t('pricing.billing.perMonth') : $t('pricing.billing.perYear') }}</span>
           </div>
-          <div class="oc-saving" v-if="period === 'yearly'">年繳等同多送 5 個月・折合 NT$200 / 月</div>
+          <div class="oc-saving" v-if="period === 'yearly'">{{ $t('pricing.other.bourgogne.yearlySaving') }}</div>
           <ul class="oc-features">
-            <li>4 大學習模組・33 個 AOC 法定產區</li>
-            <li>特級園 &amp; 一級園精確 GeoJSON 地圖</li>
-            <li>夏布利 / 夜丘 / 伯恩丘 / 馬貢完整涵蓋</li>
-            <li>互動練習遊戲 &amp; 成就徽章系統</li>
+            <li v-for="feat in $tm('pricing.other.bourgogne.features')" :key="feat">{{ feat }}</li>
           </ul>
           <div class="pm-row">
-            <div class="pm-title">付款方式</div>
+            <div class="pm-title">{{ $t('pricing.payment.title') }}</div>
             <div class="pm-btns">
               <button
                 v-for="pm in paymentMethodOptions" :key="pm.value"
@@ -174,28 +154,25 @@
             </div>
           </div>
           <button class="tier-cta oc-cta bourg-cta" :disabled="checkoutLoading || bourgogneCtaState.disabled" @click="handleCoursePurchase('bourgogne')">
-            {{ checkoutLoading ? '處理中…' : bourgogneCtaState.text }}
+            {{ checkoutLoading ? $t('pricing.tiers.processing') : bourgogneCtaState.text }}
           </button>
         </div>
 
         <!-- 義大利 -->
         <div class="other-card italy-oc-card" :class="{ 'subscribed-card': italyCtaState.state === 'subscribed' }">
-          <div v-if="italyCtaState.state === 'subscribed'" class="subscribed-badge">✓ 已訂閱</div>
+          <div v-if="italyCtaState.state === 'subscribed'" class="subscribed-badge">{{ $t('pricing.tiers.subscribed') }}</div>
           <div class="oc-badge">🇮🇹 Italy</div>
-          <h3 class="oc-title">義大利葡萄酒</h3>
+          <h3 class="oc-title">{{ $t('pricing.other.italy.title') }}</h3>
           <div class="oc-price-row">
             <span class="oc-price">NT$ {{ period === 'monthly' ? '290' : '1,800' }}</span>
-            <span class="oc-period">{{ period === 'monthly' ? '/ 月' : '/ 年' }}</span>
+            <span class="oc-period">{{ period === 'monthly' ? $t('pricing.billing.perMonth') : $t('pricing.billing.perYear') }}</span>
           </div>
-          <div class="oc-saving" v-if="period === 'yearly'">年繳等同多送 4 個月・折合 NT$150 / 月</div>
+          <div class="oc-saving" v-if="period === 'yearly'">{{ $t('pricing.other.italy.yearlySaving') }}</div>
           <ul class="oc-features">
-            <li>3 大學習模組・66 個 DOC / DOCG</li>
-            <li>20 大產區互動地圖</li>
-            <li>托斯卡尼 / 皮蒙特 / 威尼托完整涵蓋</li>
-            <li>互動練習遊戲 &amp; 成就徽章系統</li>
+            <li v-for="feat in $tm('pricing.other.italy.features')" :key="feat">{{ feat }}</li>
           </ul>
           <div class="pm-row">
-            <div class="pm-title">付款方式</div>
+            <div class="pm-title">{{ $t('pricing.payment.title') }}</div>
             <div class="pm-btns">
               <button
                 v-for="pm in paymentMethodOptions" :key="pm.value"
@@ -204,7 +181,7 @@
             </div>
           </div>
           <button class="tier-cta oc-cta italy-cta" :disabled="checkoutLoading || italyCtaState.disabled" @click="handleCoursePurchase('italy')">
-            {{ checkoutLoading ? '處理中…' : italyCtaState.text }}
+            {{ checkoutLoading ? $t('pricing.tiers.processing') : italyCtaState.text }}
           </button>
         </div>
 
@@ -215,24 +192,24 @@
   <!-- 功能對比 (卡片式) -->
   <div class="compare-section">
     <div class="cs-inner">
-      <h2>功能對比</h2>
-      <p class="cs-subtitle">不同方案包含的功能</p>
-      
+      <h2>{{ $t('pricing.compare.title') }}</h2>
+      <p class="cs-subtitle">{{ $t('pricing.compare.subtitle') }}</p>
+
       <div class="feature-cards-grid">
         <div v-for="f in featureMatrix" :key="f.name" class="feature-card">
           <div class="fc-name">{{ f.name }}</div>
           <div class="fc-checks">
             <div class="fc-check" :class="f.free ? 'included' : 'excluded'">
               <span>{{ f.free ? '✓' : '✗' }}</span>
-              <span class="fc-tier">免費</span>
+              <span class="fc-tier">{{ $t('pricing.compare.tierFree') }}</span>
             </div>
             <div class="fc-check" :class="f.single ? 'included' : 'excluded'">
               <span>{{ f.single ? '✓' : '✗' }}</span>
-              <span class="fc-tier">完整版</span>
+              <span class="fc-tier">{{ $t('pricing.compare.tierSingle') }}</span>
             </div>
             <div class="fc-check" :class="f.all ? 'included' : 'excluded'">
               <span>{{ f.all ? '✓' : '✗' }}</span>
-              <span class="fc-tier">通行證</span>
+              <span class="fc-tier">{{ $t('pricing.compare.tierGlobal') }}</span>
             </div>
           </div>
         </div>
@@ -243,9 +220,9 @@
   <!-- FAQ -->
   <div class="faq-section">
       <div class="cs-inner">
-        <h2>常見問題</h2>
+        <h2>{{ $t('pricing.faq.title') }}</h2>
         <div class="faq-list">
-          <div class="faq-item" v-for="(faq, i) in faqs" :key="i" @click="openFaq = openFaq === i ? null : i">
+          <div class="faq-item" v-for="(faq, i) in $tm('pricing.faq.items')" :key="i" @click="openFaq = openFaq === i ? null : i">
             <div class="faq-q">
               <span>{{ faq.q }}</span>
               <span class="faq-arrow" :class="{ open: openFaq === i }">▾</span>
@@ -259,9 +236,9 @@
     <!-- 底部 CTA -->
     <div class="bottom-cta">
       <div class="bc-inner">
-        <h2>從免費開始，隨時升級</h2>
-        <p>無需信用卡・隨時取消・7 天退款保障</p>
-        <button class="bc-btn" @click="handleFree">立即免費體驗</button>
+        <h2>{{ $t('pricing.bottomCta.title') }}</h2>
+        <p>{{ $t('pricing.bottomCta.subtitle') }}</p>
+        <button class="bc-btn" @click="handleFree">{{ $t('pricing.bottomCta.cta') }}</button>
       </div>
     </div>
 
@@ -271,10 +248,12 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { authState } from '../stores/authStore.js'
 import { getCourseAccess } from '../lib/purchaseService.js'
 
 const router = useRouter()
+const { t, tm } = useI18n()
 const authUser = computed(() => authState.user)
 
 // 訂閱狀態
@@ -308,11 +287,11 @@ onMounted(async () => {
 })
 
 const paymentMethod = ref('Credit')
-const paymentMethodOptions = [
-  { value: 'Credit', icon: '💳', label: '信用卡' },
-  { value: 'ATM',    icon: '🏦', label: 'ATM 轉帳' },
-  { value: 'CVS',    icon: '🏣', label: '超商繳費' },
-]
+const paymentMethodOptions = computed(() => [
+  { value: 'Credit', icon: '💳', label: t('pricing.payment.credit') },
+  { value: 'ATM',    icon: '🏦', label: t('pricing.payment.atm') },
+  { value: 'CVS',    icon: '🏣', label: t('pricing.payment.cvs') },
+])
 
 const period = ref('monthly')
 const openFaq = ref(null)
@@ -332,55 +311,49 @@ const allCourses = [
   { id: 'newzealand', flag: '🥝', nameFull: '紐西蘭',           active: true  },
 ]
 
-const featureMatrix = [
-  { name: '互動衛星地圖',             free: true,  single: true,  all: true  },
-  { name: 'Level 1 課程',           free: true,  single: true,  all: true  },
-  { name: 'Level 2–4 課程',         free: false, single: true,  all: true  },
-  { name: '4 種互動練習遊戲',     free: false, single: true,  all: true  },
-  { name: '地質岩層進階圖層',     free: false, single: true,  all: true  },
-  { name: '氣候熱力圖',             free: false, single: true,  all: true  },
-  { name: '品飲筆記本',             free: false, single: true,  all: true  },
-  { name: '酒莊精確位置標記',     free: false, single: true,  all: true  },
-  { name: '學習進度追蹤',           free: true,  single: true,  all: true  },
-  { name: '成就徽章系統',           free: true,  single: true,  all: true  },
+const featureMatrixBooleans = [
+  { free: true,  single: true,  all: true  },
+  { free: true,  single: true,  all: true  },
+  { free: false, single: true,  all: true  },
+  { free: false, single: true,  all: true  },
+  { free: false, single: true,  all: true  },
+  { free: false, single: true,  all: true  },
+  { free: false, single: true,  all: true  },
+  { free: false, single: true,  all: true  },
+  { free: true,  single: true,  all: true  },
+  { free: true,  single: true,  all: true  },
 ]
 
-const faqs = [
-  { q: '波爾多完整版包含哪些內容？', a: '包含波爾多 Level 1 至 Level 4 全部課程（共 43 堂）、4 種互動練習遊戲、法定產區完整互動地圖、地質岩層與氣候熱力圖進階圖層，以及品飲筆記本功能。' },
-  { q: '年繳可以退款嗎？', a: '訂閱後 7 天內如需退款，請聯絡我們，我們將全額退款，無任何問題。' },
-  { q: '優惠碼怎麼使用？', a: '在訂閱卡片下方輸入優惠碼後點擊訂閱按鈕即可。免費試用碼將直接啟用訂閱；折扣碼會在結帳時自動套用。' },
-  { q: '布根地和義大利課程已上線了嗎？', a: '是的！布根地和義大利課程已正式上線，可於本頁面「個別課程訂閱」區塊直接訂閱。' },
-  { q: '未來會有更多產區嗎？', a: '是的！西班牙、德國、葡萄牙等更多世界產區課程正在製作中。訂閱任一課程的學員，歡迎加入早鳥等待名單以享優先通知。' },
-  { q: '月繳和年繳可以隨時切換嗎？', a: '可以。月繳與年繳為一次性付款，如需切換方案請聯絡我們，客服將協助您辦理。' },
-  { q: '免費體驗有時間限制嗎？', a: '沒有！免費方案永久有效，Level 1 波爾多課程完全免費，不需要信用卡。' },
-  { q: '付款方式有哪些？', a: '透過綠界科技（ECPay）安全付款，支援信用卡（Visa、MasterCard、JCB）、ATM 轉帳、超商代碼等多種方式，全程加密處理。' },
-]
+const featureMatrix = computed(() => {
+  const names = tm('pricing.compare.features')
+  return featureMatrixBooleans.map((item, i) => ({ ...item, name: names[i] || '' }))
+})
 
 // CTA 按鈕狀態 computed
 const singleCtaState = computed(() => {
   const tier = userCourseAccess.value.bordeaux
-  if (tier === 'basic' || tier === 'premium') return { text: '✓ 已訂閱', disabled: true, state: 'subscribed' }
-  return { text: '立即訂閱波爾多完整版', disabled: false, state: 'unsubscribed' }
+  if (tier === 'basic' || tier === 'premium') return { text: t('pricing.tiers.subscribed'), disabled: true, state: 'subscribed' }
+  return { text: t('pricing.tiers.single.cta'), disabled: false, state: 'unsubscribed' }
 })
 
 const globalCtaState = computed(() => {
-  const hasAll = userCourseAccess.value.bordeaux === 'basic' && 
-                 userCourseAccess.value.bourgogne === 'basic' && 
+  const hasAll = userCourseAccess.value.bordeaux === 'basic' &&
+                 userCourseAccess.value.bourgogne === 'basic' &&
                  userCourseAccess.value.italy === 'basic'
-  if (hasAll) return { text: '✓ 已訂閱全部課程', disabled: true, state: 'subscribed' }
-  return { text: '立即訂閱全球產區通行證', disabled: false, state: 'unsubscribed' }
+  if (hasAll) return { text: t('pricing.tiers.subscribedAll'), disabled: true, state: 'subscribed' }
+  return { text: t('pricing.tiers.global.cta'), disabled: false, state: 'unsubscribed' }
 })
 
 const bourgogneCtaState = computed(() => {
   const tier = userCourseAccess.value.bourgogne
-  if (tier === 'basic' || tier === 'premium') return { text: '✓ 已訂閱', disabled: true, state: 'subscribed' }
-  return { text: '立即訂閱布根地課程', disabled: false, state: 'unsubscribed' }
+  if (tier === 'basic' || tier === 'premium') return { text: t('pricing.tiers.subscribed'), disabled: true, state: 'subscribed' }
+  return { text: t('pricing.other.bourgogne.cta'), disabled: false, state: 'unsubscribed' }
 })
 
 const italyCtaState = computed(() => {
   const tier = userCourseAccess.value.italy
-  if (tier === 'basic' || tier === 'premium') return { text: '✓ 已訂閱', disabled: true, state: 'subscribed' }
-  return { text: '立即訂閱義大利課程', disabled: false, state: 'unsubscribed' }
+  if (tier === 'basic' || tier === 'premium') return { text: t('pricing.tiers.subscribed'), disabled: true, state: 'subscribed' }
+  return { text: t('pricing.other.italy.cta'), disabled: false, state: 'unsubscribed' }
 })
 
 async function handleFree() {

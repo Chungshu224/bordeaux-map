@@ -48,6 +48,10 @@ import zhLoire from './zh-TW/loire.js'
 import enLoire from './en/loire.js'
 import jaLoire from './ja/loire.js'
 
+import zhPricing from './zh-TW/pricing.js'
+import enPricing from './en/pricing.js'
+import jaPricing from './ja/pricing.js'
+
 // ── 支援的語言清單 ───────────────────────────────────────────
 export const SUPPORTED_LOCALES = [
   { code: 'zh-TW', name: '繁體中文', flag: '🇹🇼' },
@@ -77,9 +81,9 @@ function detectInitialLocale() {
 
 // ── 整合各語言檔（將來會有多個 namespace） ──────────────────
 const messages = {
-  'zh-TW': { common: zhCommon, california: zhCalifornia, home: zhHome, bordeaux: zhBordeaux, italy: zhItaly, bourgogne: zhBourgogne, loire: zhLoire },
-  'en':    { common: enCommon, california: enCalifornia, home: enHome, bordeaux: enBordeaux, italy: enItaly, bourgogne: enBourgogne, loire: enLoire },
-  'ja':    { common: jaCommon, california: jaCalifornia, home: jaHome, bordeaux: jaBordeaux, italy: jaItaly, bourgogne: jaBourgogne, loire: jaLoire },
+  'zh-TW': { common: zhCommon, california: zhCalifornia, home: zhHome, bordeaux: zhBordeaux, italy: zhItaly, bourgogne: zhBourgogne, loire: zhLoire, pricing: zhPricing },
+  'en':    { common: enCommon, california: enCalifornia, home: enHome, bordeaux: enBordeaux, italy: enItaly, bourgogne: enBourgogne, loire: enLoire, pricing: enPricing },
+  'ja':    { common: jaCommon, california: jaCalifornia, home: jaHome, bordeaux: jaBordeaux, italy: jaItaly, bourgogne: jaBourgogne, loire: jaLoire, pricing: jaPricing },
 }
 
 // ── 建立 i18n 實例 ───────────────────────────────────────────
