@@ -61,9 +61,11 @@
 </template>
 
 <script setup>
-import { ref, computed, defineEmits } from 'vue'
+import { ref, computed, defineEmits, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useProgress } from '../composables/useProgress.js'
+import { authState, authInitPromise } from '../../../stores/authStore.js'
+import { saveBourgogneLesson, loadAndMergeBourgogneProgress } from '../../../lib/courseProgressSync.js'
 import LevelSelector from './LevelSelector.vue'
 import BourgogneCourseLayout from './BourgogneCourseLayout.vue'
 import LessonViewer from './LessonViewer.vue'
@@ -97,6 +99,15 @@ const quizData = ref(null)
 
 // 證書資料
 const certificateData = ref(null)
+
+onMounted(async () => {
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    await loadAndMergeBourgogneProgress(userId)
+    // LevelSelector 重讀 localStorage 時自然取到合併後資料
+  }
+})
 
 // 計算屬性
 const currentLesson = computed(() => {
@@ -308,6 +319,9 @@ const completeLesson = (lessonId) => {
   if (!completedLessons.value.includes(lessonId)) {
     completedLessons.value.push(lessonId)
     saveCompletedLessons()
+    const userId = authState.user?.id
+    const moduleId = selectedModule.value?.id
+    if (userId && moduleId) saveBourgogneLesson(userId, lessonId, moduleId)
   }
   
   // 計算並累計學習時間

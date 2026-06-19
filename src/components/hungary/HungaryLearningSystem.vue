@@ -73,14 +73,16 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import {
   hungaryLearningState,
   hungaryLearningLevels,
   hungaryLearningActions,
-  hungaryLearningProgress
+  hungaryLearningProgress,
+  hungaryReloadFromStorage
 } from '../../stores/hungaryLearningStore.js'
-import { authActions } from '../../stores/authStore.js'
+import { authActions, authState, authInitPromise } from '../../stores/authStore.js'
+import { saveHungaryLesson, loadAndMergeHungaryProgress } from '../../lib/courseProgressSync.js'
 import HungaryCourseLayout from './HungaryCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
@@ -151,10 +153,21 @@ function handleNextSlide() {
   presentationLessonRef.value?.nextSlide()
 }
 
+onMounted(async () => {
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    const didUpdate = await loadAndMergeHungaryProgress(userId)
+    if (didUpdate) hungaryReloadFromStorage()
+  }
+})
+
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
     hungaryLearningActions.completeLesson(lessonId)
+    const userId = authState.user?.id
+    if (userId) saveHungaryLesson(userId, lessonId)
     // 觸發成就記錄
     const levelId = currentLevel.value
     const levelData = currentLevelData.value

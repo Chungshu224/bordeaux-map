@@ -64,7 +64,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import {
@@ -72,9 +72,11 @@ import {
   californiaLearningLevels,
   californiaLearningActions,
   californiaLearningProgress,
-  getLocalizedCaliforniaLevels
+  getLocalizedCaliforniaLevels,
+  californiaReloadFromStorage
 } from '../../stores/californiaLearningStore.js'
-import { authActions } from '../../stores/authStore.js'
+import { authActions, authState, authInitPromise } from '../../stores/authStore.js'
+import { saveCaliforniaLesson, loadAndMergeCaliforniaProgress } from '../../lib/courseProgressSync.js'
 import CaliforniaLevelSelector from './CaliforniaLevelSelector.vue'
 import CaliforniaCourseLayout from './CaliforniaCourseLayout.vue'
 import CaliforniaTastingNotebookPage from './notebook/CaliforniaTastingNotebookPage.vue'
@@ -153,10 +155,21 @@ function handleNextSlide() {
   presentationLessonRef.value?.nextSlide()
 }
 
+onMounted(async () => {
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    const merged = await loadAndMergeCaliforniaProgress(userId)
+    if (merged) californiaReloadFromStorage()
+  }
+})
+
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
     californiaLearningActions.completeLesson(lessonId)
+    const userId = authState.user?.id
+    if (userId) saveCaliforniaLesson(userId, lessonId)
   }
   californiaLearningActions.exitLesson()
 }

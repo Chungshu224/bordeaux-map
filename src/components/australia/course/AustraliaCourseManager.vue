@@ -3,6 +3,7 @@
     <!-- 等級選擇首頁 -->
     <AustraliaLevelSelector
       v-if="view === 'levelSelector'"
+      :key="progressVersion"
       @openMap="$emit('openMap')"
       @startLevel="handleSelectLevel"
       @openAchievements="showAchievementsModal = true"
@@ -72,7 +73,9 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { authState, authInitPromise } from '../../../stores/authStore.js'
+import { saveAustraliaLesson, loadAndMergeAustraliaProgress } from '../../../lib/courseProgressSync.js'
 import AustraliaLevelSelector  from './AustraliaLevelSelector.vue'
 import AustraliaCourseLayout   from './AustraliaCourseLayout.vue'
 import AustraliaSlideViewer    from './AustraliaSlideViewer.vue'
@@ -95,6 +98,16 @@ const activeLesson          = ref(null)
 const completedMap          = ref({})
 const showAchievementsModal = ref(false)
 const achievementNotification = ref(null)
+const progressVersion = ref(0)
+
+onMounted(async () => {
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    const didUpdate = await loadAndMergeAustraliaProgress(userId)
+    if (didUpdate) progressVersion.value++
+  }
+})
 
 const currentLevelDef = computed(() =>
   selectedLevelKey.value ? courseLevels.find(l => l.key === selectedLevelKey.value) : null
@@ -134,6 +147,8 @@ function handleComplete(lessonId) {
   if (selectedLevelKey.value) {
     saveProgress(selectedLevelKey.value, lessonId)
     completedMap.value[lessonId] = true
+    const userId = authState.user?.id
+    if (userId) saveAustraliaLesson(userId, lessonId)
 
     // 計算進度並觸發成就
     const levelKey = selectedLevelKey.value

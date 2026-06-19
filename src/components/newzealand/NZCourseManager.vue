@@ -61,6 +61,8 @@ import {
   globalNzAchievementManager,
   nzAchievementState
 } from '../../stores/nzAchievementSystem.js'
+import { authState, authInitPromise } from '../../stores/authStore.js'
+import { saveNZLesson, loadAndMergeNZProgress } from '../../lib/courseProgressSync.js'
 
 defineEmits(['openMap', 'openNotebook', 'openGame'])
 
@@ -121,6 +123,8 @@ const handleMarkComplete = (lessonId) => {
   if (!completedLessons.value.includes(lessonId)) {
     completedLessons.value.push(lessonId)
     try { localStorage.setItem('nz-wine-progress', JSON.stringify(completedLessons.value)) } catch (e) {}
+    const userId = authState.user?.id
+    if (userId) saveNZLesson(userId, lessonId)
 
     // 計算進度並觸發成就
     const allModules   = courseModules.value
@@ -195,6 +199,12 @@ const updateSlideInfo = (info) => {
 onMounted(async () => {
   await loadCourseStructure()
   loadProgress()
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    const merged = await loadAndMergeNZProgress(userId)
+    if (merged) completedLessons.value = merged
+  }
 })
 </script>
 

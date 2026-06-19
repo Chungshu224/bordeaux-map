@@ -3,6 +3,7 @@
     <!-- Level Selector -->
     <GermanyLevelSelector
       v-if="view === 'levelSelector'"
+      :key="progressVersion"
       @startLevel="handleSelectLevel"
       @openMap="$emit('openMap')"
       @openGames="view = 'games'"
@@ -50,6 +51,8 @@
 <script setup>
 import { ref, computed, nextTick, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { authState, authInitPromise } from '../../../stores/authStore.js'
+import { saveGermanyLesson, loadAndMergeGermanyProgress } from '../../../lib/courseProgressSync.js'
 import GermanyLevelSelector from './GermanyLevelSelector.vue'
 import GermanySlideViewer from './GermanySlideViewer.vue'
 import GermanyCourseLayout from './GermanyCourseLayout.vue'
@@ -67,8 +70,14 @@ const { locale } = useI18n()
 
 const emit = defineEmits(['openMap'])
 
-onMounted(() => {
+onMounted(async () => {
   globalGermanyAchievementManager.init()
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    const didUpdate = await loadAndMergeGermanyProgress(userId)
+    if (didUpdate) progressVersion.value++
+  }
 })
 
 const view = ref('levelSelector') // 'levelSelector' | 'courseContent' | 'games' | 'notebook'
@@ -76,6 +85,7 @@ const selectedLevelKey = ref(null)
 const activeLesson = ref(null)
 const activeLessonMeta = ref(null)
 const completedMap = ref({})
+const progressVersion = ref(0)  // 同步後遞增，強制 LevelSelector remount
 
 const completedLessonsArray = computed(() =>
   Object.keys(completedMap.value).filter(k => completedMap.value[k])
@@ -143,6 +153,8 @@ function handleComplete(lessonId) {
   if (selectedLevelKey.value && lessonId) {
     saveProgress(selectedLevelKey.value, lessonId)
     completedMap.value[lessonId] = true
+    const userId = authState.user?.id
+    if (userId) saveGermanyLesson(userId, lessonId)
 
     // 記錄到成就系統
     const levelNum = selectedLevelKey.value === 'level1' ? 1

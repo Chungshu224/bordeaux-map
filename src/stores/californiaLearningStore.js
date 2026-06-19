@@ -140,6 +140,49 @@ export const californiaLearningLevels = {
   }
 }
 
+// ── localStorage 進度持久化 ────────────────────────────────────────
+const CA_STORAGE_KEY = 'california-progress'
+
+function saveToStorage() {
+  try {
+    localStorage.setItem(CA_STORAGE_KEY, JSON.stringify(californiaLearningState.completedLessons))
+  } catch (e) { console.warn('[california] save error', e) }
+}
+
+function loadFromStorage() {
+  try {
+    const raw = localStorage.getItem(CA_STORAGE_KEY)
+    if (!raw) return
+    const lessons = JSON.parse(raw)
+    if (!Array.isArray(lessons)) return
+    for (const lessonId of lessons) {
+      if (californiaLearningState.completedLessons.includes(lessonId)) continue
+      californiaLearningState.completedLessons.push(lessonId)
+      const match = lessonId.match(/^ca-l(\d+)-/)
+      if (match) {
+        const lk = `level${match[1]}`
+        if (californiaLearningState.userProgress[lk]) {
+          californiaLearningState.userProgress[lk].completed = Math.min(
+            californiaLearningState.userProgress[lk].completed + 1,
+            californiaLearningState.userProgress[lk].total
+          )
+        }
+      }
+    }
+  } catch (e) { console.warn('[california] load error', e) }
+}
+
+loadFromStorage()
+
+// 供 CaliforniaLearningSystem 在 Supabase 同步後呼叫
+export function californiaReloadFromStorage() {
+  californiaLearningState.completedLessons = []
+  Object.keys(californiaLearningState.userProgress).forEach(k => {
+    californiaLearningState.userProgress[k].completed = 0
+  })
+  loadFromStorage()
+}
+
 // 加州學習操作
 export const californiaLearningActions = {
   // 取得指定 Level 最後一課 ID
@@ -184,6 +227,7 @@ export const californiaLearningActions = {
           californiaLearningState.userProgress[levelKey].total
         )
       }
+      saveToStorage()
     }
   },
 

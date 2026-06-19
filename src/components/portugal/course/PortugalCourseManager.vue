@@ -4,6 +4,7 @@
     <!-- 等級選擇首頁 -->
     <PortugalLevelSelector
       v-if="view === 'levelSelector'"
+      :key="progressVersion"
       @openMap="$emit('openMap')"
       @startLevel="handleSelectLevel"
       @openNotebook="view = 'notebook'"
@@ -47,7 +48,9 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { authState, authInitPromise } from '../../../stores/authStore.js'
+import { savePortugalLesson, loadAndMergePortugalProgress } from '../../../lib/courseProgressSync.js'
 import PortugalLevelSelector from './PortugalLevelSelector.vue'
 import PortugalGameHubPage from '../games/PortugalGameHubPage.vue'
 import PortugalTastingNotebookPage from '../notebook/PortugalTastingNotebookPage.vue'
@@ -61,6 +64,16 @@ const view = ref('levelSelector') // 'levelSelector' | 'courseContent' | 'notebo
 const selectedLevelKey = ref(null)
 const activeLesson = ref(null)
 const completedMap = ref({})
+const progressVersion = ref(0)
+
+onMounted(async () => {
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    const didUpdate = await loadAndMergePortugalProgress(userId)
+    if (didUpdate) progressVersion.value++
+  }
+})
 
 const currentLevelDef = computed(() =>
   selectedLevelKey.value ? courseLevels[selectedLevelKey.value] : null
@@ -100,6 +113,8 @@ function handleComplete(lessonId) {
   completedMap.value[lessonId] = true
   saveProgress(selectedLevelKey.value, lessonId)
   activeLesson.value = null
+  const userId = authState.user?.id
+  if (userId) savePortugalLesson(userId, lessonId)
 }
 </script>
 

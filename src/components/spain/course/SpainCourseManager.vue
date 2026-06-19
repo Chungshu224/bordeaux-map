@@ -4,6 +4,7 @@
     <!-- 等級選擇首頁 -->
     <SpainLevelSelector
       v-if="view === 'levelSelector'"
+      :key="progressVersion"
       @openMap="$emit('openMap')"
       @openSelector="$emit('openSelector')"
       @startLevel="handleSelectLevel"
@@ -48,7 +49,9 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { authState, authInitPromise } from '../../../stores/authStore.js'
+import { saveSpainLesson, loadAndMergeSpainProgress } from '../../../lib/courseProgressSync.js'
 import SpainLevelSelector from './SpainLevelSelector.vue'
 import SpainCourseLayout from './SpainCourseLayout.vue'
 import SpainSlideViewer from './SpainSlideViewer.vue'
@@ -63,6 +66,16 @@ const view = ref('levelSelector')
 const selectedLevelKey = ref(null)
 const activeLesson = ref(null)
 const completedMap = ref({})
+const progressVersion = ref(0)
+
+onMounted(async () => {
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    const didUpdate = await loadAndMergeSpainProgress(userId)
+    if (didUpdate) progressVersion.value++
+  }
+})
 
 const currentLevelDef = computed(() =>
   selectedLevelKey.value ? courseLevels[selectedLevelKey.value] : null
@@ -102,6 +115,8 @@ function handleComplete(lessonId) {
   completedMap.value[lessonId] = true
   saveProgress(selectedLevelKey.value, lessonId)
   activeLesson.value = null
+  const userId = authState.user?.id
+  if (userId) saveSpainLesson(userId, lessonId)
 
   // 觸發成就系統
   const levelNum = parseInt((selectedLevelKey.value || '').replace('level', '')) || 0

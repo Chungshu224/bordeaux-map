@@ -167,6 +167,15 @@ function loadProgressFromStorage() {
 // 模組載入時立即恢復進度
 loadProgressFromStorage()
 
+// 供 HungaryLearningSystem 在 Supabase 同步後呼叫，重新載入 store 狀態
+export function hungaryReloadFromStorage() {
+  hungaryLearningState.completedLessons = []
+  Object.keys(hungaryLearningState.userProgress).forEach(k => {
+    hungaryLearningState.userProgress[k].completed = 0
+  })
+  loadProgressFromStorage()
+}
+
 // 匈牙利學習操作
 export const hungaryLearningActions = {
   // 取得指定 Level 最後一課 ID

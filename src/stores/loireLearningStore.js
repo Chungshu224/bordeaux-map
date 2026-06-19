@@ -342,6 +342,50 @@ export const loireLearningLevels = {
   }
 }
 
+// ── localStorage 進度持久化 ────────────────────────────────────────
+const LOIRE_STORAGE_KEY = 'loire-progress'
+
+function saveToStorage() {
+  try {
+    localStorage.setItem(LOIRE_STORAGE_KEY, JSON.stringify(loireLearningState.completedLessons))
+  } catch (e) { console.warn('[loire] save error', e) }
+}
+
+function loadFromStorage() {
+  try {
+    const raw = localStorage.getItem(LOIRE_STORAGE_KEY)
+    if (!raw) return
+    const lessons = JSON.parse(raw)
+    if (!Array.isArray(lessons)) return
+    for (const lessonId of lessons) {
+      if (loireLearningState.completedLessons.includes(lessonId)) continue
+      loireLearningState.completedLessons.push(lessonId)
+      const match = lessonId.match(/^lo-l(\d+)-/)
+      if (match) {
+        const lk = `level${match[1]}`
+        if (loireLearningState.userProgress[lk]) {
+          loireLearningState.userProgress[lk].completed = Math.min(
+            loireLearningState.userProgress[lk].completed + 1,
+            loireLearningState.userProgress[lk].total
+          )
+        }
+      }
+    }
+  } catch (e) { console.warn('[loire] load error', e) }
+}
+
+loadFromStorage()
+
+// 供 LoireLearningSystem 在 Supabase 同步後呼叫，重新載入 store 狀態
+export function loireReloadFromStorage() {
+  // 重置後重新載入，避免計數重複
+  loireLearningState.completedLessons = []
+  Object.keys(loireLearningState.userProgress).forEach(k => {
+    loireLearningState.userProgress[k].completed = 0
+  })
+  loadFromStorage()
+}
+
 // 羅亞爾學習操作
 export const loireLearningActions = {
   // 取得指定 Level 最後一課 ID
@@ -389,6 +433,7 @@ export const loireLearningActions = {
           loireLearningState.userProgress[levelKey].total
         )
       }
+      saveToStorage()
     }
   },
 

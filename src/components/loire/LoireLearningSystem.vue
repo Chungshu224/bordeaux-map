@@ -87,14 +87,16 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import {
   loireLearningState,
   loireLearningLevels,
   loireLearningActions,
-  loireLearningProgress
+  loireLearningProgress,
+  loireReloadFromStorage
 } from '../../stores/loireLearningStore.js'
-import { authActions } from '../../stores/authStore.js'
+import { authActions, authState, authInitPromise } from '../../stores/authStore.js'
+import { saveLoireLesson, loadAndMergeLoireProgress } from '../../lib/courseProgressSync.js'
 import LoireLevelSelector from './LoireLevelSelector.vue'
 import LoireCourseLayout from './LoireCourseLayout.vue'
 import LoireTastingNotebookPage from './notebook/LoireTastingNotebookPage.vue'
@@ -174,10 +176,21 @@ function handleNextSlide() {
   presentationLessonRef.value?.nextSlide()
 }
 
+onMounted(async () => {
+  await authInitPromise
+  const userId = authState.user?.id
+  if (userId) {
+    const merged = await loadAndMergeLoireProgress(userId)
+    if (merged) loireReloadFromStorage()
+  }
+})
+
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
     loireLearningActions.completeLesson(lessonId)
+    const userId = authState.user?.id
+    if (userId) saveLoireLesson(userId, lessonId)
     // 觸發成就記錄
     const levelId = currentLevel.value
     const levelData = currentLevelData.value
