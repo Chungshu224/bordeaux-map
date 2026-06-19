@@ -181,6 +181,7 @@
 import { ref, computed, onUnmounted, onMounted } from 'vue'
 import { supabase } from '@/lib/supabaseClient.js'
 import { authState } from '@/stores/authStore.js'
+import { globalAustraliaAchievementManager } from '../../../stores/australiaAchievementSystem.js'
 
 const emit = defineEmits(['back'])
 
@@ -405,6 +406,11 @@ function endGame() {
     localStorage.setItem('au_state_quiz_best', score.value)
     bestScore.value = score.value
   }
+  globalAustraliaAchievementManager.recordQuizResult({
+    score: score.value,
+    correctCount: correctCount.value,
+    totalQ: questions.value.length,
+  })
 }
 
 function backToLobby() {

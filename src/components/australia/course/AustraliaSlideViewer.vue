@@ -156,23 +156,54 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { getAustraliaLessonSlides } from '../data/lessonSlides.js'
+import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
 import AustraliaMapSlide from './slides/AustraliaMapSlide.vue'
 import AustraliaGISystemSlide from './slides/AustraliaGISystemSlide.vue'
 import AustraliaShirazRegionalStylesSlide from './slides/AustraliaShirazRegionalStylesSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
+
+const AUSTRALIA_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/australia/*.json')
 
 const props = defineProps({
   lesson:     { type: Object, required: true },
   isFinalExam:{ type: Boolean, default: false },
 })
 const emit = defineEmits(['close', 'complete'])
+const { locale } = useI18n()
 
 const currentSlide = ref(0)
 const quizAnswered = ref(false)
 const quizSelected = ref(null)
+const overlayData = ref(null)
 
-const slides = computed(() => getAustraliaLessonSlides(props.lesson.id))
+async function loadOverlay() {
+  const loc = locale.value
+  if (!loc || loc === 'zh-TW') { overlayData.value = null; return }
+  const key = Object.keys(AUSTRALIA_TRANSLATIONS).find(k =>
+    k.includes(`/${loc}/`) && k.endsWith(`/${props.lesson.id}.json`)
+  )
+  if (!key) { overlayData.value = null; return }
+  try {
+    const mod = await AUSTRALIA_TRANSLATIONS[key]()
+    overlayData.value = mod?.default || mod || null
+  } catch { overlayData.value = null }
+}
+
+watch([() => props.lesson.id, locale], () => {
+  currentSlide.value = 0
+  quizAnswered.value = false
+  quizSelected.value = null
+  loadOverlay()
+}, { immediate: true })
+
+const slides = computed(() => {
+  const raw = getAustraliaLessonSlides(props.lesson.id)
+  if (!overlayData.value) return raw
+  const result = applyItalyTranslations({ slides: raw }, overlayData.value)
+  return result.slides
+})
 const slide  = computed(() => slides.value[currentSlide.value] || {})
 const progressPct = computed(() =>
   slides.value.length > 1 ? Math.round((currentSlide.value / (slides.value.length - 1)) * 100) : 0

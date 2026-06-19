@@ -10,12 +10,24 @@
           <div><span class="pm-num">{{ overallPct }}%</span><span class="pm-lbl">完成度</span></div>
         </div>
         <div class="pm-levels">
-          <div v-for="lvl in levels" :key="lvl.label" class="pm-level-row">
-            <div class="pm-level-label">{{ lvl.label }}</div>
-            <div class="pm-progress-bar">
-              <div class="pm-bar-fill" :style="{ width: `${lvl.pct}%` }"></div>
+          <div v-for="lvl in levels" :key="lvl.label" class="pm-level-block">
+            <div class="pm-level-row">
+              <div class="pm-level-label">{{ lvl.label }}</div>
+              <div class="pm-progress-bar">
+                <div class="pm-bar-fill" :style="{ width: `${lvl.pct}%` }"></div>
+              </div>
+              <div class="pm-pct-label">{{ Math.round(lvl.pct) }}%</div>
             </div>
-            <div class="pm-pct-label">{{ Math.round(lvl.pct) }}%</div>
+            <!-- 模組細節（可選）-->
+            <div v-if="lvl.modules && lvl.modules.length" class="pm-modules">
+              <div v-for="mod in lvl.modules" :key="mod.label" class="pm-mod-row">
+                <div class="pm-mod-label">{{ mod.label }}</div>
+                <div class="pm-mod-bar">
+                  <div class="pm-mod-fill" :style="{ width: `${mod.pct}%` }"></div>
+                </div>
+                <div class="pm-mod-count">{{ mod.done }}/{{ mod.total }}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -69,7 +81,8 @@ const cssVars = computed(() => ({ '--region-primary': props.themeColor }))
 .pm-num { font-size: 1.4rem; font-weight: 800; color: var(--region-primary); }
 .pm-lbl { font-size: 0.78rem; color: #6b7280; }
 
-.pm-levels { display: flex; flex-direction: column; gap: 10px; }
+.pm-levels { display: flex; flex-direction: column; gap: 14px; }
+.pm-level-block { display: flex; flex-direction: column; gap: 6px; }
 .pm-level-row {
   display: grid; grid-template-columns: 80px 1fr 50px;
   align-items: center; gap: 10px;
@@ -82,4 +95,11 @@ const cssVars = computed(() => ({ '--region-primary': props.themeColor }))
   transition: width 0.4s ease;
 }
 .pm-pct-label { font-size: 0.85rem; font-weight: 700; color: var(--region-primary); text-align: right; }
+
+.pm-modules { display: flex; flex-direction: column; gap: 4px; padding-left: 8px; border-left: 2px solid #f3f4f6; }
+.pm-mod-row { display: grid; grid-template-columns: 1fr 60px 48px; align-items: center; gap: 8px; }
+.pm-mod-label { font-size: 0.75rem; color: #6b7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pm-mod-bar { height: 4px; background: #f3f4f6; border-radius: 2px; overflow: hidden; }
+.pm-mod-fill { height: 100%; border-radius: 2px; background: var(--region-primary); opacity: 0.55; transition: width 0.4s ease; }
+.pm-mod-count { font-size: 0.72rem; color: #9ca3af; text-align: right; }
 </style>

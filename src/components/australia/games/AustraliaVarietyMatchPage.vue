@@ -175,6 +175,9 @@
 
 <script setup>
 import { ref, computed, onUnmounted } from 'vue'
+import { authState } from '../../../stores/authStore.js'
+import { supabase } from '../../../lib/supabaseClient.js'
+import { globalAustraliaAchievementManager } from '../../../stores/australiaAchievementSystem.js'
 
 const emit = defineEmits(['back'])
 
@@ -469,6 +472,11 @@ function showFeedback() {
       const _prev = parseInt(localStorage.getItem('au_variety_best') || '0')
       if (score.value > _prev) localStorage.setItem('au_variety_best', score.value)
       phase.value = 'final'
+      globalAustraliaAchievementManager.recordQuizResult({
+        score: score.value,
+        correctCount: correctCount.value,
+        totalQ: questions.value.length,
+      })
     } else {
       setOptions()
       phase.value = 'playing'

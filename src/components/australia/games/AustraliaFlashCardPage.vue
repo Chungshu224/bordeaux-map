@@ -159,6 +159,7 @@
 import { ref, computed, onUnmounted, onMounted } from 'vue'
 import { supabase } from '@/lib/supabaseClient.js'
 import { authState } from '@/stores/authStore.js'
+import { globalAustraliaAchievementManager } from '../../../stores/australiaAchievementSystem.js'
 
 const emit = defineEmits(['back'])
 
@@ -408,6 +409,11 @@ function showFeedback() {
       const _prev = parseInt(localStorage.getItem('au_flashcard_best') || '0')
       if (score.value > _prev) localStorage.setItem('au_flashcard_best', score.value)
       phase.value = 'final'
+      globalAustraliaAchievementManager.recordQuizResult({
+        score: score.value,
+        correctCount: correctCount.value,
+        totalQ: questions.value.length,
+      })
     } else {
       setOptions()
       phase.value = 'playing'

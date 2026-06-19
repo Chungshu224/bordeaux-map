@@ -55,6 +55,7 @@ import {
   LevelTrack, RegionStoryGrid, ProgressModal, getTheme
 } from '../../shared/courseHome/index.js'
 import { courseLevels, getUserProgress } from '../data/courseLevels.js'
+import { authActions } from '../../../stores/authStore.js'
 
 const emit = defineEmits(['openMap', 'startLevel', 'openAchievements', 'openNotebook', 'openGameHub'])
 
@@ -79,6 +80,11 @@ const overallProgress = computed(() =>
   totalLessonCount.value ? Math.round(completedTotal.value / totalLessonCount.value * 100) : 0
 )
 function pct(key) { return stats.value.find(s => s.key === key)?.pct || 0 }
+
+// 解鎖邏輯：Admin 全開；L2 需完成 A1FinalExam；L3 需完成 L2 全部
+const isAdmin = computed(() => authActions.isAdmin && authActions.isAdmin())
+const l1ExamDone = computed(() => !!getUserProgress('level1')['A1FinalExam'])
+const l2FullDone = computed(() => pct('level2') === 100)
 
 const heroButtonText = computed(() => {
   if (pct('level1') === 0) return '開始學習'
@@ -138,14 +144,16 @@ const levelData = computed(() => [
     description: 'Barossa 老藤、Margaret River 波爾多風格、Hunter Semillon、Heathcote、Yarra。',
     tags: ['Barossa 老藤', 'Margaret River', 'Hunter Semillon', 'Tasmania', 'Yarra'],
     modules: 6, lessons: 22,
-    progress: pct('level2'), unlocked: true
+    progress: pct('level2'), unlocked: isAdmin.value || l1ExamDone.value,
+    unlockHint: l1ExamDone.value ? '' : '完成 Level 1 期末測驗後解鎖'
   },
   {
     number: 3, title: '風土工藝品牌', subtitle: 'Penfolds 哲學', icon: '🔬',
     description: 'Penfolds 釀造哲學、南澳老藤 GSM、義大利品種革命、螺旋蓋推廣與自然酒。',
     tags: ['Penfolds 哲學', 'GSM 工藝', '螺旋蓋革命', '自然酒'],
     modules: 4, lessons: 11,
-    progress: pct('level3'), unlocked: true
+    progress: pct('level3'), unlocked: isAdmin.value || l2FullDone.value,
+    unlockHint: l2FullDone.value ? '' : '完成 Level 2 全部課程後解鎖'
   },
   {
     number: 4, title: '澳洲大師', subtitle: '盲品與收藏', icon: '🏆',
@@ -167,6 +175,15 @@ const overviewItems = [
 ]
 
 const modalLevels = computed(() =>
-  KEYS.map((k, i) => ({ label: `Level ${i + 1}`, pct: pct(k) }))
+  KEYS.map((k, i) => {
+    const def = courseLevels.find(l => l.key === k)
+    const prog = getUserProgress(k)
+    const modules = (def?.modules || []).map(m => {
+      const total = m.lessons.length
+      const done = m.lessons.filter(l => prog[l.id]).length
+      return { label: m.title, pct: total ? Math.round(done / total * 100) : 0, done, total }
+    })
+    return { label: `Level ${i + 1}`, pct: pct(k), modules }
+  })
 )
 </script>
