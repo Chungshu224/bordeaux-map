@@ -2112,7 +2112,7 @@ function getCourseIcon(id) {
 const slides = computed(() => {
   const raw = lessonContent.value || []
   // 將 intro 轉為一頁封面，其餘過濾舊式 title/course-complete/end
-  const transformed = raw.map(s => {
+  const transformed = raw.map((s, idx) => {
     if (!s) return null
     if (s.type === 'intro') {
       return {
@@ -2122,6 +2122,16 @@ const slides = computed(() => {
         title: props.lessonTitle || '',
         subtitle: extractIntroSubtitle(s.content),
         points: extractCoverPoints(s.content)
+      }
+    }
+    // 已有 cover 但無 points：從下一張 slide 的 highlights 自動補充
+    if (s.type === 'cover' && !s.points?.length) {
+      const next = raw[idx + 1]
+      if (next?.highlights?.length) {
+        return {
+          ...s,
+          points: next.highlights.slice(0, 4).map(h => ({ icon: h.icon || '✦', text: h.title }))
+        }
       }
     }
     return s

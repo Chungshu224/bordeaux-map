@@ -1,5 +1,5 @@
 <template>
-  <div class="cover-slide" :style="{ background: slide.gradient || defaultGradient }">
+  <div class="cover-slide" :style="{ background: slide.gradient || slide.background || defaultGradient }">
     <div class="cover-icon">{{ slide.icon || '🍷' }}</div>
     <h1 class="cover-title">{{ slide.title }}</h1>
     <p v-if="slide.subtitle" class="cover-subtitle">{{ slide.subtitle }}</p>
