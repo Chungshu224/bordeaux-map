@@ -59,8 +59,10 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
+// 統一封面與摘要元件
+import CoverSlide from '../../shared/slides/CoverSlide.vue'
+import SummarySlide from '../../shared/slides/SummarySlide.vue'
 // 重用布根地的 slide 元件
-import IntroSlide from '../../bourgogne/course/slides/IntroSlide.vue'
 import TitleSlide from '../../bourgogne/course/slides/TitleSlide.vue'
 import ContentSlide from '../../bourgogne/course/slides/ContentSlide.vue'
 import ListSlide from '../../bourgogne/course/slides/ListSlide.vue'
@@ -113,7 +115,8 @@ const currentSlide = ref(0)
 const finalQuizBank = ref([])
 
 const slideComponentMap = {
-  intro: IntroSlide,
+  cover: CoverSlide,
+  summary: SummarySlide,
   title: TitleSlide,
   content: ContentSlide,
   list: ListSlide,
@@ -198,14 +201,34 @@ const slides = computed(() => {
 
   const arr = []
   const titleSlide = lessonSlides.find(s => s.type === 'title')
-  if (titleSlide) arr.push(titleSlide)
+  const objectives = props.lesson.objectives || ['掌握核心概念', '認識產區風土', '了解品種特色']
+
+  // 一頁式封面（合併原 title + intro）
   arr.push({
-    type: 'intro',
-    title: '課程導讀',
-    description: props.lesson.description || `本課程將深入探討 ${props.lesson.title} 的各個面向。`,
-    objectives: props.lesson.objectives || ['掌握核心概念', '認識產區風土', '了解品種特色']
+    type: 'cover',
+    icon: titleSlide?.icon || '🍷',
+    gradient: titleSlide?.bgColor
+      ? `linear-gradient(135deg, ${titleSlide.bgColor} 0%, #2c3e50 100%)`
+      : 'linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%)',
+    title: props.lesson.title || titleSlide?.title,
+    subtitle: titleSlide?.subtitle || props.lesson.description?.slice(0, 60) || '',
+    points: objectives.map(obj => ({ icon: '✦', text: obj }))
   })
-  arr.push(...lessonSlides.filter(s => s.type !== 'title'))
+
+  // 內容投影片（排除 title）
+  const contentSlides = lessonSlides.filter(s => s.type !== 'title')
+  arr.push(...contentSlides)
+
+  // 自動注入重點回顧（若最後一頁不是 summary）
+  const lastSlide = contentSlides[contentSlides.length - 1]
+  if (lastSlide?.type !== 'summary') {
+    arr.push({
+      type: 'summary',
+      title: '課程完成！',
+      message: `恭喜完成《${props.lesson.title}》！`,
+      keyPoints: objectives
+    })
+  }
   return arr
 })
 

@@ -62,7 +62,9 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
-import IntroSlide from './slides/IntroSlide.vue'
+// 統一封面與摘要元件
+import CoverSlide from '../../shared/slides/CoverSlide.vue'
+import SummarySlide from '../../shared/slides/SummarySlide.vue'
 import TitleSlide from './slides/TitleSlide.vue'
 import ContentSlide from './slides/ContentSlide.vue'
 import ImageSlide from './slides/ImageSlide.vue'
@@ -144,18 +146,26 @@ const progressPercentage = computed(() => {
 const slides = computed(() => {
   const slideArray = []
   
-  // 0. 課程導讀投影片（第一頁）
-  slideArray.push({
-    type: 'intro',
-    title: t('bourgogne.layout.courseIntro'),
-    description: props.lesson.content?.introduction || props.lesson.description || t('bourgogne.layout.introFallback', { title: props.lesson.title }),
+  // 0. 一頁式封面（整合導讀與課程標題）
+  const rawObjectives = props.lesson.objectives || generateDefaultObjectives()
+  const coverPoints = Array.isArray(rawObjectives) && typeof rawObjectives[0] === 'string'
+    ? rawObjectives.map(obj => ({ icon: '✦', text: obj }))
+    : rawObjectives  // generateDefaultObjectives() 已回傳 {icon, text}
 
-    objectives: props.lesson.objectives || generateDefaultObjectives()
+  slideArray.push({
+    type: 'cover',
+    icon: '🍇',
+    gradient: 'linear-gradient(135deg, #722f37 0%, #a0522d 100%)',
+    title: props.lesson.title,
+    subtitle: props.lesson.duration || 'Bourgogne',
+    points: coverPoints
   })
-  
+
   // 如果課程已經包含 slides 陣列，合併使用
   if (props.lesson.slides && Array.isArray(props.lesson.slides)) {
-    slideArray.push(...props.lesson.slides)
+    // 排除 title 型投影片（封面已涵蓋）
+    const nonTitleSlides = props.lesson.slides.filter(s => s.type !== 'title')
+    slideArray.push(...nonTitleSlides)
     // 如果是綜合評量且題庫已載入，在最後添加隨機測驗
     if (props.lesson.isFinalExam && finalQuizBank.value.length > 0) {
       slideArray.push({
@@ -165,18 +175,22 @@ const slides = computed(() => {
         passScore: 80,
         questions: pickRandom(finalQuizBank.value, Math.min(20, finalQuizBank.value.length))
       })
+    } else if (!props.lesson.isFinalExam) {
+      // 自動注入重點回顧（若最後一頁不是 summary）
+      const lastSlide = nonTitleSlides[nonTitleSlides.length - 1]
+      if (lastSlide?.type !== 'summary') {
+        slideArray.push({
+          type: 'summary',
+          title: '課程完成！',
+          message: `恭喜完成《${props.lesson.title}》！`,
+          keyPoints: coverPoints.map(p => p.text || '')
+        })
+      }
     }
     return slideArray
   }
-  
-  // 否則，將舊格式轉換為投影片格式
-  // 1. 標題投影片
-  slideArray.push({
-    type: 'title',
-    title: props.lesson.title,
-    subtitle: props.lesson.duration,
-    description: props.lesson.content?.introduction || ''
-  })
+
+  // 否則，將舊格式轉換為投影片格式（不再另加標題頁，封面已涵蓋）
 
   // 2. 地圖投影片（如果有的話，放在第二頁）
   if (props.lesson.content?.mapSlide) {
@@ -911,6 +925,17 @@ const slides = computed(() => {
     })
   }
 
+  // 11. 自動注入重點回顧（舊格式路徑）
+  const lastOldSlide = slideArray[slideArray.length - 1]
+  if (lastOldSlide?.type !== 'summary') {
+    slideArray.push({
+      type: 'summary',
+      title: '課程完成！',
+      message: `恭喜完成《${props.lesson.title}》！`,
+      keyPoints: coverPoints.map(p => p.text || '')
+    })
+  }
+
   return slideArray
 })
 
@@ -955,7 +980,8 @@ const getCurrentSlideComponent = computed(() => {
   const slideType = slides.value[currentSlide.value]?.type
   
   switch(slideType) {
-    case 'intro': return IntroSlide
+    case 'cover': return CoverSlide
+    case 'summary': return SummarySlide
     case 'title': return TitleSlide
     case 'list': return ListSlide
     case 'timeline': return TimelineSlide
