@@ -2082,10 +2082,15 @@ function renderGenericTable({ headers = [], rows = [], description = '' }) {
 function extractCoverPoints(html) {
   if (!html) return []
   const matches = html.match(/<h4[^>]*>([\s\S]*?)<\/h4>/gi) || []
-  return matches.slice(0, 4).map(h4 => ({
-    icon: '✦',
-    text: h4.replace(/<[^>]+>/g, '').trim()
-  }))
+  return matches.slice(0, 4).map(h4 => {
+    const raw = h4.replace(/<[^>]+>/g, '').trim()
+    // 若開頭是 emoji（codePoint > U+2000）且後面有空格，分離成 icon + text
+    const spaceIdx = raw.indexOf(' ')
+    if (spaceIdx > 0 && (raw.codePointAt(0) || 0) > 0x2000) {
+      return { icon: raw.slice(0, spaceIdx), text: raw.slice(spaceIdx + 1) }
+    }
+    return { icon: '✦', text: raw }
+  })
 }
 function extractIntroSubtitle(html) {
   if (!html) return ''
@@ -2154,14 +2159,20 @@ const slides = computed(() => {
       }
     })
   }
-  // 自動注入重點回顧（末頁非 component 類型且非 summary）
-  const last = slideArray[slideArray.length - 1]
-  if (slideArray.length > 0 && last?.type !== 'summary' && !last?.component) {
+  // 自動注入重點回顧
+  // 若末尾有 QuizSlide component，summary 插在它前面；否則直接推到末尾
+  const hasSummary = slideArray.some(s => s?.type === 'summary')
+  if (!hasSummary) {
+    let insertIdx = slideArray.length
+    for (let i = slideArray.length - 1; i >= 0; i--) {
+      if (slideArray[i]?.component && /quiz/i.test(slideArray[i].component)) insertIdx = i
+      else break
+    }
     const keyPoints = slideArray
-      .filter(s => s?.title && s?.type !== 'cover')
+      .filter(s => s?.title && s?.type !== 'cover' && !(s?.component && /quiz/i.test(s?.component || '')))
       .slice(0, 6)
       .map(s => s.title)
-    slideArray.push({ type: 'summary', title: '課程完成！', message: '', keyPoints })
+    slideArray.splice(insertIdx, 0, { type: 'summary', title: '課程完成！', message: '', keyPoints })
   }
   return slideArray
 })
