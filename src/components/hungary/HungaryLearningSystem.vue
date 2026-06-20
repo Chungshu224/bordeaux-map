@@ -36,6 +36,7 @@
           <PresentationLesson
             ref="presentationLessonRef"
             :lessonId="currentLesson.id"
+            :lessonTitle="currentLesson?.title || ''"
             @lessonComplete="completeCurrentLesson"
             @openRegionMap="(info) => emit('openRegionMap', info)"
           />

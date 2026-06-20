@@ -51,6 +51,7 @@
           <PresentationLesson
             ref="presentationLessonRef"
             :lessonId="resolvedLessonId"
+            :lessonTitle="currentLesson?.title || ''"
             @lessonComplete="completeCurrentLesson"
             @nextLesson="handleLessonNext"
           />

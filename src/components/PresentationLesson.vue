@@ -31,6 +31,12 @@
                   </button>
                 </div>
               </template>
+              <!-- 一頁式封面投影片 -->
+              <template v-else-if="currentSlideData.type === 'cover'">
+                <div class="pl-cover-host">
+                  <CoverSlide :slide="currentSlideData" />
+                </div>
+              </template>
               <template v-else>
               <!-- 章節導覽（依 chapter-divider 自動生成） -->
               <div v-if="chapterItems.length" class="chapter-nav">
@@ -254,6 +260,7 @@ import NapaSonomaCompareSlide from './california/slides/NapaSonomaCompareSlide.v
 import AVAHierarchySlide from './california/slides/AVAHierarchySlide.vue'
 import CaliforniaRegionMapSlide from './california/slides/CaliforniaRegionMapSlide.vue'
 import SummarySlide from './shared/slides/SummarySlide.vue'
+import CoverSlide from './shared/slides/CoverSlide.vue'
 // 改用 lessonContentLoader 的單例載入器,避免間接層帶來的潛在等待問題
 import { loadLessonContent as coreLoadLessonContent } from '../data/lessonContentLoader.js'
 // 導入進度追蹤系統
@@ -263,6 +270,10 @@ const props = defineProps({
   lessonId: {
     type: String,
     required: true
+  },
+  lessonTitle: {
+    type: String,
+    default: ''
   }
 })
 
@@ -967,6 +978,8 @@ const toList = (arr) => Array.isArray(arr) ? arr : []
 // 將課程原始資料正規化為簡報可渲染的統一結構
 const normalizeSlide = (s) => {
   if (!s || typeof s !== 'object') return null
+  // cover / summary 已有正確結構，直接透傳
+  if (s.type === 'cover' || s.type === 'summary') return s
   const type = s.type || 'content'
 
   // 基礎容器
@@ -2065,10 +2078,55 @@ function renderGenericTable({ headers = [], rows = [], description = '' }) {
   `
 }
 
+// ── 封面轉換 helpers ──────────────────────────────────────────────
+function extractCoverPoints(html) {
+  if (!html) return []
+  const matches = html.match(/<h4[^>]*>([\s\S]*?)<\/h4>/gi) || []
+  return matches.slice(0, 4).map(h4 => ({
+    icon: '✦',
+    text: h4.replace(/<[^>]+>/g, '').trim()
+  }))
+}
+function extractIntroSubtitle(html) {
+  if (!html) return ''
+  const m = html.match(/<p[^>]*class="[^"]*intro-lead[^"]*"[^>]*>([\s\S]*?)<\/p>/i)
+  if (!m) return ''
+  const text = m[1].replace(/<[^>]+>/g, '').trim()
+  const end = text.search(/[。！？]/)
+  if (end > 0 && end < 60) return text.slice(0, end + 1)
+  return text.slice(0, 55) + (text.length > 55 ? '…' : '')
+}
+function getCourseGradient(id) {
+  if (id?.startsWith('ca-')) return 'linear-gradient(135deg, #7b2d00 0%, #c0392b 100%)'
+  if (id?.startsWith('hu-')) return 'linear-gradient(135deg, #5b1fa0 0%, #3a0d7a 100%)'
+  if (id?.startsWith('lo-')) return 'linear-gradient(135deg, #1a6e40 0%, #0d4a28 100%)'
+  return 'linear-gradient(135deg, #722f37 0%, #4a0e15 100%)' // Bordeaux
+}
+function getCourseIcon(id) {
+  if (id?.startsWith('ca-')) return '🍷'
+  if (id?.startsWith('hu-')) return '🍾'
+  if (id?.startsWith('lo-')) return '🌊'
+  return '🍇'
+}
+
 const slides = computed(() => {
   const raw = lessonContent.value || []
-  // 避免重複呈現封面/標題（第 0 頁已用 lessonData 顯示），並移除課程完成頁
-  const mapped = raw.filter(s => s?.type !== 'cover' && s?.type !== 'title' && s?.type !== 'course-complete' && s?.type !== 'end').map(normalizeSlide)
+  // 將 intro 轉為一頁封面，其餘過濾舊式 title/course-complete/end
+  const transformed = raw.map(s => {
+    if (!s) return null
+    if (s.type === 'intro') {
+      return {
+        type: 'cover',
+        icon: getCourseIcon(props.lessonId),
+        gradient: getCourseGradient(props.lessonId),
+        title: props.lessonTitle || '',
+        subtitle: extractIntroSubtitle(s.content),
+        points: extractCoverPoints(s.content)
+      }
+    }
+    return s
+  })
+  const mapped = transformed.filter(s => s?.type !== 'title' && s?.type !== 'course-complete' && s?.type !== 'end').map(normalizeSlide)
   // 支援 normalizeSlide 回傳多張投影片
   const slideArray = mapped.flatMap(x => Array.isArray(x) ? x : [x]).filter(Boolean)
   // 若此課程為綜合評量且題庫已載入，在最後添加隨機測驗
@@ -2090,7 +2148,7 @@ const slides = computed(() => {
   const last = slideArray[slideArray.length - 1]
   if (slideArray.length > 0 && last?.type !== 'summary' && !last?.component) {
     const keyPoints = slideArray
-      .filter(s => s?.title && s?.type !== 'intro')
+      .filter(s => s?.title && s?.type !== 'cover')
       .slice(0, 6)
       .map(s => s.title)
     slideArray.push({ type: 'summary', title: '課程完成！', message: '', keyPoints })
@@ -2393,6 +2451,15 @@ defineExpose({
 </style>
 
 <style scoped>
+/* ── 一頁封面投影片（PresentationLesson 內嵌） ── */
+.pl-cover-host {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
 /* ── 課程完成摘要投影片（PresentationLesson 內嵌） ── */
 .pl-summary-host {
   display: flex;
