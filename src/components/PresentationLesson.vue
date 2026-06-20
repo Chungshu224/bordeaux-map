@@ -2168,10 +2168,17 @@ const slides = computed(() => {
       if (slideArray[i]?.component && /quiz/i.test(slideArray[i].component)) insertIdx = i
       else break
     }
-    const keyPoints = slideArray
-      .filter(s => s?.title && s?.type !== 'cover' && !(s?.component && /quiz/i.test(s?.component || '')))
-      .slice(0, 6)
-      .map(s => s.title)
+    // 過濾出有意義的標題：排除封面、quiz（含 inline quiz）、重複標題
+    const seen = new Set()
+    const keyPoints = slideArray.filter(s => {
+      if (!s?.title) return false
+      if (s?.type === 'cover' || s?.type === 'quiz') return false
+      if (s?.quiz) return false   // inline quiz（有 quiz 屬性的投影片）
+      if (s?.component && /quiz/i.test(s?.component || '')) return false
+      if (seen.has(s.title)) return false
+      seen.add(s.title)
+      return true
+    }).slice(0, 6).map(s => s.title)
     slideArray.splice(insertIdx, 0, { type: 'summary', title: '課程完成！', message: '', keyPoints })
   }
   return slideArray
