@@ -22,6 +22,16 @@
           <div :key="currentSlide" class="slide">
             <!-- 內容幻燈片 -->
             <div v-if="currentSlideData" class="content-slide">
+              <!-- 課程完成摘要投影片 -->
+              <template v-if="currentSlideData.type === 'summary'">
+                <div class="pl-summary-host">
+                  <SummarySlide :slide="currentSlideData" />
+                  <button class="pl-complete-btn" @click="emit('lessonComplete')">
+                    ✓ {{ $t('common.actions.finish') }}
+                  </button>
+                </div>
+              </template>
+              <template v-else>
               <!-- 章節導覽（依 chapter-divider 自動生成） -->
               <div v-if="chapterItems.length" class="chapter-nav">
                 <button
@@ -186,6 +196,7 @@
                   <p class="quiz-explanation">{{ enhanceText(quizFeedbackExplanation) }}</p>
                 </div>
               </div>
+              </template>
             </div>
           </div>
         </transition>
@@ -242,6 +253,7 @@ import HungaryGrapeProfileSlide from './hungary/slides/HungaryGrapeProfileSlide.
 import NapaSonomaCompareSlide from './california/slides/NapaSonomaCompareSlide.vue'
 import AVAHierarchySlide from './california/slides/AVAHierarchySlide.vue'
 import CaliforniaRegionMapSlide from './california/slides/CaliforniaRegionMapSlide.vue'
+import SummarySlide from './shared/slides/SummarySlide.vue'
 // 改用 lessonContentLoader 的單例載入器,避免間接層帶來的潛在等待問題
 import { loadLessonContent as coreLoadLessonContent } from '../data/lessonContentLoader.js'
 // 導入進度追蹤系統
@@ -2074,6 +2086,15 @@ const slides = computed(() => {
       }
     })
   }
+  // 自動注入重點回顧（末頁非 component 類型且非 summary）
+  const last = slideArray[slideArray.length - 1]
+  if (slideArray.length > 0 && last?.type !== 'summary' && !last?.component) {
+    const keyPoints = slideArray
+      .filter(s => s?.title && s?.type !== 'intro')
+      .slice(0, 6)
+      .map(s => s.title)
+    slideArray.push({ type: 'summary', title: '課程完成！', message: '', keyPoints })
+  }
   return slideArray
 })
 
@@ -2372,6 +2393,30 @@ defineExpose({
 </style>
 
 <style scoped>
+/* ── 課程完成摘要投影片（PresentationLesson 內嵌） ── */
+.pl-summary-host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-height: 400px;
+  padding: 20px 0;
+}
+.pl-complete-btn {
+  background: linear-gradient(135deg, #4CAF50, #388E3C);
+  color: white;
+  border: none;
+  padding: 14px 48px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.pl-complete-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
 .presentation-lesson {
   position: relative;
 }

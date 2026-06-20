@@ -8,16 +8,30 @@
         </button>
         <span class="nz-lh-title">{{ currentLesson.title }}</span>
         <button
-          class="nz-lh-btn nz-lh-complete-btn"
-          :class="{ completed: isCurrentLessonCompleted }"
-          @click="triggerMarkComplete"
-          :disabled="isCurrentLessonCompleted"
-        >{{ isCurrentLessonCompleted ? `✓ ${$t('common.actions.completed')}` : $t('common.actions.markComplete') }}</button>
+          v-if="isCurrentLessonCompleted"
+          class="nz-lh-btn nz-lh-complete-btn completed"
+          disabled
+        >✓ {{ $t('common.actions.completed') }}</button>
+        <span v-else class="nz-lh-placeholder"></span>
       </div>
       <div class="nz-lh-row nz-lh-row-2" v-if="showSlideControls">
         <button class="nz-lh-btn nz-lh-nav-btn" @click="handlePrevSlide" :disabled="!canPrevSlide">◀ {{ $t('common.actions.prev') }}</button>
         <span class="nz-lh-nav-label">{{ currentSlideNum }} / {{ totalSlides }}</span>
-        <button class="nz-lh-btn nz-lh-nav-btn" @click="handleNextSlide" :disabled="!canNextSlide">{{ $t('common.actions.next') }} ▶</button>
+        <button
+          v-if="canNextSlide"
+          class="nz-lh-btn nz-lh-nav-btn"
+          @click="handleNextSlide"
+        >{{ $t('common.actions.next') }} ▶</button>
+        <button
+          v-else-if="!isCurrentLessonCompleted"
+          class="nz-lh-btn nz-lh-complete-btn"
+          @click="triggerMarkComplete"
+        >✓ {{ $t('common.actions.finish') }}</button>
+        <button
+          v-else
+          class="nz-lh-btn nz-lh-complete-btn completed"
+          disabled
+        >✓ {{ $t('common.actions.completed') }}</button>
       </div>
     </header>
 
@@ -262,6 +276,7 @@ onMounted(async () => {
   white-space: nowrap;
   padding: 0 8px;
 }
+.nz-lh-placeholder { flex-shrink: 0; min-width: 80px; }
 .nz-lh-complete-btn {
   background: rgba(72,187,120,0.25);
   border-color: rgba(72,187,120,0.55);
