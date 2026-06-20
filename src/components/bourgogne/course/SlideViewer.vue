@@ -179,11 +179,15 @@ const slides = computed(() => {
       // 自動注入重點回顧（若最後一頁不是 summary）
       const lastSlide = nonTitleSlides[nonTitleSlides.length - 1]
       if (lastSlide?.type !== 'summary') {
+        const keyPoints = nonTitleSlides
+          .filter(s => s?.title && s.type !== 'quiz' && s.type !== 'summary')
+          .slice(0, 6)
+          .map(s => s.title)
         slideArray.push({
           type: 'summary',
           title: '課程完成！',
           message: `恭喜完成《${props.lesson.title}》！`,
-          keyPoints: coverPoints.map(p => p.text || '')
+          keyPoints: keyPoints.length > 0 ? keyPoints : coverPoints.map(p => p.text || '')
         })
       }
     }
@@ -928,11 +932,15 @@ const slides = computed(() => {
   // 11. 自動注入重點回顧（舊格式路徑）
   const lastOldSlide = slideArray[slideArray.length - 1]
   if (lastOldSlide?.type !== 'summary') {
+    const keyPoints = slideArray
+      .filter(s => s?.title && s.type !== 'cover' && s.type !== 'quiz' && s.type !== 'summary')
+      .slice(0, 6)
+      .map(s => s.title)
     slideArray.push({
       type: 'summary',
       title: '課程完成！',
       message: `恭喜完成《${props.lesson.title}》！`,
-      keyPoints: coverPoints.map(p => p.text || '')
+      keyPoints: keyPoints.length > 0 ? keyPoints : coverPoints.map(p => p.text || '')
     })
   }
 

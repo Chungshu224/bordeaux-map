@@ -26,7 +26,7 @@
         下一頁 →
       </button>
       <button v-else class="sv-nav-btn complete" @click="complete">
-        完成課程 ✓
+        ✓ {{ $t('common.actions.finish') }}
       </button>
     </nav>
 
@@ -539,8 +539,8 @@ function complete() {
 .sv-nav-btn:disabled { opacity: 0.35; cursor: default; }
 .sv-nav-btn.primary { background: #00274e; border-color: #00274e; color: #fff; }
 .sv-nav-btn.primary:hover { background: #003a70; }
-.sv-nav-btn.complete { background: #c8a951; border-color: #c8a951; color: #000; }
-.sv-nav-btn.complete:hover { background: #b8993d; }
+.sv-nav-btn.complete { background: linear-gradient(135deg, #27ae60, #2ecc71); border-color: transparent; color: #fff; }
+.sv-nav-btn.complete:hover { opacity: 0.9; }
 
 /* Transition */
 .fade-enter-active, .fade-leave-active { transition: opacity 0.25s; }

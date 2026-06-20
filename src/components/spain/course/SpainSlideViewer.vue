@@ -38,7 +38,7 @@
         class="sv-nav-btn complete"
         @click="complete"
       >
-        {{ $t('common.actions.finish') }} ✓
+        ✓ {{ $t('common.actions.finish') }}
       </button>
     </nav>
 

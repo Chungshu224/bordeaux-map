@@ -222,11 +222,15 @@ const slides = computed(() => {
   // 自動注入重點回顧（若最後一頁不是 summary）
   const lastSlide = contentSlides[contentSlides.length - 1]
   if (lastSlide?.type !== 'summary') {
+    const keyPoints = contentSlides
+      .filter(s => s?.title && s.type !== 'quiz')
+      .slice(0, 6)
+      .map(s => s.title)
     arr.push({
       type: 'summary',
       title: '課程完成！',
       message: `恭喜完成《${props.lesson.title}》！`,
-      keyPoints: objectives
+      keyPoints
     })
   }
   return arr
