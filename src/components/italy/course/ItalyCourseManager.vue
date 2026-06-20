@@ -177,6 +177,7 @@ async function startLesson (lessonMeta) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     let data = await res.json()
     if (lessonMeta.mapRegion) data.mapRegion = lessonMeta.mapRegion
+    if (lessonMeta.objectives?.length) data.objectives = lessonMeta.objectives
     // 注入 levelKey 供綜合評量題庫載入使用
     data.levelKey = levelKey
 

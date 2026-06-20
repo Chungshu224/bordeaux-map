@@ -147,10 +147,28 @@ const slides = computed(() => {
   const slideArray = []
   
   // 0. 一頁式封面（整合導讀與課程標題）
-  const rawObjectives = props.lesson.objectives || generateDefaultObjectives()
-  const coverPoints = Array.isArray(rawObjectives) && typeof rawObjectives[0] === 'string'
-    ? rawObjectives.map(obj => ({ icon: '✦', text: obj }))
-    : rawObjectives  // generateDefaultObjectives() 已回傳 {icon, text}
+  // 優先用明確 objectives；若無則從課程投影片標題提取；最後才用關鍵字推斷
+  let coverPoints
+  if (props.lesson.objectives?.length) {
+    const raw = props.lesson.objectives
+    coverPoints = typeof raw[0] === 'string'
+      ? raw.map(obj => ({ icon: '✦', text: obj }))
+      : raw
+  } else if (props.lesson.slides?.length) {
+    const contentSlides = props.lesson.slides
+      .filter(s => s.type !== 'title' && s.type !== 'quiz' && s.type !== 'summary' && s.title)
+      .slice(0, 4)
+    coverPoints = contentSlides.map(s => {
+      const raw = s.title
+      const sp = raw.indexOf(' ')
+      if (sp > 0 && (raw.codePointAt(0) || 0) > 0x2000)
+        return { icon: raw.slice(0, sp), text: raw.slice(sp + 1) }
+      return { icon: '✦', text: raw }
+    })
+    if (!coverPoints.length) coverPoints = generateDefaultObjectives()
+  } else {
+    coverPoints = generateDefaultObjectives()
+  }
 
   slideArray.push({
     type: 'cover',
