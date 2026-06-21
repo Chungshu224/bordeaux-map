@@ -8,6 +8,10 @@
       "subtitle": "番茄、橄欖、海鮮、辛香料——南義餐桌的配酒邏輯"
     },
     {
+      "type": "tuscany-docg-map",
+      "title": "🗺️ Tuscany DOCG 互動地圖"
+    },
+    {
       "type": "content",
       "title": "🥩 Tuscany 深度搭配：超越基礎，進入細節",
       "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Level 1 已介紹 Chianti 配番茄醬和牛排。Level 2 要進一步：同樣是 Tuscany，Brunello、Vino Nobile、Vernaccia di San Gimignano 各有其最佳搭配對象，選錯了就是浪費。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🍷 Brunello / Vino Nobile</h4><p><strong>Bistecca alla Fiorentina 2.0：</strong>若 Chianti 是配日常牛排的首選，Brunello di Montalcino 則是配陳年熟成 T 骨的頂級選擇——更長的余韻對應更深層的肉香。<br><strong>野豬燉肉（Cinghiale）：</strong>Vino Nobile di Montepulciano 的優雅單寧配野豬的濃野風味，比 Chianti 更有層次感。<br><strong>白松露（Tartufo Bianco）：</strong>陳年 Brunello 的煙草泥土香呼應松露複雜度——奢華搭配的典範。</p></div><div class=\"method-card modern\"><h4>🥂 Vernaccia / Vin Santo</h4><p><strong>Vernaccia di San Gimignano + 清蒸白魚：</strong>Tuscany 唯一 DOCG 白酒，礦物感搭配地中海風格白身魚，是中義海鮮搭配的最佳代表。<br><strong>Vin Santo + Cantucci（杏仁餅）：</strong>Tuscany 最傳統的甜點搭配——把 Cantucci 浸入 Vin Santo，在地文化的最純粹體現。甜酒的甜度超過杏仁餅，完全符合甜度法則。</p></div></div></div></div>"
@@ -102,7 +106,11 @@
             "C. Campania 的 Fiano di Avellino 配拿坡里海鮮義大利麵",
             "D. Brunello di Montalcino 配拿坡里 Margherita 披薩"
           ],
-          "correct": [0, 1, 2],
+          "correct": [
+            0,
+            1,
+            2
+          ],
           "explanation": "Vin Santo 甜度高於 Cantucci，符合甜度法則；Negroamaro 草本苦韻呼應苦菜，是苦味對比智慧；Fiano 的礦物果香完美配海鮮。Brunello 過於飽滿，配 Margherita 披薩會壓制番茄和起司，且屬於不同產區——應選 Chianti 或 Fiano。"
         }
       ]
@@ -111,25 +119,45 @@
   "quiz": [
     {
       "question": "Marche 的番茄海鮮燉最符合地域性的搭配是？",
-      "options": ["Barolo", "Verdicchio dei Castelli di Jesi", "Primitivo di Manduria", "Sagrantino"],
+      "options": [
+        "Barolo",
+        "Verdicchio dei Castelli di Jesi",
+        "Primitivo di Manduria",
+        "Sagrantino"
+      ],
       "answer": 1,
       "explanation": "Verdicchio 礦物感呼應海鮮，高酸對抗番茄酸度，是 Marche 最在地搭配。"
     },
     {
       "question": "為何 Sagrantino 不適合清淡白魚？",
-      "options": ["顏色不搭", "單寧最高，清淡料理無法平衡其澀感", "必須在 Umbria 喝", "太甜"],
+      "options": [
+        "顏色不搭",
+        "單寧最高，清淡料理無法平衡其澀感",
+        "必須在 Umbria 喝",
+        "太甜"
+      ],
       "answer": 1,
       "explanation": "Sagrantino 超高單寧需要蛋白質結合，清淡白魚無力駕馭。"
     },
     {
       "question": "Sardinia 烤海鱸最道地的搭配是？",
-      "options": ["Cannonau 紅酒", "Vermentino di Gallura", "Nero d'Avola", "Soave"],
+      "options": [
+        "Cannonau 紅酒",
+        "Vermentino di Gallura",
+        "Nero d'Avola",
+        "Soave"
+      ],
       "answer": 1,
       "explanation": "Vermentino di Gallura 海風礦物感與海魚鮮甜互映，是「海風配海魚」的典範。"
     },
     {
       "question": "Tuscany 的 Vin Santo 最傳統的甜點搭配是？",
-      "options": ["提拉米蘇", "Panna Cotta", "Cantucci 杏仁餅（浸入 Vin Santo）", "Cannoli"],
+      "options": [
+        "提拉米蘇",
+        "Panna Cotta",
+        "Cantucci 杏仁餅（浸入 Vin Santo）",
+        "Cannoli"
+      ],
       "answer": 2,
       "explanation": "把 Cantucci 浸入 Vin Santo，是 Tuscany 最傳統的在地甜點文化，完全符合甜度法則。"
     }

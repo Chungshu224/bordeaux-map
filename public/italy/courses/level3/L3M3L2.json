@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "Brunello di Montalcino 與 Chianti Classico 年份差異的根本原因是？",
-      "options": ["品種不同（Nebbiolo vs Sangiovese）", "海拔、朝向與地塊特性造成微氣候差異", "生產者釀造技術不同", "陳年時間法規不同"],
+      "options": [
+        "品種不同（Nebbiolo vs Sangiovese）",
+        "海拔、朝向與地塊特性造成微氣候差異",
+        "生產者釀造技術不同",
+        "陳年時間法規不同"
+      ],
       "answer": 1,
       "explanation": "兩者都使用 Sangiovese，但 Montalcino 獨立山丘地形造就獨特微氣候（海洋影響＋多樣海拔），與 Chianti Classico 丘陵地帶表現截然不同。"
     },
     {
       "question": "2015 年份在 Brunello 與 Chianti Classico 的共同特點是？",
-      "options": ["酸度極高、單寧緊澀", "溫暖豐熟、果味集中但仍均衡", "遭受嚴重冰雹損害", "產量極低導致價格暴漲"],
+      "options": [
+        "酸度極高、單寧緊澀",
+        "溫暖豐熟、果味集中但仍均衡",
+        "遭受嚴重冰雹損害",
+        "產量極低導致價格暴漲"
+      ],
       "answer": 1,
       "explanation": "2015 年整個托斯卡納溫暖晴朗，Brunello 和 Chianti Classico 都呈現豐熟果味與圓潤單寧，是近年最廣受好評的年份之一。"
     },
     {
       "question": "在 Chianti Classico，Gran Selezione 等級在艱難年份（如 2014）的表現如何？",
-      "options": ["依然頂級，不受年份影響", "嚴格篩選使其仍優於普通 Classico，但品質明顯受損", "品質與普通 Classico 相同", "完全停產，等待下一年份"],
+      "options": [
+        "依然頂級，不受年份影響",
+        "嚴格篩選使其仍優於普通 Classico，但品質明顯受損",
+        "品質與普通 Classico 相同",
+        "完全停產，等待下一年份"
+      ],
       "answer": 1,
       "explanation": "Gran Selezione 的嚴格篩選（僅最佳地塊）使其在艱難年份仍優於普通 Classico，但整體品質仍明顯受年份氣候影響。"
     },
     {
       "question": "Brunello 2010 年份的特色是？",
-      "options": ["早熟易飲，現在已達高峰", "結構偉大、單寧緊密，需要更長時間陳年", "輕盈優雅，已開始進入適飲期", "受氣候影響，表現平淡"],
+      "options": [
+        "早熟易飲，現在已達高峰",
+        "結構偉大、單寧緊密，需要更長時間陳年",
+        "輕盈優雅，已開始進入適飲期",
+        "受氣候影響，表現平淡"
+      ],
       "answer": 1,
       "explanation": "2010 年 Brunello 被許多評家評為近代最偉大年份：完美氣候造就強健結構與緊密單寧，陳年潛力超過 40 年，目前仍處於發展期。"
     }
@@ -32,6 +52,10 @@
       "type": "title",
       "title": "Brunello & Chianti 年份解析",
       "subtitle": "托斯卡納兩大旗艦產區年份深度解析"
+    },
+    {
+      "type": "tuscany-docg-map",
+      "title": "🗺️ Tuscany DOCG 互動地圖"
     },
     {
       "type": "content",
@@ -76,35 +100,60 @@
         {
           "type": "single",
           "question": "Brunello di Montalcino 與 Chianti Classico 年份差異的根本原因是？",
-          "options": ["品種不同（Nebbiolo vs Sangiovese）", "地形微氣候差異（孤立山丘 vs 丘陵帶）", "生產者釀造技術不同", "陳年時間法規不同"],
+          "options": [
+            "品種不同（Nebbiolo vs Sangiovese）",
+            "地形微氣候差異（孤立山丘 vs 丘陵帶）",
+            "生產者釀造技術不同",
+            "陳年時間法規不同"
+          ],
           "correct": 1,
           "explanation": "兩者都使用 Sangiovese，但 Montalcino 孤立山丘地形造就獨特微氣候（海洋影響＋多樣海拔），與 Chianti Classico 丘陵地帶表現截然不同。"
         },
         {
           "type": "single",
           "question": "2010 年份 Brunello 被稱為近代最偉大年份，主要特色是？",
-          "options": ["早熟易飲，現在已達高峰", "強健結構、緊密單寧，陳年潛力超過 40 年", "輕盈優雅，花香為主", "產量極高，性價比最佳"],
+          "options": [
+            "早熟易飲，現在已達高峰",
+            "強健結構、緊密單寧，陳年潛力超過 40 年",
+            "輕盈優雅，花香為主",
+            "產量極高，性價比最佳"
+          ],
           "correct": 1,
           "explanation": "2010 年 Brunello 完美氣候造就強健結構與緊密單寧，陳年潛力超過 40 年，目前仍處於發展期，是窖藏首選。"
         },
         {
           "type": "single",
           "question": "在 Chianti Classico，Gran Selezione 在艱難年份（如 2014）的表現如何？",
-          "options": ["依然頂級，完全不受年份影響", "嚴格篩選使其仍優於普通 Classico，但品質仍受損", "品質與普通 Classico 完全相同", "停產等待下一年份"],
+          "options": [
+            "依然頂級，完全不受年份影響",
+            "嚴格篩選使其仍優於普通 Classico，但品質仍受損",
+            "品質與普通 Classico 完全相同",
+            "停產等待下一年份"
+          ],
           "correct": 1,
           "explanation": "Gran Selezione 的嚴格篩選（僅最佳地塊）使其在艱難年份仍優於普通 Classico，但整體品質仍明顯受年份氣候影響。"
         },
         {
           "type": "single",
           "question": "2015 vs 2016 年份在托斯卡納的最大風格差異是？",
-          "options": ["2015 更優雅緊緻，2016 更豐熟圓潤", "2015 豐熟現代易飲，2016 均衡精緻陳年潛力更長", "兩者風格完全相同", "2015 陳年潛力遠超 2016"],
+          "options": [
+            "2015 更優雅緊緻，2016 更豐熟圓潤",
+            "2015 豐熟現代易飲，2016 均衡精緻陳年潛力更長",
+            "兩者風格完全相同",
+            "2015 陳年潛力遠超 2016"
+          ],
           "correct": 1,
           "explanation": "2015 溫暖豐熟，相對早熟易飲；2016 均衡精緻，酸度更高，結構更強，陳年潛力超過 2015，是傳統派首選。"
         },
         {
           "type": "single",
           "question": "2014 年份在 Brunello 產區屬於何種評級？造成的主要原因是？",
-          "options": ["五星頂級年份，氣候完美", "四星良好年份，略低於平均", "二星艱難年份，秋季持續豪雨導致腐爛與稀釋", "一星災難年份，完全不值得購買"],
+          "options": [
+            "五星頂級年份，氣候完美",
+            "四星良好年份，略低於平均",
+            "二星艱難年份，秋季持續豪雨導致腐爛與稀釋",
+            "一星災難年份，完全不值得購買"
+          ],
           "correct": 2,
           "explanation": "2014 年秋季連續豪雨是托斯卡納的災難年，Brunello 大幅減產，品質差異懸殊，需極謹慎篩選頂級生產者的精選地塊酒款。"
         }

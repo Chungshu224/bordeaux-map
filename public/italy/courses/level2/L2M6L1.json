@@ -8,6 +8,10 @@
       "subtitle": "從高山到平原——用產區知識找到最佳組合"
     },
     {
+      "type": "piemonte-docg-map",
+      "title": "🗺️ Piemonte DOCG 互動地圖"
+    },
+    {
       "type": "content",
       "title": "🏔️ Trentino-Alto Adige：高山白酒與山地料理",
       "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Alto Adige 獨特的高山風土造就出香氣精準、酸度清新的白酒，與當地受奧地利影響的料理形成絕佳組合。「長在一起的，就搭在一起」在這個產區體現得最為鮮明。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🧀 Pinot Grigio / Gewürztraminer</h4><p><strong>南蒂羅爾煙燻火腿 Speck：</strong>Alto Adige Pinot Grigio 清新果香切割煙燻油脂，同產區地域搭配無懈可擊。<br><strong>蘋果派 Strudel：</strong>Gewürztraminer 的荔枝玫瑰花香呼應蘋果桂皮，甜度法則完美實踐。<br><strong>高山起司（Graukäse）：</strong>帶礦物感的 Pinot Grigio，清爽切割起司油脂。</p></div><div class=\"method-card modern\"><h4>🍷 Lagrein / Teroldego</h4><p><strong>燉牛肉（Goulash）：</strong>Lagrein 的黑果深度與紫羅蘭香氣，完美搭配受奧匈帝國影響的燉肉料理。<br><strong>鹿肉排：</strong>Teroldego 的野性礦物感與獵禽野味天然呼應，是 Trentino 最在地的搭配。<br><strong>蘑菇燉飯：</strong>Lagrein 泥土底韻與蘑菇鮮香相輔相成。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">酸度</div><div class=\"stat-label\">高山冷涼氣候=超高酸白酒</div></div><div class=\"stat-box\"><div class=\"stat-number\">在地</div><div class=\"stat-label\">奧地利菜系影響</div></div><div class=\"stat-box\"><div class=\"stat-number\">Speck</div><div class=\"stat-label\">+Pinot Grigio 經典首選</div></div></div></div>"
@@ -102,7 +106,11 @@
             "C. Soave Classico 配威尼斯海鮮小吃 Cicchetti",
             "D. Lambrusco 配帕爾瑪火腿 Prosciutto di Parma"
           ],
-          "correct": [0, 2, 3],
+          "correct": [
+            0,
+            2,
+            3
+          ],
           "explanation": "Vermentino 的草本香氣完美呼應青醬；Soave 的礦物感與海鮮搭配；Lambrusco 的氣泡切割火腿油脂——三者皆是正確的在地搭配。Amarone 飽滿豐腴，配清蒸白魚會壓制魚肉細膩風味，是錯誤配對。"
         }
       ]
@@ -111,25 +119,45 @@
   "quiz": [
     {
       "question": "南蒂羅爾煙燻火腿 Speck 最符合地域性原則的搭配是？",
-      "options": ["Barolo（Piemonte）", "Alto Adige Pinot Grigio", "Brunello di Montalcino", "Chianti Classico"],
+      "options": [
+        "Barolo（Piemonte）",
+        "Alto Adige Pinot Grigio",
+        "Brunello di Montalcino",
+        "Chianti Classico"
+      ],
       "answer": 1,
       "explanation": "「長在一起的，就搭在一起」——Speck 是 Alto Adige 的傳統熟食，同產區 Pinot Grigio 是最符合地域性原則的搭配。"
     },
     {
       "question": "Lambrusco 是 Emilia 熟食的最佳搭配，原因是？",
-      "options": ["酒精度高", "微泡切割油脂＋微甜果香平衡鹹肥", "單寧極高", "義大利最貴葡萄酒"],
+      "options": [
+        "酒精度高",
+        "微泡切割油脂＋微甜果香平衡鹹肥",
+        "單寧極高",
+        "義大利最貴葡萄酒"
+      ],
       "answer": 1,
       "explanation": "Lambrusco 的微泡切割豬肉油脂，微甜果香平衡鹹肥感，千年共同演化造就絕配。"
     },
     {
       "question": "米蘭炸豬排 Cotoletta 的最佳搭配是？",
-      "options": ["Amarone", "Barolo", "Franciacorta Brut", "Moscato d'Asti"],
+      "options": [
+        "Amarone",
+        "Barolo",
+        "Franciacorta Brut",
+        "Moscato d'Asti"
+      ],
       "answer": 2,
       "explanation": "炸物需要高酸氣泡酒切割油脂，Franciacorta Brut 是米蘭最傳統搭配。"
     },
     {
       "question": "Liguria 青醬麵最適合搭配哪種酒？",
-      "options": ["Barolo", "Chianti", "Vermentino/Pigato", "Amarone"],
+      "options": [
+        "Barolo",
+        "Chianti",
+        "Vermentino/Pigato",
+        "Amarone"
+      ],
       "answer": 2,
       "explanation": "Vermentino 天然草本香氣與青醬的羅勒松子完美共鳴，且為 Liguria 在地品種。"
     }

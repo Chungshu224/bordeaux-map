@@ -54,6 +54,10 @@
       "subtitle": "Nebbiolo、Barbera、Sangiovese 的全方位解析"
     },
     {
+      "type": "piemonte-docg-map",
+      "title": "🗺️ Piemonte DOCG 互動地圖"
+    },
+    {
       "type": "content",
       "title": "👑 Nebbiolo — 品種特徵與風土要求",
       "content": "<div class=\"history-section\"><p class=\"history-intro\">「霧中之王」（Nebbia=霧），義大利最高貴紅葡萄 —— <span class=\"intro-highlight\">全球5,800公頃，99%在Piemonte，對風土要求極端；矛盾美學：酒色偏淺卻骨架驚人，需陳年5-30年才展現真面目</span></p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🏔️</div><h4>風土要求極端</h4><p><strong>海拔：</strong>200-450m（太低太熱，太高太冷）</p><p><strong>朝向：</strong>南至西南（Barolo）/ 南至東南（Barbaresco）</p><p><strong>土壤：</strong>Serravallian藍灰泥灰岩（Barolo強勁）/ Tortonian沙質（Barbaresco優雅）</p><p><strong>氣候：</strong>需早春霧氣保濕，秋季霧氣延遲採收，延長成熟期</p><p><strong>成熟：</strong>極晚熟（10月中下旬），易受壞天氣影響</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🍷</div><h4>結構特徵 &amp; 風味演化</h4><p><strong>顏色：</strong>淺石榴紅，邊緣橘色（外觀輕盈，力量驚人）</p><p><strong>單寧：</strong>極高（&gt;3,000 mg/L），年輕時緊澀難飲</p><p><strong>酸度：</strong>高（TA 6-7 g/L）</p><p><strong>年輕（&lt;5年）：</strong>紅果、玫瑰，單寧緊澀不平衡</p><p><strong>成熟（5-15年）：</strong>乾花、皮革、松露，結構完整</p><p><strong>陳年（15+年）：</strong>焦油、香料、巧克力，複雜度顛峰</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">5,800公頃</div><div class=\"stat-label\">全球種植面積</div></div><div class=\"stat-box\"><div class=\"stat-number\">99%</div><div class=\"stat-label\">產於Piemonte</div></div><div class=\"stat-box\"><div class=\"stat-number\">5-30年</div><div class=\"stat-label\">陳年潛力</div></div><div class=\"stat-box\"><div class=\"stat-number\">€30-1,000+</div><div class=\"stat-label\">名莊超千歐</div></div></div>"
