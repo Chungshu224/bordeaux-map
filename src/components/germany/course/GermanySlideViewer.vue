@@ -75,6 +75,7 @@ import GermanyMoselTrioSlide from './slides/GermanyMoselTrioSlide.vue'
 import GermanySpätburgunderRegionsSlide from './slides/GermanySpätburgunderRegionsSlide.vue'
 import GermanyGrapeProfileSlide from './slides/GermanyGrapeProfileSlide.vue'
 import RieslingPairingMatrixSlide from './slides/RieslingPairingMatrixSlide.vue'
+import GermanyRegionMapSlide from './slides/GermanyRegionMapSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({
@@ -108,7 +109,8 @@ const slideComponentMap = {
   'mosel-trio': GermanyMoselTrioSlide,
   'spatburgunder-regions': GermanySpätburgunderRegionsSlide,
   'germany-grape-profile': GermanyGrapeProfileSlide,
-  'riesling-pairing-matrix': RieslingPairingMatrixSlide
+  'riesling-pairing-matrix': RieslingPairingMatrixSlide,
+  'germany-region-map': GermanyRegionMapSlide
 }
 
 function pickRandom(arr, n) {
@@ -177,7 +179,7 @@ const slides = computed(() => {
   const lastSlide = contentSlides[contentSlides.length - 1]
   if (lastSlide?.type !== 'summary') {
     const keyPoints = contentSlides
-      .filter(s => s?.title && s.type !== 'quiz')
+      .filter(s => s?.title && s.type !== 'quiz' && s.type !== 'germany-region-map')
       .slice(0, 6)
       .map(s => s.title)
     arr.push({
