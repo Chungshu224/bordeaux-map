@@ -7189,6 +7189,14 @@ const S4M1L4_slides = [
     ],
   },
   {
+    type: 'map',
+    title: '四大產地土壤 × 地理對照',
+    description: 'Rioja（石灰黏土）vs Ribera del Duero（花崗岩高原）vs Priorat（板岩）vs Rías Baixas（花崗岩海岸）——盲品地理推斷的空間基礎',
+    mapRegion: 'all',
+    classificationColors: true,
+  },,
+
+  {
     type: 'content',
     icon: '🪨',
     title: '土壤在酒杯中的語言',
@@ -7258,6 +7266,14 @@ const S4M2L1_slides = [
       { icon: '🔄', label: '年份背後的故事', text: '氣候事件（霜害、熱浪、冰雹）如何直接塑造葡萄酒風格' },
     ],
   },
+  {
+    type: 'map',
+    title: 'Rioja & Ribera del Duero 地理對照',
+    description: '兩大頂級紅酒產區的位置關係——Rioja（埃布羅河谷，東西走向）與 Ribera del Duero（杜羅河高原，海拔 850m）',
+    mapRegion: 'castilla-leon',
+    geojsonUrl: '/spain/geojson/appellations/ribera-del-duero.geojson',
+  },,
+
   {
     type: 'content',
     icon: '🍷',
