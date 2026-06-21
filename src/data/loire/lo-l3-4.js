@@ -53,6 +53,19 @@ export const lessonContent = [
     `
   },
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Layon 甜酒帶地圖',
+    componentProps: {
+      slide: {
+        title: 'Layon 甜酒帶地圖',
+        description: 'Layon 河谷甜酒三層級——廣域 Coteaux-du-Layon、精選 Bonnezeaux（92 ha）、頂峰 Quarts-de-Chaume Grand Cru（35 ha）的嵌套地理',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Coteaux-du-Layon.geojson', 'Bonnezeaux.geojson', 'Quarts-de-Chaume.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Quarts-de-Chaume Grand Cru — 羅亞爾的頂峰',
     content: `
       <div class="quarts-de-chaume">

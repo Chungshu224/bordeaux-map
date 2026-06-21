@@ -43,6 +43,19 @@ export const lessonContent = [
     `
   },
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Anjou 紅酒三層級地圖',
+    componentProps: {
+      slide: {
+        title: 'Anjou 紅酒三層級地圖',
+        description: 'Anjou → Anjou-Villages → Anjou-Brissac 的地理嵌套關係——從廣泛的地區 AOC 到 Brissac-Quincé 的片岩坡地頂級村莊',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Anjou.geojson', 'Anjou-Villages.geojson', 'Anjou-Brissac.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Saumur Rouge 與 Saumur-Champigny',
     highlights: [
       { id: 1, icon: '🍾', title: 'Saumur Rouge', content: '索米爾基礎紅酒，凝灰岩土壤，輕盈優雅，Cabernet Franc 主導' },
@@ -56,6 +69,20 @@ export const lessonContent = [
       </div>
     `
   },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Saumur-Champigny 地圖',
+    componentProps: {
+      slide: {
+        title: 'Saumur-Champigny 地圖',
+        description: 'Saumur 凝灰岩帶與 Saumur-Champigny 的位置——Loire 南岸凝灰岩台地上最著名的 Cabernet Franc 紅酒 AOC',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Saumur.geojson', 'Saumur-Champigny.geojson'],
+      }
+    }
+  },
+
   {
     type: 'quiz',
     title: '小測驗',

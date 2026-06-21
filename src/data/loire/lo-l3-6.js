@@ -68,6 +68,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Vouvray 地圖',
+    componentProps: {
+      slide: {
+        title: 'Vouvray 地圖',
+        description: 'Tours 東側 Loire 北岸的 Vouvray AOC（8 個村莊，凝灰岩），與南岸對望的 Montlouis-sur-Loire——一河之隔的風格姐妹產區',
+        mapGroup: 'Touraine',
+        highlightFiles: ['Vouvray.geojson', 'Montlouis-sur-Loire.geojson'],
+      }
+    }
+  },
+
+  {
     component: 'LoireSweetnessSpectrumSlide',
     title: 'Vouvray 四級甜度光譜',
     componentProps: {

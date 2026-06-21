@@ -145,6 +145,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Savennières 三部曲地圖',
+    componentProps: {
+      slide: {
+        title: 'Savennières 三部曲地圖',
+        description: 'Loire 北岸南向坡上的三層金字塔——主 AOC Savennières（105 ha）、Cru La Roche-aux-Moines（33 ha）、單一園 Coulée de Serrant（7 ha）的嵌套位置',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Savennières.geojson', 'Savennières-Roche-aux-Moines.geojson', 'Coulée-de-Serrant.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Nicolas Joly 與生物動力法的故事',
     highlights: [
       { id: 1, icon: '🌱', title: '1980 年代轉型', content: '從金融業回到家族酒莊，1984 年起全面採用生物動力法' },

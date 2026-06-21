@@ -55,6 +55,19 @@ export const lessonContent = [
     `
   },
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Touraine 紅酒產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Touraine 紅酒產區地圖',
+        description: 'Touraine Rouge（地區 AOC）、Touraine-Amboise（安博瓦茲城堡旁）、Touraine-Noble-Joué（Tours 南郊）的地理位置',
+        mapGroup: 'Touraine',
+        highlightFiles: ['Touraine.geojson', 'Touraine-Amboise.geojson', 'Touraine-Noble-Joué.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Touraine-Noble-Joué — 法國最奇特的粉紅酒 AOC',
     content: `
       <div class="noble-joue-section">

@@ -2175,6 +2175,7 @@ const slides = computed(() => {
       if (s?.type === 'cover' || s?.type === 'quiz') return false
       if (s?.quiz) return false   // inline quiz（有 quiz 屬性的投影片）
       if (s?.component && /quiz/i.test(s?.component || '')) return false
+      if (s?.component === 'LoireRegionMapSlide') return false
       if (seen.has(s.title)) return false
       seen.add(s.title)
       return true

@@ -94,6 +94,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Pays Nantais 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Pays Nantais 產區地圖',
+        description: '大西洋出海口的 Muscadet 王國——Sèvre-et-Maine、Côtes de Grandlieu、Coteaux de la Loire 三個子產區與 Gros Plant 分布',
+        mapGroup: 'PayNantes',
+        highlightFiles: ['Muscadet.geojson', 'Muscadet-Sèvre-et-Maine.geojson', 'Muscadet-Côtes-de-Grandlieu.geojson', 'Muscadet-Coteaux-de-la-Loire.geojson', 'Gros-Plant-du-Pays-Nantais.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Anjou-Saumur：甜酒天堂與紅酒寶地',
     highlights: [
       { id: 1, icon: '🍯', title: 'Anjou：全球最偉大甜酒之一的產地', content: 'Coteaux du Layon、Quarts de Chaume Grand Cru、Bonnezeaux——三個世界頂級甜白酒 AOP 在此集中' },
@@ -135,6 +148,19 @@ export const lessonContent = [
       options: ['Gamay', 'Merlot', 'Pinot Noir', 'Cabernet Franc'],
       correct: 3,
       explanation: 'Saumur-Champigny 是 100% Cabernet Franc 的法定產區，位於 Saumur 南部的凝灰石地帶。其絲滑的質感、覆盆子和草莓的紅果香氣，以及礦石感的尾韻，使其成為羅亞爾最受市場歡迎的紅酒 AOP，常被視為「羅亞爾紅酒的大使」。'
+    }
+  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Anjou-Saumur 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Anjou-Saumur 產區地圖',
+        description: '甜酒天堂（Layon 甜酒帶）與紅酒寶地（Saumur-Champigny）的雙重面貌，及 Savennières 火山岩坡地的位置',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Anjou.geojson', 'Saumur.geojson', 'Saumur-Champigny.geojson', 'Savennières.geojson', 'Quarts-de-Chaume.geojson', 'Bonnezeaux.geojson', 'Coteaux-du-Layon.geojson'],
+      }
     }
   },
 
@@ -214,6 +240,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Touraine 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Touraine 產區地圖',
+        description: '城堡之鄉的葡萄酒版圖——Vouvray（北岸）、Montlouis（南岸）對望，Chinon（Vienne 河谷）、Bourgueil（Loire 北岸）的地理分布',
+        mapGroup: 'Touraine',
+        highlightFiles: ['Vouvray.geojson', 'Montlouis-sur-Loire.geojson', 'Chinon.geojson', 'Bourgueil.geojson', 'Saint-Nicolas-de-Bourgueil.geojson', 'Touraine.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Centre-Loire：礦石的最終章',
     highlights: [
       { id: 1, icon: '⛰️', title: 'Sancerre：Sauvignon Blanc 的聖地', content: '三種土壤（泥灰岩、燧石、石灰岩碎石）賦予 Sancerre 三種截然不同的風格，是 Sauvignon Blanc 教科書' },
@@ -264,6 +303,19 @@ export const lessonContent = [
       ],
       correct: 1,
       explanation: 'Sancerre 最著名的三種土壤類型是：1）「Terres blanches」泥灰岩——最精緻複雜，陳年潛力最強；2）「Silex」燧石——煙燻礦石感，帶有「打火石」特有香氣；3）「Caillotes」石灰岩碎石——清新活潑，果香明亮，適合早飲。了解這三種土壤，就能理解為何同為 Sancerre 的不同酒莊，風格可以差異如此之大。'
+    }
+  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Centre-Loire 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Centre-Loire 產區地圖',
+        description: 'Sancerre 與 Pouilly-Fumé 隔河相望，Menetou-Salon、Quincy、Reuilly 等衛星 AOC 的地理位置',
+        mapGroup: 'Centre',
+        highlightFiles: ['Sancerre.geojson', 'Pouilly-Fumé-ou-Blanc-Fumé-de-Pouilly.geojson', 'Menetou-Salon.geojson', 'Quincy.geojson', 'Reuilly.geojson'],
+      }
     }
   },
 

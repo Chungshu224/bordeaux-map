@@ -58,6 +58,19 @@ export const lessonContent = [
     `
   },
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Centre-Loire 衛星 AOC 地圖',
+    componentProps: {
+      slide: {
+        title: 'Centre-Loire 衛星 AOC 地圖',
+        description: 'Sancerre/Pouilly-Fumé 核心雙雄，與六個衛星 AOC（Menetou-Salon、Quincy、Reuilly、Coteaux-du-Giennois、Châteaumeillant、Saint-Pourçain）的完整地理分布',
+        mapGroup: 'Centre',
+        highlightFiles: ['Menetou-Salon.geojson', 'Quincy.geojson', 'Reuilly.geojson', 'Sancerre.geojson', 'Pouilly-Fumé-ou-Blanc-Fumé-de-Pouilly.geojson', 'Châteaumeillant.geojson', 'Coteaux-du-Giennois.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Quincy & Reuilly — 燧石之地的 Sauvignon',
     content: `
       <div class="quincy-reuilly-section">

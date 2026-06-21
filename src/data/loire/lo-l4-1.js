@@ -94,6 +94,19 @@ export const lessonContent = [
     `
   },
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Côtes-d\'Auvergne 五 Cru 地圖',
+    componentProps: {
+      slide: {
+        title: 'Côtes-d\'Auvergne 五 Cru 地圖',
+        description: '奧弗涅火山鏈上的五個 Cru——Corent（火山口）、Boudes（玄武岩）、Chateaugay（城堡山）、Madargues（花崗岩）、Riom（最北）的分布位置',
+        mapGroup: 'MassifCentral',
+        highlightFiles: ['Côtes-dAuvergne-Corent.geojson', 'Côtes-dAuvergne-Boudes.geojson', 'Côtes-dAuvergne-Chateaugay.geojson', 'Côtes-dAuvergne-Madargues.geojson'],
+      }
+    }
+  },
+
+  {
     title: '奧弗涅 Gamay vs 薄酒萊 Gamay',
     content: `
       <div class="gamay-comparison">
