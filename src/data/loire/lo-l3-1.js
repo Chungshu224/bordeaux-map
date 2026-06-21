@@ -104,6 +104,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Anjou Blanc & Saumur Blanc 地圖',
+    componentProps: {
+      slide: {
+        title: 'Anjou Blanc & Saumur Blanc 地圖',
+        description: '黑色片岩（Anjou Noir）vs 白色凝灰岩（Saumur Tuffeau）——同是 Chenin Blanc，兩種截然不同的地質分界在地圖上清楚可見',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Anjou.geojson', 'Saumur.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Savennières——Anjou 干白的金字塔頂',
     highlights: [
       { id: 1, icon: '🏆', title: '頂級子產區', content: '位於 Anjou 內，僅產干型 Chenin Blanc 白酒' },
@@ -137,6 +150,19 @@ export const lessonContent = [
         </div>
       </div>
     `
+  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Savennières 三層級地圖',
+    componentProps: {
+      slide: {
+        title: 'Savennières 三層級地圖',
+        description: 'Anjou 干白金字塔頂——主 AOC Savennières（145 ha）內嵌套 La Roche-aux-Moines（33 ha）與 Coulée de Serrant（7 ha）的精確位置',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Savennières.geojson', 'Savennières-Roche-aux-Moines.geojson', 'Coulée-de-Serrant.geojson'],
+      }
+    }
   },
 
   {

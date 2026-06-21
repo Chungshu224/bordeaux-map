@@ -130,6 +130,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'LoireRegionMapSlide',
+    title: '干型 Chenin 頂級產區地圖',
+    componentProps: {
+      slide: {
+        title: '干型 Chenin 頂級產區地圖',
+        description: 'Savennières（Loire 北岸南向坡）與 Coulée de Serrant（7 公頃獨家 Cru）的位置——全球最偉大干型 Chenin Blanc 的發源地',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Savennières.geojson', 'Coulée-de-Serrant.geojson', 'Savennières-Roche-aux-Moines.geojson'],
+      }
+    }
+  },
+
+  {
     title: '甜型 Chenin — 液態黃金',
     highlights: [
       { id: 1, icon: '🍯', title: '貴腐的奇蹟', content: '秋季晨霧帶來的貴腐菌（Botrytis cinerea）讓 Chenin Blanc 的糖分濃縮，創造出蜂蜜、杏桃和薑的迷人甜酒' },
@@ -169,6 +182,19 @@ export const lessonContent = [
       options: ['它是面積最大的甜酒產區', '它是唯一獲得 Grand Cru 獨立 AOP 地位的羅亞爾甜酒產區', '它只在偶數年份生產', '它的 Chenin Blanc 從不用貴腐葡萄'],
       correct: 1,
       explanation: 'Quarts de Chaume 在 2011 年獲得了羅亞爾河谷首個（也是迄今唯一的）Grand Cru 獨立 AOP 地位，使其成為媲美勃艮第 Grand Cru 的法定頂級地塊。僅 40 公頃的面積，加上嚴格的低產量規定，使其成為收藏家競相追逐的稀世甜酒。'
+    }
+  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: '甜型 Chenin 產區地圖',
+    componentProps: {
+      slide: {
+        title: '甜型 Chenin 產區地圖',
+        description: 'Layon 河谷甜酒帶——Coteaux-du-Layon、Bonnezeaux 與 Quarts-de-Chaume Grand Cru 的地理嵌套關係',
+        mapGroup: 'AnjouSaumur',
+        highlightFiles: ['Coteaux-du-Layon.geojson', 'Bonnezeaux.geojson', 'Quarts-de-Chaume.geojson'],
+      }
     }
   },
 

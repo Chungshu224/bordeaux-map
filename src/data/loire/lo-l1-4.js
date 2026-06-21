@@ -79,6 +79,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'LoireRegionMapSlide',
+    title: 'Pays Nantais 地圖',
+    componentProps: {
+      slide: {
+        title: 'Pays Nantais 地圖',
+        description: 'Melon de Bourgogne 的家鄉——Muscadet Sèvre-et-Maine、Côtes de Grandlieu、Coteaux de la Loire 三大子產區位置',
+        mapGroup: 'PayNantes',
+        highlightFiles: ['Muscadet.geojson', 'Muscadet-Sèvre-et-Maine.geojson', 'Muscadet-Côtes-de-Grandlieu.geojson', 'Muscadet-Coteaux-de-la-Loire.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Sur Lie：讓簡單變複雜的藝術',
     highlights: [
       { id: 1, icon: '🍺', title: 'Sur Lie（在酒泥上陳放）', content: '發酵後不過濾，讓葡萄酒與死酵母菌（酒渣）接觸數月，增添麵包感、奶油質感和複雜度' },
@@ -176,6 +189,19 @@ export const lessonContent = [
       options: ['因為葡萄園附近有工廠排放煙霧', '燧石土壤賦予葡萄酒特有的「煙燻燧石」香氣', '釀造過程中使用煙燻橡木桶', '生產者的姓氏中含有「Fumé」'],
       correct: 1,
       explanation: '「Fumé」在法文中意為「煙燻」。Pouilly-Fumé 的這個特別名稱來自其燧石（silex）土壤所賦予葡萄酒的獨特「煙燻燧石」（pierre à fusil，意為打火石）香氣，彷彿擊打燧石時散發的火藥煙燻氣息。加州傳奇釀酒師 Robert Mondavi 甚至以此為靈感，將他的 Sauvignon Blanc 命名為「Fumé Blanc」。'
+    }
+  },
+
+  {
+    component: 'LoireRegionMapSlide',
+    title: 'Centre-Loire 地圖',
+    componentProps: {
+      slide: {
+        title: 'Centre-Loire 地圖',
+        description: 'Sancerre（右岸）與 Pouilly-Fumé（左岸）隔 Loire 河對望——Sauvignon Blanc 的世界頂端，燧石土壤的煙燻礦石故鄉',
+        mapGroup: 'Centre',
+        highlightFiles: ['Sancerre.geojson', 'Pouilly-Fumé-ou-Blanc-Fumé-de-Pouilly.geojson', 'Pouilly-sur-Loire.geojson'],
+      }
     }
   },
 
