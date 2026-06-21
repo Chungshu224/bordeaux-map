@@ -40,6 +40,12 @@
             <div class="cover-emoji">{{ slide.emoji || '🦘' }}</div>
             <h1 class="cover-title">{{ slide.title }}</h1>
             <p class="cover-subtitle">{{ slide.subtitle }}</p>
+            <div v-if="coverPoints.length" class="cover-objectives">
+              <div v-for="pt in coverPoints" :key="pt.text" class="cover-obj">
+                <span class="obj-icon">{{ pt.icon }}</span>
+                <span class="obj-text">{{ pt.text }}</span>
+              </div>
+            </div>
           </div>
         </template>
 
@@ -205,6 +211,20 @@ const slides = computed(() => {
   return result.slides
 })
 const slide  = computed(() => slides.value[currentSlide.value] || {})
+
+// 封面學習目標：從前幾張內容投影片自動生成
+const coverPoints = computed(() => {
+  if (slide.value?.type !== 'cover') return []
+  if (slide.value?.points?.length) return slide.value.points
+  return slides.value
+    .filter(s => s.type !== 'cover' && s.type !== 'summary' && s.type !== 'quiz' && s.title)
+    .slice(0, 4)
+    .map(s => {
+      const t = s.title, sp = t.indexOf(' ')
+      if (sp > 0 && (t.codePointAt(0) || 0) > 0x2000) return { icon: t.slice(0, sp), text: t.slice(sp + 1) }
+      return { icon: '🍷', text: t }
+    })
+})
 const progressPct = computed(() =>
   slides.value.length > 1 ? Math.round((currentSlide.value / (slides.value.length - 1)) * 100) : 0
 )
@@ -321,6 +341,10 @@ function complete() {
 .cover-emoji { font-size: 3.5rem; }
 .cover-title { font-size: 1.6rem; font-weight: 900; margin: 0; }
 .cover-subtitle { font-size: 0.88rem; opacity: 0.8; margin: 0; }
+.cover-objectives { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; width: 100%; max-width: 420px; text-align: left; }
+.cover-obj { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.15); border-radius: 8px; padding: 8px 14px; }
+.obj-icon { font-size: 1.1rem; flex-shrink: 0; }
+.obj-text { font-size: 0.88rem; color: rgba(255,255,255,0.95); font-weight: 500; line-height: 1.4; }
 
 /* Content card */
 .slide-content-card {
