@@ -152,6 +152,13 @@ const SLIDE_MAP = {
       emoji: '☁️',
     },
     {
+      type: 'map',
+      title: '澳洲氣候帶 × 產區分布',
+      subtitle: '從 Tasmania 涼爽到 Barossa 炎熱，氣候決定風格',
+      mapRegion: 'all',
+    },,
+
+    {
       type: 'content',
       title: '澳洲三大氣候帶',
       points: [
@@ -224,6 +231,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #00274e 0%, #8e44ad 100%)',
       emoji: '📋',
     },
+    {
+      type: 'map',
+      title: '澳洲 GI 產區體系總覽',
+      subtitle: 'Zone → Region → Sub-Region 三層級地理示意',
+      mapRegion: 'all',
+    },,
+
     {
       type: 'content',
       title: '澳洲 GI 系統概覽',
@@ -412,6 +426,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #1a6b9b 0%, #2980b9 100%)',
       emoji: '🔗',
     },
+    {
+      type: 'map',
+      title: '品種 × 產區分布地圖',
+      subtitle: 'Shiraz（SA/VIC）、Cabernet（WA/SA）、Riesling（SA）、Pinot（VIC/TAS）',
+      mapRegion: 'all',
+    },,
+
     {
       type: 'content',
       title: '頂尖品種 × 最佳產區',
@@ -896,6 +917,13 @@ const SLIDE_MAP = {
       emoji: '⏳',
     },
     {
+      type: 'map',
+      title: 'Hunter Valley 產區地圖',
+      subtitle: 'New South Wales 最重要的歷史產區，Sydney 北方約 160km',
+      mapRegion: 'Hunter Valley',
+    },,
+
+    {
       type: 'content',
       title: 'Hunter Valley 基本資料',
       points: [
@@ -1198,6 +1226,13 @@ const SLIDE_MAP = {
       emoji: '🌳',
     },
     {
+      type: 'map',
+      title: 'Barossa Valley 產區地圖',
+      subtitle: 'South Australia，Barossa Zone，老藤 Shiraz 聖地',
+      mapRegion: 'Barossa Valley',
+    },,
+
+    {
       type: 'content',
       title: 'Barossa Old Vine Charter（老藤憲章）',
       points: [
@@ -1240,6 +1275,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #27ae60 0%, #1a6b9b 100%)',
       emoji: '❄️',
     },
+    {
+      type: 'map',
+      title: 'Tasmania 產區地圖',
+      subtitle: '澳洲最南州分，Bass 海峽以南，涼爽海洋氣候出產精緻 Pinot・Chardonnay',
+      mapRegion: 'TAS',
+    },,
+
     {
       type: 'content',
       title: 'Tasmania 為什麼是澳洲最冷的產酒州？',
@@ -1286,6 +1328,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #7b1818 0%, #f39c12 100%)',
       emoji: '⏳',
     },
+    {
+      type: 'map',
+      title: 'Eden Valley 產區地圖',
+      subtitle: 'Barossa Zone 高海拔精品產區，Barossa Valley 東側山坡',
+      mapRegion: 'Eden Valley',
+    },,
+
     {
       type: 'content',
       title: 'Eden Valley 產區概況',
@@ -1364,6 +1413,13 @@ const SLIDE_MAP = {
       emoji: '🔍',
     },
     {
+      type: 'map',
+      title: 'Clare Valley 產區地圖',
+      subtitle: 'Mount Lofty Ranges Zone，螺旋蓋革命發源地',
+      mapRegion: 'Clare Valley',
+    },,
+
+    {
       type: 'content',
       title: 'Clare Valley 的地理結構',
       points: [
@@ -1440,6 +1496,13 @@ const SLIDE_MAP = {
       emoji: '🪨',
     },
     {
+      type: 'map',
+      title: 'Limestone Coast Zone 各產區',
+      subtitle: 'SA 東南部石灰岩地帶：Coonawarra、Padthaway、Wrattonbully 等六大 Region',
+      mapRegion: 'Coonawarra|Padthaway|Wrattonbully|Robe|Mount Benson|Mount Gambier',
+    },,
+
+    {
       type: 'content',
       title: 'Limestone Coast Zone 的地理',
       points: [
@@ -1506,6 +1569,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #1a5c2a 0%, #27ae60 100%)',
       emoji: '⬆️',
     },
+    {
+      type: 'map',
+      title: 'Yarra Valley 產區地圖',
+      subtitle: 'Victoria Port Phillip Zone，墨爾本東北，澳洲最著名 Pinot Noir 產地',
+      mapRegion: 'Yarra Valley',
+    },,
+
     {
       type: 'content',
       title: 'Yarra Valley 概況',
@@ -1585,6 +1655,13 @@ const SLIDE_MAP = {
       emoji: '🇮🇹',
     },
     {
+      type: 'map',
+      title: 'King Valley 產區地圖',
+      subtitle: 'Victoria North East Zone，義大利移民帶來 Prosecco・Sangiovese・Nebbiolo',
+      mapRegion: 'King Valley',
+    },,
+
+    {
       type: 'content',
       title: 'King Valley 概況',
       points: [
@@ -1649,6 +1726,13 @@ const SLIDE_MAP = {
       emoji: '🍯',
     },
     {
+      type: 'map',
+      title: 'Rutherglen 產區地圖',
+      subtitle: 'Victoria 東北內陸，全澳最著名的加烈甜酒 Muscat 與 Topaque 產地',
+      mapRegion: 'Rutherglen',
+    },,
+
+    {
       type: 'content',
       title: 'Rutherglen 產區與 Muscat 傳統',
       points: [
@@ -1712,6 +1796,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #2c0a5e 0%, #c0392b 100%)',
       emoji: '✨',
     },
+    {
+      type: 'map',
+      title: 'Grampians 產區地圖',
+      subtitle: 'Victoria Western Victoria Zone，傳統氣泡紅酒 Sparkling Shiraz 發源地',
+      mapRegion: 'Grampians',
+    },,
+
     {
       type: 'content',
       title: 'Grampians 產區概況',
@@ -1780,6 +1871,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #4a3000 0%, #e67e22 100%)',
       emoji: '📅',
     },
+    {
+      type: 'map',
+      title: 'Hunter Valley 產區地圖',
+      subtitle: 'NSW 最老酒區，以低酒精 Semillon 年份縱向陳年著稱',
+      mapRegion: 'Hunter Valley',
+    },,
+
     {
       type: 'content',
       title: 'Hunter Valley Semillon 的傳奇地位',
@@ -1857,6 +1955,13 @@ const SLIDE_MAP = {
       emoji: '🏔️',
     },
     {
+      type: 'map',
+      title: 'Canberra District 產區地圖',
+      subtitle: 'Southern New South Wales Zone，海拔 500–800m，Shiraz・Riesling 精品小產區',
+      mapRegion: 'Canberra District',
+    },,
+
+    {
       type: 'content',
       title: 'Canberra District 概況',
       points: [
@@ -1919,6 +2024,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #783200 0%, #f39c12 100%)',
       emoji: '🏔️',
     },
+    {
+      type: 'map',
+      title: 'Orange & Mudgee 高海拔產區地圖',
+      subtitle: 'NSW Central Ranges Zone，Orange（900m）vs Mudgee（500m）兩大高海拔對比',
+      mapRegion: 'Orange|Mudgee',
+    },,
+
     {
       type: 'content',
       title: 'Orange GI 概況',
@@ -2002,6 +2114,13 @@ const SLIDE_MAP = {
       emoji: '🗺',
     },
     {
+      type: 'map',
+      title: 'Margaret River 產區地圖',
+      subtitle: 'WA 西南端，Perth 南方 280km，三面環海地中海氣候',
+      mapRegion: 'Margaret River',
+    },,
+
+    {
       type: 'content',
       title: 'Margaret River 的地理獨特性',
       points: [
@@ -2065,6 +2184,13 @@ const SLIDE_MAP = {
       emoji: '5️⃣',
     },
     {
+      type: 'map',
+      title: 'Great Southern 五大 Region 地圖',
+      subtitle: 'WA 最大 Zone：Albany・Denmark・Frankland River・Mount Barker・Porongurup',
+      mapRegion: 'Albany|Denmark|Frankland River|Mount Barker|Porongurup',
+    },,
+
+    {
       type: 'content',
       title: 'Great Southern Zone 概況',
       points: [
@@ -2126,6 +2252,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #1a3d5c 0%, #f39c12 100%)',
       emoji: '🍋',
     },
+    {
+      type: 'map',
+      title: 'Frankland River 產區地圖',
+      subtitle: 'Great Southern Zone 最內陸的 Region，大陸型氣候造就濃郁 Riesling',
+      mapRegion: 'Frankland River',
+    },,
+
     {
       type: 'content',
       title: 'Frankland River 的地理與氣候',
@@ -2193,6 +2326,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #27ae60 0%, #2980b9 100%)',
       emoji: '⬆️',
     },
+    {
+      type: 'map',
+      title: 'Tasmania 北 vs 南分布地圖',
+      subtitle: '北部（Tamar Valley）vs 南部（Coal River Valley・Huon Valley）微氣候差異',
+      mapRegion: 'TAS',
+    },,
+
     {
       type: 'compare',
       title: '塔斯馬尼亞北部 vs 南部',
@@ -2271,6 +2411,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #5d1a5d 0%, #e67e22 100%)',
       emoji: '🪨',
     },
+    {
+      type: 'map',
+      title: 'Granite Belt 產區地圖',
+      subtitle: 'Queensland 唯一精品產區，海拔 800–1000m，「Strange Bird」替代品種實驗場',
+      mapRegion: 'Granite Belt',
+    },,
+
     {
       type: 'content',
       title: 'Granite Belt 概況',
@@ -2554,6 +2701,13 @@ const SLIDE_MAP = {
       emoji: '📦',
     },
     {
+      type: 'map',
+      title: 'Penfolds 葡萄來源產區地圖',
+      subtitle: 'Penfolds 跨州混調哲學：主要葡萄來自 SA（Barossa・Eden Valley・Coonawarra）與 VIC',
+      mapRegion: 'SA|VIC',
+    },,
+
+    {
       type: 'content',
       title: 'Penfolds 的品牌哲學',
       points: [
@@ -2617,6 +2771,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #1a0000 0%, #8B0000 100%)',
       emoji: '👑',
     },
+    {
+      type: 'map',
+      title: 'Grange 的葡萄核心來源',
+      subtitle: 'Penfolds Grange 以 Barossa Valley 老藤 Shiraz 為主，混調多個南澳產區',
+      mapRegion: 'Barossa Valley',
+    },,
+
     {
       type: 'content',
       title: 'Grange 的誕生故事',
@@ -2685,6 +2846,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #0a1a40 0%, #1abc9c 100%)',
       emoji: '📅',
     },
+    {
+      type: 'map',
+      title: '澳洲年份地理脈絡',
+      subtitle: '澳洲各州氣候獨立——SA、VIC、NSW、WA 年份評分可能截然不同',
+      mapRegion: 'all',
+    },,
+
     {
       type: 'content',
       title: '如何解讀澳洲年份差異',
