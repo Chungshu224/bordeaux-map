@@ -32,6 +32,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'Napa Valley — 膜拜酒產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Napa Valley — 膜拜酒產區地圖',
+        description: '巴黎審判冠軍產地與 Cult Wine 重鎮：Stags Leap、Oakville、Rutherford、Howell Mountain',
+        mapGroup: 'Napa Valley',
+        highlightAVAs: ["Stags Leap District","Oakville","Rutherford","Howell Mountain","Calistoga"],
+      }
+    }
+  },
+
+  {
     title: '1976 年巴黎審判：改變世界的盲品',
     content: `<div class="judgment-of-paris">
       <h3>🏆 Judgment of Paris（巴黎審判）— 完整故事</h3>

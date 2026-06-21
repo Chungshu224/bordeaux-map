@@ -37,6 +37,18 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: '加州氣候帶 × 產區分布',
+    componentProps: {
+      slide: {
+        title: '加州氣候帶 × 產區分布',
+        description: '太平洋冷流影響下的氣候梯度：沿岸涼爽帶（Sonoma Coast、Santa Rita Hills）vs 內陸炎熱帶（Napa 谷地、Paso Robles）',
+        mapGroup: 'overview',
+      }
+    }
+  },
+
+  {
     title: '加利福尼亞寒流：天然空調系統',
     content: `<div class="california-current">
       <h3>🌊 California Current — 全球最重要的葡萄酒氣候機制之一</h3>

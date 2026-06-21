@@ -40,6 +40,18 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: '加州葡萄酒產區總覽',
+    componentProps: {
+      slide: {
+        title: '加州葡萄酒產區總覽',
+        description: '從 North Coast 的 Napa 到 Central Coast，再到 Sierra Foothills——加州葡萄酒地理版圖一覽',
+        mapGroup: 'overview',
+      }
+    }
+  },
+
+  {
     title: '為什麼選擇加州葡萄酒？',
     highlights: [
       { id: 1, icon: '🏆', title: '巴黎評判傳奇', content: '1976 年納帕 Cabernet Sauvignon 和 Chardonnay 在盲品中擊敗法國頂級佳釀，震撼全球葡萄酒界' },

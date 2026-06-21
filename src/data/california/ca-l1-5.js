@@ -33,6 +33,18 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'Central Coast 產區地圖',
+    componentProps: {
+      slide: {
+        title: 'Central Coast 產區地圖',
+        description: 'Livermore Valley、Paso Robles、Santa Barbara County、Santa Cruz Mountains——延伸 400 公里的精品海岸帶',
+        mapGroup: 'Central Coast',
+      }
+    }
+  },
+
+  {
     title: 'Livermore Valley — 加州 Chardonnay 的搖籃',
     content: `<div class="livermore-detail">
       <h3>🔬 Livermore Valley — 歷史、基因與品質</h3>

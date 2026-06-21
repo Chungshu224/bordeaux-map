@@ -2177,6 +2177,7 @@ const slides = computed(() => {
       if (s?.component && /quiz/i.test(s?.component || '')) return false
       if (s?.component === 'LoireRegionMapSlide') return false
       if (s?.component === 'HungaryRegionMapSlide') return false
+      if (s?.component === 'CaliforniaRegionMapSlide') return false
       if (seen.has(s.title)) return false
       seen.add(s.title)
       return true

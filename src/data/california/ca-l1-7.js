@@ -32,6 +32,18 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: '品種 × 核心產區地圖',
+    componentProps: {
+      slide: {
+        title: '品種 × 核心產區地圖',
+        description: 'Cabernet（Napa）、Pinot Noir（Sonoma/Santa Barbara）、Zinfandel（Lodi/Sierra Foothills）、Chardonnay（Central Coast）',
+        mapGroup: 'overview',
+      }
+    }
+  },
+
+  {
     title: 'Cabernet Sauvignon — 加州紅酒之王',
     content: `<div class="variety-detail cabernet">
       <h3>👑 Cabernet Sauvignon</h3>

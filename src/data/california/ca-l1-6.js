@@ -33,6 +33,18 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'Mendocino、Lake County & Sierra Foothills 地圖',
+    componentProps: {
+      slide: {
+        title: 'Mendocino、Lake County & Sierra Foothills 地圖',
+        description: '北加州有機農業先驅 Mendocino、火山湖岸 Lake County，與金礦時代老藤遺產 Sierra Foothills',
+        mapGroup: 'Mendocino & Lake County',
+      }
+    }
+  },
+
+  {
     title: 'Mendocino County — 有機農業的先鋒',
     content: `<div class="mendocino-detail">
       <h3>🌿 Mendocino County — 加州最環保的葡萄酒郡</h3>

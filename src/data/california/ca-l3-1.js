@@ -32,6 +32,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'CaliforniaRegionMapSlide',
+    title: 'Napa Valley 山地 AVA 地圖',
+    componentProps: {
+      slide: {
+        title: 'Napa Valley 山地 AVA 地圖',
+        description: 'Spring Mountain・Howell Mountain・Mt. Veeder・Diamond Mountain・Atlas Peak——五大山地 AVA vs 谷地 AVA 對照',
+        mapGroup: 'Napa Valley',
+        highlightAVAs: ["Spring Mountain District","Howell Mountain","Mt. Veeder","Diamond Mountain District","Atlas Peak"],
+      }
+    }
+  },
+
+  {
     title: '山坡 vs 谷地：最根本的風土分野',
     content: `<div class="hillside-valley">
       <h3>⛰️ Hillside vs Valley Floor — 兩種加州風土哲學</h3>
