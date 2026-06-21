@@ -6,16 +6,19 @@
     </div>
     <div class="ptms-map-wrapper">
       <div ref="mapContainer" class="ptms-mapbox"></div>
+
       <div v-if="loading" class="ptms-overlay">
         <div class="ptms-spinner"></div>
         <span>地圖載入中…</span>
       </div>
+
       <div v-if="errorMsg" class="ptms-error">
         <span>⚠️ {{ errorMsg }}</span>
       </div>
+
       <!-- 開啟完整互動地圖按鈕 -->
       <button
-        v-if="!loading && !errorMsg && slide.mapRegion"
+        v-if="!loading && !errorMsg && (slide.mapRegion || slide.mapRegions?.length)"
         class="ptms-fullmap-btn"
         @click="emit('openFullMap')"
         title="開啟完整互動地圖"
@@ -26,16 +29,20 @@
         </svg>
         🗺️ 開啟完整互動地圖
       </button>
-      <!-- 產區類型圖例 -->
-      <div v-if="regionInfo" class="ptms-badge" :class="regionInfo.region_type === 'DOC' ? 'doc' : 'igp'">
-        {{ regionInfo.region_type }}
+
+      <!-- 圖例 -->
+      <div v-if="legendItems.length" class="ptms-legend">
+        <div v-for="item in legendItems" :key="item.label" class="ptms-legend-item">
+          <span class="ptms-legend-dot" :style="{ background: item.color }"></span>
+          <span class="ptms-legend-label">{{ item.label }}</span>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
@@ -45,11 +52,31 @@ const props = defineProps({
 const emit = defineEmits(['openFullMap'])
 
 const mapContainer = ref(null)
-const loading = ref(true)
-const errorMsg = ref(null)
-const regionInfo = ref(null)
+const loading      = ref(true)
+const errorMsg     = ref(null)
 let map = null
 
+const HIGHLIGHT_COLOR = '#f39c12'
+const CONTEXT_COLOR   = '#7f8c8d'
+
+// 目標產區名稱清單（支援 mapRegion 字串 或 mapRegions 陣列）
+const targetNames = computed(() => {
+  if (props.slide.mapRegions?.length) return props.slide.mapRegions
+  if (props.slide.mapRegion)          return [props.slide.mapRegion]
+  return []
+})
+
+// 圖例
+const legendItems = computed(() => {
+  const items = []
+  if (targetNames.value.length) {
+    items.push({ label: '重點產區', color: HIGHLIGHT_COLOR })
+    items.push({ label: '其他葡萄牙產區', color: CONTEXT_COLOR + '80' })
+  }
+  return items
+})
+
+// ── Bbox 工具 ─────────────────────────────────────────────────
 function getCoords(g, out) {
   if (!g) return
   if (g.type === 'Point') out.push(g.coordinates)
@@ -59,9 +86,9 @@ function getCoords(g, out) {
   else if (g.type === 'GeometryCollection') g.geometries.forEach(s => getCoords(s, out))
 }
 
-function calcBbox(feature) {
+function calcBbox(features) {
   const pts = []
-  getCoords(feature.geometry, pts)
+  features.forEach(f => getCoords(f.geometry, pts))
   if (!pts.length) return null
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity
   for (const c of pts) {
@@ -75,7 +102,6 @@ function calcBbox(feature) {
 
 function destroyMap() {
   if (map) { map.remove(); map = null }
-  regionInfo.value = null
 }
 
 async function initMap() {
@@ -92,8 +118,8 @@ async function initMap() {
     return
   }
 
-  const regionName = props.slide.mapRegion
-  if (!regionName) {
+  const names = targetNames.value
+  if (!names.length) {
     errorMsg.value = '未指定產區名稱'
     loading.value = false
     return
@@ -101,7 +127,6 @@ async function initMap() {
 
   mapboxgl.accessToken = token
 
-  // 葡萄牙地理中心，作為初始視角
   const mapInst = new mapboxgl.Map({
     container: mapContainer.value,
     style: 'mapbox://styles/mapbox/satellite-streets-v12',
@@ -114,56 +139,86 @@ async function initMap() {
   mapInst.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   mapInst.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
 
-  mapInst.on('error', (e) => {
+  mapInst.on('error', e => {
     console.warn('[PortugalRegionMapSlide] map error:', e?.error?.message)
   })
 
   mapInst.on('load', async () => {
     try {
-      // 載入葡萄牙產區 GeoJSON（包含 DOC + IGP）
-      const geojsonUrl = props.slide.geojsonUrl || '/portugal/doc_regions.geojson'
-      const res = await fetch(geojsonUrl)
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      const fullGeojson = await res.json()
+      // 決定從哪個 GeoJSON 讀取 — 優先自訂，再試 DOC，找不到再試 IGP
+      const docUrl = '/portugal/doc_regions.geojson'
+      const igpUrl = '/portugal/igp_regions.geojson'
+      const customUrl = props.slide.geojsonUrl
 
-      // 過濾出指定產區
-      const feature = fullGeojson.features.find(
-        f => f.properties?.name === regionName
-      )
-      if (!feature) throw new Error(`找不到產區「${regionName}」`)
+      let allFeatures = []
 
-      regionInfo.value = feature.properties
+      // 一律載入 DOC + IGP 作為背景脈絡
+      const [docRes, igpRes] = await Promise.all([fetch(docUrl), fetch(igpUrl)])
+      const docData = docRes.ok ? await docRes.json() : { features: [] }
+      const igpData = igpRes.ok ? await igpRes.json() : { features: [] }
+      allFeatures = [...(docData.features || []), ...(igpData.features || [])]
 
-      // 建立只含該產區的 FeatureCollection
-      const regionGeojson = { type: 'FeatureCollection', features: [feature] }
+      // 如有自訂 URL 額外合併（避免遺漏）
+      if (customUrl && customUrl !== docUrl && customUrl !== igpUrl) {
+        const customRes = await fetch(customUrl)
+        if (customRes.ok) {
+          const customData = await customRes.json()
+          allFeatures = [...allFeatures, ...(customData.features || [])]
+        }
+      }
 
-      const fillColor = feature.properties?.color || '#27ae60'
+      // 找出要高亮的目標 feature
+      const nameSet = new Set(names)
+      const targetFeatures  = allFeatures.filter(f => nameSet.has(f.properties?.name))
+      const contextFeatures = allFeatures.filter(f => !nameSet.has(f.properties?.name))
 
-      mapInst.addSource('pt-region', { type: 'geojson', data: regionGeojson })
+      if (!targetFeatures.length) {
+        throw new Error(`找不到產區「${names.join('、')}」`)
+      }
+
+      // ── 背景脈絡層（全部非目標產區，暗色低透明） ──
+      if (contextFeatures.length) {
+        mapInst.addSource('pt-context', {
+          type: 'geojson',
+          data: { type: 'FeatureCollection', features: contextFeatures }
+        })
+        mapInst.addLayer({
+          id: 'pt-context-fill',
+          type: 'fill',
+          source: 'pt-context',
+          paint: { 'fill-color': CONTEXT_COLOR, 'fill-opacity': 0.12 }
+        })
+        mapInst.addLayer({
+          id: 'pt-context-line',
+          type: 'line',
+          source: 'pt-context',
+          paint: { 'line-color': CONTEXT_COLOR, 'line-width': 0.8, 'line-opacity': 0.5 }
+        })
+      }
+
+      // ── 高亮層（目標產區，橘色）──
+      mapInst.addSource('pt-region', {
+        type: 'geojson',
+        data: { type: 'FeatureCollection', features: targetFeatures }
+      })
       mapInst.addLayer({
         id: 'pt-region-fill',
         type: 'fill',
         source: 'pt-region',
-        paint: {
-          'fill-color': fillColor,
-          'fill-opacity': 0.25,
-        },
+        paint: { 'fill-color': HIGHLIGHT_COLOR, 'fill-opacity': 0.4 }
       })
       mapInst.addLayer({
         id: 'pt-region-line',
         type: 'line',
         source: 'pt-region',
-        paint: {
-          'line-color': fillColor,
-          'line-width': 2.5,
-        },
+        paint: { 'line-color': HIGHLIGHT_COLOR, 'line-width': 2.5, 'line-opacity': 0.95 }
       })
 
-      // 自動縮放至產區範圍
-      const bbox = calcBbox(feature)
+      // fitBounds 至目標產區
+      const bbox = calcBbox(targetFeatures)
       if (bbox) {
-        // 島嶼產區可能需要更大的 padding
-        const isIsland = feature.properties?.island === true
+        const isIsland = targetFeatures.some(f => f.properties?.island === true)
+          || names.some(n => ['Madeira', 'Açores', 'Graciosa', 'Biscoitos', 'Pico'].includes(n))
         mapInst.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], {
           padding: isIsland ? 60 : 80,
           maxZoom: 11,
@@ -172,6 +227,7 @@ async function initMap() {
       }
     } catch (e) {
       errorMsg.value = `產區地圖載入失敗（${e.message}）`
+      console.error('[PortugalRegionMapSlide]', e)
     } finally {
       loading.value = false
     }
@@ -183,9 +239,9 @@ onMounted(async () => {
   initMap()
 })
 
-watch(() => props.slide.mapRegion, () => {
+watch(() => [props.slide.mapRegion, props.slide.mapRegions], () => {
   nextTick(() => initMap())
-})
+}, { deep: true })
 
 onBeforeUnmount(() => destroyMap())
 </script>
@@ -298,26 +354,38 @@ onBeforeUnmount(() => destroyMap())
   transform: translateY(-1px);
 }
 
-.ptms-badge {
+.ptms-legend {
   position: absolute;
-  top: 12px;
+  bottom: 46px;
   left: 12px;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  background: rgba(10, 20, 10, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 12px;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.ptms-badge.doc {
-  background: #27ae60;
-  color: #fff;
+.ptms-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.ptms-badge.igp {
-  background: #3498db;
-  color: #fff;
+.ptms-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ptms-legend-label {
+  font-size: 0.78rem;
+  color: #e8f5e9;
+  white-space: nowrap;
 }
 
 @media (max-width: 600px) {

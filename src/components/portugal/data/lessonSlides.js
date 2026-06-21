@@ -123,6 +123,13 @@ const P1M1L2_slides = [
     `,
   },
   {
+    type: 'map',
+    title: '葡萄牙產區全覽地圖',
+    description: '從 Minho（最北）到 Algarve（最南），14 大葡萄酒大區的地理分布——大西洋氣候帶 vs. 大陸型氣候帶',
+    mapRegions: ['Vinho Verde', 'Douro', 'Dão', 'Bairrada', 'Alentejo', 'Algarve', 'Lisboa', 'DoTejo'],
+  },,
+
+  {
     type: 'compare',
     title: '南北差異：葡萄牙的氣候與風格對比',
     items: [
@@ -1500,6 +1507,13 @@ const P2M1L4_slides = [
 // P2M2L1 — Dão：花崗岩土壤與優雅 Touriga Nacional
 const P2M2L1_slides = [
   {
+    type: 'map',
+    title: 'Trás-os-Montes DOC 產區地圖',
+    description: '葡萄牙東北邊境山區——與西班牙交界的偏遠高地，大陸型極端氣候造就濃厚個性',
+    mapRegion: 'Trás-os-Montes',
+  },,
+
+  {
     type: 'cover',
     icon: '⛰️',
     gradient: 'linear-gradient(135deg, #546e7a, #2c3e50)',
@@ -1565,6 +1579,13 @@ const P2M2L1_slides = [
       </ul>
     `,
   },
+  {
+    type: 'map',
+    title: 'Dão DOC 產區地圖',
+    description: '花崗岩高地環繞的葡萄酒孤島——Serra da Estrela 阻擋大西洋濕氣，造就優雅高酸的 Touriga Nacional',
+    mapRegion: 'Dão',
+  },,
+
   {
     type: 'compare',
     title: 'Dão vs. Douro：兩大葡萄牙紅酒的對比',
@@ -1707,6 +1728,13 @@ const P2M2L2_slides = [
 // P2M2L3 — Terras da Beira / Beira Interior：山地極端氣候
 const P2M2L3_slides = [
   {
+    type: 'map',
+    title: 'Bairrada DOC 產區地圖',
+    description: '大西洋與 Serra do Buçaco 山脈之間的黏土帶——Baga 葡萄的故鄉，葡萄牙最具陳年潛力的紅酒產地',
+    mapRegion: 'Bairrada',
+  },,
+
+  {
     type: 'cover',
     icon: '🏔️',
     gradient: 'linear-gradient(135deg, #4e342e, #6d4c41)',
@@ -1831,6 +1859,13 @@ const P2M2L4_slides = [
 
 // P2M3L1 — Lisboa：九大子產區的多元風格
 const P2M3L1_slides = [
+  {
+    type: 'map',
+    title: 'Beira Interior DOC 產區地圖',
+    description: '葡萄牙最高海拔產區——Serra da Estrela 山麓，Pinhel、Castelo Rodrigo、Cova da Beira 三個子 DOC',
+    mapRegion: 'Beira Interior',
+  },,
+
   {
     type: 'cover',
     icon: '🏙️',
@@ -2045,6 +2080,14 @@ const P2M3L2_slides = [
 // P2M3L3 — Tejo：泰加斯河谷的豐沛葡萄園
 const P2M3L3_slides = [
   {
+    type: 'map',
+    title: 'Lisboa IGP 產區地圖',
+    description: '里斯本大都會圈的九個子 DOC——從辛特拉海岸（Colares）到 Torres Vedras，歷史與現代並存',
+    mapRegions: ['Lisboa', 'Bucelas', 'Colares', 'Carcavelos', 'Alenquer', 'Arruda', 'Torres Vedras', 'Lourinhã', 'Óbidos', 'Encostas d'Aire'],
+    geojsonUrl: '/portugal/igp_regions.geojson',
+  },,
+
+  {
     type: 'cover',
     icon: '🌊',
     gradient: 'linear-gradient(135deg, #2e7d32, #388e3c)',
@@ -2120,6 +2163,13 @@ const P2M3L3_slides = [
 
 // P2M4L1 — Alentejo 深度：八大子產區與土壤多樣性
 const P2M4L1_slides = [
+  {
+    type: 'map',
+    title: 'Tejo DOC 產區地圖',
+    description: '泰加斯河（Tejo）貫穿的農業大平原——里斯本東側的葡萄酒穀倉，現代風格正逐漸取代大量生產',
+    mapRegion: 'DoTejo',
+  },,
+
   {
     type: 'cover',
     icon: '☀️',
@@ -2321,6 +2371,13 @@ const P2M4L2_slides = [
 // P2M4L3 — Algarve：葡萄牙最南端四大 DOC
 const P2M4L3_slides = [
   {
+    type: 'map',
+    title: 'Setúbal & Palmela 產區地圖',
+    description: '里斯本南側半島——Setúbal DOC 以 Moscatel 甜酒聞名，Palmela DOC 以 Castelão 紅酒稱霸',
+    mapRegions: ['Setúbal', 'Palmela'],
+  },,
+
+  {
     type: 'cover',
     icon: '🏖️',
     gradient: 'linear-gradient(135deg, #0288d1, #0097a7)',
@@ -2374,6 +2431,13 @@ const P2M4L3_slides = [
       </ul>
     `,
   },
+  {
+    type: 'map',
+    title: 'Algarve 產區地圖',
+    description: '葡萄牙最南端四個 DOC——Lagos、Portimão、Lagoa、Tavira，地中海氣候，觀光與精品酒並進',
+    mapRegions: ['Lagos', 'Portimão', 'Lagoa', 'Tavira'],
+  },,
+
   {
     type: 'compare',
     title: 'Algarve vs. Alentejo：兩個南方大區的差異',
