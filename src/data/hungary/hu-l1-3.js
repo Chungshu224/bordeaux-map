@@ -56,6 +56,15 @@ export const lessonContent = [
     </div>`
   },
   {
+    component: 'HungaryRegionMapSlide',
+    title: 'Furmint 的核心產地：Tokaj',
+    componentProps: {
+      mapRegion: 'Tokaj',
+      description: '托卡伊位於匈牙利東北角，Bodrog 與 Tisza 兩河交匯——Furmint 的最佳表達，貴腐甜酒的發源地',
+    },
+  },,
+
+  {
     title: 'Hárslevelű — 椴樹葉品種',
     highlights: [
       { id: 1, icon: '🌸', title: '名字的含義', content: '「Hárslevelű」在匈牙利語意為「椴樹葉」，反映其葉形與椴花的香氣特徵' },
@@ -127,6 +136,15 @@ export const lessonContent = [
       </div>
     </div>`
   },
+  {
+    component: 'HungaryRegionMapSlide',
+    title: 'Olaszrizling 的主場：Badacsony',
+    componentProps: {
+      mapRegion: 'Badacsony',
+      description: 'Badacsony 火山玄武岩台地——巴拉頓湖北岸，是 Olaszrizling 最精彩的表達地，礦石感與清新酸度並存',
+    },
+  },,
+
   {
     title: '其他重要白葡萄品種',
     highlights: [

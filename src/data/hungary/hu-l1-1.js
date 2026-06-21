@@ -62,6 +62,15 @@ export const lessonContent = [
     </div>`
   },
   {
+    component: 'HungaryRegionMapSlide',
+    title: '匈牙利葡萄酒產區總覽',
+    componentProps: {
+      mapRegion: 'all',
+      description: '匈牙利 22 個法定葡萄酒產區（Borvidék）分布於喀爾巴阡盆地，形成 6 大區域群：托卡伊、北部高地、北特蘭斯多瑙比亞、巴拉頓湖、帕農尼亞、多瑙河',
+    },
+  },,
+
+  {
     title: '共產時期的破壞與現代復興',
     highlights: [
       { id: 1, icon: '🏭', title: '集體農場時期', content: '1948 年後，私人酒莊被收歸國有，採量產模式，喪失風土特性與精品文化' },

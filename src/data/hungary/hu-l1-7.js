@@ -51,6 +51,15 @@ export const lessonContent = [
     </div>`
   },
   {
+    component: 'HungaryRegionMapSlide',
+    title: 'Tokaji Aszú 的地理核心',
+    componentProps: {
+      mapRegion: 'Tokaj',
+      description: '貴腐甜酒的誕生地——秋季晨霧（Bodrog 河）與午後暖陽創造 Botrytis Cinerea 生長的完美條件，造就貴腐糖珠（Aszú berries）',
+    },
+  },,
+
+  {
     title: '干型白酒：Furmint 和 Olaszrizling',
     highlights: [
       { id: 1, icon: '🍋', title: '干型 Furmint', content: '21 世紀匈牙利出口的主力，以高酸、礦物感和超長陳年潛力著稱，頂級款可陳年 20-30 年' },
@@ -133,6 +142,15 @@ export const lessonContent = [
       </div>
     </div>`
   },
+  {
+    component: 'HungaryRegionMapSlide',
+    title: 'Egri Bikavér 的風土地圖',
+    componentProps: {
+      mapRegion: 'Eger',
+      description: 'Eger（北部高地）與 Szekszárd（帕農尼亞）並列匈牙利兩大公牛血法定產區——Eger 以較涼爽的大陸性氣候和 Kékfrankos 為核心',
+    },
+  },,
+
   {
     title: '其他重要酒款類型',
     highlights: [

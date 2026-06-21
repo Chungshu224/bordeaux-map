@@ -60,6 +60,15 @@ export const lessonContent = [
     </div>`
   },
   {
+    component: 'HungaryRegionMapSlide',
+    title: 'Kékfrankos 重鎮：Eger 產區',
+    componentProps: {
+      mapRegion: 'Eger',
+      description: 'Eger 位於北部高地（North Hungary），Bükk 山脈與 Mátra 丘陵之間——匈牙利最重要的 Kékfrankos 及 Egri Bikavér（公牛血）產地',
+    },
+  },,
+
+  {
     title: 'Kadarka — 傳統公牛血的靈魂',
     highlights: [
       { id: 1, icon: '🏛️', title: '古老的原生品種', content: '原產於巴爾幹半島，在 16 世紀鄂圖曼統治時期進入匈牙利，曾是全國最重要的紅葡萄' },
@@ -110,6 +119,15 @@ export const lessonContent = [
       </div>
     </div>`
   },
+  {
+    component: 'HungaryRegionMapSlide',
+    title: 'Cabernet Franc 的新故鄉：Villány',
+    componentProps: {
+      mapRegion: 'Villany',
+      description: 'Villány 位於匈牙利最南端、氣候最溫暖的帕農尼亞產區——Cabernet Franc 在此展現不遜於波爾多 St-Émilion 的深度與陳年潛力',
+    },
+  },,
+
   {
     title: '其他重要紅葡萄品種',
     highlights: [
