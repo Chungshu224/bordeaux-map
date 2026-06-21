@@ -16,6 +16,121 @@
           "description": "了解布根地特級園的分級制度與標準"
         },
         {
+          "type": "map",
+          "title": "🗺️ 布根地特級園分布一覽",
+          "mapConfig": {
+            "center": [
+              4.95,
+              47.12
+            ],
+            "zoom": 10.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "chambertin",
+              "url": "/geojson/Cote-de-Nuits/04Gevrey Chambertin/Grand Crus/AOC Chambertin Grand Cru.geojson",
+              "displayName": "Chambertin",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "clvougeot",
+              "url": "/geojson/Cote-de-Nuits/09Vougeot/Grand Crus/AOC Clos de Vougeot ou Clos Vougeot Grand Cru.geojson",
+              "displayName": "Clos de Vougeot",
+              "fillColor": "#A52A2A",
+              "fillOpacity": 0.8,
+              "lineColor": "#6B1A1A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "musigny",
+              "url": "/geojson/Cote-de-Nuits/06Chambolle Musigny/Grand Crus/AOC Musigny Grand Cru.geojson",
+              "displayName": "Musigny",
+              "fillColor": "#C0392B",
+              "fillOpacity": 0.8,
+              "lineColor": "#7B1F17",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "romanee-conti",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC Romanée-Conti Grand Cru.geojson",
+              "displayName": "Romanée-Conti",
+              "fillColor": "#E74C3C",
+              "fillOpacity": 0.9,
+              "lineColor": "#922B21",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "la-tache",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC La Tâche Grand Cru.geojson",
+              "displayName": "La Tâche",
+              "fillColor": "#CB4335",
+              "fillOpacity": 0.8,
+              "lineColor": "#821B15",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "richebourg",
+              "url": "/geojson/Cote-de-Nuits/08Vosne-Romanée/Grand Crus/AOC Richebourg Grand Cru.geojson",
+              "displayName": "Richebourg",
+              "fillColor": "#D35400",
+              "fillOpacity": 0.8,
+              "lineColor": "#884202",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "corton-gc",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton Grand Cru(Aloxe).geojson",
+              "displayName": "Corton",
+              "fillColor": "#D4AC0D",
+              "fillOpacity": 0.8,
+              "lineColor": "#7D6608",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "corton-ch",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson",
+              "displayName": "Corton-Charlemagne",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B8000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "montrachet",
+              "url": "/geojson/Cote-de-Beaune/14Puligny-Montrachet/Grand Cru/AOC Montrachet Grand Cru(Puligny).geojson",
+              "displayName": "Montrachet",
+              "fillColor": "#F9E79F",
+              "fillOpacity": 0.85,
+              "lineColor": "#9A7D0A",
+              "lineWidth": 2.5,
+              "showLabels": true
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "什麼是特級園（Grand Cru）？",
           "content": "特級園是布根地葡萄酒分級制度的最高等級，代表風土條件最優越的地塊。整個布根地僅有33個特級園（不含夏布利），總面積約550公頃，僅佔布根地總產區的2%。"

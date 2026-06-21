@@ -16,6 +16,140 @@
           "description": "認識薄酒萊的加美品種、花崗岩土壤與二氧化碳浸漬法——布根地最獨特的另類存在"
         },
         {
+          "type": "map",
+          "title": "🗺️ 薄酒萊產區總覽",
+          "mapConfig": {
+            "center": [
+              4.6,
+              46.15
+            ],
+            "zoom": 9.5,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "beaujolais-base",
+              "url": "/geojson/Beaujolais/AOC Beaujolais.geojson",
+              "isBase": true,
+              "fillColor": "#FFE4E1",
+              "fillOpacity": 0.15,
+              "lineColor": "#C71585",
+              "lineWidth": 1.5,
+              "showLabels": false
+            },
+            {
+              "id": "beaujolais-villages",
+              "url": "/geojson/Beaujolais/AOC Beaujolais Villages.geojson",
+              "fillColor": "#FF69B4",
+              "fillOpacity": 0.25,
+              "lineColor": "#C71585",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "saint-amour",
+              "url": "/geojson/Beaujolais/AOC Saint-Amour.geojson",
+              "displayName": "Saint-Amour",
+              "fillColor": "#FF1493",
+              "fillOpacity": 0.75,
+              "lineColor": "#8B0057",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "julienas",
+              "url": "/geojson/Beaujolais/AOC Juliénas.geojson",
+              "displayName": "Juliénas",
+              "fillColor": "#E0115F",
+              "fillOpacity": 0.75,
+              "lineColor": "#8B0032",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chenas",
+              "url": "/geojson/Beaujolais/AOC Chénas.geojson",
+              "displayName": "Chénas",
+              "fillColor": "#DC143C",
+              "fillOpacity": 0.75,
+              "lineColor": "#8B0023",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "moulin-a-vent",
+              "url": "/geojson/Beaujolais/AOC Moulin-à-Vent.geojson",
+              "displayName": "Moulin-à-Vent",
+              "fillColor": "#C41E3A",
+              "fillOpacity": 0.75,
+              "lineColor": "#7B0026",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "fleurie",
+              "url": "/geojson/Beaujolais/AOC Fleurie.geojson",
+              "displayName": "Fleurie",
+              "fillColor": "#A52A2A",
+              "fillOpacity": 0.75,
+              "lineColor": "#5C0016",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "chiroubles",
+              "url": "/geojson/Beaujolais/AOC Chiroubles.geojson",
+              "displayName": "Chiroubles",
+              "fillColor": "#8B1A1A",
+              "fillOpacity": 0.75,
+              "lineColor": "#400000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "morgon",
+              "url": "/geojson/Beaujolais/AOC Morgon.geojson",
+              "displayName": "Morgon",
+              "fillColor": "#722F37",
+              "fillOpacity": 0.75,
+              "lineColor": "#3D1A1E",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "regnie",
+              "url": "/geojson/Beaujolais/AOC Régnié.geojson",
+              "displayName": "Régnié",
+              "fillColor": "#6B1A4E",
+              "fillOpacity": 0.75,
+              "lineColor": "#3D0E22",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "brouilly",
+              "url": "/geojson/Beaujolais/AOC Brouilly.geojson",
+              "displayName": "Brouilly",
+              "fillColor": "#5A1F7A",
+              "fillOpacity": 0.75,
+              "lineColor": "#2E1040",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "cote-de-brouilly",
+              "url": "/geojson/Beaujolais/AOC Côte de Brouilly.geojson",
+              "displayName": "Côte de Brouilly",
+              "fillColor": "#4A148C",
+              "fillOpacity": 0.75,
+              "lineColor": "#2A0050",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "為什麼薄酒萊是「叛逆者」？",
           "content": "薄酒萊行政上屬於布根地大區，卻在幾乎所有關鍵層面上與布根地其他產區背道而馳。這裡不種黑皮諾，不用石灰岩土壤，不用傳統發酵方式——卻因此發展出獨一無二的個性。\n\n1395 年，勃艮第公爵 Philippe le Hardi 下令在金丘禁種加美，稱其「低劣」。諷刺的是，這道禁令讓加美落戶薄酒萊的花崗岩土壤，數百年後反而成就了世界最知名的果味紅酒產區之一。"
@@ -137,7 +271,11 @@
                 "C. 都使用相同的二氧化碳浸漬法",
                 "D. 釀造方式不同：低單寧浸漬 vs 傳統發酵"
               ],
-              "correct": [0, 1, 3],
+              "correct": [
+                0,
+                1,
+                3
+              ],
               "explanation": "薄酒萊與金丘在品種（加美vs黑皮諾）、土壤（花崗岩vs石灰岩）、釀造（低單寧浸漬vs傳統發酵）上都截然不同。金丘並不使用二氧化碳浸漬法，那是薄酒萊獨有的技術。"
             }
           ]
@@ -706,11 +844,39 @@
         {
           "type": "comparison",
           "title": "三種薄酒萊品鑑對比",
-          "headers": ["類型", "外觀", "香氣", "口感", "侍酒溫度", "適飲期"],
+          "headers": [
+            "類型",
+            "外觀",
+            "香氣",
+            "口感",
+            "侍酒溫度",
+            "適飲期"
+          ],
           "rows": [
-            ["🆕 薄酒萊新酒", "鮮豔紫紅", "香蕉、泡泡糖、草莓糖", "輕盈簡單、甜美", "10–12°C", "當年 12 月前"],
-            ["🔵 Beaujolais-Villages", "紫紅色", "紅莓、櫻桃、淡花香", "清新均衡、中等酒體", "12–14°C", "1–3 年"],
-            ["👑 特級村 Cru", "深紅寶石", "成熟櫻桃、紫羅蘭、香料、土壤", "複雜、結構感、礦物", "14–16°C", "2–15 年"]
+            [
+              "🆕 薄酒萊新酒",
+              "鮮豔紫紅",
+              "香蕉、泡泡糖、草莓糖",
+              "輕盈簡單、甜美",
+              "10–12°C",
+              "當年 12 月前"
+            ],
+            [
+              "🔵 Beaujolais-Villages",
+              "紫紅色",
+              "紅莓、櫻桃、淡花香",
+              "清新均衡、中等酒體",
+              "12–14°C",
+              "1–3 年"
+            ],
+            [
+              "👑 特級村 Cru",
+              "深紅寶石",
+              "成熟櫻桃、紫羅蘭、香料、土壤",
+              "複雜、結構感、礦物",
+              "14–16°C",
+              "2–15 年"
+            ]
           ]
         },
         {
@@ -799,7 +965,11 @@
                 "C. 生蠔（搭配白酒為佳）",
                 "D. 糖醋排骨"
               ],
-              "correct": [0, 1, 3],
+              "correct": [
+                0,
+                1,
+                3
+              ],
               "explanation": "薄酒萊是中式料理的最佳夥伴：宮保雞丁（微辣果味）、北京烤鴨（油脂花香）、糖醋排骨（甜酸果味）都是絕配。生蠔因其鮮腥特性，傳統上搭配酸度明亮的白酒（如夏布利）更為合適。"
             }
           ]

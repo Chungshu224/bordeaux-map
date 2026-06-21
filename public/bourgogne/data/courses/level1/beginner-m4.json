@@ -873,6 +873,121 @@
           "description": "除了前面介紹的名村，伯恩丘還有許多值得關注的村莊，性價比極高，適合入門學習。"
         },
         {
+          "type": "map",
+          "title": "🗺️ 伯恩丘：其他重要村莊",
+          "mapConfig": {
+            "center": [
+              4.88,
+              47.05
+            ],
+            "zoom": 11,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "aloxe",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson",
+              "displayName": "Aloxe-Corton",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.7,
+              "lineColor": "#4A0000",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "beaune",
+              "url": "/geojson/Cote-de-Beaune/06Beaune/AOC Beaune Village.geojson",
+              "displayName": "Beaune",
+              "fillColor": "#A0522D",
+              "fillOpacity": 0.7,
+              "lineColor": "#5C2E00",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "pommard",
+              "url": "/geojson/Cote-de-Beaune/07Pommard/AOC Pommard Village.geojson",
+              "displayName": "Pommard",
+              "fillColor": "#722F37",
+              "fillOpacity": 0.6,
+              "lineColor": "#3D1A1E",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "volnay",
+              "url": "/geojson/Cote-de-Beaune/08Volnay/AOC Volnay Village.geojson",
+              "displayName": "Volnay",
+              "fillColor": "#884B6D",
+              "fillOpacity": 0.6,
+              "lineColor": "#4A2A3C",
+              "lineWidth": 1.5,
+              "showLabels": true
+            },
+            {
+              "id": "auxey",
+              "url": "/geojson/Cote-de-Beaune/11Auxey-Duresses/AOC Auxey-Duresses Village.geojson",
+              "displayName": "Auxey-Duresses",
+              "fillColor": "#1565C0",
+              "fillOpacity": 0.65,
+              "lineColor": "#0D3B8A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "srom",
+              "url": "/geojson/Cote-de-Beaune/10Saint-Romain/AOC Saint-Romain Village.geojson",
+              "displayName": "Saint-Romain",
+              "fillColor": "#1976D2",
+              "fillOpacity": 0.65,
+              "lineColor": "#0D47A1",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "saubin",
+              "url": "/geojson/Cote-de-Beaune/16Saint-Aubin/AOC Saint-Aubin Village.geojson",
+              "displayName": "Saint-Aubin",
+              "fillColor": "#0288D1",
+              "fillOpacity": 0.65,
+              "lineColor": "#01579B",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "santenay",
+              "url": "/geojson/Cote-de-Beaune/17Santenay/AOC Santenay Village.geojson",
+              "displayName": "Santenay",
+              "fillColor": "#0097A7",
+              "fillOpacity": 0.65,
+              "lineColor": "#006064",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "maranges",
+              "url": "/geojson/Cote-de-Beaune/18Maranges/AOC Maranges Village.geojson",
+              "displayName": "Maranges",
+              "fillColor": "#00897B",
+              "fillOpacity": 0.65,
+              "lineColor": "#004D40",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "Aloxe-Corton：紅白雙特級園",
           "content": "伯恩丘唯一同時擁有紅白特級園的村莊，歷史悠久，品質卓越。",

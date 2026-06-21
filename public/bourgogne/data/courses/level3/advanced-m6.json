@@ -588,6 +588,121 @@
           "description": "探索伯恩丘唯一的紅酒特級園"
         },
         {
+          "type": "map",
+          "title": "🗺️ Corton 山：三村共享的特級園",
+          "mapConfig": {
+            "center": [
+              4.875,
+              47.07
+            ],
+            "zoom": 13,
+            "pitch": 0,
+            "bearing": 0
+          },
+          "geojsonFiles": [
+            {
+              "id": "base",
+              "url": "/geojson/AOC Bourgogne map.geojson",
+              "isBase": true,
+              "fillColor": "#E6E6FA",
+              "fillOpacity": 0.1,
+              "lineColor": "#9370DB",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "aloxe-v",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/AOC Aloxe-Corton Village.geojson",
+              "displayName": "Aloxe-Corton",
+              "fillColor": "#FDEBD0",
+              "fillOpacity": 0.3,
+              "lineColor": "#E59866",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "pernand-v",
+              "url": "/geojson/Cote-de-Beaune/01Pernand-Vergelesses/AOC Pernand-Vergelesses Village.geojson",
+              "displayName": "Pernand",
+              "fillColor": "#EBF5FB",
+              "fillOpacity": 0.3,
+              "lineColor": "#85C1E9",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "ladoix-v",
+              "url": "/geojson/Cote-de-Beaune/02Ladoix/AOC Ladoix Village.geojson",
+              "displayName": "Ladoix",
+              "fillColor": "#EAFAF1",
+              "fillOpacity": 0.3,
+              "lineColor": "#82E0AA",
+              "lineWidth": 1,
+              "showLabels": false
+            },
+            {
+              "id": "corton-aloxe",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton Grand Cru(Aloxe).geojson",
+              "displayName": "Corton（Aloxe）",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#4A0000",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "corton-pern",
+              "url": "/geojson/Cote-de-Beaune/01Pernand-Vergelesses/Grand Cru/AOC Corton Grand Cru(Pernand).geojson",
+              "displayName": "Corton（Pernand）",
+              "fillColor": "#A52A2A",
+              "fillOpacity": 0.8,
+              "lineColor": "#6B1A1A",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "corton-lad",
+              "url": "/geojson/Cote-de-Beaune/02Ladoix/Grand Cru/AOC Corton Grand Cru(Ladoix).geojson",
+              "displayName": "Corton（Ladoix）",
+              "fillColor": "#C0392B",
+              "fillOpacity": 0.8,
+              "lineColor": "#7B1F17",
+              "lineWidth": 2.5,
+              "showLabels": true
+            },
+            {
+              "id": "cc-aloxe",
+              "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson",
+              "displayName": "Corton-Charlemagne（Aloxe）",
+              "fillColor": "#F39C12",
+              "fillOpacity": 0.8,
+              "lineColor": "#9A6A08",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "cc-pern",
+              "url": "/geojson/Cote-de-Beaune/01Pernand-Vergelesses/Grand Cru/AOC Corton-Charlemagne Grand Cru(Pernand).geojson",
+              "displayName": "Corton-Charlemagne（Pernand）",
+              "fillColor": "#F5CBA7",
+              "fillOpacity": 0.8,
+              "lineColor": "#AF601A",
+              "lineWidth": 2,
+              "showLabels": true
+            },
+            {
+              "id": "cc-lad",
+              "url": "/geojson/Cote-de-Beaune/02Ladoix/Grand Cru/AOC Corton-Charlemagne Grand Cru(Ladoix).geojson",
+              "displayName": "Corton-Charlemagne（Ladoix）",
+              "fillColor": "#FAD7A0",
+              "fillOpacity": 0.8,
+              "lineColor": "#CA8A04",
+              "lineWidth": 2,
+              "showLabels": true
+            }
+          ]
+        },
+        {
           "type": "content",
           "title": "Corton：伯恩丘的紅色例外",
           "content": "Corton是伯恩丘最大的特級園（160ha含紅白），也是唯一同時生產紅酒和白酒特級園的地塊。位於Corton山上，橫跨三個村莊（Aloxe-Corton、Ladoix、Pernand-Vergelesses）。因為面積大、地塊多，品質差異顯著。"
