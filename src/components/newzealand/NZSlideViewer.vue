@@ -7,6 +7,12 @@
           <div class="slide-icon">{{ currentSlide.icon }}</div>
           <h1 class="slide-title">{{ currentSlide.title }}</h1>
           <p class="slide-subtitle">{{ currentSlide.subtitle }}</p>
+          <div v-if="coverPoints.length" class="cover-objectives">
+            <div v-for="pt in coverPoints" :key="pt.text" class="cover-obj">
+              <span class="obj-icon">{{ pt.icon }}</span>
+              <span class="obj-text">{{ pt.text }}</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -271,6 +277,17 @@ const props = defineProps({
 defineEmits(['go-to-level'])
 
 const currentSlide = computed(() => props.slides[props.currentIndex] || null)
+
+// 封面學習目標：優先用資料中的 points，否則從內容 slides 自動生成
+const coverPoints = computed(() => {
+  if (currentSlide.value?.type !== 'cover') return []
+  if (currentSlide.value?.points?.length) return currentSlide.value.points
+  return props.slides
+    .filter(s => s.type !== 'cover' && s.type !== 'summary' && s.title)
+    .slice(0, 4)
+    .map(s => ({ icon: s.icon || '✦', text: s.title }))
+})
+
 const embeddedMapContainer = ref(null)
 let embeddedMap = null
 
@@ -341,6 +358,10 @@ onUnmounted(() => {
 @keyframes slideIn { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
 .slide-cover { text-align: center; color: white; min-height: 500px; display: flex; align-items: center; justify-content: center; }
 .slide-cover-content { width: 100%; }
+.cover-objectives { display: flex; flex-direction: column; gap: 10px; margin-top: 32px; text-align: left; max-width: 480px; margin-left: auto; margin-right: auto; }
+.cover-obj { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.15); border-radius: 10px; padding: 10px 16px; backdrop-filter: blur(4px); }
+.obj-icon { font-size: 1.3rem; flex-shrink: 0; }
+.obj-text { font-size: 0.95rem; color: rgba(255,255,255,0.95); font-weight: 500; line-height: 1.4; }
 .slide-cover .slide-icon { font-size: 80px; margin-bottom: 30px; display: block; }
 .slide-cover .slide-title { font-size: 48px; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
 .slide-cover .slide-subtitle { font-size: 24px; font-weight: 400; opacity: 0.95; margin: 0; }

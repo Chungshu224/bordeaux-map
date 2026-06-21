@@ -73,10 +73,10 @@
       ],
       "icon": "🔍",
       "quiz": {
-        "question": "酒標上出現 "Single Vineyard" 時，代表什麼？",
+        "question": "酒標上出現「Single Vineyard」時，代表什麼？",
         "options": ["來自多個葡萄園混釀", "標示該酒來自特定葡萄園，風格較集中", "保證採用機械採收", "表示為特製甜酒"],
         "correct": 1,
-        "explanation": ""Single Vineyard" 表示葡萄來自特定葡萄園，通常代表酒款更能反映該地塊的風土特性與集中風格。"
+        "explanation": "「Single Vineyard」表示葡萄來自特定葡萄園，通常代表酒款更能反映該地塊的風土特性與集中風格。"
       }
     },
     {
