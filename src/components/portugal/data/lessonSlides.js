@@ -566,6 +566,13 @@ const P1M3L3_slides = [
     ],
   },
   {
+    type: 'map',
+    title: '葡萄牙品種 × 產區分布地圖',
+    description: '主要品種的核心地理：Alvarinho（Vinho Verde 北部）→ Touriga Nacional（Douro/Dão）→ Aragonez（Alentejo）→ Moscatel（Setúbal）',
+    mapRegions: ['Vinho Verde', 'Douro', 'Dão', 'Alentejo', 'DoTejo'],
+  },,
+
+  {
     type: 'content',
     icon: '📊',
     title: '品種 × 產區對應表',
@@ -1309,6 +1316,13 @@ const P2M1L3_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Vinho Verde DOC 產區地圖',
+    description: 'Vinho Verde 是葡萄牙最大 DOC，Minho 地區 9 個子產區——Alvarinho 主要集中於最北的 Monção e Melgaço',
+    mapRegion: 'Vinho Verde',
+  },,
+
+  {
     type: 'content',
     icon: '⭐',
     title: 'Monção 與 Melgaço：Alvarinho 的巔峰之地',
@@ -1443,6 +1457,13 @@ const P2M1L4_slides = [
       { icon: '🍇', label: '古老品種', text: '保存了許多葡萄牙中南部罕見的古老本土品種' },
     ],
   },
+  {
+    type: 'map',
+    title: 'Trás-os-Montes DOC 產區地圖',
+    description: '「山的另一邊」——葡萄牙最偏遠的東北山區，與西班牙接壤，Douro 河上游，大陸型極端氣候',
+    mapRegion: 'Trás-os-Montes',
+  },,
+
   {
     type: 'content',
     icon: '🗺️',
@@ -1637,6 +1658,13 @@ const P2M2L2_slides = [
     ],
   },
   {
+    type: 'map',
+    title: 'Bairrada DOC 產區地圖',
+    description: 'Bairrada 位於大西洋沿岸，Porto 以南，以厚皮高單寧的 Baga 紅酒與傳統法氣泡酒 Espumante 聞名',
+    mapRegion: 'Bairrada',
+  },,
+
+  {
     type: 'content',
     icon: '🍒',
     title: 'Baga：葡萄牙最挑戰性的品種',
@@ -1811,6 +1839,13 @@ const P2M2L4_slides = [
       { icon: '⛪', label: '西多會修道院', text: 'Terras de Cister（西多之地），葡萄酒文化源自西多會 Salzedas 修道院' },
     ],
   },
+  {
+    type: 'map',
+    title: 'Távora-Varosa DOC 產區地圖',
+    description: '葡萄牙海拔最高的 DOC（500–700 公尺），Douro 河上游南岸，涼爽氣候出產最精緻的傳統法氣泡酒',
+    mapRegion: 'Távora-Varosa',
+  },,
+
   {
     type: 'content',
     icon: '🗺️',
@@ -1989,6 +2024,13 @@ const P2M3L2_slides = [
       { icon: '🥃', label: 'Carcavelos', text: '半甜加烈酒，曾以出口英國聞名，現僅剩一個酒莊生產' },
     ],
   },
+  {
+    type: 'map',
+    title: '里斯本三寶 DOC 產區地圖',
+    description: 'Bucelas（石灰岩高地 Arinto）、Colares（砂丘老藤 Ramisco）、Carcavelos（稀有加烈甜白）——里斯本外圍三個珍稀歷史 DOC',
+    mapRegions: ['Bucelas', 'Colares', 'Carcavelos'],
+  },,
+
   {
     type: 'content',
     icon: '🍋',
@@ -2307,6 +2349,13 @@ const P2M4L2_slides = [
       { icon: '🌊', label: '大西洋半島', text: '夾在泰加斯河口和大西洋之間，氣候受大西洋影響，比 Alentejo 涼爽' },
     ],
   },
+  {
+    type: 'map',
+    title: 'Setúbal & Palmela DOC 產區地圖',
+    description: 'Tejo 河口南岸的 Península de Setúbal：Palmela（Castelão 紅酒）與 Setúbal（全球最著名 Moscatel 產地之一）',
+    mapRegions: ['Setúbal', 'Palmela'],
+  },,
+
   {
     type: 'content',
     icon: '🍯',
@@ -2870,6 +2919,13 @@ const P4M2L1_slides = [
       { icon: '🌡️', label: '氣候變遷趨勢', text: '21 世紀以來整體溫度上升，影響年份表現節奏' },
     ],
   },
+  {
+    type: 'map',
+    title: 'Douro 年份指南地理脈絡',
+    description: '年份品質取決於 Douro 河谷氣候——片岩梯田的夏季高溫與秋雨是決定 Vintage Port 宣告的關鍵地理因素',
+    mapRegion: 'Douro',
+  },,
+
   {
     type: 'content',
     icon: '📊',
@@ -3545,6 +3601,13 @@ const P3M1L1_slides = [
       { icon: '🔬', label: '現代機械化', text: 'Autovinificators 和 Robotic Lagares 讓大量生產與頂級品質兼顧' },
     ],
   },
+  {
+    type: 'map',
+    title: 'Douro DOC 產區地圖',
+    description: '波特酒的誕生地——杜羅河谷片岩梯田，從 Baixo Corgo（西，多雨）到 Douro Superior（東，炎熱）三個子產區各有特色',
+    mapRegion: 'Douro',
+  },,
+
   {
     type: 'content',
     icon: '⏱️',
