@@ -204,16 +204,21 @@ const layersToLoad = computed(() => {
   const files = GROUP_FILES[group] || []
   const baseColor = cfg.color
   const highlightSet = new Set(props.slide.highlightFiles || [])
+  const colorMap = props.slide.highlightColors || {}
 
-  return files.map(f => ({
-    file: `/geojson/Loire/${group}/${f}`,
-    color: highlightSet.size > 0
-      ? (highlightSet.has(f) ? '#f39c12' : baseColor + '55')
-      : baseColor,
-    label: fileToLabel(f),
-    highlight: highlightSet.has(f),
-    opacity: highlightSet.size > 0 && !highlightSet.has(f) ? 0.25 : 0.5,
-  }))
+  return files.map(f => {
+    const isHighlit = highlightSet.has(f)
+    const perColor = colorMap[f]
+    return {
+      file: `/geojson/Loire/${group}/${f}`,
+      color: highlightSet.size > 0
+        ? (isHighlit ? (perColor || '#f39c12') : baseColor + '44')
+        : baseColor,
+      label: fileToLabel(f),
+      highlight: isHighlit,
+      opacity: highlightSet.size > 0 && !isHighlit ? 0.12 : 0.55,
+    }
+  })
 })
 
 // ── 圖例項目 ─────────────────────────────────────────────────
@@ -222,8 +227,22 @@ const legendItems = computed(() => {
   const group = props.slide.mapGroup
   const cfg = GROUP_CONFIG[group]
   if (!cfg) return []
+
+  const colorMap = props.slide.highlightColors || {}
+  const highlights = props.slide.highlightFiles || []
+
+  if (highlights.length && Object.keys(colorMap).length) {
+    // 每個 highlight 獨立圖例
+    return [
+      { label: cfg.label, color: cfg.color },
+      ...highlights.map(f => ({
+        label: fileToLabel(f),
+        color: colorMap[f] || '#f39c12',
+      }))
+    ]
+  }
   const items = [{ label: cfg.label, color: cfg.color }]
-  if (props.slide.highlightFiles?.length) {
+  if (highlights.length) {
     items.push({ label: '重點產區', color: '#f39c12' })
   }
   return items
