@@ -73,27 +73,45 @@ export const lessonContent = [
     title: '2000 年的釀酒歷史',
     highlights: [
       { id: 1, icon: '🏛️', title: '羅馬時代的起源', content: '西元 1 世紀羅馬人引入葡萄種植，Anjou 地區成為最早的產酒中心' },
-      { id: 2, icon: '👑', title: '法國王室的御用酒', content: '中世紀時為法國王室最鍾愛的葡萄酒，貴族們在羅亞爾河谷建造城堡' }
+      { id: 2, icon: '⛪', title: '修道院守護傳承', content: '中世紀本篤會與西多會精心培育葡萄園，奠定今日頂級地塊的概念基礎' },
+      { id: 3, icon: '👑', title: '法國王室的御用酒', content: '15–16 世紀法國王室在此建造數十座城堡，羅亞爾河谷葡萄酒成為宮廷首選' },
+      { id: 4, icon: '🌍', title: 'UNESCO 世界遺產', content: '2000 年城堡與葡萄園景觀獲 UNESCO 認定，代表人與自然 2000 年共同創造的傑出成就' }
     ],
     content: `<div class="history-section">
-      <p class="history-intro">羅亞爾河谷不僅是葡萄酒產區，更是法國文明的搖籃，被稱為「法國的花園」（le jardin de la France）——<span class="intro-highlight">2000 年釀酒史與法國王室文明的深度交融</span></p>
+      <p class="history-intro">羅亞爾河谷不僅是葡萄酒產區，更是法國文明的搖籃，被稱為「法國的花園」（le jardin de la France）——<span class="intro-highlight">2000 年釀酒史橫跨羅馬征服、修道院傳承、王室榮耀到現代 AOC 典範</span></p>
     </div>
     <div class="timeline-container">
       <div class="timeline-item">
         <div class="timeline-badge ancient">西元 1 世紀</div>
-        <div class="timeline-content"><strong>🏛️ 羅馬奠基</strong><p>羅馬人在征服高盧後，沿著羅亞爾河廣泛種植葡萄。Anjou 和 Touraine 地區的葡萄園在這一時期逐漸成形。</p></div>
+        <div class="timeline-content"><strong>🏛️ 羅馬奠基</strong><p>羅馬人征服高盧後，沿著羅亞爾河廣泛種植葡萄。Anjou 和 Touraine 地區最早成形，奠定日後整個產區的地理框架。</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-badge medieval">中世紀</div>
-        <div class="timeline-content"><strong>⛪ 修道院的貢獻</strong><p>本篤會和西多會修道院在整個中世紀扮演了重要角色，精心培育葡萄園，建立了許多至今仍存在的頂級地塊概念。</p></div>
+        <div class="timeline-content"><strong>⛪ 修道院守護傳承</strong><p>本篤會與西多會修道院精心培育葡萄園，記錄風土特性，奠定 Savennières、Vouvray 等地至今仍存在的頂級地塊（lieu-dit）概念。</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-badge medieval">12–14 世紀</div>
+        <div class="timeline-content"><strong>⚓ 英國貿易黃金期</strong><p>英王亨利二世（1154 年）統治 Anjou 後，羅亞爾河谷葡萄酒大量出口英國。Anjou 紅酒曾是英國宮廷最受歡迎的法國葡萄酒，奠定國際貿易基礎。</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-badge renaissance">15–16 世紀</div>
-        <div class="timeline-content"><strong>👑 王室的偏愛</strong><p>法國王室在羅亞爾河谷建造了數十座城堡（如 Chambord、Amboise），羅亞爾河谷葡萄酒成為宮廷宴席的首選。</p></div>
+        <div class="timeline-content"><strong>👑 法國王室的御用產區</strong><p>法蘭索瓦一世（François I）在 Chambord、查理八世在 Amboise 建造文藝復興宮廷。羅亞爾河谷成為法國文化中心，葡萄酒是宮廷外交不可缺少的要角。</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-badge austria">17 世紀</div>
+        <div class="timeline-content"><strong>🚢 荷蘭商人改變格局</strong><p>荷蘭商人大量收購 Muscadet 白酒與 Anjou 粉紅酒出口北歐，推動南特地區 Melon de Bourgogne 的大規模種植，形塑今日 Muscadet 產區的雛形。</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-badge sparkling">1880 年代</div>
+        <div class="timeline-content"><strong>🐛 根瘤蚜危機與重建</strong><p>根瘤蚜蟲病（Phylloxera）席捲羅亞爾河谷，幾乎摧毀所有葡萄園。重建期間嫁接美洲砧木，並趁機重新規劃品種分布，奠定現代品種格局。</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-badge doc">1936 年</div>
+        <div class="timeline-content"><strong>📋 AOC 制度建立</strong><p>法國 AOC 法定產區制度誕生，羅亞爾河谷的 Muscadet、Sancerre、Pouilly-Fumé 等產區陸續獲得法定認證，確立品種、產區與釀造規範，保護傳統風格。</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-badge modern">2000 年</div>
-        <div class="timeline-content"><strong>🌍 全球認可</strong><p>羅亞爾河谷的城堡和葡萄園景觀被 UNESCO 列為世界文化遺產，代表了人與自然數千年共同創造的傑出景觀。</p></div>
+        <div class="timeline-content"><strong>🌍 UNESCO 世界文化遺產</strong><p>羅亞爾河谷的城堡群與葡萄園景觀整體獲 UNESCO 列為世界文化遺產，是法國面積最大的世界遺產之一，代表人與自然 2000 年共同創造的傑出文明景觀。</p></div>
       </div>
     </div>
     <div class="stat-grid">
