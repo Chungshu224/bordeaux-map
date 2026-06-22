@@ -43,12 +43,19 @@ export const lessonContent = [
         title: 'Muscadet 四大 AOC 分布',
         description: 'Pays Nantais 的 17 個 AOP 中，Muscadet 家族是絕對核心——點擊按鈕查看各 AOC 詳情',
         mapGroup: 'PayNantes',
-        highlightFiles: ['Muscadet.geojson', 'Muscadet-Sèvre-et-Maine.geojson', 'Muscadet-Côtes-de-Grandlieu.geojson', 'Muscadet-Coteaux-de-la-Loire.geojson'],
+        highlightFiles: [
+          'Muscadet.geojson',
+          'Muscadet-Sèvre-et-Maine.geojson',
+          'Muscadet-Côtes-de-Grandlieu.geojson',
+          'Muscadet-Coteaux-de-la-Loire.geojson',
+          'Gros-Plant-du-Pays-Nantais.geojson',
+        ],
         highlightColors: {
           'Muscadet.geojson':                         '#a78bfa',
           'Muscadet-Sèvre-et-Maine.geojson':          '#0ea5e9',
           'Muscadet-Côtes-de-Grandlieu.geojson':      '#10b981',
           'Muscadet-Coteaux-de-la-Loire.geojson':     '#f59e0b',
+          'Gros-Plant-du-Pays-Nantais.geojson':       '#fb923c',
         },
         aocButtons: [
           {

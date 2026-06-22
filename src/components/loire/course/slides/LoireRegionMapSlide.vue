@@ -216,17 +216,17 @@ function updateLayerVisibility(aoc) {
   })
 }
 
-watch(selectedAOC, (aoc) => { updateLayerVisibility(aoc) })
-
 function selectAOC(btn) {
   if (selectedAOC.value?.id === btn.id) {
     selectedAOC.value = null
+    updateLayerVisibility(null)
     return
   }
   selectedAOC.value = btn
   if (map && btn.center) {
     map.flyTo({ center: btn.center, zoom: btn.zoom ?? 10, duration: 900 })
   }
+  updateLayerVisibility(btn)
 }
 
 // ── 計算要顯示哪些圖層 ──────────────────────────────────────
