@@ -147,66 +147,132 @@ export const lessonContent = [
   },
 
   {
-    title: '🏆 Crus Communaux：三大旗艦地塊',
+    title: '🏆 Crus Communaux：10 個官方認可地塊',
     highlights: [
-      { id: 1, icon: '🍫', title: 'Clisson（片岩）', content: '以片岩（schiste）為主，風格最圓潤豐滿，帶有烤麵包與礦石香，陳年後展現蜂蜜複雜度，最少 36 個月 sur lie' },
-      { id: 2, icon: '⚫', title: 'Gorges（輝長岩）', content: '以輝長岩（gabbro）為主，風格最強勁深邃，礦石張力最強，碘鹹感明顯，最少 24 個月 sur lie，需要時間開放' }
+      { id: 1, icon: '🍫', title: 'Clisson（片岩）★★★', content: '唯一要求 36 個月 sur lie，風格最圓潤豐滿，帶烤麵包與礦石香，陳年後蜂蜜複雜度最高，是考試首選必背地塊' },
+      { id: 2, icon: '⚫', title: 'Gorges（輝長岩）★★★', content: '輝長岩（Gabbro）是 Pays Nantais 最稀有的土壤，釀出礦石張力最強、最深邃的 Muscadet，需要時間開放方顯真章' }
     ],
     content: `<div class="region-overview">
-      <p class="region-intro">2011 年建立的 Crus Communaux（地塊分級制度）是 Muscadet 品質革命的里程碑，目前有 10 個官方認可的 cru，考試最常考三個：</p>
-      <div class="region-grid main-grid">
+      <p class="region-intro">2011 年建立的 Crus Communaux 制度是 Muscadet 品質革命里程碑。全部 10 個官方認可的地塊均位於 Muscadet-Sèvre-et-Maine，★★★ 為考試重點：</p>
+      <div class="region-grid secondary-grid">
         <div class="region-card rg-pays">
           <div class="rc-header">
             <span class="rc-icon">🍫</span>
-            <span class="rc-name">Clisson</span>
+            <span class="rc-name">Clisson ★★★</span>
             <span class="rc-aop">片岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">最少 36 個月 sur lie</div>
-            <div class="rc-style">豐滿圓潤，烤麵包香，蜂蜜陳年</div>
+            <div class="rc-grape">最少 <strong>36 個月</strong> sur lie（最長）</div>
+            <div class="rc-style">豐滿圓潤，烤麵包香，蜂蜜陳年複雜度</div>
           </div>
         </div>
         <div class="region-card rg-touraine">
           <div class="rc-header">
             <span class="rc-icon">⚫</span>
-            <span class="rc-name">Gorges</span>
+            <span class="rc-name">Gorges ★★★</span>
             <span class="rc-aop">輝長岩</span>
           </div>
           <div class="rc-body">
             <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">深邃強勁，最強礦石張力</div>
+            <div class="rc-style">深邃強勁，最強礦石張力，碘鹹感</div>
           </div>
         </div>
         <div class="region-card rg-centre">
           <div class="rc-header">
             <span class="rc-icon">🪨</span>
-            <span class="rc-name">Le Pallet</span>
+            <span class="rc-name">Le Pallet ★★★</span>
             <span class="rc-aop">花崗岩</span>
           </div>
           <div class="rc-body">
             <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">精確、清晰，高雅礦石感</div>
+            <div class="rc-style">精確高雅，清晰礦石，結構紮實</div>
+          </div>
+        </div>
+        <div class="region-card rg-anjou">
+          <div class="rc-header">
+            <span class="rc-icon">🏰</span>
+            <span class="rc-name">Château-Thébaud ★★</span>
+            <span class="rc-aop">正長片麻岩</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">最少 24 個月 sur lie</div>
+            <div class="rc-style">圓潤果香，柔順易飲，細膩礦石</div>
           </div>
         </div>
         <div class="region-card rg-loir">
           <div class="rc-header">
-            <span class="rc-icon">➕</span>
-            <span class="rc-name">其他 7 個 Crus</span>
-            <span class="rc-aop">多樣</span>
+            <span class="rc-icon">🌿</span>
+            <span class="rc-name">Goulaine ★★</span>
+            <span class="rc-aop">片麻岩+雲母片岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">Mouzillon-Tillières, Château-Thébaud 等</div>
-            <div class="rc-style">各具獨特土壤個性</div>
+            <div class="rc-grape">最少 24 個月 sur lie</div>
+            <div class="rc-style">細膩優雅，花香調，長度出色</div>
+          </div>
+        </div>
+        <div class="region-card rg-poitou">
+          <div class="rc-header">
+            <span class="rc-icon">🔵</span>
+            <span class="rc-name">Mouzillon-Tillières ★★</span>
+            <span class="rc-aop">複合變質岩</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">最少 24 個月 sur lie</div>
+            <div class="rc-style">清新活潑，表達土壤多樣性</div>
+          </div>
+        </div>
+        <div class="region-card rg-pays">
+          <div class="rc-header">
+            <span class="rc-icon">🍇</span>
+            <span class="rc-name">Vallet ★</span>
+            <span class="rc-aop">片麻岩</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">最少 24 個月 sur lie</div>
+            <div class="rc-style">均衡結構，純粹礦石，平易近人</div>
+          </div>
+        </div>
+        <div class="region-card rg-touraine">
+          <div class="rc-header">
+            <span class="rc-icon">⛪</span>
+            <span class="rc-name">Saint-Fiacre-sur-Maine ★</span>
+            <span class="rc-aop">正長片麻岩</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">最少 24 個月 sur lie</div>
+            <div class="rc-style">清爽純粹，鹹鮮礦石，輕快酸度</div>
+          </div>
+        </div>
+        <div class="region-card rg-centre">
+          <div class="rc-header">
+            <span class="rc-icon">🌊</span>
+            <span class="rc-name">La Haye-Fouassière ★</span>
+            <span class="rc-aop">雲母片岩</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">最少 24 個月 sur lie</div>
+            <div class="rc-style">輕盈鮮活，精緻花香，海洋清新</div>
+          </div>
+        </div>
+        <div class="region-card rg-loir">
+          <div class="rc-header">
+            <span class="rc-icon">🏡</span>
+            <span class="rc-name">Montières-sur-Lay ★</span>
+            <span class="rc-aop">花崗岩+片岩</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">最少 24 個月 sur lie</div>
+            <div class="rc-style">平衡易飲，展現混合地質個性</div>
           </div>
         </div>
       </div>
-      <div class="region-tip">🔑 記憶技巧：<strong>Clisson（片岩→豐滿）、Gorges（輝長岩→礦石最強）、Le Pallet（花崗岩→精確）</strong>，是 WSET 和侍酒師考試最常考的三個 crus。</div>
+      <div class="region-tip">🔑 考試記憶技巧：<strong>Clisson（片岩→豐滿，36m）、Gorges（輝長岩→礦石最強）、Le Pallet（花崗岩→精確）</strong> 為三大旗艦，其餘 7 個均需最少 24 個月 sur lie。</div>
     </div>`,
     quiz: {
       question: '哪個 Cru Communal 以輝長岩（Gabbro）土壤著稱，釀出礦石感最強烈的 Muscadet？',
       options: ['Clisson', 'Gorges', 'Le Pallet', 'Château-Thébaud'],
       correct: 1,
-      explanation: 'Gorges 是 Muscadet-Sèvre-et-Maine 中最獨特的地塊，以罕見的輝長岩（Gabbro）土壤為主。輝長岩是一種深色火成岩，賦予酒款最深邃、最強烈的礦石張力，最少需要 24 個月 sur lie 陳釀，被許多評論家視為 Muscadet 中最具陳年潛力的風格之一。'
+      explanation: 'Gorges 是 Muscadet-Sèvre-et-Maine 中最獨特的地塊，以罕見的輝長岩（Gabbro）土壤為主。輝長岩是一種深色火成岩，賦予酒款最深邃、最強烈的礦石張力，最少需要 24 個月 sur lie 陳釀。相較之下，Clisson 以片岩為主且要求最長的 36 個月 sur lie，Le Pallet 以花崗岩為主風格最精確高雅。'
     }
   }
 ]
