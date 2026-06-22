@@ -323,22 +323,24 @@ const completeLesson = (lessonId) => {
     const moduleId = selectedModule.value?.id
     if (userId && moduleId) saveBourgogneLesson(userId, lessonId, moduleId)
   }
-  
-  // 計算並累計學習時間
-  if (lessonStartTime.value > 0) {
-    const endTime = Date.now()
-    const durationMinutes = Math.round((endTime - lessonStartTime.value) / 1000 / 60)
-    
-    // 使用 progressStore 累計時間
-    const moduleId = selectedModule.value.id
-    progressStore.addLearningTime(moduleId, durationMinutes)
-    
-    lessonStartTime.value = 0
+
+  // 計算並累計學習時間（任何錯誤不應阻斷導航）
+  try {
+    if (lessonStartTime.value > 0) {
+      const endTime = Date.now()
+      const durationMinutes = Math.round((endTime - lessonStartTime.value) / 1000 / 60)
+      const moduleId = selectedModule.value?.id
+      if (moduleId) progressStore.addLearningTime(moduleId, durationMinutes)
+      lessonStartTime.value = 0
+    }
+  } catch (e) {
+    console.warn('[completeLesson] 學習時間記錄失敗:', e)
   }
-  
+
   // 如果還有下一課，繼續
-  if (currentLessonIndex.value < moduleData.value.lessons.length - 1) {
+  if (moduleData.value?.lessons && currentLessonIndex.value < moduleData.value.lessons.length - 1) {
     currentLessonIndex.value++
+    lessonStartTime.value = Date.now()
   } else {
     // 所有課程完成，載入模組測驗
     quizData.value = null
