@@ -9,6 +9,13 @@
       "background": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "紐西蘭葡萄酒產區總覽",
+      "subtitle": "從北島的 Auckland、Hawke's Bay，到南島的 Marlborough、Central Otago",
+      "mapRegion": "Auckland|Hawkes_Bay|Gisborne|Martinborough|Marlborough|Nelson|Central_Otago|Waipara_Valley"
+    },
+    {
       "id": 2,
       "type": "content-with-map",
       "title": "紐西蘭的地理位置",

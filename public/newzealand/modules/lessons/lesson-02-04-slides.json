@@ -9,11 +9,21 @@
       "background": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
     },
     {
+      "id": 1.5,
+      "type": "map",
+      "title": "紅葡萄品種核心產區地圖",
+      "subtitle": "Merlot & Cabernet（Hawke's Bay）、Syrah（Hawke's Bay 北部）——紐西蘭紅酒的主戰場",
+      "mapRegion": "Hawkes_Bay|Central_Hawkes_Bay"
+    },
+    {
       "id": 2,
       "type": "content",
       "title": "為何分類其他紅葡萄？",
       "content": [
-        { "type": "text", "text": "除了 Pinot Noir，紐西蘭與國際市場也栽培多種紅葡萄。這些品種在風土與釀造方式上有不同表現，了解其特性有助於品飲與配餐判斷。" }
+        {
+          "type": "text",
+          "text": "除了 Pinot Noir，紐西蘭與國際市場也栽培多種紅葡萄。這些品種在風土與釀造方式上有不同表現，了解其特性有助於品飲與配餐判斷。"
+        }
       ],
       "icon": "📚"
     },
@@ -23,9 +33,21 @@
       "title": "Merlot：柔順與果香",
       "icon": "🍒",
       "features": [
-        { "title": "典型風格", "description": "中等酒體，成熟紅果如李子、黑櫻桃，單寧較柔和。", "icon": "🍑" },
-        { "title": "栽培要點", "description": "喜歡溫暖到中等氣候，適度產量控制可提升濃度。", "icon": "☀️" },
-        { "title": "常見搭配", "description": "烤肉、燉菜與口味適中的紅肉料理。", "icon": "🥘" }
+        {
+          "title": "典型風格",
+          "description": "中等酒體，成熟紅果如李子、黑櫻桃，單寧較柔和。",
+          "icon": "🍑"
+        },
+        {
+          "title": "栽培要點",
+          "description": "喜歡溫暖到中等氣候，適度產量控制可提升濃度。",
+          "icon": "☀️"
+        },
+        {
+          "title": "常見搭配",
+          "description": "烤肉、燉菜與口味適中的紅肉料理。",
+          "icon": "🥘"
+        }
       ],
       "quiz": {
         "question": "Merlot 葡萄酒相較於 Cabernet Sauvignon 的主要特點是什麼？",
@@ -45,9 +67,21 @@
       "title": "Cabernet Sauvignon：結構與陳年潛力",
       "icon": "🛡️",
       "features": [
-        { "title": "典型風格", "description": "黑加侖子、黑莓、草本與香料，單寧結構明顯，適合陳年。", "icon": "🖤" },
-        { "title": "栽培要點", "description": "偏愛溫暖成熟條件，晚採可提升成熟度與單寧軟化。", "icon": "🌞" },
-        { "title": "常見搭配", "description": "濃郁紅肉、燒烤與成熟乳酪皆為好選擇。", "icon": "🥩" }
+        {
+          "title": "典型風格",
+          "description": "黑加侖子、黑莓、草本與香料，單寧結構明顯，適合陳年。",
+          "icon": "🖤"
+        },
+        {
+          "title": "栽培要點",
+          "description": "偏愛溫暖成熟條件，晚採可提升成熟度與單寧軟化。",
+          "icon": "🌞"
+        },
+        {
+          "title": "常見搭配",
+          "description": "濃郁紅肉、燒烤與成熟乳酪皆為好選擇。",
+          "icon": "🥩"
+        }
       ],
       "quiz": {
         "question": "為什麼 Cabernet Sauvignon 被認為具有優秀的陳年潛力？",
@@ -67,9 +101,21 @@
       "title": "Syrah (Shiraz)：香料與果實的結合",
       "icon": "🌶️",
       "features": [
-        { "title": "典型風格", "description": "黑莓、黑胡椒、香料與動物香（陳年後）。由果實濃郁到辛香皆有。", "icon": "🍇" },
-        { "title": "栽培要點", "description": "對熱度較敏感，適合多樣風格從新鮮到濃郁皆可能。", "icon": "☀️" },
-        { "title": "常見搭配", "description": "辛香燒烤、香料菜餚與風乾肉品。", "icon": "🔥" }
+        {
+          "title": "典型風格",
+          "description": "黑莓、黑胡椒、香料與動物香（陳年後）。由果實濃郁到辛香皆有。",
+          "icon": "🍇"
+        },
+        {
+          "title": "栽培要點",
+          "description": "對熱度較敏感，適合多樣風格從新鮮到濃郁皆可能。",
+          "icon": "☀️"
+        },
+        {
+          "title": "常見搭配",
+          "description": "辛香燒烤、香料菜餚與風乾肉品。",
+          "icon": "🔥"
+        }
       ],
       "quiz": {
         "question": "Syrah/Shiraz 葡萄酒最具標誌性的香氣特徵是什麼？",
@@ -89,9 +135,21 @@
       "title": "Malbec：深色果實與柔順單寧",
       "icon": "🍫",
       "features": [
-        { "title": "典型風格", "description": "黑色果實、巧克力與香料，單寧中等至豐富。", "icon": "🍇" },
-        { "title": "栽培要點", "description": "耐旱性較好，適合乾燥且溫暖地區。", "icon": "🌵" },
-        { "title": "常見搭配", "description": "燒烤、辛香紅肉與濃郁風味料理。", "icon": "🍖" }
+        {
+          "title": "典型風格",
+          "description": "黑色果實、巧克力與香料，單寧中等至豐富。",
+          "icon": "🍇"
+        },
+        {
+          "title": "栽培要點",
+          "description": "耐旱性較好，適合乾燥且溫暖地區。",
+          "icon": "🌵"
+        },
+        {
+          "title": "常見搭配",
+          "description": "燒烤、辛香紅肉與濃郁風味料理。",
+          "icon": "🍖"
+        }
       ]
     },
     {
@@ -99,7 +157,10 @@
       "type": "content",
       "title": "釀造與混釀的角色",
       "content": [
-        { "type": "text", "text": "這些品種常被用於單一品種表現或混釀（如 Bordeaux 風格），透過混釀可以平衡果香、單寧與結構。了解每種葡萄的特質有助於預測混釀的結果。" }
+        {
+          "type": "text",
+          "text": "這些品種常被用於單一品種表現或混釀（如 Bordeaux 風格），透過混釀可以平衡果香、單寧與結構。了解每種葡萄的特質有助於預測混釀的結果。"
+        }
       ],
       "icon": "🔀"
     },
@@ -109,9 +170,18 @@
       "title": "選擇與搭配指南（簡要）",
       "subtitle": "根據風格選擇料理與飲用時機",
       "items": [
-        { "year": "輕飲風格", "text": "選 Merlot 或年輕 Syrah，較適合日常搭餐。" },
-        { "year": "結構與陳年", "text": "Cabernet 與高度結構化的混釀適合陳年與搭配濃郁料理。" },
-        { "year": "特殊風味", "text": "Malbec 與辛香 Syrah 適合煙燻或辛香料理。" }
+        {
+          "year": "輕飲風格",
+          "text": "選 Merlot 或年輕 Syrah，較適合日常搭餐。"
+        },
+        {
+          "year": "結構與陳年",
+          "text": "Cabernet 與高度結構化的混釀適合陳年與搭配濃郁料理。"
+        },
+        {
+          "year": "特殊風味",
+          "text": "Malbec 與辛香 Syrah 適合煙燻或辛香料理。"
+        }
       ],
       "icon": "📅"
     },
@@ -120,7 +190,10 @@
       "type": "content",
       "title": "推薦入門酒款與試飲建議",
       "content": [
-        { "type": "text", "text": "從容易取得的入門酒款開始，注意產區差異與橡木處理；嘗試同一品種不同產區以觀察風土影響。" }
+        {
+          "type": "text",
+          "text": "從容易取得的入門酒款開始，注意產區差異與橡木處理；嘗試同一品種不同產區以觀察風土影響。"
+        }
       ],
       "icon": "🏷️"
     },

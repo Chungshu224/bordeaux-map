@@ -13,7 +13,10 @@
       "type": "content",
       "title": "品種起源與在紐西蘭的發展",
       "content": [
-        { "type": "text", "text": "Pinot Noir 原產於法國勃艮第，是公認最具表現土地差異性的紅葡萄品種之一。紐西蘭自 1980s 起開始栽植，南島 Central Otago 與北島的部分涼爽斜坡產生了非常有代表性的風格。" }
+        {
+          "type": "text",
+          "text": "Pinot Noir 原產於法國勃艮第，是公認最具表現土地差異性的紅葡萄品種之一。紐西蘭自 1980s 起開始栽植，南島 Central Otago 與北島的部分涼爽斜坡產生了非常有代表性的風格。"
+        }
       ],
       "icon": "📜"
     },
@@ -23,9 +26,21 @@
       "title": "典型香氣與風味特徵",
       "icon": "👃",
       "features": [
-        { "title": "紅果與漿果", "description": "櫻桃、紅莓、覆盆子等清爽紅果香。", "icon": "🍒" },
-        { "title": "植物與地表氣息", "description": "乾燥葉片、香料、微妙的泥土或礦物感。", "icon": "🌱" },
-        { "title": "陳年後的次級香氣", "description": "隨著時間出現皮革、香菇或乾果等複雜層次。", "icon": "🕰️" }
+        {
+          "title": "紅果與漿果",
+          "description": "櫻桃、紅莓、覆盆子等清爽紅果香。",
+          "icon": "🍒"
+        },
+        {
+          "title": "植物與地表氣息",
+          "description": "乾燥葉片、香料、微妙的泥土或礦物感。",
+          "icon": "🌱"
+        },
+        {
+          "title": "陳年後的次級香氣",
+          "description": "隨著時間出現皮革、香菇或乾果等複雜層次。",
+          "icon": "🕰️"
+        }
       ],
       "quiz": {
         "question": "Pinot Noir 葡萄酒在陳年後會發展出哪些次級香氣？",
@@ -40,15 +55,37 @@
       }
     },
     {
+      "id": 3.5,
+      "type": "map",
+      "title": "Pinot Noir 核心產區地圖",
+      "subtitle": "Central Otago（岩石・片岩）vs Martinborough（風成砂・礫石）vs Marlborough（多樣土壤）",
+      "mapRegion": "Central_Otago|Martinborough|Marlborough"
+    },
+    {
       "id": 4,
       "type": "content",
       "title": "主要產區與風土比較",
       "content": [
-        { "type": "stats", "items": [
-          { "label": "Central Otago", "value": "氣候大幅日夜溫差，產出濃郁而鮮明的 Pinot Noir", "icon": "🏔️" },
-          { "label": "Martinborough / Wairarapa", "value": "坡地冷涼風格，酒體優雅且細緻", "icon": "🌾" },
-          { "label": "Marlborough (部分地塊)", "value": "也出產果香豐富、易飲風格的 Pinot", "icon": "🌿" }
-        ] }
+        {
+          "type": "stats",
+          "items": [
+            {
+              "label": "Central Otago",
+              "value": "氣候大幅日夜溫差，產出濃郁而鮮明的 Pinot Noir",
+              "icon": "🏔️"
+            },
+            {
+              "label": "Martinborough / Wairarapa",
+              "value": "坡地冷涼風格，酒體優雅且細緻",
+              "icon": "🌾"
+            },
+            {
+              "label": "Marlborough (部分地塊)",
+              "value": "也出產果香豐富、易飲風格的 Pinot",
+              "icon": "🌿"
+            }
+          ]
+        }
       ],
       "icon": "🗺️",
       "quiz": {
@@ -69,10 +106,22 @@
       "title": "栽培到裝瓶：影響 Pinot 風格的關鍵",
       "subtitle": "田間處理、採收時機與釀造決策的影響",
       "items": [
-        { "year": "修剪與產量控制", "text": "低產量傾向帶來更集中風味與更高品質原料。" },
-        { "year": "採收時機", "text": "稍早採成保留酸度與鮮明果香；晚採有助於酒體與成熟香氣。" },
-        { "year": "發酵與陳年", "text": "全果或部分去梗、開放式發酵槽、法國橡木桶提升結構與複雜度。" },
-        { "year": "瓶陳與整合", "text": "短中期瓶陳可柔化單寧並發展次級香氣。" }
+        {
+          "year": "修剪與產量控制",
+          "text": "低產量傾向帶來更集中風味與更高品質原料。"
+        },
+        {
+          "year": "採收時機",
+          "text": "稍早採成保留酸度與鮮明果香；晚採有助於酒體與成熟香氣。"
+        },
+        {
+          "year": "發酵與陳年",
+          "text": "全果或部分去梗、開放式發酵槽、法國橡木桶提升結構與複雜度。"
+        },
+        {
+          "year": "瓶陳與整合",
+          "text": "短中期瓶陳可柔化單寧並發展次級香氣。"
+        }
       ],
       "icon": "⚙️"
     },
@@ -82,9 +131,21 @@
       "title": "釀造選項與對風格的影響",
       "icon": "🏺",
       "features": [
-        { "title": "全果發酵 vs 去梗", "description": "去梗降低青味與粗澀；保留部分彩梗可增加結構與香料感。", "icon": "⚖️" },
-        { "title": "橡木使用", "description": "新桶帶來香草、香料與結構；老桶則保留果香並提供柔和度。", "icon": "🪵" },
-        { "title": "溫和萃取", "description": "Pinot 較脆弱，常用較溫和的萃取手法以保留精緻性。", "icon": "💧" }
+        {
+          "title": "全果發酵 vs 去梗",
+          "description": "去梗降低青味與粗澀；保留部分彩梗可增加結構與香料感。",
+          "icon": "⚖️"
+        },
+        {
+          "title": "橡木使用",
+          "description": "新桶帶來香草、香料與結構；老桶則保留果香並提供柔和度。",
+          "icon": "🪵"
+        },
+        {
+          "title": "溫和萃取",
+          "description": "Pinot 較脆弱，常用較溫和的萃取手法以保留精緻性。",
+          "icon": "💧"
+        }
       ],
       "quiz": {
         "question": "在 Pinot Noir 釀造中，保留部分葡萄梗進行發酵會帶來什麼影響？",
@@ -103,11 +164,25 @@
       "type": "content",
       "title": "品鑑指南：如何品嚐 Pinot Noir",
       "content": [
-        { "type": "text", "text": "觀察酒色（淺至中等紅），聞香辨識紅果、花朵、香料與次級氣味；入口感受單寧、酸度與酒體的平衡。" },
-        { "type": "stats", "items": [
-          { "label": "建議溫度", "value": "14-16°C", "icon": "🌡️" },
-          { "label": "醒酒", "value": "視年輕度/結構，輕度醒酒有助於打開香氣", "icon": "⏳" }
-        ] }
+        {
+          "type": "text",
+          "text": "觀察酒色（淺至中等紅），聞香辨識紅果、花朵、香料與次級氣味；入口感受單寧、酸度與酒體的平衡。"
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "label": "建議溫度",
+              "value": "14-16°C",
+              "icon": "🌡️"
+            },
+            {
+              "label": "醒酒",
+              "value": "視年輕度/結構，輕度醒酒有助於打開香氣",
+              "icon": "⏳"
+            }
+          ]
+        }
       ],
       "icon": "🥂"
     },
@@ -117,9 +192,21 @@
       "title": "經典搭配與食物建議",
       "icon": "🍽️",
       "features": [
-        { "title": "烤鴨與家禽", "description": "脂香與烤製風味與 Pinot 的酸度與果香互補。", "icon": "🦆" },
-        { "title": "蘑菇料理與地味菜餚", "description": "地表與根莖風味與陳年 Pinot 的次級香氣呼應。", "icon": "🍄" },
-        { "title": "輕度調味的紅肉", "description": "嫩煎牛小排、羊排等較不需要濃烈單寧的搭配。", "icon": "🥩" }
+        {
+          "title": "烤鴨與家禽",
+          "description": "脂香與烤製風味與 Pinot 的酸度與果香互補。",
+          "icon": "🦆"
+        },
+        {
+          "title": "蘑菇料理與地味菜餚",
+          "description": "地表與根莖風味與陳年 Pinot 的次級香氣呼應。",
+          "icon": "🍄"
+        },
+        {
+          "title": "輕度調味的紅肉",
+          "description": "嫩煎牛小排、羊排等較不需要濃烈單寧的搭配。",
+          "icon": "🥩"
+        }
       ]
     },
     {
@@ -127,7 +214,10 @@
       "type": "content",
       "title": "推薦酒莊與入門款式",
       "content": [
-        { "type": "text", "text": "建議從 Central Otago 的代表酒莊與 Martinborough 的經典小莊開始，嘗試不同子產區與橡木處理的差異。" }
+        {
+          "type": "text",
+          "text": "建議從 Central Otago 的代表酒莊與 Martinborough 的經典小莊開始，嘗試不同子產區與橡木處理的差異。"
+        }
       ],
       "icon": "🏆"
     },
