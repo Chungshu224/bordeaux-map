@@ -176,44 +176,80 @@ export const lessonContent = [
       { id: 1, icon: '🗺️', title: '從西到東的旅程', content: '四大核心產區群各有主角葡萄品種和代表酒款，構成完整的羅亞爾風味地圖；北方還有 Vallée du Loir 和 Haut-Poitou 兩個特色次產區' },
       { id: 2, icon: '🍾', title: '所有風格一應俱全', content: '氣泡、干白、甜白、紅酒、粉紅——羅亞爾是唯一能提供所有類型頂級酒款的法國產區，共有 54 個 AOP/DGC 及 IGP' }
     ],
-    content: `<div class="loire-regions-overview">
-      <p class="lead-text">從大西洋出發，沿著羅亞爾河向東，您將穿越四個截然不同的葡萄酒世界，北方還有兩個充滿個性的特色次產區。每個都有自己的主角品種與代表風格。</p>
-      <div class="regions-table">
-        <div class="region-row">
-          <div class="region-name">🌊 Pays Nantais</div>
-          <div class="region-grape">Melon de Bourgogne</div>
-          <div class="region-style">清新礦石 Muscadet（17 AOPs）</div>
+    content: `<div class="region-overview">
+      <p class="region-intro">從大西洋出發，沿著羅亞爾河向東，穿越四個截然不同的葡萄酒世界；北方另有兩個充滿個性的特色次產區。共 <strong>55+ AOP</strong>，每個都有自己的主角品種與代表風格。</p>
+      <div class="region-grid main-grid">
+        <div class="region-card rg-pays">
+          <div class="rc-header">
+            <span class="rc-icon">🌊</span>
+            <span class="rc-name">Pays Nantais</span>
+            <span class="rc-aop">17 AOPs</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">Melon de Bourgogne</div>
+            <div class="rc-style">清新礦石 · Muscadet</div>
+          </div>
         </div>
-        <div class="region-row">
-          <div class="region-name">🏰 Anjou-Saumur</div>
-          <div class="region-grape">Chenin Blanc + Cabernet Franc</div>
-          <div class="region-style">偉大甜酒 + Saumur-Champigny（23 AOPs）</div>
+        <div class="region-card rg-anjou">
+          <div class="rc-header">
+            <span class="rc-icon">🏰</span>
+            <span class="rc-name">Anjou-Saumur</span>
+            <span class="rc-aop">23 AOPs</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">Chenin Blanc + Cab. Franc</div>
+            <div class="rc-style">偉大甜酒 · Saumur-Champigny</div>
+          </div>
         </div>
-        <div class="region-row">
-          <div class="region-name">🏯 Touraine</div>
-          <div class="region-grape">Chenin + Cabernet Franc + Côt</div>
-          <div class="region-style">Vouvray + Chinon + Bourgueil（14 AOPs）</div>
+        <div class="region-card rg-touraine">
+          <div class="rc-header">
+            <span class="rc-icon">🏯</span>
+            <span class="rc-name">Touraine</span>
+            <span class="rc-aop">14 AOPs</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">Chenin + Cab. Franc + Côt</div>
+            <div class="rc-style">Vouvray · Chinon · Bourgueil</div>
+          </div>
         </div>
-        <div class="region-row">
-          <div class="region-name">⛰️ Centre-Loire</div>
-          <div class="region-grape">Sauvignon Blanc + Pinot Noir</div>
-          <div class="region-style">Sancerre + Pouilly-Fumé（礦石頂峰）</div>
-        </div>
-        <div class="region-row" style="border-left: 3px solid #a3c4a3;">
-          <div class="region-name">🌿 Vallée du Loir</div>
-          <div class="region-grape">Chenin + Pineau d'Aunis + Gamay</div>
-          <div class="region-style">Jasnières + Coteaux du Loir（4 AOPs）</div>
-        </div>
-        <div class="region-row" style="border-left: 3px solid #c4b8a3;">
-          <div class="region-name">🏛️ Haut-Poitou</div>
-          <div class="region-grape">Sauvignon Blanc + Gamay + Cab. Franc</div>
-          <div class="region-style">跨行政疆界的特殊 AOP（1 AOP）</div>
+        <div class="region-card rg-centre">
+          <div class="rc-header">
+            <span class="rc-icon">⛰️</span>
+            <span class="rc-name">Centre-Loire</span>
+            <span class="rc-aop">礦石頂峰</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">Sauvignon Blanc + Pinot Noir</div>
+            <div class="rc-style">Sancerre · Pouilly-Fumé</div>
+          </div>
         </div>
       </div>
-      <div class="study-tips">
-        <h4>📚 學習建議</h4>
-        <p>在接下來的課程中，我們將從地理環境開始，逐步深入每個品種和產區。記住這四大區域（加上北方的 Vallée du Loir 和 Haut-Poitou）的位置和主角品種，是掌握羅亞爾河谷的第一步！</p>
+      <div class="region-secondary-label">北方特色次產區</div>
+      <div class="region-grid secondary-grid">
+        <div class="region-card rg-loir">
+          <div class="rc-header">
+            <span class="rc-icon">🌿</span>
+            <span class="rc-name">Vallée du Loir</span>
+            <span class="rc-aop">4 AOPs</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">Chenin + Pineau d'Aunis + Gamay</div>
+            <div class="rc-style">Jasnières · Coteaux du Loir</div>
+          </div>
+        </div>
+        <div class="region-card rg-poitou">
+          <div class="rc-header">
+            <span class="rc-icon">🏛️</span>
+            <span class="rc-name">Haut-Poitou</span>
+            <span class="rc-aop">1 AOP</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">Sauvignon Blanc + Gamay + Cab. Franc</div>
+            <div class="rc-style">跨行政疆界的特殊 AOP</div>
+          </div>
+        </div>
       </div>
+      <div class="region-tip">📚 接下來的課程將從 Pays Nantais 出發，逐一深入每個品種和產區——記住四大區的位置與主角品種，是掌握羅亞爾河谷的第一步！</div>
     </div>`,
     quiz: {
       question: 'Sancerre 和 Pouilly-Fumé 屬於羅亞爾河谷的哪個子產區群？',

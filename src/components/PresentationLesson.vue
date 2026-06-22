@@ -3955,5 +3955,58 @@ defineExpose({
   .main-content :deep(.stat-grid) { grid-template-columns: repeat(2, 1fr); }
   .main-content :deep(.timeline-badge) { font-size: 0.66rem; padding: 2px 8px; }
 }
+
+/* ═══════════════════════════════════════
+   Loire 四大產區群速覽卡片
+   ═══════════════════════════════════════ */
+.main-content :deep(.region-overview) { display: flex; flex-direction: column; gap: 10px; }
+.main-content :deep(.region-intro) { font-size: 0.92rem; color: #374151; line-height: 1.6; margin: 0; }
+.main-content :deep(.region-grid) { display: grid; gap: 8px; }
+.main-content :deep(.region-grid.main-grid) { grid-template-columns: repeat(4, 1fr); }
+.main-content :deep(.region-grid.secondary-grid) { grid-template-columns: repeat(2, 1fr); }
+.main-content :deep(.region-secondary-label) {
+  font-size: 0.72rem; font-weight: 700; color: #6b7280; letter-spacing: 0.05em; text-transform: uppercase;
+}
+.main-content :deep(.region-card) {
+  border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.main-content :deep(.rc-header) {
+  display: flex; align-items: center; gap: 7px;
+  padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.main-content :deep(.rc-icon) { font-size: 1rem; flex-shrink: 0; }
+.main-content :deep(.rc-name) { font-weight: 700; font-size: 0.83rem; flex: 1; color: #1a1a2e; }
+.main-content :deep(.rc-aop) {
+  font-size: 0.68rem; font-weight: 700;
+  padding: 2px 8px; border-radius: 20px; flex-shrink: 0; color: white;
+}
+.main-content :deep(.rc-body) { padding: 9px 12px; background: white; }
+.main-content :deep(.rc-grape) { font-size: 0.8rem; color: #1f2937; font-weight: 600; margin-bottom: 3px; }
+.main-content :deep(.rc-style) { font-size: 0.76rem; color: #6b7280; font-style: italic; }
+
+/* 各產區配色 */
+.main-content :deep(.rg-pays .rc-header)    { background: #e0f2fe; }
+.main-content :deep(.rg-pays .rc-aop)       { background: #0369a1; }
+.main-content :deep(.rg-anjou .rc-header)   { background: #fce7f3; }
+.main-content :deep(.rg-anjou .rc-aop)      { background: #9d174d; }
+.main-content :deep(.rg-touraine .rc-header){ background: #dcfce7; }
+.main-content :deep(.rg-touraine .rc-aop)   { background: #166534; }
+.main-content :deep(.rg-centre .rc-header)  { background: #fef9c3; }
+.main-content :deep(.rg-centre .rc-aop)     { background: #92400e; }
+.main-content :deep(.rg-loir .rc-header)    { background: #f0fdf4; }
+.main-content :deep(.rg-loir .rc-aop)       { background: #4d7c0f; }
+.main-content :deep(.rg-poitou .rc-header)  { background: #f1f5f9; }
+.main-content :deep(.rg-poitou .rc-aop)     { background: #64748b; }
+
+.main-content :deep(.region-tip) {
+  background: #f0f9ff; border-left: 4px solid #0369a1;
+  border-radius: 8px; padding: 10px 14px;
+  font-size: 0.83rem; color: #374151; line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .main-content :deep(.region-grid.main-grid) { grid-template-columns: repeat(2, 1fr); }
+  .main-content :deep(.region-grid.secondary-grid) { grid-template-columns: 1fr; }
+}
 </style>
 
