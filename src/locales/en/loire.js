@@ -73,9 +73,9 @@ export default {
   },
   lessons: {
     'lo-l1-1': { title: 'Loire Valley Overview', duration: 15 },
-    'lo-l1-2': { title: 'The Muscadet Family—Four AOC Comparison', duration: 18 },
-    'lo-l1-3': { title: 'Sur Lie Aging & Mineral Character', duration: 20 },
-    'lo-l1-4': { title: 'Other Nantais Appellations—Gros Plant, Ancenis & Vendée', duration: 18 },
+    'lo-l1-2': { title: 'Loire Valley Geography & Climate', duration: 18 },
+    'lo-l1-3': { title: 'Pays Nantais: Sub-Region Overview', duration: 20 },
+    'lo-l1-4': { title: 'The Muscadet Family—Four AOC Comparison', duration: 18 },
     'lo-l1-5': { title: 'Schist Soils & Maritime Climate Sensory Training', duration: 20 },
     'lo-l1-6': { title: 'Muscadet × Oysters—High-Acid Food Pairing', duration: 18 },
     'lo-l1-7': { title: 'Level 1 Final Exam', duration: 25 },

@@ -73,9 +73,9 @@ export default {
   },
   lessons: {
     'lo-l1-1': { title: 'ロワール渓谷概観', duration: 15 },
-    'lo-l1-2': { title: 'ミュスカデファミリー——4 AOC 比較', duration: 18 },
-    'lo-l1-3': { title: 'シュール・リー熟成と鉱物的風味', duration: 20 },
-    'lo-l1-4': { title: 'ナンテその他の産地——グロ・プラン、アンスニ、ヴァンデ', duration: 18 },
+    'lo-l1-2': { title: 'ロワール渓谷の地理と気候', duration: 18 },
+    'lo-l1-3': { title: 'ペイ・ナンテ産地概論', duration: 20 },
+    'lo-l1-4': { title: 'ミュスカデファミリー——4 AOC 比較', duration: 18 },
     'lo-l1-5': { title: '片岩土壌と海洋性気候 感覚トレーニング', duration: 20 },
     'lo-l1-6': { title: 'ミュスカデ × カキ・貝類——高酸度フードペアリング', duration: 18 },
     'lo-l1-7': { title: 'Level 1 総合評価', duration: 25 },

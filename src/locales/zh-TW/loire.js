@@ -73,9 +73,9 @@ export default {
   },
   lessons: {
     'lo-l1-1': { title: '羅亞爾河谷總覽', duration: 15 },
-    'lo-l1-2': { title: 'Muscadet 家族全解——四大 AOC 比較', duration: 18 },
-    'lo-l1-3': { title: 'Sur Lie 陳釀工藝與礦石風味', duration: 20 },
-    'lo-l1-4': { title: '南特其他產區——大植、昂塞尼、旺代', duration: 18 },
+    'lo-l1-2': { title: '羅亞爾河谷地理環境與氣候', duration: 18 },
+    'lo-l1-3': { title: 'Pays Nantais 產區概論', duration: 20 },
+    'lo-l1-4': { title: 'Muscadet 家族全解——四大 AOC 比較', duration: 18 },
     'lo-l1-5': { title: '片岩土壤與海洋性氣候感官訓練', duration: 20 },
     'lo-l1-6': { title: 'Muscadet × 生蠔貝類——高酸度餐搭', duration: 18 },
     'lo-l1-7': { title: 'Level 1 綜合評量', duration: 25 },

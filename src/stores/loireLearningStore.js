@@ -45,20 +45,20 @@ export const loireLearningLevels = {
       },
       {
         id: 'lo-l1-2',
-        title: 'Muscadet 家族全解——四大 AOC 比較',
-        description: '系統比較 Muscadet、Muscadet-Sèvre-et-Maine、Muscadet-Côtes-de-Grandlieu、Muscadet-Coteaux-de-la-Loire 四大 AOC 的土壤、分布與風格差異',
+        title: '羅亞爾河谷地理環境與氣候',
+        description: '羅亞爾河的地理走向、主要土壤類型（花崗岩、片岩、凝灰石）、從海洋到半大陸型的氣候梯度，以及品種與風土的對應關係',
         duration: 18
       },
       {
         id: 'lo-l1-3',
-        title: 'Sur Lie 陳釀工藝與礦石風味',
-        description: '深入理解 sur lie 帶酒泥陳釀技術：酵母自溶對酒體、氣泡感與礦物張力的影響，以及 Clisson、Gorges、Le Pallet 地塊分級',
+        title: 'Pays Nantais 產區概論',
+        description: '大西洋門戶 Pays Nantais 的地理位置、三種主要土壤（花崗岩、片岩、輝長岩）、Melon de Bourgogne 品種特性與 Muscadet 的核心海洋礦石風格',
         duration: 20
       },
       {
         id: 'lo-l1-4',
-        title: '南特其他產區——大植、昂塞尼、旺代',
-        description: 'Gros-Plant-du-Pays-Nantais（Folle Blanche）的銳利酸度、Coteaux-d\'Ancenis（Malvoisie）、Fiefs-Vendéens 的多元風格',
+        title: 'Muscadet 家族全解——四大 AOC 比較',
+        description: '系統比較四大 Muscadet AOC、Sur Lie 帶酒泥陳釀技術原理，以及 Clisson、Gorges、Le Pallet 三大 Crus Communaux 地塊分級',
         duration: 18
       },
       {
