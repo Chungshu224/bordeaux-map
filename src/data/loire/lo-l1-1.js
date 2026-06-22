@@ -75,26 +75,32 @@ export const lessonContent = [
       { id: 1, icon: '🏛️', title: '羅馬時代的起源', content: '西元 1 世紀羅馬人引入葡萄種植，Anjou 地區成為最早的產酒中心' },
       { id: 2, icon: '👑', title: '法國王室的御用酒', content: '中世紀時為法國王室最鍾愛的葡萄酒，貴族們在羅亞爾河谷建造城堡' }
     ],
-    content: `<div class="loire-history">
-      <p class="lead-text">羅亞爾河谷不僅是葡萄酒產區，更是法國文明的搖籃，被稱為「法國的花園」（le jardin de la France）。</p>
-      <div class="history-timeline">
-        <div class="timeline-item">
-          <h4>🏛️ 西元 1 世紀 - 羅馬奠基</h4>
-          <p>羅馬人在征服高盧後，沿著羅亞爾河廣泛種植葡萄。Anjou 和 Touraine 地區的葡萄園在這一時期逐漸成形。</p>
-        </div>
-        <div class="timeline-item">
-          <h4>⛪ 中世紀 - 修道院的貢獻</h4>
-          <p>本篤會和西多會修道院在整個中世紀扮演了重要角色，精心培育葡萄園，建立了許多至今仍存在的頂級地塊概念。</p>
-        </div>
-        <div class="timeline-item">
-          <h4>👑 文藝復興 - 王室的偏愛</h4>
-          <p>15-16 世紀，法國王室在羅亞爾河谷建造了數十座城堡（如 Chambord、Amboise），羅亞爾河谷葡萄酒成為宮廷宴席的首選。</p>
-        </div>
-        <div class="timeline-item">
-          <h4>🌍 現代 - 全球認可</h4>
-          <p>2000年，羅亞爾河谷的城堡和葡萄園景觀被 UNESCO 列為世界文化遺產，代表了人與自然數千年共同創造的傑出景觀。</p>
-        </div>
+    content: `<div class="history-section">
+      <p class="history-intro">羅亞爾河谷不僅是葡萄酒產區，更是法國文明的搖籃，被稱為「法國的花園」（le jardin de la France）——<span class="intro-highlight">2000 年釀酒史與法國王室文明的深度交融</span></p>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <div class="timeline-badge ancient">西元 1 世紀</div>
+        <div class="timeline-content"><strong>🏛️ 羅馬奠基</strong><p>羅馬人在征服高盧後，沿著羅亞爾河廣泛種植葡萄。Anjou 和 Touraine 地區的葡萄園在這一時期逐漸成形。</p></div>
       </div>
+      <div class="timeline-item">
+        <div class="timeline-badge medieval">中世紀</div>
+        <div class="timeline-content"><strong>⛪ 修道院的貢獻</strong><p>本篤會和西多會修道院在整個中世紀扮演了重要角色，精心培育葡萄園，建立了許多至今仍存在的頂級地塊概念。</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-badge renaissance">15–16 世紀</div>
+        <div class="timeline-content"><strong>👑 王室的偏愛</strong><p>法國王室在羅亞爾河谷建造了數十座城堡（如 Chambord、Amboise），羅亞爾河谷葡萄酒成為宮廷宴席的首選。</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-badge modern">2000 年</div>
+        <div class="timeline-content"><strong>🌍 全球認可</strong><p>羅亞爾河谷的城堡和葡萄園景觀被 UNESCO 列為世界文化遺產，代表了人與自然數千年共同創造的傑出景觀。</p></div>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-number">西元 1 世紀</div><div class="stat-label">羅馬引入葡萄</div></div>
+      <div class="stat-box"><div class="stat-number">15–16 世紀</div><div class="stat-label">法國王室的花園</div></div>
+      <div class="stat-box"><div class="stat-number">55+</div><div class="stat-label">法定 AOP 產區</div></div>
+      <div class="stat-box"><div class="stat-number">2000 年</div><div class="stat-label">UNESCO 世界遺產</div></div>
     </div>`,
     quiz: {
       question: '羅亞爾河谷何時被 UNESCO 列為世界文化遺產？',

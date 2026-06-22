@@ -3884,5 +3884,76 @@ defineExpose({
     font-size: 0.9rem;
   }
 }
+
+/* ═══════════════════════════════════════
+   Italy-style 歷史時間軸（v-html 內容用 :deep()）
+   ═══════════════════════════════════════ */
+.main-content :deep(.history-section) { margin-bottom: 14px; }
+.main-content :deep(.history-intro) {
+  font-size: 1rem; color: #374151; line-height: 1.6; margin-bottom: 10px;
+}
+.main-content :deep(.intro-highlight) {
+  display: inline-block;
+  background: linear-gradient(135deg, #ede7f6, #d1c4e9);
+  border-radius: 12px; padding: 10px 14px;
+  border-left: 5px solid #7e57c2;
+  font-size: 0.95rem; line-height: 1.6; margin-top: 8px;
+}
+
+.main-content :deep(.timeline-container) {
+  display: flex; flex-direction: column; gap: 0;
+  padding-left: 18px; border-left: 3px solid #e2e8f0;
+  margin: 14px 0;
+}
+.main-content :deep(.timeline-container .timeline-item) {
+  display: flex; gap: 14px; padding: 10px 0; position: relative;
+}
+.main-content :deep(.timeline-container .timeline-item::before) {
+  content: ''; position: absolute; left: -23px; top: 16px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #667eea; border: 2px solid white;
+  box-shadow: 0 0 0 2px #667eea;
+}
+.main-content :deep(.timeline-badge) {
+  flex-shrink: 0; font-size: 0.72rem; font-weight: 700;
+  background: #dbeafe; color: #1e40af;
+  padding: 3px 10px; border-radius: 20px; height: fit-content;
+  margin-top: 2px; white-space: nowrap;
+}
+.main-content :deep(.timeline-badge.ancient)    { background: #fef9c3; color: #92400e; }
+.main-content :deep(.timeline-badge.medieval)   { background: #ede9fe; color: #5b21b6; }
+.main-content :deep(.timeline-badge.renaissance){ background: #ffedd5; color: #c2410c; }
+.main-content :deep(.timeline-badge.austria)    { background: #fce7f3; color: #9d174d; }
+.main-content :deep(.timeline-badge.modern)     { background: #dcfce7; color: #166534; }
+.main-content :deep(.timeline-badge.sparkling)  { background: #e0f2fe; color: #0369a1; }
+.main-content :deep(.timeline-badge.doc)        { background: #fef3c7; color: #92400e; }
+.main-content :deep(.timeline-content) { flex: 1; min-width: 0; }
+.main-content :deep(.timeline-content strong) {
+  font-size: 0.92rem; font-weight: 700; color: #1a1a2e;
+  display: block; margin-bottom: 4px;
+}
+.main-content :deep(.timeline-content p) {
+  font-size: 0.87rem; color: #4b5563; margin: 0; line-height: 1.6;
+}
+
+/* stat-grid */
+.main-content :deep(.stat-grid) {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px;
+}
+.main-content :deep(.stat-grid .stat-box) {
+  background: #f8fafc; border-radius: 10px; padding: 12px 8px;
+  border: 1px solid #e2e8f0; text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+}
+.main-content :deep(.stat-grid .stat-number) {
+  display: block; font-size: 1rem; font-weight: 900; color: #0369a1;
+}
+.main-content :deep(.stat-grid .stat-label) {
+  display: block; font-size: 0.72rem; color: #6b7280; margin-top: 4px;
+}
+@media (max-width: 640px) {
+  .main-content :deep(.stat-grid) { grid-template-columns: repeat(2, 1fr); }
+  .main-content :deep(.timeline-badge) { font-size: 0.66rem; padding: 2px 8px; }
+}
 </style>
 
