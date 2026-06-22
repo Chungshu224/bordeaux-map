@@ -216,16 +216,21 @@ const slides = computed(() => {
   })
 
   // 內容投影片（排除 title）
-  const contentSlides = lessonSlides.filter(s => s.type !== 'title')
+  const allContentSlides = lessonSlides.filter(s => s.type !== 'title')
+
+  // 若有手動的「重點回顧」list，提取其詳細 points 並合併至 summary，不顯示為獨立投影片
+  const reviewSlide = allContentSlides.find(s => s.type === 'list' && s.title === '重點回顧')
+  const contentSlides = reviewSlide
+    ? allContentSlides.filter(s => s !== reviewSlide)
+    : allContentSlides
   arr.push(...contentSlides)
 
   // 自動注入重點回顧（若最後一頁不是 summary）
   const lastSlide = contentSlides[contentSlides.length - 1]
   if (lastSlide?.type !== 'summary') {
-    const keyPoints = contentSlides
-      .filter(s => s?.title && s.type !== 'quiz')
-      .slice(0, 6)
-      .map(s => s.title)
+    const keyPoints = reviewSlide
+      ? (reviewSlide.points || []).slice(0, 8)
+      : contentSlides.filter(s => s?.title && s.type !== 'quiz').slice(0, 6).map(s => s.title)
     arr.push({
       type: 'summary',
       title: '課程完成！',
