@@ -17,21 +17,21 @@
 
       <!-- Row 2：上一張/下一張導航按鈕 -->
       <div class="nav-row-2">
-        <button 
-          class="nav-control-btn nav-control-prev" 
+        <button
+          class="nav-control-btn nav-control-prev"
           @click="prevSlide"
           :disabled="currentSlide === 0"
           title="上一張 (← 鍵盤)"
         >
           ◀
         </button>
-        
+
         <div class="nav-progress-info">
           {{ slides[currentSlide]?.title || $t('bourgogne.layout.slidePage', { n: currentSlide + 1, total: slides.length }) }}
         </div>
-        
-        <button 
-          class="nav-control-btn nav-control-next" 
+
+        <button
+          class="nav-control-btn nav-control-next"
           @click="nextSlide"
           :disabled="currentSlide === slides.length - 1"
           title="下一張 (→ 鍵盤)"
@@ -39,13 +39,20 @@
           ▶
         </button>
       </div>
+
+      <button
+        v-if="currentSlide === slides.length - 1"
+        class="nav-control-btn complete-btn full-width"
+        @click="completeLesson"
+      >✓ {{ $t('common.actions.finish') }}</button>
     </div>
 
     <!-- 簡報主區域 -->
     <div class="slide-container">
-      <!-- 當前投影片 -->
       <div ref="slideRef" class="slide" :key="currentSlide">
-        <component :is="getCurrentSlideComponent" :slide="slides[currentSlide]" />
+        <div class="slide-scroll">
+          <component :is="getCurrentSlideComponent" :slide="slides[currentSlide]" />
+        </div>
       </div>
     </div>
 
@@ -1073,137 +1080,61 @@ watch(currentSlide, () => {
 .slide-viewer {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   flex-direction: column;
+  background: linear-gradient(160deg, #1a0a1e 0%, #2d1b3d 45%, #1a2a4a 100%);
   z-index: 50;
 }
 
-/* 頂部導航欄：毛玻璃效果 */
+/* ── 頂部導覽列：毛玻璃效果 ── */
 .top-navigation {
   background: rgba(255,255,255,0.07);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding: 12px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 100;
+  padding: 10px 20px;
+  z-index: 10;
   flex-shrink: 0;
 }
 
-/* Row 1：返回按鈕 + 頁碼 */
-.nav-row-1 {
+.nav-row-1, .nav-row-2 {
   display: flex;
   align-items: center;
-  gap: 12px;
   justify-content: space-between;
+  margin-bottom: 6px;
 }
-
-/* Row 2：導航按鈕 */
-.nav-row-2 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  justify-content: center;
-}
-
-.nav-progress-info {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-  font-weight: 500;
-  min-width: 140px;
-  text-align: center;
-}
-
-.nav-control-prev,
-.nav-control-next {
-  flex: 0 0 44px;
-  height: 44px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-}
-
-.complete-btn.full-width {
-  width: 100%;
-  background: rgba(76, 175, 80, 0.9);
-}
-
-.complete-btn.full-width:hover {
-  background: rgba(76, 175, 80, 1);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
-}
+.nav-row-2 { margin-bottom: 0; }
 
 .nav-control-btn {
-  padding: 8px 16px;
+  background: rgba(200,169,110,0.85);
+  color: #fff;
   border: none;
+  padding: 8px 16px;
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
-  font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: opacity 0.2s, background 0.2s;
+  white-space: nowrap;
   min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
 }
+.nav-control-btn:disabled { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.35); cursor: default; }
+.nav-control-btn:not(:disabled):hover { opacity: 0.88; background: #c8a96e; }
 
-.nav-control-btn:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-1px);
-}
+.back-btn    { background: rgba(108,117,125,0.75); }
+.complete-btn { background: rgba(40,167,69,0.85); }
+.full-width  { width: 100%; margin-top: 8px; }
 
-.nav-control-btn.complete-btn {
-  background: rgba(76, 175, 80, 0.9);
-  border-color: rgba(255, 255, 255, 0.4);
-}
+.slide-counter { font-size: 0.88rem; color: rgba(255,255,255,0.6); }
+.current-number { font-weight: 700; color: #c8a96e; font-size: 1rem; }
+.separator { color: rgba(255,255,255,0.25); margin: 0 3px; }
+.nav-progress-info { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
 
-.nav-control-btn.complete-btn:hover {
-  background: rgba(76, 175, 80, 1);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
-}
-
-.nav-control-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.slide-counter {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: white;
-}
-
-.current-number {
-  font-size: 1.3rem;
-  color: white;
-  font-weight: 700;
-}
-
-.separator {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.total-number {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-
-
-/* 簡報主區域 */
+/* ── 投影片容器 ── */
 .slide-container {
   flex: 1;
   min-height: 0;
@@ -1214,232 +1145,51 @@ watch(currentSlide, () => {
   overflow: hidden;
 }
 
+/* ── 白色卡片 ── */
 .slide {
   width: 100%;
   max-width: 960px;
   height: 100%;
-  background: white;
+  background: #fff;
   border-radius: 22px;
   box-shadow: 0 12px 48px rgba(0,0,0,0.45),
-              0 2px 0 rgba(102,126,234,0.3);
+              0 2px 0 rgba(200,169,110,0.3);
   animation: slideIn 0.4s ease-out;
   overflow: hidden;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
 }
 
-.slide > * {
-  flex: 1;
-  min-height: 0;
+/* 統一由這層接管垂直捲動 */
+.slide-scroll {
+  width: 100%;
+  height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
-/* 底部進度條區域 */
-.bottom-progress {
-  flex-shrink: 0;
-}
+/* ── 底部進度條 ── */
+.bottom-progress { flex-shrink: 0; }
 
 .progress-bar-container {
-  width: 100%;
   height: 4px;
   background: rgba(255,255,255,0.1);
-  position: relative;
-  overflow: hidden;
 }
 
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+  background: linear-gradient(90deg, #c8a96e, #e8c880, #9b6a1f);
+  transition: width 0.35s ease;
 }
 
-.progress-bar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3));
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.complete-lesson-btn {
-  position: absolute;
-  bottom: 20px;
-  right: 40px;
-  padding: 14px 30px;
-  background: linear-gradient(135deg, #4CAF50, #45a049);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
-.complete-lesson-btn:hover {
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
-  transform: translateY(-2px);
-}
-
-/* 淡入淡出動畫 */
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.3s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-/* 響應式設計 */
-@media (max-width: 1024px) {
-  .slide-container {
-    padding: 30px 20px;
-  }
-
-  .top-navigation {
-    padding: 12px 16px;
-  }
-
-  .nav-control-btn {
-    padding: 8px 14px;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .slide-container {
-    padding: 16px 12px;
-  }
-
-  .slide {
-    max-width: 100%;
-    border-radius: 16px;
-  }
-
-  .top-navigation {
-    padding: 10px 12px;
-    gap: 8px;
-  }
-
-  .nav-row-1,
-  .nav-row-2 {
-    gap: 10px;
-  }
-
-  .slide-counter {
-    font-size: 0.9rem;
-  }
-
-  .nav-control-btn {
-    padding: 6px 12px;
-    font-size: 0.8rem;
-    min-height: 40px;
-  }
-
-  .nav-progress-info {
-    font-size: 0.85rem;
-    min-width: 120px;
-  }
-
-  .nav-control-prev,
-  .nav-control-next {
-    flex: 0 0 40px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .slide-container {
-    padding: 12px 8px;
-  }
-
-  .slide {
-    border-radius: 12px;
-    max-height: 70vh;
-  }
-
-  .top-navigation {
-    padding: 8px 10px;
-    gap: 6px;
-  }
-
-  .nav-row-1 {
-    gap: 8px;
-  }
-
-  .nav-row-2 {
-    gap: 8px;
-  }
-
-  .back-btn {
-    padding: 6px 10px;
-    font-size: 0.75rem;
-    flex: 0 0 auto;
-  }
-
-  .slide-counter {
-    font-size: 0.8rem;
-    gap: 4px;
-  }
-
-  .current-number {
-    font-size: 0.95rem;
-  }
-
-  .nav-control-btn {
-    padding: 5px 10px;
-    font-size: 0.75rem;
-    min-height: 36px;
-    border-radius: 6px;
-  }
-
-  .nav-control-prev,
-  .nav-control-next {
-    flex: 1;
-    height: 36px;
-    font-size: 0.9rem;
-  }
-
-  .nav-progress-info {
-    font-size: 0.75rem;
-    min-width: 100px;
-    padding: 0 4px;
-  }
-
-  .complete-btn.full-width {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-    margin-top: 2px;
-  }
+@media (max-width: 600px) {
+  .slide-container { padding: 10px 12px; }
+  .slide { border-radius: 16px; }
 }
 </style>
