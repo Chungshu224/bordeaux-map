@@ -172,7 +172,31 @@ const hoveredAOC = ref(null)
 const tooltipX = ref(0)
 const tooltipY = ref(0)
 const selectedAOC = ref(null)
+const mapLayersReady = ref(false)
 let map = null
+
+function updateLayerVisibility(aoc) {
+  if (!map || !mapLayersReady.value) return
+  const layers = layersToLoad.value
+  layers.forEach((layer, idx) => {
+    const fillId = `loire-fill-${idx}`
+    const lineId = `loire-line-${idx}`
+    if (!map.getLayer(fillId)) return
+    if (!aoc) {
+      map.setPaintProperty(fillId, 'fill-opacity', layer.opacity ?? 0.55)
+      map.setPaintProperty(lineId, 'line-opacity', layer.highlight ? 0.9 : 0.6)
+    } else {
+      const fname = layer.file.split('/').pop()
+      const isSelected = aoc.file === fname
+      const isHighlit = layer.highlight
+      map.setPaintProperty(fillId, 'fill-opacity', isSelected ? 0.72 : isHighlit ? 0 : 0.07)
+      map.setPaintProperty(lineId, 'line-opacity', isSelected ? 1 : isHighlit ? 0 : 0.15)
+      map.setPaintProperty(lineId, 'line-width', isSelected ? 3 : 1.5)
+    }
+  })
+}
+
+watch(selectedAOC, (aoc) => { updateLayerVisibility(aoc) })
 
 function selectAOC(btn) {
   if (selectedAOC.value?.id === btn.id) {
@@ -284,6 +308,7 @@ function calcBbox(gj) {
 }
 
 function destroyMap() {
+  mapLayersReady.value = false
   if (map) { map.remove(); map = null }
 }
 
@@ -399,13 +424,15 @@ async function initMap() {
     }
 
     loading.value = false
+    mapLayersReady.value = true
+    if (selectedAOC.value) updateLayerVisibility(selectedAOC.value)
   })
 }
 
 onMounted(() => { initMap() })
 onBeforeUnmount(() => { destroyMap() })
 
-watch(() => props.slide.mapGroup, () => { initMap() })
+watch(() => props.slide.mapGroup, () => { mapLayersReady.value = false; initMap() })
 </script>
 
 <style scoped>

@@ -53,6 +53,7 @@ export const lessonContent = [
         aocButtons: [
           {
             id: 'msm',
+            file: 'Muscadet-Sèvre-et-Maine.geojson',
             label: 'Muscadet-Sèvre-et-Maine',
             short: 'MSM ★★★',
             color: '#0ea5e9',
@@ -67,6 +68,7 @@ export const lessonContent = [
           },
           {
             id: 'mcdgl',
+            file: 'Muscadet-Côtes-de-Grandlieu.geojson',
             label: 'Muscadet-Côtes-de-Grandlieu',
             short: 'MCDGL ★★',
             color: '#10b981',
@@ -80,6 +82,7 @@ export const lessonContent = [
           },
           {
             id: 'mcdll',
+            file: 'Muscadet-Coteaux-de-la-Loire.geojson',
             label: 'Muscadet-Coteaux-de-la-Loire',
             short: 'MCDLL ★★',
             color: '#f59e0b',
@@ -93,6 +96,7 @@ export const lessonContent = [
           },
           {
             id: 'muscadet',
+            file: 'Muscadet.geojson',
             label: 'Muscadet（基礎 AOC）',
             short: 'Muscadet',
             color: '#a78bfa',
@@ -106,6 +110,7 @@ export const lessonContent = [
           },
           {
             id: 'gros-plant',
+            file: 'Gros-Plant-du-Pays-Nantais.geojson',
             label: 'Gros Plant du Pays Nantais',
             short: 'Gros Plant',
             color: '#fb923c',
