@@ -236,130 +236,130 @@ export const lessonContent = [
   {
     title: '🏆 Crus Communaux：10 個官方認可地塊',
     highlights: [
-      { id: 1, icon: '🍫', title: 'Clisson（片岩）★★★', content: '唯一要求 36 個月 sur lie，風格最圓潤豐滿，帶烤麵包與礦石香，陳年後蜂蜜複雜度最高，是考試首選必背地塊' },
-      { id: 2, icon: '⚫', title: 'Gorges（輝長岩）★★★', content: '輝長岩（Gabbro）是 Pays Nantais 最稀有的土壤，釀出礦石張力最強、最深邃的 Muscadet，需要時間開放方顯真章' }
+      { id: 1, icon: '💪', title: 'Clisson — Power（力量）★★★', content: '花崗岩母岩，24–36 個月 sur lie，高酒精、豐滿圓潤，香氣為熟梨、蜜桃、熟柑橘、蜂蜜與榲桲，是 MSM 南部旗艦地塊' },
+      { id: 2, icon: '⚫', title: 'Gorges — Length（長度）★★★', content: '輝長岩（Gabbro）子土，最古老的 Cru，24–40 個月 sur lie，年輕時封閉，薄荷、檸檬、煙燻、燧石香，礦石張力最強' }
     ],
     content: `<div class="region-overview">
-      <p class="region-intro">2011 年建立的 Crus Communaux 制度是 Muscadet 品質革命里程碑。全部 10 個官方認可的地塊均位於 Muscadet-Sèvre-et-Maine，★★★ 為考試重點：</p>
+      <p class="region-intro">2011 年建立的 Crus Communaux 是 Muscadet 品質革命里程碑。9 個位於 MSM，<strong>Champtoceaux 唯一位於 MCDLL</strong>。每個 Cru 均有官方認定的個性關鍵字：</p>
       <div class="region-grid secondary-grid">
         <div class="region-card rg-pays">
           <div class="rc-header">
-            <span class="rc-icon">🍫</span>
+            <span class="rc-icon">💪</span>
             <span class="rc-name">Clisson ★★★</span>
-            <span class="rc-aop">片岩</span>
+            <span class="rc-aop">Power · 花崗岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">最少 <strong>36 個月</strong> sur lie（最長）</div>
-            <div class="rc-style">豐滿圓潤，烤麵包香，蜂蜜陳年複雜度</div>
+            <div class="rc-grape">Sur lie <strong>24–36 個月</strong> · MSM 南部</div>
+            <div class="rc-style">高酒精豐滿，熟梨·蜂蜜·榲桲，陳年複雜度最高</div>
           </div>
         </div>
         <div class="region-card rg-touraine">
           <div class="rc-header">
-            <span class="rc-icon">⚫</span>
+            <span class="rc-icon">〰️</span>
             <span class="rc-name">Gorges ★★★</span>
-            <span class="rc-aop">輝長岩</span>
+            <span class="rc-aop">Length · 輝長岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">深邃強勁，最強礦石張力，碘鹹感</div>
+            <div class="rc-grape">Sur lie <strong>24–40 個月</strong> · Sèvre 河丘</div>
+            <div class="rc-style">年輕封閉，薄荷·煙燻·燧石，礦石張力最長</div>
           </div>
         </div>
         <div class="region-card rg-centre">
           <div class="rc-header">
             <span class="rc-icon">🪨</span>
             <span class="rc-name">Le Pallet ★★★</span>
-            <span class="rc-aop">花崗岩</span>
+            <span class="rc-aop">Unctuosity · 片麻岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">精確高雅，清晰礦石，結構紮實</div>
+            <div class="rc-grape">Sur lie <strong>18+ 個月</strong> · Sèvre 右岸中心</div>
+            <div class="rc-style">豐潤圓滑，果香·礦石，絲滑口感</div>
+          </div>
+        </div>
+        <div class="region-card rg-loir">
+          <div class="rc-header">
+            <span class="rc-icon">⚖️</span>
+            <span class="rc-name">Goulaine ★★</span>
+            <span class="rc-aop">Balance · 片麻岩+雲母片岩</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">Sur lie <strong>20–30 個月</strong> · 沼澤地丘陵</div>
+            <div class="rc-style">最先採收，熟果·蜂蜜，均衡優雅</div>
           </div>
         </div>
         <div class="region-card rg-anjou">
           <div class="rc-header">
             <span class="rc-icon">🏰</span>
             <span class="rc-name">Château-Thébaud ★★</span>
-            <span class="rc-aop">正長片麻岩</span>
+            <span class="rc-aop">Refinement · 花崗閃長岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">圓潤果香，柔順易飲，細膩礦石</div>
-          </div>
-        </div>
-        <div class="region-card rg-loir">
-          <div class="rc-header">
-            <span class="rc-icon">🌿</span>
-            <span class="rc-name">Goulaine ★★</span>
-            <span class="rc-aop">片麻岩+雲母片岩</span>
-          </div>
-          <div class="rc-body">
-            <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">細膩優雅，花香調，長度出色</div>
+            <div class="rc-grape">Sur lie <strong>36–48 個月</strong> · Maine 河丘</div>
+            <div class="rc-style">茴香·甘草·香料，優雅鹹感收尾</div>
           </div>
         </div>
         <div class="region-card rg-poitou">
           <div class="rc-header">
-            <span class="rc-icon">🔵</span>
+            <span class="rc-icon">🔬</span>
             <span class="rc-name">Mouzillon-Tillières ★★</span>
-            <span class="rc-aop">複合變質岩</span>
+            <span class="rc-aop">Complexity · 複合變質岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">清新活潑，表達土壤多樣性</div>
-          </div>
-        </div>
-        <div class="region-card rg-pays">
-          <div class="rc-header">
-            <span class="rc-icon">🍇</span>
-            <span class="rc-name">Vallet ★</span>
-            <span class="rc-aop">片麻岩</span>
-          </div>
-          <div class="rc-body">
-            <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">均衡結構，純粹礦石，平易近人</div>
+            <div class="rc-grape">Sur lie <strong>24+ 個月</strong> · MSM</div>
+            <div class="rc-style">多元土壤帶來複雜礦石層次</div>
           </div>
         </div>
         <div class="region-card rg-touraine">
           <div class="rc-header">
-            <span class="rc-icon">⛪</span>
-            <span class="rc-name">Saint-Fiacre-sur-Maine ★</span>
-            <span class="rc-aop">正長片麻岩</span>
+            <span class="rc-icon">💪🏼</span>
+            <span class="rc-name">Monnières-Saint Fiacre ★</span>
+            <span class="rc-aop">Body · 片麻岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">清爽純粹，鹹鮮礦石，輕快酸度</div>
+            <div class="rc-grape">Sur lie <strong>24+ 個月</strong> · Sèvre 左岸</div>
+            <div class="rc-style">豐腴柔滑，橙花·異國果香·蜂蠟</div>
           </div>
         </div>
         <div class="region-card rg-centre">
           <div class="rc-header">
-            <span class="rc-icon">🌊</span>
-            <span class="rc-name">La Haye-Fouassière ★</span>
-            <span class="rc-aop">雲母片岩</span>
+            <span class="rc-icon">🌸</span>
+            <span class="rc-name">La Haye Fouassière ★</span>
+            <span class="rc-aop">Elegance · 正長片麻岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">輕盈鮮活，精緻花香，海洋清新</div>
+            <div class="rc-grape">Sur lie <strong>18 個月</strong>（最短）· 最西端 Cru</div>
+            <div class="rc-style">薄荷·花香·燧石礦石，早熟優雅</div>
+          </div>
+        </div>
+        <div class="region-card rg-pays">
+          <div class="rc-header">
+            <span class="rc-icon">✨</span>
+            <span class="rc-name">Vallet ★</span>
+            <span class="rc-aop">Opulence · 雲母片岩</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">Sur lie <strong>18+ 個月</strong> · MSM 東北內陸</div>
+            <div class="rc-style">豐盛花果香，晚熟規律，優雅奢潤</div>
           </div>
         </div>
         <div class="region-card rg-loir">
           <div class="rc-header">
-            <span class="rc-icon">🏡</span>
-            <span class="rc-name">Montières-sur-Lay ★</span>
-            <span class="rc-aop">花崗岩+片岩</span>
+            <span class="rc-icon">🥂</span>
+            <span class="rc-name">Champtoceaux ★</span>
+            <span class="rc-aop">Silkiness · 雲母片岩+角閃岩</span>
           </div>
           <div class="rc-body">
-            <div class="rc-grape">最少 24 個月 sur lie</div>
-            <div class="rc-style">平衡易飲，展現混合地質個性</div>
+            <div class="rc-grape">Sur lie <strong>17+ 個月</strong> · <em>唯一位於 MCDLL</em></div>
+            <div class="rc-style">絲滑柔順，橙花·柑橘·香料，陳年顯香草</div>
           </div>
         </div>
       </div>
-      <div class="region-tip">🔑 考試記憶技巧：<strong>Clisson（片岩→豐滿，36m）、Gorges（輝長岩→礦石最強）、Le Pallet（花崗岩→精確）</strong> 為三大旗艦，其餘 7 個均需最少 24 個月 sur lie。</div>
+      <div class="region-tip">🔑 考試重點：<strong>Clisson（花崗岩→Power）、Gorges（輝長岩→Length）、Le Pallet（片麻岩→Unctuosity）</strong> 為三大旗艦；Château-Thébaud 陳釀最長（36–48m）；Champtoceaux 唯一不在 MSM 的 Cru。</div>
     </div>`,
     quiz: {
-      question: '哪個 Cru Communal 以輝長岩（Gabbro）土壤著稱，釀出礦石感最強烈的 Muscadet？',
-      options: ['Clisson', 'Gorges', 'Le Pallet', 'Château-Thébaud'],
-      correct: 1,
-      explanation: 'Gorges 是 Muscadet-Sèvre-et-Maine 中最獨特的地塊，以罕見的輝長岩（Gabbro）土壤為主。輝長岩是一種深色火成岩，賦予酒款最深邃、最強烈的礦石張力，最少需要 24 個月 sur lie 陳釀。相較之下，Clisson 以片岩為主且要求最長的 36 個月 sur lie，Le Pallet 以花崗岩為主風格最精確高雅。'
+      question: '下列哪個 Cru Communal 是唯一不位於 Muscadet-Sèvre-et-Maine（MSM）的地塊？',
+      options: ['Clisson', 'Vallet', 'Champtoceaux', 'Gorges'],
+      correct: 2,
+      explanation: 'Champtoceaux 是 10 個 Crus Communaux 中唯一位於 Muscadet-Coteaux-de-la-Loire（MCDLL）的地塊，位於 Ancenis 附近羅亞爾河兩岸山丘。土壤以雲母片岩、片麻岩、角閃岩等複合變質岩為主，風格被官方定義為「Silkiness（絲滑）」，最少 17 個月 sur lie。其餘 9 個 Crus 均位於 MSM 範圍內。'
     }
   }
 ]
