@@ -248,16 +248,4 @@ export const lessonContent = [
     }
   },
 
-  {
-    component: 'LoireRegionMapSlide',
-    title: 'Pays Nantais 地理位置與產區分布',
-    componentProps: {
-      slide: {
-        title: 'Pays Nantais 地理位置與產區分布',
-        description: '大西洋海岸邊的 Muscadet 王國，最涼爽的羅亞爾子產區',
-        mapGroup: 'PayNantes',
-        highlightFiles: ['Muscadet.geojson', 'Muscadet-Sèvre-et-Maine.geojson', 'Muscadet-Côtes-de-Grandlieu.geojson', 'Muscadet-Coteaux-de-la-Loire.geojson'],
-      }
-    }
-  }
 ]

@@ -39,8 +39,8 @@ export const loireLearningLevels = {
     lessons: [
       {
         id: 'lo-l1-1',
-        title: '羅亞爾河谷總覽與南特區地理',
-        description: '法國最長葡萄酒產區800公里的全貌，UNESCO遺產，以及南特區作為大西洋門戶的獨特定位',
+        title: '羅亞爾河谷總覽',
+        description: '法國最長葡萄酒產區800公里的全貌，UNESCO遺產，四大產區群與全球市場地位',
         duration: 15
       },
       {

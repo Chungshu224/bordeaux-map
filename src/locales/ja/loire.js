@@ -72,7 +72,7 @@ export default {
     LO4M3: 'プロフェッショナル実務とマスター評価'
   },
   lessons: {
-    'lo-l1-1': { title: 'ロワール渓谷概観とナンテの地理', duration: 15 },
+    'lo-l1-1': { title: 'ロワール渓谷概観', duration: 15 },
     'lo-l1-2': { title: 'ミュスカデファミリー——4 AOC 比較', duration: 18 },
     'lo-l1-3': { title: 'シュール・リー熟成と鉱物的風味', duration: 20 },
     'lo-l1-4': { title: 'ナンテその他の産地——グロ・プラン、アンスニ、ヴァンデ', duration: 18 },

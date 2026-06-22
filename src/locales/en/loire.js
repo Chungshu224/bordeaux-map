@@ -72,7 +72,7 @@ export default {
     LO4M3: 'Professional Practice & Master Exam'
   },
   lessons: {
-    'lo-l1-1': { title: 'Loire Valley Overview & Nantais Geography', duration: 15 },
+    'lo-l1-1': { title: 'Loire Valley Overview', duration: 15 },
     'lo-l1-2': { title: 'The Muscadet Family—Four AOC Comparison', duration: 18 },
     'lo-l1-3': { title: 'Sur Lie Aging & Mineral Character', duration: 20 },
     'lo-l1-4': { title: 'Other Nantais Appellations—Gros Plant, Ancenis & Vendée', duration: 18 },

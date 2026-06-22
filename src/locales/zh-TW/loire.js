@@ -72,7 +72,7 @@ export default {
     LO4M3: '專業實務與大師評量'
   },
   lessons: {
-    'lo-l1-1': { title: '羅亞爾河谷總覽與南特區地理', duration: 15 },
+    'lo-l1-1': { title: '羅亞爾河谷總覽', duration: 15 },
     'lo-l1-2': { title: 'Muscadet 家族全解——四大 AOC 比較', duration: 18 },
     'lo-l1-3': { title: 'Sur Lie 陳釀工藝與礦石風味', duration: 20 },
     'lo-l1-4': { title: '南特其他產區——大植、昂塞尼、旺代', duration: 18 },
