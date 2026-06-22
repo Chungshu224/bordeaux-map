@@ -1,4 +1,4 @@
-﻿/**
+/**
  * lessonSlides.js  ─  澳洲葡萄酒課程投影片內容
  * Level 1 完整（18 課 + 期末），Level 2+ 框架預留
  */
@@ -19,6 +19,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #00274e 0%, #c8a951 100%)',
       emoji: '🦘',
     },
+    {
+      type: 'map',
+      title: '澳洲六大產酒州全圖',
+      subtitle: 'SA・VIC・NSW・WA・TAS・QLD — 跨越 100+ GI 的葡萄酒大陸',
+      mapRegion: 'all',
+    },
+
     {
       type: 'content',
       title: '澳洲葡萄酒的世界地位',
@@ -317,6 +324,13 @@ const SLIDE_MAP = {
       emoji: '🍇',
     },
     {
+      type: 'map',
+      title: '澳洲紅品種核心產區地圖',
+      subtitle: 'Shiraz（Barossa/Hunter）、Cabernet（Coonawarra/Margaret River）、Grenache（McLaren Vale）、Pinot（Yarra/TAS）',
+      mapRegion: 'all',
+    },
+
+    {
       type: 'content',
       title: 'Shiraz（西拉）── 澳洲紅酒之王',
       points: [
@@ -377,6 +391,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #d4ac0d 0%, #f7dc6f 100%)',
       emoji: '🍾',
     },
+    {
+      type: 'map',
+      title: '澳洲白品種核心產區地圖',
+      subtitle: 'Chardonnay（Adelaide Hills/Yarra）、Riesling（Clare/Eden Valley）、Semillon（Hunter）、Sauvignon Blanc（Margaret River）',
+      mapRegion: 'all',
+    },
+
     {
       type: 'content',
       title: 'Chardonnay ── 最廣泛種植的白品種',
@@ -2917,6 +2938,13 @@ const SLIDE_MAP = {
       emoji: '🌡️',
     },
     {
+      type: 'map',
+      title: '氣候變遷下的澳洲：Tasmania 作為避風港',
+      subtitle: '氣溫上升迫使產區南遷——Tasmania 成為最受矚目的氣候紅利受益者',
+      mapRegion: 'TAS',
+    },
+
+    {
       type: 'content',
       title: '澳洲葡萄酒面臨的氣候挑戰',
       points: [
@@ -3049,6 +3077,13 @@ const SLIDE_MAP = {
       emoji: '🌈',
     },
     {
+      type: 'map',
+      title: 'Shiraz 風格光譜：炎熱 vs 涼爽產區地圖',
+      subtitle: 'Barossa（濃厚果醬）→ McLaren Vale（巧克力）→ Heathcote（香料）→ Grampians（辛香）→ Eden Valley（胡椒）',
+      mapRegion: 'Barossa Valley|McLaren Vale|Eden Valley|Grampians|Heathcote',
+    },
+
+    {
       type: 'content',
       title: 'Shiraz（=Syrah）：品種的兩個極端',
       points: [
@@ -3125,6 +3160,13 @@ const SLIDE_MAP = {
       bg: 'linear-gradient(135deg, #2a4a00 0%, #f1c40f 100%)',
       emoji: '🍊',
     },
+    {
+      type: 'map',
+      title: '頂級澳洲 Chardonnay 產區地圖',
+      subtitle: 'Adelaide Hills・Yarra Valley（涼爽優雅）vs Margaret River・Mornington Peninsula（結構豐盈）',
+      mapRegion: 'Adelaide Hills|Yarra Valley|Margaret River|Mornington Peninsula',
+    },
+
     {
       type: 'content',
       title: '澳洲 Chardonnay 的歷史演變',
