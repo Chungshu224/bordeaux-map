@@ -16,19 +16,19 @@ export const lessonContent = [
         <div class="learning-points">
           <div class="point-item">
             <h4>🌊 了解 Pays Nantais 的地理位置</h4>
-            <p>認識大西洋氣候如何塑造 Muscadet 的輕盈、高酸與鹹鮮礦石風格</p>
+            <p>認識法國最西端的葡萄酒產區——從 Pornic 到 Ancenis，大西洋氣候如何塑造 Muscadet 的清新礦石風格</p>
           </div>
           <div class="point-item">
-            <h4>🪨 認識 Pays Nantais 的多元土壤</h4>
-            <p>花崗岩、片岩、輝長岩——不同地質如何影響 Muscadet 的礦物感</p>
+            <h4>🏔️ 認識阿莫里坎地盾的多元地質</h4>
+            <p>花崗岩、輝長岩、片麻岩、雲母片岩、角閃岩——前寒武紀結晶基底如何造就全法最複雜的白酒礦石層次</p>
+          </div>
+          <div class="point-item">
+            <h4>🏛️ 掌握 Pays Nantais 兩千年歷史脈絡</h4>
+            <p>從羅馬人種植第一株葡萄、Vertou 修道院、諾曼人入侵，到 1936 年 AOC 認證——了解歷史如何塑造今日 Muscadet</p>
           </div>
           <div class="point-item">
             <h4>🍇 掌握 Melon de Bourgogne 品種特性</h4>
-            <p>了解這個在布根地幾乎消失的品種，為何在南特海濱重獲新生</p>
-          </div>
-          <div class="point-item">
-            <h4>🦪 理解 Muscadet 的核心風格</h4>
-            <p>清新、輕盈、鹹鮮礦石——為何它是全球海鮮餐桌上的首選白酒</p>
+            <p>了解這個在布根地幾乎消失的品種，為何在南特海濱重獲新生，並能陳年長達 10–40 年</p>
           </div>
         </div>
       </div>

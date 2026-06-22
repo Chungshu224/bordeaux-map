@@ -199,37 +199,80 @@ export const lessonContent = [
   },
 
   {
-    title: '🦠 Sur Lie：帶酒泥陳釀的魔法',
+    title: '🦠 Sur Lie：帶酒泥陳釀的三個境界',
     highlights: [
-      { id: 1, icon: '🦠', title: '酵母自溶（Autolysis）', content: '酵母細胞分解後釋放氨基酸、多醣和甘油，為酒款增添麵包、奶油、酵母氣息和豐潤口感，同時提升酒體' },
-      { id: 2, icon: '🍾', title: '天然 CO₂ 保護', content: '酒泥產生的微量 CO₂ 保留在酒中，帶來輕盈氣泡感和活潑清新感，同時防止氧化，是 Muscadet 清新風格的秘密' }
+      { id: 1, icon: '🏗️', title: '地下混凝土桶：南特獨有工藝', content: '所有 Muscadet 的 sur lie 陳釀均在「地下混凝土桶」（覆蓋玻璃或陶磚的地下水槽）中進行，這是南特產區特有的傳統設施，穩定的地下溫度是陳釀品質的關鍵' },
+      { id: 2, icon: '⏰', title: '三個陳釀等級，三種風格境界', content: '短期（< 6 個月）→ 清新活潑；中期（< 18 個月）→ 豐潤結構；長期（> 24 個月）→ 複雜陳年，對應 10 個 Crus Communaux 地塊等級制度' }
     ],
     content: `<div class="history-section">
-      <p class="history-intro">Sur Lie（帶酒泥陳釀）是 Muscadet 最重要的釀造技術，讓它從「廉價開胃酒」升級為「值得認真對待的精品白酒」——<span class="intro-highlight">不過濾、不換桶、讓酒與死酵母共存至少到隔年 3 月</span></p>
+      <p class="history-intro">Sur Lie（帶酒泥陳釀）是 Muscadet 最核心的釀造工藝。MSM、MCDGL、MCDLL <strong>三個地區 AOC 均強制要求</strong>，10 個 Crus Communaux 更需 24 個月以上——<span class="intro-highlight">時間長短決定風格境界</span></p>
     </div>
-    <div class="timeline-container">
+    <div class="region-overview" style="margin-top:10px">
+      <p class="region-intro">🏗️ 傳統儲存方式：<strong>地下混凝土桶</strong>（覆蓋玻璃磚或陶磚的地下水槽）——南特獨有的傳統設施，穩定地下溫度確保緩慢、均勻的酒泥接觸。</p>
+      <div class="region-grid main-grid">
+        <div class="region-card rg-pays">
+          <div class="rc-header">
+            <span class="rc-icon">💧</span>
+            <span class="rc-name">短期 Sur Lie</span>
+            <span class="rc-aop">&lt; 6 個月</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">基礎 Muscadet AOC</div>
+            <div class="rc-style">清新活潑，花果香明顯，高酸輕盈，適合即飲</div>
+          </div>
+        </div>
+        <div class="region-card rg-loir">
+          <div class="rc-header">
+            <span class="rc-icon">🌿</span>
+            <span class="rc-name">中期 Sur Lie</span>
+            <span class="rc-aop">&lt; 18 個月</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">地區 AOC（MSM / MCDGL / MCDLL）</div>
+            <div class="rc-style">豐潤結構，麵包奶油香，CO₂ 氣泡感，平衡複雜</div>
+          </div>
+        </div>
+        <div class="region-card rg-touraine">
+          <div class="rc-header">
+            <span class="rc-icon">🏆</span>
+            <span class="rc-name">長期 Sur Lie</span>
+            <span class="rc-aop">&gt; 24 個月</span>
+          </div>
+          <div class="rc-body">
+            <div class="rc-grape">10 個 Crus Communaux 地塊</div>
+            <div class="rc-style">複雜陳年，蜂蜜榲桲，香料礦石，可窖藏 10–40 年</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-container" style="margin-top:12px">
       <div class="timeline-item">
         <div class="timeline-badge ancient">採收後</div>
-        <div class="timeline-content"><strong>🍇 發酵完成</strong><p>葡萄酒完成酒精發酵，死酵母（酒泥 / lies）沉澱在酒桶底部。</p></div>
+        <div class="timeline-content"><strong>🍇 酒精發酵完成</strong><p>死酵母（lies）自然沉澱於地下混凝土桶底部，不換桶、不過濾，開始漫長的自溶（Autolysis）過程。</p></div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-badge medieval">整個冬季</div>
-        <div class="timeline-content"><strong>❄️ 不換桶、不過濾</strong><p>Sur Lie 要求酒款整個冬季不換桶、不過濾，讓酒與酒泥持續接觸，進行「自溶」過程，釋放複雜度。</p></div>
+        <div class="timeline-badge medieval">自溶作用</div>
+        <div class="timeline-content"><strong>🦠 酵母細胞分解釋放複雜度</strong><p>酵母壁破裂，釋放氨基酸、多醣、甘油，賦予麵包奶油香、豐潤口感；同時微量 CO₂ 留存，帶來活潑氣泡感，防止氧化。</p></div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-badge renaissance">隔年 3 月</div>
-        <div class="timeline-content"><strong>📋 法規最短期限</strong><p>法規規定 sur lie 陳釀最少至次年 3 月 1 日，以保留 CO₂、酵母風味和豐潤口感後才能裝瓶。</p></div>
+        <div class="timeline-badge renaissance">次年 3 月</div>
+        <div class="timeline-content"><strong>📋 地區 AOC 最短法定期限</strong><p>MSM、MCDGL、MCDLL 三個地區 AOC 均要求最少陳釀至次年 3 月 1 日。這是「Muscadet Sur Lie」標示的法律門檻。</p></div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-badge modern">Crus Communaux</div>
-        <div class="timeline-content"><strong>⏰ 頂級地塊延長陳釀</strong><p>Clisson、Gorges、Le Pallet 要求更長的 sur lie 陳釀期（24–36 個月），產出更複雜的陳年型 Muscadet。</p></div>
+        <div class="timeline-badge modern">24–48 個月</div>
+        <div class="timeline-content"><strong>🏆 Crus Communaux：最長陳釀</strong><p>10 個地塊分級均需超過 24 個月；Château-Thébaud 最長可達 48 個月，頂級年份展現 10–40 年陳年潛力。</p></div>
       </div>
     </div>`,
     quiz: {
-      question: 'Sur Lie 法規要求 Muscadet 至少陳釀至何時才能裝瓶？',
-      options: ['採收當年 12 月', '次年 1 月', '次年 3 月', '次年 6 月'],
-      correct: 2,
-      explanation: '法規規定 Muscadet sur lie 必須帶酒泥陳釀至次年 3 月 1 日後才能裝瓶。頂級地塊（Crus Communaux）通常陳釀 24–36 個月，以產出更複雜、值得窖藏的陳年型風格。這個技術讓 Muscadet 獲得獨特的酵母麵包香、豐潤口感和清新氣泡感。'
+      question: '根據官方規定，哪幾個 Muscadet AOC 強制要求 Sur Lie 陳釀？',
+      options: [
+        '所有 Muscadet AOC 均強制要求',
+        'MSM、MCDGL、MCDLL 三個地區 AOC',
+        '只有 Muscadet-Sèvre-et-Maine（MSM）',
+        '只有 10 個 Crus Communaux 地塊'
+      ],
+      correct: 1,
+      explanation: '根據官方規定，Muscadet-Sèvre-et-Maine（MSM）、Muscadet-Côtes-de-Grandlieu（MCDGL）、Muscadet-Coteaux-de-la-Loire（MCDLL）三個地區 AOC 均強制要求 Sur Lie 陳釀，最少至次年 3 月 1 日。10 個 Crus Communaux 地塊更需超過 24 個月。基礎通用 Muscadet AOC 則可選擇是否標示 Sur Lie。'
     }
   },
 
