@@ -183,15 +183,35 @@ function updateLayerVisibility(aoc) {
     const lineId = `loire-line-${idx}`
     if (!map.getLayer(fillId)) return
     if (!aoc) {
+      // 還原：所有圖層回到原始顏色
+      map.setPaintProperty(fillId, 'fill-color', layer.color)
       map.setPaintProperty(fillId, 'fill-opacity', layer.opacity ?? 0.55)
+      map.setPaintProperty(lineId, 'line-color', layer.color)
       map.setPaintProperty(lineId, 'line-opacity', layer.highlight ? 0.9 : 0.6)
+      map.setPaintProperty(lineId, 'line-width', layer.highlight ? 2.5 : 1.5)
     } else {
       const fname = layer.file.split('/').pop()
       const isSelected = aoc.file === fname
       const isHighlit = layer.highlight
-      map.setPaintProperty(fillId, 'fill-opacity', isSelected ? 0.72 : isHighlit ? 0 : 0.07)
-      map.setPaintProperty(lineId, 'line-opacity', isSelected ? 1 : isHighlit ? 0 : 0.15)
-      map.setPaintProperty(lineId, 'line-width', isSelected ? 3 : 1.5)
+      if (isSelected) {
+        // 選中：強制使用按鈕顏色，避免半透明 baseColor 問題
+        map.setPaintProperty(fillId, 'fill-color', aoc.color)
+        map.setPaintProperty(fillId, 'fill-opacity', 0.65)
+        map.setPaintProperty(lineId, 'line-color', aoc.color)
+        map.setPaintProperty(lineId, 'line-opacity', 1)
+        map.setPaintProperty(lineId, 'line-width', 3)
+      } else if (isHighlit) {
+        // 其他 highlight 圖層：隱藏
+        map.setPaintProperty(fillId, 'fill-opacity', 0)
+        map.setPaintProperty(lineId, 'line-opacity', 0)
+      } else {
+        // 背景圖層：極淡
+        map.setPaintProperty(fillId, 'fill-color', layer.color)
+        map.setPaintProperty(fillId, 'fill-opacity', 0.07)
+        map.setPaintProperty(lineId, 'line-color', layer.color)
+        map.setPaintProperty(lineId, 'line-opacity', 0.12)
+        map.setPaintProperty(lineId, 'line-width', 1.5)
+      }
     }
   })
 }
