@@ -18,6 +18,13 @@ export const G1M1L1 = {
       background: '#2c3e50'
     },
     {
+      type: 'germany-region-map',
+      title: '德國 13 個 Anbaugebiete 地圖',
+      description: '從 Ahr（最北）到 Sachsen（最東）、Baden（最南）——德國 13 個法定葡萄酒產區地理總覽',
+      mapRegion: 'overview',
+    },
+
+    {
       type: 'content',
       title: '🌍 德國葡萄酒的歷史',
       content: '德國的葡萄酒歷史超過 2000 年，可追溯至羅馬帝國時期。羅馬人沿萊茵河（Rhine）與摩澤爾河（Mosel）建立了最早的葡萄園，留下了延續至今的釀酒傳統。中世紀時期，修道院僧侶在德國各地培育葡萄品種，建立起今日許多著名酒莊的基礎。'
@@ -82,6 +89,13 @@ export const G1M1L2 = {
       subtitle: 'Von Kabinett bis Trockenbeerenauslese',
       background: '#3d5a80'
     },
+    {
+      type: 'germany-region-map',
+      title: '分級制度 × 產區地圖',
+      description: '理解德國 QbA/Prädikat 分級前，先掌握 13 個 Anbaugebiete 的地理分布——氣候差異是分級的根本',
+      mapRegion: 'overview',
+    },
+
     {
       type: 'content',
       title: '🏛️ 德國分級制度概覽',
@@ -298,6 +312,14 @@ export const G1M2L2 = {
       subtitle: '多元品種的豐富世界',
       background: '#4a7c59'
     },
+    {
+      type: 'germany-region-map',
+      title: '白葡萄品種核心產區地圖',
+      description: 'Müller-Thurgau（全境）、Silvaner（Franken/Rheinhessen）、Grauburgunder（Baden/Pfalz）——品種的地理分布',
+      mapRegion: 'overview',
+      highlightFiles: ["rheinhessen-region.geojson","franken-region.geojson","pfalz-region.geojson","baden-freiburg-region.geojson","baden-karlsruhe-region.geojson"],
+    },
+
     {
       type: 'list',
       title: '🍇 德國五大白葡萄品種概覽',
@@ -543,6 +565,14 @@ export const G1M3L3 = {
       subtitle: 'Verband Deutscher Prädikatsweingüter',
       background: '#1a3a1a'
     },
+    {
+      type: 'germany-region-map',
+      title: 'VDP 頂級酒莊核心產區地圖',
+      description: 'VDP 成員主要集中在 Mosel、Rheingau、Nahe、Pfalz、Rheinhessen——精英酒莊聯盟的地理版圖',
+      mapRegion: 'rhineCore',
+      highlightFiles: ["mosel-region.geojson","rheingau-region.geojson","nahe-region.geojson","pfalz-region.geojson","rheinhessen-region.geojson"],
+    },
+
     {
       type: 'content',
       title: '🦅 什麼是 VDP？',
@@ -1711,6 +1741,14 @@ export const G2M4L1 = {
       background: '#1a0a3a'
     },
     {
+      type: 'germany-region-map',
+      title: 'Eiswein & TBA 最佳產區地圖',
+      description: 'Mosel 的冬季寒流是 Eiswein 的天然條件；Rheingau 的 Botrytis 是 TBA 的靈魂——兩款甜酒巔峰的地理根源',
+      mapRegion: 'rhineCore',
+      highlightFiles: ["mosel-region.geojson","rheingau-region.geojson","nahe-region.geojson"],
+    },
+
+    {
       type: 'content',
       title: '👑 德國甜酒的兩個極致',
       content: 'TBA（Trockenbeerenauslese）與 Eiswein（冰酒）是德國 Prädikat 系統中最頂級、最稀有的兩個等級，也是世界上最昂貴的葡萄酒之一。兩者都達到極高的糖分濃縮，但原理完全不同：TBA 仰賴貴腐菌（Botrytis cinerea）慢慢分解葡萄皮、蒸發水分、濃縮糖酸；Eiswein 則依靠冬日低溫，使葡萄中的水分結冰，在榨汁時排出水分、留下濃縮液。最關鍵的區別：TBA 需要感染貴腐病的葡萄，而 Eiswein 需要完全健康的葡萄在低溫下天然冰凍。'
@@ -2044,6 +2082,14 @@ export const G3M1L1 = {
       background: '#1a3a1a'
     },
     {
+      type: 'germany-region-map',
+      title: 'VDP 核心產區地理版圖',
+      description: 'VDP 240 個成員酒莊主要集中於萊茵河核心：Mosel、Rheingau、Nahe、Pfalz、Rheinhessen——精英產區分布一覽',
+      mapRegion: 'rhineCore',
+      highlightFiles: ["mosel-region.geojson","rheingau-region.geojson","nahe-region.geojson","pfalz-region.geojson","rheinhessen-region.geojson"],
+    },
+
+    {
       type: 'content',
       title: 'VDP 簡介',
       content: 'VDP 創立於 1910 年，目前約有 200 個成員酒莊，自訂更嚴格的四級分類體系，類比法國布根地的 Grand Cru / Premier Cru 概念。與官方 QmP 制度最大的不同在於：葡萄園分級不依甜度而依地塊風土品質，強調 Terroir 的核心地位，是德國葡萄酒走向國際精品市場的重要推力。'
@@ -2102,6 +2148,14 @@ export const G3M1L2 = {
       subtitle: '德國最偉大的乾型白酒',
       background: '#2c1810'
     },
+    {
+      type: 'germany-region-map',
+      title: 'Großes Gewächs 重點產區地圖',
+      description: 'GG 最集中的產區：Mosel（Bernkasteler Doctor）、Rheingau（Rüdesheimer Berg Schlossberg）、Nahe、Pfalz',
+      mapRegion: 'rhineCore',
+      highlightFiles: ["mosel-region.geojson","rheingau-region.geojson","nahe-region.geojson","pfalz-region.geojson"],
+    },
+
     {
       type: 'content',
       title: 'Grosses Gewächs 介紹',
@@ -2167,6 +2221,14 @@ export const G3M1L3 = {
       subtitle: '從 Mosel 到 Pfalz 的名莊風景線',
       background: '#4a2040'
     },
+    {
+      type: 'germany-region-map',
+      title: '頂級 VDP 酒莊地理分布',
+      description: '從 Mosel 到 Pfalz 的名莊地圖——Egon Müller、JJ Prüm（Mosel）、Leitz（Rheingau）、Dönnhoff（Nahe）、Müller-Catoir（Pfalz）',
+      mapRegion: 'rhineCore',
+      highlightFiles: ["mosel-region.geojson","rheingau-region.geojson","nahe-region.geojson","pfalz-region.geojson","ahr-region.geojson"],
+    },
+
     {
       type: 'list',
       title: 'Mosel 頂級酒莊',
@@ -2237,6 +2299,14 @@ export const G3M2L1 = {
       subtitle: '從新鮮果香到汽油礦石的蛻變',
       background: '#5a3e28'
     },
+    {
+      type: 'germany-region-map',
+      title: 'Riesling 陳年核心產區地圖',
+      description: 'Mosel 板岩 Riesling 20–40 年、Rheingau 25–50 年——陳年條件最佳的產區都在萊茵河核心區',
+      mapRegion: 'rhineCore',
+      highlightFiles: ["mosel-region.geojson","rheingau-region.geojson","nahe-region.geojson"],
+    },
+
     {
       type: 'content',
       title: 'Riesling 陳年潛力',
@@ -2375,6 +2445,14 @@ export const G3M2L3 = {
       subtitle: '1971–2021 半世紀的偉大收穫',
       background: '#3d1515'
     },
+    {
+      type: 'germany-region-map',
+      title: '德國頂級年份產區地圖',
+      description: '年份品質因產區而異——Mosel 的頂級年份（2005、2015、2021）與 Pfalz/Rheinhessen 的溫暖年份特點不同',
+      mapRegion: 'overview',
+      highlightFiles: ["mosel-region.geojson","rheingau-region.geojson","pfalz-region.geojson"],
+    },
+
     {
       type: 'timeline',
       title: '重要年份時間軸',
