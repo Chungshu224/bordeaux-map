@@ -103,6 +103,11 @@ export class MapSlideManager {
     // 載入基礎圖層
     await this.loadBaseLayers()
 
+    // 等高線圖層（在產區填色之前加入，使其顯示於半透明填色之下）
+    if (this.config.showContours) {
+      this.addContourLayer()
+    }
+
     // 載入所有產區圖層
     await this.loadAllRegionLayers()
 
@@ -374,6 +379,75 @@ export class MapSlideManager {
       console.error('計算邊界失敗:', error)
       // 如果失敗，使用配置中的預設視圖
       this.setInitialView()
+    }
+  }
+
+  /**
+   * 從 Mapbox terrain-v2 向量圖磚加入等高線圖層
+   * index=5 為主等高線（每5條一條），index=1 為次等高線
+   */
+  addContourLayer() {
+    const src = 'mapbox-terrain-v2'
+    if (!this.map.getSource(src)) {
+      this.map.addSource(src, {
+        type: 'vector',
+        url: 'mapbox://mapbox.mapbox-terrain-v2'
+      })
+    }
+
+    if (!this.map.getLayer('contour-minor')) {
+      this.map.addLayer({
+        id: 'contour-minor',
+        type: 'line',
+        source: src,
+        'source-layer': 'contour',
+        filter: ['!=', ['get', 'index'], 5],
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: {
+          'line-color': '#C4A265',
+          'line-width': 0.5,
+          'line-opacity': 0.45
+        }
+      })
+    }
+
+    if (!this.map.getLayer('contour-major')) {
+      this.map.addLayer({
+        id: 'contour-major',
+        type: 'line',
+        source: src,
+        'source-layer': 'contour',
+        filter: ['==', ['get', 'index'], 5],
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: {
+          'line-color': '#8B6220',
+          'line-width': 1.2,
+          'line-opacity': 0.65
+        }
+      })
+    }
+
+    if (!this.map.getLayer('contour-label')) {
+      this.map.addLayer({
+        id: 'contour-label',
+        type: 'symbol',
+        source: src,
+        'source-layer': 'contour',
+        filter: ['==', ['get', 'index'], 5],
+        layout: {
+          'symbol-placement': 'line',
+          'text-field': ['concat', ['to-string', ['get', 'ele']], ' m'],
+          'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+          'text-size': 9,
+          'text-allow-overlap': false,
+          'symbol-spacing': 280
+        },
+        paint: {
+          'text-color': '#7A5618',
+          'text-halo-color': 'rgba(255,255,255,0.9)',
+          'text-halo-width': 1.2
+        }
+      })
     }
   }
 

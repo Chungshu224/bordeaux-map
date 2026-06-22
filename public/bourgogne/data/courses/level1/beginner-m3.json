@@ -156,7 +156,8 @@
               "lineWidth": 2,
               "showLabels": true
             }
-          ]
+          ],
+          "showContours": true
         },
         {
           "type": "content",
@@ -447,7 +448,8 @@
               "lineWidth": 3,
               "showLabels": true
             }
-          ]
+          ],
+          "showContours": true
         },
         {
           "type": "content",
@@ -693,7 +695,8 @@
               "lineWidth": 2,
               "showLabels": true
             }
-          ]
+          ],
+          "showContours": true
         },
         {
           "type": "content",
@@ -904,7 +907,8 @@
               "lineWidth": 2,
               "showLabels": true
             }
-          ]
+          ],
+          "showContours": true
         },
         {
           "type": "content",
