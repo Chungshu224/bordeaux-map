@@ -6,6 +6,18 @@
       <p v-if="slide.description" class="lms-desc">{{ slide.description }}</p>
     </div>
 
+    <!-- AOC 快速按鈕列 -->
+    <div v-if="slide.aocButtons?.length" class="lms-aoc-bar">
+      <button
+        v-for="btn in slide.aocButtons"
+        :key="btn.id"
+        class="lms-aoc-btn"
+        :class="{ active: selectedAOC?.id === btn.id }"
+        :style="selectedAOC?.id === btn.id ? { background: btn.color, borderColor: btn.color } : { borderColor: btn.color, color: btn.color }"
+        @click="selectAOC(btn)"
+      >{{ btn.short || btn.label }}</button>
+    </div>
+
     <!-- 地圖區 -->
     <div class="lms-map-wrapper">
       <div ref="mapContainer" class="lms-mapbox"></div>
@@ -23,13 +35,41 @@
 
       <!-- Hover tooltip -->
       <div
-        v-if="hoveredAOC"
+        v-if="hoveredAOC && !selectedAOC"
         class="lms-tooltip"
         :style="{ left: tooltipX + 'px', top: tooltipY + 'px' }"
       >{{ hoveredAOC }}</div>
 
+      <!-- AOC 詳情面板 -->
+      <Transition name="lms-panel">
+        <div v-if="selectedAOC" class="lms-aoc-panel" :style="{ borderColor: selectedAOC.color }">
+          <button class="lms-panel-close" @click="selectedAOC = null">✕</button>
+          <div class="lms-panel-badge" :style="{ background: selectedAOC.color }">{{ selectedAOC.aop }}</div>
+          <h3 class="lms-panel-title">{{ selectedAOC.label }}</h3>
+          <div class="lms-panel-rows">
+            <div class="lms-panel-row">
+              <span class="lms-panel-key">🪨 土壤</span>
+              <span class="lms-panel-val">{{ selectedAOC.soil }}</span>
+            </div>
+            <div class="lms-panel-row">
+              <span class="lms-panel-key">🍇 品種</span>
+              <span class="lms-panel-val">{{ selectedAOC.grapes }}</span>
+            </div>
+            <div class="lms-panel-row">
+              <span class="lms-panel-key">🦠 Sur Lie</span>
+              <span class="lms-panel-val">{{ selectedAOC.surLie }}</span>
+            </div>
+            <div class="lms-panel-row lms-panel-style">
+              <span class="lms-panel-key">🍷 風格</span>
+              <span class="lms-panel-val">{{ selectedAOC.style }}</span>
+            </div>
+            <div v-if="selectedAOC.note" class="lms-panel-note">{{ selectedAOC.note }}</div>
+          </div>
+        </div>
+      </Transition>
+
       <!-- 圖例 -->
-      <div v-if="legendItems.length" class="lms-legend">
+      <div v-if="legendItems.length && !selectedAOC" class="lms-legend">
         <div v-for="item in legendItems" :key="item.label" class="lms-legend-item">
           <span class="lms-legend-dot" :style="{ background: item.color }"></span>
           <span class="lms-legend-label">{{ item.label }}</span>
@@ -131,7 +171,19 @@ const errorMsg = ref(null)
 const hoveredAOC = ref(null)
 const tooltipX = ref(0)
 const tooltipY = ref(0)
+const selectedAOC = ref(null)
 let map = null
+
+function selectAOC(btn) {
+  if (selectedAOC.value?.id === btn.id) {
+    selectedAOC.value = null
+    return
+  }
+  selectedAOC.value = btn
+  if (map && btn.center) {
+    map.flyTo({ center: btn.center, zoom: btn.zoom ?? 10, duration: 900 })
+  }
+}
 
 // ── 計算要顯示哪些圖層 ──────────────────────────────────────
 const layersToLoad = computed(() => {
@@ -471,5 +523,148 @@ watch(() => props.slide.mapGroup, () => { initMap() })
   font-size: 0.8rem;
   color: #f0e6d3;
   white-space: nowrap;
+}
+
+/* ── AOC 按鈕列 ───────────────────────────────────────── */
+.lms-aoc-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+
+.lms-aoc-btn {
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1.5px solid currentColor;
+  background: transparent;
+  color: #f0e6d3;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.lms-aoc-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.lms-aoc-btn.active {
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+/* ── AOC 詳情面板 ─────────────────────────────────────── */
+.lms-aoc-panel {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 260px;
+  background: rgba(10, 12, 28, 0.93);
+  border: 1.5px solid #666;
+  border-radius: 10px;
+  padding: 14px 16px 12px;
+  z-index: 25;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.lms-panel-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: rgba(240,230,211,0.6);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.lms-panel-close:hover {
+  color: #f0e6d3;
+}
+
+.lms-panel-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+.lms-panel-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f0e6d3;
+  margin: 0 0 10px;
+  padding-right: 20px;
+  line-height: 1.3;
+}
+
+.lms-panel-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lms-panel-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.lms-panel-key {
+  font-size: 0.72rem;
+  color: rgba(240,230,211,0.55);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 1px;
+  min-width: 52px;
+}
+
+.lms-panel-val {
+  font-size: 0.8rem;
+  color: #f0e6d3;
+  line-height: 1.4;
+}
+
+.lms-panel-style .lms-panel-val {
+  font-style: italic;
+  color: rgba(240,230,211,0.85);
+}
+
+.lms-panel-note {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  color: #f39c12;
+  background: rgba(243,156,18,0.1);
+  border: 1px solid rgba(243,156,18,0.25);
+  border-radius: 6px;
+  padding: 5px 8px;
+  line-height: 1.4;
+}
+
+/* ── 面板出入動畫 ─────────────────────────────────────── */
+.lms-panel-enter-active,
+.lms-panel-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lms-panel-enter-from,
+.lms-panel-leave-to {
+  opacity: 0;
+  transform: translateX(10px);
 }
 </style>
