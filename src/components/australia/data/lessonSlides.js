@@ -3168,16 +3168,35 @@ const SLIDE_MAP = {
     },
 
     {
-      type: 'content',
+      type: 'html',
       title: '澳洲 Chardonnay 的歷史演變',
-      points: [
-        '1980 年代：「Chardonnay 狂熱」，澳洲主導全球市場，以大橡木桶、高酒精、奶油/奶酪風格為特色',
-        '代表：「ABC（Anything But Chardonnay）」反彈浪潮在 1990 年代興起，消費者對過於飽滿風格感到疲倦',
-        '2000 年代轉型：新一代釀酒師留學勃艮第歸來，開始追求更精緻、礦物感的風格',
-        '現代澳洲 Chardonnay（2010 年代至今）：清爽高酸、少量或中性橡木桶、不作完整乳酸發酵',
-        '地域差異：涼爽產區（Yarra Valley、Margaret River、Tasmania）vs 溫暖產區（Barossa、Hunter）',
-        '澳洲 Chardonnay 現在被視為全球最優秀的 Chardonnay 產地之一（可與勃艮第媲美）',
-      ],
+      html: `<div class="history-section">
+  <p class="history-intro">從 1980 年代「奶油橡木狂熱」到今日清爽礦物精品 ——<span class="intro-highlight">40 年風格大轉型，澳洲 Chardonnay 重新奪回世界頂尖地位</span></p>
+</div>
+<div class="timeline-container">
+  <div class="timeline-item">
+    <div class="timeline-badge ancient">1980 年代</div>
+    <div class="timeline-content"><strong>🛢️ Chardonnay 狂熱時代</strong><p>澳洲主導全球 Chardonnay 市場，100% 全新法國橡木桶、完整乳酸發酵、高酒精濃度，奶油/焦糖/烤麵包的濃郁風格成為市場主流。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge austria">1990 年代</div>
+    <div class="timeline-content"><strong>📉 ABC 反彈浪潮</strong><p>「ABC（Anything But Chardonnay）」運動在英國興起，消費者對過於飽滿的風格感到疲倦，澳洲 Chardonnay 出口量下滑，形象危機出現。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge renaissance">2000 年代</div>
+    <div class="timeline-content"><strong>🎓 勃艮第世代回歸</strong><p>新一代釀酒師留學勃艮第歸來，開始追求更精緻、礦物感的風格。中性橡木桶、部分乳酸發酵、更低採收糖分成為新標準。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge modern">2010 年代至今</div>
+    <div class="timeline-content"><strong>🌟 精品澳洲 Chardonnay 崛起</strong><p>清爽高酸、少量或中性橡木桶、不作完整乳酸發酵。Leeuwin Art Series、Tolpuddle、Giaconda 等精品莊被《Wine Advocate》列為世界最佳 Chardonnay 之一。</p></div>
+  </div>
+</div>
+<div class="stat-grid">
+  <div class="stat-box"><div class="stat-number">1980s</div><div class="stat-label">橡木桶濃郁風格巔峰</div></div>
+  <div class="stat-box"><div class="stat-number">ABC</div><div class="stat-label">1990s 消費者反彈</div></div>
+  <div class="stat-box"><div class="stat-number">2010+</div><div class="stat-label">精品礦物風格崛起</div></div>
+  <div class="stat-box"><div class="stat-number">世界級</div><div class="stat-label">媲美勃艮第</div></div>
+</div>`,
     },
     {
       type: 'compare',

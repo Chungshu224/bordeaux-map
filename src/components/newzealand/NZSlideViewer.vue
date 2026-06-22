@@ -68,9 +68,8 @@
         </div>
         <div class="timeline">
           <div v-for="(item, index) in currentSlide.items" :key="index" class="timeline-item">
-            <div class="timeline-marker"></div>
+            <div class="timeline-badge">{{ item.year }}</div>
             <div class="timeline-content">
-              <div class="timeline-year">{{ item.year }}</div>
               <div class="timeline-text">{{ item.text }}</div>
             </div>
           </div>
@@ -373,7 +372,7 @@ onUnmounted(() => {
 .slide-header { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 3px solid #006400; }
 .slide-header .slide-icon { font-size: 48px; }
 .slide-header h2 { margin: 0; font-size: 36px; color: #2d3748; font-weight: 700; }
-.timeline-subtitle { margin: 8px 0 0 64px; font-size: 18px; color: #718096; font-weight: 400; }
+.timeline-subtitle { margin: 8px 0 0 0; font-size: 16px; color: #718096; font-weight: 400; }
 .slide-body { font-size: 20px; line-height: 1.8; color: #4a5568; }
 .text-content { margin: 0 0 24px 0; }
 .map-container { width: 100%; margin: 24px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background: #f8f9fa; }
@@ -383,12 +382,12 @@ onUnmounted(() => {
 .stat-icon { font-size: 40px; margin-bottom: 12px; }
 .stat-label { font-size: 16px; color: #718096; font-weight: 600; margin-bottom: 8px; }
 .stat-value { font-size: 18px; color: #2d3748; font-weight: 600; line-height: 1.5; }
-.timeline { position: relative; padding-left: 40px; }
-.timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, #006400 0%, #004d00 100%); }
-.timeline-item { position: relative; margin-bottom: 32px; padding-left: 32px; }
-.timeline-marker { position: absolute; left: 0; top: 8px; width: 16px; height: 16px; background: #006400; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 3px #006400; }
-.timeline-year { font-size: 18px; font-weight: 700; color: #006400; margin-bottom: 8px; }
-.timeline-text { font-size: 18px; color: #4a5568; line-height: 1.6; }
+.timeline { display: flex; flex-direction: column; gap: 0; padding-left: 16px; border-left: 3px solid #d1e7d1; margin: 10px 0; }
+.timeline-item { display: flex; gap: 12px; padding: 10px 0; position: relative; }
+.timeline-item::before { content: ''; position: absolute; left: -22px; top: 16px; width: 10px; height: 10px; border-radius: 50%; background: #2d6a2d; border: 2px solid white; box-shadow: 0 0 0 2px #2d6a2d; }
+.timeline-badge { flex-shrink: 0; font-size: 0.75rem; font-weight: 700; background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 20px; height: fit-content; margin-top: 2px; white-space: nowrap; }
+.timeline-content { flex: 1; min-width: 0; }
+.timeline-text { font-size: 0.92rem; color: #374151; line-height: 1.6; }
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
 .feature-card { background: #f7fafc; padding: 32px; border-radius: 16px; border: 2px solid #e2e8f0; transition: all 0.3s; }
 .feature-card:hover { border-color: #006400; transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,100,0,0.2); }

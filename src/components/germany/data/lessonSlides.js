@@ -27,7 +27,41 @@ export const G1M1L1 = {
     {
       type: 'content',
       title: '🌍 德國葡萄酒的歷史',
-      content: '德國的葡萄酒歷史超過 2000 年，可追溯至羅馬帝國時期。羅馬人沿萊茵河（Rhine）與摩澤爾河（Mosel）建立了最早的葡萄園，留下了延續至今的釀酒傳統。中世紀時期，修道院僧侶在德國各地培育葡萄品種，建立起今日許多著名酒莊的基礎。'
+      content: `<div class="history-section">
+  <p class="history-intro">從羅馬人沿萊茵河種下第一株葡萄，到修道院建立傳奇酒莊 ——<span class="intro-highlight">2000 年釀酒史塑造了今日最優雅的 Riesling 產國</span></p>
+</div>
+<div class="timeline-container">
+  <div class="timeline-item">
+    <div class="timeline-badge ancient">西元 1 世紀</div>
+    <div class="timeline-content"><strong>🏛️ 羅馬帝國奠基</strong><p>羅馬士兵沿萊茵河（Rhine）與摩澤爾河（Mosel）建立最早葡萄園，Trier（特里爾）成為北方葡萄酒重鎮，奠定延續至今的釀酒傳統。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge medieval">中世紀</div>
+    <div class="timeline-content"><strong>⛪ 修道院的黃金年代</strong><p>本篤會與西多會修道院在 Rheingau、Mosel 等地精心培育葡萄園。Schloss Johannisberg（1130 年）、Kloster Eberbach 等修道院酒莊成為德國 Riesling 的精神源頭。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge renaissance">1775 年</div>
+    <div class="timeline-content"><strong>🎯 Spätlese 的意外誕生</strong><p>Schloss Johannisberg 因信使延誤採收許可，過熟葡萄意外釀出史上第一瓶有記錄的 Spätlese（晚採），開創了德國 Prädikat 分級的概念雛形。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge austria">1971 年</div>
+    <div class="timeline-content"><strong>📜 葡萄酒法現代化</strong><p>德國頒布現代《葡萄酒法》，以採收糖分（Oechsle 度數）建立 QbA / Prädikat 六級分級體系，成為全球最複雜精細的甜度分級制度。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge doc">1910–2002 年</div>
+    <div class="timeline-content"><strong>🦅 VDP 精英俱樂部</strong><p>VDP（頂級德國葡萄酒莊聯盟）1910 年成立，2002 年建立仿效布根地的四層葡萄園分級制度（Grosse Lage / Erste Lage），以地塊聲譽補足官方甜度分級的不足。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge modern">現代</div>
+    <div class="timeline-content"><strong>🌍 Riesling 全球復興</strong><p>21 世紀初，德國不甜型 Riesling（Trocken）席捲國際高端餐廳。新生代釀酒師在 Mosel、Pfalz、Ahr 等地以低產量精品重新定義德國葡萄酒。</p></div>
+  </div>
+</div>
+<div class="stat-grid">
+  <div class="stat-box"><div class="stat-number">2000 年+</div><div class="stat-label">釀酒歷史</div></div>
+  <div class="stat-box"><div class="stat-number">13</div><div class="stat-label">法定產區 Anbaugebiete</div></div>
+  <div class="stat-box"><div class="stat-number">103,000 ha</div><div class="stat-label">葡萄園面積</div></div>
+  <div class="stat-box"><div class="stat-number">1775 年</div><div class="stat-label">Spätlese 首次誕生</div></div>
+</div>`
     },
     {
       type: 'list',

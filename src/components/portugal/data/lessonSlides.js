@@ -42,6 +42,42 @@ const P1M1L1_slides = [
     `,
   },
   {
+    type: 'content',
+    icon: '📜',
+    title: '3,000 年葡萄酒歷史',
+    html: `<div class="history-section">
+  <p class="history-intro">從腓尼基人帶來葡萄藤，到龐巴爾侯爵建立全球第一個法定產區 ——<span class="intro-highlight">3,000 年釀酒史，使葡萄牙成為新世界崛起前歐洲最古老的釀酒民族之一</span></p>
+</div>
+<div class="timeline-container">
+  <div class="timeline-item">
+    <div class="timeline-badge ancient">西元前 1000 年</div>
+    <div class="timeline-content"><strong>🚢 腓尼基人引入葡萄藤</strong><p>腓尼基商人沿大西洋海岸航行時，將葡萄藤帶至伊比利半島，在今日葡萄牙南部和 Douro 河谷建立早期葡萄園。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge medieval">13–15 世紀</div>
+    <div class="timeline-content"><strong>⚓ 大航海時代的葡萄酒貿易</strong><p>葡萄牙成為歐洲最強大的航海帝國，葡萄酒隨艦船遠航至亞洲、非洲、美洲。為了承受長途航行，開始在酒中加入白蘭地——加烈酒的雛形誕生。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge renaissance">1703 年</div>
+    <div class="timeline-content"><strong>🤝 梅休因條約（Methuen Treaty）</strong><p>英國與葡萄牙簽訂貿易條約，葡萄牙葡萄酒以優惠關稅進入英國市場，Porto 波特酒因此大量出口，奠定了英國人對葡萄牙葡萄酒的長期偏好。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge doc">1756 年</div>
+    <div class="timeline-content"><strong>📋 全球第一個法定產區</strong><p>龐巴爾侯爵（Marquis of Pombal）正式劃定 Douro 產區界線，建立全球最早的法定葡萄酒產區制度——比法國波爾多的 1855 年分級早了 99 年。</p></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-badge modern">1986 年至今</div>
+    <div class="timeline-content"><strong>🌍 加入歐盟，現代化轉型</strong><p>葡萄牙加入歐盟後引進現代釀酒技術。2000 年代起，以 Touriga Nacional 為旗艦的精品乾型紅酒在國際市場崛起，全球葡萄酒愛好者重新發現葡萄牙的多樣性。</p></div>
+  </div>
+</div>
+<div class="stat-grid">
+  <div class="stat-box"><div class="stat-number">3000 年+</div><div class="stat-label">釀酒歷史</div></div>
+  <div class="stat-box"><div class="stat-number">1756 年</div><div class="stat-label">全球最早法定產區</div></div>
+  <div class="stat-box"><div class="stat-number">250+</div><div class="stat-label">本土原生葡萄品種</div></div>
+  <div class="stat-box"><div class="stat-number">30+</div><div class="stat-label">法定 DOC 產區</div></div>
+</div>`,
+  },
+  {
     type: 'compare',
     title: '葡萄牙葡萄酒：六大核心特色',
     items: [
