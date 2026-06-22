@@ -36,6 +36,19 @@ export const lessonContent = [
   },
 
   {
+    component: 'LoireRegionMapSlide',
+    title: '羅亞爾河谷：Pays Nantais 產區地圖',
+    componentProps: {
+      slide: {
+        title: '羅亞爾河谷：Pays Nantais 產區地圖',
+        description: '法國最長葡萄酒產區的最西端，大西洋風格的 Muscadet 王國',
+        mapGroup: 'PayNantes',
+        highlightFiles: ['Muscadet.geojson', 'Muscadet-Sèvre-et-Maine.geojson'],
+      }
+    }
+  },
+
+  {
     title: 'Chenin Blanc：品種之王',
     highlights: [
       { id: 1, icon: '⚡', title: '超高天然酸度', content: '即使完全成熟，Chenin 仍保有驚人的天然酸度，這是它能釀製各種甜度酒款而不失平衡的秘密' },

@@ -259,16 +259,4 @@ export const lessonContent = [
     }
   },
 
-  {
-    component: 'LoireRegionMapSlide',
-    title: '羅亞爾河谷：Pays Nantais 產區地圖',
-    componentProps: {
-      slide: {
-        title: '羅亞爾河谷：Pays Nantais 產區地圖',
-        description: '法國最長葡萄酒產區的最西端，大西洋風格的Muscadet王國',
-        mapGroup: 'PayNantes',
-        highlightFiles: ['Muscadet.geojson', 'Muscadet-Sèvre-et-Maine.geojson'],
-      }
-    }
-  }
 ]
