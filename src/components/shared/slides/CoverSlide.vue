@@ -31,37 +31,39 @@ const defaultGradient = 'linear-gradient(135deg, #2c3e50 0%, #4a6fa5 100%)'
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 48px 40px;
+  padding: 28px 36px;
   border-radius: 24px;
   overflow-y: auto;
   color: #fff;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .cover-icon {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  line-height: 1;
 }
 
 .cover-title {
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   font-weight: 700;
-  margin: 0 0 12px;
-  line-height: 1.25;
+  margin: 0 0 6px;
+  line-height: 1.2;
   letter-spacing: 0.5px;
 }
 
 .cover-subtitle {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   opacity: 0.88;
-  margin: 0 0 32px;
+  margin: 0 0 18px;
   font-weight: 500;
 }
 
 .cover-points {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
   width: 100%;
   max-width: 560px;
   text-align: left;
@@ -69,17 +71,17 @@ const defaultGradient = 'linear-gradient(135deg, #2c3e50 0%, #4a6fa5 100%)'
 
 .cover-point {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  align-items: center;
+  gap: 12px;
   background: rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 12px 16px;
+  border-radius: 10px;
+  padding: 9px 14px;
 }
 
 .cp-icon {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   flex-shrink: 0;
-  line-height: 1.3;
+  line-height: 1;
 }
 
 .cp-content {
@@ -87,29 +89,35 @@ const defaultGradient = 'linear-gradient(135deg, #2c3e50 0%, #4a6fa5 100%)'
 }
 
 .cp-label {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: 0.8;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .cp-text {
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  line-height: 1.4;
   opacity: 0.95;
 }
 
 @media (max-width: 768px) {
   .cover-slide {
-    padding: 36px 24px;
+    padding: 22px 20px;
   }
   .cover-title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+  }
+  .cover-icon {
+    font-size: 2rem;
   }
   .cover-points {
-    gap: 10px;
+    gap: 6px;
+  }
+  .cover-point {
+    padding: 8px 12px;
   }
 }
 </style>

@@ -2484,7 +2484,7 @@ defineExpose({
 <style scoped>
 /* ── 一頁封面投影片（PresentationLesson 內嵌） ── */
 .pl-cover-host {
-  min-height: 520px;
+  min-height: 380px;
   display: flex;
   flex-direction: column;
   border-radius: 16px;
