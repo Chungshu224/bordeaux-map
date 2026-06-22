@@ -39,26 +39,32 @@ export const lessonContent = [
       { id: 3, icon: '👑', title: '17–18 世紀黃金時期', content: '路易十四稱托卡伊為「王者之酒」，歐洲貴族趨之若鶩，法國、英國皇室均為愛好者' },
       { id: 4, icon: '🔴', title: '共產時期衰落（1948–1989）', content: '集體農場以量代質，托卡伊名酒淪為批量生產的廉價商品，品質大幅下滑' }
     ],
-    content: `<div class="history-content">
-      <p>匈牙利葡萄酒最輝煌的時代是 17 至 18 世紀。1703 年，匈牙利王公拉科奇二世（Francis II Rákóczi）將 Tokaji Aszú 作為外交禮品送給法國宮廷，路易十四品飲後宣稱這是「王者之酒，葡萄酒之王」（Wine of Kings, King of Wines），此句名言沿用至今。</p>
-      <div class="timeline-grid">
-        <div class="timeline-item">
-          <div class="timeline-year">1630s</div>
-          <div class="timeline-text">史上最早記錄的貴腐甜酒釀造，比德國和法國早了數十年</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">1700s</div>
-          <div class="timeline-text">匈牙利首次建立葡萄園分級制度（1737 年），比波爾多 1855 年分級早 118 年</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">1948</div>
-          <div class="timeline-text">共產黨推行集體農場，個人酒莊被沒收，以量代質政策破壞品質傳統</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">1990s</div>
-          <div class="timeline-text">私有化後外國資本湧入（如法國 AXA、西班牙 Vega Sicilia），現代化釀酒復興開始</div>
-        </div>
+    content: `<div class="history-section">
+      <p class="history-intro">匈牙利葡萄酒最輝煌的時代是 17 至 18 世紀。路易十四品飲 Tokaji Aszú 後宣稱這是「王者之酒，葡萄酒之王」——<span class="intro-highlight">2000 年釀酒史，全球最早建立葡萄園分級制度的國家之一</span></p>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <div class="timeline-badge ancient">1630s</div>
+        <div class="timeline-content"><strong>🍯 史上最早貴腐甜酒</strong><p>史上最早記錄的貴腐甜酒釀造，比德國和法國早了數十年</p></div>
       </div>
+      <div class="timeline-item">
+        <div class="timeline-badge medieval">1700s</div>
+        <div class="timeline-content"><strong>👑 葡萄園分級制度</strong><p>匈牙利首次建立葡萄園分級制度（1737 年），比波爾多 1855 年分級早 118 年</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-badge austria">1948</div>
+        <div class="timeline-content"><strong>🔴 共產集體農場</strong><p>共產黨推行集體農場，個人酒莊被沒收，以量代質政策破壞品質傳統</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-badge modern">1990s</div>
+        <div class="timeline-content"><strong>🌟 現代復興</strong><p>私有化後外國資本湧入（如法國 AXA、西班牙 Vega Sicilia），現代化釀酒復興開始</p></div>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-number">2000 年+</div><div class="stat-label">釀酒歷史</div></div>
+      <div class="stat-box"><div class="stat-number">1737 年</div><div class="stat-label">全球最早葡萄園分級</div></div>
+      <div class="stat-box"><div class="stat-number">22</div><div class="stat-label">法定葡萄酒產區</div></div>
+      <div class="stat-box"><div class="stat-number">1703 年</div><div class="stat-label">路易十四御用托卡伊</div></div>
     </div>`
   },
   {
