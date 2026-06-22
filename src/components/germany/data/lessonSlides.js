@@ -260,14 +260,15 @@ export const G1M2L1 = {
       right: { label: '🏰 Rheingau', items: ['酒精較高（11-13%）', '圓潤豐滿', '石板黏土土壤', '均衡酒體', '平緩南坡', 'GG 頂園：Schloss Johannisberg、Rüdesheimer Berg'] }
     },
     {
-      type: 'content',
-    {
       type: 'germany-region-map',
       title: 'Riesling 五大核心產區地圖',
       description: '全球最精緻 Riesling 的產地——Mosel、Rheingau、Nahe、Rheinhessen、Pfalz 的相對位置',
       mapRegion: 'rhineCore',
       highlightFiles: ['mosel-region.geojson', 'rheingau-region.geojson', 'nahe-region.geojson', 'rheinhessen-region.geojson', 'pfalz-region.geojson'],
     },
+
+    {
+      type: 'content',
 
       title: '⏳ Riesling 的陳年奇蹟',
       content: '頂級 Riesling 擁有驚人的陳年潛力。當年輕的 Riesling 帶著清新的柑橘、桃子香氣，陳年後會發展出「汽油味」（Petrol note）——這是 Riesling 成熟的重要標誌。10 年以上的 Mosel Auslese 可展現出蜂蜜、薑餅、杏桃乾的複雜層次；而 TBA 甚至可陳年 50 年以上。'
@@ -404,14 +405,15 @@ export const G1M2L3 = {
       content: 'Ahr 是德國最著名的紅酒產區，以 Spätburgunder 著稱。儘管地處德國北部（北緯 50.5 度），但陡峭的河谷地形與火山板岩土壤創造出溫暖的微氣候，使黑皮諾能完全成熟。Ahr 的頂級 Spätburgunder 呈現出勃根地般的優雅——鮮紅色澤、紅莓香料、細緻單寧，讓世界為之驚豔。'
     },
     {
-      type: 'spatburgunder-regions',
-    {
       type: 'germany-region-map',
       title: '德國紅葡萄主產區地圖',
       description: 'Ahr（最小最北）、Pfalz（最大）、Württemberg（產量最多）、Baden（最南）——德國紅酒四強的地理分布',
       mapRegion: 'overview',
       highlightFiles: ['ahr-region.geojson', 'pfalz-region.geojson', 'wuerttemberg-region.geojson', 'baden-freiburg-region.geojson', 'baden-karlsruhe-region.geojson'],
     },
+
+    {
+      type: 'spatburgunder-regions',
 
       title: '🍷 Spätburgunder 四大產區風土對決',
       description: '互動深度比較 Ahr（火山板岩輕盈礦物）× Baden（最溫暖豐滿勃根地風）× Pfalz（均衡易飲）× Württemberg（傳統 Muschelkalk 白堊感）——風格光譜、土壤、頂級葡萄園（Ahr: Meyer-Näkel、Baden: Bernhard Huber）、與布根地對比，一張互動圖掌握德國紅酒四大天王。'
@@ -850,14 +852,15 @@ export const G2M1L1 = {
       content: 'Mosel 產區沿著蜿蜒的摩澤爾河延伸約 245 公里，從 Perl（德法盧三國交界）到 Koblenz（注入萊茵河口）。最優質的葡萄園位於河流的彎道內側，傾斜度高達 60-70 度，機械無法作業，全靠人工。板岩土壤白天吸熱，夜晚緩慢釋放，加上河水反射陽光，使葡萄即使在北緯 50 度也能達到優雅成熟。'
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: 'Mosel 產區地圖',
       description: '沿摩澤爾河蜿蜒的陡峭板岩坡——德國最知名的 Riesling 產地，北緯 50° 的奇蹟',
       mapRegion: 'mosel',
       highlightFiles: ['mosel-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '🏆 Mosel 頂級葡萄園（Grosse Lagen）',
       items: [
@@ -936,14 +939,15 @@ export const G2M1L2 = {
       content: 'Rheingau 是德國葡萄酒最具歷史地位的產區之一。萊茵河在此由西向東流，南岸的葡萄園因此享有難得的南向日照。北方的 Taunus 山脈如屏障般阻擋冷風，形成溫暖穩定的微氣候。全區面積約 3,285 公頃，Riesling 種植比例高達 80% 以上，是德國最集中的 Riesling 產區之一。酒風以結構飽滿、酒體豐潤、陳年潛力強著稱，與 Mosel 的輕盈纖細形成鮮明對比。'
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: 'Rheingau 產區地圖',
       description: '萊茵河在此轉向西流，南向坡道 + Taunus 山屏障——Riesling 優雅風格的地理成因',
       mapRegion: 'rheingau',
       highlightFiles: ['rheingau-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '🌟 Rheingau 頂級葡萄園',
       items: [
@@ -1026,14 +1030,15 @@ export const G2M1L3 = {
       right: { label: '🌾 Hügelland（日常）', items: ['內陸丘陵高地', '多元品種齊種', '風格清爽易飲', '大量 Müller-Thurgau', '年輕即飲型', '合理價位，日常佳選'] }
     },
     {
-      type: 'stats',
-    {
       type: 'germany-region-map',
       title: 'Rheinhessen 產區地圖',
       description: '德國最大產區（27,000 公頃）——Mainz 至 Worms 之間廣闊丘陵地帶的範圍',
       mapRegion: 'rheinhessen',
       highlightFiles: ['rheinhessen-region.geojson'],
     },
+
+    {
+      type: 'stats',
 
       title: '📊 Rheinhessen 關鍵數據',
       stats: [
@@ -1082,14 +1087,15 @@ export const G2M1L4 = {
       content: 'Nahe 位於 Rheinhessen 西南方，沿那河（Nahe River）延伸，面積約 4,150 公頃。這個產區最特別之處在於地質多樣性——從板岩、石英岩、斑岩（Porphyry）到火山岩，幾乎是德國所有土壤類型的縮影，因此被稱為「土壤博物館」。不同土壤為 Riesling 賦予截然不同的礦物表達：斑岩帶來煙燻胡椒香，石英岩增添鋼鐵礦石感，板岩提供細膩酸度張力。Nahe 的 Riesling 兼具 Mosel 的精緻礦物與 Rheingau 的豐潤深度，是行家公認的隱藏寶藏。'
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: 'Nahe 產區地圖',
       description: 'Rheinhessen 西南方沿那河延伸——「土壤博物館」的地理位置，緊鄰 Mosel 與 Rheingau',
       mapRegion: 'nahe',
       highlightFiles: ['nahe-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '🏆 Nahe 頂級葡萄園',
       items: [
@@ -1172,14 +1178,15 @@ export const G2M2L1 = {
       right: { label: '🌈 Südliche Weinstrasse（多元）', items: ['南部葡萄酒之路', '多元品種：Pinot、Dornfelder', '清爽易飲為主', '觀光產業發達', '平易近人價格', '代表：Friedrich Becker（頂級 Pinot）'] }
     },
     {
-      type: 'stats',
-    {
       type: 'germany-region-map',
       title: 'Pfalz 產區地圖',
       description: '德國第二大產區——Haardt 山脈東側的溫暖葡萄酒帶，北接 Rheinhessen，南鄰阿爾薩斯',
       mapRegion: 'pfalz',
       highlightFiles: ['pfalz-region.geojson'],
     },
+
+    {
+      type: 'stats',
 
       title: '📊 Pfalz 關鍵數據',
       stats: [
@@ -1245,14 +1252,15 @@ export const G2M2L2 = {
       right: { label: '🇨🇭 Markgräflerland（瑞士邊境輕盈）', items: ['接近瑞士Basel，石灰岩土', 'Gutedel（Chasselas）為特色品種', '酒體清爽輕盈', '優雅細緻，酸度明亮', '代表：Ziereisen', '風格接近瑞士與阿爾薩斯'] }
     },
     {
-      type: 'stats',
-    {
       type: 'germany-region-map',
       title: 'Baden 產區地圖',
       description: '德國最南、最長的產區——470 公里從博登湖延伸至 Heidelberg，緊鄰法國阿爾薩斯',
       mapRegion: 'baden',
       highlightFiles: ['baden-freiburg-region.geojson', 'baden-karlsruhe-region.geojson'],
     },
+
+    {
+      type: 'stats',
 
       title: '📊 Baden 關鍵數據',
       stats: [
@@ -1301,14 +1309,15 @@ export const G2M2L3 = {
       content: 'Württemberg 是德國紅酒比例最高的產區，約 70% 的葡萄園種植紅葡萄品種，面積約 11,500 公頃。德國南部城市 Stuttgart（斯圖加特）是這個產區的中心，葡萄園沿內卡河（Neckar River）及其支流蜿蜒延伸。Württemberg 最具地方特色的品種是 Trollinger，這種幾乎只在此地種植的紅葡萄釀出清淡粉紅般的紅酒，是當地人日常飲用的「鄉土酒」。此外，Lemberger（Blaufränkisch）和 Schwarzriesling（Pinot Meunier）也在此有精彩表現，為外地人提供了更令人驚艷的選擇。'
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: 'Württemberg 產區地圖',
       description: '斯圖加特為中心沿內卡河延伸——德國紅酒比例最高的產區（70% 紅葡萄）',
       mapRegion: 'wuerttemberg',
       highlightFiles: ['wuerttemberg-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '🍇 Württemberg 特色葡萄品種',
       items: [
@@ -1380,14 +1389,15 @@ export const G2M2L4 = {
       content: 'Franken（法蘭克）是德國唯一位於巴伐利亞邦（Bavaria）的主要葡萄酒產區，面積約 6,200 公頃。產區中心是歷史名城 Würzburg，美因河（Main River）在此蜿蜒穿過，葡萄園沿河岸起伏分佈。Franken 最具辨識度的特徵有兩項：一是獨特的 Bocksbeutel（公羊睾丸瓶），這種扁圓形玻璃瓶是 Franken 法定使用的瓶型；二是以 Silvaner 為靈魂品種，在貝殼石灰岩（Muschelkalk）土壤上展現出礦物感十足、乾爽飽滿的獨特風格，與德國其他地區的葡萄酒截然不同。'
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: 'Franken 產區地圖',
       description: '巴伐利亞邦的葡萄酒王國——沿美因河蜿蜒，Würzburg 為中心，遠離萊茵河系',
       mapRegion: 'franken',
       highlightFiles: ['franken-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '🍾 Franken 的重要元素',
       items: [
@@ -1453,14 +1463,15 @@ export const G2M3L1 = {
       content: 'Ahr 位於德國萊茵河支流阿爾河（Ahr）的河谷地帶，是德國最小的傳統葡萄酒產區之一，面積僅約 565 公頃。地處北緯 50.5 度，理論上難以讓紅葡萄充分成熟，然而 Ahr 卻以 Spätburgunder（黑皮諾）稱霸德國紅酒界。其秘密在於：陡峭的 V 字型峽谷地形將冷空氣排出，灰瓦岩與板岩吸熱蓄溫，南向坡道捕捉最多陽光，三重優勢造就了 Ahr 酒的優雅細膩——紅莓、丁香、細緻單寧，是德國最精緻的紅酒風格之一。'
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: 'Ahr 產區地圖',
       description: '北緯 50.5° 的 Spätburgunder 聖地——V 字型峽谷阻擋冷風，灰瓦岩蓄熱的地理奇蹟',
       mapRegion: 'ahr',
       highlightFiles: ['ahr-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '🏆 Ahr 頂級葡萄園與代表酒莊',
       items: [
@@ -1527,14 +1538,15 @@ export const G2M3L2 = {
       content: 'Mittelrhein（中萊茵）是德國最小的葡萄酒產區之一，面積僅約 430 公頃。這段萊茵河峽谷——從 Bingen 至 Koblenz——在 2002 年被列為 UNESCO 世界文化遺產。陡峭的岩壁上聳立著數十座中世紀城堡，葡萄園就嵌在其間，坡度高達 45–65 度，景觀壯麗但農作極為費力。泥盆紀板岩（Devonian Slate）是主要土壤，為 Riesling 提供清爽礦物感與高酸張力。Mittelrhein 的 Riesling 以其精瘦清澈、礦石感鮮明著稱，是行家眼中的寶藏。'
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: 'Mittelrhein 產區地圖',
       description: 'Bingen 至 Koblenz 的 UNESCO 世遺峽谷——430 公頃，德國最小且最難耕作的產區',
       mapRegion: 'mittelrhein',
       highlightFiles: ['mittelrhein-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '🌊 Mittelrhein 的特色與挑戰',
       items: [
@@ -1604,14 +1616,15 @@ export const G2M3L3 = {
       content: 'Hessische Bergstrasse（黑森山道）是德國面積最小的官方葡萄酒產區，僅約 455 公頃。「Bergstrasse」意為「山道」，這條古老的貿易道路沿 Odenwald 山脈（奧登瓦爾德）西麓而行，如今葡萄園就分佈於此。這個產區最著名的特色是德國最早到來的春天——每年 2 月底至 3 月初，Bensheim 與 Heppenheim 的杏仁樹（Mandelbaum）率先開花，成為當地的傳統春日節慶。Odenwald 山脈為葡萄園提供天然屏障，使氣溫偏暖，春季回溫特別早，是德國獨特的「春天前哨站」。'
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: 'Hessische Bergstraße 產區地圖',
       description: 'Odenwald 山脈西麓的德國最小官方產區（455 公頃）——鄰近 Rheinhessen 與 Pfalz，德國最早到春天的葡萄酒地帶',
       mapRegion: 'hessische',
       highlightFiles: ['hessische-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '🍇 Hessische Bergstrasse 的特色',
       items: [
@@ -1678,14 +1691,15 @@ export const G2M3L4 = {
       right: { label: '🏞️ Sachsen（薩克森）', items: ['面積約 500 公頃', 'Meißen、Dresden 易北河沿岸', '更北更涼，全歐最北葡萄酒區之一', '土壤：花崗岩、黃土、片岩', '主種：Riesling、Müller-Thurgau、Weißburgunder', '代表：Klaus Zimmerling、Schloss Proschwitz'] }
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: '東德產區地圖',
       description: 'Saale-Unstrut（Naumburg 一帶）與 Sachsen（Dresden 易北河沿岸）——德國最東、最北的葡萄酒前哨陣地',
       mapRegion: 'eastern',
       highlightFiles: ['saale-unstrut-region.geojson', 'sachsen-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '🍇 東德產區的品種與特色',
       items: [
@@ -2385,14 +2399,15 @@ export const G3M2L2 = {
       right: { label: '🏰 Rheingau', items: ['顏色：中等金黃，有光澤', '酒精：11–13%，有分量', '酸度：高但圓潤，較和諧', '酒體：中等豐潤，有質地', '香氣：蜂蜜、桃子、花香', '口感：些微油滑質感，尾韻長'] }
     },
     {
-      type: 'list',
-    {
       type: 'germany-region-map',
       title: 'Mosel vs Rheingau 地理對比',
       description: '摩澤爾河谷（西部蜿蜒）vs 萊茵河轉彎（東部南向）——地理距離約 100 公里，風格天壤之別',
       mapRegion: 'rhineCore',
       highlightFiles: ['mosel-region.geojson', 'rheingau-region.geojson'],
     },
+
+    {
+      type: 'list',
 
       title: '盲品 SOP 四步驟',
       items: [

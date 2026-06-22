@@ -2125,9 +2125,9 @@ const P2M3L3_slides = [
     type: 'map',
     title: 'Lisboa IGP 產區地圖',
     description: '里斯本大都會圈的九個子 DOC——從辛特拉海岸（Colares）到 Torres Vedras，歷史與現代並存',
-    mapRegions: ['Lisboa', 'Bucelas', 'Colares', 'Carcavelos', 'Alenquer', 'Arruda', 'Torres Vedras', 'Lourinhã', 'Óbidos', 'Encostas d'Aire'],
+    mapRegions: ['Lisboa', 'Bucelas', 'Colares', 'Carcavelos', 'Alenquer', 'Arruda', 'Torres Vedras', 'Lourinhã', 'Óbidos', "Encostas d'Aire"],
     geojsonUrl: '/portugal/igp_regions.geojson',
-  },,
+  },
 
   {
     type: 'cover',
