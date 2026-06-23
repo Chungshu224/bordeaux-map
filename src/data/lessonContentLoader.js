@@ -230,6 +230,10 @@ export const lessonModuleLoaders = {
   'ca-l1-2': () => import('./california/ca-l1-2.js'),
   'ca-l1-3': () => import('./california/ca-l1-3.js'),
   'ca-l1-4': () => import('./california/ca-l1-4.js'),
+  'ca-l1-5': () => import('./california/ca-l1-5.js'),
+  'ca-l1-6': () => import('./california/ca-l1-6.js'),
+  'ca-l1-7': () => import('./california/ca-l1-7.js'),
+  'ca-l1-8': () => import('./california/ca-l1-8.js'),
   // California Level 2
   'ca-l2-1': () => import('./california/ca-l2-1.js'),
   'ca-l2-2': () => import('./california/ca-l2-2.js'),
@@ -249,6 +253,13 @@ export const lessonModuleLoaders = {
   'hu-l1-6': () => import('./hungary/hu-l1-6.js'),
   'hu-l1-7': () => import('./hungary/hu-l1-7.js'),
   'hu-l1-8': () => import('./hungary/hu-l1-8.js'),
+  // Hungary Level 2
+  'hu-l2-1': () => import('./hungary/hu-l2-1.js'),
+  'hu-l2-2': () => import('./hungary/hu-l2-2.js'),
+  'hu-l2-3': () => import('./hungary/hu-l2-3.js'),
+  'hu-l2-4': () => import('./hungary/hu-l2-4.js'),
+  'hu-l2-5': () => import('./hungary/hu-l2-5.js'),
+  'hu-l2-6': () => import('./hungary/hu-l2-6.js'),
   // Loire Level 1
   'lo-l1-1': () => import('./loire/lo-l1-1.js'),
   'lo-l1-2': () => import('./loire/lo-l1-2.js'),
@@ -257,6 +268,7 @@ export const lessonModuleLoaders = {
   'lo-l1-5': () => import('./loire/lo-l1-5.js'),
   'lo-l1-6': () => import('./loire/lo-l1-6.js'),
   'lo-l1-7': () => import('./loire/lo-l1-7.js'),
+  'lo-l1-8': () => import('./loire/lo-l1-8.js'),
   // Loire Level 2
   'lo-l2-1': () => import('./loire/lo-l2-1.js'),
   'lo-l2-2': () => import('./loire/lo-l2-2.js'),
@@ -266,6 +278,7 @@ export const lessonModuleLoaders = {
   'lo-l2-6': () => import('./loire/lo-l2-6.js'),
   'lo-l2-7': () => import('./loire/lo-l2-7.js'),
   'lo-l2-8': () => import('./loire/lo-l2-8.js'),
+  'lo-l2-9': () => import('./loire/lo-l2-9.js'),
   // Loire Level 3
   'lo-l3-1': () => import('./loire/lo-l3-1.js'),
   'lo-l3-2': () => import('./loire/lo-l3-2.js'),
@@ -278,6 +291,7 @@ export const lessonModuleLoaders = {
   'lo-l3-9': () => import('./loire/lo-l3-9.js'),
   'lo-l3-10': () => import('./loire/lo-l3-10.js'),
   'lo-l3-11': () => import('./loire/lo-l3-11.js'),
+  'lo-l3-12': () => import('./loire/lo-l3-12.js'),
   // Loire Level 4
   'lo-l4-1': () => import('./loire/lo-l4-1.js'),
   'lo-l4-2': () => import('./loire/lo-l4-2.js'),
@@ -285,6 +299,7 @@ export const lessonModuleLoaders = {
   'lo-l4-4': () => import('./loire/lo-l4-4.js'),
   'lo-l4-5': () => import('./loire/lo-l4-5.js'),
   'lo-l4-6': () => import('./loire/lo-l4-6.js'),
+  'lo-l4-7': () => import('./loire/lo-l4-7.js'),
   // Level 4 (逐步擴充)
   'l4-1': () => import('./lessons/l4-1.js'),
   'l4-2': () => import('./lessons/l4-2.js'),

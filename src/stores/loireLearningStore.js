@@ -34,7 +34,7 @@ export const loireLearningLevels = {
     modules: [
       { id: 'LO1M1', title: '羅亞爾河谷總覽與南特地理', lessonIds: ['lo-l1-1', 'lo-l1-2'] },
       { id: 'LO1M2', title: 'Muscadet 深度探索', lessonIds: ['lo-l1-3', 'lo-l1-4'] },
-      { id: 'LO1M3', title: '品飲實習與 Level 1 評量', lessonIds: ['lo-l1-5', 'lo-l1-6', 'lo-l1-7'] }
+      { id: 'LO1M3', title: '品飲實習與 Level 1 評量', lessonIds: ['lo-l1-6', 'lo-l1-7', 'lo-l1-8'] }
     ],
     lessons: [
       {
@@ -62,22 +62,22 @@ export const loireLearningLevels = {
         duration: 18
       },
       {
-        id: 'lo-l1-5',
-        title: '片岩土壤與海洋性氣候感官訓練',
-        description: '在南特區的片岩與辉绿岩土壤背景下，訓練辨識 Muscadet 特有的碘鹹、青蘋果、酵母麵包等香氣特徵',
-        duration: 20
-      },
-      {
         id: 'lo-l1-6',
-        title: 'Muscadet × 生蠔貝類——高酸度餐搭',
-        description: '探索 Muscadet sur lie 與生蠔、貽貝、海鮮的經典搭配原理，以及為何高酸度白酒是海鮮餐搭的黃金組合',
+        title: '六大子產區深度探索',
+        description: 'Pays Nantais、Anjou-Saumur、Touraine、Centre-Loire、Vallée du Loir、Haut-Poitou 全面解析——從大西洋到法國中央高地的完整葡萄酒旅程',
         duration: 18
       },
       {
         id: 'lo-l1-7',
-        title: 'Level 1 綜合評量',
-        description: '整合南特產區全部知識，完成 Level 1 測驗取得認證，涵蓋 7 個 AOC（PayNantes 全區）',
+        title: '羅亞爾河谷酒款類型與風格全覽',
+        description: '氣泡酒、干白、甜白酒金字塔、紅酒與粉紅酒——羅亞爾河谷是法國唯一能在同一產區提供所有頂級酒款類型的地方',
         duration: 25
+      },
+      {
+        id: 'lo-l1-8',
+        title: '品飲技巧與 Level 1 綜合評量',
+        description: '專業品飲指南、餐酒搭配矩陣，完成 Level 1 測驗取得認證，涵蓋 Pays Nantais 全區 AOC 知識',
+        duration: 30
       }
     ]
   },
@@ -95,11 +95,19 @@ export const loireLearningLevels = {
     keyGrapes: 'Cabernet Franc · Cabernet Sauvignon · Gamay · Côt',
     keyAOC: ['Saumur-Champigny', 'Chinon', 'Bourgueil', 'Anjou-Villages', 'Anjou-Brissac'],
     modules: [
+      { id: 'LO2M0', title: 'Level 2 入門：紅葡萄品種認識', lessonIds: ['lo-l1-5'] },
       { id: 'LO2M1', title: '安茹索米爾紅酒群', lessonIds: ['lo-l2-1', 'lo-l2-2', 'lo-l2-3'] },
       { id: 'LO2M2', title: '都漢 Cabernet Franc 王國', lessonIds: ['lo-l2-4', 'lo-l2-5', 'lo-l2-6'] },
       { id: 'LO2M3', title: '品飲實習與 Level 2 評量', lessonIds: ['lo-l2-7', 'lo-l2-8', 'lo-l2-9'] }
     ],
     lessons: [
+      {
+        id: 'lo-l1-5',
+        title: '羅亞爾河谷紅葡萄品種全解',
+        description: 'Cabernet Franc、Gamay、Côt（Malbec）、Pineau d\'Aunis 四大紅葡萄品種的風土特性、主要產區分布與風格比較',
+        duration: 20,
+        locked: true
+      },
       {
         id: 'lo-l2-1',
         title: 'Tuffeau 地質與氣候過渡帶',

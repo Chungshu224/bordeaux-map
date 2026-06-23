@@ -8,7 +8,7 @@ export const californiaLearningState = reactive({
   completedLessons: [],
   testMode: false,
   userProgress: {
-    level1: { completed: 0, total: 4 },
+    level1: { completed: 0, total: 8 },
     level2: { completed: 0, total: 4 },
     level3: { completed: 0, total: 4 }
   },
@@ -25,7 +25,11 @@ export const californiaLearningLevels = {
       { id: 'CA1M1', title: '1.1 認識加州葡萄酒：歷史與全球地位', lessonIds: ['ca-l1-1'] },
       { id: 'CA1M2', title: '1.2 加州產區地理與氣候', lessonIds: ['ca-l1-2'] },
       { id: 'CA1M3', title: '1.3 Napa Valley 深度探索', lessonIds: ['ca-l1-3'] },
-      { id: 'CA1M4', title: '1.4 Sonoma County 深度探索', lessonIds: ['ca-l1-4'] }
+      { id: 'CA1M4', title: '1.4 Sonoma County 深度探索', lessonIds: ['ca-l1-4'] },
+      { id: 'CA1M5', title: '1.5 Central Coast 深度探索', lessonIds: ['ca-l1-5'] },
+      { id: 'CA1M6', title: '1.6 其他產區全覽', lessonIds: ['ca-l1-6'] },
+      { id: 'CA1M7', title: '1.7 加州主要葡萄品種', lessonIds: ['ca-l1-7'] },
+      { id: 'CA1M8', title: '1.8 Level 1 品飲與綜合評量', lessonIds: ['ca-l1-8'] }
     ],
     lessons: [
       {
@@ -51,6 +55,30 @@ export const californiaLearningLevels = {
         title: 'Sonoma County：19 個 AVA 的多元王國',
         description: 'Russian River Valley 的 Pinot Noir、Dry Creek Valley 的 Zinfandel、Alexander Valley 的 Cabernet，以及 99% 可持續農業認證的環保故事',
         duration: 20
+      },
+      {
+        id: 'ca-l1-5',
+        title: 'Central Coast 深度探索',
+        description: 'Paso Robles 石灰岩與 Rhône 品種、Santa Barbara 橫向山谷 Pinot Noir、Monterey 涼爽海風、Santa Cruz Mountains 的精品小農',
+        duration: 20
+      },
+      {
+        id: 'ca-l1-6',
+        title: '其他產區全覽',
+        description: 'Mendocino 有機先驅、Lake County 高海拔 Sauvignon Blanc、Sierra Foothills Zinfandel 老藤、Central Valley（Lodi）量產精品、Southern CA 海岸酒莊',
+        duration: 18
+      },
+      {
+        id: 'ca-l1-7',
+        title: '加州主要葡萄品種全解',
+        description: 'Cabernet Sauvignon、Chardonnay、Pinot Noir、Zinfandel、Merlot，以及 Syrah、Grenache 等 Rhône 品種在加州的風格表現與最佳產區對應',
+        duration: 20
+      },
+      {
+        id: 'ca-l1-8',
+        title: 'Level 1 品飲指南與綜合評量',
+        description: '加州葡萄酒品飲技巧、餐酒搭配矩陣（Chardonnay × 奶油龍蝦、Zinfandel × BBQ），以及 Level 1 知識總複習測驗',
+        duration: 25
       }
     ]
   },

@@ -240,8 +240,8 @@ const levelData = computed(() => [
     modules: 3,
     lessons: 6,
     progress: levelProgress(2),
-    unlocked: isLevelUnlocked(2),
-    unlockHint: '完成 Level 1 後解鎖'
+    unlocked: isLevelUnlocked(2) && !hungaryLearningLevels.level2?.comingSoon,
+    unlockHint: hungaryLearningLevels.level2?.comingSoon ? '🚧 課程開發中，敬請期待' : '完成 Level 1 後解鎖'
   }
 ])
 
