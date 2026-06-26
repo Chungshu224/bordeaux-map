@@ -145,4 +145,61 @@ export const lessonContent = [
       </div>
     `
   },
+
+  {
+    title: 'Level 2 綜合評量（第一題）',
+    highlights: [
+      { id: 1, icon: '🍖', title: 'Rillettes de Tours', content: 'IGP 認證的都漢豬肉抹醬，質地密實油脂感重，是 Chinon 的傳統配餐' },
+      { id: 2, icon: '⚗️', title: '配對科學', content: '食物配對需要考量酸度、單寧、甜度、香氣四個維度的互動關係' }
+    ],
+    quiz: {
+      question: 'Chinon × Rillettes de Tours 配對成功的最主要原因是？',
+      options: [
+        '單寧豐富，可以包裹並平衡豬肉油脂',
+        'Cabernet Franc 的高酸度有效切割豬肉油脂，柔順單寧不與蛋白質衝突',
+        '低酸度讓油脂感更加圓潤，不產生衝突',
+        '甜度與 Rillettes 的鹽度形成甜鹹互補'
+      ],
+      answer: 1,
+      explanation: 'Cabernet Franc 的高酸度（pH 3.4–3.6）能有效切割 Rillettes 的豐厚油脂，讓每一口喝完後味覺「重置」。同時羅亞爾版 Cabernet Franc 單寧柔順（比波爾多版更低），不會與豬肉蛋白質產生澀口感，兩者形成完美互補。'
+    }
+  },
+
+  {
+    title: 'Level 2 綜合評量（第二題）',
+    highlights: [
+      { id: 1, icon: '🏰', title: '都漢 AOC 系統', content: 'Touraine 旗下包含多個子 AOC，各有品種和風格規定' },
+      { id: 2, icon: '🍇', title: 'Pinot 三兄弟', content: '法國某個 AOC 要求必須同時混釀 Pinot Gris、Pinot Noir、Pinot Meunier 三個 Pinot 品種' }
+    ],
+    quiz: {
+      question: '以下哪個 AOC 規定必須混釀三種 Pinot 品種（Pinot Gris、Pinot Noir、Pinot Meunier）？',
+      options: [
+        'Touraine Rouge',
+        'Touraine-Amboise',
+        'Touraine-Noble-Joué',
+        'Saumur-Champigny'
+      ],
+      answer: 2,
+      explanation: 'Touraine-Noble-Joué 是法國最獨特的 AOC 之一，規定必須混釀 Pinot Gris、Pinot Noir 和 Pinot Meunier 三種 Pinot 品種，比例各有規定，釀出帶有花香和細緻酸度的粉紅酒。這是 Level 2 最需要記憶的特殊規定，也是羅亞爾品種多樣性的最佳代表。'
+    }
+  },
+
+  {
+    title: 'Level 2 綜合評量（第三題）',
+    highlights: [
+      { id: 1, icon: '🌶️', title: 'Pineau d\'Aunis', content: '羅亞爾最獨特的原生紅葡萄品種，幾乎只在支流產區找到' },
+      { id: 2, icon: '👃', title: '香氣辨識', content: '每個品種都有獨特的香氣指紋，是盲品的重要線索' }
+    ],
+    quiz: {
+      question: 'Pineau d\'Aunis 最典型的香氣特徵是？',
+      options: [
+        '熱帶水果（百香果、芒果）與白花香',
+        '黑醋栗、雪松和橡木香料',
+        '白胡椒辛香，伴隨清新紅色漿果',
+        '蜂蜜、橙皮醬和番紅花'
+      ],
+      answer: 2,
+      explanation: 'Pineau d\'Aunis 的標誌性香氣是強烈的白胡椒辛香（而非黑胡椒），伴隨清新的紅色漿果（覆盆子、蔓越莓）。這個品種幾乎只在 Coteaux-du-Loir 和 Coteaux-du-Vendômois 等羅亞爾支流產區找到，是 Level 2 品種辨識的重要考點。'
+    }
+  },
 ]

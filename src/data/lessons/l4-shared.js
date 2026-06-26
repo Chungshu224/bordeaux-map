@@ -2,7 +2,6 @@
 export function makeL4Lesson({ cover, intro, objectives = [], chapters = [], summary, quiz }) {
   const slides = []
   // Cover
-  /*
   slides.push({
     type: 'cover',
     title: cover?.title || 'Level 4 課程',
@@ -10,7 +9,6 @@ export function makeL4Lesson({ cover, intro, objectives = [], chapters = [], sum
     background: cover?.background || 'linear-gradient(135deg, #232526 0%, #414345 100%)',
     icon: cover?.icon || '🎓'
   })
-  */
   // Intro + Objectives (合併為一張投影片)
   if (objectives && objectives.length > 0) {
     slides.push({

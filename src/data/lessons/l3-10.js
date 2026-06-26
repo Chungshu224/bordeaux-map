@@ -1349,7 +1349,18 @@ export const l310Content = [
         </div>
 
       </div>
-    `
+    `,
+    quiz: {
+      question: '根據波爾多配餐的五大核心原則，以下哪個配對違反了「酸度切割油脂」的科學邏輯？',
+      options: [
+        'Sauternes（高甜度）× 鵝肝（高脂肪）',
+        '低酸度、圓潤的 Pomerol Merlot × 奶油醬汁牛排',
+        'Pessac-Léognan Blanc × 奶油炒龍蝦',
+        'Entre-Deux-Mers（清爽白酒）× 生蠔'
+      ],
+      answer: 1,
+      explanation: '低酸度的 Pomerol Merlot 缺乏足夠的酸度來切割奶油醬汁的豐厚油脂，容易造成味覺疲勞。正確配對應選用有足夠酸度的酒款（如 Graves 紅酒或高酸白酒）。Sauternes × 鵝肝是例外——甜酒的糖分能平衡鵝肝的油膩，是波爾多最著名的甜鹹對比配對。'
+    }
   },
 
   // 結束頁
