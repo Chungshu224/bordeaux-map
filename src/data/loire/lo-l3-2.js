@@ -187,6 +187,31 @@ export const lessonContent = [
             <li>16 國 200+ 酒莊定期巡迴展覽</li>
           </ul>
         </div>
+        <div class="history-timeline" style="margin-top:18px;">
+          <h4>📅 Savennières 九百年歷史時間軸</h4>
+          <div class="timeline-container">
+            <div class="timeline-item">
+              <div class="timeline-badge ancient">1106</div>
+              <div class="timeline-content"><strong>🙏 La Roche-aux-Moines 創立</strong><p>Saint-Nicolas 修士在此開墾葡萄園，奠定羅亞爾西側最古老的教會葡萄園之一</p></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge ancient">1130</div>
+              <div class="timeline-content"><strong>🏛️ Coulée de Serrant 創立</strong><p>Cistercian（熙篤會）修士開始種植；歷代受法王 Louis XI 與文豪 Balzac 讚譽，超過 900 年連續種植</p></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge">1984</div>
+              <div class="timeline-content"><strong>🌱 生物動力法革命</strong><p>Nicolas Joly 讀到 Rudolf Steiner 人智學著作，將 Coulée de Serrant 全面轉型，業界視為「瘋狂之舉」</p></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge">1997</div>
+              <div class="timeline-content"><strong>📚 《Wine from Sky to Earth》出版</strong><p>成為全球自然酒與生物動力農業運動的奠基著作，影響力延伸至 DRC、Leflaive 等頂級酒莊</p></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-badge">2000s</div>
+              <div class="timeline-content"><strong>🌍 Renaissance des Appellations 壯大</strong><p>16 國 200+ 酒莊加入，將 Savennières 的生物動力哲學推向全球葡萄酒舞台</p></div>
+            </div>
+          </div>
+        </div>
       </div>
     `,
     quiz: {

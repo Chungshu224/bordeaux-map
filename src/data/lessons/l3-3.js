@@ -201,6 +201,46 @@ export const l33Content = [
         <div style="background:linear-gradient(135deg,#263238,#37474F);border-radius:8px;padding:9px 14px;text-align:center;">
           <span style="color:#fff;font-size:0.79rem;">📌 春霜與熱浪/乾旱是主要極端風險，且頻率正在增加——從「百年一遇」演變為「數年一遇」</span>
         </div>
+        <div style="margin-top:14px;">
+          <div style="font-size:0.78rem;font-weight:700;color:#546E7A;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">🕐 極端年份歷史時間軸</div>
+          <div style="position:relative;padding-left:20px;border-left:3px solid #CFD8DC;">
+            <div style="margin-bottom:10px;position:relative;">
+              <div style="position:absolute;left:-26px;top:2px;width:12px;height:12px;border-radius:50%;background:#B71C1C;border:2px solid #fff;box-shadow:0 0 0 2px #B71C1C;"></div>
+              <span style="font-size:0.78rem;font-weight:700;color:#B71C1C;">1956</span>
+              <span style="font-size:0.74rem;color:#555;margin-left:8px;">世紀大霜凍（-20°C～-24°C）→ Malbec 幾乎消失，Merlot 大幅增加</span>
+            </div>
+            <div style="margin-bottom:10px;position:relative;">
+              <div style="position:absolute;left:-26px;top:2px;width:12px;height:12px;border-radius:50%;background:#880E4F;border:2px solid #fff;box-shadow:0 0 0 2px #880E4F;"></div>
+              <span style="font-size:0.78rem;font-weight:700;color:#880E4F;">1991</span>
+              <span style="font-size:0.74rem;color:#555;margin-left:8px;">春霜（4月20-21日）→ 產量下降 70-80%，霜凍保險業誕生</span>
+            </div>
+            <div style="margin-bottom:10px;position:relative;">
+              <div style="position:absolute;left:-26px;top:2px;width:12px;height:12px;border-radius:50%;background:#E65100;border:2px solid #fff;box-shadow:0 0 0 2px #E65100;"></div>
+              <span style="font-size:0.78rem;font-weight:700;color:#E65100;">2003</span>
+              <span style="font-size:0.74rem;color:#555;margin-left:8px;">極端熱浪（8月 40°C+）→ 氣候變遷警鐘，重新定義「成熟度」</span>
+            </div>
+            <div style="margin-bottom:10px;position:relative;">
+              <div style="position:absolute;left:-26px;top:2px;width:12px;height:12px;border-radius:50%;background:#37474F;border:2px solid #fff;box-shadow:0 0 0 2px #37474F;"></div>
+              <span style="font-size:0.78rem;font-weight:700;color:#37474F;">2013</span>
+              <span style="font-size:0.74rem;color:#555;margin-left:8px;">寒冷多雨年 → 嚴格選果的酒莊出品清新優雅，大者差異顯現</span>
+            </div>
+            <div style="margin-bottom:10px;position:relative;">
+              <div style="position:absolute;left:-26px;top:2px;width:12px;height:12px;border-radius:50%;background:#4A148C;border:2px solid #fff;box-shadow:0 0 0 2px #4A148C;"></div>
+              <span style="font-size:0.78rem;font-weight:700;color:#4A148C;">2017</span>
+              <span style="font-size:0.74rem;color:#555;margin-left:8px;">春霜 + 霜霉病雙重災難 → 損失超 10 億€，暖化反增霜凍脆弱性</span>
+            </div>
+            <div style="margin-bottom:10px;position:relative;">
+              <div style="position:absolute;left:-26px;top:2px;width:12px;height:12px;border-radius:50%;background:#546E7A;border:2px solid #fff;box-shadow:0 0 0 2px #546E7A;"></div>
+              <span style="font-size:0.78rem;font-weight:700;color:#546E7A;">2021</span>
+              <span style="font-size:0.74rem;color:#555;margin-left:8px;">春霜 + 冰雹 + 霜霉三重災 → 連續災難揭示系統性氣候風險升高</span>
+            </div>
+            <div style="position:relative;">
+              <div style="position:absolute;left:-26px;top:2px;width:12px;height:12px;border-radius:50%;background:#BF360C;border:2px solid #fff;box-shadow:0 0 0 2px #BF360C;"></div>
+              <span style="font-size:0.78rem;font-weight:700;color:#BF360C;">2022</span>
+              <span style="font-size:0.74rem;color:#555;margin-left:8px;">史上最熱最乾旱夏季 → 波爾多向地中海氣候轉變的明證，灌溉爭議升溫</span>
+            </div>
+          </div>
+        </div>
       </div>
     `,
     _legacyData: [

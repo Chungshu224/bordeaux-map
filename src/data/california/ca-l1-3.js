@@ -72,6 +72,47 @@ export const lessonContent = [
   },
 
   {
+    title: 'Napa Valley 歷史里程碑',
+    content: `<div class="napa-history">
+      <h3>🕐 從荒野到傳奇：Napa Valley 歷史時間軸</h3>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-badge ancient">1839</div>
+          <div class="timeline-content"><strong>🌿 第一批葡萄藤</strong><p>George Yount 在 Napa Valley 種下第一批葡萄，開啟美洲西海岸葡萄酒種植的歷史</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge ancient">1862</div>
+          <div class="timeline-content"><strong>🏛️ Schramsberg 創立</strong><p>Jacob Schram 創立全加州最古老酒莊之一，110 年後成為尼克森訪華的「外交氣泡酒」</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge ancient">1879</div>
+          <div class="timeline-content"><strong>🏰 Inglenook 創立</strong><p>奠定 Napa Valley 早期國際聲望，後由電影導演 Francis Ford Coppola 購回並復興</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">1966</div>
+          <div class="timeline-content"><strong>🍷 Robert Mondavi 創立酒莊</strong><p>率先在標籤標注葡萄品種，推廣 Fumé Blanc，奠定現代 Napa 葡萄酒工業的基礎</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">1968</div>
+          <div class="timeline-content"><strong>🌾 全美第一農業保護區</strong><p>立法禁止商業開發葡萄農地，是全美農業土地保育的先驅立法</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">1976</div>
+          <div class="timeline-content"><strong>🏆 巴黎評判（Judgment of Paris）</strong><p>Stag's Leap 紅酒、Chateau Montelena 白酒雙冠，震驚法國葡萄酒界，Napa Valley 登上世界舞台</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">1979</div>
+          <div class="timeline-content"><strong>🤝 Opus One 成立</strong><p>Robert Mondavi 與 Mouton-Rothschild 聯手，新舊世界葡萄酒史上最重要的跨洋合作</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-badge">1981</div>
+          <div class="timeline-content"><strong>📜 加州第一個 AVA</strong><p>Napa Valley 獲聯邦政府認定為加州第一個「美國葡萄種植區（AVA）」，確立法規保護地位</p></div>
+        </div>
+      </div>
+    </div>`
+  },
+
+  {
     component: 'CaliforniaRegionMapSlide',
     title: 'Napa Valley 產區地圖',
     componentProps: {
