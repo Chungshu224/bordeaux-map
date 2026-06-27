@@ -70,7 +70,6 @@
               <div class="pi-billing" v-if="p.billing_period">{{ p.billing_period === 'yearly' ? '年繳' : '月繳' }}</div>
               <div class="pi-amount">{{ formatPrice(p.amount) }}</div>
               <button class="enter-btn" v-if="canEnterCourse(p)" @click="enterCourse(p.course_id)">進入課程 →</button>
-              <button class="manage-btn" v-if="normalizedStatus(p) === 'active' && p.stripe_subscription_id" @click="manageSubscription">⚙️ 管理訂閱</button>
             </div>
           </div>
 
@@ -290,37 +289,6 @@ const enterCourse = (courseId) => {
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
-// 管理 Stripe 訂閱
-const manageSubscription = async () => {
-  const userId = authState.user?.id
-  if (!userId) return
-  try {
-    // 帶 JWT，伺服器端以 token 判斷身分（不信任前端 userId）
-    const { supabase } = await import('@/lib/supabaseClient.js')
-    const { data: sessionData } = await supabase.auth.getSession()
-    const accessToken = sessionData?.session?.access_token
-    if (!accessToken) {
-      alert('請先登入')
-      return
-    }
-    const res = await fetch('/api/stripe-portal', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${accessToken}`
-      },
-      body: JSON.stringify({})
-    })
-    const data = await res.json()
-    if (data.portalUrl) {
-      window.location.href = data.portalUrl
-    } else {
-      alert(`無法開啟訂閱管理頁面：${data.message || '請稍後再試'}`)
-    }
-  } catch (err) {
-    alert('請稍後再試')
-  }
-}
 </script>
 
 <style scoped>

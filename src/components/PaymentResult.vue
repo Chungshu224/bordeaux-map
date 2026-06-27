@@ -204,15 +204,7 @@ onMounted(async () => {
     return
   }
 
-  // ── Legacy Stripe flow（session_id）────────────────────────────────────────
-  const sessionId = q.session_id || ''
-  if (sessionId) {
-    type.value    = 'success'
-    tradeNo.value = sessionId.slice(-16)
-    if (supabase) await supabase.auth.refreshSession().catch(() => {})
-  } else {
-    type.value = 'failed'
-  }
+  type.value = 'failed'
   loading.value = false
 })
 

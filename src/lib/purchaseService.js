@@ -1,7 +1,7 @@
 /**
  * purchaseService.js
  * 購買記錄查詢工具（前端只讀）
- * 寫入由後端 webhook（api/stripe-webhook.js）負責
+ * 寫入由後端 webhook（api/ecpay-callback.js）負責
  */
 import { supabase } from './supabaseClient.js'
 
