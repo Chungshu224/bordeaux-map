@@ -109,6 +109,22 @@ export default {
       title: 'Sonoma County: A Diverse Kingdom of 19 AVAs',
       description: 'Russian River Valley Pinot Noir, Dry Creek Valley Zinfandel, Alexander Valley Cabernet, and the eco story of 99% sustainable agriculture certification.',
     },
+    'ca-l1-5': {
+      title: 'Central Coast Wine Regions: From Livermore to Santa Barbara',
+      description: 'Map-based exploration of Central Coast AVA diversity — Livermore Valley Chardonnay, Paso Robles Rhône varieties, Santa Barbara County (immortalized by Sideways), and Santa Cruz Mountains & Monterey County.',
+    },
+    'ca-l1-6': {
+      title: 'Northern California & Beyond: Mendocino, Sierra Foothills, Lodi & More',
+      description: "California's lesser-known regions: pioneering organic vineyards of Mendocino County, volcanic-soil Lake County, Gold Rush-era old vines in Sierra Foothills, and the high-volume Central Valley, Southern CA and Far North.",
+    },
+    'ca-l1-7': {
+      title: "California's Major Grape Varieties: Cabernet, Chardonnay, Pinot Noir & Zinfandel",
+      description: 'Interactive map linking varieties to their ideal regions — Napa Cabernet Sauvignon, Russian River Valley Chardonnay and Pinot Noir, Dry Creek Zinfandel — plus profiles of other key California grapes.',
+    },
+    'ca-l1-8': {
+      title: 'California Wine Tasting, Food Pairing & Level 1 Comprehensive Review',
+      description: 'Master California wine tasting techniques, learn region-based food pairing strategies, then consolidate all Level 1 knowledge with a comprehensive assessment covering history, regions, and varieties.',
+    },
     'ca-l2-1': {
       title: 'Soil & Climate: The Power of Pacific Fog',
       description: 'How the Pacific Fog regulates temperatures and cools Napa & Sonoma; alluvial plains vs volcanic soils and their imprint on grape flavor.',
