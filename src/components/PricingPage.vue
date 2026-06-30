@@ -189,30 +189,47 @@
     </div>
   </div>
 
-  <!-- 功能對比 (卡片式) -->
+  <!-- 功能對比 (表格式) -->
   <div class="compare-section">
     <div class="cs-inner">
       <h2>{{ $t('pricing.compare.title') }}</h2>
       <p class="cs-subtitle">{{ $t('pricing.compare.subtitle') }}</p>
 
-      <div class="feature-cards-grid">
-        <div v-for="f in featureMatrix" :key="f.name" class="feature-card">
-          <div class="fc-name">{{ f.name }}</div>
-          <div class="fc-checks">
-            <div class="fc-check" :class="f.free ? 'included' : 'excluded'">
-              <span>{{ f.free ? '✓' : '✗' }}</span>
-              <span class="fc-tier">{{ $t('pricing.compare.tierFree') }}</span>
-            </div>
-            <div class="fc-check" :class="f.single ? 'included' : 'excluded'">
-              <span>{{ f.single ? '✓' : '✗' }}</span>
-              <span class="fc-tier">{{ $t('pricing.compare.tierSingle') }}</span>
-            </div>
-            <div class="fc-check" :class="f.all ? 'included' : 'excluded'">
-              <span>{{ f.all ? '✓' : '✗' }}</span>
-              <span class="fc-tier">{{ $t('pricing.compare.tierGlobal') }}</span>
-            </div>
-          </div>
-        </div>
+      <div class="ct-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th class="ct-th-feature"></th>
+              <th class="ct-th-tier">
+                <div class="ct-th-name">{{ $t('pricing.compare.tierFree') }}</div>
+                <div class="ct-th-price">NT$ 0</div>
+              </th>
+              <th class="ct-th-tier ct-col-highlight">
+                <div class="ct-th-badge">推薦</div>
+                <div class="ct-th-name">{{ $t('pricing.compare.tierSingle') }}</div>
+                <div class="ct-th-price">NT$ 290<span class="ct-th-unit">/月起</span></div>
+              </th>
+              <th class="ct-th-tier">
+                <div class="ct-th-name">{{ $t('pricing.compare.tierGlobal') }}</div>
+                <div class="ct-th-price">NT$ 690<span class="ct-th-unit">/月起</span></div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ct-row ct-courses-row">
+              <td class="ct-td-feature">{{ $t('pricing.compare.coursesRow') }}</td>
+              <td class="ct-td-cell ct-neutral">波爾多 L1</td>
+              <td class="ct-td-cell ct-col-highlight ct-courses-val">1 個產區 · 全 Level</td>
+              <td class="ct-td-cell ct-courses-val">全部產區</td>
+            </tr>
+            <tr v-for="f in featureMatrix" :key="f.name" class="ct-row">
+              <td class="ct-td-feature">{{ f.name }}</td>
+              <td class="ct-td-cell" :class="f.free ? 'ct-yes' : 'ct-no'">{{ f.free ? '✓' : '—' }}</td>
+              <td class="ct-td-cell ct-col-highlight" :class="f.single ? 'ct-yes' : 'ct-no'">{{ f.single ? '✓' : '—' }}</td>
+              <td class="ct-td-cell" :class="f.all ? 'ct-yes' : 'ct-no'">{{ f.all ? '✓' : '—' }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -654,79 +671,82 @@ async function handleCoursePurchase(courseId) {
   margin: 0 0 40px;
 }
 
-/* 功能比較卡片網格 */
-.feature-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-@media (max-width: 680px) { .feature-cards-grid { grid-template-columns: 1fr; } }
+/* ── 功能對比表格 ──────────────────────────────────────── */
+.ct-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
-.feature-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 18px 16px;
-  transition: all .2s;
-}
-.feature-card:hover { 
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(212,175,55,0.2);
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
 }
 
-.fc-name {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #f0e8d8;
-  margin-bottom: 14px;
-  min-height: 2.4em;
-  display: flex;
-  align-items: flex-start;
+.compare-table thead th {
+  padding: 0 10px 18px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  vertical-align: bottom;
+}
+.ct-th-feature { width: 44%; text-align: left; padding-left: 0; }
+.ct-th-tier    { width: 18.67%; }
+
+.ct-th-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #c8b89a;
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+.ct-th-price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f5f0e8;
+}
+.ct-th-unit { font-size: 0.7rem; color: #9a8878; font-weight: 400; }
+
+.ct-th-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #d4af37, #b8962a);
+  color: #1a0800;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
 }
 
-.fc-checks {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+.ct-col-highlight {
+  background: rgba(212,175,55,0.055);
+  border-left: 1px solid rgba(212,175,55,0.18);
+  border-right: 1px solid rgba(212,175,55,0.18);
 }
+thead .ct-col-highlight { border-top: 2px solid rgba(212,175,55,0.35); }
 
-.fc-check {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
-  min-height: 80px;
+.ct-row {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background 0.15s;
 }
+.ct-row:last-child { border-bottom: none; }
+.ct-row:hover { background: rgba(255,255,255,0.02); }
 
-.fc-check.included {
-  background: rgba(72,187,120,0.08);
-  border-color: rgba(72,187,120,0.2);
+.ct-td-feature {
+  padding: 13px 12px 13px 0;
+  font-size: 0.88rem;
+  color: #d5c5b0;
+  font-weight: 500;
 }
-
-.fc-check.excluded {
-  background: rgba(255,255,255,0.02);
-  border-color: rgba(255,255,255,0.06);
-}
-
-.fc-check span:first-child {
-  font-size: 1.4rem;
+.ct-td-cell {
+  padding: 13px 8px;
+  text-align: center;
+  font-size: 1.15rem;
   font-weight: 700;
 }
+.ct-yes { color: #48bb78; }
+.ct-no  { color: rgba(255,255,255,0.18); font-weight: 400; font-size: 1rem; }
 
-.fc-check.included span:first-child { color: #48bb78; }
-.fc-check.excluded span:first-child { color: #5a4a3a; opacity: 0.5; }
-
-.fc-tier {
-  font-size: 0.73rem;
-  color: #9a8878;
-  font-weight: 600;
-  text-align: center;
-}
+.ct-courses-row .ct-td-feature { color: #9a8878; font-size: 0.82rem; font-style: italic; }
+.ct-neutral   { font-size: 0.75rem; color: #5a4a3a; font-weight: 400; }
+.ct-courses-val { font-size: 0.8rem; font-weight: 600; color: #48bb78; }
 
 /* ── FAQ ─────────────────────────────────────────────────────────────── */
 .faq-section { padding: 56px 24px; background: #0a0204; border-top: 1px solid rgba(255,255,255,0.06); }

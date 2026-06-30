@@ -107,6 +107,7 @@ export default {
     tierFree: 'Free',
     tierSingle: 'Complete',
     tierGlobal: 'Global',
+    coursesRow: 'Regions included',
     features: [
       'Interactive satellite map',
       'Level 1 courses',

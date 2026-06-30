@@ -107,6 +107,7 @@ export default {
     tierFree: '免費',
     tierSingle: '完整版',
     tierGlobal: '通行證',
+    coursesRow: '已收錄產區',
     features: [
       '互動衛星地圖',
       'Level 1 課程',

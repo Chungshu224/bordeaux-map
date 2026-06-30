@@ -107,6 +107,7 @@ export default {
     tierFree: '無料',
     tierSingle: '完全版',
     tierGlobal: 'パス',
+    coursesRow: '収録地域',
     features: [
       'インタラクティブ衛星地図',
       'Level 1 コース',
