@@ -678,6 +678,7 @@ async function handleCoursePurchase(courseId) {
   width: 100%;
   border-collapse: collapse;
   min-width: 500px;
+  background: #0e0406;
 }
 
 .compare-table thead th {
@@ -685,14 +686,15 @@ async function handleCoursePurchase(courseId) {
   text-align: center;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   vertical-align: bottom;
+  background: #0e0406;
 }
 .ct-th-feature { width: 44%; text-align: left; padding-left: 0; }
 .ct-th-tier    { width: 18.67%; }
 
 .ct-th-name {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #c8b89a;
+  color: #e0d0b8;
   margin-bottom: 4px;
   letter-spacing: 0.02em;
 }
@@ -701,7 +703,7 @@ async function handleCoursePurchase(courseId) {
   font-weight: 700;
   color: #f5f0e8;
 }
-.ct-th-unit { font-size: 0.7rem; color: #9a8878; font-weight: 400; }
+.ct-th-unit { font-size: 0.7rem; color: #b0a090; font-weight: 400; }
 
 .ct-th-badge {
   display: inline-block;
@@ -716,11 +718,11 @@ async function handleCoursePurchase(courseId) {
 }
 
 .ct-col-highlight {
-  background: rgba(212,175,55,0.055);
-  border-left: 1px solid rgba(212,175,55,0.18);
-  border-right: 1px solid rgba(212,175,55,0.18);
+  background: rgba(212,175,55,0.1) !important;
+  border-left: 1px solid rgba(212,175,55,0.25);
+  border-right: 1px solid rgba(212,175,55,0.25);
 }
-thead .ct-col-highlight { border-top: 2px solid rgba(212,175,55,0.35); }
+thead .ct-col-highlight { border-top: 2px solid rgba(212,175,55,0.45); }
 
 .ct-row {
   border-bottom: 1px solid rgba(255,255,255,0.05);
