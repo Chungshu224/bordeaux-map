@@ -231,6 +231,7 @@ export default {
     startQuiz: 'Start quiz',
     questionLabel: 'Question {current} / {total}',
     questionNumber: 'Question {n}',
+    multipleHint: '(Multiple choice — select all that apply, then confirm)',
     correctLabel: 'Correct!',
     incorrectLabel: 'Incorrect',
     confirmAnswer: 'Confirm answer',

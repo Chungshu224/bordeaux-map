@@ -226,6 +226,7 @@ export default {
     startQuiz: 'テスト開始',
     questionLabel: '問題 {current} / {total}',
     questionNumber: '第 {n} 問',
+    multipleHint: '（複数選択可。選んだら「回答を確認」を押してください）',
     correctLabel: '正解です！',
     incorrectLabel: '不正解',
     confirmAnswer: '回答を確認',

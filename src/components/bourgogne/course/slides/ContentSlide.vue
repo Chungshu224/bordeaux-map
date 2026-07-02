@@ -2228,6 +2228,23 @@ const formattedContent = computed(() => {
     width: 120px;
     max-height: 200px;
   }
+
+  .image-text-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .image-text-row .image-wrapper {
+    width: auto;
+    align-self: center;
+  }
+  .image-text-row .slide-image {
+    width: auto;
+    max-width: 220px;
+    max-height: 220px;
+  }
+  .image-text-row .key-points {
+    align-self: stretch;
+  }
 }
 
 .image-wrapper:hover .slide-image {

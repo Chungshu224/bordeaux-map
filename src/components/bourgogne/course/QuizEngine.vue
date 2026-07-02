@@ -39,28 +39,30 @@
           <h2>{{ currentQuestion.question }}</h2>
         </div>
 
+        <div v-if="isMultipleType" class="multi-hint">{{ $t('common.quiz.multipleHint') }}</div>
+
         <div class="options">
           <div
             v-for="(option, index) in currentQuestion.options"
             :key="index"
             class="option"
             :class="{
-              selected: selectedAnswer === index,
-              correct: showAnswer && index === currentQuestion.correctAnswer,
-              incorrect: showAnswer && selectedAnswer === index && index !== currentQuestion.correctAnswer
+              selected: isOptionSelected(index),
+              correct: showAnswer && isOptionCorrect(index),
+              incorrect: showAnswer && isOptionSelected(index) && !isOptionCorrect(index)
             }"
             @click="!showAnswer && selectAnswer(index)"
           >
             <div class="option-letter">{{ String.fromCharCode(65 + index) }}</div>
             <div class="option-text">{{ option }}</div>
-            <div v-if="showAnswer && index === currentQuestion.correctAnswer" class="answer-icon">✓</div>
-            <div v-if="showAnswer && selectedAnswer === index && index !== currentQuestion.correctAnswer" class="answer-icon">✗</div>
+            <div v-if="showAnswer && isOptionCorrect(index)" class="answer-icon">✓</div>
+            <div v-if="showAnswer && isOptionSelected(index) && !isOptionCorrect(index)" class="answer-icon">✗</div>
           </div>
         </div>
 
         <div v-if="showAnswer" class="explanation">
           <div class="explanation-header">
-            <span v-if="selectedAnswer === currentQuestion.correctAnswer" class="correct-label">✓ {{ $t('common.quiz.correctLabel') }}</span>
+            <span v-if="lastAnswerCorrect" class="correct-label">✓ {{ $t('common.quiz.correctLabel') }}</span>
             <span v-else class="incorrect-label">✗ {{ $t('common.quiz.incorrectLabel') }}</span>
           </div>
           <p>{{ currentQuestion.explanation }}</p>
@@ -82,7 +84,7 @@
             {{ $t('common.quiz.finishQuiz') }}
           </button>
           <button
-            v-if="!showAnswer && selectedAnswer !== null"
+            v-if="!showAnswer && hasSelection"
             class="submit-btn"
             @click="submitAnswer"
           >
@@ -185,6 +187,7 @@ const emit = defineEmits(['quizComplete', 'reviewLessons', 'continueNext'])
 const quizState = ref('ready') // ready, inProgress, completed
 const currentQuestionIndex = ref(0)
 const selectedAnswer = ref(null)
+const selectedAnswers = ref([])
 const showAnswer = ref(false)
 const answers = ref([])
 const elapsedTime = ref(0)
@@ -193,6 +196,16 @@ const timerInterval = ref(null)
 // 計算屬性
 const currentQuestion = computed(() => {
   return props.quiz.questions[currentQuestionIndex.value]
+})
+
+const isMultipleType = computed(() => currentQuestion.value?.type === 'multiple')
+
+const hasSelection = computed(() => {
+  return isMultipleType.value ? selectedAnswers.value.length > 0 : selectedAnswer.value !== null
+})
+
+const lastAnswerCorrect = computed(() => {
+  return answers.value[answers.value.length - 1]?.correct ?? false
 })
 
 const progressPercentage = computed(() => {
@@ -228,37 +241,67 @@ const startQuiz = () => {
   quizState.value = 'inProgress'
   currentQuestionIndex.value = 0
   selectedAnswer.value = null
+  selectedAnswers.value = []
   showAnswer.value = false
   answers.value = []
   elapsedTime.value = 0
-  
+
   // 開始計時
   timerInterval.value = setInterval(() => {
     elapsedTime.value++
   }, 1000)
 }
 
+const isOptionSelected = (index) => {
+  return isMultipleType.value ? selectedAnswers.value.includes(index) : selectedAnswer.value === index
+}
+
+const isOptionCorrect = (index) => {
+  const correct = currentQuestion.value.correctAnswer
+  return isMultipleType.value ? Array.isArray(correct) && correct.includes(index) : correct === index
+}
+
 const selectAnswer = (index) => {
-  selectedAnswer.value = index
+  if (isMultipleType.value) {
+    const i = selectedAnswers.value.indexOf(index)
+    if (i === -1) selectedAnswers.value.push(index)
+    else selectedAnswers.value.splice(i, 1)
+  } else {
+    selectedAnswer.value = index
+  }
 }
 
 const submitAnswer = () => {
-  if (selectedAnswer.value === null) return
-  
-  const isCorrect = selectedAnswer.value === currentQuestion.value.correctAnswer
+  if (!hasSelection.value) return
+
+  let isCorrect
+  let selected
+
+  if (isMultipleType.value) {
+    const correctSorted = [...(currentQuestion.value.correctAnswer || [])].sort()
+    const chosenSorted = [...selectedAnswers.value].sort()
+    isCorrect = correctSorted.length === chosenSorted.length &&
+      correctSorted.every((v, i) => v === chosenSorted[i])
+    selected = chosenSorted
+  } else {
+    isCorrect = selectedAnswer.value === currentQuestion.value.correctAnswer
+    selected = selectedAnswer.value
+  }
+
   answers.value.push({
     questionId: currentQuestion.value.id,
-    selectedAnswer: selectedAnswer.value,
+    selectedAnswer: selected,
     correctAnswer: currentQuestion.value.correctAnswer,
     correct: isCorrect
   })
-  
+
   showAnswer.value = true
 }
 
 const nextQuestion = () => {
   currentQuestionIndex.value++
   selectedAnswer.value = null
+  selectedAnswers.value = []
   showAnswer.value = false
 }
 
@@ -455,6 +498,13 @@ onUnmounted(() => {
   color: #2c3e50;
   margin: 0;
   line-height: 1.5;
+}
+
+.multi-hint {
+  font-size: 14px;
+  color: #764ba2;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 
 .options {

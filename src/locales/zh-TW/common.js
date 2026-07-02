@@ -259,6 +259,7 @@ export default {
     startQuiz: '開始測驗',
     questionLabel: '題目 {current} / {total}',
     questionNumber: '第 {n} 題',
+    multipleHint: '（可複選，選好後點擊「確認答案」）',
     correctLabel: '回答正確！',
     incorrectLabel: '回答錯誤',
     confirmAnswer: '確認答案',
