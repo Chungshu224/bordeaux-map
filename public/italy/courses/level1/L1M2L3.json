@@ -149,6 +149,30 @@
       ]
     },
     {
+      "type": "image",
+      "title": "🍷 酒標實例：Amarone della Valpolicella DOCG",
+      "image": "/italy/images/labels/veneto/amarone-masi-costasera-2009.jpg",
+      "caption": "Masi Costasera Amarone della Valpolicella DOCG 2009——義大利最強勁紅酒之一，酒標可見 DOCG 分級與 Valpolicella 產區標示。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標實例：Valpolicella Ripasso DOC",
+      "image": "/italy/images/labels/veneto/valpolicella-ripasso-2009.jpg",
+      "caption": "Villa Novare Valpolicella Classico Superiore Ripasso DOC 2009——「窮人的 Amarone」，酒標同時標示 Classico、Superiore、Ripasso 三個術語。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標實例：Soave Classico DOC",
+      "image": "/italy/images/labels/veneto/soave-classico-campagnola.jpg",
+      "caption": "Campagnola Soave Classico——Garganega 老藤白酒，酒標上「Classico」代表傳統核心產區。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標對比：Prosecco DOC vs Prosecco Superiore DOCG",
+      "image": "/italy/images/labels/veneto/prosecco-superiore-docg-conegliano-valdobbiadene.jpg",
+      "caption": "Conegliano Valdobbiadene Prosecco Superiore DOCG——比一般 Prosecco DOC 高一個等級，僅限核心丘陵產區，酒標會明確標示「Conegliano Valdobbiadene」與「DOCG」。"
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

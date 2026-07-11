@@ -28,6 +28,30 @@
       "content": "<div class=\"region-intro\"><p class=\"intro-text\">Level 2 的最後一個維度：搭配不只看食物，也要看場合。同一道料理在不同場合，最佳酒款可能大不相同。</p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🍹 Aperitivo（開胃酒時光）</h3><p class=\"mf-style\">Prosecco / Franciacorta Brut / Vermentino</p><p class=\"mf-prod\">開胃酒不能太飽滿——Prosecco 是義大利 Aperitivo 的靈魂（尤其是 Spritz 文化）。搭配橄欖、薯片、Bruschetta，目的是開胃而非配正餐，輕盈清爽優先。</p></div><div class=\"mf-zone warm\"><h3>🎂 婚宴 / 節慶晚宴</h3><p class=\"mf-style\">開場 Franciacorta → 魚料理 Verdicchio → 主菜 Barolo / Brunello → 甜點 Moscato d'Asti</p><p class=\"mf-prod\">正式多道菜晚宴的配酒邏輯：由淺至深（氣泡→白酒→紅酒→甜酒），酒體遞增，讓每道菜都獲得最佳搭配而不互相干擾。</p></div><div class=\"mf-zone cool\"><h3>💼 商務宴請</h3><p class=\"mf-style\">Pinot Grigio / Soave / 輕型 Chianti</p><p class=\"mf-prod\">商務場合選中性不帶爭議的酒款：避免太強勁（Amarone、Barolo）、太甜（Moscato）或太奇特（橘酒）。優先選大家都認識的「安全牌」，讓酒不搶話題。</p></div><div class=\"mf-zone plain\"><h3>🏡 家庭聚餐（日常）</h3><p class=\"mf-style\">Barbera d'Asti / Valpolicella / Vermentino</p><p class=\"mf-prod\">日常家庭餐桌選高 CP 值、個性鮮明但不誇張的酒款。Barbera 高酸低單寧配任何義大利麵；Vermentino 配海鮮沙拉；Valpolicella 配家常紅肉——輕鬆愉快才是重點。</p></div></div>"
     },
     {
+      "type": "image",
+      "title": "🍷 酒標實例：Prosecco DOC",
+      "image": "/italy/images/labels/veneto/prosecco-doc.jpg",
+      "caption": "Prosecco DOC——Aperitivo 開胃酒文化的靈魂，Charmat 法釀造，清爽果香易飲。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標實例：Franciacorta DOCG",
+      "image": "/italy/images/labels/lombardia/franciacorta-docg-alt.jpg",
+      "caption": "Franciacorta DOCG——義大利版「香檳」，適合全程晚宴與精緻海鮮搭配。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標實例：Vin Santo del Chianti Classico",
+      "image": "/italy/images/labels/toscana/vin-santo-chianti-classico-2005.jpg",
+      "caption": "Castello di Brolio Vin Santo del Chianti Classico 2005——傳統搭配 Cantucci 杏仁脆餅浸酒食用。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標實例：Moscato d'Asti DOCG",
+      "image": "/italy/images/labels/piemonte/moscato-dasti-prunotto-2012.jpg",
+      "caption": "Prunotto Moscato d'Asti DOCG 2012——低酒精微甜氣泡酒，配提拉米蘇是義大利經典甜點搭配。"
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

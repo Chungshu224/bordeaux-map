@@ -54,6 +54,30 @@
       "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利酒標的組合術語和品種標示規則，是選酒時最重要的解讀技巧。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Chianti Classico Gran Selezione</h3><ul><li><strong>創立：</strong>2014 年（Chianti Classico 最高等級）</li><li><strong>要求：</strong>葡萄必須來自<strong>酒莊自有葡萄園</strong></li><li><strong>陳年：</strong>至少 30 個月</li><li><strong>品質目標：</strong>與 Brunello、Barolo 齊名</li><li><strong>代表：</strong>Fontodi, Felsina, Montevertine</li><li><strong>價格：</strong>€40-150</li></ul></div><div class=\"method-card modern\"><h3>品種標示規則</h3><ul><li><strong>單一品種：</strong>酒標標示一個品種→至少 <strong>85%</strong> 該品種</li><li><strong>DOCG 例外：</strong>Brunello di Montalcino 必須 <strong>100%</strong> Sangiovese</li><li><strong>IGT 自由：</strong>可使用 Cabernet, Merlot 等非傳統品種</li><li><strong>常見例子：</strong>Etna Rosso = 80%+ Nerello Mascalese｜Friuli Pinot Grigio = 85%+ Pinot Grigio</li><li><strong>莊園裝瓶：</strong>尋找「Imbottigliato all'origine」代表品質控制更好</li></ul></div></div></div></div>"
     },
     {
+      "type": "image",
+      "title": "🍷 術語實例：Riserva",
+      "image": "/italy/images/labels/toscana/chianti-classico-banfi-riserva-2010.jpg",
+      "caption": "Banfi Riserva Chianti Classico DOCG 2010——酒標明確標示「Riserva」，代表比基本款陳年更久、通常選用更優質葡萄釀造。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 術語實例：Superiore",
+      "image": "/italy/images/labels/piemonte/barbera-dalba-superiore-2010.jpg",
+      "caption": "Papagena Barbera d'Alba Superiore 2010——「Superiore」強調更高酒精度與葡萄成熟度，並非單純指陳年時間。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 術語對比：Prosecco DOC vs Prosecco Superiore DOCG",
+      "image": "/italy/images/labels/veneto/prosecco-superiore-docg-conegliano-valdobbiadene.jpg",
+      "caption": "Conegliano Valdobbiadene Prosecco Superiore DOCG——比一般 Prosecco DOC 高一級，僅限核心丘陵產區，酒精度與品質規範更嚴格。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 術語實例：Metodo Classico",
+      "image": "/italy/images/labels/lombardia/franciacorta-docg-2016.jpg",
+      "caption": "Franciacorta DOCG——採用與香檳相同的瓶中二次發酵傳統法（Metodo Classico），對比 Prosecco 使用的 Charmat 大罐法。"
+    },
+    {
       "type": "list",
       "title": "重點回顧",
       "points": [

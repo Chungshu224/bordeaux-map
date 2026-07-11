@@ -54,6 +54,18 @@
       "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">面對一份包含多種起司的拼盤，或需要在整餐使用單一酒款時，選酒邏輯會有所不同——需要找到「最大公約數」型的酒款。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>🧀 起司拼盤的萬用選酒邏輯</h3><ul><li><strong>首選：不甜但微甜 (Off-dry) 氣泡酒</strong>——如 Franciacorta Extra Brut 或 Prosecco Extra Dry；氣泡能同時對應新鮮與半硬質起司，殘糖足以中和部分鮮味</li><li><strong>備選：中等單寧紅酒</strong>——如 Barbera d'Alba 或 Dolcetto；低單寧不會被鮮味放大，高酸度切割各類起司油脂</li><li><strong>若有藍起司：</strong>先供應干型酒款（搭配其他起司），最後開甜酒配藍起司，視為「壓軸」</li></ul></div><div class=\"method-card modern\"><h3>🥂 氣泡酒作為「全場通用」的邏輯</h3><ul><li><strong>餐前（Aperitivo）：</strong>Prosecco Brut 刺激食慾，搭配橄欖、生火腿、起司脆餅</li><li><strong>頭盤海鮮：</strong>Franciacorta Brut 切割生蠔碘鹽感，氣泡洗刷口腔</li><li><strong>炸物：</strong>氣泡 + 高酸雙重清潔，每一口炸物都像第一口</li><li><strong>輕量起司：</strong>氣泡清潔新鮮莫扎瑞拉、Burrata 的奶脂</li><li>義大利頂級氣泡酒（Franciacorta）的全場通用性是其最大優勢</li></ul></div></div></div></div>"
     },
     {
+      "type": "image",
+      "title": "🍷 酒標實例：Vin Santo del Chianti Classico",
+      "image": "/italy/images/labels/toscana/vin-santo-chianti-classico-2005.jpg",
+      "caption": "Castello di Brolio Vin Santo del Chianti Classico 2005——托斯卡尼在地甜酒文化的代表，傳統搭配 Cantucci 杏仁脆餅。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標實例：Franciacorta DOCG",
+      "image": "/italy/images/labels/lombardia/franciacorta-docg-2016.jpg",
+      "caption": "Franciacorta DOCG——傳統法氣泡酒，適合全程搭配精緻海鮮與生蠔的高端宴席。"
+    },
+    {
       "type": "list",
       "title": "重點回顧",
       "points": [

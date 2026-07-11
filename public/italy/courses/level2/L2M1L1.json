@@ -118,6 +118,12 @@
       "content": "<div class=\"pairing-grid\"><div class=\"pairing-card\"><h4>🍷 Alto Adige Pinot Grigio</h4><ul><li>🐟 烤鱒魚（當地特產）</li><li>🥗 Speck 火腿沙拉</li><li>🧀 山羊起司</li><li>🍝 奶油野菇麵</li></ul></div><div class=\"pairing-card\"><h4>🌸 Gewürztraminer</h4><ul><li>🍛 亞洲料理（泰式、中式）</li><li>🧀 藍紋起司</li><li>🦆 煙燻鴨胸</li><li>🥘 香料燉菜</li></ul></div><div class=\"pairing-card\"><h4>🥂 Trento DOC</h4><ul><li>🦪 生蠔</li><li>🍤 海鮮拼盤</li><li>🧀 Parmigiano-Reggiano</li><li>🍾 慶祝場合開胃酒</li></ul></div><div class=\"pairing-card\"><h4>🍇 Teroldego Rotaliano</h4><ul><li>🍖 Tyrolean 香腸</li><li>🥩 烤牛排</li><li>🍝 肉醬麵</li><li>🧀 陳年起司</li></ul></div></div>"
     },
     {
+      "type": "image",
+      "title": "🍷 酒標實例：Alto Adige DOC",
+      "image": "/italy/images/labels/trentino/alto-adige-lagrein-riserva-2015.jpg",
+      "caption": "Alto Adige DOC Lagrein Riserva 2015——德義雙語文化區的代表酒款，酒標同時可見「Riserva」陳年等級標示。"
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

@@ -118,6 +118,12 @@
       "content": "<div class=\"pairing-section\"><div class=\"pairing-match\"><h4>🌿 Friulano</h4><ul><li>🧀 San Daniele 生火腿（當地特產）</li><li>🐟 烤海鱸魚</li><li>🥗 蘆筍沙拉</li><li>🍝 奶油義大利麵</li></ul></div><div class=\"pairing-match\"><h4>🍇 Ribolla Gialla</h4><ul><li>🦪 生蠔、貝類</li><li>🐟 清蒸魚</li><li>🥗 柑橘沙拉</li><li>🍤 檸檬蝦</li></ul></div><div class=\"pairing-match\"><h4>🧡 橘酒（Orange Wine）</h4><ul><li>🍛 咖哩料理</li><li>🧀 洗浸起司（臭起司）</li><li>🥘 摩洛哥燉菜</li><li>🍖 烤豬肉</li></ul></div><div class=\"pairing-match\"><h4>🍯 Picolit</h4><ul><li>🍰 杏桃塔</li><li>🧀 藍紋起司</li><li>🥜 堅果甜點</li><li>🍫 白巧克力慕斯</li></ul></div></div>"
     },
     {
+      "type": "image",
+      "title": "🍷 酒標實例：Colli Orientali del Friuli DOC",
+      "image": "/italy/images/labels/friuli/colli-orientali-miani-2011.jpg",
+      "caption": "Miani Colli Orientali del Friuli Chardonnay 2011——Friuli 白酒名莊 Miani 的代表作，展現產區白酒的精緻與陳年潛力。"
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

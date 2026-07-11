@@ -124,6 +124,18 @@
       ]
     },
     {
+      "type": "image",
+      "title": "🍷 酒標實例：Barolo DOCG",
+      "image": "/italy/images/labels/piemonte/barolo-parusso-2010.jpg",
+      "caption": "Parusso Mariondino Barolo DOCG 2010——酒標上可見產區名稱「BAROLO」、法定分級「DOCG」與年份，瓶頸貼有國家保證封條。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標實例：Barbaresco DOCG",
+      "image": "/italy/images/labels/piemonte/barbaresco-gaja-2004.jpg",
+      "caption": "Gaja Barbaresco DOCG 2004——Gaja 是將 Barbaresco 推向世界舞台的傳奇酒莊，酒標風格洗鍊，與傳統派 Barolo 酒標形成對比。"
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

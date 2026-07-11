@@ -154,6 +154,24 @@
       ]
     },
     {
+      "type": "image",
+      "title": "🍷 酒標實例：Chianti Classico DOCG",
+      "image": "/italy/images/labels/toscana/chianti-classico-ruffino-riserva-2008.jpg",
+      "caption": "Ruffino Riserva Ducale Chianti Classico DOCG 2008——注意瓶頸的黑公雞（Gallo Nero）標誌與「Riserva」字樣，代表傳統核心產區與陳年等級。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標實例：Brunello di Montalcino DOCG",
+      "image": "/italy/images/labels/toscana/brunello-castello-banfi-2008.jpg",
+      "caption": "Castello Banfi Brunello di Montalcino DOCG 2008——托斯卡納最強勁的 Sangiovese 表現，酒標明確標示 100% Sangiovese 產區規定。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 酒標實例：超級托斯卡納 Tignanello",
+      "image": "/italy/images/labels/toscana/tignanello-supertuscan-igt-2010.jpg",
+      "caption": "Antinori Tignanello——1971 年首創的超級托斯卡納代表作，酒標僅標示「Toscana IGT」而非 DOCG，正是超托打破傳統法規的最佳實例。"
+    },
+    {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [

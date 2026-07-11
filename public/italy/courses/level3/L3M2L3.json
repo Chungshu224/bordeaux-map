@@ -54,6 +54,18 @@
       "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Brunello di Montalcino</h3><p class=\"mf-style\">傳統 vs 現代</p><p class=\"mf-prod\">傳統：Biondi-Santi、Soldera，大桶 5-7 年，優雅高酸，需長陳年，€60-500+ / 現代：Casanova di Neri、Siro Pacenti，法國小桶，果香濃郁，早適飲，€50-250</p></div><div class=\"mf-zone warm\"><h3>Chianti Classico</h3><p class=\"mf-style\">傳統 vs 現代</p><p class=\"mf-prod\">傳統：Montevertine、Badia a Coltibuono，Sangiovese + 白葡萄（歷史配方），輕盈高酸 / 現代：Fontodi、Felsina，100% Sangiovese 或混 Cabernet，濃郁國際化</p></div><div class=\"mf-zone cool\"><h3>Franciacorta DOCG</h3><p class=\"mf-style\">氣泡酒風格分野</p><p class=\"mf-prod\">優雅派：Bellavista、Ca' del Bosco，長時間酵母接觸（36-60 月），細膩礦物複雜 / 果香派：Ferghettina，最低法定陳年（18-24 月），清新易親近</p></div></div></div>"
     },
     {
+      "type": "image",
+      "title": "🍷 風格實例：傳統派 Barolo",
+      "image": "/italy/images/labels/piemonte/barolo-gd-vajra-2006.jpg",
+      "caption": "G.D. Vajra Barolo 2006——以傳統斯洛維尼亞大桶陳年著稱的代表性酒莊，風格路線接近 Giacomo Conterno、Bartolo Mascarello。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 風格實例：現代派 Barolo",
+      "image": "/italy/images/labels/piemonte/barolo-parusso-2010.jpg",
+      "caption": "Parusso Mariondino Barolo 2010——以法國小橡木桶（Barrique）培養見長的現代派酒莊，果香濃郁、單寧較為柔順。"
+    },
+    {
       "type": "list",
       "title": "重點回顧",
       "points": [

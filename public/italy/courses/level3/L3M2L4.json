@@ -54,6 +54,18 @@
       "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🇫🇷 法國 AOC</h3><p class=\"mf-style\">1935 年創立｜最悠久｜AOP > IGP > Vin de France</p><p class=\"mf-prod\">極精確風土劃分（Burgundy Grand Cru 幾公頃）/ Cru 分級（1855 Bordeaux）/ 無強制品質檢測 / 全球最高認知度</p></div><div class=\"mf-zone warm\"><h3>🇪🇸 西班牙 DO</h3><p class=\"mf-style\">DOCa（2個）> DO > VdlT</p><p class=\"mf-prod\">強調陳年時間分級（Crianza/Reserva/Gran Reserva）/ 僅 Rioja 和 Priorat 是 DOCa / 系統較簡單直觀</p></div><div class=\"mf-zone cool\"><h3>🇩🇪 德國 VDP</h3><p class=\"mf-style\">雙重系統：VDP（風土）+ Prädikat（成熟度）</p><p class=\"mf-prod\">Grosse Lage（頂級單一園）/ Kabinett→Spätlese→Auslese→BA→TBA（成熟度分級）/ 最複雜學術化</p></div><div class=\"mf-zone plain\"><h3>🇵🇹 葡萄牙 DOC</h3><p class=\"mf-style\">DOP > IGP｜Douro 1756 年（世界最古老）</p><p class=\"mf-prod\">Port 酒複雜分級（Vintage/LBV/Tawny）/ 傳統較少創新 / 義大利 IGT 提供更多自由度</p></div></div><div class=\"science-note\">歐盟 2009 年統一：DOCG/DOC = PDO（原產地保護），IGT = PGI（地理標示保護）</div></div>"
     },
     {
+      "type": "image",
+      "title": "🍷 分級實例：DOCG",
+      "image": "/italy/images/labels/piemonte/barolo-2013.jpg",
+      "caption": "Barolo DOCG 2013——最高等級，強制每批次化學+感官檢測，瓶頸貼有國家保證封條（Fascetta）。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 分級實例：IGT",
+      "image": "/italy/images/labels/toscana/tignanello-supertuscan-igt-2010.jpg",
+      "caption": "Antinori Tignanello（Toscana IGT）——酒標僅標示 IGT，卻是全球最昂貴的義大利酒之一，正是「DOCG ≠ 品質保證」最好的證明。"
+    },
+    {
       "type": "list",
       "title": "重點回顧",
       "points": [

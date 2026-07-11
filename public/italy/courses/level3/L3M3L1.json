@@ -78,6 +78,18 @@
       "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🏔️ Serralunga d'Alba</h3><p class=\"mf-style\">土壤：Helvetian 石灰岩，排水極佳</p><p class=\"mf-prod\">艱難年份最穩定｜強勁結構風格｜代表：Giacomo Conterno Monfortino</p></div><div class=\"mf-zone warm\"><h3>🌺 La Morra</h3><p class=\"mf-style\">土壤：Tortonian 黏土較多，保水性強</p><p class=\"mf-prod\">溫暖年份表現最佳｜花香優雅風格｜乾旱年份有優勢｜代表：Roberto Voerzio</p></div><div class=\"mf-zone cool\"><h3>🏘️ Barolo Village</h3><p class=\"mf-style\">土壤：混合地質，居中風格</p><p class=\"mf-prod\">均衡年份最能展現特色｜傳統優雅｜代表：Bartolo Mascarello</p></div><div class=\"mf-zone plain\"><h3>⛰️ Monforte d'Alba</h3><p class=\"mf-style\">土壤：混合 Helvetian/Tortonian</p><p class=\"mf-prod\">各年份均表現穩定｜兼具力量與優雅｜代表：Aldo Conterno Granbussia</p></div></div>"
     },
     {
+      "type": "image",
+      "title": "🍷 年份實例：Barolo 1996",
+      "image": "/italy/images/labels/piemonte/barolo-1996.jpg",
+      "caption": "Barolo DOCG 1996——經典年份的實體酒標，可觀察陳年瓶標的色澤變化。"
+    },
+    {
+      "type": "image",
+      "title": "🍷 年份實例：Barolo 2006",
+      "image": "/italy/images/labels/piemonte/barolo-2006-ascheri.jpg",
+      "caption": "Ascheri Sorano Barolo DOCG 2006——中生代年份，對比 1996 與 2013 兩端，展現 Barolo 年份光譜的中間表現。"
+    },
+    {
       "type": "list",
       "title": "重點回顧",
       "points": [
