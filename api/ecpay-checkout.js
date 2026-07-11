@@ -221,7 +221,8 @@ export default async function handler(req, res) {
     return `${n.getFullYear()}/${String(n.getMonth()+1).padStart(2,'0')}/${String(n.getDate()).padStart(2,'0')} ${String(n.getHours()).padStart(2,'0')}:${String(n.getMinutes()).padStart(2,'0')}:${String(n.getSeconds()).padStart(2,'0')}`
   })()
 
-  const itemName = ITEM_NAMES[`${courseId}-${tier}`] || `${courseId} ${tier}`
+  const billingLabel = billingPeriod === 'yearly' ? '年繳365日' : '月繳30日'
+  const itemName = `${ITEM_NAMES[`${courseId}-${tier}`] || `${courseId} ${tier}`}（${billingLabel}）`
 
   const params = {
     MerchantID:          merchantId,
