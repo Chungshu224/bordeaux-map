@@ -152,6 +152,7 @@
           <button class="checkout-btn" :disabled="checkoutDisabled" @click="startCheckout">
             {{ checkoutLoading ? '建立綠界訂單中...' : checkoutButtonText }}
           </button>
+          <p class="checkout-redirect-note">點擊後請耐心等待 5–10 秒，系統將自動導向綠界付款頁面，請勿重複點擊或關閉視窗。</p>
         </section>
       </div>
     </div>
@@ -671,5 +672,13 @@ async function startCheckout() {
 .checkout-btn:disabled {
   opacity: 0.45;
   cursor: not-allowed;
+}
+
+.checkout-redirect-note {
+  margin: 8px 0 0;
+  font-size: 0.76rem;
+  color: #b8a690;
+  text-align: center;
+  line-height: 1.5;
 }
 </style>
