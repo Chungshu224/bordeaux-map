@@ -67,6 +67,12 @@
     },
     {
       "type": "image",
+      "title": "🍷 術語實例：Gran Selezione",
+      "image": "/italy/images/labels/toscana/chianti-classico-fonterutoli-gran-selezione-2013.jpg",
+      "caption": "Castello Fonterutoli Chianti Classico Gran Selezione DOCG 2013（Mazzei 酒莊）——Chianti Classico 最高等級，葡萄須來自酒莊自有葡萄園，陳年至少 30 個月。"
+    },
+    {
+      "type": "image",
       "title": "🍷 術語對比：Prosecco DOC vs Prosecco Superiore DOCG",
       "image": "/italy/images/labels/veneto/prosecco-superiore-docg-conegliano-valdobbiadene.jpg",
       "caption": "Conegliano Valdobbiadene Prosecco Superiore DOCG——比一般 Prosecco DOC 高一級，僅限核心丘陵產區，酒精度與品質規範更嚴格。"

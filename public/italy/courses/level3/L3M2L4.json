@@ -61,6 +61,12 @@
     },
     {
       "type": "image",
+      "title": "🔐 Fascetta 封條特寫",
+      "image": "/italy/images/reference/fascetta-doc-docg-tricolore.jpg",
+      "caption": "國家保證封條特寫：上方金色為 DOCG 封條，下方藍色為 DOC 封條——皆含唯一序號與義大利國徽，DOCG 封條為 DOC 所沒有的獨有標識。"
+    },
+    {
+      "type": "image",
       "title": "🍷 分級實例：IGT",
       "image": "/italy/images/labels/toscana/tignanello-supertuscan-igt-2010.jpg",
       "caption": "Antinori Tignanello（Toscana IGT）——酒標僅標示 IGT，卻是全球最昂貴的義大利酒之一，正是「DOCG ≠ 品質保證」最好的證明。"
