@@ -75,6 +75,11 @@
           </div>
         </template>
 
+        <!-- 酒標圖片投影片 -->
+        <template v-else-if="currentSlideData.type === 'image'">
+          <ImageSlide :slide="currentSlideData" />
+        </template>
+
         <!-- 圖表比較投影片 -->
         <template v-else-if="currentSlideData.type === 'compare'">
           <div class="slide-compare-card">
@@ -208,6 +213,7 @@ import RiojaAgingSlide from './slides/RiojaAgingSlide.vue'
 import SpainRegionsOverviewSlide from './slides/SpainRegionsOverviewSlide.vue'
 import SherrySoleraSlide from './slides/SherrySoleraSlide.vue'
 import CavaQualityTiersSlide from './slides/CavaQualityTiersSlide.vue'
+import ImageSlide from '../../bourgogne/course/slides/ImageSlide.vue'
 import WineGlossary from '../../WineGlossary.vue'
 
 const props = defineProps({

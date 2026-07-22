@@ -256,6 +256,18 @@ const S1M2L2_slides = [
     description: '點選 Joven / Crianza / Reserva / Gran Reserva 查看完整陳年規範（紅/白/粉紅葡萄酒桶月數 + 瓶中月數）、典型風味變化、建議酒款及「美國橡木 vs 法國橡木」的關鍵差異。',
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Joven（新酒）',
+    image: '/spain/images/labels/rioja/puelles-joven.jpg',
+    caption: 'Puelles Rioja Joven——酒標直接標示「Joven」，無陳年時間規定，強調新鮮果味，是最年輕、最平易近人的等級。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Gran Reserva（最高等級）',
+    image: '/spain/images/labels/rioja/rioja-bordon-gran-reserva-1999.jpg',
+    caption: 'Rioja Bordón Gran Reserva 1999（Bodegas Franco-Españolas，1890 年創立）——紅酒需陳年至少 5 年（含 18 個月橡木桶），是陳年最久、最傳統的等級。',
+  },
+  {
     type: 'quiz',
     question: 'Rioja 的 Gran Reserva 紅酒，最短需要多少年的總陳年時間（橡木桶 + 瓶中）？',
     options: ['2 年', '3 年', '5 年', '7 年'],
@@ -440,6 +452,18 @@ const S1M4L1_slides = [
         color: '#e67e22',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Rioja Alta 傳統派',
+    image: '/spain/images/labels/rioja/lopez-de-heredia-tondonia-reserva-2004.jpg',
+    caption: 'R. López de Heredia「Viña Tondonia」Reserva 2004（Haro，創立於 1877 年）——Rioja Alta 最具代表性的傳統酒莊，堅持大橡木桶長期陳年的古典風格。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Rioja Alavesa 現代派',
+    image: '/spain/images/labels/rioja/ysios-reserva-2007.jpg',
+    caption: 'Bodegas Ysios Reserva 2007（Rioja Alavesa，Santiago Calatrava 設計酒莊建築）——代表 Rioja Alavesa 現代化、國際化的一面，與 Rioja Alta 的傳統風格形成鮮明對比。',
   },
   {
     type: 'content',
@@ -771,6 +795,12 @@ const S1M2L3_slides = [
         <li><strong>「Vino de la Tierra」</strong>：類似法國 IGP，地理指示餐酒，有時品質超過 DO 等級</li>
       </ul>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：完整標示範例',
+    image: '/spain/images/labels/ribera-del-duero/pagos-de-valcerracin-crianza-2015.jpg',
+    caption: 'Pagos de Valcerracín「Crianza」2015，Ribera del Duero D.O.——一次看齊本文六大關鍵資訊：酒莊名稱、年份、產區（Ribera del Duero Denominación de Origen）、陳年等級（Crianza）與「Producto de España」產地標示。',
   },
   {
     type: 'quiz',
@@ -1310,6 +1340,24 @@ const S1M4L2_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：CVNE Imperial（傳統派）',
+    image: '/spain/images/labels/rioja/cvne-imperial-reserva-2009.jpg',
+    caption: 'CVNE「Imperial」Reserva 2009——Haro 歷史名莊 CVNE 的傳統精品系列，代表美國橡木長陳的古典 Rioja 風格。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Marqués de Murrieta（傳統派）',
+    image: '/spain/images/labels/rioja/marques-de-murrieta-ygay-gran-reserva-1998.jpg',
+    caption: 'Marqués de Murrieta「Ygay」Gran Reserva 1998——1852 年創立，是 Rioja 傳統派最具代表性的家族酒莊之一。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Contino（車庫酒／單一葡萄園）',
+    image: '/spain/images/labels/rioja/contino-reserva-2006.jpg',
+    caption: 'Contino Reserva 2006（Single Vineyard，Laguardia-Laserna）——強調單一葡萄園的車庫酒代表，酒標明確標示「Single Vineyard」與裝瓶編號。',
+  },
+  {
     type: 'quiz',
     question: '關於 DOCa Rioja 的陳年分類，下列哪項最正確？',
     options: [
@@ -1494,6 +1542,12 @@ const S2M1L1_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Vega Sicilia Único',
+    image: '/spain/images/labels/ribera-del-duero/vega-sicilia-unico-2009.jpg',
+    caption: 'Vega Sicilia「Único」2009——西班牙最傳奇的頂級酒莊旗艦款，只在最佳年份出廠，是 Ribera del Duero 陳年潛力的最高象徵。',
+  },
+  {
     type: 'content',
     icon: '🏛️',
     title: 'Ribera del Duero：產業現況與葡萄酒旅遊',
@@ -1637,6 +1691,12 @@ const S2M1L2_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Rueda Verdejo',
+    image: '/spain/images/labels/rueda/basa-blanco-2011.jpg',
+    caption: 'Telmo Rodríguez「Basa」Blanco Rueda 2011——當代西班牙釀酒師 Telmo Rodríguez 詮釋的老藤 Verdejo，展現產區草本、白桃與微苦尾韻的典型風格。',
+  },
+  {
     type: 'quiz',
     question: 'DO Rueda 的標誌性土壤「Cascajosos」，哪項最準確描述其特性？',
     options: [
@@ -1748,6 +1808,12 @@ const S2M1L3_slides = [
         <li><strong>醒酒</strong>：無需醒酒；陳年潛力 <strong>3–5 年</strong></li>
       </ul>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Bierzo Mencía',
+    image: '/spain/images/labels/bierzo/enedina-villafranca.jpg',
+    caption: 'Raúl Pérez「Enedina」Viñedos Viejos del Bierzo（Villafranca del Bierzo）——Raúl Pérez 是繼 Descendientes de J. Palacios 之後另一位帶動 Bierzo 老藤復興的關鍵釀酒師。',
   },
   {
     type: 'quiz',
@@ -1881,6 +1947,12 @@ const S2M1L4_slides = [
         <li><strong>現代</strong>：回歸本土品種，Viura 白酒、Garnacha 紅酒與 Rosado 三足鼎立，多元化定位穩固</li>
       </ul>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Navarra 國際品種紅酒',
+    image: '/spain/images/labels/navarra/magana-dignus-2007.jpg',
+    caption: 'Bodega Viña Magaña「Dignus」Navarra 2007——以 Cabernet Sauvignon/Merlot 為主的波爾多式混釀，正是 1980 年代 EVENA 推動國際品種實驗以來的成果代表。',
   },
   {
     type: 'quiz',
@@ -3100,6 +3172,18 @@ const S2M2L1_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Paco & Lola Albariño',
+    image: '/spain/images/labels/rias-baixas/paco-lola-no12.jpg',
+    caption: 'Paco & Lola「Nº12」Albariño Rías Baixas D.O.——以波爾卡圓點酒標聞名國際，是 Val do Salnés 最具辨識度的主流品牌之一。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Zárate（老藤精品）',
+    image: '/spain/images/labels/rias-baixas/zarate-albarino.jpg',
+    caption: 'Zárate Albariño（Val do Salnés）——Eulogio Pomares 主理的老藤精品酒莊，展現 Albariño 更具深度與陳年潛力的一面。',
+  },
+  {
     type: 'quiz',
     question: 'Rías Baixas 的 Albariño 使用「Pergola（棚架式）」種植系統的主要原因是什麼？',
     options: [
@@ -3283,6 +3367,12 @@ const S2M2L2_slides = [
       <h4>💡 Treixadura（Ribeiro 的旗艦品種）</h4>
       <p>Ribeiro 的代表白品種，被譽為「萊貝羅葡萄園的瑰寶」。精緻花香、桃子、杏桃與淡淡香脂（balsamic）氣息，質地圓潤滑順。通常以 Treixadura 為主體，混釀 Albariño、Godello、Loureira，增添複雜度與平衡感（酒精 12–13.5%）。</p>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Valdeorras Godello',
+    image: '/spain/images/labels/valdeorras/gaba-do-xil-godello-2011.jpg',
+    caption: 'Telmo Rodríguez「Gaba do Xil」Godello 2011（Valdeorras）——當代西班牙釀酒師詮釋下的 Godello，展現白桃、蜂蠟與礦石骨架的產區典型風格。',
   },
   {
     type: 'content',
@@ -3641,6 +3731,18 @@ const S2M3L1_slides = [
     ],
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Cims de Porrera（老藤 Carignan）',
+    image: '/spain/images/labels/priorat/cims-de-porrera-classic-2000.jpg',
+    caption: 'Cims de Porrera「Clàssic」2000——由 Porrera 村農業合作社百年老藤釀成的 100% Carignan（Mazuelo），正是本文提到的頂級酒莊之一。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Priorat DOQ 一般款',
+    image: '/spain/images/labels/priorat/costers-del-prior-2010.jpg',
+    caption: 'Costers del Prior Priorat DOQ 2010——酒標標示「Denominació d\'Origen Qualificada」加泰語，對應本文提到的 DOCa／DOQ 最高等級認證。',
+  },
+  {
     type: 'quiz',
     question: '關於 Priorat 的土壤特性，以下哪項描述最為準確？',
     options: [
@@ -3808,6 +3910,12 @@ const S2M3L3_slides = [
         </div>
       </div>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Jean León（現代化先驅酒莊）',
+    image: '/spain/images/labels/penedes/jean-leon-vinya-palau.jpg',
+    caption: 'Jean León「Vinya Palau」（Torrelavit，Penedès DO）——與 Torres 家族齊名的另一位現代化先驅，1963 年率先在西班牙種植 Cabernet Sauvignon，是 Penedès 品種試驗精神的代表酒莊。',
   },
   {
     type: 'quiz',
@@ -4306,6 +4414,18 @@ const S2M3L7_slides = [
         color: '#4a148c',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Llebre（Tomàs Cusiné）',
+    image: '/spain/images/labels/costers-del-segre/llebre-2016.jpg',
+    caption: 'Tomàs Cusiné「Llebre」2016（El Vilosell，Costers del Segre）——酒名「Llebre」在加泰語意為「野兔」，呼應本地品種 Ull de Llebre（字面意為「兔子的眼睛」，即 Tempranillo 在加泰羅尼亞的名稱）。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Celistia（Costers del Sió）',
+    image: '/spain/images/labels/costers-del-segre/celistia-tierra.jpg',
+    caption: 'Celistia Tierra Costers del Sió（Lleida/Catalunya，D.O. Costers del Segre）——展現產區內部各分散小區塊的風土多樣性。',
   },
   {
     type: 'quiz',
@@ -4899,6 +5019,18 @@ const S2M4L1_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Fino（Equipo Navazos）',
+    image: '/spain/images/labels/jerez/la-bota-de-fino-35.jpg',
+    caption: '「La Bota de Fino」No. 35（Equipo Navazos，Jerez，2012 年 Saca）——當代最受評論家推崇的 Sherry 精選裝瓶系列，每批（Saca）皆有編號，是 Fino 愛好者的收藏標的。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Manzanilla',
+    image: '/spain/images/labels/jerez/el-gallo-azul-manzanilla.jpg',
+    caption: 'El Gallo Azul Manzanilla（D.O. Manzanilla-Sanlúcar de Barrameda）——只能在 Sanlúcar de Barrameda 鎮生產的 Fino 家族成員，海洋鹽漬感是其招牌特徵。',
+  },
+  {
     type: 'quiz',
     question: '在 Sherry 釀造中，為什麼 Fino 的基酒酒精只加到 15%，而 Oloroso 要加到 17% 以上？',
     options: [
@@ -5039,6 +5171,12 @@ const S2M4L3_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：老藤 Bobal',
+    image: '/spain/images/labels/utiel-requena/senorio-de-iniesta-bobal.jpg',
+    caption: 'Señorío de Iniesta「Bobal」（Unión Campesina Iniestense 合作社，Iniesta-Cuenca）——酒標標示「60 年以上老藤特選」，來自 Bobal 產區鄰近的 Vino de la Tierra de Castilla，印證老藤精品化浪潮已擴及周邊地區。',
+  },
+  {
     type: 'quiz',
     question: 'Bobal 是西班牙種植面積第幾大的品種？它長期被低估的主要原因是什麼？',
     options: [
@@ -5133,6 +5271,12 @@ const S2M4L4_slides = [
         <li><strong>Listán Negro</strong>：輕盈紅果、香料、低單寧</li>
       </ul>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Tenerife 火山老藤',
+    image: '/spain/images/labels/canarias/7-fuentes-2018.jpg',
+    caption: '「7 Fuentes」2018（Valle de la Orotava DO，Tenerife）——由知名自然酒團隊 Envínate 釀造，展現特內里費火山土壤古藤葡萄的獨特風味。',
   },
   {
     type: 'quiz',
@@ -5340,6 +5484,12 @@ const S2M4L6_slides = [
         color: '#f9a825',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Campo de Borja Garnacha 混釀',
+    image: '/spain/images/labels/campo-de-borja/grunon-garnacha-shiraz-2017.jpg',
+    caption: '「Gruñón」Garnacha & Shiraz 2017（Locos por el Vino，Campo de Borja D.O.）——以老藤 Garnacha 為基底，混入國際品種 Shiraz，酒精度達 15.5%，展現大陸型氣候下的濃郁飽滿風格。',
   },
   {
     type: 'quiz',
@@ -5553,6 +5703,18 @@ const S2M4L8_slides = [
         color: '#f57f17',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Enate Tempranillo',
+    image: '/spain/images/labels/somontano/enate-tempranillo-2019.jpg',
+    caption: 'Enate Tempranillo 2019（Somontano DO）——Enate 是 Somontano 最具國際知名度的酒莊之一，酒標以當代藝術家作品聞名（此款出自畫家 Pepe Cerdá 之手）。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：國際品種混釀',
+    image: '/spain/images/labels/somontano/iberis-sevil-2007.jpg',
+    caption: 'Íberis「Sevil」2007（Somontano DO）——Merlot 與 Cabernet Sauvignon 混釀，法國橡木桶陳年 18 個月，展現本文提到的國際品種在此地的優異表現。',
   },
   {
     type: 'quiz',
@@ -5837,6 +5999,18 @@ const S3M1L2_slides = [
     ],
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：傳統派 López de Heredia',
+    image: '/spain/images/labels/rioja/lopez-de-heredia-tondonia-reserva-2004.jpg',
+    caption: 'R. López de Heredia「Viña Tondonia」Reserva 2004——酒標本身即是傳統派的活教材，設計自 1877 年創廠以來幾乎未變。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：現代派 Ysios',
+    image: '/spain/images/labels/rioja/ysios-reserva-2007.jpg',
+    caption: 'Bodegas Ysios Reserva 2007——建築師 Santiago Calatrava 設計酒莊，酒標的現代金屬感設計與 López de Heredia 的古典風格形成強烈視覺對比。',
+  },
+  {
     type: 'quiz',
     question: '以下哪個描述正確反映「傳統 Rioja」風格的特徵？',
     options: [
@@ -6044,6 +6218,12 @@ const S3M2L1_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Método Tradicional',
+    image: '/spain/images/labels/cava/bonaval-metodo-tradicional.jpg',
+    caption: 'Bodegas Bonaval「Cava」Método Tradicional——酒標直接標明「Método Tradicional」字樣，是辨識瓶中二次發酵工藝最直接的線索。',
+  },
+  {
     type: 'quiz',
     question: '在傳統法釀造中，「酒泥陳年（Lees Aging）」產生的主要香氣化合物是什麼？表現為哪類風味？',
     options: [
@@ -6242,6 +6422,18 @@ const S3M2L4_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Gramona III Lustros',
+    image: '/spain/images/labels/corpinnat/gramona-iii-lustros-2012.png',
+    caption: 'Gramona「III Lustros」Finca Font de Jui 2012——Corpinnat 創始八家酒莊之一，「III Lustros」意為「三個五年」，指裝瓶前需經 15 年酒窖規劃陳年。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Recaredo L\'Infinit',
+    image: '/spain/images/labels/corpinnat/recaredo-linfinit-brut-nature-2023.jpg',
+    caption: 'Recaredo「L\'Infinit」Brut Nature 2023——另一家 Corpinnat 創始酒莊，酒標標示「Crianza con Tapón de Corcho y \'Degorjat\' Manual」，強調人工搖瓶除渣的手工工藝。',
+  },
+  {
     type: 'quiz',
     question: 'Corpinnat 脫離 Cava DO 的主要原因是什麼？',
     options: [
@@ -6399,6 +6591,24 @@ const S3M3L3_slides = [
     ],
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Fino',
+    image: '/spain/images/labels/jerez/la-bota-de-fino-35.jpg',
+    caption: '「La Bota de Fino」No. 35（Equipo Navazos）——標示「Saca」（裝瓶批次）與年份，是理解 Sherry 非年份、批次導向裝瓶邏輯的最佳範例。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Manzanilla',
+    image: '/spain/images/labels/jerez/el-gallo-azul-manzanilla.jpg',
+    caption: 'El Gallo Azul Manzanilla（D.O. Manzanilla-Sanlúcar de Barrameda）——酒標明確標示只能在 Sanlúcar 生產的產區限定規範。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Pedro Ximénez（PX）',
+    image: '/spain/images/labels/montilla-moriles/toro-albala-don-px-2010.jpg',
+    caption: 'Toro Albalá「Don PX」Pedro Ximénez Vino Dulce Natural 2010——酒標說明「未過濾、可能有沉澱」，正是天然甜型酒的真實風貌。',
+  },
+  {
     type: 'quiz',
     question: '「Palo Cortado」被稱為 Sherry 中最神秘的風格，它是怎麼形成的？',
     options: [
@@ -6528,6 +6738,18 @@ const S3M4L1_slides = [
       <h4 style="margin-top:12px">🫂 Montilla-Moriles PX 的特別之處</h4>
       <p>日曬（Pasificación）後的 PX 葡萄含殘糖極高（> 400g/L 的葡萄汁），發酵被早期酒精終止，最終酒款殘糖通常超過 300g/L。是全球幾乎最甜的非冰酒葡萄酒。</p>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Don PX（Toro Albalá）',
+    image: '/spain/images/labels/montilla-moriles/toro-albala-don-px-2010.jpg',
+    caption: 'Toro Albalá「Don PX」Pedro Ximénez Vino Dulce Natural 2010（Bodegas desde 1922）——Montilla-Moriles 最具代表性的 PX 甜酒酒莊之一。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Montilla Fino（Toro Albalá）',
+    image: '/spain/images/labels/montilla-moriles/toro-albala-electrico-fino.jpg',
+    caption: 'Toro Albalá「Eléctrico」Fino del Lagar，D.O. Montilla-Moriles——同一酒莊的 Fino 風格款，印證本文提到「Montilla Fino」的存在。',
   },
   {
     type: 'quiz',
@@ -7560,6 +7782,24 @@ const S4M3L1_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Vega Sicilia Único（年份款）',
+    image: '/spain/images/labels/ribera-del-duero/vega-sicilia-unico-1999.jpg',
+    caption: 'Vega Sicilia「Único」1999——標準年份款，酒標記錄了 1927-1930 年間三次國際金牌的歷史榮譽。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Único Reserva Especial（多年份混調）',
+    image: '/spain/images/labels/ribera-del-duero/vega-sicilia-unico-reserva-especial.jpg',
+    caption: 'Vega Sicilia「Único」Reserva Especial——酒標明確標示混合 1991、1994、1999 三個年份的酒液，正是本文提到的「非年份混調」風格。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Alión（Vega Sicilia 的現代分支）',
+    image: '/spain/images/labels/ribera-del-duero/alion-2003.jpg',
+    caption: 'Bodegas y Viñedos Alión 2003——Vega Sicilia 於 1991 年創立的現代化姊妹酒莊，100% Tinto Fino，法國新桶，風格較 Único 更聚焦於果味與結構。',
+  },
+  {
     type: 'quiz',
     question: 'Vega Sicilia Único 的旗艦紅酒混調中，除了 Tinto Fino（Tempranillo）之外，主要的輔助品種是什麼？',
     options: ['Garnacha', 'Cabernet Sauvignon', 'Monastrell', 'Mencía'],
@@ -7617,6 +7857,18 @@ const S4M3L2_slides = [
       <h4>🏆 Álvaro Palacios — L'Ermita</h4>
       <p>L'Ermita（意為「隱修院」）是一塊面積僅 5 公頃的小山丘地塊，種植著 1900 年前後種下的 <strong>100+ 年老藤 Garnacha</strong>。每瓶售價超過 600 歐元（好年份更高），是西班牙二手市場最受追捧的酒款之一。</p>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Clos Mogador',
+    image: '/spain/images/labels/priorat/clos-mogador.png',
+    caption: 'Clos Mogador（René Barbier，Gratallops）——酒標標示「Vi de Finca Qualificada」（VFQ，加泰羅尼亞最高單一莊園分級）與「Vinyes en Propietat: Isabelle i René Barbier」，正是本文提到 1989 年 Priorat 復興先驅的旗艦酒款。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：L\'Ermita',
+    image: '/spain/images/labels/priorat/lermita.jpg',
+    caption: 'Álvaro Palacios「L\'Ermita」（Priorat DOCa，Gran Vino de Guarda）——酒標標示「Velles Vinyes」（老藤），正是本文提到 5 公頃、1900 年前後種下的百年老藤 Garnacha 地塊，西班牙最貴的酒款之一。',
   },
   {
     type: 'quiz',
@@ -7680,6 +7932,24 @@ const S4M3L3_slides = [
         color: '#e67e22',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Viña Tondonia',
+    image: '/spain/images/labels/rioja/lopez-de-heredia-tondonia-reserva-2004.jpg',
+    caption: 'R. López de Heredia「Viña Tondonia」Reserva 2004（Haro，創立於 1877 年）——酒標仍保留 1877 年建廠時的古典設計，是傳統主義最純粹的象徵。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Viña Bosconia',
+    image: '/spain/images/labels/rioja/lopez-de-heredia-bosconia-reserva-2006.jpg',
+    caption: 'R. López de Heredia「Viña Bosconia」Reserva 2006——同一酒莊的另一單一葡萄園，風格比 Tondonia 更多果香與結構，展現 López de Heredia 對地塊差異的堅持。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Marqués de Murrieta Ygay',
+    image: '/spain/images/labels/rioja/marques-de-murrieta-ygay-gran-reserva-1998.jpg',
+    caption: 'Marqués de Murrieta「Ygay」Gran Reserva 1998——1847 年創立，是 Rioja 最古老名莊之一，Castillo Ygay 系列陳年潛力可達 30-50 年。',
   },
   {
     type: 'quiz',
@@ -7754,6 +8024,30 @@ const S4M3L4_slides = [
         color: '#27ae60',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Pazo Señorans Albariño',
+    image: '/spain/images/labels/rias-baixas/pazo-senorans-albarino.jpg',
+    caption: 'Pazo Señorans「Albariño」Vendimiado 2023（Val do Salnés，Rías Baixas D.O.）——本文提到 1989 年創立、加利西亞白酒定義者的基本款，與旗艦 Selección de Añada 為同一酒莊。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Rectoral de Amandi',
+    image: '/spain/images/labels/ribeira-sacra/rectoral-de-amandi-mencia-barrica-2017.png',
+    caption: 'Rectoral de Amandi「Mencía Barrica」2017，Edición Limitada（Manolo Arnoya，Ribeira Sacra）——桶陳版本展現本文提到的優雅花香與礦石鮮酸，是 Ribeira Sacra 陡坡板岩 Mencía 的名片酒款。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Guitián Godello Sobre Lías',
+    image: '/spain/images/labels/valdeorras/guitian-godello-sobre-lias.jpg',
+    caption: 'Guitián「Godello」Sobre Lías（Valdeorras Denominación de Origen）——本文提到讓全球認識 Godello 陳年複雜度的先驅桶陳款，正是酒標上「Sobre Lías」（酒泥陳年）字樣的由來。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Pazo de Lusco',
+    image: '/spain/images/labels/rias-baixas/pazo-de-lusco-albarino.png',
+    caption: 'Pazo de Lusco「Albariño」Crianza sobre Lías（Rías Baixas）——本文提到的 Lusco 酒莊（Pontevedra）入門款，與旗艦單一葡萄園 Patio de Lusco 同源，展現 Val do Salnés 老藤 Albariño 的礦石深度。',
   },
   {
     type: 'quiz',
@@ -8176,6 +8470,18 @@ const S2M0L1_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Muga（Haro，La Estación 車站區）',
+    image: '/spain/images/labels/rioja/muga-reserva.jpg',
+    caption: 'Muga Reserva（Bodegas Muga S.L.，Haro，創立於 1932 年）——本文提到聚集在 Haro「La Estación」的頂級傳統酒莊之一，酒標保留自 1932 年創廠以來的古典風格。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：La Rioja Alta S.A.',
+    image: '/spain/images/labels/rioja/la-rioja-alta-vina-ardanza-2017.png',
+    caption: 'La Rioja Alta S.A.「Viña Ardanza」Reserva 2017（Haro，創立於 1890 年）——同樣座落於「La Estación」車站區的傳統名莊，Viña Ardanza 是其代表性混釀酒款。',
+  },
+  {
     type: 'quiz',
     question: 'Rioja Alavesa 與 Rioja Alta 最關鍵的土壤差異是什麼？',
     options: [
@@ -8312,6 +8618,18 @@ const S2M0L2_slides = [
     ],
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：美國橡木桶傳統風格',
+    image: '/spain/images/labels/rioja/lopez-de-heredia-tondonia-reserva-2004.jpg',
+    caption: 'R. López de Heredia「Viña Tondonia」Reserva 2004——美國橡木桶長期陳年的代表，本文提到的傳統派靈魂酒莊。',
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：法國橡木桶現代風格',
+    image: '/spain/images/labels/rioja/amaren-reserva-2009.jpg',
+    caption: 'Bodegas Amaren Reserva Tempranillo 2009（Samaniego，Rioja Alavesa）——現代簡約酒標設計，代表法國橡木桶陣營的當代 Rioja 風格。',
+  },
+  {
     type: 'quiz',
     question: '關於 Rioja 的混釀品種搭配，哪項描述最準確？',
     options: [
@@ -8444,6 +8762,12 @@ const S2M0L3_slides = [
         color: '#2e7d32',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Plácet Valtomelloso（100% Viura）',
+    image: '/spain/images/labels/rioja/placet-valtomelloso-2009.jpg',
+    caption: 'Palacios Remondo「Plácet」Valtomelloso 2009（Alfaro，Rioja Oriental）——Álvaro Palacios 家族酒莊的單一葡萄園 100% Viura，展現 Viura 品種在優質風土下的細膩表現。',
   },
   {
     type: 'quiz',
