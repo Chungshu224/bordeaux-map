@@ -64,10 +64,10 @@ export const COURSE_PRICING = {
 export const TIERS = {
   free: {
     id: 'free',
-    name: '免費體驗',
+    name: '尚未訂閱',
     price: { monthly: 0, yearly: 0 },
-    features: ['Level 1 基礎入門', '基本地圖瀏覽'],
-    locked: ['Level 2–4 進階課程', '互動練習中心', '進階地圖圖層', '品飲筆記本']
+    features: ['基本地圖瀏覽'],
+    locked: ['Level 1–4 全部課程', '互動練習中心', '進階地圖圖層', '品飲筆記本']
   },
   basic: {
     id: 'basic',

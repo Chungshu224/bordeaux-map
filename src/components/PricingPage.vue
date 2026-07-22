@@ -23,22 +23,6 @@
     <div class="tiers-section">
       <div class="tiers-grid">
 
-        <!-- 免費 -->
-        <div class="tier-card free-card">
-          <div class="tier-top">
-            <div class="tier-label">{{ $t('pricing.tiers.free.label') }}</div>
-            <div class="tier-price-wrap">
-              <span class="tier-price">NT$ 0</span>
-            </div>
-            <div class="tier-desc">{{ $t('pricing.tiers.free.desc') }}</div>
-          </div>
-          <ul class="tier-features">
-            <li v-for="feat in $tm('pricing.tiers.free.featuresOk')" :key="feat" class="ok">{{ feat }}</li>
-            <li v-for="feat in $tm('pricing.tiers.free.featuresNo')" :key="feat" class="no">{{ feat }}</li>
-          </ul>
-          <button class="tier-cta free-cta" @click="handleFree">{{ $t('pricing.tiers.free.cta') }}</button>
-        </div>
-
         <!-- 波爾多完整版 -->
         <div class="tier-card single-card" :class="{ 'subscribed-card': singleCtaState.state === 'subscribed' }">
           <div v-if="singleCtaState.state === 'subscribed'" class="subscribed-badge">{{ $t('pricing.tiers.subscribed') }}</div>
@@ -200,10 +184,6 @@
           <thead>
             <tr>
               <th class="ct-th-feature"></th>
-              <th class="ct-th-tier">
-                <div class="ct-th-name">{{ $t('pricing.compare.tierFree') }}</div>
-                <div class="ct-th-price">NT$ 0</div>
-              </th>
               <th class="ct-th-tier ct-col-highlight">
                 <div class="ct-th-badge">推薦</div>
                 <div class="ct-th-name">{{ $t('pricing.compare.tierSingle') }}</div>
@@ -218,13 +198,11 @@
           <tbody>
             <tr class="ct-row ct-courses-row">
               <td class="ct-td-feature">{{ $t('pricing.compare.coursesRow') }}</td>
-              <td class="ct-td-cell ct-neutral">波爾多 L1</td>
               <td class="ct-td-cell ct-col-highlight ct-courses-val">1 個產區 · 全 Level</td>
               <td class="ct-td-cell ct-courses-val">全部產區</td>
             </tr>
             <tr v-for="f in featureMatrix" :key="f.name" class="ct-row">
               <td class="ct-td-feature">{{ f.name }}</td>
-              <td class="ct-td-cell" :class="f.free ? 'ct-yes' : 'ct-no'">{{ f.free ? '✓' : '—' }}</td>
               <td class="ct-td-cell ct-col-highlight" :class="f.single ? 'ct-yes' : 'ct-no'">{{ f.single ? '✓' : '—' }}</td>
               <td class="ct-td-cell" :class="f.all ? 'ct-yes' : 'ct-no'">{{ f.all ? '✓' : '—' }}</td>
             </tr>
@@ -255,7 +233,7 @@
       <div class="bc-inner">
         <h2>{{ $t('pricing.bottomCta.title') }}</h2>
         <p>{{ $t('pricing.bottomCta.subtitle') }}</p>
-        <button class="bc-btn" @click="handleFree">{{ $t('pricing.bottomCta.cta') }}</button>
+        <button class="bc-btn" @click="handleGetStarted">{{ $t('pricing.bottomCta.cta') }}</button>
       </div>
     </div>
 
@@ -329,16 +307,16 @@ const allCourses = [
 ]
 
 const featureMatrixBooleans = [
-  { free: true,  single: true,  all: true  },
-  { free: true,  single: true,  all: true  },
-  { free: false, single: true,  all: true  },
-  { free: false, single: true,  all: true  },
-  { free: false, single: true,  all: true  },
-  { free: false, single: true,  all: true  },
-  { free: false, single: true,  all: true  },
-  { free: false, single: true,  all: true  },
-  { free: true,  single: true,  all: true  },
-  { free: true,  single: true,  all: true  },
+  { single: true, all: true },
+  { single: true, all: true },
+  { single: true, all: true },
+  { single: true, all: true },
+  { single: true, all: true },
+  { single: true, all: true },
+  { single: true, all: true },
+  { single: true, all: true },
+  { single: true, all: true },
+  { single: true, all: true },
 ]
 
 const featureMatrix = computed(() => {
@@ -373,9 +351,9 @@ const italyCtaState = computed(() => {
   return { text: t('pricing.other.italy.cta'), disabled: false, state: 'unsubscribed' }
 })
 
-async function handleFree() {
+function handleGetStarted() {
   if (authUser.value) {
-    router.push('/bordeaux')
+    document.querySelector('.tiers-section')?.scrollIntoView({ behavior: 'smooth' })
   } else {
     router.push('/register')
   }
@@ -517,7 +495,7 @@ async function handleCoursePurchase(courseId) {
 }
 .tiers-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr 1.1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: start;
 }
@@ -530,7 +508,6 @@ async function handleCoursePurchase(courseId) {
   padding: 28px;
   position: relative;
 }
-.free-card  { border-color: rgba(255,255,255,0.12); }
 .single-card { border-color: rgba(212,175,55,0.25); background: rgba(212,175,55,0.03); }
 .all-card   { border-color: rgba(212,175,55,0.5); background: rgba(212,175,55,0.06); }
 
@@ -577,7 +554,6 @@ async function handleCoursePurchase(courseId) {
 .all-card .tier-label { color: #d4af37; }
 .tier-price-wrap { display: flex; align-items: baseline; justify-content: center; gap: 6px; margin-bottom: 6px; }
 .tier-price { font-size: 2.4rem; font-weight: 800; color: #f5f0e8; line-height: 1; }
-.free-card .tier-price { color: #48bb78; }
 .all-card .tier-price { color: #d4af37; }
 .tier-period { font-size: 1rem; color: #9a8878; }
 .tier-saving { font-size: 0.78rem; color: #48bb78; margin-bottom: 8px; }
@@ -643,8 +619,6 @@ async function handleCoursePurchase(courseId) {
   cursor: pointer;
   transition: all .2s;
 }
-.free-cta { background: rgba(255,255,255,0.08); color: #d0c8b8; border: 1px solid rgba(255,255,255,0.15); }
-.free-cta:hover { background: rgba(255,255,255,0.14); }
 .single-cta { background: linear-gradient(135deg, #5a4a20, #8a7030); color: #f5e8b0; }
 .single-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(212,175,55,0.25); }
 .all-cta { background: linear-gradient(135deg, #c9a84c, #d4af37); color: #1a0409; }
@@ -689,7 +663,7 @@ async function handleCoursePurchase(courseId) {
   background: #0e0406;
 }
 .ct-th-feature { width: 44%; text-align: left; padding-left: 0; }
-.ct-th-tier    { width: 18.67%; }
+.ct-th-tier    { width: 28%; }
 
 .ct-th-name {
   font-size: 0.85rem;

@@ -102,18 +102,10 @@
         </div>
       </section>
 
-      <!-- 免費試學 -->
+      <!-- 免費功能 -->
       <section class="dash-section" v-if="effectiveTier === 'free'">
-        <h2 class="section-title">🆓 免費體驗內容</h2>
+        <h2 class="section-title">🗺️ 免費功能</h2>
         <div class="free-content-list">
-          <div class="fc-item" @click="$router.push({ name: 'Learning', query: { level: 1 } })">
-            <span class="fci-icon">📖</span>
-            <div>
-              <div class="fci-title">Level 1 基礎入門</div>
-              <div class="fci-desc">波爾多概論・品種・地理・AOC分級</div>
-            </div>
-            <span class="fci-arrow">→</span>
-          </div>
           <div class="fc-item" @click="$router.push('/explore')">
             <span class="fci-icon">🗺️</span>
             <div>
@@ -161,7 +153,7 @@ const userEmail    = computed(() => authActions.getEmail())
 const effectiveTier = computed(() => authActions.getEffectiveTier())
 
 const TIER_INFO = {
-  free:    { icon: '🆓', label: '免費體驗', desc: '已解鎖 Level 1 基礎課程' },
+  free:    { icon: '🆓', label: '尚未訂閱', desc: '可免費探索地圖・訂閱解鎖完整課程' },
   basic:   { icon: '📚', label: '完整課程方案', desc: '已解鎖完整課程與付費學習功能' },
   premium: { icon: '🌍', label: '多產區方案', desc: '自選三大世界產區（即將推出）' }
 }

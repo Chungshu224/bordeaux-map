@@ -5,7 +5,7 @@ export default {
   header: {
     eyebrow: 'Transparent Pricing · Cancel Anytime',
     title: 'Choose Your Learning Plan',
-    subtitle: 'Start free, upgrade to unlock all four Bordeaux course levels · advanced map layers · tasting notebook',
+    subtitle: 'Subscribe to unlock all four Bordeaux course levels · advanced map layers · tasting notebook',
   },
   billing: {
     monthly: 'Monthly',
@@ -19,24 +19,6 @@ export default {
     subscribedAll: '✓ All Courses Subscribed',
     processing: 'Processing…',
     processingOrder: 'Creating order…',
-    free: {
-      label: 'Free Trial',
-      desc: 'Perfect for first-time explorers · try before you buy',
-      featuresOk: [
-        '🏰 Bordeaux Level 1 Full Access (12 lessons)',
-        '57 AOC appellation interactive maps',
-        'Left & Right Bank geography basics',
-        'Achievement system & progress tracking',
-      ],
-      featuresNo: [
-        'Level 2–4 advanced courses',
-        'Interactive practice center (4 games)',
-        '7 other world wine regions',
-        'Geology / climate advanced map layers',
-        'Tasting notebook',
-      ],
-      cta: 'Start Free',
-    },
     single: {
       label: 'Bordeaux Complete',
       yearlySaving: 'Yearly plan gives 4 extra months · only NT$150/mo',
@@ -104,7 +86,6 @@ export default {
   compare: {
     title: 'Feature Comparison',
     subtitle: "What's included in each plan",
-    tierFree: 'Free',
     tierSingle: 'Complete',
     tierGlobal: 'Global',
     coursesRow: 'Regions included',
@@ -130,13 +111,12 @@ export default {
       { q: 'Are Burgundy and Italy courses available?', a: 'Yes! Burgundy and Italy courses are officially live and can be subscribed to in the "Individual Course Subscriptions" section on this page.' },
       { q: 'Will more regions be added?', a: 'Yes! Spain, Germany, Portugal, and more world wine regions are in production. Subscribers are welcome to join the early-bird waitlist for priority notifications.' },
       { q: 'Can I switch between monthly and yearly billing?', a: 'Yes. Monthly and yearly plans are one-time payments. To switch plans, please contact us and our support team will assist you.' },
-      { q: 'Is the free plan time-limited?', a: 'No! The free plan is permanent. Bordeaux Level 1 is completely free — no credit card required.' },
       { q: 'What payment methods are supported?', a: 'Secure payment via ECPay (Green World FinTech). Supports credit cards (Visa, MasterCard, JCB), ATM transfers, and convenience store payments — all encrypted.' },
     ],
   },
   bottomCta: {
-    title: 'Start Free, Upgrade Anytime',
-    subtitle: 'No credit card · cancel anytime · 7-day money-back guarantee',
-    cta: 'Start Free Now',
+    title: 'Ready to start your wine journey?',
+    subtitle: 'Cancel anytime · 7-day money-back guarantee',
+    cta: 'Sign Up Now',
   },
 }

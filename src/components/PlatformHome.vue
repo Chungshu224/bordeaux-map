@@ -207,7 +207,7 @@
             <div class="card-pricing-cta">
               <div class="cpc-hint">{{ $t('home.courses.bordeaux.priceHint') }}</div>
               <div class="cpc-actions">
-                <button class="cpc-btn-free" @click="handleFreeTier">{{ $t('home.courses.bordeaux.startFreeBtn') }}</button>
+                <button class="cpc-btn-free" @click="openCourseDetail('bordeaux')">{{ $t('home.courses.bordeaux.courseDetailBtn') }}</button>
                 <button class="cpc-btn-plan" @click="goToPricing">{{ $t('home.courses.bordeaux.viewPlansBtn') }} →</button>
               </div>
             </div>
@@ -254,6 +254,7 @@
             <div class="card-pricing-cta">
               <div class="cpc-hint">NT$390 起 / 月・完整課程全開放</div>
               <div class="cpc-actions">
+                <button class="cpc-btn-free" @click="openCourseDetail('bourgogne')">{{ $t('home.courses.bourgogne.courseDetailBtn') }}</button>
                 <button class="cpc-btn-plan" @click="goToPricing">查看方案 →</button>
                 <button v-if="isAdmin" class="cpc-btn-free" @click="router.push('/bourgogne')">管理員進入</button>
               </div>
@@ -357,6 +358,7 @@
             <div class="card-pricing-cta">
               <div class="cpc-hint">NT$290 起 / 月・完整課程全開放</div>
               <div class="cpc-actions">
+                <button class="cpc-btn-free" @click="openCourseDetail('italy')">{{ $t('home.courses.italy.courseDetailBtn') }}</button>
                 <button class="cpc-btn-plan" @click="goToPricing">查看方案 →</button>
                 <button v-if="isAdmin" class="cpc-btn-free" @click="router.push('/italy')">管理員進入</button>
               </div>
@@ -805,28 +807,28 @@
               <div class="cm-lv-badge">{{ $t('home.modal.bordeaux.levels.l1.badge') }}</div>
               <div class="cm-lv-name">{{ $t('home.modal.bordeaux.levels.l1.name') }}</div>
               <ul class="cm-lv-list">
-                <li v-for="item in $t('home.modal.bordeaux.levels.l1.items')" :key="item">{{ item }}</li>
+                <li v-for="item in $tm('home.modal.bordeaux.levels.l1.items')" :key="item">{{ item }}</li>
               </ul>
             </div>
             <div class="cm-level">
               <div class="cm-lv-badge lv2">{{ $t('home.modal.bordeaux.levels.l2.badge') }}</div>
               <div class="cm-lv-name">{{ $t('home.modal.bordeaux.levels.l2.name') }}</div>
               <ul class="cm-lv-list">
-                <li v-for="item in $t('home.modal.bordeaux.levels.l2.items')" :key="item">{{ item }}</li>
+                <li v-for="item in $tm('home.modal.bordeaux.levels.l2.items')" :key="item">{{ item }}</li>
               </ul>
             </div>
             <div class="cm-level">
               <div class="cm-lv-badge lv3">{{ $t('home.modal.bordeaux.levels.l3.badge') }}</div>
               <div class="cm-lv-name">{{ $t('home.modal.bordeaux.levels.l3.name') }}</div>
               <ul class="cm-lv-list">
-                <li v-for="item in $t('home.modal.bordeaux.levels.l3.items')" :key="item">{{ item }}</li>
+                <li v-for="item in $tm('home.modal.bordeaux.levels.l3.items')" :key="item">{{ item }}</li>
               </ul>
             </div>
             <div class="cm-level">
               <div class="cm-lv-badge lv4">{{ $t('home.modal.bordeaux.levels.l4.badge') }}</div>
               <div class="cm-lv-name">{{ $t('home.modal.bordeaux.levels.l4.name') }}</div>
               <ul class="cm-lv-list">
-                <li v-for="item in $t('home.modal.bordeaux.levels.l4.items')" :key="item">{{ item }}</li>
+                <li v-for="item in $tm('home.modal.bordeaux.levels.l4.items')" :key="item">{{ item }}</li>
               </ul>
             </div>
           </div>
@@ -836,7 +838,7 @@
         <div class="cm-section">
           <h3 class="cm-sec-title">{{ $t('home.modal.bordeaux.toolsTitle') }}</h3>
           <div class="cm-tools-grid">
-            <div class="cm-tool" v-for="tool in $t('home.modal.bordeaux.tools')" :key="tool.name">
+            <div class="cm-tool" v-for="tool in $tm('home.modal.bordeaux.tools')" :key="tool.name">
               <span class="ct-icon">{{ tool.icon }}</span>
               <span class="ct-name">{{ tool.name }}</span>
               <span class="ct-desc">{{ tool.desc }}</span>
@@ -850,13 +852,11 @@
           <div class="cm-compare-table">
             <div class="cm-compare-header">
               <div class="cc-col feature-col">{{ $t('home.modal.bordeaux.compareFeature') }}</div>
-              <div class="cc-col free-col" v-html="$t('home.modal.bordeaux.compareFree', { price: 0 })"></div>
               <div class="cc-col basic-col popular-col" v-html="$t('home.modal.bordeaux.compareBasic', { price: pricing.basic.monthly })"></div>
-              <div class="cc-col premium-col" v-html="$t('home.modal.bordeaux.comparePremium', { price: pricing.premium.monthly })"></div>
+              <div class="cc-col premium-col" v-html="$t('home.modal.bordeaux.comparePremium', { price: GLOBAL_PASS_PRICE })"></div>
             </div>
             <div v-for="row in compareRows" :key="row.feature" class="cm-compare-row">
               <div class="cc-col feature-col">{{ row.feature }}</div>
-              <div class="cc-col free-col"><span :class="row.free ? 'cc-yes' : 'cc-no'">{{ row.free ? '✓' : '✗' }}</span><span v-if="row.freeNote" class="cc-note">{{ row.freeNote }}</span></div>
               <div class="cc-col basic-col"><span :class="row.basic ? 'cc-yes' : 'cc-no'">{{ row.basic ? '✓' : '✗' }}</span><span v-if="row.basicNote" class="cc-note">{{ row.basicNote }}</span></div>
               <div class="cc-col premium-col"><span :class="row.premium ? 'cc-yes' : 'cc-no'">{{ row.premium ? '✓' : '✗' }}</span><span v-if="row.premiumNote" class="cc-note">{{ row.premiumNote }}</span></div>
             </div>
@@ -865,60 +865,162 @@
 
         <!-- CTA -->
         <div class="cm-cta">
-          <button class="cm-btn free" @click="showCourseModal = false; handleFreeTier()">{{ $t('home.modal.bordeaux.btnFree') }}</button>
           <button class="cm-btn basic" @click="showCourseModal = false; handlePurchase('bordeaux','basic')">{{ $t('home.modal.bordeaux.btnBasicPrice', { price: pricing.basic.monthly }) }}</button>
-          <button class="cm-btn premium" @click="showCourseModal = false; handlePurchase('bordeaux','premium')">{{ $t('home.modal.bordeaux.btnPremiumPrice', { price: pricing.premium.monthly }) }}</button>
+          <button class="cm-btn premium" @click="goToGlobalCheckout()">{{ $t('home.modal.bordeaux.btnGlobalPrice', { price: GLOBAL_PASS_PRICE }) }}</button>
         </div>
         </template>
 
-        <template v-else-if="activePrelaunchDetail">
-          <div class="cm-header">
-            <div class="cm-icon">{{ activePrelaunchDetail.icon }}</div>
-            <h2 class="cm-title">{{ activePrelaunchDetail.title }}</h2>
-            <p class="cm-sub">{{ activePrelaunchDetail.subtitle }}</p>
-            <div class="cm-badge-preview">{{ $t('home.modal.prelaunch.coming') }}</div>
-          </div>
+        <template v-else-if="activeCourseDetail === 'bourgogne'">
 
-          <div class="cm-alert">
-            {{ $t('home.modal.prelaunch.alert') }}
-          </div>
+        <!-- 標題 -->
+        <div class="cm-header">
+          <div class="cm-icon">🍇</div>
+          <h2 class="cm-title">{{ $t('home.modal.bourgogne.title') }}</h2>
+          <p class="cm-sub">{{ $t('home.modal.bourgogne.sub') }}</p>
+        </div>
 
-          <div class="cm-section">
-            <h3 class="cm-sec-title">{{ $t('home.modal.prelaunch.devProgressTitle') }}</h3>
-            <div class="cm-tools-grid">
-              <div class="cm-tool" v-for="item in activePrelaunchDetail.devStatus" :key="item.title">
-                <span class="ct-icon">{{ item.icon }}</span>
-                <span class="ct-name">{{ item.title }}</span>
-                <span class="ct-desc">{{ item.desc }}</span>
-              </div>
+        <!-- 課程總覽 -->
+        <div class="cm-section">
+          <h3 class="cm-sec-title">{{ $t('home.modal.bourgogne.overviewTitle') }}</h3>
+          <div class="cm-levels-grid">
+            <div class="cm-level">
+              <div class="cm-lv-badge">{{ $t('home.modal.bourgogne.levels.l1.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.bourgogne.levels.l1.name') }}</div>
+              <ul class="cm-lv-list">
+                <li v-for="item in $tm('home.modal.bourgogne.levels.l1.items')" :key="item">{{ item }}</li>
+              </ul>
+            </div>
+            <div class="cm-level">
+              <div class="cm-lv-badge lv2">{{ $t('home.modal.bourgogne.levels.l2.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.bourgogne.levels.l2.name') }}</div>
+              <ul class="cm-lv-list">
+                <li v-for="item in $tm('home.modal.bourgogne.levels.l2.items')" :key="item">{{ item }}</li>
+              </ul>
+            </div>
+            <div class="cm-level">
+              <div class="cm-lv-badge lv3">{{ $t('home.modal.bourgogne.levels.l3.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.bourgogne.levels.l3.name') }}</div>
+              <ul class="cm-lv-list">
+                <li v-for="item in $tm('home.modal.bourgogne.levels.l3.items')" :key="item">{{ item }}</li>
+              </ul>
+            </div>
+            <div class="cm-level">
+              <div class="cm-lv-badge lv4">{{ $t('home.modal.bourgogne.levels.l4.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.bourgogne.levels.l4.name') }}</div>
+              <ul class="cm-lv-list">
+                <li v-for="item in $tm('home.modal.bourgogne.levels.l4.items')" :key="item">{{ item }}</li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          <div class="cm-section">
-            <h3 class="cm-sec-title">{{ $t('home.modal.prelaunch.roadmapTitle') }}</h3>
-            <div class="cm-preview-grid">
-              <div class="cm-preview-card" v-for="lv in activePrelaunchDetail.roadmap" :key="lv.level">
-                <div class="cm-lv-badge">{{ lv.level }}</div>
-                <div class="cm-lv-name">{{ lv.name }}</div>
-                <div class="cm-preview-meta">{{ lv.meta }}</div>
-                <ul class="cm-lv-list">
-                  <li v-for="point in lv.points" :key="point">{{ point }}</li>
-                </ul>
-              </div>
+        <!-- 互動工具 -->
+        <div class="cm-section">
+          <h3 class="cm-sec-title">{{ $t('home.modal.bourgogne.toolsTitle') }}</h3>
+          <div class="cm-tools-grid">
+            <div class="cm-tool" v-for="tool in $tm('home.modal.bourgogne.tools')" :key="tool.name">
+              <span class="ct-icon">{{ tool.icon }}</span>
+              <span class="ct-name">{{ tool.name }}</span>
+              <span class="ct-desc">{{ tool.desc }}</span>
             </div>
           </div>
+        </div>
 
-          <div class="cm-section">
-            <h3 class="cm-sec-title">{{ $t('home.modal.prelaunch.featuresTitle') }}</h3>
-            <div class="cm-pill-list">
-              <span class="cm-pill" v-for="f in activePrelaunchDetail.features" :key="f">{{ f }}</span>
+        <!-- 方案比較 -->
+        <div class="cm-section">
+          <h3 class="cm-sec-title">{{ $t('home.modal.bourgogne.compareTitle') }}</h3>
+          <div class="cm-compare-table">
+            <div class="cm-compare-header">
+              <div class="cc-col feature-col">{{ $t('home.modal.bourgogne.compareFeature') }}</div>
+              <div class="cc-col basic-col popular-col" v-html="$t('home.modal.bourgogne.compareBasic', { price: COURSE_PRICING.bourgogne.basic.monthly })"></div>
+              <div class="cc-col premium-col" v-html="$t('home.modal.bourgogne.comparePremium', { price: GLOBAL_PASS_PRICE })"></div>
+            </div>
+            <div v-for="row in $tm('home.modal.bourgogne.compareRows')" :key="row.feature" class="cm-compare-row">
+              <div class="cc-col feature-col">{{ row.feature }}</div>
+              <div class="cc-col basic-col"><span :class="row.basic ? 'cc-yes' : 'cc-no'">{{ row.basic ? '✓' : '✗' }}</span></div>
+              <div class="cc-col premium-col"><span :class="row.premium ? 'cc-yes' : 'cc-no'">{{ row.premium ? '✓' : '✗' }}</span></div>
             </div>
           </div>
+        </div>
 
-          <div class="cm-cta">
-            <button class="cm-btn basic" @click="showCourseModal = false; handleNotify(activeCourseDetail)">{{ $t('home.modal.prelaunch.notifyBtn') }}</button>
-            <button class="cm-btn free" @click="showCourseModal = false">{{ $t('home.modal.prelaunch.laterBtn') }}</button>
+        <!-- CTA -->
+        <div class="cm-cta">
+          <button class="cm-btn basic" @click="showCourseModal = false; handlePurchase('bourgogne','basic')">{{ $t('home.modal.bourgogne.btnBasicPrice', { price: COURSE_PRICING.bourgogne.basic.monthly }) }}</button>
+          <button class="cm-btn premium" @click="goToGlobalCheckout()">{{ $t('home.modal.bourgogne.btnGlobalPrice', { price: GLOBAL_PASS_PRICE }) }}</button>
+        </div>
+        </template>
+
+        <template v-else-if="activeCourseDetail === 'italy'">
+
+        <!-- 標題 -->
+        <div class="cm-header">
+          <div class="cm-icon">🇮🇹</div>
+          <h2 class="cm-title">{{ $t('home.modal.italy.title') }}</h2>
+          <p class="cm-sub">{{ $t('home.modal.italy.sub') }}</p>
+        </div>
+
+        <!-- 課程總覽 -->
+        <div class="cm-section">
+          <h3 class="cm-sec-title">{{ $t('home.modal.italy.overviewTitle') }}</h3>
+          <div class="cm-levels-grid cm-levels-grid-3">
+            <div class="cm-level">
+              <div class="cm-lv-badge">{{ $t('home.modal.italy.levels.l1.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.italy.levels.l1.name') }}</div>
+              <ul class="cm-lv-list">
+                <li v-for="item in $tm('home.modal.italy.levels.l1.items')" :key="item">{{ item }}</li>
+              </ul>
+            </div>
+            <div class="cm-level">
+              <div class="cm-lv-badge lv2">{{ $t('home.modal.italy.levels.l2.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.italy.levels.l2.name') }}</div>
+              <ul class="cm-lv-list">
+                <li v-for="item in $tm('home.modal.italy.levels.l2.items')" :key="item">{{ item }}</li>
+              </ul>
+            </div>
+            <div class="cm-level">
+              <div class="cm-lv-badge lv3">{{ $t('home.modal.italy.levels.l3.badge') }}</div>
+              <div class="cm-lv-name">{{ $t('home.modal.italy.levels.l3.name') }}</div>
+              <ul class="cm-lv-list">
+                <li v-for="item in $tm('home.modal.italy.levels.l3.items')" :key="item">{{ item }}</li>
+              </ul>
+            </div>
           </div>
+        </div>
+
+        <!-- 互動工具 -->
+        <div class="cm-section">
+          <h3 class="cm-sec-title">{{ $t('home.modal.italy.toolsTitle') }}</h3>
+          <div class="cm-tools-grid">
+            <div class="cm-tool" v-for="tool in $tm('home.modal.italy.tools')" :key="tool.name">
+              <span class="ct-icon">{{ tool.icon }}</span>
+              <span class="ct-name">{{ tool.name }}</span>
+              <span class="ct-desc">{{ tool.desc }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 方案比較 -->
+        <div class="cm-section">
+          <h3 class="cm-sec-title">{{ $t('home.modal.italy.compareTitle') }}</h3>
+          <div class="cm-compare-table">
+            <div class="cm-compare-header">
+              <div class="cc-col feature-col">{{ $t('home.modal.italy.compareFeature') }}</div>
+              <div class="cc-col basic-col popular-col" v-html="$t('home.modal.italy.compareBasic', { price: COURSE_PRICING.italy.basic.monthly })"></div>
+              <div class="cc-col premium-col" v-html="$t('home.modal.italy.comparePremium', { price: GLOBAL_PASS_PRICE })"></div>
+            </div>
+            <div v-for="row in $tm('home.modal.italy.compareRows')" :key="row.feature" class="cm-compare-row">
+              <div class="cc-col feature-col">{{ row.feature }}</div>
+              <div class="cc-col basic-col"><span :class="row.basic ? 'cc-yes' : 'cc-no'">{{ row.basic ? '✓' : '✗' }}</span></div>
+              <div class="cc-col premium-col"><span :class="row.premium ? 'cc-yes' : 'cc-no'">{{ row.premium ? '✓' : '✗' }}</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cm-cta">
+          <button class="cm-btn basic" @click="showCourseModal = false; handlePurchase('italy','basic')">{{ $t('home.modal.italy.btnBasicPrice', { price: COURSE_PRICING.italy.basic.monthly }) }}</button>
+          <button class="cm-btn premium" @click="goToGlobalCheckout()">{{ $t('home.modal.italy.btnGlobalPrice', { price: GLOBAL_PASS_PRICE }) }}</button>
+        </div>
         </template>
       </div>
     </div>
@@ -932,7 +1034,7 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { supabase } from '../lib/supabaseClient.js'
 import { authState, authActions } from '../stores/authStore.js'
-import { initiateCheckout, submitEcpayForm, getCourseAccess } from '../lib/purchaseService.js'
+import { initiateCheckout, submitEcpayForm, getCourseAccess, COURSE_PRICING } from '../lib/purchaseService.js'
 import { fetchRecentPosts } from '../lib/forumService.js'
 
 const router = useRouter()
@@ -967,15 +1069,6 @@ const handleStartFree = () => {
     router.push('/bordeaux')
   } else {
     router.push('/register')
-  }
-}
-
-// ─── 免費 Tier（需登入）───────────────────────────────────────────────────────
-const handleFreeTier = () => {
-  if (authUser.value) {
-    router.push('/bordeaux')
-  } else {
-    router.push({ path: '/register', query: { plan: 'free' } })
   }
 }
 
@@ -1119,14 +1212,16 @@ const handlePurchase = async (courseId, tier) => {
   }
 }
 
-const handleNotify = (courseId) => {
-  const detail = prelaunchCourseDetails.value[courseId]
-  const name = detail?.title || courseId
-  if (authUser.value) {
-    alert(`${name} — ${t('home.modal.prelaunch.notifyBtn')}`)
-  } else {
-    router.push({ path: '/register', query: { notify: courseId } })
+const GLOBAL_PASS_PRICE = 690
+
+const goToGlobalCheckout = () => {
+  showCourseModal.value = false
+  const query = { courseId: 'global', billingPeriod: 'monthly', paymentMethod: 'ALL' }
+  if (!authUser.value) {
+    router.push({ path: '/register', query: { redirect: `/checkout/cart?${new URLSearchParams(query).toString()}` } })
+    return
   }
+  router.push({ path: '/checkout/cart', query })
 }
 
 // ─── FAQ ─────────────────────────────────────────────────────────────────────
@@ -1141,13 +1236,6 @@ const openCourseDetail = (courseId = 'bordeaux') => {
   activeCourseDetail.value = courseId
   showCourseModal.value = true
 }
-
-const prelaunchCourseDetails = computed(() => ({
-  bourgogne: t('home.modal.prelaunchCourses.bourgogne'),
-  italy:     t('home.modal.prelaunchCourses.italy'),
-}))
-
-const activePrelaunchDetail = computed(() => prelaunchCourseDetails.value[activeCourseDetail.value] || null)
 
 const compareRows = computed(() => tm('home.modal.bordeaux.compareRows'))
 
@@ -2190,6 +2278,7 @@ onMounted(async () => {
 
 /* 四個等級卡片 */
 .cm-levels-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.cm-levels-grid-3 { grid-template-columns: repeat(3, 1fr); }
 .cm-level { background: #faf7f2; border-radius: 12px; padding: 16px; border: 1px solid #e8e0d4; }
 .cm-lv-badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; background: #722f37; color: #fff; margin-bottom: 6px; }
 .cm-lv-badge.lv2 { background: #3b5998; }
@@ -2207,8 +2296,8 @@ onMounted(async () => {
 
 /* 比較表 */
 .cm-compare-table { border-radius: 12px; overflow: hidden; border: 1px solid #e8e0d4; }
-.cm-compare-header { display: grid; grid-template-columns: 2fr 1fr 1.2fr 1.2fr; background: #2c1810; color: #fff; }
-.cm-compare-row { display: grid; grid-template-columns: 2fr 1fr 1.2fr 1.2fr; border-bottom: 1px solid #f0e8d8; }
+.cm-compare-header { display: grid; grid-template-columns: 2fr 1.2fr 1.2fr; background: #2c1810; color: #fff; }
+.cm-compare-row { display: grid; grid-template-columns: 2fr 1.2fr 1.2fr; border-bottom: 1px solid #f0e8d8; }
 .cm-compare-row:last-child { border-bottom: none; }
 .cm-compare-row:nth-child(even) { background: #faf7f2; }
 .cc-col { padding: 10px 14px; font-size: 0.82rem; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
@@ -2230,63 +2319,11 @@ onMounted(async () => {
 .cm-btn.premium { background: linear-gradient(135deg, #7c4f00, #d4af37); color: #fff; }
 .cm-btn.premium:hover { opacity: 0.9; transform: translateY(-1px); }
 
-.cm-badge-preview {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(255, 180, 0, 0.15);
-  color: #9c5f00;
-  font-weight: 700;
-  font-size: 0.82rem;
-}
-.cm-alert {
-  background: #fff7eb;
-  border: 1px solid #f2d39a;
-  color: #7d5a21;
-  border-radius: 10px;
-  padding: 10px 12px;
-  font-size: 0.84rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-.cm-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-.cm-preview-card {
-  background: #faf7f2;
-  border: 1px solid #e8e0d4;
-  border-radius: 12px;
-  padding: 14px;
-}
-.cm-preview-meta {
-  font-size: 0.78rem;
-  color: #7a6a5a;
-  margin-bottom: 6px;
-}
-.cm-pill-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.cm-pill {
-  background: #f7efe2;
-  border: 1px solid #e3d4b9;
-  color: #5a4630;
-  border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
 @media (max-width: 700px) {
   .cm-modal { padding: 24px 16px; }
   .cm-levels-grid { grid-template-columns: repeat(2, 1fr); }
   .cm-tools-grid { grid-template-columns: repeat(2, 1fr); }
-  .cm-preview-grid { grid-template-columns: 1fr; }
-  .cm-compare-header, .cm-compare-row { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
+  .cm-compare-header, .cm-compare-row { grid-template-columns: 1.5fr 1fr 1fr; }
   .cc-col { font-size: 0.72rem; padding: 8px 6px; }
 }
 </style>

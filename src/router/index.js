@@ -6,30 +6,24 @@ import { getCourseAccess } from '../lib/purchaseService.js'
 //  訂閱層級功能對照表 (Tier Access Map)
 // ============================================================
 //  免費 (free)  — 只要註冊即可
-//    ✅ 首頁、登入、設定
-//    ✅ Level 1 課程
+//    ✅ 登入、設定
 //    ✅ 地圖探索 (限 Regional AOC + LeftBank-Medoc AOC 兩個群組)
-//    ❌ Level 2、3、4 課程
+//    ❌ Level 1~4 課程（免費體驗已下架，需訂閱；例外由優惠碼發放的試用期）
 //    ❌ 地圖進階圖層：等高線、地質土壤、氣候熱力
 //    ❌ 地圖內「顯示知名酒莊」功能
 //    ❌ 互動練習中心 (GameHub)
 //    ❌ 品飲筆記本 (TastingNotebook)
 //
-//  初階付費 (basic) — 課程 + 基本地圖 + 互動練習中心
+//  初階付費 (basic) — 訂閱單一產區即完整解鎖該產區
 //    ✅ Level 1~4 課程 (全部)
-//    ✅ 探索地圖 (全部 AOC 群組)
-//    ✅ 互動練習中心 (全部 4 種互動遊戲)
-//    ❌ 地圖進階圖層：等高線、地質土壤、氣候熱力
-//    ❌ 地圖內「顯示知名酒莊」功能
-//    ❌ 品飲筆記本 (TastingNotebook)
-//
-//  進階付費 (premium) — 完整解鎖
-//    ✅ Level 1~4 課程
 //    ✅ 探索地圖 (全部 AOC 群組)
 //    ✅ 地圖進階圖層：等高線、地質土壤、氣候熱力
 //    ✅ 地圖內「顯示知名酒莊」功能
 //    ✅ 互動練習中心 (全部 4 種互動遊戲)
-//    ✅ 品飲筆記本
+//    ✅ 品飲筆記本 (TastingNotebook)
+//    ❌ 其他產區課程（需另外訂閱，或購買全球產區通行證）
+//
+//  進階付費 (premium) — 保留給未來多產區/加值方案使用，目前無獨立販售管道
 // ============================================================
 
 const routes = [
@@ -195,11 +189,7 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
   {
-    //  /learning?level=1  → free
-    //  /learning?level=2  → basic
-    //  /learning?level=3  → basic
-    //  /learning?level=4  → basic
-    //  層級判斷由 beforeEach 動態計算 (見下方)
+    //  所有 level 皆需 basic 以上（見下方 beforeEach 的 Learning 特判）
     path: '/learning',
     name: 'Learning',
     component: () => import('../components/bordeaux/LearningSystem.vue'),
