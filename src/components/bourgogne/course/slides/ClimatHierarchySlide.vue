@@ -110,7 +110,8 @@ const defaultLevels = [
       '產量上限：白 57 hL/ha、紅 50 hL/ha',
       '葡萄須 100% 來自村莊邊界內',
       '可標示單一葡萄園（lieu-dit）名稱',
-      '共 44 個 Village AOC'
+      '共 44 個 Village AOC',
+      '該層級白酒 68%／紅酒 32%（白酒為主）'
     ],
     examples: [
       'Meursault',
@@ -133,7 +134,8 @@ const defaultLevels = [
     rules: [
       '產量上限：白 56 hL/ha、紅 48 hL/ha',
       '須來自指定 climat（單一葡萄園）',
-      '全布根地共 684 個 Premier Cru climats',
+      '全布根地共 684 個 Premier Cru climats（約占總產量 11%）',
+      '該層級白酒 51%／紅酒 49%（白紅相近）',
       '酒標標示：village + "1er Cru" + climat 名'
     ],
     examples: [
@@ -157,7 +159,8 @@ const defaultLevels = [
     rules: [
       '產量上限：白 48 hL/ha、紅 35 hL/ha（最嚴）',
       '每個 Grand Cru 為獨立 AOC',
-      '全布根地僅 33 個 Grand Cru',
+      '全布根地僅 33 個 Grand Cru，約占總產量 ±1.5%',
+      '該層級白酒 42%／紅酒 58%（以紅酒地塊為主）',
       '酒標僅標示 climat 名稱（不含村莊）'
     ],
     examples: [
