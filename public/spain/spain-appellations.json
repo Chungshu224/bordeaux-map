@@ -53,22 +53,33 @@
     "zonName": "Priorato",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "elevation": "100–600 公尺（部分梯田近 1,200 公尺）",
+    "soilType": "llicorella——紅褐相間的板岩與石英岩碎屑，厚約 45 公分，排水佳且逼迫根系深扎",
+    "climateNote": "大陸性氣候為主，南方密史脫拉暖風與北方山谷寒風交替影響，夏季炎熱乾燥、冬季寒冷，少雲",
+    "history": "傳說千年前牧人見天使沿階梯登天，於顯靈處建卡爾特會修道院「上帝之梯」（Scala Dei），修道院四周發展成產區最早的釀酒聚落，是加泰隆尼亞歷史最悠久的葡萄種植區之一",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒",
+      "高度酒（Generosos）",
+      "陳年葡萄酒（Rancios）"
     ],
     "grapes": [
-      "Garnacha",
-      "Cariñena",
+      "紅加納查 Garnacha Tinta（主力品種，老藤陡坡種植）",
+      "卡利涅納 Cariñena",
       "Cabernet Sauvignon",
       "Syrah",
-      "Merlot"
+      "Merlot",
+      "黑比諾 Pinot Noir",
+      "馬卡貝奧 Macabeo（白）",
+      "白加納查 Garnacha Blanca（白）",
+      "佩德羅－希梅內斯 Pedro Ximénez（白）"
     ],
-    "description": "加泰隆尼亞頂級 DOCa 產區，以獨特的板岩土壤 llicorella 著稱，Garnacha 老藤種植於陡峭山坡，孕育極度濃郁、礦物感強勁的紅酒，被譽為西班牙勃根地。",
+    "description": "加泰隆尼亞頂級 DOCa 產區，壯觀的山脈地貌與獨具個性的葡萄酒使其成為西班牙最獨特的產地。葡萄園多位於蒙特桑特山脈坡地梯田，部分海拔近 1,200 公尺。以獨特的紅褐色板岩土壤 llicorella 著稱，紅加納查老藤深扎於岩隙，孕育出顏色近黑、極度濃郁、礦物感強勁的紅酒，被譽為西班牙勃根地；傳統上亦生產以加納查釀成的陳年甜酒。依橡木桶與酒瓶陳年期分為 Crianza、Reserva、Gran Reserva 三級。",
     "provinces": [
       "Tarragona"
     ],
-    "classification": "DO"
+    "classification": "DOCa"
   },
   {
     "zonName": "Ribera del Duero",
@@ -152,10 +163,13 @@
     "zonName": "Penedés",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "elevation": "下佩內德斯 0–200m／中佩內德斯 200–400m／上佩內德斯 400–800m",
+    "soilType": "普遍富含石灰石，地勢最高處含白堊，表層土壤隨海拔漸變為粘土",
     "styles": [
       "白酒",
       "紅酒",
-      "粉紅酒"
+      "粉紅酒",
+      "氣泡酒"
     ],
     "grapes": [
       "Xarel·lo",
@@ -163,9 +177,10 @@
       "Parellada",
       "Tempranillo",
       "Cabernet Sauvignon",
+      "Merlot",
       "Chardonnay"
     ],
-    "description": "巴塞隆納南方多元產區，是卡瓦氣泡酒的發源地。紅白酒均有傑出表現，Torres 家族在此深耕百年；山地副區種植 Riesling、Chardonnay 等國際品種，風味多樣。",
+    "description": "巴塞隆納南方多元產區，1960 年代一系列創新造就了卡瓦氣泡酒的發源地。依海拔分為下、中、上佩內德斯三區，氣候由地中海溫暖漸轉涼爽，各具風格。以純淨果味乾白（Parellada、Xarel·lo、Macabeo）馳名，紅酒則兼有 Tempranillo、紅加納查傳統混釀與 Cabernet Sauvignon、梅鹿、黑比諾等國際品種；Torres 家族在此深耕百年。",
     "provinces": [
       "Barcelona",
       "Tarragona"
@@ -186,7 +201,7 @@
       "Chardonnay",
       "Pinot Noir"
     ],
-    "description": "西班牙傳統氣泡酒，以香檳傳統瓶中二次發酵法釀製，主要使用 Macabeo、Xarel·lo、Parellada 三大原生品種。主產於卡特隆尼亞，現已擴展至多個自治區，是香檳最實惠的替代選項。",
+    "description": "西班牙傳統氣泡酒，1872 年首釀於巴塞隆納省，以「傳統方法」瓶中二次發酵，酒渣至少陳放 9 個月（優質款常達 2–3 年）。清晨採收葡萄以避暑氣，低溫發酵後依各酒莊比例調配 Macabeo、Xarel·lo、Parellada 三大原生品種，也可用 100% 霞多麗。依含糖量分為 Extra Brut 到 Dulce 等級。主產於加泰羅尼亞聖薩杜爾尼-德阿諾亞一帶，現已擴展至阿拉貢、納瓦拉、里奧哈等多個自治區。",
     "provinces": [
       "Barcelona",
       "Tarragona",
@@ -204,15 +219,18 @@
     "zonName": "Jerez-Xeres-Sherry",
     "autonomia": "安達盧西亞",
     "autonomiaId": "andalucia",
+    "elevation": "海平面至 45 公尺",
+    "soilType": "Albariza 白堊土——雨季吸水、旱季反射陽光並向根系供水，是上赫雷斯（Jerez Superior）最優質地塊的標誌",
+    "history": "或為現今仍在生產的最古老醇酒之一，腓尼基人早在西元前 8 世紀已在此從事葡萄酒貿易，古羅馬時代即受推崇；莎士比亞時代的 Jerez-Sack（雪利白葡萄酒）被視為當時世界最好的葡萄酒之一",
     "styles": [
       "加強酒"
     ],
     "grapes": [
-      "Palomino Fino",
-      "Pedro Ximénez",
-      "Moscatel"
+      "雪利葡萄 Palomino Fino（佔種植面積約 90%）",
+      "佩德羅－希梅內斯 Pedro Ximénez",
+      "密思嘉 Moscatel"
     ],
-    "description": "安達盧西亞南端的雪莉酒王國，沿用 Solera 陳年系統，Fino、Manzanilla、Oloroso、Pedro Ximénez 各具特色。特殊白色白堊土 Albariza 是成就複雜風味的關鍵。",
+    "description": "安達盧西亞南端加的斯省的雪莉酒王國，以赫雷斯－德拉弗隆特拉、聖瑪莉亞港、桑盧卡爾－德巴拉梅達三城為核心。沿用 Solera 動態陳年系統：新酒逐年汲取陳年酒液的風味特徵。兩大主軸風格為表層生成酵母薄膜（Flor）的菲諾雪利（Fino，酒齡 5–9 年）與未生成酵母膜、酒體更醇厚的歐洛羅索雪利（Oloroso，酒齡 10–15 年），另有陳化期更長的阿蒙提亞多（Amontillado）與佩德羅－希梅內斯、密思嘉釀成的甜型克林姆雪利。特殊白堊土 Albariza 是成就複雜風味的關鍵。",
     "provinces": [
       "Cadix"
     ],
@@ -222,13 +240,16 @@
     "zonName": "Manzanilla Sanlúcar de Barrameda",
     "autonomia": "安達盧西亞",
     "autonomiaId": "andalucia",
+    "soilType": "Albariza 白堊土，葡萄園海拔介於海平面至 45 公尺",
     "styles": [
       "加強酒"
     ],
     "grapes": [
-      "Palomino Fino"
+      "雪利葡萄 Palomino Fino（約佔種植面積 90%）",
+      "佩德羅－希梅內斯 Pedro Ximénez",
+      "密思嘉 Moscatel"
     ],
-    "description": "雪莉家族中最精緻的成員，產自瓜達爾基維爾河口的海洋涼風中，帶有獨特的鹹海洋礦物感，是最適合搭配鮮海鮮的 Fino 型不甜雪莉。",
+    "description": "雪莉家族中最精緻的成員，與赫雷斯共用同一套 Solera 陳年系統與法規，但僅產自瓜達爾基維爾河口氣候涼爽的桑盧卡爾－德巴拉梅達，酒齡 5–9 年的曼查尼拉表層生成酵母薄膜（Flor），帶有獨特的鹹海洋礦物感，是最適合搭配鮮海鮮的 Fino 型不甜雪莉；當地也生產陳年 10–15 年的歐洛羅索雪利。",
     "provinces": [
       "Cadix"
     ],
@@ -241,9 +262,9 @@
     "doYear": 1980,
     "elevation": "700–800 公尺",
     "whiteGrapePct": 95,
-    "soilType": "Cascajosos（砻石地）——富鎈鈐與鏡，有機質含量低，排水通風極佳",
+    "soilType": "Cascajosos（礫石地）——富含礫石與石灰質，有機質含量低，排水通風極佳",
     "keyTowns": ["La Seca", "Rueda", "Serrada", "Medina del Campo"],
-    "climateNote": "大陸型氣候（高海拔修正）：夏季均温 23°C，冬季均温 -3°C；年隨 318mm，日照 2600 小時",
+    "climateNote": "大陸型氣候（高海拔修正）：夏季均溫 23°C，冬季均溫 -3°C；年雨量 318mm，日照 2,600 小時",
     "styles": [
       "白酒",
       "氣泡酒"
@@ -258,7 +279,7 @@
       "Merlot（紅）",
       "Garnacha（紅）"
     ],
-    "description": "杭羅河谷白酒精品產區，海拔 700–800 公尺。產區 95% 為白葡萄，以原生品種 Verdejo 主導：其在魯埃達种植已超達數世紀，可湯源至 11 世紀阿方根3六世時期，據信由摩爾人自北非引入。Verdejo 具備獨特草本氣息、青檟、哈密瓜、蒸菨葡萄柚皮、茎香與白桃風味，酸度中高，結尾的微苦感（bitter touch）是高品質魯埃達白酒的識別標誌。Cascajosos 砻石土壤排水通風極佳，日照時長達 2,600 小時。",
+    "description": "杜羅河谷白酒精品產區，海拔 700–800 公尺，95% 為白葡萄。過去以生產近似淡型雪利酒的增度葡萄酒聞名，1960 年代外來投資湧入後轉型生產清爽新式白酒。主導品種 Verdejo 種植歷史可溯及 11 世紀阿方索六世時期，據信由摩爾人自北非引入，具備獨特草本氣息、青草、哈密瓜、葡萄柚皮與白桃風味，酸度中高，尾韻的微苦感（bitter touch）是高品質盧埃達白酒的識別標誌。Cascajosos 礫石土壤排水通風極佳，日照時長達 2,600 小時。",
     "provinces": [
       "Valladolid",
       "Segovia",
@@ -270,6 +291,7 @@
     "zonName": "Toro",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "doYear": 1987,
     "nameTranslation": "托羅",
     "area": 5550,
     "elevation": "650–825公尺",
@@ -284,7 +306,7 @@
       "Tinta de Toro（Tempranillo 變種，核心紅品種）",
       "Garnacha"
     ],
-    "description": "薩莫拉省的豪邁紅酒產地，歷史可追溯至中世紀。Tinta de Toro（Tempranillo 本地變種）老藤生長在 650–825 公尺的砂質貧瘠土壤，釀出酒體強勁、顏色深郁的紅酒：櫻桃、無花果乾、雪松、菸草與蒔蘿香氣，酒精 13.5–15%，特級珍藏陳年潛力達 20 年。建議 16–20°C 侍酒、醒酒 1 小時。",
+    "description": "薩莫拉省的豪邁紅酒產地，釀酒史與西班牙最古老的薩拉曼卡大學（建於 1215 年）密切相關，卡斯提亞宮廷與文藝復興時期的貴族皆是酒勁厚重的托羅紅酒愛好者，1987 年正式獲得法定產區稱號。Tinta de Toro（Tempranillo 本地變種）老藤生長在 650–825 公尺的砂質貧瘠土壤，釀出酒體強勁、顏色深郁的紅酒：櫻桃、無花果乾、雪松、菸草與蒔蘿香氣，酒精 13.5–15%，特級珍藏陳年潛力達 20 年。建議 16–20°C 侍酒、醒酒 1 小時。",
     "provinces": [
       "Zamora",
       "Valladolid"
@@ -333,17 +355,22 @@
     "zonName": "Jumilla",
     "autonomia": "穆爾西亞",
     "autonomiaId": "murcia",
+    "elevation": "最高近 730 公尺",
+    "soilType": "表層多沙、呈棕紅色，底層幾乎全為石灰岩",
+    "climateNote": "大陸性氣候明顯，部分地區半乾旱，夏季極炎熱、冬季異常寒冷，霜凍頻繁",
+    "history": "1980 年代末葡萄蚜蟲侵害迫使大規模重新種植，酒農藉機改種更優質的品種以提升品質",
     "styles": [
       "紅酒",
       "白酒",
       "粉紅酒"
     ],
     "grapes": [
-      "Monastrell (Mourvèdre)",
-      "Garnacha",
-      "Syrah"
+      "慕爾韋度 Monastrell（佔種植面積約 80%）",
+      "紅加納查 Garnacha",
+      "森希貝爾 Cencibel",
+      "阿依侖 Arién（白）"
     ],
-    "description": "胡米利亞的 Monastrell（Mourvèdre）以耐旱著稱，老藤灌木種植，產出烈日下的深濃紅酒，果醬感濃郁、單寧厚實，性價比極高。",
+    "description": "穆爾西亞省下黎凡特地區的兩大法定產區之一，跨越穆爾西亞與卡斯提亞-拉曼恰的阿爾巴塞特省邊界。80% 葡萄園種植 Monastrell（Mourvèdre），耐旱老藤灌木種植於石灰岩沙質土，產出烈日下的深濃紅酒，果醬感濃郁、單寧厚實；也生產以百分百慕爾韋度釀成、可陳年至特級珍藏（Gran Reserva）等級的甜味紅酒，性價比極高。",
     "provinces": [
       "Murcia",
       "Albacete"
@@ -390,7 +417,8 @@
     "area": 4040,
     "elevation": "350–1,000 公尺",
     "climateNote": "温和型：年均降雨 500mm、日照 2,700 小時，夏季最高 26.63°C、冬季最低 −0.85°C；山地日夜溫差保留香氣細膜感",
-    "soilType": "覆蓋在柔軟物質上的褐色石灯岩土，低肥力、透水性佳、含適量石灯質，士壤衣生條件良好",
+    "soilType": "覆蓋在柔軟物質上的褐色石灰岩土，低肥力、透水性佳、含適量石灰質，土壤衛生條件良好",
+    "history": "歷史可追溯至石器時代，維羅河峽谷岩洞中仍保留石器時代岩畫；羅馬時代起即開始釀酒，但直至 1970 年代大部分葡萄酒仍銷往庇里牛斯山另一側的法國，在阿拉貢自治區境內反而鮮為人知",
     "yieldLimit": { "紅葡萄": "8,000kg/ha", "白葡萄": "9,000kg/ha" },
     "styles": [
       "紅酒",
@@ -414,7 +442,7 @@
       "Riesling",
       "Alcañón（阿拉貢原生白品種）"
     ],
-    "description": "1984 年獲得 DO，位於韋斯卡省，阿拉貢庇里牛斯山脈山腳（1984 DO）。同時种植 15 種本地與國際品種，包含罕見的 Gewürztraminer、Alcañón與 Parraleta。海拔 350–1,000 公尺，年雨 500mm、日照 2,700 小時，酒款以清新輕盈、優雅細致著稱。",
+    "description": "1984 年獲得 DO 地位，位於韋斯卡省，阿拉貢庇里牛斯山脈山腳下，是研究和開發新型葡萄品種的基地。同時種植 15 種本地與國際品種，包含罕見的 Gewürztraminer、Alcañón 與 Parraleta。海拔 350–1,000 公尺，年雨 500mm、日照 2,700 小時，酒款以清新輕盈、優雅細緻著稱。",
     "provinces": [
       "Huesca"
     ],
@@ -424,15 +452,20 @@
     "zonName": "Valdepeñas",
     "autonomia": "卡斯提亞-拉曼恰",
     "autonomiaId": "castilla-la-mancha",
+    "nameTranslation": "岩石峽谷（Valle de las Peñas）",
+    "elevation": "約 700 公尺",
+    "soilType": "表層黃紅色沖積粘土夾雜岩石，底層富含白堊的石灰岩，有助炎熱季節保水",
+    "history": "羅馬時代前已開始釀酒，1243 年以「岩石峽谷」之名正式建鎮；1861 年鐵路貫通後開始外銷，1925 年成立葡萄酒製造商地區聯合會，即今日協調委員會前身",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Tempranillo (Cencibel)",
-      "Airén"
+      "森希貝爾 Cencibel（Tempranillo 本地變種）",
+      "阿依侖 Airén（白，佔種植面積逾八成）"
     ],
-    "description": "卡斯提亞-拉曼恰區南端，以 Cencibel（Tempranillo）為主，傳統上以黏土大甕陳年，近年現代化轉型，出產易飲而優質的紅酒，性價比出眾。",
+    "description": "卡斯提亞-拉曼恰區南端、幾乎被拉曼恰產區包圍，但生產高品質葡萄酒的歷史更悠久。以百分百阿依侖釀成新鮮爽口的白酒，賴以成名的則是紅酒：森希貝爾（Tempranillo 本地變種）成熟期較短、耐熱性強，21 世紀展開重新種植計畫，使其與阿依侖種植比例趨於平衡，依橡木桶陳年分為 Reserva、Gran Reserva 兩級。",
     "provinces": [
       "Ciudad Real"
     ],
@@ -442,16 +475,20 @@
     "zonName": "La Mancha",
     "autonomia": "卡斯提亞-拉曼恰",
     "autonomiaId": "castilla-la-mancha",
+    "elevation": "約 700 公尺",
+    "soilType": "表層棕紅色沙土，底層多為粘土，優質地塊底層為石灰岩",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Airén",
-      "Tempranillo",
-      "Garnacha"
+      "阿依侖 Airén（全球種植面積最廣的品種之一）",
+      "森希貝爾 Cencibel（Tempranillo）",
+      "加納查 Garnacha",
+      "馬卡貝奧 Macabeo（白）"
     ],
-    "description": "西班牙乃至全球面積最大的 DO 產區，覆蓋廣闊高原。Airén 白葡萄曾佔絕對主導，近年 Tempranillo 大量種植，是物美價廉餐酒的重要來源。",
+    "description": "西班牙乃至全球面積最大的 DO 產區，覆蓋卡斯提亞-拉曼恰四省，是《唐吉訶德》主人翁的故鄉。因地處內陸、交通阻塞，長期以鄉村風格散裝酒為主；1970 年代起地價與種植成本低廉吸引大量投資，1980 年代起現代化酒廠以優質品種取代原生葡萄。Airén 白葡萄曾佔絕對主導，如今森希貝爾（Tempranillo 本地變種）大量取代，是物美價廉餐酒的重要來源，目前約 70% 銷往海外市場。",
     "provinces": [
       "Ciudad Real",
       "Albacete",
@@ -601,6 +638,7 @@
     "zonName": "Monterrei",
     "autonomia": "加利西亞",
     "autonomiaId": "galicia",
+    "doYear": 1996,
     "styles": [
       "白酒",
       "紅酒"
@@ -637,16 +675,19 @@
     "zonName": "Montilla-Moriles",
     "autonomia": "安達盧西亞",
     "autonomiaId": "andalucia",
+    "elevation": "300–700 公尺，地勢向南遞降",
+    "soilType": "中部白堊質 Albarizas 土壤最優，周邊為稱作 Arenas 的沙質土",
     "styles": [
       "加強酒",
       "白酒"
     ],
     "grapes": [
-      "Pedro Ximénez",
-      "Airén",
-      "Moscatel"
+      "佩德羅－希梅內斯 Pedro Ximénez（當地主力品種）",
+      "密思嘉 Moscatel",
+      "阿依倫 Airén",
+      "巴拉迪 Baladí-Verdejo"
     ],
-    "description": "科爾多瓦附近以 Pedro Ximénez 老藤著稱，傳統上不添加酒精的自然強化風格是一大特色，濃縮葡萄乾香甜酒聞名，是雪莉 PX 葡萄的主要來源。",
+    "description": "科爾多瓦市以南 45 公里，是西班牙歷史最悠久的葡萄酒產地之一，釀酒傳統可溯及三千年前的腓尼基時代。以佩德羅－希梅內斯老藤著稱，因當地日照充足、葡萄天然糖度高，傳統上不需額外增度即可達到雪利酒等級的酒精濃度，是安達盧西亞自然強化風格的代表；濃縮葡萄乾風味的天然甜酒（Pedro Ximénez）聞名於世，也是雪莉酒廠採購 PX 葡萄的主要來源。",
     "provinces": [
       "Cordoba"
     ],
@@ -656,15 +697,19 @@
     "zonName": "Condado de Huelva",
     "autonomia": "安達盧西亞",
     "autonomiaId": "andalucia",
+    "elevation": "約 25 公尺",
+    "soilType": "表層多沙，底層為石灰岩與沖積岩",
+    "history": "15 世紀已頗負盛名，曾與地中海地區的增度酒一併被稱為「薩克酒」（Sack），是莎士比亞時代自歐洲南部輸入英國大受歡迎的白葡萄酒",
     "styles": [
       "白酒",
       "加強酒"
     ],
     "grapes": [
-      "Zalema",
-      "Palomino"
+      "薩雷馬 Zalema（佔種植面積約 86%）",
+      "白雪利葡萄 Listán Blanco",
+      "雪利葡萄 Palomino Fino"
     ],
-    "description": "韋爾瓦省沿海產區，鄰近葡萄牙，生產清淡乾型白酒和傳統氧化型加強酒（Condado Viejo）。",
+    "description": "韋爾瓦省沿海產區，地處安達盧西亞西端、西班牙與葡萄牙邊境以東，屬地中海型氣候。15 世紀所產白酒曾與地中海增度酒並稱「薩克酒」風靡歐洲，如今出產三種風格：略增度的淡色葡萄酒（Pálido）、經完全氧化陳化、增度可達 17–23% 的陳年酒（Viejo），以及低溫發酵、適合即飲的果味新酒（Joven Afrutado）。",
     "provinces": [
       "Huelva"
     ],
@@ -695,6 +740,8 @@
     "zonName": "Alella",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "doYear": 1956,
+    "history": "釀酒史可追溯至古羅馬時代，1890 年代曾最早遭受葡萄蚜蟲侵害，園區面積因而縮減；1956 年正式獲得法定產區完全認定，1989 年起產區向地勢較高的瓦耶斯（Vallés）地區擴展",
     "classification": "DO",
     "soilType": "花崗岩（granite）為主，排水良好、低肥力",
     "climateNote": "緊鄰海岸，地中海溫暖海風調節，氣候溫和；海拔高度是定義酒款風格的關鍵因素",
@@ -721,17 +768,23 @@
     "zonName": "Montsant",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "doYear": 2001,
+    "elevation": "200–700 公尺",
+    "soilType": "邊陲地帶為石塊與石灰質土；法爾塞特為花崗岩沙土；部分地區為砂板岩",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Garnacha",
-      "Cariñena",
-      "Tempranillo",
-      "Syrah"
+      "黑加納查 Garnacha Negra",
+      "慕爾韋度 Monastrell",
+      "馬蘇埃拉 Mazuela",
+      "西拉 Syrah",
+      "馬卡貝奧 Macabeo（白）",
+      "白加納查 Garnacha Blanca（白）"
     ],
-    "description": "環繞 Priorat 的產區，常被稱為「Priorat 的入門款」，以更合理的價格提供相近風格。板岩和石灰岩土壤，老藤 Garnacha 出色。",
+    "description": "環繞 Priorat 的產區，原屬塔拉戈納法定產區分區之一，2001 年以法爾塞特為核心獨立取得 DO 命名，常被稱為「Priorat 的入門款」，以更合理的價格提供相近風格。紅酒以純黑加納查或混合馬蘇埃拉、西拉等品種釀造，白酒則以白加納查為主，帶有獨特的地中海叢林氣息。",
     "provinces": [
       "Tarragona"
     ],
@@ -741,16 +794,21 @@
     "zonName": "Terra Alta",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "elevation": "約 400 公尺",
+    "soilType": "厚層表土下為石灰岩與粘土，通風排水俱佳",
     "styles": [
       "白酒",
-      "紅酒"
+      "紅酒",
+      "粉紅酒",
+      "甜酒"
     ],
     "grapes": [
-      "Garnacha Blanca",
-      "Garnacha Tinta",
-      "Cariñena"
+      "白加納查 Garnacha Blanca（佔種植面積約四分之三）",
+      "馬卡貝奧 Macabeo",
+      "黑加納查 Garnacha Negra",
+      "卡利涅納 Cariñena"
     ],
-    "description": "塔拉戈納省西南高原，以 Garnacha Blanca 白酒著稱，近年品質飛躍提升，強烈礦物感和結構感令人印象深刻。",
+    "description": "塔拉戈納省最南端、地勢最高的加泰羅尼亞法定產區，因交通不便長期居於邊陲，1970 年代起透過設備更新與創新逐漸嶄露頭角。以白加納查白酒著稱，近年品質飛躍提升，強烈礦物感和結構感令人印象深刻；紅酒則有即飲清爽型與依橡木桶陳年分級（Crianza、Reserva、Gran Reserva）的陳年型並存。",
     "provinces": [
       "Tarragona"
     ],
@@ -760,6 +818,7 @@
     "zonName": "Cigales",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "doYear": 1991,
     "styles": [
       "粉紅酒",
       "紅酒",
@@ -783,6 +842,7 @@
     "zonName": "Arlanza",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "doYear": 2008,
     "styles": [
       "紅酒",
       "白酒"
@@ -803,6 +863,7 @@
     "zonName": "Arribes",
     "autonomia": "卡斯提亞-萊昂",
     "autonomiaId": "castilla-leon",
+    "doYear": 2007,
     "styles": [
       "紅酒",
       "白酒"
@@ -825,6 +886,9 @@
     "zonName": "Empordá",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "doYear": 1975,
+    "elevation": "0–195 公尺",
+    "soilType": "底層石灰岩，表層肥沃，最好的葡萄園位於西端受庇護的高地峽谷",
     "styles": [
       "紅酒",
       "白酒",
@@ -832,12 +896,12 @@
       "粉紅酒"
     ],
     "grapes": [
-      "Garnacha",
-      "Cariñena",
-      "Macabeo",
-      "Garnatxa d'Empordà"
+      "紅加納查 Garnacha Tinta",
+      "卡利涅納 Cariñena",
+      "馬卡貝奧 Macabeo（白）",
+      "白加納查 Garnacha Blanca（白）"
     ],
-    "description": "加泰隆尼亞北端吉隆納省，夾在庇里牛斯山與地中海之間，傳統甜葡萄酒 Garnatxa de l'Empordà 聞名，近年精品紅白酒表現亦相當出色。",
+    "description": "加泰隆尼亞最北端法定產區，位於吉隆納省，夾在庇里牛斯山與地中海之間，多風氣候（南濕風、北乾冷風）。歷史上以近似法國 vins de paille 的半增度甜陳酒為主，1975 年獲 DO 命名後轉向清淡新鮮風格；傳統甜酒 Garnatxa d'Empordà 以加納查釀成，通常經橡木桶長年陳化，近年精品紅白酒表現亦相當出色。",
     "provinces": [
       "Girona"
     ],
@@ -847,13 +911,20 @@
     "zonName": "Bizkaiko Txakolina-Chacolí de Bizkaia",
     "autonomia": "巴斯克地區",
     "autonomiaId": "pais-vasco",
+    "climateNote": "西班牙最寒冷潮濕的產區之一，沿海地帶少遮蔽，西南部巴爾馬塞達因山脈保護略為溫和",
+    "soilType": "山海之間多為富含粘土的沖積土",
     "styles": [
-      "白酒"
+      "白酒",
+      "紅酒"
     ],
     "grapes": [
-      "Hondarrabi Zuri"
+      "昂達拉比-蘇利-薩拉蒂亞 Ondarrabi Zuri Zerratia（約佔 80%）",
+      "昂達拉比-蘇利 Ondarrabi Zuri",
+      "大滿勝 Gros Manseng",
+      "滿勝 Manseng",
+      "昂達拉比-貝爾薩 Ondarrabi Beltza（紅）"
     ],
-    "description": "巴斯克海岸的輕盈白酒，以 Hondarrabi Zuri 釀製，微氣泡、高酸低酒精，是配搭 Pintxos 小點的最佳拍檔。",
+    "description": "比斯開省的傳統巴斯克葡萄酒，產區橫跨畢爾包周邊 31 個分散村鎮，屬西班牙最寒冷潮濕的葡萄種植區之一。以本地品種昂達拉比-蘇利-薩拉蒂亞（佔約 80%）釀成新鮮無糖白酒，是搭配巴斯克海鮮料理的最佳拍檔，也是全西班牙最北端出產的葡萄酒。",
     "provinces": [
       "Biskaia"
     ],
@@ -863,14 +934,16 @@
     "zonName": "Getariako Txakolina-Chacolí de Getaria",
     "autonomia": "巴斯克地區",
     "autonomiaId": "pais-vasco",
+    "soilType": "山腳沿海地帶",
     "styles": [
-      "白酒"
+      "白酒",
+      "紅酒"
     ],
     "grapes": [
-      "Hondarrabi Zuri",
-      "Hondarrabi Beltza"
+      "昂達拉比-蘇利 Hondarrabi Zuri（佔約 80%）",
+      "昂達拉比-貝爾薩 Hondarrabi Beltza（紅）"
     ],
-    "description": "吉普斯科亞海岸的傳統 Txakoli 產區，海洋性氣候孕育細膩的蘋果、柑橘氣息，從高杯傾注以增加碳酸感是當地傳統。",
+    "description": "吉普斯科亞省沿海薩勞茨、赫塔利亞、埃亞三地一帶的傳統 Txakoli 產區。白酸（Txakolí Blanco）新鮮爽口、味酸無糖，是搭配海鮮的上選；紅酸（Txakolí Tinto）同樣清爽無糖，兩者皆屬即飲型，從高杯傾注以增加碳酸感是當地傳統飲法。",
     "provinces": [
       "Guipuzcoa"
     ],
@@ -880,13 +953,19 @@
     "zonName": "Arabako Txakolina-Chacolí de Álava",
     "autonomia": "巴斯克地區",
     "autonomiaId": "pais-vasco",
+    "doYear": 1989,
+    "climateNote": "較比斯開地區乾燥，春季仍會出現不利葡萄生長的霜凍",
+    "soilType": "土壤種類不一，兼有粘土與石塊地",
     "styles": [
       "白酒"
     ],
     "grapes": [
-      "Hondarrabi Zuri"
+      "昂達拉比-蘇利 Hondarrabi Zuri（佔約 80%）",
+      "大滿勝 Gros Manseng",
+      "小滿勝 Petit Manseng",
+      "小古爾布 Petit Corbu"
     ],
-    "description": "阿拉瓦省內陸的最小 Txakoli 產區，受大陸性氣候影響，酒體比沿海 Txakoli 稍為豐滿，複雜度更高。",
+    "description": "三個巴斯克 Txakoli 產區中面積最小、最新成立的一個，1989 年正式建區，由阿蒙里奧、亞埃拉、亞信尼亞加等 5 個村鎮組成，位於阿拉瓦省西北部納比安河盆地兩岸。內陸大陸性氣候影響下，酒體比沿海 Txakoli 稍為豐滿，複雜度更高，同樣是巴斯克人品嚐開胃小菜（Chiquiteo）時的傳統佐餐酒。",
     "provinces": [
       "Alava"
     ],
@@ -932,17 +1011,24 @@
     "zonName": "Vinos de Madrid",
     "autonomia": "馬德里",
     "autonomiaId": "madrid",
+    "doYear": 1990,
+    "subRegions": [
+      { "name": "San Martín de Valdeiglesias", "climate": "馬德里以西，最潮濕", "soil": "表層肥沃，底層花崗岩", "style": "與門特里達產區接壤" },
+      { "name": "Navalcarnero", "climate": "馬德里以南", "soil": "表層細沙，底層沙土與粘土", "style": "" },
+      { "name": "Arganda", "climate": "馬德里東南，最乾燥", "soil": "表層粘土泥灰，底層花崗岩／部分石灰岩", "style": "與拉曼恰產區相鄰" }
+    ],
     "styles": [
       "紅酒",
       "白酒",
       "粉紅酒"
     ],
     "grapes": [
-      "Tempranillo",
-      "Garnacha",
-      "Albillo"
+      "加納查 Garnacha Tinta（佔種植面積約 25%）",
+      "精紅 Tinto Fino（Tempranillo）",
+      "馬爾瓦爾 Malvar（白）",
+      "阿爾比約 Albillo（白）"
     ],
-    "description": "馬德里周圍的山地產區，以 Grenache（Garnacha）老藤著稱，阿爾維蘇等副區海拔達 900 公尺，孕育優雅清爽的紅酒。",
+    "description": "馬德里市於 1561 年建城後帶動周邊釀酒業發展，1990 年才正式獲得法定產區稱號，分為聖馬丁-德瓦爾德伊格西亞斯（西）、納瓦爾卡爾內羅（南）、阿爾甘達（東南）三分區。以老藤 Garnacha 著稱，各分區土壤條件各異（花崗岩、沙土粘土、石灰岩不等），孕育優雅清爽的紅酒，並已發展出佳釀級白酒與陳酒級紅酒。",
     "provinces": [
       "Madrid"
     ],
@@ -952,16 +1038,27 @@
     "zonName": "Ribera del Guadiana",
     "autonomia": "埃斯特雷馬杜拉",
     "autonomiaId": "extremadura",
+    "doYear": 1999,
+    "climateNote": "夏季最高達 40°C、冬季最低 5°C，年均降雨 400–500mm",
+    "subRegions": [
+      { "name": "Tierra de Barros", "climate": "-", "soil": "粘質土，儲水佳、富石灰，地形平坦利於機械化，佔葡萄園總面積 80%", "style": "產區核心分區" },
+      { "name": "Cañamero", "climate": "-", "soil": "貧瘠葉岩土", "style": "海拔最高（平均 849m）" },
+      { "name": "Montánchez", "climate": "-", "soil": "棕色微酸性土", "style": "山嶺與山谷交錯" },
+      { "name": "Ribera Alta / Ribera Baja del Guadiana", "climate": "-", "soil": "多沙較淺薄／粘土與沖積土", "style": "西部沿葡萄牙邊境" }
+    ],
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Tempranillo",
-      "Garnacha",
-      "Cayetana Blanca"
+      "添百利路 Tempranillo",
+      "梅鹿 Merlot",
+      "加納查 Garnacha",
+      "白卡耶塔納 Cayetana Blanca（白）",
+      "亞拉裡耶 Alarije（白）"
     ],
-    "description": "艾斯特雷馬杜拉省的廣闊產區，以 Tempranillo、Garnacha 和當地原生品種 Alarije 為主，屬傳統農業酒鄉，近年逐漸現代化。",
+    "description": "西班牙與葡萄牙邊境沿瓜迪亞納河的廣闊產區，1999 年整合原本分散於巴達霍斯省與卡塞雷斯省的 6 個鄉村酒區而成，各分區可採用不同釀造規範。艾斯特雷馬杜拉葡萄園面積居西班牙第二，歷史上多用於蒸餾白蘭地。目前以白葡萄新酒為主力，與卡斯提亞-拉曼恰產品直接競爭，也生產以梅鹿、添百利路與 Cabernet 混釀的優質紅酒。",
     "provinces": [
       "Badajoz",
       "Caceres"
@@ -972,16 +1069,23 @@
     "zonName": "Tacoronte-Acentejo",
     "autonomia": "加那利群島",
     "autonomiaId": "canarias",
+    "elevation": "200–750 公尺",
+    "climateNote": "亞熱帶氣候，四面環海濕度高，夏季漫長炎熱乾燥",
+    "soilType": "火山層表面形成含泥灰的棕色土壤",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒",
+      "烈酒",
+      "古典甜酒"
     ],
     "grapes": [
-      "Listán Negro",
-      "Negramoll",
-      "Listán Blanco"
+      "黑雪利葡萄 Listán Negro",
+      "黑摩爾 Negramoll",
+      "莫維賽亞 Malvasía（白）",
+      "白雪利葡萄 Listán Blanco（白）"
     ],
-    "description": "特內里費島北部最古老的 DO 產區，以 Listán Negro 紅酒為主，火山土壤 picón 賦予獨特的礦物煙燻感。",
+    "description": "特內里費島西北火山山坡上的產區，以塔科隆特與曼蘭薩-德阿森台霍為核心，梯田葡萄園朝北朝西分佈。15 世紀中葉西班牙佔領加那利群島後即開始釀酒，部分品種已在伊比利半島絕跡卻在此保存至今。以黑雪利葡萄與黑摩爾釀成的紅酒為主，多屬清淡新鮮的即飲新酒（Joven），主要供島內消費。",
     "provinces": [
       "Santa Cruz Tenerife"
     ],
@@ -991,16 +1095,24 @@
     "zonName": "Lanzarote",
     "autonomia": "加那利群島",
     "autonomiaId": "canarias",
+    "doYear": 1994,
+    "elevation": "海平面至約 600 公尺",
+    "soilType": "黑色火山灰覆蓋，葡萄種植於挖掘的坑洞（hoyos）中並以石塊圍牆防風，坑深可達 3 公尺",
+    "history": "島名源自古羅馬人所見遍地野狗，稱為「狗島」（Insulae Canium），1402 年西班牙佔領後改稱加那利群島；葡萄酒最初歸類為鄉村餐酒「拉赫里亞」（La Geria），1994 年獲完整法定產區命名",
     "styles": [
       "白酒",
-      "紅酒"
+      "紅酒",
+      "烈酒",
+      "古典甜酒"
     ],
     "grapes": [
-      "Malvasía Volcánica",
-      "Listán Blanco",
-      "Listán Negro"
+      "莫維賽亞（火山）Malvasía Volcánica（白）",
+      "布拉布蘭卡 Burra Blanca（白）",
+      "迭戈 Diego（白）",
+      "黑雪利葡萄 Listán Negro（紅）",
+      "黑摩爾 Negramoll（紅）"
     ],
-    "description": "蘭薩羅特島上獨特的火山景觀，葡萄種植在 *hoyos* 火山灰坑中以防強風，Malvasía 白酒甜潤、帶有杏桃蜂蜜香氣，景色與酒款同樣令人印象深刻。",
+    "description": "蘭薩羅特島獨特的火山景觀產區，覆蓋全島大部分葡萄園，葡萄種植於名為 hoyos 的火山灰坑中，並以石塊圍牆防強風，坑深可達 3 公尺。烈性葡萄酒是主要類型，也是傳統「加那利白葡萄酒」（Canary Sack）之一，通常用莫維賽亞與少量雪利葡萄釀成；另有黑摩爾釀造的淡型紅酒與清爽的傳統白酒，景色與酒款同樣令人印象深刻。",
     "provinces": [
       "Lanzarote"
     ],
@@ -1010,16 +1122,22 @@
     "zonName": "Abona",
     "autonomia": "加那利群島",
     "autonomiaId": "canarias",
+    "doYear": 1996,
+    "elevation": "最高達 1,600 公尺，維拉弗洛爾一帶為歐洲地勢最高的葡萄園之一",
+    "soilType": "以黑色火山土為主，海拔 600 公尺以上全為火山物質",
     "styles": [
       "白酒",
-      "紅酒"
+      "紅酒",
+      "烈酒",
+      "古典甜酒"
     ],
     "grapes": [
-      "Listán Blanco",
-      "Vijariego",
-      "Listán Negro"
+      "白雪利葡萄 Listán Blanco（佔種植面積約 80%）",
+      "維哈利埃格 Vijariego",
+      "玫瑰香 Malvasía Rosada（紅）",
+      "黑摩爾 Negramoll（紅）"
     ],
-    "description": "特內里費島南部高海拔產區（最高達 1750 公尺），是西班牙海拔最高的葡萄酒產區之一，清涼氣候造就清爽多酸白酒。",
+    "description": "特內里費島最年輕的法定產區之一，1996 年獲得法定產區稱號，因地勢陡峭產量不多。是全島陽光最充足、雨量最少的地區，海拔最高可達 1,600 公尺（維拉弗洛爾一帶為歐洲地勢最高的葡萄園之一）。以白雪利葡萄為主，出產酒精度較高的白酒，清涼高海拔氣候造就清爽多酸風格；也利用黑雜交葡萄釀造玫瑰紅，並生產有機葡萄酒。",
     "provinces": [
       "Santa Cruz Tenerife"
     ],
@@ -1029,18 +1147,23 @@
     "zonName": "Conca de Barberá",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "doYear": 1989,
+    "elevation": "195–390 公尺",
+    "soilType": "河谷沖積土，底層石灰岩，表層含白堊",
     "styles": [
       "白酒",
       "紅酒",
-      "氣泡酒"
+      "氣泡酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Macabeo",
-      "Parellada",
-      "Trepat",
-      "Tempranillo"
+      "帕雷亞達 Parellada",
+      "馬卡貝奧 Macabeo",
+      "查帕 Trepat",
+      "加納查 Garnacha",
+      "添百利路 Tempranillo"
     ],
-    "description": "加泰羅尼亞山地涼爽產區，以 Cava 基酒葡萄著稱，本地品種 Trepat 可釀製清淡粉紅色氣泡酒，Miguel Torres 在此有大量投資。",
+    "description": "加泰羅尼亞山地涼爽產區，現代釀酒史起源於供應卡瓦氣泡酒基酒，1989 年獲得法定產區稱號。三面環山（塔拉特山、普拉德斯山、蒙特桑特山）形成天然屏障。白酒佔產量三分之二，以百分百帕雷亞達釀成的清爽乾白最受歡迎；本地品種 Trepat 可釀製清淡爽口的粉紅酒，Miguel Torres 在此有大量投資。",
     "provinces": [
       "Tarragona"
     ],
@@ -1050,17 +1173,24 @@
     "zonName": "Utiel-Requena",
     "autonomia": "巴倫西亞",
     "autonomiaId": "valencia",
+    "doYear": 1957,
+    "elevation": "600–900 公尺，平均約 720 公尺",
+    "climateNote": "巴倫西亞自治區大陸性特徵最明顯的產區，日夜溫差可達 30°C，有利葡萄成熟並加速木桶陳化",
     "styles": [
       "紅酒",
       "粉紅酒",
-      "白酒"
+      "白酒",
+      "氣泡酒",
+      "烈酒"
     ],
     "grapes": [
-      "Bobal",
-      "Tempranillo",
-      "Cabernet Sauvignon"
+      "博巴爾 Bobal（種植面積最廣）",
+      "添百利路 Tempranillo",
+      "紅加納查 Garnacha",
+      "馬卡貝奧 Macabeo（白）",
+      "梅爾塞格拉 Merseguera（白）"
     ],
-    "description": "巴倫西亞西部高原（海拔 700 公尺），以本地品種 Bobal 著稱，多汁、顏色深沉，在粉紅酒中表現出色。近年出現越來越多品質導向的裝瓶。",
+    "description": "巴倫西亞自治區最靠內陸、海拔最高的法定產區之一，1957 年獲得法定產區稱號。本地品種 Bobal 多汁、顏色深沉，是最具代表性的品種，在酒香濃郁的玫瑰紅中表現尤其出色，堪稱區內佳作；紅酒同樣以博巴爾與加納查、添百利路混釀，近年出現越來越多以百分百添百利路釀成、達佳釀（Crianza）等級的品質導向裝瓶。",
     "provinces": [
       "Valence"
     ],
@@ -1070,17 +1200,23 @@
     "zonName": "Alicante",
     "autonomia": "巴倫西亞",
     "autonomiaId": "valencia",
+    "elevation": "沿海海平面至內陸約 400 公尺",
+    "soilType": "低地為沖積土，高地富含碳酸鹽，底層石灰岩",
     "styles": [
       "紅酒",
       "甜酒",
-      "白酒"
+      "白酒",
+      "粉紅酒",
+      "烈酒"
     ],
     "grapes": [
-      "Monastrell",
-      "Garnacha",
-      "Moscatel de Alejandría"
+      "慕爾韋度 Monastrell",
+      "紅加納查 Garnacha Tinta",
+      "紫加納查 Garnacha Tintorera",
+      "蜜思吉 Moscatel de Alejandría",
+      "梅爾塞格拉 Merseguera（白）"
     ],
-    "description": "阿利坎特省地中海氣候，以濃郁 Monastrell 紅酒和傳統甜型 Moscatel 著稱，Marina Alta 子產區靠近海岸，種植優質 Moscatel 釀製甜酒。",
+    "description": "巴倫西亞自治區最南端的法定產區，分為沿海濕潤的拉馬利納（La Marina）與內陸大陸性氣候更明顯的阿利坎特兩區，自古便是地中海重要的葡萄酒出口門戶。以濃郁 Monastrell 紅酒著稱，拉馬利納地區則以百分百羅馬麝香葡萄（Moscatel）釀成的烈性甜酒聞名；最珍稀的特產是阿利坎特陳酒（Fondillón）——百分百慕爾韋度釀造、增度後於橡木桶陳放至少 8 年的傳統陳年酒。",
     "provinces": [
       "Alicante"
     ],
@@ -1090,18 +1226,28 @@
     "zonName": "Valencia",
     "autonomia": "巴倫西亞",
     "autonomiaId": "valencia",
+    "subRegions": [
+      { "name": "Clariano", "climate": "-", "soil": "-", "style": "最南端，鄰近 Alicante" },
+      { "name": "Moscatel de Valencia", "climate": "-", "soil": "-", "style": "巴倫西亞市西南，Moscatel 甜酒重鎮" },
+      { "name": "Alto Turia", "climate": "海拔約 600 公尺，地表多沙", "soil": "底層石灰岩", "style": "巴倫西亞市西北，地勢最高" },
+      { "name": "Valentino", "climate": "海拔約 175 公尺", "soil": "表層棕紅泥灰土、底層石灰岩", "style": "西北部鄰昆卡省，地勢最低" }
+    ],
     "styles": [
       "紅酒",
       "白酒",
+      "粉紅酒",
+      "氣泡酒",
       "甜酒"
     ],
     "grapes": [
-      "Garnacha",
-      "Tempranillo",
-      "Moscatel Romano",
-      "Merseguera"
+      "慕爾韋度 Monastrell",
+      "紅加納查 Garnacha Tinta",
+      "添百利路 Tempranillo",
+      "梅爾塞格拉 Merseguera（白）",
+      "羅馬麝香葡萄 Moscatel Romano（白）",
+      "佩德羅－希梅內斯 Pedro Ximénez（白）"
     ],
-    "description": "西班牙第三大城市周邊廣大產區，分為多個子產區，生產從日常飲用酒到精品酒，Moscatel 甜酒是傳統特產。",
+    "description": "西班牙第三大城市周邊廣大產區，長期是西班牙最大的葡萄酒出口集散地，也為鄰近的 Utiel-Requena、Alicante 兩產區提供倉儲、裝瓶與銷售服務。分為 Clariano、Moscatel de Valencia、Alto Turia、Valentino 四個子產區，生產從新酒（Jóvenes）、佳釀級紅酒到陳年甜酒（Vinos de Licor）等完整酒款系列，羅馬麝香葡萄釀成的傳統甜酒是招牌特產。",
     "provinces": [
       "Valence",
       "Castellon"
@@ -1112,15 +1258,19 @@
     "zonName": "Almansa",
     "autonomia": "卡斯提亞-拉曼恰",
     "autonomiaId": "castilla-la-mancha",
+    "climateNote": "大陸性氣候，部分半乾旱，夏熱冬冷、溫差大，年雨量僅約 350mm",
+    "soilType": "地勢較低處，表層肥沃、底層石灰岩",
     "styles": [
-      "紅酒"
+      "紅酒",
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Garnacha Tintorera",
-      "Tempranillo",
-      "Monastrell"
+      "紫加納查 Garnacha Tintorera（果肉帶色變種）",
+      "慕爾韋度 Monastrell",
+      "森希貝爾 Cencibel（Tempranillo）"
     ],
-    "description": "阿爾巴塞特省東部，連接梅塞塔高原和地中海沿岸。以 Garnacha Tintorera（果肉紅色變種）著稱，是少數允許 100% Garnacha Tintorera 裝瓶的產區之一。",
+    "description": "阿爾巴塞特省東部，連接中央高原與地中海沿岸，過去以供應馬德里與巴倫西亞的日常餐酒為主。近年個別酒莊致力提升品質，已躋身卡斯提亞-拉曼恰最佳葡萄酒之列。以紫加納查（Garnacha Tintorera）與慕爾韋度為主，是少數允許 100% Garnacha Tintorera 裝瓶的產區之一；也生產 70% 森希貝爾混合 30% 慕爾韋度的優質紅酒，依橡木桶陳年分 Crianza、Reserva、Gran Reserva 三級。",
     "provinces": [
       "Albacete"
     ],
@@ -1130,16 +1280,21 @@
     "zonName": "Manchuela",
     "autonomia": "卡斯提亞-拉曼恰",
     "autonomiaId": "castilla-la-mancha",
+    "doYear": 2004,
+    "elevation": "600–700 公尺",
+    "soilType": "表層多沙石，底層石灰岩",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Bobal",
-      "Tempranillo",
-      "Garnacha"
+      "博巴爾 Bobal",
+      "赤珠霞 Cabernet Sauvignon",
+      "森希貝爾 Cencibel",
+      "馬卡貝奧 Macabeo（白）"
     ],
-    "description": "庫恩卡和阿爾巴切特省交界高原，本地品種 Bobal 表現出色，產出紮實帶果香紅酒，是西班牙本地品種復興的重要區域。",
+    "description": "位於昆卡省與阿爾巴塞特省交界的胡卡河與卡比奧爾河之間，1982 年脫離拉曼恰產區獨立設委員會，2004 年正式升格 DO。本地品種 Bobal 表現出色，並保留傳統「雙料」紅酒工藝（doble pasta，雙份葡萄皮混單份葡萄汁），釀出色深、口味濃厚、果味豐富的紅酒；白酒風格與拉曼恰相近，是西班牙本地品種復興的重要區域。",
     "provinces": [
       "Cuenca",
       "Albacete"
@@ -1150,14 +1305,21 @@
     "zonName": "Méntrida",
     "autonomia": "卡斯提亞-拉曼恰",
     "autonomiaId": "castilla-la-mancha",
+    "doYear": 1960,
+    "elevation": "200–480 公尺",
+    "soilType": "沙土與粘土，部分地區含少量石灰岩",
     "styles": [
-      "紅酒"
+      "紅酒",
+      "粉紅酒",
+      "白酒"
     ],
     "grapes": [
-      "Garnacha",
-      "Tempranillo"
+      "加納查 Garnacha（佔種植面積約 85%）",
+      "添百利路 Tempranillo",
+      "西拉 Syrah",
+      "阿爾比約 Albillo（白）"
     ],
-    "description": "托萊多省中部，以老藤 Garnacha 著稱，歷史上以高酒精度酒聞名，現代釀酒師正在重新詮釋這些老藤，復興精緻風格。",
+    "description": "托萊多省中部（部分葡萄園延伸至馬德里自治區），以老藤 Garnacha 著稱，歷史上以供應散裝高酒精度酒聞名，1960 年獲法定產區稱號卻未能立即帶動轉型。1991 年新設備投資與法規調整後開始生產度數更低、口味更清淡的即飲玫瑰紅與佳釀級紅酒，現代釀酒師正重新詮釋這些老藤，復興精緻風格。",
     "provinces": [
       "Toledo"
     ],
@@ -1167,15 +1329,21 @@
     "zonName": "Uclés",
     "autonomia": "卡斯提亞-拉曼恰",
     "autonomiaId": "castilla-la-mancha",
+    "doYear": 2006,
+    "elevation": "600–1,200 公尺",
+    "soilType": "多沙，鄰近河岸土壤多為粘土",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Tempranillo",
-      "Cabernet Sauvignon"
+      "赤珠霞 Cabernet Sauvignon",
+      "森希貝爾 Cencibel（Tempranillo）",
+      "青葡萄 Verdejo（白）",
+      "密思嘉 Moscatel（白）"
     ],
-    "description": "庫恩卡省小型子產區，以高海拔和石灰岩土壤出名，2006 年取得 DO 資格，主要種植 Tempranillo。",
+    "description": "昆卡省西部、托萊多西北部的小型子產區，大部分葡萄園集中於特拉戈及周邊城市，2002 年起籌備、2006 年正式取得 DO 資格。高低起伏的地形使海拔跨幅達 600 公尺，礦物味濃郁的即飲紅酒以森希貝爾為主，酒精度與酸度控管較卡斯提亞-拉曼恰其他產區出色。",
     "provinces": [
       "Cuenca"
     ],
@@ -1185,15 +1353,17 @@
     "zonName": "Ribera del Júcar",
     "autonomia": "卡斯提亞-拉曼恰",
     "autonomiaId": "castilla-la-mancha",
+    "doYear": 2003,
+    "elevation": "650–750 公尺",
+    "soilType": "表層石塊，中層粘土，有助保水",
     "styles": [
       "紅酒"
     ],
     "grapes": [
-      "Tempranillo",
-      "Bobal",
-      "Garnacha"
+      "添百利路 Tempranillo",
+      "博巴爾 Bobal"
     ],
-    "description": "胡卡爾河流域新興產區，2003 年升格 DO，高原氣候，老藤 Bobal 和 Tempranillo 生產深色豐富紅酒。",
+    "description": "胡卡爾河流域新興產區，位於昆卡省南端七座城鎮，2003 年升格 DO，大部分酒莊以合作社形式營運。高原大陸性氣候使葡萄成熟較晚，老藤 Bobal 和添百利路生產深櫻桃紅色、桑葚味重、單寧充足的紅酒。",
     "provinces": [
       "Cuenca"
     ],
@@ -1203,16 +1373,21 @@
     "zonName": "Pla de Bages",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "elevation": "300–600 公尺",
+    "soilType": "粘土沖積土、沙土沖積土及兩者混合的沖積土",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Picapoll",
-      "Sumoll",
-      "Cabernet Sauvignon"
+      "皮卡浦爾 Picapoll（本地特色白品種）",
+      "蘇摩爾 Sumoll",
+      "添百利路 Tempranillo",
+      "Cabernet Sauvignon",
+      "梅鹿 Merlot"
     ],
-    "description": "巴塞隆那省中部山地產區，以本地白品種 Picapoll 著稱，海拔 300-600 公尺，氣候較巴塞隆那涼爽。",
+    "description": "巴塞隆那省中部曼雷薩市為核心的山地產區，以蒙特塞特山脈與 Penedès 為界。19 世紀末葡萄蚜蟲災害曾使葡萄園縮減至五分之一，20 世紀末重新振興。氣候兼具地中海與大陸性特徵，年均溫 13°C。本地白品種 Picapoll 芳香均衡、口感獨特，是產區最鮮明的招牌；紅酒與粉紅酒則以添百利路、Cabernet Sauvignon、梅鹿與本地蘇摩爾為主。",
     "provinces": [
       "Barcelona"
     ],
@@ -1222,17 +1397,23 @@
     "zonName": "Costers del Segre",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "doYear": 1988,
+    "soilType": "表層多沙，底層石灰岩",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒",
+      "氣泡酒"
     ],
     "grapes": [
       "Tempranillo",
+      "紅加納查 Garnacha Tinta",
       "Cabernet Sauvignon",
-      "Garnacha",
+      "馬卡貝奧 Macabeo",
+      "帕雷亞達 Parellada",
       "Chardonnay"
     ],
-    "description": "塞格雷河流域的六個分散子區，以 Raimat 酒莊最為知名，採用現代灌溉技術種植國際品種，是西班牙現代化葡萄酒的先驅。",
+    "description": "萊里達省塞格雷河沿岸分散的四個分區（阿爾特薩、琉科爾布、萊斯加利蓋斯、萊馬特），1988 年獲得法定產區稱號，以 Raimat 獨立莊園最為知名，率先採用現代灌溉技術種植國際品種，是西班牙現代化葡萄酒的先驅。傳統風格以馬卡貝奧、帕雷亞達為主，新式葡萄酒則多用添百利路與紅加納查釀造。",
     "provinces": [
       "Lleida"
     ],
@@ -1242,17 +1423,25 @@
     "zonName": "Pla i Llevant",
     "autonomia": "巴利亞利群島",
     "autonomiaId": "baleares",
+    "elevation": "海平面至約 100 公尺",
+    "climateNote": "地中海氣候，年均溫 16°C，夏季乾熱、冬季略寒，年雨量約 425mm，多集中於秋季",
+    "soilType": "部分石灰岩，以沖積岩為主，表層下為肥沃粘土",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒",
+      "氣泡酒",
+      "烈酒"
     ],
     "grapes": [
-      "Callet",
-      "Fogoneu",
+      "普倫薩爾白葡萄 Prensal Blanc（白，本地主力）",
+      "卡耶特 Callet（紅）",
+      "佛格內烏 Fogoneu（紅）",
+      "黑披風 Manto Negro（紅）",
       "Chardonnay",
-      "Merlot"
+      "梅鹿 Merlot"
     ],
-    "description": "馬略卡島東部產區，本地老品種 Callet 和 Fogoneu 表現出獨特的地中海島嶼風土，也種植多種國際品種。",
+    "description": "馬約卡島東部與 Plà 平原地帶產區，全名 Plà i Llevant，由 18 個城鎮組成，釀酒史可溯及古羅馬時代。本地品種 Callet、佛格內烏、黑披風表現出獨特的地中海島嶼風土，普倫薩爾白葡萄則是主力白品種；近年引進國際品種帶動品質復甦，出產紅、白、粉紅、氣泡與烈酒等完整酒款系列。",
     "provinces": [
       "Baleares"
     ],
@@ -1326,18 +1515,23 @@
     "zonName": "Tarragona",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "elevation": "海平面至約 450 公尺（法爾塞特分區）",
+    "soilType": "沖積層，表層泥灰含石灰石；法爾塞特山區底層為花崗岩",
     "styles": [
       "紅酒",
       "白酒",
-      "甜酒",
-      "加強酒"
+      "粉紅酒",
+      "古典烈性甜酒",
+      "陳年氧化酒（Rancios）"
     ],
     "grapes": [
-      "Garnacha",
-      "Cariñena",
-      "Macabeo"
+      "黑加納查 Garnacha Negra",
+      "添百利路 Tempranillo",
+      "馬卡貝奧 Macabeo（白）",
+      "帕雷亞達 Parellada（白）",
+      "沙雷洛 Xarel·lo（白）"
     ],
-    "description": "古羅馬時代即盛產葡萄酒，今日以多樣風格著稱，傳統甜型加強酒（Rancio Tarraconense）和現代干型酒並存。",
+    "description": "加泰羅尼亞面積最大的法定產區，古羅馬時代即是重要葡萄酒出口地，當時以略增度的甜味紅酒為主，直到 1960 年代仍是外銷主力，至今仍有生產。分為沿海的塔拉戈納原野（佔 70%）與內陸山區的法爾塞特兩大區域，今日風格多樣：即飲原野白酒與紅酒、傳統古典烈性甜酒（Clásico Licoroso），以及無甜味的陳年氧化酒（Rancios）並存。",
     "provinces": [
       "Tarragona"
     ],
@@ -1347,15 +1541,21 @@
     "zonName": "Mondéjar",
     "autonomia": "卡斯提亞-拉曼恰",
     "autonomiaId": "castilla-la-mancha",
+    "history": "文字記載最早可溯及 16 世紀菲利普二世執政時期，當時的蒙德哈爾葡萄酒已頗受青睞",
+    "climateNote": "溫和地中海氣候，年均溫約 18°C，年雨量約 500mm",
+    "soilType": "南部為含粘土的紅色沉積土，夾雜鵝卵石；北部為含白堊的棕色土壤",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Tempranillo",
-      "Malvar"
+      "添百利路 Tempranillo",
+      "赤珠霞 Cabernet Sauvignon",
+      "瑪巴爾 Malvar（白）",
+      "馬卡貝奧 Macabeo（白）"
     ],
-    "description": "瓜達拉哈拉省小型產區，以石灰岩高原地形著稱，Tempranillo 和本地白品種 Malvar 是主要葡萄品種。",
+    "description": "瓜達拉哈拉省西南小型產區，文字記載最早可溯及 16 世紀菲利普二世時期，涵蓋近 20 個城鎮、約 1,000 公頃葡萄園。以添百利路釀造的果味紅葡萄新酒為主力，本地白品種瑪巴爾（Malvar）與馬卡貝奧亦具特色，白酒與玫瑰紅均屬適合即飲的新酒風格。",
     "provinces": [
       "Guadalajara"
     ],
@@ -1369,7 +1569,7 @@
     "area": 3500,
     "elevation": "最高至 800 公尺（Sierra de la Virgen 山脈南向坡）",
     "climateNote": "大陸型：平均氣溫 13.5°C，年均降雨 350mm，日照 2,700 小時；夏季極熱乾燥，冬季極寒（霜害威脅長達半年以上）",
-    "soilType": "多樣土壤：石灰岩、灰紅米板岩、黏土、壤土、石膏與鵝卵石；鬆散、多石、排水良好",
+    "soilType": "多樣土壤：石灰岩、灰紅色板岩、黏土、壤土、石膏與鵝卵石；鬆散、多石、排水良好",
     "yieldLimit": { "紅葡萄": "7,000kg/ha", "白葡萄": "8,000kg/ha", "老藤": "4,500kg/ha" },
     "superiorCategory": "Calatayud Superior：Garnacha 老藤（藤齡≥ 50 年），產量≤ 3,500kg/ha",
     "styles": [
@@ -1389,7 +1589,7 @@
       "Chardonnay",
       "Garnacha Blanca"
     ],
-    "description": "阿拉貢直轄市薩拉戈薩省 DO（1990 年），阿拉貢內僅次於 Cariñena 的第二大優質產區。3,500 公頃葡萄園位於 Sierra de la Virgen 山脈南向坡，最高海拔 800 公尺。Garnacha 佔種植面積 75%，釀造酒體宏大、風味大膽的紅酒；特優分類 Calatayud Superior 需由藤齡≥ 50 年 Garnacha 老藤釀造，產量限 3,500 kg/ha，是阿拉貢地區最具收藏價值的少量結構起作。",
+    "description": "阿拉貢直轄市薩拉戈薩省 DO（1990 年），阿拉貢內僅次於 Cariñena 的第二大優質產區。3,500 公頃葡萄園位於 Sierra de la Virgen 山脈南向坡，最高海拔 800 公尺。Garnacha 佔種植面積 75%，釀造酒體宏大、風味大膽的紅酒；特優分類 Calatayud Superior 需由藤齡≥ 50 年 Garnacha 老藤釀造，產量限 3,500 kg/ha，是阿拉貢地區最具收藏價值的珍稀酒款之一。",
     "provinces": [
       "Zaragoza"
     ],
@@ -1399,16 +1599,21 @@
     "zonName": "Campo de Borja",
     "autonomia": "阿拉貢",
     "autonomiaId": "aragon",
+    "doYear": 1990,
+    "climateNote": "大陸性氣候，部分半乾旱，夏季酷熱，Cierzo 強冷北風使冬季嚴寒",
+    "soilType": "表層棕色多沙，底層石灰岩，海拔 350–700 公尺，地勢由西向東遞降",
     "styles": [
       "紅酒",
-      "粉紅酒"
+      "粉紅酒",
+      "白酒"
     ],
     "grapes": [
-      "Garnacha",
+      "Garnacha（佔種植面積約 75%）",
       "Tempranillo",
-      "Cabernet Sauvignon"
+      "Cabernet Sauvignon",
+      "Viura（Macabeo，白）"
     ],
-    "description": "薩拉戈薩省的 Garnacha 大本營，傳統酒合作社仍佔主導。近年精品酒莊崛起，以老藤 Garnacha 釀製濃郁且具陳年潛力的紅酒。",
+    "description": "薩拉戈薩省的 Garnacha 大本營，得名自博爾哈家族（Borgia），早在羅馬人到來前即已產酒。1990 年獲得法定產區命名，傳統酒合作社仍佔主導，近年精品酒莊崛起，以老藤 Garnacha 釀製濃郁且具陳年潛力的紅酒，並依橡木桶貯存期分為 Crianza、Reserva、Gran Reserva 三級。",
     "provinces": [
       "Zaragoza"
     ],
@@ -1423,7 +1628,7 @@
     "nickname": "el vino de las piedras（來自岩石的葡萄酒）",
     "elevation": "400–800 公尺",
     "climateNote": "大陸型：夏季最高 40°C、冬季最低 -6°C，年均降雨 380–450mm， Cierzo 強冷北風調節夏季高溫與保持低濕度",
-    "soilType": "紅褐色石灯岩为主，底土多石（沖積土與米板岩），遇布岩石與鵝塶石",
+    "soilType": "紅褐色石灰岩為主，底土多石（沖積土與頁岩），遍布岩石與鵝卵石",
     "yieldLimit": { "紅葡萄": "8,500kg/ha", "白葡萄": "9,000kg/ha" },
     "styles": [
       "紅酒",
@@ -1446,7 +1651,7 @@
       "Moscatel de Alejandría",
       "Parellada"
     ],
-    "description": "阿拉貢最古老的 DO 產區（1932 年划定），也是最大的 DO〃4,459 公頃葡萄園布於埃布羅河南岩石鵝塶石平原，被稱為「el vino de las piedras（來自岩石的葡萄酒）」。Cariñena 葡萄品種即源自此，但目前 Garnacha 已成為主戴。 Cierzo 強冷北風調節御影。產區正從大鈇式散裝轉向精品酒莊主導的品質貣認時代。",
+    "description": "阿拉貢最古老的 DO 產區，早在 1696 年即頒布品質管制法規，1932 年成為西班牙首批獲認定的葡萄酒產地之一，也是阿拉貢面積最大的 DO。14,459 公頃葡萄園分佈於埃布羅河南岸岩石鵝卵石平原，因而被稱為「el vino de las piedras（來自岩石的葡萄酒）」。Cariñena 葡萄品種即源自此地，但目前紅加納查（Garnacha Tinta）已成為主導品種，佔種植面積逾半；Cierzo 強冷北風調節夏季高溫、保持低濕度。產區正從大宗散裝葡萄酒轉向精品酒莊主導的品質新時代。",
     "provinces": [
       "Zaragoza"
     ],
@@ -1462,10 +1667,11 @@
       "白酒"
     ],
     "grapes": [
-      "Moscatel de Alejandría",
-      "Pedro Ximénez"
+      "蜜思吉 Moscatel de Alejandría",
+      "佩德羅－希梅內斯 Pedro Ximénez"
     ],
-    "description": "馬拉加省的傳統加強甜酒產區，以 Moscatel de Alejandría 和 PX 葡萄的甜型酒著稱，歷史上維多利亞女王最愛的甜酒。",
+    "history": "17 世紀 Málaga-Sack 曾是北歐與維多利亞時代英國最受歡迎的地中海甜酒之一，藏酒櫃若無一瓶「山區葡萄酒」會被視為藏酒不足",
+    "description": "馬拉加省的傳統加強甜酒產區，分為西部埃斯特波納沿海及以馬拉加市為核心向北延伸的主產區（再細分莫里納、阿薩爾基亞、山脈三分區）。以密思嘉（沿海與西部）和佩德羅－希梅內斯（內陸）兩大品種釀成的甜型酒著稱，最具代表性的是日曬濃縮葡萄釀成、酒精約 18 度的馬拉加甜酒（Málaga Dulce），以及僅用非濃縮果汁釀製的滴製馬拉加甜酒，多以酒底子（Solera 式）陳化。",
     "provinces": [
       "Malaga"
     ],
@@ -1475,17 +1681,22 @@
     "zonName": "Sierras de Málaga",
     "autonomia": "安達盧西亞",
     "autonomiaId": "andalucia",
+    "elevation": "600–900 公尺（Ronda 分區）",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "其他（含強化型）"
     ],
     "grapes": [
-      "Moscatel",
+      "密思嘉 Moscatel",
+      "馬卡貝奧 Macabeo",
+      "佩德羅－希梅內斯 Pedro Ximénez",
       "Cabernet Sauvignon",
       "Syrah",
-      "Merlot"
+      "Merlot",
+      "添百利路 Tempranillo"
     ],
-    "description": "馬拉加省山區認證，以 Ronda 為中心，海拔 600–900 公尺，以 Merlot、Syrah、Petit Verdot 等國際品種表現優異，是安達盧西亞最具潛力的靜態餐酒產區。",
+    "description": "由 Málaga DO 法規修訂而生的姊妹產區，目的是在氣候較涼爽的山區生產清淡型靜態餐酒，實務上大部分產品來自 Ronda 分區。同一協調委員會管理，白酒呈黃色帶果香與淡雅香氣，口感清脆爽口；紅酒酒體醇厚，礦物與土質芳香佔主導，是安達盧西亞最具潛力的靜態餐酒產區。",
     "provinces": [
       "Malaga"
     ],
@@ -1515,16 +1726,23 @@
     "zonName": "La Palma",
     "autonomia": "加那利群島",
     "autonomiaId": "canarias",
+    "doYear": 1994,
+    "elevation": "300–1,200 公尺",
+    "soilType": "大部分山坡覆蓋黑色火山灰，1971 年是島上最近一次火山爆發",
+    "subzones": ["Hoyo de Mazo（東南坡）", "Fuencaliente（西南坡）", "北部半圓形分區"],
     "styles": [
       "白酒",
-      "紅酒"
+      "紅酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Albillo Criollo",
-      "Listán Blanco",
-      "Negramoll"
+      "白雪利葡萄 Listán Blanco",
+      "維哈利埃格 Vijariego Blanco",
+      "密思嘉 Moscatel（白）",
+      "黑摩爾 Negramoll（紅）",
+      "黑雜交葡萄 Bastardo Negro（紅）"
     ],
-    "description": "拉帕爾馬火山島，以高海拔（最高達 1200 公尺）和多樣的微氣候著稱，Negramoll 釀製清爽紅酒，Albillo 白酒帶有花香。",
+    "description": "拉帕爾馬火山島，1994 年獲得法定產區稱號，涵蓋大部分因火山活動形成的島嶼地形，分為三個區域。海拔可達 1,200 公尺，遠高於伊比利半島常見高度，火山灰土壤有效減少病蟲害。以黑摩爾（有時加入白雪利葡萄調和）釀成清爽果味紅酒；密思嘉白酒可增度至酒精 22 度成為甜酒，是莎士比亞時代著名的「加那利白葡萄酒」（Canary Sack）之一。",
     "provinces": [
       "Santa Cruz Tenerife"
     ],
@@ -1534,16 +1752,21 @@
     "zonName": "Valle de Güimar",
     "autonomia": "加那利群島",
     "autonomiaId": "canarias",
+    "elevation": "200–1,600 公尺",
+    "soilType": "起源於火山活動，200–600 公尺為碎石沙覆蓋，600 公尺以上為黑土（品質最佳），上層為石灰質土壤",
     "styles": [
       "白酒",
-      "紅酒"
+      "紅酒",
+      "粉紅酒",
+      "氣泡酒"
     ],
     "grapes": [
-      "Listán Blanco",
-      "Moscatel de Alejandría",
-      "Listán Negro"
+      "白雪利葡萄 Listán Blanco（佔種植面積約 60%）",
+      "黑雪利葡萄 Listán Negro（約佔 20%）",
+      "黑摩爾 Negramoll（紅）",
+      "莫維賽亞 Malvasía（白）"
     ],
-    "description": "特內里費島東南部 Güimar 山谷，火山土壤，乾燥氣候，以清爽 Listán Blanco 白酒和甜型 Moscatel 著稱。",
+    "description": "特內里費島東南部，是相鄰阿博納產區向東北延伸的部分，由阿拉佛、坎德拉利亞、古瑪律三鎮組成。加那利型氣候在海洋調節下溫和，日夜溫差明顯，賦予酒款不同酸度。60% 為白葡萄新酒，以白雪利葡萄為主，另生產少量紅酒與玫瑰紅。",
     "provinces": [
       "Santa Cruz Tenerife"
     ],
@@ -1553,16 +1776,24 @@
     "zonName": "Valle de la Orotava",
     "autonomia": "加那利群島",
     "autonomiaId": "canarias",
+    "doYear": 1995,
+    "elevation": "250–700 公尺",
+    "climateNote": "夏季最高約 37°C、冬季最低約 7°C，年均降雨 465mm，暖風夾帶的濕潤海霧為產區帶來額外水氣",
+    "soilType": "火山成因，土質輕盈、滲透性佳，礦物質豐富，酸鹼度略呈酸性",
+    "history": "14 世紀西班牙佔領加那利群島後即成為首批葡萄酒產地之一，16 世紀部分葡萄園曾一度被香蕉園取代，1995 年正式獲得法定產區確認",
     "styles": [
       "白酒",
-      "紅酒"
+      "紅酒",
+      "氣泡酒",
+      "甜酒"
     ],
     "grapes": [
-      "Listán Blanco",
-      "Listán Negro",
-      "Verdelho"
+      "白雪利葡萄 Listán Blanco",
+      "黑雪利葡萄 Listán Negro（紅）",
+      "玫瑰香 Malvasía Rosada（紅）",
+      "黑摩爾 Negramoll（紅）"
     ],
-    "description": "特內里費島北部奧羅塔瓦山谷，肥沃的火山土，古老的梯田葡萄園，以優雅清爽的 Listán 品種葡萄酒著稱。",
+    "description": "特內里費島西北部泰德峰山腳一路延伸至海濱的峽谷產區，葡萄種植面積約 1,000 公頃，海拔 250–700 公尺。1995 年確認法定產區，但釀酒業歷史可溯及 14 世紀西班牙佔領時期。大部分酒款是以白雪利葡萄釀成的乾白，紅酒產量雖少但品質日趨優異，另生產氣泡酒、甜酒與高度酒。",
     "provinces": [
       "Santa Cruz Tenerife"
     ],
@@ -1591,17 +1822,22 @@
     "zonName": "Gran Canaria",
     "autonomia": "加那利群島",
     "autonomiaId": "canarias",
+    "doYear": 2006,
+    "climateNote": "熱帶海洋性氣候，受海拔、方位與信風影響而多樣化，火山島土壤肥沃，多個微氣候調節濕度與溫度",
     "styles": [
       "白酒",
-      "紅酒"
+      "紅酒",
+      "粉紅酒",
+      "烈酒"
     ],
     "grapes": [
-      "Listán Blanco",
-      "Moscatel",
-      "Listán Negro",
-      "Tintilla"
+      "白雪利葡萄 Listán Blanco",
+      "維哈利埃格 Vijariego",
+      "密思嘉 Moscatel",
+      "黑雪利葡萄 Listán Negro（紅）",
+      "淡紅葡萄 Tintilla（紅，本地特有）"
     ],
-    "description": "大加那利島的葡萄酒產區，以山地梯田葡萄園著稱，有多個分散的子產區，Tintilla 是島上特有的本地品種。",
+    "description": "大加那利島法定產區，2006 年取得命名，合併達裡法區與舊有大加那利島產區。島嶼面積近 1,600 平方公里，多元氣候與地理環境使其有「大陸的縮影」之稱，傳統採用椿式（低矮）種植。雖以紅酒最出名，白莫維賽亞（Malvasía）帶苗香氣息、玫瑰紅清新豐富，以及琥珀色的莫維賽亞甜烈酒同樣值得留意。",
     "provinces": [
       "Gran Canaria"
     ],
@@ -1611,16 +1847,21 @@
     "zonName": "La Gomera",
     "autonomia": "加那利群島",
     "autonomiaId": "canarias",
+    "doYear": 2003,
+    "areaHa": 120,
+    "keyMunicipalities": ["Vallehermoso", "Hermigua", "Agulo", "San Sebastián de La Gomera", "Alajeró", "Valle Gran Rey"],
     "styles": [
       "白酒",
       "紅酒"
     ],
     "grapes": [
-      "Forastera",
-      "Listán Blanco",
-      "Gomera"
+      "弗拉斯特拉 Forastera（白，主力品種）",
+      "馬爾馬胡埃羅 Marmajuelo（白）",
+      "莫維賽亞 Malvasía（白）",
+      "黑麗思 Listán Negro（紅）",
+      "黑摩爾 Negramoll（紅）"
     ],
-    "description": "戈梅拉小島的葡萄酒產區，以 Forastera 本地白品種著稱，島嶼微氣候和火山土壤賦予獨特的鹹海風味。",
+    "description": "戈梅拉小島的葡萄酒產區，2003 年成立，由 13 家酒莊、120 公頃緩坡葡萄園組成，享有得天獨厚的亞熱帶氣候。幾乎全為白葡萄品種，以弗拉斯特拉釀成的金黃色白酒最為出色，具濃郁花香與悠長回甘；近年也開始釀出展現櫻桃紅色、果香充沛的年輕紅酒。",
     "provinces": [
       "Santa Cruz Tenerife"
     ],
@@ -1630,16 +1871,22 @@
     "zonName": "El Hierro",
     "autonomia": "加那利群島",
     "autonomiaId": "canarias",
+    "history": "釀酒歷史可溯及群島被征服的年代，島上第一座葡萄園建於 1526 年",
+    "climateNote": "大西洋型氣候，全年溫和，介於攝氏 18–29 度之間，潮濕信風在局部地區造就貴腐效果",
+    "soilType": "多沙多石，部分地區覆蓋火山灰",
     "styles": [
       "白酒",
-      "紅酒"
+      "紅酒",
+      "烈酒",
+      "古典甜酒"
     ],
     "grapes": [
-      "Verijadiego",
-      "Listán Blanco",
-      "Baboso Negro"
+      "維哈利埃格 Vijariego（白，約佔一半）",
+      "白雪利葡萄 Listán Blanco",
+      "黑雪利葡萄 Listán Negro（紅）",
+      "黑巴博素 Baboso Negro（紅）"
     ],
-    "description": "加那利群島最西端小島，獨特的火山地形和乾燥氣候，保育有世界上最稀有的葡萄品種，如 Verijadiego 和 Baboso Negro。",
+    "description": "加那利群島最西端小島，涵蓋全島的法定產區，弗隆特拉和萊斯廷加是兩個核心產地。獨特的火山地形和乾燥氣候，潮濕信風在部分地區帶來貴腐效果，保育有世界上最稀有的葡萄品種。白酒清新富果香，經培養者呈琥珀色；傳統浸漬法紅酒暗紅帶紫，玫瑰紅則因白紅葡萄混釀而風格近似白酒。",
     "provinces": [
       "Santa Cruz Tenerife"
     ],
@@ -1673,15 +1920,17 @@
     "zonName": "Ribera del Júcar",
     "autonomia": "卡斯提亞-拉曼恰",
     "autonomiaId": "castilla-la-mancha",
+    "doYear": 2003,
+    "elevation": "650–750 公尺",
+    "soilType": "表層石塊，中層粘土，有助保水",
     "styles": [
       "紅酒"
     ],
     "grapes": [
-      "Tempranillo",
-      "Bobal",
-      "Garnacha"
+      "添百利路 Tempranillo",
+      "博巴爾 Bobal"
     ],
-    "description": "胡卡爾河流域新興產區，2003 年升格 DO，高原氣候，老藤 Bobal 和 Tempranillo 生產深色豐富紅酒。",
+    "description": "胡卡爾河流域新興產區，位於昆卡省南端七座城鎮，2003 年升格 DO，大部分酒莊以合作社形式營運。高原大陸性氣候使葡萄成熟較晚，老藤 Bobal 和添百利路生產深櫻桃紅色、桑葚味重、單寧充足的紅酒。",
     "provinces": [
       "Cuenca"
     ],
@@ -1691,6 +1940,7 @@
     "zonName": "Rioja",
     "autonomia": "拉里奧哈",
     "autonomiaId": "rioja",
+    "doYear": 1991,
     "styles": [
       "紅酒",
       "白酒",
@@ -1701,7 +1951,7 @@
       "Garnacha",
       "Viura"
     ],
-    "description": "西班牙唯二 DOCa 認證產區，以橡木桶陳年著稱。",
+    "description": "西班牙首個獲 DOCa 認證的產區（1991 年），也是西班牙僅有的兩個 DOCa 之一。二千多年前已開始釀酒，19 世紀中葉引入橡木桶陳年新工藝，恰逢歐洲北部葡萄園遭蚜蟲侵害，里奧哈酒因此聲名遠播海外。以 Tempranillo 為品種之王，按 Crianza、Reserva、Gran Reserva 分級陳年。",
     "provinces": [
       "La Rioja",
       "Alava",
@@ -1722,7 +1972,7 @@
       "Garnacha",
       "Tempranillo"
     ],
-    "description": "納瓦拉法定產區。",
+    "description": "納瓦拉法定產區，分為 5 個分區，北接庇里牛斯山麓、南達埃布羅河谷。境內擁有西班牙已知最古老的榨汁槽遺跡（弗內斯，古羅馬 2 世紀所建），聖地亞哥朝聖之路亦帶來歷史繁榮。以 Garnacha 玫瑰紅（Rosado）聞名全球，位於 Olite 的 EVENA 研究中心是 1980 年代技術轉型的關鍵推手。",
     "provinces": [
       "Navarre"
     ],
@@ -1732,19 +1982,23 @@
     "zonName": "Priorato, Comunidad de Cataluña",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "elevation": "100–600 公尺（部分梯田近 1,200 公尺）",
+    "soilType": "llicorella——紅褐相間的板岩與石英岩碎屑",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
-      "Garnacha",
-      "Cariñena"
+      "紅加納查 Garnacha Tinta",
+      "卡利涅納 Cariñena",
+      "馬卡貝奧 Macabeo（白）"
     ],
-    "description": "加泰羅尼亞頂級 DOCa 認證，黑板岩 llicorella 土壤。",
+    "description": "加泰羅尼亞頂級 DOCa 認證，位於塔拉戈納省蒙特桑特山脈坡地，獨特的紅褐色板岩土壤 llicorella 使紅加納查老藤深扎岩隙，孕育顏色深邃、礦物感強勁的紅酒，被譽為西班牙勃根地。",
     "provinces": [
       "Tarragona"
     ],
-    "classification": "DO"
+    "classification": "DOCa"
   },
   {
     "zonName": "Penedés, Comunidad de Cataluña",
@@ -1752,13 +2006,16 @@
     "autonomiaId": "catalonia",
     "styles": [
       "白酒",
-      "紅酒"
+      "紅酒",
+      "氣泡酒"
     ],
     "grapes": [
       "Xarel·lo",
-      "Macabeo"
+      "Macabeo",
+      "Parellada",
+      "Tempranillo"
     ],
-    "description": "加泰羅尼亞 Penedès 產區。",
+    "description": "巴塞隆納南方的加泰羅尼亞 Penedès 產區，卡瓦氣泡酒發源地，依海拔分下、中、上三區，以 Xarel·lo、Macabeo、Parellada 釀成的果味乾白最負盛名。",
     "provinces": [
       "Barcelona",
       "Tarragona"
@@ -1769,15 +2026,22 @@
     "zonName": "Cataluña",
     "autonomia": "加泰羅尼亞",
     "autonomiaId": "catalonia",
+    "doYear": 1999,
+    "climateNote": "地中海型氣候，年均溫 14–15°C；沿海溫和清爽，內陸偏大陸性，冬冷夏熱",
     "styles": [
       "紅酒",
-      "白酒"
+      "白酒",
+      "粉紅酒"
     ],
     "grapes": [
       "Garnacha",
-      "Tempranillo"
+      "Tempranillo",
+      "Cabernet Sauvignon",
+      "Xarel·lo",
+      "Macabeo",
+      "Chardonnay（獲准品種共 27 種）"
     ],
-    "description": "加泰羅尼亞廣域 DO 認證。",
+    "description": "1999 年設立的加泰羅尼亞自治區廣域 DO，讓釀酒商得以混合來自區內不同法定產區的葡萄或葡萄酒並裝瓶，制度上與波爾多大區級 AOC 類似。酒莊既可用「加泰羅尼亞 DO」標籤，也可繼續使用所在子產區（如 Priorato）的標籤。全區共批准 27 個葡萄品種，以不銹鋼桶低溫控溫釀造清新風格為主，托雷斯家族（Casa Miguel Torres）是代表酒莊之一。",
     "provinces": [
       "Barcelona",
       "Tarragona",
@@ -1798,7 +2062,7 @@
       "Garnacha",
       "Cariñena"
     ],
-    "description": "Costa Brava 沿岸產區，即今日 Empordà DO。",
+    "description": "Costa Brava 沿岸產區，即今日 Empordà DO 的舊稱（歷史上曾稱 Ampurdán-Costa Brava），1975 年成立，以傳統甜酒 Garnatxa d'Empordà 聞名。",
     "provinces": [
       "Girona"
     ],
@@ -1832,7 +2096,7 @@
     "grapes": [
       "Hondarrabi Zuri"
     ],
-    "description": "比斯開省 Txakoli 微氣泡白酒。",
+    "description": "比斯開省 Txakoli 產區，橫跨畢爾包周邊 31 個分散村鎮，以本地品種昂達拉比-蘇利-薩拉蒂亞為主，釀成清新無糖的微氣泡白酒。",
     "provinces": [
       "Biskaia"
     ],
@@ -1848,7 +2112,7 @@
     "grapes": [
       "Hondarrabi Zuri"
     ],
-    "description": "赫塔里亞科 Txakoli 白酒。",
+    "description": "吉普斯科亞省沿海薩勞茨、赫塔利亞、埃亞三地一帶的傳統巴斯克白酸葡萄酒，新鮮爽口、味酸無糖，是搭配海鮮的上選。",
     "provinces": [
       "Guipuzcoa"
     ],
@@ -1864,7 +2128,7 @@
     "grapes": [
       "Hondarrabi Zuri"
     ],
-    "description": "阿拉瓦省 Txakoli 白酒。",
+    "description": "巴斯克三個 Txakoli 產區中面積最小、最新成立的一個（1989 年），位於阿拉瓦省西北部納比安河盆地，內陸大陸性氣候使酒體比沿海 Txakoli 略為豐滿。",
     "provinces": [
       "Alava"
     ],
@@ -2201,7 +2465,7 @@
       "Tempranillo",
       "Cabernet Sauvignon"
     ],
-    "description": "托萊多 Valdepusa 莊園，西班牙第一個 Vino de Pago 認證（2002）。",
+    "description": "托萊多省瓦爾德布薩地區，卡洛斯·法爾歌（格林勇侯爵）家族酒莊，祖先自 1292 年起接管此地葡萄園。2002 年獲西班牙第一個 Vino de Pago 單一莊園認證，年均溫 17°C、年雨僅 400mm、年日照近 2,800 小時，白堊紀粘土石灰岩底土排水極佳。以西拉、梅鹿、赤珠霞、小維鐸釀成單一品種葡萄酒，於法國橡木桶陳釀 12–15 個月。",
     "provinces": [
       "Toledo"
     ],
