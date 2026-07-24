@@ -159,6 +159,22 @@ export default async function handler(req, res) {
         const hasDiscount = discountPct > 0
         const hasBonus = bonusDays > 0
 
+        // 提前擋掉已用過此碼的帳號（真正的原子防重複發生在付款成功的 callback）
+        let alreadyRedeemed = false
+        if (activeCheck.ok && policyCheck.ok) {
+          const { data: redemption } = await admin
+            .from('coupon_redemptions')
+            .select('id')
+            .eq('user_id', userId)
+            .eq('coupon_code', code)
+            .limit(1)
+          alreadyRedeemed = !!(redemption && redemption.length > 0)
+        }
+
+        if (alreadyRedeemed) {
+          return res.status(400).json({ message: '此優惠碼您已使用過' })
+        }
+
         if (activeCheck.ok && policyCheck.ok && (hasDiscount || hasBonus)) {
           if (hasDiscount) {
           // 套用折扣，不得低於 NT$1

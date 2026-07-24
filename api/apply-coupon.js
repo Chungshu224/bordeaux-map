@@ -103,6 +103,18 @@ export default async function handler(req, res) {
 
   // ── discount / affiliate：只回傳折扣資訊，不寫入 DB ─────────────────────
   if (coupon.type === 'discount' || coupon.type === 'affiliate') {
+    // 提前告知使用者此碼已用過（真正的原子防重複發生在付款成功的 callback）
+    const { data: alreadyRedeemed } = await admin
+      .from('coupon_redemptions')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('coupon_code', code)
+      .limit(1)
+
+    if (alreadyRedeemed && alreadyRedeemed.length > 0) {
+      return res.status(400).json({ message: '此優惠碼您已使用過' })
+    }
+
     const bonusDays = couponBonusDays(coupon)
     const discountPct = Number(coupon.discount_pct || 0)
     return res.status(200).json({
@@ -148,16 +160,18 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: '您已使用過試用優惠，無法再次啟用。' })
   }
 
-  // 確認未重複使用同一試用碼
-  const { data: usedBefore } = await admin
-    .from('purchases')
-    .select('id')
-    .eq('user_id', userId)
-    .eq('coupon_code', code)
-    .limit(1)
+  // C4: 原子「兌換聲明」——以 UNIQUE (user_id, coupon_code) 取代舊版
+  // 「先 SELECT 再 INSERT」的競態寫法，避免同時發出的兩個請求都通過檢查。
+  const { error: claimErr } = await admin
+    .from('coupon_redemptions')
+    .insert({ user_id: userId, coupon_code: code })
 
-  if (usedBefore && usedBefore.length > 0) {
-    return res.status(400).json({ message: '此優惠碼您已使用過' })
+  if (claimErr) {
+    if (claimErr.code === '23505') { // unique_violation
+      return res.status(400).json({ message: '此優惠碼您已使用過' })
+    }
+    console.error('[apply-coupon] coupon_redemptions insert error for user', maskId(userId), ':', claimErr)
+    return res.status(500).json({ message: '建立試用訂閱失敗，請聯絡客服' })
   }
 
   const trialDays  = couponBonusDays(coupon) || 30
@@ -187,12 +201,21 @@ export default async function handler(req, res) {
 
   if (insertErr) {
     console.error('[apply-coupon] DB insert error for user', maskId(userId), ':', insertErr)
+    await admin.from('coupon_redemptions').delete().eq('user_id', userId).eq('coupon_code', code)
     return res.status(500).json({ message: '建立試用訂閱失敗，請聯絡客服' })
   }
+
+  // 補上兌換紀錄與這筆訂單的關聯（僅供後台追溯，失敗不影響主流程）
+  await admin
+    .from('coupon_redemptions')
+    .update({ purchase_id: insertedPurchase.id })
+    .eq('user_id', userId)
+    .eq('coupon_code', code)
 
   const consumeResult = await consumeCouponUse(admin, code)
   if (!consumeResult.ok) {
     await admin.from('purchases').delete().eq('id', insertedPurchase.id)
+    await admin.from('coupon_redemptions').delete().eq('user_id', userId).eq('coupon_code', code)
     return res.status(400).json({ message: '優惠碼使用次數已達上限' })
   }
 

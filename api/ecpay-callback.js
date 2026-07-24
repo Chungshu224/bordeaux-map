@@ -286,11 +286,28 @@ export default async function handler(req, res) {
   }
 
   if (purchase.coupon_code) {
-    const consumeResult = await consumeCouponUse(supabaseAdmin, purchase.coupon_code)
-    if (!consumeResult.ok) {
+    // 原子「兌換聲明」：UNIQUE (user_id, coupon_code) 是真正防止同一帳號
+    // 重複使用同一優惠碼的最終防線（結帳前的檢查僅供 UX 提早攔截，
+    // 無法排除極端情況下兩筆訂單並行完成付款的競態）。
+    const { error: claimErr } = await supabaseAdmin
+      .from('coupon_redemptions')
+      .insert({ user_id: purchase.user_id, coupon_code: purchase.coupon_code, purchase_id: purchase.id })
+
+    if (claimErr && claimErr.code === '23505') {
+      // 此帳號已透過另一筆訂單用過這組碼——訂單本身已付款完成，不可撤銷，
+      // 但不重複扣用優惠碼的全域名額，僅記錄供人工複查。
       console.warn(
-        `[ecpay-callback] coupon consume failed trade=${MerchantTradeNo} code=${purchase.coupon_code} mode=${consumeResult.mode}`
+        `[ecpay-callback] duplicate coupon redemption blocked trade=${MerchantTradeNo} user=${maskId(purchase.user_id)} code=${purchase.coupon_code}`
       )
+    } else if (claimErr) {
+      console.error('[ecpay-callback] coupon_redemptions insert error:', claimErr)
+    } else {
+      const consumeResult = await consumeCouponUse(supabaseAdmin, purchase.coupon_code)
+      if (!consumeResult.ok) {
+        console.warn(
+          `[ecpay-callback] coupon consume failed trade=${MerchantTradeNo} code=${purchase.coupon_code} mode=${consumeResult.mode}`
+        )
+      }
     }
   }
 
