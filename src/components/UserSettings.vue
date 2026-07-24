@@ -50,7 +50,25 @@
                 <span class="tier-desc">{{ currentTierInfo.desc }}</span>
               </div>
             </div>
-            <div class="subscription-dates">
+            <div v-if="activeCourseSubscriptions.length" class="course-subscriptions">
+              <div v-for="course in activeCourseSubscriptions" :key="course.courseId" class="course-sub-group">
+                <div class="course-sub-name">{{ course.name }}</div>
+                <div class="subscription-dates">
+                  <div class="sub-date-item">
+                    <span class="sub-date-label">開通日期</span>
+                    <span class="sub-date-value">{{ course.startDate }}</span>
+                  </div>
+                  <div class="sub-date-item">
+                    <span class="sub-date-label">到期日</span>
+                    <span class="sub-date-value" :class="{ 'expiry-soon': course.isExpiringSoon }">
+                      {{ course.expiryDate }}
+                      <span v-if="course.isExpiringSoon" class="expiry-badge warning">即將到期</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div v-else class="subscription-dates">
               <div class="sub-date-item">
                 <span class="sub-date-label">訂閱日期</span>
                 <span class="sub-date-value">{{ subscriptionStartDate }}</span>
@@ -499,6 +517,32 @@ const isExpiringSoon = computed(() => {
   return diff > 0 && diff < 14 * 24 * 60 * 60 * 1000  // 14天內
 })
 
+// 每門課程各自的開通日期／到期日（取每門課最新一筆有效訂單）
+const activeCourseSubscriptions = computed(() => {
+  const now = new Date()
+  const seen = new Set()
+  const result = []
+  for (const p of purchases.value) {
+    const status = normalizedStatus(p)
+    if (!['paid', 'active'].includes(status)) continue
+    if (p.expires_at && new Date(p.expires_at) < now) continue
+    if (seen.has(p.course_id)) continue
+    const name = COURSE_META[p.course_id]?.name
+    if (!name) continue
+    seen.add(p.course_id)
+    const exp = p.expires_at ? new Date(p.expires_at) : null
+    const diff = exp ? exp - now : null
+    result.push({
+      courseId: p.course_id,
+      name,
+      startDate: formatDate(p.paid_at),
+      expiryDate: exp ? formatDate(p.expires_at) : '永久有效',
+      isExpiringSoon: diff !== null && diff > 0 && diff < 14 * 24 * 60 * 60 * 1000
+    })
+  }
+  return result
+})
+
 // ── 學習統計 ─────────────────────────────
 const stats = ref(null)   // { totalStudySeconds, completedLevels, quizAccuracy }
 
@@ -776,6 +820,22 @@ onMounted(loadSettings)
 .tier-name { font-size: 0.95rem; font-weight: 700; }
 .tier-desc { font-size: 0.78rem; opacity: 0.75; }
 
+/* ── 各課程訂閱日期 ─────────────────────────────── */
+.course-subscriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+.course-sub-group { display: flex; flex-direction: column; }
+.course-sub-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-bottom: 0.2rem;
+  padding-left: 0.2rem;
+}
+
 /* ── 訂閱日期 ───────────────────────────────────── */
 .subscription-dates {
   display: flex;
@@ -787,6 +847,7 @@ onMounted(loadSettings)
   border-radius: 10px;
   margin-top: 0.4rem;
 }
+.course-sub-group .subscription-dates { margin-top: 0; }
 .sub-date-item {
   display: flex;
   justify-content: space-between;
