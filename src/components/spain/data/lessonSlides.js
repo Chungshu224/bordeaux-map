@@ -198,7 +198,7 @@ const S1M2L1_slides = [
     question: '在「spain-classification」金字塔中，VP（Vino de Pago）代表的是？',
     options: ['街區葡萄酒', '單一酒莊頂級酒（Single Estate）', '桌酒等級', '長期陳年酒款'],
     answer: 1,
-    explanation: 'Vino de Pago（VP）是針對「單一酒莊頂級葡萄園」的認證，重視圓區裡的特定地塊品質，代表酒莊如 Dominio de Valdepusa、Pago de Arosñ。與 DO/DOCa「整體產區」認證不同，VP 是「點狀頂級」認證。',
+    explanation: 'Vino de Pago（VP）是針對「單一酒莊頂級葡萄園」的認證，重視圓區裡的特定地塊品質，代表酒莊如 Dominio de Valdepusa、Pago de Arínzano。與 DO/DOCa「整體產區」認證不同，VP 是「點狀頂級」認證。',
   },
   {
     type: 'summary',
@@ -321,7 +321,7 @@ const S1M3L1_slides = [
   {
     type: 'spain-grape-profile',
     title: '🍇 西班牙五大紅葡萄品種互動檔案',
-    description: '點選 Tempranillo / Garnacha / Monastrell / Mencía / Bobal 查看詳細品種檔案：同義名稱、主要產區、品酣特徵、釀造風格、餐酒搭配、代表酒款與股价區間。'
+    description: '點選 Tempranillo / Garnacha / Monastrell / Mencía / Bobal 查看詳細品種檔案：同義名稱、主要產區、品飲特徵、釀造風格、餐酒搭配、代表酒款與價格區間。'
   },
   {
     type: 'quiz',
@@ -335,7 +335,7 @@ const S1M3L1_slides = [
     question: '在「spain-grape-profile」品種檔案中，Mencía 主要種植在哪個產區並成為該區類似 Pinot Noir 風格的代表品種？',
     options: ['Ribera del Duero', 'Bierzo 與 Ribeira Sacra', 'Jumilla', 'Penedès'],
     answer: 1,
-    explanation: 'Mencía 主要種植於 Bierzo（萊昂省）和 Ribeira Sacra（加利西亞），這些產區以板岩（Schist）梯田為典型風土，赋予 Mencía 獨特的礦石鉄筆芜風味與優雅輕盈的結構，被譽為「西班牙的 Pinot Noir」。',
+    explanation: 'Mencía 主要種植於 Bierzo（萊昂省）和 Ribeira Sacra（加利西亞），這些產區以板岩（Schist）梯田為典型風土，賦予 Mencía 獨特的礦石與鉛筆芯風味，以及優雅輕盈的結構，被譽為「西班牙的 Pinot Noir」。',
   },
   {
     type: 'summary',
@@ -1715,7 +1715,7 @@ const S2M1L2_slides = [
     keyPoints: [
       '杜羅河谷白酒精品，海拔 700–800 公尺，95% 白葡萄',
       '大陸型氣候：夏季 23°C / 冬季 −3°C，年雨 318mm，日照 2,600 小時',
-      'Cascajosos 礫石地：鈣鎂佳、排水優，根瘤蚜難存，老藤將尼',
+      'Cascajosos 礫石地：鈣鎂佳、排水優，根瘤蚜難存，老藤得以保存',
       'Verdejo 起源自 11 世紀，摩爾人自北非引入；酸度中高，尾韻微苦感是品質標誌',
       'Rueda Verdejo 規定 Verdejo ≥ 85%；飲用溫度 3–7°C，適飲 3–5 年',
     ],
@@ -4323,11 +4323,11 @@ const S2M3L7_slides = [
     icon: '🌊',
     gradient: 'linear-gradient(135deg, #1565c0, #43a047)',
     title: 'Costers del Segre DO — 塞格雷河兩岸的混釀先驅',
-    subtitle: 'Level 2 · 加泰羅尼亞 · 本地 × 法國品種創新小第',
+    subtitle: 'Level 2 · 加泰羅尼亞 · 本地 × 法國品種創新之路',
     points: [
-      { icon: '🌊', label: '塞格雷河兩岸', text: '沿 River Segre 延伸，河川寒流調節氣候，形成特殊的內陸決區風土環境' },
-      { icon: '🍾', label: '本地 × 国際混釀', text: '將当地品種（如 Garnacha、Ull de Llebre）與法國品種（如 Cabernet Sauvignon、Chardonnay）混釀，是產區標誌哲學' },
-      { icon: '🌱', label: '多元品種庫', text: '白葡萄同時容納本地與国際豪華第，紅葡萄涵蓋 Garnacha、Tempranillo、Pinot Noir 等多达 9 個品種' },
+      { icon: '🌊', label: '塞格雷河兩岸', text: '沿 River Segre 延伸，河川調節氣候，形成特殊的內陸產區風土環境' },
+      { icon: '🍾', label: '本地 × 國際混釀', text: '將當地品種（如 Garnacha、Ull de Llebre）與法國品種（如 Cabernet Sauvignon、Chardonnay）混釀，是產區標誌哲學' },
+      { icon: '🌱', label: '多元品種庫', text: '白葡萄同時容納本地與國際品種，紅葡萄涵蓋 Garnacha、Tempranillo、Pinot Noir 等多達 9 個品種' },
     ],
   },
   {
@@ -4340,20 +4340,20 @@ const S2M3L7_slides = [
   {
     type: 'content',
     icon: '🌊',
-    title: '地理特徵：塞格雷河兩岸的決區風土',
+    title: '地理特徵：塞格雷河兩岸的產區風土',
     html: `
       <p>Costers del Segre 意為「塞格雷河的山坡」，產區沿著加泰羅尼亞內陸的<strong>塞格雷河（River Segre）兩岸</strong>延伸。</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
         <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:12px;border-radius:0 10px 10px 0">
           <strong>🌊 河流微氣候</strong>
           <ul style="margin:6px 0 0;padding-left:18px">
-            <li>塞格雷河帶來審湿的河流微氣候，調節周邊區域的溫度儷動</li>
-            <li>內陸區位於加泰羅尼亞西部，邏離海岸影響，大陸性氣候特徵更顕著</li>
-            <li>日夜溫差顯著，有助保留天然酸度與細致香氣</li>
+            <li>塞格雷河帶來濕潤的河流微氣候，調節周邊區域的溫度波動</li>
+            <li>內陸區位於加泰羅尼亞西部，遠離海岸影響，大陸性氣候特徵更顯著</li>
+            <li>日夜溫差顯著，有助保留天然酸度與細緻香氣</li>
           </ul>
         </div>
         <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
-          <strong>🏗️ 產區的和小分區結構</strong>
+          <strong>🏗️ 產區的分散小區結構</strong>
           <ul style="margin:6px 0 0;padding-left:18px">
             <li>Costers del Segre DO 內部有幾個分散的小區塊，分布於河流上下游</li>
             <li>小區塊之間氣候與地形各有差異，提供多樣的風土選擇</li>
@@ -4368,19 +4368,19 @@ const S2M3L7_slides = [
     title: '釀造哲學：本地 × 法國品種混釀',
     html: `
       <p>Costers del Segre 最標誌性的特色，在於將<strong>本地原生品種</strong>與<strong>法國引進品種</strong>進行混釀。</p>
-      <h4>🍾 混釀哲學的邏輟</h4>
+      <h4>🍾 混釀哲學的邏輯</h4>
       <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
         <div style="background:#fff3e0;border-left:4px solid #e65100;padding:12px;border-radius:0 10px 10px 0">
           <strong>本地品種的貢獻</strong><br/>
-          Garnacha 和 Ull de Llebre（Tempranillo）提供熟果豐潤與加泰羅尼亞地中海的話語屬性；Trepat 張顯產區原生識別度
+          Garnacha 和 Ull de Llebre（Tempranillo）提供熟果豐潤與加泰羅尼亞地中海的風土屬性；Trepat 彰顯產區原生識別度
         </div>
         <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:12px;border-radius:0 10px 10px 0">
           <strong>法國品種的貢獻</strong><br/>
-          Cabernet Sauvignon 和 Merlot 引入結構度與黑醋栗複雜層次；Chardonnay 和 Sauvignon Blanc 強化白酒的国際風格與市場吸引力；Pinot Noir 為紅酒加入紅莓果的精練感
+          Cabernet Sauvignon 和 Merlot 引入結構度與黑醋栗複雜層次；Chardonnay 和 Sauvignon Blanc 強化白酒的國際風格與市場吸引力；Pinot Noir 為紅酒加入紅莓果的精緻感
         </div>
         <div style="background:#f3e5f5;border-left:4px solid #7b1fa2;padding:12px;border-radius:0 10px 10px 0">
           <strong>🌟 新舊世界的對話</strong><br/>
-          這種混釀哲學在 1980 年代引進國際品種時引發爭議，如今却成為產區的利器——同時吸引尋求弸狀可口的尋常消費者，以及沿繃压街買家
+          這種混釀哲學在 1980 年代引進國際品種時引發爭議，如今卻成為產區的利器——同時吸引追求順口易飲的一般消費者，以及尋求風土深度的進階買家
         </div>
       </div>
     `,
@@ -4397,20 +4397,20 @@ const S2M3L7_slides = [
       },
       {
         icon: '🍷',
-        label: '白品種：国際系',
-        desc: 'Chardonnay、Riesling、Sauvignon Blanc——三大專樹白葡萄品種，赋予產區白酒更廣的風格譜系與国際市場競爭力',
+        label: '白品種：國際系',
+        desc: 'Chardonnay、Riesling、Sauvignon Blanc——三大國際白葡萄品種，賦予產區白酒更廣的風格譜系與國際市場競爭力',
         color: '#0277bd',
       },
       {
         icon: '🔴',
         label: '紅品種：本地系',
-        desc: 'Garnacha Tinta、Ull de Llebre（Tempranillo）、Monastrell、Trepat、Samsó（Carignan）——这五個本地品種為產區紅酒提供地中海滚燱賭格與結構',
+        desc: 'Garnacha Tinta、Ull de Llebre（Tempranillo）、Monastrell、Trepat、Samsó（Carignan）——這五個本地品種為產區紅酒提供地中海風格與結構',
         color: '#c0392b',
       },
       {
         icon: '🍇',
-        label: '紅品種：国際系',
-        desc: 'Cabernet Sauvignon、Merlot、Pinot Noir、Syrah——法國四大紅葡萄品種尽数入駐，各自貢獻結構、鴿葉、橸木層次與辛株特色',
+        label: '紅品種：國際系',
+        desc: 'Cabernet Sauvignon、Merlot、Pinot Noir、Syrah——法國四大紅葡萄品種悉數入駐，各自貢獻結構、單寧、橡木層次與辛香特色',
         color: '#4a148c',
       },
     ],
@@ -4431,13 +4431,13 @@ const S2M3L7_slides = [
     type: 'quiz',
     question: 'Costers del Segre DO 最標誌性的釀造哲學是什麼？',
     options: [
-      '全面做自然派舂派，只使用本地原生品種，拒絕引進外來品種',
+      '全面採用自然派釀造，只使用本地原生品種，拒絕引進外來品種',
       '將本地葡萄品種與法國葡萄品種進行混釀，融合傳統與創新',
-      '專門產造 Cava 氣泡酒基酒，葡萄品種限定從 Macabeo、Xarel·lo、Parellada 三種',
-      '僅產造加強酒與甲法酒，風格山小精實，僅在當地消費',
+      '專門生產 Cava 氣泡酒基酒，葡萄品種限定 Macabeo、Xarel·lo、Parellada 三種',
+      '僅生產加強酒與甜酒，風格小眾精實，僅供當地消費',
     ],
     answer: 1,
-    explanation: 'Costers del Segre DO 最大的特色是將本地葡萄品種（如 Garnacha、Ull de Llebre、Trepat）與法國引進品種（如 Cabernet Sauvignon、Chardonnay、Pinot Noir）進行混釀，展現傳統與創新的對話。產區沿塞格雷河兩岸延伸，内陸大陸性氣候加上日夜溫差，為多樣風格的葡萄決區提供良好生長基礎。',
+    explanation: 'Costers del Segre DO 最大的特色是將本地葡萄品種（如 Garnacha、Ull de Llebre、Trepat）與法國引進品種（如 Cabernet Sauvignon、Chardonnay、Pinot Noir）進行混釀，展現傳統與創新的對話。產區沿塞格雷河兩岸延伸，內陸大陸性氣候加上日夜溫差，為多樣風格的葡萄產區提供良好生長基礎。',
   },
   {
     type: 'summary',
@@ -4457,12 +4457,12 @@ const S2M3L8_slides = [
     type: 'cover',
     icon: '🌊',
     gradient: 'linear-gradient(135deg, #0d47a1, #e53935)',
-    title: 'Empordà DO — 地中海海風上的现代轉型',
-    subtitle: 'Level 2 · 加泰羅尼亞 · 甲酒轉紅酒 · Garnacha Blanca 白酒亮點',
+    title: 'Empordà DO — 地中海海風上的現代轉型',
+    subtitle: 'Level 2 · 加泰羅尼亞 · 甜酒轉紅酒 · Garnacha Blanca 白酒亮點',
     points: [
-      { icon: '🌊', label: '地中海沙質海岸', text: '沿海炒山地帶，沙質土壤為主，暴露於地中海溫暖海風之中' },
-      { icon: '🔄', label: '甲酒轉紅酒', text: '傳統上以甲酒聞名，現已轉向釀造現代風格紅葡萄酒，是產區正在經歷的重要轉型' },
-      { icon: '🍷', label: 'Garnacha Blanca 白酒', text: '生產口感豐潤、具質感的 Garnacha Blanca 白酒，樣式調節平衡，是產區白酒中特別亮眼的存在' },
+      { icon: '🌊', label: '地中海沙質海岸', text: '沿海丘陵地帶，沙質土壤為主，暴露於地中海溫暖海風之中' },
+      { icon: '🔄', label: '甜酒轉紅酒', text: '傳統上以加烈甜酒聞名，現已轉向釀造現代風格紅葡萄酒，是產區正在經歷的重要轉型' },
+      { icon: '🍷', label: 'Garnacha Blanca 白酒', text: '生產口感豐潤、具質感的 Garnacha Blanca 白酒，風格均衡，是產區白酒中特別亮眼的存在' },
     ],
   },
   {
@@ -4470,29 +4470,29 @@ const S2M3L8_slides = [
     title: 'Empordà DO 位置',
     mapRegion: 'catalonia',
     geojsonUrl: '/spain/geojson/appellations/emporda.geojson',
-    description: '位於加泰羅尼亞最北端，比利牙斯山腳地中海沿岸，居于法國境內不遠處。地中海海風與沙質土壤是產區的兩大風土標誌。',
+    description: '位於加泰羅尼亞最北端，庇里牛斯山腳地中海沿岸，鄰近法國邊境。地中海海風與沙質土壤是產區的兩大風土標誌。',
   },
   {
     type: 'content',
     icon: '🌡️',
     title: '風土檢驗：沙質土壤 × 地中海海風',
     html: `
-      <p>Empordà 位於加泰羅尼亞最北端，地中海沿岸地帶，風土由<strong>沙質土壤</strong>與<strong>地中海溯濕海風</strong>共同塑造。</p>
+      <p>Empordà 位於加泰羅尼亞最北端，地中海沿岸地帶，風土由<strong>沙質土壤</strong>與<strong>地中海潮濕海風</strong>共同塑造。</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
         <div style="background:#e3f2fd;border-left:4px solid #0d47a1;padding:12px;border-radius:0 10px 10px 0">
           <strong>🌊 地中海海風影響</strong>
           <ul style="margin:6px 0 0;padding-left:18px">
-            <li>如同加泰羅尼亞其他海岸產區，葡萄園暴露於<strong>地中海溯濕海風</strong>之中</li>
+            <li>如同加泰羅尼亞其他海岸產區，葡萄園暴露於<strong>地中海潮濕海風</strong>之中</li>
             <li>海風調節氣溫，避免夏季過熱，保留葡萄酸度與香氣新鮮度</li>
-            <li>海拔高度與距海遠近是加泰羅尼亞目理解產區風格的核心要素</li>
+            <li>海拔高度與距海遠近是理解加泰羅尼亞產區風格的核心要素</li>
           </ul>
         </div>
         <div style="background:#fff8e1;border-left:4px solid #f9a825;padding:12px;border-radius:0 10px 10px 0">
           <strong>🪫 沙質土壤的魔力</strong>
           <ul style="margin:6px 0 0;padding-left:18px">
             <li>產區主要土壤為<strong>沙質土壤</strong>，排水良好</li>
-            <li>沙質土壤肥力低，葡萄自然低產選擇，有助提升果实濃縮度與品種表達</li>
-            <li>與南部板岩產區（如 Priorat）風格迅異，呈現更清爽活洼的果味</li>
+            <li>沙質土壤肥力低，葡萄自然低產，有助提升果實濃縮度與品種表達</li>
+            <li>與南部板岩產區（如 Priorat）風格迥異，呈現更清爽活潑的果味</li>
           </ul>
         </div>
       </div>
@@ -4501,21 +4501,21 @@ const S2M3L8_slides = [
   {
     type: 'content',
     icon: '🔄',
-    title: '產區展變：甲酒 → 現代紅酒',
+    title: '產區轉變：甜酒 → 現代紅酒',
     html: `
-      <p>Empordà DO 正在經歷一場引人注目的<strong>風格轉型</strong>：從傳統甲酒產區辭變為現代紅葡萄酒產區。</p>
-      <h4>🍰 過去：甲酒的天下</h4>
-      <p>單寧豐潤的加強甲酒曾是 Empordà 的主角，尤其是以 Garnacha 與 Cariñena 釀造的第性履歇型甲酒，大有名氣。</p>
+      <p>Empordà DO 正在經歷一場引人注目的<strong>風格轉型</strong>：從傳統加烈甜酒產區蛻變為現代紅葡萄酒產區。</p>
+      <h4>🍰 過去：甜酒的天下</h4>
+      <p>單寧豐潤的加烈甜酒曾是 Empordà 的主角，尤其是以 Garnacha 與 Cariñena 釀造的傳統陳年型甜酒（Garnatxa d'Empordà），大有名氣。</p>
       <h4>🔥 現在：現代紅酒的崛起</h4>
       <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
         <div style="background:#fce4ec;border-left:4px solid #c62828;padding:12px;border-radius:0 10px 10px 0">
-          <strong>產區新一代釀酒師</strong>對產區展示了新的釀造哲學：不加精酒、清爽果味導向、淡化气候影響。
+          <strong>產區新一代釀酒師</strong>展示了新的釀造哲學：減少增度、清爽果味導向、更精準地表現風土特色。
         </div>
         <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
-          <strong>Garnacha Tinta 與 Cariñena</strong>是現代 Empordà 紅酒的骨幹：地中海溯濕的熟果豐潤，加上 Cariñena 的酸度與香料骨幹，性格鮮明。
+          <strong>Garnacha Tinta 與 Cariñena</strong>是現代 Empordà 紅酒的骨幹：地中海潮濕氣候下的熟果豐潤，加上 Cariñena 的酸度與香料骨幹，性格鮮明。
         </div>
         <div style="background:#f3e5f5;border-left:4px solid #7b1fa2;padding:12px;border-radius:0 10px 10px 0">
-          <strong>產區也以粘紅酒（rosé）能力聞名</strong>，節度豐潤又不失清爽，是沙灘季的理想選擇。
+          <strong>產區也以粉紅酒（rosé）能力聞名</strong>，果味豐潤又不失清爽，是夏日的理想選擇。
         </div>
       </div>
     `,
@@ -4527,48 +4527,48 @@ const S2M3L8_slides = [
       {
         icon: '🍋',
         label: 'Garnacha Blanca · Garnacha Roja（白）',
-        desc: 'Garnacha Blanca 釀造出口感豐潤、具質感的白酒，是產區白酒亮點；Garnacha Roja（又稱 Garnacha Gris）提供芳香預香與豐潤感',
+        desc: 'Garnacha Blanca 釀造出口感豐潤、具質感的白酒，是產區白酒亮點；Garnacha Roja（又稱 Garnacha Gris）提供芳香花香與豐潤感',
         color: '#f9a825',
       },
       {
         icon: '🌸',
         label: 'Macabeo · Moscatel de Alejandría（白）',
-        desc: 'Macabeo 清爽果味，常用於白酒與 Cava 基酒；Moscatel de Alejandría 強烈芳香、蓝莉花和莄茸味道，用於甩香白酒或甘甜酒',
+        desc: 'Macabeo 清爽果味，常用於白酒與 Cava 基酒；Moscatel de Alejandría 帶有強烈的花香與麝香葡萄氣息，用於芳香型白酒或甜酒',
         color: '#0277bd',
       },
       {
         icon: '🔴',
         label: 'Garnacha Tinta（紅）',
-        desc: '現代 Empordà 紅酒的主點豔豌，地中海溯濕的熟果豐潤，紅果聓萹特色，可入口即飲或短期陶小樾熊仓联，是產區轉型的最佳窗口',
+        desc: '現代 Empordà 紅酒的主力品種，地中海氣候下的熟果豐潤，紅色漿果特色鮮明，可即飲也可短期橡木桶陳年，是產區轉型的最佳代表',
         color: '#c0392b',
       },
       {
         icon: '🟣',
         label: 'Cariñena（紅）',
-        desc: '即 Carignan，在 Empordà 呈現高酸、深色、豐潤香料的特性。與 Garnacha 混釀客觀結構與高酸骨幹，提升紅酒複雜度和可陶存性',
+        desc: '即 Carignan，在 Empordà 呈現高酸、深色、豐潤香料的特性。與 Garnacha 混釀提供結構與高酸骨幹，提升紅酒複雜度和陳年潛力',
         color: '#4a148c',
       },
     ],
   },
   {
     type: 'quiz',
-    question: '關於 Empordà DO，以下哪一項描述最為准確？',
+    question: '關於 Empordà DO，以下哪一項描述最為準確？',
     options: [
       '可釀造 Cava 氣泡酒，以 Llicorella 板岩土壤百年老藤聞名，屬 DOCa 等級',
-      '傳統上以甲酒聞名，目前已轉向現代紅葡萄酒；沙質土壤，暴露於地中海海風；Garnacha Blanca 白酒豐潤具質',
-      '受山脈屏障與海洋隔絕，主要產造 Cava 基酒， Trepat 是独特原生種',
-      '属於 Costers del Segre 的小區塊，沿塞格雷河延伸，本地與法國品種混釀',
+      '傳統上以加烈甜酒聞名，目前已轉向現代紅葡萄酒；沙質土壤，暴露於地中海海風；Garnacha Blanca 白酒豐潤具質',
+      '受山脈屏障與海洋隔絕，主要生產 Cava 基酒，Trepat 是獨特原生種',
+      '屬於 Costers del Segre 的小區塊，沿塞格雷河延伸，本地與法國品種混釀',
     ],
     answer: 1,
-    explanation: 'Empordà DO 傳統上以甲酒（加強甲酒）聞名，現已轉型專注現代紅葡萄酒。產區土壤主要為沙質土壤，暴露於地中海海風。白酒方面以 Garnacha Blanca 釀造的就有口感豐潤、具質感的白酒最有特色。海拔高度與距海遠近是鐘容加泰羅尼亞各產區風格的核心等式。',
+    explanation: 'Empordà DO 傳統上以加烈甜酒（如 Garnatxa d\'Empordà）聞名，現已轉型專注現代紅葡萄酒。產區土壤主要為沙質土壤，暴露於地中海海風。白酒方面以 Garnacha Blanca 釀造的口感豐潤、具質感的白酒最有特色。海拔高度與距海遠近是理解加泰羅尼亞各產區風格的核心要素。',
   },
   {
     type: 'summary',
     message: 'Empordà DO 學習完成！',
     keyPoints: [
-      '加泰羅尼亞最北端 DO，地中海沿岸，沙質土壤，暴露於地中海溯濕海風',
-      '風格轉型：傳統甲酒 → 現代紅酒（Garnacha Tinta + Cariñena 為主點）',
-      'Garnacha Blanca 白酒豐潤具質，是產區白酒屬中最特別的一面',
+      '加泰羅尼亞最北端 DO，地中海沿岸，沙質土壤，暴露於地中海潮濕海風',
+      '風格轉型：傳統加烈甜酒 → 現代紅酒（Garnacha Tinta + Cariñena 為主力）',
+      'Garnacha Blanca 白酒豐潤具質，是產區白酒中最特別的一面',
       '白品種：Garnacha Blanca、Garnacha Roja、Macabeo、Moscatel de Alejandría；紅品種：Cariñena、Garnacha Tinta',
     ],
   },
@@ -4690,7 +4690,7 @@ const S2M3L10_slides = [
     points: [
       { icon: '🌿', label: 'Picapoll 特色', text: '加泰羅尼亞本地白品種 Picapoll 是產區的個性標誌，與 Macabeo、Parellada 共同構成白酒基高' },
       { icon: '🇳🇱', label: '法國引進品種', text: 'Chardonnay、Gewurztraminer（白）、Merlot、Cabernet Sauvignon、Cabernet Franc、Syrah（紅）幾乎涵蓋所有法國主要品種' },
-      { icon: '🌊', label: '地中海海風', text: '暴露於地中海溯濕海風，海拔高度與距海遠近决定風格，是理解加泰羅尼亞產區的核心要素' },
+      { icon: '🌊', label: '地中海海風', text: '暴露於地中海潮濕海風，海拔高度與距海遠近決定風格，是理解加泰羅尼亞產區的核心要素' },
     ],
   },
   {
@@ -4705,18 +4705,18 @@ const S2M3L10_slides = [
     icon: '🌡️',
     title: '風土檢驗：地中海海風 × 海拔與距海',
     html: `
-      <p>Pla de Bages DO 坐落於加泰羅尼亞中部內陸，如同加泰羅尼亞其他產區，葡萄園同樣<strong>暴露於地中海溯濕海風</strong>之中。</p>
+      <p>Pla de Bages DO 坐落於加泰羅尼亞中部內陸，如同加泰羅尼亞其他產區，葡萄園同樣<strong>暴露於地中海潮濕海風</strong>之中。</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
         <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:12px;border-radius:0 10px 10px 0">
           <strong>🌊 地中海海風影響</strong>
           <ul style="margin:6px 0 0;padding-left:18px">
-            <li>不論距海遠近，加泰羅尼亞全區葡萄園均共享地中海溯濕海風的洸潤</li>
+            <li>不論距海遠近，加泰羅尼亞全區葡萄園均共享地中海潮濕海風的滋潤</li>
             <li>海風調節氣溫，避免夏季過熱，提升葡萄酸度和香氣保存</li>
           </ul>
         </div>
         <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
           <strong>⛰️ 海拔與距海：加泰羅尼亞的核心公式</strong><br/>
-          在加泰羅尼亞，<strong>海拔高度</strong>與<strong>距海遠近</strong>是理解產區風格與釀造方式的核心要素。Pla de Bages 位於內陸，距海較遠，大陸性氣候特徵更明顔，日夜溫差較大，不同於沿海產區
+          在加泰羅尼亞，<strong>海拔高度</strong>與<strong>距海遠近</strong>是理解產區風格與釀造方式的核心要素。Pla de Bages 位於內陸，距海較遠，大陸性氣候特徵更明顯，日夜溫差較大，不同於沿海產區
         </div>
       </div>
     `,
@@ -4734,19 +4734,19 @@ const S2M3L10_slides = [
       {
         icon: '🌸',
         label: '白品種：法國系',
-        desc: 'Chardonnay 賦予豐潤口感與爍受橙特色；<strong>Gewurztraminer</strong> 运用強烈荱薔譜香、茹枝花與蕨柔烟燻，在 Pla de Bages 的内陸氣候下呈現獨特表現力',
+        desc: 'Chardonnay 賦予豐潤口感與柑橘特色；<strong>Gewürztraminer</strong> 帶來強烈的荔枝、玫瑰花與淡淡煙燻氣息，在 Pla de Bages 的內陸氣候下呈現獨特表現力',
         color: '#0277bd',
       },
       {
         icon: '🔴',
         label: '紅品種：本地系',
-        desc: '<strong>Garnacha</strong> 提供地中海熟果豐潤；<strong>Tempranillo</strong>（Ull de Llebre）賦予櫻榄與紅果；<strong>Sumoll</strong> 是加泰羅尼亞古老原生紅品種，酒高、酸度髪競、正在被重新發揘',
+        desc: '<strong>Garnacha</strong> 提供地中海熟果豐潤；<strong>Tempranillo</strong>（Ull de Llebre）賦予櫻桃與紅果；<strong>Sumoll</strong> 是加泰羅尼亞古老原生紅品種，色淡、酸度高，正在被重新發掘',
         color: '#c0392b',
       },
       {
         icon: '🟣',
         label: '紅品種：法國系',
-        desc: 'Merlot 賦予柔潤單寧；Cabernet Sauvignon 帶來黑醋栗與香料骨幹；Cabernet Franc 呈現蒸度興締葉清新感；Syrah 加入歉岖舅葡男香的成熟復雜性，所有法國主要紅品種幾乎全数就位',
+        desc: 'Merlot 賦予柔潤單寧；Cabernet Sauvignon 帶來黑醋栗與香料骨幹；Cabernet Franc 呈現清新草本與紫羅蘭氣息；Syrah 加入黑胡椒與成熟複雜度，法國主要紅品種幾乎全數到位',
         color: '#4a148c',
       },
     ],
@@ -4761,15 +4761,15 @@ const S2M3L10_slides = [
       '2002 年從 Tarragona DO 獨立，以 Garnacha Blanca 白酒與 Carignan 紅酒聞名',
     ],
     answer: 1,
-    explanation: 'Pla de Bages DO 所有葡萄園均暴露於地中海溯濕海風中。本地白品種有 Macabeo、Parellada 和獲加泰羅尼亞特色的 Picapoll；紅品種有 Garnacha、Tempranillo 和古老原生種 Sumoll。法國品種方面，白酒有 Chardonnay 與 Gewurztraminer，紅酒有 Merlot、Cabernet Sauvignon、Cabernet Franc、Syrah，海拔高度與距海遠近是產區風格的决定要素。',
+    explanation: 'Pla de Bages DO 所有葡萄園均暴露於地中海潮濕海風中。本地白品種有 Macabeo、Parellada 和具加泰羅尼亞特色的 Picapoll；紅品種有 Garnacha、Tempranillo 和古老原生種 Sumoll。法國品種方面，白酒有 Chardonnay 與 Gewürztraminer，紅酒有 Merlot、Cabernet Sauvignon、Cabernet Franc、Syrah，海拔高度與距海遠近是產區風格的決定要素。',
   },
   {
     type: 'summary',
     message: 'Pla de Bages DO 學習完成！',
     keyPoints: [
-      '加泰羅尼亞內陸 DO，暴露於地中海海風，海拔高度與距海遠近决定風格與釀造',
-      '本地白品種：Macabeo、Parellada、Picapoll（加泰羅尼亞特色原生種）；法國白：Chardonnay、Gewurztraminer',
-      '本地紅品種：Garnacha、Tempranillo、Sumoll（古老原生種，酒高酸度髪競）；法國紅：Merlot、Cabernet Sauvignon、Cabernet Franc、Syrah',
+      '加泰羅尼亞內陸 DO，暴露於地中海海風，海拔高度與距海遠近決定風格與釀造',
+      '本地白品種：Macabeo、Parellada、Picapoll（加泰羅尼亞特色原生種）；法國白：Chardonnay、Gewürztraminer',
+      '本地紅品種：Garnacha、Tempranillo、Sumoll（古老原生種，色淡酸度高）；法國紅：Merlot、Cabernet Sauvignon、Cabernet Franc、Syrah',
       '產區狀態：本地與法國品種並存，多元風格與舒適的地中海氣候特色',
     ],
   },
@@ -5556,8 +5556,8 @@ const S2M4L7_slides = [
           <strong>🪨 地形與土壤</strong>
           <ul style="margin:6px 0 0;padding-left:18px">
             <li>海拔：<strong>400–800 公尺</strong></li>
-            <li>主要為<strong>紅褐色石灰岩</strong>，底土多石（沖積土與米板岩）</li>
-            <li>遍布嚴岩石與鵝卵石——賦予葡萄酒礦物索蘭等石質尾韻</li>
+            <li>主要為<strong>紅褐色石灰岩</strong>，底土多石（沖積土與頁岩）</li>
+            <li>遍布岩石與鵝卵石——賦予葡萄酒礦物與石質尾韻</li>
           </ul>
         </div>
         <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px;border-radius:0 10px 10px 0">
@@ -5574,7 +5574,7 @@ const S2M4L7_slides = [
       {
         icon: '🍇',
         label: 'Garnacha Tinta（目前主導）',
-        desc: '對當地高溫乾燥環境適感最強，釀造濃醇、酒精度高（常超過 14%）的紅酒，已取代 Cariñena 成為產區主戴',
+        desc: '對當地高溫乾燥環境適應力最強，釀造濃醇、酒精度高（常超過 14%）的紅酒，已取代 Cariñena 成為產區主導品種',
         color: '#b71c1c',
       },
       {
@@ -5586,7 +5586,7 @@ const S2M4L7_slides = [
       {
         icon: '🍊',
         label: 'Juan Ibáñez（地方原生品種）',
-        desc: '阿拉貢規有原生紅品種，具欲深色、格談 extra 特性，在少數酒莊中用作旁小混釀成分增加風味多樣性',
+        desc: '阿拉貢特有原生紅品種，色澤深、單寧結實，在少數酒莊中用作少量混釀成分，增加風味多樣性',
         color: '#880e4f',
       },
       {
@@ -5981,7 +5981,7 @@ const S3M1L2_slides = [
       {
         icon: '🏺',
         label: '傳統風格（Tradicional）',
-        desc: '代表：López de Heredia, CVNE Imperialなど 長期美國橡木桶（6-9 年）+ 後續瓶中熟成。顏色磚橙，透明。香氣：椰子、香草、皮革、煙燻。口感：輕盈優雅，酸度突出，單寧柔順絲滑',
+        desc: '代表：López de Heredia、CVNE Imperial 等。長期美國橡木桶（6-9 年）+ 後續瓶中熟成。顏色磚橙，透明。香氣：椰子、香草、皮革、煙燻。口感：輕盈優雅，酸度突出，單寧柔順絲滑',
         color: '#a04000',
       },
       {
@@ -6243,7 +6243,7 @@ const S3M2L1_slides = [
       '傳統法 = 瓶中二次發酵，密封 CO₂天然形成（6 atm 氣壓）',
       '酒泥陳年：酵母自溶 → 烤麵包、餅乾、奶油，時間越長越複雜',
       '搖瓶（Riddling）讓酒泥集中瓶口，冷凍 Disgorgement 噴出',
-      'Dosage 記決定最終甜度（Brut Nature 零糖 → Demi-Sec 半甜）',
+      'Dosage 決定最終甜度（Brut Nature 零糖 → Demi-Sec 半甜）',
     ],
   },
 ]
@@ -6416,7 +6416,7 @@ const S3M2L4_slides = [
         <li><strong>品種</strong>：只允許 8 個加泰羅尼亞本土品種，禁止 Chardonnay 等國際品種</li>
       </ul>
       <h4>🌿 Clàssic Penedès DO（2012 年）</h4>
-      <p>同樣限制在 Penedès，也требует有機農法和傳統法，但標準略低於 Corpinnat。允許 Chardonnay 等品種。是官方 DO，有法規保障。</p>
+      <p>同樣限制在 Penedès，也要求有機農法和傳統法，但標準略低於 Corpinnat。允許 Chardonnay 等品種。是官方 DO，有法規保障。</p>
       <h4>🤔 這對消費者意味著什麼？</h4>
       <p>在架上看到「Corpinnat」或「Clàssic Penedès」標籤，可以確信：這是來自 Penedès 核心、有機農法、高品質的精品氣泡酒，完全不同於量產 Cava。</p>
     `,
@@ -6938,7 +6938,7 @@ const S3FinalExam_slides = [
     options: [
       '美國橡木桶 6-9 年陳年，磚橙色，輕盈椰子香草絲滑口感',
       '法國新橡木桶 12-18 個月，深紫濃縮，咖啡烤土司，豐滿高酒精',
-      '大型 Foudre 桶中不接觸橡木，原汁鮮果韁美型',
+      '大型 Foudre 桶中不接觸橡木，保留原汁鮮果風格',
       '完全不用橡木，不鏽鋼桶釀造，保留 Tempranillo 原始果香',
     ],
     answer: 1,
@@ -7416,7 +7416,7 @@ const S4M1L4_slides = [
     description: 'Rioja（石灰黏土）vs Ribera del Duero（花崗岩高原）vs Priorat（板岩）vs Rías Baixas（花崗岩海岸）——盲品地理推斷的空間基礎',
     mapRegion: 'all',
     classificationColors: true,
-  },,
+  },
 
   {
     type: 'content',
@@ -7494,7 +7494,7 @@ const S4M2L1_slides = [
     description: '兩大頂級紅酒產區的位置關係——Rioja（埃布羅河谷，東西走向）與 Ribera del Duero（杜羅河高原，海拔 850m）',
     mapRegion: 'castilla-leon',
     geojsonUrl: '/spain/geojson/appellations/ribera-del-duero.geojson',
-  },,
+  },
 
   {
     type: 'content',
