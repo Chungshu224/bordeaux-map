@@ -23,8 +23,11 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 const SUPABASE_URL            = Deno.env.get('SUPABASE_URL')!
 const SUPABASE_SERVICE_KEY    = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
 const RESEND_API_KEY          = Deno.env.get('RESEND_API_KEY')!
-const SITE_URL                = Deno.env.get('SITE_URL') ?? 'https://yoursite.com'
-const FROM_EMAIL              = '侍酒師的筆記本 <noreply@yourdomain.com>'
+const SITE_URL                = Deno.env.get('SITE_URL') ?? 'https://wineacademy.vercel.app'
+// 尚未有自訂網域可供 Resend 驗證前，先用 Resend 提供的共用測試網域寄送
+// （不需 DNS 設定即可寄給任何收件人）；日後若有自訂網域，改成該網域下的地址即可
+const FROM_EMAIL              = Deno.env.get('FROM_EMAIL') ?? '侍酒師的筆記本 <onboarding@resend.dev>'
+const SUPPORT_EMAIL           = Deno.env.get('SUPPORT_EMAIL') ?? 'chungshu224@gmail.com'
 
 // ── 到期規則 ────────────────────────────────────────────────────────────────
 const REMINDER_RULES = [
@@ -72,7 +75,7 @@ function buildEmailHtml(
         </a>
       </div>
       <p style="color:#aaa;font-size:.8rem;text-align:center;margin:0">
-        如有任何問題，請聯絡 <a href="mailto:support@yourdomain.com" style="color:#8b1a2b">客服信箱</a>
+        如有任何問題，請聯絡 <a href="mailto:${SUPPORT_EMAIL}" style="color:#8b1a2b">客服信箱</a>
       </p>
     </div>
   </div>
@@ -126,7 +129,7 @@ Deno.serve(async (req) => {
         billing_period,
         expires_at
       `)
-      .eq('status', 'active')
+      .in('status', ['paid', 'active'])
       .eq('billing_period', rule.billing_period)
       .gte('expires_at', windowStart.toISOString())
       .lt('expires_at', windowEnd.toISOString())
