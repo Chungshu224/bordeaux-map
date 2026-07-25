@@ -24,9 +24,9 @@
           <button v-if="effectiveTier === 'free'" class="upgrade-btn" @click="$router.push('/')">
             升級方案 →
           </button>
-          <div v-else class="tsc-expires">
-            {{ expiresText }}
-          </div>
+          <button v-else class="tsc-expires-link" @click="$router.push('/settings')">
+            {{ expiresText }} →
+          </button>
         </div>
       </div>
 
@@ -159,12 +159,10 @@ const TIER_INFO = {
 }
 const tierInfo = computed(() => TIER_INFO[effectiveTier.value] || TIER_INFO.free)
 
-const expiresAt = computed(() => authState.user?.app_metadata?.subscription_expires_at)
-const expiresText = computed(() => {
-  if (!expiresAt.value) return '終身有效'
-  const d = new Date(expiresAt.value)
-  return `有效至 ${d.toLocaleDateString('zh-TW')}`
-})
+// app_metadata.subscription_expires_at 是帳號層級的彙總值（取所有課程中
+// 最晚的到期日），不代表「每個課程」都有效至此日——各課程實際到期日不同，
+// 準確的逐課程到期日在「帳號設定」頁（UserSettings.vue）已個別列出。
+const expiresText = computed(() => '查看各課程到期日')
 
 // 購買記錄
 const purchases = ref([])
@@ -337,7 +335,16 @@ const router = useRouter()
   font-size: 0.85rem;
   cursor: pointer;
 }
-.tsc-expires { color: #9a8878; font-size: 0.82rem; }
+.tsc-expires-link {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #9a8878;
+  font-size: 0.82rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.tsc-expires-link:hover { color: #d4af37; border-color: #d4af37; }
 
 /* ─── Sections ────────────────────────────────────────────────────────────── */
 .dash-section { margin-bottom: 40px; }
