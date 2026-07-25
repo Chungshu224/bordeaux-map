@@ -515,28 +515,63 @@
             <label class="notes-label">📚 已購課程</label>
             <div v-if="studentPurchasesLoading" class="loading-state">載入中…</div>
             <p v-else-if="studentPurchases.length === 0" class="empty-state">尚無購買紀錄</p>
-            <table v-else class="data-table purchases-mini-table">
-              <thead>
-                <tr>
-                  <th>課程</th>
-                  <th>方案</th>
-                  <th>狀態</th>
-                  <th>金額</th>
-                  <th>付款日</th>
-                  <th>到期日</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(pu, i) in studentPurchases" :key="i">
-                  <td>{{ courseFlag(pu.course_id) }} {{ courseLabel(pu.course_id) }}</td>
-                  <td>{{ tierLabel(pu.tier) }}</td>
-                  <td>{{ purchaseStatusLabel(pu) }}</td>
-                  <td class="amount-cell">NT$ {{ (pu.amount || 0).toLocaleString() }}</td>
-                  <td class="date-cell">{{ formatDate(pu.paid_at) }}</td>
-                  <td class="date-cell">{{ formatDate(pu.expires_at) }}</td>
-                </tr>
-              </tbody>
-            </table>
+            <template v-else>
+              <table class="data-table purchases-mini-table">
+                <thead>
+                  <tr>
+                    <th>課程</th>
+                    <th>方案</th>
+                    <th>狀態</th>
+                    <th>金額</th>
+                    <th>付款日</th>
+                    <th>到期日</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="pu in groupedStudentPurchases" :key="pu.course_id">
+                    <td>{{ courseFlag(pu.course_id) }} {{ courseLabel(pu.course_id) }}</td>
+                    <td>{{ tierLabel(pu.tier) }}</td>
+                    <td>
+                      {{ purchaseStatusLabel(pu) }}
+                      <span v-if="pu.recordCount > 1" class="tag-pill tag-neutral" style="margin-left:4px">{{ pu.recordCount }} 筆紀錄</span>
+                    </td>
+                    <td class="amount-cell">NT$ {{ (pu.amount || 0).toLocaleString() }}</td>
+                    <td class="date-cell">{{ formatDate(pu.paid_at) }}</td>
+                    <td class="date-cell">{{ formatDate(pu.expires_at) }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button
+                v-if="studentPurchases.length > groupedStudentPurchases.length"
+                class="btn-xs"
+                style="margin-top:8px"
+                @click="showAllStudentPurchases = !showAllStudentPurchases"
+              >{{ showAllStudentPurchases ? '收合' : `顯示全部 ${studentPurchases.length} 筆原始紀錄` }}</button>
+              <table v-if="showAllStudentPurchases" class="data-table purchases-mini-table" style="margin-top:8px">
+                <thead>
+                  <tr>
+                    <th>課程</th>
+                    <th>方案</th>
+                    <th>狀態</th>
+                    <th>金額</th>
+                    <th>付款日</th>
+                    <th>到期日</th>
+                    <th>建立時間</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(pu, i) in studentPurchases" :key="i">
+                    <td>{{ courseFlag(pu.course_id) }} {{ courseLabel(pu.course_id) }}</td>
+                    <td>{{ tierLabel(pu.tier) }}</td>
+                    <td>{{ purchaseStatusLabel(pu) }}</td>
+                    <td class="amount-cell">NT$ {{ (pu.amount || 0).toLocaleString() }}</td>
+                    <td class="date-cell">{{ formatDate(pu.paid_at) }}</td>
+                    <td class="date-cell">{{ formatDate(pu.expires_at) }}</td>
+                    <td class="date-cell">{{ formatDate(pu.created_at) }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </template>
           </div>
 
           <!-- 管理者備註 -->
@@ -800,8 +835,37 @@ const savingNotes  = ref(false)
 const notesSaved   = ref(false)
 
 // 學員已購課程明細
-const studentPurchases    = ref([])
+const studentPurchases        = ref([])
 const studentPurchasesLoading = ref(false)
+const showAllStudentPurchases = ref(false)
+
+const PURCHASE_STATUS_PRIORITY = {
+  paid: 4, active: 4, expired: 3, awaiting_payment: 2, pending: 1, refunded: 0, cancelled: 0, amount_mismatch: 0
+}
+function comparePurchaseRecords(left, right) {
+  const statusDiff = (PURCHASE_STATUS_PRIORITY[left.status] || 0) - (PURCHASE_STATUS_PRIORITY[right.status] || 0)
+  if (statusDiff !== 0) return statusDiff
+  const leftTime  = new Date(left.paid_at || left.expires_at || left.created_at || 0).getTime() || 0
+  const rightTime = new Date(right.paid_at || right.expires_at || right.created_at || 0).getTime() || 0
+  return leftTime - rightTime
+}
+// 同一課程可能因重複結帳有多筆紀錄（尤其是未完成付款），只取最具代表性
+// 的一筆顯示（已付款/訂閱中 > 已到期 > 付款中 > 等待付款 > 已取消/退款），
+// 其餘用「N 筆紀錄」標記，避免像 6 筆等待付款疊在一起看起來很亂。
+const groupedStudentPurchases = computed(() => {
+  const grouped = new Map()
+  for (const pu of studentPurchases.value) {
+    const current = grouped.get(pu.course_id)
+    if (!current) {
+      grouped.set(pu.course_id, { ...pu, recordCount: 1 })
+      continue
+    }
+    const nextCount = (current.recordCount || 1) + 1
+    const better = comparePurchaseRecords(pu, current) > 0 ? pu : current
+    grouped.set(pu.course_id, { ...better, recordCount: nextCount })
+  }
+  return Array.from(grouped.values()).sort((a, b) => comparePurchaseRecords(b, a))
+})
 
 const filteredStudents = computed(() => {
   const q = studentSearch.value.toLowerCase()
@@ -828,6 +892,7 @@ async function viewStudent(s) {
   notesLoading.value = true
   studentPurchases.value = []
   studentPurchasesLoading.value = true
+  showAllStudentPurchases.value = false
   try {
     const { data } = await supabase.rpc('admin_get_notes', { p_user_id: s.user_id })
     notesText.value = data ?? ''
