@@ -510,6 +510,35 @@
           <p><strong>到期日：</strong>{{ formatDate(selectedStudent.subscription_exp) }}</p>
           <p><strong>消費：</strong>NT$ {{ (selectedStudent.total_spent || 0).toLocaleString() }}</p>
 
+          <!-- 已購課程明細 -->
+          <div class="student-purchases-section">
+            <label class="notes-label">📚 已購課程</label>
+            <div v-if="studentPurchasesLoading" class="loading-state">載入中…</div>
+            <p v-else-if="studentPurchases.length === 0" class="empty-state">尚無購買紀錄</p>
+            <table v-else class="data-table purchases-mini-table">
+              <thead>
+                <tr>
+                  <th>課程</th>
+                  <th>方案</th>
+                  <th>狀態</th>
+                  <th>金額</th>
+                  <th>付款日</th>
+                  <th>到期日</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(pu, i) in studentPurchases" :key="i">
+                  <td>{{ courseFlag(pu.course_id) }} {{ courseLabel(pu.course_id) }}</td>
+                  <td>{{ tierLabel(pu.tier) }}</td>
+                  <td>{{ purchaseStatusLabel(pu) }}</td>
+                  <td class="amount-cell">NT$ {{ (pu.amount || 0).toLocaleString() }}</td>
+                  <td class="date-cell">{{ formatDate(pu.paid_at) }}</td>
+                  <td class="date-cell">{{ formatDate(pu.expires_at) }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <!-- 管理者備註 -->
           <div class="notes-section">
             <label class="notes-label">📝 管理者備註</label>
@@ -770,6 +799,10 @@ const notesLoading = ref(false)
 const savingNotes  = ref(false)
 const notesSaved   = ref(false)
 
+// 學員已購課程明細
+const studentPurchases    = ref([])
+const studentPurchasesLoading = ref(false)
+
 const filteredStudents = computed(() => {
   const q = studentSearch.value.toLowerCase()
   if (!q) return studentsList.value
@@ -793,11 +826,19 @@ async function viewStudent(s) {
   notesText.value = ''
   notesSaved.value = false
   notesLoading.value = true
+  studentPurchases.value = []
+  studentPurchasesLoading.value = true
   try {
     const { data } = await supabase.rpc('admin_get_notes', { p_user_id: s.user_id })
     notesText.value = data ?? ''
   } finally {
     notesLoading.value = false
+  }
+  try {
+    const { data } = await supabase.rpc('admin_get_student_detail', { p_user_id: s.user_id })
+    studentPurchases.value = data?.purchases ?? []
+  } finally {
+    studentPurchasesLoading.value = false
   }
 }
 
@@ -1210,6 +1251,22 @@ function courseLabel(id) {
 function courseFlag(id) {
   return { bordeaux: '🇫🇷', bourgogne: '🇫🇷', italy: '🇮🇹', spain: '🇪🇸', germany: '🇩🇪', portugal: '🇵🇹', australia: '🇦🇺', newzealand: '🇳🇿', loire: '🇫🇷', california: '🇺🇸' }[id] ?? '🍷'
 }
+const PURCHASE_STATUS_LABELS = {
+  pending: '等待付款',
+  awaiting_payment: '付款中',
+  paid: '已付款',
+  active: '訂閱中',
+  expired: '已到期',
+  refunded: '已退款',
+  cancelled: '已取消',
+  amount_mismatch: '金額異常待審'
+}
+function purchaseStatusLabel(p) {
+  if (['paid', 'active'].includes(p.status) && p.expires_at && new Date(p.expires_at) < new Date()) {
+    return '已到期'
+  }
+  return PURCHASE_STATUS_LABELS[p.status] ?? p.status
+}
 function formatDate(dateStr) {
   if (!dateStr) return '—'
   return new Date(dateStr).toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' })
@@ -1499,6 +1556,9 @@ function formatStudyTime(sec) {
 .modal-student { max-width: 520px; }
 .notes-section { margin-top: 18px; border-top: 1px solid #eee; padding-top: 16px; }
 .notes-label { display: block; font-size: .82rem; color: #555; font-weight: 600; margin-bottom: 8px; }
+.student-purchases-section { margin-top: 18px; border-top: 1px solid #eee; padding-top: 16px; }
+.purchases-mini-table { font-size: .82rem; width: 100%; }
+.purchases-mini-table th, .purchases-mini-table td { padding: 6px 8px; }
 .notes-textarea {
   width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px;
   font-size: .88rem; font-family: inherit; resize: vertical; outline: none;
