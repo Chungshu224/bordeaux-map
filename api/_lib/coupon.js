@@ -17,17 +17,10 @@ export function isCouponActiveNow(coupon, now = new Date()) {
 }
 
 export function parseCouponPolicy(coupon) {
-  const note = String(coupon?.note || '').toLowerCase()
-
-  let scope = 'any'
-  if (/scope\s*[:=]\s*single/.test(note)) scope = 'single'
-  if (/scope\s*[:=]\s*global/.test(note)) scope = 'global'
-
-  let billing = null
-  const billingMatch = note.match(/billing\s*[:=]\s*(monthly|yearly)/)
-  if (billingMatch) billing = billingMatch[1]
-
-  return { scope, billing }
+  return {
+    scope:   coupon?.scope || 'any',
+    billing: coupon?.billing_restriction || null
+  }
 }
 
 export function validateCouponPolicy({ coupon, courseId, billingPeriod }) {

@@ -354,10 +354,15 @@
               <tbody>
                 <tr v-for="c in couponList" :key="c.code">
                   <td><code class="code-tag">{{ c.code }}</code></td>
-                  <td>{{ couponTypeLabel(c.type) }}</td>
+                  <td>
+                    {{ couponTypeLabel(c.type) }}
+                    <span v-if="c.scope !== 'any'" class="tag-pill tag-neutral" style="margin-left:4px">{{ couponScopeLabel(c.scope) }}</span>
+                    <span v-if="c.billing_restriction" class="tag-pill tag-neutral" style="margin-left:4px">{{ c.billing_restriction === 'monthly' ? '限月繳' : '限年繳' }}</span>
+                  </td>
                   <td>
                     <span v-if="c.type === 'free_trial'">免費 {{ c.trial_days || 30 }} 天</span>
                     <span v-else-if="c.discount_pct > 0">折扣 {{ c.discount_pct }}%</span>
+                    <span v-else-if="c.trial_days > 0">加贈 {{ c.trial_days }} 天</span>
                     <span v-else>—</span>
                   </td>
                   <td>
@@ -587,6 +592,24 @@
             <div class="form-group">
               <label>到期時間（空白 = 永久）</label>
               <input v-model="editingCoupon.valid_until" type="datetime-local" class="field-input" />
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>適用範圍</label>
+              <select v-model="editingCoupon.scope" class="field-select">
+                <option value="any">不限（單一課程／全球通行證皆可）</option>
+                <option value="single">僅限單一課程</option>
+                <option value="global">僅限全球產區通行證</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>限定計費週期</label>
+              <select v-model="editingCoupon.billing_restriction" class="field-select">
+                <option :value="null">不限（月繳／年繳皆可）</option>
+                <option value="monthly">僅限月繳</option>
+                <option value="yearly">僅限年繳</option>
+              </select>
             </div>
           </div>
           <div class="form-group">
@@ -1078,6 +1101,8 @@ function openNewCoupon() {
     valid_until:    '',
     active:         true,
     note:           '',
+    scope:              'any',
+    billing_restriction: null,
   }
 }
 
@@ -1114,6 +1139,8 @@ async function saveCoupon() {
       valid_until:    c.valid_until    || null,
       active:         c.active,
       note:           c.note           || null,
+      scope:               c.scope               || 'any',
+      billing_restriction: c.billing_restriction  || null,
     }
     if (c._isNew) {
       payload.code = c.code.trim().toUpperCase()
@@ -1148,6 +1175,10 @@ async function toggleCoupon(c) {
 
 function couponTypeLabel(t) {
   return { free_trial: '免費試用', discount: '折扣碼', affiliate: '合作夥伴' }[t] ?? t
+}
+
+function couponScopeLabel(scope) {
+  return { single: '單一課程', global: '全球通行證' }[scope] ?? scope
 }
 function annModeLabel(m) {
   return { banner: 'Banner', modal: 'Modal', ticker: 'Ticker' }[m] ?? m
@@ -1565,6 +1596,7 @@ function formatStudyTime(sec) {
 .code-tag { background: #f0ebe5; border: 1px solid #e0d8d0; border-radius: 5px; padding: 2px 8px; font-size: .82rem; color: #5a3020; letter-spacing: .5px; }
 .tag-pill  { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: .75rem; font-weight: 600; }
 .tag-purple { background: #f3e5f5; color: #8e44ad; }
+.tag-neutral { background: #eef2f7; color: #5a6a7a; }
 .status-pill { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: .75rem; font-weight: 700; }
 .status-on  { background: #e8f8f0; color: #27ae60; }
 .status-off { background: #f0f0f0; color: #aaa; }
