@@ -155,6 +155,16 @@
                 </div>
               </div>
             </div>
+
+            <!-- 全部課程完成後，顯示開始測驗按鈕 -->
+            <div v-if="isModuleFullyDone(module)" class="module-quiz-cta">
+              <button
+                class="module-quiz-btn"
+                @click="emit('startQuiz', { module, moduleData: moduleDataCache[module.id] })"
+              >
+                📝 開始測驗
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -223,7 +233,7 @@ onMounted(async () => {
 const props = defineProps({
   currentLevel: { type: Object, required: true }  // { id: 1, name: '基礎入門', description: '...' }
 })
-const emit = defineEmits(['backToLevelSelector', 'changeLevel', 'startLesson'])
+const emit = defineEmits(['backToLevelSelector', 'changeLevel', 'startLesson', 'startQuiz'])
 
 const progressStore = useProgress()
 const drawerOpen = ref(false)
@@ -294,6 +304,11 @@ const isLessonCompleted = (moduleId, lessonId) => {
 const moduleDoneCount = (module) => {
   const lessons = moduleDataCache.value[module.id]?.lessons || []
   return lessons.filter(l => isLessonCompleted(module.id, l.id)).length
+}
+
+const isModuleFullyDone = (module) => {
+  const total = moduleDataCache.value[module.id]?.lessons?.length ?? module.lessons ?? 0
+  return total > 0 && moduleDoneCount(module) >= total
 }
 
 const completedLessonsCount = computed(() => {
@@ -741,6 +756,27 @@ function getModuleDuration(module) {
 }
 .tag-done { color: #27ae60; background: #d4edda; }
 .tag-start { color: var(--primary); background: var(--primary-light); }
+
+/* Module quiz CTA */
+.module-quiz-cta {
+  padding: 6px 14px 16px;
+}
+.module-quiz-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.module-quiz-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
 
 /* Drawer transition */
 .burg-slide-up-enter-active,
