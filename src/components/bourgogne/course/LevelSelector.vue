@@ -91,7 +91,7 @@ function updateLevelLocks() {
     return
   }
   levels.value[0].unlocked = true
-  if (levels.value[1]) levels.value[1].unlocked = progressStore.getCompletedLessons('beginner-m8').includes('lesson3')
+  if (levels.value[1]) levels.value[1].unlocked = progressStore.isExamPassed(1, 'beginner-m9')
   if (levels.value[2]) levels.value[2].unlocked = progressStore.isExamPassed(2, 'intermediate-m9')
   if (levels.value[3]) levels.value[3].unlocked = progressStore.getCompletedLessons('advanced-m15').includes('m15-l5')
 }

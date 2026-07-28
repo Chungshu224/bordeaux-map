@@ -1,0 +1,56 @@
+{
+  "moduleId": "beginner-m9",
+  "title": "L1 綜合評量",
+  "description": "整合入門課程 M1–M8 的全部學習內容，隨機抽取 20 題進行綜合測驗",
+  "lessons": [
+    {
+      "id": "m9-l1",
+      "title": "L1 入門 綜合評量",
+      "duration": "25分鐘",
+      "type": "exam",
+      "isFinalExam": true,
+      "quizBankPath": "/bourgogne/data/courses/level1/quiz-bank.json",
+      "finalExamTitle": "📋 L1 入門 綜合評量",
+      "slides": [
+        {
+          "type": "title",
+          "title": "L1 入門 綜合評量",
+          "subtitle": "布根地入門 - 知識總驗收",
+          "description": "整合 M1 至 M8 全部課程內容，測試您對布根地入門知識的掌握程度"
+        },
+        {
+          "type": "content",
+          "title": "📋 評量涵蓋範圍",
+          "content": "本次綜合評量涵蓋 L1 入門課程的所有模組：\n\n• M1 認識布根地\n• M2 風土與品種\n• M3 夜丘探索\n• M4 伯恩丘探索\n• M5 夏布利深入探索\n• M6 薄酒萊入門\n• M7 夏隆內丘與馬貢內\n• M8 年份與名莊\n\n題庫共 72 題，系統隨機抽取 20 題。通過標準：80 分以上。"
+        },
+        {
+          "type": "list",
+          "title": "🎯 考前重點提示",
+          "points": [
+            "地理與產區：六大產區由北到南——夏布利、夜丘、伯恩丘、夏隆丘、馬貢內、薄酒萊",
+            "分級制度：地區級 53%、村莊級 36%、一級園 10%、特級園僅 1%",
+            "核心品種：紅酒黑皮諾（Pinot Noir）、白酒夏多內（Chardonnay），薄酒萊用加美（Gamay）",
+            "夜丘：24 個特級園，Gevrey-Chambertin 擁有最多（9 個），DRC 獨佔 Romanée-Conti 與 La Tâche",
+            "伯恩丘：6 個白酒特級園（Montrachet 家族），Meursault 沒有特級園但一級園頂尖",
+            "夏布利：Kimmeridgian 牡蠣化石土壤，7 個特級園，經典搭配生蠔",
+            "薄酒萊：二氧化碳浸漬法、10 個特級村，Moulin-à-Vent 有「薄酒萊之王」美譽",
+            "酒標判讀：只寫村莊名為村莊級，加註 1er Cru 為一級園，只標園名則為特級園",
+            "⚠️ 本測驗結果 80 分以上可解鎖 Level 2 中級進階課程"
+          ]
+        }
+      ],
+      "quiz": {
+        "id": "beginner-m9-quiz",
+        "title": "L1 入門 綜合評量",
+        "passingScore": 80,
+        "questions": []
+      }
+    }
+  ],
+  "quiz": {
+    "id": "beginner-m9-final",
+    "title": "L1 入門 綜合評量",
+    "passingScore": 80,
+    "questions": []
+  }
+}

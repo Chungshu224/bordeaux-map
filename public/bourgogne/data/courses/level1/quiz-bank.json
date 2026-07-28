@@ -1,283 +1,942 @@
 {
-  "level": "level1",
-  "title": "Level 1 布根地葡萄酒入門 — 題庫",
+  "title": "布根地 Level 1 綜合評量題庫",
+  "level": "beginner",
   "questions": [
     {
+      "source": "M1",
       "type": "single",
-      "question": "布根地 AOC 金字塔最高等級是？",
+      "question": "布根地位於法國哪個方位？",
       "options": [
-        "A. Bourgogne",
-        "B. Village",
-        "C. Premier Cru",
-        "D. Grand Cru"
+        "西南部（波爾多附近）",
+        "東部（巴黎東南方約300公里）",
+        "南部（普羅旺斯地區）",
+        "北部（香檳區附近）"
+      ],
+      "correct": 1,
+      "explanation": "布根地位於法國東部，從巴黎東南方約300公里處開始，主要城市包括第戎（Dijon）和伯恩（Beaune）。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "布根地屬於什麼氣候類型？",
+      "options": [
+        "地中海型氣候",
+        "海洋性氣候",
+        "大陸性氣候",
+        "熱帶氣候"
+      ],
+      "correct": 2,
+      "explanation": "布根地屬於大陸性氣候，四季分明，冬季寒冷，夏季溫暖但不炎熱，這對黑皮諾和夏多內的生長非常理想。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "哪個修道會對布根地葡萄酒發展貢獻最大？",
+      "options": [
+        "本篤會（Benedictine）",
+        "西篤會（Cistercian）",
+        "方濟會（Franciscan）",
+        "道明會（Dominican）"
+      ],
+      "correct": 1,
+      "explanation": "西篤會修道士仔細研究不同地塊的差異，首創「風土」概念，並建立了嚴格的葡萄種植與釀酒標準，對布根地發展功不可沒。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "布根地的「Climats」在2015年被列為什麼？",
+      "options": [
+        "法國國家級古蹟",
+        "聯合國教科文組織世界遺產",
+        "歐盟保護產區",
+        "國際美食之都"
+      ],
+      "correct": 1,
+      "explanation": "2015年，布根地的 Climats（1,247個精確劃分的葡萄園地塊）被列為聯合國教科文組織世界遺產，彰顯其獨特的文化與歷史價值。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "布根地紅酒主要使用哪個葡萄品種？",
+      "options": [
+        "卡本內蘇維濃（Cabernet Sauvignon）",
+        "梅洛（Merlot）",
+        "黑皮諾（Pinot Noir）",
+        "希哈（Syrah）"
+      ],
+      "correct": 2,
+      "explanation": "布根地紅酒幾乎全部使用黑皮諾（Pinot Noir）單一品種釀造，這是布根地的特色之一，與波爾多的混釀傳統截然不同。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "夏多內（Chardonnay）在布根地主要用於釀造什麼？",
+      "options": [
+        "紅酒",
+        "白酒",
+        "粉紅酒",
+        "氣泡酒"
+      ],
+      "correct": 1,
+      "explanation": "夏多內是白葡萄品種，在布根地主要用於釀造白酒。布根地是夏多內的原鄉，這裡的夏多內白酒被視為世界標竿。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "布根地四級分級系統中，哪一級產量最少但品質最高？",
+      "options": [
+        "地區級（Régionale）",
+        "村莊級（Village）",
+        "一級園（Premier Cru）",
+        "特級園（Grand Cru）"
       ],
       "correct": 3,
-      "explanation": "Grand Cru（特級園）是布根地最高等級，全布根地只有 33 個，是世界頂級葡萄酒的代名詞。"
+      "explanation": "特級園（Grand Cru）僅佔布根地總產量的1%，是品質最高的等級。這些葡萄園擁有最優越的風土條件，釀造出的葡萄酒最具陳年潛力。"
     },
     {
+      "source": "M1",
       "type": "single",
-      "question": "布根地紅酒的核心品種是？",
+      "question": "在布根地酒標上，如果只標示「Chambertin」而沒有村莊名，這是什麼等級？",
       "options": [
-        "A. Cabernet Sauvignon",
-        "B. Pinot Noir",
-        "C. Syrah",
-        "D. Gamay"
+        "地區級",
+        "村莊級",
+        "一級園",
+        "特級園"
       ],
-      "correct": 1,
-      "explanation": "Pinot Noir 是布根地紅酒的唯一核心品種，以細膩的結構、高酸和陳年潛力聞名。"
+      "correct": 3,
+      "explanation": "特級園（Grand Cru）的酒標只會標示葡萄園名稱，不需要標示村莊名。如果是一級園，則會標示「村莊名 + 1er Cru + 葡萄園名」。"
     },
     {
+      "source": "M1",
       "type": "single",
-      "question": "布根地白酒的核心品種是？",
+      "question": "「Mis en bouteille au domaine」在酒標上代表什麼意思？",
       "options": [
-        "A. Sauvignon Blanc",
-        "B. Riesling",
-        "C. Chardonnay",
-        "D. Viognier"
+        "有機認證葡萄酒",
+        "老藤葡萄釀造",
+        "酒莊自行裝瓶",
+        "單一葡萄園"
       ],
       "correct": 2,
-      "explanation": "Chardonnay 是布根地白酒的代表，從夏布利的礦物感到 Meursault 的奶油感，展現出驚人的風土多樣性。"
+      "explanation": "「Mis en bouteille au domaine」表示這支酒是由酒莊自行裝瓶，通常意味著從葡萄種植到裝瓶都由同一酒莊掌控，品質較有保障。"
     },
     {
+      "source": "M1",
       "type": "single",
-      "question": "夏布利（Chablis）白酒最典型的風格特徵是？",
+      "question": "布根地從北到南有六大產區，以下哪個不是？",
       "options": [
-        "A. 奶油熱帶果香",
-        "B. 高酸礦物感帶火石氣息",
-        "C. 甜美低酸",
-        "D. 高酒精濃郁"
-      ],
-      "correct": 1,
-      "explanation": "夏布利是布根地最北、最涼爽的產區，加上 Kimmeridgian 土壤，Chardonnay 在此展現高酸度和獨特的礦物/火石感。"
-    },
-    {
-      "type": "single",
-      "question": "薄酒萊（Beaujolais）的核心品種是？",
-      "options": [
-        "A. Pinot Noir",
-        "B. Chardonnay",
-        "C. Gamay",
-        "D. Grenache"
+        "夏布利（Chablis）",
+        "夜丘（Côte de Nuits）",
+        "波亞克（Pauillac）",
+        "薄酒萊（Beaujolais）"
       ],
       "correct": 2,
-      "explanation": "Gamay 是薄酒萊的靈魂品種，採用碳酸浸泡法釀造，風格輕盈果香，是布根地地區最獨特的品種和風格。"
+      "explanation": "波亞克（Pauillac）是波爾多的產區，不屬於布根地。布根地六大產區由北到南為：夏布利、夜丘、伯恩丘、夏隆丘、馬貢內、薄酒萊。"
     },
     {
-      "type": "multiple",
-      "question": "金丘（Côte d'Or）分為哪兩個部分？（多選）",
-      "options": [
-        "A. 夜丘（Côte de Nuits）",
-        "B. 伯恩丘（Côte de Beaune）",
-        "C. 夏布利（Chablis）",
-        "D. 薄酒萊（Beaujolais）"
-      ],
-      "correct": [
-        0,
-        1
-      ],
-      "explanation": "金丘分為北部的夜丘（以頂級 Pinot Noir 著名）和南部的伯恩丘（頂級 Chardonnay 白酒集中地）。夏布利和薄酒萊是布根地的其他子區域，不屬於金丘。"
-    },
-    {
+      "source": "M2",
       "type": "single",
-      "question": "夜丘（Côte de Nuits）最著名的特級莊園是？",
+      "question": "布根地的四級分級體系中，哪一級佔總產量最多？",
       "options": [
-        "A. Montrachet",
-        "B. Chambertin",
-        "C. Pouilly-Fuissé",
-        "D. Chablis Grand Cru"
+        "地區級 Régionales",
+        "村莊級 Villages",
+        "一級園 Premiers Crus",
+        "特級園 Grands Crus"
+      ],
+      "correct": 0,
+      "explanation": "地區級佔布根地總產量的 53%，是最基礎也是產量最大的分級。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "特級園（Grand Cru）的酒標上通常會標示什麼？",
+      "options": [
+        "村莊名 + Grand Cru",
+        "只標園名 + Grand Cru",
+        "村莊名 + 園名 + Grand Cru",
+        "Bourgogne + Grand Cru"
       ],
       "correct": 1,
-      "explanation": "Chambertin 是夜丘最著名的紅酒特級園之一，拿破侖最愛的酒款，位於 Gevrey-Chambertin 村，以強勁的結構和長達數十年的陳年潛力著稱。"
+      "explanation": "特級園的酒標最簡潔，只標注園名和 Grand Cru，不標示村莊名，因為特級園本身就是獨立的 AOC。"
     },
     {
+      "source": "M2",
       "type": "single",
-      "question": "世界最著名的白酒特級園「Le Montrachet」位於伯恩丘哪兩個村莊之間？",
+      "question": "一級園（Premier Cru）允許的最大產量約為多少？",
       "options": [
-        "A. Meursault 到 Puligny-Montrachet",
-        "B. Puligny-Montrachet 和 Chassagne-Montrachet",
-        "C. Volnay 和 Pommard",
-        "D. Nuits-Saint-Georges 和 Vosne-Romanée"
+        "30–35 hl/ha",
+        "40–48 hl/ha",
+        "55–60 hl/ha",
+        "沒有限制"
       ],
       "correct": 1,
-      "explanation": "Le Montrachet 是一個 7 公頃的白酒特級園，橫跨 Puligny-Montrachet 和 Chassagne-Montrachet 兩村，被認為是世界最偉大的干型白酒。"
+      "explanation": "一級園的允許產量為紅酒約 40–48 hl/ha，比特級園（35–37）高，但比地區級（55–60）嚴格得多。"
     },
     {
+      "source": "M2",
       "type": "single",
-      "question": "「DRC」代表哪個傳奇酒莊？",
+      "question": "如果酒標上只標示「GEVREY-CHAMBERTIN」，這是什麼級別？",
       "options": [
-        "A. Domaine Raveneau Chablis",
-        "B. Domaine de la Romanée-Conti",
-        "C. Domaine Robert Collins",
-        "D. Domaine Rousseau Chambertin"
+        "地區級",
+        "村莊級",
+        "一級園",
+        "特級園"
       ],
       "correct": 1,
-      "explanation": "DRC（Domaine de la Romanée-Conti）是布根地最傳奇的酒莊，唯一完整擁有 Romanée-Conti 特級園（1.8公頃），出產的酒在拍賣會上是全球最貴葡萄酒之一。"
+      "explanation": "只標村莊名而無其他標示（如 Premier Cru 或 Grand Cru），即為村莊級葡萄酒。"
     },
     {
+      "source": "M2",
       "type": "single",
-      "question": "夏隆內丘（Côte Chalonnaise）在地理上位於哪裡？",
+      "question": "AOC 是哪個詞組的縮寫？",
       "options": [
-        "A. 金丘北部",
-        "B. 金丘南部延伸",
-        "C. 夏布利周邊",
-        "D. 薄酒萊北部"
+        "Appellation d'Origine Contrôlée",
+        "Association of Original Chateaux",
+        "Advanced Organic Certification",
+        "Agricultural Origin Classification"
+      ],
+      "correct": 0,
+      "explanation": "AOC 是 Appellation d'Origine Contrôlée（法定產區控制命名）的縮寫，是法國葡萄酒的品質保證制度。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "布根地共有多少個特級園（Grands Crus）？",
+      "options": [
+        "10 個",
+        "33 個",
+        "100 個",
+        "640 個"
       ],
       "correct": 1,
-      "explanation": "夏隆內丘緊跟在伯恩丘南方，是金丘的南部延伸帶，走同樣的 Pinot Noir 和 Chardonnay 路線，但知名度較低，因此性價比更高。"
+      "explanation": "布根地共有 33 個特級園，分布在夏布利（1個）、夜丘（24個）和伯恩丘（8個）。"
     },
     {
+      "source": "M2",
       "type": "single",
-      "question": "哪個修道院組織對布根地 Climat 系統的建立貢獻最大？",
+      "question": "一級園的酒標上一定會出現哪個詞？",
       "options": [
-        "A. 方濟各會（Franciscan）",
-        "B. 多明各會（Dominican）",
-        "C. 熙篤會（Cistercian）",
-        "D. 耶穌會（Jesuit）"
+        "Bourgogne",
+        "Village",
+        "Premier Cru 或 1er Cru",
+        "Monopole"
       ],
       "correct": 2,
-      "explanation": "熙篤會（Cistercians）修士在中世紀精心研究、記錄和分類布根地的每一塊葡萄園，建立了 Climat 系統的基礎，其代表成果是 Clos de Vougeot 的建立（12 世紀）。"
+      "explanation": "一級園酒標必定標示「Premier Cru」或其縮寫「1er Cru」，以區別於村莊級。"
     },
     {
+      "source": "M2",
       "type": "single",
-      "question": "法國大革命後布根地葡萄園最重大的變化是？",
+      "question": "以下哪個是地區級（Régionale）的酒標？",
       "options": [
-        "A. 品種從 Pinot 改為 Cabernet",
-        "B. 土地被沒收分割，形成今日碎片化所有制",
-        "C. 產區等級制度被廢除",
-        "D. 葡萄酒出口完全停止"
-      ],
-      "correct": 1,
-      "explanation": "法國大革命（1789年）將教會和貴族的葡萄園沒收拍賣，土地被分割給衆多買家，形成布根地今日極度碎片化的土地結構，同一個特級園可能有幾十到幾百個不同擁有者。"
-    },
-    {
-      "type": "multiple",
-      "question": "布根地的「Climat」體系在 2015 年獲得哪個國際組織認可？（多選）",
-      "options": [
-        "A. 被列入 UNESCO 世界文化遺產",
-        "B. 被 WTO 認定為地理標誌",
-        "C. 獲得歐盟農業遺産認定",
-        "D. 被 OIV 列為葡萄酒文化教科書範例"
-      ],
-      "correct": [
-        0
-      ],
-      "explanation": "布根地的 Climat（葡萄園地塊系統）於 2015 年被列入 UNESCO 世界文化遺產，被認定為「人與自然千年交互形成的傑出文化景觀」，是第一個以葡萄園地塊文化獲得此認定的地方。"
-    },
-    {
-      "type": "single",
-      "question": "Négociant 在布根地的角色是？",
-      "options": [
-        "A. 政府監管員",
-        "B. 向農莊收購葡萄或原酒並釀造銷售的酒商",
-        "C. 設計酒標的藝術家",
-        "D. 布根地酒在亞洲的代理商"
-      ],
-      "correct": 1,
-      "explanation": "Négociant（酒商）是布根地的重要角色，向多個小農莊購買葡萄、葡萄汁或原酒，在自己的酒窖中完成培養、調配和裝瓶。Bouchard、Louis Jadot、Joseph Drouhin 等都是著名的 Négociant。"
-    },
-    {
-      "type": "single",
-      "question": "布根地白酒（Chardonnay）在橡木桶陳年後出現的典型香氣是？",
-      "options": [
-        "A. 青草和柑橘（不銹鋼桶風格）",
-        "B. 奶油、烤麵包和榛子（橡木桶熟成）",
-        "C. 煙燻和礦物感單一風格",
-        "D. 熱帶水果（炎熱氣候風格）"
-      ],
-      "correct": 1,
-      "explanation": "布根地 Chardonnay 經橡木桶陳年（尤其是 Meursault 風格），通常發展出奶油、牛油、烤榛果、蜂蜜和烤麵包香氣，這是以金丘為中心的布根地白酒最典型的風格。"
-    },
-    {
-      "type": "single",
-      "question": "薄酒萊碳酸浸泡法（Carbonic Maceration）的最主要結果是？",
-      "options": [
-        "A. 高單寧高色澤",
-        "B. 低單寧果香豐富易飲",
-        "C. 增加甜度",
-        "D. 讓酒更耐陳年"
-      ],
-      "correct": 1,
-      "explanation": "碳酸浸泡法通過胞内發酵減少了單寧萃取，保留大量鮮嫩果香（草莓、覆盆子），造就薄酒萊標誌的輕柔易飲風格。但這也意味着酒通常不適合長期陳年。"
-    },
-    {
-      "type": "single",
-      "question": "酒標只寫「Gevrey-Chambertin」不帶任何葡萄園名是什麼等級？",
-      "options": [
-        "A. Grand Cru",
-        "B. Premier Cru",
-        "C. Village AOC",
-        "D. 大區 Bourgogne"
+        "Chambertin",
+        "Gevrey-Chambertin",
+        "Bourgogne Pinot Noir",
+        "Meursault 1er Cru"
       ],
       "correct": 2,
-      "explanation": "只有村莊名（如 Gevrey-Chambertin）而無葡萄園名，是村莊等級（Village AOC），比大區 Bourgogne 高，比一級園（1er Cru）低，品質適中，性價比不錯。"
+      "explanation": "只要看到「Bourgogne」開頭的標示，就是地區級葡萄酒。"
     },
     {
+      "source": "M2",
       "type": "single",
-      "question": "「Chambolle-Musigny Les Amoureuses 1er Cru」中的「Les Amoureuses」是？",
+      "question": "特級園（Grand Cru）大約佔布根地總產量的多少？",
       "options": [
-        "A. 釀酒師的名字",
-        "B. 一個一級園 Climat（地塊）的名稱",
-        "C. 葡萄品種名",
-        "D. 裝瓶年份"
+        "1%",
+        "10%",
+        "36%",
+        "53%"
+      ],
+      "correct": 0,
+      "explanation": "特級園只佔布根地總產量的 1%，是最稀有珍貴的分級。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "村莊級葡萄酒的典型價格範圍通常為？",
+      "options": [
+        "€10–20",
+        "€25–80",
+        "€100–500",
+        "€1000 以上"
       ],
       "correct": 1,
-      "explanation": "Les Amoureuses（愛人們）是 Chambolle-Musigny 村最著名的一級園 Climat 名稱，以細膩優雅的 Pinot Noir 著稱，是伯恩丘最受追捧的一級園之一，品質接近鄰村的 Musigny 特級園。"
+      "explanation": "村莊級葡萄酒的典型價格範圍為 €25–80，是學習布根地風土的性價比之選。"
     },
     {
-      "type": "multiple",
-      "question": "以下關於 Grand Cru 酒標的說法哪些是正確的？（多選）",
-      "options": [
-        "A. 通常只寫特級園名，不需要村莊名",
-        "B. Grand Cru 是自成一個 AOC 的等級",
-        "C. Grand Cru 必須在酒標上寫出「Grand Cru」",
-        "D. Grand Cru 表示這瓶酒的售價"
-      ],
-      "correct": [
-        0,
-        1,
-        2
-      ],
-      "explanation": "Grand Cru 自成一個 AOC（如「Chambertin」就是一個 AOC），因此不需要在酒標上另外寫村莊名；同時通常也會在酒標的其他位置標注「Grand Cru」字樣以確認等級。售價不在酒標上。"
-    },
-    {
+      "source": "M3",
       "type": "single",
-      "question": "布根地葡萄酒最適合搭配哪種布根地傳統料理？",
+      "question": "夜丘共有多少個特級園？",
       "options": [
-        "A. 海鮮壽司",
-        "B. 紅酒燉牛肉（Boeuf Bourguignon）",
-        "C. 義大利海鮮燉飯",
-        "D. 日式天婦羅"
+        "18個",
+        "24個",
+        "30個",
+        "33個"
       ],
       "correct": 1,
-      "explanation": "紅酒燉牛肉（Boeuf Bourguignon）是布根地最著名的傳統料理，就用當地 Pinot Noir 燉煮，與布根地紅酒是天然的完美搭配，充分體現「當地食物配當地酒」的原則。"
+      "explanation": "夜丘擁有24個特級園，佔布根地33個特級園的絕大部分。"
     },
     {
+      "source": "M3",
       "type": "single",
-      "question": "馬貢內（Mâconnais）最著名的 Chardonnay AOC 是？",
+      "question": "哪個村莊擁有最多特級園（9個）？",
       "options": [
-        "A. Givry",
-        "B. Montagny",
-        "C. Pouilly-Fuissé",
-        "D. Rully"
+        "Vosne-Romanée",
+        "Gevrey-Chambertin",
+        "Morey-Saint-Denis",
+        "Chambolle-Musigny"
+      ],
+      "correct": 1,
+      "explanation": "Gevrey-Chambertin 擁有9個特級園，是夜丘特級園最多的村莊。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Romanée-Conti 特級園的面積是多少？",
+      "options": [
+        "0.85公頃",
+        "1.81公頃",
+        "6.06公頃",
+        "8.03公頃"
+      ],
+      "correct": 1,
+      "explanation": "Romanée-Conti 僅1.81公頃，是全球最貴的葡萄酒產地之一。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "哪個村莊以「女性化」風格聞名？",
+      "options": [
+        "Gevrey-Chambertin",
+        "Chambolle-Musigny",
+        "Nuits-Saint-Georges",
+        "Fixin"
+      ],
+      "correct": 1,
+      "explanation": "Chambolle-Musigny 以絲綢般質地、花香四溢、精緻細膩的「女性化」風格著稱。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "布根地最大的特級園是哪一個？",
+      "options": [
+        "Chambertin",
+        "Clos de Vougeot",
+        "Échézeaux",
+        "Charmes-Chambertin"
+      ],
+      "correct": 1,
+      "explanation": "Clos de Vougeot 是布根地最大的特級園，面積達50.6公頃。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Nuits-Saint-Georges 有多少個特級園？",
+      "options": [
+        "0個",
+        "2個",
+        "5個",
+        "8個"
+      ],
+      "correct": 0,
+      "explanation": "Nuits-Saint-Georges 沒有特級園，但擁有41個一級園，品質極高。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "哪個村莊是夜丘唯一可釀造紅、白、粉紅三色酒的？",
+      "options": [
+        "Marsannay",
+        "Fixin",
+        "Vougeot",
+        "Morey-Saint-Denis"
+      ],
+      "correct": 0,
+      "explanation": "Marsannay 是夜丘唯一可以釀造紅、白、粉紅三色酒的村莊。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "DRC（Domaine de la Romanée-Conti）獨佔哪兩個特級園？",
+      "options": [
+        "Romanée-Conti & Richebourg",
+        "Romanée-Conti & La Tâche",
+        "La Tâche & Richebourg",
+        "Romanée-Saint-Vivant & La Romanée"
+      ],
+      "correct": 1,
+      "explanation": "DRC 獨佔 Romanée-Conti（1.81公頃）和 La Tâche（6.06公頃）兩個特級園。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Morey-Saint-Denis 擁有多少個特級園？",
+      "options": [
+        "2個",
+        "3個",
+        "5個",
+        "7個"
       ],
       "correct": 2,
-      "explanation": "Pouilly-Fuissé 是馬貢內最頂尖的 Chardonnay AOC，近年更獲得正式的一級園（Premier Cru）認定，品質大幅提升，定價仍比金丘 Chardonnay 親民許多。"
+      "explanation": "Morey-Saint-Denis 擁有5個特級園：Clos de la Roche、Clos Saint-Denis、Clos des Lambrays、Clos de Tart 和 Bonnes-Mares（部分）。"
     },
     {
-      "type": "multiple",
-      "question": "以下哪些描述正確說明了布根地葡萄酒的特點？（多選）",
+      "source": "M3",
+      "type": "single",
+      "question": "夜丘的主要土壤類型是？",
       "options": [
-        "A. 強調風土差異，同一地塊不同莊主出產品質可能不同",
-        "B. 土地碎片化，同一個特級園可能有幾十個擁有者",
-        "C. 布根地全部使用用 Cabernet Sauvignon 釀紅酒",
-        "D. 是全球最受收藏家追捧的葡萄酒產區之一"
+        "花崗岩",
+        "侏羅紀石灰岩與泥灰岩",
+        "火山岩",
+        "沙質土"
       ],
-      "correct": [
-        0,
-        1,
-        3
+      "correct": 1,
+      "explanation": "夜丘的主要土壤是侏羅紀石灰岩與泥灰岩，這種土壤造就了黑皮諾的優雅風格。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "伯恩丘共有多少個白酒特級園？",
+      "options": [
+        "4個",
+        "6個",
+        "8個",
+        "10個"
       ],
-      "explanation": "布根地以風土差異和碎片化土地所有制著稱：同一個 Clos de Vougeot 有 80 多個擁有者，品質差異極大；布根地紅酒全用 Pinot Noir，不是 Cabernet。布根地是全球收藏家最熱烈追逐的產區之一。"
+      "correct": 1,
+      "explanation": "伯恩丘有6個白酒特級園，全部是夏多內：Montrachet、Chevalier-Montrachet、Bâtard-Montrachet、Bienvenues-Bâtard-Montrachet、Criots-Bâtard-Montrachet、Corton-Charlemagne。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "哪個村莊被稱為「白酒之王」但沒有特級園？",
+      "options": [
+        "Puligny-Montrachet",
+        "Chassagne-Montrachet",
+        "Meursault",
+        "Beaune"
+      ],
+      "correct": 2,
+      "explanation": "Meursault 是伯恩丘最大的白酒村莊，雖然沒有特級園，但一級園品質極高。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Montrachet 特級園的面積是多少？",
+      "options": [
+        "3.7公頃",
+        "7.5公頃",
+        "11.9公頃",
+        "15.4公頃"
+      ],
+      "correct": 1,
+      "explanation": "Montrachet 特級園面積7.5公頃，橫跨 Puligny-Montrachet 和 Chassagne-Montrachet 兩村。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "伯恩丘最強勁的紅酒產自哪個村莊？",
+      "options": [
+        "Beaune",
+        "Pommard",
+        "Volnay",
+        "Aloxe-Corton"
+      ],
+      "correct": 1,
+      "explanation": "Pommard 以單寧厚實、結構強勁聞名，是伯恩丘最強勁的紅酒。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Volnay 的風格特徵是？",
+      "options": [
+        "單寧厚實、強勁有力",
+        "絲滑細膩、花香四溢",
+        "礦物感強、酸度高",
+        "奶油榛果、圓潤飽滿"
+      ],
+      "correct": 1,
+      "explanation": "Volnay 以絲滑細膩、花香四溢、優雅精緻聞名，被稱為「紅酒中的女性」。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "哪個村莊擁有42個一級園，是伯恩丘的首府？",
+      "options": [
+        "Meursault",
+        "Beaune",
+        "Pommard",
+        "Volnay"
+      ],
+      "correct": 1,
+      "explanation": "Beaune 是伯恩丘的首府，擁有42個一級園，村莊級酒性價比極高。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Chassagne-Montrachet 的產量組成是？",
+      "options": [
+        "100%白酒",
+        "80%白酒 20%紅酒",
+        "50%白酒 50%紅酒",
+        "30%白酒 70%紅酒"
+      ],
+      "correct": 2,
+      "explanation": "Chassagne-Montrachet 紅白兼產，產量約各佔50%。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Meursault 最著名的一級園是？",
+      "options": [
+        "Charmes",
+        "Genevrières",
+        "Perrières",
+        "Poruzots"
+      ],
+      "correct": 2,
+      "explanation": "Perrières 是 Meursault 品質最高的一級園，最接近特級園水準，礦物感強。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "伯恩丘的主要土壤類型與夜丘相比有何不同？",
+      "options": [
+        "完全相同",
+        "泥灰岩比例較高",
+        "花崗岩為主",
+        "火山岩較多"
+      ],
+      "correct": 1,
+      "explanation": "伯恩丘的土壤以石灰岩為主，但泥灰岩比例比夜丘高，更適合夏多內。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "全球最貴的夏多內白酒產自哪個特級園？",
+      "options": [
+        "Chevalier-Montrachet",
+        "Montrachet",
+        "Corton-Charlemagne",
+        "Bâtard-Montrachet"
+      ],
+      "correct": 1,
+      "explanation": "Montrachet 是全球最貴的夏多內產地，均價超過€500，頂級酒莊可達€2000以上。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "夏布利的獨特土壤 Kimmeridgian 主要富含什麼？",
+      "options": [
+        "火山灰",
+        "小牡蠣化石",
+        "鐵礦",
+        "花崗岩"
+      ],
+      "correct": 1,
+      "explanation": "Kimmeridgian 泥灰岩富含1.5億年前的小牡蠣化石（Exogyra virgula），賦予夏布利獨特的礦物感和牡蠣貝殼味。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "夏布利共有多少個特級園（Grand Cru）？",
+      "options": [
+        "1個",
+        "7個",
+        "12個",
+        "24個"
+      ],
+      "correct": 1,
+      "explanation": "夏布利有7個特級園：Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchot，全部位於 Serein 河右岸。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "哪個是夏布利最大、最著名的特級園？",
+      "options": [
+        "Preuses",
+        "Vaudésir",
+        "Les Clos",
+        "Grenouilles"
+      ],
+      "correct": 2,
+      "explanation": "Les Clos 是夏布利最大的特級園（26.9公頃），也被公認為品質最優秀，可陳年30年以上。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "夏布利四級分級中，佔產量最大比例的是？",
+      "options": [
+        "Petit Chablis",
+        "Chablis",
+        "Premier Cru",
+        "Grand Cru"
+      ],
+      "correct": 1,
+      "explanation": "Chablis（夏布利）村莊級佔總產量的60%，是最基礎也是產量最大的級別。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "夏布利最經典的餐酒搭配是？",
+      "options": [
+        "牛排",
+        "生蠔",
+        "巧克力",
+        "辣椒"
+      ],
+      "correct": 1,
+      "explanation": "夏布利與生蠔是經典搭配，礦物感與海洋風味完美匹配，高酸度平衡蠔的鮮味。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "品鑑夏布利的理想溫度是？",
+      "options": [
+        "4-6°C",
+        "8-10°C",
+        "14-16°C",
+        "18-20°C"
+      ],
+      "correct": 1,
+      "explanation": "夏布利應在8-10°C品飲，過冷會抑制香氣，陳年老酒可稍高至12°C。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "夏布利一級園（Premier Cru）約有多少個氣候區？",
+      "options": [
+        "10個",
+        "20個",
+        "40個",
+        "100個"
+      ],
+      "correct": 2,
+      "explanation": "夏布利有約40個一級園，其中最著名的包括 Montée de Tonnerre、Fourchaume、Vaillons 等。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "哪個不是夏布利傳統不鏽鋼桶派的代表酒莊？",
+      "options": [
+        "Dauvissat",
+        "Raveneau",
+        "William Fèvre",
+        "Moreau"
+      ],
+      "correct": 2,
+      "explanation": "William Fèvre 屬於橡木桶派（現代派），Dauvissat 和 Raveneau 是傳統不鏽鋼桶派的代表。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "夏布利春季最大的自然威脅是？",
+      "options": [
+        "乾旱",
+        "霜凍",
+        "颱風",
+        "冰雹"
+      ],
+      "correct": 1,
+      "explanation": "春季霜凍是夏布利最大的威脅，4-5月的霜凍可能摧毀當年大部分產量，酒農使用暖爐、灑水等方式防霜。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "La Moutonne 是一個橫跨哪兩個特級園的獨佔園？",
+      "options": [
+        "Les Clos 和 Valmur",
+        "Preuses 和 Vaudésir",
+        "Bougros 和 Blanchot",
+        "Grenouilles 和 Valmur"
+      ],
+      "correct": 1,
+      "explanation": "La Moutonne（2.35公頃）橫跨 Preuses 和 Vaudésir 兩個特級園，由 Domaine Long-Depaquit 獨家擁有。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "薄酒萊主要種植哪個葡萄品種？",
+      "options": [
+        "黑皮諾 Pinot Noir",
+        "加美 Gamay",
+        "希哈 Syrah",
+        "梅洛 Merlot"
+      ],
+      "correct": 1,
+      "explanation": "薄酒萊100%種植加美（Gamay）葡萄，這是與布根地其他產區最大的區別。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "薄酒萊最獨特的釀造技術是什麼？",
+      "options": [
+        "冷浸皮",
+        "二氧化碳浸漬法",
+        "蘋果酸乳酸發酵",
+        "橡木桶陳年"
+      ],
+      "correct": 1,
+      "explanation": "二氧化碳浸漬法（Carbonic Maceration）是薄酒萊的標誌性釀造技術，整串葡萄在無氧環境下發酵。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "薄酒萊共有多少個特級村（Crus）？",
+      "options": [
+        "5個",
+        "7個",
+        "10個",
+        "12個"
+      ],
+      "correct": 2,
+      "explanation": "薄酒萊有10個特級村，包括 Moulin-à-Vent、Morgon、Fleurie 等。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "哪個特級村被稱為「薄酒萊之王」？",
+      "options": [
+        "Fleurie",
+        "Morgon",
+        "Moulin-à-Vent",
+        "Brouilly"
+      ],
+      "correct": 2,
+      "explanation": "Moulin-à-Vent 被稱為「薄酒萊之王」，最強勁複雜，可陳年10-20年，陳年後常被誤認為夜丘黑皮諾。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "薄酒萊新酒（Beaujolais Nouveau）每年什麼時候上市？",
+      "options": [
+        "9月第一個週六",
+        "10月第三個週四",
+        "11月第三個週四",
+        "12月第一個週六"
+      ],
+      "correct": 2,
+      "explanation": "薄酒萊新酒每年11月第三個週四上市，這是法國的葡萄酒節慶日。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "哪個特級村因其優雅芬芳的風格被稱為「薄酒萊女王」？",
+      "options": [
+        "Fleurie",
+        "Chiroubles",
+        "Saint-Amour",
+        "Régnié"
+      ],
+      "correct": 0,
+      "explanation": "Fleurie 被稱為「薄酒萊女王」，以紫羅蘭、玫瑰花香和絲滑質地著稱，是最優雅芬芳的特級村。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "薄酒萊十大特級村主要位於什麼土壤上？",
+      "options": [
+        "石灰岩",
+        "花崗岩",
+        "黏土",
+        "沙土"
+      ],
+      "correct": 1,
+      "explanation": "十大特級村都位於北部的花崗岩土壤上，這與金丘的石灰岩土壤完全不同。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "品鑑薄酒萊的理想溫度是？",
+      "options": [
+        "8-10°C",
+        "12-14°C",
+        "16-18°C",
+        "18-20°C"
+      ],
+      "correct": 1,
+      "explanation": "薄酒萊應微冷飲用（12-14°C），夏天可降至10°C。常溫飲用會顯得鬆散無趣。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "哪個特級村是唯一位於火山岩土壤上的？",
+      "options": [
+        "Morgon",
+        "Côte de Brouilly",
+        "Moulin-à-Vent",
+        "Chénas"
+      ],
+      "correct": 1,
+      "explanation": "Côte de Brouilly 位於 Mont Brouilly 山坡上，是唯一有火山岩土壤的特級村，賦予酒款獨特的礦物感。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "薄酒萊最適合搭配哪種料理？",
+      "options": [
+        "厚重紅肉",
+        "辣味川菜",
+        "亞洲料理",
+        "甜點"
+      ],
+      "correct": 2,
+      "explanation": "薄酒萊的果味、低單寧和適中酒體，使其成為亞洲料理（中式、日式）的絕配，尤其適合宮保雞丁、糖醋排骨等。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "夏隆內丘最大的村莊是？",
+      "options": [
+        "Bouzeron",
+        "Rully",
+        "Mercurey",
+        "Givry"
+      ],
+      "correct": 2,
+      "explanation": "Mercurey 是夏隆內丘最大的村莊，以紅酒為主，產量占整個產區約60%。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "Bouzeron 產區的特色是？",
+      "options": [
+        "只產黑皮諾",
+        "只產夏多內",
+        "只產 Aligoté",
+        "只產氣泡酒"
+      ],
+      "correct": 2,
+      "explanation": "Bouzeron 是布根地唯一只產 Aligoté 白酒的村莊級AOC。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "馬貢內最頂級的產區是？",
+      "options": [
+        "Mâcon-Villages",
+        "Pouilly-Fuissé",
+        "Saint-Véran",
+        "Viré-Clessé"
+      ],
+      "correct": 1,
+      "explanation": "Pouilly-Fuissé 是馬貢內品質最高的產區，礦物質感強，陳年潛力佳。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "夏隆內丘相比金丘的價格差異約為？",
+      "options": [
+        "10-20%",
+        "30-50%",
+        "60-80%",
+        "幾乎相同"
+      ],
+      "correct": 1,
+      "explanation": "夏隆內丘的酒比金丘便宜30-50%，是性價比之選。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "Montagny 產區的特色是？",
+      "options": [
+        "只產紅酒",
+        "只產白酒",
+        "紅白兼產",
+        "產氣泡酒"
+      ],
+      "correct": 1,
+      "explanation": "Montagny 是夏隆內丘唯一只產白酒的村莊，以夏多內為主。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "以下哪個年份被認為是近期的世紀年份？",
+      "options": [
+        "2017",
+        "2015",
+        "2021",
+        "2019"
+      ],
+      "correct": 1,
+      "explanation": "2015 年是公認的世紀年份，紅白酒都表現卓越，陳年潛力佳。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "Domaine de la Romanée-Conti (DRC) 位於哪個產區？",
+      "options": [
+        "伯恩丘",
+        "夜丘",
+        "夏布利",
+        "馬貢內"
+      ],
+      "correct": 1,
+      "explanation": "DRC 位於夜丘的 Vosne-Romanée，擁有多個頂級特級園。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "Domaine Leflaive 以哪個村莊的白酒聞名？",
+      "options": [
+        "Meursault",
+        "Chassagne-Montrachet",
+        "Puligny-Montrachet",
+        "Corton"
+      ],
+      "correct": 2,
+      "explanation": "Domaine Leflaive 是 Puligny-Montrachet 白酒的頂級生產者。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "夏布利的標竿酒莊是？",
+      "options": [
+        "Domaine Raveneau",
+        "Domaine Coche-Dury",
+        "Domaine Leroy",
+        "Domaine Dujac"
+      ],
+      "correct": 0,
+      "explanation": "Domaine Raveneau 是夏布利特級園的標竿，以純淨礦物質風格著稱。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "布根地特級園紅酒的適飲期通常是？",
+      "options": [
+        "1-5年",
+        "3-8年",
+        "10-30年以上",
+        "50年以上"
+      ],
+      "correct": 2,
+      "explanation": "特級園紅酒結構紮實，陳年潛力佳，通常需要10-30年以上才能達到最佳狀態。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "2022 年份的特色是？",
+      "options": [
+        "霜害嚴重",
+        "炎熱乾燥，白酒出色",
+        "產量極高",
+        "品質平庸"
+      ],
+      "correct": 1,
+      "explanation": "2022 年炎熱乾燥，葡萄集中度高，白酒尤其表現出色。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "酒窖的理想溫度是？",
+      "options": [
+        "8-10°C",
+        "12-14°C",
+        "16-18°C",
+        "20-22°C"
+      ],
+      "correct": 1,
+      "explanation": "12-14°C 是理想的酒窖恆溫，能讓葡萄酒緩慢而穩定地陳年。"
     }
   ]
 }
