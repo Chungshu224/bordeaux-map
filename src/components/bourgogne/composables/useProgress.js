@@ -109,6 +109,17 @@ export function useProgress() {
   }
 
   /**
+   * 檢查指定模組的綜合評量（isFinalExam 課程）是否已通過
+   * @param {number} levelId - 階段 ID
+   * @param {string} moduleId - 模組 ID（綜合評量所在的模組）
+   * @returns {boolean} 是否已通過
+   */
+  const isExamPassed = (levelId, moduleId) => {
+    const progress = getLevelProgress(levelId)
+    return !!progress[moduleId]?.passed
+  }
+
+  /**
    * 檢查階段是否完成
    * @param {number} levelId - 階段 ID
    * @param {number} totalModules - 該階段總模組數
@@ -141,6 +152,7 @@ export function useProgress() {
     getLevelProgress,
     saveModuleProgress,
     isLevelComplete,
+    isExamPassed,
     getLevelProgressPercent,
     
     // 課程完成狀態

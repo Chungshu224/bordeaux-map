@@ -29,6 +29,7 @@
         :totalLessons="moduleData.lessons.length"
         @close="backToOverview"
         @complete="completeLesson"
+        @exam-result="handleExamResult"
       />
 
       <!-- 模組測驗 -->
@@ -333,6 +334,19 @@ const completeLesson = (lessonId) => {
   }
 
   viewMode.value = 'overview'
+}
+
+// 綜合評量（isFinalExam 課程）結果 — 記錄是否通過，供 Level 解鎖判斷使用
+const handleExamResult = ({ lessonId, passed, scorePct }) => {
+  const levelId = selectedLevel.value?.id
+  const moduleId = selectedModule.value?.id
+  if (!levelId || !moduleId) return
+  progressStore.saveModuleProgress(levelId, moduleId, {
+    completed: true,
+    quizScore: scorePct,
+    passed,
+    completedAt: new Date().toISOString()
+  })
 }
 
 // 載入模組測驗（從 Level 題庫隨機抽題）

@@ -51,7 +51,7 @@
     <div class="slide-container">
       <div ref="slideRef" class="slide" :key="currentSlide">
         <div class="slide-scroll">
-          <component :is="getCurrentSlideComponent" :slide="slides[currentSlide]" />
+          <component :is="getCurrentSlideComponent" :slide="slides[currentSlide]" @exam-result="handleExamResult" />
         </div>
       </div>
     </div>
@@ -97,7 +97,7 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['complete', 'close'])
+const emit = defineEmits(['complete', 'close', 'examResult'])
 const { t } = useI18n()
 
 const currentSlide = ref(0)
@@ -1052,6 +1052,10 @@ const goToSlide = (index) => {
 
 const completeLesson = () => {
   emit('complete', props.lesson.id)
+}
+
+const handleExamResult = (result) => {
+  emit('examResult', { lessonId: props.lesson.id, ...result })
 }
 
 // 鍵盤導航

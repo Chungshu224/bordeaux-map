@@ -111,6 +111,7 @@ const { t } = useI18n()
 const props = defineProps({
   slide: { type: Object, required: true }
 })
+const emit = defineEmits(['examResult'])
 
 const questions = computed(() => props.slide.questions || [])
 
@@ -195,6 +196,14 @@ function nextQuestion () {
     selectedMulti.value = []
   } else {
     showResult.value = true
+    if (props.slide.isFinalExam) {
+      emit('examResult', {
+        passed: passed.value,
+        score: score.value,
+        total: questions.value.length,
+        scorePct: scorePct.value
+      })
+    }
   }
 }
 
