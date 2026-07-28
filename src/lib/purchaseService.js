@@ -18,7 +18,7 @@ export const COURSES = {
   },
   bourgogne: {
     id: 'bourgogne',
-    name: '勃根地葡萄酒',
+    name: '布根地葡萄酒',
     nameEn: 'Bourgogne Wine',
     flag: '🍇',
     region: 'France · Bourgogne',

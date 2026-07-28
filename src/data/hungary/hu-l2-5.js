@@ -76,7 +76,7 @@ export const lessonContent = [
     ],
     quiz: {
       question: '盲品一杯具有極高酸度、煙燻礦石感和白花香氣的中等酒體白酒，最可能是哪個品種？',
-      options: ['Chardonnay（勃根地）', 'Furmint（托卡伊）', 'Riesling（摩澤爾）', 'Sauvignon Blanc（盧瓦爾）'],
+      options: ['Chardonnay（布根地）', 'Furmint（托卡伊）', 'Riesling（摩澤爾）', 'Sauvignon Blanc（盧瓦爾）'],
       answer: 1,
       explanation: 'Furmint 的辨識組合：(1) 極高酸度（比 Riesling 更有衝擊感）；(2) 火山礦石感（而非 Riesling 的板岩礦石或 Sauvignon Blanc 的燧石感）；(3) 白花而非草本；(4) 微微蜂蠟感。Chardonnay 酸度較低，Riesling 有汽油香但礦石感類型不同。'
     }

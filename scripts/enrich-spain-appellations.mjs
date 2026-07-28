@@ -123,7 +123,7 @@ const PROVINCES = {
 // ── 優化描述表 (僅補充或改寫說明較薄的產區)
 const DESCRIPTIONS = {
   'Vino de Rioja': '西班牙唯二 DOCa 認證產區，以橡木桶陳年 Tempranillo 聞名。依陳年時間分為 Joven、Crianza、Reserva、Gran Reserva，各有不同風味層次。產區橫跨拉里奧哈、阿拉瓦和納瓦拉，是西班牙最具代表性的紅酒產區。',
-  'Priorato': '加泰隆尼亞頂級 DOCa 產區，以獨特的板岩土壤 llicorella 著稱，Garnacha 老藤種植於陡峭山坡，孕育極度濃郁、礦物感強勁的紅酒，被譽為西班牙勃根地。',
+  'Priorato': '加泰隆尼亞頂級 DOCa 產區，以獨特的板岩土壤 llicorella 著稱，Garnacha 老藤種植於陡峭山坡，孕育極度濃郁、礦物感強勁的紅酒，被譽為西班牙布根地。',
   'Ribera del Duero': '西班牙最受矚目的紅酒重鎮，海拔 700–1000 公尺的大陸性氣候，以 Tinto Fino（Tempranillo）著稱，頂級酒莊如 Vega Sicilia、Pingus 聞名全球。日夜溫差大，賦予葡萄優異的酸度與結構。',
   'Rías Baixas': '加利西亞旗艦白酒產區，多雨潮濕的大西洋氣候孕育西班牙最優質的 Albariño，散發鮮活的柑橘、桃子花香與清脆礦物感，是全球最受矚目的白酒之一。',
   'Penedés': '巴塞隆納南方多元產區，是卡瓦氣泡酒的發源地。紅白酒均有傑出表現，Torres 家族在此深耕百年；山地副區種植 Riesling、Chardonnay 等國際品種，風味多樣。',

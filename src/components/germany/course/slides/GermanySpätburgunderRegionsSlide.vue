@@ -46,7 +46,7 @@
         <div class="info-row profile-row"><strong>🎯 風格特色：</strong>{{ active.profile }}</div>
         <div class="info-row vineyard-row"><strong>🏆 頂級葡萄園：</strong>{{ active.vineyards }}</div>
         <div class="info-row estate-row"><strong>🏛️ 代表酒莊：</strong>{{ active.estates }}</div>
-        <div class="info-row comparison-row"><strong>🥂 與勃根地相比：</strong>{{ active.vsBourgogne }}</div>
+        <div class="info-row comparison-row"><strong>🥂 與布根地相比：</strong>{{ active.vsBourgogne }}</div>
       </div>
     </div>
 
@@ -107,7 +107,7 @@
 
     <div class="key-insight">
       <h4>💡 如何在盲品中辨識德國 Spätburgunder？</h4>
-      <p>德國 Spätburgunder（尤其是 Ahr 和 Baden）比勃根地紅酒通常<strong>顏色更淺</strong>（因涼爽氣候），但<strong>香氣更直接</strong>（鮮紅莓果、紫羅蘭）。Ahr 款式帶有明顯的<strong>火山板岩礦物感</strong>；Baden 則更<strong>豐滿圓潤</strong>（接近勃根地 Côte de Nuits）。注意<strong>高酸低單寧</strong>是德國 Spätburgunder 的共同特徵，德語標籤上的「GG（Grosses Gewächs）」= 德國頂級 Spätburgunder 的認證符號。</p>
+      <p>德國 Spätburgunder（尤其是 Ahr 和 Baden）比布根地紅酒通常<strong>顏色更淺</strong>（因涼爽氣候），但<strong>香氣更直接</strong>（鮮紅莓果、紫羅蘭）。Ahr 款式帶有明顯的<strong>火山板岩礦物感</strong>；Baden 則更<strong>豐滿圓潤</strong>（接近布根地 Côte de Nuits）。注意<strong>高酸低單寧</strong>是德國 Spätburgunder 的共同特徵，德語標籤上的「GG（Grosses Gewächs）」= 德國頂級 Spätburgunder 的認證符號。</p>
     </div>
   </div>
 </template>
@@ -137,7 +137,7 @@ const regions = [
     pct: '約 67% 全為 Spätburgunder',
     abv: '12.5–14%',
     winemaking: '整串發酵、舊桶熟成，強調純淨',
-    profile: '顏色如透明紅寶石；鮮紅莓果（草莓、覆盆子）+ 紫羅蘭 + 火山板岩礦物感；單寧細緻如絲，酸度鮮明；最頂級的可與勃根地 Premier Cru 抗衡。',
+    profile: '顏色如透明紅寶石；鮮紅莓果（草莓、覆盆子）+ 紫羅蘭 + 火山板岩礦物感；單寧細緻如絲，酸度鮮明；最頂級的可與布根地 Premier Cru 抗衡。',
     vineyards: 'Dernauer Pfarrwingert、Recher Herrenberg、Walporzheimer Kräuterberg、Neuenahrer Sonnenberg、Heimersheimer Landskrone',
     estates: 'Meyer-Näkel（傳奇，Jean Meyer）、Jean Stodden、Deutzerhof、Nelles、Weingut Adeneuer、Kreuzberg',
     vsBourgogne: '與 Chambolle-Musigny 最相似：同樣輕柔優雅，礦物感強；但 Ahr 帶有獨特火山板岩礦物，比 Chambolle 更透明、更早可飲。',
@@ -159,7 +159,7 @@ const regions = [
     pct: '約 35% 為 Spätburgunder（最高絕對量）',
     abv: '13–14.5%',
     winemaking: '全棄梗、法國新橡木桶，仿效 Côte d\'Or',
-    profile: '更豐潤圓滿；深紅色澤；黑莓、黑醋栗、甘草；橡木桶影響明顯（部分）；單寧結構更扎實；最接近勃根地 Côte de Nuits 的德國版本。',
+    profile: '更豐潤圓滿；深紅色澤；黑莓、黑醋栗、甘草；橡木桶影響明顯（部分）；單寧結構更扎實；最接近布根地 Côte de Nuits 的德國版本。',
     vineyards: 'Kaiserstuhl 火山熔岩圓丘（世界無雙）、Oberbergen Bassgeige GG、Spätburgunder Ihringen Winklerberg',
     estates: 'Bernhard Huber（傳奇，Malterdingen）、Salwey、Dreissigacker、Ziereisen、Dr. Heger（Kaiserstuhl）',
     vsBourgogne: '與 Gevrey-Chambertin 或 Nuits-Saint-Georges 相似：更厚重的單寧、深果香、明顯橡木；仿效風格，但 Kaiserstuhl 火山土壤帶有獨特辛香。',

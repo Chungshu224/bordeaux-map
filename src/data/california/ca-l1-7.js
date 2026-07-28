@@ -124,7 +124,7 @@ export const lessonContent = [
       </div>
 
       <div class="chard-fact">
-        <p>📊 加州 80% 的 Chardonnay 基因可追溯至 Livermore Valley 的 Wente 家族 1880 年代從勃根地引進的克隆株（「Wente Clone」），是全球種植最廣的 Chardonnay 克隆。</p>
+        <p>📊 加州 80% 的 Chardonnay 基因可追溯至 Livermore Valley 的 Wente 家族 1880 年代從布根地引進的克隆株（「Wente Clone」），是全球種植最廣的 Chardonnay 克隆。</p>
       </div>
     </div>`
   },
@@ -145,7 +145,7 @@ export const lessonContent = [
             <li>🌺 玫瑰花瓣、薰衣草（優雅款）</li>
             <li>🍄 蘑菇、腐葉（陳年後）</li>
             <li>💎 細膩絲滑的單寧，天然高酸度</li>
-            <li>🏔️ 山地款（Santa Cruz Mountains）：更緊實、礦石感，類似勃根地</li>
+            <li>🏔️ 山地款（Santa Cruz Mountains）：更緊實、礦石感，類似布根地</li>
           </ul>
         </div>
         <p class="pinot-producers">頂級代表：Williams Selyem、J. Rochioli、Merry Edwards（Russian River）、Littorai、Hirsch Vineyard（Sonoma Coast）、Sanford（Sta. Rita Hills）</p>
@@ -231,9 +231,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '「Wente Clone」是指什麼？',
-            options: ['A. 加州最著名的 Cabernet Sauvignon 克隆株', 'B. 加州 80% Chardonnay 的基因來源，由 Wente 家族 1880 年代從勃根地引進', 'C. 加州最老的 Zinfandel 老藤克隆', 'D. Robert Mondavi 研發的 Pinot Noir 克隆'],
+            options: ['A. 加州最著名的 Cabernet Sauvignon 克隆株', 'B. 加州 80% Chardonnay 的基因來源，由 Wente 家族 1880 年代從布根地引進', 'C. 加州最老的 Zinfandel 老藤克隆', 'D. Robert Mondavi 研發的 Pinot Noir 克隆'],
             correct: 1,
-            explanation: '「Wente Clone」指 C.H. Wente 1880 年代從勃根地引進的 Chardonnay 克隆株，成為整個加州 Chardonnay 種植的主要基因來源，加州約 80% 的 Chardonnay 可追溯至此，是全球種植最廣的 Chardonnay 克隆之一。'
+            explanation: '「Wente Clone」指 C.H. Wente 1880 年代從布根地引進的 Chardonnay 克隆株，成為整個加州 Chardonnay 種植的主要基因來源，加州約 80% 的 Chardonnay 可追溯至此，是全球種植最廣的 Chardonnay 克隆之一。'
           },
           {
             type: 'single',

@@ -271,7 +271,7 @@ node scripts/media-optimize.mjs --apply --threshold=1MB --include=images/
 - [ ] 社群討論功能
 
 ### v1.2 (未來版本)
-- [ ] 擴展其他產區（勃根地、香檳等）
+- [ ] 擴展其他產區（布根地、香檳等）
 - [ ] VR/AR學習體驗
 - [ ] 個人化學習路徑
 - [ ] 線上認證考試

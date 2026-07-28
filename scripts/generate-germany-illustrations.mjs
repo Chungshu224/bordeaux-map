@@ -622,7 +622,7 @@ const SPATBURG = [
   <line x1="142" y1="66" x2="210" y2="55" stroke="rgba(255,255,255,0.13)" stroke-width="1"/>`
   },
   {
-    key: 'baden', label: 'Baden', sublabel: '黑森林邊緣 · 溫暖豐滿 · 勃根地風',
+    key: 'baden', label: 'Baden', sublabel: '黑森林邊緣 · 溫暖豐滿 · 布根地風',
     bg1: '#1A0828', bg2: '#380E55',
     scene: () => `
   <!-- Black Forest silhouette -->

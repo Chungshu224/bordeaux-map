@@ -11,7 +11,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          加州為何能在同一個州內，同時生產與法國勃根地並駕齊驅的 Pinot Noir，以及媲美波爾多的 Cabernet Sauvignon？答案就藏在氣候與土壤的交互作用中。本課深度解析太平洋海霧、地形屏障、土壤類型如何共同塑造加州多元的葡萄酒風格。
+          加州為何能在同一個州內，同時生產與法國布根地並駕齊驅的 Pinot Noir，以及媲美波爾多的 Cabernet Sauvignon？答案就藏在氣候與土壤的交互作用中。本課深度解析太平洋海霧、地形屏障、土壤類型如何共同塑造加州多元的葡萄酒風格。
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
@@ -199,7 +199,7 @@ export const lessonContent = [
             <span class="wr-gdd">&lt; 2,500 GDD (°F 計)</span>
           </div>
           <div class="wr-detail">
-            <p class="wr-climate">最涼爽 — 類似勃根地氣候</p>
+            <p class="wr-climate">最涼爽 — 類似布根地氣候</p>
             <p class="wr-grapes">Pinot Noir、Chardonnay、Riesling、Sparkling wine</p>
             <p class="wr-example">代表地區：Carneros、Santa Rita Hills、Anderson Valley</p>
           </div>
@@ -279,7 +279,7 @@ export const lessonContent = [
             question: 'Winkler 制度（GDD）中，Region I 最適合種植哪類品種？',
             options: ['A. Zinfandel 和 Grenache', 'B. Pinot Noir 和 Chardonnay', 'C. Cabernet Sauvignon 和 Merlot', 'D. Barbera 和 Sangiovese'],
             correct: 1,
-            explanation: 'Region I 是最涼爽的氣候帶（< 2,500 GDD），類似勃根地氣候，最適合種植 Pinot Noir、Chardonnay 和 Riesling 等涼爽氣候品種，也是最佳氣泡酒產區。'
+            explanation: 'Region I 是最涼爽的氣候帶（< 2,500 GDD），類似布根地氣候，最適合種植 Pinot Noir、Chardonnay 和 Riesling 等涼爽氣候品種，也是最佳氣泡酒產區。'
           }
         ]
       }

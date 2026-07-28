@@ -68,7 +68,7 @@
         {
           "type": "content",
           "title": "為何有些一級園未升級特級園？",
-          "content": "原因包括：歷史因素（劃分時的政治考量）、面積太小不具代表性、風土略遜一籌但仍優秀、生產者品質不夠穩定。但許多一級園（如默爾索Les Perrières）品質實已達特級園水準。"
+          "content": "原因包括：歷史因素（劃分時的政治考量）、面積太小不具代表性、風土略遜一籌但仍優秀、生產者品質不夠穩定。但許多一級園（如梅索Les Perrières）品質實已達特級園水準。"
         },
         {
           "type": "quiz",
@@ -157,7 +157,7 @@
         },
         {
           "type": "content",
-          "title": "熱夫雷-香貝丹一級園",
+          "title": "哲維瑞-香貝丹一級園",
           "content": "熱夫雷擁有26個一級園，總面積約80公頃。雖然特級園光芒耀眼，但頂級一級園的品質不容小覷。"
         },
         {
@@ -174,7 +174,7 @@
         },
         {
           "type": "map",
-          "title": "熱夫雷-香貝丹頂級一級園地圖",
+          "title": "哲維瑞-香貝丹頂級一級園地圖",
           "description": "點擊按鈕查看5大頂級一級園位置",
           "mapConfig": {
             "center": [
@@ -292,7 +292,7 @@
         },
         {
           "type": "content",
-          "title": "香波-慕西尼一級園",
+          "title": "香波-蜜思妮一級園",
           "content": "香波有24個一級園，整體風格優雅細膩。由於只有2個特級園，一級園成為體驗香波風格的重要途徑。"
         },
         {
@@ -309,7 +309,7 @@
         },
         {
           "type": "map",
-          "title": "香波-慕西尼頂級一級園地圖",
+          "title": "香波-蜜思妮頂級一級園地圖",
           "description": "點擊按鈕查看各頂級一級園位置",
           "mapConfig": {
             "center": [
@@ -437,7 +437,7 @@
             "Les Saint-Georges - 村莊命名來源，品質最高",
             "Les Vaucrains - 強勁濃郁，單寧緊實",
             "Les Cailles - 細膩優雅",
-            "Aux Boudots - 靠近馮內-羅曼尼",
+            "Aux Boudots - 靠近馮內-侯瑪內",
             "Les Pruliers - 平衡之作",
             "投資建議：頂級生產者的這些一級園值得長期持有"
           ]
@@ -652,26 +652,26 @@
         },
         {
           "type": "content",
-          "title": "默爾索一級園",
-          "content": "默爾索沒有特級園，但其頂級一級園的品質完全可與特級園媲美，特別是Les Perrières。"
+          "title": "梅索一級園",
+          "content": "梅索沒有特級園，但其頂級一級園的品質完全可與特級園媲美，特別是Les Perrières。"
         },
         {
           "type": "list",
-          "title": "🥇 默爾索最佳一級園",
+          "title": "🥇 梅索最佳一級園",
           "points": [
             "Les Perrières - 「石頭園」，最接近特級園",
             "風格：礦物感極強、優雅精緻、陳年潛力20-30年",
             "Les Genevrières - 「杜松園」，平衡完美",
             "風格：豐滿圓潤、榛果香、奶油質地",
             "Les Charmes - 「魅力園」，如其名般迷人",
-            "Poruzots - 強勁有力版默爾索",
+            "Poruzots - 強勁有力版梅索",
             "Goutte d'Or - 「黃金滴」，最豐滿",
-            "價格：Perrières可達巴塔-蒙哈榭的70%價格"
+            "價格：Perrières可達巴達-蒙哈榭的70%價格"
           ]
         },
         {
           "type": "map",
-          "title": "默爾索頂級一級園地圖",
+          "title": "梅索頂級一級園地圖",
           "description": "點擊按鈕查看各頂級一級園位置",
           "mapConfig": {
             "center": [
@@ -790,7 +790,7 @@
         {
           "type": "content",
           "title": "普里尼-蒙哈榭一級園",
-          "content": "普里尼有17個一級園，風格比默爾索更清瘦優雅，礦物感更明顯。"
+          "content": "普里尼有17個一級園，風格比梅索更清瘦優雅，礦物感更明顯。"
         },
         {
           "type": "list",
@@ -802,7 +802,7 @@
             "Les Combettes - 平衡之作",
             "Les Folatières - 花香明顯",
             "Champ Canet - 位置絕佳",
-            "特色：整體比默爾索更需陳年"
+            "特色：整體比梅索更需陳年"
           ]
         },
         {
@@ -925,24 +925,24 @@
         },
         {
           "type": "content",
-          "title": "波瑪與沃爾奈一級園",
+          "title": "玻瑪與渥爾內一級園",
           "content": "這兩個村莊沒有特級園，一級園就是品質標竿，且價格相對親民。"
         },
         {
           "type": "list",
           "title": "🍷 紅酒一級園精選",
           "points": [
-            "波瑪 Les Rugiens - 「紅土園」，最強勁",
-            "波瑪 Les Epenots - 優雅版波瑪",
-            "沃爾奈 Caillerets - 「石子園」，最優雅",
-            "沃爾奈 Champans - 豐滿有力",
-            "沃爾奈 Santenots - 技術上屬默爾索",
+            "玻瑪 Les Rugiens - 「紅土園」，最強勁",
+            "玻瑪 Les Epenots - 優雅版玻瑪",
+            "渥爾內 Caillerets - 「石子園」，最優雅",
+            "渥爾內 Champans - 豐滿有力",
+            "渥爾內 Santenots - 技術上屬梅索",
             "投資價值：這些紅酒一級園被嚴重低估"
           ]
         },
         {
           "type": "map",
-          "title": "波瑪頂級一級園地圖",
+          "title": "玻瑪頂級一級園地圖",
           "description": "點擊按鈕查看各頂級一級園位置",
           "mapConfig": {
             "center": [
@@ -1012,7 +1012,7 @@
         },
         {
           "type": "map",
-          "title": "沃爾奈頂級一級園地圖",
+          "title": "渥爾內頂級一級園地圖",
           "description": "點擊按鈕查看各頂級一級園位置",
           "mapConfig": {
             "center": [
@@ -1357,11 +1357,11 @@
           "Meursault Charmes"
         ],
         "correctAnswer": 1,
-        "explanation": "熱夫雷-香貝丹的Clos Saint-Jacques被公認為最接近特級園品質，價格常超過某些特級園。"
+        "explanation": "哲維瑞-香貝丹的Clos Saint-Jacques被公認為最接近特級園品質，價格常超過某些特級園。"
       },
       {
         "id": "q3",
-        "question": "默爾索哪個一級園礦物感最強？",
+        "question": "梅索哪個一級園礦物感最強？",
         "type": "single",
         "options": [
           "Les Charmes",
@@ -1370,11 +1370,11 @@
           "Les Genevrières"
         ],
         "correctAnswer": 1,
-        "explanation": "Les Perrières（石頭園）以極強的礦物感著稱，是最接近特級園品質的默爾索一級園。"
+        "explanation": "Les Perrières（石頭園）以極強的礦物感著稱，是最接近特級園品質的梅索一級園。"
       },
       {
         "id": "q4",
-        "question": "香波-慕西尼哪個一級園被稱為「戀人」？",
+        "question": "香波-蜜思妮哪個一級園被稱為「戀人」？",
         "type": "single",
         "options": [
           "Les Charmes",

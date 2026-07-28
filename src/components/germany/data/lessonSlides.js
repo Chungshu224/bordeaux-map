@@ -413,7 +413,7 @@ export const G1M2L3 = {
     {
       type: 'content',
       title: '🍷 德國是紅酒產地？',
-      content: '許多人不知道，德國約有 35% 的葡萄種植的是紅葡萄品種，而 Spätburgunder（黑皮諾的德語名）在 Ahr 和 Baden 等地已釀出堪比勃根地的世界級紅酒。氣候暖化使德國紅酒品質不斷提升，成為全球葡萄酒界的熱門話題。'
+      content: '許多人不知道，德國約有 35% 的葡萄種植的是紅葡萄品種，而 Spätburgunder（黑皮諾的德語名）在 Ahr 和 Baden 等地已釀出堪比布根地的世界級紅酒。氣候暖化使德國紅酒品質不斷提升，成為全球葡萄酒界的熱門話題。'
     },
     {
       type: 'list',
@@ -436,7 +436,7 @@ export const G1M2L3 = {
     {
       type: 'content',
       title: '🏆 Ahr — 德國紅酒聖地',
-      content: 'Ahr 是德國最著名的紅酒產區，以 Spätburgunder 著稱。儘管地處德國北部（北緯 50.5 度），但陡峭的河谷地形與火山板岩土壤創造出溫暖的微氣候，使黑皮諾能完全成熟。Ahr 的頂級 Spätburgunder 呈現出勃根地般的優雅——鮮紅色澤、紅莓香料、細緻單寧，讓世界為之驚豔。'
+      content: 'Ahr 是德國最著名的紅酒產區，以 Spätburgunder 著稱。儘管地處德國北部（北緯 50.5 度），但陡峭的河谷地形與火山板岩土壤創造出溫暖的微氣候，使黑皮諾能完全成熟。Ahr 的頂級 Spätburgunder 呈現出布根地般的優雅——鮮紅色澤、紅莓香料、細緻單寧，讓世界為之驚豔。'
     },
     {
       type: 'germany-region-map',
@@ -450,7 +450,7 @@ export const G1M2L3 = {
       type: 'spatburgunder-regions',
 
       title: '🍷 Spätburgunder 四大產區風土對決',
-      description: '互動深度比較 Ahr（火山板岩輕盈礦物）× Baden（最溫暖豐滿勃根地風）× Pfalz（均衡易飲）× Württemberg（傳統 Muschelkalk 白堊感）——風格光譜、土壤、頂級葡萄園（Ahr: Meyer-Näkel、Baden: Bernhard Huber）、與布根地對比，一張互動圖掌握德國紅酒四大天王。'
+      description: '互動深度比較 Ahr（火山板岩輕盈礦物）× Baden（最溫暖豐滿布根地風）× Pfalz（均衡易飲）× Württemberg（傳統 Muschelkalk 白堊感）——風格光譜、土壤、頂級葡萄園（Ahr: Meyer-Näkel、Baden: Bernhard Huber）、與布根地對比，一張互動圖掌握德國紅酒四大天王。'
     },
     {
       type: 'quiz',
@@ -1255,7 +1255,7 @@ export const G2M2L2 = {
   lessonId: 'G2M2L2',
   title: 'Baden — 最接近地中海的德國',
   description: '探索德國最南端、最溫暖、以 Pinot 系品種著稱的產區',
-  objectives: ['了解 Baden 的地理特色與氣候優勢', '認識 Kaiserstuhl 火山地帶', '掌握 Baden Spätburgunder 的勃根地風格'],
+  objectives: ['了解 Baden 的地理特色與氣候優勢', '認識 Kaiserstuhl 火山地帶', '掌握 Baden Spätburgunder 的布根地風格'],
   slides: [
     {
       type: 'title',
@@ -1266,7 +1266,7 @@ export const G2M2L2 = {
     {
       type: 'content',
       title: '☀️ Baden 的地理奇觀',
-      content: 'Baden 是德國最南端的葡萄酒產區，從博登湖（Bodensee）北岸一路延伸 470 公里至 Heidelberg 附近，面積約 16,000 公頃，地跨德國最長的葡萄酒地帶。西與法國阿爾薩斯隔萊茵河相望，共享相近的風土，但各自發展出獨特個性。Baden 年均氣溫全德最高，夏季酷熱，葡萄成熟度極佳，因此 Spätburgunder（黑皮諾）在此展現出最豐滿的果實感，被譽為「德國的勃根地」。'
+      content: 'Baden 是德國最南端的葡萄酒產區，從博登湖（Bodensee）北岸一路延伸 470 公里至 Heidelberg 附近，面積約 16,000 公頃，地跨德國最長的葡萄酒地帶。西與法國阿爾薩斯隔萊茵河相望，共享相近的風土，但各自發展出獨特個性。Baden 年均氣溫全德最高，夏季酷熱，葡萄成熟度極佳，因此 Spätburgunder（黑皮諾）在此展現出最豐滿的果實感，被譽為「德國的布根地」。'
     },
     {
       type: 'list',
@@ -1282,7 +1282,7 @@ export const G2M2L2 = {
     {
       type: 'comparison',
       title: 'Kaiserstuhl vs Markgräflerland 風格對比',
-      left: { label: '🌋 Kaiserstuhl（火山豐潤）', items: ['玄武岩、火山土壤', 'Spätburgunder 豐滿飽滿', '酒精度高（可達 14%+）', '礦物感與果實濃郁並存', '代表：Bernhard Huber、Salwey', 'Pinot Noir 可媲美南勃根地'] },
+      left: { label: '🌋 Kaiserstuhl（火山豐潤）', items: ['玄武岩、火山土壤', 'Spätburgunder 豐滿飽滿', '酒精度高（可達 14%+）', '礦物感與果實濃郁並存', '代表：Bernhard Huber、Salwey', 'Pinot Noir 可媲美南布根地'] },
       right: { label: '🇨🇭 Markgräflerland（瑞士邊境輕盈）', items: ['接近瑞士Basel，石灰岩土', 'Gutedel（Chasselas）為特色品種', '酒體清爽輕盈', '優雅細緻，酸度明亮', '代表：Ziereisen', '風格接近瑞士與阿爾薩斯'] }
     },
     {
@@ -1318,7 +1318,7 @@ export const G2M2L2 = {
           question: 'Baden 種植最多的紅葡萄品種是？',
           options: ['Trollinger', 'Dornfelder', 'Spätburgunder', 'Lemberger'],
           answer: 2,
-          explanation: 'Spätburgunder（黑皮諾）在 Baden 的種植比例約達 37%，是德國種植 Spätburgunder 比例最高的產區，以 Kaiserstuhl 和 Breisgau 地帶的表現最為出色，酒風豐滿濃郁，被譽為德國的勃根地。'
+          explanation: 'Spätburgunder（黑皮諾）在 Baden 的種植比例約達 37%，是德國種植 Spätburgunder 比例最高的產區，以 Kaiserstuhl 和 Breisgau 地帶的表現最為出色，酒風豐滿濃郁，被譽為德國的布根地。'
         }
       ]
     }
@@ -2067,7 +2067,7 @@ export const G2FinalExam = {
           question: 'Baden 種植最廣的紅葡萄品種比例約為多少？',
           options: ['Trollinger 70%', 'Spätburgunder 37%', 'Dornfelder 50%', 'Lemberger 45%'],
           answer: 1,
-          explanation: 'Spätburgunder（黑皮諾）在 Baden 的種植比例約達 37%，是德國種植 Spätburgunder 比例最高的產區，以 Kaiserstuhl 火山地帶的表現最為出色，被譽為「德國的勃根地」。'
+          explanation: 'Spätburgunder（黑皮諾）在 Baden 的種植比例約達 37%，是德國種植 Spätburgunder 比例最高的產區，以 Kaiserstuhl 火山地帶的表現最為出色，被譽為「德國的布根地」。'
         }
       ]
     },

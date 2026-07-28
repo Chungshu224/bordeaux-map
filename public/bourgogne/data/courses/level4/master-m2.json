@@ -437,7 +437,7 @@
             },
             {
               "type": "single",
-              "question": "「Vosne-Romanée（沃恩羅曼尼）」村莊被認為是布根地黑皮諾最高表達的原因是？",
+              "question": "「Vosne-Romanée（馮內-侯瑪內）」村莊被認為是布根地黑皮諾最高表達的原因是？",
               "options": [
                 "A. 因為 DRC 位於此村莊，所有 Vosne 酒都品質最高",
                 "B. Vosne-Romanée 坐落在夜丘最佳的地質條件交匯點——侏羅紀石灰岩中有最理想的礦物多樣性（包含 Comblanchien 石灰岩、Premeaux 石灰岩、泥灰岩多層交替），結合最佳坡向和土壤厚度，使黑皮諾能同時展現結構（來自礦物）和精緻感（來自石灰岩的細緻砂粒質地），DRC 的頂峰地位是此地質優越性的最極致體現",
@@ -784,7 +784,7 @@
                 "A. 位於加州北部，1960 年代商業化種植",
                 "B. 位於俄勒岡州（Oregon）西北部（緯度約 45°N，與布根地相近），1960 年代由 David Lett（Eyrie Vineyards）等先驅以「冷涼的布根地精神」開創——1979 年的 Gault-Millau 盲品中，Eyrie VS 1975 與布根地頂級酒競爭出色，引發法國媒體關注，正式確立了奧勒岡作為世界級黑皮諾產區",
                 "C. 威拉美特谷的黑皮諾是 2000 年代才開始種植",
-                "D. 威拉美特谷以霞多麗為主要品種"
+                "D. 威拉美特谷以夏多內為主要品種"
               ],
               "correct": 1,
               "explanation": "1979 年巴黎競賽的奧勒岡啟示：David Lett 的 Eyrie Vineyards 1975 South Block Reserve 黑皮諾在 Gault-Millau 的盲品競賽中得分高於多款布根地一級/特級園（與 1976 年巴黎評判（The Judgment of Paris）的加州葡萄酒崛起故事相似），Robert Drouhin（Maison Joseph Drouhin 的 Robert）親自主持再賽仍確認了 Eyrie 的高競爭力。這個事件不僅確立了奧勒岡的國際聲譽，也吸引了 Drouhin 家族直接在威拉美特谷購地建立 Domaine Drouhin Oregon（1987），是「布根地名莊在新世界直接投資」的最早和最有影響力的案例。"
@@ -796,7 +796,7 @@
                 "A. 兩種土壤對黑皮諾完全沒有影響",
                 "B. Jory 土（紅色鐵質玄武岩風化土，排水極佳，礦物質豐富）——通常帶來結構更強、深色水果更豐滿的黑皮諾；Willakenzie 土（海洋沉積的 Sedimentary Marine，絲狀碎石）——排水略差，通常帶來更精緻、紅色水果導向、更接近布根地「精緻感」的風格；兩種土壤的共存使威拉美特谷在同一區域內有豐富的風格多樣性",
                 "C. 威拉美特谷只有 Jory 土一種類型",
-                "D. Willakenzie 土只適合霞多麗"
+                "D. Willakenzie 土只適合夏多內"
               ],
               "correct": 1,
               "explanation": "奧勒岡的「地塊發現階段」：不同於布根地幾百年的地塊知識積累，威拉美特谷的「地塊特異性研究（Terroir Mapping）」仍在進行中。Jory vs. Willakenzie 的對比研究（2000s 後逐漸出現），使奧勒岡開始建立自己的「地塊語言」——部分酒莊（如 Adelsheim）有系統地進行不同土壤地塊分開釀造的比較研究。生物動力農耕在威拉美特谷的推廣（Beaux Frères, Bergström, Brooks）也推動了土壤健康和風土表達的研究深度，預示著奧勒岡在未來幾十年可能建立更完備的地塊分類知識體系。"
@@ -1058,7 +1058,7 @@
         {
           "type": "content",
           "title": "索諾瑪海岸的獨特性",
-          "content": "Sonoma Coast是加州最涼爽的黑皮諾產區之一，受太平洋霧氣調節，創造出獨特的微氣候。與Napa Valley的Cabernet導向不同，索諾瑪海岸專注於黑皮諾與霞多麗。陡峭的西向坡地、多樣化土壤（Goldridge沙質壤土、火山土、海洋沉積岩）、涼爽但陽光充足的氣候，生產出濃郁但不失優雅的黑皮諾。"
+          "content": "Sonoma Coast是加州最涼爽的黑皮諾產區之一，受太平洋霧氣調節，創造出獨特的微氣候。與Napa Valley的Cabernet導向不同，索諾瑪海岸專注於黑皮諾與夏多內。陡峭的西向坡地、多樣化土壤（Goldridge沙質壤土、火山土、海洋沉積岩）、涼爽但陽光充足的氣候，生產出濃郁但不失優雅的黑皮諾。"
         },
         {
           "type": "list",
@@ -1103,7 +1103,7 @@
           "points": [
             "Williams Selyem - 車庫酒教父級傳奇",
             "Kosta Browne - 現代風格標竿",
-            "Littorai - 勃根地風格追求者",
+            "Littorai - 布根地風格追求者",
             "Hirsch Vineyards - 極端海岸風土",
             "Flowers - 海拔與海洋的結合",
             "Failla - 多產區精品"

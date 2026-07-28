@@ -291,10 +291,10 @@ const HARD_QUESTIONS = [
   },
   {
     category: '🍇 品種深究',
-    question: '紐西蘭 Chardonnay 在哪個產區以勃根地風格聞名？',
+    question: '紐西蘭 Chardonnay 在哪個產區以布根地風格聞名？',
     options: ['Gisborne', 'Kumeu（Auckland）', 'Nelson', 'Waipara'],
     correct: 1,
-    explanation: 'Kumeu 位於奧克蘭近郊，Kumeu River 等酒莊以精細的勃根地風格 Chardonnay 享譽國際。',
+    explanation: 'Kumeu 位於奧克蘭近郊，Kumeu River 等酒莊以精細的布根地風格 Chardonnay 享譽國際。',
   },
   {
     category: '🌡️ 氣候知識',

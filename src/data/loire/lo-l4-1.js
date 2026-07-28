@@ -23,7 +23,7 @@ export const lessonContent = [
             <p>從 Corent 的火山口葡萄園到 Boudes 的黑色玄武岩坡地，每個 cru 都有自己的獨特故事</p>
           </div>
           <div class="point-item">
-            <h4>🍷 認識奧弗涅 Gamay 與勃根地 Gamay 的差異</h4>
+            <h4>🍷 認識奧弗涅 Gamay 與布根地 Gamay 的差異</h4>
             <p>火山土壤的 Gamay 如何表現出完全不同於 Beaujolais 的個性</p>
           </div>
         </div>

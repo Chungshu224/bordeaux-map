@@ -21,7 +21,7 @@
       "question": "伯恩丘（Côte de Beaune）以哪類葡萄酒聞名於全球？",
       "options": ["A. 頂級紅酒為主，白酒為次", "B. 頂級白酒（Chardonnay）為主，集中了 Montrachet、Meursault 等", "C. 氣泡酒（Crémant）", "D. 加烈酒"],
       "correct": 1,
-      "explanation": "伯恩丘最大的榮耀是頂級 Chardonnay 白酒——蒙哈榭、默爾索、科爾通-查理曼等，是全球最偉大白酒的集中地，同時也出產 Pommard、Volnay 等頂級 Pinot Noir。"
+      "explanation": "伯恩丘最大的榮耀是頂級 Chardonnay 白酒——蒙哈榭、梅索、高登-查理曼等，是全球最偉大白酒的集中地，同時也出產 Pommard、Volnay 等頂級 Pinot Noir。"
     },
     {
       "type": "single",
@@ -39,10 +39,10 @@
     },
     {
       "type": "single",
-      "question": "熱夫雷-香貝丹（Gevrey-Chambertin）共有多少個特級園？",
+      "question": "哲維瑞-香貝丹（Gevrey-Chambertin）共有多少個特級園？",
       "options": ["A. 2 個", "B. 5 個", "C. 9 個", "D. 24 個"],
       "correct": 2,
-      "explanation": "熱夫雷-香貝丹是布根地擁有最多特級園的村莊，共 9 個 Grand Cru，包括 Chambertin、Chambertin-Clos de Bèze、Mazis-Chambertin、Chapelle-Chambertin 等。"
+      "explanation": "哲維瑞-香貝丹是布根地擁有最多特級園的村莊，共 9 個 Grand Cru，包括 Chambertin、Chambertin-Clos de Bèze、Mazis-Chambertin、Chapelle-Chambertin 等。"
     },
     {
       "type": "single",
@@ -109,7 +109,7 @@
     },
     {
       "type": "single",
-      "question": "「香波-慕西尼（Chambolle-Musigny）」兩個特級園中，哪一個以「女性化優雅」著稱？",
+      "question": "「香波-蜜思妮（Chambolle-Musigny）」兩個特級園中，哪一個以「女性化優雅」著稱？",
       "options": ["A. Bonnes-Mares（以豐滿著稱）", "B. Le Musigny（以花香優雅著稱）", "C. 兩者都以強勁著稱", "D. 兩者都以礦物感著稱"],
       "correct": 1,
       "explanation": "Le Musigny 是布根地最細膩優雅的 Grand Cru 之一，以玫瑰、紫羅蘭的花香和絲般口感著稱；Bonnes-Mares 雖也在同村，風格卻更豐滿強健，兩者形成鮮明對比。"

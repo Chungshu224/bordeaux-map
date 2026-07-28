@@ -143,7 +143,7 @@ export const lessonContent = [
       <div class="winemaking-techniques">
         <div class="wt-card">
           <h4>🍇 Whole Cluster Fermentation（整串發酵）</h4>
-          <p>傳統上，葡萄在發酵前需要去梗（Destemming）。Whole Cluster 則是保留部分或全部葡萄梗一起發酵，是勃根地的傳統做法，也是加州精品 Pinot Noir 的最新趨勢。</p>
+          <p>傳統上，葡萄在發酵前需要去梗（Destemming）。Whole Cluster 則是保留部分或全部葡萄梗一起發酵，是布根地的傳統做法，也是加州精品 Pinot Noir 的最新趨勢。</p>
           <div class="wt-effects">
             <div class="wt-pro">
               <h5>效果</h5>

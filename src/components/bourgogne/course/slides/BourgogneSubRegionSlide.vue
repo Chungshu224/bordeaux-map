@@ -208,7 +208,7 @@ const defaultRegions = [
       'Pouilly-Vinzelles、Pouilly-Loché（面積小、緊鄰 Pouilly-Fuissé）',
       'Saint-Véran（環繞 Pouilly-Fuissé 南北兩側）',
       'Viré-Clessé（2 個村莊合併命名的獨立法定產區）',
-      'Mâcon-Villages（可加註村莊名，如 Mâcon-Lugny、Mâcon-Viré）、Mâcon（大區級）'
+      'Mâcon-Villages（可加註村莊名，如 Mâcon-Lugny、Mâcon-Viré）、Mâcon（地區級）'
     ],
     style: '白酒風格較溫暖飽滿、酒精偏高（13–13.5%）、果香奔放（杏桃、白桃、蜂蜜、金合歡花香），礦物較內斂。Pouilly-Fuissé 頂級酒款（如 Domaine Saumaize-Michelin、Olivier Merlin）可比 Côte de Beaune 中階白酒；Mâcon 等入門款則清爽多果香、適合早飲。',
     summary: 'Mâconnais 是布根地的「南方白酒帶」——氣候溫暖、Chardonnay 表現飽滿溫潤。Pouilly-Fuissé 在 2020 年正式建立 Premier Cru 體系，被視為下一個值得收藏的布根地產區。'

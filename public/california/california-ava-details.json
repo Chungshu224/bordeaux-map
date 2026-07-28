@@ -214,7 +214,7 @@
     "acres": 3000,
     "elevation": "400–2200",
     "climate": "山地涼爽，火山岩土壤，日照充足",
-    "description": "馬雅卡瑪斯山脈索諾馬側，Hanzell 以勃根地風格的夏多內與黑皮諾聞名，古藤金芬黛也有佳作。"
+    "description": "馬雅卡瑪斯山脈索諾馬側，Hanzell 以布根地風格的夏多內與黑皮諾聞名，古藤金芬黛也有佳作。"
   },
   "northern_sonoma_19850617": {
     "grapes": ["Cabernet Sauvignon", "Pinot Noir", "Chardonnay", "Zinfandel"],
@@ -262,7 +262,7 @@
     "grapes": ["Pinot Noir", "Chardonnay", "Gewurztraminer", "Riesling", "Pinot Gris"],
     "acres": 50000,
     "elevation": "200–2000",
-    "climate": "極涼爽，太平洋霧氣深入谷地，適合芳香品種與勃根地品種",
+    "climate": "極涼爽，太平洋霧氣深入谷地，適合芳香品種與布根地品種",
     "description": "加州最涼爽的產區之一，Roederer Estate（L'Ermitage）、Husch 等酒莊以精緻黑皮諾和格烏茲塔明那聞名，也是優質起泡酒產地。"
   },
   "mendocino_19840716": {

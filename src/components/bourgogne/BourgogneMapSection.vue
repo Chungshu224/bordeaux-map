@@ -2,7 +2,7 @@
   <section class="map-section">
     <!-- Header -->
     <RegionMapHeader
-      regionName="勃根地"
+      regionName="布根地"
       :title="`${props.regionConfig?.name || 'Bourgogne wine map'} 葡萄酒產區地圖`"
       icon="🍷"
       @back="emit('request-learning-mode')"

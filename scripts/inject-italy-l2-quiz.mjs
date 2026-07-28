@@ -219,7 +219,7 @@ function createQuizBank () {
       { type: 'single', question: 'Friuli 中 "Ponka" 是指什麼？', options: ['A. 一種本土品種', 'B. 由砂岩和泥灰岩交互層疊的土壤', 'C. 傳統釀造技法', 'D. 一個法定產區名稱'], correct: 1, explanation: 'Ponka 是 Friuli 獨特的砂岩與泥灰岩交互沉積土壤，為 Collio 葡萄酒提供礦物感。' },
       { type: 'single', question: 'Emilia-Romagna 最有名的食物與葡萄酒搭配是？', options: ['A. 生蠔配 Trebbiano', 'B. 燻火腿佐 Lambrusco 微氣泡', 'C. 薄餅配 Barolo', 'D. 魚湯配 Amarone'], correct: 1, explanation: 'Lambrusco 是 Emilia-Romagna 的靈魂飲品，與當地 Prosciutto di Parma 等油脂豐富的食物是完美搭配。' },
       // ── 中義 ──
-      { type: 'single', question: 'Verdicchio dei Castelli di Jesi 的瓶型外觀特色是？', options: ['A. 波爾多型細長瓶', 'B. 安福拉形雙耳瓶', 'C. 魚形瓶 (anfora)', 'D. 勃根地型寬肩瓶'], correct: 1, explanation: 'Verdicchio 傳統使用獨特的安福拉形雙耳瓶（amphora），成為其品牌識別標誌。' },
+      { type: 'single', question: 'Verdicchio dei Castelli di Jesi 的瓶型外觀特色是？', options: ['A. 波爾多型細長瓶', 'B. 安福拉形雙耳瓶', 'C. 魚形瓶 (anfora)', 'D. 布根地型寬肩瓶'], correct: 1, explanation: 'Verdicchio 傳統使用獨特的安福拉形雙耳瓶（amphora），成為其品牌識別標誌。' },
       { type: 'single', question: 'Umbria 的 Orvieto DOC 主要使用哪個品種？', options: ['A. Grechetto', 'B. Trebbiano / Procanico', 'C. Sagrantino', 'D. Sangiovese'], correct: 1, explanation: 'Orvieto DOC 以 Trebbiano（當地稱 Procanico）為主調配，是 Umbria 最重要的白酒。' },
       { type: 'single', question: 'Castelli Romani（羅馬城堡）的葡萄酒產區以哪種地形著稱？', options: ['A. 靠近海岸的礫石平原', 'B. 羅馬南方的火山丘陵', 'C. 亞平寧山脈高原', 'D. 沿海鹽田低地'], correct: 1, explanation: 'Castelli Romani 位於羅馬南方約 20 公里的火山丘陵上，Frascati 等白酒以清爽易飲著稱。' },
       { type: 'single', question: 'Abruzzo 的海拔高度對 Montepulciano 葡萄有何影響？', options: ['A. 降低酸度', 'B. 保留酸度與清新感，平衡高溫', 'C. 增加甜度', 'D. 促進早熟'], correct: 1, explanation: 'Abruzzo 雖緯度偏南但山地海拔高，夜晚冷涼可保留 Montepulciano 的天然酸度。' },

@@ -322,7 +322,7 @@ export const lessonContent = [
             question: 'Sonoma County 以哪個品種的種植面積居加州全州之冠？',
             options: ['A. Cabernet Sauvignon', 'B. Chardonnay', 'C. Pinot Noir', 'D. Zinfandel'],
             correct: 2,
-            explanation: 'Sonoma County 種植的 Pinot Noir 比加州任何其他郡都多，Russian River Valley 是最重要的子 AVA，以優雅、具勃根地風格的 Pinot Noir 聞名。'
+            explanation: 'Sonoma County 種植的 Pinot Noir 比加州任何其他郡都多，Russian River Valley 是最重要的子 AVA，以優雅、具布根地風格的 Pinot Noir 聞名。'
           },
           {
             type: 'single',

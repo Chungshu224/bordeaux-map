@@ -89,7 +89,7 @@
     {
       "type": "content",
       "title": "Alto Piemonte — 被遺忘的北皮埃蒙特",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>為什麼 Alto Piemonte 被遺忘了？</h3><p>Alto Piemonte（北皮埃蒙特）曾是19世紀義大利葡萄酒最知名的地區之一——Gattinara 在 1800 年代的聲望甚至高於 Barolo。然而二次世界大戰後，工業化帶走了農村人口，葡萄園被廢棄，生產者從 1,500 家銳減至不足 100 家。如今這片幾乎被遺忘的土地，正因少數充滿使命感的酒農和 Nervi-Conterno 等精品品牌的加入，再度引起全球收藏家的注意。</p><div class=\"science-card\">位置：Piemonte 北部，Monte Rosa 阿爾卑斯山麓｜氣候：大陸性，比 Langhe 更冷涼｜土壤：花崗岩、石英、酸性礦質土</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">與 Barolo/Barbaresco 的根本差異</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>土壤：</strong>Barolo/Barbaresco 是石灰岩黏土（鹼性）；Alto Piemonte 是花崗岩 + 石英（酸性）——同樣是 Nebbiolo，酸性花崗岩土壤賦予更高的酸度、更精緻的單寧、更突出的礦物感，風格更接近勃根地</div><div class=\"orvieto-card\"><strong>海拔：</strong>Alto Piemonte 葡萄園海拔 300–700m，比 Langhe 丘陵整體更高，晝夜溫差更大，生長季更長，這有助於保留酸度和香氣複雜度</div><div class=\"orvieto-card\"><strong>混調：</strong>Alto Piemonte 的 Nebbiolo（當地稱「Spanna」）通常與 Vespolina（香料辛辣感）和 Bonarda（圓潤果香）混調，法規允許各 DOC/DOCG 混入 10–30% 不等的其他品種，風格更多元</div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>為什麼 Alto Piemonte 被遺忘了？</h3><p>Alto Piemonte（北皮埃蒙特）曾是19世紀義大利葡萄酒最知名的地區之一——Gattinara 在 1800 年代的聲望甚至高於 Barolo。然而二次世界大戰後，工業化帶走了農村人口，葡萄園被廢棄，生產者從 1,500 家銳減至不足 100 家。如今這片幾乎被遺忘的土地，正因少數充滿使命感的酒農和 Nervi-Conterno 等精品品牌的加入，再度引起全球收藏家的注意。</p><div class=\"science-card\">位置：Piemonte 北部，Monte Rosa 阿爾卑斯山麓｜氣候：大陸性，比 Langhe 更冷涼｜土壤：花崗岩、石英、酸性礦質土</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">與 Barolo/Barbaresco 的根本差異</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>土壤：</strong>Barolo/Barbaresco 是石灰岩黏土（鹼性）；Alto Piemonte 是花崗岩 + 石英（酸性）——同樣是 Nebbiolo，酸性花崗岩土壤賦予更高的酸度、更精緻的單寧、更突出的礦物感，風格更接近布根地</div><div class=\"orvieto-card\"><strong>海拔：</strong>Alto Piemonte 葡萄園海拔 300–700m，比 Langhe 丘陵整體更高，晝夜溫差更大，生長季更長，這有助於保留酸度和香氣複雜度</div><div class=\"orvieto-card\"><strong>混調：</strong>Alto Piemonte 的 Nebbiolo（當地稱「Spanna」）通常與 Vespolina（香料辛辣感）和 Bonarda（圓潤果香）混調，法規允許各 DOC/DOCG 混入 10–30% 不等的其他品種，風格更多元</div></div></div></div>"
     },
     {
       "type": "content",
@@ -210,7 +210,7 @@
             "Alto Piemonte 是沙土，Langhe 是黏土"
           ],
           "correct": 1,
-          "explanation": "Alto Piemonte 的花崗岩酸性礦質土（vs Langhe 的石灰岩黏土鹼性土）是最根本的差異，造就了同樣的 Nebbiolo 品種卻展現截然不同的風格——更高酸度、更精緻單寧、更突出的礦物感，風格更接近勃根地。"
+          "explanation": "Alto Piemonte 的花崗岩酸性礦質土（vs Langhe 的石灰岩黏土鹼性土）是最根本的差異，造就了同樣的 Nebbiolo 品種卻展現截然不同的風格——更高酸度、更精緻單寧、更突出的礦物感，風格更接近布根地。"
         },
         {
           "type": "single",

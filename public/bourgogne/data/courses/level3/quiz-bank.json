@@ -85,7 +85,7 @@
         "D. 霜凍在布根地不是問題"
       ],
       "correct": 1,
-      "explanation": "春季霜凍的破壞機制：黑皮諾和霞多麗是早萌品種（相比Cabernet更早），在4-5月的「芽吐窗口」內部分新嫩芽對低溫极其敏感（-2°C 即可凍死）；霜凍後果：部分藤株需用「次生芽（Secondary Bud）」替補，產量大幅減少而果實成熟度通常較低；近年3月底/4月初的氣候暖化使葡萄提前萌芽，而春季霜凍頻率並未同步減少，形成雙重風險提升。"
+      "explanation": "春季霜凍的破壞機制：黑皮諾和夏多內是早萌品種（相比Cabernet更早），在4-5月的「芽吐窗口」內部分新嫩芽對低溫极其敏感（-2°C 即可凍死）；霜凍後果：部分藤株需用「次生芽（Secondary Bud）」替補，產量大幅減少而果實成熟度通常較低；近年3月底/4月初的氣候暖化使葡萄提前萌芽，而春季霜凍頻率並未同步減少，形成雙重風險提升。"
     },
     {
       "id": "qb-m4-1",
@@ -147,7 +147,7 @@
       "id": "qb-m6-1",
       "source": "M6",
       "type": "single",
-      "question": "「Chambertin（香貝坦）」和「Chambertin Clos de Bèze（香貝坦貝日莊）」的關係是？",
+      "question": "「Chambertin（香貝丹）」和「Chambertin Clos de Bèze（香貝丹-貝日園）」的關係是？",
       "options": [
         "A. 完全相同的地塊",
         "B. Clos de Bèze（15.4 ha）是 Chambertin（28.1 ha）的北鄰特級園，兩者風格相近但不同；Clos de Bèze 的酒可以選擇標注為「Chambertin Clos de Bèze」（保留完整稱呼）或單純標注「Chambertin」（降格稱呼），但 Chambertin 的酒不能標注為 Clos de Bèze",
@@ -164,7 +164,7 @@
       "question": "「Montrachet（蒙哈榭）」特級園為何被認為是世界最偉大的白酒地塊之一？",
       "options": [
         "A. 因為它是最大的白酒特級園",
-        "B. Montrachet（7.99 ha）橫跨 Puligny 和 Chassagne 兩個村莊，坐落於最佳的石灰岩中坡位置，土壤礦物豐富度、坡度和排水條件創造了霞多麗的「完美表達條件」——在最佳生產者（DRC/Domaine Leflaive 等）手中，以複雜礦石感、陳年能力（30-50 年）和絕對的密度著稱",
+        "B. Montrachet（7.99 ha）橫跨 Puligny 和 Chassagne 兩個村莊，坐落於最佳的石灰岩中坡位置，土壤礦物豐富度、坡度和排水條件創造了夏多內的「完美表達條件」——在最佳生產者（DRC/Domaine Leflaive 等）手中，以複雜礦石感、陳年能力（30-50 年）和絕對的密度著稱",
         "C. 因為它的面積最小",
         "D. Montrachet 只在特定年份是特級園"
       ],
@@ -273,7 +273,7 @@
       "id": "qb-m10-2",
       "source": "M10",
       "type": "single",
-      "question": "「Meursault（默爾索）」村莊級霞多麗最適合搭配什麼風格的食物？",
+      "question": "「Meursault（梅索）」村莊級夏多內最適合搭配什麼風格的食物？",
       "options": [
         "A. 因為高酸，最適合生蠔",
         "B. Meursault 以「豐滿酒體 + 低酸（相比 Puligny）+ 奶油/榛果感 + 礦石」著稱，最適合搭配：奶油白醬魚料理（Beurre Blanc, Sole Meunière）、龍蝦奶油、奶油蘑菇義大利麵——食物的奶油圓潤感和酒的榛果奶油感形成「質地共鳴」",
@@ -333,7 +333,7 @@
       "options": [
         "A. 高海拔不影響溫度",
         "B. 海拔每上升 100 公尺，氣溫約下降 0.65°C（絕熱遞減率）——在傳統農耕高度（200-300m）的 Côte d'Or 之外，向北坡和更高位置（Hautes Côtes，300-450m）擴展種植可以補償暖化帶來的溫度上升，維持黑皮諾所需的充足生長季溫差",
-        "C. 高海拔只適合霞多麗",
+        "C. 高海拔只適合夏多內",
         "D. 海拔提升在布根地法規下不允許"
       ],
       "correct": 1,
@@ -407,7 +407,7 @@
         "D. 沙布利和 Puligny 沒有差別"
       ],
       "correct": 1,
-      "explanation": "Puligny-Montrachet 的白酒聖地地位：4 個白酒特級園有 3 個主要坐落在 Puligny 境內（Montrachet 的北半、Chevalier-Montrachet、Bienvenues-Bâtard-Montrachet、部分 Bâtard）；1 級園 Les Pucelles 是 Leflaive 和 Etienne Sauzet 的旗艦，全球 Chardonnay 愛好者的「必嚐清單」；Puligny 風格：礦石精緻、清澈的柑橘和石頭感（對比 Meursault 的奶油豐滿）是學習霞多麗風格分化的最佳對照教材。"
+      "explanation": "Puligny-Montrachet 的白酒聖地地位：4 個白酒特級園有 3 個主要坐落在 Puligny 境內（Montrachet 的北半、Chevalier-Montrachet、Bienvenues-Bâtard-Montrachet、部分 Bâtard）；1 級園 Les Pucelles 是 Leflaive 和 Etienne Sauzet 的旗艦，全球 Chardonnay 愛好者的「必嚐清單」；Puligny 風格：礦石精緻、清澈的柑橘和石頭感（對比 Meursault 的奶油豐滿）是學習夏多內風格分化的最佳對照教材。"
     },
     {
       "id": "qb-m15-2",

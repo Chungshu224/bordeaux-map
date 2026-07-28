@@ -84,8 +84,8 @@ function genMerchantTradeNo() {
 const ITEM_NAMES = {
   'bordeaux-basic': '波爾多葡萄酒 完整課程',
   'bordeaux-premium': '波爾多葡萄酒 頂級方案',
-  'bourgogne-basic': '勃根地葡萄酒 完整課程',
-  'bourgogne-premium': '勃根地葡萄酒 頂級方案',
+  'bourgogne-basic': '布根地葡萄酒 完整課程',
+  'bourgogne-premium': '布根地葡萄酒 頂級方案',
   'italy-basic': '義大利葡萄酒 完整課程',
   'italy-premium': '義大利葡萄酒 頂級方案',
   'global-basic': '全球產區通行證（波爾多 + 布根地 + 義大利）'

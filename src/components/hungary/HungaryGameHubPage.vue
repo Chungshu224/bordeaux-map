@@ -86,8 +86,8 @@ const stats = computed(() => {
   let played = 0, totalBest = 0
   keys.forEach(k => { const v = parseInt(localStorage.getItem(k) || '0'); if (v > 0) { played++; totalBest += v } })
   return [
-    { icon: '🎮', value: played,                          label: '已挑戰遲戲' },
-    { icon: '📊', value: keys.length,                     label: '全部遲戲' },
+    { icon: '🎮', value: played,                          label: '已挑戰遊戲' },
+    { icon: '📊', value: keys.length,                     label: '全部遊戲' },
     { icon: '🏅', value: totalBest > 0 ? totalBest : '—', label: '累計最高分' }
   ]
 })

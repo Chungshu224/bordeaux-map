@@ -237,7 +237,7 @@ export const lessonContent = [
         </div>
         <div class="sa-item">
           <h4>🌊 Sonoma Coast（索諾瑪海岸）</h4>
-          <p>廣大的 AVA，包括緊鄰太平洋的極涼爽產地（「True Sonoma Coast」）。是加州最具勃根地風格的 Pinot Noir 產地——酸度明亮，結構優雅。</p>
+          <p>廣大的 AVA，包括緊鄰太平洋的極涼爽產地（「True Sonoma Coast」）。是加州最具布根地風格的 Pinot Noir 產地——酸度明亮，結構優雅。</p>
           <div class="sa-details">
             <span>氣候：涼爽至極涼爽（依距海遠近）</span>
             <span>代表酒莊：Flowers Vineyard、Hirsch Vineyards</span>

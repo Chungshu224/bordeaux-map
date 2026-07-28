@@ -167,7 +167,7 @@
           "type": "image",
           "title": "特級園規模懸殊差異",
           "image": "/bourgogne/images/Lesson/grand-cru-size-bubble.svg",
-          "caption": "不同特級園的面積可以相差數十倍，從約50公頃的「巨無霸」武若園到只有0.8公頃的羅曼尼園。"
+          "caption": "不同特級園的面積可以相差數十倍，從約50公頃的「巨無霸」梧玖園到只有0.8公頃的侯瑪內園。"
         },
         {
           "type": "quiz",
@@ -252,16 +252,16 @@
           "type": "title",
           "title": "夜丘特級園（上）",
           "subtitle": "Lesson 2 - 18分鐘",
-          "description": "熱夫雷-香貝丹與莫雷-聖丹尼的特級園"
+          "description": "哲維瑞-香貝丹與莫瑞-聖丹尼的特級園"
         },
         {
           "type": "content",
-          "title": "熱夫雷-香貝丹的9個特級園",
-          "content": "熱夫雷-香貝丹擁有布根地最多的特級園，全部以「香貝丹」命名，但風格各異。只有Chambertin和Clos de Bèze可以互相標示對方名稱。"
+          "title": "哲維瑞-香貝丹的9個特級園",
+          "content": "哲維瑞-香貝丹擁有布根地最多的特級園，全部以「香貝丹」命名，但風格各異。只有Chambertin和Clos de Bèze可以互相標示對方名稱。"
         },
         {
           "type": "map",
-          "title": "熱夫雷-香貝丹9大特級園地圖",
+          "title": "哲維瑞-香貝丹9大特級園地圖",
           "description": "點擊按鈕查看每個特級園的位置",
           "regions": [
             {
@@ -277,43 +277,43 @@
               "fillColor": "#A52A2A"
             },
             {
-              "name": "查姆-香貝丹",
+              "name": "夏姆-香貝丹",
               "nameFr": "Charmes-Chambertin",
               "id": "charmes-chambertin",
               "fillColor": "#B22222"
             },
             {
-              "name": "沙貝勒-香貝丹",
+              "name": "夏貝爾-香貝丹",
               "nameFr": "Chapelle-Chambertin",
               "id": "chapelle-chambertin",
               "fillColor": "#CD5C5C"
             },
             {
-              "name": "格里奧特-香貝丹",
+              "name": "吉歐特-香貝丹",
               "nameFr": "Griotte-Chambertin",
               "id": "griotte-chambertin",
               "fillColor": "#DC143C"
             },
             {
-              "name": "拉特希葉-香貝丹",
+              "name": "拉堤歇-香貝丹",
               "nameFr": "Latricières-Chambertin",
               "id": "latricieres-chambertin",
               "fillColor": "#E9967A"
             },
             {
-              "name": "瑪茲-香貝丹",
+              "name": "馬利-香貝丹",
               "nameFr": "Mazis-Chambertin",
               "id": "mazis-chambertin",
               "fillColor": "#F08080"
             },
             {
-              "name": "瑪佐耶",
+              "name": "馬索耶",
               "nameFr": "Mazoyères-Chambertin",
               "id": "mazoyeres-chambertin",
               "fillColor": "#FA8072"
             },
             {
-              "name": "呂修特-香貝丹",
+              "name": "胡修特-香貝丹",
               "nameFr": "Ruchottes-Chambertin",
               "id": "ruchottes-chambertin",
               "fillColor": "#FF6347"
@@ -423,7 +423,7 @@
         },
         {
           "type": "list",
-          "title": "🍷 熱夫雷-香貝丹特級園排名",
+          "title": "🍷 哲維瑞-香貝丹特級園排名",
           "points": [
             "1. Chambertin - 12.9公頃，最負盛名",
             "2. Clos de Bèze - 15.4公頃，可標為Chambertin",
@@ -438,16 +438,16 @@
         },
         {
           "type": "content",
-          "title": "莫雷-聖丹尼的5個特級園",
-          "content": "莫雷-聖丹尼被夾在兩個明星村莊之間，但其5個特級園品質卓越，且性價比極高。"
+          "title": "莫瑞-聖丹尼的5個特級園",
+          "content": "莫瑞-聖丹尼被夾在兩個明星村莊之間，但其5個特級園品質卓越，且性價比極高。"
         },
         {
           "type": "map",
-          "title": "莫雷-聖丹尼5大特級園地圖",
+          "title": "莫瑞-聖丹尼5大特級園地圖",
           "description": "點擊按鈕查看每個特級園的位置",
           "regions": [
             {
-              "name": "洛奇園",
+              "name": "羅希園",
               "nameFr": "Clos de la Roche",
               "id": "clos-de-la-roche",
               "fillColor": "#8B008B"
@@ -459,19 +459,19 @@
               "fillColor": "#9932CC"
             },
             {
-              "name": "蘭布雷園",
+              "name": "蘭貝園",
               "nameFr": "Clos des Lambrays",
               "id": "clos-des-lambrays",
               "fillColor": "#BA55D3"
             },
             {
-              "name": "塔爾園",
+              "name": "大德園",
               "nameFr": "Clos de Tart",
               "id": "clos-de-tart",
               "fillColor": "#9370DB"
             },
             {
-              "name": "邦馬爾(莫雷部分)",
+              "name": "邦-馬爾(莫瑞部分)",
               "nameFr": "Bonnes-Mares",
               "id": "bonnes-mares-morey",
               "fillColor": "#8A2BE2"
@@ -541,7 +541,7 @@
         },
         {
           "type": "list",
-          "title": "💎 莫雷-聖丹尼特級園",
+          "title": "💎 莫瑞-聖丹尼特級園",
           "points": [
             "Clos de la Roche - 16.9公頃，最大最優",
             "風格：力量與優雅完美平衡",
@@ -557,7 +557,7 @@
         {
           "type": "content",
           "title": "投資建議",
-          "content": "莫雷-聖丹尼的特級園被嚴重低估，價格僅為熱夫雷-香貝丹的60-70%，但品質不遑多讓。Clos de la Roche和Clos Saint-Denis是性價比極高的投資選擇。"
+          "content": "莫瑞-聖丹尼的特級園被嚴重低估，價格僅為哲維瑞-香貝丹的60-70%，但品質不遑多讓。Clos de la Roche和Clos Saint-Denis是性價比極高的投資選擇。"
         },
         {
           "type": "quiz",
@@ -565,7 +565,7 @@
           "questions": [
             {
               "type": "single",
-              "question": "熱夫雷-香貝丹 9 個特級園中，被稱為「王者之王」的是哪一個？",
+              "question": "哲維瑞-香貝丹 9 個特級園中，被稱為「王者之王」的是哪一個？",
               "options": [
                 "A. Mazis-Chambertin",
                 "B. Chambertin",
@@ -589,7 +589,7 @@
             },
             {
               "type": "multiple",
-              "question": "莫雷-聖丹尼（Morey-Saint-Denis）的 Grand Cru 包括哪些？（多選）",
+              "question": "莫瑞-聖丹尼（Morey-Saint-Denis）的 Grand Cru 包括哪些？（多選）",
               "options": [
                 "A. Clos de la Roche",
                 "B. Clos Saint-Denis",
@@ -643,32 +643,32 @@
           "type": "title",
           "title": "夜丘特級園（中）",
           "subtitle": "Lesson 3 - 17分鐘",
-          "description": "香波-慕西尼與伏舊的特級園"
+          "description": "香波-蜜思妮與梧玖的特級園"
         },
         {
           "type": "content",
-          "title": "香波-慕西尼的2+1個特級園",
-          "content": "香波-慕西尼雖只有2個獨有特級園，但都是夜丘最優雅的代表。還有部分Bonnes-Mares位於此村。"
+          "title": "香波-蜜思妮的2+1個特級園",
+          "content": "香波-蜜思妮雖只有2個獨有特級園，但都是夜丘最優雅的代表。還有部分Bonnes-Mares位於此村。"
         },
         {
           "type": "map",
-          "title": "香波-慕西尼與伏舊特級園地圖",
+          "title": "香波-蜜思妮與梧玖特級園地圖",
           "description": "點擊按鈕查看特級園位置",
           "regions": [
             {
-              "name": "慕西尼",
+              "name": "蜜思妮",
               "nameFr": "Musigny",
               "id": "musigny",
               "fillColor": "#DB7093"
             },
             {
-              "name": "邦馬爾",
+              "name": "邦-馬爾",
               "nameFr": "Bonnes-Mares",
               "id": "bonnes-mares-chambolle",
               "fillColor": "#C71585"
             },
             {
-              "name": "克洛伏舊",
+              "name": "梧玖園",
               "nameFr": "Clos de Vougeot",
               "id": "clos-vougeot",
               "fillColor": "#B22222"
@@ -718,21 +718,21 @@
         },
         {
           "type": "list",
-          "title": "🌹 Musigny - 慕西尼",
+          "title": "🌹 Musigny - 蜜思妮",
           "points": [
             "面積：10.9公頃（10.7紅酒 + 0.7白酒）",
             "風格：夜丘最優雅、如絲綢般質地",
             "香氣：玫瑰、紫羅蘭、紅色莓果",
             "特色：唯一可產少量白酒的夜丘特級園",
             "頂級生產者：Domaine Comte Georges de Vogüé",
-            "價格：與羅曼尼康帝同級"
+            "價格：與侯瑪內-康地同級"
           ]
         },
         {
           "type": "list",
-          "title": "💪 Bonnes-Mares - 邦馬爾",
+          "title": "💪 Bonnes-Mares - 邦-馬爾",
           "points": [
-            "面積：15.1公頃（13.6在香波，1.5在莫雷）",
+            "面積：15.1公頃（13.6在香波，1.5在莫瑞）",
             "風格：比Musigny更強勁，兼具力量與優雅",
             "香氣：黑色水果、香料、礦物",
             "特色：兩個地塊風格不同",
@@ -742,7 +742,7 @@
         },
         {
           "type": "content",
-          "title": "Clos de Vougeot - 克洛-伏舊",
+          "title": "Clos de Vougeot - 克洛-梧玖",
           "content": "布根地最著名的特級園之一，但也最具爭議。面積50.6公頃，是特級園中最大的之一，擁有80多位地主，品質參差不齊。"
         },
         {
@@ -751,7 +751,7 @@
           "points": [
             "歷史：西篤會僧侶於12世紀建立",
             "石牆環繞的「Clos」（封閉園）",
-            "上坡地段 - 頂級品質，接近慕西尼",
+            "上坡地段 - 頂級品質，接近蜜思妮",
             "中坡地段 - 優秀品質",
             "下坡地段 - 品質較普通，近平地",
             "選購關鍵：必須了解生產者與地塊位置",
@@ -764,7 +764,7 @@
           "questions": [
             {
               "type": "single",
-              "question": "香波-慕西尼（Chambolle-Musigny）的兩個特級園是哪兩個？",
+              "question": "香波-蜜思妮（Chambolle-Musigny）的兩個特級園是哪兩個？",
               "options": [
                 "A. Musigny 和 Les Amoureuses",
                 "B. Musigny 和 Bonnes-Mares",
@@ -800,7 +800,7 @@
             },
             {
               "type": "multiple",
-              "question": "馮內-羅曼尼（Vosne-Romanée）的特級園包括哪些？（多選）",
+              "question": "馮內-侯瑪內（Vosne-Romanée）的特級園包括哪些？（多選）",
               "options": [
                 "A. Romanée-Conti",
                 "B. La Tâche",
@@ -841,50 +841,50 @@
           "type": "title",
           "title": "夜丘特級園（下）",
           "subtitle": "Lesson 4 - 20分鐘",
-          "description": "馮內-羅曼尼的8大傳奇特級園"
+          "description": "馮內-侯瑪內的8大傳奇特級園"
         },
         {
           "type": "content",
-          "title": "馮內-羅曼尼：特級園的天堂",
-          "content": "這個小村莊集中了8個特級園，包括世界最貴的羅曼尼康帝。每一個特級園都有鮮明個性，代表黑皮諾的不同面向。"
+          "title": "馮內-侯瑪內：特級園的天堂",
+          "content": "這個小村莊集中了8個特級園，包括世界最貴的侯瑪內-康地。每一個特級園都有鮮明個性，代表黑皮諾的不同面向。"
         },
         {
           "type": "map",
-          "title": "馮內-羅曼尼8大特級園地圖",
+          "title": "馮內-侯瑪內8大特級園地圖",
           "description": "點擊按鈕查看每個傳奇特級園的位置",
           "regions": [
             {
-              "name": "羅曼尼康帝",
+              "name": "侯瑪內-康地",
               "nameFr": "Romanée-Conti",
               "id": "romanee-conti",
               "fillColor": "#8B0000"
             },
             {
-              "name": "拉塔希",
+              "name": "塔須園",
               "nameFr": "La Tâche",
               "id": "la-tache",
               "fillColor": "#A52A2A"
             },
             {
-              "name": "羅曼尼",
+              "name": "侯瑪內園",
               "nameFr": "La Romanée",
               "id": "la-romanee",
               "fillColor": "#B22222"
             },
             {
-              "name": "李奇堡",
+              "name": "李其堡",
               "nameFr": "Richebourg",
               "id": "richebourg",
               "fillColor": "#CD5C5C"
             },
             {
-              "name": "羅曼尼-聖維旺",
+              "name": "侯瑪內-聖維望",
               "nameFr": "Romanée-Saint-Vivant",
               "id": "romanee-saint-vivant",
               "fillColor": "#DC143C"
             },
             {
-              "name": "大街",
+              "name": "大道園",
               "nameFr": "La Grande Rue",
               "id": "la-grande-rue",
               "fillColor": "#E9967A"
@@ -1009,7 +1009,7 @@
         {
           "type": "chart",
           "chartType": "bar",
-          "title": "💰 馮內-羅曼尼8大特級園價格排名",
+          "title": "💰 馮內-侯瑪內8大特級園價格排名",
           "content": "平均單瓶售價對比（歐元）",
           "data": {
             "items": [
@@ -1056,11 +1056,11 @@
             ],
             "unit": "€"
           },
-          "note": "羅曼尼康帝的價格是其他特級園的 4-40 倍。Echézeaux 是最親民的馮內-羅曼尼特級園，但品質仍屬頂級。投資收藏建議：頂級 3 個，性價比選擇：後 3 個。"
+          "note": "侯瑪內-康地的價格是其他特級園的 4-40 倍。Echézeaux 是最親民的馮內-侯瑪內特級園，但品質仍屬頂級。投資收藏建議：頂級 3 個，性價比選擇：後 3 個。"
         },
         {
           "type": "list",
-          "title": "💎 La Tâche - 拉塔希",
+          "title": "💎 La Tâche - 塔須園",
           "points": [
             "面積：6.1公頃",
             "獨家所有：DRC",
@@ -1102,7 +1102,7 @@
         {
           "type": "content",
           "title": "投資與收藏",
-          "content": "馮內-羅曼尼的特級園是頂級收藏家的必備。建議：DRC的酒需極高預算；其他優質生產者如Leroy、Méo-Camuzet性價比更佳；Richebourg和RSV是較親民的入門選擇。"
+          "content": "馮內-侯瑪內的特級園是頂級收藏家的必備。建議：DRC的酒需極高預算；其他優質生產者如Leroy、Méo-Camuzet性價比更佳；Richebourg和RSV是較親民的入門選擇。"
         },
         {
           "type": "quiz",
@@ -1206,13 +1206,13 @@
               "fillColor": "#FFD700"
             },
             {
-              "name": "騎士-蒙哈榭",
+              "name": "歇瓦里-蒙哈榭",
               "nameFr": "Chevalier-Montrachet",
               "id": "chevalier-montrachet",
               "fillColor": "#F0E68C"
             },
             {
-              "name": "巴塔-蒙哈榭",
+              "name": "巴達-蒙哈榭",
               "nameFr": "Bâtard-Montrachet",
               "id": "batard-montrachet",
               "fillColor": "#DAA520"
@@ -1230,7 +1230,7 @@
               "fillColor": "#CD853F"
             },
             {
-              "name": "科爾通-查理曼",
+              "name": "高登-查理曼",
               "nameFr": "Corton-Charlemagne",
               "id": "corton-charlemagne",
               "fillColor": "#FFE4B5"
@@ -1242,7 +1242,7 @@
               "fillColor": "#FFEFD5"
             },
             {
-              "name": "科爾通(紅酒)",
+              "name": "高登(紅酒)",
               "nameFr": "Corton",
               "id": "corton-rouge",
               "fillColor": "#8B0000"
@@ -1373,7 +1373,7 @@
         },
         {
           "type": "list",
-          "title": "👑 科爾通山特級園",
+          "title": "👑 高登山特級園",
           "points": [
             "Corton-Charlemagne - 51.6公頃，最大白酒特級園",
             "風格：礦物感強、優雅精緻",
@@ -1393,7 +1393,7 @@
             "陳年後金黃色",
             "需10-30年陳年"
           ],
-          "rightTitle": "科爾通-查理曼",
+          "rightTitle": "高登-查理曼",
           "rightPoints": [
             "優雅精緻",
             "礦物花香",
@@ -1444,7 +1444,7 @@
                 "D. 按土壤顏色：白土為白酒，紅土為紅酒"
               ],
               "correct": 1,
-              "explanation": "科爾通山的 Grand Cru 劃分相對靈活：法規核心是種什麼品種就生產對應的酒款，種 Pinot Noir 的可申報 Corton，種 Chardonnay 的可申報 Corton-Charlemagne，但具體到山丘的坡向位置也有影響。"
+              "explanation": "高登山的 Grand Cru 劃分相對靈活：法規核心是種什麼品種就生產對應的酒款，種 Pinot Noir 的可申報 Corton，種 Chardonnay 的可申報 Corton-Charlemagne，但具體到山丘的坡向位置也有影響。"
             },
             {
               "type": "multiple",
@@ -1534,7 +1534,7 @@
             "入門級：Corton-Charlemagne、Richebourg",
             "進階級：Clos de la Roche、Musigny",
             "頂級：Romanée-Conti、Montrachet、La Tâche",
-            "性價比：莫雷-聖丹尼的特級園被低估",
+            "性價比：莫瑞-聖丹尼的特級園被低估",
             "保存：恆溫恆濕酒窖（12-14°C，70%濕度）",
             "持有期：至少10-20年才能欣賞全貌"
           ]
@@ -1652,17 +1652,17 @@
         "question": "哪個村莊擁有最多特級園？",
         "type": "single",
         "options": [
-          "馮內-羅曼尼",
-          "熱夫雷-香貝丹",
-          "香波-慕西尼",
-          "莫雷-聖丹尼"
+          "馮內-侯瑪內",
+          "哲維瑞-香貝丹",
+          "香波-蜜思妮",
+          "莫瑞-聖丹尼"
         ],
         "correctAnswer": 1,
-        "explanation": "熱夫雷-香貝丹擁有9個特級園，都以「香貝丹」命名。"
+        "explanation": "哲維瑞-香貝丹擁有9個特級園，都以「香貝丹」命名。"
       },
       {
         "id": "q3",
-        "question": "羅曼尼康帝特級園獨家擁有者是？",
+        "question": "侯瑪內-康地特級園獨家擁有者是？",
         "type": "single",
         "options": [
           "Leroy",
@@ -1671,7 +1671,7 @@
           "Dujac"
         ],
         "correctAnswer": 1,
-        "explanation": "羅曼尼康帝由Domaine de la Romanée-Conti (DRC)獨家擁有，是Monopole。"
+        "explanation": "侯瑪內-康地由Domaine de la Romanée-Conti (DRC)獨家擁有，是Monopole。"
       },
       {
         "id": "q4",

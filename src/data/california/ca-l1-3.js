@@ -316,7 +316,7 @@ export const lessonContent = [
           <div class="structure-grid">
             <div class="sp-item"><strong>酒精：</strong>通常 13.5-15.5%，飽滿豐厚</div>
             <div class="sp-item"><strong>單寧：</strong>依子 AVA 而異——山地（Howell Mountain）單寧緊實，谷底（Rutherford）單寧絲滑</div>
-            <div class="sp-item"><strong>酸度：</strong>中等，通常不如波爾多或勃根地高</div>
+            <div class="sp-item"><strong>酸度：</strong>中等，通常不如波爾多或布根地高</div>
             <div class="sp-item"><strong>陳年潛力：</strong>頂級酒款 20-30+ 年，一般酒款 5-15 年</div>
           </div>
         </div>
@@ -378,7 +378,7 @@ export const lessonContent = [
           {
             type: 'single',
             question: '以下哪個描述最準確地形容 Napa Valley Cabernet Sauvignon 的特點？',
-            options: ['A. 輕盈清雅，酸度高，適合年輕飲用', 'B. 豐厚飽滿，黑果香為主，單寧圓潤，橡木風味明顯', 'C. 以礦石感和高酸度為主，類似勃根地 Pinot Noir', 'D. 以花香和紅果為主，適合配海鮮'],
+            options: ['A. 輕盈清雅，酸度高，適合年輕飲用', 'B. 豐厚飽滿，黑果香為主，單寧圓潤，橡木風味明顯', 'C. 以礦石感和高酸度為主，類似布根地 Pinot Noir', 'D. 以花香和紅果為主，適合配海鮮'],
             correct: 1,
             explanation: 'Napa Valley Cabernet Sauvignon 以豐厚飽滿著稱：黑莓、黑醋栗、李子等黑果香，美國或法國橡木帶來香草、雪松和巧克力，單寧圓潤（尤其是谷底產區），酒精偏高（13.5-15.5%）。'
           }

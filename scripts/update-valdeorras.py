@@ -74,7 +74,7 @@ old_godello_content = """    html: `
         <li><strong>桶陳版本</strong>：增加奶油烤麵包感，複雜度媲美頂級 Burgundy 白酒</li>
       </ul>
       <h4>🌍 全球認可</h4>
-      <p>業界常將頂級 Godello 與勃根地 Chardonnay 相提並論。</p>
+      <p>業界常將頂級 Godello 與布根地 Chardonnay 相提並論。</p>
       <h4>💡 Treixadura（Ribeiro 的寶貝）</h4>
       <p>Ribeiro 的代表白品種，帶有玫瑰花瓣、杏桃和淡淡香草，質地圓潤。通常與 Godello、Albariño 混調，增添複雜度。</p>
     `,"""

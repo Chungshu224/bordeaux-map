@@ -35,7 +35,7 @@ export const lessonContent = [
       { id: 1, icon: '🥇', title: 'Gere Attila Winery', content: '維拉尼最知名酒莊，單一葡萄園 Kopar Cabernet Franc 是鎮莊之寶，深色果味＋雪松＋黑巧克力，酒體飽滿可陳年 20 年' },
       { id: 2, icon: '🥈', title: 'Bock Winery', content: '家族釀酒傳承，旗艦酒 Ermitage 為 Cabernet Franc 主導的混釀，帶有煙燻皮革和黑醋栗；對遊客友好，設有高端餐廳' },
       { id: 3, icon: '🏅', title: 'Malatinszky Estate', content: '精品小農，堅持低產量（每公頃不超過 4,000 公升），手工採收，Franc Noir 展現維拉尼最精緻的一面：紫羅蘭＋鐵礦石' },
-      { id: 4, icon: '🌿', title: 'Tiffán Estate', content: '傳統方法捍衛者，使用大型舊橡木桶（而非法國新桶），酒款強調風土表達，風格更接近勃根地的精準與克制' }
+      { id: 4, icon: '🌿', title: 'Tiffán Estate', content: '傳統方法捍衛者，使用大型舊橡木桶（而非法國新桶），酒款強調風土表達，風格更接近布根地的精準與克制' }
     ],
     content: `<div class="villany-estates">
       <div class="grape-varieties">

@@ -105,7 +105,7 @@ export const lessonContent = [
           </div>
           <div class="mlf-card none">
             <h5>完全不進行 MLF（Crisp Style）</h5>
-            <p>2010 年代後流行的「新浪潮加州白酒」風格。保留蘋果酸的清爽感，展現 Chardonnay 的果香和礦物感，不用或少用橡木桶。代表：Littorai、Ceritas 的勃根地風格 Chardonnay</p>
+            <p>2010 年代後流行的「新浪潮加州白酒」風格。保留蘋果酸的清爽感，展現 Chardonnay 的果香和礦物感，不用或少用橡木桶。代表：Littorai、Ceritas 的布根地風格 Chardonnay</p>
             <span class="mlf-result">結果：清爽、高酸、礦物感</span>
           </div>
           <div class="mlf-card partial">
@@ -290,7 +290,7 @@ export const lessonContent = [
             question: 'Winkler 制度 Region I 最適合哪類品種？',
             options: ['A. Zinfandel 和 Grenache', 'B. Pinot Noir 和 Chardonnay', 'C. Cabernet Sauvignon 和 Merlot', 'D. Barbera 和 Sangiovese'],
             correct: 1,
-            explanation: 'Region I 是最涼爽的氣候帶（< 2,500 GDD），類似勃根地氣候，最適合 Pinot Noir、Chardonnay 和 Riesling 等涼爽氣候品種。'
+            explanation: 'Region I 是最涼爽的氣候帶（< 2,500 GDD），類似布根地氣候，最適合 Pinot Noir、Chardonnay 和 Riesling 等涼爽氣候品種。'
           },
           {
             type: 'single',

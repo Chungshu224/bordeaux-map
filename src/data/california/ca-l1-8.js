@@ -294,9 +294,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '加州 Chardonnay 的「Wente Clone」典故是指什麼？',
-            options: ['A. Ridge Winery 研發的 Chardonnay 克隆', 'B. C.H. Wente 1880 年代從勃根地引進的 Chardonnay 克隆，成為加州 80% Chardonnay 的基因來源', 'C. 加州大學 Davis 分校培育的實驗克隆', 'D. 禁酒令後重新引進的 Chardonnay 品種'],
+            options: ['A. Ridge Winery 研發的 Chardonnay 克隆', 'B. C.H. Wente 1880 年代從布根地引進的 Chardonnay 克隆，成為加州 80% Chardonnay 的基因來源', 'C. 加州大學 Davis 分校培育的實驗克隆', 'D. 禁酒令後重新引進的 Chardonnay 品種'],
             correct: 1,
-            explanation: 'Wente Clone 是指 C.H. Wente 在 1880 年代從勃根地引進的 Chardonnay 克隆株，種植於 Livermore Valley。這批克隆後來成為整個加州 Chardonnay 種植的主要基因來源，加州約 80% 的 Chardonnay 可追溯至此。'
+            explanation: 'Wente Clone 是指 C.H. Wente 在 1880 年代從布根地引進的 Chardonnay 克隆株，種植於 Livermore Valley。這批克隆後來成為整個加州 Chardonnay 種植的主要基因來源，加州約 80% 的 Chardonnay 可追溯至此。'
           },
           {
             type: 'single',

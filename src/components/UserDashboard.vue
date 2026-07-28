@@ -180,7 +180,7 @@ onMounted(async () => {
 // 工具函式
 const COURSE_META = {
   bordeaux:  { name: '波爾多葡萄酒', icon: '🏰', route: '/bordeaux' },
-  bourgogne: { name: '勃根地葡萄酒', icon: '🍇', route: '/bourgogne' },
+  bourgogne: { name: '布根地葡萄酒', icon: '🍇', route: '/bourgogne' },
   italy:     { name: '義大利葡萄酒', icon: '🇮🇹', route: '/italy' },
   spain:     { name: '西班牙葡萄酒', icon: '🇪🇸', route: '/spain' },
   loire:     { name: '羅亞爾河葡萄酒', icon: '🌿', route: '/loire' },

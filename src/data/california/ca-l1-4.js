@@ -81,7 +81,7 @@ export const lessonContent = [
             <li>🍓 草莓、覆盆子、紅醋栗等鮮豔紅果香</li>
             <li>🌺 花香（紫羅蘭、玫瑰）</li>
             <li>🌿 新鮮香草（薄荷、肉桂）</li>
-            <li>💎 天然高酸度（與勃根地 Pinot 相比）</li>
+            <li>💎 天然高酸度（與布根地 Pinot 相比）</li>
             <li>🥂 細膩絲滑的單寧</li>
           </ul>
         </div>
@@ -137,7 +137,7 @@ export const lessonContent = [
         </div>
         <div class="ava-item">
           <h4>Sonoma Valley</h4>
-          <p>Sonoma 城周圍的歷史性 AVA，也是加州葡萄酒旅遊的起源地。溫和氣候，多元品種，是最早釀造優質葡萄酒的 Sonoma 地帶。代表：Hanzell Vineyards（1950年代起即模仿勃根地風格）。</p>
+          <p>Sonoma 城周圍的歷史性 AVA，也是加州葡萄酒旅遊的起源地。溫和氣候，多元品種，是最早釀造優質葡萄酒的 Sonoma 地帶。代表：Hanzell Vineyards（1950年代起即模仿布根地風格）。</p>
         </div>
         <div class="ava-item">
           <h4>Carneros（Los Carneros）</h4>
@@ -246,7 +246,7 @@ export const lessonContent = [
             question: 'Sonoma County 哪個品種的種植面積居加州全州之冠？',
             options: ['A. Cabernet Sauvignon', 'B. Chardonnay', 'C. Pinot Noir', 'D. Zinfandel'],
             correct: 2,
-            explanation: 'Sonoma County 種植的 Pinot Noir 比加州任何其他郡都多，Russian River Valley 是最重要的子 AVA，以優雅的勃根地風格 Pinot Noir 聞名。'
+            explanation: 'Sonoma County 種植的 Pinot Noir 比加州任何其他郡都多，Russian River Valley 是最重要的子 AVA，以優雅的布根地風格 Pinot Noir 聞名。'
           },
           {
             type: 'single',

@@ -164,10 +164,10 @@ NEW_QUESTIONS_OBJECT = {
         },
         {
             'id': 5,
-            'question': '葡萄酒投資組合 60% 波爾多一級莊 + 30% 勃根地特級園 + 10% 其他，Sharpe Ratio = 0.85。為提升 Sharpe Ratio，最有效的調整是？',
+            'question': '葡萄酒投資組合 60% 波爾多一級莊 + 30% 布根地特級園 + 10% 其他，Sharpe Ratio = 0.85。為提升 Sharpe Ratio，最有效的調整是？',
             'options': [
                 {'id': 'a', 'text': '全集中波爾多一級莊，提高集中度', 'explanation': '集中持倉提高波動性（σp），Sharpe Ratio = (Rp - Rf) / σp 通常下降。'},
-                {'id': 'b', 'text': '引入低相關性資產（如義大利 Super Tuscan、年份香檳），降低組合波動', 'explanation': '✓ 正確! 降低 σp 可在相同預期回報下提升 Sharpe Ratio。低相關性資產是教科書級多元化策略，歷史上波爾多與勃根地相關性約 0.65~0.75，引入義大利/香檳資產可顯著降低組合波動。', 'correct': True},
+                {'id': 'b', 'text': '引入低相關性資產（如義大利 Super Tuscan、年份香檳），降低組合波動', 'explanation': '✓ 正確! 降低 σp 可在相同預期回報下提升 Sharpe Ratio。低相關性資產是教科書級多元化策略，歷史上波爾多與布根地相關性約 0.65~0.75，引入義大利/香檳資產可顯著降低組合波動。', 'correct': True},
                 {'id': 'c', 'text': '增加期酒槓桿操作', 'explanation': '槓桿放大波動和損失，Sharpe Ratio 通常惡化。'},
                 {'id': 'd', 'text': '持倉不動，等待市場回升', 'explanation': '被動持有不改變組合結構，Sharpe Ratio 由持倉決定。'},
             ],

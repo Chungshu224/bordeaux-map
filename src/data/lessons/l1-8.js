@@ -380,7 +380,7 @@ export const lessonContent = [
           question: '以下哪個葡萄品種「不屬於」波爾多的法定品種？',
           options: ['小維多（Petit Verdot）', '黑皮諾（Pinot Noir）', '馬爾貝克（Malbec）', '卡門內爾（Carménère）'],
           correct: 1,
-          explanation: '黑皮諾是勃根地的代表品種，波爾多不種植也不允許。波爾多法定紅葡萄品種包括：卡本內-蘇維濃、梅洛、卡本內弗朗、馬爾貝克（Côt）、小維多、卡門內爾等。'
+          explanation: '黑皮諾是布根地的代表品種，波爾多不種植也不允許。波爾多法定紅葡萄品種包括：卡本內-蘇維濃、梅洛、卡本內弗朗、馬爾貝克（Côt）、小維多、卡門內爾等。'
         },
         {
           question: '「兩海之間」（Entre-Deux-Mers）名稱中的「兩海」指的是？',

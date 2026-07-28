@@ -40,7 +40,7 @@ if (caSlideStart === -1 || caSlideEnd === -1) {
     '      </div>',
     '      <div class="timeline-item">',
     '        <div class="timeline-badge sparkling">1976</div>',
-    '        <div class="timeline-content"><strong>🏆 巴黎評判（Judgment of Paris）</strong><p>英國酒商 Steven Spurrier 在巴黎舉辦的盲品大賽中，納帕谷 Stag\'s Leap 的 Cabernet Sauvignon 和 Chateau Montelena 的 Chardonnay 分別擊敗波爾多和勃根地頂級名莊，震驚全球。</p></div>',
+    '        <div class="timeline-content"><strong>🏆 巴黎評判（Judgment of Paris）</strong><p>英國酒商 Steven Spurrier 在巴黎舉辦的盲品大賽中，納帕谷 Stag\'s Leap 的 Cabernet Sauvignon 和 Chateau Montelena 的 Chardonnay 分別擊敗波爾多和布根地頂級名莊，震驚全球。</p></div>',
     '      </div>',
     '      <div class="timeline-item">',
     '        <div class="timeline-badge doc">1981</div>',

@@ -96,12 +96,12 @@ const QUIZ_MAP = {
       },
       {
         type: 'single',
-        question: '布根地頂級黑皮諾搭配「勃根地紅酒燉牛肉（Boeuf Bourguignon）」的搭配原理是？',
+        question: '布根地頂級黑皮諾搭配「布根地紅酒燉牛肉（Boeuf Bourguignon）」的搭配原理是？',
         options: [
           'A. 兩者都是法國食品，沒有其他關聯',
           'B. 多維度協同：① 地域搭配（Regional Harmony）——布根地酒 + 布根地食譜，共享風土風味語境；② 風味鏡像（Flavor Mirroring）——燉牛肉的蘑菇/百里香/月桂風味與成熟布根地的「二次/三次香（蘑菇/泥土/森林底層）」形成鏡像共鳴；③ 質地協同——長時燉煮的牛肉膠原蛋白帶出豐厚質地，與頂尖布根地的絲滑單寧在口感上「共同提升（Co-elevation）」；④ 酸度清潔——布根地的高酸度在較油潤的燉肉醬汁中提供清潔感',
           'C. 純屬巧合，布根地酒不適合燉牛肉',
-          'D. 勃根地燉牛肉只能搭配波爾多'
+          'D. 布根地燉牛肉只能搭配波爾多'
         ],
         correct: 1,
         explanation: '地域搭配的「風土鏡像（Terroir Mirroring）」假說：法國各產區傳統菜餚往往與當地葡萄酒在幾百年的共同演化中達到了無意識的感官和諧——布根地人使用當地黑皮諾燉牛肉（Boeuf Bourguignon），食物和酒都因相同風土環境發展出相似的酸/鮮/泥土/蘑菇風味化合物（如 Dimethyl Sulfide 二甲硫，常見於「Earthy/Mushroom」的感官描述，在布根地泥土土壤和蘑菇中共存）。這個「地域搭配」原則（Regional Pairing/Somme Terroir Pairing）在布根地、薄酒萊、阿爾薩斯、隆河等法國產區普遍有效。'

@@ -10,12 +10,12 @@ import * as turf from '@turf/turf'
 
 // ── 法語地質描述 → 中文對應 ──────────────────────────────────────────
 const DESCR_MAP = [
-  { match: ['calcaire', 'craie', 'calcschiste'],    zh: '石灰岩', icon: '🪨', cat: '石灰岩質', wine: '石灰岩富含鈣質，有助葡萄保留天然酸度，賦予白葡萄酒礦物感，勃根地、香檳、羅亞爾河的核心土壤。' },
+  { match: ['calcaire', 'craie', 'calcschiste'],    zh: '石灰岩', icon: '🪨', cat: '石灰岩質', wine: '石灰岩富含鈣質，有助葡萄保留天然酸度，賦予白葡萄酒礦物感，布根地、香檳、羅亞爾河的核心土壤。' },
   { match: ['granite', 'granit', 'pegmatite'],       zh: '花崗岩', icon: '🗿', cat: '深成岩',   wine: '花崗岩排水優良，貧瘠而礦物質豐富，有助葡萄根系深入尋找養分，產出結構堅實、具礦物張力的葡萄酒。' },
   { match: ['basalte', 'andésite', 'andésite', 'trachyte', 'phonolite', 'volcanique', 'volcan'],
                                                      zh: '火山岩', icon: '🌋', cat: '火山岩',   wine: '火山岩土壤富含礦物質，賦予葡萄酒獨特的煙燻感和火山礦石風味。' },
-  { match: ['marne', 'marneux'],                     zh: '泥灰岩', icon: '🟤', cat: '泥灰岩質', wine: '泥灰岩混合石灰石與黏土，保水性適中，是眾多頂級產區的核心土壤——勃根地金丘、波爾多右岸、羅亞爾河與義大利許多名莊均以泥灰岩為根基。' },
-  { match: ['argile', 'argileux', 'argilo'],         zh: '黏土', icon: '🟫', cat: '黏土質',   wine: '黏土保水性強，適合晚熟品種生長。梅洛（Merlot）在波爾多右岸黏土上展現豐潤風格；黑皮諾（Pinot Noir）在勃根地黏土層中則孕育出深邃、絲滑的質地。' },
+  { match: ['marne', 'marneux'],                     zh: '泥灰岩', icon: '🟤', cat: '泥灰岩質', wine: '泥灰岩混合石灰石與黏土，保水性適中，是眾多頂級產區的核心土壤——布根地金丘、波爾多右岸、羅亞爾河與義大利許多名莊均以泥灰岩為根基。' },
+  { match: ['argile', 'argileux', 'argilo'],         zh: '黏土', icon: '🟫', cat: '黏土質',   wine: '黏土保水性強，適合晚熟品種生長。梅洛（Merlot）在波爾多右岸黏土上展現豐潤風格；黑皮諾（Pinot Noir）在布根地黏土層中則孕育出深邃、絲滑的質地。' },
   { match: ['alluvion', 'alluvions'],                zh: '沖積土', icon: '💧', cat: '沖積物',  wine: '河流沖積土由礫石、細沙與粉土交互堆積而成，結構多樣。波爾多梅多克、隆河谷地、義大利波河平原等眾多名產區均坐落在沖積平原上。' },
   { match: ['gravel', 'graves', 'galet', 'galets', 'gravelle'],
                                                      zh: '礫石土', icon: '⚪', cat: '礫石質',  wine: '礫石土壤白天吸熱、夜間散熱，有助葡萄均勻成熟、降低疾病風險。波爾多 Graves、隆河谷地的鵝卵石（Galets Roulés）及西班牙普里奧拉托均以礫石土著稱。' },
@@ -40,9 +40,9 @@ const REGION_DESCR_OVERRIDE = {
     '砂岩/砂土': '波爾多部分低窪地帶（如 Lussac、Fronsac 邊緣）出現砂質土壤，排水迅速，適合種植梅洛，釀出輕盈早飲風格的酒款。',
   },
   bourgogne: {
-    '黏土':     '勃根地金丘下坡偏黏土的地塊（如 Meursault 部分 Premier Cru）賦予黑皮諾（Pinot Noir）豐潤、絲滑的果感，夏多內（Chardonnay）則展現奶油與榛果風味。',
-    '泥灰岩':   '勃根地金丘的泥灰岩（Calcaire Marneux）是黑皮諾與夏多內最重要的土壤母質，精確的泥灰岩厚度與比例決定每個 Lieu-dit 的個性與層次。',
-    '石灰岩':   '勃根地金丘的石灰岩骨架賦予黑皮諾精緻酸度與礦物骨感；夏布利（Chablis）的啟莫里奇（Kimmeridgian）石灰岩更帶出獨特燧石礦物感與海洋鹹鮮。',
+    '黏土':     '布根地金丘下坡偏黏土的地塊（如 Meursault 部分 Premier Cru）賦予黑皮諾（Pinot Noir）豐潤、絲滑的果感，夏多內（Chardonnay）則展現奶油與榛果風味。',
+    '泥灰岩':   '布根地金丘的泥灰岩（Calcaire Marneux）是黑皮諾與夏多內最重要的土壤母質，精確的泥灰岩厚度與比例決定每個 Lieu-dit 的個性與層次。',
+    '石灰岩':   '布根地金丘的石灰岩骨架賦予黑皮諾精緻酸度與礦物骨感；夏布利（Chablis）的啟莫里奇（Kimmeridgian）石灰岩更帶出獨特燧石礦物感與海洋鹹鮮。',
     '片岩/板岩': '薄酒萊北段（Moulin-à-Vent、Fleurie 等特級莊）花崗岩丘陵邊緣出現片岩，排水良好，賦予佳美（Gamay）細膩的礦物感與陳年潛力。',
     '花崗岩':   '薄酒萊北端十個特級莊坐落於花崗岩山丘之上，貧瘠且礦物質豐富，佳美（Gamay）在此根系深入，釀出具有結構感與礦物張力的頂級酒款。',
   },

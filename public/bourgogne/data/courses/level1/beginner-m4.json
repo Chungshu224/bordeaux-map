@@ -1,7 +1,7 @@
 {
   "moduleId": "module4",
   "title": "伯恩丘探索 Côte de Beaune",
-  "description": "深入探索布根地白酒天堂伯恩丘，了解 Meursault、Puligny-Montrachet、Chassagne-Montrachet 等名村，以及霞多麗的極致表現",
+  "description": "深入探索布根地白酒天堂伯恩丘，了解 Meursault、Puligny-Montrachet、Chassagne-Montrachet 等名村，以及夏多內的極致表現",
   "lessons": [
     {
       "id": "lesson1",
@@ -13,7 +13,7 @@
           "type": "title",
           "title": "伯恩丘概覽：白酒天堂",
           "subtitle": "12分鐘",
-          "description": "伯恩丘是金丘的南段，以出產世界頂級霞多麗白酒聞名。雖然也產紅酒，但白酒的名氣更勝一籌，Meursault、Puligny-Montrachet、Chassagne-Montrachet 等村莊是白酒愛好者的朝聖地。"
+          "description": "伯恩丘是金丘的南段，以出產世界頂級夏多內白酒聞名。雖然也產紅酒，但白酒的名氣更勝一籌，Meursault、Puligny-Montrachet、Chassagne-Montrachet 等村莊是白酒愛好者的朝聖地。"
         },
         {
           "type": "map",
@@ -226,7 +226,7 @@
           "title": "地理與氣候特徵",
           "content": "伯恩丘從 Ladoix 延伸到 Maranges，長約25公里。相比夜丘，這裡的地形更複雜，山坡走向多變，土壤組成也更多樣化，造就了紅白酒並存的格局。",
           "keyPoints": [
-            "氣候：比夜丘稍溫暖，更適合霞多麗",
+            "氣候：比夜丘稍溫暖，更適合夏多內",
             "土壤：石灰岩為主，泥灰岩比例較高",
             "地形：山谷與山坡交錯，微氣候差異大",
             "產量：白酒佔60%，紅酒40%"
@@ -235,9 +235,9 @@
         {
           "type": "content",
           "title": "伯恩丘的獨特之處",
-          "content": "伯恩丘是布根地白酒的心臟地帶，擁有6個白酒特級園（全球最貴霞多麗產地），同時也產出優質黑皮諾。18個村莊級 AOC 展現了驚人的多樣性。",
+          "content": "伯恩丘是布根地白酒的心臟地帶，擁有6個白酒特級園（全球最貴夏多內產地），同時也產出優質黑皮諾。18個村莊級 AOC 展現了驚人的多樣性。",
           "keyPoints": [
-            "🏆 白酒特級園：6個全球最貴的霞多麗產地（全在 Montrachet 周圍）",
+            "🏆 白酒特級園：6個全球最貴的夏多內產地（全在 Montrachet 周圍）",
             "🍷 紅酒村莊：Pommard、Volnay 風格迥異，品質卓越",
             "💎 性價比之王：Beaune 村莊級酒極具性價比",
             "🎨 風格多樣性：從礦物到奶油，從強勁到優雅",
@@ -249,7 +249,7 @@
           "type": "list",
           "title": "💡 重點提示",
           "points": [
-            "🍾 伯恩丘60%產白酒，霞多麗是主角",
+            "🍾 伯恩丘60%產白酒，夏多內是主角",
             "🍾 白酒特級園集中在 Montrachet 周圍",
             "🍾 紅酒雖不如夜丘著名，但品質同樣卓越"
           ]
@@ -327,7 +327,7 @@
         {
           "type": "content",
           "title": "總結",
-          "content": "伯恩丘展現了霞多麗的極致表現，從奶油般的 Meursault 到礦物感十足的 Puligny，每個村莊都有獨特魅力。"
+          "content": "伯恩丘展現了夏多內的極致表現，從奶油般的 Meursault 到礦物感十足的 Puligny，每個村莊都有獨特魅力。"
         }
       ]
     },
@@ -341,7 +341,7 @@
           "type": "title",
           "title": "白酒三大名村：Meursault、Puligny、Chassagne",
           "subtitle": "18分鐘",
-          "description": "伯恩丘的白酒三大名村，代表了霞多麗的三種不同風格：奶油榛果的 Meursault、礦物優雅的 Puligny、紅白兼具的 Chassagne。"
+          "description": "伯恩丘的白酒三大名村，代表了夏多內的三種不同風格：奶油榛果的 Meursault、礦物優雅的 Puligny、紅白兼具的 Chassagne。"
         },
         {
           "type": "map",
@@ -424,7 +424,7 @@
           "type": "image",
           "title": "伯恩丘「白酒金三角」風格光譜",
           "image": "/bourgogne/images/Lesson/golden-triangle-whites.svg",
-          "caption": "霞多麗在三個頂尖村莊呈現的三種極致面向：純淨、圓潤與雄渾"
+          "caption": "夏多內在三個頂尖村莊呈現的三種極致面向：純淨、圓潤與雄渾"
         },
         {
           "type": "content",
@@ -453,10 +453,10 @@
         {
           "type": "content",
           "title": "Puligny-Montrachet：礦物優雅",
-          "content": "Puligny-Montrachet 擁有4個特級園，是全球最精緻的霞多麗產地。礦物感強、酸度活潑、陳年潛力驚人。",
+          "content": "Puligny-Montrachet 擁有4個特級園，是全球最精緻的夏多內產地。礦物感強、酸度活潑、陳年潛力驚人。",
           "image": "/bourgogne/images/Lesson/Puligny-Montrachet.jpg",
           "keyPoints": [
-            "4個特級園（全球最貴霞多麗產地）",
+            "4個特級園（全球最貴夏多內產地）",
             "風格：礦物感極強、酸度活潑、纖細優雅",
             "陳年：8-30年",
             "價格：村莊級 €40-80，特級園 €250-2000"
@@ -465,7 +465,7 @@
         {
           "type": "content",
           "title": "Puligny-Montrachet 特級園（1/2）",
-          "content": "Montrachet 是白酒之王，與 Chevalier-Montrachet 代表了霞多麗的最高成就，這兩個特級園的位置和風土造就了它們獨特的個性。",
+          "content": "Montrachet 是白酒之王，與 Chevalier-Montrachet 代表了夏多內的最高成就，這兩個特級園的位置和風土造就了它們獨特的個性。",
           "keyPoints": [
             "🏆 Montrachet（白酒之王）",
             "  面積：7.5公頃（Puligny 3.5ha + Chassagne 4ha）",
@@ -488,7 +488,7 @@
         {
           "type": "content",
           "title": "Puligny-Montrachet 特級園（2/2）",
-          "content": "Bâtard 家族的兩個特級園，雖不及 Montrachet 頂級，但依然是世界級的霞多麗產地，各有特色。",
+          "content": "Bâtard 家族的兩個特級園，雖不及 Montrachet 頂級，但依然是世界級的夏多內產地，各有特色。",
           "keyPoints": [
             "🏆 Bâtard-Montrachet（強勁兄弟）",
             "  面積：11.9公頃（Puligny 6.1ha + Chassagne 5.8ha）",
@@ -551,7 +551,7 @@
           "title": "💡 重點提示",
           "points": [
             "🍾 Meursault 無特級園，但頂級一級園可媲美特級園",
-            "🍾 Montrachet 是全球最貴霞多麗，均價超過€500",
+            "🍾 Montrachet 是全球最貴夏多內，均價超過€500",
             "🍾 Chassagne 的紅酒常被低估，性價比極高"
           ]
         },
@@ -628,7 +628,7 @@
         {
           "type": "content",
           "title": "總結",
-          "content": "白酒三大名村展現了霞多麗的極致多樣性，從奶油到礦物，每個村莊都有獨特魅力。"
+          "content": "白酒三大名村展現了夏多內的極致多樣性，從奶油到礦物，每個村莊都有獨特魅力。"
         }
       ]
     },
@@ -1044,9 +1044,9 @@
             "  白酒：礦物感強、酸度活潑、接近 Puligny 風格",
             "  特點：風土條件優越但知名度較低",
             "  價格：€20-40（Puligny 的三分之一價格）",
-            "  適合：想體驗礦物霞多麗但預算有限",
+            "  適合：想體驗礦物夏多內但預算有限",
             "",
-            "🍾 Santenay（桑特內）- 南部紅酒",
+            "🍾 Santenay（松特內）- 南部紅酒",
             "  位置：伯恩丘最南端",
             "  紅酒：果味豐富、單寧柔和、易飲易配餐",
             "  白酒：清新礦物、價格實惠",
@@ -1061,7 +1061,7 @@
           "keyPoints": [
             "🎓 入門級（€15-40）",
             "  推薦酒款：Beaune Village、Saint-Romain、Auxey-Duresses",
-            "  學習目標：認識霞多麗與黑皮諾的基本風格",
+            "  學習目標：認識夏多內與黑皮諾的基本風格",
             "  品鑑重點：奶油 vs 礦物（白）、果味 vs 單寧（紅）",
             "  飲用建議：白酒8-12°C，紅酒14-16°C",
             "  陳年：購買後1-3年內飲用",
@@ -1098,7 +1098,7 @@
             "💎 收藏級（€300-2000+）",
             "  推薦酒款：Montrachet（€500-2000）、Chevalier-Montrachet（€300-800）",
             "             Bâtard-Montrachet（€300-700）",
-            "  學習目標：體驗霞多麗的極致表現、理解風土精髓",
+            "  學習目標：體驗夏多內的極致表現、理解風土精髓",
             "  品鑑重點：極致複雜度、無盡餘韻、陳年演化",
             "  飲用建議：陳年10-20年巔峰期，醒酒3-4小時",
             "  儲存條件：專業酒窖，恆溫恆濕，長期平放",
@@ -1282,7 +1282,7 @@
           "10個"
         ],
         "correctAnswer": 1,
-        "explanation": "伯恩丘有6個白酒特級園，全部是霞多麗：Montrachet、Chevalier-Montrachet、Bâtard-Montrachet、Bienvenues-Bâtard-Montrachet、Criots-Bâtard-Montrachet、Corton-Charlemagne。"
+        "explanation": "伯恩丘有6個白酒特級園，全部是夏多內：Montrachet、Chevalier-Montrachet、Bâtard-Montrachet、Bienvenues-Bâtard-Montrachet、Criots-Bâtard-Montrachet、Corton-Charlemagne。"
       },
       {
         "id": "q2",
@@ -1386,11 +1386,11 @@
           "火山岩較多"
         ],
         "correctAnswer": 1,
-        "explanation": "伯恩丘的土壤以石灰岩為主，但泥灰岩比例比夜丘高，更適合霞多麗。"
+        "explanation": "伯恩丘的土壤以石灰岩為主，但泥灰岩比例比夜丘高，更適合夏多內。"
       },
       {
         "id": "q10",
-        "question": "全球最貴的霞多麗白酒產自哪個特級園？",
+        "question": "全球最貴的夏多內白酒產自哪個特級園？",
         "type": "single-choice",
         "options": [
           "Chevalier-Montrachet",
@@ -1399,7 +1399,7 @@
           "Bâtard-Montrachet"
         ],
         "correctAnswer": 1,
-        "explanation": "Montrachet 是全球最貴的霞多麗產地，均價超過€500，頂級酒莊可達€2000以上。"
+        "explanation": "Montrachet 是全球最貴的夏多內產地，均價超過€500，頂級酒莊可達€2000以上。"
       }
     ]
   }

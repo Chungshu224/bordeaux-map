@@ -128,7 +128,7 @@ export const lessonContent = [
         question: 'Clos Rougeard 被稱為「Saumur-Champigny 的 Romanée-Conti」，主要因為？',
         options: [
           '它使用完全相同的 Pinot Noir 品種',
-          '傳統大桶長期陳年、極低產量、頂款在二手市場達 €300–500+，複雜度達勃根地頂級水準',
+          '傳統大桶長期陳年、極低產量、頂款在二手市場達 €300–500+，複雜度達布根地頂級水準',
           '它位於 Saumur-Champigny 的 Grand Cru 地塊',
           '它是唯一允許使用 Pinot Noir 的羅亞爾 AOC'
         ],

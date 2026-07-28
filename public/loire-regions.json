@@ -30,7 +30,7 @@
     "style": "白酒",
     "hectare": 8000,
     "grapes": "Melon de Bourgogne",
-    "description": "羅亞爾河口附近生產的清爽白酒，採用勃根地引進的 Melon de Bourgogne 葡萄。常以「酒渣陳釀」（sur lie）方式增加複雜度，是法國最受歡迎的海鮮佐餐酒之一，最適合搭配生蠔與海鮮。"
+    "description": "羅亞爾河口附近生產的清爽白酒，採用布根地引進的 Melon de Bourgogne 葡萄。常以「酒渣陳釀」（sur lie）方式增加複雜度，是法國最受歡迎的海鮮佐餐酒之一，最適合搭配生蠔與海鮮。"
   },
   {
     "id": "Muscadet-Sèvre-et-Maine",
@@ -404,7 +404,7 @@
     "style": "白酒",
     "hectare": 60,
     "grapes": "Romorantin",
-    "description": "全球唯一以 Romorantin 葡萄釀造的 AOC，此品種由法王弗朗索瓦一世從勃根地引入。出產獨特的乾型白酒，帶有蜂蜜、榅桲和礦物風味，可陳年數十年。是羅亞爾河谷最罕見珍貴的酒款之一。"
+    "description": "全球唯一以 Romorantin 葡萄釀造的 AOC，此品種由法王弗朗索瓦一世從布根地引入。出產獨特的乾型白酒，帶有蜂蜜、榅桲和礦物風味，可陳年數十年。是羅亞爾河谷最罕見珍貴的酒款之一。"
   },
   {
     "id": "Valençay",
@@ -459,7 +459,7 @@
     "style": ["紅酒", "白酒"],
     "hectare": 100,
     "grapes": "Pinot Noir, Pinot Meunier, Chardonnay",
-    "description": "歷史名城奧爾良周邊的小型 AOC，2006年升格。以 Pinot Noir 和 Pinot Meunier 紅酒為主，另有 Chardonnay 白酒。風格清淡輕盈，帶有勃根地特色，是羅亞爾河谷最東邊的產區之一。"
+    "description": "歷史名城奧爾良周邊的小型 AOC，2006年升格。以 Pinot Noir 和 Pinot Meunier 紅酒為主，另有 Chardonnay 白酒。風格清淡輕盈，帶有布根地特色，是羅亞爾河谷最東邊的產區之一。"
   },
   {
     "id": "Orléans-Cléry",
@@ -514,7 +514,7 @@
     "style": ["白酒", "紅酒", "粉紅酒"],
     "hectare": 3000,
     "grapes": "Sauvignon Blanc, Pinot Noir",
-    "description": "法國最著名的 Sauvignon Blanc 產區之一，以礦物感強烈、帶有黑醋栗芽（cassis）和燧石（silex）香氣的白酒聞名全球。三種主要土壤（燧石、石灰岩、白堊黏土）各帶來不同風格。Pinot Noir 紅酒精緻優雅，質量不亞於許多勃根地村莊級酒款。"
+    "description": "法國最著名的 Sauvignon Blanc 產區之一，以礦物感強烈、帶有黑醋栗芽（cassis）和燧石（silex）香氣的白酒聞名全球。三種主要土壤（燧石、石灰岩、白堊黏土）各帶來不同風格。Pinot Noir 紅酒精緻優雅，質量不亞於許多布根地村莊級酒款。"
   },
   {
     "id": "Pouilly-Fumé-ou-Blanc-Fumé-de-Pouilly",

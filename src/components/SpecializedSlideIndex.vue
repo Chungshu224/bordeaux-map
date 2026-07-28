@@ -223,7 +223,7 @@ const allSlides = [
   {
     region: 'germany', type: 'spatburgunder-regions', isEnhanced: true,
     title: 'Spätburgunder 四大產區風土對決',
-    desc: 'D 強化 · Ahr × Baden × Pfalz × Württemberg：風格光譜、Meyer-Näkel vs Bernhard Huber、與勃根地對比、盲品識別。',
+    desc: 'D 強化 · Ahr × Baden × Pfalz × Württemberg：風格光譜、Meyer-Näkel vs Bernhard Huber、與布根地對比、盲品識別。',
     category: '互動對比', lesson: 'G1 M2 L3', route: '/germany'
   },
 

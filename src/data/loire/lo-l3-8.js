@@ -88,7 +88,7 @@ export const lessonContent = [
           <h4>🏛️ Orléans Blanc（奧爾良白酒）</h4>
           <p><strong>品種：</strong>Chardonnay（主）+ Pinot Gris（二，非常特殊的品種選擇，在羅亞爾其他地方極少）</p>
           <p><strong>背景：</strong>奧爾良曾是法國中世紀最重要的葡萄酒城市之一（距巴黎最近的主要產區），但鐵路普及後，醋業和蔬菜農業取代了葡萄種植，直到 1990 年代才有少數農家重新復耕</p>
-          <p><strong>風格：</strong>清爽、輕盈的 Chardonnay 個性，礦物感，完全沒有勃根地的橡木厚重感。Pinot Gris 版本有獨特的煙燻和玫瑰香氣，是非常少見的表現。</p>
+          <p><strong>風格：</strong>清爽、輕盈的 Chardonnay 個性，礦物感，完全沒有布根地的橡木厚重感。Pinot Gris 版本有獨特的煙燻和玫瑰香氣，是非常少見的表現。</p>
           <p><strong>代表酒莊：</strong>Domaine Clos Saint-Fiacre（奧爾良復興的主要推手）</p>
         </div>
         <div class="aoc-item-row">

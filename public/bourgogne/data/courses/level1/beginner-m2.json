@@ -25,7 +25,7 @@
           "title": "🔒 AOC 管制五大要素",
           "points": [
             "🗺️ 產地界定：精確劃定葡萄園的地理邊界，釐米精確",
-            "🍇 品種限制：規定可使用的葡萄品種（如布根地只允許黑皮諾與霞多麗）",
+            "🍇 品種限制：規定可使用的葡萄品種（如布根地只允許黑皮諾與夏多內）",
             "🌿 種植規範：最高產量（hl/ha）、種植密度、修剪方式",
             "🍷 釀造標準：最低酒精度、是否允許添糖、橡木桶陳年要求",
             "✅ 品質檢驗：化學分析 + 官方專家盲品雙重把關，不合格不得上市"
@@ -62,7 +62,7 @@
         {
           "type": "content",
           "title": "AOC 等級與風土的對應關係",
-          "content": "布根地的 AOC 等級並非隨意劃定，而是數百年農耕觀察與現代地質科學的結合。等級越高的 AOC，代表葡萄園在土壤、坡度、日照、排水等風土條件上越具優勢。\n\n一般規律是：最好的葡萄園位於山坡中段，坡度適中（5–12%）、石灰岩層透水性佳、面向東南方可迎接清晨陽光。這樣的葡萄園往往被認定為一級園或特級園，而山坡底部平坦地帶通常只能達到村莊級或大區級。"
+          "content": "布根地的 AOC 等級並非隨意劃定，而是數百年農耕觀察與現代地質科學的結合。等級越高的 AOC，代表葡萄園在土壤、坡度、日照、排水等風土條件上越具優勢。\n\n一般規律是：最好的葡萄園位於山坡中段，坡度適中（5–12%）、石灰岩層透水性佳、面向東南方可迎接清晨陽光。這樣的葡萄園往往被認定為一級園或特級園，而山坡底部平坦地帶通常只能達到村莊級或地區級。"
         },
         {
           "type": "list",
@@ -72,7 +72,7 @@
             "搜尋生產者名稱比 AOC 更重要——好酒莊的村莊級勝過差酒莊的一級園",
             "初學者入門首選：村莊級（均衡風土特色 + 合理價格）",
             "想感受極致風土：找一級園或特級園，但需要預算支撐",
-            "日常開瓶：大區級的 Bourgogne Pinot Noir / Chardonnay 性價比高"
+            "日常開瓶：地區級的 Bourgogne Pinot Noir / Chardonnay 性價比高"
           ]
         },
         {
@@ -140,25 +140,25 @@
           "type": "title",
           "title": "四級分級體系詳解",
           "subtitle": "Lesson 2 · 20分鐘",
-          "description": "深入了解大區級、村莊級、一級園、特級園的差異——從產量佔比、風土條件到典型價格"
+          "description": "深入了解地區級、村莊級、一級園、特級園的差異——從產量佔比、風土條件到典型價格"
         },
         {
           "type": "content",
           "title": "四級分級金字塔",
-          "content": "布根地的葡萄酒分成四個等級，由下而上越來越精稀、越來越昂貴。這個金字塔並非行政區劃，而是對「風土品質」的精準詮釋——每一級代表著更嚴格的地理條件、更低的許可產量，以及更濃縮的風土表現。\n\n四個等級從基礎到頂峰分別是：大區級（Régionale）→ 村莊級（Village）→ 一級園（Premier Cru）→ 特級園（Grand Cru）",
+          "content": "布根地的葡萄酒分成四個等級，由下而上越來越精稀、越來越昂貴。這個金字塔並非行政區劃，而是對「風土品質」的精準詮釋——每一級代表著更嚴格的地理條件、更低的許可產量，以及更濃縮的風土表現。\n\n四個等級從基礎到頂峰分別是：地區級（Régionale）→ 村莊級（Village）→ 一級園（Premier Cru）→ 特級園（Grand Cru）",
           "image": "/bourgogne/images/Lesson/bourgogne-4-tier-pyramid.svg",
           "imagePosition": "bottom"
         },
         {
           "type": "content",
-          "title": "第一級：大區級 Bourgogne Régionales",
-          "content": "大區級是最基礎的分級，葡萄可來自整個布根地大區約 27,000 公頃的範圍。雖是入門級，但知名酒莊釀造的大區酒同樣值得期待——有些甚至超越其他產區的高等級酒款。\n\n酒標範例：Bourgogne Pinot Noir、Bourgogne Chardonnay、Bourgogne Aligoté",
+          "title": "第一級：地區級 Bourgogne Régionales",
+          "content": "地區級是最基礎的分級，葡萄可來自整個布根地大區約 27,000 公頃的範圍。雖是入門級，但知名酒莊釀造的大區酒同樣值得期待——有些甚至超越其他產區的高等級酒款。\n\n酒標範例：Bourgogne Pinot Noir、Bourgogne Chardonnay、Bourgogne Aligoté",
           "image": "/bourgogne/images/Lesson/Bourgogne Blanc.jpg",
           "imagePosition": "bottom"
         },
         {
           "type": "list",
-          "title": "📊 大區級關鍵數字",
+          "title": "📊 地區級關鍵數字",
           "points": [
             "佔布根地總產量的 53%（最大宗）",
             "最大許可產量：紅酒 55 hl/ha、白酒 60 hl/ha",
@@ -226,7 +226,7 @@
           "title": "四級分級完整對比",
           "headers": ["分級", "產量佔比", "最大產量（hl/ha）", "典型價格", "酒標識別"],
           "rows": [
-            ["🍇 大區級 Régionale", "53%", "55–60", "€10–30", "以 Bourgogne 開頭"],
+            ["🍇 地區級 Régionale", "53%", "55–60", "€10–30", "以 Bourgogne 開頭"],
             ["🏘️ 村莊級 Village", "36%", "40–50", "€25–80", "只有村莊名"],
             ["💎 一級園 Premier Cru", "10%", "40–48", "€50–300", "村莊名 + 1er Cru + 園名"],
             ["👑 特級園 Grand Cru", "1%", "35–37", "€100–數萬", "只有園名（最簡潔）"]
@@ -239,7 +239,7 @@
             "不要迷信等級，要關注生產者：好酒莊的村莊級 > 差酒莊的一級園",
             "村莊級是風土入門最佳選擇，性價比最均衡",
             "同一村莊的一級園品質差異可以很大，需了解個別園的聲譽",
-            "大區級佳釀往往來自知名酒莊的年輕葡萄藤或邊緣地塊",
+            "地區級佳釀往往來自知名酒莊的年輕葡萄藤或邊緣地塊",
             "特級園是收藏投資首選，但需耐心等待 10–20 年才能達到顛峰"
           ]
         },
@@ -247,7 +247,7 @@
           "type": "list",
           "title": "💡 本課重點整理",
           "points": [
-            "四級：大區級（53%）→ 村莊級（36%）→ 一級園（10%）→ 特級園（1%）",
+            "四級：地區級（53%）→ 村莊級（36%）→ 一級園（10%）→ 特級園（1%）",
             "等級越高 = 更嚴格的地理條件 + 更低的許可產量",
             "布根地共有 33 個特級園，約 640 個一級園地塊，44 個村莊級 AOC",
             "特級園酒標：只標園名，不標村莊（最簡潔的反而是最頂級的）",
@@ -262,13 +262,13 @@
               "type": "single",
               "question": "布根地四級分級中，哪個等級佔總產量最多？",
               "options": [
-                "A. 大區級 Régionales",
+                "A. 地區級 Régionales",
                 "B. 村莊級 Villages",
                 "C. 一級園 Premiers Crus",
                 "D. 特級園 Grands Crus"
               ],
               "correct": 0,
-              "explanation": "大區級（Régionales）佔布根地總產量的 53%，葡萄可來自整個布根地大區約 27,000 公頃。雖是入門級，但頂級酒莊的大區酒也值得關注。"
+              "explanation": "地區級（Régionales）佔布根地總產量的 53%，葡萄可來自整個布根地大區約 27,000 公頃。雖是入門級，但頂級酒莊的大區酒也值得關注。"
             },
             {
               "type": "single",
@@ -326,15 +326,15 @@
           "type": "list",
           "title": "🔍 酒標解讀三步驟",
           "points": [
-            "第一步：找「Bourgogne」關鍵字 → 有就是大區級，馬上確認",
+            "第一步：找「Bourgogne」關鍵字 → 有就是地區級，馬上確認",
             "第二步：找「Grand Cru」或「Premier Cru / 1er Cru」關鍵字 → 找到就是頂端兩級",
             "第三步：沒有以上任何詞、但有一個地名 → 那就是村莊級"
           ]
         },
         {
           "type": "content",
-          "title": "大區級酒標解析",
-          "content": "看到酒標上以「BOURGOGNE」開頭，後面跟著品種名或子產區名，即為大區級。\n\n範例：BOURGOGNE PINOT NOIR、BOURGOGNE CHARDONNAY、BOURGOGNE HAUTES-CÔTES DE NUITS\n\n口訣：看到「Bourgogne」→ 大區級，不用再看其他",
+          "title": "地區級酒標解析",
+          "content": "看到酒標上以「BOURGOGNE」開頭，後面跟著品種名或子產區名，即為地區級。\n\n範例：BOURGOGNE PINOT NOIR、BOURGOGNE CHARDONNAY、BOURGOGNE HAUTES-CÔTES DE NUITS\n\n口訣：看到「Bourgogne」→ 地區級，不用再看其他",
           "image": "/bourgogne/images/Lesson/Bourgogne Blanc.jpg",
           "imagePosition": "bottom"
         },
@@ -374,7 +374,7 @@
           "type": "list",
           "title": "🗝️ 五個快速辨識技巧",
           "points": [
-            "看到「Bourgogne」開頭 → 大區級",
+            "看到「Bourgogne」開頭 → 地區級",
             "看到「1er Cru」或「Premier Cru」→ 一級園",
             "看到「Grand Cru」→ 特級園（也可能是 Chablis Grand Cru）",
             "只有村莊名 + 無任何補充 → 村莊級",
@@ -405,7 +405,7 @@
               "type": "single",
               "question": "酒標上只標示「VOSNE-ROMANÉE」，這是哪個分級？",
               "options": [
-                "A. 大區級（Régionale）",
+                "A. 地區級（Régionale）",
                 "B. 村莊級（Village）",
                 "C. 一級園（Premier Cru）",
                 "D. 特級園（Grand Cru）"
@@ -417,7 +417,7 @@
               "type": "single",
               "question": "酒標上只標示「ROMANÉE-CONTI」，這是哪個分級？",
               "options": [
-                "A. 大區級（Régionale）",
+                "A. 地區級（Régionale）",
                 "B. 村莊級（Village）",
                 "C. 一級園（Premier Cru）",
                 "D. 特級園（Grand Cru）"
@@ -429,7 +429,7 @@
               "type": "single",
               "question": "酒標標示「POMMARD 1ER CRU RUGIENS」，屬於哪個分級？",
               "options": [
-                "A. 大區級（Régionale）",
+                "A. 地區級（Régionale）",
                 "B. 村莊級（Village）",
                 "C. 一級園（Premier Cru）",
                 "D. 特級園（Grand Cru）"
@@ -439,7 +439,7 @@
             },
             {
               "type": "single",
-              "question": "在酒架前如何最快辨識大區級（Régionale）葡萄酒？",
+              "question": "在酒架前如何最快辨識地區級（Régionale）葡萄酒？",
               "options": [
                 "A. 酒標有 Grand Cru 字樣",
                 "B. 酒標以 'Bourgogne' 開頭",
@@ -447,7 +447,7 @@
                 "D. 酒標有 1er Cru 字樣"
               ],
               "correct": 1,
-              "explanation": "酒標以「Bourgogne」開頭（如 Bourgogne Pinot Noir、Bourgogne Chardonnay）即為大區級，葡萄可來自整個布根地大區。是入門學習的最佳起點，也是日常餐桌的好選擇。"
+              "explanation": "酒標以「Bourgogne」開頭（如 Bourgogne Pinot Noir、Bourgogne Chardonnay）即為地區級，葡萄可來自整個布根地大區。是入門學習的最佳起點，也是日常餐桌的好選擇。"
             }
           ]
         }
@@ -462,13 +462,13 @@
         "question": "布根地的四級分級體系中，哪一級佔總產量最多？",
         "type": "single-choice",
         "options": [
-          "大區級 Régionales",
+          "地區級 Régionales",
           "村莊級 Villages",
           "一級園 Premiers Crus",
           "特級園 Grands Crus"
         ],
         "correctAnswer": 0,
-        "explanation": "大區級佔布根地總產量的 53%，是最基礎也是產量最大的分級。"
+        "explanation": "地區級佔布根地總產量的 53%，是最基礎也是產量最大的分級。"
       },
       {
         "id": "q2",
@@ -494,14 +494,14 @@
           "沒有限制"
         ],
         "correctAnswer": 1,
-        "explanation": "一級園的允許產量為紅酒約 40–48 hl/ha，比特級園（35–37）高，但比大區級（55–60）嚴格得多。"
+        "explanation": "一級園的允許產量為紅酒約 40–48 hl/ha，比特級園（35–37）高，但比地區級（55–60）嚴格得多。"
       },
       {
         "id": "q4",
         "question": "如果酒標上只標示「GEVREY-CHAMBERTIN」，這是什麼級別？",
         "type": "single-choice",
         "options": [
-          "大區級",
+          "地區級",
           "村莊級",
           "一級園",
           "特級園"
@@ -550,7 +550,7 @@
       },
       {
         "id": "q8",
-        "question": "以下哪個是大區級（Régionale）的酒標？",
+        "question": "以下哪個是地區級（Régionale）的酒標？",
         "type": "single-choice",
         "options": [
           "Chambertin",
@@ -559,7 +559,7 @@
           "Meursault 1er Cru"
         ],
         "correctAnswer": 2,
-        "explanation": "只要看到「Bourgogne」開頭的標示，就是大區級葡萄酒。"
+        "explanation": "只要看到「Bourgogne」開頭的標示，就是地區級葡萄酒。"
       },
       {
         "id": "q9",

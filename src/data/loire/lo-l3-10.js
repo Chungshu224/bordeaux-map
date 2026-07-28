@@ -116,7 +116,7 @@ export const lessonContent = [
           <h4>🏛️ Saint-Pourçain AOC</h4>
           <p><strong>地理：</strong>Allier 省（Auvergne），嚴格上不在羅亞爾流域，但傳統上被歸入羅亞爾中央產區體系</p>
           <p><strong>白酒品種：</strong><strong>Tressallier（=Sacy）</strong>——幾乎只在 Saint-Pourçain 存在的古老白葡萄品種，釀成的白酒有強烈的草本和礦物感，類似緊閉的 Aligoté 但更個性</p>
-          <p><strong>紅酒品種：</strong>Pinot Noir + Gamay（混調），輕盈的勃根地風格</p>
+          <p><strong>紅酒品種：</strong>Pinot Noir + Gamay（混調），輕盈的布根地風格</p>
           <p><strong>歷史：</strong>中世紀時曾是法國王室御用餐酒（路易 IX 的宮廷），後來因戰爭和黑死病而衰落，今日正在緩慢復興</p>
           <p><strong>均價：</strong>€10–16，是羅亞爾中央最被忽略的佳品之一</p>
         </div>

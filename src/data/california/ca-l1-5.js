@@ -53,7 +53,7 @@ export const lessonContent = [
       <div class="livermore-highlights">
         <div class="highlight-box">
           <h4>🧬 加州 Chardonnay 的基因中心</h4>
-          <p>加州 80% 的 Chardonnay 基因可追溯至 Livermore Valley！C.H. Wente 從勃根地引進的 Chardonnay 克隆株，後來成為整個加州 Chardonnay 種植的主要基因來源。</p>
+          <p>加州 80% 的 Chardonnay 基因可追溯至 Livermore Valley！C.H. Wente 從布根地引進的 Chardonnay 克隆株，後來成為整個加州 Chardonnay 種植的主要基因來源。</p>
         </div>
         <div class="highlight-box">
           <h4>🏆 多個品種認定先鋒</h4>

@@ -201,7 +201,7 @@ const G2R_QUESTIONS = [
   },
   {
     dir: 'g2r', subject: 'chardonnay',
-    clue: '勃根地風格的細膩奶油感，來自奧克蘭近郊的精品酒莊',
+    clue: '布根地風格的細膩奶油感，來自奧克蘭近郊的精品酒莊',
     answer: 'kumeu', wrongs: ['marlborough', 'centralOtago', 'hawkesBay'],
   },
   {
@@ -267,7 +267,7 @@ const R2G_QUESTIONS = [
   },
   {
     dir: 'r2g', subject: 'kumeu',
-    clue: '奧克蘭近郊，以媲美勃根地的精品白酒聞名，最重要的品種是？',
+    clue: '奧克蘭近郊，以媲美布根地的精品白酒聞名，最重要的品種是？',
     answer: 'chardonnay', wrongs: ['sauvBlanc', 'pinotNoir', 'riesling'],
   },
   {

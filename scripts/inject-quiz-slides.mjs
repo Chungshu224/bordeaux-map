@@ -427,7 +427,7 @@ const QUIZ_MAP = {
         question: 'Garganega 是哪個著名白酒的核心品種？',
         options: ['A. Pinot Grigio delle Venezie', 'B. Soave DOC', 'C. Trebbiano d\'Abruzzo', 'D. Vermentino di Sardegna'],
         correct: 1,
-        explanation: 'Garganega 是 Veneto 的 Soave DOC 核心品種（法規要求至少 70%），帶有白花、杏仁和蜂蜜香氣，Soave Classico 版本尤為優秀，可媲美頂級白勃根地。'
+        explanation: 'Garganega 是 Veneto 的 Soave DOC 核心品種（法規要求至少 70%），帶有白花、杏仁和蜂蜜香氣，Soave Classico 版本尤為優秀，可媲美頂級白布根地。'
       },
       {
         type: 'multiple',

@@ -674,7 +674,7 @@ export const l210Content = [
         <h5>🌡️ 品飲建議</h5>
         <ul>
           <li><strong>侍酒溫度：</strong>8–12°C（過冷會壓抑香氣，過暖則甜膩）</li>
-          <li><strong>杯型：</strong>半型鬱金香杯或白酒杯，避免大型勃根地杯（會加速揮發）</li>
+          <li><strong>杯型：</strong>半型鬱金香杯或白酒杯，避免大型布根地杯（會加速揮發）</li>
           <li><strong>份量：</strong>標準倒杯量 60–75ml（是紅酒的一半），避免味覺疲勞</li>
           <li><strong>醒酒：</strong>年輕酒款無需醒酒；老年份可短醒10分鐘釋放香氣</li>
         </ul>

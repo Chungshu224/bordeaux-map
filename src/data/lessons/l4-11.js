@@ -374,13 +374,13 @@ export const l411Content = makeL4Lesson({
                 <table class="data-table compact">
                   <tbody>
                     <tr><td><strong>2008 金融危機</strong></td><td>Liv-ex 100 下跌 -22% (2008~2009)</td></tr>
-                    <tr><td><strong>2011-2015 熊市</strong></td><td>中國需求降溫,波爾多 -35%,勃根地相對抗跌</td></tr>
+                    <tr><td><strong>2011-2015 熊市</strong></td><td>中國需求降溫,波爾多 -35%,布根地相對抗跌</td></tr>
                     <tr><td><strong>2020 COVID</strong></td><td>短期波動 ±15%,頂級莊快速反彈</td></tr>
                   </tbody>
                 </table>
                 <p><strong>對沖策略</strong>:</p>
                 <ul>
-                  <li>多產區分散 (波爾多 40% + 勃根地 30% + 義大利 20% + 香檳 10%)。</li>
+                  <li>多產區分散 (波爾多 40% + 布根地 30% + 義大利 20% + 香檳 10%)。</li>
                   <li>混合年份 (成熟年份 60% + 年輕年份 40%)。</li>
                   <li>部分配置抗跌酒款 (如 DRC, Petrus)。</li>
                 </ul>
@@ -457,7 +457,7 @@ export const l411Content = makeL4Lesson({
                 <p><strong>高風險酒款</strong>:</p>
                 <table class="data-table compact">
                   <tbody>
-                    <tr><td>勃根地頂級園</td><td>DRC, Leroy, Rousseau (稀缺,價高,仿冒多)</td></tr>
+                    <tr><td>布根地頂級園</td><td>DRC, Leroy, Rousseau (稀缺,價高,仿冒多)</td></tr>
                     <tr><td>波爾多老酒</td><td>1961/1982/1990 Pétrus, Lafite (需來源證明)</td></tr>
                     <tr><td>義大利</td><td>Sassicaia, Masseto (標籤易仿)</td></tr>
                   </tbody>
@@ -505,13 +505,13 @@ export const l411Content = makeL4Lesson({
             </thead>
             <tbody>
               <tr><td>波爾多一級莊 (2010-2023)</td><td>7.2%</td><td>14.5%</td><td>0.38</td></tr>
-              <tr><td>勃根地 DRC (2010-2023)</td><td>12.5%</td><td>18.2%</td><td>0.62</td></tr>
+              <tr><td>布根地 DRC (2010-2023)</td><td>12.5%</td><td>18.2%</td><td>0.62</td></tr>
               <tr><td>Liv-ex 100 指數</td><td>5.8%</td><td>12.3%</td><td>0.30</td></tr>
               <tr><td>S&P 500 (同期)</td><td>11.2%</td><td>16.8%</td><td>0.58</td></tr>
               <tr><td>黃金 (同期)</td><td>4.1%</td><td>15.5%</td><td>0.13</td></tr>
             </tbody>
           </table>
-          <p class="note">勃根地頂級酒款風險調整回報優於波爾多,但流動性較低。</p>
+          <p class="note">布根地頂級酒款風險調整回報優於波爾多,但流動性較低。</p>
           <h3>與傳統資產的相關性</h3>
           <table class="data-table compact">
             <thead>
@@ -521,7 +521,7 @@ export const l411Content = makeL4Lesson({
               <tr><td>葡萄酒 vs S&P 500</td><td>0.25</td><td>低相關,良好分散</td></tr>
               <tr><td>葡萄酒 vs 黃金</td><td>0.18</td><td>低相關</td></tr>
               <tr><td>葡萄酒 vs 房地產</td><td>0.32</td><td>中低相關</td></tr>
-              <tr><td>波爾多 vs 勃根地</td><td>0.45</td><td>中度相關</td></tr>
+              <tr><td>波爾多 vs 布根地</td><td>0.45</td><td>中度相關</td></tr>
               <tr><td>葡萄酒 vs 藝術品</td><td>0.38</td><td>中度相關</td></tr>
             </tbody>
           </table>
@@ -602,7 +602,7 @@ export const l411Content = makeL4Lesson({
                 <h4>Liv-ex 指數系統</h4>
                 <p><strong>Liv-ex 100</strong>: 最廣泛追蹤的精品酒指數。</p>
                 <ul>
-                  <li><strong>成分</strong>: 100 款最交易活躍酒款 (波爾多為主 80%,勃根地/香檳 20%)。</li>
+                  <li><strong>成分</strong>: 100 款最交易活躍酒款 (波爾多為主 80%,布根地/香檳 20%)。</li>
                   <li><strong>權重</strong>: 依交易量動態調整。</li>
                   <li><strong>基期</strong>: 2003/12 = 100。</li>
                   <li><strong>當前</strong>: 約 310 (2023/12),20 年年化回報 5.8%。</li>
@@ -612,7 +612,7 @@ export const l411Content = makeL4Lesson({
                   <tbody>
                     <tr><td><strong>Liv-ex 50</strong></td><td>波爾多一級莊 10 款 (5 莊 × 最近 2 年份),保守藍籌</td></tr>
                     <tr><td><strong>Bordeaux 500</strong></td><td>波爾多 500 款,涵蓋左右岸全產區</td></tr>
-                    <tr><td><strong>Burgundy 150</strong></td><td>勃根地頂級 150 款,近 5 年表現最強</td></tr>
+                    <tr><td><strong>Burgundy 150</strong></td><td>布根地頂級 150 款,近 5 年表現最強</td></tr>
                     <tr><td><strong>Champagne 50</strong></td><td>香檳 50 款,穩定低波動</td></tr>
                     <tr><td><strong>Italy 100</strong></td><td>義大利 100 款,新興投資標的</td></tr>
                   </tbody>
@@ -625,7 +625,7 @@ export const l411Content = makeL4Lesson({
                   <li>Bordeaux 500: <strong>+4.1%</strong></li>
                   <li>Italy 100: <strong>+9.8%</strong></li>
                 </ul>
-                <p class="note">趨勢: 勃根地持續跑贏波爾多,義大利/香檳成長潛力大。</p>
+                <p class="note">趨勢: 布根地持續跑贏波爾多,義大利/香檳成長潛力大。</p>
               </div>
               <div class="panel" data-feature="data">
                 <h4>Liv-ex 數據服務</h4>
@@ -645,7 +645,7 @@ export const l411Content = makeL4Lesson({
                 <ul>
                   <li>月度市場報告: 價格趨勢、成交量、熱門酒款。</li>
                   <li>年份分析: 各年份表現、適飲窗口預測。</li>
-                  <li>產區聚焦: 波爾多/勃根地/義大利深度分析。</li>
+                  <li>產區聚焦: 波爾多/布根地/義大利深度分析。</li>
                 </ul>
                 <p><strong>API 數據訂閱</strong>: 機構投資者可購買實時數據 feed (£10K~£50K/年)。</p>
                 <p class="note">投資建議: 定期追蹤 Liv-ex Power 100 (最具影響力酒款),聚焦高流動性標的。</p>
@@ -691,7 +691,7 @@ export const l411Content = makeL4Lesson({
       `,
       highlights: [
         { id: 1, icon: '🔄', title: 'Liv-ex', content: '佣金 5.5%,藍籌酒 1~3 天成交,價格透明。' },
-        { id: 2, icon: '📊', title: '指數績效', content: '勃根地 +12.3%,香檳 +8.5%,波爾多 +4.1%。' },
+        { id: 2, icon: '📊', title: '指數績效', content: '布根地 +12.3%,香檳 +8.5%,波爾多 +4.1%。' },
         { id: 3, icon: '💰', title: '退出策略', content: '藍籌 Liv-ex,老酒拍賣,緊急酒商折價。' }
       ]
     },
@@ -724,7 +724,7 @@ export const l411Content = makeL4Lesson({
                   <tbody>
                     <tr><td>波爾多一級莊</td><td>50%</td><td>Lafite, Latour, Margaux (成熟年份 2010/2015)</td></tr>
                     <tr><td>香檳</td><td>25%</td><td>Krug, Dom Pérignon, Bollinger (年份香檳)</td></tr>
-                    <tr><td>勃根地 Grand Cru</td><td>15%</td><td>DRC, Leroy, Rousseau (少量配置)</td></tr>
+                    <tr><td>布根地 Grand Cru</td><td>15%</td><td>DRC, Leroy, Rousseau (少量配置)</td></tr>
                     <tr><td>義大利 Super Tuscan</td><td>10%</td><td>Sassicaia, Ornellaia, Masseto</td></tr>
                   </tbody>
                 </table>
@@ -747,7 +747,7 @@ export const l411Content = makeL4Lesson({
                   </thead>
                   <tbody>
                     <tr><td>波爾多一級莊</td><td>30%</td><td>核心持倉,成熟年份</td></tr>
-                    <tr><td>勃根地頂級</td><td>35%</td><td>DRC, Leroy, Dujac, Roumier (成長引擎)</td></tr>
+                    <tr><td>布根地頂級</td><td>35%</td><td>DRC, Leroy, Dujac, Roumier (成長引擎)</td></tr>
                     <tr><td>隆河/義大利</td><td>20%</td><td>Guigal La La, Gaja, Solaia (新興潛力)</td></tr>
                     <tr><td>香檳</td><td>10%</td><td>穩定配息性質</td></tr>
                     <tr><td>期酒</td><td>5%</td><td>頂級年份期酒 (2019/2022)</td></tr>
@@ -755,11 +755,11 @@ export const l411Content = makeL4Lesson({
                 </table>
                 <p><strong>特性</strong>:</p>
                 <ul>
-                  <li>成長潛力: 勃根地近 5 年年化 +12%。</li>
+                  <li>成長潛力: 布根地近 5 年年化 +12%。</li>
                   <li>分散風險: 跨產區、年份、風格。</li>
                   <li>適度投機: 5% 期酒博取超額回報。</li>
                 </ul>
-                <p><strong>再平衡</strong>: 每年檢視,勃根地若漲超 40% → 部分獲利了結,再投資低估標的。</p>
+                <p><strong>再平衡</strong>: 每年檢視,布根地若漲超 40% → 部分獲利了結,再投資低估標的。</p>
                 <p><strong>適合對象</strong>: 中年投資者、10~15 年投資期、可承受中度波動。</p>
                 <p class="note">案例: €100K 投資,5 年後預期 €140K~€160K (40~60% 總回報)。</p>
               </div>
@@ -772,7 +772,7 @@ export const l411Content = makeL4Lesson({
                     <tr><th>類別</th><th>比例</th><th>標的</th></tr>
                   </thead>
                   <tbody>
-                    <tr><td>勃根地 DRC/Leroy</td><td>40%</td><td>頂級單一園,近年年份</td></tr>
+                    <tr><td>布根地 DRC/Leroy</td><td>40%</td><td>頂級單一園,近年年份</td></tr>
                     <tr><td>車庫酒/膜拜酒</td><td>25%</td><td>Le Pin, Valandraud, Screaming Eagle</td></tr>
                     <tr><td>期酒</td><td>20%</td><td>頂級年份 (2018/2019/2022)</td></tr>
                     <tr><td>新興產區</td><td>10%</td><td>Napa Cult, Barolo 現代派 (Conterno, Gaja)</td></tr>
@@ -803,7 +803,7 @@ export const l411Content = makeL4Lesson({
             </thead>
             <tbody>
               <tr><td>短期 (1~3 年)</td><td>期酒套利,市場波動交易</td><td>頂級年份期酒,熱門新酒</td><td>10~30% (高風險)</td></tr>
-              <tr><td>中期 (5~10 年)</td><td>買入持有,適飲窗口前出售</td><td>一級莊,勃根地 Grand Cru</td><td>50~100%</td></tr>
+              <tr><td>中期 (5~10 年)</td><td>買入持有,適飲窗口前出售</td><td>一級莊,布根地 Grand Cru</td><td>50~100%</td></tr>
               <tr><td>長期 (15+ 年)</td><td>陳年增值,傳承收藏</td><td>DRC, Pétrus, 傳奇年份</td><td>150~400%</td></tr>
             </tbody>
           </table>
@@ -852,7 +852,7 @@ export const l411Content = makeL4Lesson({
         </div>
       `,
       highlights: [
-        { id: 1, icon: '📊', title: '組合配置', content: '保守 50% 一級莊,平衡 35% 勃根地,進取 40% DRC。' },
+        { id: 1, icon: '📊', title: '組合配置', content: '保守 50% 一級莊,平衡 35% 布根地,進取 40% DRC。' },
         { id: 2, icon: '💰', title: '稅務優勢', content: '香港/新加坡免稅,英國保稅倉延稅,美國長期 0~20%。' },
         { id: 3, icon: '🏛️', title: '遺產規劃', content: '家族信託、人壽保險、提前贈與避稅。' }
       ]
@@ -866,8 +866,8 @@ export const l411Content = makeL4Lesson({
         <li><strong>En Primeur 機制</strong>: 時間軸 (採收 → 試飲 → 釋價 → 交付),Tranche 策略 (T1 試探 → T2 調整 → T3 收尾),僅頂級年份值得期酒。</li>
         <li><strong>定價模型</strong>: 多因子回歸 (R² = 0.84),XGBoost (MAPE 8.5%),可比分析 (€/分倍數法)。</li>
         <li><strong>風險評估</strong>: 市場風險 (β 0.3, 波動 12~18%),年份風險 (2011/2013 虧損),假酒防範 (來源追溯/區塊鏈)。</li>
-        <li><strong>二級市場</strong>: Liv-ex (佣金 5.5%, 1~3 天成交),拍賣 (稀有老酒,佣金 30~40%),指數績效 (勃根地 +12%, 波爾多 +4%)。</li>
-        <li><strong>組合管理</strong>: 保守 (一級莊 50%,年化 4~6%),平衡 (勃根地 35%,7~10%),進取 (DRC 40%,12~20%),稅務優化 (保稅倉/香港免稅)。</li>
+        <li><strong>二級市場</strong>: Liv-ex (佣金 5.5%, 1~3 天成交),拍賣 (稀有老酒,佣金 30~40%),指數績效 (布根地 +12%, 波爾多 +4%)。</li>
+        <li><strong>組合管理</strong>: 保守 (一級莊 50%,年化 4~6%),平衡 (布根地 35%,7~10%),進取 (DRC 40%,12~20%),稅務優化 (保稅倉/香港免稅)。</li>
       </ol>
       <p><strong>投資黃金法則</strong>:</p>
       <ul>
@@ -924,10 +924,10 @@ export const l411Content = makeL4Lesson({
       },
       {
         id: 5,
-        question: '葡萄酒投資組合 60% 波爾多一級莊 + 30% 勃根地特級園 + 10% 其他，Sharpe Ratio = 0.85。為提升 Sharpe Ratio，最有效的調整是？',
+        question: '葡萄酒投資組合 60% 波爾多一級莊 + 30% 布根地特級園 + 10% 其他，Sharpe Ratio = 0.85。為提升 Sharpe Ratio，最有效的調整是？',
         options: [
         { id: 'a', text: '全集中波爾多一級莊，提高集中度', explanation: '集中持倉提高波動性（σp），Sharpe Ratio = (Rp - Rf) / σp 通常下降。' },
-        { id: 'b', text: '引入低相關性資產（如義大利 Super Tuscan、年份香檳），降低組合波動', explanation: '✓ 正確! 降低 σp 可在相同預期回報下提升 Sharpe Ratio。低相關性資產是教科書級多元化策略，歷史上波爾多與勃根地相關性約 0.65~0.75，引入義大利/香檳資產可顯著降低組合波動。', correct: true },
+        { id: 'b', text: '引入低相關性資產（如義大利 Super Tuscan、年份香檳），降低組合波動', explanation: '✓ 正確! 降低 σp 可在相同預期回報下提升 Sharpe Ratio。低相關性資產是教科書級多元化策略，歷史上波爾多與布根地相關性約 0.65~0.75，引入義大利/香檳資產可顯著降低組合波動。', correct: true },
         { id: 'c', text: '增加期酒槓桿操作', explanation: '槓桿放大波動和損失，Sharpe Ratio 通常惡化。' },
         { id: 'd', text: '持倉不動，等待市場回升', explanation: '被動持有不改變組合結構，Sharpe Ratio 由持倉決定。' }
         ]

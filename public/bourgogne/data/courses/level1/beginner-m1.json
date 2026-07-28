@@ -72,7 +72,7 @@
           "points": [
             "位於北緯 46-48 度之間，葡萄種植的黃金緯度",
             "南北跨越約 230 公里，從夏布利延伸至薄酒萊",
-            "主要城市：第戎（Dijon）與博訥（Beaune）",
+            "主要城市：第戎（Dijon）與伯恩（Beaune）",
             "鄰近瑞士邊境，受阿爾卑斯山脈影響"
           ]
         },
@@ -96,7 +96,7 @@
               "id": "chablis",
               "name": "夏布利",
               "nameFr": "Chablis",
-              "description": "純淨礦物風格的霞多麗白酒"
+              "description": "純淨礦物風格的夏多內白酒"
             },
             {
               "id": "cote-de-nuits",
@@ -948,7 +948,7 @@
           "type": "chart",
           "chartType": "radar",
           "title": "📊 三大品種特性雷達圖",
-          "content": "直觀對比黑皮諾、霞多麗和加美的風味特性與風格差異",
+          "content": "直觀對比黑皮諾、夏多內和加美的風味特性與風格差異",
           "data": {
             "dimensions": [
               "酒體",
@@ -973,7 +973,7 @@
                 ]
               },
               {
-                "label": "霞多麗 Chardonnay",
+                "label": "夏多內 Chardonnay",
                 "color": "#FFD700",
                 "opacity": 0.3,
                 "values": [
@@ -1000,7 +1000,7 @@
               }
             ]
           },
-          "note": "評分範圍 0-10，數值越高表示該特性越明顯。白葡萄無單寧，故霞多麗單寧值為 0。"
+          "note": "評分範圍 0-10，數值越高表示該特性越明顯。白葡萄無單寧，故夏多內單寧值為 0。"
         },
         {
           "type": "list",
@@ -1048,7 +1048,7 @@
                 "D. Viognier"
               ],
               "correct": 1,
-              "explanation": "Chardonnay 是布根地白酒的核心品種，從夏布利的礦物感到默爾索（Meursault）的奶油感，展現了 Chardonnay 在不同風土下的驚人多樣性，被視為世界最偉大的白葡萄品種之一。"
+              "explanation": "Chardonnay 是布根地白酒的核心品種，從夏布利的礦物感到梅索（Meursault）的奶油感，展現了 Chardonnay 在不同風土下的驚人多樣性，被視為世界最偉大的白葡萄品種之一。"
             },
             {
               "type": "multiple",
@@ -1136,7 +1136,7 @@
           "type": "list",
           "title": "四級金字塔分級系統",
           "points": [
-            "大區級（Régionale）- 約佔產量 53%",
+            "地區級（Régionale）- 約佔產量 53%",
             "村莊級（Village）- 約佔產量 36%",
             "一級園（Premier Cru）- 約佔產量 10%",
             "特級園（Grand Cru）- 僅佔產量 1%"
@@ -1272,7 +1272,7 @@
           "北部（香檳區附近）"
         ],
         "correctAnswer": 1,
-        "explanation": "布根地位於法國東部，從巴黎東南方約300公里處開始，主要城市包括第戎（Dijon）和博訥（Beaune）。"
+        "explanation": "布根地位於法國東部，從巴黎東南方約300公里處開始，主要城市包括第戎（Dijon）和伯恩（Beaune）。"
       },
       {
         "id": "q2",
@@ -1344,7 +1344,7 @@
         "question": "布根地四級分級系統中，哪一級產量最少但品質最高？",
         "type": "single",
         "options": [
-          "大區級（Régionale）",
+          "地區級（Régionale）",
           "村莊級（Village）",
           "一級園（Premier Cru）",
           "特級園（Grand Cru）"
@@ -1357,7 +1357,7 @@
         "question": "在布根地酒標上，如果只標示「Chambertin」而沒有村莊名，這是什麼等級？",
         "type": "single",
         "options": [
-          "大區級",
+          "地區級",
           "村莊級",
           "一級園",
           "特級園"
