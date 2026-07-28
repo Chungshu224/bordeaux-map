@@ -18,7 +18,6 @@
         @backToLevelSelector="backToLevelSelector"
         @changeLevel="handleChangeLevel"
         @startLesson="handleStartLesson"
-        @startQuiz="handleStartQuiz"
       />
 
       <!-- 課程內容 - 全螢幕簡報模式 -->
@@ -308,15 +307,6 @@ const startLesson = (lessonIndex) => {
   
   // 直接進入簡報模式（第一頁是課程導讀）
   viewMode.value = 'lesson'
-}
-
-// 開始測驗（從課程總覽手動觸發，模組全部課程完成後才會顯示按鈕）
-const handleStartQuiz = (payload) => {
-  selectedModule.value = payload.module
-  moduleData.value = payload.moduleData
-  quizData.value = null
-  viewMode.value = 'quiz'
-  loadModuleQuiz()
 }
 
 // 完成課程 — 一律回到課程總覽，交由使用者自行選擇下一步（不自動接下一課或跳測驗）
