@@ -1,427 +1,1929 @@
 {
-  "title": "Bourgogne Level 3 綜合評量",
-  "description": "涵蓋 M1–M15 全模組，共 30 題",
-  "passingScore": 70,
+  "title": "布根地 Level 3 綜合評量題庫",
+  "level": "advanced",
   "questions": [
     {
-      "id": "qb-m1-1",
       "source": "M1",
       "type": "single",
-      "question": "布根地「Côte d'Or（黃金丘）」的地質基盤主要由什麼岩石構成？",
+      "question": "布根地頂級葡萄園的理想坡向是？",
       "options": [
-        "A. 花崗岩",
-        "B. 侏羅紀石灰岩（Jurassic Limestone）和泥灰岩（Marl）",
-        "C. 玄武岩",
-        "D. 砂岩"
+        "正南向，獲得最多日照",
+        "東向或東南向，清晨陽光溫和",
+        "西向，享受午後陽光",
+        "北向，保持涼爽"
       ],
       "correct": 1,
-      "explanation": "侏羅紀石灰岩（約 1.5 億年前的海洋沉積，富含礦物質）是布根地風土獨特性的地質基礎，其礦物滲透性和根系互動為葡萄藤提供獨特的礦石感特徵。"
+      "explanation": "東向或東南向坡地提供清晨溫和的陽光，避免午後過度曝曬，同時確保良好的排水性，是布根地頂級葡萄園的理想方位。"
     },
     {
-      "id": "qb-m1-2",
       "source": "M1",
       "type": "single",
-      "question": "夜丘（Côte de Nuits）相比伯恩丘（Côte de Beaune）在風土上最大的差異是？",
+      "question": "夏布利特級園的Kimmeridgian土壤最顯著的特徵是？",
       "options": [
-        "A. 夜丘完全沒有白酒生產",
-        "B. 夜丘的特級園幾乎全以黑皮諾為主（15 個特級園），土壤以深色黏土-石灰岩混合為特色，有助於黑皮諾的結構和陳年潛力；伯恩丘特級園包含多個白酒特級園（Montrachet 系列）",
-        "C. 兩者地質完全相同",
-        "D. 伯恩丘只生產紅酒"
+        "富含火山灰",
+        "富含小牡蠣化石",
+        "純粹的黏土",
+        "花崗岩基岩"
       ],
       "correct": 1,
-      "explanation": "夜丘 vs. 伯恩丘的品種/風土分工是布根地地理的核心知識點，解釋了為何布根地最偉大的紅酒均來自夜丘（Chambertin、Musigny、Romanée-Conti），而最偉大的白酒均來自伯恩丘南端（Montrachet、Bâtard、Corton-Charlemagne）。"
+      "explanation": "Kimmeridgian土壤形成於侏羅紀晚期，富含小牡蠣化石（Exogyra virgula），賦予夏布利白酒獨特的礦物感與鹹鮮味。"
     },
     {
-      "id": "qb-m2-1",
+      "source": "M1",
+      "type": "single",
+      "question": "Clos de Vougeot特級園內部，上坡地塊與下坡地塊的主要差異是？",
+      "options": [
+        "上坡黏土多，下坡石灰岩多",
+        "上坡石灰岩多較優雅，下坡黏土多較厚重",
+        "沒有明顯差異，品質一致",
+        "下坡品質更好"
+      ],
+      "correct": 1,
+      "explanation": "Clos de Vougeot上坡（靠近Musigny）石灰岩含量高，酒款優雅精緻；下坡黏土含量高，酒體較為厚重飽滿，這也導致同一特級園內價格可差距5倍以上。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "氣候變遷導致布根地採收期平均提前約2週。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "過去30年布根地平均氣溫上升約1.5°C，採收期從1980年代的9月底提前至現在的9月初，平均提前約2週。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "黑皮諾被認為是最能反映風土的品種，主要原因是？",
+      "options": [
+        "產量極高，容易種植",
+        "對環境極其敏感，能精確表達風土差異",
+        "適應各種氣候條件",
+        "不需要特殊照顧"
+      ],
+      "correct": 1,
+      "explanation": "黑皮諾對環境極其敏感，相同葡萄種在相距僅100米的不同地塊就能產出截然不同的酒款，這種高度敏感性使其成為風土的「透明翻譯者」。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "石灰岩主導的土壤通常產出什麼風格的酒？",
+      "options": [
+        "酒體飽滿、果味濃郁",
+        "酒體輕盈、礦物感明顯、優雅",
+        "高酒精、低酸度",
+        "粗獷、單寧厚重"
+      ],
+      "correct": 1,
+      "explanation": "石灰岩土壤排水性極佳，通常產出酒體輕盈、礦物感明顯、酸度高的優雅酒款，如Musigny和Montrachet。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "Chambolle-Musigny村莊的酒款特別優雅細緻，主要原因是？",
+      "options": [
+        "使用特殊釀造技術",
+        "位於碗狀地形，有森林保護，土壤薄且貧瘠",
+        "葡萄產量特別高",
+        "使用特殊的黑皮諾無性系"
+      ],
+      "correct": 1,
+      "explanation": "Chambolle-Musigny位於天然圓形劇場地形，東側森林屏障保護避免冷風，土壤以薄層石灰岩為主，迫使根系深入，產生極其優雅的酒款。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "布根地只使用黑皮諾和夏多內兩個品種，是為了純粹展現每塊土地的獨特風土。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "使用單一品種可以排除混釀變數，純粹展現每塊土地的獨特性，這是布根地與波爾多混釀哲學的最大不同。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "海拔每上升100米，溫度約下降多少？",
+      "options": [
+        "0.3°C",
+        "0.6°C",
+        "1°C",
+        "1.5°C"
+      ],
+      "correct": 1,
+      "explanation": "海拔每上升100米，溫度約下降0.6°C，這是影響葡萄成熟度和酸度的重要因素。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "面對氣候變遷，布根地生產者的應對策略不包括？",
+      "options": [
+        "提早採收保留酸度",
+        "增加樹葉遮蔽保護葡萄",
+        "大量使用灌溉系統",
+        "重新評估高海拔地塊潛力"
+      ],
+      "correct": 2,
+      "explanation": "布根地傳統上不使用灌溉，依賴自然降雨。生產者主要透過調整採收時機、樹冠管理和地塊選擇來應對氣候變遷。"
+    },
+    {
       "source": "M2",
       "type": "single",
-      "question": "「DRC（Domaine de la Romanée-Conti）」擁有兩個壟佔特級園（Monopole），分別是？",
+      "question": "DRC擁有的唯一白酒特級園是？",
       "options": [
-        "A. Chambertin 和 Musigny",
-        "B. Romanée-Conti（1.81 公頃）和 La Tâche（6.06 公頃）",
-        "C. Richebourg 和 Échézeaux",
-        "D. Corton 和 Montrachet"
+        "Corton-Charlemagne",
+        "Montrachet",
+        "Meursault Perrières",
+        "Musigny Blanc"
       ],
       "correct": 1,
-      "explanation": "DRC 的兩個壟佔特級園是布根地二手市場最核心的稀缺資產：RC（1.81 ha, 年產約 5,000 瓶）和 La Tâche（6.06 ha, 年產約 18,000 瓶）只有 DRC 這一個生產者，稀缺性是制度性的，與市場需求無關。"
+      "explanation": "DRC擁有0.67公頃的Montrachet，是酒莊唯一的白酒特級園，年產量極少，價格昂貴。"
     },
     {
-      "id": "qb-m2-2",
       "source": "M2",
       "type": "single",
-      "question": "「Maison Leroy（勒華酒莊）」在布根地的雙重身份是？",
+      "question": "Domaine Leroy的創辦人Lalou Bize-Leroy，每公頃產量約為多少？",
       "options": [
-        "A. 只是一個 Négociant",
-        "B. 同時是：① Négociant（酒商，購買葡萄或葡萄酒進行培養）② Domaine Leroy（自有生物動力葡萄園，1988 年 Lalou Bize-Leroy 從 DRC 退出後建立），其村莊級（如 Chambolle Village）因極低產量和完美品質，定價常超過其他酒莊的特級園",
-        "C. 只是一個農民酒莊",
-        "D. Leroy 是政府機構"
+        "30-35 hl/ha",
+        "25-30 hl/ha",
+        "15-18 hl/ha",
+        "40-45 hl/ha"
       ],
-      "correct": 1,
-      "explanation": "Leroy 的雙身份反映了布根地「酒商 vs. 酒莊」界限的典型模糊案例——Lalou Bize-Leroy 建立 Domaine Leroy 後，採用生物動力農耕和極低產量（每公頃 12-18 百升，為法規上限的 25-30%），使即使是村莊級的品質達到業界頂尖。"
+      "correct": 2,
+      "explanation": "Leroy採用極端的生物動力法，產量極低，每公頃僅15-18 hl，遠低於法定上限，這是其酒款濃郁度的來源。"
     },
     {
-      "id": "qb-m3-1",
+      "source": "M2",
+      "type": "single",
+      "question": "Domaine Armand Rousseau被認為是Gevrey-Chambertin村最具代表性的酒莊。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "Armand Rousseau擁有多個Gevrey-Chambertin頂級地塊，包括Chambertin和Clos de Bèze，是該村最受尊敬的酒莊。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "Domaine Coche-Dury使用的新橡木桶比例約為？",
+      "options": [
+        "80-100%",
+        "50-60%",
+        "20-30%",
+        "不使用新橡木桶"
+      ],
+      "correct": 2,
+      "explanation": "Coche-Dury僅使用20-30%新橡木桶，避免木味掩蓋風土表達，這是其白酒如此純淨優雅的原因之一。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "Domaine Comte de Vogüé擁有Musigny特級園的多少比例？",
+      "options": [
+        "約30%",
+        "約50%",
+        "約70%",
+        "100%（獨佔園）"
+      ],
+      "correct": 2,
+      "explanation": "Vogüé擁有Musigny 7.2公頃中的7.12公頃，約佔70%，是Musigny最大的地主。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "以下哪位釀酒師被譽為20世紀最偉大的布根地釀酒師，深刻影響了Méo-Camuzet的風格？",
+      "options": [
+        "Aubert de Villaine",
+        "Henri Jayer",
+        "Jacques Seysses",
+        "Lalou Bize-Leroy"
+      ],
+      "correct": 1,
+      "explanation": "Henri Jayer是20世紀最偉大的布根地釀酒師之一，他指導Jean-Nicolas Méo建立了Méo-Camuzet的釀造風格。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "DRC和Domaine Leroy都採用100%整串發酵。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 1,
+      "explanation": "DRC採用100%整串發酵，但Leroy視年份和地塊調整整串比例，並非總是100%。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "Domaine Dujac的整串發酵比例通常為？",
+      "options": [
+        "0%（完全去梗）",
+        "50%",
+        "100%",
+        "視年份調整"
+      ],
+      "correct": 2,
+      "explanation": "Dujac是100%整串發酵的堅定支持者，Jacques Seysses認為這能帶來更多複雜度和香料氣息。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "Domaine Comte de Vogüé在哪個時期進行了品質革命，重回頂級行列？",
+      "options": [
+        "1970年代",
+        "1980年代中期",
+        "1990年代初期",
+        "2000年代"
+      ],
+      "correct": 2,
+      "explanation": "1986年François Millet接手後進行改革，從1990年份開始品質顯著提升，重回頂級酒莊行列。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "以下哪個酒莊的Meursault Les Perrières被認為品質可媲美特級園？",
+      "options": [
+        "Domaine Leflaive",
+        "Domaine Coche-Dury",
+        "Domaine Roulot",
+        "Domaine Comtes Lafon"
+      ],
+      "correct": 1,
+      "explanation": "Coche-Dury的Meursault Les Perrières被許多專家認為品質可與Le Montrachet相提並論，是布根地最頂級的一級園白酒之一。"
+    },
+    {
       "source": "M3",
       "type": "single",
-      "question": "「2015 布根地年份」在業界評分中的定位是？",
+      "question": "以下哪個年份被認為是21世紀首個完美年份？",
       "options": [
-        "A. 2015 是近年最差年份",
-        "B. 2015 是近 20 年布根地最受讚譽的「偉大年份」之一——溫暖乾燥的季節帶來完美成熟度，黑皮諾呈現深厚果香 + 精緻酸度平衡，陳年潛力極佳，被 Burghound 和 Vinous 廣泛評為 96-99 分",
-        "C. 2015 是普通年份",
-        "D. 2015 的布根地已全數售罄，無法評估"
+        "2003",
+        "2005",
+        "2009",
+        "2010"
       ],
       "correct": 1,
-      "explanation": "2015 布根地的特徵：充足的陽光（葡萄酚類完全成熟）+ 有效的酸度保留（7-8 月的涼夜）= 理想的「成熟度與活力平衡」；對投資者：2015 的頂尖布根地已在全球市場快速升值，仍持有者處於有利的 Hold 位置；對飲用者：頂尖款 2026-2030 才進入最佳飲用窗口。"
+      "explanation": "2005年是21世紀首個被公認為完美的年份，氣候條件理想，釀出的酒款濃郁、平衡、陳年潛力極佳。"
     },
     {
-      "id": "qb-m3-2",
       "source": "M3",
       "type": "single",
-      "question": "「霜凍（Frost）」對布根地的威脅主要發生在哪個月份，後果是？",
+      "question": "2003年因極端熱浪導致許多酒款酒精度過高、酸度不足。",
       "options": [
-        "A. 12 月，影響儲存",
-        "B. 4-5 月（春季芽吐時期）——若晚霜在芽後拂晨摧毀新生嫩芽，可造成該年份最多 60-90% 的產量損失（2016、2021 年均有嚴重霜凍事件），是布根地產量最不可預測的自然風險",
-        "C. 8 月，只發生在海拔高地區",
-        "D. 霜凍在布根地不是問題"
+        "正確",
+        "錯誤"
       ],
-      "correct": 1,
-      "explanation": "春季霜凍的破壞機制：黑皮諾和夏多內是早萌品種（相比Cabernet更早），在4-5月的「芽吐窗口」內部分新嫩芽對低溫极其敏感（-2°C 即可凍死）；霜凍後果：部分藤株需用「次生芽（Secondary Bud）」替補，產量大幅減少而果實成熟度通常較低；近年3月底/4月初的氣候暖化使葡萄提前萌芽，而春季霜凍頻率並未同步減少，形成雙重風險提升。"
+      "correct": 0,
+      "explanation": "2003年是史上最炎熱的年份之一，許多酒款酒精度超過14%，酸度不足，失去布根地經典的優雅。"
     },
     {
-      "id": "qb-m4-1",
+      "source": "M3",
+      "type": "single",
+      "question": "2021年份的主要問題是？",
+      "options": [
+        "過度炎熱",
+        "嚴重霜凍導致產量極低",
+        "採收期持續降雨",
+        "病蟲害嚴重"
+      ],
+      "correct": 1,
+      "explanation": "2021年遭遇嚴重霜凍災害，產量下降30-50%，但倖存葡萄品質極佳。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "一瓶2019年份的特級園紅酒，理想的飲用窗口期約為？",
+      "options": [
+        "2020-2025年",
+        "2025-2050年",
+        "2030-2060年",
+        "現在就可以喝"
+      ],
+      "correct": 1,
+      "explanation": "2019年份品質極佳，特級園陳年潛力可達50年，理想飲用窗口為2025-2050年。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "1999年被認為是被嚴重低估的優秀年份。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "1999年經常被1990和2000年掩蓋，但其實是優秀年份，價格合理，性價比極佳。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "以下哪個因素對布根地葡萄酒陳年潛力的影響最小？",
+      "options": [
+        "酸度高低",
+        "軟木塞品質",
+        "單寧結構",
+        "生產者釀造水平"
+      ],
+      "correct": 1,
+      "explanation": "酸度、單寧結構和生產者釀造水平都直接決定陳年潛力；軟木塞品質雖然重要，但主要影響的是保存穩定性而非酒本身的陳年架構。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "2010年份的特色是？",
+      "options": [
+        "早熟、果味豐富、較早適飲",
+        "結構強勁、酸度高、需長期陳年",
+        "酒精度過高、酸度不足",
+        "產量極低、價格高昂"
+      ],
+      "correct": 1,
+      "explanation": "2010年份結構強勁、酸度高，是經典的長期陳年年份。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "困難年份中，頂級生產者通常也能釀出不錯的酒款。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "頂級生產者擁有更好的葡萄園管理和釀造技術，即使在困難年份也能透過嚴格挑選和技術調整釀出優秀酒款。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "白葡萄酒的理想陳年時間通常比紅葡萄酒？",
+      "options": [
+        "更長",
+        "更短",
+        "相同",
+        "取決於橡木桶使用"
+      ],
+      "correct": 1,
+      "explanation": "布根地白酒的陳年潛力通常比紅酒短，一般10-20年達到巔峰，而頂級紅酒可陳年30-50年。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "期酒（En Primeur）購買的主要優勢是？",
+      "options": [
+        "可以立即取酒",
+        "價格通常較低、可確保配額",
+        "可以先品鑑再購買",
+        "沒有風險"
+      ],
+      "correct": 1,
+      "explanation": "期酒購買的優勢是價格較市場價低、可確保配額，但需提前支付並等待2-3年才能取酒。"
+    },
+    {
       "source": "M4",
       "type": "single",
-      "question": "「Chambolle-Musigny 的土壤特徵」如何影響其黑皮諾的風格？",
+      "question": "布根地的土壤主要形成於哪個地質時期？",
       "options": [
-        "A. 幾乎沒有影響",
-        "B. Chambolle 含有相對較高的磁性石灰岩和薄層黏土，排水良好，成就了「精緻、花香為主（Floral-Forward）、單寧絲滑」的風格——被稱為布根地最「女性化」的村莊；相比鄰近的 Gevrey（更深厚黑色黏土）風格更輕盈優雅",
-        "C. Chambolle 的土壤和 Gevrey 完全相同",
-        "D. Chambolle 以白酒著名"
+        "白堊紀",
+        "侏羅紀",
+        "三疊紀",
+        "新生代"
       ],
       "correct": 1,
-      "explanation": "Chambolle vs. Gevrey 的地質風格對比是布根地風土課程的典型教學案例：Chambolle 的淺薄白色石灰岩土讓 Les Amoureuses（一級）和 Musigny（特級）展現了布根地最精緻的黑皮諾表達；Gevrey 的深色富含有機質黏土為 Chambertin 提供了更雄渾的骨架。地質決定品種表達，這是布根地風土論的核心命題。"
+      "explanation": "布根地土壤主要形成於侏羅紀時期（2億-1.45億年前），當時是溫暖的淺海環境。"
     },
     {
-      "id": "qb-m4-2",
       "source": "M4",
       "type": "single",
-      "question": "「坡向（Aspect/Orientation）」如何在布根地影響葡萄成熟度？",
+      "question": "Kimmeridgian土壤最顯著的特徵是？",
       "options": [
-        "A. 坡向在布根地沒有重要性",
-        "B. Côte d'Or 的最佳地塊主要為「東南坡向（East to Southeast-Facing）」——最大化接受早晨（8-12 時）的陽光，避免下午過度高溫（緯度 47°N，中午後的直射也有相當強度），同時保護葡萄不受北風使地塊管理精細化的能力",
-        "C. 西向坡向在布根地最優",
-        "D. 坡向只影響白酒生產"
+        "富含火山灰",
+        "富含小牡蠣化石",
+        "純粹的花崗岩",
+        "高含量有機質"
       ],
       "correct": 1,
-      "explanation": "東南向坡的成熟策略：布根地緯度高（47°N），太陽輻射角度較低，早晨陽光的有效熱量積累時間更長；東南向坡在 8-14 時提供最高光照強度（太陽弧線的最佳覆蓋），避免了西向坡的「午後烤曬」（過熱 + 蒸散損失）。特級園和最佳一級園的坡向分析確認：Chambertin、Musigny、Montrachet 均位於最佳東至東南向的中坡位置，這不是巧合，而是幾百年農業選擇的自然篩選結果。"
+      "explanation": "Kimmeridgian土壤富含小牡蠣化石（Exogyra virgula），這是夏布利特級園的標誌性特徵。"
     },
     {
-      "id": "qb-m5-1",
+      "source": "M4",
+      "type": "single",
+      "question": "夏布利所有七個特級園都位於Kimmeridgian土壤上。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "夏布利的七個特級園全部位於Serein河右岸的Kimmeridgian土壤上，這是其卓越品質的基礎。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "夜丘與伯恩丘土壤的主要差異是？",
+      "options": [
+        "夜丘黏土多，伯恩丘石灰岩多",
+        "夜丘石灰岩多，伯恩丘黏土多",
+        "兩者土壤完全相同",
+        "夜丘是花崗岩"
+      ],
+      "correct": 0,
+      "explanation": "夜丘以石灰岩混合紅黏土為主（適合黑皮諾），伯恩丘以白色泥灰岩和石灰岩為主（適合夏多內）。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "理想的布根地土壤pH值範圍是？",
+      "options": [
+        "6-6.5",
+        "7-8",
+        "8.5-9",
+        "5.5-6"
+      ],
+      "correct": 1,
+      "explanation": "布根地最理想的土壤pH值在7-8之間（微鹼性），這有助於保持葡萄的高酸度和養分有效性。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "土壤中的鐵質含量會影響葡萄酒的香氣發展。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "鐵質影響葡萄的代謝過程和香氣發展，富含鐵質的土壤（如Romanée-Conti）經常帶來「血味」和礦物特徵。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Le Montrachet的土壤深度約為？",
+      "options": [
+        "10-20cm",
+        "30-40cm",
+        "80-100cm",
+        "150cm以上"
+      ],
+      "correct": 1,
+      "explanation": "Le Montrachet的土壤深度僅30-40cm，下層為堅硬石灰岩，這種淺薄土層是其優雅風格的關鍵。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Kimmeridgian和Portlandian土壤的年代差異約為？",
+      "options": [
+        "500萬年",
+        "1000萬年",
+        "5000萬年",
+        "1億年"
+      ],
+      "correct": 0,
+      "explanation": "Kimmeridgian（約1.55億年前）和Portlandian（約1.5億年前）相差約500萬年，但造就了不同的土壤特性。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "石灰岩含量越高，酒款通常越優雅精緻。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "高石灰岩含量（50-70%）的土壤排水性極佳，通常產出優雅、礦物感強、酸度高的酒款。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "頂級地塊通常位於坡地的哪個位置？",
+      "options": [
+        "上坡（最高處）",
+        "中坡",
+        "下坡（最低處）",
+        "平地"
+      ],
+      "correct": 1,
+      "explanation": "中坡位置通常最理想，兼具良好排水、適度水分壓力、理想坡向，避免霜凍和積水。"
+    },
+    {
       "source": "M5",
       "type": "single",
-      "question": "「整串發酵（Whole Cluster Fermentation）」在布根地的爭議性是？",
+      "question": "DRC使用的整串發酵比例是？",
       "options": [
-        "A. 整串發酵在布根地從不使用",
-        "B. 整串（保留梗，含木質素完整葡萄一起發酵）可增加酒的結構感、清新度和自然酸度（梗帶來植物性單寧）；部分布根地傳統派（Dujac, Rousseau 部分）支持使用，認為豐富複雜度；反對派認為梗增加不必要的苦澀感；使用比例（0-100% 整串）因年份、地塊、生產者哲學而差異極大",
-        "C. 整串發酵強制帶來負面效果",
-        "D. 只有大型酒商使用整串"
+        "0%",
+        "50%",
+        "80%",
+        "100%"
       ],
-      "correct": 1,
-      "explanation": "整串 vs. 去梗（Destemming）的現代辯論：整串的香氣特徵（花香更複雜、香料感更豐富）和結構特性（天然單寧骨架、清新酸度）符合部分傳統布根地美學；但梗的成熟度必須達標（未熟梗 = 強烈的草本苦澀），因此高比例整串需要非常成熟、健康梗才能成功。這也是為什麼同一生產者在不同年份可能使用不同整串比例——氣候決定梗的成熟度，成熟度決定整串的可用比例。"
+      "correct": 3,
+      "explanation": "DRC採用100%整串發酵，認為這能帶來最大的複雜度和陳年潛力。"
     },
     {
-      "id": "qb-m5-2",
       "source": "M5",
       "type": "single",
-      "question": "「巴里克（Barriques，228 升橡木桶）」在布根地黑皮諾培養中的標準使用方式是？",
+      "question": "整串發酵需要果梗完全成熟，否則會帶來生青味。",
       "options": [
-        "A. 全部使用 100% 新桶",
-        "B. 頂尖布根地通常使用「分比例混合（Combination）」：特級園 30-50% 新桶（其餘二手；三手桶），村莊級 0-15% 新桶——新桶比例越高，橡木影響越強（香草/烤麵包感）；傳統派傾向低新桶比例（10-20%）以保留風土純粹性",
-        "C. 所有布根地都使用法國橡木以外的其他桶種",
-        "D. 布根地不使用橡木桶培養"
+        "正確",
+        "錯誤"
       ],
-      "correct": 1,
-      "explanation": "新桶比例的布根地哲學：Burgundy 221 的「地塊第一」原則要求橡木感後退為服務性配角，而非主角——過度的橡木感（>50% 新桶）遮蔽了精緻地塊風土的細節。對比：波爾多名莊通常 100% 新桶，橡木感是「品質標誌」之一；頂尖布根地的橡木克制（低新桶）反映了「風土表達優先」的核心美學價值觀。新桶的另一功能：微氧化（Micro-oxygenation），穩定顏色、柔化單寧——因此哪怕是低新桶比例，也要確保桶的品質（良好桶商和適當烘焙程度）。"
+      "correct": 0,
+      "explanation": "果梗必須完全成熟（呈棕色木質化），未熟的綠色果梗會帶來生青、草本植物的不良氣息。"
     },
     {
-      "id": "qb-m6-1",
+      "source": "M5",
+      "type": "single",
+      "question": "Coche-Dury的白酒使用約多少比例的新橡木桶？",
+      "options": [
+        "0%",
+        "20-30%",
+        "50-60%",
+        "100%"
+      ],
+      "correct": 1,
+      "explanation": "Coche-Dury僅使用20-30%新橡木桶，避免木味掩蓋白酒精緻的礦物感。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "布根地標準橡木桶的容量是？",
+      "options": [
+        "225公升",
+        "228公升",
+        "300公升",
+        "500公升"
+      ],
+      "correct": 1,
+      "explanation": "布根地標準橡木桶（pièce）容量為228公升，略大於波爾多桶的225公升。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "攪桶（Bâtonnage）主要用於白葡萄酒，可增加圓潤感和麵包香氣。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "攪桶讓酒泥重新懸浮，釋出多醣體和風味物質，增加白酒的圓潤感和麵包、奶油香氣。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "乳酸發酵（MLF）的主要作用是？",
+      "options": [
+        "增加酒精度",
+        "將蘋果酸轉化為乳酸，降低酸度",
+        "增加顏色",
+        "去除雜質"
+      ],
+      "correct": 1,
+      "explanation": "MLF將尖銳的蘋果酸轉化為柔和的乳酸，降低總酸度約2-4 g/L，增加圓潤感。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "隨著氣候變暖，部分生產者開始實驗阻止白酒的乳酸發酵以保留酸度。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "在低酸年份（如2018、2022），部分創新酒莊阻止MLF以保留酸度和新鮮感。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "布根地紅酒的典型浸皮時間是？",
+      "options": [
+        "3-7天",
+        "7-14天",
+        "15-30天",
+        "40-60天"
+      ],
+      "correct": 2,
+      "explanation": "布根地紅酒通常浸皮15-30天，遠長於新世界，以萃取複雜的單寧結構。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "冷浸漬（Cold Maceration）的主要目的是？",
+      "options": [
+        "萃取單寧",
+        "萃取香氣和色素而不萃取單寧",
+        "加速發酵",
+        "降低酒精度"
+      ],
+      "correct": 1,
+      "explanation": "冷浸漬在5-10°C進行5-7天，萃取香氣和色素，但因溫度低不萃取單寧。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "DRC和Leroy都拒絕過濾，認為過濾會損害風土表達。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "兩家頂級酒莊都堅持不過濾，保留所有風味物質和質地，雖然可能有沉澱物但風味更完整。"
+    },
+    {
       "source": "M6",
       "type": "single",
-      "question": "「Chambertin（香貝丹）」和「Chambertin Clos de Bèze（香貝丹-貝日園）」的關係是？",
+      "question": "Clos de Vougeot特級園被多少個生產者擁有？",
       "options": [
-        "A. 完全相同的地塊",
-        "B. Clos de Bèze（15.4 ha）是 Chambertin（28.1 ha）的北鄰特級園，兩者風格相近但不同；Clos de Bèze 的酒可以選擇標注為「Chambertin Clos de Bèze」（保留完整稱呼）或單純標注「Chambertin」（降格稱呼），但 Chambertin 的酒不能標注為 Clos de Bèze",
-        "C. 兩個地塊在不同村莊",
-        "D. Clos de Bèze 是 Chambertin 的一部分"
+        "約20個",
+        "約50個",
+        "約80個",
+        "約100個"
       ],
-      "correct": 1,
-      "explanation": "這個不對稱標注關係反映了歷史上 Clos de Bèze 的更高聲望（12世紀西多修道院早期種植，歷史優先性）：Clos de Bèze 在中世紀比 Chambertin 更先聞名，因此反向降格（Clos de Bèze → Chambertin）被允許作為合理的「聲望讓渡」；而 Chambertin（名字來自 Champ de Bertin，12 世紀農民 Bertin 的田地）後來居上，兩者現在市場地位並列頂尖（拿破崙特別偏愛 Chambertin）。"
+      "correct": 2,
+      "explanation": "Clos de Vougeot被80多個生產者擁有，是布根地所有權最分散的特級園。"
     },
     {
-      "id": "qb-m6-2",
       "source": "M6",
       "type": "single",
-      "question": "「Montrachet（蒙哈榭）」特級園為何被認為是世界最偉大的白酒地塊之一？",
+      "question": "Chambertin-Clos de Bèze可以標示為Chambertin，但反之不行。",
       "options": [
-        "A. 因為它是最大的白酒特級園",
-        "B. Montrachet（7.99 ha）橫跨 Puligny 和 Chassagne 兩個村莊，坐落於最佳的石灰岩中坡位置，土壤礦物豐富度、坡度和排水條件創造了夏多內的「完美表達條件」——在最佳生產者（DRC/Domaine Leflaive 等）手中，以複雜礦石感、陳年能力（30-50 年）和絕對的密度著稱",
-        "C. 因為它的面積最小",
-        "D. Montrachet 只在特定年份是特級園"
+        "正確",
+        "錯誤"
       ],
-      "correct": 1,
-      "explanation": "Montrachet 的物理條件分析：位於 Puligny-Montrachet 和 Chassagne-Montrachet 之間的中坡（Midslope），石灰岩母岩接近地表（排水近完美），Kimmeridgian 白色石灰岩（礦物質最豐富），坡度適中（東南向 7°）——此四重物理完美的疊加是少有地塊能複製的。DRC 的 Montrachet（0.68 ha，約 2,900 瓶）更以加入之後保持的釀造標準成為其白酒系列的頂點。"
+      "correct": 0,
+      "explanation": "法律允許Clos de Bèze標示為Chambertin，但Chambertin不能標示為Clos de Bèze，顯示Clos de Bèze的地位。"
     },
     {
-      "id": "qb-m7-1",
+      "source": "M6",
+      "type": "single",
+      "question": "Gevrey-Chambertin有多少個特級園？",
+      "options": [
+        "5個",
+        "7個",
+        "9個",
+        "11個"
+      ],
+      "correct": 2,
+      "explanation": "Gevrey-Chambertin有9個特級園，包括Chambertin、Clos de Bèze和7個帶Chambertin後綴的特級園。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Corton-Charlemagne的名稱來源於？",
+      "options": [
+        "一位釀酒師",
+        "查理曼大帝",
+        "一個地名",
+        "葡萄品種"
+      ],
+      "correct": 1,
+      "explanation": "Corton-Charlemagne得名於查理曼大帝（Charlemagne），傳說他下令此地改種白葡萄。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Montrachet家族有多少個白酒特級園？",
+      "options": [
+        "3個",
+        "4個",
+        "5個",
+        "6個"
+      ],
+      "correct": 2,
+      "explanation": "Montrachet家族有5個白酒特級園：Le Montrachet、Chevalier、Bâtard、Bienvenues-Bâtard和Criots-Bâtard。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Chevalier-Montrachet位於Le Montrachet的上坡位置，風格更優雅精緻。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "Chevalier-Montrachet在上坡，土壤更薄、石灰岩更多，產出極致優雅、高酸度、礦物感強的白酒。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Comte de Vogüé擁有Musigny特級園的多少比例？",
+      "options": [
+        "30%",
+        "50%",
+        "70%",
+        "100%"
+      ],
+      "correct": 2,
+      "explanation": "Comte de Vogüé擁有Musigny 10.8公頃中的約7公頃，約佔70%，是Musigny的代名詞。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Bonnes-Mares特級園橫跨Chambolle-Musigny和Morey-Saint-Denis兩個村莊。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "Bonnes-Mares約85%在Chambolle，15%在Morey-Saint-Denis，兩側風格略有差異。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "從投資角度，以下哪個特級園的性價比較高？",
+      "options": [
+        "Romanée-Conti",
+        "Clos de la Roche",
+        "Le Montrachet",
+        "La Tâche"
+      ],
+      "correct": 1,
+      "explanation": "Clos de la Roche品質優秀但相對被低估，價格較合理，投資性價比較高。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Clos de Vougeot上坡地塊的品質可媲美？",
+      "options": [
+        "村莊級",
+        "一級園",
+        "Musigny",
+        "普通特級園"
+      ],
+      "correct": 2,
+      "explanation": "Clos de Vougeot上坡地塊（如Méo-Camuzet持有）品質接近Musigny水準，遠超一般特級園。"
+    },
+    {
       "source": "M7",
       "type": "single",
-      "question": "「Liv-ex Burgundy 150 指數」追蹤什麼？",
+      "question": "過去20年DRC Romanée-Conti的年均增值率約為？",
       "options": [
-        "A. 布根地葡萄農的收入",
-        "B. 150 個頂尖布根地酒款在 Liv-ex 交易平台上的成交價格走勢，提供市場整體的「可量化投資回報指標」；類似股市的大盤指數，是機構投資者和葡萄酒基金用來跟蹤布根地二手市場的核心工具",
-        "C. 布根地的葡萄種植面積",
-        "D. 布根地的旅遊人數"
+        "5%",
+        "8%",
+        "12%",
+        "20%"
       ],
-      "correct": 1,
-      "explanation": "Liv-ex Burgundy 150 的投資工具角色：該指數 2008-2024 年的表現顯示，布根地精品葡萄酒長期年化回報約 12-18%（不同計算期間），在可替代投資資產中表現突出；但需注意流動性（交易成本）和儲存費用對實際回報的侵蝕（通常 1.5-2% 年化）。指數的「成份酒款更新」（定期調整追蹤的 150 個酒款）也是觀察市場焦點演變的重要信號。"
+      "correct": 2,
+      "explanation": "根據拍賣數據，2000-2024年DRC Romanée-Conti的年均增值率約12%，遠超傳統投資。"
     },
     {
-      "id": "qb-m7-2",
       "source": "M7",
       "type": "single",
-      "question": "「葡萄酒投資的流動性風險（Liquidity Risk）」是什麼？",
+      "question": "布根地佔全球葡萄酒產量的比例約為？",
       "options": [
-        "A. 葡萄酒可能喝完",
-        "B. 不像股票可以在任何時間以市價即時出售，精品布根地的出售需要：找到買家（等待拍賣時機/聯繫酒商）、支付手續費（15-25% 買方傭金）、等待付款——在短期資金需求時可能無法以理想價格快速變現，是實物葡萄酒投資的核心非金融風險",
-        "C. 流動性風險指葡萄酒液體可能外漏",
-        "D. 流動性風險在布根地市場中不存在"
+        "不到1%",
+        "約5%",
+        "約10%",
+        "約20%"
       ],
-      "correct": 1,
-      "explanation": "流動性風險的實際案例：若持有 $100,000 的頂尖布根地，在需要迅速套現時，最快的路徑（私下轉讓給酒商）通常以市價 20-30% 折讓成交；等待主要拍賣場次可能需要 3-6 個月；若市場恰好下行（如 2023 年布根地市場出現的 15-20% 調整），時間壓力更使折讓加深。布根地投資最適合「5-10 年以上視野」的長期資本配置，不適合需要隨時流動的資金。"
+      "correct": 0,
+      "explanation": "布根地僅佔全球葡萄酒產量不到1%，但在精品酒市場的份額卻高達30-40%。"
     },
     {
-      "id": "qb-m8-1",
+      "source": "M7",
+      "type": "single",
+      "question": "拍賣行的買家佣金通常為15-25%。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "國際拍賣行向買家收取15-25%的佣金（Buyer's Premium），這是需要計入總成本的重要因素。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "理想的葡萄酒投資組合中，核心藍籌酒款應佔？",
+      "options": [
+        "30%",
+        "50%",
+        "70%",
+        "90%"
+      ],
+      "correct": 2,
+      "explanation": "建議配置為：70%核心藍籌（穩健增值）、20%成長型、10%投機型。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "期酒購買的主要優勢是？",
+      "options": [
+        "可以立即取酒",
+        "價格通常較低且能確保配額",
+        "可以事先品鑑",
+        "沒有任何風險"
+      ],
+      "correct": 1,
+      "explanation": "期酒的主要優勢是價格通常比裝瓶後低10-30%，且能確保配額，但需提前付款並等待2-3年。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "與DRC建立配額關係通常需要5-10年的持續購買和關係建立。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "頂級酒莊如DRC的配額極難取得，需要長期購買、建立關係，通常需要5-10年甚至更久。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "專業酒窖的年度儲存成本約為？",
+      "options": [
+        "每箱10-20美元",
+        "每箱50-100美元",
+        "每箱200-300美元",
+        "每箱500美元以上"
+      ],
+      "correct": 1,
+      "explanation": "專業酒窖的年度儲存成本通常為每箱（12瓶）50-100美元，約為酒款價值的2-3%。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "市場上精品布根地酒有真偽疑慮的比例約為？",
+      "options": [
+        "1-2%",
+        "5-8%",
+        "10-20%",
+        "30-40%"
+      ],
+      "correct": 2,
+      "explanation": "據估計，市場上約10-20%的精品酒有真偽疑慮，特別是DRC等頂級酒莊，購買時需謹慎鑑定。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "2022-2023年布根地市場首次出現價格回調約10-15%。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "受全球經濟放緩影響，2022-2023年布根地市場出現首次回調，但2024年開始回穩。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "葡萄酒收藏保險的年度成本約為收藏價值的？",
+      "options": [
+        "0.1-0.3%",
+        "0.5-1%",
+        "2-3%",
+        "5%以上"
+      ],
+      "correct": 1,
+      "explanation": "葡萄酒收藏保險的年度成本約為收藏總價值的0.5-1%，是風險管理的重要環節。"
+    },
+    {
       "source": "M8",
       "type": "single",
-      "question": "布根地精品紅酒的理想長期儲存條件是？",
+      "question": "理想酒窖的溫度應維持在？",
       "options": [
-        "A. 冰箱（2-4°C）最佳",
-        "B. 恆溫 10-14°C（±1°C），濕度 60-75%（防止軟木塞乾燥），無光線（UV 會導致光氧化），無振動（干擾沉澱物形成和酒的靜態發展），側放（保持軟木塞濕潤）——這五個條件共同確保布根地的最長陳年潛力",
-        "C. 室溫 25°C，方便隨時取用",
-        "D. 高濕度（95%+）是最重要的條件"
+        "10-12°C",
+        "12-14°C",
+        "14-16°C",
+        "16-18°C"
       ],
       "correct": 1,
-      "explanation": "五合一儲存條件的科學基礎：溫度恆定（避免熱脹冷縮對軟木塞的反覆擠壓）；濕度（軟木塞在乾燥環境會收縮，空氣進入 = 氧化風險）；無光（UV 分解 SO₂ 等保護成分，破壞芳香物質）；無振動（干擾正在形成的沉澱晶體，破壞老酒的靜態化學反應）；側放（液體接觸軟木塞使其保持膨脹密封）。其中「溫度恆定」比「低溫」更重要——長期 16°C 恆定 > 不恆定的 10-20°C 波動。"
+      "explanation": "專業酒窖應維持在12-14°C的恆溫，波動不應超過±1°C，這是葡萄酒長期陳年的最佳溫度。"
     },
     {
-      "id": "qb-m8-2",
       "source": "M8",
       "type": "single",
-      "question": "「酒標損壞（Label Damage）」對布根地瓶裝酒二手市場價值的影響是？",
+      "question": "酒窖的理想濕度範圍是？",
       "options": [
-        "A. 標籤損壞完全不影響市場價值",
-        "B. 酒標是 Provenance（來源鑑定）和收藏完整性的重要指標：輕微划痕/少量污損折讓 5-10%；嚴重撕裂/大面積污損折讓 20-40%；標籤完全缺失折讓 50%+（且難以通過主要拍賣行上拍）——因為標籤狀態部分反映了整體儲存條件的謹慎程度",
-        "C. 酒標越舊越破代表陳年越長，所以溢價",
-        "D. 標籤損壞只影響外觀，不被考慮"
+        "40-50%",
+        "60-75%",
+        "80-90%",
+        "90-95%"
       ],
       "correct": 1,
-      "explanation": "標籤狀態的「代理信號」功能：在無法直接開瓶驗證的二手市場，標籤狀態是最容易被眼睛評估的「藏家謹慎度指標」——愛惜存倉的藏家通常標籤保存也更好（避免潮濕、避免撕扯）；雖然相關性不是完美的，但整體上「標籤完好 = 儘職存倉可能性更高」的購買者直覺在市場上形成了定價差距。頂尖拍賣行（Sotheby's/Christie's）有標準化的「標籤狀態描述量表（Label Condition Scale）」，是目錄中的固定欄位。"
+      "explanation": "酒窖濕度應保持在60-75%，既能防止軟木塞乾裂，又不會導致標籤發霉。"
     },
     {
-      "id": "qb-m9-1",
+      "source": "M8",
+      "type": "single",
+      "question": "液位在BN（Base Neck）以上的布根地老酒被視為瓶況極佳。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "BN（瓶頸底）或IN（瓶頸內）的液位代表極佳瓶況，是投資級藏酒的標準。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "專家估計市場上精品酒有真偽疑慮的比例約為？",
+      "options": [
+        "1-5%",
+        "10-20%",
+        "30-40%",
+        "50%以上"
+      ],
+      "correct": 1,
+      "explanation": "據估計，市場上約10-20%的精品酒有真偽疑慮，特別是DRC等頂級酒莊，購買時需謹慎。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "專業葡萄酒保險的年度保費約為藏酒價值的？",
+      "options": [
+        "0.1-0.3%",
+        "0.5-1.5%",
+        "2-3%",
+        "5%以上"
+      ],
+      "correct": 1,
+      "explanation": "專業葡萄酒保險的年度保費通常為藏酒價值的0.5-1.5%，視保險範圍和風險而定。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "有完整Provenance（來源記錄）的酒款價格可溢價30-50%。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "清楚的來源記錄大幅降低假酒風險，因此有完整Provenance的酒款可獲得顯著溢價。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "以下哪項不是假酒的常見疑點？",
+      "options": [
+        "標籤印刷過於精細完美",
+        "軟木塞印記模糊不清",
+        "來源記錄完整清楚",
+        "價格遠低於市場行情"
+      ],
+      "correct": 2,
+      "explanation": "來源記錄完整清楚是真酒的特徵，其他選項都是假酒的常見疑點。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "30年老酒的液位在什麼程度是可接受的？",
+      "options": [
+        "IN/BN",
+        "BN/TS",
+        "TS/HS",
+        "HS/MS"
+      ],
+      "correct": 2,
+      "explanation": "30年老酒的液位在TS（Top Shoulder）到HS（High Shoulder）之間是可接受的，自然蒸發屬正常現象。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "一般住宅保險通常足以涵蓋高價值葡萄酒收藏。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 1,
+      "explanation": "一般住宅保險通常不涵蓋或理賠上限極低（如5,000美元），高價收藏需要專業葡萄酒保險。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "Rudy Kurniawan假酒案發生在哪一年？",
+      "options": [
+        "2008年",
+        "2010年",
+        "2012年",
+        "2015年"
+      ],
+      "correct": 2,
+      "explanation": "2012年Rudy Kurniawan假酒案是葡萄酒史上最大的造假醜聞，揭露了精品酒市場的假酒問題。"
+    },
+    {
       "source": "M9",
       "type": "single",
-      "question": "「布根地頂尖黑皮諾」在盲品中最具識別性的嗅覺特徵組合是？",
+      "question": "系統化盲品的第一步是觀察什麼？",
       "options": [
-        "A. 黑醋栗 + 覆盆子 + 新橡木",
-        "B. 紅果（覆盆子/草莓/紅醋栗） + 花香（紫羅蘭/玫瑰） + 土地感（腐葉/蘑菇/地下室泥土） + 礦石感（鐵/燧石）——這個特定組合是布根地黑皮諾不同於新世界黑皮諾的核心嗅覺身份",
-        "C. 薄荷 + 桉樹 + 黑橄欖",
-        "D. 椰子 + 香草 + 奶油橡木"
+        "香氣強度",
+        "外觀和顏色",
+        "口感和酸度",
+        "餘韻長度"
       ],
       "correct": 1,
-      "explanation": "布根地黑皮諾的嗅覺「基因組」：典型如 Vosne-Romanée 的「玫瑰 + 鐵礦 + 覆盆子」三位一體是全球黑皮諾中最獨特的；Gevrey 偏向「泥土 + 黑色水果 + 甘草」；Chambolle 偏向「鮮花 + 紅果」——理解這個村莊內部的差異是識別布根地盲品地塊的第一步。相比之下，新世界黑皮諾更常見的是「新鮮草莓醬 + 新橡木（香草/丁香）+ 更圓潤飽滿的酒體」，缺少布根地的礦石/土地三次香。"
+      "explanation": "系統化盲品遵循「外觀→香氣→口感→結論」的順序，首先觀察顏色、清澈度和粘度。"
     },
     {
-      "id": "qb-m9-2",
       "source": "M9",
       "type": "single",
-      "question": "「系統性盲品技術（Systematic Blind Tasting Approach）」的核心流程是？",
+      "question": "Gevrey-Chambertin的典型特徵是？",
       "options": [
-        "A. 先猜年份再觀察",
-        "B. 先觀察（顏色/深淺）→ 嗅覺（強度/香氣類型/一次/二次/三次）→ 口感（酸度/單寧/酒體/收尾）→ 初步評估（品質/陳年潛力）→ 最後推論（品種/產地/年份/生產者）——先「描述」再「推論」的順序避免先入為主的心理偏差",
-        "C. 只需要鑽研氣味，不需要看顏色",
-        "D. 系統性技術不適合布根地"
+        "優雅、絲綢、紅色水果",
+        "強勁、黑色水果、動物氣息",
+        "花香、香料、精緻",
+        "礦物、高酸、清爽"
       ],
       "correct": 1,
-      "explanation": "「先描述後推論」原則的認知科學基礎：若先有生產者/年份的先入假設，大腦會啟動「確認偏誤（Confirmation Bias）」——傾向將感知到的特徵解釋為符合既有預設，而非客觀分析。先建立「無先驗的感知記錄」再做推論，能最大化盲品準確率。這也是 WSET SAT 和 CMS 評分標準要求「系統性記錄」的核認知邏輯——評分者看的是你的「推理過程」而非只是「最終答案」，即使最後結論錯誤，系統性推理過程也能得到部分分數。"
+      "explanation": "Gevrey-Chambertin以強勁的結構、黑色水果和動物氣息聞名，是金丘最陽剛的村莊之一。"
     },
     {
-      "id": "qb-m10-1",
+      "source": "M9",
+      "type": "single",
+      "question": "炎熱年份的布根地通常顏色深、酸度低、酒精度高。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "炎熱年份（如2015, 2019）葡萄成熟度高，導致顏色深、糖分高（酒精高）、酸度相對低。"
+    },
+    {
+      "source": "M9",
+      "type": "single",
+      "question": "陳年15年的布根地紅酒通常會呈現什麼顏色？",
+      "options": [
+        "深紫紅",
+        "寶石紅",
+        "磚紅色",
+        "棕褐色"
+      ],
+      "correct": 2,
+      "explanation": "15年陳年的布根地會從寶石紅演化為磚紅色，邊緣開始出現橙褐色調。"
+    },
+    {
+      "source": "M9",
+      "type": "single",
+      "question": "以下哪位生產者以高比例新橡木桶和現代風格聞名？",
+      "options": [
+        "Rousseau",
+        "Roumier",
+        "Méo-Camuzet",
+        "Dujac"
+      ],
+      "correct": 2,
+      "explanation": "Méo-Camuzet以較高比例新桶（50-100%）和拋光的現代風格聞名，立即誘人。"
+    },
+    {
+      "source": "M9",
+      "type": "single",
+      "question": "整串發酵會為酒液帶來辛香料和莖的單寧特徵。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "整串發酵（Whole Cluster）保留葡萄梗，會帶來肉桂、丁香等辛香料氣息和特殊的莖單寧。"
+    },
+    {
+      "source": "M9",
+      "type": "single",
+      "question": "頂級布根地紅酒的陳年高峰期通常持續多久？",
+      "options": [
+        "2-5年",
+        "5-10年",
+        "10-15年",
+        "20-30年"
+      ],
+      "correct": 2,
+      "explanation": "頂級布根地的高峰期（所有元素完美平衡）通常可持續10-15年，之後緩慢衰退。"
+    },
+    {
+      "source": "M9",
+      "type": "single",
+      "question": "100分制評分中，90-94分通常代表什麼品質等級？",
+      "options": [
+        "良好（Good）",
+        "優秀（Very Good）",
+        "傑出（Outstanding）",
+        "完美（Perfect）"
+      ],
+      "correct": 1,
+      "explanation": "在100分制中：85-89=Good, 90-94=Very Good, 95-100=Outstanding/Exceptional。"
+    },
+    {
+      "source": "M9",
+      "type": "single",
+      "question": "Chambolle-Musigny通常比Gevrey-Chambertin顏色更深、單寧更強。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 1,
+      "explanation": "相反，Chambolle以明亮的顏色、絲綢般的細膩單寧和優雅風格聞名，Gevrey才是深色強勁的代表。"
+    },
+    {
+      "source": "M9",
+      "type": "single",
+      "question": "盲品時，過於明顯的香草和烤麵包香氣通常暗示什麼？",
+      "options": [
+        "老酒陳年特徵",
+        "冷涼年份",
+        "高比例新橡木桶",
+        "整串發酵"
+      ],
+      "correct": 2,
+      "explanation": "香草、烤麵包、摩卡等香氣來自橡木桶，過於明顯通常表示使用了高比例（50-100%）新桶。"
+    },
+    {
       "source": "M10",
       "type": "single",
-      "question": "布根地紅酒（黑皮諾）與食物搭配的「經典配對」是？",
+      "question": "Chablis與生蠔的經典搭配基於什麼原理？",
       "options": [
-        "A. 配烤羊排（紅肉）是最佳搭配",
-        "B. 「Coq au Vin（布根地紅酒燉雞）」是傳統的「酒食地域搭配」——家禽（適中蛋白質）+醬汁（葡萄酒為基礎的酸性）+蘑菇（土地感共鳴）與黑皮諾的輕盈酒體/高酸/絲滑單寧形成完美的重量匹配和風味和諧",
-        "C. 布根地紅酒只能配素食",
-        "D. 布根地紅酒最適合配海鮮"
+        "互補原則",
+        "對比原則（高酸切海洋鹹鮮）",
+        "風味呼應",
+        "產地呼應"
       ],
       "correct": 1,
-      "explanation": "地域搭配（Regional Pairing）的邏輯：同一地域發展出的食物和葡萄酒往往具有天然和諧性——布根地的家禽/小牛肉（Veau）料理和黑皮諾並行發展了幾百年，蘑菇（在布根地森林和葡萄園附近天然生長）和黑皮諾的「土地感共鳴（Terroir Resonance）」是感官上可量化的一致性。此外，黑皮諾的「比波爾多更輕盈的酒體」使其可以搭配更廣泛的食物——包括三文魚（少見和紅酒搭配，但黑皮諾因單寧低、鐵礦感和魚是良好組合）。"
+      "explanation": "Chablis的高酸度與礦物感能平衡生蠔的海洋鹹鮮和油膩，屬於對比搭配原理。"
     },
     {
-      "id": "qb-m10-2",
       "source": "M10",
       "type": "single",
-      "question": "「Meursault（梅索）」村莊級夏多內最適合搭配什麼風格的食物？",
+      "question": "以下哪個搭配是錯誤的？",
       "options": [
-        "A. 因為高酸，最適合生蠔",
-        "B. Meursault 以「豐滿酒體 + 低酸（相比 Puligny）+ 奶油/榛果感 + 礦石」著稱，最適合搭配：奶油白醬魚料理（Beurre Blanc, Sole Meunière）、龍蝦奶油、奶油蘑菇義大利麵——食物的奶油圓潤感和酒的榛果奶油感形成「質地共鳴」",
-        "C. 因為甜美，最適合甜點",
-        "D. 完全不適合任何海鮮"
+        "Meursault + 龍蝦奶油醬",
+        "高單寧紅酒 + 清蒸魚",
+        "Gevrey-Chambertin + 紅酒燉牛肉",
+        "Chablis + 蝸牛"
       ],
       "correct": 1,
-      "explanation": "質地共鳴（Textural Resonance）的配餐邏輯：Meursault 的「奶油榛果風格」（較高 bâtonnage/酒泥攪拌使酒更圓潤）和奶油醬汁的「口感質地」在口腔中形成了「相似質感的和諧感（Like-with-Like）」；同時，Meursault 的礦石感「切穿（Cut-Through）」奶油醬汁的油膩感，扮演了「清潔劑（Palate Cleanser）」的功能——這是評酒搭配中最受讚揚的配對動態之一。相比 Chablis 的高酸配海鮮是「對比配對（Contrast Pairing）」，Meursault+奶油是「和諧配對（Complete Pairing）」。"
+      "explanation": "單寧強的紅酒配魚類會產生金屬苦味，這是餐酒搭配的大忌。"
     },
     {
-      "id": "qb-m11-1",
+      "source": "M10",
+      "type": "single",
+      "question": "Meursault的飽滿酒體和奶油質地適合配奶油醬汁料理，這是互補搭配原則。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "豐腴的Meursault配豐腴的奶油醬汁，強化相似特質，屬於互補搭配。"
+    },
+    {
+      "source": "M10",
+      "type": "single",
+      "question": "布根地經典料理「Coq au Vin」最適合搭配？",
+      "options": [
+        "Chablis",
+        "Meursault",
+        "Gevrey-Chambertin",
+        "Sauternes"
+      ],
+      "correct": 2,
+      "explanation": "Coq au Vin（紅酒燉雞）傳統上用Gevrey紅酒烹調，也最適合配同款紅酒。"
+    },
+    {
+      "source": "M10",
+      "type": "single",
+      "question": "壽司和生魚片最適合搭配哪款布根地酒？",
+      "options": [
+        "Pommard",
+        "Meursault",
+        "Chablis Grand Cru",
+        "Gevrey村莊級"
+      ],
+      "correct": 2,
+      "explanation": "Chablis的礦物感和高酸度與生魚的海洋鮮味完美契合，已成為經典搭配。"
+    },
+    {
+      "source": "M10",
+      "type": "single",
+      "question": "辛辣的川菜和湘菜適合搭配高單寧的布根地紅酒。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 1,
+      "explanation": "辣味+高單寧會產生火上澆油的效果，讓酒變苦澀，應避免這種搭配。"
+    },
+    {
+      "source": "M10",
+      "type": "single",
+      "question": "米其林Tasting Menu的搭配順序通常是？",
+      "options": [
+        "紅酒→白酒→甜酒",
+        "白酒→紅酒→甜酒",
+        "隨機選擇",
+        "只用一款酒"
+      ],
+      "correct": 1,
+      "explanation": "Tasting Menu遵循從輕到重、從白到紅的原則，最後以甜酒收尾。"
+    },
+    {
+      "source": "M10",
+      "type": "single",
+      "question": "Époisses乳酪（洗皮乳酪）最適合搭配？",
+      "options": [
+        "Chablis",
+        "年輕Gevrey",
+        "甜白酒或Marc",
+        "清酒"
+      ],
+      "correct": 2,
+      "explanation": "Époisses味道強烈，需要甜白酒的甜度或Marc的酒精度來平衡。"
+    },
+    {
+      "source": "M10",
+      "type": "single",
+      "question": "菜餚的醬汁往往比主食材本身對搭配更重要。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "醬汁通常主導菜餚的味道，因此在選酒時醬汁的風味比主食材更關鍵。"
+    },
+    {
+      "source": "M10",
+      "type": "single",
+      "question": "和牛（Wagyu）豐富的油花最適合搭配什麼風格的布根地？",
+      "options": [
+        "高酸清爽的Chablis",
+        "絲滑單寧的Chambolle或Vosne",
+        "強勁粗獷的老Pommard",
+        "甜白酒"
+      ],
+      "correct": 1,
+      "explanation": "和牛的油花需要絲滑細膩的單寧來襯托，Chambolle或Vosne的優雅風格最適合。"
+    },
+    {
       "source": "M11",
       "type": "single",
-      "question": "「生物動力農耕（Biodynamic Agriculture）」的根本哲學是？",
+      "question": "生物動力法的創始人是誰？",
       "options": [
-        "A. 生物動力只是有機農業的另一個名字",
-        "B. Rudolf Steiner (1924) 的「農業課程（Agricultural Course）」奠基：農場是一個「自我滋養的有機體（Self-sustaining Organism）」，需要通過特定製劑（如 BD500 牛角糞肥）和農曆種植曆（Lunar Calendar）加強土壤生命力和植物與宇宙力量的連結，目標是恢復並強化土壤的「生命活力（Life Forces）」",
-        "C. 生物動力是現代科技發明的農法",
-        "D. 生物動力農耕禁止任何形式的施肥"
+        "Lalou Bize-Leroy",
+        "Rudolf Steiner",
+        "Aubert de Villaine",
+        "Maria Thun"
       ],
       "correct": 1,
-      "explanation": "生物動力的「系統性整體論（Systemic Holism）」：與有機農業（主要聚焦「不使用化學農藥/肥料」）不同，生物動力還包含積極的「促進活力」措施——BD500（牛角黃糞，增強土壤微生物）、BD501（石英粉，增強光合作用和果實芳香前驅物），以及嚴格按照種植曆（Root Day/Leaf Day/Flower Day/Fruit Day）安排農事和品鑑活動。在布根地，Domaine Leroy、Domaine de la Romanée-Conti（部分）、Leflaive 等頂尖酒莊採用生物動力農耕，為其品質哲學的核心部分。"
+      "explanation": "生物動力法由奧地利哲學家Rudolf Steiner於1924年提出，源自其「人智學」哲學。"
     },
     {
-      "id": "qb-m11-2",
       "source": "M11",
       "type": "single",
-      "question": "生物動力農耕的實踐對布根地葡萄酒風味的假設影響是？",
+      "question": "500號製劑（牛糞角）的主要作用是？",
       "options": [
-        "A. 科學完全確認生物動力提升品質",
-        "B. 嚴格的科學對照研究尚無定論，但實踐者（Leroy、DRC）的一致報告是：更活躍的土壤微生物群落（Microbiome）富集了更多土壤礦物質的植物風土表達，使最終酒款展現「更深刻的地塊特定性（Place-Specificity）」，在盲品中更易識別其具體地塊——尤其在繁複的礦石感和土地感上比慣行農耕更突出",
-        "C. 生物動力農耕被科學完全否定",
-        "D. 生物動力農耕只影響白酒"
+        "增強光合作用",
+        "活化土壤微生物",
+        "防治霉病",
+        "促進開花"
       ],
       "correct": 1,
-      "explanation": "生物動力「風味提升」的科學爭議：2024 年現有最佳的「有效根據（Best Evidence）」是：生物動力農耕確實可測量地增加土壤微生物多樣性（Mycorrhizal fungi, bacterial richness），這在理論上支持了「礦物質 uptake 複雜性增加」的假設，但從土壤到杯中的直接因果鏈仍難以嚴格分離（有機農耕也有類似效果，很難只歸因於生物動力製劑）。最誠實的結論：生物動力農耕的頂尖推行者常產出布根地最被讚揚的酒款，相關性很高，但因果性 ongoing debate。"
+      "explanation": "500號製劑噴灑於土壤，用於活化土壤微生物、促進根系發展。"
     },
     {
-      "id": "qb-m12-1",
+      "source": "M11",
+      "type": "single",
+      "question": "生物動力法必須先達成有機農業標準，才能進一步認證。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "生物動力法的要求比有機農業更嚴格，必須先符合有機標準，再遵循生物動力法的額外要求。"
+    },
+    {
+      "source": "M11",
+      "type": "single",
+      "question": "DRC開始採用生物動力法是在哪一年？",
+      "options": [
+        "1975年",
+        "1985年",
+        "1995年",
+        "2005年"
+      ],
+      "correct": 1,
+      "explanation": "DRC從1985年在Aubert de Villaine推動下開始試驗生物動力法，1990年代全面採用。"
+    },
+    {
+      "source": "M11",
+      "type": "single",
+      "question": "根據生物動力法月相理論，最佳的採收日是？",
+      "options": [
+        "根日",
+        "葉日",
+        "花日",
+        "果日"
+      ],
+      "correct": 3,
+      "explanation": "果日（月亮經過火象星座時）被認為是最佳採收日，此時果實能量最充沛。"
+    },
+    {
+      "source": "M11",
+      "type": "single",
+      "question": "Domaine Leroy的平均產量約為15-20 hl/ha，遠低於DRC的25-30 hl/ha。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "Leroy採取極端低產量策略（15-20 hl/ha），比DRC（25-30）更極端，追求極致濃度。"
+    },
+    {
+      "source": "M11",
+      "type": "single",
+      "question": "生物動力法的主要認證機構是？",
+      "options": [
+        "USDA Organic",
+        "AB（歐盟有機）",
+        "Demeter和Biodyvin",
+        "ISO 14001"
+      ],
+      "correct": 2,
+      "explanation": "Demeter（國際）和Biodyvin（法國）是生物動力法的兩大主要認證機構。"
+    },
+    {
+      "source": "M11",
+      "type": "single",
+      "question": "科學界對生物動力法的主要質疑是？",
+      "options": [
+        "成本太高",
+        "產量太低",
+        "缺乏雙盲對照實驗證實",
+        "不適合布根地氣候"
+      ],
+      "correct": 2,
+      "explanation": "科學界主要質疑生物動力法缺乏嚴格的雙盲對照實驗，部分做法（如月相影響）被視為偽科學。"
+    },
+    {
+      "source": "M11",
+      "type": "single",
+      "question": "501號製劑（石英角）主要用於噴灑葉面，增強光合作用。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "501號製劑噴灑於葉面，據稱能增強光合作用、促進果實成熟，與500號（土壤用）相對應。"
+    },
+    {
+      "source": "M11",
+      "type": "single",
+      "question": "生物動力法實踐者認為其成功的關鍵在於？",
+      "options": [
+        "單一神秘製劑的效果",
+        "月相的直接影響",
+        "整體管理哲學和嚴格的葡萄園管理",
+        "化學肥料的替代品"
+      ],
+      "correct": 2,
+      "explanation": "即使科學界質疑部分做法，但生物動力法的整體管理哲學（嚴格有機管理、低產量、土壤照護）確實帶來高品質。"
+    },
+    {
       "source": "M12",
       "type": "single",
-      "question": "氣候暖化對布根地「採收時機（Harvest Timing）」的影響是？",
+      "question": "過去50年（1970-2020）布根地平均氣溫上升約多少？",
       "options": [
-        "A. 採收時機沒有明顯改變",
-        "B. 1970-2024 年的數據顯示，布根地平均採收日期提前約 3-4 週——1970s 的 10 月初採收，2010s-2020s 普遍 9 月初甚至 8 月底採收；最早記錄（2003 年，歷史性熱浪）是 8 月 18 日開始，遠超傳統窗口；提前採收趨勢直接改變了成熟度管理策略和標誌性年份模式",
-        "C. 布根地採收只發生在 11 月",
-        "D. 氣候暖化使布根地採收更安全"
+        "0.5°C",
+        "1.0°C",
+        "1.8°C",
+        "3.0°C"
       ],
-      "correct": 1,
-      "explanation": "採收提前的複合影響：1) 採收決策窗口縮短——需要更精準地監測成熟度（糖分、酸度、酚類成熟）並更快速決策；2) 早採收 = 更少的蒸散水分流失，果串健康度通常更高；3) 傳統上「晚採收 = 更好濃縮度」的規則在暖年不適用（晚採 = 過熟 + 酸度崩潰）；4) 年份對比：1988/1990/1996 的「晚採」理想和 2015/2018 的「早採且優秀」顯示了年份特徵的系統性轉移，舊的年份判斷規則需要調整。"
+      "correct": 2,
+      "explanation": "1970-2020年間，布根地平均氣溫上升約1.8°C，高於全球平均1.1°C。"
     },
     {
-      "id": "qb-m12-2",
       "source": "M12",
       "type": "single",
-      "question": "「海拔植種（Altitude Planting）」被視為布根地應對氣候暖化的策略之一，原因是？",
+      "question": "相比1980年代，2020年代布根地平均採收期提早了約多久？",
       "options": [
-        "A. 高海拔不影響溫度",
-        "B. 海拔每上升 100 公尺，氣溫約下降 0.65°C（絕熱遞減率）——在傳統農耕高度（200-300m）的 Côte d'Or 之外，向北坡和更高位置（Hautes Côtes，300-450m）擴展種植可以補償暖化帶來的溫度上升，維持黑皮諾所需的充足生長季溫差",
-        "C. 高海拔只適合夏多內",
-        "D. 海拔提升在布根地法規下不允許"
+        "1週",
+        "2週",
+        "3週",
+        "4週以上"
       ],
-      "correct": 1,
-      "explanation": "海拔應對策略的地理限制：Côte d'Or 的特殊地形限制了「向上移動」的可能性——最佳中坡（200-350m）已充分開發；Hautes Côtes de Beaune/Nuits 在高海拔（300-450m）確有冷涼特質，2013 年後因全球暖化而受到更多關注和投資（部分過去太冷的地塊現在達到成熟窗口）；更根本的地理挑戰：傳統的 Côte d'Or 特級/一級園已完全種植，後退山頂的選項只適用於新開發地塊，不解決現有老樹的問題。"
+      "correct": 3,
+      "explanation": "採收期從9月底提早至8月底，約提早30天（4週以上）。"
     },
     {
-      "id": "qb-m13-1",
+      "source": "M12",
+      "type": "single",
+      "question": "2021年春季霜凍導致布根地部分地區損失50-80%產量。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "2021年4月春季霜凍是近年最嚴重的災害之一，許多酒莊損失慘重。"
+    },
+    {
+      "source": "M12",
+      "type": "single",
+      "question": "暖化對布根地紅酒的主要影響是？",
+      "options": [
+        "顏色變淺",
+        "酒精度上升、酸度下降",
+        "單寧增加",
+        "陳年潛力提升"
+      ],
+      "correct": 1,
+      "explanation": "高溫導致糖分累積快（酒精高）、蘋果酸分解（酸度低），改變傳統平衡。"
+    },
+    {
+      "source": "M12",
+      "type": "single",
+      "question": "以下哪個產區最可能是氣候變遷的受益者？",
+      "options": [
+        "Pommard南坡",
+        "Chablis",
+        "Corton低海拔",
+        "Volnay平原"
+      ],
+      "correct": 1,
+      "explanation": "Chablis過去常成熟度不足，暖化後達到理想成熟且保留高酸度，品質飛躍。"
+    },
+    {
+      "source": "M12",
+      "type": "single",
+      "question": "2020年法國放寬法規，允許高級園在極端乾旱時適度灌溉。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "面對氣候變遷，2020年法規允許在緊急狀況下進行適度灌溉。"
+    },
+    {
+      "source": "M12",
+      "type": "single",
+      "question": "酒莊應對高溫的釀酒技術調整包括？",
+      "options": [
+        "增加新桶比例",
+        "延長浸皮時間",
+        "增加整串發酵比例",
+        "提高發酵溫度"
+      ],
+      "correct": 2,
+      "explanation": "整串發酵（保留梗）可帶來單寧和酸度，幫助平衡暖化導致的高酒精、低酸度。"
+    },
+    {
+      "source": "M12",
+      "type": "single",
+      "question": "根據IPCC預測，2050年布根地可能再升溫多少（中度情境）？",
+      "options": [
+        "0.3-0.5°C",
+        "1-1.5°C",
+        "2-3°C",
+        "4-5°C"
+      ],
+      "correct": 1,
+      "explanation": "中度排放情境下，2050年可能再升溫1-1.5°C，總計相比1970年升溫約3°C。"
+    },
+    {
+      "source": "M12",
+      "type": "single",
+      "question": "Hautes-Côtes（高海拔地區）因氣候變遷價值正在上升。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "高海拔地區過去太冷，現在溫度適宜且能保留酸度，投資價值增加。"
+    },
+    {
+      "source": "M12",
+      "type": "single",
+      "question": "面對氣候變遷，布根地最核心的挑戰是？",
+      "options": [
+        "產量下降",
+        "成本增加",
+        "保持黑皮諾的優雅風格與風土特色",
+        "國際競爭"
+      ],
+      "correct": 2,
+      "explanation": "高酒精、低酸度威脅布根地的傳統優雅風格，如何保持黑皮諾特色是核心挑戰。"
+    },
+    {
       "source": "M13",
       "type": "single",
-      "question": "「買方手續費（Buyer's Premium）」在葡萄酒拍賣中的典型比率是？",
+      "question": "全球年交易額最大的葡萄酒拍賣行是？",
       "options": [
-        "A. 1-3%，幾乎可忽略",
-        "B. 主要國際拍賣行（Sotheby's、Christie's）通常為成交落槌價的 15-25%（按累退制計算），加上可能的稅收，使買家的「全含成本」遠高於落槌價——應納入任何拍賣競標的「心理預算」",
-        "C. 買方無需支付任何手續費",
-        "D. 手續費只由賣家支付"
+        "Christie's",
+        "Sotheby's",
+        "Acker Merrall & Condit",
+        "Bonhams"
       ],
-      "correct": 1,
-      "explanation": "累退制手續費的實際計算舉例：若落槌價為 $10,000，Sotheby's 的標準結構（以美國市場為例）：$0-$2,000 累進檔 25%，$2,001-$500,000 累進檔 20% → 此例的手續費約 $2,000；買家最終支出 $12,000，有效手續費率 20%。對高價布根地（落槌 $50,000+），累退制使手續費比率降至 18-19%。賣方另支付 10-15% 賣方傭金（不同行費率不同），因此拍賣行從一筆交易中賺取買賣雙方合計 25-40% 的佣金。"
+      "correct": 2,
+      "explanation": "Acker Merrall & Condit是美國最大的葡萄酒拍賣行，年交易額達1.5-2億美元。"
     },
     {
-      "id": "qb-m13-2",
       "source": "M13",
       "type": "single",
-      "question": "「Provenance（來源記錄）」在布根地二手交易中為什麼是核心文件要求？",
+      "question": "國際拍賣行的買家佣金（Buyer's Premium）通常為？",
       "options": [
-        "A. Provenance 只是形式要求，對品質無影響",
-        "B. 完整的 Provenance（原始購買發票/倉儲溫度記錄/所有前持有者的委托文件）是識別「假酒（Counterfeit Wine）」和確認「良好儲存條件」的最主要防護文件——Rudy Kurniawan 假酒事件（2012年）後，主要拍賣行和頂尖藏家對 Provenance 的要求大幅提高",
-        "C. Provenance 文件只在歐洲市場需要",
-        "D. 只有 DRC 酒款需要 Provenance"
+        "5-10%",
+        "15-25%",
+        "30-40%",
+        "50%"
       ],
       "correct": 1,
-      "explanation": "Post-Kurniawan 的 Provenance 要求升級：Rudy Kurniawan 的假酒案揭示了一個脆弱的信任漏洞——當時市場對「聲望收藏家背書」的信任過度依賴，缺乏更基礎的文件驗證。他通過偽造標籤、重填不好年份的酒入名貴年份瓶中，欺騙了業界最頂尖的買家超過 $35 million。Provenance 要求的現代標準：最初購買收據（酒莊/進口商直接開立）+ 所有中間轉手的書面記錄（完整的 Chain of Custody） = 最完整的真偽保護。"
+      "explanation": "買家佣金通常為15-25%，價格越高比例可能略低，這是買家需額外支付的費用。"
     },
     {
-      "id": "qb-m14-1",
+      "source": "M13",
+      "type": "single",
+      "question": "一旦在拍賣中舉牌出價，即具有法律約束力，不可撤回。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "舉牌出價後即形成承諾，具有法律約束力，得標後必須付款，無法取消。"
+    },
+    {
+      "source": "M13",
+      "type": "single",
+      "question": "拍賣中的'Reserve Price'是指？",
+      "options": [
+        "買家的預算上限",
+        "賣家設定的最低價格",
+        "拍賣行的估價",
+        "最終成交價"
+      ],
+      "correct": 1,
+      "explanation": "Reserve Price是賣家設定的底價，低於此價格拍賣行不會售出該標的。"
+    },
+    {
+      "source": "M13",
+      "type": "single",
+      "question": "完美瓶況相比一般瓶況，價格可能溢價多少？",
+      "options": [
+        "5-10%",
+        "20-50%",
+        "100%",
+        "200%"
+      ],
+      "correct": 1,
+      "explanation": "完美瓶況（液位IN/BN、標籤完整）相比一般瓶況可溢價20-50%，是價格的重要因素。"
+    },
+    {
+      "source": "M13",
+      "type": "single",
+      "question": "拍賣價格通常包含買家佣金和運費。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 1,
+      "explanation": "錘價（Hammer Price）不包含買家佣金、運費、保險等，這些都是額外成本。"
+    },
+    {
+      "source": "M13",
+      "type": "single",
+      "question": "查詢葡萄酒歷史拍賣成交價的最佳工具是？",
+      "options": [
+        "CellarTracker",
+        "Wine-Searcher Pro",
+        "Vivino",
+        "Google"
+      ],
+      "correct": 1,
+      "explanation": "Wine-Searcher Pro提供全球零售價和拍賣歷史數據，是專業價格查詢工具。"
+    },
+    {
+      "source": "M13",
+      "type": "single",
+      "question": "拍賣中'As-Is'條款意味著？",
+      "options": [
+        "可以退貨",
+        "按現狀出售，事後不可退換",
+        "拍賣行保證品質",
+        "免費送貨"
+      ],
+      "correct": 1,
+      "explanation": "As-Is表示按現狀銷售，買家需承擔瓶況風險，得標後不可退貨或索賠。"
+    },
+    {
+      "source": "M13",
+      "type": "single",
+      "question": "預展（Preview）是競標前親自檢視酒款瓶況的重要環節。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "預展讓買家親自檢視瓶況、標籤、液位，對高價酒款尤其重要，應盡可能參加。"
+    },
+    {
+      "source": "M13",
+      "type": "single",
+      "question": "新手競標最常見的錯誤是？",
+      "options": [
+        "研究太多標的",
+        "設定預算過低",
+        "情緒化追高超出預算",
+        "太早離場"
+      ],
+      "correct": 2,
+      "explanation": "新手最常在競標激烈時失去理智，情緒化追價超出預算，這是最應避免的錯誤。"
+    },
+    {
       "source": "M14",
       "type": "single",
-      "question": "「Allen Meadows（Burghound）」在布根地評分生態中的特殊地位是？",
+      "question": "Parker評分系統的滿分是？",
       "options": [
-        "A. Burghound 主要評分波爾多",
-        "B. Allen Meadows 是目前布根地專業評分社群中最受尊重的「布根地專家評論者」——其布根地垂直數據庫（包含 20,000+ 款的跨年份評分記錄）、評分風格（更重視「傳統布根地美學：精緻性/地塊特異性」而非「濃縮度/豐厚感」）使其成為嚴肅布根地藏家的首要評分參考",
-        "C. Burghound 已停止運營",
-        "D. Allen Meadows 使用 100 分制"
+        "20分",
+        "100分",
+        "5星",
+        "10分"
       ],
       "correct": 1,
-      "explanation": "Burghound 的市場影響力基礎：Allen Meadows 於 2000 年創立 Burghound.com，是葡萄酒評分界最早的「布根地專門平台」之一；其訂閱制（非免費）反而強化了讀者群的「專業認真度」——訂閱者大多是認真的布根地藏家或業界人士，使其評分對「目標市場」（頂尖布根地購買者）的影響力超過覆蓋面更廣但布根地專注度更低的 Wine Spectator。Burghound 使用 100 分制，但等效換算：95 分 = 業界「傑出（Outstanding）」等級，對市場有顯著提價效應。"
+      "explanation": "Robert Parker使用100分制，實際評分範圍為50-100分，但多數酒款在85-100分區間。"
     },
     {
-      "id": "qb-m14-2",
       "source": "M14",
       "type": "single",
-      "question": "布根地品鑑中「礦石感（Minerality）」的精確感官描述是什麼？",
+      "question": "描述布根地紅酒顏色時，'Garnet'是指？",
       "options": [
-        "A. 礦石感是一種甜味",
-        "B. 礦石感在嗅覺上表現為：火石/燧石（Flint，擊打石頭的煙燻氣息）、濕石板（Wet Slate）、鐵礦/血腥感（Iron/Metallic）；在口感上表現為：口腔特定部位的「電傳感（Electric Tingle）」、收縮感（不同於單寧）和「生唾液（Salivation）」刺激——綜合是一種「地質存在感（Geological Presence）」",
-        "C. 礦石感是橡木桶培養的結果",
-        "D. 礦石感只在白酒中存在"
+        "紫色",
+        "石榴紅色",
+        "茶色",
+        "橙色"
       ],
       "correct": 1,
-      "explanation": "礦石感的感官科學：「礦石感」是葡萄酒描述中最受科學爭議的術語之一——感官研究者已識別多個可能的化學貢獻者（吡啶類化合物、微量金屬離子、含硫化合物如二甲基硫化物），但沒有單一分子被確認為「礦物感的源泉」。在布根地，Chablis 的礦石感（Kimmeridgian 石灰岩海洋化石土）和 Meursault 的礦石感（更深厚泥灰岩，表現為不同的礦物溫度感）是兩個最教學性的對比案例。礦石感在兩種顏色均可能存在（D 為假）——Chambolle 特級 Musigny 的礦石感是業界最著名的布根地紅酒礦石表達。"
+      "explanation": "Garnet（石榴紅）是布根地Pinot Noir進入適飲期的典型顏色，介於年輕的Ruby與陳年的Tawny之間。"
     },
     {
-      "id": "qb-m15-1",
-      "source": "M15",
+      "source": "M14",
       "type": "single",
-      "question": "「Gevrey-Chambertin」村莊以外最值得深入了解的布根地村莊（白酒）是？",
+      "question": "Primary香氣是指來自葡萄品種本身的香氣。",
       "options": [
-        "A. AOC Beaune 村莊白酒",
-        "B. 「Puligny-Montrachet（普里尼-蒙哈榭）」因擁有全球最偉大的白酒特級園群（Montrachet/Chevalier/Bâtard 的主要面積均在其境內），一級園系統（Les Pucelles/Combettes/Caillerets）全球最完整的白酒地塊分層系統，是學習布根地白酒必研究的核心村莊",
-        "C. Chablis 是最重要的布根地白酒村莊",
-        "D. 沙布利和 Puligny 沒有差別"
+        "正確",
+        "錯誤"
       ],
-      "correct": 1,
-      "explanation": "Puligny-Montrachet 的白酒聖地地位：4 個白酒特級園有 3 個主要坐落在 Puligny 境內（Montrachet 的北半、Chevalier-Montrachet、Bienvenues-Bâtard-Montrachet、部分 Bâtard）；1 級園 Les Pucelles 是 Leflaive 和 Etienne Sauzet 的旗艦，全球 Chardonnay 愛好者的「必嚐清單」；Puligny 風格：礦石精緻、清澈的柑橘和石頭感（對比 Meursault 的奶油豐滿）是學習夏多內風格分化的最佳對照教材。"
+      "correct": 0,
+      "explanation": "Primary香氣來自葡萄品種，Secondary香氣來自釀造過程，Tertiary香氣來自陳年。"
     },
     {
-      "id": "qb-m15-2",
-      "source": "M15",
+      "source": "M14",
       "type": "single",
-      "question": "完成布根地 Level 3 後，選擇繼續精進的最佳「下一步」認證路徑是？",
+      "question": "Allen Meadows (Burghound)評分系統中，96分以上代表什麼？",
       "options": [
-        "A. 立即重新開始 Level 1",
-        "B. 依個人目標：業界職業發展 → WSET Level 4 Diploma（全面涵蓋釀造/商業/產區）或 CMS Advanced Sommelier（盲品導向）；深度布根地學習 → 布根地品鑑社群（Tasting Group）+ Burghound 訂閱 + 定期參訪（無標準化認證可完全替代實踐知識積累）",
-        "C. 沒有 Level 3 之後的布根地深造路徑",
-        "D. 只有 Master of Wine（MW）才是合適的下一步"
+        "Good",
+        "Very Good",
+        "Outstanding",
+        "Exceptional - 極度罕見"
+      ],
+      "correct": 3,
+      "explanation": "Burghound的96分以上極度罕見，只給最偉大年份的最偉大酒款，一年不到10款。"
+    },
+    {
+      "source": "M14",
+      "type": "single",
+      "question": "WSET品鑑系統中，SAT代表？",
+      "options": [
+        "Sweet, Acidity, Tannin",
+        "Systematic Approach to Tasting",
+        "Structure, Aroma, Texture",
+        "Score And Taste"
       ],
       "correct": 1,
-      "explanation": "不同目標的路徑設計：WSET Diploma（Level 4）是業界最通認的「專業通才認證」，覆蓋所有產區和酒類；兩年課程提供比本課程更廣（雖可能較淺）的全球覆蓋。CMS Advanced/Master Sommelier 是服務業向（餐廳侍酒師）的最高認證，以盲品和服務技術為核心。MW（Master of Wine）是全球最嚴格的葡萄酒認證（350+ 人持有中），需要研究論文和頂尖盲品能力，適合有志於葡萄酒學術/業界最高層的人士。對熱情藏家：所有認證路徑都不能替代「大量系統性品嚐 + 定期拜訪布根地」的實踐知識積累。"
+      "explanation": "SAT是WSET的Systematic Approach to Tasting（系統化品鑑方法）的縮寫。"
+    },
+    {
+      "source": "M14",
+      "type": "single",
+      "question": "單寧描述中，'Fine-grained'是指粗糙的單寧。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 1,
+      "explanation": "Fine-grained指細緻的單寧，是高品質葡萄酒的特徵。粗糙的單寧用Coarse或Rough描述。"
+    },
+    {
+      "source": "M14",
+      "type": "single",
+      "question": "品鑑筆記中，'Long finish'通常指尾韻持續多久？",
+      "options": [
+        "3秒以下",
+        "3-6秒",
+        "6-12秒",
+        "15秒以上"
+      ],
+      "correct": 3,
+      "explanation": "Long finish通常指15秒以上。Short finish <3秒，Medium finish 6-12秒。"
+    },
+    {
+      "source": "M14",
+      "type": "single",
+      "question": "描述酒體時，布根地特級園通常是？",
+      "options": [
+        "Light",
+        "Medium",
+        "Medium+ to Full",
+        "Heavy"
+      ],
+      "correct": 2,
+      "explanation": "布根地特級園通常是Medium+到Full body，比村級的Medium body更有架構和濃度。"
+    },
+    {
+      "source": "M14",
+      "type": "single",
+      "question": "專業品鑑筆記應該避免任何主觀情感表達。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 1,
+      "explanation": "雖然應以技術性描述為主，但適度的個人感受（尤其在「個人筆記」部分）可以增加筆記的真實性和參考價值。關鍵是區分客觀描述與主觀感受。"
+    },
+    {
+      "source": "M14",
+      "type": "single",
+      "question": "CellarTracker的主要功能是？",
+      "options": [
+        "購買葡萄酒",
+        "品鑑筆記記錄與酒窖管理",
+        "葡萄酒拍賣",
+        "酒莊預訂"
+      ],
+      "correct": 1,
+      "explanation": "CellarTracker是全球最大的品鑑筆記與酒窖管理平台，免費提供記錄、追蹤、社群評分等功能。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "布根地共有多少個特級園（Grand Cru）？",
+      "options": [
+        "24個",
+        "33個",
+        "42個",
+        "50個"
+      ],
+      "correct": 1,
+      "explanation": "布根地共有33個特級園：Côte de Nuits 24個（紅酒）、Côte de Beaune 8個白酒+1個紅酒（Corton）、Chablis 7個（白酒）。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "DRC的Romanée-Conti獨占園面積約為？",
+      "options": [
+        "0.8公頃",
+        "1.8公頃",
+        "3.8公頃",
+        "5.8公頃"
+      ],
+      "correct": 1,
+      "explanation": "Romanée-Conti獨占園面積約1.8公頃，年產約6,000瓶，是世界上最昂貴的葡萄酒之一。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "規劃布根地酒莊參訪時，頂級酒莊如DRC、Leroy通常需要提前6個月預約。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "頂級酒莊預約極為困難，需要提前6個月甚至更久，並且通常需要透過酒商或專業人士引薦。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "建立平衡的布根地收藏組合時，投資級酒款應佔總預算的多少比例？",
+      "options": [
+        "10-15%",
+        "20-30%",
+        "40-50%",
+        "60-70%"
+      ],
+      "correct": 1,
+      "explanation": "投資級酒款建議佔20-30%預算，50%為日常與特殊場合用酒，保持金字塔結構平衡。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "Fine Dining餐廳酒單設計中，By-the-Glass（杯賣）的主要優勢是？",
+      "options": [
+        "降低購買門檻、提高毛利率",
+        "減少庫存壓力",
+        "簡化侍酒師工作",
+        "加快翻桌率"
+      ],
+      "correct": 0,
+      "explanation": "By-the-Glass降低客人嘗試高價酒的門檻，同時因為1瓶可出5杯，毛利率可達75-80%，高於瓶裝銷售。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "Allen Meadows（Burghound）的96分以上評分極度罕見，一年給不到10款酒。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "Burghound的96+分極度罕見，只給最偉大年份的最偉大酒款，是布根地最嚴格的評分標準之一。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "2018年創下單瓶葡萄酒拍賣世界紀錄的是哪一款酒？",
+      "options": [
+        "1990 DRC Romanée-Conti",
+        "1945 DRC Romanée-Conti",
+        "1962 Henri Jayer Cros Parantoux",
+        "1937 DRC Romanée-Conti"
+      ],
+      "correct": 1,
+      "explanation": "2018年10月，一瓶1945年份DRC Romanée-Conti在Sotheby's拍出$558,000美元，創下單瓶葡萄酒拍賣世界紀錄。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "餐廳酒單定價時，中階酒款（成本NT$5-10K）的建議售價倍數是？",
+      "options": [
+        "2.0-2.5倍",
+        "2.8-3.0倍",
+        "3.0-3.2倍",
+        "3.5-4.0倍"
+      ],
+      "correct": 2,
+      "explanation": "中階酒款建議售價為成本的3.0-3.2倍，可達到67-69%毛利率，既有競爭力又能維持合理利潤。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "建立收藏組合時，應該集中購買單一偉大年份（如2015）以獲得最佳投資回報。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 1,
+      "explanation": "應該分散年份風險，建議30%偉大年份、50%優質年份、20%早飲年份，避免單一年份集中的市場風險。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "完成Level 3課程後，最適合的進階專業認證是？",
+      "options": [
+        "WSET Level 1",
+        "WSET Level 3或CMS Level 2",
+        "Master Sommelier",
+        "Master of Wine"
+      ],
+      "correct": 1,
+      "explanation": "Level 3畢業生適合挑戰WSET Level 3 Award或CMS Certified Sommelier（Level 2），作為進階專業認證的起點。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "Chablis特級園共有幾個？",
+      "options": [
+        "4個",
+        "7個",
+        "10個",
+        "15個"
+      ],
+      "correct": 1,
+      "explanation": "Chablis共有7個特級園：Blanchot、Bougros、Les Clos、Grenouilles、Preuses、Valmur、Vaudésir。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "Coravin系統可以讓餐廳將高價酒款以杯裝方式銷售而不影響酒質。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "Coravin系統使用惰性氣體取酒，不拔軟木塞，可以保存酒質數週甚至數月，讓高價酒by-the-glass成為可能。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "布根地最適合建立長期購酒關係的方式是？",
+      "options": [
+        "只在拍賣會購買",
+        "成為酒商VIP客戶、定期購買",
+        "每次都換不同酒商比價",
+        "等待特價促銷"
+      ],
+      "correct": 1,
+      "explanation": "成為長期VIP客戶可以獲得配額制酒款的優先購買權、專家建議和更好的價格，是建立收藏的最佳策略。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "拍賣會中的'Buyer's Premium'（買家佣金）通常為錘價的多少？",
+      "options": [
+        "5-10%",
+        "15-25%",
+        "30-40%",
+        "50%"
+      ],
+      "correct": 1,
+      "explanation": "買家佣金通常為15-25%，是買家除了錘價外需要額外支付給拍賣行的費用，價格越高比例可能略低。"
+    },
+    {
+      "source": "M15",
+      "type": "single",
+      "question": "Level 3課程涵蓋了從入門到專業水準的布根地完整知識體系。",
+      "options": [
+        "正確",
+        "錯誤"
+      ],
+      "correct": 0,
+      "explanation": "Level 3課程整合了風土、歷史、生產者、投資、品鑑、商業應用等各方面，建立了專業水準的布根地知識體系。"
     }
   ]
 }

@@ -179,6 +179,19 @@
       "completed": false,
       "locked": true,
       "description": "實際案例分析、模擬專業場景與Level 3總複習與認證準備"
+    },
+    {
+      "id": "advanced-m16",
+      "order": 16,
+      "title": "L3 綜合評量",
+      "icon": "📋",
+      "duration": "35分鐘",
+      "lessons": 1,
+      "progress": 0,
+      "completed": false,
+      "locked": true,
+      "isFinalExamModule": true,
+      "description": "整合高階課程 M1–M15 的全部學習內容，隨機抽取 20 題進行綜合測驗，通過 80 分即可解鎖 Level 4"
     }
   ]
 }

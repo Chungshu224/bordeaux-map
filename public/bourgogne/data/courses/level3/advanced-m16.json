@@ -1,0 +1,56 @@
+{
+  "moduleId": "advanced-m16",
+  "title": "L3 綜合評量",
+  "description": "整合高階課程 M1–M15 的全部學習內容，隨機抽取 20 題進行綜合測驗",
+  "lessons": [
+    {
+      "id": "m16-l1",
+      "title": "L3 高階專業 綜合評量",
+      "duration": "35分鐘",
+      "type": "exam",
+      "isFinalExam": true,
+      "quizBankPath": "/bourgogne/data/courses/level3/quiz-bank.json",
+      "finalExamTitle": "📋 L3 高階專業 綜合評量",
+      "slides": [
+        {
+          "type": "title",
+          "title": "L3 高階專業 綜合評量",
+          "subtitle": "布根地高階專業 - 知識總驗收",
+          "description": "整合 M1 至 M15 全部課程內容，測試您對布根地高階專業知識的掌握程度"
+        },
+        {
+          "type": "content",
+          "title": "📋 評量涵蓋範圍",
+          "content": "本次綜合評量涵蓋 L3 高階專業課程的所有模組：\n\n• M1 頂級風土深度剖析\n• M2 名家酒莊研究\n• M3 氣候年份專業分析\n• M4 土壤地質科學\n• M5 釀造工藝進階\n• M6 特級園地塊比較\n• M7 市場投資分析\n• M8 收藏與儲存專業\n• M9 專業盲品訓練\n• M10 餐酒搭配藝術\n• M11 生物動力法研究\n• M12 氣候變遷與未來\n• M13 拍賣與交易實務\n• M14 專業品鑑報告撰寫\n• M15 綜合案例研究\n\n題庫共 155 題，系統隨機抽取 20 題。通過標準：80 分以上。"
+        },
+        {
+          "type": "list",
+          "title": "🎯 考前重點提示",
+          "points": [
+            "風土與地質：Kimmeridgian 牡蠣化石土壤、坡向與海拔對成熟度的影響、頂級地塊多在中坡",
+            "名莊與釀酒師：DRC、Leroy、Coche-Dury、Dujac、Comte de Vogüé 等代表酒莊的風格與持有地塊",
+            "年份判讀：2003 炎熱失衡、2005/2010/2019 經典年份、2021 霜害減產",
+            "特級園比較：Clos de Vougeot 上下坡差異、Musigny 與 Bonnes-Mares 的所有權結構、Montrachet 家族 5 個特級園",
+            "釀造工藝：整串發酵、冷浸漬、乳酸發酵（MLF）、攪桶（Bâtonnage）的作用與時機",
+            "生物動力法：Rudolf Steiner 創始、Demeter/Biodyvin 認證、500/501 號製劑",
+            "氣候變遷：近 50 年升溫約 1.8°C、採收期提前約 4 週、Chablis 與 Hautes-Côtes 受益",
+            "市場與收藏：拍賣買家佣金 15–25%、期酒優勢、專業酒窖溫濕度標準、真偽鑑定",
+            "⚠️ 本測驗結果 80 分以上可解鎖 Level 4 大師課程"
+          ]
+        }
+      ],
+      "quiz": {
+        "id": "advanced-m16-quiz",
+        "title": "L3 高階專業 綜合評量",
+        "passingScore": 80,
+        "questions": []
+      }
+    }
+  ],
+  "quiz": {
+    "id": "advanced-m16-final",
+    "title": "L3 高階專業 綜合評量",
+    "passingScore": 80,
+    "questions": []
+  }
+}
