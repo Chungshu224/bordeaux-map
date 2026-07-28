@@ -267,6 +267,7 @@ const completeCurrentLesson = () => {
   if (currentLesson.value) {
     learningActions.completeLesson(currentLesson.value.id)
   }
+  learningActions.exitLesson()
 }
 
 const handleLessonNext = () => {
