@@ -1,0 +1,56 @@
+{
+  "moduleId": "master-m9",
+  "title": "L4 綜合評量",
+  "description": "整合大師課程 M1–M8 的全部學習內容，隨機抽取 20 題進行最終綜合測驗",
+  "lessons": [
+    {
+      "id": "m9-l1",
+      "title": "L4 大師 綜合評量",
+      "duration": "35分鐘",
+      "type": "exam",
+      "isFinalExam": true,
+      "quizBankPath": "/bourgogne/data/courses/level4/quiz-bank.json",
+      "finalExamTitle": "📋 L4 大師 綜合評量",
+      "slides": [
+        {
+          "type": "title",
+          "title": "L4 大師 綜合評量",
+          "subtitle": "布根地大師課程 - 最終總驗收",
+          "description": "整合 M1 至 M8 全部課程內容，測試您對布根地大師級知識的掌握程度"
+        },
+        {
+          "type": "content",
+          "title": "📋 評量涵蓋範圍",
+          "content": "本次綜合評量涵蓋 L4 大師課程的所有模組：\n\n• M1 布根地歷史文化深度研究\n• M2 全球頂級黑皮諾比較研究\n• M3 侍酒師專業技能訓練\n• M4 葡萄酒教育與培訓方法\n• M5 商業案例與市場策略\n• M6 國際貿易與進出口實務\n• M7 酒莊經營與創業管理\n• M8 專家論文與綜合評估\n\n題庫共 55 題，系統隨機抽取 20 題。通過標準：80 分以上。"
+        },
+        {
+          "type": "list",
+          "title": "🎯 考前重點提示",
+          "points": [
+            "歷史文化：西多會修士創建 Climat 系統、1395 年禁種加美、1443 年 Hospices de Beaune 成立",
+            "全球黑皮諾比較：奧勒岡 1979 巴黎盲品、中奧塔哥片岩土壤、德國 GG 分級、加州風格演變",
+            "侍酒師技能：專業酒窖溫濕度標準、醒酒時機、TCA 軟木塞污染識別、酒單結構規劃",
+            "教育與培訓：實踐導向教學、垂直與水平品鑑、WSET/CMS 準備要點",
+            "商業與市場：威布倫效應、亞洲市場特徵、零售與批發毛利率差異",
+            "國際貿易：海運與空運時效、各地關稅稅率、期酒（En Primeur）操作",
+            "酒莊經營：新建酒莊回本週期、有機認證溢價、氣候風險管理",
+            "專業論文與大師之路：MW 論文規範、專業盲品評估流程、大師認證標準",
+            "🎓 完成本測驗即代表通過布根地大師課程最終總驗收"
+          ]
+        }
+      ],
+      "quiz": {
+        "id": "master-m9-quiz",
+        "title": "L4 大師 綜合評量",
+        "passingScore": 80,
+        "questions": []
+      }
+    }
+  ],
+  "quiz": {
+    "id": "master-m9-final",
+    "title": "L4 大師 綜合評量",
+    "passingScore": 80,
+    "questions": []
+  }
+}
