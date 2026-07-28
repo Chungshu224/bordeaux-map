@@ -27,14 +27,11 @@
     <!-- 課程播放頁：有當前課程時顯示頂部導航欄 + 簡報內容 -->
     <template v-else>
       <header class="learning-header">
-        <!-- Row 1: 返回按鈕 + 進度徽章 -->
+        <!-- Row 1: 返回按鈕 + 頁碼 -->
         <div class="lh-row lh-row-1">
           <button class="lh-btn lh-back-btn" @click="handleBackButton">← {{ $t('common.actions.back') }}</button>
           <div class="lh-badges">
-            <span class="lh-badge lh-progress-badge">{{ totalProgress }}%</span>
-            <span class="lh-badge lh-achievement-badge" @click="showAchievements" :title="$t('common.labels.achievements')">
-              🏆 {{ achievementCount }}
-            </span>
+            <span class="lh-badge lh-slide-counter">{{ currentSlideNumber }} / {{ totalSlidesCount }}</span>
           </div>
         </div>
         <!-- Row 2: 上一頁 / 下一頁 -->
@@ -119,15 +116,7 @@ const visibleLessons = computed(() => {
   if (!data || !Array.isArray(data.lessons)) return []
   return data.lessons.filter(l => !l.hidden)
 })
-const achievementCount = computed(() => learningState.achievements.length)
 const totalAchievements = computed(() => 20) // 總成就數量
-
-const totalProgress = computed(() => {
-  const levels = Object.values(learningState.userProgress)
-  const totalCompleted = levels.reduce((sum, level) => sum + level.completed, 0)
-  const totalLessons = levels.reduce((sum, level) => sum + level.total, 0)
-  return Math.round((totalCompleted / totalLessons) * 100)
-})
 
 // 課程導航相關計算屬性
 const canGoPrevious = computed(() => {
@@ -148,6 +137,20 @@ const canGoNext = computed(() => {
 const currentSlideTitle = computed(() => {
   if (!presentationLessonRef.value) return t('bordeaux.system.slideNav')
   return presentationLessonRef.value.currentSlideTitle || t('bordeaux.system.slideNav')
+})
+
+const currentSlideNumber = computed(() => {
+  if (!presentationLessonRef.value) return 1
+  const slide = presentationLessonRef.value.currentSlide
+  const val = typeof slide === 'number' ? slide : slide?.value
+  return (val ?? 0) + 1
+})
+
+const totalSlidesCount = computed(() => {
+  if (!presentationLessonRef.value) return 1
+  const total = presentationLessonRef.value.totalSlides
+  const val = typeof total === 'number' ? total : total?.value
+  return val ?? 1
 })
 
 const unlockedLevels = computed(() =>
@@ -319,11 +322,6 @@ const showProgress = () => {
   console.log('Show progress modal')
 }
 
-const showAchievements = () => {
-  // 顯示成就頁面
-  console.log('Show achievements modal')
-}
-
 const showSettings = () => {
   // 顯示設置頁面
   console.log('Show settings modal')
@@ -441,12 +439,8 @@ html, body {
   background: rgba(255, 255, 255, 0.15);
 }
 
-.lh-achievement-badge {
-  cursor: pointer;
-}
-
-.lh-achievement-badge:hover {
-  background: rgba(255, 255, 255, 0.25);
+.lh-slide-counter {
+  font-variant-numeric: tabular-nums;
 }
 
 .lh-nav-label {
