@@ -545,8 +545,8 @@
         "12",
         "24"
       ],
-      "correct": 1,
-      "explanation": "Chablis has 7 Grands Crus: Bougros, Preuses, Vaudésir, Grenouilles, Valmur, Les Clos, and Blanchot — all on the right bank of the Serein river."
+      "correct": 0,
+      "explanation": "Strictly speaking, Chablis Grand Cru is legally a single AOC (appellation), containing 7 named Climats: Bougros, Preuses, Vaudésir, Grenouilles, Valmur, Les Clos, and Blanchot — all on the right bank of the Serein river. This differs from Gevrey-Chambertin, whose 9 Grands Crus are each their own separate AOC."
     },
     {
       "source": "M5",

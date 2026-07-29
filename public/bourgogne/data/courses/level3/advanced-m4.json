@@ -250,12 +250,12 @@
         },
         {
           "type": "content",
-          "title": "七大特級園的位置",
-          "content": "夏布利所有七個特級園都位於Serein河右岸的同一個坡地上，全部建立在Kimmeridgian土壤上。這個朝南偏西南的坡地提供理想的日照和排水條件，是Kimmeridgian土壤發揮最大潛力的位置。"
+          "title": "七大Climat的位置",
+          "content": "夏布利Chablis Grand Cru（單一法定產區）內的七個Climat都位於Serein河右岸的同一個坡地上，全部建立在Kimmeridgian土壤上。這個朝南偏西南的坡地提供理想的日照和排水條件，是Kimmeridgian土壤發揮最大潛力的位置。"
         },
         {
           "type": "list",
-          "title": "⭐ 夏布利七大特級園",
+          "title": "⭐ 夏布利七大Climat",
           "points": [
             "Blanchot（12.7ha）- 最北端，最優雅精緻",
             "Les Clos（26ha）- 最大、最有力量",
@@ -912,9 +912,9 @@
       {
         "id": "q3",
         "type": "true-false",
-        "question": "夏布利所有七個特級園都位於Kimmeridgian土壤上。",
+        "question": "夏布利Chablis Grand Cru內所有七個Climat都位於Kimmeridgian土壤上。",
         "correctAnswer": true,
-        "explanation": "夏布利的七個特級園全部位於Serein河右岸的Kimmeridgian土壤上，這是其卓越品質的基礎。"
+        "explanation": "夏布利Chablis Grand Cru（單一法定產區）內的七個Climat全部位於Serein河右岸的Kimmeridgian土壤上，這是其卓越品質的基礎。"
       },
       {
         "id": "q4",

@@ -118,7 +118,7 @@
             "  • 價格：€25-80",
             "",
             "🥇 Chablis Grand Cru（特級園）",
-            "  • 面積：僅100公頃，7個特級園",
+            "  • 面積：僅100公頃，1個特級園AOC（內含7個Climat）",
             "  • 土壤：最精華Kimmeridgian",
             "  • 風格：極致複雜深邃，可陳20年以上",
             "  • 價格：€60-200+"
@@ -286,8 +286,8 @@
         },
         {
           "type": "map",
-          "title": "👑 七大特級園詳圖",
-          "content": "七個特級園由西向東連續分佈在Serein河右岸的同一坡面，朝向西南至南，總面積僅100公頃",
+          "title": "👑 Chablis Grand Cru 七大Climat詳圖",
+          "content": "Chablis Grand Cru是單一法定產區（AOC），內含7個命名的Climat，由西向東連續分佈在Serein河右岸的同一坡面，朝向西南至南，總面積僅100公頃",
           "interactive": false,
           "mapConfig": {
             "center": [3.815, 47.815],
@@ -447,7 +447,7 @@
               "question": "夏布利四大分級中，面積最小（僅100公頃）、等級最高的是？",
               "options": ["Petit Chablis", "Chablis 1er Cru", "Chablis Grand Cru", "Chablis AOC"],
               "correct": 2,
-              "explanation": "Chablis Grand Cru（特級園）只有100公頃、7個特級園，是夏布利金字塔的頂端，也是最稀少珍貴的等級。"
+              "explanation": "Chablis Grand Cru（特級園）只有100公頃、是單一法定產區（AOC，內含7個Climat），是夏布利金字塔的頂端，也是最稀少珍貴的等級。"
             }
           ]
         }
@@ -1084,7 +1084,7 @@
           "keyPoints": [
             "📊 產量占比：僅2%",
             "🗺️ 總面積：100公頃",
-            "🏔️ 數量：7個特級園（連續坡面）",
+            "🏔️ 數量：7個Climat（連續坡面，同屬1個特級園AOC）",
             "🪨 土壤：最優質 Kimmeridgian 泥灰岩",
             "📍 位置：Serein 河右岸單一坡面",
             "☀️ 朝向：朝西南，日照充足",
@@ -1248,7 +1248,7 @@
                 "D. Premier Cru → Chablis → Petit Chablis → Grand Cru"
               ],
               "correct": 1,
-              "explanation": "夏布利的四大分級由低到高為：Petit Chablis（小夏布利，800ha）→ Chablis（村莊級，3,600ha）→ Chablis Premier Cru（一級園，740ha，40個氣候區）→ Chablis Grand Cru（特級園，100ha，7個特級園）。面積越小、等級越高。"
+              "explanation": "夏布利的四大分級由低到高為：Petit Chablis（小夏布利，800ha）→ Chablis（村莊級，3,600ha）→ Chablis Premier Cru（一級園，740ha，40個氣候區）→ Chablis Grand Cru（特級園，100ha，單一AOC內含7個Climat）。面積越小、等級越高。"
             },
             {
               "type": "single",
@@ -1662,8 +1662,8 @@
           "12個",
           "24個"
         ],
-        "correctAnswer": 1,
-        "explanation": "夏布利有7個特級園：Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchot，全部位於 Serein 河右岸。"
+        "correctAnswer": 0,
+        "explanation": "嚴格來說，Chablis Grand Cru在法規上是「單一個」法定產區（AOC），其中內含7個命名的Climat：Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchot，全部位於 Serein 河右岸。這與哲維瑞-香貝丹（Gevrey-Chambertin）擁有9個各自獨立的特級園AOC不同。"
       },
       {
         "id": "q3",

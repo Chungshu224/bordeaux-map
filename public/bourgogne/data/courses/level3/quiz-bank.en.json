@@ -407,13 +407,13 @@
     {
       "source": "M4",
       "type": "single",
-      "question": "All seven of Chablis's Grands Crus sit on Kimmeridgian soil.",
+      "question": "All seven Climats within Chablis Grand Cru sit on Kimmeridgian soil.",
       "options": [
         "True",
         "False"
       ],
       "correct": 0,
-      "explanation": "All seven of Chablis's Grands Crus sit on the right bank of the Serein river on Kimmeridgian soil — the foundation of their exceptional quality."
+      "explanation": "All seven Climats within Chablis Grand Cru (a single AOC) sit on the right bank of the Serein river on Kimmeridgian soil — the foundation of their exceptional quality."
     },
     {
       "source": "M4",
@@ -1751,7 +1751,7 @@
         "50"
       ],
       "correct": 1,
-      "explanation": "Burgundy has 33 Grands Crus in total: 24 in the Côte de Nuits (red), 8 white + 1 red (Corton) in the Côte de Beaune, and 7 (white) in Chablis."
+      "explanation": "Burgundy has 33 Grand Cru appellations in total: 24 in the Côte de Nuits (red), 8 in the Côte de Beaune (7 white + 1 red, including the Corton family), and 1 in Chablis (Chablis Grand Cru, a single AOC containing 7 named Climats)."
     },
     {
       "source": "M15",
@@ -1867,15 +1867,15 @@
     {
       "source": "M15",
       "type": "single",
-      "question": "How many Grands Crus does Chablis have in total?",
+      "question": "How many separate Grand Cru appellations (AOCs) does Chablis have?",
       "options": [
-        "4",
+        "1",
         "7",
         "10",
         "15"
       ],
-      "correct": 1,
-      "explanation": "Chablis has 7 Grands Crus in total: Blanchot, Bougros, Les Clos, Grenouilles, Preuses, Valmur, and Vaudésir."
+      "correct": 0,
+      "explanation": "Strictly speaking, Chablis Grand Cru is legally a single AOC (appellation), containing 7 named Climats: Blanchot, Bougros, Les Clos, Grenouilles, Preuses, Valmur, and Vaudésir. This differs from Gevrey-Chambertin, whose 9 Grands Crus are each their own separate AOC."
     },
     {
       "source": "M15",

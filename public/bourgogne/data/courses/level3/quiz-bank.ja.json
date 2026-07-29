@@ -407,13 +407,13 @@
     {
       "source": "M4",
       "type": "single",
-      "question": "シャブリの七つのグラン・クリュはすべてキンメリッジ土壌の上にある。",
+      "question": "Chablis Grand Cru内の七つのクリマはすべてキンメリッジ土壌の上にある。",
       "options": [
         "正しい",
         "誤り"
       ],
       "correct": 0,
-      "explanation": "シャブリの七つのグラン・クリュはすべてSerein川右岸のキンメリッジ土壌の上にあり、これがその卓越した品質の基盤です。"
+      "explanation": "Chablis Grand Cru（単一のAOC）内の七つのクリマはすべてSerein川右岸のキンメリッジ土壌の上にあり、これがその卓越した品質の基盤です。"
     },
     {
       "source": "M4",
@@ -1751,7 +1751,7 @@
         "50"
       ],
       "correct": 1,
-      "explanation": "ブルゴーニュには合計33のグラン・クリュがあります：コート・ド・ニュイ24（赤ワイン）、コート・ド・ボーヌ8つの白ワイン＋1つの赤ワイン（Corton）、シャブリ7（白ワイン）。"
+      "explanation": "ブルゴーニュには合計33の特級畑法定産地呼称（AOC）があります：コート・ド・ニュイ24（赤ワイン）、コート・ド・ボーヌ8（白7・赤1、Cortonファミリーを含む）、シャブリ1（Chablis Grand Cru、単一AOCで白ワイン、7つの名前付きクリマを内包）。"
     },
     {
       "source": "M15",
@@ -1867,15 +1867,15 @@
     {
       "source": "M15",
       "type": "single",
-      "question": "シャブリのグラン・クリュは全部でいくつありますか？",
+      "question": "シャブリのグラン・クリュは独立したAOC（法定産地呼称）としていくつありますか？",
       "options": [
-        "4",
+        "1",
         "7",
         "10",
         "15"
       ],
-      "correct": 1,
-      "explanation": "シャブリには全部で7つのグラン・クリュがあります：Blanchot、Bougros、Les Clos、Grenouilles、Preuses、Valmur、Vaudésirです。"
+      "correct": 0,
+      "explanation": "厳密には、Chablis Grand Cruは法規上「単一の」AOCであり、その中に7つの名前付きクリマが含まれます：Blanchot、Bougros、Les Clos、Grenouilles、Preuses、Valmur、Vaudésirです。これは、9つの独立したグラン・クリュAOCを持つジュヴレ・シャンベルタンとは異なります。"
     },
     {
       "source": "M15",

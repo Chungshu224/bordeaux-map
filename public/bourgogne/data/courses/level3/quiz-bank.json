@@ -407,13 +407,13 @@
     {
       "source": "M4",
       "type": "single",
-      "question": "夏布利所有七個特級園都位於Kimmeridgian土壤上。",
+      "question": "夏布利Chablis Grand Cru內所有七個Climat都位於Kimmeridgian土壤上。",
       "options": [
         "正確",
         "錯誤"
       ],
       "correct": 0,
-      "explanation": "夏布利的七個特級園全部位於Serein河右岸的Kimmeridgian土壤上，這是其卓越品質的基礎。"
+      "explanation": "夏布利Chablis Grand Cru（單一法定產區）內的七個Climat全部位於Serein河右岸的Kimmeridgian土壤上，這是其卓越品質的基礎。"
     },
     {
       "source": "M4",
@@ -1751,7 +1751,7 @@
         "50個"
       ],
       "correct": 1,
-      "explanation": "布根地共有33個特級園：Côte de Nuits 24個（紅酒）、Côte de Beaune 8個白酒+1個紅酒（Corton）、Chablis 7個（白酒）。"
+      "explanation": "布根地共有33個特級園（法定產區）：Côte de Nuits 24個（紅酒）、Côte de Beaune 8個（7白1紅，含Corton系列）、Chablis 1個（Chablis Grand Cru，白酒，內含7個Climat）。"
     },
     {
       "source": "M15",
@@ -1867,15 +1867,15 @@
     {
       "source": "M15",
       "type": "single",
-      "question": "Chablis特級園共有幾個？",
+      "question": "Chablis特級園共有幾個法定產區（AOC）？",
       "options": [
-        "4個",
+        "1個",
         "7個",
         "10個",
         "15個"
       ],
-      "correct": 1,
-      "explanation": "Chablis共有7個特級園：Blanchot、Bougros、Les Clos、Grenouilles、Preuses、Valmur、Vaudésir。"
+      "correct": 0,
+      "explanation": "嚴格來說，Chablis Grand Cru在法規上是「單一個」法定產區（AOC），其中內含7個命名的Climat：Blanchot、Bougros、Les Clos、Grenouilles、Preuses、Valmur、Vaudésir。這與哲維瑞-香貝丹（Gevrey-Chambertin）擁有9個各自獨立的特級園AOC不同。"
     },
     {
       "source": "M15",

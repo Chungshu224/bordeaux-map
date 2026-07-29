@@ -545,8 +545,8 @@
         "12",
         "24"
       ],
-      "correct": 1,
-      "explanation": "シャブリには7つのグラン・クリュがあります：Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchotで、すべてSerein川の右岸に位置します。"
+      "correct": 0,
+      "explanation": "厳密には、Chablis Grand Cruは法規上「単一の」AOC（法定産地呼称）であり、その中に7つの名前付きクリマが含まれます：Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchotで、すべてSerein川の右岸に位置します。これは、9つの独立したグラン・クリュAOCを持つジュヴレ・シャンベルタンとは異なります。"
     },
     {
       "source": "M5",
