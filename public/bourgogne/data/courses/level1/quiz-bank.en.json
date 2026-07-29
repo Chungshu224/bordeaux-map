@@ -1,0 +1,942 @@
+{
+  "title": "Burgundy Level 1 Comprehensive Assessment Question Bank",
+  "level": "beginner",
+  "questions": [
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "Where is Burgundy located in France?",
+      "options": [
+        "Southwest (near Bordeaux)",
+        "East (about 300 km southeast of Paris)",
+        "South (Provence region)",
+        "North (near Champagne)"
+      ],
+      "correct": 1,
+      "explanation": "Burgundy is located in eastern France, beginning about 300 km southeast of Paris. Its main cities include Dijon and Beaune."
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "What climate type does Burgundy have?",
+      "options": [
+        "Mediterranean climate",
+        "Oceanic climate",
+        "Continental climate",
+        "Tropical climate"
+      ],
+      "correct": 2,
+      "explanation": "Burgundy has a continental climate with four distinct seasons — cold winters and warm (but not hot) summers — ideal conditions for Pinot Noir and Chardonnay."
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "Which monastic order contributed most to the development of Burgundy wine?",
+      "options": [
+        "Benedictines",
+        "Cistercians",
+        "Franciscans",
+        "Dominicans"
+      ],
+      "correct": 1,
+      "explanation": "Cistercian monks carefully studied the differences between plots, pioneering the concept of 'terroir' and establishing rigorous standards for viticulture and winemaking — an enormous contribution to Burgundy's development."
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "What UNESCO designation did Burgundy's \"Climats\" receive in 2015?",
+      "options": [
+        "French National Monument",
+        "UNESCO World Heritage Site",
+        "EU Protected Region",
+        "International City of Gastronomy"
+      ],
+      "correct": 1,
+      "explanation": "In 2015, Burgundy's Climats — 1,247 precisely delineated vineyard plots — were inscribed as a UNESCO World Heritage Site, recognizing their unique cultural and historical value."
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "Which grape variety is primarily used for Burgundy red wine?",
+      "options": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Pinot Noir",
+        "Syrah"
+      ],
+      "correct": 2,
+      "explanation": "Burgundy red wine is made almost exclusively from Pinot Noir. This single-variety tradition is one of Burgundy's defining characteristics, in sharp contrast to Bordeaux's blending tradition."
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "What is Chardonnay primarily used to make in Burgundy?",
+      "options": [
+        "Red wine",
+        "White wine",
+        "Rosé",
+        "Sparkling wine"
+      ],
+      "correct": 1,
+      "explanation": "Chardonnay is a white grape variety used primarily for white wine in Burgundy. Burgundy is Chardonnay's homeland, and its white wines are considered the world benchmark."
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "In Burgundy's four-tier classification system, which tier has the lowest yield but the highest quality?",
+      "options": [
+        "Régionale (Regional)",
+        "Village",
+        "Premier Cru",
+        "Grand Cru"
+      ],
+      "correct": 3,
+      "explanation": "Grand Cru accounts for only 1% of Burgundy's total production and represents the highest quality tier. These vineyards enjoy the finest terroir and produce wines with the greatest aging potential."
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "On a Burgundy label, if only \"Chambertin\" is shown without a village name, what tier is this?",
+      "options": [
+        "Régionale",
+        "Village",
+        "Premier Cru",
+        "Grand Cru"
+      ],
+      "correct": 3,
+      "explanation": "A Grand Cru label displays only the vineyard name, without the village name, because a Grand Cru is itself an independent AOC. A Premier Cru label instead shows \"village name + 1er Cru + vineyard name.\""
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "What does \"Mis en bouteille au domaine\" mean on a label?",
+      "options": [
+        "Organic-certified wine",
+        "Made from old-vine grapes",
+        "Estate-bottled",
+        "Single-vineyard wine"
+      ],
+      "correct": 2,
+      "explanation": "\"Mis en bouteille au domaine\" means the wine was bottled at the estate, usually indicating the same domaine controlled everything from grape-growing through bottling — generally a mark of better quality assurance."
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "Burgundy has six main sub-regions running north to south. Which of the following is NOT one of them?",
+      "options": [
+        "Chablis",
+        "Côte de Nuits",
+        "Pauillac",
+        "Beaujolais"
+      ],
+      "correct": 2,
+      "explanation": "Pauillac is a Bordeaux appellation, not part of Burgundy. Burgundy's six sub-regions, from north to south, are: Chablis, Côte de Nuits, Côte de Beaune, Côte Chalonnaise, Mâconnais, and Beaujolais."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "In Burgundy's four-tier classification system, which tier accounts for the largest share of total production?",
+      "options": [
+        "Régionale",
+        "Village",
+        "Premier Cru",
+        "Grand Cru"
+      ],
+      "correct": 0,
+      "explanation": "Régionale accounts for 53% of Burgundy's total production — the most basic tier and also the largest by volume."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "What does a Grand Cru label typically show?",
+      "options": [
+        "Village name + Grand Cru",
+        "Vineyard name only + Grand Cru",
+        "Village name + vineyard name + Grand Cru",
+        "Bourgogne + Grand Cru"
+      ],
+      "correct": 1,
+      "explanation": "A Grand Cru label is the simplest of all: it shows only the vineyard name and \"Grand Cru,\" with no village name, because a Grand Cru is itself an independent AOC."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "What is the approximate maximum permitted yield for Premier Cru?",
+      "options": [
+        "30–35 hl/ha",
+        "40–48 hl/ha",
+        "55–60 hl/ha",
+        "No limit"
+      ],
+      "correct": 1,
+      "explanation": "Premier Cru's permitted yield for red wine is about 40–48 hl/ha — higher than Grand Cru (35–37) but considerably stricter than Régionale (55–60)."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "If a label shows only \"GEVREY-CHAMBERTIN,\" what tier is this?",
+      "options": [
+        "Régionale",
+        "Village",
+        "Premier Cru",
+        "Grand Cru"
+      ],
+      "correct": 1,
+      "explanation": "A village name shown alone, without any additional designation such as Premier Cru or Grand Cru, indicates a Village-level wine."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "What does AOC stand for?",
+      "options": [
+        "Appellation d'Origine Contrôlée",
+        "Association of Original Chateaux",
+        "Advanced Organic Certification",
+        "Agricultural Origin Classification"
+      ],
+      "correct": 0,
+      "explanation": "AOC stands for Appellation d'Origine Contrôlée (Controlled Designation of Origin), France's quality-assurance system for wine."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "How many Grands Crus does Burgundy have in total?",
+      "options": [
+        "10",
+        "33",
+        "100",
+        "640"
+      ],
+      "correct": 1,
+      "explanation": "Burgundy has 33 Grands Crus in total, distributed across Chablis (1), Côte de Nuits (24), and Côte de Beaune (8)."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "Which word must always appear on a Premier Cru label?",
+      "options": [
+        "Bourgogne",
+        "Village",
+        "Premier Cru or 1er Cru",
+        "Monopole"
+      ],
+      "correct": 2,
+      "explanation": "A Premier Cru label must always show \"Premier Cru\" or its abbreviation \"1er Cru\" to distinguish it from a Village-level wine."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "Which of the following is a Régionale-level label?",
+      "options": [
+        "Chambertin",
+        "Gevrey-Chambertin",
+        "Bourgogne Pinot Noir",
+        "Meursault 1er Cru"
+      ],
+      "correct": 2,
+      "explanation": "Any label beginning with \"Bourgogne\" indicates a Régionale-level wine."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "Roughly what share of Burgundy's total production does Grand Cru account for?",
+      "options": [
+        "1%",
+        "10%",
+        "36%",
+        "53%"
+      ],
+      "correct": 0,
+      "explanation": "Grand Cru accounts for only 1% of Burgundy's total production, making it the rarest and most precious tier."
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "What is the typical price range for a Village-level wine?",
+      "options": [
+        "€10–20",
+        "€25–80",
+        "€100–500",
+        "Over €1000"
+      ],
+      "correct": 1,
+      "explanation": "Village-level wine typically costs €25–80, making it a good-value entry point for learning about Burgundy terroir."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "How many Grands Crus does the Côte de Nuits have?",
+      "options": [
+        "18",
+        "24",
+        "30",
+        "33"
+      ],
+      "correct": 1,
+      "explanation": "The Côte de Nuits has 24 Grands Crus, accounting for the vast majority of Burgundy's 33 total."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Which village has the most Grands Crus (9)?",
+      "options": [
+        "Vosne-Romanée",
+        "Gevrey-Chambertin",
+        "Morey-Saint-Denis",
+        "Chambolle-Musigny"
+      ],
+      "correct": 1,
+      "explanation": "Gevrey-Chambertin has 9 Grands Crus, more than any other village in the Côte de Nuits."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "What is the size of the Romanée-Conti Grand Cru?",
+      "options": [
+        "0.85 hectares",
+        "1.81 hectares",
+        "6.06 hectares",
+        "8.03 hectares"
+      ],
+      "correct": 1,
+      "explanation": "Romanée-Conti is just 1.81 hectares — one of the most expensive vineyard sites in the world."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Which village is famous for its \"feminine\" style?",
+      "options": [
+        "Gevrey-Chambertin",
+        "Chambolle-Musigny",
+        "Nuits-Saint-Georges",
+        "Fixin"
+      ],
+      "correct": 1,
+      "explanation": "Chambolle-Musigny is renowned for its silky texture, abundant floral aromatics, and refined, \"feminine\" style."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Which is Burgundy's largest Grand Cru?",
+      "options": [
+        "Chambertin",
+        "Clos de Vougeot",
+        "Échézeaux",
+        "Charmes-Chambertin"
+      ],
+      "correct": 1,
+      "explanation": "Clos de Vougeot is Burgundy's largest Grand Cru, at 50.6 hectares."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "How many Grands Crus does Nuits-Saint-Georges have?",
+      "options": [
+        "0",
+        "2",
+        "5",
+        "8"
+      ],
+      "correct": 0,
+      "explanation": "Nuits-Saint-Georges has no Grand Cru, but it does have 41 Premiers Crus of exceptional quality."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Which village is the only one in the Côte de Nuits that can produce red, white, and rosé wine?",
+      "options": [
+        "Marsannay",
+        "Fixin",
+        "Vougeot",
+        "Morey-Saint-Denis"
+      ],
+      "correct": 0,
+      "explanation": "Marsannay is the only Côte de Nuits village that can produce red, white, and rosé wine."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Which two Grands Crus does DRC (Domaine de la Romanée-Conti) hold as monopoles?",
+      "options": [
+        "Romanée-Conti & Richebourg",
+        "Romanée-Conti & La Tâche",
+        "La Tâche & Richebourg",
+        "Romanée-Saint-Vivant & La Romanée"
+      ],
+      "correct": 1,
+      "explanation": "DRC holds Romanée-Conti (1.81 ha) and La Tâche (6.06 ha) as exclusive monopoles."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "How many Grands Crus does Morey-Saint-Denis have?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "Morey-Saint-Denis has 5 Grands Crus: Clos de la Roche, Clos Saint-Denis, Clos des Lambrays, Clos de Tart, and (part of) Bonnes-Mares."
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "What is the main soil type of the Côte de Nuits?",
+      "options": [
+        "Granite",
+        "Jurassic limestone and marl",
+        "Volcanic rock",
+        "Sandy soil"
+      ],
+      "correct": 1,
+      "explanation": "The Côte de Nuits' main soil is Jurassic limestone and marl, which gives its Pinot Noir its characteristic elegance."
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "How many white-wine Grands Crus does the Côte de Beaune have?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "correct": 1,
+      "explanation": "The Côte de Beaune has 6 white-wine Grands Crus, all Chardonnay: Montrachet, Chevalier-Montrachet, Bâtard-Montrachet, Bienvenues-Bâtard-Montrachet, Criots-Bâtard-Montrachet, and Corton-Charlemagne."
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Which village is called the \"king of white wine\" yet has no Grand Cru?",
+      "options": [
+        "Puligny-Montrachet",
+        "Chassagne-Montrachet",
+        "Meursault",
+        "Beaune"
+      ],
+      "correct": 2,
+      "explanation": "Meursault is the largest white-wine village in the Côte de Beaune. It has no Grand Cru, but its Premiers Crus are of exceptional quality."
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "What is the size of the Montrachet Grand Cru?",
+      "options": [
+        "3.7 hectares",
+        "7.5 hectares",
+        "11.9 hectares",
+        "15.4 hectares"
+      ],
+      "correct": 1,
+      "explanation": "Montrachet is 7.5 hectares, straddling the villages of Puligny-Montrachet and Chassagne-Montrachet."
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Which village produces the Côte de Beaune's most powerful red wine?",
+      "options": [
+        "Beaune",
+        "Pommard",
+        "Volnay",
+        "Aloxe-Corton"
+      ],
+      "correct": 1,
+      "explanation": "Pommard is known for its firm tannins and powerful structure — the most robust red wine of the Côte de Beaune."
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "What best characterizes the style of Volnay?",
+      "options": [
+        "Firm tannins, powerful",
+        "Silky and floral",
+        "Highly mineral, high acidity",
+        "Creamy, hazelnut, full-bodied"
+      ],
+      "correct": 1,
+      "explanation": "Volnay is known for its silky texture and abundant floral aromatics — an elegant, refined style often called \"the feminine side of red wine.\""
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Which village, with 42 Premiers Crus, is the capital of the Côte de Beaune?",
+      "options": [
+        "Meursault",
+        "Beaune",
+        "Pommard",
+        "Volnay"
+      ],
+      "correct": 1,
+      "explanation": "Beaune is the capital of the Côte de Beaune, with 42 Premiers Crus, and its Village-level wines offer excellent value."
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "What is the production breakdown of Chassagne-Montrachet?",
+      "options": [
+        "100% white",
+        "80% white, 20% red",
+        "50% white, 50% red",
+        "30% white, 70% red"
+      ],
+      "correct": 2,
+      "explanation": "Chassagne-Montrachet produces both red and white wine in roughly equal proportions."
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "What is Meursault's most famous Premier Cru?",
+      "options": [
+        "Charmes",
+        "Genevrières",
+        "Perrières",
+        "Poruzots"
+      ],
+      "correct": 2,
+      "explanation": "Perrières is Meursault's finest Premier Cru, closest to Grand Cru quality, with an intensely mineral character."
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "How does the Côte de Beaune's main soil type differ from that of the Côte de Nuits?",
+      "options": [
+        "It's exactly the same",
+        "A higher proportion of marl",
+        "Mainly granite",
+        "More volcanic rock"
+      ],
+      "correct": 1,
+      "explanation": "The Côte de Beaune's soil is mainly limestone but has a higher proportion of marl than the Côte de Nuits, which suits Chardonnay especially well."
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Which Grand Cru produces the world's most expensive Chardonnay?",
+      "options": [
+        "Chevalier-Montrachet",
+        "Montrachet",
+        "Corton-Charlemagne",
+        "Bâtard-Montrachet"
+      ],
+      "correct": 1,
+      "explanation": "Montrachet produces the world's most expensive Chardonnay, averaging over €500 a bottle, with top producers reaching over €2000."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "What is Chablis's distinctive Kimmeridgian soil primarily rich in?",
+      "options": [
+        "Volcanic ash",
+        "Small oyster fossils",
+        "Iron ore",
+        "Granite"
+      ],
+      "correct": 1,
+      "explanation": "Kimmeridgian marl is rich in tiny 150-million-year-old oyster fossils (Exogyra virgula), giving Chablis its distinctive mineral, oyster-shell character."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "How many Grands Crus does Chablis have?",
+      "options": [
+        "1",
+        "7",
+        "12",
+        "24"
+      ],
+      "correct": 1,
+      "explanation": "Chablis has 7 Grands Crus: Bougros, Preuses, Vaudésir, Grenouilles, Valmur, Les Clos, and Blanchot — all on the right bank of the Serein river."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "Which is Chablis's largest and most famous Grand Cru?",
+      "options": [
+        "Preuses",
+        "Vaudésir",
+        "Les Clos",
+        "Grenouilles"
+      ],
+      "correct": 2,
+      "explanation": "Les Clos is Chablis's largest Grand Cru (26.9 ha) and is widely regarded as the finest, capable of aging 30+ years."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "Which tier accounts for the largest share of production in Chablis's four-tier classification?",
+      "options": [
+        "Petit Chablis",
+        "Chablis",
+        "Premier Cru",
+        "Grand Cru"
+      ],
+      "correct": 1,
+      "explanation": "Chablis (village level) accounts for 60% of total production — the most basic and highest-volume tier."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "What is Chablis's most classic food pairing?",
+      "options": [
+        "Steak",
+        "Oysters",
+        "Chocolate",
+        "Chili peppers"
+      ],
+      "correct": 1,
+      "explanation": "Chablis and oysters is a classic pairing — its minerality and marine character match beautifully, and its high acidity balances the oysters' brininess."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "What is the ideal serving temperature for Chablis?",
+      "options": [
+        "4-6°C",
+        "8-10°C",
+        "14-16°C",
+        "18-20°C"
+      ],
+      "correct": 1,
+      "explanation": "Chablis should be served at 8-10°C; too cold suppresses the aromas, though aged examples can be served slightly warmer, up to 12°C."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "Roughly how many climats (named plots) does Chablis Premier Cru have?",
+      "options": [
+        "10",
+        "20",
+        "40",
+        "100"
+      ],
+      "correct": 2,
+      "explanation": "Chablis has roughly 40 Premiers Crus, the most famous of which include Montée de Tonnerre, Fourchaume, and Vaillons."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "Which is NOT a representative producer of Chablis's traditional stainless-steel school?",
+      "options": [
+        "Dauvissat",
+        "Raveneau",
+        "William Fèvre",
+        "Moreau"
+      ],
+      "correct": 2,
+      "explanation": "William Fèvre belongs to the oak-barrel (more modern) school, while Dauvissat and Raveneau represent the traditional stainless-steel school."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "What is Chablis's biggest natural threat in spring?",
+      "options": [
+        "Drought",
+        "Frost",
+        "Typhoons",
+        "Hail"
+      ],
+      "correct": 1,
+      "explanation": "Spring frost is Chablis's greatest threat — frosts in April-May can destroy most of a year's crop, so growers use heaters and water-spraying to protect the vines."
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "La Moutonne is a monopole straddling which two Grands Crus?",
+      "options": [
+        "Les Clos and Valmur",
+        "Preuses and Vaudésir",
+        "Bougros and Blanchot",
+        "Grenouilles and Valmur"
+      ],
+      "correct": 1,
+      "explanation": "La Moutonne (2.35 ha) straddles Preuses and Vaudésir and is a monopole exclusively owned by Domaine Long-Depaquit."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Which grape variety is primarily grown in Beaujolais?",
+      "options": [
+        "Pinot Noir",
+        "Gamay",
+        "Syrah",
+        "Merlot"
+      ],
+      "correct": 1,
+      "explanation": "Beaujolais is 100% planted with Gamay — the biggest distinction from the rest of Burgundy."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "What is Beaujolais's most distinctive winemaking technique?",
+      "options": [
+        "Cold soak",
+        "Carbonic maceration",
+        "Malolactic fermentation",
+        "Oak-barrel aging"
+      ],
+      "correct": 1,
+      "explanation": "Carbonic maceration is Beaujolais's signature winemaking technique, in which whole clusters ferment in an oxygen-free environment."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "How many Crus (special villages) does Beaujolais have?",
+      "options": [
+        "5",
+        "7",
+        "10",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "Beaujolais has 10 Crus, including Moulin-à-Vent, Morgon, and Fleurie."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Which Cru is called the \"king of Beaujolais\"?",
+      "options": [
+        "Fleurie",
+        "Morgon",
+        "Moulin-à-Vent",
+        "Brouilly"
+      ],
+      "correct": 2,
+      "explanation": "Moulin-à-Vent is called the \"king of Beaujolais\" — the most powerful and complex, capable of aging 10-20 years, and often mistaken for Côte de Nuits Pinot Noir once aged."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "When is Beaujolais Nouveau released each year?",
+      "options": [
+        "First Saturday of September",
+        "Third Thursday of October",
+        "Third Thursday of November",
+        "First Saturday of December"
+      ],
+      "correct": 2,
+      "explanation": "Beaujolais Nouveau is released on the third Thursday of November each year — a French wine festival day."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Which Cru, known for its elegant and fragrant style, is called the \"queen of Beaujolais\"?",
+      "options": [
+        "Fleurie",
+        "Chiroubles",
+        "Saint-Amour",
+        "Régnié"
+      ],
+      "correct": 0,
+      "explanation": "Fleurie is called the \"queen of Beaujolais,\" known for violet and rose aromas and a silky texture — the most elegant and fragrant of the Crus."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "What soil type are Beaujolais's ten Crus mainly located on?",
+      "options": [
+        "Limestone",
+        "Granite",
+        "Clay",
+        "Sand"
+      ],
+      "correct": 1,
+      "explanation": "The ten Crus are all on granite soils in the north — completely different from the Côte d'Or's limestone."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "What is the ideal serving temperature for Beaujolais?",
+      "options": [
+        "8-10°C",
+        "12-14°C",
+        "16-18°C",
+        "18-20°C"
+      ],
+      "correct": 1,
+      "explanation": "Beaujolais should be served lightly chilled (12-14°C), or as cool as 10°C in summer. Served at room temperature, it can taste loose and uninteresting."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "Which Cru is the only one on volcanic soil?",
+      "options": [
+        "Morgon",
+        "Côte de Brouilly",
+        "Moulin-à-Vent",
+        "Chénas"
+      ],
+      "correct": 1,
+      "explanation": "Côte de Brouilly, on the slopes of Mont Brouilly, is the only Cru with volcanic soil, giving its wines a distinctive minerality."
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "What cuisine does Beaujolais pair best with?",
+      "options": [
+        "Heavy red meat",
+        "Spicy Sichuan cuisine",
+        "Asian cuisine",
+        "Dessert"
+      ],
+      "correct": 2,
+      "explanation": "Beaujolais's fruitiness, low tannin, and medium body make it a perfect match for Asian cuisine (Chinese, Japanese), especially dishes like kung pao chicken or sweet-and-sour pork."
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "Which is the largest village in the Côte Chalonnaise?",
+      "options": [
+        "Bouzeron",
+        "Rully",
+        "Mercurey",
+        "Givry"
+      ],
+      "correct": 2,
+      "explanation": "Mercurey is the largest village in the Côte Chalonnaise, focused on red wine, accounting for about 60% of the region's production."
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "What is distinctive about the Bouzeron appellation?",
+      "options": [
+        "Pinot Noir only",
+        "Chardonnay only",
+        "Aligoté only",
+        "Sparkling wine only"
+      ],
+      "correct": 2,
+      "explanation": "Bouzeron is the only Village-level AOC in Burgundy dedicated exclusively to Aligoté white wine."
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "Which is the Mâconnais's top appellation?",
+      "options": [
+        "Mâcon-Villages",
+        "Pouilly-Fuissé",
+        "Saint-Véran",
+        "Viré-Clessé"
+      ],
+      "correct": 1,
+      "explanation": "Pouilly-Fuissé is the Mâconnais's finest appellation, with strong minerality and good aging potential."
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "Roughly how much cheaper are Côte Chalonnaise wines compared to the Côte d'Or?",
+      "options": [
+        "10-20%",
+        "30-50%",
+        "60-80%",
+        "Almost the same"
+      ],
+      "correct": 1,
+      "explanation": "Côte Chalonnaise wines are about 30-50% cheaper than the Côte d'Or's, making them an excellent-value choice."
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "What is distinctive about the Montagny appellation?",
+      "options": [
+        "Red wine only",
+        "White wine only",
+        "Both red and white",
+        "Sparkling wine"
+      ],
+      "correct": 1,
+      "explanation": "Montagny is the only Côte Chalonnaise village dedicated exclusively to white wine, mainly Chardonnay."
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "Which recent vintage is considered a \"vintage of the century\"?",
+      "options": [
+        "2017",
+        "2015",
+        "2021",
+        "2019"
+      ],
+      "correct": 1,
+      "explanation": "2015 is widely recognized as a vintage of the century, with outstanding red and white wines and excellent aging potential."
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "Which sub-region is Domaine de la Romanée-Conti (DRC) located in?",
+      "options": [
+        "Côte de Beaune",
+        "Côte de Nuits",
+        "Chablis",
+        "Mâconnais"
+      ],
+      "correct": 1,
+      "explanation": "DRC is located in Vosne-Romanée in the Côte de Nuits, holding several top-tier Grands Crus."
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "Domaine Leflaive is famous for the white wines of which village?",
+      "options": [
+        "Meursault",
+        "Chassagne-Montrachet",
+        "Puligny-Montrachet",
+        "Corton"
+      ],
+      "correct": 2,
+      "explanation": "Domaine Leflaive is a top producer of Puligny-Montrachet white wine."
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "Which is Chablis's benchmark producer?",
+      "options": [
+        "Domaine Raveneau",
+        "Domaine Coche-Dury",
+        "Domaine Leroy",
+        "Domaine Dujac"
+      ],
+      "correct": 0,
+      "explanation": "Domaine Raveneau is the benchmark producer for Chablis Grand Cru, known for its pure, mineral-driven style."
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "What is the typical drinking window for Burgundy Grand Cru red wine?",
+      "options": [
+        "1-5 years",
+        "3-8 years",
+        "10-30+ years",
+        "50+ years"
+      ],
+      "correct": 2,
+      "explanation": "Grand Cru red wines have a solid structure and excellent aging potential, typically needing 10-30+ years to reach their peak."
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "What was distinctive about the 2022 vintage?",
+      "options": [
+        "Severe frost damage",
+        "Hot and dry, with outstanding whites",
+        "Extremely high yields",
+        "Mediocre quality"
+      ],
+      "correct": 1,
+      "explanation": "2022 was hot and dry, producing highly concentrated grapes, with the white wines performing especially well."
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "What is the ideal temperature for a wine cellar?",
+      "options": [
+        "8-10°C",
+        "12-14°C",
+        "16-18°C",
+        "20-22°C"
+      ],
+      "correct": 1,
+      "explanation": "A steady 12-14°C is the ideal cellar temperature, allowing wine to age slowly and consistently."
+    }
+  ]
+}

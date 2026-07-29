@@ -1,0 +1,942 @@
+{
+  "title": "ブルゴーニュ Level 1 総合評価問題集",
+  "level": "beginner",
+  "questions": [
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "ブルゴーニュはフランスのどの方角に位置していますか？",
+      "options": [
+        "南西部（ボルドー付近）",
+        "東部（パリの南東約300km）",
+        "南部（プロヴァンス地方）",
+        "北部（シャンパーニュ付近）"
+      ],
+      "correct": 1,
+      "explanation": "ブルゴーニュはフランス東部、パリの南東約300kmの地点から広がっており、ディジョンやボーヌが主要都市です。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "ブルゴーニュの気候は何型に属しますか？",
+      "options": [
+        "地中海性気候",
+        "海洋性気候",
+        "大陸性気候",
+        "熱帯気候"
+      ],
+      "correct": 2,
+      "explanation": "ブルゴーニュは大陸性気候で、四季がはっきりしており、冬は寒く夏は暑すぎない気候がピノ・ノワールとシャルドネの生育に理想的です。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "ブルゴーニュワインの発展に最も貢献した修道会はどれですか？",
+      "options": [
+        "ベネディクト会",
+        "シトー会",
+        "フランシスコ会",
+        "ドミニコ会"
+      ],
+      "correct": 1,
+      "explanation": "シトー会の修道士たちは区画ごとの違いを丹念に研究し、「テロワール」の概念を最初に確立し、厳格な栽培・醸造基準を築きました。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "ブルゴーニュの「クリマ」は2015年に何に登録されましたか？",
+      "options": [
+        "フランス国指定史跡",
+        "ユネスコ世界遺産",
+        "EU保護地域",
+        "国際美食都市"
+      ],
+      "correct": 1,
+      "explanation": "2015年、ブルゴーニュのクリマ（精密に区画された1,247の畑）はユネスコ世界遺産に登録され、その独自の文化的・歴史的価値が認められました。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "ブルゴーニュの赤ワインには主にどのブドウ品種が使われますか？",
+      "options": [
+        "カベルネ・ソーヴィニヨン",
+        "メルロー",
+        "ピノ・ノワール",
+        "シラー"
+      ],
+      "correct": 2,
+      "explanation": "ブルゴーニュの赤ワインはほぼ全てピノ・ノワール単一品種で造られます。これはボルドーのブレンド伝統とは対照的な、ブルゴーニュを特徴づける要素です。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "シャルドネはブルゴーニュで主に何を造るために使われますか？",
+      "options": [
+        "赤ワイン",
+        "白ワイン",
+        "ロゼワイン",
+        "スパークリングワイン"
+      ],
+      "correct": 1,
+      "explanation": "シャルドネは白ブドウ品種で、ブルゴーニュでは主に白ワイン造りに使われます。ブルゴーニュはシャルドネの故郷であり、ここの白ワインは世界の基準とされています。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "ブルゴーニュの4段階格付けの中で、生産量が最も少なく品質が最も高いのはどれですか？",
+      "options": [
+        "レジオナル（地方名称）",
+        "ヴィレッジ（村名）",
+        "プルミエ・クリュ",
+        "グラン・クリュ"
+      ],
+      "correct": 3,
+      "explanation": "グラン・クリュはブルゴーニュ総生産量のわずか1%を占め、最高品質の格付けです。これらの畑は最も優れたテロワールを持ち、熟成能力の高いワインを生み出します。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "ブルゴーニュのラベルに村名なしで「Chambertin」とだけ書かれている場合、これは何級ですか？",
+      "options": [
+        "レジオナル",
+        "ヴィレッジ",
+        "プルミエ・クリュ",
+        "グラン・クリュ"
+      ],
+      "correct": 3,
+      "explanation": "グラン・クリュのラベルは畑名のみを表示し、村名は不要です。グラン・クリュ自体が独立したAOCだからです。プルミエ・クリュの場合は「村名＋1er Cru＋畑名」と表示されます。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "ラベルの「Mis en bouteille au domaine」とはどういう意味ですか？",
+      "options": [
+        "有機認証ワイン",
+        "オールドヴァイン（古樹）で造られた",
+        "ドメーヌ元詰め",
+        "単一畑ワイン"
+      ],
+      "correct": 2,
+      "explanation": "「Mis en bouteille au domaine」はドメーヌ（生産者）自らが瓶詰めしたことを意味し、通常はブドウ栽培から瓶詰めまで同じドメーヌが管理していることを示し、品質の裏付けとなります。"
+    },
+    {
+      "source": "M1",
+      "type": "single",
+      "question": "ブルゴーニュには北から南へ六つの主要産地がありますが、次のうち含まれないのはどれですか？",
+      "options": [
+        "シャブリ（Chablis）",
+        "コート・ド・ニュイ（Côte de Nuits）",
+        "ポイヤック（Pauillac）",
+        "ボジョレー（Beaujolais）"
+      ],
+      "correct": 2,
+      "explanation": "ポイヤックはボルドーの産地であり、ブルゴーニュには属しません。ブルゴーニュの六大産地は北から南へ：シャブリ、コート・ド・ニュイ、コート・ド・ボーヌ、コート・シャロネーズ、マコネ、ボジョレーです。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "ブルゴーニュの4段階格付け体系の中で、総生産量に占める割合が最も大きいのはどれですか？",
+      "options": [
+        "レジオナル",
+        "ヴィレッジ",
+        "プルミエ・クリュ",
+        "グラン・クリュ"
+      ],
+      "correct": 0,
+      "explanation": "レジオナルはブルゴーニュ総生産量の53%を占め、最も基本的かつ生産量の多い格付けです。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "グラン・クリュのラベルには通常何が表示されますか？",
+      "options": [
+        "村名＋Grand Cru",
+        "畑名のみ＋Grand Cru",
+        "村名＋畑名＋Grand Cru",
+        "Bourgogne＋Grand Cru"
+      ],
+      "correct": 1,
+      "explanation": "グラン・クリュのラベルは最もシンプルで、畑名とGrand Cruのみを表示し村名は書きません。グラン・クリュ自体が独立したAOCだからです。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "プルミエ・クリュに許可されている最大収穫量はおよそどのくらいですか？",
+      "options": [
+        "30〜35 hl/ha",
+        "40〜48 hl/ha",
+        "55〜60 hl/ha",
+        "制限なし"
+      ],
+      "correct": 1,
+      "explanation": "プルミエ・クリュの赤ワインの許可収穫量は約40〜48 hl/haで、グラン・クリュ（35〜37）より多いですが、レジオナル（55〜60）よりはるかに厳しい基準です。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "ラベルに「GEVREY-CHAMBERTIN」とだけ書かれている場合、これは何級ですか？",
+      "options": [
+        "レジオナル",
+        "ヴィレッジ",
+        "プルミエ・クリュ",
+        "グラン・クリュ"
+      ],
+      "correct": 1,
+      "explanation": "村名のみが表示され、Premier CruやGrand Cruなどの追加表示がない場合はヴィレッジ級のワインです。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "AOCとは何の略ですか？",
+      "options": [
+        "Appellation d'Origine Contrôlée",
+        "Association of Original Chateaux",
+        "Advanced Organic Certification",
+        "Agricultural Origin Classification"
+      ],
+      "correct": 0,
+      "explanation": "AOCはAppellation d'Origine Contrôlée（原産地統制呼称）の略で、フランスワインの品質保証制度です。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "ブルゴーニュには全部でいくつのグラン・クリュがありますか？",
+      "options": [
+        "10",
+        "33",
+        "100",
+        "640"
+      ],
+      "correct": 1,
+      "explanation": "ブルゴーニュには合計33のグラン・クリュがあり、シャブリ（1）、コート・ド・ニュイ（24）、コート・ド・ボーヌ（8）に分布しています。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "プルミエ・クリュのラベルには必ずどの言葉が表示されますか？",
+      "options": [
+        "Bourgogne",
+        "Village",
+        "Premier Cru または 1er Cru",
+        "Monopole"
+      ],
+      "correct": 2,
+      "explanation": "プルミエ・クリュのラベルには必ず「Premier Cru」またはその略称「1er Cru」が表示され、ヴィレッジ級と区別されます。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "次のうち、レジオナル級のラベルはどれですか？",
+      "options": [
+        "Chambertin",
+        "Gevrey-Chambertin",
+        "Bourgogne Pinot Noir",
+        "Meursault 1er Cru"
+      ],
+      "correct": 2,
+      "explanation": "「Bourgogne」で始まる表示は、レジオナル級のワインを示しています。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "グラン・クリュはブルゴーニュ総生産量のおよそ何％を占めますか？",
+      "options": [
+        "1%",
+        "10%",
+        "36%",
+        "53%"
+      ],
+      "correct": 0,
+      "explanation": "グラン・クリュはブルゴーニュ総生産量のわずか1%しか占めておらず、最も希少で貴重な格付けです。"
+    },
+    {
+      "source": "M2",
+      "type": "single",
+      "question": "ヴィレッジ級ワインの一般的な価格帯はどれくらいですか？",
+      "options": [
+        "€10〜20",
+        "€25〜80",
+        "€100〜500",
+        "€1000以上"
+      ],
+      "correct": 1,
+      "explanation": "ヴィレッジ級ワインの一般的な価格帯は€25〜80で、ブルゴーニュのテロワールを学ぶのにコストパフォーマンスの良い選択です。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "コート・ド・ニュイには全部でいくつのグラン・クリュがありますか？",
+      "options": [
+        "18",
+        "24",
+        "30",
+        "33"
+      ],
+      "correct": 1,
+      "explanation": "コート・ド・ニュイには24のグラン・クリュがあり、ブルゴーニュ全体の33のグラン・クリュの大部分を占めます。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "最も多くのグラン・クリュ（9つ）を持つ村はどこですか？",
+      "options": [
+        "Vosne-Romanée",
+        "Gevrey-Chambertin",
+        "Morey-Saint-Denis",
+        "Chambolle-Musigny"
+      ],
+      "correct": 1,
+      "explanation": "Gevrey-Chambertinは9つのグラン・クリュを持ち、コート・ド・ニュイで最も多くのグラン・クリュを擁する村です。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Romanée-Contiグラン・クリュの面積はどのくらいですか？",
+      "options": [
+        "0.85ヘクタール",
+        "1.81ヘクタール",
+        "6.06ヘクタール",
+        "8.03ヘクタール"
+      ],
+      "correct": 1,
+      "explanation": "Romanée-Contiはわずか1.81ヘクタールで、世界で最も高価な畑の一つです。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "「女性的」なスタイルで知られる村はどこですか？",
+      "options": [
+        "Gevrey-Chambertin",
+        "Chambolle-Musigny",
+        "Nuits-Saint-Georges",
+        "Fixin"
+      ],
+      "correct": 1,
+      "explanation": "Chambolle-Musignyはシルクのような質感、豊かな花の香り、洗練された「女性的」なスタイルで知られています。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "ブルゴーニュ最大のグラン・クリュはどれですか？",
+      "options": [
+        "Chambertin",
+        "Clos de Vougeot",
+        "Échézeaux",
+        "Charmes-Chambertin"
+      ],
+      "correct": 1,
+      "explanation": "Clos de Vougeotはブルゴーニュ最大のグラン・クリュで、面積は50.6ヘクタールに及びます。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Nuits-Saint-Georgesにはグラン・クリュがいくつありますか？",
+      "options": [
+        "0",
+        "2",
+        "5",
+        "8"
+      ],
+      "correct": 0,
+      "explanation": "Nuits-Saint-Georgesにはグラン・クリュはありませんが、41のプルミエ・クリュを持ち、その品質は非常に高いです。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "コート・ド・ニュイで赤・白・ロゼの三色すべてを造れる唯一の村はどこですか？",
+      "options": [
+        "Marsannay",
+        "Fixin",
+        "Vougeot",
+        "Morey-Saint-Denis"
+      ],
+      "correct": 0,
+      "explanation": "Marsannayはコート・ド・ニュイで赤・白・ロゼの三色すべてを造ることができる唯一の村です。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "DRC（Domaine de la Romanée-Conti）が独占所有する二つのグラン・クリュはどれですか？",
+      "options": [
+        "Romanée-Conti & Richebourg",
+        "Romanée-Conti & La Tâche",
+        "La Tâche & Richebourg",
+        "Romanée-Saint-Vivant & La Romanée"
+      ],
+      "correct": 1,
+      "explanation": "DRCはRomanée-Conti（1.81ヘクタール）とLa Tâche（6.06ヘクタール）の二つのグラン・クリュを独占所有しています。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "Morey-Saint-Denisにはグラン・クリュがいくつありますか？",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "Morey-Saint-Denisには5つのグラン・クリュがあります：Clos de la Roche、Clos Saint-Denis、Clos des Lambrays、Clos de Tart、そして（一部）Bonnes-Maresです。"
+    },
+    {
+      "source": "M3",
+      "type": "single",
+      "question": "コート・ド・ニュイの主な土壌タイプは何ですか？",
+      "options": [
+        "花崗岩",
+        "ジュラ紀の石灰岩と泥灰岩",
+        "火山岩",
+        "砂質土壌"
+      ],
+      "correct": 1,
+      "explanation": "コート・ド・ニュイの主な土壌はジュラ紀の石灰岩と泥灰岩で、この土壌がピノ・ノワールのエレガントなスタイルを生み出しています。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "コート・ド・ボーヌには白ワインのグラン・クリュがいくつありますか？",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "correct": 1,
+      "explanation": "コート・ド・ボーヌには6つの白ワイン・グラン・クリュがあり、すべてシャルドネです：Montrachet、Chevalier-Montrachet、Bâtard-Montrachet、Bienvenues-Bâtard-Montrachet、Criots-Bâtard-Montrachet、Corton-Charlemagneです。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "「白ワインの王」と呼ばれながらグラン・クリュを持たない村はどこですか？",
+      "options": [
+        "Puligny-Montrachet",
+        "Chassagne-Montrachet",
+        "Meursault",
+        "Beaune"
+      ],
+      "correct": 2,
+      "explanation": "Meursaultはコート・ド・ボーヌ最大の白ワイン村です。グラン・クリュはありませんが、プルミエ・クリュの品質は非常に高いです。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Montrachetグラン・クリュの面積はどのくらいですか？",
+      "options": [
+        "3.7ヘクタール",
+        "7.5ヘクタール",
+        "11.9ヘクタール",
+        "15.4ヘクタール"
+      ],
+      "correct": 1,
+      "explanation": "Montrachetは7.5ヘクタールで、Puligny-MontrachetとChassagne-Montrachetの二つの村にまたがっています。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "コート・ド・ボーヌで最も力強い赤ワインを産する村はどこですか？",
+      "options": [
+        "Beaune",
+        "Pommard",
+        "Volnay",
+        "Aloxe-Corton"
+      ],
+      "correct": 1,
+      "explanation": "Pommardはしっかりとしたタンニンと力強い構造で知られ、コート・ド・ボーヌで最も力強い赤ワインです。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Volnayのスタイルの特徴は何ですか？",
+      "options": [
+        "厚いタンニン、力強い",
+        "シルキーで花の香りが豊か",
+        "ミネラル感が強く高酸度",
+        "クリーミーでヘーゼルナッツ香、ふくよか"
+      ],
+      "correct": 1,
+      "explanation": "Volnayはシルキーな質感と豊かな花の香りで知られ、優雅で洗練されたスタイルから「赤ワインの女性」とも呼ばれます。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "42のプルミエ・クリュを持ち、コート・ド・ボーヌの首都と呼ばれる村はどこですか？",
+      "options": [
+        "Meursault",
+        "Beaune",
+        "Pommard",
+        "Volnay"
+      ],
+      "correct": 1,
+      "explanation": "Beauneはコート・ド・ボーヌの首都で、42のプルミエ・クリュを持ち、ヴィレッジ級ワインのコストパフォーマンスが非常に高いです。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Chassagne-Montrachetの生産構成はどうなっていますか？",
+      "options": [
+        "白ワイン100%",
+        "白ワイン80% 赤ワイン20%",
+        "白ワイン50% 赤ワイン50%",
+        "白ワイン30% 赤ワイン70%"
+      ],
+      "correct": 2,
+      "explanation": "Chassagne-Montrachetは赤白両方を産し、生産量はほぼ半々です。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "Meursaultで最も有名なプルミエ・クリュはどれですか？",
+      "options": [
+        "Charmes",
+        "Genevrières",
+        "Perrières",
+        "Poruzots"
+      ],
+      "correct": 2,
+      "explanation": "PerrièresはMeursaultで最も品質の高いプルミエ・クリュで、グラン・クリュの水準に最も近く、ミネラル感が強いことで知られます。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "コート・ド・ボーヌの主な土壌はコート・ド・ニュイと比べて何が異なりますか？",
+      "options": [
+        "全く同じ",
+        "泥灰岩の割合が高い",
+        "花崗岩が主体",
+        "火山岩が多い"
+      ],
+      "correct": 1,
+      "explanation": "コート・ド・ボーヌの土壌は石灰岩が主体ですが、コート・ド・ニュイより泥灰岩の割合が高く、シャルドネにより適しています。"
+    },
+    {
+      "source": "M4",
+      "type": "single",
+      "question": "世界で最も高価なシャルドネを産するグラン・クリュはどれですか？",
+      "options": [
+        "Chevalier-Montrachet",
+        "Montrachet",
+        "Corton-Charlemagne",
+        "Bâtard-Montrachet"
+      ],
+      "correct": 1,
+      "explanation": "Montrachetは世界で最も高価なシャルドネの産地で、平均価格は€500を超え、トップドメーヌの物は€2000以上に達します。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "シャブリ特有のキンメリッジ土壌には主に何が豊富に含まれていますか？",
+      "options": [
+        "火山灰",
+        "小さな牡蠣の化石",
+        "鉄鉱石",
+        "花崗岩"
+      ],
+      "correct": 1,
+      "explanation": "キンメリッジ泥灰岩には1億5000万年前の小さな牡蠣の化石（Exogyra virgula）が豊富に含まれ、シャブリ特有のミネラル感と牡蠣殻のような風味をもたらします。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "シャブリには全部でいくつのグラン・クリュがありますか？",
+      "options": [
+        "1",
+        "7",
+        "12",
+        "24"
+      ],
+      "correct": 1,
+      "explanation": "シャブリには7つのグラン・クリュがあります：Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchotで、すべてSerein川の右岸に位置します。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "シャブリ最大かつ最も有名なグラン・クリュはどれですか？",
+      "options": [
+        "Preuses",
+        "Vaudésir",
+        "Les Clos",
+        "Grenouilles"
+      ],
+      "correct": 2,
+      "explanation": "Les Closはシャブリ最大のグラン・クリュ（26.9ヘクタール）で、最も品質が高いと評価されており、30年以上熟成可能です。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "シャブリの4段階格付けの中で、生産量に占める割合が最も高いのはどれですか？",
+      "options": [
+        "Petit Chablis",
+        "Chablis",
+        "Premier Cru",
+        "Grand Cru"
+      ],
+      "correct": 1,
+      "explanation": "Chablis（ヴィレッジ級）は総生産量の60%を占め、最も基本的かつ生産量の多い格付けです。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "シャブリの最も古典的な料理との組み合わせは何ですか？",
+      "options": [
+        "ステーキ",
+        "生牡蠣",
+        "チョコレート",
+        "唐辛子料理"
+      ],
+      "correct": 1,
+      "explanation": "シャブリと生牡蠣は古典的な組み合わせで、ミネラル感と海の風味が完璧に調和し、高い酸度が牡蠣の旨味を引き立てます。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "シャブリのテイスティングに理想的な温度はどのくらいですか？",
+      "options": [
+        "4-6°C",
+        "8-10°C",
+        "14-16°C",
+        "18-20°C"
+      ],
+      "correct": 1,
+      "explanation": "シャブリは8-10°Cで飲むべきで、冷えすぎると香りが抑えられます。熟成した古酒はやや高めの12°C程度でも構いません。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "シャブリのプルミエ・クリュにはおよそいくつのクリマがありますか？",
+      "options": [
+        "10",
+        "20",
+        "40",
+        "100"
+      ],
+      "correct": 2,
+      "explanation": "シャブリには約40のプルミエ・クリュがあり、最も有名なものにはMontée de Tonnerre、Fourchaume、Vaillonsなどがあります。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "シャブリの伝統的なステンレスタンク派を代表しない生産者はどれですか？",
+      "options": [
+        "Dauvissat",
+        "Raveneau",
+        "William Fèvre",
+        "Moreau"
+      ],
+      "correct": 2,
+      "explanation": "William Fèvreは樽熟成派（モダン派）に属し、DauvissatとRaveneauは伝統的なステンレスタンク派を代表しています。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "シャブリの春における最大の自然の脅威は何ですか？",
+      "options": [
+        "干ばつ",
+        "霜",
+        "台風",
+        "雹"
+      ],
+      "correct": 1,
+      "explanation": "春の霜はシャブリ最大の脅威で、4〜5月の霜はその年の収穫の大部分を破壊しかねず、生産者は暖房器具や散水などで霜害対策を行います。"
+    },
+    {
+      "source": "M5",
+      "type": "single",
+      "question": "La Moutonneはどの二つのグラン・クリュにまたがる独占畑ですか？",
+      "options": [
+        "Les Clos と Valmur",
+        "Preuses と Vaudésir",
+        "Bougros と Blanchot",
+        "Grenouilles と Valmur"
+      ],
+      "correct": 1,
+      "explanation": "La Moutonne（2.35ヘクタール）はPreusesとVaudésirの二つのグラン・クリュにまたがり、Domaine Long-Depaquitが独占所有しています。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "ボジョレーで主に栽培されているブドウ品種は何ですか？",
+      "options": [
+        "ピノ・ノワール",
+        "ガメイ",
+        "シラー",
+        "メルロー"
+      ],
+      "correct": 1,
+      "explanation": "ボジョレーは100%ガメイ種が栽培されており、これがブルゴーニュの他産地との最大の違いです。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "ボジョレー最大の特徴的な醸造技術は何ですか？",
+      "options": [
+        "コールドソーク",
+        "炭酸ガス浸漬法（マセラシオン・カルボニック）",
+        "マロラクティック発酵",
+        "樽熟成"
+      ],
+      "correct": 1,
+      "explanation": "炭酸ガス浸漬法（マセラシオン・カルボニック）はボジョレーの象徴的な醸造技術で、房ごとのブドウを無酸素環境で発酵させます。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "ボジョレーには特級村（クリュ）がいくつありますか？",
+      "options": [
+        "5",
+        "7",
+        "10",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "ボジョレーには10のクリュがあり、Moulin-à-Vent、Morgon、Fleurieなどが含まれます。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "「ボジョレーの王」と呼ばれるクリュはどれですか？",
+      "options": [
+        "Fleurie",
+        "Morgon",
+        "Moulin-à-Vent",
+        "Brouilly"
+      ],
+      "correct": 2,
+      "explanation": "Moulin-à-Ventは「ボジョレーの王」と呼ばれ、最も力強く複雑で10〜20年熟成可能。熟成後はコート・ド・ニュイのピノ・ノワールと間違われることもあります。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "ボジョレー・ヌーヴォーは毎年いつ発売されますか？",
+      "options": [
+        "9月第一土曜日",
+        "10月第三木曜日",
+        "11月第三木曜日",
+        "12月第一土曜日"
+      ],
+      "correct": 2,
+      "explanation": "ボジョレー・ヌーヴォーは毎年11月第三木曜日に解禁され、フランスのワイン祭りの日となっています。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "優雅で芳香豊かなスタイルから「ボジョレーの女王」と呼ばれるクリュはどれですか？",
+      "options": [
+        "Fleurie",
+        "Chiroubles",
+        "Saint-Amour",
+        "Régnié"
+      ],
+      "correct": 0,
+      "explanation": "Fleurieは「ボジョレーの女王」と呼ばれ、スミレやバラの香り、シルキーな質感で知られる最も優雅で芳香豊かなクリュです。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "ボジョレーの十大クリュは主にどのような土壌にありますか？",
+      "options": [
+        "石灰岩",
+        "花崗岩",
+        "粘土",
+        "砂質土"
+      ],
+      "correct": 1,
+      "explanation": "十大クリュはすべて北部の花崗岩土壌にあり、コート・ドールの石灰岩土壌とは全く異なります。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "ボジョレーのテイスティングに理想的な温度はどのくらいですか？",
+      "options": [
+        "8-10°C",
+        "12-14°C",
+        "16-18°C",
+        "18-20°C"
+      ],
+      "correct": 1,
+      "explanation": "ボジョレーはやや低めの温度（12-14°C）で飲むべきで、夏場は10°Cまで下げても構いません。常温で飲むと締まりがなく面白みに欠けます。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "火山岩土壌にある唯一のクリュはどれですか？",
+      "options": [
+        "Morgon",
+        "Côte de Brouilly",
+        "Moulin-à-Vent",
+        "Chénas"
+      ],
+      "correct": 1,
+      "explanation": "Côte de BrouillyはMont Brouillyの山腹に位置し、唯一火山岩土壌を持つクリュで、独特のミネラル感をワインに与えます。"
+    },
+    {
+      "source": "M6",
+      "type": "single",
+      "question": "ボジョレーに最も合う料理はどれですか？",
+      "options": [
+        "重い赤身肉料理",
+        "辛い四川料理",
+        "アジア料理",
+        "デザート"
+      ],
+      "correct": 2,
+      "explanation": "ボジョレーの果実味、低タンニン、中程度のボディはアジア料理（中華、和食）との相性が抜群で、特に宮保鶏丁や酢豚などに合います。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "コート・シャロネーズ最大の村はどこですか？",
+      "options": [
+        "Bouzeron",
+        "Rully",
+        "Mercurey",
+        "Givry"
+      ],
+      "correct": 2,
+      "explanation": "Mercureyはコート・シャロネーズ最大の村で、赤ワインが中心となり、産地全体の生産量の約60%を占めます。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "Bouzeron産地の特徴は何ですか？",
+      "options": [
+        "ピノ・ノワールのみ産する",
+        "シャルドネのみ産する",
+        "アリゴテのみ産する",
+        "スパークリングワインのみ産する"
+      ],
+      "correct": 2,
+      "explanation": "Bouzeronはブルゴーニュで唯一、アリゴテ白ワインのみを産するヴィレッジ級AOCです。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "マコネで最高峰の産地はどこですか？",
+      "options": [
+        "Mâcon-Villages",
+        "Pouilly-Fuissé",
+        "Saint-Véran",
+        "Viré-Clessé"
+      ],
+      "correct": 1,
+      "explanation": "Pouilly-Fuisséはマコネで最も品質の高い産地で、ミネラル感が強く、熟成能力に優れています。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "コート・シャロネーズはコート・ドールと比べて価格差はおよそどのくらいですか？",
+      "options": [
+        "10-20%",
+        "30-50%",
+        "60-80%",
+        "ほぼ同じ"
+      ],
+      "correct": 1,
+      "explanation": "コート・シャロネーズのワインはコート・ドールより約30-50%安く、コストパフォーマンスに優れた選択肢です。"
+    },
+    {
+      "source": "M7",
+      "type": "single",
+      "question": "Montagny産地の特徴は何ですか？",
+      "options": [
+        "赤ワインのみ",
+        "白ワインのみ",
+        "赤白両方",
+        "スパークリングワインを産する"
+      ],
+      "correct": 1,
+      "explanation": "Montagnyはコート・シャロネーズで唯一白ワインのみを産する村で、シャルドネが中心です。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "次のうち、近年の「世紀のヴィンテージ」とされる年はどれですか？",
+      "options": [
+        "2017",
+        "2015",
+        "2021",
+        "2019"
+      ],
+      "correct": 1,
+      "explanation": "2015年は世紀のヴィンテージとして広く認められており、赤白ともに卓越した出来で熟成能力も優れています。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "Domaine de la Romanée-Conti (DRC) はどの産地に位置していますか？",
+      "options": [
+        "コート・ド・ボーヌ",
+        "コート・ド・ニュイ",
+        "シャブリ",
+        "マコネ"
+      ],
+      "correct": 1,
+      "explanation": "DRCはコート・ド・ニュイのVosne-Romanéeに位置し、複数のトップクラスのグラン・クリュを保有しています。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "Domaine Leflaiveはどの村の白ワインで有名ですか？",
+      "options": [
+        "Meursault",
+        "Chassagne-Montrachet",
+        "Puligny-Montrachet",
+        "Corton"
+      ],
+      "correct": 2,
+      "explanation": "Domaine LeflaiveはPuligny-Montrachet白ワインのトップ生産者です。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "シャブリのベンチマークとなるドメーヌはどこですか？",
+      "options": [
+        "Domaine Raveneau",
+        "Domaine Coche-Dury",
+        "Domaine Leroy",
+        "Domaine Dujac"
+      ],
+      "correct": 0,
+      "explanation": "Domaine Raveneauはシャブリ・グラン・クリュのベンチマークで、純粋なミネラル感のスタイルで知られています。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "ブルゴーニュ・グラン・クリュ赤ワインの一般的な飲み頃はいつですか？",
+      "options": [
+        "1-5年",
+        "3-8年",
+        "10-30年以上",
+        "50年以上"
+      ],
+      "correct": 2,
+      "explanation": "グラン・クリュの赤ワインはしっかりとした構造と優れた熟成能力を持ち、通常10-30年以上を経て最高の状態に達します。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "2022年ヴィンテージの特徴は何ですか？",
+      "options": [
+        "深刻な霜害",
+        "暑く乾燥し、白ワインが素晴らしい出来",
+        "極めて高い収穫量",
+        "平凡な品質"
+      ],
+      "correct": 1,
+      "explanation": "2022年は暑く乾燥しており、ブドウの凝縮感が高く、特に白ワインが素晴らしい出来となりました。"
+    },
+    {
+      "source": "M8",
+      "type": "single",
+      "question": "ワインセラーの理想的な温度はどのくらいですか？",
+      "options": [
+        "8-10°C",
+        "12-14°C",
+        "16-18°C",
+        "20-22°C"
+      ],
+      "correct": 1,
+      "explanation": "12-14°Cの一定温度が理想的なセラー環境で、ワインをゆっくりと安定して熟成させることができます。"
+    }
+  ]
+}

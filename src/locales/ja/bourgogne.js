@@ -61,6 +61,7 @@ export default {
     'm6': { title: 'ボジョレー入門', duration: '45分' },
     'm7': { title: 'コート・シャロネーズとマコネ', duration: '40分' },
     'm8': { title: 'ヴィンテージと名門ドメーヌ', duration: '45分' },
+    'm9': { title: 'L1 総合評価', duration: '25分' },
   },
 
   modulesL2: {
@@ -72,6 +73,7 @@ export default {
     'm6': { title: '気候とヴィンテージの読み解き', duration: '60分' },
     'm7': { title: '上級テイスティング技術', duration: '75分' },
     'm8': { title: 'ドメーヌと醸造家', duration: '65分' },
+    'm9': { title: 'L2 総合評価', duration: '30分' },
   },
 
   modulesL3: {
@@ -90,6 +92,7 @@ export default {
     'm13': { title: 'オークションと取引実務', duration: '70分' },
     'm14': { title: '専門テイスティングレポート執筆', duration: '75分' },
     'm15': { title: '総合ケーススタディ', duration: '90分' },
+    'm16': { title: 'L3 総合評価', duration: '35分' },
   },
 
   modulesL4: {
@@ -101,6 +104,7 @@ export default {
     'm6': { title: '国際貿易・輸出入実務', duration: '85分', description: '輸入手続き、関税法規、物流管理、国際ワインフェア参加戦略。' },
     'm7': { title: 'ワイナリー経営と起業管理', duration: '100分', description: '財務計画、ブランド構築、持続可能認定、人事管理。' },
     'm8': { title: '専門論文と総合評価', duration: '125分', description: '論文執筆、総合ブラインドテイスティング、口頭試問シミュレーション、最終評価準備。' },
+    'm9': { title: 'L4 総合評価', duration: '35分', description: 'Level 4 全内容をカバーする最終試験。80点以上でブルゴーニュ・マスター課程修了。' },
   },
 
   levels: {

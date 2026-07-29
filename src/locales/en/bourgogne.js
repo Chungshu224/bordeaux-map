@@ -63,6 +63,7 @@ export default {
     'm6': { title: 'Introduction to Beaujolais', duration: '45 min' },
     'm7': { title: 'Côte Chalonnaise and Mâconnais', duration: '40 min' },
     'm8': { title: 'Vintages and Prestigious Estates', duration: '45 min' },
+    'm9': { title: 'L1 Comprehensive Assessment', duration: '25 min' },
   },
 
   modulesL2: {
@@ -74,6 +75,7 @@ export default {
     'm6': { title: 'Climate and Vintage Interpretation', duration: '60 min' },
     'm7': { title: 'Advanced Tasting Techniques', duration: '75 min' },
     'm8': { title: 'Domaines and Winemakers', duration: '65 min' },
+    'm9': { title: 'L2 Comprehensive Assessment', duration: '30 min' },
   },
 
   modulesL3: {
@@ -92,6 +94,7 @@ export default {
     'm13': { title: 'Auction and Trading Practice', duration: '70 min' },
     'm14': { title: 'Professional Tasting Report Writing', duration: '75 min' },
     'm15': { title: 'Comprehensive Case Studies', duration: '90 min' },
+    'm16': { title: 'L3 Comprehensive Assessment', duration: '35 min' },
   },
 
   modulesL4: {
@@ -103,6 +106,7 @@ export default {
     'm6': { title: 'International Trade & Import/Export Practice', duration: '85 min', description: 'Import procedures, customs regulations, logistics management, and international wine fair strategy.' },
     'm7': { title: 'Winery Management & Entrepreneurship', duration: '100 min', description: 'Financial planning, brand building, sustainable certification, and human resource management.' },
     'm8': { title: 'Expert Thesis & Comprehensive Assessment', duration: '125 min', description: 'Thesis writing, comprehensive blind tasting, oral exam simulation, and final assessment preparation.' },
+    'm9': { title: 'L4 Comprehensive Assessment', duration: '35 min', description: 'A capstone exam covering all of Level 4 — pass with 80% or higher to complete the Burgundy Master program.' },
   },
 
   levels: {

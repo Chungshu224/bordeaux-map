@@ -1,0 +1,223 @@
+{
+  "title": "Burgundy Level 2 Comprehensive Assessment Question Bank",
+  "level": "intermediate",
+  "questions": [
+    {
+      "type": "single",
+      "question": "What is the most important grape variety in the Côte de Nuits?",
+      "options": ["Chardonnay", "Gamay", "Pinot Noir", "Cabernet Sauvignon"],
+      "correct": 2,
+      "explanation": "The Côte de Nuits produces the world's greatest Pinot Noir. Nearly all of the top red-wine Grands Crus are concentrated here, from Gevrey-Chambertin to Nuits-Saint-Georges."
+    },
+    {
+      "type": "single",
+      "question": "Roughly how many hectares is the Romanée-Conti Grand Cru?",
+      "options": ["0.5 hectares", "1.8 hectares", "6 hectares", "15 hectares"],
+      "correct": 1,
+      "explanation": "Romanée-Conti is only about 1.8 hectares, producing roughly 5,000-6,000 bottles a year. It is one of Burgundy's rarest and most expensive wines, held as a monopole by DRC."
+    },
+    {
+      "type": "single",
+      "question": "What is the Côte de Beaune globally famous for?",
+      "options": ["Primarily top red wine, white as secondary", "Primarily top-tier white wine (Chardonnay), concentrating Montrachet, Meursault, and more", "Sparkling wine (Crémant)", "Fortified wine"],
+      "correct": 1,
+      "explanation": "The Côte de Beaune's greatest glory is its top-tier Chardonnay white wines — Montrachet, Meursault, Corton-Charlemagne, and others — the world's greatest concentration of white wine excellence, while also producing top Pinot Noir such as Pommard and Volnay."
+    },
+    {
+      "type": "single",
+      "question": "In what year was Burgundy's \"Climat\" concept recognized as a UNESCO World Heritage site?",
+      "options": ["1995", "2005", "2015", "2020"],
+      "correct": 2,
+      "explanation": "Burgundy's Climats (the vineyard-plot cultural landscape) were officially inscribed as a UNESCO World Heritage Site in 2015, marking the highest global recognition of the French terroir concept."
+    },
+    {
+      "type": "single",
+      "question": "Which two villages does the Montrachet Grand Cru straddle?",
+      "options": ["Meursault and Beaune", "Puligny-Montrachet and Chassagne-Montrachet", "Gevrey and Morey", "Vosne-Romanée and Nuits-Saint-Georges"],
+      "correct": 1,
+      "explanation": "Le Montrachet straddles the boundary between Puligny-Montrachet (north) and Chassagne-Montrachet (south). Both villages appended \"Montrachet\" to their names to share in its prestige."
+    },
+    {
+      "type": "single",
+      "question": "How many Grands Crus does Gevrey-Chambertin have?",
+      "options": ["2", "5", "9", "24"],
+      "correct": 2,
+      "explanation": "Gevrey-Chambertin has more Grands Crus than any other Burgundy village — 9 in total, including Chambertin, Chambertin-Clos de Bèze, Mazis-Chambertin, and Chapelle-Chambertin."
+    },
+    {
+      "type": "single",
+      "question": "The geological foundation of Burgundy's vineyard soils dates mainly from which era?",
+      "options": ["Cambrian", "Jurassic", "Cretaceous", "Quaternary"],
+      "correct": 1,
+      "explanation": "Burgundy's soils derive mainly from Jurassic-era (roughly 180-140 million years ago) limestone and marl deposits. These geological layers give the Côte d'Or vineyards their mineral-rich growing environment and are the geological basis for the region's terroir complexity."
+    },
+    {
+      "type": "single",
+      "question": "Which two Grands Crus does DRC (Domaine de la Romanée-Conti) hold as exclusive monopoles?",
+      "options": ["Chambertin and Musigny", "Romanée-Conti and La Tâche", "Richebourg and Echézeaux", "Corton and Corton-Charlemagne"],
+      "correct": 1,
+      "explanation": "DRC holds Romanée-Conti (1.8 ha) and La Tâche (6.06 ha) as complete monopoles, and also owns partial shares of plots such as Richebourg and Romanée-Saint-Vivant."
+    },
+    {
+      "type": "single",
+      "question": "How is a Burgundy Grand Cru typically shown on the label?",
+      "options": ["As \"Bourgogne Grand Cru + village name\"", "Just the Grand Cru's name (e.g. \"Chambertin\") — the name itself is the AOC", "The country and region name must be included", "Quality is indicated with Roman numerals"],
+      "correct": 1,
+      "explanation": "A distinctive feature of Burgundy Grand Cru labels: only the Grand Cru's name needs to appear (e.g. \"Chambertin\"), with no village name required, because the vineyard name itself constitutes an independent AOC ranked above village level."
+    },
+    {
+      "type": "single",
+      "question": "Among Meursault's most famous Premiers Crus, which is known for the strongest minerality (and has been proposed for Grand Cru promotion)?",
+      "options": ["Les Charmes", "Les Perrières", "Les Genevrières", "Les Tillets"],
+      "correct": 1,
+      "explanation": "Perrières (meaning \"quarry\") has extremely thin soil with exposed limestone, making it Meursault's most mineral-driven Premier Cru. It has been proposed for Grand Cru status and is widely considered the Meursault plot closest to Grand Cru quality."
+    },
+    {
+      "type": "single",
+      "question": "What slope aspect suits top vineyards best on the Côte d'Or?",
+      "options": ["West or north-facing", "South or southwest-facing", "East or southeast-facing", "No particular preference"],
+      "correct": 2,
+      "explanation": "East- or southeast-facing slopes warm quickly in the morning to boost photosynthesis while receiving a gentler angle of sun in the afternoon, preserving acidity, and they're sheltered by hills to the west — a shared feature of Burgundy's finest Climats."
+    },
+    {
+      "type": "single",
+      "question": "How many owners currently share the Clos de Vougeot Grand Cru?",
+      "options": ["5", "20", "50", "Over 80"],
+      "correct": 3,
+      "explanation": "Clos de Vougeot, about 50 hectares, was auctioned off in fragments after the French Revolution and now has more than 80 owners — leading to enormous quality variation between different producers' bottlings from the same Grand Cru, and the strongest evidence for Burgundy's maxim that \"the producer matters more than the plot.\""
+    },
+    {
+      "type": "single",
+      "question": "What is the designated grape variety for Corton-Charlemagne?",
+      "options": ["Pinot Noir", "Chardonnay", "Aligoté", "Pinot Gris"],
+      "correct": 1,
+      "explanation": "Corton-Charlemagne is a Chardonnay white-wine Grand Cru — one of the Côte de Beaune's most important white Grands Crus, and Burgundy's grandest northern white-wine style, known for its full minerality and exceptional aging potential."
+    },
+    {
+      "type": "single",
+      "question": "What must a Burgundy Premier Cru label show together?",
+      "options": ["Only the plot name, no village name needed", "Village name + plot name + Premier Cru", "Just \"AOC Bourgogne\"", "Producer name and vintage only"],
+      "correct": 1,
+      "explanation": "The standard format for a Premier Cru label is: village AOC + plot name (Climat) + Premier Cru — for example, \"Chambolle-Musigny Les Amoureuses Premier Cru.\" This lets consumers identify both the village character and the specific plot of origin."
+    },
+    {
+      "type": "single",
+      "question": "Burgundy's most common agricultural risk, spring frost, typically occurs in which months?",
+      "options": ["January-February (deep winter cold)", "April-May (after budbreak)", "July-August (summer growing season)", "October-November (after harvest)"],
+      "correct": 1,
+      "explanation": "The most dangerous time for spring frost in Burgundy is April-May, after budbreak — once frost strikes, the tender young shoots are killed, and in severe cases yields can drop by over 50%. Both 2016 and 2019 were hit hard by this."
+    },
+    {
+      "type": "single",
+      "question": "Of Chambolle-Musigny's two Grands Crus, which is famous for its \"feminine elegance\"?",
+      "options": ["Bonnes-Mares (known for its fullness)", "Le Musigny (known for its floral elegance)", "Both are known for power", "Both are known for minerality"],
+      "correct": 1,
+      "explanation": "Le Musigny is one of Burgundy's most refined and elegant Grands Crus, known for rose and violet aromas and a silky texture. Bonnes-Mares, in the same village, is fuller and more robust by contrast."
+    },
+    {
+      "type": "single",
+      "question": "Comparing the 2015 and 2010 Burgundy vintages, which is generally regarded as fuller-bodied overall?",
+      "options": ["2010 (known for fullness)", "2015 (known for fullness)", "The two are identical", "Both are lean"],
+      "correct": 1,
+      "explanation": "2015 Burgundy is known for exceptionally full fruit and a silky texture (many compare it to 1990); 2010 is known for cool elegance and high acidity — a more \"classic\" Burgundy style. Both have passionate advocates, but 2015 is the fuller of the two."
+    },
+    {
+      "type": "single",
+      "question": "When assessing tannin quality in Burgundy Pinot Noir, what is the highest praise?",
+      "options": ["Powerful and dense, like Bordeaux Cabernet", "Coarse, with obvious astringency", "Silky and fine, gliding smoothly without scratching the throat", "The more tannin, the better"],
+      "correct": 2,
+      "explanation": "The benchmark for top Burgundy Pinot Noir tannin is: silky/velvety, gliding smoothly with no coarseness or irritation whatsoever. Excessive astringency signals over-extraction or under-ripeness — a clear quality flaw."
+    },
+    {
+      "type": "single",
+      "question": "Domaine Armand Rousseau is best known for the wines of which village?",
+      "options": ["Vosne-Romanée", "Chambolle-Musigny", "Gevrey-Chambertin", "Meursault"],
+      "correct": 2,
+      "explanation": "Armand Rousseau is a legendary estate in Gevrey-Chambertin, holding top plots such as Chambertin, Clos de Bèze, and Clos Saint-Jacques. Using traditional whole-cluster fermentation and minimal intervention, it produces some of Burgundy's greatest Chambertin wines."
+    },
+    {
+      "type": "single",
+      "question": "What effect does whole-cluster fermentation have on Pinot Noir?",
+      "options": ["Lowers alcohol, making the wine lighter", "The stems contribute tannin and a spicy character, adding structure and complexity", "Makes the wine ready to drink sooner", "Mainly used to increase color depth"],
+      "correct": 1,
+      "explanation": "Whole-cluster fermentation is a traditional Burgundy practice: the stems contribute a different type of tannin (coarser but structuring), a distinctive spice/herbal character, and one of Burgundy's most recognizable \"forest floor\" aromas. It's an important stylistic tool for top estates."
+    },
+    {
+      "type": "single",
+      "question": "What is the most directly measurable effect of climate warming on Burgundy?",
+      "options": ["The grape variety switched from Pinot Noir to Syrah", "Harvest dates have moved about 2 weeks earlier on average over the past 50 years", "Climate warming has had no significant effect on Burgundy", "Annual rainfall has dropped by 50%"],
+      "correct": 1,
+      "explanation": "Scientific records show: in the 1980s, Burgundy harvest averaged early October; from the 2010s onward it often begins in late August to early September — about 2 weeks earlier. This systematic shift in harvest timing is the most direct agricultural indicator of climate warming."
+    },
+    {
+      "type": "single",
+      "question": "What effect does \"élevage sur lies\" (aging on lees) have on Chardonnay's style?",
+      "options": ["Only adds bitterness", "Adds roundness, fullness, and toasty/buttery aromas", "Has no effect at all", "Only deepens color"],
+      "correct": 1,
+      "explanation": "Aging on lees: as dead yeast cells break down, they release proteins and polysaccharides, adding creaminess and fullness to the wine and producing its signature toasty, buttery aromas — a key winemaking step for top Meursault and Puligny Chardonnay."
+    },
+    {
+      "type": "single",
+      "question": "What is the single most important indicator of a Burgundy wine's long-term aging potential?",
+      "options": ["The deeper the color, the more it can age", "Sufficient natural acidity (the most important anti-oxidation mechanism)", "The more oak, the more it can age", "The higher the alcohol, the more it can age"],
+      "correct": 1,
+      "explanation": "Natural acidity is the single most crucial safeguard for aging: high acidity slows the rate of oxidation, protects fruit character from premature decline, and allows the wine to develop more complex tertiary aromas over time. This is why a lean, high-acid vintage can sometimes outlast a big, low-acid one."
+    },
+    {
+      "type": "single",
+      "question": "Les Amoureuses is one of Burgundy's most famous Premiers Crus. Which village is it in?",
+      "options": ["Gevrey-Chambertin", "Chambolle-Musigny", "Vosne-Romanée", "Nuits-Saint-Georges"],
+      "correct": 1,
+      "explanation": "Les Amoureuses (\"the lovers\") is Chambolle-Musigny's most famous Premier Cru, lying just below the Le Musigny Grand Cru. Its quality approaches Grand Cru level, and its auction prices sometimes surpass certain Grands Crus."
+    },
+    {
+      "type": "single",
+      "question": "What tertiary aromas are typically described in top Burgundy Pinot Noir after 10+ years of aging?",
+      "options": ["Fresh red fruit like strawberry and raspberry", "Butter, toasted bread", "Truffle, leather, forest floor, wild mushroom", "Fresh grassy, minty notes"],
+      "correct": 2,
+      "explanation": "The tertiary (aged) aromas shown by top aged Burgundy Pinot Noir include: truffle (the highest-praised indicator), leather, forest-floor decaying leaves, wild mushroom (porcini, etc.), and black tea — these complex aromas represent the pinnacle achievement of aged Burgundy."
+    },
+    {
+      "type": "single",
+      "question": "Which estate is among Burgundy's most famous representatives of biodynamic viticulture?",
+      "options": ["Domaine Leroy (pioneered by Lalou Bize-Leroy)", "Louis Latour (a traditional négociant)", "Bouchard Père & Fils (a large négociant)", "All Burgundy estates practice it"],
+      "correct": 0,
+      "explanation": "Lalou Bize-Leroy is Burgundy's most famous pioneer of biodynamic viticulture — her Domaine Leroy converted fully in the 1980s. DRC and Domaine Leflaive are also well-known biodynamic estates, but Leroy was the earliest and most radical advocate."
+    },
+    {
+      "type": "single",
+      "question": "Which Burgundy village, though one of the Côte de Nuits' most important, has no Grand Cru at all?",
+      "options": ["Gevrey-Chambertin", "Vosne-Romanée", "Nuits-Saint-Georges", "Chambolle-Musigny"],
+      "correct": 2,
+      "explanation": "Nuits-Saint-Georges is the important commercial town at the southern end of the Côte de Nuits, home to many négociants — yet surprisingly it has no Grand Cru. Despite the exceptional quality of Premiers Crus like Les Saint-Georges, historical attempts at promotion have not succeeded."
+    },
+    {
+      "type": "single",
+      "question": "What characterizes Pommard's red-wine style in the Côte de Beaune?",
+      "options": ["Light and elegant, like Volnay", "Powerful and full, with dense tannin — the Côte de Beaune's most \"masculine\" Pinot Noir", "Known for white wine", "A light style ready to drink young"],
+      "correct": 1,
+      "explanation": "Pommard and Volnay are neighbors with opposite styles: Pommard is robust and full, deep in color with high tannin — the Côte de Beaune red closest to Côte de Nuits power; Volnay, by contrast, is light, often called the most refined \"grande dame\" among French Pinot Noir."
+    },
+    {
+      "type": "single",
+      "question": "What does \"caudalie\" mean in wine tasting?",
+      "options": ["A unit of wine color", "A unit measuring finish length (1 caudalie = 1 second)", "A way of measuring alcohol content", "The proportion of oak barrel used"],
+      "correct": 1,
+      "explanation": "Caudalie is a French tasting term specifically for finish length, where 1 caudalie = 1 second. Top Burgundy Grand Cru finishes typically exceed 30 caudalies, and legendary vintages from producers like DRC can exceed 60 — one of the most direct quantitative indicators of quality."
+    },
+    {
+      "type": "single",
+      "question": "What is Domaine Coche-Dury most famous for?",
+      "options": ["Top Pinot Noir from the Côte de Nuits", "Top Meursault Chardonnay white wine", "Burgundy sparkling wine (Crémant)", "A range of Gevrey-Chambertin wines"],
+      "correct": 1,
+      "explanation": "Domaine Coche-Dury, founded by Jean-François Coche-Dury (now run by his son Raphaël), is considered one of the greatest achievements in Meursault — and Chardonnay globally. Its Corton-Charlemagne and top Premiers Crus are produced in tiny quantities, with secondary-market prices rivaling DRC's reds."
+    },
+    {
+      "type": "single",
+      "question": "In the Level 2 course, which slope aspect is most favorable for growing Grand Cru grapes?",
+      "options": ["North-facing (more shade)", "West-facing (strong afternoon sun)", "Southeast-facing (full morning sun, gentler afternoon light)", "Hilltop (most sunlight)"],
+      "correct": 2,
+      "explanation": "Southeast- (or east-) facing slopes are the ideal aspect for Côte d'Or vineyards: rapid morning warming speeds up photosynthesis, while the lower afternoon sun angle avoids overheating; the slopes are also sheltered from harsh Atlantic winds from the west — favoring balanced ripening for both Pinot Noir and Chardonnay."
+    }
+  ]
+}

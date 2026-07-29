@@ -1,0 +1,23 @@
+{
+  "title": "L2 総合評価",
+  "description": "Level 2 全モジュール（M1〜M8）の内容を統合し、問題集からランダムに20問を出題する総合評価。",
+  "lessons.0.title": "L2 中級 総合評価",
+  "lessons.0.finalExamTitle": "📋 L2 中級 総合評価",
+  "lessons.0.quizBankPath": "/bourgogne/data/courses/level2/quiz-bank.ja.json",
+  "lessons.0.slides.0.title": "L2 中級 総合評価",
+  "lessons.0.slides.0.subtitle": "ブルゴーニュ中級 - 知識の総仕上げ",
+  "lessons.0.slides.0.description": "M1からM8までの全課程内容を統合し、ブルゴーニュ中級知識の習得度をテストします。",
+  "lessons.0.slides.1.title": "📋 評価範囲",
+  "lessons.0.slides.1.content": "今回の総合評価はL2中級コースの全モジュールをカバーします：\n\n• M1 コート・ド・ニュイ産地深掘り解析\n• M2 コート・ド・ボーヌ白ワインの聖地\n• M3 テロワールと土壌科学\n• M4 グラン・クリュ完全ガイド\n• M5 プルミエ・クリュ精選分析\n• M6 気候とヴィンテージの読み解き\n• M7 上級テイスティング技術\n• M8 ドメーヌと醸造家\n\n問題集は全31問、システムがランダムに20問を出題します。合格基準：80点以上。",
+  "lessons.0.slides.2.title": "🎯 試験前の重要ポイント",
+  "lessons.0.slides.2.points.0": "コート・ド・ニュイ：9つの村、グラン・クリュの分布、トップドメーヌ（DRC、Leroy、Rousseau）",
+  "lessons.0.slides.2.points.1": "コート・ド・ボーヌ：Montrachetファミリーの白ワイン・グラン・クリュ5つ、Cortonの特徴",
+  "lessons.0.slides.2.points.2": "土壌：石灰岩 vs 泥灰岩がもたらすスタイルの違い、キンメリッジ地質",
+  "lessons.0.slides.2.points.3": "格付け制度：グラン・クリュ33、プルミエ・クリュのラベル規則、Clos de Vougeotの所有形態",
+  "lessons.0.slides.2.points.4": "ヴィンテージ：2005、2010、2015の重要な違い",
+  "lessons.0.slides.2.points.5": "テイスティング：全房発酵、ビオディナミ農法、熟成香の識別",
+  "lessons.0.slides.2.points.6": "ドメーヌ：DRC、Leroy、Rousseau、Leflaive、Coche-Duryの特徴",
+  "lessons.0.slides.2.points.7": "⚠️ 本評価で80点以上を取るとLevel 3 上級コースが解放されます",
+  "lessons.0.quiz.title": "L2 中級 総合評価",
+  "quiz.title": "L2 中級 総合評価"
+}

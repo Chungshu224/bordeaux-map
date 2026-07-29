@@ -1,0 +1,23 @@
+{
+  "title": "L2 Comprehensive Assessment",
+  "description": "A cumulative assessment covering all Level 2 modules (M1–M8), drawing 20 random questions from the question bank.",
+  "lessons.0.title": "L2 Intermediate Comprehensive Assessment",
+  "lessons.0.finalExamTitle": "📋 L2 Intermediate Comprehensive Assessment",
+  "lessons.0.quizBankPath": "/bourgogne/data/courses/level2/quiz-bank.en.json",
+  "lessons.0.slides.0.title": "L2 Intermediate Comprehensive Assessment",
+  "lessons.0.slides.0.subtitle": "Burgundy Intermediate — Final Knowledge Check",
+  "lessons.0.slides.0.description": "Covering all content from M1 through M8, this test measures your mastery of Burgundy intermediate knowledge.",
+  "lessons.0.slides.1.title": "📋 Assessment Scope",
+  "lessons.0.slides.1.content": "This comprehensive assessment covers every module in the Level 2 course:\n\n• M1 Côte de Nuits In-Depth Analysis\n• M2 Côte de Beaune: White Wine Sanctuaries\n• M3 Terroir and Soil Science\n• M4 Complete Grand Cru Guide\n• M5 Premier Cru Selection Analysis\n• M6 Climate and Vintage Interpretation\n• M7 Advanced Tasting Techniques\n• M8 Domaines and Winemakers\n\nThe bank contains 31 questions; the system randomly draws 20. Passing score: 80 or above.",
+  "lessons.0.slides.2.title": "🎯 Key Review Points",
+  "lessons.0.slides.2.points.0": "Côte de Nuits: 9 villages, Grand Cru distribution, top estates (DRC, Leroy, Rousseau)",
+  "lessons.0.slides.2.points.1": "Côte de Beaune: 5 white-wine Grands Crus in the Montrachet family, Corton's distinctive traits",
+  "lessons.0.slides.2.points.2": "Soil: how limestone vs. marl shape style, Kimmeridgian geology",
+  "lessons.0.slides.2.points.3": "Classification: 33 Grands Crus, Premier Cru labeling rules, Clos de Vougeot ownership",
+  "lessons.0.slides.2.points.4": "Vintages: key differences between 2005, 2010, and 2015",
+  "lessons.0.slides.2.points.5": "Tasting: whole-cluster fermentation, biodynamics, identifying aged aromas",
+  "lessons.0.slides.2.points.6": "Estates: what defines DRC, Leroy, Rousseau, Leflaive, and Coche-Dury",
+  "lessons.0.slides.2.points.7": "⚠️ Scoring 80 or above on this assessment unlocks the Level 3 Advanced course",
+  "lessons.0.quiz.title": "L2 Intermediate Comprehensive Assessment",
+  "quiz.title": "L2 Intermediate Comprehensive Assessment"
+}
