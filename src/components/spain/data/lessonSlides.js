@@ -803,6 +803,12 @@ const S1M2L3_slides = [
     caption: 'Pagos de Valcerracín「Crianza」2015，Ribera del Duero D.O.——一次看齊本文六大關鍵資訊：酒莊名稱、年份、產區（Ribera del Duero Denominación de Origen）、陳年等級（Crianza）與「Producto de España」產地標示。',
   },
   {
+    type: 'image',
+    title: '🏅 酒標實例：DOCa 最高等級 + 官方認證封條',
+    image: '/spain/images/labels/rioja/burgo-viejo-crianza-2009.jpg',
+    caption: 'Burgo Viejo「Crianza」2009，Rioja Denominación de Origen Calificada（DOCa）——西班牙僅 Rioja 與 Priorat 兩產區獲此最高等級認證。酒標下方可見 Consejo Regulador（產區管制委員會）官方背標編號「R.E. 7242-LO」，是辨識正牌 DOCa 酒款的關鍵防偽標示。',
+  },
+  {
     type: 'quiz',
     question: '看到一瓶西班牙紅酒標上寫著「Cosecha 2018」，這代表什麼？',
     options: [
@@ -2730,6 +2736,24 @@ const S2M1L10_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🏷️ 酒標實例：Numanthia「Termes」',
+    image: '/spain/images/labels/toro/numanthia-termes.png',
+    caption: 'Numanthia 酒莊入門款「Termes」，100% Tinta de Toro——Numanthia 由 LVMH 集團持有，是 Toro DO 現代化復興的代表酒莊之一。',
+  },
+  {
+    type: 'image',
+    title: '🏷️ 酒標實例：Pintia（Vega Sicilia 旗下）',
+    image: '/spain/images/labels/toro/pintia.png',
+    caption: 'Pintia，Bodegas y Viñedos Pintia, S.A.——由傳奇酒莊 Vega Sicilia（Tempos Vega Sicilia）於 Toro DO 投資設立，酒標清楚標示「Denominación de Origen TORO」。',
+  },
+  {
+    type: 'image',
+    title: '🏷️ 酒標實例：Maurodos「Prima」',
+    image: '/spain/images/labels/toro/maurodos-prima-2013.png',
+    caption: 'Maurodos「Prima」2013，Bodegas y Viñedos Maurodos——由 Mariano García（前 Vega Sicilia 首席釀酒師、Bodegas Mauro 創辦人）在 Toro DO 打造的紅酒，酒標明確標示「TORO Denominación de Origen」。',
+  },
+  {
     type: 'quiz',
     question: '關於 Toro DO 的 Tinta de Toro，以下哪項描述最準確？',
     options: [
@@ -3633,6 +3657,18 @@ const S2M2L4_slides = [
         <li>海鮮飯（Arroz con mariscos）</li>
       </ul>
     `,
+  },
+  {
+    type: 'image',
+    title: '🏷️ 酒標實例：Txomin Etxaniz（Getariako Txakolina）',
+    image: '/spain/images/labels/getariako-txakolina/txomin-etxaniz-2017.jpg',
+    caption: 'Txomin Etxaniz 2017——Getaria 最具歷史、規模最大的 Txakoli 生產者，酒標明確標示「Txakoli elaborado con uvas hondarribi de nuestros viñedos de Getaria」與「Getariako Txakolina Denominación de Origen」。',
+  },
+  {
+    type: 'image',
+    title: '🏷️ 酒標實例：Talai Berri（Getariako Txakolina）',
+    image: '/spain/images/labels/getariako-txakolina/talai-berri-hondarrabi-zuri-2018.png',
+    caption: 'Talai Berri 2018，Getariako Txakolina D.O.——酒標直接標示品種「Hondarrabi Zuri」，是巴斯克 Txakoli 主力白葡萄品種最直觀的辨識範例。',
   },
   {
     type: 'quiz',
@@ -5103,6 +5139,18 @@ const S2M4L2_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🏷️ 酒標實例：Jumilla DO 老藤 Monastrell',
+    image: '/spain/images/labels/jumilla/alceno-monastrell-cepas-viejas.png',
+    caption: 'Alceño「1.2」，Desde 1870——酒標清楚標示「Monastrell」「Jumilla Denominación de Origen Protegida」與「Cepas Viejas」（老藤），對應本課老藤自根生長的核心主題。',
+  },
+  {
+    type: 'image',
+    title: '🏷️ 酒標實例：Yecla DO Monastrell',
+    image: '/spain/images/labels/yecla/gran-pasas-monastrell-2017.jpg',
+    caption: '「Gran Pasas」2017，Monastrell，Yecla / Spain——展現 Jumilla 近鄰 Yecla DO 同樣以 Monastrell 為核心品種，風格上略為輕盈的對照範例。',
+  },
+  {
     type: 'quiz',
     question: 'Jumilla 的 Monastrell 老藤為何能以「自根生長」存活（即未嫁接到抗根瘤蚜砧木上）？',
     options: [
@@ -5381,6 +5429,12 @@ const S2M4L5_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🏷️ 酒標實例：Calatayud DO Garnacha',
+    image: '/spain/images/labels/calatayud/nietro-garnacha-rosado-2017.jpg',
+    caption: 'Nietro de Sommos「Rosado Garnacha viñas viejas」2017——雖為粉紅酒款，但酒標清楚標示「Garnacha viñas viejas」（老藤格納希）與「CALATAYUD Denominación de Origen」，是辨識產區與品種標示的實用範例。',
+  },
+  {
     type: 'quiz',
     question: 'Calatayud Superior 需要符合哪些資格條件？',
     options: [
@@ -5596,6 +5650,12 @@ const S2M4L7_slides = [
         color: '#f9a825',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🏷️ 酒標實例：Cariñena DO Garnacha',
+    image: '/spain/images/labels/carinena/marques-de-somera-garnacha-rose-2009.jpg',
+    caption: 'Marques de Somera「Garnacha」2009 Rosé——酒標清楚標示「CARIÑENA Denominación de Origen」，印證 Garnacha 已取代 Cariñena（Carignan）成為產區主導品種，同時也生產優質粉紅酒款。',
   },
   {
     type: 'quiz',
