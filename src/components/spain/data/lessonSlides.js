@@ -2096,6 +2096,12 @@ const S2M1L5_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Dominio de Manciles Crianza',
+    image: '/spain/images/labels/arlanza/dominio-de-manciles-crianza.jpg',
+    caption: 'Dominio de Manciles「Crianza」，Bodegas Arlanza（Villalmanzo，Burgos）——酒標清楚標示「ARLANZA Denominación de Origen」，是這個小型 DO 少數在市場上可見的酒款之一。',
+  },
+  {
     type: 'quiz',
     question: '關於 Arlanza DO 的 Albillo 白葡萄，下列何者正確？',
     options: [
@@ -2233,6 +2239,12 @@ const S2M1L6_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Cotexa（El Hato y el Garabato）',
+    image: '/spain/images/labels/arribes/cotexa-2020.jpg',
+    caption: 'Cotexa 2020，El Hato y el Garabato（Formariz，Zamora）——酒標標示「Viñedo Viejo de Arribes」（Arribes 老藤），是本文提到的 Juan García 灌木老藤風格代表。',
+  },
+  {
     type: 'quiz',
     question: '關於 Arribes DO 的 Juan García 葡萄，下列何者正確？',
     options: [
@@ -2357,6 +2369,12 @@ const S2M1L7_slides = [
         <li>已開始吸引<strong>公共與私營部門新投資</strong>，加速現代化轉型</li>
       </ul>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Museum Reserva',
+    image: '/spain/images/labels/cigales/museum-reserva-2019.jpg',
+    caption: 'Museum「Reserva」2019，Bodegas Frutos Villar（Cigales D.O.）——酒標清楚標示「CIGALES Denominación de Origen」，Museum 是 Cigales 產區從粉紅酒傳統轉向陳年紅酒的代表酒莊之一。',
   },
   {
     type: 'quiz',
@@ -2491,6 +2509,12 @@ const S2M1L8_slides = [
         color: '#2e7d32',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Pricum「Prieto Picudo」',
+    image: '/spain/images/labels/tierra-de-leon/pricum-prieto-picudo.jpg',
+    caption: 'Pricum「Prieto Picudo」，Tierra de León D.O.——酒標直接以本文提到的招牌原生品種「Prieto Picudo」命名，是產區最具代表性的單一品種裝瓶之一。',
   },
   {
     type: 'quiz',
@@ -2628,6 +2652,12 @@ const S2M1L9_slides = [
         color: '#2e7d32',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Fariña「Tinto Zamora」',
+    image: '/spain/images/labels/tierra-del-vino-de-zamora/farina-tinto-zamora-1999.jpg',
+    caption: 'Bodegas Fariña「Tinto Zamora」1999，Vino de la Tierra de Zamora（Casaseca de las Chanas，Zamora）——Fariña 是薩莫拉葡萄酒之地一帶歷史悠久的家族酒莊，酒標描繪薩莫拉河岸城景，是產區傳統紅酒風貌的代表。',
   },
   {
     type: 'quiz',
@@ -2858,6 +2888,12 @@ const S2M1L11_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Lidia「100% Rufete」',
+    image: '/spain/images/labels/sierra-de-salamanca/lidia-rufete.jpg',
+    caption: 'Lidia，100% Rufete，D.O.P Sierra de Salamanca——酒標直接標示品種比例，是本文提到的核心原生品種 Rufete 單一品種裝瓶的代表。',
+  },
+  {
     type: 'quiz',
     question: '以下哪項最準確描述 Sierra de Salamanca VC 的 Rufete 品種特點？',
     options: [
@@ -2968,6 +3004,12 @@ const S2M1L12_slides = [
     ],
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Valzuquino Rosado',
+    image: '/spain/images/labels/valles-de-benavente/valzuquino-rosado-2020.png',
+    caption: 'Valzuquino「Rosado」2020，Prieto Picudo，Bodegas y Viñedos Andrea Gutiérrez——D.O.P Valles de Benavente，以本文提到的核心品種 Prieto Picudo 釀成的粉紅酒。',
+  },
+  {
     type: 'quiz',
     question: 'Valles de Benavente VC 的「VC」分級，在西班牙葡萄酒法規中代表什麼？',
     options: [
@@ -3074,6 +3116,12 @@ const S2M1L13_slides = [
         color: '#f9a825',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Lirón Careto',
+    image: '/spain/images/labels/valtiendas/liron-careto-2016.jpg',
+    caption: 'Lirón Careto 2016，D.O.P Valtiendas——酒標以當地睡鼠（lirón careto）為意象，是這個僅 170 公頃小產區少數可見的裝瓶之一。',
   },
   {
     type: 'quiz',
@@ -4073,6 +4121,12 @@ const S2M3L4_slides = [
     ],
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Cau d\'en Genís（Alta Alella）',
+    image: '/spain/images/labels/alella/cau-den-genis-2022.png',
+    caption: 'Alta Alella「Cau d\'en Genís」2022，Família Pujol-Busquets——酒標明確標示「Pansa Blanca (Xarel·lo)」與「Granitic Soil」，是本文提到核心白品種與花崗岩風土的最佳示範，並採有機認證釀造。',
+  },
+  {
     type: 'quiz',
     question: '關於 Alella DO，以下哪項描述最為準確？',
     options: [
@@ -4327,6 +4381,12 @@ const S2M3L6_slides = [
       <h4 style="margin-top:14px">🍾 靜態白酒的傳統聲譽</h4>
       <p>除 Cava 基酒外，Conca de Barberá 也以釀造靜態白葡萄酒見長，Parellada 的花香清新與 Macabeo 的柑橘清爽共同構成產區白酒的基本風格輪廓。</p>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Mont-Blanc 362',
+    image: '/spain/images/labels/conca-de-barbera/montblanc-362.png',
+    caption: 'Mont-Blanc「362」，Conca de Barberà D.O.——酒標標示混釀品種「Parellada, Macabeo, Sauvignon Blanc」，正是本文提到的 Cava 基酒兩大核心白品種在此地的靜態白酒表現。',
   },
   {
     type: 'quiz',
@@ -4587,6 +4647,12 @@ const S2M3L8_slides = [
     ],
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Mas Llunes「Maragda」',
+    image: '/spain/images/labels/emporda/mas-llunes-maragda-2024.png',
+    caption: 'Mas Llunes「Maragda」2024，Empordà D.O.——加泰羅尼亞最北端產區的現代酒標設計，是本文提到產區轉型現代風格的代表酒莊之一。',
+  },
+  {
     type: 'quiz',
     question: '關於 Empordà DO，以下哪一項描述最為準確？',
     options: [
@@ -4692,6 +4758,12 @@ const S2M3L9_slides = [
     ],
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Dosterras「Vermell」',
+    image: '/spain/images/labels/montsant/dosterras-vermell.jpg',
+    caption: 'Dosterras「Vermell」，Montsant D.O.——酒標直接標示產區四大土壤類型「Granit・Argila・Licorella・Calcari」（花崗岩・黏土・板岩・石灰岩），呼應本文提到的多元風土條件。',
+  },
+  {
     type: 'quiz',
     question: '關於 Montsant DO，以下哪一項描述最為準確？',
     options: [
@@ -4788,6 +4860,12 @@ const S2M3L10_slides = [
     ],
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Abadal「Matís」',
+    image: '/spain/images/labels/pla-de-bages/abadal-matis-crianza.png',
+    caption: 'Abadal「Matís」Crianza，Pla de Bages Denominació d\'Origen——Abadal 是產區歷史最悠久的家族酒莊之一，兼種本地與法國品種，是本文提到融合哲學的代表。',
+  },
+  {
     type: 'quiz',
     question: '關於 Pla de Bages DO，以下哪一項描述最為準確？',
     options: [
@@ -4869,7 +4947,7 @@ const S2M3L11_slides = [
       {
         icon: '🌸',
         label: '白品種：國際系',
-        desc: '<strong>Chardonnay</strong>：豐潤口感，常用於木桶發酵或熊仔熟成；<strong>Moscatel</strong>：強烈芳香、葡萄甜香',
+        desc: '<strong>Chardonnay</strong>：豐潤口感，常用於木桶發酵或橡木桶熟成；<strong>Moscatel</strong>：強烈芳香、葡萄甜香',
         color: '#0277bd',
       },
       {
@@ -4881,10 +4959,16 @@ const S2M3L11_slides = [
       {
         icon: '🟣',
         label: '紅品種：國際系',
-        desc: '<strong>Cabernet Sauvignon</strong>：黑醋栗與香料骨幹；<strong>Merlot</strong>：柔潤單寧；<strong>Syrah</strong>：黑胡椒與隱泣，常與本地品種混釀',
+        desc: '<strong>Cabernet Sauvignon</strong>：黑醋栗與香料骨幹；<strong>Merlot</strong>：柔潤單寧；<strong>Syrah</strong>：黑胡椒與辛香，常與本地品種混釀',
         color: '#4a148c',
       },
     ],
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：De Muller「Syrah」',
+    image: '/spain/images/labels/tarragona/de-muller-syrah.jpg',
+    caption: 'De Muller「Syrah」，DO Tarragona——「Casa Fundada 1851」，De Muller 是塔拉戈納歷史最悠久的酒莊之一，展現本文提到本地與國際品種並陳的產區特色。',
   },
   {
     type: 'quiz',
@@ -6876,6 +6960,12 @@ const S3M4L2_slides = [
     `,
   },
   {
+    type: 'image',
+    title: '🍷 酒標實例：Botani「Moscatel Old Vines」',
+    image: '/spain/images/labels/malaga/botani-moscatel-old-vines.jpg',
+    caption: 'Botani「Moscatel Old Vines」，Sierras de Málaga D.O.——由 Jorge Ordóñez & Co. 釀造，是本文提到老藤 Moscatel de Alejandría 最具國際知名度的代表酒款之一。',
+  },
+  {
     type: 'quiz',
     question: 'Sierras de Málaga DO（2001 年設立）與傳統 Málaga DO 的主要差異是什麼？',
     options: [
@@ -6941,6 +7031,12 @@ const S3M4L3_slides = [
       <h4 style="margin-top:12px">☀️ 日曬工藝（Pasificación）的科學</h4>
       <p>葡萄採收後在<strong>草蓆或木板架上攤曬</strong>（或在藤上自然風乾），水分蒸發讓葡萄縮成葡萄乾狀態，糖分濃縮 3-4 倍。加那利島的強烈日照和 Alisios 信風聯手創造了理想的日曬條件。</p>
     `,
+  },
+  {
+    type: 'image',
+    title: '🍷 酒標實例：Yaiza Esencia「Malvasía Volcánica」',
+    image: '/spain/images/labels/canarias/yaiza-esencia-malvasia-volcanica-2017.jpg',
+    caption: 'Yaiza「Esencia」Malvasía Volcánica 2017，Bodegas Vega de Yuco（Lanzarote D.O.）——酒標標示「Seco」（干型），展現本文提到火山 Malvasía 品種的另一面：即便是不甜版本，同樣承載著 Picón 火山礦石感；同款葡萄亦常見於甜型裝瓶。',
   },
   {
     type: 'quiz',
