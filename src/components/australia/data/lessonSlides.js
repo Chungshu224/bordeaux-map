@@ -51,6 +51,18 @@ const SLIDE_MAP = {
       ],
     },
     {
+      type: 'content',
+      title: '產業結構與貿易格局',
+      points: [
+        '生產者以小型酒莊為主：全澳約 2,600 家生產者，僅 16 家年產超過 10,000 噸',
+        'Wine Australia：法定產業機構，由酒莊徵收之 levy 資助，負責研發（R&D）、出口管理、行銷與教育推廣',
+        '五大集團：Casella Family Brands（Yellow Tail）、Treasury Wine Estates（Penfolds）、Accolade Wines、Australian Vintage、Pernod Ricard',
+        '中國關稅衝突：2019 年中國曾佔澳洲葡萄酒出口值 42%；2020 年中國課徵高額反傾銷關稅，出口市場劇烈震盪',
+        '直售通路（D2C）：Cellar Door 對小型酒莊貢獻可達營收 70%，大型酒商僅約 4%；其餘透過官網、酒俱樂部直售',
+      ],
+      note: '澳洲酒業高度依賴出口且集中於少數大集團，但產業基底仍由眾多家族小酒莊構成',
+    },
+    {
       type: 'quiz',
       question: '澳洲是全球第幾大葡萄酒出口國？',
       options: ['第 2 大', '第 5 大', '第 8 大', '第 10 大'],
@@ -64,6 +76,7 @@ const SLIDE_MAP = {
         '澳洲是全球重要葡萄酒出口國，年出口 $18 億澳幣',
         '跨越多個氣候帶，品種與風格極為多元',
         '以技術創新（螺旋蓋）和性價比著稱',
+        '產業以小型酒莊為主，但出口高度集中於中國等少數市場，易受貿易政策衝擊',
       ],
       nextLesson: '下一課：六州葡萄酒地理分布',
     },
@@ -243,7 +256,7 @@ const SLIDE_MAP = {
       title: '澳洲 GI 產區體系總覽',
       subtitle: 'Zone → Region → Sub-Region 三層級地理示意',
       mapRegion: 'all',
-    },,
+    },
 
     {
       type: 'content',
@@ -296,6 +309,17 @@ const SLIDE_MAP = {
       subtitle: '點選 Sub-Region / Region / Zone / State / Country 查看詳細規範',
     },
     {
+      type: 'content',
+      title: 'Label Integrity Program：混調宣告規則',
+      points: [
+        '年份宣告：單一年份至少 85%；宣告多個年份時，所有宣告年份加總須達 100%，並依比例由高到低列出',
+        '品種宣告：單一品種至少 85%；多品種標示須依比例由高到低完整排列，不可跳過任何佔比高於已列品種的其他品種',
+        '範例：70% Semillon + 20% Chardonnay + 10% Sauvignon Blanc → 不可標「Semillon Sauvignon Blanc」（跳過佔比更高的 Chardonnay），須標「Semillon Chardonnay」或三者全列',
+        'GI 產區宣告：單一 GI 至少 85%；最多可同時宣告 3 個 GI，加總須達 95% 以上，且每個列名 GI 貢獻須超過 5%，依比例由高到低列出',
+        '此制度稱為 Label Integrity Program（LIP），由 Wine Australia 監督執行，確保酒標宣告可追溯查核',
+      ],
+    },
+    {
       type: 'quiz',
       question: '若澳洲酒標上標示「Barossa Valley」，這屬於 GI 的哪個層級？',
       options: ['State（州）', 'Zone（大區）', 'Region（次區）', 'Sub-Region（子區）'],
@@ -309,6 +333,7 @@ const SLIDE_MAP = {
         '澳洲使用 GI 系統（非 AOC/DOC），三層：Zone → Region → Sub-Region',
         '酒標最常見的層級是 Region（如 Barossa Valley、Margaret River）',
         '標示產地須 85% 葡萄來自該產區',
+        'Label Integrity Program 進一步規範年份、品種、多重 GI 混調宣告的百分比與排列規則',
       ],
       nextLesson: '下一課：5 大紅葡萄品種',
     },
