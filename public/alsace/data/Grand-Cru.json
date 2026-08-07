@@ -1,0 +1,937 @@
+[
+  {
+    "id": "AOC-Alsace-Grand-Cru-Kastelberg",
+    "file": "AOC-Alsace-Grand-Cru-Kastelberg.geojson",
+    "folder": "01-Schiste",
+    "name": "Kastelberg",
+    "fullName": "Alsace Grand Cru Kastelberg",
+    "commune": "Andlau",
+    "family": "片岩",
+    "familyColor": "#2d3436",
+    "area": "5.82 公頃",
+    "lessonId": "AL2M2L1",
+    "grapes": [
+      "Riesling"
+    ],
+    "soil": "志留紀 Steige 片岩，被 Andlau 花崗岩變質，堅硬深色岩石",
+    "description": "全阿爾薩斯唯一片岩地塊，僅授權 Riesling，風格剛健有力、礦石感強烈、陳年潛力極佳。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Muenchberg",
+    "file": "AOC-Alsace-Grand-Cru-Muenchberg.geojson",
+    "folder": "02-Volcano-sedimentaire",
+    "name": "Muenchberg",
+    "fullName": "Alsace Grand Cru Muenchberg",
+    "commune": "Nothalten",
+    "family": "火山沉積岩",
+    "familyColor": "#8e44ad",
+    "area": "17.7 公頃",
+    "lessonId": "AL2M2L2",
+    "grapes": [
+      "Riesling"
+    ],
+    "soil": "二疊紀火山碎屑堆積岩（火山灰與凝灰岩），多石貧瘠、排水佳",
+    "description": "Ungersberg 砂岩孤丘屏障降雨，12 世紀熙篤會修士已耕作，以 Riesling 為主。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Rangen",
+    "file": "AOC-Alsace-Grand-Cru-Rangen.geojson",
+    "folder": "02-Volcano-sedimentaire",
+    "name": "Rangen",
+    "fullName": "Alsace Grand Cru Rangen",
+    "commune": "Thann & Vieux-Thann",
+    "family": "火山沉積岩",
+    "familyColor": "#c0392b",
+    "area": "22.13 公頃",
+    "lessonId": "AL2M2L2",
+    "grapes": [
+      "Riesling",
+      "Pinot Gris",
+      "Gewurztraminer"
+    ],
+    "soil": "矽質岩與玄武質熔岩，深色多石，蓄熱極佳",
+    "description": "全阿爾薩斯唯一真正火山岩地塊，最南端 Grand Cru，Thann 全轄區皆列為 Grand Cru。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Kessler",
+    "file": "AOC-Alsace-Grand-Cru-Kessler.geojson",
+    "folder": "03-Gres",
+    "name": "Kessler",
+    "fullName": "Alsace Grand Cru Kessler",
+    "commune": "Guebwiller",
+    "family": "砂岩",
+    "familyColor": "#e67e22",
+    "area": "28.53 公頃",
+    "lessonId": "AL2M2L3",
+    "grapes": [
+      "Gewurztraminer"
+    ],
+    "soil": "Buntsandstein 孚日砂岩，底部 Muschelkalk 石灰岩露頭",
+    "description": "1394 年文獻記載，1830 年起獨立商標銷售，Gewurztraminer 花香濃郁、複雜持久。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Kitterle",
+    "file": "AOC-Alsace-Grand-Cru-Kitterle.geojson",
+    "folder": "03-Gres",
+    "name": "Kitterlé",
+    "fullName": "Alsace Grand Cru Kitterlé",
+    "commune": "Guebwiller",
+    "family": "砂岩",
+    "familyColor": "#c0392b",
+    "area": "25.79 公頃",
+    "lessonId": "AL2M2L3",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer",
+      "Pinot Gris"
+    ],
+    "soil": "陡坡多面朝向，石牆梯田獨樹一格的地形",
+    "description": "1699 年即有記載，三品種皆優異，低產量帶來極致濃縮與長壽潛力。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Wiebelsberg",
+    "file": "AOC-Alsace-Grand-Cru-Wiebelsberg.geojson",
+    "folder": "03-Gres",
+    "name": "Wiebelsberg",
+    "fullName": "Alsace Grand Cru Wiebelsberg",
+    "commune": "Andlau",
+    "family": "砂岩",
+    "familyColor": "#d35400",
+    "area": "12.52 公頃",
+    "lessonId": "AL2M2L3",
+    "grapes": [
+      "Riesling"
+    ],
+    "soil": "孚日砂岩覆第四紀溶蝕堆積物，砂質排水佳",
+    "description": "1852 年 Stoltz 分級著作已列名，Riesling 專屬，風格細緻花香、風骨高貴。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Brand",
+    "file": "AOC-Alsace-Grand-Cru-Brand.geojson",
+    "folder": "04-Granite",
+    "name": "Brand",
+    "fullName": "Alsace Grand Cru Brand",
+    "commune": "Turckheim",
+    "family": "花崗岩",
+    "familyColor": "#c0392b",
+    "area": "57.95 公頃",
+    "lessonId": "AL2M3L2",
+    "grapes": [
+      "Riesling",
+      "Pinot Gris",
+      "Gewurztraminer"
+    ],
+    "soil": "Turckheim 兩雲母花崗岩風化砂土",
+    "description": "傳說「太陽與惡龍搏鬥之地」，三大貴族品種皆優異，均衡感如帝王般高雅。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Frankstein",
+    "file": "AOC-Alsace-Grand-Cru-Frankstein.geojson",
+    "folder": "04-Granite",
+    "name": "Frankstein",
+    "fullName": "Alsace Grand Cru Frankstein",
+    "commune": "Dambach-la-Ville",
+    "family": "花崗岩",
+    "familyColor": "#27ae60",
+    "area": "56.2 公頃",
+    "lessonId": "AL2M3L2",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer"
+    ],
+    "soil": "兩雲母花崗岩風化砂，坡向東與東南",
+    "description": "1320 年 Colmar 修道院與 Strasbourg 主教座堂皆曾擁有，數年瓶陳後展現最佳狀態。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Gloeckelberg",
+    "file": "AOC-Alsace-Grand-Cru-Gloeckelberg.geojson",
+    "folder": "04-Granite",
+    "name": "Gloeckelberg",
+    "fullName": "Alsace Grand Cru Gloeckelberg",
+    "commune": "Rodern & Saint-Hippolyte",
+    "family": "花崗岩",
+    "familyColor": "#8d6e63",
+    "area": "23.4 公頃",
+    "lessonId": "AL2M3L2",
+    "grapes": [
+      "Pinot Gris",
+      "Gewurztraminer"
+    ],
+    "soil": "花崗岩基盤，酸性砂質棕色土，局部偏黏質",
+    "description": "中世紀起即為修道院所有，酒款細緻輕盈、優雅且香氣持久。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Praelatenberg",
+    "file": "AOC-Alsace-Grand-Cru-Praelatenberg.geojson",
+    "folder": "04-Granite",
+    "name": "Praelatenberg",
+    "fullName": "Alsace Grand Cru Praelatenberg",
+    "commune": "Kintzheim",
+    "family": "花崗岩",
+    "familyColor": "#95a5a6",
+    "area": "18.7 公頃",
+    "lessonId": "AL2M3L2",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer",
+      "Muscat",
+      "Pinot Gris"
+    ],
+    "soil": "變質岩片麻岩（gneiss），重矽質土含鐵質礫石",
+    "description": "受 Haut-Kœnigsbourg 城堡俯瞰，823 年即有文獻記載，陳年後展現細緻優雅。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Schlossberg",
+    "file": "AOC-Alsace-Grand-Cru-Schlossberg.geojson",
+    "folder": "04-Granite",
+    "name": "Schlossberg",
+    "fullName": "Alsace Grand Cru Schlossberg",
+    "commune": "Kientzheim",
+    "family": "花崗岩",
+    "familyColor": "#2d3436",
+    "area": "80.28 公頃",
+    "lessonId": "AL2M3L1",
+    "grapes": [
+      "Riesling"
+    ],
+    "soil": "migmatite ＋ Thannenkirch 侵入花崗岩，礦物豐富多元",
+    "description": "阿爾薩斯面積最大的 Grand Cru（80.28ha），1928 年起即有農民自主規範公約。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Sommerberg",
+    "file": "AOC-Alsace-Grand-Cru-Sommerberg.geojson",
+    "folder": "04-Granite",
+    "name": "Sommerberg",
+    "fullName": "Alsace Grand Cru Sommerberg",
+    "commune": "Niedermorschwihr & Katzenthal",
+    "family": "花崗岩",
+    "familyColor": "#7f8c8d",
+    "area": "28.36 公頃",
+    "lessonId": "AL2M3L1",
+    "grapes": [
+      "Riesling"
+    ],
+    "soil": "Turckheim 兩雲母花崗岩",
+    "description": "坡度高達 45°，全阿爾薩斯數一數二陡峭的葡萄園，1214 年即有種植紀錄。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Wineck-Schlossberg",
+    "file": "AOC-Alsace-Grand-Cru-Wineck-Schlossberg.geojson",
+    "folder": "04-Granite",
+    "name": "Wineck-Schlossberg",
+    "fullName": "Alsace Grand Cru Wineck-Schlossberg",
+    "commune": "Katzenthal & Ammerschwihr",
+    "family": "花崗岩",
+    "familyColor": "#636e72",
+    "area": "27.4 公頃",
+    "lessonId": "AL2M3L1",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer"
+    ],
+    "soil": "Turckheim 兩雲母花崗岩，山谷三面環抱",
+    "description": "因 Wineck 城堡（阿爾薩斯唯一完全被葡萄園環繞的城堡）得名，Riesling 之鄉。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Winzenberg",
+    "file": "AOC-Alsace-Grand-Cru-Winzenberg.geojson",
+    "folder": "04-Granite",
+    "name": "Winzenberg",
+    "fullName": "Alsace Grand Cru Winzenberg",
+    "commune": "Blienschwiller",
+    "family": "花崗岩",
+    "familyColor": "#16a085",
+    "area": "19.2 公頃",
+    "lessonId": "AL2M3L2",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer",
+      "Pinot Gris"
+    ],
+    "soil": "兩雲母花崗岩，陡坡南南東向",
+    "description": "日照時數極長，酒款展現細緻優雅的花香特質，陳年潛力優異。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Bruderthal",
+    "file": "AOC-Alsace-Grand-Cru-Bruderthal.geojson",
+    "folder": "05-Calcaire",
+    "name": "Bruderthal",
+    "fullName": "Alsace Grand Cru Bruderthal",
+    "commune": "Molsheim",
+    "family": "石灰岩",
+    "familyColor": "#95a5a6",
+    "area": "18.4 公頃",
+    "lessonId": "AL2M4L1",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer"
+    ],
+    "soil": "Muschelkalk 上部＋Lettenkohle 石灰岩／白雲岩，均質泥灰石灰土",
+    "description": "1316 年熙篤會修士命名，Gewurztraminer 帶洋槐花與玫瑰香氣。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Rosacker",
+    "file": "AOC-Alsace-Grand-Cru-Rosacker.geojson",
+    "folder": "05-Calcaire",
+    "name": "Rosacker",
+    "fullName": "Alsace Grand Cru Rosacker",
+    "commune": "Hunawihr",
+    "family": "石灰岩",
+    "familyColor": "#e91e8c",
+    "area": "26.18 公頃",
+    "lessonId": "AL2M4L1",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer"
+    ],
+    "soil": "Muschelkalk 上部＋Lettenkohle 白雲岩化石灰岩，鈣鎂質土壤",
+    "description": "1483 年文獻記載，年輕 Riesling 帶胡椒調性，陳年後展現礦石感。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Steinert",
+    "file": "AOC-Alsace-Grand-Cru-Steinert.geojson",
+    "folder": "05-Calcaire",
+    "name": "Steinert",
+    "fullName": "Alsace Grand Cru Steinert",
+    "commune": "Pfaffenheim & Westhalten",
+    "family": "石灰岩",
+    "familyColor": "#bdc3c7",
+    "area": "38.9 公頃",
+    "lessonId": "AL2M4L1",
+    "grapes": [
+      "Gewurztraminer",
+      "Pinot Gris",
+      "Riesling"
+    ],
+    "soil": "Dogger 鮞狀石灰岩，乾燥且滲透性極佳",
+    "description": "1150 年本篤會、巴賽爾主教與史特拉斯堡主教皆曾擁有，陳年後香氣尤其發展完全。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Steinklotz",
+    "file": "AOC-Alsace-Grand-Cru-Steinklotz.geojson",
+    "folder": "05-Calcaire",
+    "name": "Steinklotz",
+    "fullName": "Alsace Grand Cru Steinklotz",
+    "commune": "Marlenheim",
+    "family": "石灰岩",
+    "familyColor": "#7f8c8d",
+    "area": "40.6 公頃",
+    "lessonId": "AL2M4L1",
+    "grapes": [
+      "Pinot Gris",
+      "Riesling",
+      "Gewurztraminer"
+    ],
+    "soil": "Muschelkalk 與白雲岩化 Keuper「石灰岩塊」，表土僅約 20cm",
+    "description": "589 年即有阿爾薩斯最早的葡萄酒文字記載，酒款高貴且陳年潛力極佳。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Geisberg",
+    "file": "AOC-Alsace-Grand-Cru-Geisberg.geojson",
+    "folder": "06-Calcaro-greseux",
+    "name": "Geisberg",
+    "fullName": "Alsace Grand Cru Geisberg",
+    "commune": "Ribeauvillé",
+    "family": "灰砂岩",
+    "familyColor": "#f39c12",
+    "area": "8.53 公頃",
+    "lessonId": "AL2M4L2",
+    "grapes": [
+      "Riesling"
+    ],
+    "soil": "Muschelkalk 下部白雲岩／白雲質泥灰岩，陡坡",
+    "description": "1308 年即有文獻記載，Riesling 的「天選之地」，發展出著名的強烈礦石感。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Pfingstberg",
+    "file": "AOC-Alsace-Grand-Cru-Pfingstberg.geojson",
+    "folder": "06-Calcaro-greseux",
+    "name": "Pfingstberg",
+    "fullName": "Alsace Grand Cru Pfingstberg",
+    "commune": "Orschwihr",
+    "family": "灰砂岩",
+    "familyColor": "#e67e22",
+    "area": "28.15 公頃",
+    "lessonId": "AL2M4L2",
+    "grapes": [
+      "Gewurztraminer",
+      "Riesling",
+      "Pinot Gris",
+      "Muscat"
+    ],
+    "soil": "上部灰質砂岩＋雲母質砂岩，下部偏黏質砂岩",
+    "description": "1299 年文獻記載，花香濃郁，Riesling 需 1-2 年瓶陳方能完全展現。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Zinnkoepfle",
+    "file": "AOC-Alsace-Grand-Cru-Zinnkoepfle.geojson",
+    "folder": "06-Calcaro-greseux",
+    "name": "Zinnkoepflé",
+    "fullName": "Alsace Grand Cru Zinnkoepflé",
+    "commune": "Soultzmatt & Westhalten",
+    "family": "灰砂岩",
+    "familyColor": "#d35400",
+    "area": "71.03 公頃",
+    "lessonId": "AL2M4L2",
+    "grapes": [
+      "Gewurztraminer",
+      "Riesling"
+    ],
+    "soil": "三疊紀灰砂岩，海拔可達 420m",
+    "description": "「阿爾薩斯葡萄園的屋頂」，Gewurztraminer 展現極致力量，Riesling 意外地細緻和諧。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Furstentum",
+    "file": "AOC-Alsace-Grand-Cru-Furstentum.geojson",
+    "folder": "07-Marno-greseux",
+    "name": "Furstentum",
+    "fullName": "Alsace Grand Cru Furstentum",
+    "commune": "Kientzheim & Sigolsheim",
+    "family": "泥灰砂岩",
+    "familyColor": "#e67e22",
+    "area": "30.5 公頃",
+    "lessonId": "AL2M5L1",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer",
+      "Pinot Gris"
+    ],
+    "soil": "Dogger 下部泥灰石灰砂岩，坡度達 37%",
+    "description": "地中海式植被的「石灰質島嶼」，1330 年巴賽爾修道院文獻記載，力量與細緻兼具。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Kirchberg-de-Ribeauville",
+    "file": "AOC-Alsace-Grand-Cru-Kirchberg-de-Ribeauville.geojson",
+    "folder": "07-Marno-greseux",
+    "name": "Kirchberg de Ribeauvillé",
+    "fullName": "Alsace Grand Cru Kirchberg de Ribeauvillé",
+    "commune": "Ribeauvillé",
+    "family": "泥灰砂岩",
+    "familyColor": "#f39c12",
+    "area": "11.4 公頃",
+    "lessonId": "AL2M5L1",
+    "grapes": [
+      "Riesling",
+      "Muscat",
+      "Gewurztraminer",
+      "Pinot Gris"
+    ],
+    "soil": "下部 Muschelkalk 白雲質泥灰岩＋上部灰質泥灰岩，黏質多石土",
+    "description": "1328 年文獻記載，泥灰石灰岩特有的優雅香氣隨時間展現。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Ollwiller",
+    "file": "AOC-Alsace-Grand-Cru-Ollwiller.geojson",
+    "folder": "07-Marno-greseux",
+    "name": "Ollwiller",
+    "fullName": "Alsace Grand Cru Ollwiller",
+    "commune": "Wuenheim",
+    "family": "泥灰砂岩",
+    "familyColor": "#c0392b",
+    "area": "35.86 公頃",
+    "lessonId": "AL2M5L1",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer"
+    ],
+    "soil": "第三紀砂質黏質沉積",
+    "description": "全法國最乾燥地區之一（年均僅 450mm），12 世紀城堡見證悠久歷史。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Pfersigberg",
+    "file": "AOC-Alsace-Grand-Cru-Pfersigberg.geojson",
+    "folder": "07-Marno-greseux",
+    "name": "Pfersigberg",
+    "fullName": "Alsace Grand Cru Pfersigberg",
+    "commune": "Eguisheim & Wettolsheim",
+    "family": "泥灰砂岩",
+    "familyColor": "#e74c3c",
+    "area": "74.55 公頃",
+    "lessonId": "AL2M5L1",
+    "grapes": [
+      "Gewurztraminer",
+      "Pinot Gris",
+      "Riesling",
+      "Muscat"
+    ],
+    "soil": "礫石灰岩基礎，鹼性 rendzine 土（pH7.7–8）",
+    "description": "Gewurztraminer 天選之地，1927 年 Colmar 首屆酒展重新發揚。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Saering",
+    "file": "AOC-Alsace-Grand-Cru-Saering.geojson",
+    "folder": "07-Marno-greseux",
+    "name": "Saering",
+    "fullName": "Alsace Grand Cru Saering",
+    "commune": "Guebwiller",
+    "family": "泥灰砂岩",
+    "familyColor": "#16a085",
+    "area": "26.75 公頃",
+    "lessonId": "AL2M5L1",
+    "grapes": [
+      "Riesling"
+    ],
+    "soil": "漸新世 latdorfien 期礫岩＋夾層泥灰岩，重質泥灰砂土",
+    "description": "1250 年文獻記載，1830 年起獨立商標銷售，花香典型，乾爽風骨清晰。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Spiegel",
+    "file": "AOC-Alsace-Grand-Cru-Spiegel.geojson",
+    "folder": "07-Marno-greseux",
+    "name": "Spiegel",
+    "fullName": "Alsace Grand Cru Spiegel",
+    "commune": "Bergholtz & Guebwiller",
+    "family": "泥灰砂岩",
+    "familyColor": "#2980b9",
+    "area": "18.26 公頃",
+    "lessonId": "AL2M5L1",
+    "grapes": [
+      "Gewurztraminer",
+      "Pinot Gris",
+      "Riesling",
+      "Muscat"
+    ],
+    "soil": "漸新世礫岩（砂岩礫石為主）＋夾層泥灰岩，砂黏質土",
+    "description": "50 年以上聲譽，南向坡地亦有優異 Riesling／Muscat，Pinot Gris 尤其飽滿圓潤。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Vorbourg",
+    "file": "AOC-Alsace-Grand-Cru-Vorbourg.geojson",
+    "folder": "07-Marno-greseux",
+    "name": "Vorbourg",
+    "fullName": "Alsace Grand Cru Vorbourg",
+    "commune": "Rouffach & Westhalten",
+    "family": "泥灰砂岩",
+    "familyColor": "#27ae60",
+    "area": "73.61 公頃",
+    "lessonId": "AL2M5L1",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer",
+      "Pinot Gris",
+      "Muscat"
+    ],
+    "soil": "砂岩與鮞狀石灰岩礫石泥灰土，表層覆黃土",
+    "description": "762 年主教 Heddo 捐贈古老葡萄園紀錄，極早熟、常自然發展貴腐。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Altenberg-de-Bergheim",
+    "file": "AOC-Alsace-Grand-Cru-Altenberg-de-Bergheim.geojson",
+    "folder": "08-Marno-calcaro-greseux",
+    "name": "Altenberg de Bergheim",
+    "fullName": "Alsace Grand Cru Altenberg de Bergheim",
+    "commune": "Bergheim",
+    "family": "泥灰石灰砂岩",
+    "familyColor": "#e74c3c",
+    "area": "35.06 公頃",
+    "lessonId": "AL2M5L2",
+    "grapes": [
+      "Riesling",
+      "Pinot Gris",
+      "Gewurztraminer"
+    ],
+    "soil": "紅色泥灰石灰岩，多石且富含化石",
+    "description": "全阿爾薩斯僅二的混釀 Grand Cru 之一，Riesling 50-70%+Pinot Gris 10-25%+Gewurztraminer 10-25%。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Engelberg",
+    "file": "AOC-Alsace-Grand-Cru-Engelberg.geojson",
+    "folder": "08-Marno-calcaro-greseux",
+    "name": "Engelberg",
+    "fullName": "Alsace Grand Cru Engelberg",
+    "commune": "Dahlenheim & Scharrachbergheim",
+    "family": "泥灰石灰砂岩",
+    "familyColor": "#e74c3c",
+    "area": "14.8 公頃",
+    "lessonId": "AL2M5L2",
+    "grapes": [
+      "Gewurztraminer",
+      "Riesling"
+    ],
+    "soil": "均質多石泥灰石灰岩，富含化石，Muschelkalk 佔優勢",
+    "description": "884 年即有文獻記載「高貴的酒」，需數年瓶陳方能完全展現優雅風味。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Osterberg",
+    "file": "AOC-Alsace-Grand-Cru-Osterberg.geojson",
+    "folder": "08-Marno-calcaro-greseux",
+    "name": "Osterberg",
+    "fullName": "Alsace Grand Cru Osterberg",
+    "commune": "Ribeauvillé",
+    "family": "泥灰石灰砂岩",
+    "familyColor": "#d35400",
+    "area": "24.6 公頃",
+    "lessonId": "AL2M5L2",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer",
+      "Pinot Gris"
+    ],
+    "soil": "Muschelkalk 中部泥灰岩＋東側 Lettenkohle 白雲質石灰岩",
+    "description": "中世紀文獻記載，Ribeaupierre 領主曾擁有，展現強勁礦石感與長壽潛力。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Zotzenberg",
+    "file": "AOC-Alsace-Grand-Cru-Zotzenberg.geojson",
+    "folder": "08-Marno-calcaro-greseux",
+    "name": "Zotzenberg",
+    "fullName": "Alsace Grand Cru Zotzenberg",
+    "commune": "Mittelbergheim",
+    "family": "泥灰石灰砂岩",
+    "familyColor": "#f39c12",
+    "area": "36.45 公頃",
+    "lessonId": "AL2M5L2",
+    "grapes": [
+      "Gewurztraminer",
+      "Riesling",
+      "Pinot Gris",
+      "Sylvaner"
+    ],
+    "soil": "侏羅紀泥灰石灰岩＋漸新世石灰質礫岩，保水抗旱",
+    "description": "歷史上唯一授權 Sylvaner 的 Grand Cru，1364 年首度以「Zoczenberg」記載。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Altenberg-de-Wolxheim",
+    "file": "AOC-Alsace-Grand-Cru-Altenberg-de-Wolxheim.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Altenberg de Wolxheim",
+    "fullName": "Alsace Grand Cru Altenberg de Wolxheim",
+    "commune": "Wolxheim",
+    "family": "泥灰石灰岩",
+    "familyColor": "#8e44ad",
+    "area": "31.2 公頃",
+    "lessonId": "AL2M5L3",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer"
+    ],
+    "soil": "Lias＋Dogger 泥灰石灰岩，多石",
+    "description": "拿破崙一世曾讚賞其 Riesling，強勁和諧、風味細緻。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Eichberg",
+    "file": "AOC-Alsace-Grand-Cru-Eichberg.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Eichberg",
+    "fullName": "Alsace Grand Cru Eichberg",
+    "commune": "Eguisheim",
+    "family": "泥灰石灰岩",
+    "familyColor": "#9b59b6",
+    "area": "57.62 公頃",
+    "lessonId": "AL2M5L3",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer",
+      "Pinot Gris"
+    ],
+    "soil": "漸新世礫岩泥灰岩，Colmar 一帶降雨量最低區域",
+    "description": "11 世紀 Marbach 修道院即有課稅紀錄，酒款極為豐腴，陳年潛力優異。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Florimont",
+    "file": "AOC-Alsace-Grand-Cru-Florimont.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Florimont",
+    "fullName": "Alsace Grand Cru Florimont",
+    "commune": "Ingersheim & Katzenthal",
+    "family": "泥灰石灰岩",
+    "familyColor": "#7d3c98",
+    "area": "21.0 公頃",
+    "lessonId": "AL2M5L3",
+    "grapes": [
+      "Gewurztraminer",
+      "Riesling"
+    ],
+    "soil": "Bathonien/Bajocien 石灰岩＋漸新世礫岩泥灰岩",
+    "description": "位於「Colmar 橢圓區」年降雨僅約 550mm，酒款飽滿均衡、極具陳年潛力。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Goldert",
+    "file": "AOC-Alsace-Grand-Cru-Goldert.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Goldert",
+    "fullName": "Alsace Grand Cru Goldert",
+    "commune": "Gueberschwihr",
+    "family": "泥灰石灰岩",
+    "familyColor": "#a569bd",
+    "area": "45.35 公頃",
+    "lessonId": "AL2M5L3",
+    "grapes": [
+      "Gewurztraminer"
+    ],
+    "soil": "Dogger 鮞狀石灰岩＋第四紀溶蝕堆積物",
+    "description": "750 年即為知名酒村，得名自「金色」，展現金黃色澤與絕佳和諧感。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Hatschbourg",
+    "file": "AOC-Alsace-Grand-Cru-Hatschbourg.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Hatschbourg",
+    "fullName": "Alsace Grand Cru Hatschbourg",
+    "commune": "Hattstatt & Vœgtlinshoffen",
+    "family": "泥灰石灰岩",
+    "familyColor": "#8e44ad",
+    "area": "47.36 公頃",
+    "lessonId": "AL2M5L3",
+    "grapes": [
+      "Gewurztraminer",
+      "Pinot Gris",
+      "Riesling",
+      "Muscat"
+    ],
+    "soil": "泥灰石灰岩＋黃土沉積，厚實排水良好",
+    "description": "中世紀文獻記載，16-17 世紀售價高昂，典型性突出、陳年實力堅強。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Hengst",
+    "file": "AOC-Alsace-Grand-Cru-Hengst.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Hengst",
+    "fullName": "Alsace Grand Cru Hengst",
+    "commune": "Wintzenheim",
+    "family": "泥灰石灰岩",
+    "familyColor": "#6c3483",
+    "area": "75.78 公頃",
+    "lessonId": "AL2M5L3",
+    "grapes": [
+      "Gewurztraminer"
+    ],
+    "soil": "漸新世礫岩＋石灰質泥灰岩",
+    "description": "「種馬」之意，年輕時展現「野性」，10-20 年瓶陳後馴化為優雅細緻的「純種馬」。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Kirchberg-de-Barr",
+    "file": "AOC-Alsace-Grand-Cru-Kirchberg-de-Barr.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Kirchberg de Barr",
+    "fullName": "Alsace Grand Cru Kirchberg de Barr",
+    "commune": "Barr",
+    "family": "泥灰石灰岩",
+    "familyColor": "#5b2c6f",
+    "area": "40.63 公頃",
+    "lessonId": "AL2M5L3",
+    "grapes": [
+      "Gewurztraminer",
+      "Riesling",
+      "Pinot Gris"
+    ],
+    "soil": "石灰岩至泥灰石灰岩，富含侏羅紀中期石灰岩塊礫石",
+    "description": "因山頂 Saint-Martin 禮拜堂得名，成熟較晚但陳年後展現驚人結構與香料調性。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Mambourg",
+    "file": "AOC-Alsace-Grand-Cru-Mambourg.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Mambourg",
+    "fullName": "Alsace Grand Cru Mambourg",
+    "commune": "Sigolsheim",
+    "family": "泥灰石灰岩",
+    "familyColor": "#8e44ad",
+    "area": "61.85 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Gewurztraminer"
+    ],
+    "soil": "鈣鎂質土壤，第三紀礫岩泥灰岩覆蓋層",
+    "description": "正南朝向、日照時數最長的地塊之一，783 年即有聲譽記載，風味典雅。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Mandelberg",
+    "file": "AOC-Alsace-Grand-Cru-Mandelberg.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Mandelberg",
+    "fullName": "Alsace Grand Cru Mandelberg",
+    "commune": "Mittelwihr & Beblenheim",
+    "family": "泥灰石灰岩",
+    "familyColor": "#9b59b6",
+    "area": "22.0 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Gewurztraminer",
+      "Riesling"
+    ],
+    "soil": "第三紀萊茵地塹邊緣礫岩泥灰石灰岩",
+    "description": "「杏仁坡」，羅馬高盧時期即耕作，1925 年起以自己名稱標示酒標。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Marckrain",
+    "file": "AOC-Alsace-Grand-Cru-Marckrain.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Marckrain",
+    "fullName": "Alsace Grand Cru Marckrain",
+    "commune": "Bennwihr & Sigolsheim",
+    "family": "泥灰石灰岩",
+    "familyColor": "#a569bd",
+    "area": "53.35 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Gewurztraminer",
+      "Pinot Gris"
+    ],
+    "soil": "漸新世濱海礫岩，鮞狀石灰岩礫石為主",
+    "description": "777 年即有文獻記載，Gewurztraminer 為王，體質強勁、香氣複雜。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Moenchberg",
+    "file": "AOC-Alsace-Grand-Cru-Moenchberg.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Moenchberg",
+    "fullName": "Alsace Grand Cru Moenchberg",
+    "commune": "Andlau & Eichhoffen",
+    "family": "泥灰石灰岩",
+    "familyColor": "#7d3c98",
+    "area": "11.83 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Riesling"
+    ],
+    "soil": "第四紀溶蝕堆積物，細質黏土壤",
+    "description": "「僧侶之山」，羅馬占領時期已種植，優雅品種特性搭配紮實酒體。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Sonnenglanz",
+    "file": "AOC-Alsace-Grand-Cru-Sonnenglanz.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Sonnenglanz",
+    "fullName": "Alsace Grand Cru Sonnenglanz",
+    "commune": "Beblenheim",
+    "family": "泥灰石灰岩",
+    "familyColor": "#6c3483",
+    "area": "32.8 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Pinot Gris",
+      "Gewurztraminer"
+    ],
+    "soil": "第三紀礫岩泥灰岩，年雨量低於 500mm",
+    "description": "「陽光燦爛」，金黃酒色、成熟濃郁香氣，口感溫暖均衡且餘韻悠長。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Steingrubler",
+    "file": "AOC-Alsace-Grand-Cru-Steingrubler.geojson",
+    "folder": "09-Marno-calcaire",
+    "name": "Steingrubler",
+    "fullName": "Alsace Grand Cru Steingrubler",
+    "commune": "Wettolsheim",
+    "family": "泥灰石灰岩",
+    "familyColor": "#5b2c6f",
+    "area": "22.95 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer"
+    ],
+    "soil": "泥灰石灰岩至黏砂質，上部砂質、下部富含石灰質",
+    "description": "13 世紀採石場遺跡記載，陳年潛力強，香氣豐富、體質堅實。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Altenberg-de-Bergbieten",
+    "file": "AOC-Alsace-Grand-Cru-Altenberg-de-Bergbieten.geojson",
+    "folder": "10-Argilo-marneux",
+    "name": "Altenberg de Bergbieten",
+    "fullName": "Alsace Grand Cru Altenberg de Bergbieten",
+    "commune": "Bergbieten",
+    "family": "黏土泥灰岩",
+    "familyColor": "#154360",
+    "area": "29.07 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Riesling",
+      "Gewurztraminer"
+    ],
+    "soil": "石膏質 Keuper 黏土泥灰岩＋白雲岩礫石",
+    "description": "1050 年教宗 Léon IX 相關檔案已提及，花香細膩溫柔，數年陳年後展現醇厚芳香。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Froehn",
+    "file": "AOC-Alsace-Grand-Cru-Froehn.geojson",
+    "folder": "10-Argilo-marneux",
+    "name": "Froehn",
+    "fullName": "Alsace Grand Cru Froehn",
+    "commune": "Zellenberg",
+    "family": "黏土泥灰岩",
+    "familyColor": "#2471a3",
+    "area": "14.6 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Gewurztraminer",
+      "Pinot Gris",
+      "Muscat"
+    ],
+    "soil": "Lias 黏土泥灰岩，深灰色頁岩質泥灰岩夾細白石灰岩層",
+    "description": "果香豐沛、體態飽滿，優異的陳年潛力。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Kanzlerberg",
+    "file": "AOC-Alsace-Grand-Cru-Kanzlerberg.geojson",
+    "folder": "10-Argilo-marneux",
+    "name": "Kanzlerberg",
+    "fullName": "Alsace Grand Cru Kanzlerberg",
+    "commune": "Bergheim",
+    "family": "黏土泥灰岩",
+    "familyColor": "#34495e",
+    "area": "3.23 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Riesling",
+      "Pinot Gris",
+      "Gewurztraminer"
+    ],
+    "soil": "厚重黏質石灰岩，灰／黑色石膏質 Keuper 泥灰岩＋底部 Muschelkalk 石灰岩",
+    "description": "全阿爾薩斯面積最小的 Grand Cru（3.23ha），1312 年即有單獨釀造紀錄。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Schoenenbourg",
+    "file": "AOC-Alsace-Grand-Cru-Schoenenbourg.geojson",
+    "folder": "10-Argilo-marneux",
+    "name": "Schoenenbourg",
+    "fullName": "Alsace Grand Cru Schoenenbourg",
+    "commune": "Riquewihr & Zellenberg",
+    "family": "黏土泥灰岩",
+    "familyColor": "#2980b9",
+    "area": "53.4 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Riesling"
+    ],
+    "soil": "Keuper 泥灰岩／白雲岩／石膏質，富含肥沃元素、保水力強",
+    "description": "伏爾泰曾擁有此地葡萄園，Riesling 為王，微氣候特別適合 VT／SGN 貴腐甜酒。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Sporen",
+    "file": "AOC-Alsace-Grand-Cru-Sporen.geojson",
+    "folder": "10-Argilo-marneux",
+    "name": "Sporen",
+    "fullName": "Alsace Grand Cru Sporen",
+    "commune": "Riquewihr",
+    "family": "黏土泥灰岩",
+    "familyColor": "#1a5276",
+    "area": "23.7 公頃",
+    "lessonId": "AL2M5L4",
+    "grapes": [
+      "Gewurztraminer",
+      "Pinot Gris"
+    ],
+    "soil": "Lias 黏土泥灰岩表層脫鈣，磷酸含量異常豐富",
+    "description": "1580 年 Fischart 譽為「阿爾薩斯眾酒之首」，細緻且氣質高貴。"
+  },
+  {
+    "id": "AOC-Alsace-Grand-Cru-Kaefferkopf",
+    "file": "AOC-Alsace-Grand-Cru-Kaefferkopf.geojson",
+    "folder": "11-Kaefferkopf",
+    "name": "Kaefferkopf",
+    "fullName": "Alsace Grand Cru Kaefferkopf",
+    "commune": "Ammerschwihr",
+    "family": "混釀特例",
+    "familyColor": "#c9a227",
+    "area": "71.65 公頃",
+    "lessonId": "AL3M4L2",
+    "grapes": [
+      "Gewurztraminer",
+      "Riesling",
+      "Pinot Gris"
+    ],
+    "soil": "花崗岩、鮞狀石灰岩與砂岩混合的複雜地質",
+    "description": "全阿爾薩斯唯二混釀 Grand Cru 之一，1932 年即受司法保護，Gewurztraminer 60-80%+Riesling 10-40%+Pinot Gris≤30%。"
+  }
+]

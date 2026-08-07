@@ -1,0 +1,97 @@
+{
+  "01-Schiste｜片岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Kastelberg.geojson"
+    ]
+  },
+  "02-Volcano-sedimentaire｜火山沉積岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Muenchberg.geojson",
+      "AOC-Alsace-Grand-Cru-Rangen.geojson"
+    ]
+  },
+  "03-Gres｜砂岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Kessler.geojson",
+      "AOC-Alsace-Grand-Cru-Kitterle.geojson",
+      "AOC-Alsace-Grand-Cru-Wiebelsberg.geojson"
+    ]
+  },
+  "04-Granite｜花崗岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Brand.geojson",
+      "AOC-Alsace-Grand-Cru-Frankstein.geojson",
+      "AOC-Alsace-Grand-Cru-Gloeckelberg.geojson",
+      "AOC-Alsace-Grand-Cru-Praelatenberg.geojson",
+      "AOC-Alsace-Grand-Cru-Schlossberg.geojson",
+      "AOC-Alsace-Grand-Cru-Sommerberg.geojson",
+      "AOC-Alsace-Grand-Cru-Wineck-Schlossberg.geojson",
+      "AOC-Alsace-Grand-Cru-Winzenberg.geojson"
+    ]
+  },
+  "05-Calcaire｜石灰岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Bruderthal.geojson",
+      "AOC-Alsace-Grand-Cru-Rosacker.geojson",
+      "AOC-Alsace-Grand-Cru-Steinert.geojson",
+      "AOC-Alsace-Grand-Cru-Steinklotz.geojson"
+    ]
+  },
+  "06-Calcaro-greseux｜灰砂岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Geisberg.geojson",
+      "AOC-Alsace-Grand-Cru-Pfingstberg.geojson",
+      "AOC-Alsace-Grand-Cru-Zinnkoepfle.geojson"
+    ]
+  },
+  "07-Marno-greseux｜泥灰砂岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Furstentum.geojson",
+      "AOC-Alsace-Grand-Cru-Kirchberg-de-Ribeauville.geojson",
+      "AOC-Alsace-Grand-Cru-Ollwiller.geojson",
+      "AOC-Alsace-Grand-Cru-Pfersigberg.geojson",
+      "AOC-Alsace-Grand-Cru-Saering.geojson",
+      "AOC-Alsace-Grand-Cru-Spiegel.geojson",
+      "AOC-Alsace-Grand-Cru-Vorbourg.geojson"
+    ]
+  },
+  "08-Marno-calcaro-greseux｜泥灰石灰砂岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Altenberg-de-Bergheim.geojson",
+      "AOC-Alsace-Grand-Cru-Engelberg.geojson",
+      "AOC-Alsace-Grand-Cru-Osterberg.geojson",
+      "AOC-Alsace-Grand-Cru-Zotzenberg.geojson"
+    ]
+  },
+  "09-Marno-calcaire｜泥灰石灰岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Altenberg-de-Wolxheim.geojson",
+      "AOC-Alsace-Grand-Cru-Eichberg.geojson",
+      "AOC-Alsace-Grand-Cru-Florimont.geojson",
+      "AOC-Alsace-Grand-Cru-Goldert.geojson",
+      "AOC-Alsace-Grand-Cru-Hatschbourg.geojson",
+      "AOC-Alsace-Grand-Cru-Hengst.geojson",
+      "AOC-Alsace-Grand-Cru-Kirchberg-de-Barr.geojson",
+      "AOC-Alsace-Grand-Cru-Mambourg.geojson",
+      "AOC-Alsace-Grand-Cru-Mandelberg.geojson",
+      "AOC-Alsace-Grand-Cru-Marckrain.geojson",
+      "AOC-Alsace-Grand-Cru-Moenchberg.geojson",
+      "AOC-Alsace-Grand-Cru-Sonnenglanz.geojson",
+      "AOC-Alsace-Grand-Cru-Steingrubler.geojson"
+    ]
+  },
+  "10-Argilo-marneux｜黏土泥灰岩": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Altenberg-de-Bergbieten.geojson",
+      "AOC-Alsace-Grand-Cru-Froehn.geojson",
+      "AOC-Alsace-Grand-Cru-Kanzlerberg.geojson",
+      "AOC-Alsace-Grand-Cru-Schoenenbourg.geojson",
+      "AOC-Alsace-Grand-Cru-Sporen.geojson"
+    ]
+  },
+  "11-Kaefferkopf｜混釀特例": {
+    "files": [
+      "AOC-Alsace-Grand-Cru-Kaefferkopf.geojson"
+    ]
+  }
+}
