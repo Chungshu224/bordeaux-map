@@ -721,6 +721,139 @@ const S1M1L4_slides = [
   },
 ]
 
+const S1M1L5_slides = [
+  {
+    type: 'cover',
+    icon: '🌱',
+    gradient: 'linear-gradient(135deg, #6d4c41, #8d6e63)',
+    title: '葡萄樹解剖・生長週期與病蟲害',
+    subtitle: 'Level 1 · 第五課',
+    points: [
+      { icon: '🌿', label: '葡萄樹構造', text: '根、幹、蔓、芽、卷鬚——認識釀酒葡萄的基本部位' },
+      { icon: '🔄', label: '年度生長週期', text: '從休眠、萌芽到採收，六個階段決定葡萄品質' },
+      { icon: '🐛', label: '病蟲害', text: '根瘤蚜、白粉病、霜黴病——西班牙老藤傳奇的真正原因' },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🍇',
+    title: '葡萄的構造：果實裡藏著風味密碼',
+    html: `
+      <p>釀酒葡萄（Vitis vinifera）與食用葡萄不同：果粒更小、更甜、皮更厚、帶籽。全球約有 1,400 個釀酒品種，其中約 100 個品種就佔了全球 75% 的葡萄園面積。</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div style="background:#fefae0;border-left:4px solid #f1c40f;border-radius:0 10px 10px 0;padding:12px">
+          <strong>🟡 果肉（Pulp）</strong>：提供酒體、糖分與酸度，佔果實絕大部分重量。
+        </div>
+        <div style="background:#fce8e6;border-left:4px solid #e74c3c;border-radius:0 10px 10px 0;padding:12px">
+          <strong>🍇 果皮（Skin）</strong>：貢獻單寧、品種特有香氣，也是<strong>色素</strong>的來源——紅酒的顏色來自果皮而非果肉。
+        </div>
+        <div style="background:#f3e5f5;border-left:4px solid #8e44ad;border-radius:0 10px 10px 0;padding:12px">
+          <strong>⚫ 種籽（Pips）</strong>：數量、形狀與成熟度因品種而異，提供單寧與澀感——過度榨汁易萃取出種籽的苦澀單寧。
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 10px 10px 0;padding:12px">
+          <strong>🌿 果梗（Stems）</strong>：帶來偏酸澀的單寧，帶梗發酵（如部分 Garnacha、Mencía 產區的嘗試）會增添香料與草本調性。
+        </div>
+      </div>
+      <p style="margin-top:10px">💡 單寧就是喝茶包泡太久時，那種讓口腔發澀收斂的感覺——主要來自果皮、種籽與果梗。</p>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🌳',
+    title: '葡萄樹的構造',
+    html: `
+      <p>了解葡萄樹的基本部位，有助理解修剪與樹形管理如何影響產量與品質：</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+        <div style="background:#f5f5f5;border-radius:8px;padding:10px 14px"><strong>根（Root）</strong>：吸收水分與養分；西班牙因 19 世紀根瘤蚜蟲害，絕大多數葡萄樹皆嫁接於抗蟲的美洲砧木上。</div>
+        <div style="background:#f5f5f5;border-radius:8px;padding:10px 14px"><strong>主幹（Trunk）與臂（Arm）</strong>：支撐整棵樹的骨架，樹齡越老、主幹越粗壯。</div>
+        <div style="background:#f5f5f5;border-radius:8px;padding:10px 14px"><strong>短枝（Spur）與結果枝（Cane）</strong>：冬季修剪後留下的枝條，帶有芽眼（Buds），決定隔年的產量。</div>
+        <div style="background:#f5f5f5;border-radius:8px;padding:10px 14px"><strong>卷鬚（Tendril）與葉片（Leaf）</strong>：卷鬚幫助攀附棚架；葉片行光合作用，為果實累積糖分。</div>
+      </div>
+      <p style="margin-top:10px">葡萄樹生長需要熱能、日照、水分、養分與二氧化碳五大要素缺一不可。</p>
+    `,
+  },
+  {
+    type: 'content',
+    icon: '🔄',
+    title: '年度生長週期：從休眠到採收',
+    html: `
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px">
+        <div style="background:#eceff1;border-radius:8px;padding:10px 14px"><strong>❄️ 休眠（Latent）</strong>：冬季葡萄樹落葉、無綠色部位，進入休眠；此時進行<strong>冬季修剪</strong>，決定隔年留下多少芽眼與結果母枝，直接影響來年產量。</div>
+        <div style="background:#e8f5e9;border-radius:8px;padding:10px 14px"><strong>🌱 萌芽（Budding）</strong>：春季新芽開始生長，是霜害風險最高的階段。</div>
+        <div style="background:#fff9c4;border-radius:8px;padding:10px 14px"><strong>🌸 開花與坐果（Flowering / Fruit Set）</strong>：授粉後果粒開始形成，此時期最怕強風豪雨影響坐果率。</div>
+        <div style="background:#ffe0b2;border-radius:8px;padding:10px 14px"><strong>🍇 轉色（Veraison）</strong>：夏末初秋，果粒開始變色、糖度上升、酸度下降，是成熟監測的起點。</div>
+        <div style="background:#ffccbc;border-radius:8px;padding:10px 14px"><strong>🧺 採收（Harvest）</strong>：果實達到理想的糖酸與酚類成熟度後採收，可用機械（快速、成本低）或人工（精細，可整串挑選）方式進行。</div>
+      </div>
+    `,
+  },
+  {
+    type: 'compare',
+    title: '樹形訓練與修剪：兩種主要系統',
+    items: [
+      {
+        icon: '🌳',
+        label: '灌木型（Bush Training / Vaso）',
+        desc: '不依賴棚架，樹形低矮，多為人工採收；常見於乾旱少雨、需要更靠近地面保溫的老藤產區，如西班牙中部的傳統葡萄園。',
+        color: '#8d6e63',
+      },
+      {
+        icon: '🪜',
+        label: '棚架型（Cordon / Espaldera Training）',
+        desc: '枝蔓沿鐵絲棚架水平延伸，便於機械化管理與採收，也利於精準的葉幕（冠層）管理；是現代化、高密度種植的主流方式。',
+        color: '#558b2f',
+      },
+    ],
+  },
+  {
+    type: 'content',
+    icon: '🐛',
+    title: '葡萄樹的主要病蟲害',
+    html: `
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+        <div style="background:#fce8e6;border-left:4px solid #c0392b;border-radius:0 10px 10px 0;padding:12px">
+          <strong>🦟 根瘤蚜（Phylloxera）</strong><br/>
+          原生於北美的蚜蟲，19 世紀末傳入西班牙，啃食根部、無藥可醫，幾乎摧毀歐洲所有葡萄園。解方是將歐洲釀酒品種<strong>嫁接於抗蟲的美洲砧木</strong>上——至今仍是全球主流做法。少數如加那利群島、部分砂質土壤產區未曾受害，因而保留下珍貴的自根老藤。
+        </div>
+        <div style="background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 10px 10px 0;padding:12px">
+          <strong>🍄 真菌性病害：白粉病（Oidium）與霜黴病（Mildew）</strong><br/>
+          好發於溫暖潮濕的環境，可侵害植株各部位。傳統上會在葡萄園邊緣種植玫瑰樹作為「預警指標」——雖然感染玫瑰與葡萄的黴菌品種不同，但發病條件相似，玫瑰通常會先出現病徵。
+        </div>
+        <div style="background:#efebe9;border-left:4px solid #6d4c41;border-radius:0 10px 10px 0;padding:12px">
+          <strong>🟣 灰黴病（Botrytis cinerea）：腐爛 vs 貴腐</strong><br/>
+          多數情況下是破壞性的果實腐爛；但在特定的霧氣與日照交替條件下，同一種黴菌能形成「貴腐」，濃縮糖分並增添蜂蜜與果乾風味，成就頂級甜酒。
+        </div>
+        <div style="background:#eceff1;border-left:4px solid #607d8b;border-radius:0 10px 10px 0;padding:12px">
+          <strong>🪱 線蟲、病毒與 Esca 木質病害</strong><br/>
+          線蟲會攻擊根部並傳播病毒；病毒一旦感染難以根治；Esca 是難以治療的木質部病害，是老藤葡萄園管理的長期挑戰。
+        </div>
+      </div>
+    `,
+  },
+  {
+    type: 'quiz',
+    question: '為什麼西班牙絕大多數的葡萄樹都嫁接在美洲砧木上？',
+    options: [
+      '美洲砧木能讓葡萄樹提早結果',
+      '為了抵抗 19 世紀傳入、摧毀歐洲葡萄園的根瘤蚜蟲害',
+      '美洲砧木能讓葡萄酒風味更濃郁',
+      '西班牙法律規定所有葡萄樹都必須嫁接',
+    ],
+    answer: 1,
+    explanation: '根瘤蚜（Phylloxera）是 19 世紀從北美傳入歐洲的蚜蟲，會啃食葡萄根部且無藥可醫，幾乎摧毀了整個歐洲的葡萄園。解方是將歐洲釀酒品種嫁接在天生抗蟲的美洲葡萄砧木上，這個做法至今仍是全球主流。少數如西班牙的砂質土壤或加那利群島因地理或土質阻隔了蟲害，因此保留了珍貴的自根老藤。',
+  },
+  {
+    type: 'summary',
+    message: '葡萄樹解剖與生長週期學習完成！',
+    keyPoints: [
+      '葡萄由果肉、果皮、種籽、果梗組成，其中果皮貢獻顏色與品種香氣，種籽與果梗貢獻單寧',
+      '年度生長週期：休眠 → 萌芽 → 開花坐果 → 轉色 → 採收，冬季修剪決定隔年產量',
+      '樹形分為灌木型（傳統、人工）與棚架型（現代、可機械化）兩大系統',
+      '根瘤蚜幾乎摧毀 19 世紀歐洲葡萄園，嫁接美洲砧木是至今主流解方；西班牙部分砂質土壤與離島得以保留自根老藤',
+      '灰黴病可以是破壞性的腐爛，也可以在特定條件下形成珍貴的貴腐甜酒',
+    ],
+  },
+]
+
 const S1M2L3_slides = [
   {
     type: 'cover',
@@ -8955,12 +9088,13 @@ const S2M0L3_slides = [
 // ───────────────────────────────────────────────────────────────
 
 const SLIDE_MAP = {
-  // ── Level 1（完整 13 課）────────────────────────────────────────
-  // 第一章：西班牙葡萄酒版圖（4 課）
+  // ── Level 1（完整 14 課）────────────────────────────────────────
+  // 第一章：西班牙葡萄酒版圖（5 課）
   S1M1L1: S1M1L1_slides,   // 概覽與特色
   S1M1L2: S1M1L2_slides,   // 17 個自治區地理
   S1M1L3: S1M1L3_slides,   // 三大氣候帶
   S1M1L4: S1M1L4_slides,   // 土壤類型
+  S1M1L5: S1M1L5_slides,   // 葡萄樹解剖・生長週期與病蟲害
   // 第二章：分級制度（3 課）
   S1M2L1: S1M2L1_slides,   // DO / DOCa / VP / VC
   S1M2L2: S1M2L2_slides,   // 陳年制度

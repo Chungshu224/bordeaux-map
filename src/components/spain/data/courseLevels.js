@@ -17,7 +17,7 @@ export const courseLevels = {
     icon: '🌱',
     color: '#c0392b',
     gradient: 'linear-gradient(135deg, #c0392b, #e74c3c)',
-    totalLessons: 13,
+    totalLessons: 14,
     modules: [
       {
         id: 'S1M1',
@@ -27,6 +27,7 @@ export const courseLevels = {
           { id: 'S1M1L2', title: '17 個自治區地理分布' },
           { id: 'S1M1L3', title: '三大氣候帶：大西洋・地中海・內陸大陸' },
           { id: 'S1M1L4', title: '土壤類型：石灰岩・板岩・砂土・紅土' },
+          { id: 'S1M1L5', title: '葡萄樹解剖・生長週期與病蟲害' },
         ],
       },
       {
