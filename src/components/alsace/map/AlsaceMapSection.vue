@@ -168,9 +168,9 @@ async function loadOverviewLayer() {
     map.addLayer({ id: 'denom-fill', type: 'fill', source: 'denom', paint: { 'fill-color': '#16a085', 'fill-opacity': 0.35 } })
     map.addLayer({ id: 'denom-outline', type: 'line', source: 'denom', paint: { 'line-color': '#fff', 'line-width': 1 } })
 
-    // 頂層：51 個 Grand Cru（依地質族群上色）
+    // 頂層：51 個 Grand Cru（產區位階模式下不顯示地質分類，統一以金色標示這一階層）
     map.addSource('overview', { type: 'geojson', data: grandCru })
-    map.addLayer({ id: 'overview-fill', type: 'fill', source: 'overview', paint: { 'fill-color': ['get', 'familyColor'], 'fill-opacity': 0.75 } })
+    map.addLayer({ id: 'overview-fill', type: 'fill', source: 'overview', paint: { 'fill-color': '#c9a227', 'fill-opacity': 0.75 } })
     map.addLayer({ id: 'overview-outline', type: 'line', source: 'overview', paint: { 'line-color': '#fff', 'line-width': 1 } })
 
     attachInteractionsOnce()
@@ -205,6 +205,14 @@ async function loadOverviewLayer() {
   map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 40, duration: 0 })
 }
 
+function setOverviewVisibility(visible) {
+  if (!map) return
+  const visibility = visible ? 'visible' : 'none'
+  for (const id of OVERVIEW_LAYER_IDS) {
+    if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', visibility)
+  }
+}
+
 async function showAOCGeojson(group, aocFile) {
   if (!map) return
   isLoading.value = true
@@ -218,6 +226,9 @@ async function showAOCGeojson(group, aocFile) {
     if (map.getLayer('aoc-fill')) map.removeLayer('aoc-fill')
     if (map.getLayer('aoc-outline')) map.removeLayer('aoc-outline')
     if (map.getSource('aoc')) map.removeSource('aoc')
+
+    // 選定單一地塊後隱藏其他總覽圖層，避免視覺上互相干擾
+    setOverviewVisibility(false)
 
     map.addSource('aoc', { type: 'geojson', data: geojson })
     map.addLayer({
@@ -247,6 +258,7 @@ async function resetMap() {
   if (map?.getLayer('aoc-fill')) map.removeLayer('aoc-fill')
   if (map?.getLayer('aoc-outline')) map.removeLayer('aoc-outline')
   if (map?.getSource('aoc')) map.removeSource('aoc')
+  setOverviewVisibility(true)
   isInfoCollapsed.value = false
   if (map) map.easeTo({ center: DEFAULT_VIEW.center, zoom: DEFAULT_VIEW.zoom, duration: 800 })
   emit('resetMap')
@@ -347,6 +359,7 @@ watch(() => props.activeAOC, (newAOC, oldAOC) => {
     map.removeLayer('aoc-fill')
     map.removeLayer('aoc-outline')
     map.removeSource('aoc')
+    setOverviewVisibility(true)
     map.flyTo({ center: DEFAULT_VIEW.center, zoom: DEFAULT_VIEW.zoom })
   }
 }, { deep: true })
