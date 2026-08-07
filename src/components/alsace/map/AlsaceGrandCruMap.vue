@@ -81,8 +81,10 @@ const setMobileAOCList = (visible) => {
   top: 0; left: 0; right: 0;
 }
 
-@media (max-width: 4096px) {
+@media (max-width: 768px) {
   .main-layout { flex-direction: column; height: 100dvh; width: 100%; position: fixed; }
+
+  :deep(.aoc-list:not(.mobile-overlay)) { display: none; }
 
   :deep(.aoc-list.mobile-overlay) {
     position: fixed;
@@ -97,13 +99,5 @@ const setMobileAOCList = (visible) => {
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     overflow-y: auto;
   }
-}
-
-@media (min-width: 1024px) {
-  :deep(.aoc-list) { width: 320px; min-width: 320px; }
-}
-
-@media (max-width: 768px) {
-  :deep(.aoc-list:not(.mobile-overlay)) { display: none; }
 }
 </style>
