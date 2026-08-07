@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import AOCList from './AlsaceAOCList.vue'
 import MapSection from './AlsaceMapSection.vue'
 
@@ -9,6 +9,18 @@ const search = ref('')
 const activeAOC = ref({ group: '', aoc: '' })
 const regionInfo = ref(null)
 let metadataList = null
+
+// 'geology'：只看 51 個 Grand Cru，依十大地質族群分組（預設，對應 Level 2 課程）
+// 'hierarchy'：完整產區位階（AOC Alsace → 13 個補充地理標示 → Grand Cru → Crémant）
+const mode = ref('geology')
+const indexPath = computed(() =>
+  mode.value === 'hierarchy' ? '/alsace/geojson/index-hierarchy.json' : '/alsace/geojson/index.json'
+)
+function setMode(next) {
+  if (mode.value === next) return
+  mode.value = next
+  resetMap()
+}
 
 const REAL_MOBILE_MAX_WIDTH = 768
 const isMobileView = ref(typeof window !== 'undefined' && window.innerWidth <= REAL_MOBILE_MAX_WIDTH)
@@ -55,13 +67,18 @@ const setMobileAOCList = (visible) => {
       v-show="!isMobileView || showMobileAOCList"
       v-model:search="search"
       :activeAOC="activeAOC"
+      :indexPath="indexPath"
+      :mode="mode"
       @selectAOC="showAOC"
+      @setMode="setMode"
       :class="{ 'mobile-overlay': isMobileView && showMobileAOCList }"
     />
 
     <MapSection
       :activeAOC="activeAOC"
       :regionInfo="regionInfo"
+      :mode="mode"
+      :indexPath="indexPath"
       :mobileAOCListOpen="showMobileAOCList"
       @resetMap="resetMap"
       @reselect-aoc="reselectAOC"

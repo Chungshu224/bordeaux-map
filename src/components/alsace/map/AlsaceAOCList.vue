@@ -1,8 +1,22 @@
 <template>
   <div class="aoc-list">
     <div class="list-header">
-      <h2 class="list-title">🍇 51 個 Grand Cru</h2>
-      <p class="list-subtitle">依 Claude Sittler 十大地質族群分組</p>
+      <h2 class="list-title">🍇 探索阿爾薩斯</h2>
+      <div class="mode-toggle">
+        <button
+          class="mode-btn"
+          :class="{ active: mode === 'geology' }"
+          @click="$emit('setMode', 'geology')"
+        >🪨 依地質分類</button>
+        <button
+          class="mode-btn"
+          :class="{ active: mode === 'hierarchy' }"
+          @click="$emit('setMode', 'hierarchy')"
+        >🗺️ 依產區位階</button>
+      </div>
+      <p class="list-subtitle">
+        {{ mode === 'hierarchy' ? 'AOC Alsace → 補充地理標示 → Grand Cru → Crémant' : '依 Claude Sittler 十大地質族群分組（51 個 Grand Cru）' }}
+      </p>
     </div>
 
     <div class="search-container">
@@ -10,7 +24,7 @@
       <input
         type="text"
         class="aoc-search"
-        placeholder="搜尋 Grand Cru 或村莊..."
+        placeholder="搜尋名稱或村莊..."
         v-model="searchModel"
       />
     </div>
@@ -39,18 +53,19 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, watch } from 'vue'
 
 const props = defineProps({
   search: String,
   activeAOC: Object,
+  mode: { type: String, default: 'geology' },
   indexPath: {
     type: String,
     default: '/alsace/geojson/index.json'
   }
 })
 
-const emit = defineEmits(['update:search', 'selectAOC'])
+const emit = defineEmits(['update:search', 'selectAOC', 'setMode'])
 
 const tree = ref({})
 const expandedGroups = ref({})
@@ -66,6 +81,7 @@ function familyLabel(groupName) {
 }
 
 const FAMILY_COLORS = {
+  '00-AOC-Alsace': '#7fb3d5',
   '01-Schiste': '#2d3436',
   '02-Volcano-sedimentaire': '#c0392b',
   '03-Gres': '#d35400',
@@ -77,6 +93,8 @@ const FAMILY_COLORS = {
   '09-Marno-calcaire': '#8e44ad',
   '10-Argilo-marneux': '#2980b9',
   '11-Kaefferkopf': '#c9a227',
+  '12-Denominations': '#16a085',
+  '13-Cremant': '#c9a227',
 }
 function familyColor(groupName) {
   const idx = groupName.indexOf('｜')
@@ -102,6 +120,9 @@ function toggleGroup(groupName) {
 function formatName(file) {
   return file
     .replace('AOC-Alsace-Grand-Cru-', '')
+    .replace('AOC-Alsace-General', 'AOC Alsace')
+    .replace('AOC-Alsace-', '')
+    .replace('AOC-Cremant-d-Alsace', "Crémant d'Alsace")
     .replace('.geojson', '')
     .replace(/-/g, ' ')
 }
@@ -110,18 +131,20 @@ function isActive(group, aoc) {
   return props.activeAOC?.group === group && props.activeAOC?.aoc === aoc
 }
 
-onMounted(async () => {
+async function loadTree(path) {
   try {
-    const res = await fetch(props.indexPath)
+    const res = await fetch(path)
     if (!res.ok) throw new Error(`無法載入 index (${res.status})`)
     tree.value = await res.json()
-    // 預設展開第一個族群
+    expandedGroups.value = {}
     const firstKey = Object.keys(tree.value)[0]
     if (firstKey) expandedGroups.value[firstKey] = true
   } catch (err) {
     console.error('載入 Alsace geojson index 失敗:', err)
   }
-})
+}
+
+watch(() => props.indexPath, (path) => loadTree(path), { immediate: true })
 </script>
 
 <style scoped>
@@ -140,7 +163,20 @@ onMounted(async () => {
   border-bottom: 1px solid #f0f0f0;
 }
 .list-title { margin: 0; font-size: 1.1rem; color: #1b4332; }
-.list-subtitle { margin: 4px 0 0; font-size: 0.75rem; color: #6b7280; }
+.list-subtitle { margin: 8px 0 0; font-size: 0.72rem; color: #6b7280; line-height: 1.4; }
+.mode-toggle {
+  display: flex; gap: 6px; margin-top: 10px;
+}
+.mode-btn {
+  flex: 1; padding: 6px 8px;
+  border: 1px solid #e5e7eb; border-radius: 8px;
+  background: #f9fafb; color: #4b5563;
+  font-size: 0.72rem; font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.mode-btn:hover { background: #f0fdf4; }
+.mode-btn.active { background: #1b4332; color: #fff; border-color: #1b4332; }
 .search-container {
   position: relative;
   padding: 10px 16px;

@@ -63,6 +63,8 @@ import {
 const props = defineProps({
   activeAOC: Object,
   regionInfo: Object,
+  mode: { type: String, default: 'geology' },
+  indexPath: { type: String, default: '/alsace/geojson/index.json' },
   mobileAOCListOpen: { type: Boolean, default: false }
 })
 
@@ -83,7 +85,8 @@ const geojsonCache = new Map()
 let hasRetriedWithOsmFallback = false
 
 const ALL_GEOJSON_PATH = '/alsace/geojson/all-grand-crus.geojson'
-const INDEX_JSON_PATH = '/alsace/geojson/index.json'
+const GENERAL_GEOJSON_PATH = '/alsace/geojson/hierarchy-general.geojson'
+const DENOMINATIONS_GEOJSON_PATH = '/alsace/geojson/hierarchy-denominations.geojson'
 
 const DEFAULT_VIEW = { center: [7.36, 48.15], zoom: 9.3 }
 
@@ -105,14 +108,80 @@ async function fetchJson(path) {
   return data
 }
 
+const OVERVIEW_LAYER_IDS = [
+  'general-fill', 'general-outline',
+  'denom-fill', 'denom-outline',
+  'overview-fill', 'overview-outline',
+]
+const OVERVIEW_SOURCE_IDS = ['general', 'denom', 'overview']
+
+function removeOverviewLayers() {
+  if (!map) return
+  for (const id of OVERVIEW_LAYER_IDS) if (map.getLayer(id)) map.removeLayer(id)
+  for (const id of OVERVIEW_SOURCE_IDS) if (map.getSource(id)) map.removeSource(id)
+}
+
+function clickToSelect(id) {
+  fetchJson(props.indexPath).then((idx) => {
+    for (const groupName of Object.keys(idx)) {
+      const match = idx[groupName].files.find(f => f.replace('.geojson', '') === id)
+      if (match) {
+        emit('reselect-aoc', { group: groupName, aoc: match })
+        return
+      }
+    }
+  })
+}
+
+// 事件監聽器只綁定一次（用穩定的函式參照），避免每次切換模式時 addLayer 重建
+// 圖層後重複呼叫 map.on(...) 造成監聽器疊加
+const clickableLayerIds = ['denom-fill', 'overview-fill']
+const attachedListenerIds = new Set()
+function attachInteractionsOnce() {
+  if (!map) return
+  for (const id of clickableLayerIds) {
+    if (attachedListenerIds.has(id)) continue
+    map.on('click', id, (e) => { const f = e.features?.[0]; if (f) clickToSelect(f.properties?.id) })
+    map.on('mouseenter', id, () => { map.getCanvas().style.cursor = 'pointer' })
+    map.on('mouseleave', id, () => { map.getCanvas().style.cursor = '' })
+    attachedListenerIds.add(id)
+  }
+}
+
 async function loadOverviewLayer() {
   if (!map) return
+  removeOverviewLayers()
+
+  if (props.mode === 'hierarchy') {
+    const [general, denom, grandCru] = await Promise.all([
+      fetchJson(GENERAL_GEOJSON_PATH),
+      fetchJson(DENOMINATIONS_GEOJSON_PATH),
+      fetchJson(ALL_GEOJSON_PATH),
+    ])
+
+    // 底層：AOC Alsace 基礎產區（僅外框，避免疊加過暗）
+    map.addSource('general', { type: 'geojson', data: general })
+    map.addLayer({ id: 'general-outline', type: 'line', source: 'general', paint: { 'line-color': '#7fb3d5', 'line-width': 2, 'line-dasharray': [2, 1.5] } })
+
+    // 中層：13 個補充地理標示
+    map.addSource('denom', { type: 'geojson', data: denom })
+    map.addLayer({ id: 'denom-fill', type: 'fill', source: 'denom', paint: { 'fill-color': '#16a085', 'fill-opacity': 0.35 } })
+    map.addLayer({ id: 'denom-outline', type: 'line', source: 'denom', paint: { 'line-color': '#fff', 'line-width': 1 } })
+
+    // 頂層：51 個 Grand Cru（依地質族群上色）
+    map.addSource('overview', { type: 'geojson', data: grandCru })
+    map.addLayer({ id: 'overview-fill', type: 'fill', source: 'overview', paint: { 'fill-color': ['get', 'familyColor'], 'fill-opacity': 0.75 } })
+    map.addLayer({ id: 'overview-outline', type: 'line', source: 'overview', paint: { 'line-color': '#fff', 'line-width': 1 } })
+
+    attachInteractionsOnce()
+
+    const bbox = turf.bbox(general)
+    map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 40, duration: 0 })
+    return
+  }
+
+  // 'geology' 模式：只顯示 51 個 Grand Cru，依地質族群上色
   const geojson = await fetchJson(ALL_GEOJSON_PATH)
-
-  if (map.getLayer('overview-fill')) map.removeLayer('overview-fill')
-  if (map.getLayer('overview-outline')) map.removeLayer('overview-outline')
-  if (map.getSource('overview')) map.removeSource('overview')
-
   map.addSource('overview', { type: 'geojson', data: geojson })
   map.addLayer({
     id: 'overview-fill',
@@ -130,24 +199,7 @@ async function loadOverviewLayer() {
     paint: { 'line-color': '#fff', 'line-width': 1 }
   })
 
-  map.on('click', 'overview-fill', (e) => {
-    const feature = e.features?.[0]
-    if (!feature) return
-    const family = feature.properties?.family
-    const id = feature.properties?.id
-    // reconstruct group key & filename to select via index
-    fetchJson(INDEX_JSON_PATH).then((idx) => {
-      for (const groupName of Object.keys(idx)) {
-        const match = idx[groupName].files.find(f => f.replace('.geojson', '') === id)
-        if (match) {
-          emit('reselect-aoc', { group: groupName, aoc: match })
-          return
-        }
-      }
-    })
-  })
-  map.on('mouseenter', 'overview-fill', () => { map.getCanvas().style.cursor = 'pointer' })
-  map.on('mouseleave', 'overview-fill', () => { map.getCanvas().style.cursor = '' })
+  attachInteractionsOnce()
 
   const bbox = turf.bbox(geojson)
   map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 40, duration: 0 })
@@ -158,7 +210,7 @@ async function showAOCGeojson(group, aocFile) {
   isLoading.value = true
   mapError.value = null
   try {
-    const idx = await fetchJson(INDEX_JSON_PATH)
+    const idx = await fetchJson(props.indexPath)
     const path = findGeojsonPathInIndex(idx, group, aocFile)
     if (!path) throw new Error(`找不到檔案: ${aocFile}`)
     const geojson = await fetchJson(path)
@@ -279,6 +331,13 @@ const unifiedInfo = computed(() => {
     soil: r.soil || '',
     description: r.description || '',
   }
+})
+
+watch(() => props.mode, async () => {
+  if (map?.getLayer('aoc-fill')) map.removeLayer('aoc-fill')
+  if (map?.getLayer('aoc-outline')) map.removeLayer('aoc-outline')
+  if (map?.getSource('aoc')) map.removeSource('aoc')
+  await loadOverviewLayer()
 })
 
 watch(() => props.activeAOC, (newAOC, oldAOC) => {
