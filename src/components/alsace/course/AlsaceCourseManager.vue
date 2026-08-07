@@ -7,6 +7,20 @@
       :key="progressVersion"
       @startLevel="handleSelectLevel"
       @openMap="emit('openMap')"
+      @openNotebook="view = 'notebook'"
+      @openGames="view = 'games'"
+    />
+
+    <!-- 品飲筆記 -->
+    <AlsaceTastingNotebookPage
+      v-else-if="view === 'notebook'"
+      @back="view = 'levelSelector'"
+    />
+
+    <!-- 互動練習 -->
+    <AlsaceGameHubPage
+      v-else-if="view === 'games'"
+      @back="view = 'levelSelector'"
     />
 
     <!-- 章節列表 -->
@@ -39,6 +53,8 @@ import { saveAlsaceLesson, loadAndMergeAlsaceProgress } from '../../../lib/cours
 import AlsaceLevelSelector from './AlsaceLevelSelector.vue'
 import AlsaceCourseLayout from './AlsaceCourseLayout.vue'
 import AlsaceSlideViewer from './AlsaceSlideViewer.vue'
+import AlsaceTastingNotebookPage from '../notebook/AlsaceTastingNotebookPage.vue'
+import AlsaceGameHubPage from '../games/AlsaceGameHubPage.vue'
 import { courseLevels, getUserProgress, saveProgress, getLevelProgressPercent } from '../data/courseLevels.js'
 import { globalAlsaceAchievementManager } from '../../../stores/alsaceAchievementSystem.js'
 

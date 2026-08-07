@@ -65,7 +65,7 @@ import { globalAlsaceAchievementManager } from '../../../stores/alsaceAchievemen
 import { getTotalLessonCount } from '../data/courseLevels.js'
 import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
 
-const emit = defineEmits(['startLevel', 'openMap'])
+const emit = defineEmits(['startLevel', 'openMap', 'openNotebook', 'openGames'])
 
 const theme = getTheme('alsace')
 const showAchievements = ref(false)
@@ -84,14 +84,16 @@ const heroStats = [
 
 const quickNavItems = [
   { key: 'map' },
-  { key: 'games', enabled: false },
-  { key: 'notebook', enabled: false },
+  { key: 'games' },
+  { key: 'notebook' },
   { key: 'achievements' },
   { key: 'progress' }
 ]
 function onQuickNav(key) {
   switch (key) {
     case 'map':           emit('openMap'); break
+    case 'games':         emit('openGames'); break
+    case 'notebook':      emit('openNotebook'); break
     case 'achievements':  showAchievements.value = true; break
     case 'progress':      showProgress.value = true; break
   }
