@@ -87,6 +87,7 @@ export default {
       australia:  '🦘 澳洲',
       newzealand: '🥝 紐西蘭',
       california: '🍷 加州',
+      alsace:     '🍇 阿爾薩斯',
     },
     groupLabels: {
       france:   '🇫🇷 法國',

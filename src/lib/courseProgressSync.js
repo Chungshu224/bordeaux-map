@@ -232,3 +232,22 @@ export async function loadAndMergeCaliforniaProgress(userId) {
   console.log('[californiaSync] ✅ synced')
   return merged  // 回傳合併後陣列，供 store reload 使用
 }
+
+// ─── Alsace ──────────────────────────────────────────────────────
+export const saveAlsaceLesson = (userId, lessonId) => upsertLesson(userId, 'alsace', lessonId)
+
+export async function loadAndMergeAlsaceProgress(userId) {
+  const rows = await fetchRows(userId, 'alsace')
+  if (!rows.length) return false
+  const byLevel = groupByPrefix(rows.map(r => r.module_id), [
+    { prefix: 'AL1', levelKey: 'level1' },
+    { prefix: 'AL2', levelKey: 'level2' },
+    { prefix: 'AL3', levelKey: 'level3' },
+    { prefix: 'AL4', levelKey: 'level4' },
+  ])
+  let didUpdate = false
+  for (const [lk, ids] of Object.entries(byLevel))
+    if (mergeArrayKey(`alsace_course_progress_${lk}`, ids)) didUpdate = true
+  if (didUpdate) console.log('[alsaceSync] ✅ synced')
+  return didUpdate
+}

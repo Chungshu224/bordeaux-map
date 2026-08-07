@@ -99,6 +99,14 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free', title: '🥝 紐西蘭 · 侍酒師的筆記本' }
   },
 
+  // ─── 阿爾薩斯葡萄酒課程 ─────────────────────────────────────────────────────
+  {
+    path: '/alsace',
+    name: 'Alsace',
+    component: () => import('../components/alsace/AlsacePage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🍇 阿爾薩斯 · 侍酒師的筆記本' }
+  },
+
   // ─── 羅亞爾河谷探索地圖 ──────────────────────────────────────────────────────
   {
     path: '/loire',
@@ -276,6 +284,7 @@ const COURSE_ACCESS_RULES = {
   Portugal: { courseId: 'portugal', minimumTier: 'free' },
   Australia: { courseId: 'australia', minimumTier: 'free' },
   NewZealand: { courseId: 'newzealand', minimumTier: 'free' },
+  Alsace: { courseId: 'alsace', minimumTier: 'basic' },
   Loire: { courseId: 'loire', minimumTier: 'free' },
   LoireCourse: { courseId: 'loire', minimumTier: 'basic' },
   Hungary: { courseId: 'hungary', minimumTier: 'free' },

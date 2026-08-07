@@ -51,6 +51,11 @@ import {
   californiaAchievementDefinitions,
   globalCaliforniaAchievementManager
 } from '../stores/californiaAchievementSystem.js'
+import {
+  alsaceAchievementState,
+  alsaceAchievementDefinitions,
+  globalAlsaceAchievementManager
+} from '../stores/alsaceAchievementSystem.js'
 
 // ── 課程標籤 ──────────────────────────────────────────────────
 const COURSE_LABELS = {
@@ -60,7 +65,8 @@ const COURSE_LABELS = {
   germany:     '侍酒師的筆記本',
   spain:       '侍酒師的筆記本',
   newzealand:  '侍酒師的筆記本',
-  california:  '侍酒師的筆記本'
+  california:  '侍酒師的筆記本',
+  alsace:      '侍酒師的筆記本'
 }
 
 // ── 各課程分類定義 ────────────────────────────────────────────
@@ -145,6 +151,13 @@ const COURSE_CATEGORIES = {
     { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
     { id: 'time',       name: '時間特殊', icon: '⏰' },
     { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
+  alsace: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
   ]
 }
 
@@ -210,6 +223,10 @@ export function useAchievements(courseKey) {
     state       = californiaAchievementState
     definitions = californiaAchievementDefinitions
     manager     = globalCaliforniaAchievementManager
+  } else if (courseKey === 'alsace') {
+    state       = alsaceAchievementState
+    definitions = alsaceAchievementDefinitions
+    manager     = globalAlsaceAchievementManager
   } else {
     // default: bordeaux
     state       = achievementState

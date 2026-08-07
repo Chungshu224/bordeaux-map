@@ -47,6 +47,14 @@ export const COURSES = {
     flag: '🇺🇸',
     region: 'USA · California',
     available: true
+  },
+  alsace: {
+    id: 'alsace',
+    name: '阿爾薩斯葡萄酒',
+    nameEn: 'Alsace Wine',
+    flag: '🍇',
+    region: 'France · Alsace',
+    available: true
   }
 }
 
@@ -59,6 +67,7 @@ export const COURSE_PRICING = {
   spain:     { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
   loire:      { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
   california: { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
+  alsace:     { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
 }
 
 export const TIERS = {

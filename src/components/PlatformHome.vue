@@ -1135,6 +1135,7 @@ const courseConfig = computed(() => [
   { id: 'australia',  label: t('home.courses.labels.australia'), route: '/australia',         group: 'newworld' },
   { id: 'newzealand', label: t('home.courses.labels.newzealand'), route: '/newzealand',        group: 'newworld' },
   { id: 'california', label: t('home.courses.labels.california'), route: '/california/course', group: 'newworld' },
+  { id: 'alsace',     label: t('home.courses.labels.alsace'), route: '/alsace',           group: 'france'   },
 ])
 
 // ─── 課程狀態 + 訂閱定價（從 DB 讀取）────────────────────────────────
@@ -1143,9 +1144,9 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, alsace: false })
 
 async function loadCourseData() {
   try {
