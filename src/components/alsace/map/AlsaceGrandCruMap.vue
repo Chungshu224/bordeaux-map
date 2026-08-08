@@ -120,7 +120,6 @@ const GEOLOGY_ORDER = [
   '06-Calcaro-greseux', '07-Marno-greseux', '08-Marno-calcaro-greseux',
   '09-Marno-calcaire', '10-Argilo-marneux', '11-Kaefferkopf',
 ]
-const HIERARCHY_ORDER = ['00-AOC-Alsace', '12-Denominations', ...GEOLOGY_ORDER, '13-Cremant']
 
 // ── State ──────────────────────────────────────────────────────
 const mapContainer = ref(null)
@@ -150,21 +149,44 @@ const MODE_SOURCE_IDS = ['denom', 'overview']
 
 // ── Computed ───────────────────────────────────────────────────
 const groupedItems = computed(() => {
-  const order = mode.value === 'hierarchy' ? HIERARCHY_ORDER : GEOLOGY_ORDER
   let list = metaList.value
   if (search.value.trim()) {
     const q = search.value.trim().toLowerCase()
     list = list.filter(m => m.name.toLowerCase().includes(q) || (m.commune || '').toLowerCase().includes(q))
   }
+
+  const toItems = (arr) => arr.slice().sort((a, b) => a.name.localeCompare(b.name)).map(m => ({ id: m.id, name: m.name }))
+
+  if (mode.value === 'hierarchy') {
+    // 產區位階模式：AOC Alsace → 補充地理標示 → Grand Cru（單一群組，不再依地質細分）→ Crémant
+    const tiers = { '00-AOC-Alsace': [], '12-Denominations': [], 'grand-cru': [], '13-Cremant': [] }
+    for (const m of list) {
+      if (m.folder === '00-AOC-Alsace') tiers['00-AOC-Alsace'].push(m)
+      else if (m.folder === '12-Denominations') tiers['12-Denominations'].push(m)
+      else if (m.folder === '13-Cremant') tiers['13-Cremant'].push(m)
+      else if (GEOLOGY_ORDER.includes(m.folder)) tiers['grand-cru'].push(m)
+    }
+    const tierLabels = {
+      '00-AOC-Alsace': 'AOC Alsace 基礎產區',
+      '12-Denominations': '補充地理標示',
+      'grand-cru': 'Grand Cru 特級園',
+      '13-Cremant': "Crémant d'Alsace",
+    }
+    return ['00-AOC-Alsace', '12-Denominations', 'grand-cru', '13-Cremant']
+      .filter(k => tiers[k].length)
+      .map(k => ({ key: k, label: `${tierLabels[k]}（${tiers[k].length}）`, items: toItems(tiers[k]) }))
+  }
+
+  // 地質分類模式：十大地質族群（僅 Grand Cru）
   const byFolder = {}
   for (const m of list) {
-    if (!order.includes(m.folder)) continue
+    if (!GEOLOGY_ORDER.includes(m.folder)) continue
     ;(byFolder[m.folder] ||= []).push(m)
   }
-  return order.filter(f => byFolder[f]?.length).map(f => ({
+  return GEOLOGY_ORDER.filter(f => byFolder[f]?.length).map(f => ({
     key: f,
     label: `${FAMILY_LABELS[f]}（${byFolder[f].length}）`,
-    items: byFolder[f].slice().sort((a, b) => a.name.localeCompare(b.name)).map(m => ({ id: m.id, name: m.name })),
+    items: toItems(byFolder[f]),
   }))
 })
 
@@ -222,6 +244,8 @@ function setOverviewVisibility(visible) {
   if (!map) return
   const vis = visible ? 'visible' : 'none'
   for (const id of MODE_LAYER_IDS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', vis)
+  // 選取單一地塊時，連同整個阿爾薩斯基礎產區外框線也一併隱藏，避免視覺干擾
+  if (map.getLayer('region-outline-line')) map.setLayoutProperty('region-outline-line', 'visibility', vis)
 }
 
 const clickableLayerIds = ['denom-fill', 'overview-fill']
@@ -274,6 +298,7 @@ async function setMode(next) {
   activeInfo.value = null
   infoCollapsed.value = false
   await loadOverviewLayer()
+  if (map?.getLayer('region-outline-line')) map.setLayoutProperty('region-outline-line', 'visibility', 'visible')
   if (regionBounds) map.fitBounds([[regionBounds[0], regionBounds[1]], [regionBounds[2], regionBounds[3]]], { padding: 60, duration: 600 })
 }
 
