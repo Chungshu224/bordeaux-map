@@ -54,14 +54,66 @@
         <RegionMapLayerPanel
           :is3D="is3D"
           :show-contours="showContours"
-          :climate-enabled="false"
+          :climate-enabled="climateEnabled"
           soil-label="BRGM 地質"
           :soil-disabled="true"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContours"
-          @toggle-climate="onLayerComingSoon"
+          @toggle-climate="toggleClimate"
           @close="showLayerPanel = false"
         />
+      </div>
+    </transition>
+
+    <!-- 氣候熱力（示範資料，需先選取一個地塊） -->
+    <transition name="climate-slide">
+      <div v-if="climateEnabled && climateData" class="climate-overlay">
+        <div class="cy-indicator-tabs">
+          <button
+            v-for="ind in CLIMATE_INDICATORS" :key="ind.id"
+            :class="['cy-ind-btn', { active: climateIndicator === ind.id }]"
+            @click="setClimateIndicator(ind.id)"
+          >{{ ind.icon }} {{ ind.label }}</button>
+        </div>
+
+        <div class="climate-header-row">
+          <div class="cy-year-badge">
+            <span class="cy-year">{{ climateYear }}</span>
+            <span v-if="isWarmVintage" class="cy-golden">🌞 相對溫暖年份</span>
+          </div>
+          <div class="cy-stats">
+            <div v-if="climateAocLabel" class="cy-aoc-name">{{ climateAocLabel }}</div>
+            <span v-if="currentYearValue !== null" class="cy-temp">{{ currentYearValue }}{{ currentIndicatorConfig.unit }}</span>
+            <span v-if="currentYearDelta !== null" class="cy-delta" :class="currentYearDelta > 0 ? 'cy-warm' : 'cy-cool'">
+              {{ currentYearDelta > 0 ? '+' : '' }}{{ currentYearDelta }}{{ currentIndicatorConfig.unit }} vs 該地塊均值
+            </span>
+          </div>
+          <button class="cy-close" title="關閉氣候圖層" @click="toggleClimate">✕</button>
+        </div>
+
+        <input
+          class="climate-slider" type="range"
+          v-model.number="climateYear"
+          :min="climateYears[0]" :max="climateYears[climateYears.length - 1]" step="1"
+          @input="onClimateYearChange"
+        />
+        <div class="climate-year-axis">
+          <span>{{ climateYears[0] }}</span>
+          <span>{{ climateYears[Math.floor(climateYears.length / 2)] }}</span>
+          <span>{{ climateYears[climateYears.length - 1] }}</span>
+        </div>
+
+        <div class="climate-legend">
+          <div :class="['legend-gradient', `legend-${climateIndicator}`]"></div>
+          <div class="legend-labels">
+            <span>{{ currentGlobalStats ? currentGlobalStats.min.toFixed(0) : '' }}{{ currentIndicatorConfig.unit }} {{ currentIndicatorConfig.lowLabel }}</span>
+            <span>均值</span>
+            <span>{{ currentIndicatorConfig.highLabel }} {{ currentGlobalStats ? currentGlobalStats.max.toFixed(0) : '' }}{{ currentIndicatorConfig.unit }}</span>
+          </div>
+        </div>
+        <div class="climate-footnote">
+          🧪 示範資料，依地塊 ID 演算生成，非阿爾薩斯官方實測氣象紀錄｜請先於「產區」清單選取一個地塊
+        </div>
       </div>
     </transition>
 
@@ -144,6 +196,25 @@ let hasRetriedWithOsmFallback = false
 let regionBounds = null
 const geojsonCache = new Map()
 
+// 氣候熱力（示範資料）
+const climateEnabled = ref(false)
+const climateYear = ref(2012)
+const climateData = ref(null)
+const climateStats = ref(null)
+const climateStatsSun = ref(null)
+const climateStatsRain = ref(null)
+const climateYears = ref([])
+const climateYearAvg = ref([])
+const climateYearSun = ref([])
+const climateYearRain = ref([])
+const climateIndicator = ref('temp')
+
+const CLIMATE_INDICATORS = [
+  { id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C', lowLabel: '涼', highLabel: '熱', dataKey: 'temps', baselineKey: 'baseline' },
+  { id: 'sun', icon: '☀️', label: '日照時數', unit: 'h', lowLabel: '少', highLabel: '多', dataKey: 'sun', baselineKey: 'baselineSun' },
+  { id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm', lowLabel: '乾', highLabel: '濕', dataKey: 'rain', baselineKey: 'baselineRain' },
+]
+
 const MODE_LAYER_IDS = ['denom-fill', 'denom-outline', 'overview-fill', 'overview-outline']
 const MODE_SOURCE_IDS = ['denom', 'overview']
 
@@ -205,6 +276,45 @@ const unifiedInfo = computed(() => {
     soil: r.soil || '',
     description: r.description || '',
   }
+})
+
+const currentIndicatorConfig = computed(() => CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value))
+const currentGlobalStats = computed(() => {
+  if (climateIndicator.value === 'sun') return climateStatsSun.value
+  if (climateIndicator.value === 'rain') return climateStatsRain.value
+  return climateStats.value
+})
+const climateAocLabel = computed(() => activeInfo.value?.name || '')
+
+const currentYearValue = computed(() => {
+  if (!climateYears.value.length || !currentIndicatorConfig.value || !activeInfo.value) return null
+  const idx = climateYears.value.indexOf(climateYear.value)
+  if (idx < 0) return null
+  const arr = climateData.value?.[activeInfo.value.id]?.[currentIndicatorConfig.value.dataKey]
+  if (!Array.isArray(arr) || arr[idx] == null) return null
+  return Number(arr[idx].toFixed(climateIndicator.value === 'temp' ? 1 : 0))
+})
+
+const currentYearDelta = computed(() => {
+  if (!activeInfo.value || !climateYears.value.length || !currentIndicatorConfig.value) return null
+  const idx = climateYears.value.indexOf(climateYear.value)
+  if (idx < 0) return null
+  const cfg = currentIndicatorConfig.value
+  const d = climateData.value?.[activeInfo.value.id]
+  const arr = d?.[cfg.dataKey]
+  const baseline = d?.[cfg.baselineKey]
+  if (!Array.isArray(arr) || arr[idx] == null || !Number.isFinite(baseline)) return null
+  const digits = climateIndicator.value === 'temp' ? 2 : 0
+  return Number((arr[idx] - baseline).toFixed(digits))
+})
+
+const isWarmVintage = computed(() => {
+  if (!activeInfo.value || climateIndicator.value !== 'temp') return false
+  const arr = climateData.value?.[activeInfo.value.id]?.temps
+  const idx = climateYears.value.indexOf(climateYear.value)
+  if (!Array.isArray(arr) || idx < 0) return false
+  const sorted = [...arr].sort((a, b) => b - a)
+  return sorted.slice(0, Math.max(1, Math.round(arr.length * 0.2))).includes(arr[idx])
 })
 
 // ── Data loading ───────────────────────────────────────────────
@@ -313,6 +423,7 @@ async function selectItem(m) {
   drawerOpen.value = false
   await highlightItem(m)
   await checkAudio(m)
+  if (climateEnabled.value) applyClimateColor(climateYear.value)
 }
 
 async function highlightItem(m) {
@@ -400,11 +511,150 @@ function toggleContours() {
   if (map.getLayer('contour-labels')) map.setLayoutProperty('contour-labels', 'visibility', vis)
 }
 
-function onLayerComingSoon() {
-  mapError.value = '🚧 氣候熱力／BRGM 地質圖層即將推出，敬請期待'
-  setTimeout(() => {
-    if (mapError.value === '🚧 氣候熱力／BRGM 地質圖層即將推出，敬請期待') mapError.value = null
-  }, 2200)
+// ── 氣候熱力（示範資料，依地塊 id 演算生成，非官方實測紀錄）──────
+function createDemoClimatePayload(items) {
+  const years = Array.from({ length: 25 }, (_, i) => 2000 + i)
+  const aocs = {}
+  const allTemps = [], allSun = [], allRain = []
+
+  for (const item of items) {
+    let seed = 0
+    for (const ch of item.id) seed += ch.charCodeAt(0)
+
+    // 阿爾薩斯夏季（6-8月）氣候基準：均溫約 19.5°C、日照約 620h、降雨約 165mm
+    const tempBaseline = 19.5 + (seed % 50) * 0.05
+    const seasonalAmp = 0.4 + (seed % 10) * 0.03
+    const trend = 0.018 + (seed % 3) * 0.004
+    const sunBaseline = 620 + (seed % 90)
+    const rainBaseline = 165 + (seed % 70)
+
+    const temps = years.map((year, idx) => {
+      const val = Number((tempBaseline + Math.sin((idx + seed % 7) * 0.55) * seasonalAmp + (year - years[0]) * trend).toFixed(2))
+      allTemps.push(val)
+      return val
+    })
+    const sun = years.map((_, idx) => {
+      const val = Number((sunBaseline + Math.sin((idx + seed % 5) * 0.5) * 30).toFixed(1))
+      allSun.push(val)
+      return val
+    })
+    const rain = years.map((_, idx) => {
+      const val = Number((rainBaseline + Math.cos((idx + seed % 6) * 0.52) * 24).toFixed(1))
+      allRain.push(val)
+      return val
+    })
+
+    aocs[item.id] = {
+      temps, sun, rain,
+      baseline: Number((temps.reduce((s, v) => s + v, 0) / temps.length).toFixed(2)),
+      baselineSun: Number((sun.reduce((s, v) => s + v, 0) / sun.length).toFixed(1)),
+      baselineRain: Number((rain.reduce((s, v) => s + v, 0) / rain.length).toFixed(1)),
+    }
+  }
+
+  const stats = (arr) => ({ min: Number(Math.min(...arr).toFixed(2)), max: Number(Math.max(...arr).toFixed(2)), mean: Number((arr.reduce((s, v) => s + v, 0) / arr.length).toFixed(2)) })
+  return {
+    aocs,
+    global: stats(allTemps),
+    globalSun: stats(allSun),
+    globalRain: stats(allRain),
+    meta: { years },
+  }
+}
+
+async function loadClimateData() {
+  if (climateData.value && climateYears.value.length) return
+  const demo = createDemoClimatePayload(metaList.value.filter(m => GEOLOGY_ORDER.includes(m.folder)))
+  climateData.value = demo.aocs
+  climateStats.value = demo.global
+  climateStatsSun.value = demo.globalSun
+  climateStatsRain.value = demo.globalRain
+  climateYears.value = demo.meta.years
+  if (climateYears.value.length) {
+    climateYear.value = climateYears.value.includes(2012) ? 2012 : climateYears.value[0]
+  }
+}
+
+function valueToClimateColor(v, indicator = climateIndicator.value) {
+  let stats, stops
+  if (indicator === 'sun') {
+    stats = climateStatsSun.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [[min, [120, 81, 169]], [mean, [171, 217, 233]], [mean + 20, [254, 224, 72]], [max, [253, 141, 60]]]
+  } else if (indicator === 'rain') {
+    stats = climateStatsRain.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [[min, [253, 141, 60]], [mean, [255, 255, 191]], [mean + 15, [74, 144, 226]], [max, [44, 62, 160]]]
+  } else {
+    stats = climateStats.value
+    if (!stats) return '#ffffbf'
+    const { min, max, mean } = stats
+    stops = [[min, [69, 117, 180]], [mean - 1, [171, 217, 233]], [mean, [255, 255, 191]], [mean + 1.5, [252, 141, 89]], [max, [215, 48, 39]]]
+  }
+  const { min, max } = stats
+  const t = Math.max(min, Math.min(max, v))
+  for (let i = 0; i < stops.length - 1; i++) {
+    const [t0, c0] = stops[i]
+    const [t1, c1] = stops[i + 1]
+    if (t <= t1) {
+      const f = (t - t0) / Math.max(t1 - t0, 0.0001)
+      const r = Math.round(c0[0] + f * (c1[0] - c0[0]))
+      const g = Math.round(c0[1] + f * (c1[1] - c0[1]))
+      const b = Math.round(c0[2] + f * (c1[2] - c0[2]))
+      return `rgb(${r},${g},${b})`
+    }
+  }
+  const last = stops[stops.length - 1][1]
+  return `rgb(${last[0]},${last[1]},${last[2]})`
+}
+
+function applyClimateColor(year) {
+  if (!map || !climateEnabled.value || !climateData.value || !climateYears.value.length || !currentIndicatorConfig.value) return
+  if (!map.getLayer('highlight-fill') || !activeInfo.value) return
+  const idx = climateYears.value.indexOf(year)
+  if (idx < 0) return
+  const cfg = currentIndicatorConfig.value
+  const arr = climateData.value[activeInfo.value.id]?.[cfg.dataKey]
+  const value = Array.isArray(arr) && idx < arr.length ? Number(arr[idx]) : null
+  const color = Number.isFinite(value) ? valueToClimateColor(value, cfg.id) : '#f0f0f0'
+  map.setPaintProperty('highlight-fill', 'fill-color', color)
+  map.setPaintProperty('highlight-fill', 'fill-opacity', Number.isFinite(value) ? 0.72 : 0.2)
+}
+
+function resetClimateFill() {
+  if (!map || !map.getLayer('highlight-fill')) return
+  map.setPaintProperty('highlight-fill', 'fill-color', '#ffd700')
+  map.setPaintProperty('highlight-fill', 'fill-opacity', 0.55)
+}
+
+function setClimateIndicator(id) {
+  climateIndicator.value = id
+  applyClimateColor(climateYear.value)
+}
+
+function onClimateYearChange() {
+  applyClimateColor(climateYear.value)
+}
+
+async function toggleClimate() {
+  if (!map) return
+  if (!climateEnabled.value) {
+    try {
+      await loadClimateData()
+      climateEnabled.value = true
+      applyClimateColor(climateYear.value)
+      mapError.value = null
+      infoCollapsed.value = true
+    } catch (err) {
+      mapError.value = `氣候資料載入失敗: ${err.message}`
+      climateEnabled.value = false
+    }
+    return
+  }
+  climateEnabled.value = false
+  resetClimateFill()
 }
 
 function handleToolbarAction(action) {
@@ -583,4 +833,60 @@ onUnmounted(() => {
 }
 .slide-up-enter-active, .slide-up-leave-active { transition: all 0.2s ease; }
 .slide-up-enter-from, .slide-up-leave-to { opacity: 0; transform: translate(-50%, 12px); }
+
+/* ── 氣候熱力 ── */
+.climate-overlay {
+  position: absolute;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  left: 20px;
+  width: min(380px, calc(100vw - 44px));
+  background: rgba(20, 30, 48, 0.93);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 50;
+  padding: 14px 16px 12px;
+  color: #e8eaf6;
+}
+.cy-indicator-tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+.cy-ind-btn {
+  flex: 1; font-size: 0.72rem; padding: 5px 4px; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.07);
+  color: rgba(230,230,255,0.7); cursor: pointer; transition: background 0.2s, color 0.2s; text-align: center;
+}
+.cy-ind-btn.active { background: #2d6a4f; border-color: #52b788; color: #fff; font-weight: 700; }
+.cy-ind-btn:not(.active):hover { background: rgba(255,255,255,0.14); color: #fff; }
+.climate-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.cy-year-badge { display: flex; align-items: baseline; gap: 6px; }
+.cy-year { font-size: 1.5rem; font-weight: 700; color: #9fd8bb; line-height: 1; }
+.cy-golden { font-size: 0.7rem; color: #c9a227; font-weight: 600; white-space: nowrap; }
+.cy-stats { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-end; }
+.cy-aoc-name { font-size: 0.72rem; color: rgba(200,230,210,0.85); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 170px; }
+.cy-temp { font-size: 1.02rem; font-weight: 700; color: #f8fbff; }
+.cy-delta { font-size: 0.72rem; font-weight: 600; padding: 1px 6px; border-radius: 999px; margin-top: 2px; }
+.cy-warm { background: rgba(215, 48, 39, 0.22); color: #ffc2bb; }
+.cy-cool { background: rgba(69, 117, 180, 0.28); color: #b8d7ff; }
+.cy-close {
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.6); cursor: pointer; font-size: 0.8rem;
+  display: flex; align-items: center; justify-content: center; transition: background 0.2s; flex-shrink: 0;
+}
+.cy-close:hover { background: rgba(255,255,255,0.2); color: #fff; }
+.climate-slider { width: 100%; height: 4px; border-radius: 2px; accent-color: #2d6a4f; cursor: pointer; margin-bottom: 2px; }
+.climate-year-axis { display: flex; justify-content: space-between; font-size: 0.65rem; color: rgba(200,220,210,0.55); margin-bottom: 10px; padding: 0 2px; }
+.climate-legend { margin-bottom: 6px; }
+.legend-gradient { height: 8px; border-radius: 4px; width: 100%; }
+.legend-gradient.legend-temp { background: linear-gradient(to right, #4575b4, #ffffbf, #d73027); }
+.legend-gradient.legend-sun  { background: linear-gradient(to right, #7851a9, #ffffbf, #fd8d3c); }
+.legend-gradient.legend-rain { background: linear-gradient(to right, #fd8d3c, #ffffbf, #2c3ea0); }
+.legend-labels { display: flex; justify-content: space-between; font-size: 0.63rem; color: rgba(200,220,210,0.6); margin-top: 3px; }
+.climate-footnote { font-size: 0.63rem; color: rgba(180,210,200,0.55); margin-top: 4px; line-height: 1.4; }
+.climate-slide-enter-active, .climate-slide-leave-active { transition: opacity 0.3s ease, transform 0.3s ease; }
+.climate-slide-enter-from, .climate-slide-leave-to { opacity: 0; transform: translateY(12px); }
+
+@media (max-width: 768px) {
+  .climate-overlay { left: 8px; width: calc(100vw - 16px); }
+}
 </style>
