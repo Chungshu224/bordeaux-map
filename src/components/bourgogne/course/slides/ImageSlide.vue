@@ -215,11 +215,10 @@ onUnmounted(() => {
   justify-content: center;
   cursor: zoom-in;
   border-radius: 16px;
-  overflow: hidden;
-  flex: 0 1 auto;
-  width: 85%;
-  max-width: 640px;
-  max-height: 50vh;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 520px;
+  min-width: 0;
   min-height: 0;
 }
 
@@ -228,10 +227,13 @@ onUnmounted(() => {
 }
 
 .slide-image {
+  display: block;
   max-width: 100%;
-  max-height: 50vh;
+  max-height: 42vh;
   width: auto;
   height: auto;
+  min-width: 0;
+  min-height: 0;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   object-fit: contain;
@@ -336,6 +338,8 @@ onUnmounted(() => {
   max-height: 100%;
   width: auto;
   height: auto;
+  min-width: 0;
+  min-height: 0;
   object-fit: contain;
   transform-origin: center center;
   transition: transform 0.1s ease;
