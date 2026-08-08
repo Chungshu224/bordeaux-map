@@ -55,13 +55,28 @@
           :is3D="is3D"
           :show-contours="showContours"
           :climate-enabled="climateEnabled"
-          soil-label="BRGM 地質"
-          :soil-disabled="true"
+          :hide-soil="true"
+          :brgm-available="true"
+          :brgm-enabled="brgmEnabled"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContours"
           @toggle-climate="toggleClimate"
+          @toggle-brgm="toggleBRGM(map)"
           @close="showLayerPanel = false"
         />
+        <!-- BRGM 地質圖層控制列（啟用時顯示） -->
+        <div v-if="brgmEnabled" class="brgm-inline-panel">
+          <div class="brgm-inline-title">🗺️ BRGM 地質圖</div>
+          <div class="brgm-inline-row">
+            <span class="brgm-inline-lbl">透明度</span>
+            <input class="brgm-inline-slider" type="range" min="0.05" max="0.85" step="0.05" v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
+            <span class="brgm-inline-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
+          </div>
+          <div class="brgm-inline-footer">
+            <span>© BRGM LITHO_1M (Etalab OL)</span>
+            <span>請先選取地塊，再點擊地圖查看岩石資訊</span>
+          </div>
+        </div>
       </div>
     </transition>
 
@@ -132,7 +147,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
@@ -142,12 +157,23 @@ import {
   getOSMStyle,
   getMapboxStyleUrl
 } from '@/utils/getMapboxToken'
+import { useBRGMGeology, BRGM_POPUP_STYLES } from '@/composables/useBRGMGeology.js'
 import {
   RegionMapHeader, RegionMapInfoPanel, RegionMapLayerPanel,
   RegionMapAppellationDrawer, RegionMapMobileToolbar
 } from '../../shared/regionMap/index.js'
 
 const emit = defineEmits(['request-learning-mode', 'go-to-lesson'])
+
+const { brgmEnabled, brgmOpacity, toggleBRGM, resetBRGM, updateBRGMOpacity, updateBRGMClip } = useBRGMGeology('alsace')
+
+// BRGM 開啟時，若已有選取地塊，立即套用裁切遮罩
+watch(brgmEnabled, (enabled) => {
+  if (!map) return
+  if (!enabled) { updateBRGMClip(map, null); return }
+  const src = map.getSource('highlight')
+  if (src?._data) updateBRGMClip(map, src._data)
+})
 
 const DEFAULT_VIEW = { center: [7.36, 48.15], zoom: 9.3 }
 
@@ -405,6 +431,7 @@ async function setMode(next) {
   if (map?.getLayer('highlight-fill')) map.removeLayer('highlight-fill')
   if (map?.getLayer('highlight-line')) map.removeLayer('highlight-line')
   if (map?.getSource('highlight')) map.removeSource('highlight')
+  updateBRGMClip(map, null)
   activeInfo.value = null
   infoCollapsed.value = false
   await loadOverviewLayer()
@@ -442,6 +469,7 @@ async function highlightItem(m) {
     map.addSource('highlight', { type: 'geojson', data: geojson })
     map.addLayer({ id: 'highlight-fill', type: 'fill', source: 'highlight', paint: { 'fill-color': '#ffd700', 'fill-opacity': 0.55 } })
     map.addLayer({ id: 'highlight-line', type: 'line', source: 'highlight', paint: { 'line-color': '#fff', 'line-width': 3 } })
+    if (brgmEnabled.value) updateBRGMClip(map, geojson)
 
     const bbox = turf.bbox(geojson)
     map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 80, duration: 800 })
@@ -458,6 +486,7 @@ function resetMap() {
   if (map?.getLayer('highlight-line')) map.removeLayer('highlight-line')
   if (map?.getSource('highlight')) map.removeSource('highlight')
   setOverviewVisibility(true)
+  updateBRGMClip(map, null)
   activeInfo.value = null
   infoCollapsed.value = false
   if (map && regionBounds) map.fitBounds([[regionBounds[0], regionBounds[1]], [regionBounds[2], regionBounds[3]]], { padding: 60, duration: 900 })
@@ -759,12 +788,19 @@ async function initMap(retry = 0) {
 }
 
 onMounted(async () => {
+  if (!document.getElementById('brgm-popup-styles')) {
+    const style = document.createElement('style')
+    style.id = 'brgm-popup-styles'
+    style.textContent = BRGM_POPUP_STYLES
+    document.head.appendChild(style)
+  }
   await loadMeta()
   await nextTick()
   initMap()
 })
 
 onUnmounted(() => {
+  resetBRGM(map)
   if (audioPlayer) { audioPlayer.pause(); audioPlayer = null }
   if (map) { map.remove(); map = null }
 })
@@ -888,5 +924,24 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .climate-overlay { left: 8px; width: calc(100vw - 16px); }
+}
+
+/* ── BRGM 地質圖層內嵌控制列（圖層面板下方） ── */
+.brgm-inline-panel {
+  background: rgba(255,255,255,0.97);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+  padding: 10px 14px;
+  width: min(320px, calc(100vw - 32px));
+}
+.brgm-inline-title { font-size: 13px; font-weight: 700; color: #666; margin-bottom: 10px; }
+.brgm-inline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.brgm-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
+.brgm-inline-slider { flex: 1; height: 4px; accent-color: #2d6a4f; }
+.brgm-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+.brgm-inline-footer {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 10px; color: #aaa;
+  border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
 </style>

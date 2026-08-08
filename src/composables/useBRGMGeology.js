@@ -46,6 +46,16 @@ const REGION_DESCR_OVERRIDE = {
     '片岩/板岩': '薄酒萊北段（Moulin-à-Vent、Fleurie 等特級莊）花崗岩丘陵邊緣出現片岩，排水良好，賦予佳美（Gamay）細膩的礦物感與陳年潛力。',
     '花崗岩':   '薄酒萊北端十個特級莊坐落於花崗岩山丘之上，貧瘠且礦物質豐富，佳美（Gamay）在此根系深入，釀出具有結構感與礦物張力的頂級酒款。',
   },
+  alsace: {
+    '花崗岩':   '孚日山兩雲母花崗岩風化砂土是阿爾薩斯最大的地質族群之一（8 個 Grand Cru），Schlossberg、Brand、Sommerberg 等地塊的雷司令（Riesling）在此展現鮮明礦石感與骨架。',
+    '片岩/板岩': 'Kastelberg（Andlau）是全阿爾薩斯唯一的片岩 Grand Cru——志留紀 Steige 片岩被鄰近花崗岩變質為堅硬深色岩石，賦予雷司令剛健有力、細緻內斂的風格。',
+    '石灰岩':   'Muschelkalk 貝殼石灰岩與 Dogger 石灰岩構成孚日下丘陵的核心地質，Bruderthal、Rosacker、Steinklotz 等地塊排水與保水達到絕佳平衡，是雷司令的重要風土。',
+    '泥灰岩':   '泥灰石灰岩（marno-calcaires）是阿爾薩斯數量最多的地質族群，共 13 個 Grand Cru，如 Hengst、Eichberg，是格烏茲塔明那（Gewurztraminer）展現結構與力量的重要舞台。',
+    '黏土':     '黏土泥灰岩（argilo-marneux）土壤厚重保水，Schoenenbourg、Kanzlerberg 等地塊是阿爾薩斯 VT／SGN 貴腐甜酒最重要的風土基礎之一。',
+    '砂岩/砂土': '孚日砂岩（grès vosgien）由石英砂粒膠結而成，排水佳、升溫快，Wiebelsberg、Kessler、Kitterlé 三傑展現從優雅到濃縮的多樣風格光譜。',
+    '火山岩':   'Rangen（Thann）是全阿爾薩斯唯一真正的火山岩 Grand Cru，矽質岩與玄武質熔岩深色多石、蓄熱極佳，賦予酒款濃縮而獨特的風味印記。',
+    '白雲岩':   'Muschelkalk 白雲岩化石灰岩常見於 Rosacker（Hunawihr）等地塊，鈣鎂質土壤讓雷司令年輕時帶胡椒調性、陳年後展現深厚礦石感。',
+  },
   loire: {
     '片岩/板岩': '羅亞爾河流域的板岩（Ardoise/Schiste）是安茹（Anjou）、希農（Chinon）、薩維涅爾（Savennières）的關鍵土壤，保溫性佳，賦予白詩南（Chenin Blanc）與卡本內弗朗（Cabernet Franc）細緻的礦物張力與陳年深度。',
     '石灰岩':   '都蘭（Touraine）與索米爾（Saumur）一帶的凝灰岩與石灰岩（Tuffeau）是白詩南（Chenin Blanc）的故鄉，多孔疏鬆質地讓酒款保有爽脆酸度與獨特礦物質感。',
