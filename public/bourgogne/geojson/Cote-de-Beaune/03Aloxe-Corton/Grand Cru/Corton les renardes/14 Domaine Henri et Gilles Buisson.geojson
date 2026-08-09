@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.867863313874419,
+              47.07633886758115,
+              0.0
+            ],
+            [
+              4.868555195770135,
+              47.07581954095938,
+              0.0
+            ],
+            [
+              4.868920216688187,
+              47.07604929902017,
+              0.0
+            ],
+            [
+              4.86817283164693,
+              47.07655734060081,
+              0.0
+            ],
+            [
+              4.867863313874419,
+              47.07633886758115,
+              0.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "folder": "14 Domaine Henri et Gilles Buisson.kmz",
+        "name": "14 Domaine Henri et Gilles Buisson"
+      }
+    }
+  ]
+}

@@ -453,8 +453,9 @@ const domaineImageCandidates = computed(() => {
     }
   }
 
-  if (props.activeAOC.aoc === PREUSES_GRAND_CRU) {
-    pushCandidates('/bourgogne/images/Chablis Grand Cru Preuses/')
+  const zone = activeDomaineZone.value
+  if (zone?.imageDir) {
+    pushCandidates(zone.imageDir)
   }
   return candidates
 })
@@ -470,33 +471,143 @@ function onDomaineImageError() {
   }
 }
 
-const PREUSES_GRAND_CRU = 'AOC Chablis Grand Cru Preuses.geojson';
+// 各 AOC 對應的酒莊圖層設定：dir 為相對於 geojsonBasePath 的資料夾路徑，
+// listFile／infoFile 為酒莊清單／詳細資訊的 JSON 路徑（infoFile 可選）。
+// 同一顆特級園若因跨村莊而有多個檔名（如 Bonnes-Mares 分屬 Chambolle-Musigny／
+// Morey-Saint-Denis 兩個村莊資料夾、檔名一個有連字號一個沒有），在此各自列一筆即可。
+const DOMAINE_ZONES = {
+  'AOC Chablis Grand Cru Preuses.geojson': {
+    dir: 'Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Preuses',
+    listFile: '/bourgogne/data/preuses-domaines.json',
+    infoFile: '/bourgogne/data/preuses-domaines-info.json',
+    imageDir: '/bourgogne/images/Chablis Grand Cru Preuses/'
+  },
+  'AOC Bonnes-Mares Grand Cru.geojson': {
+    dir: 'Domaines/Bonnes-Mares',
+    listFile: '/bourgogne/data/bonnes-mares-domaines.json'
+  },
+  'AOC Bonnes Mares Grand Cru.geojson': {
+    dir: 'Domaines/Bonnes-Mares',
+    listFile: '/bourgogne/data/bonnes-mares-domaines.json'
+  },
+  // Chablis Grand Cru（區域 id: chablis，geojsonBasePath = /bourgogne/geojson）
+  'AOC Chablis Grand Cru Valmur.geojson': {
+    dir: 'Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Valmur',
+    listFile: '/bourgogne/data/valmur-domaines.json'
+  },
+  'AOC Chablis Grand Cru Les Clos.geojson': {
+    dir: 'Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Les Clos',
+    listFile: '/bourgogne/data/les-clos-domaines.json'
+  },
+  'AOC Chablis Grand Cru Vaudésir.geojson': {
+    dir: 'Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Vaudésir',
+    listFile: '/bourgogne/data/vaudesir-domaines.json'
+  },
+  // Côte de Nuits（geojsonBasePath = /bourgogne/geojson/Cote-de-Nuits）
+  'AOC Chambertin Grand Cru.geojson': {
+    dir: '04Gevrey Chambertin/Grand Crus/Chambertin Grand Cru',
+    listFile: '/bourgogne/data/chambertin-domaines.json'
+  },
+  'AOC Chambolle-Musigny 1er Cru Les Amoureuses.geojson': {
+    dir: '06Chambolle Musigny/1er Crus/Chambolle-Musigny 1er Cru Les Amoureuses',
+    listFile: '/bourgogne/data/amoureuses-domaines.json'
+  },
+  'AOC Grands-Echezeaux Grand Cru.geojson': {
+    dir: '07Flagey-Echézeaux/Grand Crus/Grands-Echezeaux Grand Cru',
+    listFile: '/bourgogne/data/grands-echezeaux-domaines.json'
+  },
+  'AOC Nuits-Saint-Georges 1er Cru Les Vaucrains.geojson': {
+    dir: '10Nuits-Saint-Georges/1er Crus/Nuits-Saint-Georges 1er Cru Les Vaucrains',
+    listFile: '/bourgogne/data/nsg-vaucrains-domaines.json'
+  },
+  'AOC Richebourg Grand Cru.geojson': {
+    dir: '08Vosne-Romanée/Grand Crus/Richebourg Grand Cru',
+    listFile: '/bourgogne/data/richebourg-domaines.json'
+  },
+  'AOC Vosne-Romanée 1er Cru Les Suchots.geojson': {
+    dir: '08Vosne-Romanée/1er Crus/Vosne-Romanée 1er Cru Les Suchots',
+    listFile: '/bourgogne/data/vosne-romanee-suchots-domaines.json'
+  },
+  // Côte de Beaune（geojsonBasePath = /bourgogne/geojson/Cote-de-Beaune）
+  // Corton Les Renardes 與 Corton Les Bressandes 同屬 Corton Grand Cru（Aloxe-Corton 側）單一圖形，
+  // Bressandes 來源資料夾只有酒莊照片、沒有 geojson，故僅掛上 Renardes 的酒莊清單。
+  'AOC Corton Grand Cru(Aloxe).geojson': {
+    dir: '03Aloxe-Corton/Grand Cru/Corton les renardes',
+    listFile: '/bourgogne/data/corton-renardes-domaines.json'
+  },
+  'AOC Meursault 1er Cru Genevrières.geojson': {
+    dir: '12Meursault/Meursault 1er cru/AOC Meursault 1er Cru Genevrières',
+    listFile: '/bourgogne/data/meursault-genevrieres-domaines.json'
+  },
+  'AOC Pommard 1er Cru Les Rugiens Bas.geojson': {
+    dir: '07Pommard/Pommard 1er cru/AOC Pommard 1er Cru Les Rugiens Bas',
+    listFile: '/bourgogne/data/pommard-rugiens-bas-domaines.json'
+  },
+  'AOC Pommard 1er Cru Les Rugiens Hauts.geojson': {
+    dir: '07Pommard/Pommard 1er cru/AOC Pommard 1er Cru Les Rugiens Hauts',
+    listFile: '/bourgogne/data/pommard-rugiens-hauts-domaines.json'
+  },
+  'AOC Pommard 1er Cru Les Grands Epenots.geojson': {
+    dir: '07Pommard/Pommard 1er cru/AOC Pommard 1er Cru Les Grands Epenots',
+    listFile: '/bourgogne/data/pommard-grands-epenots-domaines.json'
+  },
+  'AOC Pommard 1er Cru Les Petits Epenots.geojson': {
+    dir: '07Pommard/Pommard 1er cru/AOC Pommard 1er Cru Les Petits Epenots',
+    listFile: '/bourgogne/data/pommard-petits-epenots-domaines.json'
+  },
+  'AOC Volnay 1er Cru Les Caillerets.geojson': {
+    dir: '08Volnay/Volnay 1er cru/AOC Volnay 1er Cru Les Caillerets',
+    listFile: '/bourgogne/data/volnay-caillerets-domaines.json'
+  },
+  'AOC Saint-Aubin 1er Cru Les Murgers des Dents de Chien.geojson': {
+    dir: '16Saint-Aubin/Saint-Aubin 1er cru/AOC Saint-Aubin 1er Cru Les Murgers des Dents de Chien',
+    listFile: '/bourgogne/data/saint-aubin-murgers-domaines.json'
+  },
+  'AOC Chevalier-Montrachet Grand Cru.geojson': {
+    dir: '14Puligny-Montrachet/Grand Cru/AOC Chevalier-Montrachet Grand Cru',
+    listFile: '/bourgogne/data/chevalier-montrachet-domaines.json'
+  },
+  'AOC Bâtard-Montrachet Grand Cru(Puligny).geojson': {
+    dir: '14Puligny-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Puligny)',
+    listFile: '/bourgogne/data/batard-montrachet-puligny-domaines.json'
+  },
+  'AOC Bâtard-Montrachet Grand Cru(Chassagne).geojson': {
+    dir: '15Chassagne-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Chassagne)',
+    listFile: '/bourgogne/data/batard-montrachet-chassagne-domaines.json'
+  }
+}
 
-// ... existing code ...
+const activeDomaineZone = computed(() => DOMAINE_ZONES[props.activeAOC?.aoc] || null)
 
 // 切換 AOC 或酒莊時，重置圖片候補索引
 watch([() => props.activeAOC?.aoc, activeDomaine], () => {
   imageIndex.value = 0
 })
 
-const showDomaineButton = computed(() => {
-  return props.activeAOC?.aoc === PREUSES_GRAND_CRU;
-});
+const showDomaineButton = computed(() => !!activeDomaineZone.value)
 
 const toggleDomainesMode = async () => {
   domainesMode.value = !domainesMode.value;
   if (domainesMode.value) {
+    const zone = activeDomaineZone.value
     emit('clear-region-info');
+    if (!zone) {
+      domaines.value = [];
+      return
+    }
     try {
-      const res = await fetch('/bourgogne/data/preuses-domaines.json');
+      const res = await fetch(zone.listFile);
       if (!res.ok) throw new Error('Failed to load domaines list');
       domaines.value = await res.json();
-      
-      // 同時載入酒莊詳細資訊
-      const infoRes = await fetch('/bourgogne/data/preuses-domaines-info.json');
-      if (infoRes.ok) {
-        const domainesInfo = await infoRes.json();
-        selectedDomaineInfo.value = domainesInfo;
+
+      // 同時載入酒莊詳細資訊（若有提供）
+      if (zone.infoFile) {
+        const infoRes = await fetch(zone.infoFile);
+        if (infoRes.ok) {
+          selectedDomaineInfo.value = await infoRes.json();
+        }
+      } else {
+        selectedDomaineInfo.value = null;
       }
     } catch (err) {
       console.error('Error loading domaines:', err);
@@ -525,10 +636,9 @@ const loadDomaineLayer = async (domaineFile) => {
     container.scrollTop = 0;
   }
 
-  let geojsonPath = '';
-  if (props.activeAOC.aoc === PREUSES_GRAND_CRU) {
-    geojsonPath = `${geojsonBasePath.value}/Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Preuses/${encodeURIComponent(domaineFile)}`;
-  }
+  const zone = activeDomaineZone.value
+  if (!zone) return;
+  const geojsonPath = `${geojsonBasePath.value}/${zone.dir}/${encodeURIComponent(domaineFile)}`;
 
   if (!geojsonPath) return;
 
