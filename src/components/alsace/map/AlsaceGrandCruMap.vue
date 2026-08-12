@@ -127,7 +127,8 @@
           </div>
         </div>
         <div class="climate-footnote">
-          🧪 示範資料，依地塊 ID 演算生成，非阿爾薩斯官方實測氣象紀錄｜請先於「產區」清單選取一個地塊
+          <template v-if="climateIsDemo">🧪 示範資料，依地塊 ID 演算生成，非阿爾薩斯官方實測氣象紀錄｜請先於「產區」清單選取一個地塊</template>
+          <template v-else>📊 {{ currentIndicatorConfig.footnote }}</template>
         </div>
       </div>
     </transition>
@@ -222,10 +223,11 @@ let hasRetriedWithOsmFallback = false
 let regionBounds = null
 const geojsonCache = new Map()
 
-// 氣候熱力（示範資料）
+// 氣候熱力（優先載入 Open-Meteo 實測資料，失敗才退回示範資料）
 const climateEnabled = ref(false)
 const climateYear = ref(2012)
 const climateData = ref(null)
+const climateIsDemo = ref(false)
 const climateStats = ref(null)
 const climateStatsSun = ref(null)
 const climateStatsRain = ref(null)
@@ -236,9 +238,21 @@ const climateYearRain = ref([])
 const climateIndicator = ref('temp')
 
 const CLIMATE_INDICATORS = [
-  { id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C', lowLabel: '涼', highLabel: '熱', dataKey: 'temps', baselineKey: 'baseline' },
-  { id: 'sun', icon: '☀️', label: '日照時數', unit: 'h', lowLabel: '少', highLabel: '多', dataKey: 'sun', baselineKey: 'baselineSun' },
-  { id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm', lowLabel: '乾', highLabel: '濕', dataKey: 'rain', baselineKey: 'baselineRain' },
+  {
+    id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C', lowLabel: '涼', highLabel: '熱',
+    dataKey: 'temps', baselineKey: 'baseline',
+    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API',
+  },
+  {
+    id: 'sun', icon: '☀️', label: '日照時數', unit: 'h', lowLabel: '少', highLabel: '多',
+    dataKey: 'sun', baselineKey: 'baselineSun',
+    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API',
+  },
+  {
+    id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm', lowLabel: '乾', highLabel: '濕',
+    dataKey: 'rain', baselineKey: 'baselineRain',
+    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API',
+  },
 ]
 
 const MODE_LAYER_IDS = ['denom-fill', 'denom-outline', 'overview-fill', 'overview-outline']
@@ -593,15 +607,35 @@ function createDemoClimatePayload(items) {
 
 async function loadClimateData() {
   if (climateData.value && climateYears.value.length) return
-  const demo = createDemoClimatePayload(metaList.value.filter(m => GEOLOGY_ORDER.includes(m.folder)))
-  climateData.value = demo.aocs
-  climateStats.value = demo.global
-  climateStatsSun.value = demo.globalSun
-  climateStatsRain.value = demo.globalRain
-  climateYears.value = demo.meta.years
-  if (climateYears.value.length) {
-    climateYear.value = climateYears.value.includes(2012) ? 2012 : climateYears.value[0]
+
+  const applyPayload = (payload, isDemo) => {
+    climateData.value = payload.aocs || {}
+    climateStats.value = payload.global || null
+    climateStatsSun.value = payload.globalSun || null
+    climateStatsRain.value = payload.globalRain || null
+    climateYears.value = payload.meta?.years || []
+    climateYearAvg.value = payload.meta?.yearAvg || []
+    climateYearSun.value = payload.meta?.yearSunAvg || []
+    climateYearRain.value = payload.meta?.yearRainAvg || []
+    climateIsDemo.value = isDemo
+    if (climateYears.value.length) {
+      climateYear.value = climateYears.value.includes(2012) ? 2012 : climateYears.value[0]
+    }
   }
+
+  try {
+    const res = await fetch('/data/alsace-climate.json')
+    if (res.ok) {
+      const json = await res.json()
+      applyPayload(json, false)
+      return
+    }
+  } catch (error) {
+    console.warn('[AlsaceGrandCruMap] 無法載入 alsace-climate.json，改用示範資料。', error)
+  }
+
+  const demo = createDemoClimatePayload(metaList.value.filter(m => GEOLOGY_ORDER.includes(m.folder)))
+  applyPayload(demo, true)
 }
 
 function valueToClimateColor(v, indicator = climateIndicator.value) {

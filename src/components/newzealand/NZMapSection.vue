@@ -182,11 +182,11 @@ const climateIndicator = ref('temp')
 
 const CLIMATE_INDICATORS = [
   { id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C', lowLabel: '涼', highLabel: '熱',
-    footnote: '指標：6–8 月日均溫平均值 | 基準：1981–2010', dataKey: 'temps', baselineKey: 'baseline' },
+    footnote: '指標：12–2 月日均溫平均值（南半球夏季）| 基準：1981–2010', dataKey: 'temps', baselineKey: 'baseline' },
   { id: 'sun',  icon: '☀️', label: '日照時數',  unit: 'h',  lowLabel: '少', highLabel: '多',
-    footnote: '指標：6–8 月日照時數總和（小時）| 基準：1981–2010', dataKey: 'sun', baselineKey: 'baselineSun' },
+    footnote: '指標：12–2 月日照時數總和（小時，南半球夏季）| 基準：1981–2010', dataKey: 'sun', baselineKey: 'baselineSun' },
   { id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm', lowLabel: '乾', highLabel: '濕',
-    footnote: '指標：6–8 月降雨量總和（毫米）| 基準：1981–2010', dataKey: 'rain', baselineKey: 'baselineRain' },
+    footnote: '指標：12–2 月降雨量總和（毫米，南半球夏季）| 基準：1981–2010', dataKey: 'rain', baselineKey: 'baselineRain' },
 ]
 const GOLDEN_VINTAGES_NZ = new Set([1998, 2007, 2013, 2019, 2021])
 

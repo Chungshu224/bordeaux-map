@@ -306,19 +306,19 @@ const CLIMATE_INDICATORS = [
   {
     id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C',
     lowLabel: '涼', highLabel: '熱',
-    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010',
+    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API',
     dataKey: 'temps', baselineKey: 'baseline', globalKey: 'global', yearAvgKey: 'yearAvg'
   },
   {
     id: 'sun', icon: '☀️', label: '日照時數', unit: 'h',
     lowLabel: '少', highLabel: '多',
-    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010',
+    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API',
     dataKey: 'sun', baselineKey: 'baselineSun', globalKey: 'globalSun', yearAvgKey: 'yearSunAvg'
   },
   {
     id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm',
     lowLabel: '乾', highLabel: '濕',
-    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010',
+    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API',
     dataKey: 'rain', baselineKey: 'baselineRain', globalKey: 'globalRain', yearAvgKey: 'yearRainAvg'
   }
 ]

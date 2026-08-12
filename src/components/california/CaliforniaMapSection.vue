@@ -97,7 +97,10 @@
             <span>{{ currentIndicatorConfig.highLabel }} {{ currentGlobalStats ? currentGlobalStats.max.toFixed(0) : '' }}{{ currentIndicatorConfig.unit }}</span>
           </div>
         </div>
-        <div class="climate-footnote">📊 {{ currentIndicatorConfig.footnote }}</div>
+        <div class="climate-footnote">
+          <template v-if="climateIsDemo">🧪 示範資料，依產區演算生成，非官方實測氣象紀錄</template>
+          <template v-else>📊 {{ currentIndicatorConfig.footnote }}</template>
+        </div>
       </div>
     </transition>
 
@@ -198,14 +201,15 @@ const climateYearAvg   = ref([])
 const climateYearSun   = ref([])
 const climateYearRain  = ref([])
 const climateIndicator = ref('temp')
+const climateIsDemo = ref(false)
 
 const CLIMATE_INDICATORS = [
   { id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C', lowLabel: '涼', highLabel: '熱',
-    footnote: '指標：6–8 月日均溫平均值 | 基準：1981–2010', dataKey: 'temps', baselineKey: 'baseline' },
+    footnote: '指標：6–8 月日均溫平均值 | 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API', dataKey: 'temps', baselineKey: 'baseline' },
   { id: 'sun',  icon: '☀️', label: '日照時數',  unit: 'h',  lowLabel: '少', highLabel: '多',
-    footnote: '指標：6–8 月日照時數總和（小時）| 基準：1981–2010', dataKey: 'sun', baselineKey: 'baselineSun' },
+    footnote: '指標：6–8 月日照時數總和（小時）| 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API', dataKey: 'sun', baselineKey: 'baselineSun' },
   { id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm', lowLabel: '乾', highLabel: '濕',
-    footnote: '指標：6–8 月降雨量總和（毫米）| 基準：1981–2010', dataKey: 'rain', baselineKey: 'baselineRain' },
+    footnote: '指標：6–8 月降雨量總和（毫米）| 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API', dataKey: 'rain', baselineKey: 'baselineRain' },
 ]
 const GOLDEN_VINTAGES_CA = new Set([1974, 1985, 1991, 1994, 1997, 2001, 2002, 2007, 2012, 2013])
 
@@ -730,8 +734,9 @@ async function loadClimateData() {
   }
   try {
     const res = await fetch('/data/california-climate.json')
-    if (res.ok) { apply(await res.json()); return }
+    if (res.ok) { climateIsDemo.value = false; apply(await res.json()); return }
   } catch (_) {}
+  climateIsDemo.value = true
   apply(createDemoClimatePayload(allRegions.value))
 }
 

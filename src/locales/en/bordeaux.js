@@ -416,11 +416,11 @@ export default {
       mean:          'Mean',
       indicators: {
         temp:  { label: 'Summer Temp', lowLabel: 'Cool', highLabel: 'Warm',
-          footnote: 'Metric: Jun–Aug daily mean temperature | Baseline: 1981–2010' },
+          footnote: 'Metric: Jun–Aug daily mean temperature | Baseline: 1981–2010 | Source: Open-Meteo Historical Weather API' },
         sun:   { label: 'Sunshine Hours', lowLabel: 'Low', highLabel: 'High',
-          footnote: 'Metric: Jun–Aug total sunshine hours | Baseline: 1981–2010' },
+          footnote: 'Metric: Jun–Aug total sunshine hours | Baseline: 1981–2010 | Source: Open-Meteo Historical Weather API' },
         rain:  { label: 'Summer Rainfall', lowLabel: 'Dry', highLabel: 'Wet',
-          footnote: 'Metric: Jun–Aug total precipitation (mm) | Baseline: 1981–2010' },
+          footnote: 'Metric: Jun–Aug total precipitation (mm) | Baseline: 1981–2010 | Source: Open-Meteo Historical Weather API' },
       },
     },
     alert: {

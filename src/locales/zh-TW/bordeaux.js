@@ -324,11 +324,11 @@ export default {
       mean:          '均値',
       indicators: {
         temp:  { label: '夏季均溫', lowLabel: '涼', highLabel: '熱',
-          footnote: '指標：6–8 月日均溫平均値（夏季均溫）｜ 基準：1981–2010' },
+          footnote: '指標：6–8 月日均溫平均値（夏季均溫）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API' },
         sun:   { label: '日照時數', lowLabel: '少', highLabel: '多',
-          footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010' },
+          footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API' },
         rain:  { label: '夏季降雨', lowLabel: '乾', highLabel: '濕',
-          footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010' },
+          footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API' },
       },
     },
     alert: {

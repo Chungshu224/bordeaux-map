@@ -417,11 +417,11 @@ export default {
       mean:          '平均',
       indicators: {
         temp:  { label: '夏季平均気温', lowLabel: '涼', highLabel: '暑',
-          footnote: '指標：6〜8月の日平均気温 | 基準：1981〜2010' },
+          footnote: '指標：6〜8月の日平均気温 | 基準：1981〜2010 | 出典：Open-Meteo Historical Weather API' },
         sun:   { label: '日照時間', lowLabel: '少', highLabel: '多',
-          footnote: '指標：6〜8月の日照時間合計（時間）| 基準：1981〜2010' },
+          footnote: '指標：6〜8月の日照時間合計（時間）| 基準：1981〜2010 | 出典：Open-Meteo Historical Weather API' },
         rain:  { label: '夏季降水量', lowLabel: '乾', highLabel: '湿',
-          footnote: '指標：6〜8月の降水量合計（mm）| 基準：1981〜2010' },
+          footnote: '指標：6〜8月の降水量合計（mm）| 基準：1981〜2010 | 出典：Open-Meteo Historical Weather API' },
       },
     },
     alert: {
