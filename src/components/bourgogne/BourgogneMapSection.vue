@@ -27,8 +27,8 @@
       </template>
       <template #extra-content>
         <div v-if="domainesMode" class="domaines-list-container">
-          <div v-if="currentDomaineImage" style="margin-bottom:12px;text-align:center">
-            <img :src="currentDomaineImage" @error="onDomaineImageError" style="max-width:100%;height:auto;border-radius:4px;max-height:150px;object-fit:cover">
+          <div v-if="currentDomaineImage" style="margin-bottom:12px;display:flex;justify-content:center">
+            <img :src="currentDomaineImage" @error="onDomaineImageError" style="display:block;margin:0 auto;max-width:100%;height:auto;border-radius:4px;max-height:150px;object-fit:cover">
           </div>
           <ul class="domaines-list">
             <li v-for="domaine in domaines" :key="domaine" @click="loadDomaineLayer(domaine)" :class="{ active: activeDomaine === domaine }">
@@ -83,6 +83,9 @@
           <span class="bourg-brgm-inline-lbl">透明度</span>
           <input class="bourg-brgm-inline-slider" type="range" min="0.05" max="0.85" step="0.05" v-model.number="brgmOpacity" @input="updateBRGMOpacity(map)">
           <span class="bourg-brgm-inline-pct">{{ Math.round(brgmOpacity * 100) }}%</span>
+        </div>
+        <div v-if="!props.activeAOC?.aoc" class="bourg-brgm-inline-hint">
+          👉 請先在「產區」分頁選擇一個 AOC，地質圖才會顯示
         </div>
         <div class="bourg-brgm-inline-footer">
           <span>© BRGM LITHO_1M (Etalab OL)</span>
@@ -305,13 +308,13 @@ const climateIndicator = ref('temp')
 
 const CLIMATE_INDICATORS = [
   { id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C', lowLabel: '涼', highLabel: '熱',
-    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010',
+    footnote: '指標：6–8 月日均溫平均值（夏季均溫）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API',
     dataKey: 'temps', baselineKey: 'baseline', globalKey: 'global', yearAvgKey: 'yearAvg' },
   { id: 'sun', icon: '☀️', label: '日照時數', unit: 'h', lowLabel: '少', highLabel: '多',
-    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010',
+    footnote: '指標：6–8 月日照時數總和（小時）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API',
     dataKey: 'sun', baselineKey: 'baselineSun', globalKey: 'globalSun', yearAvgKey: 'yearSunAvg' },
   { id: 'rain', icon: '🌧', label: '夏季降雨', unit: 'mm', lowLabel: '乾', highLabel: '濕',
-    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010',
+    footnote: '指標：6–8 月降雨量總和（毫米）｜ 基準：1981–2010｜資料來源：Open-Meteo Historical Weather API',
     dataKey: 'rain', baselineKey: 'baselineRain', globalKey: 'globalRain', yearAvgKey: 'yearRainAvg' },
 ]
 
@@ -484,11 +487,13 @@ const DOMAINE_ZONES = {
   },
   'AOC Bonnes-Mares Grand Cru.geojson': {
     dir: 'Domaines/Bonnes-Mares',
-    listFile: '/bourgogne/data/bonnes-mares-domaines.json'
+    listFile: '/bourgogne/data/bonnes-mares-domaines.json',
+    imageDir: '/bourgogne/images/Bonnes-Mares/'
   },
   'AOC Bonnes Mares Grand Cru.geojson': {
     dir: 'Domaines/Bonnes-Mares',
-    listFile: '/bourgogne/data/bonnes-mares-domaines.json'
+    listFile: '/bourgogne/data/bonnes-mares-domaines.json',
+    imageDir: '/bourgogne/images/Bonnes-Mares/'
   },
   // Chablis Grand Cru（區域 id: chablis，geojsonBasePath = /bourgogne/geojson）
   'AOC Chablis Grand Cru Valmur.geojson': {
@@ -501,12 +506,14 @@ const DOMAINE_ZONES = {
   },
   'AOC Chablis Grand Cru Vaudésir.geojson': {
     dir: 'Chablis/Chablis Grand Cru/AOC Chablis Grand Cru Vaudésir',
-    listFile: '/bourgogne/data/vaudesir-domaines.json'
+    listFile: '/bourgogne/data/vaudesir-domaines.json',
+    imageDir: '/bourgogne/images/Chablis Grand Cru Vaudésir/'
   },
   // Côte de Nuits（geojsonBasePath = /bourgogne/geojson/Cote-de-Nuits）
   'AOC Chambertin Grand Cru.geojson': {
     dir: '04Gevrey Chambertin/Grand Crus/Chambertin Grand Cru',
-    listFile: '/bourgogne/data/chambertin-domaines.json'
+    listFile: '/bourgogne/data/chambertin-domaines.json',
+    imageDir: '/bourgogne/images/Chambertin Grand Cru/'
   },
   'AOC Chambolle-Musigny 1er Cru Les Amoureuses.geojson': {
     dir: '06Chambolle Musigny/1er Crus/Chambolle-Musigny 1er Cru Les Amoureuses',
@@ -522,7 +529,8 @@ const DOMAINE_ZONES = {
   },
   'AOC Richebourg Grand Cru.geojson': {
     dir: '08Vosne-Romanée/Grand Crus/Richebourg Grand Cru',
-    listFile: '/bourgogne/data/richebourg-domaines.json'
+    listFile: '/bourgogne/data/richebourg-domaines.json',
+    imageDir: '/bourgogne/images/Richebourg Grand Cru/'
   },
   'AOC Vosne-Romanée 1er Cru Les Suchots.geojson': {
     dir: '08Vosne-Romanée/1er Crus/Vosne-Romanée 1er Cru Les Suchots',
@@ -541,11 +549,13 @@ const DOMAINE_ZONES = {
   },
   'AOC Pommard 1er Cru Les Rugiens Bas.geojson': {
     dir: '07Pommard/Pommard 1er cru/AOC Pommard 1er Cru Les Rugiens Bas',
-    listFile: '/bourgogne/data/pommard-rugiens-bas-domaines.json'
+    listFile: '/bourgogne/data/pommard-rugiens-bas-domaines.json',
+    imageDir: '/bourgogne/images/Pommard 1er Cru Les Rugiens Bas/'
   },
   'AOC Pommard 1er Cru Les Rugiens Hauts.geojson': {
     dir: '07Pommard/Pommard 1er cru/AOC Pommard 1er Cru Les Rugiens Hauts',
-    listFile: '/bourgogne/data/pommard-rugiens-hauts-domaines.json'
+    listFile: '/bourgogne/data/pommard-rugiens-hauts-domaines.json',
+    imageDir: '/bourgogne/images/Pommard 1er Cru Les Rugiens Hauts/'
   },
   'AOC Pommard 1er Cru Les Grands Epenots.geojson': {
     dir: '07Pommard/Pommard 1er cru/AOC Pommard 1er Cru Les Grands Epenots',
@@ -569,11 +579,13 @@ const DOMAINE_ZONES = {
   },
   'AOC Bâtard-Montrachet Grand Cru(Puligny).geojson': {
     dir: '14Puligny-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Puligny)',
-    listFile: '/bourgogne/data/batard-montrachet-puligny-domaines.json'
+    listFile: '/bourgogne/data/batard-montrachet-puligny-domaines.json',
+    imageDir: '/bourgogne/images/Bâtard-Montrachet Grand Cru(Puligny)/'
   },
   'AOC Bâtard-Montrachet Grand Cru(Chassagne).geojson': {
     dir: '15Chassagne-Montrachet/Grand Cru/AOC Bâtard-Montrachet Grand Cru(Chassagne)',
-    listFile: '/bourgogne/data/batard-montrachet-chassagne-domaines.json'
+    listFile: '/bourgogne/data/batard-montrachet-chassagne-domaines.json',
+    imageDir: '/bourgogne/images/Bâtard-Montrachet Grand Cru(Chassagne)/'
   }
 }
 
@@ -628,6 +640,7 @@ const toggleDomainesMode = async () => {
 const loadDomaineLayer = async (domaineFile) => {
   if (!map) return;
   activeDomaine.value = domaineFile;
+  mapError.value = null;
 
   // 滾動到酒莊列表容器的最上方
   await nextTick();
@@ -2642,6 +2655,11 @@ const unifiedInfo = computed(() => {
   .bourg-brgm-inline-lbl { font-size: 12px; color: #666; white-space: nowrap; }
   .bourg-brgm-inline-slider { flex: 1; height: 4px; accent-color: #795548; }
   .bourg-brgm-inline-pct { font-size: 12px; color: #888; min-width: 32px; text-align: right; }
+  .bourg-brgm-inline-hint {
+    font-size: 11px; color: #a15c00; background: #fff3e0;
+    border: 1px solid #ffcc80; border-radius: 8px;
+    padding: 6px 8px; margin-bottom: 8px; line-height: 1.4;
+  }
   .bourg-brgm-inline-footer {
     display: flex; flex-direction: column; gap: 2px;
     font-size: 10px; color: #aaa;
