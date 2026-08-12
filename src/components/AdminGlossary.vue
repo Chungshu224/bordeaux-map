@@ -3,13 +3,25 @@
 
     <!-- 頂部工具列 -->
     <div class="ag-toolbar">
-      <!-- 產區篩選 -->
-      <div class="ag-filter-group">
+      <!-- 瀏覽模式切換 -->
+      <div class="ag-view-toggle">
+        <button
+          :class="['ag-view-btn', { active: viewMode === 'region' }]"
+          @click="viewMode = 'region'; page = 1"
+        >{{ $t('common.admin.glossary.viewMode.region') }}</button>
+        <button
+          :class="['ag-view-btn', { active: viewMode === 'category' }]"
+          @click="viewMode = 'category'"
+        >{{ $t('common.admin.glossary.viewMode.category') }}</button>
+      </div>
+
+      <!-- 產區篩選（僅「依產區」模式） -->
+      <div v-if="viewMode === 'region'" class="ag-filter-group">
         <button
           v-for="r in regionOptions"
           :key="r.key"
-          :class="['ag-region-btn', { active: filterRegion === r.key }]"
-          @click="filterRegion = r.key; page = 1"
+          :class="['ag-region-btn', { active: filterRegion === r.key && !isSearching, dimmed: isSearching }]"
+          @click="filterRegion = r.key; page = 1; searchQ = ''"
         >{{ r.icon }} {{ r.label }}</button>
       </div>
 
@@ -19,14 +31,17 @@
         <option v-for="c in categoryOptions" :key="c.key" :value="c.key">{{ c.label }}</option>
       </select>
 
-      <!-- 搜尋 -->
-      <input
-        v-model.trim="searchQ"
-        class="ag-search"
-        type="search"
-        :placeholder="$t('common.admin.glossary.searchPlaceholder')"
-        @input="page = 1"
-      />
+      <!-- 搜尋（跨全部產區） -->
+      <div class="ag-search-wrap">
+        <input
+          v-model.trim="searchQ"
+          class="ag-search"
+          type="search"
+          :placeholder="$t('common.admin.glossary.searchPlaceholder')"
+          @input="page = 1"
+        />
+        <span v-if="isSearching" class="ag-search-hint">{{ $t('common.admin.glossary.searchingAllRegions') }}</span>
+      </div>
 
       <!-- 新增按鈕 -->
       <button class="ag-btn-add" @click="openForm(null)">{{ $t('common.admin.glossary.addEntry') }}</button>
@@ -51,62 +66,93 @@
       <span v-else-if="batchSummary" :class="['ag-batch-summary', { 'is-error': batchSummary.startsWith('!') }]">{{ batchSummary.replace(/^!/, '') }}</span>
     </div>
 
-    <!-- 表格 -->
-    <div v-if="loading" class="ag-state">{{ $t('common.actions.loading') }}</div>
-    <div v-else-if="pageItems.length === 0" class="ag-state ag-empty">{{ $t('common.admin.glossary.noResults') }}</div>
-    <div v-else class="ag-table-wrap">
-      <table class="ag-table">
-        <thead>
-          <tr>
-            <th class="ag-check-col">
-              <input
-                type="checkbox"
-                :checked="isAllOnPageSelected"
-                :indeterminate.prop="isPartialPageSelected"
-                @change="togglePageSelection($event.target.checked)"
-                :title="$t('common.admin.glossary.batch.selectAll')"
-              />
-            </th>
-            <th>{{ $t('common.admin.glossary.th.region') }}</th>
-            <th>{{ $t('common.admin.glossary.th.zh') }}</th>
-            <th>{{ $t('common.admin.glossary.th.en') }}</th>
-            <th>{{ $t('common.admin.glossary.th.lang3') }}</th>
-            <th>{{ $t('common.admin.glossary.th.category') }}</th>
-            <th class="ag-def-col">{{ $t('common.admin.glossary.th.definition') }}</th>
-            <th>{{ $t('common.admin.glossary.th.actions') }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="item in pageItems" :key="item.id" :class="{ 'is-selected': selectedIds.has(item.id) }">
-            <td class="ag-check-col">
-              <input
-                type="checkbox"
-                :checked="selectedIds.has(item.id)"
-                @change="toggleSelection(item.id, $event.target.checked)"
-              />
-            </td>
-            <td><span :class="['region-badge', `region-${item.region}`]">{{ regionLabel(item.region) }}</span></td>
-            <td class="fw-bold">{{ item.zh }}</td>
-            <td class="text-it">{{ item.en }}</td>
-            <td class="text-it text-muted">{{ itemLang3(item) || '—' }}</td>
-            <td><span :class="['cat-badge', `cat-${item.category}`]">{{ catLabel(item.category) }}</span></td>
-            <td class="ag-def-col text-sm text-muted">{{ item.definition.slice(0, 60) }}{{ item.definition.length > 60 ? '…' : '' }}</td>
-            <td class="ag-actions">
-              <button class="ag-btn-edit" @click="openForm(item)" :title="$t('common.admin.glossary.btn.edit')">✏️</button>
-              <button class="ag-btn-del" @click="confirmDelete(item)" :title="$t('common.admin.glossary.btn.delete')">🗑️</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- 表格：依產區模式 -->
+    <template v-if="viewMode === 'region'">
+      <div v-if="loading" class="ag-state">{{ $t('common.actions.loading') }}</div>
+      <div v-else-if="pageItems.length === 0" class="ag-state ag-empty">{{ $t('common.admin.glossary.noResults') }}</div>
+      <div v-else class="ag-table-wrap">
+        <table class="ag-table">
+          <thead>
+            <tr>
+              <th class="ag-check-col">
+                <input
+                  type="checkbox"
+                  :checked="isAllOnPageSelected"
+                  :indeterminate.prop="isPartialPageSelected"
+                  @change="togglePageSelection($event.target.checked)"
+                  :title="$t('common.admin.glossary.batch.selectAll')"
+                />
+              </th>
+              <th>{{ $t('common.admin.glossary.th.region') }}</th>
+              <th>{{ $t('common.admin.glossary.th.zh') }}</th>
+              <th>{{ $t('common.admin.glossary.th.en') }}</th>
+              <th>{{ $t('common.admin.glossary.th.lang3') }}</th>
+              <th>{{ $t('common.admin.glossary.th.category') }}</th>
+              <th class="ag-def-col">{{ $t('common.admin.glossary.th.definition') }}</th>
+              <th>{{ $t('common.admin.glossary.th.actions') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in pageItems" :key="item.id" :class="{ 'is-selected': selectedIds.has(item.id) }">
+              <td class="ag-check-col">
+                <input
+                  type="checkbox"
+                  :checked="selectedIds.has(item.id)"
+                  @change="toggleSelection(item.id, $event.target.checked)"
+                />
+              </td>
+              <td><span :class="['region-badge', `region-${item.region}`]">{{ regionLabel(item.region) }}</span></td>
+              <td class="fw-bold">{{ item.zh }}</td>
+              <td class="text-it">{{ item.en }}</td>
+              <td class="text-it text-muted">{{ itemLang3(item) || '—' }}</td>
+              <td><span :class="['cat-badge', `cat-${item.category}`]">{{ catLabel(item.category) }}</span></td>
+              <td class="ag-def-col text-sm text-muted">{{ item.definition.slice(0, 60) }}{{ item.definition.length > 60 ? '…' : '' }}</td>
+              <td class="ag-actions">
+                <button class="ag-btn-edit" @click="openForm(item)" :title="$t('common.admin.glossary.btn.edit')">✏️</button>
+                <button class="ag-btn-del" @click="confirmDelete(item)" :title="$t('common.admin.glossary.btn.delete')">🗑️</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <!-- 分頁 -->
-    <div v-if="totalPages > 1" class="ag-pagination">
-      <button :disabled="page <= 1" @click="page--">◀</button>
-      <span>{{ $t('common.admin.glossary.pagination', { page, total: totalPages, count: filtered.length }) }}</span>
-      <button :disabled="page >= totalPages" @click="page++">▶</button>
-    </div>
-    <div v-else-if="!loading" class="ag-count">{{ $t('common.admin.glossary.countOnly', { count: filtered.length }) }}</div>
+      <!-- 分頁 -->
+      <div v-if="totalPages > 1" class="ag-pagination">
+        <button :disabled="page <= 1" @click="page--">◀</button>
+        <span>{{ $t('common.admin.glossary.pagination', { page, total: totalPages, count: filtered.length }) }}</span>
+        <button :disabled="page >= totalPages" @click="page++">▶</button>
+      </div>
+      <div v-else-if="!loading" class="ag-count">{{ $t('common.admin.glossary.countOnly', { count: filtered.length }) }}</div>
+    </template>
+
+    <!-- 索引：依類別模式（跨全部產區） -->
+    <template v-else>
+      <div v-if="loading" class="ag-state">{{ $t('common.actions.loading') }}</div>
+      <div v-else-if="groupedByCategory.length === 0" class="ag-state ag-empty">{{ $t('common.admin.glossary.noResults') }}</div>
+      <div v-else class="ag-index">
+        <div v-for="g in groupedByCategory" :key="g.key" class="ag-index-group">
+          <button type="button" class="ag-index-header" @click="toggleGroupCollapse(g.key)">
+            <span class="ag-index-header-label">{{ g.label }}</span>
+            <span class="ag-index-header-count">{{ g.items.length }}</span>
+            <span class="ag-index-caret">{{ collapsedGroups.has(g.key) ? '▸' : '▾' }}</span>
+          </button>
+          <ul v-show="!collapsedGroups.has(g.key)" class="ag-index-list">
+            <li v-for="item in g.items" :key="item.id" class="ag-index-item">
+              <span :class="['region-badge', `region-${item.region}`]">{{ regionLabel(item.region) }}</span>
+              <span class="ag-index-zh">{{ item.zh }}</span>
+              <span class="ag-index-en text-it text-muted">{{ item.en }}</span>
+              <span v-if="itemLang3(item)" class="ag-index-lang3 text-it text-muted">{{ itemLang3(item) }}</span>
+              <span class="ag-index-def text-sm text-muted">{{ item.definition.slice(0, 60) }}{{ item.definition.length > 60 ? '…' : '' }}</span>
+              <span class="ag-index-actions">
+                <button class="ag-btn-edit" @click="openForm(item)" :title="$t('common.admin.glossary.btn.edit')">✏️</button>
+                <button class="ag-btn-del" @click="confirmDelete(item)" :title="$t('common.admin.glossary.btn.delete')">🗑️</button>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="ag-count">{{ $t('common.admin.glossary.indexCount', { count: filtered.length, groups: groupedByCategory.length }) }}</div>
+      </div>
+    </template>
 
     <!-- ── 新增/編輯 Modal ── -->
     <Teleport to="body">
@@ -304,8 +350,16 @@ const searchQ        = ref('')
 const page           = ref(1)
 const PAGE_SIZE      = 20
 
+// 瀏覽模式：'region' 依產區分頁瀏覽／'category' 依類別索引（跨全部產區）
+const viewMode = ref('region')
+
+const isSearching  = computed(() => searchQ.value.length > 0)
+const useAllRegions = computed(() => isSearching.value || viewMode.value === 'category')
+
 const filtered = computed(() => {
-  let list = allItems.value.filter(i => i.region === filterRegion.value)
+  let list = useAllRegions.value
+    ? allItems.value
+    : allItems.value.filter(i => i.region === filterRegion.value)
   if (filterCategory.value) list = list.filter(i => i.category === filterCategory.value)
   const q = searchQ.value.toLowerCase()
   if (q) list = list.filter(i =>
@@ -326,6 +380,32 @@ const totalPages = computed(() => Math.max(1, Math.ceil(filtered.value.length / 
 const pageItems  = computed(() => {
   const start = (page.value - 1) * PAGE_SIZE
   return filtered.value.slice(start, start + PAGE_SIZE)
+})
+
+// ── 依類別索引（書本索引概念：類別為主分組，產區為每筆的標籤） ──
+const collapsedGroups = ref(new Set())
+
+function toggleGroupCollapse(key) {
+  const next = new Set(collapsedGroups.value)
+  if (next.has(key)) next.delete(key); else next.add(key)
+  collapsedGroups.value = next
+}
+
+const groupedByCategory = computed(() => {
+  const groups = new Map()
+  for (const item of filtered.value) {
+    if (!groups.has(item.category)) groups.set(item.category, [])
+    groups.get(item.category).push(item)
+  }
+  return categoryOptions
+    .map(c => ({
+      key: c.key,
+      label: c.label,
+      items: (groups.get(c.key) || []).slice().sort((a, b) =>
+        a.region.localeCompare(b.region) || a.zh.localeCompare(b.zh)
+      ),
+    }))
+    .filter(g => g.items.length > 0)
 })
 
 // ── 表單狀態 ─────────────────────────────────────────────────
@@ -617,7 +697,27 @@ async function runBatchTranslate() {
   gap: 10px;
   flex-wrap: wrap;
 }
-.ag-filter-group { display: flex; gap: 6px; }
+.ag-view-toggle {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: #f5f0e8;
+  border-radius: 10px;
+}
+.ag-view-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #7a6a5a;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.ag-view-btn.active { background: #fff; color: #2c1a0e; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+
+.ag-filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
 .ag-region-btn {
   padding: 6px 14px;
   border-radius: 20px;
@@ -629,6 +729,7 @@ async function runBatchTranslate() {
   transition: all 0.15s;
 }
 .ag-region-btn.active { background: #2c1a0e; color: #f5e6c8; border-color: #2c1a0e; }
+.ag-region-btn.dimmed { opacity: 0.5; }
 
 .ag-select, .ag-search {
   padding: 7px 12px;
@@ -638,7 +739,14 @@ async function runBatchTranslate() {
   background: #fff;
   outline: none;
 }
+.ag-search-wrap { display: flex; align-items: center; gap: 8px; }
 .ag-search { min-width: 180px; }
+.ag-search-hint {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a8872d;
+  white-space: nowrap;
+}
 
 .ag-btn-add {
   margin-left: auto;
@@ -748,6 +856,50 @@ async function runBatchTranslate() {
 
 /* ── 狀態 ── */
 .ag-state { padding: 40px; text-align: center; color: #9a8677; font-size: 0.9rem; }
+
+/* ── 依類別索引 ── */
+.ag-index { display: flex; flex-direction: column; gap: 10px; }
+.ag-index-group {
+  border: 1px solid #f0ebe0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ag-index-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #faf7f2;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #2c1a0e;
+}
+.ag-index-header-count {
+  background: #e8e0d0;
+  color: #7a6a5a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+.ag-index-caret { margin-left: auto; color: #9a8677; }
+.ag-index-list { list-style: none; margin: 0; padding: 0; }
+.ag-index-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-top: 1px solid #f0ebe0;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+.ag-index-zh { font-weight: 700; }
+.ag-index-def { flex: 1 1 200px; min-width: 0; }
+.ag-index-actions { display: flex; gap: 6px; margin-left: auto; white-space: nowrap; }
 
 /* ── Modal ── */
 .ag-overlay {

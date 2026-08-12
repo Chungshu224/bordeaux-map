@@ -120,8 +120,14 @@ export default {
     glossary: {
       filterAllCats: 'すべてのカテゴリー',
       searchPlaceholder: '用語を検索…',
+      searchingAllRegions: '🔍 全産地を検索中',
       addEntry: '＋ 新規追加',
       noResults: '該当する用語はありません',
+      viewMode: {
+        region: '📂 産地別',
+        category: '🗂️ カテゴリー索引',
+      },
+      indexCount: '全{count}件 · {groups}カテゴリー',
       th: {
         region: '産地',
         zh: '中国語',

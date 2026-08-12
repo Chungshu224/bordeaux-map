@@ -120,8 +120,14 @@ export default {
     glossary: {
       filterAllCats: 'All categories',
       searchPlaceholder: 'Search entries…',
+      searchingAllRegions: '🔍 Searching all regions',
       addEntry: '＋ Add entry',
       noResults: 'No matching entries',
+      viewMode: {
+        region: '📂 By region',
+        category: '🗂️ Category index',
+      },
+      indexCount: '{count} entries · {groups} categories',
       th: {
         region: 'Region',
         zh: 'Chinese',

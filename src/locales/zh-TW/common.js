@@ -144,8 +144,14 @@ export default {
     glossary: {
       filterAllCats: '全部類別',
       searchPlaceholder: '搜尋詞條…',
+      searchingAllRegions: '🔍 搜尋全部產區中',
       addEntry: '＋ 新增詞條',
       noResults: '沒有符合的詞條',
+      viewMode: {
+        region: '📂 依產區',
+        category: '🗂️ 依類別索引',
+      },
+      indexCount: '共 {count} 筆 · {groups} 個分類',
       th: {
         region: '產區',
         zh: '中文',
