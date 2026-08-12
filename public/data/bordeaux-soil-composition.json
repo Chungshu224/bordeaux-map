@@ -1,0 +1,146 @@
+{
+  "Regional": {
+    "Bordeaux_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 45% + 黏土 30% + 砂土 15% + 石灰岩 10%",
+      "description": "波爾多整體 AOC 土壤多樣，以礫石和黏土混合為主"
+    },
+    "Bordeaux-Superior_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 50% + 黏土 25% + 砂土 15% + 石灰岩 10%",
+      "description": "略高於 Bordeaux AOC 的礫石比例，排水更佳"
+    }
+  },
+  "LeftBank-Medoc": {
+    "Pauillac_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 85% + 黏土 10% + 砂土 5%",
+      "description": "深厚 Gunz 砂礫層，排水優異，熱儲存能力強"
+    },
+    "Margaux_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 70% + 砂土 20% + 黏土 10%",
+      "description": "砂質礫石土，顆粒較細，質地最優雅"
+    },
+    "Saint-Julien_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 80% + 黏土 15% + 砂土 5%",
+      "description": "深厚礫石層，含鐵質，排水完美"
+    },
+    "Saint-Estephe_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 50% + 礫石 35% + 石灰岩 15%",
+      "description": "梅多克最北端，黏土比例最高，保水性強"
+    },
+    "Listrac-Medoc_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 55% + 礫石 30% + 石灰岩 15%",
+      "description": "內陸產區，石灰岩黏土為主，地勢較高"
+    },
+    "Moulis-en-Medoc_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 60% + 黏土 25% + 石灰岩 15%",
+      "description": "礫石與黏土混合，土壤多樣性高"
+    },
+    "Haut-Medoc_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 65% + 黏土 25% + 砂土 10%",
+      "description": "梅多克核心地帶，礫石為主"
+    },
+    "Medoc_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 50% + 礫石 30% + 沖積土 20%",
+      "description": "梅多克北部平原，黏土與沖積土混合"
+    }
+  },
+  "LeftBank-Graves": {
+    "Pessac-Leognan_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 80% + 砂土 15% + 黏土 5%",
+      "description": "格拉夫（Graves）精華區，礫石深厚"
+    },
+    "Graves_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 70% + 砂土 20% + 黏土 10%",
+      "description": "以礫石命名的產區，排水優異"
+    },
+    "Cerons_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 60% + 黏土 25% + 石灰岩 15%",
+      "description": "格拉夫南端，礫石與黏土混合"
+    }
+  },
+  "RightBank-Libournais": {
+    "Pomerol_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 70% + 礫石 20% + 鐵質 10%",
+      "description": "著名的藍色黏土（Blue Clay），富含鐵質"
+    },
+    "Saint-Emilion_AOC": {
+      "primary": "石灰岩",
+      "composition": "石灰岩 50% + 黏土 30% + 砂土 20%",
+      "description": "高地石灰岩台地與坡地黏土混合"
+    },
+    "Saint-Emilion-Grand-Cru_AOC": {
+      "primary": "石灰岩",
+      "composition": "石灰岩 60% + 黏土 30% + 泥灰岩 10%",
+      "description": "精選地塊，石灰岩比例更高"
+    },
+    "Lalande-de-Pomerol_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 60% + 礫石 25% + 砂土 15%",
+      "description": "波美侯北部，黏土與礫石混合"
+    },
+    "Fronsac_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 55% + 石灰岩 30% + 砂土 15%",
+      "description": "高地黏土與石灰岩"
+    },
+    "Canon-Fronsac_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 60% + 石灰岩 30% + 泥灰岩 10%",
+      "description": "Fronsac 精華區，黏土比例更高"
+    }
+  },
+  "RightBank-Blaye": {
+    "Cotes-de-Bourg_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 60% + 石灰岩 25% + 砂土 15%",
+      "description": "河岸高地黏土土壤"
+    },
+    "Blaye-Cotes-de-Bordeaux_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 50% + 石灰岩 30% + 礫石 20%",
+      "description": "吉倫特河右岸，黏土與石灰岩為主"
+    }
+  },
+  "Entre-Deux-Mers": {
+    "Entre-Deux-Mers_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 55% + 石灰岩 30% + 砂土 15%",
+      "description": "兩河之間，黏土與石灰岩混合"
+    },
+    "Cadillac-Cotes-de-Bordeaux_AOC": {
+      "primary": "黏土",
+      "composition": "黏土 60% + 石灰岩 25% + 礫石 15%",
+      "description": "加龍河右岸，黏土比例較高"
+    }
+  },
+  "Sauternais": {
+    "Sauternes_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 50% + 黏土 30% + 石灰岩 20%",
+      "description": "礫石與黏土混合，利於貴腐菌生長"
+    },
+    "Barsac_AOC": {
+      "primary": "石灰岩",
+      "composition": "石灰岩 55% + 黏土 30% + 礫石 15%",
+      "description": "石灰岩台地，排水良好"
+    },
+    "Cerons_AOC": {
+      "primary": "礫石土",
+      "composition": "礫石 60% + 黏土 25% + 石灰岩 15%",
+      "description": "格拉夫南端，礫石與黏土混合"
+    }
+  }
+}

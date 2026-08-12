@@ -293,14 +293,16 @@ watch(brgmOpacity, () => updateBRGMOpacity(map))
 // 當選取的 AOC 變更或 BRGM 開關時，更新地質圖設罩
 watch([brgmEnabled, () => props.activeAOC?.aoc], () => {
   if (!brgmEnabled.value || !props.activeAOC?.aoc) {
-    updateBRGMClip(map, null)
+    updateBRGMClip(map, null, null)
     return
   }
   let geojson = null
   for (const [path, data] of geojsonCache.entries()) {
     if (path.endsWith('/' + props.activeAOC.aoc)) { geojson = data; break }
   }
-  updateBRGMClip(map, geojson)
+  // 傳遞 AOC 名稱（移除 .geojson 後綴）
+  const aocName = props.activeAOC.aoc.replace('.geojson', '')
+  updateBRGMClip(map, geojson, aocName)
 })
 let aocClickPopup = null
 let chateauMarkerJustClicked = false  // 旗標：酒莊 marker 剛被點擊，AOC handler 應跳過
@@ -1324,30 +1326,31 @@ const initMap = async (retry = 0) => {
           'paint': {
             'line-color': [
               'case',
-              ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFD700',
-              ['==', ['%', ['to-number', ['get', 'ele']], 50], 0], '#FFAA00',
-              '#FF7733'
+              ['==', ['%', ['to-number', ['get', 'ele']], 100], 0], '#FFFF00', // 亮黃色（100m倍數）
+              ['==', ['%', ['to-number', ['get', 'ele']], 50], 0], '#FFD700',  // 金黃色（50m倍數）
+              '#FFA500' // 明亮橙色（其他）
             ],
             'line-width': [
               'case',
               ['==', ['%', ['to-number', ['get', 'ele']], 50], 0],
-              ['interpolate', ['linear'], ['zoom'], 9, 0.9, 11, 1.6, 13, 2.2, 16, 3],
-              ['interpolate', ['linear'], ['zoom'], 9, 0.3, 11, 0.7, 13, 1, 16, 1.5]
+              ['interpolate', ['linear'], ['zoom'], 9, 1.5, 11, 2.2, 13, 3.0, 16, 4.5], // 加粗50m倍數線
+              ['interpolate', ['linear'], ['zoom'], 9, 0.8, 11, 1.2, 13, 1.8, 16, 2.5]  // 加粗一般線
             ],
             'line-opacity': [
               'interpolate',
               ['linear'],
               ['zoom'],
-              9, 0.4,
-              11, 0.6,
-              13, 0.8,
-              16, 0.9
-            ]
+              9, 0.7,  // 提高透明度
+              11, 0.85,
+              13, 0.95,
+              16, 1.0
+            ],
+            'line-blur': 0.5 // 輕微模糊效果，讓線條更柔和醒目
           },
           'minzoom': 9 // 降低最小縮放級別
         })
         console.log('[等高線] ✅ contours 圖層已添加 (minzoom: 9, 默認隱藏)')
-        console.log('[等高線] 配置: 橙色線條, 透明度隨zoom調整, 無filter限制')
+        console.log('[等高線] 配置: 亮黃/金黃/橙色線條, 加粗寬度, 高透明度, 微模糊效果')
         
         // 添加等高線標籤圖層（顯示高度數字）
         map.addLayer({
@@ -1363,23 +1366,23 @@ const initMap = async (retry = 0) => {
               'interpolate',
               ['linear'],
               ['zoom'],
-              10, 9,
-              13, 11,
-              16, 13
+              10, 10,  // 放大字體
+              13, 12,
+              16, 15
             ],
-            'text-padding': 25,
+            'text-padding': 20, // 減少間距，顯示更多標籤
             'visibility': 'none' // 預設隱藏
           },
           'paint': {
-            'text-color': '#FFD700', // 金黃色，更清晰
-            'text-halo-color': 'rgba(0,0,0,0.8)', // 黑色光暈
-            'text-halo-width': 2,
+            'text-color': '#FFFF00', // 亮黃色，更醒目
+            'text-halo-color': 'rgba(0,0,0,0.9)', // 更深的黑色光暈
+            'text-halo-width': 2.5, // 加寬光暈
             'text-opacity': [
               'interpolate',
               ['linear'],
               ['zoom'],
-              10, 0.5,
-              12, 0.8,
+              10, 0.7,  // 提高透明度
+              12, 0.9,
               14, 1
             ]
           },
@@ -1619,7 +1622,15 @@ const showChateauxMarkers = async () => {
         descDiv.textContent = descText
         popupContainer.appendChild(descDiv)
       }
-      
+
+      // 土壤風土
+      if (chateau.soil) {
+        const soilDiv = document.createElement('div')
+        soilDiv.className = 'soil'
+        soilDiv.textContent = '🪨 ' + chateau.soil
+        popupContainer.appendChild(soilDiv)
+      }
+
       // 評級
       if (chateau.rating) {
         const ratingP = document.createElement('p')
@@ -2855,6 +2866,17 @@ const unifiedInfo = computed(() => {
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
+}
+
+:global(.chateau-popup .soil) {
+  margin: 8px 0;
+  padding: 8px 10px;
+  background: #f6f3ee;
+  border-left: 3px solid #8B0000;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #555;
 }
 
 :global(.chateau-popup .rating) {

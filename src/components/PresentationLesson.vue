@@ -245,6 +245,7 @@ import MedocInteractiveMap from './maps/MedocInteractiveMap.vue'
 import FirstGrowthsMap from './maps/FirstGrowthsMap.vue'
 import LessonProgressIndicator from './LessonProgressIndicator.vue'
 import QuizSlide from './italy/course/slides/QuizSlide.vue'
+import ImageSlide from './bourgogne/course/slides/ImageSlide.vue'
 import LoireRegionMapSlide from './loire/course/slides/LoireRegionMapSlide.vue'
 import LoireSubRegionsSlide from './loire/course/slides/LoireSubRegionsSlide.vue'
 import LoireGrapeProfileSlide from './loire/course/slides/LoireGrapeProfileSlide.vue'
@@ -261,6 +262,7 @@ import AVAHierarchySlide from './california/slides/AVAHierarchySlide.vue'
 import CaliforniaRegionMapSlide from './california/slides/CaliforniaRegionMapSlide.vue'
 import SummarySlide from './shared/slides/SummarySlide.vue'
 import CoverSlide from './shared/slides/CoverSlide.vue'
+import SoilProfileViewer from './SoilProfileViewer.vue'
 // 改用 lessonContentLoader 的單例載入器,避免間接層帶來的潛在等待問題
 import { loadLessonContent as coreLoadLessonContent } from '../data/lessonContentLoader.js'
 // 導入進度追蹤系統
@@ -416,6 +418,7 @@ const slideComponentMap = {
   MedocInteractiveMap,
   FirstGrowthsMap,
   QuizSlide,
+  ImageSlide,
   LoireRegionMapSlide,
   LoireSubRegionsSlide,
   LoireGrapeProfileSlide,
@@ -429,7 +432,8 @@ const slideComponentMap = {
   HungaryGrapeProfileSlide,
   CaliforniaRegionMapSlide,
   NapaSonomaCompareSlide,
-  AVAHierarchySlide
+  AVAHierarchySlide,
+  SoilProfileViewer
 }
 
 // 將內容中的 AOC 名稱標準化並附上英文原文（避免重複標註，具備一定的容錯與等幣性）
@@ -1701,6 +1705,19 @@ const normalizeSlide = (s) => {
         ${s.icon ? `<div class="chapter-icon">${esc(s.icon)}</div>` : ''}
         ${descHtml}
       </div>`
+      break
+    }
+    case 'image': {
+      // 酒標實例投影片：重用 Italy/Bourgogne 課程共用的 ImageSlide 元件與其點擊放大燈箱
+      slide.title = s.title || ''
+      slide.component = 'ImageSlide'
+      slide.componentProps = {
+        slide: {
+          title: s.title || '',
+          image: s.image || '',
+          caption: s.caption || ''
+        }
+      }
       break
     }
     case 'content': {

@@ -96,7 +96,7 @@ const BRGM_DEFAULT = {
   wine: '此處為混合型沉積土壤，由風化基岩、河流沖積與細粒沉積物交織而成，排水與保水性介於砂質與黏質之間，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
 }
 
-function renderBRGMPopupHTML(descr, type, _codeGeol, region = '') {
+function renderBRGMPopupHTML(descr, type, _codeGeol, region = '', soilComposition = null) {
   let info = translateBRGM(descr, type)
   // 若未轉換成功（讀不到對應關鍵字）提供中文 fallback
   if (!info.wine) {
@@ -105,13 +105,24 @@ function renderBRGMPopupHTML(descr, type, _codeGeol, region = '') {
   // 套用各產區專屬描述（若有）
   const regionOverride = REGION_DESCR_OVERRIDE[region]
   const wineText = (regionOverride && regionOverride[info.zh]) ? regionOverride[info.zh] : info.wine
+  
+  // 土壤組成比例區塊（如果有數據）
+  const compositionHTML = soilComposition ? `
+    <div style="background:rgba(255,215,0,0.12);margin:6px 12px;padding:10px 12px;border-radius:8px;border-left:3px solid #FFD700;">
+      <div style="font-weight:700;font-size:12px;margin-bottom:4px;color:#FFD700;">📊 土壤組成比例</div>
+      <div style="font-size:13px;font-weight:600;color:#FFEB99;margin-bottom:4px;">${soilComposition.composition}</div>
+      <div style="font-size:11px;line-height:1.5;color:#e8efe8;opacity:0.9;">${soilComposition.description || ''}</div>
+    </div>
+  ` : ''
+  
   return `
-    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#1e3a2a 0%,#16291e 100%);color:#f5f1eb;min-width:240px;">
+    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#1e3a2a 0%,#16291e 100%);color:#f5f1eb;min-width:260px;max-width:340px;">
       <div style="padding:10px 14px;font-weight:700;font-size:14px;background:rgba(0,0,0,0.25);border-bottom:1px solid rgba(255,255,255,0.08);color:#fff;">🗺️ 地質資訊</div>
       <div style="display:flex;padding:8px 14px;gap:10px;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;">
         <span style="color:#a8d8a8;min-width:64px;">岩石類型</span>
         <span style="color:#fff;flex:1;">${info.zh}</span>
       </div>
+      ${compositionHTML}
       <div style="background:rgba(255,255,255,0.06);margin:10px 12px 12px;padding:10px 12px;border-radius:8px;border-left:3px solid #6fbf73;">
         <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:#c8f0c8;">${info.icon} ${info.zh}</div>
         <div style="font-size:12px;line-height:1.6;color:#e8efe8;">${wineText}</div>
@@ -147,6 +158,10 @@ export function useBRGMGeology(region = '') {
 
   // 目前裁切 mask 對應的產區 polygon（用於限制點擊範圍）
   let currentClipFeature = null
+  
+  // 土壤組成數據（從 JSON 文件載入）
+  let soilCompositionData = null
+  let currentAOCName = null
 
   // ── 遮罩：以 GeoJSON 邊界反轉遮蓋，只顯示邊界內的地質圖 ──────────
   function applyClipMask(map, geojson) {
@@ -187,15 +202,32 @@ export function useBRGMGeology(region = '') {
 
   // ── 公開方法：由外部傳入目前選取的 AOC GeoJSON ────────────────────
   // geojson = null 時隱藏地質圖（無選取）
-  function updateBRGMClip(map, geojson) {
+  // aocName = 當前 AOC 名稱（例如 'Pauillac_AOC'）
+  function updateBRGMClip(map, geojson, aocName = null) {
     if (!map || !brgmEnabled.value) return
-    if (!geojson) { hideClipMask(map); return }
+    console.log('[BRGM] updateBRGMClip 被調用，AOC:', aocName)
+    currentAOCName = aocName
+    if (!geojson) { hideClipMask(map); currentAOCName = null; return }
     applyClipMask(map, geojson)
   }
 
   async function loadBRGMLayer(map) {
     if (!map) return
     injectBRGMPopupBase()
+    
+    // 載入土壤組成數據（僅載入一次）
+    if (!soilCompositionData && region === 'bordeaux') {
+      try {
+        const response = await fetch('/data/bordeaux-soil-composition.json')
+        if (response.ok) {
+          soilCompositionData = await response.json()
+          console.log('[BRGM] 土壤組成數據已載入', Object.keys(soilCompositionData).length, '個群組')
+        }
+      } catch (err) {
+        console.warn('[BRGM] 無法載入土壤組成數據:', err)
+      }
+    }
+    
     if (map.getLayer('brgm-geology-layer')) return
     if (!map.getSource('brgm-geology-wms')) {
       map.addSource('brgm-geology-wms', {
@@ -219,12 +251,25 @@ export function useBRGMGeology(region = '') {
       layout: { visibility: 'none' },
       paint: { 'raster-opacity': brgmOpacity.value }
     })
+    // 若 updateBRGMClip 已在圖層新增前被呼叫（非同步載入土壤數據期間的競態），
+    // currentClipFeature 會已經設定 → 補上可見性，避免圖層永遠隱藏
+    if (brgmEnabled.value && currentClipFeature) {
+      map.setLayoutProperty('brgm-geology-layer', 'visibility', 'visible')
+    }
 
     if (!brgmClickRegistered) {
       map.on('click', async (e) => {
-        if (!brgmEnabled.value) return
-        if (map.getLayoutProperty('brgm-geology-layer', 'visibility') === 'none') return
+        console.log('[BRGM] 地圖點擊事件觸發')
+        if (!brgmEnabled.value) {
+          console.log('[BRGM] BRGM 未啟用，跳過')
+          return
+        }
+        if (map.getLayoutProperty('brgm-geology-layer', 'visibility') === 'none') {
+          console.log('[BRGM] 地質圖層不可見，跳過')
+          return
+        }
         const { lng, lat } = e.lngLat
+        console.log('[BRGM] 點擊座標:', { lng, lat })
         // 點擊只限選取產區範圍內（支援 FeatureCollection 與單一 Feature）
         if (currentClipFeature) {
           try {
@@ -266,12 +311,32 @@ export function useBRGMGeology(region = '') {
               codeGeol = getXmlValue(xmlDoc, 'CODE_GEOL')
             }
           } catch (_) {}
+          
+          // 查找當前 AOC 的土壤組成數據
+          let soilComp = null
+          if (soilCompositionData && currentAOCName) {
+            console.log('[BRGM] 正在查找土壤數據，AOC名稱:', currentAOCName)
+            // 遍歷所有群組找到匹配的 AOC
+            for (const group of Object.values(soilCompositionData)) {
+              if (group[currentAOCName]) {
+                soilComp = group[currentAOCName]
+                console.log('[BRGM] 找到土壤數據:', soilComp)
+                break
+              }
+            }
+            if (!soilComp) {
+              console.warn('[BRGM] 未找到 AOC 的土壤數據:', currentAOCName)
+            }
+          } else {
+            console.warn('[BRGM] 土壤數據或 AOC 名稱缺失:', { hasData: !!soilCompositionData, aocName: currentAOCName })
+          }
+          
           // 即使無資料也顯示中文 fallback popup
-          const html = renderBRGMPopupHTML(descr, type, codeGeol, region)
+          const html = renderBRGMPopupHTML(descr, type, codeGeol, region, soilComp)
           if (brgmPopup) brgmPopup.remove()
           brgmPopup = new mapboxgl.Popup({
             className: 'brgm-popup-wrap',
-            maxWidth: '320px',
+            maxWidth: '360px',
             closeButton: true
           })
             .setLngLat([lng, lat])

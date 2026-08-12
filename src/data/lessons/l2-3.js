@@ -114,6 +114,31 @@ export const l23Content = [
       explanation: 'Pauillac的深厚砂礫土壤排水性極佳，能儲存並反射熱量，非常適合晚熟的Cabernet Sauvignon。同時，貧瘠的特性迫使葡萄藤深扎根，從而獲得更複雜的風味。'
     }
   },
+  // ========== 2.5 土層剖面互動視覺化 ==========
+  {
+    title: 'Pauillac 土層剖面深度解析',
+    component: 'SoilProfileViewer',
+    componentProps: {
+      region: 'Pauillac',
+      title: 'Pauillac 土層剖面圖',
+      subtitle: '深達 30 米的古老砂礫層',
+      width: 600,
+      height: 700
+    },
+    highlights: [
+      { id: 1, icon: '🔬', title: '五層結構', content: '從表層砂礫到深層黏土基底的完整剖面' },
+      { id: 2, icon: '📊', title: '互動探索', content: '點擊各土層查看詳細組成與功能' },
+      { id: 3, icon: '🌡️', title: '熱循環', content: '觀察白天黑夜的熱量儲存與釋放過程' }
+    ],
+    presenterNotes: [
+      '💡 提示學生點擊土層查看詳細資訊',
+      '🎮 演示「播放動畫」功能，展示土層依序展開',
+      '☀️ 啟用「熱循環」動畫，解釋砂礫土壤的熱儲存能力',
+      '📌 重點：深厚的 Gunz 砂礫層（2-10米）是 Pauillac 的核心優勢',
+      '🌱 說明：貧瘠土壤迫使葡萄根系深扎，吸收深層礦物質',
+      '💧 強調：優異的排水性防止葡萄根部過濕，確保品質'
+    ]
+  },
   // ========== 3. 三大一級莊概覽 ==========
   {
     title: 'Pauillac的三大巨頭',

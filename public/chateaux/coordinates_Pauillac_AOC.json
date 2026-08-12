@@ -11,7 +11,8 @@
     "description_en": "One of Bordeaux's five First Growths and the Pauillac benchmark; supremely elegant with extraordinary ageing potential.",
     "rank_en": "1st Growth (Premier Grand Cru Classé 1855)",
     "rank_ja": "1855年 第1級格付け",
-    "description_ja": "ボルドー五大シャトーの一つ、ポイヤックを代表する頂点的存在。最高のエレガンスと驚異的な熟成力を誇る。"
+    "description_ja": "ボルドー五大シャトーの一つ、ポイヤックを代表する頂点的存在。最高のエレガンスと驚異的な熟成力を誇る。",
+    "soil": "礫石層深達 10 公尺，混風積沙與泥灰岩，底層為第三紀石灰岩，全園最深的礫石地塊之一。"
   },
   {
     "name": "Château Latour",
@@ -25,7 +26,8 @@
     "description_en": "Celebrated for rich structure and formidable ageing power; the most powerful First Growth in Pauillac.",
     "rank_en": "1st Growth (Premier Grand Cru Classé 1855)",
     "rank_ja": "1855年 第1級格付け",
-    "description_ja": "豊かな骨格と圧倒的な熟成力で名高い。ポイヤックで最も力強い第一特等格付けシャトー。"
+    "description_ja": "豊かな骨格と圧倒的な熟成力で名高い。ポイヤックで最も力強い第一特等格付けシャトー。",
+    "soil": "起伏礫石丘下藏有罕見的「膨潤黏土」，保水力遠高於一般波雅克礫石地，是酒體結構的關鍵來源。"
   },
   {
     "name": "Château Mouton Rothschild",
@@ -39,7 +41,8 @@
     "description_en": "Elevated to First Growth in 1973, world-famous for its artist-designed labels and opulent style.",
     "rank_en": "Premier Grand Cru Classé (1973)",
     "rank_ja": "Premier Grand Cru Classé (1973)",
-    "description_ja": "1973年に第一特等格付けに昇格。芸術家デザインのラベルと豊潤なスタイルで世界的に名高い。"
+    "description_ja": "1973年に第一特等格付けに昇格。芸術家デザインのラベルと豊潤なスタイルで世界的に名高い。",
+    "soil": "酒莊官方形容其風土「近乎100%純礫石」，表土貧瘠，底部為黏土-石灰岩層。"
   },
   {
     "name": "Château Pichon Baron",
@@ -53,7 +56,8 @@
     "description_en": "One of Pauillac's most representative Second Growths; rich-bodied and firmly structured.",
     "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
     "rank_ja": "1855年 第2級格付け",
-    "description_ja": "ポイヤックを代表する第二特等格付けの一つ。リッチなボディとしっかりとした骨格を持つ。"
+    "description_ja": "ポイヤックを代表する第二特等格付けの一つ。リッチなボディとしっかりとした骨格を持つ。",
+    "soil": "深層沙礫夾雜多處黏土囊，底層含牡蠣化石泥灰岩與 Sanois 黏土層，地質層次豐富。"
   },
   {
     "name": "Château Pichon Lalande",
@@ -67,7 +71,8 @@
     "description_en": "Known for its feminine elegance and finesse; a Second Growth of notable charm.",
     "rank_en": "2nd Growth (Deuxième Grand Cru Classé 1855)",
     "rank_ja": "1855年 第2級格付け",
-    "description_ja": "女性的なエレガンスと繊細さで名高い、魅力あふれる第二特等格付け。"
+    "description_ja": "女性的なエレガンスと繊細さで名高い、魅力あふれる第二特等格付け。",
+    "soil": "依品種精細分區：卡本內蘇維濃種在礫石丘頂，梅洛種在濕潤黏土上的沙礫層，波雅克少見的品種對位規劃。"
   },
   {
     "name": "Château Pontet-Canet",
@@ -81,7 +86,8 @@
     "description_en": "A pioneer in organic and biodynamic viticulture; quality has soared in recent years, rivalling Second Growths.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "オーガニック・ビオディナミ農法の先駆者。近年品質が急上昇し、第二特等格付けに匹敵する評価を受ける。"
+    "description_ja": "オーガニック・ビオディナミ農法の先駆者。近年品質が急上昇し、第二特等格付けに匹敵する評価を受ける。",
+    "soil": "主體為棍茲期（Günz）礫石台地覆於石灰岩床上，近河岸另有石灰岩裸露地塊，園內兩種地質單元並存。"
   },
   {
     "name": "Château Lynch-Bages",
@@ -95,7 +101,8 @@
     "description_en": "Known for rich fruit and structure; greatly prized by collectors.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "豊かな果実感と骨格で知られ、コレクターに高く評価される。"
+    "description_ja": "豊かな果実感と骨格で知られ、コレクターに高く評価される。",
+    "soil": "座落於名為「Batges」的礫石丘陵，均質深層礫石，排水穩定，是波雅克入口處的代表地塊。"
   },
   {
     "name": "Château Grand-Puy-Lacoste",
@@ -109,7 +116,8 @@
     "description_en": "Classic style and excellent value; an outstanding Fifth Growth in Pauillac.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "クラシックスタイルとコストパフォーマンスの高さで知られるポイヤック随一の第五特等格付け。"
+    "description_ja": "クラシックスタイルとコストパフォーマンスの高さで知られるポイヤック随一の第五特等格付け。",
+    "soil": "位於海拔約 20 公尺的礫石丘頂，礫石中僅摻少量黏土，田塊由排水溝渠「jalles」分隔。"
   },
   {
     "name": "Château Batailley",
@@ -123,7 +131,8 @@
     "description_en": "Known for firm structure and ageing potential; a traditional-style Pauillac.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "しっかりとした骨格と熟成ポテンシャルで知られる伝統的スタイルのポイヤック。"
+    "description_ja": "しっかりとした骨格と熟成ポテンシャルで知られる伝統的スタイルのポイヤック。",
+    "soil": "棍茲期深層古老礫石，混矽質與沙質成分，底層可見鐵質砂岩（alios）夾層。"
   },
   {
     "name": "Château Haut-Batailley",
@@ -137,7 +146,8 @@
     "description_en": "A branch of the Batailley family; refined and elegant, with steadily improving quality.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "バタイエ家の分家。洗練されたエレガントなスタイルで着実に品質を向上させている。"
+    "description_ja": "バタイエ家の分家。洗練されたエレガントなスタイルで着実に品質を向上させている。",
+    "soil": "礫石較細緻，底土為黏土與鐵質砂岩（alios）組合，質地介於礫石與黏土質之間。"
   },
   {
     "name": "Château Clerc Milon",
@@ -151,7 +161,8 @@
     "description_en": "Owned by the Rothschild family; rich in style with generous fruit.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "ロスチャイルド家所有。リッチなスタイルで果実豊かなワインを生産する。"
+    "description_ja": "ロスチャイルド家所有。リッチなスタイルで果実豊かなワインを生産する。",
+    "soil": "約三分之二為深層沙礫土，東側地塊底部黏土-石灰岩層會露出地表，園區土層變化較大。"
   },
   {
     "name": "Château Croizet-Bages",
@@ -165,7 +176,8 @@
     "description_en": "Firmly structured with abundant tannins; suited for long-term cellaring.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "しっかりとした骨格と豊富なタンニン。長期熟成向きのスタイル。"
+    "description_ja": "しっかりとした骨格と豊富なタンニン。長期熟成向きのスタイル。",
+    "soil": "深層礫石與沙礫土壤，公開資料與波雅克 AOC 通用風土描述相近，暫無獨特地質細節。"
   },
   {
     "name": "Château d'Armailhac",
@@ -179,7 +191,8 @@
     "description_en": "Neighbouring Mouton Rothschild; elegant style with excellent value.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "ムートン・ロートシルトの隣に位置し、エレガントなスタイルとコストパフォーマンスが魅力。"
+    "description_ja": "ムートン・ロートシルトの隣に位置し、エレガントなスタイルとコストパフォーマンスが魅力。",
+    "soil": "由四座地質迥異的礫石丘組成，其中皮布杭高地的深礫石覆於黏土-石灰岩底床，賦予酒款細緻優雅風格。"
   },
   {
     "name": "Château Duhart-Milon",
@@ -193,7 +206,8 @@
     "description_en": "A sister château of Lafite Rothschild; refined and elegant.",
     "rank_en": "4th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第4級格付け",
-    "description_ja": "ラフィット・ロートシルトの姉妹シャトー。洗練されたエレガントなスタイルを持つ。"
+    "description_ja": "ラフィット・ロートシルトの姉妹シャトー。洗練されたエレガントなスタイルを持つ。",
+    "soil": "延伸自拉菲卡呂雅德高地，地勢略低、坡向偏北，梅洛種植區黏土比例明顯高於拉菲本身。"
   },
   {
     "name": "Château Grand-Puy Ducasse",
@@ -207,7 +221,8 @@
     "description_en": "Classic style with good structure; a reliable Fifth Growth in Pauillac.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "クラシックなスタイルと良好な骨格を持つ信頼性の高い第五特等格付け。"
+    "description_ja": "クラシックなスタイルと良好な骨格を持つ信頼性の高い第五特等格付け。",
+    "soil": "60 個地塊涵蓋 11 種土壤類型，是波雅克內部土壤多樣性最高的酒莊之一，黏質沙礫地帶多留給梅洛。"
   },
   {
     "name": "Château Haut-Bages-Libéral",
@@ -221,7 +236,8 @@
     "description_en": "Rich and fruit-forward; quality has improved noticeably in recent years.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "リッチで果実豊か。近年品質が著しく向上している。"
+    "description_ja": "リッチで果実豊か。近年品質が著しく向上している。",
+    "soil": "分為緊鄰拉圖爾堡的黏土-石灰岩地塊（石灰岩塊具調節水分功能）與巴日高地深層棍茲期礫石地塊，雙軌並存。"
   },
   {
     "name": "Château Lynch-Moussas",
@@ -235,7 +251,8 @@
     "description_en": "Balanced and approachable; an excellent-value Pauillac estate.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "バランスの取れた親しみやすいスタイル。コストパフォーマンスに優れたポイヤック。"
+    "description_ja": "バランスの取れた親しみやすいスタイル。コストパフォーマンスに優れたポイヤック。",
+    "soil": "位於棍茲期礫石丘頂，風土描述與通用波雅克礫石地相近，區隔特徵有限。"
   },
   {
     "name": "Château Pédesclaux",
@@ -249,6 +266,7 @@
     "description_en": "Quality has improved rapidly under modern management; rich and full-bodied.",
     "rank_en": "5th Growth (Grand Cru Classé 1855)",
     "rank_ja": "1855年 第5級格付け",
-    "description_ja": "近代的経営のもと急速に品質が向上。リッチでフルボディなスタイルへと進化している。"
+    "description_ja": "近代的経営のもと急速に品質が向上。リッチでフルボディなスタイルへと進化している。",
+    "soil": "俯瞰波雅克市鎮的礫石台地，土壤呈現從最深層礫石到黏土-石灰岩的漸變鑲嵌，黏土賦予力道、礫石賦予細緻感。"
   }
 ]
