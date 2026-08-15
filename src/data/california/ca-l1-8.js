@@ -1,6 +1,8 @@
 /**
  * CA-L1-8 Level 1 綜合評量與品飲指南
- * 餐酒搭配、品飲技巧、Level 1 總複習測驗
+ * 品飲技巧、侍酒服務基礎、餐酒搭配、Level 1 總複習測驗
+ * 資料來源：discovercaliforniawines.com、通用侍酒服務溫度標準（WSET / Court of Master Sommeliers
+ * 教學慣例，交叉核對多方侍酒溫度指南）、本課程 CA-L1-1 至 CA-L1-7 內容整合
  */
 
 export const lessonContent = [
@@ -10,21 +12,25 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          恭喜您完成加州葡萄酒 Level 1 的所有課程！本最後一課將整合所有學習內容——從品飲技巧到餐酒搭配，從產區辨識到品種記憶——以一場全面的綜合評量來確認您的學習成果。
+          恭喜您完成加州葡萄酒 Level 1 的所有課程！本最後一課將整合所有學習內容——從系統化品飲技巧、侍酒服務基礎，到餐酒搭配原則，從產區辨識到品種記憶——以一場全面的綜合評量來確認您的學習成果，為進入 Level 2 的深度風土與釀造技術課程做好準備。
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
           <div class="point-item">
             <h4>🍷 系統化品飲技巧</h4>
-            <p>掌握 WSET 四步驟品飲法（觀察、嗅聞、品嚐、結論）</p>
+            <p>掌握四步驟品飲法（觀察、嗅聞、品嚐、結論）並應用於加州葡萄酒盲飲判斷</p>
+          </div>
+          <div class="point-item">
+            <h4>🌡️ 侍酒服務基礎</h4>
+            <p>了解正確的侍酒溫度、杯型選擇與醒酒原則</p>
           </div>
           <div class="point-item">
             <h4>🥩 加州葡萄酒餐酒搭配</h4>
-            <p>了解加州主要品種與食材的最佳搭配原則</p>
+            <p>了解餐酒搭配三大原則，以及加州主要品種與食材的最佳搭配</p>
           </div>
           <div class="point-item">
             <h4>📚 Level 1 總複習</h4>
-            <p>以 15 題綜合測驗確認加州葡萄酒 Level 1 全課程學習成果</p>
+            <p>以擴充版綜合測驗確認加州葡萄酒 Level 1 全課程（CA-L1-1 至 CA-L1-8）學習成果</p>
           </div>
         </div>
       </div>
@@ -33,6 +39,10 @@ export const lessonContent = [
 
   {
     title: '加州葡萄酒品飲技巧',
+    highlights: [
+      { id: 1, icon: '👁️', title: '四步驟品飲法', content: '觀察、嗅聞、品嚐、結論——建立系統化的品飲思考框架' },
+      { id: 2, icon: '🧠', title: '盲飲口訣', content: '用香氣、單寧、酸度組合快速鎖定加州品種與產區的可能範圍' }
+    ],
     content: `<div class="tasting-guide">
       <h3>🍷 系統化品飲加州葡萄酒</h3>
 
@@ -45,6 +55,7 @@ export const lessonContent = [
               <li><strong>顏色深淺：</strong>深色 = Cabernet、Petite Sirah；淡色 = Pinot Noir、Grenache</li>
               <li><strong>邊緣顏色：</strong>磚紅邊緣 = 陳年；紫紅 = 年輕</li>
               <li><strong>黏稠度（淚腳）：</strong>淚腳慢而厚 = 酒精高、甜度高</li>
+              <li><strong>白酒色澤：</strong>淡檸檬綠 = 未經橡木、年輕；金黃色 = 橡木陳年或成熟年份的 Chardonnay</li>
             </ul>
           </div>
         </div>
@@ -55,7 +66,8 @@ export const lessonContent = [
             <ul>
               <li><strong>第一印象（靜止）：</strong>不轉杯，感受最揮發的香氣（花香、清新果香）</li>
               <li><strong>轉杯後：</strong>感受更複雜的香氣（木質、香料、土壤感）</li>
-              <li><strong>加州紅酒識別：</strong>黑醋栗 + 橡木香草 = Napa Cab；草莓 + 海鹽 = 涼爽 Pinot；黑莓 + 胡椒 = Zinfandel</li>
+              <li><strong>加州紅酒識別：</strong>黑醋栗 + 橡木香草 = Napa Cab；草莓 + 海鹽 = 涼爽 Pinot；黑莓 + 胡椒 = Zinfandel；黑橄欖 + 煙燻 = Paso Robles Syrah</li>
+              <li><strong>加州白酒識別：</strong>奶油爆米花 + 烤蘋果 = 傳統 Chardonnay；柑橘 + 礦石 = 現代精緻 Chardonnay；百香果 + 萊姆 = 清爽 Sauvignon Blanc</li>
             </ul>
           </div>
         </div>
@@ -66,7 +78,7 @@ export const lessonContent = [
             <ul>
               <li><strong>酸度：</strong>感受口水分泌（高酸 = 涼爽氣候品種：Pinot、Chardonnay；低酸 = 溫暖氣候：Zinfandel、傳統 Chard）</li>
               <li><strong>單寧（紅酒）：</strong>乾澀感強 = 山地 Cab、Petite Sirah；絲滑 = Stags Leap Cab、Pinot Noir</li>
-              <li><strong>酒精熱感：</strong>喉嚨灼熱感——加州通常偏高（13.5-15%）</li>
+              <li><strong>酒精熱感：</strong>喉嚨灼熱感——加州通常偏高（13.5-15%，部分 Zinfandel 可達 17%）</li>
               <li><strong>果味濃縮度：</strong>果醬感 = 過熟或炎熱氣候；新鮮果香 = 涼爽年份 / 高海拔</li>
               <li><strong>餘韻長度：</strong>10 秒以上 = 優質葡萄酒的指標</li>
             </ul>
@@ -79,9 +91,11 @@ export const lessonContent = [
             <p>嘗試判斷：品種？產區？年份？品質等級？ 加州盲飲口訣：</p>
             <ul>
               <li>酒精高 + 黑果 + 橡木 → <strong>Napa Cab</strong></li>
-              <li>細緻紅果 + 高酸 + 絲滑 → <strong>Russian River Pinot</strong></li>
-              <li>黑莓 + 胡椒 + 高酒精 → <strong>Zinfandel（Dry Creek/Lodi）</strong></li>
-              <li>奶油 + 香草 + 豐厚 → <strong>傳統 California Chard</strong></li>
+              <li>細緻紅果 + 高酸 + 絲滑 → <strong>Russian River / Sta. Rita Hills Pinot</strong></li>
+              <li>黑莓 + 胡椒 + 高酒精 → <strong>Zinfandel（Dry Creek / Lodi / Amador）</strong></li>
+              <li>奶油 + 香草 + 豐厚 → <strong>傳統 California Chardonnay</strong></li>
+              <li>黑橄欖 + 紫羅蘭 + 煙燻 → <strong>Paso Robles / Santa Barbara Syrah</strong></li>
+              <li>石灰岩礦石感 + 極高酸 + 緊實單寧 → <strong>Santa Cruz Mountains Cabernet</strong></li>
             </ul>
           </div>
         </div>
@@ -90,10 +104,67 @@ export const lessonContent = [
   },
 
   {
+    title: '侍酒服務基礎：溫度、杯型與醒酒',
+    highlights: [
+      { id: 1, icon: '🌡️', title: '溫度決定風味表現', content: '過冷會掩蓋香氣，過熱會放大酒精灼熱感，是最容易被忽略的品飲變因' },
+      { id: 2, icon: '🍷', title: '醒酒的兩個目的', content: '年輕濃縮酒款用醒酒瓶「呼吸」軟化單寧；老酒用醒酒瓶「換瓶」分離沉澱物' }
+    ],
+    content: `<div class="service-basics">
+      <h3>🌡️ 侍酒溫度指南</h3>
+      <p>溫度是最容易被忽略、卻對品飲體驗影響最大的變因之一。過冷會掩蓋香氣與果味，過熱則會放大酒精灼熱感、模糊細節。以下為業界常見的服務溫度區間，可作為加州葡萄酒服務的參考起點：</p>
+      <table class="compare-table">
+        <thead>
+          <tr><th>酒款類型</th><th>建議溫度</th><th>加州範例</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>氣泡酒</td><td>約 6-9°C</td><td>Carneros / Anderson Valley Sparkling</td></tr>
+          <tr><td>清爽白酒</td><td>約 8-10°C</td><td>Sauvignon Blanc、精緻 Chardonnay</td></tr>
+          <tr><td>豐厚白酒</td><td>約 10-13°C</td><td>傳統橡木風格 Chardonnay</td></tr>
+          <tr><td>輕盈紅酒</td><td>約 12-14°C</td><td>涼爽氣候 Pinot Noir</td></tr>
+          <tr><td>中等酒體紅酒</td><td>約 14-16°C</td><td>Merlot、優雅風格 Cabernet</td></tr>
+          <tr><td>飽滿紅酒</td><td>約 16-18°C</td><td>Napa Cabernet、Zinfandel、Syrah</td></tr>
+        </tbody>
+      </table>
+      <div class="service-tips">
+        <h4>🍷 杯型與醒酒原則</h4>
+        <ul>
+          <li><strong>大肚杯（Bordeaux glass）：</strong>適合 Cabernet Sauvignon、Merlot 等結構感強的紅酒，杯身較高，讓香氣有充分空間聚集</li>
+          <li><strong>寬肚杯（Burgundy glass）：</strong>適合 Pinot Noir，寬口設計讓細緻香氣更快釋放</li>
+          <li><strong>笛型杯 / 鬱金香杯：</strong>適合氣泡酒，保留氣泡與香氣</li>
+          <li><strong>年輕、單寧緊實的酒款：</strong>建議醒酒 30 分鐘至 1 小時（如年輕 Napa Cab、山地 Cabernet），透過與空氣接觸軟化單寧、釋放香氣</li>
+          <li><strong>陳年老酒：</strong>醒酒（換瓶）主要目的是分離瓶底沉澱物，操作時應緩慢傾倒並避免過度搖晃，以免破壞脆弱的陳年香氣</li>
+        </ul>
+      </div>
+    </div>`
+  },
+
+  {
     title: '加州葡萄酒餐酒搭配指南',
+    highlights: [
+      { id: 1, icon: '⚖️', title: '搭配三原則', content: '酒體對應、酸度呼應、單寧與蛋白質／油脂的互動，是餐酒搭配最基本的邏輯框架' },
+      { id: 2, icon: '🍽️', title: 'California Cuisine 精神', content: '新鮮在地食材、跨文化融合料理，與加州葡萄酒的豐厚果味天生契合' }
+    ],
     content: `<div class="food-pairing">
       <h3>🍽️ 加州葡萄酒餐酒搭配</h3>
-      <p class="pairing-intro">加州飲食文化（California Cuisine）以新鮮食材、融合風格著稱，天然與加州葡萄酒的豐厚果味相得益彰。</p>
+      <p class="pairing-intro">加州飲食文化（California Cuisine）以新鮮食材、融合風格著稱，天然與加州葡萄酒的豐厚果味相得益彰。以下先建立三個基礎搭配原則，再對照具體酒款與菜式。</p>
+
+      <div class="pairing-principles">
+        <h4>⚖️ 餐酒搭配三大基礎原則</h4>
+        <div class="principle-grid">
+          <div class="principle-card">
+            <h5>1. 酒體對應（Weight Matching）</h5>
+            <p>清爽菜式配輕盈酒款（如生蠔配清爽 Sauvignon Blanc），濃郁菜式配飽滿酒款（如烤牛排配 Napa Cabernet），避免其中一方壓過另一方。</p>
+          </div>
+          <div class="principle-card">
+            <h5>2. 酸度呼應（Acid Matching）</h5>
+            <p>高酸度菜式（如檸檬海鮮、油醋沙拉）適合搭配同樣具備明亮酸度的酒款（如涼爽氣候 Chardonnay 或 Pinot Noir），酸度不足的酒會顯得平淡無力。</p>
+          </div>
+          <div class="principle-card">
+            <h5>3. 單寧與蛋白質 / 油脂互動</h5>
+            <p>紅肉的蛋白質和油脂能柔化紅酒的單寧澀感，因此高單寧酒款（如年輕 Cabernet）特別適合搭配油脂豐富的紅肉料理；反之清蒸海鮮應避免高單寧紅酒。</p>
+          </div>
+        </div>
+      </div>
 
       <div class="pairing-grid">
         <div class="pair-card">
@@ -113,7 +184,7 @@ export const lessonContent = [
         </div>
 
         <div class="pair-card">
-          <div class="wine-name">⚡ Dry Creek Zinfandel</div>
+          <div class="wine-name">⚡ Dry Creek / Lodi Zinfandel</div>
           <div class="food-match">
             <strong>最佳搭配：</strong>BBQ 豬肋排、辣味義大利香腸披薩、墨西哥烤肉（Carnitas）
           </div>
@@ -137,7 +208,7 @@ export const lessonContent = [
         </div>
 
         <div class="pair-card">
-          <div class="wine-name">☀️ Paso Robles Syrah</div>
+          <div class="wine-name">☀️ Paso Robles / Santa Barbara Syrah</div>
           <div class="food-match">
             <strong>最佳搭配：</strong>摩洛哥羊肉燉菜、黑橄欖牛排醬、地中海烤豬
           </div>
@@ -159,56 +230,123 @@ export const lessonContent = [
           </div>
           <div class="pairing-reason">氣泡和高酸度是油脂食物的最佳解膩</div>
         </div>
+
+        <div class="pair-card">
+          <div class="wine-name">🍇 Paso Robles Grenache / GSM 混釀</div>
+          <div class="food-match">
+            <strong>最佳搭配：</strong>烤雞腿排、番茄燉肉、西班牙 Tapas 拼盤
+          </div>
+          <div class="pairing-reason">中等酒體與柔和單寧不會壓過多層次的燉煮料理</div>
+        </div>
+
+        <div class="pair-card">
+          <div class="wine-name">🔥 Lodi Petite Sirah</div>
+          <div class="food-match">
+            <strong>最佳搭配：</strong>炭烤牛小排、黑胡椒牛排、濃郁藍紋乳酪
+          </div>
+          <div class="pairing-reason">緊實單寧與深色果味需要同樣濃厚的菜式才能平衡</div>
+        </div>
       </div>
+
+      <p class="pairing-note">💡 小提醒：以上搭配屬於 Level 1 基礎入門原則；更進階的動態搭配技巧（如醬汁主導原則、風土呼應、餐廳實務演練）將於 Level 3 的精緻餐飲搭配實作課程中深入探討。</p>
     </div>`
   },
 
   {
-    title: 'Level 1 總複習',
+    title: 'Level 1 總複習：歷史與 AVA 制度',
     content: `<div class="review-summary">
-      <h3>📚 加州葡萄酒 Level 1 核心知識總整理</h3>
+      <h3>📚 加州葡萄酒 Level 1 核心知識總整理（一）：歷史與制度</h3>
 
       <div class="review-section">
         <h4>📅 歷史里程碑</h4>
         <ul>
           <li>1769 年：西班牙傳教士種植第一批葡萄（San Diego）</li>
-          <li>1812 年：Sonoma 首批商業葡萄種植</li>
-          <li>1839 年：Napa Valley 首批葡萄</li>
-          <li>1880s：Phylloxera 毀滅第一代葡萄園</li>
+          <li>1839 年：Napa Valley 首批葡萄（George Yount）</li>
+          <li>1849 年：加州淘金熱（Gold Rush），帶動 Sierra Foothills 早期葡萄種植</li>
+          <li>1883 年：Livermore Valley 的 Wente 與 Concannon 兩大家族創立酒莊</li>
+          <li>1880s：Phylloxera（根瘤蚜）毀滅第一代葡萄園</li>
           <li>1919-1933：禁酒令（Prohibition）重創產業</li>
           <li>1966 年：Robert Mondavi Winery 創立，現代 Napa 葡萄酒的里程碑</li>
           <li>1976 年：巴黎評判（Judgment of Paris）——紅酒冠軍：Stag's Leap Wine Cellars；白酒冠軍：Chateau Montelena</li>
-          <li>1981 年：Napa Valley 成為加州第一個 AVA</li>
-          <li>2024 年：加州共有 154+ 個 AVA</li>
+          <li>1981 年：Napa Valley 成為加州第一個 AVA；同年 Santa Cruz Mountains、Santa Maria Valley 等 AVA 也相繼設立</li>
+          <li>1987 年：Sierra Foothills AVA 正式設立，整合 6 個子產區</li>
+          <li>1989 年：Tablas Creek Vineyard 於 Paso Robles 創立，開啟 Rhône Rangers 運動</li>
+          <li>1991 年：Lodi Winegrape Commission 成立，後續推動 LODI RULES 永續認證</li>
+          <li>2006 年：Lodi 內部核准 7 個子 AVA；同年 Santa Cruz Mountains 的 Ridge 1971 年份 Monte Bello 在「巴黎評判 30 週年重賽」中奪冠</li>
+          <li>2014 年：Paso Robles 一次核准 11 個子 AVA；同年 Malibu Coast AVA 也正式設立</li>
         </ul>
       </div>
 
       <div class="review-section">
-        <h4>🗺️ 六大產區群</h4>
+        <h4>📜 AVA 制度速記</h4>
+        <ul>
+          <li>AVA 只規範地理邊界與最低比例（85% 原料需來自標示產區），不像法國 AOC 那樣規範品種、產量與釀造方式</li>
+          <li>加州目前已有超過 150 個 AVA，且數量持續增加</li>
+          <li>AVA 之下可再劃分子 AVA（如 Napa Valley 之下有 16 個子 AVA），形成州 → 產區群 → AVA → 子 AVA 的層級結構</li>
+        </ul>
+      </div>
+    </div>`
+  },
+
+  {
+    title: 'Level 1 總複習：六大產區與子產區地圖',
+    content: `<div class="review-summary">
+      <h3>📚 加州葡萄酒 Level 1 核心知識總整理（二）：產區地圖</h3>
+
+      <div class="review-section">
+        <h4>🗺️ 六大產區群與代表子產區</h4>
         <div class="review-table">
-          <table>
-            <thead><tr><th>產區群</th><th>代表 AVA</th><th>主要品種</th><th>氣候特性</th></tr></thead>
+          <table class="compare-table">
+            <thead><tr><th>產區群</th><th>代表 AVA / 子產區</th><th>主要品種</th><th>氣候特性</th></tr></thead>
             <tbody>
-              <tr><td>北海岸（North Coast）</td><td>Napa Valley、Sonoma County、Mendocino</td><td>Cab Sauv、Pinot Noir、Chard</td><td>地中海型，受海霧調節</td></tr>
-              <tr><td>中央海岸（Central Coast）</td><td>Paso Robles、Santa Barbara、Santa Cruz Mtns</td><td>Syrah、Pinot Noir、Cab Sauv</td><td>涼爽至溫和，橫向山谷</td></tr>
-              <tr><td>Sierra Foothills</td><td>El Dorado、Amador County</td><td>Zinfandel（老藤）、Barbera</td><td>山地大陸性，晝夜溫差大</td></tr>
-              <tr><td>中央谷地（Inland Valleys）</td><td>Lodi</td><td>Zinfandel、Cab Sauv</td><td>溫暖乾燥，海洋涼風</td></tr>
-              <tr><td>南加州（Southern CA）</td><td>Temecula Valley</td><td>多元品種</td><td>亞熱帶，涼風影響</td></tr>
-              <tr><td>遠北加州（Far North CA）</td><td>Trinity County</td><td>Petite Sirah、Grenache</td><td>高海拔，偏涼</td></tr>
+              <tr><td>北海岸（North Coast）</td><td>Napa Valley（16 子 AVA）、Sonoma County（19 個 AVA）</td><td>Cab Sauv、Pinot Noir、Chardonnay</td><td>地中海型，受海霧調節</td></tr>
+              <tr><td>中央海岸（Central Coast）</td><td>Paso Robles（11 子 AVA）、Santa Barbara（Sta. Rita Hills、Ballard Canyon）、Santa Cruz Mountains、Monterey（Santa Lucia Highlands）、Livermore Valley</td><td>Syrah、Grenache、Pinot Noir、Cab Sauv</td><td>涼爽至溫和，橫向山谷與強風效應</td></tr>
+              <tr><td>Sierra Foothills</td><td>El Dorado、California Shenandoah Valley、Fiddletown</td><td>Zinfandel（老藤）、Barbera</td><td>山地大陸性，晝夜溫差大</td></tr>
+              <tr><td>中央谷地（Inland Valleys）</td><td>Lodi（7 子 AVA）、Madera</td><td>Zinfandel、Cab Sauv、Chardonnay</td><td>溫暖乾燥，部分受三角洲涼風調節</td></tr>
+              <tr><td>南加州（Southern CA）</td><td>Temecula Valley、Malibu Coast、Ramona Valley</td><td>多元品種，Rhône 與 Bordeaux 品種並重</td><td>地中海型，山口缺口帶來涼風</td></tr>
+              <tr><td>遠北加州（Far North CA）</td><td>Trinity County、Shasta County</td><td>Petite Sirah、Grenache</td><td>高海拔，偏涼，仍在拓荒階段</td></tr>
             </tbody>
           </table>
         </div>
       </div>
 
       <div class="review-section">
+        <h4>🌊 Mendocino & Lake County 速記</h4>
+        <ul>
+          <li>Anderson Valley（1983 年設立）：世界級 Pinot Noir、氣泡酒（Roederer Estate）與 Alsatian 品種</li>
+          <li>Mendocino Ridge（1997 年設立）：全美唯一以海拔劃界的「島嶼型」AVA</li>
+          <li>Lake County：火山紅土壤（Red Hills，2004 年設立）與高海拔（High Valley，2005 年設立）是兩大關鍵字</li>
+        </ul>
+      </div>
+    </div>`
+  },
+
+  {
+    title: 'Level 1 總複習：品種與克隆記憶卡',
+    content: `<div class="review-summary">
+      <h3>📚 加州葡萄酒 Level 1 核心知識總整理（三）：品種與克隆</h3>
+
+      <div class="review-section">
         <h4>🍇 重要品種記憶卡</h4>
         <div class="variety-cards-mini">
-          <div class="vcm">Cab Sauv → Napa Valley 王者，黑醋栗，橡木，15%</div>
-          <div class="vcm">Chardonnay → 兩種風格（奶油款 / 礦石款），Livermore 基因</div>
-          <div class="vcm">Pinot Noir → 涼爽氣候，Russian River / Sta. Rita Hills，草莓，高酸</div>
-          <div class="vcm">Zinfandel → 加州靈魂，Dry Creek / Lodi 老藤，黑莓胡椒，高酒精</div>
-          <div class="vcm">Syrah → Paso Robles / Santa Barbara，Rhône 風格，香料橄欖</div>
+          <div class="vcm">Cab Sauv → Napa Valley 王者，黑醋栗，橡木，13.5-15%，Clone 4／6／169／337</div>
+          <div class="vcm">Chardonnay → 兩種風格（奶油款／礦石款），Wente Clone（Clone 4）是基因源頭</div>
+          <div class="vcm">Pinot Noir → 涼爽氣候，Russian River／Sta. Rita Hills，草莓，高酸，Dijon 667／777／115</div>
+          <div class="vcm">Zinfandel → 加州靈魂，Dry Creek／Lodi／Amador 老藤，黑莓胡椒，高酒精，DNA 溯源克羅地亞</div>
+          <div class="vcm">Merlot → Dan Duckhorn「Mr. Merlot」，1976 年創立 Duckhorn Vineyards</div>
+          <div class="vcm">Syrah → Paso Robles／Santa Barbara，Rhône 風格，香料橄欖</div>
+          <div class="vcm">Petite Sirah → 本名 Durif，Syrah × Peloursin 雜交，法國幾近絕跡卻在加州發揚光大</div>
+          <div class="vcm">Grenache → Rhône Rangers 運動核心品種，Ballard Canyon／Paso Robles 西側佳</div>
         </div>
+      </div>
+
+      <div class="review-section">
+        <h4>🌡️ 侍酒與搭配快速複習</h4>
+        <ul>
+          <li>紅酒服務溫度依酒體遞增：輕盈 12-14°C → 飽滿 16-18°C</li>
+          <li>白酒與氣泡酒需更低溫：清爽白酒 8-10°C，氣泡酒 6-9°C</li>
+          <li>餐酒搭配三原則：酒體對應、酸度呼應、單寧與蛋白質／油脂互動</li>
+        </ul>
       </div>
     </div>`
   },
@@ -254,7 +392,7 @@ export const lessonContent = [
             question: '哪部電影讓 Santa Barbara County 的 Pinot Noir 聲名大噪？',
             options: ['A. Bottle Shock（2008）', 'B. Sideways（2004）', 'C. Wine Country（2019）', 'D. Somm（2012）'],
             correct: 1,
-            explanation: '2004 年電影《Sideways》在 Santa Barbara 葡萄酒鄉拍攝，主角 Miles 對 Pinot Noir 的激情讚美（以及對 Merlot 的拒絕）使全美 Pinot Noir 銷量暴增約 50%，Merlot 銷量則短暫下滑。'
+            explanation: '2004 年電影《Sideways》在 Santa Barbara 葡萄酒鄉拍攝，主角 Miles 對 Pinot Noir 的激情讚美（以及對 Merlot 的拒絕）使全美 Pinot Noir 銷量顯著攀升，Merlot 銷量則短暫下滑。'
           },
           {
             type: 'single',
@@ -268,14 +406,14 @@ export const lessonContent = [
             question: 'Zinfandel 的 DNA 最終追溯至哪個國家的原生品種？',
             options: ['A. 法國', 'B. 義大利', 'C. 克羅地亞', 'D. 西班牙'],
             correct: 2,
-            explanation: 'DNA 研究追溯出 Zinfandel 與克羅地亞的 Crljenak Kaštelanski（又名 Tribidrag）完全相同，最原始的基因根源在克羅地亞的 Dalmatia 海岸。'
+            explanation: 'DNA 研究追溯出 Zinfandel 與克羅地亞的 Crljenak Kaštelanski（又名 Tribidrag）完全相同，最原始的基因根源在克羅地亞的 Dalmatia 海岸，與義大利 Primitivo 也是同一品種。'
           },
           {
             type: 'single',
             question: 'Tablas Creek Vineyard（Paso Robles）是由哪個法國名莊合資，在加州推廣 Rhône 品種種植的？',
             options: ['A. Château Margaux', 'B. Château Beaucastel', 'C. Domaine de la Romanée-Conti', 'D. Château Pétrus'],
             correct: 1,
-            explanation: 'Tablas Creek Vineyard 由 Haas 家族和法國 Rhône 名莊 Château Beaucastel（法定產區 Châteauneuf-du-Pape）合資創立，從法國引進並推廣 Rhône 品種在加州的種植。'
+            explanation: 'Tablas Creek Vineyard 由 Robert Haas 家族和法國 Rhône 名莊 Château de Beaucastel（法定產區 Châteauneuf-du-Pape）的 Perrin 家族於 1989 年合資創立，1994 年起自法國引進並推廣 Rhône 品種在加州的種植。'
           },
           {
             type: 'single',
@@ -294,9 +432,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '加州 Chardonnay 的「Wente Clone」典故是指什麼？',
-            options: ['A. Ridge Winery 研發的 Chardonnay 克隆', 'B. C.H. Wente 1880 年代從布根地引進的 Chardonnay 克隆，成為加州 80% Chardonnay 的基因來源', 'C. 加州大學 Davis 分校培育的實驗克隆', 'D. 禁酒令後重新引進的 Chardonnay 品種'],
+            options: ['A. Ridge Winery 研發的 Chardonnay 克隆', 'B. C.H. Wente 1880 年代從布根地引進的 Chardonnay 克隆，是加州種植面積最大的 Chardonnay 克隆之一', 'C. 加州大學 Davis 分校培育的實驗克隆', 'D. 禁酒令後重新引進的 Chardonnay 品種'],
             correct: 1,
-            explanation: 'Wente Clone 是指 C.H. Wente 在 1880 年代從布根地引進的 Chardonnay 克隆株，種植於 Livermore Valley。這批克隆後來成為整個加州 Chardonnay 種植的主要基因來源，加州約 80% 的 Chardonnay 可追溯至此。'
+            explanation: 'Wente Clone 是指 C.H. Wente 在 1880 年代從布根地引進的 Chardonnay 種苗，種植於 Livermore Valley，經 UC Davis 除毒篩選後編號為 Clone 4。這批克隆後來成為加州種植面積最大的 Chardonnay 克隆之一，1936 年 Wente 更率先在酒標標示品種名。'
           },
           {
             type: 'single',
@@ -310,14 +448,14 @@ export const lessonContent = [
             question: 'Dry Creek Valley（Sonoma）最著名的品種和土壤特色是什麼？',
             options: ['A. Pinot Noir，Goldridge 細沙壤土', 'B. Zinfandel（含老藤），礫石土壤（Benchland Gravels）', 'C. Cabernet Sauvignon，火山岩', 'D. Chardonnay，石灰岩'],
             correct: 1,
-            explanation: 'Dry Creek Valley 以老藤 Zinfandel 著稱，礫石和黏土混合土壤帶來完美的排水性，有些葡萄藤已超過 100 年歷史，釀造出濃郁黑果、香料和胡椒感的加州最具特色 Zinfandel。'
+            explanation: 'Dry Creek Valley 以老藤 Zinfandel 著稱，礫石和黏土混合土壤帶來完美的排水性，有些葡萄藤已超過百年歷史，釀造出濃郁黑果、香料和胡椒感的加州最具特色 Zinfandel。'
           },
           {
             type: 'single',
-            question: '以下哪個子 AVA 以「高海拔 + 石灰岩土壤 + 陳年潛力超強的 Cabernet」著稱，曾在巴黎評判 30 周年重賽中名列前茅？',
+            question: '以下哪個子 AVA 以「高海拔 + 石灰岩土壤 + 陳年潛力超強的 Cabernet」著稱，曾在巴黎評判 30 週年重賽中奪冠？',
             options: ['A. Napa Valley Oakville', 'B. Santa Cruz Mountains（Ridge Monte Bello）', 'C. Paso Robles Adelaida District', 'D. Russian River Valley'],
             correct: 1,
-            explanation: 'Ridge Monte Bello 位於 Santa Cruz Mountains，海拔約 800 公尺，擁有加州罕見的石灰岩土壤，帶來極高的天然酸度和礦石感。其 Cabernet Sauvignon 陳年潛力可達 20-40 年，在 2006 年「巴黎評判 30 周年重賽」中，1971 年份奪得冠軍。'
+            explanation: 'Ridge Monte Bello 位於 Santa Cruz Mountains，海拔約 400-820 公尺，擁有加州罕見的石灰岩與綠岩土壤，帶來極高的天然酸度和礦石感。其 Cabernet Sauvignon 陳年潛力可達 20-40 年，2006 年「巴黎評判 30 週年重賽」中，1971 年份奪得冠軍。'
           },
           {
             type: 'single',
@@ -325,6 +463,34 @@ export const lessonContent = [
             options: ['A. 豐厚果醬口感、低酸度、高酒精（15%）、濃重橡木', 'B. 明亮草莓和覆盆子、高酸度、細膩單寧、優雅花香、餘韻帶礦石感', 'C. 黑醋栗、黑莓、重單寧、飽滿結構', 'D. 香草冰淇淋、奶油烤蘋果、低酸度、奶油口感'],
             correct: 1,
             explanation: '涼爽氣候加州 Pinot Noir（如 Russian River Valley、Sonoma Coast、Sta. Rita Hills）的典型特徵是：明亮的草莓和覆盆子果香、高天然酸度、細膩絲滑的單寧、玫瑰和薰衣草的花香，以及礦石感的餘韻。'
+          },
+          {
+            type: 'single',
+            question: 'Paso Robles 於 2014 年一次核准了幾個官方子 AVA？',
+            options: ['A. 5 個', 'B. 7 個', 'C. 9 個', 'D. 11 個'],
+            correct: 3,
+            explanation: '美國菸酒稅務貿易局（TTB）於 2014 年一次核准 Paso Robles 內部 11 個子 AVA（含 Adelaida District、Willow Creek District、Templeton Gap District 等），是加州近代規模最大的產區細分之一。'
+          },
+          {
+            type: 'single',
+            question: 'Petite Sirah 這個品種本名叫什麼？其血統是哪兩個品種的雜交後代？',
+            options: ['A. Primitivo；Zinfandel × Grenache', 'B. Durif；Syrah × Peloursin', 'C. Mourvèdre；Grenache × Cinsault', 'D. Tannat；Cabernet × Merlot'],
+            correct: 1,
+            explanation: 'Petite Sirah 本名 Durif，是 1880 年代法國植物學家 François Durif 發現的 Syrah 與 Peloursin 天然雜交後代，引入美國後改稱 Petite Sirah，在法國本土幾乎絕跡，卻在加州（尤其 Lodi）發揚光大。'
+          },
+          {
+            type: 'single',
+            question: '根據餐酒搭配三大基礎原則，清蒸海鮮料理最應該避免搭配以下哪種酒款？',
+            options: ['A. 清爽 Sauvignon Blanc', 'B. 涼爽氣候 Chardonnay', 'C. 年輕高單寧 Cabernet Sauvignon', 'D. 氣泡酒'],
+            correct: 2,
+            explanation: '根據「單寧與蛋白質／油脂互動」原則，高單寧紅酒需要紅肉的蛋白質和油脂來柔化澀感；清蒸海鮮質地細緻、缺乏油脂，搭配高單寧紅酒會讓單寧顯得粗澀突兀，應優先選擇清爽白酒或氣泡酒。'
+          },
+          {
+            type: 'single',
+            question: 'Lodi AVA 於哪一年核准了內部的 7 個子 AVA？',
+            options: ['A. 1991 年', 'B. 2001 年', 'C. 2006 年', 'D. 2014 年'],
+            correct: 2,
+            explanation: 'TTB 於 2006 年核准 Lodi 內部 7 個子 AVA：Mokelumne River、Clements Hills、Alta Mesa、Borden Ranch、Cosumnes River、Jahant、Sloughhouse，反映其土壤與微氣候的多樣性。'
           }
         ]
       }
