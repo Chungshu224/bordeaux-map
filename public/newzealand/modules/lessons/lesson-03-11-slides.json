@@ -4,7 +4,7 @@
       "id": 1,
       "type": "cover",
       "title": "Martinborough 代表酒莊與風格",
-      "subtitle": "認識精品小酒莊與其獨特釀酒哲學",
+      "subtitle": "從 1978 年的土壤研究到今日的世界級精品酒莊",
       "icon": "🏆",
       "background": "linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%)"
     },
@@ -13,62 +13,91 @@
       "type": "content",
       "title": "Martinborough 酒莊特色",
       "content": [
-        { "type": "text", "text": "Martinborough 以家族經營的小型精品酒莊為主，強調手工釀造、低產量與風土表現。許多酒莊由葡萄酒愛好者創立，注重品質勝於產量。" }
+        { "type": "text", "text": "Martinborough 以家族經營的小型精品酒莊為主，強調手工釀造、低產量與風土表現。多數第一代酒莊由葡萄酒愛好者於 1970 年代末至 1980 年代初創立，注重品質勝於產量，形成了迄今仍主導產區精神的『開拓者文化』。" }
       ],
       "icon": "🏡"
     },
     {
       "id": 3,
-      "type": "feature",
-      "title": "經典酒莊風格取向",
-      "icon": "🎯",
-      "features": [
-        { "title": "傳統勃艮第風格", "description": "強調優雅、細膩與陳年潛力，使用法國橡木桶與天然酵母。", "icon": "🇫🇷" },
-        { "title": "現代果香風格", "description": "注重純淨果香與易飲性，適合較早飲用。", "icon": "✨" },
-        { "title": "生物動力實踐", "description": "部分酒莊採用生物動力法，追求最自然的風土表現。", "icon": "🌙" }
-      ],
-      "quiz": {
-        "question": "Martinborough 酒莊常見的兩種釀酒風格為何？",
-        "options": ["甜酒與氣泡酒", "傳統勃艮第風格與現代果香風格", "清甜型白酒與加烈酒", "起泡酒與加香酒"],
-        "correct": 1,
-        "explanation": "Martinborough 的酒莊常見風格有偏向傳統勃艮第的優雅陳年款，也有追求明亮果香的現代風格，兩者並存於區內不同酒莊。"
-      }
+      "type": "timeline",
+      "title": "開拓者時間軸",
+      "subtitle": "從一份土壤研究報告到五家先驅酒莊",
+      "icon": "📜",
+      "items": [
+        { "year": "1978年", "text": "土壤學家 Derek Milne 發表研究，指出 Martinborough Terrace 的氣候與土壤與勃艮第相似，Pinot Noir 最有潛力。" },
+        { "year": "1979年", "text": "牛津化學博士 Neil McCallum 創立 Dry River，成為產區第一家商業酒莊。" },
+        { "year": "1980年", "text": "Clive Paton 創立 Ata Rangi；同年 Derek Milne 與夥伴共同創立 Martinborough Vineyard，兩者與 Dry River、Chifney、Te Kairanga 並稱『開拓五雄』。" },
+        { "year": "1984年", "text": "Richard Riddiford 創立 Palliser Estate，成為產區規模較大的代表酒莊之一。" },
+        { "year": "1999年", "text": "Craggy Range 在 Martinborough 市區以東闢建 Te Muna Road 葡萄園，標誌產區邁入現代精品投資階段。" }
+      ]
     },
     {
       "id": 4,
-      "type": "content",
-      "title": "知名酒莊案例",
-      "content": [
-        { "type": "text", "text": "Martinborough 擁有多家獲國際認可的精品酒莊，如 Ata Rangi、Dry River、Martinborough Vineyard 等，各具特色但都以高品質 Pinot Noir 著稱." }
+      "type": "feature",
+      "title": "開拓先驅酒莊 I：Ata Rangi 與 Dry River",
+      "icon": "🌅",
+      "features": [
+        { "title": "Ata Rangi（1980年創立）", "description": "由前酪農 Clive Paton 買下五公頃石礫牧地創立，是產區最知名的拓荒酒莊之一。首批種植即包含傳說源自法國 DRC La Tâche 走私穗條的 Abel 克隆。招牌 Pinot Noir 混調自六座自家葡萄園，單一園 McCrone 展現更集中的地塊個性，副牌 Crimson 則提供更平易近人的入門選擇；主要葡萄園自 2014 年起陸續取得有機認證。", "icon": "🌅" },
+        { "title": "Dry River（1979年創立）", "description": "由牛津化學博士 Neil McCallum 與妻子 Dawn 創立，是產區最早成立的商業酒莊，也是紐西蘭最具傳奇色彩的『郵購酒莊』——僅透過會員名單限量銷售。除了細緻耐陳的單一園 Pinot Noir，亦以貴腐 Riesling、Pinot Gris 與 Gewürztraminer 等白酒聞名，並釀有名為 Twelve Spies 的紅酒混調。", "icon": "🏜️" }
       ],
-      "icon": "🌟",
       "quiz": {
-        "question": "下列哪一家不是 Martinborough 的代表酒莊？",
-        "options": ["Ata Rangi", "Dry River", "Kumeu River", "Martinborough Vineyard"],
+        "question": "Dry River 酒莊由誰於 1979 年創立，成為 Martinborough 最早的商業酒莊？",
+        "options": ["Clive Paton", "Derek Milne", "Neil McCallum", "Richard Riddiford"],
         "correct": 2,
-        "explanation": "Kumeu River 位於 Auckland 附近，以 Chardonnay 著名；而 Ata Rangi、Dry River 與 Martinborough Vineyard 為 Martinborough 的代表酒莊。"
+        "explanation": "Dry River 由牛津訓練的化學博士 Neil McCallum 與妻子 Dawn 於 1979 年創立，是 Martinborough 第一家商業酒莊，早於 1980 年成立的 Ata Rangi 與 Martinborough Vineyard。"
       }
     },
     {
       "id": 5,
       "type": "feature",
-      "title": "酒莊釀造哲學差異",
-      "icon": "🎨",
+      "title": "開拓先驅酒莊 II：Martinborough Vineyard 與 Palliser Estate",
+      "icon": "🏛️",
       "features": [
-        { "title": "地塊表現", "description": "單一葡萄園酒款展現特定風土特性。", "icon": "🪨" },
-        { "title": "混釀平衡", "description": "混合不同地塊以達到複雜度與平衡。", "icon": "⚖️" },
-        { "title": "最低干預", "description": "自然發酵、不過濾、低二氧化硫添加。", "icon": "🌿" }
-      ]
+        { "title": "Martinborough Vineyard（1980年創立）", "description": "由發表關鍵土壤研究的 Derek Milne，與 Duncan Milne、Claire Campbell、Russell 與 Sue Schultz 共同創立。1980 年種下的 Home Block 葡萄園，是紐西蘭現存最古老的 Pinot Noir 老藤之一；頂級酒款 Marie Zelie（首釀於 2006 年）以 1880 年代 Wairarapa 拓荒女性命名，向產區釀酒史致敬。", "icon": "🏛️" },
+        { "title": "Palliser Estate（1984年創立）", "description": "由 Wairarapa 拓荒家族後代 Richard Riddiford 創立，是產區規模較大的酒莊之一，以優質 Sauvignon Blanc 與 Pinot Noir 並重見長。副牌 Pencarrow 以親民價格呈現產區風格，是許多人認識 Martinborough 的入門酒款。", "icon": "⛵" }
+      ],
+      "quiz": {
+        "question": "Martinborough Vineyard 的 Home Block 葡萄園具有什麼特殊地位？",
+        "options": ["紐西蘭種植面積最大的葡萄園", "紐西蘭現存最古老的 Pinot Noir 老藤之一", "全紐西蘭海拔最高的葡萄園", "唯一種植白蘇維濃的地塊"],
+        "correct": 1,
+        "explanation": "Home Block 是 Martinborough Vineyard 於創立當年（1980年）種下的原始葡萄園，其 Pinot Noir 老藤被視為紐西蘭現存最古老的 Pinot Noir 種植地之一。"
+      }
     },
     {
       "id": 6,
       "type": "content",
+      "title": "新世代代表：Craggy Range Te Muna Road Vineyard",
+      "content": [
+        { "type": "text", "text": "1999 年，Craggy Range 由澳裔美籍企業家 Terry Peabody 於 Martinborough 市區以東約 7 公里處闢建 Te Muna Road 葡萄園。這是產區內少數橫跨三層不同年代古河階的葡萄園，涵蓋各異的礫石與黏土沉積層，種植超過十種不同 Pinot Noir 克隆，分區採收、分開釀造後再行調配，展現地塊拼圖般的風土複雜度，代表了 Martinborough 從 1980 年代拓荒精神邁向現代精品投資的下一個階段。" }
+      ],
+      "icon": "🧭",
+      "quiz": {
+        "question": "Craggy Range 的 Te Muna Road 葡萄園在地形上有何獨特之處？",
+        "options": ["是產區唯一橫跨三層古河階地形的葡萄園", "是唯一種植於平原低地的葡萄園", "完全沒有礫石土壤", "是產區最早成立的葡萄園"],
+        "correct": 0,
+        "explanation": "Te Muna Road Vineyard 是 Martinborough 少數橫跨三層不同年代河階地形的葡萄園，讓同一莊園內就能展現多樣的土壤與微氣候組合。"
+      }
+    },
+    {
+      "id": 7,
+      "type": "feature",
+      "title": "酒莊釀造哲學差異",
+      "icon": "🎨",
+      "features": [
+        { "title": "地塊表現", "description": "單一葡萄園酒款展現特定風土特性，如 Ata Rangi 的 McCrone。", "icon": "🪨" },
+        { "title": "混釀平衡", "description": "混合不同地塊以達到複雜度與平衡，如 Ata Rangi 的招牌 Pinot Noir。", "icon": "⚖️" },
+        { "title": "最低干預", "description": "自然發酵、不過濾、低二氧化硫添加，是多數開拓酒莊共同的釀造哲學。", "icon": "🌿" }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "content",
       "title": "如何從酒標判讀風格",
       "content": [
         { "type": "stats", "items": [
-          { "label": "Single Vineyard", "value": "標示特定葡萄園名稱，風格更精準集中", "icon": "📍" },
-          { "label": "Reserve / Premium", "value": "通常代表最佳地塊或精選桶陳", "icon": "⭐" },
-          { "label": "有機/生物動力認證", "value": "標示認證標章，強調自然栽培", "icon": "🌱" }
+          { "label": "Single Vineyard", "value": "標示特定葡萄園名稱，如 McCrone、Te Muna Road，風格更精準集中", "icon": "📍" },
+          { "label": "Reserve / Premium", "value": "通常代表最佳地塊或精選桶陳，如 Martinborough Vineyard 的 Marie Zelie", "icon": "⭐" },
+          { "label": "副牌 / 入門系列", "value": "如 Ata Rangi 的 Crimson、Palliser Estate 的 Pencarrow，親民易飲", "icon": "🌱" }
         ] }
       ],
       "icon": "🔍",
@@ -80,27 +109,27 @@
       }
     },
     {
-      "id": 7,
+      "id": 9,
       "type": "timeline",
       "title": "品鑑不同風格酒莊的建議順序",
+      "icon": "🥂",
       "items": [
-        { "year": "入門款", "text": "從村莊級或基本款開始，了解產區基本風格。" },
-        { "year": "單一葡萄園", "text": "品嚐特定地塊，理解風土差異。" },
-        { "year": "頂級 Reserve", "text": "體驗酒莊最高表現與陳年潛力。" },
-        { "year": "陳年酒款", "text": "若有機會，品嚐 5-10 年陳年酒了解發展。" }
-      ],
-      "icon": "🥂"
+        { "year": "入門款", "text": "從 Pencarrow 或 Crimson 等副牌開始，了解產區基本風格。" },
+        { "year": "村莊 / 產區級", "text": "品嚐 Palliser Estate、Martinborough Vineyard 等經典款，建立風格參照。" },
+        { "year": "單一葡萄園", "text": "比較 Ata Rangi McCrone 與 Craggy Range Te Muna Road，理解地塊差異。" },
+        { "year": "頂級陳年款", "text": "若有機會，品嚐 Dry River 或 Marie Zelie 等陳年 5-10 年的酒款，感受發展潛力。" }
+      ]
     },
     {
-      "id": 8,
+      "id": 10,
       "type": "summary",
       "title": "重點總結",
       "icon": "🔑",
       "points": [
-        "Martinborough 以小型家族精品酒莊為特色",
-        "風格從傳統勃艮第取向到現代果香都有",
-        "單一葡萄園酒款能展現細緻的風土差異",
-        "酒標資訊可協助判斷酒款風格與品質定位"
+        "1978 年 Derek Milne 的土壤研究催生了 Dry River、Ata Rangi、Martinborough Vineyard 等開拓五雄",
+        "Ata Rangi 的 Abel 克隆傳說、Dry River 的郵購限量制，是產區早期歷史的鮮明印記",
+        "Palliser Estate 與 1999 年落成的 Craggy Range Te Muna Road，代表產區的擴張與現代化",
+        "從副牌到單一葡萄園酒款，酒標資訊能協助判斷風格與品質定位"
       ]
     }
   ]

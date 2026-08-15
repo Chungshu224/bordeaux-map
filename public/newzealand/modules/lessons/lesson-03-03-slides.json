@@ -4,7 +4,7 @@
       "id": 1,
       "type": "cover",
       "title": "Auckland 及周邊產區 — 城市旁的多樣風土",
-      "subtitle": "認識 Auckland、Kumeu、Matakana、Waiheke 等子產區的特色與酒款風格",
+      "subtitle": "認識 Kumeu、Waiheke Island、Matakana 與 Northland 的特色與代表酒莊",
       "icon": "🏙️",
       "background": "linear-gradient(135deg,#a18cd1 0%,#fbc2eb 100%)"
     },
@@ -12,7 +12,7 @@
       "id": 1.5,
       "type": "map",
       "title": "Auckland 及周邊產區地圖",
-      "subtitle": "城市旁的多樣風土：Kumeu、Matakana、Waiheke 等子產區",
+      "subtitle": "城市旁的多樣風土：Kumeu、Matakana、Waiheke Island 等子產區",
       "mapRegion": "Auckland|Kumeu|Matakana|Waiheke_Island|Northland"
     },
     {
@@ -20,62 +20,74 @@
       "type": "content",
       "title": "產區概覽",
       "content": [
-        { "type": "text", "text": "Auckland 大都會周邊包含多個風格各異的葡萄酒子產區：Kumeu 以高品質白酒（Chardonnay）聞名，Waiheke 以豐滿的紅酒著稱，Matakana 與其他小產區則兼具白酒與紅酒的多樣性。城市近郊的旅遊與葡萄酒產業互相促進。" }
+        { "type": "text", "text": "紐西蘭的葡萄酒產業其實始於 Auckland 一帶：1833 年英國殖民地官員 James Busby 在最北端的 Waitangi 建立了具規模的早期葡萄園，比 Marlborough 或 Central Otago 的發展早了超過一個世紀。如今 Auckland 大都會周邊涵蓋多個風格迥異的子產區：Kumeu 以精緻 Chardonnay 聞名，Waiheke Island 以溫暖氣候孕育的波爾多式紅酒著稱，Matakana 與更北方的 Northland 則展現各自的小眾特色。雖然 Auckland 大區的葡萄種植面積在全國占比不到 1%，但憑藉鄰近城市的地利，酒莊旅遊與品牌故事的份量遠超其產量規模。" }
       ],
       "icon": "🗺️"
     },
     {
       "id": 3,
       "type": "feature",
-      "title": "Kumeu: Chardonnay 的代表",
+      "title": "Kumeu：Chardonnay 的代表產區",
       "icon": "🍾",
       "features": [
-        { "title": "氣候與土壤", "description": "較溫和海洋性氣候,黏土/石灰質土壤在部分地塊出現,有利優雅且礦物感明顯的 Chardonnay。", "icon": "🌡️" },
-        { "title": "風格要點", "description": "高酸度、細緻奶油與礦物質感,常以橡木發展複雜度。", "icon": "🥂" }
+        { "title": "氣候與土壤", "description": "屬溫和海洋性氣候，年雨量偏高；土壤以 Waitemata 岩系風化而成的黏土與粉砂質壤土為主，保水性佳，有利根系穩定吸收養分。", "icon": "🌡️" },
+        { "title": "Kumeu River Wines", "description": "Brajkovich 家族自 1944 年由克羅埃西亞移民 Mick 與 Kate Brajkovich 創立，原名 San Marino Vineyards，1986 年起轉型專注精品 Chardonnay。第三代 Michael Brajkovich 於 1989 年成為紐西蘭第一位 Master of Wine，奠定 Kumeu 在國際上的聲譽。", "icon": "🏆" },
+        { "title": "風格要點", "description": "採用類似布根地的釀造手法：野生酵母發酵、部分月分乳酸發酵與法國橡木桶陳釀，呈現高酸度、細緻奶油質地與礦物感，陳年潛力佳。", "icon": "🥂" }
       ],
       "quiz": {
-        "question": "Kumeu 子產區以哪種葡萄品種著稱?",
-        "options": ["Pinot Noir", "Sauvignon Blanc", "Chardonnay", "Merlot"],
-        "correct": 2,
-        "explanation": "Kumeu 以高品質 Chardonnay 聞名,該區的 Chardonnay 具有高酸度、細緻奶油感與明顯礦物質,常以橡木發展複雜度,是紐西蘭 Chardonnay 的代表產區之一。"
+        "question": "Kumeu River Wines 的第三代莊主 Michael Brajkovich 在 1989 年締造了什麼紀錄？",
+        "options": ["紐西蘭第一位 Master of Wine", "紐西蘭第一位女性釀酒師", "全球最年輕的侍酒大師", "紐西蘭第一位有機認證酒莊主"],
+        "correct": 0,
+        "explanation": "Michael Brajkovich 於 1989 年成為紐西蘭史上第一位 Master of Wine，他持續以布根地式釀造手法打造 Kumeu River 的精緻 Chardonnay，讓 Kumeu 成為紐西蘭白酒版圖上重要的一站。"
       }
     },
     {
       "id": 4,
       "type": "feature",
-      "title": "Waiheke: 溫暖且果香豐富的紅酒",
+      "title": "Waiheke Island：波爾多式紅酒的小島傳奇",
       "icon": "🍷",
       "features": [
-        { "title": "產區特性", "description": "小島氣候溫暖,部分地塊能產出濃鬱而成熟的 Cabernet / Bordeaux 風格混釀。", "icon": "🏝️" },
-        { "title": "品飲建議", "description": "適合較高溫度與較長醒酒時間,搭配烤肉與濃鬱風味料理。", "icon": "🥩" }
+        { "title": "產區特性", "description": "位於 Hauraki Gulf 的小島，因地形形成雨影效應，日照與排水均優於 Auckland 本島，溫暖乾燥的微氣候特別適合晚熟的紅葡萄品種完全成熟。", "icon": "🏝️" },
+        { "title": "Stonyridge Vineyard", "description": "Stephen White 於 1982 年開始種植，1987 年推出以 Cabernet Sauvignon 為主體的旗艦混釀 Larose，是紐西蘭最早、也最知名的波爾多式膜拜酒（cult wine）之一，長年在國際評比中名列前茅。", "icon": "🍇" },
+        { "title": "Goldwater Estate 與 Man O' War", "description": "Kim 與 Jeanette Goldwater 於 1978 年創立 Goldwater Estate，是 Waiheke 最早的酒莊；Man O' War Vineyards 則於 1990 年代初期起步，如今已發展為全島面積最大的酒莊，出產包含 Cabernet Franc、Malbec 等品種的波爾多式混釀。", "icon": "⚓" }
       ],
       "quiz": {
-        "question": "Waiheke Island 主要產出哪類風格的葡萄酒?",
-        "options": ["清爽的白酒", "濃鬱成熟的紅酒", "起泡酒", "甜白酒"],
+        "question": "Waiheke Island 最知名的膜拜酒（cult wine）Larose 出自哪家酒莊？",
+        "options": ["Kumeu River", "Stonyridge Vineyard", "Millton Vineyard", "Neudorf Vineyards"],
         "correct": 1,
-        "explanation": "Waiheke Island 因溫暖的小島氣候,特別適合產出濃鬱、成熟且酒精度較高的紅酒,尤其以 Cabernet Sauvignon 與波爾多式混釀著稱,風格飽滿且結構良好。"
+        "explanation": "Stonyridge Vineyard 的莊主 Stephen White 於 1982 年開始種植葡萄，1987 年首釀以 Cabernet Sauvignon 為主的波爾多式混釀 Larose，成為紐西蘭最具代表性的膜拜酒之一。"
       }
     },
     {
       "id": 5,
       "type": "content",
-      "title": "Matakana 與周邊小產區",
+      "title": "Matakana 與 Northland：小而多元的北方風土",
       "content": [
-        { "type": "text", "text": "Matakana 地勢多變，結合砂質與黏土，能產出多樣風格的白酒與紅酒；小型酒莊與單一地塊酒款較多。" }
+        { "type": "text", "text": "Matakana 位於 Auckland 以北約一小時車程，火山土與黏土交錯，加上溫暖多雨的氣候，適合種植 Syrah、波爾多式紅酒品種與 Pinot Gris，多為小型精品酒莊，常結合藝廊、市集打造在地旅遊體驗。再往北的 Northland 則是紐西蘭最溫暖、最靠近赤道的產區，也是葡萄酒歷史的起點：傳教士 Samuel Marsden 於 1819 年在 Kerikeri 種下紐西蘭第一批葡萄藤，James Busby 隨後於 1833 年在 Waitangi 打造更具規模的葡萄園。如今 Northland 產量極小，但憑藉近乎亞熱帶的氣候，發展出以 Chambourcin、Syrah 為主的獨特紅酒風格，代表酒莊如 Marsden Estate 與位於偏遠半島的 Karikari Estate。" }
       ],
-      "icon": "🌾"
+      "icon": "🌾",
+      "quiz": {
+        "question": "紐西蘭史上第一批葡萄藤是在何時、何地種下的？",
+        "options": ["1833 年，Waiheke Island", "1819 年，Northland 的 Kerikeri", "1851 年，Hawke's Bay", "1973 年，Marlborough"],
+        "correct": 1,
+        "explanation": "傳教士 Samuel Marsden 於 1819 年在 Northland 的 Kerikeri 種下紐西蘭第一批葡萄藤，比 James Busby 在 Waitangi 建立正式葡萄園（1833 年）還要早，也遠早於 Marlborough（1973 年）等現代主力產區的發展。"
+      }
     },
     {
       "id": 6,
       "type": "timeline",
-      "title": "釀造與市場趨勢",
-      "subtitle": "從本地消費到觀光驅動的產業模式",
+      "title": "Auckland 地區葡萄酒發展史",
+      "subtitle": "從傳教士的第一株藤蔓到城市旁的精品酒莊群",
       "items": [
-        { "year": "酒莊旅遊化", "text": "Auckland 近年發展酒莊旅遊，提升小產區的能見度與直接銷售。" },
-        { "year": "精品化", "text": "小量生產、地塊指定與手工釀造成為許多酒莊的追求。" },
-        { "year": "市場導向", "text": "遊客與本地市場偏好影響酒莊在風格與包裝上的選擇。" }
+        { "year": "1819年", "text": "傳教士 Samuel Marsden 在 Northland 的 Kerikeri 種下紐西蘭第一批葡萄藤。" },
+        { "year": "1833年", "text": "James Busby 在 Waitangi 建立更具規模的葡萄園，被視為紐西蘭葡萄酒業的起點之一。" },
+        { "year": "1944年", "text": "克羅埃西亞移民 Brajkovich 家族於 Kumeu 創立酒莊，即今日 Kumeu River 的前身。" },
+        { "year": "1978年", "text": "Goldwater 夫婦在 Waiheke Island 開創首座酒莊，證明小島適合種植晚熟紅葡萄。" },
+        { "year": "1980年代", "text": "Stonyridge 等酒莊相繼投入 Waiheke，波爾多式混釀逐漸建立國際聲譽。" },
+        { "year": "1989年", "text": "Michael Brajkovich 成為紐西蘭第一位 Master of Wine，鞏固 Kumeu Chardonnay 的地位。" },
+        { "year": "現今", "text": "Auckland 周邊以精品化與酒莊旅遊為主軸，種植面積雖小但品牌影響力深遠。" }
       ],
-      "icon": "📈"
+      "icon": "📜"
     },
     {
       "id": 7,
@@ -83,35 +95,35 @@
       "title": "主要品種與風格一覽",
       "icon": "🍇",
       "features": [
-        { "title": "Chardonnay", "description": "Kumeu 的特色,風格從清新礦物到奶油橡木皆有。", "icon": "🥂" },
-        { "title": "Cabernet / Merlot", "description": "Waiheke 的強項,酒體飽滿、單寧結構良好。", "icon": "🍷" },
-        { "title": "Pinot Gris / Syrah", "description": "在 Matakana 與周邊產區可見不同風格嘗試。", "icon": "🍾" }
+        { "title": "Chardonnay（Kumeu）", "description": "布根地式釀造手法造就的細緻酸度與奶油礦物質感，是紐西蘭精品 Chardonnay 的指標。", "icon": "🥂" },
+        { "title": "Cabernet Sauvignon / Merlot（Waiheke）", "description": "溫暖微氣候帶來成熟單寧與濃郁黑色果香，波爾多式混釀是招牌風格。", "icon": "🍷" },
+        { "title": "Syrah / Pinot Gris（Matakana、Northland）", "description": "溫暖潮濕氣候下發展出帶胡椒調性的 Syrah，以及果香奔放的 Pinot Gris。", "icon": "🌶️" }
       ],
       "quiz": {
-        "question": "Auckland 周邊產區的產業發展模式主要受哪些因素驅動?",
-        "options": ["大量出口與工業化生產", "酒莊旅遊與直接銷售", "國際競賽獲獎", "政府資助計畫"],
+        "question": "Waiheke Island 的溫暖微氣候，主要是受什麼地理因素影響而形成？",
+        "options": ["高海拔造成的日夜溫差", "Hauraki Gulf 地形形成的雨影效應", "鄰近火山的地熱", "終年強風的海洋性氣候"],
         "correct": 1,
-        "explanation": "Auckland 周邊產區由於靠近都市,近年來酒莊旅遊與直接銷售成為主要的產業驅動力,遊客可以輕鬆造訪酒莊進行品酒體驗,這也提升了小產區的能見度。"
+        "explanation": "Waiheke Island 位於 Hauraki Gulf 內，島嶼地形產生雨影效應，使降雨量與濕度都低於 Auckland 本島，日照與排水條件更佳，特別適合晚熟紅葡萄品種完全成熟。"
       }
     },
     {
       "id": 8,
       "type": "content",
-      "title": "品鑑小技巧（Auckland 產區特有）",
+      "title": "品鑑技巧：辨識 Auckland 風格酒款",
       "content": [
-        { "type": "text", "text": "觀察風格差異：Kumeu Chardonnay 與 Marlborough Chardonnay 的香氣與酸度表現不同；Waiheke 的紅酒傾向高酒精與深色果香。注意酒標上的地塊資訊與釀造註記以判斷風格。" }
+        { "type": "text", "text": "比較 Kumeu Chardonnay 與 Marlborough Chardonnay：前者酸度更細膩、橡木與乳酸發酵帶來的奶油感更明顯；後者則常呈現更直接的果香與清新酸度。品飲 Waiheke 紅酒時，留意其酒精度偏高、單寧成熟圓潤，並帶有黑醋栗、雪松與淡淡海風鹹感的特徵，這是小島型微氣候的印記。酒標上若標示「Waiheke Island」而非泛稱「Auckland」，通常代表更嚴格的產區與品質定位。" }
       ],
       "icon": "🔍"
     },
     {
       "id": 9,
       "type": "feature",
-      "title": "代表酒莊與推薦款（入門）",
+      "title": "代表酒莊速覽",
       "icon": "🏅",
       "features": [
-        { "title": "Kumeu River", "description": "出品高品質 Chardonnay 與白酒，適合比較風格。", "icon": "🏞️" },
-        { "title": "Mudbrick / Te Motu (Waiheke)", "description": "以飽滿紅酒與觀光體驗聞名。", "icon": "🏝️" },
-        { "title": "Matakana 小酒莊群", "description": "適合尋找ニュー奇趣與小量精品酒款。", "icon": "🔎" }
+        { "title": "Kumeu River Wines", "description": "紐西蘭最具國際聲譽的 Chardonnay 專家，第四代家族經營，適合作為布根地式白酒的入門比較對象。", "icon": "🏞️" },
+        { "title": "Stonyridge / Man O' War（Waiheke）", "description": "前者以膜拜級 Larose 聞名，後者是全島最大酒莊，兩者皆展現波爾多式混釀的細膩層次。", "icon": "🏝️" },
+        { "title": "Millton 式的鄰近精神（Matakana / Northland）", "description": "多為家族經營的小型酒莊，重視地塊特色與手工釀造，適合尋找風格獨特的小眾酒款。", "icon": "🔎" }
       ]
     },
     {
@@ -120,10 +132,10 @@
       "title": "課程重點總結",
       "icon": "🔑",
       "points": [
-        "Auckland 周邊產區風格高度多元，從礦物感 Chardonnay 到濃郁紅酒均可見",
-        "Kumeu 代表高品質 Chardonnay；Waiheke 則以強勁紅酒聞名",
-        "觀光與小型酒莊經營驅動產區多樣化與直接銷售渠道",
-        "閱讀酒標與地塊資訊能快速判斷酒款風格" 
+        "Auckland 是紐西蘭葡萄酒業的歷史起點（Northland，1819 年），如今則以精品化與酒莊旅遊為主軸",
+        "Kumeu River Wines 憑藉布根地式釀造與 Michael Brajkovich（紐西蘭首位 MW）奠定精緻 Chardonnay 的地位",
+        "Waiheke Island 因雨影效應形成溫暖微氣候，Stonyridge、Goldwater、Man O' War 等酒莊打造出紐西蘭最著名的波爾多式紅酒",
+        "Matakana 與 Northland 產量雖小，但各自發展出 Syrah、Chambourcin 等具地方特色的風格"
       ]
     }
   ]

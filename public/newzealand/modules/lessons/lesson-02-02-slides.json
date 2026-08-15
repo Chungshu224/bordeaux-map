@@ -15,10 +15,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Pinot Noir 原產於法國勃艮第，是公認最具表現土地差異性的紅葡萄品種之一。紐西蘭自 1980s 起開始栽植，南島 Central Otago 與北島的部分涼爽斜坡產生了非常有代表性的風格。"
+          "text": "Pinot Noir 原產於法國勃艮第，是公認最能表現土地差異性的紅葡萄品種之一。紐西蘭的 Pinot Noir 種植始於1970年代末，1980年 Clive Paton 在 Martinborough 創立 Ata Rangi，與 Dry River（Neil McCallum）、Martinborough Vineyard（Derek Milne）、Chifney Wines、Te Kairanga 並列為開拓 Martinborough Terrace 的『五大先驅』；南島 Central Otago 則自1990年代起迅速崛起，成為世界最南端的葡萄酒產區之一。"
+        },
+        {
+          "type": "text",
+          "text": "紐西蘭種植的 Pinot Noir 以第戎（Dijon）系列無性系114、115、667、777為主流，另有紐西蘭特有的 Abel 選系——相傳源自法國勃艮第的珍稀老藤材料，果串較大、糖度偏低但色澤與單寧結構完整，Martinborough 的 Ata Rangi 是最早引進並廣泛運用 Abel 選系的酒莊之一，其旗艦酒款即以高比例 Abel 選系釀成。"
         }
       ],
-      "icon": "📜"
+      "icon": "📜",
+      "quiz": {
+        "question": "下列哪一個無性系（clone）是紐西蘭特有、並非源自第戎（Dijon）系列？",
+        "options": [
+          "115",
+          "667",
+          "Abel",
+          "777"
+        ],
+        "correct": 2,
+        "explanation": "Abel 選系是紐西蘭特有的 Pinot Noir 無性系，相傳源自法國勃艮第的珍稀老藤材料，果串較大、糖度偏低但色澤與單寧結構完整。Martinborough 的 Ata Rangi 是最早引進並廣泛運用 Abel 選系的酒莊之一。114、115、667、777 皆屬於第戎（Dijon）系列，是紐西蘭另一大主流無性系來源。"
+      }
     },
     {
       "id": 3,
@@ -58,8 +73,8 @@
       "id": 3.5,
       "type": "map",
       "title": "Pinot Noir 核心產區地圖",
-      "subtitle": "Central Otago（岩石・片岩）vs Martinborough（風成砂・礫石）vs Marlborough（多樣土壤）",
-      "mapRegion": "Central_Otago|Martinborough|Marlborough"
+      "subtitle": "Central Otago（Bannockburn 溫暖濃郁 vs 高海拔的涼爽子產區）、Martinborough（風成砂・礫石）、Marlborough（多樣土壤）",
+      "mapRegion": "Central_Otago|Bannockburn|Martinborough|Marlborough"
     },
     {
       "id": 4,
@@ -71,17 +86,17 @@
           "items": [
             {
               "label": "Central Otago",
-              "value": "氣候大幅日夜溫差，產出濃郁而鮮明的 Pinot Noir",
+              "value": "世界最南端產區之一，大陸性氣候日夜溫差大；其中 Bannockburn 溫暖乾燥、產出結構濃郁的酒款，海拔最高的 Gibbston 則氣候最涼，風格更為細緻花香",
               "icon": "🏔️"
             },
             {
               "label": "Martinborough / Wairarapa",
-              "value": "坡地冷涼風格，酒體優雅且細緻",
+              "value": "坡地冷涼風格，風成砂與礫石台地排水極佳，酒體優雅且結構細緻",
               "icon": "🌾"
             },
             {
-              "label": "Marlborough (部分地塊)",
-              "value": "也出產果香豐富、易飲風格的 Pinot",
+              "label": "Marlborough（部分地塊）",
+              "value": "也出產果香豐富、易飲風格的 Pinot Noir，常用於氣泡酒基酒",
               "icon": "🌿"
             }
           ]
@@ -97,7 +112,7 @@
           "該產區全年氣溫穩定溫暖"
         ],
         "correct": 1,
-        "explanation": "Central Otago 位於紐西蘭南島，是世界上最南端的葡萄酒產區之一。其大陸性氣候特徵帶來顯著的日夜溫差，白天充足的陽光促進葡萄成熟和糖分積累，夜晚的涼爽則保留酸度和風味物質，這種條件使得 Central Otago 的 Pinot Noir 既濃郁又鮮明，果香集中且結構良好。"
+        "explanation": "Central Otago 位於紐西蘭南島，是世界上最南端的葡萄酒產區之一。其大陸性氣候特徵帶來顯著的日夜溫差，白天充足的陽光促進葡萄成熟和糖分積累，夜晚的涼爽則保留酸度和風味物質，這種條件使得 Central Otago 的 Pinot Noir 既濃郁又鮮明，果香集中且結構良好。區內的 Bannockburn 與 Gibbston 等子產區又因地勢與氣候差異，發展出各自的風格光譜。"
       }
     },
     {
@@ -133,12 +148,12 @@
       "features": [
         {
           "title": "全果發酵 vs 去梗",
-          "description": "去梗降低青味與粗澀；保留部分彩梗可增加結構與香料感。",
+          "description": "去梗降低青味與粗澀；保留部分整串可增加結構與香料感。",
           "icon": "⚖️"
         },
         {
           "title": "橡木使用",
-          "description": "新桶帶來香草、香料與結構；老桶則保留果香並提供柔和度。",
+          "description": "新桶帶來香草、香料與結構；舊桶則保留果香並提供柔和度。",
           "icon": "🪵"
         },
         {
@@ -148,7 +163,7 @@
         }
       ],
       "quiz": {
-        "question": "在 Pinot Noir 釀造中，保留部分葡萄梗進行發酵會帶來什麼影響？",
+        "question": "在 Pinot Noir 釀造中，保留部分整串葡萄（含果梗）進行發酵會帶來什麼影響？",
         "options": [
           "會使葡萄酒失去所有果香",
           "可以增加酒體結構與香料感",
@@ -156,7 +171,7 @@
           "會使單寧變得過於柔軟"
         ],
         "correct": 1,
-        "explanation": "在 Pinot Noir 釀造中，是否去梗是一個重要的決策。完全去梗可以降低青澀味與粗糙單寧，使酒體更加柔順。但保留部分葡萄梗（通常5-30%）進行發酵，可以增加酒體的結構性、單寧的骨架感，並帶來額外的香料氣息（如白胡椒、丁香），使葡萄酒更具複雜度和陳年潛力。這是一種平衡的藝術，需要根據年份和葡萄成熟度來調整。"
+        "explanation": "在 Pinot Noir 釀造中，是否去梗是一個重要的決策。完全去梗可以降低青澀味與粗糙單寧，使酒體更加柔順。但保留部分整串葡萄（通常5-30%）進行發酵，可以增加酒體的結構性、單寧的骨架感，並帶來額外的香料氣息（如白胡椒、丁香），使葡萄酒更具複雜度和陳年潛力。這是一種平衡的藝術，需要根據年份和葡萄成熟度來調整。"
       }
     },
     {
@@ -216,10 +231,25 @@
       "content": [
         {
           "type": "text",
-          "text": "建議從 Central Otago 的代表酒莊與 Martinborough 的經典小莊開始，嘗試不同子產區與橡木處理的差異。"
+          "text": "Martinborough 的 Ata Rangi（1980年由 Clive Paton 創立）與 Central Otago 的 Felton Road（1991年由 Stewart Elms 於 Bannockburn 的 Elms Vineyard 開墾，2000年由 Nigel Greening 接手經營，釀酒師 Blair Walter 自1996年掌舵至今），是2010年紐西蘭葡萄酒協會首度頒發『Tipuranga Teitei o Aotearoa』（紐西蘭特級園分級）的唯二得主，代表了紐西蘭 Pinot Noir 的品質標竿。"
+        },
+        {
+          "type": "text",
+          "text": "此外，Craggy Range 在 Martinborough 的 Te Muna Road 園區以八個不同無性系種植 Pinot Noir，展現細膩的地塊拼配工藝；坐落 Lake Wanaka 湖畔、由 Mills 家族自1912年起於當地務農並採生物動力法耕作的 Rippon，也是探索紐西蘭 Pinot Noir 多樣風土不可錯過的指標酒莊。"
         }
       ],
-      "icon": "🏆"
+      "icon": "🏆",
+      "quiz": {
+        "question": "2010年，紐西蘭葡萄酒協會首度頒發『Tipuranga Teitei o Aotearoa』（紐西蘭特級園分級）殊榮，唯二獲獎的酒莊是？",
+        "options": [
+          "Cloudy Bay 與 Villa Maria",
+          "Ata Rangi 與 Felton Road",
+          "Craggy Range 與 Te Mata Estate",
+          "Rippon 與 Dry River"
+        ],
+        "correct": 1,
+        "explanation": "Martinborough 的 Ata Rangi（1980年由 Clive Paton 創立）與 Central Otago 的 Felton Road（1991年建園、2000年由 Nigel Greening 接手，釀酒師 Blair Walter 主導）在2010年成為紐西蘭葡萄酒協會首度頒發『Tipuranga Teitei o Aotearoa』分級的唯二得主，象徵這兩家酒莊在紐西蘭 Pinot Noir 品質上的標竿地位。"
+      }
     },
     {
       "id": 10,
@@ -227,7 +257,9 @@
       "title": "重點總結",
       "icon": "🔑",
       "points": [
-        "Pinot Noir 在紐西蘭能展現從鮮明紅果到複雜陳年風格的寬廣譜系",
+        "1980年 Ata Rangi 於 Martinborough 創立，是開拓當地 Pinot Noir 產業的『五大先驅』之一",
+        "紐西蘭主要使用第戎系列（114、115、667、777）與特有的 Abel 選系",
+        "Central Otago 內部因子產區（如 Bannockburn 與 Gibbston）氣候差異而風格多樣",
         "田間管理、採收時機與溫和釀造決定其精緻度與結構",
         "搭配蘑菇、家禽與細緻紅肉能最佳化品飲體驗"
       ]

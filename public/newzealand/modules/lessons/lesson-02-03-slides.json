@@ -12,8 +12,8 @@
       "id": 1.5,
       "type": "map",
       "title": "白葡萄品種核心產區地圖",
-      "subtitle": "Chardonnay（Hawke's Bay / Gisborne）、Riesling（Marlborough / Nelson）、Gewürztraminer（Gisborne）",
-      "mapRegion": "Hawkes_Bay|Gisborne|Marlborough|Nelson"
+      "subtitle": "Chardonnay（Hawke's Bay / Gisborne / Auckland-Kumeu）、Riesling 與 Gewürztraminer（Waipara, North Canterbury）",
+      "mapRegion": "Hawkes_Bay|Gisborne|Waipara_Valley|North_Canterbury"
     },
     {
       "id": 2,
@@ -22,10 +22,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Chardonnay 原產於法國勃艮第，但在全球多個產區被廣泛種植。紐西蘭的多樣氣候讓 Chardonnay 可展現從清新礦物到豐富奶油風格的廣泛譜系。"
+          "text": "Chardonnay 原產於法國勃艮第。1971年，David Sheat 自澳洲 CSIRO 引進 Mendoza Clone——這個無性系當時已帶有捲葉病毒，卻意外因風味濃郁飽滿而長年成為紐西蘭 Chardonnay 的主流選系，常與第戎系列的 Clone 95、15、548 搭配種植：Mendoza 賦予酒體與熱帶果感，Dijon 系列則帶來更細緻的柑橘與花香骨架。"
+        },
+        {
+          "type": "text",
+          "text": "北島的 Gisborne 因產量與品質兼具，長期被稱為『紐西蘭的 Chardonnay 之都』；1984年由 James 與 Annie Millton 在 Gisborne 創立的 Millton Vineyard，是紐西蘭第一家取得有機與生物動力（Demeter）雙認證的酒莊，早於永續風潮數十年即開始實踐友善土地的種植方式。"
         }
       ],
-      "icon": "📜"
+      "icon": "📜",
+      "quiz": {
+        "question": "紐西蘭第一家取得有機與生物動力雙認證的酒莊是哪一家？",
+        "options": [
+          "Millton Vineyard",
+          "Cloudy Bay",
+          "Felton Road",
+          "Te Mata Estate"
+        ],
+        "correct": 0,
+        "explanation": "1984年由 James 與 Annie Millton 在 Gisborne 創立的 Millton Vineyard，是紐西蘭第一家取得 BioGro 有機認證（1989年）與 Demeter 生物動力認證的酒莊，比紐西蘭整體的永續種植風潮早了數十年，是該領域公認的先驅。"
+      }
     },
     {
       "id": 3,
@@ -45,7 +60,7 @@
         },
         {
           "title": "橡木與乳化風格",
-          "description": "橡木與馬鈴薯般的奶油、奶油杏仁感來自發酵與乳酸發酵處理。",
+          "description": "橡木與奶油、烤杏仁般的質地感來自橡木發酵與乳酸發酵處理。",
           "icon": "🪵"
         }
       ],
@@ -58,7 +73,7 @@
           "使用特殊的酵母菌株"
         ],
         "correct": 1,
-        "explanation": "Chardonnay 的奶油、香草、奶油杏仁等風味主要來自兩個釀造技術：1) 橡木桶發酵與陳年，特別是使用新的法國橡木桶會帶來香草、香料、烘烤等香氣；2) 乳酸發酵（Malolactic Fermentation, MLF），這個過程將酸度較高的蘋果酸轉化為較柔和的乳酸，同時產生奶油般的質地和風味。相比之下，不鏽鋼桶發酵會保留純淨的果香和高酸度，風格截然不同。"
+        "explanation": "Chardonnay 的奶油、香草、烤杏仁等風味主要來自兩個釀造技術：1) 橡木桶發酵與陳年，特別是使用新的法國橡木桶會帶來香草、香料、烘烤等香氣；2) 乳酸發酵（Malolactic Fermentation, MLF），這個過程將酸度較高的蘋果酸轉化為較柔和的乳酸，同時產生奶油般的質地和風味。相比之下，不鏽鋼桶發酵會保留純淨的果香和高酸度，風格截然不同。"
       }
     },
     {
@@ -76,13 +91,18 @@
             },
             {
               "label": "Riesling",
-              "value": "高酸度，從乾型到甜型都有表現，香氣以花果與礦物為主",
+              "value": "北坎特伯里的 Waipara 是紐西蘭 Riesling 重鎮，1986年由神經科醫師 Ivan Donaldson 創立的 Pegasus Bay 是半甜型 Riesling 的標竿酒莊，風格從極乾到貴腐甜酒都有出色表現",
               "icon": "🍋"
             },
             {
               "label": "Pinot Gris",
-              "value": "中等酒體、帶梨與蜂蜜香，適合多種風格處理",
+              "value": "中等酒體、帶梨與蜂蜜香，可釀成阿爾薩斯式厚實風格或羅亞爾河式清爽風格",
               "icon": "🍯"
+            },
+            {
+              "label": "Gewürztraminer",
+              "value": "Martinborough 的 Dry River（1979年 Neil McCallum 創立）以荔枝、玫瑰花瓣與辛香著稱，是該品種的代表酒莊",
+              "icon": "🌹"
             }
           ]
         }
@@ -97,7 +117,7 @@
           "Pinot Gris"
         ],
         "correct": 2,
-        "explanation": "Riesling 是最具風格多樣性的白葡萄品種之一。由於其天生的高酸度，Riesling 可以釀造從極乾型（bone dry）到貴腐甜酒（noble rot）的各種風格。其高酸度在甜型酒中能平衡糖分，不會顯得膩口。此外，Riesling 的花果香與礦物感在各種風格中都能良好表現。相比之下，Sauvignon Blanc 主要釀造乾型酒，Chardonnay 雖然風格多樣但較少釀甜酒，Pinot Gris 雖然可以有不同甜度但範圍不如 Riesling 廣泛。"
+        "explanation": "Riesling 是最具風格多樣性的白葡萄品種之一。由於其天生的高酸度，Riesling 可以釀造從極乾型（bone dry）到貴腐甜酒（noble rot）的各種風格，紐西蘭的 Waipara（北坎特伯里）正是以此聞名的核心產區。其高酸度在甜型酒中能平衡糖分，不會顯得膩口。相比之下，Sauvignon Blanc 主要釀造乾型酒，Chardonnay 雖然風格多樣但較少釀甜酒，Pinot Gris 雖然可以有不同甜度但範圍不如 Riesling 廣泛。"
       }
     },
     {
@@ -139,7 +159,7 @@
         },
         {
           "title": "橡木桶陳年",
-          "description": "新桶增加香草與烘烤香，舊桶保留果香與柔化酒體。",
+          "description": "新桶增加香草與烘烤香，舊桶保留果香並柔化酒體。",
           "icon": "🪵"
         }
       ],
@@ -200,7 +220,7 @@
         },
         {
           "title": "辛香料理與亞洲菜",
-          "description": "Sauvignon Blanc 的酸與香草特性適合搭配較清爽的亞洲口味。",
+          "description": "Sauvignon Blanc 的酸與草本特性適合搭配較清爽的亞洲口味。",
           "icon": "🍜"
         }
       ]
@@ -212,10 +232,25 @@
       "content": [
         {
           "type": "text",
-          "text": "建議嘗試不同子產區與釀造處理：涼爽地塊的清新款、不鏽鋼發酵的純淨風格，以及桶陳發展的豐富款。"
+          "text": "Chardonnay 方面，Auckland 近郊 Kumeu 產區的 Kumeu River（1944年由 Brajkovich 家族創立）因其旗艦酒款屢獲《Wine Spectator》全球百大肯定，並由紐西蘭第一位 Master of Wine——Michael Brajkovich（1989年取得資格）——主理，是勃艮第式 Chardonnay 的指標酒莊。"
+        },
+        {
+          "type": "text",
+          "text": "芳香系白葡萄品種方面，Waipara 的 Pegasus Bay（1986年由 Ivan Donaldson 創立）以半甜 Riesling 著稱；Martinborough 的 Dry River（1979年創立）則是 Gewürztraminer 與 Pinot Gris 的長期代表；Gisborne 的 Millton Vineyard 則展現生物動力種植下 Chardonnay 與 Chenin Blanc 的獨特風貌。"
         }
       ],
-      "icon": "🏆"
+      "icon": "🏆",
+      "quiz": {
+        "question": "哪家酒莊由紐西蘭第一位 Master of Wine Michael Brajkovich 主理，並以勃艮第式 Chardonnay 屢獲《Wine Spectator》全球百大肯定？",
+        "options": [
+          "Kumeu River",
+          "Villa Maria",
+          "Craggy Range",
+          "Te Mata Estate"
+        ],
+        "correct": 0,
+        "explanation": "Kumeu River 由 Brajkovich 家族於1944年在 Auckland 近郊的 Kumeu 創立，由紐西蘭第一位 Master of Wine（1989年取得資格）Michael Brajkovich 主理釀造，其勃艮第式 Chardonnay 曾多次入選《Wine Spectator》年度全球百大葡萄酒，是紐西蘭 Chardonnay 的指標酒莊。"
+      }
     },
     {
       "id": 10,
@@ -223,9 +258,11 @@
       "title": "重點總結",
       "icon": "🔑",
       "points": [
-        "Chardonnay 在紐西蘭能展現從清新礦物到豐富桶陳的多樣風格",
+        "Chardonnay 在紐西蘭能展現從清新礦物到豐富桶陳的多樣風格，Gisborne 有『Chardonnay 之都』美譽",
+        "Mendoza Clone 與第戎系列 95、15、548 是主流無性系組合",
         "釀造決策（發酵容器、MLF、橡木）決定最終風格方向",
-        "其他白品種如 Sauvignon Blanc、Riesling、Pinot Gris 各有其典型用途與搭配場景"
+        "Waipara 是 Riesling 與 Gewürztraminer 等芳香品種的重要重鎮",
+        "Kumeu River、Pegasus Bay、Dry River、Millton 各自代表不同白葡萄品種的紐西蘭巔峰表現"
       ]
     }
   ]

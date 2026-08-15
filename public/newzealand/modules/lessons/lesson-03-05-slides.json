@@ -4,7 +4,7 @@
       "id": 1,
       "type": "cover",
       "title": "Hawke's Bay — 風土與土壤",
-      "subtitle": "理解一個紅酒重鎮的地形、氣候與土壤如何塑造葡萄酒風格",
+      "subtitle": "從一場 1867 年的洪水到今日的礫石傳奇：解構產區內每個子產區的地質與風格密碼",
       "icon": "🌄",
       "background": "linear-gradient(135deg,#f6d365 0%,#fda085 100%)"
     },
@@ -12,119 +12,167 @@
       "id": 1.5,
       "type": "map",
       "title": "Hawke's Bay 產區地圖",
-      "subtitle": "北島東岸，Napier 與 Hastings 雙城之間，Gimblett Gravels 是核心精品地塊",
+      "subtitle": "北島東岸，Napier 與 Hastings 雙城之間，Heretaunga 平原孕育出全紐西蘭最多樣的土壤拼圖",
       "mapRegion": "Hawkes_Bay|Central_Hawkes_Bay"
     },
     {
       "id": 2,
       "type": "content",
-      "title": "地理位置與氣候概要",
+      "title": "地理大結構：河流造就的土壤拼圖",
       "content": [
         {
           "type": "text",
-          "text": "Hawke's Bay 位於北島東岸，受太平洋影響，具有溫暖乾燥的生長季，海風與地形造成分區微氣候差異。"
+          "text": "Hawke's Bay 的葡萄園主要坐落在 Heretaunga 平原上，由 Ngaruroro、Tutaekuri、Tukituki 等多條河流數千年來反覆改道、沖積而成。這也是為什麼此區擁有超過 25 種土壤類型——從排水極佳的礫石、含鐵的紅土，到黏土與石灰岩，密度之高在世界產區中相當罕見。"
+        },
+        {
+          "type": "text",
+          "text": "西側的 Kaweka 與 Ruahine 山脈擋下盛行西風帶來的雨水，形成雨影效應，讓 Hawke's Bay 年降雨量僅約 800 毫米、年日照時數超過 2,200 小時，氣候型態常被拿來與波爾多相比，但更溫暖乾燥。"
         }
       ],
-      "icon": "🗺️"
+      "icon": "🗺️",
+      "quiz": {
+        "question": "Hawke's Bay 呈現高度土壤多樣性的主要原因是什麼？",
+        "options": ["火山噴發反覆覆蓋地表", "多條河流數千年來反覆改道沖積", "人工引入外地土壤改良", "冰河時期的冰磧作用"],
+        "correct": 1,
+        "explanation": "Hawke's Bay 地處 Heretaunga 平原，Ngaruroro、Tutaekuri、Tukituki 等河流數千年來不斷改道與沖積，留下超過 25 種土壤類型，是全紐西蘭土壤最多樣的產區之一。"
+      }
     },
     {
       "id": 3,
       "type": "feature",
-      "title": "代表性土壤類型",
-      "icon": "🧱",
+      "title": "Gimblett Gravels：一場洪水造就的傳奇",
+      "icon": "💎",
       "features": [
-        {
-          "title": "重礫石與础石層",
-          "description": "排水良好,促進根系延伸與成熟；常見於 Gimblett Gravels 等子產區。",
-          "icon": "🪨"
-        },
-        {
-          "title": "沖積土與粘土混合",
-          "description": "保水性較佳,能夠平衡乾燥季節的水分供應,影響葡萄的酸度與成熟節奏。",
-          "icon": "🌱"
-        },
-        {
-          "title": "砂質與沙礫",
-          "description": "通常促成果香鮮明、單寧較柔和的風格。",
-          "icon": "🏖️"
-        }
+        { "title": "1867 年的洪水", "description": "一場豪雨造成 Ngaruroro 河改道，舊河床外露，留下由灰砂岩（greywacke）沖積而成、層層堆疊的礫石層（Omahu Gravels），面積約 800 公頃。", "icon": "🌊" },
+        { "title": "以土壤定義的產區", "description": "這片曾被認為貧瘠到只能養一隻羊（一般地一英畝可養三隻羊）的荒地，1981 年首次商業種植葡萄；2001 年 Gimblett Gravels Winegrowers Association 成立，將其註冊為商標，成為全球少數以「土壤層」而非行政界線劃定範圍的產區。", "icon": "🏷️" },
+        { "title": "礫石的蓄熱效應", "description": "礫石白天吸熱、夜晚緩慢釋放，提升有效積溫並延長成熟期，特別適合晚熟的 Cabernet Sauvignon 與 Syrah 完全成熟，是產區內公認最頂級的紅酒地塊。", "icon": "🔥" }
       ],
       "quiz": {
-        "question": "Gimblett Gravels 子產區的土壤特性對葡萄酒品質有何影響?",
-        "options": [
-          "保水性佳，果香清爽",
-          "排水良好，促進成熟與集中度",
-          "黏土質，酸度高",
-          "石灰岩，礦物感強"
-        ],
-        "correct": 1,
-        "explanation": "Gimblett Gravels 的礫石土壤排水性極佳，促使葡萄根系延伸，帶來成熟度更高、風味更集中的果實，產出的紅酒結構集中、單寧豐富且具有優異的陳年潛力。"
+        "question": "Gimblett Gravels 在全球產區劃定方式上有何特殊之處？",
+        "options": ["以行政區界線劃定", "以海拔高度劃定", "以特定土壤層（Omahu Gravels）的分布範圍劃定", "以葡萄品種種植歷史劃定"],
+        "correct": 2,
+        "explanation": "Gimblett Gravels 是世界少數以土壤類型而非地理、行政或政治邊界劃定的產區，範圍完全依循 1867 年洪水後露出的 Omahu Gravels 礫石層分布，並由 Gimblett Gravels Winegrowers Association 於 2001 年註冊為商標保護。"
       }
     },
     {
       "id": 4,
-      "type": "content",
-      "title": "坡向與日照對葡萄成熟的影響",
-      "content": [
-        {
-          "type": "text",
-          "text": "南向/北向坡地、海風遮蔽與低海拔平原的組合,造成同一產區內不同葡萄園有顯著差異。"
-        }
+      "type": "feature",
+      "title": "Bridge Pa Triangle（又稱 Ngatarawa Triangle）",
+      "icon": "🌉",
+      "features": [
+        { "title": "平原上最古老的土壤", "description": "由 Ngatarawa Road、State Highway 50 與 Maraekakaho Road 三條道路圈出約 2,100 公頃的三角地帶，是 Heretaunga 平原上最古老的土壤，歷經陶波火山多次噴發的浮石覆蓋。", "icon": "⏳" },
+        { "title": "沙壤覆礫石與浮石黏土", "description": "以 Takapau 與 Ngatarawa 系列的沙質壤土覆礫石為主，東側沿 Ngatarawa Road 一帶則是 Te Awa 黏土壤覆浮石沙，保水性略高於 Gimblett Gravels。", "icon": "🧱" },
+        { "title": "更渾圓的風格", "description": "地勢略內陸、氣溫更溫暖，加上保水性稍佳的表土，造就以 Merlot 主導、Syrah 表現亮眼的波爾多混釀，相較 Gimblett Gravels 更圓潤多梅果與花香、單寧也更柔和。", "icon": "🍇" }
       ],
-      "icon": "☀️",
       "quiz": {
-        "question": "Hawke's Bay 產區內的微氣候差異主要是由什麼造成?",
-        "options": [
-          "土壤類型差異",
-          "坡向、海風遮蔽與海拔的組合",
-          "降雨量差異",
-          "品種選擇不同"
-        ],
+        "question": "與 Gimblett Gravels 相比，Bridge Pa Triangle 產出的紅酒風格傾向如何？",
+        "options": ["更瘦高、單寧更粗獷", "更渾圓多梅果香氣、單寧更柔和", "完全不適合種植紅葡萄品種", "只適合起泡酒生產"],
         "correct": 1,
-        "explanation": "Hawke's Bay 產區內的微氣候差異主要由坡向（南向/北向）、海風遮蔽程度和海拔高低的組合造成，這些因素影響日照量、溫度與風速，從而在同一產區內產生不同的葡萄風格。"
+        "explanation": "Bridge Pa Triangle（又稱 Ngatarawa Triangle）土壤保水性較 Gimblett Gravels 略高、氣候更溫暖內陸，因此以 Merlot 為主導的混釀與 Syrah 表現出更渾圓、梅果與花香明顯、單寧更柔順的風格。"
       }
     },
     {
       "id": 5,
-      "type": "timeline",
-      "title": "生長季關鍵時刻",
-      "subtitle": "從發芽到採收的關鍵影響因子",
-      "items": [
-        {
-          "year": "春季（發芽）",
-          "text": "霜害風險管理與植株生長勢培養。"
-        },
-        {
-          "year": "夏季（生長）",
-          "text": "灌溉管理與果串稀疏以控制產量與品質。"
-        },
-        {
-          "year": "晚夏-秋季（成熟與採收）",
-          "text": "採收時機決定酸度、糖度與單寧成熟度。"
-        }
+      "type": "feature",
+      "title": "Havelock Hills：產區最古老的葡萄園",
+      "icon": "🏔️",
+      "features": [
+        { "title": "1892 年的起點", "description": "Bernard Chambers 於北向坡地種下第一批葡萄，是紐西蘭少數自 19 世紀持續種植至今的葡萄園，也是 Te Mata Estate 的家園。", "icon": "🌱" },
+        { "title": "坡地黏土與石灰質土壤", "description": "與平原礫石不同，Havelock Hills 是丘陵地形，土壤為排水良好但保水力較高的黏土與石灰質土壤，海拔較高、日夜溫差明顯。", "icon": "🪨" },
+        { "title": "經典波爾多混釀的搖籃", "description": "溫差有助保留酸度，是 Coleraine 等經典 Cabernet／Merlot 混釀的核心地塊，風格較礫石地塊更為細緻優雅、單寧更絲滑。", "icon": "🍷" }
       ],
-      "icon": "🌾",
       "quiz": {
-        "question": "在 Hawke's Bay 的生長季中，夏季的主要田間管理工作是什麼?",
-        "options": [
-          "霜害預防",
-          "灌溉管理與果串稀疏",
-          "採收時機決定",
-          "冬季修剪"
-        ],
+        "question": "Havelock Hills 與 Gimblett Gravels 在地形與土壤上的關鍵差異是什麼？",
+        "options": ["Havelock Hills 是平原礫石，Gimblett Gravels 是丘陵黏土", "Havelock Hills 是丘陵黏土與石灰質土壤，Gimblett Gravels 是平原礫石", "兩者土壤與地形完全相同", "Havelock Hills 位於海邊，Gimblett Gravels 位於山區"],
         "correct": 1,
-        "explanation": "夏季是葡萄的生長期，主要的田間管理工作包括灌溉管理（控制水分供應）和果串稀疏（控制產量以提升品質），這些管理手段對最終的葡萄品質有重大影響。"
+        "explanation": "Havelock Hills 是北向坡地丘陵，土壤以黏土與石灰質為主，保水力較高；Gimblett Gravels 則是平原上的礫石層，排水極佳。兩者地形與土壤結構的差異，也造就了風格上的細緻優雅（Havelock Hills）與結構集中（Gimblett Gravels）之別。"
       }
     },
     {
       "id": 6,
+      "type": "feature",
+      "title": "Dartmoor Valley 與 Crownthorpe Terraces：內陸涼爽地塊",
+      "icon": "🍃",
+      "features": [
+        { "title": "Dartmoor Valley", "description": "沿 Tutaekuri 河而生的河階台地與沖積土，地勢較高、氣候較涼，特別適合 Sauvignon Blanc、Pinot Gris 等芳香白葡萄品種。", "icon": "💧" },
+        { "title": "Crownthorpe Terraces", "description": "屬於更內陸、地勢更高的 Upper Ngaruroro 子產區，古老沖積土層中礫石與粉沙肥力偏低，涼爽氣候讓果實保有明亮酸度與清晰果香。", "icon": "⛰️" },
+        { "title": "產區風格光譜的另一端", "description": "這兩個涼爽子產區證明 Hawke's Bay 並非只有溫暖礫石紅酒一種樣貌，也能產出結構細緻、酸度活潑的白葡萄酒與輕盈紅酒。", "icon": "🌡️" }
+      ],
+      "quiz": {
+        "question": "Dartmoor Valley 與 Crownthorpe Terraces 的共同特色是什麼？",
+        "options": ["地勢低平、氣候炎熱，只適合種紅葡萄", "地勢較高、氣候較涼，肥力偏低，適合芳香白品種與細緻紅酒", "皆位於海岸邊，鹽分含量高", "土壤與 Gimblett Gravels 完全相同"],
+        "correct": 1,
+        "explanation": "Dartmoor Valley 與 Crownthorpe Terraces 都地勢較高、氣候比平原礫石地塊涼爽，土壤肥力偏低，因此適合 Sauvignon Blanc、Pinot Gris 等芳香白品種，也能產出酸度明亮、風格細緻的紅酒。"
+      }
+    },
+    {
+      "id": 7,
+      "type": "timeline",
+      "title": "風土發展的關鍵時刻",
+      "subtitle": "從一場自然災害到全球公認的紅酒產區",
+      "items": [
+        { "year": "1867年", "text": "豪雨造成 Ngaruroro 河改道，舊河床露出灰砂岩礫石層，成為日後的 Gimblett Gravels。" },
+        { "year": "1892年", "text": "Bernard Chambers 在 Havelock Hills 北向坡地種下葡萄，開啟至今仍在運作的葡萄園。" },
+        { "year": "1981年", "text": "Gimblett Gravels 首次商業化種植葡萄，貧瘠礫石地開始展現紅酒潛力。" },
+        { "year": "1988年", "text": "Villa Maria 購入 Gimblett Gravels 的 Ngakirikiri 葡萄園，日後成為旗艦酒款基地。" },
+        { "year": "2001年", "text": "Gimblett Gravels Winegrowers Association 成立，將區域名稱註冊為商標，正式以土壤層劃定產區邊界。" }
+      ],
+      "icon": "📜",
+      "quiz": {
+        "question": "促成 Gimblett Gravels 礫石層外露、間接開啟這個子產區歷史的自然事件發生在哪一年？",
+        "options": ["1892年", "1867年", "1981年", "2001年"],
+        "correct": 1,
+        "explanation": "1867 年一場豪雨造成 Ngaruroro 河改道，舊河床外露出層層堆疊的灰砂岩礫石，這片礫石層在一百多年後才被發現極適合種植晚熟紅葡萄品種，成為今日的 Gimblett Gravels。"
+      }
+    },
+    {
+      "id": 8,
+      "type": "content",
+      "title": "坡向、日照與微氣候的交互作用",
+      "content": [
+        {
+          "type": "text",
+          "text": "同樣位於 Hawke's Bay，南向坡地與北向坡地接收的日照量截然不同；海風的遮蔽程度、離海遠近與海拔高低，也讓同一產區內的葡萄園呈現顯著差異。這正是為何酒莊會特別標示地塊名稱——地塊的微氣候往往比大產區的氣候數據更能預測酒款風格。"
+        }
+      ],
+      "icon": "☀️",
+      "quiz": {
+        "question": "Hawke's Bay 產區內的微氣候差異主要由什麼因素組合造成？",
+        "options": ["土壤類型差異", "坡向、海風遮蔽與海拔的組合", "降雨量差異", "品種選擇不同"],
+        "correct": 1,
+        "explanation": "Hawke's Bay 產區內的微氣候差異主要由坡向（南向/北向）、海風遮蔽程度和海拔高低的組合造成，這些因素影響日照量、溫度與風速，從而在同一產區內產生不同的葡萄風格，這也是酒莊重視地塊名稱標示的原因。"
+      }
+    },
+    {
+      "id": 9,
+      "type": "timeline",
+      "title": "生長季的田間管理節奏",
+      "subtitle": "從發芽到採收，風土條件如何轉化為實際管理決策",
+      "items": [
+        { "year": "春季（發芽）", "text": "霜害風險管理與植株生長勢培養，礫石地塊排水快、增溫早，發芽通常較黏土地塊提前。" },
+        { "year": "夏季（生長）", "text": "灌溉管理與果串稀疏以控制產量與品質；保水力較低的礫石地塊需更精準的滴灌調控。" },
+        { "year": "晚夏至秋季（成熟與採收）", "text": "採收時機決定酸度、糖度與單寧成熟度；溫暖子產區（如 Gimblett Gravels、Bridge Pa）通常較涼爽子產區（如 Crownthorpe Terraces）提早採收。" }
+      ],
+      "icon": "🌾",
+      "quiz": {
+        "question": "為什麼礫石地塊（如 Gimblett Gravels）的灌溉管理需要更精準的調控？",
+        "options": ["因為礫石保水力強，容易積水", "因為礫石排水極佳、保水力低，水分供應變化快", "因為礫石地塊禁止灌溉", "因為礫石地塊不需要灌溉系統"],
+        "correct": 1,
+        "explanation": "礫石土壤排水性極佳但保水力低，水分供應變化較黏土或壤土地塊更快，因此需要更精準的滴灌調控，才能避免葡萄樹在乾燥季節承受過度水分逆境。"
+      }
+    },
+    {
+      "id": 10,
       "type": "summary",
       "title": "本課重點整理",
       "icon": "🔑",
       "points": [
-        "Hawke's Bay 的土壤多樣，礫石地塊對紅葡萄品質貢獻明顯",
-        "微氣候與坡向造成產區內的風格差異",
-        "田間管理與水分管理是影響品質的重要環節"
+        "Hawke's Bay 因多條河流反覆改道沖積，擁有超過 25 種土壤類型，是紐西蘭土壤最多樣的產區之一",
+        "Gimblett Gravels 由 1867 年洪水造就，是全球少數以土壤層而非行政界線劃定的產區，2001 年註冊為商標",
+        "Bridge Pa Triangle（Ngatarawa Triangle）土壤保水性較高、氣候更內陸溫暖，風格較 Gimblett Gravels 渾圓柔和",
+        "Havelock Hills 是產區最古老的葡萄園（1892 年起），丘陵黏土與石灰質土壤造就細緻優雅的波爾多混釀",
+        "Dartmoor Valley 與 Crownthorpe Terraces 等涼爽內陸地塊，證明 Hawke's Bay 也能產出酸度明亮的白酒與輕盈紅酒",
+        "坡向、海風遮蔽與海拔的微氣候組合，加上田間管理節奏，共同決定每個地塊最終的酒款風格"
       ]
     }
   ]

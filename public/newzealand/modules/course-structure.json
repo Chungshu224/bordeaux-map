@@ -245,6 +245,12 @@
     "description": "掌握系統化的品酒方法與餐酒搭配原則",
     "lessons": [
       {
+        "id": "lesson-06-01",
+        "title": "WSET 系統化品酒法",
+        "duration": "20分鐘",
+        "type": "text"
+      },
+      {
         "id": "lesson-06-02",
         "title": "紐西蘭葡萄酒風格分析",
         "duration": "25分鐘",

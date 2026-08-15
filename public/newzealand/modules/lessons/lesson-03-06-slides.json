@@ -4,79 +4,193 @@
       "id": 1,
       "type": "cover",
       "title": "Hawke's Bay 的紅酒風格與釀造實務",
-      "subtitle": "從葡萄到酒杯：技術決策如何定義風味與結構",
+      "subtitle": "從波爾多混釀哲學到北隆河式 Syrah：技術決策如何定義風味與結構",
       "icon": "🍷",
       "background": "linear-gradient(135deg,#fbc2eb 0%,#a6c1ee 100%)"
     },
     {
       "id": 2,
       "type": "content",
-      "title": "主要栽培品種（紅）",
+      "title": "核心品種與風格光譜",
       "content": [
-        { "type": "text", "text": "Hawke's Bay 著重 Cabernet Sauvignon、Merlot、Syrah 與 Bordeaux blend 的混釀風格；部分地塊也種植 Cabernet Franc 與其他品種。" }
+        {
+          "type": "text",
+          "text": "Hawke's Bay 的紅酒版圖以波爾多品種與 Syrah 為兩大支柱：Cabernet Sauvignon、Merlot、Cabernet Franc、少量 Malbec 與 Petit Verdot 用於混釀；Syrah 則走出自己的一條路，發展出獨樹一格的冷涼氣候風格。"
+        },
+        {
+          "type": "text",
+          "text": "值得注意的趨勢是：近二十年來 Merlot 的種植面積已超越 Cabernet Sauvignon，因為 Merlot 在較涼的年份也能穩定成熟，而 Cabernet Sauvignon 只有在最溫暖的地塊與年份才能完全成熟；與此同時，Syrah 種植面積持續擴大，成為評論界最常拿來與北隆河 Hermitage、Côte-Rôtie 相提並論的紐西蘭紅酒類型。"
+        }
       ],
-      "icon": "🍇"
+      "icon": "🍇",
+      "quiz": {
+        "question": "近二十年來，Hawke's Bay 紅葡萄品種種植面積出現了什麼變化趨勢？",
+        "options": ["Cabernet Sauvignon 種植面積超越 Merlot", "Merlot 種植面積超越 Cabernet Sauvignon", "Pinot Noir 成為主要品種", "所有紅葡萄品種都被拔除改種白葡萄"],
+        "correct": 1,
+        "explanation": "由於 Merlot 在較涼的年份也能穩定成熟，而 Cabernet Sauvignon 需要最溫暖的地塊與年份才能完全成熟，近二十年來 Merlot 的種植面積已超越 Cabernet Sauvignon，成為產區內種植最廣的紅葡萄品種。"
+      }
     },
     {
       "id": 3,
       "type": "feature",
-      "title": "釀造選項與風格結果",
-      "icon": "🏺",
+      "title": "波爾多混釀的調配哲學",
+      "icon": "⚖️",
       "features": [
-        { "title": "較高酒精與成熟單寧", "description": "溫暖氣候促進糖度累積,帶來飽滿酒體與成熟單寧。", "icon": "🔥" },
-        { "title": "橡木桶陳年", "description": "新桶使用會增加香草與烘烤香氣,混合使用提升複雜性。", "icon": "🪵" },
-        { "title": "混釀策略", "description": "以 Cabernet 為骨架、Merlot 提供圓潤與早期飲用友善性、Syrah 提供香料與色澤。", "icon": "⚖️" }
+        { "title": "Cabernet Sauvignon：骨架與陳年潛力", "description": "提供單寧結構、黑醋栗與雪松調性，是混釀中負責長期陳年潛力的骨幹，通常種植在最溫暖的礫石地塊。", "icon": "🏛️" },
+        { "title": "Merlot：圓潤與早期魅力", "description": "貢獻梅子與李子般的柔順果香、圓潤中段口感，讓混釀在年輕時就能展現迷人的易飲性，並平衡 Cabernet 的緊澀單寧。", "icon": "🍑" },
+        { "title": "Cabernet Franc 與 Malbec：香氣與色澤點綴", "description": "Cabernet Franc 增添覆盆莓與香草植物般的芳香層次，少量 Malbec 或 Petit Verdot 則用於加深色澤、補強香料調性，比例通常不超過一成。", "icon": "🌿" }
       ],
       "quiz": {
-        "question": "在 Hawke's Bay 的波爾多式混釀中,Merlot 的主要作用是什麼?",
-        "options": ["增加酸度與淡化顏色", "提供圓潤感與早期飲用友善性", "增加香料與胡椒感", "增強單寧結構"],
+        "question": "在 Hawke's Bay 波爾多式混釀中，Cabernet Sauvignon 的主要角色是什麼？",
+        "options": ["提供圓潤口感與早期飲用友善性", "提供單寧結構與長期陳年潛力", "只用於增加酒色深度", "完全不參與混釀，僅單獨裝瓶"],
         "correct": 1,
-        "explanation": "在 Hawke's Bay 的波爾多式混釀中,Cabernet Sauvignon 提供結構與骨架,而 Merlot 的主要作用是提供圓潤的口感與早期飲用的友善性,平衡 Cabernet 的單寧結構。"
+        "explanation": "Cabernet Sauvignon 在混釀中主要提供單寧結構、黑醋栗與雪松調性，是負責賦予酒款長期陳年潛力的骨幹品種，通常種植於 Gimblett Gravels 等最溫暖的礫石地塊，確保能完全成熟。"
       }
     },
     {
       "id": 4,
-      "type": "timeline",
-      "title": "從收穫到瓶陳的關鍵釀造步驟",
-      "items": [
-        { "year": "破碎 / 去棗", "text": "廠家會依風格選擇去棗比例以控制萎取與結構。" },
-        { "year": "發酵管理", "text": "溫控、浸皮時長與頻繁下壓影響顏色與單寧萎取。" },
-        { "year": "橡木與陳年", "text": "新桶比例與陳年時間決定酒體與香氣調性。" }
+      "type": "feature",
+      "title": "Syrah 的崛起：北隆河風格的南半球版本",
+      "icon": "🌶️",
+      "features": [
+        { "title": "冷涼氣候的辛香骨架", "description": "相較澳洲溫暖產區的濃郁果醬感，Hawke's Bay 的 Syrah 走冷涼氣候路線：白胡椒、紫羅蘭與石墨般的礦物氣息，酒精度通常維持在 13-14% 之間，張力細膩。", "icon": "🌡️" },
+        { "title": "部分整串發酵", "description": "常採用 30% 至 60% 不等的整串（whole-bunch）比例入發酵槽，增添香料與骨架感，並帶來更細緻、如絲絨般的單寧質地。", "icon": "🍇" },
+        { "title": "代表酒款", "description": "Trinity Hill 的 Homage、Craggy Range 的 Le Sol、Elephant Hill 的 Airavata 皆是這股風格的指標酒款，屢屢獲得國際酒評高分肯定。", "icon": "🏆" }
       ],
-      "icon": "⚙️",
       "quiz": {
-        "question": "發酵管理階段中,浸皮時長和頻繁下壓主要影響什麼?",
-        "options": ["酒精度與糖分", "顏色與單寧萎取", "酸度與 pH 值", "香氣的清爽度"],
+        "question": "Hawke's Bay 的 Syrah 常被拿來與哪個經典產區的風格相比擬？",
+        "options": ["西班牙 Rioja", "法國北隆河（Hermitage、Côte-Rôtie）", "義大利 Barolo", "美國納帕谷"],
         "correct": 1,
-        "explanation": "發酵管理階段中,浸皮時長（果皮與果汁接觸時間）和頻繁下壓（將果帽壓入果汁）主要影響葡萄酒的顏色深度和單寧萎取量,這兩個因素對紅酒的風格與結構至關重要。"
+        "explanation": "Hawke's Bay 的 Syrah 走冷涼氣候路線，展現白胡椒、紫羅蘭與石墨般的礦物氣息、酒精度適中且單寧細緻，這種風格常被酒評家拿來與法國北隆河的 Hermitage、Côte-Rôtie 相提並論，而非澳洲溫暖產區濃郁果醬感的 Shiraz。"
       }
     },
     {
       "id": 5,
       "type": "content",
-      "title": "釀造實務的品質信號",
+      "title": "採收與破碎：決定風格的第一步",
       "content": [
-        { "type": "stats", "items": [
-          { "label": "高品質指標", "value": "均衡酸度、精緻單寧、層次感與長尾韻" },
-          { "label": "釀造建議", "value": "適度橡木、良好果實濃縮與適切的採收時機" }
-        ] }
+        {
+          "type": "text",
+          "text": "頂級地塊多採人工採收，以便分批挑選最理想的果串成熟度；破碎去梗階段，釀酒師會依酒款目標決定整串保留比例——保留越多整串，通常帶來更多香料感與更細緻的單寧結構，但也需要更精準的果實成熟度掌控，以免帶入生青梗味。"
+        },
+        {
+          "type": "text",
+          "text": "許多酒莊採用開放式發酵槽並使用原生（野生）酵母發酵，讓風味更能反映葡萄園本身的特性；發酵前的低溫泡皮（cold soak）則有助於在酒精發酵開始前，先溫和地萃取果皮中的花青素與香氣前驅物。"
+        }
       ],
-      "icon": "🔬",
+      "icon": "🔪",
       "quiz": {
-        "question": "高品質 Hawke's Bay 紅酒的指標不包括下列哪項?",
-        "options": ["均衡酸度", "精緻單寧", "高糖分殘留", "層次感與長尾韻"],
-        "correct": 2,
-        "explanation": "高品質 Hawke's Bay 紅酒的指標包括均衡酸度、精緻單寧、層次感與長尾韻。高糖分殘留通常出現在甜酒中，不是乾型紅酒的品質指標，適切的採收時機和良好的果實濃縮才是重點。"
+        "question": "保留較高比例的整串葡萄進入發酵槽，通常會為酒款帶來什麼影響？",
+        "options": ["降低酒精度並增加甜度", "增添香料感並帶來更細緻的單寧結構", "完全去除單寧，口感更清淡", "使酒色變得更淺淡"],
+        "correct": 1,
+        "explanation": "保留較高比例的整串葡萄（whole-bunch）發酵，通常能增添香料與骨架感，並帶來更細緻、如絲絨般的單寧質地，是 Hawke's Bay 頂級 Syrah 常用的技術，但也需要精準掌控果實成熟度，避免帶入生青梗味。"
       }
     },
     {
       "id": 6,
+      "type": "feature",
+      "title": "萃取工藝：從果皮到酒液的溫柔轉化",
+      "icon": "🍷",
+      "features": [
+        { "title": "打循環（Pump-over）", "description": "將發酵槽底部的酒液抽取後淋回頂部的果帽，萃取手法較溫和，能均勻萃取顏色與單寧，是波爾多混釀常用的技術。", "icon": "🔄" },
+        { "title": "踩皮（Punch-down）", "description": "以人工或機械將浮起的果帽壓入酒液中，萃取力道較強、接觸更直接，常用於希望強化結構與濃縮度的頂級地塊酒款。", "icon": "👣" },
+        { "title": "延長泡皮期", "description": "發酵結束後持續讓酒液與果皮接觸長達 30 至 40 天（extended maceration），能柔化單寧顆粒感、提升酒款的圓潤度與陳年潛力。", "icon": "⏳" }
+      ],
+      "quiz": {
+        "question": "延長泡皮期（extended maceration）對紅酒的單寧質地通常有什麼作用？",
+        "options": ["使單寧更粗獷、口感更澀", "柔化單寧顆粒感，提升圓潤度與陳年潛力", "完全去除酒中所有單寧", "只影響酒色，不影響單寧"],
+        "correct": 1,
+        "explanation": "發酵結束後讓酒液與果皮持續接觸長達 30 至 40 天的延長泡皮期，能讓原本較粗獷的單寧顆粒逐漸柔化、聚合，提升酒款的圓潤口感與長期陳年潛力，是許多 Hawke's Bay 頂級紅酒的關鍵工序。"
+      }
+    },
+    {
+      "id": 7,
+      "type": "content",
+      "title": "橡木桶陳年策略",
+      "content": [
+        {
+          "type": "text",
+          "text": "法國橡木桶是 Hawke's Bay 頂級紅酒的主流選擇，相較美國橡木常見的椰香與蒔蘿調性，法國橡木能帶來更細緻的雪松、香料與煙燻氣息，並讓單寧的整合更為優雅。新桶比例通常落在 20% 至 35% 之間，陳年時間約 12 至 18 個月。"
+        },
+        {
+          "type": "text",
+          "text": "近年也有越來越多酒莊改用容量較大的 500 公升大桶（puncheon）取代傳統 225 公升小桶，目的是降低橡木風味對果香的直接干擾，讓地塊本身的風土特色更清晰地展現。"
+        }
+      ],
+      "icon": "🪵",
+      "quiz": {
+        "question": "為什麼部分 Hawke's Bay 酒莊改用容量較大的橡木桶（如 500 公升 puncheon）？",
+        "options": ["為了加快陳年速度", "為了降低橡木風味的直接干擾，讓風土特色更清晰", "因為大桶成本比小桶便宜", "為了增加酒精度"],
+        "correct": 1,
+        "explanation": "容量較大的橡木桶（如 500 公升 puncheon）因表面積與酒液體積比例較小，橡木風味的釋放更為含蓄，能降低橡木對果香的直接干擾，讓葡萄園本身的風土特色更清晰地展現在酒液中。"
+      }
+    },
+    {
+      "id": 8,
+      "type": "comparison",
+      "title": "兩種風格哲學的對照",
+      "icon": "⚖️",
+      "comparisonData": {
+        "title": "經典波爾多混釀 vs. 現代 Syrah 風格",
+        "left": {
+          "label": "波爾多混釀（Cabernet-Merlot）",
+          "icon": "🍷",
+          "color": "#764ba2",
+          "items": [
+            "以 Cabernet Sauvignon 提供結構、Merlot 提供圓潤",
+            "多來自 Gimblett Gravels、Bridge Pa Triangle 等溫暖礫石地塊",
+            "法國橡木新桶比例 20-35%，陳年 12-18 個月",
+            "代表酒款：Te Mata Coleraine、Church Road TOM"
+          ]
+        },
+        "right": {
+          "label": "北隆河式 Syrah",
+          "icon": "🌶️",
+          "color": "#e07a5f",
+          "items": [
+            "單一品種，強調白胡椒、紫羅蘭與礦物氣息",
+            "常見部分整串發酵（30-60%），質地更細緻",
+            "酒精度偏低（13-14%），張力優先於濃縮度",
+            "代表酒款：Trinity Hill Homage、Craggy Range Le Sol"
+          ]
+        }
+      },
+      "summary": "兩種風格哲學共享同一片風土，卻透過不同的品種選擇與釀造工序，展現出 Hawke's Bay 紅酒版圖的完整廣度。",
+      "quiz": {
+        "question": "北隆河式 Syrah 風格與經典波爾多混釀相比，通常更強調什麼？",
+        "options": ["更高的酒精度與更濃縮的果醬感", "白胡椒、紫羅蘭等辛香氣息與細膩張力", "完全捨棄橡木桶陳年", "只使用機械採收"],
+        "correct": 1,
+        "explanation": "北隆河式 Syrah 風格強調白胡椒、紫羅蘭與礦物氣息，酒精度偏低、單寧細緻，追求張力而非濃縮度，與強調結構骨架、由 Cabernet 與 Merlot 主導的經典波爾多混釀走出不同的風格路線。"
+      }
+    },
+    {
+      "id": 9,
+      "type": "content",
+      "title": "釀造實務的品質信號",
+      "content": [
+        { "type": "stats", "items": [
+          { "label": "高品質指標", "value": "均衡酸度、精緻單寧、清晰的地塊特徵與悠長尾韻" },
+          { "label": "釀造建議", "value": "適度且與果香協調的橡木使用、精準採收時機與溫和萃取" }
+        ] }
+      ],
+      "icon": "🔬",
+      "quiz": {
+        "question": "評估 Hawke's Bay 頂級紅酒品質時，下列哪一項並非核心指標？",
+        "options": ["均衡酸度", "精緻單寧與悠長尾韻", "高糖分殘留", "清晰的地塊風土特徵"],
+        "correct": 2,
+        "explanation": "高品質 Hawke's Bay 紅酒的指標包括均衡酸度、精緻單寧、清晰的地塊特徵與悠長尾韻。高糖分殘留通常出現在甜酒中，不是乾型紅酒的品質指標。"
+      }
+    },
+    {
+      "id": 10,
       "type": "summary",
       "title": "本課重點整理",
       "points": [
-        "Hawke's Bay 的紅酒常呈現飽滿酒體與成熟單寧",
-        "混釀與橡木處理是該產區重要的風格塑造工具",
-        "採收時機與果實品質直接影響最終酒款的細緻度"
+        "Hawke's Bay 紅酒以波爾多混釀與 Syrah 為兩大支柱，近年 Merlot 種植面積已超越 Cabernet Sauvignon",
+        "波爾多混釀中 Cabernet Sauvignon 提供結構、Merlot 提供圓潤，各品種角色分工明確",
+        "Syrah 走北隆河式冷涼風格，常搭配部分整串發酵，展現白胡椒與紫羅蘭的辛香氣息",
+        "打循環、踩皮與延長泡皮期是塑造單寧質地的關鍵萃取工藝",
+        "法國橡木與適度新桶比例，加上近年流行的大桶陳年，共同型塑優雅而非厚重的橡木調性"
       ],
       "icon": "🔑"
     }

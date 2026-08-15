@@ -3,107 +3,126 @@
     {
       "id": 1,
       "type": "cover",
-      "title": "Gisborne 與其他北島產區 — 海岸、河谷與多樣風格",
-      "subtitle": "快速了解 Gisborne、Northland 與 Waiheke 等北島產區的特色與代表酒款",
+      "title": "Gisborne 與其他北島產區 — 從散裝到精品的蛻變",
+      "subtitle": "認識紐西蘭最早見到日出的產區，以及它從大宗 Chardonnay 到芳香白酒精品化的轉型之路",
       "icon": "🌊",
       "background": "linear-gradient(135deg,#89f7fe 0%,#66a6ff 100%)"
     },
     {
       "id": 1.5,
       "type": "map",
-      "title": "Gisborne 與北島其他產區地圖",
-      "subtitle": "東岸海洋氣候孕育的多樣風格",
-      "mapRegion": "Gisborne|Northland"
+      "title": "Gisborne 產區地圖",
+      "subtitle": "北島東岸、Poverty Bay 沖積平原的溫暖產區",
+      "mapRegion": "Gisborne"
     },
     {
       "id": 2,
       "type": "content",
       "title": "Gisborne 產區概覽",
       "content": [
-        { "type": "text", "text": "Gisborne 位於北島東岸,以溫暖、日照充足的氣候聞名,適合生產成熟而果香濃鬱的白酒（如 Chardonnay）與較輕盈的紅酒。產區也有長期的釀酒歷史與特色酒莊。" }
+        { "type": "text", "text": "Gisborne 位於北島東岸的 Poverty Bay，是地球上最早迎接日出的地區之一。相傳最初載運葡萄藤的移民原本要前往 Hawke's Bay，卻誤打誤撞在此登陸，意外開啟了這片沖積平原的葡萄酒歷史。Poverty Bay 平原土壤肥沃、排水良好，加上溫暖多陽的氣候，長期以來是紐西蘭單位面積產量最高的產區之一，也因此在二十世紀後半奠定了「散裝白酒供應站」的角色。" }
       ],
       "icon": "🗺️",
       "quiz": {
-        "question": "Gisborne 產區最適合生產哪類酒款?",
-        "options": ["起泡酒", "成熟果香濃鬱的白酒", "陳年型紅酒", "加烈酒"],
+        "question": "Gisborne 地理位置上有什麼特殊之處？",
+        "options": ["紐西蘭海拔最高的產區", "地球上最早迎接日出的地區之一", "紐西蘭最南端的產區", "唯一沒有沿海地形的產區"],
         "correct": 1,
-        "explanation": "Gisborne 位於北島東岸,擁有溫暖且日照充足的氣候,特別適合生產成熟而果香濃鬱的白酒,尤其是 Chardonnay,也有較輕盈的紅酒生產。"
+        "explanation": "Gisborne 位於紐西蘭北島東岸，是地球上最早迎接日出的地區之一，因此當地也常以「The First to See the Light」作為行銷特色。"
       }
     },
     {
       "id": 3,
-      "type": "feature",
-      "title": "北島其他重點產區速覽",
-      "icon": "📍",
-      "features": [
-        { "title": "Northland", "description": "更北方且氣候溫暖,部分區域適合種植芳香型白葡萄與較輕盈的紅酒。", "icon": "🌿" },
-        { "title": "Waiheke（補充）", "description": "小島氣候溫暖,出品高酒精度的濃鬱紅酒,適合富有結構的烤肉搭配。", "icon": "🏝️" },
-        { "title": "其他小產區", "description": "一些近海或河谷地塊提供多樣風格,從礦物感白酒到果香豐富的紅酒皆有。", "icon": "🔎" }
+      "type": "timeline",
+      "title": "從散裝供應到精品酒莊：Gisborne 的產業轉型",
+      "subtitle": "一部濃縮紐西蘭葡萄酒業變遷的歷史",
+      "items": [
+        { "year": "1921年", "text": "Frederick Wohnsiedler 種下 Gisborne 第一批商業葡萄園，開啟正式釀酒歷史。" },
+        { "year": "1972年", "text": "Corbans 在此設立第二座酒廠，年產能達 270 萬公升，Gisborne 迅速成為大宗釀酒葡萄的重要供應地。" },
+        { "year": "1974年", "text": "Montana Wines 推出紐西蘭第一支商業化生產的 Chardonnay，原料正是來自 Gisborne，奠定其「Chardonnay 之都」的名聲。" },
+        { "year": "1984年", "text": "James 與 Annie Millton 創立 Millton Vineyard，率先投入有機與生物動力法栽培。" },
+        { "year": "1989年", "text": "Millton Vineyard 取得紐西蘭第一張 BioGro 有機認證，成為全國有機釀酒的先驅。" },
+        { "year": "1990年代起", "text": "隨著 Marlborough 崛起搶占大宗 Sauvignon Blanc 市場，Gisborne 逐漸轉型，聚焦芳香型白酒與精品化生產。" }
       ],
+      "icon": "📜",
       "quiz": {
-        "question": "Northland 產區的氣候特色是什麼?",
-        "options": ["冷涼且多雨", "溫暖且位於北方", "高海拔山區", "乾燥沙漠氣候"],
-        "correct": 1,
-        "explanation": "Northland 位於紐西蘭北島的最北端,氣候溫暖,適合種植芳香型白葡萄與較輕盈的紅酒品種,是紐西蘭氣候最溫暖的葡萄酒產區之一。"
+        "question": "紐西蘭第一支商業化生產的 Chardonnay，原料來自哪個產區？",
+        "options": ["Marlborough", "Hawke's Bay", "Gisborne", "Nelson"],
+        "correct": 2,
+        "explanation": "Montana Wines 於 1974 年推出紐西蘭第一支商業化生產的 Chardonnay，葡萄原料正是來自 Gisborne，這也是該產區長年被稱為「Chardonnay 之都」的原因。"
       }
     },
     {
       "id": 4,
-      "type": "content",
-      "title": "土壤與微氣候影響",
-      "content": [
-        { "type": "text", "text": "海岸影響、河谷沖積層與古河床礫石都會影響水分保持與根系發展，進而改變果香濃度與酸度表現。" }
-      ],
-      "icon": "🪨"
+      "type": "feature",
+      "title": "土壤、氣候與品種優勢",
+      "icon": "🪨",
+      "features": [
+        { "title": "Poverty Bay 沖積平原", "description": "由 Waipaoa 河沖積而成的肥沃壤土與黏土混合，保水性佳、地力豐富，是紐西蘭少數能維持高產量又不失品質的產區。", "icon": "🏞️" },
+        { "title": "溫暖多陽氣候", "description": "亞熱帶邊緣氣候搭配充足日照，有利葡萄快速累積糖分與濃郁果香，但也偶受熱帶氣旋帶來的秋季降雨影響。", "icon": "☀️" },
+        { "title": "Chardonnay 為主力", "description": "Chardonnay 長期占全區種植面積過半，風格從清新果香到奶油橡木皆有，兼具產量與品質的彈性。", "icon": "🥂" }
+      ]
     },
     {
       "id": 5,
       "type": "feature",
-      "title": "代表品種與風格",
-      "icon": "🍇",
+      "title": "Gewürztraminer 與芳香白酒的舞台",
+      "icon": "🌺",
       "features": [
-        { "title": "Chardonnay", "description": "在 Gisborne、Kumeu 等地能表現從清新礦物到奶油橡木多樣風格。", "icon": "🥂" },
-        { "title": "Sauvignon Blanc / Pinot Gris", "description": "視產區而異，從礦石感到果香豐富都有。", "icon": "🍋" },
-        { "title": "輕型紅酒", "description": "北島部分區域生產較輕盈、果香的紅酒，適合早飲。", "icon": "🍒" }
-      ]
-    },
-    {
-      "id": 6,
-      "type": "timeline",
-      "title": "北島產業趨勢",
-      "subtitle": "從地方性生產到旅遊與直銷驅動的商業模式",
-      "items": [
-        { "year": "地方性生產", "text": "許多小酒莊以家族經營為主，注重地塊與風格多樣性。" },
-        { "year": "觀光與直銷", "text": "近年遊客帶動酒莊品酒與直售，提升小產區的能見度。" },
-        { "year": "精品化趨勢", "text": "重視低產量、高品質的製酒方式與地塊標示。" }
-      ],
-      "icon": "📈"
-    },
-    {
-      "id": 7,
-      "type": "feature",
-      "title": "品鑑要點（北島白酒與輕紅）",
-      "icon": "🥂",
-      "features": [
-        { "title": "觀察酸度與果香", "description": "北島白酒多呈現飽滿果香,重點在酸度平衡與礦物感的辨識。", "icon": "🍋" },
-        { "title": "紅酒爽飲性", "description": "輕型紅酒強調純淨紅果與易飲性,適合較短熟成。", "icon": "🍷" }
+        { "title": "產區招牌品種", "description": "Gisborne 溫暖的氣候特別能凸顯 Gewürztraminer 的荔枝、玫瑰與香料調性，被視為紐西蘭最能代表此品種水準的產區。", "icon": "🌸" },
+        { "title": "Millton Vineyard", "description": "James 與 Annie Millton 自 1984 年起投入有機與生物動力法，出品的 Chenin Blanc、Chardonnay 與 Viognier 展現極高的風土純淨度，是紐西蘭有機釀酒的指標酒莊。", "icon": "🌿" },
+        { "title": "其他芳香品種", "description": "Viognier、Pinot Gris 等芳香型白酒近年也逐漸受到重視，成為 Gisborne 精品化策略的一環。", "icon": "🍇" }
       ],
       "quiz": {
-        "question": "北島產區近年的產業趋勢主要包括哪些方向?",
-        "options": ["大量出口與機械化生產", "旅遊化、直銷與精品化", "低價競爭策略", "放棄小型酒莊"],
-        "correct": 1,
-        "explanation": "北島產區近年朝向旅遊化、直銷與精品化發展,許多小型酒莊以家族經營為主,注重地塊與風格多樣性,這客帶動酒莊品酒體驗與直接銷售,提升小產區的能見度。"
+        "question": "Millton Vineyard 在紐西蘭葡萄酒史上最重要的貢獻是什麼？",
+        "options": ["第一家取得 BioGro 有機認證的酒莊", "第一家生產起泡酒的酒莊", "紐西蘭最大的散裝酒出口商", "第一家引進法國橡木桶的酒莊"],
+        "correct": 0,
+        "explanation": "James 與 Annie Millton 於 1984 年創立 Millton Vineyard，並於 1989 年成為紐西蘭第一家取得 BioGro 有機認證的酒莊，是有機與生物動力法釀酒在紐西蘭的先驅。"
       }
     },
     {
+      "id": 6,
+      "type": "content",
+      "title": "產業轉型的挑戰與策略",
+      "content": [
+        { "type": "text", "text": "1990 年代後，Marlborough 的 Sauvignon Blanc 迅速主導出口市場，Gisborne 過去仰賴的大宗散裝白酒訂單大幅萎縮，許多合作型大廠關閉或縮編。倖存的酒莊轉而強調地塊特色、有機栽培與芳香品種的差異化定位，並發展酒莊直售與小眾出口，逐步從「產量掛帥」轉型為「風土敘事」導向的精品產區，這個轉型過程也是理解紐西蘭葡萄酒產業結構變化的重要案例。" }
+      ],
+      "icon": "🔄"
+    },
+    {
+      "id": 7,
+      "type": "content",
+      "title": "北島其他區域小記",
+      "content": [
+        { "type": "text", "text": "北島的主要葡萄酒版圖已由 Northland（見 Auckland 單元）、Hawke's Bay、Wairarapa/Martinborough 與 Gisborne 涵蓋；Waikato、Bay of Plenty 等地雖偶有零星種植，但規模極小，尚未形成具代表性的產區身分，市場上也少見以此為產區標示的酒款。" }
+      ],
+      "icon": "🧭"
+    },
+    {
       "id": 8,
+      "type": "feature",
+      "title": "品鑑要點：辨識 Gisborne 風格",
+      "icon": "🥂",
+      "features": [
+        { "title": "觀察濃郁果香", "description": "Gisborne 白酒常呈現比 Marlborough 更飽滿的熱帶與核果香氣，酸度相對柔和，反映溫暖氣候與肥沃沖積土的特質。", "icon": "🍑" },
+        { "title": "留意 Gewürztraminer 香氣", "description": "荔枝、玫瑰花瓣與淡淡薑味是判斷 Gisborne 芳香白酒的重要線索。", "icon": "🌹" }
+      ],
+      "quiz": {
+        "question": "Gisborne 產業從大宗生產轉向精品化的主要原因是什麼？",
+        "options": ["政府禁止大量出口", "Marlborough Sauvignon Blanc 崛起搶占出口市場", "當地土壤突然變得貧瘠", "氣候變遷導致無法種植葡萄"],
+        "correct": 1,
+        "explanation": "1990 年代後 Marlborough 的 Sauvignon Blanc 迅速崛起並主導紐西蘭白酒出口市場，Gisborne 原本仰賴的大宗散裝訂單大幅萎縮，促使當地酒莊轉向強調風土特色與芳香品種的精品化策略。"
+      }
+    },
+    {
+      "id": 9,
       "type": "summary",
       "title": "本課重點總結",
       "icon": "🔑",
       "points": [
-        "Gisborne 與北島其他產區風格多樣，受海岸與河谷影響明顯",
-        "Chardonnay 與芳香型白酒在北島多有亮眼表現，部分區域也生產輕盈紅酒",
-        "產業趨勢朝向旅遊化、直銷與精品化發展"
+        "Gisborne 位於 Poverty Bay 沖積平原，是紐西蘭最早見到日出的產區，也是 1974 年首支商業 Chardonnay 的原料產地",
+        "Millton Vineyard（1984 年創立）是紐西蘭有機與生物動力法釀酒的先驅，1989 年取得全國第一張 BioGro 認證",
+        "Gewürztraminer 是 Gisborne 最具代表性的芳香白酒品種，展現荔枝、玫瑰與香料調性",
+        "產區歷經從大宗散裝生產到精品化、風土導向的重大轉型，是理解紐西蘭酒業結構變遷的關鍵案例"
       ]
     }
   ]

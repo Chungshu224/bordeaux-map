@@ -15,10 +15,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Sauvignon Blanc 原產自法國波爾多/盧瓦爾河流域，於20世紀後期在紐西蘭獲得重大成功。Marlborough 地區在1970s-1980s 推動了其國際聲譽，並成為紐西蘭最具代表性的品種之一。"
+          "text": "Sauvignon Blanc 原產自法國羅亞爾河與波爾多。1973年8月24日，Montana Wines（現今的 Brancott Estate）在 Marlborough 種下該產區歷史上第一批葡萄藤（品種為 Cabernet Sauvignon、Riesling 與 Sylvaner），正式開啟 Marlborough 的釀酒歷史；直到1975年才種下首批 Sauvignon Blanc，1979年才裝出第一個年份酒款。真正讓世界驚豔的，是1985年由 David Hohnen 與釀酒師 Kevin Judd 創立的 Cloudy Bay 酒莊，其充滿百香果與青草香氣的酒款迅速在國際間打開知名度，確立 Marlborough 作為紐西蘭 Sauvignon Blanc 標竿產區的地位。"
+        },
+        {
+          "type": "text",
+          "text": "今日 Marlborough 逾九成的 Sauvignon Blanc 種植使用 UCD1（Mass Select）單一無性系——此系源自法國 Sancerre，以穩定產量與濃郁品種特徵形塑出紐西蘭的招牌風格；部分酒莊會混入1990年代自波爾多引進的 Clone 316、317，以增添酒體厚度與複雜度，但因嫁接親和力較差，多僅作為調配用途。"
         }
       ],
-      "icon": "📜"
+      "icon": "📜",
+      "quiz": {
+        "question": "Marlborough 絕大多數（約九成）Sauvignon Blanc 種植使用哪一個無性系（clone）？",
+        "options": [
+          "Dijon 115",
+          "UCD1（Mass Select）",
+          "Abel 選系",
+          "Mendoza Clone"
+        ],
+        "correct": 1,
+        "explanation": "UCD1（又稱 Mass Select）源自法國 Sancerre，是 Marlborough 逾九成 Sauvignon Blanc 種植所使用的主力無性系，以穩定的產量與濃郁的品種香氣特徵，奠定了紐西蘭招牌風格的基礎。1990年代自波爾多引進的 Clone 316、317 雖能增添酒體厚度，但因嫁接親和力較差，多僅用於少量調配。Abel 是紐西蘭特有的 Pinot Noir 選系，Mendoza Clone 則用於 Chardonnay，皆與 Sauvignon Blanc 無關。"
+      }
     },
     {
       "id": 3,
@@ -28,17 +43,17 @@
       "features": [
         {
           "title": "草本與綠色果實",
-          "description": "青椒、青草、番石榴與青蘋果等鮮明香氣。",
+          "description": "青椒、青草、番石榴與青蘋果等鮮明香氣，主要來自甲氧基吡𠯤（methoxypyrazine）。",
           "icon": "🌿"
         },
         {
           "title": "熱帶果香",
-          "description": "尤其在成熟度偏高或較溫暖產區,常見百香果與芒果香氣。",
+          "description": "尤其在成熟度偏高或較溫暖產區，常見百香果與芒果香氣，這類香氣多來自硫醇（thiol）類化合物。",
           "icon": "🥭"
         },
         {
           "title": "礦物與酸度",
-          "description": "優良的酸度結構及礦物感,造就清新且耐喝的風格。",
+          "description": "優良的酸度結構及礦物感，造就清新且耐喝的風格。",
           "icon": "🪨"
         }
       ],
@@ -51,53 +66,55 @@
           "玫瑰花瓣與荔枝的花香"
         ],
         "correct": 1,
-        "explanation": "紐西蘭 Sauvignon Blanc 以鮮明的百香果、青草、番石榴與青蘋果等綠色果實和熱帶果香著稱，搭配優良的酸度結構，這種風格與法國盧瓦爾河谷的風格有所區別，特別是 Marlborough 產區更是將這種風格推向極致。橡木香氣並非此品種的典型特徵。"
+        "explanation": "紐西蘭 Sauvignon Blanc 以鮮明的百香果、青草、番石榴與青蘋果等綠色果實和熱帶果香著稱，搭配優良的酸度結構，這種風格與法國羅亞爾河谷的風格有所區別，特別是 Marlborough 產區更是將這種風格推向極致。橡木香氣並非此品種的典型特徵。"
       }
     },
     {
       "id": 3.5,
       "type": "map",
       "title": "Sauvignon Blanc 核心產區地圖",
-      "subtitle": "Marlborough 佔全球紐西蘭 SB 出口的 70%，Nelson 與 Central Otago 提供涼爽風格對比",
+      "subtitle": "Marlborough 佔紐西蘭 Sauvignon Blanc 種植與出口的最大宗，Nelson 與 Central Otago 提供涼爽風格對比",
       "mapRegion": "Marlborough|Nelson|Central_Otago"
     },
     {
       "id": 4,
-      "type": "content",
-      "title": "主要產區與風土對比",
-      "content": [
-        {
-          "type": "stats",
+      "type": "comparison",
+      "title": "產區風土對比：Wairau Valley vs Awatere Valley",
+      "icon": "🗺️",
+      "comparisonData": {
+        "title": "Marlborough 兩大核心子產區",
+        "left": {
+          "label": "Wairau Valley",
+          "icon": "🌾",
+          "color": "#F6A623",
           "items": [
-            {
-              "label": "Marlborough",
-              "value": "以濃郁百香果、鮮明酸度著稱，是最知名的產區",
-              "icon": "🏞️"
-            },
-            {
-              "label": "Nelson / Waipara",
-              "value": "氣候較溫和，風味偏向細緻花香與熱帶果",
-              "icon": "🌸"
-            },
-            {
-              "label": "Hawke's Bay",
-              "value": "較溫暖，果實成熟度高，風格更為圓潤",
-              "icon": "☀️"
-            }
+            "Marlborough 最早開墾、種植面積最大的核心地帶",
+            "谷底沖積層深厚，排水良好的礫石與壤土",
+            "風格圓潤飽滿，百香果、芒果等熱帶果香突出，硫醇香氣主導"
+          ]
+        },
+        "right": {
+          "label": "Awatere Valley",
+          "icon": "🌬️",
+          "color": "#42A5F5",
+          "items": [
+            "位於 Wairau 南側，更靠近海岸，氣候更涼爽多風",
+            "土壤較薄，黏土與板岩含量高，日夜溫差更大",
+            "風格更緊實內斂，青椒、萊姆皮與燧石般的礦物鹹感明顯，甲氧基吡𠯤主導"
           ]
         }
-      ],
-      "icon": "🗺️",
+      },
+      "summary": "越來越多酒莊（如 Villa Maria、Astrolabe）將 Wairau 與 Awatere 的葡萄分開裝瓶，藉此展現 Marlborough 內部的風土差異，而非單一同質化的「紐西蘭風味」。",
       "quiz": {
-        "question": "Marlborough 產區的 Sauvignon Blanc 為何能成為紐西蘭最具代表性的葡萄酒？",
+        "question": "與 Wairau Valley 相比，Awatere Valley 生產的 Sauvignon Blanc 通常展現什麼風格差異？",
         "options": [
-          "因為該產區使用大量新橡木桶陳年",
-          "因為濃郁的百香果香氣與鮮明酸度形成獨特風格",
-          "因為該產區的葡萄含糖量最高",
-          "因為該產區採用野生酵母發酵"
+          "酒體更圓潤，熱帶果香更濃郁",
+          "風格更緊實，青椒與燧石般礦物鹹感更明顯",
+          "完全沒有酸度，口感較甜",
+          "橡木桶風味更強烈"
         ],
         "correct": 1,
-        "explanation": "Marlborough 在1970-1980年代憑藉其獨特的涼爽氣候與風土條件，生產出濃郁百香果香氣、鮮明酸度的 Sauvignon Blanc，這種風格在國際上大受歡迎，成為紐西蘭葡萄酒的代表。該產區通常使用不鏽鋼低溫發酵來保留鮮明果香，而非橡木桶陳年。"
+        "explanation": "Awatere Valley 位於 Wairau Valley 南側、更靠近海岸，氣候更涼爽多風，土壤黏土與板岩含量較高，日夜溫差也更大，因此該地的 Sauvignon Blanc 風格較緊實內斂，青椒、萊姆皮與燧石般的礦物鹹感明顯，以甲氧基吡𠯤為主要香氣來源。相對地，Wairau Valley 谷底沖積層深厚，酒款風格較圓潤飽滿，以百香果、芒果等硫醇主導的熱帶果香為特色。"
       }
     },
     {
@@ -120,7 +137,7 @@
         },
         {
           "year": "調配與裝瓶",
-          "text": "調整酸度、殘糖與澄清，決定最終風格（乾型、半乾或帶甜）"
+          "text": "調整酸度、殘糖與澄清，決定最終風格（乾型、半乾或帶甜），多數酒款採用旋蓋封瓶以保持新鮮果香"
         }
       ],
       "icon": "⚙️"
@@ -216,10 +233,25 @@
       "content": [
         {
           "type": "text",
-          "text": "推薦從 Marlborough 的代表酒莊入手，嘗試不同子產區與釀造風格：Cloudy Bay、Kim Crawford、Greywacke、Dog Point 等。"
+          "text": "紐西蘭 Sauvignon Blanc 的產業系譜與 Cloudy Bay 淵源極深：Cloudy Bay（1985年由 David Hohnen 與創始釀酒師 Kevin Judd 創立，現隸屬 LVMH 集團）確立了經典風格；其早期首席葡萄農 Ivan Sutherland 與釀酒師 James Healy 於2002年離開後，共同創立了 Dog Point Vineyard；Kevin Judd 本人則在2009年推出個人品牌 Greywacke，兩者的酒款皆委由 Dog Point 酒莊釀造。"
+        },
+        {
+          "type": "text",
+          "text": "此外，紐西蘭最大的家族經營酒莊 Villa Maria（1961年由當時21歲的 George Fistonich 創立）也以 Awatere Valley 的單一園酒款展現該子產區特有的礦物與草本風格，是比較不同風土表現的絕佳入門選擇。"
         }
       ],
-      "icon": "🏆"
+      "icon": "🏆",
+      "quiz": {
+        "question": "Dog Point 與 Greywacke 這兩家酒莊，與哪家 Marlborough 先驅酒莊有直接淵源？",
+        "options": [
+          "Villa Maria",
+          "Cloudy Bay",
+          "Te Mata Estate",
+          "Felton Road"
+        ],
+        "correct": 1,
+        "explanation": "Dog Point 由 Cloudy Bay 早期首席葡萄農 Ivan Sutherland 與釀酒師 James Healy 於2002年共同創立；Greywacke 則是 Cloudy Bay 創始釀酒師 Kevin Judd 在2009年推出的個人品牌，兩者的酒款皆委由 Dog Point 酒莊釀造。這條系譜清楚展現了 Cloudy Bay 對 Marlborough Sauvignon Blanc 產業人才培育的深遠影響。"
+      }
     },
     {
       "id": 10,
@@ -227,9 +259,10 @@
       "title": "重點總結",
       "icon": "🔑",
       "points": [
-        "Sauvignon Blanc 在紐西蘭展現出鮮明的果香、清晰酸度與地域性差異",
+        "Marlborough 自1975年種下首批 Sauvignon Blanc，1985年 Cloudy Bay 的成功確立其國際標竿地位",
+        "逾九成種植使用 UCD1 無性系，是紐西蘭招牌風格的根基",
+        "Wairau Valley 圓潤熱帶果香 vs Awatere Valley 緊實礦物感，展現產區內部風土差異",
         "栽培與採收時機、發酵溫度與容器選擇直接影響風格走向",
-        "Marlborough 為代表性產區，但其他地區亦提供不同層次與風格",
         "搭配海鮮、山羊起司與亞洲酸香料理能最大化飲用體驗"
       ]
     }

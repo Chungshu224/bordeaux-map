@@ -4,7 +4,7 @@
       "id": 1,
       "type": "cover",
       "title": "Pinot Noir 在 Martinborough 的表現",
-      "subtitle": "深入了解品種特性、釀造技術與風格表現",
+      "subtitle": "深入了解品種特性、釀造技術與風格表現，並與 Central Otago、勃艮第對照",
       "icon": "🍷",
       "background": "linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)"
     },
@@ -13,7 +13,7 @@
       "type": "content",
       "title": "為何 Pinot Noir 在此成功？",
       "content": [
-        { "type": "text", "text": "Martinborough 的冷涼氣候、適度日照與礫石土壤，完美匹配 Pinot Noir 對風土的敏感性，造就出優雅細膩、層次豐富的酒款。" }
+        { "type": "text", "text": "Martinborough 的冷涼氣候、適度日照與礫石台地，完美匹配 Pinot Noir 對風土的敏感性。1978 年 Derek Milne 的研究正是因為發現當地氣候與勃艮第相似，才吸引拓荒者選擇 Pinot Noir 作為主力品種，造就出優雅細膩、層次豐富的酒款。" }
       ],
       "icon": "🎯"
     },
@@ -35,22 +35,61 @@
       }
     },
     {
+      "id": 3.5,
+      "type": "comparison",
+      "title": "Martinborough vs. Central Otago：兩種紐西蘭 Pinot Noir 風格",
+      "icon": "⚖️",
+      "comparisonData": {
+        "title": "產區風格對比",
+        "left": {
+          "label": "Martinborough",
+          "icon": "🌾",
+          "color": "#fa709a",
+          "items": [
+            "紅色系果香為主：櫻桃、草莓、覆盆莓",
+            "單寧細緻絲滑，酒體中等偏輕盈",
+            "酸度活潑，帶有香料與微妙泥土氣息",
+            "海洋性氣候，風格較貼近勃艮第的優雅與含蓄"
+          ]
+        },
+        "right": {
+          "label": "Central Otago",
+          "icon": "⛰️",
+          "color": "#8ec5fc",
+          "items": [
+            "黑色系果香為主：黑櫻桃、黑李、藍莓",
+            "單寧與酒精濃度較高，酒體更為飽滿",
+            "香氣濃郁，常見紫羅蘭花香與辛香料調性",
+            "大陸性氣候，風格更強調濃縮度與力量感"
+          ]
+        }
+      },
+      "summary": "兩者都以勃艮第為精神標竿，但 Martinborough 因冷涼海洋性氣候展現優雅、細膩與較高酸度的一面，Central Otago 則因高海拔大陸性氣候而風格更濃郁強勁——共同構成紐西蘭 Pinot Noir 的兩種代表性表達方式。",
+      "quiz": {
+        "question": "相較於 Central Otago，Martinborough 的 Pinot Noir 風格通常較偏向？",
+        "options": ["更高酒精濃度與濃縮度", "更飽滿的黑色系果香", "更優雅細膩、紅色系果香為主", "幾乎沒有酸度"],
+        "correct": 2,
+        "explanation": "Martinborough 因冷涼海洋性氣候，Pinot Noir 通常展現紅色系果香、細緻單寧與活潑酸度，風格較 Central Otago 更為優雅含蓄；Central Otago 則因大陸性氣候而風格更濃郁強勁。"
+      }
+    },
+    {
       "id": 4,
       "type": "content",
-      "title": "葡萄園管理實踐",
+      "title": "克隆選擇與葡萄園管理",
       "content": [
         { "type": "stats", "items": [
-          { "label": "低產量控制", "value": "每公頃產量控制在 4-6 噸，確保風味集中", "icon": "📉" },
-          { "label": "手工採收", "value": "精選成熟度一致的果串，避免機械傷害", "icon": "✋" },
-          { "label": "有機栽培", "value": "乾燥氣候適合有機管理，許多酒莊已獲認證", "icon": "🌱" }
+          { "label": "Abel 克隆", "value": "傳說源自 DRC La Tâche 的走私穗條，1980 年由 Clive Paton 種於 Ata Rangi，帶來甜美乾草調性與均勻單寧分布", "icon": "🍇" },
+          { "label": "第戎克隆（114/115/667/777）", "value": "近年種植比例上升，帶來更細緻的香氣層次與結構感", "icon": "🇫🇷" },
+          { "label": "低產量控制", "value": "每公頃產量普遍偏低，確保風味集中", "icon": "📉" },
+          { "label": "有機栽培", "value": "乾燥氣候適合有機管理，多家酒莊已獲認證", "icon": "🌱" }
         ] }
       ],
       "icon": "🌾",
       "quiz": {
-        "question": "為何 Martinborough 的酒莊常採用手工採收？",
-        "options": ["成本更低", "能精選成熟度一致的果串以提升品質", "機械無法運作在地區", "手工採收使酒款更甜"],
+        "question": "Abel 克隆在 Martinborough 的種植與哪家酒莊的創辦歷史直接相關？",
+        "options": ["Palliser Estate", "Ata Rangi", "Craggy Range", "Gladstone Vineyard"],
         "correct": 1,
-        "explanation": "手工採收可以挑選成熟度一致的果串，避免機械採收時混入未成熟或過熟果實，進而提升釀造品質。"
+        "explanation": "Abel 克隆據傳源自法國 DRC La Tâche 葡萄園的走私穗條，1980 年由 Ata Rangi 創辦人 Clive Paton 率先種植，是 Martinborough 早期 Pinot Noir 種植史上的重要篇章。"
       }
     },
     {
@@ -88,7 +127,7 @@
       "type": "content",
       "title": "陳年潛力與適飲期",
       "content": [
-        { "type": "text", "text": "Martinborough Pinot Noir 通常在釀造後 2-3 年進入適飲期，優質酒款可陳年 8-15 年，發展出更多次級香氣如皮革、香菇與乾果。" }
+        { "type": "text", "text": "Martinborough Pinot Noir 通常在釀造後 2-3 年進入適飲期，優質酒款可陳年 8-15 年，發展出更多次級香氣如皮革、香菇與乾果，這也是其與勃艮第村莊級以上酒款相比毫不遜色之處。" }
       ],
       "icon": "🕰️"
     },
@@ -109,8 +148,8 @@
       "title": "重點總結",
       "icon": "🔑",
       "points": [
-        "Martinborough 的風土條件完美匹配 Pinot Noir 的需求",
-        "風格強調優雅、純淨果香、細緻單寧與活潑酸度",
+        "Martinborough 的風土條件完美匹配 Pinot Noir 的需求，Abel 與第戎克隆是產區的重要基石",
+        "相較 Central Otago 的濃郁力量型，Martinborough 風格更優雅、紅色果香更鮮明",
         "低產量控制與精細釀造是品質保證",
         "優質酒款具備 8-15 年陳年潛力，發展豐富次級香氣"
       ]

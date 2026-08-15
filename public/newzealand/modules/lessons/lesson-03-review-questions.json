@@ -13,7 +13,7 @@
     { "id": 11, "question": "在釀造紅酒時，增加新橡木的比例會帶來什麼效果？", "options": ["增加奶油與礦物感", "減少酒精度", "增加香草與烘烤香氣", "使酒更清爽"], "correct": 2, "explanation": "新橡木會增加香草、烘烤與烘焙風味，改變酒體與香氣。" },
     { "id": 12, "question": "哪一項在判斷葡萄採收時機時最重要？", "options": ["土壤顏色", "糖度與酸度的平衡", "酒標設計", "葡萄園面積"], "correct": 1, "explanation": "採收時機需根據糖度與酸度平衡，以確保風味與結構適合預期風格。" },
     { "id": 13, "question": "在冷藏壓榨與短時間發酵中（針對白酒），主要目的是？", "options": ["保持鮮明果香與酸度", "提高單寧含量", "增加甜度", "製造起泡酒"], "correct": 0, "explanation": "冷藏壓榨與短發酵能保留 Sauvignon Blanc 等白酒的鮮明果香與酸度。" },
-    { "id": 14, "question": "哪種土壤常與產出結構集中、陳年潛力強的紅酒相關？", "options": ["黏土高有機質土", "礫石與砾石土壤", "酸性泥炭土", "沙漠砂土"], "correct": 1, "explanation": "礫石土壤（如 Gimblett Gravels）排水良好，常產出結構集中且具陳年潛力的紅酒。" },
+    { "id": 14, "question": "哪種土壤常與產出結構集中、陳年潛力強的紅酒相關？", "options": ["黏土高有機質土", "礫石土壤", "酸性泥炭土", "沙漠砂土"], "correct": 1, "explanation": "礫石土壤（如 Gimblett Gravels）排水良好，常產出結構集中且具陳年潛力的紅酒。" },
     { "id": 15, "question": "在品鑑 Pinot Noir 時，下列哪項不是典型重點？", "options": ["櫻桃等紅果香", "絲滑的單寧", "高單寧且極重酒體", "活潑的酸度"], "correct": 2, "explanation": "Pinot Noir 通常酒體中等、單寧較細緻，不以極高單寧或極重酒體為特徵。" },
     { "id": 16, "question": "若酒款單寧豐富，最適合配哪類料理？", "options": ["清淡沙拉", "油脂較多的烤肉", "甜點", "水果沙拉"], "correct": 1, "explanation": "油脂豐富的肉類能軟化單寧，使搭配更協調。" },
     { "id": 17, "question": "哪個產區以高酸度且鮮明草本/百香果香為主要風格？", "options": ["Central Otago", "Marlborough", "Hawke's Bay", "Waitaki Valley"], "correct": 1, "explanation": "Marlborough 的 Sauvignon Blanc 以高酸度與鮮明果香（如百香果）著稱。" },

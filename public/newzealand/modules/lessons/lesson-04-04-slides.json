@@ -3,8 +3,8 @@
     {
       "id": 1,
       "type": "cover",
-      "title": "Waitaki Valley — 河谷風土與品質之鑰",
-      "subtitle": "探索 North Otago 的 Waitaki 河谷：氣候、土壤與風格特色",
+      "title": "Waitaki Valley — 紐西蘭最年輕的石灰岩產區",
+      "subtitle": "探索 North Otago 的新興河谷：石灰岩土壤、Pinot Noir 與 Riesling 的實驗場",
       "icon": "🏞️",
       "background": "linear-gradient(135deg,#89f7fe 0%,#66a6ff 100%)"
     },
@@ -20,51 +20,58 @@
       "type": "content",
       "title": "產區位置與地形",
       "content": [
-        { "type": "text", "text": "Waitaki Valley 位於南島東岸的 North Otago 區域，河谷地形與良好的排水使其成為兼具白酒與紅酒潛力的產地。" }
+        { "type": "text", "text": "Waitaki Valley 位於南島東岸的 North Otago 區域，沿 Waitaki 河兩岸展開，行政上與 Central Otago 相鄰卻是獨立登記的地理標示（GI）。這裡是紐西蘭最年輕的葡萄酒產區——第一批具規模的商業葡萄園直到二十一世紀初（約 2001 年前後）才出現，起因於當地酒農發現朝北的石灰岩緩坡具備發展冷涼氣候精品葡萄酒的潛力，才吸引了一批尋求「紐西蘭布根地」的釀酒師前來拓荒。" }
       ],
-      "icon": "🗺️"
+      "icon": "🗺️",
+      "quiz": {
+        "question": "Waitaki Valley 在紐西蘭葡萄酒版圖中最特別的身分是什麼？",
+        "options": ["歷史最悠久的產區", "紐西蘭最年輕的葡萄酒產區之一", "紐西蘭種植面積最大的產區", "唯一位於北島的產區"],
+        "correct": 1,
+        "explanation": "Waitaki Valley 的商業葡萄園直到二十一世紀初才開始發展，是紐西蘭最年輕的葡萄酒產區之一，晚於 Marlborough（1973 年）與 Central Otago（1970-80 年代）等主力產區數十年。"
+      }
     },
     {
       "id": 3,
       "type": "feature",
-      "title": "氣候與生長條件",
+      "title": "石灰岩風土：紐西蘭少見的地質條件",
       "icon": "🌤️",
       "features": [
-        { "title": "溫和日照與涼爽夜晚", "description": "日夜溫差有助於保留酸度，同時促進風味複雜度。", "icon": "🌡️" },
-        { "title": "河谷排水良好", "description": "排水性佳的土壤減少病害，同時促進根系發展與風味集中。", "icon": "🪨" }
+        { "title": "石灰岩基岩", "description": "土壤為薄層的 pallic 與 rendzic melanic 土覆蓋在石灰岩基岩上，這種地質在紐西蘭其他主要產區相當罕見，常被拿來與布根地的石灰岩風土相比擬。", "icon": "🪨" },
+        { "title": "朝北緩坡與日照", "description": "葡萄園多選址於朝北、面向 Waitaki 河的緩坡台地，以爭取最大日照量，彌補內陸大陸性氣候生長季較短的限制。", "icon": "☀️" },
+        { "title": "涼爽的日夜溫差", "description": "與 Central Otago 相似，日夜溫差顯著，有助於保留酸度並延長芳香物質的成熟時間，形塑出更為纖細、礦物感突出的酒體。", "icon": "🌡️" }
       ],
       "quiz": {
-        "question": "Waitaki Valley 河谷排水良好對葡萄栽培的好處是？",
-        "options": ["增加病害風險", "減少病害並促進根系發展", "提高土壤鹽分", "使葡萄過度水化"],
+        "question": "Waitaki Valley 的土壤與地質最大特色是什麼？",
+        "options": ["深厚的火山灰土", "薄層土覆蓋在石灰岩基岩上", "純黑色泥炭土", "沙漠型鹽鹼地"],
         "correct": 1,
-        "explanation": "排水良好的土壤能減少積水與病害，同時促進根系更深發展，帶來更集中的風味表現。"
+        "explanation": "Waitaki Valley 的土壤是薄層的 pallic 與 rendzic melanic 土覆蓋在石灰岩基岩之上，這種石灰岩風土在紐西蘭其他主要產區相當罕見，是該產區最鮮明的地質特徵。"
       }
     },
     {
       "id": 4,
-      "type": "content",
-      "title": "代表性土壤與地塊差異",
-      "content": [
-        { "type": "text", "text": "從沖積砂礫到黏土混合土壤皆有，地塊差異明顯，直接影響葡萄的酸度、果香與結構。" }
-      ],
-      "icon": "🧱"
-    },
-    {
-      "id": 5,
       "type": "feature",
       "title": "主要葡萄品種與風格傾向",
       "icon": "🍇",
       "features": [
-        { "title": "Riesling", "description": "在部分冷涼地塊能展現優雅酸度與礦物感，適合長期保存。", "icon": "🍋" },
-        { "title": "Pinot Noir", "description": "在較冷涼的地塊能表現細緻果香與優雅結構。", "icon": "🍒" },
-        { "title": "Chardonnay", "description": "在良好日照的地塊能產出平衡的白酒，口感從清新到豐滿皆有。", "icon": "🥂" }
+        { "title": "Pinot Noir（主力品種）", "description": "在石灰岩地塊上展現細緻的紅色果香、清晰的礦物感與優雅結構，單寧比 Central Otago 更輕盈，酸度也更突出，是產區最受矚目的品種。", "icon": "🍒" },
+        { "title": "Riesling", "description": "冷涼氣候與石灰岩土壤特別適合 Riesling，能展現優雅酸度與明顯礦物感，是產區另一張重要名片。", "icon": "🍋" },
+        { "title": "Pinot Gris 與少量 Chardonnay", "description": "作為輔助品種，在日照良好的地塊上也能產出風格均衡的白酒。", "icon": "🥂" }
       ],
       "quiz": {
-        "question": "下列哪個品種在 Waitaki Valley 的冷涼地塊特別能展現優雅酸度與礦物感？",
-        "options": ["Riesling", "Shiraz", "Muscadet", "Zinfandel"],
+        "question": "下列哪個品種是 Waitaki Valley 的主力種植品種？",
+        "options": ["Pinot Noir", "Shiraz", "Muscadet", "Zinfandel"],
         "correct": 0,
-        "explanation": "Riesling 在較冷涼的地塊能展現優雅的酸度與礦物感，適合長期保存，是 Waitaki Valley 的重要白酒選擇。"
+        "explanation": "Pinot Noir 是 Waitaki Valley 種植面積最大的品種，在石灰岩土壤與冷涼氣候下展現細緻果香與優雅酸度；Riesling 則是另一個表現突出的品種選擇。"
       }
+    },
+    {
+      "id": 5,
+      "type": "content",
+      "title": "拓荒酒莊：尋找紐西蘭的布根地",
+      "content": [
+        { "type": "text", "text": "由於年輕且規模極小，Waitaki Valley 至今仍以少數幾家精品酒莊為主，其中 Valli Vineyards 的創辦人 Grant Taylor——被業界譽為「紐西蘭 Pinot Noir 的教父」之一——特別在 Waitaki 開闢了一塊石灰岩葡萄園，出產的 Pinot Noir 以冷涼、礦物感強烈著稱，是目前商業種植中最南端的 Pinot Noir 之一。另有 Ostler Wines 等在地酒莊專注於 Riesling 與 Pinot Noir 的地塊表現，持續驗證這片年輕石灰岩產區的長期潛力。" }
+      ],
+      "icon": "👨‍🌾"
     },
     {
       "id": 6,
@@ -72,16 +79,16 @@
       "title": "栽培與釀造重點",
       "subtitle": "哪些管理決策會影響最終風格？",
       "items": [
-        { "year": "園位選擇", "text": "選擇高點或坡向以減少霜害風險並增加日照累積。" },
-        { "year": "水分管理", "text": "依土壤保水性調整灌溉，平衡果實成熟與酸度保存。" },
-        { "year": "釀造手段", "text": "低溫發酵與精細的橡木使用可保留果香與細緻度。" }
+        { "year": "園位選擇", "text": "選擇朝北、面河的高點坡地以減少霜害風險並增加日照累積，彌補內陸氣候生長季偏短的限制。" },
+        { "year": "水分管理", "text": "依土壤保水性調整灌溉，平衡果實成熟與酸度保存，石灰岩土壤排水快，需更精細的水分監控。" },
+        { "year": "釀造手段", "text": "低溫發酵與精細的橡木使用可保留果香與細緻度，多數酒莊採用小批量、少干預的釀造哲學以凸顯地塊個性。" }
       ],
       "icon": "⚙️",
       "quiz": {
-        "question": "在 Waitaki Valley, 水分管理的主要目的是？",
+        "question": "在 Waitaki Valley，水分管理的主要目的是？",
         "options": ["讓葡萄浸水更久", "平衡果實成熟與酸度保存", "增加病害風險", "提高酒精含量"],
         "correct": 1,
-        "explanation": "水分管理用以平衡葡萄的成熟速度與酸度保存，避免過度水分造成品質下降，並依土壤特性調整灌溉策略。"
+        "explanation": "水分管理用以平衡葡萄的成熟速度與酸度保存，避免過度水分造成品質下降；由於石灰岩土壤排水迅速，Waitaki Valley 的酒農需更精細地依土壤特性調整灌溉策略。"
       }
     },
     {
@@ -89,7 +96,7 @@
       "type": "content",
       "title": "品鑑提示與食物搭配",
       "content": [
-        { "type": "text", "text": "Riesling 與清爽白酒適合貝類與清淡亞洲料理；Pinot Noir 與稍重的烤肉或蘑菇料理為佳。留意酸度與酒體的配合。" }
+        { "type": "text", "text": "Waitaki Valley 的 Riesling 與清爽白酒適合搭配貝類與清淡亞洲料理，其鮮明酸度能襯托海鮮的鮮甜；Pinot Noir 則因單寧細緻、酸度突出，適合搭配烤鴨、蘑菇燉飯或風味不過重的烤肉料理。品飲時可留意其相較 Central Otago Pinot Noir 更纖細的酒體與更明顯的礦物、白堊感，這正是石灰岩風土的印記。" }
       ],
       "icon": "🍽️"
     },
@@ -99,9 +106,10 @@
       "title": "本課重點總結",
       "icon": "🔑",
       "points": [
-        "Waitaki Valley 的河谷地形與土壤多樣性造就不同地塊的風味表現",
-        "冷涼因素與排水良好的土壤有利於高品質的白酒（Riesling/Chardonnay）與優雅的 Pinot Noir",
-        "園位選擇、灌溉管理與釀造手法是決定風格的關鍵"
+        "Waitaki Valley 是紐西蘭最年輕的葡萄酒產區之一，商業種植始於二十一世紀初，土壤為紐西蘭少見的石灰岩基岩",
+        "Pinot Noir 與 Riesling 是產區兩大主力品種，展現比 Central Otago 更纖細、礦物感更突出的風格",
+        "Valli Vineyards（Grant Taylor）與 Ostler Wines 等精品酒莊持續探索這片年輕石灰岩風土的潛力",
+        "朝北坡地選址、精細水分管理與少干預釀造是塑造 Waitaki 風格的關鍵決策"
       ]
     }
   ]

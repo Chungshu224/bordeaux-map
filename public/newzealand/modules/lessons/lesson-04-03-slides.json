@@ -3,8 +3,8 @@
     {
       "id": 1,
       "type": "cover",
-      "title": "Nelson 與 Canterbury — 多樣的南島風土",
-      "subtitle": "認識 Nelson、North Canterbury 與周邊產區如何在白酒與紅酒上各展所長",
+      "title": "Nelson 與 Canterbury — 藝術家與拓荒者的風土",
+      "subtitle": "認識 Nelson 的精品白酒、Waipara Valley 的石灰岩風土與 Pinot Noir",
       "icon": "🏞️",
       "background": "linear-gradient(135deg,#d4fc79 0%,#96e6a1 100%)"
     },
@@ -12,7 +12,7 @@
       "id": 1.5,
       "type": "map",
       "title": "Nelson 與 Canterbury 產區地圖",
-      "subtitle": "南島北部多樣的白酒與紅酒風土",
+      "subtitle": "南島北部的日照之城，與南島東岸的石灰岩風土",
       "mapRegion": "Nelson|North_Canterbury|Waipara_Valley"
     },
     {
@@ -20,97 +20,115 @@
       "type": "content",
       "title": "產區概覽：Nelson 與 Canterbury",
       "content": [
-        { "type": "text", "text": "Nelson 位於南島北端，以日照充足與溫暖氣候聞名，白葡萄表現優異；Canterbury（含 North Canterbury）範圍廣泛，從沿海到內陸河谷均有出產，能生產風格多元的白酒與紅酒。" }
+        { "type": "text", "text": "Nelson 位於南島西北端，是紐西蘭日照時數最高的產區之一（年均約 2,400-2,500 小時），加上 Richmond Range 山脈的屏障效應，氣候溫暖穩定，長年吸引藝術家、手工藝人與有機小農聚居，也塑造出當地重視手作與地塊表現的精品酒莊文化。Canterbury（含 North Canterbury 的 Waipara Valley）則地形廣闊，從沿海到內陸丘陵皆有種植，其中 Waipara Valley 因獨特的石灰岩地質，發展出紐西蘭最具代表性的 Riesling 與 Pinot Noir 產區之一。" }
       ],
       "icon": "🗺️"
     },
     {
       "id": 3,
       "type": "feature",
-      "title": "Nelson 的白酒特色",
+      "title": "Nelson：兩大子產區與拓荒先驅",
       "icon": "🍾",
       "features": [
-        { "title": "陽光充沛", "description": "長日照促進果實成熟，白酒果香濃郁且結構良好。", "icon": "☀️" },
-        { "title": "代表品種", "description": "Chardonnay、Sauvignon Blanc 與 Pinot Gris 在當地表現亮眼。", "icon": "🍇" }
+        { "title": "Moutere Hills", "description": "位於 Nelson 市西側，土壤為石礫混雜黏土（Moutere Gravels），排水良好但保水力也佳，賦予酒款更飽滿的質地與陳年潛力，氣候略暖於 Waimea。", "icon": "🪨" },
+        { "title": "Waimea Plains", "description": "以沖積礫石土壤為主，海洋調節效應明顯，出產的酒款通常較 Moutere 更清爽明亮，是近年 Nelson 擴植的主要區域。", "icon": "🌊" },
+        { "title": "拓荒先驅", "description": "奧地利移民 Hermann Seifried 於 1973 年在 Upper Moutere 種下第一批葡萄，開啟 Nelson 現代釀酒史；1978 年 Tim 與 Judy Finn 創立 Neudorf Vineyards，其 Moutere Vineyard Chardonnay 至今仍是全國指標酒款之一。", "icon": "🏆" }
       ],
       "quiz": {
-        "question": "Nelson 地區白酒的主要優勢是？",
-        "options": ["長日照促進果實成熟", "極端寒冷導致晚成熟", "大量橡木桶使用", "以甜酒為主"],
-        "correct": 0,
-        "explanation": "Nelson 陽光充沛，長日照有助於果實成熟並形成濃郁果香，是該地區白酒的一大優勢。"
+        "question": "誰在 1973 年於 Nelson 的 Upper Moutere 種下第一批葡萄，開啟該產區的現代釀酒史？",
+        "options": ["Tim Finn", "Hermann Seifried", "Danny Schuster", "Ivan Donaldson"],
+        "correct": 1,
+        "explanation": "奧地利移民 Hermann Seifried 於 1973 年在 Nelson 的 Upper Moutere 種下第一批葡萄，其創立的 Seifried Estate 至今仍是 Nelson 規模最大的酒莊；Tim 與 Judy Finn 則於 1978 年創立 Neudorf Vineyards，同為產區奠基者。"
       }
     },
     {
       "id": 4,
-      "type": "feature",
-      "title": "Canterbury 的地形與風格多樣性",
-      "icon": "🌄",
-      "features": [
-        { "title": "沿海平原與河谷", "description": "Waimakariri 與 Waipara 等河谷產出既有新鮮白酒也有陳年潛力的紅酒。", "icon": "🏞️" },
-        { "title": "北坎特伯里（North Canterbury）", "description": "石灰質與砂質土壤在部分地塊提供良好排水與礦物感，尤其適合 Riesling 與 Pinot Noir。", "icon": "🪨" }
+      "type": "content",
+      "title": "Nelson 的品種表現與藝術小鎮氛圍",
+      "content": [
+        { "type": "text", "text": "Nelson 以 Chardonnay、Sauvignon Blanc 與 Pinot Gris 見長，Neudorf 的 Chardonnay 以布根地式手法（野生酵母、部分乳酸發酵、法國橡木）釀成，質地細膩、陳年潛力佳；Seifried Estate 則以親民價格與多品種線廣為人知。由於 Nelson 長期是紐西蘭藝術家與工匠聚居地，當地酒莊多為家族經營的小型精品酒莊，近年也有 Rimu Grove、Greenhough 等酒莊投入有機栽培，形塑出「慢工出細活」的產區性格，與鄰近 Marlborough 的規模化生產形成鮮明對比。" }
       ],
+      "icon": "🎨",
       "quiz": {
-        "question": "北坎特伯里適合哪兩種葡萄品種？",
-        "options": ["Riesling 與 Pinot Noir", "Sangiovese 與 Tempranillo", "Riesling 與 Zinfandel", "Chardonnay 與 Malbec"],
-        "correct": 0,
-        "explanation": "北坎特伯里的石灰質與砂質土壤特別適合 Riesling 與 Pinot Noir，兩者在當地表現突出。"
+        "question": "相較於 Marlborough，Nelson 產區的酒莊經營模式有何特色？",
+        "options": ["以大型跨國集團為主", "多為家族經營的小型精品酒莊，重視手工與有機栽培", "完全採機械化大量生產", "只生產起泡酒"],
+        "correct": 1,
+        "explanation": "Nelson 長年是藝術家與工匠的聚居地，當地酒莊多為家族經營的小型精品酒莊，重視手工釀造與地塊表現，近年更有多家投入有機栽培，與鄰近 Marlborough 的規模化生產模式形成對比。"
       }
     },
     {
       "id": 5,
-      "type": "content",
-      "title": "釀造與品飲指引",
-      "content": [
-        { "type": "text", "text": "Nelson 的白酒建議清爽飲用以保存果香；Canterbury 的 Pinot 與 Riesling 在較低溫下釀造能保留酸度與鮮明香氣，部分優質酒款適合陳年。" }
+      "type": "feature",
+      "title": "Waipara Valley：石灰岩打造的風土實驗室",
+      "icon": "🌄",
+      "features": [
+        { "title": "兩種核心地質", "description": "北側 Omihi 一帶為石灰岩與黏土丘陵，南側谷地則是 Waipara 河沖積而成、排水極佳的 Glasnevin Gravels，兩種地質孕育出風格迥異的酒款。", "icon": "🪨" },
+        { "title": "拓荒者 Danny Schuster", "description": "捷克移民 Danny Schuster 於 1986 年在 Omihi Hills 建立自己的葡萄園，被譽為「Canterbury 葡萄酒界的教父」，其早期 Pinot Noir 是紐西蘭第二支在國際賽事奪金的 Pinot 作品。", "icon": "👨‍🌾" },
+        { "title": "Pegasus Bay", "description": "由神經科醫師兼葡萄酒作家 Ivan Donaldson 與妻子 Christine 於 1985/86 年創立，是 Waipara 最具代表性的酒莊，以微甜型 Riesling 與高品質 Pinot Noir、Chardonnay 聞名。", "icon": "🐴" }
       ],
-      "icon": "🥂"
+      "quiz": {
+        "question": "Waipara Valley 的兩種核心地質分別是什麼？",
+        "options": ["火山灰與砂岩", "北側石灰岩／黏土丘陵，南側沖積礫石（Glasnevin Gravels）", "純黑色玄武岩", "全部為泥炭土"],
+        "correct": 1,
+        "explanation": "Waipara Valley 北側的 Omihi 一帶為石灰岩與黏土丘陵，南側谷地則是 Waipara 河沖積而成的 Glasnevin Gravels，排水極佳，兩種地質造就了產區內豐富的風格差異。"
+      }
     },
     {
       "id": 6,
-      "type": "timeline",
-      "title": "產業發展重點",
-      "subtitle": "從地方生產到國內市場與旅遊驅動的變化",
-      "items": [
-        { "year": "地方核心", "text": "小型酒莊與家庭經營仍是北島與南島多數地區的主力。" },
-        { "year": "特色化生產", "text": "地塊標示與小量精品生產成為提高競爭力的策略。" },
-        { "year": "市場與觀光", "text": "酒莊體驗與直售成為重要的收益來源。" }
+      "type": "content",
+      "title": "石灰岩新浪潮：Bell Hill 與 Pyramid Valley",
+      "content": [
+        { "type": "text", "text": "2000 年代起，一批新世代釀酒師受布根地啟發，深入 Waipara 內陸的 Waikari 一帶尋找純粹石灰岩地塊，其中 Bell Hill 與 Pyramid Valley 以高密度種植、極低產量與嚴謹的有機／生物動力法栽培著稱，出產的 Chardonnay 與 Pinot Noir 被視為紐西蘭最接近布根地風格、也最具稀缺性的酒款之一，象徵著 Waipara 從「Riesling 產區」進一步走向風土精品化的新階段。" }
       ],
-      "icon": "📈",
-      "quiz": {
-        "question": "比較品鑑 (comparative tasting) 對學習產區差異的好處為何？",
-        "options": ["沒有幫助", "能直接比較酸度、礦物感與風格差異", "只適合專家", "會混淆風格認知"],
-        "correct": 1,
-        "explanation": "比較品鑑可以讓學習者直接觀察不同地塊或產區在酸度、礦物感與風格上的差異，是理解地區特性的有效方法。"
-      }
+      "icon": "⛰️"
     },
     {
       "id": 7,
       "type": "feature",
-      "title": "代表酒莊與推薦酒款（入門）",
-      "icon": "🏅",
+      "title": "代表品種與風格對比",
+      "icon": "🍇",
       "features": [
-        { "title": "Nelson 小酒莊群", "description": "以創新與白葡萄精品聞名，適合探索單一品種的差異。", "icon": "🔎" },
-        { "title": "Waipara / North Canterbury", "description": "Riesling 與 Pinot Noir 表現突出，值得比較品鑑。", "icon": "🍷" }
+        { "title": "Riesling（Waipara 招牌）", "description": "從干型到微甜型皆有出色表現，高酸度搭配石灰岩礦物感，是紐西蘭 Riesling 的指標產區。", "icon": "🍋" },
+        { "title": "Pinot Noir", "description": "Waipara 的 Pinot 通常比 Central Otago 更具香料與泥土調性，單寧細緻；Nelson 的 Pinot 則相對輕盈明亮。", "icon": "🍒" },
+        { "title": "Chardonnay（Nelson 與 Waipara 皆強）", "description": "Neudorf 與 Pegasus Bay 分別代表兩地布根地式 Chardonnay 的高水準表現，質地細膩、陳年潛力俱佳。", "icon": "🥂" }
       ]
     },
     {
       "id": 8,
       "type": "content",
-      "title": "品鑑練習建議",
+      "title": "品鑑練習：比較品飲的價值",
       "content": [
-        { "type": "text", "text": "進行比較品鑑：將 Nelson 的 Chardonnay 與 North Canterbury 的 Chardonnay 比較，尋找酸度、礦物感與果香的差異；以 Riesling 與 Pinot 進行垂直/橫向比較練習。" }
+        { "type": "text", "text": "建議進行比較品鑑：將 Nelson 的 Chardonnay（如 Neudorf）與 Waipara 的 Chardonnay（如 Pegasus Bay）並列品嚐，觀察兩地在酸度結構、礦物感與橡木融合度上的差異；亦可比較 Marlborough、Central Otago 與 Waipara 三地的 Pinot Noir，感受海洋性氣候、大陸性氣候與石灰岩風土分別帶來的果香輪廓與單寧質地變化，這是掌握紐西蘭產區風格差異最有效的學習方式。" }
       ],
-      "icon": "🔍"
+      "icon": "🔍",
+      "quiz": {
+        "question": "比較品鑑（comparative tasting）對學習產區差異的主要好處是什麼？",
+        "options": ["沒有實質幫助", "能直接比較酸度、礦物感與風格差異，加深對風土的理解", "只適合專業侍酒師", "會混淆學習者對風格的認知"],
+        "correct": 1,
+        "explanation": "比較品鑑能讓學習者在同一時間直接對照不同產區或地塊在酸度、礦物感與風格上的差異，是理解風土特性最直接有效的方法。"
+      }
     },
     {
       "id": 9,
+      "type": "feature",
+      "title": "代表酒莊速覽",
+      "icon": "🏅",
+      "features": [
+        { "title": "Neudorf Vineyards（Nelson）", "description": "1978 年創立於 Upper Moutere，其 Chardonnay 是紐西蘭精品白酒的指標之一。", "icon": "🔎" },
+        { "title": "Seifried Estate（Nelson）", "description": "1973 年創立，是 Nelson 規模最大、品項最完整的家族酒莊。", "icon": "🍇" },
+        { "title": "Pegasus Bay / Bell Hill（Waipara）", "description": "前者是 Waipara 的全能型代表酒莊，後者則是石灰岩新浪潮中最受矚目的稀缺精品。", "icon": "🍷" }
+      ]
+    },
+    {
+      "id": 10,
       "type": "summary",
       "title": "本課重點總結",
       "icon": "🔑",
       "points": [
-        "Nelson 與 Canterbury 各有其強項：Nelson 偏向白葡萄精品，Canterbury 展現多樣化地塊風格",
-        "比較品鑑是學習產區差異的最佳方式",
-        "酒莊旅遊與地塊指定是近年重要的產業趨勢"
+        "Nelson 以全國數一數二的日照時數與 Moutere Hills／Waimea Plains 兩大子產區聞名，1973 年 Seifried、1978 年 Neudorf 奠定其精品白酒基礎",
+        "Waipara Valley 的石灰岩與 Glasnevin Gravels 地質，造就其 Riesling 與 Pinot Noir 的代表性，Danny Schuster 與 Pegasus Bay 是關鍵拓荒者",
+        "Bell Hill、Pyramid Valley 等 2000 年代崛起的石灰岩新浪潮酒莊，讓 Waipara 進一步朝向布根地式的風土精品化發展",
+        "比較品飲不同產區的 Chardonnay 與 Pinot Noir，是掌握紐西蘭風土差異的最佳學習方法"
       ]
     }
   ]

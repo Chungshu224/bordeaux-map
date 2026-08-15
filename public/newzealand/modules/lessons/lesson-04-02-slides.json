@@ -3,8 +3,8 @@
     {
       "id": 1,
       "type": "cover",
-      "title": "Central Otago — 世界最南端產區",
-      "subtitle": "探索地理極限如何造就出色的 Pinot Noir 與高海拔葡萄酒風格",
+      "title": "Central Otago — 世界最南端的重要產區",
+      "subtitle": "探索地理極限如何造就出色的 Pinot Noir 與高海拔大陸性氣候風格",
       "icon": "🏔️",
       "background": "linear-gradient(135deg,#f3e7e9 0%,#e3eeff 100%)"
     },
@@ -12,7 +12,7 @@
       "id": 1.5,
       "type": "map",
       "title": "Central Otago 產區地圖",
-      "subtitle": "世界最南端的葡萄酒產區，高海拔大陸性氣候",
+      "subtitle": "世界最南端的重要葡萄酒產區，唯一的高海拔大陸性氣候產區",
       "mapRegion": "Central_Otago|Bannockburn|Waitaki_Valley_North_Otago"
     },
     {
@@ -20,88 +20,111 @@
       "type": "content",
       "title": "產區概覽與地理位置",
       "content": [
-        { "type": "text", "text": "Central Otago 位於紐西蘭南島，是世界上最南端的葡萄酒產區之一；地勢多山，葡萄園常分布在坡地與河谷，海拔與日夜溫差對葡萄品質影響顯著。" }
+        { "type": "text", "text": "Central Otago 位於紐西蘭南島內陸，是世界上最南端的重要葡萄酒產區之一，也是紐西蘭唯一擁有真正大陸性氣候的產區——遠離海洋調節，晝夜與四季溫差都比沿海產區明顯。地勢崎嶇多山，葡萄園多分布於湖畔坡地與峽谷台地，海拔可達 200-400 公尺，是紐西蘭種植海拔最高的產區。這片土地最早因 1860 年代的淘金熱而聚集人潮，如今則以精緻的 Pinot Noir 聞名國際。" }
       ],
       "icon": "🗺️"
     },
     {
       "id": 3,
+      "type": "timeline",
+      "title": "從淘金熱到 Pinot Noir 聖地",
+      "subtitle": "Central Otago 葡萄酒業的獨特起源",
+      "items": [
+        { "year": "1860年代", "text": "法國淘金移民 Jean Desire Feraud 在 Clyde 一帶試種葡萄並小規模釀酒，作品甚至曾於澳洲葡萄酒競賽獲獎，被視為 Central Otago 的第一位釀酒人。" },
+        { "year": "1974年", "text": "Rolfe 與 Lois Mills 夫婦在 Wanaka 湖畔創立 Rippon Vineyard，是產區現代葡萄酒業最早的拓荒者之一。" },
+        { "year": "1981年", "text": "Alan Brady 在 Gibbston 山谷試種實驗性葡萄園，隨後創立 Gibbston Valley Wines，成為產區現代釀酒的重要推手，Gibbston 也因此被稱為「Central Otago 葡萄酒的搖籃」。" },
+        { "year": "1990年代", "text": "Felton Road（Bannockburn）等酒莊相繼投入生物動力法與有機栽培，確立產區在國際 Pinot Noir 版圖上的地位。" },
+        { "year": "現今", "text": "Central Otago 已發展出 Bannockburn、Bendigo、Gibbston、Cromwell Basin、Wanaka、Alexandra 六大子產區，是紐西蘭 Pinot Noir 種植面積第二大的產區，僅次於 Marlborough。" }
+      ],
+      "icon": "📜",
+      "quiz": {
+        "question": "誰被視為 Central Otago 的第一位釀酒人？",
+        "options": ["Alan Brady", "Jean Desire Feraud，一位法國淘金移民", "Rolfe Mills", "Danny Schuster"],
+        "correct": 1,
+        "explanation": "法國淘金移民 Jean Desire Feraud 於 1860 年代在 Clyde 一帶試種葡萄並釀酒，作品曾於澳洲葡萄酒競賽獲獎，是文獻記載中 Central Otago 最早的釀酒人，比現代產業的興起早了超過一個世紀。"
+      }
+    },
+    {
+      "id": 4,
       "type": "feature",
       "title": "極端氣候與成熟節奏",
       "icon": "🌡️",
       "features": [
-        { "title": "強烈日夜溫差", "description": "有助於保留酸度並形成集中而純淨的果香。", "icon": "❄️" },
-        { "title": "短生長季", "description": "生長季較短，成熟期關鍵在陽光累積與無霜的窗口期。", "icon": "☀️" }
+        { "title": "真正的大陸性氣候", "description": "遠離海洋調節，冬季酷寒、夏季炎熱乾燥，是紐西蘭唯一具備此特徵的產區。", "icon": "🌍" },
+        { "title": "強烈日夜溫差", "description": "白天高溫促進光合作用與糖分累積，夜晚急速降溫則有助於保留酸度，形成集中而純淨的果香。", "icon": "❄️" },
+        { "title": "短生長季與霜害風險", "description": "生長季較短，春秋霜害是栽培的一大挑戰，酒農需精準選擇坡地朝向與海拔以爭取無霜期。", "icon": "☀️" }
       ],
       "quiz": {
         "question": "Central Otago 強烈的日夜溫差主要有利於哪項？",
         "options": ["降低酸度", "保留酸度並形成純淨果香", "使葡萄提早成熟", "提高產量"],
         "correct": 1,
-        "explanation": "強烈日夜溫差有助於保留酸度，同時在白天形成純淨且集中的果香，是 Central Otago Pinot 的重要特徵。"
+        "explanation": "強烈日夜溫差有助於保留酸度，同時在白天形成純淨且集中的果香，是 Central Otago Pinot Noir 的重要特徵，也是其與其他紐西蘭產區風格區隔的關鍵。"
       }
     },
     {
-      "id": 4,
+      "id": 5,
       "type": "content",
       "title": "土壤與地形對風味的影響",
       "content": [
-        { "type": "text", "text": "Central Otago 的土壤多樣，包含砾石、砂質與薄層土，排水良好有利於根系深入與風味集中，地塊差異常造就不同的 Pinot 特性。" }
+        { "type": "text", "text": "Central Otago 的土壤多樣，涵蓋冰河與河流沖積而成的礫石、黃土（loess）與片岩風化土，排水普遍良好，有利於根系深入並集中風味表現。子產區之間的差異相當顯著：Bannockburn 地勢溫暖乾燥，被早期淘金者稱為「沙漠之心」；Bendigo 位於高地台地，日照強烈；Gibbston 海拔最高、氣候最涼爽，果香更細緻；Wanaka 湖畔則受湖泊調節，晝夜溫差相對緩和。這些地塊差異，正是後續 Central Otago Pinot Noir 子產區風格對比要探討的核心。" }
       ],
       "icon": "🪨"
     },
     {
-      "id": 5,
+      "id": 6,
       "type": "feature",
       "title": "Pinot Noir 在 Central Otago 的典型風格",
       "icon": "🍒",
       "features": [
-        { "title": "果香與顏色", "description": "以紅色與黑色水果為主，果味純淨且輪廓分明。", "icon": "🍇" },
-        { "title": "質地與單寧", "description": "單寧中等偏緊，結構清晰，酸度支持良好陳年潛力。", "icon": "💪" },
-        { "title": "次級香氣發展", "description": "陳年後出現皮革、蘑菇、乾果等層次感。", "icon": "🕰️" }
+        { "title": "果香與顏色", "description": "以紅色與黑色水果為主——櫻桃、覆盆莓、黑李，果味純淨且輪廓分明，顏色通常較 Marlborough 或 Martinborough 的 Pinot 更深。", "icon": "🍇" },
+        { "title": "質地與單寧", "description": "單寧中等偏緊，結構清晰，酸度支持良好陳年潛力，酒體通常比法國布根地更飽滿厚實。", "icon": "💪" },
+        { "title": "次級香氣發展", "description": "陳年後逐漸出現皮革、蘑菇、松露與乾果等層次感，展現與新世界 Pinot Noir 常見的濃郁果味截然不同的成熟魅力。", "icon": "🕰️" }
       ],
       "quiz": {
         "question": "Central Otago Pinot Noir 陳年後常出現哪類次級香氣？",
         "options": ["巧克力與咖啡", "皮革與蘑菇", "強烈花香", "濃郁香草"],
         "correct": 1,
-        "explanation": "隨著陳年，Pinot Noir 常會發展出皮革、蘑菇和乾果等次級香氣，這是成熟與氧化演變的表現。"
-      }
-    },
-    {
-      "id": 6,
-      "type": "timeline",
-      "title": "栽培與釀造要點",
-      "subtitle": "哪些決策會改變 Pinot 的表現？",
-      "items": [
-        { "year": "園位選擇", "text": "選擇受陽光充足的坡地以促進成熟並避免低窪霜害區。" },
-        { "year": "採收時機", "text": "精準判斷糖度與酸度的平衡，避免過晚採收造成失去細緻性。" },
-        { "year": "釀造手法", "text": "低溫或溫和萃取保留精緻香氣，法國橡木可用於增加結構。" }
-      ],
-      "icon": "⚙️",
-      "quiz": {
-        "question": "在 Central Otago, 為什麼採收時機特別重要？",
-        "options": ["因為可以增加產量", "避免過晚採收以保留細緻性與酸度", "讓酒更甜", "無關緊要"],
-        "correct": 1,
-        "explanation": "採收時機會影響酸度與果香，過晚採收可能導致失去 Pinot 的細緻性與清晰度，因此在 Central Otago 精準掌握採收時間非常重要。"
+        "explanation": "隨著陳年，Central Otago 的 Pinot Noir 常會發展出皮革、蘑菇和乾果等次級香氣，這是成熟與氧化演變的表現，也是判斷酒款陳年狀態的重要線索。"
       }
     },
     {
       "id": 7,
-      "type": "content",
-      "title": "品鑑指南：如何品嚐 Central Otago Pinot",
-      "content": [
-        { "type": "text", "text": "觀察顏色深淺、聞香找出紅/黑果與香料，品飲時注意酸度、單寧與尾韻的長度，並比較不同地塊的細緻差異。" }
+      "type": "timeline",
+      "title": "栽培與釀造要點",
+      "subtitle": "哪些決策會改變 Pinot Noir 的表現？",
+      "items": [
+        { "year": "園位選擇", "text": "選擇受陽光充足、朝北的坡地以促進成熟並避免低窪處的霜害風險。" },
+        { "year": "採收時機", "text": "精準判斷糖度與酸度的平衡，避免過晚採收造成失去細緻性與過高酒精度。" },
+        { "year": "釀造手法", "text": "低溫或溫和萃取以保留精緻香氣，部分整串發酵可增添花香與結構，法國橡木則用於增加骨架。" },
+        { "year": "有機與生物動力法", "text": "Felton Road、Rippon 等指標酒莊採用生物動力法栽培，強調土壤生命力與風土的純粹表達。" }
       ],
-      "icon": "👃"
+      "icon": "⚙️",
+      "quiz": {
+        "question": "在 Central Otago，為什麼採收時機特別重要？",
+        "options": ["因為可以增加產量", "避免過晚採收以保留細緻性與酸度", "讓酒更甜", "與品質無關"],
+        "correct": 1,
+        "explanation": "採收時機會直接影響酸度與果香的平衡，過晚採收可能導致失去 Pinot Noir 的細緻性與清晰度，因此在 Central Otago 這種短生長季的產區，精準掌握採收時間格外重要。"
+      }
     },
     {
       "id": 8,
       "type": "feature",
-      "title": "經典搭配與建議",
-      "icon": "🍽️",
+      "title": "代表酒莊速覽",
+      "icon": "🏅",
       "features": [
-        { "title": "烤羊排與紅肉", "description": "中等單寧與酸度的 Pinot 能很好地搭配烤羊與風味不過重的紅肉。", "icon": "🥩" },
-        { "title": "蘑菇與野味", "description": "陳年款的泥土與菌菇風味能與野味料理呼應。", "icon": "🍄" }
+        { "title": "Rippon Vineyard", "description": "Rolfe 與 Lois Mills 於 1974 年在 Wanaka 湖畔創立，是產區最早的拓荒酒莊之一，如今由第二代經營，以生物動力法與湖景梯田聞名。", "icon": "🏞️" },
+        { "title": "Felton Road（Bannockburn）", "description": "以嚴謹的生物動力法栽培與地塊分級著稱，是 Central Otago 最受國際評論家推崇的酒莊之一。", "icon": "🌿" },
+        { "title": "Gibbston Valley Wines", "description": "由拓荒者 Alan Brady 於 1981 年創立，是產區現代釀酒業的起點之一，也設有紐西蘭第一座大型酒窖岩洞供遊客參觀。", "icon": "🍇" }
       ]
+    },
+    {
+      "id": 9,
+      "type": "content",
+      "title": "品鑑指南：如何品嚐 Central Otago Pinot Noir",
+      "content": [
+        { "type": "text", "text": "觀察顏色深淺、聞香找出紅／黑果與香料調性，品飲時注意酸度、單寧與尾韻的長度，並比較不同子產區的細緻差異：Bannockburn 通常較濃郁厚實，Gibbston 則偏向優雅細緻。搭配建議上，中等單寧與酸度的 Pinot Noir 能很好地搭配烤羊排與風味不過重的紅肉；陳年款帶有的泥土與菌菇風味，則能與野味料理及蘑菇燉飯相互呼應。" }
+      ],
+      "icon": "👃"
     },
     {
       "id": 8.5,
@@ -111,14 +134,15 @@
       "icon": "🍒"
     },
     {
-      "id": 9,
+      "id": 10,
       "type": "summary",
       "title": "重點總結",
       "icon": "🔑",
       "points": [
-        "Central Otago 以冷涼、日夜溫差大與高海拔條件聞名",
-        "Pinot Noir 在此能展現純淨果香、清晰結構與良好陳年潛力",
-        "地塊選擇、採收時機與溫和釀造是關鍵決策"
+        "Central Otago 是世界最南端的重要產區，也是紐西蘭唯一具真正大陸性氣候的產區，起源可追溯至 1860 年代淘金移民 Jean Desire Feraud",
+        "1974 年 Rippon Vineyard 與 1981 年 Alan Brady 在 Gibbston 的拓荒，開啟了現代葡萄酒業的篇章",
+        "強烈日夜溫差與短生長季，讓 Pinot Noir 展現純淨果香、清晰結構與良好陳年潛力",
+        "Bannockburn、Bendigo、Gibbston、Cromwell Basin、Wanaka 等子產區風土各異，地塊選擇與生物動力法栽培是塑造風格的關鍵"
       ]
     }
   ]

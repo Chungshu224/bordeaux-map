@@ -4,7 +4,7 @@
       "id": 1,
       "type": "cover",
       "title": "其他紅葡萄品種",
-      "subtitle": "認識 Merlot、Cabernet、Syrah、Malbec 等常見紅葡萄",
+      "subtitle": "認識紐西蘭的 Syrah 與波爾多式混釀：Hawke's Bay 與 Waiheke Island 的紅酒版圖",
       "icon": "🍷",
       "background": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
     },
@@ -12,178 +12,237 @@
       "id": 1.5,
       "type": "map",
       "title": "紅葡萄品種核心產區地圖",
-      "subtitle": "Merlot & Cabernet（Hawke's Bay）、Syrah（Hawke's Bay 北部）——紐西蘭紅酒的主戰場",
-      "mapRegion": "Hawkes_Bay|Central_Hawkes_Bay"
+      "subtitle": "Hawke's Bay 的 Gimblett Gravels（Syrah、波爾多式混釀主戰場）與 Auckland 外海的 Waiheke Island（精品海島產區）",
+      "mapRegion": "Hawkes_Bay|Central_Hawkes_Bay|Waiheke_Island"
     },
     {
       "id": 2,
       "type": "content",
-      "title": "為何分類其他紅葡萄？",
+      "title": "紐西蘭紅酒的另一條路線：溫暖產區",
       "content": [
         {
           "type": "text",
-          "text": "除了 Pinot Noir，紐西蘭與國際市場也栽培多種紅葡萄。這些品種在風土與釀造方式上有不同表現，了解其特性有助於品飲與配餐判斷。"
+          "text": "除了 Pinot Noir，紐西蘭北島的 Hawke's Bay 與 Auckland 外海的 Waiheke Island，因擁有溫暖且排水良好的風土條件，發展出以 Syrah 與波爾多式混釀（Cabernet Sauvignon、Merlot、Cabernet Franc、少量 Malbec 與 Petit Verdot）為核心的紅酒產業，是紐西蘭紅酒版圖中與 Pinot Noir 分庭抗禮的另一條重要路線。"
+        },
+        {
+          "type": "text",
+          "text": "Hawke's Bay 的 Gimblett Gravels 是紐西蘭唯一以土壤類型（而非行政或地理界線）劃定的葡萄酒產區：1991年當地僅約20公頃葡萄園，2001年由在地酒莊組成的協會正式將此名稱註冊商標。如今約800公頃的範圍內，須有95%以上土地屬於 Omahu、Flaxmere 或 Omarunui 系列的礫石土壤，排水極佳、蓄熱能力強，特別適合晚熟的 Syrah 與波爾多品種完全成熟。"
         }
       ],
-      "icon": "📚"
+      "icon": "📚",
+      "quiz": {
+        "question": "Gimblett Gravels 產區最特殊之處是什麼？",
+        "options": [
+          "是紐西蘭面積最大的產區",
+          "是紐西蘭唯一以土壤類型（而非行政界線）劃定的產區",
+          "專門種植白葡萄品種",
+          "位於南島最南端"
+        ],
+        "correct": 1,
+        "explanation": "Gimblett Gravels 是紐西蘭唯一以特定土壤類型（Omahu、Flaxmere、Omarunui 系列礫石）劃定範圍的葡萄酒產區，而非依循行政區或地理界線，這種做法更接近法國產區的傳統，也是全球少見的案例。約800公頃的範圍內須有95%以上土地符合此土壤標準，排水極佳且蓄熱能力強，特別適合晚熟的 Syrah 與波爾多品種。"
+      }
     },
     {
       "id": 3,
       "type": "feature",
-      "title": "Merlot：柔順與果香",
-      "icon": "🍒",
+      "title": "Syrah：紐西蘭最受矚目的紅葡萄新星",
+      "icon": "🌶️",
       "features": [
         {
-          "title": "典型風格",
-          "description": "中等酒體，成熟紅果如李子、黑櫻桃，單寧較柔和。",
-          "icon": "🍑"
+          "title": "Trinity Hill『Homage』",
+          "description": "1993年由 John Hancock 與倫敦 Bleeding Heart 餐廳的 Wilson 夫婦在 Gimblett Gravels 創立 Trinity Hill，旗艦酒款 Homage Syrah 被公認為紐西蘭最具代表性的紅酒之一。",
+          "icon": "🏅"
         },
         {
-          "title": "栽培要點",
-          "description": "喜歡溫暖到中等氣候，適度產量控制可提升濃度。",
-          "icon": "☀️"
+          "title": "Te Mata『Bullnose』",
+          "description": "紐西蘭歷史最悠久、自1896年起連續營運的酒莊 Te Mata Estate 率先看中 Syrah 的潛力，種下著名的 Bullnose 園區，樹立產區標竿。",
+          "icon": "🐂"
         },
         {
-          "title": "常見搭配",
-          "description": "烤肉、燉菜與口味適中的紅肉料理。",
-          "icon": "🥘"
+          "title": "風格光譜",
+          "description": "涼爽的夜間氣溫使 Hawke's Bay 的 Syrah 展現黑胡椒（羅坦酮 rotundone）與紫羅蘭般的優雅香料調性，風格介於法國北隆河的內斂與澳洲溫暖產區 Shiraz 的濃郁飽滿之間。",
+          "icon": "🍇"
         }
       ],
       "quiz": {
-        "question": "Merlot 葡萄酒相較於 Cabernet Sauvignon 的主要特點是什麼？",
+        "question": "紐西蘭 Hawke's Bay 的 Syrah 風格，通常被形容為介於哪兩種經典風格之間？",
         "options": [
-          "單寧更加強勁，酒體更重",
-          "單寧較柔和，果香更加成熟圓潤",
-          "酸度更高，風味更加清新",
-          "只適合在涼爽氣候下種植"
+          "法國北隆河 Syrah 與澳洲溫暖產區 Shiraz",
+          "西班牙 Tempranillo 與美國 Zinfandel",
+          "義大利 Nebbiolo 與法國波爾多",
+          "智利 Carménère 與阿根廷 Malbec"
         ],
-        "correct": 1,
-        "explanation": "Merlot 是一個較為柔順易飲的紅葡萄品種，其主要特點是中等酒體、柔和的單寧，以及成熟的紅果風味（如李子、黑櫻桃）。相比之下，Cabernet Sauvignon 通常有更強勁的單寧結構、更飽滿的酒體和更明顯的黑色果實風味（黑醋栗）。Merlot 的柔和特性使其更容易在年輕時飲用，也是波爾多右岸混釀中的主角。在混釀中，Merlot 常用來柔化 Cabernet Sauvignon 的強勁單寧。"
+        "correct": 0,
+        "explanation": "Hawke's Bay 涼爽的夜間氣溫讓 Syrah 保有明顯的黑胡椒（羅坦酮）與紫羅蘭般的辛香調性，同時果實成熟度足夠帶來飽滿的黑莓果香，因此風格常被形容為介於法國北隆河的內斂優雅與澳洲溫暖產區 Shiraz 的濃郁豐滿之間，是紐西蘭近年最受國際矚目的紅葡萄品種。"
       }
     },
     {
       "id": 4,
       "type": "feature",
-      "title": "Cabernet Sauvignon：結構與陳年潛力",
+      "title": "波爾多式混釀：以 Merlot 與 Cabernet 為骨幹",
       "icon": "🛡️",
       "features": [
         {
-          "title": "典型風格",
-          "description": "黑加侖子、黑莓、草本與香料，單寧結構明顯，適合陳年。",
-          "icon": "🖤"
+          "title": "Te Mata『Coleraine』",
+          "description": "1982年首釀，以 Cabernet Sauvignon 為主體，混合 Merlot 與 Cabernet Franc，長年被視為紐西蘭最具指標性的紅酒。",
+          "icon": "🏆"
         },
         {
-          "title": "栽培要點",
-          "description": "偏愛溫暖成熟條件，晚採可提升成熟度與單寧軟化。",
-          "icon": "🌞"
+          "title": "Craggy Range『Sophia』",
+          "description": "產自 Gimblett Gravels，以 Merlot 為主體（常佔六成以上）混合 Cabernet Franc 與 Cabernet Sauvignon，展現細膩優雅的風格。",
+          "icon": "🍷"
         },
         {
-          "title": "常見搭配",
-          "description": "濃郁紅肉、燒烤與成熟乳酪皆為好選擇。",
-          "icon": "🥩"
+          "title": "混釀邏輯",
+          "description": "Cabernet Sauvignon 提供單寧骨架與陳年潛力，Merlot 增添圓潤果香與中段口感，Cabernet Franc 帶來香料與紫羅蘭氣息，是波爾多式混釀的經典配方。",
+          "icon": "⚖️"
         }
       ],
       "quiz": {
-        "question": "為什麼 Cabernet Sauvignon 被認為具有優秀的陳年潛力？",
+        "question": "Te Mata Estate 的旗艦酒款 Coleraine，是以哪個品種為主體的混釀？",
         "options": [
-          "因為它的果香最濃郁",
-          "因為它具有強勁的單寧結構和高酸度",
-          "因為它的酒精度最高",
-          "因為它只在涼爽氣候下種植"
+          "Merlot",
+          "Cabernet Sauvignon",
+          "Syrah",
+          "Pinot Noir"
         ],
         "correct": 1,
-        "explanation": "Cabernet Sauvignon 是最具陳年潛力的紅葡萄品種之一，主要原因有三：1) 強勁的單寧結構，這些單寧在陳年過程中會逐漸柔化並與其他成分整合；2) 較高的酸度，能保持葡萄酒的新鮮度和平衡；3) 濃郁的風味物質和色素。這些特性使得優質的 Cabernet Sauvignon 可以陳年數十年，在陳年過程中發展出複雜的次級和三級香氣，如雪松、煙草、皮革等。相比之下，Merlot 雖然也可陳年，但通常更早進入適飲期。"
+        "explanation": "Coleraine 自1982年首釀以來，一直是以 Cabernet Sauvignon 為主體，依年份混合不同比例的 Merlot 與 Cabernet Franc 而成的波爾多式混釀，長年被視為紐西蘭最具代表性的紅酒。相對地，Craggy Range 的 Sophia 則是以 Merlot 為主體的混釀，兩者恰好形成對照。"
       }
     },
     {
       "id": 5,
       "type": "feature",
-      "title": "Syrah (Shiraz)：香料與果實的結合",
-      "icon": "🌶️",
+      "title": "Waiheke Island：紐西蘭的海島紅酒產區",
+      "icon": "🏝️",
       "features": [
         {
-          "title": "典型風格",
-          "description": "黑莓、黑胡椒、香料與動物香（陳年後）。由果實濃郁到辛香皆有。",
+          "title": "Stonyridge『Larose』",
+          "description": "1982年 Stephen White 在 Waiheke Island 種下 Cabernet Sauvignon，1985年首釀，1987年 Larose 一鳴驚人，1993年更釀出紐西蘭第一款五品種波爾多式混釀，樹立全國標竿。",
+          "icon": "🍾"
+        },
+        {
+          "title": "溫暖海島微氣候",
+          "description": "距離 Auckland 僅一段渡輪航程，受海洋調節的溫暖氣候讓晚熟的波爾多品種得以完全成熟，成熟期常早於本島其他產區。",
+          "icon": "⛵"
+        },
+        {
+          "title": "精品酒莊聚落",
+          "description": "島上聚集數十家小型精品酒莊，多以低產量、高單價經營，除波爾多品種外也栽培 Syrah 與少量新興的 Tempranillo、Montepulciano。",
           "icon": "🍇"
-        },
-        {
-          "title": "栽培要點",
-          "description": "對熱度較敏感，適合多樣風格從新鮮到濃郁皆可能。",
-          "icon": "☀️"
-        },
-        {
-          "title": "常見搭配",
-          "description": "辛香燒烤、香料菜餚與風乾肉品。",
-          "icon": "🔥"
         }
       ],
       "quiz": {
-        "question": "Syrah/Shiraz 葡萄酒最具標誌性的香氣特徵是什麼？",
+        "question": "Waiheke Island 上的哪家酒莊，被視為紐西蘭波爾多式混釀的開創者？",
         "options": [
-          "櫻桃與覆盆子的紅果香",
-          "黑胡椒與辛香料的風味",
-          "青草與青椒的草本氣息",
-          "奶油與香草的桶陳風味"
+          "Stonyridge Vineyard",
+          "Craggy Range",
+          "Te Mata Estate",
+          "Trinity Hill"
         ],
-        "correct": 1,
-        "explanation": "Syrah（在澳洲稱為 Shiraz）最具標誌性的特徵就是其獨特的黑胡椒和辛香料氣息，這種香氣來自品種本身的芳香化合物（特別是羅塔蓮rotundone）。除了辛香料，Syrah 還常展現黑莓、藍莓等黑色果實香氣，以及在陳年後可能出現的橄欖、煙燻、皮革等複雜氣息。這種香料特性使得 Syrah 特別適合搭配辛香料理、燒烤和風乾肉品。涼爽產區的 Syrah 傾向更多黑胡椒與優雅感，溫暖產區則更偏向成熟果實與豐滿酒體。"
+        "correct": 0,
+        "explanation": "Stephen White 於1982年在 Waiheke Island 種下 Cabernet Sauvignon，1985年推出首個年份，1987年份的 Larose 讓酒莊一舉成名，1993年更釀出紐西蘭第一款五品種波爾多式混釀，奠定 Stonyridge 作為紐西蘭波爾多式混釀開創者的地位。"
       }
     },
     {
       "id": 6,
-      "type": "feature",
-      "title": "Malbec：深色果實與柔順單寧",
-      "icon": "🍫",
-      "features": [
-        {
-          "title": "典型風格",
-          "description": "黑色果實、巧克力與香料，單寧中等至豐富。",
-          "icon": "🍇"
+      "type": "comparison",
+      "title": "產區對比：Hawke's Bay 與 Waiheke Island",
+      "icon": "🗺️",
+      "comparisonData": {
+        "title": "兩大波爾多式混釀產區",
+        "left": {
+          "label": "Hawke's Bay（Gimblett Gravels）",
+          "icon": "🏞️",
+          "color": "#F6A623",
+          "items": [
+            "紐西蘭第二大葡萄酒產區，以礫石台地為核心",
+            "規模較大，酒莊數量多，價格帶較廣",
+            "代表酒款：Te Mata Coleraine、Craggy Range Sophia、Trinity Hill Homage"
+          ]
         },
-        {
-          "title": "栽培要點",
-          "description": "耐旱性較好，適合乾燥且溫暖地區。",
-          "icon": "🌵"
-        },
-        {
-          "title": "常見搭配",
-          "description": "燒烤、辛香紅肉與濃郁風味料理。",
-          "icon": "🍖"
+        "right": {
+          "label": "Waiheke Island",
+          "icon": "🏝️",
+          "color": "#42A5F5",
+          "items": [
+            "Auckland 外海的火山島嶼，種植面積小而精緻",
+            "海洋調節型溫暖微氣候，成熟期較早",
+            "代表酒款：Stonyridge Larose"
+          ]
         }
-      ]
+      },
+      "summary": "兩地皆證明紐西蘭在涼爽氣候的刻板印象之外，同樣能孕育出結構飽滿、具陳年潛力的波爾多式混釀與 Syrah。",
+      "quiz": {
+        "question": "與 Hawke's Bay 的 Gimblett Gravels 相比，Waiheke Island 葡萄酒產業的規模與定位有何不同？",
+        "options": [
+          "Waiheke Island 種植面積小而精緻，走低產量精品化路線；Gimblett Gravels 規模較大、酒莊數量較多",
+          "兩者規模完全相同",
+          "Waiheke Island 只種植白葡萄品種",
+          "Gimblett Gravels 是一座島嶼"
+        ],
+        "correct": 0,
+        "explanation": "Hawke's Bay 的 Gimblett Gravels 是紐西蘭第二大產區的核心子產區，規模較大、酒莊數量多、價格帶廣；Waiheke Island 則是 Auckland 外海的小型火山島嶼，種植面積小而精緻，多數酒莊採低產量、高單價的精品化經營模式。兩地皆以 Syrah 與波爾多式混釀見長，但產業規模與定位明顯不同。"
+      }
     },
     {
       "id": 7,
-      "type": "content",
-      "title": "釀造與混釀的角色",
-      "content": [
+      "type": "feature",
+      "title": "小眾與新興品種",
+      "icon": "🔬",
+      "features": [
         {
-          "type": "text",
-          "text": "這些品種常被用於單一品種表現或混釀（如 Bordeaux 風格），透過混釀可以平衡果香、單寧與結構。了解每種葡萄的特質有助於預測混釀的結果。"
+          "title": "Montepulciano",
+          "description": "近年在 Gimblett Gravels 等溫暖地塊試種，展現紐西蘭特有的鮮明果香與較低單寧，仍屬仍在探索階段的新興品種。",
+          "icon": "🍇"
+        },
+        {
+          "title": "Tempranillo",
+          "description": "在 Hawke's Bay 與 Waiheke Island 皆有小規模種植，帶來皮革與烘烤香料的西班牙式風味，多見於精品酒莊的實驗性酒款。",
+          "icon": "🌶️"
+        },
+        {
+          "title": "Malbec",
+          "description": "在紐西蘭較少作為單一品種裝瓶，多半作為波爾多式混釀中增添色澤與結構的配角，而非如阿根廷般擔任主角。",
+          "icon": "🍫"
         }
       ],
-      "icon": "🔀"
+      "quiz": {
+        "question": "在紐西蘭的波爾多式混釀傳統中，Malbec 通常扮演什麼角色？",
+        "options": [
+          "如阿根廷般的旗艦單一品種",
+          "混釀中增添色澤與結構的配角",
+          "主要用於釀造氣泡酒基酒",
+          "僅種植於南島 Central Otago"
+        ],
+        "correct": 1,
+        "explanation": "與阿根廷 Mendoza 將 Malbec 作為旗艦單一品種不同，紐西蘭的 Malbec 種植面積很小，多半是波爾多式混釀中增添深色果實色澤與單寧結構的配角，較少見到單一品種裝瓶的酒款。"
+      }
     },
     {
       "id": 8,
       "type": "timeline",
-      "title": "選擇與搭配指南（簡要）",
-      "subtitle": "根據風格選擇料理與飲用時機",
+      "title": "從葡萄到酒杯的關鍵工序",
+      "subtitle": "Hawke's Bay 與 Waiheke Island 紅酒的釀造要點",
       "items": [
         {
-          "year": "輕飲風格",
-          "text": "選 Merlot 或年輕 Syrah，較適合日常搭餐。"
+          "year": "採收與篩選",
+          "text": "多為人工採收，並以光學或振動式選果機篩除未熟果與雜質，確保原料品質。"
         },
         {
-          "year": "結構與陳年",
-          "text": "Cabernet 與高度結構化的混釀適合陳年與搭配濃郁料理。"
+          "year": "發酵與萃取",
+          "text": "開放式或旋轉發酵槽搭配溫和淋汁與踩皮，追求成熟細緻的單寧而非苦澀感。"
         },
         {
-          "year": "特殊風味",
-          "text": "Malbec 與辛香 Syrah 適合煙燻或辛香料理。"
+          "year": "橡木陳年",
+          "text": "波爾多品種常以法國橡木桶陳年12-22個月，新桶比例依酒莊風格從二成到五成不等。"
+        },
+        {
+          "year": "調配（Blending）",
+          "text": "混釀比例於陳年後期依年份條件微調，是波爾多式紅酒最終風格的關鍵決策。"
         }
       ],
-      "icon": "📅"
+      "icon": "⚙️"
     },
     {
       "id": 9,
@@ -192,7 +251,11 @@
       "content": [
         {
           "type": "text",
-          "text": "從容易取得的入門酒款開始，注意產區差異與橡木處理；嘗試同一品種不同產區以觀察風土影響。"
+          "text": "建議並列品飲 Te Mata Coleraine（Cabernet 主導）與 Craggy Range Sophia（Merlot 主導），感受波爾多式混釀中兩種骨架邏輯的差異；再以 Trinity Hill Homage 與 Te Mata Bullnose 比較 Hawke's Bay 不同酒莊詮釋 Syrah 的手法差異。若想感受海島風土，Stonyridge Larose 是不可錯過的標竿酒款。"
+        },
+        {
+          "type": "text",
+          "text": "搭餐建議：Syrah 適合搭配辛香燒烤與風乾肉品；波爾多式混釀適合搭配烤羊排、牛排與陳年硬質乳酪，濃郁的單寧結構能與油脂充分平衡。"
         }
       ],
       "icon": "🏷️"
@@ -203,9 +266,11 @@
       "title": "重點總結",
       "icon": "🔑",
       "points": [
-        "其他紅葡萄如 Merlot、Cabernet、Syrah、Malbec 各有典型風格與用途",
-        "了解栽培條件與釀造選擇能幫助預測酒款風格",
-        "混釀是調和與強化風味的常見策略，選擇搭配時考慮酒體與香料層次"
+        "Hawke's Bay 的 Gimblett Gravels 是紐西蘭唯一以土壤類型劃定的產區，為 Syrah 與波爾多品種提供理想風土",
+        "Syrah 以 Trinity Hill Homage、Te Mata Bullnose 為代表，風格介於北隆河與溫暖產區 Shiraz 之間",
+        "波爾多式混釀以 Te Mata Coleraine（Cabernet 主導）與 Craggy Range Sophia（Merlot 主導）為兩大標竿",
+        "Waiheke Island 憑藉海洋調節微氣候與 Stonyridge Larose，發展出精品化的海島紅酒產業",
+        "Montepulciano、Tempranillo 等為新興試驗品種，Malbec 則多作為混釀配角而非主角"
       ]
     }
   ]

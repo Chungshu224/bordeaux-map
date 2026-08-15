@@ -4,7 +4,7 @@
       "id": 1,
       "type": "cover",
       "title": "Wairarapa/Martinborough — Pinot 的優雅之地",
-      "subtitle": "探索紐西蘭精品 Pinot Noir 的搖籃：精緻、細膩與風土表現",
+      "subtitle": "探索紐西蘭精品 Pinot Noir 的搖籃：歷史、風土與產區全貌",
       "icon": "🍷",
       "background": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
     },
@@ -12,17 +12,20 @@
       "id": 1.5,
       "type": "map",
       "title": "Martinborough / Wairarapa 產區地圖",
-      "subtitle": "紐西蘭北島南端的精品 Pinot Noir 產區",
+      "subtitle": "北島東南端，距離首都 Wellington 車程約一小時的精品 Pinot Noir 產區",
       "mapRegion": "Martinborough|Gladstone"
     },
     {
       "id": 2,
       "type": "content",
-      "title": "Wairarapa 與 Martinborough 產區概覽",
+      "title": "Wairarapa 地理與產區組成",
+      "icon": "🗺️",
       "content": [
-        { "type": "text", "text": "Wairarapa 位於北島東南端，包含 Martinborough、Gladstone 等子產區。Martinborough 以冷涼氣候與精緻 Pinot Noir 聞名，被譽為紐西蘭的「小勃艮第」。" }
-      ],
-      "icon": "🗺️"
+        {
+          "type": "text",
+          "text": "Wairarapa 位於北島東南端，與首都 Wellington 隔著 Tararua 山脈相望。產區主要由三個子產區組成：以 Pinot Noir 聞名國際的 Martinborough、氣候更為涼爽的 Gladstone，以及擁有全紐西蘭最早商業葡萄園歷史的 Masterton 一帶。儘管種植面積在紐西蘭主要產區中屬於最小之列，Wairarapa 仍憑藉風土品質贏得與 Marlborough、Hawke's Bay 並列的世界級聲譽。"
+        }
+      ]
     },
     {
       "id": 3,
@@ -30,21 +33,22 @@
       "title": "產區核心特色",
       "icon": "⭐",
       "features": [
-        { "title": "冷涼氣候", "description": "受南方海風與山脈影響,氣候冷涼且日夜溫差大,適合 Pinot Noir 展現細膩度。", "icon": "🌬️" },
-        { "title": "礫石與砂質土壤", "description": "排水良好的古河床礫石土壤,促進根系深入與風味集中。", "icon": "🪨" },
-        { "title": "小規模精品酒莊", "description": "以家族式小型酒莊為主,注重品質與手工釀造。", "icon": "🏡" }
+        { "title": "冷涼氣候", "description": "受南方海風與 Tararua 山脈雨影效應影響，氣候冷涼乾燥、日夜溫差大，適合 Pinot Noir 展現細膩度。", "icon": "🌬️" },
+        { "title": "礫石與砂質土壤", "description": "排水良好的古河床礫石台地，促進根系深入與風味集中。", "icon": "🪨" },
+        { "title": "小規模精品酒莊", "description": "以家族式小型酒莊為主，注重品質與手工釀造，年產量遠低於 Marlborough。", "icon": "🏡" }
       ],
       "quiz": {
-        "question": "Martinborough 被譽為紐西蘭的什麼地方?",
-        "options": ["小波爾多", "小勃艮第", "小香檳區", "小隆河區"],
+        "question": "Martinborough 常被葡萄酒評論界類比為法國哪個產區？",
+        "options": ["波爾多", "勃艮第", "香檳區", "隆河谷"],
         "correct": 1,
-        "explanation": "Martinborough 以冷涼氣候與精緻 Pinot Noir 聞名,風格細膩優雅,與法國勃艮第的 Pinot Noir 風格相似,因此被譽為紐西蘭的『小勃艮第』。"
+        "explanation": "1978 年土壤學家 Derek Milne 的研究指出，Martinborough 的氣候與土壤與法國勃艮第驚人相似，因此該產區常被稱為紐西蘭的『小勃艮第』。"
       }
     },
     {
       "id": 4,
       "type": "content",
       "title": "主要葡萄品種",
+      "icon": "🍇",
       "content": [
         { "type": "stats", "items": [
           { "label": "Pinot Noir", "value": "產區招牌，風格優雅、單寧細緻、果香純淨", "icon": "🍇" },
@@ -52,21 +56,21 @@
           { "label": "Sauvignon Blanc", "value": "相較 Marlborough 更為收斂與礦石感", "icon": "🍋" },
           { "label": "Riesling", "value": "少量種植，展現優雅酸度與陳年潛力", "icon": "✨" }
         ] }
-      ],
-      "icon": "🍇"
+      ]
     },
     {
       "id": 5,
       "type": "timeline",
-      "title": "Martinborough 的葡萄酒歷史",
-      "subtitle": "從實驗到國際認可",
+      "title": "Wairarapa 葡萄酒發展史",
+      "subtitle": "從殖民時期的先驅到現代精品產區",
+      "icon": "📜",
       "items": [
-        { "year": "1979年", "text": "首批現代葡萄園建立，開啟精品酒莊時代。" },
-        { "year": "1980年代", "text": "Pinot Noir 表現受到注目，確立產區定位。" },
-        { "year": "1990年代", "text": "多家酒莊獲得國際獎項，Martinborough Pinot 聲名遠播。" },
-        { "year": "2000年至今", "text": "成為紐西蘭精品 Pinot Noir 代名詞，吸引全球收藏家。" }
-      ],
-      "icon": "📜"
+        { "year": "1883年", "text": "William Beetham 在 Masterton 附近的 Lansdowne 莊園種下 Wairarapa 第一片商業葡萄園，被視為紐西蘭最早的商業釀酒先驅之一。" },
+        { "year": "1908年", "text": "禁酒公投通過，Wairarapa 成為紐西蘭最早以公投限制酒類銷售的地區之一，多數葡萄園遭剷除，產業一度中斷近七十年。" },
+        { "year": "1978年", "text": "土壤學家 Derek Milne 發表研究，指出 Martinborough 的氣候與土壤與勃艮第相似，重新點燃該地種植 Pinot Noir 的可能性。" },
+        { "year": "1979-1984年", "text": "Dry River、Ata Rangi、Martinborough Vineyard、Palliser Estate 等開拓酒莊陸續成立，奠定現代 Martinborough 產區基礎。" },
+        { "year": "現今", "text": "Wairarapa 以小面積、高品質聞名，是紐西蘭精品 Pinot Noir 的代名詞，吸引全球收藏家關注。" }
+      ]
     },
     {
       "id": 6,
@@ -74,51 +78,45 @@
       "title": "Martinborough 的風土優勢",
       "icon": "🌄",
       "features": [
-        { "title": "日夜溫差", "description": "白天溫暖促進成熟,夜晚涼爽保留酸度與香氣。", "icon": "🌡️" },
-        { "title": "低降雨量", "description": "乾燥氣候降低病害風險,有利於有機栽培。", "icon": "☀️" },
-        { "title": "風土多樣性", "description": "不同地塊的微氣候與土壤差異創造豐富風格。", "icon": "🎨" }
+        { "title": "日夜溫差", "description": "白天溫暖促進成熟，夜晚涼爽保留酸度與香氣，溫差可達 10-14°C。", "icon": "🌡️" },
+        { "title": "充足日照", "description": "年日照時數超過 2000 小時，優於紐西蘭多數產區，有利緩慢而完整的成熟。", "icon": "☀️" },
+        { "title": "低降雨與雨影效應", "description": "Tararua 山脈阻擋濕氣，年降雨量僅約 700 毫米，降低病害風險。", "icon": "🏔️" }
       ],
       "quiz": {
-        "question": "Martinborough 的乾燥氣候特別有利於哪種栽培方式?",
-        "options": ["密集灌溉栽培", "有機與生物動力法栽培", "大規模機械化栽培", "溫室栽培"],
+        "question": "Martinborough 較低的降雨量主要來自什麼地形因素？",
+        "options": ["靠近赤道", "Tararua 山脈的雨影效應", "海拔過低", "缺乏河流"],
         "correct": 1,
-        "explanation": "Martinborough 的低降雨量與乾燥氣候能降低病害風險,非常適合採用有機與生物動力法栽培,許多酒莊因此能實踐低干預的自然釀造方式。"
+        "explanation": "Tararua 山脈阻擋了來自塔斯曼海的濕氣，在其背風側的 Martinborough 形成雨影效應，造就相對乾燥的生長季。"
       }
     },
     {
       "id": 7,
       "type": "content",
-      "title": "Pinot Noir 風格特徵",
+      "title": "Pinot Noir 風格總覽",
+      "icon": "🍷",
       "content": [
-        { "type": "text", "text": "Martinborough 的 Pinot Noir 以優雅、細緻與純淨果香著稱，帶有櫻桃、紅莓、香料與微妙的泥土氣息，單寧絲滑、酸度活潑，具備良好陳年潛力。" }
-      ],
-      "icon": "🍷"
+        { "type": "text", "text": "Martinborough 的 Pinot Noir 以優雅、細緻與純淨果香著稱，帶有櫻桃、紅莓、香料與微妙的泥土氣息，單寧絲滑、酸度活潑，具備良好陳年潛力。更深入的風格分析與子產區比較，將在後續課程中詳細探討。" }
+      ]
     },
     {
       "id": 8,
       "type": "feature",
-      "title": "品鑑與搭配建議",
-      "icon": "🥂",
+      "title": "產區小檔案",
+      "icon": "📋",
       "features": [
-        { "title": "適飲溫度", "description": "14-16°C,能完整展現細膩香氣與質地。", "icon": "🌡️" },
-        { "title": "醒酒建議", "description": "年輕酒款建議醒酒 20-30 分鐘,陳年酒款可直接品飲。", "icon": "⏳" },
-        { "title": "搭配料理", "description": "烤鴨、鮭魚、蘑菇料理、軟質起司等精緻料理。", "icon": "🦆" }
-      ],
-      "quiz": {
-        "question": "品飲 Martinborough Pinot Noir 的建議適飲溫度是?",
-        "options": ["8-10°C", "14-16°C", "18-20°C", "22-24°C"],
-        "correct": 1,
-        "explanation": "Martinborough Pinot Noir 建議在 14-16°C 品飲,這個溫度能完整展現其細膩的香氣、絲滑的單寧與優雅的質地,溫度過低會壓抑香氣,過高則會突顯酒精感。"
-      }
+        { "title": "適飲溫度", "description": "紅酒建議 14-16°C，能完整展現細膩香氣與質地。", "icon": "🌡️" },
+        { "title": "代表酒莊", "description": "Ata Rangi、Dry River、Martinborough Vineyard 等開拓者酒莊，詳見後續課程。", "icon": "🏆" },
+        { "title": "推薦場合", "description": "適合搭配鴨肉、鮭魚、野菇等細緻料理，詳細配對建議見後續課程。", "icon": "🍽️" }
+      ]
     },
     {
       "id": 9,
       "type": "content",
       "title": "永續與有機實踐",
+      "icon": "🌿",
       "content": [
-        { "type": "text", "text": "Martinborough 的乾燥氣候適合有機與生物動力法栽培，許多酒莊採用低干預釀造，強調自然風土表現與環境保護。" }
-      ],
-      "icon": "🌿"
+        { "type": "text", "text": "Martinborough 乾燥少雨的氣候特別適合有機與生物動力法栽培，許多開拓酒莊（如 Ata Rangi）已取得有機認證，強調低干預釀造與自然風土表現，是紐西蘭永續葡萄酒運動的重要據點。" }
+      ]
     },
     {
       "id": 10,
@@ -126,10 +124,10 @@
       "title": "重點總結",
       "icon": "🔑",
       "points": [
-        "Martinborough 以冷涼氣候與礫石土壤產出精緻 Pinot Noir",
-        "風格強調優雅、細膩與純淨果香，具備良好陳年潛力",
-        "小型精品酒莊為主，注重手工釀造與風土表現",
-        "被譽為紐西蘭的「小勃艮第」，是 Pinot Noir 愛好者必訪產區"
+        "Wairarapa 產區歷史可追溯至 1883 年，歷經禁酒運動中斷後於 1978 年因土壤研究而復興",
+        "Martinborough 以冷涼氣候、雨影效應與礫石台地產出精緻 Pinot Noir",
+        "小型家族精品酒莊為主，風格強調優雅、細膩與純淨果香",
+        "被譽為紐西蘭的『小勃艮第』，是 Pinot Noir 愛好者必訪產區"
       ]
     }
   ]

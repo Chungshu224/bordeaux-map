@@ -4,7 +4,7 @@
       "id": 1,
       "type": "cover",
       "title": "Marlborough — 白酒之都",
-      "subtitle": "探索紐西蘭最知名的白酒產區：氣候、土壤與 Sauvignon Blanc 的風格",
+      "subtitle": "探索紐西蘭最重要的葡萄酒產區：Sauvignon Blanc 的崛起、風土與子產區風格",
       "icon": "🍾",
       "background": "linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)"
     },
@@ -12,7 +12,7 @@
       "id": 1.5,
       "type": "map",
       "title": "Marlborough 產區地圖",
-      "subtitle": "紐西蘭最大的白酒產區，Sauvignon Blanc 的故鄉",
+      "subtitle": "紐西蘭最大的葡萄酒產區，占全國種植面積超過三分之二",
       "mapRegion": "Marlborough"
     },
     {
@@ -20,34 +20,47 @@
       "type": "content",
       "title": "產區概覽與地理位置",
       "content": [
-        { "type": "text", "text": "Marlborough 位於紐西蘭南島東北部，長日照與相對乾燥的生長季造就鮮明果香與高酸度，是紐西蘭白酒（特別是 Sauvignon Blanc）最重要的產區。" }
+        { "type": "text", "text": "Marlborough 位於紐西蘭南島東北角，是全國面積最大、也最重要的葡萄酒產區，種植面積占全國超過三分之二，其中 Sauvignon Blanc 又占了 Marlborough 種植面積的大多數。產區的現代篇章始於 1973 年 8 月 24 日：Montana Wines（現 Brancott Estate）在 Wairau Valley 的 Brancott 首度大規模商業種植葡萄，開啟了紐西蘭葡萄酒業最重要的轉折點。此地擁有全國數一數二的日照時數，加上乾燥少雨的生長季與夜間顯著降溫，造就了 Marlborough Sauvignon Blanc 標誌性的鮮明果香與明亮酸度。" }
       ],
       "icon": "🗺️"
     },
     {
       "id": 3,
-      "type": "feature",
-      "title": "氣候與生長條件",
-      "icon": "☀️",
-      "features": [
-        { "title": "長日照與涼爽夜晚", "description": "日夜溫差保留酸度與芳香化合物，促進果香發展。", "icon": "🌡️" },
-        { "title": "乾燥生長季", "description": "降低病害壓力，利於成熟與品質穩定。", "icon": "🌾" }
+      "type": "timeline",
+      "title": "Marlborough 崛起簡史",
+      "subtitle": "從無人看好的南島農地到世界 Sauvignon Blanc 的代名詞",
+      "items": [
+        { "year": "1973年", "text": "Montana Wines 在 Wairau Valley 的 Brancott 大規模種植葡萄，開啟 Marlborough 現代釀酒史。" },
+        { "year": "1979年", "text": "Montana 推出首支商業版 Marlborough Sauvignon Blanc，市場反應熱烈。" },
+        { "year": "1985年", "text": "David Hohnen 創立 Cloudy Bay，其 Sauvignon Blanc 迅速打開國際市場，成為產區最具代表性的出口品牌；同年 Awatere Valley 種下第一批葡萄藤，成為最新開發的子產區。" },
+        { "year": "1990年代", "text": "Villa Maria、Oyster Bay 等品牌相繼擴大投資，Marlborough Sauvignon Blanc 的「青草、百香果」風格成為國際市場辨識度最高的紐西蘭酒款符號。" },
+        { "year": "2000年代", "text": "Kevin Judd（前 Cloudy Bay 首席釀酒師）創立 Greywacke；Peter Yealands 創立 Yealands Estate，並打造全球第一家從創立之初就取得 CarboNZero 碳中和認證的酒莊。" },
+        { "year": "現今", "text": "Marlborough 已是全球最大的 Sauvignon Blanc 產區之一，同時致力於永續葡萄栽培（SWNZ）認證與氣候調適策略。" }
       ],
+      "icon": "📜",
       "quiz": {
-        "question": "Marlborough 長日照與涼爽夜晚對 Sauvignon Blanc 的主要貢獻是？",
-        "options": ["增加單寧", "保留酸度並強化果香", "提高糖分殘留", "使果香消失"],
+        "question": "Marlborough 現代葡萄酒業的起點，是哪家酒莊在哪一年展開大規模商業種植？",
+        "options": ["Cloudy Bay，1985 年", "Montana Wines，1973 年", "Villa Maria，1961 年", "Yealands Estate，2008 年"],
         "correct": 1,
-        "explanation": "長日照與涼爽夜晚有助於累積風味化合物並在晚間保留酸度，讓 Sauvignon Blanc 展現鮮明果香與清爽酸度。"
+        "explanation": "Montana Wines（現 Brancott Estate）於 1973 年 8 月 24 日在 Wairau Valley 的 Brancott 首度大規模種植葡萄，正式開啟了 Marlborough 的現代釀酒史；Cloudy Bay 則於 1985 年成立，讓 Marlborough Sauvignon Blanc 打開國際知名度。"
       }
     },
     {
       "id": 4,
-      "type": "content",
-      "title": "代表性土壤與子產區",
-      "content": [
-        { "type": "text", "text": "產區包含多樣土壤：沖積砂礫、砂質壤土與黏土混合帶來不同的風味表現。子產區如 Wairau Plain 與 Awatere Valley 在風土與風格上各有差異。" }
+      "type": "feature",
+      "title": "氣候與生長條件",
+      "icon": "☀️",
+      "features": [
+        { "title": "長日照與涼爽夜晚", "description": "全國數一數二的日照時數搭配夜間顯著降溫，日夜溫差有助保留酸度並延長芳香化合物的累積時間。", "icon": "🌡️" },
+        { "title": "乾燥的生長季", "description": "降雨集中在生長季之外，病害壓力低，讓葡萄能穩定成熟並維持果實健康度。", "icon": "🌾" },
+        { "title": "南阿爾卑斯山的屏障", "description": "南阿爾卑斯山脈阻擋西岸潮濕氣流，使 Marlborough 相對乾燥晴朗，形成其獨特的大陸性海洋氣候。", "icon": "🏔️" }
       ],
-      "icon": "🪨"
+      "quiz": {
+        "question": "Marlborough 長日照與涼爽夜晚對 Sauvignon Blanc 的主要貢獻是？",
+        "options": ["增加單寧", "保留酸度並強化果香化合物累積", "提高糖分殘留", "使果香消失"],
+        "correct": 1,
+        "explanation": "長日照有助於累積風味化合物，夜間顯著降溫則能保留酸度，兩者共同讓 Marlborough Sauvignon Blanc 展現鮮明果香與清爽酸度。"
+      }
     },
     {
       "id": 5,
@@ -55,49 +68,75 @@
       "title": "Sauvignon Blanc 的典型風格（Marlborough）",
       "icon": "🍋",
       "features": [
-        { "title": "果香明顯", "description": "青柑橘、草本、熱帶水果（如百香果）等鮮明香氣。", "icon": "🍈" },
-        { "title": "高酸度", "description": "清爽的酸度使其在餐酒搭配上相當百搭。", "icon": "🍋" },
-        { "title": "礦物與草本調性", "description": "在特定地塊可見礦物感與草本複雜度。", "icon": "🌿" }
+        { "title": "果香明顯", "description": "青柑橘、剪過的青草、百香果與醋栗葉等鮮明香氣，是國際市場最容易辨識的紐西蘭白酒特徵。", "icon": "🍈" },
+        { "title": "高酸度", "description": "清爽明亮的酸度使其在餐酒搭配上相當百搭，也是與法國 Loire Sauvignon Blanc 風格區隔的重要標誌。", "icon": "🍋" },
+        { "title": "甲氧基吡𠯤（MP）與硫醇香氣", "description": "科學研究顯示，Marlborough Sauvignon Blanc 特有的青椒／醋栗葉調性來自甲氧基吡𠯤化合物，而百香果、黑醋栗芽苞的熱帶水果香則主要源於揮發性硫醇，兩者的平衡塑造出產區的招牌風味。", "icon": "🧪" }
       ],
       "quiz": {
         "question": "哪一種香氣是 Marlborough Sauvignon Blanc 的典型描述？",
-        "options": ["百香果（熱帶水果）", "黑醋栗", "濃郁巧克力", "煙燻香"],
+        "options": ["百香果（熱帶水果）與青草調性", "黑醋栗利口酒", "濃郁巧克力", "煙燻培根"],
         "correct": 0,
-        "explanation": "Marlborough Sauvignon Blanc 常以百香果、草本和柑橘類果香聞名，是其典型風格表現。"
+        "explanation": "Marlborough Sauvignon Blanc 常以百香果、剪過的青草與柑橘類果香聞名，這是甲氧基吡𠯤與揮發性硫醇共同作用下的典型風格表現。"
       }
     },
     {
       "id": 6,
       "type": "content",
-      "title": "釀造與風格塑造",
+      "title": "代表性土壤與子產區地質",
       "content": [
-        { "type": "text", "text": "冷藏壓榨、短時間發酵與不過度的橡木使用，能保留 Sauvignon Blanc 的鮮明香氣；部分酒莊會透過罐澄與不完全發酵達到不同口感。" }
+        { "type": "text", "text": "Marlborough 的核心地質是由 Wairau 河沖積而成的深厚礫石層，表土之下為排水極佳的礫石與沙質壤土，根系必須深入土層才能取得水分，這種輕微的水分逆境有助於濃縮風味並穩定糖酸平衡。往南進入 Southern Valleys 的支流河谷，冰河沖積形成的黃土（loess）覆蓋在向北的坡地上，保水性較佳；而最南、最靠海的 Awatere Valley 則地勢更高、風更強、氣候更涼爽，土壤含更多石灰質與黏土，孕育出結構更緊實、草本調性更明顯的風格。" }
       ],
-      "icon": "⚙️"
+      "icon": "🪨"
     },
     {
       "id": 7,
+      "type": "content",
+      "title": "釀造與風格塑造",
+      "content": [
+        { "type": "text", "text": "冷藏壓榨、低溫發酵與不鏽鋼槽釀造能保留 Sauvignon Blanc 鮮明的果香與酸度，是產區主流做法；部分酒莊如 Greywacke、Dog Point 會採用野生酵母發酵或橡木桶熟成一部分酒液，增添質地與複雜度，塑造出更接近布根地風格的「野生 Sauvignon」。除了 Sauvignon Blanc，Marlborough 也以其冷涼氣候生產優質的傳統法起泡酒（Cloudy Bay 的 Pelorus、Nautilus 的 Cuvée Marlborough 為代表）以及日益受重視的 Pinot Noir，後者集中於 Awatere Valley 與 Southern Valleys 的較涼爽地塊。" }
+      ],
+      "icon": "⚙️",
+      "quiz": {
+        "question": "Marlborough 除了 Sauvignon Blanc 之外，還以哪兩類酒款逐漸建立聲譽？",
+        "options": ["加烈酒與甜點酒", "傳統法起泡酒與 Pinot Noir", "橡木桶陳年 Chardonnay 與 Riesling 冰酒", "Syrah 與 Malbec"],
+        "correct": 1,
+        "explanation": "Marlborough 冷涼的氣候同樣適合釀造高品質的傳統法起泡酒（如 Cloudy Bay Pelorus、Nautilus Cuvée Marlborough）以及風格細緻的 Pinot Noir，是產區在 Sauvignon Blanc 之外的兩大重要發展方向。"
+      }
+    },
+    {
+      "id": 8,
       "type": "feature",
       "title": "品鑑指引與建議搭配",
       "icon": "🥂",
       "features": [
-        { "title": "建議溫度", "description": "8-10°C，能突顯清新果香與酸度。", "icon": "🌡️" },
-        { "title": "搭配建議", "description": "生蠔、海鮮、清淡沙拉與亞洲酸辣料理皆為好選擇。", "icon": "🦪" },
-        { "title": "醒酒與保存", "description": "通常不需醒酒；年輕飲用最能體現活潑果香。", "icon": "⏳" }
+        { "title": "建議溫度", "description": "8-10°C，能突顯清新果香與明亮酸度。", "icon": "🌡️" },
+        { "title": "搭配建議", "description": "生蠔、青口貝等海鮮、山羊乳酪沙拉與泰式酸辣料理皆是經典搭配，草本與柑橘調性能與酸辣、鹹鮮風味互相呼應。", "icon": "🦪" },
+        { "title": "醒酒與保存", "description": "通常不需醒酒，年輕飲用最能體現活潑果香；主流商業款建議兩年內飲用完畢，橡木桶陳年款則可再多存放數年。", "icon": "⏳" }
       ],
       "quiz": {
         "question": "Marlborough Sauvignon Blanc 最合適的飲用溫度範圍是？",
         "options": ["8-10°C", "14-16°C", "18-20°C", "22-24°C"],
         "correct": 0,
-        "explanation": "建議在 8-10°C 飲用 Marlborough 的 Sauvignon Blanc，可以突顯其清新果香與亮麗酸度。"
+        "explanation": "建議在 8-10°C 飲用 Marlborough 的 Sauvignon Blanc，可以突顯其清新果香與亮麗酸度，過高的溫度會使香氣顯得鬆散。"
       }
     },
     {
-      "id": 8,
+      "id": 9,
+      "type": "feature",
+      "title": "代表酒莊速覽",
+      "icon": "🏅",
+      "features": [
+        { "title": "Cloudy Bay", "description": "David Hohnen 於 1985 年創立，是讓 Marlborough Sauvignon Blanc 打入國際市場的關鍵品牌，也生產傳統法起泡酒 Pelorus。", "icon": "☁️" },
+        { "title": "Greywacke", "description": "前 Cloudy Bay 首席釀酒師 Kevin Judd 於 2009 年創立，以帶橡木陳年、野生酵母發酵的「Wild Sauvignon」聞名，展現產區更具深度的一面。", "icon": "🍇" },
+        { "title": "Yealands Estate", "description": "Peter Yealands 創立，位於 Awatere Valley，是全球第一家從創立之初即取得 CarboNZero 碳中和認證的酒莊，永續栽培實踐堪稱業界標竿。", "icon": "🌱" }
+      ]
+    },
+    {
+      "id": 10,
       "type": "content",
       "title": "產業趨勢與可持續實踐",
       "content": [
-        { "type": "text", "text": "越來越多 Marlborough 酒莊導入節水、土壤保護與有機栽培措施，並探索提高地塊表現的策略以面對氣候變化。" }
+        { "type": "text", "text": "紐西蘭的永續葡萄栽培計畫（Sustainable Winegrowing New Zealand, SWNZ）在 Marlborough 有極高的參與率，多數酒莊已納入節水灌溉、覆蓋作物與生物多樣性管理措施。面對氣候變遷帶來的降雨模式改變與極端天氣風險，酒莊也持續評估新地塊、調整採收時間，並投入有機與生物動力法栽培（如 Seresin Estate、Churton），以維持長期的風土表現與環境永續性。" }
       ],
       "icon": "🌱"
     },
@@ -109,14 +148,15 @@
       "icon": "🍋"
     },
     {
-      "id": 9,
+      "id": 11,
       "type": "summary",
       "title": "本課重點總結",
       "icon": "🔑",
       "points": [
-        "Marlborough 是紐西蘭白酒的核心產區，尤其以 Sauvignon Blanc 著稱",
-        "長日照與夜間涼爽造就鮮明果香與高酸度",
-        "土壤與子產區差異造成風味多樣性，且產業正朝向更多可持續作法發展"
+        "Marlborough 是紐西蘭最大的葡萄酒產區，種植面積占全國超過三分之二，1973 年 Montana Wines 的商業種植開啟了現代篇章",
+        "長日照、乾燥氣候與顯著日夜溫差造就 Sauvignon Blanc 鮮明的果香與高酸度，甲氧基吡𠯤與硫醇是關鍵香氣來源",
+        "Wairau Valley、Southern Valleys、Awatere Valley 三大子產區在土壤與氣候上各有差異，風格也隨之不同",
+        "除了 Sauvignon Blanc，傳統法起泡酒與 Pinot Noir 也是產區重要發展方向，永續栽培更是產業共同目標"
       ]
     }
   ]
