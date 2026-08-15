@@ -130,25 +130,27 @@
       <div v-if="loading" class="ag-state">{{ $t('common.actions.loading') }}</div>
       <div v-else-if="groupedByCategory.length === 0" class="ag-state ag-empty">{{ $t('common.admin.glossary.noResults') }}</div>
       <div v-else class="ag-index">
-        <div v-for="g in groupedByCategory" :key="g.key" class="ag-index-group">
-          <button type="button" class="ag-index-header" @click="toggleGroupCollapse(g.key)">
-            <span class="ag-index-header-label">{{ g.label }}</span>
-            <span class="ag-index-header-count">{{ g.items.length }}</span>
-            <span class="ag-index-caret">{{ collapsedGroups.has(g.key) ? '▸' : '▾' }}</span>
-          </button>
-          <ul v-show="!collapsedGroups.has(g.key)" class="ag-index-list">
-            <li v-for="item in g.items" :key="item.id" class="ag-index-item">
-              <span :class="['region-badge', `region-${item.region}`]">{{ regionLabel(item.region) }}</span>
-              <span class="ag-index-zh">{{ item.zh }}</span>
-              <span class="ag-index-en text-it text-muted">{{ item.en }}</span>
-              <span v-if="itemLang3(item)" class="ag-index-lang3 text-it text-muted">{{ itemLang3(item) }}</span>
-              <span class="ag-index-def text-sm text-muted">{{ item.definition.slice(0, 60) }}{{ item.definition.length > 60 ? '…' : '' }}</span>
-              <span class="ag-index-actions">
-                <button class="ag-btn-edit" @click="openForm(item)" :title="$t('common.admin.glossary.btn.edit')">✏️</button>
-                <button class="ag-btn-del" @click="confirmDelete(item)" :title="$t('common.admin.glossary.btn.delete')">🗑️</button>
-              </span>
-            </li>
-          </ul>
+        <div class="ag-index-scroll">
+          <div v-for="g in groupedByCategory" :key="g.key" class="ag-index-group">
+            <button type="button" class="ag-index-header" @click="toggleGroupCollapse(g.key)">
+              <span class="ag-index-header-label">{{ g.label }}</span>
+              <span class="ag-index-header-count">{{ g.items.length }}</span>
+              <span class="ag-index-caret">{{ collapsedGroups.has(g.key) ? '▸' : '▾' }}</span>
+            </button>
+            <ul v-show="!collapsedGroups.has(g.key)" class="ag-index-list">
+              <li v-for="item in g.items" :key="item.id" class="ag-index-item">
+                <span :class="['region-badge', `region-${item.region}`]">{{ regionLabel(item.region) }}</span>
+                <span class="ag-index-zh">{{ item.zh }}</span>
+                <span class="ag-index-en text-it text-muted">{{ item.en }}</span>
+                <span v-if="itemLang3(item)" class="ag-index-lang3 text-it text-muted">{{ itemLang3(item) }}</span>
+                <span class="ag-index-def text-sm text-muted">{{ item.definition.slice(0, 60) }}{{ item.definition.length > 60 ? '…' : '' }}</span>
+                <span class="ag-index-actions">
+                  <button class="ag-btn-edit" @click="openForm(item)" :title="$t('common.admin.glossary.btn.edit')">✏️</button>
+                  <button class="ag-btn-del" @click="confirmDelete(item)" :title="$t('common.admin.glossary.btn.delete')">🗑️</button>
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="ag-count">{{ $t('common.admin.glossary.indexCount', { count: filtered.length, groups: groupedByCategory.length }) }}</div>
       </div>
@@ -762,7 +764,7 @@ async function runBatchTranslate() {
 .ag-btn-add:hover { background: #a8872d; }
 
 /* ── 表格 ── */
-.ag-table-wrap { overflow-x: auto; }
+.ag-table-wrap { overflow-x: auto; overflow-y: auto; max-height: 65vh; overscroll-behavior: contain; }
 .ag-table {
   width: 100%;
   border-collapse: collapse;
@@ -859,6 +861,14 @@ async function runBatchTranslate() {
 
 /* ── 依類別索引 ── */
 .ag-index { display: flex; flex-direction: column; gap: 10px; }
+.ag-index-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 65vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
 .ag-index-group {
   border: 1px solid #f0ebe0;
   border-radius: 10px;
