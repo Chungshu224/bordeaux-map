@@ -49,6 +49,9 @@ export const lessonContent = [
         </div>
         <h4>👅 口感分析</h4>
         <p>匈牙利白酒的最大特徵：<strong>高天然酸度</strong>。即使是 Aszú 甜酒，你也應該感受到明顯的酸度平衡甜度。如果甜酒嘗起來「肥厚膩口」，通常是品質不佳的徵兆。好的 Aszú 應該是酸甜清晰、層次豐富的。</p>
+        <div class="note-box">
+          <p>🎯 <strong>系統性品飲三步驟提醒</strong>：專業品飲永遠依循「視覺 → 嗅覺 → 口感」的固定順序——先觀察色澤與濃淡判斷年齡和酒款類型；再靜置聞香捕捉一、二、三類香氣；最後入口評估酸度、甜度、酒體與餘韻長度。養成這個習慣，能讓你在盲飲匈牙利葡萄酒時更有系統地推理出品種、產區甚至年份。</p>
+        </div>
       </div>
     </div>`
   },
@@ -93,11 +96,15 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: '🍲', title: '古拉什燉牛肉（Gulyás）', content: 'Kékfrankos 或 Egri Bikavér 是最佳拍檔，辛香料感與燉牛肉的紅椒（Paprika）風味完美呼應' },
       { id: 2, icon: '🐟', title: '多瑙河鮮魚湯（Halászlé）', content: '口感濃郁的辣味魚湯，搭配冰涼的干型 Furmint 或酸度充足的 Olaszrizling 最為解膩' },
-      { id: 3, icon: '🧀', title: 'Foie Gras 鵝肝', content: '托卡伊 Aszú（3-4 Puttonyos）或干型 Furmint 是搭配鵝肝的絕配，尤其在 Strasbourg 式的傳統上' },
+      { id: 3, icon: '🧀', title: 'Foie Gras 鵝肝', content: '鵝肝其實是匈牙利本土的「國家珍品（Hungarikum）」，並非僅是法國舶來品——匈牙利是全球第二大鵝肝生產國，出口量占全球鵝肝消費近八成。搭配 4-5 Puttonyos Aszú（殘糖約 100-140 g/L）是最經典的組合' },
       { id: 4, icon: '🍮', title: '甜點搭配', content: '6 Puttonyos Aszú 搭配藍紋起司或核桃蛋糕；Eszencia 最好單獨品飲，感受其純粹的貴腐風味' }
     ],
     content: `<div class="food-pairing-guide">
       <p>匈牙利料理以大膽的紅椒（Paprika）風味和豐富的燉煮傳統著稱，恰好與匈牙利葡萄酒的酸度和辛香料感形成天然的互補。</p>
+      <div class="note-box">
+        <h4>🦢 鵝肝：匈牙利的國家珍品，不只是法國舶來品</h4>
+        <p>很多人以為鵝肝是法國專屬，但匈牙利其實是<strong>全球第二大鵝肝生產國</strong>（僅次於法國），出口量占全球鵝肝消費量近八成。這項傳統可追溯至馬扎爾人（Magyar）進入喀爾巴阡盆地後延續的填飼養鵝習俗，並在 18 世紀玉米種植普及後真正興盛。2013 年鵝肝及其製品被列入匈牙利「國家珍品名錄（Hungarikum）」，是匈牙利飲食文化的官方認證代表——這也是為什麼 Tokaji Aszú 配鵝肝在匈牙利不只是「經典搭配」，更是一種本土的飲食身份認同。</p>
+      </div>
       <div class="pairing-matrix">
         <h4>🍽️ 匈牙利料理 × 葡萄酒搭配矩陣</h4>
         <table class="pairing-table">
@@ -118,8 +125,13 @@ export const lessonContent = [
           </tr>
           <tr>
             <td>鵝肝（Foie Gras）</td>
-            <td>Tokaji Aszú 3-5 Puttonyos</td>
-            <td>甜酸平衡切割鵝肝油脂感</td>
+            <td>Tokaji Aszú 4-5 Puttonyos（殘糖約 100-140 g/L）</td>
+            <td>甜酸平衡切割鵝肝油脂感，是匈牙利最經典的宴席搭配</td>
+          </tr>
+          <tr>
+            <td>野味料理（鹿肉、野豬燉肉）</td>
+            <td>陳年 Tokaji Aszú、Egri Bikavér Superior</td>
+            <td>陳年 Aszú 的乾果與辛香層次呼應野味的濃郁；Bikavér 的單寧與酸度可切割野味油脂</td>
           </tr>
           <tr>
             <td>匈牙利炸雞（Rántott csirke）</td>
@@ -127,9 +139,14 @@ export const lessonContent = [
             <td>酸度搭配油炸食品，礦物感提升鮮味</td>
           </tr>
           <tr>
+            <td>新鮮起司 / 淡味乳酪</td>
+            <td>干型 Olaszrizling</td>
+            <td>清爽酸度平衡乳脂感，礦物感與鮮乳酪的簡單風味相輔相成</td>
+          </tr>
+          <tr>
             <td>藍紋起司（Gorgonzola）</td>
             <td>Tokaji Aszú 5-6 Puttonyos</td>
-            <td>甜酒的蜂蜜感平衡起司的鹹味和刺激感</td>
+            <td>起司越濃郁鹹重，越適合搭配越甜的 Aszú——甜酒的蜂蜜感平衡鹹味和刺激感</td>
           </tr>
           <tr>
             <td>巧克力甜點</td>
@@ -137,6 +154,9 @@ export const lessonContent = [
             <td>紅酒的紅果酸度與可可的苦感形成複雜層次</td>
           </tr>
         </table>
+      </div>
+      <div class="note-box">
+        <p>💡 <strong>搭配邏輯口訣</strong>：甜配鹹（Aszú 配藍紋起司）、酸解油（Furmint/Olaszrizling 配油炸與魚類）、單寧配紅肉（Bikavér、Villányi Franc 配燉牛肉與野味）、陳年配濃郁（老年份 Aszú 配野味與陳年起司）。掌握這四個原則，就能推理出大多數匈牙利料理的搭配邏輯，而不必死背菜單。</p>
       </div>
     </div>`
   },
@@ -205,28 +225,28 @@ export const lessonContent = [
         questions: [
         {
           type: 'single',
-          text: '品飲高品質 Tokaji Aszú 時，你應該感受到什麼重要的口感特徵？',
+          question: '品飲高品質 Tokaji Aszú 時，你應該感受到什麼重要的口感特徵？',
           options: ['A. 純粹的甜膩感，沒有任何酸度，類似糖漿', 'B. 酸甜平衡：高殘糖帶來甜蜜感，但同時有明顯的天然酸度，讓口感清晰不膩口', 'C. 高酒精感（15%+）搭配濃郁甜度', 'D. 完全干燥，沒有任何甜感'],
           correct: 1,
           explanation: '高品質 Tokaji Aszú 的關鍵品質標誌是「酸甜平衡」。Furmint 品種的高天然酸度（即使在 Aszú 中也保留）與濃縮的糖分形成張力，讓甜度不顯膩口，反而帶來清新感。這正是 Tokaji Aszú 區別於其他甜酒（如某些糖分添加的低品質酒款）的核心特徵。如果一款 Aszú 嘗起來完全是甜膩的，沒有酸度支撐，通常品質有問題。'
         },
         {
           type: 'single',
-          text: 'Kadarka 的香氣特徵最接近下列哪種描述？',
+          question: 'Kadarka 的香氣特徵最接近下列哪種描述？',
           options: ['A. 黑醋栗、鉛筆芯、高單寧，類似頂級波爾多', 'B. 玫瑰水、乾草莓、辛香料（薑、丁香），低單寧，芬芳持久', 'C. 青草、青椒、高酸度，類似羅亞爾河 Cabernet Franc', 'D. 煙燻、礦石、高酸，類似布根地 Pinot Noir'],
           correct: 1,
           explanation: 'Kadarka 是匈牙利最芬芳的紅葡萄品種，以玫瑰水、乾燥紅果（草莓、野生紅莓）和東方辛香料（薑、丁香）的獨特香氣著稱。它的單寧含量很低，口感柔順，但香氣持久而複雜。正是這種「芬芳低單寧」的特性，使 Kadarka 在 Bikavér 混釀中扮演「香氣貢獻者」的角色，與 Kékfrankos 的骨架感形成互補。'
         },
         {
           type: 'single',
-          text: '搭配匈牙利傳統鵝肝（Foie Gras）料理，最經典的選擇是哪種酒？',
+          question: '搭配匈牙利傳統鵝肝（Foie Gras）料理，最經典的選擇是哪種酒？',
           options: ['A. 冰涼的干型 Olaszrizling，以清爽感中和鵝肝的油脂', 'B. Egri Bikavér 紅酒，以單寧切割鵝肝油脂', 'C. Tokaji Aszú 甜白酒，以甜酸平衡切割鵝肝的豐富油脂感', 'D. 氣泡酒（Pezsgő），以氣泡感解膩'],
           correct: 2,
           explanation: '鵝肝（Foie Gras）配甜白酒是歐洲最經典的搭配之一（在波爾多是用 Sauternes，在匈牙利則是用 Tokaji Aszú）。原理是：甜酒的糖分和蜂蜜風味與鵝肝的豐富油脂形成風味呼應，而 Furmint 的高酸度則切割油脂感，讓口腔在每一口後都感到清新。這個搭配在匈牙利傳統宴席中是最高規格的搭配選擇。'
         },
         {
           type: 'single',
-          text: '以下關於托卡伊（Tokaj）的陳述，哪一項是正確的？',
+          question: '以下關於托卡伊（Tokaj）的陳述，哪一項是正確的？',
           options: ['A. 托卡伊是匈牙利最大的葡萄酒產區，面積超過 20,000 公頃', 'B. 托卡伊的分級制度建立於 1737 年，比波爾多的 1855 年分級早了 118 年', 'C. 托卡伊只能用 Hárslevelű 品種釀造 Aszú', 'D. 托卡伊 Aszú 不含任何天然酸度，因為貴腐菌分解了所有的酒石酸'],
           correct: 1,
           explanation: '正確答案是 B。托卡伊在 1737 年由神聖羅馬帝國皇帝查理六世建立了世界上第一個官方葡萄園品質分級制度，比波爾多著名的 1855 年梅多克分級早了整整 118 年。這是托卡伊（和匈牙利）在葡萄酒歷史上的重要地位象徵。其他選項均不正確：Tokaj 面積約 5,723 公頃（不是最大）；Aszú 主要品種是 Furmint（不是 Hárslevelű）；貴腐菌不會分解所有酸度，Aszú 的高天然酸度正是其品質標誌。'
@@ -245,73 +265,115 @@ export const lessonContent = [
         questions: [
         {
           type: 'single',
-          text: '托卡伊（Tokaj）葡萄酒產區被列入 UNESCO 世界文化遺產的年份是？',
-          options: ['A. 1990 年', 'B. 2002 年', 'C. 2010 年', 'D. 1995 年'],
-          correct: 1,
-          explanation: '托卡伊葡萄酒歷史文化景觀於 2002 年被列入 UNESCO 世界文化遺產，是全球最古老的法定葡萄酒產區之一，也是匈牙利以葡萄酒文化為主題的唯一世界遺產。'
+          question: '匈牙利 1737 年的托卡伊葡萄園分級制度，除了劃分葡萄園等級之外，還同時做出了什麼具有現代 AOC（法定產區）精神的規定？',
+          options: ['A. 禁止外地葡萄酒進入托卡伊產區銷售', 'B. 規定所有酒莊必須以貴族姓氏命名', 'C. 強制所有酒莊採用相同的橡木桶陳年時間', 'D. 限制托卡伊只能出口給哈布斯堡皇室'],
+          correct: 0,
+          explanation: '1737 年查理六世的法令不只分級，還同時禁止外地葡萄酒混入托卡伊產區銷售，等於劃定了受保護的產區邊界——這正是現代 AOC／PDO 制度「產區保護」精神的雛形，也是托卡伊比波爾多 1855 年分級更早、更全面的原因。'
         },
         {
           type: 'single',
-          text: '匈牙利建立世界第一個官方葡萄園分級制度比波爾多 1855 年分級早了幾年？',
-          options: ['A. 55 年', 'B. 100 年', 'C. 118 年', 'D. 150 年'],
+          question: '1990 年代匈牙利葡萄酒復興的重要推手 Royal Tokaji 酒莊，是由誰主導聯合創辦？',
+          options: ['A. 英國酒評家 Hugh Johnson', 'B. 法國酒商 Baron Philippe de Rothschild', 'C. 西班牙 Vega Sicilia 家族', 'D. 美國酒商 Robert Mondavi'],
+          correct: 0,
+          explanation: 'Royal Tokaji 由英國知名酒評家 Hugh Johnson 於 1990 年聯合創辦，是私有化後外資進入托卡伊、帶動現代精品釀酒理念的標誌性酒莊之一。'
+        },
+        {
+          type: 'single',
+          question: '匈牙利的緯度（約 46-48°N）雖與波爾多、布根地相近，但因地處歐洲大陸中心，氣候上呈現什麼特徵？',
+          options: ['A. 海洋性氣候，冬暖夏涼、四季溫差小', 'B. 大陸性氣候更強，夏季更炎熱、冬季更寒冷', 'C. 地中海型氣候，全年溫和少雨', 'D. 高山氣候，日夜溫差極小'],
+          correct: 1,
+          explanation: '匈牙利深處喀爾巴阡盆地內陸，遠離海洋調節，屬於典型大陸性氣候：夏季平均氣溫可達 26-28°C，冬季則可降至 -10°C 至 -20°C，季節溫差比波爾多等受海洋影響的產區明顯得多。'
+        },
+        {
+          type: 'single',
+          question: '下列「產區群—代表酒款」的配對，何者正確？',
+          options: ['A. 托卡伊地區 → Villányi Franc', 'B. 巴拉頓地區 → Tokaji Aszú', 'C. 北匈牙利 → Egri Bikavér', 'D. 多瑙河平原 → Tokaji Eszencia'],
           correct: 2,
-          explanation: '1737 年哈布斯堡皇帝查理六世頒令建立托卡伊葡萄園分級制度，比波爾多著名的 1855 年梅多克分級早了整整 118 年，是世界上最早的官方葡萄園品質分級體系之一。'
+          explanation: '北匈牙利產區群（涵蓋 Eger、Mátra、Bükk）以 Egri Bikavér（埃格爾公牛血）聞名。托卡伊地區代表酒款是 Tokaji Aszú；巴拉頓地區以 Olaszrizling／Szürkebarát 為主；多瑙河平原以量產日常餐酒為主，並非精品甜酒產地。'
         },
         {
           type: 'single',
-          text: 'Furmint 葡萄特別適合釀造 Tokaji Aszú 的主要原因是？',
-          options: ['A. 天然糖分極高，無需貴腐菌', 'B. 薄皮易受貴腐菌感染，且高天然酸度與甜度形成完美平衡', 'C. 成熟期特別早，採收方便', 'D. 果皮顏色特殊，便於選果'],
+          question: '在托卡伊 Aszú 的傳統調配邏輯中，Furmint 與 Hárslevelű 兩者的角色分工最準確的描述是？',
+          options: ['A. Furmint 提供花香，Hárslevelű 提供酸度骨架', 'B. Furmint 提供高酸度與結構骨架，Hárslevelű 提供芬芳花香與圓潤口感', 'C. 兩者角色完全相同，可以任意互相替代', 'D. Furmint 只能用於干型酒，Hárslevelű 只能用於 Aszú'],
           correct: 1,
-          explanation: 'Furmint 的兩大特性使其成為 Aszú 釀造的理想品種：①薄皮讓貴腐菌能輕易穿透形成貴腐果漿；②高天然酸度在糖分極高時仍能保持清新平衡，避免甜酒變得膩口。'
+          explanation: 'Furmint 薄皮高酸，是 Aszú 的「骨架」來源；Hárslevelű 皮厚酸度較低，帶來椴花、杏桃等豐郁香氣，是「靈魂」的芳香來源。兩者搭配互補，才構成托卡伊 Aszú 完整的風味結構。'
         },
         {
           type: 'single',
-          text: '匈牙利種植面積最廣的紅葡萄品種是哪一個？',
-          options: ['A. Kadarka', 'B. Cabernet Franc', 'C. Kékfrankos', 'D. Zweigelt'],
+          question: 'Olaszrizling（Welschriesling）這個名字最容易讓消費者誤以為它和哪個品種有親緣關係，但實際上兩者 DNA 並無關聯？',
+          options: ['A. Chardonnay', 'B. Sauvignon Blanc', 'C. Rhine Riesling（萊茵雷司令）', 'D. Gewürztraminer'],
           correct: 2,
-          explanation: 'Kékfrankos 是匈牙利種植面積最廣的紅葡萄品種，超過 8,000 公頃，幾乎遍布所有 22 個法定產區，也是 Egri Bikavér 公牛血混釀的核心品種。'
+          explanation: 'Olaszrizling 雖然名字帶有「Rizling」（Riesling），但與德國萊茵雷司令（Rhine Riesling）並無親緣關係，是完全不同的品種，風格上也更圓潤、酸度較低，不具備萊茵雷司令的高酸與長陳年潛力。'
         },
         {
           type: 'single',
-          text: '「公牛血（Bikavér）」名字的起源傳說與哪個歷史事件相關？',
-          options: ['A. 一位釀酒師在釀造時混入了牛血', 'B. 16 世紀埃格爾守軍飲用紅酒染紅鬍鬚，嚇退鄂圖曼軍隊', 'C. 匈牙利國王在祭祀中使用牛血與葡萄酒混合的儀式', 'D. Kadarka 葡萄串的外觀形似公牛角'],
+          question: 'Kékfrankos 在德國的產區裡通常被稱為什麼名稱？',
+          options: ['A. Spätburgunder', 'B. Lemberger（或 Limberger）', 'C. Dornfelder', 'D. Trollinger'],
           correct: 1,
-          explanation: '根據傳說，1552 年鄂圖曼軍隊圍攻埃格爾時，守軍大量飲用紅色 Bikavér 酒，紅酒染紅鬍鬚。土耳其人誤以為他們在喝公牛血，驚懼撤退。「公牛血」之名由此而來，沿用至今。'
+          explanation: 'Kékfrankos 在奧地利稱為 Blaufränkisch，在德國（主要是 Württemberg）則稱為 Lemberger 或 Limberger，是中歐地區廣泛種植的同一品種在不同國家的異名。'
         },
         {
           type: 'single',
-          text: '托卡伊的「晨霧＋暖乾午後」氣候對貴腐菌有什麼關鍵作用？',
-          options: ['A. 晨霧殺菌，暖乾防止菌絲過度生長', 'B. 晨霧提供濕氣讓菌絲穿透葡萄皮，暖乾午後蒸發水分讓糖分濃縮，避免爛葡萄', 'C. 晨霧增加葡萄的光合作用，提高糖分含量', 'D. 暖乾午後是貴腐菌生長的主要時間，晨霧只是副作用'],
+          question: '根據「公牛血（Bikavér）」的傳說，16 世紀埃格爾守軍抵禦鄂圖曼軍隊圍城時，發生了什麼讓敵軍誤判局勢的插曲？',
+          options: ['A. 守軍將紅酒潑灑在城牆上偽裝血跡嚇退敵軍', 'B. 守軍飲用紅酒染紅鬍鬚，被圍城的鄂圖曼軍誤認為飲用了公牛血', 'C. 守軍以整批紅酒與敵軍交換停戰協議', 'D. 守軍用紅酒為傷兵消毒，士氣大振嚇退敵軍'],
           correct: 1,
-          explanation: '這個氣候組合是托卡伊 Aszú 釀造的核心：晨霧（濕氣）讓貴腐菌的菌絲能穿透 Furmint 的薄果皮；暖乾午後（晴天）蒸發水分，防止葡萄整顆爛掉。這種「交替濕乾」的節律是形成高品質 Aszú 果漿的必要條件。'
+          explanation: '傳說 1552 年埃格爾守軍在圍城中大量飲用紅色的 Bikavér，紅酒染紅了他們的鬍鬚；鄂圖曼軍誤以為守軍喝了公牛血而驚懼撤退，「公牛血」之名從此流傳，成為埃格爾紅酒最著名的品牌故事。'
         },
         {
           type: 'single',
-          text: '維拉尼（Villány）最著名的葡萄品種及其官方認證品牌是？',
-          options: ['A. Furmint → Tokaji Aszú', 'B. Kékfrankos → Egri Bikavér', 'C. Cabernet Franc → Villányi Franc', 'D. Kadarka → Szekszárdi Bikavér'],
-          correct: 2,
-          explanation: '維拉尼是匈牙利最溫暖的產區，以 Cabernet Franc 最為著名。「Villányi Franc」是匈牙利唯一擁有自己專屬品牌認證的葡萄酒，英國酒評家 Michael Broadbent 稱維拉尼是 Cabernet Franc 的「天然家園」。'
-        },
-        {
-          type: 'single',
-          text: 'Badacsony 玄武岩火山土壤對 Olaszrizling 葡萄酒風格的主要影響是？',
-          options: ['A. 使酸度降低，產出更圓潤的風格', 'B. 提供強烈礦物感和複雜度，遠超平原地區的同品種', 'C. 適合種植所有紅葡萄品種', 'D. 降雨量充足，葡萄不需要灌溉'],
+          question: '維拉尼（Villány）之所以能讓 Cabernet Franc 展現不遜於波爾多右岸的成熟度，最主要的氣候原因是什麼？',
+          options: ['A. 維拉尼是匈牙利最涼爽的產區，晝夜溫差全國最大', 'B. 維拉尼是匈牙利最溫暖的產區，年均氣溫最高，地中海氣候影響明顯', 'C. 維拉尼終年多雨，葡萄完全不需要灌溉', 'D. 維拉尼海拔全國最高，日照時數最長'],
           correct: 1,
-          explanation: 'Badacsony 的玄武岩火山土壤保熱性強，葡萄在晝夜溫差中緩慢成熟；火山礦物質滲入土壤後被葡萄根系吸收，賦予葡萄酒顯著的礦物感，這是平原地區 Olaszrizling 無法比擬的風土優勢。'
+          explanation: '維拉尼年均氣溫約 11.6°C，是匈牙利所有法定產區中最高的，加上南部地中海氣候影響，使 Cabernet Franc 等波爾多品種能充分成熟，單寧圓熟，不帶羅亞爾河常見的青椒／草本感。'
         },
         {
           type: 'single',
-          text: '傳統上 6 Puttonyos 的 Tokaji Aszú 代表什麼意思？',
-          options: ['A. 這批酒使用了 6 個不同產區的葡萄', 'B. 這款酒在橡木桶中陳年了 6 年', 'C. 傳統上代表每 136 公升基酒中加入了 6 桶 Aszú 果漿，是最高甜度等級', 'D. 這款酒混合了 6 種不同的葡萄品種'],
-          correct: 2,
-          explanation: '傳統 Puttonyos 系統中，數字代表每個 Gönc 桶（136 公升）基酒中添加幾桶 Aszú 果漿。6 Puttonyos 是最高甜度等級，香氣最濃郁。2013 年後法規改以殘糖量（g/L）指標，但 Puttonyos 數字仍是識別甜度等級的重要參考。'
-        },
-        {
-          type: 'single',
-          text: 'Egri Bikavér（埃格爾公牛血）最基本的法定釀造條件是什麼？',
-          options: ['A. 必須 100% 使用 Kadarka，在橡木桶中陳年 5 年以上', 'B. 至少使用 3 種葡萄品種，且 Kékfrankos 必須是比例最高的品種', 'C. 必須使用 Furmint 和 Kékfrankos 各 50%', 'D. 必須添加指定比例的匈牙利橡木桶萃取液'],
+          question: '塞克薩德公牛血（Szekszárdi Bikavér）與埃格爾公牛血相比，風格上最主要的差異是什麼？',
+          options: ['A. 塞克薩德完全不使用 Kékfrankos 品種', 'B. 塞克薩德的 Kadarka 比例通常較高，帶有更多玫瑰與東方辛香料的芬芳，風格更圓潤', 'C. 塞克薩德法規禁止混釀，只能單一品種裝瓶', 'D. 塞克薩德只生產白酒，沒有公牛血紅酒'],
           correct: 1,
-          explanation: 'Egri Bikavér 的核心法定條件：①必須來自埃格爾法定產區；②至少使用 3 種不同葡萄品種；③Kékfrankos 必須是比例最高的品種。這個「多品種混釀以 Kékfrankos 為核心」的結構，是公牛血區別於其他紅酒的根本特徵。'
+          explanation: '塞克薩德位於較溫暖的南部潘農地區，其公牛血傳統上保留較高比例的 Kadarka，因此帶有更明顯的玫瑰水、東方辛香料香氣，整體風格比北部涼爽、礦物感較強的埃格爾公牛血更圓潤豐郁。'
+        },
+        {
+          type: 'single',
+          question: '「Puttonyos」這個詞在托卡伊傳統中最初指的是什麼實物？',
+          options: ['A. 托卡伊產區內的行政區劃單位', 'B. 傳統上背在背上、用來採收 Aszú 貴腐果漿的木桶', 'C. 一種只在托卡伊使用的貴腐菌菌株名稱', 'D. 托卡伊酒莊申請分級認證用的證書'],
+          correct: 1,
+          explanation: 'Puttonyos 原指採收工人背在背上用來裝運 Aszú 貴腐果漿的傳統木桶，每桶約 20 公斤。後來這個詞演變成甜度分級單位——「幾 Puttonyos」代表每桶基酒中加入了幾桶 Aszú 果漿。'
+        },
+        {
+          type: 'single',
+          question: 'Tokaji Eszencia 的酒精度通常只有 2-5%，主要原因是什麼？',
+          options: ['A. 釀酒師在發酵過程中刻意加水稀釋', 'B. 果漿糖分濃度極高（450-800 g/L），發酵過程中酵母難以承受高滲透壓，發酵極其緩慢且不完全', 'C. 使用特殊酵母菌株，天生只能產生極低酒精度', 'D. 匈牙利法規強制規定 Eszencia 的最高酒精度上限'],
+          correct: 1,
+          explanation: 'Eszencia 是純貴腐果漿自然滴落的汁液，糖度可達 450-800 g/L（比蜂蜜還高）。如此極端的高糖環境會產生滲透壓抑制，讓酵母幾乎無法正常運作，發酵極慢且往往在酒精度僅有 2-5% 時就自然停止。'
+        },
+        {
+          type: 'single',
+          question: '2013 年托卡伊法規改革後，Aszú 的品質判定主要改以什麼指標為依據，取代了單純的 Puttonyos 數字？',
+          options: ['A. 葡萄園的海拔高度', 'B. 殘糖量（要求達到 120 g/L 以上）', 'C. 橡木桶陳年年限長短', 'D. 貴腐菌感染的百分比'],
+          correct: 1,
+          explanation: '2013 年新法規簡化了托卡伊的分級邏輯，改以實測的殘糖量（要求 Aszú 的殘糖 ≥ 120 g/L）作為品質判定依據，不再硬性規定 Puttonyos 木桶數量，但許多酒莊仍在酒標上保留 Puttonyos 數字作為傳統參考。'
+        },
+        {
+          type: 'single',
+          question: '「Szamorodni」這個字本身的意思，最貼切地反映了它獨特的釀造方式，是指什麼？',
+          options: ['A. 「甜蜜的祝福」，象徵婚禮用酒的傳統', 'B. 「按原樣採收」，整串葡萄連貴腐果粒與正常果粒一起採收發酵，不特別分揀', 'C. 「二次發酵」，指瓶中二次發酵工序', 'D. 「橡木桶精華」，指專用陳年橡木桶的名稱'],
+          correct: 1,
+          explanation: 'Szamorodni 源自波蘭語「按原樣」之意，指整串葡萄不刻意分揀貴腐果粒與健康果粒，直接一起壓榨發酵。這與精選貴腐果漿手工採收的 Aszú 截然不同的釀造理念，因此 Szamorodni 可以是干型（Száraz，類似 Fino Sherry 風格）或甜型（Édes）。'
+        },
+        {
+          type: 'single',
+          question: 'Egri Bikavér Superior 與基本款 Egri Bikavér 相比，最主要的差異在於？',
+          options: ['A. Superior 款只能使用 Kadarka 單一品種', 'B. Superior 款需通過更嚴格的盲品評審，且陳年時間要求更長（含更長橡木桶陳年）', 'C. Superior 款規定不得使用 Kékfrankos', 'D. Superior 款只能在巴拉頓產區生產'],
+          correct: 1,
+          explanation: 'Egri Bikavér Superior 是埃格爾酒莊協會認證的最高等級，除了符合基本款的多品種混釀規定外，還需通過嚴格的盲品評審，且要求更長的陳年時間（含至少 12 個月以上橡木桶陳年），品質標準遠高於基本款。'
+        },
+        {
+          type: 'single',
+          question: '「Villányi Franc」這個品牌認證在匈牙利葡萄酒業中最獨特之處是什麼？',
+          options: ['A. 它是匈牙利唯一擁有專屬品牌認證的單一品種紅酒', 'B. 它是匈牙利唯一的官方氣泡酒（Pezsgő）品牌', 'C. 它其實專指托卡伊產區出產的干型白酒', 'D. 它是政府授予所有維拉尼酒莊的通用標籤，沒有品質門檻'],
+          correct: 0,
+          explanation: 'Villányi Franc 是匈牙利唯一擁有自己專屬品牌認證的單一品種葡萄酒，只有通過維拉尼酒農協會嚴格盲品評審的 Cabernet Franc 才能使用此認證，這在匈牙利 22 個法定產區中是獨一無二的品質保證機制。'
         }
         ]
       }

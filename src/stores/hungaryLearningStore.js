@@ -82,7 +82,6 @@ export const hungaryLearningLevels = {
     title: 'Level 2 - 匈牙利葡萄酒進階',
     description: '深入各產區風土、頂級酒莊與年份差異，提升品飲和鑑別能力',
     color: '#477050',
-    comingSoon: true,
     modules: [
       { id: 'HU2M1', title: '托卡伊深度', lessonIds: ['hu-l2-1', 'hu-l2-2'] },
       { id: 'HU2M2', title: '頂級紅酒產區', lessonIds: ['hu-l2-3', 'hu-l2-4'] },

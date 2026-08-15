@@ -53,6 +53,25 @@ export const lessonContent = [
           </div>
         </div>
       </div>
+      <div class="clone-box">
+        <h4>🧬 果色與克隆多樣性</h4>
+        <p>近年 DNA 研究在托卡伊確認了 Furmint 存在數種 DNA 相同、但外觀不同的「體細胞突變」類型：主流的黃綠色 <strong>Sárga Furmint</strong>（黃色）之外，還有果皮帶粉紅色澤的 <strong>Piros Furmint</strong>（紅色）、果串鬆散的 <strong>Lazafürtű</strong>，以及果色表現不穩定的 <strong>Változó</strong>（多變）。這些同源異型的存在，說明 Furmint 在托卡伊已有數百年的栽培演化史，也是釀酒師選種育苗時重要的參考依據。</p>
+      </div>
+      <div class="producer-pairing">
+        <div class="info-card">
+          <h5>🏛️ 代表酒莊</h5>
+          <ul>
+            <li><strong>István Szepsy</strong>：托卡伊第十七代釀酒世家，被譽為「干型 Furmint 革命之父」，2000 年份的 Úrágya Furmint 讓同業首次見識干型托卡伊的潛力</li>
+            <li><strong>Disznókő</strong>：1992 年即裝瓶匈牙利最早的干型 Furmint 之一，也是甜酒經典大廠</li>
+            <li><strong>Oremus</strong>：旗下單一園 Mandolás 干型 Furmint 自 2000 年份起，被公認為推動托卡伊當代干型浪潮的先鋒酒款</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h5>🍽️ 餐搭建議</h5>
+          <p><strong>干型 Furmint：</strong>高酸度與礦物感適合搭配生蠔、握壽司、清蒸魚等海鮮料理，也能balance匈牙利鵝肝的油脂感。</p>
+          <p><strong>Tokaji Aszú：</strong>經典搭配是鵝肝（libamáj）與藍紋乳酪，濃郁甜度也能平衡辛辣的亞洲料理與東方香料甜點。</p>
+        </div>
+      </div>
     </div>`
   },
   {
@@ -62,7 +81,7 @@ export const lessonContent = [
       mapRegion: 'Tokaj',
       description: '托卡伊位於匈牙利東北角，Bodrog 與 Tisza 兩河交匯——Furmint 的最佳表達，貴腐甜酒的發源地',
     },
-  },,
+  },
 
   {
     title: 'Hárslevelű — 椴樹葉品種',
@@ -100,6 +119,19 @@ export const lessonContent = [
       <div class="note-box">
         <p>🎯 在判讀 Tokaji Aszú 時，如果酒款帶有特別豐郁的花香（椴花、金合歡）和蜂蜜感，通常反映了較高比例的 Hárslevelű 在調配中。</p>
       </div>
+      <div class="producer-pairing">
+        <div class="info-card">
+          <h5>🏛️ 代表酒莊</h5>
+          <ul>
+            <li><strong>Royal Tokaji</strong>：由酒評家 Hugh Johnson 參與創立的先驅酒莊，除經典 Aszú 外也出產令人驚豔的干型 Hárslevelű</li>
+            <li><strong>Demeter Zoltán</strong>：專注單一園精品的釀酒師，其 Szerelmi 園 Hárslevelű 出自托卡伊公認最古老的「特級園」之一，被視為干型 Hárslevelű 的標竿</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h5>🍽️ 餐搭建議</h5>
+          <p>豐郁的花果香氣適合搭配白肉料理、烤雞、輕度辛香的亞洲菜；甜型的 Aszú 風格則與杏桃塔、蜂蜜甜點相得益彰。</p>
+        </div>
+      </div>
     </div>`
   },
   {
@@ -134,6 +166,24 @@ export const lessonContent = [
           </div>
         </div>
       </div>
+      <div class="clone-box">
+        <h4>🌍 一個名字，八十個化身</h4>
+        <p>Olaszrizling 家族在中歐擁有近 80 個同義名，是分佈最廣、歷史最悠久的白葡萄品種之一：克羅埃西亞稱 <strong>Graševina</strong>，斯洛維尼亞與塞爾維亞稱 <strong>Laški Rizling</strong>，義大利稱 <strong>Riesling Italico</strong>，奧地利則直接稱 <strong>Welschriesling</strong>。DNA 分析已確認它與德國萊茵雷司令（Rhine Riesling）沒有任何親緣關係，僅因歷史上歐洲人習慣以「Riesling」泛稱優質白葡萄而共享了名字。</p>
+      </div>
+      <div class="producer-pairing">
+        <div class="info-card">
+          <h5>🏛️ 代表酒莊</h5>
+          <ul>
+            <li><strong>Laposa</strong>：巴達松尼現代化酒莊，以火山玄武岩台地的 Olaszrizling 聞名，是巴拉頓白酒的國際指標</li>
+            <li><strong>Villa Tolnay</strong>：巴達松尼有機酒莊，出產風格純淨、礦物感突出的 Olaszrizling</li>
+            <li><strong>Figula</strong>：家族經營，在 Balatonfüred-Csopak 石灰岩區產出清爽高酸的版本</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h5>🍽️ 餐搭建議</h5>
+          <p>清爽版本適合沙拉、烤魚、家禽料理；巴拉頓火山礦物版本則能搭配匈牙利燉雞（csirkepaprikás）等奶油辛香料理。</p>
+        </div>
+      </div>
     </div>`
   },
   {
@@ -143,27 +193,36 @@ export const lessonContent = [
       mapRegion: 'Badacsony',
       description: 'Badacsony 火山玄武岩台地——巴拉頓湖北岸，是 Olaszrizling 最精彩的表達地，礦石感與清新酸度並存',
     },
-  },,
+  },
 
   {
     title: '其他重要白葡萄品種',
     highlights: [
       { id: 1, icon: '🦁', title: 'Juhfark（羊尾巴）', content: '幾乎只在 Somló 火山產區種植，以高酸、強烈礦物感著稱，傳統上是新婚之夜的酒款' },
       { id: 2, icon: '🐦', title: 'Szürkebarát（灰修士）', content: '即 Pinot Gris，在巴拉頓湖北岸的火山土壤上產出匈牙利最好的 Pinot Gris 表現' },
-      { id: 3, icon: '🍑', title: 'Irsai Olivér', content: '帶強烈麝香葡萄（Muscat）香氣，早熟，廣泛種植，是許多人的入門匈牙利白酒' },
-      { id: 4, icon: '🌸', title: 'Cserszegi Fűszeres', content: '意為「香料感」，帶玫瑰水、荔枝和辛香料香氣，性價比極高的芳香品種' }
+      { id: 3, icon: '🍑', title: 'Irsai Olivér', content: '1930 年匈牙利育成的早熟芳香品種，帶強烈麝香葡萄（Muscat）香氣，是許多人的入門匈牙利白酒' },
+      { id: 4, icon: '🌸', title: 'Cserszegi Fűszeres', content: '1960 年育成，Irsai Olivér 與瓊瑤漿（Gewürztraminer）的雜交後代，意為「香料感」，帶玫瑰水與辛香料香氣' }
     ],
     content: `<div class="other-grapes">
-      <p>除了三大主力品種外，匈牙利還保存了數十種本土原生白葡萄品種，其中一些只在特定產區或單一山丘種植，非常珍稀。</p>
+      <p>除了三大主力品種外，匈牙利還保存了數十種本土原生白葡萄品種，其中一些只在特定產區或單一山丘種植，非常珍稀；另有一批 20 世紀育成的芳香雜交品種，成為大眾市場入門匈牙利白酒的重要角色。</p>
       <div class="special-grapes">
         <div class="grape-card">
           <h5>🦁 Juhfark — Somló 的靈魂</h5>
           <p>「Juhfark」意為「羊尾巴」，形容葡萄串的細長形狀。幾乎只在 Somló 火山山丘種植，一公頃不到 400 瓶的極低產量，高酸、高礦物感、需要多年陳年才能開放，是匈牙利葡萄酒中最獨特的白酒之一。</p>
           <div class="grape-note">傳統說法：Somló 的 Juhfark 是「婚禮之夜的酒」，能「保證生兒子」——當然是民間傳說，但足見其在文化上的特殊地位。</div>
+          <p class="producer-line"><strong>代表酒莊：</strong>Kreinbacher、Tornai（Somló 兩大主力酒莊，合計佔區內種植面積逾一成）、Spiegelberg（僅 2 公頃的自學釀酒師，其 Juhfark 曾獲國際酒評選為世界最佳白酒之一）。</p>
         </div>
         <div class="grape-card">
           <h5>🐦 Szürkebarát — 匈牙利的 Pinot Gris</h5>
-          <p>「Szürkebarát」意為「灰修士」，即 Pinot Gris。在巴拉頓湖北岸的玄武岩火山土上表現最佳，風格豐郁帶有煙燻感和礦物質，是匈牙利版本中最受精品酒客歡迎的白葡萄之一。</p>
+          <p>「Szürkebarát」意為「灰修士」，即 Pinot Gris。在巴拉頓湖北岸的玄武岩火山土上表現最佳，風格豐郁帶有煙燻感和礦物質，是匈牙利版本中最受精品酒客歡迎的白葡萄之一，常見於 Badacsony 與 Balaton-felvidék 產區的頂級酒莊產品線。</p>
+        </div>
+        <div class="grape-card">
+          <h5>🍑 Irsai Olivér — 芳香入門款</h5>
+          <p>由育種家 Pál Kocsis 於 1930 年在 Kecskemét 育成，是 Pozsonyi（Csaba 珍珠的親緣品種）與 Csaba 珍珠（Pearl of Csaba）的雜交後代。早熟、產量穩定，最初作為食用葡萄栽培，1980 年代後才被推廣為釀酒品種，其奔放的麝香葡萄（Muscat）香氣使其成為許多消費者認識匈牙利白酒的第一支酒款。</p>
+        </div>
+        <div class="grape-card">
+          <h5>🌸 Cserszegi Fűszeres — 玫瑰與辛香的雜交新品種</h5>
+          <p>1960 年由育種家 Karoly Bakonyi 培育，是 Irsai Olivér 與瓊瑤漿（Gewürztraminer）的雜交後代，因誕生地 Cserszegtomaj 村而得名，「fűszeres」意為「辛香的」。如今是全匈牙利種植面積第二大的白葡萄品種，玫瑰水、荔枝、辛香料的奔放香氣加上親民酒體，是性價比極高的芳香系選擇。</p>
         </div>
       </div>
       <div class="summary-box">
@@ -175,6 +234,8 @@ export const lessonContent = [
           <tr><td>Olaszrizling</td><td>Balaton, 全國</td><td>清爽、果香、易飲</td></tr>
           <tr><td>Juhfark</td><td>Somló</td><td>極高酸、礦物、稀少</td></tr>
           <tr><td>Szürkebarát</td><td>Badacsony</td><td>豐郁、煙燻、礦物感</td></tr>
+          <tr><td>Irsai Olivér</td><td>全國</td><td>麝香、早熟、入門款</td></tr>
+          <tr><td>Cserszegi Fűszeres</td><td>全國</td><td>玫瑰水、辛香、性價比高</td></tr>
         </table>
       </div>
     </div>`
@@ -196,31 +257,45 @@ export const lessonContent = [
         questions: [
         {
           type: 'single',
-          text: '為什麼 Furmint 特別適合釀造 Tokaji Aszú 貴腐甜酒？',
+          question: '為什麼 Furmint 特別適合釀造 Tokaji Aszú 貴腐甜酒？',
           options: ['A. 因為 Furmint 的糖分含量天然極高，不需要貴腐菌輔助', 'B. Furmint 的薄皮易被貴腐菌穿透，且高天然酸度與甜度形成完美平衡', 'C. Furmint 成熟非常早，可以在貴腐菌生長前就採收', 'D. Furmint 的果皮顏色特殊，能讓貴腐菌更容易識別'],
           correct: 1,
           explanation: 'Furmint 的兩大特性使其成為 Aszú 釀造的理想品種：①薄皮讓貴腐菌能輕易穿透，形成貴腐果漿（Aszú Berry）；②天然高酸度在糖分極高的情況下仍能保持清新平衡，避免甜酒變得膩口。這兩點缺一不可。'
         },
         {
           type: 'single',
-          text: '在托卡伊（Tokaj）的 Aszú 調配中，Hárslevelű 的主要貢獻是什麼？',
+          question: '在托卡伊（Tokaj）的 Aszú 調配中，Hárslevelű 的主要貢獻是什麼？',
           options: ['A. 提供高酸度和強烈的礦物感', 'B. 提供芬芳的花香和豐郁的圓潤感，與 Furmint 的骨架互補', 'C. 提高葡萄酒的深色色素', 'D. 降低釀酒成本，因為它比 Furmint 產量更高'],
           correct: 1,
           explanation: 'Hárslevelű 在 Tokaji Aszú 的調配中扮演「芬芳提升者」的角色：它的低酸度柔化了 Furmint 的尖銳感，豐郁的椴花和杏桃香氣增加了複雜度。這種互補調配是托卡伊傳統風格的精髓——結構（Furmint）+ 香氣（Hárslevelű）= 完整的甜酒體驗。'
         },
         {
           type: 'single',
-          text: 'Olaszrizling 和 Rhine Riesling（萊茵雷司令）是同一品種嗎？',
+          question: 'Olaszrizling 和 Rhine Riesling（萊茵雷司令）是同一品種嗎？',
           options: ['A. 是，只是匈牙利和德國的不同叫法', 'B. 否，Olaszrizling（Welschriesling）和 Rhine Riesling 是完全不同的兩個品種', 'C. 部分相同，是 Rhine Riesling 的一個突變克隆', 'D. 是相同品種，但在不同土壤上展現不同特性'],
           correct: 1,
-          explanation: 'Olaszrizling（即奧地利的 Welschriesling，字面意思是「外國/義大利雷司令」）和 Rhine Riesling（萊茵雷司令，德國最著名的白葡萄）是完全不同的品種，DNA 分析已確認無親緣關係。Olaszrizling 風格更圓潤易飲，酸度較低；Rhine Riesling 以極高酸度、礦物感和超長陳年潛力著稱。這個名字上的混淆常造成消費者誤解。'
+          explanation: 'Olaszrizling（即奧地利的 Welschriesling，字面意思是「外國/義大利雷司令」）和 Rhine Riesling（萊茵雷司令，德國最著名的白葡萄）是完全不同的品種，DNA 分析已確認無親緣關係。Olaszrizling 風格更圓潤易飲，酸度較低；Rhine Riesling 以極高酸度、礦物感和超長陳年潛力著稱。這個名字上的混淆常造成消費者誤解，它在克羅埃西亞叫 Graševina、斯洛維尼亞叫 Laški Rizling、義大利叫 Riesling Italico，全部同屬一個品種家族。'
         },
         {
           type: 'single',
-          text: 'Juhfark 白葡萄在匈牙利最大的特色是什麼？',
+          question: 'Juhfark 白葡萄在匈牙利最大的特色是什麼？',
           options: ['A. 全國種植面積最廣，性價比最高', 'B. 幾乎只在 Somló 火山山丘種植，以極高酸度和礦物感著稱，傳統上被視為婚禮紀念酒', 'C. 是托卡伊 Aszú 的第三主要品種', 'D. 帶有強烈的麝香葡萄（Muscat）香氣'],
           correct: 1,
           explanation: 'Juhfark 是匈牙利最獨特也最稀少的原生白葡萄之一，幾乎只在 Somló 火山山丘種植。其極高酸度、強烈礦物感和需要多年陳年的特性，使其成為收藏家趨之若鶩的珍品。傳統上稱之為「婚禮之夜的酒」，雖然是民間傳說，卻反映了匈牙利文化對此品種的特殊情感。'
+        },
+        {
+          type: 'single',
+          question: '關於 Furmint 的克隆（clone）多樣性，下列敘述何者正確？',
+          options: ['A. Furmint 只有單一品系，沒有明顯的體細胞突變', 'B. DNA 分析在托卡伊確認了 Furmint 存在多種同 DNA 但外觀不同的類型，包括黃色 Sárga 與粉紅色 Piros 等', 'C. Piros Furmint 其實是另一個完全不同的品種', 'D. Furmint 的所有克隆都只能用於甜酒釀造'],
+          correct: 1,
+          explanation: 'DNA 研究確認 Furmint 在托卡伊存在數種體細胞突變類型，包括主流的黃綠色 Sárga Furmint、果皮偏粉紅的 Piros Furmint、果串較鬆散的 Lazafürtű，以及表現不穩定的 Változó。這些類型 DNA 相同，但外觀性狀不同，反映了 Furmint 在托卡伊長達數百年的栽培演化歷史。'
+        },
+        {
+          type: 'single',
+          question: 'Cserszegi Fűszeres 這個品種是如何培育出來的？',
+          options: ['A. 野生原生品種，未經人工育種', 'B. 1960 年由 Karoly Bakonyi 培育，為 Irsai Olivér 與瓊瑤漿（Gewürztraminer）的雜交後代', 'C. 是 Furmint 的天然突變品種', 'D. 從法國引進後在匈牙利馴化的品種'],
+          correct: 1,
+          explanation: 'Cserszegi Fűszeres 是 1960 年由匈牙利育種家 Karoly Bakonyi 培育的雜交品種，親本為 Irsai Olivér（另一個匈牙利育成品種）與瓊瑤漿（Gewürztraminer）。品種名稱來自培育地 Cserszegtomaj 村，加上「fűszeres」（辛香的）描述其香氣特徵。如今已是全匈牙利種植面積第二大的白葡萄品種。'
         }
         ]
       }
