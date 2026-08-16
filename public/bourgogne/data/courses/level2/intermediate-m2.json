@@ -925,6 +925,26 @@
               "showLabels": true
             },
             {
+              "id": "corton-rouge-pernand",
+              "url": "/geojson/Cote-de-Beaune/01Pernand-Vergelesses/Grand Cru/AOC Corton Grand Cru(Pernand).geojson",
+              "displayName": "Corton (Rouge)",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "corton-rouge-ladoix",
+              "url": "/geojson/Cote-de-Beaune/02Ladoix/Grand Cru/AOC Corton Grand Cru(Ladoix).geojson",
+              "displayName": "Corton (Rouge)",
+              "fillColor": "#8B0000",
+              "fillOpacity": 0.8,
+              "lineColor": "#5A0000",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
               "id": "corton-charlemagne",
               "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson",
               "displayName": "Corton-Charlemagne",
@@ -935,6 +955,26 @@
               "showLabels": true
             },
             {
+              "id": "corton-charlemagne-pernand",
+              "url": "/geojson/Cote-de-Beaune/01Pernand-Vergelesses/Grand Cru/AOC Corton-Charlemagne Grand Cru(Pernand).geojson",
+              "displayName": "Corton-Charlemagne",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
+              "id": "corton-charlemagne-ladoix",
+              "url": "/geojson/Cote-de-Beaune/02Ladoix/Grand Cru/AOC Corton-Charlemagne Grand Cru(Ladoix).geojson",
+              "displayName": "Corton-Charlemagne",
+              "fillColor": "#FFD700",
+              "fillOpacity": 0.8,
+              "lineColor": "#8B7500",
+              "lineWidth": 2,
+              "showLabels": false
+            },
+            {
               "id": "charlemagne",
               "url": "/geojson/Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Charlemagne Grand Cru (Aloxe).geojson",
               "displayName": "Charlemagne",
@@ -943,6 +983,16 @@
               "lineColor": "#9B870C",
               "lineWidth": 2,
               "showLabels": true
+            },
+            {
+              "id": "charlemagne-pernand",
+              "url": "/geojson/Cote-de-Beaune/01Pernand-Vergelesses/Grand Cru/AOC Charlemagne Grand Cru(Pernand).geojson",
+              "displayName": "Charlemagne",
+              "fillColor": "#F0E68C",
+              "fillOpacity": 0.8,
+              "lineColor": "#9B870C",
+              "lineWidth": 2,
+              "showLabels": false
             }
           ]
         },
