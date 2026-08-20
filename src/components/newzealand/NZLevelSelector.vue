@@ -49,7 +49,7 @@ import {
   CourseHomeLayout, RegionHero, ProgressStrip, QuickNavGrid,
   LevelTrack, ProgressModal, AchievementModal, getTheme
 } from '../shared/courseHome/index.js'
-import { authActions } from '../../stores/authStore.js'
+import { authActions, authState } from '../../stores/authStore.js'
 
 const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
 
@@ -94,7 +94,10 @@ function levelProgress(n) {
 function isLevelUnlocked(n) {
   if (n === 1) return true
   if (authActions.isAdmin && authActions.isAdmin()) return true
-  try { if (localStorage.getItem(`nz-wine-level${n - 1}-passed`) === 'true') return true } catch {}
+  try {
+    const userId = authState.user?.id
+    if (userId && localStorage.getItem(`nz-wine-level${n - 1}-passed:${userId}`) === 'true') return true
+  } catch {}
   return levelProgress(n - 1) >= 100
 }
 

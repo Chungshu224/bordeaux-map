@@ -1,7 +1,12 @@
 // 成就系統管理
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
 import { supabase } from '../lib/supabaseClient.js'
 import { authState } from './authStore.js'
+
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的成就紀錄
+function achievementsStorageKey(userId) {
+  return `bordeaux-wine-academy-achievements:${userId}`
+}
 
 // 成就定義
 export const achievementDefinitions = {
@@ -405,6 +410,13 @@ export const achievementState = reactive({
   displayQueue: []     // 待顯示的成就通知隊列
 })
 
+// 初始狀態快照：切換帳號（同瀏覽器登出換登入）時用來重置，避免殘留上一位使用者的資料
+const DEFAULT_ACHIEVEMENT_SNAPSHOT = JSON.parse(JSON.stringify({
+  unlockedAchievements: achievementState.unlockedAchievements,
+  totalPoints: achievementState.totalPoints,
+  userStats: achievementState.userStats
+}))
+
 // 成就系統配置
 export const achievementConfig = {
   rarityColors: {
@@ -528,11 +540,25 @@ export class AchievementManager {
     this._initialized = true
     this.loadAchievements()
     this.startPeriodicCheck()
+
+    // 登入狀態改變（含同瀏覽器切換帳號）時，重新載入該帳號自己的成就
+    watch(() => authState.user?.id, (userId, prevUserId) => {
+      if (userId !== prevUserId) this.loadAchievements()
+    })
   }
 
-  // 載入已解鎖的成就
-  loadAchievements() {
-    const saved = localStorage.getItem('bordeaux-wine-academy-achievements')
+  // 載入已解鎖的成就（依目前登入帳號區分，避免同瀏覽器不同帳號互相看到彼此的紀錄）
+  async loadAchievements() {
+    const userId = authState.user?.id
+
+    // 先重置為初始狀態，避免殘留前一位使用者的資料
+    achievementState.unlockedAchievements = [...DEFAULT_ACHIEVEMENT_SNAPSHOT.unlockedAchievements]
+    achievementState.totalPoints = DEFAULT_ACHIEVEMENT_SNAPSHOT.totalPoints
+    achievementState.userStats = { ...DEFAULT_ACHIEVEMENT_SNAPSHOT.userStats }
+
+    if (!userId) return
+
+    const saved = localStorage.getItem(achievementsStorageKey(userId))
     if (saved) {
       try {
         const data = JSON.parse(saved)
@@ -543,20 +569,40 @@ export class AchievementManager {
         console.error('Failed to load achievements:', error)
       }
     }
+
+    // 雲端資料優先（跨裝置的權威來源）
+    if (supabase) {
+      try {
+        const { data, error } = await supabase
+          .from('profiles')
+          .select('achievements_json')
+          .eq('id', userId)
+          .single()
+        const cloud = data?.achievements_json
+        if (!error && cloud) {
+          achievementState.unlockedAchievements = cloud.unlocked || achievementState.unlockedAchievements
+          achievementState.totalPoints = cloud.totalPoints ?? achievementState.totalPoints
+        }
+      } catch (error) {
+        console.warn('[achievements] 雲端載入失敗:', error.message)
+      }
+    }
   }
 
   // 儲存成就資料
   saveAchievements() {
+    const userId = authState.user?.id
+    if (!userId) return
+
     const data = {
       unlocked: achievementState.unlockedAchievements,
       totalPoints: achievementState.totalPoints,
       userStats: achievementState.userStats
     }
-    localStorage.setItem('bordeaux-wine-academy-achievements', JSON.stringify(data))
+    localStorage.setItem(achievementsStorageKey(userId), JSON.stringify(data))
 
     // 同步到 Supabase profiles.achievements_json
-    const userId = authState.user?.id
-    if (supabase && userId) {
+    if (supabase) {
       supabase.from('profiles').update({
         achievements_json: {
           unlocked:    achievementState.unlockedAchievements,

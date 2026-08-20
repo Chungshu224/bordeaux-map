@@ -1,5 +1,11 @@
 // 澳洲葡萄酒成就系統
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
+import { authState } from './authStore.js'
+
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的成就紀錄
+function australiaAchievementsStorageKey(userId) {
+  return `australia-wine-academy-achievements:${userId}`
+}
 
 // ── 成就定義 ──────────────────────────────────────────────────
 export const australiaAchievementDefinitions = {
@@ -245,6 +251,14 @@ export const australiaAchievementState = reactive({
   }
 })
 
+// 初始狀態快照，切換帳號時用來重置，避免殘留前一位使用者的資料
+const DEFAULT_AUSTRALIA_ACHIEVEMENT_SNAPSHOT = JSON.parse(JSON.stringify({
+  unlockedAchievements: australiaAchievementState.unlockedAchievements,
+  totalPoints: australiaAchievementState.totalPoints,
+  newUnlocks: australiaAchievementState.newUnlocks,
+  userStats: australiaAchievementState.userStats
+}))
+
 // ── 配置 ──────────────────────────────────────────────────────
 export const australiaAchievementConfig = {
   rarityColors: {
@@ -298,11 +312,20 @@ export class AustraliaAchievementManager {
     if (this._initialized) return
     this._initialized = true
     this._load()
+    // 切換帳號（同瀏覽器登出換登入）時重新載入該帳號自己的成就
+    watch(() => authState.user?.id, (userId, prevUserId) => {
+      if (userId !== prevUserId) this._load()
+    })
   }
 
   _load() {
+    const userId = authState.user?.id
+    australiaAchievementState.unlockedAchievements = [...DEFAULT_AUSTRALIA_ACHIEVEMENT_SNAPSHOT.unlockedAchievements]
+    australiaAchievementState.totalPoints = DEFAULT_AUSTRALIA_ACHIEVEMENT_SNAPSHOT.totalPoints
+    australiaAchievementState.userStats = { ...DEFAULT_AUSTRALIA_ACHIEVEMENT_SNAPSHOT.userStats }
+    if (!userId) return
     try {
-      const raw = localStorage.getItem('australia-wine-academy-achievements')
+      const raw = localStorage.getItem(australiaAchievementsStorageKey(userId))
       if (!raw) return
       const data = JSON.parse(raw)
       australiaAchievementState.unlockedAchievements = data.unlocked    || []
@@ -315,8 +338,10 @@ export class AustraliaAchievementManager {
   }
 
   _save() {
+    const userId = authState.user?.id
+    if (!userId) return
     try {
-      localStorage.setItem('australia-wine-academy-achievements', JSON.stringify({
+      localStorage.setItem(australiaAchievementsStorageKey(userId), JSON.stringify({
         unlocked:    australiaAchievementState.unlockedAchievements,
         totalPoints: australiaAchievementState.totalPoints,
         userStats:   australiaAchievementState.userStats

@@ -603,28 +603,31 @@ export const progressComputed = {
   })
 }
 
-// ===== 自動保存到 localStorage =====
-if (typeof window !== 'undefined') {
-  // 從 localStorage 載入進度
-  const savedProgress = localStorage.getItem('bordeaux-progress')
-  if (savedProgress) {
-    try {
-      const data = JSON.parse(savedProgress)
-      progressActions.importProgress(data)
-      // 將已完成的課程同步回 learningStore
-      Object.entries(progressState.lessonProgress).forEach(([lessonId, p]) => {
-        const done = p.completedSlides instanceof Set ? p.completedSlides.size : (p.completedSlides?.length ?? 0)
-        if (p.totalSlides > 0 && done >= p.totalSlides) {
-          learningActions.completeLesson(lessonId)
-        }
-      })
-      console.log('✅ 已載入保存的學習進度')
-    } catch (e) {
-      console.error('❌ 載入進度失敗:', e)
-    }
-  }
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的學習進度
+function progressStorageKey(userId) {
+  return `bordeaux-progress:${userId}`
+}
 
-  // 監聽進度變化並自動保存
+// 重置為初始狀態，避免殘留前一位使用者（同瀏覽器切換帳號）的資料
+function resetProgressState() {
+  progressState.lessonProgress = {}
+  progressState.studyTime = {}
+  progressState.quizHistory = {}
+  progressState.sessions = []
+  progressState.currentSession = null
+  progressState.dailyStats = {}
+  progressState.milestones = []
+  progressState.learningPatterns = {
+    preferredTime: null,
+    averageSessionLength: 0,
+    completionRate: 0,
+    quizAccuracy: 0
+  }
+  learningActions.disableTestMode()
+}
+
+// ===== 自動保存到 localStorage（僅在已登入時，依帳號 id 存放）=====
+if (typeof window !== 'undefined') {
   watch(
     () => ({
       lessonProgress: { ...progressState.lessonProgress },
@@ -634,6 +637,9 @@ if (typeof window !== 'undefined') {
       dailyStats: { ...progressState.dailyStats }
     }),
     (state) => {
+      const userId = authState.user?.id
+      if (!userId) return // 未登入不寫入 localStorage，避免污染下一位使用者
+
       // 將 Set 轉換為數組以便序列化
       const serializedState = {
         ...state,
@@ -642,8 +648,8 @@ if (typeof window !== 'undefined') {
             lessonId,
             {
               ...progress,
-              completedSlides: progress.completedSlides instanceof Set 
-                ? Array.from(progress.completedSlides) 
+              completedSlides: progress.completedSlides instanceof Set
+                ? Array.from(progress.completedSlides)
                 : progress.completedSlides
             }
           ])
@@ -653,46 +659,52 @@ if (typeof window !== 'undefined') {
             date,
             {
               ...stats,
-              lessonsStudied: stats.lessonsStudied instanceof Set 
-                ? Array.from(stats.lessonsStudied) 
+              lessonsStudied: stats.lessonsStudied instanceof Set
+                ? Array.from(stats.lessonsStudied)
                 : stats.lessonsStudied
             }
           ])
         )
       }
-      localStorage.setItem('bordeaux-progress', JSON.stringify({
+      localStorage.setItem(progressStorageKey(userId), JSON.stringify({
         ...serializedState,
         savedAt: new Date().toISOString()
       }))
 
-      // ── 雲端同步（已登入時，防抖 5 秒） ──
-      if (authState.user) {
-        clearTimeout(cloudSaveTimer)
-        cloudSaveTimer = setTimeout(() => {
-          saveProgressToSupabase(
-            authState.user.id,
-            progressActions.exportProgress()
-          )
-        }, 5000)
-      }
+      // ── 雲端同步（防抖 5 秒） ──
+      clearTimeout(cloudSaveTimer)
+      cloudSaveTimer = setTimeout(() => {
+        saveProgressToSupabase(userId, progressActions.exportProgress())
+      }, 5000)
     },
     { deep: true }
   )
 }
 
-// ===== 監聽登入狀態，登入後從雲端載入進度 =====
+// ===== 監聽登入狀態，登入/切換帳號後從該帳號自己的本地快取＋雲端載入進度 =====
 let cloudSaveTimer = null
 
 watch(
   () => authState.user,
   async (user, prevUser) => {
     if (user && !prevUser) {
-      // 剛登入：比較本地與雲端的 savedAt，取較新的
+      // 剛登入：先重置，避免殘留前一位使用者的資料
+      resetProgressState()
+
+      const localRaw = localStorage.getItem(progressStorageKey(user.id))
+      if (localRaw) {
+        try {
+          progressActions.importProgress(JSON.parse(localRaw))
+        } catch (e) {
+          console.error('❌ 載入本地進度失敗:', e)
+        }
+      }
+
+      // 比較本地與雲端的 savedAt，取較新的
       const cloudProgress = await loadProgressFromSupabase(user.id)
 
       if (cloudProgress) {
         const cloudTime = cloudProgress.savedAt ? new Date(cloudProgress.savedAt).getTime() : 0
-        const localRaw = localStorage.getItem('bordeaux-progress')
         const localTime = (() => {
           try {
             const d = JSON.parse(localRaw)
@@ -703,25 +715,31 @@ watch(
         if (cloudTime >= localTime) {
           progressActions.importProgress(cloudProgress)
           console.log('☁️ 已從雲端載入學習進度（雲端較新）')
-        } else {
+        } else if (localRaw) {
           // 本地較新 → 上傳到雲端覆蓋
           console.log('☁️ 本地進度較新，將上傳至雲端')
           await saveProgressToSupabase(user.id, progressActions.exportProgress())
         }
-      } else {
-        // 雲端無資料（新帳號） → 把現有本地進度上傳
-        const localRaw = localStorage.getItem('bordeaux-progress')
-        if (localRaw) {
-          console.log('☁️ 新帳號，上傳現有本地進度至雲端')
-          await saveProgressToSupabase(user.id, progressActions.exportProgress())
-        }
+      } else if (localRaw) {
+        // 雲端無資料，但本機已有這個帳號自己的進度 → 上傳
+        console.log('☁️ 雲端尚無資料，上傳本帳號的本地進度')
+        await saveProgressToSupabase(user.id, progressActions.exportProgress())
       }
+
+      // 將已完成的課程同步回 learningStore
+      Object.entries(progressState.lessonProgress).forEach(([lessonId, p]) => {
+        const done = p.completedSlides instanceof Set ? p.completedSlides.size : (p.completedSlides?.length ?? 0)
+        if (p.totalSlides > 0 && done >= p.totalSlides) {
+          learningActions.completeLesson(lessonId)
+        }
+      })
     }
     if (!user && prevUser) {
-      // 登出：清除雲端同步 timer（繼續使用 localStorage）
+      // 登出：清除雲端同步 timer，並清空畫面上的進度顯示
       clearTimeout(cloudSaveTimer)
       cloudSaveTimer = null
-      console.log('🔒 已登出，改用本地進度')
+      resetProgressState()
+      console.log('🔒 已登出，清除本地顯示的學習進度')
     }
   }
 )

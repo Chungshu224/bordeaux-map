@@ -1,5 +1,6 @@
 // 加州葡萄酒學習系統狀態管理
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
+import { authState } from './authStore.js'
 
 // 加州學習進度狀態
 export const californiaLearningState = reactive({
@@ -168,18 +169,26 @@ export const californiaLearningLevels = {
   }
 }
 
-// ── localStorage 進度持久化 ────────────────────────────────────────
+// ── localStorage 進度持久化（依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的進度）──
 const CA_STORAGE_KEY = 'california-progress'
 
+function californiaStorageKey(userId) {
+  return `${CA_STORAGE_KEY}:${userId}`
+}
+
 function saveToStorage() {
+  const userId = authState.user?.id
+  if (!userId) return
   try {
-    localStorage.setItem(CA_STORAGE_KEY, JSON.stringify(californiaLearningState.completedLessons))
+    localStorage.setItem(californiaStorageKey(userId), JSON.stringify(californiaLearningState.completedLessons))
   } catch (e) { console.warn('[california] save error', e) }
 }
 
 function loadFromStorage() {
+  const userId = authState.user?.id
+  if (!userId) return
   try {
-    const raw = localStorage.getItem(CA_STORAGE_KEY)
+    const raw = localStorage.getItem(californiaStorageKey(userId))
     if (!raw) return
     const lessons = JSON.parse(raw)
     if (!Array.isArray(lessons)) return
@@ -200,8 +209,6 @@ function loadFromStorage() {
   } catch (e) { console.warn('[california] load error', e) }
 }
 
-loadFromStorage()
-
 // 供 CaliforniaLearningSystem 在 Supabase 同步後呼叫
 export function californiaReloadFromStorage() {
   californiaLearningState.completedLessons = []
@@ -210,6 +217,11 @@ export function californiaReloadFromStorage() {
   })
   loadFromStorage()
 }
+
+// 登入／切換帳號時重新載入該帳號自己的進度
+watch(() => authState.user?.id, (userId, prevUserId) => {
+  if (userId !== prevUserId) californiaReloadFromStorage()
+})
 
 // 加州學習操作
 export const californiaLearningActions = {

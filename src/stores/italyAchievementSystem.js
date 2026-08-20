@@ -1,5 +1,11 @@
 // 義大利成就系統
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
+import { authState } from './authStore.js'
+
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的成就紀錄
+function italyAchievementsStorageKey(userId) {
+  return `italy-wine-academy-achievements:${userId}`
+}
 
 // ── 成就定義 ──────────────────────────────────────────────────
 export const italyAchievementDefinitions = {
@@ -172,6 +178,14 @@ export const italyAchievementState = reactive({
   }
 })
 
+// 初始狀態快照，切換帳號時用來重置，避免殘留前一位使用者的資料
+const DEFAULT_ITALY_ACHIEVEMENT_SNAPSHOT = JSON.parse(JSON.stringify({
+  unlockedAchievements: italyAchievementState.unlockedAchievements,
+  totalPoints: italyAchievementState.totalPoints,
+  newUnlocks: italyAchievementState.newUnlocks,
+  userStats: italyAchievementState.userStats
+}))
+
 // ── 配置 ──────────────────────────────────────────────────────
 export const italyAchievementConfig = {
   rarityColors: {
@@ -225,11 +239,21 @@ export class ItalyAchievementManager {
     if (this._initialized) return
     this._initialized = true
     this._load()
+    // 切換帳號（同瀏覽器登出換登入）時重新載入該帳號自己的成就
+    watch(() => authState.user?.id, (userId, prevUserId) => {
+      if (userId !== prevUserId) this._load()
+    })
   }
 
   _load() {
+    const userId = authState.user?.id
+    // 先重置為初始狀態，避免殘留前一位使用者的資料
+    italyAchievementState.unlockedAchievements = [...DEFAULT_ITALY_ACHIEVEMENT_SNAPSHOT.unlockedAchievements]
+    italyAchievementState.totalPoints = DEFAULT_ITALY_ACHIEVEMENT_SNAPSHOT.totalPoints
+    italyAchievementState.userStats = { ...DEFAULT_ITALY_ACHIEVEMENT_SNAPSHOT.userStats }
+    if (!userId) return
     try {
-      const raw = localStorage.getItem('italy-wine-academy-achievements')
+      const raw = localStorage.getItem(italyAchievementsStorageKey(userId))
       if (!raw) return
       const data = JSON.parse(raw)
       italyAchievementState.unlockedAchievements = data.unlocked || []
@@ -239,8 +263,10 @@ export class ItalyAchievementManager {
   }
 
   _save() {
+    const userId = authState.user?.id
+    if (!userId) return
     try {
-      localStorage.setItem('italy-wine-academy-achievements', JSON.stringify({
+      localStorage.setItem(italyAchievementsStorageKey(userId), JSON.stringify({
         unlocked:    italyAchievementState.unlockedAchievements,
         totalPoints: italyAchievementState.totalPoints,
         userStats:   italyAchievementState.userStats

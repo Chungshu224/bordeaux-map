@@ -255,12 +255,20 @@ export const courseLevels = {
   },
 }
 
-// ─── 進度儲存工具（localStorage）────────────────────────────────
+// ─── 進度儲存工具（localStorage，依帳號 id 區分）────────────────────
+import { authState } from '../../../stores/authStore.js'
+
 const STORAGE_PREFIX = 'portugal_course_progress_'
+
+function progressKey(levelKey) {
+  const userId = authState.user?.id
+  return userId ? `${STORAGE_PREFIX}${levelKey}:${userId}` : null
+}
 
 export function getUserProgress(levelKey) {
   try {
-    const raw = localStorage.getItem(STORAGE_PREFIX + levelKey)
+    const key = progressKey(levelKey)
+    const raw = key ? localStorage.getItem(key) : null
     if (raw) return JSON.parse(raw)
   } catch {/* ignore */}
   return { completedLessons: [], lastAccessedLesson: null }
@@ -268,12 +276,14 @@ export function getUserProgress(levelKey) {
 
 export function saveProgress(levelKey, lessonId) {
   try {
+    const key = progressKey(levelKey)
+    if (!key) return
     const prog = getUserProgress(levelKey)
     if (!prog.completedLessons.includes(lessonId)) {
       prog.completedLessons.push(lessonId)
     }
     prog.lastAccessedLesson = lessonId
-    localStorage.setItem(STORAGE_PREFIX + levelKey, JSON.stringify(prog))
+    localStorage.setItem(key, JSON.stringify(prog))
   } catch {/* ignore */}
 }
 

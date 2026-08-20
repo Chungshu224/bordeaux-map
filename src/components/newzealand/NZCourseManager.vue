@@ -114,9 +114,16 @@ const loadCourseStructure = async () => {
   }
 }
 
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的課程進度
+const nzProgressKey = () => {
+  const userId = authState.user?.id
+  return userId ? `nz-wine-progress:${userId}` : null
+}
+
 const loadProgress = () => {
   try {
-    const saved = localStorage.getItem('nz-wine-progress')
+    const key = nzProgressKey()
+    const saved = key ? localStorage.getItem(key) : null
     if (saved) completedLessons.value = JSON.parse(saved)
   } catch (e) {
     completedLessons.value = []
@@ -136,7 +143,10 @@ const handleSelectLessonDirect = ({ lesson }) => {
 const handleMarkComplete = (lessonId) => {
   if (!completedLessons.value.includes(lessonId)) {
     completedLessons.value.push(lessonId)
-    try { localStorage.setItem('nz-wine-progress', JSON.stringify(completedLessons.value)) } catch (e) {}
+    try {
+      const key = nzProgressKey()
+      if (key) localStorage.setItem(key, JSON.stringify(completedLessons.value))
+    } catch (e) {}
     const userId = authState.user?.id
     if (userId) saveNZLesson(userId, lessonId)
 
@@ -212,8 +222,8 @@ const updateSlideInfo = (info) => {
 
 onMounted(async () => {
   await loadCourseStructure()
-  loadProgress()
   await authInitPromise
+  loadProgress()
   const userId = authState.user?.id
   if (userId) {
     const merged = await loadAndMergeNZProgress(userId)

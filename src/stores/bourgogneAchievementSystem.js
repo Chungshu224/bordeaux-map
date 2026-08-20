@@ -1,5 +1,11 @@
 // 布根地成就系統
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
+import { authState } from './authStore.js'
+
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的成就紀錄
+function burgAchievementsStorageKey(userId) {
+  return `burgundy-wine-academy-achievements:${userId}`
+}
 
 // ── 成就定義 ──────────────────────────────────────────────────
 export const burgAchievementDefinitions = {
@@ -240,6 +246,14 @@ export const burgAchievementState = reactive({
   }
 })
 
+// 初始狀態快照，切換帳號時用來重置，避免殘留前一位使用者的資料
+const DEFAULT_BURG_ACHIEVEMENT_SNAPSHOT = JSON.parse(JSON.stringify({
+  unlockedAchievements: burgAchievementState.unlockedAchievements,
+  totalPoints: burgAchievementState.totalPoints,
+  newUnlocks: burgAchievementState.newUnlocks,
+  userStats: burgAchievementState.userStats
+}))
+
 // ── 配置 ──────────────────────────────────────────────────────
 export const burgAchievementConfig = {
   rarityColors: {
@@ -299,11 +313,20 @@ export class BurgAchievementManager {
     if (this._initialized) return
     this._initialized = true
     this._load()
+    // 切換帳號（同瀏覽器登出換登入）時重新載入該帳號自己的成就
+    watch(() => authState.user?.id, (userId, prevUserId) => {
+      if (userId !== prevUserId) this._load()
+    })
   }
 
   _load() {
+    const userId = authState.user?.id
+    burgAchievementState.unlockedAchievements = [...DEFAULT_BURG_ACHIEVEMENT_SNAPSHOT.unlockedAchievements]
+    burgAchievementState.totalPoints = DEFAULT_BURG_ACHIEVEMENT_SNAPSHOT.totalPoints
+    burgAchievementState.userStats = { ...DEFAULT_BURG_ACHIEVEMENT_SNAPSHOT.userStats }
+    if (!userId) return
     try {
-      const raw = localStorage.getItem('burgundy-wine-academy-achievements')
+      const raw = localStorage.getItem(burgAchievementsStorageKey(userId))
       if (!raw) return
       const data = JSON.parse(raw)
       burgAchievementState.unlockedAchievements = data.unlocked || []
@@ -313,8 +336,10 @@ export class BurgAchievementManager {
   }
 
   _save() {
+    const userId = authState.user?.id
+    if (!userId) return
     try {
-      localStorage.setItem('burgundy-wine-academy-achievements', JSON.stringify({
+      localStorage.setItem(burgAchievementsStorageKey(userId), JSON.stringify({
         unlocked:   burgAchievementState.unlockedAchievements,
         totalPoints: burgAchievementState.totalPoints,
         userStats:   burgAchievementState.userStats

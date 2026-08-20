@@ -1,5 +1,11 @@
 // 加州葡萄酒成就系統
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
+import { authState } from './authStore.js'
+
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的成就紀錄
+function californiaAchievementsStorageKey(userId) {
+  return `california-wine-academy-achievements:${userId}`
+}
 
 // ── 成就定義 ──────────────────────────────────────────────────
 export const californiaAchievementDefinitions = {
@@ -226,6 +232,14 @@ export const californiaAchievementState = reactive({
   }
 })
 
+// 初始狀態快照，切換帳號時用來重置，避免殘留前一位使用者的資料
+const DEFAULT_CALIFORNIA_ACHIEVEMENT_SNAPSHOT = JSON.parse(JSON.stringify({
+  unlockedAchievements: californiaAchievementState.unlockedAchievements,
+  totalPoints: californiaAchievementState.totalPoints,
+  newUnlocks: californiaAchievementState.newUnlocks,
+  userStats: californiaAchievementState.userStats
+}))
+
 // ── 配置 ──────────────────────────────────────────────────────
 export const californiaAchievementConfig = {
   rarityColors: {
@@ -279,11 +293,20 @@ export class CaliforniaAchievementManager {
     if (this._initialized) return
     this._initialized = true
     this._load()
+    // 切換帳號（同瀏覽器登出換登入）時重新載入該帳號自己的成就
+    watch(() => authState.user?.id, (userId, prevUserId) => {
+      if (userId !== prevUserId) this._load()
+    })
   }
 
   _load() {
+    const userId = authState.user?.id
+    californiaAchievementState.unlockedAchievements = [...DEFAULT_CALIFORNIA_ACHIEVEMENT_SNAPSHOT.unlockedAchievements]
+    californiaAchievementState.totalPoints = DEFAULT_CALIFORNIA_ACHIEVEMENT_SNAPSHOT.totalPoints
+    californiaAchievementState.userStats = { ...DEFAULT_CALIFORNIA_ACHIEVEMENT_SNAPSHOT.userStats }
+    if (!userId) return
     try {
-      const raw = localStorage.getItem('california-wine-academy-achievements')
+      const raw = localStorage.getItem(californiaAchievementsStorageKey(userId))
       if (!raw) return
       const data = JSON.parse(raw)
       californiaAchievementState.unlockedAchievements = data.unlocked    || []
@@ -296,8 +319,10 @@ export class CaliforniaAchievementManager {
   }
 
   _save() {
+    const userId = authState.user?.id
+    if (!userId) return
     try {
-      localStorage.setItem('california-wine-academy-achievements', JSON.stringify({
+      localStorage.setItem(californiaAchievementsStorageKey(userId), JSON.stringify({
         unlocked:    californiaAchievementState.unlockedAchievements,
         totalPoints: californiaAchievementState.totalPoints,
         userStats:   californiaAchievementState.userStats

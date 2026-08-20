@@ -1,6 +1,14 @@
 /**
  * 德國葡萄酒課程結構
  */
+import { authState } from '../../../stores/authStore.js'
+
+// 依帳號 id 區分 localStorage key，避免同一瀏覽器不同帳號互相看到彼此的課程進度
+function progressKey(levelKey) {
+  const userId = authState.user?.id
+  return userId ? `germany-${levelKey}-progress:${userId}` : null
+}
+
 export const courseLevels = {
   level1: {
     id: 'level1',
@@ -162,15 +170,18 @@ export const courseLevels = {
 
 // ── Progress helpers ──────────────────────────────────────────────────
 export function getUserProgress(levelKey) {
-  const saved = localStorage.getItem(`germany-${levelKey}-progress`)
+  const key = progressKey(levelKey)
+  const saved = key ? localStorage.getItem(key) : null
   return saved ? JSON.parse(saved) : { completedLessons: [] }
 }
 
 export function saveProgress(levelKey, lessonId) {
+  const key = progressKey(levelKey)
+  if (!key) return
   const progress = getUserProgress(levelKey)
   if (!progress.completedLessons.includes(lessonId)) {
     progress.completedLessons.push(lessonId)
-    localStorage.setItem(`germany-${levelKey}-progress`, JSON.stringify(progress))
+    localStorage.setItem(key, JSON.stringify(progress))
   }
 }
 

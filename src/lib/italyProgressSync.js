@@ -58,12 +58,13 @@ export async function loadAndMergeItalyProgress(userId) {
   let didUpdate = false
   for (const [levelKey, remote] of Object.entries(byLevel)) {
     if (remote.length === 0) continue
-    const saved = localStorage.getItem(`italy-${levelKey}-progress`)
+    const key = `italy-${levelKey}-progress:${userId}`
+    const saved = localStorage.getItem(key)
     const local = saved ? JSON.parse(saved) : { completedLessons: [] }
     const merged = Array.from(new Set([...(local.completedLessons || []), ...remote]))
     if (merged.length !== (local.completedLessons || []).length) {
       localStorage.setItem(
-        `italy-${levelKey}-progress`,
+        key,
         JSON.stringify({ ...local, completedLessons: merged })
       )
       didUpdate = true

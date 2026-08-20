@@ -1,5 +1,6 @@
 // 匈牙利葡萄酒學習系統狀態管理
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
+import { authState } from './authStore.js'
 
 // 匈牙利學習進度狀態
 export const hungaryLearningState = reactive({
@@ -134,12 +135,18 @@ export const hungaryLearningLevels = {
   }
 }
 
-// ── localStorage 進度持久化 ───────────────────────────────────
+// ── localStorage 進度持久化（依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的進度）──
 const HUNGARY_PROGRESS_KEY = 'hungary-wine-academy-progress'
 
+function progressStorageKey(userId) {
+  return `${HUNGARY_PROGRESS_KEY}:${userId}`
+}
+
 function saveProgressToStorage() {
+  const userId = authState.user?.id
+  if (!userId) return
   try {
-    localStorage.setItem(HUNGARY_PROGRESS_KEY, JSON.stringify({
+    localStorage.setItem(progressStorageKey(userId), JSON.stringify({
       completedLessons: hungaryLearningState.completedLessons,
       userProgress: hungaryLearningState.userProgress
     }))
@@ -147,8 +154,10 @@ function saveProgressToStorage() {
 }
 
 function loadProgressFromStorage() {
+  const userId = authState.user?.id
+  if (!userId) return
   try {
-    const raw = localStorage.getItem(HUNGARY_PROGRESS_KEY)
+    const raw = localStorage.getItem(progressStorageKey(userId))
     if (!raw) return
     const data = JSON.parse(raw)
     if (Array.isArray(data.completedLessons)) {
@@ -164,9 +173,6 @@ function loadProgressFromStorage() {
   } catch (e) { console.warn('[hungary-learn] load error', e) }
 }
 
-// 模組載入時立即恢復進度
-loadProgressFromStorage()
-
 // 供 HungaryLearningSystem 在 Supabase 同步後呼叫，重新載入 store 狀態
 export function hungaryReloadFromStorage() {
   hungaryLearningState.completedLessons = []
@@ -175,6 +181,11 @@ export function hungaryReloadFromStorage() {
   })
   loadProgressFromStorage()
 }
+
+// 登入／切換帳號時重新載入該帳號自己的進度，避免殘留前一位使用者的資料
+watch(() => authState.user?.id, (userId, prevUserId) => {
+  if (userId !== prevUserId) hungaryReloadFromStorage()
+})
 
 // 匈牙利學習操作
 export const hungaryLearningActions = {

@@ -48,6 +48,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { authState } from '../../stores/authStore.js'
 
 const props = defineProps({
   config: {
@@ -149,10 +150,12 @@ function saveResult() {
     passed: passed.value
   }
   try {
-    const key = props.config.storageKey || 'nz-wine-level1-review'
+    const userId = authState.user?.id
+    if (!userId) return
+    const key = `${props.config.storageKey || 'nz-wine-level1-review'}:${userId}`
     localStorage.setItem(key, JSON.stringify(record))
     if (passed.value) {
-      const passedKey = props.config.passedKey || 'nz-wine-level1-passed'
+      const passedKey = `${props.config.passedKey || 'nz-wine-level1-passed'}:${userId}`
       localStorage.setItem(passedKey, 'true')
     }
   } catch (e) {

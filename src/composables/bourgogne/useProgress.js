@@ -2,6 +2,13 @@
  * 課程進度管理 Composable
  * 統一管理所有 localStorage 操作，避免代碼重複
  */
+import { authState } from '../../stores/authStore.js'
+
+// 依帳號 id 區分課程進度／證書 key，避免同一瀏覽器不同帳號互相看到彼此的資料
+function userScoped(baseKey) {
+  const userId = authState.user?.id
+  return userId ? `${baseKey}:${userId}` : null
+}
 
 export function useProgress() {
   /**
@@ -10,8 +17,8 @@ export function useProgress() {
    * @returns {Object} 進度物件 { moduleId: { completed: boolean, quizScore: number, completedAt: string } }
    */
   const getLevelProgress = (levelId) => {
-    const key = `burgundy-level${levelId}-progress`
-    const saved = localStorage.getItem(key)
+    const key = userScoped(`burgundy-level${levelId}-progress`)
+    const saved = key ? localStorage.getItem(key) : null
     return saved ? JSON.parse(saved) : {}
   }
 
@@ -22,7 +29,8 @@ export function useProgress() {
    * @param {Object} data - 進度數據 { completed, quizScore, completedAt }
    */
   const saveModuleProgress = (levelId, moduleId, data) => {
-    const key = `burgundy-level${levelId}-progress`
+    const key = userScoped(`burgundy-level${levelId}-progress`)
+    if (!key) return
     const progress = getLevelProgress(levelId)
     progress[moduleId] = {
       ...progress[moduleId],
@@ -37,8 +45,8 @@ export function useProgress() {
    * @returns {Array<string>} 已完成課程 ID 列表
    */
   const getCompletedLessons = (moduleId) => {
-    const key = `completed-lessons-${moduleId}`
-    const saved = localStorage.getItem(key)
+    const key = userScoped(`completed-lessons-${moduleId}`)
+    const saved = key ? localStorage.getItem(key) : null
     return saved ? JSON.parse(saved) : []
   }
 
@@ -48,7 +56,8 @@ export function useProgress() {
    * @param {Array<string>} lessons - 已完成課程 ID 列表
    */
   const saveCompletedLessons = (moduleId, lessons) => {
-    const key = `completed-lessons-${moduleId}`
+    const key = userScoped(`completed-lessons-${moduleId}`)
+    if (!key) return
     localStorage.setItem(key, JSON.stringify(lessons))
   }
 
@@ -58,8 +67,8 @@ export function useProgress() {
    * @returns {number} 累計學習時長（分鐘）
    */
   const getLearningTime = (moduleId) => {
-    const key = `learningTime-${moduleId}`
-    return parseInt(localStorage.getItem(key) || '0')
+    const key = userScoped(`learningTime-${moduleId}`)
+    return key ? parseInt(localStorage.getItem(key) || '0') : 0
   }
 
   /**
@@ -68,7 +77,8 @@ export function useProgress() {
    * @param {number} minutes - 要累加的分鐘數
    */
   const addLearningTime = (moduleId, minutes) => {
-    const key = `learningTime-${moduleId}`
+    const key = userScoped(`learningTime-${moduleId}`)
+    if (!key) return
     const currentTime = getLearningTime(moduleId)
     localStorage.setItem(key, (currentTime + minutes).toString())
   }
@@ -94,7 +104,8 @@ export function useProgress() {
    * @returns {Array<Object>} 證書列表
    */
   const getCertificates = () => {
-    const saved = localStorage.getItem('certificates')
+    const key = userScoped('certificates')
+    const saved = key ? localStorage.getItem(key) : null
     return saved ? JSON.parse(saved) : []
   }
 
@@ -103,9 +114,11 @@ export function useProgress() {
    * @param {Object} certificate - 證書數據
    */
   const saveCertificate = (certificate) => {
+    const key = userScoped('certificates')
+    if (!key) return
     const certificates = getCertificates()
     certificates.push(certificate)
-    localStorage.setItem('certificates', JSON.stringify(certificates))
+    localStorage.setItem(key, JSON.stringify(certificates))
   }
 
   /**

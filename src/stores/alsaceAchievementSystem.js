@@ -1,15 +1,23 @@
 // 阿爾薩斯成就系統
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
 import { courseLevels } from '../components/alsace/data/courseLevels.js'
+import { authState } from './authStore.js'
 
-// ── localStorage 讀取工具 ─────────────────────────────────────
+// ── localStorage 讀取工具（依帳號 id 區分，須與 courseLevels.js 的 key 格式一致）──
 const ALSACE_PROGRESS_PREFIX = 'alsace_course_progress_'
 
 function getCompletedLessons(levelKey) {
+  const userId = authState.user?.id
+  if (!userId) return []
   try {
-    const raw = localStorage.getItem(ALSACE_PROGRESS_PREFIX + levelKey)
+    const raw = localStorage.getItem(`${ALSACE_PROGRESS_PREFIX}${levelKey}:${userId}`)
     return raw ? (JSON.parse(raw).completedLessons || []) : []
   } catch { return [] }
+}
+
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的成就紀錄
+function alsaceAchievementsStorageKey(userId) {
+  return `alsace-wine-academy-achievements:${userId}`
 }
 
 function getTotalRealLessons() {
@@ -160,6 +168,14 @@ export const alsaceAchievementState = reactive({
   }
 })
 
+// 初始狀態快照，切換帳號時用來重置，避免殘留前一位使用者的資料
+const DEFAULT_ALSACE_ACHIEVEMENT_SNAPSHOT = JSON.parse(JSON.stringify({
+  unlockedAchievements: alsaceAchievementState.unlockedAchievements,
+  totalPoints: alsaceAchievementState.totalPoints,
+  newUnlocks: alsaceAchievementState.newUnlocks,
+  userStats: alsaceAchievementState.userStats
+}))
+
 // ── 配置 ──────────────────────────────────────────────────────
 export const alsaceAchievementConfig = {
   rarityColors: {
@@ -214,11 +230,23 @@ export class AlsaceAchievementManager {
     this._initialized = true
     this._load()
     this._syncWithCourseProgress()
+    // 切換帳號（同瀏覽器登出換登入）時重新載入該帳號自己的成就與課程進度
+    watch(() => authState.user?.id, (userId, prevUserId) => {
+      if (userId !== prevUserId) {
+        this._load()
+        this._syncWithCourseProgress()
+      }
+    })
   }
 
   _load() {
+    const userId = authState.user?.id
+    alsaceAchievementState.unlockedAchievements = [...DEFAULT_ALSACE_ACHIEVEMENT_SNAPSHOT.unlockedAchievements]
+    alsaceAchievementState.totalPoints = DEFAULT_ALSACE_ACHIEVEMENT_SNAPSHOT.totalPoints
+    alsaceAchievementState.userStats = { ...DEFAULT_ALSACE_ACHIEVEMENT_SNAPSHOT.userStats }
+    if (!userId) return
     try {
-      const raw = localStorage.getItem('alsace-wine-academy-achievements')
+      const raw = localStorage.getItem(alsaceAchievementsStorageKey(userId))
       if (!raw) return
       const data = JSON.parse(raw)
       alsaceAchievementState.unlockedAchievements = data.unlocked || []
@@ -228,8 +256,10 @@ export class AlsaceAchievementManager {
   }
 
   _save() {
+    const userId = authState.user?.id
+    if (!userId) return
     try {
-      localStorage.setItem('alsace-wine-academy-achievements', JSON.stringify({
+      localStorage.setItem(alsaceAchievementsStorageKey(userId), JSON.stringify({
         unlocked:    alsaceAchievementState.unlockedAchievements,
         totalPoints: alsaceAchievementState.totalPoints,
         userStats:   alsaceAchievementState.userStats

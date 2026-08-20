@@ -1,5 +1,6 @@
 // 羅亞爾河谷葡萄酒學習系統狀態管理
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
+import { authState } from './authStore.js'
 
 // 羅亞爾學習進度狀態
 export const loireLearningState = reactive({
@@ -350,18 +351,26 @@ export const loireLearningLevels = {
   }
 }
 
-// ── localStorage 進度持久化 ────────────────────────────────────────
+// ── localStorage 進度持久化（依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的進度）──
 const LOIRE_STORAGE_KEY = 'loire-progress'
 
+function loireStorageKey(userId) {
+  return `${LOIRE_STORAGE_KEY}:${userId}`
+}
+
 function saveToStorage() {
+  const userId = authState.user?.id
+  if (!userId) return
   try {
-    localStorage.setItem(LOIRE_STORAGE_KEY, JSON.stringify(loireLearningState.completedLessons))
+    localStorage.setItem(loireStorageKey(userId), JSON.stringify(loireLearningState.completedLessons))
   } catch (e) { console.warn('[loire] save error', e) }
 }
 
 function loadFromStorage() {
+  const userId = authState.user?.id
+  if (!userId) return
   try {
-    const raw = localStorage.getItem(LOIRE_STORAGE_KEY)
+    const raw = localStorage.getItem(loireStorageKey(userId))
     if (!raw) return
     const lessons = JSON.parse(raw)
     if (!Array.isArray(lessons)) return
@@ -382,17 +391,20 @@ function loadFromStorage() {
   } catch (e) { console.warn('[loire] load error', e) }
 }
 
-loadFromStorage()
-
 // 供 LoireLearningSystem 在 Supabase 同步後呼叫，重新載入 store 狀態
 export function loireReloadFromStorage() {
-  // 重置後重新載入，避免計數重複
+  // 重置後重新載入，避免計數重複／殘留前一位使用者的資料
   loireLearningState.completedLessons = []
   Object.keys(loireLearningState.userProgress).forEach(k => {
     loireLearningState.userProgress[k].completed = 0
   })
   loadFromStorage()
 }
+
+// 登入／切換帳號時重新載入該帳號自己的進度
+watch(() => authState.user?.id, (userId, prevUserId) => {
+  if (userId !== prevUserId) loireReloadFromStorage()
+})
 
 // 羅亞爾學習操作
 export const loireLearningActions = {

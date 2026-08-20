@@ -2,8 +2,15 @@
  * courseLevels.js  ─  澳洲葡萄酒課程等級定義
  * 仿照 portugal/data/courseLevels.js 架構
  */
+import { authState } from '../../../stores/authStore.js'
 
 export const STORAGE_PREFIX = 'australia_course_progress_'
+
+// 依帳號 id 區分 localStorage key，避免同一瀏覽器不同帳號互相看到彼此的課程進度
+function progressKey(levelKey) {
+  const userId = authState.user?.id
+  return userId ? `${STORAGE_PREFIX}${levelKey}:${userId}` : null
+}
 
 // ── 課程等級定義 ───────────────────────────────────────────────────────────
 export const courseLevels = [
@@ -183,16 +190,19 @@ export const courseLevels = [
 // ── Progress utilities ────────────────────────────────────────────────────
 export function getUserProgress(levelKey) {
   try {
-    const raw = localStorage.getItem(STORAGE_PREFIX + levelKey)
+    const key = progressKey(levelKey)
+    const raw = key ? localStorage.getItem(key) : null
     return raw ? JSON.parse(raw) : {}
   } catch { return {} }
 }
 
 export function saveProgress(levelKey, lessonId) {
   try {
+    const key = progressKey(levelKey)
+    if (!key) return
     const prev = getUserProgress(levelKey)
     prev[lessonId] = true
-    localStorage.setItem(STORAGE_PREFIX + levelKey, JSON.stringify(prev))
+    localStorage.setItem(key, JSON.stringify(prev))
   } catch { /* ignore */ }
 }
 

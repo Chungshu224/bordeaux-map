@@ -1,5 +1,11 @@
 // 匈牙利葡萄酒成就系統
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
+import { authState } from './authStore.js'
+
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的成就紀錄
+function hungaryAchievementsStorageKey(userId) {
+  return `hungary-wine-academy-achievements:${userId}`
+}
 
 // ── 成就定義 ──────────────────────────────────────────────────
 export const hungaryAchievementDefinitions = {
@@ -211,6 +217,14 @@ export const hungaryAchievementState = reactive({
   }
 })
 
+// 初始狀態快照，切換帳號時用來重置，避免殘留前一位使用者的資料
+const DEFAULT_HUNGARY_ACHIEVEMENT_SNAPSHOT = JSON.parse(JSON.stringify({
+  unlockedAchievements: hungaryAchievementState.unlockedAchievements,
+  totalPoints: hungaryAchievementState.totalPoints,
+  newUnlocks: hungaryAchievementState.newUnlocks,
+  userStats: hungaryAchievementState.userStats
+}))
+
 // ── 配置 ──────────────────────────────────────────────────────
 export const hungaryAchievementConfig = {
   rarityColors: {
@@ -265,11 +279,20 @@ export class HungaryAchievementManager {
     this._initialized = true
     this._load()
     this._syncWithCourseProgress()
+    // 切換帳號（同瀏覽器登出換登入）時重新載入該帳號自己的成就與課程進度
+    watch(() => authState.user?.id, (userId, prevUserId) => {
+      if (userId !== prevUserId) {
+        this._load()
+        this._syncWithCourseProgress()
+      }
+    })
   }
 
   _syncWithCourseProgress() {
+    const userId = authState.user?.id
+    if (!userId) return
     try {
-      const raw = localStorage.getItem('hungary-wine-academy-progress')
+      const raw = localStorage.getItem(`hungary-wine-academy-progress:${userId}`)
       if (!raw) return
       const data = JSON.parse(raw)
       const completedLessons = data.completedLessons || []
@@ -296,8 +319,13 @@ export class HungaryAchievementManager {
   }
 
   _load() {
+    const userId = authState.user?.id
+    hungaryAchievementState.unlockedAchievements = [...DEFAULT_HUNGARY_ACHIEVEMENT_SNAPSHOT.unlockedAchievements]
+    hungaryAchievementState.totalPoints = DEFAULT_HUNGARY_ACHIEVEMENT_SNAPSHOT.totalPoints
+    hungaryAchievementState.userStats = { ...DEFAULT_HUNGARY_ACHIEVEMENT_SNAPSHOT.userStats }
+    if (!userId) return
     try {
-      const raw = localStorage.getItem('hungary-wine-academy-achievements')
+      const raw = localStorage.getItem(hungaryAchievementsStorageKey(userId))
       if (!raw) return
       const data = JSON.parse(raw)
       hungaryAchievementState.unlockedAchievements = data.unlocked || []
@@ -307,8 +335,10 @@ export class HungaryAchievementManager {
   }
 
   _save() {
+    const userId = authState.user?.id
+    if (!userId) return
     try {
-      localStorage.setItem('hungary-wine-academy-achievements', JSON.stringify({
+      localStorage.setItem(hungaryAchievementsStorageKey(userId), JSON.stringify({
         unlocked:    hungaryAchievementState.unlockedAchievements,
         totalPoints: hungaryAchievementState.totalPoints,
         userStats:   hungaryAchievementState.userStats

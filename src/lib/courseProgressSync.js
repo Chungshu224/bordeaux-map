@@ -67,7 +67,7 @@ export async function loadAndMergeGermanyProgress(userId) {
   ])
   let didUpdate = false
   for (const [lk, ids] of Object.entries(byLevel))
-    if (mergeArrayKey(`germany-${lk}-progress`, ids)) didUpdate = true
+    if (mergeArrayKey(`germany-${lk}-progress:${userId}`, ids)) didUpdate = true
   if (didUpdate) console.log('[germanySync] ✅ synced')
   return didUpdate
 }
@@ -86,7 +86,7 @@ export async function loadAndMergeSpainProgress(userId) {
   ])
   let didUpdate = false
   for (const [lk, ids] of Object.entries(byLevel))
-    if (mergeArrayKey(`spain_course_progress_${lk}`, ids)) didUpdate = true
+    if (mergeArrayKey(`spain_course_progress_${lk}:${userId}`, ids)) didUpdate = true
   if (didUpdate) console.log('[spainSync] ✅ synced')
   return didUpdate
 }
@@ -105,7 +105,7 @@ export async function loadAndMergePortugalProgress(userId) {
   ])
   let didUpdate = false
   for (const [lk, ids] of Object.entries(byLevel))
-    if (mergeArrayKey(`portugal_course_progress_${lk}`, ids)) didUpdate = true
+    if (mergeArrayKey(`portugal_course_progress_${lk}:${userId}`, ids)) didUpdate = true
   if (didUpdate) console.log('[portugalSync] ✅ synced')
   return didUpdate
 }
@@ -124,7 +124,7 @@ export async function loadAndMergeAustraliaProgress(userId) {
   ])
   let didUpdate = false
   for (const [lk, ids] of Object.entries(byLevel)) {
-    const key = `australia_course_progress_${lk}`
+    const key = `australia_course_progress_${lk}:${userId}`
     const raw = localStorage.getItem(key)
     const local = raw ? JSON.parse(raw) : {}
     let updated = false
@@ -143,11 +143,12 @@ export async function loadAndMergeNZProgress(userId) {
   const rows = await fetchRows(userId, 'nz')
   if (!rows.length) return null
   const remote = rows.map(r => r.module_id)
-  const raw = localStorage.getItem('nz-wine-progress')
+  const key = `nz-wine-progress:${userId}`
+  const raw = localStorage.getItem(key)
   const local = raw ? JSON.parse(raw) : []
   const merged = Array.from(new Set([...local, ...remote]))
   if (merged.length === local.length) return null
-  localStorage.setItem('nz-wine-progress', JSON.stringify(merged))
+  localStorage.setItem(key, JSON.stringify(merged))
   console.log('[nzSync] ✅ synced')
   return merged  // 回傳合併後陣列，供呼叫端更新 ref
 }
@@ -168,7 +169,7 @@ export async function loadAndMergeBourgogneProgress(userId) {
   }
   let didUpdate = false
   for (const [moduleId, remoteLessons] of Object.entries(byModule)) {
-    const key = `completed-lessons-${moduleId}`
+    const key = `completed-lessons-${moduleId}:${userId}`
     const raw = localStorage.getItem(key)
     const local = raw ? JSON.parse(raw) : []
     const merged = Array.from(new Set([...local, ...remoteLessons]))
@@ -189,7 +190,7 @@ export async function loadAndMergeHungaryProgress(userId) {
   const rows = await fetchRows(userId, 'hungary')
   if (!rows.length) return false
   const remote = rows.map(r => r.module_id)
-  const STORAGE_KEY = 'hungary-wine-academy-progress'
+  const STORAGE_KEY = `hungary-wine-academy-progress:${userId}`
   const raw = localStorage.getItem(STORAGE_KEY)
   const local = raw ? JSON.parse(raw) : { completedLessons: [], userProgress: {} }
   const merged = Array.from(new Set([...(local.completedLessons || []), ...remote]))
@@ -207,11 +208,12 @@ export async function loadAndMergeLoireProgress(userId) {
   const rows = await fetchRows(userId, 'loire')
   if (!rows.length) return null
   const remote = rows.map(r => r.module_id)
-  const raw = localStorage.getItem('loire-progress')
+  const key = `loire-progress:${userId}`
+  const raw = localStorage.getItem(key)
   const local = raw ? JSON.parse(raw) : []
   const merged = Array.from(new Set([...local, ...remote]))
   if (merged.length === local.length) return null
-  localStorage.setItem('loire-progress', JSON.stringify(merged))
+  localStorage.setItem(key, JSON.stringify(merged))
   console.log('[loireSync] ✅ synced')
   return merged  // 回傳合併後陣列，供 store reload 使用
 }
@@ -224,11 +226,12 @@ export async function loadAndMergeCaliforniaProgress(userId) {
   const rows = await fetchRows(userId, 'california')
   if (!rows.length) return null
   const remote = rows.map(r => r.module_id)
-  const raw = localStorage.getItem('california-progress')
+  const key = `california-progress:${userId}`
+  const raw = localStorage.getItem(key)
   const local = raw ? JSON.parse(raw) : []
   const merged = Array.from(new Set([...local, ...remote]))
   if (merged.length === local.length) return null
-  localStorage.setItem('california-progress', JSON.stringify(merged))
+  localStorage.setItem(key, JSON.stringify(merged))
   console.log('[californiaSync] ✅ synced')
   return merged  // 回傳合併後陣列，供 store reload 使用
 }
@@ -247,7 +250,7 @@ export async function loadAndMergeAlsaceProgress(userId) {
   ])
   let didUpdate = false
   for (const [lk, ids] of Object.entries(byLevel))
-    if (mergeArrayKey(`alsace_course_progress_${lk}`, ids)) didUpdate = true
+    if (mergeArrayKey(`alsace_course_progress_${lk}:${userId}`, ids)) didUpdate = true
   if (didUpdate) console.log('[alsaceSync] ✅ synced')
   return didUpdate
 }

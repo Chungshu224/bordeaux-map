@@ -2,6 +2,8 @@
  * 義大利課程資料
  * 從 Italy Wine Learning-map 專案移植並整合至 Bordeaux Wine Academy
  */
+import { authState } from '../../../stores/authStore.js'
+
 export const courseLevels = {
   level1: {
     id: 'level1',
@@ -505,16 +507,24 @@ export const courseLevels = {
   }
 }
 
+function progressKey (levelKey) {
+  const userId = authState.user?.id
+  return userId ? `italy-${levelKey}-progress:${userId}` : null
+}
+
 export function getUserProgress (levelKey) {
-  const saved = localStorage.getItem(`italy-${levelKey}-progress`)
+  const key = progressKey(levelKey)
+  const saved = key ? localStorage.getItem(key) : null
   return saved ? JSON.parse(saved) : { completedLessons: [] }
 }
 
 export function saveProgress (levelKey, lessonId) {
+  const key = progressKey(levelKey)
+  if (!key) return
   const progress = getUserProgress(levelKey)
   if (!progress.completedLessons.includes(lessonId)) {
     progress.completedLessons.push(lessonId)
-    localStorage.setItem(`italy-${levelKey}-progress`, JSON.stringify(progress))
+    localStorage.setItem(key, JSON.stringify(progress))
   }
 }
 

@@ -1,15 +1,23 @@
 // 西班牙成就系統
-import { reactive, computed } from 'vue'
+import { reactive, computed, watch } from 'vue'
 import { courseLevels } from '../components/spain/data/courseLevels.js'
+import { authState } from './authStore.js'
 
-// ── localStorage 讀取工具 ─────────────────────────────────────
+// ── localStorage 讀取工具（依帳號 id 區分，須與 courseLevels.js 的 key 格式一致）──
 const SPAIN_PROGRESS_PREFIX = 'spain_course_progress_'
 
 function getCompletedLessons(levelKey) {
+  const userId = authState.user?.id
+  if (!userId) return []
   try {
-    const raw = localStorage.getItem(SPAIN_PROGRESS_PREFIX + levelKey)
+    const raw = localStorage.getItem(`${SPAIN_PROGRESS_PREFIX}${levelKey}:${userId}`)
     return raw ? (JSON.parse(raw).completedLessons || []) : []
   } catch { return [] }
+}
+
+// localStorage 依帳號 id 區分，避免同一瀏覽器不同帳號互相看到彼此的成就紀錄
+function spainAchievementsStorageKey(userId) {
+  return `spain-wine-academy-achievements:${userId}`
 }
 
 function getTotalRealLessons() {
@@ -203,6 +211,14 @@ export const spainAchievementState = reactive({
   }
 })
 
+// 初始狀態快照，切換帳號時用來重置，避免殘留前一位使用者的資料
+const DEFAULT_SPAIN_ACHIEVEMENT_SNAPSHOT = JSON.parse(JSON.stringify({
+  unlockedAchievements: spainAchievementState.unlockedAchievements,
+  totalPoints: spainAchievementState.totalPoints,
+  newUnlocks: spainAchievementState.newUnlocks,
+  userStats: spainAchievementState.userStats
+}))
+
 // ── 配置 ──────────────────────────────────────────────────────
 export const spainAchievementConfig = {
   rarityColors: {
@@ -257,11 +273,23 @@ export class SpainAchievementManager {
     this._initialized = true
     this._load()
     this._syncWithCourseProgress()
+    // 切換帳號（同瀏覽器登出換登入）時重新載入該帳號自己的成就與課程進度
+    watch(() => authState.user?.id, (userId, prevUserId) => {
+      if (userId !== prevUserId) {
+        this._load()
+        this._syncWithCourseProgress()
+      }
+    })
   }
 
   _load() {
+    const userId = authState.user?.id
+    spainAchievementState.unlockedAchievements = [...DEFAULT_SPAIN_ACHIEVEMENT_SNAPSHOT.unlockedAchievements]
+    spainAchievementState.totalPoints = DEFAULT_SPAIN_ACHIEVEMENT_SNAPSHOT.totalPoints
+    spainAchievementState.userStats = { ...DEFAULT_SPAIN_ACHIEVEMENT_SNAPSHOT.userStats }
+    if (!userId) return
     try {
-      const raw = localStorage.getItem('spain-wine-academy-achievements')
+      const raw = localStorage.getItem(spainAchievementsStorageKey(userId))
       if (!raw) return
       const data = JSON.parse(raw)
       spainAchievementState.unlockedAchievements = data.unlocked || []
@@ -271,8 +299,10 @@ export class SpainAchievementManager {
   }
 
   _save() {
+    const userId = authState.user?.id
+    if (!userId) return
     try {
-      localStorage.setItem('spain-wine-academy-achievements', JSON.stringify({
+      localStorage.setItem(spainAchievementsStorageKey(userId), JSON.stringify({
         unlocked:    spainAchievementState.unlockedAchievements,
         totalPoints: spainAchievementState.totalPoints,
         userStats:   spainAchievementState.userStats
