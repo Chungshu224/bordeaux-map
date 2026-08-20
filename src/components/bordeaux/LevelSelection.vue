@@ -108,7 +108,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import {
   CourseHomeLayout,
@@ -121,7 +121,8 @@ import {
 } from '../shared/courseHome/index.js'
 import { learningState, learningActions } from '../../stores/learningStore.js'
 import { achievementState } from '../../stores/achievementSystem.js'
-import { authActions } from '../../stores/authStore.js'
+import { authActions, authState } from '../../stores/authStore.js'
+import { getCourseAccess } from '../../lib/purchaseService.js'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
 
 // Props（保留 deviceInfo 以便父層傳入時不報錯）
@@ -173,10 +174,21 @@ const totalProgressPct = computed(() => {
   return Math.round((totalCompletedCount.value / totalLessonCount.value) * 100)
 })
 
+// Level 2 以上需要 basic 訂閱；Level 1 永久免費（見 router/index.js 的 Tier Access Map）
+const courseTier = ref('free')
+onMounted(async () => {
+  if (authActions.isAdmin && authActions.isAdmin()) {
+    courseTier.value = 'premium'
+  } else if (authState.user) {
+    courseTier.value = await getCourseAccess(authState.user.id, 'bordeaux')
+  }
+})
+
 function isLevelUnlocked(n) {
   if (n === 1) return true
   if (learningState.testMode) return true
   if (authActions.isAdmin && authActions.isAdmin()) return true
+  if (courseTier.value === 'free') return false
   const finalId = learningActions.getFinalLessonId(n - 1)
   return finalId != null && completedLessons.value.includes(finalId)
 }

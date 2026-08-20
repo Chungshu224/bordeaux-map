@@ -7,8 +7,9 @@ import { getCourseAccess } from '../lib/purchaseService.js'
 // ============================================================
 //  免費 (free)  — 只要註冊即可
 //    ✅ 登入、設定
+//    ✅ Level 1 課程（永久免費體驗）
 //    ✅ 地圖探索 (限 Regional AOC + LeftBank-Medoc AOC 兩個群組)
-//    ❌ Level 1~4 課程（免費體驗已下架，需訂閱；例外由優惠碼發放的試用期）
+//    ❌ Level 2~4 課程（需訂閱；例外由優惠碼發放的試用期）
 //    ❌ 地圖進階圖層：等高線、地質土壤、氣候熱力
 //    ❌ 地圖內「顯示知名酒莊」功能
 //    ❌ 互動練習中心 (GameHub)
@@ -40,7 +41,7 @@ const routes = [
     path: '/bordeaux',
     name: 'Home',
     component: () => import('../components/bordeaux/LevelSelection.vue'),
-    meta: { requiresAuth: true, minimumTier: 'basic', title: '波爾多 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '波爾多 · 侍酒師的筆記本' }
   },
 
   // ─── 布根地課程 ─────────────────────────────────────────────────────────────
@@ -197,11 +198,11 @@ const routes = [
     meta: { requiresAuth: true, minimumTier: 'free' }
   },
   {
-    //  所有 level 皆需 basic 以上（見下方 beforeEach 的 Learning 特判）
+    //  Level 1 免費，Level 2~4 需 basic 以上（見下方 beforeEach 的 Learning 特判，依 query.level 動態判斷）
     path: '/learning',
     name: 'Learning',
     component: () => import('../components/bordeaux/LearningSystem.vue'),
-    meta: { requiresAuth: true, minimumTier: 'basic', title: '📖 波爾多課程 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, minimumTier: 'free', title: '📖 波爾多課程 · 侍酒師的筆記本' }
   },
   {
     // 地圖探索：free 以上均可進入 (AOC 群組與圖層由元件內部依 Tier 控管)
@@ -276,7 +277,7 @@ const router = createRouter({
 })
 
 const COURSE_ACCESS_RULES = {
-  Home: { courseId: 'bordeaux', minimumTier: 'basic' },
+  Home: { courseId: 'bordeaux', minimumTier: 'free' },
   Bourgogne: { courseId: 'bourgogne', minimumTier: 'basic' },
   Italy: { courseId: 'italy', minimumTier: 'basic' },
   Spain: { courseId: 'spain', minimumTier: 'free' },
@@ -290,7 +291,7 @@ const COURSE_ACCESS_RULES = {
   Hungary: { courseId: 'hungary', minimumTier: 'free' },
   California: { courseId: 'california', minimumTier: 'free' },
   CaliforniaCourse: { courseId: 'california', minimumTier: 'basic' },
-  Learning: { courseId: 'bordeaux', minimumTier: 'basic' },
+  Learning: { courseId: 'bordeaux', minimumTier: 'free' },
   Explore: { courseId: 'bordeaux', minimumTier: 'free' },
   GameHub: { courseId: 'bordeaux', minimumTier: 'basic' },
   Notebook: { courseId: 'bordeaux', minimumTier: 'basic' },
@@ -343,7 +344,9 @@ router.beforeEach(async (to, from, next) => {
   }
 
   if (to.name === 'Learning') {
-    requiredTier = 'basic'
+    // Level 1 永久免費；Level 2 以上需 basic 訂閱
+    const requestedLevel = parseInt(to.query.level) || 1
+    requiredTier = requestedLevel === 1 ? 'free' : 'basic'
   }
 
   // 3. 比對 Tier 權重

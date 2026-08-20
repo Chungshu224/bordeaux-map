@@ -74,7 +74,8 @@
 import { ref, computed, onMounted, watch, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { learningState, learningLevels, learningActions, learningProgress } from '../../stores/learningStore.js'
-import { authActions } from '../../stores/authStore.js'
+import { authActions, authState } from '../../stores/authStore.js'
+import { getCourseAccess } from '../../lib/purchaseService.js'
 import BordeauxCourseLayout from './BordeauxCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
@@ -182,11 +183,22 @@ watch(() => props.selectedLevel, (newLevel) => {
   }
 }, { immediate: true })
 
+// Level 2 以上需要 basic 訂閱；Level 1 永久免費（見 router/index.js 的 Tier Access Map）
+const courseTier = ref('free')
+onMounted(async () => {
+  if (authActions.isAdmin()) {
+    courseTier.value = 'premium'
+  } else if (authState.user) {
+    courseTier.value = await getCourseAccess(authState.user.id, 'bordeaux')
+  }
+})
+
 const isLevelUnlocked = (level) => {
   // 測試模式或管理員下所有等級都解鎖
   if (learningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (courseTier.value === 'free') return false
   // 必須通過前一個 Level 的綜合評量（最後一課）才能解鎖
   const finalLessonId = learningActions.getFinalLessonId(level - 1)
   return finalLessonId != null && learningState.completedLessons.includes(finalLessonId)
