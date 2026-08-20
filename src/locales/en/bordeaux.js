@@ -428,6 +428,7 @@ export default {
         chateau:  'Show Châteaux',
         contours: 'Contours',
         climate:  'Climate Heat',
+        geology:  'BRGM Geology',
       },
       tier: {
         basic:   'Basic',

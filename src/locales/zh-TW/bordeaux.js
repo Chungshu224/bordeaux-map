@@ -336,6 +336,7 @@ export default {
         chateau:  '顯示知名酒莊',
         contours: '等高線',
         climate:  '氣候熱力',
+        geology:  'BRGM 地質',
       },
       tier: {
         basic:   '初階付費',

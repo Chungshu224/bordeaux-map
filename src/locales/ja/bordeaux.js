@@ -429,6 +429,7 @@ export default {
         chateau:  'シャトーを表示',
         contours: '等高線',
         climate:  '気候ヒートマップ',
+        geology:  'BRGM地質図',
       },
       tier: {
         basic:   '基本プラン',

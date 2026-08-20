@@ -90,15 +90,16 @@
             <span v-if="!canAccessTier('basic')" class="lbtn-lock">🔒</span>
             <span v-else class="lbtn-dot" :class="{ on: climateEnabled }"></span>
           </button>
-          <!-- BRGM 法國官方地質圖 -->
+          <!-- BRGM 法國官方地質圖：basic 以上 -->
           <button
             class="btn-layer"
-            :class="{ active: brgmEnabled, 'color-brgm': true }"
-            @click="toggleBRGM(map)"
+            :class="{ active: brgmEnabled && canAccessTier('basic'), 'color-brgm': true, 'btn-layer-locked': !canAccessTier('basic') }"
+            @click="canAccessTier('basic') ? toggleBRGM(map) : alertUpgrade('geology', 'basic')"
           >
             <span class="lbtn-icon">🗺️</span>
             <span class="lbtn-text">{{ $t('bordeaux.map.layers.geology') }}</span>
-            <span class="lbtn-dot" :class="{ on: brgmEnabled }"></span>
+            <span v-if="!canAccessTier('basic')" class="lbtn-lock">🔒</span>
+            <span v-else class="lbtn-dot" :class="{ on: brgmEnabled }"></span>
           </button>
         </div>
       </div>
@@ -1399,8 +1400,8 @@ const initMap = async (retry = 0) => {
       // 註冊 AOC 點選偵測（PostGIS get_aoc_at_point）
       registerAocClickHandler()
 
-      // 手機裝置：預設啟用氣候熱力與地質圖層
-      if (isPhoneDevice.value) {
+      // 手機裝置：預設啟用氣候熱力與地質圖層（basic 以上才自動開啟）
+      if (isPhoneDevice.value && canAccessTier('basic')) {
         toggleBRGM(map)
         await toggleClimate()
       }
