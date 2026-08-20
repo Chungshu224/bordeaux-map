@@ -26,6 +26,16 @@
           <strong>{{ submittedEmail }}</strong>
         </p>
         <p class="success-hint">請前往信箱點擊驗證連結，完成帳號啟用後即可登入學習系統。</p>
+
+        <a class="tutorial-cta" href="https://youtu.be/qN6PmQ3ydx4" target="_blank" rel="noopener noreferrer">
+          <img class="tutorial-thumb" src="https://i.ytimg.com/vi/qN6PmQ3ydx4/hqdefault.jpg" alt="新手教學影片縮圖" loading="lazy" />
+          <span class="tutorial-thumb-play">▶</span>
+          <div class="tutorial-cta-text">
+            <span class="tutorial-cta-label">等信的空檔，先看新手教學影片</span>
+            <span class="tutorial-cta-sub">從註冊到解鎖第一個成就，完整導覽 →</span>
+          </div>
+        </a>
+
         <button class="btn-back" @click="$router.push('/')">返回首頁</button>
       </div>
 
@@ -559,8 +569,64 @@ function getBubbleStyle(i) {
 .success-hint {
   font-size: 0.8rem;
   color: rgba(255,255,255,0.5);
-  margin: 0 0 24px;
+  margin: 0 0 20px;
   line-height: 1.6;
+}
+
+/* ── 教學影片引導卡 ──────────────────────────────── */
+.tutorial-cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  margin: 0 0 24px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  text-align: left;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+.tutorial-cta:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(196,139,166,0.5);
+  transform: translateY(-1px);
+}
+.tutorial-thumb {
+  width: 84px;
+  height: 63px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.tutorial-thumb-play {
+  position: absolute;
+  left: 10px;
+  width: 84px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  background: rgba(0,0,0,0.25);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.tutorial-cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.tutorial-cta-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+}
+.tutorial-cta-sub {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.55);
 }
 .btn-back {
   padding: 12px 32px;

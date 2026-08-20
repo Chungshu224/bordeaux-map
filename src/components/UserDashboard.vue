@@ -30,6 +30,21 @@
         </div>
       </div>
 
+      <!-- 新手教學影片 -->
+      <section v-if="showTutorialCard" class="dash-section tutorial-section">
+        <button class="tutorial-dismiss" @click="dismissTutorial" aria-label="關閉">✕</button>
+        <a class="tutorial-link" href="https://youtu.be/qN6PmQ3ydx4" target="_blank" rel="noopener noreferrer">
+          <div class="tutorial-thumb-wrap">
+            <img class="tutorial-thumb" src="https://i.ytimg.com/vi/qN6PmQ3ydx4/hqdefault.jpg" alt="新手教學影片縮圖" loading="lazy" />
+            <span class="tutorial-thumb-play">▶</span>
+          </div>
+          <div class="tutorial-text">
+            <div class="tutorial-title">🎬 新手上手：網站操作導覽</div>
+            <div class="tutorial-sub">從註冊、選課到解鎖成就，2 分鐘看懂完整流程 →</div>
+          </div>
+        </a>
+      </section>
+
       <!-- 已購課程 -->
       <section class="dash-section">
         <h2 class="section-title">📚 已購課程</h2>
@@ -169,10 +184,22 @@ const purchases = ref([])
 const loading   = ref(true)
 const showPendingPurchases = ref(false)
 
+// 新手教學影片卡片（依帳號 id 記住是否已關閉）
+const TUTORIAL_DISMISS_KEY = 'tutorial-video-dismissed'
+const showTutorialCard = ref(true)
+function dismissTutorial() {
+  showTutorialCard.value = false
+  const userId = authState.user?.id
+  if (userId) localStorage.setItem(`${TUTORIAL_DISMISS_KEY}:${userId}`, 'true')
+}
+
 onMounted(async () => {
   const userId = authState.user?.id
   if (userId) {
     purchases.value = await getUserPurchases(userId)
+    if (localStorage.getItem(`${TUTORIAL_DISMISS_KEY}:${userId}`) === 'true') {
+      showTutorialCard.value = false
+    }
   }
   loading.value = false
 })
@@ -349,6 +376,55 @@ const router = useRouter()
 /* ─── Sections ────────────────────────────────────────────────────────────── */
 .dash-section { margin-bottom: 40px; }
 .section-title { font-size: 1.1rem; color: #d4af37; margin: 0 0 18px; }
+
+/* ─── 新手教學影片卡片 ─────────────────────────────────────────────────────── */
+.tutorial-section {
+  position: relative;
+  background: rgba(212,175,55,0.06);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 36px;
+}
+.tutorial-dismiss {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 50%;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background 0.2s, color 0.2s;
+}
+.tutorial-dismiss:hover { background: rgba(255,255,255,0.16); color: #fff; }
+.tutorial-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+.tutorial-thumb-wrap { position: relative; flex-shrink: 0; }
+.tutorial-thumb { width: 120px; height: 90px; object-fit: cover; border-radius: 8px; display: block; }
+.tutorial-thumb-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.4rem;
+  background: rgba(0,0,0,0.25);
+  border-radius: 8px;
+}
+.tutorial-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.tutorial-sub { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
 
 /* ─── Loading / Empty ─────────────────────────────────────────────────────── */
 .loading-row { display: flex; align-items: center; gap: 10px; color: #7a6858; }
