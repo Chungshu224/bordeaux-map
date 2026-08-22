@@ -1,28 +1,48 @@
-﻿{
+{
   "lessonId": "L2M1L4",
   "title": "Emilia-Romagna 艾米利亞-羅馬涅",
   "quiz": [
     {
       "question": "優質的 Lambrusco 主流風格是？",
-      "options": ["甜型（Dolce）", "不甜（Secco）", "加烈酒", "橘酒"],
+      "options": [
+        "甜型（Dolce）",
+        "不甜（Secco）",
+        "加烈酒",
+        "橘酒"
+      ],
       "answer": 1,
       "explanation": "現代高品質 Lambrusco 主流是不甜（Secco）風格，清爽、果香豐富，改變了過去甜型廉價酒的印象。"
     },
     {
       "question": "三種 Lambrusco DOC 中，哪個最優雅、酒體最輕？",
-      "options": ["Lambrusco Grasparossa", "Lambrusco di Sorbara", "Reggiano Lambrusco", "都一樣"],
+      "options": [
+        "Lambrusco Grasparossa",
+        "Lambrusco di Sorbara",
+        "Reggiano Lambrusco",
+        "都一樣"
+      ],
       "answer": 1,
       "explanation": "Lambrusco di Sorbara 是最優雅的品種，酒體最輕，呈現玫瑰粉紅色，高酸度、細膩氣泡。"
     },
     {
       "question": "義大利第一個白酒 DOCG 是？",
-      "options": ["Soave", "Gavi", "Albana di Romagna", "Vernaccia di San Gimignano"],
+      "options": [
+        "Soave",
+        "Gavi",
+        "Albana di Romagna",
+        "Vernaccia di San Gimignano"
+      ],
       "answer": 2,
       "explanation": "Albana di Romagna 在 1987 年成為義大利第一個白酒 DOCG，主要產自 Romagna 地區。"
     },
     {
       "question": "Aceto Balsamico Tradizionale di Modena DOCG 最少需要陳年幾年？",
-      "options": ["3 年", "5 年", "12 年", "25 年"],
+      "options": [
+        "3 年",
+        "5 年",
+        "12 年",
+        "25 年"
+      ],
       "answer": 2,
       "explanation": "Tradizionale DOCG 傳統巴薩米克醋最低陳年 12 年（銀蓋），25 年以上為 Extra Vecchio（金蓋）。葡萄汁在一系列不同木材的小桶中逐年轉移、濃縮，是義大利最複雜的農產品之一。"
     },
@@ -39,7 +59,12 @@
     },
     {
       "question": "Romagna 大區的代表性紅品種是？",
-      "options": ["Lambrusco", "Sangiovese di Romagna", "Terrano（Cagnina）", "Albana"],
+      "options": [
+        "Lambrusco",
+        "Sangiovese di Romagna",
+        "Terrano（Cagnina）",
+        "Albana"
+      ],
       "answer": 1,
       "explanation": "Sangiovese di Romagna DOC 是 Romagna 地區最重要的紅品種，風格比 Tuscany 的 Sangiovese 更果香柔順易飲，以 San Patrignano 為代表的精品款已達 Level 2 複雜度。"
     },
@@ -69,6 +94,11 @@
     {
       "type": "emilia-docg-map",
       "title": "Emilia-Romagna DOC 互動地圖"
+    },
+    {
+      "type": "content",
+      "title": "📜 歷史與風土地理（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>從凱爾特到義大利王國：兩千年的融合史</h3><p>Emilia-Romagna原住民是凱爾特人；西元前3-2世紀羅馬人入侵前，當地人已在Etruscan人教導下種植葡萄。西元前1世紀，老普林尼（Pliny the Elder）記載了Bologna周邊的氣泡白酒，以及以Modena周邊平原上生長的<em>Lambrusche</em>（Lambrusco）葡萄釀成的氣泡紅酒——這是Lambrusco最早的文字記載。一個世紀後，羅馬執政官Marco Emilio Lepido修築Via Emilia大道，連接西邊的Piacenza與東邊亞得里亞海岸的Rimini，這條貿易要道最終成為本地區的名稱由來。</p></div><div class=\"science-card\">西元5世紀羅馬帝國滅亡後，本地區分裂為Emilia（倫巴底部族統治，發展為Parma、Piacenza、Modena、Reggio Emilia、Bologna等城邦）與Romagna（先受拜占庭統治，被稱為「Romania」——即Romagna名稱由來——後由法蘭克國王丕平助教廷擊敗倫巴底人，劃歸教皇國，直到18世紀末拿破崙入侵）。1815年維也納會議後兩地短暫恢復舊制，1860年公民投票後相繼併入Sardegna王國（隔年成為義大利王國），但至今Emiliani（Emilia人）與Romagnoli（Romagna人）仍自認方言、飲食與文化各不相同。西元1088年創立於Bologna的Alma Mater Studiorum（波隆那大學）是西方世界最古老的大學。</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">地形、氣候與土壤</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>三帶地形：</strong>平原48%（Po河谷沖積平原，古海洋沉積+河流沖積土，深厚肥沃，佔葡萄種植總面積三分之二）、丘陵27%（天然土層淺薄，黏土、砂岩與泥灰岩混合，土壤貧瘠反而更適合優質葡萄種植）、山地25%（北亞平寧山脈，海拔多不超過2,000公尺，山區不種葡萄）</div><div class=\"orvieto-card\"><strong>氣候光譜：</strong>平原為大陸性氣候（夏熱潮濕、冬長寒冷），是全區最乾燥處，年雨量僅20-30英寸／600-800毫米，秋冬多霧；丘陵屬半大陸型（雨量更多、夏涼冬暖）；沿海則呈地中海型，海風調節全年溫度</div><div class=\"orvieto-card\"><strong>Po河的雙面刃：</strong>Po河與眾多支流（Panaro、Secchia、Taro、Trebbia）整體調節氣候，但也提高濕度，增加黴菌與腐爛風險，是平原葡萄園的主要種植挑戰</div><div class=\"orvieto-card\"><strong>產業規模：</strong>葡萄園面積超過123,000英畝／50,000公頃（佔義大利全國8%），年產約600萬公石（佔全國10%）；截至2017年共21個法定產區（19個DOC＋2個DOCG），DOC/DOCG佔總產量約25%，IGT佔40%（主要為Emilia IGT與Rubicone IGT），其餘為日常餐酒</div><div class=\"orvieto-card\"><strong>合作社結構：</strong>葡萄園被分割成無數細碎地塊，平均每塊僅5英畝／2公頃；超過三分之二的種植者（佔種植面積60%）隸屬合作社，其產量佔全區總產量高達85%——是義大利規模最大的合作社網絡之一；但最優質、最耐人尋味的酒款，仍多來自Emilia與Romagna丘陵地帶的獨立酒莊</div></div></div>"
     },
     {
       "type": "content",
@@ -103,6 +133,11 @@
     },
     {
       "type": "content",
+      "title": "🍇 更多原生品種與產業數據（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Sangiovese 其實不是托斯卡納品種？</h3><p>近年DNA研究證實，Sangiovese其實是兩個南義大利品種——Ciliegiolo與幾乎絕跡的Calabrese（Montenuovo）——天然雜交而成，且與多個南義品種具有親緣關係，顯示其可能起源於義大利南部而非Toscana。更有趣的是，如今種植於Toscana、品質最優異的部分Sangiovese克隆株，其實源自Romagna。相傳Sangiovese之名源自拉丁文「sanguis Jovi」（朱庇特之血），是Romagna境內Rimini附近Monte Giove一帶的修士所取的稱呼。</p></div><div class=\"science-card\">種植最廣泛品種（ISTAT，2010年）：Trebbiano Romagnolo 28%・Sangiovese 15%・Lambrusco Salamino 8%・Ancellotta 7%・Lambrusco Grasparossa 4%・Barbera 4%・Croatina 3%・Pignoletto 3%・Lambrusco di Sorbara 3%・Albana 2%・其他23%</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Piacenza／Parma丘陵的原生白品種</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Malvasia di Candia Aromatica：</strong>香氣濃郁的品種，廣泛種植於Emilia各地，尤以Piacenza與Parma丘陵最受推崇；可釀成靜態酒、氣泡酒與passito多種風格，其passito被視為義大利最頂尖的甜酒之一</div><div class=\"orvieto-card\"><strong>Ortrugo：</strong>原生於Piacenza丘陵，種植數世紀但直到19世紀才首見於文獻；名稱源自方言Altruga（「另一個葡萄品種」），20世紀一度瀕臨絕種，1970年代起才開始裝瓶為單一品種酒，如今是Piacenza丘陵種植最廣的白葡萄之一，風格爽脆帶礦物感</div><div class=\"orvieto-card\"><strong>Spergola：</strong>Reggio Emilia省Scandiano／Canossa丘陵的原生白品種，可裝瓶為無氣泡或frizzante風格，甜度從不甜到甜型皆有</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">其他原生紅葡萄品種</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">Ancellotta（常用於為Lambrusco混釀增色）・Barbera・Bonarda（即Croatina）・Fortana（Bosco Eliceo沙地紅酒品種）・Malbo Gentile・Terrano（即Cagnina）・Barbarossa</div><div class=\"orvieto-card\"><strong>Lambrusco家族冷知識：</strong>Lambrusco di Sorbara需要園中混植另一Lambrusco品種作授粉者，通常由Lambrusco Salamino擔任；因此Lambrusco di Sorbara DOC規定須至少含60%的Sorbara、Salamino比例不得超過40%。其他次要Lambrusco品種還有Lambrusco Marani與Lambrusco Maestri。</div></div></div>"
+    },
+    {
+      "type": "content",
       "title": "Sangiovese di Romagna & Romagna DOC",
       "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Romagna 的靈魂紅品種</h3><p>Romagna 的 Sangiovese 與 Tuscany 的 Sangiovese 基因相同，但在 Apennines 丘陵的不同土壤和釀造哲學下，展現出完全不同的個性——更多紅色漿果果香、更柔順的單寧、更早飲用。2011 年「Romagna DOC」法規整合了區域內多個 DOC，Sangiovese 分為普通款、Superiore、Riserva 三個等級，頂級款可與 Chianti Classico Riserva 媲美。</p><div class=\"science-card\">2011 年：Romagna DOC 法規整合｜三等級：Sangiovese / Superiore / Riserva</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">與 Tuscany Sangiovese 比較</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Romagna 風格：</strong>更豐富的紅色漿果（草莓、覆盆莓、紅李）、更柔順的單寧、更早適飲（2-5 年）、整體更平易近人、均價 €8-35</div><div class=\"orvieto-card\"><strong>Chianti/Brunello 風格：</strong>更強的結構感、高酸度、緊實單寧、明顯的風乾玫瑰和皮革香氣，需要陳年 5-20 年才完全展現</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">頂級生產者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>San Patrignano：</strong>義大利最著名的社會企業酒莊——一所藥物成癮康復社區（容納 1,300+ 人），旗艦款 Avi Sangiovese di Romagna Superiore Riserva（均價 €25–45）已達精品等級，收益全部用於社區運作，是義大利最有故事的酒莊之一</div><div class=\"orvieto-card\"><strong>Tre Monti：</strong>Imola 丘陵的有機農法精品酒莊，旗艦 Thea Sangiovese di Romagna Riserva（均價 €20–35），以丘陵石灰岩賦予的礦物感著稱</div><div class=\"orvieto-card\"><strong>Leone Conti：</strong>自然農法先鋒，Sangiovese 老藤版本（均價 €15–30），是自然酒圈的 Romagna 代表</div></div></div></div>"
     },
@@ -115,6 +150,16 @@
       "type": "content",
       "title": "Colli Bolognesi & Pignoletto DOCG",
       "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>波隆那丘陵——被忽視的精品白酒產區</h3><p>Colli Bolognesi（波隆那丘陵）是 Emilia 精品白酒最重要的產區，以 Pignoletto 品種為核心。Pignoletto 的學名是 Grechetto Gentile，與 Umbria 的 Grechetto 有關係，但在 Bologna 丘陵的沙礫石灰岩土壤下，展現出獨特的青蘋果和杏仁礦物風格。2010 年，Colli Bolognesi Pignoletto DOCG 正式獲認，是 Emilia 地區第一個且唯一的白酒 DOCG。</p><div class=\"science-card\">Colli Bolognesi Pignoletto DOCG（2010）｜Bologna 周邊丘陵｜Pignoletto（Grechetto Gentile）</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Pignoletto 品種特徵與風格</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>干型靜態酒（Tranquillo）：</strong>白花、青蘋果、白桃、杏仁苦尾、礦物感；中等酸度；適合年輕 1–4 年飲用；是 Bologna 最流行的餐廳開胃酒選項</div><div class=\"orvieto-card\"><strong>Frizzante（微氣泡）：</strong>輕盈氣泡加強清爽度，是夏日餐前酒的完美選項；在 Bologna 的戶外餐廳（Osteria）最常見</div><div class=\"orvieto-card\"><strong>Spumante（完全氣泡）：</strong>傳統法或 Charmat 法均有；複雜度最高，適合慶祝場合</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Colli Bolognesi 其他葡萄品種</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Barbera：</strong>從 Piemonte 引入，在 Bologna 丘陵展現更柔順的版本，是 Pignoletto 的紅酒搭配</div><div class=\"orvieto-card\"><strong>Cabernet Sauvignon / Merlot：</strong>Bologna 丘陵對國際品種的在地詮釋，風格較輕盈，不走 Super Tuscan 路線</div></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏞️ Piacenza、Parma 與 Reggio Emilia 丘陵法定產區",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Emilia 西段：沿 Via Emilia 一路向東的四大葡萄酒產區</h3><p>Emilia的法定產區可劃分為四個地理上依序相連的產區，沿西北至東南走向、依循Via Emilia從Piacenza延伸至Bologna：Piacenza丘陵、Parma丘陵、Reggio Emilia／Modena的Lambrusco產區，以及Bologna地區。Piacenza丘陵早在Etruscan人時代便已種植葡萄，與Lombardia境內相鄰的Oltrepò Pavese丘陵種植條件相似，海拔介於650-1,600英尺／200-500公尺之間，形成一系列平行谷地。</p></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Colli Piacentini DOC 及其四個子產區</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Colli Piacentini DOC：</strong>Emilia境內規模最大、產量最高的產區之一。紅酒主要以Barbera與Bonarda（Croatina）釀成，常見半氣泡風格；白酒以Malvasia di Candia Aromatica為主（標示Colli Piacentini Malvasia DOC），傳統上香氣馥郁、微甜、半氣泡，passito版本也相當傳統，並允許以Malvasia＋Ortrugo釀造Vin Santo</div><div class=\"orvieto-card\"><strong>三個調配子產區：</strong>Monterosso Val d'Arda、Trebbianino Val Trebbia與Valnure，以Malvasia di Candia Aromatica、Ortrugo與Trebbiano Romagnolo調配，風格從不甜到半甜、靜態到frizzante或氣泡型皆有</div><div class=\"orvieto-card\"><strong>Vin Santo di Vigoleno：</strong>第四個子產區，古老甜型passito，以原生白品種Santa Maria與Melara、生長於中世紀小鎮Vigoleno周邊的葡萄釀成，須橡木桶陳釀至少4年，發展出蜜餞水果、蜂蜜、堅果與羅望子香氣</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">獨立出走的兩個 DOC：Gutturnio 與 Ortrugo</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Gutturnio DOC：</strong>Barbera與Bonarda（Croatina）混釀酒，2010年脫離Colli Piacentini獨立成DOC，名稱源自1878年在Piacenza附近出土的古羅馬酒壺（gutturnium）；傳統為frizzante風格（不甜或微甜），亦可釀成須較高最低酒精濃度的superiore，或須陳年至少2年（含6個月橡木桶）的riserva；classico稱謂僅保留給歷史核心產區且達superiore／riserva等級者，且皆為無氣泡不甜型</div><div class=\"orvieto-card\"><strong>Ortrugo DOC：</strong>邊界與Colli Piacentini DOC完全一致，是Ortrugo獨立出的專屬DOC，風格涵蓋無氣泡、frizzante與半乾型</div><div class=\"orvieto-card\"><strong>Colli di Parma DOC：</strong>位於Parma西側與南側丘陵，酒款多為frizzante，融合本地與國際品種，最具特色者以Lambrusco Maestri、Barbera、Malvasia di Candia Aromatica與Sauvignon Blanc調配而成</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Reggio Emilia 丘陵：Colli di Scandiano e di Canossa DOC</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">位於Reggio Emilia西南側，兼具平原與丘陵地形，酒款多為frizzante。其中最具特色者為以本地白品種Spergola釀成的酒款（無氣泡或frizzante，不甜至甜型皆有），其他重要品種包括Malvasia、Lambrusco Grasparossa、Lambrusco Montericco、Malbo Gentile、Cabernet Sauvignon與Sauvignon Blanc。產自此DOC丘陵葡萄園的Lambrusco，被視為所有Lambrusco中最優秀的一批。</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏛️ Bologna 與 Romagna 丘陵：DOC 完整架構",
+      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Bologna 地區：Colli Bolognesi DOC 與 Reno DOC</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Colli Bolognesi DOC（基礎版）：</strong>位於Bologna南側與西南側丘陵，與Colli Bolognesi Pignoletto DOCG是兩個不同法定產區——本DOC以紅、白混釀為主，也生產Barbera與Cabernet Sauvignon、Merlot、Sauvignon Blanc、Chardonnay等國際品種單一酒款，並含一個較小的「Bologna」子產區，主產紅白混釀</div><div class=\"orvieto-card\"><strong>Reno DOC：</strong>僅生產白葡萄酒，涵蓋Bologna北側與東側平原、以及Bologna與Modena之間區域，包括以Montù釀成的單一品種酒、以Trebbiano Romagnolo＋Albana調配的Reno Bianco，以及最受歡迎的Reno Montuni（無氣泡、frizzante或spumante，不甜到甜型皆有，高酸、輕盈、花香與未熟柑橘）</div><div class=\"orvieto-card\"><strong>Pignoletto DOC（2014年新設）：</strong>與Colli Bolognesi Pignoletto DOCG不同，本DOC旨在保護核心產區以外、以Pignoletto單一品種標示的酒款，並涵蓋Modena與Ravenna省鄰近村莊，下設Modena、Reno、Colli d'Imola三個子產區，可釀成無氣泡、frizzante、spumante、passito與晚收型；須至少含85%的Grechetto（Pignoletto），歷史核心產區的無氣泡superiore款可加註classico，須以至少95%的品種釀造</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Romagna DOC（2011）：五個子稱謂的傘狀架構</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">2011年設立的Romagna DOC，將原先五個獨立產區整合為其下的子稱謂——酒標上「Romagna」一字須置於每個子稱謂之前：<strong>①Sangiovese</strong>（本課程重點介紹，下設12個子產區，品種比例須達95%）、<strong>②Trebbiano</strong>（以Trebbiano Romagnolo為主）、<strong>③Pagadebit</strong>（以Bombino Bianco釀成，同義詞意為「還債者」，因劣年也能豐收得名；下設Bertinoro子產區；無氣泡或frizzante，不甜或半甜）、<strong>④Cagnina</strong>（本課程已介紹的秋收甜紅酒）、<strong>⑤Albana Spumante</strong>（以部分風乾的Albana釀成的氣泡酒，可用罐式法或傳統法，產區範圍與Romagna Albana DOCG相同）</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Romagna 丘陵次要產區與 Bosco Eliceo DOC</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>四個丘陵產區：</strong>由西至東分佈於Bologna延伸至亞得里亞海畔Rimini的丘陵地帶——Colli d'Imola DOC、Colli di Faenza DOC、Colli Romagna Centrale DOC與Colli di Rimini DOC，各聚焦本地與國際品種（Trebbiano Romagnolo、Sangiovese、Chardonnay、Sauvignon Blanc、Cabernet Sauvignon），以紅白混釀及單一品種形式釀造</div><div class=\"orvieto-card\"><strong>Bosco Eliceo DOC：</strong>位於Ravenna南側、沿Po河三角洲的亞得里亞海岸狹長沙地，含沙量高達95-97%，根瘤蚜蟲無法存活，許多葡萄藤為未嫁接原生根系，因此得名「vini delle sabbie」（沙地之酒）。旗艦酒款為以稀有本地紅品種Fortana（當地稱uva d'oro「金色葡萄」）釀成的Bosco Eliceo Fortana，可為無氣泡、vivace或frizzante，不甜至甜型皆有，傳統上搭配當地鰻魚享用</div></div></div>"
     },
     {
       "type": "content",
@@ -131,6 +176,9 @@
       "title": "重點回顧",
       "points": [
         "Emilia（西）= Lambrusco / Parmigiano / Balsamic 醋的故鄉；Romagna（東）= Sangiovese 紅酒 / Albana 白酒 / Piadina 薄餅",
+        "產業規模：葡萄園逾 123,000 英畝／50,000 公頃（義大利 8%），年產 600 萬公石（義大利 10%）；60% 種植面積屬合作社，貢獻全區 85% 產量",
+        "Emilia 西段沿 Via Emilia 依序分布四大產區：Piacenza 丘陵（Colli Piacentini／Gutturnio／Ortrugo）→ Parma 丘陵（Colli di Parma）→ Reggio Emilia（Colli di Scandiano e di Canossa／Reggiano）→ Bologna（Colli Bolognesi／Reno／Pignoletto）",
+        "Romagna DOC（2011）是傘狀架構，整合 Sangiovese、Trebbiano、Pagadebit、Cagnina、Albana Spumante 五個子稱謂",
         "Lambrusco 復興：1970–80 年代廉價甜型出口形象，1990 年後精品 Secco 不甜風格帶動全球重評",
         "四大 Lambrusco DOC：Sorbara（最優雅輕盈）/ Grasparossa（最飽滿）/ Salamino（葡萄串似香腸而得名）/ Reggiano（量最大）",
         "釀造方法：Charmat 法（工業主流）vs Ancestrale 古法（精品，保留沉澱，略混濁是品質標誌）",
@@ -150,7 +198,12 @@
         {
           "type": "single",
           "question": "優質 Lambrusco 的主流現代風格是？",
-          "options": ["甜型（Dolce）", "不甜（Secco）", "加烈酒", "橘酒"],
+          "options": [
+            "甜型（Dolce）",
+            "不甜（Secco）",
+            "加烈酒",
+            "橘酒"
+          ],
           "correct": 1,
           "explanation": "現代高品質 Lambrusco 主流是不甜（Secco）風格，清爽果香，改變過去廉價甜型形象。1970–80 年代的出口甜型版本已逐漸式微。"
         },
@@ -181,7 +234,12 @@
         {
           "type": "single",
           "question": "Aceto Balsamico Tradizionale DOCG 的最低陳年要求是？",
-          "options": ["3 年", "5 年", "12 年（銀蓋），25 年為 Extra Vecchio（金蓋）", "50 年以上"],
+          "options": [
+            "3 年",
+            "5 年",
+            "12 年（銀蓋），25 年為 Extra Vecchio（金蓋）",
+            "50 年以上"
+          ],
           "correct": 2,
           "explanation": "Tradizionale DOCG 最低陳年 12 年（銀蓋），25 年以上為 Extra Vecchio（金蓋）。葡萄汁在一系列不同木材的縮小木桶中逐年轉移濃縮，是義大利最複雜的農產品之一。"
         },

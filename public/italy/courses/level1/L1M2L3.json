@@ -1,4 +1,4 @@
-﻿{
+{
   "lessonId": "L1M2L3",
   "title": "Veneto 威尼托 - 水都風情",
   "quiz": [
@@ -56,12 +56,17 @@
     {
       "type": "content",
       "title": "📍 產區概況",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利東北部威尼斯大區，從Dolomites阿爾卑斯山麓延伸至Po河平原。<span class=\"highlight\">義大利第二大產區</span>（約80,000公頃），14 DOCG + 14 DOC，Prosecco、Amarone、Soave三大風格各霸一方，年產量居義大利之冠。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>義大利東北部，北靠Dolomites，東臨亞德里亞海，首府維洛納（Verona）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園規模</strong><br>約80,000公頃，義大利第二大產區（僅次於Sicily），年產量居義大利各大區之冠</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>法定認證</strong><br>14 DOCG + 14 DOC，義大利認證密度最高省份之一，品質幅度從入門到收藏均有</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍾</div><div class=\"fact-text\"><strong>全球影響力</strong><br>全球第一大Prosecco產區，Amarone是義大利最強勁紅酒之一，Soave是全球最廣泛飲用義大利白酒</div></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利東北部威尼斯大區，從Dolomites阿爾卑斯山麓延伸至Po河平原。<span class=\"highlight\">義大利種植面積第三大產區</span>（約80,000公頃，僅次於Sicilia、Puglia），14 DOCG + 29 DOC（截至2017年統計），Prosecco、Amarone、Soave三大風格各霸一方，DOC/G分級年產量居義大利之冠（逾50%產量為DOC/G等級，IGT約占25-30%）。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>義大利東北部，北靠Dolomites，東臨亞德里亞海，首府維洛納（Verona）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園規模</strong><br>約80,000公頃，義大利種植面積第三大產區（僅次於Sicilia、Puglia），DOC/G分級年產量居義大利各大區之冠</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>法定認證</strong><br>14 DOCG + 29 DOC，DOCG數量全義大利第二（僅次於Piemonte），品質幅度從入門到收藏均有</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍾</div><div class=\"fact-text\"><strong>全球影響力</strong><br>全球第一大Prosecco產區，Amarone是義大利最強勁紅酒之一，Soave是全球最廣泛飲用義大利白酒</div></div></div>"
     },
     {
       "type": "content",
       "title": "🏛 歷史與文化地位",
       "content": "<div class=\"history-section\"><p class=\"history-intro\">從羅馬帝國的「最優質葡萄酒」到2019年UNESCO世界遺產 —— <span class=\"intro-highlight\">威尼斯共和國1100年貿易帝國讓Veneto葡萄酒走遍世界</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">公元前1世紀</div><div class=\"timeline-content\"><strong>羅馬帝國盛世</strong>：Pliny the Elder在《自然史》中讚美Valpolicella的Rhaetic葡萄酒，羅馬人列其為帝國最優質葡萄酒之一</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1000-1400年</div><div class=\"timeline-content\"><strong>中世紀記載</strong>：Corvina和Garganega品種首次被文獻記載，修道院成為釀造技術中心，Recioto甜紅酒成為貴族珍品</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">697-1797年</div><div class=\"timeline-content\"><strong>威尼斯共和國盛世</strong>：威尼斯商人將Veneto葡萄酒運往全歐洲和東地中海，Palladio別墅莊園成為葡萄園文化象徵，葡萄酒成為外交贈禮</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">2019年</div><div class=\"timeline-content\"><strong>UNESCO世界遺產</strong>：Prosecco丘陵（Conegliano-Valdobbiadene）獲列入世界遺產，確立文化與農業歷史地位</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">2000年+</div><div class=\"stat-label\">釀酒歷史</div></div><div class=\"stat-box\"><div class=\"stat-number\">1100年</div><div class=\"stat-label\">威尼斯共和國</div></div><div class=\"stat-box\"><div class=\"stat-number\">2019</div><div class=\"stat-label\">UNESCO世界遺產</div></div><div class=\"stat-box\"><div class=\"stat-number\">#1</div><div class=\"stat-label\">全球Prosecco產區</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "📜 Veneto歷史深度：從Veneti人到威尼斯共和國（IWS官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Veneti人與羅馬時代</h3><p>可確定Veneti人早於<strong>西元前9世紀</strong>已定居Veneto，向鄰近的Rhaeti、Etruscan人學會種植葡萄與釀酒（傳說Veneti人在特洛伊陷落後自安納托利亞遷入，但缺乏考古佐證）。Veneti人與羅馬結盟對抗塞爾特人入侵，凱撒於<strong>西元前49年</strong>授予Veneti羅馬公民權，羅馬人隨後擴大葡萄園、提升產量；當地古酒「Retico」「Acinatico」被視為今日Verona省甜型recioto酒的前身。</p></div><div class=\"science-card\">西羅馬帝國滅亡後（5世紀），倫巴底人於568年越過阿爾卑斯山入侵，Veneto一度分裂為內陸（倫巴底控制）與沿海（拜占庭控制）兩部分，葡萄種植嚴重衰退，直到威尼斯崛起為海上強權後才復甦；威尼斯於9世紀脫離拜占庭獨立，成為由選舉產生的「Doge」（元首）領導的共和國，勢力其後擴及Veneto、Friuli、部分Lombardia及今日斯洛維尼亞、克羅埃西亞部分地區</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">從威尼斯衰落到義大利統一</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">17世紀鄂圖曼帝國崛起、新航路開通及美洲的發現，使威尼斯政經地位式微，<strong>1709年</strong>的嚴寒冬季更重創葡萄種植（大量葡萄藤凍死）。1797年拿破崙入侵北義大利、佔領Veneto，結束威尼斯逾千年的獨立；拿破崙戰敗後改由奧地利帝國控制，1866年才併入義大利王國</div><div class=\"orvieto-card\"><strong>1876年</strong>Conegliano釀酒學校（Scuola Enologica di Conegliano）成立，是義大利最早、最重要的釀酒教育機構之一，早期任務之一即為研究白粉病（oidium）、根瘤蚜（phylloxera）、露菌病（downy mildew）的防治，成為產業復甦的起點</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">兩次世界大戰與戰後經濟奇蹟</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">一戰期間Veneto淪為主要戰場，戰爭破壞與貧困導致大量人口外移；二戰同樣造成損害，真正的經濟復甦要到<strong>1960年代</strong>才展開，此後家具、皮革、紡織、金屬製造等中小企業蓬勃發展，帶動Veneto成為義大利乃至歐洲最富裕地區之一，葡萄酒業也同步導入現代化技術，藉Soave與Valpolicella的國際成功躍升為歐洲最大葡萄酒產區之一</div><div class=\"orvieto-card\">💡 <strong>產業起伏：</strong>1970-80年代Valpolicella、Soave曾享國際盛名，其後因供不應求導致品質下滑趨於平庸，1990年代由同一批產區帶動品質復興，目前產業同時兼顧大量平價酒與強調原生品種、風土、單一葡萄園（cru）的精品化路線</div></div></div>"
     },
     {
       "type": "content",
@@ -75,8 +80,18 @@
     },
     {
       "type": "content",
+      "title": "🍇 Veneto品種統計與更多原生品種（IWS官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>種植比例（Regione Veneto 2013統計）</h3><p>Glera 28%・Garganega 13%・Pinot Grigio 12%・Merlot 9%・Corvina 8%・Cabernet Sauvignon 4%・Chardonnay 4%・Rondinella 3%・Cabernet Franc 3%・Corvinone 1%・Pinot Bianco 1%・其他14%。原生的<strong>Glera、Garganega、Corvina Veronese</strong>三者合計占全區近半種植面積，逾60%為原生或義大利本土品種。</p></div><div class=\"science-card\">🍷 <strong>Merlot 王國：</strong>波爾多品種於1830年代引入中東部Veneto，根瘤蚜蟲害後地位更形重要，已有近200年種植歷史而被視為傳統品種（常混合裝瓶並簡稱「Cabernet」）。Merlot現為區內種植最廣的紅葡萄品種，也是<strong>全義大利種植面積最大的Merlot產區</strong>；Cabernet Franc歷史上種植更廣，現已被Cabernet Sauvignon超越</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Valpolicella混調的配角品種</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Rondinella：</strong>Verona省已種植數世紀但19世紀末才正式記載，證實為Corvina的後代。易栽培、抗病抗寒抗旱、產量高，抗真菌病害特性很適合appassimento，帶櫻桃香氣、單寧低、酒體輕，但缺乏Corvina的個性與優雅度</div><div class=\"orvieto-card\"><strong>Corvinone：</strong>Verona原生品種，過去誤以為是Corvina的無性系突變，DNA證實兩者完全無關；名稱意為「大Corvina」，單寧高於Corvina，經appassimento後可增添結構、酒體與鹹鮮風味，現已納入官方品種但使用比例受限</div><div class=\"orvieto-card\"><strong>Molinara：</strong>名稱源自「mulino」（磨坊），因果粒表面覆有似麵粉的白色果粉而得名。過去是Valpolicella經典組成之一，2003年起被移出強制品種名單，但仍有酒莊認為能為濃郁的Amarone帶來平衡、貢獻酸度</div><div class=\"orvieto-card\"><strong>Oseleta：</strong>Verona古老原生品種，因產量低且不穩定，1970年代幾近絕種；因酒莊Masi於1980年代重新發掘並復育而重獲關注，少量添加可提升混調酒款的結構，現愈來愈常用於Valpolicella</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Raboso Piave 與其他重要原生品種</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Raboso Piave：</strong>單寧與酸度都很高的品種，原鄉在Piave河沖積平原；名稱可能源自義大利文「rabbioso」（狂暴）形容酒的粗獷風格。自1950年代起逐漸被Merlot取代而式微，1980年代起在地酒莊興起復興風潮，充分成熟的果實經足夠橡木桶及瓶陳可馴化其單寧與酸度，成酒色深、具漿果、紫羅蘭、菸草、皮革等複雜香氣</div><div class=\"orvieto-card\"><strong>Vespaiola：</strong>Vicenza省特有的古老品種，名稱源於「vespe」（黃蜂），因黃蜂喜愛其甜美果實而得名。生長勢強、酸度高，更以釀造甜型passito酒聞名（即Breganze的Torcolato）</div><div class=\"orvieto-card\"><strong>Durella：</strong>原生於Monti Lessini，高酸度使其非常適合釀造氣泡酒（Lessini Durello DOC），成酒風格爽脆、帶礦物與打火石特徵風味</div><div class=\"orvieto-card\"><strong>Manzoni Bianco：</strong>1930年代由Conegliano釀酒學校教授Luigi Manzoni育成的人工雜交品種（原名Incrocio Manzoni 6.0.13），長期被認為是Riesling與Pinot Bianco的雜交，但近期研究顯示可能實為Riesling與Chardonnay的雜交；風格清爽、帶淡雅香氣、具礦物與辛香調</div></div></div>"
+    },
+    {
+      "type": "content",
       "title": "✨ 三大明星酒款",
       "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Veneto三大國際巨星，分別代表氣泡、紅酒、白酒的不同極致 —— 從全球第一氣泡酒到義大利最強勁紅酒</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🥂 Prosecco DOC / DOCG</strong><p>Glera 85%+，Charmat法大罐二次發酵，清新果香細緻氣泡。白桃、梨子、杏花。10.5-12%酒精，1-3年適飲期。全球第一氣泡酒。搭配開胃菜、海鮮、brunch。€6-50+。</p></div><div class=\"orvieto-card\"><strong>🍷 Amarone della Valpolicella DOCG</strong><p>Corvina + Rondinella + Molinara，100% Appassimento風乾，近乎干型。乾果、巧克力、皮革，15-17%酒精，陳年10-30年。義大利最強勁紅酒。搭配燉肉、野味、陳年起司。€25-600+。</p></div><div class=\"orvieto-card\"><strong>🤍 Soave Classico DOCG</strong><p>Garganega 70%+，玄武岩老藤，礦物感十足。杏仁、白花、礦物、蜂蜜（老藤），11.5-13%，3-20年潛力。搭配海鮮、白肉、淡味起司。€12-55。</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏞️ Bardolino & Custoza：加爾達湖畔的清爽酒款（IWS官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Bardolino——「橄欖樹海岸」的輕盈紅酒</h3><p>位於加爾達湖東南岸的「Riviera degli Ulivi」（橄欖樹海岸），葡萄園與橄欖樹並存，只釀造清淡的rosso（紅）與rosato（粉紅）酒款。混調以<strong>Corvina Veronese</strong>為主（法規35-80%，平均占60%），搭配Rondinella（10-40%）及Molinara（0-15%）。酒色淺寶石紅、清淡清爽，具花香、粉紅葡萄柚、櫻桃、野莓香氣，建議年輕、微冰飲用。</p></div><div class=\"science-card\">🏆 官方分級：<strong>Bardolino DOC</strong>（含Bardolino Classico、Bardolino Chiaretto粉紅酒、Bardolino Novello新酒三種標示）與<strong>Bardolino Superiore DOCG</strong>（更低產量、更高酒精、至少陳年一年）。最佳酒款多來自classico次產區（Bardolino鎮及周邊村落），風格具獨特辛鹹（salato）風味</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Custoza DOC（Bianco di Custoza）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">白酒產區，得名自Custoza小村，與Bardolino DOC南部範圍重疊，土壤為冰磧地形沉積、多礫石。混調品種：<strong>Trebbiano Toscano、Garganega、Tai、Cortese</strong>，官方比例Trebbiano Toscano 10-45%、Garganega 20-40%，優質酒莊傾向提高Garganega比例。酒款色淺、酒體輕盈、乾淨爽口，是義大利高性價比白酒代表之一</div><div class=\"orvieto-card\">💡 <strong>Lugana DOC小檔案：</strong>以Turbiana品種為主的跨區產區，主要位於Lombardia，但約60%的酒由Veneto側（Peschiera del Garda鎮周邊，尤以San Benedetto di Lugana聞名）的酒莊裝瓶</div></div></div>"
     },
     {
       "type": "veneto-docg-map",
@@ -109,6 +124,11 @@
     },
     {
       "type": "content",
+      "title": "🗺️ 中部與東部Veneto其他重要法定產區（IWS官方教材）",
+      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Gambellara——Soave的「雙生」姊妹產區</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">同樣以<strong>Garganega</strong>為主的純白酒DOC（最低80%），範圍緊鄰Soave東側、完全位於Vicenza省境內，火山玄武岩土壤條件與Soave東半部相似。<strong>Recioto di Gambellara DOCG</strong>以100% Garganega（僅限classico產區）釀成甜passito酒，傳統以「picai」工法風乾（將果串以細繩綁紮懸掛於屋樑）。Gambellara也是全Veneto唯一出產Vin Santo的產區</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Breganze——Maculan推動的隱藏珍寶</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">位於Asiago高原山麓，以優質波爾多混調及單一品種聞名。特有兩款酒皆以原生白葡萄<strong>Vespaiola</strong>釀成：<strong>Torcolato</strong>（100% Vespaiola甜passito酒，名稱源於「torcolare」絞緊束緊果串的傳統風乾綁紮技法）與<strong>Vespaiolo</strong>（不甜單一品種白酒）</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Colli Berici & Colli Euganei——火山與海相丘陵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Colli Berici DOC：</strong>Vicenza市以南由海相石灰岩構成的孤立丘陵，區內最受矚目的是單一品種<strong>Tai Rosso</strong>（即Cannonau/Grenache），最佳表現見於中央的Barbarano子區（規定須100% Tai Rosso）</div><div class=\"orvieto-card\"><strong>Colli Euganei DOC：</strong>火山成因丘陵（玄武岩、凝灰岩、流紋岩），19世紀便是全Veneto最早引進Cabernet與Merlot的先驅之一。<strong>Colli Euganei Fior d'Arancio DOCG</strong>是義大利少數以稀有品種Moscato Giallo釀造的產區之一，濃郁的passito版本最具代表性</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">東部平原：Piave DOC 與 Lison-Pramaggiore</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Piave DOC：</strong>橫跨Treviso、Venezia兩省的大型appellation，是Merlot主要產區之一；區內最具特色的是原生品種<strong>Raboso Piave</strong>所釀的Raboso del Piave DOC，色深、單寧極高、酸度高，法規要求至少陳年兩年。<strong>Piave Malanotte（Malanotte del Piave）DOCG</strong>原為Piave DOC下的特定標示，因獨特風格升級為獨立DOCG，規定15-30%葡萄須經appassimento風乾以馴化Raboso強勁的單寧</div><div class=\"orvieto-card\"><strong>Lison-Pramaggiore DOC：</strong>跨Veneto/Friuli Venezia Giulia邊界的產區，Merlot、兩種Cabernet被視為當地傳統品種。<strong>Lison DOCG</strong>原為Tai（即Friulano）酒款的特定標示，因品質優異獨立升級為DOCG，是全球第一個以Tai/Friulano品種獲得DOCG的產區</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Asolo-Montello：Conegliano以外的Prealps丘陵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Asolo Prosecco DOCG：</strong>環繞Asolo鎮，氣候較Conegliano Valdobbiadene略暖濕，同樣以Glera為基礎，總產量遠小於Conegliano Valdobbiadene DOCG。<strong>Montello（Montello Rosso）DOCG</strong>是2011年設立的新DOCG，波爾多式紅酒以Cabernet Sauvignon（40-70%）為主，富含黏土的坡地土壤造就結構扎實、具陳年潛力的酒款</div></div></div>"
+    },
+    {
+      "type": "content",
       "title": "🍽️ 美食與佐餐搭配",
       "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Veneto美食與葡萄酒的完美邂逅 —— 水都威尼斯的海鮮風情、Verona的燉肉傳統、以及以Amarone作食材的頂級料理文化</p><div class=\"food-pairing\"><div class=\"pairing-card\"><strong>🥂 Prosecco Brut DOCG</strong><p><strong>搭配：Sarde in Saor（威尼斯醋漬沙丁魚）</strong><br>威尼斯最古老的傳統菜，洋蔥醋漬沙丁魚配松子葡萄乾。Prosecco清爽氣泡去油解膩，杏花香平衡酸甜，典型威尼斯開胃搭配。</p></div><div class=\"pairing-card\"><strong>🤍 Soave Classico DOCG</strong><p><strong>搭配：Baccalà alla Vicentina（維琴察鹽漬鱈魚）</strong><br>鹽漬鱈魚以牛奶和洋蔥燉煮，維琴察的驕傲。Garganega的礦物感和杏仁花香完美搭配鱈魚鮮甜，高酸清口不膩。</p></div><div class=\"pairing-card\"><strong>🌿 Valpolicella Ripasso</strong><p><strong>搭配：Pasta e Fagioli（豆子義大利麵）</strong><br>Veneto農民傳統菜，濃郁豆類湯底。Ripasso中等複雜的果味和單寧搭配豆類厚重感，互相提升，溫暖身心。</p></div><div class=\"pairing-card\"><strong>🍷 Amarone della Valpolicella DOCG</strong><p><strong>搭配：Risotto all'Amarone（Amarone紅酒燉飯）</strong><br>最高境界的酒食搭配：以Amarone本身入菜釀製的燉飯，再以Amarone佐餐。酒食同源，濃郁對濃郁，Veneto頂級料理文化。</p></div></div></div>"
     },
@@ -121,7 +141,9 @@
           "title": "Amarone vs Valpolicella Superiore——同葡萄、不同工藝",
           "intro": "兩者都來自 Veneto Valpolicella、使用相同葡萄組合（Corvina+Rondinella+Molinara），但釀造工藝決定了天差地別的風格。",
           "left": {
-            "name": "Amarone della Valpolicella DOCG", "region": "Veneto / Valpolicella", "color": "#5C2334",
+            "name": "Amarone della Valpolicella DOCG",
+            "region": "Veneto / Valpolicella",
+            "color": "#5C2334",
             "grape": "45-95% Corvina + Corvinone、Rondinella、其他",
             "soil": "Valpolicella 石灰質黏土",
             "climate": "溫和大陸、Lake Garda 調節",
@@ -133,7 +155,9 @@
             "producers": "Quintarelli、Dal Forno、Bertani、Allegrini、Masi"
           },
           "right": {
-            "name": "Valpolicella Superiore DOC", "region": "Veneto / Valpolicella", "color": "#A8324A",
+            "name": "Valpolicella Superiore DOC",
+            "region": "Veneto / Valpolicella",
+            "color": "#A8324A",
             "grape": "相同混釀（Corvina+Rondinella+Molinara）",
             "soil": "相同",
             "climate": "相同",
@@ -176,7 +200,7 @@
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Veneto 是義大利產量第二大的產區，擁有14個DOCG和14個DOC",
+        "✓ Veneto 種植面積是義大利第三大產區（僅次於Sicilia、Puglia），擁有14個DOCG和29個DOC，DOC/G分級年產量居全義大利之冠",
         "✓ 威尼斯共和國時期成就葡萄酒貿易黃金時代，Prosecco丘陵2019年列入UNESCO世界遺產",
         "✓ 三大地理區：東部Prosecco丘陵（涼爽）、中西部Valpolicella/Soave（溫和）、南部Po河平原（大量生產）",
         "✓ Corvina厚皮高酸適合Appassimento風乾，Garganega老藤展現驚人深度，Glera成就Prosecco清新風格",
