@@ -31,7 +31,20 @@
           <span class="aoc-dot" :style="{ background: aocColor(folderName) }"></span>
           <span class="aoc-name">{{ formatAOCName(file) }}</span>
         </div>
-        
+
+        <!-- 跨村莊 AOC：同時顯示所有村莊圖層並整合資訊 -->
+        <div
+          v-for="group in multiCommuneItemsFor(folderName)"
+          :key="'multi-' + folderName + '-' + group.baseKey"
+          class="aoc-item aoc-item-multi"
+          :class="{ active: isActive(folderName, multiSelector(group)) }"
+          :title="`涵蓋村莊：${group.members.map(m => m.communeLabel).join('、')}`"
+          @click="$emit('selectAOC', folderName, multiSelector(group))"
+        >
+          <span class="aoc-dot aoc-dot-multi">🔗</span>
+          <span class="aoc-name">{{ group.baseLabel }}（全部 {{ group.members.length }} 村）</span>
+        </div>
+
         <!-- Subfolders -->
         <div v-for="(subfolderContent, subfolderName) in folderContent.subfolders" :key="subfolderName">
           <div class="group-header" @click="toggleRegion(subfolderName)">
@@ -49,6 +62,18 @@
               <span class="aoc-dot" :style="{ background: aocColor(subfolderName) }"></span>
               <span class="aoc-name">{{ formatAOCName(file) }}</span>
             </div>
+
+            <div
+              v-for="group in multiCommuneItemsFor(folderName + '/' + subfolderName)"
+              :key="'multi-' + subfolderName + '-' + group.baseKey"
+              class="aoc-item aoc-item-multi"
+              :class="{ active: isActive(subfolderName, multiSelector(group)) }"
+              :title="`涵蓋村莊：${group.members.map(m => m.communeLabel).join('、')}`"
+              @click="$emit('selectAOC', folderName + '/' + subfolderName, multiSelector(group))"
+            >
+              <span class="aoc-dot aoc-dot-multi">🔗</span>
+              <span class="aoc-name">{{ group.baseLabel }}（全部 {{ group.members.length }} 村）</span>
+            </div>
           </div>
         </div>
       </div>
@@ -58,6 +83,7 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
+import { buildMultiCommuneGroups, makeMultiCommuneSelector } from '@/utils/multiCommuneAOC'
 
 const props = defineProps({
   search: String,
@@ -77,6 +103,7 @@ const emit = defineEmits(['update:search', 'selectAOC'])
 
 const geojsonTree = ref({})
 const expandedRegions = ref({})
+const multiCommuneGroups = ref([])
 
 const searchModel = computed({
   get: () => props.search,
@@ -132,11 +159,24 @@ const isActive = (group, aoc) => {
   return activeGroupPath.endsWith(group) && props.activeAOC?.aoc === aoc;
 }
 
+// 依 baseKey 挑出「顯示全部村莊」項目要插入的資料夾（primaryGroupPath）
+const multiCommuneItemsFor = (groupPath) => {
+  const lowerSearch = (searchModel.value || '').toLowerCase();
+  return multiCommuneGroups.value.filter(group => {
+    if (group.primaryGroupPath !== groupPath) return false;
+    if (!lowerSearch) return true;
+    return group.baseLabel.toLowerCase().includes(lowerSearch);
+  });
+}
+
+const multiSelector = (group) => makeMultiCommuneSelector(group.baseKey)
+
 const loadGeojsonIndex = async () => {
   try {
     const res = await fetch(props.indexPath);
     if (!res.ok) throw new Error('Failed to load geojson index');
     geojsonTree.value = await res.json();
+    multiCommuneGroups.value = buildMultiCommuneGroups(geojsonTree.value);
     // Initialize expansion state
     for (const key in geojsonTree.value) {
       expandedRegions.value[key] = false;
@@ -325,6 +365,30 @@ watch(() => props.indexPath, async () => {
   flex-shrink: 0;
   border: 2px solid white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.aoc-item-multi {
+  background: linear-gradient(to right, #fff8ec, white);
+  font-weight: 600;
+}
+
+.aoc-item-multi:hover {
+  color: #b8860b;
+}
+
+.aoc-item-multi.active {
+  color: #b8860b;
+  border-left: 4px solid #b8860b;
+  box-shadow: inset 0 0 0 1px rgba(184, 134, 11, 0.15);
+}
+
+.aoc-dot-multi {
+  width: auto;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  font-size: 0.85rem;
+  line-height: 1;
 }
 
 @media (max-width: 4096px) {

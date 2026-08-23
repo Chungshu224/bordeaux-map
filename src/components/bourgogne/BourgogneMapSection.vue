@@ -193,6 +193,7 @@ import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as turf from '@turf/turf'
 import { useBRGMGeology, BRGM_POPUP_STYLES } from '@/composables/useBRGMGeology.js'
+import { buildMultiCommuneGroups, isMultiCommuneSelector, parseMultiCommuneSelector } from '@/utils/multiCommuneAOC'
 import {
   getMapboxToken,
   shouldUseMapbox,
@@ -340,9 +341,16 @@ const isGoldenVintage = computed(() => {
   const gv = climateData.value.__meta?.goldenVintages || []
   return gv.includes(climateYear.value)
 })
+// 將檔名／跨村莊選取器轉為可顯示的名稱
+function prettyAocLabel(aocFile) {
+  const baseKey = parseMultiCommuneSelector(aocFile)
+  if (baseKey !== null) return baseKey.replace(/-/g, ' ')
+  return aocFile.replace('.geojson', '').replace(/_/g, ' ')
+}
+
 const climateCurrentAocLabel = computed(() => {
   if (!props.activeAOC?.aoc) return null
-  return props.activeAOC.aoc.replace('.geojson', '').replace(/_/g, ' ')
+  return prettyAocLabel(props.activeAOC.aoc)
 })
 
 
@@ -774,6 +782,51 @@ function findGeojsonPathInIndex(indexObj, filename) {
   return null
 }
 
+// 跨村莊 AOC：讀取所有成員村莊的 geojson，合併成單一 FeatureCollection，
+// 讓地圖以單一圖層同時顯示所有村莊的區塊。
+async function loadMergedMultiCommuneGeojson(indexJson, aocFile) {
+  const baseKey = parseMultiCommuneSelector(aocFile)
+  const groups = buildMultiCommuneGroups(indexJson)
+  const groupInfo = groups.find(g => g.baseKey === baseKey)
+  if (!groupInfo) return null
+
+  const allFeatures = []
+  for (const member of groupInfo.members) {
+    const path = findGeojsonPathInIndex(indexJson, member.file)
+    if (!path) {
+      console.warn('[loadMergedMultiCommuneGeojson] index.json 中未找到檔案:', member.file)
+      continue
+    }
+
+    let memberGeojson
+    if (geojsonCache.has(path)) {
+      memberGeojson = geojsonCache.get(path)
+    } else {
+      const res = await fetch(path)
+      if (!res.ok) {
+        console.warn('[loadMergedMultiCommuneGeojson] 載入失敗:', path, res.status)
+        continue
+      }
+      memberGeojson = await res.json()
+      geojsonCache.set(path, memberGeojson)
+    }
+
+    const features = memberGeojson.type === 'FeatureCollection'
+      ? memberGeojson.features
+      : [memberGeojson]
+
+    features.forEach(feature => {
+      allFeatures.push({
+        ...feature,
+        properties: { ...feature.properties, __commune: member.communeLabel }
+      })
+    })
+  }
+
+  if (!allFeatures.length) return null
+  return { type: 'FeatureCollection', features: allFeatures }
+}
+
 async function loadInitialVillageGeojsons() {
   if (!map) return null
   try {
@@ -939,27 +992,35 @@ const showAOCGeojson = async (groupName, aocFile) => {
     if (!idxRes.ok) throw new Error('無法讀取 geojson index')
     const indexJson = await idxRes.json()
 
-    // 使用 findGeojsonPathInIndex 函數查找正確的檔案路徑
-    const geojsonPath = findGeojsonPathInIndex(indexJson, aocFile)
-    
-    if (!geojsonPath) {
-      throw new Error(`在 index.json 中找不到檔案: ${aocFile}`)
-    }
-
-    // Debug log：方便在 console 檢查實際請求的路徑
-    console.debug('[showAOCGeojson] 載入 geojson 路徑:', geojsonPath)
-
     let geojson
-    if (geojsonCache.has(geojsonPath)) {
-      geojson = geojsonCache.get(geojsonPath)
-      console.debug('[showAOCGeojson] 使用緩存的 geojson')
+    if (isMultiCommuneSelector(aocFile)) {
+      // 跨村莊 AOC：合併所有成員村莊的 geojson，於單一圖層同時顯示
+      geojson = await loadMergedMultiCommuneGeojson(indexJson, aocFile)
+      if (!geojson) {
+        throw new Error(`找不到跨村莊 AOC 群組: ${aocFile}`)
+      }
     } else {
-      console.debug('[showAOCGeojson] Fetching:', geojsonPath)
-      const res = await fetch(geojsonPath)
-      if (!res.ok) throw new Error(`無法載入 geojson (${res.status})`)
-      geojson = await res.json()
-      console.debug('[showAOCGeojson] GeoJSON 已解析:', geojson.type, '特徵數:', geojson.features?.length)
-      geojsonCache.set(geojsonPath, geojson)
+      // 使用 findGeojsonPathInIndex 函數查找正確的檔案路徑
+      const geojsonPath = findGeojsonPathInIndex(indexJson, aocFile)
+
+      if (!geojsonPath) {
+        throw new Error(`在 index.json 中找不到檔案: ${aocFile}`)
+      }
+
+      // Debug log：方便在 console 檢查實際請求的路徑
+      console.debug('[showAOCGeojson] 載入 geojson 路徑:', geojsonPath)
+
+      if (geojsonCache.has(geojsonPath)) {
+        geojson = geojsonCache.get(geojsonPath)
+        console.debug('[showAOCGeojson] 使用緩存的 geojson')
+      } else {
+        console.debug('[showAOCGeojson] Fetching:', geojsonPath)
+        const res = await fetch(geojsonPath)
+        if (!res.ok) throw new Error(`無法載入 geojson (${res.status})`)
+        geojson = await res.json()
+        console.debug('[showAOCGeojson] GeoJSON 已解析:', geojson.type, '特徵數:', geojson.features?.length)
+        geojsonCache.set(geojsonPath, geojson)
+      }
     }
 
     // 移除初始村莊圖層（使用已載入的檔案列表）
@@ -1569,25 +1630,28 @@ const unifiedInfo = computed(() => {
   if (domainesMode.value) {
     const domName = activeDomaine.value
       ? activeDomaine.value.replace('.geojson', '')
-      : aoc.aoc.replace('.geojson', '').replace(/_/g, ' ')
+      : prettyAocLabel(aoc.aoc)
     return { name: domName, description: '' }
   }
   const r = props.regionInfo
-  if (!r) return { name: aoc.aoc.replace('.geojson', '').replace(/_/g, ' '), description: '' }
+  if (!r) return { name: prettyAocLabel(aoc.aoc), description: '' }
   const meta = []
   if (r.area) meta.push({ label: '面積', value: r.area })
   if (r.altitude) meta.push({ label: '海拔', value: r.altitude })
   if (r.exposition) meta.push({ label: '坡向', value: r.exposition })
   const styles = r.wineTypes || []
+  const badges = r.classification ? [{ label: r.classification }] : [];
+  if (r.subregions) badges.push({ label: `跨村莊 AOC · ${Object.keys(r.subregions).length} 村` });
   return {
-    name: r.name || aoc.aoc.replace('.geojson', '').replace(/_/g, ' '),
-    badges: r.classification ? [{ label: r.classification }] : [],
+    name: r.name || prettyAocLabel(aoc.aoc),
+    badges,
     meta,
     styles,
     grapes: r.grapeVarieties || [],
     climate: r.climate || '',
     soil: r.soilStructure || '',
-    description: [r.wineStyle, r.tastingNotes, r.agingPotential].filter(Boolean).join(' ／ '),
+    description: [r.wineStyle, r.tastingNotes, r.agingPotential].filter(Boolean).join(' ／ ') || r.description || '',
+    subregions: r.subregions || undefined,
     estates: (r.famousWineries || []).map(w => ({ name: w })),
   }
 })
