@@ -6,6 +6,8 @@
 ![Vue](https://img.shields.io/badge/Vue.js-3.5+-green.svg)
 ![Mapbox](https://img.shields.io/badge/Mapbox-GL-orange.svg)
 
+🌐 **線上體驗**：[https://bordeaux-map.vercel.app/](https://bordeaux-map.vercel.app/)
+
 ## 🌟 最新突破與更新 (2026)
 
 ### 🏰 巨量酒莊地圖資料擴充
@@ -114,8 +116,8 @@ src/
 
 1. **克隆專案**
 ```bash
-git clone https://github.com/yourusername/bordeaux-wine-academy.git
-cd bordeaux-wine-academy
+git clone https://github.com/Chungshu224/bordeaux-map.git
+cd bordeaux-map
 ```
 
 2. **安裝依賴**
@@ -157,6 +159,17 @@ npm run build
 ```bash
 npm run preview
 ```
+
+### 🚀 部署到 Vercel
+
+1. 在 Vercel 新增專案並連接此 GitHub 倉庫。
+2. 在 **Settings → Environment Variables** 中加入：
+   ```
+   VITE_MAPBOX_TOKEN=pk.your_mapbox_public_token_here
+   ```
+3. 觸發重新部署後，即可透過 [https://bordeaux-map.vercel.app/](https://bordeaux-map.vercel.app/) 存取。
+
+詳細說明請參閱 [VERCEL_DEPLOYMENT_GUIDE.md](./VERCEL_DEPLOYMENT_GUIDE.md)。
 
 ## 🖼️ 媒體資產優化工具
 
