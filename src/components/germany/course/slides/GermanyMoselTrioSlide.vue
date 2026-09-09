@@ -131,11 +131,11 @@ const rivers = [
     estates: 'J.J. Prüm（傳奇）、Dr. Loosen、Markus Molitor、Heymann-Löwenstein、Weingut Willi Schaefer',
     vintages: '2019、2015、2011（TBA 年份）、2009、2005（甜酒經典）',
     vineyardPoints: [
-      { name: 'Bernkasteler Doctor', lng: 7.0692, lat: 49.9186, estate: 'Wegeler / Dr. H. Thanisch' },
-      { name: 'Wehlener Sonnenuhr', lng: 7.0294, lat: 49.9243, estate: 'J.J. Prüm' },
-      { name: 'Graacher Himmelreich', lng: 7.0580, lat: 49.9370, estate: 'Willi Schaefer / Dr. Loosen' },
-      { name: 'Ürziger Würzgarten', lng: 7.0053, lat: 49.9822, estate: 'Dr. Loosen / Merkelbach' },
-      { name: 'Erdener Treppchen', lng: 7.0210, lat: 49.9770, estate: 'Dr. Loosen' }
+      { name: 'Bernkasteler Doctor', lng: 7.0780, lat: 49.9165, estate: 'Wegeler / Dr. H. Thanisch' },
+      { name: 'Wehlener Sonnenuhr', lng: 7.0250, lat: 49.9245, estate: 'J.J. Prüm' },
+      { name: 'Graacher Himmelreich', lng: 7.0637, lat: 49.9366, estate: 'Willi Schaefer / Dr. Loosen' },
+      { name: 'Ürziger Würzgarten', lng: 7.0049, lat: 49.9825, estate: 'Dr. Loosen / Merkelbach' },
+      { name: 'Erdener Treppchen', lng: 7.0273, lat: 49.9776, estate: 'Dr. Loosen' }
     ]
   },
   {
@@ -157,11 +157,11 @@ const rivers = [
     estates: 'Egon Müller（Scharzhofberg，世界最昂貴德國酒）、Van Volxem、Weingut Zilliken（Forstmeister Geltz）、Peter Lauer',
     vintages: '2003（例外溫暖）、2009、2015、2019（近年最佳）',
     vineyardPoints: [
-      { name: 'Scharzhofberg', lng: 6.6200, lat: 49.6550, estate: 'Egon Müller' },
-      { name: 'Ockfener Bockstein', lng: 6.5780, lat: 49.6280, estate: 'Van Volxem' },
-      { name: 'Ayl Kupp', lng: 6.5620, lat: 49.6340, estate: 'Peter Lauer' },
-      { name: 'Wiltinger Braune Kupp', lng: 6.5780, lat: 49.6630, estate: 'Van Volxem' },
-      { name: 'Kanzemer Altenberg', lng: 6.5680, lat: 49.6690, estate: 'Von Othegraven' }
+      { name: 'Scharzhofberg', lng: 6.6117, lat: 49.6530, estate: 'Egon Müller' },
+      { name: 'Ockfener Bockstein', lng: 6.5894, lat: 49.6246, estate: 'Van Volxem' },
+      { name: 'Ayl Kupp', lng: 6.5593, lat: 49.6375, estate: 'Peter Lauer' },
+      { name: 'Wiltinger Braune Kupp', lng: 6.5854, lat: 49.6766, estate: 'Van Volxem' },
+      { name: 'Kanzemer Altenberg', lng: 6.5738, lat: 49.6702, estate: 'Von Othegraven' }
     ]
   },
   {
@@ -183,8 +183,8 @@ const rivers = [
     estates: 'Von Schubert（Maximin Grünhaus，傳奇家族）、Karthäuserhof（Christoph Tyrell）',
     vintages: '2001（Ruwer TBA 傳說）、2009、2011、2015、2018',
     vineyardPoints: [
-      { name: 'Maximin Grünhäuser Abtsberg / Herrenberg', lng: 6.7328, lat: 49.7676, estate: 'Von Schubert' },
-      { name: 'Karthäuserhofberg', lng: 6.7189, lat: 49.7779, estate: 'Karthäuserhof' }
+      { name: 'Maximin Grünhäuser Abtsberg / Herrenberg', lng: 6.7326, lat: 49.7745, estate: 'Von Schubert' },
+      { name: 'Karthäuserhofberg', lng: 6.7241, lat: 49.7756, estate: 'Karthäuserhof' }
     ]
   }
 ]
