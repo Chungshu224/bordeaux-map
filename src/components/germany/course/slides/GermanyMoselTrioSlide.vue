@@ -47,6 +47,20 @@
       </div>
     </div>
 
+    <!-- 頂級葡萄園分佈地圖 -->
+    <div class="vineyard-map-section">
+      <h3>🗺️ {{ active.name }} 頂級葡萄園分佈</h3>
+      <div class="vineyard-map-wrapper">
+        <div ref="mapContainer" class="vineyard-mapbox"></div>
+        <div v-if="mapLoading" class="vm-overlay">
+          <div class="vm-spinner"></div>
+          <span>地圖載入中…</span>
+        </div>
+        <div v-if="mapErrorMsg" class="vm-error">⚠️ {{ mapErrorMsg }}</div>
+      </div>
+      <p class="vineyard-map-note">📍 標記位置為葡萄園／村莊概略座標，僅供教學參考，非精確地籍邊界。</p>
+    </div>
+
     <!-- 三流域風格比較表 -->
     <div class="comparison-section">
       <h3>⚖️ 三大河流域 Riesling 風格對比</h3>
@@ -87,7 +101,9 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
+import mapboxgl from 'mapbox-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({
   slide: { type: Object, default: () => ({}) }
@@ -113,7 +129,14 @@ const rivers = [
     style: '藍板岩賦予清晰礦物感與精緻桃子香；河流彎道南向坡充分日照；平衡高酸與精緻果香；從輕盈 Kabinett 到濃郁 TBA 全系列皆優秀。',
     vineyards: 'Bernkasteler Doctor（最著名）、Wehlener Sonnenuhr（J.J. Prüm）、Ürziger Würzgarten（紅砂岩）、Graacher Himmelreich、Erdener Treppchen',
     estates: 'J.J. Prüm（傳奇）、Dr. Loosen、Markus Molitor、Heymann-Löwenstein、Weingut Willi Schaefer',
-    vintages: '2019、2015、2011（TBA 年份）、2009、2005（甜酒經典）'
+    vintages: '2019、2015、2011（TBA 年份）、2009、2005（甜酒經典）',
+    vineyardPoints: [
+      { name: 'Bernkasteler Doctor', lng: 7.0692, lat: 49.9186, estate: 'Wegeler / Dr. H. Thanisch' },
+      { name: 'Wehlener Sonnenuhr', lng: 7.0294, lat: 49.9243, estate: 'J.J. Prüm' },
+      { name: 'Graacher Himmelreich', lng: 7.0580, lat: 49.9370, estate: 'Willi Schaefer / Dr. Loosen' },
+      { name: 'Ürziger Würzgarten', lng: 7.0053, lat: 49.9822, estate: 'Dr. Loosen / Merkelbach' },
+      { name: 'Erdener Treppchen', lng: 7.0210, lat: 49.9770, estate: 'Dr. Loosen' }
+    ]
   },
   {
     name: 'Saar',
@@ -132,7 +155,14 @@ const rivers = [
     style: '涼爽氣候使葡萄保留極高酸度；灰板岩與石英礦物帶來鹹礦物 + 煙燻 + 石板香；壞年份偏瘦，好年份（2003/2009/2019）可達 TBA 巔峰。被稱為「Riesling 最極端的表達」。',
     vineyards: 'Scharzhofberg（Wiltingen，德國最偉大葡萄園之一）、Ockfener Bockstein、Ayl Kupp、Wiltinger Braune Kupp、Kanzemer Altenberg',
     estates: 'Egon Müller（Scharzhofberg，世界最昂貴德國酒）、Van Volxem、Weingut Zilliken（Forstmeister Geltz）、Peter Lauer',
-    vintages: '2003（例外溫暖）、2009、2015、2019（近年最佳）'
+    vintages: '2003（例外溫暖）、2009、2015、2019（近年最佳）',
+    vineyardPoints: [
+      { name: 'Scharzhofberg', lng: 6.6200, lat: 49.6550, estate: 'Egon Müller' },
+      { name: 'Ockfener Bockstein', lng: 6.5780, lat: 49.6280, estate: 'Van Volxem' },
+      { name: 'Ayl Kupp', lng: 6.5620, lat: 49.6340, estate: 'Peter Lauer' },
+      { name: 'Wiltinger Braune Kupp', lng: 6.5780, lat: 49.6630, estate: 'Van Volxem' },
+      { name: 'Kanzemer Altenberg', lng: 6.5680, lat: 49.6690, estate: 'Von Othegraven' }
+    ]
   },
   {
     name: 'Ruwer',
@@ -151,12 +181,105 @@ const rivers = [
     style: '最涼的支流，葡萄成熟最緩。Riesling 在此展現最細緻的花香（白花、茉莉）+ 煙燻石墨 + 透明輕盈感；酸度如琴弦般緊繃；Auslese/TBA 年份稀少且珍貴，二手市場價格高昂。',
     vineyards: 'Maximin Grünhäuser Abtsberg / Herrenberg（最著名）、Karthaüserhofberg（Eitelsbach）',
     estates: 'Von Schubert（Maximin Grünhaus，傳奇家族）、Karthäuserhof（Christoph Tyrell）',
-    vintages: '2001（Ruwer TBA 傳說）、2009、2011、2015、2018'
+    vintages: '2001（Ruwer TBA 傳說）、2009、2011、2015、2018',
+    vineyardPoints: [
+      { name: 'Maximin Grünhäuser Abtsberg / Herrenberg', lng: 6.7328, lat: 49.7676, estate: 'Von Schubert' },
+      { name: 'Karthäuserhofberg', lng: 6.7189, lat: 49.7779, estate: 'Karthäuserhof' }
+    ]
   }
 ]
 
 const active = computed(() => rivers[activeIdx.value])
 const riverKeys = ['mittelmosel', 'saar', 'ruwer']
+
+// ── 頂級葡萄園分佈地圖 ──────────────────────────────────────
+const mapContainer = ref(null)
+const mapLoading = ref(true)
+const mapErrorMsg = ref(null)
+let map = null
+let markers = []
+
+function clearMarkers() {
+  markers.forEach(m => m.remove())
+  markers = []
+}
+
+function renderMarkersForActiveRiver() {
+  if (!map) return
+  clearMarkers()
+  const r = active.value
+  const pts = r.vineyardPoints || []
+  if (!pts.length) return
+
+  pts.forEach(pt => {
+    const el = document.createElement('div')
+    el.className = 'vm-marker'
+    el.style.background = r.color
+    el.title = pt.name
+
+    const popup = new mapboxgl.Popup({ offset: 14, closeButton: false, maxWidth: '240px' })
+      .setHTML(`<div class="vm-popup"><strong>${pt.name}</strong><br/><span>${pt.estate || ''}</span></div>`)
+
+    const marker = new mapboxgl.Marker({ element: el })
+      .setLngLat([pt.lng, pt.lat])
+      .setPopup(popup)
+      .addTo(map)
+
+    el.addEventListener('mouseenter', () => marker.togglePopup())
+    el.addEventListener('mouseleave', () => marker.togglePopup())
+
+    markers.push(marker)
+  })
+
+  if (pts.length === 1) {
+    map.flyTo({ center: [pts[0].lng, pts[0].lat], zoom: 12.5, duration: 700 })
+  } else {
+    const lngs = pts.map(p => p.lng)
+    const lats = pts.map(p => p.lat)
+    map.fitBounds(
+      [[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]],
+      { padding: 56, duration: 700, maxZoom: 13 }
+    )
+  }
+}
+
+function initMap() {
+  if (!mapContainer.value || map) return
+  const token = import.meta.env.VITE_MAPBOX_TOKEN
+    || (typeof window !== 'undefined' && (window.__MAPBOX_TOKEN || window.localStorage?.getItem('VITE_MAPBOX_TOKEN')))
+  if (!token) {
+    mapErrorMsg.value = '未設定 Mapbox Token'
+    mapLoading.value = false
+    return
+  }
+  mapboxgl.accessToken = token
+
+  map = new mapboxgl.Map({
+    container: mapContainer.value,
+    style: 'mapbox://styles/mapbox/satellite-streets-v12',
+    center: [7.0, 49.95],
+    zoom: 10,
+    attributionControl: false,
+  })
+
+  map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
+  map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
+
+  map.on('error', e => console.warn('[GermanyMoselTrioSlide] map error:', e?.error?.message))
+
+  map.on('load', () => {
+    mapLoading.value = false
+    renderMarkersForActiveRiver()
+  })
+}
+
+onMounted(() => { nextTick(initMap) })
+onBeforeUnmount(() => {
+  clearMarkers()
+  if (map) { map.remove(); map = null }
+})
+
+watch(activeIdx, () => { renderMarkersForActiveRiver() })
 
 const compRows = [
   { label: '面積', values: ['~7,800 ha（主體）', '~800 ha', '~200 ha（最小）'] },
@@ -304,6 +427,67 @@ const slates = [
 .estate-row { background: #f4ecf7; border-left: 3px solid #8e44ad; }
 .year-row { background: #fff8e6; border-left: 3px solid #d4af37; }
 
+.vineyard-map-section { margin-bottom: 22px; }
+.vineyard-map-section h3 {
+  color: #2874a6;
+  font-size: 1.2rem;
+  margin: 0 0 14px;
+}
+.vineyard-map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.vineyard-mapbox {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.vm-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20,30,45,0.55);
+  color: #fff;
+  gap: 10px;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+.vm-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255,255,255,0.25);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: vm-spin 0.8s linear infinite;
+}
+@keyframes vm-spin { to { transform: rotate(360deg); } }
+.vm-error {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(180,40,40,0.92);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  z-index: 20;
+}
+.vineyard-map-note {
+  margin: 8px 2px 0;
+  font-size: 0.78rem;
+  color: #888;
+  line-height: 1.5;
+}
+
 .comparison-section { margin-bottom: 22px; }
 .comparison-section h3 {
   color: #2874a6;
@@ -426,4 +610,23 @@ const slates = [
   .metrics-grid { grid-template-columns: 1fr; }
   .slate-card { flex-direction: column; gap: 8px; }
 }
+</style>
+
+<style>
+/* Mapbox 標記與彈窗（非 scoped，因由 mapbox-gl 動態掛載於元件外層） */
+.vm-marker {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+.vm-popup {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #2c3e50;
+}
+.vm-popup strong { font-size: 0.88rem; }
+.vm-popup span { color: #666; }
 </style>
