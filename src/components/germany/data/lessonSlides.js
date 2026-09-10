@@ -48,8 +48,8 @@ export const G1M1L1 = {
     <div class="timeline-content"><strong>📜 葡萄酒法現代化</strong><p>德國頒布現代《葡萄酒法》，以採收糖分（Oechsle 度數）建立 QbA / Prädikat 六級分級體系，成為全球最複雜精細的甜度分級制度。</p></div>
   </div>
   <div class="timeline-item">
-    <div class="timeline-badge doc">1910–2002 年</div>
-    <div class="timeline-content"><strong>🦅 VDP 精英俱樂部</strong><p>VDP（頂級德國葡萄酒莊聯盟）1910 年成立，2002 年建立仿效布根地的四層葡萄園分級制度（Grosse Lage / Erste Lage），以地塊聲譽補足官方甜度分級的不足。</p></div>
+    <div class="timeline-badge doc">1910–2012 年</div>
+    <div class="timeline-content"><strong>🦅 VDP 精英俱樂部</strong><p>VDP（頂級德國葡萄酒莊聯盟）1910 年成立，2002 年推出首批 Grosses Gewächs、2012 年正式確立仿效布根地的四層葡萄園分級金字塔（Gutswein / Ortswein / Erste Lage / Grosse Lage），以地塊聲譽補足官方甜度分級的不足。</p></div>
   </div>
   <div class="timeline-item">
     <div class="timeline-badge modern">現代</div>
@@ -612,7 +612,7 @@ export const G1M3L3 = {
     {
       type: 'content',
       title: '🦅 什麼是 VDP？',
-      content: 'VDP（頂級德國葡萄酒莊聯盟）成立於 1910 年，是德國最具影響力的葡萄酒品質組織。目前約有 200 家頂級酒莊成員，其標誌是一隻展翅老鷹配以葡萄圖案。VDP 建立了自己的四層分級制度，仿效布根地的 Grand Cru 概念，以葡萄園的地理特性和歷史聲譽來決定等級，補充了官方 QmP 系統的不足。'
+      content: 'VDP（Verband Deutscher Prädikatsweingüter，頂級德國葡萄酒莊聯盟）成立於 1910 年，是德國最具影響力的葡萄酒品質組織。目前約有 200 家頂級酒莊成員（2023 年 201 家、約佔全德葡萄園面積 5%），其標誌是一隻展翅老鷹配以葡萄圖案。VDP 於 2002 年推出首批 Grosses Gewächs、2012 年正式確立四層葡萄園分級制度，仿效布根地的 Grand Cru 概念，以葡萄園的地理特性和歷史聲譽來決定等級，補充官方 QmP（依糖分）系統的不足。'
     },
     {
       type: 'timeline',
@@ -620,8 +620,8 @@ export const G1M3L3 = {
       events: [
         { year: 'Gutswein', title: '酒莊酒', desc: '基礎等級，代表酒莊整體風格，平易近人' },
         { year: 'Ortswein', title: '村莊酒', desc: '特定村莊或次產區，展現地方特色' },
-        { year: 'Erste Lage', title: '頭等葡萄園', desc: '卓越地塊，白酒標示 Erste Gewächs（EG），高品質' },
-        { year: 'Grosse Lage', title: '特等葡萄園', desc: '最頂級地塊，白酒稱 Grosses Gewächs（GG），德國 Grand Cru' }
+        { year: 'Erste Lage', title: '頭等葡萄園', desc: '卓越單一地塊；乾型酒稱 VDP.ERSTES GEWÄCHS（標誌「1G」），對應布根地 Premier Cru' },
+        { year: 'Grosse Lage', title: '特等葡萄園', desc: '最頂級地塊；乾型酒稱 Grosses Gewächs（GG），德國 Grand Cru' }
       ]
     },
     {
@@ -638,7 +638,7 @@ export const G1M3L3 = {
     {
       type: 'vdp-classification',
       title: '👑 VDP 4 階金字塔互動詳解 + GG 重點解說',
-      description: '點選金字塔任一層看規範 / 葡萄園 / 風格 / 價格與代表酒款。下方 4 卡詳解 Grosses Gewächs（GG）的定義、特色、例外、歷史——VDP 如何以 Burgundy Grand Cru 為藍本，在 2002 年建立德國「葡萄園分級」革命。'
+      description: '點選金字塔任一層看規範 / 葡萄園 / 風格 / 價格與代表酒款。下方 4 卡詳解 Grosses Gewächs（GG）的定義、特色、例外、歷史——VDP 如何以 Burgundy Grand Cru 為藍本，2002 年推出首批 GG、2012 年確立四層金字塔，掀起德國「葡萄園分級」革命。'
     },
     {
       type: 'quiz',
@@ -2132,7 +2132,7 @@ export const G3M1L1 = {
     {
       type: 'germany-region-map',
       title: 'VDP 核心產區地理版圖',
-      description: 'VDP 240 個成員酒莊主要集中於萊茵河核心：Mosel、Rheingau、Nahe、Pfalz、Rheinhessen——精英產區分布一覽',
+      description: 'VDP 約 200 個成員酒莊主要集中於萊茵河核心：Mosel、Rheingau、Nahe、Pfalz、Rheinhessen——精英產區分布一覽',
       mapRegion: 'rhineCore',
       highlightFiles: ["mosel-region.geojson","rheingau-region.geojson","nahe-region.geojson","pfalz-region.geojson","rheinhessen-region.geojson"],
     },
@@ -2140,7 +2140,7 @@ export const G3M1L1 = {
     {
       type: 'content',
       title: 'VDP 簡介',
-      content: 'VDP 創立於 1910 年，目前約有 200 個成員酒莊，自訂更嚴格的四級分類體系，類比法國布根地的 Grand Cru / Premier Cru 概念。與官方 QmP 制度最大的不同在於：葡萄園分級不依甜度而依地塊風土品質，強調 Terroir 的核心地位，是德國葡萄酒走向國際精品市場的重要推力。'
+      content: 'VDP（Verband Deutscher Prädikatsweingüter）創立於 1910 年，目前約有 200 個成員酒莊，自訂更嚴格的四級分類體系（Gutswein → Ortswein → Erste Lage → Grosse Lage），2002 年推出首批 Grosses Gewächs、2012 年正式定案，類比法國布根地的 Grand Cru / Premier Cru 概念。與官方 QmP 制度最大的不同在於：葡萄園分級不依甜度而依地塊風土品質，強調 Terroir 的核心地位。2021 年德國新《葡萄酒法》亦採納類似的「產地越小、等級越高」金字塔，Einzellage／Erstes Gewächs／Grosses Gewächs 將於 2026 年份起成為官方法定用語。'
     },
     {
       type: 'vdp-classification',
@@ -2157,10 +2157,10 @@ export const G3M1L1 = {
       type: 'list',
       title: 'VDP 四級詳細說明',
       items: [
-        { icon: '🏠', text: 'Gutswein（入門莊園級）：代表酒莊整體風格，平易近人，展現酒莊基礎釀造哲學' },
-        { icon: '🏘️', text: 'Ortswein（村莊級）：特定村莊的風土表現，比 Gutswein 更具地方特色與深度' },
-        { icon: '⭐', text: 'Erste Lage（一級園）：VDP 認可的優秀葡萄園，標示 VDP.ERSTE LAGE® 徽章' },
-        { icon: '👑', text: 'Grosse Lage（頂級園）：VDP 最高等級葡萄園；乾型白酒稱 Grosses Gewächs（GG）；甜型保留 Prädikat 稱謂（GG Prädikat）' }
+        { icon: '🏠', text: 'Gutswein（入門莊園級，75 hL/ha）：僅用酒莊自有葡萄園，代表酒莊整體風格；乾型自 2019 年起不標 Prädikat' },
+        { icon: '🏘️', text: 'Ortswein（村莊級，75 hL/ha）：特定村莊的風土表現，比 Gutswein 更具地方特色；建議不早於採收隔年 3 月上市' },
+        { icon: '⭐', text: 'Erste Lage（一級園，60 hL/ha）：VDP 認可的優秀單一葡萄園，標示 VDP.ERSTE LAGE® 徽章；乾型酒稱 VDP.ERSTES GEWÄCHS（標誌「1G」，2019 年首發）' },
+        { icon: '👑', text: 'Grosse Lage（頂級園，50 hL/ha）：VDP 最高等級葡萄園；乾型稱 Grosses Gewächs（GG，殘糖 ≤ 9 g/L）；甜型保留 Prädikat 稱謂；白 GG 隔年 9/1、紅 GG 隔兩年 9/1 上市' }
       ]
     },
     {
@@ -2207,7 +2207,7 @@ export const G3M1L2 = {
     {
       type: 'content',
       title: 'Grosses Gewächs 介紹',
-      content: 'GG（Grosses Gewächs）只在 VDP 成員酒莊的 Grosse Lage 頂級園才能使用，必須為乾型（Trocken），手工採收，低產量（Riesling ≤ 50 hL/ha）。瓶身標示 GG 徽章。GG 是德國乾型白酒金字塔的最高峰，可媲美布根地頂級 Grand Cru 白酒，展現最純粹的葡萄園風土表達，被國際評酒家視為德國白酒文藝復興的核心。'
+      content: 'GG（官方全稱 VDP.GROSSES GEWÄCHS®）只在 VDP 成員酒莊的 Grosse Lage 頂級園才能使用，必須為乾型（殘糖 ≤ 9 g/L），手工採收，低產量（≤ 50 hL/ha），使用專屬浮雕瓶。延遲上市：白 GG 於採收隔年 9 月 1 日、紅 GG 於採收後第二年 9 月 1 日（至少 12 個月木桶陳年）。2024 年份共登記 463 款 GG、來自 312 個葡萄園。GG 是德國乾型白酒金字塔的最高峰，可媲美布根地 Grand Cru 白酒；Erste Lage 的乾型旗艦則稱 1G（VDP.ERSTES GEWÄCHS）。'
     },
     {
       type: 'list',

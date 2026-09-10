@@ -3,7 +3,7 @@
     <div class="slide-header">
       <h2>{{ slide.title || 'VDP 分級系統——德國的 Burgundy 化葡萄園分級' }}</h2>
       <p v-if="slide.description" class="slide-desc">
-        {{ slide.description || 'VDP（Verband Deutscher Prädikats- und Qualitätsweingüter）是德國精英酒莊聯盟，自 2002 年起建立 4 階葡萄園分級制度——以 Burgundy 為藍本、根據「葡萄園品質」而非「葡萄成熟度」分級。約 200 家頂級酒莊加入。' }}
+        {{ slide.description || 'VDP（Verband Deutscher Prädikatsweingüter，品牌名 VDP.DIE PRÄDIKATSWEINGÜTER）是德國精英酒莊聯盟，1910 年創立，現約 200 家頂級酒莊成員（2023 年 201 家）。2002 年推出首批 Grosses Gewächs，2012 年正式確立 4 階葡萄園分級金字塔——以 Burgundy 為藍本、根據「葡萄園品質」而非「葡萄成熟度」分級。' }}
       </p>
     </div>
 
@@ -82,19 +82,19 @@
       <div class="gg-grid">
         <div class="gg-card">
           <h4>📐 定義</h4>
-          <p>「Grosses Gewächs」字面意為「偉大的生長」——是 Grosse Lage（VDP 最頂級葡萄園）所釀的<strong>「乾型」</strong>頂級酒。酒標標示縮寫 <strong>「GG」</strong>。</p>
+          <p>「Grosses Gewächs」字面意為「偉大的生長」——是 Grosse Lage（VDP 最頂級葡萄園）所釀的<strong>「乾型」</strong>頂級酒，官方全稱 <strong>VDP.GROSSES GEWÄCHS®</strong>、酒標標示縮寫 <strong>「GG」</strong>。Erste Lage 的乾型旗艦則對應稱 <strong>1G（VDP.ERSTES GEWÄCHS®）</strong>。</p>
         </div>
         <div class="gg-card">
           <h4>🍷 特色</h4>
-          <p>必須是 Trocken（殘糖 ≤ 9 g/L）、單一葡萄園、低產量、晚於 9 月 1 日（紅酒）/ 8 月 15 日（白酒）後上市。是德國最頂級乾型酒款的標誌。</p>
+          <p>必須是 Trocken（殘糖 ≤ 9 g/L）、單一葡萄園、手工採收、低產量（≤ 50 hL/ha）。延遲上市：<strong>白 GG 於採收隔年 9 月 1 日、紅 GG 於採收後第二年 9 月 1 日</strong>（至少 12 個月木桶陳年）。</p>
         </div>
         <div class="gg-card">
           <h4>🍯 例外</h4>
           <p>Grosse Lage 葡萄園的「甜型」酒款不稱 GG，而以傳統 Prädikat（Spätlese / Auslese / BA / TBA / Eiswein）標示——例如 <strong>「Wehlener Sonnenuhr Auslese GL」</strong>。</p>
         </div>
         <div class="gg-card">
-          <h4>📖 歷史</h4>
-          <p>VDP 成立於 1910 年，現代分級系統 2002 年確立、2012 年完成 4 階架構。GG 概念啟發自 Burgundy 的 Grand Cru，旨在強調「<strong>地塊更勝品種</strong>」的風土哲學。</p>
+          <h4>📖 歷史與新法</h4>
+          <p>VDP 1910 年成立，2002 年推出首批 GG、2012 年確立 4 階金字塔。GG 概念啟發自 Burgundy 的 Grand Cru，強調「<strong>地塊更勝品種</strong>」。2021 年德國新《葡萄酒法》將 Einzellage／Erstes Gewächs／Grosses Gewächs 納入官方法規，<strong>2026 年份起全面生效</strong>。</p>
         </div>
       </div>
     </div>
@@ -119,10 +119,11 @@ const defaultTiers = [
     burgundyEquiv: 'Régionale (Bourgogne)',
     share: '~50% VDP 產量',
     rules: [
-      'VDP 分級最低層',
-      '葡萄來自酒莊任何葡萄園',
+      'VDP 分級最低層——「基礎中的極致」',
+      '葡萄僅能來自酒莊自有葡萄園',
       '可標示產區（如 Mosel、Rheingau）',
-      '最大產量：75 hL/ha'
+      '最大產量：75 hL/ha',
+      '至少 80% 使用產區傳統品種；乾型自 2019 年起不再標 Prädikat'
     ],
     vineyard: '酒莊各葡萄園的混合，常為較年輕葡萄藤或基礎地塊。',
     style: '反映酒莊整體風格與產區特色，是入門認識酒莊的最佳起點。',
@@ -144,10 +145,11 @@ const defaultTiers = [
     burgundyEquiv: 'Village (Bourgogne)',
     share: '~30% VDP 產量',
     rules: [
-      '葡萄來自單一村莊（Ort）',
-      '酒標可標示村莊名（如 Wehlener、Forster）',
+      '葡萄來自單一村莊（Ort）內的優質葡萄園',
+      '酒標可標示村莊名（如 Wehlener、Forster）+「VDP.ORTSWEIN」瓶封',
       '最大產量：75 hL/ha',
-      '須使用該村莊的「典型」品種'
+      '限用該產區傳統品種',
+      '建議上市：不早於採收隔年 3 月 1 日'
     ],
     vineyard: '單一村莊內多個葡萄園的混合，反映該村莊的整體風土特性。',
     style: '展現特定村莊的風土性格——例如 Forster 的飽滿圓潤、Wehlener 的優雅板岩、Niersteiner 的紅色斜坡香料。',
@@ -165,24 +167,27 @@ const defaultTiers = [
     en: 'VDP.ERSTE LAGE',
     symbol: '⭐',
     color: '#FF6F00',
-    tagline: '一級葡萄園——優秀單一地塊',
-    burgundyEquiv: 'Premier Cru',
+    tagline: '一級葡萄園——優秀單一地塊（乾型稱 1G）',
+    burgundyEquiv: 'Premier Cru（乾型 = 1G）',
     share: '~15% VDP 產量',
     rules: [
-      '單一葡萄園（Einzellage）',
-      '葡萄園須通過 VDP 嚴格品質審核',
+      '單一葡萄園（Einzellage）中經 VDP 劃定的優質地塊',
+      '葡萄園與酒款皆須通過 VDP 品質審核',
       '最大產量：60 hL/ha',
-      '酒標標示葡萄園名 + 「VDP.ERSTE LAGE」徽章',
-      '可釀為乾型、半乾或甜型（含 Prädikat 等級）'
+      '酒標標示「村名 + 葡萄園名」+「VDP.ERSTE LAGE®」徽章',
+      '限用該產區傳統品種',
+      '乾型酒可標示「VDP.ERSTES GEWÄCHS®」或「1G」標誌（2018 年通過、2019 年首度發表）',
+      '甜型酒仍以傳統 Prädikat 等級標示（Spätlese / Auslese…）',
+      '上市：採收隔年 4 月底 VDP 精品展（Weinbörse）預展、5 月 1 日起販售'
     ],
     vineyard: '經 VDP 認可的優秀單一葡萄園，等級僅次於 Grosse Lage。',
-    style: '展現單一葡萄園特性，比村莊酒更集中、複雜度更高。',
+    style: '展現單一葡萄園特性，比村莊酒更集中、複雜度更高。乾型 1G 是介於村莊酒與 GG 之間的風土旗艦，被視為「德國的 Premier Cru」。',
     priceRange: '€25-€60',
     advice: '探索單一葡萄園風土的入門價位；性價比優。',
     examples: [
-      { name: 'Selbach-Oster Zeltinger Schlossberg ⭐', note: 'Mosel Erste Lage' },
-      { name: 'Künstler Hochheimer Stein ⭐', note: 'Rheingau Erste Lage' },
-      { name: 'Christmann Königsbacher Idig ⭐', note: 'Pfalz Erste Lage' }
+      { name: 'Selbach-Oster Zeltinger Schlossberg', note: 'Mosel Erste Lage，乾型可標 1G' },
+      { name: '「1G」標誌', note: '瓶身／酒標的乾型 Erste Lage 標記，對應 GG 的縮寫邏輯' },
+      { name: 'Weinbörse 首發', note: '各家 1G 每年 4 月底於 VDP 精品展預展、5 月上市' }
     ]
   },
   {
@@ -196,11 +201,11 @@ const defaultTiers = [
     share: '~5% VDP 產量',
     rules: [
       '德國頂級單一葡萄園——VDP 最高分級',
-      '最大產量：50 hL/ha（紅）/ 60 hL/ha（白）',
-      '酒標標示葡萄園名 + 「VDP.GROSSE LAGE」徽章',
-      '乾型酒稱「Grosses Gewächs」（GG）——殘糖 ≤ 9 g/L',
+      '最大產量：50 hL/ha（Grosse Lage 全級一致）',
+      '酒標僅標葡萄園名（不加村名）+「VDP.GROSSE LAGE®」徽章，乾型用專屬浮雕瓶',
+      '乾型酒稱「VDP.GROSSES GEWÄCHS®」（GG）——殘糖 ≤ 9 g/L、手工採收、限用產區傳統品種',
       '甜型酒以傳統 Prädikat 等級標示（Spätlese / Auslese / BA / TBA / Eiswein）',
-      '釋出時間延遲：白 GG 隔年 9 月 1 日、紅 GG 隔年 9 月 1 日（採收後第二年）'
+      '延遲上市：白 GG 於採收隔年 9 月 1 日、紅 GG 於採收後第二年 9 月 1 日（至少 12 個月木桶陳年）'
     ],
     vineyard: '德國最頂級的歷史葡萄園——例如 Wehlener Sonnenuhr、Bernkasteler Doctor、Erdener Prälat、Schloss Johannisberg、Forster Kirchenstück、Niersteiner Pettenthal、Westhofener Morstein 等。',
     style: '反映葡萄園獨特的風土、低產量、長陳年潛力（20-50+ 年）。GG 乾型表現礦物複雜度的極致；甜型版本（Auslese GL / TBA GL）為世界級甜酒。',
