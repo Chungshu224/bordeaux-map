@@ -296,6 +296,16 @@ export const G1M2L1 = {
       content: 'Riesling 是一種晚熟、高酸的白葡萄品種，原產於萊茵河地區，在德國找到了最完美的風土表達。它的薄皮使其容易感染貴腐菌（Botrytis），從而釀出頂級甜酒。Riesling 的最大特點是能忠實反映土壤特性，在板岩地上展現礦物感，在石灰岩地上呈現花香，是真正的 Terroir 品種。'
     },
     {
+      type: 'stats',
+      title: '📊 Riesling 官方種植數據（2024/25）',
+      stats: [
+        { label: '德國種植面積', value: '23,890 公頃' },
+        { label: '佔全德葡萄園比例', value: '約 23%（全德第一大品種）' },
+        { label: '全球地位', value: '全球種植面積最大的 Riesling 生產國' },
+        { label: '核心產區', value: 'Mosel / Rheingau / Nahe / Pfalz / Rheinhessen' }
+      ]
+    },
+    {
       type: 'list',
       title: '🌟 Riesling 的多樣風格',
       items: [
@@ -378,10 +388,10 @@ export const G1M2L2 = {
       type: 'list',
       title: '🍇 德國五大白葡萄品種概覽',
       items: [
-        { icon: '🌿', text: 'Müller-Thurgau：種植面積第二，清爽易飲，花香青蘋果，Rheinhessen 多見' },
-        { icon: '🏛️', text: 'Silvaner：Franken 的靈魂品種，Bocksbeutel 扁圓瓶，礦物大地氣息' },
-        { icon: '🌸', text: 'Grauburgunder（灰皮諾）：Baden Kaiserstuhl 最佳，豐潤杏桃蜂蜜' },
-        { icon: '🥂', text: 'Weißburgunder（白皮諾）：清爽優雅，酸度鮮明，Sekt 重要基酒' },
+        { icon: '🌿', text: 'Müller-Thurgau（10,230 公頃）：全德白葡萄種植面積第二，但近十年持續下滑，清爽易飲，花香青蘋果，Rheinhessen 多見' },
+        { icon: '🏛️', text: 'Silvaner：Franken 的靈魂品種，Bocksbeutel 扁圓瓶，礦物大地氣息；近年種植面積緩步下降' },
+        { icon: '🌸', text: 'Grauburgunder（灰皮諾，約 7,700–8,000 公頃）：持續成長中的明星品種，Baden／Rheinhessen／Pfalz 三產區合計佔全德近 85%' },
+        { icon: '🥂', text: 'Weißburgunder（白皮諾）：清爽優雅，酸度鮮明，種植面積同樣穩定成長，Sekt 重要基酒' },
         { icon: '🌾', text: 'Scheurebe：Riesling 子代，濃郁黑醋栗葡萄柚，Pfalz 頂級甜型驚艷' }
       ]
     },
@@ -432,16 +442,16 @@ export const G1M2L3 = {
     {
       type: 'content',
       title: '🍷 德國是紅酒產地？',
-      content: '許多人不知道，德國約有 35% 的葡萄種植的是紅葡萄品種，而 Spätburgunder（黑皮諾的德語名）在 Ahr 和 Baden 等地已釀出堪比布根地的世界級紅酒。氣候暖化使德國紅酒品質不斷提升，成為全球葡萄酒界的熱門話題。'
+      content: '許多人不知道，德國約有 31%（2024 官方統計 30.7%）的葡萄種植的是紅葡萄品種，而 Spätburgunder（黑皮諾的德語名）在 Ahr 和 Baden 等地已釀出堪比布根地的世界級紅酒。氣候暖化使德國紅酒品質不斷提升，成為全球葡萄酒界的熱門話題。'
     },
     {
       type: 'list',
       title: '🔴 德國主要紅葡萄品種',
       items: [
-        { icon: '🌹', text: 'Spätburgunder（黑皮諾）：德國最頂級紅酒，Ahr、Baden 為精華' },
+        { icon: '🌹', text: 'Spätburgunder（黑皮諾，11,250 公頃）：全德種植面積最大的紅葡萄（約 11%），德國最頂級紅酒，Ahr、Baden 為精華' },
+        { icon: '🏚️', text: 'Dornfelder（6,618 公頃）：全德第二大紅葡萄，晚熟，色深果濃，Pfalz 和 Rheinhessen 多見' },
         { icon: '🍇', text: 'Trollinger：Württemberg 特產，輕盈清新，日常飲用型' },
         { icon: '💪', text: 'Lemberger（Blaufränkisch）：深色，單寧紮實，Württemberg 出色' },
-        { icon: '🏚️', text: 'Dornfelder：晚熟，色深果濃，Pfalz 和 Rheinhessen 多見' },
         { icon: '🌸', text: 'Frühburgunder（黑皮諾變種）：早熟，花香迷人，Ahr 佳例' },
         { icon: '📚', text: 'Portugieser：輕盈低單寧，歷史悠久，Pfalz 常見' }
       ]

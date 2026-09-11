@@ -138,7 +138,7 @@ const defaultGrapes = [
     style_type: '白葡萄 · 輕盈清爽',
     mainRegion: 'Rheinhessen / Mosel / Baden',
     tagline: '全德種植第二大白葡萄——清爽易飲的日常之選',
-    germanyRole: 'Müller-Thurgau 是 Riesling × Madeleine Royale 的雜交品種（1882 年由 Hermann Müller 在 Thurgau 培育），曾是全德種植面積最大的白葡萄，現在仍是第二大。早熟、高產、適應力強，廣泛種植於 Rheinhessen、Mosel 平地及 Baden。以清爽日常風格為主，少數老藤精品版本展現驚人深度。',
+    germanyRole: 'Müller-Thurgau 是 Riesling × Madeleine Royale 的雜交品種（1882 年由 Hermann Müller 在 Thurgau 培育），曾是全德種植面積最大的白葡萄，現約 10,230 公頃，仍是白葡萄種植面積第二大，但十年來持續下滑。早熟、高產、適應力強，廣泛種植於 Rheinhessen、Mosel 平地及 Baden。以清爽日常風格為主，少數老藤精品版本展現驚人深度。',
     mainAreas: [
       { name: 'Rheinhessen（最大面積）', note: '平地多見，大量生產日常酒款' },
       { name: 'Mosel（平坦地區）', note: '陡坡 Riesling 的補充品種' },
@@ -210,7 +210,7 @@ const defaultGrapes = [
     style_type: '白葡萄 · 豐潤圓滑',
     mainRegion: 'Baden / Pfalz / Rheinhessen',
     tagline: '杏桃蜂蜜的豐潤品種——灰皮諾的德國表達',
-    germanyRole: 'Grauburgunder 是 Pinot Gris（灰皮諾）的德語名稱，在最溫暖的德國產區（Baden、Pfalz）展現最佳表現。隨著氣候暖化，此品種在德國快速崛起，成為繼 Riesling 和 Silvaner 後最受矚目的精品白酒選擇。Baden 的 Kaiserstuhl 火山岩土壤賦予獨特礦物感，釀出可媲美阿爾薩斯 Pinot Gris Grand Cru 的複雜版本。',
+    germanyRole: 'Grauburgunder 是 Pinot Gris（灰皮諾）的德語名稱，現約 7,700–8,000 公頃（全德約 7–8%），是白葡萄種植面積第三大，僅次於 Riesling 與 Müller-Thurgau，且仍持續成長中。在最溫暖的德國產區（Baden、Pfalz）展現最佳表現，Baden、Rheinhessen、Pfalz 三產區合計佔全德種植面積近 85%。隨著氣候暖化，此品種快速崛起，成為最受矚目的精品白酒選擇之一。Baden 的 Kaiserstuhl 火山岩土壤賦予獨特礦物感，釀出可媲美阿爾薩斯 Pinot Gris Grand Cru 的複雜版本。',
     mainAreas: [
       { name: 'Baden（Kaiserstuhl）', note: '火山玄武岩，最複雜豐潤，可媲美阿爾薩斯' },
       { name: 'Baden（Markgräflerland）', note: '瑞士邊境，較輕盈優雅' },
