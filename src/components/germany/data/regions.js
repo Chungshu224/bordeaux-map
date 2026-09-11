@@ -11,10 +11,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/mosel-vineyard.geojson',
     grapes: ['Riesling', 'Müller-Thurgau', 'Elbling'],
     styles: ['Kabinett', 'Spätlese', 'Auslese', 'TBA'],
-    description: '德國最著名的白酒產區，陡峭板岩坡道孕育全球最精緻的 Riesling',
+    description: '德國最古老的產區，全球坡度最陡的葡萄園帶——近半數坡度超過 30 度、部分達 70 度，孕育全球最精緻的 Riesling',
     soils: ['板岩', '泥板岩', '灰板岩'],
     climate: '大陸型氣候，河谷微氣候調節',
-    hectares: 8900,
+    hectares: 8287,
     villages: ['Bernkastel', 'Piesport', 'Wehlen', 'Ürzig', 'Erden']
   },
   {
@@ -29,10 +29,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/rheinhessen-vineyard.geojson',
     grapes: ['Riesling', 'Silvaner', 'Müller-Thurgau', 'Dornfelder'],
     styles: ['QbA', 'Spätlese', 'Auslese', 'Sekt'],
-    description: '德國最大產區，多元地形造就豐富葡萄品種與風格',
+    description: '德國最大產區，擁有德國最早文獻記載的葡萄園 Niersteiner Glöck，近十年紅酒種植面積翻倍以上',
     soils: ['黃土', '砂岩', '石灰岩', '板岩'],
     climate: '溫和大陸型氣候',
-    hectares: 27000,
+    hectares: 27657,
     villages: ['Nierstein', 'Nackenheim', 'Oppenheim', 'Ingelheim']
   },
   {
@@ -47,10 +47,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/pfalz-vineyard.geojson',
     grapes: ['Riesling', 'Dornfelder', 'Portugieser', 'Grauburgunder'],
     styles: ['Kabinett', 'Spätlese', 'Auslese', '紅酒'],
-    description: '德國第二大產區，氣候溫暖，紅白酒並重，Riesling 結構飽滿',
+    description: '德國第二大產區、也是德國最大紅酒產區；擁有全德近半數 Merlot 種植面積，沿線 85 公里、130 個酒村',
     soils: ['砂質黏土', '石灰岩', '玄武岩'],
     climate: '溫暖大陸型，孚日山脈遮風',
-    hectares: 24000,
+    hectares: 23640,
     villages: ['Deidesheim', 'Wachenheim', 'Forst', 'Ruppertsberg']
   },
   {
@@ -65,10 +65,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/rheingau-vineyard.geojson',
     grapes: ['Riesling', 'Spätburgunder'],
     styles: ['Kabinett', 'Spätlese', 'Auslese', 'Eiswein', 'TBA'],
-    description: '傳統頂級產區，南向坡面與萊茵河共同塑造優雅細膩的 Riesling',
+    description: '傳統頂級產區，Riesling 佔比高達 85%（全德最高）；「萊茵河膝」轉彎處造就南向坡的絕佳微氣候',
     soils: ['板岩', '石英岩', '黏土板岩'],
     climate: '大陸型，萊茵河調節',
-    hectares: 3200,
+    hectares: 3117,
     villages: ['Johannisberg', 'Rüdesheim', 'Eltville', 'Hochheim']
   },
   {
@@ -83,10 +83,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/nahe-vineyard.geojson',
     grapes: ['Riesling', 'Müller-Thurgau', 'Silvaner'],
     styles: ['Kabinett', 'Spätlese', 'Auslese'],
-    description: '多岩石地質造就礦物感十足的 Riesling，兼具 Mosel 優雅與 Rheingau 豐潤',
+    description: '地質最豐富的產區，火成岩、沉積岩、變質岩齊聚，堪稱「岩石循環博物館」，兼具 Mosel 優雅與 Rheingau 豐潤',
     soils: ['火成岩', '板岩', '砂質黏土', '石英斑岩'],
     climate: '溫和大陸型',
-    hectares: 4200,
+    hectares: 4166,
     villages: ['Schlossböckelheim', 'Niederhausen', 'Norheim', 'Bad Kreuznach']
   },
   {
@@ -101,10 +101,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/franken-vineyard.geojson',
     grapes: ['Silvaner', 'Müller-Thurgau', 'Bacchus', 'Riesling'],
     styles: ['QbA', 'Spätlese', 'Auslese'],
-    description: '以扁圓瓶 Bocksbeutel 著稱，Silvaner 在此展現最佳表現，酒體乾爽飽滿',
+    description: '沿美因河釀酒歷史超過 1200 年，以扁圓瓶 Bocksbeutel 著稱，Silvaner 在此展現最佳表現，酒體乾爽飽滿',
     soils: ['三疊紀砂岩', '貝殼石灰岩', '盆德岩'],
     climate: '大陸型，夏熱冬寒',
-    hectares: 6200,
+    hectares: 6040,
     villages: ['Würzburg', 'Iphofen', 'Escherndorf', 'Randersacker']
   },
   {
@@ -119,10 +119,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/ahr-vineyard.geojson',
     grapes: ['Spätburgunder', 'Frühburgunder', 'Portugieser', 'Riesling'],
     styles: ['紅酒 QbA', '紅酒 Spätlese', 'Auslese'],
-    description: '德國最知名的紅酒產區，陡峭河谷孕育優雅的 Spätburgunder（黑皮諾）',
+    description: '德國最北端產區，卻是紅葡萄品種佔比最高的產區（79%）；陡峭河谷孕育優雅的 Spätburgunder（黑皮諾）',
     soils: ['板岩', '玄武岩', '花崗岩'],
     climate: '溫暖河谷微氣候',
-    hectares: 560,
+    hectares: 535,
     villages: ['Dernau', 'Ahrweiler', 'Neuenahr', 'Mayschoss']
   },
   {
@@ -137,10 +137,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/mittelrhein-vineyard.geojson',
     grapes: ['Riesling', 'Müller-Thurgau'],
     styles: ['Kabinett', 'Spätlese', 'Sekt'],
-    description: '萊茵河峽谷兩岸陡峭板岩坡，景色壯觀，Riesling 礦物感鮮明',
+    description: '德國最小產區，羅馬人最早在此栽種葡萄；沿萊茵河峽谷 65 公里，2002 年列入 UNESCO 世界遺產',
     soils: ['板岩', '石英岩'],
     climate: '河谷微氣候，涼爽',
-    hectares: 460,
+    hectares: 439,
     villages: ['Bacharach', 'Boppard', 'Oberwesel']
   },
   {
@@ -156,10 +156,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/hessische-vineyard.geojson',
     grapes: ['Riesling', 'Müller-Thurgau', 'Grauburgunder'],
     styles: ['Kabinett', 'Spätlese'],
-    description: '德國最小產區之一，溫暖微氣候使葡萄熟早，被稱為「德國的花園」',
+    description: '德國最小產區之一，1971 年獨立設立；早春氣候溫暖，杏花常比其他產區提前綻放，被稱為「德國的花園」',
     soils: ['砂岩', '片麻岩', '黃土'],
     climate: '溫暖，受黑森林保護',
-    hectares: 450,
+    hectares: 440,
     villages: ['Bensheim', 'Heppenheim']
   },
   {
@@ -174,10 +174,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/wuerttemberg-vineyard.geojson',
     grapes: ['Trollinger', 'Lemberger', 'Riesling', 'Spätburgunder'],
     styles: ['紅酒 QbA', '紅酒 Spätlese', 'Weißherbst'],
-    description: '德國消耗量最大的紅酒產區，Trollinger 輕盈易飲，Lemberger 結構紮實',
+    description: '德國第四大產區、紅酒佔比 63%；Trollinger 輕盈易飲，Lemberger 結構紮實，本地消耗量居全德之冠',
     soils: ['三疊紀砂岩', '石灰岩', '黏土'],
     climate: '溫暖大陸型，Neckar 河谷',
-    hectares: 11500,
+    hectares: 10694,
     villages: ['Stuttgart', 'Heilbronn', 'Maulbronn', 'Mundelsheim']
   },
   {
@@ -192,10 +192,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/saale-unstrut-vineyard.geojson',
     grapes: ['Müller-Thurgau', 'Weißburgunder', 'Riesling', 'Silvaner'],
     styles: ['QbA', 'Kabinett'],
-    description: '德國最北端主要產區之一，乾燥大陸氣候，多石灰岩地質',
+    description: '沿北緯 51 度、公元 998 年即有葡萄種植記載的古老產區；年僅約 500mm 降雨，是德國最乾燥的產區之一，梯田乾式石牆景觀獨特',
     soils: ['石灰岩', '砂岩', '礫石'],
     climate: '大陸型，乾燥，日照強',
-    hectares: 800,
+    hectares: 868,
     villages: ['Freyburg', 'Naumburg', 'Bad Kösen']
   },
   {
@@ -210,10 +210,10 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/sachsen-vineyard.geojson',
     grapes: ['Müller-Thurgau', 'Weißburgunder', 'Riesling', 'Traminer'],
     styles: ['QbA', 'Kabinett', 'Sekt'],
-    description: '德國最東部產區，易北河沿岸，大陸型氣候，酸度鮮明',
+    description: '德國最東部產區，易北河沿岸，1161 年首見文獻記載；擁有全德幾乎唯獨此地種植的特有品種 Goldriesling',
     soils: ['花崗岩', '片麻岩', '黃土'],
     climate: '大陸型，寒冷，生長期短',
-    hectares: 500,
+    hectares: 531,
     villages: ['Meißen', 'Dresden', 'Pillnitz']
   },
   {
@@ -234,10 +234,10 @@ export const germanyRegions = [
     ],
     grapes: ['Spätburgunder', 'Grauburgunder', 'Müller-Thurgau', 'Riesling'],
     styles: ['紅酒 QbA', '紅酒 Spätlese', 'Grauburgunder', 'Sekt'],
-    description: '德國最南端最溫暖產區，沿萊茵河從 Freiburg 延伸至 Karlsruhe，Spätburgunder 飽滿圓潤',
+    description: '德國第三大產區，南北縱貫約 400 公里；全德唯一 EU B 級溫暖產區，Pinot（黑/灰/白皮諾）合計佔 61% 種植面積',
     soils: ['火山岩', '黃土', '黏土石灰岩', '片麻岩'],
     climate: '溫暖，德國最接近地中海型氣候',
-    hectares: 16000,
+    hectares: 15142,
     villages: ['Freiburg', 'Baden-Baden', 'Kaiserstuhl', 'Ortenau', 'Markgräflerland']
   }
 ]

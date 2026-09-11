@@ -59,7 +59,7 @@ export const G1M1L1 = {
 <div class="stat-grid">
   <div class="stat-box"><div class="stat-number">2000 年+</div><div class="stat-label">釀酒歷史</div></div>
   <div class="stat-box"><div class="stat-number">13</div><div class="stat-label">法定產區 Anbaugebiete</div></div>
-  <div class="stat-box"><div class="stat-number">103,000 ha</div><div class="stat-label">葡萄園面積</div></div>
+  <div class="stat-box"><div class="stat-number">102,000 ha</div><div class="stat-label">葡萄園面積（2025）</div></div>
   <div class="stat-box"><div class="stat-number">1775 年</div><div class="stat-label">Spätlese 首次誕生</div></div>
 </div>`
     },
@@ -84,9 +84,9 @@ export const G1M1L1 = {
       type: 'stats',
       title: '📊 德國葡萄酒數據',
       stats: [
-        { label: '葡萄園面積', value: '103,000 公頃' },
+        { label: '葡萄園面積', value: '102,000 公頃（2025）' },
         { label: '法定產區', value: '13 個 Anbaugebiete' },
-        { label: '年產量', value: '约 90 億公升' },
+        { label: '生產者', value: '約 15,200 家' },
         { label: '出口比例', value: '約 35%' }
       ]
     },
@@ -219,6 +219,25 @@ export const G1M1L3 = {
       ]
     },
     {
+      type: 'list',
+      title: '🌟 13 產區冷知識',
+      items: [
+        { icon: '📐', text: 'Mosel：全球坡度最陡的產區之一，近半數葡萄園超過 30 度、部分達 70 度，機械採收幾乎不可能' },
+        { icon: '📜', text: 'Rheinhessen：德國最早文獻記載的葡萄園 Niersteiner Glöck 就在此地' },
+        { icon: '🍷', text: 'Pfalz：德國最大紅酒產區，全德近半 Merlot 種植於此；擁有全球最大葡萄酒節（Bad Dürkheim）' },
+        { icon: '🔄', text: 'Rheingau：因「萊茵河膝」（Rheinknie）轉彎形成絕佳南向微氣候，Riesling 佔比高達 85%，全德最高' },
+        { icon: '🪨', text: 'Nahe：火成岩、沉積岩、變質岩齊聚一地，被稱為「岩石循環博物館」' },
+        { icon: '🔴', text: 'Ahr：紅葡萄品種佔比 79%，全德最高，儘管地處最北端' },
+        { icon: '🏛️', text: 'Franken：沿美因河釀酒史超過 1200 年，Bocksbeutel 扁瓶是產區標誌' },
+        { icon: '🏰', text: 'Mittelrhein：德國最小產區，羅馬人最早於此種植葡萄；峽谷段 2002 年列入 UNESCO 世界遺產' },
+        { icon: '🌸', text: 'Hessische Bergstrasse：1971 年才獨立設區，春天杏花總是搶先其他產區綻放' },
+        { icon: '🍇', text: 'Württemberg：德國第四大產區，紅酒佔 63%，本地人日常消耗量居全德之冠' },
+        { icon: '🧱', text: 'Saale-Unstrut：西元 998 年即有種植記載，年雨量僅約 500mm，乾式石牆梯田是招牌景觀' },
+        { icon: '🍾', text: 'Sachsen：擁有全德幾乎唯獨此地種植的特有品種 Goldriesling' },
+        { icon: '☀️', text: 'Baden：南北縱貫約 400 公里，是德國唯一被歸類為 EU B 級（較溫暖）的產區' }
+      ]
+    },
+    {
       type: 'map_placeholder',
       title: '🗺️ 互動地圖探索',
       description: '點擊下方按鈕，在衛星地圖上探索 Mosel 的陡峭板岩坡與葡萄園分佈',
@@ -242,7 +261,7 @@ export const G1M1L3 = {
           question: '德國最大的葡萄酒產區是？',
           options: ['Mosel', 'Rheinhessen', 'Pfalz', 'Baden'],
           answer: 1,
-          explanation: 'Rheinhessen 是德國面積最大的葡萄酒產區，擁有超過 27,000 公頃的葡萄園，種植品種最為多元。'
+          explanation: 'Rheinhessen 是德國面積最大的葡萄酒產區，擁有超過 27,600 公頃的葡萄園（2025），種植品種最為多元。'
         },
         {
           question: '以下哪條河流對德國葡萄酒最重要？',
