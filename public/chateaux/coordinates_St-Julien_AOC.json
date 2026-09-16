@@ -126,6 +126,20 @@
     "description_ja": "船の帆をモチーフにした有名なラベル。滑らかで親しみやすく幅広い人気を持つ。"
   },
   {
+    "name": "Château Saint-Pierre",
+    "coordinates": [
+      -0.7426481884035471,
+      45.148919446027726
+    ],
+    "rank": "四級酒莊 (Quatrième Grand Cru Classé 1855)",
+    "description": "聖朱利安面積最小的列級酒莊之一，風格紮實穩健，性價比出眾。",
+    "image": "/images/chateaux/LeftBank/Medoc/saint_pierre.png",
+    "description_en": "One of the smallest classified growths in Saint-Julien; a firmly structured, dependable style offering excellent value.",
+    "rank_en": "4th Growth (Quatrième Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第4級格付け",
+    "description_ja": "サン＝ジュリアンで最も小規模な格付けシャトーの一つ。しっかりとした骨格と安定感のあるスタイルで、コストパフォーマンスに優れる。"
+  },
+  {
     "name": "Château Langoa Barton",
     "coordinates": [
       -0.73912,

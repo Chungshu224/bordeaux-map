@@ -14,6 +14,20 @@
     "description_ja": "オー＝メドック南部に位置し、バランスの取れた果実味豊かなワインを生産する。"
   },
   {
+    "name": "Château Cantemerle",
+    "coordinates": [
+      -0.69012,
+      45.00123
+    ],
+    "rank": "五級酒莊 (Cinquième Grand Cru Classé 1855)",
+    "description": "位於 Haut-Médoc 南端，風格優雅細膩，果香豐富。",
+    "image": "/images/chateaux/LeftBank/Medoc/Cantemerle.jpg",
+    "description_en": "Located at the southern tip of Haut-Médoc; elegant, refined, and fruit-forward.",
+    "rank_en": "5th Growth (Grand Cru Classé 1855)",
+    "rank_ja": "1855年 第5級格付け",
+    "description_ja": "オー＝メドック最南端に位置し、エレガントで洗練されたフルーティなスタイルが特徴。"
+  },
+  {
     "name": "Château Camensac",
     "coordinates": [
       -0.73456,
