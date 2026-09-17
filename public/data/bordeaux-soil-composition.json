@@ -22,12 +22,12 @@
       "composition": "礫石 70% + 砂土 20% + 黏土 10%",
       "description": "砂質礫石土，顆粒較細，質地最優雅"
     },
-    "Saint-Julien_AOC": {
+    "St-Julien_AOC": {
       "primary": "礫石土",
       "composition": "礫石 80% + 黏土 15% + 砂土 5%",
       "description": "深厚礫石層，含鐵質，排水完美"
     },
-    "Saint-Estephe_AOC": {
+    "St-Estephe_AOC": {
       "primary": "黏土",
       "composition": "黏土 50% + 礫石 35% + 石灰岩 15%",
       "description": "梅多克最北端，黏土比例最高，保水性強"
@@ -76,12 +76,12 @@
       "composition": "黏土 70% + 礫石 20% + 鐵質 10%",
       "description": "著名的藍色黏土（Blue Clay），富含鐵質"
     },
-    "Saint-Emilion_AOC": {
+    "St-Emilion_AOC": {
       "primary": "石灰岩",
       "composition": "石灰岩 50% + 黏土 30% + 砂土 20%",
       "description": "高地石灰岩台地與坡地黏土混合"
     },
-    "Saint-Emilion-Grand-Cru_AOC": {
+    "St-Emilion-Grand-Cru_AOC": {
       "primary": "石灰岩",
       "composition": "石灰岩 60% + 黏土 30% + 泥灰岩 10%",
       "description": "精選地塊，石灰岩比例更高"
