@@ -159,13 +159,13 @@
       -0.788,
       45.26
     ],
-    "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
-    "description": "位於 Saint-Estèphe，充滿活力的 Exceptionnel，豐富的黑色水果與精緻架構受到廣大讚譽。",
-    "image": "",
-    "description_en": "A vibrant Exceptionnel in Saint-Estèphe; rich black fruit and refined structure have earned wide acclaim.",
-    "rank_en": "Cru Bourgeois Exceptionnel",
-    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
-    "description_ja": "サン＝テステフの活気あるエクセプショネル。豊かな黒果実と洗練された骨格で高い評価を得ている。"
+    "rank": "中級莊優選 (Cru Bourgeois Supérieur)",
+    "description": "位於 Saint-Estèphe，充滿活力的 Cru Bourgeois Supérieur，豐富的黑色水果與精緻架構受到廣大讚譽。",
+    "image": "/images/chateaux/LeftBank/Medoc/petit_bocq.jpg",
+    "description_en": "A vibrant Cru Bourgeois Supérieur in Saint-Estèphe; rich black fruit and refined structure have earned wide acclaim.",
+    "rank_en": "Cru Bourgeois Supérieur",
+    "rank_ja": "クリュ・ブルジョワ・シュペリユール",
+    "description_ja": "サン＝テステフの活気あるクリュ・ブルジョワ・シュペリユール。豊かな黒果実と洗練された骨格で高い評価を得ている。"
   },
   {
     "name": "Château Les Ormes de Pez",
@@ -175,7 +175,7 @@
     ],
     "rank": "中級莊 (Cru Bourgeois)",
     "description": "由 Lynch-Bages 業主 Jean-Michel Cazes 家族管理，一致性極高，常被譽為「Lynch-Bages 平替」。",
-    "image": "",
+    "image": "/images/chateaux/LeftBank/Medoc/ormes_de_pez.jpg",
     "description_en": "Managed by Jean-Michel Cazes's family, owners of Lynch-Bages; highly consistent and often called the 'Lynch-Bages of Saint-Estèphe'.",
     "rank_en": "Cru Bourgeois",
     "rank_ja": "クリュ・ブルジョワ",
@@ -189,7 +189,7 @@
     ],
     "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
     "description": "與 Montrose 同屬 Bouygues 兄弟旗下，共用釀造團隊，近年品質穩步提升。",
-    "image": "",
+    "image": "/images/chateaux/LeftBank/Medoc/tronquoy_lalande.png",
     "description_en": "Owned by the Bouygues brothers alongside Montrose, sharing its winemaking team; quality has steadily improved in recent years.",
     "rank_en": "Cru Bourgeois Exceptionnel",
     "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
@@ -201,12 +201,12 @@
       -0.7718469037680447,
       45.23876535665472
     ],
-    "rank": "中級莊 (Cru Bourgeois)",
+    "rank": "特等中級莊 (Cru Bourgeois Exceptionnel)",
     "description": "由 Cuvelier 家族（Saint-Julien Léoville Poyferré 業主）擁有，位處吉倫特河畔，風格傳統紮實。",
-    "image": "",
+    "image": "/images/chateaux/LeftBank/Medoc/le_crock.png",
     "description_en": "Owned by the Cuvelier family (also owners of Léoville Poyferré in Saint-Julien); situated along the Gironde with a traditional, sturdy style.",
-    "rank_en": "Cru Bourgeois",
-    "rank_ja": "クリュ・ブルジョワ",
+    "rank_en": "Cru Bourgeois Exceptionnel",
+    "rank_ja": "クリュ・ブルジョワ・エクセプショネル",
     "description_ja": "サン＝ジュリアンのレオヴィル・ポワフェレも所有するキュヴリエ家が経営。ジロンド川沿いに位置し、伝統的でしっかりとしたスタイル。"
   }
 ]
