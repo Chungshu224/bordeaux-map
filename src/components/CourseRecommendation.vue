@@ -53,7 +53,7 @@ const AOC_LESSON_MAP = {
   'St-Emilion_AOC':                { lessonId: 'l2-7', level: 2, title: 'St-Emilion 的分級秘辛',  icon: '⛪', reason: '品飲過 St-Emilion，了解其複雜的分級制度與多元風格' },
   'Lalande-de-Pomerol_AOC':        { lessonId: 'l2-8', level: 2, title: '衛星產區的物超所值',     icon: '💡', reason: '品飲衛星產區後，深入了解這些隱藏的寶藏' },
   'Fronsac_AOC':                   { lessonId: 'l2-8', level: 2, title: '衛星產區的物超所值',     icon: '💡', reason: '品飲衛星產區後，深入了解這些隱藏的寶藏' },
-  'Pessac-Leognan_AOC':            { lessonId: 'l2-1', level: 2, title: 'Pessac-Léognan 礫石風土', icon: '🦅', reason: '你品飲了 Pesssac-Léognan，了解 Graves 的石頭魔法' },
+  'Pessac-Leognan_AOC':            { lessonId: 'l2-11', level: 2, title: 'Pessac-Léognan 礫石風土', icon: '🦅', reason: '你品飲了 Pessac-Léognan，了解 Graves 的石頭魔法' },
   'Sauternes_AOC':                 { lessonId: 'l3-5', level: 3, title: '貴腐甜酒的釀造奧秘',     icon: '🍯', reason: '你品飲了 Sauternes，深入了解貴腐黴菌與甜酒釀造工藝' },
   'Barsac_AOC':                    { lessonId: 'l3-5', level: 3, title: '貴腐甜酒的釀造奧秘',     icon: '🍯', reason: '你品飲了 Barsac 甜酒，了解貴腐釀造的藝術' },
 }

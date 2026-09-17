@@ -784,7 +784,7 @@ export const lessonContent = [
                 <div class="red-wine-estates">
                   <h6>紅酒列級莊</h6>
                   <ul>
-                    <li><strong>酒莊數量：</strong>16家</li>
+                    <li><strong>酒莊數量：</strong>13家</li>
                     <li><strong>知名酒莊：</strong>侯伯王堡、美訊堡、拉圖瑪蒂亞克堡</li>
                     <li><strong>風格特點：</strong>優雅礦物感，陳年潛力佳</li>
                   </ul>
@@ -793,7 +793,7 @@ export const lessonContent = [
                   <h6>白酒列級莊</h6>
                   <ul>
                     <li><strong>酒莊數量：</strong>9家</li>
-                    <li><strong>代表酒莊：</strong>侯伯王白酒、拉維爾侯伯王堡</li>
+                    <li><strong>代表酒莊：</strong>拉維爾侯伯王堡、舒瓦利耶堡</li>
                     <li><strong>品質地位：</strong>法國最頂級的干型白酒</li>
                   </ul>
                 </div>

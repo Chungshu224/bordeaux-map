@@ -83,7 +83,7 @@ class LessonContentManager {
       const module = await loader()
       // 統一尋找可能的匯出鍵
       const candidates = [
-        'default','lessonContent','l21Content','l22Content','l23Content','l24Content','l25Content','l26Content','l27Content','l28Content','l29Content','l210Content','l31Content','l32Content','l33Content','l34Content','l35Content','l36Content','l37Content','l38Content','l39Content','l310Content','l311Part1Content','l311Part2Content','l312Content','l313Part1Content','l313Part2Content','l314Content','l3gtcContent','l410Content','l411Content','l412Content','l413Content'
+        'default','lessonContent','l21Content','l22Content','l23Content','l24Content','l25Content','l26Content','l27Content','l28Content','l29Content','l210Content','l211Content','l31Content','l32Content','l33Content','l34Content','l35Content','l36Content','l37Content','l38Content','l39Content','l310Content','l311Part1Content','l311Part2Content','l312Content','l313Part1Content','l313Part2Content','l314Content','l3gtcContent','l410Content','l411Content','l412Content','l413Content'
       ]
       let baseContent = null
       for (const key of candidates) {
@@ -208,6 +208,7 @@ export const lessonModuleLoaders = {
   'l2-8': () => import('./lessons/l2-8.js'),
   'l2-9': () => import('./lessons/l2-9.js'), // Level 2 綜合評量
   'l2-10': () => import('./lessons/l2-10.js'), // 蘇玳與巴薩克：貴腐甜酒傳奇
+  'l2-11': () => import('./lessons/l2-11.js'), // Pessac-Léognan：波爾多城裡的礫石王國
   // Level 3 (現存模組)
   'l3-1': () => import('./lessons/l3-1.js'),
   'l3-2': () => import('./lessons/l3-2.js'),

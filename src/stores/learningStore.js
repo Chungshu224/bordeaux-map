@@ -177,7 +177,8 @@ export const learningLevels = {
       { id: 'B2M1', title: '左岸 Médoc 深度探索', lessonIds: ['l2-1', 'l2-2', 'l2-3', 'l2-4', 'l2-5'] },
       { id: 'B2M2', title: '右岸精品產區', lessonIds: ['l2-6', 'l2-7', 'l2-8'] },
       { id: 'B2M3', title: '蘇玳甜酒帶', lessonIds: ['l2-10'] },
-      { id: 'B2M4', title: '進階綜合評量', lessonIds: ['l2-9'] }
+      { id: 'B2M4', title: '進階綜合評量', lessonIds: ['l2-9'] },
+      { id: 'B2M5', title: '左岸格拉夫產區', lessonIds: ['l2-11'] }
     ],
     lessons: [
       {
@@ -320,6 +321,20 @@ export const learningLevels = {
         ],
         interactiveElements: ['comprehensive-assessment', 'knowledge-matrix', 'progress-evaluation'],
         duration: 30
+      },
+      {
+        id: 'l2-11',
+        title: 'Pessac-Léognan - 波爾多城裡的礫石王國',
+        description: '唯一紅白皆列級的左岸產區，Château Haut-Brion的家鄉深度探索',
+        mapFocus: { group: 'LeftBank-Graves', aoc: 'Pessac-Leognan_AOC.geojson' },
+        objectives: [
+          '了解Pessac-Léognan橫跨波爾多城南緣十個村莊的地理特色',
+          '掌握1959年格拉夫分級紅、白雙軌名單的運作邏輯',
+          '認識Château Haut-Brion橫跨1855與1959兩套分級系統的唯一身分',
+          '理解礫石台地如何同時孕育頂級紅酒與白酒'
+        ],
+        interactiveElements: ['red-white-classification-explorer', 'haut-brion-timeline', 'gravel-soil-analyzer'],
+        duration: 32
       }
     ]
   },
@@ -837,8 +852,8 @@ export const learningActions = {
     const allLessonIds = [
       // Level 1
       'l1-1', 'l1-2', 'l1-3', 'l1-4', 'l1-5', 'l1-6', 'l1-7', 'l1-8',
-      // Level 2  
-      'l2-1', 'l2-2', 'l2-3', 'l2-4', 'l2-5', 'l2-6', 'l2-7', 'l2-8', 'l2-9',
+      // Level 2
+      'l2-1', 'l2-2', 'l2-3', 'l2-4', 'l2-5', 'l2-6', 'l2-7', 'l2-8', 'l2-9', 'l2-10', 'l2-11',
       // Level 3
       'l3-1', 'l3-2', 'l3-3'
     ]

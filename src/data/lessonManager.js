@@ -21,7 +21,10 @@ export const lessonContentMap = {
   // 'l2-6': Pomerol - 稀世珍寶
   // 'l2-7': 聖愛美濃深度探索
   // 'l2-8': Libournais衛星產區
-  
+  // 'l2-9': Level 2 綜合評量
+  // 'l2-10': 蘇玳與巴薩克：貴腐甜酒傳奇
+  // 'l2-11': Pessac-Léognan - 波爾多城裡的礫石王國
+
   // L3-5 綜合（合併版）
   // 'l3-5': 現代釀酒工藝與技術（Part1+Part2+Part3A+Part3B 整合）
 }
