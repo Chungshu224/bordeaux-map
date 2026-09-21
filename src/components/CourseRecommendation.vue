@@ -54,6 +54,7 @@ const AOC_LESSON_MAP = {
   'Lalande-de-Pomerol_AOC':        { lessonId: 'l2-8', level: 2, title: '衛星產區的物超所值',     icon: '💡', reason: '品飲衛星產區後，深入了解這些隱藏的寶藏' },
   'Fronsac_AOC':                   { lessonId: 'l2-8', level: 2, title: '衛星產區的物超所值',     icon: '💡', reason: '品飲衛星產區後，深入了解這些隱藏的寶藏' },
   'Pessac-Leognan_AOC':            { lessonId: 'l2-11', level: 2, title: 'Pessac-Léognan 礫石風土', icon: '🦅', reason: '你品飲了 Pessac-Léognan，了解 Graves 的石頭魔法' },
+  'Graves_AOC':                    { lessonId: 'l2-12', level: 2, title: 'Graves 最古老的身世', icon: '🪨', reason: '你品飲了 Graves，認識這個把名字借給礫石的母產區' },
   'Sauternes_AOC':                 { lessonId: 'l3-5', level: 3, title: '貴腐甜酒的釀造奧秘',     icon: '🍯', reason: '你品飲了 Sauternes，深入了解貴腐黴菌與甜酒釀造工藝' },
   'Barsac_AOC':                    { lessonId: 'l3-5', level: 3, title: '貴腐甜酒的釀造奧秘',     icon: '🍯', reason: '你品飲了 Barsac 甜酒，了解貴腐釀造的藝術' },
 }

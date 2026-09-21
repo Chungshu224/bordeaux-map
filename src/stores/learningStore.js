@@ -178,7 +178,7 @@ export const learningLevels = {
       { id: 'B2M2', title: '右岸精品產區', lessonIds: ['l2-6', 'l2-7', 'l2-8'] },
       { id: 'B2M3', title: '蘇玳甜酒帶', lessonIds: ['l2-10'] },
       { id: 'B2M4', title: '進階綜合評量', lessonIds: ['l2-9'] },
-      { id: 'B2M5', title: '左岸格拉夫產區', lessonIds: ['l2-11'] }
+      { id: 'B2M5', title: '左岸格拉夫產區', lessonIds: ['l2-12', 'l2-11'] }
     ],
     lessons: [
       {
@@ -321,6 +321,20 @@ export const learningLevels = {
         ],
         interactiveElements: ['comprehensive-assessment', 'knowledge-matrix', 'progress-evaluation'],
         duration: 30
+      },
+      {
+        id: 'l2-12',
+        title: 'Graves - 波爾多最古老的身世',
+        description: '把名字借給礫石的產區，1987年分家出 Pessac-Léognan 的母產區深度探索',
+        mapFocus: { group: 'LeftBank-Graves', aoc: 'Graves_AOC.geojson' },
+        objectives: [
+          '了解 Graves 橫跨38個村莊、波爾多最古老產區的地理範圍',
+          '掌握1987年 Pessac-Léognan 從 Graves 獨立的世系脈絡',
+          '理解礫石台地如何同時孕育頂級紅酒與白酒',
+          '分辨 Graves 與 Graves Supérieures「同一塊地、兩種宣告」的關係'
+        ],
+        interactiveElements: ['gravel-soil-analyzer', 'graves-superieures-comparison', 'south-graves-estates-map'],
+        duration: 28
       },
       {
         id: 'l2-11',
@@ -853,7 +867,7 @@ export const learningActions = {
       // Level 1
       'l1-1', 'l1-2', 'l1-3', 'l1-4', 'l1-5', 'l1-6', 'l1-7', 'l1-8',
       // Level 2
-      'l2-1', 'l2-2', 'l2-3', 'l2-4', 'l2-5', 'l2-6', 'l2-7', 'l2-8', 'l2-9', 'l2-10', 'l2-11',
+      'l2-1', 'l2-2', 'l2-3', 'l2-4', 'l2-5', 'l2-6', 'l2-7', 'l2-8', 'l2-9', 'l2-10', 'l2-11', 'l2-12',
       // Level 3
       'l3-1', 'l3-2', 'l3-3'
     ]

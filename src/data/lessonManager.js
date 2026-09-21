@@ -24,6 +24,7 @@ export const lessonContentMap = {
   // 'l2-9': Level 2 綜合評量
   // 'l2-10': 蘇玳與巴薩克：貴腐甜酒傳奇
   // 'l2-11': Pessac-Léognan - 波爾多城裡的礫石王國
+  // 'l2-12': Graves - 波爾多最古老的身世
 
   // L3-5 綜合（合併版）
   // 'l3-5': 現代釀酒工藝與技術（Part1+Part2+Part3A+Part3B 整合）

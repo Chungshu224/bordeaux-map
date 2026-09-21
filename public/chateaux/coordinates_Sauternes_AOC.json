@@ -20,9 +20,9 @@
       44.55656
     ],
     "rank": "一級酒莊 (Premier Cru Classé 1855)",
-    "description": "Sauternes 五大一級酒莊之一，風格濃郁、甜美且層次豐富。",
+    "description": "1855年11座一級酒莊之一，風格濃郁、甜美且層次豐富。",
     "image": "/images/chateaux/Sauternais/suduiraut.jpg",
-    "description_en": "One of Sauternes' five First Growth estates; rich, luscious, and multi-layered.",
+    "description_en": "One of the eleven 1855 Premiers Crus; rich, luscious, and multi-layered.",
     "rank_en": "Premier Cru Classé 1855",
     "rank_ja": "1855年 プルミエ・クリュ・クラッセ",
     "description_ja": "ソーテルヌ第一特等格付けの一つ。リッチで蜂蜜のように甘く、複雑な重なりを持つ甘口白ワイン。"
@@ -62,9 +62,9 @@
       44.59476
     ],
     "rank": "一級酒莊 (Premier Cru Classé 1855)",
-    "description": "Barsac 五大一級酒莊之一，風格細膩優雅，酸度明亮。",
+    "description": "Barsac 兩座一級酒莊之一（另一座為 Climens），風格細膩優雅，酸度明亮。",
     "image": "/images/chateaux/Sauternais/coutet.jpg",
-    "description_en": "One of the five First Growths of Barsac, with a long history of producing high-quality botrytized sweet whites.",
+    "description_en": "One of only two Premiers Crus located in Barsac (the other being Climens), with a long history of producing high-quality botrytized sweet whites.",
     "rank_en": "Premier Cru Classé 1855",
     "rank_ja": "1855年 プルミエ・クリュ・クラッセ",
     "description_ja": "バルサック第一特等格付けの一つ。長年にわたり高品質な貴腐甘口白ワインを生産し続ける歴史的名シャトー。"
@@ -72,13 +72,13 @@
   {
     "name": "Château Climens",
     "coordinates": [
-      -0.33473,
-      44.58948
+      -0.3265,
+      44.5935
     ],
     "rank": "一級酒莊 (Premier Cru Classé 1855)",
-    "description": "Barsac 五大一級酒莊之一，被譽為Barsac的女王，風格細緻優雅。",
+    "description": "Barsac 兩座一級酒莊之一（另一座為 Coutet），被譽為Barsac的女王，風格細緻優雅。",
     "image": "/images/chateaux/Sauternais/climens.jpg",
-    "description_en": "One of the five First Growths of Barsac, celebrated for its delicate, refined character — often called the Queen of Barsac.",
+    "description_en": "One of only two Premiers Crus located in Barsac (the other being Coutet), celebrated for its delicate, refined character — often called the Queen of Barsac.",
     "rank_en": "Premier Cru Classé 1855",
     "rank_ja": "1855年 プルミエ・クリュ・クラッセ",
     "description_ja": "バルサック第一特等格付け。繊細で上品なスタイルから「バルサックの女王」とも称される。"
