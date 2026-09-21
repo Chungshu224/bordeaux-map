@@ -30,14 +30,24 @@ const DESCR_MAP = [
 ]
 
 // ── 各產區土壤描述覆蓋（key = translateBRGM 返回的 zh 名稱）────────
+// 波爾多橫跨左右兩岸，同一種岩性（如黏土、石灰岩）在左右岸的代表性產區完全不同，
+// 因此 bordeaux 底下依「left」／「right」分岸儲存，由呼叫端依目前選取 AOC 所在的岸別挑選；
+// 若當時沒有選取 AOC 或所在分組無法判斷左右岸（如 Entre-Deux-Mers、Regional），則不套用覆蓋，
+// 改回退到 DESCR_MAP 的通用（跨產區、不預設地點）說明，避免對錯的岸別下錯誤結論。
 const REGION_DESCR_OVERRIDE = {
   bordeaux: {
-    '黏土':     '黏土保水性強，梅洛（Merlot）在波爾多右岸聖愛美濃（Saint-Émilion）、波美侯（Pomerol）的黏土上展現豐潤柔滑的風格，是右岸風土的靈魂。',
-    '泥灰岩':   '波爾多右岸高地（Saint-Émilion Grand Cru）的泥灰岩台地混合石灰岩與黏土，保水適中，孕育出結構細緻的頂級佳釀。',
-    '沖積土':   '波爾多梅多克沿吉倫特河的礫石沖積土排水極佳，卡本內蘇維翁（Cabernet Sauvignon）在此充分成熟，是左岸各名莊的根基。',
-    '礫石土':   '礫石土壤白天吸熱、夜晚散熱，幫助葡萄均勻成熟。波爾多 Graves（格拉夫）以礫石命名，卡本內蘇維翁與梅洛在此共同展現波爾多風土的深度。',
-    '石灰岩':   '波爾多右岸聖愛美濃高地由石灰岩組成，偏涼且排水良好，賦予頂級酒款精緻的酸度與礦物質感。',
-    '砂岩/砂土': '波爾多部分低窪地帶（如 Lussac、Fronsac 邊緣）出現砂質土壤，排水迅速，適合種植梅洛，釀出輕盈早飲風格的酒款。',
+    left: {
+      '沖積土':   '波爾多梅多克沿吉倫特河的礫石沖積土排水極佳，卡本內蘇維翁（Cabernet Sauvignon）在此充分成熟，是左岸各名莊的根基。',
+      '礫石土':   '礫石土壤白天吸熱、夜晚散熱，幫助葡萄均勻成熟。波爾多 Graves（格拉夫）以礫石命名，卡本內蘇維翁與梅洛在此共同展現波爾多風土的深度。',
+      '黏土':     '左岸並非全是礫石——梅多克最北端的 Saint-Estèphe，黏土比例是左岸四大名村中最高的，保水性強、升溫慢，賦予酒款更緊實的骨架與陳年潛力。',
+      '石灰岩':   '左岸南端的 Barsac，坐落在石灰岩台地上，排水良好又能適度保濕，是貴腐甜白酒的重要風土基礎。',
+    },
+    right: {
+      '黏土':     '黏土保水性強，梅洛（Merlot）在波爾多右岸聖愛美濃（Saint-Émilion）、波美侯（Pomerol）的黏土上展現豐潤柔滑的風格，是右岸風土的靈魂。',
+      '泥灰岩':   '波爾多右岸高地（Saint-Émilion Grand Cru）的泥灰岩台地混合石灰岩與黏土，保水適中，孕育出結構細緻的頂級佳釀。',
+      '石灰岩':   '波爾多右岸聖愛美濃高地由石灰岩組成，偏涼且排水良好，賦予頂級酒款精緻的酸度與礦物質感。',
+      '砂岩/砂土': '波爾多部分低窪地帶（如 Lussac、Fronsac 邊緣）出現砂質土壤，排水迅速，適合種植梅洛，釀出輕盈早飲風格的酒款。',
+    },
   },
   bourgogne: {
     '黏土':     '布根地金丘下坡偏黏土的地塊（如 Meursault 部分 Premier Cru）賦予黑皮諾（Pinot Noir）豐潤、絲滑的果感，夏多內（Chardonnay）則展現奶油與榛果風味。',
@@ -96,14 +106,17 @@ const BRGM_DEFAULT = {
   wine: '此處為混合型沉積土壤，由風化基岩、河流沖積與細粒沉積物交織而成，排水與保水性介於砂質與黏質之間，能支持多元葡萄品種生長，並賦予葡萄酒柔順的果香與適度的礦物層次。'
 }
 
-function renderBRGMPopupHTML(descr, type, _codeGeol, region = '', soilComposition = null) {
+function renderBRGMPopupHTML(descr, type, _codeGeol, region = '', soilComposition = null, bank = null) {
   let info = translateBRGM(descr, type)
   // 若未轉換成功（讀不到對應關鍵字）提供中文 fallback
   if (!info.wine) {
     info = { ...BRGM_DEFAULT, zh: info.zh && info.zh !== descr ? info.zh : BRGM_DEFAULT.zh }
   }
-  // 套用各產區專屬描述（若有）
-  const regionOverride = REGION_DESCR_OVERRIDE[region]
+  // 套用各產區專屬描述（若有）——bordeaux 依左右岸挑選，避免在左岸套用右岸專屬文字（反之亦然）
+  let regionOverride = REGION_DESCR_OVERRIDE[region]
+  if (region === 'bordeaux') {
+    regionOverride = bank ? regionOverride?.[bank] : null
+  }
   const wineText = (regionOverride && regionOverride[info.zh]) ? regionOverride[info.zh] : info.wine
   
   // 土壤組成比例區塊（如果有數據）
@@ -312,14 +325,16 @@ export function useBRGMGeology(region = '') {
             }
           } catch (_) {}
           
-          // 查找當前 AOC 的土壤組成數據
+          // 查找當前 AOC 的土壤組成數據，並記錄所屬群組以判斷左右岸
           let soilComp = null
+          let matchedGroupKey = null
           if (soilCompositionData && currentAOCName) {
             console.log('[BRGM] 正在查找土壤數據，AOC名稱:', currentAOCName)
             // 遍歷所有群組找到匹配的 AOC
-            for (const group of Object.values(soilCompositionData)) {
+            for (const [groupKey, group] of Object.entries(soilCompositionData)) {
               if (group[currentAOCName]) {
                 soilComp = group[currentAOCName]
+                matchedGroupKey = groupKey
                 console.log('[BRGM] 找到土壤數據:', soilComp)
                 break
               }
@@ -330,9 +345,17 @@ export function useBRGMGeology(region = '') {
           } else {
             console.warn('[BRGM] 土壤數據或 AOC 名稱缺失:', { hasData: !!soilCompositionData, aocName: currentAOCName })
           }
-          
+
+          // 依群組名稱判斷左右岸（LeftBank-* / RightBank-*；Sauternais 地理上屬左岸；
+          // Entre-Deux-Mers、Regional 橫跨或不分岸，回傳 null 不套用岸別專屬文字）
+          let bank = null
+          if (matchedGroupKey) {
+            if (matchedGroupKey.startsWith('LeftBank') || matchedGroupKey === 'Sauternais') bank = 'left'
+            else if (matchedGroupKey.startsWith('RightBank')) bank = 'right'
+          }
+
           // 即使無資料也顯示中文 fallback popup
-          const html = renderBRGMPopupHTML(descr, type, codeGeol, region, soilComp)
+          const html = renderBRGMPopupHTML(descr, type, codeGeol, region, soilComp, bank)
           if (brgmPopup) brgmPopup.remove()
           brgmPopup = new mapboxgl.Popup({
             className: 'brgm-popup-wrap',
