@@ -133,13 +133,14 @@ export const l211Content = [
             <tr><th>類別</th><th>家數</th><th>代表酒莊</th></tr>
           </thead>
           <tbody>
-            <tr><td>僅紅酒列級</td><td>7家</td><td>Haut-Brion、Pape Clément、La Mission Haut-Brion、Haut-Bailly、Fieuzal 等</td></tr>
+            <tr><td>僅紅酒列級</td><td>7家</td><td>Haut-Brion、La Mission Haut-Brion、Pape Clément、Smith Haut Lafitte、Haut-Bailly、La Tour Haut-Brion、de Fieuzal</td></tr>
             <tr><td>僅白酒列級</td><td>3家</td><td>Couhins、Couhins-Lurton、Laville Haut-Brion</td></tr>
-            <tr><td>紅白皆列級</td><td>6家</td><td>Domaine de Chevalier、Smith Haut Lafitte、Carbonnieux、Malartic-Lagravière、Latour-Martillac、Olivier、Bouscaut</td></tr>
+            <tr><td>紅白皆列級</td><td>6家</td><td>Domaine de Chevalier、Carbonnieux、Malartic-Lagravière、Latour-Martillac、Olivier、Bouscaut</td></tr>
           </tbody>
         </table>
         <p><strong>總計16家酒莊</strong>：13家名列紅酒榜、9家名列白酒榜，兩份名單有6家重疊，合計16家不重複的列級酒莊。</p>
         <p>而在這16家裡，只有一家與眾不同——<strong>Château Haut-Brion</strong>，它不只在1959年的格拉夫名單上，更早在1855年就被列為Médoc分級的一級莊，是五大一級莊裡唯一不在Médoc半島上的酒莊。</p>
+        <p class="note-box"><strong>常見誤解提醒：</strong>Smith Haut Lafitte的白酒近年評價極高，卻<strong>不在</strong>1959年白酒列級名單裡——因為它的白酒是1990年代之後才大量發展起來的，分級名單制定時尚未成氣候，之後也未再修訂。這是Pessac-Léognan學習者最容易搞錯的一個知識點。</p>
       </div>
     </div>`,
     hasMap: false,
@@ -420,11 +421,12 @@ export const l211Content = [
 
   // ========== 6. 紅酒巨星們 ==========
   {
-    title: '紅酒巨星：Pape Clément、Smith Haut Lafitte、Haut-Bailly',
+    title: '紅酒巨星：Pape Clément、Smith Haut Lafitte、Haut-Bailly、de Fieuzal',
     highlights: [
       { id: 1, icon: '⛪', title: 'Pape Clément', content: '歷史可追溯至13世紀教宗克勉五世，波爾多最古老的酒莊之一' },
       { id: 2, icon: '⛷️', title: 'Smith Haut Lafitte', content: '前滑雪選手Cathiard夫婦接手後，成為近年最耀眼的復興故事' },
-      { id: 3, icon: '⛰️', title: 'Haut-Bailly', content: '位處優越高地，結構嚴謹優雅，公認格拉夫極品' }
+      { id: 3, icon: '⛰️', title: 'Haut-Bailly', content: '位處優越高地，結構嚴謹優雅，公認格拉夫極品' },
+      { id: 4, icon: '🍇', title: 'de Fieuzal', content: '紅酒名列格拉夫列級，未列級的白酒同樣豐富醇厚' }
     ],
     content: `<div class="red-stars-profile">
       <p class="lead-text">Pessac-Léognan的紅酒列級莊裡，有幾個故事特別值得認識——從教會歷史到現代復興，各自代表著不同時代的波爾多。</p>
@@ -432,6 +434,7 @@ export const l211Content = [
         <p><strong>Pape Clément：</strong>歷史可追溯至13世紀，因曾屬於後來成為教宗克勉五世的Bertrand de Goth而得名，是波爾多歷史最悠久的酒莊之一，酒體豐滿濃郁。</p>
         <p><strong>Smith Haut Lafitte：</strong>結合現代科技與傳統工藝，近年在新業主的投資下，成為佩薩克-雷奧良最具代表性、獲評價最高的頂級莊之一。</p>
         <p><strong>Haut-Bailly：</strong>位處優越高地，出產結構嚴謹、極度優雅的紅酒，被公認為格拉夫地區的極品名莊之一。</p>
+        <p><strong>de Fieuzal：</strong>紅酒名列格拉夫列級，表現不俗；未被列入白酒名單的白酒同樣品質超群、風格豐富醇厚，是16家列級莊裡目前唯一沒有官方授權酒莊照片的酒莊。</p>
       </div>
     </div>`,
     hasMap: true,
@@ -448,7 +451,8 @@ export const l211Content = [
       const estates = [
         { name: 'Château Pape Clément', nameChinese: '教皇堡', position: [-0.64671, 44.80568], icon: '⛪', color: '#6b4226', image: '/images/chateaux/LeftBank/Graves/pape_clement.jpg', note: '歷史可追溯至13世紀教宗克勉五世' },
         { name: 'Château Smith Haut Lafitte', nameChinese: '史密斯拉菲特堡', position: [-0.55835, 44.73226], icon: '⛷️', color: '#2C5F2D', image: '/images/chateaux/LeftBank/Graves/smith_haut_lafitte.jpg', note: '現代科技與傳統工藝結合的頂級莊' },
-        { name: 'Château Haut-Bailly', nameChinese: '巴依勒堡', position: [-0.58151, 44.73316], icon: '⛰️', color: '#4a5d3a', image: '/images/chateaux/LeftBank/Graves/haut_bailly.jpg', note: '優越高地，結構嚴謹優雅' }
+        { name: 'Château Haut-Bailly', nameChinese: '巴依勒堡', position: [-0.58151, 44.73316], icon: '⛰️', color: '#4a5d3a', image: '/images/chateaux/LeftBank/Graves/haut_bailly.jpg', note: '優越高地，結構嚴謹優雅' },
+        { name: 'Château de Fieuzal', nameChinese: '費雅克堡', position: [-0.60724, 44.71384], icon: '🍇', color: '#7c5a3a', image: '', note: '紅酒列級表現不俗，未列級白酒同樣豐富醇厚（暫無官方授權酒莊照片）' }
       ]
 
       try {
@@ -471,7 +475,7 @@ export const l211Content = [
 
         const popupContent = document.createElement('div')
         popupContent.innerHTML = `
-          <img src="${estate.image}" alt="${estate.name}" style="width:100%;max-height:180px;object-fit:contain;display:block;background:#f5f5f5;" onerror="this.style.display='none'" />
+          ${estate.image ? `<img src="${estate.image}" alt="${estate.name}" style="width:100%;max-height:180px;object-fit:contain;display:block;background:#f5f5f5;" onerror="this.style.display='none'" />` : `<div style="width:100%;height:80px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;color:#999;font-size:12px;">尚無官方授權照片</div>`}
           <div style="padding:12px;">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
               <span style="font-size:24px;">${estate.icon}</span>
@@ -716,6 +720,52 @@ export const l211Content = [
       correct: 1,
       explanation: 'Pessac-Léognan紅白酒皆有列級莊、皆具頂級陳年潛力，能同時搭配紅肉與海鮮料理，這種「紅白並重」的彈性在波爾多其他產區相當少見。'
     }
+  },
+
+  // ========== 10. 16家列級莊總覽表（複習用） ==========
+  {
+    title: '複習卡：16家格拉夫列級莊總覽',
+    highlights: [
+      { id: 1, icon: '📋', title: '一次看完16家', content: '按紅酒／白酒／紅白皆列級分類整理，方便考前複習' },
+      { id: 2, icon: '🎧', title: '9家有發音示範', content: '練習正確唸法時，優先選這9家' },
+      { id: 3, icon: '📷', title: '僅de Fieuzal缺照片', content: '15家皆有酒莊照片，唯獨de Fieuzal目前沒有' }
+    ],
+    content: `<div class="pessac-leognan-cheatsheet">
+      <p class="lead-text">學完前面九堂課，這裡把16家格拉夫列級莊整理成一張總表，複習或考前重點回顧時直接對照使用。</p>
+      <div class="cheatsheet-table">
+        <table class="data-table compact">
+          <thead>
+            <tr><th>酒莊</th><th>中文名</th><th>列級類別</th><th>風味關鍵字</th><th>發音檔</th><th>酒莊照片</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Château Haut-Brion</td><td>侯伯王堡</td><td>紅（+1855一級莊）</td><td>煙燻、礦物、優雅</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Château La Mission Haut-Brion</td><td>美訊堡</td><td>紅</td><td>宏大、濃郁</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Château La Tour Haut-Brion</td><td>拉圖侯伯王堡</td><td>紅（2005併入美訊堡）</td><td>已停產、藏家絕響</td><td>—</td><td>✅</td></tr>
+            <tr><td>Château Pape Clément</td><td>教皇堡</td><td>紅</td><td>豐滿、濃郁、歷史悠久</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Château Smith Haut Lafitte</td><td>史密斯拉菲特堡</td><td>紅（白酒未列級）</td><td>現代、精緻</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Château Haut-Bailly</td><td>巴依勒堡</td><td>紅</td><td>結構嚴謹、優雅</td><td>—</td><td>✅</td></tr>
+            <tr><td>Château de Fieuzal</td><td>費雅克堡</td><td>紅（白酒未列級）</td><td>醇厚、豐富</td><td>—</td><td>❌</td></tr>
+            <tr><td>Domaine de Chevalier</td><td>舒瓦利耶堡</td><td>紅＋白</td><td>松林、礦物、隱藏冠軍</td><td>—</td><td>✅</td></tr>
+            <tr><td>Château Carbonnieux</td><td>卡本尼奧堡</td><td>紅＋白</td><td>白：清新優雅／紅：陳年佳</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Château Malartic-Lagravière</td><td>瑪拉狄格哈維耶堡</td><td>紅＋白</td><td>現代化、細膩</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Château Latour-Martillac</td><td>拉圖瑪蒂亞克堡</td><td>紅＋白</td><td>花香、礦物感</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Château Olivier</td><td>奧利佛堡</td><td>紅＋白</td><td>細膩花果香</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Château Bouscaut</td><td>布斯考堡</td><td>紅＋白</td><td>傳統、細緻</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Château Couhins</td><td>庫安斯堡</td><td>白</td><td>INRA所有、白酒精緻</td><td>—</td><td>✅</td></tr>
+            <tr><td>Château Couhins-Lurton</td><td>庫安斯呂爾頓堡</td><td>白</td><td>100% Sauvignon Blanc</td><td>—</td><td>✅</td></tr>
+            <tr><td>Château Laville Haut-Brion</td><td>拉維爾侯伯王堡</td><td>白（2009更名美訊堡白）</td><td>傳奇白酒</td><td>—</td><td>✅</td></tr>
+          </tbody>
+        </table>
+        <p class="table-footnote">💡 快速記憶法：先記「6家紅白皆列級」（Domaine de Chevalier、Carbonnieux、Malartic-Lagravière、Latour-Martillac、Olivier、Bouscaut），剩下的紅酒陣營與白酒陣營就容易對號入座——尤其記得Smith Haut Lafitte雖然白酒評價很高，卻不在這6家名單裡。</p>
+      </div>
+    </div>`,
+    hasMap: false,
+    quiz: {
+      question: '16家格拉夫列級莊裡，唯一目前沒有官方授權酒莊照片的是哪一家？',
+      options: ['Château Haut-Bailly', 'Château de Fieuzal', 'Domaine de Chevalier', 'Château Couhins'],
+      correct: 1,
+      explanation: 'Château de Fieuzal是16家格拉夫列級莊裡目前唯一沒有酒莊照片的酒莊，其餘15家皆有圖片可供辨識。'
+    }
   }
 ];
 
@@ -729,7 +779,8 @@ l211Content.push({
     '掌握1959年格拉夫分級紅、白雙軌名單的運作邏輯',
     '認識Château Haut-Brion唯一橫跨1855與1959兩套分級系統的身分',
     '了解礫石台地如何同時孕育頂級紅酒與白酒',
-    '掌握Domaine de Chevalier、Smith Haut Lafitte等名莊的故事'
+    '掌握Domaine de Chevalier、Smith Haut Lafitte等名莊的故事',
+    '能對照總覽表，準確分辨16家列級莊各自屬於紅酒、白酒或紅白皆列級'
   ],
   nextSteps: [
     {
