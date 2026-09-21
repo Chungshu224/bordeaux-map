@@ -177,8 +177,8 @@ export const learningLevels = {
       { id: 'B2M1', title: '左岸 Médoc 深度探索', lessonIds: ['l2-1', 'l2-2', 'l2-3', 'l2-4', 'l2-5'] },
       { id: 'B2M2', title: '右岸精品產區', lessonIds: ['l2-6', 'l2-7', 'l2-8'] },
       { id: 'B2M3', title: '蘇玳甜酒帶', lessonIds: ['l2-10'] },
-      { id: 'B2M4', title: '進階綜合評量', lessonIds: ['l2-9'] },
-      { id: 'B2M5', title: '左岸格拉夫產區', lessonIds: ['l2-12', 'l2-11'] }
+      { id: 'B2M5', title: '左岸格拉夫產區', lessonIds: ['l2-12', 'l2-11'] },
+      { id: 'B2M4', title: '進階綜合評量', lessonIds: ['l2-9'] }
     ],
     lessons: [
       {
