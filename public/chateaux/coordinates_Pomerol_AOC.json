@@ -30,8 +30,8 @@
   {
     "name": "Château Le Pin",
     "coordinates": [
-      -0.191,
-      44.929
+      -0.20533448488120823,
+      44.92600389200015
     ],
     "rank": "Pomerol 頂級名莊",
     "description": "極小產量的精品酒莊，酒款稀有且價格高昂，風格濃郁細膩。",
@@ -160,7 +160,7 @@
       44.9295
     ],
     "rank": "Pomerol 優質名莊",
-    "description": "曾為 Certan-Giraud，被 Moueix 家族收購，位於精華高地，老藤 Cab Franc 比例佳，被譽為波美侯的白馬酒莊。",
+    "description": "曾為 Certan-Giraud，被 Moueix 家族收購，位於精華高地，老藤 Cab Franc 比例佳，風格細緻優雅。",
     "image": "/images/chateaux/RightBank/Libournais/Hosanna.jpg",
     "description_en": "Formerly Certan-Giraud, acquired by the Moueix family; located on prime plateau land with old-vine Cabernet Franc in the blend.",
     "rank_en": "Distinguished Pomerol Estate",

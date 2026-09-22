@@ -423,9 +423,9 @@ export const l29Content = [
         },
         {
           question: '波爾多的「車庫酒」（Garage Wine）運動起源於哪裡？',
-          options: ['Médoc', 'Pomerol', 'Libournais衛星產區', 'Graves'],
+          options: ['Médoc', 'Pomerol', 'Libournais地區', 'Graves'],
           correct: 2,
-          explanation: '車庫酒運動起源於1990年代的Libournais地區（特別是Saint-Émilion衛星產區），以極小產量、極致品質和現代釀造手法挑戰傳統，代表酒莊如Le Pin、Valandraud等。'
+          explanation: '車庫酒運動起源於1990年代的Libournais地區，以極小產量、極致品質和現代釀造手法挑戰傳統，代表酒莊如Pomerol的Le Pin（1980年代先驅）、Saint-Émilion的Valandraud（1991年創立）等。'
         },
         {
           question: '左岸和右岸在釀造理念上的主要差異是什麼？',
