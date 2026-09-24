@@ -119,7 +119,7 @@ export const courseLevels = {
     difficulty: '進階',
     icon: '🍷',
     color: '#FF9800',
-    totalLessons: 27,
+    totalLessons: 25,
     modules: [
       {
         id: 'L2M1',

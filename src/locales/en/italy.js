@@ -89,7 +89,8 @@ export default {
     L2M3: 'Chapter 3: Southern Italy & Islands',
     L2M4: 'Chapter 4: Advanced Variety Study',
     L2M5: 'Chapter 5: Investment & Collecting',
-    L2M6: 'Chapter 6: Level 2 Comprehensive Review',
+    L2M6: 'Chapter 6: Regional Food Pairing Practice',
+    L2M7: 'Chapter 7: Level 2 Comprehensive Review',
     // Level 3
     L3M1: 'Chapter 1: Rare Varieties & Small Regions',
     L3M2: 'Chapter 2: Expert Label Reading',
@@ -144,6 +145,10 @@ export default {
     L2M5L1: 'Italian Fine Wine Investment Guide',
     L2M5L2: 'Vintage Assessment & Collecting Strategy',
     L2M5L3: 'International Market & Auctions',
+    // Level 2 - Module 6
+    L2M6L1: 'Northern Italy Food Pairing in Practice',
+    L2M6L2: 'Central-Southern Italy & Islands Food Pairing in Practice',
+    L2M6L3: 'Special Pairings: Sparkling, Sweet & Fortified Wines',
     L2FinalExam: 'Level 2 Comprehensive Review',
     // Level 3 - Module 1
     L3M1L1: 'Northern Italy Rare Variety Treasures',
