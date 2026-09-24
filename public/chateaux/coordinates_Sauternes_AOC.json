@@ -98,6 +98,76 @@
     "description_ja": "蜂蜜とアプリコットのアロマを持ち、甘みと酸のバランスが取れたリッチな甘口白ワイン。"
   },
   {
+    "name": "Château Lafaurie-Peyraguey",
+    "coordinates": [
+      -0.3371536585209927,
+      44.54988866639009
+    ],
+    "rank": "一級酒莊 (Premier Cru Classé 1855)",
+    "description": "位於Bommes村的歷史名莊，風格濃郁，帶杏桃與蜂蜜氣息，陳年潛力佳。",
+    "image": "",
+    "description_en": "A historic estate in the commune of Bommes; rich style with apricot and honey notes and strong ageing potential.",
+    "rank_en": "Premier Cru Classé 1855",
+    "rank_ja": "1855年 プルミエ・クリュ・クラッセ",
+    "description_ja": "ボム村に位置する歴史的名シャトー。アプリコットと蜂蜜の香りを持つリッチなスタイルで、優れた熟成力を誇る。"
+  },
+  {
+    "name": "Château Clos Haut-Peyraguey",
+    "coordinates": [
+      -0.3396800177509008,
+      44.545796830685944
+    ],
+    "rank": "一級酒莊 (Premier Cru Classé 1855)",
+    "description": "位於Sauternes產區地勢最高的台地上，原為Lafaurie-Peyraguey領地的一部分，風格精緻、清新，礦物感明顯。",
+    "image": "",
+    "description_en": "Set on the highest plateau in the Sauternes appellation, historically part of the Lafaurie-Peyraguey estate; a precise, fresh style with pronounced minerality.",
+    "rank_en": "Premier Cru Classé 1855",
+    "rank_ja": "1855年 プルミエ・クリュ・クラッセ",
+    "description_ja": "ソーテルヌ地区最高標高のプラトーに位置し、かつてはラフォリー・ペイラゲの領地の一部だった。精密でフレッシュ、際立ったミネラル感を持つ。"
+  },
+  {
+    "name": "Château Rayne-Vigneau",
+    "coordinates": [
+      -0.3460506045427024,
+      44.54795346076162
+    ],
+    "rank": "一級酒莊 (Premier Cru Classé 1855)",
+    "description": "以葡萄園中蘊藏石英與半寶石礫石聞名，酒體優雅、礦物感豐富。",
+    "image": "",
+    "description_en": "Famous for the quartz and semi-precious gravel found in its vineyard soils; an elegant style with rich minerality.",
+    "rank_en": "Premier Cru Classé 1855",
+    "rank_ja": "1855年 プルミエ・クリュ・クラッセ",
+    "description_ja": "畑に石英や半貴石の砂利が見られることで知られる。エレガントでミネラル感豊かなスタイル。"
+  },
+  {
+    "name": "Château Rabaud-Promis",
+    "coordinates": [
+      -0.33903277386128255,
+      44.55525815342452
+    ],
+    "rank": "一級酒莊 (Premier Cru Classé 1855)",
+    "description": "由古老的Rabaud莊園分割而來（另一半為Sigalas-Rabaud），風格傳統均衡。",
+    "image": "",
+    "description_en": "One half of the historic Rabaud estate, split from Château Sigalas-Rabaud; a traditional, well-balanced style.",
+    "rank_en": "Premier Cru Classé 1855",
+    "rank_ja": "1855年 プルミエ・クリュ・クラッセ",
+    "description_ja": "古いラボー領地から分割されたシャトーの一つ（もう一方はシガラス・ラボー）。伝統的でバランスの取れたスタイル。"
+  },
+  {
+    "name": "Château Sigalas-Rabaud",
+    "coordinates": [
+      -0.3392915119262524,
+      44.55306240709568
+    ],
+    "rank": "一級酒莊 (Premier Cru Classé 1855)",
+    "description": "由古老的Rabaud莊園分割而來（另一半為Rabaud-Promis），Sémillon比例高，風格細膩優雅。",
+    "image": "",
+    "description_en": "One half of the historic Rabaud estate, split from Château Rabaud-Promis; a high proportion of Sémillon gives it a refined, elegant style.",
+    "rank_en": "Premier Cru Classé 1855",
+    "rank_ja": "1855年 プルミエ・クリュ・クラッセ",
+    "description_ja": "古いラボー領地から分割されたシャトーの一つ（もう一方はラボー・プロミス）。セミヨン比率が高く、繊細でエレガントなスタイル。"
+  },
+  {
     "name": "Château Filhot",
     "coordinates": [
       -0.337,

@@ -112,6 +112,104 @@
     "description_ja": "伝統的な製法を守り、バルサック特有のエレガンスとフレッシュさを体現した甘口白ワイン。"
   },
   {
+    "name": "Château d'Arche",
+    "coordinates": [
+      -0.3436565873566403,
+      44.537889965994076
+    ],
+    "rank": "二級酒莊 (Deuxième Cru Classé 1855)",
+    "description": "歷史悠久的二級酒莊，風格優雅均衡，具良好陳年潛力。",
+    "image": "",
+    "description_en": "A historic Second Growth; elegant and well-balanced with good ageing potential.",
+    "rank_en": "Deuxième Cru Classé (1855)",
+    "rank_ja": "1855年 ドゥジェム・クリュ・クラッセ",
+    "description_ja": "歴史ある第二特等格付け。エレガントでバランスの取れたスタイルと優れた熟成力を持つ。"
+  },
+  {
+    "name": "Château Broustet",
+    "coordinates": [
+      -0.3249969161889642,
+      44.60363034581784
+    ],
+    "rank": "二級酒莊 (Deuxième Cru Classé 1855)",
+    "description": "小型家族酒莊，風格花香馥郁，甜度細膩。",
+    "image": "",
+    "description_en": "A small family estate; aromatic and floral in style with a delicate sweetness.",
+    "rank_en": "Deuxième Cru Classé (1855)",
+    "rank_ja": "1855年 ドゥジェム・クリュ・クラッセ",
+    "description_ja": "小規模な家族経営シャトー。花のように香り高く、繊細な甘みを持つスタイル。"
+  },
+  {
+    "name": "Château Suau",
+    "coordinates": [
+      -0.3237944762742916,
+      44.694174000170975
+    ],
+    "rank": "二級酒莊 (Deuxième Cru Classé 1855)",
+    "description": "Barsac面積最小的二級酒莊之一，家族經營，風格精緻細膩。",
+    "image": "",
+    "description_en": "One of the smallest Second Growths in Barsac; family-run with a refined, delicate style.",
+    "rank_en": "Deuxième Cru Classé (1855)",
+    "rank_ja": "1855年 ドゥジェム・クリュ・クラッセ",
+    "description_ja": "バルサックで最も小規模な第二特等格付けの一つ。家族経営で繊細なスタイルを持つ。"
+  },
+  {
+    "name": "Château de Malle",
+    "coordinates": [
+      -0.29581609957707033,
+      44.56519463447441
+    ],
+    "rank": "二級酒莊 (Deuxième Cru Classé 1855)",
+    "description": "以歷史悠久的城堡建築與花園聞名，風格優雅細膩，兼具傳統與精緻感。",
+    "image": "",
+    "description_en": "Renowned for its historic château and gardens; an elegant, refined style balancing tradition and finesse.",
+    "rank_en": "Deuxième Cru Classé (1855)",
+    "rank_ja": "1855年 ドゥジェム・クリュ・クラッセ",
+    "description_ja": "歴史ある城館と庭園で名高い。伝統と繊細さを兼ね備えたエレガントなスタイル。"
+  },
+  {
+    "name": "Château Romer du Hayot",
+    "coordinates": [
+      -0.34264736425819897,
+      44.5929041086776
+    ],
+    "rank": "二級酒莊 (Deuxième Cru Classé 1855)",
+    "description": "由古老的Romer莊園分割而來，由Hayot家族經營，風格輕盈優雅。",
+    "image": "",
+    "description_en": "One half of the historic Romer estate, run by the Hayot family; a light, elegant style.",
+    "rank_en": "Deuxième Cru Classé (1855)",
+    "rank_ja": "1855年 ドゥジェム・クリュ・クラッセ",
+    "description_ja": "古いロメール領地から分割されたシャトー。オヨ家が経営し、軽やかでエレガントなスタイル。"
+  },
+  {
+    "name": "Château Lamothe",
+    "coordinates": [
+      -0.3501451731444423,
+      44.532695792397
+    ],
+    "rank": "二級酒莊 (Deuxième Cru Classé 1855)",
+    "description": "由古老的Lamothe莊園分割而來（另一半為Lamothe-Guignard），風格傳統純淨。",
+    "image": "",
+    "description_en": "One half of the historic Lamothe estate, split from Château Lamothe-Guignard; a traditional, pure style.",
+    "rank_en": "Deuxième Cru Classé (1855)",
+    "rank_ja": "1855年 ドゥジェム・クリュ・クラッセ",
+    "description_ja": "古いラモット領地から分割されたシャトーの一つ（もう一方はラモット・ギニャール）。伝統的で純粋なスタイル。"
+  },
+  {
+    "name": "Château Lamothe-Guignard",
+    "coordinates": [
+      -0.3498539097082399,
+      44.53300083751768
+    ],
+    "rank": "二級酒莊 (Deuxième Cru Classé 1855)",
+    "description": "由古老的Lamothe莊園分割而來（另一半為Lamothe），由Guignard家族經營，品質穩健提升。",
+    "image": "",
+    "description_en": "One half of the historic Lamothe estate, split from Château Lamothe, run by the Guignard family with steadily improving quality.",
+    "rank_en": "Deuxième Cru Classé (1855)",
+    "rank_ja": "1855年 ドゥジェム・クリュ・クラッセ",
+    "description_ja": "古いラモット領地から分割されたシャトーの一つ（もう一方はラモット）。ギニャール家が経営し、着実に品質を向上させている。"
+  },
+  {
     "name": "Château Simon",
     "coordinates": [
       -0.33,
