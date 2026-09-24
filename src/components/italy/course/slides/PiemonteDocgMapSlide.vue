@@ -8,7 +8,7 @@
     <!-- DOCG 選擇按鈕 -->
     <div class="docg-buttons">
       <button
-        v-for="docg in DOCG_LIST"
+        v-for="docg in docgList"
         :key="docg.id"
         class="docg-btn"
         :class="[`tier-${docg.tier}`, { active: selected === docg.id }]"
@@ -80,7 +80,7 @@ import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-defineProps({ slide: { type: Object, default: () => ({}) } })
+const props = defineProps({ slide: { type: Object, default: () => ({}) } })
 
 // Ghemme 的備用內嵌多邊形（官方檔案 geometry 為 null）
 const GHEMME_FALLBACK = {
@@ -96,7 +96,8 @@ const GHEMME_FALLBACK = {
 }
 
 // ── 9 大 DOCG 資料（geojsonPath 對應 public/ 下的真實邊界檔案）──
-const DOCG_LIST = [
+// 預設值（zh-TW），若 slide.docgList 有提供（含多語言翻譯覆蓋）則優先使用
+const DEFAULT_DOCG_LIST = [
   {
     id: 'barolo',
     name: 'Barolo DOCG',
@@ -271,6 +272,17 @@ const DOCG_LIST = [
   }
 ]
 
+// slide.docgList（可能來自 lesson JSON + locale 翻譯覆蓋）不含 geojsonFallback（純幾何資料，不需要翻譯），
+// 這裡依 id 從 DEFAULT_DOCG_LIST 補回 Ghemme 的備用多邊形
+const docgList = computed(() => {
+  const provided = props.slide?.docgList
+  if (!Array.isArray(provided) || !provided.length) return DEFAULT_DOCG_LIST
+  return provided.map(d => {
+    const fallback = DEFAULT_DOCG_LIST.find(def => def.id === d.id)?.geojsonFallback
+    return fallback ? { ...d, geojsonFallback: fallback } : d
+  })
+})
+
 const TIER_COLORS = {
   s:  { fill: '#8B0000', line: '#FF1744', opacity: 0.28 },
   a:  { fill: '#1565C0', line: '#2196F3', opacity: 0.25 },
@@ -287,7 +299,7 @@ let map = null
 let markersArr = []
 
 const selectedInfo = computed(() =>
-  selected.value ? DOCG_LIST.find(d => d.id === selected.value) : null
+  selected.value ? docgList.value.find(d => d.id === selected.value) : null
 )
 
 // ── GeoJSON 非同步載入 ────────────────────────────────────────
@@ -317,9 +329,9 @@ async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
 
   // 並行載入所有 GeoJSON
-  const geojsonData = await Promise.all(DOCG_LIST.map(d => fetchGeojson(d)))
+  const geojsonData = await Promise.all(docgList.value.map(d => fetchGeojson(d)))
 
-  DOCG_LIST.forEach((d, i) => {
+  docgList.value.forEach((d, i) => {
     const gj = geojsonData[i]
     if (!gj) return
 
@@ -344,7 +356,7 @@ async function highlightAll () {
   })
 
   // 數字標記
-  DOCG_LIST.forEach((d, i) => {
+  docgList.value.forEach((d, i) => {
     const el = document.createElement('div')
     el.className = 'docg-marker'
     el.textContent = i + 1
@@ -359,10 +371,10 @@ async function highlightAll () {
 
 function selectDocg (id) {
   selected.value = id
-  const info = DOCG_LIST.find(d => d.id === id)
+  const info = docgList.value.find(d => d.id === id)
   if (!info || !map) return
 
-  DOCG_LIST.forEach(d => {
+  docgList.value.forEach(d => {
     const tc = TIER_COLORS[d.tier]
     if (map.getLayer(`fill-${d.id}`)) {
       map.setPaintProperty(`fill-${d.id}`, 'fill-opacity', d.id === id ? tc.opacity * 2 : tc.opacity * 0.5)
