@@ -233,17 +233,15 @@ export const l29Content = [
           <div class="structure-section">
             <h5>🏅 Saint-Émilion分級制度</h5>
             <ul>
-              <li><strong>Premier Grand Cru Classé A：</strong>最高等級（4家）
+              <li><strong>Premier Grand Cru Classé A：</strong>最高等級（2022年起僅剩2家）
                 <ul>
-                  <li>Château Ausone（高台石灰岩）</li>
-                  <li>Château Cheval Blanc（砂礫平原）</li>
-                  <li>Château Angélus</li>
+                  <li>Château Figeac（砂礫平原，2022年晉升）</li>
                   <li>Château Pavie</li>
                 </ul>
               </li>
-              <li><strong>Premier Grand Cru Classé B：</strong>14家頂級酒莊</li>
-              <li><strong>Grand Cru Classé：</strong>64家優質酒莊</li>
-              <li><strong>每10年重新評估</strong>（與左岸1855永久分級不同）</li>
+              <li><strong>Premier Grand Cru Classé：</strong>12家頂級酒莊（原稱B級，2022年起簡化名稱）</li>
+              <li><strong>Grand Cru Classé：</strong>71家優質酒莊</li>
+              <li><strong>每10年重新評估</strong>（與左岸1855永久分級不同；2021-2022年Ausone、Cheval Blanc、Angélus主動退出評選，是近年最大變動）</li>
             </ul>
           </div>
           <div class="structure-section">
@@ -400,8 +398,8 @@ export const l29Content = [
         {
           question: 'Saint-Émilion的Premier Grand Cru Classé A等級目前有幾家酒莊？',
           options: ['2家', '4家', '5家', '8家'],
-          correct: 1,
-          explanation: '2022年的最新分級中，Saint-Émilion的Premier Grand Cru Classé A等級有4家：Ausone、Cheval Blanc、Angélus和Pavie。'
+          correct: 0,
+          explanation: '2022年的最新分級中，Saint-Émilion的Premier Grand Cru Classé A等級僅剩2家：Château Figeac（2022年晉升）與Château Pavie。原本的A級常客Ausone、Cheval Blanc與Angélus皆於2021-2022年主動退出評選（不滿分級標準過度偏重行銷與觀光因素），目前不再持有官方分級頭銜，但市場地位與價格並未因此受影響。'
         },
         {
           question: 'Château Ausone位於Saint-Émilion的哪個地形區域？',
