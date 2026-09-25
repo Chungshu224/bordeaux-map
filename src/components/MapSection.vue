@@ -633,7 +633,40 @@ const showAOCGeojson = async (groupName, aocFile) => {
         promoteId: 'id' // 支援 feature-state 功能
       })
     }
-    
+
+    // 3.5 村莊標籤專用點位：依 new_nomcom 合併同名的多重 Polygon 區塊，
+    // 避免同一村莊被拆成多個不相連的小區塊時（例如 St-Emilion AOC 裡的 Libourne、Saint-Sulpice-de-Faleyrens）
+    // 每個區塊各自產生一個重複標籤——改成每個村莊名稱只算一個代表點
+    const communeLabelFeatures = []
+    if (geojson.features) {
+      const byCommune = new Map()
+      for (const f of geojson.features) {
+        const communeName = f.properties && f.properties.new_nomcom
+        if (!communeName) continue
+        if (!byCommune.has(communeName)) byCommune.set(communeName, [])
+        byCommune.get(communeName).push(f)
+      }
+      for (const [communeName, feats] of byCommune) {
+        let pt = null
+        try {
+          const merged = feats.length === 1 ? feats[0] : turf.combine(turf.featureCollection(feats)).features[0]
+          pt = turf.pointOnFeature(merged)
+        } catch (e) {
+          try { pt = turf.pointOnFeature(feats[0]) } catch (e2) { pt = null }
+        }
+        if (pt) {
+          pt.properties = { new_nomcom: communeName }
+          communeLabelFeatures.push(pt)
+        }
+      }
+    }
+    const communeLabelGeojson = { type: 'FeatureCollection', features: communeLabelFeatures }
+    if (map.getSource('aoc-commune-label-points')) {
+      map.getSource('aoc-commune-label-points').setData(communeLabelGeojson)
+    } else {
+      map.addSource('aoc-commune-label-points', { type: 'geojson', data: communeLabelGeojson })
+    }
+
     // 4. 新增/更新圖層（帶平滑過渡動畫）
     if (!map.getLayer('aoc-fill')) {
       map.addLayer({
@@ -688,12 +721,13 @@ const showAOCGeojson = async (groupName, aocFile) => {
     }
 
     // 村莊/行政區名稱標籤（僅在來源 geojson 有 new_nomcom 屬性時顯示，例如 St-Emilion 的 9 個村莊）
+    // 來源改用 aoc-commune-label-points（每個村莊一個代表點），避免同名村莊被拆成多個不相連區塊時重複顯示
     // minzoom 避免在 Entre-Deux-Mers（132 個村莊）等大範圍 AOC 的預設縮放層級下顯示過多標籤造成雜亂
     if (!map.getLayer('aoc-commune-labels')) {
       map.addLayer({
         id: 'aoc-commune-labels',
         type: 'symbol',
-        source: 'aoc',
+        source: 'aoc-commune-label-points',
         minzoom: 10.5,
         layout: {
           'text-field': ['get', 'new_nomcom'],
