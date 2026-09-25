@@ -240,8 +240,8 @@
   {
     "name": "Château Cap de Mourlin",
     "coordinates": [
-      -0.16323,
-      44.89293
+      -0.16189,
+      44.89388
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "東北高原，老藤 Merlot，酒色深邃，果香豐富，層次感佳。",
@@ -296,8 +296,8 @@
   {
     "name": "Château Corbin Michotte",
     "coordinates": [
-      -0.18114,
-      44.92314
+      -0.17979,
+      44.92219
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "波美侯邊境，黏土礫石，Merlot 與 Cab. Franc 混釀，果香柔和。",
@@ -506,7 +506,7 @@
   {
     "name": "Château Franc Mayne",
     "coordinates": [
-      -0.17432,
+      -0.17242,
       44.89965
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
@@ -576,8 +576,8 @@
   {
     "name": "Château Haut-Sarpe",
     "coordinates": [
-      -0.13846,
-      44.89702
+      -0.13681,
+      44.89617
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "聖克里斯多夫東北坡，石灰黏土，Merlot 主導，果香濃郁,  由 Janoueix 家族管理。",
@@ -660,8 +660,8 @@
   {
     "name": "Château La Dominique",
     "coordinates": [
-      -0.18679,
-      44.92052
+      -0.18544,
+      44.92147
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "緊鄰 Cheval Blanc 和 Pétrus，砂礫黏土，Merlot 主導，風格豐潤，標誌性現代酒窖。",
@@ -702,8 +702,8 @@
   {
     "name": "Château La Serre",
     "coordinates": [
-      -0.18679,
-      44.92052
+      -0.18814,
+      44.91957
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "北側高原中心，石灰黏土，Merlot 主導，結構平衡，歷史傳統酒莊。",
@@ -716,8 +716,8 @@
   {
     "name": "Château La Tour Figeac",
     "coordinates": [
-      -0.20139,
-      44.9156
+      -0.20004,
+      44.91655
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "Figeac 姊妹莊，砂礫土壤，Merlot 與 Cab. Franc 平衡，風格圓潤易飲。",
@@ -898,8 +898,8 @@
   {
     "name": "Château Petit Faurie de Soutard",
     "coordinates": [
-      -0.14918,
-      44.90155
+      -0.15053,
+      44.9025
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原北側，石灰岩地塊，Merlot 為主，風格傳統均衡，與 Soutard 毗鄰。",
@@ -954,8 +954,8 @@
   {
     "name": "Château Saint-Georges (Côte Pavie)",
     "coordinates": [
-      -0.14957,
-      44.88428
+      -0.15019,
+      44.88301
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "Pavie 坡地南段，黏土石灰岩，Merlot 主導，結構均衡，帶典雅花香。",
@@ -1038,7 +1038,7 @@
   {
     "name": "Château Yon-Figeac",
     "coordinates": [
-      -0.19419,
+      -0.19609,
       44.92065
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
@@ -1052,8 +1052,8 @@
   {
     "name": "Clos Dubreuil",
     "coordinates": [
-      -0.20379,
-      44.90252
+      -0.20244,
+      44.90347
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "東南坡地精品小莊，黏土石灰岩，Merlot 主導，產量極低，車庫酒風格，受高度評價。",
@@ -1080,8 +1080,8 @@
   {
     "name": "Clos Saint-Martin",
     "coordinates": [
-      -0.20379,
-      44.90252
+      -0.20514,
+      44.90157
     ],
     "rank": "聖愛美濃特級酒莊 (Grand Cru Classé)",
     "description": "高原中心微型古園，石灰岩，Merlot 與 Cab. Franc 混釀，由 Reiffers 家族管理，細緻高雅。",
@@ -1165,7 +1165,7 @@
     "name": "Château Canon La Gaffelière",
     "coordinates": [
       -0.16092,
-      44.88116
+      44.87981
     ],
     "rank": "特級B級 (Premier Grand Cru Classé B)",
     "description": "坡腳砂質黏土地帶，Cab. Franc 比例特別高，花香馥郁，結構細緻優雅，由 Von Neipperg 伯爵家族管理。",
