@@ -687,6 +687,31 @@ const showAOCGeojson = async (groupName, aocFile) => {
       })
     }
 
+    // 村莊/行政區名稱標籤（僅在來源 geojson 有 new_nomcom 屬性時顯示，例如 St-Emilion 的 9 個村莊）
+    // minzoom 避免在 Entre-Deux-Mers（132 個村莊）等大範圍 AOC 的預設縮放層級下顯示過多標籤造成雜亂
+    if (!map.getLayer('aoc-commune-labels')) {
+      map.addLayer({
+        id: 'aoc-commune-labels',
+        type: 'symbol',
+        source: 'aoc',
+        minzoom: 10.5,
+        layout: {
+          'text-field': ['get', 'new_nomcom'],
+          'text-transform': 'uppercase',
+          'text-font': ['DIN Pro Medium', 'Arial Unicode MS Regular'],
+          'text-size': 11,
+          'text-anchor': 'center',
+          'text-allow-overlap': false,
+          'text-ignore-placement': false
+        },
+        paint: {
+          'text-color': '#FFFFFF',
+          'text-halo-color': 'rgba(0,0,0,0.75)',
+          'text-halo-width': 1.4
+        }
+      })
+    }
+
     // 5. 添加懸停高亮效果和工具提示（使用feature-state）
     let hoveredFeatureId = null
     
