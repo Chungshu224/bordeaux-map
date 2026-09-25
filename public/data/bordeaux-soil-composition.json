@@ -83,8 +83,8 @@
     },
     "St-Emilion-Grand-Cru_AOC": {
       "primary": "石灰岩",
-      "composition": "石灰岩 60% + 黏土 30% + 泥灰岩 10%",
-      "description": "精選地塊，石灰岩比例更高"
+      "composition": "石灰岩 50% + 黏土 30% + 砂土 20%",
+      "description": "高地石灰岩台地與坡地黏土混合（與 Saint-Émilion AOC 共用完全相同的法定產區範圍，差異在於更嚴格的生產規範，而非土壤）"
     },
     "Lalande-de-Pomerol_AOC": {
       "primary": "黏土",
