@@ -1,7 +1,7 @@
 <template>
   <div class="appellation-comparison-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '姊妹 DOCG 對比' }}</h2>
+      <h2>{{ slide.title || t('italy.slides.comparison.defaultTitle') }}</h2>
       <p v-if="slide.description" class="slide-desc">{{ slide.description }}</p>
     </div>
 
@@ -56,7 +56,7 @@
       </div>
 
       <div class="key-difference">
-        <h4>🎯 關鍵差異</h4>
+        <h4>{{ t('italy.slides.comparison.keyDifference') }}</h4>
         <p>{{ activePair.keyDifference }}</p>
       </div>
     </div>
@@ -65,22 +65,16 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
   slide: { type: Object, default: () => ({}) }
 })
 
-const rows = [
-  { key: 'grape', label: '🍇 主要葡萄' },
-  { key: 'soil', label: '🪨 土壤' },
-  { key: 'climate', label: '🌤️ 氣候' },
-  { key: 'elevation', label: '⛰️ 海拔' },
-  { key: 'ageing', label: '⏳ 法定陳年' },
-  { key: 'style', label: '🍷 風格' },
-  { key: 'aromas', label: '👃 香氣' },
-  { key: 'price', label: '💰 價格區間' },
-  { key: 'producers', label: '🌟 代表酒莊' }
-]
+const { t } = useI18n()
+
+const ROW_KEYS = ['grape', 'soil', 'climate', 'elevation', 'ageing', 'style', 'aromas', 'price', 'producers']
+const rows = computed(() => ROW_KEYS.map(key => ({ key, label: t(`italy.slides.comparison.rows.${key}`) })))
 
 const defaultPairs = [
   {

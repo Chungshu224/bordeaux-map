@@ -1,16 +1,16 @@
 <template>
   <div class="docg-map-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🗺️ 托斯卡納 DOCG & DOC 互動地圖' }}</h2>
-      <p class="slide-subtitle">點選按鈕查看各產區位置與詳細資訊</p>
+      <h2>{{ slide.title || t('italy.slides.tuscanyMap.defaultTitle') }}</h2>
+      <p class="slide-subtitle">{{ t('italy.slides.tuscanyMap.subtitle') }}</p>
     </div>
 
     <!-- 分類按鈕列 -->
     <div class="zone-buttons">
       <div class="btn-group">
-        <span class="btn-group-label">🏆 五大必學 DOCG</span>
+        <span class="btn-group-label">{{ t('italy.slides.tuscanyMap.groupDocg') }}</span>
         <button
-          v-for="z in DOCG_ZONES"
+          v-for="z in docgZones"
           :key="z.id"
           class="zone-btn"
           :class="[`tier-${z.tier}`, { active: selected === z.id }]"
@@ -18,29 +18,29 @@
         >{{ z.emoji }} {{ z.shortName }}</button>
       </div>
       <div class="btn-group">
-        <span class="btn-group-label">🍷 周邊重要 DOC</span>
+        <span class="btn-group-label">{{ t('italy.slides.tuscanyMap.groupDoc') }}</span>
         <button
-          v-for="z in DOC_ZONES"
+          v-for="z in docZones"
           :key="z.id"
           class="zone-btn"
           :class="[`tier-${z.tier}`, { active: selected === z.id }]"
           @click="selectZone(z.id)"
         >{{ z.emoji }} {{ z.shortName }}</button>
       </div>
-      <button v-if="selected" class="reset-btn" @click="resetView">🔄 全覽</button>
+      <button v-if="selected" class="reset-btn" @click="resetView">{{ t('italy.slides.tuscanyMap.reset') }}</button>
     </div>
 
     <!-- 地圖 + 資訊 -->
     <div class="map-info-row">
       <div class="map-wrapper">
         <div ref="mapContainer" class="mapbox-container"></div>
-        <div v-if="loading" class="map-loading">地圖載入中…</div>
+        <div v-if="loading" class="map-loading">{{ t('italy.slides.tuscanyMap.loading') }}</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
-          <div class="legend-row"><span class="legend-dot tier-s"></span>頂級 DOCG（Brunello 等級）</div>
-          <div class="legend-row"><span class="legend-dot tier-a"></span>經典 DOCG（Chianti / Nobile）</div>
-          <div class="legend-row"><span class="legend-dot tier-b"></span>其他 DOCG</div>
-          <div class="legend-row"><span class="legend-dot tier-doc"></span>重要 DOC</div>
+          <div class="legend-row"><span class="legend-dot tier-s"></span>{{ t('italy.slides.tuscanyMap.legend.s') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-a"></span>{{ t('italy.slides.tuscanyMap.legend.a') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-b"></span>{{ t('italy.slides.tuscanyMap.legend.b') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-doc"></span>{{ t('italy.slides.tuscanyMap.legend.doc') }}</div>
         </div>
       </div>
 
@@ -51,24 +51,24 @@
         </div>
         <h3 class="info-name">{{ selectedInfo.name }}</h3>
         <div class="info-rows">
-          <div class="info-row" v-for="row in selectedInfo.details" :key="row.label">
+          <div class="info-row" v-for="row in selectedInfo.details" :key="row.key">
             <span class="info-label">{{ row.label }}</span>
             <span class="info-val">{{ row.value }}</span>
           </div>
         </div>
         <div class="info-desc">{{ selectedInfo.desc }}</div>
         <div class="info-pair" v-if="selectedInfo.pairing">
-          <span class="pair-label">🍽️ 配餐</span>{{ selectedInfo.pairing }}
+          <span class="pair-label">{{ t('italy.slides.tuscanyMap.pairing') }}</span>{{ selectedInfo.pairing }}
         </div>
         <div class="info-price" v-if="selectedInfo.price">
-          <span class="price-label">💶 參考價格</span>{{ selectedInfo.price }}
+          <span class="price-label">{{ t('italy.slides.tuscanyMap.price') }}</span>{{ selectedInfo.price }}
         </div>
       </div>
       <div class="info-panel info-empty" v-else>
         <div class="empty-icon">👆</div>
-        <p>點選上方按鈕或地圖上的產區<br>查看位置與詳細資訊</p>
+        <p>{{ t('italy.slides.tuscanyMap.emptyLine1') }}<br>{{ t('italy.slides.tuscanyMap.emptyLine2') }}</p>
         <div class="empty-hint">
-          <div class="hint-row" v-for="z in ALL_ZONES" :key="z.id">
+          <div class="hint-row" v-for="z in allZones" :key="z.id">
             <span class="hint-dot" :class="`tier-${z.tier}`"></span>
             <span>{{ z.emoji }} {{ z.name }}</span>
           </div>
@@ -80,173 +80,118 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({ slide: { type: Object, default: () => ({}) } })
 
+const { t } = useI18n()
+
 // ── 產區資料 ─────────────────────────────────────────────────
-const DOCG_ZONES = [
+// 此元件同時用於 L1M2L2、L2M6L2、L3M3L2，因此文字（名稱、細節、描述、配餐、價格）
+// 放在 locales/*/italy.js 的 italy.slides.tuscanyMap.zones.<id>，這裡只保留地理與樣式資料。
+// rows：資訊面板要顯示的欄位，label 取自 italy.slides.tuscanyMap.labels.<key>
+const ZONES = [
   {
     id: 'brunello',
-    name: 'Brunello di Montalcino DOCG',
-    shortName: 'Brunello',
+    group: 'docg',
     emoji: '👑',
     tier: 's',
-    tierLabel: '👑 頂級 DOCG — Legendary',
     center: [11.490, 42.986],
     zoom: 11.5,
     color: '#8B0000',
-    details: [
-      { label: '品種', value: '100% Sangiovese（Brunello 克隆，Montalcino 專屬）' },
-      { label: '面積', value: '約 3,500 公頃' },
-      { label: '陳年', value: '最少 5 年（含 2 年橡木桶）；Riserva 6 年+' },
-      { label: '風格', value: '最強勁複雜，陳年潛力 20-30 年，義大利頂峰' },
-      { label: '位置', value: 'Siena 省，Montalcino 丘陵，海拔 250-600m' }
-    ],
-    desc: '義大利最偉大的紅酒之一，Biondi-Santi 家族在 19 世紀末確立此款酒的傳奇地位。Galestro 片岩土壤賦予無可替代的礦物骨架，充足陽光造就飽滿成熟度。',
-    pairing: '野豬肉 Cinghiale、陳年 Pecorino 起司、松露料理、紅燒野味',
-    price: '€40-200+ / Riserva €80-400+',
+    rows: ['grape', 'area', 'ageing', 'style', 'location'],
     geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Brunello di Montalcino DOCG.geojson'
   },
   {
     id: 'chianti-classico',
-    name: 'Chianti Classico DOCG',
-    shortName: 'Chianti Classico',
+    group: 'docg',
     emoji: '🐓',
     tier: 'a',
-    tierLabel: '⭐ 經典 DOCG — Classic',
     center: [11.290, 43.545],
     zoom: 10,
     color: '#1B5E20',
-    details: [
-      { label: '品種', value: 'Sangiovese 80-100%，Gallo Nero 黑公雞標誌' },
-      { label: '面積', value: '約 7,200 公頃' },
-      { label: '等級', value: 'Annata / Riserva（24 個月）/ Gran Selezione（30 個月）' },
-      { label: '風格', value: '活潑酸度、新鮮櫻桃、礦物感，義大利最親民頂級紅酒' },
-      { label: '位置', value: '佛羅倫斯與錫耶納之間，Greve / Gaiole / Castelnuovo 等市鎮' }
-    ],
-    desc: '佛羅倫斯與錫耶納之間的「古典核心區」，Galestro 片岩賦予獨特礦物感，Gran Selezione（2014 新設）代表單一葡萄園最高表達。黑公雞徽章象徵最傳統的風格承諾。',
-    pairing: 'Bistecca alla Fiorentina T 骨牛排、番茄肉醬麵、野豬燉肉',
-    price: 'Annata €12-22 / Riserva €18-45 / Gran Selezione €35-80+',
+    rows: ['grape', 'area', 'tiers', 'style', 'location'],
     geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Chianti Classico DOCG.geojson'
   },
   {
     id: 'vino-nobile',
-    name: 'Vino Nobile di Montepulciano DOCG',
-    shortName: 'Vino Nobile',
+    group: 'docg',
     emoji: '🏛️',
     tier: 'a',
-    tierLabel: '⭐ 經典 DOCG — Classic',
     center: [11.775, 43.098],
     zoom: 12,
     color: '#4A148C',
-    details: [
-      { label: '品種', value: 'Sangiovese（Prugnolo Gentile）70%+，可混少量其他品種' },
-      { label: '面積', value: '約 1,200 公頃' },
-      { label: '陳年', value: '最少 2 年（含 12 個月木桶）；Riserva 最少 3 年' },
-      { label: '風格', value: '介於 Chianti 和 Brunello 之間，李子、皮革、優雅礦物' },
-      { label: '位置', value: 'Siena 省，Montepulciano 丘陵，海拔 250-600m' }
-    ],
-    desc: '托斯卡納三強中的「隱藏寶石」，Tufo 凝灰岩與砂質黏土混合土壤賦予獨特礦物複雜度。Avignonesi、Poliziano 是代表性酒莊，性價比勝過 Brunello。',
-    pairing: 'Piccione（鴿肉）料理、Tagliatelle 野豬醬麵、陳年起司',
-    price: '€15-40 / Riserva €25-60',
+    rows: ['grape', 'area', 'ageing', 'style', 'location'],
     geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Vino Nobile di Montepulciano DOCG.geojson'
   },
   {
     id: 'morellino',
-    name: 'Morellino di Scansano DOCG',
-    shortName: 'Morellino',
+    group: 'docg',
     emoji: '🌊',
     tier: 'b',
-    tierLabel: '💎 DOCG — Quality',
     center: [11.348, 42.688],
     zoom: 11,
     color: '#00695C',
-    details: [
-      { label: '品種', value: 'Sangiovese（Morellino）85%+，海岸克隆' },
-      { label: '面積', value: '約 1,500 公頃' },
-      { label: '陳年', value: '普通款：6 個月+；Riserva：24 個月+' },
-      { label: '風格', value: '果香奔放、單寧柔和，地中海溫暖海岸風格，易飲' },
-      { label: '位置', value: 'Grosseto 省，Scansano 周邊，距海岸約 20km' }
-    ],
-    desc: '托斯卡納地中海海岸的 Sangiovese（當地稱 Morellino），溫暖氣候造就柔順的果香風格，是 Brunello 的親民替代選擇。Erik Banti 等酒莊在此建立優良聲譽。',
-    pairing: '海鮮料理（烤魚、淡菜）、野豬、烤羊、輕食義大利麵',
-    price: '€10-20 / Riserva €15-30',
+    rows: ['grape', 'area', 'ageing', 'style', 'location'],
     geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Morellino di Scansano DOCG.geojson'
   },
   {
     id: 'vernaccia',
-    name: 'Vernaccia di San Gimignano DOCG',
-    shortName: 'Vernaccia',
+    group: 'docg',
     emoji: '🏰',
     tier: 'b',
-    tierLabel: '💎 DOCG — 唯一白酒',
     center: [11.042, 43.468],
     zoom: 12.5,
     color: '#F57F17',
-    details: [
-      { label: '品種', value: '100% Vernaccia di San Gimignano（當地白葡萄）' },
-      { label: '面積', value: '約 700 公頃' },
-      { label: '陳年', value: '普通款：3 個月+；Riserva：11 個月+' },
-      { label: '風格', value: '清爽礦物、柑橘、苦杏仁尾韻，中高酸度' },
-      { label: '位置', value: 'Siena 省，San Gimignano 塔城周邊' }
-    ],
-    desc: '托斯卡納唯一的白葡萄酒 DOCG，也是義大利獲得 DOCG 認證的第一款白酒（1993年）。San Gimignano 的中世紀塔樓城市是著名觀光地標，Vernaccia 的苦杏仁尾韻獨具辨識度。',
-    pairing: '海鮮前菜、沙拉、白肉料理、地方小食（Bruschetta）',
-    price: '€12-22 / Riserva €18-35',
+    rows: ['grape', 'area', 'ageing', 'style', 'location'],
     geojsonPath: '/italy/regions/tuscany/geojson/DOCG/Vernaccia di San Gimignano DOCG.geojson'
-  }
-]
-
-const DOC_ZONES = [
+  },
   {
     id: 'rosso-montalcino',
-    name: 'Rosso di Montalcino DOC',
-    shortName: 'Rosso Montalcino',
+    group: 'doc',
     emoji: '🍷',
     tier: 'doc',
-    tierLabel: '🍷 重要 DOC — Brunello 降級款',
     center: [11.490, 42.986],
     zoom: 11.5,
     color: '#B71C1C',
-    details: [
-      { label: '品種', value: '100% Sangiovese（Brunello 克隆），與 Brunello 同區域' },
-      { label: '面積', value: '同 Brunello 產區，部分葡萄園降級申報' },
-      { label: '陳年', value: '最少 1 年（遠低於 Brunello 的 5 年）' },
-      { label: '風格', value: 'Brunello 的年輕版，果香更鮮活，更早開飲' },
-      { label: '定位', value: 'Brunello 的「小弟」，同一酒莊的入門精品' }
-    ],
-    desc: '許多頂尖 Brunello 酒莊（Biondi-Santi、Casanova di Neri、Poggio di Sotto）都會生產 Rosso di Montalcino 作為入門款，在品質欠佳的年份，部分 Brunello 園地的葡萄也會降級釀製 Rosso，以維護 Brunello 的品質標準。',
-    pairing: '燉肉料理、義大利麵、日常牛排',
-    price: '€15-30，CP 值極高的 Brunello 前導款',
+    rows: ['grape', 'area', 'ageing', 'style', 'position'],
     geojsonPath: '/italy/regions/tuscany/geojson/DOC/Rosso di Montalcino DOC.geojson'
   },
   {
     id: 'bolgheri',
-    name: 'Bolgheri DOC',
-    shortName: 'Bolgheri',
+    group: 'doc',
     emoji: '🌊',
     tier: 'doc',
-    tierLabel: '🍷 重要 DOC — 超托根據地',
     center: [10.575, 43.228],
     zoom: 12,
     color: '#1565C0',
-    details: [
-      { label: '品種', value: 'Cabernet Sauvignon / Cabernet Franc / Merlot / Syrah（國際品種）' },
-      { label: '面積', value: '約 1,200 公頃（含 Sassicaia DOC 子產區）' },
-      { label: '陳年', value: '依款式不同，Bolgheri Rosso 12 個月+，Superiore 24 個月+' },
-      { label: '風格', value: '波爾多風格，黑醋栗、雪松、煙草，結構強勁' },
-      { label: '位置', value: 'Livorno 省，地中海沿岸，Castagneto Carducci 周邊' }
-    ],
-    desc: '超級托斯卡納的誕生地。Sassicaia（1968）和 Ornellaia 在此確立義大利最頂尖的波爾多式紅酒。海岸砂質土壤 + 地中海氣候造就出色的 Cabernet 成熟度。2013年，Bolgheri Sassicaia 成為義大利唯一的單一酒莊 DOC。',
-    pairing: '烤羊排、牛排、陳年起司、黑松露',
-    price: 'Bolgheri Rosso €20-45 / Sassicaia €150-250 / Ornellaia €180-300',
+    rows: ['grape', 'area', 'ageing', 'style', 'location'],
     geojsonPath: '/italy/regions/tuscany/geojson/DOC/Bolgheri DOC.geojson'
   }
 ]
 
-const ALL_ZONES = [...DOCG_ZONES, ...DOC_ZONES]
+// 依目前語系組出含文字的產區資料
+const allZones = computed(() => ZONES.map(z => {
+  const base = `italy.slides.tuscanyMap.zones.${z.id}`
+  return {
+    ...z,
+    name: t(`${base}.name`),
+    shortName: t(`${base}.shortName`),
+    tierLabel: t(`${base}.tierLabel`),
+    details: z.rows.map(key => ({
+      key,
+      label: t(`italy.slides.tuscanyMap.labels.${key}`),
+      value: t(`${base}.${key}`)
+    })),
+    desc: t(`${base}.desc`),
+    pairing: t(`${base}.pairing`),
+    price: t(`${base}.price`)
+  }
+}))
+const docgZones = computed(() => allZones.value.filter(z => z.group === 'docg'))
+const docZones = computed(() => allZones.value.filter(z => z.group === 'doc'))
 
 const TIER_STYLE = {
   s:   { fill: '#8B0000', line: '#EF5350', fillOpacity: 0.28, lineWidth: 2.5 },
@@ -264,7 +209,7 @@ let map = null
 let markersArr = []
 
 const selectedInfo = computed(() =>
-  selected.value ? ALL_ZONES.find(z => z.id === selected.value) : null
+  selected.value ? allZones.value.find(z => z.id === selected.value) : null
 )
 
 // ── GeoJSON 非同步載入 ────────────────────────────────────────
@@ -285,9 +230,9 @@ async function fetchGeojson (z) {
 async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
 
-  const geojsonData = await Promise.all(ALL_ZONES.map(z => fetchGeojson(z)))
+  const geojsonData = await Promise.all(ZONES.map(z => fetchGeojson(z)))
 
-  ALL_ZONES.forEach((z, i) => {
+  ZONES.forEach((z, i) => {
     const gj = geojsonData[i]
     if (!gj) return
 
@@ -312,7 +257,7 @@ async function highlightAll () {
   })
 
   // 數字標記
-  ALL_ZONES.forEach((z, i) => {
+  ZONES.forEach((z, i) => {
     const el = document.createElement('div')
     el.innerHTML = z.emoji
     el.style.cssText = `font-size:16px;cursor:pointer;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));transition:transform 0.15s;`
@@ -328,10 +273,10 @@ async function highlightAll () {
 
 function selectZone (id) {
   selected.value = id
-  const info = ALL_ZONES.find(z => z.id === id)
+  const info = ZONES.find(z => z.id === id)
   if (!info || !map) return
 
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     const isActive = z.id === id
     if (map.getLayer(`fill-${z.id}`)) {
@@ -348,7 +293,7 @@ function selectZone (id) {
 function resetView () {
   selected.value = null
   if (!map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', ts.fillOpacity)
     if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', ts.lineWidth)
@@ -359,7 +304,7 @@ function resetView () {
 function initMap () {
   if (!mapContainer.value) return
   const token = import.meta.env.VITE_MAPBOX_TOKEN
-  if (!token) { mapError.value = '未設定 Mapbox Token'; loading.value = false; return }
+  if (!token) { mapError.value = t('italy.slides.tuscanyMap.noToken'); loading.value = false; return }
   mapboxgl.accessToken = token
   map = new mapboxgl.Map({
     container: mapContainer.value,
@@ -371,7 +316,7 @@ function initMap () {
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
   map.on('load', async () => { await highlightAll(); loading.value = false })
-  map.on('error', e => { mapError.value = `地圖錯誤：${e.error?.message || '未知'}`; loading.value = false })
+  map.on('error', e => { mapError.value = t('italy.slides.tuscanyMap.mapError', { msg: e.error?.message || t('italy.slides.tuscanyMap.unknownError') }); loading.value = false })
 }
 
 onMounted(async () => { await nextTick(); initMap() })

@@ -1,4 +1,4 @@
-﻿{
+{
   "lessonId": "L1M2L2",
   "title": "Tuscany 托斯卡納 - 經典之美",
   "quiz": [
@@ -11,7 +11,7 @@
         "Primitivo"
       ],
       "answer": 1,
-      "explanation": "Sangiovese 是托斯卡納的靈魂品種，種植面積佔該產區 90% 以上。"
+      "explanation": "Sangiovese 是托斯卡納的靈魂品種，種植面積佔全區 60% 以上（IWS）；紅酒則約佔 Toscana 總產量的 90%。"
     },
     {
       "question": "Brunello di Montalcino 必須使用哪個品種釀造？",
@@ -56,17 +56,27 @@
     {
       "type": "content",
       "title": "📍 Toscana 產區概況",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利中部的葡萄酒殿堂，亞平寧山脈懷抱，首府佛羅倫斯。<span class=\"highlight\">Sangiovese占葡萄園90%以上</span>，從親民的Chianti到傳奇的Brunello，11個DOCG構成義大利葡萄酒最豐富的產區版圖。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>義大利中部，亞平寧山脈，首府佛羅倫斯（Firenze），葡萄園海拔250-700m丘陵地帶</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園面積</strong><br>約63,000公頃，地中海氣候，溫暖乾燥，夏季日照充足</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>法定認證</strong><br>11 DOCG，義大利最重要DOCG集中地，Brunello + Chianti Classico + Vino Nobile三強鼎立</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍇</div><div class=\"fact-text\"><strong>核心品種</strong><br>Sangiovese主導（90%+），白酒：Vernaccia di San Gimignano（托斯卡納唯一DOCG白酒）</div></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利中部的葡萄酒殿堂，亞平寧山脈懷抱，首府佛羅倫斯。<span class=\"highlight\">紅酒約佔產量90%，Sangiovese佔種植面積60%以上</span>，從親民的Chianti到傳奇的Brunello，11個DOCG＋41個DOC構成義大利葡萄酒最豐富的產區版圖。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>義大利中部，亞平寧山脈，首府佛羅倫斯（Firenze），葡萄園海拔250-700m丘陵地帶</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園面積</strong><br>約58,000公頃（143,000英畝），佔全義葡萄酒產量約6%；DOC/DOCG佔產量65%、IGT佔30%（幾乎全為Toscana IGT）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>法定認證</strong><br>52個DOC/DOCG（11 DOCG + 41 DOC），數量僅次於Piemonte居全義第二；Brunello + Chianti Classico + Vino Nobile三強鼎立</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍇</div><div class=\"fact-text\"><strong>核心品種</strong><br>Sangiovese主導（60%+），其次為Merlot、Cabernet Sauvignon；白酒：Vernaccia di San Gimignano（托斯卡納唯一白酒DOCG）</div></div></div><div class=\"terroir-key-point\"><h4>🏆 Toscana 11 個 DOCG 全列表</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>中部 Sangiovese</strong><br>Chianti Classico<br>Chianti<br>Carmignano</div><div class=\"kp-box\"><strong>南部山城</strong><br>Brunello di Montalcino<br>Vino Nobile di Montepulciano</div><div class=\"kp-box\"><strong>Maremma 沿海</strong><br>Morellino di Scansano<br>Montecucco Sangiovese<br>Val di Cornia Rosso<br>Suvereto</div><div class=\"kp-box\"><strong>白酒與甜酒</strong><br>Vernaccia di San Gimignano（唯一白酒）<br>Elba Aleatico Passito（紅色甜酒）</div></div></div>"
     },
     {
       "type": "content",
       "title": "🏛️ 歷史與文化地位",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">從伊特魯里亞文明到文藝復興，從Baron Ricasoli的配方到超托革命 —— <span class=\"intro-highlight\">3000年釀酒史與義大利文明的靈魂交融</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">公元前8世紀</div><div class=\"timeline-content\"><strong>伊特魯里亞文明</strong>：托斯卡納葡萄酒文化起源，大規模種植葡萄，成為地中海貿易重要商品</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1716年</div><div class=\"timeline-content\"><strong>Cosimo III劃定Chianti產區邊界</strong>：全球第一個法定葡萄酒產區誕生，比法國AOC制度早約200年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1872年</div><div class=\"timeline-content\"><strong>Baron Ricasoli確立Chianti配方</strong>：以Sangiovese為主體的混釀公式，奠定現代托斯卡納紅酒的基礎架構</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1968-1970年代</div><div class=\"timeline-content\"><strong>超級托斯卡納誕生</strong>：Sassicaia（1968）、Tignanello打破傳統法規，以Toscana IGT震驚國際，改寫義大利葡萄酒史</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">1385年</div><div class=\"stat-label\">Antinori家族成立</div></div><div class=\"stat-box\"><div class=\"stat-number\">1716年</div><div class=\"stat-label\">全球第一法定產區</div></div><div class=\"stat-box\"><div class=\"stat-number\">11</div><div class=\"stat-label\">DOCG 認證數量</div></div><div class=\"stat-box\"><div class=\"stat-number\">1968年</div><div class=\"stat-label\">Sassicaia首年份</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">從伊特魯里亞文明到文藝復興，從Baron Ricasoli的配方到超托革命 —— <span class=\"intro-highlight\">3000年釀酒史與義大利文明的靈魂交融</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">公元前8世紀</div><div class=\"timeline-content\"><strong>伊特魯里亞文明</strong>：托斯卡納葡萄酒文化起源，大規模種植葡萄，成為地中海貿易重要商品</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1716年</div><div class=\"timeline-content\"><strong>Cosimo III de' Medici頒布法令</strong>：正式劃定Chianti、Pomino、Carmignano、Val d'Arno di Sopra四個產區，並設委員會管控生產、出口與防偽，是世界最早官方劃界的產區之一，比法國AOC制度早約200年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1872年</div><div class=\"timeline-content\"><strong>Baron Ricasoli確立Chianti配方</strong>：以Sangiovese為主體的混釀公式，奠定現代托斯卡納紅酒的基礎架構</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1968-1970年代</div><div class=\"timeline-content\"><strong>超級托斯卡納誕生</strong>：Sassicaia（1968年份，1972年上市）、Tignanello打破傳統法規，先以Vino da Tavola、1992年後以Toscana IGT震驚國際，改寫義大利葡萄酒史</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">1385年</div><div class=\"stat-label\">Antinori家族成立</div></div><div class=\"stat-box\"><div class=\"stat-number\">1716年</div><div class=\"stat-label\">全球第一法定產區</div></div><div class=\"stat-box\"><div class=\"stat-number\">11</div><div class=\"stat-label\">DOCG 認證數量</div></div><div class=\"stat-box\"><div class=\"stat-number\">1968年</div><div class=\"stat-label\">Sassicaia首年份</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "📜 歷史、社會與現代復興（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>從伊特魯里亞到 Medici</h3><p><strong>伊特魯里亞（西元前900-300年）</strong>→ <strong>羅馬 Latini（西元前300-西元500年）</strong>→ 中世紀「築城運動」（encastellation）留下San Gimignano、Monteriggioni、Montalcino等山城；朝聖之路<strong>Via Francigena</strong>帶動沿線經濟。</p><p>13世紀起約300年，<strong>Siena共和國</strong>與<strong>Firenze共和國</strong>瓜分托斯卡納並相互征戰；Firenze貴族世家延續至今：<strong>Ricasoli</strong>（12世紀起賣酒）、<strong>Frescobaldi</strong>（14世紀初）、<strong>Antinori</strong>（14世紀末），皆為全球最古老的持續經營企業之列。</p><p>1737年Medici絕嗣，大公國交給法國<strong>Lorraine家族</strong>；1860年併入薩丁尼亞王國，1861年義大利統一，<strong>Firenze曾為首都（至1870年）</strong>。19世紀後半，白粉病、露菌病與根瘤蚜相繼重創葡萄園。</p></div><div class=\"dna-research\"><h3>Coltura Promiscua 與 Mezzadria</h3><p><strong>Coltura promiscua</strong>＝混合作物栽培：葡萄攀附在果樹上，行間種穀物或放牧——不是整枝系統，也不是分益佃農制。</p><p><strong>Mezzadria</strong>（分益佃農制）自9世紀起施行，1960年代遭廢除；地主缺乏資金、農民流向工業區，葡萄園一度荒廢。低廉地價隨後吸引大量投資，加上DOC制度建立，1980年代掀起葡萄種植復興與超托革命。</p></div></div><div class=\"orvieto-section\"><p class=\"orvieto-intro\">🎓 考試常見人物</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Giacomo Tachis</strong><p>現代義大利葡萄酒復興的奠基者之一，打造Sassicaia、Tignanello、Solaia。</p></div><div class=\"orvieto-card\"><strong>Giulio Gambelli</strong><p>「Sangiovese之父」，Soldera Case Basse、Montevertine Le Pergole Torte、Poggio di Sotto的推手。</p></div><div class=\"orvieto-card\"><strong>Chianti Classico 2000（1987年啟動）</strong><p>Consorzio主導的長期研究計畫，篩選優質Sangiovese等品種克隆並全區改植；不少最佳克隆其實來自Emilia-Romagna。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🌍 風土條件深度分析",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">地中海氣候 × 四種代表性土壤 × 海拔250-700m —— 多元風土造就托斯卡納從輕盈到雄渾的寬廣風格幅度</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🪨</div><h4>Galestro &amp; Alberese 核心土壤</h4><p><strong>Galestro片岩：</strong>富含泥灰岩碎片，排水極佳，Chianti Classico核心產區，賦予優雅礦物感</p><p><strong>Alberese石灰岩：</strong>白色石灰岩，保水力強，鈣質豐富，Montalcino部分區域，結構強勁</p><p><strong>Tufo凝灰岩：</strong>火山起源，Montepulciano區域，賦予獨特礦物複雜度</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">☀️</div><h4>地中海氣候與海拔梯度</h4><p><strong>氣候：</strong>溫暖乾燥，年均溫14-16°C，年降雨700-900mm</p><p><strong>夏季：</strong>炎熱乾燥，日照充足，促進Sangiovese充分成熟</p><p><strong>晝夜溫差：</strong>10-15°C，高海拔更大，保留天然酸度與香氣</p><p><strong>海拔：</strong>350-500m為頂級產區帶，Bolgheri沿岸砂質土帶來柔順果香風格</p></div></div><div class=\"terroir-key-point\"><h4>🗺️ 四大土壤類型</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Galestro片岩</strong><br>→ 優雅礦物型<br>Chianti Classico</div><div class=\"kp-box\"><strong>Alberese石灰岩</strong><br>→ 結構陳年型<br>Montalcino</div><div class=\"kp-box\"><strong>砂質土</strong><br>→ 果香柔順型<br>Bolgheri海岸</div><div class=\"kp-box\"><strong>Tufo凝灰岩</strong><br>→ 複雜礦物型<br>Montepulciano</div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">地中海 × 大陸性氣候交會 × 多元土壤 × 海拔250-700m —— 多元風土造就托斯卡納從輕盈到雄渾的寬廣風格幅度</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🪨</div><h4>Galestro &amp; Alberese 核心土壤</h4><p><strong>Galestro：</strong>變質岩，質地易碎、似片岩、邊緣銳利呈片狀剝落，排水極佳；分布於托斯卡納中部——Rufina、Montalcino與Chianti Classico，賦予優雅香氣與礦物感</p><p><strong>Alberese：</strong>細緻的石灰質泥灰岩（calcareous marl），鈣質豐富；主要見於Chianti Classico中南部（Castellina、Castelnuovo Berardenga），也見於Montalcino高海拔處，賦予結構</p><p><strong>海洋沉積砂土：</strong>古海洋反覆進退留下的砂、黏土與石灰質沉積；Montepulciano、San Gimignano與Montalcino低海拔處，風格較柔和圓潤</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">☀️</div><h4>地中海氣候與海拔梯度</h4><p><strong>氣候：</strong>位於北方Po河平原大陸性氣候與中南義地中海型氣候的過渡帶；越靠海越溫和，內陸冬冷夏熱（夏季可超過35°C）</p><p><strong>夏季：</strong>炎熱乾燥，日照充足，促進Sangiovese充分成熟</p><p><strong>晝夜溫差：</strong>10-15°C，高海拔更大，保留天然酸度與香氣</p><p><strong>海拔：</strong>350-500m為頂級產區帶，Bolgheri沿岸砂質土帶來柔順果香風格</p></div></div><div class=\"terroir-key-point\"><h4>🗺️ 四大土壤類型</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Galestro</strong><br>→ 優雅礦物型<br>Chianti Classico / Rufina</div><div class=\"kp-box\"><strong>Alberese泥灰岩</strong><br>→ 結構陳年型<br>Chianti Classico中南部</div><div class=\"kp-box\"><strong>砂質土</strong><br>→ 果香柔順型<br>Bolgheri海岸</div><div class=\"kp-box\"><strong>海洋沉積砂土</strong><br>→ 柔和圓潤型<br>Montepulciano</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏔️ 地形、河流、整枝與釀造傳統（IWS 官方教材）",
+      "content": "<div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>位置</strong><br>北緯42°-44°，中義面積最大的大區，呈三角形：西臨Ligurian Sea與Tyrrhenian Sea（海岸線逾600公里），東北為Apennines，南側無天然邊界；鄰Liguria、Emilia-Romagna、Marche、Umbria、Lazio，另有含Elba在內的7座Tuscan Archipelago島嶼</div></div><div class=\"fact-box\"><div class=\"fact-icon\">⛰️</div><div class=\"fact-text\"><strong>地形</strong><br>丘陵為主體；山地約25%（北Apennines，另有Apuan Alps、Pratomagno、Monte Amiata）；平原僅8%，多為沿海或河谷沖積平原</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌊</div><div class=\"fact-text\"><strong>河流</strong><br>河流多但短小湍急。<strong>Arno</strong>最長，流經Firenze、Empoli、Pisa注入Ligurian Sea；南部有<strong>Ombrone</strong>與<strong>Orcia</strong></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌡️</div><div class=\"fact-text\"><strong>氣候</strong><br>Apennines阻擋北方冷空氣並形成雨影；南Maremma與島嶼最溫暖（年均約15°C），內陸冬季偶有降雪</div></div></div><div class=\"terroir-key-point\"><h4>✂️ 常見整枝系統</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Guyot</strong><br>單／雙蔓枝修剪</div><div class=\"kp-box\"><strong>Archetto</strong><br>Guyot變化型<br>結果枝彎成拱形</div><div class=\"kp-box\"><strong>Cordon spur</strong><br>永久主幹<br>短梢修剪</div></div></div><div class=\"orvieto-section\"><p class=\"orvieto-intro\">🍷 托斯卡納釀造傳統</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Governo all'uso toscano</strong><p>在發酵完成的酒中加入預留風乾的葡萄，誘發二次發酵（也能救回停滯發酵），增加酒精、酒體與柔順度，酒標須標示「Governo」。Chianti DOCG仍允許但已罕見。</p></div><div class=\"orvieto-card\"><strong>木桶陳年</strong><p>傳統用大型老舊Slavonian橡木或栗木botti；1980年代起法國小橡木桶（barrique）流行，今日兩者並用。</p></div><div class=\"orvieto-card\"><strong>顧問釀酒師</strong><p>托斯卡納很早就引進顧問釀酒師制度，早期多為法國籍，如今以義大利籍為主。</p></div></div></div>"
     },
     {
       "type": "content",
@@ -76,21 +86,46 @@
     {
       "type": "content",
       "title": "🧬 Sangiovese 克隆與地方變種",
-      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🔴 Brunello (Sangiovese Grosso)</div><div class=\"mf-prod\">Montalcino 專屬 — 果粒最大、皮最厚、晚熟2-3週，單寧最高，陳年潛力20-30年，Brunello di Montalcino DOCG的基礎</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🍷 Prugnolo Gentile</div><div class=\"mf-prod\">Montepulciano 專屬 — 介於Brunello與標準Sangiovese，中高柔順單寧，李子風味明顯，Vino Nobile的優雅支柱</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🌊 Morellino (Sangiovese Maremmano)</div><div class=\"mf-prod\">Scansano 海岸 — 適應溫暖海岸氣候，果香奔放、單寧柔和，易飲型，Morellino di Scansano DOCG</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🍇 標準Sangiovese（Chianti型）</div><div class=\"mf-prod\">Chianti Classico / Rufina / 全區 — 中等酒體，活潑酸度，新鮮櫻桃，最廣泛種植，100種以上克隆</div></div></div>"
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🔴 Brunello (Sangiovese Grosso)</div><div class=\"mf-prod\">Montalcino 專屬 — 果粒最大、皮最厚、晚熟2-3週，單寧最高，陳年潛力20-30年，Brunello di Montalcino DOCG的基礎</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🍷 Prugnolo Gentile</div><div class=\"mf-prod\">Montepulciano 專屬 — 介於Brunello與標準Sangiovese，中高柔順單寧，李子風味明顯，Vino Nobile的優雅支柱</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🌊 Morellino (Sangiovese Maremmano)</div><div class=\"mf-prod\">Scansano 海岸 — 適應溫暖海岸氣候，果香奔放、單寧柔和，易飲型，Morellino di Scansano DOCG</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🍇 標準Sangiovese（Chianti型）</div><div class=\"mf-prod\">Chianti Classico當地稱Sangioveto / Rufina / 全區 — 中等酒體，活潑酸度，新鮮櫻桃，最廣泛種植，100種以上克隆</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍇 Sangiovese 同義詞與其他關鍵品種（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Sangiovese：難種卻最具代表性</h3><p>義大利種植最廣的品種，佔托斯卡納60%以上。親緣可能為<strong>Ciliegiolo × Calabrese Montenuovo</strong>（另有研究指向Negro Dolce），暗示南義血統。<strong>早發芽、晚成熟</strong>，對風土極度敏感，偏好朝南、貧瘠且排水良好的坡地與長而溫暖的生長季。酒色淺到中等、高酸、單寧有抓力，典型香氣為紫羅蘭、酸櫻桃、茶葉、泥土。</p></div></div><div class=\"terroir-key-point\"><h4>🔤 五個同義詞 × 產地（常考）</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Brunello</strong><br>Montalcino</div><div class=\"kp-box\"><strong>Morellino</strong><br>Scansano</div><div class=\"kp-box\"><strong>Prugnolo Gentile</strong><br>Montepulciano</div><div class=\"kp-box\"><strong>Sangioveto</strong><br>Chianti Classico</div><div class=\"kp-box\"><strong>Sangiovese Grosso</strong><br>Toscana</div><div class=\"kp-box\"><strong>⚠️ Colorino</strong><br>不是同義詞<br>是獨立的上色品種</div></div></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍷 Canaiolo（Canaiolo Nero）</strong><p>18世紀前是托斯卡納的主要品種，之後被Sangiovese超越，根瘤蚜後更難嫁接而式微；至今仍是Sangiovese最主要的混釀夥伴——柔化單寧與酸度，增添香氣與口感。</p></div><div class=\"orvieto-card\"><strong>🥂 白葡萄</strong><p><strong>Trebbiano Toscano</strong>（法國稱Ugni Blanc，約6%，提供酸度）、<strong>Malvasia Bianca Lunga</strong>（Malvasia del Chianti，提供酒體與香氣）、<strong>Vernaccia di San Gimignano</strong>（名稱源自拉丁文vernaculus「本地的」，與其他Vernaccia無親緣）、沿海的<strong>Vermentino</strong>與<strong>Ansonica</strong>。</p></div><div class=\"orvieto-card\"><strong>🌍 國際品種</strong><p>19世紀已存在，近30年大增：<strong>Merlot</strong>為全區第二大品種，其次<strong>Cabernet Sauvignon</strong>；Cabernet Franc在Carmignano與Bolgheri份量重；<strong>Syrah</strong>以Cortona為代表。白葡萄以Chardonnay最多，其次Sauvignon Blanc、Pinot Grigio。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏆 Chianti 分級與子產區",
-      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Chianti Classico DOCG是托斯卡納最具代表性的產區，2014年新增頂級Gran Selezione等級，四級體系涵蓋所有品質層次，<strong>黑公雞（Gallo Nero）</strong>是傳統核心區的標誌。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🔵 Annata（基礎款）</strong><p>Sangiovese 80-100%，陳年至少12個月。新鮮櫻桃、活潑酸度、親民日常飲用型，€10-18。</p></div><div class=\"orvieto-card\"><strong>🟡 Riserva（陳年款）</strong><p>法規要求至少24個月（含3個月瓶陳）。更豐富層次、皮革、香草、礦物感，€18-35。</p></div><div class=\"orvieto-card\"><strong>🏆 Gran Selezione（2014新設）</strong><p>Chianti Classico最高等級，至少30個月陳年，單一葡萄園或精選混釀，頂級表達，€35-80+。</p></div></div></div><div class=\"terroir-key-point\"><h4>🗺️ Chianti DOC 7 大子產區</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Rufina ⭐</strong><br>品質最佳<br>高海拔冷涼</div><div class=\"kp-box\"><strong>Colli Fiorentini</strong><br>佛羅倫斯丘陵<br>優雅風格</div><div class=\"kp-box\"><strong>Colli Senesi</strong><br>Siena周邊<br>最大子產區</div><div class=\"kp-box\"><strong>其他4子區</strong><br>Aretini / Pisane<br>Montalbano / Montespertoli</div></div></div>"
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Chianti Classico DOCG是托斯卡納最具代表性的產區，2014年新增頂級Gran Selezione等級，三級體系涵蓋所有品質層次，<strong>黑公雞（Gallo Nero）</strong>是傳統核心區的標誌。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🔵 Annata（基礎款）</strong><p>Sangiovese 80-100%，陳年至少12個月。新鮮櫻桃、活潑酸度、親民日常飲用型，€10-18。</p></div><div class=\"orvieto-card\"><strong>🟡 Riserva（陳年款）</strong><p>法規要求至少24個月（含3個月瓶陳）。更豐富層次、皮革、香草、礦物感，€18-35。</p></div><div class=\"orvieto-card\"><strong>🏆 Gran Selezione（2014新設）</strong><p>Chianti Classico最高等級，至少30個月陳年（含3個月瓶陳），須為酒莊自有葡萄；2021年起最低90% Sangiovese且其餘僅限本土品種，2023年起可標示11個UGA村莊名，€35-80+。</p></div></div></div><div class=\"terroir-key-point\"><h4>🗺️ Chianti DOCG 7 大子產區</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Rufina ⭐</strong><br>品質最佳<br>高海拔冷涼</div><div class=\"kp-box\"><strong>Colli Fiorentini</strong><br>佛羅倫斯丘陵<br>優雅風格</div><div class=\"kp-box\"><strong>Colli Senesi</strong><br>Siena周邊<br>最大子產區，最低75% Sangiovese</div><div class=\"kp-box\"><strong>其他4子區</strong><br>Aretini / Pisane<br>Montalbano / Montespertoli（1997年最晚加入）</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "📜 Chianti vs Chianti Classico：歷史與法規（IWS 官方教材）",
+      "content": "<div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">14世紀 / 1384</div><div class=\"timeline-content\">首次出現「Chianti」酒名；<strong>Lega del Chianti</strong>劃定Chianti Storico疆界</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1716 / 17-18世紀</div><div class=\"timeline-content\">Cosimo III劃界；當時Chianti主要以<strong>Canaiolo</strong>釀造</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1872</div><div class=\"timeline-content\"><strong>Barone Bettino Ricasoli</strong>提出兩套配方：陳年型＝Sangiovese＋少量Canaiolo；易飲型＝70% Sangiovese＋15% Canaiolo＋15% Malvasia（可用Governo）。易飲型成為標準，後來Malvasia常被較劣質的Trebbiano取代，拖累形象</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1924 / 1932</div><div class=\"timeline-content\">33家生產者組成Consorzio（義大利最早之一）；政府劃定歷史區並擴大Chianti範圍、設立子產區，歷史核心成為子產區「Chianti Classico」</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1967 → 2006</div><div class=\"timeline-content\">1967 Chianti DOC → 1984 DOCG → 1987 Chianti Classico 2000 → <strong>1996 Chianti Classico獨立為DOCG</strong> → 2006禁用白葡萄 → 2014 Gran Selezione</div></div></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🐓 Chianti Classico DOCG</strong><p>Firenze與Siena之間丘陵，約10,000公頃葡萄園，橫跨9個市鎮（Castellina、Gaiole、Radda、Greve全境在內）。河流：Pesa、Greve向北注入Arno，Arbia向南注入Ombrone。大陸性為主帶地中海影響，海拔200-450m，Galestro與Alberese土壤。最低80% Sangiovese，輔助品種Canaiolo、Colorino、Cabernet Sauvignon、Merlot；最高產量7,500kg/ha，屬義大利最低之列。同區有Vin Santo del Chianti Classico DOC。</p></div><div class=\"orvieto-card\"><strong>🍷 Chianti DOCG</strong><p>1930年代擴大的周邊產區，面積約為Classico兩倍，產量與出口量居全義前列，品質風格差異大。最低70% Sangiovese，最高30%輔助品種（Cabernet合計≤15%），<strong>仍可加最多10%白葡萄</strong>，允許Governo。7個子產區可標於「Chianti」之後，跨區混調只能標Chianti。同區有Vin Santo del Chianti DOC。</p></div><div class=\"orvieto-card\"><strong>⭐ 三大重點子產區</strong><p><strong>Rufina</strong>：Firenze東側北Apennines山麓，海拔250-500m，1716年屬Pomino，Sieve河流經，高酸優雅耐陳年。<strong>Colli Senesi</strong>：最大、最南、最溫暖，酒體較飽滿，最低75% Sangiovese。<strong>Colli Fiorentini</strong>：Firenze南側與東側，歷史上稱「Vino di Firenze」。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "⭐ 五大必學 DOCG",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>👑 Brunello di Montalcino DOCG</h4><p><strong>品種：</strong>100% Sangiovese（Brunello克隆，Montalcino專屬）</p><p><strong>陳年：</strong>最少5年（含2年橡木桶）；Riserva 6年以上</p><p><strong>風格：</strong>最強勁、最複雜，陳年潛力20-30年以上，義大利頂峰</p><p><strong>價格：</strong>€40-200+，義大利最具收藏價值紅酒之一</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🐓 Chianti Classico DOCG</h4><p><strong>品種：</strong>Sangiovese 80-100%，Gallo Nero黑公雞標誌</p><p><strong>等級：</strong>Annata / Riserva（24個月）/ Gran Selezione（30個月，2014新設）</p><p><strong>風格：</strong>活潑酸度、新鮮櫻桃、礦物感，義大利最親民的頂級紅酒</p><p><strong>價格：</strong>€12-80+，CP值極高</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏛️ Vino Nobile di Montepulciano DOCG</h4><p><strong>品種：</strong>Sangiovese（Prugnolo Gentile）70%以上</p><p><strong>陳年：</strong>最少2年；Riserva最少3年</p><p><strong>風格：</strong>介於Chianti和Brunello之間，李子優雅，優秀性價比</p><p><strong>價格：</strong>€15-40，托斯卡納三強中的隱藏寶石</p></div></div></div><div class=\"terroir-key-point\"><h4>🍷 另外2個重要DOCG + 周邊DOC</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Morellino di Scansano</strong><br>海岸柔順Sangiovese<br>€10-20，易飲型</div><div class=\"kp-box\"><strong>Vernaccia di San Gimignano</strong><br>托斯卡納唯一白酒DOCG<br>清爽礦物，€12-22</div><div class=\"kp-box\"><strong>Rosso di Montalcino DOC</strong><br>Brunello降級款<br>入門€15-25</div><div class=\"kp-box\"><strong>Bolgheri DOC</strong><br>超托根據地<br>Cabernet，€20-250</div></div></div>"
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>👑 Brunello di Montalcino DOCG</h4><p><strong>品種：</strong>100% Sangiovese（Brunello克隆，Montalcino專屬）</p><p><strong>陳年：</strong>最少4年（其中至少2年木桶），採收後第5年1月1日才能上市；Riserva最少5年（第6年上市）</p><p><strong>風格：</strong>最強勁、最複雜，陳年潛力20-30年以上，義大利頂峰</p><p><strong>價格：</strong>€40-200+，義大利最具收藏價值紅酒之一</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🐓 Chianti Classico DOCG</h4><p><strong>品種：</strong>Sangiovese 80-100%，Gallo Nero黑公雞標誌</p><p><strong>等級：</strong>Annata / Riserva（24個月）/ Gran Selezione（30個月，2014新設）；最低80% Sangiovese，2006年起禁用白葡萄</p><p><strong>風格：</strong>活潑酸度、新鮮櫻桃、礦物感，義大利最親民的頂級紅酒</p><p><strong>價格：</strong>€12-80+，CP值極高</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏛️ Vino Nobile di Montepulciano DOCG</h4><p><strong>品種：</strong>Sangiovese（Prugnolo Gentile）70%以上</p><p><strong>陳年：</strong>最少24個月（至少12個月木桶）；Riserva最少36個月</p><p><strong>風格：</strong>介於Chianti和Brunello之間，李子優雅，優秀性價比</p><p><strong>價格：</strong>€15-40，托斯卡納三強中的隱藏寶石</p></div></div></div><div class=\"terroir-key-point\"><h4>🍷 另外2個重要DOCG + 周邊DOC</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Morellino di Scansano</strong><br>最低85% Sangiovese（Morellino）<br>海岸柔順易飲型，€10-20</div><div class=\"kp-box\"><strong>Vernaccia di San Gimignano</strong><br>托斯卡納唯一白酒DOCG<br>清爽礦物，€12-22</div><div class=\"kp-box\"><strong>Rosso di Montalcino DOC</strong><br>Brunello降級款<br>入門€15-25</div><div class=\"kp-box\"><strong>Bolgheri DOC</strong><br>超托根據地<br>Cabernet，€20-250</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "👑 Montalcino 與 Montepulciano 深度解析（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Brunello 的誕生：Biondi-Santi 家族</h3><p>Montalcino自16世紀以甜白酒<strong>Moscadello</strong>聞名。「Brunello」作為Sangiovese地方名出現於18世紀末-19世紀初。Pisa大學藥學畢業的<strong>Clemente Santi</strong>在Tenuta Greppo推行單一品種、延長發酵與浸皮、不加白葡萄、不用Governo；1869年「Vino Rosso Scelto Brunello 1865」在Montepulciano農展獲銀牌，是「Brunello」首次正式入標。</p><p>1885年外孫<strong>Ferruccio Biondi</strong>接手，合併姓氏為Biondi-Santi，引進去梗、群體選種與Slavonian橡木長期陳年；1960年代<strong>Tancredi Biondi-Santi</strong>使Brunello躋身義大利最負盛名酒款。1966年成為首批DOC（法規以Tancredi作法為藍本），<strong>1980年成為義大利首批DOCG</strong>。</p></div></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🗺️ Montalcino 風土</strong><p>產區與市鎮邊界一致，近似邊長約15公里的正方形，由<strong>Asso、Orcia、Ombrone</strong>三河圍繞；不規則丘陵與稜線從四面向中央的Montalcino鎮匯聚，海拔120-600m。地中海海風＋Apennines大陸性影響，日夜溫差大，比Chianti Classico更溫暖，Sangiovese可穩定完熟。高處土壤古老淺薄多石（Galestro、Alberese）；低處較年輕深厚，多海洋黏土與砂。</p></div><div class=\"orvieto-card\"><strong>📋 Montalcino 法定酒款</strong><p><strong>Brunello DOCG</strong>：100% Sangiovese，陳年≥4年（木桶≥2年），Riserva≥5年；傳統派用大型botti，現代派用barrique。<strong>Rosso di Montalcino DOC</strong>：同區、同樣100% Sangiovese，Brunello可降級為Rosso，是「副牌」概念的原型。<strong>Sant'Antimo DOC</strong>：讓Montalcino生產者釀造非100% Sangiovese的酒款。</p></div><div class=\"orvieto-card\"><strong>🏛️ Montepulciano 與 Vino Nobile</strong><p>伊特魯里亞古城，自羅馬時代即為貴族、藝術家、教宗的「高貴之酒」；19-20世紀衰落，1930年代Adamo Fanetti帶動復興。葡萄園分布於<strong>Montepulciano</strong>與<strong>Valiano</strong>兩片開闊丘陵，中隔Val di Chiana，海拔250-600m，更內陸、更大陸性，受<strong>Trasimeno湖</strong>調節；海洋起源砂質土，較均質。最低70% Prugnolo Gentile（多數用80-100%），常搭Canaiolo、Colorino、Mammolo、Merlot；24個月（木桶12個月），Riserva 36個月。副牌為<strong>Rosso di Montepulciano DOC</strong>（無強制木桶陳年）。</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏰 Carmignano、Vernaccia 與 Cortona（IWS 官方教材）",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍷 Carmignano DOCG — Cabernet 的古老傳統</h4><p><strong>歷史：</strong>文獻可追溯至西元804年，1716年Cosimo III劃界；傳說Caterina de' Medici下令引種Cabernet，16世紀即有種植。19-20世紀衰落，1930年代併入Chianti Montalbano子產區；Tenuta di Capezzana的<strong>Count Ugo Contini Bonacossi</strong>推動復興——1975年DOC、1990年DOCG。</p><p><strong>法規：</strong>最低50% Sangiovese＋<strong>10-20% Cabernet Franc/Sauvignon</strong>（實務常見70-90% Sangiovese）；Riserva最少3年（木桶至少1年）。</p><p><strong>同區四種法定酒：</strong>Carmignano DOCG、<strong>Barco Reale di Carmignano DOC</strong>（副牌，同混釀規則、無強制陳年）、粉紅酒<strong>Vin Ruspo</strong>（放血法）、<strong>Vin Santo di Carmignano DOC</strong>。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥂 Vernaccia di San Gimignano DOCG</h4><p><strong>歷史：</strong>13世紀起受推崇；<strong>1966年成為義大利第一個DOC</strong>，1993年成為托斯卡納唯一白酒DOCG。San Gimignano高塔林立，有「義大利的曼哈頓」之稱，列UNESCO世界遺產。</p><p><strong>風土：</strong>位於Chianti Classico西側，與Chianti Colli Senesi重疊；海洋起源的黃砂、黃黏土與石灰質泥灰岩。</p><p><strong>釀造：</strong>最低85% Vernaccia；傳統為帶皮浸漬、大木桶、略氧化風格，現代多為不鏽鋼溫控；Riserva最少陳年11個月，常見桶內發酵與桶陳。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌿 Cortona DOC — 托斯卡納的 Syrah</h4><p>Arezzo省、Trasimeno湖西北方的伊特魯里亞古城，1999年成為DOC；以紅酒為主，尤以<strong>Syrah</strong>聲譽日隆，另有Merlot與Sangiovese。</p></div></div></div>"
     },
     {
       "type": "tuscany-docg-map",
       "title": "🗺️ Tuscany 5大DOCG + 周邊DOC 互動地圖"
+    },
+    {
+      "type": "content",
+      "title": "🌊 沿海產區：Maremma、Bolgheri 與 Elba（IWS 官方教材）",
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\"><strong>Maremma</strong>是介於Toscana與Lazio之間的歷史沿海區，昔日為瘧疾橫行的沼澤與流放地，20世紀上半葉排水開墾後轉為農業區，是托斯卡納少數擁有大片平原的地方。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🏖️ Bolgheri DOC（北Maremma）</strong><p>海與平行海岸的丘陵之間的狹長帶，多數葡萄園位於丘陵腳下平地；海風調節，比內陸溫和。土壤多元：卵石礫石沖積土、砂／石灰岩／黏土海相沉積，並帶部分火山成分。1983年DOC原僅限白酒與粉紅酒，<strong>1994年才納入紅酒</strong>。Rosso：Cabernet Sauvignon、Cabernet Franc、Merlot任意比例，Sangiovese與Syrah各最多50%；<strong>Rosso Superiore</strong>最少2年（木桶1年）；Bianco以Vermentino、Sauvignon Blanc為主；Rosato傳統以Sangiovese為主。在Sassicaia之前，這裡幾乎沒有釀酒名聲。</p></div><div class=\"orvieto-card\"><strong>⚔️ Bolgheri Sassicaia DOC</strong><p>1940年代<strong>Marchese Mario Incisa della Rocchetta</strong>從Piemonte移居Tenuta San Guido，種Cabernet自飲；親戚<strong>Antinori</strong>說服他商業化並引介Giacomo Tachis。1968年份於1972年以VdT上市 → 1994年成為Bolgheri子產區 → 2013年獨立DOC。法規最低80% Cabernet Sauvignon（實際85% CS＋15% CF），至少24個月（小橡木桶至少18個月）。名稱源自「sassi」多石礫土壤，是<strong>義大利唯一單一酒莊、單一酒款的DOC</strong>。</p></div><div class=\"orvieto-card\"><strong>🍇 Val di Cornia Rosso DOCG ＆ Suvereto DOCG</strong><p>Bolgheri東南側、面對Elba島的丘陵，氣候近似Bolgheri，主力為Cabernet、Merlot、Sangiovese。原屬Val di Cornia DOC，<strong>2011年升格DOCG</strong>；1990年代中期Bolgheri地價飆漲後投資湧入。</p></div><div class=\"orvieto-card\"><strong>🌞 南Maremma（Grosseto以南）</strong><p><strong>Morellino di Scansano DOCG</strong>：溫暖地中海氣候，最低85% Morellino，Riserva最少2年（木桶1年）。<strong>Montecucco Sangiovese DOCG</strong>：Montalcino南側，2011年自Montecucco DOC升格，最低90% Sangiovese、至少1年木桶。<strong>Maremma Toscana DOC</strong>：由IGT升格的傘狀產區，涵蓋整個南Maremma、品種風格多元。</p></div><div class=\"orvieto-card\"><strong>🏝️ Elba 島</strong><p>義大利第三大島，距本土約10公里；伊特魯里亞人為鐵礦而來，老普林尼稱其為「Insula Vini Ferax」（多產美酒之島）。拿破崙1814-1815年流放於此。花崗岩、斑岩、石灰岩、片岩等多元貧瘠土壤，梯田以乾砌石牆支撐。兩個法定產區：<strong>Elba Aleatico Passito DOCG</strong>（100% Aleatico紅色甜酒）與Elba DOC。</p></div></div></div>"
     },
     {
       "type": "content",
@@ -100,17 +135,144 @@
     {
       "type": "content",
       "title": "🚀 超級托斯卡納深度探索",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>⚔️ 叛逆的誕生背景</h4><p><strong>1960年代限制：</strong>DOC法規要求Chianti必須混入白葡萄（Malvasia / Trebbiano）</p><p><strong>禁止：</strong>使用Cabernet Sauvignon等非傳統國際品種</p><p><strong>困境：</strong>高品質創新酒被迫標示為最低等級VdT餐酒</p><p><strong>諷刺：</strong>「最低等級」賣出全義大利最高價格</p></div><div class=\"research-content\"><h4>📜 IGT制度解放（1992年）</h4><p><strong>1992年：</strong>IGT（Indicazione Geografica Tipica）制度建立</p><p><strong>Toscana IGT：</strong>超托終於獲得適合的法律身份</p><p><strong>2013年：</strong>Bolgheri Sassicaia升格為義大利唯一單一酒莊DOC</p><p><strong>現狀：</strong>超托是義大利最昂貴酒款的代名詞</p></div></div></div><div class=\"aging-science\"><p>超級托斯卡納三大風格流派</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🇫🇷 純國際品種型</h5><p>Sassicaia / Ornellaia / Masseto（100% Merlot）</p><p class=\"science-note\">Cabernet / Merlot主導，Bolgheri海岸，波爾多風格</p></div><div class=\"science-card\"><h5>🌹 Sangiovese混釀型</h5><p>Tignanello / Sammarco / Solaia</p><p class=\"science-note\">Sangiovese + Cabernet，本土 × 國際完美融合</p></div><div class=\"science-card\"><h5>🍷 純Sangiovese精品型</h5><p>Percarlo / Flaccianello della Pieve</p><p class=\"science-note\">100% Sangiovese，超越DOC框架的極致工藝</p></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>⚔️ 叛逆的誕生背景</h4><p><strong>1960年代限制：</strong>DOC法規要求Chianti必須混入白葡萄（Malvasia / Trebbiano）</p><p><strong>禁止：</strong>使用Cabernet Sauvignon等非傳統國際品種</p><p><strong>困境：</strong>高品質創新酒被迫標示為最低等級VdT餐酒</p><p><strong>諷刺：</strong>「最低等級」賣出全義大利最高價格</p></div><div class=\"research-content\"><h4>📜 IGT制度解放（1992年）</h4><p><strong>1992年：</strong>Goria法引入IGT（Indicazione Geografica Tipica）制度，地位高於VdT、規範比DOC寬鬆</p><p><strong>1994年：</strong>Bolgheri DOC修法納入紅酒，多數Bolgheri超托取得DOC身份</p><p><strong>Toscana IGT：</strong>超托終於獲得適合的法律身份</p><p><strong>2013年：</strong>Bolgheri Sassicaia升格為義大利唯一單一酒莊DOC</p><p><strong>現狀：</strong>超托是義大利最昂貴酒款的代名詞</p></div></div></div><div class=\"aging-science\"><p>超級托斯卡納三大風格流派</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🇫🇷 純國際品種型</h5><p>Sassicaia / Ornellaia / Masseto（100% Merlot）</p><p class=\"science-note\">Cabernet / Merlot主導，Bolgheri海岸，波爾多風格</p></div><div class=\"science-card\"><h5>🌹 Sangiovese混釀型</h5><p>Tignanello / Sammarco / Solaia</p><p class=\"science-note\">Sangiovese + Cabernet，本土 × 國際完美融合</p></div><div class=\"science-card\"><h5>🍷 純Sangiovese精品型</h5><p>Percarlo / Flaccianello della Pieve</p><p class=\"science-note\">100% Sangiovese，超越DOC框架的極致工藝</p></div></div></div><div class=\"orvieto-section\"><p class=\"orvieto-intro\">📘 IWS 補充：超托的真正震央其實是 Chianti Classico</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>兩種不同動機</strong><p>Sassicaia源於在默默無名的Bolgheri釀出波爾多風格好酒的直覺；Chianti Classico的超托（Antinori Tignanello、San Felice Vigorello等）則源於對過時Chianti法規（強制加白葡萄、不准100% Sangiovese）的不滿，以及1970年代Chianti聲譽低迷。</p></div><div class=\"orvieto-card\"><strong>釀造革新</strong><p>引進Cabernet Sauvignon、Cabernet Franc，後來加入Merlot、Syrah、Petit Verdot；以全新法國小橡木桶取代老舊的大型Slavonian橡木或栗木桶；搭配醒目的酒標與自創酒名。</p></div><div class=\"orvieto-card\"><strong>深遠影響</strong><p>迫使Chianti法規全面修訂、帶動全義品質革命；Toscana IGT如今是義大利量與值最大的IGT之一。其後許多生產者重新回歸本土品種與較低干預的傳統釀法。</p></div></div></div>"
     },
     {
       "type": "super-tuscan-evolution",
       "title": "🌟 Super Tuscan 進化史（互動）",
-      "description": "點擊時間軸節點與五大旗艦酒，深入了解 1968-2013 年法律演進與酒款風格定位光譜。"
+      "description": "點擊時間軸節點與五大旗艦酒，深入了解 1968-2013 年法律演進與酒款風格定位光譜。",
+      "timeline": [
+        {
+          "year": "1968",
+          "title": "Sassicaia 首釀",
+          "desc": "Marchese Incisa della Rocchetta 在 Bolgheri 海岸種植 Cabernet Sauvignon，開啟超托時代。",
+          "color": "#8e44ad"
+        },
+        {
+          "year": "1971",
+          "title": "Tignanello 誕生",
+          "desc": "Antinori 家族首次在 Sangiovese 中加入 Cabernet 並使用 Barrique 小橡木桶，違反 Chianti 法規。",
+          "color": "#c0392b"
+        },
+        {
+          "year": "1978",
+          "title": "Solaia 問世",
+          "desc": "以 Cabernet 主導（75%）+ Sangiovese 配角，更激進的國際化嘗試。",
+          "color": "#d4af37"
+        },
+        {
+          "year": "1985-86",
+          "title": "Ornellaia / Masseto",
+          "desc": "Lodovico Antinori 在 Bolgheri 推出波爾多風格旗艦；Masseto 100% Merlot 確立「義大利的 Petrus」地位。",
+          "color": "#16a085"
+        },
+        {
+          "year": "1992",
+          "title": "Goria 法案 → IGT 等級",
+          "desc": "農業部長 Giovanni Goria 推動法律改革，新增 IGT（Indicazione Geografica Tipica）等級，承認超托合法地位。",
+          "color": "#3498db"
+        },
+        {
+          "year": "1994",
+          "title": "Bolgheri DOC 納入紅酒",
+          "desc": "Bolgheri DOC（1983 年成立時僅限白酒與粉紅酒）修法納入以 Cabernet/Merlot 為主的紅酒，Sassicaia 同時成為其子產區，超托從「叛逆」變為「制度內精品」。",
+          "color": "#27ae60"
+        },
+        {
+          "year": "2013",
+          "title": "Bolgheri Sassicaia DOC",
+          "desc": "全義大利唯一單一酒莊、單一酒款專屬 DOC，Sassicaia 從 Bolgheri 子產區獨立為自有 DOC。",
+          "color": "#e67e22"
+        }
+      ],
+      "wines": [
+        {
+          "name": "Sassicaia",
+          "shortName": "Sassicaia",
+          "firstVintage": "1968",
+          "estate": "Tenuta San Guido",
+          "blend": "85% Cabernet Sauvignon + 15% Cabernet Franc",
+          "region": "Bolgheri Sassicaia DOC（海岸礫石）",
+          "style": "優雅、波爾多左岸風格、雪松與黑醋栗",
+          "price": "€200–€400",
+          "tagline": "義大利的 Lafite",
+          "story": "Marchese Incisa 將法國 Cabernet 引入 Bolgheri，發現此地礫石土壤類似波爾多左岸，造就義大利第一支國際風格頂級紅酒。",
+          "color": "#5D2A8E",
+          "colorEnd": "#7B3FA8",
+          "spectrum": 92
+        },
+        {
+          "name": "Tignanello",
+          "shortName": "Tigna",
+          "firstVintage": "1971",
+          "estate": "Marchesi Antinori",
+          "blend": "80% Sangiovese + 15% Cabernet Sauvignon + 5% Cabernet Franc",
+          "region": "Toscana IGT（Chianti Classico 區內）",
+          "style": "Sangiovese 主導、國際品種增添結構、平衡優雅",
+          "price": "€100–€200",
+          "tagline": "Antinori 經典革命",
+          "story": "第一款不使用白葡萄、採用 Barrique 小橡木桶陳年的 Sangiovese，違反當時 Chianti DOC 規範，被迫降級為 Vino da Tavola。",
+          "color": "#A8324A",
+          "colorEnd": "#C84B66",
+          "spectrum": 35
+        },
+        {
+          "name": "Solaia",
+          "shortName": "Solaia",
+          "firstVintage": "1978",
+          "estate": "Marchesi Antinori",
+          "blend": "75% Cabernet Sauvignon + 20% Sangiovese + 5% Cabernet Franc",
+          "region": "Toscana IGT（Tignanello 鄰園）",
+          "style": "Cabernet 主導、強勁結構、長陳年潛力",
+          "price": "€200–€400",
+          "tagline": "向陽之地",
+          "story": "Antinori 旗艦酒款，與 Tignanello 為鄰園卻反向操作——以 Cabernet 為主體、Sangiovese 為輔，2000 年成為《Wine Spectator》年度第一。",
+          "color": "#D4A037",
+          "colorEnd": "#E8B952",
+          "spectrum": 82
+        },
+        {
+          "name": "Ornellaia",
+          "shortName": "Ornellaia",
+          "firstVintage": "1985",
+          "estate": "Tenuta dell'Ornellaia（Frescobaldi）",
+          "blend": "50% Cabernet Sauvignon + 25% Merlot + 20% Cabernet Franc + 5% Petit Verdot",
+          "region": "Bolgheri Superiore DOC",
+          "style": "豐滿、奢華、強勁、波爾多風格",
+          "price": "€150–€300",
+          "tagline": "Bolgheri 經典波爾多混釀",
+          "story": "Lodovico Antinori（Piero 之弟）創立，與 Sassicaia 為鄰，採用完整波爾多五大品種，現由 Frescobaldi 家族經營。",
+          "color": "#16886A",
+          "colorEnd": "#1FA682",
+          "spectrum": 88
+        },
+        {
+          "name": "Masseto",
+          "shortName": "Masseto",
+          "firstVintage": "1986",
+          "estate": "Masseto Estate（原 Ornellaia 旗下）",
+          "blend": "100% Merlot",
+          "region": "Toscana IGT（Bolgheri 內 7 ha 黏土）",
+          "style": "極致濃郁、天鵝絨般質地、頂級 Merlot",
+          "price": "€500–€1,000+",
+          "tagline": "義大利的 Petrus",
+          "story": "Ornellaia 莊園內一塊獨特藍灰黏土地塊（類似 Pomerol），單獨釀造為 100% Merlot 旗艦。2012 年母酒莊更名為「Ornellaia e Masseto」並轉為有機種植，約 2014 年起分家獨立營運，2019 年深埋藍黏土下的專屬重力流酒廠落成。",
+          "color": "#6B1A1A",
+          "colorEnd": "#8B2A2A",
+          "spectrum": 96
+        }
+      ],
+      "insight": "Super Tuscan 的真正革命不在「加 Cabernet」，而在<strong>挑戰 DOCG 法規桎梏 → 創造 IGT 等級 → 推動 Bolgheri DOC 誕生</strong>。1992 年「Goria 法」承認 IGT 後，這些酒款從「叛逆 Vino da Tavola」變為合法且價格屢創新高。"
     },
     {
       "type": "content",
       "title": "🍽️ 餐酒搭配",
       "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Sangiovese的高酸度讓它成為義大利料理的天生伴侶。從日常Chianti搭配番茄麵，到頂級Brunello配白松露，托斯卡納的葡萄酒與料理緊密交融。</p><div class=\"food-pairing\"><div class=\"pairing-card\"><h4>🥩 Bistecca alla Fiorentina</h4><p>佛羅倫斯T骨牛排（Chianina牛 1.5kg+，半生熟）<br>🍷 配：<strong>Chianti Classico Riserva / Gran Selezione</strong><br>高酸單寧精準切入油脂，礦物感提升肉香</p></div><div class=\"pairing-card\"><h4>🍝 Pappardelle al Cinghiale</h4><p>野豬肉醬寬扁麵，托斯卡納森林傳統料理<br>🍷 配：<strong>Brunello di Montalcino</strong><br>強勁單寧匹配野味濃郁，複雜度相互共鳴</p></div><div class=\"pairing-card\"><h4>🧀 Pecorino Toscano</h4><p>托斯卡納羊奶起司（新鮮款或陳年款）<br>🍷 配：<strong>Vino Nobile / Vernaccia di San Gimignano</strong><br>礦物感與起司鮮味相輔相成，酸度解膩</p></div><div class=\"pairing-card\"><h4>🍄 白松露料理</h4><p>Risotto al Tartufo Bianco / Tagliolini con Tartufo<br>🍷 配：<strong>Brunello Riserva / 頂級Super Tuscan</strong><br>陳年複雜香氣共鳴白松露的神祕土地氣息</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍯 Vin Santo — 托斯卡納聖酒（IWS 官方教材）",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">托斯卡納最具代表性的風乾甜酒（passito）—— <span class=\"intro-highlight\">源自中世紀，以madre、caratelli與不控溫的vinsantaia，經年累月醞釀而成</span></p></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍇 品種</strong><p>主要為<strong>Trebbiano Toscano</strong>（酸度）與<strong>Malvasia Bianca Lunga</strong>（酒體、質地與香氣）。罕見的粉紅版<strong>Occhio di Pernice</strong>（鷓鴣之眼）以Sangiovese為主。名稱由來最常見說法：傳統上於聖週（Holy Week）壓榨發酵。</p></div><div class=\"orvieto-card\"><strong>☀️ 風乾（Appassimento）</strong><p>健康成熟的葡萄懸掛於屋樑或平鋪在草蓆／竹架（graticci）上，於通風閣樓風乾2-6個月（通常到12月至隔年3月），可用風扇加速；托斯卡納氣候通常不利貴腐菌發展。</p></div><div class=\"orvieto-card\"><strong>🛢️ Caratelli 與 Madre</strong><p>壓榨後的濃稠糖汁放入<strong>caratelli</strong>小桶（30-200升，最常見50升；栗木、橡木、刺槐、杜松或櫻桃木），只裝4/5滿。置於不控溫的<strong>vinsantaia</strong>，隨季節溫度停止又重啟，進行長時間氧化式發酵。桶底留下的酒渣沉積<strong>madre</strong>（母酒）用來啟動下一批發酵，品質決定成品風格。最低陳年通常2-3年，好酒常陳4-5年甚至十年，體積會減少1/3至1/2。</p></div><div class=\"orvieto-card\"><strong>🍷 風格與搭配</strong><p>甜度從secco（不甜，最少見）、abboccato、amabile到dolce；金黃至深琥珀色，帶堅果、蜂蜜、乾草、乾果、甘草與香料的氧化風味。不甜款作開胃酒，甜款配藍紋或硬質起司、杏仁餅<strong>cantucci</strong>，也是絕佳的「冥想之酒」（vino da meditazione）。</p></div></div></div><div class=\"terroir-key-point\"><h4>📜 四個 Vin Santo 專屬 DOC（常考）</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Vin Santo del Chianti</strong></div><div class=\"kp-box\"><strong>Vin Santo del Chianti Classico</strong></div><div class=\"kp-box\"><strong>Vin Santo di Carmignano</strong></div><div class=\"kp-box\"><strong>Vin Santo di Montepulciano</strong></div></div><p>⚠️ 別與Trentino的<strong>Vino Santo</strong>混淆：後者以Nosiola釀造，一定是甜型，通常更甜、酒精略低。</p></div>"
     },
     {
       "type": "content",
@@ -126,7 +288,9 @@
           "title": "Brunello vs Vino Nobile——托斯卡尼姊妹",
           "intro": "同為 Sangiovese 為主的托斯卡尼 DOCG、相距僅 30 km，但風格與市場定位截然不同。Brunello 國際聞名、Vino Nobile 性價比之選。",
           "left": {
-            "name": "Brunello di Montalcino DOCG", "region": "Toscana / Montalcino", "color": "#7B1F2A",
+            "name": "Brunello di Montalcino DOCG",
+            "region": "Toscana / Montalcino",
+            "color": "#7B1F2A",
             "grape": "100% Sangiovese Grosso（BBS-11 無性系）",
             "soil": "多元——Galestro 片岩泥灰、Alberese 石灰岩、海岸黏土",
             "climate": "溫暖乾燥、海岸影響、Mt. Amiata 屏障",
@@ -138,7 +302,9 @@
             "producers": "Biondi-Santi、Soldera Case Basse、Salvioni、Poggio di Sotto"
           },
           "right": {
-            "name": "Vino Nobile di Montepulciano DOCG", "region": "Toscana / Montepulciano", "color": "#A8324A",
+            "name": "Vino Nobile di Montepulciano DOCG",
+            "region": "Toscana / Montepulciano",
+            "color": "#A8324A",
             "grape": "70%+ Sangiovese（當地稱 Prugnolo Gentile）+ 可加 Canaiolo、Colorino 等",
             "soil": "中新世海洋沉積（黏土、砂、石灰）",
             "climate": "較內陸、夏熱冬冷",
@@ -175,10 +341,14 @@
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Sangiovese 是托斯卡納的靈魂品種，擁有多種地方變種",
+        "✓ Sangiovese 是托斯卡納的靈魂品種（佔種植面積 60%+），地方同義詞：Brunello、Morellino、Prugnolo Gentile、Sangioveto",
         "✓ Brunello = 最強勁，Chianti Classico = 最經典",
-        "✓ Chianti Classico 2014年新增 Gran Selezione 最高等級",
+        "✓ Chianti Classico 1996 年獨立為 DOCG、2006 年禁用白葡萄，2014 年新增 Gran Selezione 最高等級；Chianti DOCG 有 7 個子產區",
         "✓ 超級托斯卡納打破傳統創造新風格，Sassicaia（1968）開創先河",
+        "✓ 1716 年 Cosimo III de' Medici 劃定 Chianti、Pomino、Carmignano、Val d'Arno di Sopra，是世界最早的官方產區之一",
+        "✓ Brunello di Montalcino 100% Sangiovese、最少陳年 4 年（第 5 年上市）；Vino Nobile 最低 70% Prugnolo Gentile、24 個月",
+        "✓ Carmignano 傳統上須混 10-20% Cabernet；Vernaccia di San Gimignano 是義大利第一個 DOC、托斯卡納唯一白酒 DOCG",
+        "✓ Vin Santo 以 Trebbiano Toscano + Malvasia Bianca Lunga 風乾釀造，在 caratelli 中以 madre 長期氧化陳年；有 4 個專屬 DOC",
         "✓ Bolgheri 海岸產區崛起，成為國際品種理想家園",
         "✓ 傳統家族酒莊（Antinori / Frescobaldi）與創新精神並存",
         "✓ Sangiovese 高酸度使其成為義大利料理搭配之王"
@@ -206,19 +376,19 @@
           "options": [
             "A. 2 年",
             "B. 3 年",
-            "C. 5 年",
+            "C. 4 年",
             "D. 7 年"
           ],
           "correct": 2,
-          "explanation": "Brunello di Montalcino 法規要求最少陳年 5 年（含 2 年橡木桶），是義大利陳年要求最長的 DOCG 之一。"
+          "explanation": "IWS：Brunello di Montalcino 最少陳年 4 年（其中至少 2 年木桶），採收後第 5 年的 1 月 1 日才能上市；Riserva 最少 5 年（第 6 年上市），是義大利最長的最低陳年要求。"
         },
         {
           "type": "multiple",
           "question": "超級托斯卡納（Super Tuscan）的主要特點包括哪些？（多選）",
           "options": [
             "A. 使用 Cabernet Sauvignon 或 Merlot 等非傳統品種",
-            "B. 最初被分類為 IGT 等級",
-            "C. 誕生於 1970-80 年代的創新嘗試",
+            "B. 最初只能標示 Vino da Tavola，1992 年後多改標 Toscana IGT",
+            "C. 誕生於 1960 年代末至 1970 年代的創新嘗試",
             "D. 法規規定必須使用 100% Sangiovese"
           ],
           "correct": [
@@ -255,6 +425,70 @@
             3
           ],
           "explanation": "Brunello di Montalcino、Chianti Classico、Vino Nobile di Montepulciano 都是托斯卡納的 DOCG 紅酒。Barolo 是皮埃蒙特的 DOCG。"
+        },
+        {
+          "type": "single",
+          "question": "以下哪一個「不是」Sangiovese 的同義詞？",
+          "options": [
+            "A. Brunello",
+            "B. Morellino",
+            "C. Prugnolo Gentile",
+            "D. Colorino"
+          ],
+          "correct": 3,
+          "explanation": "Colorino 是獨立的上色品種。Brunello（Montalcino）、Morellino（Scansano）、Prugnolo Gentile（Montepulciano）、Sangioveto（Chianti Classico）都是 Sangiovese 的地方名稱。"
+        },
+        {
+          "type": "single",
+          "question": "20 世紀下半葉讓 Carmignano 重獲獨立產區地位（1975 DOC、1990 DOCG）的關鍵人物是？",
+          "options": [
+            "A. Barone Bettino Ricasoli",
+            "B. Count Ugo Contini Bonacossi",
+            "C. Giacomo Tachis",
+            "D. Marchese Piero Antinori"
+          ],
+          "correct": 1,
+          "explanation": "Tenuta di Capezzana 的 Count Ugo Contini Bonacossi 推動 Carmignano 脫離 Chianti Montalbano，1975 年成為 DOC、1990 年升格 DOCG。"
+        },
+        {
+          "type": "single",
+          "question": "Chianti DOCG 七個子產區中，最晚（1997 年）加入的是？",
+          "options": [
+            "A. Montalbano",
+            "B. Colli Aretini",
+            "C. Colline Pisane",
+            "D. Montespertoli"
+          ],
+          "correct": 3,
+          "explanation": "Montespertoli 位於 Empoli 南方，1997 年才成為子產區；其餘子產區皆於 1932 年設立。"
+        },
+        {
+          "type": "multiple",
+          "question": "以下哪些是專門生產 Vin Santo 的 DOC？（多選）",
+          "options": [
+            "A. Vin Santo del Chianti Classico",
+            "B. Vin Santo di Montepulciano",
+            "C. Vin Santo di Montalcino",
+            "D. Vin Santo di Carmignano"
+          ],
+          "correct": [
+            0,
+            1,
+            3
+          ],
+          "explanation": "托斯卡納四個 Vin Santo 專屬 DOC：Vin Santo del Chianti、Vin Santo del Chianti Classico、Vin Santo di Carmignano、Vin Santo di Montepulciano。Montalcino 的傳統甜酒是 Moscadello。"
+        },
+        {
+          "type": "single",
+          "question": "「Coltura promiscua」指的是什麼？",
+          "options": [
+            "A. 分益佃農制",
+            "B. 托斯卡納傳統整枝系統",
+            "C. 混合作物栽培",
+            "D. Vin Santo 的發酵母酒"
+          ],
+          "correct": 2,
+          "explanation": "Coltura promiscua 是混合作物栽培：葡萄攀附在果樹上，行間種植穀物或放牧。分益佃農制是 Mezzadria，Vin Santo 的母酒則稱 madre。"
         }
       ]
     }

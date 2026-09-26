@@ -1,14 +1,14 @@
 <template>
   <div class="super-tuscan-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🌟 Super Tuscan 進化史' }}</h2>
+      <h2>{{ slide.title || t('italy.slides.superTuscan.defaultTitle') }}</h2>
       <p v-if="slide.description" class="slide-desc">{{ slide.description }}</p>
-      <p v-else class="slide-desc">從 1968 年 Sassicaia 突破傳統，到 2013 年 Bolgheri Sassicaia DOC，Super Tuscan 走過 45 年的法律與品味革命。</p>
+      <p v-else class="slide-desc">{{ t('italy.slides.superTuscan.defaultDesc') }}</p>
     </div>
 
     <!-- 法律演進時間軸 -->
     <div class="legal-timeline">
-      <h3>⚖️ 法律演進關鍵節點</h3>
+      <h3>{{ t('italy.slides.superTuscan.timelineTitle') }}</h3>
       <div class="timeline">
         <div v-for="(ev, i) in timeline" :key="i" class="timeline-item">
           <div class="timeline-year">{{ ev.year }}</div>
@@ -22,7 +22,7 @@
 
     <!-- 五大旗艦酒 Tab -->
     <div class="wines-section">
-      <h3>🍷 五大旗艦酒款</h3>
+      <h3>{{ t('italy.slides.superTuscan.winesTitle') }}</h3>
       <div class="wine-tabs">
         <button
           v-for="(w, i) in wines"
@@ -47,31 +47,31 @@
         </div>
         <div class="wine-body">
           <div class="wine-row">
-            <div class="row-label">🏛 酒莊</div>
+            <div class="row-label">{{ t('italy.slides.superTuscan.labels.estate') }}</div>
             <div class="row-value">{{ activeWine.estate }}</div>
           </div>
           <div class="wine-row">
-            <div class="row-label">📅 首年份</div>
+            <div class="row-label">{{ t('italy.slides.superTuscan.labels.firstVintage') }}</div>
             <div class="row-value">{{ activeWine.firstVintage }}</div>
           </div>
           <div class="wine-row">
-            <div class="row-label">🍇 混釀</div>
+            <div class="row-label">{{ t('italy.slides.superTuscan.labels.blend') }}</div>
             <div class="row-value">{{ activeWine.blend }}</div>
           </div>
           <div class="wine-row">
-            <div class="row-label">📍 產區</div>
+            <div class="row-label">{{ t('italy.slides.superTuscan.labels.region') }}</div>
             <div class="row-value">{{ activeWine.region }}</div>
           </div>
           <div class="wine-row">
-            <div class="row-label">🎯 風格</div>
+            <div class="row-label">{{ t('italy.slides.superTuscan.labels.style') }}</div>
             <div class="row-value">{{ activeWine.style }}</div>
           </div>
           <div class="wine-row">
-            <div class="row-label">💰 價格</div>
+            <div class="row-label">{{ t('italy.slides.superTuscan.labels.price') }}</div>
             <div class="row-value">{{ activeWine.price }}</div>
           </div>
           <div class="wine-story">
-            <strong>📖 故事：</strong>{{ activeWine.story }}
+            <strong>{{ t('italy.slides.superTuscan.labels.story') }}</strong>{{ activeWine.story }}
           </div>
         </div>
       </div>
@@ -79,11 +79,11 @@
 
     <!-- 風格定位圖 -->
     <div class="style-map">
-      <h3>🗺️ 風格定位（Sangiovese 主導 ↔ Bordeaux 國際派）</h3>
+      <h3>{{ t('italy.slides.superTuscan.styleMapTitle') }}</h3>
       <div class="spectrum">
         <div class="spectrum-axis">
-          <span class="axis-left">🇮🇹 Sangiovese 傳統</span>
-          <span class="axis-right">🇫🇷 Bordeaux 國際</span>
+          <span class="axis-left">{{ t('italy.slides.superTuscan.axisLeft') }}</span>
+          <span class="axis-right">{{ t('italy.slides.superTuscan.axisRight') }}</span>
         </div>
         <div class="spectrum-track">
           <div
@@ -102,29 +102,33 @@
     </div>
 
     <div class="key-insight">
-      <h4>💡 關鍵洞察</h4>
-      <p>Super Tuscan 的真正革命不在「加 Cabernet」，而在<strong>挑戰 DOCG 法規桎梏 → 創造 IGT 等級 → 推動 Bolgheri DOC 誕生</strong>。1992 年「Goria 法」承認 IGT 後，這些酒款從「叛逆 Vino da Tavola」變為合法且價格屢創新高。</p>
+      <h4>{{ t('italy.slides.superTuscan.insightTitle') }}</h4>
+      <p v-html="insight"></p>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
   slide: { type: Object, default: () => ({}) }
 })
 
+const { t } = useI18n()
+
 const activeIdx = ref(0)
 
-const timeline = [
+// 預設值（zh-TW）；lesson JSON 若提供 slide.timeline / slide.wines / slide.insight（含 locale 翻譯覆蓋）則優先使用
+const defaultTimeline = [
   { year: '1968', title: 'Sassicaia 首釀', desc: 'Marchese Incisa della Rocchetta 在 Bolgheri 海岸種植 Cabernet Sauvignon，開啟超托時代。', color: '#8e44ad' },
   { year: '1971', title: 'Tignanello 誕生', desc: 'Antinori 家族首次在 Sangiovese 中加入 Cabernet 並使用 Barrique 小橡木桶，違反 Chianti 法規。', color: '#c0392b' },
   { year: '1978', title: 'Solaia 問世', desc: '以 Cabernet 主導（75%）+ Sangiovese 配角，更激進的國際化嘗試。', color: '#d4af37' },
   { year: '1985-86', title: 'Ornellaia / Masseto', desc: 'Lodovico Antinori 在 Bolgheri 推出波爾多風格旗艦；Masseto 100% Merlot 確立「義大利的 Petrus」地位。', color: '#16a085' },
   { year: '1992', title: 'Goria 法案 → IGT 等級', desc: '農業部長 Giovanni Goria 推動法律改革，新增 IGT（Indicazione Geografica Tipica）等級，承認超托合法地位。', color: '#3498db' },
-  { year: '1994', title: 'Bolgheri DOC', desc: '專為 Cabernet/Merlot 等國際品種設立的 DOC，超托從「叛逆」變為「制度內精品」。', color: '#27ae60' },
-  { year: '2013', title: 'Bolgheri Sassicaia DOC', desc: '全義大利唯一單一酒款專屬 DOC，Sassicaia 從 IGT 升格為自有 DOC。', color: '#e67e22' }
+  { year: '1994', title: 'Bolgheri DOC 納入紅酒', desc: 'Bolgheri DOC（1983 年成立時僅限白酒與粉紅酒）修法納入以 Cabernet/Merlot 為主的紅酒，Sassicaia 同時成為其子產區，超托從「叛逆」變為「制度內精品」。', color: '#27ae60' },
+  { year: '2013', title: 'Bolgheri Sassicaia DOC', desc: '全義大利唯一單一酒莊、單一酒款專屬 DOC，Sassicaia 從 Bolgheri 子產區獨立為自有 DOC。', color: '#e67e22' }
 ]
 
 const defaultWines = [
@@ -198,12 +202,21 @@ const defaultWines = [
     style: '極致濃郁、天鵝絨般質地、頂級 Merlot',
     price: '€500–€1,000+',
     tagline: '義大利的 Petrus',
-    story: 'Ornellaia 莊園內一塊獨特藍灰黏土地塊（類似 Pomerol），單獨釀造為 100% Merlot 旗艦。2012 年起獨立成為自有酒莊。',
+    story: 'Ornellaia 莊園內一塊獨特藍灰黏土地塊（類似 Pomerol），單獨釀造為 100% Merlot 旗艦。2012 年母酒莊更名為「Ornellaia e Masseto」並轉為有機種植，約 2014 年起分家獨立營運，2019 年深埋藍黏土下的專屬重力流酒廠落成。',
     color: '#6B1A1A',
     colorEnd: '#8B2A2A',
     spectrum: 96
   }
 ]
+
+const defaultInsight = 'Super Tuscan 的真正革命不在「加 Cabernet」，而在<strong>挑戰 DOCG 法規桎梏 → 創造 IGT 等級 → 推動 Bolgheri DOC 誕生</strong>。1992 年「Goria 法」承認 IGT 後，這些酒款從「叛逆 Vino da Tavola」變為合法且價格屢創新高。'
+
+const timeline = computed(() => {
+  if (Array.isArray(props.slide?.timeline) && props.slide.timeline.length) return props.slide.timeline
+  return defaultTimeline
+})
+
+const insight = computed(() => props.slide?.insight || defaultInsight)
 
 const wines = computed(() => {
   if (Array.isArray(props.slide?.wines) && props.slide.wines.length) return props.slide.wines
