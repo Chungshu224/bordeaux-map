@@ -199,9 +199,9 @@ const LAYERS = [
     zones: {
       north:   { icon:'🪨', color:'#8D6E63',
         title:'黏土・石灰岩・砂質土', subtitle:'Barolo的靈魂土壤',
-        summary:'Piemonte的Barolo/Barbaresco依賴兩種不同地質時期的土壤：Tortonian（較年輕，黏土為主，酒體豐厚）和Helvetian（較古老，砂質石灰岩，芳香細膩）。這兩種土壤的差異造就了Barolo不同村莊的風格差異。',
+        summary:'Piemonte的Barolo/Barbaresco依賴兩種不同地質時期的土壤：Tortonian（較年輕，藍灰泥灰岩，芳香細膩）和Helvetian（較古老，砂岩為主，結構強勁）。這兩種土壤的差異造就了Barolo不同村莊的風格差異。',
         points:['Langhe（Barolo）: Tortonian藍灰色黏土 + Helvetian砂質石灰岩','Veneto: 火山玄武岩 + 石灰岩（Soave） + 沖積土（Bardolino）','Alto Adige: 花崗岩 + 石英岩片岩','Friuli: 灰色黏板岩（Ponca）= 獨特礦物感','冰河遺留的礫石和沙質土'],
-        regions:['Barolo（Tortonian黏土）','Barbaresco（砂質石灰岩）','Amarone（石灰岩+玄武岩）','Soave（火山玄武岩）'] },
+        regions:['Barolo（Tortonian泥灰岩＋Helvetian砂岩）','Barbaresco（鈣質泥灰岩）','Amarone（石灰岩+玄武岩）','Soave（火山玄武岩）'] },
       center:  { icon:'🏺', color:'#A1887F',
         title:'Galestro・Alberese・凝灰岩', subtitle:'托斯卡納的獨特地質',
         summary:'Galestro（灰泥板岩）是托斯卡納最典型的土壤——呈片狀、易碎、排水極佳，讓Sangiovese的根系深扎。Alberese是緻密灰色石灰岩黏土，提供結構和礦物感。這兩者的混合成就了Chianti Classico的骨幹。',

@@ -110,7 +110,7 @@ const DEFAULT_DOCG_LIST = [
     aging: '最少 38 個月（含 18 個月木桶）',
     style: '力量型、高單寧、高酸、酒體飽滿',
     location: 'Alba 西南方 Langhe 丘陵，11 個市鎮',
-    desc: '被譽為「酒中之王」，最長陳年潛力可達 30 年以上。Serralunga d\'Alba 土壤偏 Tortoniano 黏土，風格更強勁；La Morra 偏 Helvetiano 砂質，更優雅。',
+    desc: '被譽為「酒中之王」，最長陳年潛力可達 30 年以上。Serralunga d\'Alba 土壤偏 Helvetiano 砂岩，風格更強勁；La Morra 偏 Tortoniano 泥灰岩，更優雅芬芳。',
     pairing: '白松露燉飯、Brasato 燉牛肉、野味、老起司',
     center: [7.923, 44.610],
     zoom: 12,
