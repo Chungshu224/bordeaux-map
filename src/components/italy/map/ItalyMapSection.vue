@@ -323,7 +323,14 @@ const CLIMATE_INDICATORS = [
   }
 ]
 
-const GOLDEN_VINTAGES = new Set([1982, 1989, 1990, 2000, 2003, 2005, 2009, 2010, 2015, 2016, 2019, 2020])
+// 黃金年份依大區而異（例如 2003 對波爾多是好年，對 Barolo 卻是過熱的困難年份），
+// 只列出有公認評價的大區；未列出的大區不顯示標記
+const GOLDEN_VINTAGES_BY_REGION = {
+  // Barolo / Barbaresco
+  piedmont: new Set([1982, 1985, 1989, 1990, 1996, 1999, 2001, 2004, 2006, 2010, 2013, 2016, 2019]),
+  // Brunello di Montalcino / Chianti Classico
+  tuscany: new Set([1985, 1990, 1997, 2001, 2004, 2006, 2010, 2015, 2016, 2019])
+}
 
 const currentIndicatorConfig = computed(() =>
   CLIMATE_INDICATORS.find((i) => i.id === climateIndicator.value)
@@ -341,11 +348,16 @@ const currentYearAvgArr = computed(() => {
   return climateYearAvg.value
 })
 
-const isGoldenVintage = computed(() => GOLDEN_VINTAGES.has(climateYear.value))
+const isGoldenVintage = computed(() =>
+  !!GOLDEN_VINTAGES_BY_REGION[props.region.id]?.has(climateYear.value)
+)
 
 const climateCurrentAocLabel = computed(() => {
   if (!activeAOCInfo.value?.name) return ''
-  return activeAOCInfo.value.name
+  // 該產區無氣候資料時，下方數值會退回全義大利平均，標籤要一併說明
+  const arr = climateData.value?.[activeAOCInfo.value.id]?.[currentIndicatorConfig.value?.dataKey]
+  const hasData = Array.isArray(arr) && arr.some((v) => v != null)
+  return hasData ? activeAOCInfo.value.name : `${activeAOCInfo.value.name}（無資料・顯示全義大利平均）`
 })
 
 const currentYearValue = computed(() => {
@@ -432,14 +444,14 @@ function clearAllAocLayers() {
 const ITALY_LITHO_CODES = {
   A1:  { zh: '石灰岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '排水性佳、礦物質豐富，典型於托斯卡納（基安帝）、巴羅洛產區，賦予葡萄酒清爽酸度與石灰質礦感。' },
   A2:  { zh: '白雲岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '礦物感強且偏鹼性，常見於特倫蒂諾、上阿迪傑高山產區，有助保留葡萄酒的清爽活力。' },
-  A3:  { zh: '泥灰石灰岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '石灰岩與泥灰岩混合，兼具排水與保水性，是巴羅洛 Tortonian 地層的典型，孕育內比歐露的豐富單寧。' },
+  A3:  { zh: '泥灰石灰岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '石灰岩與泥灰岩混合，兼具排水與保水性，孕育結構紮實、單寧豐富的酒款。' },
   A4:  { zh: '燧石岩（碧玉岩）', cat: 'A：固結沉積岩', icon: '🪨', wine: '矽質含量高、排水極佳，有助提升葡萄酒的礦石香氣與清脆感。' },
   A5:  { zh: '石英砂岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '砂質地質、保溫性佳，常見於義大利中部地區。' },
   A6:  { zh: '矽藻岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '微孔結構，保水與排水並兼，有利於根系深扎。' },
-  A7:  { zh: '泥灰岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '黏土與石灰岩混合，典型的巴羅洛 Helvetian 土壤層，賦予內比歐露優雅花香與豐厚結構。' },
+  A7:  { zh: '泥灰岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '黏土與石灰質混合，保水性佳。Barolo 西側（La Morra、Barolo 村）與 Barbaresco 的 Tortonian 泥灰岩即屬此類，賦予內比歐露優雅花香與細膩單寧。' },
   A8:  { zh: '礫岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '礫石含量高、排水性極佳，常見於威尼托阿馬羅內產區，有利葡萄達到高濃縮度。' },
   A9:  { zh: '砂岩與砂土', cat: 'A：固結沉積岩', icon: '🪨', wine: '質地疏鬆、排水性佳，釀造出的酒款通常口感清爽輕盈、芬芳易飲。' },
-  A10: { zh: '泥岩砂岩複合層', cat: 'A：固結沉積岩', icon: '🪨', wine: '沉積混合地層，廣泛分布於亞平寧山脈，是義大利中部許多重要產區的基底地質。' },
+  A10: { zh: '泥岩砂岩複合層', cat: 'A：固結沉積岩', icon: '🪨', wine: '沉積混合地層，廣泛分布於亞平寧山脈，是義大利中部許多重要產區的基底地質。在 Barolo 東側（Serralunga、Monforte 一帶）則是較古老的砂岩泥岩交互層，造就單寧強勁、耐久陳的酒款。' },
   A11: { zh: '灰岩砂岩複合層', cat: 'A：固結沉積岩', icon: '🪨', wine: '石灰與砂岩交互層，同時提供礦物感與良好排水。' },
   A12: { zh: '蒸發岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '含鹽份礦物，部分地區賦予葡萄酒獨特鹹鮮礦物感。' },
   A13: { zh: '殘積岩', cat: 'A：固結沉積岩', icon: '🪨', wine: '原地風化殘留的岩石，特性取決於母岩。' },
@@ -521,7 +533,8 @@ async function loadGeologyLayer() {
       type: 'raster',
       tiles: [
         '/ispra/arcgis/services/servizi/litologica/MapServer/WMSServer' +
-        '?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=0' +
+        // WMS 圖層 1 = Litologica（0 是 1:100K 圖幅索引格網，與 REST 的編號相反）
+        '?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=1' +
         '&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256' +
         '&SRS=EPSG:3857&FORMAT=image/png&TRANSPARENT=TRUE&STYLES='
       ],

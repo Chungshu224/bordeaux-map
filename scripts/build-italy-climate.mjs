@@ -14,6 +14,8 @@
  *   node scripts/build-italy-climate.mjs --region=tuscany
  *   node scripts/build-italy-climate.mjs --limit=40
  *   node scripts/build-italy-climate.mjs --delay=1200
+ *   node scripts/build-italy-climate.mjs --merge --region=piedmont
+ *     （--merge：保留現有 JSON 中已有資料的產區，只補抓全為 null 的產區，再重算統計值）
  */
 
 import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'fs'
@@ -37,6 +39,7 @@ const DRY_RUN = args.includes('--dry-run')
 const REGION_FILTER = (args.find((a) => a.startsWith('--region=')) || '').split('=')[1] || ''
 const LIMIT = Number((args.find((a) => a.startsWith('--limit=')) || '').split('=')[1] || 0)
 const REQUEST_DELAY_MS = Number((args.find((a) => a.startsWith('--delay=')) || '').split('=')[1] || 1200)
+const MERGE = args.includes('--merge')
 
 proj4.defs(
   'EPSG:3003',
@@ -384,13 +387,23 @@ async function main() {
     return
   }
 
-  const aocs = {}
+  const existing = MERGE && existsSync(outputPath)
+    ? JSON.parse(readFileSync(outputPath, 'utf-8')).aocs || {}
+    : {}
+  const hasData = (d) => Array.isArray(d?.temps) && d.temps.some((v) => v != null)
+
+  const aocs = { ...existing }
   let ok = 0
   let fail = 0
+  let kept = 0
 
   for (let i = 0; i < work.length; i++) {
     const w = work[i]
     const [lng, lat] = w.centroid
+    if (MERGE && hasData(existing[w.item.id])) {
+      kept += 1
+      continue
+    }
     process.stdout.write(`[${i + 1}/${work.length}] ${w.item.id} ... `)
 
     const climate = await fetchSummerClimate(lat, lng)
@@ -453,7 +466,7 @@ async function main() {
   writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf-8')
 
   console.log('done')
-  console.log(`success: ${ok}, fail: ${fail}`)
+  console.log(`success: ${ok}, fail: ${fail}${MERGE ? `, kept: ${kept}` : ''}`)
   console.log(`output: public/data/italy-climate.json`) 
 }
 
