@@ -2,7 +2,7 @@
   <div class="docg-map-slide">
     <div class="slide-header">
       <h2>{{ slide.title || t('italy.slides.tuscanyMap.defaultTitle') }}</h2>
-      <p class="slide-subtitle">{{ t('italy.slides.tuscanyMap.subtitle') }}</p>
+      <p class="slide-subtitle">{{ t('italy.slides.mapCommon.subtitle') }}</p>
     </div>
 
     <!-- 分類按鈕列 -->
@@ -27,14 +27,14 @@
           @click="selectZone(z.id)"
         >{{ z.emoji }} {{ z.shortName }}</button>
       </div>
-      <button v-if="selected" class="reset-btn" @click="resetView">{{ t('italy.slides.tuscanyMap.reset') }}</button>
+      <button v-if="selected" class="reset-btn" @click="resetView">{{ t('italy.slides.mapCommon.reset') }}</button>
     </div>
 
     <!-- 地圖 + 資訊 -->
     <div class="map-info-row">
       <div class="map-wrapper">
         <div ref="mapContainer" class="mapbox-container"></div>
-        <div v-if="loading" class="map-loading">{{ t('italy.slides.tuscanyMap.loading') }}</div>
+        <div v-if="loading" class="map-loading">{{ t('italy.slides.mapCommon.loading') }}</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
           <div class="legend-row"><span class="legend-dot tier-s"></span>{{ t('italy.slides.tuscanyMap.legend.s') }}</div>
@@ -58,15 +58,15 @@
         </div>
         <div class="info-desc">{{ selectedInfo.desc }}</div>
         <div class="info-pair" v-if="selectedInfo.pairing">
-          <span class="pair-label">{{ t('italy.slides.tuscanyMap.pairing') }}</span>{{ selectedInfo.pairing }}
+          <span class="pair-label">{{ t('italy.slides.mapCommon.pairing') }}</span>{{ selectedInfo.pairing }}
         </div>
         <div class="info-price" v-if="selectedInfo.price">
-          <span class="price-label">{{ t('italy.slides.tuscanyMap.price') }}</span>{{ selectedInfo.price }}
+          <span class="price-label">{{ t('italy.slides.mapCommon.price') }}</span>{{ selectedInfo.price }}
         </div>
       </div>
       <div class="info-panel info-empty" v-else>
         <div class="empty-icon">👆</div>
-        <p>{{ t('italy.slides.tuscanyMap.emptyLine1') }}<br>{{ t('italy.slides.tuscanyMap.emptyLine2') }}</p>
+        <p>{{ t('italy.slides.mapCommon.emptyLine1') }}<br>{{ t('italy.slides.mapCommon.emptyLine2') }}</p>
         <div class="empty-hint">
           <div class="hint-row" v-for="z in allZones" :key="z.id">
             <span class="hint-dot" :class="`tier-${z.tier}`"></span>
@@ -91,7 +91,7 @@ const { t } = useI18n()
 // ── 產區資料 ─────────────────────────────────────────────────
 // 此元件同時用於 L1M2L2、L2M6L2、L3M3L2，因此文字（名稱、細節、描述、配餐、價格）
 // 放在 locales/*/italy.js 的 italy.slides.tuscanyMap.zones.<id>，這裡只保留地理與樣式資料。
-// rows：資訊面板要顯示的欄位，label 取自 italy.slides.tuscanyMap.labels.<key>
+// rows：資訊面板要顯示的欄位，label 取自 italy.slides.mapCommon.labels.<key>
 const ZONES = [
   {
     id: 'brunello',
@@ -182,7 +182,7 @@ const allZones = computed(() => ZONES.map(z => {
     tierLabel: t(`${base}.tierLabel`),
     details: z.rows.map(key => ({
       key,
-      label: t(`italy.slides.tuscanyMap.labels.${key}`),
+      label: t(`italy.slides.mapCommon.labels.${key}`),
       value: t(`${base}.${key}`)
     })),
     desc: t(`${base}.desc`),
@@ -304,7 +304,7 @@ function resetView () {
 function initMap () {
   if (!mapContainer.value) return
   const token = import.meta.env.VITE_MAPBOX_TOKEN
-  if (!token) { mapError.value = t('italy.slides.tuscanyMap.noToken'); loading.value = false; return }
+  if (!token) { mapError.value = t('italy.slides.mapCommon.noToken'); loading.value = false; return }
   mapboxgl.accessToken = token
   map = new mapboxgl.Map({
     container: mapContainer.value,
@@ -316,7 +316,7 @@ function initMap () {
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
   map.on('load', async () => { await highlightAll(); loading.value = false })
-  map.on('error', e => { mapError.value = t('italy.slides.tuscanyMap.mapError', { msg: e.error?.message || t('italy.slides.tuscanyMap.unknownError') }); loading.value = false })
+  map.on('error', e => { mapError.value = t('italy.slides.mapCommon.mapError', { msg: e.error?.message || t('italy.slides.mapCommon.unknownError') }); loading.value = false })
 }
 
 onMounted(async () => { await nextTick(); initMap() })

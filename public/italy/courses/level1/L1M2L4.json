@@ -1,4 +1,4 @@
-﻿{
+{
   "lessonId": "L1M2L4",
   "title": "Sicily 西西里島 - 地中海瑰寶",
   "quiz": [
@@ -56,27 +56,42 @@
     {
       "type": "content",
       "title": "🏝️ 產區概況",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利最大的島嶼，地中海中心，北以Messina海峽與本土相望。<span class=\"highlight\">義大利產量第一大區</span>（約105,000公頃），Etna火山、300天日照、多元移民文化共同造就地中海最豐富的品種寶庫。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>地中海最大島嶼，北部Etna火山（3,329m），南端距突尼西亞140km，首府巴勒莫（Palermo）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園規模</strong><br>約105,000公頃，義大利產量最大島，年均日照300天+，地中海氣候炎熱乾燥，海風調節</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>法定認證</strong><br>1 DOCG（Cerasuolo di Vittoria）+ 23 DOC，義大利原生品種寶庫，本土品種數十種</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌋</div><div class=\"fact-text\"><strong>火山奇蹟</strong><br>Etna是歐洲最活躍火山，唯一火山土壤DOC，近年被國際評酒界譽為「地中海的勃艮第」</div></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利最大的島嶼，地中海中心，北以Messina海峽與本土相望。<span class=\"highlight\">義大利葡萄園面積最大的大區</span>（約100,000公頃），產量居全義前四，Etna火山、300天日照、多元移民文化共同造就地中海最豐富的品種寶庫。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>地中海最大島嶼，東部Etna火山（海拔3,300m以上），南端距突尼西亞140km，首府巴勒莫（Palermo）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園規模</strong><br>約100,000公頃（250,000英畝），義大利葡萄園面積最大；DOC/DOCG僅佔產量約20%、Terre Siciliane IGT約40%，仍是義大利主要散裝酒產區之一</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>法定認證</strong><br>1 DOCG（Cerasuolo di Vittoria）+ 23 DOC，義大利原生品種寶庫，本土品種數十種</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌋</div><div class=\"fact-text\"><strong>火山奇蹟</strong><br>Etna是歐洲最高的活火山，1968年成為西西里第一個DOC；Pantelleria、Lipari等火山島也各有DOC。Etna近年被譽為「地中海的勃艮第」</div></div></div>"
     },
     {
       "type": "content",
       "title": "🏛️ 歷史與多元文化",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">腓尼基人到希臘人、羅馬帝國到阿拉伯人、諾曼王國到英國商人 —— <span class=\"intro-highlight\">數千年多元文化在Sicily留下深刻葡萄酒印記，造就世界最豐富的島嶼酒文化</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">公元前8世紀</div><div class=\"timeline-content\"><strong>古希臘殖民</strong>：希臘人引入系統化葡萄種植，稱Sicily為「Enotria」（葡萄酒之地），奠定二千年文明基礎，修道院成為技術中心</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">公元前3-5世紀</div><div class=\"timeline-content\"><strong>羅馬帝國</strong>：Sicily成為「羅馬的糧倉與酒窖」，大規模葡萄園開發，葡萄酒出口地中海各地，農業系統高度發展</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">827-1061年</div><div class=\"timeline-content\"><strong>阿拉伯統治</strong>：引入先進灌溉技術和農業創新，保留葡萄種植，對土地管理影響深遠，帶來香料料理文化融合</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1773年至今</div><div class=\"timeline-content\"><strong>Marsala誕生與現代復興</strong>：英國商人John Woodhouse發明Marsala加烈酒，受Nelson海軍青睞；2000年代Etna崛起、精品革命重寫歷史</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">3000年+</div><div class=\"stat-label\">釀酒歷史</div></div><div class=\"stat-box\"><div class=\"stat-number\">1773年</div><div class=\"stat-label\">Marsala誕生</div></div><div class=\"stat-box\"><div class=\"stat-number\">2005年</div><div class=\"stat-label\">Sicily首個DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">#1</div><div class=\"stat-label\">義大利產量大區</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">腓尼基人到希臘人、羅馬帝國到阿拉伯人、諾曼王國到英國商人 —— <span class=\"intro-highlight\">數千年多元文化在Sicily留下深刻葡萄酒印記，造就世界最豐富的島嶼酒文化</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">公元前8世紀</div><div class=\"timeline-content\"><strong>古希臘殖民</strong>：希臘人是最早殖民本島的民族之一，Sicily成為「大希臘」（Magna Graecia）的重鎮，並帶來精緻的葡萄栽培與釀酒技術</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">公元前3世紀起</div><div class=\"timeline-content\"><strong>羅馬帝國</strong>：羅馬人取代希臘人，把Sicily當作「羅馬的糧倉」，主力轉向穀物生產以供應帝國擴張</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">827-1061年</div><div class=\"timeline-content\"><strong>阿拉伯統治</strong>：引入灌溉技術、農業進步，但葡萄種植主要用來生產葡萄乾；隨後的諾曼王朝（11-13世紀）時期Sicily繁榮昌盛</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1770年代至今</div><div class=\"timeline-content\"><strong>Marsala崛起與現代復興</strong>：英國商人John Woodhouse於1770年代發現當地的vino perpetuo，加烈後外銷英國；19世紀為填補歐洲根瘤蚜造成的缺口大量生產散裝酒，1980-90年代轉向品質，2000年代Etna崛起</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">3000年+</div><div class=\"stat-label\">釀酒歷史</div></div><div class=\"stat-box\"><div class=\"stat-number\">1770年代</div><div class=\"stat-label\">Marsala外銷英國</div></div><div class=\"stat-box\"><div class=\"stat-number\">2005年</div><div class=\"stat-label\">Sicily首個DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">#1</div><div class=\"stat-label\">義大利葡萄園面積</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "📜 歷史脈絡與產業現況（IWS 官方教材）",
+      "content": "<div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">古希臘 → 羅馬</div><div class=\"timeline-content\">希臘人帶來精緻的栽培與釀酒技術，Sicily成為Magna Graecia重鎮；羅馬人接手後主力轉向穀物</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">9-13世紀</div><div class=\"timeline-content\">阿拉伯時期（9-11世紀）農業進步，但葡萄多用於製作葡萄乾；諾曼時期（11-13世紀）Sicily繁榮</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">14-19世紀</div><div class=\"timeline-content\">長期的經濟與社會衰退；18-19世紀Marsala崛起；19世紀法國等地遭根瘤蚜重創，Sicily大量生產散裝酒供應歐洲</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">20世紀 → 今日</div><div class=\"timeline-content\">20世紀大部分時間以Marsala與散裝酒為主；1980-90年代轉向品質；2011-2012年設立全島Sicilia DOC、原Sicilia IGT改為Terre Siciliane IGT</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">100,000 ha</div><div class=\"stat-label\">義大利葡萄園面積最大</div></div><div class=\"stat-box\"><div class=\"stat-number\">前 4 名</div><div class=\"stat-label\">義大利葡萄酒產量</div></div><div class=\"stat-box\"><div class=\"stat-number\">~20%</div><div class=\"stat-label\">DOC/DOCG 佔比</div></div><div class=\"stat-box\"><div class=\"stat-number\">~40%</div><div class=\"stat-label\">Terre Siciliane IGT 佔比</div></div></div><div class=\"terroir-key-point\"><h4>🍽️ 西西里經典美食</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Arancini</strong><br>炸飯糰</div><div class=\"kp-box\"><strong>Cannoli / Cassata</strong><br>Ricotta甜點</div><div class=\"kp-box\"><strong>Pane ca Meusa</strong><br>巴勒莫牛脾麵包</div><div class=\"kp-box\"><strong>Tonno / Capperi</strong><br>鮪魚與酸豆</div></div></div>"
     },
     {
       "type": "content",
       "title": "🌍 風土條件分析",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">Etna火山活土、地中海陽光、海拔梯度 —— 三大要素共同造就Sicily從優雅礦物到濃郁豐沛的極端風格差距</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🌋</div><h4>北部 — Etna火山產區</h4><p><strong>地理：</strong>Etna火山坡地，海拔400-1,100m，歐洲最高活火山</p><p><strong>土壤：</strong>火山灰、玄武岩碎石，富含礦物質（鐵、鉀、鎂），排水性極佳</p><p><strong>氣候：</strong>涼爽，日夜溫差大，海拔每升100m降溫0.6°C</p><p><strong>特色：</strong>Contrada分區系統（如勃艮第Climat），百年老藤未嫁接Alberello樹形栽培</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">☀️</div><h4>南部 — 地中海陽光產區</h4><p><strong>地理：</strong>東南部丘陵和沿岸平原，Noto、Pachino、Vittoria地區</p><p><strong>土壤：</strong>砂質、黏土、石灰岩，土層深厚，保水性良好</p><p><strong>氣候：</strong>炎熱乾燥，300天+日照，非洲熱風影響，海風局部調節</p><p><strong>特色：</strong>Nero d'Avola最佳產地，充分成熟，濃郁果實高酒精</p></div></div><div class=\"terroir-key-point\"><h4>🗺️ Sicily 四大風土分區</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Etna火山坡</strong><br>涼爽礦物感<br>精緻優雅型</div><div class=\"kp-box\"><strong>東南部Noto</strong><br>炎熱地中海<br>濃郁果醬型</div><div class=\"kp-box\"><strong>Vittoria平原</strong><br>Cerasuolo DOCG<br>混釀均衡型</div><div class=\"kp-box\"><strong>Pantelleria島</strong><br>火山+非洲熱風<br>Zibibbo甜酒</div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">Etna火山活土、地中海陽光、海拔梯度 —— 三大要素共同造就Sicily從優雅礦物到濃郁豐沛的極端風格差距</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🌋</div><h4>東北部 — Etna火山產區</h4><p><strong>地理：</strong>Etna火山北、東、南坡，海拔300-1,200m，歐洲最高活火山</p><p><strong>土壤：</strong>火山灰、玄武岩碎石，富含礦物質（鐵、鉀、鎂），排水性極佳</p><p><strong>氣候：</strong>涼爽，日夜溫差大，降雨多於島上其他地區，海拔每升100m降溫0.6°C</p><p><strong>特色：</strong>Contrada分區系統（如勃艮第Climat），百年老藤未嫁接Alberello樹形栽培</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">☀️</div><h4>南部 — 地中海陽光產區</h4><p><strong>地理：</strong>東南部丘陵和沿岸平原，Noto、Pachino、Vittoria地區</p><p><strong>土壤：</strong>砂質、黏土、石灰岩，土層深厚，保水性良好</p><p><strong>氣候：</strong>炎熱乾燥，300天+日照，來自東南方的非洲熱風Sirocco影響南部與西部，海風局部調節</p><p><strong>特色：</strong>Nero d'Avola最佳產地，充分成熟，濃郁果實高酒精</p></div></div><div class=\"terroir-key-point\"><h4>🗺️ Sicily 四大風土分區</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Etna火山坡</strong><br>涼爽礦物感<br>精緻優雅型</div><div class=\"kp-box\"><strong>東南部Noto</strong><br>炎熱地中海<br>濃郁果醬型</div><div class=\"kp-box\"><strong>Vittoria平原</strong><br>Cerasuolo DOCG<br>混釀均衡型</div><div class=\"kp-box\"><strong>Pantelleria島</strong><br>火山+終年強風<br>Zibibbo甜酒</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🗺️ 地理、氣候、土壤與栽培（IWS 官方教材）",
+      "content": "<div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>位置</strong><br>北緯36°-38°，義大利面積最大的大區、地中海最大島；Messina海峽與Calabria相隔，Canale di Sicilia與北非相隔；位居地中海中心，是多元文化的交匯點。歷史上分為Val di Mazara（西）、Val Demone（東北）、Val di Noto（東南）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">⛰️</div><div class=\"fact-text\"><strong>地形</strong><br>面積廣大，地形、地質與氣候極為多樣：北部有西西里亞平寧山脈（Peloritani、Nebrodi、Madonie），東南為Monti Iblei高原，東部矗立Etna火山；火山活動活躍（Etna、Stromboli、Vulcano）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">☀️</div><div class=\"fact-text\"><strong>氣候</strong><br>地中海型氣候，高海拔處轉為溫和地中海型至半大陸型；降雨少；東南方吹來的非洲熱風Sirocco影響南部與西部</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🪨</div><div class=\"fact-text\"><strong>土壤</strong><br>丘陵多為黏土與石灰岩，沿海多砂質；火山土壤見於Etna、Pantelleria與Aeolian群島（Lipari、Salina、Stromboli），火山土的年代與成分差異很大</div></div></div><div class=\"terroir-key-point\"><h4>🍇 品種結構</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>白葡萄 60%+</strong><br>西部以白葡萄為主<br>東部以紅葡萄為主</div><div class=\"kp-box\"><strong>原生／傳統品種 80%</strong><br>國際品種約20%</div><div class=\"kp-box\"><strong>國際品種</strong><br>1980年代引進，1990年代至2000年代初大增；以Chardonnay、Syrah最多，多在西部</div></div></div><div class=\"orvieto-section\"><p class=\"orvieto-intro\">✂️ 整枝系統：Alberello（常考）</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>傳統：Alberello 灌木式</strong><p>Sicily歷史上的傳統整枝法，適合炎熱、陽光充足、乾燥的環境：產量低、糖分與萃取物濃度高。Etna上的alberello會為每株葡萄各插一根木樁。</p></div><div class=\"orvieto-card\"><strong>現代化轉型</strong><p>1980-90年代歐盟葡萄園現代化計畫拔除了大量alberello；如今Guyot與cordone speronato（短梢修剪單臂）佔80%，傳統alberello已不到10%。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍇 本土品種深度",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Nero d'Avola — 西西里之王</h4><p><strong>起源：</strong>Syracuse省Avola小鎮，別名Calabrese，種植面積約15,000公頃（Sicily第一）</p><p><strong>香氣：</strong>黑櫻桃、黑莓、李子、巧克力、甜香料、煙草</p><p><strong>結構：</strong>單寧堅實、酒體飽滿、13-14.5%酒精，中高酸度</p><p><strong>風格幅度：</strong>日常餐酒到陳年15年頂級單一園，品質差距極大；類比Syrah / Cabernet Sauvignon</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Nerello Mascalese — Etna之魂</h4><p><strong>產區：</strong>Etna火山坡地原生品種，佔Etna紅酒80%以上</p><p><strong>香氣：</strong>紅櫻桃、覆盆子、玫瑰、草本、火山礦物、煙燻</p><p><strong>結構：</strong>優雅單寧、高酸度、中等酒體，風格類似Pinot Noir / Nebbiolo</p><p><strong>陳年：</strong>頂級Contrada單一園可陳年10-20年；Nerello Cappuccio（輔助品種，增色補充）</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⚪ 白酒品種群 — Grillo、Carricante、Catarratto</h4><p><strong>Grillo：</strong>最常見白酒品種，傳統Marsala原料，現代干白清新，檸檬白桃杏仁香，適飲期2-5年</p><p><strong>Carricante：</strong>Etna白酒主力，高酸礦物感，老藤陳年潛力5-10年，玄武岩土壤精華</p><p><strong>Catarratto：</strong>Sicily種植面積最廣，中性清新，日常餐酒；Inzolia花香地中海草本</p><p><strong>Zibibbo：</strong>Pantelleria島Moscato d'Alessandria，製作金黃色蜂蜜杏桃Passito甜酒</p></div></div></div>"
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Nero d'Avola — 西西里之王</h4><p><strong>起源：</strong>官方名稱Calabrese，名稱源自Siracusa省Avola小鎮，Sicily種植最廣的紅葡萄</p><p><strong>香氣：</strong>黑櫻桃、黑莓、李子、巧克力、甜香料、煙草</p><p><strong>結構：</strong>顏色深、單寧柔順、酒精高、酸度清新，與橡木桶相容性佳；傳統以alberello栽培</p><p><strong>風格幅度：</strong>日常餐酒到陳年15年頂級單一園，品質差距極大；類比Syrah / Cabernet Sauvignon</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Nerello Mascalese — Etna之魂</h4><p><strong>產區：</strong>Etna火山坡地原生品種，佔Etna紅酒80%以上</p><p><strong>香氣：</strong>紅櫻桃、覆盆子、玫瑰、草本、火山礦物、煙燻</p><p><strong>結構：</strong>淺至中等色澤、單寧柔順、酒精高、酸度活潑，晚熟且能細緻反映地塊差異，風格類似Pinot Noir / Nebbiolo</p><p><strong>陳年：</strong>頂級Contrada單一園可陳年10-20年；Nerello Cappuccio（輔助品種，增色補充）</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⚪ 白酒品種群 — Grillo、Carricante、Catarratto</h4><p><strong>Grillo：</strong>Catarratto × Zibibbo自然雜交，傳統Marsala原料，現代干白清新，檸檬白桃杏仁香，適飲期2-5年</p><p><strong>Carricante：</strong>Etna白酒主力，高酸礦物感，老藤陳年潛力5-10年，玄武岩土壤精華</p><p><strong>Catarratto：</strong>Sicily種植面積最廣，中性清新，日常餐酒；Inzolia花香地中海草本</p><p><strong>Zibibbo：</strong>Pantelleria島Moscato d'Alessandria，製作金黃色蜂蜜杏桃Passito甜酒</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍇 原生品種全解析（IWS 官方教材）",
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">⚪ 白葡萄</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Catarratto Bianco</strong><p>Sicily種植最廣的品種，歷史上用於Marsala；兩大生物型：Catarratto Bianco Comune與品質較高的Catarratto Bianco Lucido。</p></div><div class=\"orvieto-card\"><strong>Grillo</strong><p>Catarratto Bianco × Zibibbo的自然雜交，用於Marsala與干白。傳統干白色深、帶堅果味、易氧化；現代風格清新乾淨、有酒體與質地。名稱來自西西里方言「grilli」（葡萄籽）。</p></div><div class=\"orvieto-card\"><strong>Inzolia（Ansonica）</strong><p>過去種於西部供Marsala使用，如今釀成單一品種干白或用於混釀，通常提早採收以保留酸度。</p></div><div class=\"orvieto-card\"><strong>Carricante</strong><p>高品質原生品種，歷史上種在Etna山坡，常在海拔900m以上；蘋果酸高、礦物感鮮明、酸度中等，是Etna Bianco的主要品種，常見未嫁接的百年老藤。</p></div><div class=\"orvieto-card\"><strong>Zibibbo</strong><p>Muscat of Alexandria在西西里的名稱，源自阿拉伯語「zabib」（葡萄乾）；皮厚、果粒大而多汁，適合風乾釀Passito，也當鮮食或葡萄乾，大量種在火山島Pantelleria。</p></div><div class=\"orvieto-card\"><strong>Malvasia di Lipari</strong><p>歷史上種在Aeolian火山群島，基因上與Malvasia di Sardegna、Calabria的Greco Bianco相同，用於著名的Malvasia delle Lipari Passito。</p></div></div></div><div class=\"orvieto-section\"><p class=\"orvieto-intro\">🔴 紅葡萄</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Nero d'Avola（Calabrese）</strong><p>官方名稱Calabrese，Sicily種植最廣的紅葡萄，傳統以alberello栽培；顏色深、單寧柔順、酒精高、酸度清新，與橡木相容性佳。</p></div><div class=\"orvieto-card\"><strong>Nerello Mascalese</strong><p>Etna的貴族原生品種，晚熟，能表現各地塊細微差異；淺至中等色澤、香氣複雜細緻、單寧柔順、酒精高、酸度活潑。Etna上許多是未嫁接的百年老藤；近年研究指出其親本為Sangiovese × Mantonico Bianco。常搭配Nerello Cappuccio。</p></div><div class=\"orvieto-card\"><strong>Frappato</strong><p>歷史上種在東南部Vittoria鎮周邊，傳統與Nero d'Avola混釀；寶石紅、香氣芬芳、清新多汁，酒體與單寧中等。</p></div><div class=\"orvieto-card\"><strong>其他紅葡萄</strong><p>Perricone（Pignatello）、Nocera（Faro DOC）、Nerello Cappuccio（Etna、Faro）。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏆 三大核心產區",
-      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">從歐洲最高活火山坡地到地中海平原，Sicily三大代表性產區各有風格，展現Island多元葡萄酒面貌</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🌋 Etna DOC</strong><p>歐洲最活躍火山坡地，海拔400-1,100m。Nerello Mascalese（紅）+ Carricante（白）。優雅高酸礦物感，Contrada分區文化。被譽為「地中海的勃艮第」。€15-200+。</p></div><div class=\"orvieto-card\"><strong>🏅 Cerasuolo di Vittoria DOCG</strong><p>Sicily唯一DOCG（2005年），東南部Vittoria地區。Nero d'Avola 50-70% + Frappato 30-50%混釀。中等酒體、成熟櫻桃、均衡優雅。COS / Arianna Occhipinti名莊。€15-45。</p></div><div class=\"orvieto-card\"><strong>🍷 Marsala DOC</strong><p>西島Marsala港，1773年英國商人發明。Grillo/Catarratto加入中性烈酒。Fine（1年）至Vergine Riserva（10年+）多種分級。乾型至甜型均有，烹飪+飲用兩用。€8-60+。</p></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">從歐洲最高活火山坡地到地中海平原，Sicily三大代表性產區各有風格，展現Island多元葡萄酒面貌</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🌋 Etna DOC</strong><p>歐洲最高活火山的北、東、南坡，海拔300-1,200m。Nerello Mascalese（紅）+ Carricante（白）。優雅高酸礦物感，Contrada分區文化。被譽為「地中海的勃艮第」。€15-200+。</p></div><div class=\"orvieto-card\"><strong>🏅 Cerasuolo di Vittoria DOCG</strong><p>Sicily唯一DOCG（2005年），東南部Vittoria地區。Nero d'Avola 50-70% + Frappato 30-50%混釀。中等酒體、成熟櫻桃、均衡優雅。COS / Arianna Occhipinti名莊。€15-45。</p></div><div class=\"orvieto-card\"><strong>🍷 Marsala DOC</strong><p>西端Marsala港，1770年代英國商人Woodhouse將其推向英國。以Grillo、Catarratto、Inzolia釀造後加入葡萄烈酒加烈。Fine（1年）至Vergine Riserva（10年+）多種分級。乾型至甜型均有，烹飪+飲用兩用。€8-60+。</p></div></div></div>"
     },
     {
       "type": "sicily-docg-map",
@@ -84,23 +99,43 @@
     },
     {
       "type": "content",
-      "title": "🌋 Etna 四坡面深度",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">Etna火山四面坡展現截然不同的微氣候 —— <span class=\"intro-highlight\">北坡是全球最受矚目的新星產區，Contrada精細分區如勃艮第Climat般受國際追捧</span></p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🧭 北坡（Versante Nord）— 頂級核心</div><div class=\"mf-prod\">海拔600-1,000m+，最涼爽降雨充足，年輕火山岩礦物質豐富，優雅高酸礦物感，Passopisciaro / Terre Nere等名莊集中</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🧭 南坡（Versante Sud）— 溫暖果香</div><div class=\"mf-prod\">海拔400-600m，較溫暖日照充足，古老火山岩沙質土壤，果味濃郁酒體飽滿，風格圓潤易飲，Benanti等酒莊</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🧭 東坡（Versante Est）— 海洋清新</div><div class=\"mf-prod\">海洋影響較大，濕度較高，清新感和海洋礦物氣息明顯，果味清爽，不同於北坡的緊張礦物感</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🧭 西坡（Versante Ovest）— 乾燥集中</div><div class=\"mf-prod\">乾燥陽光充足，集中度高、結構感強，風格介於北坡與南坡之間，獨特乾燥草本礦物香氣</div></div></div>"
+      "title": "🌋 Etna 各坡面深度",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Etna葡萄園分布在火山的北、東、南三面坡，橫跨20個村莊、133個Contrada —— <span class=\"intro-highlight\">北坡是全球最受矚目的產區，Contrada精細分區如勃艮第Climat般受國際追捧</span></p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🧭 北坡（Versante Nord）— 頂級核心</div><div class=\"mf-prod\">海拔約600-1,000m，降雨少於東坡與南坡、夏季涼爽、日夜溫差大；Randazzo、Castiglione di Sicilia、Linguaglossa、Passopisciaro一帶，以Nerello Mascalese紅酒為主，Passopisciaro、Terre Nere等名莊集中</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🧭 東坡（Versante Est）— 面海多雨</div><div class=\"mf-prod\">面向Ionian海，降雨最多、濕度較高；Milo村是Etna Bianco Superiore（Carricante最低80%）的唯一產地，Carricante白酒清新、礦物與鹹鮮感明顯</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🧭 南坡（Versante Sud）— 溫暖日照</div><div class=\"mf-prod\">較溫暖、日照充足，葡萄園可爬升到1,000m以上；果味成熟、酒體較飽滿。1990年代Benanti與釀酒師Salvo Foti在此帶頭重新聚焦Etna風土與在地品種</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">📜 Etna DOC 法定規範</div><div class=\"mf-prod\">Etna Rosso：最低80% Nerello Mascalese、最多20% Nerello Cappuccio，Riserva最少4年（含1年木桶）；Etna Bianco：最低60% Carricante、最多40% Catarratto；另有Rosato與Spumante。葡萄全數來自單一官方Contrada時，可在酒標標示該Contrada名稱</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🌋 Etna DOC：歷史與風土（IWS 官方教材）",
+      "content": "<div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">19世紀</div><div class=\"timeline-content\">Catania省（含Etna）是Sicily種植最廣、產量最高的地區之一；19世紀末至20世紀初以散裝酒為主，20世紀大部分時間持續衰退</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1968</div><div class=\"timeline-content\"><strong>Etna DOC成立，是西西里第一個DOC</strong></div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1990s → 2010s</div><div class=\"timeline-content\">1990年代Benanti與Salvo Foti開始聚焦Etna風土與在地品種；2000年代生產者終於讓Etna揚名國際；2010年代投資湧入、新酒莊不斷出現；2011年正式採用133個Contrada作為MGA</div></div></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🗺️ 什麼是 Contrada？</strong><p>類似小村落或街區的小型地理分區。Sicily歷史上一直以contrada來標示葡萄園位置；2011年Etna DOC正式採用歷史contrada地圖，登記為可標示於酒標的MGA（Menzioni Geografiche Aggiuntive）。20個村莊、每村含多個contrada，共133個。</p></div><div class=\"orvieto-card\"><strong>⛰️ 高海拔氣候</strong><p>葡萄園海拔300-1,200m，氣候涼爽、日夜溫差大，平均降雨高於Sicily多數地區；採收期在9月底到10月底，是義大利最晚的採收之一。</p></div><div class=\"orvieto-card\"><strong>🪨 火山土壤與老藤</strong><p>深色、鬆散的火山砂土覆蓋在熔岩底土上，能抵抗根瘤蚜，因此保有許多未嫁接老藤。地形崎嶇，葡萄園多為以石牆支撐的小塊梯田，傳統採每株一根木樁的alberello。</p></div><div class=\"orvieto-card\"><strong>🏛️ Palmento</strong><p>Etna傳統的黑色熔岩石造釀酒房，分為多層高低相連的槽池，利用重力讓葡萄汁在踩皮、發酵、培養之間流動。部分自然派酒莊（如Vino di Anna）仍在使用。</p></div><div class=\"orvieto-card\"><strong>⚪ Etna Bianco 與 Superiore</strong><p>Etna Bianco：最低60% Carricante、最多40% Catarratto（其他白葡萄最多15%），許多是100% Carricante，多以不鏽鋼槽釀造，部分用大型橡木桶，礦物感鮮明、酸度爽脆、耐陳年。Etna Bianco Superiore：最低80% Carricante，葡萄須全部來自東坡的Milo村。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🧬 西西里雙雄對比",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Sicily雙雄 —— Nero d'Avola與Nerello Mascalese代表完全不同的風格哲學，如同兩個極端的Sicily葡萄酒世界</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>👑 Nero d'Avola — 力量型</h4><p><strong>產區：</strong>東南部Noto / Pachino（海岸炎熱）</p><p><strong>顏色：</strong>深紫紅，近乎黑色</p><p><strong>香氣：</strong>黑莓、黑棗、巧克力、甜香料、皮革</p><p><strong>結構：</strong>高單寧、飽滿酒體、13-14.5%</p><p><strong>類比：</strong>Syrah / Cabernet Sauvignon</p><p><strong>陳年：</strong>頂級5-15年，日常即飲均有</p></div><div class=\"method-card modern\"><h4>🌋 Nerello Mascalese — 優雅型</h4><p><strong>產區：</strong>Etna火山北坡（涼爽高海拔）</p><p><strong>顏色：</strong>淺寶石紅，邊緣帶橙色</p><p><strong>香氣：</strong>紅櫻桃、玫瑰、草本、火山礦物、煙燻</p><p><strong>結構：</strong>細緻單寧、高酸度、中等酒體</p><p><strong>類比：</strong>Pinot Noir / Nebbiolo</p><p><strong>陳年：</strong>頂級Contrada可陳年10-20年</p></div></div></div></div><div class=\"dna-research\"><h4>🍷 第三條路：Cerasuolo di Vittoria DOCG 黃金混釀</h4><p class=\"research-content\">Nero d'Avola（50-70%）+ Frappato（30-50%）—— 力量與清新的完美結合。Nero d'Avola提供結構與深度，Frappato帶來輕盈花香草莓活力，兩者互補造就Sicily唯一DOCG的獨特個性。Cerasuolo義大利語意為「櫻桃色」，完美描述其迷人色澤。</p></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Sicily雙雄 —— Nero d'Avola與Nerello Mascalese代表完全不同的風格哲學，如同兩個極端的Sicily葡萄酒世界</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>👑 Nero d'Avola — 力量型</h4><p><strong>產區：</strong>東南部Noto / Pachino（海岸炎熱）</p><p><strong>顏色：</strong>深紫紅，近乎黑色</p><p><strong>香氣：</strong>黑莓、黑棗、巧克力、甜香料、皮革</p><p><strong>結構：</strong>單寧柔順、酒體飽滿、酒精高、酸度清新</p><p><strong>類比：</strong>Syrah / Cabernet Sauvignon</p><p><strong>陳年：</strong>頂級5-15年，日常即飲均有</p></div><div class=\"method-card modern\"><h4>🌋 Nerello Mascalese — 優雅型</h4><p><strong>產區：</strong>Etna火山北坡（涼爽高海拔）</p><p><strong>顏色：</strong>淺寶石紅，邊緣帶橙色</p><p><strong>香氣：</strong>紅櫻桃、玫瑰、草本、火山礦物、煙燻</p><p><strong>結構：</strong>細緻單寧、高酸度、中等酒體</p><p><strong>類比：</strong>Pinot Noir / Nebbiolo</p><p><strong>陳年：</strong>頂級Contrada可陳年10-20年</p></div></div></div></div><div class=\"dna-research\"><h4>🍷 第三條路：Cerasuolo di Vittoria DOCG 黃金混釀</h4><p class=\"research-content\">Nero d'Avola（50-70%）+ Frappato（30-50%）—— 力量與清新的完美結合。Nero d'Avola提供結構與深度，Frappato帶來輕盈花香草莓活力，兩者互補造就Sicily唯一DOCG的獨特個性。Cerasuolo義大利語意為「櫻桃色」，完美描述其迷人色澤。</p></div>"
     },
     {
       "type": "content",
       "title": "🍷 Marsala 加烈酒傳統",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">1773年英國商人的意外創造，成就地中海最重要的加烈酒傳統 —— <span class=\"intro-highlight\">Marsala曾與波特、雪利並列三大加烈酒，如今走向精品復興之路</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1773年</div><div class=\"timeline-content\"><strong>Marsala誕生</strong>：John Woodhouse為船上葡萄酒加入白蘭地防止腐敗，偶然創造Marsala。1806年受Nelson海軍採購，拿破崙戰爭期間聲名大噪</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1833-1880年</div><div class=\"timeline-content\"><strong>黃金時代</strong>：Ingham、Whitaker家族加入，年產數百萬公升，與波特酒、雪利酒並列三大加烈酒，外銷歐洲各國</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">21世紀</div><div class=\"timeline-content\"><strong>精品復興</strong>：Marco De Bartoli等先驅推動傳統Vergine Marsala復興，Solera Perpetuum陳年系統，重現真正的精品品飲價值</div></div></div><div class=\"aging-science\"><p>Marsala 三大陳年等級 — 時間造就複雜度</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🍷 Fine（入門）</h5><p>最少陳年1年，17%酒精，果香直接，常用於烹飪（Tiramisu、Zabaglione）</p><p class=\"science-note\">廚房必備，€8-15</p></div><div class=\"science-card\"><h5>⏳ Superiore Riserva（進階）</h5><p>最少陳年4年，18%酒精，複雜度佳，杏仁、榛果、蜂蜜，適合品鑑飲用</p><p class=\"science-note\">品鑑型，€20-40</p></div><div class=\"science-card\"><h5>🏆 Vergine Riserva（頂級）</h5><p>最少陳年10年，18%酒精，未添加甜化劑，Solera系統，乾型最高等級</p><p class=\"science-note\">收藏型，€40-80+</p></div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">1770年代英國商人讓在地的vino perpetuo走向世界，成就地中海最重要的加烈酒傳統 —— <span class=\"intro-highlight\">Marsala曾與波特、雪利並列三大加烈酒，如今走向精品復興之路</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1770年代</div><div class=\"timeline-content\"><strong>走向世界</strong>：John Woodhouse在Marsala發現當地特產vino perpetuo，加以改良、加烈後外銷英國；拿破崙戰爭期間英國海軍（Nelson）採購更使其聲名大噪</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1833-1880年</div><div class=\"timeline-content\"><strong>黃金時代</strong>：Benjamin Ingham改良生產、成為最成功的出口商；1830年代起Florio等西西里本地酒商崛起，Marsala與波特酒、雪利酒並列三大加烈酒</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">21世紀</div><div class=\"timeline-content\"><strong>精品復興</strong>：Marco De Bartoli等先驅推動傳統Vergine Marsala復興，Solera Perpetuum陳年系統，重現真正的精品品飲價值</div></div></div><div class=\"aging-science\"><p>Marsala 三大陳年等級 — 時間造就複雜度</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🍷 Fine（入門）</h5><p>最少陳年1年（含8個月木桶），17.5%酒精，果香直接，常用於烹飪（Tiramisu、Zabaglione）</p><p class=\"science-note\">廚房必備，€8-15</p></div><div class=\"science-card\"><h5>⏳ Superiore Riserva（進階）</h5><p>最少木桶陳年4年，18%酒精，複雜度佳，杏仁、榛果、蜂蜜，適合品鑑飲用</p><p class=\"science-note\">品鑑型，€20-40</p></div><div class=\"science-card\"><h5>🏆 Vergine Riserva（頂級）</h5><p>最少木桶陳年10年（又稱Stravecchio），18%酒精，只加烈、不添加任何甜化劑，可用Solera系統，乾型最高等級</p><p class=\"science-note\">收藏型，€40-80+</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍷 Marsala 法規、品種與風格（IWS 官方教材）",
+      "content": "<div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1770s → 1830s</div><div class=\"timeline-content\">Woodhouse改良並加烈vino perpetuo外銷英國；Benjamin Ingham成為最成功的出口商；1830年代Florio等本地酒商崛起</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1860s → 1950s</div><div class=\"timeline-content\">併入義大利王國有利本地生產者；根瘤蚜使品質逐漸下滑；1931年政府正式劃定產區；1950年代加味的「Marsala Speciali」流行，損及Marsala品質形象</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1969 → 今日</div><div class=\"timeline-content\">1969年Marsala DOC成立；1984年規範收緊，Marsala Speciali終於被排除；如今生產多供低價市場與食品業，但仍有少數精品生產者（如Marco De Bartoli）</div></div></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍇 品種與產區</strong><p>經典Marsala是以白葡萄釀的白色加烈酒：<strong>Grillo、Catarratto、Inzolia（Ansonica）、Damaschino</strong>（Carricante不在其中）；少見的Rubino（寶石紅）款用Nero d'Avola、Perricone、Nerello Mascalese。產區是Sicily西端的一大片土地，葡萄園位於沿海平地與低矮丘陵，完全地中海型氣候，是全島最乾燥、最炎熱的地區之一。</p></div><div class=\"orvieto-card\"><strong>🏆 Marsala Vergine（Solera）</strong><p>只加入葡萄烈酒或酒精加烈，不得添加其他物質。最少木桶陳年5年，Riserva（Stravecchio）10年；部分酒廠使用Solera系統；最低18%酒精、殘糖低於4%，可標年份或跨年份混調。被視為最正宗、最接近古老vino perpetuo的風格，頂級款不甜、濃郁複雜，但產量極少。</p></div><div class=\"orvieto-card\"><strong>🍯 Marsala Superiore 與 Fine（Conciati）</strong><p>兩者都在19世紀發展出來，除加烈外還可加入「concia」：mosto cotto（熟葡萄汁）、sifone（加烈葡萄汁，mistella）或mosto concentrato（濃縮葡萄汁）。依顏色分Ambra（琥珀）、Oro（金）、Rubino（寶石紅），依甜度分secco、semisecco、dolce。Superiore：最低18%、最少木桶2年（Riserva 4年），不到總產量20%，細緻柔滑；Fine：最低17.5%、最少1年（含8個月木桶），多數供食品業使用。</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏅 其他重要產區與 Sicilia DOC（IWS 官方教材）",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍒 Cerasuolo di Vittoria DOCG ＆ Vittoria DOC</h4><p><strong>歷程：</strong>1973年Cerasuolo di Vittoria DOC → 2005年升格DOCG，同時設立Vittoria DOC；範圍也包含鄰近Riesi DOC中一小塊以優質Nero d'Avola聞名的地區。</p><p><strong>風土：</strong>沿海與內陸丘陵，完全地中海型氣候、炎熱乾燥；砂土與黏土覆蓋在石灰岩上，夾有富含鐵質的紅土（terra rossa）。</p><p><strong>法規：</strong>Nero d'Avola 50-70%（顏色、酒體、單寧）＋ Frappato 30-50%（輕盈、酸度、清新花果香），最低13%酒精，另有Classico子產區。Vittoria DOC有單一品種Frappato、Inzolia、Nero d'Avola及Rosso、Novello；最佳的單一品種Frappato多出自這裡。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍇 Eloro DOC — Nero d'Avola 的故鄉</h4><p>東南角的沿海平地與低丘，深色礫石石灰質土壤；品種為Nero d'Avola、Frappato、Perricone（Pignatello），單一品種Nero d'Avola最低90%。官方子產區<strong>Eloro Pachino</strong>：最低80% Nero d'Avola、最多20% Frappato和/或Perricone，Riserva須陳年2年（含6個月木桶）。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌊 Faro DOC</h4><p>Messina附近的歷史產區，1976年成為DOC，1990年代由Palari酒莊復興。陡坡緊鄰海洋，沖積土（Tyrrhenian側較多黏土、Ionian側較多砂）覆蓋變質岩底土。是Etna以外唯一以Nerello Mascalese與Nerello Cappuccio為傳統品種的產區：Nerello Mascalese 45-60%、Nerello Cappuccio 15-30%、Nocera 5-10%。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⛰️ Contea di Sclafani DOC</h4><p>內陸產區，完全受大陸性氣候影響、日夜溫差大，葡萄園位於中高海拔。Rosso以Nero d'Avola和/或Perricone釀造，Bianco以Catarratto釀造，兩者都有Riserva與Vendemmia Tardiva（晚摘）版本。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏝️ Sicilia DOC ＆ Terre Siciliane IGT</h4><p>2011年以前許多優質酒標示為全區的Sicilia IGT；2012年Sicilia IGT升格為<strong>Sicilia DOC</strong>，並以<strong>Terre Siciliane IGT</strong>取代原IGT。Sicilia DOC規範較嚴，必須在島上裝瓶，許多西西里頂尖酒款都用此產區名。Terre Siciliane IGT可在島外裝瓶，但<strong>Nero d'Avola與Grillo不得以此IGT生產</strong>。</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏝️ 火山島甜酒：Pantelleria 與 Lipari（IWS 官方教材）",
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">🌬️ Pantelleria — 風之島的 Zibibbo</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>📜 歷史</strong><p>深受阿拉伯文化影響，長久以來把Zibibbo風乾製成葡萄乾與Passito甜酒；Passito在19-20世紀流行，1971年成為Passito di Pantelleria DOC。20世紀生產多由酒商掌控、品質下滑，1980年代因De Bartoli、Murana、Donnafugata等生產者而復興；2013年整合為Pantelleria DOC，涵蓋多種以Zibibbo釀造的風格。</p></div><div class=\"orvieto-card\"><strong>🌋 風土與 Alberello Pantesco</strong><p>火山起源的不規則丘陵（cuddie），以火山岩乾砌石牆支撐梯田，葡萄與酸豆幾乎是僅有的作物；土壤為砂與多孔火山礫。完全地中海型氣候、炎熱乾燥，終年強風會使葡萄脫水、中斷成熟、減少產量，因此葡萄藤被修剪得極低、種在淺坑（conche）裡，並以火山石牆圍繞（Giardino Pantesco）。這種「alberello pantesco」已被UNESCO列入非物質文化遺產。</p></div><div class=\"orvieto-card\"><strong>🍯 Passito vs Moscato di Pantelleria</strong><p><strong>Passito di Pantelleria</strong>：兩次採收——8月先採一批Zibibbo在陽光下曬乾，其餘葡萄採收壓榨發酵後，再把曬乾的葡萄加入葡萄汁中；最低14%酒精，金黃至琥珀色，熱帶水果、果乾、蜜餞、蜂蜜與香料，濃郁甜美。<strong>Moscato di Pantelleria</strong>：以新鮮（有時過熟）Zibibbo釀造、不經風乾，顏色較淺、甜度與酒精較低、較清新。另有Spumante、Frizzante、Zibibbo干白、Moscato Liquoroso與Passito Liquoroso（liquoroso＝加烈）。</p></div></div></div><div class=\"orvieto-section\"><p class=\"orvieto-intro\">🌬️ Aeolian 群島 — Malvasia delle Lipari DOC</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>📜 歷史</strong><p>群島名稱源自希臘風神Aeolus；自西元前6世紀希臘人定居以來便種植葡萄。19世紀甜酒享有盛名，20世紀沒落，1980年代由生產者Carlo Hauner帶動復興。</p></div><div class=\"orvieto-card\"><strong>🌋 產區與酒款</strong><p>多山的火山島，葡萄園是小塊（有時為梯田）的淺層砂質火山土，大多位於Salina島。92-95% Malvasia di Lipari ＋ 5-8% Corinto Nero。<strong>Malvasia delle Lipari Passito</strong>：晚摘葡萄再經風乾，金黃琥珀色、濃郁複雜；<strong>Malvasia delle Lipari</strong>：晚摘但不風乾，較輕盈、甜度較低。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏰 知名酒莊",
-      "content": "<div class=\"variety-intro\"><p>Etna膜拜名莊、Cerasuolo自然酒先驅、Nero d'Avola頂尖生產者，Sicily六大代表酒莊</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">PP</div><div class=\"up-badge\">Etna Contrada大師</div><div class=\"up-body\"><div class=\"up-est\">Passopisciaro — Est. 2000</div><p>Tuscany名莊主Andrea Franchetti進駐Etna，Contrada單一園先驅。每個地塊獨立釀造，完美展現火山微氣候差異。</p><div class=\"up-wines\">🌋 Contrada系列（C / P / R / S / G）100% Nerello Mascalese，礦物優雅型 €50-150+</div><div class=\"up-tip\">Etna北坡高海拔 × Contrada分區哲學 × Wine Advocate / Decanter最高關注度</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">DF</div><div class=\"up-badge\">現代Sicily代表</div><div class=\"up-body\"><div class=\"up-est\">Donnafugata — Est. 1983</div><p>Rallo家族旗艦酒莊，橫跨Sicily五大產區（Etna、Noto、Vittoria、Menfi、Pantelleria），現代與傳統並重。</p><div class=\"up-wines\">🍷 Mille e Una Notte（Nero d'Avola頂級）€60-80 / Ben Ryé（Passito di Pantelleria頂級甜酒）/ Etna Eruzione系列</div><div class=\"up-tip\">跨產區全面佈局 × 現代精品路線 × Passito甜酒全球知名</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>COS（Cerasuolo先驅）</strong><p>1980年創立，生物動力先驅，陶罐（Amphora）發酵復興，Cerasuolo di Vittoria Classico頂尖代表</p><div class=\"um-prices\">Cerasuolo di Vittoria Classico Amphora<br>Frappato / Pithos系列</div><div class=\"um-age\">€18-40 / 自然活潑風</div></div><div class=\"umbria-mini c2\"><strong>Arianna Occhipinti（自然酒女王）</strong><p>2004年創立，最少干預釀造哲學，SP68是全球自然酒愛好者必嘗款，輕盈活潑清新個性</p><div class=\"um-prices\">SP68 Frappato+Nero d'Avola<br>Il Frappato / Siccagno Nero d'Avola</div><div class=\"um-age\">€18-35 / 清新自然型</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>€8-18</h4><p>Nero d'Avola DOC、Grillo Sicilia DOC、Etna Rosso入門款，日常易飲地中海風情</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>€18-50</h4><p>Etna Rosso Contrada、Donnafugata系列、Cerasuolo Classico，品質躍升宴客首選</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 珍藏</div><h4>€50-200+</h4><p>Passopisciaro Contrada系列、Mille e Una Notte、Terre Nere Prephylloxera，頂級陳年珍藏</p></div></div></div>"
+      "content": "<div class=\"variety-intro\"><p>Etna膜拜名莊、Cerasuolo自然酒先驅、Nero d'Avola頂尖生產者，Sicily六大代表酒莊</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">PP</div><div class=\"up-badge\">Etna Contrada大師</div><div class=\"up-body\"><div class=\"up-est\">Passopisciaro — Est. 2000</div><p>Tuscany名莊主Andrea Franchetti進駐Etna，Contrada單一園先驅。每個地塊獨立釀造，完美展現火山微氣候差異。</p><div class=\"up-wines\">🌋 Contrada系列（C / P / R / S / G）100% Nerello Mascalese，礦物優雅型 €50-150+</div><div class=\"up-tip\">Etna北坡高海拔 × Contrada分區哲學 × Wine Advocate / Decanter最高關注度</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">DF</div><div class=\"up-badge\">現代Sicily代表</div><div class=\"up-body\"><div class=\"up-est\">Donnafugata — Est. 1983</div><p>Rallo家族旗艦酒莊，莊園橫跨Contessa Entellina、Pantelleria、Vittoria（Acate）與Etna（Randazzo），Marsala老酒窖負責陳年與裝瓶，現代與傳統並重。</p><div class=\"up-wines\">🍷 Mille e Una Notte（Nero d'Avola頂級）€60-80 / Ben Ryé（Passito di Pantelleria頂級甜酒）/ Sul Vulcano Etna系列</div><div class=\"up-tip\">跨產區全面佈局 × 現代精品路線 × Passito甜酒全球知名</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>COS（Cerasuolo先驅）</strong><p>1980年創立，生物動力先驅，陶罐（Amphora）發酵復興，Cerasuolo di Vittoria Classico頂尖代表</p><div class=\"um-prices\">Cerasuolo di Vittoria Classico Amphora<br>Frappato / Pithos系列</div><div class=\"um-age\">€18-40 / 自然活潑風</div></div><div class=\"umbria-mini c2\"><strong>Arianna Occhipinti（自然酒女王）</strong><p>2004年創立，最少干預釀造哲學，SP68是全球自然酒愛好者必嘗款，輕盈活潑清新個性</p><div class=\"um-prices\">SP68 Frappato+Nero d'Avola<br>Il Frappato / Siccagno Nero d'Avola</div><div class=\"um-age\">€18-35 / 清新自然型</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>€8-18</h4><p>Nero d'Avola DOC、Grillo Sicilia DOC、Etna Rosso入門款，日常易飲地中海風情</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>€18-50</h4><p>Etna Rosso Contrada、Donnafugata系列、Cerasuolo Classico，品質躍升宴客首選</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 珍藏</div><h4>€50-200+</h4><p>Passopisciaro Contrada系列、Mille e Una Notte、Terre Nere Prephylloxera，頂級陳年珍藏</p></div></div></div>"
     },
     {
       "type": "content",
@@ -110,7 +145,7 @@
     {
       "type": "content",
       "title": "🔥 現代 Sicily 品質革命",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h4>🔬 Sicily 品質革命</h4><p class=\"research-content\">從義大利南部散裝酒產地到精品葡萄酒新星 —— 2000年代Etna老藤搶救、Cerasuolo自然酒運動、Pantelleria甜酒崛起，三條路徑同步推動Sicily品質革命，改寫義大利葡萄酒地圖</p></div><div class=\"aging-science\"><p>三條轉型路徑 — 讓Sicily重返世界頂級舞台</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🌋 Etna崛起（2000年代）</h5><p>Andrea Franchetti等進駐Etna，Contrada單一園文化建立，百年老藤未嫁接Alberello，Wine Advocate 90+分頻現</p><p class=\"science-note\">「地中海勃艮第」國際認可</p></div><div class=\"science-card\"><h5>🌱 有機自然酒運動</h5><p>300天日照+乾燥氣候天然防病，Sicily成為義大利有機認證比例最高地區，COS陶罐釀造復興，Arianna Occhipinti引領風潮</p><p class=\"science-note\">義大利有機葡萄酒之王</p></div><div class=\"science-card\"><h5>🍯 Passito di Pantelleria</h5><p>Pantelleria火山島（距突尼西亞更近），Zibibbo風乾法，Donnafugata Ben Ryé成全球最知名Passito，杏桃蜂蜜金黃珍品</p><p class=\"science-note\">Sicily甜酒國際名片</p></div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h4>🔬 Sicily 品質革命</h4><p class=\"research-content\">從義大利南部散裝酒產地到精品葡萄酒新星 —— 2000年代Etna老藤搶救、Cerasuolo自然酒運動、Pantelleria甜酒崛起，三條路徑同步推動Sicily品質革命，改寫義大利葡萄酒地圖</p></div><div class=\"aging-science\"><p>三條轉型路徑 — 讓Sicily重返世界頂級舞台</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🌋 Etna崛起（2000年代）</h5><p>Andrea Franchetti等進駐Etna，Contrada單一園文化建立，百年老藤未嫁接Alberello，Wine Advocate 90+分頻現</p><p class=\"science-note\">「地中海勃艮第」國際認可</p></div><div class=\"science-card\"><h5>🌱 有機自然酒運動</h5><p>300天日照+乾燥氣候天然防病，Sicily的有機葡萄園面積居義大利之冠，COS陶罐釀造復興，Arianna Occhipinti引領風潮</p><p class=\"science-note\">義大利有機葡萄園面積第一</p></div><div class=\"science-card\"><h5>🍯 Passito di Pantelleria</h5><p>Pantelleria火山島（距突尼西亞更近），Zibibbo風乾法，Donnafugata Ben Ryé成全球最知名Passito，杏桃蜂蜜金黃珍品</p><p class=\"science-note\">Sicily甜酒國際名片</p></div></div></div></div>"
     },
     {
       "type": "image",
@@ -122,15 +157,18 @@
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Sicily 是義大利最大產酒島（105,000公頃），產量第一大區，1個DOCG + 23個DOC",
-        "✓ Etna火山（3,329m，歐洲最活躍）孕育獨特礦物風味，被譽為「地中海的勃艮第」",
+        "✓ Sicily 是義大利葡萄園面積最大的大區（約100,000公頃），產量居全義前四，1個DOCG + 23個DOC；Terre Siciliane IGT約佔40%",
+        "✓ Etna（歐洲最高活火山）1968年成為西西里第一個DOC，孕育獨特礦物風味，被譽為「地中海的勃艮第」",
         "✓ Nero d'Avola（西西里之王，濃郁黑果香料）和Nerello Mascalese（Etna之魂，優雅礦物）是兩大代表性紅品種",
-        "✓ Etna DOC分四坡面（北坡最頂級），Contrada單一園系統如勃艮第Climat，百年老藤未嫁接Alberello栽培",
+        "✓ Etna葡萄園分布於北、東、南三坡（北坡最受矚目），2011年起133個Contrada可標示於酒標，百年老藤未嫁接Alberello栽培",
         "✓ Cerasuolo di Vittoria DOCG是Sicily唯一DOCG（2005年），Nero d'Avola + Frappato均衡混釀",
-        "✓ Marsala DOC 1773年由John Woodhouse發明，Fine（1年）至Vergine Riserva（10年+）多等級，Solera陳年系統",
+        "✓ Marsala DOC：1770年代John Woodhouse將vino perpetuo加烈外銷英國；Vergine只加烈、不加concia，Fine（1年）至Vergine Riserva（10年），可用Solera",
         "✓ 頂級酒莊：Passopisciaro & Terre Nere（Etna膜拜酒）、Donnafugata（跨產區精品）、COS & Arianna Occhipinti（自然酒先驅）",
-        "✓ Passito di Pantelleria：Zibibbo風乾甜酒，Pantelleria火山島，金黃色杏桃蜂蜜，Donnafugata Ben Ryé全球知名",
-        "✓ 2000年代品質革命：Etna崛起、有機自然酒運動（義大利有機認證比例最高）、精品價格€50-200+"
+        "✓ Passito di Pantelleria：Zibibbo曬乾釀造的甜酒，Pantelleria火山島的alberello pantesco列入UNESCO非物質文化遺產",
+        "✓ 白葡萄佔60%以上（西白東紅），原生／傳統品種約80%；Catarratto種植最廣，Grillo是Catarratto × Zibibbo的雜交",
+        "✓ Sicilia DOC（2011-2012）必須在島上裝瓶；Terre Siciliane IGT不得生產Nero d'Avola與Grillo",
+        "✓ Faro DOC（Nerello Mascalese、Cappuccio、Nocera）、Eloro DOC（Pachino子產區，Nero d'Avola）、Malvasia delle Lipari DOC也是必學產區",
+        "✓ 2000年代品質革命：Etna崛起、有機自然酒運動（有機葡萄園面積居義大利之冠）、精品價格€50-200+"
       ]
     },
     {
@@ -147,7 +185,7 @@
             "D. 酒價和布根地相當"
           ],
           "correct": 1,
-          "explanation": "Etna 因獨特火山土壤、高海拔（600-1000m）和強調 Contrada（地塊）差異的哲學，用 Nerello Mascalese 釀出細膩優雅的紅酒，因此得到「義大利布根地」美名。"
+          "explanation": "Etna 因獨特火山土壤、高海拔（300-1,200m）和強調 Contrada（地塊）差異的哲學，用 Nerello Mascalese 釀出細膩優雅的紅酒，因此得到「義大利布根地」美名。"
         },
         {
           "type": "single",
@@ -187,7 +225,7 @@
             "D. 微氣泡酒"
           ],
           "correct": 2,
-          "explanation": "Marsala 是西西里著名的加烈酒，在發酵過程中加入中性烈酒以提升酒精度（約 17-20%），由英國商人 John Woodhouse 於 18 世紀發明，為海運設計。"
+          "explanation": "Marsala 是西西里著名的加烈酒，加入葡萄烈酒或酒精加烈（Fine 最低 17.5%、Superiore 與 Vergine 最低 18%）。1770 年代英國商人 John Woodhouse 改良當地的 vino perpetuo 並加烈外銷英國，使其聞名。"
         },
         {
           "type": "multiple",
@@ -204,6 +242,66 @@
             2
           ],
           "explanation": "Etna DOC 位於西西里 Etna 活火山斜坡，以 Nerello Mascalese 釀造細膩紅酒，近年被 Wine Spectator、Decanter 等媒體高度評價。Etna 主要釀造干型酒，非甜酒產區。"
+        },
+        {
+          "type": "single",
+          "question": "Grillo 是哪兩個品種的自然雜交？",
+          "options": [
+            "A. Carricante × Catarratto Bianco",
+            "B. Zibibbo × Carricante",
+            "C. Catarratto Bianco × Zibibbo",
+            "D. Catarratto Bianco × Grecanico Dorato"
+          ],
+          "correct": 2,
+          "explanation": "IWS：Grillo 是 Catarratto Bianco 與 Zibibbo（Muscat of Alexandria）的自然雜交，用於 Marsala 與現代清新的干白。"
+        },
+        {
+          "type": "single",
+          "question": "以下哪一個「不是」可用來釀造 Marsala 的葡萄？",
+          "options": [
+            "A. Catarratto",
+            "B. Grillo",
+            "C. Ansonica",
+            "D. Carricante"
+          ],
+          "correct": 3,
+          "explanation": "經典 Marsala 使用 Grillo、Catarratto、Inzolia（Ansonica）與 Damaschino；Carricante 是 Etna Bianco 的主要品種。"
+        },
+        {
+          "type": "single",
+          "question": "Etna 酒標上的「Contrada」指的是什麼？",
+          "options": [
+            "A. 傳統整枝系統",
+            "B. 小型地理分區",
+            "C. 一種散裝酒類別",
+            "D. 一種 Marsala 風格"
+          ],
+          "correct": 1,
+          "explanation": "Contrada 是類似小村落或街區的小型地理分區。2011 年 Etna DOC 正式採用 133 個歷史 contrada 作為可標示於酒標的 MGA。"
+        },
+        {
+          "type": "single",
+          "question": "Sicily 歷史上傳統使用的整枝系統是？",
+          "options": [
+            "A. Pergola",
+            "B. Alberello",
+            "C. Cordone Speronato",
+            "D. Alberata"
+          ],
+          "correct": 1,
+          "explanation": "Alberello（灌木式）適合炎熱乾燥的環境，產量低、糖分與萃取物高；但1980-90年代歐盟現代化計畫拔除大量 alberello，如今 Guyot 與 cordone speronato 佔 80%，alberello 不到 10%。"
+        },
+        {
+          "type": "single",
+          "question": "酒標上的「liquoroso」代表什麼？",
+          "options": [
+            "A. 一種義大利利口酒",
+            "B. 加烈葡萄酒",
+            "C. 以濃縮葡萄汁釀造的酒",
+            "D. 熟葡萄汁"
+          ],
+          "correct": 1,
+          "explanation": "Liquoroso 指加烈（fortified）葡萄酒，例如 Moscato di Pantelleria Liquoroso、Passito Liquoroso。熟葡萄汁是 mosto cotto，濃縮葡萄汁是 mosto concentrato。"
         }
       ]
     }

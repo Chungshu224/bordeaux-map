@@ -1,32 +1,32 @@
 <template>
   <div class="docg-map-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🗺️ Sicily 重要產區互動地圖' }}</h2>
-      <p class="slide-subtitle">點選按鈕查看各產區位置與詳細資訊</p>
+      <h2>{{ slide.title || t('italy.slides.sicilyMap.defaultTitle') }}</h2>
+      <p class="slide-subtitle">{{ t('italy.slides.mapCommon.subtitle') }}</p>
     </div>
 
     <!-- 按鈕列 -->
     <div class="zone-buttons">
       <button
-        v-for="z in ALL_ZONES"
+        v-for="z in allZones"
         :key="z.id"
         class="zone-btn"
         :class="[`tier-${z.tier}`, { active: selected === z.id }]"
         @click="selectZone(z.id)"
       >{{ z.emoji }} {{ z.shortName }}</button>
-      <button v-if="selected" class="reset-btn" @click="resetView">🔄 全覽</button>
+      <button v-if="selected" class="reset-btn" @click="resetView">{{ t('italy.slides.mapCommon.reset') }}</button>
     </div>
 
     <!-- 地圖 + 資訊 -->
     <div class="map-info-row">
       <div class="map-wrapper">
         <div ref="mapContainer" class="mapbox-container"></div>
-        <div v-if="loading" class="map-loading">地圖載入中…</div>
+        <div v-if="loading" class="map-loading">{{ t('italy.slides.mapCommon.loading') }}</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
-          <div class="legend-row"><span class="legend-dot tier-s"></span>頂級 — Etna 火山產區</div>
-          <div class="legend-row"><span class="legend-dot tier-a"></span>重要 DOCG / 歷史 DOC</div>
-          <div class="legend-row"><span class="legend-dot tier-b"></span>特色 DOC</div>
+          <div class="legend-row"><span class="legend-dot tier-s"></span>{{ t('italy.slides.sicilyMap.legend.s') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-a"></span>{{ t('italy.slides.sicilyMap.legend.a') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-b"></span>{{ t('italy.slides.sicilyMap.legend.b') }}</div>
         </div>
       </div>
 
@@ -37,24 +37,24 @@
         </div>
         <h3 class="info-name">{{ selectedInfo.name }}</h3>
         <div class="info-rows">
-          <div class="info-row" v-for="row in selectedInfo.details" :key="row.label">
+          <div class="info-row" v-for="row in selectedInfo.details" :key="row.key">
             <span class="info-label">{{ row.label }}</span>
             <span class="info-val">{{ row.value }}</span>
           </div>
         </div>
         <div class="info-desc">{{ selectedInfo.desc }}</div>
         <div class="info-pair" v-if="selectedInfo.pairing">
-          <span class="pair-label">🍽️ 配餐</span>{{ selectedInfo.pairing }}
+          <span class="pair-label">{{ t('italy.slides.mapCommon.pairing') }}</span>{{ selectedInfo.pairing }}
         </div>
         <div class="info-price" v-if="selectedInfo.price">
-          <span class="price-label">💶 參考價格</span>{{ selectedInfo.price }}
+          <span class="price-label">{{ t('italy.slides.mapCommon.price') }}</span>{{ selectedInfo.price }}
         </div>
       </div>
       <div class="info-panel info-empty" v-else>
         <div class="empty-icon">🌋</div>
-        <p>點選上方按鈕或地圖上的產區<br>查看位置與詳細資訊</p>
+        <p>{{ t('italy.slides.mapCommon.emptyLine1') }}<br>{{ t('italy.slides.mapCommon.emptyLine2') }}</p>
         <div class="empty-hint">
-          <div class="hint-row" v-for="z in ALL_ZONES" :key="z.id">
+          <div class="hint-row" v-for="z in allZones" :key="z.id">
             <span class="hint-dot" :class="`tier-${z.tier}`"></span>
             <span>{{ z.emoji }} {{ z.name }}</span>
           </div>
@@ -66,124 +66,88 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({ slide: { type: Object, default: () => ({}) } })
 
+const { t } = useI18n()
+
 // ── 產區資料 ─────────────────────────────────────────────────
-const ALL_ZONES = [
+// 文字（名稱、細節、描述、配餐、價格）放在 locales/*/italy.js 的 italy.slides.sicilyMap.zones.<id>，
+// 這裡只保留地理與樣式資料。rows：資訊面板要顯示的欄位，label 取自 italy.slides.mapCommon.labels.<key>
+const ZONES = [
   {
     id: 'etna',
-    name: 'Etna DOC',
-    shortName: 'Etna',
     emoji: '🌋',
     tier: 's',
-    tierLabel: '👑 頂級 DOC — 地中海的勃艮第',
     center: [15.003, 37.728],
     zoom: 11,
     color: '#5D1A00',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Etna DOC.geojson',
-    details: [
-      { label: '品種', value: '紅：Nerello Mascalese 80%+；白：Carricante 60%+' },
-      { label: '海拔', value: '400-1,100m，歐洲種植海拔最高的產區之一' },
-      { label: '土壤', value: '火山岩漿土（Basalto），礦物質豐富，幾乎無根瘤蚜病害' },
-      { label: '風格', value: '優雅高酸礦物感，Contrada 分區如 Burgundy Climat，越北坡越精緻' },
-      { label: '位置', value: 'Catania 省，Etna 火山四面坡，北坡為頂級核心' }
-    ],
-    desc: '被稱為「地中海的勃艮第」，Etna 的 Nerello Mascalese 在火山黑岩土上展現出類似 Pinot Noir 的細膩風格。Contrada（分區）文化反映不同坡面、海拔、土壤的風格差異，百年老藤（Pre-Phylloxera）更是珍寶。',
-    pairing: '烤魚、地中海燉蔬菜、野菇燉飯、羊肉料理',
-    price: '入門 €15-30 / Contrada 頂級 €50-200+'
+    rows: ['grape', 'altitude', 'soil', 'style', 'location'],
+    geojsonPath: '/italy/regions/sicily/geojson/DOC/Etna DOC.geojson'
   },
   {
     id: 'cerasuolo',
-    name: 'Cerasuolo di Vittoria DOCG',
-    shortName: 'Cerasuolo',
     emoji: '🏅',
     tier: 'a',
-    tierLabel: '⭐ Sicily 唯一 DOCG（2005年）',
     center: [14.540, 36.955],
     zoom: 11,
     color: '#B71C1C',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Vittoria DOC.geojson',
-    details: [
-      { label: '品種', value: 'Nero d\'Avola 50-70% + Frappato 30-50%，黃金混釀' },
-      { label: '認證', value: 'Sicily 唯一 DOCG，2005 年升格，Classico 次等級更嚴格' },
-      { label: '風格', value: '中等酒體、成熟櫻桃紅色（Cerasuolo 意為「櫻桃色」）、均衡優雅' },
-      { label: '代表酒莊', value: 'COS、Arianna Occhipinti、Valle dell\'Acate' },
-      { label: '位置', value: 'Ragusa 省，東南部 Vittoria 平原，石灰岩紅土' }
-    ],
-    desc: 'Nero d\'Avola 帶來結構深度，Frappato 帶來清新草莓花香，兩者的混釀創造出 Sicily 最具個性的紅酒。COS 酒莊（1980年）和 Arianna Occhipinti 是自然農法的先驅，將此產區推向國際視野。',
-    pairing: '烤雞、豬里肌、地中海燉菜（Caponata）、中等陳年起司',
-    price: '€15-45 / Classico €20-60'
+    rows: ['grape', 'certification', 'style', 'producers', 'location'],
+    geojsonPath: '/italy/regions/sicily/geojson/DOC/Vittoria DOC.geojson'
   },
   {
     id: 'marsala',
-    name: 'Marsala DOC',
-    shortName: 'Marsala',
     emoji: '🔶',
     tier: 'a',
-    tierLabel: '⭐ 歷史 DOC — 1773 年英國發明',
     center: [12.435, 37.800],
     zoom: 11,
     color: '#E65100',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Marsala DOC.geojson',
-    details: [
-      { label: '品種', value: '白：Grillo / Catarratto；紅：Pignatello / Calabrese（Nero d\'Avola）' },
-      { label: '工藝', value: '加入 Mistella（中性葡萄烈酒）+ Concia（濃縮葡萄液）' },
-      { label: '等級', value: 'Fine（1年）→ Superiore（2年）→ Superiore Riserva（4年）→ Vergine / Stravecchio（10年+）' },
-      { label: '甜度', value: 'Secco（干型）/ Semisecco / Dolce（甜型）' },
-      { label: '位置', value: 'Trapani 省，西岸 Marsala 港，鹽田與地中海微氣候' }
-    ],
-    desc: '1773 年英國商人 John Woodhouse 在 Marsala 港意外發現加烈葡萄酒的保存特性，開創義大利最著名的加烈酒傳統。Vergine 等級（無添加）代表最純粹的 Marsala 表達，陳年 Solera 系統賦予核果氧化風格。',
-    pairing: '烹飪（Chicken Marsala、Zabaione）/ 飲用：陳年起司、堅果、焦糖甜點',
-    price: 'Fine €8-15 / Vergine Riserva €25-60+'
+    rows: ['grape', 'method', 'tiers', 'sweetness', 'location'],
+    geojsonPath: '/italy/regions/sicily/geojson/DOC/Marsala DOC.geojson'
   },
   {
     id: 'pantelleria',
-    name: 'Pantelleria DOC',
-    shortName: 'Pantelleria',
     emoji: '🏝️',
     tier: 'b',
-    tierLabel: '💎 火山島 DOC — 風之島',
     center: [11.953, 36.780],
     zoom: 11.5,
     color: '#F57F17',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Pantelleria DOC.geojson',
-    details: [
-      { label: '品種', value: 'Zibibbo（Muscat of Alexandria）100%，葡萄乾甜酒' },
-      { label: '工藝', value: 'Passito 風乾工藝，葡萄風乾後釀製甜白酒，糖分極高' },
-      { label: '最高等級', value: 'Passito di Pantelleria（UNESCO 非物質文化遺產）' },
-      { label: '風格', value: '濃郁杏桃、蜂蜜、柑橘蜜餞、琥珀色，甜而不膩' },
-      { label: '位置', value: '突尼西亞對岸火山島，強烈 Sirocco 風，藤蔓匍匐地面' }
-    ],
-    desc: '位於突尼西亞北方 70km 的火山島，強烈 Sirocco 沙漠熱風迫使藤蔓以 Alberello（矮灌木）姿態貼地生長。Passito di Pantelleria 是義大利最頂級的甜白酒之一，Marco de Bartoli 是最具代表性的釀酒師。',
-    pairing: '杏仁甜點（Cassata）、烤無花果、藍起司（Gorgonzola）、餐後獨享',
-    price: 'Passito di Pantelleria €20-80 / 頂級 €100+'
+    rows: ['grape', 'method', 'wines', 'style', 'location'],
+    geojsonPath: '/italy/regions/sicily/geojson/DOC/Pantelleria DOC.geojson'
   },
   {
     id: 'noto',
-    name: 'Noto DOC',
-    shortName: 'Noto（Nero d\'Avola）',
     emoji: '🍇',
     tier: 'b',
-    tierLabel: '💎 特色 DOC — Nero d\'Avola 故鄉',
     center: [15.072, 36.888],
     zoom: 11,
     color: '#1A237E',
-    geojsonPath: '/italy/regions/sicily/geojson/DOC/Noto DOC.geojson',
-    details: [
-      { label: '品種', value: 'Nero d\'Avola 100%，Sicily 最重要的紅葡萄' },
-      { label: '風格', value: '深紫黑色、高單寧、飽滿酒體，黑莓、巧克力、甜香料' },
-      { label: '土壤', value: '石灰岩白土（Calcareo），炎熱乾燥，陽光充足' },
-      { label: '類比', value: '性格類似 Syrah / Cabernet，被稱為「南方的 Barolo」' },
-      { label: '位置', value: 'Siracusa 省，Avola / Noto 周邊，東南海岸炎熱區' }
-    ],
-    desc: 'Nero d\'Avola 的發源地，Avola 小鎮是這個品種的命名地。炎熱石灰岩土壤造就深邃的色澤與飽滿酒體。頂級版可陳年 10-15 年，展現皮革、乾果的複雜熟成香氣。Planeta、Donnafugata 是在此扎根的知名酒莊。',
-    pairing: '烤羊肉、燉牛肉（Ragù）、野豬肉、陳年硬質起司',
-    price: '€10-25 / 頂級 Nero d\'Avola €25-60'
+    rows: ['grape', 'style', 'soil', 'nearby', 'location'],
+    geojsonPath: '/italy/regions/sicily/geojson/DOC/Noto DOC.geojson'
   }
 ]
+
+// 依目前語系組出含文字的產區資料
+const allZones = computed(() => ZONES.map(z => {
+  const base = `italy.slides.sicilyMap.zones.${z.id}`
+  return {
+    ...z,
+    name: t(`${base}.name`),
+    shortName: t(`${base}.shortName`),
+    tierLabel: t(`${base}.tierLabel`),
+    details: z.rows.map(key => ({
+      key,
+      label: t(`italy.slides.mapCommon.labels.${key}`),
+      value: t(`${base}.${key}`)
+    })),
+    desc: t(`${base}.desc`),
+    pairing: t(`${base}.pairing`),
+    price: t(`${base}.price`)
+  }
+}))
 
 const TIER_STYLE = {
   s: { fill: '#5D1A00', line: '#FF6D00', fillOpacity: 0.32, lineWidth: 2.5 },
@@ -200,7 +164,7 @@ let map = null
 let markersArr = []
 
 const selectedInfo = computed(() =>
-  selected.value ? ALL_ZONES.find(z => z.id === selected.value) : null
+  selected.value ? allZones.value.find(z => z.id === selected.value) : null
 )
 
 // ── GeoJSON 非同步載入 ────────────────────────────────────────
@@ -220,8 +184,8 @@ async function fetchGeojson (z) {
 // ── 地圖操作 ─────────────────────────────────────────────────
 async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
-  const geojsonData = await Promise.all(ALL_ZONES.map(z => fetchGeojson(z)))
-  ALL_ZONES.forEach((z, i) => {
+  const geojsonData = await Promise.all(ZONES.map(z => fetchGeojson(z)))
+  ZONES.forEach((z, i) => {
     const gj = geojsonData[i]
     if (!gj) return
     const fillId = `fill-${z.id}`
@@ -241,7 +205,7 @@ async function highlightAll () {
     map.on('mouseleave', fillId, () => { map.getCanvas().style.cursor = '' })
   })
   // emoji 標記
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const el = document.createElement('div')
     el.innerHTML = z.emoji
     el.style.cssText = `font-size:16px;cursor:pointer;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));transition:transform 0.15s;`
@@ -254,9 +218,9 @@ async function highlightAll () {
 
 function selectZone (id) {
   selected.value = id
-  const info = ALL_ZONES.find(z => z.id === id)
+  const info = ZONES.find(z => z.id === id)
   if (!info || !map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     const active = z.id === id
     if (map.getLayer(`fill-${z.id}`)) {
@@ -272,7 +236,7 @@ function selectZone (id) {
 function resetView () {
   selected.value = null
   if (!map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', ts.fillOpacity)
     if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', ts.lineWidth)
@@ -283,7 +247,7 @@ function resetView () {
 function initMap () {
   if (!mapContainer.value) return
   const token = import.meta.env.VITE_MAPBOX_TOKEN
-  if (!token) { mapError.value = '未設定 Mapbox Token'; loading.value = false; return }
+  if (!token) { mapError.value = t('italy.slides.mapCommon.noToken'); loading.value = false; return }
   mapboxgl.accessToken = token
   map = new mapboxgl.Map({
     container: mapContainer.value,
@@ -295,7 +259,7 @@ function initMap () {
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
   map.on('load', async () => { await highlightAll(); loading.value = false })
-  map.on('error', e => { mapError.value = `地圖錯誤：${e.error?.message || '未知'}`; loading.value = false })
+  map.on('error', e => { mapError.value = t('italy.slides.mapCommon.mapError', { msg: e.error?.message || t('italy.slides.mapCommon.unknownError') }); loading.value = false })
 }
 
 onMounted(async () => { await nextTick(); initMap() })
