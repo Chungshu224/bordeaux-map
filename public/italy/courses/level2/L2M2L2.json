@@ -3,15 +3,15 @@
   "title": "Umbria 翁布里亞",
   "quiz": [
     {
-      "question": "Sagrantino 的單寧含量大約是多少？",
+      "question": "Umbria 第一個 DOCG 是？",
       "options": [
-        "1000-2000 mg/L",
-        "2500-3500 mg/L",
-        "5000-6000 mg/L",
-        "8000-10000 mg/L"
+        "Montefalco Sagrantino",
+        "Torgiano Rosso Riserva",
+        "Orvieto",
+        "Montefalco Rosso"
       ],
-      "answer": 2,
-      "explanation": "Sagrantino 的單寧含量約 5000-6000 mg/L，是世界上單寧含量最高的葡萄品種之一。"
+      "answer": 1,
+      "explanation": "Torgiano Rosso Riserva 原屬 Umbria 第一個 DOC Torgiano（1968），1990 年獨立為 Umbria 第一個 DOCG；Montefalco Sagrantino 則在 1992 年升格。"
     },
     {
       "question": "Sagrantino di Montefalco Passito 的釀造方式是？",
@@ -22,18 +22,18 @@
         "冰凍葡萄發酵"
       ],
       "answer": 1,
-      "explanation": "Passito 版本使用風乾（Appassimento）技術，將葡萄風乾 2-3 個月後發酵，釀成甜型酒。"
+      "explanation": "Passito 版本將葡萄風乾（Appassimento）至少 2 個月後發酵，最少陳年 37 個月（不強制木桶），是 Sagrantino 的傳統風格。"
     },
     {
-      "question": "Orvieto DOC 的主導品種是？",
+      "question": "Orvieto DOC 以哪些品種為主？",
       "options": [
-        "Trebbiano",
-        "Grechetto",
+        "Trebbiano 與 Verdicchio",
+        "Grechetto 和/或 Procanico（Trebbiano Toscano）",
         "Verdicchio",
         "Malvasia"
       ],
       "answer": 1,
-      "explanation": "Orvieto 以 Grechetto（40-60%）為主導品種，混合 Trebbiano Toscano 和其他品種。"
+      "explanation": "Orvieto 規定 Grechetto 和/或 Procanico（Trebbiano Toscano）合計至少 60%，常搭配 Malvasia Bianca Lunga、Verdello、Drupeggio。"
     },
     {
       "question": "Montefalco Rosso 與 Sagrantino di Montefalco 的主要差別是？",
@@ -44,7 +44,7 @@
         "單寧含量相同"
       ],
       "answer": 1,
-      "explanation": "Montefalco Rosso 使用 Sangiovese（60-70%）+ Sagrantino（10-15%）混釀，比純 Sagrantino 更易飲、價格更親民。"
+      "explanation": "Montefalco Rosso 以 Sangiovese（60-80%）為主、Sagrantino 佔 10-25%，最少陳年 18 個月；Montefalco Sagrantino DOCG 則是 100% Sagrantino、陳年 37 個月。"
     }
   ],
   "slides": [
@@ -56,7 +56,7 @@
     {
       "type": "content",
       "title": "💚 義大利的綠色心臟",
-      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Umbria（翁布里亞）是義大利唯一<strong>沒有海岸線的中部大區</strong>，被稱為<strong>「義大利的綠色心臟」</strong>（Cuore Verde d'Italia）。</p><p class=\"highlight\">Umbria 以<strong>Sagrantino di Montefalco</strong>（義大利單寧最高的紅酒之一）和<strong>Orvieto 白酒</strong>聞名。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🏔️</div><div class=\"fact-text\">丘陵地形為主<br>海拔 200-500m</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌳</div><div class=\"fact-text\">森林覆蓋率高<br>自然生態豐富</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\">2 DOCG<br>13 DOC</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏛️</div><div class=\"fact-text\">歷史名城<br>Assisi, Perugia</div></div></div></div>"
+      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Umbria（翁布里亞）是義大利中南部唯一<strong>不臨海的大區</strong>，也是<strong>義大利丘陵最多的大區</strong>，被稱為<strong>「義大利的綠色心臟」</strong>（Cuore Verde d'Italia）。</p><p class=\"highlight\">Umbria 以<strong>Montefalco Sagrantino</strong>（義大利單寧最強勁的紅酒之一）和<strong>Orvieto 白酒</strong>聞名。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🏔️</div><div class=\"fact-text\">義大利丘陵最多的大區<br>中南部唯一不臨海</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌳</div><div class=\"fact-text\">森林覆蓋率高<br>自然生態豐富</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\">2 DOCG<br>13 DOC</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏛️</div><div class=\"fact-text\">歷史名城<br>Assisi, Perugia</div></div></div></div>"
     },
     {
       "type": "umbria-docg-map",
@@ -65,17 +65,17 @@
     {
       "type": "content",
       "title": "🍇 Sagrantino - 義大利的單寧之王",
-      "content": "<div class=\"sagrantino-section\"><div class=\"sagrantino-intro\"><h3>💪 世界上單寧含量最高的葡萄品種之一</h3><p>Sagrantino 是 Umbria 獨有的紅葡萄品種，<strong>單寧含量極高、酒體強勁、陳年潛力驚人</strong>，與 Barolo、Barbaresco 齊名。</p><div class=\"tannin-comparison\"><h4>單寧含量比較（mg/L）</h4><div class=\"tannin-bars\"><div class=\"tannin-bar sagrantino\"><span>Sagrantino</span><div class=\"bar\" style=\"width:100%\">5000-6000</div></div><div class=\"tannin-bar nebbiolo\"><span>Nebbiolo</span><div class=\"bar\" style=\"width:65%\">3000-4000</div></div><div class=\"tannin-bar cabernet\"><span>Cabernet Sauvignon</span><div class=\"bar\" style=\"width:50%\">2500-3000</div></div><div class=\"tannin-bar sangiovese\"><span>Sangiovese</span><div class=\"bar\" style=\"width:45%\">2000-2500</div></div></div></div></div><div class=\"sagrantino-docg\"><h3>Sagrantino di Montefalco DOCG</h3><div class=\"docg-details\"><p><strong>位置：</strong>Montefalco 小鎮周圍</p><p><strong>品種：</strong>Sagrantino（100%）</p><p><strong>風格：</strong>極濃郁、高單寧、高酒精度（14-16%）</p><p><strong>風味：</strong>黑櫻桃、黑莓、李子、皮革、巧克力、野味、香料</p><p><strong>陳年要求：</strong>33 個月（含 12 個月橡木桶）</p><p><strong>陳年潛力：</strong>15-30 年</p></div></div></div>"
+      "content": "<div class=\"sagrantino-section\"><div class=\"sagrantino-intro\"><h3>💪 義大利單寧最強勁的葡萄之一</h3><p>Sagrantino 是 Umbria 的招牌紅葡萄，<strong>果皮厚、多酚含量極高、酒體強勁、陳年潛力驚人</strong>。歷史上主要釀成甜型 Passito，1960 年代一度幾近絕種。</p><div class=\"tannin-comparison\"><h4>單寧強度（相對比較）</h4><div class=\"tannin-bars\"><div class=\"tannin-bar sagrantino\"><span>Sagrantino</span><div class=\"bar\" style=\"width:100%\">極高</div></div><div class=\"tannin-bar nebbiolo\"><span>Nebbiolo</span><div class=\"bar\" style=\"width:80%\">很高</div></div><div class=\"tannin-bar cabernet\"><span>Cabernet Sauvignon</span><div class=\"bar\" style=\"width:65%\">高</div></div><div class=\"tannin-bar sangiovese\"><span>Sangiovese</span><div class=\"bar\" style=\"width:55%\">中高</div></div></div></div></div><div class=\"sagrantino-docg\"><h3>Montefalco Sagrantino DOCG</h3><div class=\"docg-details\"><p><strong>位置：</strong>Montefalco 與周邊 4 個村莊</p><p><strong>品種：</strong>100% Sagrantino</p><p><strong>風格：</strong>深寶石紅、強勁、高單寧、酒體飽滿、酒精度高</p><p><strong>風味：</strong>黑櫻桃、黑莓、李子、皮革、巧克力、野味、香料</p><p><strong>陳年要求：</strong>最少 37 個月（含 12 個月木桶）</p><p><strong>陳年潛力：</strong>15-30 年</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍷 Sagrantino 的兩種風格",
-      "content": "<div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h3>🍇 Sagrantino di Montefalco Secco</h3><div class=\"style-details\"><p class=\"style-badge dry-badge\">不甜 Dry</p><p><strong>風格：</strong>現代主流版本</p><p><strong>釀造：</strong>傳統發酵、橡木桶陳年</p><p><strong>單寧：</strong>極高、堅實、需陳年軟化</p><p><strong>酒精度：</strong>14-16%</p><p><strong>風味：</strong>黑色水果、皮革、煙草、巧克力、香料</p><p><strong>配餐：</strong>野味（野豬、鹿）、烤紅肉、陳年 Pecorino 起司</p><p><strong>適飲期：</strong>釀造後 5-10 年，可陳年 30 年</p></div></div><div class=\"style-card sweet\"><h3>🍇 Sagrantino di Montefalco Passito</h3><div class=\"style-details\"><p class=\"style-badge sweet-badge\">甜型 Sweet</p><p><strong>風格：</strong>傳統古老版本</p><p><strong>釀造：</strong>葡萄風乾（Appassimento）後發酵</p><p><strong>風乾時間：</strong>2-3 個月</p><p><strong>殘糖：</strong>50-100 g/L</p><p><strong>風味：</strong>乾果、無花果、黑巧克力、咖啡、甘草、葡萄乾</p><p><strong>配餐：</strong>巧克力甜點、藍紋起司、堅果塔</p><p><strong>特點：</strong>歷史上用於宗教儀式（名字來自 Sacro - 神聖）</p></div></div></div>"
+      "content": "<div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h3>🍇 Montefalco Sagrantino（Secco）</h3><div class=\"style-details\"><p class=\"style-badge dry-badge\">不甜 Dry</p><p><strong>風格：</strong>1980 年代中期起成為主流</p><p><strong>釀造：</strong>最少陳年 37 個月（含 12 個月木桶）；酒標不必標示「secco」</p><p><strong>單寧：</strong>極高、堅實、需陳年軟化</p><p><strong>酒精度：</strong>14-16%</p><p><strong>風味：</strong>黑色水果、皮革、煙草、巧克力、香料</p><p><strong>配餐：</strong>野味（野豬、鹿）、烤紅肉、陳年 Pecorino 起司</p><p><strong>適飲期：</strong>釀造後 5-10 年，可陳年 30 年</p></div></div><div class=\"style-card sweet\"><h3>🍇 Montefalco Sagrantino Passito</h3><div class=\"style-details\"><p class=\"style-badge sweet-badge\">甜型 Sweet</p><p><strong>風格：</strong>傳統古老版本</p><p><strong>釀造：</strong>葡萄風乾（Appassimento）後發酵</p><p><strong>風乾時間：</strong>最少 2 個月</p><p><strong>陳年：</strong>最少 37 個月（不強制木桶）</p><p><strong>風味：</strong>乾果、無花果、黑巧克力、咖啡、甘草、葡萄乾</p><p><strong>配餐：</strong>巧克力甜點、藍紋起司、堅果塔</p><p><strong>特點：</strong>Sagrantino 的傳統風格，甜美與土壤氣息由單寧平衡（名字據說來自 sacro「神聖」）</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "⚪ Orvieto DOC - Umbria 的經典白酒",
-      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🏰 古城 Orvieto 的白酒傳統</h3><p>Orvieto 是 Umbria 最知名的白酒產區，歷史可追溯至<strong>Etruscan 文明</strong>（公元前 8 世紀）。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🍇 品種組成</h4><ul><li><strong>Grechetto</strong> 40-60%（主導品種）</li><li><strong>Trebbiano Toscano</strong> 15-25%</li><li><strong>Verdello、Canaiolo Bianco、Malvasia</strong>（可選）</li></ul></div><div class=\"orvieto-card\"><h4>🍷 風格類型</h4><p><strong>Secco（不甜）：</strong>主流版本</p><p>風味：白花、青蘋果、杏仁、礦物</p><p>風格：清爽、中等酒體</p><hr><p><strong>Abboccato（微甜）：</strong>傳統風格</p><p>風味：蜂蜜、杏桃、白花</p><p>殘糖：10-30 g/L</p><hr><p><strong>Classico：</strong>核心產區，品質更高</p><p><strong>Superiore：</strong>陳年 12 個月，12% 酒精度</p></div><div class=\"orvieto-card\"><h4>🍽️ 配餐</h4><ul><li>🐟 淡水魚（Umbria 多河流湖泊）</li><li>🍝 Carbonara 培根蛋麵</li><li>🍄 松露料理（Umbria 產黑松露）</li><li>🧀 新鮮起司</li></ul></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🏰 古城 Orvieto 的白酒傳統</h3><p>Orvieto 是 Umbria 面積最大、產量最高、外銷最多的 DOC，歷史可追溯至<strong>Etruscan 文明</strong>（公元前 8 世紀）。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🍇 品種組成</h4><ul><li><strong>Grechetto 和/或 Procanico</strong>（Trebbiano Toscano）合計至少 60%</li><li>常見混調：<strong>Malvasia Bianca Lunga、Verdello、Drupeggio</strong></li><li>橫跨 Umbria 與 Lazio 的<strong>白酒專屬</strong>產區，大部分面積與產量在 Umbria</li></ul></div><div class=\"orvieto-card\"><h4>🍷 風格類型</h4><p><strong>Secco（不甜）：</strong>主流版本</p><p>風味：白花、青蘋果、杏仁、礦物</p><p>風格：清爽、中等酒體</p><hr><p><strong>Abboccato（微甜）：</strong>傳統風格</p><p>風味：蜂蜜、杏桃、白花</p><p>殘糖：10-30 g/L</p><hr><p><strong>Classico：</strong>核心產區，品質更高</p><p><strong>Superiore：</strong>規範更嚴格</p><hr><p><strong>甜型：</strong>Vendemmia Tardiva（晚摘）與 Muffa Nobile（貴腐）——Orvieto 是義大利少數能在樹上發展貴腐的產區</p></div><div class=\"orvieto-card\"><h4>🍽️ 配餐</h4><ul><li>🐟 淡水魚（Umbria 多河流湖泊）</li><li>🍝 Carbonara 培根蛋麵</li><li>🍄 松露料理（Umbria 產黑松露）</li><li>🧀 新鮮起司</li></ul></div></div></div>"
     },
     {
       "type": "image",
@@ -86,12 +86,17 @@
     {
       "type": "content",
       "title": "🍷 Montefalco Rosso DOC",
-      "content": "<div class=\"montefalco-rosso\"><div class=\"rosso-intro\"><h3>🍇 Sagrantino 的「小弟」</h3><p>Montefalco Rosso 使用<strong>Sangiovese + Sagrantino</strong>混釀，比 Sagrantino di Montefalco 更易飲、價格更親民，是<strong>了解 Sagrantino 風格的入門酒款</strong>。</p></div><div class=\"rosso-details\"><table><tbody><tr><th>項目</th><th>Montefalco Rosso DOC</th><th>Sagrantino di Montefalco DOCG</th></tr><tr><td><strong>品種</strong></td><td>Sangiovese 60-70%<br>Sagrantino 10-15%<br>其他品種</td><td>Sagrantino 100%</td></tr><tr><td><strong>風格</strong></td><td>中等至飽滿酒體<br>單寧中等</td><td>飽滿酒體<br>極高單寧</td></tr><tr><td><strong>陳年要求</strong></td><td>無<br>Riserva: 30 個月</td><td>33 個月<br>（含 12 個月橡木桶）</td></tr><tr><td><strong>酒精度</strong></td><td>12-13%</td><td>14-16%</td></tr><tr><td><strong>適飲期</strong></td><td>即飲 - 5 年</td><td>5-30 年</td></tr><tr><td><strong>價格</strong></td><td>€€</td><td>€€€-€€€€</td></tr></tbody></table></div></div>"
+      "content": "<div class=\"montefalco-rosso\"><div class=\"rosso-intro\"><h3>🍇 Sagrantino 的「小弟」</h3><p>Montefalco Rosso 使用<strong>Sangiovese + Sagrantino</strong>混釀，比 Sagrantino di Montefalco 更易飲、價格更親民，是<strong>了解 Montefalco 風土的入門酒款</strong>。Montefalco DOC 另有 Montefalco Bianco（最低 50% Trebbiano Spoletino）與 Montefalco Grechetto（最低 85% Grechetto）。</p></div><div class=\"rosso-details\"><table><tbody><tr><th>項目</th><th>Montefalco Rosso DOC</th><th>Montefalco Sagrantino DOCG</th></tr><tr><td><strong>品種</strong></td><td>Sangiovese 60-80%<br>Sagrantino 10-25%<br>其他紅葡萄最多 30%</td><td>Sagrantino 100%</td></tr><tr><td><strong>風格</strong></td><td>中等至飽滿酒體<br>單寧中等</td><td>飽滿酒體<br>極高單寧</td></tr><tr><td><strong>陳年要求</strong></td><td>最少 18 個月<br>Riserva：30 個月（含 12 個月木桶）</td><td>37 個月<br>（含 12 個月木桶）</td></tr><tr><td><strong>酒精度</strong></td><td>12-13%</td><td>14-16%</td></tr><tr><td><strong>適飲期</strong></td><td>即飲 - 5 年</td><td>5-30 年</td></tr><tr><td><strong>價格</strong></td><td>€€</td><td>€€€-€€€€</td></tr></tbody></table></div></div>"
     },
     {
       "type": "content",
       "title": "🍇 其他 Umbria 葡萄酒",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><h3>Torgiano Rosso Riserva DOCG</h3><div class=\"wine-info\"><p><strong>位置：</strong>Perugia 附近的 Torgiano</p><p><strong>品種：</strong>Sangiovese（70-100%），可混 Canaiolo</p><p><strong>風格：</strong>優雅、結構良好、陳年潛力佳</p><p><strong>特點：</strong>由 Lungarotti 酒莊推廣至世界</p><p><strong>陳年：</strong>3 年（含橡木桶）</p></div></div><div class=\"wine-card\"><h3>Grechetto（單一品種酒）</h3><div class=\"wine-info\"><p><strong>品種：</strong>Grechetto（100%）</p><p><strong>產區：</strong>Umbria 全區</p><p><strong>風格：</strong>果香豐富、酒體飽滿、杏仁香氣</p><p><strong>風味：</strong>白桃、杏桃、杏仁、礦物</p><p><strong>特點：</strong>比 Orvieto 混釀更濃郁</p></div></div><div class=\"wine-card\"><h3>Umbria IGT</h3><div class=\"wine-info\"><p><strong>特點：</strong>允許國際品種（Merlot、Cabernet、Chardonnay）</p><p><strong>風格：</strong>現代化、果香濃郁</p><p><strong>代表：</strong>Cervaro della Sala（Chardonnay + Grechetto，Antinori 出品）</p></div></div></div>"
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><h3>Torgiano Rosso Riserva DOCG</h3><div class=\"wine-info\"><p><strong>位置：</strong>Perugia 附近的 Torgiano</p><p><strong>品種：</strong>最低 70% Sangiovese</p><p><strong>風格：</strong>優雅、結構良好、陳年潛力佳</p><p><strong>特點：</strong>1990 年成為 Umbria 第一個 DOCG，規範以 Lungarotti 的 Vigna Monticchio 為範本</p><p><strong>陳年：</strong>最少 3 年</p></div></div><div class=\"wine-card\"><h3>Grechetto（單一品種酒）</h3><div class=\"wine-info\"><p><strong>品種：</strong>Grechetto（100%）</p><p><strong>兩種 Grechetto：</strong>Grechetto di Orvieto（Umbria 傳統白品種，輕盈、柑橘、清爽，可晚摘或貴腐）與 Grechetto di Todi（即 Pignoletto，原生於 Emilia-Romagna，酒體飽滿、酸度紮實），兩者基因並不相同</p><p><strong>風格：</strong>果香豐富、酒體飽滿、杏仁香氣</p><p><strong>風味：</strong>白桃、杏桃、杏仁、礦物</p><p><strong>特點：</strong>比 Orvieto 混釀更濃郁</p></div></div><div class=\"wine-card\"><h3>Umbria IGT</h3><div class=\"wine-info\"><p><strong>特點：</strong>涵蓋 Umbria 全區，風格與品質多元；國際品種以 Merlot 種植最廣</p><p><strong>風格：</strong>現代化、果香濃郁</p><p><strong>代表：</strong>Cervaro della Sala（Chardonnay + Grechetto，Antinori 出品）</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "📜 Umbria 法定產區全解（IWS 官方教材）",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h3>🏺 Torgiano Rosso Riserva DOCG</h3><p><strong>Giorgio Lungarotti：</strong>戰後義大利葡萄酒業最重要的人物之一，1962 年推出 Rubesco，並推動 Umbria 第一個 DOC——Torgiano（1968）成立。</p><p><strong>法規：</strong>原屬 Torgiano DOC，1990 年獨立為 Umbria 第一個 DOCG；規範以 Lungarotti 的 Vigna Monticchio 為範本；最低 70% Sangiovese、最少陳年 3 年。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h3>🍇 Montefalco Sagrantino DOCG ＆ Montefalco DOC</h3><p><strong>產區：</strong>兩者範圍相同，Montefalco 與周邊 4 個村莊；大陸性氣候，中央 Apennine 西側山麓，海拔 220-450m；土壤以湖相沉積的黃色砂土與砂質黏土為主。</p><p><strong>DOCG：</strong>兩種版本都須 100% Sagrantino。乾型最少陳年 37 個月（含 12 個月木桶），深寶石紅、強勁、高單寧、酒體飽滿、酒精度高、壽命長；Passito 最少風乾 2 個月、陳年 37 個月（不強制木桶），甜美與土壤氣息由單寧平衡。</p><p><strong>DOC 三個類別：</strong>Montefalco Rosso（Sangiovese 60-80%、Sagrantino 10-25%、其他紅葡萄最多 30%，最少 18 個月；Riserva 30 個月含 12 個月木桶）、Montefalco Bianco（最低 50% Trebbiano Spoletino）、Montefalco Grechetto（最低 85%）。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h3>⚪ Orvieto DOC</h3><p><strong>歷史：</strong>伊特魯里亞時期起就是名產區，古羅馬人推崇、中世紀受教廷喜愛；傳統風格是金黃色、微氣泡、柔和帶甜，abboccato 風格延續到 1950 年代，20 世紀下半葉轉向乾型。1931 年劃定產區，1971 年成立 DOC 時範圍擴大，原始產區稱為 Classico。</p><p><strong>產區：</strong>Orvieto 周邊丘陵，海拔 100-500m，受 Tevere、Paglia 河與 Bolsena、Corbara 湖影響，是義大利少數能在樹上發展貴腐的地方。</p><p><strong>法規：</strong>跨 Umbria 與 Lazio 的白酒產區；Grechetto 和/或 Procanico（Trebbiano Toscano）至少 60%，常搭配 Malvasia Bianca Lunga、Verdello、Drupeggio；有 Classico 子產區、規範更嚴的 Superiore，以及 Vendemmia Tardiva 與 Muffa Nobile 兩種甜型。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h3>🌿 Colli Martani、Spoleto、Todi 與 Umbria IGT</h3><p><strong>Colli Martani DOC：</strong>與 Montefalco 及部分 Todi、Spoleto 重疊，是 Grechetto 的故鄉；另有 Trebbiano Toscano、Sangiovese、Vernaccia Nera 與 Merlot、Cabernet Sauvignon、Chardonnay、Sauvignon 等國際品種。兩個子產區：Grechetto di Todi 與 Vernaccia di Cannara（Passito）。</p><p><strong>Spoleto DOC（2011）：</strong>為推廣 Trebbiano Spoletino 而設，與 Colli Martani、Montefalco 東側重疊；Bianco 最低 50% Trebbiano Spoletino，單一品種 Trebbiano Spoletino 最低 85%。</p><p><strong>Umbria IGT：</strong>涵蓋全區，風格與品質多元，Grechetto、Trebbiano Spoletino、Ciliegiolo、Sangiovese、Merlot、Cabernet Sauvignon 都有佳作。</p></div></div></div>"
     },
     {
       "type": "content",
@@ -101,42 +106,45 @@
     {
       "type": "content",
       "title": "🏛️ 歷史與文化傳承",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">⏳ <strong>從 Etruscan 文明到現代復興</strong>：Umbria 葡萄酒擁有超過 2800 年的釀酒歷史，是義大利文化遺產的重要組成部分。</p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">Etruscan</div><div class=\"timeline-content\"><h4>🏺 Etruscan 時期（公元前 8-3 世紀）</h4><ul><li><strong>起源：</strong>Orvieto 古城發現大量 Etruscan 酒窖遺跡，證明公元前 8 世紀已開始釀酒</li><li><strong>技術：</strong>使用陶罐發酵（Dolia），地下洞穴陳年系統（溫度穩定 12-14°C）</li><li><strong>證據：</strong>Orvieto Classico 區域發現 1200+ 個地下酒窖（Cantine）</li></ul></div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">中世紀</div><div class=\"timeline-content\"><h4>⛪ 中世紀宗教時期（11-15 世紀）</h4><ul><li><strong>Sagrantino 命名：</strong>來自拉丁文「Sacro」（神聖），用於教會聖禮儀式</li><li><strong>修道院釀造：</strong>Montefalco 的 Franciscan 修道院培育 Sagrantino，釀成 Passito 甜酒供彌撒使用</li><li><strong>文獻記載：</strong>1549 年首次書面記錄「Itinerary」提及 Sagrantino</li><li><strong>UNESCO 遺產：</strong>Assisi（聖方濟各大教堂）1200 年代與葡萄酒文化密切相關</li></ul></div></div><div class=\"timeline-item\"><div class=\"timeline-badge renaissance\">文藝復興</div><div class=\"timeline-content\"><h4>🎨 文藝復興時期（15-17 世紀）</h4><ul><li><strong>Orvieto 貿易高峰：</strong>1500 年代 Orvieto 白酒出口至羅馬教廷、佛羅倫斯</li><li><strong>教皇御用：</strong>Pope Paul III（1534-1549）指定 Orvieto 為教廷官方用酒</li><li><strong>運輸創新：</strong>Orvieto 山城建造 Pozzo di San Patrizio（聖派翠克井）運輸葡萄酒（深 62 公尺，雙螺旋樓梯）</li></ul></div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">現代復興</div><div class=\"timeline-content\"><h4>🚀 現代復興（1970-1990 年代）</h4><ul><li><strong>轉折點：</strong>1971 年 Arnaldo Caprai 購買 Montefalco 莊園，開始現代化改革</li><li><strong>科學研究：</strong>1988 年米蘭大學研究 Sagrantino 多酚結構，證明其單寧世界第一（5000-6000 mg/L）</li><li><strong>DOCG 認證：</strong>1992 年 Sagrantino di Montefalco 升級為 DOCG（義大利僅 74 個）</li><li><strong>國際認可：</strong>1990 年代 Robert Parker、Wine Spectator 開始評分，2005 年 Caprai 25 Anni 獲 Parker 96 分</li><li><strong>產量增長：</strong>1990: 200,000 瓶 → 2020: 1,500,000 瓶（成長 7.5 倍）</li></ul></div></div></div></div>"
+      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">⏳ <strong>從伊特魯里亞到 Lungarotti 與 Caprai</strong>：Orvieto 自古就是名酒產地，Montefalco 以 Sagrantino 甜酒聞名，20 世紀下半葉兩位關鍵人物讓 Umbria 躍上國際舞台。</p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">古代</div><div class=\"timeline-content\"><h4>🏺 伊特魯里亞與羅馬</h4><ul><li><strong>Orvieto：</strong>自伊特魯里亞時期就是著名產區，備受古羅馬人推崇</li><li><strong>傳統栽培：</strong>葡萄攀附在樹上的 alberata，與其他作物混種（coltura promiscua）</li></ul></div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">中世紀</div><div class=\"timeline-content\"><h4>⛪ 教宗與 Montefalco</h4><ul><li><strong>Orvieto：</strong>中世紀深受教廷喜愛；傳統風格是金黃色、微氣泡、柔和帶甜的 abboccato，一直延續到 1950 年代</li><li><strong>Montefalco：</strong>11 世紀起就是知名產區，Sagrantino 主要釀成甜型 Passito</li></ul></div></div><div class=\"timeline-item\"><div class=\"timeline-badge renaissance\">20世紀上半</div><div class=\"timeline-content\"><h4>📜 法規與轉型</h4><ul><li><strong>1920 年代：</strong>乾型 Sagrantino 首次正式出現</li><li><strong>1931：</strong>Orvieto 產區正式劃定</li><li><strong>1950-60 年代：</strong>Sagrantino 葡萄園所剩無幾；20 世紀下半葉 Orvieto 轉向乾型</li></ul></div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">現代復興</div><div class=\"timeline-content\"><h4>🚀 Lungarotti、DOC 與 Caprai</h4><ul><li><strong>1962：</strong>Giorgio Lungarotti 推出 Rubesco，奠定 Umbria 現代栽培與釀造的基礎</li><li><strong>1968：</strong>Torgiano 成為 Umbria 第一個 DOC；1971 年 Orvieto DOC 成立，範圍擴大，原始產區稱為 Classico</li><li><strong>1979：</strong>Montefalco DOC 成立；1980 年代中期乾型 Sagrantino 成為主流</li><li><strong>1990 / 1992：</strong>Torgiano Rosso Riserva 成為 Umbria 第一個 DOCG；Sagrantino di Montefalco 升格 DOCG</li><li><strong>1990 年代：</strong>Arnaldo Caprai 帶動 Sagrantino 人氣爆發；2011 年 Spoleto DOC 成立，推廣由 Cantina Novelli 救回的 Trebbiano Spoletino</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🌍 地質風土深度解析",
-      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p class=\"intro-highlight\">🪨 <strong>50 萬年地質演化塑造獨特風味</strong>：Umbria 位於義大利中部地質斷層帶，融合海洋沉積、火山活動、丘陵風土的複雜地質。</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🌊</div><h3>地質形成（Pliocene 上新世）</h3><ul><li><strong>時期：</strong>5.3-2.6 百萬年前</li><li><strong>成因：</strong>古地中海（Tethys Sea）退去後留下海洋沉積物</li><li><strong>化石證據：</strong>土壤含貝殼、珊瑚化石碎片</li><li><strong>礦物組成：</strong>鈣質（CaCO₃ 30-45%）+ 黏土（20-30%）+ 沙質（15-25%）</li></ul></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🔥</div><h3>Orvieto 火山土壤</h3><ul><li><strong>岩石類型：</strong>火山凝灰岩（Tufa）+ 玄武岩</li><li><strong>形成：</strong>120 萬年前 Vulsini 火山系統噴發</li><li><strong>特點：</strong>多孔性（排水極佳），富含鉀（K）、鎂（Mg）</li><li><strong>風味影響：</strong>礦物感、煙燻味、白花香</li></ul></div></div><h3>🍇 Montefalco vs Orvieto 風土對比</h3><div class=\"comparison-table\"><table><tbody><tr><th>風土因素</th><th>Montefalco（Sagrantino）</th><th>Orvieto（白酒）</th></tr><tr><td><strong>海拔高度</strong></td><td>220-500m（最佳 400-450m）</td><td>150-400m（山丘台地）</td></tr><tr><td><strong>土壤類型</strong></td><td>黏土-石灰岩混合（黏土 40-50%）</td><td>火山凝灰岩 + 沙質（排水極佳）</td></tr><tr><td><strong>氣候型態</strong></td><td>大陸性（日夜溫差 15-18°C）</td><td>地中海-大陸混合（溫差 12-15°C）</td></tr><tr><td><strong>年均溫</strong></td><td>13.5-14.5°C</td><td>14.5-15.5°C（較溫暖）</td></tr><tr><td><strong>年降雨量</strong></td><td>700-800mm（偏乾燥）</td><td>750-850mm</td></tr><tr><td><strong>生長季日照</strong></td><td>1850-1950 小時</td><td>1750-1850 小時</td></tr><tr><td><strong>風味特徵</strong></td><td>濃縮、高單寧、結構強；黑色水果、皮革、礦物</td><td>清爽、礦物感、花香；白花、杏仁、煙燻</td></tr></tbody></table></div><div class=\"terroir-key-point\"><h3>⛰️ 海拔對 Sagrantino 單寧發展的影響</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>220-350m</strong><p>溫暖、成熟快、單寧較柔和、果味豐富、酒精度高（15-16%）</p></div><div class=\"kp-box\"><strong>350-450m ⭐ 最佳平衡帶</strong><p>單寧結構完整、酸度活躍、陳年潛力最佳（15-30 年）</p></div><div class=\"kp-box\"><strong>450-500m</strong><p>冷涼、成熟慢、單寧緊實、優雅風格、需更長陳年（酸度 6.0-6.5 g/L）</p></div><div class=\"kp-box\"><strong>科學數據</strong><p>海拔每上升 100m，單寧成熟期延後 7-10 天，多酚含量增加 8-12%</p></div></div></div></div>"
+      "title": "🌍 地形、氣候與土壤（IWS 官方教材）",
+      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p class=\"intro-highlight\">🏔️ <strong>義大利丘陵最多的大區</strong>：內陸位置與海拔造就從西側地中海型到東側大陸型的氣候過渡，Trasimeno 湖與 Tevere 河帶來調節。</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">⛰️</div><h3>地形與氣候</h3><ul><li><strong>山脈：</strong>東側為中央 Apennine 山脈，西側為次 Apennine 山地（Subappennini），中部為 Monti Martani</li><li><strong>水系：</strong>Tevere（Tiber）河縱貫全區；西側有 Trasimeno 湖</li><li><strong>氣候：</strong>內陸與海拔影響，由西側地中海型過渡到東側大陸型；Trasimeno 湖與 Tevere 河有調節作用</li></ul></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🪨</div><h3>土壤分布</h3><ul><li><strong>中部：</strong>古 Tiberino 湖留下的沖積與湖相沉積</li><li><strong>西南部：</strong>海洋起源的砂、礫石與黏土</li><li><strong>北半部：</strong>砂岩、泥灰岩與黏土</li><li><strong>Orvieto 周邊：</strong>火山土壤（凝灰岩 tufo、玄武岩、火山碎屑）</li></ul></div></div><h3>🍇 Montefalco vs Orvieto 風土對比</h3><div class=\"comparison-table\"><table><tbody><tr><th>風土因素</th><th>Montefalco（Sagrantino）</th><th>Orvieto（白酒）</th></tr><tr><td><strong>海拔高度</strong></td><td>220-450m</td><td>100-500m</td></tr><tr><td><strong>位置</strong></td><td>中央 Apennine 西側山麓，Montefalco 與周邊 4 個村莊</td><td>Orvieto 周邊丘陵，受 Tevere、Paglia 河與 Bolsena、Corbara 湖影響</td></tr><tr><td><strong>土壤類型</strong></td><td>以湖相沉積為主：黃色砂土與砂質黏土</td><td>南部火山土（凝灰岩、玄武岩）；中北部黏土；東北部富含海洋化石的砂土；河岸沖積土</td></tr><tr><td><strong>氣候型態</strong></td><td>大陸性</td><td>河流與湖泊調節，是義大利少數能在樹上發展貴腐的地方</td></tr><tr><td><strong>風味特徵</strong></td><td>濃縮、高單寧、結構強；黑色水果、皮革</td><td>清爽、柑橘、礦物；甜型帶蜂蜜與貴腐風味</td></tr></tbody></table></div><div class=\"terroir-key-point\"><h3>🍽️ Umbria 在地美食</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Tartufi di Norcia</strong><p>Norcia 黑松露</p></div><div class=\"kp-box\"><strong>Lenticchie di Castelluccio</strong><p>Castelluccio 扁豆</p></div><div class=\"kp-box\"><strong>Sopressata</strong><p>Umbria 風乾臘腸</p></div><div class=\"kp-box\"><strong>Crostini</strong><p>雞肝醬烤麵包片</p></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🧬 Sagrantino 品種科學與克隆",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🔬 DNA 研究：Umbria 的孤立品種</h3><div class=\"research-content\"><div><h4>遺傳身份</h4><ul class=\"research-text\"><li><strong>DNA 分析：</strong>2004 年 University of Milan 研究確認 Sagrantino 為獨立品種</li><li><strong>遺傳關係：</strong>未發現任何親緣品種（非 Sangiovese 系統）</li><li><strong>起源推測：</strong>可能來自古希臘或小亞細亞，中世紀已完全本土化</li><li><strong>地理分佈：</strong>99.5% 種植於 Montefalco 區域（280 公頃）</li></ul></div><div><h4>基因特徵</h4><ul class=\"research-text\"><li><strong>染色體標記：</strong>SSR markers 顯示極低遺傳多樣性（近親繁殖 5+ 世紀）</li><li><strong>突變穩定：</strong>自然突變率極低，品種特性高度穩定</li><li><strong>克隆選育：</strong>1980-1990 年代 University of Milan + Vivai Cooperativi Rauscedo (VCR) 選育官方克隆</li></ul></div></div></div><div class=\"aging-science\"><h3>🔴 多酚結構：單寧之王的秘密</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>總多酚</h4><p><strong>5000-6000 mg/L</strong></p><p>世界第一</p></div><div class=\"science-card\"><h4>花青素</h4><p><strong>800-1200 mg/L</strong></p><p>深紫色來源</p></div><div class=\"science-card\"><h4>原花青素</h4><p><strong>3500-4500 mg/L</strong></p><p>澀感核心</p></div></div><p class=\"science-note\">化學結構：Sagrantino 的原花青素（Proanthocyanidins）聚合度高（平均 DP = 6-8），形成極強澀感，需 10-20 年陳年才能聚合軟化。</p></div><h3>🌱 官方克隆特性比較</h3><div class=\"comparison-table\"><table><tbody><tr><th>克隆編號</th><th>選育年份</th><th>產量</th><th>單寧強度</th><th>風格傾向</th><th>適用性</th></tr><tr><td><strong>VCR 205</strong></td><td>1992</td><td>中-高（9-11 t/ha）</td><td>⭐⭐⭐⭐（極高）</td><td>結構強勁、濃縮；黑色水果、皮革</td><td>Secco 干型；長期陳年</td></tr><tr><td><strong>VCR 421</strong></td><td>1995</td><td>中（7-9 t/ha）</td><td>⭐⭐⭐⭐⭐（超高）</td><td>單寧最高、緊實；礦物、香料</td><td>頂級酒款；20-30 年陳年</td></tr><tr><td><strong>VCR 74</strong></td><td>1998</td><td>高（10-12 t/ha）</td><td>⭐⭐⭐（高）</td><td>果味豐富、圓潤；紅色水果、較早熟</td><td>易飲風格；5-10 年陳年</td></tr></tbody></table></div><div class=\"biological-traits\"><h3>🍇 Sagrantino 葡萄特性</h3><div class=\"traits-grid\"><div class=\"trait-card\"><h4>🍇 果皮厚度</h4><ul><li><strong>比 Sangiovese 厚 3 倍</strong></li><li>皮重比 15-18%（Sangiovese 僅 5-7%）</li><li>高單寧與色素來源</li></ul></div><div class=\"trait-card\"><h4>⏰ 成熟期</h4><ul><li><strong>晚熟品種</strong>，10 月中旬採收</li><li>比 Sangiovese 晚 20-25 天</li><li>需熱量 2050-2150 GDD</li></ul></div><div class=\"trait-card\"><h4>🍷 酒精潛力</h4><ul><li><strong>自然酒精度 14-16%</strong></li><li>採收糖分 24-27° Brix</li><li>無需加糖（Chaptalisation）</li></ul></div></div></div></div>"
+      "title": "🍇 Umbria 品種全解析（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🔴 紅葡萄</h3><div class=\"research-content\"><div><h4>Sangiovese</h4><ul class=\"research-text\"><li>Umbria 種植最廣的品種（約 20%），被視為傳統品種</li><li>可單一品種，也常與 Sagrantino、Merlot、Cabernet Sauvignon 混調</li><li>Torgiano Rosso Riserva 與 Montefalco Rosso 的主力</li></ul></div><div><h4>Sagrantino</h4><ul class=\"research-text\"><li>Umbria 的招牌紅葡萄，原生於此</li><li>果皮厚、多酚含量高，歷史上用來釀甜型 Passito</li><li>1960 年代幾近絕種，後因乾型 Sagrantino 而復興</li></ul></div></div></div><div class=\"aging-science\"><h3>⚪ 白葡萄</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>Grechetto di Orvieto</h4><p><strong>Umbria 傳統白品種</strong></p><p>輕盈、柑橘、清爽；可晚摘或貴腐；Orvieto 的主力</p></div><div class=\"science-card\"><h4>Grechetto di Todi</h4><p><strong>= Pignoletto／Grechetto Gentile</strong></p><p>原生於 Emilia-Romagna；酒體飽滿、酸度紮實，也用於氣泡酒；Todi、Colli Martani、Montefalco</p></div><div class=\"science-card\"><h4>Trebbiano Spoletino</h4><p><strong>Umbria 原生</strong></p><p>20 世紀幾近絕種，由 Cantina Novelli 救回；清爽酸度、中等至飽滿酒體；Spoleto DOC、Montefalco Bianco DOC、Umbria IGT</p></div></div><p class=\"science-note\">⚠️ Grechetto di Orvieto 與 Grechetto di Todi 基因並不相同。Umbria 所說的 Procanico 就是 Trebbiano Toscano。</p></div><h3>🌍 國際品種</h3><div class=\"comparison-table\"><table><tbody><tr><th>重點</th><th>說明</th></tr><tr><td><strong>比例</strong></td><td>約佔種植面積 20%</td></tr><tr><td><strong>發展</strong></td><td>1980-90 年代大量引進；多數 Umbria DOC 允許國際品種單獨或混調</td></tr><tr><td><strong>最廣</strong></td><td>Merlot 是種植最廣的國際品種，另有 Cabernet Sauvignon、Chardonnay、Sauvignon Blanc</td></tr><tr><td><strong>趨勢</strong></td><td>如今市場興趣轉回原生與傳統品種</td></tr></tbody></table></div><div class=\"biological-traits\"><h3>🍇 其他在地品種</h3><div class=\"traits-grid\"><div class=\"trait-card\"><h4>🔴 Ciliegiolo</h4><ul><li>Umbria IGT 常見的佳作品種</li></ul></div><div class=\"trait-card\"><h4>🔴 Gamay del Trasimeno</h4><ul><li>名稱是 Gamay，其實是 Cannonau（Grenache）的生物型</li></ul></div><div class=\"trait-card\"><h4>🔴 Vernaccia Nera</h4><ul><li>Colli Martani 的 Vernaccia di Cannara 子產區用它釀 Passito</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍷 釀造工藝演變",
-      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">⚗️ <strong>從傳統到現代：單寧管理的革命</strong>：1980-1990 年代 Arnaldo Caprai 引領釀造革新，將 Sagrantino 從粗獷野性轉變為優雅強勁。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🏺 傳統工藝（1950-1980）</h4><ul><li><strong>發酵容器：</strong>Slavonian 大橡木桶（Botti）5000-10000L，使用 20-50 年老桶，幾乎無橡木味</li><li><strong>浸皮時間：</strong>30-40 天超長浸漬 → 萃取過度，單寧粗糙苦澀</li><li><strong>陳年時間：</strong>大橡木桶 3-5 年，氧化緩慢，需極長時間才能飲用</li><li><strong>澄清過濾：</strong>不過濾或粗略過濾，酒液混濁、沉澱物多</li><li><strong>風格：</strong>野性、粗獷、單寧如砂紙，需陳年 20-30 年，品質不穩定</li></ul></div><div class=\"method-card modern\"><h4>🔬 現代工藝（1990-現在）</h4><ul><li><strong>發酵容器：</strong>溫控不鏽鋼槽 + 法國橡木桶（Barriques 225L），控溫 26-28°C、微氧化</li><li><strong>浸皮管理：</strong>20-25 天控制浸漬 + Délestage 淋皮法，每日淋皮 2-3 次溫和萃取</li><li><strong>陳年組合：</strong>法國小橡木桶 12-18 個月 + 大桶 6-12 個月，新桶比例 30-50%</li><li><strong>單寧聚合：</strong>Micro-oxygenation 微氧化，加速單寧-花青素聚合，5-8 年可飲</li><li><strong>風格：</strong>優雅、平衡、單寧絲滑，5-10 年即可享受，陳年潛力 20-30 年</li></ul></div></div></div><div class=\"flavor-evolution\"><h3>🍇 Passito 傳統風乾技術</h3><div class=\"evolution-timeline\"><div class=\"evo-stage stage-1\"><div class=\"flavor-icon\">1️⃣</div><div class=\"stage-year\">採收選果</div><div class=\"stage-flavors\"><p>10 月中旬手工採摘，選擇完美果串</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-2\"><div class=\"flavor-icon\">2️⃣</div><div class=\"stage-year\">風乾過程</div><div class=\"stage-flavors\"><p>2-3 個月，竹簾或木架，通風室 15-18°C</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-3\"><div class=\"flavor-icon\">3️⃣</div><div class=\"stage-year\">重量損失</div><div class=\"stage-flavors\"><p>30-40% 水分蒸發，糖分濃縮至 28-32° Brix</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-4\"><div class=\"flavor-icon\">4️⃣</div><div class=\"stage-year\">發酵陳年</div><div class=\"stage-flavors\"><p>緩慢發酵 30-40 天，保留 50-100g/L 殘糖，橡木桶陳年 24+ 個月</p></div></div></div></div><h3>🪵 橡木桶選擇與風格影響</h3><div class=\"comparison-table\"><table><tbody><tr><th>橡木類型</th><th>容量</th><th>氧化速度</th><th>風味貢獻</th><th>價格區間</th><th>風格</th></tr><tr><td><strong>法國 Allier 橡木</strong>（新桶 50%）</td><td>225L Barrique</td><td>快（高表面積）</td><td>香草、烤麵包、香料、可可</td><td>€100-200+（頂級）</td><td>現代、優雅、國際風格</td></tr><tr><td><strong>Slavonian 大橡木桶</strong>（15+ 年老桶）</td><td>5000-10000L Botte</td><td>極慢（低表面積）</td><td>幾乎無橡木味、保留純淨果香</td><td>€40-80（傳統）</td><td>傳統、野性、品種表現</td></tr><tr><td><strong>混合陳年</strong>（法桶 + 大桶）</td><td>225L + 5000L 組合</td><td>中等（平衡）</td><td>香料、果香平衡、複雜度高</td><td>€50-100（主流）</td><td>⭐ 平衡、傳統與現代融合</td></tr></tbody></table></div></div>"
+      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">⚗️ <strong>從傳統到現代：單寧管理的革命</strong>：1980-1990 年代 Arnaldo Caprai 引領釀造革新，將 Sagrantino 從粗獷野性轉變為優雅強勁。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🏺 傳統工藝（1950-1980）</h4><ul><li><strong>發酵容器：</strong>Slavonian 大橡木桶（Botti）5000-10000L，使用 20-50 年老桶，幾乎無橡木味</li><li><strong>浸皮時間：</strong>30-40 天超長浸漬 → 萃取過度，單寧粗糙苦澀</li><li><strong>陳年時間：</strong>大橡木桶 3-5 年，氧化緩慢，需極長時間才能飲用</li><li><strong>澄清過濾：</strong>不過濾或粗略過濾，酒液混濁、沉澱物多</li><li><strong>風格：</strong>野性、粗獷、單寧如砂紙，需陳年 20-30 年，品質不穩定</li></ul></div><div class=\"method-card modern\"><h4>🔬 現代工藝（1990-現在）</h4><ul><li><strong>發酵容器：</strong>溫控不鏽鋼槽 + 法國橡木桶（Barriques 225L），控溫 26-28°C、微氧化</li><li><strong>浸皮管理：</strong>20-25 天控制浸漬 + Délestage 淋皮法，每日淋皮 2-3 次溫和萃取</li><li><strong>陳年組合：</strong>法國小橡木桶 12-18 個月 + 大桶 6-12 個月，新桶比例 30-50%</li><li><strong>單寧聚合：</strong>Micro-oxygenation 微氧化，加速單寧-花青素聚合，5-8 年可飲</li><li><strong>風格：</strong>優雅、平衡、單寧絲滑，5-10 年即可享受，陳年潛力 20-30 年</li></ul></div></div></div><div class=\"flavor-evolution\"><h3>🍇 Passito 傳統風乾技術</h3><div class=\"evolution-timeline\"><div class=\"evo-stage stage-1\"><div class=\"flavor-icon\">1️⃣</div><div class=\"stage-year\">採收選果</div><div class=\"stage-flavors\"><p>10 月中旬手工採摘，選擇完美果串</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-2\"><div class=\"flavor-icon\">2️⃣</div><div class=\"stage-year\">風乾過程</div><div class=\"stage-flavors\"><p>最少 2 個月，在竹簾或木架上風乾</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-3\"><div class=\"flavor-icon\">3️⃣</div><div class=\"stage-year\">重量損失</div><div class=\"stage-flavors\"><p>水分蒸發，糖分與風味濃縮</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-4\"><div class=\"flavor-icon\">4️⃣</div><div class=\"stage-year\">發酵陳年</div><div class=\"stage-flavors\"><p>緩慢發酵、保留殘糖；最少陳年 37 個月（不強制木桶）</p></div></div></div></div><h3>🪵 橡木桶選擇與風格影響</h3><div class=\"comparison-table\"><table><tbody><tr><th>橡木類型</th><th>容量</th><th>氧化速度</th><th>風味貢獻</th><th>價格區間</th><th>風格</th></tr><tr><td><strong>法國 Allier 橡木</strong>（新桶 50%）</td><td>225L Barrique</td><td>快（高表面積）</td><td>香草、烤麵包、香料、可可</td><td>€100-200+（頂級）</td><td>現代、優雅、國際風格</td></tr><tr><td><strong>Slavonian 大橡木桶</strong>（15+ 年老桶）</td><td>5000-10000L Botte</td><td>極慢（低表面積）</td><td>幾乎無橡木味、保留純淨果香</td><td>€40-80（傳統）</td><td>傳統、野性、品種表現</td></tr><tr><td><strong>混合陳年</strong>（法桶 + 大桶）</td><td>225L + 5000L 組合</td><td>中等（平衡）</td><td>香料、果香平衡、複雜度高</td><td>€50-100（主流）</td><td>⭐ 平衡、傳統與現代融合</td></tr></tbody></table></div></div>"
     },
     {
       "type": "content",
-      "title": "🗺️ Montefalco 子產區與 Cru 體系",
-      "content": "<div class=\"terroir-intro\"><p class=\"intro-highlight\">🍇 <strong>600 公頃中的風土差異</strong>：Montefalco DOCG 雖然僅 600 公頃，但海拔、土壤、微氣候造就顯著風土差異。</p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h4>⛰️ Montefalco Village Center</h4><p><strong>海拔：</strong>450-500m（最高）</p><p><strong>土壤：</strong>黏土-石灰岩、排水佳</p><p><strong>氣候：</strong>溫差大（18°C）、日照充足</p><div class=\"mf-style\"><strong>風格：</strong>結構最強、單寧最緊實；黑櫻桃、石墨、礦物感；陳年潛力 20-30 年</div><p class=\"mf-prod\"><strong>代表酒莊：</strong>Caprai、Antonelli、Adanti</p></div><div class=\"mf-zone warm\"><h4>🌞 San Marco Zone</h4><p><strong>海拔：</strong>380-420m</p><p><strong>土壤：</strong>黏土-砂質混合</p><p><strong>氣候：</strong>溫暖、南向坡</p><div class=\"mf-style\"><strong>風格：</strong>果味豐富、單寧圓潤；黑莓、李子、甘草；酒精度較高（15-16%）；陳年潛力 15-20 年</div><p class=\"mf-prod\"><strong>代表酒莊：</strong>Antonelli San Marco</p></div><div class=\"mf-zone cool\"><h4>🌬️ Gualdo Cattaneo Area</h4><p><strong>海拔：</strong>350-400m</p><p><strong>土壤：</strong>富含石灰岩、貧瘠</p><p><strong>氣候：</strong>北向、冷涼風影響</p><div class=\"mf-style\"><strong>風格：</strong>優雅、精緻、高酸度；紅色水果、紫羅蘭、香料；單寧細膩、需陳年；陳年潛力 20-25 年</div><p class=\"mf-prod\"><strong>代表酒莊：</strong>Perticaia、Scacciadiavoli</p></div><div class=\"mf-zone plain\"><h4>🌾 Bevagna Plains</h4><p><strong>海拔：</strong>220-300m（最低）</p><p><strong>地形：</strong>平緩丘陵、河谷影響</p><p><strong>土壤：</strong>沖積土、肥沃</p><div class=\"mf-style\"><strong>風格：</strong>柔和、易飲、單寧較軟；紅色水果、花香；適合早期飲用；陳年潛力 10-15 年</div><p class=\"mf-prod\"><strong>代表酒莊：</strong>Paolo Bea（自然酒）</p></div></div><h3>⭐ 非官方「Cru」單一園體系</h3><p class=\"science-note\">雖然義大利法規不承認 Montefalco 的 Cru 系統，但頂級酒莊已標註單一園名稱，獲市場認可。</p><div class=\"comparison-table\"><table><tbody><tr><th>「Cru」單一園</th><th>酒莊</th><th>海拔</th><th>面積</th><th>風格定位</th><th>價格</th></tr><tr><td><strong>25 Anni</strong></td><td>Caprai</td><td>420m</td><td>5 ha</td><td>旗艦款、結構強勁；Parker 96 分</td><td>€120-150</td></tr><tr><td><strong>Collepiano</strong></td><td>Antonelli</td><td>300m</td><td>9 ha</td><td>優雅、傳統風格；大橡木桶陳年</td><td>€60-80</td></tr><tr><td><strong>Pagliaro</strong></td><td>Paolo Bea</td><td>280m</td><td>3 ha</td><td>自然酒、野性；零添加</td><td>€100-130</td></tr><tr><td><strong>Arquata</strong></td><td>Adanti</td><td>420m</td><td>4 ha</td><td>精緻、長陳年；高海拔表現</td><td>€70-90</td></tr></tbody></table></div>"
+      "title": "🗺️ Montefalco 產區與酒款",
+      "content": "<div class=\"terroir-intro\"><p class=\"intro-highlight\">🍇 <strong>Montefalco 與周邊 4 個村莊</strong>：Montefalco Sagrantino DOCG 與 Montefalco DOC 範圍完全相同，位於中央 Apennine 西側山麓，海拔 220-450m。</p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h4>⛰️ Montefalco</h4><p><strong>地位：</strong>產區核心，被稱為「Umbria 的陽台」</p><p><strong>土壤：</strong>湖相沉積的黃色砂土與砂質黏土</p><div class=\"mf-style\"><strong>角色：</strong>Sagrantino 的歷史中心，11 世紀起即為知名產區</div><p class=\"mf-prod\"><strong>代表酒莊：</strong>Arnaldo Caprai、Paolo Bea、Antonelli、Scacciadiavoli</p></div><div class=\"mf-zone warm\"><h4>🏛️ Bevagna</h4><p><strong>位置：</strong>Montefalco 西北側</p><p><strong>地形：</strong>較平緩的丘陵與谷地</p><div class=\"mf-style\"><strong>角色：</strong>產區 5 個村莊之一</div><p class=\"mf-prod\"><strong>代表酒莊：</strong>Adanti（Arquata）</p></div><div class=\"mf-zone cool\"><h4>🌬️ Gualdo Cattaneo</h4><p><strong>位置：</strong>Montefalco 西側</p><p><strong>地形：</strong>丘陵</p><div class=\"mf-style\"><strong>角色：</strong>產區 5 個村莊之一</div><p class=\"mf-prod\"><strong>備註：</strong>Montefalco 西側的丘陵地帶</p></div><div class=\"mf-zone plain\"><h4>🌾 Giano dell’Umbria ＆ Castel Ritaldi</h4><p><strong>位置：</strong>Montefalco 南側與西南側</p><p><strong>地形：</strong>丘陵</p><div class=\"mf-style\"><strong>角色：</strong>產區其餘 2 個村莊</div><p class=\"mf-prod\"><strong>備註：</strong>與 Montefalco、Bevagna、Gualdo Cattaneo 合為 5 個村莊</p></div></div><h3>⭐ 代表性單一園與旗艦酒款</h3><p class=\"science-note\">義大利法規沒有 Montefalco 的 Cru 分級，但頂級酒莊會以單一園或旗艦名稱標示酒款。</p><div class=\"comparison-table\"><table><tbody><tr><th>酒款</th><th>酒莊</th><th>風格定位</th></tr><tr><td><strong>25 Anni</strong></td><td>Arnaldo Caprai</td><td>旗艦款、結構強勁、現代風格</td></tr><tr><td><strong>Collepiano</strong></td><td>Arnaldo Caprai</td><td>經典 Sagrantino</td></tr><tr><td><strong>Pagliaro</strong></td><td>Paolo Bea</td><td>自然派、低干預、野性</td></tr><tr><td><strong>Arquata</strong></td><td>Adanti</td><td>精緻、長陳年</td></tr></tbody></table></div>"
     },
     {
       "type": "content",
       "title": "🏆 傳奇名莊巡禮",
-      "content": "<div class=\"variety-intro\"><p class=\"intro-highlight\">🍷 <strong>Sagrantino 的推手與守護者</strong>：從現代化先鋒 Caprai 到自然酒傳奇 Paolo Bea，Montefalco 的酒莊各有風格。</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\"><div class=\"up-badge\">AC</div><p class=\"up-est\">est. 1971</p></div><div class=\"up-body\"><h4>Arnaldo Caprai 🚀</h4><p><strong>地位：</strong>Sagrantino 現代化之父、品質革命推動者</p><p><strong>創新：</strong>1980 年代引入法國橡木桶、溫控發酵、克隆選育研究</p><p><strong>科研合作：</strong>與米蘭大學合作研究 Sagrantino 多酚結構（1988-1995）</p><p><strong>面積：</strong>136 公頃（Montefalco 最大）｜<strong>旗艦：</strong>25 Anni（紀念 25 週年）</p><div class=\"up-wines\"><p>• Montefalco Sagrantino：€30-40（入門）</p><p>• Collepiano Riserva：€60-80（精選）</p><p>• <strong>25 Anni：</strong>€120-150（旗艦，Parker 96 分）</p></div><p class=\"up-tip\">陳年建議：入門款 5-10 年 ｜ Riserva 10-20 年 ｜ 25 Anni 20-30 年</p></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\"><div class=\"up-badge\">PB</div><p class=\"up-est\">est. 1500s</p></div><div class=\"up-body\"><h4>Paolo Bea 🌿</h4><p><strong>地位：</strong>自然酒運動（Natural Wine）的義大利傳奇</p><p><strong>哲學：</strong>生物動力農法、零添加（無硫、無過濾、自然酵母）</p><p><strong>特點：</strong>極長浸皮（40-60 天）、大橡木桶陳年、野性風格</p><p><strong>面積：</strong>15 公頃（小規模手工）｜<strong>旗艦：</strong>Pagliaro（單一園）</p><div class=\"up-wines\"><p>• Rosso de Veo：€35-45（入門自然酒）</p><p>• Sagrantino Secco：€80-100</p><p>• <strong>Pagliaro：</strong>€100-130（自然酒收藏家必備）</p></div><p class=\"up-tip\">風格警告：野性、未馴化，需陳年 15-25 年才能接近適飲期</p></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><h4>Antonelli San Marco 🏛️</h4><p><strong>創立：</strong>1881 年（最古老家族酒莊）</p><p><strong>風格：</strong>傳統與優雅、大橡木桶為主</p><p><strong>面積：</strong>170 公頃（含 Montefalco、Torgiano）｜<strong>旗艦：</strong>Collepiano</p><div class=\"um-prices\"><p>• Sagrantino：€40-55</p><p>• <strong>Collepiano：</strong>€60-80</p></div><p class=\"um-age\">陳年：10-20 年</p></div><div class=\"umbria-mini c2\"><h4>Perticaia 💎</h4><p><strong>創立：</strong>2000 年（新生代精品）</p><p><strong>風格：</strong>小產量、極致品質、現代精緻</p><p><strong>面積：</strong>僅 10 公頃｜<strong>特點：</strong>法國橡木桶、精密釀造</p><div class=\"um-prices\"><p>• Sagrantino：€50-65</p><p>• <strong>Riserva：</strong>€80-100</p></div><p class=\"um-age\">陳年：10-20 年</p></div><div class=\"umbria-mini c3\"><h4>Scacciadiavoli 👹</h4><p><strong>創立：</strong>1884 年｜<strong>名稱：</strong>「Devil Chaser」趕魔鬼</p><p><strong>風格：</strong>傳統、強勁、野性</p><p><strong>面積：</strong>35 公頃</p><div class=\"um-prices\"><p>• Sagrantino：€35-50</p><p>• Passito：€45-60（375ml）</p></div><p class=\"um-age\">陳年：10-20 年</p></div><div class=\"umbria-mini c4\"><h4>Adanti ✨</h4><p><strong>創立：</strong>1960s</p><p><strong>風格：</strong>優雅、精緻、高海拔表現</p><p><strong>面積：</strong>30 公頃｜<strong>旗艦：</strong>Arquata（單一園 420m）</p><div class=\"um-prices\"><p>• Sagrantino：€45-60</p><p>• <strong>Arquata：</strong>€70-90</p></div><p class=\"um-age\">陳年：15-25 年</p></div></div><div class=\"three-styles\"><h3>💰 價格分級與購買建議</h3><div class=\"styles-grid\"><div class=\"style-card entry\"><span class=\"style-badge\">💚 入門探索</span><div class=\"style-details\"><p><strong>€25-40</strong></p><p>基礎 Sagrantino、Montefalco Rosso</p><p>適飲：即飲-8 年；適合初學者認識 Sagrantino</p></div></div><div class=\"style-card mid\"><span class=\"style-badge\">🧡 精選收藏</span><div class=\"style-details\"><p><strong>€50-100</strong></p><p>Riserva 級、優質單一園</p><p>適飲：5-20 年；適合進階愛好者建立酒窖</p></div></div><div class=\"style-card premium\"><span class=\"style-badge\">❤️ 頂級投資</span><div class=\"style-details\"><p><strong>€100-200+</strong></p><p>旗艦 Cru、限量珍藏</p><p>適飲：10-30 年；收藏家、特殊場合、投資</p></div></div></div></div>"
+      "content": "<div class=\"variety-intro\"><p class=\"intro-highlight\">🍷 <strong>Sagrantino 的推手與守護者</strong>：從現代化先鋒 Caprai 到自然酒傳奇 Paolo Bea，Montefalco 的酒莊各有風格。</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\"><div class=\"up-badge\">AC</div><p class=\"up-est\">est. 1971</p></div><div class=\"up-body\"><h4>Arnaldo Caprai 🚀</h4><p><strong>地位：</strong>Sagrantino 現代化之父、品質革命推動者</p><p><strong>創新：</strong>1980 年代引入法國橡木桶、溫控發酵、克隆選育研究</p><p><strong>科研合作：</strong>與米蘭大學合作進行 Sagrantino 的克隆與栽培研究</p><p><strong>旗艦：</strong>25 Anni（紀念酒莊 25 週年）、Collepiano</p><div class=\"up-wines\"><p>• Montefalco Sagrantino：€30-40（入門）</p><p>• Collepiano：€60-80（精選）</p><p>• <strong>25 Anni：</strong>€120-150（旗艦）</p></div><p class=\"up-tip\">陳年建議：入門款 5-10 年 ｜ Riserva 10-20 年 ｜ 25 Anni 20-30 年</p></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\"><div class=\"up-badge\">PB</div><p class=\"up-est\">est. 1500s</p></div><div class=\"up-body\"><h4>Paolo Bea 🌿</h4><p><strong>地位：</strong>自然酒運動（Natural Wine）的義大利傳奇</p><p><strong>哲學：</strong>極低干預：自然酵母、不過濾、極少添加</p><p><strong>特點：</strong>極長浸皮（40-60 天）、大橡木桶陳年、野性風格</p><p><strong>規模：</strong>小規模手工｜<strong>旗艦：</strong>Pagliaro（單一園）</p><div class=\"up-wines\"><p>• Rosso de Veo：€35-45（入門自然酒）</p><p>• Sagrantino Secco：€80-100</p><p>• <strong>Pagliaro：</strong>€100-130（自然酒收藏家必備）</p></div><p class=\"up-tip\">風格警告：野性、未馴化，需陳年 15-25 年才能接近適飲期</p></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><h4>Antonelli San Marco 🏛️</h4><p><strong>創立：</strong>1881 年（最古老家族酒莊）</p><p><strong>風格：</strong>傳統與優雅、大橡木桶為主</p><p><strong>旗艦：</strong>Chiusa di Pannone</p><div class=\"um-prices\"><p>• Sagrantino：€40-55</p><p>• <strong>Chiusa di Pannone：</strong>€60-80</p></div><p class=\"um-age\">陳年：10-20 年</p></div><div class=\"umbria-mini c2\"><h4>Perticaia 💎</h4><p><strong>創立：</strong>2000 年（新生代精品）</p><p><strong>風格：</strong>小產量、極致品質、現代精緻</p><p><strong>特點：</strong>小產量、精密釀造</p><div class=\"um-prices\"><p>• Sagrantino：€50-65</p><p>• <strong>Riserva：</strong>€80-100</p></div><p class=\"um-age\">陳年：10-20 年</p></div><div class=\"umbria-mini c3\"><h4>Scacciadiavoli 👹</h4><p><strong>創立：</strong>1884 年｜<strong>名稱：</strong>「Devil Chaser」趕魔鬼</p><p><strong>風格：</strong>傳統、強勁、野性</p><div class=\"um-prices\"><p>• Sagrantino：€35-50</p><p>• Passito：€45-60（375ml）</p></div><p class=\"um-age\">陳年：10-20 年</p></div><div class=\"umbria-mini c4\"><h4>Adanti ✨</h4><p><strong>創立：</strong>1960s</p><p><strong>風格：</strong>優雅、精緻</p><p><strong>旗艦：</strong>Arquata（位於 Bevagna）</p><div class=\"um-prices\"><p>• Sagrantino：€45-60</p><p>• <strong>Arquata：</strong>€70-90</p></div><p class=\"um-age\">陳年：15-25 年</p></div></div><div class=\"three-styles\"><h3>💰 價格分級與購買建議</h3><div class=\"styles-grid\"><div class=\"style-card entry\"><span class=\"style-badge\">💚 入門探索</span><div class=\"style-details\"><p><strong>€25-40</strong></p><p>基礎 Sagrantino、Montefalco Rosso</p><p>適飲：即飲-8 年；適合初學者認識 Sagrantino</p></div></div><div class=\"style-card mid\"><span class=\"style-badge\">🧡 精選收藏</span><div class=\"style-details\"><p><strong>€50-100</strong></p><p>Riserva 級、優質單一園</p><p>適飲：5-20 年；適合進階愛好者建立酒窖</p></div></div><div class=\"style-card premium\"><span class=\"style-badge\">❤️ 頂級投資</span><div class=\"style-details\"><p><strong>€100-200+</strong></p><p>旗艦 Cru、限量珍藏</p><p>適飲：10-30 年；收藏家、特殊場合、投資</p></div></div></div></div>"
     },
     {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Umbria 被稱為「義大利的綠色心臟」，唯一沒有海岸線的中部大區",
-        "✓ Sagrantino 是世界上單寧含量最高的葡萄品種之一（5000-6000 mg/L）",
-        "✓ Sagrantino di Montefalco 有 Secco（不甜）和 Passito（甜型）兩種風格",
-        "✓ Montefalco Rosso（Sangiovese + Sagrantino）是了解 Sagrantino 的入門酒款",
-        "✓ Sagrantino 適合野味、烤紅肉，陳年潛力 15-30 年"
+        "✓ Umbria 是義大利丘陵最多的大區，也是中南部唯一不臨海的大區，被稱為「義大利的綠色心臟」",
+        "✓ 2 個 DOCG：Torgiano Rosso Riserva（1990，Umbria 第一個）與 Montefalco Sagrantino（1992）",
+        "✓ Giorgio Lungarotti 奠定 Umbria 現代葡萄酒業：1962 年 Rubesco、1968 年 Torgiano 成為 Umbria 第一個 DOC",
+        "✓ Montefalco Sagrantino DOCG：100% Sagrantino，乾型與 Passito 都需陳年 37 個月（乾型含 12 個月木桶）；1990 年代 Arnaldo Caprai 帶動人氣",
+        "✓ Montefalco Rosso 以 Sangiovese 為主（60-80%）、Sagrantino 10-25%，並非以 Sagrantino 為主",
+        "✓ Orvieto DOC 是 Umbria 最大、產量最高、外銷最多的 DOC，跨 Umbria 與 Lazio、只產白酒；Grechetto 和/或 Procanico ≥60%，可產貴腐甜酒",
+        "✓ Grechetto di Orvieto 與 Grechetto di Todi（Pignoletto）基因不同；Trebbiano Spoletino 由 Cantina Novelli 救回，Spoleto DOC 2011 年成立",
+        "✓ Sangiovese 是種植最廣的品種，Merlot 是種植最廣的國際品種；Umbria 以紅葡萄為主"
       ]
     },
     {
@@ -146,15 +154,15 @@
       "questions": [
         {
           "type": "single",
-          "question": "Sagrantino 的單寧含量大約是多少？",
+          "question": "Umbria 第一個 DOCG 是？",
           "options": [
-            "1000-2000 mg/L",
-            "2500-3500 mg/L",
-            "5000-6000 mg/L",
-            "8000-10000 mg/L"
+            "Montefalco Sagrantino",
+            "Torgiano Rosso Riserva",
+            "Orvieto",
+            "Montefalco Rosso"
           ],
-          "correct": 2,
-          "explanation": "Sagrantino 的單寧含量約 5000-6000 mg/L，是世界上單寧含量最高的葡萄品種之一。"
+          "correct": 1,
+          "explanation": "Torgiano Rosso Riserva 原屬 Umbria 第一個 DOC Torgiano（1968），1990 年獨立為 Umbria 第一個 DOCG；Montefalco Sagrantino 則在 1992 年升格。"
         },
         {
           "type": "single",
@@ -166,19 +174,19 @@
             "冰凍葡萄發酵"
           ],
           "correct": 1,
-          "explanation": "Passito 版本使用風乾（Appassimento）技術，將葡萄風乾 2-3 個月後發酵，釀成甜型酒。"
+          "explanation": "Passito 版本將葡萄風乾（Appassimento）至少 2 個月後發酵，最少陳年 37 個月（不強制木桶），是 Sagrantino 的傳統風格。"
         },
         {
           "type": "single",
-          "question": "Orvieto DOC 的主導品種是？",
+          "question": "Orvieto DOC 以哪些品種為主？",
           "options": [
-            "Trebbiano",
-            "Grechetto",
+            "Trebbiano 與 Verdicchio",
+            "Grechetto 和/或 Procanico（Trebbiano Toscano）",
             "Verdicchio",
             "Malvasia"
           ],
           "correct": 1,
-          "explanation": "Orvieto 以 Grechetto（40-60%）為主導品種，混合 Trebbiano Toscano 和其他品種。"
+          "explanation": "Orvieto 規定 Grechetto 和/或 Procanico（Trebbiano Toscano）合計至少 60%，常搭配 Malvasia Bianca Lunga、Verdello、Drupeggio。"
         },
         {
           "type": "single",
@@ -190,7 +198,7 @@
             "單寧含量相同"
           ],
           "correct": 1,
-          "explanation": "Montefalco Rosso 使用 Sangiovese（60-70%）+ Sagrantino（10-15%）混釀，比純 Sagrantino 更易飲、價格更親民。"
+          "explanation": "Montefalco Rosso 以 Sangiovese（60-80%）為主、Sagrantino 佔 10-25%，最少陳年 18 個月；Montefalco Sagrantino DOCG 則是 100% Sagrantino、陳年 37 個月。"
         },
         {
           "type": "single",
@@ -202,7 +210,67 @@
             "D. 低酒精輕盈風格"
           ],
           "correct": 1,
-          "explanation": "Sagrantino 含有全義大利最高的單寧量，陳年潛力極強，最少需 37 個月才能裝瓶。"
+          "explanation": "Sagrantino 果皮厚、多酚含量極高，是義大利單寧最強勁的品種之一；Montefalco Sagrantino DOCG 最少需陳年 37 個月才能上市。"
+        },
+        {
+          "type": "single",
+          "question": "在 Umbria，Trebbiano Toscano 又被稱為什麼？",
+          "options": [
+            "A. Grechetto di Todi",
+            "B. Trebbiano Spoletino",
+            "C. Procanico",
+            "D. Pignoletto"
+          ],
+          "correct": 2,
+          "explanation": "Umbria（尤其 Orvieto）把 Trebbiano Toscano 稱為 Procanico；Trebbiano Spoletino 是另一個 Umbria 原生品種，Grechetto di Todi 則是 Pignoletto。"
+        },
+        {
+          "type": "single",
+          "question": "誰奠定了 Umbria 現代葡萄栽培與釀酒的基礎？",
+          "options": [
+            "A. Giorgio Lungarotti",
+            "B. Piero Antinori",
+            "C. Riccardo Cotarella",
+            "D. Arnaldo Caprai"
+          ],
+          "correct": 0,
+          "explanation": "Giorgio Lungarotti 是戰後義大利葡萄酒業最重要的人物之一：1962 年推出 Rubesco，並推動 Torgiano 在 1968 年成為 Umbria 第一個 DOC。Arnaldo Caprai 則在 1990 年代帶動 Sagrantino 人氣。"
+        },
+        {
+          "type": "single",
+          "question": "Umbria 歷史上的葡萄整枝方式是？",
+          "options": [
+            "A. Alberello",
+            "B. Cordone Speronato",
+            "C. Alberata",
+            "D. Pergola"
+          ],
+          "correct": 2,
+          "explanation": "Umbria 傳統上讓葡萄攀附在樹上（alberata），並與其他作物混種（coltura promiscua）；alberello 灌木式並非 Umbria 的傳統。"
+        },
+        {
+          "type": "single",
+          "question": "Colli Martani DOC 的主要品種是？",
+          "options": [
+            "A. Grechetto、Sangiovese、Sagrantino",
+            "B. Grechetto、Sangiovese、Trebbiano Toscano",
+            "C. Sangiovese、Sagrantino、Trebbiano Spoletino",
+            "D. Grechetto、Sangiovese、Vernaccia Nera"
+          ],
+          "correct": 1,
+          "explanation": "Colli Martani 是 Grechetto 的故鄉，另有 Trebbiano Toscano 與 Sangiovese（以及 Vernaccia Nera 和國際品種）；子產區為 Grechetto di Todi 與 Vernaccia di Cannara。"
+        },
+        {
+          "type": "single",
+          "question": "哪一個 Umbria 產區的條件有利於貴腐（muffa nobile）發展？",
+          "options": [
+            "A. Montefalco",
+            "B. Torgiano",
+            "C. Orvieto",
+            "D. Spoleto"
+          ],
+          "correct": 2,
+          "explanation": "Orvieto 受 Tevere、Paglia 河與 Bolsena、Corbara 湖影響，是義大利少數能在樹上發展貴腐的地方，並有 Muffa Nobile 甜型。"
         }
       ]
     }

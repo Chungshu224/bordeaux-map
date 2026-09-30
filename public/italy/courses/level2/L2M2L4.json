@@ -22,7 +22,7 @@
         "Gran Selezione"
       ],
       "answer": 2,
-      "explanation": "Montepulciano d'Abruzzo Colline Teramane 在 2003 年升級為 DOCG，是該產區的最高品質分級。"
+      "explanation": "Montepulciano d'Abruzzo Colline Teramane 在 2003 年升級為 DOCG：最低 90% Montepulciano，最少陳年 1 年、Riserva 3 年。Abruzzo 的另一個 DOCG 是 2019 年的 Terre Tollesi / Tullum。"
     },
     {
       "question": "Cerasuolo d'Abruzzo 的特點是？",
@@ -33,18 +33,18 @@
         "氣泡酒"
       ],
       "answer": 2,
-      "explanation": "Cerasuolo（櫻桃色）是用 Montepulciano 葡萄釀造的粉紅酒，浸皮時間較長，呈現深粉紅至淺紅色。"
+      "explanation": "Cerasuolo 源自方言 cerasa（櫻桃），以最低 85% Montepulciano 釀成，顏色比一般粉紅酒更深，風格複雜、鹹鮮、有結構。它是靜態粉紅酒，不是氣泡酒。"
     },
     {
       "question": "Trebbiano d'Abruzzo 與 Trebbiano Toscano 的關係是？",
       "options": [
         "相同品種",
-        "不同品種，Abruzzese 品質潛力更高",
-        "只是名稱不同",
-        "Toscano 品質更高"
+        "不同品種，但常被混淆且常混植",
+        "Trebbiano Abruzzese 就是 Bombino Bianco",
+        "Trebbiano Toscano 不能用於 Trebbiano d'Abruzzo"
       ],
       "answer": 1,
-      "explanation": "Trebbiano d'Abruzzo（更正確名稱：Trebbiano Abruzzese 或 Bombino Bianco）與 Trebbiano Toscano 是不同品種，品質潛力更高。"
+      "explanation": "Trebbiano Abruzzese 與 Trebbiano Toscano 是不同品種，但常被混淆，也常與 Bombino Bianco 混植；Trebbiano d'Abruzzo DOC 允許三者（合計最低 85%）。Trebbiano Abruzzese 過去被認為與 Bombino Bianco 相同，其實不然。"
     }
   ],
   "slides": [
@@ -56,7 +56,7 @@
     {
       "type": "content",
       "title": "🏔️ 山與海之間",
-      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Abruzzo（阿布魯佐）位於義大利中部，西有<strong>Apennine 山脈</strong>，東臨<strong>Adriatic 海</strong>，以<strong>Montepulciano d'Abruzzo 紅酒</strong>和<strong>Trebbiano d'Abruzzo 白酒</strong>聞名全球。</p><p class=\"highlight\">Abruzzo 是義大利葡萄酒產量<strong>第五大</strong>的產區，以高性價比著稱，擁有 33,252 公頃葡萄園，年產 3.2 億公升。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🏔️</div><div class=\"fact-text\"><strong>2,912m</strong>Gran Sasso 最高峰</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>第 5</strong>全國產量排名</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌊</div><div class=\"fact-text\"><strong>130km</strong>Adriatic 海岸線</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>1</strong>DOCG 產區</div></div></div></div>"
+      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Abruzzo（阿布魯佐）位於義大利中部，西有<strong>中央 Apennine 山脈</strong>（Gran Sasso 與 Monti della Laga），東臨<strong>Adriatic 海</strong>，以<strong>Montepulciano d'Abruzzo 紅酒</strong>、<strong>Cerasuolo d'Abruzzo 粉紅酒</strong>和<strong>Trebbiano d'Abruzzo 白酒</strong>聞名。</p><p class=\"highlight\">Abruzzo 是<strong>義大利中南部最多山的大區</strong>，也是中南部葡萄種植最密集的產區之一；葡萄園集中在<strong>沿海與中段兩條丘陵帶</strong>，約四分之三的 DOC/DOCG 產量掛 Montepulciano d'Abruzzo DOC。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🏔️</div><div class=\"fact-text\"><strong>2,912m</strong>Gran Sasso 最高峰</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>¾</strong>DOC/G 產量為 Montepulciano d'Abruzzo</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌿</div><div class=\"fact-text\"><strong>Pergola</strong>Abruzzese 傳統棚架</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>2</strong>DOCG 產區</div></div></div></div>"
     },
     {
       "type": "abruzzo-docg-map",
@@ -65,27 +65,27 @@
     {
       "type": "content",
       "title": "🍇 Montepulciano d'Abruzzo DOC",
-      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🍷 義大利性價比之王</h3><p><strong>⚠️ 名稱辨識：</strong>Montepulciano d'Abruzzo（Montepulciano <u>品種</u> + Abruzzo）≠ Vino Nobile di Montepulciano（Sangiovese 品種 + Tuscany 地名），兩款酒完全不同！</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🍇 品種與風格</h4><p><strong>品種：</strong>Montepulciano（85%+），可混 Sangiovese</p><p><strong>風格：</strong>果香豐富・柔順・中至飽滿酒體</p><p><strong>風味：</strong>黑櫻桃・李子・紫羅蘭・香料・草本</p><p><strong>酸度：</strong>中等・<strong>單寧：</strong>柔順成熟</p><p><strong>酒精度：</strong>12–13.5%</p></div><div class=\"orvieto-card\"><h4>🏆 品質分級</h4><p><strong>Montepulciano d'Abruzzo DOC：</strong>基本款</p><hr><p><strong>Colline Teramane DOCG：</strong></p><ul><li>Teramo 省高品質子產區</li><li>2003 年升級為 DOCG</li><li>陳年要求：2 年（Riserva 3 年）</li><li>最低酒精度 12.5%</li></ul></div><div class=\"orvieto-card\"><h4>🍽️ 配餐</h4><ul><li>🐑 Arrosticini 羊肉串</li><li>🍝 肉醬吉他麵</li><li>🥩 烤紅肉・野味</li><li>🧀 陳年 Pecorino 起司</li><li>🍄 野菇燉飯</li></ul></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🍷 義大利性價比之王</h3><p><strong>⚠️ 名稱辨識：</strong>Montepulciano d'Abruzzo（Montepulciano <u>品種</u> + Abruzzo）≠ Vino Nobile di Montepulciano（Sangiovese 品種 + Tuscany 地名），兩款酒完全不同！</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🍇 品種與風格</h4><p><strong>品種：</strong>Montepulciano 最低 85%</p><p><strong>風格：</strong>從簡單易飲、果香豐富，到深色濃縮、結構強勁的木桶陳年款</p><p><strong>風味：</strong>黑櫻桃・李子・紫羅蘭・香料・草本</p><p><strong>Riserva：</strong>最少陳年 2 年（至少 9 個月木桶）</p><p><strong>範圍：</strong>全區性 DOC，1968 年成立（Abruzzo 第一個 DOC），有 5 個子產區</p></div><div class=\"orvieto-card\"><h4>🏆 品質分級</h4><p><strong>Montepulciano d'Abruzzo DOC：</strong>基本款</p><hr><p><strong>Colline Teramane DOCG：</strong></p><ul><li>Teramo 周邊丘陵，從海岸延伸至 Gran Sasso 山麓</li><li>2003 年升級為 DOCG</li><li>最低 90% Montepulciano（Sangiovese 最多 10%）</li><li>最少陳年 1 年；Riserva 3 年（含 1 年木桶）</li></ul></div><div class=\"orvieto-card\"><h4>🍽️ 配餐</h4><ul><li>🐑 Arrosticini 羊肉串</li><li>🍝 肉醬吉他麵</li><li>🥩 烤紅肉・野味</li><li>🧀 陳年 Pecorino 起司</li><li>🍄 野菇燉飯</li></ul></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍷 Montepulciano 品種特性",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🍇 Montepulciano：晚熟・高產・超深色</h3><div class=\"research-content\"><div><h4>品種基本特徵</h4><ul class=\"research-text\"><li><strong>晚熟品種：</strong>10 月中至 11 月初採收，需溫暖氣候和長成熟期</li><li><strong>天然高產：</strong>頂級生產者限制在 6–8 噸/公頃以提升品質</li><li><strong>深紫紅色：</strong>富含花青素，常用於混釀增色</li><li><strong>氣候適應：</strong>耐寒、耐旱，山海之間表現最佳</li></ul></div><div><h4>與 Sangiovese 的差異</h4><ul class=\"research-text\"><li><strong>Montepulciano：</strong>單寧柔順、果香豐富、陳年溫和</li><li><strong>Sangiovese：</strong>單寧剛硬、酸度更高、需長陳年</li><li><strong>常見混淆：</strong>Vino Nobile di Montepulciano 使用 Sangiovese，並非 Montepulciano 品種</li><li><strong>分佈：</strong>Montepulciano 品種 99% 種植於義大利中南部</li></ul></div></div></div><div class=\"aging-science\"><h3>🍷 不同等級的風格差異</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>DOC 基本款</h4><p>日常易飲・果香為主</p><p>黑櫻桃・李子・柔順單寧</p><p><strong>適飲：即飲–5年・€8–18</strong></p></div><div class=\"science-card\"><h4>Colline Teramane DOCG</h4><p>結構更強・礦物感明顯</p><p>黑色水果・皮革・香料</p><p><strong>適飲：5–15年・€20–50</strong></p></div><div class=\"science-card\"><h4>DOCG Riserva</h4><p>最高品質・橡木桶陳年</p><p>複雜・煙燻・乾果・礦物</p><p><strong>適飲：8–20年・€35–80</strong></p></div></div><p class=\"science-note\">性價比秘訣：Montepulciano d'Abruzzo DOC 基本款通常 €8–15 就能獲得豐富果香與柔順口感，是入門義大利紅酒的絕佳選擇。</p></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🍇 Montepulciano：晚熟・生長旺盛・深色高單寧</h3><div class=\"research-content\"><div><h4>品種基本特徵</h4><ul class=\"research-text\"><li><strong>原生品種：</strong>Abruzzo 原生，也是 Abruzzo 種植最廣的品種；大部分 Montepulciano 種在 Abruzzo</li><li><strong>晚熟：</strong>需要漫長溫暖的生長季才能完全成熟</li><li><strong>生長旺盛、皮厚：</strong>單寧明顯、花青素含量高</li><li><strong>散裝混調酒：</strong>過去大量作為 vino da taglio（混調用散裝酒）</li></ul></div><div><h4>與 Sangiovese 的關係</h4><ul class=\"research-text\"><li><strong>歷史混淆：</strong>Montepulciano 過去常與 Sangiovese 混為一談</li><li><strong>並非近親：</strong>兩者並沒有密切的親緣關係</li><li><strong>名稱陷阱：</strong>Montepulciano 並非原生於 Toscana 的 Montepulciano 鎮；Vino Nobile di Montepulciano 使用的是 Sangiovese</li><li><strong>搭檔：</strong>Colline Teramane DOCG 可混最多 10% Sangiovese</li></ul></div></div></div><div class=\"aging-science\"><h3>🍷 不同等級的風格差異</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>DOC 基本款</h4><p>日常易飲・果香為主</p><p>黑櫻桃・李子・柔順單寧</p><p><strong>適飲：即飲–5年・€8–18</strong></p></div><div class=\"science-card\"><h4>Colline Teramane DOCG</h4><p>結構更強・更濃縮</p><p>黑色水果・皮革・香料</p><p><strong>適飲：5–15年・€20–50</strong></p></div><div class=\"science-card\"><h4>DOCG Riserva</h4><p>最高品質・橡木桶陳年</p><p>複雜・煙燻・乾果・礦物</p><p><strong>適飲：8–20年・€35–80</strong></p></div></div><p class=\"science-note\">性價比秘訣：Montepulciano d'Abruzzo DOC 基本款通常 €8–15 就能獲得豐富果香與柔順口感，是入門義大利紅酒的絕佳選擇。</p></div></div>"
     },
     {
       "type": "content",
       "title": "⚪ Trebbiano d'Abruzzo DOC：白酒的逆襲",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">💡 <strong>重要提示：</strong>Trebbiano d'Abruzzo（正確名稱：Trebbiano Abruzzese 或 Bombino Bianco）與常見的 Trebbiano Toscano 是<strong>不同品種</strong>，品質潛力更高。過去以大量生產著稱，但 Valentini 和 Emidio Pepe 等酒莊已證明其驚人的陳年潛力。</p></div></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h3>❌ 傳統低品質版本（1970–2000s）</h3><div class=\"style-details\"><p class=\"dry-badge\">大量生產</p><p><strong>產量：</strong>150–200 噸/公頃（過度生產）</p><p><strong>採收：</strong>過早，酸度不足</p><p><strong>釀造：</strong>大型不鏽鋼快速釀造</p><p><strong>風味：</strong>單薄・中性・低酸度</p><p><strong>價格：</strong>€5 以下，充斥廉價市場</p></div></div><div class=\"style-card sweet\"><h3>✅ 現代高品質版本（2000s–至今）</h3><div class=\"style-details\"><p class=\"sweet-badge\">精品路線</p><p><strong>產量：</strong>50–70 噸/公頃（嚴格控制）</p><p><strong>採收：</strong>完全成熟，精心挑選</p><p><strong>釀造：</strong>橡木桶或精心不鏽鋼釀造</p><p><strong>風味：</strong>白桃・杏桃・杏仁・礦物</p><p><strong>陳年：</strong>5–10 年（頂級款 20–40 年）</p><p><strong>代表：</strong>Valentini (€100–180)・Emidio Pepe (€50–75)</p></div></div></div>"
+      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">💡 <strong>重要提示：</strong>Trebbiano d'Abruzzo DOC 歷史上是 Abruzzo 的旗艦白酒，可用三個品種：<strong>Trebbiano Abruzzese</strong>、<strong>Trebbiano Toscano</strong> 與 <strong>Bombino Bianco</strong>。Trebbiano Abruzzese 過去被認為與 Bombino Bianco 相同，也常與 Trebbiano Toscano 混淆，但三者是不同品種，而且常混植在同一片葡萄園。Valentini 與 Emidio Pepe 證明了它驚人的陳年潛力。</p></div></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h3>📜 DOC 規範</h3><div class=\"style-details\"><p class=\"dry-badge\">IWS 重點</p><p><strong>品種：</strong>最低 85% Trebbiano Abruzzese 和/或 Trebbiano Toscano 和/或 Bombino Bianco</p><p><strong>Superiore：</strong>最低酒精度較高</p><p><strong>Riserva：</strong>最少陳年 18 個月</p><p><strong>Trebbiano Toscano：</strong>Abruzzo 種植最廣的白葡萄，常與 Trebbiano Abruzzese 混釀</p><p><strong>Trebbiano Abruzzese：</strong>來源不明，傳統上屬於 Abruzzo（可能原生）</p></div></div><div class=\"style-card sweet\"><h3>✅ 精品風格</h3><div class=\"style-details\"><p class=\"sweet-badge\">精品路線</p><p><strong>過去：</strong>大量生產、酒質中性，名聲被廉價酒拖累</p><p><strong>現在：</strong>低產量、完全成熟採收，以大型木桶（botti）或不鏽鋼釀造</p><p><strong>風味：</strong>白桃・杏桃・杏仁・礦物</p><p><strong>陳年：</strong>頂級款可陳年數十年</p><p><strong>代表：</strong>Valentini・Emidio Pepe</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🌸 Cerasuolo d'Abruzzo DOC",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">🌸 <strong>Cerasuolo</strong>（意為「<strong>櫻桃色</strong>」）是用 Montepulciano 葡萄釀造的粉紅酒，2010 年獲得獨立 DOC 認證。浸皮時間比一般 Rosé 更長（4–12 小時），呈現深粉紅至淺紅的迷人色澤。</p></div></div><div class=\"other-wines\"><div class=\"wine-card\"><h3>🍷 釀造方式</h3><div class=\"wine-info\"><p><strong>浸皮時間：</strong>4–12 小時（比一般 Rosé 更長）</p><p><strong>顏色：</strong>深粉紅至淺紅（櫻桃紅）</p><p><strong>發酵：</strong>不鏽鋼桶低溫發酵，保留果香</p></div></div><div class=\"wine-card\"><h3>🌸 風味特徵</h3><div class=\"wine-info\"><p><strong>風味：</strong>紅櫻桃・草莓・覆盆莓・紫羅蘭・香料</p><p><strong>風格：</strong>乾型・果香豐富・酒體中等</p><p><strong>酸度：</strong>清爽・<strong>單寧：</strong>輕微</p></div></div><div class=\"wine-card\"><h3>🍽️ 配餐建議</h3><div class=\"wine-info\"><p>🍝 番茄醬義大利麵</p><p>🍤 烤海鮮・炸魚</p><p>🥗 夏季沙拉・冷盤拼盤</p><p>🍕 Pizza・番茄料理</p></div></div></div>"
+      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">🌸 <strong>Cerasuolo</strong>（意為「<strong>櫻桃色</strong>」）源自方言「cerasa」（櫻桃），是 Abruzzo 的全區性粉紅酒，2010 年成為獨立 DOC。最低 85% Montepulciano，另有 Superiore（最低酒精度較高）。與其他粉紅酒相比，顏色更深、櫻桃香氣更濃，風格複雜、鹹鮮、有結構。</p></div></div><div class=\"other-wines\"><div class=\"wine-card\"><h3>🍷 釀造方式</h3><div class=\"wine-info\"><p><strong>浸皮：</strong>短時間浸皮，萃取 Montepulciano 豐富的花青素</p><p><strong>顏色：</strong>深粉紅至淺紅（櫻桃紅）</p><p><strong>發酵：</strong>不鏽鋼桶低溫發酵，保留果香</p></div></div><div class=\"wine-card\"><h3>🌸 風味特徵</h3><div class=\"wine-info\"><p><strong>風味：</strong>紅櫻桃・草莓・覆盆莓・紫羅蘭・香料</p><p><strong>風格：</strong>複雜・鹹鮮・有結構</p><p><strong>注意：</strong>Cerasuolo 是靜態粉紅酒，並非氣泡酒</p></div></div><div class=\"wine-card\"><h3>🍽️ 配餐建議</h3><div class=\"wine-info\"><p>🍝 番茄醬義大利麵</p><p>🍤 烤海鮮・炸魚</p><p>🥗 夏季沙拉・冷盤拼盤</p><p>🍕 Pizza・番茄料理</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🎯 如何挑選優質 Abruzzo 葡萄酒",
-      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p class=\"intro-highlight\">🎯 Abruzzo 葡萄酒從 €8 到 €180 都有，價格差距極大。掌握幾個挑選原則，能以合理預算選到真正優質的酒款。</p></div><div class=\"terroir-key-point\"><h3>🍷 紅酒挑選四大原則</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🏆 選 Colline Teramane DOCG</strong><p>品質最穩定的高等級產區，值得陳年，結構與深度兼具</p></div><div class=\"kp-box\"><strong>⭐ 尋找 Riserva 標示</strong><p>陳年 3 年以上，更複雜、更優雅，性價比最佳的選擇</p></div><div class=\"kp-box\"><strong>🏡 選擇小型精品酒莊</strong><p>產量控制更嚴格，品質更高，標有「嚴格控管」的生產者優先</p></div><div class=\"kp-box\"><strong>🌱 有機/生物動力認證</strong><p>Emidio Pepe・Valentini 等高品質生產者多採有機或自然農法</p></div></div></div><div class=\"terroir-key-point\"><h3>⚪ 白酒與粉紅酒挑選</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>❌ 避免廉價版本</strong><p>€10 以下的 Trebbiano 通常為大量生產，品質平庸</p></div><div class=\"kp-box\"><strong>🌟 知名精品生產者</strong><p>Valentini（傳奇）・Emidio Pepe（有機）・Tiberio（現代）</p></div><div class=\"kp-box\"><strong>📋 確認品種標示</strong><p>尋找「Trebbiano Abruzzese」或「Bombino Bianco」，而非 Trebbiano Toscano</p></div><div class=\"kp-box\"><strong>🌸 試試 Cerasuolo</strong><p>深色粉紅酒，性價比絕佳，介於白酒與紅酒之間的最佳搭餐選擇</p></div></div></div></div>"
+      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p class=\"intro-highlight\">🎯 Abruzzo 葡萄酒從 €8 到 €180 都有，價格差距極大。掌握幾個挑選原則，能以合理預算選到真正優質的酒款。</p></div><div class=\"terroir-key-point\"><h3>🍷 紅酒挑選四大原則</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🏆 選 Colline Teramane DOCG</strong><p>品質最穩定的高等級產區，值得陳年，結構與深度兼具</p></div><div class=\"kp-box\"><strong>⭐ 尋找 Riserva 標示</strong><p>DOC Riserva 最少陳年 2 年、DOCG Riserva 3 年，更複雜、更優雅</p></div><div class=\"kp-box\"><strong>🏡 選擇小型精品酒莊</strong><p>產量控制更嚴格，品質更高，標有「嚴格控管」的生產者優先</p></div><div class=\"kp-box\"><strong>🌱 傳統名莊</strong><p>Emidio Pepe、Valentini、Masciarelli 是 IWS 列出的代表生產者</p></div></div></div><div class=\"terroir-key-point\"><h3>⚪ 白酒與粉紅酒挑選</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>❌ 避免廉價版本</strong><p>€10 以下的 Trebbiano 通常為大量生產，品質平庸</p></div><div class=\"kp-box\"><strong>🌟 知名精品生產者</strong><p>Valentini（傳奇）・Emidio Pepe（有機）・Tiberio（現代）</p></div><div class=\"kp-box\"><strong>📋 試試原生白葡萄</strong><p>Pecorino、Passerina 近年大受歡迎，Terre Tollesi（Tullum）DOCG 白酒即以兩者為主</p></div><div class=\"kp-box\"><strong>🌸 試試 Cerasuolo</strong><p>深色粉紅酒，性價比絕佳，介於白酒與紅酒之間的最佳搭餐選擇</p></div></div></div></div>"
     },
     {
       "type": "content",
@@ -94,39 +94,39 @@
     },
     {
       "type": "content",
-      "title": "🏺 Abruzzo 葡萄酒的歷史傳承",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">⏳ <strong>從古羅馬到現代產業</strong>：Abruzzo 葡萄酒擁有超過 2,000 年歷史，Pliny the Elder 記載 Peligni 部落釀造優質紅酒，詩人 Ovid 也讚頌家鄉葡萄酒。如今 Abruzzo 是義大利第五大葡萄酒產區，年出口值 €420M。</p></div></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">古羅馬</div><div class=\"timeline-content\"><h4>🏺 古羅馬時期（公元前 3 世紀–）</h4><p>Peligni 部落釀造 Pretutian 紅酒（Montepulciano 祖先）。詩人 Ovid 出生於 Sulmo（今 Sulmona），讚譽家鄉葡萄酒。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">中世紀</div><div class=\"timeline-content\"><h4>⛪ 中世紀修道院（9–14 世紀）</h4><p>San Clemente a Casauria 修道院（871 年建立）保存葡萄栽培技術，本篤會修士引入法國釀酒技術。14 世紀文獻首次記載 Montepulciano 品種名稱。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">DOC 時代</div><div class=\"timeline-content\"><h4>📜 1968 年：DOC 法規建立</h4><p>Montepulciano d'Abruzzo DOC 正式認證，Abruzzo 葡萄酒產業現代化正式起步。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">DOCG</div><div class=\"timeline-content\"><h4>🏆 2003 年：Colline Teramane DOCG</h4><p>義大利首個 Montepulciano 品種 DOCG 誕生，Abruzzo 精品葡萄酒獲得國際認可。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge sparkling\">粉紅酒</div><div class=\"timeline-content\"><h4>🌸 2010 年：Cerasuolo 獨立認證</h4><p>Cerasuolo d'Abruzzo DOC 獨立認證，Abruzzo 粉紅酒正式走向精品路線。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">33,252</div><div class=\"stat-label\">公頃葡萄園</div></div><div class=\"stat-box\"><div class=\"stat-number\">第 5</div><div class=\"stat-label\">全義大利產量排名</div></div><div class=\"stat-box\"><div class=\"stat-number\">€420M</div><div class=\"stat-label\">年出口金額</div></div><div class=\"stat-box\"><div class=\"stat-number\">12,500</div><div class=\"stat-label\">直接就業人數</div></div></div>"
+      "title": "🏺 Abruzzo 葡萄酒的歷史",
+      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">⏳ <strong>從古羅馬到現代產業</strong>：Abruzzo 的葡萄酒歷史可追溯至古羅馬，Pliny the Elder 提過 Teramo 一帶（Praetutii 人的土地）的葡萄酒，詩人 Ovid 則出生於 Sulmo（今 Sulmona）。Abruzzo 曾擁有豐富的原生品種，直到根瘤蚜摧毀了葡萄園。</p></div></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">古羅馬</div><div class=\"timeline-content\"><h4>🏺 古羅馬時期</h4><p>Pliny the Elder 記載 Praetutii 人（Teramo 一帶）的葡萄酒；Ovid 出生於 Sulmo（今 Sulmona，Terre dei Peligni 子產區所在）。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">中世紀</div><div class=\"timeline-content\"><h4>⛪ San Clemente a Casauria 修道院</h4><p>871 年建立的修道院位於 Aterno-Pescara 河谷，今日的 Terre di Casauria 子產區即以它為名。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">19–20 世紀</div><div class=\"timeline-content\"><h4>🐛 根瘤蚜與散裝酒時代</h4><p>根瘤蚜摧毀葡萄園，豐富的品種遺產隨之流失；重植時以 Montepulciano 與 Trebbiano 為主，大量酒液以 vino da taglio（混調用散裝酒）形式運往北方。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">DOC / DOCG</div><div class=\"timeline-content\"><h4>📜 1968–2003</h4><p>1968 年 Montepulciano d'Abruzzo 成為 Abruzzo 第一個 DOC；2003 年 Colline Teramane 升格為 DOCG。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge sparkling\">新時代</div><div class=\"timeline-content\"><h4>🌸 2010–2019</h4><p>2010 年 Cerasuolo d'Abruzzo 成為獨立 DOC；2019 年 Terre Tollesi（Tullum）升格為 Abruzzo 第二個 DOCG。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">871</div><div class=\"stat-label\">San Clemente a Casauria 建立</div></div><div class=\"stat-box\"><div class=\"stat-number\">1968</div><div class=\"stat-label\">Abruzzo 第一個 DOC</div></div><div class=\"stat-box\"><div class=\"stat-number\">2003</div><div class=\"stat-label\">Colline Teramane DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">2019</div><div class=\"stat-label\">Tullum DOCG</div></div></div>"
     },
     {
       "type": "content",
-      "title": "🔬 Montepulciano 品種深度解析",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🔬 品種獨特性</h3><div class=\"research-content\"><div><h4>遺傳特徵</h4><ul class=\"research-text\"><li><strong>原生品種：</strong>Abruzzo 原生，99% 種植於義大利中南部</li><li><strong>遺傳獨立：</strong>與 Sangiovese 遺傳距離明顯，屬不同品系</li><li><strong>DNA 鑑定：</strong>CNR-IBBR 研究確認 Montepulciano 為獨立品種</li><li><strong>二倍體：</strong>2n=38，標準二倍體，基因組完整穩定</li></ul></div><div><h4>農藝特性</h4><ul class=\"research-text\"><li><strong>皮厚色深：</strong>果皮厚，花青素含量極高，常用於混釀增色</li><li><strong>晚熟高糖：</strong>10 月中至 11 月初採收，自然糖度高</li><li><strong>頂端優勢：</strong>天然高產，需嚴格控制產量（6–8 t/ha）</li><li><strong>單寧結構：</strong>單寧柔順，不需超長陳年，比 Sagrantino 更易飲</li></ul></div></div></div><div class=\"aging-science\"><h3>🌡️ 芳香化合物與風味層次</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>酯類（果香核心）</h4><p>Ethyl hexanoate・Isoamyl acetate</p><p>黑櫻桃・李子・覆盆莓</p><p><strong>年輕款的主要香氣</strong></p></div><div class=\"science-card\"><h4>降異戊二烯（陳年香）</h4><p>β-Ionone・β-Damascenone</p><p>紫羅蘭・玫瑰・蜂蜜</p><p><strong>陳年款的複雜香氣</strong></p></div><div class=\"science-card\"><h4>花青素（色素）</h4><p>含量極高，呈深紫紅色</p><p>賦予酒體深邃色澤</p><p><strong>Cerasuolo 的色澤來源</strong></p></div></div><p class=\"science-note\">Montepulciano 的魔力在於：以相對柔順的單寧結構，提供黑色水果的濃郁果香，使其成為義大利最容易親近、性價比最高的品種之一。</p></div></div>"
+      "title": "🍇 Abruzzo 品種全解（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🍇 三個品種佔多數</h3><div class=\"research-content\"><div><h4>紅葡萄</h4><ul class=\"research-text\"><li><strong>Montepulciano：</strong>Abruzzo 原生、種植最廣的品種，主導大多數法定產區</li><li><strong>Sangiovese：</strong>次要品種，Colline Teramane DOCG 可混最多 10%</li><li>葡萄園大部分種植紅葡萄；國際品種只扮演次要角色</li></ul></div><div><h4>白葡萄</h4><ul class=\"research-text\"><li><strong>Trebbiano Toscano：</strong>種植最廣的白葡萄，常與 Trebbiano Abruzzese 混釀</li><li><strong>Trebbiano Abruzzese：</strong>來源不明、傳統上屬於 Abruzzo；過去被認為與 Bombino Bianco 相同</li><li><strong>其他：</strong>Pecorino、Passerina、Cococciola、Montonico Bianco、Malvasia、Falanghina</li></ul></div></div></div><div class=\"aging-science\"><h3>🍷 重點品種比較</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>Montepulciano</h4><p>晚熟、生長旺盛、皮厚、單寧明顯、花青素高</p><p>風格從簡單易飲、高酸、便宜，到深色濃縮、結構強、高酒精、木桶陳年的昂貴酒款；也廣泛用於粉紅酒</p><p><strong>Abruzzo 的靈魂</strong></p></div><div class=\"science-card\"><h4>Trebbiano Abruzzese</h4><p>常被與 Trebbiano Toscano 混淆</p><p>Trebbiano Abruzzese、Trebbiano Toscano、Bombino Bianco 三者常混植</p><p><strong>Trebbiano d'Abruzzo 的核心</strong></p></div><div class=\"science-card\"><h4>Pecorino</h4><p>被認為原生於 Marche 南部、與 Abruzzo 交界處（並非 Abruzzo 原生）</p><p>天然高糖、高酸；近年人氣與種植面積都在增加，多釀成單一品種白酒</p><p><strong>崛起中的白葡萄</strong></p></div></div><p class=\"science-note\">IWS 考點：Montepulciano 並非原生於 Toscana 的 Montepulciano 鎮，也與 Sangiovese 並非近親；Pecorino 是白葡萄，原生於 Marche 南部。</p></div></div>"
     },
     {
       "type": "content",
-      "title": "🏆 Colline Teramane DOCG 4 大子產區",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">🏆 <strong>Colline Teramane DOCG</strong>（2003）是義大利首個 Montepulciano 品種 DOCG，涵蓋 Teramo 省 19 個市鎮、6,800 公頃認證葡萄園。陳年要求：2 年（Riserva 3 年），Montepulciano 90%+，最低酒精度 12.5%。</p></div></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h4>🏔️ Valle del Vomano</h4><p><strong>海拔：</strong>250–400m・<strong>土壤：</strong>黏土–石灰岩</p><div class=\"mf-style\">結構強勁・單寧扎實・礦物感明顯；陳年潛力 15–20 年</div><p class=\"mf-prod\"><strong>代表酒莊：</strong>Illuminati・Lepore</p></div><div class=\"mf-zone warm\"><h4>🌿 Colline di Controguerra</h4><p><strong>海拔：</strong>300–500m・<strong>土壤：</strong>砂質–黏土</p><div class=\"mf-style\">優雅芳香・平衡感佳・單寧細膩；陳年潛力 10–15 年</div><p class=\"mf-prod\"><strong>代表酒莊：</strong>Dino Illuminati・Torre Raone</p></div><div class=\"mf-zone cool\"><h4>🌊 Valle della Vibrata</h4><p><strong>海拔：</strong>200–350m・<strong>土壤：</strong>沖積–礫石</p><div class=\"mf-style\">清爽果香・酸度活潑・受海洋氣候調節；陳年 8–12 年</div><p class=\"mf-prod\"><strong>特點：</strong>近 Adriatic 海，海風帶來清爽個性</p></div><div class=\"mf-zone plain\"><h4>🏘️ Piane di Notaresco</h4><p><strong>海拔：</strong>150–250m・<strong>土壤：</strong>黏土–沙質混合</p><div class=\"mf-style\">柔和圓潤・易飲親民・果味主導；適合早期飲用 5–10 年</div><p class=\"mf-prod\"><strong>特點：</strong>地勢平緩，量產高性價比 DOC 的重要區域</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">19</div><div class=\"stat-label\">認證市鎮</div></div><div class=\"stat-box\"><div class=\"stat-number\">6,800</div><div class=\"stat-label\">公頃葡萄園</div></div><div class=\"stat-box\"><div class=\"stat-number\">2003</div><div class=\"stat-label\">DOCG 認證年份</div></div><div class=\"stat-box\"><div class=\"stat-number\">90%+</div><div class=\"stat-label\">Montepulciano 要求</div></div></div>"
+      "title": "🏆 Montepulciano d'Abruzzo 5 大子產區與兩個 DOCG",
+      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">🏆 <strong>Montepulciano d'Abruzzo DOC</strong> 是全區性 DOC，下設 5 個子產區，品種比例要求比 DOC（最低 85%）更高。<strong>Colline Teramane</strong> 原本也在其中，2003 年升格為獨立 DOCG。</p></div></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h4>⛪ Casauria / Terre di Casauria</h4><p><strong>位置：</strong>Chieti 西南、Aterno-Pescara 河沿岸</p><div class=\"mf-style\">要求 100% Montepulciano</div><p class=\"mf-prod\"><strong>名稱：</strong>源自 San Clemente a Casauria 修道院</p></div><div class=\"mf-zone warm\"><h4>🏔️ Terre dei Vestini</h4><p><strong>位置：</strong>從 Pescara 延伸至 Gran Sasso 山麓</p><div class=\"mf-style\">最低 90% Montepulciano</div><p class=\"mf-prod\"><strong>特點：</strong>Pescara 省的丘陵地帶</p></div><div class=\"mf-zone cool\"><h4>⛰️ Alto Tirino</h4><p><strong>位置：</strong>Gran Sasso 東南山麓的高海拔子產區</p><div class=\"mf-style\">最低 95% Montepulciano</div><p class=\"mf-prod\"><strong>特點：</strong>L'Aquila 省內陸高地</p></div><div class=\"mf-zone plain\"><h4>🏞️ Terre dei Peligni</h4><p><strong>位置：</strong>Sulmona 鎮周邊的 Peligna 河谷，高海拔</p><div class=\"mf-style\">最低 95% Montepulciano</div><p class=\"mf-prod\"><strong>特點：</strong>詩人 Ovid 的故鄉</p></div><div class=\"mf-zone center\"><h4>🌊 Teate</h4><p><strong>位置：</strong>從 Pescara 與 Chieti 延伸至 Molise 邊界</p><div class=\"mf-style\">最低 90% Montepulciano</div><p class=\"mf-prod\"><strong>名稱：</strong>Teate 是 Chieti 的古名</p></div></div><div class=\"other-wines\"><div class=\"wine-card\"><h3>🏆 Montepulciano d'Abruzzo Colline Teramane DOCG（2003）</h3><div class=\"wine-info\"><p><strong>位置：</strong>Teramo 周邊丘陵，從 Adriatic 海岸延伸至 Gran Sasso 與 Monti della Laga 山麓</p><p><strong>規範：</strong>最低 90% Montepulciano（Sangiovese 最多 10%）；最少陳年 1 年，Riserva 3 年（含 1 年木桶）</p></div></div><div class=\"wine-card\"><h3>⭐ Terre Tollesi / Tullum DOCG（2019）</h3><div class=\"wine-info\"><p><strong>位置：</strong>Chieti 省 Tollo 鎮周邊，靠近海岸（Tullum 是 Tollo 的拉丁古名）</p><p><strong>規範：</strong>白酒以 Passerina 與 Pecorino 為主，紅酒以 Montepulciano 為主；有靜態與 spumante（氣泡）</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🔬 Abruzzo 現代釀酒革命",
-      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">📈 <strong>從危機到復興</strong>：1980 年代 Abruzzo 是大量生產廉價酒的代名詞（€2–3/瓶）。1990 年代 Emidio Pepe 和 Valentini 堅持品質，帶動整個產區革命。如今 30+ 酒莊獲 Gambero Rosso 三杯獎，Parker 90+ 分。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>⚠️ 危機時代（1980s 以前）</h4><ul><li><strong>產量：</strong>20–25 噸/公頃，過度生產</li><li><strong>採收：</strong>機械採收，混合成熟度</li><li><strong>發酵：</strong>商業酵母快速發酵，25–30°C</li><li><strong>陳年：</strong>大型水泥槽，6–12 個月</li><li><strong>結果：</strong>品質低落，國際聲譽受損</li></ul></div><div class=\"method-card modern\"><h4>🚀 現代精品方法（2000s–現在）</h4><ul><li><strong>產量：</strong>6–8 噸/公頃，老藤保護 30–50 年</li><li><strong>採收：</strong>手工分批，糖度 24–26° Brix 監測</li><li><strong>發酵：</strong>野生酵母混合，22–26°C 精密控溫</li><li><strong>陳年：</strong>法國橡木桶 30–50% 新桶</li><li><strong>結果：</strong>複雜礦物感，陳年潛力 15–30 年</li></ul></div></div></div><div class=\"flavor-evolution\"><h3>📅 革命的四個階段</h3><div class=\"evolution-timeline\"><div class=\"evo-stage stage-1\"><div class=\"flavor-icon\">⚠️</div><div class=\"stage-year\">1980s 危機</div><div class=\"stage-flavors\"><p>大量廉價酒・€2–3/瓶・聲譽低落</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-2\"><div class=\"flavor-icon\">🌱</div><div class=\"stage-year\">1990s 革命</div><div class=\"stage-flavors\"><p>Emidio Pepe &amp; Valentini 堅持品質・有機轉型</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-3\"><div class=\"flavor-icon\">🏆</div><div class=\"stage-year\">2000s 認可</div><div class=\"stage-flavors\"><p>DOCG 認證・Parker 關注・國際市場拓展</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-4\"><div class=\"flavor-icon\">🚀</div><div class=\"stage-year\">2010s+</div><div class=\"stage-flavors\"><p>新世代回歸・生物動力普及・精品酒莊林立</p></div></div></div></div></div>"
+      "title": "🌿 地形、土壤與 Pergola Abruzzese（IWS 官方教材）",
+      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">⛰️ <strong>山與海的交互作用</strong>：沿海為地中海型氣候、內陸為大陸性氣候。Abruzzo 以山地為主（中央 Apennine、Gran Sasso 與 Monti della Laga），葡萄園集中在<strong>沿海與中段兩條丘陵帶</strong>，並沒有廣大的沿海平原。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🌊 沿海丘陵帶</h4><ul><li><strong>土壤：</strong>海相來源的黏土</li><li><strong>氣候：</strong>地中海型，受 Adriatic 海調節</li><li><strong>河流：</strong>Tronto、Vomano、Tordino、Aterno-Pescara、Sangro 由山區流向大海</li><li><strong>重心：</strong>Chieti 省是最大產區（據 Consorzio 資料佔全區葡萄園八成以上），其次是 Pescara、Teramo，L'Aquila 不到 1%</li></ul></div><div class=\"method-card modern\"><h4>⛰️ 中段丘陵帶與山區盆地</h4><ul><li><strong>土壤：</strong>泥灰岩、砂岩、黏土——雖然多樣，大多含黏土</li><li><strong>氣候：</strong>越往內陸越大陸性，日夜溫差大</li><li><strong>山區盆地：</strong>Valle Peligna、Conca Aquilana、Conca del Fucino</li><li><strong>子產區：</strong>Alto Tirino、Terre dei Peligni 屬高海拔內陸</li></ul></div></div></div><div class=\"flavor-evolution\"><h3>🌿 Abruzzo 的整枝系統</h3><div class=\"evolution-timeline\"><div class=\"evo-stage stage-1\"><div class=\"flavor-icon\">🌿</div><div class=\"stage-year\">Pergola Abruzzese</div><div class=\"stage-flavors\"><p>傳統的高架棚架，至今仍是最普遍的整枝方式</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-2\"><div class=\"flavor-icon\">📈</div><div class=\"stage-year\">高產量</div><div class=\"stage-flavors\"><p>棚架產量高，過去大量生產 vino da taglio 散裝混調酒</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-3\"><div class=\"flavor-icon\">✂️</div><div class=\"stage-year\">Cordone Speronato</div><div class=\"stage-flavors\"><p>新植葡萄園多改為成排種植的短枝修剪單幹整枝（spurred cordon）</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-4\"><div class=\"flavor-icon\">🏆</div><div class=\"stage-year\">品質導向</div><div class=\"stage-flavors\"><p>控產與精選讓 Abruzzo 從散裝酒走向精品</p></div></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍷 Trebbiano 復興傳奇與 Cerasuolo 釀造藝術",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🔬 Trebbiano Abruzzese 品種真相</h3><div class=\"research-content\"><div><h4>品種正名</h4><ul class=\"research-text\"><li><strong>CNR 研究（2010–2015）：</strong>揭示「Trebbiano d'Abruzzo」標示下實際是不同品種</li><li><strong>真正原生品種：</strong>Trebbiano Abruzzese = Bombino Bianco，非 Trebbiano Toscano</li><li><strong>高酸潛力：</strong>比 Trebbiano Toscano 更高的品質潛力與陳年能力</li><li><strong>陳年奇蹟：</strong>頂級款可陳年 20–40 年（白酒！）</li></ul></div><div><h4>Valentini 釀酒哲學</h4><ul class=\"research-text\"><li>「葡萄酒在葡萄園中誕生，酒窖只是助產士」</li><li>產量：2.5–3.5 t/ha（產區平均 12–15 t/ha）</li><li>只用 30–40% 最佳果實，玻璃槽陳年 18–24 個月</li><li>年份差的葡萄全部降級賣掉，絕不妥協品質</li></ul></div></div></div><div class=\"flavor-evolution\"><h3>🌸 Cerasuolo 浸皮釀造步驟</h3><div class=\"evolution-timeline\"><div class=\"evo-stage stage-1\"><div class=\"flavor-icon\">🍇</div><div class=\"stage-year\">採收</div><div class=\"stage-flavors\"><p>手工採摘成熟 Montepulciano，挑選完美果串</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-2\"><div class=\"flavor-icon\">🕐</div><div class=\"stage-year\">浸皮 4–12 小時</div><div class=\"stage-flavors\"><p>低溫浸皮萃取花青素與香氣，比一般 Rosé 更長</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-3\"><div class=\"flavor-icon\">🧃</div><div class=\"stage-year\">分離榨汁</div><div class=\"stage-flavors\"><p>榨汁後呈現深粉紅至淺紅的迷人櫻桃紅色澤</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-4\"><div class=\"flavor-icon\">🌸</div><div class=\"stage-year\">發酵熟成</div><div class=\"stage-flavors\"><p>低溫發酵保留果香，展現紅櫻桃・草莓・紫羅蘭風味</p></div></div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🔬 Trebbiano 品種真相</h3><div class=\"research-content\"><div><h4>三個品種，一個 DOC</h4><ul class=\"research-text\"><li><strong>Trebbiano Abruzzese：</strong>來源不明，傳統上屬於 Abruzzo（可能原生）</li><li><strong>與 Bombino Bianco：</strong>過去被認為是同一品種，其實不同</li><li><strong>與 Trebbiano Toscano：</strong>常被混淆；Trebbiano Toscano 是 Abruzzo 種植最廣的白葡萄</li><li><strong>混植：</strong>三個品種常種在同一片葡萄園，法規也允許三者共同組成 Trebbiano d'Abruzzo</li></ul></div><div><h4>Valentini 的傳奇</h4><ul class=\"research-text\"><li>位於 Pescara 省 Loreto Aprutino 的傳統酒莊</li><li>只挑選最好的葡萄裝瓶，其餘賣掉</li><li>在大型木桶（botti）中釀造與陳年</li><li>其 Trebbiano d'Abruzzo 以驚人的陳年能力聞名</li></ul></div></div></div><div class=\"flavor-evolution\"><h3>🌸 Cerasuolo 釀造步驟</h3><div class=\"evolution-timeline\"><div class=\"evo-stage stage-1\"><div class=\"flavor-icon\">🍇</div><div class=\"stage-year\">採收</div><div class=\"stage-flavors\"><p>採收成熟的 Montepulciano（最低 85%）</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-2\"><div class=\"flavor-icon\">🕐</div><div class=\"stage-year\">短時間浸皮</div><div class=\"stage-flavors\"><p>Montepulciano 花青素豐富，短時間浸皮就能萃取出深櫻桃色</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-3\"><div class=\"flavor-icon\">🧃</div><div class=\"stage-year\">分離榨汁</div><div class=\"stage-flavors\"><p>顏色比一般粉紅酒更深，名稱源自方言 cerasa（櫻桃）</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-4\"><div class=\"flavor-icon\">🌸</div><div class=\"stage-year\">發酵熟成</div><div class=\"stage-flavors\"><p>濃郁櫻桃香，風格複雜、鹹鮮、有結構；Superiore 最低酒精度較高</p></div></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏆 Abruzzo 傳奇名莊巡禮",
-      "content": "<div class=\"variety-intro\"><p class=\"intro-highlight\">🍷 <strong>Abruzzo 的精品革命推手</strong>：從傳奇自然酒大師 Emidio Pepe 到極端完美主義者 Valentini，這些酒莊用數十年的堅持，證明了 Abruzzo 不只是廉價酒產區。</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\"><div class=\"up-badge\">EP</div><p class=\"up-est\">est. 1964</p></div><div class=\"up-body\"><h4>Emidio Pepe 🌿</h4><p><strong>地位：</strong>Abruzzo 自然酒傳奇，手工採收・腳踩破碎・野生酵母・無過濾</p><p><strong>位置：</strong>Torano Nuovo・15 公頃・海拔 300–350m・100% 有機（1964 年起）</p><p><strong>哲學：</strong>「葡萄酒是活的，必須呼吸」—陶罐發酵，瓶中陳年 10 年以上才釋出</p><div class=\"up-wines\"><p>• Montepulciano d'Abruzzo：€60–90（陳年潛力 30–50 年）</p><p>• Trebbiano d'Abruzzo：€50–75（有機，複雜度極高）</p><p>• Cerasuolo d'Abruzzo：€40–55</p></div><p class=\"up-tip\">特點：提供換瓶服務，老年份酒可重新裝瓶再銷售</p></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\"><div class=\"up-badge\">VT</div><p class=\"up-est\">est. 1650s</p></div><div class=\"up-body\"><h4>Valentini 👑</h4><p><strong>地位：</strong>義大利最神秘傳奇酒莊之一，極端完美主義</p><p><strong>位置：</strong>Loreto Aprutino・60 公頃（僅用 20 公頃最佳區塊）</p><p><strong>哲學：</strong>年份差則全部降級不裝瓶，只用 30–40% 最佳果實，年產僅 12,000–15,000 瓶</p><div class=\"up-wines\"><p>• Trebbiano d'Abruzzo：€100–180（20–40 年陳年，全球最貴義大利白酒之一）</p><p>• Montepulciano d'Abruzzo：€80–130（Parker 95–100 分）</p><p>• Cerasuolo d'Abruzzo：€60–90</p></div><p class=\"up-tip\">警告：市場極為稀缺，建議透過信任的進口商預購</p></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><h4>Masciarelli 🏆</h4><p>📍 San Martino・280 公頃・現代派旗手</p><p>Villa Gemma 旗艦款・國際品種試驗</p><div class=\"um-prices\"><p>Montepulciano DOC：€12–20</p><p>Villa Gemma DOCG Riserva：€50–80</p></div><p class=\"um-age\">陳年：5–15 年</p></div><div class=\"umbria-mini c2\"><h4>Cataldi Madonna 🌱</h4><p>📍 Ofena・30 公頃・海拔 650m</p><p>全義大利最高產區之一・有機農法・Cerasuolo 頂尖生產者</p><div class=\"um-prices\"><p>Montepulciano DOC：€15–25</p><p>Cerasuolo Superiore：€20–30</p></div><p class=\"um-age\">陳年：3–10 年</p></div><div class=\"umbria-mini c3\"><h4>Tiberio 🔬</h4><p>📍 Cugnoli・20 公頃・2000 年創立</p><p>現代精緻風格・科學化釀造・國際市場熱門</p><div class=\"um-prices\"><p>Montepulciano DOC：€16–25</p><p>Trebbiano d'Abruzzo：€20–30</p></div><p class=\"um-age\">陳年：3–8 年</p></div><div class=\"umbria-mini c4\"><h4>Illuminati 🌟</h4><p>📍 Controguerra・130 公頃・DOCG 最大私人生產者</p><p>傳統與現代平衡・Colline Teramane 旗手</p><div class=\"um-prices\"><p>Colline Teramane DOCG：€20–35</p><p>Pieluni Riserva：€35–55</p></div><p class=\"um-age\">陳年：5–20 年</p></div></div><div class=\"three-styles\"><h3>💰 價格分級與購買建議</h3><div class=\"styles-grid\"><div class=\"style-card entry\"><span class=\"style-badge\">💚 入門探索</span><div class=\"style-details\"><p><strong>€8–18</strong></p><p>Montepulciano d'Abruzzo DOC<br>Cerasuolo d'Abruzzo</p><p>適飲：即飲–5 年；初學者絕佳選擇</p></div></div><div class=\"style-card mid\"><span class=\"style-badge\">🧡 品質升級</span><div class=\"style-details\"><p><strong>€20–55</strong></p><p>Colline Teramane DOCG<br>Riserva 級・精品 Trebbiano</p><p>適飲：3–15 年；高級餐廳搭配</p></div></div><div class=\"style-card premium\"><span class=\"style-badge\">❤️ 頂級收藏</span><div class=\"style-details\"><p><strong>€50–180+</strong></p><p>Emidio Pepe・Valentini<br>Masciarelli Villa Gemma</p><p>適飲：10–50 年；收藏家・里程碑慶祝</p></div></div></div></div>"
+      "content": "<div class=\"variety-intro\"><p class=\"intro-highlight\">🍷 <strong>Abruzzo 的精品革命推手</strong>：從堅持傳統的 Emidio Pepe、Valentini 到現代派的 Masciarelli，這些酒莊用數十年的堅持，證明了 Abruzzo 不只是廉價酒產區。</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\"><div class=\"up-badge\">EP</div><p class=\"up-est\">est. 1964</p></div><div class=\"up-body\"><h4>Emidio Pepe 🌿</h4><p><strong>地位：</strong>Abruzzo 自然酒傳奇，手工採收・腳踩破碎・野生酵母・無過濾</p><p><strong>位置：</strong>Teramo 省 Torano Nuovo・有機與生物動力農法</p><p><strong>哲學：</strong>極少干預，並在酒莊中長期保存老年份，晚釋出</p><div class=\"up-wines\"><p>• Montepulciano d'Abruzzo：€60–90（陳年潛力極長）</p><p>• Trebbiano d'Abruzzo：€50–75（複雜度極高）</p><p>• Cerasuolo d'Abruzzo：€40–55</p></div><p class=\"up-tip\">特點：老年份會在出貨前換瓶</p></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\"><div class=\"up-badge\">VT</div><p class=\"up-est\">est. 1650s</p></div><div class=\"up-body\"><h4>Valentini 👑</h4><p><strong>地位：</strong>義大利最神秘傳奇酒莊之一，極端完美主義</p><p><strong>位置：</strong>Pescara 省 Loreto Aprutino</p><p><strong>哲學：</strong>只挑選最好的葡萄以自家名義裝瓶，其餘售出；年份不佳時可能完全不裝瓶</p><div class=\"up-wines\"><p>• Trebbiano d'Abruzzo：€100–180（陳年能力驚人，義大利最受推崇的白酒之一）</p><p>• Montepulciano d'Abruzzo：€80–130</p><p>• Cerasuolo d'Abruzzo：€60–90</p></div><p class=\"up-tip\">警告：市場極為稀缺，建議透過信任的進口商預購</p></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><h4>Masciarelli 🏆</h4><p>📍 Chieti 省 San Martino sulla Marrucina・現代派旗手</p><p>Villa Gemma 旗艦款</p><div class=\"um-prices\"><p>Montepulciano DOC：€12–20</p><p>Villa Gemma Riserva：€50–80</p></div><p class=\"um-age\">陳年：5–15 年</p></div><div class=\"umbria-mini c2\"><h4>Cataldi Madonna 🌱</h4><p>📍 L'Aquila 省 Ofena・Alto Tirino 子產區一帶</p><p>內陸山區酒莊・Cerasuolo 頂尖生產者</p><div class=\"um-prices\"><p>Montepulciano DOC：€15–25</p><p>Cerasuolo Superiore：€20–30</p></div><p class=\"um-age\">陳年：3–10 年</p></div><div class=\"umbria-mini c3\"><h4>Tiberio 🔬</h4><p>📍 Pescara 省 Cugnoli・2000 年創立</p><p>現代精緻風格・以 Trebbiano Abruzzese 與 Pecorino 聞名</p><div class=\"um-prices\"><p>Montepulciano DOC：€16–25</p><p>Trebbiano d'Abruzzo：€20–30</p></div><p class=\"um-age\">陳年：3–8 年</p></div><div class=\"umbria-mini c4\"><h4>Illuminati 🌟</h4><p>📍 Teramo 省 Controguerra</p><p>傳統與現代平衡・Colline Teramane 旗手</p><div class=\"um-prices\"><p>Colline Teramane DOCG：€20–35</p><p>Pieluni Riserva：€35–55</p></div><p class=\"um-age\">陳年：5–20 年</p></div></div><div class=\"three-styles\"><h3>💰 價格分級與購買建議</h3><div class=\"styles-grid\"><div class=\"style-card entry\"><span class=\"style-badge\">💚 入門探索</span><div class=\"style-details\"><p><strong>€8–18</strong></p><p>Montepulciano d'Abruzzo DOC<br>Cerasuolo d'Abruzzo</p><p>適飲：即飲–5 年；初學者絕佳選擇</p></div></div><div class=\"style-card mid\"><span class=\"style-badge\">🧡 品質升級</span><div class=\"style-details\"><p><strong>€20–55</strong></p><p>Colline Teramane DOCG<br>Riserva 級・精品 Trebbiano</p><p>適飲：3–15 年；高級餐廳搭配</p></div></div><div class=\"style-card premium\"><span class=\"style-badge\">❤️ 頂級收藏</span><div class=\"style-details\"><p><strong>€50–180+</strong></p><p>Emidio Pepe・Valentini<br>Masciarelli Villa Gemma</p><p>適飲：10–50 年；收藏家・里程碑慶祝</p></div></div></div></div>"
     },
     {
       "type": "image",
       "title": "🍷 酒標實例：Montepulciano d'Abruzzo Colline Teramane DOCG",
       "image": "/italy/images/labels/abruzzo/montepulciano-dabruzzo-colline-teramane-farnese.jpg",
-      "caption": "Farnese Montepulciano d'Abruzzo Colline Teramane DOCG——Abruzzo 唯一的 DOCG 分級，比一般 Montepulciano d'Abruzzo DOC 規範更嚴格。"
+      "caption": "Farnese Montepulciano d'Abruzzo Colline Teramane DOCG——Abruzzo 兩個 DOCG 之一（另一個是 Terre Tollesi / Tullum），比一般 Montepulciano d'Abruzzo DOC 規範更嚴格：最低 90% Montepulciano，Riserva 陳年 3 年。"
     },
     {
       "type": "image",
@@ -138,12 +138,14 @@
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Montepulciano d'Abruzzo 是義大利性價比最高的紅酒之一",
-        "✓ Montepulciano d'Abruzzo ≠ Vino Nobile di Montepulciano（不同品種、不同產區）",
-        "✓ Colline Teramane DOCG 是 Montepulciano 的最高品質分級",
-        "✓ Trebbiano d'Abruzzo 在頂級生產者手中能釀出優質白酒",
-        "✓ Cerasuolo d'Abruzzo 是義大利最佳粉紅酒之一，色澤深邃、風味濃郁",
-        "✓ 挑選 Abruzzo 酒要注意生產者和產量控制"
+        "✓ Abruzzo 是義大利中南部最多山的大區；葡萄園集中在沿海與中段丘陵帶，Pergola Abruzzese 是傳統整枝系統",
+        "✓ Montepulciano 是 Abruzzo 原生、種植最廣的品種：晚熟、皮厚、單寧明顯；它並非原生於 Toscana 的 Montepulciano 鎮，也與 Sangiovese 並非近親",
+        "✓ Montepulciano d'Abruzzo DOC（1968）是 Abruzzo 第一個 DOC，最低 85% Montepulciano，Riserva 2 年（9 個月木桶），有 5 個子產區，約佔 DOC/G 產量四分之三",
+        "✓ 兩個 DOCG：Colline Teramane（2003，最低 90% Montepulciano，Riserva 3 年）與 Terre Tollesi / Tullum（2019，Passerina、Pecorino、Montepulciano）",
+        "✓ Cerasuolo d'Abruzzo（cerasa＝櫻桃）是全區性粉紅酒，最低 85% Montepulciano，顏色深、鹹鮮、有結構",
+        "✓ Trebbiano d'Abruzzo：最低 85% Trebbiano Abruzzese 和/或 Trebbiano Toscano 和/或 Bombino Bianco；Riserva 18 個月",
+        "✓ Trebbiano Toscano 是種植最廣的白葡萄；Pecorino 原生於 Marche 南部，天然高糖高酸",
+        "✓ 代表生產者：Emidio Pepe、Valentini、Masciarelli"
       ]
     },
     {
@@ -173,7 +175,7 @@
             "Gran Selezione"
           ],
           "correct": 2,
-          "explanation": "Montepulciano d'Abruzzo Colline Teramane 在 2003 年升級為 DOCG，是該產區的最高品質分級。"
+          "explanation": "Montepulciano d'Abruzzo Colline Teramane 在 2003 年升級為 DOCG：最低 90% Montepulciano，最少陳年 1 年、Riserva 3 年。Abruzzo 的另一個 DOCG 是 2019 年的 Terre Tollesi / Tullum。"
         },
         {
           "type": "single",
@@ -185,19 +187,19 @@
             "氣泡酒"
           ],
           "correct": 2,
-          "explanation": "Cerasuolo（櫻桃色）是用 Montepulciano 葡萄釀造的粉紅酒，浸皮時間較長，呈現深粉紅至淺紅色。"
+          "explanation": "Cerasuolo 源自方言 cerasa（櫻桃），以最低 85% Montepulciano 釀成，顏色比一般粉紅酒更深，風格複雜、鹹鮮、有結構。它是靜態粉紅酒，不是氣泡酒。"
         },
         {
           "type": "single",
           "question": "Trebbiano d'Abruzzo 與 Trebbiano Toscano 的關係是？",
           "options": [
             "相同品種",
-            "不同品種，Abruzzese 品質潛力更高",
-            "只是名稱不同",
-            "Toscano 品質更高"
+            "不同品種，但常被混淆且常混植",
+            "Trebbiano Abruzzese 就是 Bombino Bianco",
+            "Trebbiano Toscano 不能用於 Trebbiano d'Abruzzo"
           ],
           "correct": 1,
-          "explanation": "Trebbiano d'Abruzzo（更正確名稱：Trebbiano Abruzzese 或 Bombino Bianco）與 Trebbiano Toscano 是不同品種，品質潛力更高。"
+          "explanation": "Trebbiano Abruzzese 與 Trebbiano Toscano 是不同品種，但常被混淆，也常與 Bombino Bianco 混植；Trebbiano d'Abruzzo DOC 允許三者（合計最低 85%）。Trebbiano Abruzzese 過去被認為與 Bombino Bianco 相同，其實不然。"
         },
         {
           "type": "single",
@@ -210,6 +212,66 @@
           ],
           "correct": 1,
           "explanation": "Montepulciano d'Abruzzo 以 Montepulciano 品種（非 Vino Nobile di Montepulciano 的 Sangiovese）釀造。"
+        },
+        {
+          "type": "single",
+          "question": "Abruzzo 的傳統整枝系統是？",
+          "options": [
+            "A. Alberello",
+            "B. Pergola Abruzzese",
+            "C. Guyot",
+            "D. Sylvoz"
+          ],
+          "correct": 1,
+          "explanation": "Pergola Abruzzese 是 Abruzzo 的傳統棚架整枝系統，至今仍最普遍；新植葡萄園多採成排的 Cordone Speronato。Alberello 不是 Abruzzo 使用的系統。"
+        },
+        {
+          "type": "single",
+          "question": "Abruzzo 大部分葡萄園位於哪裡？",
+          "options": [
+            "A. 沿海平原",
+            "B. 高山區",
+            "C. 沿海與中段丘陵帶",
+            "D. 內陸盆地"
+          ],
+          "correct": 2,
+          "explanation": "Abruzzo 以山地為主，沒有廣大的沿海平原；葡萄園集中在沿海丘陵帶（海相黏土）與中段丘陵帶（泥灰岩、砂岩、黏土）。"
+        },
+        {
+          "type": "single",
+          "question": "Pecorino 是 Abruzzo 原生的白葡萄。這個說法？",
+          "options": [
+            "A. 正確",
+            "B. 錯誤：它被認為原生於 Marche 南部、與 Abruzzo 交界處",
+            "C. 錯誤：它是紅葡萄",
+            "D. 錯誤：它原生於 Toscana"
+          ],
+          "correct": 1,
+          "explanation": "Pecorino 是白葡萄，被認為原生於 Marche 南部、與 Abruzzo 交界處；天然高糖、高酸，近年人氣與種植面積都在增加。"
+        },
+        {
+          "type": "single",
+          "question": "Abruzzo 第一個 DOC 是？",
+          "options": [
+            "A. Trebbiano d'Abruzzo",
+            "B. Cerasuolo d'Abruzzo",
+            "C. Montepulciano d'Abruzzo",
+            "D. Controguerra"
+          ],
+          "correct": 2,
+          "explanation": "Montepulciano d'Abruzzo 在 1968 年成為 Abruzzo 第一個 DOC，也是產量最大的法定產區，約佔 DOC/G 產量的四分之三。"
+        },
+        {
+          "type": "single",
+          "question": "哪個 Montepulciano d'Abruzzo 子產區要求 100% Montepulciano？",
+          "options": [
+            "A. Teate",
+            "B. Terre dei Vestini",
+            "C. Casauria / Terre di Casauria",
+            "D. Alto Tirino"
+          ],
+          "correct": 2,
+          "explanation": "Casauria（Terre di Casauria）位於 Chieti 西南的 Aterno-Pescara 河沿岸，要求 100% Montepulciano；Alto Tirino 與 Terre dei Peligni 最低 95%，Terre dei Vestini 與 Teate 最低 90%。"
         }
       ]
     }
