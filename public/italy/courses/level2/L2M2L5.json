@@ -22,18 +22,18 @@
         "一個 DOC 產區"
       ],
       "answer": 1,
-      "explanation": "Tintilia 是 Molise 的代表性紅葡萄品種，曾在 1980-90 年代幾近消失，近年重新受到重視。"
+      "explanation": "Tintilia 是 Molise 的招牌紅葡萄，被視為原生（但沒有確切證據，也有人認為來自西班牙）；顏色深、酒體飽滿、酸度明顯、單寧細緻。"
     },
     {
-      "question": "Molise 葡萄酒產量約佔義大利總產量的多少？",
+      "question": "Molise 種植最廣的葡萄品種是？",
       "options": [
-        "10%",
-        "5%",
-        "< 0.5%",
-        "20%"
+        "Tintilia",
+        "Trebbiano Abruzzese",
+        "Montepulciano",
+        "Aglianico"
       ],
       "answer": 2,
-      "explanation": "Molise 葡萄酒產量極小，佔義大利總產量不到 0.5%，這也是為什麼很少在國際市場見到的原因。"
+      "explanation": "受 Abruzzo 影響，Montepulciano 是 Molise 種植最廣的品種，紅葡萄佔 70% 以上；Trebbiano Abruzzese 則是種植最廣的白葡萄。"
     },
     {
       "question": "Molise 最知名的酒莊是？",
@@ -44,19 +44,19 @@
         "Valentini"
       ],
       "answer": 2,
-      "explanation": "Di Majo Norante 是 Molise 最知名的酒莊，致力於推廣 Tintilia 和其他 Molise 本土品種。"
+      "explanation": "Di Majo Norante 位於靠近海岸的 Campomarino，是 Molise 最知名的酒莊，也是 IWS 測驗的考點。"
     }
   ],
   "slides": [
     {
       "type": "title",
       "title": "🌿 Molise",
-      "subtitle": "義大利最小的葡萄酒產區"
+      "subtitle": "Tintilia 的故鄉"
     },
     {
       "type": "content",
       "title": "🔍 義大利最不為人知的產區",
-      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Molise（莫利塞）是義大利<strong>第二小的大區</strong>，位於 Abruzzo 南方，直到 <strong>1963 年</strong>才從 Abruzzo 分離獨立。產量極小，但擁有獨特的本土品種 Tintilia 和質樸的農村飲食文化。</p><p class=\"highlight\">🔑 關鍵事實：葡萄酒產量佔義大利總量不到 <strong>0.5%</strong>，是真正的秘境產區。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🗺️</div><div class=\"fact-text\"><strong>4,438 km²</strong>義大利第二小大區</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>4 個 DOC</strong>葡萄酒產區</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍇</div><div class=\"fact-text\"><strong>2,180 公頃</strong>葡萄園面積</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌊</div><div class=\"fact-text\"><strong>35 km</strong>Adriatic 海岸線</div></div></div></div>"
+      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Molise（莫利塞）是義大利<strong>第二小的大區</strong>，位於 Abruzzo 南方，原屬 Abruzzo，<strong>1963 年</strong>才成為獨立大區。它位於<strong>南 Apennine 山脈東側</strong>，地形以山地為主，只有一小段 Adriatic 海岸線。</p><p class=\"highlight\">🔑 關鍵事實：沿海為地中海型氣候，越往山區越大陸性；受 Abruzzo 影響，Montepulciano 與 Trebbiano 是主角，<strong>紅葡萄佔 70% 以上</strong>，原生的 <strong>Tintilia</strong> 則是 Molise 的招牌。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🗺️</div><div class=\"fact-text\"><strong>1963</strong>從 Abruzzo 獨立</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>4 個 DOC</strong>沒有 DOCG</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍇</div><div class=\"fact-text\"><strong>70%+</strong>紅葡萄</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌊</div><div class=\"fact-text\"><strong>約 35 km</strong>Adriatic 海岸線</div></div></div></div>"
     },
     {
       "type": "molise-doc-map",
@@ -64,23 +64,23 @@
     },
     {
       "type": "content",
-      "title": "🍇 Molise 的本土品種",
-      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🍇 多樣的本土葡萄品種</h3><p>Molise 以 <strong>Tintilia</strong> 為招牌本土紅品種，同時種植 Falanghina、Greco Bianco 等白品種，以及共享鄰區的 Montepulciano 和 Aglianico。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🔴 Tintilia（紅）</h4><p><strong>地位：</strong>Molise 的靈魂品種，本土獨有</p><p><strong>來源：</strong>西班牙統治期引入，200 年以上本土演化</p><p><strong>風味：</strong>黑櫻桃、黑莓、紫羅蘭、香料、甘草</p><p><strong>特色：</strong>深紫紅色、單寧柔順、陳年潛力 5–10 年</p></div><div class=\"orvieto-card\"><h4>⚪ Falanghina（白）</h4><p><strong>特點：</strong>Molise 版本風格與 Campania 不同</p><p><strong>土壤：</strong>黏土-石灰岩，酒體更飽滿圓潤</p><p><strong>風味：</strong>黃蘋果、杏桃、金銀花、奶油質地</p><p><strong>陳年：</strong>5–8 年，發展蜂蜜、堅果複雜度</p></div><div class=\"orvieto-card\"><h4>⚪ Greco Bianco（白）</h4><p><strong>起源：</strong>古老品種，可能源自希臘</p><p><strong>風味：</strong>白桃、杏桃、柑橘、蜂蜜、礦物</p><p><strong>特色：</strong>酒體飽滿，陳年可發展堅果、蜂蠟複雜度</p><p><strong>配餐：</strong>白松露料理、陳年起司</p></div></div></div>"
+      "title": "🍇 Molise 的葡萄品種",
+      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🍇 Abruzzo 的影響與原生的 Tintilia</h3><p>Molise 的品種深受 Abruzzo 影響：<strong>Montepulciano</strong> 是種植最廣的品種，<strong>Trebbiano</strong> 是最重要的白葡萄；紅葡萄佔 70% 以上。原生的 <strong>Tintilia</strong> 雖然面積小，卻是 Molise 的招牌。其他品種還有 Aglianico、Sangiovese、Ciliegiolo、Falanghina、Greco、Malvasia Bianca、Moscato Bianco、Bombino Bianco。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🔴 Tintilia（紅）</h4><p><strong>地位：</strong>被視為 Molise 原生、Molise 的招牌品種</p><p><strong>來源：</strong>被視為原生但沒有確切證據，也有人認為它來自西班牙</p><p><strong>風格：</strong>顏色深、酒體飽滿、酸度明顯、單寧細緻</p><p><strong>現況：</strong>傳統上與 Montepulciano 混釀；仍屬小眾，但越來越受重視</p></div><div class=\"orvieto-card\"><h4>🔴 Montepulciano（紅）</h4><p><strong>地位：</strong>Molise 種植最廣的品種</p><p><strong>來源：</strong>來自鄰近的 Abruzzo</p><p><strong>角色：</strong>Molise DOC Rosso 與 Biferno Rosso 的主體</p><p><strong>搭檔：</strong>傳統上與 Tintilia 混釀</p></div><div class=\"orvieto-card\"><h4>⚪ Trebbiano（白）</h4><p><strong>地位：</strong>最重要的白葡萄是 Trebbiano Abruzzese 與 Trebbiano Toscano</p><p><strong>種植最廣：</strong>Trebbiano Abruzzese 是 Molise 種植最廣的白葡萄</p><p><strong>角色：</strong>Biferno Bianco 以 Trebbiano Toscano 為主</p><p><strong>其他白葡萄：</strong>Falanghina、Greco、Malvasia Bianca、Bombino Bianco</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏛️ Tintilia del Molise DOC",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">🏆 <strong>Tintilia del Molise DOC（2011）</strong>是 Molise 最重要的葡萄酒產區，致力於推廣這個獨特的本土品種。Tintilia 在 1980–90 年代幾近消失，近 20 年在生產者努力下成功復興，成為 Molise 的品牌代表。</p></div></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h3>🍷 Rosso 紅酒</h3><div class=\"style-details\"><p class=\"dry-badge\">主流版本</p><p><strong>品種：</strong>Tintilia 95%+</p><p><strong>最低酒精度：</strong>12%</p><p><strong>風味：</strong>黑櫻桃・香料・紫羅蘭</p><p><strong>風格：</strong>濃郁、果香豐富、單寧柔順</p><p><strong>Riserva：</strong>陳年 24 個月（含 6 個月橡木桶）</p></div></div><div class=\"style-card sweet\"><h3>🌸 Rosato 粉紅酒</h3><div class=\"style-details\"><p class=\"sweet-badge\">清爽夏日款</p><p><strong>品種：</strong>Tintilia 95%+</p><p><strong>浸皮：</strong>2–4 小時（短浸皮）</p><p><strong>風味：</strong>野草莓・白胡椒・花香</p><p><strong>風格：</strong>輕盈優雅、洋蔥皮色澤</p><p><strong>配餐：</strong>烤海鮮、夏季沙拉</p></div></div></div>"
+      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">🏆 <strong>Tintilia del Molise DOC（2011）</strong>是 Molise 最重要的葡萄酒產區，致力於推廣這個獨特的本土品種。Tintilia 傳統上只與 Montepulciano 混釀，一度被遺忘；如今以單一品種裝瓶的酒款越來越多，成為 Molise 的品牌代表。</p></div></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h3>🍷 Rosso 紅酒</h3><div class=\"style-details\"><p class=\"dry-badge\">主流版本</p><p><strong>品種：</strong>Tintilia 95%+</p><p><strong>色澤：</strong>深色</p><p><strong>風味：</strong>黑櫻桃・香料・紫羅蘭</p><p><strong>風格：</strong>酒體飽滿、酸度明顯、單寧細緻</p><p><strong>Riserva：</strong>最少陳年 2 年</p></div></div><div class=\"style-card sweet\"><h3>🌸 Rosato 粉紅酒</h3><div class=\"style-details\"><p class=\"sweet-badge\">清爽夏日款</p><p><strong>品種：</strong>Tintilia 95%+</p><p><strong>浸皮：</strong>短時間浸皮</p><p><strong>風味：</strong>野草莓・白胡椒・花香</p><p><strong>風格：</strong>清爽、果香豐富</p><p><strong>配餐：</strong>烤海鮮、夏季沙拉</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍷 其他 Molise DOC",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><h3>🍷 Biferno DOC（1983）</h3><div class=\"wine-info\"><p><strong>地位：</strong>Molise 第一個 DOC，最大產區</p><p><strong>範圍：</strong>Biferno 河流域，Campobasso 省</p><p><strong>紅酒品種：</strong>Montepulciano（70–80%）+ Aglianico</p><p><strong>白酒品種：</strong>Trebbiano（65–70%）+ Bombino Bianco</p><p><strong>風格：</strong>類 Abruzzo Montepulciano，但更輕盈清爽</p></div></div><div class=\"wine-card\"><h3>🏔️ Pentro di Isernia DOC（1983）</h3><div class=\"wine-info\"><p><strong>範圍：</strong>Isernia 省山區（Molise 西部）</p><p><strong>名稱：</strong>Pentro 源自古代 Samnite 部落名</p><p><strong>紅酒品種：</strong>Montepulciano + Sangiovese（各 45–55%）</p><p><strong>特點：</strong>產量極小，幾乎僅在地方市場流通</p></div></div><div class=\"wine-card\"><h3>🌿 Molise DOC（2014）</h3><div class=\"wine-info\"><p><strong>範圍：</strong>Molise 全區通用 DOC</p><p><strong>特點：</strong>允許多品種混釀，釀造彈性最大</p><p><strong>可用品種：</strong>Montepulciano、Aglianico、Tintilia、Falanghina、Greco 等</p><p><strong>用途：</strong>為生產者提供更多釀造自由度</p></div></div></div>"
+      "title": "🍷 Molise 的 DOC",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><h3>🌿 Molise DOC</h3><div class=\"wine-info\"><p><strong>地位：</strong>全區性 DOC，面積最大、產量最多</p><p><strong>範圍：</strong>幾乎涵蓋整個 Molise</p><p><strong>Rosso：</strong>以 Montepulciano 為主</p><p><strong>單一品種：</strong>多種單一品種酒款，包括國際品種（如 Cabernet Sauvignon）</p><p><strong>風格：</strong>紅、粉紅、白、氣泡、微氣泡、Passito 等，種類最多元</p></div></div><div class=\"wine-card\"><h3>🍷 Biferno DOC（1983）</h3><div class=\"wine-info\"><p><strong>範圍：</strong>Campobasso 省，以 Molise 主要河流 Biferno 河為名</p><p><strong>紅酒品種：</strong>以 Montepulciano 為主，搭配 Aglianico</p><p><strong>白酒品種：</strong>以 Trebbiano Toscano 為主的混釀</p><p><strong>風格：</strong>與 Abruzzo 的 Montepulciano 相近</p></div></div><div class=\"wine-card\"><h3>🏔️ Pentro di Isernia DOC（1983）</h3><div class=\"wine-info\"><p><strong>範圍：</strong>Isernia 省山區（Molise 西部），又稱 Pentro</p><p><strong>名稱：</strong>源自古代 Samnite 部族 Pentri</p><p><strong>紅酒品種：</strong>Montepulciano 與 Sangiovese</p><p><strong>特點：</strong>產量很小，主要在當地流通</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏺 Molise 的歷史與文化",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">⏳ <strong>千年傳承</strong>：Molise 葡萄酒歷史可追溯至古羅馬時期，Samnite 部落已有釀酒傳統。1963 年從 Abruzzo 獨立後，Molise 開始建立自己的葡萄酒身份，但面臨嚴峻的社會經濟挑戰。</p></div></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">古代</div><div class=\"timeline-content\"><h4>🏺 Samnite 部落葡萄酒傳統（343 BC 以前）</h4><p>古代山區部落已有釀酒文化，Larino 古城遺址發現 1 世紀 BC 的釀酒設施，Pliny the Elder 記載 Pentrian 葡萄品種。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">西班牙統治</div><div class=\"timeline-content\"><h4>🇪🇸 Tintilia 品種的引入（15–18 世紀）</h4><p>西班牙統治（1442–1707）期間引入 Tintilia 品種，名稱源自西班牙「Tinto」（紅色）。200+ 年本土適應後，成為 Molise 的象徵品種。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">現代</div><div class=\"timeline-content\"><h4>📅 獨立建區與 DOC 體系建立</h4><p>1963：從 Abruzzo 分離 ／ 1983：Biferno DOC（首個 DOC） ／ 2011：Tintilia del Molise DOC ／ 2023：18 家酒莊生產，出口至 15 國</p></div></div></div>"
+      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">⏳ <strong>山區部族到獨立大區</strong>：Molise 是古代 Samnite 人的土地，Pentro di Isernia 的名稱就來自 Samnite 的 Pentri 部族。Molise 長期與 Abruzzo 屬於同一行政區，直到 1963 年才獨立，因此葡萄品種與整枝方式都深受 Abruzzo 影響。</p></div></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">古代</div><div class=\"timeline-content\"><h4>🏺 Samnite 部族</h4><p>Molise 山區是 Samnite 人的家園，Pentri 是其中一支，後來被羅馬征服。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">近代</div><div class=\"timeline-content\"><h4>🇪🇸 Tintilia 的來源之謎</h4><p>Molise 長期屬於拿坡里王國，一度受西班牙統治；有人認為 Tintilia 就是當時從西班牙傳入，但沒有確切證據，它通常被視為 Molise 原生品種。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">現代</div><div class=\"timeline-content\"><h4>📅 獨立建區與 DOC 體系建立</h4><p>1963：從 Abruzzo 分離獨立 ／ 1983：Biferno DOC 與 Pentro di Isernia DOC ／ 之後設立全區性的 Molise DOC ／ 2011：Tintilia del Molise DOC</p></div></div></div>"
     },
     {
       "type": "content",
@@ -90,54 +90,56 @@
     {
       "type": "content",
       "title": "❓ 為什麼 Molise 不為人知？",
-      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">🔍 <strong>隱藏的秘境</strong>：Molise 擁有獨特的本土品種和悠久傳統，卻因多重因素長期不為人知。但正因如此，它提供了葡萄酒愛好者難得的探索機會。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>⚠️ 為何不為人知（6 大原因）</h4><ul><li><strong>產量極小：</strong>不足義大利總產量 0.5%</li><li><strong>歷史較短：</strong>1963 年才從 Abruzzo 獨立</li><li><strong>缺乏 DOCG：</strong>沒有頂級品質標籤</li><li><strong>人口外流：</strong>年輕人離鄉，葡萄園老化</li><li><strong>投資不足：</strong>缺乏國際行銷資源</li><li><strong>地理位置：</strong>被大產區（Abruzzo、Campania）包圍</li></ul></div><div class=\"method-card modern\"><h4>💎 隱藏的寶石機會</h4><ul><li><strong>極佳性價比：</strong>€8–35 探索獨特品種</li><li><strong>稀有體驗：</strong>Tintilia 是義大利罕見品種</li><li><strong>有機趨勢：</strong>22% 葡萄園有機認證</li><li><strong>精品崛起：</strong>50+ 家品質導向酒莊</li><li><strong>國際媒體：</strong>Wine Enthusiast「被遺忘的瑰寶」</li><li><strong>代表酒莊：</strong>Di Majo Norante 引領復興</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">🔍 <strong>隱藏的秘境</strong>：Molise 擁有獨特的本土品種和悠久傳統，卻因多重因素長期不為人知。但正因如此，它提供了葡萄酒愛好者難得的探索機會。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>⚠️ 為何不為人知（6 大原因）</h4><ul><li><strong>規模很小：</strong>義大利第二小的大區</li><li><strong>歷史較短：</strong>1963 年才從 Abruzzo 獨立</li><li><strong>缺乏 DOCG：</strong>沒有頂級品質標籤</li><li><strong>人口外流：</strong>年輕人離鄉，葡萄園老化</li><li><strong>散裝酒傳統：</strong>過去大多以散裝酒出售</li><li><strong>地理位置：</strong>被大產區（Abruzzo、Campania）包圍</li></ul></div><div class=\"method-card modern\"><h4>💎 隱藏的寶石機會</h4><ul><li><strong>極佳性價比：</strong>以親民價格探索獨特品種</li><li><strong>稀有體驗：</strong>Tintilia 是義大利罕見品種</li><li><strong>Tintilia DOC：</strong>2011 年起有了專屬的法定產區</li><li><strong>精品崛起：</strong>越來越多品質導向的小酒莊</li><li><strong>單一品種：</strong>Molise DOC 允許多種單一品種酒款</li><li><strong>代表酒莊：</strong>Di Majo Norante 是 Molise 最知名的酒莊</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🏛️ Molise 葡萄酒歷史",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p class=\"intro-highlight\">🏛️ <strong>從 Samnite 到現代</strong>：Molise 的葡萄酒歷史跨越 2,300 年，從古代山區部落、西班牙統治、修道院傳承，到現代獨立大區建立與 DOC 認證。</p></div></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">343 BC–</div><div class=\"timeline-content\"><h4>🏺 Samnite Wars 前：山區釀酒文化</h4><p>Samnite Wars（343–290 BC）前已有釀酒傳統。Larino 古城出土 1 世紀 BC–2 世紀 AD 釀酒設施。Pliny the Elder 記載 Pentrian 葡萄，最早 Molise 品種文獻。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">6–11 世紀</div><div class=\"timeline-content\"><h4>⛪ San Vincenzo al Volturno 修道院（8 世紀）</h4><p>聖本篤會修道院，8 世紀義大利最大修道院之一，保存並傳承葡萄栽培技術，成為中世紀 Molise 葡萄酒的守護者。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1442–1707</div><div class=\"timeline-content\"><h4>🇪🇸 西班牙統治：Tintilia 品種引入</h4><p>西班牙統治時期引入 Tintilia，名稱源自「Tinto」（紅色）。200+ 年本土適應演化後，Tintilia 成為 Molise 的象徵品種，並在 2007 年 DNA 研究確認為獨立品種。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1963–2025</div><div class=\"timeline-content\"><h4>📅 現代里程碑</h4><p>1963：從 Abruzzo 分離 ／ 1983：Biferno DOC（首個 DOC） ／ 1995：Di Majo Norante 首次商業化 Tintilia ／ 2007：DNA 確認獨立品種 ／ 2011：Tintilia DOC ／ 2023：18 家酒莊生產，出口至 15 國</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">2,180</div><div class=\"stat-label\">公頃葡萄園（2025）</div></div><div class=\"stat-box\"><div class=\"stat-number\">1,200萬</div><div class=\"stat-label\">公升年產量</div></div><div class=\"stat-box\"><div class=\"stat-number\">12%</div><div class=\"stat-label\">DOC 產量比例</div></div><div class=\"stat-box\"><div class=\"stat-number\">€18M</div><div class=\"stat-label\">葡萄酒年產值</div></div></div>"
+      "title": "📜 Molise 法定產區全解（IWS 官方教材）",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h3>🌿 Tintilia del Molise DOC（2011）</h3><p>較新的 DOC，專為 Tintilia 設立：最低 95% Tintilia；Riserva 最少陳年 2 年。想找<strong>單一品種 Tintilia</strong>，就看這個 DOC。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h3>🍷 Molise DOC</h3><p>全區性 DOC，幾乎涵蓋整個 Molise，是面積最大、產量最多的 DOC。風格多元：以 Montepulciano 為主的 Rosso，以及多種單一品種酒款（包括國際品種）。想找<strong>單一品種 Cabernet Sauvignon</strong>，最可能在這個 DOC。注意：Molise DOC 並非只產紅酒，也允許單一品種酒。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h3>🏞️ Biferno DOC</h3><p>以 Molise 的主要河流 Biferno 河命名。紅酒以 Montepulciano 為主；<strong>以 Trebbiano Toscano 為主的白酒混釀</strong>最可能來自這個 DOC。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h3>🏔️ Pentro di Isernia / Pentro DOC 與 IGT</h3><p>Pentro di Isernia（又稱 Pentro）位於西部 Isernia 省山區。全區性 IGT 為 Terre degli Osci。Molise 沒有 DOCG。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">4</div><div class=\"stat-label\">DOC</div></div><div class=\"stat-box\"><div class=\"stat-number\">0</div><div class=\"stat-label\">DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">95%</div><div class=\"stat-label\">Tintilia DOC 最低比例</div></div><div class=\"stat-box\"><div class=\"stat-number\">2 年</div><div class=\"stat-label\">Tintilia Riserva 陳年</div></div></div>"
     },
     {
       "type": "content",
       "title": "🧬 Tintilia 品種深度解析",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🧬 Tintilia：被誤認 30 年的本土品種</h3><div class=\"research-content\"><div><h4>DNA 研究歷程</h4><ul class=\"research-text\"><li><strong>1970–2005 年：</strong>長期被誤認為西班牙 Graciano 品種</li><li><strong>2007 年 CNR 突破：</strong>DNA 分析確認 Tintilia 為完全獨立品種</li><li><strong>2011–2015 研究：</strong>San Michele 研究所完整 18 個 SSR 標記鑑定</li><li><strong>遺傳距離：</strong>與 Graciano 距離 0.68，屬遠親而非同一品種</li><li><strong>起源推測：</strong>15–16 世紀西班牙統治引入，200 年以上本土演化</li></ul></div><div><h4>農藝特性</h4><ul class=\"research-text\"><li><strong>晚熟品種：</strong>9 月底–10 月中旬採收，成熟期長</li><li><strong>抗病性：</strong>霜黴病中等、白粉病良好、灰黴病優秀，適合有機栽培</li><li><strong>果串形態：</strong>圓錐形，平均重 350–450g，果皮厚，抗病害</li><li><strong>總酚含量：</strong>2850–4200 mg/L，比 Sangiovese 高 15–25%</li><li><strong>克隆選育：</strong>Molise 大學選育 3 個優良克隆（MOL-T1、T2、T3）</li></ul></div></div></div><div class=\"aging-science\"><h3>🍷 Tintilia 不同等級風格</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>Tintilia 一般款</h4><p>黑櫻桃・紫羅蘭・香料</p><p>單寧柔順、果香主導</p><p><strong>適飲：即飲–5 年・€12–20</strong></p></div><div class=\"science-card\"><h4>Tintilia Riserva</h4><p>黑莓・皮革・橡木香料</p><p>結構強勁、橡木桶陳年</p><p><strong>適飲：3–10 年・€22–35</strong></p></div><div class=\"science-card\"><h4>Tintilia Rosato</h4><p>野草莓・白胡椒・花香</p><p>輕盈優雅、洋蔥皮色澤</p><p><strong>適飲：1–3 年・€10–18</strong></p></div></div><p class=\"science-note\">Tintilia 的魔力：以柔順的單寧結構和豐富的黑色水果香氣，展現 Molise 山區風土的獨特個性，是義大利最值得探索的稀有品種之一。</p></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🧬 Tintilia：Molise 的招牌品種</h3><div class=\"research-content\"><div><h4>來源</h4><ul class=\"research-text\"><li><strong>原生？</strong>被視為 Molise 原生品種，但沒有確切證據</li><li><strong>西班牙說：</strong>有人認為它是從西班牙傳入</li><li><strong>名稱：</strong>常被認為與西班牙語 tinto（紅色）有關</li><li><strong>傳統用途：</strong>過去與 Montepulciano 混釀</li></ul></div><div><h4>品種特性</h4><ul class=\"research-text\"><li><strong>顏色：</strong>深</li><li><strong>酒體：</strong>飽滿</li><li><strong>酸度：</strong>明顯</li><li><strong>單寧：</strong>細緻</li><li><strong>現況：</strong>小眾品種，但越來越受到重視</li></ul></div></div></div><div class=\"aging-science\"><h3>🍷 Tintilia 不同等級風格</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>Tintilia 一般款</h4><p>黑櫻桃・紫羅蘭・香料</p><p>果香主導、單寧細緻</p><p><strong>適飲：即飲–5 年・€12–20</strong></p></div><div class=\"science-card\"><h4>Tintilia Riserva</h4><p>最少陳年 2 年</p><p>結構更強、層次更多</p><p><strong>適飲：3–10 年・€22–35</strong></p></div><div class=\"science-card\"><h4>Tintilia Rosato</h4><p>紅色漿果・花香</p><p>清爽、果香豐富</p><p><strong>適飲：1–3 年・€10–18</strong></p></div></div><p class=\"science-note\">Tintilia 的魅力：深色、飽滿，又有明顯的酸度與細緻的單寧，展現 Molise 山區風土的獨特個性。</p></div></div>"
     },
     {
       "type": "content",
-      "title": "🏞️ Biferno DOC 地理與風土",
-      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p class=\"intro-highlight\">🏞️ <strong>Biferno DOC（1983）</strong>是 Molise 最大的 DOC 產區，沿 Biferno 河流域分布，從 Matese 山脈延伸至 Adriatic 海岸（93km），涵蓋三個不同微氣候子區域。</p></div><div class=\"terroir-key-point\"><h3>⛰️ 三大子區域與風格差異</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌊 Campomarino 海岸區（50–150m）</strong><p>Adriatic 海洋影響，沖積土，較溫暖濕潤；白酒和粉紅酒最佳，果味主導、早熟清爽風格</p></div><div class=\"kp-box\"><strong>🌿 Larino-Ururi 丘陵帶（200–400m）</strong><p>Biferno DOC 核心，黏土-石灰岩；Montepulciano 表現最佳，Di Majo Norante 主要葡萄園所在</p></div><div class=\"kp-box\"><strong>🏔️ 內陸山麓區（400–600m）</strong><p>較涼爽，日夜溫差大（16–20°C）；泥灰岩-黏土，酸度保留佳，紅酒陳年潛力最強</p></div><div class=\"kp-box\"><strong>🌡️ 海洋微氣候優勢</strong><p>Adriatic 海風調節夏季高溫（降 1.5–2.5°C），生長季降雨 520–680mm，採收期乾爽，病害風險低</p></div></div></div><div class=\"terroir-key-point\"><h3>🪨 土壤地質特點</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>藍灰色黏土（Pliocene）</strong><p>海洋沉積，富含化石，保水性強，賦予 Montepulciano 礦物感和飽滿酒體</p></div><div class=\"kp-box\"><strong>沖積砂礫（Pleistocene）</strong><p>Biferno 河沖積，排水優良，適合早熟品種，白酒和粉紅酒表現清爽果味</p></div><div class=\"kp-box\"><strong>黏土-石灰岩混合</strong><p>CaCO₃ 25–45%，pH 7.5–8.0，DOC 核心區，最適合 Montepulciano 紅酒</p></div><div class=\"kp-box\"><strong>泥灰岩丘陵</strong><p>坡度 8–20%，黏土-石灰岩互層，排水中等，賦予紅酒優異陳年潛力</p></div></div></div></div>"
+      "title": "🏞️ 地形、氣候與土壤（IWS 官方教材）",
+      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p class=\"intro-highlight\">🏞️ <strong>山地為主的大區</strong>：Molise 位於南 Apennine 山脈東側，地形以山地為主，只有一小段 Adriatic 海岸線。主要河流 Biferno 河向東流入 Adriatic 海，西部的 Volturno 河則流向 Campania。</p></div><div class=\"terroir-key-point\"><h3>☀️ 氣候</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌊 沿海</strong><p>地中海型氣候</p></div><div class=\"kp-box\"><strong>🏔️ 山區</strong><p>越往山區越大陸性</p></div><div class=\"kp-box\"><strong>🏙️ 兩個省</strong><p>Campobasso（東部，延伸至海岸）與 Isernia（西部山區）</p></div><div class=\"kp-box\"><strong>🌿 整枝</strong><p>傳統的 Pergola Abruzzese 棚架，新葡萄園多採 Cordone Speronato</p></div></div></div><div class=\"terroir-key-point\"><h3>🪨 土壤</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>沿海地區</strong><p>砂質與黏土</p></div><div class=\"kp-box\"><strong>內陸地區</strong><p>石灰岩與泥灰岩</p></div><div class=\"kp-box\"><strong>Biferno 河谷</strong><p>Biferno DOC 以這條河命名，位於 Campobasso 省</p></div><div class=\"kp-box\"><strong>Isernia 山區</strong><p>Pentro di Isernia DOC 所在的西部高地</p></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🔄 傳統與現代釀造",
-      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">📈 <strong>從危機到復興</strong>：1980 年代 Molise 幾乎沒有裝瓶酒莊，散裝酒為主。1995 年 Di Majo Norante 首次商業化 Tintilia，帶動整個產區的品質革命。如今 50+ 家精品酒莊在國際市場嶄露頭角。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>⚠️ 傳統方式（~1990 以前）</h4><ul><li><strong>葡萄園：</strong>高產（80–100 hl/ha），混植系統</li><li><strong>採收：</strong>機械採收，混合成熟度</li><li><strong>發酵：</strong>商業酵母，快速發酵 4–6 天</li><li><strong>容器：</strong>水泥槽、玻璃纖維桶，溫控不良</li><li><strong>陳年：</strong>大型舊橡木桶 6–12 個月</li><li><strong>結果：</strong>品質低落，散裝酒占 60%</li></ul></div><div class=\"method-card modern\"><h4>🚀 現代精品（2010s–現在）</h4><ul><li><strong>葡萄園：</strong>低產精耕（30–45 hl/ha），GPS 精準監控</li><li><strong>採收：</strong>手工分批，光學分選台依糖度分級</li><li><strong>發酵：</strong>原生酵母，低溫冷浸漬（8–10°C）</li><li><strong>容器：</strong>不鏽鋼控溫槽、陶罐（自然酒）、橡木桶</li><li><strong>陳年：</strong>法國小橡木桶 12–18 個月（30% 新桶）</li><li><strong>結果：</strong>複雜礦物感，瓶裝酒比例升至 85%</li></ul></div></div></div><div class=\"flavor-evolution\"><h3>📅 Tintilia 復興四大階段</h3><div class=\"evolution-timeline\"><div class=\"evo-stage stage-1\"><div class=\"flavor-icon\">⚠️</div><div class=\"stage-year\">1980s 危機</div><div class=\"stage-flavors\"><p>Tintilia 瀕臨滅絕，農民改種高產 Montepulciano・Sangiovese</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-2\"><div class=\"flavor-icon\">🌱</div><div class=\"stage-year\">1990s 萌芽</div><div class=\"stage-flavors\"><p>Di Majo Norante 1995 首次裝瓶・Slow Food 關注・Molise 大學研究</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-3\"><div class=\"flavor-icon\">🏆</div><div class=\"stage-year\">2000s 品質革命</div><div class=\"stage-flavors\"><p>2007 DNA 確認獨立品種・2011 Tintilia DOC 認證・有機轉型</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-4\"><div class=\"flavor-icon\">🚀</div><div class=\"stage-year\">2010s+ 精品化</div><div class=\"stage-flavors\"><p>新世代釀酒師回鄉・15+ 精品酒莊崛起・Wine Enthusiast「義大利最後秘境」</p></div></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">📈 <strong>從散裝酒到裝瓶酒</strong>：Molise 過去大多生產散裝酒，Tintilia 也多與 Montepulciano 混釀。隨著 Tintilia del Molise DOC（2011）設立，越來越多酒莊以單一品種裝瓶，展現 Molise 的個性。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>⚠️ 傳統方式</h4><ul><li><strong>整枝：</strong>Pergola Abruzzese 棚架，產量高</li><li><strong>品種：</strong>以 Montepulciano、Trebbiano 為主</li><li><strong>Tintilia：</strong>與 Montepulciano 混釀</li><li><strong>銷售：</strong>多為散裝酒</li></ul></div><div class=\"method-card modern\"><h4>🚀 現代方向</h4><ul><li><strong>整枝：</strong>成排種植的 Cordone Speronato</li><li><strong>品種：</strong>單一品種 Tintilia，以及 Molise DOC 下的各種單一品種酒款</li><li><strong>等級：</strong>Tintilia Riserva 最少陳年 2 年</li><li><strong>銷售：</strong>精品小酒莊以裝瓶酒爭取國際市場</li></ul></div></div></div><div class=\"flavor-evolution\"><h3>📅 Tintilia 的復興</h3><div class=\"evolution-timeline\"><div class=\"evo-stage stage-1\"><div class=\"flavor-icon\">🍇</div><div class=\"stage-year\">傳統</div><div class=\"stage-flavors\"><p>與 Montepulciano 混釀，鮮少單獨裝瓶</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-2\"><div class=\"flavor-icon\">🌱</div><div class=\"stage-year\">重新發現</div><div class=\"stage-flavors\"><p>生產者開始以單一品種釀造 Tintilia</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-3\"><div class=\"flavor-icon\">🏆</div><div class=\"stage-year\">2011</div><div class=\"stage-flavors\"><p>Tintilia del Molise DOC 設立，最低 95% Tintilia</p></div></div><div class=\"evo-arrow\">→</div><div class=\"evo-stage stage-4\"><div class=\"flavor-icon\">🚀</div><div class=\"stage-year\">現在</div><div class=\"stage-flavors\"><p>仍屬小眾，但熱度與日俱增</p></div></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍾 品種工藝深度探索",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🍾 Falanghina del Molise vs Campania：風格對比</h3><div class=\"research-content\"><div><h4>Campania Falanghina</h4><ul class=\"research-text\"><li><strong>土壤：</strong>火山土（Campi Flegrei），礦物感強烈</li><li><strong>氣候：</strong>地中海型，酸度尖銳（7–8 g/L）</li><li><strong>香氣：</strong>檸檬皮・白花・鹽味礦物・火山岩</li><li><strong>陳年：</strong>3–5 年，以新鮮度為主</li><li><strong>釀造：</strong>不鏽鋼，強調純淨度</li></ul></div><div><h4>Molise Falanghina</h4><ul class=\"research-text\"><li><strong>土壤：</strong>黏土-石灰岩，結構更飽滿</li><li><strong>氣候：</strong>大陸性影響，酸度較柔和（6–7 g/L）</li><li><strong>香氣：</strong>黃蘋果・杏桃・金銀花・奶油・烘烤杏仁</li><li><strong>陳年：</strong>5–8 年，發展蜂蜜・堅果複雜度</li><li><strong>釀造：</strong>橡木桶部分發酵（20–30%）+ 酒泥陳年 6–8 個月</li></ul></div></div></div><div class=\"aging-science\"><h3>🌸 釀造容器與風格多元化</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>不鏽鋼槽（白酒）</h4><p>Falanghina / Greco Bianco</p><p>純淨果味、保留酸度</p><p><strong>風格：清爽・礦物・活潑</strong></p></div><div class=\"science-card\"><h4>法國橡木桶（紅酒）</h4><p>Tintilia Riserva</p><p>香草・烘烤香料・柔化單寧</p><p><strong>風格：複雜・陳年・優雅</strong></p></div><div class=\"science-card\"><h4>陶罐 Anfora（自然酒）</h4><p>Claudio Cipressi 實驗款</p><p>礦物感・自然野性風味</p><p><strong>風格：原始・個性・稀有</strong></p></div></div><p class=\"science-note\">Sur Lie 工藝：Falanghina 和 Greco 白酒進行 6–12 個月酒泥陳年，每週攪拌（Bâtonnage），增加奶油質地和麵包酵母香氣，是 Molise 白酒的現代進化。</p></div></div>"
+      "title": "🍾 Molise DOC 的多元風格",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🍾 一個 DOC，多種風格</h3><div class=\"research-content\"><div><h4>酒款類型</h4><ul class=\"research-text\"><li><strong>Rosso：</strong>以 Montepulciano 為主</li><li><strong>Rosato：</strong>粉紅酒</li><li><strong>Bianco：</strong>白酒</li><li><strong>Spumante / Frizzante：</strong>氣泡酒／微氣泡酒</li><li><strong>Passito：</strong>風乾葡萄釀成的甜酒</li><li><strong>Riserva：</strong>陳年等級</li></ul></div><div><h4>可見的單一品種</h4><ul class=\"research-text\"><li><strong>紅：</strong>Montepulciano、Aglianico、Tintilia、Sangiovese</li><li><strong>白：</strong>Falanghina、Greco、Trebbiano、Moscato Bianco</li><li><strong>國際品種：</strong>如 Cabernet Sauvignon</li><li><strong>規範：</strong>具體品種與比例依 disciplinare（生產規範）而定</li></ul></div></div></div><div class=\"aging-science\"><h3>🌸 如何選擇</h3><div class=\"science-explanation\"><div class=\"science-card\"><h4>想喝 Tintilia</h4><p>Tintilia del Molise DOC</p><p>最低 95% Tintilia</p><p><strong>Molise 的招牌</strong></p></div><div class=\"science-card\"><h4>想喝國際品種</h4><p>Molise DOC</p><p>例如單一品種 Cabernet Sauvignon</p><p><strong>彈性最大</strong></p></div><div class=\"science-card\"><h4>想喝 Trebbiano 白酒</h4><p>Biferno DOC</p><p>以 Trebbiano Toscano 為主的混釀</p><p><strong>Biferno 河谷</strong></p></div></div><p class=\"science-note\">IWS 考點：Molise DOC 是全區性、產量最大的 DOC，允許單一品種酒，並非只產紅酒；Molise Rosso 以 Montepulciano 為主。</p></div></div>"
     },
     {
       "type": "content",
       "title": "🏰 Molise 名莊介紹",
-      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🏰 Molise 六大代表酒莊</h3><p>從 1980 年代的無名產區，到 2025 年擁有 150+ 酒莊，以下六大酒莊代表 Molise 葡萄酒的不同風格與哲學。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🥇 Di Majo Norante（Campomarino）</h4><p><strong>地位：</strong>Molise 最知名酒莊，Tintilia 復興先驅</p><p><strong>規模：</strong>120 公頃，年產 80 萬瓶，第五代莊主</p><p><strong>代表作：</strong>Don Luigi Tintilia Riserva（€28–35）</p><p><strong>榮譽：</strong>Gambero Rosso 三杯獎 3 次，Wine Advocate 88–91 分</p></div><div class=\"orvieto-card\"><h4>🌿 Borgo di Colloredo（Campomarino）</h4><p><strong>地位：</strong>Molise 首家 Demeter 生物動力認證酒莊（2012）</p><p><strong>規模：</strong>15 公頃，年產 2.5 萬瓶</p><p><strong>代表作：</strong>Gironia Tintilia（€25–32）</p><p><strong>特色：</strong>完整自然農法，極低產量，品質極致</p></div><div class=\"orvieto-card\"><h4>🎨 Claudio Cipressi（Larino）</h4><p><strong>地位：</strong>Molise 自然酒運動領軍人物</p><p><strong>規模：</strong>8 公頃，年產僅 6,000 瓶（極稀有）</p><p><strong>代表作：</strong>Contrada Mastro Filippo Tintilia（€30–40）</p><p><strong>特色：</strong>零硫化物添加，國際收藏家追捧</p></div><div class=\"orvieto-card\"><h4>💰 Cantine Salvatore（Riccia）</h4><p><strong>地位：</strong>最佳性價比代表，本地市場占有率第一</p><p><strong>規模：</strong>25 公頃，年產 4 萬瓶</p><p><strong>代表作：</strong>Tintilia del Molise 經典款（€15–20）</p><p><strong>特色：</strong>傳統工藝守護者，入門 Molise 最佳選擇</p></div><div class=\"orvieto-card\"><h4>⭐ Campi Valerio（Campobasso）</h4><p><strong>地位：</strong>新世代精品，Bordeaux 技術 × Molise 風土</p><p><strong>規模：</strong>12 公頃，年產 1.8 萬瓶</p><p><strong>代表作：</strong>Vigna del Prete Tintilia（€32–42）</p><p><strong>榮譽：</strong>Parker 89–92 分，Decanter 金牌獎</p></div><div class=\"orvieto-card\"><h4>🌊 Tenute Martarosa（Termoli 海岸）</h4><p><strong>地位：</strong>白酒與粉紅酒專家，海洋風格代表</p><p><strong>規模：</strong>18 公頃，海拔 50–120m</p><p><strong>代表作：</strong>Marina Falanghina（€14–20）、Onda Tintilia Rosato（€16–22）</p><p><strong>特色：</strong>Adriatic 海岸線微氣候，海洋礦物風味</p></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><h3>🏰 Molise 代表酒莊</h3><p>Molise 的酒莊多為家族經營的小型酒莊，以下幾家代表 Molise 葡萄酒的不同風格。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🥇 Di Majo Norante（Campomarino）</h4><p><strong>地位：</strong>Molise 最知名的酒莊</p><p><strong>位置：</strong>靠近 Adriatic 海岸的 Campomarino</p><p><strong>代表作：</strong>以 Montepulciano 為主的 Don Luigi Riserva</p><p><strong>特色：</strong>也釀造 Tintilia 與多種 Molise 單一品種酒</p></div><div class=\"orvieto-card\"><h4>🌿 Borgo di Colloredo（Campomarino）</h4><p><strong>地位：</strong>沿海地區的家族酒莊</p><p><strong>代表作：</strong>Tintilia、Biferno 等</p><p><strong>特色：</strong>傳統與現代並行</p></div><div class=\"orvieto-card\"><h4>🎨 Claudio Cipressi（San Felice del Molise）</h4><p><strong>地位：</strong>Tintilia 專家</p><p><strong>代表作：</strong>Macchiarossa Tintilia del Molise</p><p><strong>特色：</strong>專注於展現 Tintilia 的純粹個性</p></div><div class=\"orvieto-card\"><h4>💰 Cantine Salvatore（Ururi）</h4><p><strong>地位：</strong>Campobasso 省的品質酒莊</p><p><strong>代表作：</strong>Tintilia del Molise</p><p><strong>特色：</strong>入門 Molise 的好選擇</p></div><div class=\"orvieto-card\"><h4>⭐ Campi Valerio（Monteroduni）</h4><p><strong>地位：</strong>Isernia 省的酒莊</p><p><strong>代表作：</strong>Tintilia del Molise</p><p><strong>特色：</strong>位於西部山區，Pentro di Isernia 一帶</p></div></div></div>"
     },
     {
       "type": "image",
       "title": "🍷 標籤實例：Tintilia del Molise",
       "image": "/italy/images/labels/molise/tintilia-del-molise-macchiarossa-cipressi.jpg",
-      "caption": "Claudio Cipressi「Macchiarossa」Tintilia del Molise DOP——Claudio Cipressi 是 Molise 自然酒運動的領軍人物，年產僅 6,000 瓶，是本課提及的六大代表酒莊之一。"
+      "caption": "Claudio Cipressi「Macchiarossa」Tintilia del Molise DOP——單一品種 Tintilia 的代表酒款；Tintilia del Molise DOC（2011）要求最低 95% Tintilia。"
     },
     {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Molise 是義大利第二小、最不為人知的葡萄酒產區",
-        "✓ Tintilia 是 Molise 的代表性紅葡萄品種，曾幾近消失、近年復興",
-        "✓ Tintilia del Molise DOC（2011）致力於推廣這個獨特本土品種",
-        "✓ Biferno DOC 是 Molise 第一個 DOC（1983），以 Montepulciano 為主",
-        "✓ Molise 產量極小（< 0.5% 義大利總產量），缺乏國際知名度",
-        "✓ Di Majo Norante 是 Molise 最知名的酒莊"
+        "✓ Molise 是義大利第二小的大區，原屬 Abruzzo，1963 年獨立；位於南 Apennine 山脈東側，地形以山地為主",
+        "✓ 沿海為地中海型氣候、山區越來越大陸性；沿海土壤為砂與黏土，內陸為石灰岩與泥灰岩",
+        "✓ 受 Abruzzo 影響：Montepulciano 是種植最廣的品種，紅葡萄佔 70% 以上；Trebbiano Abruzzese 是種植最廣的白葡萄",
+        "✓ Tintilia 被視為原生（但沒有確切證據，也有人認為來自西班牙）：顏色深、酒體飽滿、酸度明顯、單寧細緻；傳統上與 Montepulciano 混釀",
+        "✓ Tintilia del Molise DOC（2011）：最低 95% Tintilia，Riserva 最少陳年 2 年",
+        "✓ Molise DOC 是全區性、產量最大的 DOC：Rosso 以 Montepulciano 為主，也有單一品種酒（包括國際品種）",
+        "✓ Biferno DOC 以主要河流 Biferno 為名，白酒以 Trebbiano Toscano 為主；另有 Pentro di Isernia DOC，Molise 沒有 DOCG",
+        "✓ 傳統整枝系統是 Pergola Abruzzese；Di Majo Norante 是 Molise 最知名的酒莊"
       ]
     },
     {
@@ -167,19 +169,19 @@
             "一個 DOC 產區"
           ],
           "correct": 1,
-          "explanation": "Tintilia 是 Molise 的代表性紅葡萄品種，曾在 1980-90 年代幾近消失，近年重新受到重視。"
+          "explanation": "Tintilia 是 Molise 的招牌紅葡萄，被視為原生（但沒有確切證據，也有人認為來自西班牙）；顏色深、酒體飽滿、酸度明顯、單寧細緻。"
         },
         {
           "type": "single",
-          "question": "Molise 葡萄酒產量約佔義大利總產量的多少？",
+          "question": "Molise 種植最廣的葡萄品種是？",
           "options": [
-            "10%",
-            "5%",
-            "< 0.5%",
-            "20%"
+            "Tintilia",
+            "Trebbiano Abruzzese",
+            "Montepulciano",
+            "Aglianico"
           ],
           "correct": 2,
-          "explanation": "Molise 葡萄酒產量極小，佔義大利總產量不到 0.5%，這也是為什麼很少在國際市場見到的原因。"
+          "explanation": "受 Abruzzo 影響，Montepulciano 是 Molise 種植最廣的品種，紅葡萄佔 70% 以上；Trebbiano Abruzzese 則是種植最廣的白葡萄。"
         },
         {
           "type": "single",
@@ -191,19 +193,79 @@
             "Valentini"
           ],
           "correct": 2,
-          "explanation": "Di Majo Norante 是 Molise 最知名的酒莊，致力於推廣 Tintilia 和其他 Molise 本土品種。"
+          "explanation": "Di Majo Norante 位於靠近海岸的 Campomarino，是 Molise 最知名的酒莊，也是 IWS 測驗的考點。"
         },
         {
           "type": "single",
           "question": "Molise 最重要的原生品種是？",
           "options": [
             "A. Aglianico",
-            "B. Tintilia del Molise",
+            "B. Tintilia",
             "C. Primitivo",
             "D. Greco"
           ],
           "correct": 1,
-          "explanation": "Tintilia del Molise 是當地最具代表性的原生紅品種，現有 DOC 保護。"
+          "explanation": "Tintilia 是 Molise 最具代表性的原生紅葡萄，專屬的 Tintilia del Molise DOC 要求最低 95% Tintilia。"
+        },
+        {
+          "type": "single",
+          "question": "Tintilia del Molise DOC 的規範是？",
+          "options": [
+            "A. 最低 85% Tintilia，Riserva 1 年",
+            "B. 最低 95% Tintilia，Riserva 最少 2 年",
+            "C. 最低 60% Tintilia，與 Montepulciano 混釀",
+            "D. 100% Tintilia，沒有 Riserva"
+          ],
+          "correct": 1,
+          "explanation": "Tintilia del Molise DOC 是 2011 年設立的較新 DOC：最低 95% Tintilia，Riserva 最少陳年 2 年。"
+        },
+        {
+          "type": "single",
+          "question": "哪個 DOC 幾乎涵蓋整個 Molise，產量也最大？",
+          "options": [
+            "A. Biferno",
+            "B. Pentro di Isernia",
+            "C. Tintilia del Molise",
+            "D. Molise DOC"
+          ],
+          "correct": 3,
+          "explanation": "Molise DOC 是全區性 DOC，幾乎涵蓋整個 Molise，是面積最大、產量最多的 DOC；Rosso 以 Montepulciano 為主，也有多種單一品種酒。"
+        },
+        {
+          "type": "single",
+          "question": "想找以 Trebbiano Toscano 為主的白酒混釀，最可能來自哪個 DOC？",
+          "options": [
+            "A. Biferno",
+            "B. Tintilia del Molise",
+            "C. Pentro di Isernia",
+            "D. Molise DOC"
+          ],
+          "correct": 0,
+          "explanation": "Biferno DOC 以 Molise 主要河流 Biferno 河為名，白酒以 Trebbiano Toscano 為主；想找單一品種 Cabernet Sauvignon 則看 Molise DOC，單一品種 Tintilia 則看 Tintilia del Molise DOC。"
+        },
+        {
+          "type": "single",
+          "question": "Molise 的地形以什麼為主？",
+          "options": [
+            "A. 寬廣平原",
+            "B. 山地",
+            "C. 丘陵",
+            "D. 沙灘"
+          ],
+          "correct": 1,
+          "explanation": "Molise 位於南 Apennine 山脈東側，地形以山地為主，只有一小段 Adriatic 海岸線；沿海土壤為砂與黏土，內陸為石灰岩與泥灰岩。"
+        },
+        {
+          "type": "single",
+          "question": "Molise 的傳統整枝系統是？",
+          "options": [
+            "A. Alberello",
+            "B. Guyot",
+            "C. Pergola Abruzzese",
+            "D. Sylvoz"
+          ],
+          "correct": 2,
+          "explanation": "受 Abruzzo 影響，Molise 的傳統整枝系統是 Pergola Abruzzese 棚架；新葡萄園多採 Cordone Speronato。"
         }
       ]
     }

@@ -1,63 +1,52 @@
 <template>
   <div class="docg-map-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🗺️ Molise DOC 互動地圖' }}</h2>
-      <p class="slide-subtitle">點選按鈕查看各產區位置與詳細資訊（Molise 無 DOCG，全為 DOC 等級）</p>
+      <h2>{{ slide.title || t('italy.slides.moliseMap.defaultTitle') }}</h2>
+      <p class="slide-subtitle">{{ t('italy.slides.mapCommon.subtitle') }}</p>
     </div>
-
     <div class="zone-buttons">
-      <div class="btn-group">
-        <span class="btn-group-label">⭐ 旗艦 DOC</span>
+      <div class="btn-group" v-for="g in GROUPS" :key="g.key">
+        <span class="btn-group-label">{{ t(`italy.slides.moliseMap.${g.label}`) }}</span>
         <button
-          v-for="z in STAR_ZONES" :key="z.id"
+          v-for="z in allZones.filter(z => z.group === g.key)" :key="z.id"
           class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
           @click="selectZone(z.id)"
         >{{ z.emoji }} {{ z.shortName }}</button>
       </div>
-      <div class="btn-group">
-        <span class="btn-group-label">🍷 其他 DOC</span>
-        <button
-          v-for="z in OTHER_ZONES" :key="z.id"
-          class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
-          @click="selectZone(z.id)"
-        >{{ z.emoji }} {{ z.shortName }}</button>
-      </div>
-      <button v-if="selected" class="reset-btn" @click="resetView">🔄 全覽</button>
+      <button v-if="selected" class="reset-btn" @click="resetView">{{ t('italy.slides.mapCommon.reset') }}</button>
     </div>
-
     <div class="map-info-row">
       <div class="map-wrapper">
         <div ref="mapContainer" class="mapbox-container"></div>
-        <div v-if="loading" class="map-loading">地圖載入中…</div>
+        <div v-if="loading" class="map-loading">{{ t('italy.slides.mapCommon.loading') }}</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
-          <div class="legend-row"><span class="legend-dot tier-a"></span>旗艦 DOC（Tintilia / Biferno）</div>
-          <div class="legend-row"><span class="legend-dot tier-b"></span>其他 DOC（Pentro / Molise）</div>
+          <div class="legend-row"><span class="legend-dot tier-a"></span>{{ t('italy.slides.moliseMap.legend.a') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-b"></span>{{ t('italy.slides.moliseMap.legend.b') }}</div>
         </div>
       </div>
-
       <div class="info-panel" v-if="selectedInfo">
         <div class="info-badge" :class="`tier-${selectedInfo.tier}`">{{ selectedInfo.tierLabel }}</div>
         <h3 class="info-name">{{ selectedInfo.name }}</h3>
         <div class="info-rows">
-          <div class="info-row" v-for="row in selectedInfo.details" :key="row.label">
+          <div class="info-row" v-for="row in selectedInfo.details" :key="row.key">
             <span class="info-label">{{ row.label }}</span>
             <span class="info-val">{{ row.value }}</span>
           </div>
         </div>
         <div class="info-desc">{{ selectedInfo.desc }}</div>
         <div class="info-pair" v-if="selectedInfo.pairing">
-          <span class="pair-label">🍽️ 配餐</span>{{ selectedInfo.pairing }}
+          <span class="pair-label">{{ t('italy.slides.mapCommon.pairing') }}</span>{{ selectedInfo.pairing }}
         </div>
         <div class="info-price" v-if="selectedInfo.price">
-          <span class="price-label">💶 參考價格</span>{{ selectedInfo.price }}
+          <span class="price-label">{{ t('italy.slides.mapCommon.price') }}</span>{{ selectedInfo.price }}
         </div>
       </div>
       <div class="info-panel info-empty" v-else>
         <div class="empty-icon">🔍</div>
-        <p>點選上方按鈕或地圖上的產區<br>查看位置與詳細資訊</p>
+        <p>{{ t('italy.slides.mapCommon.emptyLine1') }}<br>{{ t('italy.slides.mapCommon.emptyLine2') }}</p>
         <div class="empty-hint">
-          <div class="hint-row" v-for="z in ALL_ZONES" :key="z.id">
+          <div class="hint-row" v-for="z in allZones" :key="z.id">
             <span class="hint-dot" :class="`tier-${z.tier}`"></span>
             <span>{{ z.emoji }} {{ z.name }}</span>
           </div>
@@ -69,102 +58,68 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({ slide: { type: Object, default: () => ({}) } })
 
-const STAR_ZONES = [
+const { t } = useI18n()
+
+// 按鈕分組：key 對應 ZONES 的 group，label 為 italy.slides.moliseMap 下的鍵
+const GROUPS = [
+  { key: 'star', label: 'groupStar' },
+  { key: 'other', label: 'groupOther' }
+]
+
+// ── 產區資料 ─────────────────────────────────────────────────
+// 此元件用於 L2M2L5，文字放在 locales/*/italy.js 的 italy.slides.moliseMap.zones.<id>，
+// 這裡只保留地理與樣式資料。rows：資訊面板要顯示的欄位，label 取自 italy.slides.mapCommon.labels.<key>
+const ZONES = [
   {
-    id: 'tintilia-molise',
-    name: 'Tintilia del Molise DOC',
-    shortName: 'Tintilia del Molise',
-    emoji: '🌿',
-    tier: 'a',
-    tierLabel: '🌿 旗艦 DOC — Molise 靈魂品種',
-    center: [14.638, 41.555],
-    zoom: 9.5,
-    geojsonPath: '/italy/regions/molise/geojson/DOC/Tintilia del Molise DOC.geojson',
-    details: [
-      { label: 'DOC 年份', value: '2011 年升格，Molise 最重要的 DOC，也是最新建立的' },
-      { label: '品種', value: 'Tintilia 95%+，Molise 獨有本土紅品種，名稱源自西班牙語「Tinto」（紅色）' },
-      { label: '歷史', value: '西班牙統治（1442-1707）引入，1980-90 年代瀕臨消失，近 20 年成功復興' },
-      { label: '等級', value: 'Rosso / Rosato / Riserva（陳年 24 個月，含 6 個月橡木桶）' },
-      { label: '範圍', value: 'Molise 全區（Campobasso + Isernia 兩省），海拔 200-800m 山地' }
-    ],
-    desc: 'Molise 最具代表性的 DOC，守護一個曾幾乎消失的本土靈魂品種。Tintilia 在 1980-90 年代被大量拔除換種更商業化的品種，瀕臨滅絕。過去 20 年，以 Di Majo Norante 為首的生產者重新發掘老藤、申請 DOC 認證，讓這個深紫紅色、柔順果香的品種重見天日。',
-    pairing: 'Cavatelli 手工貝殼麵配羊肉醬、炭烤羊腿（Agnello alla Brace）、Caciocavallo Molisano 起司',
-    price: '€10-20 / Riserva €18-35，Molise 最具收藏價值、最能代表產區個性的選擇'
+    id: 'tintilia-molise', group: 'star', emoji: '🌿', tier: 'a',
+    center: [14.638, 41.555], zoom: 9.5,
+    rows: ['established', 'grape', 'history', 'tiers', 'style'],
+    geojsonPath: '/italy/regions/molise/geojson/DOC/Tintilia del Molise DOC.geojson'
   },
   {
-    id: 'biferno',
-    name: 'Biferno DOC',
-    shortName: 'Biferno',
-    emoji: '🏔️',
-    tier: 'a',
-    tierLabel: '🏔️ 旗艦 DOC — Molise 第一個 DOC',
-    center: [14.820, 41.580],
-    zoom: 10,
-    geojsonPath: '/italy/regions/molise/geojson/DOC/Biferno DOC.geojson',
-    details: [
-      { label: 'DOC 年份', value: '1983 年，Molise 第一個 DOC，以 Biferno 河命名' },
-      { label: '範圍', value: 'Campobasso 省 Biferno 河流域，從內陸山地延伸至 Adriatic 海岸' },
-      { label: '紅酒', value: 'Montepulciano 70-80% + Aglianico，類似 Abruzzo 但更輕盈清爽' },
-      { label: '白酒', value: 'Trebbiano 65-70% + Bombino Bianco，清爽易飲的海岸風格' },
-      { label: '特色', value: '橫跨山地到 Adriatic 海岸（Termoli 城），地形多元，風土組合豐富' }
-    ],
-    desc: 'Molise 第一個也是最大的 DOC，以 Biferno 河為名。以 Montepulciano 為主力紅品種，風格比鄰近的 Abruzzo 稍微輕盈清爽，同時在 Termoli 海岸出產適合搭配海鮮的白酒。Di Majo Norante 是全 Molise 最重要的優質酒莊，其 Biferno Rosso Riserva 是全區指標。',
-    pairing: 'Brodetto alla Termolese 海鮮湯（白酒配）、烤鯛魚、Cavatelli 配番茄醬（紅酒配）',
-    price: '€8-18 / Riserva €15-28，親民而有品質的 Molise 入門款'
+    id: 'molise-doc', group: 'star', emoji: '🌾', tier: 'a',
+    center: [14.700, 41.555], zoom: 9.5,
+    rows: ['scope', 'grape', 'wines', 'feature'],
+    geojsonPath: '/italy/regions/molise/geojson/DOC/Molise del Molise DOC.geojson'
+  },
+  {
+    id: 'biferno', group: 'other', emoji: '🏞️', tier: 'b',
+    center: [14.820, 41.580], zoom: 10,
+    rows: ['established', 'location', 'grape', 'wines', 'feature'],
+    geojsonPath: '/italy/regions/molise/geojson/DOC/Biferno DOC.geojson'
+  },
+  {
+    id: 'pentro-isernia', group: 'other', emoji: '⛰️', tier: 'b',
+    center: [14.228, 41.595], zoom: 10.5,
+    rows: ['established', 'nameOrigin', 'location', 'grape', 'feature'],
+    geojsonPath: '/italy/regions/molise/geojson/DOC/Pentro di Isernia DOC.geojson'
   }
 ]
 
-const OTHER_ZONES = [
-  {
-    id: 'pentro-isernia',
-    name: 'Pentro di Isernia DOC',
-    shortName: 'Pentro di Isernia',
-    emoji: '⛰️',
-    tier: 'b',
-    tierLabel: '💎 山地 DOC — 古代部落遺名',
-    center: [14.228, 41.595],
-    zoom: 10.5,
-    geojsonPath: '/italy/regions/molise/geojson/DOC/Pentro di Isernia DOC.geojson',
-    details: [
-      { label: 'DOC 年份', value: '1983 年，與 Biferno DOC 同年建立' },
-      { label: '名稱', value: '「Pentro」源自古代 Samnite 部落（Pentri）的名稱，保留了前羅馬時代記憶' },
-      { label: '位置', value: 'Isernia 省，Molise 西部山區，Apennine 山脈高地，海拔較高' },
-      { label: '品種', value: 'Montepulciano + Sangiovese（各約 45-55%）；白：Trebbiano + Bombino Bianco' },
-      { label: '特色', value: '產量極小，幾乎只在當地市場流通，幾乎無出口，是義大利最難找的 DOC 之一' }
-    ],
-    desc: '義大利最罕見、最難買到的 DOC 之一。以古代山區部落「Pentri」命名，位於 Isernia 省西部高地，冬季嚴寒、夏季清爽的山地氣候讓葡萄酒保有獨特的清新酸度。年產量極少，幾乎從未出現在義大利以外的市場，是葡萄酒探索者的聖杯級秘境。',
-    pairing: '烤羊肉、山區燉野豬、Caciocavallo 硬質起司、手工義大利麵',
-    price: '€8-15，如果能找到，絕對是 Molise 最物超所值的珍稀選擇'
-  },
-  {
-    id: 'molise-doc',
-    name: 'Molise DOC',
-    shortName: 'Molise DOC',
-    emoji: '🌾',
-    tier: 'b',
-    tierLabel: '💎 通用 DOC — Molise 全區',
-    center: [14.700, 41.555],
-    zoom: 9.5,
-    geojsonPath: '/italy/regions/molise/geojson/DOC/Molise del Molise DOC.geojson',
-    details: [
-      { label: 'DOC 年份', value: '2014 年建立，Molise 最新的 DOC，也是最靈活的' },
-      { label: '範圍', value: 'Molise 全大區（Campobasso + Isernia 兩省），是通用大傘型 DOC' },
-      { label: '品種', value: 'Montepulciano、Aglianico、Tintilia、Falanghina、Greco Bianco 等多品種皆允許' },
-      { label: '目的', value: '讓生產者有更大彈性試驗不同品種和釀造風格，同時保有法定認證' },
-      { label: '特色', value: '同一個酒莊可同時申請 Tintilia del Molise DOC 和 Molise DOC，靈活運用不同許可品種' }
-    ],
-    desc: 'Molise 最年輕的 DOC（2014），設計初衷是讓生產者能在通用 DOC 框架下靈活試驗各種品種和風格。可使用 Falanghina、Greco Bianco 釀白酒，或以 Aglianico 釀濃郁紅酒，為 Molise 這個小產區提供更寬廣的品種表達空間。',
-    pairing: '配餐視品種而定：Falanghina 配海鮮、Aglianico 配羊肉、Greco 配輕食',
-    price: '€8-15，Molise 葡萄酒風格多元探索的起點'
+// 依目前語系組出含文字的產區資料
+const allZones = computed(() => ZONES.map(z => {
+  const base = `italy.slides.moliseMap.zones.${z.id}`
+  return {
+    ...z,
+    name: t(`${base}.name`),
+    shortName: t(`${base}.shortName`),
+    tierLabel: t(`${base}.tierLabel`),
+    details: z.rows.map(key => ({
+      key,
+      label: t(`italy.slides.mapCommon.labels.${key}`),
+      value: t(`${base}.${key}`)
+    })),
+    desc: t(`${base}.desc`),
+    pairing: t(`${base}.pairing`),
+    price: t(`${base}.price`)
   }
-]
-
-const ALL_ZONES = [...STAR_ZONES, ...OTHER_ZONES]
+}))
 
 const TIER_STYLE = {
   a: { fill: '#4A148C', line: '#CE93D8', fillOpacity: 0.32, lineWidth: 2.5 },
@@ -179,7 +134,7 @@ let map = null
 let markersArr = []
 
 const selectedInfo = computed(() =>
-  selected.value ? ALL_ZONES.find(z => z.id === selected.value) : null
+  selected.value ? allZones.value.find(z => z.id === selected.value) : null
 )
 
 async function fetchGeojson (z) {
@@ -197,8 +152,8 @@ async function fetchGeojson (z) {
 
 async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
-  const geojsonData = await Promise.all(ALL_ZONES.map(z => fetchGeojson(z)))
-  ALL_ZONES.forEach((z, i) => {
+  const geojsonData = await Promise.all(ZONES.map(z => fetchGeojson(z)))
+  ZONES.forEach((z, i) => {
     const gj = geojsonData[i]
     if (!gj) return
     const ts = TIER_STYLE[z.tier]
@@ -217,7 +172,7 @@ async function highlightAll () {
     map.on('mouseenter', fillId, () => { map.getCanvas().style.cursor = 'pointer' })
     map.on('mouseleave', fillId, () => { map.getCanvas().style.cursor = '' })
   })
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const el = document.createElement('div')
     el.innerHTML = z.emoji
     el.style.cssText = 'font-size:16px;cursor:pointer;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));transition:transform 0.15s;'
@@ -230,9 +185,9 @@ async function highlightAll () {
 
 function selectZone (id) {
   selected.value = id
-  const info = ALL_ZONES.find(z => z.id === id)
+  const info = ZONES.find(z => z.id === id)
   if (!info || !map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     const active = z.id === id
     if (map.getLayer(`fill-${z.id}`)) {
@@ -248,7 +203,7 @@ function selectZone (id) {
 function resetView () {
   selected.value = null
   if (!map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', ts.fillOpacity)
     if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', ts.lineWidth)
@@ -259,7 +214,7 @@ function resetView () {
 function initMap () {
   if (!mapContainer.value) return
   const token = import.meta.env.VITE_MAPBOX_TOKEN
-  if (!token) { mapError.value = '未設定 Mapbox Token'; loading.value = false; return }
+  if (!token) { mapError.value = t('italy.slides.mapCommon.noToken'); loading.value = false; return }
   mapboxgl.accessToken = token
   map = new mapboxgl.Map({
     container: mapContainer.value,
@@ -271,7 +226,7 @@ function initMap () {
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
   map.on('load', async () => { await highlightAll(); loading.value = false })
-  map.on('error', e => { mapError.value = `地圖錯誤：${e.error?.message || '未知'}`; loading.value = false })
+  map.on('error', e => { mapError.value = t('italy.slides.mapCommon.mapError', { msg: e.error?.message || t('italy.slides.mapCommon.unknownError') }); loading.value = false })
 }
 
 onMounted(async () => { await nextTick(); initMap() })

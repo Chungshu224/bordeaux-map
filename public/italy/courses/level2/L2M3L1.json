@@ -3,15 +3,15 @@
   "title": "Campania 坎帕尼亞",
   "quiz": [
     {
-      "question": "Aglianico 為什麼被稱為「南義的 Nebbiolo」？",
+      "question": "Aglianico 被稱為什麼？",
       "options": [
-        "產量相同",
-        "高單寧、高酸度、陳年潛力驚人",
-        "顏色相同",
-        "價格相同"
+        "南義的 Barolo",
+        "南義的 Sauvignon Blanc",
+        "西西里之王",
+        "Tuscany 之星"
       ],
-      "answer": 1,
-      "explanation": "Aglianico 與 Nebbiolo 類似，擁有極高單寧、高酸度和驚人的陳年潛力（20-30 年），是南義最高貴的紅葡萄品種。"
+      "answer": 0,
+      "explanation": "Aglianico 皮厚、晚熟，單寧、酸度與花青素都高，極耐陳年，因此被稱為「南義的 Barolo」；主要產區是 Taurasi 與 Aglianico del Taburno。"
     },
     {
       "question": "Campania 的白葡萄三劍客是？",
@@ -22,18 +22,18 @@
         "Garganega, Cortese, Timorasso"
       ],
       "answer": 1,
-      "explanation": "Fiano di Avellino、Greco di Tufo、Falanghina 是 Campania 的代表性白葡萄品種，都是古老的本土品種。"
+      "explanation": "Fiano（Fiano di Avellino）、Greco（Greco di Tufo）、Falanghina 是 Campania 的代表白葡萄，都是古老的原生品種；Falanghina 是種植最廣的白葡萄，Fiano 是最高貴的白葡萄。"
     },
     {
-      "question": "Vesuvio DOC 的特點是？",
+      "question": "Lacryma Christi 與 Vesuvio DOC 的關係是？",
       "options": [
-        "沒有火山",
-        "歐洲唯一仍活躍的火山葡萄園",
-        "海拔最低的產區",
-        "只產紅酒"
+        "兩個獨立的 DOCG",
+        "Lacryma Christi 是 Vesuvio DOC 下規範更嚴格的子類別",
+        "Lacryma Christi 是一種甜酒品種",
+        "Lacryma Christi 屬於 Campi Flegrei DOC"
       ],
       "answer": 1,
-      "explanation": "Vesuvio（維蘇威火山）是歐洲唯一仍活躍的火山，葡萄園位於火山斜坡，賦予葡萄酒獨特火山礦物感。"
+      "explanation": "Vesuvio DOC 是正式法定產區，Lacryma Christi del Vesuvio 是歷史名稱，如今是 Vesuvio DOC 下規範更嚴格的子類別；Bianco 以 Coda di Volpe 為主，Rosso 以 Piedirosso 為主。"
     },
     {
       "question": "Taurasi DOCG 的最低陳年要求是？",
@@ -56,7 +56,7 @@
     {
       "type": "content",
       "title": "🏛️ 古老葡萄酒文化的搖籃",
-      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Campania（坎帕尼亞）位於義大利南部，<strong>Napoli（那不勒斯）</strong>是首府，擁有超過 <strong>2500 年的葡萄酒歷史</strong>。古羅馬詩人 Virgil 和 Pliny 都盛讚此地的 <strong>Falernian 葡萄酒</strong>，譽為當時世界最頂級。</p><p class=\"highlight\">🌋 Campania 以<strong>火山土壤</strong>與<strong>古老本土品種</strong>聞名，4 個 DOCG 代表南義最高等級。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🗓️</div><div class=\"fact-text\"><strong>2500+</strong><span>年葡萄酒歷史</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>4個</strong><span>DOCG頂級認證</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌍</div><div class=\"fact-text\"><strong>20,000</strong><span>公頃葡萄園</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>75+</strong><span>DOC/DOCG/IGT</span></div></div></div></div>"
+      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Campania（坎帕尼亞）位於義大利南部、面向 <strong>Tyrrhenian 海</strong>，<strong>Napoli（那不勒斯）</strong>是首府。這裡與古希臘、伊特魯里亞與古羅馬葡萄酒有深厚淵源，古羅馬時代的 <strong>Falernum</strong> 是當時最偉大的葡萄酒之一，堪稱古代的「一級酒莊」。</p><p class=\"highlight\">🌋 Campania 以<strong>火山土壤</strong>與<strong>約 100 個原生品種</strong>聞名，許多品種只見於此地；4 個 DOCG 中有 3 個位於 Irpinia。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🌍</div><div class=\"fact-text\"><strong>20,000</strong><span>公頃葡萄園</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>4個</strong><span>DOCG</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍇</div><div class=\"fact-text\"><strong>~100</strong><span>原生品種</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>~20%</strong><span>DOC/G 產量比例</span></div></div></div></div>"
     },
     {
       "type": "campania-docg-map",
@@ -65,27 +65,32 @@
     {
       "type": "content",
       "title": "🍷 Aglianico - 南義之王",
-      "content": "<div class=\"variety-deep-section\"><h3>👑「南義的 Nebbiolo」</h3><p>Aglianico 是義大利最高貴的紅葡萄品種之一，由古希臘人引進（公元前 8 世紀），名稱來自 <strong>「Hellenico」（希臘的）</strong>。陳年潛力驚人，可達 20-30 年。</p><div class=\"aging-science\"><div class=\"science-explanation\"><div class=\"science-card\"><h5>⚫ 高單寧</h5><p>單寧含量 4200 mg/L，年輕時極為緊閉堅實，需長期陳年才能軟化展現優雅。</p><div class=\"science-note\">需陳年 8-12 年達巔峰</div></div><div class=\"science-card\"><h5>🍋 高酸度</h5><p>天然高酸度（pH 3.30-3.40）保持酒款活力，是陳年 20-30 年的保鮮關鍵。</p><div class=\"science-note\">30 年後仍有驚人活力</div></div><div class=\"science-card\"><h5>🌋 晚熟品種</h5><p>10 月底至 11 月初採收，海拔 300-600m 為最佳種植區，火山土壤增添礦物感。</p><div class=\"science-note\">義大利採收最晚的品種</div></div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><h3>👑「南義的 Barolo」</h3><p>Aglianico 是義大利的「貴族」紅葡萄之一，也是 Campania 的招牌品種與<strong>種植最廣的品種</strong>。名稱常被認為源自 <strong>「Ellenico」（希臘的）</strong>。主要法定產區是 <strong>Taurasi</strong> 與 <strong>Aglianico del Taburno</strong>。</p><div class=\"aging-science\"><div class=\"science-explanation\"><div class=\"science-card\"><h5>⚫ 高單寧、深色</h5><p>果皮厚，單寧、花青素含量高，年輕時緊實強勁，需要時間軟化。</p><div class=\"science-note\">極具陳年潛力</div></div><div class=\"science-card\"><h5>🍋 高酸度</h5><p>天然高酸，與單寧共同構成長壽的骨架。Taburno 的 Aglianico Amaro 以明顯的酸度得名。</p><div class=\"science-note\">酸度與單寧 = 陳年潛力</div></div><div class=\"science-card\"><h5>🌋 晚熟、喜火山土</h5><p>晚熟品種，偏好火山土壤。主要生物型：Aglianico di Taurasi、Aglianico Amaro（Taburno）、Aglianico del Vulture（Basilicata）。</p><div class=\"science-note\">Aglianicone 不是 Aglianico 的生物型</div></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏆 Taurasi DOCG - 南義之冠",
-      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><p>Taurasi DOCG（1993 年升格）位於 Avellino 省內陸丘陵，是<strong>南義最偉大的紅酒</strong>，常與 Barolo 和 Brunello 並稱義大利三大頂級紅酒。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>📋 DOCG 規定</h4><ul><li>Aglianico <strong>85%</strong> 以上</li><li>陳年最少 <strong>3 年</strong>（含 1 年橡木桶）</li><li>Riserva 陳年 <strong>4 年</strong>（含 18 個月橡木桶）</li><li>酒精度 <strong>12.5%</strong> 以上</li></ul></div><div class=\"orvieto-card\"><h4>📍 產區位置</h4><ul><li>Avellino 省 17 個鄉鎮</li><li>海拔 <strong>400-700m</strong> 山地丘陵</li><li>大陸性氣候，晝夜溫差大</li><li>火山灰 + 石灰岩混合土壤</li></ul></div><div class=\"orvieto-card\"><h4>🍷 風味演化</h4><ul><li><strong>年輕 1-5 年：</strong>黑櫻桃、李子、強勁單寧</li><li><strong>成熟 6-15 年：</strong>皮革、煙草、石榴紅</li><li><strong>陳年 15+ 年：</strong>黑松露、焦油、玫瑰乾花</li></ul></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><p>Taurasi DOCG（1993 年升格，<strong>南義第一個 DOCG</strong>）位於 Avellino 省 Irpinia 內陸丘陵，是<strong>南義最負盛名的法定產區之一</strong>，常與 Barolo、Brunello 相提並論。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>📋 DOCG 規定</h4><ul><li>Aglianico <strong>85%</strong> 以上</li><li>陳年最少 <strong>3 年</strong>（含 1 年橡木桶）</li><li>Riserva 陳年 <strong>4 年</strong>（含 18 個月橡木桶）</li><li>傳統搭檔為 <strong>Piedirosso</strong>；小橡木桶與大木桶（botti）都有人使用</li></ul></div><div class=\"orvieto-card\"><h4>📍 產區位置</h4><ul><li>Avellino 省 17 個鄉鎮</li><li>海拔 <strong>300-700m</strong> 山地丘陵</li><li>Calore 河調節氣候，晝夜溫差大</li><li>石灰質黏土與海相石灰岩，混合火山物質</li></ul></div><div class=\"orvieto-card\"><h4>🍷 風味演化</h4><ul><li><strong>年輕 1-5 年：</strong>黑櫻桃、李子、強勁單寧</li><li><strong>成熟 6-15 年：</strong>皮革、煙草、石榴紅</li><li><strong>陳年 15+ 年：</strong>黑松露、焦油、玫瑰乾花</li></ul></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍾 白葡萄三劍客",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥇 Fiano di Avellino DOCG</h4><p>Campania 最複雜的白酒，具豐富陳年潛力（5-10 年），風味濃郁獨特。</p><ul><li><strong>風味：</strong>榛果、蜂蜜、梨子、白桃、礦物感</li><li><strong>特色：</strong>陳年後出現煙燻、汽油等三級香氣</li><li><strong>釀造：</strong>低溫發酵，sur lie 酒泥陳年增加複雜度</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥈 Greco di Tufo DOCG</h4><p>以凝灰岩（Tufo）火山土壤命名，高酸多礦物感，地中海最佳白酒之一。</p><ul><li><strong>風味：</strong>檸檬、橘皮、桃子、礦物感、杏仁</li><li><strong>特色：</strong>阻止 MLF 保留尖銳酸度，火山礦物感強</li><li><strong>最佳配餐：</strong>生蠔、炸海鮮</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥉 Falanghina del Sannio</h4><p>日常易飲白酒，清新活潑，是 Campania 種植最廣泛的白葡萄品種。</p><ul><li><strong>風味：</strong>青蘋果、杏桃、白花、輕微礦物感</li><li><strong>特色：</strong>不銹鋼發酵保持果香純淨，萬能餐酒</li><li><strong>最佳配餐：</strong>Pizza、Mozzarella、炸海鮮</li></ul></div></div></div>"
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥇 Fiano di Avellino DOCG</h4><p>Fiano 最負盛名的產區；Fiano 是 Campania 最高貴的白葡萄，也是義大利最佳白葡萄之一。</p><ul><li><strong>風味：</strong>榛果、蜂蜜、梨子、白桃、礦物感</li><li><strong>特色：</strong>複雜、長壽，需要瓶中陳年才能完全展現</li><li><strong>釀造：</strong>通常在不鏽鋼槽中釀造</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥈 Greco di Tufo DOCG</h4><p>以 Tufo 村命名，Greco 最負盛名的產區；土壤含硫量高，酒款高酸、多礦物感。</p><ul><li><strong>風味：</strong>檸檬、橘皮、桃子、礦物感、杏仁</li><li><strong>特色：</strong>不鏽鋼釀造、不過桶；打火石、煙燻（sulfurei）、有質感</li><li><strong>最佳配餐：</strong>生蠔、炸海鮮</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥉 Falanghina del Sannio</h4><p>日常易飲白酒，清新活潑，是 Campania 種植最廣泛的白葡萄品種。</p><ul><li><strong>風味：</strong>青蘋果、杏桃、白花、輕微礦物感</li><li><strong>特色：</strong>不銹鋼發酵保持果香純淨，萬能餐酒</li><li><strong>最佳配餐：</strong>Pizza、Mozzarella、炸海鮮</li></ul></div></div></div>"
     },
     {
       "type": "content",
       "title": "🌋 火山葡萄酒產區",
-      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p>Campania 擁有歐洲最獨特的<strong>火山葡萄酒產區</strong>，活躍火山的礦物質土壤賦予葡萄酒無可複製的個性。</p><div class=\"terroir-key-point\"><h4>🌋 Vesuvio DOC - 歐洲唯一活火山葡萄園</h4><div class=\"key-point-grid\"><div class=\"kp-box\">歐洲唯一仍活躍的火山葡萄園，海拔 100-1,200m 斜坡種植</div><div class=\"kp-box\">Lacryma Christi（基督之淚）為代表酒款，白/紅/粉三種風格</div><div class=\"kp-box\">火山灰土壤 + 黑色玄武岩礫石，獨特礦物感與煙燻香氣</div></div></div><div class=\"terroir-key-point\"><h4>🔥 Campi Flegrei DOC - 燃燒的大地</h4><div class=\"key-point-grid\"><div class=\"kp-box\">「超級火山」地貌，地熱活動活躍，土地持續緩慢升降，世界罕見</div><div class=\"kp-box\">Falanghina Flegrea 是代表品種，帶有碘鹽感和極強礦物風味</div><div class=\"kp-box\">地下水熱影響土壤化學，賦予葡萄酒難以複製的火山個性</div></div></div></div></div>"
+      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p>Campania 的火山土壤依火山的年齡與狀態（活火山、休眠、死火山）而大不相同，材質包括熔岩、火山礫、火山灰、凝灰岩與浮石；疏鬆的火山砂土讓根瘤蚜無法生存，因此保留許多<strong>老藤與未嫁接的葡萄樹</strong>。</p><div class=\"terroir-key-point\"><h4>🌋 Vesuvio DOC — 維蘇威火山</h4><div class=\"key-point-grid\"><div class=\"kp-box\">維蘇威仍是活火山；葡萄園位於中低坡，海拔 50-400m</div><div class=\"kp-box\">Lacryma Christi del Vesuvio 是歷史名稱，現為 Vesuvio DOC 下規範更嚴格的子類別</div><div class=\"kp-box\">深色疏鬆的火山砂土，根瘤蚜無法生存；Bianco 以 Coda di Volpe 為主，Rosso 以 Piedirosso 為主</div></div></div><div class=\"terroir-key-point\"><h4>🔥 Campi Flegrei DOC — 燃燒的田野</h4><div class=\"key-point-grid\"><div class=\"kp-box\">Napoli 以西，由多次火山爆發形成的大型火山窪地</div><div class=\"kp-box\">深厚疏鬆的砂質火山土，沒有根瘤蚜，保留許多未嫁接的老藤</div><div class=\"kp-box\">兩大主角：Campi Flegrei Piedirosso（Per' e' Palummo）與 Campi Flegrei Falanghina</div></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍷 其他重要 Campania 葡萄酒",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌋 Lacryma Christi del Vesuvio</h4><p>「基督之淚」，產自維蘇威火山斜坡，歐洲最戲劇性的葡萄酒產地。</p><ul><li><strong>產地：</strong>維蘇威火山斜坡，活火山葡萄園</li><li><strong>品種：</strong>Falanghina/Coda di Volpe（白）、Piedirosso（紅）</li><li><strong>特色：</strong>煙燻礦物感，火山灰土壤獨特風味</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏔️ Aglianico del Taburno DOCG</h4><p>Taburno 山脈的 Aglianico，風格稍輕盈，是 Taurasi 之外的精品選擇。</p><ul><li><strong>產地：</strong>Benevento 省 Taburno 山脈</li><li><strong>特色：</strong>比 Taurasi 更早成熟，果香更豐富</li><li><strong>陳年：</strong>最少 3 年，Riserva 5 年</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔥 Campi Flegrei DOC</h4><p>超級火山地貌產區，Falanghina Flegrea 展現最純粹的火山礦物個性。</p><ul><li><strong>特色：</strong>碘鹽感、海洋礦物感、清爽高酸</li><li><strong>品種：</strong>Falanghina Flegrea、Piedirosso</li><li><strong>最佳配餐：</strong>海鮮、貝類、生蠔</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌿 Sannio DOC</h4><p>Campania 最大的 DOC 產區，多品種多風格，性價比極高的日常好酒。</p><ul><li><strong>品種：</strong>Falanghina、Aglianico、Greco</li><li><strong>特色：</strong>多樣風格、平易近人、物超所值</li><li><strong>代表酒莊：</strong>Cantina del Taburno（合作社，高性價比）</li></ul></div></div></div>"
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌋 Lacryma Christi del Vesuvio</h4><p>「基督之淚」，Vesuvio DOC 下規範更嚴格的子類別；傳說名稱源自 17 世紀修士使用的滴濾系統。</p><ul><li><strong>產地：</strong>維蘇威火山中低坡（50-400m）</li><li><strong>品種：</strong>Coda di Volpe Bianca（白）、Piedirosso（紅）</li><li><strong>特色：</strong>煙燻礦物感，火山灰土壤獨特風味</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏔️ Aglianico del Taburno DOCG</h4><p>原為 Sannio DOC 子產區，2011 年獨立為 DOCG，是義大利三大 Aglianico 產區之一。</p><ul><li><strong>產地：</strong>Benevento 省 Taburno 山脈</li><li><strong>特色：</strong>當地生物型 Aglianico Amaro，酸度明顯；石灰質黏土與砂岩，表層覆蓋火山物質</li><li><strong>陳年：</strong>最少 2 年，Riserva 3 年（含 1 年木桶）</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔥 Campi Flegrei DOC</h4><p>Napoli 以西的火山窪地，未嫁接老藤眾多。</p><ul><li><strong>特色：</strong>疏鬆砂質火山土，根瘤蚜無法生存</li><li><strong>品種：</strong>Falanghina Flegrea、Piedirosso</li><li><strong>最佳配餐：</strong>海鮮、貝類、生蠔</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌿 Sannio DOC</h4><p>歷史上的 Sannio 相當於 Benevento 省，是 Campania 產量最大的產區。</p><ul><li><strong>品種：</strong>Fiano、Greco、Coda di Volpe Bianca、Aglianico 等</li><li><strong>特色：</strong>土壤與中氣候多樣，風格眾多；與 Falanghina del Sannio DOC 同樣有 5 個子產區</li><li><strong>代表酒莊：</strong>Cantina del Taburno（合作社，高性價比）</li></ul></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏛️ 沿海與北部法定產區（IWS 官方教材）",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏛️ Falerno del Massico DOC</h4><p>為延續古羅馬 Falernum 的傳承而設，範圍大致與古代 Falernum 相同：Monte Massico 周圍與 Roccamonfina 山麓，火山土覆蓋在石灰岩上。</p><ul><li><strong>Bianco：</strong>以 Falanghina（Flegrea）為主</li><li><strong>Rosso：</strong>以 Aglianico 為主（搭配 Piedirosso）</li><li><strong>Primitivo：</strong>單一品種 Primitivo</li><li><strong>Riserva：</strong>兩種紅酒都可，最少陳年 2 年（含 1 年木桶）</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌳 Asprinio di Aversa DOC</h4><p>Caserta 省 Aversa 周邊，以當地 Asprinio 葡萄釀造；平坦肥沃的土地，凝灰岩底土上覆火山物質。</p><ul><li><strong>整枝：</strong>源自伊特魯里亞人的 Alberata Aversana，把葡萄樹攀在白楊樹上</li><li><strong>規範：</strong>最低 85% Asprinio；Spumante 須 100%</li><li><strong>風格：</strong>靜態、微氣泡、氣泡酒</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏝️ Ischia DOC</h4><p>「L'isola Verde（綠島）」，2000 多年的釀酒歷史；1966 年成為 Campania 第一個 DOC，也是義大利最早的 DOC 之一。</p><ul><li><strong>葡萄園：</strong>陡峭狹窄的梯田，以乾砌石牆支撐</li><li><strong>白酒：</strong>Biancolella、Forastera 單一品種</li><li><strong>紅酒：</strong>Piedirosso（Per' e' Palummo）</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌊 Costa d'Amalfi DOC</h4><p>陡峭岩石梯田，乾砌石牆支撐；白雲岩基岩上覆疏鬆火山土，有許多百年未嫁接老藤，典型整枝為 Pergola。</p><ul><li><strong>白：</strong>Biancolella、Falanghina</li><li><strong>紅：</strong>Piedirosso、Aglianico、Sciascinoso</li><li><strong>子產區：</strong>Furore、Ravello、Tramonti</li></ul></div></div></div>"
     },
     {
       "type": "content",
@@ -95,49 +100,51 @@
     {
       "type": "content",
       "title": "📜 Campania 葡萄酒歷史深度",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p>Campania 的葡萄酒歷史是一部跨越 2500 年的史詩，從古希臘殖民到現代復興。</p><p class=\"intro-highlight\">「Falernian 是古羅馬最偉大的葡萄酒，Pliny 稱其為『最受神靈青睞的佳釀』」</p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge\">BC8世紀</div><div class=\"timeline-content\"><h4>希臘人引進 Aglianico</h4><p>古希臘殖民者帶來「Hellenico」品種，在 Campania 定居釀酒，奠定 2500 年葡萄酒傳統。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge\">BC2世紀</div><div class=\"timeline-content\"><h4>Falernian 稱霸羅馬</h4><p>Falernian 成為羅馬帝國最頂級葡萄酒，凱撒大帝宴席必備，Pliny 在《自然史》中詳細記載。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge\">1928年</div><div class=\"timeline-content\"><h4>Mastroberardino 復興 Taurasi</h4><p>Antonio Mastroberardino 重新開發 Taurasi 葡萄園，現代 Campania 高品質葡萄酒時代正式開始。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge\">1993年</div><div class=\"timeline-content\"><h4>Taurasi DOCG 升格</h4><p>Taurasi 獲得 DOCG 最高認證，Fiano 和 Greco 也相繼升格，Campania 進入國際舞台。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">2500+</div><div class=\"stat-label\">年葡萄酒歷史</div></div><div class=\"stat-box\"><div class=\"stat-number\">4</div><div class=\"stat-label\">DOCG 頂級產區</div></div><div class=\"stat-box\"><div class=\"stat-number\">20,000</div><div class=\"stat-label\">公頃葡萄園</div></div><div class=\"stat-box\"><div class=\"stat-number\">100+</div><div class=\"stat-label\">本土原生品種</div></div></div></div>"
+      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p>Campania 的葡萄酒歷史從古希臘殖民一路延續到現代復興。</p><p class=\"intro-highlight\">「Falernum 是古代最偉大的葡萄酒之一，堪稱當時的『一級酒莊』」</p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge\">BC 8 世紀</div><div class=\"timeline-content\"><h4>希臘人建立殖民地</h4><p>希臘人在 Campania 建立重要據點，引進灌木式（低矮）整枝；BC 7 世紀伊特魯里亞人南下，帶來把葡萄樹攀在樹上的整枝法（alberata）。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge\">BC 3 世紀</div><div class=\"timeline-content\"><h4>Falernum 的時代</h4><p>Monte Massico 山坡自 BC 3 世紀起生產 Falernum，依葡萄園位置分三級：Faustianum（中坡，最優）、Caucinum（最高處）、Falernum（低地）；雙耳瓶標示產地、年份與生產者，是最早的產區概念之一。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge\">476–1861</div><div class=\"timeline-content\"><h4>動盪到統一</h4><p>羅馬帝國崩潰後 Falernum 沒落，Campania 長期政權更迭；18 世紀西班牙波旁王朝帶來穩定（兩西西里王國），1861 年併入義大利王國。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge\">1950s–1968</div><div class=\"timeline-content\"><h4>Mastroberardino 與 Taurasi</h4><p>20 世紀初 Taurasi 的酒以散裝運往北義與法國；兩次大戰與根瘤蚜重創產業。1950 年代 Antonio Mastroberardino 專注於 Aglianico、Greco、Fiano，並在 1940 年代末救回瀕臨滅絕的 Fiano；1968 年推出 Taurasi Riserva。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge\">1966–2011</div><div class=\"timeline-content\"><h4>DOC 與 DOCG</h4><p>1966 年 Ischia 成為 Campania 第一個 DOC；1970 年 Taurasi 成為 DOC，1993 年升格為南義第一個 DOCG；之後 Fiano di Avellino、Greco di Tufo（2003）與 Aglianico del Taburno（2011）也升格 DOCG。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">1966</div><div class=\"stat-label\">第一個 DOC（Ischia）</div></div><div class=\"stat-box\"><div class=\"stat-number\">4</div><div class=\"stat-label\">DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">20,000</div><div class=\"stat-label\">公頃葡萄園</div></div><div class=\"stat-box\"><div class=\"stat-number\">~100</div><div class=\"stat-label\">原生品種</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🧬 Aglianico 品種科學與 DNA 研究",
-      "content": "<div class=\"variety-deep-section\"><h3>🔬 古老品種的現代科學解析</h3><p>Aglianico 是義大利最具科學研究價值的古老品種，其 DNA 研究揭示了品種的獨特性與歐洲其他品種的差異。</p><div class=\"dna-research\"><h4>🧬 DNA 研究發現</h4><div class=\"research-content\"><p>2006 年科學研究確認 Aglianico 是<strong>獨立古老品種</strong>，與 Nebbiolo 無基因關係，「南義 Nebbiolo」是風格比喻而非遺傳關係。Aglianico 可能是義大利最古老的釀酒葡萄之一，至今仍保留古老基因多樣性。</p></div></div><div class=\"aging-science\"><div class=\"science-explanation\"><div class=\"science-card\"><h5>⚫ 單寧結構</h5><p>多酚含量極高（總多酚 3800-4200 mg/L），以花青素為主，年輕時極為收斂緊閉，陳年後逐漸軟化展現複雜度。</p><div class=\"science-note\">12 年後：絲滑單寧巔峰</div></div><div class=\"science-card\"><h5>🍋 酸度保鮮</h5><p>蘋果酸與酒石酸共存，天然高酸環境（pH 3.30-3.40）保護葡萄酒免受氧化，是 30 年陳年潛力的關鍵。</p><div class=\"science-note\">酸度 = 陳年壽命的保證</div></div><div class=\"science-card\"><h5>🌋 火山礦物</h5><p>Campania 火山土壤（凝灰岩、玄武岩）通過葡萄根系吸收，在葡萄酒中表現為獨特的礦物感、煙燻和焦油香氣。</p><div class=\"science-note\">土壤 → 根系 → 果實 → 酒款</div></div></div></div></div>"
+      "title": "🍇 Campania 原生品種全解（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><h3>🍇 約 100 個原生品種，許多只見於 Campania</h3><p>Campania 能保留豐富的品種多樣性，主要因為火山土壤阻止了根瘤蚜的擴散。近年 Barbera、Sangiovese、Malvasia Bianca di Candia 等外來品種則逐漸退場。</p><div class=\"dna-research\"><h4>🔴 紅葡萄</h4><div class=\"research-content\"><p><strong>Aglianico：</strong>種植最廣的紅葡萄，見前頁。<strong>Piedirosso（Per' e' Palummo）：</strong>古老品種，歷史上種在 Napoli 周邊（Campi Flegrei、Vesuvio、Ischia、Sorrento 半島）；傳統上用來柔化 Aglianico，因火山土常以自根種植。其他還有 Casavecchia、Pallagrello Nero、Sciascinoso、Tintore。</p></div></div><div class=\"aging-science\"><div class=\"science-explanation\"><div class=\"science-card\"><h5>🥇 Fiano</h5><p>Campania 最高貴的白葡萄；13 世紀首次出現在神聖羅馬帝國皇帝 Frederick II 的酒單；古拉丁名 Apianum。1940 年代末幾近滅絕，由 Mastroberardino 救回。複雜長壽，需瓶中陳年。</p><div class=\"science-note\">最高貴的白葡萄</div></div><div class=\"science-card\"><h5>🥈 Greco</h5><p>古老白葡萄，歷史上種在 Tufo 鎮周邊；名稱可能指古希臘風格（帶殘糖）的酒，而非希臘起源。晚熟、難種，酚類物質多、酸度高，耐陳年；雙果串、易氧化。</p><div class=\"science-note\">高酸、易氧化</div></div><div class=\"science-card\"><h5>🥉 Falanghina</h5><p>原生古老品種，Campania <strong>種植最廣的白葡萄</strong>；1970 年代由 Villa Matilde、Mustilli、Grotta del Sole 帶動復興。其實是兩個基因不同的品種：Falanghina Flegrea（Napoli、Caserta）與 Falanghina Beneventana（Benevento，種植最廣）。</p><div class=\"science-note\">一個名字，兩個品種</div></div></div></div><p class=\"science-note\">其他白葡萄：Biancolella（Ischia 原生，酒精與酸度中等）、Coda di Volpe Bianca（常與 Greco、Fiano、Falanghina 混釀，Sannio 與 Irpinia 也有單一品種）、Asprinio、Forastera、Pallagrello Bianco。注意：Casavecchia 是紅葡萄。</p></div>"
     },
     {
       "type": "content",
-      "title": "🌋 火山土壤深度解析",
-      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p>Campania 的兩大火山產區各有獨特的地質背景，賦予葡萄酒截然不同卻同樣令人印象深刻的礦物個性。</p></div><div class=\"terroir-key-point\"><h4>🌋 Vesuvio 維蘇威火山（Vesuvio DOC）</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>地質：</strong>黑色玄武岩礫石 + 火山灰，排水性極佳，礦物質豐富</div><div class=\"kp-box\"><strong>海拔：</strong>100-1,200m 火山斜坡，劇烈的海拔溫差造就獨特酸度</div><div class=\"kp-box\"><strong>土壤特色：</strong>高鉀低氮，葡萄天然低產，風味高度集中，煙燻礦物感明顯</div></div></div><div class=\"terroir-key-point\"><h4>🔥 Campi Flegrei 燃燒大地（Campi Flegrei DOC）</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>地質：</strong>超級火山系統（Caldera），地熱活動持續，土地緩慢升降，世界罕見</div><div class=\"kp-box\"><strong>土壤：</strong>黃色凝灰岩（Tufo giallo）+ 火山灰，高硫化物含量賦予碘鹽感</div><div class=\"kp-box\"><strong>葡萄酒個性：</strong>極強礦物感、碘鹽、硫磺，Falanghina Flegrea 是最佳代表</div></div></div></div>"
+      "title": "🌋 地形、氣候、土壤與整枝（IWS 官方教材）",
+      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p>Campania 地形不規則，以丘陵和山地為主，面向 Tyrrhenian 海。沿海為地中海型氣候，越往內陸越大陸性；南 Apennine 山脈抵消了南方的緯度，山丘地帶晝夜溫差大。</p></div><div class=\"terroir-key-point\"><h4>🪨 土壤：多樣而複雜</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>火山土為主：</strong>依火山年齡與狀態（活火山、休眠、死火山）差異極大</div><div class=\"kp-box\"><strong>材質：</strong>熔岩、火山礫、火山灰、凝灰岩、浮石；空降的火山物質可飄到很遠，與石灰岩、黏土、砂混合</div><div class=\"kp-box\"><strong>根瘤蚜：</strong>疏鬆的礫質火山土讓根瘤蚜無法生存，火山土常與極老、未嫁接的葡萄樹相伴</div></div></div><div class=\"terroir-key-point\"><h4>🌿 傳統整枝系統</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Alberata：</strong>把葡萄樹攀在樹上或樹間，源自伊特魯里亞人；Alberata Aversana 是 Asprinio di Aversa 的傳統整枝（攀在白楊樹上）</div><div class=\"kp-box\"><strong>Raggiera：</strong>放射狀整枝，在 Taurasi 稱為 starza；如今 Guyot 與 Cordone Speronato 較常見</div><div class=\"kp-box\"><strong>Pergola：</strong>棚架，是 Costa d'Amalfi 的典型整枝；Ischia 北部也用 Pergola 與 Alberata，南部則用 Alberello、Cordone Speronato、Guyot</div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🔄 Taurasi 傳統與現代釀造",
-      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p>Taurasi 的釀造在傳統大橡木桶與現代法國小橡木桶之間尋求平衡，兩種哲學各有其擁護者與精彩作品。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🏛️ 傳統工藝</h4><ul><li>斯洛維尼亞大橡木桶（<strong>10-50hl</strong>）陳年</li><li>長浸皮（20-30 天）提取深色色素</li><li>天然本土酵母自然發酵</li><li>最少人工干預</li><li>釋出時間：採收後 5-8 年</li></ul><p>代表：Mastroberardino、Antonio Caggiano</p></div><div class=\"method-card modern\"><h4>🔬 現代工藝</h4><ul><li>法國 <strong>小橡木桶</strong>（225L Barriques）</li><li>精確溫控發酵（26-28°C）</li><li>Micro-oxygenation 技術</li><li>短浸皮（12-18 天）保留果香</li><li>釋出時間：採收後 3-5 年</li></ul><p>代表：Feudi di San Gregorio、Terredora</p></div></div></div><div class=\"flavor-evolution\"><h4>⏳ Taurasi 陳年演化</h4><div class=\"evolution-timeline\"><div class=\"evo-stage\"><div class=\"stage-year\">3年</div><div class=\"stage-flavors\"><div class=\"flavor-icon\">🍒</div><div>黑色果香開放，單寧開始軟化</div></div><div class=\"evo-arrow\">→</div></div><div class=\"evo-stage\"><div class=\"stage-year\">8年</div><div class=\"stage-flavors\"><div class=\"flavor-icon\">🍄</div><div>皮革煙草出現，石榴紅色澤</div></div><div class=\"evo-arrow\">→</div></div><div class=\"evo-stage\"><div class=\"stage-year\">12年</div><div class=\"stage-flavors\"><div class=\"flavor-icon\">💎</div><div>巔峰期，黑松露焦油，絲滑單寧</div></div><div class=\"evo-arrow\">→</div></div><div class=\"evo-stage\"><div class=\"stage-year\">20年+</div><div class=\"stage-flavors\"><div class=\"flavor-icon\">🏛️</div><div>皮革雪茄，琥珀色澤，傳奇境界</div></div></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p>Taurasi 的釀造在傳統大橡木桶與現代法國小橡木桶之間尋求平衡，兩種哲學各有其擁護者與精彩作品。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🏛️ 傳統工藝</h4><ul><li>大木桶（<strong>botti</strong>）陳年</li><li>長浸皮（20-30 天）提取深色色素</li><li>天然本土酵母自然發酵</li><li>最少人工干預</li><li>傳統整枝：Raggiera（當地稱 starza）</li></ul><p>代表：Mastroberardino、Antonio Caggiano</p></div><div class=\"method-card modern\"><h4>🔬 現代工藝</h4><ul><li>法國 <strong>小橡木桶</strong>（225L Barriques）</li><li>精確溫控發酵（26-28°C）</li><li>Guyot、Cordone Speronato 整枝</li><li>短浸皮（12-18 天）保留果香</li><li>法規：最少陳年 3 年（含 1 年木桶）</li></ul><p>代表：Feudi di San Gregorio、Terredora</p></div></div></div><div class=\"flavor-evolution\"><h4>⏳ Taurasi 陳年演化</h4><div class=\"evolution-timeline\"><div class=\"evo-stage\"><div class=\"stage-year\">3年</div><div class=\"stage-flavors\"><div class=\"flavor-icon\">🍒</div><div>黑色果香開放，單寧開始軟化</div></div><div class=\"evo-arrow\">→</div></div><div class=\"evo-stage\"><div class=\"stage-year\">8年</div><div class=\"stage-flavors\"><div class=\"flavor-icon\">🍄</div><div>皮革煙草出現，石榴紅色澤</div></div><div class=\"evo-arrow\">→</div></div><div class=\"evo-stage\"><div class=\"stage-year\">12年</div><div class=\"stage-flavors\"><div class=\"flavor-icon\">💎</div><div>巔峰期，黑松露焦油，絲滑單寧</div></div><div class=\"evo-arrow\">→</div></div><div class=\"evo-stage\"><div class=\"stage-year\">20年+</div><div class=\"stage-flavors\"><div class=\"flavor-icon\">🏛️</div><div>皮革雪茄，琥珀色澤，傳奇境界</div></div></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍾 白葡萄釀造工藝比較",
-      "content": "<div class=\"variety-deep-section\"><h3>🍇 三大白葡萄品種釀造比較</h3><p>Campania 三大白葡萄各有其獨特釀造哲學，在地中海氣候下展現截然不同的個性與風格。</p><div class=\"aging-science\"><div class=\"science-explanation\"><div class=\"science-card\"><h5>🥇 Fiano di Avellino</h5><p>低溫浸皮（8-10°C，6-12 小時）提取芳香前驅物，sur lie 酒泥陳年 3-9 個月增加複雜度與酒體。</p><div class=\"science-note\">陳年潛力：5-10 年，可達 15 年</div></div><div class=\"science-card\"><h5>🥈 Greco di Tufo</h5><p>80% 阻止蘋果酸乳酸發酵（MLF）保留尖銳酸度，低溫發酵 14-16°C 長達 20-30 天保留礦物感。</p><div class=\"science-note\">阻止 MLF = 保留火山酸度</div></div><div class=\"science-card\"><h5>🥉 Falanghina</h5><p>不銹鋼低溫發酵（16-18°C）保持新鮮果香，無橡木桶影響，追求清爽純淨的即飲風格。</p><div class=\"science-note\">最佳飲用期：1-3 年</div></div></div></div></div>"
+      "title": "🍾 三大白酒法定產區（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><h3>🍇 Irpinia 與 Sannio 的白酒</h3><p>Campania 4 個 DOCG 中有 3 個位於 Irpinia（Avellino 省）；Sannio（Benevento 省）則是 Campania 產量最大的產區。</p><div class=\"aging-science\"><div class=\"science-explanation\"><div class=\"science-card\"><h5>🥇 Fiano di Avellino DOCG</h5><p>最低 85% Fiano（多為 100%），可用 Greco、Coda di Volpe Bianca、Trebbiano Toscano；土壤富含黏土與火山物質，通常不鏽鋼釀造。四個知名村莊：Summonte（濃縮有力）、Montefredane（礦物、長壽）、Lapio（香氣明顯）、Cesinali（細緻易飲）。</p><div class=\"science-note\">需要瓶中陳年</div></div><div class=\"science-card\"><h5>🥈 Greco di Tufo DOCG</h5><p>最低 85% Greco，Coda di Volpe Bianca 最多 15%（多為 100% Greco）。主要村莊 Tufo、Santa Paolina、Montefusco，海拔 300-650m 以上；黏土混合石灰岩、砂與火山物質，含硫量高。不鏽鋼釀造、不過桶：高酸、礦物、打火石、煙燻。</p><div class=\"science-note\">含硫土壤 = 煙燻礦物感</div></div><div class=\"science-card\"><h5>🥉 Falanghina del Sannio DOC</h5><p>最低 85% Falanghina，以種植最廣的 Falanghina Beneventana 為主。與 Sannio DOC 同樣有 5 個子產區：Guardiolo、Sant'Agata dei Goti、Solopaca、Solopaca Classico、Taburno。多為靜態酒，也有氣泡酒與 Passito。</p><div class=\"science-note\">Falanghina Beneventana</div></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏰 Campania 名莊介紹",
-      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><p>Campania 的頂級酒莊各有不同的釀酒哲學，從 1878 年的傳奇先驅到 2001 年的學術精品，共同塑造南義葡萄酒的國際形象。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🥇 Mastroberardino（1878）</h4><ul><li>Taurasi 的傳奇先驅，家族第 10 代傳承</li><li>復興瀕危古老品種（Fiano、Greco）</li><li>龐貝葡萄園考古計畫（復原古羅馬品種）</li><li>代表：Radici Riserva（Parker 92-96 分）</li></ul></div><div class=\"orvieto-card\"><h4>🥈 Feudi di San Gregorio（1986）</h4><ul><li>Irpinia 最大酒莊（400 公頃），現代化領導者</li><li>引入法國小橡木桶，國際顧問 Riccardo Cotarella</li><li>代表：Serpico Irpinia（Parker 91-94 分）</li></ul></div><div class=\"orvieto-card\"><h4>🎓 Quintodecimo（2001）</h4><ul><li>創始人 Luigi Moio：Napoli 大學釀酒系主任</li><li>生物動力農法，最低干預，本土酵母</li><li>代表：Terra d'Eclano（Parker 94-97 分）</li></ul></div><div class=\"orvieto-card\"><h4>🏺 Antonio Caggiano（1990）</h4><ul><li>攝影師轉型釀酒師，堅守大橡木桶傳統</li><li>35 公頃，年產 12 萬瓶，家族經營</li><li>代表：Vigna Macchia dei Goti（Parker 92-95 分）</li></ul></div><div class=\"orvieto-card\"><h4>🌱 Terredora di Paolo（1978）</h4><ul><li>Mastroberardino 家族分支（Paolo），有機認證</li><li>150 公頃全有機，年產 100 萬瓶</li><li>代表：CampoRe Fiano di Avellino DOCG</li></ul></div><div class=\"orvieto-card\"><h4>🏛️ Villa Matilde（1960）</h4><ul><li>古羅馬 Falernian 產區復興先鋒</li><li>與 Napoli 大學合作考古，復原古羅馬品種</li><li>代表：Falerno del Massico Rosso（€30-50）</li></ul></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><p>Campania 的頂級酒莊各有不同的釀酒哲學，從 1878 年的傳奇先驅到 2001 年的學院派酒莊，共同塑造南義葡萄酒的國際形象。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🥇 Mastroberardino（1878）</h4><ul><li>Antonio Mastroberardino 被視為 Campania 現代葡萄酒之父</li><li>1940 年代末救回瀕臨滅絕的 Fiano，也專注 Aglianico、Greco</li><li>1968 年推出 Taurasi Riserva</li><li>代表：Radici Taurasi</li></ul></div><div class=\"orvieto-card\"><h4>🥈 Feudi di San Gregorio（1986）</h4><ul><li>Irpinia 的現代派代表酒莊</li><li>以 Fiano、Greco、Aglianico 為核心</li><li>代表：Serpico Irpinia Aglianico</li></ul></div><div class=\"orvieto-card\"><h4>🎓 Quintodecimo（2001）</h4><ul><li>創始人 Luigi Moio：Napoli 大學釀酒學教授</li><li>位於 Mirabella Eclano，專注 Irpinia 的 Aglianico、Fiano、Greco</li><li>代表：Terra d'Eclano Taurasi</li></ul></div><div class=\"orvieto-card\"><h4>🏺 Antonio Caggiano（1990）</h4><ul><li>位於 Taurasi 鎮的家族酒莊</li><li>以單一園 Taurasi 聞名</li><li>代表：Vigna Macchia dei Goti Taurasi</li></ul></div><div class=\"orvieto-card\"><h4>🌱 Terredora di Paolo（1978）</h4><ul><li>Mastroberardino 家族的另一支（Walter Mastroberardino）</li><li>專注 Irpinia 的三大 DOCG</li><li>代表：CampoRe Taurasi、Pago dei Fusi Taurasi</li></ul></div><div class=\"orvieto-card\"><h4>🏛️ Villa Matilde（1960）</h4><ul><li>Falerno del Massico 的先驅，該 DOC 為延續古羅馬 Falernum 的傳承而設</li><li>1970 年代與 Mustilli、Grotta del Sole 一同帶動 Falanghina 復興</li><li>代表：Falerno del Massico Rosso（€30-50）</li></ul></div></div></div>"
     },
     {
       "type": "image",
       "title": "🍷 酒標實例：Taurasi DOCG",
       "image": "/italy/images/labels/campania/taurasi-terredora-2004.jpg",
-      "caption": "Terredora Pago del Fusi Taurasi DOCG 2004——以 Aglianico 品種釀造，被稱為「南義的 Barolo」，陳年潛力極高。"
+      "caption": "Terredora Pago dei Fusi Taurasi DOCG 2004——Taurasi 最低 85% Aglianico，最少陳年 3 年（含 1 年木桶）；Aglianico 被稱為「南義的 Barolo」，陳年潛力極高。"
     },
     {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Campania 擁有 2500 年葡萄酒歷史，古羅馬時期就有 Falernian 名酒",
-        "✓ Aglianico 被稱為「南義的 Nebbiolo」，陳年潛力 20-30 年",
-        "✓ Taurasi DOCG 是南義最頂級紅酒，需陳年 3-4 年才能釋出",
-        "✓ Fiano、Greco、Falanghina 是 Campania 的白葡萄三劍客",
-        "✓ 火山土壤（Vesuvius, Campi Flegrei）賦予葡萄酒獨特礦物感",
-        "✓ Lacryma Christi del Vesuvio 是歐洲唯一仍活躍的火山葡萄園產區"
+        "✓ Campania 面向 Tyrrhenian 海，地形以丘陵與山地為主；沿海地中海型、內陸大陸性，山丘晝夜溫差大",
+        "✓ 古希臘人帶來低矮整枝、伊特魯里亞人帶來 Alberata；古羅馬的 Falernum（Monte Massico）是古代最偉大的葡萄酒之一",
+        "✓ 火山土壤多樣，疏鬆火山土讓根瘤蚜無法生存，保留了約 100 個原生品種與許多未嫁接老藤",
+        "✓ Aglianico（南義的 Barolo）是種植最廣的品種：皮厚、晚熟、高單寧、高酸、極耐陳年；Falanghina 是種植最廣的白葡萄",
+        "✓ Taurasi DOCG（1993，南義第一個 DOCG）：最低 85% Aglianico，最少 3 年（1 年木桶），Riserva 4 年（18 個月木桶）",
+        "✓ Aglianico del Taburno DOCG（2011）：Aglianico Amaro，最少 2 年，Riserva 3 年（1 年木桶）",
+        "✓ Fiano di Avellino 與 Greco di Tufo 都是最低 85%、不鏽鋼釀造；Fiano 是最高貴的白葡萄，Greco di Tufo 以含硫土壤的打火石煙燻感著稱",
+        "✓ Ischia 是 Campania 第一個 DOC（1966）；Lacryma Christi 是 Vesuvio DOC 下的子類別；Antonio Mastroberardino 被視為 Campania 現代葡萄酒之父"
       ]
     },
     {
@@ -147,15 +154,15 @@
       "questions": [
         {
           "type": "single",
-          "question": "Aglianico 為什麼被稱為「南義的 Nebbiolo」？",
+          "question": "Aglianico 被稱為什麼？",
           "options": [
-            "產量相同",
-            "高單寧、高酸度、陳年潛力驚人",
-            "顏色相同",
-            "價格相同"
+            "南義的 Barolo",
+            "南義的 Sauvignon Blanc",
+            "西西里之王",
+            "Tuscany 之星"
           ],
-          "correct": 1,
-          "explanation": "Aglianico 與 Nebbiolo 類似，擁有極高單寧、高酸度和驚人的陳年潛力（20-30 年），是南義最高貴的紅葡萄品種。"
+          "correct": 0,
+          "explanation": "Aglianico 皮厚、晚熟，單寧、酸度與花青素都高，極耐陳年，因此被稱為「南義的 Barolo」；主要產區是 Taurasi 與 Aglianico del Taburno。"
         },
         {
           "type": "single",
@@ -167,19 +174,19 @@
             "Garganega, Cortese, Timorasso"
           ],
           "correct": 1,
-          "explanation": "Fiano di Avellino、Greco di Tufo、Falanghina 是 Campania 的代表性白葡萄品種，都是古老的本土品種。"
+          "explanation": "Fiano（Fiano di Avellino）、Greco（Greco di Tufo）、Falanghina 是 Campania 的代表白葡萄，都是古老的原生品種；Falanghina 是種植最廣的白葡萄，Fiano 是最高貴的白葡萄。"
         },
         {
           "type": "single",
-          "question": "Vesuvio DOC 的特點是？",
+          "question": "Lacryma Christi 與 Vesuvio DOC 的關係是？",
           "options": [
-            "沒有火山",
-            "歐洲唯一仍活躍的火山葡萄園",
-            "海拔最低的產區",
-            "只產紅酒"
+            "兩個獨立的 DOCG",
+            "Lacryma Christi 是 Vesuvio DOC 下規範更嚴格的子類別",
+            "Lacryma Christi 是一種甜酒品種",
+            "Lacryma Christi 屬於 Campi Flegrei DOC"
           ],
           "correct": 1,
-          "explanation": "Vesuvio（維蘇威火山）是歐洲唯一仍活躍的火山，葡萄園位於火山斜坡，賦予葡萄酒獨特火山礦物感。"
+          "explanation": "Vesuvio DOC 是正式法定產區，Lacryma Christi del Vesuvio 是歷史名稱，如今是 Vesuvio DOC 下規範更嚴格的子類別；Bianco 以 Coda di Volpe 為主，Rosso 以 Piedirosso 為主。"
         },
         {
           "type": "single",
@@ -203,7 +210,67 @@
             "以氣泡著名"
           ],
           "correct": 1,
-          "explanation": "Fiano di Avellino 以獨特的礦物感、榛果與煙燻香氣著稱，優質年份可陳年 10 年以上。"
+          "explanation": "Fiano 是 Campania 最高貴的白葡萄，複雜且長壽，需要瓶中陳年才能完全展現；Fiano di Avellino 通常在不鏽鋼槽中釀造。"
+        },
+        {
+          "type": "single",
+          "question": "Campania 的第一個 DOC 是？",
+          "options": [
+            "A. Taurasi",
+            "B. Ischia",
+            "C. Vesuvio",
+            "D. Falerno del Massico"
+          ],
+          "correct": 1,
+          "explanation": "Ischia（綠島）在 1966 年成為 Campania 第一個 DOC，也是義大利最早的 DOC 之一；Biancolella 是 Ischia 的招牌白葡萄。"
+        },
+        {
+          "type": "single",
+          "question": "哪一個不是 Aglianico 的生物型？",
+          "options": [
+            "A. Aglianico Amaro",
+            "B. Aglianico di Taurasi",
+            "C. Aglianico del Vulture",
+            "D. Aglianicone"
+          ],
+          "correct": 3,
+          "explanation": "Aglianico 的三大生物型是 Aglianico di Taurasi、Aglianico Amaro（Taburno）與 Aglianico del Vulture（Basilicata）；Aglianicone 是另一個紅葡萄品種。"
+        },
+        {
+          "type": "single",
+          "question": "「Per' e' Palummo」是哪個品種的別名？",
+          "options": [
+            "A. Casavecchia",
+            "B. Primitivo",
+            "C. Piedirosso",
+            "D. Asprinio"
+          ],
+          "correct": 2,
+          "explanation": "Piedirosso 又稱 Per' e' Palummo，是 Napoli 周邊的古老紅葡萄，傳統上用來柔化 Aglianico，常因火山土而以自根種植。"
+        },
+        {
+          "type": "single",
+          "question": "Greco di Tufo DOCG 中，最多可使用 15% 的輔助品種是？",
+          "options": [
+            "A. Fiano",
+            "B. Coda di Volpe Bianca",
+            "C. Falanghina",
+            "D. Trebbiano Toscano"
+          ],
+          "correct": 1,
+          "explanation": "Greco di Tufo DOCG 最低 85% Greco，Coda di Volpe Bianca 最多 15%（多數酒款為 100% Greco）；通常不鏽鋼釀造、不過桶。"
+        },
+        {
+          "type": "single",
+          "question": "Alberata 是什麼？",
+          "options": [
+            "A. 高架棚架",
+            "B. 低矮的灌木式整枝",
+            "C. 把葡萄樹攀在樹上的整枝",
+            "D. 現代籬架"
+          ],
+          "correct": 2,
+          "explanation": "Alberata 是把葡萄樹攀在樹上或樹間的整枝法，源自伊特魯里亞人；Asprinio di Aversa 的 Alberata Aversana 把葡萄攀在白楊樹上。低矮的灌木式整枝則是希臘人帶來的。"
         }
       ]
     }
