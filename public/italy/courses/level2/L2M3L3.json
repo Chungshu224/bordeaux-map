@@ -14,26 +14,26 @@
       "explanation": "Aglianico del Vulture 產自 Monte Vulture 已滅絕火山斜坡，火山土壤賦予獨特礦物感。"
     },
     {
-      "question": "Aglianico del Vulture Superiore Riserva 需陳年多久？",
+      "question": "Aglianico del Vulture Superiore Riserva 最早何時可以上市？",
       "options": [
-        "1 年",
-        "3 年",
-        "5 年",
-        "10 年"
+        "採收翌年",
+        "採收後第三年",
+        "採收後第五年",
+        "採收後第十年"
       ],
       "answer": 2,
-      "explanation": "Aglianico del Vulture Superiore Riserva 需陳年至少 5 年（含 2 年橡木桶）才能釋出。"
+      "explanation": "Superiore Riserva 必須至少 2 年木桶＋1 年瓶中陳年，採收後第五年之前不得上市；Superiore 則是 1 年木桶＋1 年瓶陳，第三年 11 月 1 日之後才能上市。"
     },
     {
       "question": "Aglianico del Vulture 與 Taurasi 的主要差異是？",
       "options": [
         "使用不同品種",
-        "Vulture 更礦物、更優雅",
+        "同一品種，但為不同生物型（Aglianico del Vulture 與 Aglianico di Taurasi）",
         "Taurasi 在 Basilicata",
-        "酒精度差異大"
+        "兩者都允許 15% 其他品種"
       ],
       "answer": 1,
-      "explanation": "兩者都用 Aglianico 品種，但 Vulture 因火山土壤和高海拔，風格更礦物、更優雅、更緊緻。"
+      "explanation": "兩者都是 Aglianico，分別是 Aglianico del Vulture 與 Aglianico di Taurasi 兩個生物型；Aglianico del Vulture 要求 100% Aglianico，Taurasi 則是最低 85%。"
     },
     {
       "question": "Basilicata 料理的特色香料是？",
@@ -44,7 +44,7 @@
         "肉桂"
       ],
       "answer": 1,
-      "explanation": "Basilicata 料理以辣椒（Peperoncino）為特色，Peperoni Cruschi（酥脆辣椒）是當地特產。"
+      "explanation": "Basilicata 料理以辣椒（Peperoncino）為特色，Peperoni Cruschi（酥脆辣椒）是當地特產；IWS 也介紹了 Canestrato di Moliterno 起司、Lucanica 香腸與 Matera 麵包。"
     }
   ],
   "slides": [
@@ -56,7 +56,7 @@
     {
       "type": "content",
       "title": "🏔️ 義大利最驕傲的秘境產區",
-      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Basilicata（巴西利卡塔）是義大利<strong>最貧窮、人口最稀少</strong>的大區之一，卻擁有<strong>Aglianico del Vulture DOCG</strong>——被譽為「南義的 Barolo」，是義大利最偉大的紅酒之一。</p><p class=\"highlight\">🎯 精而不多：只有 1 個 DOCG，但 Parker 最高 97 分，國際聲譽遠超產量規模，是義大利最佳性價比頂級紅酒。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">👥</div><div class=\"fact-text\"><strong>56萬</strong><span>人口（全義倒數第四）</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌋</div><div class=\"fact-text\"><strong>1 DOCG</strong><span>Monte Vulture 火山</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">⛰️</div><div class=\"fact-text\"><strong>400-700m</strong><span>葡萄園海拔</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">📉</div><div class=\"fact-text\"><strong>&lt;0.3%</strong><span>義大利葡萄酒總產量</span></div></div></div></div>"
+      "content": "<div class=\"region-intro\"><div class=\"intro-text\"><p>Basilicata（巴西利卡塔）古稱 <strong>Lucania</strong>，是義大利<strong>葡萄種植面積最小、產量最少</strong>的大區之一，卻擁有 <strong>Aglianico del Vulture</strong>——南義最重要的 Aglianico 產區之一。北接 Campania 與 Puglia，南鄰 Calabria。</p><p class=\"highlight\">🎯 兩段海岸：Ionian 海上的一小段（介於 Salento 與 Calabria 之間），以及 Tyrrhenian 海上極短的一段；分為 Potenza 與 Matera 兩省。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">⛰️</div><div class=\"fact-text\"><strong>近一半</strong><span>是山地（Appennino Lucano）</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌋</div><div class=\"fact-text\"><strong>1 DOCG</strong><span>Aglianico del Vulture Superiore</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍇</div><div class=\"fact-text\"><strong>70%+</strong><span>紅葡萄</span></div></div><div class=\"fact-box\"><div class=\"fact-icon\">🗺️</div><div class=\"fact-text\"><strong>2</strong><span>省（Potenza、Matera）</span></div></div></div></div>"
     },
     {
       "type": "basilicata-docg-map",
@@ -64,34 +64,34 @@
     },
     {
       "type": "content",
-      "title": "🌋 Aglianico del Vulture DOCG 三大等級",
-      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><p>Aglianico del Vulture 在 2010 年升級 DOCG，品種 100% Aglianico，三個等級代表截然不同的陳年深度與複雜度。火山土壤、高海拔、大日夜溫差是品質的三大支柱。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🍷 Aglianico del Vulture（基本款）</h4><ul><li><strong>陳年：</strong>最少 12 個月</li><li><strong>酒精度：</strong>12.5%+</li><li><strong>風格：</strong>果香豐富、單寧強勁、需醒酒 1-2 小時</li><li><strong>風味：</strong>黑櫻桃、紫羅蘭、香料、礦物感</li><li><strong>適飲期：</strong>3-10 年</li><li><strong>價格：</strong>€15-25</li></ul></div><div class=\"orvieto-card\"><h4>⭐ Aglianico del Vulture Superiore</h4><ul><li><strong>陳年：</strong>最少 3 年（含 1 年橡木桶）</li><li><strong>風格：</strong>結構完整、層次豐富、複雜度提升</li><li><strong>風味：</strong>黑莓、皮革、煙草、烘烤橡木、礦物</li><li><strong>適飲期：</strong>5-15 年</li><li><strong>價格：</strong>€25-45</li></ul></div><div class=\"orvieto-card\"><h4>🏆 Superiore Riserva（頂級款）</h4><ul><li><strong>陳年：</strong>最少 5 年（含 2 年橡木桶）</li><li><strong>風格：</strong>極致優雅、無與倫比的礦物複雜度</li><li><strong>風味：</strong>焦油、松露、玫瑰乾花、火山灰、皮革</li><li><strong>適飲期：</strong>10-30 年</li><li><strong>價格：</strong>€50-100</li></ul></div></div></div>"
+      "title": "🌋 Aglianico del Vulture 的兩個法定產區",
+      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><p>Aglianico del Vulture 在 1971 年成為 DOC；2010 年只有 <strong>Superiore 等級</strong>升格為 DOCG。兩個法定產區都要求 <strong>100% Aglianico</strong>。火山土壤、充足日照與大日夜溫差是品質的支柱。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🍷 Aglianico del Vulture DOC（1971）</h4><ul><li><strong>品種：</strong>100% Aglianico</li><li><strong>上市：</strong>採收翌年 9 月 1 日之前不得上市</li><li><strong>注意：</strong>許多酒款（包括一些頂級酒）仍以 DOC 名義裝瓶</li><li><strong>其他：</strong>也可釀造氣泡酒（Spumante）</li><li><strong>價格：</strong>€15-25</li></ul></div><div class=\"orvieto-card\"><h4>⭐ Aglianico del Vulture Superiore DOCG（2010）</h4><ul><li><strong>規範：</strong>最高產量更低、最低酒精度更高、陳年更長</li><li><strong>陳年：</strong>至少 1 年木桶＋至少 1 年瓶中</li><li><strong>上市：</strong>採收後第三年 11 月 1 日之前不得上市</li><li><strong>價格：</strong>€25-45</li></ul></div><div class=\"orvieto-card\"><h4>🏆 Superiore Riserva</h4><ul><li><strong>陳年：</strong>至少 2 年木桶＋至少 1 年瓶中</li><li><strong>上市：</strong>採收後第五年之前不得上市</li><li><strong>風格：</strong>複雜、細緻、耐陳年</li><li><strong>價格：</strong>€50-100</li></ul></div></div></div>"
     },
     {
       "type": "image",
       "title": "🍷 標籤實例：Aglianico del Vulture DOC",
       "image": "/italy/images/labels/basilicata/aglianico-del-vulture-synthesi-paternoster-2015.jpg",
-      "caption": "Paternoster「Synthesi」Aglianico del Vulture DOC 2015——Paternoster 是 Vulture 復興先驅酒莊，酒標標示「Denominazione di Origine Controllata」，屬於基本款 DOC 等級（僅 Superiore 以上才升格 DOCG）。"
+      "caption": "Paternoster「Synthesi」Aglianico del Vulture DOC 2015——Paternoster 是 Barile 的歷史酒莊；Aglianico del Vulture DOC 要求 100% Aglianico，許多頂級酒款仍以 DOC 名義裝瓶。酒標標示「Denominazione di Origine Controllata」，屬於基本款 DOC 等級（僅 Superiore 以上才升格 DOCG）。"
     },
     {
       "type": "content",
       "title": "⏳ Aglianico del Vulture 陳年演化",
-      "content": "<div class=\"variety-deep-section\"><h3>🍷 從剛烈少年到傳奇長者</h3><p>Aglianico del Vulture 年輕時單寧堅硬、難以親近，需要時間展現本色。義大利最晚熟的品種之一（10 月底採收），陳年後展現的優雅複雜是南義紅酒之最。</p><div class=\"aging-science\"><div class=\"science-explanation\"><div class=\"science-card\"><h5>🌑 年輕期（1-5 年）</h5><p>深紫黑色，單寧強勁緊澀，高酸度，需要醒酒 1-2 小時。主導風味為黑莓、紫羅蘭、礦物感，架構宏大，尚未平衡。</p><div class=\"science-note\">建議：至少醒酒 2 小時再飲</div></div><div class=\"science-card\"><h5>🟣 成熟期（6-15 年）</h5><p>石榴紅邊緣出現，單寧開始軟化，複雜度急速增加。皮革、煙草、炙烤橡木交織，礦物感更加突出，進入第一個飲用高峰。</p><div class=\"science-note\">Superiore 最佳飲用窗口</div></div><div class=\"science-card\"><h5>💎 陳年期（15-30 年）</h5><p>優雅細膩，單寧如絲。焦油、松露、玫瑰乾花、火山灰礦物感交融，是南義最具陳年潛力的紅酒。Riserva 在此時達到傳奇境界。</p><div class=\"science-note\">Riserva 收藏家的終極目標</div></div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><h3>🍷 從剛烈少年到傳奇長者</h3><p>Aglianico del Vulture 年輕時單寧堅硬、難以親近，需要時間展現本色。Aglianico 皮厚、晚熟；Aglianico del Vulture 酸度與單寧高，紅色果香更明顯，複雜、細緻且耐陳年。</p><div class=\"aging-science\"><div class=\"science-explanation\"><div class=\"science-card\"><h5>🌑 年輕期（1-5 年）</h5><p>深紫黑色，單寧強勁緊澀，高酸度，需要醒酒 1-2 小時。主導風味為黑莓、紫羅蘭、礦物感，架構宏大，尚未平衡。</p><div class=\"science-note\">建議：至少醒酒 2 小時再飲</div></div><div class=\"science-card\"><h5>🟣 成熟期（6-15 年）</h5><p>石榴紅邊緣出現，單寧開始軟化，複雜度急速增加。皮革、煙草、炙烤橡木交織，礦物感更加突出，進入第一個飲用高峰。</p><div class=\"science-note\">Superiore 最佳飲用窗口</div></div><div class=\"science-card\"><h5>💎 陳年期（15-30 年）</h5><p>優雅細膩，單寧如絲。焦油、松露、玫瑰乾花、火山灰礦物感交融，是南義最具陳年潛力的紅酒。Riserva 在此時達到傳奇境界。</p><div class=\"science-note\">Riserva 收藏家的終極目標</div></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🆚 Vulture vs Taurasi：同品種兩種靈魂",
-      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">🤔 Aglianico del Vulture（Basilicata）和 Taurasi（Campania）都使用 Aglianico 品種，但截然不同的土壤與氣候，造就了截然不同的個性：<strong>Vulture 是優雅礦物派，Taurasi 是強勁結構派</strong>。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🏔️ Taurasi DOCG（Campania）</h4><ul><li><strong>土壤：</strong>火山 + 石灰岩混合</li><li><strong>海拔：</strong>350-600m</li><li><strong>氣候：</strong>較溫暖，丘陵地形</li><li><strong>風格：</strong>強勁飽滿、果香豐富</li><li><strong>單寧：</strong>堅實有力、陳年後厚實</li><li><strong>核心風味：</strong>黑櫻桃、焦油、煙草、皮革</li><li><strong>陳年潛力：</strong>20-30 年</li><li><strong>價格：</strong>€40-150+</li></ul></div><div class=\"method-card modern\"><h4>🌋 Aglianico del Vulture（Basilicata）</h4><ul><li><strong>土壤：</strong>100% 玄武岩火山土</li><li><strong>海拔：</strong>400-700m（更高）</li><li><strong>氣候：</strong>更涼爽，日夜溫差 15-20°C</li><li><strong>風格：</strong>優雅緊緻、礦物感極致</li><li><strong>單寧：</strong>細膩絲滑、陳年後如絲</li><li><strong>核心風味：</strong>紫羅蘭、火山灰、松露、礦物</li><li><strong>陳年潛力：</strong>15-30 年</li><li><strong>價格：</strong>€25-100（性價比更高）</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><div class=\"winemaking-intro\"><p class=\"intro-highlight\">🤔 Aglianico del Vulture（Basilicata）與 Taurasi（Campania）都以 Aglianico 釀造，而且是三大生物型中的兩個：<strong>Aglianico del Vulture</strong> 與 <strong>Aglianico di Taurasi</strong>（第三個是 Taburno 的 Aglianico Amaro）。不同的生物型、土壤與氣候，造就不同的個性。</p></div><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🏔️ Taurasi DOCG（Campania）</h4><ul><li><strong>生物型：</strong>Aglianico di Taurasi</li><li><strong>土壤：</strong>石灰質黏土與海相石灰岩，混合火山物質</li><li><strong>海拔：</strong>300-700m，Calore 河調節</li><li><strong>規範：</strong>最低 85% Aglianico；最少 3 年（含 1 年木桶）</li><li><strong>風格：</strong>結構強、強勁、酒體飽滿</li><li><strong>地位：</strong>1993 年成為南義第一個 DOCG</li></ul></div><div class=\"method-card modern\"><h4>🌋 Aglianico del Vulture（Basilicata）</h4><ul><li><strong>生物型：</strong>Aglianico del Vulture（曾被認為是獨立品種）</li><li><strong>土壤：</strong>西側火山土，東側砂質黏土</li><li><strong>氣候：</strong>以大陸性為主，日照充足，日夜溫差大</li><li><strong>規範：</strong>100% Aglianico</li><li><strong>風格：</strong>高酸、高單寧，紅色果香更明顯，複雜細緻、耐陳年</li><li><strong>地位：</strong>1971 年 DOC，Superiore 於 2010 年升格 DOCG</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍷 其他 Basilicata DOC 產區",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏛️ Matera DOC（2005）</h4><p>位於 Basilicata 東部，靠近 Apulia 邊界，UNESCO 世界遺產城市 Matera（石窟 Sassi）的所在地。</p><ul><li><strong>紅酒品種：</strong>Primitivo、Sangiovese（與 Apulia 風格接近）</li><li><strong>白酒品種：</strong>Malvasia、Greco</li><li><strong>風格：</strong>比 Vulture 更溫暖、更果香、更易飲</li><li><strong>配餐：</strong>Matera 麵包、羊肉、陳年起司</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🕳️ Grottino di Roccanova DOC</h4><p>「Grottino」意為「小洞穴」，指傳統洞穴酒窖，位於 Basilicata 西南部，產量極少。</p><ul><li><strong>主要品種：</strong>Sangiovese、Malvasia Nera、Cabernet Sauvignon</li><li><strong>白酒品種：</strong>Malvasia Bianca、Greco</li><li><strong>特點：</strong>非常罕見，幾乎只在地方市場流通</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏔️ Terre dell'Alta Val d'Agri DOC</h4><p>位於 Agri 河上游山谷，是 Basilicata 最年輕的 DOC 之一，允許國際品種，現代化風格。</p><ul><li><strong>主要品種：</strong>Merlot、Cabernet Sauvignon、Malvasia</li><li><strong>風格：</strong>實驗性、現代化，山區微氣候影響</li><li><strong>特點：</strong>產量極小，主要供應高端餐廳</li></ul></div></div></div>"
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏛️ Matera DOC（2005）</h4><p>位於 Basilicata 東部，靠近 Apulia 邊界，UNESCO 世界遺產城市 Matera（石窟 Sassi）的所在地。</p><ul><li><strong>紅酒品種：</strong>Primitivo、Sangiovese；另有 Moro（以 Cabernet Sauvignon 為主的紅酒類別）</li><li><strong>白酒品種：</strong>Malvasia、Greco</li><li><strong>土壤：</strong>Matera 周邊以石灰岩為主</li><li><strong>配餐：</strong>Matera 麵包、羊肉、陳年起司</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🕳️ Grottino di Roccanova DOC</h4><p>「Grottino」意為「小洞穴」，指傳統洞穴酒窖，位於 Basilicata 西南部，產量極少。</p><ul><li><strong>主要品種：</strong>Sangiovese、Malvasia Nera、Cabernet Sauvignon</li><li><strong>白酒品種：</strong>Malvasia Bianca、Greco</li><li><strong>特點：</strong>產量很小，主要在當地流通</li></ul></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏔️ Terre dell'Alta Val d'Agri DOC</h4><p>位於 Agri 河上游山谷，以國際品種為主的 DOC。</p><ul><li><strong>主要品種：</strong>Merlot、Cabernet Sauvignon、Malvasia</li><li><strong>風格：</strong>山區產區，國際品種為主</li><li><strong>特點：</strong>Basilicata 的國際品種只扮演次要角色</li></ul></div></div></div>"
     },
     {
       "type": "content",
       "title": "🥂 Aglianico del Vulture Spumante — 隱藏的寶石",
-      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><p>少數生產者嘗試用 Aglianico 葡萄釀造<strong>氣泡酒（Spumante）</strong>，是葡萄酒愛好者的獨特發現。淡玫瑰粉紅色，礦物感極強，風格優雅獨特，非常罕見。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🍾 Metodo Classico（傳統法）</h4><ul><li><strong>方法：</strong>瓶中二次發酵（如 Champagne）</li><li><strong>陳年：</strong>酒泥接觸 18-36 個月</li><li><strong>顏色：</strong>淺玫瑰粉紅，氣泡細緻持久</li><li><strong>風格：</strong>優雅、礦物感強、高酸</li><li><strong>風味：</strong>紅色莓果、麵包酵母、礦物、火山灰</li><li><strong>代表：</strong>Paternoster Rosé Brut（€25-45）</li></ul></div><div class=\"orvieto-card\"><h4>🥂 Metodo Charmat（槽中法）</h4><ul><li><strong>方法：</strong>不鏽鋼槽二次發酵</li><li><strong>陳年：</strong>3-6 個月，更快上市</li><li><strong>風格：</strong>清爽、果香豐富、易飲</li><li><strong>風味：</strong>櫻桃、草莓、紫羅蘭</li><li><strong>特點：</strong>更適合夏日飲用，入門 Aglianico 氣泡</li><li><strong>代表：</strong>入門級 Aglianico Spumante（€12-22）</li></ul></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><div class=\"orvieto-intro\"><p>Aglianico del Vulture <strong>DOC</strong> 允許釀造<strong>氣泡酒（Spumante）</strong>——這是 DOC 與 Superiore DOCG 的差別之一。產量很少，是葡萄酒愛好者的獨特發現。</p></div><div class=\"orvieto-details\"><div class=\"orvieto-card\"><h4>🍾 Metodo Classico（傳統法）</h4><ul><li><strong>方法：</strong>瓶中二次發酵（如 Champagne）</li><li><strong>陳年：</strong>依生產者而定</li><li><strong>顏色：</strong>淺玫瑰粉紅，氣泡細緻持久</li><li><strong>風格：</strong>優雅、礦物感強、高酸</li><li><strong>風味：</strong>紅色莓果、麵包酵母、礦物、火山灰</li><li><strong>價格：</strong>€25-45</li></ul></div><div class=\"orvieto-card\"><h4>🥂 Metodo Charmat（槽中法）</h4><ul><li><strong>方法：</strong>不鏽鋼槽二次發酵</li><li><strong>上市：</strong>較快</li><li><strong>風格：</strong>清爽、果香豐富、易飲</li><li><strong>風味：</strong>櫻桃、草莓、紫羅蘭</li><li><strong>特點：</strong>更適合夏日飲用，入門 Aglianico 氣泡</li><li><strong>代表：</strong>入門級 Aglianico Spumante（€12-22）</li></ul></div></div></div>"
     },
     {
       "type": "content",
@@ -101,43 +101,45 @@
     {
       "type": "content",
       "title": "📜 Basilicata 葡萄酒歷史深度",
-      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p>Basilicata 古稱「Lucania」，是義大利南部最古老的葡萄酒產區之一。從古希臘 Magna Graecia 的黃金時代，到近代的貧困散裝酒時期，再到 1990 年代的驚人復興，走過了 3000 年的起伏之路。</p><p class=\"intro-highlight\">「Basilicata 的葡萄酒復興故事，是義大利南方最動人的奇蹟——從義大利最窮困的角落，誕生出 Parker 97 分的傳奇之作。」</p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">BC 800</div><div class=\"timeline-content\"><h4>🏺 Magna Graecia：希臘殖民黃金時代</h4><p>古希臘殖民者建立「Magna Graecia」（大希臘），帶來 Aglianico 品種前身。古羅馬時期 Basilicata（Lucania）葡萄酒享譽地中海，是重要貿易商品，詩人 Horace 出生於此（Venosa）。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1861-1950</div><div class=\"timeline-content\"><h4>📉 義大利統一後的貧困時期</h4><p>義大利統一後 Basilicata 陷入極度貧困，30% 人口外流至北義或美國（義大利最大移民潮之一）。葡萄酒產業停滯，90% 為散裝酒，品質不受重視，幾乎無人知曉。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1990-2000</div><div class=\"timeline-content\"><h4>🚀 現代化啟蒙：復興的曙光</h4><p>D'Angelo 率先引入現代化技術。1997 年 <strong>Paternoster Don Anselmo</strong> 獲 Parker 92 分，是 Basilicata 第一次在國際舞台上引發關注，掀起外界對 Vulture 的好奇。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">2005-今</div><div class=\"timeline-content\"><h4>🌟 傳奇誕生：Elena Fucci 改變世界</h4><p>2005 年 <strong>Elena Fucci 的 Titolo</strong> 獲 Parker 95 分，震撼世界葡萄酒界。2010 年升格 DOCG，2019 年 Matera 成為歐洲文化之都，旅遊帶動葡萄酒聲望。出口增長 +580%，價格上漲 200%。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">3000+</div><div class=\"stat-label\">年葡萄酒歷史</div></div><div class=\"stat-box\"><div class=\"stat-number\">Parker 97</div><div class=\"stat-label\">最高評分（Titolo）</div></div><div class=\"stat-box\"><div class=\"stat-number\">+580%</div><div class=\"stat-label\">30年出口增長</div></div><div class=\"stat-box\"><div class=\"stat-number\">2019</div><div class=\"stat-label\">Matera 歐洲文化之都</div></div></div></div>"
+      "content": "<div class=\"history-section\"><div class=\"history-intro\"><p>Basilicata 古稱「Lucania」，這個名字至今仍在使用。從古希臘殖民、Lucani 人、羅馬人，到 20 世紀的 DOC 與 DOCG，Aglianico del Vulture 一直是這裡的核心。</p><p class=\"intro-highlight\">「Basilicata 是義大利葡萄種植面積最小的產區之一，卻以 Aglianico del Vulture 在南義占有一席之地。」</p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">BC 8 世紀</div><div class=\"timeline-content\"><h4>🏺 希臘人建立據點</h4><p>BC 8 世紀希臘人在沿海建立據點（Metaponto 的 Tavole Palatine 神殿遺址至今仍在）；BC 6-5 世紀被當地的 Lucani 人擊退。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">BC 3 世紀</div><div class=\"timeline-content\"><h4>🏛️ 羅馬併入</h4><p>BC 3 世紀被羅馬併入；這片土地至今仍被稱為 Lucania。古羅馬詩人 Horace 出生於 Venosa，就在今天的 Vulture 產區。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1971</div><div class=\"timeline-content\"><h4>📜 Aglianico del Vulture DOC</h4><p>Aglianico del Vulture 在 1971 年成為 DOC，要求 100% Aglianico。</p></div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">2010-今</div><div class=\"timeline-content\"><h4>🌟 Superiore 升格 DOCG</h4><p>2010 年 Superiore 等級升格為 DOCG，產量更低、酒精更高、陳年更長；2019 年 Matera 成為歐洲文化之都。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">BC 8世紀</div><div class=\"stat-label\">希臘人到來</div></div><div class=\"stat-box\"><div class=\"stat-number\">1971</div><div class=\"stat-label\">Aglianico del Vulture DOC</div></div><div class=\"stat-box\"><div class=\"stat-number\">2010</div><div class=\"stat-label\">Superiore 升格 DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">100%</div><div class=\"stat-label\">Aglianico</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍇 Aglianico 品種科學深度",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🍇 單寧之王：義大利最強勁的品種</h3><div class=\"research-content\"><div><h4>品種起源與科學</h4><ul class=\"research-text\"><li><strong>起源：</strong>古希臘「Vitis hellenica」演化，由 Magna Graecia 殖民者引入，最早文獻記載 1520 年代</li><li><strong>單寧含量：</strong>4500-6500 mg/L，義大利最高之一，僅次 Sagrantino（Umbria）</li><li><strong>花青素：</strong>3800-5500 mg/L，深紫黑色，陳年後轉石榴紅</li><li><strong>成熟期：</strong>10 月中下旬，義大利最晚熟品種之一，在高海拔火山坡保留極佳酸度</li></ul></div><div><h4>Vulture 火山風土互動</h4><ul class=\"research-text\"><li><strong>玄武岩土壤：</strong>鐵含量 12-18%（全球均值 4-8%），是礦物感的核心來源</li><li><strong>微酸性 pH 5.5-6.5：</strong>適合維持高酸度，賦予葡萄酒的新鮮感和陳年能力</li><li><strong>日夜溫差 15-20°C：</strong>保留β-紫羅蘭酮（標誌性花香），芳香化合物在夜間大量累積</li><li><strong>硫醇類化合物：</strong>火山岩帶來的石墨感、濕石頭氣息，是 Vulture 的識別標誌</li></ul></div></div></div><div class=\"aging-science\"><h3>🔬 Aglianico vs 其他義大利強品種</h3><div class=\"science-explanation\"><div class=\"science-card\"><h5>🌋 Aglianico（Basilicata/Campania）</h5><p>單寧 4500-6500 mg/L，極晚熟，深紫黑色，焦油・礦物・紫羅蘭，陳年潛力 15-30 年，€25-100，性價比最佳。</p><div class=\"science-note\">崛起中的南義傳奇</div></div><div class=\"science-card\"><h5>🍷 Nebbiolo（Piedmont）</h5><p>單寧 4000-5500 mg/L，晚熟，石榴紅色偏淺，玫瑰・焦油・松露，陳年潛力 20-40 年，€40-300+，國際知名度最高。</p><div class=\"science-note\">Barolo / Barbaresco 之王</div></div><div class=\"science-card\"><h5>🌿 Sagrantino（Umbria）</h5><p>單寧 6000-8000 mg/L，義大利最高，深紅寶石色，黑莓・皮革・草本，陳年潛力 15-25 年，€30-80，Umbria 的黑馬。</p><div class=\"science-note\">Montefalco DOCG 獨家</div></div></div></div></div>"
+      "title": "🍇 Basilicata 的葡萄品種（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>🍇 紅葡萄佔 70% 以上，Aglianico 是主角</h3><div class=\"research-content\"><div><h4>Aglianico</h4><ul class=\"research-text\"><li><strong>地位：</strong>Basilicata 種植最廣的品種</li><li><strong>特性：</strong>皮厚、晚熟，酸度與單寧高；品種內變異大</li><li><strong>土壤：</strong>偏好火山土</li><li><strong>別稱：</strong>「南義的 Barolo」</li></ul></div><div><h4>Aglianico del Vulture 生物型</h4><ul class=\"research-text\"><li><strong>地位：</strong>Aglianico 三大生物型之一（另兩個是 Aglianico di Taurasi 與 Aglianico Amaro）</li><li><strong>歷史：</strong>曾被認為是基因上獨立的品種</li><li><strong>風格：</strong>高酸、高單寧，紅色果香更明顯，複雜、細緻、耐陳年</li><li><strong>注意：</strong>Basilicata 的 Aglianico 與 Campania 的 Aglianico 是同一品種</li></ul></div></div></div><div class=\"aging-science\"><h3>🔬 其他品種</h3><div class=\"science-explanation\"><div class=\"science-card\"><h5>⚪ Malvasia Bianca di Basilicata</h5><p>稀有，是 Basilicata 最具特色的白葡萄，與其他 Malvasia 品種沒有親緣關係。傳統上少量混入 Aglianico 以柔化酒質。</p><div class=\"science-note\">最具特色的白葡萄</div></div><div class=\"science-card\"><h5>🍷 其他紅葡萄</h5><p>Primitivo、Sangiovese、Montepulciano、Malvasia Nera di Basilicata、Ciliegiolo、Barbera 等。</p><div class=\"science-note\">Matera DOC 的 Primitivo</div></div><div class=\"science-card\"><h5>🌍 國際品種</h5><p>扮演次要角色，主要出現在 Matera DOC 的 Moro 與 Terre dell'Alta Val d'Agri DOC。</p><div class=\"science-note\">Merlot、Cabernet Sauvignon</div></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🌋 Monte Vulture 火山風土科學",
-      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p class=\"intro-highlight\">🌋 <strong>131,000 年前最後噴發</strong>的死火山，海拔 1326m，玄武岩主導（70%），是 Aglianico del Vulture DOCG 的靈魂所在。Monticchio 雙火山口湖提供夜間降溫，是義大利最特殊的葡萄酒風土之一。</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🌋</div><h3>火山地質：玄武岩 + 凝灰岩</h3><ul><li><strong>玄武岩（70%）：</strong>富含鐵（Fe₂O₃ 12-18%）、鎂，是礦物感和深色的主要來源，全球均值僅 4-8%</li><li><strong>火山凝灰岩（20%）：</strong>壓縮火山灰，排水優秀，保水能力佳，是 pH 5.5-6.5 微酸性的關鍵</li><li><strong>土壤類型：</strong>Andosol（火山灰土），陽離子交換量 35-50 cmol/kg，養分極豐富，微生物活性高</li></ul></div><div class=\"explanation-card sea\"><div class=\"card-icon\">⛰️</div><h3>海拔氣候：三區域 Vertical Terroir</h3><ul><li><strong>黃金區間 500-600m（90% 頂級 DOCG）：</strong>年均 13-14°C，日夜溫差 15-20°C，是 Elena Fucci、Paternoster、Cantine del Notaio 的所在，平衡完美</li><li><strong>低海拔 400-500m：</strong>較溫暖 +2-3°C，更多果香，適飲期 3-8 年，入門 DOC 級別</li><li><strong>高海拔 600-700m：</strong>較涼爽 -2-3°C，極致優雅，陳年潛力 15-25 年，實驗性地塊</li></ul></div></div><div class=\"terroir-key-point\"><h3>🔑 四大風土關鍵</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌑 玄武岩礦物感</strong><p>鐵含量是全球均值 3 倍，賦予 Aglianico 標誌性石墨・濕石頭・火藥礦物氣息</p></div><div class=\"kp-box\"><strong>💧 火山口湖調節</strong><p>Monticchio 雙湖夜間降溫 3-5°C，生長季延長 10-15 天，保留酸度和芳香化合物</p></div><div class=\"kp-box\"><strong>🌡️ 日夜溫差 15-20°C</strong><p>全 Basilicata 最大溫差，是高酸度和複雜香氣的保障，採收期可延至 10 月底</p></div><div class=\"kp-box\"><strong>☔ 年降雨 700-900mm</strong><p>充足但不過量，火山碎屑排水結構保證根系深扎，老藤可達 4-6m 深</p></div></div></div></div>"
+      "title": "🌋 位置、地形、氣候與土壤（IWS 官方教材）",
+      "content": "<div class=\"terroir-section\"><div class=\"terroir-intro\"><p class=\"intro-highlight\">🌋 <strong>近一半是山地</strong>（Appennino Lucano，即南 Apennine 山脈）。西北部是死火山 <strong>Monte Vulture</strong>，Ionian 海旁有一小片沿海平原（Metapontino）。氣候以大陸性為主，只有東側 Ionian 海的小片沿海地區受地中海影響；日夜溫差大。</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🌋</div><h3>Aglianico del Vulture 產區</h3><ul><li><strong>位置：</strong>Basilicata 最北端，15 個村莊環繞古老的死火山 Monte Vulture</li><li><strong>風土：</strong>火山土、充足日照、大日夜溫差；Monticchio 雙湖位於火山口</li><li><strong>MGA：</strong>70 個 Menzioni Geografiche Aggiuntive（附加地理標示）</li><li><strong>降雨：</strong>西部 Vulture 與 Potenza 一帶降雨最多</li></ul></div><div class=\"explanation-card sea\"><div class=\"card-icon\">⛰️</div><h3>兩大區域</h3><ul><li><strong>Vulture 區（西）：</strong>海拔較高，火山土，酒款細緻複雜</li><li><strong>東部區：</strong>海拔較低，砂質黏土，酒款更飽滿、更大方</li><li><strong>河流：</strong>Bradano、Basento、Agri 等河流向東流入 Ionian 海</li></ul></div></div><div class=\"terroir-key-point\"><h3>🔑 Basilicata 的土壤</h3><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌑 Vulture 山麓</strong><p>深色火山土</p></div><div class=\"kp-box\"><strong>⛰️ 中部與東部丘陵</strong><p>黏土與石灰岩</p></div><div class=\"kp-box\"><strong>🏛️ Matera 周邊</strong><p>石灰岩</p></div><div class=\"kp-box\"><strong>🌊 東南沿海</strong><p>砂質與沖積土</p></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏘️ DOCG 核心村莊與產區深度",
-      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h4>⭐ Barile（最精華核心）</h4><p>DOCG 最核心村莊，海拔 550-620m，玄武岩最純粹，Elena Fucci 的 Titolo 單一園即在此地。極小產量，絕大多數都是頂級 DOCG Riserva 等級。</p><div class=\"mf-style\">Titolo 單一園 · Parker 95-97 分 · 年產 3 萬瓶</div><p class=\"mf-prod\"><strong>代表酒款：</strong>Elena Fucci Titolo（€70-90，配額制搶購）</p></div><div class=\"mf-zone warm\"><h4>🍇 Rionero in Vulture（最大城鎮）</h4><p>DOCG 產區最大城鎮，D'Angelo 與 Cantine del Notaio 的所在地。海拔 520-600m，土壤多樣，風格在精緻與豐富之間，是 Basilicata 葡萄酒產業的行政中心。</p><div class=\"mf-style\">多元風格 · 產量最大 · 適合品酒旅遊</div><p class=\"mf-prod\"><strong>代表酒款：</strong>Cantine del Notaio Il Repertorio（€65-75，Parker 93-95）</p></div><div class=\"mf-zone cool\"><h4>📜 Venosa（詩人 Horace 的故鄉）</h4><p>古羅馬詩人 Horace（Quintus Horatius Flaccus，BC 65-8）出生地，Paternoster 的歷史根基所在。海拔 410-500m，略低海拔，果香更豐富，Paternoster Don Anselmo 在此締造傳奇。</p><div class=\"mf-style\">歷史文化最深厚 · 16 世紀酒窖 · 考古遺址</div><p class=\"mf-prod\"><strong>代表酒款：</strong>Paternoster Don Anselmo（€60-80，Parker 92）</p></div><div class=\"mf-zone plain\"><h4>🌿 Ripacandida & Ginestra（新興精品）</h4><p>DOCG 產區東北部，海拔 500-650m，近年崛起的精品新區。Grifalco 等新世代酒莊在此以現代風格詮釋 Aglianico，有機比例高，是未來值得關注的明星子產區。</p><div class=\"mf-style\">有機農業 · 新世代釀酒師 · 高性價比</div><p class=\"mf-prod\"><strong>代表酒款：</strong>Grifalco Daginestra（€20-30，高性價比首選）</p></div></div>"
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h4>⭐ Barile</h4><p>Vulture 區的核心村莊之一，Elena Fucci 與 Paternoster 都位於此地。Elena Fucci 的 Titolo 來自 Barile 的 Contrada Solagna del Titolo。</p><div class=\"mf-style\">火山土 · Vulture 區（西）</div><p class=\"mf-prod\"><strong>代表酒款：</strong>Elena Fucci Titolo、Paternoster Don Anselmo</p></div><div class=\"mf-zone warm\"><h4>🍇 Rionero in Vulture</h4><p>產區的主要城鎮之一，D'Angelo 與 Cantine del Notaio 的所在地。</p><div class=\"mf-style\">火山土 · 歷史酒莊集中</div><p class=\"mf-prod\"><strong>代表酒款：</strong>Cantine del Notaio Il Repertorio、D'Angelo Vigna Caselle</p></div><div class=\"mf-zone cool\"><h4>📜 Venosa（詩人 Horace 的故鄉）</h4><p>古羅馬詩人 Horace（BC 65-8）的出生地，位於產區東側，海拔較低、土壤以砂質黏土為主，酒款較飽滿大方。</p><div class=\"mf-style\">東部區 · 歷史文化深厚</div><p class=\"mf-prod\"><strong>代表：</strong>Cantina di Venosa（合作社）、Grifalco</p></div><div class=\"mf-zone plain\"><h4>🌿 Rapolla、Melfi、Ripacandida、Ginestra</h4><p>其他環繞 Monte Vulture 的村莊；整個產區共有 15 個村莊與 70 個 MGA。</p><div class=\"mf-style\">15 個村莊 · 70 個 MGA</div><p class=\"mf-prod\"><strong>代表酒款：</strong>Grifalco Daginestra（Ginestra）</p></div></div>"
     },
     {
       "type": "content",
       "title": "🏆 Vulture 傳奇名莊",
-      "content": "<div class=\"variety-intro\"><p class=\"intro-highlight\">🍷 <strong>從南義最貧窮角落到世界頂級葡萄酒舞台</strong>：Elena Fucci 一個 25 歲女性的勇氣，Parker 97 分的認可，讓世界知道了 Vulture 這個名字。以下是 Basilicata 最值得認識的名莊。</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\"><div class=\"up-badge\">EF</div><p class=\"up-est\">est. 2000</p></div><div class=\"up-body\"><h4>Elena Fucci 👑</h4><p><strong>地位：</strong>「Vulture 女王」，Basilicata 最傳奇的酒莊</p><p><strong>位置：</strong>Barile・8 公頃・海拔 550-600m 黃金區間</p><p><strong>特色：</strong>25 歲接手家族，極簡主義釀造，Titolo 單一園每年僅 3 萬瓶，法國小橡木桶 12 個月，配額制一瓶難求</p><div class=\"up-wines\"><p>• Titolo Aglianico del Vulture DOCG：€70-90（Parker 94-97，WS Top 100）</p><p>• Titolo Bianco（Fiano）：€25-35（白酒系列，近年推出）</p></div><p class=\"up-tip\">警告：Titolo 需要至少 5-8 年才能打開，巔峰期 15-25 年。購買後務必有耐心。</p></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\"><div class=\"up-badge\">PT</div><p class=\"up-est\">est. 1925</p></div><div class=\"up-body\"><h4>Paternoster 🏛️</h4><p><strong>地位：</strong>Vulture 復興先驅，Basilicata 最知名的傳統酒莊</p><p><strong>位置：</strong>Venosa・22 公頃・歷史酒窖建於 16 世紀</p><p><strong>特色：</strong>1990 年代現代化改革先驅，Don Anselmo 1997 年 Parker 92 分是 Basilicata 第一次國際突破，傳統與現代完美平衡</p><div class=\"up-wines\"><p>• Don Anselmo Aglianico del Vulture：€60-80（Parker 91-93，陳年 24 個月橡木桶）</p><p>• Rotondo Aglianico del Vulture Superiore：€30-45（性價比款）</p><p>• Bianco di Corte Fiano：€15-22（清爽白酒）</p></div><p class=\"up-tip\">建議：Don Anselmo 陳年 8-12 年後的皮革・松露・礦物複雜度令人難忘，是收藏 Basilicata 的最佳入門選擇</p></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><h4>Cantine del Notaio 🔬</h4><p>📍 Rionero・35 公頃・海拔 500-650m</p><p>律師 Gerardo Giuratrabocchetti 1998 年轉行，Vulture 最大精品酒莊，現代化標誌，多款單一園</p><div class=\"um-prices\"><p>Il Repertorio DOCG：€65-75</p><p>La Firma Superiore：€30-40</p></div><p class=\"um-age\">陳年：10-20 年（Parker 93-95）</p></div><div class=\"umbria-mini c2\"><h4>D'Angelo 🍇</h4><p>📍 Rionero・40 公頃・第 3 代傳承</p><p>1939 年創立，Basilicata 現代化運動先驅，大橡木桶傳統風格，風土純粹主義</p><div class=\"um-prices\"><p>Vigna Caselle Riserva：€45-60</p><p>Aglianico del Vulture DOC：€15-22</p></div><p class=\"um-age\">陳年：8-20 年（Parker 90-92）</p></div></div><div class=\"three-styles\"><h3>💰 Aglianico del Vulture 價格分級指南</h3><div class=\"styles-grid\"><div class=\"style-card entry\"><span class=\"style-badge\">💚 入門探索</span><div class=\"style-details\"><p><strong>€15-25</strong></p><p>D'Angelo Aglianico del Vulture<br>Grifalco Daginestra<br>Paternoster Rotondo</p><p>適飲：3-8 年；認識 Vulture 最佳起點</p></div></div><div class=\"style-card mid\"><span class=\"style-badge\">🧡 品質升級</span><div class=\"style-details\"><p><strong>€30-65</strong></p><p>Paternoster Don Anselmo<br>Cantine del Notaio Il Repertorio<br>D'Angelo Vigna Caselle Riserva</p><p>適飲：8-15 年；精品餐廳頂配</p></div></div><div class=\"style-card premium\"><span class=\"style-badge\">❤️ 頂級收藏</span><div class=\"style-details\"><p><strong>€70-100</strong></p><p>Elena Fucci Titolo<br>Paternoster Don Anselmo（老年份）</p><p>適飲：10-30 年；收藏家首選</p></div></div></div></div>"
+      "content": "<div class=\"variety-intro\"><p class=\"intro-highlight\">🍷 <strong>Vulture 的名莊</strong>：從歷史悠久的家族酒莊到新世代生產者，以下是 Basilicata 最值得認識的名莊。</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\"><div class=\"up-badge\">EF</div><p class=\"up-est\">est. 2000</p></div><div class=\"up-body\"><h4>Elena Fucci 👑</h4><p><strong>地位：</strong>Vulture 新世代的代表酒莊</p><p><strong>位置：</strong>Barile，Contrada Solagna del Titolo</p><p><strong>特色：</strong>Elena Fucci 接手家族葡萄園，只專注於單一酒款 Titolo</p><div class=\"up-wines\"><p>• Titolo Aglianico del Vulture：€70-90</p></div><p class=\"up-tip\">警告：Titolo 需要至少 5-8 年才能打開，巔峰期 15-25 年。購買後務必有耐心。</p></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\"><div class=\"up-badge\">PT</div><p class=\"up-est\">est. 1925</p></div><div class=\"up-body\"><h4>Paternoster 🏛️</h4><p><strong>地位：</strong>Vulture 的歷史酒莊之一</p><p><strong>位置：</strong>Barile</p><p><strong>特色：</strong>Don Anselmo 是 Vulture 的經典酒款之一，傳統與現代並重</p><div class=\"up-wines\"><p>• Don Anselmo Aglianico del Vulture：€60-80</p><p>• Rotondo Aglianico del Vulture：€30-45</p></div><p class=\"up-tip\">建議：Don Anselmo 陳年 8-12 年後的皮革・松露・礦物複雜度令人難忘，是收藏 Basilicata 的最佳入門選擇</p></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><h4>Cantine del Notaio 🔬</h4><p>📍 Rionero in Vulture</p><p>Gerardo Giuratrabocchetti 於 1998 年創立，現代化的代表酒莊</p><div class=\"um-prices\"><p>Il Repertorio：€65-75</p><p>La Firma Superiore：€30-40</p></div><p class=\"um-age\">陳年：10-20 年</p></div><div class=\"umbria-mini c2\"><h4>D'Angelo 🍇</h4><p>📍 Rionero in Vulture</p><p>Vulture 的歷史家族酒莊，大木桶傳統風格</p><div class=\"um-prices\"><p>Vigna Caselle Riserva：€45-60</p><p>Aglianico del Vulture DOC：€15-22</p></div><p class=\"um-age\">陳年：8-20 年</p></div></div><div class=\"three-styles\"><h3>💰 Aglianico del Vulture 價格分級指南</h3><div class=\"styles-grid\"><div class=\"style-card entry\"><span class=\"style-badge\">💚 入門探索</span><div class=\"style-details\"><p><strong>€15-25</strong></p><p>D'Angelo Aglianico del Vulture<br>Grifalco Daginestra<br>Paternoster Rotondo</p><p>適飲：3-8 年；認識 Vulture 最佳起點</p></div></div><div class=\"style-card mid\"><span class=\"style-badge\">🧡 品質升級</span><div class=\"style-details\"><p><strong>€30-65</strong></p><p>Paternoster Don Anselmo<br>Cantine del Notaio Il Repertorio<br>D'Angelo Vigna Caselle Riserva</p><p>適飲：8-15 年；精品餐廳頂配</p></div></div><div class=\"style-card premium\"><span class=\"style-badge\">❤️ 頂級收藏</span><div class=\"style-details\"><p><strong>€70-100</strong></p><p>Elena Fucci Titolo<br>Paternoster Don Anselmo（老年份）</p><p>適飲：10-30 年；收藏家首選</p></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍽️ 深度配餐指南 & 🗺️ 葡萄酒旅遊路線",
-      "content": "<div class=\"cuisine-section\"><div class=\"cuisine-intro\"><h3>🌶️ Basilicata 餐桌哲學：山區的剛烈之美</h3><p>Basilicata 料理以<strong>辣椒、羊肉、豬肉</strong>為靈魂，搭配 Aglianico 的強勁單寧和礦物感，形成義大利南方最剛烈而動人的餐酒組合。</p></div><div class=\"food-pairing\"><div class=\"pairing-card\"><h4>🐑 Agnello al Forno（烤羊肉）× Aglianico del Vulture Superiore Riserva</h4><p>Basilicata 最具代表性的料理，迷迭香、大蒜、辣椒調味，慢烤 3-4 小時。Riserva 的絲滑單寧與焦油礦物感完美切割羊肉油脂，是最經典的南義搭配。需醒酒 2-3 小時。</p></div><div class=\"pairing-card\"><h4>🍄 Pasta con Funghi Porcini & Tartufo Nero × DOCG Superiore</h4><p>牛肝菌寬麵配黑松露，是 Basilicata 山區秋季限定料理。Superiore 的土壤礦物感與松露的大地氣息天然呼應，是品飲 Aglianico 最高境界的搭配。</p></div><div class=\"pairing-card\"><h4>🧀 Canestrato di Moliterno（陳年起司）× DOCG Riserva</h4><p>Basilicata 特產混合奶（羊奶+山羊奶）陳年起司，熟成 6-18 個月，鹹香紮實。Riserva 的強勁單寧切割起司油脂，礦物感呼應鹹香，是當地最傳統的搭配。</p></div><div class=\"pairing-card\"><h4>🌶️ Cinghiale（野豬燉肉）× Aglianico del Vulture（年輕款）</h4><p>山區野豬燉肉配辣椒、月桂葉、紅酒，是秋冬節慶料理。年輕 Aglianico 的充沛果香和高單寧完美平衡野豬的野性風味，比 Riserva 更適合這道料理。</p></div></div></div><div class=\"terroir-key-point\"><h4>🗺️ Basilicata 葡萄酒旅遊路線</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌋 Vulture 火山 2 日遊：</strong>Day 1 Elena Fucci（預約必須 1 個月前）+ Paternoster 16 世紀酒窖 + Barile 傳統 Osteria。Day 2 Rionero + Cantine del Notaio 現代酒莊。總預算約 €600/人。</div><div class=\"kp-box\"><strong>🏛️ Matera UNESCO 世界遺產：</strong>Sassi 石窟洞穴城市（2019 年歐洲文化之都），早到可看日出打在石窟上的金光，周邊 Matera DOC 酒莊參訪，結合文化與葡萄酒的完美行程。</div><div class=\"kp-box\"><strong>🏖️ Ionian 海岸 + Metaponto：</strong>Basilicata 擁有一小段愛奧尼亞海岸，Metaponto 有保存完好的希臘 Magna Graecia 遺址（Tavole Palatine 神殿），是理解 Aglianico 歷史根源的最佳地點。</div><div class=\"kp-box\"><strong>📅 最佳旅遊季節：</strong>9-10 月採收季最佳，氣候宜人，可參與採收體驗。交通必須租車（GPS 必備），Bari 機場 1.5 小時車程，英語普及率低，翻譯 App 必備。</div></div></div>"
+      "content": "<div class=\"cuisine-section\"><div class=\"cuisine-intro\"><h3>🌶️ Basilicata 餐桌哲學：山區的剛烈之美</h3><p>Basilicata 料理以<strong>辣椒、羊肉、豬肉</strong>為靈魂，搭配 Aglianico 的強勁單寧和礦物感，形成義大利南方最剛烈而動人的餐酒組合。</p></div><div class=\"food-pairing\"><div class=\"pairing-card\"><h4>🐑 Agnello al Forno（烤羊肉）× Aglianico del Vulture Superiore Riserva</h4><p>Basilicata 最具代表性的料理，迷迭香、大蒜、辣椒調味，慢烤 3-4 小時。Riserva 的絲滑單寧與焦油礦物感完美切割羊肉油脂，是最經典的南義搭配。需醒酒 2-3 小時。</p></div><div class=\"pairing-card\"><h4>🍄 Pasta con Funghi Porcini & Tartufo Nero × DOCG Superiore</h4><p>牛肝菌寬麵配黑松露，是 Basilicata 山區秋季限定料理。Superiore 的土壤礦物感與松露的大地氣息天然呼應，是品飲 Aglianico 最高境界的搭配。</p></div><div class=\"pairing-card\"><h4>🧀 Canestrato di Moliterno（陳年起司）× DOCG Riserva</h4><p>Basilicata 特產混合奶（羊奶+山羊奶）陳年起司，熟成 6-18 個月，鹹香紮實。Riserva 的強勁單寧切割起司油脂，礦物感呼應鹹香，是當地最傳統的搭配。</p></div><div class=\"pairing-card\"><h4>🌶️ Cinghiale（野豬燉肉）× Aglianico del Vulture（年輕款）</h4><p>山區野豬燉肉配辣椒、月桂葉、紅酒，是秋冬節慶料理。年輕 Aglianico 的充沛果香和高單寧完美平衡野豬的野性風味，比 Riserva 更適合這道料理。</p></div></div></div><div class=\"terroir-key-point\"><h4>🗺️ Basilicata 葡萄酒旅遊路線</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌋 Vulture 火山 2 日遊：</strong>Day 1 Barile：Elena Fucci、Paternoster（需事先預約）+ 傳統 Osteria。Day 2 Rionero：D'Angelo、Cantine del Notaio，再到 Venosa 參觀 Horace 故鄉。</div><div class=\"kp-box\"><strong>🏛️ Matera UNESCO 世界遺產：</strong>Sassi 石窟洞穴城市（2019 年歐洲文化之都），早到可看日出打在石窟上的金光，周邊 Matera DOC 酒莊參訪，結合文化與葡萄酒的完美行程。</div><div class=\"kp-box\"><strong>🏖️ Ionian 海岸 + Metaponto：</strong>Basilicata 擁有一小段愛奧尼亞海岸，Metaponto 有保存完好的希臘 Magna Graecia 遺址（Tavole Palatine 神殿），是理解 Aglianico 歷史根源的最佳地點。</div><div class=\"kp-box\"><strong>📅 最佳旅遊季節：</strong>9-10 月採收季最佳，氣候宜人，可參與採收體驗。交通必須租車（GPS 必備），Bari 機場 1.5 小時車程，英語普及率低，翻譯 App 必備。</div></div></div>"
     },
     {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Basilicata 是義大利最貧窮的大區，但擁有 Aglianico del Vulture 這顆明珠",
-        "✓ Aglianico del Vulture 產自已滅絕的 Monte Vulture 火山斜坡（海拔 400-700m）",
-        "✓ Aglianico del Vulture Superiore Riserva 需陳年 5 年，陳年潛力 15-30 年",
-        "✓ Vulture 版本比 Taurasi 更礦物、更優雅，性價比更高",
-        "✓ Elena Fucci 的 Titolo 獲 Parker 97 分，是義大利南部最傳奇的紅酒之一",
-        "✓ Basilicata 料理以辣椒（Peperoncino）和羊肉為特色"
+        "✓ Basilicata 古稱 Lucania，是義大利葡萄種植面積最小、產量最少的大區之一；分為 Potenza 與 Matera 兩省",
+        "✓ 近一半是山地（Appennino Lucano）；兩段海岸：Ionian 海與極短的 Tyrrhenian 海；以大陸性氣候為主，日夜溫差大",
+        "✓ 土壤：Vulture 火山土、丘陵黏土與石灰岩、Matera 石灰岩、東南沿海砂質與沖積土",
+        "✓ 紅葡萄佔 70% 以上，Aglianico 種植最廣；Malvasia Bianca di Basilicata 是最具特色的白葡萄，與其他 Malvasia 無親緣",
+        "✓ Aglianico del Vulture 是 Aglianico 三大生物型之一：高酸、高單寧，紅色果香更明顯，複雜細緻、耐陳年",
+        "✓ 產區在 Basilicata 最北端，15 個村莊環繞死火山 Monte Vulture，70 個 MGA；西側火山土更細緻、東側砂質黏土更飽滿",
+        "✓ Aglianico del Vulture DOC（1971）與 Superiore DOCG（2010）都要求 100% Aglianico；DOC 在採收翌年 9 月 1 日後才能上市",
+        "✓ Superiore：1 年木桶＋1 年瓶陳，第三年 11 月 1 日後上市；Riserva：2 年木桶＋1 年瓶陳，第五年後上市"
       ]
     },
     {
@@ -159,27 +161,27 @@
         },
         {
           "type": "single",
-          "question": "Aglianico del Vulture Superiore Riserva 需陳年多久？",
+          "question": "Aglianico del Vulture Superiore Riserva 最早何時可以上市？",
           "options": [
-            "1 年",
-            "3 年",
-            "5 年",
-            "10 年"
+            "採收翌年",
+            "採收後第三年",
+            "採收後第五年",
+            "採收後第十年"
           ],
           "correct": 2,
-          "explanation": "Aglianico del Vulture Superiore Riserva 需陳年至少 5 年（含 2 年橡木桶）才能釋出。"
+          "explanation": "Superiore Riserva 必須至少 2 年木桶＋1 年瓶中陳年，採收後第五年之前不得上市；Superiore 則是 1 年木桶＋1 年瓶陳，第三年 11 月 1 日之後才能上市。"
         },
         {
           "type": "single",
           "question": "Aglianico del Vulture 與 Taurasi 的主要差異是？",
           "options": [
             "使用不同品種",
-            "Vulture 更礦物、更優雅",
+            "同一品種，但為不同生物型（Aglianico del Vulture 與 Aglianico di Taurasi）",
             "Taurasi 在 Basilicata",
-            "酒精度差異大"
+            "兩者都允許 15% 其他品種"
           ],
           "correct": 1,
-          "explanation": "兩者都用 Aglianico 品種，但 Vulture 因火山土壤和高海拔，風格更礦物、更優雅、更緊緻。"
+          "explanation": "兩者都是 Aglianico，分別是 Aglianico del Vulture 與 Aglianico di Taurasi 兩個生物型；Aglianico del Vulture 要求 100% Aglianico，Taurasi 則是最低 85%。"
         },
         {
           "type": "single",
@@ -191,7 +193,7 @@
             "肉桂"
           ],
           "correct": 1,
-          "explanation": "Basilicata 料理以辣椒（Peperoncino）為特色，Peperoni Cruschi（酥脆辣椒）是當地特產。"
+          "explanation": "Basilicata 料理以辣椒（Peperoncino）為特色，Peperoni Cruschi（酥脆辣椒）是當地特產；IWS 也介紹了 Canestrato di Moliterno 起司、Lucanica 香腸與 Matera 麵包。"
         },
         {
           "type": "single",
@@ -203,7 +205,67 @@
             "河谷沖積地"
           ],
           "correct": 1,
-          "explanation": "Aglianico del Vulture 生長於 Monte Vulture 已絕的火山熔岩土壤，這賦予葡萄酒獨特的礦物感與酸度。"
+          "explanation": "Aglianico del Vulture 產區在 Basilicata 最北端，15 個村莊環繞死火山 Monte Vulture；Aglianico 偏好火山土壤。"
+        },
+        {
+          "type": "single",
+          "question": "Aglianico del Vulture DOC 與 Superiore DOCG 最少需要多少比例的 Aglianico？",
+          "options": [
+            "A. 70%",
+            "B. 85%",
+            "C. 90%",
+            "D. 100%"
+          ],
+          "correct": 3,
+          "explanation": "兩個法定產區都要求 100% Aglianico。Aglianico del Vulture 在 1971 年成為 DOC，Superiore 等級在 2010 年升格 DOCG。"
+        },
+        {
+          "type": "single",
+          "question": "Basilicata 的歷史別稱是？",
+          "options": [
+            "A. Magna Graecia",
+            "B. Lucania",
+            "C. Apulia",
+            "D. Irpinia"
+          ],
+          "correct": 1,
+          "explanation": "Basilicata 至今仍被稱為 Lucania，名稱來自當地的 Lucani 人——他們在 BC 6-5 世紀擊退了希臘人。"
+        },
+        {
+          "type": "single",
+          "question": "Basilicata 臨哪兩片海？",
+          "options": [
+            "A. Tyrrhenian 與 Adriatic",
+            "B. Adriatic 與 Ionian",
+            "C. Tyrrhenian 與 Ionian",
+            "D. 只有 Ionian"
+          ],
+          "correct": 2,
+          "explanation": "Basilicata 有一小段 Ionian 海岸（介於 Salento 與 Calabria 之間），以及極短的 Tyrrhenian 海岸。"
+        },
+        {
+          "type": "single",
+          "question": "關於 Malvasia Bianca di Basilicata，以下何者正確？",
+          "options": [
+            "A. 是 Basilicata 種植最廣的品種",
+            "B. 與其他 Malvasia 品種沒有親緣關係",
+            "C. 是紅葡萄",
+            "D. 只用於氣泡酒"
+          ],
+          "correct": 1,
+          "explanation": "Malvasia Bianca di Basilicata 稀有，是 Basilicata 最具特色的白葡萄，與其他 Malvasia 沒有親緣關係；傳統上少量混入 Aglianico 以柔化酒質。"
+        },
+        {
+          "type": "single",
+          "question": "Aglianico del Vulture 產區的西側（Vulture 區）有什麼特點？",
+          "options": [
+            "A. 海拔較低、砂質黏土、酒款飽滿",
+            "B. 海拔較高、火山土、酒款細緻複雜",
+            "C. 沿海平原、沖積土",
+            "D. 石灰岩峽谷"
+          ],
+          "correct": 1,
+          "explanation": "西側的 Vulture 區海拔較高、火山土，酒款細緻複雜；東側海拔較低、砂質黏土，酒款更飽滿大方。"
         }
       ]
     }

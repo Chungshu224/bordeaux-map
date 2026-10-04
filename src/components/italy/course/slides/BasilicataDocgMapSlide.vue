@@ -1,64 +1,53 @@
 <template>
   <div class="docg-map-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🗺️ Basilicata 重要 DOCG & DOC 互動地圖' }}</h2>
-      <p class="slide-subtitle">點選按鈕查看各產區位置與詳細資訊</p>
+      <h2>{{ slide.title || t('italy.slides.basilicataMap.defaultTitle') }}</h2>
+      <p class="slide-subtitle">{{ t('italy.slides.mapCommon.subtitle') }}</p>
     </div>
-
     <div class="zone-buttons">
-      <div class="btn-group">
-        <span class="btn-group-label">🏆 DOCG</span>
+      <div class="btn-group" v-for="g in GROUPS" :key="g.key">
+        <span class="btn-group-label">{{ t(`italy.slides.basilicataMap.${g.label}`) }}</span>
         <button
-          v-for="z in DOCG_ZONES" :key="z.id"
+          v-for="z in allZones.filter(z => z.group === g.key)" :key="z.id"
           class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
           @click="selectZone(z.id)"
         >{{ z.emoji }} {{ z.shortName }}</button>
       </div>
-      <div class="btn-group">
-        <span class="btn-group-label">🍷 重要 DOC</span>
-        <button
-          v-for="z in DOC_ZONES" :key="z.id"
-          class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
-          @click="selectZone(z.id)"
-        >{{ z.emoji }} {{ z.shortName }}</button>
-      </div>
-      <button v-if="selected" class="reset-btn" @click="resetView">🔄 全覽</button>
+      <button v-if="selected" class="reset-btn" @click="resetView">{{ t('italy.slides.mapCommon.reset') }}</button>
     </div>
-
     <div class="map-info-row">
       <div class="map-wrapper">
         <div ref="mapContainer" class="mapbox-container"></div>
-        <div v-if="loading" class="map-loading">地圖載入中…</div>
+        <div v-if="loading" class="map-loading">{{ t('italy.slides.mapCommon.loading') }}</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
-          <div class="legend-row"><span class="legend-dot tier-s"></span>頂級 DOCG（Aglianico del Vulture Superiore）</div>
-          <div class="legend-row"><span class="legend-dot tier-a"></span>重要 DOC（Vulture 基本款）</div>
-          <div class="legend-row"><span class="legend-dot tier-b"></span>特色 DOC（Matera / Alta Val d'Agri）</div>
+          <div class="legend-row"><span class="legend-dot tier-s"></span>{{ t('italy.slides.basilicataMap.legend.s') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-a"></span>{{ t('italy.slides.basilicataMap.legend.a') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-b"></span>{{ t('italy.slides.basilicataMap.legend.b') }}</div>
         </div>
       </div>
-
       <div class="info-panel" v-if="selectedInfo">
         <div class="info-badge" :class="`tier-${selectedInfo.tier}`">{{ selectedInfo.tierLabel }}</div>
         <h3 class="info-name">{{ selectedInfo.name }}</h3>
         <div class="info-rows">
-          <div class="info-row" v-for="row in selectedInfo.details" :key="row.label">
+          <div class="info-row" v-for="row in selectedInfo.details" :key="row.key">
             <span class="info-label">{{ row.label }}</span>
             <span class="info-val">{{ row.value }}</span>
           </div>
         </div>
         <div class="info-desc">{{ selectedInfo.desc }}</div>
         <div class="info-pair" v-if="selectedInfo.pairing">
-          <span class="pair-label">🍽️ 配餐</span>{{ selectedInfo.pairing }}
+          <span class="pair-label">{{ t('italy.slides.mapCommon.pairing') }}</span>{{ selectedInfo.pairing }}
         </div>
         <div class="info-price" v-if="selectedInfo.price">
-          <span class="price-label">💶 參考價格</span>{{ selectedInfo.price }}
+          <span class="price-label">{{ t('italy.slides.mapCommon.price') }}</span>{{ selectedInfo.price }}
         </div>
       </div>
       <div class="info-panel info-empty" v-else>
         <div class="empty-icon">🌋</div>
-        <p>點選上方按鈕或地圖上的產區<br>查看位置與詳細資訊</p>
+        <p>{{ t('italy.slides.mapCommon.emptyLine1') }}<br>{{ t('italy.slides.mapCommon.emptyLine2') }}</p>
         <div class="empty-hint">
-          <div class="hint-row" v-for="z in ALL_ZONES" :key="z.id">
+          <div class="hint-row" v-for="z in allZones" :key="z.id">
             <span class="hint-dot" :class="`tier-${z.tier}`"></span>
             <span>{{ z.emoji }} {{ z.name }}</span>
           </div>
@@ -70,102 +59,74 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({ slide: { type: Object, default: () => ({}) } })
 
-const DOCG_ZONES = [
+const { t } = useI18n()
+
+// 按鈕分組：key 對應 ZONES 的 group，label 為 italy.slides.basilicataMap 下的鍵
+const GROUPS = [
+  { key: 'docg', label: 'groupDocg' },
+  { key: 'doc', label: 'groupDoc' }
+]
+
+// ── 產區資料 ─────────────────────────────────────────────────
+// 此元件用於 L2M3L3，文字放在 locales/*/italy.js 的 italy.slides.basilicataMap.zones.<id>，
+// 這裡只保留地理與樣式資料。rows：資訊面板要顯示的欄位，label 取自 italy.slides.mapCommon.labels.<key>
+const ZONES = [
   {
-    id: 'adv-superiore',
-    name: 'Aglianico del Vulture Superiore DOCG',
-    shortName: 'AdV Superiore DOCG',
-    emoji: '🌋',
-    tier: 's',
-    tierLabel: '👑 頂級 DOCG — 南義的 Barolo',
-    center: [15.650, 40.950],
-    zoom: 10,
-    geojsonPath: '/italy/regions/basilicata/geojson/DOCG/Aglianico del Vulture Superiore DOCG.geojson',
-    details: [
-      { label: '品種', value: 'Aglianico 100%，Monte Vulture（休眠火山）坡面種植' },
-      { label: '三個等級', value: '基本款（12個月）/ Superiore（3年，含1年桶）/ Riserva（5年，含2年桶）' },
-      { label: '高度', value: '海拔 400-700m，大日夜溫差（15-20°C），保留天然酸度' },
-      { label: '土壤', value: '火山凝灰岩、火山灰，礦物質極豐富，是 Aglianico 風味最複雜的產區' },
-      { label: 'Parker', value: '最高 97 分，Riserva 頂款可達 20-30 年陳年潛力' }
-    ],
-    desc: 'Basilicata 唯一 DOCG，是義大利最被低估的頂級紅酒。儘管產量極少（<0.3% 義大利總產量），Parker 97 分的評價讓 Aglianico del Vulture 在國際市場赫赫有名。比 Taurasi 海拔更高，火山土壤更純粹，風格更具礦物張力。Elena Fucci 的 Titolo 和 Basilisco 的 Riserva 是 Vulture 的傳奇酒款。',
-    pairing: '烤全羊（Pignata 傳統土鍋燉羊）、野豬燉肉、陳年 Pecorino Lucano 起司、松露料理',
-    price: '€15-25（基本）/ €25-45（Superiore）/ €50-120（Riserva）— 性價比遠超 Barolo'
+    id: 'adv-superiore', group: 'docg', emoji: '🌋', tier: 's',
+    center: [15.650, 40.950], zoom: 10,
+    rows: ['established', 'grape', 'ageing', 'feature', 'location'],
+    geojsonPath: '/italy/regions/basilicata/geojson/DOCG/Aglianico del Vulture Superiore DOCG.geojson'
+  },
+  {
+    id: 'adv-doc', group: 'doc', emoji: '🍷', tier: 'a',
+    center: [15.610, 40.920], zoom: 10,
+    rows: ['established', 'grape', 'ageing', 'wines', 'feature'],
+    geojsonPath: '/italy/regions/basilicata/geojson/DOC/Aglianico del Vulture DOC.geojson'
+  },
+  {
+    id: 'matera', group: 'doc', emoji: '🪨', tier: 'b',
+    center: [16.610, 40.670], zoom: 10.5,
+    rows: ['location', 'soil', 'grape', 'wines', 'feature'],
+    geojsonPath: '/italy/regions/basilicata/geojson/DOC/Matera DOC.geojson'
+  },
+  {
+    id: 'alta-val-agri', group: 'doc', emoji: '⛰️', tier: 'b',
+    center: [15.928, 40.272], zoom: 10.5,
+    rows: ['location', 'grape', 'feature'],
+    geojsonPath: "/italy/regions/basilicata/geojson/DOC/Terre dell'Alta Val d'Agri DOC.geojson"
+  },
+  {
+    id: 'grottino', group: 'doc', emoji: '🕳️', tier: 'b',
+    center: [16.205, 40.212], zoom: 11,
+    rows: ['nameOrigin', 'location', 'grape', 'feature'],
+    geojsonPath: '/italy/regions/basilicata/geojson/DOC/Grottino di Roccanova DOC.geojson'
   }
 ]
 
-const DOC_ZONES = [
-  {
-    id: 'adv-doc',
-    name: 'Aglianico del Vulture DOC',
-    shortName: 'AdV DOC',
-    emoji: '🍷',
-    tier: 'a',
-    tierLabel: '🍷 重要 DOC — DOCG 前身基本款',
-    center: [15.610, 40.920],
-    zoom: 10,
-    geojsonPath: '/italy/regions/basilicata/geojson/DOC/Aglianico del Vulture DOC.geojson',
-    details: [
-      { label: '品種', value: 'Aglianico 85%+，同一地理區，陳年要求較低' },
-      { label: '與 DOCG 差異', value: 'DOC 涵蓋更廣的葡萄園範圍，包括 Spumante 氣泡酒版本（DOC 限定）' },
-      { label: 'Spumante', value: 'Aglianico del Vulture Spumante DOC 是義大利罕見的紅色氣泡酒，以 Metodo Classico 釀造' },
-      { label: '陳年', value: '最少 12 個月，親民易飲，是進入 Vulture Aglianico 的最佳起點' },
-      { label: '特點', value: '同一火山風土，比 DOCG 等級更親民，包含白酒、粉紅酒全系列' }
-    ],
-    desc: '2010 年前的完整 Vulture 產區體系，現在是 DOCG 的補充。最特別的是 Aglianico del Vulture Spumante，用 Metodo Classico（傳統法）將高單寧 Aglianico 釀成氣泡酒，是義大利最罕見的頂級紅色起泡酒，極少流通市面。',
-    pairing: '日常義大利麵、烤豬里肌、拼盤料理，或配 Burrata 起司開胃',
-    price: '€10-18，Basilicata 最親民的 Aglianico 入門款'
-  },
-  {
-    id: 'matera',
-    name: 'Matera DOC',
-    shortName: 'Matera',
-    emoji: '🪨',
-    tier: 'b',
-    tierLabel: '💎 特色 DOC — 石窟城市的葡萄酒',
-    center: [16.610, 40.670],
-    zoom: 10.5,
-    geojsonPath: '/italy/regions/basilicata/geojson/DOC/Matera DOC.geojson',
-    details: [
-      { label: '位置', value: 'Matera 省，以石窟城市（Sassi di Matera，UNESCO 世遺）聞名' },
-      { label: '品種', value: 'Primitivo / Merlot / Cabernet（紅）；Greco / Malvasia（白）；Moscato（甜）' },
-      { label: '地形', value: 'Bradano 河谷，石灰岩峽谷地形，與火山區 Vulture 完全不同' },
-      { label: '風格', value: '多元：紅酒濃郁飽滿（南部陽光）；白酒清爽礦物；Passito 甜酒香濃' },
-      { label: '特點', value: 'Matera 是 2019 年「歐洲文化首都」，近年精品化明顯' }
-    ],
-    desc: 'Basilicata 東部的石灰岩峽谷產區，以 UNESCO 世界遺產石窟城市 Sassi di Matera 聞名全球。與 Vulture 火山風土截然不同，在石灰岩地形上種植 Primitivo、Greco 等多元品種，是發現 Basilicata 另一面的產區。',
-    pairing: '烤蔬菜拼盤、Basilicata 辣腸（Lucanica）、Focaccia 配當地起司',
-    price: '€8-18，以旅遊配餐酒款為主'
-  },
-  {
-    id: 'alta-val-agri',
-    name: "Terre dell'Alta Val d'Agri DOC",
-    shortName: "Alta Val d'Agri",
-    emoji: '⛰️',
-    tier: 'b',
-    tierLabel: "💎 特色 DOC — Apennine 高山稀有產區",
-    center: [15.928, 40.272],
-    zoom: 10.5,
-    geojsonPath: "/italy/regions/basilicata/geojson/DOC/Terre dell'Alta Val d'Agri DOC.geojson",
-    details: [
-      { label: '位置', value: "Agri 河谷上游，Apennine 山區，海拔 600-1000m，接近 Calabria 邊界" },
-      { label: '品種', value: 'Merlot 50%+（非傳統），Cabernet Sauvignon；是 Basilicata 最不典型的產區' },
-      { label: '特點', value: '高山氣候，年均溫僅 12°C，是義大利南部少見的涼爽高山產區' },
-      { label: '產量', value: '產量極少，義大利最小 DOC 之一，幾乎只在當地流通' },
-      { label: '風格', value: 'Merlot + Cabernet 的高山版本，比低地款更清爽、更有酸度' }
-    ],
-    desc: 'Basilicata 最偏遠的高山 DOC，Agri 河谷源頭的壯麗山地葡萄園。罕見地以 Merlot 和 Cabernet 為主角（非本土品種），在 600-1000m 高山氣候下展現出義大利南部最涼爽的國際品種詮釋。產量極稀，幾乎只供當地消費。',
-    pairing: '野味料理、山區燉肉、當地 Caciocavallo 起司',
-    price: '€10-20，稀有度極高，主要當地消費'
+// 依目前語系組出含文字的產區資料
+const allZones = computed(() => ZONES.map(z => {
+  const base = `italy.slides.basilicataMap.zones.${z.id}`
+  return {
+    ...z,
+    name: t(`${base}.name`),
+    shortName: t(`${base}.shortName`),
+    tierLabel: t(`${base}.tierLabel`),
+    details: z.rows.map(key => ({
+      key,
+      label: t(`italy.slides.mapCommon.labels.${key}`),
+      value: t(`${base}.${key}`)
+    })),
+    desc: t(`${base}.desc`),
+    pairing: t(`${base}.pairing`),
+    price: t(`${base}.price`)
   }
-]
-
-const ALL_ZONES = [...DOCG_ZONES, ...DOC_ZONES]
+}))
 
 const TIER_STYLE = {
   s: { fill: '#3E0000', line: '#FF6E40', fillOpacity: 0.35, lineWidth: 3.0 },
@@ -181,7 +142,7 @@ let map = null
 let markersArr = []
 
 const selectedInfo = computed(() =>
-  selected.value ? ALL_ZONES.find(z => z.id === selected.value) : null
+  selected.value ? allZones.value.find(z => z.id === selected.value) : null
 )
 
 async function fetchGeojson (z) {
@@ -199,8 +160,8 @@ async function fetchGeojson (z) {
 
 async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
-  const geojsonData = await Promise.all(ALL_ZONES.map(z => fetchGeojson(z)))
-  ALL_ZONES.forEach((z, i) => {
+  const geojsonData = await Promise.all(ZONES.map(z => fetchGeojson(z)))
+  ZONES.forEach((z, i) => {
     const gj = geojsonData[i]
     if (!gj) return
     const fillId = `fill-${z.id}`
@@ -219,7 +180,7 @@ async function highlightAll () {
     map.on('mouseenter', fillId, () => { map.getCanvas().style.cursor = 'pointer' })
     map.on('mouseleave', fillId, () => { map.getCanvas().style.cursor = '' })
   })
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const el = document.createElement('div')
     el.innerHTML = z.emoji
     el.style.cssText = 'font-size:16px;cursor:pointer;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));transition:transform 0.15s;'
@@ -232,9 +193,9 @@ async function highlightAll () {
 
 function selectZone (id) {
   selected.value = id
-  const info = ALL_ZONES.find(z => z.id === id)
+  const info = ZONES.find(z => z.id === id)
   if (!info || !map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     const active = z.id === id
     if (map.getLayer(`fill-${z.id}`)) {
@@ -250,7 +211,7 @@ function selectZone (id) {
 function resetView () {
   selected.value = null
   if (!map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', ts.fillOpacity)
     if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', ts.lineWidth)
@@ -261,7 +222,7 @@ function resetView () {
 function initMap () {
   if (!mapContainer.value) return
   const token = import.meta.env.VITE_MAPBOX_TOKEN
-  if (!token) { mapError.value = '未設定 Mapbox Token'; loading.value = false; return }
+  if (!token) { mapError.value = t('italy.slides.mapCommon.noToken'); loading.value = false; return }
   mapboxgl.accessToken = token
   map = new mapboxgl.Map({
     container: mapContainer.value,
@@ -273,7 +234,7 @@ function initMap () {
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
   map.on('load', async () => { await highlightAll(); loading.value = false })
-  map.on('error', e => { mapError.value = `地圖錯誤：${e.error?.message || '未知'}`; loading.value = false })
+  map.on('error', e => { mapError.value = t('italy.slides.mapCommon.mapError', { msg: e.error?.message || t('italy.slides.mapCommon.unknownError') }); loading.value = false })
 }
 
 onMounted(async () => { await nextTick(); initMap() })

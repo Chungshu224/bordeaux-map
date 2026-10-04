@@ -1,64 +1,53 @@
 <template>
   <div class="docg-map-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🗺️ Calabria 重要 DOCG & DOC 互動地圖' }}</h2>
-      <p class="slide-subtitle">點選按鈕查看各產區位置與詳細資訊</p>
+      <h2>{{ slide.title || t('italy.slides.calabriaMap.defaultTitle') }}</h2>
+      <p class="slide-subtitle">{{ t('italy.slides.mapCommon.subtitle') }}</p>
     </div>
-
     <div class="zone-buttons">
-      <div class="btn-group">
-        <span class="btn-group-label">🏆 DOCG</span>
+      <div class="btn-group" v-for="g in GROUPS" :key="g.key">
+        <span class="btn-group-label">{{ t(`italy.slides.calabriaMap.${g.label}`) }}</span>
         <button
-          v-for="z in DOCG_ZONES" :key="z.id"
+          v-for="z in allZones.filter(z => z.group === g.key)" :key="z.id"
           class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
           @click="selectZone(z.id)"
         >{{ z.emoji }} {{ z.shortName }}</button>
       </div>
-      <div class="btn-group">
-        <span class="btn-group-label">🍷 重要 DOC</span>
-        <button
-          v-for="z in DOC_ZONES" :key="z.id"
-          class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
-          @click="selectZone(z.id)"
-        >{{ z.emoji }} {{ z.shortName }}</button>
-      </div>
-      <button v-if="selected" class="reset-btn" @click="resetView">🔄 全覽</button>
+      <button v-if="selected" class="reset-btn" @click="resetView">{{ t('italy.slides.mapCommon.reset') }}</button>
     </div>
-
     <div class="map-info-row">
       <div class="map-wrapper">
         <div ref="mapContainer" class="mapbox-container"></div>
-        <div v-if="loading" class="map-loading">地圖載入中…</div>
+        <div v-if="loading" class="map-loading">{{ t('italy.slides.mapCommon.loading') }}</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
-          <div class="legend-row"><span class="legend-dot tier-s"></span>頂級 DOCG（Cirò — 奧運選手之酒）</div>
-          <div class="legend-row"><span class="legend-dot tier-a"></span>重要 DOC（Cirò / Greco di Bianco）</div>
-          <div class="legend-row"><span class="legend-dot tier-b"></span>特色 DOC（廣域 / 內陸）</div>
+          <div class="legend-row"><span class="legend-dot tier-s"></span>{{ t('italy.slides.calabriaMap.legend.s') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-a"></span>{{ t('italy.slides.calabriaMap.legend.a') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-b"></span>{{ t('italy.slides.calabriaMap.legend.b') }}</div>
         </div>
       </div>
-
       <div class="info-panel" v-if="selectedInfo">
         <div class="info-badge" :class="`tier-${selectedInfo.tier}`">{{ selectedInfo.tierLabel }}</div>
         <h3 class="info-name">{{ selectedInfo.name }}</h3>
         <div class="info-rows">
-          <div class="info-row" v-for="row in selectedInfo.details" :key="row.label">
+          <div class="info-row" v-for="row in selectedInfo.details" :key="row.key">
             <span class="info-label">{{ row.label }}</span>
             <span class="info-val">{{ row.value }}</span>
           </div>
         </div>
         <div class="info-desc">{{ selectedInfo.desc }}</div>
         <div class="info-pair" v-if="selectedInfo.pairing">
-          <span class="pair-label">🍽️ 配餐</span>{{ selectedInfo.pairing }}
+          <span class="pair-label">{{ t('italy.slides.mapCommon.pairing') }}</span>{{ selectedInfo.pairing }}
         </div>
         <div class="info-price" v-if="selectedInfo.price">
-          <span class="price-label">💶 參考價格</span>{{ selectedInfo.price }}
+          <span class="price-label">{{ t('italy.slides.mapCommon.price') }}</span>{{ selectedInfo.price }}
         </div>
       </div>
       <div class="info-panel info-empty" v-else>
         <div class="empty-icon">🌊</div>
-        <p>點選上方按鈕或地圖上的產區<br>查看位置與詳細資訊</p>
+        <p>{{ t('italy.slides.mapCommon.emptyLine1') }}<br>{{ t('italy.slides.mapCommon.emptyLine2') }}</p>
         <div class="empty-hint">
-          <div class="hint-row" v-for="z in ALL_ZONES" :key="z.id">
+          <div class="hint-row" v-for="z in allZones" :key="z.id">
             <span class="hint-dot" :class="`tier-${z.tier}`"></span>
             <span>{{ z.emoji }} {{ z.name }}</span>
           </div>
@@ -70,123 +59,80 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({ slide: { type: Object, default: () => ({}) } })
 
-const DOCG_ZONES = [
+const { t } = useI18n()
+
+// 按鈕分組：key 對應 ZONES 的 group，label 為 italy.slides.calabriaMap 下的鍵
+const GROUPS = [
+  { key: 'main', label: 'groupMain' },
+  { key: 'other', label: 'groupOther' }
+]
+
+// ── 產區資料 ─────────────────────────────────────────────────
+// 此元件用於 L2M3L4，文字放在 locales/*/italy.js 的 italy.slides.calabriaMap.zones.<id>，
+// 這裡只保留地理與樣式資料。rows：資訊面板要顯示的欄位，label 取自 italy.slides.mapCommon.labels.<key>
+const ZONES = [
   {
-    id: 'ciro-docg',
-    name: 'Cirò DOCG',
-    shortName: 'Cirò DOCG',
-    emoji: '🏆',
-    tier: 's',
-    tierLabel: '👑 頂級 DOCG — 奧運選手之酒',
-    center: [17.115, 39.367],
-    zoom: 10.5,
-    geojsonPath: '/italy/regions/calabria/geojson/DOCG/Cirò DOCG.geojson',
-    details: [
-      { label: '品種', value: 'Rosso/Rosato：Gaglioppo 95%+；Bianco：Greco Bianco 主導' },
-      { label: '三款酒', value: 'Rosso（紅）/ Rosato（粉紅）/ Bianco（白），各等級不同陳年要求' },
-      { label: '奧運傳說', value: '傳說古希臘奧運選手以 Cremissa（Cirò 前身）慶功，葡萄酒歷史達 2700 年' },
-      { label: '位置', value: 'Crotone 省東海岸，Ionian Sea 沿岸，海拔 50-400m' },
-      { label: '土壤', value: '黏土、石灰岩，地中海氣候，年日照 2800+ 小時' }
-    ],
-    desc: 'Calabria 最具歷史意義的產區，義大利最古老的釀酒傳統之一。傳說古希臘奧運冠軍會以此地酒（當時稱 Cremissa）慶功，是 2700 年不間斷的釀酒文明見證。Gaglioppo 釀造的 Cirò Rosso 展現出柔順圓潤、紅果礦物的典型南義風格，Librandi 是最重要的國際知名酒莊。',
-    pairing: "烤劍魚（Calabria 海岸特產）、'Nduja 辣腸義大利麵、烤羊排、當地起司",
-    price: '€8-18 / Classico Superiore €15-30 / Riserva €25-50，義大利性價比最高頂級紅酒之一'
+    id: 'ciro', group: 'main', emoji: '🏆', tier: 's',
+    center: [17.115, 39.367], zoom: 10.5,
+    rows: ['established', 'location', 'grape', 'tiers', 'feature'],
+    geojsonPath: '/italy/regions/calabria/geojson/DOC/Cirò DOC.geojson'
+  },
+  {
+    id: 'greco-bianco', group: 'main', emoji: '🍯', tier: 'a',
+    center: [16.098, 38.085], zoom: 11.5,
+    rows: ['location', 'grape', 'style', 'feature'],
+    geojsonPath: '/italy/regions/calabria/geojson/DOC/Greco di Bianco DOC.geojson'
+  },
+  {
+    id: 'terre-cosenza', group: 'other', emoji: '⛰️', tier: 'b',
+    center: [16.248, 39.302], zoom: 9.5,
+    rows: ['scope', 'history', 'grape', 'feature'],
+    geojsonPath: '/italy/regions/calabria/geojson/DOC/Terre di Cosenza DOC.geojson'
+  },
+  {
+    id: 'lamezia', group: 'other', emoji: '🌅', tier: 'b',
+    center: [16.278, 38.968], zoom: 11,
+    rows: ['location', 'grape', 'feature'],
+    geojsonPath: '/italy/regions/calabria/geojson/DOC/Lamezia DOC.geojson'
+  },
+  {
+    id: 'savuto', group: 'other', emoji: '🏞️', tier: 'b',
+    center: [16.250, 39.120], zoom: 11,
+    rows: ['location', 'grape', 'feature'],
+    geojsonPath: '/italy/regions/calabria/geojson/DOC/Savuto DOC.geojson'
+  },
+  {
+    id: 'bivongi', group: 'other', emoji: '🌿', tier: 'b',
+    center: [16.450, 38.480], zoom: 11,
+    rows: ['location', 'grape', 'feature'],
+    geojsonPath: '/italy/regions/calabria/geojson/DOC/Bivongi DOC.geojson'
   }
 ]
 
-const DOC_ZONES = [
-  {
-    id: 'ciro-doc',
-    name: 'Cirò DOC',
-    shortName: 'Cirò DOC',
-    emoji: '🍷',
-    tier: 'a',
-    tierLabel: '🍷 重要 DOC — DOCG 周邊擴展產區',
-    center: [17.085, 39.340],
-    zoom: 10.5,
-    geojsonPath: '/italy/regions/calabria/geojson/DOC/Cirò DOC.geojson',
-    details: [
-      { label: '範圍', value: '比 DOCG 稍廣的地理範圍，包含 Rossano、Cariati 等周邊鄉鎮' },
-      { label: '品種', value: 'Gaglioppo（紅粉）、Greco Bianco（白），與 DOCG 相同品種要求' },
-      { label: '差異', value: 'DOC 等級無 Classico 子產區限制，入門款平均價格更親民' },
-      { label: '特點', value: '部分精品酒莊選擇在 DOC 等級以外品種（Cabernet 等）做更自由嘗試' },
-      { label: '位置', value: 'Crotone 省，與 DOCG 核心區高度重疊' }
-    ],
-    desc: 'Cirò DOCG 升格前的完整產區版本，現在主要作為擴展區和入門款。Gaglioppo 在此區依然展現出 Ionian 海岸陽光的溫暖個性，是認識 Calabria 葡萄酒最便宜的入口。',
-    pairing: '日常義大利麵、Calabria 辣香腸拼盤、披薩',
-    price: '€6-15，Calabria 最親民的每日飲用款'
-  },
-  {
-    id: 'greco-bianco',
-    name: 'Greco di Bianco DOC',
-    shortName: 'Greco di Bianco',
-    emoji: '🍯',
-    tier: 'a',
-    tierLabel: '⭐ 稀有 DOC — 義大利最罕見甜白酒',
-    center: [16.098, 38.085],
-    zoom: 11.5,
-    geojsonPath: '/italy/regions/calabria/geojson/DOC/Greco di Bianco DOC.geojson',
-    details: [
-      { label: '品種', value: 'Greco Bianco 95%+，古希臘引進的本土白品種' },
-      { label: '工藝', value: 'Passito 風乾：葡萄採後日曬 10-15 天至半乾縮，集中糖分與芳香' },
-      { label: '風格', value: '橙花蜂蜜、杏桃乾、薑、肉桂、太妃糖，甜潤而爽口，餘韻無窮' },
-      { label: '產量', value: '全球年產僅數萬瓶，是義大利最難買到的甜酒之一' },
-      { label: '位置', value: 'Reggio Calabria 省 Bianco 鎮，Calabria 最南端，Ionian 海岸' }
-    ],
-    desc: '義大利最罕見的頂級甜白酒，產量全球僅數萬瓶。Bianco 鎮只有幾十公頃的 Greco Bianco 老藤，日曬風乾後集中成無與倫比的香甜複雜度。Umberto Ceratti 的 Greco di Bianco 是義大利最被低估的偉大甜酒，Robert Parker 曾給出極高評價。',
-    pairing: '杏仁餅乾、蜂蜜蛋糕、Fichi Secchi 無花果乾、義大利杏仁糖 (Torrone)',
-    price: '€25-60 / 375ml，稀有珍品，遠低於同級國際甜酒'
-  },
-  {
-    id: 'terre-cosenza',
-    name: 'Terre di Cosenza DOC',
-    shortName: 'Terre di Cosenza',
-    emoji: '⛰️',
-    tier: 'b',
-    tierLabel: '💎 特色 DOC — Calabria 最大廣域產區',
-    center: [16.248, 39.302],
-    zoom: 9.5,
-    geojsonPath: '/italy/regions/calabria/geojson/DOC/Terre di Cosenza DOC.geojson',
-    details: [
-      { label: '範圍', value: 'Cosenza 省廣大範圍，涵蓋 Apennine 山脈兩側，Calabria 面積最大 DOC' },
-      { label: '品種', value: 'Gaglioppo / Greco Nero / Magliocco（紅）；Greco Bianco / Malvasia（白）' },
-      { label: '子產區', value: 'Donnici / Pollino / Verbicaro / Esaro 等多個地理子區，各有特色' },
-      { label: '高度', value: '部分葡萄園海拔超過 800m，是義大利南部最涼爽的高山產區之一' },
-      { label: '特點', value: '包含保護區 Pollino 國家公園（義大利最大國家公園）內的葡萄園' }
-    ],
-    desc: 'Calabria 面積最大的 DOC，涵蓋 Pollino 國家公園等壯麗山地景觀。Magliocco 是最值得關注的本土品種，在海拔 600-900m 的山地展現出比海岸產區更涼爽、更具礦物感的個性。近年精品莊園開始發掘這片被遺忘的高山風土。',
-    pairing: '山區烤肉、野蘑菇燉飯、陳年山羊起司',
-    price: '€8-20，Calabria 山地風土的超值發現'
-  },
-  {
-    id: 'lamezia',
-    name: 'Lamezia DOC',
-    shortName: 'Lamezia',
-    emoji: '🌅',
-    tier: 'b',
-    tierLabel: '💎 特色 DOC — Tyrrhenian 海岸平原',
-    center: [16.278, 38.968],
-    zoom: 11,
-    geojsonPath: '/italy/regions/calabria/geojson/DOC/Lamezia DOC.geojson',
-    details: [
-      { label: '位置', value: 'Catanzaro 省 Lamezia Terme 平原，Tyrrhenian（第勒尼安）海岸西側' },
-      { label: '品種', value: 'Greco Nero / Nerello Mascalese / Gaglioppo（紅）；Greco / Trebbiano（白）' },
-      { label: '風格', value: '相較 Ionian 海岸的 Cirò，Lamezia 受西側 Tyrrhenian 海影響，風格略微清爽' },
-      { label: '平原', value: 'Calabria 少見的海岸平原地形，是 Calabria 主要農業和柑橘種植區' },
-      { label: '特點', value: '交通便利（Lamezia 機場），是遊覽 Calabria 的主要門戶城市' }
-    ],
-    desc: 'Calabria 西海岸的代表性 DOC，地處 Tyrrhenian 海岸平原。以 Greco Nero 和 Nerello Mascalese 為主要品種，展現出與東岸 Cirò 不同的輕盈細緻風格。近年開始有精品酒莊探索其獨特的本土品種潛力。',
-    pairing: '烤劍魚、Tropea 紅洋蔥沙拉、清蒸海鮮、海岸風格料理',
-    price: '€8-18，親民的西岸 Calabria 選擇'
+// 依目前語系組出含文字的產區資料
+const allZones = computed(() => ZONES.map(z => {
+  const base = `italy.slides.calabriaMap.zones.${z.id}`
+  return {
+    ...z,
+    name: t(`${base}.name`),
+    shortName: t(`${base}.shortName`),
+    tierLabel: t(`${base}.tierLabel`),
+    details: z.rows.map(key => ({
+      key,
+      label: t(`italy.slides.mapCommon.labels.${key}`),
+      value: t(`${base}.${key}`)
+    })),
+    desc: t(`${base}.desc`),
+    pairing: t(`${base}.pairing`),
+    price: t(`${base}.price`)
   }
-]
-
-const ALL_ZONES = [...DOCG_ZONES, ...DOC_ZONES]
+}))
 
 const TIER_STYLE = {
   s: { fill: '#004D40', line: '#80CBC4', fillOpacity: 0.32, lineWidth: 2.8 },
@@ -202,7 +148,7 @@ let map = null
 let markersArr = []
 
 const selectedInfo = computed(() =>
-  selected.value ? ALL_ZONES.find(z => z.id === selected.value) : null
+  selected.value ? allZones.value.find(z => z.id === selected.value) : null
 )
 
 async function fetchGeojson (z) {
@@ -220,8 +166,8 @@ async function fetchGeojson (z) {
 
 async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
-  const geojsonData = await Promise.all(ALL_ZONES.map(z => fetchGeojson(z)))
-  ALL_ZONES.forEach((z, i) => {
+  const geojsonData = await Promise.all(ZONES.map(z => fetchGeojson(z)))
+  ZONES.forEach((z, i) => {
     const gj = geojsonData[i]
     if (!gj) return
     const ts = TIER_STYLE[z.tier]
@@ -240,7 +186,7 @@ async function highlightAll () {
     map.on('mouseenter', fillId, () => { map.getCanvas().style.cursor = 'pointer' })
     map.on('mouseleave', fillId, () => { map.getCanvas().style.cursor = '' })
   })
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const el = document.createElement('div')
     el.innerHTML = z.emoji
     el.style.cssText = 'font-size:16px;cursor:pointer;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));transition:transform 0.15s;'
@@ -253,9 +199,9 @@ async function highlightAll () {
 
 function selectZone (id) {
   selected.value = id
-  const info = ALL_ZONES.find(z => z.id === id)
+  const info = ZONES.find(z => z.id === id)
   if (!info || !map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     const active = z.id === id
     if (map.getLayer(`fill-${z.id}`)) {
@@ -271,7 +217,7 @@ function selectZone (id) {
 function resetView () {
   selected.value = null
   if (!map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', ts.fillOpacity)
     if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', ts.lineWidth)
@@ -282,7 +228,7 @@ function resetView () {
 function initMap () {
   if (!mapContainer.value) return
   const token = import.meta.env.VITE_MAPBOX_TOKEN
-  if (!token) { mapError.value = '未設定 Mapbox Token'; loading.value = false; return }
+  if (!token) { mapError.value = t('italy.slides.mapCommon.noToken'); loading.value = false; return }
   mapboxgl.accessToken = token
   map = new mapboxgl.Map({
     container: mapContainer.value,
@@ -294,7 +240,7 @@ function initMap () {
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
   map.on('load', async () => { await highlightAll(); loading.value = false })
-  map.on('error', e => { mapError.value = `地圖錯誤：${e.error?.message || '未知'}`; loading.value = false })
+  map.on('error', e => { mapError.value = t('italy.slides.mapCommon.mapError', { msg: e.error?.message || t('italy.slides.mapCommon.unknownError') }); loading.value = false })
 }
 
 onMounted(async () => { await nextTick(); initMap() })

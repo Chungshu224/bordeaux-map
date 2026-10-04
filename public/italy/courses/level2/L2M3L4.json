@@ -1,4 +1,4 @@
-﻿{
+{
   "lessonId": "L2M3L4",
   "title": "Calabria 卡拉布里亞",
   "quiz": [
@@ -11,29 +11,29 @@
         "文藝復興藝術家"
       ],
       "answer": 1,
-      "explanation": "傳說古希臘奧運選手在比賽後會飲用 Cirò 葡萄酒慶祝，當時稱為 Cremissa。"
+      "explanation": "古希臘時期的名酒 Krimisa 據說是頒給古代奧運優勝者的獎品，名稱可能源自位於今日 Cirò 一帶的希臘殖民地 Cremissa。"
     },
     {
-      "question": "Gaglioppo 為什麼被稱為「南義的 Pinot Noir」？",
+      "question": "Gaglioppo 的特性是？",
       "options": [
-        "產量相同",
-        "顏色較淡、單寧柔順、風味細膩",
-        "價格相同",
-        "都產自法國"
+        "低酸、低單寧",
+        "高酸、高單寧",
+        "白葡萄品種",
+        "國際品種"
       ],
       "answer": 1,
-      "explanation": "Gaglioppo 與 Pinot Noir 類似，顏色相對較淡、單寧柔順、風味細膩，因此被稱為「南義的 Pinot Noir」。"
+      "explanation": "Gaglioppo 是義大利最古老的品種之一，被視為 Calabria 原生，是 Calabria 的招牌與主要紅葡萄，酸度與單寧都高。"
     },
     {
-      "question": "Greco di Bianco DOC 的酒精度通常是？",
+      "question": "Greco di Bianco DOC 生產什麼風格的酒？",
       "options": [
-        "10-12%",
-        "12-14%",
-        "14-16%",
-        "17%+"
+        "乾型白酒",
+        "風乾甜白酒（Passito）",
+        "氣泡酒",
+        "粉紅酒"
       ],
-      "answer": 3,
-      "explanation": "Greco di Bianco 是甜白酒，使用風乾葡萄釀造，酒精度極高（17%+），是義大利最甜、最濃郁的甜白酒之一。"
+      "answer": 1,
+      "explanation": "Greco di Bianco DOC 是 Bianco 村周邊小巧而有聲望的風乾甜白酒產區：最低 95% Greco Bianco，酒精最低 14%，甜味由清新酸度平衡。它不是乾型酒。"
     },
     {
       "question": "'Nduja 是什麼？",
@@ -44,7 +44,7 @@
         "一個 DOC 產區"
       ],
       "answer": 1,
-      "explanation": "'Nduja 是 Calabria 的超辣抹醬香腸，主要成分是豬肉和大量辣椒，可塗麵包食用，搭配 Cirò Rosso 完美。"
+      "explanation": "'Nduja 是 Calabria 的超辣可塗抹豬肉香腸，以大量 Calabria 辣椒調味，可塗麵包食用，搭配 Cirò Rosso 完美。"
     }
   ],
   "slides": [
@@ -56,7 +56,7 @@
     {
       "type": "content",
       "title": "🌊 Calabria 產區概況",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利靴形半島最南端的「腳尖」，Ionian海與Tyrrhenian海雙面環繞。<span class=\"highlight\">800公里海岸線</span>孕育出2500年歷史的葡萄酒文化，古希臘人稱此地為「Oenotria」—— 葡萄酒之地。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🗺️</div><div class=\"fact-text\"><strong>地理位置</strong><br>義大利最南端，靴形腳尖，北接Basilicata，東岸Ionian、西岸Tyrrhenian兩海環繞</div></div><div class=\"fact-box\"><div class=\"fact-icon\">📜</div><div class=\"fact-text\"><strong>釀酒歷史</strong><br>2500年歷史，古希臘稱「Oenotria葡萄酒之地」，公元前800年希臘移民開始栽培</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏅</div><div class=\"fact-text\"><strong>法定認證</strong><br>12 DOC，無 DOCG。21世紀品質革命進行中，頂級酒已達國際競爭水準</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌊</div><div class=\"fact-text\"><strong>雙海圍繞</strong><br>東岸Ionian（炎熱乾燥、石灰岩）× 西岸Tyrrhenian（海風涼爽），風土多元</div></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利靴形半島最南端的「腳尖」，<span class=\"highlight\">三面環海</span>：東臨 Ionian 海、西臨 Tyrrhenian 海，南隔 Strait of Messina（墨西拿海峽）與 Sicilia 相望。古希臘移民稱此地為「Oenotria」（Enotria）——葡萄樹之地。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🗺️</div><div class=\"fact-text\"><strong>地形</strong><br>丘陵與山地超過 90%，南 Apennine 山脈（Pollino、Sila、Aspromonte、Catena Costiera）縱貫全區</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌡️</div><div class=\"fact-text\"><strong>氣候</strong><br>沿海為地中海型，內陸受大陸性影響</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏅</div><div class=\"fact-text\"><strong>法定產區</strong><br>9 個 DOC，沒有 DOCG；大部分產量是無產地標示的葡萄酒</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍇</div><div class=\"fact-text\"><strong>品種</strong><br>紅葡萄將近 90%，Gaglioppo 佔一半以上的葡萄園</div></div></div>"
     },
     {
       "type": "calabria-docg-map",
@@ -65,79 +65,81 @@
     {
       "type": "content",
       "title": "🏆 Cirò DOC — 傳奇奧運選手之酒",
-      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Calabria最知名的法定產區，傳說古希臘奧運選手以此酒慶功（當時名為Cremissa）。Gaglioppo主導，三種顏色各有特色，是認識Calabria葡萄酒的最佳起點。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🔴 Cirò Rosso</strong><p>Gaglioppo 95%以上，Calabria紅酒代表。紅櫻桃、草莓、泥土礦物香，中等酒體柔順單寧。設有Classico、Superiore、Riserva三個等級。</p></div><div class=\"orvieto-card\"><strong>🌸 Cirò Rosato</strong><p>Gaglioppo 100%釀造，清爽玫瑰酒。草莓、紅醋栗、西瓜香氣，搭配海鮮與夏日料理，是Calabria海岸風情代表。</p></div><div class=\"orvieto-card\"><strong>🤍 Cirò Bianco</strong><p>Greco Bianco為主，清淡易飲白酒。柑橘、杏花、鹽味礦物感，完美搭配Calabria劍魚與海鮮料理。</p></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Calabria 最古老（1969）、產量最大的 DOC，位於 Ionian 海岸中段。古希臘時期的名酒 Krimisa 據說是頒給古代奧運優勝者的獎品，名稱可能源自位於今日 Cirò 一帶的希臘殖民地 Cremissa。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🔴 Cirò Rosso</strong><p>最低 80% Gaglioppo，Calabria 紅酒代表。紅櫻桃、草莓、泥土礦物香，酸度與單寧都高。可標示 Classico、Superiore（最低酒精 13.5%）、Riserva（最少陳年 2 年）及其組合。</p></div><div class=\"orvieto-card\"><strong>🌸 Cirò Rosato</strong><p>最低 80% Gaglioppo，清爽粉紅酒。草莓、紅醋栗、西瓜香氣，搭配海鮮與夏日料理，是 Calabria 海岸風情代表。</p></div><div class=\"orvieto-card\"><strong>🤍 Cirò Bianco</strong><p>最低 80% Greco Bianco，清淡易飲白酒。柑橘、杏花、鹽味礦物感，完美搭配 Calabria 劍魚與海鮮料理。</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍇 Gaglioppo — 南義的 Pinot Noir",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">「南義的 Pinot Noir」—— <span class=\"intro-highlight\">薄皮淺色、柔順單寧、細膩風味</span>，在炎熱的Calabria展現出意想不到的優雅個性</p></div><div class=\"sagrantino-styles\"><div class=\"styles-grid\"><div class=\"style-card dry\"><div class=\"dry-badge\">一般風格</div><h4>🍷 Cirò Rosso 型</h4><div class=\"style-details\"><p>🎨 顏色：中等石榴紅，比一般南義紅酒明顯較淺</p><p>🌹 香氣：紅櫻桃、草莓、玫瑰花瓣、輕微泥土礦物</p><p>👅 口感：柔順單寧、活潑中高酸度、酒精13-14%</p><p>🏷️ 代表酒莊：Librandi、A Vita、Ippolito 1845</p></div></div><div class=\"style-card sweet\"><div class=\"sweet-badge\">Riserva等級</div><h4>🏆 陳年Riserva型</h4><div class=\"style-details\"><p>⏱️ 陳年：36個月以上（橡木桶+瓶陳）</p><p>🌹 香氣：乾燥香草、皮革、雪松、烤肉、焦糖</p><p>👅 口感：單寧更圓潤成熟，層次感豐富</p><p>🏷️ 代表：Ippolito Riserva、Ceraudo Dattilo</p></div></div></div></div>"
+      "title": "🍇 Gaglioppo — Calabria 的招牌紅葡萄",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Gaglioppo 是<span class=\"intro-highlight\">義大利最古老的品種之一，被視為 Calabria 原生</span>，是 Calabria 的招牌與主要紅葡萄，佔一半以上的葡萄園；名稱常被解釋為「美麗的腳」。酸度與單寧都高。</p></div><div class=\"sagrantino-styles\"><div class=\"styles-grid\"><div class=\"style-card dry\"><div class=\"dry-badge\">一般風格</div><h4>🍷 Cirò Rosso 型</h4><div class=\"style-details\"><p>🎨 顏色：中等石榴紅，比許多南義紅酒更淺</p><p>🌹 香氣：紅櫻桃、草莓、玫瑰花瓣、輕微泥土礦物</p><p>👅 口感：酸度高、單寧高</p><p>🏷️ 代表酒莊：Librandi、A Vita、Ippolito 1845</p></div></div><div class=\"style-card sweet\"><div class=\"sweet-badge\">Riserva等級</div><h4>🏆 陳年Riserva型</h4><div class=\"style-details\"><p>⏱️ 陳年：Cirò Rosso Riserva 最少 2 年</p><p>🌹 香氣：乾燥香草、皮革、雪松、烤肉</p><p>👅 口感：單寧隨陳年變得圓潤，層次感豐富</p><p>🏷️ 代表：Ippolito 1845、Ceraudo</p></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🏺 Calabria 三大本土品種",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍇 Magliocco</h4><p><strong>別名：</strong>Arvino、Magliocco Dolce</p><p><strong>風格：</strong>深紫黑色、超濃郁力量型，酒精高達14-15.5%</p><p><strong>香氣：</strong>黑莓醬、黑巧克力、甘草、黑胡椒、煙燻皮革</p><p><strong>產區：</strong>Lamezia DOC 主力品種，€15-30</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍯 Greco Bianco</h4><p><strong>注意：</strong>與Campania的Greco為不同品種，Calabria特有原生種</p><p><strong>用途：</strong>Greco di Bianco DOC 極稀有甜白酒主力</p><p><strong>香氣：</strong>杏桃乾、蜂蜜、橙花、柑橘皮、烤榛果、焦糖</p><p><strong>規格：</strong>殘糖100-150g/L，酒精17%+，€25-60（50ml）</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌸 Mantonico</h4><p><strong>產區：</strong>Bivongi DOC，Ionian海岸南部</p><p><strong>風格：</strong>芳香型Passito甜白酒，酒精15-16%</p><p><strong>香氣：</strong>白桃、杏桃、金銀花、蜂蜜、烤杏仁、柑橘醬</p><p><strong>稀有：</strong>年產量僅數千瓶，€18-35，珍稀收藏等級</p></div></div></div>"
+      "title": "🏺 Calabria 的其他重要品種",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍇 Magliocco</h4><p><strong>地位：</strong>另一個重要的傳統紅葡萄</p><p><strong>注意：</strong>Magliocco Canino 與 Magliocco Dolce 名稱相近，在各地常被混用</p><p><strong>風格：</strong>顏色深、酒體飽滿</p><p><strong>產區：</strong>Terre di Cosenza、Lamezia、Savuto 等 DOC</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍯 Greco Bianco</h4><p><strong>地位：</strong>Calabria 主要的白葡萄</p><p><strong>真相：</strong>與 Malvasia di Lipari 基因相同，又稱 Greco Bianco di Gerace；與 Campania 的 Greco 是不同品種</p><p><strong>用途：</strong>非常適合風乾（appassimento），是 Greco di Bianco DOC 的主角，也是 Cirò Bianco 的基礎</p><p><strong>注意：</strong>「Greco Bianco」這個名稱也常被用來指其他葡萄</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌸 Nerello Cappuccio 與其他</h4><p><strong>Nerello Cappuccio：</strong>在 Calabria 種植量可觀的紅葡萄</p><p><strong>其他：</strong>Greco Nero、Nerello Mascalese、Mantonico Bianco、Pecorello、Guarnaccia Bianca</p><p><strong>命名混亂：</strong>Calabria 人在不同地方用同一名字指不同品種，也用不同名字指同一品種，是義大利品種名稱最混亂的大區之一</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍯 Greco di Bianco DOC — 義大利最稀有甜白酒",
-      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">義大利最稀有甜白酒之一。產自Bianco小鎮，使用<strong>Appassimento風乾工法</strong>濃縮糖分，殘糖100-150g/L，酒精17%以上，南義甜白酒之王，可陳年10-20年。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍇 釀造工藝</strong><p>葡萄採收後在蔭涼通風處風乾2-4週，糖分、酸度、香氣全面濃縮。野生酵母緩慢發酵，橡木桶陳年6個月以上，風格極為複雜。</p></div><div class=\"orvieto-card\"><strong>🍯 品飲與搭配</strong><p>建議溫度12-14°C，小份（50ml）緩慢享用。搭配：義大利杏仁餅（Amaretti）、藍紋起司（Gorgonzola）、法式焦糖燉蛋、水果塔。陳年10-20年後複雜度倍增。</p></div></div></div>"
+      "title": "🍯 Greco di Bianco DOC — 風乾甜白酒",
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">小巧而有聲望的 <strong>Passito（風乾甜酒）</strong>產區，產自 Ionian 海岸南端的 <strong>Bianco</strong> 村周邊。最低 95% Greco Bianco；金琥珀色，香氣與風味複雜，酒精最低 14%，甜味由清新的酸度平衡。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍇 名稱要分清</strong><p><strong>Greco Bianco</strong> 是葡萄品種；<strong>Greco di Bianco</strong> 是 DOC；<strong>Bianco</strong> 是村莊。Greco Bianco 與 Malvasia di Lipari 基因相同，非常適合風乾。</p></div><div class=\"orvieto-card\"><strong>🍯 品飲與搭配</strong><p>半甜至甜型，不是乾型。建議溫度 12-14°C，小份緩慢享用。搭配：杏仁餅（Amaretti）、藍紋起司（Gorgonzola）、水果塔、無花果乾。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏷️ 其他重要 DOC 產區",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍷 Lamezia DOC</h4><p><strong>主要品種：</strong>Magliocco、Nerello Mascalese、Greco Nero</p><p><strong>風格：</strong>濃郁深色紅酒，力量型結構，適合燉牛羊等重口料理</p><p><strong>位置：</strong>Tyrrhenian海岸中部，靠近Lamezia Terme，海風影響明顯</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌿 Bivongi DOC</h4><p><strong>主要品種：</strong>Greco Nero（紅）、Mantonico（白/Passito）</p><p><strong>特色：</strong>Mantonico Passito是義大利珍稀甜白酒，芳香馥郁、收藏等級</p><p><strong>位置：</strong>Ionian海岸南部，靠近Locri古希臘城市遺址</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏔️ Savuto DOC</h4><p><strong>主要品種：</strong>Gaglioppo、Greco Nero、Magliocco的混釀</p><p><strong>特色：</strong>Apennine山脈產區，海拔300-700m，風格比Cirò更清爽細緻</p><p><strong>位置：</strong>Cosenza省西部，Tyrrhenian海岸山地，涼爽微氣候</p></div></div></div>"
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍷 Lamezia DOC</h4><p><strong>主要品種：</strong>Gaglioppo、Magliocco、Greco Nero、Nerello Cappuccio</p><p><strong>風格：</strong>濃郁深色紅酒，力量型結構，適合燉牛羊等重口料理</p><p><strong>位置：</strong>Tyrrhenian 海岸中部，Sant'Eufemia 平原，靠近 Lamezia Terme</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🌿 Bivongi DOC</h4><p><strong>主要品種：</strong>Gaglioppo、Greco Nero（紅）；Greco Bianco、Mantonico Bianco（白）</p><p><strong>特色：</strong>Ionian 海岸南部的小產區</p><p><strong>位置：</strong>Ionian海岸南部，靠近Locri古希臘城市遺址</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🏔️ Savuto DOC</h4><p><strong>主要品種：</strong>Gaglioppo、Greco Nero、Magliocco的混釀</p><p><strong>特色：</strong>Savuto 河谷的丘陵產區</p><p><strong>位置：</strong>Cosenza 與 Catanzaro 省，Tyrrhenian 海岸一側</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🌶️ Calabria 美食配餐指南",
-      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Calabria是義大利「辣椒王國」，'Nduja超辣抹醬聞名全球。東岸Ionian豐富海鮮 × 西岸Tyrrhenian劍魚，兩種海洋飲食文化同時交融，成就獨特配餐版圖。</p><div class=\"food-pairing\"><div class=\"pairing-card\"><h4>🌶️ 'Nduja辣腸義大利麵</h4><p>Spaghetti con 'Nduja — Calabria超辣靈魂料理<br>🍷 配：<strong>Cirò Rosso Classico Superiore</strong><br>柔順單寧平衡辣感，紅果香化解油脂</p></div><div class=\"pairing-card\"><h4>🐟 烤劍魚 Pesce Spada</h4><p>Tyrrhenian海岸最具代表性海鮮料理<br>🍷 配：<strong>Cirò Bianco 或 Greco Bianco</strong><br>清爽礦物感完美提升魚肉鮮味</p></div><div class=\"pairing-card\"><h4>🧀 Fileja con 'Nduja e Caciocavallo</h4><p>本地螺旋麵 + 辣腸 + Calabria煙燻起司<br>🍷 配：<strong>Magliocco Lamezia DOC</strong><br>高酒精14.5%匹配濃郁辣起司的力量</p></div><div class=\"pairing-card\"><h4>🍯 Greco di Bianco甜酒配餐</h4><p>傳統杏仁餅Amaretti、Gorgonzola藍紋起司<br>🍷 配：<strong>Greco di Bianco DOC</strong><br>殘糖100-150g/L，陳年潛力10-20年</p></div></div></div>"
+      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Calabria是義大利「辣椒王國」，'Nduja超辣抹醬聞名全球。東岸Ionian豐富海鮮 × 西岸Tyrrhenian劍魚，兩種海洋飲食文化同時交融，成就獨特配餐版圖。</p><div class=\"food-pairing\"><div class=\"pairing-card\"><h4>🌶️ 'Nduja辣腸義大利麵</h4><p>Spaghetti con 'Nduja — Calabria超辣靈魂料理<br>🍷 配：<strong>Cirò Rosso Classico Superiore</strong><br>活潑酸度平衡辣感，紅果香化解油脂</p></div><div class=\"pairing-card\"><h4>🐟 烤劍魚 Pesce Spada</h4><p>Tyrrhenian海岸最具代表性海鮮料理<br>🍷 配：<strong>Cirò Bianco 或 Greco Bianco</strong><br>清爽礦物感完美提升魚肉鮮味</p></div><div class=\"pairing-card\"><h4>🧀 Fileja con 'Nduja e Caciocavallo</h4><p>本地螺旋麵 + 辣腸 + Calabria煙燻起司<br>🍷 配：<strong>Magliocco Lamezia DOC</strong><br>深色飽滿的酒體匹配濃郁辣起司的力量</p></div><div class=\"pairing-card\"><h4>🍯 Greco di Bianco甜酒配餐</h4><p>傳統杏仁餅Amaretti、Gorgonzola藍紋起司<br>🍷 配：<strong>Greco di Bianco DOC</strong><br>金琥珀色的風乾甜酒，甜味由清新酸度平衡</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🏺 Calabria 葡萄酒歷史深度演變",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">從古希臘「Oenotria」到21世紀品質革命 —— <span class=\"intro-highlight\">2800年史詩的跌宕與重生</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">公元前800</div><div class=\"timeline-content\"><strong>古希臘黃金時期</strong>：希臘殖民者命名「Oenotria」（葡萄酒之地），Cremissa成為奧運選手慶功酒，品質享譽整個地中海</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">公元前3世紀</div><div class=\"timeline-content\"><strong>羅馬帝國整合</strong>：Calabria葡萄酒進入羅馬貿易網絡，大量出口至帝國各地，Cirò成為軍隊補給品之一</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1969年</div><div class=\"timeline-content\"><strong>Cirò DOC 正式認定</strong>：南義首批DOC產區之一，正式確立Gaglioppo主導地位，建立現代品質管理框架</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1980–2025</div><div class=\"timeline-content\"><strong>現代品質革命</strong>：Librandi率先引入法國橡木桶，A Vita開創自然派，Ceraudo推生物動力法，DOC占比從5%升至35%+</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">5%</div><div class=\"stat-label\">1980年DOC占比</div></div><div class=\"stat-box\"><div class=\"stat-number\">35%+</div><div class=\"stat-label\">2025年DOC占比</div></div><div class=\"stat-box\"><div class=\"stat-number\">€50+</div><div class=\"stat-label\">頂級酒最高單價</div></div><div class=\"stat-box\"><div class=\"stat-number\">15+</div><div class=\"stat-label\">活躍自然派酒莊</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">從古希臘「Oenotria」到今日 —— <span class=\"intro-highlight\">古老的葡萄酒之地</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">古希臘</div><div class=\"timeline-content\"><strong>Oenotria（Enotria）</strong>：古希臘移民稱 Calabria 為「葡萄樹之地」。名酒 Krimisa 據說是頒給古代奧運優勝者的獎品，名稱可能源自今日 Cirò 一帶的希臘殖民地 Cremissa</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">16 世紀</div><div class=\"timeline-content\"><strong>文藝復興時期的記載</strong>：教宗 Paul III 的酒窖總管 Sante Lancerio 與葡萄酒學者 Andrea Bacci 都曾記載 Calabria 的葡萄酒</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">19-20 世紀</div><div class=\"timeline-content\"><strong>散裝酒時代</strong>：Calabria 在 19 與 20 世紀大部分時間以 vini da taglio（混調用散裝酒）聞名；1969 年 Cirò 成為 Calabria 第一個 DOC</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">今日</div><div class=\"timeline-content\"><strong>品質提升</strong>：Librandi 等酒莊帶動 Calabria 葡萄酒走向國際；多個舊 DOC 合併為 Terre di Cosenza DOC。不過大部分產量仍是無產地標示的葡萄酒</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">1969</div><div class=\"stat-label\">第一個 DOC（Cirò）</div></div><div class=\"stat-box\"><div class=\"stat-number\">9</div><div class=\"stat-label\">DOC</div></div><div class=\"stat-box\"><div class=\"stat-number\">0</div><div class=\"stat-label\">DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">~90%</div><div class=\"stat-label\">紅葡萄</div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍇 Gaglioppo 品種科學深度解析",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🧬 DNA與起源</h4><p><strong>古希臘品種後裔</strong>，2500年以上栽培史</p><p>薄皮淺色基因，抗旱能力極強（耐40°C+高溫）</p><p>芳香物：酯類（乙酸乙酯=櫻桃）、萜烯類（香葉醇=玫瑰紫羅蘭）</p></div><div class=\"research-content\"><h4>📊 三品種風格對比</h4><p><strong>Gaglioppo</strong>：淺至中深 / 中等柔順單寧 / 中高酸度 / 13-14% / €12-35</p><p><strong>Pinot Noir</strong>：淺色 / 中等柔順單寧 / 高酸度 / 12-13.5% / €30-150+</p><p><strong>Nebbiolo</strong>：淺至中深 / 高強勁單寧 / 極高酸度 / 13-15% / €25-200+</p></div></div></div><div class=\"aging-science\"><p>Gaglioppo陳年演化：從清新果香到複雜皮革</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🌸 年輕期（1-3年）</h5><p>紅櫻桃、新鮮草莓、玫瑰花瓣、活潑酸度</p><p class=\"science-note\">最佳搭配：海鮮、沙拉、輕食</p></div><div class=\"science-card\"><h5>🍷 成熟期（4-8年）</h5><p>乾燥香草、皮革、雪松、礦物鹽感</p><p class=\"science-note\">最佳搭配：Classico Superiore配烤雞</p></div><div class=\"science-card\"><h5>🏆 陳年期（9年以上）</h5><p>皮革、煙草、泥土、焦糖、複雜礦物</p><p class=\"science-note\">最佳搭配：Riserva配烤羊排</p></div></div></div>"
+      "title": "🍇 Gaglioppo 品種深度解析",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🧬 起源</h4><p><strong>義大利最古老的品種之一</strong>，被視為 Calabria 原生</p><p>名稱常被解釋為「美麗的腳」（Gaglioppo = beautiful foot）</p><p>Calabria 的招牌與主要紅葡萄，佔一半以上的葡萄園</p></div><div class=\"research-content\"><h4>📊 品種特性</h4><p><strong>酸度：</strong>高</p><p><strong>單寧：</strong>高</p><p><strong>主要產區：</strong>Cirò DOC（Rosso、Rosato 最低 80%）</p><p><strong>整枝：</strong>Calabria 主要的整枝方式是 Alberello</p></div></div><div class=\"aging-science\"><p>Gaglioppo 陳年演化：從清新果香到複雜皮革</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🌸 年輕期（1-3年）</h5><p>紅櫻桃、新鮮草莓、玫瑰花瓣、活潑酸度</p><p class=\"science-note\">最佳搭配：海鮮、沙拉、輕食</p></div><div class=\"science-card\"><h5>🍷 成熟期（4-8年）</h5><p>乾燥香草、皮革、雪松、礦物鹽感</p><p class=\"science-note\">最佳搭配：Classico Superiore配烤雞</p></div><div class=\"science-card\"><h5>🏆 陳年期（9年以上）</h5><p>皮革、煙草、泥土、複雜礦物</p><p class=\"science-note\">最佳搭配：Riserva配烤羊排</p></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🏖️ Cirò 產區風土科學",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">Ionian海岸石灰岩天堂，古希臘奧運冠軍酒的誕生地，10,000公頃葡萄園，Gaglioppo占95%以上</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🪨</div><h4>石灰岩風土</h4><p><strong>土壤：</strong>鈣質石灰岩，pH 7.5-8.2（偏鹼性），排水極佳</p><p><strong>礦物質：</strong>鈣、鎂、海鹽，賦予酒款獨特礦物感</p><p><strong>酒款特色：</strong>優雅、礦物感強、中至高酸度</p><p><strong>對比：</strong>比Vulture火山土（pH 5.5-6.5）更鹼性、風格更細緻</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🌊</div><h4>Ionian海岸氣候</h4><p><strong>夏季：</strong>28-32°C，日照2,800+小時/年</p><p><strong>海風：</strong>日夜海陸風，降溫5-8°C，保留葡萄酸度與香氣</p><p><strong>降雨：</strong>600-700mm/年，夏季極乾燥</p><p><strong>採收：</strong>9月底至10月初，完熟且保留酸度</p></div></div><div class=\"terroir-key-point\"><h4>🏆 Cirò DOC 等級系統</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Cirò DOC</strong><br>基礎等級<br>€8-12</div><div class=\"kp-box\"><strong>Classico</strong><br>傳統核心產區<br>€12-18</div><div class=\"kp-box\"><strong>Superiore</strong><br>陳年1年以上<br>€18-28</div><div class=\"kp-box\"><strong>Riserva</strong><br>陳年3年以上<br>€25-40</div></div></div>"
+      "title": "🏖️ 地形、氣候、土壤與 Cirò 的等級",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">Calabria 丘陵與山地超過 90%，南 Apennine 山脈縱貫全區，三面環海；Cirò 位於 Ionian 海岸中段，Classico 子產區只包括 Cirò 與 Cirò Marina 兩個市鎮。</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🪨</div><h4>極度多樣的土壤</h4><p><strong>砂質礫石</strong></p><p><strong>海相黏土</strong></p><p><strong>沖積土</strong></p><p><strong>石灰岩與砂岩</strong></p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🌊</div><h4>氣候</h4><p><strong>沿海：</strong>地中海型</p><p><strong>內陸：</strong>受大陸性影響</p><p><strong>平原：</strong>Sibari、Sant'Eufemia 等沿海平原</p><p><strong>河流：</strong>Crati、Neto 等</p></div></div><div class=\"terroir-key-point\"><h4>🏆 Cirò Rosso 的等級</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Cirò Rosso</strong><br>最低 80% Gaglioppo<br>€8-12</div><div class=\"kp-box\"><strong>Classico</strong><br>只限 Cirò 與 Cirò Marina<br>€12-18</div><div class=\"kp-box\"><strong>Superiore</strong><br>最低酒精 13.5%<br>€18-28</div><div class=\"kp-box\"><strong>Riserva</strong><br>最少陳年 2 年<br>€25-40</div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🏺 Calabria 本土品種寶庫深度",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🍇 Magliocco 深度檔案</h4><p><strong>別名：</strong>Arvino、Magliocco Dolce</p><p><strong>風格：</strong>深紫黑色、超濃郁力量型，酒精高達14-15.5%</p><p><strong>香氣層次：</strong>黑莓醬→黑巧克力→甘草→黑胡椒→煙燻皮革</p><p><strong>市場：</strong>€15-30，南義最佳CP值品種之一</p></div><div class=\"research-content\"><h4>🌸 Mantonico 深度檔案</h4><p><strong>產區：</strong>Bivongi DOC，Ionian海岸南部小產區</p><p><strong>類型：</strong>Passito風乾甜白酒，酒精15-16%</p><p><strong>香氣：</strong>白桃→杏桃→金銀花→蜂蜜→烤杏仁→柑橘醬</p><p><strong>稀有度：</strong>年產量僅數千瓶，€18-35，珍稀收藏級</p></div></div></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🍇 Magliocco</div><div class=\"mf-prod\">Lamezia DOC — 深紫黑濃郁型紅酒，Tyrrhenian海岸，力量感強</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🌸 Mantonico</div><div class=\"mf-prod\">Bivongi DOC — Passito風乾甜白酒，Ionian海岸南部，年產僅數千瓶</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🍯 Greco Bianco</div><div class=\"mf-prod\">Greco di Bianco DOC — 極稀有甜白酒，殘糖100-150g/L，酒精17%+</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🔴 Greco Nero</div><div class=\"mf-prod\">Bivongi / Lamezia DOC — 深色紅酒輔助品種，結構強勁，常混釀使用</div></div></div>"
+      "title": "🏺 Calabria 的法定產區全解（IWS 官方教材）",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🏆 9 個 DOC</h4><p><strong>Cirò</strong>（最古老、產量最大）、<strong>Greco di Bianco</strong>（風乾甜白酒）、Bivongi、Lamezia、Melissa、Sant'Anna di Isola Capo Rizzuto、Savuto、Scavigna、Terre di Cosenza</p><p><strong>IGT：</strong>Calabria、Val di Neto</p></div><div class=\"research-content\"><h4>🗺️ Terre di Cosenza DOC</h4><p>整合了多個舊 DOC：Colline del Crati、Condoleo、Donnici、Esaro、Pollino、San Vito di Luzzi、Verbicaro</p><p>位於 Calabria 北部的 Cosenza 省</p></div></div></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🍷 Cirò DOC（1969）</div><div class=\"mf-prod\">Ionian 海岸中段 — Rosso、Rosato 最低 80% Gaglioppo，Bianco 最低 80% Greco Bianco</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🍯 Greco di Bianco DOC</div><div class=\"mf-prod\">Ionian 海岸南端 Bianco 村 — 最低 95% Greco Bianco 的風乾甜白酒，酒精最低 14%</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">⛰️ Terre di Cosenza DOC</div><div class=\"mf-prod\">北部 Cosenza 省 — 整合多個舊 DOC 的廣域產區</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🌅 Lamezia DOC</div><div class=\"mf-prod\">Tyrrhenian 海岸 — Sant'Eufemia 平原周邊</div></div></div>"
     },
     {
       "type": "content",
       "title": "🏛️ Calabria 傳奇名莊深度檔案",
-      "content": "<div class=\"variety-intro\"><p>從國際先驅到自然派明星，四大酒莊共同推動Calabria品質革命</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">LB</div><div class=\"up-badge\">國際先驅</div><div class=\"up-body\"><div class=\"up-est\">Librandi — Est. 1950</div><p>1980年代率先引入法國橡木桶與現代釀酒技術，將Calabria葡萄酒推向國際市場，奠定現代Cirò DOC的品質基礎</p><div class=\"up-wines\">🍷 旗艦：Gravello（60% Gaglioppo + 40% Cabernet Sauvignon）18個月法國橡木桶 | €30-40 | 92+ pts</div><div class=\"up-tip\">300公頃葡萄園 × 2.5M瓶年產量 × 出口美國、德國、日本等國際市場</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">AV</div><div class=\"up-badge\">自然派明星</div><div class=\"up-body\"><div class=\"up-est\">A Vita — Est. 2010</div><p>零添加、野生酵母、不過濾、低硫或無硫，展現Gaglioppo最純粹的原始表達，受國際自然酒愛好者追捧</p><div class=\"up-wines\">🍷 代表：Zero Zero（100%老藤Gaglioppo）SO₂&lt;20mg/L | €25-32 | 活潑純淨風格</div><div class=\"up-tip\">12公頃有機葡萄園 × 30,000瓶年產量 × 自然酒界獲獎明星</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Ippolito 1845</strong><p>Calabria最古老持續運營酒莊（179年），傳統工藝與現代技術結合的典範</p><div class=\"um-prices\">Cirò Rosso Classico Superiore Riserva<br>95% Gaglioppo，橡木桶36個月陳年</div><div class=\"um-age\">€18-25 / 傳統優雅風格</div></div><div class=\"umbria-mini c2\"><strong>Ceraudo</strong><p>有機認證 + Demeter生物動力法認證，Calabria有機葡萄酒的先驅與標竿</p><div class=\"um-prices\">Dattilo（100%生物動力法Gaglioppo）<br>野生酵母、最少干預釀造</div><div class=\"um-age\">€22-30 / 生機活力風格</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>€7-15</h4><p>Cirò DOC Rosso / Bianco，Gaglioppo鮮果香，日常餐酒的性價比之王</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>€16-40</h4><p>Cirò Classico Superiore / Riserva，Magliocco Lamezia，具陳年深度與層次</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 收藏</div><h4>€40-60+</h4><p>Librandi Gravello、A Vita Zero Zero、Greco di Bianco，頂級表達與稀有甜白酒</p></div></div></div>"
+      "content": "<div class=\"variety-intro\"><p>從國際先驅到自然派明星，四大酒莊共同推動Calabria品質革命</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">LB</div><div class=\"up-badge\">國際先驅</div><div class=\"up-body\"><div class=\"up-est\">Librandi — Est. 1950</div><p>Cirò 的代表酒莊，將 Calabria 葡萄酒推向國際市場，也積極研究 Calabria 的原生品種</p><div class=\"up-wines\">🍷 旗艦：Gravello（Gaglioppo + Cabernet Sauvignon，Calabria IGT）| €30-40</div><div class=\"up-tip\">IWS 列出的 Calabria 代表生產者</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">AV</div><div class=\"up-badge\">自然派明星</div><div class=\"up-body\"><div class=\"up-est\">A Vita</div><p>新世代的 Cirò 生產者，以低干預方式釀造，展現 Gaglioppo 的純粹表達</p><div class=\"up-wines\">🍷 代表：Cirò Rosso Classico Superiore | €20-35</div><div class=\"up-tip\">有機栽培</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Ippolito 1845</strong><p>1845 年創立的 Cirò 歷史酒莊，傳統工藝與現代技術結合</p><div class=\"um-prices\">Cirò Rosso Classico Superiore Riserva<br>以 Gaglioppo 為主，最少陳年 2 年</div><div class=\"um-age\">€18-25 / 傳統優雅風格</div></div><div class=\"umbria-mini c2\"><strong>Ceraudo</strong><p>位於 Crotone 一帶的有機酒莊</p><div class=\"um-prices\">Dattilo（Gaglioppo）<br>有機栽培</div><div class=\"um-age\">€22-30 / 生機活力風格</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>€7-15</h4><p>Cirò DOC Rosso / Bianco，Gaglioppo鮮果香，日常餐酒的性價比之王</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>€16-40</h4><p>Cirò Classico Superiore / Riserva、Magliocco，具陳年深度與層次</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 收藏</div><h4>€40-60+</h4><p>Librandi Gravello、Greco di Bianco，頂級表達與風乾甜白酒</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🌶️ 'Nduja美食文化 + 配餐指南 + 雙海旅遊",
-      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">'Nduja DOP超辣靈魂醬 × 4場景配餐。辣度15,000-30,000 SHU，豬肉60-70% + Calabria辣椒25-30%，Spilinga小鎮3-6個月熟成的驕傲。</p><div class=\"food-pairing\"><div class=\"pairing-card\"><h4>🍝 'Nduja義大利麵</h4><p>Spaghetti con 'Nduja（奶油辣醬麵）<br>🍷 配：<strong>Cirò Rosso Classico Superiore</strong><br>柔順單寧平衡奶油感，紅果香化解辣度</p></div><div class=\"pairing-card\"><h4>🥖 烤麵包塗抹</h4><p>Bruschetta con 'Nduja（前菜）<br>🍷 配：<strong>Cirò Rosato（冰鎮）</strong><br>清爽酸度+草莓香解膩，冰涼降低辣椒刺激</p></div><div class=\"pairing-card\"><h4>🍕 'Nduja Pizza</h4><p>Pizza con 'Nduja e Burrata（辣醬起司披薩）<br>🍷 配：<strong>Magliocco Lamezia DOC</strong><br>濃郁果香+高酒精14.5%完美匹配辣味強度</p></div><div class=\"pairing-card\"><h4>🥩 BBQ 烤肉</h4><p>Grilled pork ribs con salsa 'Nduja（烤豬肋排）<br>🍷 配：<strong>Cirò Rosso Riserva</strong><br>強勁單寧搭配炭烤肉味，完美均衡</p></div></div></div><div class=\"terroir-key-point\"><h4>🚗 Calabria 雙海旅遊路線</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Day 1 Ionian岸</strong><br>Cirò DOC酒莊<br>Librandi + A Vita<br>Kroton古城遺址</div><div class=\"kp-box\"><strong>Day 1 下午</strong><br>Greco di Bianco DOC<br>Bianco小鎮品酒<br>Locri古希臘城市</div><div class=\"kp-box\"><strong>Day 2 Tyrrhenian岸</strong><br>'Nduja發源地<br>Spilinga小鎮<br>Tropea海灘</div><div class=\"kp-box\"><strong>美食採購</strong><br>Mercato Centrale<br>'Nduja DOP正宗<br>Mantonico Passito</div></div></div>"
+      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">'Nduja 是 Calabria 的超辣可塗抹豬肉香腸，以 Calabria 辣椒調味，Spilinga 小鎮是它的故鄉。4 種場景配餐：</p><div class=\"food-pairing\"><div class=\"pairing-card\"><h4>🍝 'Nduja義大利麵</h4><p>Spaghetti con 'Nduja（奶油辣醬麵）<br>🍷 配：<strong>Cirò Rosso Classico Superiore</strong><br>高酸度平衡奶油感，紅果香化解辣度</p></div><div class=\"pairing-card\"><h4>🥖 烤麵包塗抹</h4><p>Bruschetta con 'Nduja（前菜）<br>🍷 配：<strong>Cirò Rosato（冰鎮）</strong><br>清爽酸度+草莓香解膩，冰涼降低辣椒刺激</p></div><div class=\"pairing-card\"><h4>🍕 'Nduja Pizza</h4><p>Pizza con 'Nduja e Burrata（辣醬起司披薩）<br>🍷 配：<strong>Magliocco Lamezia DOC</strong><br>濃郁果香與飽滿酒體匹配辣味強度</p></div><div class=\"pairing-card\"><h4>🥩 BBQ 烤肉</h4><p>Grilled pork ribs con salsa 'Nduja（烤豬肋排）<br>🍷 配：<strong>Cirò Rosso Riserva</strong><br>強勁單寧搭配炭烤肉味，完美均衡</p></div></div></div><div class=\"terroir-key-point\"><h4>🚗 Calabria 雙海旅遊路線</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Day 1 Ionian岸</strong><br>Cirò DOC酒莊<br>Librandi + A Vita<br>Kroton古城遺址</div><div class=\"kp-box\"><strong>Day 1 下午</strong><br>Greco di Bianco DOC<br>Bianco小鎮品酒<br>Locri古希臘城市</div><div class=\"kp-box\"><strong>Day 2 Tyrrhenian岸</strong><br>'Nduja發源地<br>Spilinga小鎮<br>Tropea海灘</div><div class=\"kp-box\"><strong>美食採購</strong><br>當地市場<br>Spilinga 'Nduja<br>Greco di Bianco</div></div></div>"
     },
     {
       "type": "image",
       "title": "🍷 酒標實例：Cirò DOC",
       "image": "/italy/images/labels/calabria/ciro-doc.jpg",
-      "caption": "Cirò DOC——以 Gaglioppo 品種釀造，Calabria 最悠久、最具代表性的產區，古希臘時期已是知名酒鄉。"
+      "caption": "Cirò DOC——Rosso 最低 80% Gaglioppo，Calabria 最古老（1969）、產量最大的 DOC；古希臘時期的名酒 Krimisa 即來自這一帶。"
     },
     {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Calabria 位於義大利「腳尖」，擁有 2500 年葡萄酒歷史",
-        "✓ Cirò DOC 是 Calabria 最知名產區，傳說是古希臘奧運選手的酒",
-        "✓ Gaglioppo 是 Calabria 代表紅葡萄品種，被稱為「南義的 Pinot Noir」",
-        "✓ Greco di Bianco DOC 是義大利最稀有的甜白酒之一，酒精度 17%+",
-        "✓ Magliocco 是濃郁、顏色深的紅葡萄品種",
-        "✓ 'Nduja 是 Calabria 超辣抹醬香腸，完美搭配 Cirò Rosso"
+        "✓ Calabria 位於義大利「腳尖」，三面環海，以 Strait of Messina 與 Sicilia 相隔；古希臘人稱之為 Oenotria（葡萄樹之地）",
+        "✓ 丘陵與山地超過 90%（南 Apennine 山脈）；沿海地中海型、內陸大陸性；土壤極度多樣",
+        "✓ 紅葡萄將近 90%；Gaglioppo 是招牌與主要品種，佔一半以上葡萄園，酸度與單寧高；Magliocco 是另一個重要紅葡萄",
+        "✓ Greco Bianco 是主要白葡萄，與 Malvasia di Lipari 基因相同，與 Campania 的 Greco 不同，非常適合風乾",
+        "✓ Cirò DOC（1969）是最古老、產量最大的 DOC：Rosso 與 Rosato 最低 80% Gaglioppo，Bianco 最低 80% Greco Bianco",
+        "✓ Cirò Rosso：Superiore 最低酒精 13.5%，Riserva 最少陳年 2 年；Classico 只限 Cirò 與 Cirò Marina",
+        "✓ Greco di Bianco DOC：Bianco 村的風乾甜白酒，最低 95% Greco Bianco，酒精最低 14%，甜味由酸度平衡",
+        "✓ 9 個 DOC、沒有 DOCG；大部分產量是無產地標示的葡萄酒；主要整枝方式是 Alberello"
       ]
     },
     {
@@ -155,31 +157,31 @@
             "文藝復興藝術家"
           ],
           "correct": 1,
-          "explanation": "傳說古希臘奧運選手在比賽後會飲用 Cirò 葡萄酒慶祝，當時稱為 Cremissa。"
+          "explanation": "古希臘時期的名酒 Krimisa 據說是頒給古代奧運優勝者的獎品，名稱可能源自位於今日 Cirò 一帶的希臘殖民地 Cremissa。"
         },
         {
           "type": "single",
-          "question": "Gaglioppo 為什麼被稱為「南義的 Pinot Noir」？",
+          "question": "Gaglioppo 的特性是？",
           "options": [
-            "產量相同",
-            "顏色較淡、單寧柔順、風味細膩",
-            "價格相同",
-            "都產自法國"
+            "低酸、低單寧",
+            "高酸、高單寧",
+            "白葡萄品種",
+            "國際品種"
           ],
           "correct": 1,
-          "explanation": "Gaglioppo 與 Pinot Noir 類似，顏色相對較淡、單寧柔順、風味細膩，因此被稱為「南義的 Pinot Noir」。"
+          "explanation": "Gaglioppo 是義大利最古老的品種之一，被視為 Calabria 原生，是 Calabria 的招牌與主要紅葡萄，酸度與單寧都高。"
         },
         {
           "type": "single",
-          "question": "Greco di Bianco DOC 的酒精度通常是？",
+          "question": "Greco di Bianco DOC 生產什麼風格的酒？",
           "options": [
-            "10-12%",
-            "12-14%",
-            "14-16%",
-            "17%+"
+            "乾型白酒",
+            "風乾甜白酒（Passito）",
+            "氣泡酒",
+            "粉紅酒"
           ],
-          "correct": 3,
-          "explanation": "Greco di Bianco 是甜白酒，使用風乾葡萄釀造，酒精度極高（17%+），是義大利最甜、最濃郁的甜白酒之一。"
+          "correct": 1,
+          "explanation": "Greco di Bianco DOC 是 Bianco 村周邊小巧而有聲望的風乾甜白酒產區：最低 95% Greco Bianco，酒精最低 14%，甜味由清新酸度平衡。它不是乾型酒。"
         },
         {
           "type": "single",
@@ -191,7 +193,7 @@
             "一個 DOC 產區"
           ],
           "correct": 1,
-          "explanation": "'Nduja 是 Calabria 的超辣抹醬香腸，主要成分是豬肉和大量辣椒，可塗麵包食用，搭配 Cirò Rosso 完美。"
+          "explanation": "'Nduja 是 Calabria 的超辣可塗抹豬肉香腸，以大量 Calabria 辣椒調味，可塗麵包食用，搭配 Cirò Rosso 完美。"
         },
         {
           "type": "single",
@@ -203,7 +205,67 @@
             "D. Magliocco"
           ],
           "correct": 1,
-          "explanation": "Cirò 是 Calabria 最著名的 DOC，以原生品種 Gaglioppo 釀造，風格強勁帶有泥土氣息。"
+          "explanation": "Cirò 是 Calabria 最古老、產量最大的 DOC：Rosso 與 Rosato 最低 80% Gaglioppo，Bianco 最低 80% Greco Bianco。"
+        },
+        {
+          "type": "single",
+          "question": "Greco Bianco 與哪個品種基因相同？",
+          "options": [
+            "A. Campania 的 Greco",
+            "B. Malvasia di Lipari",
+            "C. Trebbiano Toscano",
+            "D. Fiano"
+          ],
+          "correct": 1,
+          "explanation": "Greco Bianco（又稱 Greco Bianco di Gerace）與 Malvasia di Lipari 基因相同，與 Campania 的 Greco 是不同品種。"
+        },
+        {
+          "type": "single",
+          "question": "Cirò Rosso Riserva 最少需要陳年多久？",
+          "options": [
+            "A. 1 年",
+            "B. 2 年",
+            "C. 3 年",
+            "D. 5 年"
+          ],
+          "correct": 1,
+          "explanation": "Cirò Rosso Riserva 最少陳年 2 年；Superiore 則要求較高的最低酒精度（13.5%）。"
+        },
+        {
+          "type": "single",
+          "question": "古希臘移民給 Calabria 取的名字是？",
+          "options": [
+            "A. Magna Graecia",
+            "B. Lucania",
+            "C. Oenotria（葡萄樹之地）",
+            "D. Trinacria"
+          ],
+          "correct": 2,
+          "explanation": "古希臘移民稱 Calabria 為 Oenotria（Enotria），意為「葡萄樹之地」。"
+        },
+        {
+          "type": "single",
+          "question": "哪一項描述是錯誤的？",
+          "options": [
+            "A. Calabria 一半以上的葡萄園種植 Gaglioppo",
+            "B. Calabria 以紅酒為主",
+            "C. Calabria 大部分產量是無產地標示的葡萄酒",
+            "D. Calabria 大部分產量以 DOC 等級裝瓶"
+          ],
+          "correct": 3,
+          "explanation": "Calabria 大部分產量是無產地標示的葡萄酒，而不是 DOC；19 與 20 世紀大部分時間，Calabria 主要以散裝混調酒（vini da taglio）聞名。"
+        },
+        {
+          "type": "single",
+          "question": "Cirò Classico 子產區包含哪些市鎮？",
+          "options": [
+            "A. 只有 Cirò",
+            "B. Cirò 與 Cirò Marina",
+            "C. Cirò、Melissa 與 Crotone",
+            "D. 整個 Crotone 省"
+          ],
+          "correct": 1,
+          "explanation": "Cirò Classico 子產區只包括 Cirò 與 Cirò Marina 兩個市鎮。"
         }
       ]
     }

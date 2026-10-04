@@ -1,4 +1,4 @@
-﻿{
+{
   "lessonId": "L2M3L5",
   "title": "Sardinia (Sardegna) 薩丁尼亞",
   "quiz": [
@@ -11,138 +11,140 @@
         "Syrah"
       ],
       "answer": 1,
-      "explanation": "DNA 研究證明 Cannonau 與西班牙的 Garnacha、法國的 Grenache 是同一品種，但 Sardinia 版本風格獨特。"
+      "explanation": "Cannonau 與西班牙的 Garnacha（法國稱 Grenache）基因相同，是 Sardegna 的旗艦紅葡萄，大本營在 Nuoro。"
     },
     {
       "question": "Vermentino di Gallura 有什麼特別之處？",
       "options": [
         "產量最大",
-        "Sardinia 唯一的 DOCG",
+        "Sardegna 唯一的 DOCG",
         "酒精度最低",
         "只產紅酒"
       ],
       "answer": 1,
-      "explanation": "Vermentino di Gallura 在 1996 年升級為 DOCG，是 Sardinia 唯一的 DOCG 產區。"
+      "explanation": "Vermentino di Gallura 是 Sardegna 唯一的 DOCG，也是 Vermentino 最重要的產區，涵蓋東北部的歷史區域 Gallura。"
     },
     {
       "question": "Carignano del Sulcis 的特點是？",
       "options": [
         "沒有老藤",
-        "擁有自根老藤（未嫁接、100+ 年）",
+        "擁有非常老的未嫁接自根葡萄樹",
         "只產白酒",
         "產量極大"
       ],
       "answer": 1,
-      "explanation": "Sulcis 的沙質土壤抗根瘤蚜蟲，許多葡萄園保留自根老藤（ungrafted），樹齡 100+ 年。"
+      "explanation": "Sulcis 沿海鬆散的沙質土壤上保留了非常老的未嫁接 Alberello 葡萄樹；根瘤蚜難以在沙中生存。"
     },
     {
       "question": "Bottarga 是什麼？",
       "options": [
         "一種起司",
-        "鯔魚卵",
+        "鹽漬風乾的烏魚子",
         "一種葡萄品種",
         "一種甜點"
       ],
       "answer": 1,
-      "explanation": "Bottarga 是鯔魚卵，是 Sardinia 的高級食材，通常刨絲配義大利麵或麵包，搭配 Vermentino 白酒完美。"
+      "explanation": "Bottarga 是鹽漬風乾的烏魚子，是 Sardegna 的特產，常刨絲拌義大利麵（Spaghetti alla Bottarga），搭配 Vermentino 很合適。"
     }
   ],
   "slides": [
     {
       "type": "title",
-      "title": "🏝️ Sardinia (Sardegna)",
-      "subtitle": "地中海第二大島的古老品種寶庫"
+      "title": "🏝️ Sardegna",
+      "subtitle": "地中海的「微型大陸」與古老品種寶庫"
     },
     {
       "type": "content",
-      "title": "🏝️ Sardinia 產區概況",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">地中海第二大島（僅次於Sicily），自治區文化高度獨立，受西班牙Aragón王朝<span class=\"highlight\">500年統治</span>影響深遠。Cannonau、Carignano等主力品種皆源自西班牙，卻在Sardinia孕育出截然不同的島嶼風格。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🏝️</div><div class=\"fact-text\"><strong>地理位置</strong><br>地中海第二大島，義大利本土西南方，1849km海岸線，南北各異的地中海小氣候</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏅</div><div class=\"fact-text\"><strong>認證等級</strong><br>1 DOCG（Vermentino di Gallura，1996年）+ 19 DOC，品質重心持續提升中</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🇪🇸</div><div class=\"fact-text\"><strong>西班牙遺產</strong><br>1323-1720年Aragón王國統治，引入Cannonau（=Grenache）、Carignano（=Carignan）等品種</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌞</div><div class=\"fact-text\"><strong>氣候特色</strong><br>炎熱地中海型，夏季日照充足，Mistral北風調節，孕育高酒精度濃郁紅酒</div></div></div>"
+      "title": "🏝️ Sardegna 產區概況",
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">地中海第二大島（僅次於 Sicilia），常被稱為「微型大陸」，島民的心態與義大利其他地區截然不同。14 至 18 世紀受<span class=\"highlight\">亞拉岡－西班牙王朝統治</span>，Cannonau、Carignano、Bovale Sardo 等品種，以及加烈酒與 flor 酵母膜的傳統，都留下了西班牙的影子。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">🏝️</div><div class=\"fact-text\"><strong>地形</strong><br>山脈、丘陵、高原與平原不規則交錯；東側多山，是久經侵蝕的花崗岩山脈；西側丘陵較低，有石灰岩與零星火山岩、玄武岩</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏅</div><div class=\"fact-text\"><strong>法定產區</strong><br>1 個 DOCG（Vermentino di Gallura）＋ 17 個 DOC；約一半的產量是 DOC/G 等級</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍇</div><div class=\"fact-text\"><strong>葡萄園</strong><br>約 25,000 公頃，紅葡萄超過 60%；Cannonau 與 Vermentino 合計超過 40%</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌞</div><div class=\"fact-text\"><strong>氣候</strong><br>地中海型，內陸與山區受大陸性影響；Maestrale（Mistral 西北風）吹拂全島，西南部最炎熱</div></div></div>"
     },
     {
       "type": "sardinia-docg-map",
-      "title": "🗺️ Sardinia DOCG & DOC 互動地圖"
+      "title": "🗺️ Sardegna DOCG & DOC 互動地圖"
     },
     {
       "type": "content",
-      "title": "🍇 Cannonau — Sardinia 紅酒之王",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">「Sardinia紅酒之王」= Grenache（法）= Garnacha（西）—— <span class=\"intro-highlight\">DNA完全相同，但Sardinia炙烈日照賦予截然不同的高酒精濃郁個性</span></p></div><div class=\"sagrantino-styles\"><div class=\"styles-grid\"><div class=\"style-card dry\"><div class=\"dry-badge\">Cannonau DOC</div><h4>🍷 Cannonau di Sardegna</h4><div class=\"style-details\"><p>🎨 顏色：深石榴紅，反映極高日照與酒精</p><p>🌹 香氣：紅莓果醬、草莓、黑櫻桃、香料、草本、甘草</p><p>👅 口感：酒體飽滿、果味豐沛，酒精13.5-15.5%（極高）</p><p>🏷️ 品種：Cannonau 85%+，可混Bovale、Monica、Carignano</p></div></div><div class=\"style-card sweet\"><div class=\"sweet-badge\">Riserva陳年</div><h4>🏆 Cannonau Riserva</h4><div class=\"style-details\"><p>⏱️ 法規：最少陳年2年（含1年橡木桶）</p><p>🌹 香氣：乾燥皮革、香草、煙草、焦糖、礦物</p><p>👅 口感：單寧圓潤成熟，層次感更豐富複雜</p><p>🏷️ 搭配：Porceddu烤乳豬、羊肉、Pecorino Maturo硬質起司</p></div></div></div></div>"
+      "title": "🍇 Cannonau — Sardegna 的旗艦紅葡萄",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Cannonau 與西班牙的 Garnacha（法國稱 Grenache）<span class=\"intro-highlight\">基因相同</span>，種植遍及全島，大本營是 Nuoro。高酒精、紅色果香與地中海灌木叢（macchia）氣息，風格從柔和果香到嚴肅複雜、結構紮實都有。</p></div><div class=\"sagrantino-styles\"><div class=\"styles-grid\"><div class=\"style-card dry\"><div class=\"dry-badge\">Cannonau di Sardegna DOC</div><h4>🍷 全區 DOC</h4><div class=\"style-details\"><p>🗺️ 範圍：全島，品種型 Cannonau 的全區產區</p><p>🍇 品種：最低 85% Cannonau（大多數是 100%）</p><p>👅 風格：從簡單果香到複雜、飽滿、耐陳年</p><p>⏱️ Riserva：最少陳年 2 年，其中至少 6 個月在木桶</p></div></div><div class=\"style-card sweet\"><div class=\"sweet-badge\">Classico</div><h4>🏆 Cannonau di Sardegna Classico</h4><div class=\"style-details\"><p>🗺️ 範圍：歷史產區 Nuoro 與 Ogliastra</p><p>🍇 品種：最低 90% Cannonau，產量、酒精與陳年規定更嚴格</p><p>⏱️ 陳年：最少 2 年，其中至少 1 年在木桶</p><p>📍 三個官方子產區：Oliena、Jerzu、Capo Ferrato</p></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "⚪ Vermentino di Gallura DOCG",
-      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Sardinia唯一的DOCG（1996年升級）。Gallura東北角獨特的<strong>100%花崗岩土壤</strong>賦予礦物感與活潑酸度，Costa Smeralda奢華海岸讓它成為全球最時髦的義大利白酒。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🤍 DOCG 基礎款</strong><p>Vermentino 95%+，花崗岩風土。檸檬、青蘋果、杏仁、白花、海鹽礦物感，清爽酸度，12-14%酒精，€12-20。</p></div><div class=\"orvieto-card\"><strong>🏆 Superiore等級</strong><p>陳年1年以上，最低13%酒精度。香氣更濃郁，蜂蠟、蜂蜜調性加入，完美搭配Bottarga鯔魚卵、龍蝦、生蠔，€20-35。</p></div><div class=\"orvieto-card\"><strong>🌊 Vermentino di Sardegna DOC</strong><p>全島產區，不限Gallura，風格更清爽易飲。CP值極高，搭配海鮮、Pecorino Dolce的日常首選，€8-15。</p></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Sardegna <strong>唯一的 DOCG</strong>，也是 Vermentino 最重要的產區，涵蓋東北部的歷史區域 Gallura。沿海為地中海型氣候，內陸較高海拔處受大陸性影響；土壤是<strong>花崗岩母岩上的花崗岩砂</strong>。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🤍 Vermentino di Gallura DOCG</strong><p>最低 95% Vermentino（大多數是 100%）。通常在不鏽鋼槽中釀造，少數生產者使用木桶。風格從豐潤果香到礦物感強烈、帶鹹味都有。</p></div><div class=\"orvieto-card\"><strong>🏆 Superiore</strong><p>產量更低、酒精度更高。最好的 Vermentino 耐陳年，會發展出複雜的打火石與煙燻香氣。</p></div><div class=\"orvieto-card\"><strong>🌊 Vermentino di Sardegna DOC</strong><p>全島通用的全區 DOC，與 Gallura DOCG 並列為 Vermentino 的兩大產區。Vermentino 是 Sardegna 種植最廣、最重要的白葡萄，偏好靠海、溫暖晴朗的環境，抗風也抗旱。</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍷 Carignano del Sulcis — 自根老藤奇蹟",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">「Phylloxera奇蹟」—— <span class=\"intro-highlight\">85-95%沙質土壤讓根瘤蚜蟲無法存活，保留了全球罕見的100+年ungrafted自根老藤</span></p></div><div class=\"orvieto-section\"><p class=\"orvieto-intro\">Sulcis半島（Sardinia西南）100+年自根老藤，前根瘤蚜基因純度完整保存，Carignano在此達到最高表達，媲美法國南部最佳Carignan。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍷 Carignano del Sulcis Rosso / Superiore</strong><p>Carignano 85%+，黑櫻桃、黑莓、香料、皮革、礦物感。中至高單寧，明顯酸度。Superiore陳年1年，結構更立體，€15-25。</p></div><div class=\"orvieto-card\"><strong>🏆 Riserva — 百年老藤頂峰</strong><p>陳年2年以上，百年老藤帶來更深邃複雜。Cantina Santadi「Terre Brune」100%老藤 €40-55；Agricola Punica「Barrua」混釀 €30-45。</p></div></div></div>"
+      "title": "🍷 Carignano del Sulcis — 沙地上的自根老藤",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Sardegna 最具特色的紅酒之一 —— <span class=\"intro-highlight\">沿海鬆散沙質土壤上的未嫁接自根 Alberello 老藤</span></p></div><div class=\"orvieto-section\"><p class=\"orvieto-intro\">產區位於 Sardegna 西南部的 Sulcis，包括 San Pietro 與 Sant'Antioco 兩座島。炎熱乾燥，是 Carignano 的理想環境。Carignano 與西班牙的 Mazuelo（Cariñena）、法國的 Carignan 基因相同，很可能由西班牙傳入。</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍷 Carignano del Sulcis Rosso</strong><p>最低 85% Carignano（許多是 100%），Bovale 是最常用的混調夥伴。口感豐腴、如天鵝絨般滑順，單寧柔和、酸度活潑。</p></div><div class=\"orvieto-card\"><strong>🏆 Superiore 與 Riserva</strong><p>Superiore：葡萄樹只能採 Alberello 整枝，酒精度要求較高，最少陳年 2 年。Riserva：最少陳年 2 年。</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🏺 其他 Sardinia 本土品種",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Monica</h4><p><strong>產區：</strong>Monica di Sardegna DOC（全島）</p><p><strong>風格：</strong>輕至中等酒體，易飲，果香豐富</p><p><strong>香氣：</strong>紅櫻桃、草莓、香料、草本、輕微皮革</p><p><strong>定位：</strong>Sardinia日常紅酒，親民價格，€8-15</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⚪ Nuragus</h4><p><strong>特色：</strong>Sardinia最古老品種之一（3000年歷史），以Nuraghe石塔命名</p><p><strong>產區：</strong>Nuragus di Cagliari DOC，南部平原</p><p><strong>香氣：</strong>檸檬、青蘋果、杏仁花，清爽簡單</p><p><strong>定位：</strong>日常白酒，高產量，€7-12</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⚪ Torbato</h4><p><strong>產區：</strong>Alghero DOC，西北海岸（西班牙統治遺留城市）</p><p><strong>香氣：</strong>白桃、杏桃、白花、杏仁，芳香豐富</p><p><strong>特點：</strong>稀有品種，Sella &amp; Mosca是主要保存者，也釀製Spumante氣泡酒</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Bovale</h4><p><strong>別名：</strong>= 西班牙Graciano，西班牙統治時期引入</p><p><strong>產區：</strong>Mandrolisai DOC，中部高原</p><p><strong>風格：</strong>深色、結構感強，常作輔助品種與Cannonau混釀增加骨架</p></div></div></div>"
+      "title": "🏺 Sardegna 其他重要品種",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Monica</h4><p><strong>身分：</strong>來源不明的古老品種，Sardegna 種植面積第二大的紅葡萄</p><p><strong>歷史：</strong>過去多用來釀甜酒與加烈酒，如今越來越多釀成乾型單一品種酒</p><p><strong>產區：</strong>Monica di Sardegna DOC，最低 85% Monica，部分生產者加入最多 15% 的 Bovale 和/或 Carignano；也有 Superiore</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⚪ Malvasia di Sardegna</h4><p><strong>身分：</strong>與 Malvasia di Lipari（即 Calabria 的 Greco Bianco）基因相同</p><p><strong>分布：</strong>集中在 Bosa 與 Cagliari 周邊</p><p><strong>產區：</strong>Malvasia di Bosa DOC</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⚪ Torbato ＆ 🔴 Cagnulari</h4><p><strong>產區：</strong>Alghero DOC，西北部 Alghero 鎮周邊的小產區</p><p><strong>Torbato：</strong>稀有白葡萄，釀成乾型或氣泡酒</p><p><strong>Cagnulari：</strong>稀有紅葡萄</p><p><strong>另有：</strong>Alghero DOC 也允許 Cabernet Sauvignon、Merlot、Chardonnay、Sauvignon Blanc 等國際品種</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Bovale Sardo</h4><p><strong>身分：</strong>= 西班牙的 Graciano，西班牙影響下的品種之一</p><p><strong>注意：</strong>Bovale Grande（Bovale di Spagna）是另一個傳統品種</p><p><strong>用途：</strong>Carignano del Sulcis 最常用的混調夥伴，也是 Mandrolisai DOC 混調的主角</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍯 Sardinia 甜酒傳統",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍊 Moscato di Sardegna DOC</h4><p><strong>品種：</strong>Moscato Bianco（Muscat Blanc à Petits Grains）</p><p><strong>類型：</strong>微氣泡甜白酒（Frizzante）或靜態甜酒</p><p><strong>香氣：</strong>荔枝、玫瑰、白花、蜂蜜、柑橘皮</p><p><strong>搭配：</strong>Seadas炸起司蜂蜜甜點、Pastiera、水果甜點</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍯 Vernaccia di Oristano DOC</h4><p><strong>風格：</strong>義大利唯一氧化型白酒DOC，半滿橡木桶中陳年形成Flor酵母膜</p><p><strong>等級：</strong>基礎款（2-3年）/ Superiore（3年以上）/ Riserva（4年以上）</p><p><strong>香氣：</strong>榛果、杏仁、橙皮、乾燥香草、海鹽、氧化堅果</p><p><strong>搭配：</strong>Bottarga、硬質起司、堅果盤，可作餐前或消化酒</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍬 Moscato di Sorso-Sennori DOC</h4><p><strong>產區：</strong>Sorso和Sennori兩個小鎮，Sardinia西北海岸</p><p><strong>類型：</strong>甜型或Liquoroso加烈酒</p><p><strong>香氣：</strong>蜂蜜、杏桃乾、橙花、熱帶水果</p><p><strong>稀有度：</strong>產量極小，市場罕見，珍稀收藏等級</p></div></div></div>"
+      "title": "🍯 Sardegna 的氧化型與甜型傳統",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍯 Vernaccia di Oristano DOC</h4><p><strong>地位：</strong>Sardegna 第一個 DOC，產量小</p><p><strong>風格：</strong>氧化型、類似 Sherry，但<strong>不是加烈酒</strong>；在半滿的木桶中由 flor 酵母膜熟成</p><p><strong>等級：</strong>基礎款在桶中至少 2 年／Superiore 至少 3 年／Riserva 至少 4 年</p><p><strong>品種：</strong>100% Vernaccia di Oristano，與其他名為「Vernaccia」的品種無關</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍬 Malvasia di Bosa DOC</h4><p><strong>產區：</strong>中西部海岸 Bosa 周邊，少數當地酒農的極小產量</p><p><strong>品種：</strong>最低 95% Malvasia di Sardegna</p><p><strong>規定：</strong>酒精最低 13%，半甜至甜；Riserva 酒精最低 15.5%、最少陳年 2 年（至少 1 年在木桶），從甜到乾都有，大多偏乾</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍊 Moscato 甜酒</h4><p><strong>品種：</strong>Moscato Bianco</p><p><strong>產區：</strong>全島的 Moscato di Sardegna DOC，以及西北部 Sorso 與 Sennori 兩鎮的 Moscato di Sorso-Sennori DOC</p><p><strong>傳統：</strong>Sardegna 的甜酒與加烈酒（Liquoroso）傳統，同樣可追溯到西班牙的影響</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍽️ Sardinia 美食配餐指南",
-      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Sardinia料理以羊肉、Pecorino起司、海鮮、Bottarga鯔魚卵為核心。島嶼孤立的地理保留獨特飲食文化，山區遊牧傳統與海岸漁業文化共存，孕育出全義大利最鮮明的配餐組合。</p><div class=\"food-pairing\"><div class=\"pairing-card\"><h4>🧀 Pecorino Sardo DOP</h4><p>Dolce（20-60天嫩質）/ Maturo（5-12月硬質陳年）<br>🍷 配：<strong>Vermentino di Gallura（Dolce）/ Cannonau Riserva（Maturo）</strong><br>花崗岩礦物感精準提升起司鮮味</p></div><div class=\"pairing-card\"><h4>🥚 Bottarga 鯔魚卵</h4><p>刨絲配義大利麵或麵包，Sardinia最高級食材之一<br>🍷 配：<strong>Vermentino di Gallura DOCG Superiore</strong><br>礦物鹽感與海洋鮮味完美共鳴</p></div><div class=\"pairing-card\"><h4>🐷 Porceddu 傳統烤乳豬</h4><p>香草桃金孃醃漬烤全乳豬，Sardinia節慶靈魂料理<br>🍷 配：<strong>Cannonau Riserva / Carignano del Sulcis Superiore</strong><br>飽滿單寧切入油脂，高酒精平衡肉香</p></div><div class=\"pairing-card\"><h4>🍝 Malloreddus alla Campidanese</h4><p>手工小麵疙瘩配香腸番茄肉醬，Sardinia日常靈魂料理<br>🍷 配：<strong>Cannonau di Sardegna / Monica di Sardegna</strong><br>中等果香匹配香料肉醬，親民CP值</p></div></div></div>"
+      "title": "🍽️ Sardegna 美食配餐指南",
+      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Sardegna 料理以羊肉、豬肉、Pecorino 起司與海鮮為核心：Porceddu 烤乳豬、Pan Carasau 薄脆麵包、Malloreddus 小麵疙瘩、Bottarga 烏魚子義大利麵、Culurgiones 餃子、Fregola 小粒麵，山區牧羊傳統與海岸漁業文化並存。</p><div class=\"food-pairing\"><div class=\"pairing-card\"><h4>🧀 Pecorino Sardo</h4><p>Sardegna 的硬質羊奶起司<br>🍷 配：<strong>年輕款配 Vermentino di Gallura／熟成款配 Cannonau Riserva</strong><br>白酒的鹹味礦物感襯托嫩起司，紅酒的結構撐住熟成起司</p></div><div class=\"pairing-card\"><h4>🥚 Spaghetti alla Bottarga</h4><p>Bottarga 是鹽漬風乾的烏魚子，刨絲拌麵<br>🍷 配：<strong>Vermentino di Gallura DOCG</strong><br>鹹鮮的礦物尾韻與海味相互呼應；Vernaccia di Oristano 也是經典搭配</p></div><div class=\"pairing-card\"><h4>🐷 Porceddu 烤乳豬</h4><p>以香桃木（Mirto）調味的烤全乳豬，節慶靈魂料理<br>🍷 配：<strong>Cannonau di Sardegna Riserva／Carignano del Sulcis Superiore</strong><br>紅果與地中海香草呼應香桃木，單寧切開油脂</p></div><div class=\"pairing-card\"><h4>🍝 Malloreddus alla Campidanese</h4><p>手工小麵疙瘩配香腸番茄醬<br>🍷 配：<strong>Cannonau di Sardegna／Monica di Sardegna</strong><br>柔和果香搭配家常肉醬</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🏺 Sardinia 葡萄酒歷史深度",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">從Nuragic石塔文明到西班牙500年統治 —— <span class=\"intro-highlight\">3000年歷史孕育義大利最獨特的葡萄酒文化</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">BC 1800</div><div class=\"timeline-content\"><strong>Nuragic文明</strong>：Sardinia最古老文明，建造7000+座Nuraghe石塔，已有釀酒考古證據，部分學者主張Cannonau起源於此</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">BC 238</div><div class=\"timeline-content\"><strong>羅馬征服</strong>：Sardinia成為羅馬第一個行省，葡萄種植技術擴展，成為帝國重要糧食產地，葡萄酒大量出口地中海各地</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1323-1720</div><div class=\"timeline-content\"><strong>西班牙Aragón統治</strong>：500年決定性影響！引入Cannonau（Grenache）、Carignano（Carignan）、Bovale（Graciano），塑造現代Sardinia葡萄酒版圖至今</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1948-現代</div><div class=\"timeline-content\"><strong>自治區 + 品質革命</strong>：特殊自治區保留Sardo語言，Sella &amp; Mosca開拓國際市場，Argiolas帶動有機精品運動</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">3000年</div><div class=\"stat-label\">Sardinia釀酒史</div></div><div class=\"stat-box\"><div class=\"stat-number\">500年</div><div class=\"stat-label\">西班牙統治影響</div></div><div class=\"stat-box\"><div class=\"stat-number\">1+19</div><div class=\"stat-label\">DOCG + DOC認證</div></div><div class=\"stat-box\"><div class=\"stat-number\">150萬</div><div class=\"stat-label\">島上羊隻（多於人口）</div></div></div>"
+      "title": "🏺 Sardegna 葡萄酒歷史",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">從 Nuraghe 石塔文明到西班牙與 Savoy 的統治 —— <span class=\"intro-highlight\">一座島嶼獨特的葡萄酒之路</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">古代</div><div class=\"timeline-content\"><strong>Nuraghe 文明</strong>：西元前 1800 年以前就已存在，留下錐形石塔 Nuraghe；西元前 1500 年起島上就有葡萄樹與葡萄酒。腓尼基人發展了葡萄種植，迦太基人與羅馬人則把重心放在穀物</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">14-18 世紀</div><div class=\"timeline-content\"><strong>亞拉岡－西班牙統治</strong>：Sardegna 王國由亞拉岡－西班牙王朝統治，留下品種、加烈酒與 flor 的深遠影響。Arborea 的統治者（Giudice）Eleonora 頒布的法典 Carta de Logu 也有保護葡萄種植的條文</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">18-19 世紀</div><div class=\"timeline-content\"><strong>Savoy 與義大利統一</strong>：18 世紀由 Piemonte 的 Savoy 家族統治；1861 年 Sardegna 王國成為義大利王國。1880 年代葡萄園大幅擴張，因根瘤蚜而中斷</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">20 世紀至今</div><div class=\"timeline-content\"><strong>從散裝酒到品質</strong>：1940-50 年代合作社專注高酒精散裝酒；1980 年代散裝酒市場衰退加上歐盟拔除葡萄樹計畫，種植面積縮減；1990 年代轉向品質酒</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">25,000</div><div class=\"stat-label\">公頃葡萄園</div></div><div class=\"stat-box\"><div class=\"stat-number\">~50%</div><div class=\"stat-label\">產量為 DOC/G</div></div><div class=\"stat-box\"><div class=\"stat-number\">1+17</div><div class=\"stat-label\">DOCG + DOC</div></div><div class=\"stat-box\"><div class=\"stat-number\">60%+</div><div class=\"stat-label\">紅葡萄</div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍇 Cannonau 品種科學深度解析",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🇮🇹 Sardinia主張</h4><p><strong>BC 1000起源</strong>：發現3000年前葡萄籽化石</p><p>Nuragic文明古老釀酒考古證據</p><p>「Cannonau」具Sardinian語言學根據</p><p>→ 但主流學界傾向西班牙起源說</p></div><div class=\"research-content\"><h4>🔬 科學共識（DNA分析）</h4><p><strong>DNA 100% identical</strong> = Cannonau / Garnacha / Grenache完全同一品種</p><p>起源地：學界傾向西班牙Aragón</p><p>傳播路徑：Aragón → Sardinia（14-15世紀）→ 南法Rhône（16-17世紀）</p><p>→ 風格因Sardinia炙烈日照而截然不同</p></div></div></div><div class=\"aging-science\"><p>Cannonau陳年演化：從爆炸果香到皮革礦物層次</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🍒 年輕期（1-3年）</h5><p>紅莓果醬、草莓、黑櫻桃、香料、草本</p><p class=\"science-note\">搭配：Malloreddus香腸麵</p></div><div class=\"science-card\"><h5>🍷 成熟期（4-7年）</h5><p>乾燥皮革、香草、煙草、甘草、黑巧克力</p><p class=\"science-note\">搭配：Porceddu傳統烤乳豬</p></div><div class=\"science-card\"><h5>🏆 Riserva（8年以上）</h5><p>焦糖、雪松、礦物感、複雜乾燥香草</p><p class=\"science-note\">搭配：Pecorino Maturo硬質起司</p></div></div></div>"
+      "title": "🍇 深入認識 Cannonau",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🧬 身分與別名</h4><p><strong>與 Garnacha 基因相同</strong>（法國稱 Grenache）</p><p>Sardegna 的旗艦紅葡萄，種植遍及全島，大本營在 Nuoro</p><p>其他別名：Alicante、Gamay del Trasimeno、Tocai Rosso</p><p>與 Vermentino 合計佔全島葡萄園 40% 以上</p></div><div class=\"research-content\"><h4>📊 特性</h4><p><strong>酒精：</strong>高</p><p><strong>香氣：</strong>紅色果香、地中海灌木叢</p><p><strong>風格：</strong>從柔和果香到嚴肅、複雜、結構紮實</p><p><strong>整枝：</strong>傳統為 Alberello（矮叢式），現代葡萄園也用 Cordone speronato</p></div></div><div class=\"aging-science\"><p>Cannonau 的風格光譜：從柔和果香到複雜陳年</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🍒 柔和果香型</h5><p>紅色莓果、草莓、香料、地中海香草</p><p class=\"science-note\">搭配：Malloreddus 香腸麵</p></div><div class=\"science-card\"><h5>🍷 Riserva</h5><p>最少陳年 2 年（至少 6 個月在木桶），乾燥香草、皮革、甘草</p><p class=\"science-note\">搭配：Porceddu 烤乳豬</p></div><div class=\"science-card\"><h5>🏆 Classico</h5><p>Nuoro 與 Ogliastra 的歷史產區，最少陳年 2 年（至少 1 年在木桶），結構最紮實</p><p class=\"science-note\">搭配：熟成 Pecorino Sardo</p></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "⚪ Vermentino di Gallura 風土深度",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">全球罕見的100%花崗岩單一土壤DOCG。Sardinia東北角Gallura，Costa Smeralda奢華海岸孕育義大利最時髦白酒</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🪨</div><h4>100%花崗岩風土</h4><p><strong>土壤：</strong>花崗岩風化砂質，pH 5.5-6.5（偏酸性）</p><p><strong>矽含量：</strong>極高（石英晶體），礦物質豐富</p><p><strong>物理特性：</strong>排水極佳，貧瘠低有機質，葡萄自然低產</p><p><strong>賦予酒款：</strong>獨特礦物感、海鹽風味、鮮明緊緻酸度</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🌊</div><h4>Gallura海洋型氣候</h4><p><strong>位置：</strong>Sardinia東北角，100-500m起伏丘陵，Olbia-Tempio省</p><p><strong>風系：</strong>Mistral北風（涼爽降溫）+ Scirocco南風，調節日夜氣溫</p><p><strong>降雨：</strong>600-700mm/年，冬季集中，夏季乾燥</p><p><strong>效果：</strong>保留葡萄酸度與清爽芳香，避免過熟</p></div></div><div class=\"terroir-key-point\"><h4>🏆 Vermentino di Gallura 等級系統</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>DOCG基礎</strong><br>Vermentino 95%+<br>12%最低酒精<br>€12-20</div><div class=\"kp-box\"><strong>Superiore</strong><br>陳年1年以上<br>13%最低酒精<br>€20-35</div><div class=\"kp-box\"><strong>產區面積</strong><br>3,000公頃<br>Gallura東北角<br>花崗岩100%</div><div class=\"kp-box\"><strong>DOCG 1996</strong><br>Sardinia唯一<br>Costa Smeralda<br>奢華海岸旁</div></div></div>"
+      "title": "⚪ Vermentino 與 Gallura 的風土",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">Vermentino 來源不明，是 Sardegna 種植最廣、最重要的白葡萄。香氣芬芳，有果香、香草與灌木叢氣息；酒體飽滿、酒精高，酸度清爽，尾韻帶礦物鹹味。</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🪨</div><h4>Gallura 的花崗岩</h4><p><strong>土壤：</strong>花崗岩母岩上覆蓋花崗岩砂</p><p><strong>地形：</strong>東北部，東側久經侵蝕的花崗岩山脈（如 Monti di Limbara）</p><p><strong>整枝：</strong>Gallura 也是傳統 Alberello 的典型產區之一</p><p><strong>賦予酒款：</strong>礦物感與帶鹹味的風格</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🌊</div><h4>氣候</h4><p><strong>沿海：</strong>地中海型</p><p><strong>內陸：</strong>較高海拔處受大陸性影響</p><p><strong>風：</strong>Maestrale（Mistral）</p><p><strong>品種偏好：</strong>靠海、溫暖晴朗；抗風也抗旱</p></div></div><div class=\"terroir-key-point\"><h4>🏆 Vermentino di Gallura DOCG 重點</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>品種</strong><br>最低 95% Vermentino<br>大多數是 100%</div><div class=\"kp-box\"><strong>Superiore</strong><br>產量更低<br>酒精更高</div><div class=\"kp-box\"><strong>釀造</strong><br>通常用不鏽鋼槽<br>少數用木桶</div><div class=\"kp-box\"><strong>地位</strong><br>Sardegna 唯一 DOCG<br>Vermentino 最重要產區</div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍷 Carignano del Sulcis 老藤深度",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🦠 Phylloxera 1860-1900大災難</h4><p>根瘤蚜蟲摧毀<strong>80%+歐洲葡萄園</strong></p><p>從法國蔓延至全歐洲、北非各地</p><p>解決方案：嫁接至抗性美國砧木</p><p>代價：改變風味特性，失去原始基因純度</p></div><div class=\"research-content\"><h4>🏖️ Sulcis沙質土壤奇蹟</h4><p>85-95%沙質土壤：<strong>Phylloxera無法在沙中挖掘</strong></p><p>保留100-150年ungrafted自根老藤完整存活</p><p>前根瘤蚜時代的基因純度至今保存完好</p><p>全球僅極少數產區擁有此珍貴特質</p></div></div></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🌿 Ungrafted自根老藤特色</div><div class=\"mf-prod\">極低產量（0.5-1kg/株）→ 風味高度濃縮，複雜度遠超嫁接藤，礦物感突出</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🍷 Carignano Rosso 風格</div><div class=\"mf-prod\">黑櫻桃、黑莓、香料、草本、皮革、礦物感，中至高單寧，適合陳年</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🌸 Carignano Rosato 風格</div><div class=\"mf-prod\">草莓、覆盆子、花瓣、礦物清爽，Sulcis夏日海岸的完美餐酒</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🏆 頂級Riserva代表酒款</div><div class=\"mf-prod\">Cantina Santadi「Terre Brune」€40-55 / Agricola Punica「Barrua」混釀 €30-45</div></div></div>"
+      "title": "🍷 Carignano 與 Sulcis 的老藤",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><div class=\"research-content\"><h4>🍇 Carignano 品種</h4><p>與西班牙 Mazuelo（Cariñena）、法國 Carignan <strong>基因相同</strong></p><p>很可能由西班牙傳入；別名 Uva di Spagna</p><p>需要溫暖、晴朗、乾燥才能完全成熟，抗旱也抗風</p><p>顏色深，酸度與單寧都高</p></div><div class=\"research-content\"><h4>🏖️ Sulcis 的沙地</h4><p>西南部是全島最炎熱的地區，土壤是非常沙質的土壤</p><p>1880 年代根瘤蚜中斷了島上的葡萄園擴張，但根瘤蚜難以在鬆散的沙中生存</p><p>因此沿海沙地上保留了<strong>非常老的未嫁接 Alberello 葡萄樹</strong></p></div></div></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🌿 Alberello 自根老藤</div><div class=\"mf-prod\">Alberello 是 Sardegna 的傳統整枝法，典型產區是 Gallura、Mandrolisai 與 Sulcis</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🍷 Carignano del Sulcis 風格</div><div class=\"mf-prod\">口感豐腴、如天鵝絨般滑順，單寧柔和、酸度活潑</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🏝️ 產區範圍</div><div class=\"mf-prod\">Sardegna 西南部，包括 San Pietro 與 Sant'Antioco 兩座島</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🏆 Superiore</div><div class=\"mf-prod\">只能採 Alberello 整枝，酒精要求更高，最少陳年 2 年</div></div></div>"
     },
     {
       "type": "content",
-      "title": "🍯 Vernaccia di Oristano 深度解析",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">「Sardinia的Sherry」—— <span class=\"intro-highlight\">義大利唯一氧化型白酒DOC，Flor酵母薄膜在半滿橡木桶緩慢熟成，風味深邃獨特</span></p></div><div class=\"winemaking-section\"><p class=\"winemaking-intro\">在半滿的橡木桶中陳年，表面自然形成Flor酵母薄膜，阻隔氧化同時賦予堅果氧化風味</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🇮🇹 Vernaccia di Oristano</h4><p><strong>產區：</strong>Oristano省西海岸，Tirso河平原，650公頃</p><p><strong>品種：</strong>Vernaccia di Oristano（Sardinia特有原生種）</p><p><strong>熟成：</strong>半滿橡木桶，Flor酵母薄膜自然形成，2-4年以上</p><p><strong>風格：</strong>以干型為主，分基礎款、Superiore、Riserva三級</p></div><div class=\"method-card modern\"><h4>🇪🇸 Sherry（Jerez）對比</h4><p><strong>產區：</strong>西班牙Jerez de la Frontera，Andalucía</p><p><strong>品種：</strong>Palomino（Fino / Manzanilla），Pedro Ximénez（甜型）</p><p><strong>熟成：</strong>Solera多桶循環系統，歷代酒互相融合</p><p><strong>風格：</strong>從極干的Fino到極甜的PX，風格跨度最大</p></div></div></div></div><div class=\"aging-science\"><p>Vernaccia三大等級：從清爽到深沉複雜</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🥂 基礎款（2-3年）</h5><p>榛果、杏仁、柑橘皮、輕微氧化感</p><p class=\"science-note\">搭配：Bottarga、橄欖、堅果盤</p></div><div class=\"science-card\"><h5>🏅 Superiore（3-5年）</h5><p>乾燥香草、焦糖蘋果、烤榛果、海鹽礦物</p><p class=\"science-note\">搭配：Pecorino Maturo、醃製肉類</p></div><div class=\"science-card\"><h5>🏆 Riserva（5年以上）</h5><p>蜂蠟、橙皮、核桃、煙燻礦物、極深層次</p><p class=\"science-note\">搭配：熟成硬質起司或作消化酒</p></div></div></div>"
+      "title": "🍯 深入解析 Vernaccia di Oristano",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Sardegna 第一個 DOC —— <span class=\"intro-highlight\">氧化型、類似 Sherry，但不加烈</span></p></div><div class=\"winemaking-section\"><p class=\"winemaking-intro\">Vernaccia di Oristano 是 Sardegna 的古老白葡萄，種在 Oristano 附近的 Tirso 河下游河谷，偏好溫暖氣候與沖積土，與其他名為「Vernaccia」的品種無關。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🇮🇹 Vernaccia di Oristano</h4><p><strong>土壤：</strong>沖積土：Bennaxi（深厚肥沃）與 Gregori（貧瘠、多礫石、排水佳）</p><p><strong>品種：</strong>100% Vernaccia di Oristano</p><p><strong>熟成：</strong>發酵後移入橡木或栗木桶，只裝約 80%，表面形成 flor 酵母膜</p><p><strong>加烈：</strong>不加烈</p></div><div class=\"method-card modern\"><h4>🇪🇸 Sherry（Jerez）對比</h4><p><strong>產區：</strong>西班牙 Andalucía 的 Jerez</p><p><strong>品種：</strong>以 Palomino 為主</p><p><strong>熟成：</strong>Solera 系統；Fino 等 flor 型同樣在酵母膜下熟成</p><p><strong>加烈：</strong>加烈酒</p></div></div></div></div><div class=\"aging-science\"><p>Flor 的關鍵：通風良好、溫度隨季節變化的酒窖，flor 產生乙醛（Sherry 般的香氣）</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🥂 Vernaccia di Oristano</h5><p>桶中至少 2 年</p><p class=\"science-note\">風格：濃郁、複雜、氧化</p></div><div class=\"science-card\"><h5>🏅 Superiore</h5><p>桶中至少 3 年</p><p class=\"science-note\">搭配：Bottarga、烤杏仁</p></div><div class=\"science-card\"><h5>🏆 Riserva</h5><p>桶中至少 4 年；有些酒以類似 solera 的系統在桶中熟成 10 年</p><p class=\"science-note\">特色：壽命極長</p></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🏛️ Sardinia 傳奇名莊深度檔案",
-      "content": "<div class=\"variety-intro\"><p>從百年傳統到現代精品，四大酒莊共同守護並推廣Sardinia葡萄酒遺產</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">SM</div><div class=\"up-badge\">歷史先驅</div><div class=\"up-body\"><div class=\"up-est\">Sella &amp; Mosca — Est. 1899</div><p>Sardinia葡萄酒國際化的開路先鋒，Alghero地區最重要酒莊，保存稀有品種Torbato，將Vermentino和Cannonau推向全球市場</p><div class=\"up-wines\">🍷 代表：Tanca Farrà（Cannonau+Cabernet）/ Monteoro Vermentino di Gallura DOCG / Torbato Brut Spumante | €15-50</div><div class=\"up-tip\">550公頃葡萄園 × Alghero西北海岸 × 125年歷史傳承 × Torbato稀有品種守護者</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">AR</div><div class=\"up-badge\">現代精品</div><div class=\"up-body\"><div class=\"up-est\">Argiolas — Est. 1938</div><p>Sardinia頂級精品酒莊代表，以Cannonau、Vermentino、Monica等本土品種表達島嶼風土，旗艦酒Turriga獲義大利媒體最高評價</p><div class=\"up-wines\">🍷 旗艦：Turriga（Cannonau+Carignano+Malvasia Nera+Bovale）18個月法式橡木桶 | €50-75 | 95+ pts</div><div class=\"up-tip\">Serdiana（Cagliari近郊）× 有機農法 × 義大利Wine Spectator等媒體年度最佳</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Cantina Santadi</strong><p>Sulcis最重要合作社，Terre Brune是全球最知名的老藤Carignano代表作</p><div class=\"um-prices\">Terre Brune（100%老藤Carignano）<br>橡木桶18個月，自根百年老藤</div><div class=\"um-age\">€40-55 / 深沉礦物風格</div></div><div class=\"umbria-mini c2\"><strong>Agricola Punica</strong><p>Barrua混釀將Sulcis老藤Carignano帶向現代國際風格，獲獎無數</p><div class=\"um-prices\">Barrua（85% Carignano + Cabernet + Merlot）<br>法式橡木桶陳年，現代精釀工藝</div><div class=\"um-age\">€30-45 / 現代國際風格</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>€8-18</h4><p>Vermentino di Sardegna DOC、Monica di Sardegna、Cannonau基礎款，CP值之王</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>€19-45</h4><p>Vermentino di Gallura DOCG、Carignano Superiore、Cannonau Riserva，陳年深度</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 收藏</div><h4>€50-75+</h4><p>Argiolas Turriga、Cantina Santadi Terre Brune、Sella &amp; Mosca旗艦款，義大利頂級表達</p></div></div></div>"
+      "title": "🏛️ Sardegna 代表酒莊",
+      "content": "<div class=\"variety-intro\"><p>從百年傳統酒莊到合作社，這些生產者把 Sardegna 的本土品種推向國際</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">SM</div><div class=\"up-badge\">歷史酒莊</div><div class=\"up-body\"><div class=\"up-est\">Sella &amp; Mosca — Est. 1899</div><p>Alghero 地區的代表酒莊，以稀有白葡萄 Torbato 聞名，也釀造 Vermentino 與 Cannonau</p><div class=\"up-wines\">🍷 代表：Alghero DOC Torbato（乾型與氣泡）</div><div class=\"up-tip\">Alghero DOC 的兩個稀有品種：Torbato（白）與 Cagnulari（紅）</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">AR</div><div class=\"up-badge\">本土品種代表</div><div class=\"up-body\"><div class=\"up-est\">Argiolas — Est. 1938</div><p>位於 Cagliari 附近的 Serdiana，以 Cannonau、Vermentino、Monica 等本土品種表達島嶼風土</p><div class=\"up-wines\">🍷 旗艦：Turriga（以 Cannonau 為主的本土品種混調）</div><div class=\"up-tip\">展現 Sardegna 在 1990 年代從散裝酒轉向品質酒的代表</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Cantina Santadi</strong><p>Sulcis 的重要合作社，Carignano del Sulcis 的代表生產者</p><div class=\"um-prices\">Terre Brune（以 Carignano 為主）<br>沙地上的老藤</div><div class=\"um-age\">深色果實、豐腴滑順</div></div><div class=\"umbria-mini c2\"><strong>Giovanni Cherchi ＆ Colombu</strong><p>IWS 術語表中列出的生產者</p><div class=\"um-prices\">Giovanni Cherchi：西北部的 Vermentino 與 Cagnulari<br>Colombu：Bosa 的 Malvasia di Bosa</div><div class=\"um-age\">小產量的在地風格</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>全區 DOC</h4><p>Vermentino di Sardegna、Monica di Sardegna、Cannonau di Sardegna，日常好喝</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>DOCG ＆ 老藤</h4><p>Vermentino di Gallura DOCG、Carignano del Sulcis Superiore、Cannonau Riserva 與 Classico</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 收藏</div><h4>獨特傳統</h4><p>Vernaccia di Oristano Riserva、Malvasia di Bosa，產量小、個性鮮明</p></div></div></div>"
     },
     {
       "type": "image",
       "title": "🍷 酒標實例：Vermentino di Sardegna DOC",
       "image": "/italy/images/labels/sardegna/vermentino-di-sardegna-2017.jpg",
-      "caption": "Vermentino di Sardegna DOC 2017——全島通用的 Vermentino 產區規範，比北部 Gallura 產區的 Vermentino di Gallura DOCG 等級略低，但同樣展現島嶼清爽礦物風格。"
+      "caption": "Vermentino di Sardegna DOC 2017——全島通用的全區 DOC；東北部 Gallura 的 Vermentino di Gallura 則是 Sardegna 唯一的 DOCG。"
     },
     {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Sardinia 是地中海第二大島，文化獨特，受西班牙影響深遠",
-        "✓ Cannonau（= Grenache）是 Sardinia 代表紅葡萄，酒精度 13.5-15.5%",
-        "✓ Vermentino di Gallura DOCG 是 Sardinia 唯一 DOCG，性價比極高",
-        "✓ Carignano del Sulcis 擁有自根老藤（100+ 年），未嫁接、抗根瘤蚜蟲",
-        "✓ Vernaccia di Oristano 是類似 Sherry 的氧化型白酒",
-        "✓ Pecorino Sardo 是義大利最佳羊奶起司之一"
+        "✓ Sardegna 是地中海第二大島，常被稱為「微型大陸」；14-18 世紀受亞拉岡－西班牙統治，影響品種、加烈酒與 flor 傳統",
+        "✓ 約 25,000 公頃葡萄園，約一半產量為 DOC/G；紅葡萄超過 60%；1 個 DOCG ＋ 17 個 DOC",
+        "✓ 地中海型氣候、Maestrale 風、西南部最熱；東北 Gallura 是花崗岩砂，西南 Sulcis 是沙地，西岸 Oristano 是沖積土",
+        "✓ 傳統整枝為 Alberello（Gallura、Mandrolisai、Sulcis），鬆散沙地上有非常老的未嫁接葡萄樹",
+        "✓ Cannonau（= Garnacha）是旗艦紅葡萄：Cannonau di Sardegna DOC 最低 85%，Riserva 最少 2 年（6 個月木桶）；Classico 最低 90%、2 年（1 年木桶），子產區 Oliena、Jerzu、Capo Ferrato",
+        "✓ Vermentino di Gallura 是唯一 DOCG：最低 95% Vermentino，花崗岩砂土，通常不鏽鋼槽釀造，Superiore 產量更低、酒精更高",
+        "✓ Carignano del Sulcis DOC：最低 85% Carignano（= Mazuelo），Bovale 為混調夥伴；Superiore 只能 Alberello、最少陳年 2 年",
+        "✓ Vernaccia di Oristano DOC 是第一個 DOC，類似 Sherry 但不加烈，桶中至少 2/3/4 年；Malvasia di Bosa 與 Alghero（Torbato、Cagnulari）各有特色"
       ]
     },
     {
       "type": "quiz",
-      "title": "🧠 Sardinia 知識檢測",
+      "title": "🧠 Sardegna 知識檢測",
       "_marker": "// inject-italy-l2-quiz",
       "questions": [
         {
@@ -155,55 +157,115 @@
             "Syrah"
           ],
           "correct": 1,
-          "explanation": "DNA 研究證明 Cannonau 與西班牙的 Garnacha、法國的 Grenache 是同一品種，但 Sardinia 版本風格獨特。"
+          "explanation": "Cannonau 與西班牙的 Garnacha（法國稱 Grenache）基因相同，是 Sardegna 的旗艦紅葡萄，大本營在 Nuoro。"
         },
         {
           "type": "single",
           "question": "Vermentino di Gallura 有什麼特別之處？",
           "options": [
             "產量最大",
-            "Sardinia 唯一的 DOCG",
+            "Sardegna 唯一的 DOCG",
             "酒精度最低",
             "只產紅酒"
           ],
           "correct": 1,
-          "explanation": "Vermentino di Gallura 在 1996 年升級為 DOCG，是 Sardinia 唯一的 DOCG 產區。"
+          "explanation": "Vermentino di Gallura 是 Sardegna 唯一的 DOCG，也是 Vermentino 最重要的產區，涵蓋東北部的歷史區域 Gallura。"
         },
         {
           "type": "single",
           "question": "Carignano del Sulcis 的特點是？",
           "options": [
             "沒有老藤",
-            "擁有自根老藤（未嫁接、100+ 年）",
+            "擁有非常老的未嫁接自根葡萄樹",
             "只產白酒",
             "產量極大"
           ],
           "correct": 1,
-          "explanation": "Sulcis 的沙質土壤抗根瘤蚜蟲，許多葡萄園保留自根老藤（ungrafted），樹齡 100+ 年。"
+          "explanation": "Sulcis 沿海鬆散的沙質土壤上保留了非常老的未嫁接 Alberello 葡萄樹；根瘤蚜難以在沙中生存。"
         },
         {
           "type": "single",
           "question": "Bottarga 是什麼？",
           "options": [
             "一種起司",
-            "鯔魚卵",
+            "鹽漬風乾的烏魚子",
             "一種葡萄品種",
             "一種甜點"
           ],
           "correct": 1,
-          "explanation": "Bottarga 是鯔魚卵，是 Sardinia 的高級食材，通常刨絲配義大利麵或麵包，搭配 Vermentino 白酒完美。"
+          "explanation": "Bottarga 是鹽漬風乾的烏魚子，是 Sardegna 的特產，常刨絲拌義大利麵（Spaghetti alla Bottarga），搭配 Vermentino 很合適。"
         },
         {
           "type": "single",
           "question": "Vermentino di Gallura DOCG 是哪裡的唯一 DOCG？",
           "options": [
-            "A. Sicily",
-            "B. Sardinia",
+            "A. Sicilia",
+            "B. Sardegna",
             "C. Calabria",
             "D. Campania"
           ],
           "correct": 1,
-          "explanation": "Vermentino di Gallura DOCG 是 Sardinia 全島唯一的 DOCG 等級，以北部 Gallura 地區的優質 Vermentino 為主。"
+          "explanation": "Vermentino di Gallura DOCG 是 Sardegna 全島唯一的 DOCG，位於東北部的 Gallura。"
+        },
+        {
+          "type": "single",
+          "question": "Sardegna 的傳統葡萄整枝方式是？",
+          "options": [
+            "A. Tendone",
+            "B. Alberello",
+            "C. Pergola",
+            "D. Cordone speronato"
+          ],
+          "correct": 1,
+          "explanation": "Alberello（矮叢式）是 Sardegna 的傳統整枝法，典型產區是 Gallura、Mandrolisai 與 Sulcis。"
+        },
+        {
+          "type": "single",
+          "question": "Cannonau di Sardegna Riserva 的最低陳年規定是？",
+          "options": [
+            "A. 1 年，其中 6 個月在木桶",
+            "B. 2 年，其中至少 6 個月在木桶",
+            "C. 2 年，其中至少 1 年在木桶",
+            "D. 3 年，其中至少 2 年在木桶"
+          ],
+          "correct": 1,
+          "explanation": "Riserva 最少陳年 2 年，其中至少 6 個月在木桶；2 年中至少 1 年在木桶是 Classico 的規定。"
+        },
+        {
+          "type": "single",
+          "question": "哪一個產區以白葡萄 Torbato 為特色？",
+          "options": [
+            "A. Alghero DOC",
+            "B. Isola dei Nuraghi IGT",
+            "C. Sardegna Semidano DOC",
+            "D. Mandrolisai DOC"
+          ],
+          "correct": 0,
+          "explanation": "Alghero DOC 是 Alghero 鎮周邊的小產區，以兩個稀有品種的單一品種酒為特色：Torbato（白，乾型或氣泡）與 Cagnulari（紅）。"
+        },
+        {
+          "type": "single",
+          "question": "關於 Vernaccia di Oristano DOC，哪一項描述是錯誤的？",
+          "options": [
+            "A. 是 Sardegna 第一個 DOC",
+            "B. 在只裝約 80% 的木桶中由 flor 酵母膜熟成",
+            "C. 是加烈酒",
+            "D. Riserva 至少在桶中 4 年"
+          ],
+          "correct": 2,
+          "explanation": "Vernaccia di Oristano 是氧化型、類似 Sherry 的酒，但不加烈。"
+        },
+        {
+          "type": "single",
+          "question": "以下哪一個不是 Cannonau di Sardegna Classico 的官方子產區？",
+          "options": [
+            "A. Oliena",
+            "B. Jerzu",
+            "C. Capo Ferrato",
+            "D. Sulcis"
+          ],
+          "correct": 3,
+          "explanation": "Classico 有三個官方子產區：Oliena、Jerzu、Capo Ferrato。Sulcis 是西南部 Carignano 的產區。"
         }
       ]
     }
