@@ -4,27 +4,47 @@
   "quiz": [
     {
       "question": "Barolo Riserva 的最低陳年要求是多少？",
-      "options": ["38 個月", "50 個月", "62 個月", "72 個月"],
+      "options": [
+        "38 個月",
+        "50 個月",
+        "62 個月",
+        "72 個月"
+      ],
       "answer": 2,
       "explanation": "Barolo Riserva 需要至少 62 個月陳年（5年+），比基本款的 38 個月多 24 個月。"
     },
     {
       "question": "\"Superiore\" 術語主要強調什麼？",
-      "options": ["更長的陳年時間", "更高的酒精度（葡萄成熟度）", "單一葡萄園", "有機認證"],
+      "options": [
+        "更長的陳年時間",
+        "更高的酒精度（葡萄成熟度）",
+        "單一葡萄園",
+        "有機認證"
+      ],
       "answer": 1,
       "explanation": "Superiore 主要強調更高的酒精度（通常 +0.5-1% ABV），代表更成熟的葡萄，通常也有更長的陳年要求。"
     },
     {
       "question": "氣泡酒甜度術語中，哪一個比 Brut 更甜？",
-      "options": ["Extra Brut", "Brut Nature", "Extra Dry", "Dosaggio Zero"],
+      "options": [
+        "Extra Brut",
+        "Brut Nature",
+        "Extra Dry",
+        "Dosaggio Zero"
+      ],
       "answer": 2,
       "explanation": "Extra Dry（12-17 g/L）比 Brut（6-12 g/L）更甜，這是歷史遺留的命名問題，容易造成誤解。"
     },
     {
       "question": "Chianti Classico Gran Selezione 要求葡萄必須來自哪裡？",
-      "options": ["任何 Chianti Classico 產區", "酒莊自有葡萄園", "指定的 MGA", "有機認證葡萄園"],
+      "options": [
+        "任何 Chianti Classico 產區",
+        "酒莊自有葡萄園",
+        "指定的 MGA",
+        "有機認證葡萄園"
+      ],
       "answer": 1,
-      "explanation": "Gran Selezione（2014年創立）要求葡萄必須來自酒莊自有葡萄園，且陳年至少 30 個月，代表最高品質保證。"
+      "explanation": "Gran Selezione（2014 年首度上市）要求葡萄必須來自酒莊自有葡萄園，且陳年至少 30 個月；2021 年起更要求 Sangiovese 至少 90%，並可標示 UGA 村莊名稱，是 Chianti Classico 的最高等級。"
     }
   ],
   "slides": [
@@ -36,22 +56,22 @@
     {
       "type": "content",
       "title": "陳年術語：Riserva · Superiore · Classico",
-      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">陳年術語三大核心</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Riserva（精選）</strong>— 更長陳年｜Barolo: 38→62 月（+24）｜Barbaresco: 26→50 月｜Brunello: 50→62 月｜Chianti Classico: 12→24 月。通常使用最好葡萄和年份釀造，品質高於基本款</div><div class=\"orvieto-card\"><strong>Superiore（優質）</strong>— 更高酒精度（葡萄成熟度），通常 +0.5-1% ABV｜Valpolicella Superiore: 11→12%，最少 12 個月陳年｜Soave Superiore: 10.5→11.5%。強調葡萄成熟度，非單純陳年</div><div class=\"orvieto-card\"><strong>Classico（經典）</strong>— 歷史核心產區葡萄，品質通常高出 30-50%｜代表：Chianti Classico DOCG（Firenze-Siena 之間）、Soave Classico（火山土壤）、Valpolicella Classico（三歷史山谷）</div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">陳年術語三大核心</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Riserva（精選）</strong>— 更長陳年｜Barolo: 38→62 月（+24）｜Barbaresco: 26→50 月｜Brunello: 50→62 月｜Chianti Classico: 12→24 月。通常使用最好葡萄和年份釀造，品質高於基本款</div><div class=\"orvieto-card\"><strong>Superiore（優質）</strong>— 更高酒精度（葡萄成熟度），通常 +0.5-1% ABV｜Valpolicella Superiore: 11→12%，最少 12 個月陳年｜Soave Superiore: 10.5→11.5%。強調葡萄成熟度，非單純陳年</div><div class=\"orvieto-card\"><strong>Classico（經典）</strong>— 歷史核心產區葡萄，通常代表更具代表性的風土｜代表：Chianti Classico DOCG（Firenze-Siena 之間）、Soave Classico（火山土壤）、Valpolicella Classico（三歷史山谷）</div></div></div></div>"
     },
     {
       "type": "content",
       "title": "分級金字塔與 IGT 超級托斯卡納",
-      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>DOCG</h3><p class=\"mf-style\">最高等級｜77 個（2024）｜強制品質檢測</p><p class=\"mf-prod\">每批次化學+感官測試 / 瓶頸封條（Fascetta）/ 代表：Barolo, Brunello, Amarone</p></div><div class=\"mf-zone warm\"><h3>DOC</h3><p class=\"mf-style\">中等等級｜約 330 個｜法規控制</p><p class=\"mf-prod\">無強制品質檢測 / 受法規保護品種和產量 / 代表：Barbera d'Asti, Soave, Valpolicella</p></div><div class=\"mf-zone cool\"><h3>IGT</h3><p class=\"mf-style\">地理標示｜約 118 個｜創新自由</p><p class=\"mf-prod\">允許非傳統品種（Cabernet, Merlot）/ 超級托斯卡納 / 最貴義大利酒可能是 IGT / 代表：Toscana IGT</p></div><div class=\"mf-zone plain\"><h3>Vino</h3><p class=\"mf-style\">餐酒｜無地理標示｜無限制</p><p class=\"mf-prod\">最基本等級 / 無品種或地理要求 / 現在多已升級為 IGT</p></div></div><div class=\"dna-research\"><h3>IGT 傳奇：超級托斯卡納</h3><div class=\"science-card\">Sassicaia（Bolgheri Sassicaia DOC）€250-400 ｜ Tignanello（Toscana IGT）€100-180 ｜ Ornellaia（Bolgheri DOC）€180-300 ｜ 這些酒品質遠超大多數 DOCG</div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>DOCG</h3><p class=\"mf-style\">最高等級｜約 77 個｜最嚴格的品質檢測</p><p class=\"mf-prod\">每批次化學+感官測試 / 瓶頸封條（Fascetta）/ 代表：Barolo, Brunello, Amarone</p></div><div class=\"mf-zone warm\"><h3>DOC</h3><p class=\"mf-style\">中等等級｜約 330 個｜法規控制</p><p class=\"mf-prod\">須通過化學與感官檢驗 / 規範品種、產量與釀法 / 代表：Barbera d'Asti, Soave, Valpolicella</p></div><div class=\"mf-zone cool\"><h3>IGT</h3><p class=\"mf-style\">地理標示｜約 118 個｜創新自由</p><p class=\"mf-prod\">允許非傳統品種（Cabernet, Merlot）/ 超級托斯卡納 / 最貴義大利酒可能是 IGT / 代表：Toscana IGT</p></div><div class=\"mf-zone plain\"><h3>Vino</h3><p class=\"mf-style\">餐酒｜無地理標示｜無限制</p><p class=\"mf-prod\">最基本等級 / 無品種或地理要求 / 現在多已升級為 IGT</p></div></div><div class=\"dna-research\"><h3>IGT 傳奇：超級托斯卡納</h3><div class=\"science-card\">Tignanello（Toscana IGT）｜ Sassicaia（起初為 Vino da Tavola，2013 年起擁有專屬的 Bolgheri Sassicaia DOC）｜ Ornellaia（Bolgheri Superiore DOC）｜ 這些酒的品質與聲譽不輸頂級 DOCG</div></div></div>"
     },
     {
       "type": "content",
       "title": "氣泡酒術語：釀法與甜度",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利氣泡酒使用三種主要釀造方式，甜度標示也有容易混淆的規律。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Metodo Classico（傳統法）</h3><ul><li><strong>方式：</strong>瓶中二次發酵（與香檳相同）</li><li><strong>香氣：</strong>酵母、烤麵包、奶油、堅果</li><li><strong>氣泡：</strong>細緻持久</li><li><strong>陳年潛力：</strong>5-15 年</li><li><strong>主要產區：</strong>Franciacorta DOCG（€25-150）、Trento DOC（€20-80）、Alta Langa DOCG</li></ul></div><div class=\"method-card modern\"><h3>Metodo Charmat（查瑪法）</h3><ul><li><strong>方式：</strong>大型密閉不鏽鋼槽中二次發酵</li><li><strong>香氣：</strong>新鮮水果、花香（無酵母香）</li><li><strong>氣泡：</strong>活潑清新</li><li><strong>陳年潛力：</strong>1-3 年內飲用</li><li><strong>主要產區：</strong>Prosecco DOC/DOCG（€8-40）、Asti DOCG（甜型）、Lambrusco</li></ul></div></div></div><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\">Dosaggio Zero / Brut Nature：0-3 g/L｜極乾型</div><div class=\"kp-box\">Extra Brut：0-6 g/L｜非常乾型</div><div class=\"kp-box\">Brut：6-12 g/L｜最常見的乾型</div><div class=\"kp-box\">⚠️ Extra Dry：12-17 g/L｜比 Brut <strong>更甜</strong>（常見誤解！）</div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利氣泡酒使用三種主要釀造方式，甜度標示也有容易混淆的規律。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Metodo Classico（傳統法）</h3><ul><li><strong>方式：</strong>瓶中二次發酵（與香檳相同）</li><li><strong>香氣：</strong>酵母、烤麵包、奶油、堅果</li><li><strong>氣泡：</strong>細緻持久</li><li><strong>陳年潛力：</strong>5-15 年</li><li><strong>主要產區：</strong>Franciacorta DOCG、Trento DOC、Alta Langa DOCG</li></ul></div><div class=\"method-card modern\"><h3>Metodo Charmat（查瑪法）</h3><ul><li><strong>方式：</strong>大型密閉不鏽鋼槽中二次發酵</li><li><strong>香氣：</strong>新鮮水果、花香（無酵母香）</li><li><strong>氣泡：</strong>活潑清新</li><li><strong>陳年潛力：</strong>1-3 年內飲用</li><li><strong>主要產區：</strong>Prosecco DOC/DOCG、Asti DOCG（甜型）、Lambrusco</li></ul></div></div></div><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\">Dosaggio Zero / Brut Nature：0-3 g/L｜極乾型</div><div class=\"kp-box\">Extra Brut：0-6 g/L｜非常乾型</div><div class=\"kp-box\">Brut：6-12 g/L｜最常見的乾型</div><div class=\"kp-box\">⚠️ Extra Dry：12-17 g/L｜比 Brut <strong>更甜</strong>（常見誤解！）</div></div></div></div>"
     },
     {
       "type": "content",
       "title": "組合術語與品種標示實戰",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利酒標的組合術語和品種標示規則，是選酒時最重要的解讀技巧。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Chianti Classico Gran Selezione</h3><ul><li><strong>創立：</strong>2014 年（Chianti Classico 最高等級）</li><li><strong>要求：</strong>葡萄必須來自<strong>酒莊自有葡萄園</strong></li><li><strong>陳年：</strong>至少 30 個月</li><li><strong>品質目標：</strong>與 Brunello、Barolo 齊名</li><li><strong>代表：</strong>Fontodi, Felsina, Montevertine</li><li><strong>價格：</strong>€40-150</li></ul></div><div class=\"method-card modern\"><h3>品種標示規則</h3><ul><li><strong>單一品種：</strong>酒標標示一個品種→至少 <strong>85%</strong> 該品種</li><li><strong>DOCG 例外：</strong>Brunello di Montalcino 必須 <strong>100%</strong> Sangiovese</li><li><strong>IGT 自由：</strong>可使用 Cabernet, Merlot 等非傳統品種</li><li><strong>常見例子：</strong>Etna Rosso = 80%+ Nerello Mascalese｜Friuli Pinot Grigio = 85%+ Pinot Grigio</li><li><strong>莊園裝瓶：</strong>尋找「Imbottigliato all'origine」代表品質控制更好</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利酒標的組合術語和品種標示規則，是選酒時最重要的解讀技巧。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Chianti Classico Gran Selezione</h3><ul><li><strong>創立：</strong>2014 年首度上市（Chianti Classico 最高等級）</li><li><strong>要求：</strong>葡萄必須來自<strong>酒莊自有葡萄園</strong></li><li><strong>陳年：</strong>至少 30 個月；2021 年起 Sangiovese 至少 90%，可標示 UGA 村莊名稱</li><li><strong>品質目標：</strong>與 Brunello、Barolo 齊名</li><li><strong>代表：</strong>Fontodi, Fèlsina, Castello di Ama, Mazzei</li></ul></div><div class=\"method-card modern\"><h3>品種標示規則</h3><ul><li><strong>單一品種：</strong>酒標標示一個品種→至少 <strong>85%</strong> 該品種</li><li><strong>DOCG 例外：</strong>Brunello di Montalcino 必須 <strong>100%</strong> Sangiovese</li><li><strong>IGT 自由：</strong>可使用 Cabernet, Merlot 等非傳統品種</li><li><strong>常見例子：</strong>Etna Rosso = 80%+ Nerello Mascalese｜Friuli Pinot Grigio = 85%+ Pinot Grigio</li><li><strong>莊園裝瓶：</strong>尋找「Imbottigliato all'origine」代表品質控制更好</li></ul></div></div></div></div>"
     },
     {
       "type": "image",
@@ -89,10 +109,10 @@
       "points": [
         "Riserva 要求更長陳年時間，並通常使用最好的葡萄和年份釀造",
         "Superiore 強調更高酒精度（葡萄成熟度），Riserva 強調陳年時間，兩者可同時出現",
-        "Classico 代表歷史核心產區，品質通常高出普通款 30-50%，價格也更高",
+        "Classico 代表歷史核心產區，通常代表更具代表性的風土",
         "Chianti Classico Gran Selezione（2014）是最高等級，要求自有葡萄園和 30 個月陳年",
         "義大利分級金字塔：DOCG（77個，強制品質檢測）> DOC（330個）> IGT（118個）> Vino",
-        "IGT 允許非傳統品種，超級托斯卡納（Sassicaia、Tignanello）多為 IGT，品質遠超平庸 DOCG",
+        "IGT 允許非傳統品種，超級托斯卡納（如 Tignanello）多為 IGT，品質與聲譽不輸頂級 DOCG；Sassicaia 則於 2013 年擁有專屬 DOC",
         "Metodo Classico（瓶中發酵）= 複雜陳年型 / Metodo Charmat（槽中發酵）= 清新早飲型",
         "氣泡酒甜度易誤解：Extra Dry 比 Brut 更甜（12-17 g/L vs 6-12 g/L）",
         "品種標示規則：酒標標示單一品種→至少 85% 該品種（DOCG 可能有更嚴格要求）"
@@ -106,30 +126,50 @@
         {
           "type": "single",
           "question": "Barolo Riserva 的最低陳年要求是多少？",
-          "options": ["38 個月", "50 個月", "62 個月", "72 個月"],
+          "options": [
+            "38 個月",
+            "50 個月",
+            "62 個月",
+            "72 個月"
+          ],
           "correct": 2,
           "explanation": "Barolo Riserva 需要至少 62 個月陳年（5年+），比基本款的 38 個月多 24 個月。"
         },
         {
           "type": "single",
           "question": "\"Superiore\" 術語主要強調什麼？",
-          "options": ["更長的陳年時間", "更高的酒精度（葡萄成熟度）", "單一葡萄園", "有機認證"],
+          "options": [
+            "更長的陳年時間",
+            "更高的酒精度（葡萄成熟度）",
+            "單一葡萄園",
+            "有機認證"
+          ],
           "correct": 1,
           "explanation": "Superiore 主要強調更高的酒精度（通常 +0.5-1% ABV），代表更成熟的葡萄，通常也有更長的陳年要求。"
         },
         {
           "type": "single",
           "question": "氣泡酒甜度術語中，哪一個比 Brut 更甜？",
-          "options": ["Extra Brut", "Brut Nature", "Extra Dry", "Dosaggio Zero"],
+          "options": [
+            "Extra Brut",
+            "Brut Nature",
+            "Extra Dry",
+            "Dosaggio Zero"
+          ],
           "correct": 2,
           "explanation": "Extra Dry（12-17 g/L）比 Brut（6-12 g/L）更甜，這是歷史遺留的命名問題，容易造成誤解。"
         },
         {
           "type": "single",
           "question": "Chianti Classico Gran Selezione 要求葡萄必須來自哪裡？",
-          "options": ["任何 Chianti Classico 產區", "酒莊自有葡萄園", "指定的 MGA", "有機認證葡萄園"],
+          "options": [
+            "任何 Chianti Classico 產區",
+            "酒莊自有葡萄園",
+            "指定的 MGA",
+            "有機認證葡萄園"
+          ],
           "correct": 1,
-          "explanation": "Gran Selezione（2014年創立）要求葡萄必須來自酒莊自有葡萄園，且陳年至少 30 個月，代表最高品質保證。"
+          "explanation": "Gran Selezione（2014 年首度上市）要求葡萄必須來自酒莊自有葡萄園，且陳年至少 30 個月；2021 年起更要求 Sangiovese 至少 90%，並可標示 UGA 村莊名稱，是 Chianti Classico 的最高等級。"
         },
         {
           "type": "single",

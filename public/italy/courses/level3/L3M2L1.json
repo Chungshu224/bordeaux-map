@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "Barolo MGA 制度正式實施是在哪一年？",
-      "options": ["1990", "2000", "2010", "2015"],
+      "options": [
+        "1990",
+        "2000",
+        "2010",
+        "2015"
+      ],
       "answer": 2,
       "explanation": "Barolo MGA 制度於 2010 年正式實施，共有 170 個葡萄園獲得 MGA 認證。"
     },
     {
       "question": "Giacomo Conterno 的旗艦酒款 Monfortino 來自哪個 MGA？",
-      "options": ["Cannubi", "Brunate", "Vigna Rionda（稱為 Francia）", "Bussia"],
+      "options": [
+        "Cannubi",
+        "Brunate",
+        "Francia（Serralunga d'Alba 的 Cascina Francia）",
+        "Bussia"
+      ],
       "answer": 2,
-      "explanation": "Francia 是 Giacomo Conterno 家族對 Vigna Rionda 的稱呼，Monfortino 實際就是 Vigna Rionda MGA。"
+      "explanation": "Monfortino 來自 Giacomo Conterno 位於 Serralunga d'Alba 的 Cascina Francia 葡萄園，即 Francia MGA（約 6 公頃，由 Conterno 獨有）；Vigna Rionda 則是 Serralunga 另一個獨立的傳奇 MGA。"
     },
     {
       "question": "Barbaresco 的官方 MGA 數量是多少？",
-      "options": ["33 個", "66 個", "100 個", "170 個"],
+      "options": [
+        "33 個",
+        "66 個",
+        "100 個",
+        "170 個"
+      ],
       "answer": 1,
       "explanation": "Barbaresco 有 66 個官方 MGA，遠少於 Barolo 的 170 個。"
     },
     {
       "question": "酒標上標示 MGA 時，MGA 名稱的字體有何限制？",
-      "options": ["不可大於生產者名稱", "不可大於產區名稱", "不可大於年份數字", "沒有限制"],
+      "options": [
+        "不可大於生產者名稱",
+        "不可大於產區名稱",
+        "不可大於年份數字",
+        "沒有限制"
+      ],
       "answer": 1,
       "explanation": "法規規定 MGA 名稱不可大於產區名稱（如 Barolo），以防止誤導消費者。"
     }
@@ -36,27 +56,27 @@
     {
       "type": "content",
       "title": "MGA 是什麼？與法國 Cru 的差異",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>MGA = Menzioni Geografiche Aggiuntive（附加地理標示）</h3><p>MGA 是義大利葡萄酒法規中的官方術語，允許生產者在酒標上標示更小的地理單位，標明葡萄的確切來源地。2010 年正式實施，Barolo 有 170 個 MGA，Barbaresco 有 66 個。</p></div><div class=\"winemaking-section\"><p class=\"winemaking-intro\">MGA vs 法國 Burgundy Cru 系統</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Burgundy Cru 系統</h3><ul><li><strong>歷史：</strong>13 世紀開始，數百年演變</li><li><strong>分級：</strong>Grand Cru → Premier Cru → Village（官方品質分級）</li><li><strong>Grand Cru：</strong>33 個（全球公認品質保證）</li><li><strong>市場認知：</strong>全球最高</li></ul></div><div class=\"method-card modern\"><h3>Barolo MGA 系統</h3><ul><li><strong>歷史：</strong>2010 年正式實施（非常新）</li><li><strong>分級：</strong>僅地理標示，<strong>無官方品質分級</strong></li><li><strong>MGA 數量：</strong>170 個（遠多於 Burgundy）</li><li><strong>市場認知：</strong>專業圈認可，普通消費者陌生</li></ul></div></div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>MGA = Menzioni Geografiche Aggiuntive（附加地理標示）</h3><p>MGA 是義大利葡萄酒法規中的官方術語，允許生產者在酒標上標示更小的地理單位，標明葡萄的確切來源地。Barbaresco 於 2007 年、Barolo 於 2010 年正式實施；Barolo 有 170 個葡萄園 MGA（另有 11 個村莊 MGA），Barbaresco 有 66 個。</p></div><div class=\"winemaking-section\"><p class=\"winemaking-intro\">MGA vs 法國 Burgundy Cru 系統</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Burgundy Cru 系統</h3><ul><li><strong>歷史：</strong>13 世紀開始，數百年演變</li><li><strong>分級：</strong>Grand Cru → Premier Cru → Village（官方品質分級）</li><li><strong>Grand Cru：</strong>33 個（全球公認品質保證）</li><li><strong>市場認知：</strong>全球最高</li></ul></div><div class=\"method-card modern\"><h3>Barolo MGA 系統</h3><ul><li><strong>歷史：</strong>2010 年正式實施（非常新）</li><li><strong>分級：</strong>僅地理標示，<strong>無官方品質分級</strong></li><li><strong>MGA 數量：</strong>170 個（遠多於 Burgundy）</li><li><strong>市場認知：</strong>專業圈認可，普通消費者陌生</li></ul></div></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "Barolo 五大村莊風土",
-      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Serralunga d'Alba</h3><p class=\"mf-style\">結構派｜Helvetian 砂岩（藍色泥灰岩）｜24 個 MGA</p><p class=\"mf-prod\">單寧最強勁 / 需最長陳年 / 頂級：Vigna Rionda、Francia / 乾燥玫瑰、焦油</p></div><div class=\"mf-zone warm\"><h3>La Morra</h3><p class=\"mf-style\">優雅派｜Tortonian 泥灰岩（白色）｜35 個 MGA</p><p class=\"mf-prod\">最芳香細膩 / 較早適飲 / 頂級：Brunate、Rocche dell'Annunziata / 玫瑰、紅色漿果</p></div><div class=\"mf-zone cool\"><h3>Barolo 村</h3><p class=\"mf-style\">平衡派｜混合土質（砂岩+泥灰岩）｜31 個 MGA</p><p class=\"mf-prod\">優雅與力量兼備 / 最歷史悠久 / 頂級：Cannubi（1752年）、Cerequio / 精緻單寧</p></div><div class=\"mf-zone plain\"><h3>Castiglione Falletto</h3><p class=\"mf-style\">經典派｜複雜混合土質｜22 個 MGA</p><p class=\"mf-prod\">強勁複雜長壽 / 頂級：Monprivato（獨佔）、Villero、Bricco Boschis / 煙燻礦物</p></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Serralunga d'Alba</h3><p class=\"mf-style\">結構派｜Serravallian（舊稱 Helvetian）石灰質泥灰岩與砂岩</p><p class=\"mf-prod\">單寧最強勁 / 需最長陳年 / 頂級：Vigna Rionda、Francia、Lazzarito / 乾燥玫瑰、焦油</p></div><div class=\"mf-zone warm\"><h3>La Morra</h3><p class=\"mf-style\">優雅派｜Tortonian 泥灰岩（Sant'Agata 化石泥灰岩）</p><p class=\"mf-prod\">最芳香細膩 / 較早適飲 / 頂級：Brunate、Cerequio、Rocche dell'Annunziata / 玫瑰、紅色漿果</p></div><div class=\"mf-zone cool\"><h3>Barolo 村</h3><p class=\"mf-style\">平衡派｜混合土質（泥灰岩 + 砂質）</p><p class=\"mf-prod\">優雅與力量兼備 / 最歷史悠久 / 頂級：Cannubi（1752年）、Sarmassa / 精緻單寧</p></div><div class=\"mf-zone plain\"><h3>Castiglione Falletto</h3><p class=\"mf-style\">經典派｜複雜混合土質</p><p class=\"mf-prod\">強勁複雜長壽 / 頂級：Monprivato（Giuseppe Mascarello）、Villero、Bricco Boschis / 煙燻礦物</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "傳奇 MGA 深度解析",
-      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Cannubi — Barolo 的心臟（Barolo 村，1752 年）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">土壤：Tortonian 泥灰岩（鬆軟，排水佳）｜海拔 250-300m｜朝向南/西南</div><div class=\"orvieto-card\">風格：細膩優雅（非強勁）｜玫瑰花瓣、紅櫻桃、甘草｜陳年 20-40 年</div><div class=\"orvieto-card\">頂級：Luciano Sandrone（€200-350）、Chiara Boschis E.Pira（€150-280）、Paolo Scavino（€120-220）</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Vigna Rionda — Barolo 之王（Serralunga，又稱 Francia）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">土壤：Helvetian 砂岩｜海拔 300-360m｜正南朝向｜僅 4 家生產者擁有</div><div class=\"orvieto-card\">風格：Barolo 最強勁複雜｜黑果、焦油、玫瑰、礦物｜陳年 30-50 年</div><div class=\"orvieto-card\">頂級：Giacomo Conterno Monfortino（€800-2000+）、Massolino（€150-300）、Oddero（€120-250）</div></div></div></div></div>"
+      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Cannubi — Barolo 的心臟（Barolo 村，1752 年）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">土壤：Tortonian 泥灰岩夾砂（排水佳）｜海拔 250-300m｜朝向南/東南</div><div class=\"orvieto-card\">風格：細膩優雅（非強勁）｜玫瑰花瓣、紅櫻桃、甘草｜陳年 20-40 年</div><div class=\"orvieto-card\">頂級：Luciano Sandrone、Chiara Boschis E.Pira、Brezza</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Vigna Rionda — Serralunga 的傳奇（Serralunga d'Alba）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">土壤：Serravallian 石灰質泥灰岩與砂岩｜海拔 300-360m｜朝向南/西南</div><div class=\"orvieto-card\">風格：Barolo 最強勁複雜之一｜黑果、焦油、玫瑰、礦物｜陳年 30-50 年</div><div class=\"orvieto-card\">頂級：Massolino（Vigna Rionda Riserva）、Oddero、Luigi Pira</div></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "Barbaresco 三大傳奇 Cru",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Barbaresco vs Barolo 快速對比</h3><div class=\"science-card\">規模：700 公頃（vs Barolo 2,000 公頃）｜MGA：66 個（vs 170）｜陳年：26 個月（vs 38）</div><div class=\"science-note\">風格：Barbaresco 更優雅細膩、較早適飲｜Barolo 更強勁結構、需長陳年｜頂級 Barbaresco 通常比同等 Barolo 便宜 30-40%</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">三大傳奇 Cru</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">🌹 Asili（Barbaresco 村）— 優雅女王：泥灰岩土壤、玫瑰+紅漿果+礦物感、陳年 15-30 年｜Produttori del Barbaresco Riserva（€120-250）</div><div class=\"orvieto-card\">💪 Rabajà（Barbaresco 村）— 力量之王：砂岩土壤、黑莓+焦油+皮革、結構強勁、陳年 20-35 年｜Bruno Rocca（€80-180）</div><div class=\"orvieto-card\">💎 Pajé（Treiso，高海拔）— 複雜度之冠：泥灰岩、紅漿果+花香+礦物+松露、平衡優雅｜Roagna（€100-220）</div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>Barbaresco vs Barolo 快速對比</h3><div class=\"science-card\">規模：約 750 公頃（vs Barolo 約 2,200 公頃）｜MGA：66 個（vs 170）｜陳年：26 個月（vs 38）</div><div class=\"science-note\">風格：Barbaresco 更優雅細膩、較早適飲｜Barolo 更強勁結構、需長陳年｜頂級 Barbaresco 價格通常比同級 Barolo 親民</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">三大傳奇 Cru</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">🌹 Asili（Barbaresco 村）— 優雅女王：泥灰岩土壤、玫瑰+紅漿果+礦物感、陳年 15-30 年｜Bruno Giacosa、Produttori del Barbaresco Riserva</div><div class=\"orvieto-card\">💪 Rabajà（Barbaresco 村）— 力量之王：石灰質泥灰岩夾砂、黑莓+焦油+皮革、結構強勁、陳年 20-35 年｜Bruno Rocca</div><div class=\"orvieto-card\">💎 Pajé（Barbaresco 村）— 複雜度之冠：泥灰岩、紅漿果+花香+礦物+松露、平衡優雅｜Roagna</div></div></div></div>"
     },
     {
       "type": "content",
       "title": "如何解讀 MGA 酒標",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">選購 Barolo/Barbaresco 時，MGA 酒標含有豐富資訊。以下是四個關鍵解讀技巧：</p><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>100% 來源保證：</strong>標示 MGA 的酒款，葡萄必須 100% 種植在該 MGA 內，字體不可大於產區名稱（如 BAROLO），防止誤導消費者</div><div class=\"kp-box\"><strong>生產者優先於 MGA：</strong>同一 MGA 由不同生產者詮釋，風格差異極大。頂級生產者的「普通」MGA 常勝過二流生產者的頂級 MGA</div><div class=\"kp-box\"><strong>年份影響巨大：</strong>Nebbiolo 極度依賴年份。頂級年份：2016、2013、2010、2006、2004。普通年份頂級 MGA 不一定優於好年份基本款</div><div class=\"kp-box\"><strong>避開最熱門 MGA：</strong>Cannubi 和 Vigna Rionda 溢價高，選同村其他 MGA 可節省 30-50%。Barbaresco 頂級 Cru 通常比 Barolo 便宜 30-40%</div></div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">選購 Barolo/Barbaresco 時，MGA 酒標含有豐富資訊。以下是四個關鍵解讀技巧：</p><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>100% 來源保證：</strong>標示 MGA 的酒款，葡萄必須 100% 種植在該 MGA 內，字體不可大於產區名稱（如 BAROLO），防止誤導消費者</div><div class=\"kp-box\"><strong>生產者優先於 MGA：</strong>同一 MGA 由不同生產者詮釋，風格差異極大。頂級生產者的「普通」MGA 常勝過二流生產者的頂級 MGA</div><div class=\"kp-box\"><strong>年份影響巨大：</strong>Nebbiolo 極度依賴年份。頂級年份：2016、2013、2010、2006、2004。普通年份頂級 MGA 不一定優於好年份基本款</div><div class=\"kp-box\"><strong>避開最熱門 MGA：</strong>Cannubi 和 Vigna Rionda 溢價高，選同村其他 MGA 往往親民許多；Barbaresco 頂級 Cru 通常也比同級 Barolo 親民</div></div></div></div>"
     },
     {
       "type": "image",
@@ -74,13 +94,13 @@
       "type": "list",
       "title": "重點回顧",
       "points": [
-        "MGA（Menzioni Geografiche Aggiuntive）是 2010 年正式實施的義大利官方地理標示系統",
+        "MGA（Menzioni Geografiche Aggiuntive）是 分別於 2007 年（Barbaresco）與 2010 年（Barolo）正式實施的義大利官方地理標示系統",
         "Barolo 有 170 個 MGA 分佈在 11 個村莊，Barbaresco 有 66 個 MGA",
         "Burgundy Cru 有官方品質分級（Grand Cru > Premier Cru），Barolo MGA 僅有地理標示，無品質分級",
-        "Barolo 五大村莊：Serralunga（結構）、La Morra（優雅）、Barolo 村（平衡）、Castiglione（強勁）、Monforte（現代）",
-        "Cannubi 是 Barolo 最古老葡萄園（1752 年文獻），優雅細膩，頂級酒款 €120-350",
-        "Vigna Rionda（又稱 Francia）是 Serralunga 最強勁風土，Giacomo Conterno Monfortino €800-2000+",
-        "Barbaresco 三大傳奇 Cru：Asili（優雅）、Rabajà（力量）、Pajé（複雜），均比 Barolo 便宜 30-40%",
+        "Barolo 五大村莊：Serralunga（結構）、La Morra（優雅）、Barolo 村（平衡）、Castiglione Falletto（經典）、Monforte d'Alba（強勁長壽）",
+        "Cannubi 是 Barolo 最古老葡萄園（1752 年文獻），優雅細膩",
+        "Vigna Rionda 是 Serralunga 最強勁的風土之一；Giacomo Conterno 的 Monfortino 則來自同村的 Francia MGA",
+        "Barbaresco 三大傳奇 Cru：Asili（優雅）、Rabajà（力量）、Pajé（複雜），價格通常比同級 Barolo 親民",
         "MGA 酒標法規：葡萄 100% 來源該園、MGA 字體不可大於產區名稱",
         "選購策略：頂級生產者 > 頂級年份 > 頂級 MGA；不需執著於最熱門 MGA"
       ]
@@ -93,28 +113,48 @@
         {
           "type": "single",
           "question": "Barolo MGA 制度正式實施是在哪一年？",
-          "options": ["1990", "2000", "2010", "2015"],
+          "options": [
+            "1990",
+            "2000",
+            "2010",
+            "2015"
+          ],
           "correct": 2,
           "explanation": "Barolo MGA 制度於 2010 年正式實施，共有 170 個葡萄園獲得 MGA 認證。"
         },
         {
           "type": "single",
           "question": "Giacomo Conterno 的旗艦酒款 Monfortino 來自哪個 MGA？",
-          "options": ["Cannubi", "Brunate", "Vigna Rionda（稱為 Francia）", "Bussia"],
+          "options": [
+            "Cannubi",
+            "Brunate",
+            "Francia（Serralunga d'Alba 的 Cascina Francia）",
+            "Bussia"
+          ],
           "correct": 2,
-          "explanation": "Francia 是 Giacomo Conterno 家族對 Vigna Rionda 的稱呼，Monfortino 實際就是 Vigna Rionda MGA。"
+          "explanation": "Monfortino 來自 Giacomo Conterno 位於 Serralunga d'Alba 的 Cascina Francia 葡萄園，即 Francia MGA（約 6 公頃，由 Conterno 獨有）；Vigna Rionda 則是 Serralunga 另一個獨立的傳奇 MGA。"
         },
         {
           "type": "single",
           "question": "Barbaresco 的官方 MGA 數量是多少？",
-          "options": ["33 個", "66 個", "100 個", "170 個"],
+          "options": [
+            "33 個",
+            "66 個",
+            "100 個",
+            "170 個"
+          ],
           "correct": 1,
           "explanation": "Barbaresco 有 66 個官方 MGA，遠少於 Barolo 的 170 個。"
         },
         {
           "type": "single",
           "question": "酒標上標示 MGA 時，MGA 名稱的字體有何限制？",
-          "options": ["不可大於生產者名稱", "不可大於產區名稱", "不可大於年份數字", "沒有限制"],
+          "options": [
+            "不可大於生產者名稱",
+            "不可大於產區名稱",
+            "不可大於年份數字",
+            "沒有限制"
+          ],
           "correct": 1,
           "explanation": "法規規定 MGA 名稱不可大於產區名稱（如 Barolo），以防止誤導消費者。"
         },
@@ -128,7 +168,7 @@
             "Metodo Geografico Avanzato"
           ],
           "correct": 1,
-          "explanation": "MGA 是 Menzione Geografica Aggiuntiva 的縮寫，允許酒標上標示特定葡萄園名稱，類似布根地的一級/特級園概念。"
+          "explanation": "MGA 是 Menzione Geografica Aggiuntiva 的縮寫，允許酒標上標示特定葡萄園名稱，但不像布根地有特級/一級的官方品質分級。"
         }
       ]
     }

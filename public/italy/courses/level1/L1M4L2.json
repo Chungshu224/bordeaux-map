@@ -4,7 +4,12 @@
   "quiz": [
     {
       "question": "義大利本土葡萄品種超過多少種？",
-      "options": ["約 100 種", "約 200 種", "超過 350 種", "超過 600 種"],
+      "options": [
+        "約 100 種",
+        "約 200 種",
+        "超過 350 種",
+        "超過 600 種"
+      ],
       "answer": 2,
       "explanation": "義大利擁有超過 350 個登錄原生品種，是全球葡萄品種多樣性最高的國家，每個大區幾乎都有其獨特的地方品種。"
     },
@@ -21,13 +26,23 @@
     },
     {
       "question": "DOCG 的「G」代表什麼意思？",
-      "options": ["Geografica（地理）", "Garantita（保證）", "Grande（偉大）", "Genuina（真實）"],
+      "options": [
+        "Geografica（地理）",
+        "Garantita（保證）",
+        "Grande（偉大）",
+        "Genuina（真實）"
+      ],
       "answer": 1,
       "explanation": "G = Garantita（保證），表示義大利政府對酒款品質的官方背書，是 DOCG 有別於 DOC 的核心意義。每瓶 DOCG 都有防偽貼紙（fascetta）。"
     },
     {
       "question": "Barolo DOCG 使用的葡萄品種是？",
-      "options": ["Sangiovese", "Barbera", "Nebbiolo", "Montepulciano"],
+      "options": [
+        "Sangiovese",
+        "Barbera",
+        "Nebbiolo",
+        "Montepulciano"
+      ],
       "answer": 2,
       "explanation": "Barolo DOCG 規定必須使用 100% Nebbiolo 釀造，是被稱為「葡萄酒之王」的義大利最具陳年潛力的頂級紅酒。"
     },
@@ -55,19 +70,34 @@
     },
     {
       "question": "Brunello di Montalcino DOCG 的法定最低陳年時間是？",
-      "options": ["2 年", "3 年", "5 年", "7 年"],
+      "options": [
+        "2 年",
+        "3 年",
+        "5 年",
+        "7 年"
+      ],
       "answer": 2,
       "explanation": "Brunello di Montalcino 規定最低陳年 5 年（含 2 年橡木桶），Riserva 則需 6 年以上。這是義大利所有 DOCG 中陳年要求最長之一。"
     },
     {
       "question": "Chianti Classico DOCG 的官方標誌是？",
-      "options": ["白鷹", "黑公雞（Gallo Nero）", "紅獅", "金色盾牌"],
+      "options": [
+        "白鷹",
+        "黑公雞（Gallo Nero）",
+        "紅獅",
+        "金色盾牌"
+      ],
       "answer": 1,
       "explanation": "黑公雞（Gallo Nero）是 Chianti Classico 的官方標誌，代表 Chianti 最傳統的核心產區。據說源自中世紀 Firenze 與 Siena 之間以公雞鳴叫時機決定邊界的古老傳說。"
     },
     {
       "question": "Prosecco（義大利氣泡酒）使用哪個葡萄品種釀造？",
-      "options": ["Chardonnay", "Pinot Bianco", "Glera", "Garganega"],
+      "options": [
+        "Chardonnay",
+        "Pinot Bianco",
+        "Glera",
+        "Garganega"
+      ],
       "answer": 2,
       "explanation": "Prosecco 使用 Glera 品種（至少 85%）釀造，主要產自 Veneto 的 Conegliano-Valdobbiadene 地區，以 Charmat 法（大桶二次發酵）為主。"
     },
@@ -80,11 +110,16 @@
         "以二氧化碳浸漬法保留新鮮果味"
       ],
       "answer": 1,
-      "explanation": "Amarone 使用 Appassimento（風乾法），將葡萄在通風架上乾燥 3–4 個月，糖分濃縮後再發酵至全乾，釀成酒精度達 15–17% 的濃郁紅酒。"
+      "explanation": "Amarone 使用 Appassimento（風乾法），將葡萄在通風的室內風乾數個月，糖分濃縮後再發酵至不甜，釀成最低酒精 14%（常達 15% 以上）的濃郁紅酒。"
     },
     {
       "question": "Soave DOC 以哪個品種為主？",
-      "options": ["Trebbiano Toscano", "Garganega", "Pinot Grigio", "Verdicchio"],
+      "options": [
+        "Trebbiano Toscano",
+        "Garganega",
+        "Pinot Grigio",
+        "Verdicchio"
+      ],
       "answer": 1,
       "explanation": "Soave 以 Garganega（至少 70%）為主體，產自 Veneto，是義大利最著名的白酒產區之一，風格清爽帶杏仁香氣。"
     },
@@ -112,7 +147,12 @@
     },
     {
       "question": "Nero d'Avola 主要產自義大利哪個地區？",
-      "options": ["Piemonte", "Tuscany", "Sicily", "Puglia"],
+      "options": [
+        "Piemonte",
+        "Tuscany",
+        "Sicily",
+        "Puglia"
+      ],
       "answer": 2,
       "explanation": "Nero d'Avola 是 Sicily 最重要的原生紅葡萄品種，以黑色水果、巧克力和溫暖香料著稱，是西西里紅酒的代表。"
     },
@@ -129,26 +169,36 @@
     },
     {
       "question": "下列哪個是義大利五大白葡萄品種之一？",
-      "options": ["Primitivo", "Verdicchio", "Corvina", "Aglianico"],
+      "options": [
+        "Primitivo",
+        "Verdicchio",
+        "Corvina",
+        "Aglianico"
+      ],
       "answer": 1,
       "explanation": "Verdicchio 是義大利重要的白葡萄品種，主要產自 Marche（馬爾凱），以 Verdicchio dei Castelli di Jesi DOC 最為著名，風格清爽，帶杏仁苦尾。"
     },
     {
       "question": "「超級托斯卡納（Super Tuscan）」通常標示為哪個等級？",
-      "options": ["DOCG", "DOC", "IGT", "Vino da Tavola"],
+      "options": [
+        "DOCG",
+        "DOC",
+        "IGT",
+        "Vino da Tavola"
+      ],
       "answer": 2,
-      "explanation": "超級托斯卡納因使用 Cabernet Sauvignon 等非傳統品種或非標準混釀，無法符合 DOC/DOCG 規定，通常標示為 Toscana IGT。但品質往往超越許多 DOCG 酒款，是 IGT 等級的最高成就。"
+      "explanation": "超級托斯卡納因使用 Cabernet Sauvignon 等非傳統品種或非標準混釀，無法符合 DOC/DOCG 規定，通常標示為 Toscana IGT（部分如今已納入 Bolgheri 等 DOC）。但品質往往超越許多 DOCG 酒款，是 IGT 等級的最高成就。"
     },
     {
       "question": "Sassicaia 在義大利分級制度上的特殊地位是？",
       "options": [
         "義大利第一個 DOCG",
-        "義大利唯一以單一酒莊名稱命名的 DOC（Bolgheri Sassicaia DOC）",
+        "義大利第一個以單一酒莊為範圍的 DOC（Bolgheri Sassicaia DOC）",
         "義大利第一個獲得國際獎項的 IGT",
         "義大利唯一允許添加外國品種的 DOC"
       ],
       "answer": 1,
-      "explanation": "Sassicaia 是義大利唯一以單一酒莊名稱命名的 DOC，全名「Bolgheri Sassicaia DOC」，1994年升格。它是超級托斯卡納的鼻祖，使用 Cabernet Sauvignon 主體釀造。"
+      "explanation": "Sassicaia 是義大利第一個以單一酒莊為範圍的 DOC，全名「Bolgheri Sassicaia DOC」，1994年升格。它是超級托斯卡納的鼻祖，使用 Cabernet Sauvignon 主體釀造。"
     },
     {
       "question": "在義式餐酒搭配中，「What grows together, goes together」是什麼原則？",
@@ -163,13 +213,23 @@
     },
     {
       "question": "番茄醬料理（如義大利麵、披薩）最理想的搭配品種是？",
-      "options": ["Pinot Grigio（高酸白酒）", "Moscato d'Asti（甜型氣泡）", "Sangiovese（高酸紅酒）", "Amarone（濃郁紅酒）"],
+      "options": [
+        "Pinot Grigio（高酸白酒）",
+        "Moscato d'Asti（甜型氣泡）",
+        "Sangiovese（高酸紅酒）",
+        "Amarone（濃郁紅酒）"
+      ],
       "answer": 2,
       "explanation": "番茄醬的高酸度需要同樣高酸的葡萄酒來匹配，Sangiovese 天然高酸是最佳選擇。低酸葡萄酒配番茄醬會顯得扁平；高單寧紅酒則會因番茄酸度而更加澀口。"
     },
     {
       "question": "藍紋乳酪 Gorgonzola 最傳統的搭配酒款是？",
-      "options": ["Barolo（干型濃郁紅酒）", "Moscato d'Asti（甜型氣泡）", "Pinot Grigio（清爽白酒）", "Lambrusco（微氣泡紅酒）"],
+      "options": [
+        "Barolo（干型濃郁紅酒）",
+        "Moscato d'Asti（甜型氣泡）",
+        "Pinot Grigio（清爽白酒）",
+        "Lambrusco（微氣泡紅酒）"
+      ],
       "answer": 1,
       "explanation": "濃郁鹹香的藍紋乳酪與甜型葡萄酒形成對比互補，Moscato d'Asti 的清甜與 Gorgonzola 的鹹鮮是義大利傳統的完美搭配，甜度中和了乳酪的強烈風味。"
     },
@@ -196,15 +256,15 @@
       "explanation": "Sforzato 與 Amarone 都使用 Appassimento（葡萄風乾）法釀造，差別是 Sforzato 使用 Nebbiolo（Chiavennasca），地點在 Lombardy 的 Valtellina 山地，酒精度約 14% 以上，風格比 Amarone 更優雅。"
     },
     {
-      "question": "義大利全國葡萄酒生產量在全球的地位是？",
+      "question": "義大利葡萄酒產量在全球的地位是？",
       "options": [
-        "全球第一生產國",
-        "全球第一出口國（按量計）",
-        "全球第一消費國",
-        "歐洲第三大產酒國"
+        "全球產量最大的國家之一，常與法國競爭第一",
+        "全球產量排名第十左右",
+        "產量很小，以內銷為主",
+        "歐洲第五大產酒國"
       ],
-      "answer": 1,
-      "explanation": "義大利是全球出口量最大的葡萄酒國家（按量計），每年出口約 20 億升以上，美國、德國、英國是最主要的出口市場。義大利也是全球產量最大的國家之一，與法國長年競爭第一。"
+      "answer": 0,
+      "explanation": "義大利是全球葡萄酒產量最大的國家之一，長年與法國競爭第一；出口量也名列前茅，美國、德國、英國是最主要的出口市場。"
     },
     {
       "question": "下列關於 Pinot Grigio 的描述，哪個最準確？",
@@ -233,7 +293,7 @@
       "type": "list",
       "title": "🎯 Level 1 重點回顧",
       "points": [
-        "🍷 義大利是全球出口量第一的葡萄酒國，擁有 350+ 原生品種",
+        "🍷 義大利是全球產量最大的葡萄酒國之一，擁有 350+ 原生品種",
         "📊 分級制度：DOCG（最高）> DOC > IGT > Vino da Tavola",
         "🏔️ 亞平寧山脈貫穿全境，三大氣候帶：大陸性 / 地中海 / 熱地中海",
         "🗺️ 北部（Piemonte, Veneto, Lombardy）：高品質紅酒與氣泡酒",

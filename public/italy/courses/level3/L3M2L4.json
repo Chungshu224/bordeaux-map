@@ -4,27 +4,47 @@
   "quiz": [
     {
       "question": "DOCG 制度創立於哪一年？",
-      "options": ["1963", "1980", "1992", "2010"],
+      "options": [
+        "1963",
+        "1980",
+        "1992",
+        "2010"
+      ],
       "answer": 1,
-      "explanation": "DOCG 制度創立於 1980 年，為了區分頂級產區。首批 DOCG 包括 Barolo、Barbaresco、Brunello、Vino Nobile。"
+      "explanation": "DOCG 等級雖在 1963 年法規中已有規劃，首批 DOCG 於 1980 年授予：Brunello di Montalcino、Vino Nobile di Montepulciano、Barolo、Barbaresco；Chianti 則於 1984 年升格。"
     },
     {
       "question": "DOCG 和 DOC 最大的差異是什麼？",
-      "options": ["產量限制更嚴格", "陳年時間更長", "每批次強制品質檢測（化學+感官）", "價格更高"],
+      "options": [
+        "產量限制更嚴格",
+        "陳年時間更長",
+        "更嚴格的檢測，並強制貼國家保證封條",
+        "價格更高"
+      ],
       "answer": 2,
-      "explanation": "DOCG 最大特徵是每批次必須通過政府化學分析和感官品鑑委員會測試，這是 DOC 所沒有的。"
+      "explanation": "DOC 與 DOCG 都須通過化學與感官檢驗，但 DOCG 的規範更嚴格（每批次裝瓶前檢測），並且必須在瓶頸貼上國家保證封條，這是兩者最主要的差異。"
     },
     {
       "question": "DOCG 酒標上必須有什麼獨特標識？",
-      "options": ["金色標籤", "國家保證封條（Fascetta）", "生產者簽名", "MGA 標示"],
+      "options": [
+        "金色標籤",
+        "國家保證封條（Fascetta）",
+        "生產者簽名",
+        "MGA 標示"
+      ],
       "answer": 1,
-      "explanation": "DOCG 酒款必須在瓶頸貼上帶有序號的國家保證封條（粉紅色或綠色），證明已通過檢測，這是 DOCG 獨有特徵。"
+      "explanation": "DOCG 酒款必須在瓶頸貼上帶有唯一序號的國家保證封條（Fascetta），由國家印製局印製，用於防偽與追溯；部分 DOC 也採用封條，但 DOCG 是強制的。"
     },
     {
       "question": "截至 2024 年，義大利共有多少個 DOCG？",
-      "options": ["33 個", "57 個", "77 個", "100 個"],
+      "options": [
+        "33 個",
+        "57 個",
+        "77 個",
+        "100 個"
+      ],
       "answer": 2,
-      "explanation": "截至 2024 年，義大利共有 77 個 DOCG，其中 Piedmont 擁有最多（18 個）。"
+      "explanation": "截至 2024 年，義大利約有 77 個 DOCG，其中 Piemonte 擁有最多。"
     }
   ],
   "slides": [
@@ -36,52 +56,52 @@
     {
       "type": "content",
       "title": "義大利分級系統歷史演變",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">義大利葡萄酒分級系統歷經 60 年演變，從 1963 年仿效法國 AOC 的 DOC，到 1980 年創立 DOCG，再到 1992 年引入 IGT 開放超級托斯卡納——每一步都在品質保護與創新自由之間尋找平衡。</p><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1963</div><div class=\"timeline-content\"><strong>DOC 法規誕生：</strong>模仿法國 AOC 建立 Denominazione di Origine Controllata，義大利葡萄酒開始有法律保護的原產地名稱</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1980</div><div class=\"timeline-content\"><strong>DOCG 創立：</strong>首批 5 個——Brunello、Vino Nobile、Barolo、Barbaresco、Chianti。加入「e Garantita（保證）」，要求強制品質檢測，增加瓶頸封條</div></div><div class=\"timeline-item\"><div class=\"timeline-badge sparkling\">1992</div><div class=\"timeline-content\"><strong>IGT 引入：</strong>Indicazione Geografica Tipica 系統讓超級托斯卡納等創新酒款找到合法分類，允許使用非傳統品種與釀法</div></div><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">2024</div><div class=\"timeline-content\"><strong>現狀：</strong>77 個 DOCG（Piedmont 最多，18 個）、約 330 個 DOC、約 118 個 IGT。MGA 系統（2010）進一步細化 Barolo/Barbaresco 風土</div></div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">義大利葡萄酒分級系統歷經 60 年演變，從 1963 年仿效法國 AOC 的 DOC 法規，到 1980 年授予首批 DOCG，再到 1992 年引入 IGT 開放超級托斯卡納——每一步都在品質保護與創新自由之間尋找平衡。</p><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1963</div><div class=\"timeline-content\"><strong>DOC 法規誕生：</strong>模仿法國 AOC 建立 Denominazione di Origine Controllata，1966 年首個 DOC（Vernaccia di San Gimignano）誕生，義大利葡萄酒開始有法律保護的原產地名稱</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1980</div><div class=\"timeline-content\"><strong>首批 DOCG：</strong>Brunello、Vino Nobile、Barolo、Barbaresco（Chianti 於 1984 年加入）。加入「e Garantita（保證）」，要求更嚴格的品質檢測，並須貼瓶頸封條</div></div><div class=\"timeline-item\"><div class=\"timeline-badge sparkling\">1992</div><div class=\"timeline-content\"><strong>IGT 引入：</strong>Indicazione Geografica Tipica 系統讓超級托斯卡納等創新酒款找到合法分類，允許使用非傳統品種與釀法</div></div><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">2024</div><div class=\"timeline-content\"><strong>現狀：</strong>約 77 個 DOCG（Piemonte 最多）、約 330 個 DOC、約 118 個 IGT。MGA 系統（Barbaresco 2007、Barolo 2010）進一步細化風土</div></div></div></div>"
     },
     {
       "type": "content",
       "title": "DOCG 深度解析",
-      "content": "<div class=\"variety-deep-section\"><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">77</div><div class=\"stat-label\">DOCG 總數<br>（截至 2024）</div></div><div class=\"stat-box\"><div class=\"stat-number\">18</div><div class=\"stat-label\">Piedmont<br>最多 DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">14</div><div class=\"stat-label\">Veneto<br>第二多</div></div><div class=\"stat-box\"><div class=\"stat-number\">11</div><div class=\"stat-label\">Tuscany<br>第三多</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">DOCG 的六大認證條件</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">① 精確地理邊界（如 Barolo 僅限 11 個村莊）｜② 法定品種與比例（如 Brunello 必須 100% Sangiovese）｜③ 產量限制（通常 8,000-10,000 kg/公頃）</div><div class=\"orvieto-card\">④ 最低陳年時間（如 Barolo 38 月）｜⑤ 最低酒精度（如 Barolo 13% ABV）｜⑥ 每批次強制品質檢測（化學+感官）——這是 DOCG 與 DOC 的最大差異</div><div class=\"orvieto-card\">🔐 DOCG 獨有標識：瓶頸必須貼國家保證封條（Fascetta），含唯一序號，粉紅色（靜態酒）或綠色（氣泡酒），防偽且可追溯</div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">77</div><div class=\"stat-label\">DOCG 總數<br>（約，2024）</div></div><div class=\"stat-box\"><div class=\"stat-number\">18+</div><div class=\"stat-label\">Piemonte<br>最多 DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">14</div><div class=\"stat-label\">Veneto<br>第二多</div></div><div class=\"stat-box\"><div class=\"stat-number\">11</div><div class=\"stat-label\">Toscana<br>第三多</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">DOCG 的六大認證條件</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">① 精確地理邊界（如 Barolo 僅限 11 個村莊）｜② 法定品種與比例（如 Brunello 必須 100% Sangiovese）｜③ 產量限制（通常 8,000-10,000 kg/公頃）</div><div class=\"orvieto-card\">④ 最低陳年時間（如 Barolo 38 月）｜⑤ 最低酒精度（如 Barolo 13% ABV）｜⑥ 更嚴格的品質檢測（每批次化學+感官）</div><div class=\"orvieto-card\">🔐 DOCG 必備標識：瓶頸必須貼國家保證封條（Fascetta），含唯一序號，由國家印製局印製，防偽且可追溯（部分 DOC 也採用）</div></div></div></div>"
     },
     {
       "type": "content",
       "title": "DOC vs DOCG 差異 + 選酒策略",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">DOCG 和 DOC 的關鍵差異，以及實際選酒時的重要策略。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>DOCG（最高等級）</h3><ul><li><strong>創立：</strong>1980</li><li><strong>數量：</strong>77 個</li><li><strong>品質檢測：</strong>✅ 每批次強制化學+感官</li><li><strong>封條：</strong>✅ Fascetta（瓶頸必貼）</li><li><strong>產量限制：</strong>嚴格（8,000-10,000 kg/ha）</li><li><strong>陳年要求：</strong>較長（通常 2-5 年）</li><li><strong>代表：</strong>Barolo, Brunello, Amarone</li><li><strong>價格：</strong>€15-500+</li></ul></div><div class=\"method-card modern\"><h3>DOC（中等等級）</h3><ul><li><strong>創立：</strong>1963</li><li><strong>數量：</strong>約 330 個</li><li><strong>品質檢測：</strong>❌ 無強制品質檢測</li><li><strong>封條：</strong>❌ 無 Fascetta</li><li><strong>產量限制：</strong>較寬（10,000-12,000 kg/ha）</li><li><strong>陳年要求：</strong>較短或無</li><li><strong>代表：</strong>Barbera d'Asti, Soave</li><li><strong>價格：</strong>€5-50（多數）</li></ul></div></div></div><div class=\"dna-research\"><h3>⚠️ 重要：DOCG ≠ 品質保證</h3><div class=\"science-card\">頂級生產者的 DOC 酒款（如 Giacomo Conterno Barbera d'Alba，€60-100）品質遠超無名小莊的 DOCG Barolo（€25）</div><div class=\"science-note\">選酒策略：<strong>頂級生產者 > 頂級年份 > 分級等級</strong></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">DOCG 和 DOC 的關鍵差異，以及實際選酒時的重要策略。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>DOCG（最高等級）</h3><ul><li><strong>首批授予：</strong>1980</li><li><strong>數量：</strong>約 77 個</li><li><strong>品質檢測：</strong>✅ 最嚴格（每批次化學+感官）</li><li><strong>封條：</strong>✅ Fascetta（瓶頸必貼）</li><li><strong>產量限制：</strong>嚴格（8,000-10,000 kg/ha）</li><li><strong>陳年要求：</strong>較長（通常 2-5 年）</li><li><strong>代表：</strong>Barolo, Brunello, Amarone</li></ul></div><div class=\"method-card modern\"><h3>DOC（中等等級）</h3><ul><li><strong>創立：</strong>1963（首個 DOC 1966）</li><li><strong>數量：</strong>約 330 個</li><li><strong>品質檢測：</strong>✅ 須通過檢驗，規範較寬</li><li><strong>封條：</strong>部分產區採用，非全面強制</li><li><strong>產量限制：</strong>較寬（10,000-12,000 kg/ha）</li><li><strong>陳年要求：</strong>較短或無</li><li><strong>代表：</strong>Barbera d'Asti, Soave</li></ul></div></div></div><div class=\"dna-research\"><h3>⚠️ 重要：DOCG ≠ 品質保證</h3><div class=\"science-card\">頂級生產者的 DOC 酒款（如 Giacomo Conterno Barbera d'Alba）品質遠超無名小莊的 DOCG Barolo</div><div class=\"science-note\">選酒策略：<strong>頂級生產者 > 頂級年份 > 分級等級</strong></div></div></div>"
     },
     {
       "type": "content",
       "title": "國際分級系統比較",
-      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🇫🇷 法國 AOC</h3><p class=\"mf-style\">1935 年創立｜最悠久｜AOP > IGP > Vin de France</p><p class=\"mf-prod\">極精確風土劃分（Burgundy Grand Cru 幾公頃）/ Cru 分級（1855 Bordeaux）/ 無強制品質檢測 / 全球最高認知度</p></div><div class=\"mf-zone warm\"><h3>🇪🇸 西班牙 DO</h3><p class=\"mf-style\">DOCa（2個）> DO > VdlT</p><p class=\"mf-prod\">強調陳年時間分級（Crianza/Reserva/Gran Reserva）/ 僅 Rioja 和 Priorat 是 DOCa / 系統較簡單直觀</p></div><div class=\"mf-zone cool\"><h3>🇩🇪 德國 VDP</h3><p class=\"mf-style\">雙重系統：VDP（風土）+ Prädikat（成熟度）</p><p class=\"mf-prod\">Grosse Lage（頂級單一園）/ Kabinett→Spätlese→Auslese→BA→TBA（成熟度分級）/ 最複雜學術化</p></div><div class=\"mf-zone plain\"><h3>🇵🇹 葡萄牙 DOC</h3><p class=\"mf-style\">DOP > IGP｜Douro 1756 年（世界最古老）</p><p class=\"mf-prod\">Port 酒複雜分級（Vintage/LBV/Tawny）/ 傳統較少創新 / 義大利 IGT 提供更多自由度</p></div></div><div class=\"science-note\">歐盟 2009 年統一：DOCG/DOC = PDO（原產地保護），IGT = PGI（地理標示保護）</div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🇫🇷 法國 AOC</h3><p class=\"mf-style\">1935 年創立｜最悠久｜AOP > IGP > Vin de France</p><p class=\"mf-prod\">極精確風土劃分（Burgundy Grand Cru 幾公頃）/ Cru 分級（1855 Bordeaux）/ 各國原產地制度的範本 / 全球最高認知度</p></div><div class=\"mf-zone warm\"><h3>🇪🇸 西班牙 DO</h3><p class=\"mf-style\">DOCa（2個）> DO > VdlT</p><p class=\"mf-prod\">強調陳年時間分級（Crianza/Reserva/Gran Reserva）/ 僅 Rioja 和 Priorat 是 DOCa / 系統較簡單直觀</p></div><div class=\"mf-zone cool\"><h3>🇩🇪 德國 VDP</h3><p class=\"mf-style\">雙重系統：VDP 私人協會（風土）+ 法定 Prädikat（成熟度）</p><p class=\"mf-prod\">Grosse Lage（頂級單一園）/ Kabinett→Spätlese→Auslese→BA→TBA（成熟度分級）/ 最複雜學術化</p></div><div class=\"mf-zone plain\"><h3>🇵🇹 葡萄牙 DOC</h3><p class=\"mf-style\">DOP > IGP｜Douro 1756 年（世界最早劃定的產區之一）</p><p class=\"mf-prod\">Port 酒複雜分級（Vintage/LBV/Tawny）/ 傳統較少創新 / 義大利 IGT 提供更多自由度</p></div></div><div class=\"science-note\">歐盟 2009 年統一：DOCG/DOC = PDO（原產地保護），IGT = PGI（地理標示保護）</div></div>"
     },
     {
       "type": "image",
       "title": "🍷 分級實例：DOCG",
       "image": "/italy/images/labels/piemonte/barolo-2013.jpg",
-      "caption": "Barolo DOCG 2013——最高等級，強制每批次化學+感官檢測，瓶頸貼有國家保證封條（Fascetta）。"
+      "caption": "Barolo DOCG 2013——最高等級，每批次接受最嚴格的化學+感官檢測，瓶頸貼有國家保證封條（Fascetta）。"
     },
     {
       "type": "image",
       "title": "🔐 Fascetta 封條特寫",
       "image": "/italy/images/reference/fascetta-doc-docg-tricolore.jpg",
-      "caption": "國家保證封條特寫：上方金色為 DOCG 封條，下方藍色為 DOC 封條——皆含唯一序號與義大利國徽，DOCG 封條為 DOC 所沒有的獨有標識。"
+      "caption": "國家保證封條特寫：上方金色為 DOCG 封條，下方藍色為 DOC 封條——皆含唯一序號與義大利國徽，用於防偽與追溯；DOCG 必須貼封條，部分 DOC 也採用。"
     },
     {
       "type": "image",
       "title": "🍷 分級實例：IGT",
       "image": "/italy/images/labels/toscana/tignanello-supertuscan-igt-2010.jpg",
-      "caption": "Antinori Tignanello（Toscana IGT）——酒標僅標示 IGT，卻是全球最昂貴的義大利酒之一，正是「DOCG ≠ 品質保證」最好的證明。"
+      "caption": "Antinori Tignanello（Toscana IGT）——酒標僅標示 IGT，卻是國際知名、價格高昂的頂級酒款，正是「DOCG ≠ 品質保證」最好的證明。"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
         "義大利分級系統：1963 年 DOC → 1980 年 DOCG → 1992 年 IGT，三步演化完成現代架構",
-        "DOCG 創立於 1980 年，目前全義大利有 77 個，Piedmont 擁有最多（18 個）",
+        "首批 DOCG 於 1980 年授予，目前全義大利約有 77 個，Piemonte 擁有最多",
         "DOCG 六大條件：精確地理邊界、法定品種、產量限制、陳年要求、最低酒精度、強制品質檢測",
-        "DOCG 獨有：瓶頸國家保證封條（Fascetta），含唯一序號，粉紅色（靜態）或綠色（氣泡）",
-        "DOC vs DOCG 最大差異：DOCG 每批次強制化學+感官檢測，DOC 無",
-        "重要觀念：DOCG ≠ 品質保證。頂級 IGT（Sassicaia €250-400，Tignanello €100-180）常勝過平庸 DOCG",
-        "法國 AOC 最悠久、最精確（Burgundy Grand Cru 精確到幾公頃），但無強制品質檢測",
+        "DOCG 必備：瓶頸國家保證封條（Fascetta），含唯一序號，防偽可追溯（部分 DOC 也採用）",
+        "DOC vs DOCG 最大差異：DOCG 檢測更嚴格（每批次化學+感官），並強制貼國家封條",
+        "重要觀念：DOCG ≠ 品質保證。頂級 IGT（如 Tignanello）常勝過平庸 DOCG",
+        "法國 AOC 最悠久、最精確（Burgundy Grand Cru 精確到幾公頃），是各國原產地制度的範本",
         "西班牙強調陳年分級（Crianza/Reserva/Gran Reserva），德國有雙重系統（VDP 風土 + Prädikat 成熟度）",
         "最終選酒策略：頂級生產者 > 頂級年份 > 分級等級——名莊的 DOC 常勝過二流廠的 DOCG"
       ]
@@ -94,42 +114,62 @@
         {
           "type": "single",
           "question": "DOCG 制度創立於哪一年？",
-          "options": ["1963", "1980", "1992", "2010"],
+          "options": [
+            "1963",
+            "1980",
+            "1992",
+            "2010"
+          ],
           "correct": 1,
-          "explanation": "DOCG 制度創立於 1980 年，為了區分頂級產區。首批 DOCG 包括 Barolo、Barbaresco、Brunello、Vino Nobile。"
+          "explanation": "DOCG 等級雖在 1963 年法規中已有規劃，首批 DOCG 於 1980 年授予：Brunello di Montalcino、Vino Nobile di Montepulciano、Barolo、Barbaresco；Chianti 則於 1984 年升格。"
         },
         {
           "type": "single",
           "question": "DOCG 和 DOC 最大的差異是什麼？",
-          "options": ["產量限制更嚴格", "陳年時間更長", "每批次強制品質檢測（化學+感官）", "價格更高"],
+          "options": [
+            "產量限制更嚴格",
+            "陳年時間更長",
+            "更嚴格的檢測，並強制貼國家保證封條",
+            "價格更高"
+          ],
           "correct": 2,
-          "explanation": "DOCG 最大特徵是每批次必須通過政府化學分析和感官品鑑委員會測試，這是 DOC 所沒有的。"
+          "explanation": "DOC 與 DOCG 都須通過化學與感官檢驗，但 DOCG 的規範更嚴格（每批次裝瓶前檢測），並且必須在瓶頸貼上國家保證封條，這是兩者最主要的差異。"
         },
         {
           "type": "single",
           "question": "DOCG 酒標上必須有什麼獨特標識？",
-          "options": ["金色標籤", "國家保證封條（Fascetta）", "生產者簽名", "MGA 標示"],
+          "options": [
+            "金色標籤",
+            "國家保證封條（Fascetta）",
+            "生產者簽名",
+            "MGA 標示"
+          ],
           "correct": 1,
-          "explanation": "DOCG 酒款必須在瓶頸貼上帶有序號的國家保證封條（粉紅色或綠色），證明已通過檢測，這是 DOCG 獨有特徵。"
+          "explanation": "DOCG 酒款必須在瓶頸貼上帶有唯一序號的國家保證封條（Fascetta），由國家印製局印製，用於防偽與追溯；部分 DOC 也採用封條，但 DOCG 是強制的。"
         },
         {
           "type": "single",
           "question": "截至 2024 年，義大利共有多少個 DOCG？",
-          "options": ["33 個", "57 個", "77 個", "100 個"],
+          "options": [
+            "33 個",
+            "57 個",
+            "77 個",
+            "100 個"
+          ],
           "correct": 2,
-          "explanation": "截至 2024 年，義大利共有 77 個 DOCG，其中 Piedmont 擁有最多（18 個）。"
+          "explanation": "截至 2024 年，義大利約有 77 個 DOCG，其中 Piemonte 擁有最多。"
         },
         {
           "type": "single",
           "question": "Sassicaia 如何從 Vino da Tavola 升格取得法定保護地位？",
           "options": [
             "被列為 Chianti Classico DOCG",
-            "單獨設立 Bolgheri Sassicaia DOC（義大利唯一單一酒莊 DOC）",
+            "單獨設立 Bolgheri Sassicaia DOC（由單一酒莊獨享的 DOC）",
             "升格為 IGT 超級托斯卡納",
             "申請為歐盟 GI 保護"
           ],
           "correct": 1,
-          "explanation": "1994 年，義大利政府為 Sassicaia 單獨設立 Bolgheri Sassicaia DOC，是全義大利唯一以單一酒莊命名的 DOC 產區，確立了其法律地位。"
+          "explanation": "Sassicaia 於 1994 年成為 Bolgheri DOC 下的 Sassicaia 子產區，2013 年再獨立為 Bolgheri Sassicaia DOC，是罕見由單一酒莊獨享的 DOC，確立了其法律地位。"
         }
       ]
     }

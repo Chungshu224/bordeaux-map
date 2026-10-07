@@ -33,7 +33,7 @@
         "只有現代派風格酒莊受益"
       ],
       "answer": 1,
-      "explanation": "Serralunga d'Alba 的 Helvetian 石灰岩土壤排水能力極強，在多雨潮濕的艱難年份能保持根系健康，相對其他村莊表現更佳。"
+      "explanation": "Serralunga d'Alba 的 Serravallian（舊稱 Helvetian）石灰質泥灰岩與砂岩土壤較貧瘠緊實、排水能力極強，在多雨潮濕的艱難年份能保持根系健康，相對其他村莊表現更佳。"
     },
     {
       "question": "評估 Barolo 年份品質，以下哪個組合最為關鍵？",
@@ -60,12 +60,12 @@
     {
       "type": "content",
       "title": "年份重要性與氣候關鍵因素",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">Barolo 是全義大利年份差異最顯著的產區之一。Nebbiolo 對氣候極為敏感，優異年份與普通年份之間，品質差距可達 30-40 年的陳年潛力。</p><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌸 春季</strong>：均衡降雨與適度溫暖促進健康萌芽；冰雹是最大威脅，可摧毀 30-50% 產量</div><div class=\"kp-box\"><strong>☀️ 夏季</strong>：高溫乾燥確保充分成熟，但極端高溫（超過 38°C）會導致酸度喪失與過熟</div><div class=\"kp-box\"><strong>🍂 秋季</strong>：日夜溫差是品質核心。大溫差保留酸度、花青素與細膩香氣複雜度</div></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🌡️ 最佳氣候模型</h3><p class=\"mf-style\">春季均衡 → 夏季溫暖乾燥 → 秋季涼爽延長</p><p class=\"mf-prod\">典型代表：2010、2013、2016、2019</p></div><div class=\"mf-zone warm\"><h3>⚠️ 挑戰年份特徵</h3><p class=\"mf-style\">夏季乾旱或秋季豪雨，任一都構成威脅</p><p class=\"mf-prod\">典型代表：2002（冰雹）、2014（多雨）、2017（乾旱）</p></div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">Barolo 是全義大利年份差異最顯著的產區之一。Nebbiolo 對氣候極為敏感，優異年份與普通年份之間，品質與陳年潛力差距極大。</p><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌸 春季</strong>：均衡降雨與適度溫暖促進健康萌芽、開花；晚霜與開花期多雨會降低產量</div><div class=\"kp-box\"><strong>☀️ 夏季</strong>：溫暖乾燥確保充分成熟，但極端高溫會導致酸度喪失與過熟；夏季冰雹是最大威脅之一，可嚴重損害產量</div><div class=\"kp-box\"><strong>🍂 秋季</strong>：日夜溫差是品質核心。大溫差保留酸度、花青素與細膩香氣複雜度</div></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🌡️ 最佳氣候模型</h3><p class=\"mf-style\">春季均衡 → 夏季溫暖乾燥 → 秋季涼爽延長</p><p class=\"mf-prod\">典型代表：2010、2013、2016、2019</p></div><div class=\"mf-zone warm\"><h3>⚠️ 挑戰年份特徵</h3><p class=\"mf-style\">夏季乾旱或秋季豪雨，任一都構成威脅</p><p class=\"mf-prod\">典型代表：2002（冰雹）、2014（多雨）、2017（乾旱）</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "Barolo 年份評級 2000–2024",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">以下為 Barolo 過去 25 年的年份評級摘要，★★★★★ 為傳奇年份，★★★ 為良好，★★ 為普通，★ 為艱難。</p><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge modern\">★★★★★</div><div class=\"timeline-content\"><strong>2016：</strong>當代最偉大——完美平衡，豐富果味＋精緻結構，陳年潛力 40-50 年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">★★★★★</div><div class=\"timeline-content\"><strong>2010：</strong>經典傳統風格高峰——濃郁、複雜、單寧強勁，陳年潛力 30-50 年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">★★★★</div><div class=\"timeline-content\"><strong>2013：</strong>優雅型偉大年份——酸度精緻、花香突出，傳統派愛好者首選，潛力 30-40 年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">★★★★</div><div class=\"timeline-content\"><strong>2019：</strong>現代偉大年份——果味飽滿、結構完整，相對早熟，潛力 25-35 年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">★★★</div><div class=\"timeline-content\"><strong>2015、2018：</strong>溫暖年份——果味豐富飽滿，酸度略低，現代派風格表現更佳</div></div><div class=\"timeline-item\"><div class=\"timeline-badge sparkling\">★★</div><div class=\"timeline-content\"><strong>2014：</strong>多雨挑戰年——需嚴格篩選，Serralunga 排水佳地塊仍有好酒，慎選生產者</div></div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">以下為 Barolo 過去 25 年的年份評級摘要，★★★★★ 為傳奇年份，★★★ 為良好，★★ 為普通，★ 為艱難。</p><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge modern\">★★★★★</div><div class=\"timeline-content\"><strong>2016：</strong>當代最偉大——完美平衡，豐富果味＋精緻結構，陳年潛力 40-50 年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">★★★★★</div><div class=\"timeline-content\"><strong>2010：</strong>經典傳統風格高峰——濃郁、複雜、單寧強勁，陳年潛力 30-50 年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">★★★★</div><div class=\"timeline-content\"><strong>2013：</strong>優雅型偉大年份——酸度精緻、花香突出，傳統派愛好者首選，潛力 30-40 年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">★★★★</div><div class=\"timeline-content\"><strong>2019：</strong>現代偉大年份——果味飽滿、結構完整，相對早熟，潛力 25-35 年</div></div><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">★★★</div><div class=\"timeline-content\"><strong>2015、2017：</strong>溫暖炎熱年份——果味豐富飽滿，酸度略低，需慎選生產者</div></div><div class=\"timeline-item\"><div class=\"timeline-badge sparkling\">★★</div><div class=\"timeline-content\"><strong>2014、2018：</strong>多雨挑戰年——品質參差，需嚴格篩選，Serralunga 排水佳地塊仍有好酒，慎選生產者</div></div></div></div>"
     },
     {
       "type": "content",
@@ -75,7 +75,7 @@
     {
       "type": "content",
       "title": "五大村莊年份表現差異策略",
-      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🏔️ Serralunga d'Alba</h3><p class=\"mf-style\">土壤：Helvetian 石灰岩，排水極佳</p><p class=\"mf-prod\">艱難年份最穩定｜強勁結構風格｜代表：Giacomo Conterno Monfortino</p></div><div class=\"mf-zone warm\"><h3>🌺 La Morra</h3><p class=\"mf-style\">土壤：Tortonian 黏土較多，保水性強</p><p class=\"mf-prod\">溫暖年份表現最佳｜花香優雅風格｜乾旱年份有優勢｜代表：Roberto Voerzio</p></div><div class=\"mf-zone cool\"><h3>🏘️ Barolo Village</h3><p class=\"mf-style\">土壤：混合地質，居中風格</p><p class=\"mf-prod\">均衡年份最能展現特色｜傳統優雅｜代表：Bartolo Mascarello</p></div><div class=\"mf-zone plain\"><h3>⛰️ Monforte d'Alba</h3><p class=\"mf-style\">土壤：混合 Helvetian/Tortonian</p><p class=\"mf-prod\">各年份均表現穩定｜兼具力量與優雅｜代表：Aldo Conterno Granbussia</p></div></div>"
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🏔️ Serralunga d'Alba</h3><p class=\"mf-style\">土壤：Serravallian（舊稱 Helvetian）石灰質泥灰岩與砂岩，排水極佳</p><p class=\"mf-prod\">艱難年份最穩定｜強勁結構風格｜代表：Giacomo Conterno Monfortino</p></div><div class=\"mf-zone warm\"><h3>🌺 La Morra</h3><p class=\"mf-style\">土壤：Tortonian 黏土較多，保水性強</p><p class=\"mf-prod\">溫暖年份表現最佳｜花香優雅風格｜乾旱年份有優勢｜代表：Roberto Voerzio</p></div><div class=\"mf-zone cool\"><h3>🏘️ Barolo Village</h3><p class=\"mf-style\">土壤：混合地質，居中風格</p><p class=\"mf-prod\">均衡年份最能展現特色｜傳統優雅｜代表：Bartolo Mascarello</p></div><div class=\"mf-zone plain\"><h3>⛰️ Monforte d'Alba</h3><p class=\"mf-style\">土壤：Serravallian 與 Tortonian 混合</p><p class=\"mf-prod\">各年份均表現穩定｜兼具力量與優雅｜代表：Aldo Conterno Granbussia</p></div></div>"
     },
     {
       "type": "image",
@@ -87,19 +87,19 @@
       "type": "image",
       "title": "🍷 年份實例：Barolo 2006",
       "image": "/italy/images/labels/piemonte/barolo-2006-ascheri.jpg",
-      "caption": "Ascheri Sorano Barolo DOCG 2006——中生代年份，對比 1996 與 2013 兩端，展現 Barolo 年份光譜的中間表現。"
+      "caption": "Ascheri Sorano Barolo DOCG 2006——中生代年份，介於 1996 老年份與近年年份之間，展現 Barolo 年份光譜的中段表現。"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
-        "Barolo 年份差異顯著，優異與普通年份陳年潛力差距達 30-40 年",
+        "Barolo 年份差異顯著，優異與普通年份在品質與陳年潛力上差距極大",
         "秋季日夜溫差是影響年份品質的最關鍵氣候因素，保留酸度與香氣複雜度",
         "2016 年是當代最偉大年份：完美平衡，豐富果味＋精緻結構，潛力 40-50 年",
         "2010 年是傳統風格高峰：濃郁複雜、單寧強勁，適合長期窖藏愛好者",
         "2013 年為優雅型偉大年份：酸度精緻、花香突出，傳統派首選",
         "2014 年多雨艱難：需嚴格篩選生產者，Serralunga 排水佳地塊相對最佳",
-        "Serralunga d'Alba 石灰岩排水優異，艱難年份表現最穩定",
+        "Serralunga d'Alba 石灰質泥灰岩與砂岩排水優異，艱難年份表現最穩定",
         "La Morra 黏土保水佳，溫暖乾燥年份優勢最大",
         "選購策略：頂級生產者 > 頂級年份 > 頂級 MGA 地塊"
       ]
@@ -138,12 +138,12 @@
           "question": "Serralunga d'Alba 在艱難年份（如 2014 多雨年）表現相對最佳的原因是？",
           "options": [
             "海拔最高，氣溫最低",
-            "Helvetian 石灰岩土壤排水能力極強",
+            "Serravallian（Helvetian）石灰質土壤排水能力極強",
             "使用最高比例的現代釀造技術",
             "葡萄樹齡最老"
           ],
           "correct": 1,
-          "explanation": "Serralunga d'Alba 的 Helvetian 石灰岩土壤排水能力極強，在多雨潮濕的艱難年份能保持根系健康，相對其他村莊表現更佳。"
+          "explanation": "Serralunga d'Alba 的 Serravallian（舊稱 Helvetian）石灰質泥灰岩與砂岩土壤較貧瘠緊實、排水能力極強，在多雨潮濕的艱難年份能保持根系健康，相對其他村莊表現更佳。"
         },
         {
           "type": "single",

@@ -22,10 +22,10 @@
         "Verdicchio"
       ],
       "answer": 2,
-      "explanation": "Soave（尤其是 Soave Classico DOCG）主要使用 Garganega 葡萄釀造，以杏仁香聞名。"
+      "explanation": "Soave（尤其是 Soave Classico DOC）主要使用 Garganega 葡萄釀造，以杏仁香聞名。"
     },
     {
-      "question": "哪個品種以獨特的魚形瓶（Anfora）包裝聞名？",
+      "question": "哪個品種以獨特的雙耳瓶（Anfora）造型酒瓶包裝聞名？",
       "options": [
         "Vermentino",
         "Verdicchio",
@@ -33,7 +33,7 @@
         "Trebbiano"
       ],
       "answer": 1,
-      "explanation": "Verdicchio dei Castelli di Jesi 傳統上使用魚形瓶（Anfora）包裝，非常具有辨識度。"
+      "explanation": "Verdicchio dei Castelli di Jesi 傳統上使用雙耳瓶（Anfora，常被形容為魚形瓶）包裝，非常具有辨識度。"
     },
     {
       "question": "Vermentino 的特色風味是？",
@@ -56,37 +56,37 @@
     {
       "type": "content",
       "title": "🏆 五大白葡萄品種總覽",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">五個品種覆蓋義大利白酒的完整風格光譜，<span class=\"highlight\">從Friuli的清爽Pinot Grigio到Sardinia的海岸Vermentino</span>，從大眾市場到頂級珍藏，每個場合都有最適合的選擇</p></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🌟 Pinot Grigio — 國際巨星</strong><p>Friuli/Trentino清爽精品到Veneto大眾市場，義大利出口量最大白酒。輕盈易飲，中高酸，青蘋果梨子，年輕即飲，$-$$。</p></div><div class=\"orvieto-card\"><strong>🌾 Trebbiano + 🍇 Garganega — 中性大眾 &amp; Soave精品</strong><p>Trebbiano：義大利最廣植白葡萄，法國稱Ugni Blanc，清淡高酸日常酒，也是Balsamic醋原料，$。Garganega：Soave之魂，獨特苦杏仁收尾，複雜陳年潛力，$$-$$$。</p></div><div class=\"orvieto-card\"><strong>💎 Verdicchio + 🌊 Vermentino — 礦物海岸雙星</strong><p>Verdicchio：Marche礦物瑰寶，魚形瓶（Anfora）包裝，高酸礦物感，海鮮絕配，$$。Vermentino：Sardinia海岸之星，法國稱Rolle，鹽礦鹹鮮地中海個性，$$。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">5</div><div class=\"stat-label\">代表品種</div></div><div class=\"stat-box\"><div class=\"stat-number\">清爽→複雜</div><div class=\"stat-label\">完整風格光譜</div></div><div class=\"stat-box\"><div class=\"stat-number\">$→$$$</div><div class=\"stat-label\">多元價格帶</div></div><div class=\"stat-box\"><div class=\"stat-number\">高酸</div><div class=\"stat-label\">共同特色</div></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">五個品種覆蓋義大利白酒的完整風格光譜，<span class=\"highlight\">從Friuli的清爽Pinot Grigio到Sardinia的海岸Vermentino</span>，從大眾市場到頂級珍藏，每個場合都有最適合的選擇</p></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🌟 Pinot Grigio — 國際巨星</strong><p>Friuli/Trentino清爽精品到Veneto大眾市場，義大利出口量最大白酒。輕盈易飲，中高酸，青蘋果梨子，年輕即飲。</p></div><div class=\"orvieto-card\"><strong>🌾 Trebbiano + 🍇 Garganega — 中性大眾 &amp; Soave精品</strong><p>Trebbiano：義大利最廣植白葡萄，法國稱Ugni Blanc，清淡高酸日常酒，也是Balsamic醋原料。Garganega：Soave之魂，獨特苦杏仁收尾，複雜陳年潛力。</p></div><div class=\"orvieto-card\"><strong>💎 Verdicchio + 🌊 Vermentino — 礦物海岸雙星</strong><p>Verdicchio：Marche礦物瑰寶，雙耳瓶（Anfora）造型酒瓶，高酸礦物感，海鮮絕配。Vermentino：Sardinia海岸之星，法國稱Rolle，鹽礦鹹鮮地中海個性。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">5</div><div class=\"stat-label\">代表品種</div></div><div class=\"stat-box\"><div class=\"stat-number\">清爽→複雜</div><div class=\"stat-label\">完整風格光譜</div></div><div class=\"stat-box\"><div class=\"stat-number\">日常→陳年</div><div class=\"stat-label\">多元品質</div></div><div class=\"stat-box\"><div class=\"stat-number\">高酸</div><div class=\"stat-label\">共同特色</div></div></div>"
     },
     {
       "type": "content",
       "title": "🌟 Pinot Grigio — 國際巨星",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">「灰皮諾」（Pinot Gris / Pinot Grigio），義大利出口量最大的白酒 —— <span class=\"intro-highlight\">清爽輕盈的國際明星，Friuli頂級款到大眾市場，覆蓋從宴客到日常的完整選擇</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡黃色帶綠色調，清澈透明（Ramato橘皮版本帶銅色）</p><p><strong>香氣：</strong>青蘋果、梨子、柑橘、白花、金銀花；高品質版本帶蜂蜜杏仁</p><p><strong>口感：</strong>酸度中到高，酒體輕到中等，清新易飲，12-13.5%</p><p><strong>產區：</strong>Friuli-Venezia Giulia（最頂級）、Trentino-Alto Adige（高海拔清新）、Veneto（大眾市場）</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Friuli Pinot Grigio DOC：</strong>最頂級，礦物感清爽，Jermann名莊，陳年3-5年，€15-35</p><p><strong>Trentino-Alto Adige DOC：</strong>高海拔清新，更多花香礦物，均衡優雅，€15-30</p><p><strong>Delle Venezie DOC：</strong>大眾市場，易飲親民，年輕即飲，€8-15</p><p><strong>配餐：</strong>沙拉、開胃菜（Antipasto）、清蒸魚、海鮮、白肉、義大利麵、壽司</p><p><strong>特色：</strong>義大利出口最大白酒，全球最受歡迎義大利白酒，年輕即飲1-3年最佳</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">中-高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">輕-中</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">1-5年</div><div class=\"stat-label\">適飲期</div></div><div class=\"stat-box\"><div class=\"stat-number\">$-$$</div><div class=\"stat-label\">價格帶</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">「灰皮諾」（Pinot Gris / Pinot Grigio），義大利出口量最大的白酒 —— <span class=\"intro-highlight\">清爽輕盈的國際明星，Friuli頂級款到大眾市場，覆蓋從宴客到日常的完整選擇</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡黃色帶綠色調，清澈透明（Ramato橘皮版本帶銅色）</p><p><strong>香氣：</strong>青蘋果、梨子、柑橘、白花、金銀花；高品質版本帶蜂蜜杏仁</p><p><strong>口感：</strong>酸度中到高，酒體輕到中等，清新易飲，12-13.5%</p><p><strong>產區：</strong>Friuli-Venezia Giulia（最頂級）、Trentino-Alto Adige（高海拔清新）、Veneto（大眾市場）</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Friuli Pinot Grigio DOC：</strong>最頂級，礦物感清爽，Jermann名莊，陳年3-5年</p><p><strong>Trentino-Alto Adige DOC：</strong>高海拔清新，更多花香礦物，均衡優雅</p><p><strong>Delle Venezie DOC：</strong>大眾市場，易飲親民，年輕即飲</p><p><strong>配餐：</strong>沙拉、開胃菜（Antipasto）、清蒸魚、海鮮、白肉、義大利麵、壽司</p><p><strong>特色：</strong>義大利出口最大白酒，全球最受歡迎義大利白酒，年輕即飲1-3年最佳</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">中-高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">輕-中</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">1-5年</div><div class=\"stat-label\">適飲期</div></div><div class=\"stat-box\"><div class=\"stat-number\">Friuli</div><div class=\"stat-label\">最高品質產區</div></div></div>"
     },
     {
       "type": "content",
       "title": "🌾 Trebbiano — 產量巨人",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">義大利種植面積最廣的白葡萄，法國稱Ugni Blanc —— <span class=\"intro-highlight\">產量龐大、高酸清淡，是日常餐酒的好夥伴，也是Balsamic摩德納醋與法國干邑（Cognac）的重要原料</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡黃色，清澈透明，通常顏色很淡</p><p><strong>香氣：</strong>中性清淡，青蘋果、檸檬、白桃；高品質版本帶白花礦物感</p><p><strong>口感：</strong>酸度高（最大優點），酒體輕到中等，清爽不複雜，11-12.5%</p><p><strong>特色：</strong>高酸度是天然優點，適合做調配基底；法國稱Ugni Blanc，是Cognac干邑的核心基酒品種</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Trebbiano d'Abruzzo DOC：</strong>Abruzzo最重要白酒，頂級莊主Valentini版本可陳年10年+，品質令人驚艷</p><p><strong>Orvieto DOC（混釀）：</strong>Umbria名酒，以Trebbiano為基底調配，礦物感偶爾出色</p><p><strong>Lugana DOC：</strong>Trebbiano di Lugana（又稱Turbiana），Garda湖畔，近年最受國際關注，花香礦物感</p><p><strong>配餐：</strong>炸海鮮（Fritto Misto）、清淡魚類、沙拉、開胃菜，清爽無壓力日常飲用</p><p><strong>Balsamic醋：</strong>Trebbiano是摩德納Balsamic傳統醋（Aceto Balsamico Tradizionale）的重要原料</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">輕-中</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">1-3年</div><div class=\"stat-label\">適飲期</div></div><div class=\"stat-box\"><div class=\"stat-number\">$</div><div class=\"stat-label\">價格帶</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">義大利種植面積最廣的白葡萄，法國稱Ugni Blanc —— <span class=\"intro-highlight\">產量龐大、高酸清淡，是日常餐酒的好夥伴，也是Balsamic摩德納醋與法國干邑（Cognac）的重要原料</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡黃色，清澈透明，通常顏色很淡</p><p><strong>香氣：</strong>中性清淡，青蘋果、檸檬、白桃；高品質版本帶白花礦物感</p><p><strong>口感：</strong>酸度高（最大優點），酒體輕到中等，清爽不複雜，11-12.5%</p><p><strong>特色：</strong>高酸度是天然優點，適合做調配基底；法國稱Ugni Blanc，是Cognac干邑的核心基酒品種</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Trebbiano d'Abruzzo DOC：</strong>Abruzzo最重要白酒，頂級莊主Valentini版本可陳年10年+，品質令人驚艷</p><p><strong>Orvieto DOC（混釀）：</strong>Umbria名酒，以Trebbiano為基底調配，礦物感偶爾出色</p><p><strong>Lugana DOC：</strong>Trebbiano di Lugana（又稱Turbiana），Garda湖畔，名字雖有Trebbiano，其實與Verdicchio關係較近，花香礦物感</p><p><strong>配餐：</strong>炸海鮮（Fritto Misto）、清淡魚類、沙拉、開胃菜，清爽無壓力日常飲用</p><p><strong>Balsamic醋：</strong>Trebbiano是摩德納Balsamic傳統醋（Aceto Balsamico Tradizionale）的重要原料</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">輕-中</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">1-3年</div><div class=\"stat-label\">適飲期</div></div><div class=\"stat-box\"><div class=\"stat-number\">Ugni Blanc</div><div class=\"stat-label\">法國名稱</div></div></div>"
     },
     {
       "type": "content",
       "title": "🍇 Garganega — Soave 之魂",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">Veneto的優雅白葡萄，Soave的靈魂所在 —— <span class=\"intro-highlight\">獨特的苦杏仁收尾（Mandorla），白桃杏桃花香，頂級Soave Classico陳年10年以上展現令人驚艷的複雜度</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡黃綠色，透明度高，陳年後轉金黃</p><p><strong>香氣：</strong>白桃、杏桃、杏花、金銀花、檸檬；最特色：苦杏仁（Mandorla）收尾，獨一無二</p><p><strong>口感：</strong>酸度中到高，礦物感，酒體中到飽滿，微苦杏仁尾韻，11.5-13%</p><p><strong>產區：</strong>Veneto（Verona附近），Soave Classico火山玄武岩土壤帶來礦物複雜度</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Soave Classico DOCG：</strong>最頂級，法規要求70%+ Garganega，Gini / Pieropan名莊，陳年潛力強</p><p><strong>Soave Superiore DOCG：</strong>山丘葡萄園，火山土壤帶來更強礦物感，複雜優雅</p><p><strong>Recioto di Soave DOCG：</strong>風乾甜白酒，杏仁蜂蜜濃郁，可媲美法國Sauternes</p><p><strong>配餐：</strong>淡水鱸魚、白肉烤雞（Pollo Arrosto）、清爽義大利麵、蔬菜料理</p><p><strong>陳年：</strong>Soave Classico 3-8年，單一園5-12年，杏仁香隨陳年增強</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">中-高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">中-飽滿</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">3-12年</div><div class=\"stat-label\">陳年潛力</div></div><div class=\"stat-box\"><div class=\"stat-number\">$$-$$$</div><div class=\"stat-label\">價格帶</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Veneto的優雅白葡萄，Soave的靈魂所在 —— <span class=\"intro-highlight\">獨特的苦杏仁收尾（Mandorla），白桃杏桃花香，頂級Soave Classico陳年10年以上展現令人驚艷的複雜度</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡黃綠色，透明度高，陳年後轉金黃</p><p><strong>香氣：</strong>白桃、杏桃、杏花、金銀花、檸檬；最特色：杏仁（Mandorla）收尾，獨一無二</p><p><strong>口感：</strong>酸度中到高，礦物感，酒體中到飽滿，微苦杏仁尾韻，11.5-13%</p><p><strong>產區：</strong>Veneto（Verona附近），Soave Classico火山玄武岩土壤帶來礦物複雜度</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Soave Classico DOC：</strong>歷史核心區，法規要求70%+ Garganega，Gini / Pieropan名莊，陳年潛力強</p><p><strong>Soave Superiore DOCG：</strong>限丘陵葡萄園，產量更低，複雜優雅</p><p><strong>Recioto di Soave DOCG：</strong>風乾甜白酒，杏仁蜂蜜濃郁，可媲美法國Sauternes</p><p><strong>配餐：</strong>淡水鱸魚、白肉烤雞（Pollo Arrosto）、清爽義大利麵、蔬菜料理</p><p><strong>陳年：</strong>Soave Classico 3-8年，單一園5-12年，杏仁香隨陳年增強</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">中-高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">中-飽滿</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">3-12年</div><div class=\"stat-label\">陳年潛力</div></div><div class=\"stat-box\"><div class=\"stat-number\">Soave</div><div class=\"stat-label\">代表產區</div></div></div>"
     },
     {
       "type": "content",
       "title": "💎 Verdicchio — Marche 礦物瑰寶",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">Marche的礦物瑰寶，以獨特魚形瓶（Anfora）聞名 —— <span class=\"intro-highlight\">高酸礦物感，草本微苦收尾，是義大利中部最具特色的白酒，海鮮料理天生絕配</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡黃綠色，清澈明亮（名字Verdicchio源自verde＝綠）</p><p><strong>香氣：</strong>檸檬、青蘋果、白花、礦物感、微微海鹽；陳年發展榛果堅果香</p><p><strong>口感：</strong>酸度高，礦物感鮮明，輕到中等酒體，微苦收尾（品種特徵），11.5-13%</p><p><strong>特色：</strong>魚形瓶（Anfora）是Verdicchio dei Castelli di Jesi的傳統包裝，義大利最具辨識度的酒瓶設計之一</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Verdicchio dei Castelli di Jesi DOC：</strong>最著名，Marche沿海丘陵，Umani Ronchi / Bucci名莊，清脆礦物</p><p><strong>Verdicchio dei Castelli di Jesi Classico Superiore：</strong>更複雜版本，礦物感更強，€15-25</p><p><strong>Verdicchio di Matelica DOC：</strong>內陸山地版本，酒體更豐厚，礦物感更強烈</p><p><strong>配餐：</strong>生蠔 / 貝類（天生絕配）、炸海鮮、亞洲料理；礦物感與海鮮鮮味完美共鳴</p><p><strong>陳年：</strong>一般款3-5年，Riserva 5-10年，複雜度隨時間提升</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">輕-中</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">3-10年</div><div class=\"stat-label\">陳年潛力</div></div><div class=\"stat-box\"><div class=\"stat-number\">$$</div><div class=\"stat-label\">價格帶</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Marche的礦物瑰寶，以獨特的雙耳瓶（Anfora）造型酒瓶聞名 —— <span class=\"intro-highlight\">高酸礦物感，草本微苦收尾，是義大利中部最具特色的白酒，海鮮料理天生絕配</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡黃綠色，清澈明亮（名字Verdicchio源自verde＝綠）</p><p><strong>香氣：</strong>檸檬、青蘋果、白花、礦物感、微微海鹽；陳年發展榛果堅果香</p><p><strong>口感：</strong>酸度高，礦物感鮮明，輕到中等酒體，微苦收尾（品種特徵），11.5-13%</p><p><strong>特色：</strong>1950年代起流行的雙耳瓶（Anfora，常被形容為魚形瓶）是Verdicchio dei Castelli di Jesi最具辨識度的傳統包裝</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Verdicchio dei Castelli di Jesi DOC：</strong>最著名，Marche沿海丘陵，Umani Ronchi / Bucci名莊，清脆礦物</p><p><strong>Verdicchio dei Castelli di Jesi Classico Superiore：</strong>更複雜版本，礦物感更強</p><p><strong>Verdicchio di Matelica DOC：</strong>內陸山地版本，酒體更豐厚，礦物感更強烈</p><p><strong>配餐：</strong>生蠔 / 貝類（天生絕配）、炸海鮮、亞洲料理；礦物感與海鮮鮮味完美共鳴</p><p><strong>陳年：</strong>一般款3-5年，Riserva 5-10年，複雜度隨時間提升</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">輕-中</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">3-10年</div><div class=\"stat-label\">陳年潛力</div></div><div class=\"stat-box\"><div class=\"stat-number\">Marche</div><div class=\"stat-label\">代表產區</div></div></div>"
     },
     {
       "type": "content",
       "title": "🌊 Vermentino — 海岸之星",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">地中海海岸之星，Sardinia的驕傲 —— <span class=\"intro-highlight\">鹹鮮礦物、柑橘海風，是義大利南部島嶼對白酒世界最獨特的貢獻，海鮮大餐的靈魂伴侶</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡金黃色，明亮，比其他白品種顏色稍深</p><p><strong>香氣：</strong>柑橘（葡萄柚/萊姆）、青草、地中海香草（迷迭香）、海風鹽礦感、蜂蜜</p><p><strong>口感：</strong>酸度中高，礦物感鮮明，鹹鮮感（海岸特質），中等酒體，12-14%</p><p><strong>主要產區：</strong>Sardinia（最著名）、Liguria（Cinque Terre周邊）、Tuscany沿岸</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Vermentino di Gallura DOCG：</strong>Sardinia北部，義大利最頂級Vermentino，花崗岩土壤帶強烈礦物感，€15-35</p><p><strong>Vermentino di Sardegna DOC：</strong>整個Sardinia島，清爽易飲，性價比極高，€10-20</p><p><strong>Colli di Luni Vermentino DOC：</strong>Liguria/Tuscany邊界，優雅細緻海岸風格</p><p><strong>配餐：</strong>各式海鮮料理（天生絕配）、烤魚（Branzino）、地中海沙拉、魚湯（Zuppa di Pesce）</p><p><strong>法國別名：</strong>Rolle，在Provence地區也廣泛種植，Côtes de Provence白酒主要品種</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">中-高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">中</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">2-5年</div><div class=\"stat-label\">適飲期</div></div><div class=\"stat-box\"><div class=\"stat-number\">$$</div><div class=\"stat-label\">價格帶</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">地中海海岸之星，Sardinia的驕傲 —— <span class=\"intro-highlight\">鹹鮮礦物、柑橘海風，是義大利南部島嶼對白酒世界最獨特的貢獻，海鮮大餐的靈魂伴侶</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🎨 品種特徵</h4><p><strong>酒色：</strong>淡金黃色，明亮，比其他白品種顏色稍深</p><p><strong>香氣：</strong>柑橘（葡萄柚/萊姆）、青草、地中海香草（迷迭香）、海風鹽礦感、蜂蜜</p><p><strong>口感：</strong>酸度中高，礦物感鮮明，鹹鮮感（海岸特質），中等酒體，12-14%</p><p><strong>主要產區：</strong>Sardinia（最著名）、Liguria（Cinque Terre周邊）、Tuscany沿岸</p></div><div class=\"style-card sweet\"><h4>🍷 代表酒款 &amp; 配餐</h4><p><strong>Vermentino di Gallura DOCG：</strong>Sardinia北部，義大利最頂級Vermentino，花崗岩土壤帶強烈礦物感</p><p><strong>Vermentino di Sardegna DOC：</strong>整個Sardinia島，清爽易飲，性價比極高</p><p><strong>Colli di Luni Vermentino DOC：</strong>Liguria/Tuscany邊界，優雅細緻海岸風格</p><p><strong>配餐：</strong>各式海鮮料理（天生絕配）、烤魚（Branzino）、地中海沙拉、魚湯（Zuppa di Pesce）</p><p><strong>法國別名：</strong>Rolle，在Provence地區也廣泛種植，Côtes de Provence白酒主要品種</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">中-高</div><div class=\"stat-label\">酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">中</div><div class=\"stat-label\">酒體</div></div><div class=\"stat-box\"><div class=\"stat-number\">2-5年</div><div class=\"stat-label\">適飲期</div></div><div class=\"stat-box\"><div class=\"stat-number\">Sardinia</div><div class=\"stat-label\">代表產區</div></div></div>"
     },
     {
       "type": "content",
       "title": "📊 五大品種全面對比",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">從選酒策略到食物搭配 —— 理解五大白葡萄的相對關係，開啟義大利白酒世界的大門</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>✨ 清爽易飲型</h4><p><strong>Pinot Grigio：</strong>中高酸輕盈，青蘋果梨子，出口量最大，百搭入門，1-3年，$-$$</p><p><strong>Trebbiano：</strong>高酸清淡中性，日常餐酒調配基底，Balsamic醋原料，1-2年，$</p><p><strong>入門建議：</strong>從Pinot Grigio開始，輕鬆認識義大利白酒的清爽個性</p><p><strong>通則：</strong>趁新鮮飲用，配開胃菜輕食無壓力</p></div><div class=\"method-card modern\"><h4>💎 礦物複雜型</h4><p><strong>Garganega（Soave）：</strong>中高酸中飽滿，苦杏仁特色，優雅陳年，3-12年，$$-$$$</p><p><strong>Verdicchio：</strong>高酸礦物草本，微苦收尾，海鮮完美搭配，3-10年，$$</p><p><strong>Vermentino：</strong>中高酸海岸鹹鮮，地中海個性，2-5年，$$</p><p><strong>進階建議：</strong>探索Garganega Soave Classico和Verdicchio，發現義大利白酒的深度</p></div></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">入門</div><div class=\"stat-label\">Pinot Grigio / Trebbiano</div></div><div class=\"stat-box\"><div class=\"stat-number\">中級</div><div class=\"stat-label\">Verdicchio / Vermentino</div></div><div class=\"stat-box\"><div class=\"stat-number\">進階</div><div class=\"stat-label\">Garganega（Soave Classico）</div></div><div class=\"stat-box\"><div class=\"stat-number\">通則</div><div class=\"stat-label\">高酸 × 海鮮最完美</div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">從選酒策略到食物搭配 —— 理解五大白葡萄的相對關係，開啟義大利白酒世界的大門</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>✨ 清爽易飲型</h4><p><strong>Pinot Grigio：</strong>中高酸輕盈，青蘋果梨子，出口量最大，百搭入門，1-3年</p><p><strong>Trebbiano：</strong>高酸清淡中性，日常餐酒調配基底，Balsamic醋原料，1-2年</p><p><strong>入門建議：</strong>從Pinot Grigio開始，輕鬆認識義大利白酒的清爽個性</p><p><strong>通則：</strong>趁新鮮飲用，配開胃菜輕食無壓力</p></div><div class=\"method-card modern\"><h4>💎 礦物複雜型</h4><p><strong>Garganega（Soave）：</strong>中高酸中飽滿，杏仁特色，優雅陳年，3-12年</p><p><strong>Verdicchio：</strong>高酸礦物草本，微苦收尾，海鮮完美搭配，3-10年</p><p><strong>Vermentino：</strong>中高酸海岸鹹鮮，地中海個性，2-5年</p><p><strong>進階建議：</strong>探索Garganega Soave Classico和Verdicchio，發現義大利白酒的深度</p></div></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">入門</div><div class=\"stat-label\">Pinot Grigio / Trebbiano</div></div><div class=\"stat-box\"><div class=\"stat-number\">中級</div><div class=\"stat-label\">Verdicchio / Vermentino</div></div><div class=\"stat-box\"><div class=\"stat-number\">進階</div><div class=\"stat-label\">Garganega（Soave Classico）</div></div><div class=\"stat-box\"><div class=\"stat-number\">通則</div><div class=\"stat-label\">高酸 × 海鮮最完美</div></div></div>"
     },
     {
       "type": "content",
@@ -108,17 +108,43 @@
           "tagline": "義大利出口量最大的白酒——清爽輕盈的國際巨星",
           "italyRole": "義大利出口量最大的白酒品種，從大眾市場到高端精品皆有覆蓋。法國/阿爾薩斯稱 Pinot Gris，義大利以「清爽輕盈」風格著稱。Friuli-Venezia Giulia 出產義大利最高品質版本，Ramato 橙皮接觸版本是近年復興的傳統工藝。",
           "mainAreas": [
-            { "name": "Friuli-Venezia Giulia DOC", "note": "最高品質，礦物感清爽，Jermann 等名莊，陳年 3-5 年" },
-            { "name": "Trentino-Alto Adige DOC", "note": "高海拔涼爽，花香礦物，均衡優雅" },
-            { "name": "Delle Venezie DOC", "note": "大眾市場主力，易飲親民，€8-15" },
-            { "name": "Oltrepò Pavese（Lombardia）", "note": "氣泡酒版本（Pinot Grigio Spumante）" }
+            {
+              "name": "Friuli-Venezia Giulia DOC",
+              "note": "最高品質，礦物感清爽，Jermann 等名莊，陳年 3-5 年"
+            },
+            {
+              "name": "Trentino-Alto Adige DOC",
+              "note": "高海拔涼爽，花香礦物，均衡優雅"
+            },
+            {
+              "name": "Delle Venezie DOC",
+              "note": "大眾市場主力，易飲親民"
+            },
+            {
+              "name": "Oltrepò Pavese（Lombardia）",
+              "note": "氣泡酒版本（Pinot Grigio Spumante）"
+            }
           ],
           "cluster": "中等緊密，皮薄呈灰粉色",
           "ripening": "中早熟（9 月上中旬）",
           "soils": "黏土砂質、石灰岩、玄武岩火山土",
           "climate": "涼爽至溫和，需充足日照但保留清新感",
-          "metrics": { "acidity": 3, "mineral": 3, "body": 2, "fruit": 3, "ageing": 2 },
-          "aromas": ["青蘋果", "梨子", "白花", "柑橘", "金銀花", "杏仁", "礦物（頂級款）"],
+          "metrics": {
+            "acidity": 3,
+            "mineral": 3,
+            "body": 2,
+            "fruit": 3,
+            "ageing": 2
+          },
+          "aromas": [
+            "青蘋果",
+            "梨子",
+            "白花",
+            "柑橘",
+            "金銀花",
+            "杏仁",
+            "礦物（頂級款）"
+          ],
           "style": "酸度中到高，酒體輕到中等，清爽易飲。基礎款 1-3 年飲用；頂級 Friuli 或 Ramato 橙酒可陳年 5-10 年，發展蜂蜜、杏桃、香料複雜度。",
           "ageing": "基礎款 1-3 年；Friuli 頂級款 3-8 年；Ramato 橙酒 5-10 年",
           "pairings": [
@@ -129,10 +155,22 @@
             "Caprese 番茄起司沙拉"
           ],
           "examples": [
-            { "name": "Jermann（Dreams）", "note": "Friuli 頂級 Pinot Grigio 代表" },
-            { "name": "Marco Felluga", "note": "Collio DOC 精品莊" },
-            { "name": "Santa Margherita", "note": "將 Pinot Grigio 推向國際市場" },
-            { "name": "Alois Lageder", "note": "Alto Adige 生物動力法先驅" }
+            {
+              "name": "Jermann",
+              "note": "Friuli 代表名莊，Pinot Grigio 與白酒混釀知名"
+            },
+            {
+              "name": "Marco Felluga",
+              "note": "Collio DOC 精品莊"
+            },
+            {
+              "name": "Santa Margherita",
+              "note": "將 Pinot Grigio 推向國際市場"
+            },
+            {
+              "name": "Alois Lageder",
+              "note": "Alto Adige 生物動力法先驅"
+            }
           ]
         },
         {
@@ -143,19 +181,43 @@
           "color_type": "白葡萄",
           "mainRegion": "廣泛全義大利",
           "tagline": "義大利種植最廣的白葡萄——從日常餐酒到干邑基酒",
-          "italyRole": "義大利栽植面積最廣的白葡萄（約 65,000 ha），法國稱 Ugni Blanc，是法國干邑（Cognac）蒸餾的核心基酒品種，也是摩德納 Balsamic 傳統醋的重要原料。高產低濃度，頂級版本（Valentini 的 Trebbiano d'Abruzzo）可發展驚人深度。",
+          "italyRole": "義大利栽植面積最廣的白葡萄，法國稱 Ugni Blanc，是法國干邑（Cognac）蒸餾的核心基酒品種，也是摩德納 Balsamic 傳統醋的重要原料。高產低濃度，頂級版本（Valentini 的 Trebbiano d'Abruzzo）可發展驚人深度。",
           "mainAreas": [
-            { "name": "Trebbiano d'Abruzzo DOC", "note": "最重要，Valentini 頂級款可陳年 10-20 年" },
-            { "name": "Orvieto DOC（Umbria）", "note": "以 Trebbiano 為基底混釀，礦物感偶爾出色" },
-            { "name": "Lugana DOC（Trebbiano di Lugana）", "note": "加爾達湖畔，又稱 Turbiana，花香礦物感，近年最受國際關注" },
-            { "name": "Romagna Albana DOCG", "note": "Emilia 高品質版本" }
+            {
+              "name": "Trebbiano d'Abruzzo DOC",
+              "note": "最重要，Valentini 頂級款可陳年 10-20 年"
+            },
+            {
+              "name": "Orvieto DOC（Umbria）",
+              "note": "以 Trebbiano 為基底混釀，礦物感偶爾出色"
+            },
+            {
+              "name": "Lugana DOC（Trebbiano di Lugana）",
+              "note": "加爾達湖畔，又稱 Turbiana，名字雖有 Trebbiano 但與 Verdicchio 關係較近，花香礦物感"
+            },
+            {
+              "name": "Romagna DOC（Trebbiano Romagnolo）",
+              "note": "Emilia-Romagna 的 Trebbiano 版本，清爽日常"
+            }
           ],
           "cluster": "中大、鬆散，高產量",
           "ripening": "中等（9 月下旬至 10 月初）",
           "soils": "黏土、砂質、石灰岩皆可，適應力強",
           "climate": "適應力極強，忌過熱",
-          "metrics": { "acidity": 4, "mineral": 2, "body": 2, "fruit": 2, "ageing": 1 },
-          "aromas": ["青蘋果", "檸檬", "白桃", "白花", "中性礦物（頂級款）"],
+          "metrics": {
+            "acidity": 4,
+            "mineral": 2,
+            "body": 2,
+            "fruit": 2,
+            "ageing": 1
+          },
+          "aromas": [
+            "青蘋果",
+            "檸檬",
+            "白桃",
+            "白花",
+            "中性礦物（頂級款）"
+          ],
           "style": "高酸度是最大優點，風味中性清淡，酒體輕到中等。基礎款適合日常即飲；Valentini 的 Trebbiano d'Abruzzo 是罕見例外——可陳年 10-20 年並發展蜂蜜、石油、礦物深度。",
           "ageing": "基礎款 1-2 年；Lugana DOC 2-5 年；Valentini Trebbiano d'Abruzzo 10-20 年",
           "pairings": [
@@ -166,10 +228,22 @@
             "義大利海鮮燉飯（Risotto ai Frutti di Mare）"
           ],
           "examples": [
-            { "name": "Valentini（Trebbiano d'Abruzzo）", "note": "義大利白酒最神秘的傳奇，可陳年 20 年+" },
-            { "name": "Emidio Pepe", "note": "自然酒先驅，Abruzzo 頂級版本" },
-            { "name": "Ca' dei Frati（Lugana Brolettino）", "note": "Lugana 最佳代表" },
-            { "name": "Pieropan（Soave + Lugana）", "note": "Veneto 精品名莊" }
+            {
+              "name": "Valentini（Trebbiano d'Abruzzo）",
+              "note": "義大利白酒最神秘的傳奇，可陳年 20 年+"
+            },
+            {
+              "name": "Emidio Pepe",
+              "note": "自然酒先驅，Abruzzo 頂級版本"
+            },
+            {
+              "name": "Ca' dei Frati（Lugana Brolettino）",
+              "note": "Lugana 最佳代表"
+            },
+            {
+              "name": "Zenato（Lugana San Benedetto）",
+              "note": "Lugana 代表酒莊之一"
+            }
           ]
         },
         {
@@ -182,17 +256,44 @@
           "tagline": "苦杏仁的魔法——Soave 之魂",
           "italyRole": "Veneto 最重要的本土白葡萄，Soave DOC 的核心（法規要求 70%+）。Garganega 的最大特色是獨特的苦杏仁（Mandorla）收尾，是世界上最容易辨識的白酒品種特徵之一。老藤種植於 Soave Classico 的火山玄武岩土壤，可展現令人驚艷的陳年潛力。",
           "mainAreas": [
-            { "name": "Soave Classico DOCG", "note": "最頂級，火山玄武岩，Gini / Pieropan 名莊，陳年 5-12 年" },
-            { "name": "Soave Superiore DOCG", "note": "山丘葡萄園，礦物感更強" },
-            { "name": "Recioto di Soave DOCG", "note": "風乾甜白酒，杏仁蜂蜜濃郁，可媲美 Sauternes" },
-            { "name": "Gambellara DOC", "note": "Garganega 的次要產區" }
+            {
+              "name": "Soave Classico DOC",
+              "note": "歷史核心區，東部為火山玄武岩，Gini / Pieropan 名莊，陳年 5-12 年"
+            },
+            {
+              "name": "Soave Superiore DOCG",
+              "note": "山丘葡萄園，礦物感更強"
+            },
+            {
+              "name": "Recioto di Soave DOCG",
+              "note": "風乾甜白酒，杏仁蜂蜜濃郁，可媲美 Sauternes"
+            },
+            {
+              "name": "Gambellara DOC",
+              "note": "Garganega 的次要產區"
+            }
           ],
           "cluster": "中等大小，緊實",
           "ripening": "中晚熟（10 月初）",
           "soils": "Soave Classico 火山玄武岩（最佳）；石灰岩黏土",
           "climate": "溫和大陸，需涼爽夜晚保留酸度",
-          "metrics": { "acidity": 4, "mineral": 4, "body": 3, "fruit": 4, "ageing": 4 },
-          "aromas": ["白桃", "杏桃", "杏花", "金銀花", "檸檬", "苦杏仁（Mandorla）", "礦物", "蜂蜜（陳年）"],
+          "metrics": {
+            "acidity": 4,
+            "mineral": 4,
+            "body": 3,
+            "fruit": 4,
+            "ageing": 4
+          },
+          "aromas": [
+            "白桃",
+            "杏桃",
+            "杏花",
+            "金銀花",
+            "檸檬",
+            "苦杏仁（Mandorla）",
+            "礦物",
+            "蜂蜜（陳年）"
+          ],
           "style": "酸度中到高，礦物感鮮明，酒體中到飽滿，最特色的苦杏仁尾韻是天然品種特徵。年輕時果香清新；頂級 Soave Classico 老藤陳年後發展蜂蜜、堅果、礦物深度，令人驚艷。",
           "ageing": "基礎款 2-4 年；Soave Classico 3-8 年；頂級單一園 5-15 年；Recioto 10-20 年",
           "pairings": [
@@ -203,10 +304,22 @@
             "鵝肝（Recioto di Soave 甜酒版）"
           ],
           "examples": [
-            { "name": "Gini（La Froscà）", "note": "Soave Classico 最高水準，老藤單一園" },
-            { "name": "Pieropan（Calvarino）", "note": "現代 Soave 的教父，1970 年代復興 Soave" },
-            { "name": "Anselmi（Capitel Foscarino）", "note": "脫離 DOC 但品質頂尖" },
-            { "name": "Inama（Vigneto du Lot）", "note": "單一園典範" }
+            {
+              "name": "Gini（La Froscà）",
+              "note": "Soave Classico 最高水準，老藤單一園"
+            },
+            {
+              "name": "Pieropan（Calvarino）",
+              "note": "現代 Soave 的教父，1970 年代復興 Soave"
+            },
+            {
+              "name": "Anselmi（Capitel Foscarino）",
+              "note": "脫離 DOC 但品質頂尖"
+            },
+            {
+              "name": "Inama（Vigneto du Lot）",
+              "note": "單一園典範"
+            }
           ]
         },
         {
@@ -217,19 +330,46 @@
           "color_type": "白葡萄",
           "mainRegion": "Marche",
           "tagline": "義大利礦物白酒之冠——Marche 的海風靈魂",
-          "italyRole": "Marche 最重要的本土白葡萄，名字源自 verde（綠），以高酸度、鮮明礦物感和微苦收尾著稱。以傳統魚形瓶（Anfora）聞名，是義大利最具辨識度的酒瓶設計。Verdicchio dei Castelli di Jesi 與 Verdicchio di Matelica 代表「海岸」與「山地」兩種風格。",
+          "italyRole": "Marche 最重要的本土白葡萄，名字源自 verde（綠），以高酸度、鮮明礦物感和微苦收尾著稱。以傳統的雙耳瓶（Anfora）造型酒瓶聞名，是義大利最具辨識度的酒瓶設計。Verdicchio dei Castelli di Jesi 與 Verdicchio di Matelica 代表「海岸」與「山地」兩種風格。",
           "mainAreas": [
-            { "name": "Verdicchio dei Castelli di Jesi DOC", "note": "最著名，海岸丘陵，Umani Ronchi / Bucci 名莊" },
-            { "name": "Verdicchio dei Castelli di Jesi Classico Superiore", "note": "更複雜版本，礦物感更強，€15-25" },
-            { "name": "Verdicchio di Matelica DOC", "note": "內陸山地，酸度更高，礦物感更強，陳年潛力更強" },
-            { "name": "Verdicchio di Matelica Riserva DOC", "note": "頂級，老藤單一園，可陳年 15-20 年" }
+            {
+              "name": "Verdicchio dei Castelli di Jesi DOC",
+              "note": "最著名，海岸丘陵，Umani Ronchi / Bucci 名莊"
+            },
+            {
+              "name": "Verdicchio dei Castelli di Jesi Classico Superiore",
+              "note": "更複雜版本，礦物感更強"
+            },
+            {
+              "name": "Verdicchio di Matelica DOC",
+              "note": "內陸山地，酸度更高，礦物感更強，陳年潛力更強"
+            },
+            {
+              "name": "Verdicchio di Matelica Riserva DOCG",
+              "note": "頂級，老藤單一園，可陳年 15-20 年"
+            }
           ],
           "cluster": "中等大小，緊實",
           "ripening": "中晚熟（10 月初至中旬）",
           "soils": "Castelli di Jesi：黏土、砂質；Matelica：海洋化石石灰岩、白堊質黏土",
           "climate": "Jesi：受 Adriatic 海洋調節；Matelica：山谷大陸氣候，日夜溫差大",
-          "metrics": { "acidity": 5, "mineral": 5, "body": 3, "fruit": 3, "ageing": 4 },
-          "aromas": ["檸檬", "青蘋果", "白花", "礦物感", "微微海鹽", "燧石", "榛果（陳年）", "蜂蜜（陳年）"],
+          "metrics": {
+            "acidity": 5,
+            "mineral": 5,
+            "body": 3,
+            "fruit": 3,
+            "ageing": 4
+          },
+          "aromas": [
+            "檸檬",
+            "青蘋果",
+            "白花",
+            "礦物感",
+            "微微海鹽",
+            "燧石",
+            "榛果（陳年）",
+            "蜂蜜（陳年）"
+          ],
           "style": "高酸度 + 鮮明礦物感 + 微苦收尾（品種特徵），是義大利酸度最高的白葡萄之一。清爽易飲款適合即飲；Matelica Riserva 或老藤款陳年後發展榛果、蜂蜜、礦物複雜度，堪稱義大利版 Chablis。",
           "ageing": "基礎款 2-4 年；Riserva 5-10 年；Matelica 頂級老藤 10-20 年",
           "pairings": [
@@ -240,10 +380,22 @@
             "海鮮義大利麵"
           ],
           "examples": [
-            { "name": "Bucci（Villa Bucci Riserva）", "note": "Castelli di Jesi 精神領袖，老藤有機" },
-            { "name": "Sartarelli（Balciana）", "note": "100% Verdicchio 專家，老藤單一園" },
-            { "name": "Bisci（Vigneto Fogliano）", "note": "Matelica 之王，陳年潛力最強" },
-            { "name": "Umani Ronchi（Casal di Serra）", "note": "Marche 最大精品酒莊" }
+            {
+              "name": "Bucci（Villa Bucci Riserva）",
+              "note": "Castelli di Jesi 精神領袖，老藤有機"
+            },
+            {
+              "name": "Sartarelli（Balciana）",
+              "note": "100% Verdicchio 專家，老藤單一園"
+            },
+            {
+              "name": "Bisci（Vigneto Fogliano）",
+              "note": "Matelica 之王，陳年潛力最強"
+            },
+            {
+              "name": "Umani Ronchi（Casal di Serra）",
+              "note": "Marche 代表性的大型酒莊"
+            }
           ]
         },
         {
@@ -256,17 +408,43 @@
           "tagline": "地中海海岸之星——海風鹽礦的靈魂品種",
           "italyRole": "義大利地中海沿岸最具代表性的白葡萄，尤以 Sardinia 最著名。法國 Provence 地區稱 Rolle，是 Côtes de Provence 白酒的主要品種。Vermentino di Gallura DOCG 是 Sardinia 唯一白酒 DOCG，花崗岩土壤帶來獨特礦物深度。",
           "mainAreas": [
-            { "name": "Vermentino di Gallura DOCG", "note": "Sardinia 北部，唯一白酒 DOCG，花崗岩土壤，€15-35" },
-            { "name": "Vermentino di Sardegna DOC", "note": "整個 Sardinia 島，清爽易飲，性價比極高" },
-            { "name": "Colli di Luni Vermentino DOC", "note": "Liguria/Toscana 邊界，優雅細緻海岸風格" },
-            { "name": "Bolgheri Vermentino DOC", "note": "Toscana 海岸，與 Sassicaia 同產區的清爽白酒" }
+            {
+              "name": "Vermentino di Gallura DOCG",
+              "note": "Sardinia 北部，唯一白酒 DOCG，花崗岩土壤"
+            },
+            {
+              "name": "Vermentino di Sardegna DOC",
+              "note": "整個 Sardinia 島，清爽易飲，性價比極高"
+            },
+            {
+              "name": "Colli di Luni Vermentino DOC",
+              "note": "Liguria/Toscana 邊界，優雅細緻海岸風格"
+            },
+            {
+              "name": "Bolgheri Vermentino DOC",
+              "note": "Toscana 海岸，與 Sassicaia 同產區的清爽白酒"
+            }
           ],
           "cluster": "中等，鬆散",
           "ripening": "中早熟（8 月底至 9 月初）",
           "soils": "花崗岩（Gallura 最佳）；砂質壤土；石英岩",
           "climate": "溫暖地中海，海風調節，乾旱夏季",
-          "metrics": { "acidity": 4, "mineral": 4, "body": 3, "fruit": 4, "ageing": 2 },
-          "aromas": ["葡萄柚", "萊姆", "白花", "迷迭香", "海風鹽礦", "蜂蜜", "地中海香草"],
+          "metrics": {
+            "acidity": 4,
+            "mineral": 4,
+            "body": 3,
+            "fruit": 4,
+            "ageing": 2
+          },
+          "aromas": [
+            "葡萄柚",
+            "萊姆",
+            "白花",
+            "迷迭香",
+            "海風鹽礦",
+            "蜂蜜",
+            "地中海香草"
+          ],
           "style": "酸度中高，帶鮮明礦物感與海風鹹鮮特質，酒體中等，果香奔放。年輕時最佳（2-4 年）；頂級 Gallura DOCG 花崗岩版本可陳年 5-8 年並發展堅果蜂蜜複雜度。",
           "ageing": "一般款 1-3 年；Gallura DOCG 3-6 年；頂級老藤 5-10 年",
           "pairings": [
@@ -277,10 +455,22 @@
             "烤章魚（Polpo alla Griglia）"
           ],
           "examples": [
-            { "name": "Capichera（VT / Vigna 'Ngena）", "note": "Gallura DOCG 最頂級，陳年潛力驚人" },
-            { "name": "Sella e Mosca（Monteoro）", "note": "Sardinia 最大精品酒莊" },
-            { "name": "Argiolas（Is Argiolas）", "note": "Sardinia 傳奇家族酒莊" },
-            { "name": "Lunae Bosoni（Colli di Luni）", "note": "Liguria 最佳 Vermentino" }
+            {
+              "name": "Capichera（VT / Vigna 'Ngena）",
+              "note": "Gallura DOCG 最頂級，陳年潛力驚人"
+            },
+            {
+              "name": "Sella e Mosca（Monteoro）",
+              "note": "Sardinia 代表性的大型酒莊"
+            },
+            {
+              "name": "Argiolas（Is Argiolas）",
+              "note": "Sardinia 傳奇家族酒莊"
+            },
+            {
+              "name": "Lunae Bosoni（Colli di Luni）",
+              "note": "Liguria 最佳 Vermentino"
+            }
           ]
         }
       ]
@@ -291,8 +481,8 @@
       "points": [
         "✓ Pinot Grigio 是義大利出口量最大的白酒，清爽輕盈，Friuli-Venezia Giulia出產最高品質版本，全球最受歡迎義大利白酒",
         "✓ Trebbiano 是義大利種植面積最廣的白葡萄，法國稱Ugni Blanc，是法國干邑（Cognac）的核心基酒，也是Balsamic摩德納傳統醋的重要原料",
-        "✓ Garganega 是Soave DOC的核心品種（法規要求70%以上），以獨特的苦杏仁（Mandorla）收尾聞名，頂級Soave Classico可陳年10年以上",
-        "✓ Verdicchio 是Marche的礦物白酒代表，名字源自verde（綠色），傳統魚形瓶（Anfora）是義大利最具辨識度的酒瓶設計之一",
+        "✓ Garganega 是Soave DOC的核心品種（法規要求70%以上），以獨特的杏仁（Mandorla）收尾聞名，頂級Soave Classico可陳年10年以上",
+        "✓ Verdicchio 是Marche的礦物白酒代表，名字源自verde（綠色），傳統雙耳瓶（Anfora）造型酒瓶是義大利最具辨識度的酒瓶設計之一",
         "✓ Vermentino 是Sardinia和Liguria的海岸品種，法國稱Rolle，帶有獨特的海風鹽礦感，Vermentino di Gallura DOCG是最頂級版本",
         "✓ 選酒入門：Pinot Grigio / Trebbiano（清爽易飲）→ Verdicchio / Vermentino（礦物個性）→ Garganega Soave Classico（優雅複雜）循序漸進",
         "✓ 義大利白酒最大特色：普遍高酸度，天生適合搭配海鮮料理、開胃菜、義大利麵等地中海飲食",

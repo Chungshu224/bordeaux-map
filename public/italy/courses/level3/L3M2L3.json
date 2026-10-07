@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "Barolo Boys 革命始於哪一年代？",
-      "options": ["1960年代", "1970年代", "1980年代", "1990年代"],
+      "options": [
+        "1960年代",
+        "1970年代",
+        "1980年代",
+        "1990年代"
+      ],
       "answer": 2,
       "explanation": "Barolo Boys 革命始於 1980 年代，Elio Altare 等現代派釀酒師引入法國橡木桶和新技術，挑戰傳統派。"
     },
     {
       "question": "傳統派 Barolo 主要使用什麼橡木桶？",
-      "options": ["法國小桶（225L Barrique）", "美國橡木桶", "斯洛維尼亞大桶（20-100 HL Botti）", "不鏽鋼桶"],
+      "options": [
+        "法國小桶（225L Barrique）",
+        "美國橡木桶",
+        "斯拉沃尼亞大桶（20-100 HL Botti）",
+        "不鏽鋼桶"
+      ],
       "answer": 2,
-      "explanation": "傳統派使用大型斯洛維尼亞橡木桶（Botti），容量 20-100 HL，幾乎不增添橡木香氣，保留純淨風土表達。"
+      "explanation": "傳統派使用大型斯拉沃尼亞橡木桶（Botti），容量 20-100 HL，幾乎不增添橡木香氣，保留純淨風土表達。"
     },
     {
       "question": "Giacomo Conterno Monfortino 的葡萄來自哪個 MGA？",
-      "options": ["Cannubi", "Brunate", "Vigna Rionda（稱為 Francia）", "Bussia"],
+      "options": [
+        "Cannubi",
+        "Brunate",
+        "Francia（Serralunga d'Alba 的 Cascina Francia）",
+        "Bussia"
+      ],
       "answer": 2,
-      "explanation": "Monfortino 的葡萄來自 Vigna Rionda MGA，但 Conterno 家族稱之為 Francia，這是傳奇中的傳奇酒款。"
+      "explanation": "Monfortino 的葡萄來自 Giacomo Conterno 位於 Serralunga d'Alba 的 Cascina Francia 葡萄園（Francia MGA），是傳奇中的傳奇酒款；Vigna Rionda 則是 Serralunga 另一個獨立的 MGA。"
     },
     {
       "question": "盲品時，如何快速判斷傳統派 vs 現代派 Barolo？",
-      "options": ["看產區標示", "觀察顏色深度和橡木影響", "品嚐酸度", "聞花香"],
+      "options": [
+        "看產區標示",
+        "觀察顏色深度和橡木影響",
+        "品嚐酸度",
+        "聞花香"
+      ],
       "answer": 1,
       "explanation": "顏色深度（傳統派較淺）和橡木影響（現代派有明顯香草、巧克力）是最直接的判斷依據。"
     }
@@ -36,28 +56,28 @@
     {
       "type": "content",
       "title": "Barolo 風格戰爭（1980-2010）",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">1980 年代，Elio Altare 從布根地帶回法國橡木桶技術，引發了義大利葡萄酒史上最激烈的風格辯論。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>傳統派（Tradizionalisti）</h3><ul><li><strong>橡木桶：</strong>斯洛維尼亞大桶（Botti，20-100 HL），幾乎無橡木香</li><li><strong>浸皮時間：</strong>30-60 天（極長萃取）</li><li><strong>顏色：</strong>淺石榴紅、磚紅邊緣（即使年輕酒）</li><li><strong>香氣：</strong>乾玫瑰、焦油、皮革、菸草</li><li><strong>單寧：</strong>粗糙緊澀，需 15-20 年才適飲</li><li><strong>代表：</strong>Giacomo Conterno、Bartolo Mascarello、Bruno Giacosa</li></ul></div><div class=\"method-card modern\"><h3>現代派（Barolo Boys）</h3><ul><li><strong>橡木桶：</strong>法國小橡木桶（Barrique，225L），賦予香草巧克力</li><li><strong>浸皮時間：</strong>10-20 天（縮短，保留果香）</li><li><strong>顏色：</strong>深石榴紅、接近不透光</li><li><strong>香氣：</strong>新鮮漿果、香草、巧克力、咖啡</li><li><strong>單寧：</strong>柔順細膩，5-10 年即可享用</li><li><strong>代表：</strong>Elio Altare、Luciano Sandrone、Roberto Voerzio、Gaja</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">1980 年代，Elio Altare 從布根地帶回法國橡木桶技術，引發了義大利葡萄酒史上最激烈的風格辯論。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>傳統派（Tradizionalisti）</h3><ul><li><strong>橡木桶：</strong>斯拉沃尼亞大桶（Botti，20-100 HL），幾乎無橡木香</li><li><strong>浸皮時間：</strong>30-60 天（極長萃取）</li><li><strong>顏色：</strong>淺石榴紅、磚紅邊緣（即使年輕酒）</li><li><strong>香氣：</strong>乾玫瑰、焦油、皮革、菸草</li><li><strong>單寧：</strong>粗糙緊澀，需 15-20 年才適飲</li><li><strong>代表：</strong>Giacomo Conterno、Bartolo Mascarello、Bruno Giacosa</li></ul></div><div class=\"method-card modern\"><h3>現代派（Barolo Boys）</h3><ul><li><strong>橡木桶：</strong>法國小橡木桶（Barrique，225L），賦予香草巧克力</li><li><strong>浸皮時間：</strong>10-20 天（縮短，保留果香）</li><li><strong>顏色：</strong>深石榴紅、接近不透光</li><li><strong>香氣：</strong>新鮮漿果、香草、巧克力、咖啡</li><li><strong>單寧：</strong>柔順細膩，5-10 年即可享用</li><li><strong>代表：</strong>Elio Altare、Luciano Sandrone、Roberto Voerzio、Gaja</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "頂級生產者深度解析",
-      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Giacomo Conterno — 傳統派王者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">哲學：「Barolo 是為了陳年而生，不是為了年輕時飲用」｜堅持超大型 Botti（50-100 HL）</div><div class=\"orvieto-card\">旗艦：Monfortino（Vigna Rionda/Francia）｜僅頂級年份釀造（每 5-7 年一次）｜7-10 年橡木桶＋3-5 年瓶中｜陳年 30-50 年｜€800-2000+</div><div class=\"orvieto-card\">入門：Cascina Francia Barolo｜同一園區「年輕」版｜10 年後適飲｜€250-450｜性價比更高</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Luciano Sandrone — 現代派傳奇</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">傳奇：前葡萄園工人，1977 年購買第一塊 Cannubi Boschis，建立世界級酒莊</div><div class=\"orvieto-card\">旗艦：Barolo Cannubi Boschis｜法國小桶 50% + 大桶 50%｜強勁但絲綢單寧｜€200-350</div><div class=\"orvieto-card\">近年轉變：小桶比例從 100% 降至 50%，展現從極端現代派走向融合派的趨勢</div></div></div></div></div>"
+      "content": "<div class=\"sagrantino-styles\"><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Giacomo Conterno — 傳統派王者</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">哲學：「Barolo 是為了陳年而生，不是為了年輕時飲用」｜堅持超大型 Botti（50-100 HL）</div><div class=\"orvieto-card\">旗艦：Monfortino（Serralunga 的 Francia 葡萄園）｜僅在優秀年份釀造｜大桶陳年約 7 年才上市｜陳年 30-50 年</div><div class=\"orvieto-card\">入門：Barolo Francia（原名 Cascina Francia）｜同一園區較早上市的版本｜10 年後適飲｜性價比更高</div></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Luciano Sandrone — 現代派傳奇</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">傳奇：曾在 Marchesi di Barolo 酒窖工作，1977 年購買第一塊 Cannubi Boschis，白手起家建立世界級酒莊</div><div class=\"orvieto-card\">旗艦：Barolo Cannubi Boschis（2013 年份起更名 Aleste）｜以 500 公升法國 tonneau 培養｜強勁但絲綢單寧</div><div class=\"orvieto-card\">近年轉變：萃取更溫和、橡木更節制，展現從現代派走向融合派的趨勢</div></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "盲品辨識技巧",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">透過視覺、嗅覺、口感三個層次，可以系統化辨識傳統派與現代派 Barolo：</p><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>1. 觀察顏色：</strong>傳統派即使年輕酒也有磚紅邊緣（淺石榴紅）；現代派年輕酒邊緣是紫紅色（深石榴紅）</div><div class=\"kp-box\"><strong>2. 嗅聞橡木：</strong>聞到明顯香草、巧克力、烤麵包 → 現代派（法國小桶）；幾乎無橡木香、只有焦油玫瑰皮革 → 傳統派（大桶）</div><div class=\"kp-box\"><strong>3. 測試單寧：</strong>年輕酒（5 年內）若單寧已柔順 → 現代派；單寧粗糙緊澀 → 傳統派。傳統派需 15-20 年達巔峰，現代派 8-12 年即可</div><div class=\"kp-box\"><strong>4. 融合派現象：</strong>2000 年後主流走向 Neo-Traditionalists——使用現代設施（溫控衛生），但保留傳統大桶和較長浸皮。Aldo Conterno、Gaja、Vietti 均為代表</div></div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">透過視覺、嗅覺、口感三個層次，可以系統化辨識傳統派與現代派 Barolo：</p><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>1. 觀察顏色：</strong>傳統派即使年輕酒也有磚紅邊緣（淺石榴紅）；現代派年輕酒邊緣是紫紅色（深石榴紅）</div><div class=\"kp-box\"><strong>2. 嗅聞橡木：</strong>聞到明顯香草、巧克力、烤麵包 → 現代派（法國小桶）；幾乎無橡木香、只有焦油玫瑰皮革 → 傳統派（大桶）</div><div class=\"kp-box\"><strong>3. 測試單寧：</strong>年輕酒（5 年內）若單寧已柔順 → 現代派；單寧粗糙緊澀 → 傳統派。傳統派需 15-20 年達巔峰，現代派 8-12 年即可</div><div class=\"kp-box\"><strong>4. 融合派現象：</strong>2000 年後主流走向 Neo-Traditionalists——使用現代設施（溫控衛生），但保留傳統大桶和較長浸皮。Vietti、G.D. Vajra、Massolino 均為代表</div></div></div></div>"
     },
     {
       "type": "content",
       "title": "其他產區的風格分野",
-      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Brunello di Montalcino</h3><p class=\"mf-style\">傳統 vs 現代</p><p class=\"mf-prod\">傳統：Biondi-Santi、Soldera，大桶 5-7 年，優雅高酸，需長陳年，€60-500+ / 現代：Casanova di Neri、Siro Pacenti，法國小桶，果香濃郁，早適飲，€50-250</p></div><div class=\"mf-zone warm\"><h3>Chianti Classico</h3><p class=\"mf-style\">傳統 vs 現代</p><p class=\"mf-prod\">傳統：Montevertine、Badia a Coltibuono，Sangiovese + 白葡萄（歷史配方），輕盈高酸 / 現代：Fontodi、Felsina，100% Sangiovese 或混 Cabernet，濃郁國際化</p></div><div class=\"mf-zone cool\"><h3>Franciacorta DOCG</h3><p class=\"mf-style\">氣泡酒風格分野</p><p class=\"mf-prod\">優雅派：Bellavista、Ca' del Bosco，長時間酵母接觸（36-60 月），細膩礦物複雜 / 果香派：Ferghettina，最低法定陳年（18-24 月），清新易親近</p></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>Brunello di Montalcino</h3><p class=\"mf-style\">傳統 vs 現代</p><p class=\"mf-prod\">傳統：Biondi-Santi、Soldera，斯拉沃尼亞大桶長時間陳年，優雅高酸，需長陳年 / 現代：Casanova di Neri、Siro Pacenti，法國小桶，果香濃郁，早適飲</p></div><div class=\"mf-zone warm\"><h3>Chianti Classico</h3><p class=\"mf-style\">傳統 vs 現代</p><p class=\"mf-prod\">傳統：Montevertine、Badia a Coltibuono，Sangiovese 搭配 Canaiolo、Colorino 等本土品種，大桶陳年，輕盈高酸 / 現代：部分酒莊以法國小桶陳年、混入 Cabernet 或 Merlot，濃郁國際化</p></div><div class=\"mf-zone cool\"><h3>Franciacorta DOCG</h3><p class=\"mf-style\">氣泡酒風格分野</p><p class=\"mf-prod\">優雅派：Bellavista、Ca' del Bosco，長時間酵母接觸（36-60 月），細膩礦物複雜 / 果香派：較短的酵母接觸（無年份款法定至少 18 月），清新易親近</p></div></div></div>"
     },
     {
       "type": "image",
       "title": "🍷 風格實例：傳統派 Barolo",
       "image": "/italy/images/labels/piemonte/barolo-gd-vajra-2006.jpg",
-      "caption": "G.D. Vajra Barolo 2006——以傳統斯洛維尼亞大桶陳年著稱的代表性酒莊，風格路線接近 Giacomo Conterno、Bartolo Mascarello。"
+      "caption": "G.D. Vajra Barolo 2006——以傳統斯拉沃尼亞大桶陳年著稱的代表性酒莊，風格路線接近 Giacomo Conterno、Bartolo Mascarello。"
     },
     {
       "type": "image",
@@ -70,12 +90,12 @@
       "title": "重點回顧",
       "points": [
         "Barolo 風格戰爭（1980-2010）：Elio Altare 從布根地帶回法國橡木桶，引發傳統派 vs 現代派論戰",
-        "傳統派特徵：斯洛維尼亞大桶（Botti）、30-60 天浸皮、淺磚紅色、粗糙單寧、需 15-20 年陳年",
+        "傳統派特徵：斯拉沃尼亞大桶（Botti）、30-60 天浸皮、淺磚紅色、粗糙單寧、需 15-20 年陳年",
         "現代派特徵：法國小桶（Barrique）、10-20 天浸皮、深紫紅色、柔順單寧、5-10 年即可飲",
-        "Giacomo Conterno Monfortino 是傳統派王者（僅頂級年份，€800-2000+，陳年 30-50 年）",
-        "Luciano Sandrone 是現代派傳奇（前葡萄園工人白手起家，Cannubi Boschis €200-350）",
+        "Giacomo Conterno Monfortino 是傳統派王者（僅在優秀年份釀造，陳年 30-50 年）",
+        "Luciano Sandrone 是現代派傳奇（酒窖工人白手起家，以 500 公升 tonneau 培養 Cannubi Boschis，現名 Aleste）",
         "盲品關鍵：顏色邊緣（磚紅 vs 紫紅）+ 橡木影響（無 vs 明顯香草巧克力）+ 單寧質地",
-        "2000 年後主流是融合派（Neo-Traditionalists）：現代技術 + 傳統理念，Aldo Conterno、Gaja 為代表",
+        "2000 年後主流是融合派（Neo-Traditionalists）：現代技術 + 傳統理念，Vietti、Massolino 為代表",
         "Brunello、Chianti、Franciacorta 同樣有傳統派 vs 現代派的風格分野",
         "最終選擇哪種風格取決於個人偏好：傳統派適合陳年收藏，現代派適合早飲享受"
       ]
@@ -88,28 +108,48 @@
         {
           "type": "single",
           "question": "Barolo Boys 革命始於哪一年代？",
-          "options": ["1960年代", "1970年代", "1980年代", "1990年代"],
+          "options": [
+            "1960年代",
+            "1970年代",
+            "1980年代",
+            "1990年代"
+          ],
           "correct": 2,
           "explanation": "Barolo Boys 革命始於 1980 年代，Elio Altare 等現代派釀酒師引入法國橡木桶和新技術，挑戰傳統派。"
         },
         {
           "type": "single",
           "question": "傳統派 Barolo 主要使用什麼橡木桶？",
-          "options": ["法國小桶（225L Barrique）", "美國橡木桶", "斯洛維尼亞大桶（20-100 HL Botti）", "不鏽鋼桶"],
+          "options": [
+            "法國小桶（225L Barrique）",
+            "美國橡木桶",
+            "斯拉沃尼亞大桶（20-100 HL Botti）",
+            "不鏽鋼桶"
+          ],
           "correct": 2,
-          "explanation": "傳統派使用大型斯洛維尼亞橡木桶（Botti），容量 20-100 HL，幾乎不增添橡木香氣，保留純淨風土表達。"
+          "explanation": "傳統派使用大型斯拉沃尼亞橡木桶（Botti），容量 20-100 HL，幾乎不增添橡木香氣，保留純淨風土表達。"
         },
         {
           "type": "single",
           "question": "Giacomo Conterno Monfortino 的葡萄來自哪個 MGA？",
-          "options": ["Cannubi", "Brunate", "Vigna Rionda（稱為 Francia）", "Bussia"],
+          "options": [
+            "Cannubi",
+            "Brunate",
+            "Francia（Serralunga d'Alba 的 Cascina Francia）",
+            "Bussia"
+          ],
           "correct": 2,
-          "explanation": "Monfortino 的葡萄來自 Vigna Rionda MGA，但 Conterno 家族稱之為 Francia，這是傳奇中的傳奇酒款。"
+          "explanation": "Monfortino 的葡萄來自 Giacomo Conterno 位於 Serralunga d'Alba 的 Cascina Francia 葡萄園（Francia MGA），是傳奇中的傳奇酒款；Vigna Rionda 則是 Serralunga 另一個獨立的 MGA。"
         },
         {
           "type": "single",
           "question": "盲品時，如何快速判斷傳統派 vs 現代派 Barolo？",
-          "options": ["看產區標示", "觀察顏色深度和橡木影響", "品嚐酸度", "聞花香"],
+          "options": [
+            "看產區標示",
+            "觀察顏色深度和橡木影響",
+            "品嚐酸度",
+            "聞花香"
+          ],
           "correct": 1,
           "explanation": "顏色深度（傳統派較淺）和橡木影響（現代派有明顯香草、巧克力）是最直接的判斷依據。"
         },
@@ -118,12 +158,12 @@
           "question": "Luciano Sandrone 釀酒風格近年的轉變是？",
           "options": [
             "從傳統派轉為現代派",
-            "從 100% 法國小桶減少至 50%，走向融合派",
+            "萃取與橡木使用更節制，走向融合派（Cannubi Boschis 更名為 Aleste）",
             "改為全程不鏽鋼桶",
             "放棄單一園釀造"
           ],
           "correct": 1,
-          "explanation": "Sandrone 近年將法國小桶使用比例從 100% 降至 50%，增加大桶陳年，展現從極端現代派走向融合派的趨勢。"
+          "explanation": "Sandrone 一向以 500 公升法國 tonneau（介於小桶與大桶之間）培養；近年萃取更溫和、橡木更節制，旗艦 Cannubi Boschis 自 2013 年份起更名為 Aleste，展現從現代派走向融合派的趨勢。"
         }
       ]
     }

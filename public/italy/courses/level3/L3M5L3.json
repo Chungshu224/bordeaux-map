@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "在義大利，哪一種永續農業實踐擁有歐盟統一的「綠葉標誌 (Euro Leaf)」認證，法規最為明確？",
-      "options": ["自然酒 (Natural Wine)", "生物動力法 (Biodynamic)", "有機葡萄酒 (Organic Wine)", "橘酒 (Orange Wine)"],
+      "options": [
+        "自然酒 (Natural Wine)",
+        "生物動力法 (Biodynamic)",
+        "有機葡萄酒 (Organic Wine)",
+        "橘酒 (Orange Wine)"
+      ],
       "answer": 2,
       "explanation": "有機葡萄酒 (Vino Biologico) 擁有歐盟統一的法規與綠葉標誌認證，規範了葡萄園內禁止使用合成化學藥劑，以及釀酒過程中二氧化硫的添加上限。"
     },
     {
       "question": "生物動力法 (Biodynamic) 除了要求有機種植外，還強調什麼核心理念？",
-      "options": ["必須使用陶甕 (Amphora) 進行發酵", "將葡萄園視為自給自足的生態系統，並根據星象週期與特定配方（如牛角糞）進行農事", "完全禁止在裝瓶時添加任何二氧化硫", "只能種植義大利原生葡萄品種"],
+      "options": [
+        "必須使用陶甕 (Amphora) 進行發酵",
+        "將葡萄園視為自給自足的生態系統，並根據星象週期與特定配方（如牛角糞）進行農事",
+        "完全禁止在裝瓶時添加任何二氧化硫",
+        "只能種植義大利原生葡萄品種"
+      ],
       "answer": 1,
       "explanation": "生物動力法基於 Rudolf Steiner 的哲學，強調宇宙星象對植物的影響，並使用特定的配方（Preparations）來活化土壤與增強植物免疫力。"
     },
     {
       "question": "義大利東北部 Friuli 產區，特別是 Josko Gravner 等先驅者，以復興哪一種古老的釀酒技術而聞名全球？",
-      "options": ["使用查馬法 (Charmat Method) 釀造氣泡酒", "使用風乾葡萄 (Appassimento) 釀造甜酒", "將白葡萄連皮浸泡在陶甕 (Qvevri/Amphora) 中發酵，釀造橘酒 (Orange Wine)", "使用 100% 全新法國小橡木桶陳年白酒"],
+      "options": [
+        "使用查馬法 (Charmat Method) 釀造氣泡酒",
+        "使用風乾葡萄 (Appassimento) 釀造甜酒",
+        "將白葡萄連皮浸泡在陶甕 (Qvevri/Amphora) 中發酵，釀造橘酒 (Orange Wine)",
+        "使用 100% 全新法國小橡木桶陳年白酒"
+      ],
       "answer": 2,
       "explanation": "Josko Gravner 等人引進了喬治亞共和國的陶甕，將白葡萄（如 Ribolla Gialla）連皮長時間浸泡發酵，釀造出帶有單寧與琥珀色澤的橘酒，成為現代自然酒運動的重要里程碑。"
     },
     {
       "question": "關於「自然酒 (Natural Wine)」，下列敘述何者最為正確？",
-      "options": ["自然酒擁有嚴格的全球統一官方認證標準", "自然酒的核心理念是「無添加，無去除」，通常使用野生酵母發酵且極少或不添加二氧化硫", "自然酒在發酵過程中必須添加大量人工培養酵母以確保發酵順利", "自然酒裝瓶前必須經過嚴格的澄清與過濾"],
+      "options": [
+        "自然酒擁有嚴格的全球統一官方認證標準",
+        "自然酒的核心理念是「無添加，無去除」，通常使用野生酵母發酵且極少或不添加二氧化硫",
+        "自然酒在發酵過程中必須添加大量人工培養酵母以確保發酵順利",
+        "自然酒裝瓶前必須經過嚴格的澄清與過濾"
+      ],
       "answer": 1,
       "explanation": "自然酒的核心哲學是極簡干預（Nothing added, nothing taken away），依賴野生酵母，不澄清不過濾，且極少使用二氧化硫。目前它缺乏全球統一的官方認證。"
     }
@@ -36,7 +56,7 @@
     {
       "type": "content",
       "title": "義大利：歐洲永續農業的領頭羊",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利不僅是全球最大的葡萄酒生產國，也是推動永續農業的先驅。其得天獨厚的氣候條件（特別是中南部乾燥、通風的環境）使得減少化學藥劑的使用比歐洲其他潮濕產區更為容易。</p></div><div class=\"stat-grid\"><div class=\"stat-box\"><span class=\"stat-number\">>18%</span><span class=\"stat-label\">葡萄園已獲有機認證，遠高於全球平均</span></div><div class=\"stat-box\"><span class=\"stat-number\">Demeter</span><span class=\"stat-label\">生物動力法先驅，Foradori、Alois Lageder 等頂級莊採用</span></div><div class=\"stat-box\"><span class=\"stat-number\">Vini Veri</span><span class=\"stat-label\">義大利是全球自然酒運動最重要的推手與展會中心</span></div><div class=\"stat-box\"><span class=\"stat-number\">主流化</span><span class=\"stat-label\">永續理念已深刻影響 Barolo、Brunello、Chianti Classico 等頂級產區</span></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利不僅是全球最大的葡萄酒生產國之一，也是推動永續農業的先驅。其得天獨厚的氣候條件（特別是中南部乾燥、通風的環境）使得減少化學藥劑的使用比歐洲其他潮濕產區更為容易。</p></div><div class=\"stat-grid\"><div class=\"stat-box\"><span class=\"stat-number\">>18%</span><span class=\"stat-label\">葡萄園已獲有機認證，遠高於全球平均</span></div><div class=\"stat-box\"><span class=\"stat-number\">Demeter</span><span class=\"stat-label\">生物動力法先驅，Foradori、Alois Lageder 等頂級莊採用</span></div><div class=\"stat-box\"><span class=\"stat-number\">Vini Veri</span><span class=\"stat-label\">義大利是全球自然酒運動最重要的推手與展會中心</span></div><div class=\"stat-box\"><span class=\"stat-number\">主流化</span><span class=\"stat-label\">永續理念已深刻影響 Barolo、Brunello、Chianti Classico 等頂級產區</span></div></div>"
     },
     {
       "type": "content",
@@ -46,7 +66,7 @@
     {
       "type": "content",
       "title": "生物動力法實踐：準備劑 500 與星象農曆",
-      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🐄 準備劑 500（核心工具）</h3><p class=\"mf-style\">牛角糞法（Horn Manure）</p><p class=\"mf-prod\">將牛糞裝入牛角埋入土中過冬發酵；春天取出加水動態攪拌（動化 dynamization）後噴灑土壤；據信可活化土壤微生物群落，促進根系深度</p></div><div class=\"mf-zone warm\"><h3>🌙 星象農曆（Biodynamic Calendar）</h3><p class=\"mf-style\">根據月亮位置安排農事</p><p class=\"mf-prod\">根日（Root）：剪枝、收穫；花日（Flower）：輕微干預；葉日（Leaf）：澆水施肥；果日（Fruit）：最佳品酒日，認為酒的品質最能充分展現</p></div><div class=\"mf-zone cool\"><h3>🌿 義大利代表莊</h3><p class=\"mf-style\">Foradori（Trentino）</p><p class=\"mf-prod\">Elisabetta Foradori 是義大利生物動力法的先驅，其 Teroldego 品種葡萄酒展現了生物動力法如何讓在地品種更充分表達風土</p></div><div class=\"mf-zone plain\"><h3>🏔️ Alois Lageder（Alto Adige）</h3><p class=\"mf-style\">全園認證生物動力法</p><p class=\"mf-prod\">Alois Lageder 酒莊在 Alto Adige 的冷涼氣候下推行完整的生物動力法，被視為義大利北部永續農業的最高標準範例</p></div></div>"
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🐄 準備劑 500（核心工具）</h3><p class=\"mf-style\">牛角糞法（Horn Manure）</p><p class=\"mf-prod\">將牛糞裝入牛角埋入土中過冬發酵；春天取出加水動態攪拌（動化 dynamization）後噴灑土壤；據信可活化土壤微生物群落，促進根系深度</p></div><div class=\"mf-zone warm\"><h3>🌙 星象農曆（Biodynamic Calendar）</h3><p class=\"mf-style\">根據月亮位置安排農事</p><p class=\"mf-prod\">根日（Root）：土壤相關工作；花日（Flower）：被認為有利花香表現；葉日（Leaf）：避免大幅干預；果日（Fruit）：適合採收，也被認為是最佳品酒日</p></div><div class=\"mf-zone cool\"><h3>🌿 義大利代表莊</h3><p class=\"mf-style\">Foradori（Trentino）</p><p class=\"mf-prod\">Elisabetta Foradori 是義大利生物動力法的先驅之一，其 Teroldego 品種葡萄酒展現了生物動力法如何讓在地品種更充分表達風土</p></div><div class=\"mf-zone plain\"><h3>🏔️ Alois Lageder（Alto Adige）</h3><p class=\"mf-style\">全園認證生物動力法</p><p class=\"mf-prod\">Alois Lageder 酒莊在 Alto Adige 的冷涼氣候下推行完整的生物動力法，被視為義大利北部永續農業的最高標準範例</p></div></div>"
     },
     {
       "type": "content",
@@ -61,7 +81,7 @@
         "三種認證層次：有機（Euro Leaf，法規最明確）→ 生物動力法（Demeter，哲學更深）→ 自然酒（Vinnatur，極簡干預）",
         "有機葡萄酒禁用合成農藥，並嚴格限制二氧化硫添加量，是目前最普及的永續認證",
         "生物動力法基於 Rudolf Steiner 哲學，準備劑 500（牛角糞）是活化土壤的核心工具",
-        "生物動力法農曆將農事分為根日、花日、葉日、果日，品酒最佳選「果日」",
+        "生物動力法農曆將日子分為根日、花日、葉日、果日，「果日」被認為最適合採收與品酒",
         "橘酒 (Orange Wine) = 白葡萄連皮發酵，帶單寧的白酒，以 Friuli 產區為現代復興發源地",
         "Josko Gravner 引進喬治亞陶甕 (Qvevri)，Radikon 堅持無 SO2 添加——兩人是全球橘酒革命的教父",
         "自然酒核心哲學：「無添加，無去除（Nothing added, nothing taken away）」，依賴野生酵母，不澄清不過濾"
@@ -75,35 +95,60 @@
         {
           "type": "single",
           "question": "在義大利，哪一種永續農業實踐的法規最為明確，且擁有歐盟統一的「綠葉標誌 (Euro Leaf)」認證？",
-          "options": ["自然酒 (Natural Wine)", "生物動力法 (Biodynamic)", "有機葡萄酒 (Organic Wine)", "橘酒 (Orange Wine)"],
+          "options": [
+            "自然酒 (Natural Wine)",
+            "生物動力法 (Biodynamic)",
+            "有機葡萄酒 (Organic Wine)",
+            "橘酒 (Orange Wine)"
+          ],
           "correct": 2,
           "explanation": "有機葡萄酒 (Vino Biologico) 擁有歐盟統一的法規與綠葉標誌認證，規範了葡萄園內禁止使用合成化學藥劑，以及釀酒過程中二氧化硫的添加上限。"
         },
         {
           "type": "single",
           "question": "生物動力法 (Biodynamic) 除了要求有機種植外，還強調什麼核心理念？",
-          "options": ["必須使用陶甕 (Amphora) 進行發酵", "將葡萄園視為自給自足的生態系統，並根據星象週期與特定配方（如牛角糞）進行農事", "完全禁止在裝瓶時添加任何二氧化硫", "只能種植義大利原生葡萄品種"],
+          "options": [
+            "必須使用陶甕 (Amphora) 進行發酵",
+            "將葡萄園視為自給自足的生態系統，並根據星象週期與特定配方（如牛角糞）進行農事",
+            "完全禁止在裝瓶時添加任何二氧化硫",
+            "只能種植義大利原生葡萄品種"
+          ],
           "correct": 1,
           "explanation": "生物動力法基於 Rudolf Steiner 的哲學，強調宇宙星象對植物的影響，並使用特定的配方（Preparations）來活化土壤與增強植物免疫力。"
         },
         {
           "type": "single",
           "question": "義大利東北部 Friuli 產區，特別是 Josko Gravner 等先驅者，以復興哪一種古老的釀酒技術而聞名全球？",
-          "options": ["使用查馬法 (Charmat Method) 釀造氣泡酒", "使用風乾葡萄 (Appassimento) 釀造甜酒", "將白葡萄連皮浸泡在陶甕 (Qvevri/Amphora) 中發酵，釀造橘酒 (Orange Wine)", "使用 100% 全新法國小橡木桶陳年白酒"],
+          "options": [
+            "使用查馬法 (Charmat Method) 釀造氣泡酒",
+            "使用風乾葡萄 (Appassimento) 釀造甜酒",
+            "將白葡萄連皮浸泡在陶甕 (Qvevri/Amphora) 中發酵，釀造橘酒 (Orange Wine)",
+            "使用 100% 全新法國小橡木桶陳年白酒"
+          ],
           "correct": 2,
           "explanation": "Josko Gravner 等人引進了喬治亞共和國的陶甕，將白葡萄（如 Ribolla Gialla）連皮長時間浸泡發酵，釀造出帶有單寧與琥珀色澤的橘酒，成為現代自然酒運動的重要里程碑。"
         },
         {
           "type": "single",
           "question": "關於「自然酒 (Natural Wine)」，下列敘述何者最為正確？",
-          "options": ["自然酒擁有嚴格的全球統一官方認證標準", "自然酒的核心理念是「無添加，無去除」，通常使用野生酵母發酵且極少或不添加二氧化硫", "自然酒在發酵過程中必須添加大量人工培養酵母以確保發酵順利", "自然酒裝瓶前必須經過嚴格的澄清與過濾，以確保酒液清澈透明"],
+          "options": [
+            "自然酒擁有嚴格的全球統一官方認證標準",
+            "自然酒的核心理念是「無添加，無去除」，通常使用野生酵母發酵且極少或不添加二氧化硫",
+            "自然酒在發酵過程中必須添加大量人工培養酵母以確保發酵順利",
+            "自然酒裝瓶前必須經過嚴格的澄清與過濾，以確保酒液清澈透明"
+          ],
           "correct": 1,
           "explanation": "自然酒的核心哲學是極簡干預（Nothing added, nothing taken away），依賴野生酵母，不澄清不過濾，且極少使用二氧化硫。目前它缺乏全球統一的官方認證。"
         },
         {
           "type": "single",
           "question": "生物動力法「準備劑 500」的製作方式與功能是？",
-          "options": ["以銅硫酸鹽噴灑葡萄葉片，防治霜霉病", "以牛角填充牛糞埋入土中過冬發酵，春天取出噴灑土壤，活化土壤微生物", "在葡萄成熟期噴灑的促進果實糖分累積配方", "用來替代二氧化硫的天然防腐配方"],
+          "options": [
+            "以銅硫酸鹽噴灑葡萄葉片，防治霜霉病",
+            "以牛角填充牛糞埋入土中過冬發酵，春天取出噴灑土壤，活化土壤微生物",
+            "在葡萄成熟期噴灑的促進果實糖分累積配方",
+            "用來替代二氧化硫的天然防腐配方"
+          ],
           "correct": 1,
           "explanation": "準備劑 500（Preparation 500）是生物動力法的核心：將牛糞裝入牛角埋入土中過冬發酵，春天取出加水動態攪拌後噴灑土壤，據信可活化土壤微生物群落和促進根系深度。"
         }

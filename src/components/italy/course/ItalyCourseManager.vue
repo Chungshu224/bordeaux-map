@@ -240,7 +240,7 @@ function handleComplete (lessonId) {
       const prog = getUserProgress(lk)
       return sum + (prog.completedLessons?.length || 0)
     }, 0)
-    const totalLessons = 61
+    const totalLessons = Object.values(courseLevels).reduce((sum, lv) => sum + (lv.totalLessons || 0), 0)
     const totalProgress = Math.round(totalDone / totalLessons * 100)
 
     const newUnlocks = globalItalyAchievementManager.recordLessonCompleted({

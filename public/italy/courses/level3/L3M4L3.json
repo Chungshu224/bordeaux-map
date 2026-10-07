@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "盲品中，哪種特徵組合最能指向義大利北部（Piedmont/Trentino）產區？",
-      "options": ["低酸＋厚重酒體＋黑果", "高酸＋精緻單寧＋礦物感＋紅色水果", "低單寧＋熱帶水果＋高酒精", "中酸＋奶油橡木＋無礦物感"],
+      "options": [
+        "低酸＋厚重酒體＋黑果",
+        "高酸＋精緻單寧＋礦物感＋紅色水果",
+        "低單寧＋熱帶水果＋高酒精",
+        "中酸＋奶油橡木＋無礦物感"
+      ],
       "answer": 1,
       "explanation": "北義（尤其 Piedmont 和 Trentino）的冷涼氣候造就高酸度、精緻單寧、礦物感，以及紅色水果香氣——這與南義的低酸高酒精形成鮮明對比。"
     },
     {
       "question": "Tuscany（Chianti Classico/Brunello）在盲品中最具識別度的風土特徵是？",
-      "options": ["黑色水果＋煙燻＋火山礦物", "酸櫻桃＋乾燥草本＋托斯卡納泥土感", "花香主導＋低酸低單寧", "大量橡木桶香草＋高殘糖"],
+      "options": [
+        "黑色水果＋煙燻＋火山礦物",
+        "酸櫻桃＋乾燥草本＋托斯卡納泥土感",
+        "花香主導＋低酸低單寧",
+        "大量橡木桶香草＋高殘糖"
+      ],
       "answer": 1,
       "explanation": "Tuscany 以 Sangiovese 為主，酸櫻桃＋乾燥草本（迷迭香、百里香）＋托斯卡納赤褐泥土（galestro/alberese）帶來的粉塵單寧感是最具辨識度的風土特徵。"
     },
     {
       "question": "哪個義大利產區的白酒最具代表性的「苦杏仁尾韻＋礦物感」，來自火山凝灰岩（Volcanic Tuff）土壤？",
-      "options": ["Campania（Greco di Tufo）", "Friuli（Pinot Grigio）", "Trentino（Müller-Thurgau）", "Lombardy（Franciacorta）"],
+      "options": [
+        "Campania（Greco di Tufo）",
+        "Friuli（Pinot Grigio）",
+        "Trentino（Müller-Thurgau）",
+        "Lombardy（Franciacorta）"
+      ],
       "answer": 0,
       "explanation": "Campania 的 Greco di Tufo 和 Fiano di Avellino 生長在火山凝灰岩土壤上，帶來獨特礦物感＋苦杏仁尾韻，是南義白酒最具產區風土識別度的特徵。"
     },
     {
       "question": "識別 Piemonte 風土時，哪種香氣是 Langhe（Barolo/Barbaresco）的關鍵識別符號？",
-      "options": ["胡椒與煙燻", "焦油＋玫瑰＋枯葉（Nebbiolo 三重奏）", "熱帶水果與巧克力", "青草與白花"],
+      "options": [
+        "胡椒與煙燻",
+        "焦油＋玫瑰＋枯葉（Nebbiolo 三重奏）",
+        "熱帶水果與巧克力",
+        "青草與白花"
+      ],
       "answer": 1,
       "explanation": "Nebbiolo 在 Langhe（Barolo/Barbaresco）的風土識別符號是「焦油＋玫瑰（新鮮時）→ 枯葉/蘑菇（陳年時）」三重奏，配合高酸度和精細單寧作為佐證。"
     }
@@ -36,17 +56,17 @@
     {
       "type": "content",
       "title": "義大利南北風土差異：盲品的第一層篩選",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">義大利從阿爾卑斯山到地中海，南北跨越 1000 公里，氣候差異顯著。盲品時先用「南北判斷」縮小範圍，再識別具體產區。</p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🏔️ 北義（冷涼氣候）</h3><p class=\"mf-style\">Piedmont / Trentino / Alto Adige / Friuli</p><p class=\"mf-prod\">高酸度｜精緻單寧｜礦物感強｜紅色水果為主｜陳年潛力長</p></div><div class=\"mf-zone warm\"><h3>🌿 中義（溫和氣候）</h3><p class=\"mf-style\">Tuscany / Umbria / Marche / Lazio</p><p class=\"mf-prod\">中高酸度｜中等單寧＋粉塵質感｜乾燥草本香氣｜紅黑果並存｜泥土礦物感</p></div><div class=\"mf-zone cool\"><h3>☀️ 南義（溫暖氣候）</h3><p class=\"mf-style\">Campania / Puglia / Basilicata / Calabria</p><p class=\"mf-prod\">較低酸度｜高酒精（14%+）｜黑色水果＋香料｜火山/礦物感（Campania）</p></div><div class=\"mf-zone plain\"><h3>🌋 島嶼（極端氣候）</h3><p class=\"mf-style\">Sicily / Sardinia</p><p class=\"mf-prod\">熱帶日照強烈｜低酸高酒精（Nero d'Avola）｜但 Etna 火山高海拔例外（高酸）</p></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">義大利從阿爾卑斯山到地中海，南北跨越 1000 公里，氣候差異顯著。盲品時先用「南北判斷」縮小範圍，再識別具體產區。</p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🏔️ 北義（冷涼氣候）</h3><p class=\"mf-style\">Piedmont / Trentino / Alto Adige / Friuli</p><p class=\"mf-prod\">高酸度｜精緻單寧｜礦物感強｜紅色水果為主｜陳年潛力長</p></div><div class=\"mf-zone warm\"><h3>🌿 中義（溫和氣候）</h3><p class=\"mf-style\">Tuscany / Umbria / Marche / Lazio</p><p class=\"mf-prod\">中高酸度｜中等單寧＋粉塵質感｜乾燥草本香氣｜紅黑果並存｜泥土礦物感</p></div><div class=\"mf-zone cool\"><h3>☀️ 南義（溫暖氣候）</h3><p class=\"mf-style\">Campania / Puglia / Basilicata / Calabria</p><p class=\"mf-prod\">較低酸度｜高酒精（14%+）｜黑色水果＋香料｜火山/礦物感（Campania）</p></div><div class=\"mf-zone plain\"><h3>🌋 島嶼（極端氣候）</h3><p class=\"mf-style\">Sicily / Sardinia</p><p class=\"mf-prod\">日照強烈｜低酸高酒精（Nero d'Avola）｜但 Etna 火山高海拔例外（高酸）</p></div></div>"
     },
     {
       "type": "content",
       "title": "北義三大產區風土識別",
-      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Piedmont / Alto Adige / Friuli — 三種截然不同的北義風格</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍷 Piedmont（Langhe 丘陵）</strong><br>土壤：Tortonian 黏土（La Morra）＋ Helvetian 石灰岩（Serralunga）<br>風土標誌：Nebbiolo — 玫瑰＋焦油＋甘草｜Barbera — 高酸低單寧爽脆感<br>識別線索：高酸＋複雜結構＋礦物感，Nebbiolo 最具識別度</div><div class=\"orvieto-card\"><strong>🏔️ Alto Adige / Trentino（高山）</strong><br>土壤：板岩、花崗岩、石灰岩（海拔 200-1000m）<br>風土標誌：Pinot Grigio — 清爽礦物感｜Riesling — 高酸花香｜Gewürztraminer — 荔枝玫瑰<br>識別線索：極高酸度＋清冽礦物感＋品種香氣清晰，不同於任何其他義大利產區</div><div class=\"orvieto-card\"><strong>🌊 Friuli Venezia Giulia</strong><br>土壤：Ponca（砂岩黏土）、Collio 丘陵<br>風土標誌：Friulano — 杏仁尾韻＋白花｜Ribolla Gialla — 高酸清脆<br>識別線索：橙酒（skin-contact white）是 Friuli 的特殊風格，氧化感＋单寧質感</div></div></div>"
+      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Piedmont / Alto Adige / Friuli — 三種截然不同的北義風格</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍷 Piedmont（Langhe 丘陵）</strong><br>土壤：Tortonian 黏土（La Morra）＋ Serravallian 石灰質泥灰岩與砂岩（Serralunga）<br>風土標誌：Nebbiolo — 玫瑰＋焦油＋甘草｜Barbera — 高酸低單寧爽脆感<br>識別線索：高酸＋複雜結構＋礦物感，Nebbiolo 最具識別度</div><div class=\"orvieto-card\"><strong>🏔️ Alto Adige / Trentino（高山）</strong><br>土壤：斑岩、白雲石灰岩、片岩、冰磧土（海拔 200-1000m）<br>風土標誌：Pinot Grigio — 清爽礦物感｜Riesling — 高酸花香｜Gewürztraminer — 荔枝玫瑰<br>識別線索：極高酸度＋清冽礦物感＋品種香氣清晰，不同於任何其他義大利產區</div><div class=\"orvieto-card\"><strong>🌊 Friuli Venezia Giulia</strong><br>土壤：Ponca（砂岩黏土）、Collio 丘陵<br>風土標誌：Friulano — 杏仁尾韻＋白花｜Ribolla Gialla — 高酸清脆<br>識別線索：橙酒（skin-contact white）是 Friuli 的特殊風格，氧化感＋單寧質感</div></div></div>"
     },
     {
       "type": "content",
       "title": "托斯卡納各產區風土差異識別",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">托斯卡納以 Sangiovese 為核心，但不同產區風土帶來顯著的風格差異，可在盲品中識別。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Chianti Classico</h3><ul><li><strong>土壤：</strong>Galestro（石灰質板岩）＋ Alberese（黏土）</li><li><strong>酸度：</strong>高（pH 3.3-3.6）</li><li><strong>香氣：</strong>酸櫻桃＋乾燥草本＋泥土感</li><li><strong>單寧：</strong>中等＋粉塵質感（Galestro 影響）</li><li><strong>識別：</strong>Gran Selezione 等級花香更優雅，單寧更細膩</li></ul></div><div class=\"method-card modern\"><h3>Brunello di Montalcino</h3><ul><li><strong>土壤：</strong>多樣（砂岩、黏土、石灰岩、火山土）</li><li><strong>酸度：</strong>高（pH 3.3-3.5）</li><li><strong>香氣：</strong>酸櫻桃＋玫瑰＋礦物感（比 Chianti 更複雜）</li><li><strong>單寧：</strong>更強健，比 Chianti 更緊實</li><li><strong>識別：</strong>更豐富的果味＋更長的餘韻（115 秒 vs 90 秒）</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">托斯卡納以 Sangiovese 為核心，但不同產區風土帶來顯著的風格差異，可在盲品中識別。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Chianti Classico</h3><ul><li><strong>土壤：</strong>Galestro（易碎的片狀泥灰岩）＋ Alberese（堅硬石灰岩）</li><li><strong>酸度：</strong>高（pH 3.3-3.6）</li><li><strong>香氣：</strong>酸櫻桃＋乾燥草本＋泥土感</li><li><strong>單寧：</strong>中等＋粉塵質感（Galestro 影響）</li><li><strong>識別：</strong>Gran Selezione 等級花香更優雅，單寧更細膩</li></ul></div><div class=\"method-card modern\"><h3>Brunello di Montalcino</h3><ul><li><strong>土壤：</strong>多樣（砂岩、黏土、石灰岩、火山土）</li><li><strong>酸度：</strong>高（pH 3.3-3.5）</li><li><strong>香氣：</strong>酸櫻桃＋玫瑰＋礦物感（比 Chianti 更複雜）</li><li><strong>單寧：</strong>更強健，比 Chianti 更緊實</li><li><strong>識別：</strong>更豐富的果味＋更長的餘韻</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
@@ -76,35 +96,60 @@
         {
           "type": "single",
           "question": "盲品中，哪種特徵組合最能指向義大利北部（Piedmont/Trentino）產區？",
-          "options": ["低酸＋厚重酒體＋黑果", "高酸＋精緻單寧＋礦物感＋紅色水果", "低單寧＋熱帶水果＋高酒精", "中酸＋奶油橡木＋無礦物感"],
+          "options": [
+            "低酸＋厚重酒體＋黑果",
+            "高酸＋精緻單寧＋礦物感＋紅色水果",
+            "低單寧＋熱帶水果＋高酒精",
+            "中酸＋奶油橡木＋無礦物感"
+          ],
           "correct": 1,
           "explanation": "北義冷涼氣候造就高酸度、精緻單寧、礦物感，以及紅色水果香氣——這與南義的低酸高酒精形成鮮明對比，是盲品中最可靠的南北區分線索。"
         },
         {
           "type": "single",
           "question": "Tuscany（Chianti Classico/Brunello）在盲品中最具識別度的風土特徵是？",
-          "options": ["黑色水果＋煙燻＋火山礦物", "酸櫻桃＋乾燥草本＋托斯卡納泥土粉塵感", "花香主導＋低酸低單寧", "大量橡木桶香草＋高殘糖"],
+          "options": [
+            "黑色水果＋煙燻＋火山礦物",
+            "酸櫻桃＋乾燥草本＋托斯卡納泥土粉塵感",
+            "花香主導＋低酸低單寧",
+            "大量橡木桶香草＋高殘糖"
+          ],
           "correct": 1,
-          "explanation": "Tuscany 以 Sangiovese 為主，酸櫻桃＋乾燥草本（迷迭香、百里香）＋Galestro 石灰質板岩帶來的粉塵質感單寧是最具識別度的托斯卡納風土特徵。"
+          "explanation": "Tuscany 以 Sangiovese 為主，酸櫻桃＋乾燥草本（迷迭香、百里香）＋Galestro 片狀泥灰岩帶來的粉塵質感單寧是最具識別度的托斯卡納風土特徵。"
         },
         {
           "type": "single",
           "question": "哪個義大利產區的白酒帶有「苦杏仁尾韻＋礦物感」，因生長在火山凝灰岩土壤上？",
-          "options": ["Campania（Greco di Tufo）", "Friuli（Pinot Grigio）", "Trentino（Müller-Thurgau）", "Lombardy（Franciacorta）"],
+          "options": [
+            "Campania（Greco di Tufo）",
+            "Friuli（Pinot Grigio）",
+            "Trentino（Müller-Thurgau）",
+            "Lombardy（Franciacorta）"
+          ],
           "correct": 0,
           "explanation": "Campania 的 Greco di Tufo 和 Fiano di Avellino 生長在火山凝灰岩土壤上，帶來獨特礦物感＋苦杏仁尾韻，是南義白酒最具產區風土識別度的特徵。"
         },
         {
           "type": "single",
           "question": "Etna（西西里火山）的 Nerello Mascalese 在盲品中最容易被誤判為哪個產區的酒款？",
-          "options": ["Barolo（Nebbiolo）", "Chianti Classico（Sangiovese）", "Burgundy（Pinot Noir）", "Taurasi（Aglianico）"],
+          "options": [
+            "Barolo（Nebbiolo）",
+            "Chianti Classico（Sangiovese）",
+            "Burgundy（Pinot Noir）",
+            "Taurasi（Aglianico）"
+          ],
           "correct": 2,
           "explanation": "Etna 高海拔（600-1000m）火山帶來高酸、精緻單寧、礦物感，Nerello Mascalese 顏色也偏淺——這些特徵讓它經常被誤判為 Burgundy Pinot Noir。"
         },
         {
           "type": "single",
           "question": "識別 Piemonte Langhe（Barolo/Barbaresco）的關鍵香氣標誌是？",
-          "options": ["胡椒與煙燻（更像 Campania）", "焦油＋玫瑰（年輕）→ 枯葉/蘑菇（陳年）", "熱帶水果與巧克力（更像 Puglia）", "青草與白花（更像 Alto Adige）"],
+          "options": [
+            "胡椒與煙燻（更像 Campania）",
+            "焦油＋玫瑰（年輕）→ 枯葉/蘑菇（陳年）",
+            "熱帶水果與巧克力（更像 Puglia）",
+            "青草與白花（更像 Alto Adige）"
+          ],
           "correct": 1,
           "explanation": "Nebbiolo 在 Langhe 的風土識別符號是「焦油＋玫瑰（新鮮時）→ 枯葉/蘑菇（陳年時）」三重奏，配合高酸度和精細單寧作為佐證，是 Langhe 最具辨識度的風土特徵組合。"
         }

@@ -4,27 +4,47 @@
   "quiz": [
     {
       "question": "SAT 盲品系統必須按照 S→A→T 順序的最重要原因是？",
-      "options": ["按字母順序容易記憶", "嗅覺最敏感但易疲勞，品嚐後酒精蒸氣影響嗅覺靈敏度", "視覺分析是最重要的步驟", "這是 ASI 的規定"],
+      "options": [
+        "按字母順序容易記憶",
+        "嗅覺最敏感但易疲勞，品嚐後酒精蒸氣影響嗅覺靈敏度",
+        "視覺分析是最重要的步驟",
+        "這是 ASI 的規定"
+      ],
       "answer": 1,
-      "explanation": "嗅覺受體在持續暴露同一氣味 60-90 秒後靈敏度下降 30-50%，品嚐後酒精蒸氣進一步降低嗅覺辨識力，因此嗅覺分析必須在品嚐前完成。"
+      "explanation": "嗅覺受體持續暴露於同一氣味後很快就會疲勞（嗅覺適應），品嚐後酒精蒸氣進一步降低嗅覺辨識力，因此嗅覺分析必須在品嚐前完成。"
     },
     {
       "question": "視覺分析發現「淺石榴紅＋橙色邊緣＋高透光性」，最可能指向哪個義大利品種？",
-      "options": ["Aglianico（深紫、不透光）", "Nebbiolo（低花青素、年輕酒已有橙調）", "Primitivo（深紅、中等透光）", "Sangiovese（中等紅、5 年後才橙邊）"],
+      "options": [
+        "Aglianico（深紫、不透光）",
+        "Nebbiolo（低花青素、年輕酒已有橙調）",
+        "Primitivo（深紅、中等透光）",
+        "Sangiovese（中等紅、5 年後才橙邊）"
+      ],
       "answer": 1,
-      "explanation": "Nebbiolo 花青素僅 200-400 mg/L（Aglianico 達 800-1200 mg/L），天生顏色淺；且花青素不穩定，即使 3-5 年的年輕酒邊緣已呈橙紅，這是義大利盲品最具辨識度的視覺標誌。"
+      "explanation": "Nebbiolo 花青素含量低（遠低於 Aglianico），且以較不穩定的花青素為主，天生顏色淺；因此，即使 3-5 年的年輕酒邊緣已呈橙紅，這是義大利盲品最具辨識度的視覺標誌。"
     },
     {
       "question": "嗅覺分析聞到「玫瑰花瓣＋焦油＋紫羅蘭」，這是哪個品種的核心標誌？",
-      "options": ["Sangiovese（酸櫻桃＋乾燥草本）", "Nebbiolo（玫瑰＋焦油是唯一品種同時出現的組合）", "Aglianico（黑果＋煙燻＋火山感）", "Barbera（高酸＋紅色水果）"],
+      "options": [
+        "Sangiovese（酸櫻桃＋乾燥草本）",
+        "Nebbiolo（玫瑰＋焦油是其最經典的標誌組合）",
+        "Aglianico（黑果＋煙燻＋火山感）",
+        "Barbera（高酸＋紅色水果）"
+      ],
       "answer": 1,
-      "explanation": "Nebbiolo 含高濃度萜烯（Geraniol、Nerol），構成玫瑰香氣；陳年後單寧與酚類聚合產生焦油香。兩者同時出現是 Nebbiolo 獨有組合，識別度達 95%。"
+      "explanation": "Nebbiolo 含有萜烯類物質（如 Geraniol、Nerol），與其玫瑰香氣有關；陳年後單寧與酚類聚合產生焦油香。兩者同時出現是 Nebbiolo 最經典的辨識組合。"
     },
     {
       "question": "味覺分析得出「極高酸度＋極高單寧但細膩＋120 秒餘韻」，結合視覺的淺橙邊與嗅覺的玫瑰焦油，演繹推理結論是？",
-      "options": ["Sangiovese Riserva（單寧中等，餘韻 60-90 秒）", "Barolo DOCG，陳年 10-15 年，可能 Riserva 或 MGA 單一園", "Aglianico del Vulture（顏色深紫，不符視覺特徵）", "Barbaresco（單寧較柔，餘韻通常 90-110 秒）"],
+      "options": [
+        "Sangiovese Riserva（單寧較 Nebbiolo 溫和）",
+        "Barolo DOCG，陳年 10-15 年，可能 Riserva 或 MGA 單一園",
+        "Aglianico del Vulture（顏色深紫，不符視覺特徵）",
+        "Barbaresco（通常單寧較柔、焦油感較少）"
+      ],
       "answer": 1,
-      "explanation": "三重標誌同時確認：淺橙邊（S）+ 玫瑰焦油（A）+ 極高酸單寧且細膩、120 秒餘韻（T）= 100% Nebbiolo。焦油明顯 + 極高單寧 + 超長餘韻 → Barolo > Barbaresco。橙邊 + 焦油出現 → 陳年 10-15 年。"
+      "explanation": "三重標誌同時確認：淺橙邊（S）+ 玫瑰焦油（A）+ 極高酸單寧且細膩、120 秒餘韻（T）= Nebbiolo。焦油明顯 + 極高單寧 + 超長餘韻 → Barolo > Barbaresco。橙邊 + 焦油出現 → 陳年 10-15 年。"
     }
   ],
   "slides": [
@@ -46,22 +66,22 @@
     {
       "type": "content",
       "title": "A：嗅覺分析 — 90 秒建立香氣指紋",
-      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">三大品種標誌香氣（核心識別符號）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🌹 Nebbiolo：玫瑰＋焦油</strong>（識別度 95%）<br>年輕：紫羅蘭＋玫瑰＋紅櫻桃｜陳年：焦油＋皮革＋甘草＋松露<br>原理：高濃度萜烯（Geraniol）→ 玫瑰；高單寧陳年聚合 → 焦油</div><div class=\"orvieto-card\"><strong>🍒 Sangiovese：酸櫻桃＋乾燥草本</strong>（識別度 90%）<br>年輕：酸櫻桃＋紫羅蘭＋番茄葉｜陳年：皮革＋煙草＋香料<br>關鍵：「酸」櫻桃（sour cherry，非甜）＋乾燥草本是核心標誌</div><div class=\"orvieto-card\"><strong>🫐 Aglianico：黑果＋煙燻火山感</strong>（識別度 85%）<br>年輕：黑莓＋黑醋栗＋甘草＋黑胡椒｜陳年：皮革＋焦油＋松露<br>特色：火山土壤帶來獨特礦物煙燻感，南義最深色品種</div></div></div><div class=\"dna-research\"><h3>💡 聞香技巧：初聞（靜止）→ 搖晃後聞 → 分層識別</h3><div class=\"science-note\">找到「標誌香氣」後用次要特徵驗證，而非推翻。「玫瑰＋焦油」組合出現 → 95% 確定 Nebbiolo，無需等待其他線索</div></div>"
+      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">三大品種標誌香氣（核心識別符號）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🌹 Nebbiolo：玫瑰＋焦油</strong><br>年輕：紫羅蘭＋玫瑰＋紅櫻桃｜陳年：焦油＋皮革＋甘草＋松露<br>原理：萜烯類（如 Geraniol）→ 玫瑰；高單寧陳年聚合 → 焦油</div><div class=\"orvieto-card\"><strong>🍒 Sangiovese：酸櫻桃＋乾燥草本</strong><br>年輕：酸櫻桃＋紫羅蘭＋番茄葉｜陳年：皮革＋煙草＋香料<br>關鍵：「酸」櫻桃（sour cherry，非甜）＋乾燥草本是核心標誌</div><div class=\"orvieto-card\"><strong>🫐 Aglianico：黑果＋煙燻火山感</strong><br>年輕：黑莓＋黑醋栗＋甘草＋黑胡椒｜陳年：皮革＋焦油＋松露<br>特色：火山土壤帶來獨特礦物煙燻感，南義最深色品種</div></div></div><div class=\"dna-research\"><h3>💡 聞香技巧：初聞（靜止）→ 搖晃後聞 → 分層識別</h3><div class=\"science-note\">找到「標誌香氣」後用次要特徵驗證，而非推翻。「玫瑰＋焦油」組合出現 → 高度指向 Nebbiolo，再以其他線索驗證</div></div>"
     },
     {
       "type": "content",
       "title": "T：味覺分析 ＋ 演繹推理四步驟",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">味覺提供最終驗證數據，用來確認或推翻嗅覺假設。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>味覺核心評估項目</h3><ul><li><strong>酸度：</strong>高（pH &lt;3.5）舌側反應強 → Nebbiolo、Sangiovese、Aglianico</li><li><strong>單寧質地：</strong>細膩絲滑 vs 粗糙砂紙（品質與年齡指標）</li><li><strong>酒體：</strong>輕（Frappato）→ 飽滿（Amarone）</li><li><strong>餘韻：</strong>&lt;30秒基本款 ｜ 60-120秒優質 ｜ 120秒+頂級（DOCG）</li></ul></div><div class=\"method-card modern\"><h3>演繹推理 4 步驟</h3><ul><li><strong>① 整合 SAT 數據：</strong>列出所有觀察，標記🔥標誌特徵</li><li><strong>② 識別標誌特徵：</strong>建立「玫瑰焦油→Nebbiolo」等初步假設</li><li><strong>③ 交叉驗證：</strong>檢查所有 SAT 特徵是否支持假設，找矛盾點</li><li><strong>④ 細化結論：</strong>品種確認後 → 推斷產區、年齡、品質等級、估價</li></ul></div></div></div><div class=\"science-note\">黃金法則：每個結論需要至少 3 個獨立 SAT 證據支撐。「玫瑰（A）＋淺橙邊（S）＋高酸高單寧（T）」三重確認 = 95%+ 確定 Nebbiolo</div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">味覺提供最終驗證數據，用來確認或推翻嗅覺假設。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>味覺核心評估項目</h3><ul><li><strong>酸度：</strong>高（pH &lt;3.5）舌側反應強 → Nebbiolo、Sangiovese、Aglianico</li><li><strong>單寧質地：</strong>細膩絲滑 vs 粗糙砂紙（品質與年齡指標）</li><li><strong>酒體：</strong>輕（Frappato）→ 飽滿（Amarone）</li><li><strong>餘韻：</strong>短＝多為基本款 ｜ 中長＝優質 ｜ 極長＝頂級酒款</li></ul></div><div class=\"method-card modern\"><h3>演繹推理 4 步驟</h3><ul><li><strong>① 整合 SAT 數據：</strong>列出所有觀察，標記🔥標誌特徵</li><li><strong>② 識別標誌特徵：</strong>建立「玫瑰焦油→Nebbiolo」等初步假設</li><li><strong>③ 交叉驗證：</strong>檢查所有 SAT 特徵是否支持假設，找矛盾點</li><li><strong>④ 細化結論：</strong>品種確認後 → 推斷產區、年齡、品質等級、估價</li></ul></div></div></div><div class=\"science-note\">黃金法則：每個結論需要至少 3 個獨立 SAT 證據支撐。「玫瑰（A）＋淺橙邊（S）＋高酸高單寧（T）」三重確認 = 高度確定 Nebbiolo</div></div>"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
         "SAT 系統：S（視覺 30s）→ A（嗅覺 90s）→ T（味覺 60s）→ 演繹推理，順序不可顛倒",
-        "順序原因：嗅覺易疲勞（60-90s 後靈敏度降 30-50%），品嚐後酒精蒸氣影響嗅覺",
+        "順序原因：嗅覺易疲勞（嗅覺容易適應疲勞），品嚐後酒精蒸氣影響嗅覺",
         "視覺：顏色深度判斷品種家族；邊緣橙色程度判斷年齡；義大利陷阱：淺色≠輕單寧",
         "Nebbiolo 視覺標誌：淺石榴紅＋橙色邊緣（即使年輕 3-5 年）＋高透光性",
-        "Nebbiolo 嗅覺標誌：玫瑰＋焦油（識別度 95%，世界上唯一同時出現的品種）",
+        "Nebbiolo 嗅覺標誌：玫瑰＋焦油（最經典的辨識組合）",
         "Sangiovese 嗅覺標誌：酸櫻桃＋乾燥草本（番茄葉），注意「酸」而非甜",
         "Aglianico 嗅覺標誌：黑果＋煙燻火山感，顏色深邃不透光",
         "演繹推理四步驟：整合數據 → 識別標誌 → 交叉驗證 → 細化結論",
@@ -76,35 +96,60 @@
         {
           "type": "single",
           "question": "SAT 盲品系統必須按照 S→A→T 順序的最重要科學原因是？",
-          "options": ["按字母順序容易記憶", "嗅覺易疲勞，品嚐後酒精蒸氣影響嗅覺靈敏度，必須在品嚐前完成", "視覺分析是最重要的步驟，必須第一", "這是 ASI 侍酒師協會的規定"],
+          "options": [
+            "按字母順序容易記憶",
+            "嗅覺易疲勞，品嚐後酒精蒸氣影響嗅覺靈敏度，必須在品嚐前完成",
+            "視覺分析是最重要的步驟，必須第一",
+            "這是 ASI 侍酒師協會的規定"
+          ],
           "correct": 1,
-          "explanation": "嗅覺受體在持續暴露同一氣味 60-90 秒後靈敏度下降 30-50%；品嚐後酒精蒸氣通過後鼻腔進一步降低嗅覺辨識力。因此嗅覺必須在品嚐前完成。"
+          "explanation": "嗅覺受體持續暴露於同一氣味後很快就會疲勞（嗅覺適應）；品嚐後酒精蒸氣通過後鼻腔進一步降低嗅覺辨識力。因此嗅覺必須在品嚐前完成。"
         },
         {
           "type": "single",
           "question": "視覺分析發現「淺石榴紅＋明顯橙色邊緣＋高透光性」，最可能指向哪個義大利品種？",
-          "options": ["Aglianico（深紫不透光，年輕時紫色邊緣）", "Nebbiolo（低花青素，即使年輕 3-5 年已有橙色調）", "Primitivo（深紅，中等透光性）", "Sangiovese（中等紅，5 年後才明顯橙邊）"],
+          "options": [
+            "Aglianico（深紫不透光，年輕時紫色邊緣）",
+            "Nebbiolo（低花青素，即使年輕 3-5 年已有橙色調）",
+            "Primitivo（深紅，中等透光性）",
+            "Sangiovese（中等紅，5 年後才明顯橙邊）"
+          ],
           "correct": 1,
-          "explanation": "Nebbiolo 花青素僅 200-400 mg/L，天生顏色淺；且花青素不穩定，3-5 年年輕酒邊緣已呈橙紅色——這是義大利盲品最具辨識度的視覺標誌。"
+          "explanation": "Nebbiolo 花青素含量低，且以較不穩定的花青素為主，天生顏色淺；3-5 年年輕酒邊緣已呈橙紅色——這是義大利盲品最具辨識度的視覺標誌。"
         },
         {
           "type": "single",
-          "question": "嗅覺分析聞到「玫瑰花瓣＋焦油＋紫羅蘭」，識別度達 95% 的品種是？",
-          "options": ["Sangiovese（核心標誌是酸櫻桃＋乾燥草本）", "Nebbiolo（玫瑰＋焦油是其獨有的化學組合）", "Aglianico（核心標誌是黑果＋煙燻火山感）", "Barbera（高酸＋簡單紅色水果為主）"],
+          "question": "嗅覺分析聞到「玫瑰花瓣＋焦油＋紫羅蘭」，這是哪個品種最經典的標誌？",
+          "options": [
+            "Sangiovese（核心標誌是酸櫻桃＋乾燥草本）",
+            "Nebbiolo（玫瑰＋焦油是其最經典的標誌組合）",
+            "Aglianico（核心標誌是黑果＋煙燻火山感）",
+            "Barbera（高酸＋簡單紅色水果為主）"
+          ],
           "correct": 1,
-          "explanation": "Nebbiolo 含高濃度萜烯（Geraniol）構成玫瑰香；陳年後高單寧聚合產生焦油香。兩者同時出現是世界上 Nebbiolo 的獨有組合，識別度達 95%。"
+          "explanation": "Nebbiolo 含有萜烯類物質（如 Geraniol），與其玫瑰香有關；陳年後高單寧聚合產生焦油香。兩者同時出現是 Nebbiolo 最經典的辨識組合。"
         },
         {
           "type": "single",
           "question": "演繹推理中，「淺橙邊（S）＋玫瑰焦油（A）＋極高酸單寧且細膩＋120 秒餘韻（T）」，最終結論是？",
-          "options": ["Sangiovese Riserva（單寧中等，餘韻 60-90 秒，與極高單寧矛盾）", "Barolo DOCG，陳年 10-15 年，Riserva 或 MGA 單一園等級", "Aglianico del Vulture（顏色應為深紫，不符視覺特徵）", "Barbaresco DOCG（單寧較柔，餘韻通常 90-110 秒）"],
+          "options": [
+            "Sangiovese Riserva（單寧較溫和，與極高單寧矛盾）",
+            "Barolo DOCG，陳年 10-15 年，Riserva 或 MGA 單一園等級",
+            "Aglianico del Vulture（顏色應為深紫，不符視覺特徵）",
+            "Barbaresco DOCG（通常單寧較柔、焦油感較少）"
+          ],
           "correct": 1,
           "explanation": "三重 SAT 標誌全部確認 Nebbiolo；焦油明顯＋極高單寧＋120 秒餘韻 → Barolo > Barbaresco；橙邊＋焦油 → 陳年至少 10-15 年。"
         },
         {
           "type": "single",
           "question": "SAT 盲品中，「T 味覺」階段最重要的任務是？",
-          "options": ["重新確認顏色深度", "提供酸度、單寧、酒體、餘韻數據，驗證視覺與嗅覺的假設", "判斷香氣複雜度", "估計酒款價格"],
+          "options": [
+            "重新確認顏色深度",
+            "提供酸度、單寧、酒體、餘韻數據，驗證視覺與嗅覺的假設",
+            "判斷香氣複雜度",
+            "估計酒款價格"
+          ],
           "correct": 1,
           "explanation": "T 味覺階段的核心任務是「驗證」：用酸度強度、單寧質地與量、酒體輕重、餘韻長度等數據，確認或推翻前兩步驟建立的品種/產區假設。"
         }

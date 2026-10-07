@@ -4,26 +4,46 @@
   "quiz": [
     {
       "question": "評估葡萄酒陳年潛力的四大化學支柱中，哪個是最重要的「第一道防線」？",
-      "options": ["殘糖量", "酸度（pH 值）", "酒精濃度", "橡木桶影響"],
+      "options": [
+        "殘糖量",
+        "酸度（pH 值）",
+        "酒精濃度",
+        "橡木桶影響"
+      ],
       "answer": 1,
       "explanation": "酸度（低 pH 值）是陳年的第一道防線：抑制微生物生長、保護色素、維持清新感，是所有長壽葡萄酒的共同特徵。"
     },
     {
       "question": "儲存溫度對陳年速度的影響，以下哪個描述最準確？",
-      "options": ["溫度影響不大，僅需避免冷凍", "14°C 窖藏 40 年約等於 20°C 窖藏 20 年的成熟度", "低溫會破壞葡萄酒結構", "高溫反而能加速有益陳年"],
-      "answer": 2,
-      "explanation": "根據化學動力學，溫度每升高 10°C，化學反應速率約加倍。14°C 窖藏 40 年的成熟度大約等同 20°C 儲存 20 年，低溫顯著延緩陳年速度。"
+      "options": [
+        "溫度影響不大，僅需避免冷凍",
+        "溫度越高陳年越快：溫度每升高約 10°C，化學反應速率約加倍",
+        "低溫會破壞葡萄酒結構",
+        "高溫反而能加速有益陳年"
+      ],
+      "answer": 1,
+      "explanation": "根據化學動力學，溫度每升高約 10°C，化學反應速率約加倍。因此 20°C 下的陳年速度明顯快於 14°C，且高溫會帶來不均衡、粗糙的老化；穩定的低溫能顯著延緩陳年，讓酒款均衡發展。"
     },
     {
       "question": "品飲一款 15 年的 Barolo，若發現顏色已轉為磚紅＋橙色邊緣＋皮革菸草香氣突出，代表？",
-      "options": ["酒款過了高峰，已開始衰退", "正處於成熟高峰期，是最佳品飲時機", "酒款尚未成熟，需繼續窖藏", "受到輕微氧化損壞"],
+      "options": [
+        "酒款過了高峰，已開始衰退",
+        "正處於成熟高峰期，是最佳品飲時機",
+        "酒款尚未成熟，需繼續窖藏",
+        "受到輕微氧化損壞"
+      ],
       "answer": 1,
       "explanation": "磚紅色＋橙色邊緣＋皮革菸草香氣是成熟 Barolo 的典型特徵，說明酒款已進入成熟高峰期，是品飲絕佳時機。"
     },
     {
       "question": "使用實戰評分清單評估陳年潛力，以下哪款酒最可能得最高分？",
-      "options": ["低酸、低單寧、低酒精、無橡木桶陳年的白酒", "高酸、高單寧、高酒精、橡木桶陳年的紅酒", "低酸、高糖、高酒精的甜白酒", "高酸、低單寧、低酒精的輕盈紅酒"],
-      "answer": 2,
+      "options": [
+        "低酸、低單寧、低酒精、無橡木桶陳年的白酒",
+        "高酸、高單寧、高酒精、橡木桶陳年的紅酒",
+        "低酸、高糖、高酒精的甜白酒",
+        "高酸、低單寧、低酒精的輕盈紅酒"
+      ],
+      "answer": 1,
       "explanation": "高酸（pH 低）、高單寧、高酒精、橡木桶陳年四項加分因素齊全，構成最強的陳年支柱，是高陳年潛力酒款的典型特徵。"
     }
   ],
@@ -36,22 +56,22 @@
     {
       "type": "content",
       "title": "四大化學支柱：陳年潛力的科學基礎",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">陳年潛力不是神祕玄學，而是可量化的化學系統。掌握四大支柱，能科學預判任何義大利酒的陳年能力。</p><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>💧 酸度（第一支柱）</strong>：低 pH（高酸）是陳年第一道防線。抑制微生物、保護色素、維持清新感。目標 pH 3.2-3.5</div><div class=\"kp-box\"><strong>🍇 單寧（第二支柱）</strong>：多酚聚合反應是紅酒陳年核心。優質單寧聚合後柔化並增添複雜度，粗澀單寧則品質不升</div><div class=\"kp-box\"><strong>🔬 酒精（第三支柱）</strong>：13.5-15% ABV 是最佳陳年區間。過低缺乏保護；過高（超過 15.5%）則可能掩蓋細膩度</div><div class=\"kp-box\"><strong>🪵 橡木桶陳年（第四支柱）</strong>：適度氧化整合單寧，增添結構。但新橡木比例過高可能掩蓋風土特色</div></div><div class=\"dna-research\"><h3>⚖️ 義大利最長壽品種的共同特徵</h3><div class=\"science-card\">Nebbiolo（Barolo/Barbaresco）：pH 3.2-3.5、單寧 2.5-4 g/L、ABV 13.5-15%——三高支柱俱全</div><div class=\"science-note\">Sangiovese Grosso（Brunello）：相近的酸單寧結構，但花青素稍低，靠酸度維持更長陳年</div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">陳年潛力不是神祕玄學，而是可量化的化學系統。掌握四大支柱，能科學預判任何義大利酒的陳年能力。</p><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>💧 酸度（第一支柱）</strong>：低 pH（高酸）是陳年第一道防線。抑制微生物、保護色素、維持清新感。目標 pH 3.2-3.5</div><div class=\"kp-box\"><strong>🍇 單寧（第二支柱）</strong>：多酚聚合反應是紅酒陳年核心。優質單寧聚合後柔化並增添複雜度，粗澀單寧則品質不升</div><div class=\"kp-box\"><strong>🔬 酒精（第三支柱）</strong>：13.5-15% ABV 是最佳陳年區間。過低缺乏保護；過高（超過 15.5%）則可能掩蓋細膩度</div><div class=\"kp-box\"><strong>🪵 橡木桶陳年（第四支柱）</strong>：適度氧化整合單寧，增添結構。但新橡木比例過高可能掩蓋風土特色</div></div><div class=\"dna-research\"><h3>⚖️ 義大利最長壽品種的共同特徵</h3><div class=\"science-card\">Nebbiolo（Barolo/Barbaresco）：pH 低（約 3.2-3.5）、單寧極高、ABV 13.5-15%——三高支柱俱全</div><div class=\"science-note\">Sangiovese Grosso（Brunello）：相近的酸單寧結構，但花青素稍低，靠酸度維持更長陳年</div></div></div>"
     },
     {
       "type": "content",
       "title": "義大利主要品種陳年潛力排行榜",
-      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🥇 金級（25-50 年）</h3><p class=\"mf-style\">Nebbiolo / Sagrantino / Brunello Sangiovese</p><p class=\"mf-prod\">三高支柱（酸＋單寧＋酒精）俱全｜代表：Barolo、Barbaresco、Brunello di Montalcino、Sagrantino di Montefalco</p></div><div class=\"mf-zone warm\"><h3>🥈 銀級（15-25 年）</h3><p class=\"mf-style\">Aglianico / Amarone Corvina / Barolo Sangiovese</p><p class=\"mf-prod\">高單寧高酸｜代表：Taurasi、Amarone、Chianti Classico Gran Selezione、Montepulciano d'Abruzzo Riserva</p></div><div class=\"mf-zone cool\"><h3>🥉 銅級（8-15 年）</h3><p class=\"mf-style\">Montepulciano / Nero d'Avola / Cannonau</p><p class=\"mf-prod\">中等陳年潛力｜代表：Montepulciano d'Abruzzo、Nero d'Avola Riserva、Cannonau di Sardegna Riserva</p></div><div class=\"mf-zone plain\"><h3>🏅 一般（3-8 年）</h3><p class=\"mf-style\">Barbera / Dolcetto / 多數白葡萄品種</p><p class=\"mf-prod\">建議盡早飲用｜代表：Barbera d'Asti、Dolcetto d'Alba（特例：頂級 Vermentino 可 10-15 年）</p></div></div>"
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🥇 金級（25-50 年）</h3><p class=\"mf-style\">Nebbiolo / Sagrantino / Brunello Sangiovese</p><p class=\"mf-prod\">三高支柱（酸＋單寧＋酒精）俱全｜代表：Barolo、Barbaresco、Brunello di Montalcino、Sagrantino di Montefalco</p></div><div class=\"mf-zone warm\"><h3>🥈 銀級（15-25 年）</h3><p class=\"mf-style\">Aglianico / Amarone Corvina / Chianti Classico Sangiovese</p><p class=\"mf-prod\">高單寧高酸｜代表：Taurasi、Amarone、Chianti Classico Gran Selezione、Montepulciano d'Abruzzo Riserva</p></div><div class=\"mf-zone cool\"><h3>🥉 銅級（8-15 年）</h3><p class=\"mf-style\">Montepulciano / Nero d'Avola / Cannonau</p><p class=\"mf-prod\">中等陳年潛力｜代表：Montepulciano d'Abruzzo、Nero d'Avola Riserva、Cannonau di Sardegna Riserva</p></div><div class=\"mf-zone plain\"><h3>🏅 一般（3-8 年）</h3><p class=\"mf-style\">Barbera / Dolcetto / 多數白葡萄品種</p><p class=\"mf-prod\">建議盡早飲用｜代表：Barbera d'Asti、Dolcetto d'Alba（特例：頂級 Fiano、Verdicchio、Timorasso 等白酒可陳 10-15 年以上）</p></div></div>"
     },
     {
       "type": "content",
       "title": "視覺嗅覺口感：快速判斷陳年狀態",
-      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">三感官快速診斷系統</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>👁️ 視覺線索</strong><br>年輕（0-5年）：深紫紅色、邊緣鮮明<br>成熟（10-20年）：磚紅色、橙色邊緣漸明顯<br>老年（20年以上）：寶石紅＋褐色邊緣＋沉澱物正常<br>⚠️ 過早出現棕色 = 氧化問題</div><div class=\"orvieto-card\"><strong>👃 嗅覺線索</strong><br>年輕：新鮮漿果、紫羅蘭、橡木香草<br>成熟：皮革、菸草、蘑菇、黑松露<br>高峰：複雜香料＋陳年果香＋礦物感<br>⚠️ 醋酸、馬廄（過量）= 品質缺陷</div><div class=\"orvieto-card\"><strong>👅 口感線索</strong><br>年輕：緊密單寧、清爽酸度、果味主導<br>成熟：單寧絲滑、酸度仍清新支撐<br>高峰：所有元素完美融合、尾韻極長<br>⚠️ 酸度消失＋果味枯萎 = 過了高峰</div></div></div>"
+      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">三感官快速診斷系統</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>👁️ 視覺線索</strong><br>年輕（0-5年）：深紫紅色、邊緣鮮明<br>成熟（10-20年）：磚紅色、橙色邊緣漸明顯<br>老年（20年以上）：淡磚紅至琥珀色＋褐色邊緣＋沉澱物正常<br>⚠️ 過早出現棕色 = 氧化問題</div><div class=\"orvieto-card\"><strong>👃 嗅覺線索</strong><br>年輕：新鮮漿果、紫羅蘭、橡木香草<br>成熟：皮革、菸草、蘑菇、黑松露<br>高峰：複雜香料＋陳年果香＋礦物感<br>⚠️ 醋酸、馬廄（過量）= 品質缺陷</div><div class=\"orvieto-card\"><strong>👅 口感線索</strong><br>年輕：緊密單寧、清爽酸度、果味主導<br>成熟：單寧絲滑、酸度仍清新支撐<br>高峰：所有元素完美融合、尾韻極長<br>⚠️ 酸度消失＋果味枯萎 = 過了高峰</div></div></div>"
     },
     {
       "type": "content",
       "title": "儲存條件對陳年速度的影響",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">相同的酒，不同的儲存條件下，品質差異可達 10-20 年。以下為影響陳年速度的關鍵因素分析。</p><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌡️ 溫度（最關鍵）</strong>：14°C 陳年 40 年 ≈ 20°C 陳年 20 年。低溫顯著延緩陳年速度。理想範圍：12-15°C</div><div class=\"kp-box\"><strong>💧 濕度</strong>：理想 70-80%。過低（低於 50%）軟木塞乾燥收縮；過高（超過 85%）導致黴菌與標籤損壞</div><div class=\"kp-box\"><strong>🌑 光線</strong>：紫外線是光氧化催化劑。即使 LED 燈也有紫外線輻射，長期暴露加速氧化老化</div><div class=\"kp-box\"><strong>📳 振動</strong>：持續振動干擾沉澱形成，使單寧聚合過程不穩定；大型酒莊附近的振動是常見問題</div></div><div class=\"dna-research\"><h3>實戰案例：儲存條件對比</h3><div class=\"science-card\">完美窖藏（14°C 恆溫）vs 一般家庭（22-28°C 夏季）：相同年份 Barolo，10 年後窖藏版單寧仍緊，家庭版可能已過高峰</div><div class=\"science-note\">結論：投資頂級酒莊酒款前，先確認自己有合適儲存條件——否則選擇飲用型年份（Classico、Barbera）更划算</div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">相同的酒，在不同的儲存條件下，陳年速度與品質差異極大。以下為影響陳年速度的關鍵因素分析。</p><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>🌡️ 溫度（最關鍵）</strong>：溫度每升高約 10°C，化學反應速率約加倍，高溫還會造成不均衡的老化。低溫顯著延緩陳年速度。理想範圍：12-15°C</div><div class=\"kp-box\"><strong>💧 濕度</strong>：理想 70-80%。過低（低於 50%）軟木塞乾燥收縮；過高（超過 85%）導致黴菌與標籤損壞</div><div class=\"kp-box\"><strong>🌑 光線</strong>：光線（尤其日光與紫外線）是光氧化催化劑，長期暴露會加速老化並產生「光照味」</div><div class=\"kp-box\"><strong>📳 振動</strong>：持續振動干擾沉澱形成，使單寧聚合過程不穩定；靠近馬路或電器的振動是常見問題</div></div><div class=\"dna-research\"><h3>實戰案例：儲存條件對比</h3><div class=\"science-card\">完美窖藏（14°C 恆溫）vs 一般家庭（22-28°C 夏季）：相同年份 Barolo，10 年後窖藏版單寧仍緊，家庭版可能已過高峰</div><div class=\"science-note\">結論：投資頂級酒莊酒款前，先確認自己有合適儲存條件——否則選擇飲用型年份（Classico、Barbera）更划算</div></div></div>"
     },
     {
       "type": "list",
@@ -63,9 +83,9 @@
         "銀級品種（15-25年）：Aglianico（Taurasi）、Amarone、Chianti Classico Gran Selezione",
         "視覺診斷：磚紅色＋橙色邊緣 = 成熟中；棕色過早出現 = 氧化問題",
         "嗅覺診斷：皮革＋菸草＋松露 = 成熟期；醋酸過量 = 品質缺陷",
-        "溫度影響最大：14°C 窖藏 40 年 ≈ 20°C 窖藏 20 年的成熟度",
+        "溫度影響最大：溫度每升高約 10°C，陳年化學反應約加倍；穩定低溫（12-15°C）讓酒款均衡發展",
         "溫度穩定比溫度數值更重要——波動是陳年最大殺手",
-        "Barolo 近代最偉大年份：2010 年，被多位評家評為 100 分完美年份"
+        "Barolo 近代經典年份：2010 年被許多評家譽為傳統風格高峰，2016 年常與之並列"
       ]
     },
     {
@@ -76,37 +96,62 @@
         {
           "type": "single",
           "question": "陳年潛力四大化學支柱中，哪個是最重要的「第一道防線」？",
-          "options": ["殘糖量", "酸度（低 pH 值）", "酒精濃度", "橡木桶影響"],
+          "options": [
+            "殘糖量",
+            "酸度（低 pH 值）",
+            "酒精濃度",
+            "橡木桶影響"
+          ],
           "correct": 1,
           "explanation": "酸度（低 pH 值）是陳年的第一道防線：抑制微生物生長、保護色素、維持清新感，是所有長壽葡萄酒的共同特徵。"
         },
         {
           "type": "single",
           "question": "儲存溫度對陳年速度的影響，以下哪個描述最準確？",
-          "options": ["溫度影響不大，僅需避免冷凍", "溫度越高，有益陳年加速越快", "14°C 窖藏 40 年約等於 20°C 窖藏 20 年的成熟度", "低溫會破壞葡萄酒結構"],
+          "options": [
+            "溫度影響不大，僅需避免冷凍",
+            "溫度越高，對酒越有益，品質提升越多",
+            "溫度越高陳年越快：溫度每升高約 10°C，化學反應速率約加倍",
+            "低溫會破壞葡萄酒結構"
+          ],
           "correct": 2,
-          "explanation": "根據化學動力學，溫度每升高 10°C，化學反應速率約加倍。14°C 窖藏 40 年的成熟度大約等同 20°C 儲存 20 年，低溫顯著延緩陳年速度。"
+          "explanation": "根據化學動力學，溫度每升高約 10°C，化學反應速率約加倍。因此 20°C 下的陳年速度明顯快於 14°C，且高溫會帶來不均衡、粗糙的老化；穩定的低溫能顯著延緩陳年，讓酒款均衡發展。"
         },
         {
           "type": "single",
           "question": "品飲一款 15 年的 Barolo，發現顏色磚紅＋橙色邊緣＋皮革菸草香氣突出，代表？",
-          "options": ["酒款過了高峰，已開始衰退", "正處於成熟高峰期，是最佳品飲時機", "酒款尚未成熟，需繼續窖藏", "受到輕微氧化損壞"],
+          "options": [
+            "酒款過了高峰，已開始衰退",
+            "正處於成熟高峰期，是最佳品飲時機",
+            "酒款尚未成熟，需繼續窖藏",
+            "受到輕微氧化損壞"
+          ],
           "correct": 1,
           "explanation": "磚紅色＋橙色邊緣＋皮革菸草香氣是成熟 Barolo 的典型特徵，說明酒款已進入成熟高峰期，是品飲絕佳時機。"
         },
         {
           "type": "single",
           "question": "使用評分清單評估陳年潛力，以下哪款酒最可能得最高分？",
-          "options": ["低酸、低單寧、低酒精的輕盈白酒", "高酸、低單寧、輕盈果味的玫瑰酒", "高酸、高單寧、高酒精（13.5-15%）、橡木桶陳年的紅酒", "低酸、高糖、高酒精的甜白酒"],
+          "options": [
+            "低酸、低單寧、低酒精的輕盈白酒",
+            "高酸、低單寧、輕盈果味的玫瑰酒",
+            "高酸、高單寧、高酒精（13.5-15%）、橡木桶陳年的紅酒",
+            "低酸、高糖、高酒精的甜白酒"
+          ],
           "correct": 2,
           "explanation": "高酸（pH 低）、高單寧、高酒精（13.5-15%）、橡木桶陳年四項加分因素齊全，構成最強的陳年支柱，是高陳年潛力酒款的典型特徵。"
         },
         {
           "type": "single",
-          "question": "Barolo 近代哪個年份被多位頂級評家評為近乎完美的傳奇年份？",
-          "options": ["2016 年", "2010 年", "2015 年", "2013 年"],
+          "question": "Barolo 近代哪個年份被許多評家譽為經典傳統風格的高峰？",
+          "options": [
+            "2016 年",
+            "2010 年",
+            "2015 年",
+            "2013 年"
+          ],
           "correct": 1,
-          "explanation": "2010 年 Barolo 被 Robert Parker、Wine Spectator 等多位頂級評家評為近代最偉大年份：完美氣候＋強健結構＋超長陳年潛力（30-50 年），是公認的收藏首選。"
+          "explanation": "2010 年 Barolo 被許多評家譽為近代經典年份的高峰：完美氣候＋強健結構＋超長陳年潛力（30-50 年）；2016 年則常與之並列為當代最偉大的年份。"
         }
       ]
     }

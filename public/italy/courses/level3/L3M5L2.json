@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "按出口「金額」計算，義大利葡萄酒最大的單一市場是？",
-      "options": ["德國", "美國", "英國", "日本"],
+      "options": [
+        "德國",
+        "美國",
+        "英國",
+        "日本"
+      ],
       "answer": 1,
-      "explanation": "美國是義大利葡萄酒最大的價值市場，對 Super Tuscans、Barolo 以及 Prosecco 和 Pinot Grigio 有龐大需求，年均進口額遠超其他國家。"
+      "explanation": "美國是義大利葡萄酒最大的價值市場，對 Super Tuscans、Barolo 以及 Prosecco 和 Pinot Grigio 有龐大需求，約佔義大利葡萄酒出口總值的四分之一。"
     },
     {
       "question": "義大利出口量最大的氣泡酒品類是？",
-      "options": ["Asti Spumante", "Franciacorta", "Prosecco", "Lambrusco"],
+      "options": [
+        "Asti Spumante",
+        "Franciacorta",
+        "Prosecco",
+        "Lambrusco"
+      ],
       "answer": 2,
-      "explanation": "Prosecco 是義大利出口量最大的氣泡酒，也是全球最暢銷的氣泡酒之一，主要產自 Veneto 大區的 Conegliano Valdobbiadene 產區。"
+      "explanation": "Prosecco 是義大利出口量最大的氣泡酒，也是全球最暢銷的氣泡酒之一，主要產自 Veneto 與 Friuli 的 Prosecco DOC，頂級則為 Conegliano Valdobbiadene Prosecco Superiore DOCG。"
     },
     {
       "question": "按出口「體積」計算，哪個國家通常是義大利葡萄酒最大的進口國？",
-      "options": ["美國", "德國", "英國", "法國"],
+      "options": [
+        "美國",
+        "德國",
+        "英國",
+        "法國"
+      ],
       "answer": 1,
       "explanation": "德國是義大利葡萄酒最大的體積市場，主要進口平價散裝酒和日常餐酒，體積佔比龐大，但平均單價較低。"
     },
     {
       "question": "義大利哪個大區是全球最暢銷氣泡酒 Prosecco 的主要產地？",
-      "options": ["Piemonte", "Toscana", "Veneto", "Sicilia"],
+      "options": [
+        "Piemonte",
+        "Toscana",
+        "Veneto",
+        "Sicilia"
+      ],
       "answer": 2,
       "explanation": "Veneto 大區是 Prosecco 的主要產地，特別是 Conegliano Valdobbiadene Prosecco Superiore DOCG 是最頂級的產區，也是義大利氣泡酒出口的核心引擎。"
     }
@@ -36,12 +56,12 @@
     {
       "type": "content",
       "title": "義大利葡萄酒出口概覽",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利是全球葡萄酒出口大國，超過一半的產量銷往國際市場。出口版圖從成熟的歐美市場延伸至快速成長的亞洲，形成多元化的全球佈局。理解各市場特性是掌握義大利酒業全球競爭力的關鍵。</p></div><div class=\"stat-grid\"><div class=\"stat-box\"><span class=\"stat-number\">>70億€</span><span class=\"stat-label\">年出口總值，多年排名全球前二</span></div><div class=\"stat-box\"><span class=\"stat-number\">~54%</span><span class=\"stat-label\">產量用於出口，高度依賴國際市場</span></div><div class=\"stat-box\"><span class=\"stat-number\">美國</span><span class=\"stat-label\">最大「金額」出口市場</span></div><div class=\"stat-box\"><span class=\"stat-number\">德國</span><span class=\"stat-label\">最大「體積」出口市場</span></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利是全球葡萄酒出口大國，約一半的產量銷往國際市場。出口版圖從成熟的歐美市場延伸至快速成長的亞洲，形成多元化的全球佈局。理解各市場特性是掌握義大利酒業全球競爭力的關鍵。</p></div><div class=\"stat-grid\"><div class=\"stat-box\"><span class=\"stat-number\">>70億€</span><span class=\"stat-label\">年出口總值，多年排名全球前二</span></div><div class=\"stat-box\"><span class=\"stat-number\">~50%</span><span class=\"stat-label\">產量用於出口，高度依賴國際市場</span></div><div class=\"stat-box\"><span class=\"stat-number\">美國</span><span class=\"stat-label\">最大「金額」出口市場</span></div><div class=\"stat-box\"><span class=\"stat-number\">德國</span><span class=\"stat-label\">最大「體積」出口市場</span></div></div>"
     },
     {
       "type": "content",
       "title": "四大主力出口市場",
-      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🇺🇸 美國（最大金額市場）</h3><p class=\"mf-style\">年均進口逾 20 億歐元</p><p class=\"mf-prod\">偏好 Pinot Grigio、Prosecco、Chianti 及頂級 Super Tuscans；高端精品消費強勁；是義大利最重要的精品酒出口目的地</p></div><div class=\"mf-zone warm\"><h3>🇩🇪 德國（最大體積市場）</h3><p class=\"mf-style\">體積第一，但平均單價較低</p><p class=\"mf-prod\">主要進口平價散裝酒與日常餐酒；以量取勝；德國超市貨架上義大利酒的佔比極高</p></div><div class=\"mf-zone cool\"><h3>🇬🇧 英國（成熟穩定市場）</h3><p class=\"mf-style\">對 Prosecco 與傳統紅酒需求強勁</p><p class=\"mf-prod\">Brexit 後進口手續增加但基本需求穩固；侍酒師文化成熟，義大利精品酒受到高度重視</p></div><div class=\"mf-zone plain\"><h3>🌏 亞洲（最具潛力新興市場）</h3><p class=\"mf-style\">中日韓快速成長</p><p class=\"mf-prod\">對義大利文化與美食高度認同；目前佔比不如歐美，但增速最快；義大利酒業正積極推廣本土品種與餐酒文化</p></div></div>"
+      "content": "<div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🇺🇸 美國（最大金額市場）</h3><p class=\"mf-style\">約佔出口總值四分之一</p><p class=\"mf-prod\">偏好 Pinot Grigio、Prosecco、Chianti 及頂級 Super Tuscans；高端精品消費強勁；是義大利最重要的精品酒出口目的地</p></div><div class=\"mf-zone warm\"><h3>🇩🇪 德國（最大體積市場）</h3><p class=\"mf-style\">體積第一，但平均單價較低</p><p class=\"mf-prod\">主要進口平價散裝酒與日常餐酒；以量取勝；德國超市貨架上義大利酒的佔比極高</p></div><div class=\"mf-zone cool\"><h3>🇬🇧 英國（成熟穩定市場）</h3><p class=\"mf-style\">對 Prosecco 與傳統紅酒需求強勁</p><p class=\"mf-prod\">Brexit 後進口手續增加但基本需求穩固；侍酒師文化成熟，義大利精品酒受到高度重視</p></div><div class=\"mf-zone plain\"><h3>🌏 亞洲（最具潛力新興市場）</h3><p class=\"mf-style\">中日韓快速成長</p><p class=\"mf-prod\">對義大利文化與美食高度認同；目前佔比不如歐美，但增速最快；義大利酒業正積極推廣本土品種與餐酒文化</p></div></div>"
     },
     {
       "type": "content",
@@ -51,13 +71,13 @@
     {
       "type": "content",
       "title": "市場挑戰與機遇",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利葡萄酒在全球市場雖然地位穩固，但仍面臨結構性挑戰與新興機遇並存的複雜局面。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>⚠️ 主要挑戰</h3><ul><li><strong>成熟市場增速放緩：</strong>美德英等傳統市場趨於飽和，競爭來自法國、西班牙、智利、阿根廷等國</li><li><strong>國內消費持續下滑：</strong>義大利本土人均消費量從 1970s 的 100 公升降至約 40 公升，酒業高度依賴出口</li><li><strong>品牌碎片化：</strong>數萬家小型酒莊各自為戰，缺乏系統性的國家級行銷推廣，難以在全球建立統一形象</li><li><strong>名稱難記問題：</strong>Denominazione 系統（DOCG/DOC）複雜，消費者難以記憶，影響購買決策</li></ul></div><div class=\"method-card modern\"><h3>✅ 核心機遇</h3><ul><li><strong>亞洲市場崛起：</strong>中日韓對義大利飲食文化的高度認同，是未來十年最具潛力的成長市場</li><li><strong>Premium 化趨勢：</strong>全球中產階級願意為優質義大利酒支付更高溢價，精品酒市場持續擴大</li><li><strong>有機永續趨勢：</strong>義大利有機葡萄酒比例全球領先，契合消費者健康意識，是差異化競爭優勢</li><li><strong>Aperitivo 文化輸出：</strong>Aperol Spritz、Negroni 雞尾酒文化風靡全球，帶動 Prosecco 與苦杏仁酒出口</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利葡萄酒在全球市場雖然地位穩固，但仍面臨結構性挑戰與新興機遇並存的複雜局面。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>⚠️ 主要挑戰</h3><ul><li><strong>成熟市場增速放緩：</strong>美德英等傳統市場趨於飽和，競爭來自法國、西班牙、智利、阿根廷等國</li><li><strong>國內消費持續下滑：</strong>義大利本土人均消費量從 1970s 的 100 公升降至約 40 公升，酒業高度依賴出口</li><li><strong>品牌碎片化：</strong>數萬家小型酒莊各自為戰，缺乏系統性的國家級行銷推廣，難以在全球建立統一形象</li><li><strong>名稱難記問題：</strong>Denominazione 系統（DOCG/DOC）複雜，消費者難以記憶，影響購買決策</li></ul></div><div class=\"method-card modern\"><h3>✅ 核心機遇</h3><ul><li><strong>亞洲市場崛起：</strong>中日韓對義大利飲食文化的高度認同，是未來十年最具潛力的成長市場</li><li><strong>Premium 化趨勢：</strong>全球中產階級願意為優質義大利酒支付更高溢價，精品酒市場持續擴大</li><li><strong>有機永續趨勢：</strong>義大利有機葡萄園比例居全球前列，契合消費者健康意識，是差異化競爭優勢</li><li><strong>Aperitivo 文化輸出：</strong>Aperol Spritz、Negroni 雞尾酒文化風靡全球，帶動 Prosecco 與義式苦味開胃酒出口</li></ul></div></div></div></div>"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
-        "義大利年出口總值超過 70 億歐元，超過一半的產量銷往國際市場",
+        "義大利年出口總值超過 70 億歐元，約一半的產量銷往國際市場",
         "美國是義大利最大「金額市場」，對 Prosecco、Pinot Grigio、Super Tuscans 需求龐大",
         "德國是義大利最大「體積市場」，主要進口平價日常餐酒和散裝酒",
         "英國市場成熟穩定，Prosecco 和 Chianti 是兩大主力；Brexit 後手續增加但需求穩固",
@@ -75,35 +95,60 @@
         {
           "type": "single",
           "question": "按出口「金額」計算，義大利葡萄酒最大的單一市場是？",
-          "options": ["德國", "美國", "英國", "日本"],
+          "options": [
+            "德國",
+            "美國",
+            "英國",
+            "日本"
+          ],
           "correct": 1,
-          "explanation": "美國是義大利葡萄酒最大的價值市場，年均進口逾 20 億歐元，對 Super Tuscans、Barolo 以及 Prosecco 和 Pinot Grigio 有龐大需求。"
+          "explanation": "美國是義大利葡萄酒最大的價值市場，約佔出口總值的四分之一，對 Super Tuscans、Barolo 以及 Prosecco 和 Pinot Grigio 有龐大需求。"
         },
         {
           "type": "single",
           "question": "義大利出口量最大的氣泡酒品類是？",
-          "options": ["Asti Spumante", "Franciacorta", "Prosecco", "Lambrusco"],
+          "options": [
+            "Asti Spumante",
+            "Franciacorta",
+            "Prosecco",
+            "Lambrusco"
+          ],
           "correct": 2,
-          "explanation": "Prosecco 是義大利出口量最大的氣泡酒，也是全球最暢銷的氣泡酒之一，主要產自 Veneto 大區，是 Aperol Spritz 雞尾酒文化的核心材料。"
+          "explanation": "Prosecco 是義大利出口量最大的氣泡酒，也是全球最暢銷的氣泡酒之一，主要產自 Veneto 大區（部分產自 Friuli），是 Aperol Spritz 雞尾酒文化的核心材料。"
         },
         {
           "type": "single",
           "question": "按出口「體積」計算，哪個國家通常是義大利葡萄酒最大的進口國？",
-          "options": ["美國", "德國", "英國", "法國"],
+          "options": [
+            "美國",
+            "德國",
+            "英國",
+            "法國"
+          ],
           "correct": 1,
           "explanation": "德國是義大利葡萄酒最大的體積市場，主要進口平價散裝酒和日常餐酒，體積佔比龐大，但平均單價較低——與美國「金額最大」形成對比。"
         },
         {
           "type": "single",
           "question": "義大利哪個大區是全球最暢銷氣泡酒 Prosecco 的主要產地？",
-          "options": ["Piemonte", "Toscana", "Veneto", "Sicilia"],
+          "options": [
+            "Piemonte",
+            "Toscana",
+            "Veneto",
+            "Sicilia"
+          ],
           "correct": 2,
           "explanation": "Veneto 大區是 Prosecco 的主要產地，特別是 Conegliano Valdobbiadene Prosecco Superiore DOCG，是義大利氣泡酒出口的核心引擎。"
         },
         {
           "type": "single",
           "question": "哪個地區被義大利酒業視為最具潛力的「新興市場」？",
-          "options": ["亞洲（中日韓）", "南美洲", "非洲", "澳大利亞"],
+          "options": [
+            "亞洲（中日韓）",
+            "南美洲",
+            "非洲",
+            "澳大利亞"
+          ],
           "correct": 0,
           "explanation": "亞洲（特別是中國、日本、韓國）對義大利文化和美食高度認同，增速在所有市場中最快，是義大利酒業未來最看重的成長市場。"
         }

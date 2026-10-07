@@ -27,13 +27,13 @@
     {
       "question": "以下哪個生產者風格描述正確對應「現代派 Amarone」？",
       "options": [
-        "大型斯拉夫尼亞舊桶、高酸、花香主導",
+        "大型斯拉沃尼亞舊桶、高酸、花香主導",
         "法式新橡木桶、較早去皮、濃郁深色果味、圓潤現代感",
         "無橡木桶陳年、以保留原始果味為主",
         "陳年 10 年以上才裝瓶"
       ],
       "answer": 1,
-      "explanation": "現代派 Amarone 代表（如 Masi、Allegrini）偏好法式新橡木桶增添香草摩卡，較早去皮保留果味新鮮感，風格圓潤易飲。"
+      "explanation": "現代派 Amarone 代表（如 Allegrini）偏好法式小型新橡木桶，增添香草摩卡風味，較早去皮保留果味新鮮感，風格圓潤易飲，適飲期相對較早。"
     },
     {
       "question": "儲存 Amarone 最致命的錯誤是什麼？",
@@ -43,7 +43,7 @@
         "濕度太高（超過 80%）",
         "光線直射"
       ],
-      "answer": 2,
+      "answer": 1,
       "explanation": "溫度波動是陳年最大敵人：熱脹冷縮造成軟木塞反覆收縮，導致氧化滲入；穩定低溫（12-14°C）即使稍低於理想也遠勝於不穩定環境。"
     }
   ],
@@ -60,7 +60,7 @@
     {
       "type": "content",
       "title": "Appassimento 工藝：科學原理",
-      "content": "<div class=\"dna-research\"><h3>風乾科學：濃縮的魔法</h3><div class=\"science-card\"><strong>失水比例：</strong>葡萄風乾 90-120 天，失去 30-40% 重量，糖分、酸度、多酚與香氣前驅物均濃縮</div><div class=\"science-card\"><strong>Botrytis 影響：</strong>適度貴腐菌（Botrytis cinerea）增添複雜蜂蜜與堅果香，但過度侵染則導致品質下降</div><div class=\"science-note\">關鍵：溫度 8-12°C＋相對濕度 65-75%＋良好通風——三要素缺一不可</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">風乾後的酒體特徵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">📊 酒精度：15-17% ABV（相比普通 Valpolicella 的 12%）</div><div class=\"orvieto-card\">🍇 殘糖：通常 4-12 g/L（幾乎全乾）；Recioto 甜型則保留 80-200 g/L</div><div class=\"orvieto-card\">🔬 多酚濃縮：花青素與單寧是普通酒的 1.5-2 倍，構成超長陳年潛力</div></div></div>"
+      "content": "<div class=\"dna-research\"><h3>風乾科學：濃縮的魔法</h3><div class=\"science-card\"><strong>失水比例：</strong>葡萄風乾 90-120 天，失去 30-40% 重量，糖分、酸度、多酚與香氣前驅物均濃縮</div><div class=\"science-card\"><strong>Botrytis 影響：</strong>適度貴腐菌（Botrytis cinerea）增添複雜蜂蜜與堅果香，但過度侵染則導致品質下降</div><div class=\"science-note\">關鍵：溫度 8-12°C＋相對濕度 65-75%＋良好通風——三要素缺一不可</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">風乾後的酒體特徵</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">📊 酒精度：15-17% ABV（相比普通 Valpolicella 的 12%）</div><div class=\"orvieto-card\">🍇 殘糖：通常低於 12 g/L（幾乎全乾）；Recioto 甜型則保留 80-200 g/L</div><div class=\"orvieto-card\">🔬 多酚濃縮：花青素與單寧明顯高於普通 Valpolicella，構成超長陳年潛力</div></div></div>"
     },
     {
       "type": "content",
@@ -75,7 +75,7 @@
     {
       "type": "content",
       "title": "頂級生產者風格比較",
-      "content": "<div class=\"sagrantino-styles\"><div class=\"styles-grid\"><div class=\"style-card dry\"><h3>傳統派（Quintarelli）</h3><ul><li>大型舊斯拉夫尼亞橡木桶（1000-3000L）</li><li>超長浸皮（45-60 天）</li><li>高酸、高單寧、強勁結構</li><li>陳年潛力：25-40 年</li><li>適飲期：12-25 年後</li><li>價格：€300-600+</li></ul></div><div class=\"style-card sweet\"><h3>現代派（Masi/Allegrini）</h3><ul><li>小型法式新橡木桶（225-500L）</li><li>較短浸皮（30-40 天）</li><li>圓潤果味、香草摩卡香氣</li><li>陳年潛力：15-25 年</li><li>適飲期：5-15 年後</li><li>價格：€50-150</li></ul></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">⚖️ 平衡派：Dal Forno Romano</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">兼具傳統結構與現代精準，法義混合桶型，陳年潛力 20-35 年，被視為品質標竿，價格 €200-400</div></div></div>"
+      "content": "<div class=\"sagrantino-styles\"><div class=\"styles-grid\"><div class=\"style-card dry\"><h3>傳統派（Quintarelli）</h3><ul><li>大型舊斯拉沃尼亞橡木桶</li><li>極長時間桶陳（約 7 年才裝瓶）</li><li>高酸、高單寧、強勁結構</li><li>陳年潛力：25-40 年</li><li>適飲期：12-25 年後</li></ul></div><div class=\"style-card sweet\"><h3>現代派（如 Allegrini）</h3><ul><li>小型法式新橡木桶（225-500L）</li><li>較短浸皮</li><li>圓潤果味、香草摩卡香氣</li><li>陳年潛力：15-25 年</li><li>適飲期：5-15 年後</li></ul></div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">⚖️ 獨樹一格：Dal Forno Romano</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">位於 Classico 區以外的 Val d'Illasi，以極低產量與法國新橡木小桶陳年，濃縮度極高，陳年潛力 20-35 年，被視為品質標竿</div></div></div>"
     },
     {
       "type": "image",
@@ -85,9 +85,9 @@
     },
     {
       "type": "image",
-      "title": "🍷 現代派實例：Masi Costasera Amarone",
+      "title": "🍷 年份實例：Masi Costasera Amarone",
       "image": "/italy/images/labels/veneto/amarone-masi-costasera-2009.jpg",
-      "caption": "Masi Costasera Amarone della Valpolicella DOCG 2009——現代派代表酒莊之一，風格較圓潤、適飲期較早。"
+      "caption": "Masi Costasera Amarone della Valpolicella Classico DOCG 2009——大型酒莊的經典款，以斯拉沃尼亞大桶陳年為主，風格介於傳統與現代之間，結構穩健、適飲期相對較早。"
     },
     {
       "type": "list",
@@ -97,11 +97,11 @@
         "風乾最佳條件：8-12°C、濕度 65-75%、良好通風——三要素缺一不可",
         "Amarone 第一適飲窗口：4-7 年；傳統派偏好從 8-10 年開始品飲",
         "16-20 年是傳統派 Amarone 的第一高峰：香氣全面打開，酸度支撐，單寧融入",
-        "傳統派（Quintarelli）：大型舊桶、超長浸皮、陳年潛力 25-40 年",
-        "現代派（Masi、Allegrini）：法式新桶、果味圓潤、陳年潛力 15-25 年、相對早熟易飲",
+        "傳統派（Quintarelli）：大型舊桶、極長時間桶陳、陳年潛力 25-40 年",
+        "現代派（如 Allegrini）：法式新桶、果味圓潤、陳年潛力 15-25 年、相對早熟易飲",
         "儲存最致命錯誤：溫度波動——穩定低溫（12-14°C）遠比不穩定環境重要",
-        "頂級標竿：Quintarelli（傳統）、Dal Forno Romano（平衡）均可陳年 30 年以上",
-        "選購策略：現代派適合 10 年內飲用預算；傳統派適合長期投資窖藏"
+        "頂級標竿：Quintarelli（傳統）、Dal Forno Romano（極致濃縮）均可陳年 30 年以上",
+        "選購策略：現代派適合 10 年內飲用；傳統派適合長期窖藏"
       ]
     },
     {
@@ -137,13 +137,13 @@
           "type": "single",
           "question": "以下哪個描述正確對應「現代派 Amarone」的風格特徵？",
           "options": [
-            "大型斯拉夫尼亞舊桶、高酸、花香主導",
+            "大型斯拉沃尼亞舊桶、高酸、花香主導",
             "小型法式新橡木桶、圓潤果味、香草摩卡香氣",
             "無橡木桶陳年、以保留原始果味為主",
             "陳年 15 年以上才裝瓶銷售"
           ],
           "correct": 2,
-          "explanation": "現代派 Amarone 代表（如 Masi、Allegrini）偏好法式小型新橡木桶，增添香草摩卡風味，風格圓潤易飲，適飲期相對較早。"
+          "explanation": "現代派 Amarone 代表（如 Allegrini）偏好法式小型新橡木桶，增添香草摩卡風味，較早去皮保留果味新鮮感，風格圓潤易飲，適飲期相對較早。"
         },
         {
           "type": "single",
@@ -167,7 +167,7 @@
             "50 年以上"
           ],
           "correct": 1,
-          "explanation": "Quintarelli 使用大型斯拉夫尼亞舊桶、超長浸皮（45-60 天），單寧強勁，結構龐大，陳年潛力達 25-40 年，是 Amarone 最具代表性的傳統派標竿。"
+          "explanation": "Quintarelli 使用大型斯拉沃尼亞舊桶長時間陳年（約 7 年才裝瓶），單寧強勁、結構龐大，陳年潛力達 25-40 年，是 Amarone 最具代表性的傳統派標竿。"
         }
       ]
     }

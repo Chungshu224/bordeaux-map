@@ -20,7 +20,7 @@
     {
       "type": "content",
       "title": "🍶 義大利加烈酒：Marsala、Barolo Chinato 與 Vin Santo Riserva",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利的加烈酒（Fortified Wine）品項不如波特、雪莉知名，但 Marsala 在西西里料理中舉足輕重，Barolo Chinato 更是 Piemonte 的頂級餐後酒。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🍶 Marsala（Sicily 加烈酒）</h4><p><strong>料理用 Marsala：</strong>Marsala Secco（干型）是 Piccata di Vitello（檸檬小牛肉）醬汁的靈魂——義大利料理中最重要的加烈酒。<br><strong>配餐用 Marsala：</strong>Marsala Superiore 甜型配西西里傳統甜點 Cannoli——填料炸酥管甜點配甜 Marsala，是西西里最傳統的 Level 1 就提到過的甜點配法。<br><strong>Marsala Vergine（高端干型）：</strong>風味複雜的 Vergine 級可作為餐後酒，搭配堅果類點心或陳年起司。</p></div><div class=\"method-card modern\"><h4>🌿 Barolo Chinato（苦甜餐後酒）</h4><p><strong>配黑巧克力：</strong>Barolo Chinato 是以 Barolo 為基底的苦甜香料加烈酒，奎寧樹皮、龍膽根、肉桂的複雜香料感，與 70% 以上黑巧克力形成完美的苦甜對比搭配。<br><strong>餐後單獨享用：</strong>小杯室溫飲用，也是消化助餐的傳統 Digestivo，不一定需要搭食物。<br><strong>配陳年起司（Castelmagno）：</strong>苦甜酒配鹹香起司，複雜度對複雜度。</p></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利的加烈酒（Fortified Wine）品項不如波特、雪莉知名，但 Marsala 在西西里料理中舉足輕重，Barolo Chinato 更是 Piemonte 的頂級餐後酒。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🍶 Marsala（Sicily 加烈酒）</h4><p><strong>料理用 Marsala：</strong>Marsala Secco（干型）是 Scaloppine al Marsala（瑪莎拉小牛肉片）醬汁的靈魂——義大利料理中最重要的加烈酒。<br><strong>配餐用 Marsala：</strong>Marsala Superiore 甜型配西西里傳統甜點 Cannoli——填料炸酥管甜點配甜 Marsala，是西西里最傳統的甜點配法之一。<br><strong>Marsala Vergine（高端干型）：</strong>風味複雜的 Vergine 級可作為餐後酒，搭配堅果類點心或陳年起司。</p></div><div class=\"method-card modern\"><h4>🌿 Barolo Chinato（苦甜餐後酒）</h4><p><strong>配黑巧克力：</strong>Barolo Chinato 是以 Barolo 為基底、加入香料與酒精的苦甜加香葡萄酒，奎寧樹皮、龍膽根、肉桂的複雜香料感，與 70% 以上黑巧克力形成完美的苦甜對比搭配。<br><strong>餐後單獨享用：</strong>小杯室溫飲用，也是消化助餐的傳統 Digestivo，不一定需要搭食物。<br><strong>配陳年起司（Castelmagno）：</strong>苦甜酒配鹹香起司，複雜度對複雜度。</p></div></div></div></div>"
     },
     {
       "type": "content",
@@ -49,7 +49,7 @@
       "type": "image",
       "title": "🍷 酒標實例：Marsala DOC",
       "image": "/italy/images/labels/sicilia/marsala-doc-sweet-opici.png",
-      "caption": "Marsala DOC Sweet（Fine Marsala Wine）——甜型 Marsala，17% ABV，傳統搭配西西里 Cannoli 甜點；干型 Marsala 則是 Vitello Piccata 醬汁的靈魂。"
+      "caption": "Marsala DOC Sweet（Fine Marsala Wine）——甜型 Marsala，17% ABV，傳統搭配西西里 Cannoli 甜點；干型 Marsala 則是 Scaloppine al Marsala 醬汁的靈魂。"
     },
     {
       "type": "image",
@@ -66,7 +66,7 @@
         "✓ Moscato d'Asti：配提拉米蘇（甜點經典）也配 Gorgonzola（鹹甜對比）——甜酒不只配甜點",
         "✓ Vin Santo 浸 Cantucci 杏仁餅：Tuscany 最純粹的在地甜點文化體現",
         "✓ Passito di Pantelleria 配 Cannoli（西西里甜點）；Recioto della Valpolicella 配濃郁巧克力蛋糕",
-        "✓ Marsala 雙重用途：干型入菜（Vitello Piccata 醬汁），甜型配甜點（Cannoli），Vergine 級餐後單飲",
+        "✓ Marsala 雙重用途：干型入菜（Scaloppine al Marsala 醬汁），甜型配甜點（Cannoli），Vergine 級餐後單飲",
         "✓ Barolo Chinato：苦甜香料加烈酒，配黑巧克力是最傳統搭配，也可餐後單獨作為 Digestivo",
         "✓ 場合決定選酒：Aperitivo 選輕盈氣泡 → 婚宴由淺至深遞增 → 商務選安全牌 → 日常選高 CP 值"
       ]
@@ -132,7 +132,11 @@
             "C. Passito di Pantelleria 配西西里 Cannoli 甜點是在地傳統搭配",
             "D. 微甜 Lambrusco 可以配帕爾瑪火腿（甜配鹹）"
           ],
-          "correct": [0, 2, 3],
+          "correct": [
+            0,
+            2,
+            3
+          ],
           "explanation": "甜酒配鹹食是傳統智慧而非禁忌：Moscato 配 Gorgonzola（鹹甜對比）、Passito 配 Cannoli（在地搭配）、Lambrusco 微甜配火腿（甜度平衡鹹肥）都是正確的。只有「甜酒只能配甜點」這個說法是錯的——甜酒也能創造精彩的鹹甜對比搭配。"
         }
       ]
@@ -141,25 +145,45 @@
   "quiz": [
     {
       "question": "Franciacorta 最常見的高端搭配場景是？",
-      "options": ["配提拉米蘇", "配生蠔、精緻海鮮或全程晚宴", "配燉牛肉", "配辣香腸"],
+      "options": [
+        "配提拉米蘇",
+        "配生蠔、精緻海鮮或全程晚宴",
+        "配燉牛肉",
+        "配辣香腸"
+      ],
       "answer": 1,
       "explanation": "Franciacorta 的細膩氣泡和礦物感使它適合精緻海鮮，且可全程陪伴多道式晚宴。"
     },
     {
       "question": "Vin Santo 最傳統的在地甜點搭配是？",
-      "options": ["提拉米蘇", "Cannoli", "Cantucci 杏仁脆餅浸入 Vin Santo", "Panna Cotta"],
+      "options": [
+        "提拉米蘇",
+        "Cannoli",
+        "Cantucci 杏仁脆餅浸入 Vin Santo",
+        "Panna Cotta"
+      ],
       "answer": 2,
       "explanation": "把 Cantucci 浸入 Vin Santo 是 Tuscany 最純粹的在地甜點文化。"
     },
     {
       "question": "Barolo Chinato 最傳統的搭配食物是？",
-      "options": ["提拉米蘇", "黑巧克力（70%以上）", "海鮮沙拉", "帕爾瑪火腿"],
+      "options": [
+        "提拉米蘇",
+        "黑巧克力（70%以上）",
+        "海鮮沙拉",
+        "帕爾瑪火腿"
+      ],
       "answer": 1,
       "explanation": "Barolo Chinato 的苦甜香料與黑巧克力苦甜形成完美對比，是 Piemonte 最傳統的 Digestivo 搭配。"
     },
     {
       "question": "關於甜酒配餐，以下哪個說法是錯的？",
-      "options": ["Moscato 可配 Gorgonzola 藍紋起司", "甜酒只能配甜點，絕不能配鹹食", "微甜 Lambrusco 可配帕爾瑪火腿", "Passito 配 Cannoli 是西西里傳統搭配"],
+      "options": [
+        "Moscato 可配 Gorgonzola 藍紋起司",
+        "甜酒只能配甜點，絕不能配鹹食",
+        "微甜 Lambrusco 可配帕爾瑪火腿",
+        "Passito 配 Cannoli 是西西里傳統搭配"
+      ],
       "answer": 1,
       "explanation": "甜酒配鹹食是傳統智慧，Moscato 配藍紋起司和微甜酒配火腿都是正確的搭配。"
     }

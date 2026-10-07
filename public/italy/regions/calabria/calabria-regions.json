@@ -1,25 +1,5 @@
 [
   {
-    "id": "Cirò DOCG",
-    "name": "Cirò",
-    "type": "DOCG",
-    "region": "Calabria",
-    "province": "Crotone",
-    "zone": "Cirò",
-    "style": ["紅酒"],
-    "description": "Calabria 首個 DOCG，古希臘時代即種植葡萄，以 Gaglioppo 紅葡萄酒聞名於世",
-    "grapes": ["Gaglioppo"],
-    "hectare": "約 700 公頃",
-    "details": {
-      "introduction": "Cirò DOCG 於 2024 年正式升級為 DOCG，成為 Calabria 大區的首個 DOCG。這個產區擁有超過 2,500 年的葡萄種植歷史，據說古希臘運動員在奧林匹克競賽獲勝後會飲用此地的葡萄酒慶祝。DOCG 紅酒需至少含 95% Gaglioppo，具有深紅寶石色澤、豐富的紅色水果香氣和適中的單寧，需經至少 2 年陳年。",
-      "climate": "受愛奧尼亞海影響的溫暖地中海氣候，夏季炙熱，冬季溫和。葡萄園多位於面向海洋的山坡上，海拔 50-300 公尺。土壤富含石灰岩和黏土，提供良好排水性。Cirò Classico 產區位於最佳的傳統種植區域。",
-      "subregions": {
-        "Cirò Classico": "最核心的傳統產區，生產最優質的 Cirò 葡萄酒",
-        "Cirò Superiore Riserva": "需經至少 3 年陳年的頂級紅酒"
-      }
-    }
-  },
-  {
     "id": "Bivongi DOC",
     "name": "Bivongi",
     "type": "DOC",

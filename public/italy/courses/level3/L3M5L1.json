@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "在義大利的葡萄酒生產模式中，哪一種模式貢獻了全國超過 50% 的總產量，是產業的基石？",
-      "options": ["獨立酒莊 (Azienda Agricola)", "合作社 (Cantina Sociale)", "跨國烈酒集團", "車庫酒莊 (Garage Wineries)"],
+      "options": [
+        "獨立酒莊 (Azienda Agricola)",
+        "合作社 (Cantina Sociale)",
+        "跨國烈酒集團",
+        "車庫酒莊 (Garage Wineries)"
+      ],
       "answer": 1,
       "explanation": "合作社 (Cantina Sociale) 匯集了眾多小農的葡萄進行統一釀造，佔義大利總產量的一半以上，特別是在 Trentino-Alto Adige 和 Sicily 等產區非常發達。"
     },
     {
       "question": "以「出口價值 (Value)」計算，哪一個國家是義大利葡萄酒最大的出口市場？",
-      "options": ["德國", "英國", "中國", "美國"],
+      "options": [
+        "德國",
+        "英國",
+        "中國",
+        "美國"
+      ],
       "answer": 3,
       "explanation": "美國是義大利葡萄酒最大的價值市場，對高價位的 Super Tuscans、Barolo 以及受歡迎的 Prosecco 和 Pinot Grigio 有龐大的需求。"
     },
     {
       "question": "酒標上標示「Azienda Agricola」通常代表什麼意義？",
-      "options": ["由大型酒商收購散裝酒調配而成", "這是一款氣泡酒", "獨立酒莊，使用自己種植的葡萄釀造並裝瓶", "專門用於出口的廉價酒"],
+      "options": [
+        "由大型酒商收購散裝酒調配而成",
+        "這是一款氣泡酒",
+        "獨立酒莊，使用自己種植的葡萄釀造並裝瓶",
+        "專門用於出口的廉價酒"
+      ],
       "answer": 2,
       "explanation": "Azienda Agricola 意指「農業莊園」或獨立酒莊，代表該酒莊自己種植葡萄、釀造並裝瓶，通常與較高的品質控管和風土展現有關。"
     },
     {
       "question": "近年來，義大利葡萄酒產業面臨的內部市場挑戰主要為何？",
-      "options": ["國內人均葡萄酒消費量大幅下降", "政府禁止在國內銷售葡萄酒", "義大利人只喝法國酒", "葡萄園面積擴張過快導致供過於求"],
+      "options": [
+        "國內人均葡萄酒消費量大幅下降",
+        "政府禁止在國內銷售葡萄酒",
+        "義大利人只喝法國酒",
+        "葡萄園面積擴張過快導致供過於求"
+      ],
       "answer": 0,
       "explanation": "過去幾十年來，義大利國內的人均葡萄酒消費量大幅下降，年輕一代的飲酒習慣改變，迫使義大利酒業必須更加依賴出口市場。"
     }
@@ -31,17 +51,17 @@
     {
       "type": "title",
       "title": "義大利葡萄酒產業結構",
-      "subtitle": "世界第一出口大國：三大生產模式與全球市場版圖"
+      "subtitle": "全球葡萄酒出口大國：三大生產模式與全球市場版圖"
     },
     {
       "type": "content",
       "title": "全球最大葡萄酒生產國：產業規模",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利長期與法國爭奪全球最大葡萄酒生產國寶座，其產業規模龐大且複雜。最大特點是「極度碎片化」——從年產億瓶的跨國集團，到年產數千瓶的車庫酒莊，共同構成充滿活力的生態系。</p></div><div class=\"stat-grid\"><div class=\"stat-box\"><span class=\"stat-number\">18-20%</span><span class=\"stat-label\">佔全球葡萄酒產量，多數年份排名世界第一</span></div><div class=\"stat-box\"><span class=\"stat-number\">70萬公頃</span><span class=\"stat-label\">葡萄園面積，遍佈全國 20 個大區</span></div><div class=\"stat-box\"><span class=\"stat-number\">>70億€</span><span class=\"stat-label\">年出口總值，是義大利最重要的農產品出口項目</span></div><div class=\"stat-box\"><span class=\"stat-number\">350+</span><span class=\"stat-label\">本土葡萄品種，生物多樣性無與倫比</span></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利長期與法國爭奪全球最大葡萄酒生產國寶座，其產業規模龐大且複雜。最大特點是「極度碎片化」——從年產億瓶的跨國集團，到年產數千瓶的車庫酒莊，共同構成充滿活力的生態系。</p></div><div class=\"stat-grid\"><div class=\"stat-box\"><span class=\"stat-number\">18-20%</span><span class=\"stat-label\">佔全球葡萄酒產量，常與法國爭奪世界第一</span></div><div class=\"stat-box\"><span class=\"stat-number\">70萬公頃</span><span class=\"stat-label\">葡萄園面積（約），遍佈全國 20 個大區</span></div><div class=\"stat-box\"><span class=\"stat-number\">>70億€</span><span class=\"stat-label\">年出口總值，是義大利最重要的農產品出口項目</span></div><div class=\"stat-box\"><span class=\"stat-number\">350+</span><span class=\"stat-label\">本土葡萄品種，生物多樣性無與倫比</span></div></div>"
     },
     {
       "type": "content",
       "title": "三大生產模式：合作社 vs 獨立酒莊",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利葡萄酒生產由三種截然不同的商業模式組成，各自在市場中扮演關鍵角色。合作社與獨立酒莊是最核心的對比。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>合作社 (Cantina Sociale)</h3><ul><li><strong>產量：</strong>佔全國總產量 >50%，產業基石</li><li><strong>模式：</strong>眾多小農共享釀酒設施與行銷資源</li><li><strong>定位：</strong>規模經濟、高性價比日常餐酒</li><li><strong>代表：</strong>Trentino Cavit, Mezzacorona, Sicily</li><li>✅ 設備先進，產量穩定，價格親民</li><li>⚠️ 品質天花板較低，風土個性較弱</li></ul></div><div class=\"method-card modern\"><h3>獨立酒莊 (Azienda Agricola)</h3><ul><li><strong>產量：</strong>比例較小，但貢獻幾乎全部頂級名酒</li><li><strong>模式：</strong>莊主自己種植、釀造、裝瓶</li><li><strong>定位：</strong>展現極致風土、品質控管嚴格</li><li><strong>代表：</strong>Giacomo Conterno (Barolo), Biondi-Santi (Brunello)</li><li>✅ 品質頂尖，品牌價值高，風土鮮明</li><li>⚠️ 產量受限，行銷資源有限</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利葡萄酒生產由三種截然不同的商業模式組成，各自在市場中扮演關鍵角色。合作社與獨立酒莊是最核心的對比。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>合作社 (Cantina Sociale)</h3><ul><li><strong>產量：</strong>約佔全國總產量一半以上，產業基石</li><li><strong>模式：</strong>眾多小農共享釀酒設施與行銷資源</li><li><strong>定位：</strong>規模經濟、高性價比日常餐酒</li><li><strong>代表：</strong>Trentino Cavit, Mezzacorona, Sicily</li><li>✅ 設備先進，產量穩定，價格親民</li><li>⚠️ 品質天花板較低，風土個性較弱</li></ul></div><div class=\"method-card modern\"><h3>獨立酒莊 (Azienda Agricola)</h3><ul><li><strong>產量：</strong>比例較小，但貢獻幾乎全部頂級名酒</li><li><strong>模式：</strong>莊主自己種植、釀造、裝瓶</li><li><strong>定位：</strong>展現極致風土、品質控管嚴格</li><li><strong>代表：</strong>Giacomo Conterno (Barolo), Biondi-Santi (Brunello)</li><li>✅ 品質頂尖，品牌價值高，風土鮮明</li><li>⚠️ 產量受限，行銷資源有限</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
@@ -51,14 +71,14 @@
     {
       "type": "content",
       "title": "全球出口市場佈局",
-      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">義大利超過一半的葡萄酒產量用於出口，主力市場集中在四大區域</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🇺🇸 美國（最大金額市場）：</strong>偏好 Pinot Grigio、Prosecco、Chianti 及頂級 Super Tuscans；高端精品消費強勁，年均進口逾 20 億歐元，是義大利最重要的精品酒出口目的地</div><div class=\"orvieto-card\"><strong>🇩🇪 德國（最大體積市場）：</strong>主要進口平價散裝酒與日常餐酒；體積市場最大但平均單價較低，以量取勝，是義大利葡萄酒出口量最大的國家</div><div class=\"orvieto-card\"><strong>🇬🇧 英國（成熟穩定市場）：</strong>對 Prosecco 與傳統紅酒（Chianti、Barolo）需求強勁；Brexit 後進口手續增加，但義大利酒的基本需求依然穩固</div><div class=\"orvieto-card\"><strong>🌏 亞洲（最具潛力新興市場）：</strong>中國、日本、韓國快速成長；對義大利文化與美食高度認同；義大利酒業正積極推廣本土品種與餐酒搭配文化以拓展亞洲版圖</div></div></div>"
+      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">義大利約一半的葡萄酒產量用於出口，主力市場集中在四大區域</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🇺🇸 美國（最大金額市場）：</strong>偏好 Pinot Grigio、Prosecco、Chianti 及頂級 Super Tuscans；高端精品消費強勁，約佔義大利葡萄酒出口總值的四分之一，是最重要的精品酒出口目的地</div><div class=\"orvieto-card\"><strong>🇩🇪 德國（最大體積市場）：</strong>主要進口平價散裝酒與日常餐酒；體積市場最大但平均單價較低，以量取勝，是義大利葡萄酒出口量最大的國家</div><div class=\"orvieto-card\"><strong>🇬🇧 英國（成熟穩定市場）：</strong>對 Prosecco 與傳統紅酒（Chianti、Barolo）需求強勁；Brexit 後進口手續增加，但義大利酒的基本需求依然穩固</div><div class=\"orvieto-card\"><strong>🌏 亞洲（最具潛力新興市場）：</strong>中國、日本、韓國快速成長；對義大利文化與美食高度認同；義大利酒業正積極推廣本土品種與餐酒搭配文化以拓展亞洲版圖</div></div></div>"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
         "義大利佔全球葡萄酒產量 18-20%，年出口總值超過 70 億歐元，是最重要的農產品出口項目",
-        "三大生產模式：合作社（>50% 產量）、獨立酒莊（頂級精品）、大型酒商（全球行銷）",
+        "三大生產模式：合作社（約一半以上產量）、獨立酒莊（頂級精品）、大型酒商（全球行銷）",
         "合作社 (Cantina Sociale) 是產業基石，佔總產量過半，以高性價比日常餐酒為主",
         "Azienda Agricola（獨立酒莊）：自種自釀自裝瓶，品質控管最嚴格，風土展現最純粹",
         "大型酒商如 Antinori、Santa Margherita 是義大利葡萄酒進入全球市場的商業引擎",
@@ -75,35 +95,60 @@
         {
           "type": "single",
           "question": "在義大利的葡萄酒生產模式中，哪一種模式貢獻了全國超過 50% 的總產量，是產業的基石？",
-          "options": ["獨立酒莊 (Azienda Agricola)", "合作社 (Cantina Sociale)", "跨國烈酒集團", "車庫酒莊 (Garage Wineries)"],
+          "options": [
+            "獨立酒莊 (Azienda Agricola)",
+            "合作社 (Cantina Sociale)",
+            "跨國烈酒集團",
+            "車庫酒莊 (Garage Wineries)"
+          ],
           "correct": 1,
           "explanation": "合作社 (Cantina Sociale) 匯集了眾多小農的葡萄進行統一釀造，佔義大利總產量的一半以上，特別是在 Trentino-Alto Adige 和 Sicily 等產區非常發達。"
         },
         {
           "type": "single",
           "question": "以「出口價值 (Value)」計算，哪一個國家是義大利葡萄酒最大的出口市場？",
-          "options": ["德國", "英國", "中國", "美國"],
+          "options": [
+            "德國",
+            "英國",
+            "中國",
+            "美國"
+          ],
           "correct": 3,
           "explanation": "美國是義大利葡萄酒最大的價值市場，對高價位的 Super Tuscans、Barolo 以及受歡迎的 Prosecco 和 Pinot Grigio 有龐大的需求。"
         },
         {
           "type": "single",
           "question": "酒標上標示「Azienda Agricola」通常代表什麼意義？",
-          "options": ["由大型酒商收購散裝酒調配而成", "這是一款氣泡酒", "獨立酒莊，使用自己種植的葡萄釀造並裝瓶", "專門用於出口的廉價酒"],
+          "options": [
+            "由大型酒商收購散裝酒調配而成",
+            "這是一款氣泡酒",
+            "獨立酒莊，使用自己種植的葡萄釀造並裝瓶",
+            "專門用於出口的廉價酒"
+          ],
           "correct": 2,
           "explanation": "Azienda Agricola 意指「農業莊園」或獨立酒莊，代表該酒莊自己種植葡萄、釀造並裝瓶，通常與較高的品質控管和風土展現有關。"
         },
         {
           "type": "single",
           "question": "近年來，義大利葡萄酒產業面臨的內部市場挑戰主要為何？",
-          "options": ["國內人均葡萄酒消費量大幅下降", "政府禁止在國內銷售葡萄酒", "義大利人只喝法國酒", "葡萄園面積擴張過快導致供過於求"],
+          "options": [
+            "國內人均葡萄酒消費量大幅下降",
+            "政府禁止在國內銷售葡萄酒",
+            "義大利人只喝法國酒",
+            "葡萄園面積擴張過快導致供過於求"
+          ],
           "correct": 0,
           "explanation": "過去幾十年來，義大利國內的人均葡萄酒消費量大幅下降，年輕一代的飲酒習慣改變，迫使義大利酒業必須更加依賴出口市場。"
         },
         {
           "type": "single",
           "question": "義大利葡萄酒的「合作社（Cantina Cooperativa/Sociale）」模式主要特色是？",
-          "options": ["單一莊主控制所有葡萄園", "多個農戶共享釀酒設施，提供產量穩定與規模效益", "只生產頂級精品酒", "全部出口不在本地銷售"],
+          "options": [
+            "單一莊主控制所有葡萄園",
+            "多個農戶共享釀酒設施，提供產量穩定與規模效益",
+            "只生產頂級精品酒",
+            "全部出口不在本地銷售"
+          ],
           "correct": 1,
           "explanation": "合作社模式讓小農戶共享釀酒設備和行銷資源，貢獻義大利超過 50% 的總產量，同時也有部分合作社（如 Trentino 的 Cavit）生產高品質酒款。"
         }

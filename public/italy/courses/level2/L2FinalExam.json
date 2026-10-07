@@ -22,7 +22,7 @@
         "Bolgheri 村（Tuscany）"
       ],
       "answer": 2,
-      "explanation": "Gewürztraminer 的名稱來自 Alto Adige 的 Tramin（德語）/ Termeno（義語）村，「Gewürz」是德語香料之意，該品種正是源於此地，再傳播到阿爾薩斯和全球。"
+      "explanation": "Gewürztraminer 的名稱來自 Alto Adige 的 Tramin（德語）/ Termeno（義語）村，「Gewürz」是德語香料之意。Traminer 一般認為以此村命名，其芳香型變種 Gewürztraminer 後來在阿爾薩斯等地發揚光大。"
     },
     {
       "question": "Friuli Venezia Giulia 的 Collio DOC 以何著稱？",
@@ -77,7 +77,7 @@
         "病蟲害頻繁，難以推行有機農法"
       ],
       "answer": 2,
-      "explanation": "Cinque Terre 的葡萄種植在地中海沿岸幾乎垂直的懸崖梯田上，坡度超過 60%，完全無法機械操作，必須依賴人工採收和小型纜車搬運，是世界上成本最高的葡萄園之一。"
+      "explanation": "Cinque Terre 的葡萄種植在地中海沿岸幾乎垂直的懸崖梯田上，坡度超過 60%，完全無法機械操作，必須依賴人工採收和單軌車搬運，是世界上成本最高的葡萄園之一。"
     },
     {
       "question": "Verdicchio dei Castelli di Jesi DOC（Marche）最著名的感官特色是？",
@@ -198,7 +198,7 @@
         "Cabernet Sauvignon"
       ],
       "answer": 0,
-      "explanation": "Cannonau 就是 Grenache / Garnacha，DNA 研究甚至顯示薩丁尼亞可能是該品種的原鄉，再從島上傳播到西班牙（Garnacha）和法國南部（Grenache）。"
+      "explanation": "Cannonau 就是 Grenache / Garnacha，有研究者主張薩丁尼亞可能是該品種的原鄉，但多數觀點仍認為它源自西班牙（Garnacha），再傳播到法國南部（Grenache）與薩丁尼亞。"
     },
     {
       "question": "Vermentino di Sardegna DOC 的風味特色是？",
@@ -215,12 +215,12 @@
       "question": "傳統派（Tradizionalisti）釀造 Barolo 的主要方式是？",
       "options": [
         "短浸皮（3–5 天），法國小橡木桶（Barrique）陳年",
-        "長浸皮（30–60 天），大型斯洛維尼亞橡木桶（Botti Grandi）陳年",
+        "長浸皮（30–60 天），大型斯拉沃尼亞橡木桶（Botti Grandi）陳年",
         "去梗冷浸皮，控溫精準釀造",
         "添加 Barbera 增加顏色和果味"
       ],
       "answer": 1,
-      "explanation": "傳統派（Giacomo Conterno, Bartolo Mascarello 等）堅持長浸皮 30–60 天萃取最大單寧，使用大型 Slavonian 橡木桶（Botti，1000–2000 升）陳年 3–5 年以上，賦予酒款沉雄、複雜的陳年潛力。"
+      "explanation": "傳統派（Giacomo Conterno, Bartolo Mascarello 等）堅持長浸皮 30–60 天萃取最大單寧，使用大型 Slavonian 橡木桶（Botti，容量常達數千公升）長時間陳年，賦予酒款沉雄、複雜的陳年潛力。"
     },
     {
       "question": "現代派（Modernisti）釀造 Barolo 的主要方式是？",
@@ -330,7 +330,7 @@
         "Liguria"
       ],
       "answer": 2,
-      "explanation": "Campania 是南義大區（坎帕尼亞），屬於 Level 2 南義課程範疇，以 Taurasi DOCG（Aglianico）和 Fiano / Greco 白酒著稱；Trentino-Alto Adige、Friuli Venezia Giulia、Liguria 才是 Level 2 北部課程的三個大區。"
+      "explanation": "Campania 是南義大區（坎帕尼亞），屬於 Level 2 南義課程範疇，以 Taurasi DOCG（Aglianico）和 Fiano / Greco 白酒著稱；Trentino-Alto Adige、Friuli Venezia Giulia、Liguria、Emilia-Romagna 才是 Level 2 北部課程的四個大區。"
     },
     {
       "question": "Nero d'Avola 和 Nerello Mascalese 同為西西里代表品種，最主要的風格差異是？",
@@ -352,7 +352,7 @@
         "是義大利出口法規的縮寫，限制 Barolo 的出口配額"
       ],
       "answer": 1,
-      "explanation": "MGA（Menzioni Geografiche Aggiuntive）是 2010 年 Barolo 和 Barbaresco 官方建立的葡萄園地理標示系統，將各村莊重要葡萄園命名並標準化，類似勃艮第的 Premier Cru 概念，標示在酒標上代表特定地塊出產，如 Barolo MGA Cannubi、Brunate 等。"
+      "explanation": "MGA（Menzioni Geografiche Aggiuntive）是官方建立的葡萄園地理標示系統（Barbaresco 於 2007 年、Barolo 於 2010 年），將各村莊重要葡萄園命名並標準化，類似勃艮第的 Premier Cru 概念，標示在酒標上代表特定地塊出產，如 Barolo MGA Cannubi、Brunate 等。"
     },
     {
       "question": "義大利 En Primeur（期酒）制度最活躍的產區是？",
@@ -363,7 +363,7 @@
         "Sicily，因 Etna 火山酒近年最熱門"
       ],
       "answer": 1,
-      "explanation": "Tuscany 的高端酒款（Sassicaia、Ornellaia、Masseto 等超級托斯卡納，以及 Brunello di Montalcino）是義大利期酒交易最活躍的，這些酒的期酒交易在波爾多期酒系統的影響下運作，吸引全球收藏家和投資者。"
+      "explanation": "Tuscany 的高端酒款（Sassicaia、Ornellaia、Masseto 等超級托斯卡納，以及 Brunello di Montalcino）是義大利期酒交易最活躍的，其中多款超級托斯卡納甚至透過波爾多的 La Place 通路以期酒方式發售，吸引全球收藏家和投資者。"
     },
     {
       "question": "Umbria 的 Orvieto DOC（以 Grechetto 和 Trebbiano 為主）傳統上以哪種風格最著名？",
@@ -381,12 +381,12 @@
     {
       "type": "title",
       "title": "📋 Level 2 綜合評量",
-      "subtitle": "義大利葡萄酒 Level 2 · 進階完整測驗 · 35 題"
+      "subtitle": "義大利葡萄酒 Level 2 · 進階完整測驗 · 34 題"
     },
     {
       "type": "content",
       "title": "📚 考試範圍與說明",
-      "content": "<div class='exam-intro'><p>本評量涵蓋 Level 2 全部課程的進階知識，共 35 題。</p><div class='exam-scope'><div class='scope-item'><strong>🏔️ 北義四大區</strong>：Trentino-Alto Adige、Friuli、Liguria、Emilia-Romagna</div><div class='scope-item'><strong>🌿 中義五大區</strong>：Marche、Umbria、Lazio、Abruzzo、Molise</div><div class='scope-item'><strong>☀️ 南義五大區</strong>：Campania、Puglia、Basilicata、Calabria、Sardinia</div><div class='scope-item'><strong>🍇 品種深探</strong>：Aglianico、Primitivo / Zinfandel、Cannonau / Grenache</div><div class='scope-item'><strong>📈 市場與投資</strong>：期酒、合作社、出口市場</div></div><p class='exam-note'>建議時間：45 分鐘 ｜ 及格標準：70 分（25 題以上答對）</p></div>"
+      "content": "<div class='exam-intro'><p>本評量涵蓋 Level 2 全部課程的進階知識，共 34 題。</p><div class='exam-scope'><div class='scope-item'><strong>🏔️ 北義四大區</strong>：Trentino-Alto Adige、Friuli、Liguria、Emilia-Romagna</div><div class='scope-item'><strong>🌿 中義五大區</strong>：Marche、Umbria、Lazio、Abruzzo、Molise</div><div class='scope-item'><strong>☀️ 南義五大區</strong>：Campania、Puglia、Basilicata、Calabria、Sardinia</div><div class='scope-item'><strong>🍇 品種深探</strong>：Aglianico、Primitivo / Zinfandel、Cannonau / Grenache</div><div class='scope-item'><strong>📈 市場與投資</strong>：期酒、合作社、出口市場</div></div><p class='exam-note'>建議時間：45 分鐘 ｜ 及格標準：70 分（24 題以上答對）</p></div>"
     },
     {
       "type": "list",
@@ -406,11 +406,11 @@
         "🌞 Puglia：Primitivo = Zinfandel（克羅埃西亞 Tribidrag 起源，2001 DNA 確認）",
         "🌋 Basilicata：Aglianico del Vulture（Monte Vulture 火山土）",
         "⚔️ Calabria：Cirò DOC Gaglioppo（古希臘奧運獻酒傳說）",
-        "🏖️ Sardinia：Cannonau = Grenache（薩丁尼亞可能是原鄉）",
+        "🏖️ Sardinia：Cannonau = Grenache（有研究者主張薩丁尼亞是原鄉）",
         "🌿 Sardinia：Vermentino 地中海清爽白酒 + 藍色地帶長壽研究",
         "⚖️ Barolo 之爭：傳統派（長浸皮 + 大 Botti）vs. 現代派（短浸皮 + Barrique）",
         "🦁 Gaja 革命：Barbaresco 單一葡萄園 + 法國小橡木桶 → 義大利酒國際化",
-        "📜 Sassicaia：超級托斯卡納鼻祖，1994 年成唯一以酒莊命名 DOC",
+        "📜 Sassicaia：超級托斯卡納鼻祖，1994 年成為第一個以單一酒莊為範圍的 DOC",
         "🍷 Ripasso = Valpolicella 倒回 Amarone 酒渣二次發酵",
         "🍯 Recioto（甜型）vs. Amarone（全干型）— 同技術，不同發酵終點",
         "🏭 合作社占義大利總產量約 55-60%",

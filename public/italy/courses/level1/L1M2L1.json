@@ -66,7 +66,7 @@
     {
       "type": "content",
       "title": "📜 歷史、地形與產業（IWS 官方教材）",
-      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>「山腳下」的三重地形環帶</h3><p>「Piemonte」意為「山腳下」，三面環山：南側Ligurian Apennines與Maritime Alps、西側Alps（鄰法國）、北側鄰Valle d'Aosta與瑞士，完全不臨海。地形可視為三個同心環帶——最外層是山地（佔<strong>43%</strong>，包含Alps最高峰Gran Paradiso、Monte Rosa）；中層是丘陵（佔<strong>30%</strong>，是絕大多數葡萄種植區所在，包含Langhe、Roero、Monferrato、Novara/Vercelli丘陵、Colli Tortonesi）；內層是Po河谷平原（僅佔<strong>27%</strong>，土壤過於肥沃，主要種植稻米而非葡萄）。葡萄園多種植於海拔500-1,300英尺／150-400公尺的坡地。</p></div><div class=\"science-card\">義大利是歐洲最大稻米生產國，<strong>Piemonte是義大利國內最大稻米產地</strong>（Lombardia居次）；著名的Arborio米即得名自Vercelli省的Arborio鎮。Langhe與Monferrato秋冬常有降雹問題，當地會使用<strong>防雹炮</strong>干擾雹粒形成，保護葡萄園。</p></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">戰後的荒廢與復興</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">1950與1960年代，城市裡出現大量待遇優渥的工作機會，許多葡萄園因而遭到棄置；這股外流人口的趨勢在<strong>1970與1980年代逆轉</strong>，人們返回家族產業，希望重新喚醒這片長期閒置的土地——正是這股返鄉浪潮，奠定了今日Piemonte頂級酒莊林立的基礎。</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Vermouth：Torino 誕生的世界名飲</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">Vermouth是一種加入香草與香料調味的加烈酒，是Martini與Negroni等經典雞尾酒的重要成分，最早由<strong>Antonio Benedetto Carpano於1786年在Torino創製</strong>。「Vermouth」一詞源自德文「Wermut」（苦艾），正是原始配方中的成分之一。Torino是Vermouth生產主要中心，Asti與Canelli亦有生產；歷史上多以Canelli周邊的Moscato Bianco為基酒。</div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>「山腳下」的三重地形環帶</h3><p>「Piemonte」意為「山腳下」，三面環山：南側Ligurian Apennines與Maritime Alps、西側Alps（鄰法國）、北側鄰Valle d'Aosta與瑞士，完全不臨海。地形可視為三個同心環帶——最外層是山地（佔<strong>43%</strong>，包含Alps最高峰Gran Paradiso、Monte Rosa）；中層是丘陵（佔<strong>30%</strong>，是絕大多數葡萄種植區所在，包含Langhe、Roero、Monferrato、Novara/Vercelli丘陵、Colli Tortonesi）；內層是Po河谷平原（僅佔<strong>27%</strong>，土壤過於肥沃，主要種植稻米而非葡萄）。葡萄園多種植於海拔500-1,300英尺／150-400公尺的坡地。</p></div><div class=\"science-card\">義大利是歐洲最大稻米生產國，<strong>Piemonte是義大利國內最大稻米產地</strong>（Lombardia居次）；著名的Arborio米即得名自Vercelli省的Arborio鎮。Langhe與Monferrato夏季常有冰雹威脅，當地會使用<strong>防雹炮</strong>干擾雹粒形成，保護葡萄園。</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">戰後的荒廢與復興</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">1950與1960年代，城市裡出現大量待遇優渥的工作機會，許多葡萄園因而遭到棄置；這股外流人口的趨勢在<strong>1970與1980年代逆轉</strong>，人們返回家族產業，希望重新喚醒這片長期閒置的土地——正是這股返鄉浪潮，奠定了今日Piemonte頂級酒莊林立的基礎。</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">Vermouth：Torino 誕生的世界名飲</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">Vermouth是一種加入香草與香料調味的加烈酒，是Martini與Negroni等經典雞尾酒的重要成分，最早由<strong>Antonio Benedetto Carpano於1786年在Torino創製</strong>。「Vermouth」一詞源自德文「Wermut」（苦艾），正是原始配方中的成分之一。Torino是Vermouth生產主要中心，Asti與Canelli亦有生產；歷史上多以Canelli周邊的Moscato Bianco為基酒。</div></div></div>"
     },
     {
       "type": "content",
@@ -121,7 +121,10 @@
           "location": "Alba 西南方 Langhe 丘陵，11 個市鎮",
           "desc": "被譽為「酒中之王」，最長陳年潛力可達 30 年以上。Serralunga d'Alba 土壤偏 Helvetiano 砂岩，風格更強勁；La Morra 偏 Tortoniano 泥灰岩，更優雅芬芳。",
           "pairing": "白松露燉飯、Brasato 燉牛肉、野味、老起司",
-          "center": [7.923, 44.610],
+          "center": [
+            7.923,
+            44.61
+          ],
           "zoom": 12,
           "color": "#8B0000",
           "geojsonPath": "/italy/regions/piedmont/geojson/DOCG/Barolo DOCG.geojson"
@@ -140,7 +143,10 @@
           "location": "Alba 東北方，Tanaro 河沿岸，4 個市鎮",
           "desc": "被譽為「酒中之后」，與 Barolo 同為 Nebbiolo 頂峰，但風格更柔美細膩。Gaja 家族在此確立世界地位。",
           "pairing": "白松露、烤雞、小牛肉、中等陳年起司",
-          "center": [8.070, 44.688],
+          "center": [
+            8.07,
+            44.688
+          ],
           "zoom": 12.5,
           "color": "#C2185B",
           "geojsonPath": "/italy/regions/piedmont/geojson/DOCG/Barbaresco DOCG.geojson"
@@ -159,7 +165,10 @@
           "location": "Asti 與 Alessandria 省，廣大丘陵區",
           "desc": "Piemonte 種植面積最廣的品種，高酸低單寧讓它兼容性極高，Superiore 款（橡木桶陳年）可達相當複雜度。",
           "pairing": "披薩、義大利麵、日常肉食料理",
-          "center": [8.240, 44.850],
+          "center": [
+            8.24,
+            44.85
+          ],
           "zoom": 9.5,
           "color": "#7B1FA2",
           "geojsonPath": "/italy/regions/piedmont/geojson/DOCG/Barbera d'Asti DOCG.geojson"
@@ -178,7 +187,10 @@
           "location": "Alessandria 省東南部，11 個市鎮",
           "desc": "Piemonte 最著名的白酒 DOCG，Cortese 品種孕育出清脆礦物感，La Scolca 是代表酒莊之一。",
           "pairing": "海鮮料理、Vitello Tonnato、沙拉、輕食",
-          "center": [8.810, 44.690],
+          "center": [
+            8.81,
+            44.69
+          ],
           "zoom": 11.5,
           "color": "#2E7D32",
           "geojsonPath": "/italy/regions/piedmont/geojson/DOCG/Cortese di Gavi Gavi DOCG.geojson"
@@ -197,7 +209,10 @@
           "location": "Tanaro 河北岸，與 Barolo 隔河相望",
           "desc": "Barolo 對岸的產區，沙質土壤讓 Nebbiolo 風格更輕盈柔順，性價比優異。白酒 Arneis 帶杏仁與白花香氣。",
           "pairing": "紅：燉肉料理；白 Arneis：魚類、清淡白肉",
-          "center": [7.910, 44.710],
+          "center": [
+            7.91,
+            44.71
+          ],
           "zoom": 11.5,
           "color": "#1565C0",
           "geojsonPath": "/italy/regions/piedmont/geojson/DOCG/Roero DOCG.geojson"
@@ -216,7 +231,10 @@
           "location": "Cuneo 省，Dogliani 鎮周邊",
           "desc": "Dolcetto 的最佳詮釋地，「Dogliani」名稱的 DOCG 代表品質最高版本，Quinto Chionetti 等酒莊定義了此款風格。",
           "pairing": "日常義大利麵、沙拉米冷盤、輕食聚餐",
-          "center": [7.928, 44.533],
+          "center": [
+            7.928,
+            44.533
+          ],
           "zoom": 12,
           "color": "#4A148C",
           "geojsonPath": "/italy/regions/piedmont/geojson/DOCG/Dogliani DOCG.geojson"
@@ -235,7 +253,10 @@
           "location": "Vercelli 省北部，阿爾卑斯山腳",
           "desc": "北部 Nebbiolo（當地稱 Spanna）在火山崗岩土壤上展現獨特礦物感，更難親近但極具深度，Travaglini 酒莊最具代表性。",
           "pairing": "野味、陳年起司、燉肉、松露料理",
-          "center": [8.367, 45.627],
+          "center": [
+            8.367,
+            45.627
+          ],
           "zoom": 12.5,
           "color": "#E65100",
           "geojsonPath": "/italy/regions/piedmont/geojson/DOCG/Gattinara DOCG.geojson"
@@ -254,7 +275,10 @@
           "location": "Novara 省，與 Gattinara 相鄰",
           "desc": "義大利最小 DOCG 之一，產量稀少使其更具收藏價值，Antichi Vigneti di Cantalupo 是最重要的酒莊。",
           "pairing": "烤羊肉、野味、陳年起司",
-          "center": [8.413, 45.620],
+          "center": [
+            8.413,
+            45.62
+          ],
           "zoom": 13,
           "color": "#BF360C"
         },
@@ -272,7 +296,10 @@
           "location": "Asti、Cuneo 及 Alessandria 三省，Canelli 為核心",
           "desc": "全球最受歡迎的甜白微氣泡酒，極低酒精（約5%）配合迷人的花果香氣，是甜點與早午餐的絕佳伴侶。",
           "pairing": "甜點、水果沙拉、Panettone、草莓、婚禮場合",
-          "center": [8.290, 44.740],
+          "center": [
+            8.29,
+            44.74
+          ],
           "zoom": 10,
           "color": "#F9A825",
           "geojsonPath": "/italy/regions/piedmont/geojson/DOCG/Asti DOCG.geojson"

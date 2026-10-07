@@ -119,7 +119,7 @@ export const courseLevels = {
     difficulty: '進階',
     icon: '🍷',
     color: '#FF9800',
-    totalLessons: 25,
+    totalLessons: 26,
     modules: [
       {
         id: 'L2M1',
@@ -148,6 +148,12 @@ export const courseLevels = {
             title: 'Emilia-Romagna 艾米利亞',
             mapRegion: 'emilia',
             objectives: ['認識 Lambrusco 在艾米利亞的多元風格', '了解 Romagna 的 Sangiovese 特色', '掌握美食之都帕瑪的餐酒搭配精神']
+          },
+          {
+            id: 'L2M1L5',
+            title: "Valle d'Aosta 瓦萊達奧斯塔",
+            mapRegion: "valle d'aosta",
+            objectives: ['認識阿爾卑斯山、Monte Bianco 與 Dora Baltea 對產區的影響', '掌握上、中、下河谷的七個子產區與主要品種', '了解酒標標示方式，以及晚摘與 flétri 甜酒的差別']
           }
         ]
       },

@@ -1,73 +1,53 @@
 <template>
   <div class="docg-map-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🗺️ Veneto 重要 DOCG & DOC 互動地圖' }}</h2>
-      <p class="slide-subtitle">點選按鈕查看各產區位置與詳細資訊</p>
+      <h2>{{ slide.title || t('italy.slides.venetoMap.defaultTitle') }}</h2>
+      <p class="slide-subtitle">{{ t('italy.slides.mapCommon.subtitle') }}</p>
     </div>
-
-    <!-- 分類按鈕列 -->
     <div class="zone-buttons">
-      <div class="btn-group">
-        <span class="btn-group-label">🏆 重要 DOCG</span>
+      <div class="btn-group" v-for="g in GROUPS" :key="g.key">
+        <span class="btn-group-label">{{ t(`italy.slides.venetoMap.${g.label}`) }}</span>
         <button
-          v-for="z in DOCG_ZONES"
-          :key="z.id"
-          class="zone-btn"
-          :class="[`tier-${z.tier}`, { active: selected === z.id }]"
+          v-for="z in allZones.filter(z => z.group === g.key)" :key="z.id"
+          class="zone-btn" :class="[`tier-${z.tier}`, { active: selected === z.id }]"
           @click="selectZone(z.id)"
         >{{ z.emoji }} {{ z.shortName }}</button>
       </div>
-      <div class="btn-group">
-        <span class="btn-group-label">🍷 重要 DOC</span>
-        <button
-          v-for="z in DOC_ZONES"
-          :key="z.id"
-          class="zone-btn"
-          :class="[`tier-${z.tier}`, { active: selected === z.id }]"
-          @click="selectZone(z.id)"
-        >{{ z.emoji }} {{ z.shortName }}</button>
-      </div>
-      <button v-if="selected" class="reset-btn" @click="resetView">🔄 全覽</button>
+      <button v-if="selected" class="reset-btn" @click="resetView">{{ t('italy.slides.mapCommon.reset') }}</button>
     </div>
-
-    <!-- 地圖 + 資訊 -->
     <div class="map-info-row">
       <div class="map-wrapper">
         <div ref="mapContainer" class="mapbox-container"></div>
-        <div v-if="loading" class="map-loading">地圖載入中…</div>
+        <div v-if="loading" class="map-loading">{{ t('italy.slides.mapCommon.loading') }}</div>
         <div v-if="mapError" class="map-error">{{ mapError }}</div>
         <div class="map-legend">
-          <div class="legend-row"><span class="legend-dot tier-s"></span>頂級 DOCG（Amarone）</div>
-          <div class="legend-row"><span class="legend-dot tier-a"></span>重要 DOCG</div>
-          <div class="legend-row"><span class="legend-dot tier-doc"></span>重要 DOC</div>
+          <div class="legend-row"><span class="legend-dot tier-s"></span>{{ t('italy.slides.venetoMap.legend.s') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-a"></span>{{ t('italy.slides.venetoMap.legend.a') }}</div>
+          <div class="legend-row"><span class="legend-dot tier-b"></span>{{ t('italy.slides.venetoMap.legend.b') }}</div>
         </div>
       </div>
-
-      <!-- 資訊面板 -->
       <div class="info-panel" v-if="selectedInfo">
-        <div class="info-badge" :class="`tier-${selectedInfo.tier}`">
-          {{ selectedInfo.tierLabel }}
-        </div>
+        <div class="info-badge" :class="`tier-${selectedInfo.tier}`">{{ selectedInfo.tierLabel }}</div>
         <h3 class="info-name">{{ selectedInfo.name }}</h3>
         <div class="info-rows">
-          <div class="info-row" v-for="row in selectedInfo.details" :key="row.label">
+          <div class="info-row" v-for="row in selectedInfo.details" :key="row.key">
             <span class="info-label">{{ row.label }}</span>
             <span class="info-val">{{ row.value }}</span>
           </div>
         </div>
         <div class="info-desc">{{ selectedInfo.desc }}</div>
         <div class="info-pair" v-if="selectedInfo.pairing">
-          <span class="pair-label">🍽️ 配餐</span>{{ selectedInfo.pairing }}
+          <span class="pair-label">{{ t('italy.slides.mapCommon.pairing') }}</span>{{ selectedInfo.pairing }}
         </div>
         <div class="info-price" v-if="selectedInfo.price">
-          <span class="price-label">💶 參考價格</span>{{ selectedInfo.price }}
+          <span class="price-label">{{ t('italy.slides.mapCommon.price') }}</span>{{ selectedInfo.price }}
         </div>
       </div>
       <div class="info-panel info-empty" v-else>
-        <div class="empty-icon">👆</div>
-        <p>點選上方按鈕或地圖上的產區<br>查看位置與詳細資訊</p>
+        <div class="empty-icon">🍷</div>
+        <p>{{ t('italy.slides.mapCommon.emptyLine1') }}<br>{{ t('italy.slides.mapCommon.emptyLine2') }}</p>
         <div class="empty-hint">
-          <div class="hint-row" v-for="z in ALL_ZONES" :key="z.id">
+          <div class="hint-row" v-for="z in allZones" :key="z.id">
             <span class="hint-dot" :class="`tier-${z.tier}`"></span>
             <span>{{ z.emoji }} {{ z.name }}</span>
           </div>
@@ -79,159 +59,100 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 defineProps({ slide: { type: Object, default: () => ({}) } })
 
+const { t } = useI18n()
+
+// 按鈕分組：key 對應 ZONES 的 group，label 為 italy.slides.venetoMap 下的鍵
+const GROUPS = [
+  { key: 'docg', label: 'groupDocg' },
+  { key: 'doc', label: 'groupDoc' }
+]
+
 // ── 產區資料 ─────────────────────────────────────────────────
-const DOCG_ZONES = [
+// 此元件用於 L1M2L3，文字放在 locales/*/italy.js 的 italy.slides.venetoMap.zones.<id>，
+// 這裡只保留地理與樣式資料。rows：資訊面板要顯示的欄位，label 取自 italy.slides.mapCommon.labels.<key>
+const ZONES = [
   {
-    id: 'amarone',
-    name: 'Amarone della Valpolicella DOCG',
-    shortName: 'Amarone',
-    emoji: '🍷',
-    tier: 's',
-    tierLabel: '👑 頂級 DOCG — Legendary',
-    center: [10.930, 45.545],
-    zoom: 11,
-    color: '#8B0000',
-    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Amarone della Valpolicella DOCG.geojson',
-    details: [
-      { label: '品種', value: 'Corvina 45-95%，Corvinone 可替代 50%，Rondinella 5-30%' },
-      { label: '工藝', value: '100% Appassimento 風乾 3-4 個月，失水 30-40%' },
-      { label: '陳年', value: '最少 2 年（含 2 年橡木桶）；Riserva 4 年+' },
-      { label: '風格', value: '15-17% ABV，乾果、巧克力、皮革、菸草，近乎干型' },
-      { label: '位置', value: 'Verona 省西北，Valpolicella 谷地，3 個核心村莊' }
-    ],
-    desc: '義大利最強勁的紅酒。Corvina 葡萄風乾後糖分翻倍，發酵至接近干型，造就義大利酒精最高的紅酒。Classico 子區（Negrar、Marano、Sant\'Ambrogio）品質最佳。',
-    pairing: '野味燉肉、陳年 Parmigiano、牛骨髓料理、黑巧克力甜點',
-    price: '€25-600+，Riserva 可達 €200+'
+    id: 'amarone', group: 'docg', emoji: '👑', tier: 's',
+    center: [10.930, 45.545], zoom: 11,
+    rows: ['grape', 'method', 'ageing', 'subzones', 'feature'],
+    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Amarone della Valpolicella DOCG.geojson'
   },
   {
-    id: 'prosecco-docg',
-    name: 'Conegliano Valdobbiadene Prosecco DOCG',
-    shortName: 'Prosecco DOCG',
-    emoji: '🥂',
-    tier: 'a',
-    tierLabel: '⭐ 頂級 DOCG — Prosecco 精華',
-    center: [12.148, 45.890],
-    zoom: 10.5,
-    color: '#1565C0',
-    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Conegliano Valdobbiadene Prosecco DOCG.geojson',
-    details: [
-      { label: '品種', value: 'Glera 85%+，其餘當地白品種輔助' },
-      { label: '工藝', value: 'Charmat 法（大罐二次發酵），保留清新果香' },
-      { label: '等級', value: 'Conegliano（較圓潤）/ Valdobbiadene（較精緻）/ Rive（單一園）/ Cartizze（頂峰）' },
-      { label: '風格', value: '細緻氣泡，白桃、梨子、杏花，10.5-11.5% ABV' },
-      { label: '位置', value: 'Treviso 省，Conegliano 至 Valdobbiadene 陡峭丘陵，UNESCO 遺址' }
-    ],
-    desc: 'Prosecco 的精華核心，Cartizze（僅 107 公頃）是最頂級的單一園，坡度達 45 度的陡峭山坡造就微甜版本最高表達。2019 年列入 UNESCO 世界遺產。',
-    pairing: '開胃菜、生火腿 Prosciutto、淡海鮮、草莓甜點',
-    price: 'Brut €10-25 / Rive €18-40 / Cartizze €25-60+'
+    id: 'prosecco-docg', group: 'docg', emoji: '🥂', tier: 'a',
+    center: [12.148, 45.890], zoom: 10.5,
+    rows: ['location', 'grape', 'method', 'subzones'],
+    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Conegliano Valdobbiadene Prosecco DOCG.geojson'
   },
   {
-    id: 'soave-sup',
-    name: 'Soave Superiore DOCG',
-    shortName: 'Soave Sup.',
-    emoji: '🤍',
-    tier: 'a',
-    tierLabel: '⭐ 頂級 DOCG — 玄武岩白酒',
-    center: [11.248, 45.427],
-    zoom: 11.5,
-    color: '#4A148C',
-    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Soave Superiore DOCG.geojson',
-    details: [
-      { label: '品種', value: 'Garganega 70%+，Trebbiano di Soave / Pinot Bianco 補充' },
-      { label: '土壤', value: '玄武岩火山土 + 石灰岩，老藤帶來礦物複雜度' },
-      { label: '陳年', value: 'Superiore：最少 12 個月；Riserva：24 個月+' },
-      { label: '風格', value: '礦物感十足，杏仁、白花、蜂蜜（老藤），3-20 年陳年潛力' },
-      { label: '位置', value: 'Verona 省東部，Soave 鎮周邊，Classico 核心區品質最佳' }
-    ],
-    desc: 'Classico 核心區的玄武岩土壤是 Soave 的靈魂，老藤 Garganega（樹齡 60-100 年以上）帶來無可複製的礦物複雜度。Pieropan、Gini 等家族酒莊定義了真正的 Soave 風格。',
-    pairing: '海鮮料理、Vitello Tonnato、清淡白肉、奶油海鮮義大利麵',
-    price: 'Superiore €12-35 / Riserva €20-55'
+    id: 'asolo', group: 'docg', emoji: '🍾', tier: 'a',
+    center: [11.981, 45.830], zoom: 10.5,
+    rows: ['location', 'grape', 'feature'],
+    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Asolo - Prosecco o Colli Asolani - Prosecco DOCG.geojson'
+  },
+  {
+    id: 'soave-sup', group: 'docg', emoji: '🤍', tier: 'a',
+    center: [11.248, 45.427], zoom: 11.5,
+    rows: ['location', 'grape', 'soil', 'ageing', 'feature'],
+    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Soave Superiore DOCG.geojson'
+  },
+  {
+    id: 'bardolino-sup', group: 'docg', emoji: '🍒', tier: 'a',
+    center: [10.770, 45.478], zoom: 11,
+    rows: ['location', 'grape', 'tiers', 'soil'],
+    geojsonPath: '/italy/regions/veneto/geojson/DOCG/Bardolino Superiore DOCG.geojson'
+  },
+  {
+    id: 'valpolicella', group: 'doc', emoji: '🍷', tier: 'b',
+    center: [10.930, 45.560], zoom: 11,
+    rows: ['location', 'grape', 'subzones', 'tiers'],
+    geojsonPath: '/italy/regions/veneto/geojson/DOC/Valpolicella DOC.geojson'
+  },
+  {
+    id: 'ripasso', group: 'doc', emoji: '🌿', tier: 'b',
+    center: [10.920, 45.548], zoom: 11,
+    rows: ['method', 'ageing', 'history'],
+    geojsonPath: '/italy/regions/veneto/geojson/DOC/Valpolicella ripasso DOC.geojson'
+  },
+  {
+    id: 'prosecco-doc', group: 'doc', emoji: '🫧', tier: 'b',
+    center: [12.100, 45.820], zoom: 8.8,
+    rows: ['scope', 'grape', 'method', 'feature'],
+    geojsonPath: '/italy/regions/veneto/geojson/DOC/Prosecco DOC.geojson'
   }
 ]
 
-const DOC_ZONES = [
-  {
-    id: 'valpolicella',
-    name: 'Valpolicella DOC',
-    shortName: 'Valpolicella',
-    emoji: '🍒',
-    tier: 'doc',
-    tierLabel: '🍷 重要 DOC — Amarone 的基礎',
-    center: [10.930, 45.560],
-    zoom: 11,
-    color: '#B71C1C',
-    geojsonPath: '/italy/regions/veneto/geojson/DOC/Valpolicella DOC.geojson',
-    details: [
-      { label: '品種', value: 'Corvina 45-95%，Rondinella 5-30%，同 Amarone 品種' },
-      { label: '風格', value: '輕盈、新鮮，無風乾工藝，鮮活酸度，容易親近' },
-      { label: '陳年', value: '普通款：6 個月+；Superiore：1 年+' },
-      { label: '關係', value: 'Amarone 的基礎，同葡萄園不同工藝的入門版' },
-      { label: '位置', value: '與 Amarone 相同區域，部分 Ripasso 再使用 Amarone 酒渣' }
-    ],
-    desc: '同一葡萄園、同樣品種，不用風乾工藝就是 Valpolicella。Ripasso 工藝（過 Amarone 酒渣二次浸泡）介於兩者之間，獲得更高酒體與複雜度，是 CP 值最高的選擇。',
-    pairing: '日常義大利麵、沙拉米、烤雞、薄餅',
-    price: 'Valpolicella €8-18 / Ripasso €15-35'
-  },
-  {
-    id: 'valpolicella-ripasso',
-    name: 'Valpolicella Ripasso DOC',
-    shortName: 'Ripasso',
-    emoji: '🔁',
-    tier: 'doc',
-    tierLabel: '🍷 重要 DOC — 窮人的 Amarone',
-    center: [10.920, 45.548],
-    zoom: 11,
-    color: '#C62828',
-    geojsonPath: '/italy/regions/veneto/geojson/DOC/Valpolicella ripasso DOC.geojson',
-    details: [
-      { label: '工藝', value: 'Ripasso：將 Valpolicella 過 Amarone 或 Recioto 酒渣再次浸泡' },
-      { label: '效果', value: '獲得更多顏色、單寧、酒體，果香更複雜，酒精升至 13-14%' },
-      { label: '陳年', value: '最少 1 年（含 6 個月橡木桶）；Superiore 2 年+' },
-      { label: '風格', value: '介於 Valpolicella 和 Amarone 之間，黑醋栗、香料、皮革' },
-      { label: '定位', value: '被稱為「窮人的 Amarone」，性價比極高的中價位選擇' }
-    ],
-    desc: 'Ripasso 是 Veneto 最聰明的工藝：將基礎 Valpolicella 葡萄酒過 Amarone 酒渣（pomace）再次浸泡發酵，獲得額外的顏色、單寧與複雜度，又不需要 Amarone 的漫長風乾工藝。Masi、Bertani 是代表酒莊。',
-    pairing: '燉牛肉、烤羊、陳年硬質起司、蘑菇料理',
-    price: '€15-35，全 Veneto 最佳 CP 值'
-  },
-  {
-    id: 'prosecco-doc',
-    name: 'Prosecco DOC',
-    shortName: 'Prosecco DOC',
-    emoji: '🫧',
-    tier: 'doc',
-    tierLabel: '🍷 重要 DOC — 廣域 Prosecco',
-    center: [12.100, 45.820],
-    zoom: 8.8,
-    color: '#1976D2',
-    geojsonPath: '/italy/regions/veneto/geojson/DOC/Prosecco DOC.geojson',
-    details: [
-      { label: '品種', value: 'Glera 85%+，大量生產的親民版 Prosecco' },
-      { label: '範圍', value: 'Veneto + Friuli Venezia Giulia 九個省，比 DOCG 大得多' },
-      { label: '工藝', value: 'Charmat 法，清新果香，不講究土地個性' },
-      { label: '風格', value: '白桃、梨子，輕盈易飲，Brut / Extra Dry / Dry 多種甜度' },
-      { label: '定位', value: '全球銷量第一氣泡酒，日常場合首選' }
-    ],
-    desc: '廣域 Prosecco DOC 跨越 Veneto 和 Friuli 兩個大區，是年產超過 6 億瓶的全球最暢銷氣泡酒。DOC 版品質穩定親民，DOCG 版（Conegliano Valdobbiadene）才是精品表達。',
-    pairing: '開胃菜、午餐輕食、派對場合、brunch',
-    price: '€6-15，全球最實惠的精品氣泡酒'
+// 依目前語系組出含文字的產區資料
+const allZones = computed(() => ZONES.map(z => {
+  const base = `italy.slides.venetoMap.zones.${z.id}`
+  return {
+    ...z,
+    name: t(`${base}.name`),
+    shortName: t(`${base}.shortName`),
+    tierLabel: t(`${base}.tierLabel`),
+    details: z.rows.map(key => ({
+      key,
+      label: t(`italy.slides.mapCommon.labels.${key}`),
+      value: t(`${base}.${key}`)
+    })),
+    desc: t(`${base}.desc`),
+    pairing: t(`${base}.pairing`),
+    price: t(`${base}.price`)
   }
-]
-
-const ALL_ZONES = [...DOCG_ZONES, ...DOC_ZONES]
+}))
 
 const TIER_STYLE = {
-  s:   { fill: '#8B0000', line: '#EF5350', fillOpacity: 0.30, lineWidth: 2.5 },
-  a:   { fill: '#1565C0', line: '#64B5F6', fillOpacity: 0.25, lineWidth: 2.2 },
-  doc: { fill: '#4A148C', line: '#CE93D8', fillOpacity: 0.22, lineWidth: 1.8 }
+  s: { fill: '#8B0000', line: '#EF5350', fillOpacity: 0.30, lineWidth: 2.5 },
+  a: { fill: '#1565C0', line: '#64B5F6', fillOpacity: 0.25, lineWidth: 2.2 },
+  b: { fill: '#4A148C', line: '#CE93D8', fillOpacity: 0.20, lineWidth: 1.8 }
 }
 
-// ── 狀態 ─────────────────────────────────────────────────────
+
 const mapContainer = ref(null)
 const loading = ref(true)
 const mapError = ref(null)
@@ -240,10 +161,9 @@ let map = null
 let markersArr = []
 
 const selectedInfo = computed(() =>
-  selected.value ? ALL_ZONES.find(z => z.id === selected.value) : null
+  selected.value ? allZones.value.find(z => z.id === selected.value) : null
 )
 
-// ── GeoJSON 非同步載入 ────────────────────────────────────────
 async function fetchGeojson (z) {
   try {
     const res = await fetch(z.geojsonPath)
@@ -257,21 +177,16 @@ async function fetchGeojson (z) {
   }
 }
 
-// ── 地圖操作 ─────────────────────────────────────────────────
 async function highlightAll () {
   if (!map || !map.isStyleLoaded()) return
-
-  const geojsonData = await Promise.all(ALL_ZONES.map(z => fetchGeojson(z)))
-
-  ALL_ZONES.forEach((z, i) => {
+  const geojsonData = await Promise.all(ZONES.map(z => fetchGeojson(z)))
+  ZONES.forEach((z, i) => {
     const gj = geojsonData[i]
     if (!gj) return
+    const ts = TIER_STYLE[z.tier]
     const fillId = `fill-${z.id}`
     const lineId = `line-${z.id}`
-    const ts = TIER_STYLE[z.tier]
-    if (!map.getSource(z.id)) {
-      map.addSource(z.id, { type: 'geojson', data: gj })
-    }
+    if (!map.getSource(z.id)) map.addSource(z.id, { type: 'geojson', data: gj })
     if (!map.getLayer(fillId)) {
       map.addLayer({ id: fillId, type: 'fill', source: z.id,
         paint: { 'fill-color': ts.fill, 'fill-opacity': ts.fillOpacity } })
@@ -284,25 +199,22 @@ async function highlightAll () {
     map.on('mouseenter', fillId, () => { map.getCanvas().style.cursor = 'pointer' })
     map.on('mouseleave', fillId, () => { map.getCanvas().style.cursor = '' })
   })
-
-  // emoji 標記
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const el = document.createElement('div')
     el.innerHTML = z.emoji
-    el.style.cssText = `font-size:16px;cursor:pointer;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));transition:transform 0.15s;`
+    el.style.cssText = 'font-size:16px;cursor:pointer;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));transition:transform 0.15s;'
     el.addEventListener('mouseenter', () => { el.style.transform = 'scale(1.3)' })
     el.addEventListener('mouseleave', () => { el.style.transform = 'scale(1)' })
     el.addEventListener('click', () => selectZone(z.id))
-    const m = new mapboxgl.Marker({ element: el }).setLngLat(z.center).addTo(map)
-    markersArr.push(m)
+    markersArr.push(new mapboxgl.Marker({ element: el }).setLngLat(z.center).addTo(map))
   })
 }
 
 function selectZone (id) {
   selected.value = id
-  const info = ALL_ZONES.find(z => z.id === id)
+  const info = ZONES.find(z => z.id === id)
   if (!info || !map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     const active = z.id === id
     if (map.getLayer(`fill-${z.id}`)) {
@@ -318,7 +230,7 @@ function selectZone (id) {
 function resetView () {
   selected.value = null
   if (!map) return
-  ALL_ZONES.forEach(z => {
+  ZONES.forEach(z => {
     const ts = TIER_STYLE[z.tier]
     if (map.getLayer(`fill-${z.id}`)) map.setPaintProperty(`fill-${z.id}`, 'fill-opacity', ts.fillOpacity)
     if (map.getLayer(`line-${z.id}`)) map.setPaintProperty(`line-${z.id}`, 'line-width', ts.lineWidth)
@@ -329,7 +241,7 @@ function resetView () {
 function initMap () {
   if (!mapContainer.value) return
   const token = import.meta.env.VITE_MAPBOX_TOKEN
-  if (!token) { mapError.value = '未設定 Mapbox Token'; loading.value = false; return }
+  if (!token) { mapError.value = t('italy.slides.mapCommon.noToken'); loading.value = false; return }
   mapboxgl.accessToken = token
   map = new mapboxgl.Map({
     container: mapContainer.value,
@@ -341,7 +253,7 @@ function initMap () {
   map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
   map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
   map.on('load', async () => { await highlightAll(); loading.value = false })
-  map.on('error', e => { mapError.value = `地圖錯誤：${e.error?.message || '未知'}`; loading.value = false })
+  map.on('error', e => { mapError.value = t('italy.slides.mapCommon.mapError', { msg: e.error?.message || t('italy.slides.mapCommon.unknownError') }); loading.value = false })
 }
 
 onMounted(async () => { await nextTick(); initMap() })
@@ -357,7 +269,6 @@ onBeforeUnmount(() => {
   display: flex; flex-direction: column;
   padding: 18px 26px 14px; box-sizing: border-box; gap: 8px;
 }
-
 .slide-header { flex-shrink: 0; }
 .slide-header h2 {
   font-size: 1.38rem; font-weight: 700; color: #2c3e50;
@@ -375,12 +286,12 @@ onBeforeUnmount(() => {
   padding: 4px 10px; border-radius: 16px; border: 1.5px solid transparent;
   font-size: 0.76rem; font-weight: 600; cursor: pointer; transition: all 0.15s; white-space: nowrap;
 }
-.zone-btn.tier-s   { background: #fdf0f0; border-color: #8B0000; color: #8B0000; }
-.zone-btn.tier-a   { background: #f0f4ff; border-color: #1565C0; color: #1565C0; }
-.zone-btn.tier-doc { background: #f5f0ff; border-color: #6A1B9A; color: #6A1B9A; }
-.zone-btn.active.tier-s   { background: #8B0000; color: #fff; }
-.zone-btn.active.tier-a   { background: #1565C0; color: #fff; }
-.zone-btn.active.tier-doc { background: #6A1B9A; color: #fff; }
+.zone-btn.tier-s   { background: #e8f5e9; border-color: #8B0000; color: #8B0000; }
+.zone-btn.tier-a   { background: #fff5f5; border-color: #1565C0; color: #1565C0; }
+.zone-btn.tier-b   { background: #f0f0ff; border-color: #4A148C; color: #4A148C; }
+.zone-btn.active.tier-s { background: #8B0000; color: #fff; }
+.zone-btn.active.tier-a { background: #1565C0; color: #fff; }
+.zone-btn.active.tier-b { background: #4A148C; color: #fff; }
 .zone-btn:hover:not(.active) { opacity: 0.75; transform: translateY(-1px); }
 
 .reset-btn {
@@ -391,7 +302,6 @@ onBeforeUnmount(() => {
 .reset-btn:hover { background: #e8e8e8; }
 
 .map-info-row { flex: 1; min-height: 0; display: flex; gap: 10px; }
-
 .map-wrapper {
   flex: 1 1 58%; min-height: 0; position: relative;
   border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.12);
@@ -411,9 +321,9 @@ onBeforeUnmount(() => {
 }
 .legend-row { display: flex; align-items: center; gap: 5px; }
 .legend-dot { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
-.legend-dot.tier-s   { background: #8B0000; }
-.legend-dot.tier-a   { background: #1565C0; }
-.legend-dot.tier-doc { background: #6A1B9A; }
+.legend-dot.tier-s { background: #8B0000; }
+.legend-dot.tier-a { background: #1565C0; }
+.legend-dot.tier-b { background: #4A148C; }
 
 .info-panel {
   flex: 0 0 40%; overflow-y: auto; background: #fafafa; border-radius: 12px;
@@ -429,20 +339,19 @@ onBeforeUnmount(() => {
 }
 .hint-row { display: flex; align-items: center; gap: 6px; }
 .hint-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-.hint-dot.tier-s   { background: #8B0000; }
-.hint-dot.tier-a   { background: #1565C0; }
-.hint-dot.tier-doc { background: #6A1B9A; }
+.hint-dot.tier-s { background: #8B0000; }
+.hint-dot.tier-a { background: #1565C0; }
+.hint-dot.tier-b { background: #4A148C; }
 
 .info-badge {
   display: inline-block; padding: 2px 10px; border-radius: 10px;
   font-size: 0.72rem; font-weight: 700; color: #fff; align-self: flex-start;
 }
-.info-badge.tier-s   { background: #8B0000; }
-.info-badge.tier-a   { background: #1565C0; }
-.info-badge.tier-doc { background: #6A1B9A; }
+.info-badge.tier-s { background: #8B0000; }
+.info-badge.tier-a { background: #1565C0; }
+.info-badge.tier-b { background: #4A148C; }
 
 .info-name { font-size: 1rem; font-weight: 700; color: #2c3e50; margin: 0; }
-
 .info-rows { display: flex; flex-direction: column; gap: 4px; }
 .info-row { display: flex; gap: 6px; font-size: 0.77rem; line-height: 1.4; }
 .info-label { flex: 0 0 54px; font-weight: 600; color: #888; font-size: 0.72rem; }

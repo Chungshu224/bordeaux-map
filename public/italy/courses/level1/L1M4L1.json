@@ -66,7 +66,7 @@
     {
       "type": "content",
       "title": "🍝 義大利麵配酒指南",
-      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">義大利麵有上百種，但配酒邏輯很清晰：<strong>看醬汁，不看麵型</strong>。醬汁的重量、酸度和風味決定最佳酒款</p><div class=\"food-pairing\"><div class=\"pairing-card\"><strong>🍅 紅醬系列（Pomodoro / Arrabbiata / Bolognese）</strong><p>番茄醬的高酸需要高酸度紅酒相配，才不讓酒顯苦澀。<strong>Chianti Classico</strong>最經典（Sangiovese高酸完美呼應），<strong>Barbera d'Alba</strong>低單寧順口，<strong>Montepulciano d'Abruzzo</strong>性價比佳，三者皆是番茄醬的最佳搭檔。</p></div><div class=\"pairing-card\"><strong>🧈 白醬系列（Carbonara / Alfredo / 奶油蘑菇）</strong><p>奶油油脂需要清爽白酒平衡。<strong>Pinot Grigio</strong>清新不搶戲；<strong>Soave Classico</strong>杏仁香配奶油絕妙；<strong>Verdicchio</strong>礦物感切割油膩。避免高單寧紅酒——單寧與奶油相遇會產生金屬苦味。</p></div><div class=\"pairing-card\"><strong>🌿 青醬 / 橄欖油系列（Pesto / Aglio e Olio）</strong><p>香草橄欖油需要同樣帶草本香氣的白酒。<strong>Vermentino</strong>天然海岸草本感完美呼應；<strong>Vernaccia di San Gimignano</strong>礦物清新；<strong>Gavi（Cortese）</strong>清爽不搶。也可搭配清淡輕型紅酒如Dolcetto。</p></div><div class=\"pairing-card\"><strong>🦐 海鮮系列（蛤蜊 / 墨魚 / 龍蝦）</strong><p>海鮮義大利麵配礦物白酒或氣泡酒。<strong>Verdicchio</strong>礦物感與蛤蜊鮮味完美共鳴；<strong>Soave（Garganega）</strong>優雅花香配龍蝦；<strong>Franciacorta</strong>氣泡酒配墨魚麵，是米蘭高端餐廳首選搭配。</p></div></div></div>"
+      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">義大利麵有上百種，但配酒邏輯很清晰：<strong>看醬汁，不看麵型</strong>。醬汁的重量、酸度和風味決定最佳酒款</p><div class=\"food-pairing\"><div class=\"pairing-card\"><strong>🍅 紅醬系列（Pomodoro / Arrabbiata / Bolognese）</strong><p>番茄醬的高酸需要高酸度紅酒相配，才不讓酒顯苦澀。<strong>Chianti Classico</strong>最經典（Sangiovese高酸完美呼應），<strong>Barbera d'Alba</strong>低單寧順口，<strong>Montepulciano d'Abruzzo</strong>性價比佳，三者皆是番茄醬的最佳搭檔。</p></div><div class=\"pairing-card\"><strong>🧈 蛋奶濃郁系列（Carbonara / 奶油蘑菇）</strong><p>Carbonara 以蛋黃、豬頰肉（guanciale）與 Pecorino 起司製作，奶油蘑菇醬則帶乳脂，都需要清爽白酒平衡。<strong>Pinot Grigio</strong>清新不搶戲；<strong>Soave Classico</strong>杏仁香配奶油絕妙；<strong>Verdicchio</strong>礦物感切割油膩。避免高單寧紅酒——單寧遇上濃郁蛋奶醬汁會顯得粗糙苦澀。</p></div><div class=\"pairing-card\"><strong>🌿 青醬 / 橄欖油系列（Pesto / Aglio e Olio）</strong><p>香草橄欖油需要同樣帶草本香氣的白酒。<strong>Vermentino</strong>天然海岸草本感完美呼應；<strong>Vernaccia di San Gimignano</strong>礦物清新；<strong>Gavi（Cortese）</strong>清爽不搶。也可搭配清淡輕型紅酒如Dolcetto。</p></div><div class=\"pairing-card\"><strong>🦐 海鮮系列（蛤蜊 / 墨魚 / 龍蝦）</strong><p>海鮮義大利麵配礦物白酒或氣泡酒。<strong>Verdicchio</strong>礦物感與蛤蜊鮮味完美共鳴；<strong>Soave（Garganega）</strong>優雅花香配龍蝦；<strong>Franciacorta</strong>氣泡酒配墨魚麵，是米蘭高端餐廳首選搭配。</p></div></div></div>"
     },
     {
       "type": "content",
@@ -76,7 +76,7 @@
     {
       "type": "content",
       "title": "🧀 起司配酒",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🧀 新鮮起司（Mozzarella / Ricotta / Burrata）</h4><p>細膩清爽，需要不搶戲的輕盈白酒或氣泡酒。<strong>Prosecco</strong>清新開胃；<strong>Pinot Grigio</strong>花香輕盈；頂級水牛Mozzarella配<strong>Franciacorta</strong>是米蘭高端前菜的經典選擇。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🧀 半硬質起司（Pecorino Romano / Parmigiano-Reggiano）</h4><p>鹹香濃郁，需要酸度平衡油脂。<strong>Sangiovese / Chianti</strong>高酸單寧完美化解Parmigiano；<strong>Barbera</strong>低單寧不搶戲。Pecorino Romano配<strong>Pecorino白酒</strong>（Sardinia同名品種）是最妙的地域性搭配。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🧀 藍紋起司（Gorgonzola）</h4><p>濃郁鹹香需要甜酒對比平衡。<strong>Moscato d'Asti</strong>清甜微氣泡與Gorgonzola鹹香形成絕妙對比，是義大利最傳統的搭配；<strong>Recioto della Valpolicella</strong>甜紅酒也是佳選。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🧀 陳年硬質起司（陳年 Parmigiano 24-36 月）</h4><p>濃縮豐厚風味需要強勁酒款。<strong>Amarone della Valpolicella</strong>飽滿酒體完美對抗。<strong>Barolo</strong>高單寧酸度化解脂肪結晶。陳年<strong>Brunello di Montalcino</strong>複雜度與起司深度共鳴。</p></div></div></div>"
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🧀 新鮮起司（Mozzarella / Ricotta / Burrata）</h4><p>細膩清爽，需要不搶戲的輕盈白酒或氣泡酒。<strong>Prosecco</strong>清新開胃；<strong>Pinot Grigio</strong>花香輕盈；頂級水牛Mozzarella配<strong>Franciacorta</strong>是米蘭高端前菜的經典選擇。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🧀 半硬質起司（Pecorino Romano / Parmigiano-Reggiano）</h4><p>鹹香濃郁，需要酸度平衡油脂。<strong>Sangiovese / Chianti</strong>高酸單寧完美化解Parmigiano；<strong>Barbera</strong>低單寧不搶戲。Pecorino Romano配<strong>Pecorino白酒</strong>（Marche / Abruzzo 的同名白葡萄）是有趣的同名搭配。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🧀 藍紋起司（Gorgonzola）</h4><p>濃郁鹹香需要甜酒對比平衡。<strong>Moscato d'Asti</strong>清甜微氣泡與Gorgonzola鹹香形成絕妙對比，是義大利最傳統的搭配；<strong>Recioto della Valpolicella</strong>甜紅酒也是佳選。</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🧀 陳年硬質起司（陳年 Parmigiano 24-36 月）</h4><p>濃縮豐厚風味需要強勁酒款。<strong>Amarone della Valpolicella</strong>飽滿酒體完美對抗。<strong>Barolo</strong>高單寧酸度化解脂肪結晶。陳年<strong>Brunello di Montalcino</strong>複雜度與起司深度共鳴。</p></div></div></div>"
     },
     {
       "type": "content",
@@ -89,7 +89,7 @@
       "points": [
         "✓ 義大利配餐核心原則：「當地菜配當地酒」（地域性至上），千年共同演化出最佳組合",
         "✓ 六大原則：重量匹配、酸度平衡、風味呼應（相輔相成）+ 油脂切割、甜度法則、鹹甜對比（對比互補）",
-        "✓ 義大利麵看醬汁選酒：紅醬配高酸紅酒（Chianti/Barbera）、白醬配清爽白酒、青醬配草本白酒、海鮮配礦物白酒",
+        "✓ 義大利麵看醬汁選酒：紅醬配高酸紅酒（Chianti/Barbera）、蛋奶濃郁醬汁配清爽白酒、青醬配草本白酒、海鮮配礦物白酒",
         "✓ Pizza 最佳搭配是高酸紅酒（Chianti 最經典），番茄醬酸度需要高酸酒平衡",
         "✓ 起司配酒按質地分：新鮮→輕盈白酒、半硬質→高酸紅酒、藍紋→甜酒（對比）、陳年硬質→飽滿紅酒（Amarone/Barolo）",
         "✓ 海鮮料理配礦物清新白酒：烤魚配Vermentino，貝類配Verdicchio，龍蝦配Soave",
@@ -119,7 +119,7 @@
           "question": "以下哪些是正確的義式配餐原則？（多選）",
           "options": [
             "A. 番茄醬義大利麵適合搭配高酸紅酒如 Sangiovese",
-            "B. Carbonara（奶油培根）適合搭配白酒",
+            "B. Carbonara（蛋黃豬頰肉麵）適合搭配白酒",
             "C. 重型藍紋起司如 Gorgonzola 配甜酒",
             "D. 所有義大利菜都應配白酒"
           ],
@@ -128,7 +128,7 @@
             1,
             2
           ],
-          "explanation": "高酸 Sangiovese 能對抗番茄醬的酸度；Carbonara 的奶油適合爽口白酒；Gorgonzola 的鹹味需要甜酒平衡（如 Moscato d'Asti）。並非所有義大利菜都配白酒，紅肉料理配紅酒更佳。"
+          "explanation": "高酸 Sangiovese 能對抗番茄醬的酸度；Carbonara 的蛋黃與豬頰肉油脂適合爽口白酒；Gorgonzola 的鹹味需要甜酒平衡（如 Moscato d'Asti）。並非所有義大利菜都配白酒，紅肉料理配紅酒更佳。"
         },
         {
           "type": "single",
@@ -160,7 +160,7 @@
           "options": [
             "A. Puttanesca（橄欖番茄鯷魚麵）配 Nero d'Avola",
             "B. Cacio e Pepe（起司黑胡椒麵）配 Pecorino 白酒或 Trebbiano",
-            "C. Carbonara（奶油培根麵）配 Barolo 重型紅酒",
+            "C. Carbonara（蛋黃豬頰肉麵）配 Barolo 重型紅酒",
             "D. 海鮮義大利麵配 Soave 或 Vermentino"
           ],
           "correct": [
@@ -168,7 +168,7 @@
             1,
             3
           ],
-          "explanation": "Puttanesca 的地中海濃郁風味配南部 Nero d'Avola；Cacio e Pepe 的中性風味配 Pecorino 或 Trebbiano 白酒；海鮮麵配清爽白酒最搭。Carbonara 適合配白酒或輕紅，Barolo 過於強勁會壓過奶油味。"
+          "explanation": "Puttanesca 的地中海濃郁風味配南部 Nero d'Avola；Cacio e Pepe 的中性風味配 Pecorino 或 Trebbiano 白酒；海鮮麵配清爽白酒最搭。Carbonara 適合配白酒或輕紅，Barolo 過於強勁會壓過醬汁的風味。"
         }
       ]
     }

@@ -1,19 +1,5 @@
 [
   {
-    "id": "Albana di Romagna DOCG",
-    "name": "Albana di Romagna",
-    "type": "DOCG",
-    "style": ["白酒", "甜酒"],
-    "hectare": "800",
-    "description": "義大利第一個獲得 DOCG 等級的白酒產區,使用 Albana 葡萄品種釀造多種風格的白酒。",
-    "grapes": ["Albana"],
-    "details": {
-      "introduction": "Albana di Romagna 於 1987 年成為義大利第一個獲得 DOCG 等級的白酒產區。可以釀造不甜(secco)、微甜(amabile)、甜酒(dolce)和氣泡酒(spumante)等多種風格。",
-      "climate": "受亞得里亞海影響的溫和氣候,丘陵地形提供良好的日照和排水條件。",
-      "subregions": {}
-    }
-  },
-  {
     "id": "Colli Bolognesi Classico Pignoletto DOCG",
     "name": "Colli Bolognesi Classico Pignoletto",
     "type": "DOCG",
@@ -33,25 +19,11 @@
     "type": "DOCG",
     "style": ["白酒", "甜酒"],
     "hectare": "750",
-    "description": "Romagna 地區的白酒產區,與 Albana di Romagna DOCG 相似但範圍更廣。",
+    "description": "Romagna 丘陵的白酒 DOCG（原名 Albana di Romagna），1987 年成為義大利第一個白酒 DOCG，以 Albana 釀造不甜、半甜、甜型與 passito 等風格。",
     "grapes": ["Albana"],
     "details": {
-      "introduction": "使用 Albana 葡萄品種釀造,可生產干型、半甜和甜酒等多種風格。",
+      "introduction": "Albana di Romagna 於 1987 年成為義大利第一個獲得 DOCG 的白酒，2011 年更名為 Romagna Albana。以 Albana 釀造 secco（不甜）、amabile（半甜）、dolce（甜）與 passito 等風格，一般認為以 Bertinoro 周邊最好；氣泡版本則屬於 Romagna DOC。",
       "climate": "溫和的丘陵氣候,適合 Albana 葡萄的成熟。",
-      "subregions": {}
-    }
-  },
-  {
-    "id": "Romagna Albana Spumante DOCG",
-    "name": "Romagna Albana Spumante",
-    "type": "DOCG",
-    "style": ["氣泡酒"],
-    "hectare": "300",
-    "description": "專門生產 Albana 氣泡酒的 DOCG 產區。",
-    "grapes": ["Albana"],
-    "details": {
-      "introduction": "2011 年獲得 DOCG 認證,專注於生產高品質的 Albana 氣泡酒,採用傳統法或 Charmat 法釀造。",
-      "climate": "Romagna 丘陵地區的理想氣候條件。",
       "subregions": {}
     }
   },
@@ -94,34 +66,6 @@
     "details": {
       "introduction": "Lambrusco Salamino 因其葡萄串形似薩拉米香腸而得名,釀造的氣泡酒介於 Sorbara 和 Grasparossa 之間,平衡且易飲。",
       "climate": "Modena 平原地區的氣候,適合 Lambrusco 生長。",
-      "subregions": {}
-    }
-  },
-  {
-    "id": "Sangiovese di Romagna DOC",
-    "name": "Sangiovese di Romagna",
-    "type": "DOC",
-    "style": ["紅酒"],
-    "hectare": "2500",
-    "description": "Romagna 地區最重要的紅酒產區,使用 Sangiovese 葡萄釀造。",
-    "grapes": ["Sangiovese"],
-    "details": {
-      "introduction": "至少使用 85% Sangiovese 葡萄釀造,可分為一般、Superiore 和 Riserva 等級。展現優雅的紅色水果香氣和良好的結構。",
-      "climate": "丘陵地區氣候,受亞得里亞海調節,適合 Sangiovese 葡萄的生長。",
-      "subregions": {}
-    }
-  },
-  {
-    "id": "Trebbiano di Romagna DOC",
-    "name": "Trebbiano di Romagna",
-    "type": "DOC",
-    "style": ["白酒"],
-    "hectare": "2000",
-    "description": "Romagna 地區傳統的白酒產區,使用 Trebbiano Romagnolo 葡萄。",
-    "grapes": ["Trebbiano Romagnolo"],
-    "details": {
-      "introduction": "使用至少 85% 的 Trebbiano Romagnolo 葡萄釀造,是清爽易飲的日常白酒,帶有花香和柑橘香氣。",
-      "climate": "Romagna 的丘陵和平原地區,氣候溫和。",
       "subregions": {}
     }
   },
@@ -285,10 +229,10 @@
     "type": "DOC",
     "style": ["紅酒", "白酒", "氣泡酒"],
     "hectare": "3000",
-    "description": "Romagna 地區的廣泛性 DOC,涵蓋多種葡萄品種和酒款。",
+    "description": "Romagna 地區的統括型 DOC，2011 年整合了原本的 Sangiovese di Romagna、Trebbiano di Romagna 等 DOC，涵蓋多種葡萄品種和酒款。",
     "grapes": ["Sangiovese", "Trebbiano", "Albana", "Pagadebit"],
     "details": {
-      "introduction": "2011 年建立的綜合性 DOC,整合了 Romagna 地區的主要葡萄品種和產區。",
+      "introduction": "2011 年建立的綜合性 DOC，原本的 Sangiovese di Romagna DOC 與 Trebbiano di Romagna DOC 改為本 DOC 下的 Romagna Sangiovese 與 Romagna Trebbiano；Albana 氣泡酒（Romagna Albana Spumante）也屬於本 DOC。",
       "climate": "Romagna 地區的多樣化氣候,從丘陵到沿海。",
       "subregions": {}
     }

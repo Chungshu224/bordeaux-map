@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "在盲品中，哪個義大利紅葡萄品種以「顏色淺、帶橙紅邊緣，但具有極高酸度與強烈單寧」著稱？",
-      "options": ["Aglianico", "Barbera", "Nebbiolo", "Montepulciano"],
+      "options": [
+        "Aglianico",
+        "Barbera",
+        "Nebbiolo",
+        "Montepulciano"
+      ],
       "answer": 2,
       "explanation": "Nebbiolo 的經典特徵是顏色淺且容易帶有橙紅邊緣，但入口卻有極高酸度與強烈單寧，被稱為「披著羊皮的狼」——視覺溫和但結構強勁。"
     },
     {
       "question": "聞到明顯的「酸櫻桃（Sour Cherry）」與「番茄葉」香氣，且單寧帶有粉塵感，最可能是哪個品種？",
-      "options": ["Sangiovese", "Nero d'Avola", "Corvina", "Aglianico"],
+      "options": [
+        "Sangiovese",
+        "Nero d'Avola",
+        "Corvina",
+        "Aglianico"
+      ],
       "answer": 0,
       "explanation": "酸櫻桃（注意是「酸」而非甜）與番茄葉、乾草本是 Sangiovese 最經典的香氣標誌，托斯卡納泥土帶來粉塵質感的單寧。"
     },
     {
       "question": "Aglianico 常被稱為「南方的 Barolo」，它與 Nebbiolo 在盲品中最大的差異是？",
-      "options": ["Aglianico 酸度極低", "Aglianico 顏色深邃不透光，帶有黑色水果與火山灰香氣", "Aglianico 完全沒有單寧", "Aglianico 帶有明顯的玫瑰花瓣香氣"],
+      "options": [
+        "Aglianico 酸度極低",
+        "Aglianico 顏色深邃不透光，帶有黑色水果與火山灰香氣",
+        "Aglianico 完全沒有單寧",
+        "Aglianico 帶有明顯的玫瑰花瓣香氣"
+      ],
       "answer": 1,
       "explanation": "雖然兩者都有高酸高單寧，但 Aglianico 顏色深邃（Nebbiolo 顏色淺），香氣偏向黑色水果與火山煙燻氣息（Nebbiolo 偏向紅色水果與花香）。"
     },
     {
       "question": "Piemonte 產區中，哪個品種的盲品特徵是「高酸度但單寧極低」，與 Nebbiolo 形成強烈對比？",
-      "options": ["Sangiovese", "Barbera", "Dolcetto", "Corvina"],
+      "options": [
+        "Sangiovese",
+        "Barbera",
+        "Dolcetto",
+        "Corvina"
+      ],
       "answer": 1,
       "explanation": "Barbera 的經典結構特徵是高酸度與低單寧，這使得它在盲品中很容易與高單寧的 Nebbiolo 區分開來。"
     }
@@ -36,17 +56,17 @@
     {
       "type": "content",
       "title": "義大利盲品的品種識別核心",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利有 350+ 本土品種，但在盲品中只需掌握約 10 個「高辨識度」品種，就能覆蓋 90% 的考題與實戰情境。關鍵是找到每個品種的「標誌特徵（Signature）」。</p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🔑 標誌特徵原則</h3><p class=\"mf-style\">每個品種有 1-2 個獨特標誌</p><p class=\"mf-prod\">找到標誌特徵 = 80% 確定品種。其餘特徵用於驗證而非推翻</p></div><div class=\"mf-zone warm\"><h3>🔍 排除法思維</h3><p class=\"mf-style\">「這不可能是什麼」比「這是什麼」更有效</p><p class=\"mf-prod\">高酸＋高單寧＋淺色 → 排除 Primitivo/Nero d'Avola → 剩 Nebbiolo/Sangiovese → 看香氣決定</p></div><div class=\"mf-zone cool\"><h3>⚠️ 義大利最常見誤判</h3><p class=\"mf-style\">Nebbiolo 誤判為 Pinot Noir</p><p class=\"mf-prod\">兩者都淺色，但 Nebbiolo 橙色調更明顯，且味覺極高酸＋高單寧（Pinot Noir 是中酸中單寧）</p></div><div class=\"mf-zone plain\"><h3>📊 訓練方向</h3><p class=\"mf-style\">對比練習效果最佳</p><p class=\"mf-prod\">Nebbiolo vs Sangiovese｜Barbera vs Dolcetto｜Aglianico vs Sagrantino</p></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利有 350+ 本土品種，但在盲品中只需掌握約 10 個「高辨識度」品種，就能應對大多數考題與實戰情境。關鍵是找到每個品種的「標誌特徵（Signature）」。</p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🔑 標誌特徵原則</h3><p class=\"mf-style\">每個品種有 1-2 個獨特標誌</p><p class=\"mf-prod\">找到標誌特徵即可大幅縮小範圍。其餘特徵用於驗證而非推翻</p></div><div class=\"mf-zone warm\"><h3>🔍 排除法思維</h3><p class=\"mf-style\">「這不可能是什麼」比「這是什麼」更有效</p><p class=\"mf-prod\">高酸＋高單寧＋淺色 → 排除 Primitivo/Nero d'Avola → 剩 Nebbiolo/Sangiovese → 看香氣決定</p></div><div class=\"mf-zone cool\"><h3>⚠️ 義大利最常見誤判</h3><p class=\"mf-style\">Nebbiolo 誤判為 Pinot Noir</p><p class=\"mf-prod\">兩者都淺色，但 Nebbiolo 橙色調更明顯，且味覺極高酸＋高單寧（Pinot Noir 多為中高酸、中低單寧）</p></div><div class=\"mf-zone plain\"><h3>📊 訓練方向</h3><p class=\"mf-style\">對比練習效果最佳</p><p class=\"mf-prod\">Nebbiolo vs Sangiovese｜Barbera vs Dolcetto｜Aglianico vs Sagrantino</p></div></div>"
     },
     {
       "type": "content",
       "title": "紅酒品種標誌速查表",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利六大紅酒品種標誌特徵對照，掌握後可應對 90% 的盲品情境。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>北義品種</h3><ul><li><strong>Nebbiolo：</strong>淺色＋橙邊｜玫瑰＋焦油｜極高酸＋極高單寧（識別度 95%）</li><li><strong>Barbera：</strong>中等深度｜紅果＋少量香草｜高酸＋低單寧（與 Nebbiolo 完全相反）</li><li><strong>Dolcetto：</strong>深紫色（年輕）｜黑李＋甘草｜低酸＋中等單寧（帶苦韻）</li></ul></div><div class=\"method-card modern\"><h3>中南義品種</h3><ul><li><strong>Sangiovese：</strong>中等石榴紅｜酸櫻桃＋番茄葉＋乾草本｜高酸＋中高單寧</li><li><strong>Aglianico：</strong>深紫黑色｜黑果＋煙燻火山感｜高酸＋極高單寧（南方最強單寧）</li><li><strong>Primitivo：</strong>深紫紅色｜黑莓醬＋巧克力＋香料｜低酸＋中等單寧＋高酒精</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">義大利六大紅酒品種標誌特徵對照，掌握後可應對大多數盲品情境。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>北義品種</h3><ul><li><strong>Nebbiolo：</strong>淺色＋橙邊｜玫瑰＋焦油｜極高酸＋極高單寧</li><li><strong>Barbera：</strong>中等深度｜紅果＋少量香草｜高酸＋低單寧（與 Nebbiolo 完全相反）</li><li><strong>Dolcetto：</strong>深紫色（年輕）｜黑李＋甘草｜低酸＋中等單寧（帶苦韻）</li></ul></div><div class=\"method-card modern\"><h3>中南義品種</h3><ul><li><strong>Sangiovese：</strong>中等石榴紅｜酸櫻桃＋番茄葉＋乾草本｜高酸＋中高單寧</li><li><strong>Aglianico：</strong>深紫黑色｜黑果＋煙燻火山感｜高酸＋極高單寧（南方最強單寧）</li><li><strong>Primitivo：</strong>深紫紅色｜黑莓醬＋巧克力＋香料｜低酸＋中等單寧＋高酒精</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "Nebbiolo vs Sangiovese：最難區分的對決",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">兩者都有高酸度，義大利原生特徵明顯，是盲品中最常混淆的品種對。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Nebbiolo</h3><ul><li><strong>顏色：</strong>淺石榴紅，高透光性，橙色邊緣（即使年輕）</li><li><strong>香氣標誌：</strong>🌹 玫瑰花瓣＋🛢️ 焦油（唯一品種同時出現）</li><li><strong>香料：</strong>甘草、八角、紫羅蘭</li><li><strong>酸度：</strong>極高（pH 3.2-3.5）</li><li><strong>單寧：</strong>極高，細膩如絲綢（「絲綢包裹的鋼鐵」）</li><li><strong>代表：</strong>Barolo DOCG、Barbaresco DOCG</li></ul></div><div class=\"method-card modern\"><h3>Sangiovese</h3><ul><li><strong>顏色：</strong>中等石榴紅，透光性中等，5 年後才橙邊</li><li><strong>香氣標誌：</strong>🍒 酸櫻桃（sour cherry）＋🌿 乾燥草本</li><li><strong>香料：</strong>番茄葉、迷迭香、百里香</li><li><strong>酸度：</strong>高（pH 3.3-3.6）</li><li><strong>單寧：</strong>中高，帶粉塵質感（非絲滑）</li><li><strong>代表：</strong>Brunello DOCG、Chianti Classico DOCG</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">兩者都有高酸度，義大利原生特徵明顯，是盲品中最常混淆的品種對。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>Nebbiolo</h3><ul><li><strong>顏色：</strong>淺石榴紅，高透光性，橙色邊緣（即使年輕）</li><li><strong>香氣標誌：</strong>🌹 玫瑰花瓣＋🛢️ 焦油（最經典的辨識組合）</li><li><strong>香料：</strong>甘草、八角、紫羅蘭</li><li><strong>酸度：</strong>極高（pH 3.2-3.5）</li><li><strong>單寧：</strong>極高，細膩如絲綢（「絲綢包裹的鋼鐵」）</li><li><strong>代表：</strong>Barolo DOCG、Barbaresco DOCG</li></ul></div><div class=\"method-card modern\"><h3>Sangiovese</h3><ul><li><strong>顏色：</strong>中等石榴紅，透光性中等，5 年後才橙邊</li><li><strong>香氣標誌：</strong>🍒 酸櫻桃（sour cherry）＋🌿 乾燥草本</li><li><strong>香料：</strong>番茄葉、迷迭香、百里香</li><li><strong>酸度：</strong>高（pH 3.3-3.6）</li><li><strong>單寧：</strong>中高，帶粉塵質感（非絲滑）</li><li><strong>代表：</strong>Brunello DOCG、Chianti Classico DOCG</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
@@ -57,8 +77,8 @@
       "type": "list",
       "title": "重點回顧",
       "points": [
-        "掌握 10 個高辨識度品種，可覆蓋 90% 義大利盲品情境",
-        "Nebbiolo 標誌：淺色＋橙邊＋玫瑰焦油＋極高酸極高單寧（識別度 95%）",
+        "掌握 10 個高辨識度品種，可應對大多數義大利盲品情境",
+        "Nebbiolo 標誌：淺色＋橙邊＋玫瑰焦油＋極高酸極高單寧",
         "Sangiovese 標誌：中等石榴紅＋酸櫻桃＋乾燥草本＋中高粉塵單寧",
         "Aglianico 標誌：深紫黑色＋黑果煙燻火山感＋高酸極高單寧（南方最強）",
         "Barbera：高酸＋低單寧，是 Piemonte 與 Nebbiolo 最大對比",
@@ -76,35 +96,60 @@
         {
           "type": "single",
           "question": "哪個義大利紅葡萄品種以「顏色淺、帶橙紅邊緣，但具有極高酸度與強烈單寧」著稱？",
-          "options": ["Aglianico", "Barbera", "Nebbiolo", "Montepulciano"],
+          "options": [
+            "Aglianico",
+            "Barbera",
+            "Nebbiolo",
+            "Montepulciano"
+          ],
           "correct": 2,
           "explanation": "Nebbiolo 花青素低，顏色淺且帶橙紅邊緣，但入口卻有極高酸度與強烈單寧——視覺溫和但結構強勁，是義大利盲品最具標誌性的「反差品種」。"
         },
         {
           "type": "single",
           "question": "聞到「酸櫻桃（Sour Cherry）＋番茄葉」香氣，且單寧帶粉塵感，最可能是哪個品種？",
-          "options": ["Sangiovese", "Nero d'Avola", "Corvina", "Aglianico"],
+          "options": [
+            "Sangiovese",
+            "Nero d'Avola",
+            "Corvina",
+            "Aglianico"
+          ],
           "correct": 0,
           "explanation": "酸櫻桃（強調「酸」）與番茄葉、乾草本是 Sangiovese 最經典的香氣標誌，托斯卡納泥土賦予特有粉塵質感的單寧。"
         },
         {
           "type": "single",
           "question": "Aglianico（南方的 Barolo）與 Nebbiolo 在盲品中最大的差異是？",
-          "options": ["Aglianico 酸度極低", "Aglianico 顏色深邃不透光，帶有黑色水果與火山灰香氣", "Aglianico 完全沒有單寧", "Aglianico 帶有明顯的玫瑰花瓣香氣"],
+          "options": [
+            "Aglianico 酸度極低",
+            "Aglianico 顏色深邃不透光，帶有黑色水果與火山灰香氣",
+            "Aglianico 完全沒有單寧",
+            "Aglianico 帶有明顯的玫瑰花瓣香氣"
+          ],
           "correct": 1,
           "explanation": "兩者都有高酸高單寧，但 Aglianico 顏色深邃（Nebbiolo 顏色淺），香氣偏向黑色水果與火山煙燻氣息（Nebbiolo 偏向紅色水果與花香）。"
         },
         {
           "type": "single",
           "question": "Piemonte 中，哪個品種是「高酸度但單寧極低」，與 Nebbiolo 形成強烈對比？",
-          "options": ["Sangiovese", "Barbera", "Dolcetto", "Corvina"],
+          "options": [
+            "Sangiovese",
+            "Barbera",
+            "Dolcetto",
+            "Corvina"
+          ],
           "correct": 1,
           "explanation": "Barbera 的經典結構是高酸度與低單寧，這使得它在盲品中很容易與高單寧的 Nebbiolo 區分開來——同一產區完全相反的結構特徵。"
         },
         {
           "type": "single",
           "question": "義大利白酒在盲品中最具共同辨識度的尾韻特徵是？",
-          "options": ["強烈的橡木桶香草味", "尾韻帶有微苦的杏仁味（Bitter Almond）", "極低酸度與甜美口感", "明顯的荔枝與玫瑰花香"],
+          "options": [
+            "強烈的橡木桶香草味",
+            "尾韻帶有微苦的杏仁味（Bitter Almond）",
+            "極低酸度與甜美口感",
+            "明顯的荔枝與玫瑰花香"
+          ],
           "correct": 1,
           "explanation": "苦杏仁（Bitter Almond）尾韻是許多義大利白葡萄品種（Garganega、Verdicchio、Cortese）的經典共同特徵，是區別義大利白酒與其他國家白酒的重要線索。"
         }

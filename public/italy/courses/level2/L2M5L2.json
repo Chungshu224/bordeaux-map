@@ -11,18 +11,18 @@
         "英國葡萄酒協會評分"
       ],
       "answer": 0,
-      "explanation": "Wine Advocate（由 Robert Parker 創辦）的 100 分制評分對義大利頂級葡萄酒的市場價格影響力最強，特別是 Barolo 與 Brunello，98-100 分的高評可使酒款價格暴漲 200-400%。"
+      "explanation": "Wine Advocate（由 Robert Parker 創辦）的 100 分制評分對義大利頂級葡萄酒的市場價格影響力最強，特別是 Barolo 與 Brunello，高分評論常會明顯推升需求與價格。"
     },
     {
       "question": "Piemonte 2016 年份被葡萄酒評論家定位為？",
       "options": [
         "普通年份",
-        "傳奇年份（Wine Advocate 100 分）",
+        "公認的偉大年份",
         "挑戰年份",
         "不佳年份"
       ],
       "answer": 1,
-      "explanation": "2016 是 Piemonte 近幾十年最偉大的年份之一，Wine Advocate 評為 100 分。生長季氣候完美，Nebbiolo 達到理想的成熟度與酸度平衡，陳年潛力 50 年以上。"
+      "explanation": "2016 是 Piemonte 近幾十年最受推崇的年份之一。生長季氣候理想，Nebbiolo 達到成熟度與酸度的平衡，頂級酒款具備數十年的陳年潛力。"
     },
     {
       "question": "垂直收藏（Vertical Collection）的定義是？",
@@ -44,18 +44,18 @@
         "隨環境溫度即可"
       ],
       "answer": 1,
-      "explanation": "精品葡萄酒理想儲存溫度為 12-14°C，絕不超過 18°C，不低於 7°C。溫度波動比偏高更危險——每次 ±5°C 的溫差都會加速老化，需要專業恆溫酒櫃或恆溫酒窖。"
+      "explanation": "精品葡萄酒理想儲存溫度約為 12-14°C。劇烈的溫度波動與過高溫度都會加速老化，因此需要專業的恆溫酒櫃或恆溫酒窖。"
     },
     {
       "question": "En Primeur（期酒）在義大利的主要優勢是？",
       "options": [
         "可以在葡萄採收前一年就能喝到酒",
-        "以低於未來上市價格購入，鎖定頂級年份的早期配額",
+        "在上市前預購，確保取得產量稀少的頂級酒款配額",
         "只有透過 En Primeur 才能購買義大利 DOCG 酒款",
         "期酒不需要支付增值稅"
       ],
       "answer": 1,
-      "explanation": "En Primeur 讓買家在酒款正式裝瓶前 2–3 年以「早鳥價」預購，義大利頂級酒款（Brunello、Barolo 頂莊）的傳奇年份期酒往往在正式上市後價格翻倍，是投資者鎖定分配配額的重要工具。"
+      "explanation": "期酒讓買家在酒款正式上市前預購，主要優勢是確保取得產量稀少的頂級酒款配額，價格有時也較上市後低，但不保證。義大利沒有像波爾多那樣系統化的期酒制度，主要由部分國際酒商提供。"
     },
     {
       "question": "影響 Nebbiolo（Barolo）年份品質最關鍵的採收前氣候因素是？",
@@ -66,7 +66,7 @@
         "7 月的夏季高溫"
       ],
       "answer": 2,
-      "explanation": "Nebbiolo 晚熟，通常 10 月中下旬才採收。9–10 月的秋雨是最大威脅（稀釋糖分、引發灰黴菌）；而 9 月下旬後的大晝夜溫差則是頂級年份的關鍵——降溫讓 Nebbiolo 緩慢積累酸度和多酚複雜度，形成 2016、2010 等傳奇年份的精準平衡。"
+      "explanation": "Nebbiolo 晚熟，通常 10 月中下旬才採收。9–10 月的秋雨是最大威脅（稀釋糖分、引發灰黴菌）；而 9 月下旬後的大晝夜溫差則是頂級年份的關鍵——降溫讓 Nebbiolo 緩慢積累酸度和多酚複雜度，造就 2016、2010 等偉大年份的精準平衡。"
     }
   ],
   "slides": [
@@ -78,27 +78,27 @@
     {
       "type": "content",
       "title": "年份評分標準與主要評論系統",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">年份（Vintage）是義大利投資酒評估的核心要素。氣候條件直接影響品質、陳年潛力與市場價格，掌握主要評分系統是投資收藏的必備技能。</p><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">Wine Advocate</div><div class=\"stat-label\">Robert Parker 100 分制<br>Barolo 最具影響力</div></div><div class=\"stat-box\"><div class=\"stat-number\">Vinous</div><div class=\"stat-label\">Antonio Galloni<br>Barolo / Brunello 專家</div></div><div class=\"stat-box\"><div class=\"stat-number\">Gambero Rosso</div><div class=\"stat-label\">義大利本土<br>最具影響力評鑑</div></div><div class=\"stat-box\"><div class=\"stat-number\">Wine Spectator</div><div class=\"stat-label\">100 分制<br>美國市場首選</div></div></div><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>傳奇年份（98-100 分）：</strong>氣候完美，酸度與成熟度理想平衡，陳年 40-60 年潛力，投資價值最高</div><div class=\"kp-box\"><strong>優秀年份（93-97 分）：</strong>高品質，略有瑕疵，陳年 20-30 年，二手市場溢價 30-50%</div><div class=\"kp-box\"><strong>挑戰年份（85-92 分）：</strong>氣候異常（過熱 / 過濕），需謹慎選擇頂級酒莊，一般不建議投資</div></div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">年份（Vintage）是評估義大利頂級酒的核心要素。氣候條件直接影響品質與陳年潛力，也影響市場價格；了解主要的評論系統，是收藏的必備技能。</p><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">Wine Advocate</div><div class=\"stat-label\">Robert Parker 創辦的 100 分制<br>國際市場影響力大</div></div><div class=\"stat-box\"><div class=\"stat-number\">Vinous</div><div class=\"stat-label\">Antonio Galloni<br>Barolo / Brunello 專家</div></div><div class=\"stat-box\"><div class=\"stat-number\">Gambero Rosso</div><div class=\"stat-label\">義大利本土<br>最具影響力評鑑（三杯制）</div></div><div class=\"stat-box\"><div class=\"stat-number\">Wine Spectator</div><div class=\"stat-label\">100 分制<br>美國市場影響力大</div></div></div><div class=\"terroir-key-point\"><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>偉大年份：</strong>氣候理想，酸度與成熟度平衡，頂級酒款可陳年數十年，最受收藏家追捧</div><div class=\"kp-box\"><strong>優秀年份：</strong>整體品質高，常比偉大年份更早適飲，價格也較容易入手</div><div class=\"kp-box\"><strong>挑戰年份：</strong>氣候異常（過熱 / 過濕 / 冰雹），品質參差，需嚴選頂級酒莊</div></div></div></div>"
     },
     {
       "type": "content",
       "title": "年份氣候科學解析：讀懂天氣就懂投資",
-      "content": "<div class=\"variety-deep-section\"><p style=\"margin-bottom:16px\">了解葡萄酒年份品質，本質上是解讀氣候的週期影響。以下是 Piemonte Nebbiolo 的完整生長季氣候分析框架：</p><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🌱 冬季～春季（12月–4月）</h3><p class=\"mf-style\">冬季適度低溫讓葡萄樹進入休眠，翌年生長更有活力</p><p class=\"mf-prod\"><strong>關鍵指標：</strong>冬季降雪（補充地下水）、春霜（開花前的急凍是毀滅性災害）、5 月平均溫度（過低延遲發芽）。2017 年春霜重創北義，是當年 Barolo 產量減少 40% 的主因。</p></div><div class=\"mf-zone warm\"><h3>☀️ 夏季（6月–8月）</h3><p class=\"mf-style\">適度溫暖 + 無過度乾旱是理想條件</p><p class=\"mf-prod\"><strong>關鍵指標：</strong>6–7 月開花期晴朗（結果率高）、8 月適度乾燥（集中糖分不過熟）、避免連續 40°C+ 高溫（加速成熟但損害酸度）。2003 年酷暑造成 Barolo 過熟、酸度不足，雖然濃郁但陳年潛力有限。</p></div><div class=\"mf-zone cool\"><h3>🍂 秋季（9月–10月）</h3><p class=\"mf-style\">對 Nebbiolo 而言，秋季是最決定性的階段</p><p class=\"mf-prod\"><strong>關鍵指標：</strong>9 月下旬大晝夜溫差（保留酸度）、採收前 2 週無連續降雨（防稀釋和灰黴）、秋霧（Nebbia）適度出現（緩慢成熟）。2016 年正是秋季完美造就了世紀年份。</p></div><div class=\"mf-zone plain\"><h3>📊 年份評估速查</h3><p class=\"mf-style\">投資決策的三個氣候數據</p><p class=\"mf-prod\">① 8 月平均溫度（>25°C 過熱風險）；② 採收月份（10月）雨量（>100mm 警戒線）；③ 9月晝夜溫差（>15°C 為優）。掌握這三個數據，可在 Wine Advocate 評分發布前 6 個月提早判斷年份品質。</p></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><p style=\"margin-bottom:16px\">了解葡萄酒年份品質，本質上是解讀氣候的週期影響。以下是 Piemonte Nebbiolo 的完整生長季氣候分析框架：</p><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>🌱 冬季～春季（12月–4月）</h3><p class=\"mf-style\">冬季適度低溫讓葡萄樹進入休眠，翌年生長更有活力</p><p class=\"mf-prod\"><strong>關鍵指標：</strong>冬季降雪（補充地下水）、春霜（開花前的急凍是毀滅性災害）、5 月平均溫度（過低延遲發芽）。2017 年 4 月的春霜重創北義多個產區，造成明顯減產。</p></div><div class=\"mf-zone warm\"><h3>☀️ 夏季（6月–8月）</h3><p class=\"mf-style\">適度溫暖 + 無過度乾旱是理想條件</p><p class=\"mf-prod\"><strong>關鍵指標：</strong>6–7 月開花期晴朗（結果率高）、8 月適度乾燥（集中糖分不過熟）、避免連續 40°C+ 高溫（加速成熟但損害酸度）。2003 年酷暑造成 Barolo 過熟、酸度不足，雖然濃郁但陳年潛力有限。</p></div><div class=\"mf-zone cool\"><h3>🍂 秋季（9月–10月）</h3><p class=\"mf-style\">對 Nebbiolo 而言，秋季是最決定性的階段</p><p class=\"mf-prod\"><strong>關鍵指標：</strong>9 月下旬大晝夜溫差（保留酸度）、採收前 2 週無連續降雨（防稀釋和灰黴）、秋霧（Nebbia）適度出現（緩慢成熟）。2016 年正是秋季完美造就了世紀年份。</p></div><div class=\"mf-zone plain\"><h3>📊 年份評估速查</h3><p class=\"mf-style\">判斷年份的三個氣候觀察</p><p class=\"mf-prod\">① 夏季是否出現持續熱浪（過熱會降低酸度）；② 採收月份是否多雨（稀釋與灰黴風險）；③ 9 月是否有明顯晝夜溫差（保留酸度與香氣）。掌握這三點，就能在酒評發布前大致判斷年份的風格。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "Piemonte 關鍵年份分級",
-      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>傳奇年份</h3><p class=\"mf-style\">2016、2010、1996、1985、1978、1971</p><p class=\"mf-prod\">Wine Advocate 98-100 分。生長季完美，Nebbiolo 達理想成熟度與酸度平衡，陳年 40-60 年潛力。頂級酒莊價格持續攀升，2016 Barolo 已成近年最強投資年份。</p></div><div class=\"mf-zone warm\"><h3>優秀年份</h3><p class=\"mf-style\">2019、2015、2013、2001、1989</p><p class=\"mf-prod\">Wine Advocate 93-97 分。高品質，部分酒莊可達傳奇等級，整體水準穩定。二手市場溢價 30-50%，適合中階收藏預算。</p></div><div class=\"mf-zone cool\"><h3>良好年份</h3><p class=\"mf-style\">2020、2017、2012、2004、1999</p><p class=\"mf-prod\">Wine Advocate 89-93 分。氣候略有挑戰，頂級酒莊仍可得到優質作品。適合入門收藏，以合理價格建立基礎庫存。</p></div><div class=\"mf-zone plain\"><h3>挑戰年份</h3><p class=\"mf-style\">2014、2011、2008、2002</p><p class=\"mf-prod\">Wine Advocate 85-89 分。氣候異常（過熱或雨季過長），一般不建議投資，除非特定頂莊表現超群，具稀缺研究價值。</p></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>偉大年份</h3><p class=\"mf-style\">2016、2010、1996、1989、1978、1971</p><p class=\"mf-prod\">生長季理想，Nebbiolo 達到成熟度與酸度的理想平衡，頂級酒款可陳年數十年。2016 與 2010 是近年最受推崇的年份。</p></div><div class=\"mf-zone warm\"><h3>優秀年份</h3><p class=\"mf-style\">2019、2013、2006、2004、2001、1999</p><p class=\"mf-prod\">品質高、結構均衡，部分酒莊表現不輸偉大年份，是收藏的重要基礎。</p></div><div class=\"mf-zone cool\"><h3>炎熱年份</h3><p class=\"mf-style\">2017、2011、2009、2007、2003</p><p class=\"mf-prod\">夏季炎熱，酒款果香成熟、較早適飲，但部分酸度不足；2003 年的酷暑最為極端。</p></div><div class=\"mf-zone plain\"><h3>挑戰年份</h3><p class=\"mf-style\">2014、2002、1992</p><p class=\"mf-prod\">雨水過多或冰雹，品質參差；仍有少數頂級酒莊以嚴格篩選做出好酒。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "Tuscany 關鍵年份分級",
-      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>傳奇年份</h3><p class=\"mf-style\">2015、2010、2001、1997、1990、1985</p><p class=\"mf-prod\">Wine Advocate 98-100 分。2015 被評為近 30 年最偉大年份，Brunello / Chianti Classico 兼具力量與優雅，陳年 40-50 年潛力。</p></div><div class=\"mf-zone warm\"><h3>優秀年份</h3><p class=\"mf-style\">2019、2016、2013、2007、2004</p><p class=\"mf-prod\">Wine Advocate 93-97 分。整體水準出色，Sangiovese 熟成度高，結構均衡。二手市場需求穩定，保值性佳。</p></div><div class=\"mf-zone cool\"><h3>良好年份</h3><p class=\"mf-style\">2021、2018、2012、2006、1998</p><p class=\"mf-prod\">Wine Advocate 89-93 分。可飲性佳，部分酒莊達優秀水準。適合早飲，投資性低於傳奇與優秀年份，但性價比高。</p></div><div class=\"mf-zone plain\"><h3>挑戰年份</h3><p class=\"mf-style\">2014、2011、2002、1992</p><p class=\"mf-prod\">Wine Advocate 85-89 分。2014 受降雨影響，Sangiovese 成熟度不足。選擇嚴格品管的知名酒莊，投資需謹慎評估。</p></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>偉大年份</h3><p class=\"mf-style\">2016、2015、2010、2004、1990、1985</p><p class=\"mf-prod\">Brunello 與 Chianti Classico 兼具力量與優雅，頂級酒款可陳年數十年。2015 與 2016 先後被譽為近年最出色的年份。</p></div><div class=\"mf-zone warm\"><h3>優秀年份</h3><p class=\"mf-style\">2019、2013、2012、2007、2006、2001</p><p class=\"mf-prod\">整體水準出色，Sangiovese 成熟度佳、結構均衡，二手市場需求穩定。</p></div><div class=\"mf-zone cool\"><h3>炎熱年份</h3><p class=\"mf-style\">2017、2011、2003</p><p class=\"mf-prod\">炎熱乾燥，酒款濃郁、果香成熟、較早適飲，需選擇處理熱浪經驗豐富的酒莊。</p></div><div class=\"mf-zone plain\"><h3>挑戰年份</h3><p class=\"mf-style\">2014、2002、1992</p><p class=\"mf-prod\">採收期多雨，Sangiovese 成熟度不足，許多頂級酒莊減產或不推出旗艦酒款。</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "En Primeur 期酒操作完整指南",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">En Primeur（期酒，義大利語稱「In Anteprima」）讓投資者在葡萄酒裝瓶前以早鳥價預購，是鎖定頂級年份分配配額的重要工具。義大利期酒雖不如波爾多系統化，但對 Brunello、Barolo 頂莊的傳奇年份同樣至關重要。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>期酒優勢</h3><ul><li><strong>早鳥定價：</strong>傳奇年份期酒均價通常比正式上市低 20–40%，頂莊年份需求大，早購才能確保配額</li><li><strong>稀缺酒款優先：</strong>Giacomo Conterno Monfortino、Biondi-Santi Riserva 等極稀缺酒款，不預購幾乎無法取得</li><li><strong>套利潛力：</strong>2016 Barolo 期酒以 €180/瓶進場，正式上市後市場均價達 €350+，套利空間顯著</li></ul></div><div class=\"method-card modern\"><h3>期酒風險</h3><ul><li><strong>資金鎖定期長：</strong>Brunello 期酒需等 4–5 年才能收到實酒（法定陳年 5 年），中途不可退訂</li><li><strong>品質不確定性：</strong>採購時酒尚在桶中，評分尚未發布，需自行判斷年份潛力</li><li><strong>酒商信用風險：</strong>部分期酒透過中間商操作，需選擇有 DOCG 授權的正規進口商，避免資金風險</li></ul></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">義大利期酒操作流程</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">① 採收年（Y年）10–11月：評估當年氣候，初步判斷是否為傳奇/優秀年份</div><div class=\"orvieto-card\">② Y+1 年春季（Anteprima di Barolo / Benvenuto Brunello 發布會）：酒莊公開桶邊試飲，酒評家發布初步評分，期酒開始接受預購</div><div class=\"orvieto-card\">③ Y+2 至 Y+5 年：Brunello（5年陳年）或 Barolo Riserva（62個月）在酒窖熟成，期酒持有人靜待</div><div class=\"orvieto-card\">④ 正式裝瓶上市：收貨後可直接存入保稅倉，或進行二手轉售（通常此時已有顯著升值）</div></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">En Primeur（期酒）讓買家在酒款正式上市前預購。義大利沒有像波爾多那樣系統化的期酒制度，但部分國際酒商（尤其英國）會在新年份上市前推出 Barolo、Brunello 的預購。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>期酒優勢</h3><ul><li><strong>早期定價：</strong>預購價格有時低於上市後的市場價，但不保證</li><li><strong>確保配額：</strong>產量稀少的頂級酒款，預購是取得配額的方式之一</li><li><strong>完整收藏：</strong>可直接以原廠木箱（OWC）收貨，出處清楚</li></ul></div><div class=\"method-card modern\"><h3>期酒風險</h3><ul><li><strong>資金提前支付：</strong>需在收到酒之前先付款，中途通常不可退訂</li><li><strong>品質不確定性：</strong>購買時無法親自品嘗成品，只能依靠酒評與對年份的判斷</li><li><strong>酒商信用風險：</strong>需選擇信譽良好的酒商，避免酒商倒閉造成損失</li></ul></div></div></div><div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">新年份從採收到上市的時間軸</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">① 採收年（Y 年）秋季：評估當年氣候，初步判斷年份潛力</div><div class=\"orvieto-card\">② 每年初的新年份發表會：Barolo 與 Barbaresco 的「Nebbiolo Prima」、Montalcino 的「Benvenuto Brunello」，酒評家試飲即將上市的年份並發表評論</div><div class=\"orvieto-card\">③ 正式上市：Barolo 於採收後第 4 年 1 月 1 日起上市；Brunello 於採收後第 5 年 1 月 1 日起上市；部分酒商在上市前接受預購</div><div class=\"orvieto-card\">④ 收貨後：可存入保稅倉或自家恆溫酒窖，並保留購買憑證與儲存紀錄</div></div></div></div></div>"
     },
     {
       "type": "content",
@@ -108,26 +108,26 @@
     {
       "type": "content",
       "title": "陳年條件與地窖管理",
-      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">溫度、濕度與光線控制</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">理想溫度：12-14°C，絕不超過 18°C，不低於 7°C；溫度波動比偏高更危險，每次 ±5°C 溫差加速老化</div><div class=\"orvieto-card\">理想濕度：65-75%（低於 50% 軟木塞乾縮氧化；高於 85% 易發霉，酒標受損影響拍賣估價）</div><div class=\"orvieto-card\">避免光線與振動：UV 光加速氧化，振動干擾沉澱物；Barolo 等高單寧酒飲前 48 小時豎立靜置</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">擺放方式與保存期限</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">水平擺放：保持軟木塞濕潤防止乾縮氧化（螺旋蓋可直立放置）</div><div class=\"orvieto-card\">頂級 Barolo / Brunello 可保存 40-60 年；一般 Chianti 建議 10-20 年內飲用</div><div class=\"orvieto-card\">定期檢查：每 2-3 年確認軟木塞狀態，液面高度，出現滲漏即早處理</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">投資酒的保存文件</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">保留原木箱（OWC, Original Wooden Case）：完整 OWC 可提升拍賣估價 15-25%</div><div class=\"orvieto-card\">購買憑證與出處（Provenance）：正規來源是拍賣行接受入場的關鍵條件</div><div class=\"orvieto-card\">評分貼紙與酒標完整：Wine Advocate 高分貼紙保留完整可提升市場信心與成交價格</div></div></div></div>"
+      "content": "<div class=\"variety-deep-section\"><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">溫度、濕度與光線控制</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">理想溫度：約 12-14°C，並避免過高或過低；劇烈的溫度波動與過高溫度都會加速老化</div><div class=\"orvieto-card\">理想濕度：65-75%（低於 50% 軟木塞乾縮氧化；高於 85% 易發霉，酒標受損影響拍賣估價）</div><div class=\"orvieto-card\">避免光線與振動：UV 光加速氧化，振動干擾沉澱物；Barolo 等高單寧酒飲前 48 小時豎立靜置</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">擺放方式與保存期限</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">水平擺放：保持軟木塞濕潤防止乾縮氧化（螺旋蓋可直立放置）</div><div class=\"orvieto-card\">頂級 Barolo / Brunello 可保存數十年；一般 Chianti 建議在較年輕時飲用</div><div class=\"orvieto-card\">定期檢查：每 2-3 年確認軟木塞狀態，液面高度，出現滲漏即早處理</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">投資酒的保存文件</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\">保留原木箱（OWC, Original Wooden Case）：完整的 OWC 在拍賣時較受青睞</div><div class=\"orvieto-card\">購買憑證與出處（Provenance）：正規來源是拍賣行接受入場的關鍵條件</div><div class=\"orvieto-card\">酒標與封口完整：酒標破損、液面下降都會影響拍賣估價</div></div></div></div>"
     },
     {
       "type": "content",
       "title": "市場時機策略：何時買、何時賣",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">投資義大利頂級葡萄酒的核心技巧之一是「時機管理」——評分發布、年份釋出、市場情緒是影響買賣價格的三大節點。</p><div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>📈 最佳買入時機</h3><p class=\"mf-prod\">① <strong>採收後 1–2 年（期酒期間）：</strong>傳奇年份早期進場，估值尚低，入場成本最低<br>② <strong>評分發布前 3 個月：</strong>Wine Advocate / Vinous 發布前，市場尚未完全反應，仍有低位佈局機會<br>③ <strong>市場悲觀期（經濟衰退後 6-12 個月）：</strong>2009、2020 年疫情初期，頂級酒款短暫回調，是長線入場良機</p></div><div class=\"mf-zone warm\"><h3>📉 最佳賣出時機</h3><p class=\"mf-prod\">① <strong>評分發布後 6–12 個月：</strong>Wine Advocate 98-100 分的興奮情緒推升價格到高峰，此時賣出溢價最大<br>② <strong>酒款剛進入適飲期（Drinking Window 前段）：</strong>需求最旺盛，收藏家和餐廳同時搶購<br>③ <strong>拍賣行旺季（每年 10-12 月 / 4-5 月）：</strong>秋季和春季拍賣季流動性最高，成交量和成交價均優</p></div><div class=\"mf-zone cool\"><h3>⚖️ 長線持有 vs 短線套利</h3><p class=\"mf-prod\">短線（3-5 年）：針對傳奇年份期酒套利，進場→評分高分→正式上市→賣出，目標報酬 50-100%。需要高度市場資訊敏感度。<br><br>長線（10-30 年）：持有 Giacomo Conterno Monfortino、Biondi-Santi Riserva 等傳奇款，靜待複利增值，年化回報約 8–15%，是穩健的資產配置工具。</p></div><div class=\"mf-zone plain\"><h3>🔄 酒款「轉倉」策略</h3><p class=\"mf-prod\">將較低價值的酒款（普通年份 Barolo）轉售，將資金集中到更具升值潛力的稀缺酒款（傳奇年份 Monfortino）。每 3-5 年檢視收藏組合，淘汰流動性差或陳年已達高峰的酒款，集中資源到未達飲用窗口的頂級酒款。</p></div></div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">購買頂級義大利葡萄酒時，時機會影響取得的難易度與價格——新年份發表、酒評發布、市場情緒都是重要節點。但葡萄酒價格難以預測，不應期待保證的報酬。</p><div class=\"variety-deep-section\"><div class=\"mf-zones\"><div class=\"mf-zone center\"><h3>📈 適合買入的時機</h3><p class=\"mf-prod\">① <strong>新年份上市時：</strong>從酒莊或進口商直接購買，出處最清楚<br>② <strong>酒評發布前：</strong>偉大年份的高分評論發布後，需求常會增加<br>③ <strong>市場冷淡時：</strong>經濟不景氣時，頂級酒款有時較容易以合理價格取得</p></div><div class=\"mf-zone warm\"><h3>📉 考慮出售的時機</h3><p class=\"mf-prod\">① <strong>酒款進入適飲期時：</strong>收藏家與餐廳的需求較旺盛<br>② <strong>拍賣行的主要拍賣季：</strong>春季與秋季的大型拍賣流動性較高<br>③ <strong>重新調整收藏時：</strong>出售已不打算飲用的酒款</p></div><div class=\"mf-zone cool\"><h3>⚖️ 為飲用而收藏 vs 為轉售而收藏</h3><p class=\"mf-prod\">多數收藏家以品飲為主要目的：在適飲期享用自己收藏的酒，是收藏最確定的回報。以轉售為目的需承擔價格波動、交易手續費、儲存成本與流動性風險，結果並不保證。</p></div><div class=\"mf-zone plain\"><h3>🔄 定期檢視收藏</h3><p class=\"mf-prod\">每隔幾年檢視收藏組合：喝掉已達適飲高峰的酒款，出售不再需要的酒款，並把預算集中在真正喜愛、仍在陳年中的頂級酒款。</p></div></div></div></div>"
     },
     {
       "type": "list",
       "title": "重點回顧",
       "points": [
-        "Wine Advocate（Robert Parker 100 分制）對 Barolo / Brunello 市場影響力最強，98-100 分可使酒款暴漲 200-400%",
-        "年份品質三級：傳奇年份（98-100分）、優秀年份（93-97分）、挑戰年份（85-92分）",
+        "Wine Advocate、Vinous、Wine Spectator、Gambero Rosso 是影響義大利頂級酒市場的主要評論系統",
+        "年份大致可分為偉大、優秀、炎熱與挑戰年份；評分只是參考，酒莊實力同樣重要",
         "年份氣候科學：9–10 月採收前的秋雨和晝夜溫差，是決定 Nebbiolo 年份品質最關鍵的氣候因素",
-        "Piemonte 傳奇年份：2016、2010、1996、1985；Tuscany 傳奇年份：2015、2010、2001、1997",
-        "En Primeur 期酒：採收後 1–2 年進場，傳奇年份早鳥價比上市後低 20–40%，但需等待 4–5 年才能取貨",
+        "Piemonte 偉大年份：2016、2010、1996、1989；Tuscany 偉大年份：2016、2015、2010、2004",
+        "義大利沒有系統化的期酒制度；Barolo 於採收後第 4 年 1 月、Brunello 於第 5 年 1 月上市，部分酒商在上市前接受預購",
         "垂直收藏（同一酒莊多個年份）在拍賣市場極受追捧；水平收藏（同年份多酒莊）兼具學習與流動性",
-        "最佳買入：評分發布前 3 個月或市場悲觀期；最佳賣出：高分評分後 6–12 個月或適飲期前段",
-        "長線持有 Monfortino、Biondi-Santi 年化回報約 8–15%；短線期酒套利目標報酬 50–100%",
-        "保留 OWC 原木箱可提升拍賣估價 15-25%；Provenance 文件是拍賣行入場必要條件"
+        "購買時機：新年份上市時直接向酒莊或進口商購買出處最清楚；出售多在酒款進入適飲期或拍賣季",
+        "葡萄酒價格難以預測，收藏最確定的回報是在適飲期享用自己收藏的酒",
+        "保留 OWC 原木箱與 Provenance 文件，是拍賣行評估與接受酒款的重要條件"
       ]
     },
     {
@@ -145,19 +145,19 @@
             "英國葡萄酒協會評分"
           ],
           "correct": 0,
-          "explanation": "Wine Advocate 的 100 分制評分對義大利頂級葡萄酒的市場價格影響力最強，98-100 分的高評可使酒款價格暴漲。"
+          "explanation": "Wine Advocate 的 100 分制評分對義大利頂級葡萄酒的市場價格影響力最強，高分評論常會明顯推升需求與價格。"
         },
         {
           "type": "single",
           "question": "Piemonte 2016 年份被葡萄酒評論家定位為？",
           "options": [
             "普通年份",
-            "傳奇年份（Wine Advocate 100 分）",
+            "公認的偉大年份",
             "挑戰年份",
             "不佳年份"
           ],
           "correct": 1,
-          "explanation": "2016 是 Piemonte 近幾十年最偉大的年份之一，Wine Advocate 評為 100 分，陳年潛力 50 年以上。"
+          "explanation": "2016 是 Piemonte 近幾十年最受推崇的年份之一，頂級酒款具備數十年的陳年潛力。"
         },
         {
           "type": "single",
@@ -181,11 +181,11 @@
             "隨環境溫度即可"
           ],
           "correct": 1,
-          "explanation": "精品葡萄酒理想儲存溫度為 12-14°C，溫度波動比偏高更危險，需要專業恆溫酒櫃。"
+          "explanation": "精品葡萄酒理想儲存溫度約為 12-14°C，並應避免溫度劇烈波動，需要專業的恆溫酒櫃。"
         },
         {
           "type": "single",
-          "question": "Tuscany 哪個年份被評為近 30 年最偉大的 Brunello 年份？",
+          "question": "Tuscany 哪個年份被公認為近年最出色的 Brunello 年份之一？",
           "options": [
             "2011",
             "2007",
@@ -193,19 +193,19 @@
             "2014"
           ],
           "correct": 2,
-          "explanation": "2015 是 Tuscany 近 30 年最偉大的年份之一，Brunello di Montalcino 兼具力量與優雅，Wine Advocate 評為 100 分，陳年潛力 40-50 年。"
+          "explanation": "2015 被公認為 Tuscany 近年最出色的年份之一，Brunello di Montalcino 兼具力量與優雅，頂級酒款具備數十年的陳年潛力；緊接著的 2016 也同樣備受推崇。"
         },
         {
           "type": "single",
           "question": "En Primeur 期酒的最大投資風險是？",
           "options": [
             "期酒只能在義大利國內購買",
-            "資金鎖定期長（Brunello 需等 4–5 年），且採購時品質尚未確定",
+            "需提前付款且購買時無法親自品嘗成品",
             "期酒無法透過拍賣行轉售",
-            "期酒比正式上市後更貴"
+            "期酒一定比正式上市後更貴"
           ],
           "correct": 1,
-          "explanation": "En Primeur 的主要風險是資金鎖定：Brunello 法定陳年 5 年，期酒買入後需等 4–5 年才能取貨，中途不可退訂。購買時酒尚在桶中，品質尚未完全確認，需要投資者有獨立判斷年份潛力的能力。"
+          "explanation": "期酒的主要風險是需要在收到酒之前先付款，中途通常不可退訂；購買時無法親自品嘗成品，只能依靠酒評與對年份的判斷，也要留意酒商的信用。"
         }
       ]
     }

@@ -17,12 +17,12 @@
       "question": "Franciacorta Satèn 的特色是？",
       "options": [
         "加入紅葡萄",
-        "氣壓較低、口感絲滑",
+        "以 Chardonnay 為主、氣壓較低、口感綿密",
         "陳年 60 個月",
         "甜型氣泡酒"
       ],
       "answer": 1,
-      "explanation": "Satèn 是 Franciacorta 獨有的風格，僅用白葡萄，氣壓較低，口感更加細緻絲滑。"
+      "explanation": "Satèn 是 Franciacorta 獨有的白中白風格，只能做成 Brut，氣壓最高 5 大氣壓，氣泡更柔軟綿密。"
     },
     {
       "question": "Franciacorta Riserva 至少需要陳年多久？",
@@ -44,7 +44,7 @@
         "Corvina"
       ],
       "answer": 1,
-      "explanation": "Valtellina 使用 Nebbiolo 葡萄（當地稱為 Chiavennasca）釀造優雅的紅酒。"
+      "explanation": "Valtellina 以 Nebbiolo（當地稱 Chiavennasca）為主，三個法定產區都須至少 90%。"
     },
     {
       "question": "Sforzato di Valtellina 的釀造方式與下列哪個產區類似？",
@@ -55,18 +55,18 @@
         "Chianti Classico"
       ],
       "answer": 1,
-      "explanation": "Sforzato di Valtellina 使用風乾葡萄釀造（Appassimento），類似 Veneto 的 Amarone，產生濃郁甜美的風味。"
+      "explanation": "Sforzato di Valtellina 以風乾葡萄釀造（appassimento），與 Veneto 的 Amarone 類似，但成品是不甜型，比 Amarone 力量較弱、更優雅。"
     },
     {
-      "question": "Valtellina Superiore DOCG 的五大子產區中，哪一個被認為最著名且結構最平衡？",
+      "question": "Valtellina Superiore DOCG 的五個子區中，哪一個酒款最有結構、陳年潛力最高？",
       "options": [
         "Grumello",
         "Inferno",
         "Sassella",
         "Valgella"
       ],
-      "answer": 2,
-      "explanation": "Sassella 是 Valtellina Superiore 最大、最著名的子產區，以優雅與力量完美結合的平衡風格聞名。"
+      "answer": 1,
+      "explanation": "Inferno 意為「地獄」，因陡峭多岩、氣候較熱；酒最有結構、單寧最強，陳年潛力最高。Valgella 則是面積最大的子區。"
     }
   ],
   "slides": [
@@ -78,17 +78,17 @@
     {
       "type": "content",
       "title": "📍 產區概況",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利北部工業重心，北鄰瑞士，Como、Garda、Iseo三大冰川湖調節氣候。<span class=\"highlight\">5 DOCG + 21 DOC</span>，超過20,000公頃／50,000英畝。Franciacorta頂級氣泡酒征服國際，Valtellina阿爾卑斯山Nebbiolo展現北方優雅，Oltrepò Pavese性價比之選。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>義大利北部，北鄰瑞士，西接Piemonte，南靠Po河平原，首府米蘭（Milano），阿爾卑斯山麓</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園規模</strong><br>超過20,000公頃／50,000英畝，5個DOCG + 21個DOC，三大冰川湖（Como、Garda、Iseo）提供天然微氣候調節</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🥂</div><div class=\"fact-text\"><strong>核心酒款</strong><br>Franciacorta DOCG（義大利頂級氣泡）、Valtellina Superiore DOCG、Sforzato di Valtellina DOCG</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>文化地位</strong><br>米蘭時尚奢華消費帶動Franciacorta國際能見度，高密度米其林餐廳推升葡萄酒品質</div></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">Lombardia 是義大利人口最多、面積第四大的大區，富裕而高度工業化；首府米蘭（Milano）是全國第二大城，也是工業、金融與時尚中心。Como、Garda、Iseo 等湖泊調節氣候。<span class=\"highlight\">5 DOCG + 21 DOC</span>（2017 年），葡萄園超過 20,000 公頃／50,000 英畝。Franciacorta 被公認為義大利最好的傳統法氣泡酒，Valtellina 是 Piemonte 以外最重要的 Nebbiolo 產區，Lugana 則是本區最具特色的白酒。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>義大利北部中央，北鄰瑞士，西接 Piemonte，南鄰 Emilia-Romagna，東接 Trentino-Alto Adige 與 Veneto</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園規模</strong><br>超過 20,000 公頃／50,000 英畝，分屬六個次產區：Valtellina、Franciacorta 與 Brescia 丘陵、Bergamo 丘陵、Oltrepò Pavese、Garda Lombardo、下倫巴底</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🥂</div><div class=\"fact-text\"><strong>核心酒款</strong><br>Franciacorta DOCG、Valtellina Superiore DOCG、Sforzato di Valtellina DOCG、Oltrepò Pavese Metodo Classico DOCG、Lugana DOC</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>米蘭市場</strong><br>米蘭這座國際都會擁有活躍的葡萄酒市場，消費了 Lombardia 乃至全義大利相當比例的精品葡萄酒</div></div></div>"
     },
     {
       "type": "content",
       "title": "🏛️ 歷史與文化地位",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">從古羅馬的Valtellina山地葡萄到1961年義大利氣泡酒革命 —— <span class=\"intro-highlight\">Lombardy以米蘭時尚之都為後盾，打造義大利最優雅的葡萄酒文化</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">青銅器時代—羅馬時期</div><div class=\"timeline-content\"><strong>湖畔葡萄種植的起源</strong>：考古在Lombardy湖泊沿岸發現可追溯至青銅器時代（西元前3,000-1,200年）的葡萄種植痕跡。在Etruscan人與羅馬人薰陶下，葡萄栽培更為廣泛、品質提升；來自<strong>Valtellina與Sirmione</strong>的葡萄酒自羅馬時代起備受推崇，更被拉丁詩人<strong>維吉爾（Virgil）與卡圖盧斯（Catullus）</strong>寫入詩篇</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">6世紀—中世紀</div><div class=\"timeline-content\"><strong>倫巴底人與名稱由來</strong>：羅馬帝國衰亡後蠻族入侵，葡萄園多遭棄置，直到西元6世紀日耳曼倫巴底人（Lombards）建立王國才恢復秩序，統治兩世紀後交予查理曼大帝，但「Lombardia」之名永遠留存。中世紀修道院體系與貴族家族的重視，進一步推動葡萄栽培發展</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1570年</div><div class=\"timeline-content\"><strong>世界最早的氣泡酒專書</strong>：當地醫師Gerolamo Conforti出版《Libellus de Vino Mordaci》（氣泡酒之書），書中已記載Franciacorta地區能生產帶氣泡的葡萄酒，當地人已掌握維持氣泡的方法——比香檳地區的氣泡酒文獻記載更早</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">18-19世紀</div><div class=\"timeline-content\"><strong>拿破崙與品種浩劫</strong>：18世紀末至19世紀初，隨拿破崙軍隊到來，Cabernet Sauvignon與Cabernet Franc等法國品種被引入。一個世紀後，白粉病、露菌病與根瘤蚜蟲害接連重創產業，許多原生品種因此永遠消失，這也是Lombardy原生品種不如義大利其他大區豐富多元的原因</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">中世紀</div><div class=\"timeline-content\"><strong>修道院葡萄園</strong>：本篤會修士在Franciacorta等地建立葡萄園，保存並發展釀酒技術；Franciacorta地名源自「免稅之地」（Franca Corte）</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1961年</div><div class=\"timeline-content\"><strong>義大利氣泡酒革命</strong>：Guido Berlucchi與釀酒師Franco Ziliani創造第一瓶Franciacorta氣泡酒，採用傳統香檳法，開啟義大利頂級氣泡酒時代</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1995年</div><div class=\"timeline-content\"><strong>Franciacorta DOCG</strong>：成為義大利首個DOCG等級氣泡酒，嚴格陳年要求（最高60個月）確立頂級品質，與香檳並列世界之巔</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">1961年</div><div class=\"stat-label\">第一瓶Franciacorta</div></div><div class=\"stat-box\"><div class=\"stat-number\">1995年</div><div class=\"stat-label\">Franciacorta DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">5</div><div class=\"stat-label\">DOCG認證數量</div></div><div class=\"stat-box\"><div class=\"stat-number\">米蘭</div><div class=\"stat-label\">義大利時尚首都</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">從青銅器時代的湖畔葡萄到 1961 年第一瓶 Pinot di Franciacorta —— <span class=\"intro-highlight\">原生品種不多，卻以多樣的氣候與地形造就一系列獨特酒款</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">青銅器時代—羅馬時期</div><div class=\"timeline-content\"><strong>湖畔葡萄種植的起源</strong>：考古在 Lombardia 湖泊沿岸發現可追溯至青銅器時代（西元前 3,000-1,200 年）的葡萄種植痕跡。在 Etruscan 人與羅馬人薰陶下，葡萄栽培更為廣泛、品質提升；來自 <strong>Valtellina 與 Sirmione</strong> 的葡萄酒自羅馬時代起備受推崇，更被拉丁詩人<strong>維吉爾（Virgil）與卡圖盧斯（Catullus）</strong>寫入詩篇</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">6 世紀—中世紀</div><div class=\"timeline-content\"><strong>倫巴底人與名稱由來</strong>：羅馬帝國衰亡後蠻族入侵，葡萄園多遭棄置，直到西元 6 世紀日耳曼倫巴底人（Lombards）建立王國才恢復秩序，統治兩世紀後交予查理曼大帝，但「Lombardia」之名永遠留存。中世紀修道院讓葡萄園重獲生機，地方貴族家族對葡萄酒的重視更進一步推動發展</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1277 年</div><div class=\"timeline-content\"><strong>Franciacorta 之名首次出現</strong>：「Franzacurta」一詞用來指 Iseo 湖南方的地區。名稱由來不確定，一般認為源自拉丁文 <em>curtes francae</em>，指中世紀免稅的修道院土地與產業（francae 在拉丁文意為「自由」）</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1570 年</div><div class=\"timeline-content\"><strong>《Libellus de Vino Mordaci》</strong>：當地醫師 Gerolamo Conforti 出版這本談氣泡酒的書，記載 Franciacorta 一帶已能生產帶氣泡的葡萄酒，當地人也已掌握保留氣泡的方法</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">18-19 世紀</div><div class=\"timeline-content\"><strong>拿破崙與品種浩劫</strong>：一般認為 18 世紀末至 19 世紀初，隨拿破崙軍隊到來，Cabernet Sauvignon 與 Cabernet Franc 等法國品種被引入。一個世紀後，白粉病、露菌病與根瘤蚜接連重創產業，許多原生品種永遠消失，這也是 Lombardia 原生品種不如其他大區豐富的原因</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1961 年</div><div class=\"timeline-content\"><strong>現代 Franciacorta 的起點</strong>：1950 年代，Berlucchi 酒莊年輕的釀酒師 <strong>Franco Ziliani</strong> 開始試驗瓶中發酵氣泡酒；1961 年首次正式推出以 Pinot Bianco 釀成的傳統法氣泡酒，酒標為「Pinot di Franciacorta」</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">1967 → 1995 → 2008 年</div><div class=\"timeline-content\"><strong>法規的演進</strong>：1967 年成為 DOC（當時也包括紅、白靜態酒）；1995 年氣泡酒獨立為 <strong>Franciacorta DOCG</strong>，是義大利第一個專屬傳統法氣泡酒的 DOCG，靜態酒另設「Terre di Franciacorta」DOC；2008 年後者更名為 <strong>Curtefranca</strong>，讓「Franciacorta」只代表氣泡酒</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">1961 年</div><div class=\"stat-label\">Pinot di Franciacorta 問世</div></div><div class=\"stat-box\"><div class=\"stat-number\">1995 年</div><div class=\"stat-label\">Franciacorta DOCG</div></div><div class=\"stat-box\"><div class=\"stat-number\">5</div><div class=\"stat-label\">DOCG 數量</div></div><div class=\"stat-box\"><div class=\"stat-number\">21</div><div class=\"stat-label\">DOC 數量</div></div></div>"
     },
     {
       "type": "content",
       "title": "🌍 風土條件分析",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">冰川湖微氣候、阿爾卑斯山極端地形、Po河平原 —— 三大地理區造就Lombardy從頂級氣泡到優雅山地紅酒的多元風格</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🥂</div><h4>Iseo湖畔 — Franciacorta</h4><p><strong>地理：</strong>Brescia南部，Iseo湖南岸，海拔200-500m丘陵地帶</p><p><strong>土壤：</strong>冰川沉積礫石、砂質、黏土，礦物質豐富，排水極佳</p><p><strong>氣候：</strong>湖泊調節溫度，溫和濕潤，日夜溫差保留酸度</p><p><strong>適合：</strong>Chardonnay高酸清新，Pinot Nero結構感，義大利最頂級氣泡酒產地</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🏔️</div><h4>阿爾卑斯山谷 — Valtellina</h4><p><strong>地理：</strong>Lombardy北部，Sondrio省，Adda河谷，鄰近瑞士，海拔300-700m</p><p><strong>坡度：</strong>30-60度陡峭梯田（義大利最陡），維護成本是平地5-10倍</p><p><strong>氣候：</strong>高山氣候，冬嚴寒（-15°C），夏長日照（15h），日夜溫差20°C+</p><p><strong>適合：</strong>Nebbiolo（Chiavennasca）比Piemonte更清新輕盈，高酸優雅</p></div></div><div class=\"terroir-key-point\"><h4>🗺️ Lombardy 三大地理區</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>Iseo湖畔</strong><br>Franciacorta DOCG<br>冰川礫石礦物感</div><div class=\"kp-box\"><strong>阿爾卑斯山谷</strong><br>Valtellina DOCG<br>陡峭梯田極端氣候</div><div class=\"kp-box\"><strong>Garda湖畔</strong><br>Lugana DOC<br>Trebbiano清爽白酒</div><div class=\"kp-box\"><strong>Oltrepò Pavese</strong><br>Po河南岸<br>多樣性性價比之選</div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">阿爾卑斯山、湖泊、波河平原與亞平寧山麓 —— 多變的氣候與地形，造就 Lombardia 從傳統法氣泡酒到山地 Nebbiolo 的多元風格</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🥂</div><h4>Iseo 湖南岸 — Franciacorta</h4><p><strong>地理：</strong>Brescia 附近、Iseo 湖以南，介於 Oglio 與 Mella 兩河之間，共 19 個村莊（以 Erbusco、Adro 最知名）；葡萄園海拔 100-500 m</p><p><strong>地形與土壤：</strong>冰河冰磧形成的緩坡圓形劇場；土壤由砂、粉砂、礫石與石灰岩組成，礦物質豐富，排水極佳</p><p><strong>氣候：</strong>大陸型氣候受 Iseo 湖調節，北方山脈阻擋阿爾卑斯山下降的冷空氣</p><p><strong>適合：</strong>Chardonnay（佔種植 80%）、Pinot Nero、Pinot Bianco，全部手工採收</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🏔️</div><h4>阿爾卑斯山谷 — Valtellina</h4><p><strong>地理：</strong>Lombardia 最北端，Adda 河北岸狹長山坡，河谷東西長約 45 km，葡萄園完全朝南</p><p><strong>中氣候：</strong>北、南、東三面環山；西側 Adda 河注入 Como 湖，湖面的暖空氣沿河谷上行並被山脈留住</p><p><strong>梯田：</strong>乾砌石牆支撐的小塊梯田，海拔最高約 700-800 m，岩石白天吸熱並把熱反射給葡萄藤</p><p><strong>適合：</strong>晚熟的 Nebbiolo（Chiavennasca）</p></div></div><div class=\"terroir-key-point\"><h4>🗺️ Lombardia 主要葡萄酒地帶</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>普雷阿爾卑斯</strong><br>Franciacorta DOCG<br>冰磧土、湖泊調節</div><div class=\"kp-box\"><strong>阿爾卑斯山谷</strong><br>Valtellina DOCG<br>英雄式梯田</div><div class=\"kp-box\"><strong>Garda 湖畔</strong><br>Lugana DOC<br>Turbiana 白酒</div><div class=\"kp-box\"><strong>Oltrepò Pavese</strong><br>波河以南、亞平寧山麓<br>最大最多元的次產區</div></div></div>"
     },
     {
       "type": "lombardy-docg-map",
@@ -102,32 +102,32 @@
     {
       "type": "content",
       "title": "🍾 Franciacorta DOCG 釀造法",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Franciacorta —— 義大利唯一DOCG等級氣泡酒，採用與香檳完全相同的傳統釀造法，嚴格陳年要求確立世界頂級品質</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🍾 Metodo Classico 傳統法工序</h4><p><strong>品種：</strong>Chardonnay（主力）+ Pinot Nero + Pinot Bianco</p><p><strong>基酒：</strong>釀造各品種靜態白酒，再調配成基酒</p><p><strong>二次發酵：</strong>加入酵母+糖（Tirage），密封瓶中發酵12-60個月</p><p><strong>翻瓶：</strong>手工Riddling每日旋轉，酒渣沉積瓶口</p><p><strong>除渣：</strong>Disgorgement冷凍瓶口彈出酒渣 → 補液（Dosaggio）</p></div><div class=\"method-card modern\"><h4>🆚 Franciacorta vs Champagne</h4><p><strong>土壤：</strong>白堊土（香檳）vs 冰川礫石礦物（Franciacorta）</p><p><strong>氣候：</strong>寒冷大陸性（香檳）vs 湖泊調節溫和（Franciacorta）</p><p><strong>風格：</strong>清爽高酸礦物感（香檳）vs 果香豐富柔順優雅（Franciacorta）</p><p><strong>品種：</strong>含Meunier（香檳）vs 含Pinot Bianco（Franciacorta）</p><p><strong>價格：</strong>€25-300+（香檳）vs €20-150（Franciacorta，性價比更佳）</p></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Franciacorta —— 1995 年成為義大利第一個專屬傳統法氣泡酒的 DOCG，採用與香檳相同的瓶中二次發酵，無年份款的最低酒渣陳年要求比香檳更長</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🍾 Metodo Classico 傳統法工序</h4><p><strong>品種：</strong>Chardonnay（主力，佔種植 80%）＋ Pinot Nero ＋ Pinot Bianco（法定上限 50%，實務用量少）＋ Erbamat（2017 年起，最多 10%）</p><p><strong>基酒：</strong>手工採收，釀成靜態基酒後調配</p><p><strong>二次發酵：</strong>加入酵母與糖（tirage）後封瓶，在瓶中發酵並與酒渣接觸熟成</p><p><strong>酒渣陳年：</strong>無年份至少 18 個月、年份款（millesimato）至少 30 個月、Riserva 至少 60 個月</p><p><strong>轉瓶與除渣：</strong>手工或機器轉瓶（riddling），除渣後補液（dosaggio）</p></div><div class=\"method-card modern\"><h4>🆚 Franciacorta vs Champagne</h4><p><strong>無年份酒渣陳年：</strong>Champagne 至少 12 個月 vs Franciacorta 至少 18 個月（全世界無年份傳統法氣泡酒中最長）</p><p><strong>土壤：</strong>白堊土（香檳）vs 冰磧土：砂、粉砂、礫石與石灰岩（Franciacorta）</p><p><strong>品種：</strong>含 Meunier（香檳）vs 含 Pinot Bianco 與 Erbamat（Franciacorta）</p><p><strong>甜度：</strong>Franciacorta 生長條件較溫暖，葡萄夠熟，不需高補糖，因此 Extra Brut 與 Brut Nature（常標為 Non Dosato 或 Dosaggio Zero）特別常見</p><p><strong>酒標：</strong>兩者都屬於不必標示 PDO 等級的少數產區，只寫「Franciacorta」即可</p></div></div></div></div>"
     },
     {
       "type": "content",
-      "title": "🥂 Franciacorta 四大等級",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">從18個月入門到60個月頂級Riserva —— <span class=\"intro-highlight\">Franciacorta陳年要求比香檳更嚴格，每個等級代表截然不同的複雜度與風味深度</span></p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🥂 Franciacorta（Non-Vintage）— 入門優雅</div><div class=\"mf-prod\">最少陳年18個月，Chardonnay+Pinot Nero+Bianco，清新蘋果柑橘酵母香，均衡優雅，日常最佳選擇，€20-35</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🕊️ Satèn — Franciacorta獨有絲滑風格</div><div class=\"mf-prod\">僅白葡萄（Chardonnay+Pinot Bianco），氣壓較低，口感更細緻絲滑如絲緞，陳年24個月，Franciacorta首創獨有風格，€25-45</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">📅 Millesimato — 年份單一款</div><div class=\"mf-prod\">85%以上同年份葡萄，最少陳年30個月，反映特定年份風土，複雜度高，適合進階品鑑，€35-70</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🏆 Riserva — 頂級珍藏</div><div class=\"mf-prod\">最少陳年60個月（5年），最高等級，烤麵包堅果蜂蜜複雜陳年風味，媲美頂級香檳，每瓶皆是藝術品，€60-150+</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">0-3 g/L</div><div class=\"stat-label\">Pas Dosé（無添糖）</div></div><div class=\"stat-box\"><div class=\"stat-number\">0-12 g/L</div><div class=\"stat-label\">Brut（最常見）</div></div><div class=\"stat-box\"><div class=\"stat-number\">12-32 g/L</div><div class=\"stat-label\">Extra Dry / Dry</div></div><div class=\"stat-box\"><div class=\"stat-number\">32-50 g/L</div><div class=\"stat-label\">Demi-Sec（甜型）</div></div></div>"
+      "title": "🥂 Franciacorta 風格與等級",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">從 18 個月的無年份款到 60 個月的 Riserva —— <span class=\"intro-highlight\">Franciacorta 的風格以酒渣陳年時間、品種與氣壓區分</span></p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🥂 Franciacorta（無年份）</div><div class=\"mf-prod\">至少 18 個月酒渣陳年，以 Chardonnay 為主，搭配 Pinot Nero 與 Pinot Bianco；甜度可從 Brut Nature 到 Demi-Sec</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🕊️ Satèn — Franciacorta 獨有風格</div><div class=\"mf-prod\">以 Chardonnay 為主的白中白（Blanc de Blancs），只能做成 Brut；氣壓最高 5 大氣壓（一般 Franciacorta 至少 6），無年份款至少 24 個月酒渣陳年。較低的氣壓帶來更柔軟、綿密如絲緞的氣泡；也可做成年份款與 Riserva</div></div><div class=\"mf-zone center\"><div class=\"mf-style\">🌸 Rosé</div><div class=\"mf-prod\">至少 35% Pinot Nero，至少 24 個月酒渣陳年；也可做成年份款與 Riserva</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">📅 Millesimato — 年份款</div><div class=\"mf-prod\">至少 30 個月酒渣陳年，反映單一年份的特色；甜度限 Extra Dry、Brut、Extra Brut、Brut Nature</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🏆 Riserva</div><div class=\"mf-prod\">只在優異年份釀造的年份款，至少 60 個月酒渣陳年；甜度限 Brut、Extra Brut、Brut Nature</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">0-3 g/L</div><div class=\"stat-label\">Brut Nature（Non Dosato／Dosaggio Zero）</div></div><div class=\"stat-box\"><div class=\"stat-number\">0-6 g/L</div><div class=\"stat-label\">Extra Brut</div></div><div class=\"stat-box\"><div class=\"stat-number\">0-12 g/L</div><div class=\"stat-label\">Brut（最常見）</div></div><div class=\"stat-box\"><div class=\"stat-number\">12-50 g/L</div><div class=\"stat-label\">Extra Dry／Sec／Demi-Sec（少見）</div></div></div>"
     },
     {
       "type": "content",
       "title": "🏔️ Valtellina 風土與 Chiavennasca",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">北緯46度的極端山地，義大利最陡峭的葡萄園，百年石牆梯田 —— Valtellina是Nebbiolo在阿爾卑斯山的極致表達</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🏔️</div><h4>Valtellina 極端地形</h4><p><strong>位置：</strong>Lombardy北部，Sondrio省，Adda河谷，鄰近瑞士</p><p><strong>坡度：</strong>30-60度，義大利最陡，完全手工採收，無法機械化</p><p><strong>氣候：</strong>冬嚴寒（-15°C），夏長日照（15h），日夜溫差20°C+</p><p><strong>傳統：</strong>百年石牆梯田，UNESCO世界遺產申請中，維護成本是平地5-10倍</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🍷</div><h4>Chiavennasca vs Piemonte Nebbiolo</h4><p><strong>Valtellina（Chiavennasca）：</strong>高山冷涼，12.5-13.5%，清新優雅高酸，紅色水果香料礦物感</p><p><strong>Piemonte（Barolo）：</strong>溫暖丘陵，14-15%，豐滿酒體高單寧，玫瑰焦油皮革</p><p><strong>共同點：</strong>高酸、高單寧、優雅複雜，陳年潛力強</p><p><strong>Valtellina優勢：</strong>更輕盈清爽，稀有性高，價格相對更有性價比</p></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">乾砌石牆、陡峭梯田、背簍與單軌車 —— Valtellina 的葡萄種植被稱為「英雄式」（heroic），是 Piemonte 以外唯一大量生產 Nebbiolo 的主要產區</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🏔️</div><h4>Valtellina 英雄式梯田</h4><p><strong>位置：</strong>Lombardia 最北的產區，Adda 河北岸、阿爾卑斯山麓，葡萄園完全朝南，對晚熟的 Nebbiolo 成熟至關重要</p><p><strong>梯田：</strong>可種植的空間有限，葡萄園自古被分成許多小塊，種在乾砌石牆支撐的梯田上，海拔最高約 700-800 m</p><p><strong>採收：</strong>極度費工；有些坡地陡到必須把葡萄放進背在身上的籃子，有些則裝設單軌車把葡萄運下山谷</p><p><strong>土壤：</strong>山體侵蝕與古冰河沉積，主要是花崗岩砂、碎片岩與沖積物，淺薄貧瘠、保水差，但夏季暴雨降低缺水風險；世代農民把谷底的土背上梯田，修補被沖刷的土壤</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🍷</div><h4>Valtellina vs Barolo／Barbaresco</h4><p><strong>Valtellina Superiore：</strong>較早可飲、香氣更奔放，整體結構較精瘦，以細緻與優雅取勝，而非力量與深度</p><p><strong>Barolo／Barbaresco：</strong>更強勁、更有深度</p><p><strong>共同點：</strong>都以 Nebbiolo 釀造，酸度與單寧明顯，具陳年潛力</p><p><strong>Rosso di Valtellina DOC：</strong>入門款，傳統上以 90% Nebbiolo 加 Brugnola、Rossola、Pignola 等當地品種；酒色淡，帶乾燥玫瑰、紅色水果、皮革與香料，瓶陳後發展出高山花卉與乾燥香草香氣</p></div></div>"
     },
     {
       "type": "content",
-      "title": "🍷 Valtellina 五子產區 + Sforzato",
-      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Valtellina Superiore DOCG五大子產區如同Burgundy村莊級AOC；Sforzato DOCG則是阿爾卑斯山的「Amarone」</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🏆 Sassella（最著名）</strong><p>最大最知名子產區，優雅與力量完美結合，結構平衡，陳年10-20年潛力。Arpepe / Rainoldi名莊在此。Valtellina最佳入門選擇。</p></div><div class=\"orvieto-card\"><strong>⛰️ Grumello + Inferno + Valgella + Maroggia</strong><p>Grumello（礦物細膩）、Inferno（最溫暖飽滿，意為「地獄」）、Valgella（果香親民易飲）、Maroggia（最小最稀有，收藏家追捧）。</p></div><div class=\"orvieto-card\"><strong>💎 Sforzato di Valtellina DOCG</strong><p>Appassimento風乾3個月以上（類似Amarone），失水30-40%，酒精14-16%，濃郁乾果巧克力香料，陳年15-25年。Nino Negri 5 Stelle標竿款，€40-80+。</p></div></div></div><div class=\"dna-research\"><h4>🌿 梯田葡萄園文化</h4><p class=\"research-content\">30-60度陡坡全部手工採收，每公頃維護成本是平地5-10倍，每串葡萄需要人工攀爬石牆梯田採摘。儘管成本高昂，Valtellina酒莊堅持傳統，保護這片傳承千年的獨特風土。</p></div>"
+      "title": "🍷 Valtellina 法定產區、五子區與 Sforzato",
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Valtellina 有三個法定產區（兩個 DOCG、一個 DOC），全部須以至少 90% Chiavennasca（Nebbiolo）釀造</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🏆 Valtellina Superiore DOCG</strong><p>法定至少 90% Nebbiolo，但多數酒款是 100%。至少陳年 2 年，其中至少 1 年在橡木桶；Riserva 至少 3 年。五個官方子區可標示於酒標。</p></div><div class=\"orvieto-card\"><strong>⛰️ 五個子區</strong><p><strong>Valgella</strong>：面積最大、位置最東，酒柔和、花香、早熟易飲 ・ <strong>Inferno</strong>：意為「地獄」，因陡峭多岩、氣候較熱；酒最有結構、單寧最強、最嚴肅，陳年潛力最高 ・ <strong>Grumello</strong>：香氣芬芳、單寧柔和，陳年潛力與 Inferno 相近 ・ <strong>Sassella</strong>：歷史悠久、名聲最響，酒款優雅 ・ <strong>Maroggia</strong>：最新（2002 年）也最小，口感如絲絨、單寧紮實</p></div><div class=\"orvieto-card\"><strong>💎 Sforzato（Sfursat）di Valtellina DOCG</strong><p>Valtellina 的巔峰之作：健康、完全成熟的 Nebbiolo 以 appassimento 風乾，法定至少風乾到採收後的 12 月 10 日，實務上常風乾 3-4 個月才釀造。成品為不甜型，酒精度至少 14%，至少陳年 20 個月，其中至少 12 個月在橡木桶。乾果、香料與菸草層次豐富，口感如絲絨；與同樣風乾釀造的 Amarone 相比，力量較弱但更優雅。</p></div></div></div><div class=\"dna-research\"><h4>🌿 「英雄式」葡萄種植</h4><p class=\"research-content\">梯田的石牆與岩石在陽光下吸熱，再把熱反射給葡萄藤，在原本冷涼的氣候中幫助葡萄成熟。照顧與採收這些葡萄園極為費工，Valtellina 的葡萄種植因此被冠上「英雄式」之名。</p></div>"
     },
     {
       "type": "content",
-      "title": "🍇 本土品種深度",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥂 Chardonnay + Pinot Nero — Franciacorta雙主角</h4><p><strong>Chardonnay：</strong>Franciacorta的黃金品種，白花蘋果柑橘奶油（陳年），高酸礦物感，義大利最頂級Chardonnay表現地之一</p><p><strong>Pinot Nero（Pinot Noir）：</strong>雙重用途 —— Franciacorta增添結構陳年潛力 + Oltrepò Pavese靜態優雅紅酒</p><p><strong>Pinot Bianco：</strong>Franciacorta輔助品種，增添礦物細膩感，Satèn的重要成分</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Chiavennasca（Nebbiolo）— Valtellina之魂</h4><p><strong>特性：</strong>高酸度、高單寧、中等酒體，比Barolo更清新輕盈優雅</p><p><strong>香氣：</strong>紅櫻桃、玫瑰、紫羅蘭、岩石礦物，陳年發展皮革香料</p><p><strong>陳年：</strong>Superiore Riserva 10-20年，Sforzato風乾版本可達25年</p><p><strong>稀有性：</strong>全球Nebbiolo最北端種植地，百年梯田手工採收，產量極小</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍷 Barbera + Croatina + Trebbiano — 多元品種</h4><p><strong>Barbera：</strong>高酸低單寧，黑櫻桃李子香料，易飲親民，Oltrepò Pavese主力，€10-15性價比首選</p><p><strong>Croatina（Bonarda）：</strong>深色果香豐富，單寧柔和，黑莓巧克力，Oltrepò Pavese特色品種</p><p><strong>Trebbiano di Lugana：</strong>Garda湖畔清爽白酒，花香礦物感，Lugana DOC義大利最受歡迎白酒之一</p></div></div></div>"
+      "title": "🍇 主要品種深度",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍷 Croatina、Barbera 與 Oltrepò 的調配夥伴</h4><p><strong>Croatina：</strong>Lombardia 種植最廣的品種（約 16%），中世紀起即有紀錄；在 Oltrepò Pavese 易混淆地被稱為 Bonarda。酒色深，有新鮮多汁的紅色水果與香料，酒體肉感柔軟，帶適度單寧</p><p><strong>Barbera：</strong>單一品種酒帶清爽的酸櫻桃與鹹鮮風味，也常與 Croatina 調配</p><p><strong>Uva Rara、Ughetta（Vespolina）：</strong>在 Oltrepò Pavese 以小比例加入 Croatina 與 Barbera，前者增添紅色水果與香料，後者帶來單寧、香氣與香料</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Nebbiolo（Chiavennasca）與 Groppello</h4><p><strong>Chiavennasca：</strong>Nebbiolo 在 Valtellina 的名稱，是當地主力品種；Valtellina 是 Piemonte 以外唯一讓 Nebbiolo 大量生長的主要產區</p><p><strong>Groppello：</strong>一群特性相近的品種的統稱，以 Groppello Gentile 的面積與品質居首；主要種在 Garda 湖區，果粒大，常用來釀粉紅酒，帶明亮花香、新鮮櫻桃與草莓及香料</p><p><strong>Lambrusco Viadanese：</strong>下倫巴底最主要的 Lambrusco 品種，用於 Lambrusco Mantovano DOC</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥂 國際品種與 Turbiana</h4><p><strong>Pinot Nero：</strong>種植面積第二（約 13%），大多在 Oltrepò Pavese，用於傳統法氣泡酒與不甜靜態紅酒</p><p><strong>Chardonnay：</strong>種植面積第三（超過 10%），多數在 Franciacorta 釀氣泡酒，也用於多個 DOC 的白酒</p><p><strong>Turbiana（Trebbiano di Lugana）：</strong>Lugana DOC 的主要品種，17 世紀起即在此種植。過去被認為與 Verdicchio／Trebbiano di Soave 基因相同，近年研究則認為兩者關係密切但為不同品種。高品質、香氣芬芳，酒體中等至飽滿、酸度高，適合橡木桶，帶白花、柑橘、蘋果與核果香，陳年潛力長</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🎯 三大產區特色",
-      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Lombardy三大產區，三種截然不同的風格哲學 —— 頂級氣泡、阿爾卑斯精品、性價比之選</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🥂 Franciacorta DOCG</strong><p>Iseo湖畔，義大利氣泡酒之王。Metodo Classico傳統法，陳年18-60個月。Chardonnay+Pinot Nero優雅組合。世界頂級品質，米其林御用首選。€20-150+。</p></div><div class=\"orvieto-card\"><strong>🏔️ Valtellina Superiore + Sforzato DOCG</strong><p>阿爾卑斯山極端梯田，Chiavennasca（Nebbiolo）。5子產區各有特色，Sforzato風乾版如同阿爾卑斯版Amarone。稀有精品，藏家追捧。€20-80+。</p></div><div class=\"orvieto-card\"><strong>🍷 Oltrepò Pavese</strong><p>Lombardy最大產區（13,000公頃），Po河南岸。義大利最大Pinot Nero種植區，Metodo Classico DOCG（2007）崛起，Barbera/Croatina日常紅酒CP值極高。€10-40。</p></div></div></div><div class=\"winemaking-section\"><p class=\"winemaking-intro\">Lugana DOC —— Garda湖畔的清新白酒明星</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🌊 Lugana DOC（Garda湖畔）</h4><p><strong>品種：</strong>Trebbiano di Lugana（又稱Turbiana），白葡萄</p><p><strong>風格：</strong>花香、礦物感、白桃、清爽高酸</p><p><strong>產區：</strong>Brescia與Verona邊界，Garda湖南岸</p><p><strong>特色：</strong>義大利近年最熱門白酒之一，國際媒體高度關注</p><p><strong>價格：</strong>€12-25，性價比極佳</p></div><div class=\"method-card modern\"><h4>📊 Lombardy 各產區比較</h4><p><strong>頂級氣泡：</strong>Franciacorta DOCG（€20-150）</p><p><strong>山地精品：</strong>Valtellina DOCG（€20-80）</p><p><strong>清爽白酒：</strong>Lugana DOC（€12-25）</p><p><strong>性價比：</strong>Oltrepò Pavese（€10-40）</p><p><strong>特殊珍品：</strong>Sforzato DOCG（€40-80+）</p></div></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Lombardia 三大代表產區，三種截然不同的風格 —— 傳統法氣泡酒、阿爾卑斯山 Nebbiolo、多元的 Oltrepò Pavese</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🥂 Franciacorta DOCG</strong><p>Iseo 湖以南，被公認為義大利最好的傳統法氣泡酒。以 Chardonnay 為主，酒渣陳年 18-60 個月以上，低補糖風格特別成功。</p></div><div class=\"orvieto-card\"><strong>🏔️ Valtellina Superiore ＋ Sforzato DOCG</strong><p>阿爾卑斯山英雄式梯田，Chiavennasca（Nebbiolo）至少 90%。Superiore 有五個子區；Sforzato 以風乾葡萄釀成不甜型紅酒，是 Valtellina 的巔峰。</p></div><div class=\"orvieto-card\"><strong>🍷 Oltrepò Pavese</strong><p>Lombardia 面積最大、產量最高的次產區，位於波河以南。義大利 Pinot Nero 的重鎮，擁有 Metodo Classico DOCG（2007）；Croatina 與 Barbera 是當地紅酒主角。品質差異大，從大量生產的酒到具風土個性的精品都有。</p></div></div></div><div class=\"winemaking-section\"><p class=\"winemaking-intro\">Lugana DOC —— Lombardia 最具特色的白酒產區</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🌊 Lugana DOC（Garda 湖南岸）</h4><p><strong>品種：</strong>至少 90% Turbiana（Trebbiano di Lugana），實務上多為 100%</p><p><strong>風格：</strong>高酸、酒體中等至飽滿，帶礦物感，瓶陳後越趨複雜；白花、黃蘋果、核果、燧石、堅果與甜香料</p><p><strong>產區：</strong>Lombardia 與 Veneto 共享，大部分在 Lombardia 境內</p><p><strong>崛起：</strong>1990 年代因品質與個性受到認可</p></div><div class=\"method-card modern\"><h4>📊 Lombardia 各產區風格比較</h4><p><strong>傳統法氣泡酒：</strong>Franciacorta DOCG、Oltrepò Pavese Metodo Classico DOCG</p><p><strong>山地 Nebbiolo：</strong>Valtellina Superiore DOCG、Rosso di Valtellina DOC</p><p><strong>風乾紅酒：</strong>Sforzato di Valtellina DOCG（不甜）、Moscato di Scanzo DOCG（甜）</p><p><strong>白酒：</strong>Lugana DOC</p><p><strong>粉紅酒：</strong>Riviera del Garda Classico 的 Chiaretto</p></div></div></div></div>"
     },
     {
       "type": "content",
@@ -142,35 +142,35 @@
     {
       "type": "content",
       "title": "🏰 知名酒莊",
-      "content": "<div class=\"variety-intro\"><p>Franciacorta奢華名莊、Valtellina山地傳奇，Lombardy六大代表酒莊</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">CB</div><div class=\"up-badge\">Franciacorta頂級奢華</div><div class=\"up-body\"><div class=\"up-est\">Ca' del Bosco — Est. 1968</div><p>Maurizio Zanella創立，Franciacorta最奢華酒莊。每瓶葡萄手選去梗，極致品質要求。旗艦Annamaria Clementi是義大利最頂級氣泡酒之一。</p><div class=\"up-wines\">🥂 Cuvée Annamaria Clementi（8年陳年，複雜度極高，€120-150）/ Dosage Zéro（零添糖純淨，€50）/ Satèn精品系列</div><div class=\"up-tip\">Franciacorta最奢華路線 × 手工極致品控 × 國際獎項常勝</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">AR</div><div class=\"up-badge\">Valtellina傳統靈魂</div><div class=\"up-body\"><div class=\"up-est\">Arpepe — Est. 1860</div><p>Perego家族五代傳承（160年+），拒絕現代化，極致傳統工藝。Sassella子產區最堅定守護者，陳年潛力驚人。</p><div class=\"up-wines\">🍷 Sassella Rocce Rosse（單一園，陳年潛力20年+，€50-70）/ Sassella Stella Retica（旗艦款，€40）/ Inferno系列</div><div class=\"up-tip\">Valtellina傳統守護者 × 五代家族傳承 × Sassella頂尖代表</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Bellavista（Franciacorta現代派）</strong><p>1977年創立，Vittorio Moretti現代化精準釀造，國際能見度極高，Gran Cuvée Pas Opéré零添糖純淨風土表現</p><div class=\"um-prices\">Gran Cuvée Pas Opéré（零添糖）<br>Vittorio Moretti Riserva</div><div class=\"um-age\">€35-100 / 現代優雅型</div></div><div class=\"umbria-mini c2\"><strong>Nino Negri（Sforzato傳奇）</strong><p>1897年創立，Valtellina最大酒莊，5 Stelle Sforzato是Valtellina最知名酒款，Wine Spectator 93+分</p><div class=\"um-prices\">5 Stelle Sforzato（Wine Spectator 93+）<br>Inferno Mazer / Sassella Le Tense</div><div class=\"um-age\">€25-80 / 濃郁陳年型</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>€10-25</h4><p>Franciacorta Non-Vintage、Oltrepò Barbera、Lugana DOC，日常優雅北義風情</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>€25-60</h4><p>Franciacorta Satèn / Millesimato、Valtellina Superiore，品質躍升宴客首選</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 珍藏</div><h4>€60-150+</h4><p>Franciacorta Riserva（Ca' del Bosco）、Sforzato / Arpepe Sassella，極致陳年珍藏</p></div></div></div>"
+      "content": "<div class=\"variety-intro\"><p>Franciacorta 的開創者與名莊、Valtellina 的傳統守護者 —— Lombardia 代表酒莊</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">CB</div><div class=\"up-badge\">Franciacorta 名莊</div><div class=\"up-body\"><div class=\"up-est\">Ca' del Bosco — Est. 1968</div><p>Maurizio Zanella 在 Erbusco 創立，是推動 Franciacorta 走向國際的代表酒莊之一。旗艦 Cuvée Annamaria Clementi 是長時間酒渣陳年的 Riserva。</p><div class=\"up-wines\">🥂 Cuvée Annamaria Clementi（Riserva）／ Dosage Zéro ／ Satèn</div><div class=\"up-tip\">Franciacorta 代表 × 低補糖風格 × 長時間酒渣陳年</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">AR</div><div class=\"up-badge\">Valtellina 傳統派</div><div class=\"up-body\"><div class=\"up-est\">ARPEPE — Pelizzatti Perego 家族</div><p>家族自 1860 年起在 Valtellina 釀酒，1984 年以 ARPEPE 之名重新出發。堅持傳統，以大型木桶長時間熟成，是 Sassella 子區的代表酒莊。</p><div class=\"up-wines\">🍷 Sassella Rocce Rosse Riserva ／ Sassella Stella Retica ／ Grumello、Inferno</div><div class=\"up-tip\">傳統長時間熟成 × Sassella 代表</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Berlucchi（Franciacorta 的起點）</strong><p>釀酒師 Franco Ziliani 在此試驗瓶中發酵，1961 年推出第一款 Pinot di Franciacorta，開啟現代 Franciacorta</p><div class=\"um-prices\">Franciacorta 歷史起點<br>1961 年 Pinot di Franciacorta</div><div class=\"um-age\">開創者</div></div><div class=\"umbria-mini c2\"><strong>Nino Negri（Sfursat 名莊）</strong><p>1897 年創立於 Chiuro，Valtellina 歷史名莊之一，Sfursat 5 Stelle 是最知名的 Sforzato 之一</p><div class=\"um-prices\">Sfursat 5 Stelle<br>Valtellina Superiore 各子區</div><div class=\"um-age\">風乾濃郁型</div></div><div class=\"umbria-mini c1\"><strong>Bellavista（Franciacorta）</strong><p>1977 年由 Vittorio Moretti 創立於 Erbusco，以精準優雅的風格聞名</p><div class=\"um-prices\">Pas Operé<br>Vittorio Moretti Riserva</div><div class=\"um-age\">優雅精準型</div></div><div class=\"umbria-mini c2\"><strong>Lino Maga（Oltrepò Pavese）</strong><p>IWS 教材點名的 Oltrepò Pavese 經典：Barbacarlo 是這個以散裝酒為主的產區中少數具聲譽的酒款</p><div class=\"um-prices\">Barbacarlo</div><div class=\"um-age\">在地經典</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>新鮮易飲</h4><p>Rosso di Valtellina、Lugana、Bonarda dell'Oltrepò Pavese frizzante、Riviera del Garda Chiaretto</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>產區經典</h4><p>Franciacorta 無年份與 Satèn、Valtellina Superiore（Sassella、Grumello 等子區）、Lugana Superiore</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 珍藏</div><h4>長期陳年</h4><p>Franciacorta Riserva、Sforzato di Valtellina、Valtellina Superiore Riserva（Inferno）、Lugana Riserva</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍽️ 美食與佐餐搭配",
-      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Lombardy美食與葡萄酒的完美邂逅 —— 米蘭奢華餐桌、Valtellina山區料理、湖畔鮮魚，每道菜都有最適合的Lombardy佐餐酒</p><div class=\"food-pairing\"><div class=\"pairing-card\"><strong>🥂 Franciacorta Satèn</strong><p><strong>搭配：Risotto alla Milanese（米蘭番紅花燉飯）</strong><br>米蘭最具代表性的料理。Satèn的絲滑質地和細緻氣泡與濃郁奶油番紅花飯完美相配，清新酸度解膩，北義餐桌的優雅開場。</p></div><div class=\"pairing-card\"><strong>🥂 Franciacorta Riserva</strong><p><strong>搭配：生蠔 / 龍蝦（米其林頂級）</strong><br>頂級Franciacorta配最高端食材。60個月陳年的複雜麵包酵母香與高級海鮮鮮甜完美融合，Lombardy奢華餐桌最典雅的組合。</p></div><div class=\"pairing-card\"><strong>🍷 Valtellina Superiore</strong><p><strong>搭配：Pizzoccheri（蕎麥麵配培根起司）</strong><br>Valtellina山區傳統菜。蕎麥麵、馬鈴薯、Bitto起司、培根的濃郁組合，配上同產區高山Nebbiolo，土地與酒的完美連結。</p></div><div class=\"pairing-card\"><strong>💎 Sforzato di Valtellina</strong><p><strong>搭配：Bitto陳年起司 / 燉野味</strong><br>Lombardy最濃郁的酒款配最重口味的食材。乾果巧克力香料與陳年Bitto起司豐厚鮮味，山地飲食文化最深層的靈魂搭配。</p></div></div></div>"
+      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Lombardia 美食與葡萄酒 —— 米蘭的燉飯、Valtellina 的山區料理、湖畔鮮魚，各有最適合的在地佐餐酒</p><div class=\"food-pairing\"><div class=\"pairing-card\"><strong>🥂 Franciacorta Satèn</strong><p><strong>搭配：Risotto alla Milanese（米蘭番紅花燉飯）</strong><br>米蘭最具代表性的料理。Satèn 柔軟綿密的氣泡與奶油番紅花燉飯相襯，清新酸度解膩。</p></div><div class=\"pairing-card\"><strong>🥂 Franciacorta Riserva</strong><p><strong>搭配：生蠔／龍蝦</strong><br>長時間酒渣陳年帶來的烤麵包與酵母香氣，與海鮮的鮮甜相互襯托。</p></div><div class=\"pairing-card\"><strong>🍷 Valtellina Superiore</strong><p><strong>搭配：Pizzoccheri（Valtellina 蕎麥寬麵）</strong><br>Valtellina 山區傳統菜：蕎麥寬麵與馬鈴薯、甘藍菜，拌上奶油、大蒜、鼠尾草與當地起司。高山 Nebbiolo 的酸度與單寧正好切開濃郁的奶油與起司。</p></div><div class=\"pairing-card\"><strong>💎 Sforzato di Valtellina</strong><p><strong>搭配：陳年 Bitto 起司／燉野味</strong><br>乾果、香料與菸草的層次，配上陳年 Bitto 起司或燉野味的豐厚滋味。</p></div></div></div>"
     },
     {
       "type": "image",
       "title": "🍷 酒標實例：Franciacorta DOCG",
       "image": "/italy/images/labels/lombardia/franciacorta-docg-2016.jpg",
-      "caption": "Franciacorta DOCG 2016——義大利唯一 Metodo Classico 傳統法氣泡酒 DOCG，酒標可見年份標示（Millesimato 等級最少陳年 30 個月）。"
+      "caption": "Franciacorta DOCG 2016——1995 年成為義大利第一個專屬傳統法氣泡酒的 DOCG；酒標只需寫「Franciacorta」，不必標示 DOCG。標示年份即為 Millesimato，至少需酒渣陳年 30 個月。"
     },
     {
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Lombardy 是義大利北部重要產區（逾20,000公頃），5 DOCG + 21 DOC，首府米蘭是時尚奢華文化中心",
-        "✓ Oltrepò Pavese 是 Lombardy 最大次產區，擁有完整 DOC 家族：Metodo Classico DOCG（2007）、Buttafuoco、Bonarda、Sangue di Giuda 等",
-        "✓ Garda 湖畔另有 Riviera del Garda Classico（Groppello／Chiaretto）、Garda DOC 等產區；下倫巴底的 Lambrusco Mantovano 是 Emilia-Romagna 以外唯一產 Lambrusco 的 DOC",
-        "✓ Moscato di Scanzo DOCG 是義大利面積最小的 DOCG；Curtefranca DOC 與 Franciacorta 同範圍但專產靜態酒",
-        "✓ Franciacorta DOCG（1995）是義大利首個DOCG等級氣泡酒，1961年Guido Berlucchi創造第一瓶",
-        "✓ Franciacorta採用Metodo Classico傳統法（與香檳相同工藝），Non-Vintage（18個月）→ Riserva（60個月）",
-        "✓ Satèn是Franciacorta獨有風格：僅白葡萄釀造，氣壓較低，口感絲滑如緞，Franciacorta首創",
-        "✓ Valtellina（Sondrio省）是全球Nebbiolo最北端種植地，30-60度陡峭梯田全部手工採收",
-        "✓ Valtellina Superiore DOCG 五大子產區：Sassella（最著名平衡）、Grumello（礦物）、Inferno（最飽滿）、Valgella（親民）、Maroggia（最稀有）",
-        "✓ Sforzato di Valtellina DOCG 採用Appassimento風乾工藝（類似Amarone），酒精14-16%，陳年15-25年",
-        "✓ 頂級酒莊：Ca' del Bosco & Bellavista（Franciacorta奢華）、Arpepe & Nino Negri（Valtellina傳奇）",
-        "✓ 三大選擇：Franciacorta氣泡（€20-150+）/ Valtellina山地精品（€20-80）/ Oltrepò Pavese性價比（€10-35）"
+        "✓ Lombardia 是義大利人口最多的大區，葡萄園逾 20,000 公頃，5 DOCG + 21 DOC（2017 年），分屬六個次產區",
+        "✓ Croatina 是種植最廣的品種（在 Oltrepò Pavese 稱 Bonarda），其次是 Pinot Nero 與 Chardonnay",
+        "✓ Franciacorta：1961 年 Franco Ziliani 在 Berlucchi 推出第一款 Pinot di Franciacorta；1967 年 DOC、1995 年成為義大利第一個專屬傳統法氣泡酒的 DOCG",
+        "✓ Franciacorta 酒渣陳年：無年份 18 個月、年份款 30 個月、Riserva 60 個月；Chardonnay 佔 80%，Pinot Bianco 法定上限 50%，Erbamat 最多 10%",
+        "✓ Satèn：以 Chardonnay 為主的白中白，只能做成 Brut，最高 5 大氣壓，至少 24 個月；Rosé 至少 35% Pinot Nero",
+        "✓ Curtefranca DOC 與 Franciacorta 同範圍但專產靜態酒；Moscato di Scanzo 是義大利面積最小的 DOCG，為甜型紅 passito",
+        "✓ Valtellina：Adda 河北岸朝南的英雄式梯田，三個法定產區都須至少 90% Chiavennasca（Nebbiolo）",
+        "✓ Valtellina Superiore 五個子區：Valgella（最大、最東）、Inferno（最有結構、最耐陳）、Grumello、Sassella、Maroggia（最新也最小）",
+        "✓ Sforzato di Valtellina：風乾至少到 12 月 10 日，不甜型，至少 14%，陳年 20 個月（12 個月橡木桶），比 Amarone 更優雅",
+        "✓ Oltrepò Pavese 是最大次產區、義大利 Pinot Nero 重鎮：Metodo Classico DOCG（2007，至少 70% Pinot Nero，Cruasé 為粉紅酒品牌）、Buttafuoco、Bonarda",
+        "✓ Lugana DOC 以至少 90% Turbiana 釀造，分為 Lugana、Superiore（12 個月）、Riserva（24 個月）；Riviera del Garda Classico 以 Groppello 與 Chiaretto 聞名",
+        "✓ 下倫巴底的 Lambrusco Mantovano 是 Emilia-Romagna 以外唯一生產 Lambrusco 的法定產區"
       ]
     },
     {
@@ -187,15 +187,15 @@
             "D. 使用 Champagne 這個名稱"
           ],
           "correct": 1,
-          "explanation": "Franciacorta 使用 Pinot Nero、Chardonnay 等品種，採用 Metodo Classico（傳統法）在瓶中二次發酵，陳年要求嚴格，是義大利最接近香檳工藝的高品質氣泡酒。"
+          "explanation": "Franciacorta 以 Chardonnay、Pinot Nero、Pinot Bianco 釀造，採 Metodo Classico（傳統法）在瓶中二次發酵，被公認為義大利最好的傳統法氣泡酒。"
         },
         {
           "type": "multiple",
           "question": "Franciacorta DOCG 的陳年規定包括哪些？（多選）",
           "options": [
-            "A. Non Vintage 至少 18 個月瓶陳",
-            "B. Vintage 至少 30 個月瓶陳",
-            "C. Non Vintage 只需 6 個月",
+            "A. 無年份款至少 18 個月酒渣陳年",
+            "B. 年份款至少 30 個月酒渣陳年",
+            "C. 無年份款只需 6 個月",
             "D. Riserva 需要至少 60 個月"
           ],
           "correct": [
@@ -203,7 +203,7 @@
             1,
             3
           ],
-          "explanation": "Franciacorta 陳年規定嚴格：Non Vintage ≥ 18 個月、Vintage ≥ 30 個月、Riserva ≥ 60 個月，遠超 Cava、Prosecco 等其他氣泡酒，確保最高品質。"
+          "explanation": "Franciacorta 的酒渣陳年要求：無年份 ≥ 18 個月（比香檳的 12 個月更長）、年份款 ≥ 30 個月、Riserva ≥ 60 個月。"
         },
         {
           "type": "single",
@@ -215,19 +215,19 @@
             "D. Montepulciano，當地稱 Cordisco"
           ],
           "correct": 1,
-          "explanation": "Valtellina 以 Nebbiolo 為核心品種，當地稱為 Chiavennasca。種植在阿爾卑斯山陡峭梯田，海拔帶來涼爽微氣候，釀出比 Barolo 更輕盈細膩的風格。"
+          "explanation": "Valtellina 以 Nebbiolo 為核心品種，當地稱為 Chiavennasca。三個法定產區都須至少 90% Chiavennasca，風格比 Barolo 更精瘦、香氣更奔放。"
         },
         {
           "type": "single",
           "question": "Sforzato di Valtellina DOCG 的特別之處是？",
           "options": [
             "A. 普通 Nebbiolo 干型酒",
-            "B. 採用風乾工藝，酒精度至少 14%",
+            "B. 以風乾葡萄釀成不甜型紅酒，酒精度至少 14%",
             "C. 義大利最甜的氣泡酒",
             "D. 用 Chardonnay 釀的白酒"
           ],
           "correct": 1,
-          "explanation": "Sforzato（Sfursat）採用類似 Amarone 的 Appassimento 風乾工藝，葡萄風乾後釀造，酒精度至少達 14%，口感濃郁複雜，是 Valtellina 的頂級紅酒代表。"
+          "explanation": "Sforzato（Sfursat）以 appassimento 風乾 Nebbiolo，至少風乾到採收後的 12 月 10 日；成品為不甜型，酒精度至少 14%，至少陳年 20 個月（其中 12 個月在橡木桶）。"
         },
         {
           "type": "multiple",
@@ -243,7 +243,67 @@
             1,
             2
           ],
-          "explanation": "Franciacorta（傳統法氣泡）、Valtellina（山地 Nebbiolo）和 Lugana（加爾達湖畔的 Trebbiano di Lugana 白酒）都在 Lombardy 境內。Barolo 在 Piemonte。"
+          "explanation": "Franciacorta（傳統法氣泡酒）、Valtellina（山地 Nebbiolo）與 Lugana（Garda 湖南岸的 Turbiana 白酒）都在 Lombardia。Barolo 在 Piemonte。"
+        },
+        {
+          "type": "single",
+          "question": "Lombardia 種植面積最廣的葡萄品種是？",
+          "options": [
+            "A. Chardonnay",
+            "B. Pinot Nero",
+            "C. Croatina",
+            "D. Nebbiolo"
+          ],
+          "correct": 2,
+          "explanation": "依 ISTAT 2010 年資料，Croatina（16%）是種植最廣的品種，其次是 Pinot Nero（13%）與 Chardonnay（12%）。Croatina 在 Oltrepò Pavese 被稱為 Bonarda。"
+        },
+        {
+          "type": "single",
+          "question": "關於 Franciacorta Satèn，下列何者正確？",
+          "options": [
+            "A. 必須含至少 35% Pinot Nero",
+            "B. 只能做成 Brut，氣壓最高 5 大氣壓",
+            "C. 只需 18 個月酒渣陳年",
+            "D. 可以做成 Demi-Sec"
+          ],
+          "correct": 1,
+          "explanation": "Satèn 是以 Chardonnay 為主的白中白，只能做成 Brut，氣壓最高 5 大氣壓（一般 Franciacorta 至少 6），無年份款至少 24 個月酒渣陳年。至少 35% Pinot Nero 是 Rosé 的規定。"
+        },
+        {
+          "type": "single",
+          "question": "Valtellina Superiore 五個子區中，哪一個面積最大、位置最東？",
+          "options": [
+            "A. Sassella",
+            "B. Inferno",
+            "C. Maroggia",
+            "D. Valgella"
+          ],
+          "correct": 3,
+          "explanation": "Valgella 是面積最大、位置最東的子區，酒柔和、花香、早熟。Maroggia 則是最新（2002 年）也最小的子區。"
+        },
+        {
+          "type": "single",
+          "question": "義大利面積最小的 DOCG 是？",
+          "options": [
+            "A. Moscato di Scanzo",
+            "B. Sforzato di Valtellina",
+            "C. Oltrepò Pavese Metodo Classico",
+            "D. Curtefranca"
+          ],
+          "correct": 0,
+          "explanation": "Moscato di Scanzo DOCG 僅限 Bergamo 東北方 Scanzorosciate 鎮周邊，是義大利面積最小的 DOCG，也是少數甜型紅 passito。Curtefranca 是 DOC。"
+        },
+        {
+          "type": "single",
+          "question": "Oltrepò Pavese Metodo Classico DOCG 至少須含多少 Pinot Nero？",
+          "options": [
+            "A. 35%",
+            "B. 50%",
+            "C. 70%",
+            "D. 100%"
+          ],
+          "correct": 2,
+          "explanation": "至少 70% Pinot Nero，其餘最多 30% 可用 Chardonnay、Pinot Bianco 或 Pinot Grigio；至少 85% Pinot Nero 才可在酒標上標示「Pinot Nero」。"
         }
       ]
     }

@@ -425,7 +425,7 @@ function styleBadgeColor(style) {
 
 function geojsonTypeFolder(type) {
   if (type === 'DOCG') return 'DOCG'
-  if (type === 'IGT')  return 'IGT'
+  if (type === 'IGT' || type === 'IGP') return 'IGT'
   return 'DOC'
 }
 
@@ -920,18 +920,40 @@ async function highlightAOC(aoc) {
 }
 
 // ── Audio ──
+// 發音檔候選路徑：先找產區資料夾 sounds/<產區名>.mp3（產區名 = id 去掉 DOCG/DOC/IGT），
+// 再找共用的 /italy/sounds/。name 常帶酒款類型（如「Alghero DOC Rosso」），只當最後備援。
+function audioCandidates(aoc) {
+  const base = aoc.id.replace(/^(DOCG|DOC|IGT)\//, '').replace(/\s+(DOCG|DOC|IGT|IGP)$/, '').trim()
+  const folder = regionFolder(props.region.id)
+  const urls = [
+    `/italy/regions/${encodeURIComponent(folder)}/sounds/${encodeURIComponent(base)}.mp3`,
+    `/italy/sounds/${encodeURIComponent(base)}.mp3`,
+    `/italy/sounds/${encodeURIComponent(aoc.name)}.mp3`
+  ]
+  return [...new Set(urls)]
+}
+
+let audioUrl = null
 async function checkAudio(aoc) {
   audioAvailable.value = false
-  const url = `/italy/sounds/${encodeURIComponent(aoc.name)}.mp3`
-  try {
-    const r = await fetch(url, { method: 'HEAD' })
-    audioAvailable.value = r.ok
-  } catch { /* skip */ }
+  audioUrl = null
+  for (const url of audioCandidates(aoc)) {
+    try {
+      const r = await fetch(url, { method: 'HEAD' })
+      // 找不到檔案時 SPA fallback 會回 200 的 index.html，所以要確認是音訊
+      if (r.ok && (r.headers.get('content-type') || '').startsWith('audio')) {
+        if (activeAOCInfo.value !== aoc) return
+        audioUrl = url
+        audioAvailable.value = true
+        return
+      }
+    } catch { /* skip */ }
+  }
 }
 
 async function playAudio() {
-  if (!activeAOCInfo.value) return
-  const url = `/italy/sounds/${encodeURIComponent(activeAOCInfo.value.name)}.mp3`
+  if (!activeAOCInfo.value || !audioUrl) return
+  const url = audioUrl
   if (audioPlayer) { audioPlayer.pause(); audioPlayer = null }
   audioPlayer = new Audio(url)
   isPlayingAudio.value = true

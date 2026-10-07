@@ -22,18 +22,18 @@
         "晚摘葡萄"
       ],
       "answer": 1,
-      "explanation": "Appassimento 是將葡萄在通風棚架上風乾 3-4 個月，使糖分和風味濃縮。"
+      "explanation": "Appassimento 是把整串葡萄單層擺在通風棚舍的架上，風乾至少 3-4 個月，以濃縮糖分與浸出物。"
     },
     {
-      "question": "Amarone 的典型酒精度是？",
+      "question": "Amarone della Valpolicella 的最低酒精濃度是？",
       "options": [
-        "10-12%",
-        "12-14%",
-        "15-17%",
-        "18-20%"
+        "10%",
+        "12%",
+        "14%",
+        "18%"
       ],
       "answer": 2,
-      "explanation": "由於風乾工藝使糖分濃縮，Amarone 的酒精度通常達到 15-17%。"
+      "explanation": "Amarone 法規最低酒精 14%，實際酒款常達 15-16% 以上；至少陳年 2 年，Riserva 4 年。"
     },
     {
       "question": "Soave 主要使用哪個白葡萄品種？",
@@ -56,12 +56,12 @@
     {
       "type": "content",
       "title": "📍 產區概況",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">義大利東北部威尼斯大區，從Dolomites阿爾卑斯山麓延伸至Po河平原。<span class=\"highlight\">義大利種植面積第三大產區</span>（約80,000公頃，僅次於Sicilia、Puglia），14 DOCG + 29 DOC（截至2017年統計），Prosecco、Amarone、Soave三大風格各霸一方，DOC/G分級年產量居義大利之冠（逾50%產量為DOC/G等級，IGT約占25-30%）。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>義大利東北部，北靠Dolomites，東臨亞德里亞海，首府維洛納（Verona）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園規模</strong><br>約80,000公頃，義大利種植面積第三大產區（僅次於Sicilia、Puglia），DOC/G分級年產量居義大利各大區之冠</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>法定認證</strong><br>14 DOCG + 29 DOC，DOCG數量全義大利第二（僅次於Piemonte），品質幅度從入門到收藏均有</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍾</div><div class=\"fact-text\"><strong>全球影響力</strong><br>全球第一大Prosecco產區，Amarone是義大利最強勁紅酒之一，Soave是全球最廣泛飲用義大利白酒</div></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">Veneto 是「三威尼斯」（Tre Venezie，涵蓋 Veneto、Trentino-Alto Adige、Friuli Venezia Giulia）中面積最大、人口最多的大區，首府是威尼斯（Venezia）。<span class=\"highlight\">種植面積全國第三</span>（約 80,000 公頃，僅次於 Sicilia、Puglia），截至 2017 年有 14 個 DOCG 與 29 個 DOC；DOC/G 產量全國第一（逾 50% 產量為 DOC/G，IGT 約 25-30%）。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>北靠阿爾卑斯山（Dolomiti 與 Venetian Prealps），東南臨亞得里亞海，南接 Padana 平原，西鄰 Garda 湖</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🌾</div><div class=\"fact-text\"><strong>葡萄園規模</strong><br>約 80,000 公頃；Verona 省產量最高，約佔全區 40%，Treviso 第二</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏆</div><div class=\"fact-text\"><strong>法定產區</strong><br>14 DOCG + 29 DOC；DOCG 數量全國第二（次於 Piemonte）</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍾</div><div class=\"fact-text\"><strong>產業特色</strong><br>Verona 是 Vinitaly 的舉辦地；1876 年成立的 Conegliano 釀酒學校是義大利最早、最重要的釀酒教育機構之一</div></div></div>"
     },
     {
       "type": "content",
       "title": "🏛 歷史與文化地位",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">從羅馬帝國的「最優質葡萄酒」到2019年UNESCO世界遺產 —— <span class=\"intro-highlight\">威尼斯共和國1100年貿易帝國讓Veneto葡萄酒走遍世界</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">公元前1世紀</div><div class=\"timeline-content\"><strong>羅馬帝國盛世</strong>：Pliny the Elder在《自然史》中讚美Valpolicella的Rhaetic葡萄酒，羅馬人列其為帝國最優質葡萄酒之一</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">1000-1400年</div><div class=\"timeline-content\"><strong>中世紀記載</strong>：Corvina和Garganega品種首次被文獻記載，修道院成為釀造技術中心，Recioto甜紅酒成為貴族珍品</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">697-1797年</div><div class=\"timeline-content\"><strong>威尼斯共和國盛世</strong>：威尼斯商人將Veneto葡萄酒運往全歐洲和東地中海，Palladio別墅莊園成為葡萄園文化象徵，葡萄酒成為外交贈禮</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">2019年</div><div class=\"timeline-content\"><strong>UNESCO世界遺產</strong>：Prosecco丘陵（Conegliano-Valdobbiadene）獲列入世界遺產，確立文化與農業歷史地位</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">2000年+</div><div class=\"stat-label\">釀酒歷史</div></div><div class=\"stat-box\"><div class=\"stat-number\">1100年</div><div class=\"stat-label\">威尼斯共和國</div></div><div class=\"stat-box\"><div class=\"stat-number\">2019</div><div class=\"stat-label\">UNESCO世界遺產</div></div><div class=\"stat-box\"><div class=\"stat-number\">#1</div><div class=\"stat-label\">全球Prosecco產區</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">從羅馬時代的 Retico 到 2019 年的 UNESCO 世界遺產 —— <span class=\"intro-highlight\">威尼斯共和國逾千年的海上貿易，造就重商、開放外來品種的傳統</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">羅馬時代</div><div class=\"timeline-content\"><strong>Retico 與 Acinatico</strong>：Valpolicella 古稱「Retico」，自羅馬時代即受重視；古酒 Retico、Acinatico 被視為今日 Verona 省甜型 recioto 的前身</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">13-14 世紀</div><div class=\"timeline-content\"><strong>威尼斯的興盛</strong>：威尼斯共和國的勢力擴及 Veneto、Friuli 與部分 Lombardia，葡萄種植與貿易在 13-14 世紀蓬勃發展；Garganega 的文獻記載始於 13 世紀</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1797-1876 年</div><div class=\"timeline-content\"><strong>轉折</strong>：1797 年拿破崙佔領 Veneto，結束威尼斯逾千年的獨立；之後由奧地利統治，1866 年併入義大利王國；1876 年 Conegliano 釀酒學校成立，成為產業復甦的起點</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">2019 年</div><div class=\"timeline-content\"><strong>UNESCO 世界遺產</strong>：Conegliano 與 Valdobbiadene 的 Prosecco 丘陵列入世界遺產</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">BC 9 世紀</div><div class=\"stat-label\">Veneti 人已定居</div></div><div class=\"stat-box\"><div class=\"stat-number\">1797</div><div class=\"stat-label\">威尼斯共和國終結</div></div><div class=\"stat-box\"><div class=\"stat-number\">1876</div><div class=\"stat-label\">Conegliano 釀酒學校</div></div><div class=\"stat-box\"><div class=\"stat-number\">2019</div><div class=\"stat-label\">UNESCO 世界遺產</div></div></div>"
     },
     {
       "type": "content",
@@ -71,12 +71,12 @@
     {
       "type": "content",
       "title": "🌍 風土條件分析",
-      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">從Dolomites山麓到Po河平原，三大地理區各有特色，成就Veneto無與倫比的葡萄酒多樣性</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🏔️</div><h4>東部 — Prosecco丘陵</h4><p><strong>地區：</strong>Conegliano-Valdobbiadene，海拔150-500m陡峭斜坡</p><p><strong>土壤：</strong>石灰岩、黏土、白堊質，排水良好，年降雨1200mm</p><p><strong>氣候：</strong>涼爽，日夜溫差大，保持Glera天然酸度和花香</p><p><strong>適合：</strong>Glera清新果香，賦予礦物感，Prosecco DOCG所在地</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🍷</div><h4>中西部 — Valpolicella / Soave</h4><p><strong>地區：</strong>Verona周邊丘陵，海拔100-450m，朝南東南坡</p><p><strong>土壤：</strong>玄武岩（Soave）、石灰岩、礫石，貧瘠排水佳</p><p><strong>氣候：</strong>溫和地中海型，Garda湖調節，夏季乾燥</p><p><strong>適合：</strong>Corvina厚皮耐Appassimento，Garganega老藤礦物複雜感</p></div></div><div class=\"terroir-key-point\"><h4>🗺️ Veneto 三大地理區概覽</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>東部丘陵</strong><br>Prosecco DOCG產地<br>涼爽石灰岩地形</div><div class=\"kp-box\"><strong>中西部丘陵</strong><br>Valpolicella + Soave<br>溫和火山玄武岩</div><div class=\"kp-box\"><strong>南部平原</strong><br>Po河沖積平原<br>大量生產DOC</div><div class=\"kp-box\"><strong>Garda湖區</strong><br>Bardolino輕盈型<br>湖泊調節微氣候</div></div></div>"
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">整體氣候為溫和大陸性：阿爾卑斯山阻擋北方冷風並鎖住南方暖空氣，亞得里亞海與 Garda 湖有調節作用；離海與湖越遠，大陸性越強</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🏔️</div><h4>丘陵區</h4><p><strong>範圍：</strong>沿 Prealps 山麓從 Garda 湖向東北延伸到 Friuli 邊界，另有中部的 Colli Berici 與 Colli Euganei</p><p><strong>比例：</strong>佔全區 15% 面積，卻貢獻近 40% 的種植面積</p><p><strong>氣候：</strong>半大陸性，日夜溫差大，有利保留香氣複雜度與酸度；年雨量可達 900-1,250 mm</p><p><strong>產區：</strong>Bardolino、Valpolicella、Soave、Conegliano Valdobbiadene</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🌾</div><h4>平原與沿海平原</h4><p><strong>比例：</strong>佔全區 56% 面積，近 60% 的葡萄園在平原</p><p><strong>河流：</strong>Brenta、Piave、Livenza、Tagliamento、Adige、Po 流經並注入亞得里亞海</p><p><strong>氣候：</strong>平原夏熱潮濕、冬冷潮濕，常有霧；沿海受亞得里亞海調節最溫和</p><p><strong>雨量：</strong>平原與沿海最少，年均 500-900 mm</p></div></div><div class=\"terroir-key-point\"><h4>🗺️ Veneto 三大次產區</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>西部 Veneto</strong><br>Verona 省<br>Bardolino、Valpolicella、Soave</div><div class=\"kp-box\"><strong>中部 Veneto</strong><br>Vicenza、Padova 兩省<br>Gambellara、Breganze、Colli Euganei</div><div class=\"kp-box\"><strong>東部 Veneto</strong><br>Treviso、Venezia 兩省<br>Conegliano Valdobbiadene、Piave</div><div class=\"kp-box\"><strong>阿爾卑斯區</strong><br>佔 30% 面積<br>僅約 2% 種有葡萄</div></div></div>"
     },
     {
       "type": "content",
       "title": "🧬 本土品種深度",
-      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Corvina — Valpolicella之王</h4><p><strong>特性：</strong>厚皮、高酸（天然防腐劑）、中等單寧、顏色中等偏淺</p><p><strong>香氣：</strong>新鮮櫻桃、紫羅蘭、香料、輕微草本</p><p><strong>Appassimento優勢：</strong>厚皮風乾不易破裂，高酸平衡濃縮糖分，3-4個月不腐爛，風乾後呈現乾果、巧克力、香料層次</p><p><strong>混釀比例：</strong>Valpolicella 45-95%，搭配Rondinella（5-30%，增加顏色深度與結構）</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⚪ Garganega — Soave之魂</h4><p><strong>特性：</strong>高酸、晚熟、高產（需嚴格控制），中性基底完美反映風土</p><p><strong>香氣：</strong>白花、檸檬、青蘋果、礦物感，陳年後顯現杏仁、蜂蜜、複雜層次</p><p><strong>老藤魔力：</strong>40-80年老藤展現驚人深度，礦物感、蜂蜜杏桃，具20+年陳年潛力</p><p><strong>Soave規定：</strong>至少70%，可混Trebbiano di Soave或Chardonnay（不超過30%）</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥂 Glera — Prosecco核心</h4><p><strong>特性：</strong>芳香、高酸、清新，2009年起品種名改為Glera，Prosecco成為產地保護名</p><p><strong>香氣：</strong>白桃、梨子、杏花、蜂蜜、白花，清爽易飲</p><p><strong>釀造：</strong>Charmat法（大罐二次發酵）保留清新果香花香，不宜長時間酵母接觸</p><p><strong>Prosecco規定：</strong>至少85%，其餘可混Pinot Bianco、Chardonnay等</p></div></div></div>"
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 Corvina（Corvina Veronese）— Valpolicella 的核心</h4><p><strong>特性：</strong>晚芽、中晚熟、厚皮，適合 appassimento</p><p><strong>風格：</strong>色澤中等、酸度明亮、單寧輕至中等、酒體輕至中等</p><p><strong>香氣：</strong>酸櫻桃、紫羅蘭、香草、苦杏仁</p><p><strong>法規：</strong>Valpolicella 的 Corvina 45-95%（可由最多 50% 的 Corvinone 替代），Rondinella 5-30%</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⚪ Garganega — Soave 的靈魂</h4><p><strong>身分：</strong>義大利最古老的品種之一，與西西里的 Grecanico Dorato 為同一品種</p><p><strong>特性：</strong>晚熟、生長勢強、產量高；控制樹勢與產量才能展現細膩的半芳香特性</p><p><strong>香氣：</strong>白花、柑橘、成熟黃色水果、杏仁、礦物</p><p><strong>Soave 規定：</strong>至少 70%，Trebbiano di Soave 及/或 Chardonnay 最多 30%</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🥂 Glera — Prosecco 的核心</h4><p><strong>身分：</strong>原名 Prosecco（更精確是 Prosecco Tondo），起源不明</p><p><strong>特性：</strong>晚熟、半芳香，易受真菌病害；主要種在 Treviso 省</p><p><strong>香氣：</strong>白花、檸檬、梨、蘋果、桃子；平地高產時趨於中性，向陽坡地限產時更有深度</p><p><strong>種植：</strong>Veneto 種植面積最大的品種（28%）</p></div></div></div>"
     },
     {
       "type": "content",
@@ -86,7 +86,7 @@
     {
       "type": "content",
       "title": "✨ 三大明星酒款",
-      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Veneto三大國際巨星，分別代表氣泡、紅酒、白酒的不同極致 —— 從全球第一氣泡酒到義大利最強勁紅酒</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🥂 Prosecco DOC / DOCG</strong><p>Glera 85%+，Charmat法大罐二次發酵，清新果香細緻氣泡。白桃、梨子、杏花。10.5-12%酒精，1-3年適飲期。全球第一氣泡酒。搭配開胃菜、海鮮、brunch。€6-50+。</p></div><div class=\"orvieto-card\"><strong>🍷 Amarone della Valpolicella DOCG</strong><p>Corvina + Rondinella + Molinara，100% Appassimento風乾，近乎干型。乾果、巧克力、皮革，15-17%酒精，陳年10-30年。義大利最強勁紅酒。搭配燉肉、野味、陳年起司。€25-600+。</p></div><div class=\"orvieto-card\"><strong>🤍 Soave Classico DOCG</strong><p>Garganega 70%+，玄武岩老藤，礦物感十足。杏仁、白花、礦物、蜂蜜（老藤），11.5-13%，3-20年潛力。搭配海鮮、白肉、淡味起司。€12-55。</p></div></div></div>"
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">Veneto 的三大國際明星，分別代表氣泡、紅酒與白酒</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🥂 Prosecco DOC / DOCG</strong><p>以 Glera 為主，罐中二次發酵（Charmat 法）保留清新果香。酒款輕盈、柔和、清爽，白花、檸檬、梨、蘋果、桃子。頂級來自 Conegliano Valdobbiadene 與 Asolo 的丘陵 DOCG。</p></div><div class=\"orvieto-card\"><strong>🍷 Amarone della Valpolicella DOCG</strong><p>本質上是「不甜的 Recioto」：以風乾葡萄釀造並發酵到幾乎沒有殘糖。最低酒精 14%，至少陳年 2 年、Riserva 4 年；酒精常達 15-16% 以上。成熟漿果、乾果、菸草、甘草、黑巧克力、皮革。</p></div><div class=\"orvieto-card\"><strong>🤍 Soave Classico DOC</strong><p>Garganega 至少 70%，來自 Soave 與 Monteforte d'Alpone 之間的歷史核心丘陵。酸度緊實、酒體豐厚，洋甘菊、鳶尾花、柑橘、杏仁，陳年潛力優於預期。更嚴格的等級是 Soave Superiore DOCG。</p></div></div></div>"
     },
     {
       "type": "content",
@@ -100,7 +100,7 @@
     {
       "type": "content",
       "title": "🌬️ Appassimento 工藝深度",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Appassimento風乾工藝 —— Veneto最獨特的釀造傳統，將葡萄轉化為濃縮精華的古老藝術</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🌿 傳統Fruttai工藝</h4><p><strong>採收：</strong>9-10月人工逐串挑選，選鬆散果串，確保自然通風</p><p><strong>棚架：</strong>木竹棚架單層平鋪，完全自然通風</p><p><strong>環境：</strong>自然溫濕度，強烈依賴秋季氣候條件</p><p><strong>時間：</strong>3-4個月以上，失水30-40%</p><p><strong>風味：</strong>更自然、礦物感強、年份差異大、手工個性顯著</p></div><div class=\"method-card modern\"><h4>⚙️ 現代控制工藝</h4><p><strong>環境：</strong>精密溫濕度控制系統，理想10-15°C，60-70%濕度</p><p><strong>效益：</strong>除濕防霉設備，確保穩定風乾環境</p><p><strong>釀造：</strong>緩慢發酵30-50天，大小橡木桶陳年</p><p><strong>法規：</strong>Amarone最少2年陳年，Riserva 4年以上</p><p><strong>風味：</strong>更穩定一致，但失去部分手工個性</p></div></div></div></div><div class=\"aging-science\"><p>風乾月份的化學變化 —— Corvina從新鮮水果轉化為濃縮精華</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🍇 第一個月</h5><p>15-20%水分損失，果皮開始起皺，果串間保持通風避免雜菌</p><p class=\"science-note\">糖分開始濃縮，酸度相對提升</p></div><div class=\"science-card\"><h5>🍂 第二至三個月</h5><p>25-35%緩慢濃縮，每周檢查霉變，必要時翻動通風</p><p class=\"science-note\">多酚、甘油、花青素持續累積</p></div><div class=\"science-card\"><h5>❄️ 第四個月</h5><p>30-40%達最佳濃縮，糖分25-30%濃縮，酸度保持，準備壓榨</p><p class=\"science-note\">「Surmaturazione」完成，隨即釀造</p></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">Appassimento（風乾）是 Valpolicella 最獨特的傳統：健康、完全成熟的整串葡萄風乾數月，濃縮糖分與浸出物</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🌿 傳統 fruttai</h4><p><strong>架子：</strong>傳統木或竹製的「arele」或「graticci」，葡萄單層擺放</p><p><strong>場所：</strong>山坡上通風良好的「fruttai」棚舍</p><p><strong>時間：</strong>至少 3-4 個月，有時更久</p><p><strong>風險：</strong>須避免灰黴</p><p><strong>貴腐：</strong>適度貴腐可增加甘油與風味層次，但各酒莊看法不一</p></div><div class=\"method-card modern\"><h4>⚙️ 現代做法</h4><p><strong>容器：</strong>也使用木箱或塑膠箱</p><p><strong>法規：</strong>採收後隔年 12 月 1 日前不得釀造</p><p><strong>產量：</strong>每公頃採收量僅 65% 可用於釀造 Amarone 或 Recioto</p><p><strong>陳年：</strong>Amarone 至少 2 年、Riserva 4 年；傳統用中性的大型斯拉夫尼亞橡木桶，現在也有酒莊用新的小橡木桶</p><p><strong>貴腐爭議：</strong>部分酒莊盡量避免，認為會降低單寧與酸度、影響陳年潛力</p></div></div></div></div><div class=\"aging-science\"><p>同樣的風乾葡萄，三種結果</p><div class=\"comparison-grid\"><div class=\"science-card\"><h5>🍬 Recioto</h5><p>發酵到所需甜度後降溫停止，保留殘糖</p><p class=\"science-note\">Valpolicella 傳統上最珍視的酒款</p></div><div class=\"science-card\"><h5>🍷 Amarone</h5><p>風乾時間通常較短，發酵到糖分幾乎完全轉化</p><p class=\"science-note\">「amaro」意為苦，相較 Recioto 帶微苦</p></div><div class=\"science-card\"><h5>🌿 Ripasso</h5><p>新鮮 Valpolicella 倒入 Amarone／Recioto 的果渣浸漬 1-2 週，引發短暫二次發酵</p><p class=\"science-note\">1960 年代由 Masi 重新推廣</p></div></div></div>"
     },
     {
       "type": "amarone-appassimento",
@@ -109,18 +109,18 @@
     },
     {
       "type": "content",
-      "title": "🥂 Prosecco 革命與金字塔",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">從地方小酒到全球現象 —— <span class=\"intro-highlight\">2010年代Prosecco年銷量突破5億瓶，超越Champagne成為世界第一氣泡酒，2019年Prosecco丘陵列入UNESCO世界遺產</span></p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">👑 Cartizze DOCG — Grand Cru頂峰</div><div class=\"mf-prod\">僅107公頃，Valdobbiadene黃金斜坡（250-350m南坡），石灰岩黏土最濃郁複雜，常做Dry/Extra Dry略甜，€25-50+（普通Prosecco的3-5倍）</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🏆 Conegliano Valdobbiadene Prosecco DOCG</div><div class=\"mf-prod\">頂級核心區，15個村莊約6,900公頃人工採收陡坡，Rive單一村莊類似Cru系統，優雅礦物感花香，€12-25</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">⭐ Asolo Prosecco Superiore DOCG</div><div class=\"mf-prod\">小而精約1,800公頃，Treviso省西部，風格略帶豐潤，礦物感與花香均衡，品質穩定，€10-20</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🥂 Prosecco DOC — 全球入門款</div><div class=\"mf-prod\">Veneto + Friuli廣大產區，大量生產，清爽果香易飲，Charmat法保持新鮮，€6-12，全球年銷5億+瓶</div></div></div>"
+      "title": "🥂 Prosecco 的等級",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">從地方小酒到全球現象 —— <span class=\"intro-highlight\">2019 年 Conegliano 與 Valdobbiadene 的 Prosecco 丘陵列入 UNESCO 世界遺產</span></p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">👑 Superiore di Cartizze</div><div class=\"mf-prod\">Valdobbiadene 一片小而著名的陡峭丘陵，是 Conegliano Valdobbiadene 的頂級子區；常釀成略甜的 Dry 風格</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🏆 Conegliano Valdobbiadene Prosecco Superiore DOCG</div><div class=\"mf-prod\">Prealps 山麓的歷史核心丘陵，Treviso 省；Rive 標示代表來自特定村莊或子區的陡坡葡萄園</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">⭐ Asolo Prosecco DOCG</div><div class=\"mf-prod\">環繞 Asolo 鎮，氣候比 Conegliano Valdobbiadene 略暖濕，同樣以 Glera 為基礎，總產量小得多</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🥂 Prosecco DOC</div><div class=\"mf-prod\">橫跨 Veneto 與 Friuli 的大型跨區 DOC，大量生產，清爽易飲</div></div></div>"
     },
     {
       "type": "content",
       "title": "🏰 知名酒莊",
-      "content": "<div class=\"variety-intro\"><p>Amarone傳奇名家、Soave老藤大師、Prosecco頂尖生產者，Veneto六大代表酒莊</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">DF</div><div class=\"up-badge\">Amarone膜拜酒</div><div class=\"up-body\"><div class=\"up-est\">Dal Forno Romano — Est. 1983</div><p>極致濃郁派，Amarone的國際膜拜酒。極低產量（20-25 hl/ha）、超長風乾5個月+、大量新橡木桶，每年限量。</p><div class=\"up-wines\">🍷 Amarone della Valpolicella（17%極致濃郁，需陳年10-20年）€300-600 / Valpolicella Superiore €100-150</div><div class=\"up-tip\">Valpolicella Classico × 最少干預主義 × 全球酒評家年度最高分</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">GQ</div><div class=\"up-badge\">Amarone之父</div><div class=\"up-body\"><div class=\"up-est\">Giuseppe Quintarelli — Est. 1924</div><p>傳統工藝守護者，「Amarone之父」。完全手工，拒絕現代化，酒款只有陳年10年以上才發售，數量極少。</p><div class=\"up-wines\">🍷 Amarone della Valpolicella Classico（傳統工藝典範，發售時已陳年10年+）€250-500 / Recioto della Valpolicella €150-300</div><div class=\"up-tip\">Negrar / Valpolicella Classico × 手工傳統 × 家族繼承精神至今</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Pieropan / Gini（Soave標竿）</strong><p>Soave Classico DOCG頂級生產者，Garganega老藤，玄武岩風土礦物複雜，La Rocca單一園陳年20+年</p><div class=\"um-prices\">Soave Classico La Rocca（單一園老藤）<br>Garganega 40-80年老藤</div><div class=\"um-age\">€18-55 / 礦物細緻型</div></div><div class=\"umbria-mini c2\"><strong>Bisol / Nino Franco（Prosecco名家）</strong><p>Valdobbiadene DOCG頂尖生產者，Cartizze地主，Rive單一村莊系列精品，清新花香礦物感</p><div class=\"um-prices\">Cartizze Valdobbiadene DOCG<br>Rive單一村莊系列</div><div class=\"um-age\">€15-50 / 清新礦物型</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>€6-15</h4><p>Prosecco DOC、Soave DOC、Valpolicella DOC，日常易飲，義大利餐桌首選</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>€16-45</h4><p>Prosecco Superiore DOCG、Soave Classico、Valpolicella Ripasso，品質躍升宴客首選</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 珍藏</div><h4>€50-600+</h4><p>Amarone DOCG、Dal Forno Romano、Quintarelli，義大利頂級濃郁珍藏，陳年10-30年</p></div></div></div>"
+      "content": "<div class=\"variety-intro\"><p>Amarone 的傳奇名家、Soave 的標竿與 Prosecco 的頂尖生產者</p></div><div class=\"umbria-producers\"><div class=\"umbria-producer\"><div class=\"up-avatar\">DF</div><div class=\"up-badge\">Valpolicella Orientale</div><div class=\"up-body\"><div class=\"up-est\">Romano dal Forno — Illasi 河谷</div><p>位於非官方次分區 Valpolicella Orientale 的 Illasi 河谷，是該區的指標酒莊；風格濃縮強勁。</p><div class=\"up-wines\">🍷 Amarone della Valpolicella、Valpolicella Superiore</div><div class=\"up-tip\">證明 Classica 以外也有頂尖酒莊</div></div></div><div class=\"umbria-producer bio\"><div class=\"up-avatar\">GQ</div><div class=\"up-badge\">傳統派</div><div class=\"up-body\"><div class=\"up-est\">Giuseppe Quintarelli — Negrar</div><p>Valpolicella Classica 的傳奇傳統派生產者，以長時間陳年後才上市聞名。</p><div class=\"up-wines\">🍷 Amarone della Valpolicella Classico、Recioto della Valpolicella</div><div class=\"up-tip\">傳統派 Amarone：優雅、適合佐餐</div></div></div></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Pieropan、Anselmi（Soave）</strong><p>Pieropan 的 La Rocca 與 Calvarino 是知名的 Classico 單一園；Anselmi 則放棄 Soave DOC/DOCG，改以 IGT 標示酒款</p><div class=\"um-prices\">Calvarino、Capitel Foscarino 等 classico 葡萄園<br>以高比例或 100% Garganega 釀造</div><div class=\"um-age\">礦物、杏仁、陳年潛力</div></div><div class=\"umbria-mini c2\"><strong>Bisol、Nino Franco（Prosecco）</strong><p>Valdobbiadene 的 Conegliano Valdobbiadene Prosecco Superiore 生產者，有 Cartizze 與 Rive 酒款</p><div class=\"um-prices\">Superiore di Cartizze<br>Rive 單一村莊酒款</div><div class=\"um-age\">清新、花香、礦物</div></div></div><div class=\"three-styles\"><div class=\"styles-grid\"><div class=\"style-card entry\"><div class=\"style-badge\">💚 入門</div><h4>日常款</h4><p>Prosecco DOC、Soave DOC、Valpolicella DOC、Bardolino，清爽易飲</p></div><div class=\"style-card mid\"><div class=\"style-badge\">🧡 進階</div><h4>丘陵與 Superiore</h4><p>Conegliano Valdobbiadene DOCG、Soave Classico、Valpolicella Ripasso、Bardolino Superiore DOCG</p></div><div class=\"style-card premium\"><div class=\"style-badge\">❤️ 珍藏</div><h4>風乾酒款</h4><p>Amarone、Recioto della Valpolicella、Recioto di Soave，陳年潛力佳</p></div></div></div>"
     },
     {
       "type": "content",
       "title": "🍷 Valpolicella 完整四階梯",
-      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">同一品種Corvina，同一產區Valpolicella —— 四種截然不同的釀造方式，造就從輕盈到極致濃郁的完整風格光譜</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍷 Valpolicella DOC（新鮮輕盈）</strong><p>新鮮葡萄釀造，未經風乾。輕盈清爽，11-12.5%酒精，2-5年適飲。日常餐酒，€8-15。</p></div><div class=\"orvieto-card\"><strong>🌿 Valpolicella Ripasso DOC（中等複雜）</strong><p>新鮮Valpolicella酒液浸泡Amarone或Recioto酒渣後二次發酵，萃取風味。13-14%酒精，「Baby Amarone」，€15-30。</p></div><div class=\"orvieto-card\"><strong>🏆 Amarone della Valpolicella DOCG（頂級干型）</strong><p>100% Appassimento風乾，糖分幾乎全部發酵完，近乎干型。15-17%酒精，陳年10-30年，€25-600+。</p></div></div></div><div class=\"terroir-key-point\"><h4>🍬 Recioto della Valpolicella DOCG — 甜型始祖</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>工藝</strong><br>與Amarone同樣<br>Appassimento風乾</div><div class=\"kp-box\"><strong>差異</strong><br>終止發酵<br>殘糖60-120g/L</div><div class=\"kp-box\"><strong>香氣</strong><br>黑莓、黑巧克力<br>蜂蜜、無花果乾</div><div class=\"kp-box\"><strong>搭配</strong><br>黑巧克力甜點<br>藍紋起司 €20-60</div></div></div>"
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">同樣的葡萄、同一個產區 —— Valpolicella 有四個官方 appellation，從輕盈到濃郁</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍷 Valpolicella DOC（清爽易飲）</strong><p>新鮮葡萄釀造。酸櫻桃與花香、微苦杏仁尾韻，酒體輕、酒精適中、單寧低、酸度明亮；Superiore 須陳年至少 1 年。</p></div><div class=\"orvieto-card\"><strong>🌿 Valpolicella Ripasso DOC（中等複雜）</strong><p>新鮮 Valpolicella 倒入 Amarone 及/或 Recioto 的果渣浸漬 1-2 週，引發短暫二次發酵；可加最多 15% 新鮮 Amarone 酒液。上市前至少陳年 1 年，Superiore 最低酒精 13%。</p></div><div class=\"orvieto-card\"><strong>🏆 Amarone della Valpolicella DOCG（不甜）</strong><p>風乾葡萄發酵至幾乎沒有殘糖。最低酒精 14%，至少陳年 2 年、Riserva 4 年。</p></div></div></div><div class=\"terroir-key-point\"><h4>🍬 Recioto della Valpolicella DOCG — 甜型的始祖</h4><div class=\"key-point-grid\"><div class=\"kp-box\"><strong>工藝</strong><br>葡萄風乾<br>至少 3-4 個月</div><div class=\"kp-box\"><strong>差異</strong><br>降溫停止發酵<br>保留殘糖</div><div class=\"kp-box\"><strong>香氣</strong><br>漿果、乾果<br>瑪拉斯奇諾櫻桃、巧克力</div><div class=\"kp-box\"><strong>名稱</strong><br>方言 recia（耳朵）<br>只挑果串兩側的果粒</div></div></div>"
     },
     {
       "type": "content",
@@ -130,45 +130,45 @@
     {
       "type": "content",
       "title": "🍽️ 美食與佐餐搭配",
-      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Veneto美食與葡萄酒的完美邂逅 —— 水都威尼斯的海鮮風情、Verona的燉肉傳統、以及以Amarone作食材的頂級料理文化</p><div class=\"food-pairing\"><div class=\"pairing-card\"><strong>🥂 Prosecco Brut DOCG</strong><p><strong>搭配：Sarde in Saor（威尼斯醋漬沙丁魚）</strong><br>威尼斯最古老的傳統菜，洋蔥醋漬沙丁魚配松子葡萄乾。Prosecco清爽氣泡去油解膩，杏花香平衡酸甜，典型威尼斯開胃搭配。</p></div><div class=\"pairing-card\"><strong>🤍 Soave Classico DOCG</strong><p><strong>搭配：Baccalà alla Vicentina（維琴察鹽漬鱈魚）</strong><br>鹽漬鱈魚以牛奶和洋蔥燉煮，維琴察的驕傲。Garganega的礦物感和杏仁花香完美搭配鱈魚鮮甜，高酸清口不膩。</p></div><div class=\"pairing-card\"><strong>🌿 Valpolicella Ripasso</strong><p><strong>搭配：Pasta e Fagioli（豆子義大利麵）</strong><br>Veneto農民傳統菜，濃郁豆類湯底。Ripasso中等複雜的果味和單寧搭配豆類厚重感，互相提升，溫暖身心。</p></div><div class=\"pairing-card\"><strong>🍷 Amarone della Valpolicella DOCG</strong><p><strong>搭配：Risotto all'Amarone（Amarone紅酒燉飯）</strong><br>最高境界的酒食搭配：以Amarone本身入菜釀製的燉飯，再以Amarone佐餐。酒食同源，濃郁對濃郁，Veneto頂級料理文化。</p></div></div></div>"
+      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">Veneto美食與葡萄酒的完美邂逅 —— 水都威尼斯的海鮮風情、Verona的燉肉傳統、以及以Amarone作食材的頂級料理文化</p><div class=\"food-pairing\"><div class=\"pairing-card\"><strong>🥂 Prosecco Brut DOCG</strong><p><strong>搭配：Sarde in Saor（威尼斯醋漬沙丁魚）</strong><br>威尼斯最古老的傳統菜，洋蔥醋漬沙丁魚配松子葡萄乾。Prosecco清爽氣泡去油解膩，杏花香平衡酸甜，典型威尼斯開胃搭配。</p></div><div class=\"pairing-card\"><strong>🤍 Soave Classico DOC</strong><p><strong>搭配：Baccalà alla Vicentina（維琴察鹽漬鱈魚）</strong><br>鹽漬鱈魚以牛奶和洋蔥燉煮，維琴察的驕傲。Garganega的礦物感和杏仁花香完美搭配鱈魚鮮甜，高酸清口不膩。</p></div><div class=\"pairing-card\"><strong>🌿 Valpolicella Ripasso</strong><p><strong>搭配：Pasta e Fagioli（豆子義大利麵）</strong><br>Veneto農民傳統菜，濃郁豆類湯底。Ripasso中等複雜的果味和單寧搭配豆類厚重感，互相提升，溫暖身心。</p></div><div class=\"pairing-card\"><strong>🍷 Amarone della Valpolicella DOCG</strong><p><strong>搭配：Risotto all'Amarone（Amarone紅酒燉飯）</strong><br>最高境界的酒食搭配：以Amarone本身入菜釀製的燉飯，再以Amarone佐餐。酒食同源，濃郁對濃郁，Veneto頂級料理文化。</p></div></div></div>"
     },
     {
       "type": "appellation-comparison",
       "title": "⚖️ Amarone vs Valpolicella Superiore 同葡萄・不同工藝",
-      "description": "兩者都來自 Veneto Valpolicella、使用相同葡萄組合（Corvina+Rondinella+Molinara），但釀造工藝決定了天差地別的風格。",
+      "description": "兩者都來自 Valpolicella、使用相同的品種（以 Corvina 為主），但釀造工藝決定了天差地別的風格。",
       "pairs": [
         {
           "title": "Amarone vs Valpolicella Superiore——同葡萄、不同工藝",
-          "intro": "兩者都來自 Veneto Valpolicella、使用相同葡萄組合（Corvina+Rondinella+Molinara），但釀造工藝決定了天差地別的風格。",
+          "intro": "兩者都來自 Valpolicella、使用相同的品種（以 Corvina 為主），但釀造工藝決定了天差地別的風格。",
           "left": {
             "name": "Amarone della Valpolicella DOCG",
             "region": "Veneto / Valpolicella",
             "color": "#5C2334",
-            "grape": "45-95% Corvina + Corvinone、Rondinella、其他",
-            "soil": "Valpolicella 石灰質黏土",
-            "climate": "溫和大陸、Lake Garda 調節",
-            "elevation": "150–500 m",
-            "ageing": "24 個月（含木桶陳年）；Riserva 4 年",
-            "style": "採收後葡萄風乾 100-120 天（appassimento）→ 糖度集中，酒精 14-16%、酒體飽滿、甜潤但不甜",
-            "aromas": "黑櫻桃、無花果乾、葡萄乾、巧克力、咖啡、皮革、香料",
-            "price": "€30 – €500+",
-            "producers": "Quintarelli、Dal Forno、Bertani、Allegrini、Masi"
+            "grape": "Corvina 45-95%（可由最多 50% 的 Corvinone 替代）、Rondinella 5-30%、其他最多 25%",
+            "soil": "Valpolicella 的沖積與冰磧土、石灰岩/泥灰岩，Marano 一帶為火山玄武岩",
+            "climate": "溫和，受 Monti Lessini 屏障與 Garda 湖調節",
+            "elevation": "南向梯田，最高約 500 m",
+            "ageing": "至少 2 年；Riserva 4 年",
+            "style": "採收後葡萄風乾數月（appassimento），隔年 12 月 1 日後才能釀造；最低酒精 14%，常達 15-16% 以上，酒體飽滿但近乎不甜",
+            "aromas": "成熟漿果、乾果、菸草、甘草、黑巧克力、咖啡、皮革、香料",
+            "price": "依酒莊差異很大",
+            "producers": "Quintarelli、Romano dal Forno、Bertani、Masi、Allegrini"
           },
           "right": {
             "name": "Valpolicella Superiore DOC",
             "region": "Veneto / Valpolicella",
             "color": "#A8324A",
-            "grape": "相同混釀（Corvina+Rondinella+Molinara）",
+            "grape": "相同混調（以 Corvina 為主）",
             "soil": "相同",
             "climate": "相同",
             "elevation": "相同",
-            "ageing": "12 個月以上",
-            "style": "新鮮葡萄直接釀造（無風乾）；酒精 12-13%、酒體中等、果香奔放、易飲",
-            "aromas": "紅櫻桃、覆盆子、紫羅蘭、香料、淡苦杏仁",
-            "price": "€10 – €30",
-            "producers": "Allegrini、Tedeschi、Zenato、Zýme"
+            "ageing": "至少 1 年",
+            "style": "以精選的新鮮葡萄釀造，結構更好、酒精更高、更濃縮，部分採用 ripasso 或加入部分風乾葡萄",
+            "aromas": "酸櫻桃、花香、香料、微苦杏仁",
+            "price": "依酒莊差異很大",
+            "producers": "Allegrini、Tedeschi、Zenato"
           },
-          "keyDifference": "工藝決定一切：Amarone 將葡萄風乾 3-4 個月使糖分濃縮、釀出 14-16% 酒精的飽滿酒款；Valpolicella Superiore 使用新鮮葡萄、產出輕快易飲。值得注意：Ripasso 是中間版本——將 Valpolicella 倒入剛壓榨的 Amarone 酒渣上二次發酵，被稱為「窮人的 Amarone」。"
+          "keyDifference": "工藝決定一切：Amarone 用風乾數月的葡萄釀造，最低酒精 14%、至少陳年 2 年；Valpolicella Superiore 用新鮮葡萄，至少陳年 1 年。Ripasso 介於兩者之間——把 Valpolicella 倒入 Amarone 或 Recioto 的果渣上短暫二次發酵。"
         }
       ]
     },
@@ -176,7 +176,7 @@
       "type": "image",
       "title": "🍷 酒標實例：Amarone della Valpolicella DOCG",
       "image": "/italy/images/labels/veneto/amarone-masi-costasera-2009.jpg",
-      "caption": "Masi Costasera Amarone della Valpolicella DOCG 2009——義大利最強勁紅酒之一，酒標可見 DOCG 分級與 Valpolicella 產區標示。"
+      "caption": "Masi Costasera Amarone della Valpolicella DOCG 2009——酒標可見 DOCG 分級與 Valpolicella（Classico）產區標示。"
     },
     {
       "type": "image",
@@ -188,7 +188,7 @@
       "type": "image",
       "title": "🍷 酒標實例：Soave Classico DOC",
       "image": "/italy/images/labels/veneto/soave-classico-campagnola.jpg",
-      "caption": "Campagnola Soave Classico——Garganega 老藤白酒，酒標上「Classico」代表傳統核心產區。"
+      "caption": "Campagnola Soave Classico——Garganega 為主的白酒，酒標上「Classico」代表 Soave 與 Monteforte d'Alpone 之間的歷史核心產區。"
     },
     {
       "type": "image",
@@ -200,15 +200,14 @@
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ Veneto 種植面積是義大利第三大產區（僅次於Sicilia、Puglia），擁有14個DOCG和29個DOC，DOC/G分級年產量居全義大利之冠",
-        "✓ 威尼斯共和國時期成就葡萄酒貿易黃金時代，Prosecco丘陵2019年列入UNESCO世界遺產",
-        "✓ 三大地理區：東部Prosecco丘陵（涼爽）、中西部Valpolicella/Soave（溫和）、南部Po河平原（大量生產）",
-        "✓ Corvina厚皮高酸適合Appassimento風乾，Garganega老藤展現驚人深度，Glera成就Prosecco清新風格",
-        "✓ Appassimento風乾工藝：3-4個月失水30-40%，濃縮糖分和風味，Amarone酒精15-17%陳年10-30年",
-        "✓ Prosecco金字塔：Cartizze（107ha Grand Cru）→ Conegliano Valdobbiadene DOCG → Asolo DOCG → Prosecco DOC",
-        "✓ Prosecco使用Charmat槽中二次發酵保持清新果香，2010年代銷量超越Champagne成為世界第一氣泡酒",
-        "✓ 頂級酒莊：Dal Forno Romano & Quintarelli（Amarone傳奇）、Pieropan & Gini（Soave標竿）、Bisol & Nino Franco（Prosecco名家）",
-        "✓ 風格多樣性極致：從清爽Prosecco（10.5-12%）到濃郁Amarone（15-17%），從入門€6到收藏級€600+"
+        "✓ Veneto 種植面積全國第三（約 80,000 公頃），14 個 DOCG、29 個 DOC，DOC/G 產量全國第一；首府是威尼斯",
+        "✓ 威尼斯共和國逾千年的海上貿易造就重商、開放外來品種的傳統；1876 年成立 Conegliano 釀酒學校",
+        "✓ 三大次產區：西部（Verona：Bardolino、Valpolicella、Soave）、中部（Vicenza、Padova）、東部（Treviso、Venezia：Prosecco、Piave）",
+        "✓ 原生的 Glera（28%）、Garganega（13%）、Corvina 三者合計佔近半種植面積；Merlot 與 Pinot Grigio 的種植面積也是全義大利最大",
+        "✓ Appassimento：葡萄風乾至少 3-4 個月，隔年 12 月 1 日前不得釀造；同樣的風乾葡萄可釀成 Recioto（甜）或 Amarone（不甜）",
+        "✓ Amarone 最低酒精 14%、至少陳年 2 年（Riserva 4 年）；Ripasso 將 Valpolicella 倒入 Amarone/Recioto 果渣再發酵",
+        "✓ Soave 至少 70% Garganega；Soave Classico 是 DOC，Soave Superiore 與 Recioto di Soave 是 DOCG",
+        "✓ Prosecco 以 Glera 罐中二次發酵；頂級為 Conegliano Valdobbiadene 與 Asolo 的 DOCG，Cartizze 是頂級子區"
       ]
     },
     {
@@ -225,7 +224,7 @@
             "D. 冷凍濃縮葡萄汁"
           ],
           "correct": 1,
-          "explanation": "Appassimento 工藝將 Corvina 等葡萄在竹架上風乾 3-4 個月，失去約 30% 水分後再釀造，濃縮糖分和風味，造就濃郁的高酒精（約 15-17%）Amarone。"
+          "explanation": "Amarone 以 appassimento 風乾葡萄釀造：整串葡萄在通風的 fruttai 中單層擺放至少 3-4 個月，採收後隔年 12 月 1 日前不得釀造；發酵到幾乎沒有殘糖，最低酒精 14%。"
         },
         {
           "type": "single",
@@ -237,7 +236,7 @@
             "D. Chardonnay"
           ],
           "correct": 1,
-          "explanation": "Prosecco 主要使用 Glera 品種（至少 85%），生長於 Veneto 和 Friuli。採用 Charmat 法（大罐二次發酵），風格清爽果香，是全球銷量最大的氣泡酒之一。"
+          "explanation": "Glera 是 Prosecco 的主要品種，原名即為 Prosecco，主要種在 Treviso 省；Prosecco 以罐中二次發酵保留清新果香。"
         },
         {
           "type": "multiple",
@@ -265,7 +264,7 @@
             "D. Chardonnay"
           ],
           "correct": 2,
-          "explanation": "Soave DOC 核心品種是 Garganega（至少 70%），帶有杏仁花香和蜂蜜風味，是威尼托最著名的白葡萄品種，在 Soave Classico 中尤為出色。"
+          "explanation": "Soave 的核心品種是 Garganega（至少 70%），可搭配 Trebbiano di Soave 及/或 Chardonnay；它與西西里的 Grecanico Dorato 為同一品種。"
         },
         {
           "type": "multiple",
@@ -281,7 +280,67 @@
             1,
             3
           ],
-          "explanation": "Valpolicella 有三個層次：普通 Valpolicella（輕盈易飲）→ Ripasso（用 Amarone 酒渣二次浸泡，半濃郁）→ Amarone（全風乾，最濃郁）。Barolo 屬皮埃蒙特。"
+          "explanation": "Valpolicella 有四個官方 appellation：Valpolicella DOC、Valpolicella Ripasso DOC、Recioto della Valpolicella DOCG、Amarone della Valpolicella DOCG。Barolo 屬於 Piemonte。"
+        },
+        {
+          "type": "single",
+          "question": "Soave Classico 屬於哪個等級？",
+          "options": [
+            "A. DOCG",
+            "B. DOC",
+            "C. IGT",
+            "D. Vino"
+          ],
+          "correct": 1,
+          "explanation": "Soave Classico 是 Soave DOC 的歷史核心次產區；更嚴格的 Soave Superiore 與甜型 Recioto di Soave 才是 DOCG。"
+        },
+        {
+          "type": "single",
+          "question": "Amarone della Valpolicella 的最低陳年要求是？",
+          "options": [
+            "A. 1 年",
+            "B. 2 年（Riserva 4 年）",
+            "C. 3 年（Riserva 5 年）",
+            "D. 5 年"
+          ],
+          "correct": 1,
+          "explanation": "Amarone 最低酒精 14%、至少陳年 2 年，Riserva 至少 4 年。"
+        },
+        {
+          "type": "single",
+          "question": "Garganega 經 DNA 證實與哪個品種相同？",
+          "options": [
+            "A. Trebbiano Toscano",
+            "B. Grecanico Dorato",
+            "C. Verdicchio",
+            "D. Glera"
+          ],
+          "correct": 1,
+          "explanation": "Garganega 與西西里的 Grecanico Dorato 為同一品種；Trebbiano di Soave 則與 Marche 的 Verdicchio 相同。"
+        },
+        {
+          "type": "single",
+          "question": "Bardolino Chiaretto 是什麼酒？",
+          "options": [
+            "A. 甜型紅酒",
+            "B. 短時間浸皮的粉紅酒",
+            "C. 傳統法氣泡白酒",
+            "D. 風乾葡萄紅酒"
+          ],
+          "correct": 1,
+          "explanation": "Bardolino Chiaretto 是短時間浸皮製成的粉紅酒，被視為義大利最好的 rosato 之一。"
+        },
+        {
+          "type": "single",
+          "question": "Ripasso 工法是由哪家酒莊在 1960 年代重新推廣？",
+          "options": [
+            "A. Quintarelli",
+            "B. Masi",
+            "C. Bertani",
+            "D. Pieropan"
+          ],
+          "correct": 1,
+          "explanation": "Ripasso 是 Valpolicella 的古老工藝，1960 年代由 Masi 重新推廣；新鮮 Valpolicella 倒入 Amarone/Recioto 果渣浸漬 1-2 週，引發短暫二次發酵。"
         }
       ]
     }

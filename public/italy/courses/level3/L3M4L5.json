@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "根據「神秘酒款 1 號」品飲筆記（顏色淺帶橙邊、玫瑰與焦油香氣、極高酸度與單寧），這款酒最可能是？",
-      "options": ["Sangiovese（Chianti Classico）", "Nebbiolo（Barolo）", "Aglianico（Taurasi）", "Barbera（Barbera d'Alba）"],
+      "options": [
+        "Sangiovese（Chianti Classico）",
+        "Nebbiolo（Barolo）",
+        "Aglianico（Taurasi）",
+        "Barbera（Barbera d'Alba）"
+      ],
       "answer": 1,
       "explanation": "「玫瑰與焦油（Roses and Tar）」是 Nebbiolo 最經典的香氣標誌，加上淺色橙邊與極高酸度/單寧的結構，完美符合 Barolo 的特徵。"
     },
     {
       "question": "根據「神秘酒款 2 號」品飲筆記（洋甘菊、白桃、圓潤口感、苦杏仁尾韻），這款酒最可能是？",
-      "options": ["Pinot Grigio（Delle Venezie）", "Verdicchio（Castelli di Jesi）", "Garganega（Soave）", "Sauvignon Blanc（Alto Adige）"],
+      "options": [
+        "Pinot Grigio（Delle Venezie）",
+        "Verdicchio（Castelli di Jesi）",
+        "Garganega（Soave）",
+        "Sauvignon Blanc（Alto Adige）"
+      ],
       "answer": 2,
       "explanation": "洋甘菊與白桃香氣，加上圓潤的口感與經典的苦杏仁尾韻，是 Garganega（Soave）的標準盲品特徵。Pinot Grigio 更清淡，Verdicchio 酸度更高且帶茴香。"
     },
     {
       "question": "根據「神秘酒款 3 號」品飲筆記（細緻氣泡、成熟黃蘋果、強烈烤麵包/布里歐香氣、圓潤口感），這款酒最可能是？",
-      "options": ["Prosecco（Valdobbiadene）", "Asti（Moscato d'Asti）", "Trento DOC", "Franciacorta"],
+      "options": [
+        "Prosecco（Valdobbiadene）",
+        "Asti（Moscato d'Asti）",
+        "Trento DOC",
+        "Franciacorta"
+      ],
       "answer": 3,
       "explanation": "強烈的烤麵包味排除了查馬法的 Prosecco 和 Asti。成熟黃蘋果果香與圓潤奶油般的口感，指向氣候較溫暖的 Franciacorta，而非高酸冷冽的 Trento DOC。"
     },
     {
       "question": "盲品時，如果遇到一款顏色深邃不透光、帶有黑莓、火山灰與煙燻香氣、單寧極其強烈厚實的紅酒，最可能是哪個品種？",
-      "options": ["Nebbiolo", "Sangiovese", "Aglianico", "Corvina"],
+      "options": [
+        "Nebbiolo",
+        "Sangiovese",
+        "Aglianico",
+        "Corvina"
+      ],
       "answer": 2,
       "explanation": "深邃的顏色、黑色水果、火山煙燻氣息以及極其強烈的單寧，是南部霸主 Aglianico（如 Taurasi）的經典特徵。"
     }
@@ -36,22 +56,22 @@
     {
       "type": "content",
       "title": "實戰盲品演繹三步法",
-      "content": "<div class=\"region-intro\"><p class=\"intro-text\">這堂課提供三款「神秘酒款（Mystery Wines）」的完整品飲筆記，涵蓋紅酒、白酒、氣泡酒。你需要運用 SAT 系統與演繹推理，推斷品種、產區與品質等級。</p></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">盲品演繹三步法（實戰版）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>① 結構定生死（Structure First）</strong><br>先評估酸度、單寧、酒體——這三項能立刻排除 80% 選項<br>例：高酸＋高單寧 → 排除 Primitivo、Nero d'Avola → 縮小至 Nebbiolo/Sangiovese/Aglianico</div><div class=\"orvieto-card\"><strong>② 香氣找標誌（Aroma Markers）</strong><br>尋找每個品種的獨特標誌香氣：玫瑰焦油？酸櫻桃草本？黑果煙燻？苦杏仁？<br>找到標誌香氣 = 立即縮小至 1-2 個品種</div><div class=\"orvieto-card\"><strong>③ 綜合推論（Conclusion）</strong><br>結構＋香氣＋視覺三重確認 → 得出最合理結論<br>加上年份估算：邊緣顏色＋單寧質地＋香氣類型 → 估算 ±5 年區間</div></div></div>"
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">這堂課提供三款「神秘酒款（Mystery Wines）」的完整品飲筆記，涵蓋紅酒、白酒、氣泡酒。你需要運用 SAT 系統與演繹推理，推斷品種、產區與品質等級。</p></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">盲品演繹三步法（實戰版）</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>① 結構定生死（Structure First）</strong><br>先評估酸度、單寧、酒體——這三項能立刻大幅縮小範圍<br>例：高酸＋高單寧 → 排除 Primitivo、Nero d'Avola → 縮小至 Nebbiolo/Sangiovese/Aglianico</div><div class=\"orvieto-card\"><strong>② 香氣找標誌（Aroma Markers）</strong><br>尋找每個品種的獨特標誌香氣：玫瑰焦油？酸櫻桃草本？黑果煙燻？苦杏仁？<br>找到標誌香氣 = 立即縮小至 1-2 個品種</div><div class=\"orvieto-card\"><strong>③ 綜合推論（Conclusion）</strong><br>結構＋香氣＋視覺三重確認 → 得出最合理結論<br>加上年份估算：邊緣顏色＋單寧質地＋香氣類型 → 估算 ±5 年區間</div></div></div>"
     },
     {
       "type": "content",
       "title": "神秘酒款 1 號：義大利紅酒",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">仔細閱讀以下品飲筆記，運用 SAT 演繹推理，得出品種、產區與年份區間的結論。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>品飲筆記</h3><ul><li><strong>視覺（S）：</strong>淺石榴紅色＋明顯橙色邊緣＋高透光性</li><li><strong>嗅覺（A）：</strong>🔥 玫瑰花瓣＋🔥 焦油／柏油、紫羅蘭、甘草、紅櫻桃</li><li><strong>味覺（T）：</strong>極高酸度、極高但細膩的單寧、中等酒體、14% ABV、餘韻 120 秒+</li><li><strong>整體：</strong>優雅強勁，似乎剛進入適飲期</li></ul></div><div class=\"method-card modern\"><h3>演繹推理過程</h3><ul><li><strong>① 結構篩選：</strong>極高酸 + 極高單寧 → 排除南義（Primitivo/Nero d'Avola）</li><li><strong>② 標誌香氣：</strong>玫瑰 + 焦油 → 95% Nebbiolo 確定</li><li><strong>③ 視覺確認：</strong>淺色 + 橙邊 → 符合 Nebbiolo 低花青素</li><li><strong>④ 細化：</strong>焦油明顯 + 120 秒餘韻 → Barolo > Barbaresco</li><li><strong>年份估算：</strong>橙邊 + 焦油 + 單寧已細膩 → 10-15 年</li></ul></div></div></div><div class=\"science-note\">✅ 結論：Barolo DOCG（Nebbiolo），陳年 10-15 年，可能 Riserva 或 MGA 單一園，估價 €80-200</div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">仔細閱讀以下品飲筆記，運用 SAT 演繹推理，得出品種、產區與年份區間的結論。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>品飲筆記</h3><ul><li><strong>視覺（S）：</strong>淺石榴紅色＋明顯橙色邊緣＋高透光性</li><li><strong>嗅覺（A）：</strong>🔥 玫瑰花瓣＋🔥 焦油／柏油、紫羅蘭、甘草、紅櫻桃</li><li><strong>味覺（T）：</strong>極高酸度、極高但細膩的單寧、中等酒體、14% ABV、餘韻 120 秒+</li><li><strong>整體：</strong>優雅強勁，似乎剛進入適飲期</li></ul></div><div class=\"method-card modern\"><h3>演繹推理過程</h3><ul><li><strong>① 結構篩選：</strong>極高酸 + 極高單寧 → 排除南義（Primitivo/Nero d'Avola）</li><li><strong>② 標誌香氣：</strong>玫瑰 + 焦油 → 高度指向 Nebbiolo</li><li><strong>③ 視覺確認：</strong>淺色 + 橙邊 → 符合 Nebbiolo 低花青素</li><li><strong>④ 細化：</strong>焦油明顯 + 120 秒餘韻 → Barolo > Barbaresco</li><li><strong>年份估算：</strong>橙邊 + 焦油 + 單寧已細膩 → 10-15 年</li></ul></div></div></div><div class=\"science-note\">✅ 結論：Barolo DOCG（Nebbiolo），陳年 10-15 年，可能 Riserva 或 MGA 單一園</div></div>"
     },
     {
       "type": "content",
       "title": "神秘酒款 2 號：義大利白酒",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">第二款是義大利白酒，運用同樣的演繹推理方法進行分析。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>品飲筆記</h3><ul><li><strong>視覺（S）：</strong>淡金黃色＋帶微綠光＋清澈透亮</li><li><strong>嗅覺（A）：</strong>🔥 洋甘菊＋白桃＋杏仁花、青蘋果、礦物感</li><li><strong>味覺（T）：</strong>中等酸度、無單寧、中等酒體、圓潤質感、🔥 苦杏仁尾韻明顯</li><li><strong>整體：</strong>清雅圓潤，非常和諧平衡</li></ul></div><div class=\"method-card modern\"><h3>演繹推理過程</h3><ul><li><strong>① 結構篩選：</strong>中等酸度 + 無單寧 + 白酒 → 義大利白酒框架</li><li><strong>② 標誌香氣：</strong>洋甘菊 + 白桃 → Garganega（Soave）的核心標誌</li><li><strong>③ 苦杏仁：</strong>義大利白酒最具識別度的尾韻特徵</li><li><strong>④ 排除：</strong>Pinot Grigio 更清淡；Verdicchio 更高酸帶茴香；Fiano 有蜂蜜榛果</li><li><strong>年份估算：</strong>微綠光 + 清新無陳年 = 年輕（1-3 年）</li></ul></div></div></div><div class=\"science-note\">✅ 結論：Garganega（Soave DOC 或 Soave Classico），1-3 年，估價 €15-40</div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">第二款是義大利白酒，運用同樣的演繹推理方法進行分析。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>品飲筆記</h3><ul><li><strong>視覺（S）：</strong>淡金黃色＋帶微綠光＋清澈透亮</li><li><strong>嗅覺（A）：</strong>🔥 洋甘菊＋白桃＋杏仁花、青蘋果、礦物感</li><li><strong>味覺（T）：</strong>中等酸度、無單寧、中等酒體、圓潤質感、🔥 苦杏仁尾韻明顯</li><li><strong>整體：</strong>清雅圓潤，非常和諧平衡</li></ul></div><div class=\"method-card modern\"><h3>演繹推理過程</h3><ul><li><strong>① 結構篩選：</strong>中等酸度 + 無單寧 + 白酒 → 義大利白酒框架</li><li><strong>② 標誌香氣：</strong>洋甘菊 + 白桃 → Garganega（Soave）的核心標誌</li><li><strong>③ 苦杏仁：</strong>義大利白酒最具識別度的尾韻特徵</li><li><strong>④ 排除：</strong>Pinot Grigio 更清淡；Verdicchio 更高酸帶茴香；Fiano 有蜂蜜榛果</li><li><strong>年份估算：</strong>微綠光 + 清新無陳年 = 年輕（1-3 年）</li></ul></div></div></div><div class=\"science-note\">✅ 結論：Garganega（Soave DOC 或 Soave Classico），1-3 年</div></div>"
     },
     {
       "type": "content",
       "title": "神秘酒款 3 號：義大利氣泡酒",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">第三款是義大利氣泡酒，需先判斷釀造方法，再識別產區。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>品飲筆記</h3><ul><li><strong>視覺（S）：</strong>淡金黃色＋細緻綿密氣泡＋持久泡沫</li><li><strong>嗅覺（A）：</strong>🔥 烤麵包＋布里歐＋餅乾（強烈）、成熟黃蘋果、奶油</li><li><strong>味覺（T）：</strong>高酸度、圓潤奶油感、無甜味（Brut）、長餘韻</li><li><strong>整體：</strong>複雜優雅，明顯酵母自溶特徵</li></ul></div><div class=\"method-card modern\"><h3>演繹推理過程</h3><ul><li><strong>① 釀造法：</strong>強烈烤麵包 + 細緻氣泡 → 傳統法（非查馬法 Prosecco）</li><li><strong>② 產區篩選：</strong>圓潤＋成熟黃蘋果 → Franciacorta（溫暖的 Lombardy）</li><li><strong>③ 排除 Trento DOC：</strong>Trento 更高酸冷冽礦物感，不符圓潤特徵</li><li><strong>④ 排除 Champagne：</strong>Champagne 果味更偏青蘋果（較涼爽），酸度更高</li><li><strong>年份估算：</strong>複雜烤麵包 + 圓潤 = 至少 36 個月與酒渣接觸</li></ul></div></div></div><div class=\"science-note\">✅ 結論：Franciacorta DOCG，傳統法，Brut 等級，估價 €25-60</div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">第三款是義大利氣泡酒，需先判斷釀造方法，再識別產區。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>品飲筆記</h3><ul><li><strong>視覺（S）：</strong>淡金黃色＋細緻綿密氣泡＋持久泡沫</li><li><strong>嗅覺（A）：</strong>🔥 烤麵包＋布里歐＋餅乾（強烈）、成熟黃蘋果、奶油</li><li><strong>味覺（T）：</strong>高酸度、圓潤奶油感、無甜味（Brut）、長餘韻</li><li><strong>整體：</strong>複雜優雅，明顯酵母自溶特徵</li></ul></div><div class=\"method-card modern\"><h3>演繹推理過程</h3><ul><li><strong>① 釀造法：</strong>強烈烤麵包 + 細緻氣泡 → 傳統法（非查馬法 Prosecco）</li><li><strong>② 產區篩選：</strong>圓潤＋成熟黃蘋果 → Franciacorta（溫暖的 Lombardy）</li><li><strong>③ 排除 Trento DOC：</strong>Trento 更高酸冷冽礦物感，不符圓潤特徵</li><li><strong>④ 排除 Champagne：</strong>Champagne 果味更偏青蘋果（較涼爽），酸度更高</li><li><strong>年份估算：</strong>複雜烤麵包 + 圓潤 = 長時間的酒渣接觸（可能 30 個月以上）</li></ul></div></div></div><div class=\"science-note\">✅ 結論：Franciacorta DOCG，傳統法，Brut 等級</div></div>"
     },
     {
       "type": "list",
@@ -76,35 +96,60 @@
         {
           "type": "single",
           "question": "「神秘酒款 1 號」（淺色橙邊、玫瑰焦油香氣、極高酸度與單寧）最可能是？",
-          "options": ["Sangiovese（Chianti Classico）", "Nebbiolo（Barolo）", "Aglianico（Taurasi）", "Barbera（Barbera d'Alba）"],
+          "options": [
+            "Sangiovese（Chianti Classico）",
+            "Nebbiolo（Barolo）",
+            "Aglianico（Taurasi）",
+            "Barbera（Barbera d'Alba）"
+          ],
           "correct": 1,
           "explanation": "「玫瑰 + 焦油（Roses and Tar）」是 Nebbiolo 最經典的香氣標誌，加上淺色橙邊與極高酸度/單寧，完美符合 Barolo 的特徵。"
         },
         {
           "type": "single",
           "question": "「神秘酒款 2 號」（洋甘菊、白桃、圓潤口感、苦杏仁尾韻）最可能是？",
-          "options": ["Pinot Grigio（Delle Venezie）", "Verdicchio（Castelli di Jesi）", "Garganega（Soave）", "Sauvignon Blanc（Alto Adige）"],
+          "options": [
+            "Pinot Grigio（Delle Venezie）",
+            "Verdicchio（Castelli di Jesi）",
+            "Garganega（Soave）",
+            "Sauvignon Blanc（Alto Adige）"
+          ],
           "correct": 2,
           "explanation": "洋甘菊與白桃香氣，加上圓潤的口感與苦杏仁尾韻，是 Garganega（Soave）的標準盲品特徵。Pinot Grigio 更清淡，Verdicchio 酸度更高且帶茴香。"
         },
         {
           "type": "single",
           "question": "「神秘酒款 3 號」（細緻氣泡、成熟黃蘋果、強烈烤麵包/布里歐香氣、圓潤口感）最可能是？",
-          "options": ["Prosecco（Valdobbiadene）", "Asti（Moscato d'Asti）", "Trento DOC", "Franciacorta"],
+          "options": [
+            "Prosecco（Valdobbiadene）",
+            "Asti（Moscato d'Asti）",
+            "Trento DOC",
+            "Franciacorta"
+          ],
           "correct": 3,
           "explanation": "強烈的烤麵包味 → 傳統法（排除查馬法的 Prosecco/Asti）。成熟黃蘋果與圓潤口感 → Franciacorta（Lombardy 較溫暖），而非高酸冷冽的 Trento DOC。"
         },
         {
           "type": "single",
           "question": "顏色深邃不透光、黑莓火山灰煙燻香氣、單寧極其強烈厚實，最可能是哪個品種？",
-          "options": ["Nebbiolo", "Sangiovese", "Aglianico", "Corvina"],
+          "options": [
+            "Nebbiolo",
+            "Sangiovese",
+            "Aglianico",
+            "Corvina"
+          ],
           "correct": 2,
           "explanation": "深邃顏色、黑色水果、火山煙燻氣息以及極其強烈的單寧，是南部霸主 Aglianico（如 Taurasi DOCG）的經典特徵。"
         },
         {
           "type": "single",
           "question": "盲品中最危險的心理偏誤是？",
-          "options": ["過度依賴視覺排除年份線索", "確認偏誤（Confirmation Bias）：先入為主後只找支持假設的證據", "低估香氣揮發速度", "混淆酒體與酸度"],
+          "options": [
+            "過度依賴視覺排除年份線索",
+            "確認偏誤（Confirmation Bias）：先入為主後只找支持假設的證據",
+            "低估香氣揮發速度",
+            "混淆酒體與酸度"
+          ],
           "correct": 1,
           "explanation": "確認偏誤是盲品最危險的心理陷阱：一旦認定品種（如 Nebbiolo），會不自覺地只尋找支持證據而忽略矛盾線索。SAT 系統的作用之一就是強迫品鑑者收集所有數據後再下結論。"
         }

@@ -11,7 +11,7 @@
         "消費者不喜歡"
       ],
       "answer": 1,
-      "explanation": "義大利品種國際化困難源於：對風土要求極端（離開原產地難以複製）、克隆眾多且差異大、消費者認知度低、許多品種需 8-15 年陳年（不符合新世界即飲市場）。"
+      "explanation": "義大利品種國際化困難源於：對風土要求極端（離開原產地難以複製）、克隆眾多且差異大、消費者認知度低、許多品種需要多年陳年（不符合新世界即飲市場）。"
     },
     {
       "question": "美國加州哪個產區的 Sangiovese 最成功？",
@@ -22,23 +22,23 @@
         "Paso Robles"
       ],
       "answer": 1,
-      "explanation": "Napa Valley 的 Atlas Peak 產區（海拔 400-600m、火山土壤）是加州 Sangiovese 最成功的產區，氣候、土壤條件最接近 Tuscany。"
+      "explanation": "Napa Valley 的 Atlas Peak 產區（高海拔、火山土壤）是加州 Sangiovese 最具代表性的產區，條件較接近 Tuscany。"
     },
     {
-      "question": "Argentina 的 Bonarda 實際上是哪個義大利品種？",
+      "question": "Argentina 的 Bonarda 經 DNA 研究證實是哪個品種？",
       "options": [
-        "真正的 Bonarda",
-        "Croatina",
+        "義大利北部的 Croatina",
+        "Douce Noir（加州稱 Charbono）",
         "Barbera",
         "Dolcetto"
       ],
       "answer": 1,
-      "explanation": "DNA 研究證明，Argentina 的 \"Bonarda\" 實際上是義大利北部的 Croatina 品種，不是 Piemonte 的 Bonarda！這是常見的名稱混淆。"
+      "explanation": "DNA 研究證實，Argentina 的「Bonarda」其實是源自法國 Savoie 的 Douce Noir（加州稱 Charbono），既不是 Piemonte 的 Bonarda，也不是 Oltrepò Pavese 被稱為 Bonarda 的 Croatina。這是常見的名稱混淆。"
     },
     {
       "question": "Prosecco 全球化成功的關鍵因素不包括？",
       "options": [
-        "價格親民（€8-15）",
+        "價格親民",
         "風格易飲、果香豐富",
         "品牌命名簡單易記",
         "需要長期陳年"
@@ -56,37 +56,37 @@
     {
       "type": "content",
       "title": "🌍 義大利品種全球化 — 四大挑戰",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">相比法國品種的全球化成功，義大利品種在海外面臨更大障礙 —— <span class=\"intro-highlight\">風土依賴性強、克隆複雜度高、消費者知識門檻、長期陳年需求，是四大核心挑戰；但Sangiovese/Barbera/Prosecco已有成功案例</span></p></div><div class=\"winemaking-section\"><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🍇 品種固有挑戰</h4><p><strong>風土依賴性極強：</strong>Nebbiolo、Sangiovese 對地質氣候要求極端，離開Piemonte/Tuscany難達同等品質；99%的Nebbiolo仍在Piemonte</p><p><strong>克隆複雜性：</strong>Sangiovese 200+克隆差異極大；Nebbiolo各產區獨特選種；海外種植者選錯克隆即失敗</p><p><strong>品種個性矛盾：</strong>高酸+高單寧在未陳年時難以享用，消費者初次品飲體驗差，市場推廣困難</p></div><div class=\"method-card modern\"><h4>📊 市場行銷挑戰</h4><p><strong>消費者知識門檻高：</strong>「Chianti Classico Gran Selezione」複雜難懂 vs「Cabernet Sauvignon」全球皆知，義大利品種需大量消費者教育</p><p><strong>長期陳年需求：</strong>Nebbiolo 8-15年、Aglianico 10-20年，酒莊現金流壓力大，不符合新世界「即飲」市場需求</p><p><strong>競爭對手強：</strong>法國Bordeaux/Burgundy品種早已全球化佈局，義大利品種後進搶佔市場先天劣勢</p></div></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">200+克隆</div><div class=\"stat-label\">Sangiovese複雜性</div></div><div class=\"stat-box\"><div class=\"stat-number\">8-15年</div><div class=\"stat-label\">Nebbiolo陳年需求</div></div><div class=\"stat-box\"><div class=\"stat-number\">99%</div><div class=\"stat-label\">Nebbiolo留在Piemonte</div></div><div class=\"stat-box\"><div class=\"stat-number\">1980年代</div><div class=\"stat-label\">Cal-Ital運動起點</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">相比法國品種的全球化成功，義大利品種在海外面臨更大障礙 —— <span class=\"intro-highlight\">風土依賴性強、克隆複雜度高、消費者知識門檻、長期陳年需求，是四大核心挑戰；但Sangiovese/Barbera/Prosecco已有成功案例</span></p></div><div class=\"winemaking-section\"><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🍇 品種固有挑戰</h4><p><strong>風土依賴性極強：</strong>Nebbiolo、Sangiovese 對地質氣候要求極端，離開Piemonte/Tuscany難達同等品質；Nebbiolo至今仍以Piemonte為中心</p><p><strong>克隆複雜性：</strong>Sangiovese 有數十個登記克隆，差異極大；Nebbiolo各產區獨特選種；海外種植者選錯克隆即失敗</p><p><strong>品種個性矛盾：</strong>高酸+高單寧在未陳年時難以享用，消費者初次品飲體驗差，市場推廣困難</p></div><div class=\"method-card modern\"><h4>📊 市場行銷挑戰</h4><p><strong>消費者知識門檻高：</strong>「Chianti Classico Gran Selezione」複雜難懂 vs「Cabernet Sauvignon」全球皆知，義大利品種需大量消費者教育</p><p><strong>長期陳年需求：</strong>Nebbiolo、Aglianico 等需要多年陳年，酒莊現金流壓力大，不符合新世界「即飲」市場需求</p><p><strong>競爭對手強：</strong>法國Bordeaux/Burgundy品種早已全球化佈局，義大利品種後進搶佔市場先天劣勢</p></div></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">數十個克隆</div><div class=\"stat-label\">Sangiovese複雜性</div></div><div class=\"stat-box\"><div class=\"stat-number\">8-15年</div><div class=\"stat-label\">Nebbiolo陳年需求</div></div><div class=\"stat-box\"><div class=\"stat-number\">Piemonte</div><div class=\"stat-label\">Nebbiolo的中心</div></div><div class=\"stat-box\"><div class=\"stat-number\">1980年代</div><div class=\"stat-label\">Cal-Ital運動起點</div></div></div>"
     },
     {
       "type": "content",
       "title": "🇺🇸 美國加州 — Sangiovese & Barbera",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">19世紀末義大利移民帶入品種，1980年代Cal-Ital運動復興 —— <span class=\"intro-highlight\">Sangiovese在Atlas Peak（Napa，火山土，海拔400-600m）表現最佳；Barbera老藤（80-120年）在Sierra Foothills受追捧</span></p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🍷</div><h4>Sangiovese in California</h4><p><strong>最佳產區：</strong>Atlas Peak（Napa，海拔400-600m，火山土，最接近Tuscany條件）</p><p><strong>其他：</strong>Dry Creek Valley（Sonoma，溫暖果香）/ Sierra Foothills（義大利移民傳統區）</p><p><strong>加州風格：</strong>果香更豐富、酒體更飽滿（充足陽光），酒精14-15%，橡木影響明顯</p><p><strong>挑戰：</strong>早期克隆選擇錯誤（大量生產克隆）+ 氣候過熱失去酸度</p><p><strong>代表：</strong>Seghesio / Atlas Peak Vineyards / Shafer \"Firebreak\"</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🍇</div><h4>Barbera in California</h4><p><strong>老藤寶庫：</strong>Amador County（Sierra Foothills），80-120年老藤，Piemonte移民傳承</p><p><strong>其他：</strong>Central Valley（大量生產日常款）/ Paso Robles（現代橡木風格）</p><p><strong>風格：</strong>保留高酸度核心特性，果香豐富（黑莓黑櫻桃），酒精13.5-15%</p><p><strong>市場：</strong>義大利餐廳配酒首選；日常款$15-30；老藤版$40-60受愛好者追捧</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">19世紀末</div><div class=\"stat-label\">義大利移民帶入品種</div></div><div class=\"stat-box\"><div class=\"stat-number\">Atlas Peak</div><div class=\"stat-label\">Sangiovese加州最佳產區</div></div><div class=\"stat-box\"><div class=\"stat-number\">老藤120年</div><div class=\"stat-label\">Amador County Barbera</div></div><div class=\"stat-box\"><div class=\"stat-number\">Cal-Ital</div><div class=\"stat-label\">1980年代義大利品種復興</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">19世紀末義大利移民帶入品種，1980年代Cal-Ital運動復興 —— <span class=\"intro-highlight\">Sangiovese以Atlas Peak（Napa，火山土，高海拔）最具代表性；Sierra Foothills的Barbera老藤受到追捧</span></p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🍷</div><h4>Sangiovese in California</h4><p><strong>代表產區：</strong>Atlas Peak（Napa，高海拔火山土，條件較接近Tuscany）</p><p><strong>其他：</strong>Dry Creek Valley（Sonoma，溫暖果香）/ Sierra Foothills（義大利移民傳統區）</p><p><strong>加州風格：</strong>果香更豐富、酒體更飽滿（充足陽光），酒精14-15%，橡木影響明顯</p><p><strong>挑戰：</strong>早期克隆選擇錯誤（大量生產克隆）+ 氣候過熱失去酸度</p><p><strong>代表：</strong>Seghesio / Atlas Peak Vineyards / Shafer \"Firebreak\"</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🍇</div><h4>Barbera in California</h4><p><strong>老藤寶庫：</strong>Amador County（Sierra Foothills），保留部分義大利移民種下的老藤</p><p><strong>其他：</strong>Central Valley（大量生產日常款）/ Paso Robles（現代橡木風格）</p><p><strong>風格：</strong>保留高酸度核心特性，果香豐富（黑莓黑櫻桃），酒精13.5-15%</p><p><strong>市場：</strong>義大利餐廳配酒的熱門選擇；老藤版受愛好者追捧</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">19世紀末</div><div class=\"stat-label\">義大利移民帶入品種</div></div><div class=\"stat-box\"><div class=\"stat-number\">Atlas Peak</div><div class=\"stat-label\">Sangiovese加州最佳產區</div></div><div class=\"stat-box\"><div class=\"stat-number\">老藤</div><div class=\"stat-label\">Amador County Barbera</div></div><div class=\"stat-box\"><div class=\"stat-number\">Cal-Ital</div><div class=\"stat-label\">1980年代義大利品種復興</div></div></div>"
     },
     {
       "type": "content",
       "title": "🇺🇸 美國加州 — Nebbiolo & Cal-Ital 運動",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">Cal-Ital 運動最大的挑戰 —— <span class=\"intro-highlight\">Nebbiolo 是最難移植的品種，加州至今尚未成功複製 Barolo/Barbaresco 品質，氣候與微氣候差異是核心問題</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🍷 Nebbiolo in California</h4><p><strong>種植面積：</strong>極少（&lt;100公頃），尚無商業規模</p><p><strong>主要：</strong>Spring Mountain（Napa高海拔）/ Westside（Paso Robles，石灰岩）/ Ballard Canyon（Santa Barbara，海洋影響）</p><p><strong>最大挑戰：</strong>氣候過熱→成熟度過高→失去Barolo/Barbaresco的優雅感</p><p><strong>微氣候缺失：</strong>Piemonte的秋季霧氣（Nebbia）延遲採收 + 保持酸度，加州無法複製</p><p><strong>克隆問題：</strong>正確克隆（Lampia/Michet/Rosé）在加州極少，多數使用品質次等克隆</p><p><strong>結論：</strong>至今未成功複製Barolo/Barbaresco品質水準</p></div><div class=\"style-card sweet\"><h4>🌟 Cal-Ital 運動總結</h4><p><strong>起源（1980年代）：</strong>一批有義大利情懷的加州酒農嘗試種植義大利品種，稱為「Cal-Ital」運動</p><p><strong>先鋒酒莊：</strong>Robert Pepi（Sangiovese先鋒）/ Atlas Peak Vineyards / Seghesio（Sangiovese+Barbera）</p><p><strong>✅ 成功：</strong>Sangiovese（Atlas Peak有高品質）/ Barbera（老藤Amador County）</p><p><strong>❌ 尚未成功：</strong>Nebbiolo / Sagrantino / Aglianico（高度風土依賴）</p><p><strong>成功關鍵：</strong>選對氣候+土壤+克隆，而非僅僅種植品種就能複製義大利品質</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">成功</div><div class=\"stat-label\">Sangiovese + Barbera</div></div><div class=\"stat-box\"><div class=\"stat-number\">困難</div><div class=\"stat-label\">Nebbiolo（霧氣缺失）</div></div><div class=\"stat-box\"><div class=\"stat-number\">關鍵</div><div class=\"stat-label\">克隆+氣候+土壤三者缺一不可</div></div><div class=\"stat-box\"><div class=\"stat-number\">Cal-Ital</div><div class=\"stat-label\">仍是小眾但有忠誠市場</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Cal-Ital 運動最大的挑戰 —— <span class=\"intro-highlight\">Nebbiolo 是最難移植的品種，加州至今尚未成功複製 Barolo/Barbaresco 品質，氣候與微氣候差異是核心問題</span></p></div><div class=\"sagrantino-styles\"><div class=\"style-card dry\"><h4>🍷 Nebbiolo in California</h4><p><strong>種植面積：</strong>極少，尚無商業規模</p><p><strong>主要：</strong>Spring Mountain（Napa高海拔）/ Westside（Paso Robles，石灰岩）/ Ballard Canyon（Santa Barbara，海洋影響）</p><p><strong>最大挑戰：</strong>氣候過熱→成熟度過高→失去Barolo/Barbaresco的優雅感</p><p><strong>微氣候缺失：</strong>Piemonte的秋季霧氣（Nebbia）延遲採收 + 保持酸度，加州無法複製</p><p><strong>克隆問題：</strong>正確克隆（Lampia/Michet/Rosé）在加州極少，多數使用品質次等克隆</p><p><strong>結論：</strong>至今未成功複製Barolo/Barbaresco品質水準</p></div><div class=\"style-card sweet\"><h4>🌟 Cal-Ital 運動總結</h4><p><strong>起源（1980年代）：</strong>一批有義大利情懷的加州酒農嘗試種植義大利品種，稱為「Cal-Ital」運動</p><p><strong>先鋒酒莊：</strong>Robert Pepi（Sangiovese先鋒）/ Atlas Peak Vineyards / Seghesio（Sangiovese+Barbera）</p><p><strong>✅ 成功：</strong>Sangiovese（Atlas Peak有高品質）/ Barbera（老藤Amador County）</p><p><strong>❌ 尚未成功：</strong>Nebbiolo / Sagrantino / Aglianico（高度風土依賴）</p><p><strong>成功關鍵：</strong>選對氣候+土壤+克隆，而非僅僅種植品種就能複製義大利品質</p></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">成功</div><div class=\"stat-label\">Sangiovese + Barbera</div></div><div class=\"stat-box\"><div class=\"stat-number\">困難</div><div class=\"stat-label\">Nebbiolo（霧氣缺失）</div></div><div class=\"stat-box\"><div class=\"stat-number\">關鍵</div><div class=\"stat-label\">克隆+氣候+土壤三者缺一不可</div></div><div class=\"stat-box\"><div class=\"stat-number\">Cal-Ital</div><div class=\"stat-label\">仍是小眾但有忠誠市場</div></div></div>"
     },
     {
       "type": "content",
       "title": "🇦🇺 澳洲 — King Valley 義大利品種實驗場",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">澳洲義大利移民的葡萄酒遺產 —— <span class=\"intro-highlight\">Victoria 州的 King Valley 是澳洲義大利品種研究中心，義大利裔家族酒農世代傳承，Sangiovese、Barbera 已有穩定品質</span></p></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🏔️ King Valley（Victoria）— 義大利品種總部</strong><p>1800年代末義大利移民定居，種植家鄉品種。現為澳洲義大利品種研究中心，海拔200-800m晝夜溫差大，保留酸度。代表：Pizzini Family（義大利裔）/ Chalmers（義大利品種專家）。主要品種：Sangiovese / Barbera / Nebbiolo / Arneis / Pinot Grigio。</p></div><div class=\"orvieto-card\"><strong>🌡️ Adelaide Hills &amp; McLaren Vale（South Australia）</strong><p>Adelaide Hills（冷涼高海拔）：Sangiovese最優雅風格，最接近義大利原產地。MLaren Vale（溫暖）：Sangiovese果香豐富飽滿，現代風格。代表：Coriole（McLaren Vale，1980年代澳洲Sangiovese先鋒）。</p></div><div class=\"orvieto-card\"><strong>📊 澳洲義大利品種現況總結</strong><p>✅ 成功：Sangiovese + Barbera（穩定市場，義大利餐廳首選，King Valley特色）。❌ 挑戰：Nebbiolo（陽光過強，大多過度成熟，尚未商業化成功）。特點：澳洲傾向「新世界」風格（果香爆炸、橡木明顯），規模仍小眾（義大利品種&lt;3%種植面積）。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">King Valley</div><div class=\"stat-label\">澳洲義大利品種中心</div></div><div class=\"stat-box\"><div class=\"stat-number\">1980年代</div><div class=\"stat-label\">Coriole Sangiovese先鋒</div></div><div class=\"stat-box\"><div class=\"stat-number\">200-800m</div><div class=\"stat-label\">King Valley海拔範圍</div></div><div class=\"stat-box\"><div class=\"stat-number\">&lt;3%</div><div class=\"stat-label\">澳洲義大利品種佔比</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">澳洲義大利移民的葡萄酒遺產 —— <span class=\"intro-highlight\">Victoria 州的 King Valley 是澳洲義大利品種研究中心，義大利裔家族酒農世代傳承，Sangiovese、Barbera 已有穩定品質</span></p></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🏔️ King Valley（Victoria）— 義大利品種總部</strong><p>二戰後大批義大利移民在此種植菸草，後來改種葡萄並引進家鄉品種。現為澳洲義大利品種的重鎮，海拔落差大、晝夜溫差大，有助保留酸度。代表：Pizzini、Dal Zotto（義大利裔家族）；Victoria的Chalmers則以引進大量義大利品種聞名。主要品種：Sangiovese / Barbera / Nebbiolo / Arneis / Pinot Grigio。</p></div><div class=\"orvieto-card\"><strong>🌡️ Adelaide Hills &amp; McLaren Vale（South Australia）</strong><p>Adelaide Hills（冷涼高海拔）：Sangiovese最優雅風格，最接近義大利原產地。McLaren Vale（溫暖）：Sangiovese果香豐富飽滿，現代風格。代表：Coriole（McLaren Vale，1980年代澳洲Sangiovese先鋒）。</p></div><div class=\"orvieto-card\"><strong>📊 澳洲義大利品種現況總結</strong><p>✅ 成功：Sangiovese + Barbera（穩定市場，義大利餐廳首選，King Valley特色）。❌ 挑戰：Nebbiolo（陽光過強，大多過度成熟，尚未商業化成功）。特點：澳洲傾向「新世界」風格（果香爆炸、橡木明顯），整體規模仍屬小眾。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">King Valley</div><div class=\"stat-label\">澳洲義大利品種中心</div></div><div class=\"stat-box\"><div class=\"stat-number\">1980年代</div><div class=\"stat-label\">Coriole Sangiovese先鋒</div></div><div class=\"stat-box\"><div class=\"stat-number\">二戰後</div><div class=\"stat-label\">義大利移民在King Valley定居</div></div><div class=\"stat-box\"><div class=\"stat-number\">小眾</div><div class=\"stat-label\">義大利品種在澳洲的規模</div></div></div>"
     },
     {
       "type": "content",
       "title": "🇦🇷 Argentina — 高海拔遺產 & Bonarda 大混淆",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">義大利移民最多的南美國家（60%人口有義大利血統）—— <span class=\"intro-highlight\">高海拔Mendoza保留了Barbera的酸度特性；但Argentina最著名的義大利品種「Bonarda」其實是DNA證明的Croatina，不是真正的Bonarda！</span></p></div><div class=\"winemaking-section\"><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🏔️ Barbera &amp; Sangiovese in Argentina</h4><p><strong>歷史：</strong>19世紀末義大利移民帶來品種，60%阿根廷人有義大利血統</p><p><strong>主要：</strong>Mendoza Maipú/Luján de Cuyo（海拔900-1200m）/ San Juan（更熱）</p><p><strong>高海拔優勢：</strong>保留Barbera酸度（TA 6-8 g/L，核心特性維持），晝夜溫差大</p><p><strong>風格：</strong>果香濃郁（黑果），酒精13.5-15%，現代法國橡木桶陳年12-18個月</p><p><strong>挑戰：</strong>Malbec主導市場→義大利品種難以推廣，消費者認知度低</p></div><div class=\"method-card modern\"><h4>🧬 Bonarda（= Croatina）DNA 大揭秘</h4><p><strong>重要發現：</strong>Argentina的「Bonarda」不是義大利Piemonte的Bonarda（=Uva Rara）！</p><p><strong>DNA研究：</strong>Argentine Bonarda = 義大利北部的 <strong>Croatina</strong> 品種（已確認）</p><p><strong>種植面積：</strong>18,000公頃（Argentina第二大紅葡萄），規模龐大</p><p><strong>風格：</strong>深紫色、果香爆炸（黑果香料）、單寧柔軟、易飲</p><p><strong>價格：</strong>USD $8-15，親民日常</p><p><strong>意義：</strong>義大利移民帶來Croatina，但長期用錯名稱，DNA研究才揭開真相</p></div></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">60%</div><div class=\"stat-label\">Argentina人口有義大利血統</div></div><div class=\"stat-box\"><div class=\"stat-number\">900-1200m</div><div class=\"stat-label\">Mendoza Barbera高海拔</div></div><div class=\"stat-box\"><div class=\"stat-number\">18,000公頃</div><div class=\"stat-label\">Argentine Bonarda種植面積</div></div><div class=\"stat-box\"><div class=\"stat-number\">Croatina</div><div class=\"stat-label\">Bonarda真實DNA身份</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">義大利移民最多的南美國家之一（據估計超過一半人口有義大利血統）—— <span class=\"intro-highlight\">高海拔Mendoza保留了Barbera的酸度特性；但Argentina的「Bonarda」經DNA證實其實是源自法國Savoie的Douce Noir，不是義大利的Bonarda！</span></p></div><div class=\"winemaking-section\"><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h4>🏔️ Barbera &amp; Sangiovese in Argentina</h4><p><strong>歷史：</strong>19世紀末起大批義大利移民帶來家鄉品種</p><p><strong>主要：</strong>Mendoza Maipú/Luján de Cuyo（海拔900-1200m）/ San Juan（更熱）</p><p><strong>高海拔優勢：</strong>晝夜溫差大，保留Barbera的酸度</p><p><strong>風格：</strong>果香濃郁（黑果），酒精13.5-15%，部分以法國橡木桶陳年</p><p><strong>挑戰：</strong>Malbec主導市場→義大利品種難以推廣，消費者認知度低</p></div><div class=\"method-card modern\"><h4>🧬 Bonarda（= Douce Noir）DNA 大揭秘</h4><p><strong>重要發現：</strong>Argentina的「Bonarda」既不是Piemonte的Bonarda，也不是Oltrepò Pavese稱為Bonarda的Croatina！</p><p><strong>DNA研究：</strong>Argentine Bonarda = 源自法國Savoie的 <strong>Douce Noir</strong>（加州稱Charbono）</p><p><strong>種植面積：</strong>Argentina種植面積僅次於Malbec的紅葡萄之一，規模龐大</p><p><strong>風格：</strong>深紫色、果香爆炸（黑果香料）、單寧柔軟、易飲</p><p><strong>定位：</strong>親民的日常紅酒</p><p><strong>意義：</strong>長期被當成義大利品種，DNA研究才揭開真相</p></div></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">過半</div><div class=\"stat-label\">Argentina人口有義大利血統（估計）</div></div><div class=\"stat-box\"><div class=\"stat-number\">高海拔</div><div class=\"stat-label\">Mendoza保留酸度</div></div><div class=\"stat-box\"><div class=\"stat-number\">Malbec之後</div><div class=\"stat-label\">Argentine Bonarda的種植規模</div></div><div class=\"stat-box\"><div class=\"stat-number\">Douce Noir</div><div class=\"stat-label\">Bonarda真實DNA身份</div></div></div>"
     },
     {
       "type": "content",
       "title": "🌍 其他國家義大利品種概覽",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">從巴西到南非，從紐西蘭到墨西哥 —— <span class=\"intro-highlight\">全球多個國家均有義大利品種種植，但大多數仍屬實驗小眾階段，尚未達到商業化成功</span></p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🇧🇷 Brazil — Rio Grande do Sul</div><div class=\"mf-prod\">義大利移民最多的南美國家之一，Serra Gaúcha為主產區。主要：Barbera（保留高酸，適應酸性土壤）/ 少量Sangiovese。挑戰：高濕度氣候，成熟困難，品質參差不齊，市場以本土消費為主。</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🇿🇦 South Africa — Stellenbosch</div><div class=\"mf-prod\">約100公頃Sangiovese（全國總量），Fairview、Neil Ellis等少數酒莊嘗試。風格：果香豐富、酒體飽滿，但缺乏義大利原產地的礦物感與複雜度。仍屬小眾實驗。</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🇳🇿 New Zealand — Hawke's Bay</div><div class=\"mf-prod\">約50公頃Sangiovese，極少量Nebbiolo。冷涼海洋氣候→保留酸度，但生長季高濕度、成熟度挑戰大。目前品質尚不穩定，仍在摸索適合微氣候的區塊。</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🇲🇽 Mexico — Valle de Guadalupe</div><div class=\"mf-prod\">Baja California產區小量實驗性種植Sangiovese / Nebbiolo。氣候過熱乾燥，尚未找到適合義大利品種的微氣候。目前結論：高溫是最大障礙，需要更高海拔地塊。</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">從巴西到南非，從紐西蘭到墨西哥 —— <span class=\"intro-highlight\">全球多個國家均有義大利品種種植，但大多數仍屬實驗小眾階段，尚未達到商業化成功</span></p></div><div class=\"mf-zones\"><div class=\"mf-zone center\"><div class=\"mf-style\">🇧🇷 Brazil — Rio Grande do Sul</div><div class=\"mf-prod\">義大利移民最多的南美國家之一，Serra Gaúcha為主產區。主要：Barbera / 少量Sangiovese。挑戰：高濕度氣候，成熟困難，品質參差不齊，市場以本土消費為主。</div></div><div class=\"mf-zone warm\"><div class=\"mf-style\">🇿🇦 South Africa — Stellenbosch</div><div class=\"mf-prod\">Sangiovese種植面積很小，Fairview、Neil Ellis等少數酒莊嘗試。風格：果香豐富、酒體飽滿，但缺乏義大利原產地的礦物感與複雜度。仍屬小眾實驗。</div></div><div class=\"mf-zone cool\"><div class=\"mf-style\">🇳🇿 New Zealand — Hawke's Bay</div><div class=\"mf-prod\">少量Sangiovese與極少量Nebbiolo。冷涼海洋氣候→保留酸度，但生長季高濕度、成熟度挑戰大。目前品質尚不穩定，仍在摸索適合微氣候的區塊。</div></div><div class=\"mf-zone plain\"><div class=\"mf-style\">🇲🇽 Mexico — Valle de Guadalupe</div><div class=\"mf-prod\">Baja California產區小量實驗性種植Sangiovese / Nebbiolo。氣候過熱乾燥，尚未找到適合義大利品種的微氣候。目前結論：高溫是最大障礙，需要更高海拔地塊。</div></div></div>"
     },
     {
       "type": "content",
       "title": "🍾 Prosecco — 義大利品種國際化傳奇",
-      "content": "<div class=\"history-section\"><p class=\"history-intro\">Glera 品種 + Charmat法的完美組合 —— <span class=\"intro-highlight\">Prosecco 是義大利品種全球化最成功案例，年銷量615M瓶，超越Champagne（300M瓶），成為全球最暢銷氣泡酒</span></p></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>💶 產品優勢</strong><p>品種：Glera（2009年確立正式品種名）。Charmat法（密封大桶二次發酵，比Champagne方法更快更便宜）。風格：輕盈果香、微甜（Extra Dry/Brut）、低酒精（11%）、容易理解。價格：€8-15（Champagne €30-80），大眾市場精準定位。</p></div><div class=\"orvieto-card\"><strong>📣 行銷策略成功</strong><p>品牌命名：「Prosecco」3個音節，比「Champagne」更易於全球各語系發音記憶。場合定位：「慶祝 + Aperitivo + 派對」，不與正式晚宴用Champagne競爭。Aperol Spritz效應：Prosecco + Aperol + 蘇打水，成為全球最流行雞尾酒，帶動整體銷量爆發。</p></div><div class=\"orvieto-card\"><strong>🔒 產區保護策略</strong><p>2009年：Prosecco升格DOC + DOCG（Conegliano Valdobbiadene），阻止全球仿冒。品質階梯：DOCG Rive（單一村莊，最頂級）&gt; DOCG &gt; DOC，差異化成功。Consorzio（產區協會）大力推廣，贊助全球音樂節、酒吧教育活動。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">615M瓶/年</div><div class=\"stat-label\">超越Champagne（300M）</div></div><div class=\"stat-box\"><div class=\"stat-number\">€2.7B</div><div class=\"stat-label\">2022年出口總值</div></div><div class=\"stat-box\"><div class=\"stat-number\">85+國家</div><div class=\"stat-label\">全球出口範圍</div></div><div class=\"stat-box\"><div class=\"stat-number\">2009年</div><div class=\"stat-label\">DOC/DOCG保護生效</div></div></div>"
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">Glera 品種 + Charmat法的完美組合 —— <span class=\"intro-highlight\">Prosecco 是義大利品種全球化最成功案例，年產量已達數億瓶，遠超Champagne，成為全球最暢銷的氣泡酒之一</span></p></div><div class=\"orvieto-section\"><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>💶 產品優勢</strong><p>品種：Glera（2009年確立正式品種名）。Charmat法（密封大桶二次發酵，比Champagne方法更快更便宜）。風格：輕盈果香、微甜（Extra Dry/Brut）、低酒精（約11%）、容易理解。價格親民，大眾市場精準定位。</p></div><div class=\"orvieto-card\"><strong>📣 行銷策略成功</strong><p>品牌命名：「Prosecco」3個音節，比「Champagne」更易於全球各語系發音記憶。場合定位：「慶祝 + Aperitivo + 派對」，不與正式晚宴用Champagne競爭。Aperol Spritz效應：Prosecco + Aperol + 蘇打水，成為全球最流行雞尾酒，帶動整體銷量爆發。</p></div><div class=\"orvieto-card\"><strong>🔒 產區保護策略</strong><p>2009年：Prosecco升格DOC + DOCG（Conegliano Valdobbiadene），阻止全球仿冒。品質階梯：Superiore di Cartizze與Rive（特定村莊的陡坡葡萄園）&gt; Conegliano Valdobbiadene與Asolo DOCG &gt; Prosecco DOC，差異化成功。Consorzio（產區協會）大力推廣，贊助全球音樂節、酒吧教育活動。</p></div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">數億瓶/年</div><div class=\"stat-label\">產量遠超Champagne</div></div><div class=\"stat-box\"><div class=\"stat-number\">Glera</div><div class=\"stat-label\">2009年確立的品種名</div></div><div class=\"stat-box\"><div class=\"stat-number\">Aperol Spritz</div><div class=\"stat-label\">帶動全球銷量</div></div><div class=\"stat-box\"><div class=\"stat-number\">2009年</div><div class=\"stat-label\">DOC/DOCG保護生效</div></div></div>"
     },
     {
       "type": "content",
@@ -97,20 +97,20 @@
       "type": "list",
       "title": "🎓 重點回顧",
       "points": [
-        "✓ 義大利品種國際化四大挑戰：風土依賴性強、克隆複雜（Sangiovese 200+克隆）、消費者知識門檻高、長期陳年需求（Nebbiolo 8-15年）",
-        "✓ 美國加州：Sangiovese 在 Napa Atlas Peak（火山土，400-600m）表現最佳；Barbera 老藤（Amador County，80-120年）受追捧；Nebbiolo 至今未成功",
+        "✓ 義大利品種國際化四大挑戰：風土依賴性強、克隆複雜（Sangiovese數十個克隆）、消費者知識門檻高、長期陳年需求",
+        "✓ 美國加州：Sangiovese 以 Napa Atlas Peak（高海拔火山土）最具代表性；Amador County 的 Barbera 老藤受追捧；Nebbiolo 至今未成功",
         "✓ Cal-Ital 運動（1980年代）：成功引入Sangiovese/Barbera，但Nebbiolo/Aglianico因高度風土依賴至今難以複製",
-        "✓ 澳洲 King Valley：義大利移民農莊聚集，Sangiovese/Barbera已有穩定品質；Nebbiolo因陽光過強大多過度成熟",
-        "✓ Argentina：高海拔Mendoza（900-1200m）保留Barbera酸度；「Bonarda」18,000公頃，DNA證實實際是Croatina，不是真正的Bonarda",
+        "✓ 澳洲 King Valley：二戰後義大利移民聚集，Sangiovese/Barbera已有穩定品質；Nebbiolo因陽光過強大多過度成熟",
+        "✓ Argentina：高海拔Mendoza保留Barbera酸度；大面積種植的「Bonarda」經DNA證實是Douce Noir（加州稱Charbono），不是義大利品種",
         "✓ 其他國家（Brazil/S.Africa/NZ/Mexico）均處於實驗小眾階段，高濕度或過熱氣候是主要障礙",
-        "✓ Prosecco（Glera品種）是義大利品種全球化最成功案例，年銷615M瓶超越Champagne（300M），2009年DOC/DOCG保護義大利專屬權",
-        "✓ Prosecco成功三要素：價格親民（€8-15）+ 風格易飲（低門檻）+ 品牌命名簡單（可全球語系發音）",
+        "✓ Prosecco（Glera品種）是義大利品種全球化最成功案例，年產量達數億瓶，遠超Champagne，2009年DOC/DOCG保護義大利專屬權",
+        "✓ Prosecco成功三要素：價格親民+ 風格易飲（低門檻）+ 品牌命名簡單（可全球語系發音）",
         "✓ 新世界義大利品種風格特點：果香更豐富、酒體更飽滿、橡木影響更明顯、酒精稍高、適飲期更早；義大利原產地以礦物感+高架構+陳年複雜度勝出"
       ]
     },
     {
       "type": "quiz",
-      "title": "🧠 白葡萄品種進階知識檢測",
+      "title": "🧠 義大利品種國際化知識檢測",
       "_marker": "// inject-italy-l2-quiz",
       "questions": [
         {
@@ -123,7 +123,7 @@
             "消費者不喜歡"
           ],
           "correct": 1,
-          "explanation": "義大利品種國際化困難源於：對風土要求極端（離開原產地難以複製）、克隆眾多且差異大、消費者認知度低、許多品種需 8-15 年陳年（不符合新世界即飲市場）。"
+          "explanation": "義大利品種國際化困難源於：對風土要求極端（離開原產地難以複製）、克隆眾多且差異大、消費者認知度低、許多品種需要多年陳年（不符合新世界即飲市場）。"
         },
         {
           "type": "single",
@@ -135,25 +135,25 @@
             "Paso Robles"
           ],
           "correct": 1,
-          "explanation": "Napa Valley 的 Atlas Peak 產區（海拔 400-600m、火山土壤）是加州 Sangiovese 最成功的產區，氣候、土壤條件最接近 Tuscany。"
+          "explanation": "Napa Valley 的 Atlas Peak 產區（高海拔、火山土壤）是加州 Sangiovese 最具代表性的產區，條件較接近 Tuscany。"
         },
         {
           "type": "single",
-          "question": "Argentina 的 Bonarda 實際上是哪個義大利品種？",
+          "question": "Argentina 的 Bonarda 經 DNA 研究證實是哪個品種？",
           "options": [
-            "真正的 Bonarda",
-            "Croatina",
+            "義大利北部的 Croatina",
+            "Douce Noir（加州稱 Charbono）",
             "Barbera",
             "Dolcetto"
           ],
           "correct": 1,
-          "explanation": "DNA 研究證明，Argentina 的 \"Bonarda\" 實際上是義大利北部的 Croatina 品種，不是 Piemonte 的 Bonarda！這是常見的名稱混淆。"
+          "explanation": "DNA 研究證實，Argentina 的「Bonarda」其實是源自法國 Savoie 的 Douce Noir（加州稱 Charbono），既不是 Piemonte 的 Bonarda，也不是 Oltrepò Pavese 被稱為 Bonarda 的 Croatina。這是常見的名稱混淆。"
         },
         {
           "type": "single",
           "question": "Prosecco 全球化成功的關鍵因素不包括？",
           "options": [
-            "價格親民（€8-15）",
+            "價格親民",
             "風格易飲、果香豐富",
             "品牌命名簡單易記",
             "需要長期陳年"

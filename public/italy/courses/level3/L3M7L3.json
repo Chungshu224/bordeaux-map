@@ -4,25 +4,45 @@
   "quiz": [
     {
       "question": "一位客人點了 2010 年 Barolo（現為 2026 年，共 16 年）。適合的侍酒方式是？",
-      "options": ["立即倒入廣口醒酒瓶，醒酒 2 小時以打開封閉的單寧", "在蠟燭光前輕柔傾倒去除沉澱，倒除後立即享用，無需長時間醒酒", "直接開瓶倒入玻璃杯，陳年老酒已無需任何處理", "放入冰桶降至 10°C，讓低溫保留細緻香氣"],
+      "options": [
+        "立即倒入廣口醒酒瓶，醒酒 2 小時以打開封閉的單寧",
+        "在蠟燭光前輕柔傾倒去除沉澱，倒除後立即享用，無需長時間醒酒",
+        "直接開瓶倒入玻璃杯，陳年老酒已無需任何處理",
+        "放入冰桶降至 10°C，讓低溫保留細緻香氣"
+      ],
       "answer": 1,
       "explanation": "16 年的 Barolo 屬於陳年老酒，沉澱物豐富，需要在燈光前輕柔傾倒去除沉澱。陳年老酒非常脆弱，不適合長時間醒酒（氧化會讓酒崩解失去層次）。服務溫度應為 18°C 左右，非冰鎮。"
     },
     {
       "question": "客人在夏天訂了一瓶 Chianti Classico 搭配燒烤，餐廳室溫約 28°C。最正確的服務溫度是？",
-      "options": ["直接在室溫（28°C）服務，因為「室溫服務」是原則", "冷藏約 15 分鐘，讓酒達到 16–18°C 後服務", "放入冰桶中的冰水，快速降至 8°C", "等客人喝完第一杯後再冷藏"],
+      "options": [
+        "直接在室溫（28°C）服務，因為「室溫服務」是原則",
+        "冷藏約 15 分鐘，讓酒達到 16–18°C 後服務",
+        "放入冰桶中的冰水，快速降至 8°C",
+        "等客人喝完第一杯後再冷藏"
+      ],
       "answer": 1,
       "explanation": "「室溫服務」中的「室溫」指歐洲傳統酒窖的室溫（約 16–18°C），不是台灣夏天的 28°C。高溫環境下，Chianti Classico 若在 28°C 服務，酒精揮發感會非常強烈，單寧顯得鬆散。正確做法是冷藏至 16–18°C。"
     },
     {
       "question": "以下哪款義大利酒「不需要」使用醒酒瓶？",
-      "options": ["年輕 Brunello di Montalcino（2020 年份）", "陳年 Barolo Riserva（2005 年份）", "Prosecco Brut NV（無年份氣泡酒）", "年輕 Amarone della Valpolicella（2019 年份）"],
+      "options": [
+        "年輕 Brunello di Montalcino（2020 年份）",
+        "陳年 Barolo Riserva（2005 年份）",
+        "Prosecco Brut NV（無年份氣泡酒）",
+        "年輕 Amarone della Valpolicella（2019 年份）"
+      ],
       "answer": 2,
       "explanation": "Prosecco 是氣泡酒，二氧化碳是其核心魅力。使用醒酒瓶會讓氣泡大量消散，破壞酒款的主要特性。年輕 Brunello 和 Amarone 需要醒酒（暴氣打開），陳年 Barolo 需要醒酒瓶去除沉澱——只有氣泡酒明確排除醒酒瓶的使用。"
     },
     {
       "question": "年輕 Barolo（2020 年份）建議的醒酒時間是？",
-      "options": ["2–3 小時，使用廣口醒酒瓶讓氧氣充分接觸，打開封閉的高單寧結構", "15 分鐘，簡單讓酒接觸空氣即可", "不需要醒酒，直接開瓶倒杯", "72 小時，年輕 Barolo 需要超長時間醒酒"],
+      "options": [
+        "2–3 小時，使用廣口醒酒瓶讓氧氣充分接觸，打開封閉的高單寧結構",
+        "15 分鐘，簡單讓酒接觸空氣即可",
+        "不需要醒酒，直接開瓶倒杯",
+        "72 小時，年輕 Barolo 需要超長時間醒酒"
+      ],
       "answer": 0,
       "explanation": "年輕 Barolo 的 Nebbiolo 高單寧 + 高酸度極度封閉，建議使用廣口醒酒瓶醒酒 2–3 小時，讓氧氣充分接觸。這能軟化單寧、打開香氣、讓酒精整合——過短的時間無法達到效果。"
     }
@@ -41,12 +61,12 @@
     {
       "type": "content",
       "title": "醒酒的藝術：年輕強勁 vs 陳年老酒",
-      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">醒酒有兩個截然不同的目的：<strong>暴氣（Aeration）</strong>讓年輕封閉的酒接觸氧氣打開香氣；<strong>去除沉澱（Decanting off sediment）</strong>確保陳年老酒的固態沉澱物不入杯。兩者策略完全相反。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>🍾 年輕強勁酒：大量暴氣</h3><ul><li><strong>Barolo 年輕（5 年內）：</strong>高單寧 + 高酸極度封閉，建議廣口醒酒瓶醒酒 2–3 小時</li><li><strong>Brunello di Montalcino 年輕：</strong>Sangiovese Grosso 緊閉單寧需 1.5–2 小時才能展現</li><li><strong>Amarone della Valpolicella 年輕：</strong>半乾式葡萄的濃縮酒體需呼吸，醒酒 1–2 小時讓酒精整合</li><li><strong>策略：</strong>廣口醒酒瓶（最大接觸面積）+ 提前開瓶</li></ul></div><div class=\"method-card modern\"><h3>🕯️ 陳年老酒：輕柔去沉澱</h3><ul><li><strong>Barolo（10 年以上）：</strong>沉澱物豐富，燈光前緩慢傾倒，看到沉澱進入瓶頸時停止</li><li><strong>Brunello Riserva（15 年以上）：</strong>陳年 Sangiovese 非常脆弱，去除沉澱後立即享用，勿二次醒酒</li><li><strong>策略：</strong>瓶身提前直立 24 小時讓沉澱沉底；倒除後不需長時間醒酒——老酒容易氧化崩解</li><li><strong>不需要醒酒瓶：</strong>白酒、氣泡酒（氣泡消散）、清淡果香紅酒（Bardolino/Lambrusco）</li></ul></div></div></div></div>"
+      "content": "<div class=\"winemaking-section\"><p class=\"winemaking-intro\">醒酒有兩個截然不同的目的：<strong>暴氣（Aeration）</strong>讓年輕封閉的酒接觸氧氣打開香氣；<strong>去除沉澱（Decanting off sediment）</strong>確保陳年老酒的固態沉澱物不入杯。兩者策略完全相反。</p><div class=\"traditional-vs-modern\"><div class=\"comparison-grid\"><div class=\"method-card traditional\"><h3>🍾 年輕強勁酒：大量暴氣</h3><ul><li><strong>Barolo 年輕（5 年內）：</strong>高單寧 + 高酸極度封閉，建議廣口醒酒瓶醒酒 2–3 小時</li><li><strong>Brunello di Montalcino 年輕：</strong>Sangiovese Grosso 緊閉單寧需 1.5–2 小時才能展現</li><li><strong>Amarone della Valpolicella 年輕：</strong>風乾葡萄釀成的濃縮酒體需呼吸，醒酒 1–2 小時讓酒精整合</li><li><strong>策略：</strong>廣口醒酒瓶（最大接觸面積）+ 提前開瓶</li></ul></div><div class=\"method-card modern\"><h3>🕯️ 陳年老酒：輕柔去沉澱</h3><ul><li><strong>Barolo（10 年以上）：</strong>沉澱物豐富，燈光前緩慢傾倒，看到沉澱進入瓶頸時停止</li><li><strong>Brunello Riserva（15 年以上）：</strong>陳年 Sangiovese 非常脆弱，去除沉澱後立即享用，勿二次醒酒</li><li><strong>策略：</strong>瓶身提前直立 24 小時讓沉澱沉底；倒除後不需長時間醒酒——老酒容易氧化崩解</li><li><strong>不需要醒酒瓶：</strong>白酒、氣泡酒（氣泡消散）、清淡果香紅酒（Bardolino/Lambrusco）</li></ul></div></div></div></div>"
     },
     {
       "type": "content",
       "title": "選杯邏輯：杯型如何影響風味感知",
-      "content": "<div class=\"three-styles\"><div class=\"style-card entry\"><div class=\"style-badge\">氣泡酒杯</div><h3>笛型杯 Flûte ／ 廣口杯 Coupe</h3><p><strong>笛型杯：</strong>觀察氣泡串流，保留二氧化碳；適合 Prosecco 等清爽氣泡酒</p><p><strong>廣口杯 / 一般白酒杯：</strong>更能展現香氣複雜度；高端 Franciacorta 侍酒師愈來愈偏好用廣口白酒杯</p></div><div class=\"style-card mid\"><div class=\"style-badge\">白酒杯</div><h3>窄口型 ／ 布根地鬱金香型</h3><p><strong>窄口白酒杯：</strong>保留清爽酸度；細緻白花、礦物香氣在窄口中更容易感知；適合 Pinot Grigio / Soave / Verdicchio</p><p><strong>布根地鬱金香型：</strong>杯肚最寬，集中細緻香氣；適合 Alto Adige Pinot Nero 或 Fiano di Avellino 等香氣複雜型白酒</p></div><div class=\"style-card premium\"><div class=\"style-badge\">紅酒杯</div><h3>大肚波爾多型 ／ 布根地型</h3><p><strong>大肚波爾多型（Barolo/Brunello 杯）：</strong>大開口讓氧氣接觸最大化，強單寧酒款需要這種空間「呼吸」，香氣在杯口聚集後向上揮散</p><p><strong>布根地型：</strong>杯肚更寬、杯口收窄，集中細緻的花果香氣；適合 Nebbiolo 陳年款展現玫瑰、焦油的層次</p></div></div>"
+      "content": "<div class=\"three-styles\"><div class=\"style-card entry\"><div class=\"style-badge\">氣泡酒杯</div><h3>笛型杯 Flûte ／ 廣口杯 Coupe</h3><p><strong>笛型杯：</strong>觀察氣泡串流，保留二氧化碳；適合 Prosecco 等清爽氣泡酒</p><p><strong>廣口杯 / 一般白酒杯：</strong>更能展現香氣複雜度；高端 Franciacorta 侍酒師愈來愈偏好用廣口白酒杯</p></div><div class=\"style-card mid\"><div class=\"style-badge\">白酒杯</div><h3>窄口型 ／ 布根地鬱金香型</h3><p><strong>窄口白酒杯：</strong>保留清爽酸度；細緻白花、礦物香氣在窄口中更容易感知；適合 Pinot Grigio / Soave / Verdicchio</p><p><strong>布根地鬱金香型：</strong>杯肚最寬，集中細緻香氣；適合 Fiano di Avellino 或陳年 Timorasso 等香氣複雜型白酒</p></div><div class=\"style-card premium\"><div class=\"style-badge\">紅酒杯</div><h3>大肚波爾多型 ／ 布根地型</h3><p><strong>大肚波爾多型（Barolo/Brunello 杯）：</strong>大開口讓氧氣接觸最大化，強單寧酒款需要這種空間「呼吸」，香氣在杯口聚集後向上揮散</p><p><strong>布根地型：</strong>杯肚更寬、杯口收窄，集中細緻的花果香氣；適合 Nebbiolo 陳年款展現玫瑰、焦油的層次</p></div></div>"
     },
     {
       "type": "content",
@@ -75,35 +95,60 @@
         {
           "type": "single",
           "question": "一位客人點了 2010 年 Barolo（現為 2026 年，共 16 年）。適合的侍酒方式是？",
-          "options": ["立即倒入廣口醒酒瓶，醒酒 2 小時以打開封閉的單寧", "在蠟燭光前輕柔傾倒去除沉澱，倒除後立即享用，無需長時間醒酒", "直接開瓶倒入玻璃杯，陳年老酒已無需任何處理", "放入冰桶降至 10°C，讓低溫保留細緻香氣"],
+          "options": [
+            "立即倒入廣口醒酒瓶，醒酒 2 小時以打開封閉的單寧",
+            "在蠟燭光前輕柔傾倒去除沉澱，倒除後立即享用，無需長時間醒酒",
+            "直接開瓶倒入玻璃杯，陳年老酒已無需任何處理",
+            "放入冰桶降至 10°C，讓低溫保留細緻香氣"
+          ],
           "correct": 1,
           "explanation": "16 年的 Barolo 屬於陳年老酒，沉澱物豐富，需要在燈光前輕柔傾倒去除沉澱。陳年老酒非常脆弱，不適合長時間醒酒（氧化會讓酒崩解失去層次）。服務溫度應為 18°C 左右，非冰鎮。"
         },
         {
           "type": "single",
           "question": "客人在夏天訂了一瓶 Chianti Classico 搭配燒烤，餐廳室溫約 28°C。最正確的服務溫度是？",
-          "options": ["直接在室溫（28°C）服務，因為「室溫服務」是原則", "冷藏約 15 分鐘，讓酒達到 16–18°C 後服務", "放入冰桶中的冰水，快速降至 8°C", "等客人喝完第一杯後再冷藏"],
+          "options": [
+            "直接在室溫（28°C）服務，因為「室溫服務」是原則",
+            "冷藏約 15 分鐘，讓酒達到 16–18°C 後服務",
+            "放入冰桶中的冰水，快速降至 8°C",
+            "等客人喝完第一杯後再冷藏"
+          ],
           "correct": 1,
           "explanation": "「室溫服務」中的「室溫」指歐洲傳統酒窖的室溫（約 16–18°C），不是台灣夏天的 28°C。在高溫環境下，Chianti Classico 若在 28°C 服務，酒精揮發感會非常強烈，單寧顯得鬆散。正確做法是冷藏至 16–18°C。"
         },
         {
           "type": "single",
           "question": "以下哪款義大利酒「不需要」使用醒酒瓶？",
-          "options": ["年輕 Brunello di Montalcino（2020 年份）", "陳年 Barolo Riserva（2005 年份）", "Prosecco Brut NV（無年份氣泡酒）", "年輕 Amarone della Valpolicella（2019 年份）"],
+          "options": [
+            "年輕 Brunello di Montalcino（2020 年份）",
+            "陳年 Barolo Riserva（2005 年份）",
+            "Prosecco Brut NV（無年份氣泡酒）",
+            "年輕 Amarone della Valpolicella（2019 年份）"
+          ],
           "correct": 2,
           "explanation": "Prosecco 是氣泡酒，二氧化碳是其核心魅力。使用醒酒瓶會讓氣泡大量消散，破壞酒款的主要特性。年輕 Brunello 和 Amarone 需要醒酒（暴氣打開），陳年 Barolo 需要醒酒瓶去除沉澱——只有氣泡酒明確排除醒酒瓶的使用。"
         },
         {
           "type": "single",
           "question": "年輕 Barolo（2020 年份）建議的醒酒時間與方式是？",
-          "options": ["廣口醒酒瓶醒酒 2–3 小時，讓氧氣充分接觸打開封閉的高單寧結構", "15 分鐘，簡單接觸空氣即可", "不需要醒酒，直接開瓶倒杯", "72 小時以上，年輕 Barolo 需超長時間醒酒"],
+          "options": [
+            "廣口醒酒瓶醒酒 2–3 小時，讓氧氣充分接觸打開封閉的高單寧結構",
+            "15 分鐘，簡單接觸空氣即可",
+            "不需要醒酒，直接開瓶倒杯",
+            "72 小時以上，年輕 Barolo 需超長時間醒酒"
+          ],
           "correct": 0,
           "explanation": "年輕 Barolo 的 Nebbiolo 高單寧 + 高酸度極度封閉，建議使用廣口醒酒瓶醒酒 2–3 小時，讓氧氣充分接觸。這能軟化單寧、打開香氣、讓酒精整合——過短的時間無法達到效果。"
         },
         {
           "type": "single",
           "question": "在餐廳為客人推薦葡萄酒時，侍酒師最好的做法是？",
-          "options": ["只推薦最昂貴的酒款，以確保最高品質", "只推薦最便宜的酒款，以確保客人不會後悔", "提供高、中、低預算各一的選項，並能簡短說明每個選項的理由", "讓客人自己決定，侍酒師不應主動建議"],
+          "options": [
+            "只推薦最昂貴的酒款，以確保最高品質",
+            "只推薦最便宜的酒款，以確保客人不會後悔",
+            "提供高、中、低預算各一的選項，並能簡短說明每個選項的理由",
+            "讓客人自己決定，侍酒師不應主動建議"
+          ],
           "correct": 2,
           "explanation": "優秀的侍酒師服務賓客的體驗，而非強迫規則。提供三個不同預算選項，讓客人有選擇空間，並能用 10 秒「電梯 pitch」說明每個選項的特色。當客人問「哪個比較好？」時，應分享侍酒師的個人偏好而非迴避。"
         }

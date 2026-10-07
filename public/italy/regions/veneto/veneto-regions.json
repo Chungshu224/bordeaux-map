@@ -633,7 +633,7 @@
 			}
 		},
 		{
-			"id": "Colli Euganei Fior d'Arancio DOCG",
+			"id": "Colli Euganei Fior d’Arancio  Fior d'Arancio Colli Euganei DOCG",
 			"name": "Colli Euganei Fior d'Arancio DOCG",
 			"type": "DOCG",
 			"region": "Veneto",
@@ -648,6 +648,40 @@
 				"winemaking": "靜態甜酒（Passito）以風乾葡萄釀造；氣泡版本（Spumante）採用 Charmat 法或傳統法。",
 				"subregions": {},
 				"grape_varieties": ["Moscato Giallo (最少 95%)"]
+			}
+		},
+		{
+			"id": "Bagnoli Friularo Friularo di Bagnoli DOCG",
+			"name": "Bagnoli Friularo DOCG (Friularo di Bagnoli)",
+			"type": "DOCG",
+			"region": "Veneto",
+			"province": "Padova",
+			"zone": "Padova 省南部平原，以 Bagnoli di Sopra 為中心，範圍與 Bagnoli di Sopra DOC 大致重疊。",
+			"style": ["紅酒", "晚摘紅酒 (Vendemmia Tardiva)", "風乾甜紅酒 (Passito)"],
+			"grapes": ["Raboso Piave (Friularo)"],
+			"description": "Bagnoli Friularo DOCG 以 Raboso Piave 釀造，當地稱這個品種為 Friularo。Raboso 色深、酸度與單寧都很高，酒款結構強勁、適合陳年，除了不甜紅酒，也有晚摘與風乾甜酒版本。",
+			"details": {
+				"introduction": "Bagnoli Friularo DOCG 於 2011 年由 Bagnoli di Sopra DOC 中的 Friularo 酒款升格而來，與 Piave 河流域的 Malanotte del Piave DOCG 同為 Raboso 的 DOCG。Bagnoli 一帶的釀酒傳統與當地的本篤會修道院及莊園歷史密切相關。",
+				"climate": "Padova 南部的平原，溫帶大陸型氣候，夏季溫暖潮濕，土壤以沖積黏土為主。",
+				"subregions": {},
+				"grape_varieties": ["Raboso Piave (Friularo)"]
+			}
+		},
+		{
+			"id": "Montello  Montello Rosso DOCG",
+			"name": "Montello Rosso DOCG (Montello DOCG)",
+			"type": "DOCG",
+			"region": "Veneto",
+			"province": "Treviso",
+			"zone": "Treviso 省 Montello 丘陵，與 Asolo Prosecco DOCG 相鄰，範圍位於 Montello e Colli Asolani DOC 內。",
+			"style": ["紅酒"],
+			"grapes": ["Cabernet Sauvignon", "Cabernet Franc", "Merlot", "Carmenère"],
+			"description": "Montello Rosso DOCG 是 2011 年設立的新 DOCG，以 Cabernet Sauvignon（40-70%）為主，搭配 Cabernet Franc、Merlot、Carmenère 的波爾多式紅酒，多黏土的坡地造就結構紮實、適合陳年的酒款。",
+			"details": {
+				"introduction": "Montello Rosso DOCG 於 2011 年從 Montello e Colli Asolani DOC 獨立升格，是 Veneto 以波爾多品種為主的 DOCG。Montello 是 Piave 河畔一座孤立的長形丘陵，與西邊的 Asolo 丘陵同屬 Treviso 西部的 Prealps 山麓。",
+				"climate": "丘陵地形通風良好，溫帶氣候，夏季溫暖；紅色黏土土壤保水佳，有利於 Cabernet 成熟。",
+				"subregions": {"Superiore": "較高要求的等級，熟成時間較長"},
+				"grape_varieties": ["Cabernet Sauvignon (40-70%)", "Cabernet Franc", "Merlot", "Carmenère"]
 			}
 		}
 ]

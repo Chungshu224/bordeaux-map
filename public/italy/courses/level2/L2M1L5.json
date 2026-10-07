@@ -1,0 +1,269 @@
+{
+  "lessonId": "L2M1L5",
+  "title": "Valle d'Aosta 瓦萊達奧斯塔 - 阿爾卑斯高山葡萄酒",
+  "quiz": [
+    {
+      "question": "Valle d'Aosta 有幾個 DOC？",
+      "options": [
+        "1 個",
+        "3 個",
+        "7 個",
+        "沒有 DOC，只有 IGT"
+      ],
+      "answer": 0,
+      "explanation": "全區只有一個 DOC：Valle d'Aosta／Vallée d'Aoste，下分 7 個子產區，另有多款單一品種酒。"
+    },
+    {
+      "question": "Valle d'Aosta 的葡萄園位於哪座山的雨影之下？",
+      "options": [
+        "Monte Rosa",
+        "Monte Bianco",
+        "Gran Paradiso",
+        "Etna"
+      ],
+      "answer": 1,
+      "explanation": "葡萄園位於 Monte Bianco（白朗峰）的雨影下，因此相對乾燥、日照充足。"
+    },
+    {
+      "question": "哪裡可以找到未嫁接的 Prié Blanc 葡萄藤？",
+      "options": [
+        "Blanc de Morgex et de La Salle",
+        "Donnas",
+        "Chambave",
+        "Torrette"
+      ],
+      "answer": 0,
+      "explanation": "上河谷的 Blanc de Morgex et de La Salle 海拔極高，寒冷與砂質土壤讓根瘤蚜難以存活，因此常見未嫁接的 Prié Blanc。"
+    },
+    {
+      "question": "Nebbiolo 在 Valle d'Aosta 的當地名稱是？",
+      "options": [
+        "Chiavennasca",
+        "Spanna",
+        "Picotendro",
+        "Prugnolo"
+      ],
+      "answer": 2,
+      "explanation": "Nebbiolo 在 Valle d'Aosta 稱 Picotendro，在 Lombardia 的 Valtellina 稱 Chiavennasca，在 Piemonte 北部稱 Spanna。"
+    },
+    {
+      "question": "「flétri」與「vendemmia tardiva」的差別是？",
+      "options": [
+        "兩者相同",
+        "Flétri 是採收後風乾；vendemmia tardiva 是留在藤上延後採收",
+        "Flétri 是貴腐甜酒；vendemmia tardiva 是冰酒",
+        "Flétri 是氣泡酒"
+      ],
+      "answer": 1,
+      "explanation": "Vendemmia tardiva（晚摘）讓葡萄留在藤上過熟；flétri 是 Valle d'Aosta 對 passito 的稱呼，葡萄採收後再風乾。"
+    }
+  ],
+  "slides": [
+    {
+      "type": "title",
+      "title": "🏔️ Valle d'Aosta 瓦萊達奧斯塔",
+      "subtitle": "白朗峰下的高山葡萄酒"
+    },
+    {
+      "type": "content",
+      "title": "📍 產區概況",
+      "content": "<div class=\"region-intro\"><p class=\"intro-text\">Valle d'Aosta 是義大利<strong>面積最小、人口最少</strong>的大區，也是葡萄酒產量最少的大區。位於義大利西北角，北鄰瑞士、西接法國、南與東面是 Piemonte，四周被阿爾卑斯山的最高峰包圍。全區只有<span class=\"highlight\">一個 DOC：Valle d'Aosta／Vallée d'Aoste</span>，下轄多個子產區與單一品種酒款。</p></div><div class=\"umbria-facts\"><div class=\"fact-box\"><div class=\"fact-icon\">📍</div><div class=\"fact-text\"><strong>地理位置</strong><br>義大利西北角的阿爾卑斯山谷，北鄰瑞士、西接法國、南東為 Piemonte；首府 Aosta</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🗣️</div><div class=\"fact-text\"><strong>自治大區</strong><br>享有特別自治地位的大區，義大利語與法語同為官方語言，酒標與地名常見法義雙語</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🍷</div><div class=\"fact-text\"><strong>法定產區</strong><br>只有 1 個 DOC（Valle d'Aosta／Vallée d'Aoste），沒有 DOCG；下分 7 個子產區，另有多款單一品種酒</div></div><div class=\"fact-box\"><div class=\"fact-icon\">🏔️</div><div class=\"fact-text\"><strong>風格特徵</strong><br>高山風土造就清新、酸度高、酒體輕至中等的酒款；產量小，多由當地居民與遊客消費</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏛️ 歷史：法國影響深遠的山谷",
+      "content": "<div class=\"history-section\"><p class=\"history-intro\">扼守通往法國與瑞士的阿爾卑斯山口 —— <span class=\"intro-highlight\">Valle d'Aosta 的歷史與文化長期與法語世界緊密相連</span></p></div><div class=\"timeline-container\"><div class=\"timeline-item\"><div class=\"timeline-badge ancient\">古代</div><div class=\"timeline-content\"><strong>Salassi 人與羅馬人</strong>：山谷最早由凱爾特系的 Salassi 部族居住；西元前 25 年羅馬人征服此地，建立 <strong>Augusta Praetoria</strong>（今日的 Aosta），控制通往高盧的山口要道</div></div><div class=\"timeline-item\"><div class=\"timeline-badge medieval\">中世紀起</div><div class=\"timeline-content\"><strong>薩伏依家族</strong>：山谷長期由 <strong>Savoy（薩伏依）家族</strong>統治，與阿爾卑斯山另一側的法語地區屬於同一政治與文化圈，法語因此成為當地的行政與日常語言</div></div><div class=\"timeline-item\"><div class=\"timeline-badge modern\">19 世紀末</div><div class=\"timeline-content\"><strong>病害與衰退</strong>：白粉病、露菌病與根瘤蚜重創葡萄園，加上人口外移，種植面積大幅縮減</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1948 年</div><div class=\"timeline-content\"><strong>特別自治地位</strong>：義大利共和國賦予 Valle d'Aosta 特別自治大區的地位，法語與義大利語同為官方語言</div></div><div class=\"timeline-item\"><div class=\"timeline-badge doc\">1971 → 1985 年</div><div class=\"timeline-content\"><strong>法定產區</strong>：Donnas 等早期 DOC 於 1970 年代設立；1985 年整合為涵蓋全區的 <strong>Valle d'Aosta／Vallée d'Aoste DOC</strong>，原有產區改為子產區。合作社與地區農業學校在品質提升上扮演重要角色</div></div></div><div class=\"stat-grid\"><div class=\"stat-box\"><div class=\"stat-number\">1</div><div class=\"stat-label\">DOC（無 DOCG）</div></div><div class=\"stat-box\"><div class=\"stat-number\">7</div><div class=\"stat-label\">子產區</div></div><div class=\"stat-box\"><div class=\"stat-number\">2</div><div class=\"stat-label\">官方語言（義、法）</div></div><div class=\"stat-box\"><div class=\"stat-number\">4,808 m</div><div class=\"stat-label\">Monte Bianco 海拔</div></div></div>"
+    },
+    {
+      "type": "map_placeholder",
+      "title": "🗺️ Valle d'Aosta 地圖",
+      "content": "沿著 Dora Baltea 河谷，由西北的 Monte Bianco 一路往東南延伸到 Piemonte 邊界。"
+    },
+    {
+      "type": "content",
+      "title": "🌍 地形與氣候：阿爾卑斯、Monte Bianco 與 Dora Baltea",
+      "content": "<div class=\"terroir-section\"><p class=\"terroir-intro\">一條被群山包圍的冰河谷地 —— 阿爾卑斯山、偏北的位置與 Monte Bianco 決定了 Valle d'Aosta 的氣候</p></div><div class=\"terroir-explanation\"><div class=\"explanation-card mountain\"><div class=\"card-icon\">🏔️</div><h4>地形</h4><p><strong>阿爾卑斯山：</strong>全區皆為山地，四周是 <strong>Monte Bianco（白朗峰）</strong>、Monte Rosa、Cervino（馬特洪峰）、Gran Paradiso 等高峰</p><p><strong>Dora Baltea 河：</strong>源自 Monte Bianco 一帶，先向東流經 Aosta，再轉向東南流入 Piemonte，最終匯入 Po 河；葡萄園沿著這條主河谷分布</p><p><strong>地質：</strong>冰河切割出的 U 形谷，土壤以冰磧物、砂質與岩屑為主，淺薄、排水佳</p></div><div class=\"explanation-card sea\"><div class=\"card-icon\">🌤️</div><h4>氣候</h4><p><strong>大陸型高山氣候：</strong>冬季寒冷漫長、夏季溫暖短暫，日夜溫差大，有助於保留酸度與香氣</p><p><strong>雨影效應：</strong>葡萄園位於 <strong>Monte Bianco 的雨影</strong>下，降雨少、日照充足，是阿爾卑斯山區相對乾燥的谷地</p><p><strong>向陽坡：</strong>多數葡萄園位於河谷北側、面向南方的向陽坡地（adret），爭取最多日照</p><p><strong>風：</strong>山谷風帶來通風，降低病害壓力</p></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "⛰️ 海拔與英雄式葡萄種植",
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">海拔改變了這裡的一切：從整枝方式、砧木到葡萄品種的選擇</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🧱 梯田與石牆</strong><p>陡峭山坡上以乾砌石牆築成梯田，耕作幾乎全靠人工，被稱為「英雄式」（heroic）葡萄種植。石牆白天吸熱、夜間釋放熱量，幫助葡萄成熟。</p></div><div class=\"orvieto-card\"><strong>🌿 傳統整枝：Pergola</strong><p>Valle d'Aosta 與 Liguria 是北義仍保留傳統 <strong>pergola</strong> 棚架的產區。下河谷（Donnas 一帶）的棚架以石柱支撐；上河谷的 Morgex 則使用低矮的 pergola，讓葡萄貼近地面吸收熱量，並承受積雪。</p></div><div class=\"orvieto-card\"><strong>🦠 未嫁接的老藤</strong><p>上河谷的 <strong>Blanc de Morgex et de La Salle</strong> 位於極高海拔，寒冷氣候與砂質土壤讓根瘤蚜難以存活，因此仍可見<strong>未嫁接</strong>的 Prié Blanc 葡萄藤，葡萄園海拔可達約 1,200 m，名列歐洲最高的葡萄園之一。</p></div><div class=\"orvieto-card\"><strong>📈 海拔與品種</strong><p>海拔越高，越適合早熟、耐寒的白葡萄（如 Prié Blanc）；中河谷較溫暖，以 Petit Rouge 等原生紅葡萄為主；下河谷較低且接近 Piemonte，晚熟的 Nebbiolo 才能成熟。</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍇 原生與傳統品種",
+      "content": "<div class=\"other-wines\"><div class=\"wine-card\"><div class=\"wine-info\"><h4>🔴 原生紅葡萄</h4><p><strong>Petit Rouge：</strong>種植最廣的品種，中河谷 Torrette、Enfer d'Arvier 等子產區的主力；酒色中等偏深，紅色水果與香料，單寧低至中等</p><p><strong>Fumin：</strong>色深、高酸、高單寧，帶紅色水果、草本與香料，酒體中等至飽滿</p><p><strong>Cornalin：</strong>色深、果香豐富，與瑞士 Valais 的 Humagne Rouge 為同一品種</p><p><strong>Vien de Nus、Mayolet：</strong>其他原生紅葡萄，Vien de Nus 是 Nus 子產區紅酒的主角</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>⚪ 原生白葡萄</h4><p><strong>Prié Blanc：</strong>Valle d'Aosta 最重要的原生白葡萄，種在上河谷的高海拔葡萄園，釀成酒色極淡、酒體輕盈、酸度高的白酒，帶白花、青蘋果、柑橘、高山乾草與燧石；也釀氣泡酒</p></div></div><div class=\"wine-card\"><div class=\"wine-info\"><h4>🍇 傳統品種（非原生但歷史悠久）</h4><p><strong>Nebbiolo（當地稱 Picotendro）：</strong>種在下河谷的 Donnas 與 Arnad-Montjovet</p><p><strong>Moscato Bianco：</strong>Chambave 的招牌白葡萄，釀不甜與 flétri 甜酒</p><p><strong>Malvoisie（Pinot Grigio）：</strong>Nus 的白葡萄，亦有 flétri 甜酒</p><p><strong>Petite Arvine：</strong>源自瑞士 Valais，在此表現出色</p><p><strong>國際品種：</strong>Chardonnay、Pinot Nero、Müller-Thurgau、Gamay 等</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🗺️ 上、中、下河谷與七個子產區",
+      "content": "<div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">上河谷（Upper Valley）— Monte Bianco 腳下</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Blanc de Morgex et de La Salle</strong>：Morgex 與 La Salle 兩村，最高海拔、最冷的子產區；只用 <strong>Prié Blanc</strong> 釀造白酒與氣泡酒，常見未嫁接葡萄藤</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">中河谷（Central Valley）— Aosta 周邊，原生紅葡萄的天下</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Enfer d'Arvier</strong>：Arvier 村的小型子產區，名稱意為「地獄」，因為被岩壁包圍的圓形谷地特別炎熱；以 <strong>Petit Rouge</strong> 為主的紅酒</div><div class=\"orvieto-card\"><strong>Torrette</strong>：Aosta 西側、Aymavilles 一帶，是面積最大的子產區；以 <strong>Petit Rouge</strong> 為主的紅酒，亦有 Supérieur 等級</div><div class=\"orvieto-card\"><strong>Nus</strong>：Aosta 東側；紅酒以原生的 <strong>Vien de Nus</strong> 為主，白酒以 <strong>Malvoisie（Pinot Grigio）</strong>釀造，包括 flétri 甜酒</div><div class=\"orvieto-card\"><strong>Chambave</strong>：中河谷東端；以 <strong>Moscato</strong> 釀造不甜白酒與 flétri 甜酒聞名，另有以 Petit Rouge 為主的紅酒</div></div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">下河谷（Lower Valley）— 通往 Piemonte 的門戶</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>Arnad-Montjovet</strong>：Dora Baltea 轉向東南後的河段；以 <strong>Nebbiolo（Picotendro）</strong>為主的紅酒</div><div class=\"orvieto-card\"><strong>Donnas</strong>：最靠近 Piemonte 邊界，與 Piemonte 的 Carema 相鄰；以 <strong>Nebbiolo（Picotendro）</strong>為主，酒色淡，帶玫瑰、紅色水果、林下植物與焦油，酸度高、單寧中等至高</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏷️ 酒標與甜酒",
+      "content": "<div class=\"variety-deep-section\"><div class=\"dna-research\"><h3>如何讀 Valle d'Aosta 的酒標</h3><p>全區只有一個 DOC，所以酒標一定以 <strong>Valle d'Aosta</strong>（或法文 Vallée d'Aoste）開頭，後面再接上更明確的資訊：</p></div><div class=\"science-card\"><strong>子產區酒款：</strong>DOC 名稱 + 子產區名，例如 <strong>Valle d'Aosta Donnas DOC</strong>、Valle d'Aosta Torrette DOC、Valle d'Aosta Blanc de Morgex et de La Salle DOC<br><strong>單一品種酒款：</strong>DOC 名稱 + 品種名，例如 <strong>Valle d'Aosta Fumin DOC</strong>、Valle d'Aosta Petite Arvine DOC、Valle d'Aosta Chardonnay DOC</div></div><div class=\"orvieto-section\"><h3 class=\"orvieto-intro\">晚摘（vendemmia tardiva）與 passito（flétri）的差別</h3><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🍇 Vendemmia tardiva（晚摘）</strong><p>葡萄留在<strong>葡萄藤上</strong>延後採收，讓果實過熟、糖分濃縮後再釀造。</p></div><div class=\"orvieto-card\"><strong>☀️ Flétri（passito，風乾）</strong><p>葡萄<strong>採收之後</strong>再放置風乾，使水分蒸發、糖分濃縮後才釀造。Flétri 是 Valle d'Aosta 對 passito 的法文稱呼，最著名的是 <strong>Chambave Moscato Flétri</strong> 與 <strong>Nus Malvoisie Flétri</strong>，也被 IWS 列為北義主要的 passito 甜酒之一。</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍷 IWS 建議品飲酒款",
+      "content": "<div class=\"orvieto-section\"><p class=\"orvieto-intro\">IWS 建議至少品飲一款紅酒與一款白酒，以下是教材中的風格描述</p><div class=\"orvieto-details\"><div class=\"orvieto-card\"><strong>🔴 Valle d'Aosta Donnas DOC（Nebbiolo）</strong><p>酒色淡，玫瑰、紅色水果、林下植物與焦油；不甜、高酸，單寧中等至高，酒精中等至高，酒體中等。也可改選 Arnad-Montjovet。</p></div><div class=\"orvieto-card\"><strong>🔴 Valle d'Aosta Torrette DOC（Petit Rouge）</strong><p>酒色中等偏深，紅色水果與香料；不甜、酸度中等，單寧低至中等，酒精中等，酒體中等。也可改選 Enfer d'Arvier。</p></div><div class=\"orvieto-card\"><strong>🔴 Valle d'Aosta Fumin DOC</strong><p>酒色深，紅色水果、草本與香料；不甜、高酸、高單寧，酒精中等至高，酒體中等至飽滿。也可改選 Cornalin。</p></div><div class=\"orvieto-card\"><strong>⚪ Valle d'Aosta Blanc de Morgex et de La Salle DOC（Prié Blanc）</strong><p>酒色極淡，白花、青蘋果、柑橘、高山乾草與香草、礦物與燧石；不甜、高酸，酒精中等，酒體輕盈。</p></div><div class=\"orvieto-card\"><strong>⚪ Valle d'Aosta Petite Arvine DOC</strong><p>中等稻草黃，白花、柑橘（葡萄柚）、梨與蘋果、熱帶水果、礦物與鹹味；不甜、高酸，酒精中等至高，酒體中等至飽滿。也可改選 Chardonnay。</p></div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🏰 代表生產者",
+      "content": "<div class=\"variety-intro\"><p>產量小、地塊零碎，合作社與小型家族酒莊撐起了 Valle d'Aosta 的葡萄酒</p></div><div class=\"umbria-mini-grid\"><div class=\"umbria-mini c1\"><strong>Cave Mont Blanc de Morgex et La Salle（合作社）</strong><p>上河谷 Prié Blanc 的代表生產者，釀造 Blanc de Morgex et de La Salle 白酒與氣泡酒</p><div class=\"um-prices\">Blanc de Morgex et de La Salle</div><div class=\"um-age\">高山白酒</div></div><div class=\"umbria-mini c2\"><strong>Les Crêtes</strong><p>Aymavilles 的家族酒莊，以 Petite Arvine、Chardonnay 與原生紅葡萄聞名</p><div class=\"um-prices\">Petite Arvine<br>Fumin、Torrette</div><div class=\"um-age\">單一品種代表</div></div><div class=\"umbria-mini c1\"><strong>Grosjean</strong><p>中河谷的家族酒莊，專注於 Fumin、Cornalin、Petit Rouge 等原生品種</p><div class=\"um-prices\">Fumin<br>Cornalin</div><div class=\"um-age\">原生紅葡萄</div></div><div class=\"umbria-mini c2\"><strong>Caves Coopératives de Donnas（合作社）</strong><p>下河谷 Donnas 的合作社，以 Nebbiolo（Picotendro）釀造 Donnas 紅酒</p><div class=\"um-prices\">Valle d'Aosta Donnas</div><div class=\"um-age\">高山 Nebbiolo</div></div></div>"
+    },
+    {
+      "type": "content",
+      "title": "🍽️ 飲食文化",
+      "content": "<div class=\"cuisine-section\"><p class=\"cuisine-intro\">高山料理以起司、醃肉與燉肉為主 —— 清新高酸的 Valle d'Aosta 葡萄酒正好切開濃郁</p><div class=\"food-pairing\"><div class=\"pairing-card\"><strong>⚪ Blanc de Morgex et de La Salle</strong><p><strong>搭配：Lardo d'Arnad 與高山醃肉</strong><br>Arnad 以香草與香料醃製的豬背脂，配上輕盈、高酸的 Prié Blanc，清爽解膩。</p></div><div class=\"pairing-card\"><strong>⚪ Petite Arvine</strong><p><strong>搭配：Fonduta（Fontina 起司鍋）</strong><br>以當地 Fontina 起司製作的起司鍋，Petite Arvine 飽滿的酒體與鹹味尾韻相得益彰。</p></div><div class=\"pairing-card\"><strong>🔴 Torrette（Petit Rouge）</strong><p><strong>搭配：Carbonade（紅酒燉牛肉）</strong><br>以紅酒燉煮的醃牛肉，配玉米糕；Petit Rouge 的紅色水果與香料、柔和單寧與燉肉相襯。</p></div><div class=\"pairing-card\"><strong>🔴 Donnas（Nebbiolo）</strong><p><strong>搭配：野味與熟成 Fontina</strong><br>高酸與明顯單寧，適合燉野味與熟成的山地起司。</p></div></div></div>"
+    },
+    {
+      "type": "list",
+      "title": "🎓 重點回顧",
+      "points": [
+        "✓ Valle d'Aosta 是義大利面積最小、葡萄酒產量最少的大區，特別自治區，義大利語與法語同為官方語言",
+        "✓ 全區只有一個 DOC：Valle d'Aosta／Vallée d'Aoste，下分 7 個子產區，沒有 DOCG",
+        "✓ 葡萄園沿著 Dora Baltea 河谷分布，位於 Monte Bianco 的雨影下，乾燥、日照充足、日夜溫差大",
+        "✓ 歷史上長期由薩伏依家族統治，法語文化影響深遠，酒標常見法文",
+        "✓ 英雄式葡萄種植：乾砌石牆梯田、傳統 pergola；Morgex 高海拔的 Prié Blanc 常見未嫁接葡萄藤",
+        "✓ 上河谷：Blanc de Morgex et de La Salle（Prié Blanc）",
+        "✓ 中河谷：Enfer d'Arvier、Torrette（Petit Rouge）、Nus（Vien de Nus、Malvoisie）、Chambave（Moscato）",
+        "✓ 下河谷：Arnad-Montjovet、Donnas（Nebbiolo，當地稱 Picotendro）",
+        "✓ 原生品種：Petit Rouge（種植最廣）、Fumin、Cornalin、Vien de Nus、Mayolet、Prié Blanc；Nebbiolo、Moscato、Malvoisie、Petite Arvine 等為傳統品種",
+        "✓ 酒標：Valle d'Aosta + 子產區（如 Donnas）或 Valle d'Aosta + 品種（如 Fumin、Petite Arvine）",
+        "✓ 晚摘（vendemmia tardiva）在藤上過熟；flétri（passito）是採收後風乾"
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "🧠 Valle d'Aosta 知識檢測",
+      "questions": [
+        {
+          "type": "single",
+          "question": "Valle d'Aosta 有幾個 DOC？",
+          "options": [
+            "A. 1 個",
+            "B. 3 個",
+            "C. 7 個",
+            "D. 沒有 DOC，只有 IGT"
+          ],
+          "correct": 0,
+          "explanation": "全區只有一個 DOC：Valle d'Aosta／Vallée d'Aoste，下分 7 個子產區，另有多款單一品種酒。"
+        },
+        {
+          "type": "single",
+          "question": "Valle d'Aosta 的葡萄園位於哪座山的雨影之下？",
+          "options": [
+            "A. Monte Rosa",
+            "B. Monte Bianco",
+            "C. Gran Paradiso",
+            "D. Etna"
+          ],
+          "correct": 1,
+          "explanation": "葡萄園位於 Monte Bianco（白朗峰）的雨影下，因此相對乾燥、日照充足。"
+        },
+        {
+          "type": "single",
+          "question": "哪裡可以找到未嫁接的 Prié Blanc 葡萄藤？",
+          "options": [
+            "A. Blanc de Morgex et de La Salle",
+            "B. Donnas",
+            "C. Chambave",
+            "D. Torrette"
+          ],
+          "correct": 0,
+          "explanation": "上河谷的 Blanc de Morgex et de La Salle 海拔極高，寒冷與砂質土壤讓根瘤蚜難以存活，因此常見未嫁接的 Prié Blanc。"
+        },
+        {
+          "type": "single",
+          "question": "Nebbiolo 在 Valle d'Aosta 的當地名稱是？",
+          "options": [
+            "A. Chiavennasca",
+            "B. Spanna",
+            "C. Picotendro",
+            "D. Prugnolo"
+          ],
+          "correct": 2,
+          "explanation": "Nebbiolo 在 Valle d'Aosta 稱 Picotendro，在 Lombardia 的 Valtellina 稱 Chiavennasca，在 Piemonte 北部稱 Spanna。"
+        },
+        {
+          "type": "multiple",
+          "question": "以 Nebbiolo 為主的子產區有哪些？（多選）",
+          "options": [
+            "A. Donnas",
+            "B. Arnad-Montjovet",
+            "C. Torrette",
+            "D. Enfer d'Arvier"
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "下河谷的 Donnas 與 Arnad-Montjovet 以 Nebbiolo 為主；中河谷的 Torrette 與 Enfer d'Arvier 以 Petit Rouge 為主。"
+        },
+        {
+          "type": "single",
+          "question": "Valle d'Aosta 種植最廣的品種是？",
+          "options": [
+            "A. Petit Rouge",
+            "B. Nebbiolo",
+            "C. Fumin",
+            "D. Chardonnay"
+          ],
+          "correct": 0,
+          "explanation": "原生的 Petit Rouge 是種植最廣的品種，中河谷 Torrette 與 Enfer d'Arvier 的主力。"
+        },
+        {
+          "type": "single",
+          "question": "Chambave 子產區以哪個品種的甜酒聞名？",
+          "options": [
+            "A. Prié Blanc",
+            "B. Moscato",
+            "C. Petite Arvine",
+            "D. Fumin"
+          ],
+          "correct": 1,
+          "explanation": "Chambave 以 Moscato 釀造不甜白酒與 flétri（passito）甜酒聞名。"
+        },
+        {
+          "type": "single",
+          "question": "「flétri」與「vendemmia tardiva」的差別是？",
+          "options": [
+            "A. 兩者相同",
+            "B. Flétri 是採收後風乾；vendemmia tardiva 是留在藤上延後採收",
+            "C. Flétri 是貴腐甜酒；vendemmia tardiva 是冰酒",
+            "D. Flétri 是氣泡酒"
+          ],
+          "correct": 1,
+          "explanation": "Vendemmia tardiva（晚摘）讓葡萄留在藤上過熟；flétri 是 Valle d'Aosta 對 passito 的稱呼，葡萄採收後再風乾。"
+        },
+        {
+          "type": "single",
+          "question": "下列哪個是正確的 Valle d'Aosta 單一品種酒標寫法？",
+          "options": [
+            "A. Fumin di Valle d'Aosta DOCG",
+            "B. Valle d'Aosta Fumin DOC",
+            "C. Fumin Superiore DOCG",
+            "D. Aosta Fumin IGT"
+          ],
+          "correct": 1,
+          "explanation": "單一品種酒款以 DOC 名稱加品種名標示，例如 Valle d'Aosta Fumin DOC、Valle d'Aosta Petite Arvine DOC。"
+        },
+        {
+          "type": "single",
+          "question": "Valle d'Aosta 葡萄園分布在哪條河的河谷？",
+          "options": [
+            "A. Adige",
+            "B. Adda",
+            "C. Dora Baltea",
+            "D. Tanaro"
+          ],
+          "correct": 2,
+          "explanation": "Dora Baltea 源自 Monte Bianco 一帶，向東流經 Aosta 後轉向東南進入 Piemonte，葡萄園沿著這條河谷分布。"
+        }
+      ]
+    }
+  ]
+}
