@@ -176,7 +176,7 @@ async function loadQuizBank (levelKey) {
 
 // 產生 slides 陣列
 // 一般課程：title → intro → 其他內容（含 quiz）→ 重點回顧
-// 綜合評量：title → 重點回顧 → 綜合測驗（從題庫隨機抽20題）
+// 綜合評量：title → 考試說明 → 重點回顧 → 綜合測驗（使用課程檔內已翻譯的題目；無題目時才退回題庫抽 20 題）
 const slides = computed(() => {
   const lessonSlides = props.lesson.slides && Array.isArray(props.lesson.slides)
     ? props.lesson.slides : []
@@ -185,15 +185,24 @@ const slides = computed(() => {
     const arr = []
     const titleSlide = lessonSlides.find(s => s.type === 'title')
     if (titleSlide) arr.push(titleSlide)
-    arr.push(...lessonSlides.filter(s => s.type === 'list'))
-    const bank = finalQuizBank.value
-    if (bank.length > 0) {
+    arr.push(...lessonSlides.filter(s => s.type === 'content' || s.type === 'list'))
+    const lessonQuiz = Array.isArray(props.lesson.quiz) ? props.lesson.quiz : []
+    const questions = lessonQuiz.length > 0
+      ? lessonQuiz.map(q => ({
+          type: 'single',
+          question: q.question,
+          options: q.options,
+          correct: q.answer,
+          explanation: q.explanation
+        }))
+      : pickRandom(finalQuizBank.value, Math.min(20, finalQuizBank.value.length))
+    if (questions.length > 0) {
       arr.push({
         type: 'quiz',
-        title: '📋 Level 綜合評量',
+        title: `📋 ${props.lesson.title || titleSlide?.title || ''}`,
         isFinalExam: true,
-        passScore: 80,
-        questions: pickRandom(bank, Math.min(20, bank.length))
+        passScore: 70,
+        questions
       })
     }
     return arr
@@ -261,7 +270,7 @@ function handleKeydown (e) {
 
 onMounted(() => {
   window.addEventListener('keydown', handleKeydown)
-  if (props.isFinalExam && props.lesson.levelKey) loadQuizBank(props.lesson.levelKey)
+  if (props.isFinalExam && props.lesson.levelKey && !(props.lesson.quiz?.length)) loadQuizBank(props.lesson.levelKey)
 })
 onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
 </script>

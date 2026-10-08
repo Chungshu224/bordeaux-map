@@ -73,7 +73,7 @@ const props = defineProps({
 
 const { t } = useI18n()
 
-const ROW_KEYS = ['grape', 'soil', 'climate', 'elevation', 'ageing', 'style', 'aromas', 'price', 'producers']
+const ROW_KEYS = ['grape', 'soil', 'climate', 'elevation', 'ageing', 'style', 'aromas', 'producers']
 const rows = computed(() => ROW_KEYS.map(key => ({ key, label: t(`italy.slides.comparison.rows.${key}`) })))
 
 const defaultPairs = [
@@ -91,7 +91,6 @@ const defaultPairs = [
       ageing: '38 個月（含 18 個月木桶）；Riserva 62 個月',
       style: '結構紮實、單寧粗獷、高酸、需 10+ 年才開瓶。男性化、力量型',
       aromas: '焦油、玫瑰、皮革、松露、甘草、黑櫻桃、雪茄',
-      price: '€40 – €1,500+',
       producers: 'Conterno、Bartolo Mascarello、Vietti、Roagna、Burlotto'
     },
     right: {
@@ -105,7 +104,6 @@ const defaultPairs = [
       ageing: '26 個月（含 9 個月木桶）；Riserva 50 個月',
       style: '較優雅、單寧細緻、酒體中等、可較早飲用。女性化、優雅型',
       aromas: '紅櫻桃、玫瑰、覆盆子、絲質單寧、優雅花香',
-      price: '€35 – €800+',
       producers: 'Bruno Giacosa、Gaja、Produttori del Barbaresco、Roagna'
     },
     keyDifference: 'Barolo 因 Helvetian 砂質土帶來鋼鐵骨架，Barbaresco 的鈣質泥灰岩則賦予優雅單寧。Barolo 法定陳年 38 個月、Barbaresco 僅 26 個月——這 12 個月的差異反映兩者單寧結構的本質不同。'
@@ -124,7 +122,6 @@ const defaultPairs = [
       ageing: '50 個月（含 24 個月木桶 + 4 個月瓶陳）；Riserva 62 個月',
       style: '結構厚實、單寧成熟、果香集中、極高陳年潛力',
       aromas: '黑櫻桃、皮革、雪茄、香料、無花果乾、巧克力',
-      price: '€50 – €2,000+',
       producers: 'Biondi-Santi、Soldera Case Basse、Salvioni、Poggio di Sotto'
     },
     right: {
@@ -138,7 +135,6 @@ const defaultPairs = [
       ageing: '24 個月（含 12 個月木桶）；Riserva 36 個月',
       style: '較易飲、果香奔放、酒體中等偏飽滿',
       aromas: '紅櫻桃、紫羅蘭、菸草、皮革、香料',
-      price: '€20 – €100',
       producers: 'Avignonesi、Boscarelli、Salcheto、Poliziano'
     },
     keyDifference: 'Brunello 強制 100% Sangiovese 純粹，並有 50 個月超長陳年，使其成為 Sangiovese 的「終極表達」。Vino Nobile 允許混釀並只需 24 個月陳年，更接近日常飲用的高品質紅酒。價格落差約 3-5 倍，但 Vino Nobile 性價比經常超越 Brunello 入門款。'
@@ -157,7 +153,6 @@ const defaultPairs = [
       ageing: '基礎款無；Riserva 18 個月（DOCG 等級）',
       style: '較柔軟、果香明亮、礦物中等、適合早飲',
       aromas: '青蘋果、檸檬、白花、杏仁、鹽味（海風）',
-      price: '€10 – €40',
       producers: 'Bucci、Sartarelli、Garofoli、Umani Ronchi'
     },
     right: {
@@ -171,7 +166,6 @@ const defaultPairs = [
       ageing: '基礎款無；Riserva 18 個月',
       style: '骨感緊瘦、極高酸度、礦物張力強、極佳陳年潛力',
       aromas: '青檸、白花、燧石、煙燻、白胡椒、堅果（陳年）',
-      price: '€15 – €80',
       producers: 'Belisario、La Monacesca、Bisci、Borgo Paglianetto'
     },
     keyDifference: 'Castelli di Jesi 在海風影響下展現柔和果香與輕度鹽味；Matelica 山谷無海風、晝夜溫差大，產生極高酸度與礦物深度。Matelica 雖產量小（僅 Castelli di Jesi 的 1/10）卻擁有更佳陳年潛力——5-15 年後可發展驚人複雜度。'
@@ -190,7 +184,6 @@ const defaultPairs = [
       ageing: '24 個月（含至少 木桶陳年）；Riserva 4 年',
       style: '採收後葡萄風乾 100-120 天（appassimento）→ 糖度集中，酒精 14-16%、酒體飽滿、甜潤但不甜',
       aromas: '黑櫻桃、無花果乾、葡萄乾、巧克力、咖啡、皮革、香料',
-      price: '€30 – €500+',
       producers: 'Quintarelli、Dal Forno、Bertani、Allegrini、Masi'
     },
     right: {
@@ -204,7 +197,6 @@ const defaultPairs = [
       ageing: '12 個月以上',
       style: '新鮮葡萄直接釀造（無風乾）；酒精 12-13%、酒體中等、果香奔放、易飲',
       aromas: '紅櫻桃、覆盆子、紫羅蘭、香料、淡苦杏仁',
-      price: '€10 – €30',
       producers: 'Allegrini、Tedeschi、Zenato、Zýme'
     },
     keyDifference: '工藝決定一切：Amarone 將葡萄風乾 3-4 個月使糖分濃縮、釀出 14-16% 酒精的飽滿酒款；Valpolicella Superiore 使用新鮮葡萄、產出輕快易飲。同一個生產者用同一塊葡萄園，可同時釀造這兩種風格。值得注意：Ripasso 是中間版本——將 Valpolicella 倒入剛壓榨的 Amarone 酒渣上二次發酵，被稱為「窮人的 Amarone」。'
