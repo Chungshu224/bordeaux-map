@@ -249,7 +249,6 @@ export default {
       mapError: '地圖錯誤：{msg}',
       unknownError: '未知',
       pairing: '🍽️ 配餐',
-      price: '💶 參考價格',
       emptyLine1: '點選上方按鈕或地圖上的產區',
       emptyLine2: '查看位置與詳細資訊',
       labels: {
@@ -305,7 +304,6 @@ export default {
           location: 'Siena 省，Asso、Orcia、Ombrone 三河圍繞的 Montalcino 丘陵，海拔 120-600m',
           desc: '義大利最偉大的紅酒之一，Biondi-Santi 家族在 19 世紀末確立此款酒的傳奇地位。高海拔處為古老貧瘠的 Galestro 與 Alberese，低海拔為海洋黏土與砂土；比 Chianti Classico 更溫暖，讓 Sangiovese 穩定完熟。',
           pairing: '野豬肉 Cinghiale、陳年 Pecorino 起司、松露料理、紅燒野味',
-          price: '€40-200+ / Riserva €80-400+',
         },
         'chianti-classico': {
           name: 'Chianti Classico DOCG',
@@ -318,7 +316,6 @@ export default {
           location: '佛羅倫斯與錫耶納之間，橫跨 Greve、Castellina、Radda、Gaiole 等 9 個市鎮',
           desc: '佛羅倫斯與錫耶納之間的歷史核心區，Galestro 與 Alberese 土壤賦予優雅與礦物感。Gran Selezione（2014 新設）是只用酒莊自有葡萄的最高等級，黑公雞徽章象徵最傳統的風格承諾。',
           pairing: 'Bistecca alla Fiorentina T 骨牛排、番茄肉醬麵、野豬燉肉',
-          price: 'Annata €12-22 / Riserva €18-45 / Gran Selezione €35-80+',
         },
         'vino-nobile': {
           name: 'Vino Nobile di Montepulciano DOCG',
@@ -331,7 +328,6 @@ export default {
           location: 'Siena 省，Montepulciano 與 Valiano 丘陵，海拔 250-600m',
           desc: '托斯卡納三強中的「隱藏寶石」，較內陸、較大陸性，受 Trasimeno 湖調節；海洋起源的砂質土讓風格柔和圓潤。Avignonesi、Poliziano 是代表性酒莊，性價比勝過 Brunello。',
           pairing: 'Piccione（鴿肉）料理、Tagliatelle 野豬醬麵、陳年起司',
-          price: '€15-40 / Riserva €25-60',
         },
         morellino: {
           name: 'Morellino di Scansano DOCG',
@@ -344,7 +340,6 @@ export default {
           location: 'Grosseto 省（南 Maremma），Scansano 周邊，距海岸約 20km',
           desc: '托斯卡納地中海海岸的 Sangiovese（當地稱 Morellino），溫暖氣候造就柔順的果香風格，是 Brunello 的親民替代選擇。Erik Banti 等酒莊在此建立優良聲譽。',
           pairing: '海鮮料理（烤魚、淡菜）、野豬、烤羊、輕食義大利麵',
-          price: '€10-20 / Riserva €15-30',
         },
         vernaccia: {
           name: 'Vernaccia di San Gimignano DOCG',
@@ -357,7 +352,6 @@ export default {
           location: 'Siena 省，San Gimignano 塔城周邊，Chianti Classico 西側',
           desc: '托斯卡納唯一的白葡萄酒 DOCG（1993 年），1966 年更是義大利第一個 DOC。San Gimignano 的中世紀塔樓城市是著名觀光地標，海洋起源的黃砂土與苦杏仁尾韻獨具辨識度。',
           pairing: '海鮮前菜、沙拉、白肉料理、地方小食（Bruschetta）',
-          price: '€12-22 / Riserva €18-35',
         },
         'rosso-montalcino': {
           name: 'Rosso di Montalcino DOC',
@@ -370,7 +364,6 @@ export default {
           position: 'Brunello 的「小弟」，義大利「副牌」類別的原型',
           desc: '許多頂尖 Brunello 酒莊（Biondi-Santi、Casanova di Neri、Poggio di Sotto）都會生產 Rosso di Montalcino 作為入門款，在品質欠佳的年份，部分 Brunello 園地的葡萄也會降級釀製 Rosso，以維護 Brunello 的品質標準。',
           pairing: '燉肉料理、義大利麵、日常牛排',
-          price: '€15-30，CP 值極高的 Brunello 前導款',
         },
         bolgheri: {
           name: 'Bolgheri DOC',
@@ -383,7 +376,6 @@ export default {
           location: 'Livorno 省，北 Maremma 海岸，Castagneto Carducci 周邊',
           desc: '超級托斯卡納的誕生地。Sassicaia（1968）和 Ornellaia 在此確立義大利最頂尖的波爾多式紅酒。1983 年 DOC 原只限白酒與粉紅酒，1994 年才納入紅酒；沖積礫石、海相砂黏土加上海風調節，造就出色的 Cabernet 成熟度。2013 年 Bolgheri Sassicaia 成為義大利唯一的單一酒莊 DOC。',
           pairing: '烤羊排、牛排、陳年起司、黑松露',
-          price: 'Bolgheri Rosso €20-45 / Sassicaia €150-250 / Ornellaia €180-300',
         },
       },
     },
@@ -406,7 +398,6 @@ export default {
           location: 'Catania 省，Etna 火山北、東、南坡，北坡最受矚目',
           desc: '被稱為「地中海的勃艮第」，Etna 的 Nerello Mascalese 在火山黑土上展現出類似 Pinot Noir 的細膩風格。1968 年成為西西里第一個 DOC，2011 年起 Contrada 可標示於酒標，反映不同坡面、海拔、土壤的風格差異；未嫁接的百年老藤更是珍寶。',
           pairing: '烤魚、地中海燉蔬菜、野菇燉飯、羊肉料理',
-          price: '入門 €15-30 / Contrada 頂級 €50-200+',
         },
         cerasuolo: {
           name: 'Cerasuolo di Vittoria DOCG',
@@ -419,7 +410,6 @@ export default {
           location: 'Ragusa 省，東南部 Vittoria 一帶，砂與黏土覆蓋石灰岩，夾有富鐵紅土',
           desc: 'Nero d’Avola 帶來結構深度，Frappato 帶來清新草莓花香，兩者的混釀創造出 Sicily 最具個性的紅酒。COS 酒莊（1980年）和 Arianna Occhipinti 是自然農法的先驅，將此產區推向國際視野。',
           pairing: '烤雞、豬里肌、地中海燉菜（Caponata）、中等陳年起司',
-          price: '€15-45 / Classico €20-60',
         },
         marsala: {
           name: 'Marsala DOC',
@@ -432,7 +422,6 @@ export default {
           location: 'Trapani 省，西端 Marsala 港，全島最乾燥炎熱的地區之一',
           desc: '1770 年代英國商人 John Woodhouse 在 Marsala 港發現當地的 vino perpetuo，加烈後外銷英國，開創義大利最著名的加烈酒傳統。Vergine 等級只加烈、不加 concia，是最純粹的 Marsala 表達，部分酒廠以 Solera 系統陳年，帶出堅果與氧化風味。',
           pairing: '烹飪（Chicken Marsala、Zabaione）/ 飲用：陳年起司、堅果、焦糖甜點',
-          price: 'Fine €8-15 / Vergine Riserva €25-60+',
         },
         pantelleria: {
           name: 'Pantelleria DOC',
@@ -445,7 +434,6 @@ export default {
           location: '距突尼西亞約 70km 的火山島，終年強風，藤蔓種在淺坑中貼地生長',
           desc: '終年強風迫使葡萄以 alberello pantesco 形式種在淺坑（conche）中，並以火山石牆圍繞——這種種植方式已列入 UNESCO 非物質文化遺產。Passito di Pantelleria 是義大利最頂級的甜白酒之一，De Bartoli、Murana、Donnafugata 帶動了 1980 年代的復興。',
           pairing: '杏仁甜點（Cassata）、烤無花果、藍起司（Gorgonzola）、餐後獨享',
-          price: 'Passito di Pantelleria €20-80 / 頂級 €100+',
         },
         noto: {
           name: 'Noto DOC',
@@ -458,7 +446,6 @@ export default {
           location: 'Siracusa 省，Avola / Noto 周邊，東南海岸炎熱區',
           desc: 'Nero d’Avola 的發源地，Avola 小鎮是這個品種的命名地。炎熱石灰岩土壤造就深邃的色澤與飽滿酒體；頂級版可陳年 10-15 年，展現皮革、乾果的複雜熟成香氣。Planeta 在此設有莊園。',
           pairing: '烤羊肉、燉牛肉（Ragù）、野豬肉、陳年硬質起司',
-          price: '€10-25 / 頂級 Nero d’Avola €25-60',
         },
       },
     },
@@ -484,7 +471,6 @@ export default {
           style: '結構強、複雜、耐陳年；與 DOC 同面積、同有 99 個 MGA',
           desc: 'Castelli di Jesi 的最高等級，只佔整體產量的一小部分。Verdicchio 在鈣質黏土丘陵上展現杏仁、柑橘與礦物風味；1950-60 年代 Fazi Battaglia 的 anfora 造型瓶讓 Verdicchio 聞名，1980 年代起 Bucci、Garofoli、Umani Ronchi 等品質生產者崛起。',
           pairing: 'Vincisgrassi（Marche 傳統千層麵）、烤鯛魚、龍蝦、Adriatic 海鮮湯、新鮮 Pecorino',
-          price: '€15-25 / 頂級 Riserva €25-50',
         },
         'verdicchio-matelica-riserva': {
           name: 'Verdicchio di Matelica Riserva DOCG',
@@ -497,7 +483,6 @@ export default {
           style: '比 Jesi 海拔更高、更冷涼、日夜溫差大：果香較少、更礦物、內斂嚴謹，極耐陳年',
           desc: '面積比 Castelli di Jesi 小得多，山谷受大陸性氣候主導。Verdicchio di Matelica DOC 有靜態、Spumante 與 Passito（沒有 Superiore），Riserva DOCG 則是最複雜、最長壽的版本。Bisci、La Monacesca、Belisario 是代表酒莊。',
           pairing: '白松露義大利麵、烤比目魚、海膽、陳年 Pecorino di Fossa（地窖熟成起司）',
-          price: '€18-30 / 頂級款 €30-55',
         },
         'conero-docg': {
           name: 'Cònero DOCG',
@@ -510,7 +495,6 @@ export default {
           style: '色深、強勁、飽滿、單寧明顯、酒精度高',
           desc: 'Marche 最重要的紅酒，產自環繞 Monte Cònero 海岬的葡萄園。Cònero 以南氣候較溫暖，讓需要溫暖才能熟透的 Montepulciano 完全成熟。Umani Ronchi 的 Cùmaro 是最知名的代表之一。',
           pairing: '野豬燉肉、烤羊腿、Vincisgrassi（Marche 千層麵）、陳年 Pecorino 起司',
-          price: '€25-50 / 頂級 €40-80',
         },
         'offida-docg': {
           name: 'Offida DOCG',
@@ -523,7 +507,6 @@ export default {
           location: 'Ascoli Piceno 省，Marche 最南端，Offida 鎮周邊',
           desc: 'Marche 南部的 DOCG，以 Pecorino 的復興聞名：這個源自 Marche 西南部的品種一度幾近消失，由 Guido Cocci Grifoni 救回，糖分高、酸度也高。Passerina 則芳香、礦物、高酸。同區的 Terre di Offida DOC 以 Passerina 為主，只生產 Spumante、Passito 與 Vino Santo。',
           pairing: '烤比目魚、海鮮拼盤、Pecorino di Fossa 起司、Ascoli 炸橄欖（特產）',
-          price: '€12-22 / 頂級款 €22-40',
         },
         'vernaccia-serrapetrona': {
           name: 'Vernaccia di Serrapetrona DOCG',
@@ -536,7 +519,6 @@ export default {
           scope: '義大利唯一只生產紅色氣泡酒的 DOCG，產量稀少',
           desc: '義大利最獨特的氣泡紅酒。Vernaccia Nera 只在 Serrapetrona 一帶種植，部分葡萄風乾後再經三次發酵，香氣在氣泡中釋放出覆盆莓、紫羅蘭與香料，既不同於法國粉紅氣泡，也不同於 Lambrusco。',
           pairing: '甜型：義大利節慶甜點、巧克力；乾型：烤鴿子、山區燉肉、辣味臘腸',
-          price: '€10-18',
         },
         'verdicchio-jesi-doc': {
           name: 'Verdicchio dei Castelli di Jesi DOC',
@@ -549,7 +531,6 @@ export default {
           feature: '1950-60 年代 Fazi Battaglia 的 anfora 造型瓶讓它走紅',
           desc: '認識 Verdicchio 最容易入手的方式：一般款清爽簡單，帶杏仁、柑橘與礦物風味，搭配 Adriatic 海鮮是絕配。1970-80 年代曾大量生產中性簡單的酒，1980 年代起品質生產者崛起，1990 年代受到酒評界關注。',
           pairing: 'Adriatic 烤海鮮、炸沙丁魚、海鮮義大利麵、Brodetto（Marche 魚湯）',
-          price: '€7-15',
         },
         'rosso-conero-doc': {
           name: 'Rosso Cònero DOC',
@@ -561,7 +542,6 @@ export default {
           location: 'Monte Cònero 海岬，Ancona 南方',
           desc: 'Cònero DOCG 的入門版：年輕時果香豐沛、易飲，同時保有 Montepulciano 的結構。Umani Ronchi 的「San Lorenzo」是廣為人知的 Rosso Cònero 之一。',
           pairing: '野豬燉肉、Vincisgrassi 千層麵、烤乳豬、Marche 燉羊肉、陳年 Pecorino',
-          price: '€10-18',
         },
         'rosso-piceno': {
           name: 'Rosso Piceno DOC',
@@ -574,7 +554,6 @@ export default {
           nameOrigin: '名稱源自古代 Piceni 民族',
           desc: 'Marche 中南部最主要的紅酒 DOC，以 Montepulciano 與 Sangiovese 的混釀展現日常飲用文化。Superiore 來自東南角的子產區，更集中、更有結構，值得特別尋找。',
           pairing: '烤豬肉串、Olive all’Ascolana（炸橄欖）、披薩、燉豬肋排',
-          price: '€8-15 / Superiore €15-25',
         },
         'lacrima-morro': {
           name: 'Lacrima di Morro d’Alba DOC',
@@ -587,7 +566,6 @@ export default {
           palate: '單寧低、早飲型，適合微涼服侍',
           desc: 'Marche 最令人驚艷的本土品種之一。Lacrima 的香氣強度遠超大多數義大利紅品種，一杯就滿室玫瑰與紫羅蘭。產區只在 Morro d’Alba 小鎮周邊，面積極小；Stefano Mancinelli 是重要的生產者。',
           pairing: '陳年 Pecorino 起司、風乾肉腸（Ciauscolo）、黑巧克力甜點、羊奶起司',
-          price: '€8-16',
         },
         falerio: {
           name: 'Falerio DOC',
@@ -600,7 +578,6 @@ export default {
           nameOrigin: '源自羅馬時代的 Falerio Picenus 古城（今 Falerone）',
           desc: 'Marche 南端的傳統白酒 DOC，可視為 Offida DOCG 周邊更親民的兄弟產區。Passerina 帶來比 Trebbiano 更鮮明的花果香，是認識 Marche 南部白酒風格的好起點。',
           pairing: 'Brodetto（Marche 魚湯）、烤海鮮、炸魚、夏日前菜',
-          price: '€6-12',
         },
         'bianchello-metauro': {
           name: 'Bianchello del Metauro DOC',
@@ -613,7 +590,6 @@ export default {
           feature: 'Metauro 河谷也是西元前 207 年 Metauro 戰役的古戰場',
           desc: 'Marche 北部的輕盈日常白酒。Biancame 幾乎只在這片河谷種植，清爽、低酒精，在 Pesaro 或 Fano 的海邊餐廳配炸沙丁魚，是最道地的 Adriatic 夏日體驗。',
           pairing: '炸沙丁魚、烤蛤蜊、海鮮前菜、炸魚',
-          price: '€5-10',
         },
       },
     },
@@ -639,7 +615,6 @@ export default {
           location: 'Montefalco 與周邊 4 個村莊，中央 Apennine 西側山麓，海拔 220-450m',
           desc: 'Montefalco 自 11 世紀起就是知名產區，Sagrantino 傳統上釀成甜型 Passito；1960 年代葡萄園幾近消失，1980 年代中期乾型成為主流，1990 年代 Arnaldo Caprai 帶動人氣爆發。現代乾型展現黑色水果、皮革、巧克力的複雜度，是義大利頂級收藏紅酒。Arnaldo Caprai、Paolo Bea 是代表酒莊。',
           pairing: '野豬燉肉（Cinghiale）、烤鴿子、陳年 Pecorino 起司、黑松露料理（Umbria 特產）',
-          price: '€25-55 / 頂級款 €45-100',
         },
         'torgiano-riserva': {
           name: 'Torgiano Rosso Riserva DOCG',
@@ -652,7 +627,6 @@ export default {
           producers: 'Lungarotti「Rubesco Riserva Vigna Monticchio」是 Umbria 最具聲望的紅酒之一',
           desc: 'Giorgio Lungarotti 是戰後義大利葡萄酒業最重要的人物之一：1962 年推出 Rubesco，奠定 Umbria 現代栽培與釀造的基礎，並推動 Torgiano 成為 Umbria 第一個 DOC。以 Sangiovese 為基底，展現比 Tuscany 更柔和圓潤的個性，搭配黑松露尤為出色。',
           pairing: '黑松露義大利麵（Umbria 特產）、烤牛排、野味燉肉、陳年 Umbrian 起司',
-          price: '€25-50 / Vigna Monticchio €45-80',
         },
         'montefalco-doc': {
           name: 'Montefalco DOC',
@@ -665,7 +639,6 @@ export default {
           feature: '1979 年成立，比 DOCG 更早；Montefalco Rosso 並非以 Sagrantino 為主',
           desc: 'Montefalco 小鎮被稱為「Umbria 的陽台」（Ringhiera dell’Umbria），俯瞰全 Umbria 的丘陵風景。Montefalco DOC 是比 Sagrantino DOCG 更親民的選擇，以 Sangiovese 為主體、單寧更柔順，3-5 年即可欣賞其魅力。',
           pairing: '烤羊肉、肉醬麵、Umbrian 燉肉、黑松露薄片、Pecorino 起司',
-          price: '€10-20 / Riserva €18-35',
         },
         orvieto: {
           name: 'Orvieto DOC',
@@ -678,7 +651,6 @@ export default {
           scope: '橫跨 Umbria 與 Lazio，大部分面積與產量在 Umbria；Umbria 面積最大、產量最高、外銷最多的 DOC',
           desc: 'Orvieto 自伊特魯里亞時期就是名產區，古羅馬人推崇、中世紀受教廷喜愛；傳統風格金黃、微氣泡、柔和帶甜，20 世紀下半葉轉向乾型。1931 年劃定產區，1971 年成立 DOC，原始產區稱為 Classico。南部為火山土（凝灰岩、玄武岩），中北部為黏土。',
           pairing: '新鮮 Umbrian 起司（Ricotta、嫩 Pecorino）、白肉料理、Trasimeno 湖魚、朝鮮薊',
-          price: '€7-15 / Muffa Nobile 版本 €30-60（375ml）',
         },
         'torgiano-doc': {
           name: 'Torgiano DOC',
@@ -690,7 +662,6 @@ export default {
           soil: 'Tevere 河沖積土與丘陵黏土石灰岩',
           desc: 'Torgiano 的葡萄酒史幾乎等同於 Lungarotti 家族的歷史。1960 年代 Giorgio Lungarotti 在此釀出 Rubesco，成為 Umbria 現代精品葡萄酒的起點；Riserva 等級後來獨立為 Torgiano Rosso Riserva DOCG。',
           pairing: '黑松露義大利麵、烤豬排、陳年起司拼盤、Umbrian 燉肉',
-          price: '€12-22 / Rubesco Riserva €35-60',
         },
         assisi: {
           name: 'Assisi DOC',
@@ -701,7 +672,6 @@ export default {
           feature: '同時生產紅、白、粉紅三種類型，Grechetto 白酒清爽宜人',
           desc: '聖方濟各（San Francesco d’Assisi）的故鄉，義大利最重要的宗教朝聖地之一。Assisi DOC 釀出清爽宜人的白酒與柔順的紅酒，與當地松露料理、橄欖油、Umbrian 起司相得益彰。',
           pairing: '黑松露起司、Umbrian 橄欖油烤蔬菜、白豆燉湯、烤雞',
-          price: '€8-15',
         },
         spoleto: {
           name: 'Spoleto DOC',
@@ -713,7 +683,6 @@ export default {
           location: 'Spoleto 古城周邊，Valle Umbra 東側',
           desc: 'Trebbiano Spoletino 是 Umbria 原生品種，與一般 Trebbiano 不同，20 世紀幾近絕種，由 Cantina Novelli 救回。如今在 Spoleto DOC、Montefalco Bianco DOC 與 Umbria IGT 都能找到佳作，Paolo Bea 等酒莊的版本備受白酒愛好者推崇。',
           pairing: 'Umbrian 白松露、新鮮 Ricotta 起司、清蒸淡水魚',
-          price: '€10-20 / 精品酒莊版本 €20-40',
         },
         trasimeno: {
           name: 'Colli del Trasimeno DOC',
@@ -725,7 +694,6 @@ export default {
           history: '西元前 217 年漢尼拔在此大敗羅馬軍（Trasimeno 湖戰役），是羅馬史上最慘痛的敗仗之一',
           desc: 'Trasimeno 湖對周邊氣候有調節作用，創造出 Umbria 獨特的湖畔風土。最有趣的是 Gamay del Trasimeno——名字讓人以為是 Beaujolais 的 Gamay，其實是 Grenache 家族的一員，果香更飽滿。湖畔美景配上清爽白酒和新鮮湖魚，是 Umbria 最愉悅的鄉村體驗。',
           pairing: '烤湖鱸、湖魚清湯、烤鰻魚',
-          price: '€8-16',
         },
       },
     },
@@ -751,7 +719,6 @@ export default {
           tiers: 'Superiore（產量比 DOC 更低、酒精更高）/ Riserva（最少陳年 12 個月）',
           desc: 'Frascati 是羅馬與 Lazio 的歷史白酒，也是 Lazio 最有名的酒。DOC 等級簡單、輕盈、清新；Superiore DOCG 規範更嚴，比 DOC 更有深度、酒體與個性。歷史上曾因大量生產而品質低落，2011 年升格 DOCG 後，精品酒莊帶動品質提升。',
           pairing: 'Carbonara（蛋黃醬義大利麵）、Cacio e Pepe（起司胡椒麵）、烤海鮮、炸鱈魚（Baccalà）',
-          price: '€8-15 / Riserva €15-25',
         },
         'cannellino-frascati': {
           name: 'Cannellino di Frascati DOCG',
@@ -764,7 +731,6 @@ export default {
           feature: '與 Frascati DOC 同一產區；Malvasia del Lazio 易感染貴腐，適合甜酒',
           desc: 'Frascati 同一產區釀造的甜型版本。細緻甜美、由清爽酸度平衡，是義大利中部較少人知道的甜白酒，產量不大、以本地消費為主。',
           pairing: 'Maritozzo 奶油麵包（羅馬傳統甜點）、杏仁餅乾、新鮮 Ricotta 起司配蜂蜜、水果塔',
-          price: '€15-28',
         },
         'cesanese-piglio': {
           name: 'Cesanese del Piglio DOCG',
@@ -777,7 +743,6 @@ export default {
           aromas: '芳香、果香主導（黑櫻桃、覆盆莓）、紫羅蘭、香料；結構良好，常經木桶陳年',
           desc: 'Lazio 唯一的紅酒 DOCG，也是 Lazio 最重要原生紅葡萄 Cesanese 的最高表現。Cesanese d’Affile 品質較高、種植持續增加；Cesanese Comune 則是歷史上較普遍的品種。與 Frascati 的白酒地位不同，Cesanese del Piglio 代表 Lazio 的優質紅酒潛力，Coletti Conti、Casale della Ioria 是代表酒莊。',
           pairing: '烤羊排、野豬肉醬義大利麵、陳年 Pecorino 起司、Coda alla Vaccinara（羅馬燉牛尾）',
-          price: '€15-30',
         },
         'est-montefiascone': {
           name: 'Est! Est!! Est!!! di Montefiascone DOC',
@@ -790,7 +755,6 @@ export default {
           established: '1966 年成為 Lazio 第一個 DOC',
           desc: 'Lazio 最具故事性的歷史白酒。傳說中主教命僕人 Martin 先行試酒，Martin 抵達 Montefiascone 後大為驚艷，寫下三個「Est!」；主教據說就此留在當地直到辭世。1966 年成為 Lazio 第一個 DOC，產區環繞 Bolsena 火山湖。',
           pairing: 'Bolsena 湖魚料理、淡菜、炸鱈魚（Baccalà）、清蒸海鮮',
-          price: '€6-12',
         },
         'castelli-romani': {
           name: 'Castelli Romani DOC',
@@ -803,7 +767,6 @@ export default {
           history: '羅馬東南的 Colli Albani 火山丘陵，長期是教宗與貴族的避暑地，教宗夏宮 Castel Gandolfo 在此',
           desc: 'Castelli Romani 是羅馬東南的火山丘陵地區，自古以來是羅馬人的後花園與避暑勝地。廣域 DOC 涵蓋 Frascati、Marino、Colli Albani 等子產區以外的廣大地帶，以日常餐酒為主。',
           pairing: 'Porchetta（羅馬烤乳豬）、Cacio e Pepe、烤海鮮、各式羅馬日常料理',
-          price: '€5-12',
         },
         marino: {
           name: 'Marino DOC',
@@ -816,7 +779,6 @@ export default {
           feature: '比 Frascati 低調，是當地的日常選擇',
           desc: 'Marino 最有名的是每年葡萄節噴泉流出白酒的奇觀。酒風清爽，是 Frascati 之外另一個 Castelli Romani 的代表白酒，知名度較低、價格也較親民。',
           pairing: 'Porchetta 三明治、Pizza、炸朝鮮薊（Carciofo alla Giudea）、清淡前菜',
-          price: '€5-10',
         },
         cerveteri: {
           name: 'Cerveteri DOC',
@@ -829,7 +791,6 @@ export default {
           site: 'Banditaccia 墓葬群（Necropoli della Banditaccia）是 UNESCO 世界遺產',
           desc: 'Cerveteri 是伊特魯里亞文明的重鎮，Banditaccia 墓葬群列為 UNESCO 世界遺產。產區位於 Tyrrhenian 海岸，同時生產紅白兩種風格，是認識 Lazio 前羅馬時期歷史的好起點。',
           pairing: '烤海鮮、Spaghetti alle Vongole（蛤蠣麵）、烤豬肉、地中海式料理',
-          price: '€8-15',
         },
         'cesanese-olevano': {
           name: 'Cesanese di Olevano Romano DOC',
@@ -842,7 +803,6 @@ export default {
           feature: 'Lazio 三個 Cesanese 法定產區之一，另外兩個是 Cesanese del Piglio DOCG 與 Cesanese di Affile DOC',
           desc: 'Cesanese 的傳統 DOC，比鄰近的 Piglio DOCG 更接地氣。Olevano Romano 在 19 世紀深受德國浪漫派畫家喜愛。是認識 Cesanese 品種特色的親民入口。',
           pairing: '肉醬麵、披薩、鄉村起司拼盤、烤肉',
-          price: '€8-16',
         },
         'colli-albani': {
           name: 'Colli Albani DOC',
@@ -855,7 +815,6 @@ export default {
           history: '傳說中羅馬城的前身 Alba Longa 就在這片丘陵',
           desc: 'Colli Albani 是羅馬貴族和教宗的避暑勝地，Albano 湖與 Nemi 湖都是這座火山群的火山口湖。火山土壤是 Frascati、Marino 與 Colli Albani 的共同基礎，酒風清爽。',
           pairing: 'Porchetta 烤乳豬、朝鮮薊料理（羅馬傳統菜）、海鮮前菜、輕食',
-          price: '€6-12',
         },
       },
     },
@@ -881,7 +840,6 @@ export default {
           style: '比一般 Montepulciano d’Abruzzo DOC 更濃縮、結構更強，適合陳年',
           desc: 'Abruzzo 兩個 DOCG 中較早也較重要的一個，代表 Montepulciano 的最高表現。產區位於 Abruzzo 北部的 Teramo 丘陵，從海岸一路延伸到 Gran Sasso 山腳，規範比全區性 DOC 更嚴。Illuminati、Emidio Pepe 等酒莊都位於 Teramo 省。',
           pairing: 'Arrosticini 烤羊肉串、野豬燉肉、陳年 Pecorino 起司、烤牛排',
-          price: '€20-45 / Riserva €35-80',
         },
         tullum: {
           name: 'Terre Tollesi / Tullum DOCG',
@@ -894,7 +852,6 @@ export default {
           style: '有靜態與 spumante（氣泡）版本',
           desc: '2019 年升格的 DOCG，以 Tollo 鎮的拉丁古名 Tullum 為名。面積很小、靠近海岸，除了 Montepulciano 紅酒，也以 Pecorino、Passerina 白酒和氣泡酒為特色，反映了 Abruzzo 原生白葡萄的崛起。',
           pairing: 'Adriatic 海鮮（白酒）、Arrosticini 羊肉串（紅酒）、炸海鮮（氣泡酒）',
-          price: '€15-30',
         },
         'montepulciano-doc': {
           name: 'Montepulciano d\'Abruzzo DOC',
@@ -907,7 +864,6 @@ export default {
           feature: '5 個子產區：Casauria（100%）、Alto Tirino 與 Terre dei Peligni（95%）、Terre dei Vestini 與 Teate（90%）',
           desc: 'Abruzzo 的象徵。Montepulciano 是 Abruzzo 原生、種植最廣的品種，風格從簡單易飲、果香豐富，到深色濃縮、結構強勁的木桶陳年款都有。注意：Montepulciano d’Abruzzo 是品種名，與使用 Sangiovese 的 Toscana 產區 Vino Nobile di Montepulciano 完全不同。',
           pairing: 'Arrosticini 羊肉串、肉醬吉他麵（Maccheroni alla Chitarra）、烤紅肉、Pecorino 起司',
-          price: '€8-18 / Riserva €15-30',
         },
         cerasuolo: {
           name: 'Cerasuolo d\'Abruzzo DOC',
@@ -920,7 +876,6 @@ export default {
           feature: '靜態粉紅酒（不是氣泡酒），是 Abruzzo 的全區性粉紅酒',
           desc: 'Abruzzo 的全區性粉紅酒。Montepulciano 花青素豐富，短時間浸皮就能得到深櫻桃色。與淡色的 Provence 粉紅酒不同，Cerasuolo 更有份量和結構，是非常百搭的佐餐酒。',
           pairing: '番茄醬義大利麵、烤海鮮、Adriatic 魚湯、夏日沙拉、披薩',
-          price: '€8-15 / 精品款 €20-30',
         },
         trebbiano: {
           name: 'Trebbiano d\'Abruzzo DOC',
@@ -933,7 +888,6 @@ export default {
           style: '一般款清爽中性；頂級款有白桃、杏桃、杏仁、礦物，酒體飽滿',
           desc: 'Abruzzo 歷史上的旗艦白酒。名聲長期被大量生產的廉價版本拖累，但在 Valentini、Emidio Pepe 等頂級生產者手中，能釀出可陳年數十年的偉大白酒。Trebbiano Toscano 是 Abruzzo 種植最廣的白葡萄，常與 Trebbiano Abruzzese 混釀。',
           pairing: 'Adriatic 魚湯（Brodetto di Pesce）、烤鯛魚、新鮮 Pecorino 起司',
-          price: '€8-15（一般款）/ Valentini €100-180、Emidio Pepe €50-75',
         },
         controguerra: {
           name: 'Controguerra DOC',
@@ -946,7 +900,6 @@ export default {
           style: '紅、白、氣泡與 Passito 甜酒，風格多元',
           desc: 'Abruzzo 最北邊的 DOC，緊鄰 Marche。與其他 Abruzzo 產區不同，Controguerra 允許混入國際品種，也生產 Passito 甜酒，提供了 Abruzzo 最多元的風格選擇。',
           pairing: '火腿冷盤、山區熟食、Pecorino 起司、輕食前菜',
-          price: '€8-18',
         },
         villamagna: {
           name: 'Villamagna DOC',
@@ -957,7 +910,6 @@ export default {
           feature: '範圍很小的紅酒 DOC，有 Riserva',
           desc: 'IWS 列出的 Abruzzo DOC 之一，位於 Chieti 省的丘陵，專注於 Montepulciano 紅酒，範圍比全區性的 Montepulciano d’Abruzzo DOC 小得多。',
           pairing: '烤羊肉、肉醬義大利麵、熟成起司',
-          price: '€12-25',
         },
         ortona: {
           name: 'Ortona DOC',
@@ -968,7 +920,6 @@ export default {
           history: 'Ortona 是二戰「Ortona 戰役」（1943）的發生地，也是重要的 Adriatic 港口',
           desc: 'Ortona 是 Abruzzo 東岸的港口城市，周邊的小型 DOC 位於沿海丘陵帶，受 Adriatic 海調節。產量有限，主要供應當地。',
           pairing: 'Adriatic 烤海鮮、炸海鮮拼盤、魚湯',
-          price: '€8-15',
         },
       },
     },
@@ -992,7 +943,6 @@ export default {
           style: '顏色深、酒體飽滿、酸度明顯、單寧細緻',
           desc: '專為 Molise 的招牌品種 Tintilia 設立的 DOC。Tintilia 過去多與 Montepulciano 混釀，鮮少單獨裝瓶；如今仍屬小眾，但越來越受到重視。想喝單一品種 Tintilia，就找這個 DOC。',
           pairing: 'Cavatelli 手工貝殼麵配羊肉醬、炭烤羊肉、Caciocavallo 起司',
-          price: '€12-20 / Riserva €22-35',
         },
         'molise-doc': {
           name: 'Molise DOC',
@@ -1004,7 +954,6 @@ export default {
           feature: '並非只產紅酒；想找單一品種 Cabernet Sauvignon，最可能在這個 DOC',
           desc: 'Molise 的全區性 DOC，也是產量最大的 DOC。Rosso 以 Montepulciano 為主，同時允許許多單一品種酒款，包括國際品種，為生產者提供最大的彈性。',
           pairing: '依品種而定：Montepulciano 配燉肉、Falanghina 配海鮮、Rosato 配輕食',
-          price: '€8-15',
         },
         biferno: {
           name: 'Biferno DOC',
@@ -1017,7 +966,6 @@ export default {
           feature: '以 Trebbiano Toscano 為主的白酒混釀，最可能來自這個 DOC',
           desc: '以 Molise 主要河流 Biferno 河命名的 DOC，位於 Campobasso 省。紅酒以 Montepulciano 為主、風格接近 Abruzzo；白酒則以 Trebbiano Toscano 為主。',
           pairing: 'Brodetto alla Termolese 魚湯（白酒）、Cavatelli 配番茄醬（紅酒）',
-          price: '€8-18',
         },
         'pentro-isernia': {
           name: 'Pentro di Isernia DOC',
@@ -1030,7 +978,6 @@ export default {
           feature: '產量很小，主要在當地流通',
           desc: '以古代 Samnite 部族 Pentri 命名的 DOC，位於 Molise 西部的 Isernia 省山區。產量很小，在 Molise 以外很少見到。',
           pairing: '烤羊肉、山區燉肉、Caciocavallo 起司、手工義大利麵',
-          price: '€8-15',
         },
       },
     },
@@ -1055,7 +1002,6 @@ export default {
           soil: '石灰質黏土與海相石灰岩，混合火山物質',
           desc: '南義最負盛名的法定產區之一，位於 Avellino 省 Irpinia。酒款結構強、酒體飽滿，單寧、酸度與酒精都高，需要時間軟化並發展複雜度。1950 年代 Antonio Mastroberardino 專注於 Aglianico，1968 年推出 Taurasi Riserva，奠定其國際地位。',
           pairing: '野豬燉肉、烤羊排、陳年 Pecorino 起司',
-          price: '€15-35 / Riserva €35-80 / 頂級年份 €80-200+',
         },
         fiano: {
           name: 'Fiano di Avellino DOCG',
@@ -1068,7 +1014,6 @@ export default {
           nameOrigin: 'Fiano 的古拉丁名為 Apianum；13 世紀首次出現在 Frederick II 的酒單',
           desc: 'Fiano 是 Campania 最高貴的白葡萄，也是義大利最佳白葡萄之一。1940 年代末幾近滅絕，由 Mastroberardino 救回。產區多樣，四個村莊各有特色，需要瓶中陳年才能完全展現。',
           pairing: '鮮魚料理、海鮮義大利麵、Mozzarella di Bufala',
-          price: '€12-25 / 單一村莊 €25-60',
         },
         greco: {
           name: 'Greco di Tufo DOCG',
@@ -1081,7 +1026,6 @@ export default {
           style: '不鏽鋼釀造、不過桶；高酸、礦物、打火石、煙燻，有質感；可隨瓶陳發展',
           desc: 'Greco 最負盛名的產區。Greco 歷史上種在 Tufo 鎮周邊，名稱可能指古希臘風格的酒。晚熟、難種，酚類物質多、酸度高；含硫土壤賦予酒款標誌性的打火石與煙燻（sulfurei）風味。',
           pairing: '生蠔、烤蝦、炸海鮮（Fritto misto）',
-          price: '€10-20 / 單一園 €20-40',
         },
         'aglianico-tab': {
           name: 'Aglianico del Taburno DOCG',
@@ -1094,7 +1038,6 @@ export default {
           soil: '以石灰質黏土與砂岩為主，表層覆蓋火山物質',
           desc: 'Campania 第四個 DOCG，與 Taurasi、Basilicata 的 Aglianico del Vulture 並列義大利最重要的 Aglianico 產區。當地的 Aglianico Amaro 酸度明顯，造就有張力、耐陳年的紅酒。',
           pairing: '燒烤肉類、番茄燉肉、陳年 Pecorino 起司',
-          price: '€10-20 / Riserva €18-35',
         },
         falerno: {
           name: 'Falerno del Massico DOC',
@@ -1107,7 +1050,6 @@ export default {
           history: '古羅馬 Falernum 依葡萄園位置分 Faustianum、Caucinum、Falernum 三級',
           desc: '為延續古羅馬 Falernum 的傳承而設的 DOC。Falernum 自 BC 3 世紀起在 Monte Massico 山坡生產，是古代最偉大的葡萄酒之一，雙耳瓶標示產地、年份與生產者。Villa Matilde 是復興這段歷史的先驅。',
           pairing: 'Rosso 配燉肉與烤肉；Bianco 配海鮮',
-          price: '€12-30 / Riserva €30-50',
         },
         aversa: {
           name: 'Asprinio di Aversa DOC',
@@ -1119,7 +1061,6 @@ export default {
           wines: '靜態、微氣泡、氣泡酒',
           desc: 'Caserta 省 Aversa 周邊的 DOC，以當地的 Asprinio 葡萄釀造。最特別的是古老的 Alberata Aversana 整枝，葡萄樹沿著白楊樹攀升到很高的地方，採收時需要長梯。',
           pairing: 'Mozzarella di Bufala、炸物、Pizza marinara',
-          price: '€10-20',
         },
         vesuvio: {
           name: 'Vesuvio DOC',
@@ -1132,7 +1073,6 @@ export default {
           nameOrigin: '傳說名稱源自 17 世紀修士使用的滴濾系統',
           desc: '自古希臘、羅馬時代就享有聲譽的傳統產區。維蘇威至今仍是活火山，葡萄種在中低坡的火山砂土上，許多葡萄樹以自根種植。Lacryma Christi（基督的眼淚）是最著名的名稱。',
           pairing: 'Napoli 灣海鮮、披薩、番茄料理',
-          price: '€8-20',
         },
         'campi-flegrei': {
           name: 'Campi Flegrei DOC',
@@ -1144,7 +1084,6 @@ export default {
           feature: '兩大主角：Campi Flegrei Piedirosso 與 Campi Flegrei Falanghina',
           desc: 'Napoli 以西的火山窪地，「Flegrei」意為燃燒。疏鬆的火山砂土讓根瘤蚜無法生存，保留了許多未嫁接的 Piedirosso 與 Falanghina 老藤。',
           pairing: 'Falanghina 配海鮮；Piedirosso 配輕食與熟食',
-          price: '€10-25',
         },
         amalfi: {
           name: 'Costa d\'Amalfi DOC',
@@ -1157,7 +1096,6 @@ export default {
           feature: '子產區：Furore、Ravello、Tramonti',
           desc: '阿瑪菲海岸懸崖梯田上的葡萄酒，乾砌石牆撐起狹窄的梯田，棚架下保留許多百年老藤。產量少，多在當地消費。',
           pairing: '阿瑪菲海鮮料理、烤海鱸、檸檬料理（Sfusato 阿瑪菲檸檬）',
-          price: '€15-40',
         },
         ischia: {
           name: 'Ischia DOC',
@@ -1170,7 +1108,6 @@ export default {
           feature: '陡峭狹窄的梯田，以乾砌石牆支撐；2000 多年的釀酒歷史',
           desc: 'Napoli 灣的火山島，擁有 2000 多年的葡萄酒歷史。Biancolella 是 Ischia 原生的招牌白葡萄，酒精與酸度中等，種在俯瞰大海的梯田上。',
           pairing: '鮮蛤義大利麵（Spaghetti alle Vongole）、島嶼海鮮拼盤',
-          price: '€12-25',
         },
       },
     },
@@ -1195,7 +1132,6 @@ export default {
           style: '皮厚、單寧高、酸度中等；比 Primitivo、Negroamaro 較不強勁、酒體較輕',
           desc: 'Castel del Monte 是 Nero di Troia 的家。Nero di Troia 單寧強，傳統上會與其他品種混釀；這個 DOCG 則要求最低 90%，展現品種本色。Torrevento 的 Vigna Pedale 是知名代表。',
           pairing: '烤羊排、燉野豬肉、陳年 Caciocavallo 起司',
-          price: '€15-30 / 精選款 €30-60',
         },
         'castel-rosso': {
           name: 'Castel del Monte Rosso Riserva DOCG',
@@ -1207,7 +1143,6 @@ export default {
           feature: '並非 100% Nero di Troia，是 Nero di Troia 與其他品種的混釀',
           desc: 'Castel del Monte 的兩個紅酒 DOCG 之一，以 Nero di Troia 為主，搭配 Aglianico、Montepulciano 混釀。Rivera 的 Il Falcone 是最知名的代表。',
           pairing: '烤羊肉、燉牛肉、熟成起司',
-          price: '€15-35',
         },
         'primitivo-dolce': {
           name: 'Primitivo di Manduria Dolce Naturale DOCG',
@@ -1220,7 +1155,6 @@ export default {
           location: '與 Primitivo di Manduria DOC 相同範圍，Salento，面向 Ionian 海',
           desc: 'Primitivo di Manduria 的天然甜酒版本，2011 年成為 Puglia 第一個 DOCG。以過熟或輕度風乾的 Primitivo 釀造，風味濃縮如液態果乾。',
           pairing: '苦巧克力甜點、杏仁餅乾、藍紋起司',
-          price: '€20-40',
         },
         'castel-bombino': {
           name: 'Castel del Monte Bombino Nero DOCG',
@@ -1232,7 +1166,6 @@ export default {
           location: 'Castel del Monte，Puglia 北部與中部',
           desc: 'Puglia 唯一只產粉紅酒的法定產區。Bombino Nero 皮薄、酸度高，主要用來釀粉紅酒，酒款比 Salento 的 Negroamaro 粉紅酒更輕盈。',
           pairing: '海鮮前菜、烤沙丁魚、生火腿冷盤、地中海沙拉',
-          price: '€10-20',
         },
         'primitivo-doc': {
           name: 'Primitivo di Manduria DOC',
@@ -1245,7 +1178,6 @@ export default {
           soil: '富含鐵質的紅色砂質黏土覆蓋石灰岩',
           desc: 'Primitivo 的歷史故鄉，以豐富、強勁、酒體飽滿的紅酒聞名。Primitivo 即美國的 Zinfandel。Gianfranco Fino 的 Es 是最受追捧的精品代表。',
           pairing: '燒烤牛排、紅燒豬肋、濃醬義大利麵、陳年 Pecorino 起司',
-          price: '€10-20 入門 / 精品款 €25-60 / Es €60-100',
         },
         gioia: {
           name: 'Gioia del Colle DOC',
@@ -1258,7 +1190,6 @@ export default {
           style: '酸度高，比 Manduria 較不強勁、更細緻優雅',
           desc: 'Primitivo 的另一個主要產區。海拔比 Manduria 高，酒款酸度更高、更細緻優雅。注意：Gioia del Colle 是 DOC，不是 DOCG。',
           pairing: '烤肉、番茄燉肉、熟成起司',
-          price: '€12-30',
         },
         salice: {
           name: 'Salice Salentino DOC',
@@ -1271,7 +1202,6 @@ export default {
           producers: 'Leone de Castris（Five Roses，義大利第一款商業裝瓶粉紅酒）',
           desc: 'Negroamaro 的主要法定產區，位於 Salento。Leone de Castris 1943 年推出的 Five Roses 是義大利第一款商業裝瓶的粉紅酒。',
           pairing: '烤羔羊、Orecchiette 配番茄醬、燴茄子',
-          price: '€8-18 / Riserva €15-30',
         },
         copertino: {
           name: 'Copertino DOC',
@@ -1282,7 +1212,6 @@ export default {
           location: 'Lecce 省，Salento 半島',
           desc: 'Salento 的 Negroamaro 產區之一，以結實的紅酒聞名。IWS 考點：Copertino DOC 是以 Negroamaro 為基礎。',
           pairing: '燉肉、烤羊肉、Puglia 烤蔬菜',
-          price: '€8-20',
         },
         negroamaro: {
           name: 'Negroamaro di Terra d\'Otranto DOC',
@@ -1294,7 +1223,6 @@ export default {
           feature: 'Alberello 老藤在 Salento 仍很重要',
           desc: '涵蓋整個 Salento 的廣域 Negroamaro 產區。Salento 是 Puglia 最炎熱的地區，耐旱的 Negroamaro 在此表現最佳。',
           pairing: '紅燒羊腿、起司拼盤、烤蔬菜',
-          price: '€8-15',
         },
         cacce: {
           name: 'Cacc\'e mmitte di Lucera DOC',
@@ -1306,7 +1234,6 @@ export default {
           feature: '以紅白葡萄混釀而成的紅酒',
           desc: 'Lucera 周邊的歷史產區，以 Nero di Troia 混合白葡萄釀成紅酒。名稱在方言中意為「取出又放入」。',
           pairing: '肉醬義大利麵、烤香腸、農家料理',
-          price: '€8-15',
         },
         'san-severo': {
           name: 'San Severo DOC',
@@ -1318,7 +1245,6 @@ export default {
           feature: '以 Bombino Bianco 氣泡酒聞名',
           desc: 'Puglia 第一個 DOC，位於北部 Tavoliere 平原。Bombino Bianco 天然高酸，在這裡被釀成清爽的氣泡酒。',
           pairing: '開胃菜、炸海鮮、Burrata',
-          price: '€8-15',
         },
       },
     },
@@ -1343,7 +1269,6 @@ export default {
           location: 'Basilicata 最北端，15 個村莊環繞死火山 Monte Vulture，70 個 MGA',
           desc: 'Basilicata 唯一的 DOCG。Aglianico del Vulture 是 Aglianico 三大生物型之一：高酸、高單寧，紅色果香更明顯，複雜、細緻、耐陳年。西側 Vulture 區海拔較高、火山土，酒款細緻；東側海拔較低、砂質黏土，酒款更飽滿。',
           pairing: '烤羊肉、野豬燉肉、陳年 Canestrato di Moliterno 起司',
-          price: '€25-45（Superiore）/ €50-100（Riserva）',
         },
         'adv-doc': {
           name: 'Aglianico del Vulture DOC',
@@ -1356,7 +1281,6 @@ export default {
           feature: '許多酒款（包括一些頂級酒）仍以 DOC 名義裝瓶',
           desc: '1971 年成立的 Aglianico del Vulture DOC，與 Superiore DOCG 同樣要求 100% Aglianico。許多生產者——包括一些頂級酒款——仍選擇以 DOC 名義裝瓶，所以 DOC 不代表品質較差。',
           pairing: '肉醬義大利麵、烤豬里肌、Lucanica 香腸',
-          price: '€15-25',
         },
         matera: {
           name: 'Matera DOC',
@@ -1369,7 +1293,6 @@ export default {
           feature: 'Matera 是 2019 年歐洲文化之都',
           desc: 'Basilicata 東部的產區，以石窟城市 Sassi di Matera 聞名。與 Vulture 的火山風土截然不同，Matera 周邊以石灰岩為主，種植 Primitivo、Greco 等多元品種。',
           pairing: '烤蔬菜、Lucanica 辣香腸、Matera 麵包配當地起司',
-          price: '€8-18',
         },
         'alta-val-agri': {
           name: 'Terre dell\'Alta Val d\'Agri DOC',
@@ -1380,7 +1303,6 @@ export default {
           feature: 'Basilicata 的國際品種只扮演次要角色，這裡是少數以國際品種為主的產區',
           desc: 'Agri 河上游山谷的小型 DOC，以 Merlot、Cabernet Sauvignon 等國際品種為主角，產量很小，主要在當地流通。',
           pairing: '野味料理、山區燉肉、Caciocavallo 起司',
-          price: '€10-20',
         },
         grottino: {
           name: 'Grottino di Roccanova DOC',
@@ -1392,7 +1314,6 @@ export default {
           feature: '產量很小，主要在當地流通',
           desc: '以傳統洞穴酒窖命名的小型 DOC，位於 Basilicata 南部的山丘，產量很小，在 Basilicata 以外很少見到。',
           pairing: '鄉村燉肉、手工麵、當地起司',
-          price: '€8-15',
         },
       },
     },
@@ -1417,7 +1338,6 @@ export default {
           feature: 'Classico 子產區只包括 Cirò 與 Cirò Marina 兩個市鎮',
           desc: 'Calabria 最古老、產量最大的 DOC。古希臘時期的名酒 Krimisa 據說是頒給古代奧運優勝者的獎品，名稱可能源自位於今日 Cirò 一帶的希臘殖民地 Cremissa。Gaglioppo 釀造的 Cirò Rosso 酸度與單寧高，Librandi 是最具代表性的酒莊。注意：Calabria 沒有 DOCG。',
           pairing: '烤劍魚（Calabria 海岸特產）、\'Nduja 辣腸義大利麵、烤羊排、當地起司',
-          price: '€8-18 / Classico Superiore €15-30 / Riserva €25-50',
         },
         'greco-bianco': {
           name: 'Greco di Bianco DOC',
@@ -1429,7 +1349,6 @@ export default {
           feature: 'Greco Bianco 是品種、Greco di Bianco 是 DOC、Bianco 是村莊',
           desc: '小巧而有聲望的風乾甜白酒產區。Greco Bianco 又稱 Greco Bianco di Gerace，非常適合風乾；酒款香氣與風味複雜，半甜至甜型。Umberto Ceratti 是知名生產者。',
           pairing: '杏仁餅乾、蜂蜜蛋糕、無花果乾、義大利杏仁糖（Torrone）',
-          price: '€25-60 / 375ml',
         },
         'terre-cosenza': {
           name: 'Terre di Cosenza DOC',
@@ -1441,7 +1360,6 @@ export default {
           feature: '涵蓋 Pollino 國家公園等山地，是 Magliocco 的重要產區',
           desc: 'Calabria 北部的廣域 DOC，由多個舊 DOC 合併而成。山地丘陵眾多，Magliocco 是最值得關注的本土紅葡萄。',
           pairing: '山區烤肉、野蘑菇燉飯、陳年山羊起司',
-          price: '€8-20',
         },
         lamezia: {
           name: 'Lamezia DOC',
@@ -1452,7 +1370,6 @@ export default {
           feature: '位於 Calabria 少見的沿海平原，交通便利（Lamezia 機場）',
           desc: 'Calabria 西海岸的 DOC，位於 Sant\'Eufemia 平原周邊，展現 Tyrrhenian 海岸一側的 Calabria 風土。',
           pairing: '烤劍魚、Tropea 紅洋蔥沙拉、清蒸海鮮',
-          price: '€8-18',
         },
         savuto: {
           name: 'Savuto DOC',
@@ -1463,7 +1380,6 @@ export default {
           feature: '位於 Tyrrhenian 海岸一側的河谷丘陵',
           desc: 'Savuto 河谷的小型 DOC，以 Gaglioppo 等本土紅葡萄混釀為主。',
           pairing: '燉肉、烤豬肉、熟成起司',
-          price: '€8-18',
         },
         bivongi: {
           name: 'Bivongi DOC',
@@ -1474,7 +1390,6 @@ export default {
           feature: '產量很小，主要在當地流通',
           desc: 'Ionian 海岸南部的小型 DOC，同時生產紅、白葡萄酒，在 Calabria 以外很少見到。',
           pairing: '海鮮、烤蔬菜、當地起司',
-          price: '€8-15',
         },
       },
     },
@@ -1499,7 +1414,6 @@ export default {
           method: '通常在不鏽鋼槽中釀造，少數生產者使用木桶',
           desc: 'Sardegna 唯一的 DOCG，也是 Vermentino 最重要的產區。風格從豐潤果香到礦物感強烈、帶鹹味都有；最好的酒款耐陳年，會發展出複雜的打火石與煙燻香氣。',
           pairing: 'Spaghetti alla Bottarga（烏魚子義大利麵）、烤魚、甲殼類海鮮、年輕的 Pecorino Sardo',
-          price: '€12-20 / Superiore €20-35',
         },
         cannonau: {
           name: 'Cannonau di Sardegna DOC',
@@ -1512,7 +1426,6 @@ export default {
           subzones: '三個官方子產區：Oliena、Jerzu、Capo Ferrato',
           desc: 'Sardegna 的旗艦紅葡萄。高酒精、紅色果香與地中海灌木叢氣息，風格從簡單果香到複雜、飽滿、耐陳年都有。',
           pairing: 'Porceddu 烤乳豬、烤羊肉、Malloreddus 香腸麵、熟成 Pecorino Sardo',
-          price: '€8-15 / Riserva €15-30',
         },
         'carignano-sulcis': {
           name: 'Carignano del Sulcis DOC',
@@ -1525,7 +1438,6 @@ export default {
           tiers: 'Superiore：只能採 Alberello 整枝，酒精要求較高，最少陳年 2 年；Riserva：最少陳年 2 年',
           desc: 'Sardegna 最具特色的紅酒之一。Carignano 與西班牙的 Mazuelo、法國的 Carignan 基因相同，需要溫暖、晴朗、乾燥的環境才能完全成熟；酒款口感豐腴、如天鵝絨般滑順，單寧柔和、酸度活潑。',
           pairing: '烤羊肉、野豬燉肉、熟成 Pecorino Sardo',
-          price: '€15-25 / Superiore €25-50',
         },
         'vernaccia-oristano': {
           name: 'Vernaccia di Oristano DOC',
@@ -1539,7 +1451,6 @@ export default {
           ageing: '桶中至少 2 年；Superiore 至少 3 年；Riserva 至少 4 年',
           desc: '氧化型、類似 Sherry，但不是加烈酒。通風良好、溫度隨季節變化的酒窖讓 flor 生長，產生 Sherry 般的乙醛香氣；有些酒以類似 solera 的系統在桶中熟成 10 年，濃郁、複雜、壽命極長。',
           pairing: 'Bottarga 烏魚子、烤杏仁、熟成起司',
-          price: '€15-25 / Riserva €25-50',
         },
         alghero: {
           name: 'Alghero DOC',
@@ -1551,7 +1462,6 @@ export default {
           feature: 'Alghero 至今仍保有加泰隆尼亞語的傳統，是亞拉岡－西班牙統治留下的痕跡',
           desc: '以兩個稀有品種為特色的小產區：白葡萄 Torbato 與紅葡萄 Cagnulari。Sella & Mosca 是當地代表酒莊。',
           pairing: 'Torbato 配海鮮與龍蝦；Cagnulari 配烤肉',
-          price: '€10-25',
         },
         'malvasia-bosa': {
           name: 'Malvasia di Bosa DOC',
@@ -1563,7 +1473,6 @@ export default {
           ageing: 'Riserva：酒精最低 15.5%，最少陳年 2 年（至少 1 年在木桶），從甜到乾都有，大多偏乾',
           desc: 'Malvasia di Sardegna 主要種在 Bosa 與 Cagliari 周邊。Malvasia di Bosa 產量極小，Colombu 是 IWS 術語表中列出的生產者。',
           pairing: 'Seadas（起司炸餅淋蜂蜜）、杏仁甜點、熟成起司',
-          price: '€20-40 / 500ml',
         },
         mandrolisai: {
           name: 'Mandrolisai DOC',
@@ -1575,7 +1484,6 @@ export default {
           feature: 'Bovale Sardo 與西班牙的 Graciano 是同一品種',
           desc: '中部山區的小產區，以 Bovale Sardo、Cannonau 與 Monica 三個品種混調，展現 Sardegna 內陸的傳統風格。',
           pairing: '烤香腸、羊肉燉菜、Pecorino Sardo',
-          price: '€10-20',
         },
       },
     },
@@ -1600,7 +1508,6 @@ export default {
           feature: '產區大致與 Trentino DOC 相同，葡萄園在海拔可達 800 公尺的山坡；也有 rosato 與 rosato riserva',
           desc: '1902 年，San Michele all\'Adige 農業學院的釀酒師 Giulio Ferrari 看出 Trentino 種植 Chardonnay、釀造瓶中發酵氣泡酒的潛力，創立 Ferrari 氣泡酒廠；之後其他生產者陸續加入。Trentino 的「山之氣泡」被視為義大利最好的傳統法氣泡酒之一。',
           pairing: '生蠔、海鮮拼盤、Parmigiano-Reggiano、慶祝場合的開胃酒',
-          price: '€15-30 / Riserva €30-60',
         },
         teroldego: {
           name: 'Teroldego Rotaliano DOC',
@@ -1613,7 +1520,6 @@ export default {
           ageing: 'Riserva 至少陳年 2 年；另有粉紅酒（rosato 或 Kretzer）',
           desc: '過去 Teroldego 是高產量、即飲的簡單餐酒。1980 年代，先驅 Elisabetta Foradori 以品系選擇、降低產量與 Guyot 整枝，證明了它的潛力，其他生產者隨後跟進。今天 Teroldego 是 Trentino 最好的紅酒，也是北義最有特色的紅酒之一。',
           pairing: 'Tyrol 香腸、烤牛排、肉醬麵、熟成起司',
-          price: '€12-25 / 頂級酒款 €30-60',
         },
         trentino: {
           name: 'Trentino DOC',
@@ -1626,7 +1532,6 @@ export default {
           feature: '也包括稀有而濃郁的甜酒 Moscato Rosa',
           desc: 'Trentino DOC 是產量最大、風格最多的法定產區，絕大多數酒款是單一品種酒。Chardonnay 有清新果香與較複雜的橡木桶兩種風格，Pinot Grigio 則以清爽、帶細緻芳香為主。',
           pairing: '白酒配 Trentino 起司拼盤、烤鱒魚；Marzemino 配燉肉與熟成起司',
-          price: '€8-20',
         },
         valdadige: {
           name: 'Valdadige / Etschtaler DOC',
@@ -1637,7 +1542,6 @@ export default {
           feature: '被視為本區的基本產區，Trentino 的產量佔此 DOC 的大部分',
           desc: 'Valdadige 沿著 Adige 河谷綿延，酒款簡單、清爽、果香明顯，是阿爾卑斯山麓的日常餐酒。',
           pairing: 'Schiava 配 Speck 與 Canederli（麵包餃子）；Pinot Grigio 配烤淡水魚',
-          price: '€7-13',
         },
         casteller: {
           name: 'Casteller DOC',
@@ -1648,7 +1552,6 @@ export default {
           feature: 'Schiava 通常是主要的調配成分',
           desc: 'Trentino 的次要 DOC 之一，以 Merlot 為基礎、搭配本土紅葡萄的輕鬆紅酒。',
           pairing: 'Canederli（麵包餃子）、Luganega 香腸、烤雞',
-          price: '€6-12',
         },
         terradeiforti: {
           name: 'Terradeiforti / Valdadige Terradeiforti DOC',
@@ -1659,7 +1562,6 @@ export default {
           feature: 'Enantio 原生於 Vallagarina，舊稱 Lambrusco a Foglia Frastagliata（與 Lambrusco 家族無基因關聯），近年復育',
           desc: '與 Veneto 共享的跨區 DOC，專注於兩個本土紅葡萄 Enantio 與 Casetta。Enantio 酒款多汁、酸度明亮，帶紅色漿果與草本氣息。',
           pairing: '野味燉肉、熟成起司',
-          price: '€10-18',
         },
       },
     },
@@ -1684,7 +1586,6 @@ export default {
           history: '羅馬時代即栽培；20 世紀初沒落，由 Perusini 家族搶救，1960 年代末重拾盛名',
           desc: 'Picolit 極易落果，果串稀疏、果粒小而甜，產量極低。甜酒風格優雅複雜，如今產量稀少、價格高昂、備受追捧。',
           pairing: '杏桃塔、藍紋起司、堅果甜點',
-          price: '€40-100 / 375-500ml',
         },
         ramandolo: {
           name: 'Ramandolo DOCG',
@@ -1697,7 +1598,6 @@ export default {
           method: '人工延遲採收（有時遲至 11 月），多數生產者再以 appassimento 風乾',
           desc: 'Friuli 東北角的小型甜酒產區，涵蓋 Friuli Colli Orientali DOC 最北端；葡萄園四周環繞森林。',
           pairing: '乾果甜點、熟成起司',
-          price: '€25-50 / 500ml',
         },
         rosazzo: {
           name: 'Rosazzo DOCG',
@@ -1709,7 +1609,6 @@ export default {
           history: '修道院建於 10 世紀末，修士對當地葡萄種植與釀酒貢獻卓著；Rosazzo 數世紀來也以 Pignolo、Ribolla Gialla 聞名',
           desc: '以 Friulano 為主體的白酒混調 DOCG，原為 Colli Orientali 底下的特定標示，後升格為獨立 DOCG。',
           pairing: '白肉、奶油醬汁的義大利麵、San Daniele 生火腿',
-          price: '€25-50',
         },
         lison: {
           name: 'Lison DOCG',
@@ -1720,7 +1619,6 @@ export default {
           feature: '2007 年後品種在 Veneto 改稱 Tai；Friuli 四個 DOCG 中唯一不在 Colli Orientali 範圍內的',
           desc: '位於 Friuli 西南、與 Veneto 交界的平原，以 Friulano 釀造的白酒 DOCG。',
           pairing: '海鮮義大利麵、烤魚',
-          price: '€12-25',
         },
         collio: {
           name: 'Collio Goriziano / Collio DOC',
@@ -1733,7 +1631,6 @@ export default {
           feature: 'Oslavia、Capriva、San Floriano 等次產區未獲法規承認，不能標示；部分葡萄園位於斯洛維尼亞境內',
           desc: 'Collio 的白酒被公認為 Friuli 最頂尖，也躋身義大利最優秀之列。產區由南向的圓緩丘陵構成，坡地陡峭需人工採收，白酒佔 80% 以上，是 Friuli 第三大 DOC。',
           pairing: 'San Daniele 生火腿、海鮮、白肉',
-          price: '€18-40 / 頂級酒款 €40-100',
         },
         'colli-orientali': {
           name: 'Friuli Colli Orientali DOC',
@@ -1746,7 +1643,6 @@ export default {
           feature: 'Buttrio、Cividale、Manzano 之間的南側較暖，是紅酒的經典核心區；Picolit、Ramandolo、Rosazzo 三個 DOCG 都在此範圍內',
           desc: 'Friuli 第二大 DOC，地理上是 Collio 丘陵的延伸；兩者分界主要出於歷史因素——Colli Orientali 在 19 世紀下半葉併入義大利，Collio 則在一戰後。',
           pairing: 'Refosco 配燉肉與野味；Friulano 配生火腿',
-          price: '€15-35 / 頂級酒款 €40-80',
         },
         carso: {
           name: 'Carso / Carso - Kras DOC',
@@ -1758,7 +1654,6 @@ export default {
           grape: '白葡萄 Vitovska、紅葡萄 Terrano；「Carso」或「Carso Rosso」須至少 70% Terrano',
           desc: '產量小但聲譽持續提升，酒款帶獨特的礦物鹹鮮調性。當地深受義大利與斯洛維尼亞雙重文化影響，斯洛維尼亞裔在葡萄酒業中相當活躍。',
           pairing: '海鮮、Trieste 的豬肉料理',
-          price: '€20-45',
         },
         grave: {
           name: 'Friuli Grave DOC',
@@ -1770,7 +1665,6 @@ export default {
           feature: 'Friuli 面積與產量最大的 DOC；Merlot 非常適應礫石平原',
           desc: '中央平原上的大型 DOC，以清新易飲的單一品種酒為主，是 Friuli 的日常餐酒來源。',
           pairing: '輕食、披薩、清淡的魚料理',
-          price: '€8-15',
         },
         isonzo: {
           name: 'Friuli Isonzo / Isonzo del Friuli DOC',
@@ -1782,7 +1676,6 @@ export default {
           feature: 'Isonzo 河將產區斜向一分為二：北側（右岸）較涼、以白葡萄為主；南側（左岸）受海風影響更明顯',
           desc: 'Friuli 一個備受期待的新興產區，潛力可媲美 Collio 與 Colli Orientali 的丘陵美酒。',
           pairing: '海鮮燉飯、烤魚',
-          price: '€12-30',
         },
         aquileia: {
           name: 'Friuli Aquileia DOC',
@@ -1793,7 +1686,6 @@ export default {
           feature: '與 Friuli Annia、Friuli Latisana 同屬沿海平原的 DOC',
           desc: '亞得里亞海沿岸平原上的 DOC，生產清新易飲的紅白酒。',
           pairing: '潟湖海鮮、烤魚',
-          price: '€8-15',
         },
       },
     },
@@ -1818,7 +1710,6 @@ export default {
           ageing: 'Sciacchetrà 最低酒精 13.5%，不得早於隔年 11 月上市；Riserva 三年後',
           desc: '自羅馬時代就享有盛名，擁有 Liguria 最壯觀的梯田葡萄園；葡萄藤近到會被浪花噴到，採收時用單軌車運送。這裡是國家公園與 UNESCO 世界遺產。',
           pairing: '海鮮、炸鯷魚；Sciacchetrà 配 Pandolce 與藍紋起司',
-          price: '€20-35 / Sciacchetrà €50-100（375-500ml）',
         },
         dolceacqua: {
           name: 'Rossese di Dolceacqua / Dolceacqua DOC',
@@ -1831,7 +1722,6 @@ export default {
           soil: '梯田式多岩坡地，紅色石灰質土，保水性佳、常受強風吹拂',
           desc: 'Dolceacqua 的葡萄酒至少自 19 世紀起就備受推崇，拿破崙也曾讚賞。單寧結構良好、酒體中等，帶紅色水果與香料，適合中期陳年；比 Riviera Ligure di Ponente 的 Rossese 更濃郁、更有深度。知名 MGA 包括 Arcagna、Luvaira、Pini、Curli、Posaù、Galeae。',
           pairing: '兔肉、香草烤肉、熟成起司',
-          price: '€18-35',
         },
         'colli-di-luni': {
           name: 'Colli di Luni DOC',
@@ -1843,7 +1733,6 @@ export default {
           feature: '此區 Vermentino 風格與 Toscana 西北部相近，是 Liguria 最具特色的酒款之一',
           desc: 'Toscana 的影響清楚體現在品種與酒款風格上。葡萄園分布在海岸與內陸丘陵。羅馬時代 Luni 的葡萄酒就被老普林尼提及。',
           pairing: 'Pesto 青醬麵、烤魚、海鮮',
-          price: '€15-30',
         },
         'colline-levanto': {
           name: 'Colline di Levanto DOC',
@@ -1854,7 +1743,6 @@ export default {
           style: '輕盈、清新、簡單的白酒',
           desc: '位於 Riviera di Levante 的小型 DOC。',
           pairing: '海鮮前菜、炸魚',
-          price: '€12-20',
         },
         portofino: {
           name: 'Golfo del Tigullio - Portofino DOC',
@@ -1865,7 +1753,6 @@ export default {
           feature: 'Albarola 在此稱為 Bianchetta Genovese，兩者 DNA 證實為同一品種',
           desc: '涵蓋 Portofino 一帶海岸的 DOC。',
           pairing: 'Pesto、Focaccia、海鮮',
-          price: '€12-22',
         },
         ormeasco: {
           name: 'Ormeasco di Pornassio / Pornassio DOC',
@@ -1877,7 +1764,6 @@ export default {
           tiers: 'Superiore：更高最低酒精、至少陳年 1 年；另有粉紅酒 Sciac-trà 與甜型紅 passito',
           desc: '注意：Ormeasco 的粉紅酒 Sciac-trà，與 Cinque Terre 的甜白酒 Sciacchetrà 完全不同。',
           pairing: '山區臘腸、燉肉、菇類料理',
-          price: '€12-25',
         },
         'val-polcevera': {
           name: 'Val Polcevera DOC',
@@ -1888,7 +1774,6 @@ export default {
           subzones: 'Coronata：環繞 Genoa，僅限白葡萄混調',
           desc: 'Liguria 最小的 DOC，以清爽白酒為主。',
           pairing: 'Genoa 料理、Pesto、海鮮',
-          price: '€10-20',
         },
       },
     },
@@ -1914,7 +1799,6 @@ export default {
           feature: '最出色的是 passito，常帶貴腐；最好的來自 Bertinoro',
           desc: '舊稱 Albana di Romagna。酒款結構良好、帶輕微單寧，典型的蔬菜與鼠尾草香，加上花香、核果與杏仁。乾型越來越常見，多為單一園且越來越多經木桶陳年。',
           pairing: '乾型配白肉與起司；passito 配甜點與藍紋起司',
-          price: '€12-25 / Passito €25-50（500ml）',
         },
         pignoletto: {
           name: 'Colli Bolognesi Pignoletto DOCG',
@@ -1927,7 +1811,6 @@ export default {
           history: '2014 年起品種名改為 Grechetto，「Pignoletto」改為指稱 Monteveglio 一帶的歷史產區',
           desc: 'Emilia-Romagna 的兩個 DOCG 之一，以 Bologna 丘陵的 Grechetto（Pignoletto）釀造。',
           pairing: 'Mortadella、炸物、清淡前菜',
-          price: '€12-25',
         },
         sorbara: {
           name: 'Lambrusco di Sorbara DOC',
@@ -1939,7 +1822,6 @@ export default {
           feature: 'Sorbara 需要另一個 Lambrusco 授粉，通常混植 Salamino；可釀 rosato 或 rosso、frizzante 或 spumante',
           desc: '被視為傳統 Lambrusco 的經典範例，也是最有名的 Lambrusco；Modena 以南較多丘陵處的酒款結構較強。',
           pairing: '炸海鮮、Prosciutto di Parma、Piadina',
-          price: '€10-25',
         },
         grasparossa: {
           name: 'Lambrusco Grasparossa di Castelvetro DOC',
@@ -1951,7 +1833,6 @@ export default {
           feature: '酸度較高、單寧明顯；殘糖（若有）用來平衡',
           desc: '常被視為市面上最好的 Lambrusco 之一，雖然因風味強度與結構而被認為「較不典型」。',
           pairing: 'Zampone、Cotechino、燒烤紅肉、熟成 Parmigiano Reggiano',
-          price: '€10-25',
         },
         salamino: {
           name: 'Lambrusco Salamino di Santa Croce DOC',
@@ -1963,7 +1844,6 @@ export default {
           feature: '名稱來自果串形狀像小香腸；風格介於 Sorbara 與 Grasparossa 之間',
           desc: 'Lambrusco Salamino 常被形容為能釀出最平衡的 Lambrusco。',
           pairing: 'Tagliatelle al Ragù、Mortadella、Pizza',
-          price: '€8-20',
         },
         romagna: {
           name: 'Romagna DOC',
@@ -1976,7 +1856,6 @@ export default {
           feature: '最好的 Sangiovese 比 Toscana 的更圓潤、酸度較低、單寧較柔',
           desc: 'Romagna 的葡萄酒產量大多屬於這個大型 DOC。Romagna Trebbiano 是當地日常白酒，Cagnina 是以 Terrano 釀的甜型紅酒，Pagadebit 以 Bombino Bianco 釀造。',
           pairing: 'Sangiovese 配烤肉與 Piadina；Trebbiano 配海鮮',
-          price: '€8-20 / Riserva €20-40',
         },
         reggiano: {
           name: 'Reggiano DOC',
@@ -1988,7 +1867,6 @@ export default {
           feature: '產量最大、出口最多的 Lambrusco DOC 之一',
           desc: '南側較高的丘陵葡萄園也生產較圓潤飽滿的版本。',
           pairing: 'Parmigiano Reggiano、醃肉拼盤',
-          price: '€6-15',
         },
         'colli-bolognesi': {
           name: 'Colli Bolognesi DOC',
@@ -2000,7 +1878,6 @@ export default {
           feature: '與 Colli Bolognesi Pignoletto DOCG 是不同的法定產區',
           desc: '以紅白混調與單一品種酒為主，國際品種在這裡有最出色的表現之一。',
           pairing: 'Tortellini、Mortadella、烤肉',
-          price: '€10-25',
         },
         'bosco-eliceo': {
           name: 'Bosco Eliceo DOC',
@@ -2012,7 +1889,6 @@ export default {
           style: '無氣泡、vivace 或 frizzante，從不甜到甜型；據說帶鹹鮮的海洋氣息',
           desc: '酒款被稱為 vini delle sabbie（沙地之酒）。Fortana 傳統上搭配當地的鰻魚。',
           pairing: '鰻魚、潟湖海鮮',
-          price: '€8-15',
         },
       },
     },
@@ -2037,7 +1913,6 @@ export default {
           feature: '本質上是「不甜的 Recioto」；1950 年代由 Bolla、Bertani 等推動商業化',
           desc: 'Amarone 的品質與市場成功在 1990 年代帶動整個 Valpolicella 擺脫平庸。酒體飽滿、萃取物高、單寧圓潤，成熟漿果、乾果、菸草、甘草、黑巧克力與皮革；酒精常達 15-16% 以上。',
           pairing: '燉牛肉、野味、熟成起司、Risotto all\'Amarone',
-          price: '€35-80 / 頂級 €100-300+',
         },
         'prosecco-docg': {
           name: 'Conegliano Valdobbiadene Prosecco Superiore DOCG',
@@ -2049,7 +1924,6 @@ export default {
           subzones: 'Superiore di Cartizze（頂級子區）；Rive 代表特定村莊或子區的陡坡葡萄園',
           desc: 'Prosecco 的頂級等級。Glera 在向陽坡地且控制產量時，能展現深度與個性，酒款輕盈、柔和、清爽，帶白花、檸檬、梨、蘋果與桃子香。',
           pairing: '開胃菜、Sarde in saor、海鮮',
-          price: '€12-25 / Cartizze €25-40',
         },
         asolo: {
           name: 'Asolo Prosecco DOCG',
@@ -2060,7 +1934,6 @@ export default {
           feature: '氣候比 Conegliano Valdobbiadene 略暖濕，總產量小得多',
           desc: 'Prosecco 的第二個丘陵 DOCG，與附近的 Montello DOCG 同屬 Treviso 西部的 Prealps 丘陵。',
           pairing: '開胃菜、炸物、清淡海鮮',
-          price: '€10-20',
         },
         'soave-sup': {
           name: 'Soave Superiore DOCG',
@@ -2073,7 +1946,6 @@ export default {
           feature: '2001 年核准；因範圍不只限 classico 核心區，Anselmi 等名莊並不採用',
           desc: '比 Soave DOC 要求更高的種植密度、更低的產量與更高的最低潛在酒精。許多酒莊即使符合資格，仍選擇標示 Soave Classico DOC。',
           pairing: 'Baccalà alla vicentina、海鮮、白肉',
-          price: '€15-35',
         },
         'bardolino-sup': {
           name: 'Bardolino Superiore DOCG',
@@ -2085,7 +1957,6 @@ export default {
           soil: '冰河時期的冰磧緩丘，沉積性、多礫石的土壤',
           desc: 'Bardolino 只釀清淡的 rosso 與 rosato；Superiore 更濃郁複雜，部分酒莊以橡木桶陳年。最佳酒款多來自 classico 區，帶獨特的鹹鮮（salato）風味。',
           pairing: 'Garda 湖的鮮魚、白肉',
-          price: '€12-25',
         },
         valpolicella: {
           name: 'Valpolicella DOC',
@@ -2097,7 +1968,6 @@ export default {
           tiers: 'Superiore 上市前至少陳年 1 年',
           desc: '1970 年代曾是義大利外銷量最大的酒款之一；酸櫻桃與花香、微苦杏仁尾韻，酒體輕、單寧低、酸度明亮。',
           pairing: 'Pasta e fagioli、醃肉、披薩',
-          price: '€8-18',
         },
         ripasso: {
           name: 'Valpolicella Ripasso DOC',
@@ -2108,7 +1978,6 @@ export default {
           history: '古老傳統，1960 年代由 Masi 重新推廣',
           desc: '結構更飽滿、酒體更豐厚、酒精與單寧更高，風格介於 Valpolicella 與 Amarone 之間；因變因眾多，品質與風格落差可能很大。',
           pairing: '燉肉、Pasta e fagioli、熟成起司',
-          price: '€15-30',
         },
         'prosecco-doc': {
           name: 'Prosecco DOC',
@@ -2120,7 +1989,6 @@ export default {
           feature: '大量生產，清爽易飲；頂級等級是 Conegliano Valdobbiadene 與 Asolo 的丘陵 DOCG',
           desc: 'Glera 種在平地且產量不受限時風味趨於中性，是 Prosecco DOC 的主力。',
           pairing: '開胃酒、Spritz、輕食',
-          price: '€8-15',
         },
       },
     },
@@ -2145,7 +2013,6 @@ export default {
           feature: 'Satèn 為只能做成 Brut 的白中白，最高 5 大氣壓；酒標只寫「Franciacorta」即可',
           desc: '1995 年成為義大利第一個專屬傳統法氣泡酒的 DOCG。土壤由砂、粉砂、礫石與石灰岩組成，Iseo 湖調節氣候；葡萄夠熟，低補糖的 Extra Brut 與 Brut Nature 特別常見。',
           pairing: '米蘭番紅花燉飯、生蠔、龍蝦、開胃菜',
-          price: '€20-40 / Riserva €50-150',
         },
         'valtellina-sup': {
           name: 'Valtellina Superiore DOCG',
@@ -2158,7 +2025,6 @@ export default {
           soil: '花崗岩砂、碎片岩與沖積物，淺薄貧瘠；石牆與岩石反射熱能',
           desc: '比 Barolo、Barbaresco 更早可飲、香氣更奔放、結構更精瘦，以細緻與優雅取勝。乾砌石牆梯田極為費工，被稱為「英雄式」葡萄種植。',
           pairing: 'Pizzoccheri、野味、Bresaola、陳年起司',
-          price: '€20-50 / Riserva €35-80',
         },
         sforzato: {
           name: 'Sforzato（Sfursat）di Valtellina DOCG',
@@ -2170,7 +2036,6 @@ export default {
           style: '不甜型；乾果、香料與菸草，口感如絲絨',
           desc: '健康、完全成熟的 Nebbiolo 風乾後釀造。與同樣風乾的 Amarone 相比，力量較弱但更優雅。',
           pairing: '燉野味、陳年 Bitto 起司',
-          price: '€35-80',
         },
         'oltrepo-mc': {
           name: 'Oltrepò Pavese Metodo Classico DOCG',
@@ -2182,7 +2047,6 @@ export default {
           feature: 'Cruasé：產區聯盟為頂級粉紅氣泡酒創立的集體品牌',
           desc: 'Oltrepò Pavese 位於波河以南的亞平寧山麓，是義大利 Pinot Nero 的重鎮；冷涼的石灰岩丘陵為 Pinot Nero 提供理想家園。',
           pairing: '開胃菜、醃肉、炸物',
-          price: '€18-40',
         },
         scanzo: {
           name: 'Moscato di Scanzo DOCG',
@@ -2194,7 +2058,6 @@ export default {
           ageing: '釀成後至少陳年 2 年才上市',
           desc: '義大利半島少數的甜型紅 passito 之一，產量極少。酒款濃郁複雜，帶花香、莓果與香料，酒精高，甜度內斂、酸度清爽、單寧如絲絨。',
           pairing: '陳年起司、黑巧克力甜點',
-          price: '€40-80（500 ml）',
         },
         'rosso-valtellina': {
           name: 'Rosso di Valtellina DOC',
@@ -2205,7 +2068,6 @@ export default {
           aromas: '乾燥玫瑰、紅色水果、皮革與香料；瓶陳後出現高山花卉與乾燥香草',
           desc: '與 Valtellina Superiore 同一河谷、同樣以 Nebbiolo 為主，是認識 Valtellina 風土的入門之選。',
           pairing: '醃肉、Pizzoccheri、日常義大利麵',
-          price: '€12-25',
         },
         lugana: {
           name: 'Lugana DOC',
@@ -2218,7 +2080,6 @@ export default {
           aromas: '白花、黃蘋果、核果、燧石、堅果與甜香料',
           desc: '高酸、酒體中等至飽滿，帶礦物感，瓶陳後越趨複雜。1990 年代因品質與個性受到認可；結構與萃取物足以承受攪桶、桶中發酵與熟成。',
           pairing: 'Garda 湖鮮魚、海鮮、白肉',
-          price: '€12-25 / Riserva €20-40',
         },
         valtenesi: {
           name: 'Riviera del Garda Classico — Valtènesi',
@@ -2230,7 +2091,6 @@ export default {
           history: '原為獨立 DOC，2017 年併入 Riviera del Garda Classico DOC 成為子區',
           desc: 'Chiaretto 是 Garda 湖周邊粉紅酒的傳統名稱，也是 Riviera del Garda Classico 的旗艦酒款。',
           pairing: 'Garda 湖鮮魚、夏日沙拉、醃肉',
-          price: '€10-20',
         },
         buttafuoco: {
           name: 'Buttafuoco dell\'Oltrepò Pavese DOC',
@@ -2242,7 +2102,6 @@ export default {
           style: '經典款為橡木桶熟成的不甜紅酒，酒體飽滿、結構紮實；亦有 frizzante',
           desc: '原為 Oltrepò Pavese 的子區，2010 年憑著聲譽獨立為 DOC，已重拾 19 世紀時的盛名。',
           pairing: '燉肉、烤肉、陳年起司',
-          price: '€15-35',
         },
         'lambrusco-mantovano': {
           name: 'Lambrusco Mantovano DOC',
@@ -2254,7 +2113,6 @@ export default {
           feature: 'Emilia-Romagna 以外唯一生產 Lambrusco 的法定產區',
           desc: '紅色 frizzante，風格近似鄰近 Emilia-Romagna 的 Lambrusco：深紅寶石色，紫羅蘭、櫻桃與甜香料，酒體強勁、單寧明顯。',
           pairing: '南瓜餃（tortelli di zucca）、醃肉、燉肉',
-          price: '€8-15',
         },
       },
     },
@@ -2269,7 +2127,6 @@ export default {
         blend: '🍇 混釀',
         region: '📍 產區',
         style: '🎯 風格',
-        price: '💰 價格',
         story: '📖 故事：',
       },
       styleMapTitle: '🗺️ 風格定位（Sangiovese 主導 ↔ Bordeaux 國際派）',
@@ -2288,7 +2145,6 @@ export default {
         ageing: '⏳ 法定陳年',
         style: '🍷 風格',
         aromas: '👃 香氣',
-        price: '💰 價格區間',
         producers: '🌟 代表酒莊',
       },
     },

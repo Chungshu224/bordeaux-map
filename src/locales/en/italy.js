@@ -242,7 +242,6 @@ export default {
       mapError: 'Map error: {msg}',
       unknownError: 'unknown',
       pairing: '🍽️ Pairing',
-      price: '💶 Price guide',
       emptyLine1: 'Click a button above or an area on the map',
       emptyLine2: 'to see its location and details',
       labels: {
@@ -298,7 +297,6 @@ export default {
           location: 'Province of Siena; the Montalcino hills ringed by the Asso, Orcia and Ombrone rivers, 120–600 m',
           desc: 'One of Italy\'s greatest red wines; the Biondi-Santi family established its legend in the late 19th century. Higher slopes have old, poor Galestro and Alberese, lower ones marine clay and sand; warmer than Chianti Classico, so Sangiovese ripens reliably.',
           pairing: 'Wild boar (cinghiale), aged Pecorino, truffle dishes, braised game',
-          price: '€40–200+ / Riserva €80–400+',
         },
         'chianti-classico': {
           name: 'Chianti Classico DOCG',
@@ -311,7 +309,6 @@ export default {
           location: 'Between Florence and Siena, across 9 communes including Greve, Castellina, Radda and Gaiole',
           desc: 'The historic heartland between Florence and Siena, where Galestro and Alberese soils bring elegance and minerality. Gran Selezione (created 2014) is the top tier, made only from estate-grown grapes; the black rooster seal stands for the most traditional style.',
           pairing: 'Bistecca alla Fiorentina, pasta with tomato meat sauce, wild boar stew',
-          price: 'Annata €12–22 / Riserva €18–45 / Gran Selezione €35–80+',
         },
         'vino-nobile': {
           name: 'Vino Nobile di Montepulciano DOCG',
@@ -324,7 +321,6 @@ export default {
           location: 'Province of Siena; the Montepulciano and Valiano hills, 250–600 m',
           desc: 'The "hidden gem" of Tuscany\'s big three: further inland and more continental, moderated by Lake Trasimeno, with sandy marine soils that give a softer, rounder style. Avignonesi and Poliziano are benchmark producers; better value than Brunello.',
           pairing: 'Pigeon (piccione), tagliatelle with wild boar ragù, aged cheeses',
-          price: '€15–40 / Riserva €25–60',
         },
         morellino: {
           name: 'Morellino di Scansano DOCG',
@@ -337,7 +333,6 @@ export default {
           location: 'Province of Grosseto (southern Maremma), around Scansano, about 20 km from the coast',
           desc: 'Sangiovese from Tuscany\'s Mediterranean coast (locally Morellino); the warm climate gives a supple, fruit-driven style — an affordable alternative to Brunello. Producers such as Erik Banti built the zone\'s reputation.',
           pairing: 'Seafood (grilled fish, mussels), wild boar, roast lamb, light pasta',
-          price: '€10–20 / Riserva €15–30',
         },
         vernaccia: {
           name: 'Vernaccia di San Gimignano DOCG',
@@ -350,7 +345,6 @@ export default {
           location: 'Province of Siena, around the towered town of San Gimignano, west of Chianti Classico',
           desc: 'Tuscany\'s only white DOCG (1993) — and in 1966 Italy\'s very first DOC. The medieval towers of San Gimignano are a famous landmark; yellow marine sands and the bitter-almond finish make the wine unmistakable.',
           pairing: 'Seafood starters, salads, white meat, local bites (bruschetta)',
-          price: '€12–22 / Riserva €18–35',
         },
         'rosso-montalcino': {
           name: 'Rosso di Montalcino DOC',
@@ -363,7 +357,6 @@ export default {
           position: 'Brunello\'s "little brother" and the prototype of Italy\'s second-wine category',
           desc: 'Many top Brunello estates (Biondi-Santi, Casanova di Neri, Poggio di Sotto) make Rosso di Montalcino as their entry wine; in weaker vintages some Brunello fruit is declassified into Rosso to protect Brunello\'s standards.',
           pairing: 'Stews, pasta, everyday steak',
-          price: '€15–30 — excellent value, a preview of Brunello',
         },
         bolgheri: {
           name: 'Bolgheri DOC',
@@ -376,7 +369,6 @@ export default {
           location: 'Province of Livorno, northern Maremma coast, around Castagneto Carducci',
           desc: 'Birthplace of the Super Tuscans: Sassicaia (1968) and Ornellaia made Italy\'s finest Bordeaux-style reds here. The 1983 DOC covered only white and rosé until reds were added in 1994; alluvial gravel, marine sand and clay, plus sea breezes, ripen Cabernet superbly. In 2013 Bolgheri Sassicaia became Italy\'s only single-estate DOC.',
           pairing: 'Grilled lamb chops, steak, aged cheeses, black truffle',
-          price: 'Bolgheri Rosso €20–45 / Sassicaia €150–250 / Ornellaia €180–300',
         },
       },
     },
@@ -399,7 +391,6 @@ export default {
           location: 'Province of Catania; the north, east and south slopes of Etna, the north the most celebrated',
           desc: 'Called "the Burgundy of the Mediterranean": on black volcanic soils Nerello Mascalese shows a finesse reminiscent of Pinot Noir. Sicily\'s first DOC (1968); since 2011 contrade may appear on labels, reflecting differences in slope, altitude and soil — and its ungrafted century-old vines are treasures.',
           pairing: 'Grilled fish, Mediterranean vegetable stews, mushroom risotto, lamb',
-          price: 'Entry €15–30 / top contrada €50–200+',
         },
         cerasuolo: {
           name: 'Cerasuolo di Vittoria DOCG',
@@ -412,7 +403,6 @@ export default {
           location: 'Province of Ragusa, around Vittoria in the south-east; sand and clay over limestone with iron-rich terra rossa',
           desc: 'Nero d’Avola brings structure and depth, Frappato fresh strawberry and floral notes — together they make Sicily\'s most characterful red. COS (1980) and Arianna Occhipinti pioneered natural farming and put the zone on the international map.',
           pairing: 'Roast chicken, pork loin, caponata, medium-aged cheeses',
-          price: '€15–45 / Classico €20–60',
         },
         marsala: {
           name: 'Marsala DOC',
@@ -425,7 +415,6 @@ export default {
           location: 'Province of Trapani, the port of Marsala at the western tip — one of the driest, hottest parts of the island',
           desc: 'In the 1770s the English merchant John Woodhouse discovered the local vino perpetuo in Marsala, fortified it and shipped it to England, founding Italy\'s most famous fortified-wine tradition. Vergine, fortified but with no concia, is the purest expression; some producers age it in a solera, giving nutty, oxidative notes.',
           pairing: 'Cooking (chicken Marsala, zabaione) / drinking: aged cheeses, nuts, caramel desserts',
-          price: 'Fine €8–15 / Vergine Riserva €25–60+',
         },
         pantelleria: {
           name: 'Pantelleria DOC',
@@ -438,7 +427,6 @@ export default {
           location: 'A volcanic island about 70 km from Tunisia; constant strong winds, vines grown low in shallow hollows',
           desc: 'Relentless wind forces growers to plant the alberello pantesco in shallow hollows (conche) ringed by volcanic stone walls — a practice inscribed by UNESCO as Intangible Cultural Heritage. Passito di Pantelleria is one of Italy\'s great sweet whites; De Bartoli, Murana and Donnafugata led its 1980s revival.',
           pairing: 'Almond desserts (cassata), roast figs, blue cheese (Gorgonzola), or on its own after dinner',
-          price: 'Passito di Pantelleria €20–80 / top €100+',
         },
         noto: {
           name: 'Noto DOC',
@@ -451,7 +439,6 @@ export default {
           location: 'Province of Siracusa, around Avola and Noto on the hot south-east coast',
           desc: 'The birthplace of Nero d’Avola, named after the town of Avola. Hot limestone soils give deep colour and a full body; top examples age 10–15 years, developing leather and dried-fruit complexity. Planeta has an estate here.',
           pairing: 'Roast lamb, beef ragù, wild boar, aged hard cheeses',
-          price: '€10–25 / top Nero d’Avola €25–60',
         },
       },
     },
@@ -477,7 +464,6 @@ export default {
           style: 'Structured, complex, age-worthy; same area and the same 99 MGAs as the DOC',
           desc: 'The top tier of Castelli di Jesi and a small share of its output. On calcareous clay hills Verdicchio shows almond, citrus and minerality; in the 1950s–60s Fazi Battaglia\'s amphora-shaped bottle made it famous, and from the 1980s quality producers such as Bucci, Garofoli and Umani Ronchi emerged.',
           pairing: 'Vincisgrassi (Marche lasagne), grilled sea bream, lobster, Adriatic fish soup, fresh Pecorino',
-          price: '€15–25 / top Riserva €25–50',
         },
         'verdicchio-matelica-riserva': {
           name: 'Verdicchio di Matelica Riserva DOCG',
@@ -490,7 +476,6 @@ export default {
           style: 'Higher, cooler and with wider day–night swings than Jesi: less fruity, more mineral, restrained and austere, very age-worthy',
           desc: 'Much smaller than Castelli di Jesi, in a valley dominated by a continental climate. Verdicchio di Matelica DOC comes as still, spumante and passito (there is no Superiore), while the Riserva DOCG is the most complex and long-lived version. Bisci, La Monacesca and Belisario are benchmark producers.',
           pairing: 'White-truffle pasta, grilled turbot, sea urchin, aged Pecorino di Fossa',
-          price: '€18–30 / top wines €30–55',
         },
         'conero-docg': {
           name: 'Cònero DOCG',
@@ -503,7 +488,6 @@ export default {
           style: 'Dark, robust, full-bodied, tannic, high in alcohol',
           desc: 'Marche\'s most important red, from vineyards around the Monte Cònero promontory. It is warmer south of Cònero, so Montepulciano — which needs warmth to ripen fully — can reach full maturity. Umani Ronchi\'s Cùmaro is one of the best-known examples.',
           pairing: 'Wild boar stew, roast leg of lamb, Vincisgrassi, aged Pecorino',
-          price: '€25–50 / top €40–80',
         },
         'offida-docg': {
           name: 'Offida DOCG',
@@ -516,7 +500,6 @@ export default {
           location: 'Province of Ascoli Piceno, the far south of Marche, around the town of Offida',
           desc: 'Southern Marche\'s DOCG, famous for the revival of Pecorino: native to south-western Marche, it was nearly extinct until Guido Cocci Grifoni saved it; high in sugar and balanced by high acidity. Passerina is aromatic, mineral and high in acidity. The overlapping Terre di Offida DOC is mostly Passerina and made only as spumante, passito and vino santo.',
           pairing: 'Grilled turbot, seafood platters, Pecorino di Fossa, fried Ascoli olives',
-          price: '€12–22 / top wines €22–40',
         },
         'vernaccia-serrapetrona': {
           name: 'Vernaccia di Serrapetrona DOCG',
@@ -529,7 +512,6 @@ export default {
           scope: 'Italy\'s only DOCG that makes only red sparkling wine; tiny production',
           desc: 'Italy\'s most unusual red sparkling wine. Vernaccia Nera grows only around Serrapetrona; part of the crop is dried and the wine goes through three fermentations, releasing raspberry, violet and spice in the bubbles — unlike French pink fizz or Lambrusco.',
           pairing: 'Sweet: festive Italian desserts, chocolate; dry: roast pigeon, mountain stews, spicy salami',
-          price: '€10–18',
         },
         'verdicchio-jesi-doc': {
           name: 'Verdicchio dei Castelli di Jesi DOC',
@@ -542,7 +524,6 @@ export default {
           feature: 'Fazi Battaglia\'s amphora-shaped bottle made it popular in the 1950s–60s',
           desc: 'The easiest way into Verdicchio: the regular wine is fresh and simple, with almond, citrus and mineral notes — perfect with Adriatic seafood. Mass production of simple, neutral wines in the 1970s–80s gave way to quality producers from the 1980s and critical attention in the 1990s.',
           pairing: 'Grilled Adriatic seafood, fried sardines, seafood pasta, brodetto (Marche fish stew)',
-          price: '€7–15',
         },
         'rosso-conero-doc': {
           name: 'Rosso Cònero DOC',
@@ -554,7 +535,6 @@ export default {
           location: 'The Monte Cònero promontory, south of Ancona',
           desc: 'The entry-level version of Cònero: generous fruit and easy drinking when young, yet with Montepulciano\'s structure. Umani Ronchi\'s "San Lorenzo" is one of the best-known Rosso Cònero wines.',
           pairing: 'Wild boar stew, Vincisgrassi, roast suckling pig, Marche lamb stew, aged Pecorino',
-          price: '€10–18',
         },
         'rosso-piceno': {
           name: 'Rosso Piceno DOC',
@@ -567,7 +547,6 @@ export default {
           nameOrigin: 'Named after the ancient Piceni people',
           desc: 'The main red DOC of central-southern Marche, a Montepulciano–Sangiovese blend for everyday drinking. The Superiore, from the south-east sub-zone, is more concentrated and structured and well worth seeking out.',
           pairing: 'Pork skewers, olive all\'ascolana (fried stuffed olives), pizza, braised pork ribs',
-          price: '€8–15 / Superiore €15–25',
         },
         'lacrima-morro': {
           name: 'Lacrima di Morro d’Alba DOC',
@@ -580,7 +559,6 @@ export default {
           palate: 'Low tannin, for drinking young, best served lightly chilled',
           desc: 'One of Marche\'s most striking native grapes: its perfume far outstrips most Italian reds, filling the room with roses and violets. The zone is tiny, around the village of Morro d’Alba; Stefano Mancinelli is a key producer.',
           pairing: 'Aged Pecorino, cured sausage (ciauscolo), dark-chocolate desserts, sheep\'s cheeses',
-          price: '€8–16',
         },
         falerio: {
           name: 'Falerio DOC',
@@ -593,7 +571,6 @@ export default {
           nameOrigin: 'From the Roman town of Falerio Picenus (today Falerone)',
           desc: 'A traditional white DOC in the far south, a more affordable sibling around Offida DOCG. Passerina brings more vivid floral and fruit notes than Trebbiano — a good starting point for southern Marche whites.',
           pairing: 'Brodetto (Marche fish stew), grilled seafood, fried fish, summer starters',
-          price: '€6–12',
         },
         'bianchello-metauro': {
           name: 'Bianchello del Metauro DOC',
@@ -606,7 +583,6 @@ export default {
           feature: 'The Metauro valley is also the site of the Battle of the Metaurus in 207 BC',
           desc: 'Northern Marche\'s light everyday white. Biancame grows almost only in this valley; fresh and low in alcohol, it is the classic Adriatic summer pairing with fried sardines by the sea in Pesaro or Fano.',
           pairing: 'Fried sardines, grilled clams, seafood starters, fried fish',
-          price: '€5–10',
         },
       },
     },
@@ -632,7 +608,6 @@ export default {
           location: 'Montefalco and 4 surrounding villages, on the western foothills of the Central Apennines, 220–450 m',
           desc: 'Montefalco has been a known wine area since the 11th century, and Sagrantino was traditionally made as a sweet passito. Its vineyards had nearly vanished by the 1960s; the dry style became mainstream in the mid-1980s and Arnaldo Caprai drove an explosion of popularity in the 1990s. Today\'s dry wines show black fruit, leather and chocolate — collectible Italian reds. Arnaldo Caprai and Paolo Bea are benchmark producers.',
           pairing: 'Wild boar stew (cinghiale), roast pigeon, aged Pecorino, black-truffle dishes (an Umbrian speciality)',
-          price: '€25–55 / top wines €45–100',
         },
         'torgiano-riserva': {
           name: 'Torgiano Rosso Riserva DOCG',
@@ -645,7 +620,6 @@ export default {
           producers: 'Lungarotti\'s "Rubesco Riserva Vigna Monticchio" is one of Umbria\'s most prestigious reds',
           desc: 'Giorgio Lungarotti was one of the most important figures of the post-war Italian wine industry: his Rubesco (1962) laid the foundation of modern viticulture and winemaking in Umbria, and he drove the creation of Torgiano, Umbria\'s first DOC. Sangiovese-based and softer and rounder than Tuscany\'s, it is superb with black truffle.',
           pairing: 'Black-truffle pasta, grilled steak, game stews, aged Umbrian cheeses',
-          price: '€25–50 / Vigna Monticchio €45–80',
         },
         'montefalco-doc': {
           name: 'Montefalco DOC',
@@ -658,7 +632,6 @@ export default {
           feature: 'Created in 1979, before the DOCG; Montefalco Rosso is not Sagrantino-based',
           desc: 'The town of Montefalco is called "the balcony of Umbria" (Ringhiera dell’Umbria) for its views over the region\'s hills. Montefalco DOC is a more affordable choice than the Sagrantino DOCG: Sangiovese-led with softer tannins, enjoyable after just 3–5 years.',
           pairing: 'Roast lamb, pasta with meat sauce, Umbrian stews, shaved black truffle, Pecorino',
-          price: '€10–20 / Riserva €18–35',
         },
         orvieto: {
           name: 'Orvieto DOC',
@@ -671,7 +644,6 @@ export default {
           scope: 'Shared between Umbria and Lazio, with most of the area and production in Umbria; Umbria\'s largest, most productive and most exported DOC',
           desc: 'A prestigious wine area since Etruscan times, prized by the Romans and favoured by the papacy in the Middle Ages; the traditional style was golden, prickly and soft-sweet, turning drier in the second half of the 20th century. Delimited in 1931, it became a DOC in 1971, with the original area named Classico. Volcanic soils (tuff, basalt) lie to the south and clay in the centre and north.',
           pairing: 'Fresh Umbrian cheeses (ricotta, young Pecorino), white meat, Trasimeno lake fish, artichokes',
-          price: '€7–15 / Muffa Nobile €30–60 (375 ml)',
         },
         'torgiano-doc': {
           name: 'Torgiano DOC',
@@ -683,7 +655,6 @@ export default {
           soil: 'Tevere alluvium and clay-limestone hills',
           desc: 'Torgiano\'s wine history is almost the history of the Lungarotti family. In the 1960s Giorgio Lungarotti made Rubesco here, the starting point of modern fine wine in Umbria; the Riserva later became the separate Torgiano Rosso Riserva DOCG.',
           pairing: 'Black-truffle pasta, pork chops, aged cheese boards, Umbrian stews',
-          price: '€12–22 / Rubesco Riserva €35–60',
         },
         assisi: {
           name: 'Assisi DOC',
@@ -694,7 +665,6 @@ export default {
           feature: 'Red, white and rosé; the Grechetto whites are fresh and pleasant',
           desc: 'The home of St Francis (San Francesco d’Assisi) and one of Italy\'s great pilgrimage sites. Assisi DOC makes fresh whites and supple reds that suit local truffle dishes, olive oil and Umbrian cheeses.',
           pairing: 'Truffled cheese, roast vegetables with Umbrian olive oil, white-bean soup, roast chicken',
-          price: '€8–15',
         },
         spoleto: {
           name: 'Spoleto DOC',
@@ -706,7 +676,6 @@ export default {
           location: 'Around the town of Spoleto, on the eastern side of the Valle Umbra',
           desc: 'Trebbiano Spoletino is a native Umbrian grape distinct from ordinary Trebbiano; almost extinct in the 20th century, it was saved by Cantina Novelli. Fine examples now come from Spoleto DOC, Montefalco Bianco DOC and Umbria IGT, and producers such as Paolo Bea have won it a following among white-wine lovers.',
           pairing: 'Umbrian white truffle, fresh ricotta, steamed freshwater fish',
-          price: '€10–20 / top producers €20–40',
         },
         trasimeno: {
           name: 'Colli del Trasimeno DOC',
@@ -718,7 +687,6 @@ export default {
           history: 'In 217 BC Hannibal crushed a Roman army here (Battle of Lake Trasimene), one of Rome\'s most painful defeats',
           desc: 'The lake moderates the local climate, creating a distinctive lakeside terroir. The most intriguing grape is Gamay del Trasimeno — its name suggests Beaujolais, but it belongs to the Grenache family, with fuller fruit. Lake views, fresh whites and lake fish make for Umbria\'s most relaxed country experience.',
           pairing: 'Grilled lake perch, lake-fish broth, grilled eel',
-          price: '€8–16',
         },
       },
     },
@@ -744,7 +712,6 @@ export default {
           tiers: 'Superiore (lower yields and higher alcohol than the DOC) / Riserva (min. 12 months’ ageing)',
           desc: 'Frascati is the historic white wine of Rome and Lazio, and the region’s best-known wine. The DOC is simple, light and fresh; the stricter Superiore DOCG shows more depth, body and character. Its reputation once suffered from mass production, but since the 2011 DOCG promotion quality-focused producers have raised the bar.',
           pairing: 'Carbonara, Cacio e Pepe, grilled seafood, fried salt cod (Baccalà)',
-          price: '€8-15 / Riserva €15-25',
         },
         'cannellino-frascati': {
           name: 'Cannellino di Frascati DOCG',
@@ -757,7 +724,6 @@ export default {
           feature: 'Same area as Frascati DOC; Malvasia del Lazio is prone to botrytis and suits sweet wines',
           desc: 'The sweet version made in the same area as Frascati. Delicate and sweet, balanced by fresh acidity, it is a little-known sweet white of central Italy, produced in small volumes and mostly drunk locally.',
           pairing: 'Maritozzo (Roman cream bun), almond biscuits, fresh ricotta with honey, fruit tarts',
-          price: '€15-28',
         },
         'cesanese-piglio': {
           name: 'Cesanese del Piglio DOCG',
@@ -770,7 +736,6 @@ export default {
           aromas: 'Aromatic and fruit-led (black cherry, raspberry), violet, spice; well structured, often oak-aged',
           desc: 'Lazio’s only red DOCG and the finest expression of Cesanese, the region’s most important native red grape. Cesanese d’Affile is the higher-quality variety and its plantings are increasing; Cesanese Comune was historically more widespread. In a region known for white wine, Cesanese del Piglio shows Lazio’s potential for quality reds; Coletti Conti and Casale della Ioria are leading producers.',
           pairing: 'Grilled lamb chops, wild-boar ragù pasta, aged Pecorino, Coda alla Vaccinara (Roman oxtail stew)',
-          price: '€15-30',
         },
         'est-montefiascone': {
           name: 'Est! Est!! Est!!! di Montefiascone DOC',
@@ -783,7 +748,6 @@ export default {
           established: 'Became Lazio’s first DOC in 1966',
           desc: 'Lazio’s most story-laden historic white. Legend says a bishop sent his servant Martin ahead to taste the wines; delighted in Montefiascone, Martin wrote “Est!” three times, and the bishop reputedly stayed there for the rest of his life. It became Lazio’s first DOC in 1966, and the appellation surrounds the volcanic Lake Bolsena.',
           pairing: 'Lake Bolsena fish, mussels, fried salt cod (Baccalà), steamed seafood',
-          price: '€6-12',
         },
         'castelli-romani': {
           name: 'Castelli Romani DOC',
@@ -796,7 +760,6 @@ export default {
           history: 'The volcanic Colli Albani south-east of Rome were long a summer retreat for popes and nobles; the papal summer residence, Castel Gandolfo, is here',
           desc: 'The Castelli Romani are the volcanic hills south-east of Rome, the city’s back garden and summer retreat since antiquity. This broad DOC covers the wider area outside sub-zones such as Frascati, Marino and Colli Albani, mostly for everyday wines.',
           pairing: 'Porchetta, Cacio e Pepe, grilled seafood, everyday Roman dishes',
-          price: '€5-12',
         },
         marino: {
           name: 'Marino DOC',
@@ -809,7 +772,6 @@ export default {
           feature: 'Lower-profile than Frascati; a local everyday choice',
           desc: 'Marino is famous for its annual grape festival, when the fountain flows with white wine. Its fresh whites are another benchmark of the Castelli Romani besides Frascati — less well known and more affordable.',
           pairing: 'Porchetta sandwiches, pizza, Jewish-style fried artichokes (Carciofo alla Giudea), light starters',
-          price: '€5-10',
         },
         cerveteri: {
           name: 'Cerveteri DOC',
@@ -822,7 +784,6 @@ export default {
           site: 'The Banditaccia necropolis (Necropoli della Banditaccia) is a UNESCO World Heritage Site',
           desc: 'Cerveteri was a major Etruscan centre, and its Banditaccia necropolis is a UNESCO World Heritage Site. On the Tyrrhenian coast, the DOC makes both red and white wines — a good way into Lazio’s pre-Roman history.',
           pairing: 'Grilled seafood, Spaghetti alle Vongole, roast pork, Mediterranean dishes',
-          price: '€8-15',
         },
         'cesanese-olevano': {
           name: 'Cesanese di Olevano Romano DOC',
@@ -835,7 +796,6 @@ export default {
           feature: 'One of Lazio’s three Cesanese appellations, with Cesanese del Piglio DOCG and Cesanese di Affile DOC',
           desc: 'A traditional Cesanese DOC, more down-to-earth than the neighbouring Piglio DOCG. Olevano Romano was much loved by German Romantic painters in the 19th century. An affordable way to get to know Cesanese.',
           pairing: 'Pasta with meat ragù, pizza, rustic cheese boards, grilled meats',
-          price: '€8-16',
         },
         'colli-albani': {
           name: 'Colli Albani DOC',
@@ -848,7 +808,6 @@ export default {
           history: 'Legend places Alba Longa, the forerunner of Rome, in these hills',
           desc: 'The Colli Albani were a summer retreat for Roman nobles and popes; Lake Albano and Lake Nemi are both craters of this volcanic complex. Volcanic soils underpin Frascati, Marino and Colli Albani alike, giving fresh-styled wines.',
           pairing: 'Porchetta, Roman artichoke dishes, seafood starters, light meals',
-          price: '€6-12',
         },
       },
     },
@@ -874,7 +833,6 @@ export default {
           style: 'More concentrated and structured than regular Montepulciano d’Abruzzo DOC, built to age',
           desc: 'The older and more important of Abruzzo’s two DOCGs and the finest expression of Montepulciano. It lies in the Teramo hills of northern Abruzzo, from the coast to the foot of the Gran Sasso, with stricter rules than the regional DOC. Producers such as Illuminati and Emidio Pepe are based in Teramo province.',
           pairing: 'Arrosticini lamb skewers, wild-boar stew, aged Pecorino, grilled steak',
-          price: '€20-45 / Riserva €35-80',
         },
         tullum: {
           name: 'Terre Tollesi / Tullum DOCG',
@@ -887,7 +845,6 @@ export default {
           style: 'Still and spumante (sparkling) styles',
           desc: 'Promoted to DOCG in 2019 and named after Tullum, the Latin name of Tollo. A small area near the coast, it is known not only for Montepulciano reds but also for Pecorino and Passerina whites and sparkling wines, reflecting the rise of Abruzzo’s native white grapes.',
           pairing: 'Adriatic seafood (whites), arrosticini (reds), fried seafood (sparkling)',
-          price: '€15-30',
         },
         'montepulciano-doc': {
           name: 'Montepulciano d\'Abruzzo DOC',
@@ -900,7 +857,6 @@ export default {
           feature: 'Five sub-zones: Casauria (100%), Alto Tirino and Terre dei Peligni (95%), Terre dei Vestini and Teate (90%)',
           desc: 'The emblem of Abruzzo. Montepulciano is native to Abruzzo and its most planted grape, making everything from simple, fruity, easy-drinking reds to deep-coloured, concentrated, structured, oak-aged wines. Note: Montepulciano d’Abruzzo is named after the grape, and is entirely different from Tuscany’s Vino Nobile di Montepulciano, made from Sangiovese.',
           pairing: 'Arrosticini, Maccheroni alla Chitarra with meat sauce, grilled red meat, Pecorino',
-          price: '€8-18 / Riserva €15-30',
         },
         cerasuolo: {
           name: 'Cerasuolo d\'Abruzzo DOC',
@@ -913,7 +869,6 @@ export default {
           feature: 'A still rosé (not sparkling); Abruzzo’s regional rosato',
           desc: 'Abruzzo’s regional rosato. Montepulciano is so rich in anthocyanins that a short maceration gives a deep cherry colour. Unlike pale Provence rosé, Cerasuolo has more weight and structure, making it a very versatile food wine.',
           pairing: 'Pasta with tomato sauce, grilled seafood, Adriatic fish soup, summer salads, pizza',
-          price: '€8-15 / top examples €20-30',
         },
         trebbiano: {
           name: 'Trebbiano d\'Abruzzo DOC',
@@ -926,7 +881,6 @@ export default {
           style: 'Regular wines are fresh and neutral; top wines show white peach, apricot, almond and minerality with full body',
           desc: 'Historically Abruzzo’s flagship white. Its reputation long suffered from cheap mass production, but in the hands of top producers such as Valentini and Emidio Pepe it can make great whites that age for decades. Trebbiano Toscano is Abruzzo’s most planted white grape and is often blended with Trebbiano Abruzzese.',
           pairing: 'Brodetto di Pesce (Adriatic fish soup), grilled sea bream, fresh Pecorino',
-          price: '€8-15 (regular) / Valentini €100-180, Emidio Pepe €50-75',
         },
         controguerra: {
           name: 'Controguerra DOC',
@@ -939,7 +893,6 @@ export default {
           style: 'Red, white, sparkling and sweet Passito — a wide range of styles',
           desc: 'Abruzzo’s northernmost DOC, next to Marche. Unlike other Abruzzo appellations, Controguerra allows international grapes in the blend and also makes sweet Passito, offering the widest range of styles in the region.',
           pairing: 'Cured hams, mountain charcuterie, Pecorino, light starters',
-          price: '€8-18',
         },
         villamagna: {
           name: 'Villamagna DOC',
@@ -950,7 +903,6 @@ export default {
           feature: 'A very small red-wine DOC, with a Riserva',
           desc: 'One of the Abruzzo DOCs listed by IWS, in the hills of Chieti province. It focuses on Montepulciano reds from an area far smaller than the regional Montepulciano d’Abruzzo DOC.',
           pairing: 'Roast lamb, pasta with meat ragù, aged cheeses',
-          price: '€12-25',
         },
         ortona: {
           name: 'Ortona DOC',
@@ -961,7 +913,6 @@ export default {
           history: 'Ortona was the site of the Battle of Ortona (1943) in the Second World War, and is an important Adriatic port',
           desc: 'Ortona is a port city on Abruzzo’s east coast. The small DOC around it lies in the coastal hill band, moderated by the Adriatic. Production is limited and mostly sold locally.',
           pairing: 'Grilled Adriatic seafood, mixed fried seafood, fish soup',
-          price: '€8-15',
         },
       },
     },
@@ -985,7 +936,6 @@ export default {
           style: 'Deep colour, full body, notable acidity, fine tannins',
           desc: 'A DOC created for Tintilia, Molise’s signature grape. Tintilia was mostly blended with Montepulciano and rarely bottled on its own; it remains a minor variety but is attracting growing enthusiasm. For a varietal Tintilia, look to this DOC.',
           pairing: 'Cavatelli with lamb ragù, grilled lamb, Caciocavallo cheese',
-          price: '€12-20 / Riserva €22-35',
         },
         'molise-doc': {
           name: 'Molise DOC',
@@ -997,7 +947,6 @@ export default {
           feature: 'Not red-only; a varietal Cabernet Sauvignon is most likely to come from this DOC',
           desc: 'Molise’s regional DOC and its most productive. The Rosso is based on Montepulciano, and many varietal wines are permitted, including international grapes, giving producers the greatest flexibility.',
           pairing: 'Depends on the grape: Montepulciano with stews, Falanghina with seafood, rosato with light dishes',
-          price: '€8-15',
         },
         biferno: {
           name: 'Biferno DOC',
@@ -1010,7 +959,6 @@ export default {
           feature: 'A Trebbiano Toscano-based white blend is most likely to come from this DOC',
           desc: 'A DOC named after the Biferno, Molise’s principal river, in Campobasso province. Its reds are Montepulciano-based, close in style to Abruzzo, and its whites are based on Trebbiano Toscano.',
           pairing: 'Brodetto alla Termolese fish soup (white), cavatelli with tomato sauce (red)',
-          price: '€8-18',
         },
         'pentro-isernia': {
           name: 'Pentro di Isernia DOC',
@@ -1023,7 +971,6 @@ export default {
           feature: 'Very small production, mostly sold locally',
           desc: 'A DOC named after the Pentri, an ancient Samnite tribe, in the mountains of Isernia province in western Molise. Production is very small and the wines are rarely seen outside Molise.',
           pairing: 'Roast lamb, mountain stews, Caciocavallo cheese, handmade pasta',
-          price: '€8-15',
         },
       },
     },
@@ -1048,7 +995,6 @@ export default {
           soil: 'Calcareous clays and marine-origin limestone mixed with volcanic material',
           desc: 'One of the most prestigious appellations of southern Italy, in Irpinia, Avellino province. The wines are structured, powerful and full-bodied, high in tannin, acidity and alcohol, and need time to soften and develop. In the 1950s Antonio Mastroberardino focused on Aglianico, and his 1968 Taurasi Riserva established its international reputation.',
           pairing: 'Wild-boar stew, grilled lamb chops, aged Pecorino',
-          price: '€15-35 / Riserva €35-80 / top vintages €80-200+',
         },
         fiano: {
           name: 'Fiano di Avellino DOCG',
@@ -1061,7 +1007,6 @@ export default {
           nameOrigin: 'Fiano’s ancient Latin name is Apianum; first mentioned in the 13th century on a wine list for Frederick II',
           desc: 'Fiano is Campania’s most noble white grape and among Italy’s finest. It was on the verge of extinction in the late 1940s until saved by Mastroberardino. The area is varied, each of the four villages has its own character, and the wines need bottle age to show their full potential.',
           pairing: 'Fish dishes, seafood pasta, Mozzarella di Bufala',
-          price: '€12-25 / single village €25-60',
         },
         greco: {
           name: 'Greco di Tufo DOCG',
@@ -1074,7 +1019,6 @@ export default {
           style: 'Stainless steel, no wood; high acidity, mineral, flinty, smoky, textured; can gain complexity with bottle age',
           desc: 'The most prestigious appellation for Greco. Greco was historically grown around the town of Tufo, and its name probably refers to an ancient Greek style of wine. Late-ripening and difficult to grow, it is high in phenolics and acidity; the sulphur-rich soils give the signature flinty, smoky (sulfurei) notes.',
           pairing: 'Oysters, grilled prawns, mixed fried seafood (fritto misto)',
-          price: '€10-20 / single vineyard €20-40',
         },
         'aglianico-tab': {
           name: 'Aglianico del Taburno DOCG',
@@ -1087,7 +1031,6 @@ export default {
           soil: 'Mostly calcareous clay and sandstone with a top layer of volcanic material',
           desc: 'Campania’s fourth DOCG and, with Taurasi and Basilicata’s Aglianico del Vulture, one of Italy’s most important appellations for Aglianico. The local Aglianico Amaro has pronounced acidity, giving tense, age-worthy reds.',
           pairing: 'Grilled meats, tomato-braised meats, aged Pecorino',
-          price: '€10-20 / Riserva €18-35',
         },
         falerno: {
           name: 'Falerno del Massico DOC',
@@ -1100,7 +1043,6 @@ export default {
           history: 'Ancient Falernum had three tiers by vineyard site: Faustianum, Caucinum and Falernum',
           desc: 'A DOC created to revive the legacy of ancient Roman Falernum, produced on the slopes of Monte Massico from the 3rd century BC and one of the greatest wines of antiquity, with amphorae marked with origin, vintage and producer. Villa Matilde was a pioneer of this revival.',
           pairing: 'Rosso with stews and roast meats; Bianco with seafood',
-          price: '€12-30 / Riserva €30-50',
         },
         aversa: {
           name: 'Asprinio di Aversa DOC',
@@ -1112,7 +1054,6 @@ export default {
           wines: 'Still, frizzante and spumante',
           desc: 'A DOC around Aversa in Caserta province, based on the local Asprinio grape. Its most striking feature is the ancient Alberata Aversana, with vines climbing high into poplar trees so that harvesting requires tall ladders.',
           pairing: 'Mozzarella di Bufala, fried foods, pizza marinara',
-          price: '€10-20',
         },
         vesuvio: {
           name: 'Vesuvio DOC',
@@ -1125,7 +1066,6 @@ export default {
           nameOrigin: 'The name supposedly comes from a drip-filtration system used by 17th-century monks',
           desc: 'A traditional growing area with a reputation going back to the ancient Greeks and Romans. Vesuvius is still an active volcano; vines grow in sandy volcanic soils on its lower and middle slopes, many on their own roots. Lacryma Christi (tears of Christ) is its most famous name.',
           pairing: 'Bay of Naples seafood, pizza, tomato dishes',
-          price: '€8-20',
         },
         'campi-flegrei': {
           name: 'Campi Flegrei DOC',
@@ -1137,7 +1077,6 @@ export default {
           feature: 'Two principal wines: Campi Flegrei Piedirosso and Campi Flegrei Falanghina',
           desc: 'A volcanic depression west of Napoli; “Flegrei” means burning. The loose volcanic sands keep phylloxera out, preserving many old ungrafted Piedirosso and Falanghina vines.',
           pairing: 'Falanghina with seafood; Piedirosso with light dishes and charcuterie',
-          price: '€10-25',
         },
         amalfi: {
           name: 'Costa d\'Amalfi DOC',
@@ -1150,7 +1089,6 @@ export default {
           feature: 'Sub-zones: Furore, Ravello, Tramonti',
           desc: 'Wines from the cliff terraces of the Amalfi Coast, where dry-stone walls hold up narrow terraces and pergolas shelter many century-old vines. Production is small and mostly drunk locally.',
           pairing: 'Amalfi seafood, grilled sea bass, lemon dishes (Amalfi’s sfusato lemons)',
-          price: '€15-40',
         },
         ischia: {
           name: 'Ischia DOC',
@@ -1163,7 +1101,6 @@ export default {
           feature: 'Steep, narrow terraces supported by dry-stone walls; over 2,000 years of winemaking',
           desc: 'A volcanic island in the Bay of Naples with more than 2,000 years of wine history. Biancolella, native to Ischia, is its signature white grape, moderate in alcohol and acidity and grown on terraces overlooking the sea.',
           pairing: 'Spaghetti alle Vongole, island seafood platters',
-          price: '€12-25',
         },
       },
     },
@@ -1188,7 +1125,6 @@ export default {
           style: 'Thick-skinned, high in tannin, moderate acidity; less powerful and less full-bodied than Primitivo and Negroamaro',
           desc: 'Castel del Monte is the home of Nero di Troia. Its strong tannins mean it was traditionally blended with other grapes, but this DOCG requires at least 90%, showing the variety’s true character. Torrevento’s Vigna Pedale is a well-known example.',
           pairing: 'Grilled lamb chops, wild-boar stew, aged Caciocavallo',
-          price: '€15-30 / top cuvées €30-60',
         },
         'castel-rosso': {
           name: 'Castel del Monte Rosso Riserva DOCG',
@@ -1200,7 +1136,6 @@ export default {
           feature: 'Not 100% Nero di Troia — a blend of Nero di Troia with other grapes',
           desc: 'One of Castel del Monte’s two red DOCGs, based on Nero di Troia blended with Aglianico and Montepulciano. Rivera’s Il Falcone is its best-known example.',
           pairing: 'Roast lamb, braised beef, aged cheeses',
-          price: '€15-35',
         },
         'primitivo-dolce': {
           name: 'Primitivo di Manduria Dolce Naturale DOCG',
@@ -1213,7 +1148,6 @@ export default {
           location: 'The same area as Primitivo di Manduria DOC, Salento, facing the Ionian Sea',
           desc: 'The naturally sweet version of Primitivo di Manduria, which became Puglia’s first DOCG in 2011. Made from overripe or lightly dried Primitivo, it tastes like concentrated liquid dried fruit.',
           pairing: 'Dark-chocolate desserts, almond biscuits, blue cheese',
-          price: '€20-40',
         },
         'castel-bombino': {
           name: 'Castel del Monte Bombino Nero DOCG',
@@ -1225,7 +1159,6 @@ export default {
           location: 'Castel del Monte, northern and central Puglia',
           desc: 'Puglia’s only appellation dedicated solely to rosato. Thin-skinned, high-acid Bombino Nero is mostly used for rosato, giving lighter wines than Salento’s Negroamaro rosati.',
           pairing: 'Seafood starters, grilled sardines, cured hams, Mediterranean salads',
-          price: '€10-20',
         },
         'primitivo-doc': {
           name: 'Primitivo di Manduria DOC',
@@ -1238,7 +1171,6 @@ export default {
           soil: 'Reddish, iron-rich sandy clay over limestone',
           desc: 'The historic home of Primitivo, known for rich, powerful, full-bodied reds. Primitivo is the same grape as America’s Zinfandel. Gianfranco Fino’s Es is the most sought-after fine example.',
           pairing: 'Grilled steak, braised pork ribs, rich pasta sauces, aged Pecorino',
-          price: '€10-20 entry / fine wines €25-60 / Es €60-100',
         },
         gioia: {
           name: 'Gioia del Colle DOC',
@@ -1251,7 +1183,6 @@ export default {
           style: 'High acidity; less powerful, more refined and elegant than Manduria',
           desc: 'The other main area for Primitivo. Higher than Manduria, it gives wines with higher acidity and more refinement and elegance. Note: Gioia del Colle is a DOC, not a DOCG.',
           pairing: 'Roast meats, tomato-braised meats, aged cheeses',
-          price: '€12-30',
         },
         salice: {
           name: 'Salice Salentino DOC',
@@ -1264,7 +1195,6 @@ export default {
           producers: 'Leone de Castris (Five Roses, Italy’s first commercially bottled rosato)',
           desc: 'The main appellation for Negroamaro, in Salento. Leone de Castris’s Five Roses, launched in 1943, was Italy’s first commercially bottled rosato.',
           pairing: 'Roast lamb, orecchiette with tomato sauce, braised aubergine',
-          price: '€8-18 / Riserva €15-30',
         },
         copertino: {
           name: 'Copertino DOC',
@@ -1275,7 +1205,6 @@ export default {
           location: 'Lecce province, Salento peninsula',
           desc: 'One of Salento’s Negroamaro appellations, known for sturdy reds. IWS exam point: Copertino DOC is based on Negroamaro.',
           pairing: 'Stews, roast lamb, Apulian grilled vegetables',
-          price: '€8-20',
         },
         negroamaro: {
           name: 'Negroamaro di Terra d\'Otranto DOC',
@@ -1287,7 +1216,6 @@ export default {
           feature: 'Old alberello vines remain important in Salento',
           desc: 'A broad Negroamaro appellation covering the whole of Salento. Salento is Puglia’s hottest area, where drought-resistant Negroamaro performs best.',
           pairing: 'Braised leg of lamb, cheese boards, grilled vegetables',
-          price: '€8-15',
         },
         cacce: {
           name: 'Cacc\'e mmitte di Lucera DOC',
@@ -1299,7 +1227,6 @@ export default {
           feature: 'A red wine made from a blend of red and white grapes',
           desc: 'A historic appellation around Lucera, where Nero di Troia is blended with white grapes to make red wine. Its name means “take out and put in” in dialect.',
           pairing: 'Pasta with meat ragù, grilled sausages, country cooking',
-          price: '€8-15',
         },
         'san-severo': {
           name: 'San Severo DOC',
@@ -1311,7 +1238,6 @@ export default {
           feature: 'Known for Bombino Bianco-based sparkling wines',
           desc: 'Puglia’s first DOC, on the Tavoliere plain in the north. Naturally high-acid Bombino Bianco is made here into fresh sparkling wines.',
           pairing: 'Antipasti, fried seafood, burrata',
-          price: '€8-15',
         },
       },
     },
@@ -1336,7 +1262,6 @@ export default {
           location: 'The northernmost part of Basilicata: 15 villages around the extinct volcano Monte Vulture, with 70 MGAs',
           desc: 'Basilicata’s only DOCG. Aglianico del Vulture is one of the three main biotypes of Aglianico: high in acidity and tannin, with more pronounced red-fruit aromas — complex, refined and age-worthy. The western Vulture area is higher with volcanic soils and refined wines; the eastern area is lower with sandy clay soils and fuller wines.',
           pairing: 'Roast lamb, wild-boar stew, aged Canestrato di Moliterno',
-          price: '€25-45 (Superiore) / €50-100 (Riserva)',
         },
         'adv-doc': {
           name: 'Aglianico del Vulture DOC',
@@ -1349,7 +1274,6 @@ export default {
           feature: 'Many wines — including some top bottlings — are still released under the DOC',
           desc: 'The Aglianico del Vulture DOC, created in 1971, requires 100% Aglianico just like the Superiore DOCG. Many producers — including some top bottlings — still release their wines as DOC, so DOC does not mean lower quality.',
           pairing: 'Pasta with meat ragù, roast pork loin, Lucanica sausage',
-          price: '€15-25',
         },
         matera: {
           name: 'Matera DOC',
@@ -1362,7 +1286,6 @@ export default {
           feature: 'Matera was European Capital of Culture in 2019',
           desc: 'An appellation in eastern Basilicata, famous for the cave city of the Sassi di Matera. Unlike volcanic Vulture, the area around Matera is mainly limestone, planted with Primitivo, Greco and other varieties.',
           pairing: 'Grilled vegetables, spicy Lucanica sausage, Matera bread with local cheese',
-          price: '€8-18',
         },
         'alta-val-agri': {
           name: 'Terre dell\'Alta Val d\'Agri DOC',
@@ -1373,7 +1296,6 @@ export default {
           feature: 'International varieties play a minor role in Basilicata; this is one of the few areas based on them',
           desc: 'A small DOC in the upper Agri valley, based on international grapes such as Merlot and Cabernet Sauvignon; production is small and mostly sold locally.',
           pairing: 'Game dishes, mountain stews, Caciocavallo cheese',
-          price: '€10-20',
         },
         grottino: {
           name: 'Grottino di Roccanova DOC',
@@ -1385,7 +1307,6 @@ export default {
           feature: 'Very small production, mostly sold locally',
           desc: 'A small DOC named after the traditional cave cellars, in the hills of southern Basilicata. Production is very small, and the wines are rarely seen outside Basilicata.',
           pairing: 'Country stews, handmade pasta, local cheeses',
-          price: '€8-15',
         },
       },
     },
@@ -1410,7 +1331,6 @@ export default {
           feature: 'The Classico subzone covers only the municipalities of Cirò and Cirò Marina',
           desc: 'Calabria’s oldest and most productive DOC. Krimisa, one of the most famous wines of the Greek period, was reportedly given as a prize to winners of the ancient Olympic Games; its name is believed to derive from the Greek colony of Cremissa, in today’s Cirò area. Cirò Rosso from Gaglioppo is high in acidity and tannin; Librandi is the leading producer. Note: Calabria has no DOCG.',
           pairing: 'Grilled swordfish (a Calabrian coastal speciality), \'nduja pasta, grilled lamb chops, local cheeses',
-          price: '€8-18 / Classico Superiore €15-30 / Riserva €25-50',
         },
         'greco-bianco': {
           name: 'Greco di Bianco DOC',
@@ -1422,7 +1342,6 @@ export default {
           feature: 'Greco Bianco is the grape, Greco di Bianco is the DOC, Bianco is the town',
           desc: 'A small, prestigious appellation for sweet passito wine. Greco Bianco, also called Greco Bianco di Gerace, is ideal for appassimento; the wines have complex aromas and flavours and range from semi-sweet to sweet. Umberto Ceratti is a well-known producer.',
           pairing: 'Almond biscuits, honey cake, dried figs, Italian nougat (torrone)',
-          price: '€25-60 / 375 ml',
         },
         'terre-cosenza': {
           name: 'Terre di Cosenza DOC',
@@ -1434,7 +1353,6 @@ export default {
           feature: 'Includes mountain areas such as the Pollino National Park; an important area for Magliocco',
           desc: 'A broad DOC in northern Calabria formed by merging several former DOCs. Its many hills and mountains make Magliocco the native red most worth watching.',
           pairing: 'Mountain roasts, wild-mushroom risotto, aged goat’s cheese',
-          price: '€8-20',
         },
         lamezia: {
           name: 'Lamezia DOC',
@@ -1445,7 +1363,6 @@ export default {
           feature: 'On one of Calabria’s rare coastal plains, with easy access (Lamezia airport)',
           desc: 'A DOC on Calabria’s west coast around the Sant\'Eufemia plain, showing the Tyrrhenian side of Calabrian terroir.',
           pairing: 'Grilled swordfish, Tropea red-onion salad, steamed seafood',
-          price: '€8-18',
         },
         savuto: {
           name: 'Savuto DOC',
@@ -1456,7 +1373,6 @@ export default {
           feature: 'River-valley hills on the Tyrrhenian side',
           desc: 'A small DOC in the Savuto valley, mainly making blends of Gaglioppo and other native red grapes.',
           pairing: 'Stews, roast pork, aged cheeses',
-          price: '€8-18',
         },
         bivongi: {
           name: 'Bivongi DOC',
@@ -1467,7 +1383,6 @@ export default {
           feature: 'Very small production, mostly sold locally',
           desc: 'A small DOC on the southern Ionian coast making both red and white wines, rarely seen outside Calabria.',
           pairing: 'Seafood, grilled vegetables, local cheeses',
-          price: '€8-15',
         },
       },
     },
@@ -1492,7 +1407,6 @@ export default {
           method: 'Usually vinified in stainless steel; a few producers use wood',
           desc: 'Sardegna’s only DOCG and the most important appellation for Vermentino. Wines range from rich and fruity to intensely mineral and briny; the best examples age well, developing complex flinty-smoky aromas.',
           pairing: 'Spaghetti alla bottarga, grilled fish, shellfish, young Pecorino Sardo',
-          price: '€12-20 / Superiore €20-35',
         },
         cannonau: {
           name: 'Cannonau di Sardegna DOC',
@@ -1505,7 +1419,6 @@ export default {
           subzones: 'Three official subzones: Oliena, Jerzu, Capo Ferrato',
           desc: 'Sardegna’s flagship red grape. High alcohol, red fruit and Mediterranean scrub; wines range from simple and fruity to complex, full-bodied and age-worthy.',
           pairing: 'Porceddu (roast suckling pig), roast lamb, malloreddus with sausage, aged Pecorino Sardo',
-          price: '€8-15 / Riserva €15-30',
         },
         'carignano-sulcis': {
           name: 'Carignano del Sulcis DOC',
@@ -1518,7 +1431,6 @@ export default {
           tiers: 'Superiore: vines trained exclusively as alberello, higher alcohol, min. 2 years’ ageing; Riserva: min. 2 years’ ageing',
           desc: 'One of Sardegna’s most distinctive reds. Carignano is genetically identical to Spanish Mazuelo and French Carignan, and needs warm, sunny, dry conditions to ripen fully; the wines have a fleshy, velvety palate with smooth tannins and lively acidity.',
           pairing: 'Roast lamb, wild boar stew, aged Pecorino Sardo',
-          price: '€15-25 / Superiore €25-50',
         },
         'vernaccia-oristano': {
           name: 'Vernaccia di Oristano DOC',
@@ -1532,7 +1444,6 @@ export default {
           ageing: 'At least 2 years in barrel; Superiore at least 3; Riserva at least 4',
           desc: 'Oxidative and Sherry-like, but NOT fortified. Well-ventilated cellars with seasonal temperature swings let flor develop, producing Sherry-like aldehydes; some wines mature in barrel for 10 years in a solera-like system. Intense, complex and long-lived.',
           pairing: 'Bottarga, toasted almonds, aged cheeses',
-          price: '€15-25 / Riserva €25-50',
         },
         alghero: {
           name: 'Alghero DOC',
@@ -1544,7 +1455,6 @@ export default {
           feature: 'Alghero still keeps its Catalan language tradition, a legacy of Aragonese-Spanish rule',
           desc: 'A small appellation featuring two rare grapes: the white Torbato and the red Cagnulari. Sella & Mosca is the leading local estate.',
           pairing: 'Torbato with seafood and lobster; Cagnulari with grilled meat',
-          price: '€10-25',
         },
         'malvasia-bosa': {
           name: 'Malvasia di Bosa DOC',
@@ -1556,7 +1466,6 @@ export default {
           ageing: 'Riserva: min. 15.5% ABV, min. 2 years’ ageing (at least 1 year in wood), sweet to dry (most are drier)',
           desc: 'Malvasia di Sardegna is planted mainly around Bosa and Cagliari. Malvasia di Bosa is a tiny production; Colombu is a producer named in the IWS term list.',
           pairing: 'Seadas (fried cheese pastry with honey), almond sweets, aged cheeses',
-          price: '€20-40 / 500ml',
         },
         mandrolisai: {
           name: 'Mandrolisai DOC',
@@ -1568,7 +1477,6 @@ export default {
           feature: 'Bovale Sardo is the same grape as Spain’s Graciano',
           desc: 'A small appellation in the central mountains, blending Bovale Sardo, Cannonau and Monica in the traditional style of inland Sardegna.',
           pairing: 'Grilled sausages, lamb stew, Pecorino Sardo',
-          price: '€10-20',
         },
       },
     },
@@ -1593,7 +1501,6 @@ export default {
           feature: 'The area roughly matches Trentino DOC, with vineyards on slopes up to 800 m; rosato and rosato riserva are also made',
           desc: 'In 1902 Giulio Ferrari, an oenologist at the San Michele all\'Adige agrarian institute, saw Trentino’s potential for growing Chardonnay for bottle-fermented sparkling wine and founded the Ferrari sparkling house; other producers followed. Trentino’s “mountain bubbles” are considered among Italy’s finest traditional method sparkling wines.',
           pairing: 'Oysters, seafood platters, Parmigiano-Reggiano, celebratory aperitifs',
-          price: '€15-30 / Riserva €30-60',
         },
         teroldego: {
           name: 'Teroldego Rotaliano DOC',
@@ -1606,7 +1513,6 @@ export default {
           ageing: 'Riserva aged at least 2 years; a rosato (or Kretzer) is also made',
           desc: 'Teroldego was once a high-yielding, simple quaffing wine. In the 1980s the pioneer Elisabetta Foradori showed its potential through massal selection, lower yields and Guyot training, and others followed. Today Teroldego is Trentino’s best red and one of the most distinctive reds of northern Italy.',
           pairing: 'Tyrolean sausages, grilled steak, pasta with meat sauce, aged cheeses',
-          price: '€12-25 / top wines €30-60',
         },
         trentino: {
           name: 'Trentino DOC',
@@ -1619,7 +1525,6 @@ export default {
           feature: 'Also includes the rare, rich dessert wine Moscato Rosa',
           desc: 'Trentino DOC is the appellation with the most volume and the widest range of styles; most of its wines are single varietals. Chardonnay comes in fresh, fruity and more complex oaked styles, while Pinot Grigio is mainly crisp and subtly aromatic.',
           pairing: 'Whites with Trentino cheese boards and grilled trout; Marzemino with stews and aged cheese',
-          price: '€8-20',
         },
         valdadige: {
           name: 'Valdadige / Etschtaler DOC',
@@ -1630,7 +1535,6 @@ export default {
           feature: 'Considered the region’s basic appellation; Trentino makes most of its wine',
           desc: 'Stretching along the Adige Valley, Valdadige makes uncomplicated, refreshing, fruity wines — everyday wine of the Alpine foothills.',
           pairing: 'Schiava with speck and canederli; Pinot Grigio with grilled freshwater fish',
-          price: '€7-13',
         },
         casteller: {
           name: 'Casteller DOC',
@@ -1641,7 +1545,6 @@ export default {
           feature: 'Schiava is usually the main blending component',
           desc: 'One of Trentino’s minor DOCs: easy-going reds based on Merlot with native red grapes.',
           pairing: 'Canederli (bread dumplings), luganega sausage, roast chicken',
-          price: '€6-12',
         },
         terradeiforti: {
           name: 'Terradeiforti / Valdadige Terradeiforti DOC',
@@ -1652,7 +1555,6 @@ export default {
           feature: 'Enantio is native to the Vallagarina, formerly called Lambrusco a Foglia Frastagliata (unrelated to the Lambrusco family), and recently revived',
           desc: 'An inter-regional DOC shared with Veneto, focused on two native reds, Enantio and Casetta. Enantio makes juicy wines with bright acidity, red berries and herbs.',
           pairing: 'Game stews, aged cheeses',
-          price: '€10-18',
         },
       },
     },
@@ -1677,7 +1579,6 @@ export default {
           history: 'Grown since Roman times; declined in the early 20th century, rescued by the Perusini family, and regained its fame in the late 1960s',
           desc: 'Picolit is very prone to shatter, giving sparse bunches of small, sweet berries and tiny yields. The sweet wines are elegant and complex, and today rare, expensive and sought-after.',
           pairing: 'Apricot tart, blue cheese, nut desserts',
-          price: '€40-100 / 375-500ml',
         },
         ramandolo: {
           name: 'Ramandolo DOCG',
@@ -1690,7 +1591,6 @@ export default {
           method: 'Late harvest by hand (sometimes into November); most producers then dry the grapes (appassimento)',
           desc: 'A small sweet-wine zone in Friuli’s north-east corner, covering the northern tip of Friuli Colli Orientali DOC; the vineyards are surrounded by woods.',
           pairing: 'Dried-fruit desserts, aged cheeses',
-          price: '€25-50 / 500ml',
         },
         rosazzo: {
           name: 'Rosazzo DOCG',
@@ -1702,7 +1602,6 @@ export default {
           history: 'The abbey was founded in the late 10th century and its monks did much for local viticulture; Rosazzo has also been known for Pignolo and Ribolla Gialla for centuries',
           desc: 'A DOCG for Friulano-led white blends, formerly a special designation of Colli Orientali and later promoted to its own DOCG.',
           pairing: 'White meats, pasta with cream sauces, Prosciutto di San Daniele',
-          price: '€25-50',
         },
         lison: {
           name: 'Lison DOCG',
@@ -1713,7 +1612,6 @@ export default {
           feature: 'Since 2007 the grape has been called Tai in Veneto; the only one of Friuli’s four DOCGs outside the Colli Orientali',
           desc: 'A DOCG for Friulano whites on the plain in Friuli’s south-west, on the border with Veneto.',
           pairing: 'Seafood pasta, grilled fish',
-          price: '€12-25',
         },
         collio: {
           name: 'Collio Goriziano / Collio DOC',
@@ -1726,7 +1624,6 @@ export default {
           feature: 'Sub-areas such as Oslavia, Capriva and San Floriano are not legally recognised and cannot be labelled; some vineyards lie in Slovenia',
           desc: 'Collio’s whites are considered Friuli’s finest and among Italy’s best. The zone is a series of rounded south-facing hills, steep enough to need hand harvesting; over 80% is white and it is Friuli’s third-largest DOC.',
           pairing: 'Prosciutto di San Daniele, seafood, white meats',
-          price: '€18-40 / top wines €40-100',
         },
         'colli-orientali': {
           name: 'Friuli Colli Orientali DOC',
@@ -1739,7 +1636,6 @@ export default {
           feature: 'The warmer south between Buttrio, Cividale and Manzano is the classic heart for reds; the Picolit, Ramandolo and Rosazzo DOCGs all lie within it',
           desc: 'Friuli’s second-largest DOC and geographically an extension of the Collio hills; the boundary is mainly historical — Colli Orientali joined Italy in the second half of the 19th century, Collio only after World War I.',
           pairing: 'Refosco with stews and game; Friulano with prosciutto',
-          price: '€15-35 / top wines €40-80',
         },
         carso: {
           name: 'Carso / Carso - Kras DOC',
@@ -1751,7 +1647,6 @@ export default {
           grape: 'The white Vitovska and the red Terrano; “Carso” or “Carso Rosso” needs at least 70% Terrano',
           desc: 'Small in production but growing in reputation, with a distinctive mineral, savoury character. The area is shaped by both Italian and Slovenian culture, and ethnic Slovenians are very active in its wine industry.',
           pairing: 'Seafood, Trieste-style pork dishes',
-          price: '€20-45',
         },
         grave: {
           name: 'Friuli Grave DOC',
@@ -1763,7 +1658,6 @@ export default {
           feature: 'Friuli’s largest DOC by area and production; Merlot is very well suited to the gravelly plain',
           desc: 'A large DOC on the central plain, mainly making fresh, easy varietal wines — Friuli’s everyday wine.',
           pairing: 'Light dishes, pizza, simple fish',
-          price: '€8-15',
         },
         isonzo: {
           name: 'Friuli Isonzo / Isonzo del Friuli DOC',
@@ -1775,7 +1669,6 @@ export default {
           feature: 'The Isonzo cuts the zone diagonally: the north (right bank) is cooler and mainly white; the south (left bank) is more influenced by sea breezes',
           desc: 'A much-anticipated rising zone with the potential to rival the hill wines of Collio and Colli Orientali.',
           pairing: 'Seafood risotto, grilled fish',
-          price: '€12-30',
         },
         aquileia: {
           name: 'Friuli Aquileia DOC',
@@ -1786,7 +1679,6 @@ export default {
           feature: 'One of the coastal-plain DOCs, alongside Friuli Annia and Friuli Latisana',
           desc: 'A DOC on the Adriatic coastal plain making fresh, easy reds and whites.',
           pairing: 'Lagoon seafood, grilled fish',
-          price: '€8-15',
         },
       },
     },
@@ -1811,7 +1703,6 @@ export default {
           ageing: 'Sciacchetrà needs at least 13.5% ABV and cannot be released before November of the following year; Riserva after three years',
           desc: 'Famous since Roman times, with Liguria’s most spectacular terraced vineyards; the vines are close enough to be misted by the waves, and grapes are carried out by monorail. It is a National Park and a UNESCO World Heritage Site.',
           pairing: 'Seafood, fried anchovies; Sciacchetrà with pandolce and blue cheese',
-          price: '€20-35 / Sciacchetrà €50-100 (375-500ml)',
         },
         dolceacqua: {
           name: 'Rossese di Dolceacqua / Dolceacqua DOC',
@@ -1824,7 +1715,6 @@ export default {
           soil: 'Terraced, rocky slopes of red calcareous soil that retain water and are buffeted by winds',
           desc: 'The wines of Dolceacqua have been admired since at least the 19th century, even by Napoléon. Good tannic structure, medium body, red fruit and spice, suited to medium-term ageing; more intense and deeper than Rossese from Riviera Ligure di Ponente. Well-known MGAs include Arcagna, Luvaira, Pini, Curli, Posaù and Galeae.',
           pairing: 'Rabbit, herb-roasted meats, aged cheeses',
-          price: '€18-35',
         },
         'colli-di-luni': {
           name: 'Colli di Luni DOC',
@@ -1836,7 +1726,6 @@ export default {
           feature: 'Its Vermentino resembles that of north-west Toscana and is one of Liguria’s most distinctive wines',
           desc: 'The Tuscan influence is clear in its grapes and styles. Vineyards lie on the coast and inland hills; Pliny the Elder mentioned the wines of Roman Luni.',
           pairing: 'Pasta with pesto, grilled fish, seafood',
-          price: '€15-30',
         },
         'colline-levanto': {
           name: 'Colline di Levanto DOC',
@@ -1847,7 +1736,6 @@ export default {
           style: 'Light, fresh, simple whites',
           desc: 'A small DOC in the Riviera di Levante.',
           pairing: 'Seafood starters, fried fish',
-          price: '€12-20',
         },
         portofino: {
           name: 'Golfo del Tigullio - Portofino DOC',
@@ -1858,7 +1746,6 @@ export default {
           feature: 'Albarola is called Bianchetta Genovese here; DNA has proven them the same grape',
           desc: 'The DOC covering the coast around Portofino.',
           pairing: 'Pesto, focaccia, seafood',
-          price: '€12-22',
         },
         ormeasco: {
           name: 'Ormeasco di Pornassio / Pornassio DOC',
@@ -1870,7 +1757,6 @@ export default {
           tiers: 'Superiore: higher minimum alcohol and at least 1 year of ageing; also a rosato (Sciac-trà) and a sweet red passito',
           desc: 'Note: Ormeasco’s rosato, Sciac-trà, is completely different from Cinque Terre’s sweet white Sciacchetrà.',
           pairing: 'Mountain salumi, stews, mushroom dishes',
-          price: '€12-25',
         },
         'val-polcevera': {
           name: 'Val Polcevera DOC',
@@ -1881,7 +1767,6 @@ export default {
           subzones: 'Coronata: around Genoa, white blends only',
           desc: 'Liguria’s smallest DOC, mainly making refreshing whites.',
           pairing: 'Genoese dishes, pesto, seafood',
-          price: '€10-20',
         },
       },
     },
@@ -1907,7 +1792,6 @@ export default {
           feature: 'The finest are passitos, often with noble rot; the best come from Bertinoro',
           desc: 'Formerly Albana di Romagna. Well-structured and lightly tannic, with the typical vegetal-sage aroma plus floral, stone fruit and almond notes. Dry versions are increasingly common, often single-vineyard and increasingly barrel-aged.',
           pairing: 'Dry with white meats and cheese; passito with desserts and blue cheese',
-          price: '€12-25 / Passito €25-50 (500ml)',
         },
         pignoletto: {
           name: 'Colli Bolognesi Pignoletto DOCG',
@@ -1920,7 +1804,6 @@ export default {
           history: 'Since 2014 the grape has been called Grechetto, and “Pignoletto” names the historic area around Monteveglio',
           desc: 'One of Emilia-Romagna’s two DOCGs, made from Grechetto (Pignoletto) in the Bologna hills.',
           pairing: 'Mortadella, fried foods, light starters',
-          price: '€12-25',
         },
         sorbara: {
           name: 'Lambrusco di Sorbara DOC',
@@ -1932,7 +1815,6 @@ export default {
           feature: 'Sorbara needs another Lambrusco as a pollinator, usually interplanted Salamino; rosato or rosso, frizzante or spumante',
           desc: 'Considered the classic example of traditional Lambrusco and the most renowned; wines from the hillier land south of Modena are more structured.',
           pairing: 'Fried seafood, Prosciutto di Parma, piadina',
-          price: '€10-25',
         },
         grasparossa: {
           name: 'Lambrusco Grasparossa di Castelvetro DOC',
@@ -1944,7 +1826,6 @@ export default {
           feature: 'Higher acidity and a noticeable tannic grip; any residual sugar provides balance',
           desc: 'Often considered among the best Lambruscos on the market, though seen as “less typical” for its intensity and denser structure.',
           pairing: 'Zampone, cotechino, grilled red meat, aged Parmigiano Reggiano',
-          price: '€10-25',
         },
         salamino: {
           name: 'Lambrusco Salamino di Santa Croce DOC',
@@ -1956,7 +1837,6 @@ export default {
           feature: 'Named for its bunches shaped like small salami; stylistically between Sorbara and Grasparossa',
           desc: 'Lambrusco Salamino is often described as making the most balanced Lambrusco.',
           pairing: 'Tagliatelle al ragù, mortadella, pizza',
-          price: '€8-20',
         },
         romagna: {
           name: 'Romagna DOC',
@@ -1969,7 +1849,6 @@ export default {
           feature: 'The best Sangiovese is rounder, less acidic and softer in tannin than Toscana’s',
           desc: 'Most of Romagna’s wine falls under this large DOC. Romagna Trebbiano is the local everyday white, Cagnina a sweet red from Terrano, and Pagadebit is made from Bombino Bianco.',
           pairing: 'Sangiovese with grilled meat and piadina; Trebbiano with seafood',
-          price: '€8-20 / Riserva €20-40',
         },
         reggiano: {
           name: 'Reggiano DOC',
@@ -1981,7 +1860,6 @@ export default {
           feature: 'One of the most widely produced and exported Lambrusco DOCs',
           desc: 'Higher vineyards in the southern hills also make rounder, fuller versions.',
           pairing: 'Parmigiano Reggiano, cured meats',
-          price: '€6-15',
         },
         'colli-bolognesi': {
           name: 'Colli Bolognesi DOC',
@@ -1993,7 +1871,6 @@ export default {
           feature: 'A separate appellation from Colli Bolognesi Pignoletto DOCG',
           desc: 'Focused on red and white blends and varietals; international grapes make some of the district’s most impressive wines here.',
           pairing: 'Tortellini, mortadella, roast meats',
-          price: '€10-25',
         },
         'bosco-eliceo': {
           name: 'Bosco Eliceo DOC',
@@ -2005,7 +1882,6 @@ export default {
           style: 'Still, vivace or frizzante, dry to sweet; said to have a salty, maritime character',
           desc: 'Its wines are called vini delle sabbie (wines of the sands). Fortana is traditionally paired with local eels.',
           pairing: 'Eel, lagoon seafood',
-          price: '€8-15',
         },
       },
     },
@@ -2030,7 +1906,6 @@ export default {
           feature: 'Essentially a “dry Recioto”; commercialised in the 1950s by Bolla, Bertani and others',
           desc: 'Amarone’s quality and success in the 1990s lifted all of Valpolicella out of mediocrity. Full-bodied and high in extract with round tannins, it shows ripe berries, dried fruit, tobacco, liquorice, dark chocolate and leather, often at 15-16% or more.',
           pairing: 'Braised beef, game, aged cheeses, risotto all’Amarone',
-          price: '€35-80 / top wines €100-300+',
         },
         'prosecco-docg': {
           name: 'Conegliano Valdobbiadene Prosecco Superiore DOCG',
@@ -2042,7 +1917,6 @@ export default {
           subzones: 'Superiore di Cartizze (the top sub-zone); “Rive” marks steep vineyards from a specific village or sub-area',
           desc: 'The top tier of Prosecco. On sunny, low-yielding slopes Glera shows depth and character: light, soft and refreshing, with white flowers, lemon, pear, apple and peach.',
           pairing: 'Aperitifs, sarde in saor, seafood',
-          price: '€12-25 / Cartizze €25-40',
         },
         asolo: {
           name: 'Asolo Prosecco DOCG',
@@ -2053,7 +1927,6 @@ export default {
           feature: 'Slightly warmer and wetter than Conegliano Valdobbiadene, with much smaller production',
           desc: 'Prosecco’s second hill DOCG, in the western Treviso Prealps alongside the nearby Montello DOCG.',
           pairing: 'Aperitifs, fried snacks, light seafood',
-          price: '€10-20',
         },
         'soave-sup': {
           name: 'Soave Superiore DOCG',
@@ -2066,7 +1939,6 @@ export default {
           feature: 'Approved in 2001; because its area is not limited to the classico core, leading estates such as Anselmi do not use it',
           desc: 'Requires higher planting density, lower yields and higher minimum potential alcohol than Soave DOC. Many estates that qualify still label their wines Soave Classico DOC.',
           pairing: 'Baccalà alla vicentina, seafood, white meats',
-          price: '€15-35',
         },
         'bardolino-sup': {
           name: 'Bardolino Superiore DOCG',
@@ -2078,7 +1950,6 @@ export default {
           soil: 'Gentle glacial moraine hills with sedimentary, gravelly soils',
           desc: 'Bardolino makes only light rosso and rosato; Superiore is richer and more complex, sometimes oak-aged. The best come from the classico zone, with a distinctive savoury (salato) character.',
           pairing: 'Fresh fish from Lake Garda, white meats',
-          price: '€12-25',
         },
         valpolicella: {
           name: 'Valpolicella DOC',
@@ -2090,7 +1961,6 @@ export default {
           tiers: 'Superiore must age at least 1 year before release',
           desc: 'In the 1970s one of Italy’s best-selling export wines; sour cherry and flowers with a bitter-almond finish, light body, low tannin and bright acidity.',
           pairing: 'Pasta e fagioli, cured meats, pizza',
-          price: '€8-18',
         },
         ripasso: {
           name: 'Valpolicella Ripasso DOC',
@@ -2101,7 +1971,6 @@ export default {
           history: 'An old tradition revived by Masi in the 1960s',
           desc: 'Fuller in structure and body, with more alcohol and tannin, sitting between Valpolicella and Amarone; with so many variables, quality and style can vary widely.',
           pairing: 'Stews, pasta e fagioli, aged cheeses',
-          price: '€15-30',
         },
         'prosecco-doc': {
           name: 'Prosecco DOC',
@@ -2113,7 +1982,6 @@ export default {
           feature: 'Made in volume, fresh and easy; the top tier is the hill DOCGs of Conegliano Valdobbiadene and Asolo',
           desc: 'Glera grown on the flat with unrestricted yields tends to be neutral, and makes up the bulk of Prosecco DOC.',
           pairing: 'Aperitifs, spritz, light snacks',
-          price: '€8-15',
         },
       },
     },
@@ -2138,7 +2006,6 @@ export default {
           feature: 'Satèn is a Brut-only Blanc de Blancs at max 5 atmospheres; the label need only say "Franciacorta"',
           desc: 'In 1995 the first DOCG in Italy exclusively for traditional method sparkling wine. Soils of sand, silt, gravel and limestone, a climate moderated by Lake Iseo, and ripe grapes make low-dosage Extra Brut and Brut Nature especially common.',
           pairing: 'Risotto alla Milanese, oysters, lobster, aperitivo',
-          price: '€20-40 / Riserva €50-150',
         },
         'valtellina-sup': {
           name: 'Valtellina Superiore DOCG',
@@ -2151,7 +2018,6 @@ export default {
           soil: 'Granitic sands, broken schist and alluvium, shallow and poor; walls and rocks reflect heat',
           desc: 'More approachable, more perfumed and leaner than Barolo or Barbaresco, prized for finesse and elegance. The labour-intensive dry-stone terraces earn the name "heroic" viticulture.',
           pairing: 'Pizzoccheri, game, bresaola, aged cheese',
-          price: '€20-50 / Riserva €35-80',
         },
         sforzato: {
           name: 'Sforzato (Sfursat) di Valtellina DOCG',
@@ -2163,7 +2029,6 @@ export default {
           style: 'Dry; dried fruit, spice and tobacco with a velvety palate',
           desc: 'Made from healthy, fully ripe Nebbiolo after drying. Compared with the similarly made Amarone, it is less powerful but more elegant.',
           pairing: 'Game stews, aged Bitto cheese',
-          price: '€35-80',
         },
         'oltrepo-mc': {
           name: 'Oltrepò Pavese Metodo Classico DOCG',
@@ -2175,7 +2040,6 @@ export default {
           feature: 'Cruasé: the consortium\'s collective brand for top rosé sparkling wines',
           desc: 'Oltrepò Pavese, in the Apennine foothills south of the Po, is the stronghold of Italian Pinot Nero; its cool limestone hills give the variety an ideal home.',
           pairing: 'Aperitivo, cured meats, fried food',
-          price: '€18-40',
         },
         scanzo: {
           name: 'Moscato di Scanzo DOCG',
@@ -2187,7 +2051,6 @@ export default {
           ageing: 'At least 2 years of ageing before release',
           desc: 'One of the peninsula\'s few sweet red passito wines, made in tiny quantities. Intense and complex with floral, berry and spice notes, high alcohol, restrained sweetness, fresh acidity and velvety tannins.',
           pairing: 'Aged cheese, dark chocolate desserts',
-          price: '€40-80 (500 ml)',
         },
         'rosso-valtellina': {
           name: 'Rosso di Valtellina DOC',
@@ -2198,7 +2061,6 @@ export default {
           aromas: 'Dried rose, red fruit, leather and spice; alpine flowers and dried herbs with bottle age',
           desc: 'From the same valley and the same Nebbiolo as Valtellina Superiore, an entry point to Valtellina\'s terroir.',
           pairing: 'Cured meats, pizzoccheri, everyday pasta',
-          price: '€12-25',
         },
         lugana: {
           name: 'Lugana DOC',
@@ -2211,7 +2073,6 @@ export default {
           aromas: 'White flowers, yellow apple, stone fruit, flint, nuts and sweet spice',
           desc: 'High acidity, medium to full body and minerality, gaining complexity with bottle age. Recognised in the 1990s for its quality and character; its structure and extract suit lees stirring, barrel fermentation and barrel ageing.',
           pairing: 'Lake Garda fish, seafood, white meat',
-          price: '€12-25 / Riserva €20-40',
         },
         valtenesi: {
           name: 'Riviera del Garda Classico — Valtènesi',
@@ -2223,7 +2084,6 @@ export default {
           history: 'Formerly a separate DOC, merged into Riviera del Garda Classico DOC as a sub-zone in 2017',
           desc: 'Chiaretto is the traditional name for rosé around Lake Garda and the flagship of Riviera del Garda Classico.',
           pairing: 'Lake Garda fish, summer salads, cured meats',
-          price: '€10-20',
         },
         buttafuoco: {
           name: 'Buttafuoco dell\'Oltrepò Pavese DOC',
@@ -2235,7 +2095,6 @@ export default {
           style: 'The classic version is a dry, oak-aged red, full-bodied and structured; a frizzante also exists',
           desc: 'Formerly a sub-zone of Oltrepò Pavese, it gained its own DOC in 2010 on the strength of its reputation and has regained its 19th-century prestige.',
           pairing: 'Braised and roast meats, aged cheese',
-          price: '€15-35',
         },
         'lambrusco-mantovano': {
           name: 'Lambrusco Mantovano DOC',
@@ -2247,7 +2106,6 @@ export default {
           feature: 'The only appellation outside Emilia-Romagna producing Lambrusco',
           desc: 'A red frizzante in a style close to neighbouring Emilia-Romagna\'s Lambruscos: deep ruby, with violets, cherries and sweet spice, robust with a tannic grip.',
           pairing: 'Tortelli di zucca, cured meats, stews',
-          price: '€8-15',
         },
       },
     },
@@ -2262,7 +2120,6 @@ export default {
         blend: '🍇 Blend',
         region: '📍 Appellation',
         style: '🎯 Style',
-        price: '💰 Price',
         story: '📖 Story: ',
       },
       styleMapTitle: '🗺️ Style Spectrum (Sangiovese-led ↔ Bordeaux international)',
@@ -2281,7 +2138,6 @@ export default {
         ageing: '⏳ Legal ageing',
         style: '🍷 Style',
         aromas: '👃 Aromas',
-        price: '💰 Price range',
         producers: '🌟 Key producers',
       },
     },

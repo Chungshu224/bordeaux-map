@@ -66,10 +66,6 @@
             <div class="row-label">{{ t('italy.slides.superTuscan.labels.style') }}</div>
             <div class="row-value">{{ activeWine.style }}</div>
           </div>
-          <div class="wine-row">
-            <div class="row-label">{{ t('italy.slides.superTuscan.labels.price') }}</div>
-            <div class="row-value">{{ activeWine.price }}</div>
-          </div>
           <div class="wine-story">
             <strong>{{ t('italy.slides.superTuscan.labels.story') }}</strong>{{ activeWine.story }}
           </div>
@@ -140,7 +136,6 @@ const defaultWines = [
     blend: '85% Cabernet Sauvignon + 15% Cabernet Franc',
     region: 'Bolgheri Sassicaia DOC（海岸礫石）',
     style: '優雅、波爾多左岸風格、雪松與黑醋栗',
-    price: '€200–€400',
     tagline: '義大利的 Lafite',
     story: 'Marchese Incisa 將法國 Cabernet 引入 Bolgheri，發現此地礫石土壤類似波爾多左岸，造就義大利第一支國際風格頂級紅酒。',
     color: '#5D2A8E',
@@ -155,7 +150,6 @@ const defaultWines = [
     blend: '80% Sangiovese + 15% Cabernet Sauvignon + 5% Cabernet Franc',
     region: 'Toscana IGT（Chianti Classico 區內）',
     style: 'Sangiovese 主導、國際品種增添結構、平衡優雅',
-    price: '€100–€200',
     tagline: 'Antinori 經典革命',
     story: '第一款不使用白葡萄、採用 Barrique 小橡木桶陳年的 Sangiovese，違反當時 Chianti DOC 規範，被迫降級為 Vino da Tavola。',
     color: '#A8324A',
@@ -170,7 +164,6 @@ const defaultWines = [
     blend: '75% Cabernet Sauvignon + 20% Sangiovese + 5% Cabernet Franc',
     region: 'Toscana IGT（Tignanello 鄰園）',
     style: 'Cabernet 主導、強勁結構、長陳年潛力',
-    price: '€200–€400',
     tagline: '向陽之地',
     story: 'Antinori 旗艦酒款，與 Tignanello 為鄰園卻反向操作——以 Cabernet 為主體、Sangiovese 為輔，2000 年成為《Wine Spectator》年度第一。',
     color: '#D4A037',
@@ -185,7 +178,6 @@ const defaultWines = [
     blend: '50% Cabernet Sauvignon + 25% Merlot + 20% Cabernet Franc + 5% Petit Verdot',
     region: 'Bolgheri Superiore DOC',
     style: '豐滿、奢華、強勁、波爾多風格',
-    price: '€150–€300',
     tagline: 'Bolgheri 經典波爾多混釀',
     story: 'Lodovico Antinori（Piero 之弟）創立，與 Sassicaia 為鄰，採用完整波爾多五大品種，現由 Frescobaldi 家族經營。',
     color: '#16886A',
@@ -200,7 +192,6 @@ const defaultWines = [
     blend: '100% Merlot',
     region: 'Toscana IGT（Bolgheri 內 7 ha 黏土）',
     style: '極致濃郁、天鵝絨般質地、頂級 Merlot',
-    price: '€500–€1,000+',
     tagline: '義大利的 Petrus',
     story: 'Ornellaia 莊園內一塊獨特藍灰黏土地塊（類似 Pomerol），單獨釀造為 100% Merlot 旗艦。2012 年母酒莊更名為「Ornellaia e Masseto」並轉為有機種植，約 2014 年起分家獨立營運，2019 年深埋藍黏土下的專屬重力流酒廠落成。',
     color: '#6B1A1A',
@@ -209,7 +200,7 @@ const defaultWines = [
   }
 ]
 
-const defaultInsight = 'Super Tuscan 的真正革命不在「加 Cabernet」，而在<strong>挑戰 DOCG 法規桎梏 → 創造 IGT 等級 → 推動 Bolgheri DOC 誕生</strong>。1992 年「Goria 法」承認 IGT 後，這些酒款從「叛逆 Vino da Tavola」變為合法且價格屢創新高。'
+const defaultInsight = 'Super Tuscan 的真正革命不在「加 Cabernet」，而在<strong>挑戰 DOCG 法規桎梏 → 創造 IGT 等級 → 推動 Bolgheri DOC 誕生</strong>。1992 年「Goria 法」承認 IGT 後，這些酒款從「叛逆 Vino da Tavola」變為合法且聲望屢創新高。'
 
 const timeline = computed(() => {
   if (Array.isArray(props.slide?.timeline) && props.slide.timeline.length) return props.slide.timeline

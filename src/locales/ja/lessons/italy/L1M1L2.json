@@ -4,7 +4,7 @@
   "slides.0.subtitle": "DOCG・DOC・IGT・VdT 完全解説",
   "slides.1.title": "📋 ピラミッド格付け体系",
   "slides.2.title": "📊 格付け比較表",
-  "slides.2.content": "<div class=\"grade-comparison-table\"><table><thead><tr><th>比較項目</th><th class=\"grade-docg\">DOCG</th><th class=\"grade-doc\">DOC</th><th class=\"grade-igt\">IGT</th><th class=\"grade-vdt\">VdT</th></tr></thead><tbody><tr><td class=\"item-label\">🏅 格付け</td><td>最高格<br>品質保証付き</td><td>優良原産地呼称</td><td>地方テーブルワイン</td><td>日常テーブルワイン</td></tr><tr><td class=\"item-label\">📍 産地数</td><td><strong>74</strong></td><td><strong>334</strong></td><td><strong>118</strong></td><td>制限なし</td></tr><tr><td class=\"item-label\">🔒 規制</td><td>極めて厳格</td><td>厳格</td><td>広範な地域</td><td>規制なし</td></tr><tr><td class=\"item-label\">🍇 ブドウ品種</td><td>土着品種指定<br>比率あり</td><td>品種指定<br>と比率</td><td>柔軟<br>—国際品種可</td><td>制限なし</td></tr><tr><td class=\"item-label\">📉 収量制限</td><td>最厳格<br>(例：56 hl/ha)</td><td>厳格管理</td><td>比較的緩やか</td><td>制限なし</td></tr><tr><td class=\"item-label\">⏱️ 熟成義務</td><td>厳格規定<br>(通常数年)</td><td>規定あり</td><td>義務なし</td><td>義務なし</td></tr><tr><td class=\"item-label\">✅ 品質検査</td><td>化学分析＋<br>官能評価</td><td>検査必要</td><td>基本検査</td><td>検査なし</td></tr><tr><td class=\"item-label\">🏷️ 特別マーク</td><td>ネックバンド番号付き</td><td>なし</td><td>なし</td><td>なし</td></tr><tr><td class=\"item-label\">⏳ 昇格条件</td><td>DOCとして<br>5年以上必要</td><td>IGTまたは<br>慣行あり</td><td>-</td><td>-</td></tr><tr><td class=\"item-label\">💰 価格帯</td><td>プレミアム</td><td>ミドル〜ハイ</td><td>ミドル〜ハイ<br>(スーパータスカン等)</td><td>エントリー</td></tr><tr><td class=\"item-label\">🌟 代表銘柄</td><td>Barolo<br>Brunello<br>Amarone</td><td>Chianti<br>Soave<br>Barbera d'Asti</td><td>スーパータスカン<br>Toscana IGT</td><td>日常ワイン</td></tr></tbody></table></div>",
+  "slides.2.content": "<div class=\"grade-comparison-table\"><table><thead><tr><th>比較項目</th><th class=\"grade-docg\">DOCG</th><th class=\"grade-doc\">DOC</th><th class=\"grade-igt\">IGT</th><th class=\"grade-vdt\">VdT</th></tr></thead><tbody><tr><td class=\"item-label\">🏅 格付け</td><td>最高格<br>品質保証付き</td><td>優良原産地呼称</td><td>地方テーブルワイン</td><td>日常テーブルワイン</td></tr><tr><td class=\"item-label\">📍 産地数</td><td><strong>74</strong></td><td><strong>334</strong></td><td><strong>118</strong></td><td>制限なし</td></tr><tr><td class=\"item-label\">🔒 規制</td><td>極めて厳格</td><td>厳格</td><td>広範な地域</td><td>規制なし</td></tr><tr><td class=\"item-label\">🍇 ブドウ品種</td><td>土着品種指定<br>比率あり</td><td>品種指定<br>と比率</td><td>柔軟<br>—国際品種可</td><td>制限なし</td></tr><tr><td class=\"item-label\">📉 収量制限</td><td>最厳格<br>(例：56 hl/ha)</td><td>厳格管理</td><td>比較的緩やか</td><td>制限なし</td></tr><tr><td class=\"item-label\">⏱️ 熟成義務</td><td>厳格規定<br>(通常数年)</td><td>規定あり</td><td>義務なし</td><td>義務なし</td></tr><tr><td class=\"item-label\">✅ 品質検査</td><td>化学分析＋<br>官能評価</td><td>検査必要</td><td>基本検査</td><td>検査なし</td></tr><tr><td class=\"item-label\">🏷️ 特別マーク</td><td>ネックバンド番号付き</td><td>なし</td><td>なし</td><td>なし</td></tr><tr><td class=\"item-label\">⏳ 昇格条件</td><td>DOCとして<br>5年以上必要</td><td>IGTまたは<br>慣行あり</td><td>-</td><td>-</td></tr><tr><td class=\"item-label\">📈 市場ポジション</td><td>プレミアム</td><td>ミドル〜ハイ</td><td>ミドル〜ハイ<br>(スーパータスカン等)</td><td>エントリー</td></tr><tr><td class=\"item-label\">🌟 代表銘柄</td><td>Barolo<br>Brunello<br>Amarone</td><td>Chianti<br>Soave<br>Barbera d'Asti</td><td>スーパータスカン<br>Toscana IGT</td><td>日常ワイン</td></tr></tbody></table></div>",
   "slides.3.title": "⭐ DOCG — 保証原産地呼称",
   "slides.3.points.0": "✓ DOCとして少なくとも5年間の実績が必要",
   "slides.3.points.1": "✓ 全ボトルに番号入り公式ネックバンド",
@@ -47,7 +47,7 @@
   "slides.7.questions.4.options.3": "D. 推奨小売価格",
   "slides.7.questions.4.explanation": "生産者名・格付け・ヴィンテージはラベル上の必須事項です。小売価格は法定要件ではなく市場が決定します。",
   "slides.8.title": "🏛️ イタリア格付けピラミッドインタラクティブ詳解",
-  "slides.8.description": "ピラミッドの各段（DOCG/DOC/IGT/VdT）をクリックして詳細規定を確認：認証条件・代表銘柄・生産量シェア・価格帯。スーパータスカンがIGTを選んだ理由、DOCGのゴールドネックバンドの意義も学べます。",
+  "slides.8.description": "ピラミッドの各段（DOCG/DOC/IGT/VdT）をクリックして詳細規定を確認：認証条件・代表銘柄・生産量シェア・市場ポジション。スーパータスカンがIGTを選んだ理由、DOCGのゴールドネックバンドの意義も学べます。",
   "slides.9.title": "🎓 まとめ",
   "slides.9.content": "<div class=\"summary-boxes\"><div class=\"summary-box\"><strong>DOCG</strong><br>最高格、品質保証</div><div class=\"summary-box\"><strong>DOC</strong><br>優良原産地呼称</div><div class=\"summary-box\"><strong>IGT</strong><br>革新と地域個性</div><div class=\"summary-box\"><strong>VdT</strong><br>日常テーブルワイン</div></div>",
   "quiz.0.question": "DOCGの正式な名称は？",
@@ -74,6 +74,6 @@
   "quiz.3.options.2": "Vin de France",
   "quiz.3.options.3": "Grand Cru",
   "quiz.3.explanation": "IGT（Indicazione Geografica Tipica）はフランスのIGP（Indication Géographique Protégée）に相当します。",
-  "slides.1.description": "各等級をクリックすると、詳しい規定、代表的なワイン、価格帯が見られる",
+  "slides.1.description": "各等級をクリックすると、詳しい規定、代表的なワイン、市場ポジションが見られる",
   "slides.6.description": "この 5 つの重要な要素を押さえれば、どんなイタリアワインのラベルも簡単に読み解ける"
 }

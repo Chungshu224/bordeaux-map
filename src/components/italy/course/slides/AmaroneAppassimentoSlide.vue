@@ -1,25 +1,25 @@
 <template>
   <div class="amarone-slide">
     <div class="slide-header">
-      <h2>{{ slide.title || '🌬️ Amarone 與 Appassimento 工藝深度' }}</h2>
+      <h2>{{ slide.title || c.defaultTitle }}</h2>
       <p v-if="slide.description" class="slide-desc">{{ slide.description }}</p>
-      <p v-else class="slide-desc">同樣的 Corvina 葡萄，因為「風乾」與「殘糖」的組合排列，在 Valpolicella 衍生出 4 種完全不同的酒款風格。</p>
+      <p v-else class="slide-desc">{{ c.defaultDesc }}</p>
     </div>
 
     <!-- Valpolicella 四階梯 Tab -->
     <div class="tier-section">
-      <h3>🏔️ Valpolicella 四大酒款階梯</h3>
+      <h3>{{ c.tierHeading }}</h3>
       <div class="tier-tabs">
         <button
-          v-for="(t, i) in tiers"
+          v-for="(tier, i) in tiers"
           :key="i"
           class="tier-tab"
           :class="{ active: activeIdx === i }"
-          :style="{ background: activeIdx === i ? `linear-gradient(135deg, ${t.color}, ${t.colorEnd})` : '#fff', color: activeIdx === i ? '#fff' : '#2c3e50' }"
+          :style="{ background: activeIdx === i ? `linear-gradient(135deg, ${tier.color}, ${tier.colorEnd})` : '#fff', color: activeIdx === i ? '#fff' : '#2c3e50' }"
           @click="activeIdx = i"
         >
-          <span class="tier-rank">{{ t.rank }}</span>
-          <span class="tier-name">{{ t.name }}</span>
+          <span class="tier-rank">{{ tier.rank }}</span>
+          <span class="tier-name">{{ tier.name }}</span>
         </button>
       </div>
 
@@ -33,42 +33,17 @@
         </div>
         <div class="tier-body">
           <div class="metric-grid">
-            <div class="metric-box">
-              <div class="metric-icon">🍇</div>
-              <div class="metric-label">葡萄狀態</div>
-              <div class="metric-value">{{ activeTier.grapeState }}</div>
-            </div>
-            <div class="metric-box">
-              <div class="metric-icon">🍷</div>
-              <div class="metric-label">酒精度</div>
-              <div class="metric-value">{{ activeTier.abv }}</div>
-            </div>
-            <div class="metric-box">
-              <div class="metric-icon">🍯</div>
-              <div class="metric-label">殘糖</div>
-              <div class="metric-value">{{ activeTier.sweetness }}</div>
-            </div>
-            <div class="metric-box">
-              <div class="metric-icon">⏳</div>
-              <div class="metric-label">法定陳年</div>
-              <div class="metric-value">{{ activeTier.aging }}</div>
-            </div>
-            <div class="metric-box">
-              <div class="metric-icon">💰</div>
-              <div class="metric-label">價格</div>
-              <div class="metric-value">{{ activeTier.price }}</div>
-            </div>
-            <div class="metric-box">
-              <div class="metric-icon">📅</div>
-              <div class="metric-label">陳年潛力</div>
-              <div class="metric-value">{{ activeTier.cellar }}</div>
+            <div v-for="m in metrics" :key="m.key" class="metric-box">
+              <div class="metric-icon">{{ m.icon }}</div>
+              <div class="metric-label">{{ c.labels[m.key] }}</div>
+              <div class="metric-value">{{ activeTier[m.key] }}</div>
             </div>
           </div>
           <div class="tier-process">
-            <strong>🔬 釀造關鍵：</strong>{{ activeTier.process }}
+            <strong>{{ c.labels.process }}</strong>{{ activeTier.process }}
           </div>
           <div class="tier-pairing">
-            <strong>🍽️ 配餐：</strong>{{ activeTier.pairing }}
+            <strong>{{ c.labels.pairing }}</strong>{{ activeTier.pairing }}
           </div>
         </div>
       </div>
@@ -76,13 +51,13 @@
 
     <!-- Appassimento 風乾流程 -->
     <div class="process-section">
-      <h3>🌬️ Appassimento 風乾流程（3-4 個月）</h3>
+      <h3>{{ c.processHeading }}</h3>
       <div class="process-flow">
-        <div v-for="(p, i) in process" :key="i" class="process-step">
+        <div v-for="(p, i) in c.process" :key="i" class="process-step">
           <div class="step-month">{{ p.month }}</div>
           <div class="step-bar-wrap">
             <div class="step-bar" :style="{ width: p.weightLoss + '%', background: `linear-gradient(90deg, ${p.color}, ${p.colorEnd})` }">
-              <span class="bar-text">失水 {{ p.weightLoss }}%</span>
+              <span class="bar-text">{{ c.weightLoss }} {{ p.weightLoss }}%</span>
             </div>
           </div>
           <div class="step-info">
@@ -95,125 +70,54 @@
 
     <!-- 釀造哲學光譜 -->
     <div class="philosophy-section">
-      <h3>⚖️ 傳統派 vs 現代派釀造哲學</h3>
+      <h3>{{ c.philHeading }}</h3>
       <div class="philosophy-compare">
-        <div class="phil-card traditional">
-          <div class="phil-header">🔥 傳統派（極致濃郁）</div>
+        <div v-for="side in ['traditional', 'modern']" :key="side" class="phil-card" :class="side">
+          <div class="phil-header">{{ c[side].header }}</div>
           <ul>
-            <li><strong>風乾期</strong>：4-5 個月（失水 40%+）</li>
-            <li><strong>橡木桶</strong>：大型 Botte（5,000L+），陳年 4-8 年</li>
-            <li><strong>風格</strong>：極致濃縮、乾果、甘草、巧克力、酒精 16-17%</li>
-            <li><strong>代表</strong>：Quintarelli、Dal Forno Romano、Bertani</li>
-            <li><strong>價格</strong>：€100–€600+</li>
-          </ul>
-        </div>
-        <div class="phil-card modern">
-          <div class="phil-header">✨ 現代派（優雅平衡）</div>
-          <ul>
-            <li><strong>風乾期</strong>：3-3.5 個月（失水 30-35%）</li>
-            <li><strong>橡木桶</strong>：法國 Barrique（225L），陳年 2-4 年</li>
-            <li><strong>風格</strong>：果香新鮮、優雅平衡、酒精 15-16%</li>
-            <li><strong>代表</strong>：Allegrini、Masi、Tedeschi、Zenato</li>
-            <li><strong>價格</strong>：€30–€150</li>
+            <li v-for="item in c[side].items" :key="item[0]"><strong>{{ item[0] }}</strong>{{ c.sep }}{{ item[1] }}</li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="key-insight">
-      <h4>💡 關鍵洞察</h4>
-      <p>Recioto 才是<strong>始祖</strong>（中世紀甜紅酒），Amarone 是 1950 年代「<em>發酵失控不停</em>」的意外產物——殘糖完全轉化為高酒精乾型酒。Ripasso 則是 1980 年代 Masi 發明的「<strong>環保型 Baby Amarone</strong>」：將普通 Valpolicella 倒入剛榨完的 Amarone 酒渣上二次發酵，零浪費地獲得濃縮度。</p>
+      <h4>{{ c.insightHeading }}</h4>
+      <p v-html="c.insight"></p>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { AMARONE_CONTENT } from './data/amaroneAppassimento.js'
 
 const props = defineProps({
   slide: { type: Object, default: () => ({}) }
 })
 
+const { locale } = useI18n()
+const c = computed(() => AMARONE_CONTENT[locale.value] || AMARONE_CONTENT['zh-TW'])
+
 const activeIdx = ref(2) // 預設 Amarone
 
-const defaultTiers = [
-  {
-    rank: '①',
-    name: 'Valpolicella Classico DOC',
-    tagline: '輕盈日常款',
-    grapeState: '新鮮葡萄直接釀造',
-    abv: '11–12.5%',
-    sweetness: '乾型（< 4 g/L）',
-    aging: '無強制要求',
-    price: '€8–€18',
-    cellar: '2–5 年',
-    process: '採收後立即破皮、發酵、短期不鏽鋼槽陳年。保留 Corvina 的櫻桃酸度與紫羅蘭花香。',
-    pairing: '披薩、義大利麵、輕燉肉、Pecorino 起司',
-    color: '#3498db',
-    colorEnd: '#5dade2'
-  },
-  {
-    rank: '②',
-    name: 'Valpolicella Ripasso DOC',
-    tagline: 'Baby Amarone',
-    grapeState: '新鮮葡萄 + 倒入剛榨完的 Amarone 酒渣',
-    abv: '13–14%',
-    sweetness: '乾型（< 8 g/L）',
-    aging: '至少 1 年（其中 Superiore 等級需 2 年）',
-    price: '€15–€35',
-    cellar: '5–10 年',
-    process: '完成發酵的 Valpolicella 酒倒入 Amarone 剛壓榨完的酒渣上，啟動二次發酵 2-3 週。萃取殘留糖分、單寧、風味。',
-    pairing: '燉肉醬義大利麵、烤豬肉、Parmigiano（30-36 個月）',
-    color: '#e67e22',
-    colorEnd: '#f39c12'
-  },
-  {
-    rank: '③',
-    name: 'Amarone della Valpolicella DOCG',
-    tagline: '風乾乾型旗艦',
-    grapeState: '葡萄風乾 3-4 個月（失水 30-40%）',
-    abv: '15–17%',
-    sweetness: '乾型（< 12 g/L，但圓潤感強）',
-    aging: '至少 2 年（Riserva 4 年）',
-    price: '€35–€600+',
-    cellar: '10–30 年',
-    process: '採收後挑選最健康果串置於 Fruttai 風乾室，自然失水 3-4 個月。緩慢低溫發酵 30-50 天，糖分完全轉化為高酒精乾型酒。',
-    pairing: '燉牛肉（Pastissada）、野味、陳年 Parmigiano（60+ 個月）、黑松露',
-    color: '#8e44ad',
-    colorEnd: '#9b59b6'
-  },
-  {
-    rank: '④',
-    name: 'Recioto della Valpolicella DOCG',
-    tagline: '甜紅酒始祖',
-    grapeState: '葡萄風乾 3-4 個月（與 Amarone 相同）',
-    abv: '12–14%',
-    sweetness: '甜型（80–150 g/L 殘糖）',
-    aging: '至少 1 年',
-    price: '€30–€150',
-    cellar: '15–30 年',
-    process: '與 Amarone 同樣風乾，但發酵在糖分轉化完成「之前」中止（低溫降溫或加 SO₂），保留大量殘糖。中世紀貴族宴會酒款。',
-    pairing: '黑巧克力甜點、藍紋起司（Gorgonzola Piccante）、堅果塔、聖誕 Panettone',
-    color: '#c0392b',
-    colorEnd: '#e74c3c'
-  }
+const metrics = [
+  { key: 'grapeState', icon: '🍇' },
+  { key: 'abv', icon: '🍷' },
+  { key: 'sweetness', icon: '🍯' },
+  { key: 'aging', icon: '⏳' },
+  { key: 'cellar', icon: '📅' }
 ]
 
 const tiers = computed(() => {
   if (Array.isArray(props.slide?.tiers) && props.slide.tiers.length) return props.slide.tiers
-  return defaultTiers
+  return c.value.tiers
 })
 
 const activeTier = computed(() => tiers.value[activeIdx.value] || tiers.value[0])
 
 const tierKeys = ['valpolicella', 'ripasso', 'amarone', 'recioto']
-
-const process = [
-  { month: '第 1 個月', weightLoss: 18, title: '初期蒸散', detail: '果皮起皺、表面水分蒸發、糖度開始上升', color: '#16a085', colorEnd: '#1abc9c' },
-  { month: '第 2 個月', weightLoss: 25, title: '緩慢濃縮', detail: '糖分 / 多酚 / 甘油濃縮，定期巡視防止灰黴病', color: '#f39c12', colorEnd: '#f5b041' },
-  { month: '第 3 個月', weightLoss: 33, title: '化學變化', detail: '產生新風味化合物（乾果、香料、可可），酸度保持', color: '#e67e22', colorEnd: '#eb984e' },
-  { month: '第 4 個月', weightLoss: 38, title: '達到目標', detail: '失水 35-40%，糖度可達 28°Brix，準備破皮發酵', color: '#c0392b', colorEnd: '#e74c3c' }
-]
 </script>
 
 <style scoped>

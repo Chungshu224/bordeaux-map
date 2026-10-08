@@ -52,8 +52,7 @@
             </ul>
           </div>
           <div class="detail-block">
-            <h4>💰 價格 / 定位</h4>
-            <p class="price-range">{{ activeTier.priceRange }}</p>
+            <h4>📈 市場定位</h4>
             <p class="market-note">{{ activeTier.marketNote }}</p>
           </div>
         </div>
@@ -91,7 +90,6 @@ const defaultTiers = [
       '早期 Super Tuscan（1970-1990s）',
       '部分創新混釀酒款'
     ],
-    priceRange: '€3 – €15',
     marketNote: '入門市場主力；現代精品酒款已多升級至 IGT。'
   },
   {
@@ -116,7 +114,6 @@ const defaultTiers = [
       'Tignanello（Antinori）',
       'Ornellaia、Masseto'
     ],
-    priceRange: '€8 – €500+',
     marketNote: '現代義大利精品酒最大舞台；頂級 Super Tuscan 比許多 DOCG 更貴。'
   },
   {
@@ -143,7 +140,6 @@ const defaultTiers = [
       'Marsala DOC（Sicilia 加烈酒）',
       'Frascati DOC（Lazio）'
     ],
-    priceRange: '€10 – €60',
     marketNote: '日常品質保證；性價比優異；部分 DOC 已升級至 DOCG。'
   },
   {
@@ -171,7 +167,6 @@ const defaultTiers = [
       'Taurasi DOCG（Campania）',
       'Vino Nobile di Montepulciano DOCG'
     ],
-    priceRange: '€20 – €1,000+（單一園 Barolo / Brunello Riserva）',
     marketNote: '義大利國家級招牌；收藏與投資首選；佔義大利總產量約 7%。'
   }
 ]
@@ -356,11 +351,6 @@ const activeTier = computed(
   font-size: 0.9rem;
 }
 
-.price-range {
-  font-weight: 700;
-  color: #B8860B !important;
-  margin-bottom: 0.4rem !important;
-}
 
 .market-note {
   font-size: 0.82rem !important;

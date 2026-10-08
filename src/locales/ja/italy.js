@@ -242,7 +242,6 @@ export default {
       mapError: '地図エラー：{msg}',
       unknownError: '不明',
       pairing: '🍽️ 料理との相性',
-      price: '💶 参考価格',
       emptyLine1: '上のボタンまたは地図上の産地をクリックして',
       emptyLine2: '位置と詳細を確認しましょう',
       labels: {
@@ -298,7 +297,6 @@ export default {
           location: 'シエナ県、Asso・Orcia・Ombrone の 3 河川に囲まれた Montalcino の丘陵、標高 120〜600m',
           desc: 'イタリア最高峰の赤ワインのひとつ。19 世紀末に Biondi-Santi 家がその伝説を築いた。標高の高い区画は古く痩せた Galestro と Alberese、低い区画は海成の粘土と砂。Chianti Classico より温暖で、Sangiovese が安定して完熟する。',
           pairing: 'イノシシ（Cinghiale）、熟成 Pecorino、トリュフ料理、ジビエの煮込み',
-          price: '€40〜200+ / Riserva €80〜400+',
         },
         'chianti-classico': {
           name: 'Chianti Classico DOCG',
@@ -311,7 +309,6 @@ export default {
           location: 'フィレンツェとシエナの間、Greve・Castellina・Radda・Gaiole など 9 つのコムーネにまたがる',
           desc: 'フィレンツェとシエナの間に広がる歴史的中心地。Galestro と Alberese の土壌がエレガンスとミネラル感を与える。Gran Selezione（2014 年創設）は自社畑のブドウのみで造る最上位等級で、黒い雄鶏のマークは最も伝統的なスタイルの証。',
           pairing: 'ビステッカ・アッラ・フィオレンティーナ、トマトのミートソースパスタ、イノシシの煮込み',
-          price: 'Annata €12〜22 / Riserva €18〜45 / Gran Selezione €35〜80+',
         },
         'vino-nobile': {
           name: 'Vino Nobile di Montepulciano DOCG',
@@ -324,7 +321,6 @@ export default {
           location: 'シエナ県、Montepulciano と Valiano の丘陵、標高 250〜600m',
           desc: 'トスカーナ三強の「隠れた宝石」。より内陸で大陸性気候、トラジメーノ湖が気温を和らげる。海成の砂質土壌が柔らかく丸みのあるスタイルを生む。Avignonesi、Poliziano が代表的生産者で、Brunello よりコストパフォーマンスに優れる。',
           pairing: '鳩（Piccione）料理、イノシシのラグーのタリアテッレ、熟成チーズ',
-          price: '€15〜40 / Riserva €25〜60',
         },
         morellino: {
           name: 'Morellino di Scansano DOCG',
@@ -337,7 +333,6 @@ export default {
           location: 'グロッセート県（南マレンマ）、Scansano 周辺、海岸から約 20km',
           desc: 'トスカーナの地中海沿岸で育つ Sangiovese（現地名 Morellino）。温暖な気候がしなやかで果実味あふれるスタイルを生み、Brunello の手頃な代替となる。Erik Banti などの生産者が評価を築いた。',
           pairing: '魚介料理（焼き魚、ムール貝）、イノシシ、ローストラム、軽めのパスタ',
-          price: '€10〜20 / Riserva €15〜30',
         },
         vernaccia: {
           name: 'Vernaccia di San Gimignano DOCG',
@@ -350,7 +345,6 @@ export default {
           location: 'シエナ県、塔の町 San Gimignano 周辺、Chianti Classico の西側',
           desc: 'トスカーナ唯一の白ワイン DOCG（1993 年）であり、1966 年にはイタリア初の DOC となった。San Gimignano の中世の塔は有名な観光名所。海成の黄色い砂質土壌とビターアーモンドの余韻が個性。',
           pairing: '魚介の前菜、サラダ、白身肉料理、郷土の軽食（ブルスケッタ）',
-          price: '€12〜22 / Riserva €18〜35',
         },
         'rosso-montalcino': {
           name: 'Rosso di Montalcino DOC',
@@ -363,7 +357,6 @@ export default {
           position: 'Brunello の「弟分」であり、イタリアのセカンドワイン的カテゴリーの原型',
           desc: 'Biondi-Santi、Casanova di Neri、Poggio di Sotto など多くのトップ生産者が入門ワインとして Rosso di Montalcino を造る。不作の年には Brunello 用のブドウを Rosso に回し、Brunello の品質基準を守る。',
           pairing: '煮込み料理、パスタ、日常のステーキ',
-          price: '€15〜30、Brunello への入口として非常にお得',
         },
         bolgheri: {
           name: 'Bolgheri DOC',
@@ -376,7 +369,6 @@ export default {
           location: 'リヴォルノ県、北マレンマの海岸、Castagneto Carducci 周辺',
           desc: 'スーパータスカン誕生の地。Sassicaia（1968）と Ornellaia がここでイタリア最高峰のボルドースタイル赤ワインを確立した。1983 年の DOC は当初白とロゼのみで、赤が加わったのは 1994 年。沖積の礫、海成の砂と粘土、海風が Cabernet を見事に熟させる。2013 年、Bolgheri Sassicaia はイタリア唯一の単一ワイナリー DOC となった。',
           pairing: 'ラムチョップのグリル、ステーキ、熟成チーズ、黒トリュフ',
-          price: 'Bolgheri Rosso €20〜45 / Sassicaia €150〜250 / Ornellaia €180〜300',
         },
       },
     },
@@ -399,7 +391,6 @@ export default {
           location: 'カターニア県、エトナ火山の北・東・南斜面（北斜面が最も注目される）',
           desc: '「地中海のブルゴーニュ」と呼ばれ、黒い火山土壌で Nerello Mascalese はピノ・ノワールを思わせる繊細さを見せる。1968 年にシチリア初の DOC となり、2011 年からはコントラーダ名をラベルに表示でき、斜面・標高・土壌によるスタイルの違いを映し出す。接ぎ木なしの樹齢百年の古木は宝物である。',
           pairing: '焼き魚、地中海風の野菜の煮込み、キノコのリゾット、ラム料理',
-          price: '入門 €15〜30 / トップのコントラーダ €50〜200+',
         },
         cerasuolo: {
           name: 'Cerasuolo di Vittoria DOCG',
@@ -412,7 +403,6 @@ export default {
           location: 'ラグーザ県、南東部ヴィットーリア周辺。石灰岩の上の砂と粘土に、鉄分の多いテッラ・ロッサが混じる',
           desc: 'Nero d’Avola が骨格と深みを、Frappato がフレッシュな苺と花の香りをもたらし、シチリアで最も個性的な赤ワインを生む。COS（1980 年）と Arianna Occhipinti は自然農法の先駆者で、この産地を国際的に知らしめた。',
           pairing: 'ローストチキン、豚ロース、カポナータ、中程度に熟成したチーズ',
-          price: '€15〜45 / Classico €20〜60',
         },
         marsala: {
           name: 'Marsala DOC',
@@ -425,7 +415,6 @@ export default {
           location: 'トラーパニ県、西端のマルサラ港。島で最も乾燥して暑い地域の一つ',
           desc: '1770 年代、英国商人 John Woodhouse がマルサラ港で地元の vino perpetuo を見いだし、酒精強化して英国へ輸出したことで、イタリアで最も有名な酒精強化ワインの伝統が始まった。concia を加えず酒精強化のみの Vergine が最も純粋なマルサラで、ソレラで熟成する生産者もあり、ナッツや酸化熟成の風味をもつ。',
           pairing: '料理用（チキン・マルサラ、ザバイオーネ）／飲用：熟成チーズ、ナッツ、キャラメルのデザート',
-          price: 'Fine €8〜15 / Vergine Riserva €25〜60+',
         },
         pantelleria: {
           name: 'Pantelleria DOC',
@@ -438,7 +427,6 @@ export default {
           location: 'チュニジアから約 70km の火山島。一年中強風が吹き、ブドウは浅い窪みに低く植えられる',
           desc: '絶え間ない強風のため、ブドウは火山岩の石垣に囲まれた浅い窪み（conche）に alberello pantesco として植えられる。この栽培法はユネスコ無形文化遺産に登録されている。Passito di Pantelleria はイタリア屈指の甘口白ワインで、De Bartoli、Murana、Donnafugata が 1980 年代の復興を牽引した。',
           pairing: 'アーモンドのデザート（カッサータ）、焼きイチジク、青カビチーズ（ゴルゴンゾーラ）、食後にそのままでも',
-          price: 'Passito di Pantelleria €20〜80 / トップ €100+',
         },
         noto: {
           name: 'Noto DOC',
@@ -451,7 +439,6 @@ export default {
           location: 'シラクーサ県、アーヴォラとノート周辺の暑い南東海岸',
           desc: 'Nero d’Avola の発祥地で、品種名はアーヴォラの町に由来する。暑い石灰岩土壌が深い色とフルボディを生み、上質なものは 10〜15 年熟成してなめし革やドライフルーツの複雑な香りを見せる。Planeta がここに農園を持つ。',
           pairing: 'ローストラム、牛肉のラグー、イノシシ、熟成ハードチーズ',
-          price: '€10〜25 / トップの Nero d’Avola €25〜60',
         },
       },
     },
@@ -477,7 +464,6 @@ export default {
           style: '骨格があり複雑で長期熟成向き；DOC と同じ範囲で、同じく 99 の MGA',
           desc: 'Castelli di Jesi の最上位で、生産量はごく一部。石灰質粘土の丘で Verdicchio はアーモンド、柑橘、ミネラルの風味を見せる。1950〜60 年代に Fazi Battaglia のアンフォラ型ボトルで有名になり、1980 年代からは Bucci、Garofoli、Umani Ronchi などの高品質生産者が台頭した。',
           pairing: 'ヴィンチスグラッシ（マルケ伝統のラザニア）、鯛のグリル、ロブスター、アドリア海の魚介スープ、フレッシュな Pecorino',
-          price: '€15〜25 / トップの Riserva €25〜50',
         },
         'verdicchio-matelica-riserva': {
           name: 'Verdicchio di Matelica Riserva DOCG',
@@ -490,7 +476,6 @@ export default {
           style: 'Jesi より標高が高く冷涼で寒暖差が大きい：果実味は控えめでミネラリー、抑制的で厳格、非常に長期熟成向き',
           desc: 'Castelli di Jesi よりずっと小さく、谷は大陸性気候が支配する。Verdicchio di Matelica DOC にはスティル、スプマンテ、パッシートがあり（Superiore はない）、Riserva DOCG は最も複雑で長命なバージョン。Bisci、La Monacesca、Belisario が代表的生産者。',
           pairing: '白トリュフのパスタ、ヒラメのグリル、ウニ、熟成 Pecorino di Fossa',
-          price: '€18〜30 / トップ €30〜55',
         },
         'conero-docg': {
           name: 'Cònero DOCG',
@@ -503,7 +488,6 @@ export default {
           style: '色が濃く力強く、フルボディでタンニンがしっかりし、アルコールが高い',
           desc: 'マルケで最も重要な赤ワインで、Monte Cònero の岬を囲む畑から生まれる。Cònero の南は温暖なため、完熟に暖かさを必要とする Montepulciano が十分に熟す。Umani Ronchi の Cùmaro が最も有名な例の一つ。',
           pairing: 'イノシシの煮込み、仔羊もものロースト、ヴィンチスグラッシ、熟成 Pecorino',
-          price: '€25〜50 / トップ €40〜80',
         },
         'offida-docg': {
           name: 'Offida DOCG',
@@ -516,7 +500,6 @@ export default {
           location: 'アスコリ・ピチェーノ県、マルケ最南端のオッフィダ周辺',
           desc: 'マルケ南部の DOCG で、Pecorino の復活で知られる：マルケ南西部原産のこの品種は絶滅寸前だったが、Guido Cocci Grifoni が救った；糖度が高く、高い酸がそれを支える。Passerina は香り高くミネラリーで酸が高い。重なる Terre di Offida DOC は主に Passerina で、スプマンテ、パッシート、ヴィン・サントのみを造る。',
           pairing: 'ヒラメのグリル、魚介の盛り合わせ、Pecorino di Fossa、アスコリの揚げオリーブ',
-          price: '€12〜22 / トップ €22〜40',
         },
         'vernaccia-serrapetrona': {
           name: 'Vernaccia di Serrapetrona DOCG',
@@ -529,7 +512,6 @@ export default {
           scope: 'イタリアで唯一、赤の発泡ワインのみを造る DOCG；生産量はごくわずか',
           desc: 'イタリアで最もユニークな赤の発泡ワイン。Vernaccia Nera はセッラペトローナ周辺でのみ栽培され、一部を陰干しして 3 回の発酵を経ることで、泡の中にラズベリー、スミレ、スパイスの香りが広がる。フランスのロゼの泡ともランブルスコとも違う。',
           pairing: '甘口：イタリアの祝祭菓子、チョコレート；辛口：鳩のロースト、山の煮込み料理、辛いサラミ',
-          price: '€10〜18',
         },
         'verdicchio-jesi-doc': {
           name: 'Verdicchio dei Castelli di Jesi DOC',
@@ -542,7 +524,6 @@ export default {
           feature: '1950〜60 年代、Fazi Battaglia のアンフォラ型ボトルで人気に',
           desc: 'Verdicchio を知る最も手軽な入口：通常品はフレッシュでシンプル、アーモンド、柑橘、ミネラルの風味で、アドリア海の魚介に最適。1970〜80 年代にはシンプルでニュートラルなワインが大量生産されたが、1980 年代から高品質生産者が台頭し、1990 年代にはワイン評論家の注目を集めた。',
           pairing: 'アドリア海の魚介のグリル、イワシのフライ、魚介のパスタ、ブロデット（マルケの魚のスープ）',
-          price: '€7〜15',
         },
         'rosso-conero-doc': {
           name: 'Rosso Cònero DOC',
@@ -554,7 +535,6 @@ export default {
           location: 'アンコーナ南方、Monte Cònero の岬',
           desc: 'Cònero の入門版：若いうちは果実味豊かで飲みやすく、Montepulciano の骨格も備える。Umani Ronchi の「San Lorenzo」はよく知られた Rosso Cònero の一つ。',
           pairing: 'イノシシの煮込み、ヴィンチスグラッシ、子豚のロースト、マルケ風仔羊の煮込み、熟成 Pecorino',
-          price: '€10〜18',
         },
         'rosso-piceno': {
           name: 'Rosso Piceno DOC',
@@ -567,7 +547,6 @@ export default {
           nameOrigin: '古代のピチェーニ族に由来',
           desc: 'マルケ中南部の主要な赤ワイン DOC で、Montepulciano と Sangiovese のブレンドが日常の食卓を支える。南東のサブゾーン産の Superiore はより凝縮して骨格があり、探す価値がある。',
           pairing: '豚肉の串焼き、オリーヴェ・アッラスコラーナ（肉詰めオリーブのフライ）、ピッツァ、豚スペアリブの煮込み',
-          price: '€8〜15 / Superiore €15〜25',
         },
         'lacrima-morro': {
           name: 'Lacrima di Morro d’Alba DOC',
@@ -580,7 +559,6 @@ export default {
           palate: 'タンニンが低く若飲みタイプ、やや冷やして',
           desc: 'マルケで最も驚きのある土着品種の一つ。その香りの強さは多くのイタリアの赤を大きく上回り、一杯で部屋中がバラとスミレに包まれる。産地はモッロ・ダルバの小さな村の周辺だけで、面積はごく小さい；Stefano Mancinelli が重要な生産者。',
           pairing: '熟成 Pecorino、腸詰めサラミ（チャウスコロ）、ダークチョコレートのデザート、羊乳チーズ',
-          price: '€8〜16',
         },
         falerio: {
           name: 'Falerio DOC',
@@ -593,7 +571,6 @@ export default {
           nameOrigin: 'ローマ時代の町 Falerio Picenus（現在の Falerone）に由来',
           desc: 'マルケ最南端の伝統的な白ワイン DOC で、Offida DOCG 周辺のより手頃な兄弟分。Passerina が Trebbiano より鮮やかな花と果実の香りを添え、南部マルケの白を知る良い出発点になる。',
           pairing: 'ブロデット（マルケの魚のスープ）、魚介のグリル、魚のフライ、夏の前菜',
-          price: '€6〜12',
         },
         'bianchello-metauro': {
           name: 'Bianchello del Metauro DOC',
@@ -606,7 +583,6 @@ export default {
           feature: 'メタウロ渓谷は紀元前 207 年のメタウルスの戦いの古戦場でもある',
           desc: 'マルケ北部の軽やかな日常の白。Biancame はほぼこの谷だけで栽培され、フレッシュで低アルコール、ペーザロやファーノの海辺でイワシのフライと合わせるのが、アドリア海の夏の定番。',
           pairing: 'イワシのフライ、アサリのグリル、魚介の前菜、魚のフライ',
-          price: '€5〜10',
         },
       },
     },
@@ -632,7 +608,6 @@ export default {
           location: 'モンテファルコと周辺の 4 村、中央アペニン山脈の西の山麓、標高 220〜450m',
           desc: 'モンテファルコは 11 世紀から知られた産地で、Sagrantino は伝統的に甘口のパッシートとして造られてきた。1960 年代には畑がほぼ消え、1980 年代半ばに辛口が主流となり、1990 年代に Arnaldo Caprai が人気を爆発させた。現代の辛口は黒い果実、なめし革、チョコレートの複雑さを見せる、イタリアのコレクター向けの赤。Arnaldo Caprai と Paolo Bea が代表的生産者。',
           pairing: 'イノシシの煮込み（チンギアーレ）、鳩のロースト、熟成 Pecorino、黒トリュフ料理（ウンブリアの名物）',
-          price: '€25〜55 / トップ €45〜100',
         },
         'torgiano-riserva': {
           name: 'Torgiano Rosso Riserva DOCG',
@@ -645,7 +620,6 @@ export default {
           producers: 'Lungarotti の「Rubesco Riserva Vigna Monticchio」はウンブリアで最も名声ある赤の一つ',
           desc: 'Giorgio Lungarotti は戦後イタリアワイン業界で最も重要な人物の一人：1962 年の Rubesco でウンブリアの現代的な栽培と醸造の基礎を築き、ウンブリア初の DOC であるトルジャーノの創設を推進した。Sangiovese 主体でトスカーナより柔らかく丸く、黒トリュフとの相性は抜群。',
           pairing: '黒トリュフのパスタ、ステーキのグリル、ジビエの煮込み、熟成したウンブリアのチーズ',
-          price: '€25〜50 / Vigna Monticchio €45〜80',
         },
         'montefalco-doc': {
           name: 'Montefalco DOC',
@@ -658,7 +632,6 @@ export default {
           feature: '1979 年創設で DOCG より古い；Montefalco Rosso は Sagrantino 主体ではない',
           desc: 'モンテファルコの町は、ウンブリアの丘を見渡すことから「ウンブリアのバルコニー」（Ringhiera dell’Umbria）と呼ばれる。Montefalco DOC は Sagrantino DOCG より手頃な選択肢で、Sangiovese 主体のためタンニンが柔らかく、3〜5 年で魅力を楽しめる。',
           pairing: 'ローストラム、ミートソースのパスタ、ウンブリアの煮込み、黒トリュフのスライス、Pecorino',
-          price: '€10〜20 / Riserva €18〜35',
         },
         orvieto: {
           name: 'Orvieto DOC',
@@ -671,7 +644,6 @@ export default {
           scope: 'ウンブリアとラツィオにまたがり、面積・生産量の大半はウンブリア；ウンブリアで最大・最多生産・最多輸出の DOC',
           desc: 'エトルリア時代からの名産地で、古代ローマ人に愛され、中世には教皇庁に好まれた；伝統的なスタイルは黄金色で微発泡、柔らかな甘口で、20 世紀後半に辛口へ移った。1931 年に産地が画定され、1971 年に DOC となり、元の産地は Classico と呼ばれる。南部は火山性土壌（凝灰岩、玄武岩）、中北部は粘土。',
           pairing: 'ウンブリアのフレッシュチーズ（リコッタ、若い Pecorino）、白身肉、トラジメーノ湖の魚、アーティチョーク',
-          price: '€7〜15 / Muffa Nobile €30〜60（375ml）',
         },
         'torgiano-doc': {
           name: 'Torgiano DOC',
@@ -683,7 +655,6 @@ export default {
           soil: 'テヴェレ川の沖積土と丘陵の粘土石灰質',
           desc: 'トルジャーノのワインの歴史は Lungarotti 家の歴史とほぼ重なる。1960 年代に Giorgio Lungarotti がここで Rubesco を造り、ウンブリアの現代的な高品質ワインの出発点となった；Riserva はのちに独立して Torgiano Rosso Riserva DOCG となった。',
           pairing: '黒トリュフのパスタ、ポークチョップ、熟成チーズの盛り合わせ、ウンブリアの煮込み',
-          price: '€12〜22 / Rubesco Riserva €35〜60',
         },
         assisi: {
           name: 'Assisi DOC',
@@ -694,7 +665,6 @@ export default {
           feature: '赤、白、ロゼを造り、Grechetto の白はフレッシュで心地よい',
           desc: '聖フランチェスコ（San Francesco d’Assisi）の故郷で、イタリア有数の巡礼地。Assisi DOC はフレッシュな白としなやかな赤を造り、地元のトリュフ料理、オリーブオイル、ウンブリアのチーズとよく合う。',
           pairing: 'トリュフ入りチーズ、ウンブリアのオリーブオイルでローストした野菜、白インゲン豆のスープ、ローストチキン',
-          price: '€8〜15',
         },
         spoleto: {
           name: 'Spoleto DOC',
@@ -706,7 +676,6 @@ export default {
           location: 'スポレートの町の周辺、ウンブリア渓谷の東側',
           desc: 'Trebbiano Spoletino は一般的な Trebbiano とは異なるウンブリアの土着品種で、20 世紀に絶滅寸前となったが Cantina Novelli が救った。現在は Spoleto DOC、Montefalco Bianco DOC、Umbria IGT で優れたワインが造られ、Paolo Bea などの生産者が白ワイン愛好家の支持を集めている。',
           pairing: 'ウンブリアの白トリュフ、フレッシュなリコッタ、淡水魚の蒸し料理',
-          price: '€10〜20 / トップ生産者 €20〜40',
         },
         trasimeno: {
           name: 'Colli del Trasimeno DOC',
@@ -718,7 +687,6 @@ export default {
           history: '紀元前 217 年、ハンニバルがここでローマ軍を打ち破った（トラシメヌス湖畔の戦い）。ローマ史上屈指の痛烈な敗北',
           desc: '湖が周辺の気候を和らげ、独特の湖畔のテロワールを生む。最も興味深いのは Gamay del Trasimeno —— ボージョレのガメイを思わせる名前だが、実はグルナッシュの仲間で、果実味がより豊か。湖の景色、フレッシュな白、湖の魚は、ウンブリアで最も心地よい田舎の体験。',
           pairing: '湖のパーチのグリル、湖魚のスープ、ウナギのグリル',
-          price: '€8〜16',
         },
       },
     },
@@ -744,7 +712,6 @@ export default {
           tiers: 'Superiore（DOC より低収量・高アルコール）/ Riserva（最低 12 か月熟成）',
           desc: 'Frascati はローマとラツィオの歴史的な白ワインで、ラツィオで最も有名なワイン。DOC はシンプルで軽く爽やか。規定の厳しい Superiore DOCG は DOC より深み、ボディ、個性がある。かつては大量生産で評判を落としたが、2011 年の DOCG 昇格後、品質重視の生産者が水準を引き上げている。',
           pairing: 'カルボナーラ、カチョ・エ・ペペ、魚介のグリル、バッカラ（塩ダラ）のフライ',
-          price: '€8-15 / Riserva €15-25',
         },
         'cannellino-frascati': {
           name: 'Cannellino di Frascati DOCG',
@@ -757,7 +724,6 @@ export default {
           feature: 'Frascati DOC と同じ産地。Malvasia del Lazio は貴腐がつきやすく、甘口に向く',
           desc: 'Frascati と同じ産地で造られる甘口版。繊細な甘さを爽やかな酸が支える、イタリア中部のあまり知られていない甘口白ワインで、生産量は少なく主に地元で消費される。',
           pairing: 'マリトッツォ（ローマの伝統的なクリームパン）、アーモンドビスケット、蜂蜜をかけたフレッシュなリコッタ、フルーツタルト',
-          price: '€15-28',
         },
         'cesanese-piglio': {
           name: 'Cesanese del Piglio DOCG',
@@ -770,7 +736,6 @@ export default {
           aromas: 'アロマティックで果実主体（ブラックチェリー、ラズベリー）、スミレ、スパイス。しっかりした骨格で、樽熟成されることが多い',
           desc: 'ラツィオ唯一の赤 DOCG で、ラツィオで最も重要な土着黒ブドウ Cesanese の最高の表現。Cesanese d’Affile は品質が高く栽培が増加中、Cesanese Comune は歴史的に広く栽培されてきた。白ワインで知られるラツィオにおいて、良質な赤の可能性を示す存在で、Coletti Conti、Casale della Ioria が代表的な生産者。',
           pairing: '子羊のグリル、猪ラグーのパスタ、熟成ペコリーノ、コーダ・アッラ・ヴァッチナーラ（ローマ風牛テール煮込み）',
-          price: '€15-30',
         },
         'est-montefiascone': {
           name: 'Est! Est!! Est!!! di Montefiascone DOC',
@@ -783,7 +748,6 @@ export default {
           established: '1966 年にラツィオ初の DOC となる',
           desc: 'ラツィオで最も物語性のある歴史的な白ワイン。伝説では、司教が従者マルティンを先に行かせて試飲させ、モンテフィアスコーネのワインに感激したマルティンが「Est!」を 3 回書き、司教はその地で生涯を終えたという。1966 年にラツィオ初の DOC となり、産地は火山湖ボルセーナ湖を取り囲む。',
           pairing: 'ボルセーナ湖の魚料理、ムール貝、バッカラのフライ、蒸した魚介',
-          price: '€6-12',
         },
         'castelli-romani': {
           name: 'Castelli Romani DOC',
@@ -796,7 +760,6 @@ export default {
           history: 'ローマ南東のコッリ・アルバーニ火山性丘陵は長く教皇や貴族の避暑地で、教皇の夏の離宮カステル・ガンドルフォがある',
           desc: 'カステッリ・ロマーニはローマ南東の火山性丘陵地帯で、古代からローマの人々の裏庭であり避暑地だった。広域 DOC は Frascati、Marino、Colli Albani などのサブゾーン以外の広い地域をカバーし、主に日常ワインを生む。',
           pairing: 'ポルケッタ、カチョ・エ・ペペ、魚介のグリル、ローマの日常料理',
-          price: '€5-12',
         },
         marino: {
           name: 'Marino DOC',
@@ -809,7 +772,6 @@ export default {
           feature: 'Frascati より控えめで、地元の日常の選択肢',
           desc: 'Marino は、毎年のブドウ祭りで噴水から白ワインが流れる光景で有名。爽やかな白は Frascati と並ぶカステッリ・ロマーニのもう一つの代表で、知名度が低い分、価格も手頃。',
           pairing: 'ポルケッタのサンドイッチ、ピッツァ、カルチョーフォ・アッラ・ジュディア（ユダヤ風アーティチョークのフライ）、軽い前菜',
-          price: '€5-10',
         },
         cerveteri: {
           name: 'Cerveteri DOC',
@@ -822,7 +784,6 @@ export default {
           site: 'バンディタッチャのネクロポリス（Necropoli della Banditaccia）はユネスコ世界遺産',
           desc: 'チェルヴェーテリはエトルリア文明の重要な拠点で、バンディタッチャのネクロポリスはユネスコ世界遺産に登録されている。ティレニア海沿岸で赤と白の両方を生産し、ラツィオのローマ以前の歴史を知る入り口となる。',
           pairing: '魚介のグリル、スパゲッティ・アッレ・ヴォンゴレ、ローストポーク、地中海料理',
-          price: '€8-15',
         },
         'cesanese-olevano': {
           name: 'Cesanese di Olevano Romano DOC',
@@ -835,7 +796,6 @@ export default {
           feature: 'ラツィオの 3 つの Cesanese 原産地呼称の一つ。ほかは Cesanese del Piglio DOCG と Cesanese di Affile DOC',
           desc: '隣接する Piglio DOCG より親しみやすい、伝統的な Cesanese の DOC。オレヴァーノ・ロマーノは 19 世紀にドイツのロマン派画家たちに愛された。Cesanese を知る手頃な入り口。',
           pairing: 'ミートソースのパスタ、ピッツァ、素朴なチーズの盛り合わせ、グリルした肉',
-          price: '€8-16',
         },
         'colli-albani': {
           name: 'Colli Albani DOC',
@@ -848,7 +808,6 @@ export default {
           history: '伝説ではローマの前身アルバ・ロンガがこの丘陵にあったとされる',
           desc: 'コッリ・アルバーニはローマの貴族や教皇の避暑地で、アルバーノ湖とネーミ湖はいずれもこの火山群の火口湖。火山性土壌は Frascati、Marino、Colli Albani に共通する基盤で、爽やかなスタイルのワインを生む。',
           pairing: 'ポルケッタ、ローマのアーティチョーク料理、魚介の前菜、軽食',
-          price: '€6-12',
         },
       },
     },
@@ -874,7 +833,6 @@ export default {
           style: '通常の Montepulciano d’Abruzzo DOC より凝縮感と骨格があり、熟成に向く',
           desc: 'アブルッツォの 2 つの DOCG のうち、より古く重要なもので、Montepulciano の最高の表現。アブルッツォ北部のテーラモの丘陵にあり、海岸からグラン・サッソの麓まで広がり、州全域 DOC より規定が厳しい。Illuminati や Emidio Pepe などの生産者がテーラモ県にある。',
           pairing: 'アロスティチーニ（羊の串焼き）、猪の煮込み、熟成ペコリーノ、ステーキ',
-          price: '€20-45 / Riserva €35-80',
         },
         tullum: {
           name: 'Terre Tollesi / Tullum DOCG',
@@ -887,7 +845,6 @@ export default {
           style: 'スティルとスプマンテ（スパークリング）がある',
           desc: '2019 年に DOCG に昇格し、トッロのラテン語名 Tullum にちなんで名付けられた。海岸近くの小さな産地で、Montepulciano の赤だけでなく、Pecorino や Passerina の白、スパークリングでも知られ、アブルッツォ土着白ブドウの台頭を映している。',
           pairing: 'アドリア海の魚介（白）、アロスティチーニ（赤）、魚介のフライ（スパークリング）',
-          price: '€15-30',
         },
         'montepulciano-doc': {
           name: 'Montepulciano d\'Abruzzo DOC',
@@ -900,7 +857,6 @@ export default {
           feature: '5 つのサブゾーン：Casauria（100%）、Alto Tirino と Terre dei Peligni（95%）、Terre dei Vestini と Teate（90%）',
           desc: 'アブルッツォの象徴。Montepulciano はアブルッツォ土着で最も多く栽培される品種で、シンプルで果実味豊かな飲みやすい赤から、色濃く凝縮し骨格のある樽熟成ワインまで幅広い。注意：Montepulciano d’Abruzzo は品種名に由来し、Sangiovese で造るトスカーナの Vino Nobile di Montepulciano とはまったく別物。',
           pairing: 'アロスティチーニ、マッケローニ・アッラ・キタッラのミートソース、赤身肉のグリル、ペコリーノ',
-          price: '€8-18 / Riserva €15-30',
         },
         cerasuolo: {
           name: 'Cerasuolo d\'Abruzzo DOC',
@@ -913,7 +869,6 @@ export default {
           feature: 'スティルのロゼ（スパークリングではない）。アブルッツォの州全域ロザート',
           desc: 'アブルッツォの州全域ロザート。Montepulciano はアントシアニンが非常に豊富なため、短いマセレーションで濃いサクランボ色になる。淡いプロヴァンスのロゼと異なり、Cerasuolo はボリュームと骨格があり、料理に合わせやすい。',
           pairing: 'トマトソースのパスタ、魚介のグリル、アドリア海の魚のスープ、夏のサラダ、ピッツァ',
-          price: '€8-15 / 上質なもの €20-30',
         },
         trebbiano: {
           name: 'Trebbiano d\'Abruzzo DOC',
@@ -926,7 +881,6 @@ export default {
           style: '一般的なものは爽やかでニュートラル。トップワインは白桃、アプリコット、アーモンド、ミネラルとフルボディ',
           desc: '歴史的にアブルッツォの看板白ワイン。安価な大量生産で長く評判を落としてきたが、Valentini や Emidio Pepe などのトップ生産者の手にかかると、数十年熟成する偉大な白ワインになる。Trebbiano Toscano はアブルッツォで最も多く栽培される白ブドウで、Trebbiano Abruzzese とよくブレンドされる。',
           pairing: 'ブロデット・ディ・ペッシェ（アドリア海の魚のスープ）、鯛のグリル、フレッシュなペコリーノ',
-          price: '€8-15（一般）/ Valentini €100-180、Emidio Pepe €50-75',
         },
         controguerra: {
           name: 'Controguerra DOC',
@@ -939,7 +893,6 @@ export default {
           style: '赤・白・スパークリング・甘口パッシート。スタイルが多様',
           desc: 'マルケ州に隣接するアブルッツォ最北の DOC。他のアブルッツォの産地と異なり、国際品種のブレンドを認め、甘口のパッシートも造るため、州内で最も多様なスタイルがそろう。',
           pairing: '生ハム、山の加工肉、ペコリーノ、軽い前菜',
-          price: '€8-18',
         },
         villamagna: {
           name: 'Villamagna DOC',
@@ -950,7 +903,6 @@ export default {
           feature: 'ごく小さな赤ワインの DOC で、Riserva もある',
           desc: 'IWS が挙げるアブルッツォの DOC の一つで、キエーティ県の丘陵にある。州全域の Montepulciano d’Abruzzo DOC よりずっと狭い範囲で、Montepulciano の赤に特化している。',
           pairing: '子羊のロースト、ミートラグーのパスタ、熟成チーズ',
-          price: '€12-25',
         },
         ortona: {
           name: 'Ortona DOC',
@@ -961,7 +913,6 @@ export default {
           history: 'オルトーナは第二次世界大戦の「オルトーナの戦い」（1943 年）の舞台で、アドリア海の重要な港',
           desc: 'オルトーナはアブルッツォ東海岸の港町。周辺の小さな DOC は沿岸の丘陵帯にあり、アドリア海の影響を受ける。生産量は限られ、主に地元で消費される。',
           pairing: 'アドリア海の魚介のグリル、魚介のフライ盛り合わせ、魚のスープ',
-          price: '€8-15',
         },
       },
     },
@@ -985,7 +936,6 @@ export default {
           style: '色が濃く、フルボディで、酸がはっきりしていて、タンニンはきめ細かい',
           desc: 'モリーゼの看板品種 Tintilia のために設けられた DOC。Tintilia はかつて主に Montepulciano とブレンドされ、単独で瓶詰めされることはまれだった。現在もマイナーな品種だが、注目が高まっている。単一品種の Tintilia を探すならこの DOC。',
           pairing: '子羊ラグーのカヴァテッリ、子羊のグリル、カチョカヴァッロ・チーズ',
-          price: '€12-20 / Riserva €22-35',
         },
         'molise-doc': {
           name: 'Molise DOC',
@@ -997,7 +947,6 @@ export default {
           feature: '赤だけではない。単一品種の Cabernet Sauvignon はこの DOC から出る可能性が最も高い',
           desc: 'モリーゼの州全域 DOC で、生産量も最大。Rosso は Montepulciano 主体で、国際品種を含む多くの単一品種ワインが認められており、生産者に最大の柔軟性を与えている。',
           pairing: '品種による：Montepulciano は煮込み料理、Falanghina は魚介、ロザートは軽い料理に',
-          price: '€8-15',
         },
         biferno: {
           name: 'Biferno DOC',
@@ -1010,7 +959,6 @@ export default {
           feature: 'Trebbiano Toscano 主体の白のブレンドは、この DOC から出る可能性が最も高い',
           desc: 'モリーゼの主要河川ビフェルノ川にちなんで名付けられた、カンポバッソ県の DOC。赤は Montepulciano 主体でアブルッツォに近いスタイル、白は Trebbiano Toscano 主体。',
           pairing: 'ブロデット・アッラ・テルモレーゼ（白）、トマトソースのカヴァテッリ（赤）',
-          price: '€8-18',
         },
         'pentro-isernia': {
           name: 'Pentro di Isernia DOC',
@@ -1023,7 +971,6 @@ export default {
           feature: '生産量はごくわずかで、主に地元で消費される',
           desc: '古代サムニウム人の部族ペントリにちなんで名付けられた、モリーゼ西部イゼルニア県の山間部の DOC。生産量はごくわずかで、モリーゼ以外で見かけることはまれ。',
           pairing: '子羊のロースト、山の煮込み料理、カチョカヴァッロ・チーズ、手打ちパスタ',
-          price: '€8-15',
         },
       },
     },
@@ -1048,7 +995,6 @@ export default {
           soil: '石灰質粘土と海成石灰岩に火山性物質が混じる',
           desc: '南イタリアで最も名高い原産地呼称の一つで、アヴェッリーノ県イルピーニアにある。骨格がしっかりした力強いフルボディで、タンニン・酸・アルコールがいずれも高く、時間をかけて柔らかくなり複雑さを増す。1950 年代にアントニオ・マストロベラルディーノが Aglianico に注力し、1968 年の Taurasi Riserva で国際的な評価を確立した。',
           pairing: '猪の煮込み、子羊のグリル、熟成ペコリーノ',
-          price: '€15-35 / Riserva €35-80 / 優良年 €80-200+',
         },
         fiano: {
           name: 'Fiano di Avellino DOCG',
@@ -1061,7 +1007,6 @@ export default {
           nameOrigin: 'Fiano の古代ラテン名は Apianum。13 世紀にフリードリヒ 2 世のワインリストで初めて言及された',
           desc: 'Fiano はカンパーニアで最も高貴な白ブドウで、イタリア最高の白ブドウの一つ。1940 年代後半に絶滅寸前だったが、マストロベラルディーノが救った。産地は多様で、4 つの村がそれぞれ個性をもち、真価を発揮するには瓶熟成が必要。',
           pairing: '魚料理、魚介のパスタ、モッツァレッラ・ディ・ブーファラ',
-          price: '€12-25 / 単一村 €25-60',
         },
         greco: {
           name: 'Greco di Tufo DOCG',
@@ -1074,7 +1019,6 @@ export default {
           style: 'ステンレスで醸造し樽は使わない。高い酸、ミネラル、火打石、スモーキー、厚みのある質感。瓶熟成で複雑さが増す',
           desc: 'Greco の最も名高い原産地呼称。Greco は歴史的にトゥーフォの町の周辺で栽培され、名前は古代ギリシャ風のワインを指すと考えられる。晩熟で栽培が難しく、フェノール類と酸が多い。硫黄分の多い土壌が、特徴的な火打石やスモーキー（sulfurei）な風味を与える。',
           pairing: '生牡蠣、エビのグリル、魚介のフリット（フリット・ミスト）',
-          price: '€10-20 / 単一畑 €20-40',
         },
         'aglianico-tab': {
           name: 'Aglianico del Taburno DOCG',
@@ -1087,7 +1031,6 @@ export default {
           soil: '主に石灰質粘土と砂岩で、表層を火山性物質が覆う',
           desc: 'カンパーニア 4 つ目の DOCG で、Taurasi、バジリカータの Aglianico del Vulture と並ぶイタリアで最も重要な Aglianico 産地の一つ。地元の Aglianico Amaro は酸がはっきりしていて、緊張感があり熟成に耐える赤を生む。',
           pairing: 'グリルした肉、トマトの肉煮込み、熟成ペコリーノ',
-          price: '€10-20 / Riserva €18-35',
         },
         falerno: {
           name: 'Falerno del Massico DOC',
@@ -1100,7 +1043,6 @@ export default {
           history: '古代のファレルヌムは畑の位置によりファウスティアヌム、カウキヌム、ファレルヌムの 3 等級に分かれていた',
           desc: '古代ローマのファレルヌムの遺産を復活させるために設けられた DOC。ファレルヌムは紀元前 3 世紀からマッシコ山の斜面で造られた古代最高のワインの一つで、アンフォラには産地・年・生産者が記されていた。Villa Matilde がこの復興の先駆者。',
           pairing: 'Rosso は煮込みやローストした肉、Bianco は魚介に',
-          price: '€12-30 / Riserva €30-50',
         },
         aversa: {
           name: 'Asprinio di Aversa DOC',
@@ -1112,7 +1054,6 @@ export default {
           wines: 'スティル、フリッツァンテ、スプマンテ',
           desc: 'カゼルタ県アヴェルサ周辺の DOC で、地元の Asprinio から造られる。最大の特徴は古代のアルベラータ・アヴェルサーナで、ブドウがポプラの木を高く登るため、収穫には長いはしごが必要。',
           pairing: 'モッツァレッラ・ディ・ブーファラ、揚げ物、ピッツァ・マリナーラ',
-          price: '€10-20',
         },
         vesuvio: {
           name: 'Vesuvio DOC',
@@ -1125,7 +1066,6 @@ export default {
           nameOrigin: '名前は 17 世紀の修道士が使った滴下ろ過の仕組みに由来するとされる',
           desc: '古代ギリシャ・ローマ時代から評判の高い伝統的な産地。ヴェスヴィオは今も活火山で、ブドウは中腹から麓の砂質火山性土壌に植えられ、自根のものも多い。Lacryma Christi（キリストの涙）が最も有名な名前。',
           pairing: 'ナポリ湾の魚介、ピッツァ、トマト料理',
-          price: '€8-20',
         },
         'campi-flegrei': {
           name: 'Campi Flegrei DOC',
@@ -1137,7 +1077,6 @@ export default {
           feature: '2 つの主要ワイン：Campi Flegrei Piedirosso と Campi Flegrei Falanghina',
           desc: 'ナポリの西にある火山性の窪地で、「Flegrei」は燃えるという意味。緩い火山性の砂がフィロキセラを寄せつけず、接ぎ木していない Piedirosso と Falanghina の古木が多く残る。',
           pairing: 'Falanghina は魚介、Piedirosso は軽い料理や加工肉に',
-          price: '€10-25',
         },
         amalfi: {
           name: 'Costa d\'Amalfi DOC',
@@ -1150,7 +1089,6 @@ export default {
           feature: 'サブゾーン：フローレ、ラヴェッロ、トラモンティ',
           desc: 'アマルフィ海岸の断崖の段々畑のワイン。空積みの石垣が狭い段々畑を支え、ペルゴラの下に樹齢 100 年の古木が多く残る。生産量は少なく、主に地元で消費される。',
           pairing: 'アマルフィの魚介料理、スズキのグリル、レモン料理（アマルフィのスフザート・レモン）',
-          price: '€15-40',
         },
         ischia: {
           name: 'Ischia DOC',
@@ -1163,7 +1101,6 @@ export default {
           feature: '空積みの石垣で支えられた急峻で狭い段々畑。2000 年以上のワイン造りの歴史',
           desc: '2000 年以上のワインの歴史をもつナポリ湾の火山島。イスキア土着の Biancolella が看板の白ブドウで、アルコールと酸は中程度、海を見下ろす段々畑で栽培される。',
           pairing: 'スパゲッティ・アッレ・ヴォンゴレ、島の魚介の盛り合わせ',
-          price: '€12-25',
         },
       },
     },
@@ -1188,7 +1125,6 @@ export default {
           style: '果皮が厚くタンニンが高く、酸は中程度。Primitivo や Negroamaro ほど力強くなく、ボディも軽め',
           desc: 'カステル・デル・モンテは Nero di Troia の故郷。タンニンが強いため伝統的にほかの品種とブレンドされてきたが、この DOCG は最低 90% を求め、品種本来の個性を表現する。Torrevento の Vigna Pedale がよく知られた例。',
           pairing: '子羊のグリル、猪の煮込み、熟成カチョカヴァッロ',
-          price: '€15-30 / 上級キュヴェ €30-60',
         },
         'castel-rosso': {
           name: 'Castel del Monte Rosso Riserva DOCG',
@@ -1200,7 +1136,6 @@ export default {
           feature: 'Nero di Troia 100% ではなく、ほかの品種とのブレンド',
           desc: 'カステル・デル・モンテの 2 つの赤の DOCG の一つで、Nero di Troia を主体に Aglianico と Montepulciano をブレンドする。Rivera の Il Falcone が最も有名。',
           pairing: '子羊のロースト、牛肉の煮込み、熟成チーズ',
-          price: '€15-35',
         },
         'primitivo-dolce': {
           name: 'Primitivo di Manduria Dolce Naturale DOCG',
@@ -1213,7 +1148,6 @@ export default {
           location: 'Primitivo di Manduria DOC と同じ範囲。サレント、イオニア海に面する',
           desc: 'Primitivo di Manduria の天然甘口版で、2011 年にプーリア初の DOCG となった。過熟または軽く陰干しした Primitivo から造られ、凝縮したドライフルーツのような味わい。',
           pairing: 'ダークチョコレートのデザート、アーモンドビスケット、ブルーチーズ',
-          price: '€20-40',
         },
         'castel-bombino': {
           name: 'Castel del Monte Bombino Nero DOCG',
@@ -1225,7 +1159,6 @@ export default {
           location: 'カステル・デル・モンテ、プーリア北部・中部',
           desc: 'プーリアで唯一ロザート専用の原産地呼称。果皮が薄く酸の高い Bombino Nero は主にロザートに使われ、サレントの Negroamaro のロザートより軽やかなワインになる。',
           pairing: '魚介の前菜、イワシのグリル、生ハム、地中海風サラダ',
-          price: '€10-20',
         },
         'primitivo-doc': {
           name: 'Primitivo di Manduria DOC',
@@ -1238,7 +1171,6 @@ export default {
           soil: '石灰岩の上に鉄分の多い赤い砂質粘土',
           desc: 'Primitivo の歴史的な故郷で、豊かで力強いフルボディの赤で知られる。Primitivo はアメリカの Zinfandel と同じ品種。Gianfranco Fino の Es が最も人気の高い高品質ワイン。',
           pairing: 'ステーキ、豚スペアリブの煮込み、濃厚なソースのパスタ、熟成ペコリーノ',
-          price: '€10-20 入門 / 高品質 €25-60 / Es €60-100',
         },
         gioia: {
           name: 'Gioia del Colle DOC',
@@ -1251,7 +1183,6 @@ export default {
           style: '酸が高く、マンドゥーリアより力強さは控えめで、より洗練されエレガント',
           desc: 'Primitivo のもう一つの主要産地。マンドゥーリアより標高が高く、酸が高く洗練されたエレガントなワインになる。注意：Gioia del Colle は DOC で、DOCG ではない。',
           pairing: 'ローストした肉、トマトの肉煮込み、熟成チーズ',
-          price: '€12-30',
         },
         salice: {
           name: 'Salice Salentino DOC',
@@ -1264,7 +1195,6 @@ export default {
           producers: 'Leone de Castris（Five Roses、イタリア初の商業的に瓶詰めされたロザート）',
           desc: 'サレントにある Negroamaro の主要な原産地呼称。Leone de Castris が 1943 年に発売した Five Roses は、イタリア初の商業的に瓶詰めされたロザート。',
           pairing: '子羊のロースト、トマトソースのオレッキエッテ、ナスの煮込み',
-          price: '€8-18 / Riserva €15-30',
         },
         copertino: {
           name: 'Copertino DOC',
@@ -1275,7 +1205,6 @@ export default {
           location: 'レッチェ県、サレント半島',
           desc: 'サレントの Negroamaro 産地の一つで、骨太な赤で知られる。IWS の試験ポイント：Copertino DOC は Negroamaro がベース。',
           pairing: '煮込み料理、子羊のロースト、プーリアの焼き野菜',
-          price: '€8-20',
         },
         negroamaro: {
           name: 'Negroamaro di Terra d\'Otranto DOC',
@@ -1287,7 +1216,6 @@ export default {
           feature: 'サレントではアルベレッロの古木が今も重要',
           desc: 'サレント全域をカバーする広域の Negroamaro 産地。サレントはプーリアで最も暑い地域で、乾燥に強い Negroamaro が最も力を発揮する。',
           pairing: '子羊のすね肉の煮込み、チーズの盛り合わせ、焼き野菜',
-          price: '€8-15',
         },
         cacce: {
           name: 'Cacc\'e mmitte di Lucera DOC',
@@ -1299,7 +1227,6 @@ export default {
           feature: '黒ブドウと白ブドウのブレンドで造る赤ワイン',
           desc: 'ルチェーラ周辺の歴史的な産地で、Nero di Troia に白ブドウをブレンドして赤ワインを造る。名前は方言で「取り出して入れる」という意味。',
           pairing: 'ミートラグーのパスタ、ソーセージのグリル、田舎料理',
-          price: '€8-15',
         },
         'san-severo': {
           name: 'San Severo DOC',
@@ -1311,7 +1238,6 @@ export default {
           feature: 'Bombino Bianco ベースのスパークリングで知られる',
           desc: '北部タヴォリエーレ平野にある、プーリア初の DOC。自然に酸の高い Bombino Bianco が、爽やかなスパークリングワインに仕立てられる。',
           pairing: '前菜、魚介のフライ、ブッラータ',
-          price: '€8-15',
         },
       },
     },
@@ -1336,7 +1262,6 @@ export default {
           location: 'バジリカータ最北部。死火山モンテ・ヴルトゥレを囲む 15 の村、70 の MGA',
           desc: 'バジリカータ唯一の DOCG。Aglianico del Vulture は Aglianico の 3 大バイオタイプの一つで、酸とタンニンが高く、赤い果実の香りがより豊か。複雑で洗練され、熟成に耐える。西側のヴルトゥレ地区は標高が高く火山性土壌で繊細なワインに、東側は標高が低く砂質粘土でより豊かなワインになる。',
           pairing: '子羊のロースト、猪の煮込み、熟成カネストラート・ディ・モリテルノ',
-          price: '€25-45（Superiore）/ €50-100（Riserva）',
         },
         'adv-doc': {
           name: 'Aglianico del Vulture DOC',
@@ -1349,7 +1274,6 @@ export default {
           feature: '多くのワイン（一部のトップワインを含む）が今も DOC として出荷される',
           desc: '1971 年に設立された Aglianico del Vulture DOC で、Superiore DOCG と同じく Aglianico 100% を求める。一部のトップワインを含め、多くの生産者が今も DOC として出荷しており、DOC だから品質が劣るわけではない。',
           pairing: 'ミートラグーのパスタ、豚ロースのロースト、ルカーニカ・ソーセージ',
-          price: '€15-25',
         },
         matera: {
           name: 'Matera DOC',
@@ -1362,7 +1286,6 @@ export default {
           feature: 'マテーラは 2019 年の欧州文化首都',
           desc: '洞窟都市サッシ・ディ・マテーラで有名なバジリカータ東部の産地。火山性のヴルトゥレとは対照的に、マテーラ周辺は主に石灰岩で、Primitivo や Greco など多様な品種が植えられている。',
           pairing: '焼き野菜、辛いルカーニカ・ソーセージ、マテーラのパンと地元のチーズ',
-          price: '€8-18',
         },
         'alta-val-agri': {
           name: 'Terre dell\'Alta Val d\'Agri DOC',
@@ -1373,7 +1296,6 @@ export default {
           feature: 'バジリカータでは国際品種の役割は小さいが、ここは国際品種主体の数少ない産地',
           desc: 'アグリ川上流の谷にある小さな DOC で、Merlot や Cabernet Sauvignon などの国際品種が主役。生産量は少なく、主に地元で消費される。',
           pairing: 'ジビエ料理、山の煮込み、カチョカヴァッロ・チーズ',
-          price: '€10-20',
         },
         grottino: {
           name: 'Grottino di Roccanova DOC',
@@ -1385,7 +1307,6 @@ export default {
           feature: '生産量はごくわずかで、主に地元で消費される',
           desc: '伝統的な洞窟セラーにちなんで名付けられた、バジリカータ南部の丘陵にある小さな DOC。生産量はごくわずかで、バジリカータ以外で見かけることはまれ。',
           pairing: '田舎風の煮込み、手打ちパスタ、地元のチーズ',
-          price: '€8-15',
         },
       },
     },
@@ -1410,7 +1331,6 @@ export default {
           feature: 'Classico サブゾーンはチロとチロ・マリーナの 2 つの自治体のみ',
           desc: 'カラブリアで最も古く、生産量が最大の DOC。ギリシャ時代の名酒クリミサは古代オリンピックの勝者への賞品だったとされ、その名は現在のチロ一帯にあったギリシャの植民市クレミッサに由来すると考えられている。Gaglioppo の Cirò Rosso は酸とタンニンが高く、Librandi が代表的な生産者。注意：カラブリアに DOCG はない。',
           pairing: 'メカジキのグリル（カラブリア沿岸の名物）、\'ンドゥイヤのパスタ、子羊のグリル、地元のチーズ',
-          price: '€8-18 / Classico Superiore €15-30 / Riserva €25-50',
         },
         'greco-bianco': {
           name: 'Greco di Bianco DOC',
@@ -1422,7 +1342,6 @@ export default {
           feature: 'Greco Bianco は品種、Greco di Bianco は DOC、Bianco は村',
           desc: '陰干しの甘口ワインの小さく名高い産地。Greco Bianco は Greco Bianco di Gerace とも呼ばれ、アパッシメントに最適。香りと風味は複雑で、やや甘口から甘口。Umberto Ceratti が有名な生産者。',
           pairing: 'アーモンドビスケット、蜂蜜ケーキ、干しイチジク、トッローネ（ヌガー）',
-          price: '€25-60 / 375ml',
         },
         'terre-cosenza': {
           name: 'Terre di Cosenza DOC',
@@ -1434,7 +1353,6 @@ export default {
           feature: 'ポッリーノ国立公園などの山地を含み、Magliocco の重要な産地',
           desc: '複数の旧 DOC を統合してできたカラブリア北部の広域 DOC。山や丘が多く、Magliocco が最も注目すべき土着の黒ブドウ。',
           pairing: '山の焼き肉、キノコのリゾット、熟成山羊チーズ',
-          price: '€8-20',
         },
         lamezia: {
           name: 'Lamezia DOC',
@@ -1445,7 +1363,6 @@ export default {
           feature: 'カラブリアでは珍しい沿岸平野にあり、アクセスが便利（ラメーツィア空港）',
           desc: 'サンテウフェーミア平野周辺にあるカラブリア西海岸の DOC で、ティレニア海側のカラブリアのテロワールを表現する。',
           pairing: 'メカジキのグリル、トロペアの赤玉ねぎのサラダ、蒸した魚介',
-          price: '€8-18',
         },
         savuto: {
           name: 'Savuto DOC',
@@ -1456,7 +1373,6 @@ export default {
           feature: 'ティレニア海側の渓谷の丘陵',
           desc: 'サヴート渓谷の小さな DOC で、主に Gaglioppo などの土着黒ブドウのブレンドを造る。',
           pairing: '煮込み料理、ローストポーク、熟成チーズ',
-          price: '€8-18',
         },
         bivongi: {
           name: 'Bivongi DOC',
@@ -1467,7 +1383,6 @@ export default {
           feature: '生産量はごくわずかで、主に地元で消費される',
           desc: '赤と白の両方を造る、イオニア海沿岸南部の小さな DOC。カラブリア以外で見かけることはまれ。',
           pairing: '魚介、焼き野菜、地元のチーズ',
-          price: '€8-15',
         },
       },
     },
@@ -1492,7 +1407,6 @@ export default {
           method: '通常はステンレスタンクで醸造。木樽を使う生産者は少数',
           desc: 'サルデーニャ唯一の DOCG で、Vermentino の最も重要な産地。スタイルは豊かでフルーティなものから、ミネラル感が強く塩気のあるものまで幅広い。優れたものは熟成に耐え、火打石やスモーキーな複雑な香りを帯びる。',
           pairing: 'ボッタルガのスパゲッティ、焼き魚、甲殻類、若い Pecorino Sardo',
-          price: '€12-20 / Superiore €20-35',
         },
         cannonau: {
           name: 'Cannonau di Sardegna DOC',
@@ -1505,7 +1419,6 @@ export default {
           subzones: '公式サブゾーンは 3 つ：Oliena、Jerzu、Capo Ferrato',
           desc: 'サルデーニャを代表する黒ブドウ。アルコールが高く、赤い果実と地中海の灌木（マッキア）の香り。シンプルでフルーティなものから、複雑でフルボディ、長期熟成型まで幅広い。',
           pairing: 'ポルチェッドゥ（子豚の丸焼き）、子羊のロースト、ソーセージのマッロレッドゥス、熟成 Pecorino Sardo',
-          price: '€8-15 / Riserva €15-30',
         },
         'carignano-sulcis': {
           name: 'Carignano del Sulcis DOC',
@@ -1518,7 +1431,6 @@ export default {
           tiers: 'Superiore：アルベレッロ仕立てのみ、より高いアルコール、最低 2 年熟成。Riserva：最低 2 年熟成',
           desc: 'サルデーニャで最も個性的な赤ワインの一つ。Carignano はスペインの Mazuelo、フランスの Carignan と遺伝的に同一で、完熟には温暖で日当たりがよく乾燥した環境が必要。肉付きのよいビロードのような口当たりで、タンニンはなめらか、酸は生き生きとしている。',
           pairing: '子羊のロースト、イノシシの煮込み、熟成 Pecorino Sardo',
-          price: '€15-25 / Superiore €25-50',
         },
         'vernaccia-oristano': {
           name: 'Vernaccia di Oristano DOC',
@@ -1532,7 +1444,6 @@ export default {
           ageing: '樽で最低 2 年。Superiore は最低 3 年、Riserva は最低 4 年',
           desc: '酸化熟成型でシェリーに似るが、酒精強化ワインではない。風通しがよく季節ごとに温度が変わるセラーでフロールが育ち、シェリーのようなアルデヒドの香りが生まれる。ソレラに似たシステムで 10 年樽熟成するものもあり、濃厚で複雑、非常に長命。',
           pairing: 'ボッタルガ、ローストアーモンド、熟成チーズ',
-          price: '€15-25 / Riserva €25-50',
         },
         alghero: {
           name: 'Alghero DOC',
@@ -1544,7 +1455,6 @@ export default {
           feature: 'アルゲーロには今もカタルーニャ語の伝統が残り、アラゴン・スペイン支配の名残となっている',
           desc: '2 つの希少品種、白の Torbato と赤の Cagnulari を特色とする小さな産地。Sella & Mosca が地元の代表的なワイナリー。',
           pairing: 'Torbato には魚介やロブスター、Cagnulari にはグリルした肉',
-          price: '€10-25',
         },
         'malvasia-bosa': {
           name: 'Malvasia di Bosa DOC',
@@ -1556,7 +1466,6 @@ export default {
           ageing: 'Riserva：アルコール最低 15.5%、最低 2 年熟成（うち木樽で最低 1 年）。甘口から辛口まであり、大半はやや辛口寄り',
           desc: 'Malvasia di Sardegna は主にボーザとカリャリ周辺に植えられている。Malvasia di Bosa の生産量はごくわずかで、Colombu は IWS の用語リストに載っている生産者。',
           pairing: 'セアダス（チーズの揚げ菓子のハチミツがけ）、アーモンド菓子、熟成チーズ',
-          price: '€20-40 / 500ml',
         },
         mandrolisai: {
           name: 'Mandrolisai DOC',
@@ -1568,7 +1477,6 @@ export default {
           feature: 'Bovale Sardo はスペインの Graciano と同じ品種',
           desc: '中部の山岳地帯の小さな産地。Bovale Sardo、Cannonau、Monica の 3 品種をブレンドし、サルデーニャ内陸の伝統的なスタイルを表現する。',
           pairing: 'グリルしたソーセージ、子羊の煮込み、Pecorino Sardo',
-          price: '€10-20',
         },
       },
     },
@@ -1593,7 +1501,6 @@ export default {
           feature: '産地はおおむね Trentino DOC と同じで、畑は標高 800 m までの斜面。rosato と rosato riserva もある',
           desc: '1902 年、サン・ミケーレ・アッラーディジェ農業研究所の醸造家ジュリオ・フェッラーリは、瓶内二次発酵のスパークリング用 Chardonnay の栽培にトレンティーノが適していると見抜き、フェッラーリ社を創業した。ほかの生産者も続き、トレンティーノの「山の泡」はイタリア最高の伝統方式スパークリングの一つとされる。',
           pairing: '生ガキ、シーフードの盛り合わせ、Parmigiano-Reggiano、お祝いの食前酒',
-          price: '€15-30 / Riserva €30-60',
         },
         teroldego: {
           name: 'Teroldego Rotaliano DOC',
@@ -1606,7 +1513,6 @@ export default {
           ageing: 'Riserva は最低 2 年熟成。ロゼ（rosato または Kretzer）もある',
           desc: 'かつての Teroldego は収量の多いシンプルなテーブルワインだった。1980 年代に先駆者エリザベッタ・フォラドーリがマサル・セレクション、収量の削減、ギュイヨ仕立てでその可能性を示し、ほかの生産者も続いた。今や Teroldego はトレンティーノ最高の赤で、北イタリアで最も個性的な赤の一つ。',
           pairing: 'チロル風ソーセージ、ステーキ、ミートソースのパスタ、熟成チーズ',
-          price: '€12-25 / トップキュヴェ €30-60',
         },
         trentino: {
           name: 'Trentino DOC',
@@ -1619,7 +1525,6 @@ export default {
           feature: '希少で濃厚な甘口ワイン Moscato Rosa も含む',
           desc: 'Trentino DOC は生産量が最も多く、スタイルも最も幅広い原産地呼称で、大半が単一品種ワイン。Chardonnay はフレッシュでフルーティなタイプと、より複雑な樽熟成タイプがあり、Pinot Grigio は主に爽やかでほのかに香るスタイル。',
           pairing: '白はトレンティーノのチーズ盛り合わせやマスのグリルに、Marzemino は煮込みや熟成チーズに',
-          price: '€8-20',
         },
         valdadige: {
           name: 'Valdadige / Etschtaler DOC',
@@ -1630,7 +1535,6 @@ export default {
           feature: 'この地域の基本的な原産地呼称とされ、生産量の大半はトレンティーノ産',
           desc: 'アディジェ渓谷に沿って広がり、シンプルで爽やか、フルーティなワインを生む。アルプスのふもとのデイリーワイン。',
           pairing: 'Schiava にはスペックやカネデルリ、Pinot Grigio には淡水魚のグリル',
-          price: '€7-13',
         },
         casteller: {
           name: 'Casteller DOC',
@@ -1641,7 +1545,6 @@ export default {
           feature: '通常は Schiava が主なブレンド品種',
           desc: 'トレンティーノの小さな DOC の一つで、Merlot を土台に土着の黒ブドウを合わせた気軽な赤。',
           pairing: 'カネデルリ（パン団子）、ルガネガ・ソーセージ、ローストチキン',
-          price: '€6-12',
         },
         terradeiforti: {
           name: 'Terradeiforti / Valdadige Terradeiforti DOC',
@@ -1652,7 +1555,6 @@ export default {
           feature: 'Enantio はヴァッラガリーナ原産で、旧称 Lambrusco a Foglia Frastagliata（Lambrusco 一族とは遺伝的に無関係）。近年復活した',
           desc: 'ヴェネトと共有する州際 DOC で、2 つの土着の黒ブドウ Enantio と Casetta に力を入れる。Enantio はジューシーで明るい酸、赤いベリーとハーブの香り。',
           pairing: 'ジビエの煮込み、熟成チーズ',
-          price: '€10-18',
         },
       },
     },
@@ -1677,7 +1579,6 @@ export default {
           history: 'ローマ時代から栽培。20 世紀初めに衰退し、ペルジーニ家が救い、1960 年代末に名声を取り戻した',
           desc: 'Picolit は結実不良が非常に起きやすく、房がまばらで粒は小さく甘く、収量はごくわずか。甘口はエレガントで複雑で、今は希少で高価、大変な人気がある。',
           pairing: 'アプリコットのタルト、ブルーチーズ、ナッツのデザート',
-          price: '€40-100 / 375-500ml',
         },
         ramandolo: {
           name: 'Ramandolo DOCG',
@@ -1690,7 +1591,6 @@ export default {
           method: '手作業で遅摘み（時に 11 月まで）。多くの生産者はさらに陰干しする',
           desc: 'フリウリ北東端の小さな甘口ワインの産地で、Friuli Colli Orientali DOC の最北部を含む。畑の周りは森に囲まれている。',
           pairing: 'ドライフルーツのデザート、熟成チーズ',
-          price: '€25-50 / 500ml',
         },
         rosazzo: {
           name: 'Rosazzo DOCG',
@@ -1702,7 +1602,6 @@ export default {
           history: '修道院は 10 世紀末の創建で、修道士が地元のブドウ栽培に大きく貢献した。ロザッツォは何世紀も Pignolo と Ribolla Gialla でも知られる',
           desc: 'Friulano 主体の白のブレンドの DOCG。かつてはコッリ・オリエンターリの特別表記で、のちに独立した DOCG に昇格した。',
           pairing: '白い肉、クリームソースのパスタ、サン・ダニエーレの生ハム',
-          price: '€25-50',
         },
         lison: {
           name: 'Lison DOCG',
@@ -1713,7 +1612,6 @@ export default {
           feature: '2007 年以降、ヴェネトではこの品種を Tai と呼ぶ。フリウリの 4 つの DOCG で唯一コッリ・オリエンターリの外にある',
           desc: 'フリウリ南西部、ヴェネトとの境の平野にある、Friulano の白の DOCG。',
           pairing: 'シーフードのパスタ、焼き魚',
-          price: '€12-25',
         },
         collio: {
           name: 'Collio Goriziano / Collio DOC',
@@ -1726,7 +1624,6 @@ export default {
           feature: 'オスラーヴィア、カプリーヴァ、サン・フロリアーノなどの地区は法的に認められず表記できない。畑の一部はスロヴェニア領',
           desc: 'コッリオの白はフリウリ最高、イタリアでも屈指とされる。なだらかな南向きの丘からなり、急斜面のため手摘みが必要。80% 以上が白で、フリウリで 3 番目に大きい DOC。',
           pairing: 'サン・ダニエーレの生ハム、魚介、白い肉',
-          price: '€18-40 / トップキュヴェ €40-100',
         },
         'colli-orientali': {
           name: 'Friuli Colli Orientali DOC',
@@ -1739,7 +1636,6 @@ export default {
           feature: 'ブットリオ、チヴィダーレ、マンツァーノの間の温暖な南部が赤の典型的な中心地。Picolit、Ramandolo、Rosazzo の 3 つの DOCG はすべてこの範囲内',
           desc: 'フリウリで 2 番目に大きい DOC で、地理的にはコッリオの丘陵の延長。境界は主に歴史的なもので、コッリ・オリエンターリは 19 世紀後半に、コッリオは第一次世界大戦後にイタリアに編入された。',
           pairing: 'Refosco には煮込みやジビエ、Friulano には生ハム',
-          price: '€15-35 / トップキュヴェ €40-80',
         },
         carso: {
           name: 'Carso / Carso - Kras DOC',
@@ -1751,7 +1647,6 @@ export default {
           grape: '白の Vitovska と赤の Terrano。「Carso」または「Carso Rosso」は Terrano 最低 70%',
           desc: '生産量は少ないが評価は高まっており、独特のミネラル感と旨みがある。イタリアとスロヴェニアの両方の文化の影響を受け、スロヴェニア系の人々がワイン産業で活躍している。',
           pairing: '魚介、トリエステ風の豚肉料理',
-          price: '€20-45',
         },
         grave: {
           name: 'Friuli Grave DOC',
@@ -1763,7 +1658,6 @@ export default {
           feature: '面積と生産量でフリウリ最大の DOC。Merlot は礫質の平野によく適応している',
           desc: '中央平野の大きな DOC で、フレッシュで飲みやすい単一品種ワインが中心。フリウリのデイリーワインの供給源。',
           pairing: '軽い料理、ピッツァ、シンプルな魚料理',
-          price: '€8-15',
         },
         isonzo: {
           name: 'Friuli Isonzo / Isonzo del Friuli DOC',
@@ -1775,7 +1669,6 @@ export default {
           feature: 'イゾンツォ川が産地を斜めに二分し、北側（右岸）は冷涼で白が中心、南側（左岸）は海風の影響が大きい',
           desc: 'コッリオやコッリ・オリエンターリの丘陵のワインに匹敵する可能性を持つ、期待の新興産地。',
           pairing: 'シーフードのリゾット、焼き魚',
-          price: '€12-30',
         },
         aquileia: {
           name: 'Friuli Aquileia DOC',
@@ -1786,7 +1679,6 @@ export default {
           feature: 'Friuli Annia、Friuli Latisana と並ぶ沿岸平野の DOC',
           desc: 'アドリア海沿岸の平野にある DOC で、フレッシュで飲みやすい赤と白を造る。',
           pairing: '潟湖の魚介、焼き魚',
-          price: '€8-15',
         },
       },
     },
@@ -1811,7 +1703,6 @@ export default {
           ageing: 'シャッケトラは最低アルコール 13.5%、翌年 11 月より前は出荷不可。Riserva は 3 年後',
           desc: 'ローマ時代から名高く、リグーリアで最も壮観な段々畑がある。ブドウは波しぶきがかかるほど海に近く、収穫したブドウはモノレールで運ぶ。国立公園でユネスコ世界遺産。',
           pairing: '魚介、カタクチイワシのフライ。シャッケトラにはパンドルチェやブルーチーズ',
-          price: '€20-35 / シャッケトラ €50-100（375-500ml）',
         },
         dolceacqua: {
           name: 'Rossese di Dolceacqua / Dolceacqua DOC',
@@ -1824,7 +1715,6 @@ export default {
           soil: '段々畑になった岩の多い斜面の赤い石灰質の土。保水性がよく、風に吹かれる',
           desc: 'ドルチェアックアのワインは少なくとも 19 世紀から高く評価され、ナポレオンも称賛した。しっかりしたタンニン、ミディアムボディ、赤い果実とスパイスで、中期熟成に向く。Riviera Ligure di Ponente の Rossese より濃く深い。有名な MGA に Arcagna、Luvaira、Pini、Curli、Posaù、Galeae がある。',
           pairing: 'ウサギ、ハーブ風味のロースト、熟成チーズ',
-          price: '€18-35',
         },
         'colli-di-luni': {
           name: 'Colli di Luni DOC',
@@ -1836,7 +1726,6 @@ export default {
           feature: 'ここの Vermentino はトスカーナ北西部のものに近く、リグーリアで最も個性的なワインの一つ',
           desc: '品種やスタイルにトスカーナの影響がはっきり表れる。畑は海岸と内陸の丘にある。ローマ時代のルーニのワインは大プリニウスも言及した。',
           pairing: 'ジェノヴェーゼのパスタ、焼き魚、魚介',
-          price: '€15-30',
         },
         'colline-levanto': {
           name: 'Colline di Levanto DOC',
@@ -1847,7 +1736,6 @@ export default {
           style: '軽くフレッシュでシンプルな白',
           desc: 'リヴィエラ・ディ・レヴァンテの小さな DOC。',
           pairing: '魚介の前菜、魚のフライ',
-          price: '€12-20',
         },
         portofino: {
           name: 'Golfo del Tigullio - Portofino DOC',
@@ -1858,7 +1746,6 @@ export default {
           feature: 'ここでは Albarola を Bianchetta Genovese と呼ぶ。DNA で同一品種と証明されている',
           desc: 'ポルトフィーノ周辺の海岸をカバーする DOC。',
           pairing: 'ジェノヴェーゼ、フォカッチャ、魚介',
-          price: '€12-22',
         },
         ormeasco: {
           name: 'Ormeasco di Pornassio / Pornassio DOC',
@@ -1870,7 +1757,6 @@ export default {
           tiers: 'Superiore：より高い最低アルコールと最低 1 年熟成。ロゼ（Sciac-trà）と甘口の赤パッシートもある',
           desc: '注意：Ormeasco のロゼ Sciac-trà は、チンクエ・テッレの甘口白シャッケトラとはまったく別のワイン。',
           pairing: '山のサラミ、煮込み、キノコ料理',
-          price: '€12-25',
         },
         'val-polcevera': {
           name: 'Val Polcevera DOC',
@@ -1881,7 +1767,6 @@ export default {
           subzones: 'Coronata：ジェノヴァ周辺、白のブレンドのみ',
           desc: 'リグーリア最小の DOC で、爽やかな白が中心。',
           pairing: 'ジェノヴァ料理、ジェノヴェーゼ、魚介',
-          price: '€10-20',
         },
       },
     },
@@ -1907,7 +1792,6 @@ export default {
           feature: '最も優れたのはパッシートで、貴腐を伴うことが多い。最良のものはベルティノーロ産',
           desc: '旧称 Albana di Romagna。しっかりした骨格と軽いタンニンがあり、特徴的な植物とセージの香りに、花、核果、アーモンド。辛口が増えており、単一畑が多く、樽熟成も増えている。',
           pairing: '辛口は白い肉やチーズに、パッシートはデザートやブルーチーズに',
-          price: '€12-25 / Passito €25-50（500ml）',
         },
         pignoletto: {
           name: 'Colli Bolognesi Pignoletto DOCG',
@@ -1920,7 +1804,6 @@ export default {
           history: '2014 年から品種名は Grechetto となり、「Pignoletto」はモンテヴェッリオ周辺の歴史的な産地を指す',
           desc: 'エミリア＝ロマーニャの 2 つの DOCG の一つで、ボローニャの丘の Grechetto（Pignoletto）から造る。',
           pairing: 'モルタデッラ、揚げ物、軽い前菜',
-          price: '€12-25',
         },
         sorbara: {
           name: 'Lambrusco di Sorbara DOC',
@@ -1932,7 +1815,6 @@ export default {
           feature: 'ソルバーラは受粉に別のランブルスコが必要で、通常サラミーノを混植。rosato か rosso、frizzante か spumante',
           desc: '伝統的なランブルスコの典型で、最も有名なランブルスコとされる。丘の多いモデナ南部のものはより骨格がある。',
           pairing: '魚介のフライ、プロシュット・ディ・パルマ、ピアディーナ',
-          price: '€10-25',
         },
         grasparossa: {
           name: 'Lambrusco Grasparossa di Castelvetro DOC',
@@ -1944,7 +1826,6 @@ export default {
           feature: '酸がより高くタンニンがはっきり。残糖があればバランスのため',
           desc: '風味の強さと骨格の密度から「典型的ではない」とされるが、市場で最高のランブルスコの一つと考えられることが多い。',
           pairing: 'ザンポーネ、コテキーノ、赤身肉のグリル、熟成パルミジャーノ・レッジャーノ',
-          price: '€10-25',
         },
         salamino: {
           name: 'Lambrusco Salamino di Santa Croce DOC',
@@ -1956,7 +1837,6 @@ export default {
           feature: '房の形が小さなサラミに似ていることが名前の由来。スタイルはソルバーラとグラスパロッサの中間',
           desc: 'Lambrusco Salamino は最もバランスのよいランブルスコを生むとよく言われる。',
           pairing: 'タリアテッレ・アル・ラグー、モルタデッラ、ピッツァ',
-          price: '€8-20',
         },
         romagna: {
           name: 'Romagna DOC',
@@ -1969,7 +1849,6 @@ export default {
           feature: '最良のサンジョヴェーゼはトスカーナのものより丸く、酸が低く、タンニンが柔らかい',
           desc: 'ロマーニャのワインの大半はこの大きな DOC に属する。Romagna Trebbiano は地元の日常の白、Cagnina は Terrano の甘口の赤、Pagadebit は Bombino Bianco から造る。',
           pairing: 'サンジョヴェーゼはグリルした肉やピアディーナに、トレッビアーノは魚介に',
-          price: '€8-20 / Riserva €20-40',
         },
         reggiano: {
           name: 'Reggiano DOC',
@@ -1981,7 +1860,6 @@ export default {
           feature: '最も多く生産・輸出されるランブルスコの DOC の一つ',
           desc: '南の丘の高い畑では、より丸くフルボディなものも造られる。',
           pairing: 'パルミジャーノ・レッジャーノ、加工肉の盛り合わせ',
-          price: '€6-15',
         },
         'colli-bolognesi': {
           name: 'Colli Bolognesi DOC',
@@ -1993,7 +1871,6 @@ export default {
           feature: 'Colli Bolognesi Pignoletto DOCG とは別の原産地呼称',
           desc: '赤白のブレンドと単一品種ワインが中心で、国際品種がこの地区で最も印象的なワインの一部を生む。',
           pairing: 'トルテッリーニ、モルタデッラ、ローストした肉',
-          price: '€10-25',
         },
         'bosco-eliceo': {
           name: 'Bosco Eliceo DOC',
@@ -2005,7 +1882,6 @@ export default {
           style: 'スティル、ヴィヴァーチェ、微発泡、辛口から甘口まで。海の塩気を感じさせると言われる',
           desc: 'そのワインは vini delle sabbie（砂のワイン）と呼ばれる。Fortana は伝統的に地元のウナギと合わせる。',
           pairing: 'ウナギ、潟湖の魚介',
-          price: '€8-15',
         },
       },
     },
@@ -2030,7 +1906,6 @@ export default {
           feature: '本質的には「辛口のレチョート」。1950 年代にボッラ、ベルターニなどが商品化した',
           desc: 'アマローネの品質と成功が、1990 年代にヴァルポリチェッラ全体を凡庸さから引き上げた。フルボディでエキス分が高くタンニンは丸く、熟したベリー、ドライフルーツ、タバコ、甘草、ダークチョコレート、レザー。アルコールは 15〜16% 以上になることも多い。',
           pairing: '牛肉の煮込み、ジビエ、熟成チーズ、アマローネのリゾット',
-          price: '€35-80 / トップキュヴェ €100-300+',
         },
         'prosecco-docg': {
           name: 'Conegliano Valdobbiadene Prosecco Superiore DOCG',
@@ -2042,7 +1917,6 @@ export default {
           subzones: 'Superiore di Cartizze（最高のサブゾーン）。「Rive」は特定の村や地区の急斜面の畑を示す',
           desc: 'プロセッコの最上位。日当たりのよい斜面で収量を抑えた Glera は深みと個性を見せ、軽く柔らかく爽やかで、白い花、レモン、洋ナシ、リンゴ、桃の香り。',
           pairing: '前菜、サルデ・イン・サオール、魚介',
-          price: '€12-25 / Cartizze €25-40',
         },
         asolo: {
           name: 'Asolo Prosecco DOCG',
@@ -2053,7 +1927,6 @@ export default {
           feature: 'コネリアーノ・ヴァルドッビアデーネよりやや暖かく湿潤で、生産量はずっと少ない',
           desc: 'プロセッコの 2 つ目の丘陵の DOCG で、近くの Montello DOCG とともにトレヴィーゾ西部のプレアルプスにある。',
           pairing: '前菜、揚げ物、軽い魚介',
-          price: '€10-20',
         },
         'soave-sup': {
           name: 'Soave Superiore DOCG',
@@ -2066,7 +1939,6 @@ export default {
           feature: '2001 年に承認。範囲がクラッシコの中心地区に限られなかったため、アンセルミなどの名門は採用していない',
           desc: 'Soave DOC より高い植栽密度、低い収量、高い最低潜在アルコールが求められる。条件を満たしていても Soave Classico DOC と表記し続けるワイナリーが多い。',
           pairing: 'バッカラ・アッラ・ヴィチェンティーナ、魚介、白い肉',
-          price: '€15-35',
         },
         'bardolino-sup': {
           name: 'Bardolino Superiore DOCG',
@@ -2078,7 +1950,6 @@ export default {
           soil: '氷河期の氷堆石のなだらかな丘で、堆積性の礫の多い土壌',
           desc: 'バルドリーノは軽い rosso と rosato だけを造る。スペリオーレはより濃厚で複雑で、オーク樽で熟成させるワイナリーもある。最良のものはクラッシコ地区からで、独特の塩味（salato）がある。',
           pairing: 'ガルダ湖の鮮魚、白い肉',
-          price: '€12-25',
         },
         valpolicella: {
           name: 'Valpolicella DOC',
@@ -2090,7 +1961,6 @@ export default {
           tiers: 'Superiore は出荷前に最低 1 年熟成',
           desc: '1970 年代にはイタリアで最も輸出されたワインの一つだった。サワーチェリーと花、ビターアーモンドの余韻、ライトボディでタンニンは低く、酸は明るい。',
           pairing: 'パスタ・エ・ファジョーリ、加工肉、ピッツァ',
-          price: '€8-18',
         },
         ripasso: {
           name: 'Valpolicella Ripasso DOC',
@@ -2101,7 +1971,6 @@ export default {
           history: '古い伝統で、1960 年代にマァジが再び広めた',
           desc: '骨格とボディがより豊かで、アルコールとタンニンも高く、ヴァルポリチェッラとアマローネの中間のスタイル。変数が多いため、品質とスタイルの差が大きいこともある。',
           pairing: '煮込み、パスタ・エ・ファジョーリ、熟成チーズ',
-          price: '€15-30',
         },
         'prosecco-doc': {
           name: 'Prosecco DOC',
@@ -2113,7 +1982,6 @@ export default {
           feature: '大量に生産され、爽やかで飲みやすい。最上位はコネリアーノ・ヴァルドッビアデーネとアーゾロの丘陵の DOCG',
           desc: '平地で収量を制限しない Glera は中立的な味わいになりやすく、Prosecco DOC の主力となっている。',
           pairing: '食前酒、スプリッツ、軽食',
-          price: '€8-15',
         },
       },
     },
@@ -2138,7 +2006,6 @@ export default {
           feature: 'サテンはブリュットのみのブラン・ド・ブランで最高 5 気圧。ラベルには「Franciacorta」とだけ書けばよい',
           desc: '1995 年に伝統方式スパークリングワイン専用のイタリア初の DOCG となった。砂・シルト・礫・石灰岩の土壌、イゼオ湖が和らげる気候、よく熟したブドウにより、低ドザージュのエクストラ・ブリュットやブリュット・ナチュールが特に多い。',
           pairing: 'リゾット・アッラ・ミラネーゼ、生ガキ、ロブスター、食前酒',
-          price: '€20-40 / リゼルヴァ €50-150',
         },
         'valtellina-sup': {
           name: 'Valtellina Superiore DOCG',
@@ -2151,7 +2018,6 @@ export default {
           soil: '花崗岩質の砂、砕けた片岩、沖積物で浅く痩せている。石壁と岩が熱を照り返す',
           desc: 'バローロやバルバレスコより早くから親しみやすく、香り高く細身で、繊細さと優雅さが持ち味。手間のかかる乾式石積みの段々畑から「英雄的」なブドウ栽培と呼ばれる。',
           pairing: 'ピッツォッケリ、ジビエ、ブレザオラ、熟成チーズ',
-          price: '€20-50 / リゼルヴァ €35-80',
         },
         sforzato: {
           name: 'Sforzato（Sfursat）di Valtellina DOCG',
@@ -2163,7 +2029,6 @@ export default {
           style: '辛口。ドライフルーツ、スパイス、タバコ、ビロードのような口当たり',
           desc: '健全で完熟したネッビオーロを陰干ししてから造る。同じく陰干しで造るアマローネと比べ、力強さは控えめだがよりエレガント。',
           pairing: 'ジビエの煮込み、熟成ビット・チーズ',
-          price: '€35-80',
         },
         'oltrepo-mc': {
           name: 'Oltrepò Pavese Metodo Classico DOCG',
@@ -2175,7 +2040,6 @@ export default {
           feature: 'Cruasé：協会がつくった上質なロゼ・スパークリングワインの共同ブランド',
           desc: 'ポー川の南のアペニン山麓にあるオルトレポ・パヴェーゼは、イタリアのピノ・ネーロの拠点。冷涼な石灰岩の丘がこの品種に理想的な環境を与える。',
           pairing: '食前酒、サラミ類、揚げ物',
-          price: '€18-40',
         },
         scanzo: {
           name: 'Moscato di Scanzo DOCG',
@@ -2187,7 +2051,6 @@ export default {
           ageing: '醸造後、出荷まで最低 2 年熟成',
           desc: 'イタリア半島では数少ない甘口の赤のパッシートの一つで、生産量はごくわずか。花、ベリー、スパイスの香りで濃密かつ複雑、アルコールは高く、控えめな甘さ、爽やかな酸、ビロードのようなタンニン。',
           pairing: '熟成チーズ、ダークチョコレートのデザート',
-          price: '€40-80（500 ml）',
         },
         'rosso-valtellina': {
           name: 'Rosso di Valtellina DOC',
@@ -2198,7 +2061,6 @@ export default {
           aromas: 'ドライローズ、赤い果実、レザー、スパイス。瓶熟成で高山の花や乾燥ハーブ',
           desc: 'ヴァルテッリーナ・スペリオーレと同じ谷、同じネッビオーロから造られ、ヴァルテッリーナのテロワールを知る入り口。',
           pairing: 'サラミ類、ピッツォッケリ、日常のパスタ',
-          price: '€12-25',
         },
         lugana: {
           name: 'Lugana DOC',
@@ -2211,7 +2073,6 @@ export default {
           aromas: '白い花、黄リンゴ、核果、火打石、ナッツ、甘いスパイス',
           desc: '酸が高く、ミディアムからフルボディでミネラル感があり、瓶熟成で複雑さを増す。1990 年代に品質と個性が認められた。骨格とエキスがバトナージュ、樽発酵、樽熟成にも耐える。',
           pairing: 'ガルダ湖の魚、魚介、白身の肉',
-          price: '€12-25 / リゼルヴァ €20-40',
         },
         valtenesi: {
           name: 'Riviera del Garda Classico — Valtènesi',
@@ -2223,7 +2084,6 @@ export default {
           history: 'もとは独立した DOC で、2017 年に Riviera del Garda Classico DOC のサブゾーンに統合された',
           desc: 'キアレットはガルダ湖周辺のロゼの伝統的な名前で、Riviera del Garda Classico の看板ワイン。',
           pairing: 'ガルダ湖の魚、夏のサラダ、サラミ類',
-          price: '€10-20',
         },
         buttafuoco: {
           name: 'Buttafuoco dell\'Oltrepò Pavese DOC',
@@ -2235,7 +2095,6 @@ export default {
           style: 'クラシックなタイプは樽熟成の辛口の赤で、フルボディでしっかりした骨格。フリッツァンテもある',
           desc: 'もとはオルトレポ・パヴェーゼのサブゾーンで、その評価により 2010 年に独立した DOC となり、19 世紀の名声を取り戻した。',
           pairing: '肉の煮込みやロースト、熟成チーズ',
-          price: '€15-35',
         },
         'lambrusco-mantovano': {
           name: 'Lambrusco Mantovano DOC',
@@ -2247,7 +2106,6 @@ export default {
           feature: 'エミリア＝ロマーニャ以外でランブルスコを造る唯一の原産地呼称',
           desc: '隣のエミリア＝ロマーニャのランブルスコに近いスタイルの赤のフリッツァンテ。濃いルビー色で、スミレ、チェリー、甘いスパイスの香り、力強くタンニンがしっかり。',
           pairing: 'カボチャのトルテッリ、サラミ類、煮込み',
-          price: '€8-15',
         },
       },
     },
@@ -2262,7 +2120,6 @@ export default {
         blend: '🍇 ブレンド',
         region: '📍 産地',
         style: '🎯 スタイル',
-        price: '💰 価格',
         story: '📖 ストーリー：',
       },
       styleMapTitle: '🗺️ スタイルの位置づけ（Sangiovese 主体 ↔ ボルドー国際派）',
@@ -2281,7 +2138,6 @@ export default {
         ageing: '⏳ 法定熟成',
         style: '🍷 スタイル',
         aromas: '👃 香り',
-        price: '💰 価格帯',
         producers: '🌟 代表的生産者',
       },
     },

@@ -56,12 +56,12 @@
     {
       "type": "docg-pyramid",
       "title": "義大利葡萄酒分級金字塔",
-      "description": "點選各等級查看詳細規範、代表酒款與價格定位"
+      "description": "點選各等級查看詳細規範、代表酒款與市場定位"
     },
     {
       "type": "content",
       "title": "📊 分級制度比較表",
-      "content": "<div class=\"grade-comparison-table\"><table><thead><tr><th>比較項目</th><th class=\"grade-docg\">DOCG</th><th class=\"grade-doc\">DOC</th><th class=\"grade-igt\">IGT</th><th class=\"grade-vdt\">VdT</th></tr></thead><tbody><tr><td class=\"item-label\">🏅 等級定位</td><td>最高等級<br>保證品質</td><td>優質法定產區</td><td>地區餐酒</td><td>日常餐酒</td></tr><tr><td class=\"item-label\">📍 產區數量</td><td><strong>74 個</strong></td><td><strong>334 個</strong></td><td><strong>118 個</strong></td><td>無限制</td></tr><tr><td class=\"item-label\">🔒 產區規範</td><td>極嚴格劃定</td><td>嚴格劃定</td><td>廣泛地區</td><td>無規範</td></tr><tr><td class=\"item-label\">🍇 葡萄品種</td><td>限定本土品種<br>與比例</td><td>限定品種<br>與比例</td><td>彈性大<br>可用國際品種</td><td>無限制</td></tr><tr><td class=\"item-label\">📉 產量限制</td><td>最嚴格<br>(例: 56 hl/ha)</td><td>嚴格控管</td><td>較寬鬆</td><td>無限制</td></tr><tr><td class=\"item-label\">⏱️ 陳年要求</td><td>嚴格規定<br>(通常數年)</td><td>有規定</td><td>無強制要求</td><td>無要求</td></tr><tr><td class=\"item-label\">✅ 品質檢測</td><td>化學分析 +<br>感官評鑑</td><td>需檢測</td><td>基本檢測</td><td>無檢測</td></tr><tr><td class=\"item-label\">🏷️ 特殊標誌</td><td>瓶頸編號封條</td><td>無</td><td>無</td><td>無</td></tr><tr><td class=\"item-label\">⏳ 晉升條件</td><td>須先為 DOC<br>至少 5 年</td><td>須先為 IGT<br>或有傳統</td><td>-</td><td>-</td></tr><tr><td class=\"item-label\">💰 價格定位</td><td>高端精品</td><td>中高端</td><td>中端到高端<br>(超托等)</td><td>入門級</td></tr><tr><td class=\"item-label\">🌟 代表酒款</td><td>Barolo<br>Brunello<br>Amarone</td><td>Chianti<br>Soave<br>Barbera d'Asti</td><td>超級托斯卡納<br>Toscana IGT</td><td>日常餐酒</td></tr></tbody></table></div>"
+      "content": "<div class=\"grade-comparison-table\"><table><thead><tr><th>比較項目</th><th class=\"grade-docg\">DOCG</th><th class=\"grade-doc\">DOC</th><th class=\"grade-igt\">IGT</th><th class=\"grade-vdt\">VdT</th></tr></thead><tbody><tr><td class=\"item-label\">🏅 等級定位</td><td>最高等級<br>保證品質</td><td>優質法定產區</td><td>地區餐酒</td><td>日常餐酒</td></tr><tr><td class=\"item-label\">📍 產區數量</td><td><strong>74 個</strong></td><td><strong>334 個</strong></td><td><strong>118 個</strong></td><td>無限制</td></tr><tr><td class=\"item-label\">🔒 產區規範</td><td>極嚴格劃定</td><td>嚴格劃定</td><td>廣泛地區</td><td>無規範</td></tr><tr><td class=\"item-label\">🍇 葡萄品種</td><td>限定本土品種<br>與比例</td><td>限定品種<br>與比例</td><td>彈性大<br>可用國際品種</td><td>無限制</td></tr><tr><td class=\"item-label\">📉 產量限制</td><td>最嚴格<br>(例: 56 hl/ha)</td><td>嚴格控管</td><td>較寬鬆</td><td>無限制</td></tr><tr><td class=\"item-label\">⏱️ 陳年要求</td><td>嚴格規定<br>(通常數年)</td><td>有規定</td><td>無強制要求</td><td>無要求</td></tr><tr><td class=\"item-label\">✅ 品質檢測</td><td>化學分析 +<br>感官評鑑</td><td>需檢測</td><td>基本檢測</td><td>無檢測</td></tr><tr><td class=\"item-label\">🏷️ 特殊標誌</td><td>瓶頸編號封條</td><td>無</td><td>無</td><td>無</td></tr><tr><td class=\"item-label\">⏳ 晉升條件</td><td>須先為 DOC<br>至少 5 年</td><td>須先為 IGT<br>或有傳統</td><td>-</td><td>-</td></tr><tr><td class=\"item-label\">📈 市場定位</td><td>高端精品</td><td>中高端</td><td>中端到高端<br>(超托等)</td><td>入門級</td></tr><tr><td class=\"item-label\">🌟 代表酒款</td><td>Barolo<br>Brunello<br>Amarone</td><td>Chianti<br>Soave<br>Barbera d'Asti</td><td>超級托斯卡納<br>Toscana IGT</td><td>日常餐酒</td></tr></tbody></table></div>"
     },
     {
       "type": "list",
@@ -164,7 +164,7 @@
     {
       "type": "docg-pyramid",
       "title": "🏛️ 義大利分級金字塔互動詳解",
-      "description": "點選金字塔任一階（DOCG / DOC / IGT / VdT）查看詳細規範：認證條件、代表酒款、產量佔比與價格區間。了解為何 Super Tuscan 選择 IGT 標示、以及 DOCG 頂金色頭帶與國家台號的個别重點。"
+      "description": "點選金字塔任一階（DOCG / DOC / IGT / VdT）查看詳細規範：認證條件、代表酒款、產量佔比與市場定位。了解為何 Super Tuscan 選择 IGT 標示、以及 DOCG 頂金色頭帶與國家台號的個别重點。"
     },
     {
       "type": "content",

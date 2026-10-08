@@ -39,9 +39,6 @@
         <div class="info-pair" v-if="selectedInfo.pairing">
           <span class="pair-label">{{ t('italy.slides.mapCommon.pairing') }}</span>{{ selectedInfo.pairing }}
         </div>
-        <div class="info-price" v-if="selectedInfo.price">
-          <span class="price-label">{{ t('italy.slides.mapCommon.price') }}</span>{{ selectedInfo.price }}
-        </div>
       </div>
       <div class="info-panel info-empty" v-else>
         <div class="empty-icon">🌋</div>
@@ -123,8 +120,7 @@ const allZones = computed(() => ZONES.map(z => {
       value: t(`${base}.${key}`)
     })),
     desc: t(`${base}.desc`),
-    pairing: t(`${base}.pairing`),
-    price: t(`${base}.price`)
+    pairing: t(`${base}.pairing`)
   }
 }))
 
@@ -342,12 +338,11 @@ onBeforeUnmount(() => {
   font-size: 0.77rem; color: #555; line-height: 1.55;
   background: #f0f4f8; border-radius: 7px; padding: 9px 11px;
 }
-.info-pair, .info-price {
+.info-pair {
   font-size: 0.76rem; color: #555; border-radius: 7px; padding: 7px 11px; line-height: 1.45;
 }
 .info-pair { background: #fff8e8; }
-.info-price { background: #e8f5e9; }
-.pair-label, .price-label { font-weight: 700; margin-right: 4px; }
+.pair-label { font-weight: 700; margin-right: 4px; }
 
 @media (max-width: 680px) {
   .docg-map-slide { padding: 12px 12px 8px; }
