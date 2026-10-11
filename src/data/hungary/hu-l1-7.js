@@ -92,7 +92,7 @@ export const lessonContent = [
     title: 'Egri Bikavér：公牛血的三個等級',
     highlights: [
       { id: 1, icon: '🐂', title: '公牛血的定義', content: 'Egri Bikavér 是埃格爾（Eger）產區的官方混釀紅酒，官方核准品種清單共 13 種，以 Kékfrankos 為法定核心品種' },
-      { id: 2, icon: '🥉', title: 'Classicus（入門級）', content: '至少混合 4 種品種，Kékfrankos 佔比須在 30-65% 之間，風格活潑易飲' },
+      { id: 2, icon: '🥉', title: 'Classicus（入門級）', content: '至少混合 3 種品種，Kékfrankos 佔比須在 30-65% 之間，風格活潑易飲' },
       { id: 3, icon: '🥇', title: 'Superior／Grand Superior（高階）', content: '至少混合 5 種品種，Kékfrankos 佔比須在 30-50% 之間，須通過更嚴格的盲品評審與較長陳年' },
       { id: 4, icon: '🍷', title: '塞克薩德公牛血', content: 'Szekszárdi Bikavér 是另一個官方公牛血，來自更南部的塞克薩德，以 Kadarka 比例更高著稱' }
     ],
@@ -102,9 +102,9 @@ export const lessonContent = [
         <h4>📋 Egri Bikavér 法定規格</h4>
         <div class="spec-grid">
           <div class="spec"><strong>核准品種清單</strong><span>共 13 種，含 Kékfrankos、Kadarka、Bíbor Kadarka、Cabernet Franc、Cabernet Sauvignon、Merlot、Zweigelt、Kékoportó、Pinot Noir、Syrah、Turán 等</span></div>
-          <div class="spec"><strong>Classicus 品種數</strong><span>至少 4 種，Kékfrankos 佔 30-65%</span></div>
+          <div class="spec"><strong>Classicus 品種數</strong><span>至少 3 種，Kékfrankos 佔 30-65%</span></div>
           <div class="spec"><strong>Superior／Grand Superior 品種數</strong><span>至少 5 種，Kékfrankos 佔 30-50%</span></div>
-          <div class="spec"><strong>其他品種上限</strong><span>單一品種不得超過 30%（Turán 特別限制在 5% 以下），每個品種至少佔 5%</span></div>
+          <div class="spec"><strong>其他品種上限</strong><span>Turán 特別限制在 5% 以下；各等級的橡木桶陳年與產量上限不同（Superior 級：橡木桶至少 12 個月＋瓶陳至少 6 個月，產量 ≤ 60 hl/ha），細節以最新法規為準</span></div>
           <div class="spec"><strong>認證方式</strong><span>由埃格爾酒莊協會組織盲品評審，通過者才能使用 Superior／Grand Superior 標示</span></div>
         </div>
       </div>
@@ -126,9 +126,9 @@ export const lessonContent = [
     }
   },
   {
-    title: 'Villányi Franc：匈牙利唯一的單一品種認證品牌',
+    title: 'Villányi Franc：匈牙利最具代表性的單一品種認證品牌',
     highlights: [
-      { id: 1, icon: '🏷️', title: '2014 年創立的認證', content: 'Villányi Franc 是匈牙利唯一擁有專屬品牌認證的單一品種紅酒，2014 年由維拉尼酒農協會正式建立規範' },
+      { id: 1, icon: '🏷️', title: '2014 年創立的認證', content: 'Villányi Franc 是匈牙利率先建立專屬品牌認證的單一品種紅酒，2014 年由維拉尼酒農協會正式建立規範' },
       { id: 2, icon: '💯', title: '100% Cabernet Franc', content: '規定必須是 100% Cabernet Franc 單一品種，不得混入其他品種' },
       { id: 3, icon: '📏', title: '嚴格產量限制', content: '最高產量限制在每公頃 35 百公升（35 hl/ha），遠低於一般餐酒等級的產量上限' },
       { id: 4, icon: '🍷', title: '陳年與盲品雙重把關', content: '至少須在橡木桶陳年 1 年、瓶中陳年 1 年，並須通過區域盲品小組（Sensory Panel）評審才能貼上「Villányi Franc」標籤' }
@@ -217,16 +217,16 @@ export const lessonContent = [
           {
             type: 'single',
             question: 'Egri Bikavér 的「Superior」等級與「Classicus」等級相比，最主要的規定差異是什麼？',
-            options: ['A. Superior 只能使用 Kadarka 單一品種', 'B. Superior 需要至少 5 種品種混釀（Classicus 為 4 種），且須通過更嚴格的盲品評審', 'C. Superior 完全禁止使用 Kékfrankos', 'D. Superior 只能在 Szekszárd 產區生產'],
+            options: ['A. Superior 只能使用 Kadarka 單一品種', 'B. Superior 需要至少 5 種品種混釀（Classicus 為 3 種），且須通過更嚴格的盲品評審', 'C. Superior 完全禁止使用 Kékfrankos', 'D. Superior 只能在 Szekszárd 產區生產'],
             correct: 1,
-            explanation: 'Egri Bikavér 的官方核准品種清單共 13 種，Kékfrankos 始終是法定核心品種。Classicus 等級要求至少混合 4 種品種（Kékfrankos 佔 30-65%），而 Superior／Grand Superior 等級要求至少混合 5 種品種（Kékfrankos 佔 30-50%），且必須通過埃格爾酒莊協會組織的盲品評審才能獲得標示資格，品質門檻明顯更高。'
+            explanation: 'Egri Bikavér 的官方核准品種清單共 13 種，Kékfrankos 始終是法定核心品種。Classicus 等級要求至少混合 3 種品種（Kékfrankos 佔 30-65%），而 Superior／Grand Superior 等級要求至少混合 5 種品種（Kékfrankos 佔 30-50%），且必須通過埃格爾酒莊協會組織的盲品評審才能獲得標示資格，品質門檻明顯更高。'
           },
           {
             type: 'single',
-            question: '匈牙利哪種酒款是唯一擁有專屬「單一品種官方認證品牌」的紅酒？',
+            question: '匈牙利哪種酒款是率先建立專屬「單一品種官方認證品牌」的紅酒？',
             options: ['A. Egri Bikavér（埃格爾公牛血）', 'B. Tokaji Furmint（托卡伊弗爾明特）', 'C. Villányi Franc（維拉尼弗朗克）', 'D. Szekszárdi Bikavér（塞克薩德公牛血）'],
             correct: 2,
-            explanation: 'Villányi Franc 是匈牙利唯一擁有專屬品牌認證的單一品種紅酒，2014 年由維拉尼酒農協會正式建立規範：規定必須為 100% Cabernet Franc、最高產量 35 hl/ha、橡木桶與瓶中各陳年至少 1 年，並須通過區域感官盲品小組評審。Egri Bikavér 與 Szekszárdi Bikavér 則都是「多品種混釀」規則，並非單一品種認證。'
+            explanation: 'Villányi Franc 是匈牙利最具代表性的單一品種專屬品牌認證，2014 年由維拉尼酒農協會正式建立規範，分 Classicus／Premium／Super Premium 三級，皆須為 100% Cabernet Franc；最高等級 Super Premium 產量 ≤ 35 hl/ha、橡木桶與瓶中各陳年至少 1 年，並須通過區域感官盲品小組評審。Egri Bikavér 與 Szekszárdi Bikavér 則都是「多品種混釀」規則，並非單一品種認證。'
           },
           {
             type: 'single',

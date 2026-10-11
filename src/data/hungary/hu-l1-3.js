@@ -135,7 +135,7 @@ export const lessonContent = [
     </div>`
   },
   {
-    title: 'Olaszrizling — 匈牙利種植面積最廣的白葡萄',
+    title: 'Olaszrizling — 匈牙利歷史悠久的代表性白葡萄',
     highlights: [
       { id: 1, icon: '📊', title: '種植面積最廣', content: '全匈牙利種植面積最大的白葡萄品種，幾乎遍布所有 22 個產區' },
       { id: 2, icon: '🇦🇹', title: '中歐流行品種', content: '即奧地利的 Welschriesling，在克羅埃西亞、斯洛文尼亞也廣泛種植（非萊茵雷司令 Rhine Riesling）' },

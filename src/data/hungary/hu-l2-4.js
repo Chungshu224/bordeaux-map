@@ -135,7 +135,7 @@ export const lessonContent = [
       <div class="grape-showcase">
         <h4>🍇 Kékfrankos——埃格爾的靈魂品種</h4>
         <div class="grape-profile">
-          <p><strong>別名：</strong>德國稱 Blaufränkisch，奧地利稱 Lemberger</p>
+          <p><strong>別名：</strong>奧地利稱 Blaufränkisch，德國（Württemberg）稱 Lemberger</p>
           <p><strong>風格：</strong>鮮明的黑胡椒＋黑醋栗＋礦石感，酸度高，單寧緊緻，是 Bikavér 混釀的骨架來源</p>
           <p><strong>陳年：</strong>頂級款可陳年 10–15 年，年輕時風味較封閉</p>
           <p><strong>侍酒：</strong>建議 16°C 左右，搭配匈牙利燉牛肉（Gulyás）或煙燻火腿</p>

@@ -62,9 +62,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '托卡伊的單一葡萄園分級傳統最早可追溯至何時，相較波爾多 1855 年分級有何特殊之處？',
-            options: ['A. 1900 年代，比波爾多晚', 'B. 1700 年代已有官方分級記錄，比波爾多早約 150 年', 'C. 二戰後才建立，與波爾多同期', 'D. 從未有正式分級傳統'],
+            options: ['A. 1900 年代，比波爾多晚', 'B. 1700 年代已有官方分級記錄，比波爾多早約 118–155 年', 'C. 二戰後才建立，與波爾多同期', 'D. 從未有正式分級傳統'],
             correct: 1,
-            explanation: '托卡伊早在 1700 年代已有官方葡萄園分級記錄，是世界最早的葡萄園分級系統之一，比波爾多 1855 年分級早了約 150 年。'
+            explanation: '托卡伊早在 1700 年代已有官方葡萄園分級記錄，是世界最早的葡萄園分級系統之一，比波爾多 1855 年分級早了約 118–155 年。'
           },
           {
             type: 'single',
@@ -92,7 +92,7 @@ export const lessonContent = [
             question: 'Villányi Franc 法規對橡木桶陳年時間的最低要求是多久？',
             options: ['A. 6 個月', 'B. 12 個月', 'C. 18 個月', 'D. 24 個月'],
             correct: 1,
-            explanation: 'Villányi Franc 法規要求：100% Cabernet Franc、採收糖度至少 23 KMW、橡木桶陳釀最少 12 個月、裝瓶後再熟成 6 個月，是匈牙利少數擁有專屬品牌認證的紅酒。'
+            explanation: 'Villányi Franc 為 100% Cabernet Franc 的三級品牌：Classicus 橡木桶至少 6 個月，Premium 與 Super Premium 至少 12 個月（Super Premium 另需瓶陳 1 年、產量 ≤ 35 hl/ha），因此橡木桶陳年的最高門檻為 12 個月。'
           },
           {
             type: 'single',
@@ -117,9 +117,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '根據 2008 年 Bikavér Superior 法規，下列敘述何者正確？',
-            options: ['A. 必須 100% 使用 Kékfrankos 釀造', 'B. 最少 3 個品種混釀，Kékfrankos 佔比 30–50%，最低陳年 30 個月（含 18 個月橡木桶）', 'C. 陳年時間只需 12 個月，不限品種數量', 'D. 只能在托卡伊產區生產'],
+            options: ['A. 必須 100% 使用 Kékfrankos 釀造', 'B. 最少 5 個品種混釀，Kékfrankos 佔比 30–50%，橡木桶陳年至少 12 個月、瓶中熟成至少 6 個月', 'C. 陳年時間只需 12 個月，不限品種數量', 'D. 只能在托卡伊產區生產'],
             correct: 1,
-            explanation: 'Bikavér Superior 規定：最少 3 個品種混釀、Kékfrankos 佔比 30–50%、總陳年至少 30 個月（其中 18 個月須在橡木桶中）、最大產量每公頃 7,000 公升，並須通過評審委員會認證。'
+            explanation: 'Bikavér Superior 規定：最少 5 個品種混釀、Kékfrankos 佔比 30–50%、橡木桶陳年至少 12 個月並於裝瓶後再熟成至少 6 個月、最大產量 60 hl/ha，並須通過評審委員會認證（Classicus 則為至少 3 個品種）。'
           },
           {
             type: 'single',

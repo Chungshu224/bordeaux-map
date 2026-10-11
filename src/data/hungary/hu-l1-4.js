@@ -36,7 +36,7 @@ export const lessonContent = [
           </div>
           <div class="profile-item">
             <span class="label">總面積</span>
-            <span class="value">8,000+ 公頃</span>
+            <span class="value">約 7,150 公頃</span>
           </div>
         </div>
         <div class="style-regions">
@@ -125,7 +125,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: '🏡', title: '在維拉尼找到新家', content: '英國酒評家 Michael Broadbent 曾說：「Cabernet Franc 在維拉尼找到了它的天然家園」' },
       { id: 2, icon: '☀️', title: '匈牙利最溫暖的產區', content: '維拉尼的年均氣溫接近南法，Cabernet Franc 能在此充分成熟，不像羅亞爾河那樣帶有青澀感' },
-      { id: 3, icon: '🏆', title: '頂級品質表現', content: 'Villányi Franc 是匈牙利唯一擁有自己專屬 AOC 品牌的葡萄酒，設有嚴格品質控制' },
+      { id: 3, icon: '🏆', title: '頂級品質表現', content: 'Villányi Franc 是匈牙利率先建立自己專屬 AOC 品牌的葡萄酒，設有嚴格品質控制' },
       { id: 4, icon: '🌹', title: '風味特徵', content: '成熟的黑色水果（黑醋栗、黑李）、紫羅蘭、鉛筆芯、雪茄盒，單寧絲滑，陳年複雜度高' }
     ],
     content: `<div class="grape-detail">
@@ -182,7 +182,7 @@ export const lessonContent = [
   {
     title: '其他重要紅葡萄品種',
     highlights: [
-      { id: 1, icon: '🇦🇹', title: 'Zweigelt', content: '奧地利最廣泛種植的紅葡萄，在匈牙利有 2,400+ 公頃，主要在 Sopron，以易飲紅果風格著稱' },
+      { id: 1, icon: '🇦🇹', title: 'Zweigelt', content: '奧地利最廣泛種植的紅葡萄，在匈牙利有約 1,500 公頃，主要在 Sopron，以易飲紅果風格著稱' },
       { id: 2, icon: '🇵🇹', title: 'Portugieser（葡萄牙人）', content: '名字雖帶「葡萄牙」但其實是中歐品種，在維拉尼以輕盈新鮮風格出產，是易飲紅酒代表' },
       { id: 3, icon: '🌹', title: 'Pinot Noir', content: '匈牙利較涼爽的產區（Eger、Sopron）嘗試種植，但品質不及波爾多品種' },
       { id: 4, icon: '🍇', title: 'Merlot / Cabernet Sauvignon', content: '波爾多品種在維拉尼和塞克薩德也有種植，通常用於頂級混釀' }
@@ -192,7 +192,7 @@ export const lessonContent = [
       <div class="special-grapes">
         <div class="grape-card">
           <h5>🇦🇹 Zweigelt — 奧地利血統的清新選擇</h5>
-          <p>由奧地利育種家 Fritz Zweigelt 於 1922 年以 St. Laurent 與 Blaufränkisch（Kékfrankos）雜交育成，是奧地利種植最廣的紅葡萄。在匈牙利以 Sopron 產區表現最佳，與 Kékfrankos 共享一個親本，風格上帶有相似的紅色漿果調性，但單寧更柔和、更早熟易飲。</p>
+          <p>由奧地利育種家 Fritz Zweigelt 於 1922 年以 St. Laurent 與 Blaufränkisch（Kékfrankos）雜交育成，是奧地利種植最廣的紅葡萄。在匈牙利以 Sopron 產區表現最佳，Blaufränkisch（Kékfrankos）正是其親本之一，風格上帶有相似的紅色漿果調性，但單寧更柔和、更早熟易飲。</p>
         </div>
         <div class="grape-card">
           <h5>🇵🇹 Portugieser — 名不副實的中歐品種</h5>
@@ -203,10 +203,10 @@ export const lessonContent = [
         <h4>📋 紅葡萄品種速查表</h4>
         <table class="grape-table">
           <tr><th>品種</th><th>主要產區</th><th>風格特徵</th><th>全國面積</th></tr>
-          <tr><td>Kékfrankos</td><td>Sopron, Eger, Villány</td><td>黑色水果、辛香、高酸</td><td>8,000+ ha</td></tr>
+          <tr><td>Kékfrankos</td><td>Sopron, Eger, Villány</td><td>黑色水果、辛香、高酸</td><td>約 7,150 ha</td></tr>
           <tr><td>Kadarka</td><td>Szekszárd, Eger</td><td>玫瑰香、辛料、低單寧</td><td>&lt;700 ha</td></tr>
           <tr><td>Cabernet Franc</td><td>Villány</td><td>黑醋栗、紫羅蘭、絲滑</td><td>1,200+ ha</td></tr>
-          <tr><td>Zweigelt</td><td>Sopron</td><td>紅果、易飲、圓潤</td><td>2,400+ ha</td></tr>
+          <tr><td>Zweigelt</td><td>Sopron</td><td>紅果、易飲、圓潤</td><td>約 1,500 ha</td></tr>
           <tr><td>Portugieser</td><td>Villány</td><td>輕盈、新鮮、早飲</td><td>1,000+ ha</td></tr>
         </table>
       </div>
@@ -214,7 +214,7 @@ export const lessonContent = [
         <h4>🎯 學習要點</h4>
         <p>記憶匈牙利紅葡萄品種時，可以這樣思考：</p>
         <ul>
-          <li><strong>最廣泛</strong>：Kékfrankos（8,000+ ha，幾乎每個產區都有；與 Zweigelt 共享 St. Laurent／Blaufränkisch 系親緣）</li>
+          <li><strong>最廣泛</strong>：Kékfrankos（約 7,150 ha，幾乎每個產區都有；Zweigelt 的親本之一即為 Blaufränkisch）</li>
           <li><strong>最傳統、最戲劇性</strong>：Kadarka（巴爾幹起源，從六萬公頃劇減至不足 700 公頃，如今由 Heimann、Eszterbauer 等酒莊帶頭復興）</li>
           <li><strong>最國際化</strong>：Cabernet Franc（在維拉尼找到天然家園，Gere、Bock、Malatinszky、Vylyan 皆為代表酒莊）</li>
         </ul>
@@ -249,7 +249,7 @@ export const lessonContent = [
           question: '匈牙利的哪個產區以 Cabernet Franc 最為著名，甚至建立了以此品種命名的官方品牌「Villányi Franc」？',
           options: ['A. 托卡伊（Tokaj）', 'B. 埃格爾（Eger）', 'C. 維拉尼（Villány）', 'D. 索普倫（Sopron）'],
           correct: 2,
-          explanation: '維拉尼（Villány）是匈牙利最溫暖的產區，位於最南端，氣候接近南法。「Villányi Franc」是匈牙利唯一擁有自己專屬品牌認證的葡萄酒，設有嚴格的品質控制標準，是國際上最受認可的匈牙利紅酒品牌。英國酒評家 Michael Broadbent 曾說：「Cabernet Franc 在維拉尼找到了它的天然家園。」'
+          explanation: '維拉尼（Villány）是匈牙利最溫暖的產區，位於最南端，氣候接近南法。「Villányi Franc」是匈牙利率先建立自己專屬品牌認證的葡萄酒，設有嚴格的品質控制標準，是國際上最受認可的匈牙利紅酒品牌。英國酒評家 Michael Broadbent 曾說：「Cabernet Franc 在維拉尼找到了它的天然家園。」'
         },
         {
           type: 'single',
@@ -268,7 +268,7 @@ export const lessonContent = [
         {
           type: 'single',
           question: 'Zweigelt 這個品種是如何培育出來的，它與 Kékfrankos 有何關係？',
-          options: ['A. Zweigelt 是野生原生品種，與 Kékfrankos 沒有任何關係', 'B. 1922 年由奧地利育種家 Fritz Zweigelt 以 St. Laurent 與 Blaufränkisch（Kékfrankos）雜交育成，兩者共享一個親本', 'C. Zweigelt 是 Kékfrankos 在匈牙利的另一個名稱，其實是同一品種', 'D. Zweigelt 是近十年才培育出的新品種'],
+          options: ['A. Zweigelt 是野生原生品種，與 Kékfrankos 沒有任何關係', 'B. 1922 年由奧地利育種家 Fritz Zweigelt 以 St. Laurent 與 Blaufränkisch（Kékfrankos）雜交育成，Kékfrankos 是 Zweigelt 的親本之一', 'C. Zweigelt 是 Kékfrankos 在匈牙利的另一個名稱，其實是同一品種', 'D. Zweigelt 是近十年才培育出的新品種'],
           correct: 1,
           explanation: 'Zweigelt 由奧地利育種家 Fritz Zweigelt 於 1922 年以 St. Laurent 與 Blaufränkisch（即 Kékfrankos）雜交育成，是奧地利種植最廣的紅葡萄品種。因為共享 Blaufränkisch 這個親本，Zweigelt 與 Kékfrankos 在風味上常帶有相似的紅色漿果調性，但 Zweigelt 通常單寧更柔和、更早熟易飲。'
         }

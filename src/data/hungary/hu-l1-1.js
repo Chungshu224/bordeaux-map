@@ -14,7 +14,7 @@ export const lessonContent = [
     title: '為什麼要學匈牙利葡萄酒？',
     highlights: [
       { id: 1, icon: '🏆', title: '世界遺產產區', content: '托卡伊（Tokaj）是全球最古老的法定葡萄酒產區之一，2002 年列入 UNESCO 世界文化遺產' },
-      { id: 2, icon: '🗺️', title: '22 個法定產區', content: '匈牙利以其 9.3 萬公頃的葡萄園劃分 22 個法定產區，密度為歐洲最高之一' },
+      { id: 2, icon: '🗺️', title: '22 個法定產區', content: '匈牙利以約 6.5 萬公頃的葡萄園（2020 年 OIV／HNT 統計）劃分 22 個法定產區，密度為歐洲最高之一' },
       { id: 3, icon: '🍾', title: '復興中的葡萄酒王國', content: '1990 年代以後私有化改革，匈牙利葡萄酒重回世界舞台，品質突飛猛進' },
       { id: 4, icon: '🌏', title: '獨特原生品種', content: 'Furmint、Kékfrankos、Kadarka 等原生品種，提供全球獨一無二的風味體驗' }
     ],
@@ -61,7 +61,7 @@ export const lessonContent = [
       </div>
       <div class="timeline-item">
         <div class="timeline-badge modern">1737</div>
-        <div class="timeline-content"><strong>📜 全球最早葡萄園分級制度</strong><p>哈布斯堡皇帝查理六世頒布法令，將托卡伊葡萄園依品質正式分級，比波爾多 1855 年分級早了 118 年</p></div>
+        <div class="timeline-content"><strong>📜 最早的葡萄園分級與產區保護法令之一</strong><p>哈布斯堡皇帝查理六世頒布法令，將托卡伊葡萄園依品質正式分級，比波爾多 1855 年分級早了 118 年</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-badge austria">1870s</div>
@@ -71,7 +71,7 @@ export const lessonContent = [
     <div class="stat-grid">
       <div class="stat-box"><div class="stat-number">2000 年+</div><div class="stat-label">釀酒歷史</div></div>
       <div class="stat-box"><div class="stat-number">1631 年</div><div class="stat-label">最早文獻記載的 Aszú</div></div>
-      <div class="stat-box"><div class="stat-number">1737 年</div><div class="stat-label">全球最早葡萄園分級</div></div>
+      <div class="stat-box"><div class="stat-number">1737 年</div><div class="stat-label">最早的葡萄園分級之一</div></div>
       <div class="stat-box"><div class="stat-number">1870s</div><div class="stat-label">根瘤蚜蟲危機爆發</div></div>
     </div>`
   },
@@ -147,7 +147,7 @@ export const lessonContent = [
   {
     title: '匈牙利葡萄酒的全球地位',
     highlights: [
-      { id: 1, icon: '📜', title: '最早的葡萄園分級制度', content: '1737 年，匈牙利首創葡萄園官方分級，比波爾多 1855 年早了 118 年' },
+      { id: 1, icon: '📜', title: '最早的葡萄園分級制度之一', content: '1737 年皇家法令確立托卡伊葡萄園分級與產區邊界（分級實務可追溯至 1700–1730 年代），比波爾多 1855 年分級早約 118 年以上' },
       { id: 2, icon: '🌿', title: '獨特的原生品種', content: 'Furmint、Kékfrankos 等在世界其他地方幾乎無法找到，提供獨一無二的風味體驗' },
       { id: 3, icon: '🏆', title: '國際競賽表現亮眼', content: '匈牙利葡萄酒近年在 Decanter World Wine Awards 等國際賽事屢創佳績，2023 年更創下該賽事匈牙利獲獎數的歷史新高' },
       { id: 4, icon: '💰', title: '性價比極高', content: '相比法國、義大利，匈牙利頂級葡萄酒往往以一半不到的價格提供同等甚至更高的享受' }
@@ -204,14 +204,14 @@ export const lessonContent = [
           question: '下列哪個外國公司投資了匈牙利 Disznókő 酒莊，將現代精品釀酒理念引入托卡伊？',
           options: ['A. 法國 LVMH', 'B. 西班牙 Torres', 'C. 法國 AXA Millésimes', 'D. 義大利 Antinori'],
           correct: 2,
-          explanation: 'AXA Millésimes 是法國 AXA 保險集團的葡萄酒投資部門，同時擁有波爾多的碧尚女爵（Pichon Baron）等名莊。1992 年他們收購了托卡伊的 Disznókő，帶入現代精品釀酒技術和管理理念，是匈牙利現代葡萄酒復興的重要推手。'
+          explanation: 'AXA Millésimes 是法國 AXA 保險集團的葡萄酒投資部門，同時擁有波爾多的碧尚男爵（Pichon Baron）等名莊。1992 年他們收購了托卡伊的 Disznókő，帶入現代精品釀酒技術和管理理念，是匈牙利現代葡萄酒復興的重要推手。'
         },
         {
           type: 'single',
           question: '匈牙利首次建立官方葡萄園分級制度是在哪一年，比波爾多 1855 年分級早多少年？',
           options: ['A. 1700 年，早 155 年', 'B. 1737 年，早 118 年', 'C. 1800 年，早 55 年', 'D. 1920 年，晚 65 年'],
           correct: 1,
-          explanation: '1737 年，哈布斯堡王朝皇帝查理六世（Charles VI）頒布法令，將托卡伊的葡萄園正式分為三個等級，這是世界上最早的官方葡萄園分級制度之一，比波爾多著名的 1855 年梅多克分級早了整整 118 年。'
+          explanation: '1737 年，哈布斯堡王朝皇帝查理六世（Charles VI）頒布法令，將托卡伊的葡萄園正式分為三個等級，這是世界上最早的官方葡萄園分級制度之一，比波爾多著名的 1855 年梅多克分級早了 118 年（部分史料指出系統性分級可追溯到 1700–1730 年代，1737 年是法令確立的時間點）。'
         },
         {
           type: 'single',

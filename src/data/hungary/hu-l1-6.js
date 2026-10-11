@@ -172,9 +172,9 @@ export const lessonContent = [
   {
     title: '1737 年：比波爾多早了 118 年的分級制度',
     highlights: [
-      { id: 1, icon: '📜', title: '世界第一個官方分級', content: '1737 年，哈布斯堡皇帝查理六世頒令將托卡伊葡萄園正式分為三個等級（First Class、Second Class、Third Class）' },
+      { id: 1, icon: '📜', title: '最早的官方分級之一', content: '1737 年，哈布斯堡皇帝查理六世頒令將托卡伊葡萄園正式分為三個等級（First Class、Second Class、Third Class）' },
       { id: 2, icon: '⏳', title: '早於波爾多 118 年', content: '波爾多的官方 1855 年分級（Médoc Classification）在 1855 年建立，比托卡伊晚了 118 年' },
-      { id: 3, icon: '🔒', title: '1737 年同時限制進入', content: '同年法令禁止外地葡萄酒進入托卡伊產區銷售，形同創立了世界最早的 AOC 制度' },
+      { id: 3, icon: '🔒', title: '1737 年同時限制進入', content: '同年法令禁止外地葡萄酒進入托卡伊產區銷售，被視為現代 AOC／PDO 產區保護精神的雛形' },
       { id: 4, icon: '👑', title: '皇室御用', content: '哈布斯堡、沙皇俄國、法國宮廷都是托卡伊的忠實粉絲，路易十四稱之為「酒中之王」' }
     ],
     content: `<div class="history-detail">
@@ -184,7 +184,7 @@ export const lessonContent = [
         <div class="timeline">
           <div class="event"><span class="year">1630s</span><span class="desc">Máté Szepsy Laczkó 首次有記載地釀造貴腐 Aszú 甜酒</span></div>
           <div class="event"><span class="year">1703</span><span class="desc">Rákóczi 家族送 Tokaji Aszú 給法國宮廷，路易十四稱之為「酒中之王，王者之酒」</span></div>
-          <div class="event"><span class="year">1737</span><span class="desc">查理六世頒布法令：世界第一個官方葡萄園分級制度</span></div>
+          <div class="event"><span class="year">1737</span><span class="desc">查理六世頒布法令：最早的官方葡萄園分級制度之一</span></div>
           <div class="event"><span class="year">1855</span><span class="desc">波爾多 Médoc 分級制度建立（比托卡伊晚 118 年）</span></div>
           <div class="event"><span class="year">1989</span><span class="desc">匈牙利開放市場，外國資本進入（AXA、Vega Sicilia 等）</span></div>
           <div class="event"><span class="year">2002</span><span class="desc">托卡伊葡萄酒文化景觀列入 UNESCO 世界文化遺產</span></div>
@@ -235,7 +235,7 @@ export const lessonContent = [
             question: '1737 年托卡伊的官方葡萄園分級制度比波爾多 1855 年分級早了多少年？',
             options: ['A. 58 年', 'B. 118 年', 'C. 178 年', 'D. 218 年'],
             correct: 1,
-            explanation: '1855 - 1737 = 118 年。托卡伊在 1737 年由神聖羅馬帝國皇帝查理六世（Karl VI）頒布法令，建立了世界上最早的官方葡萄園品質分級制度（三個等級）並同時限制外地葡萄酒進入，形同現代 AOC 制度的雛形。波爾多著名的 1855 年梅多克分級（Grand Cru Classé）比托卡伊晚了整整 118 年，因此匈牙利人對此非常自豪。'
+            explanation: '1855 - 1737 = 118 年。托卡伊在 1737 年由神聖羅馬帝國皇帝查理六世（Karl VI）頒布法令，建立了世界上最早的官方葡萄園品質分級制度之一（三個等級）並同時限制外地葡萄酒進入，形同現代 AOC 制度的雛形。波爾多著名的 1855 年梅多克分級（Grand Cru Classé）比托卡伊晚了整整 118 年，因此匈牙利人對此非常自豪。'
           }
         ]
       }

@@ -131,12 +131,12 @@ export const lessonContent = [
   },
 
   {
-    title: 'Villányi Franc——匈牙利唯一的品種專屬品牌',
+    title: 'Villányi Franc——匈牙利代表性的品種專屬品牌',
     highlights: [
-      { id: 1, icon: '🏷️', title: '2013–2014 年立法確立', content: '「Villányi Franc」是維拉尼獨創、2014 年 8 月 1 日正式生效的品種專屬品牌，需經釀酒師評審小組的感官品評認證才能掛牌，是匈牙利唯一擁有此類制度的品種品牌' },
+      { id: 1, icon: '🏷️', title: '2013–2014 年立法確立', content: '「Villányi Franc」是維拉尼獨創、2014 年 8 月 1 日正式生效的品種專屬品牌，需經釀酒師評審小組的感官品評認證才能掛牌，是匈牙利最具代表性的品種專屬分級品牌' },
       { id: 2, icon: '🥉', title: 'Classicus（入門級）', content: '果實需採自維拉尼法定產區，橡木桶陳釀至少 6 個月，風格清新易飲，是認識產區風格的入門款' },
-      { id: 3, icon: '🥈', title: 'Premium Villányi Franc', content: '最大產量限制為每公頃 60 百公升（60 hl/ha），橡木桶陳釀至少 1 年並輔以瓶陳；允許混入最多 15% 其他品種以增添複雜度' },
-      { id: 4, icon: '🥇', title: 'Super Premium Villányi Franc', content: '必須 100% Cabernet Franc；最大產量限制在每公頃 50 公擔（約更嚴格的低產）；最低酒精濃度 12.83%；總陳年至少 2 年，其中至少 1 年須於橡木桶中進行' }
+      { id: 3, icon: '🥈', title: 'Premium Villányi Franc', content: '最大產量限制為每公頃 60 百公升（60 hl/ha），橡木桶陳釀至少 1 年並輔以瓶陳；須 100% Cabernet Franc' },
+      { id: 4, icon: '🥇', title: 'Super Premium Villányi Franc', content: '必須 100% Cabernet Franc；最大產量 35 hl/ha（三級中最嚴格）；橡木桶陳年 1 年＋瓶中熟成 1 年（總陳年至少 2 年）' }
     ],
     content: `<div class="franc-system">
       <p class="lead-text">Villányi Franc 不只是一個行銷名稱，而是匈牙利葡萄酒法規中少見的「品種專屬分級品牌」——透過三個嚴謹的品質等級，將 Cabernet Franc 從單純的波爾多配角，重新定義為維拉尼的招牌主角。</p>
@@ -145,10 +145,10 @@ export const lessonContent = [
         <table class="compare-table">
           <thead><tr><th>項目</th><th>Classicus</th><th>Premium</th><th>Super Premium</th></tr></thead>
           <tbody>
-            <tr><td>品種純度</td><td>Cabernet Franc 為主</td><td>可混入最多 15% 其他品種</td><td>須 100% Cabernet Franc</td></tr>
+            <tr><td>品種純度</td><td>100% Cabernet Franc</td><td>100% Cabernet Franc</td><td>100% Cabernet Franc</td></tr>
             <tr><td>橡木桶陳釀</td><td>至少 6 個月</td><td>至少 1 年＋瓶陳</td><td>總陳年 2 年，含至少 1 年木桶</td></tr>
-            <tr><td>產量限制</td><td>無特別規定</td><td>≤ 60 hl/ha</td><td>更嚴格的低產標準</td></tr>
-            <tr><td>最低酒精度</td><td>無特別規定</td><td>無特別規定</td><td>12.83%</td></tr>
+            <tr><td>產量限制</td><td>無特別規定</td><td>≤ 60 hl/ha</td><td>≤ 35 hl/ha</td></tr>
+            <tr><td>最低酒精度</td><td>依法定產區規範</td><td>依法定產區規範</td><td>依法定產區規範</td></tr>
             <tr><td>認證方式</td><td>符合法定產區規範</td><td>感官評審小組認證</td><td>感官評審小組認證，標準最嚴</td></tr>
           </tbody>
         </table>
@@ -161,13 +161,13 @@ export const lessonContent = [
     quiz: {
       question: '根據 Villányi Franc 的三級制度，下列關於「Super Premium Villányi Franc」的敘述何者正確？',
       options: [
-        '可混入最多 15% 其他品種以增添複雜度',
+        '三個等級都必須 100% Cabernet Franc，差別只在產量與陳年',
         '橡木桶陳釀至少 6 個月即可',
         '必須 100% 使用 Cabernet Franc，且總陳年至少 2 年（含至少 1 年橡木桶）',
-        '沒有最低酒精濃度的規定'
+        '產量上限為 60 hl/ha'
       ],
       correct: 2,
-      explanation: 'Super Premium Villányi Franc 是三級制度中規格最嚴謹的等級：必須 100% Cabernet Franc（不可混入其他品種）、最低酒精濃度 12.83%、產量限制最為嚴格，且總陳年須達 2 年、其中至少 1 年於橡木桶中進行。允許混入 15% 其他品種的是 Premium 等級，橡木桶最低 6 個月的則是入門的 Classicus 等級。'
+      explanation: 'Super Premium Villányi Franc 是三級制度中規格最嚴謹的等級：產量限制最嚴格（35 hl/ha）、橡木桶陳年 1 年再加瓶中熟成 1 年。三個等級都必須 100% Cabernet Franc（Premium 不能混入其他品種）；橡木桶最低 6 個月的是入門的 Classicus 等級，60 hl/ha 則是 Premium 等級的產量上限。'
     }
   },
 

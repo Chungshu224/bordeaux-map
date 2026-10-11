@@ -30,8 +30,8 @@ export const lessonContent = [
       <p class="lead-text">匈牙利地處歐洲中部的喀爾巴阡盆地（Pannonian Basin / Carpathian Basin），這個古老的內陸盆地由喀爾巴阡山脈、阿爾卑斯山東延和巴爾幹半島北緣圍合而成，形成一個天然的溫暖保護圈。</p>
       <div class="geo-stats">
         <div class="stat-box">
-          <span class="stat-num">93,000</span>
-          <span class="stat-label">公頃葡萄園面積</span>
+          <span class="stat-num">65,000</span>
+          <span class="stat-label">公頃葡萄園面積（約，2020）</span>
         </div>
         <div class="stat-box">
           <span class="stat-num">22</span>
