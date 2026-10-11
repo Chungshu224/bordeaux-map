@@ -185,7 +185,7 @@ const P1M1L2_slides = [
     question: '以下哪個是葡萄牙最大的 DOC（面積最大的法定產區）？',
     options: ['Douro', 'Alentejo', 'Vinho Verde', 'Dão'],
     answer: 2,
-    explanation: 'Vinho Verde 位於葡萄牙西北部的 Minho 大區，是葡萄牙面積最大的 DOC，覆蓋約 34,000 公頃。',
+    explanation: 'Vinho Verde 位於葡萄牙西北部的 Minho 大區，是葡萄牙面積最大的 DOC，覆蓋約 21,000 公頃。',
   },
   {
     type: 'quiz',
@@ -812,7 +812,7 @@ const P1M4L2_slides = [
     title: 'Vinho Verde — 最大 DOC 的清新綠酒',
     subtitle: 'Level 1 · 第十一課',
     points: [
-      { icon: '🌿', label: '最大 DOC', text: '葡萄牙面積最大的 DOC，約 34,000 公頃' },
+      { icon: '🌿', label: '最大 DOC', text: '葡萄牙面積最大的 DOC，約 21,000 公頃' },
       { icon: '💦', label: '「綠酒」的真正含義', text: '指年輕新鮮的酒，不是顏色！可以是白、紅、粉紅' },
       { icon: '⭐', label: '9 個子產區', text: '包含頂級 Alvarinho 的 Monção 和 Melgaço' },
     ],
@@ -868,7 +868,7 @@ const P1M4L2_slides = [
   {
     type: 'vinho-verde-subregions',
     title: '🌿 Vinho Verde 9 大子產區互動深度',
-    description: 'Vinho Verde 是葡萄牙最大的 DOC（34,000 ha），9 個子產區各有主導品種與風土差異——從頂級 Alvarinho 重鎮 Monção/Melgaço 到深色 Vinhão 紅酒重鎮 Sousa/Baião 的完整互動探索',
+    description: 'Vinho Verde 是葡萄牙最大的 DOC（約 21,000 ha），9 個子產區各有主導品種與風土差異——從頂級 Alvarinho 重鎮 Monção/Melgaço 到深色 Vinhão 紅酒重鎮 Sousa/Baião 的完整互動探索',
   },
 ]
 
@@ -1074,7 +1074,7 @@ const P2M1L1_slides = [
       </ul>
       <h4>🍷 代表性酒款</h4>
       <ul>
-        <li><strong>Barca Velha</strong>（Ferreirinha）：被譽為「葡萄牙的 Pétrus」</li>
+        <li><strong>Barca Velha</strong>（Ferreirinha）：葡萄牙最具代表性的頂級紅酒</li>
         <li><strong>Quinta do Crasto Reserva</strong>：國際知名，性價比高</li>
         <li><strong>Niepoort Redoma</strong>：有機自然派代表</li>
       </ul>
@@ -1465,7 +1465,7 @@ const P2M1L3_slides = [
     question: 'Vinho Verde 傳統上保留少量 CO₂ 的原因是什麼？',
     options: ['法規規定必須有氣泡', '增加鮮活感，彌補高酸度帶來的清爽特性', '掩蓋酒的缺陷', '降低酒精度'],
     answer: 1,
-    explanation: 'Vinho Verde 保留少量天然 CO₂（微氣泡），是傳統釀造工藝的結果——在不鏽鋼桶中保留蘋果乳酸發酵產生的少量二氧化碳。這種微氣泡增加了鮮活感和清爽度，成為 Vinho Verde 的標誌性特色，特別適合搭配海鮮。',
+    explanation: 'Vinho Verde 保留少量天然 CO₂（微氣泡），是傳統釀造工藝的結果——傳統上來自蘋果乳酸發酵（MLF）在瓶中產生的少量二氧化碳；今日多數生產者改為直接充入 CO₂（壓力低於 1 bar，法規上不屬氣泡酒）。這種微氣泡增加了鮮活感和清爽度，成為 Vinho Verde 的標誌性特色，特別適合搭配海鮮。',
   },
   {
     type: 'summary',
@@ -1603,7 +1603,7 @@ const P2M2L1_slides = [
       </ul>
       <h4>📊 基本數字</h4>
       <ul>
-        <li>DOC 面積：約 <strong>20,000 公頃</strong>葡萄藤（已種植）</li>
+        <li>DOC 面積：約 <strong>9,800 公頃</strong>葡萄藤（已種植）</li>
         <li>海拔：<strong>400–800m</strong>，部分頂級葡萄園超過 700m</li>
         <li>Dão 歷史上曾受私人酒廠壟斷（1950–90年代），1990 後獨立酒莊崛起</li>
       </ul>
@@ -2187,7 +2187,7 @@ const P2M3L3_slides = [
       <ul>
         <li><strong>河谷地帶（Campo do Tejo）</strong>：沖積平原，土壤肥沃，高產，傳統大量生產區</li>
         <li><strong>丘陵地帶（Charneca）</strong>：砂岩、黏土，較乾旱，品質更高，近代精品酒莊集中此區</li>
-        <li><strong>北部山地</strong>：靠近 Serra de São Mamede，海拔較高，保留酸度</li>
+        <li><strong>北部山地</strong>：地勢較高、較涼爽，保留酸度</li>
       </ul>
       <h4>🌡️ 氣候</h4>
       <ul>
@@ -2197,7 +2197,7 @@ const P2M3L3_slides = [
       </ul>
       <h4>🍇 主要品種</h4>
       <ul>
-        <li>紅：<strong>Castelão（= Fernão Pires 的紅酒版）・Trincadeira・Aragonez・Touriga Nacional</strong></li>
+        <li>紅：<strong>Castelão・Trincadeira・Aragonez・Touriga Nacional</strong></li>
         <li>白：<strong>Fernão Pires（最廣泛）・Arinto・Sauvignon Blanc</strong></li>
         <li>國際品種：Cabernet Sauvignon、Syrah、Merlot（IGP 標示）</li>
       </ul>
@@ -2340,7 +2340,7 @@ const P2M4L1_slides = [
       <ul>
         <li><strong>Esporão</strong>：Reguengos 子區，葡萄牙出口量最大的酒莊，有機農法先鋒</li>
         <li><strong>Herdade do Mouchão</strong>：古典風格，Alicante Bouschet 標竿，需陳年 10+ 年</li>
-        <li><strong>Cartuxa（Fundação Eugénio de Almeida）</strong>：Évora 的歷史品牌，旗艦 Pera Manca 是 Alentejo 的 Pétrus</li>
+        <li><strong>Cartuxa（Fundação Eugénio de Almeida）</strong>：Évora 的歷史品牌，旗艦 Pera Manca 是 Alentejo 最具傳奇性的酒款</li>
         <li><strong>Cortes de Cima</strong>：丹麥移民酒莊，Syrah 先驅，接近 Vidigueira</li>
       </ul>
     `,
@@ -2354,10 +2354,10 @@ const P2M4L1_slides = [
   },
   {
     type: 'quiz',
-    question: 'Alentejo 最知名的旗艦酒款「Pera Manca」由哪個酒莊生產，被稱為 Alentejo 的「Pétrus」？',
+    question: 'Alentejo 最知名的旗艦酒款「Pera Manca」由哪個酒莊生產，被視為 Alentejo 最具傳奇性的旗艦酒款？',
     options: ['Esporão', 'Herdade do Mouchão', 'Cartuxa（Fundação Eugénio de Almeida）', 'Cortes de Cima'],
     answer: 2,
-    explanation: 'Pera Manca 由位於 Évora 的 Cartuxa（Fundação Eugénio de Almeida）生產，是 Alentejo 最具傳奇性的旗艦酒款，被稱為「Alentejo 的 Pétrus」。只在最優秀的年份發布，同時有紅酒和白酒版本。',
+    explanation: 'Pera Manca 由位於 Évora 的 Cartuxa（Fundação Eugénio de Almeida）生產，是 Alentejo 最具傳奇性的旗艦酒款，是 Alentejo 最具傳奇性的酒款之一。只在最優秀的年份發布，同時有紅酒和白酒版本。',
   },
   {
     type: 'summary',
@@ -2676,9 +2676,9 @@ const P4M1L1_slides = [
   {
     type: 'content',
     icon: '🏰',
-    title: 'Barca Velha — 葡萄牙的 Pétrus',
+    title: 'Barca Velha — 葡萄牙最傳奇的紅酒',
     html: `
-      <p><strong>Barca Velha</strong> 是葡萄牙最具代表性的頂級紅酒，由 Ferreira 酒莊於 1952 年由 Fernando Nicolau de Almeida 創制。它常被稱為「葡萄牙的 Pétrus」，每次發布都引發市場轟動。</p>
+      <p><strong>Barca Velha</strong> 是葡萄牙最具代表性的頂級紅酒，由 Ferreira 酒莊於 1952 年由 Fernando Nicolau de Almeida 創制。它只在最優秀的年份才發布，每次發布都引發市場轟動。</p>
       <h4>🍇 品種與產區</h4>
       <ul>
         <li><strong>產區</strong>：Douro Superior（杜羅河上游，靠近西班牙邊界）</li>
@@ -2688,7 +2688,7 @@ const P4M1L1_slides = [
       <h4>📊 極罕見的發布規律</h4>
       <ul>
         <li>並非每年都生產：只在最優年份才發布，部分年份降格為 <em>Reserva Especial</em></li>
-        <li>自 1952 年至今，共發布 26 個年份（截至 2023 年）</li>
+        <li>自 1952 年至今，共宣布約 21 個年份（至 2015 年份，2024 年上市）</li>
         <li>著名年份：1964、1982、1985、1991、2004、2011</li>
         <li>市場價格：頂級年份每瓶可達數百至逾千歐元</li>
       </ul>
@@ -3184,7 +3184,7 @@ const P4M2L3_slides = [
     items: [
       { icon: '🌿', label: 'Niepoort（Douro）', desc: 'Dirk Niepoort：全串發酵、最低 SO₂，Batuta 和 Charme 是自然酒界的標竿作品', color: '#155724' },
       { icon: '🏔️', label: 'Quinta da Pellada（Dão）', desc: '生物動力農法，Álvaro Castro 的老藤 Touriga Nacional，純淨礦物感', color: '#1a3a6e' },
-      { icon: '🌊', label: 'João Pato（Bairrada）', desc: '有機農法，Baga 的現代詮釋，濃郁但精緻，突破 Bairrada 的傳統高澀印象', color: '#8B4513' },
+      { icon: '🌊', label: 'Filipa Pato（Bairrada）', desc: '有機農法，Baga 的現代詮釋，濃郁但精緻，突破 Bairrada 的傳統高澀印象', color: '#8B4513' },
       { icon: '🏝️', label: 'Barbeito（Madeira）', desc: '有機農法，極小批次的單一品種馬德拉，展現風土細節', color: '#8E44AD' },
     ],
   },
@@ -3413,7 +3413,7 @@ const P4M3L3_slides = [
     title: '波特酒與馬德拉：收藏與投資指南',
     subtitle: 'Level 4 · 陳年潛力與市場價值',
     points: [
-      { icon: '📈', label: '資產增值', text: 'Vintage Port 頂級年份年均增值 8–12%，超越多數傳統投資' },
+      { icon: '📈', label: '資產增值', text: 'Vintage Port 頂級年份在拍賣市場具有升值潛力（不保證）' },
       { icon: '🏺', label: '馬德拉的永恆性', text: '19 世紀馬德拉至今仍可飲用，是世界上最長壽的葡萄酒' },
       { icon: '🔍', label: '真偽鑑定', text: '學習如何識別真正的頂級老酒，避免市場上的假酒陷阱' },
     ],
@@ -3470,7 +3470,7 @@ const P4M3L3_slides = [
     type: 'compare',
     title: '波特酒 vs 馬德拉：收藏投資比較',
     items: [
-      { icon: '🥃', label: 'Vintage Port（投資型）', desc: '明確評分體系、全球拍賣市場成熟、頂級年份年均增值 8–12%，但需嚴格儲存條件', color: '#5c2a0a' },
+      { icon: '🥃', label: 'Vintage Port（投資型）', desc: '明確評分體系、全球拍賣市場成熟、頂級年份具升值潛力（不保證），但需嚴格儲存條件', color: '#5c2a0a' },
       { icon: '🏺', label: 'Madeira Frasqueira（收藏型）', desc: '陳年潛力無限（數百年），儲存相對容易（對溫度變化更寬容），但市場流動性較低', color: '#8E44AD' },
     ],
   },
@@ -3514,10 +3514,10 @@ const P4FinalExam_slides = [
   },
   {
     type: 'quiz',
-    question: '「葡萄牙的 Pétrus」指的是哪一支酒？',
+    question: '哪一支酒是 1952 年創立、只在最佳年份宣布的葡萄牙傳奇紅酒？',
     options: ['Quinta do Crasto Reserva', 'Barca Velha', 'Niepoort Batuta', 'Ramos Pinto Duas Quintas'],
     answer: 1,
-    explanation: 'Barca Velha 由 Ferreira 酒莊於 1952 年創制，因其稀罕、頂級品質和高昂價格，常被稱為「葡萄牙的 Pétrus」。它只在最優秀的年份才發布，至今共發布約 26 個年份。',
+    explanation: 'Barca Velha 由 Ferreira 酒莊於 1952 年創制，因其稀罕、頂級品質和高昂價格，是葡萄牙最具傳奇性的紅酒之一。它只在最優秀的年份才宣布，至今約 21 個年份。',
   },
   {
     type: 'quiz',
@@ -4260,7 +4260,7 @@ const P3M2L3_slides = [
     icon: '📊',
     title: 'Madeira 五個官方陳年等級',
     html: `
-      <p>葡萄牙 IVBAM（Madeira、Banyuls 及 Pico 葡萄酒研究院）制定了 Madeira 的官方陳年分級。</p>
+      <p>葡萄牙 IVBAM（馬德拉葡萄酒、刺繡暨手工藝研究院）制定了 Madeira 的官方陳年分級。</p>
       <table style="width:100%;border-collapse:collapse;font-size:0.87em">
         <tr style="background:#4a148c;color:white">
           <th style="padding:7px">等級</th><th style="padding:7px">最低陳年</th><th style="padding:7px">方式</th><th style="padding:7px">特色</th>
@@ -4324,8 +4324,6 @@ const P3M2L3_slides = [
       <h4>🏆 有記錄的百年老 Madeira</h4>
       <ul>
         <li>Blandy's <strong>1900 Vintage Malmsey</strong>：1900 年採收，仍可購買飲用，狀態驚人</li>
-        <li>D'Oliveiras <strong>1850 Verdelho</strong>：最老之一，極少量仍在市場流通</li>
-        <li>拿破崙時代（1815 年前）的 Madeira 被發現於美國白宮地窖，品飲後仍令人驚嘆</li>
       </ul>
     `,
   },
@@ -4391,7 +4389,7 @@ const P3M3L1_slides = [
       <ul>
         <li>Baga 天然高酸正好適合傳統法氣泡酒（高酸是氣泡酒的基礎）</li>
         <li>帶紅漿果、野玫瑰香氣，細緻氣泡，是全世界最特殊的紅色傳統法氣泡酒之一</li>
-        <li>Luís Pato・Filipa Pato・Sidral Mundet 等酒莊的紅色 Espumante 獲國際大獎</li>
+        <li>Luís Pato・Filipa Pato 等酒莊的紅色 Espumante 獲國際大獎</li>
       </ul>
       <h4>🏆 代表酒莊</h4>
       <ul>
@@ -4406,7 +4404,7 @@ const P3M3L1_slides = [
     title: '葡萄牙三大氣泡酒風格對比',
     items: [
       { icon: '🏅', label: 'Bairrada Espumante（傳統法）', desc: '瓶中二次發酵，酒泥陳年 9–36 個月，細緻持久氣泡，礦物感強。有白色（Bical）和獨特紅色（Baga）', color: '#1565c0' },
-      { icon: '🌿', label: 'Vinho Verde 微氣泡（天然殘留）', desc: '在不鏽鋼桶中保留天然 CO₂，輕微氣泡（1–2 bar vs. 傳統法 6 bar），清爽怡人，適合海鮮', color: '#006600' },
+      { icon: '🌿', label: 'Vinho Verde 微氣泡（天然殘留）', desc: '傳統為 MLF 副產 CO₂、今日多為充入 CO₂，輕微氣泡（低於 1 bar vs. 傳統法 約 6 bar），清爽怡人，適合海鮮', color: '#006600' },
       { icon: '🏔️', label: 'Távora-Varosa Espumante（傳統法）', desc: '葡萄牙第一個氣泡酒 DOC（1989），最高海拔（500–900m），酒泥陳年 18+ 個月，以 Malvasia Fina 為主', color: '#37474f' },
     ],
   },
@@ -4422,19 +4420,19 @@ const P3M3L1_slides = [
     question: 'Vinho Verde 的「微氣泡」與 Bairrada Espumante 的氣泡最主要的差異是什麼？',
     options: [
       '兩者完全相同，都是傳統法製造',
-      'Vinho Verde 是在桶中保留天然 CO₂（約 1–2 bar），Bairrada 是瓶中二次發酵（約 6 bar），後者氣泡更持久精緻',
+      'Vinho Verde 是在桶中保留天然 CO₂（壓力低於 1 bar），Bairrada 是瓶中二次發酵（約 6 bar），後者氣泡更持久精緻',
       'Vinho Verde 比 Bairrada 的氣泡更多',
       'Vinho Verde 不含氣泡，只有 Bairrada 有'
     ],
     answer: 1,
-    explanation: 'Vinho Verde 的微氣泡來自在不鏽鋼桶中保留的天然 CO₂（發酵副產物），壓力約 1–2 bar，氣泡細緻短暫。Bairrada Espumante 是瓶中二次發酵（傳統法），壓力約 5–6 bar（與香檳相同），氣泡更持久精緻，兩者是截然不同的工藝。',
+    explanation: 'Vinho Verde 的微氣泡傳統上來自蘋果乳酸發酵的副產物 CO₂（今日多為直接充入），壓力低於 1 bar，氣泡細緻短暫。Bairrada Espumante 是瓶中二次發酵（傳統法），壓力約 5–6 bar（與香檳相同），氣泡更持久精緻，兩者是截然不同的工藝。',
   },
   {
     type: 'summary',
     message: '恭喜完成葡萄牙氣泡酒課程！',
     keyPoints: [
       'Bairrada：最重要的傳統法氣泡酒，酒泥陳年 9–36 個月，有白色（Bical）和獨特紅色（Baga）',
-      'Vinho Verde：在桶中保留天然 CO₂，輕微氣泡（1–2 bar），清爽適合海鮮',
+      'Vinho Verde：在桶中保留天然 CO₂，輕微氣泡（低於 1 bar），清爽適合海鮮',
       'Távora-Varosa：葡萄牙第一個氣泡酒 DOC（1989），最高海拔，酒泥陳年 18+ 個月',
       'Baga 紅色傳統法氣泡酒是世界最獨特的氣泡酒之一',
     ],
@@ -4600,11 +4598,11 @@ const P3M3L3_slides = [
     options: [
       '釀酒師在裝瓶前人工充入 CO₂',
       '傳統法瓶中二次發酵',
-      '不鏽鋼桶中保留天然 CO₂（未進行蘋果乳酸發酵的副產品）',
+      '傳統上來自蘋果乳酸發酵（MLF）的副產品 CO₂（今日多為直接充入）',
       '使用特殊的起泡葡萄品種'
     ],
     answer: 2,
-    explanation: 'Vinho Verde 的微氣泡是傳統釀造的自然結果：酒在不鏽鋼桶中完成發酵，不進行蘋果乳酸發酵（MLF），保留了 CO₂ 在酒液中，壓力約 1–2 bar。這不是刻意製造的氣泡，而是延續數百年的傳統「缺陷」，後來成為 Vinho Verde 的標誌特色。',
+    explanation: 'Vinho Verde 的微氣泡是傳統釀造的自然結果：傳統上酒液的蘋果乳酸發酵（MLF）延遲到裝瓶後，在瓶中產生少量 CO₂；今日多數生產者則直接充入 CO₂，壓力低於 1 bar。這不是刻意製造的氣泡，而是延續數百年的傳統「缺陷」，後來成為 Vinho Verde 的標誌特色。',
   },
   {
     type: 'quiz',
@@ -4622,7 +4620,7 @@ const P3M3L3_slides = [
     type: 'summary',
     message: '恭喜完成 Vinho Verde 微氣泡課程！',
     keyPoints: [
-      'Vinho Verde 微氣泡：不鏽鋼桶保留天然 CO₂，壓力僅 1–2 bar，是傳統結果',
+      'Vinho Verde 微氣泡：不鏽鋼桶保留天然 CO₂，壓力低於 1 bar，傳統上為 MLF 副產物、今日多為充入 CO₂',
       '頂級 Alvarinho 趨向無氣泡，以展現品種純粹特色',
       'Pét-Nat：發酵未完成時裝瓶，只有一次發酵，最古老的氣泡酒方式',
       'Pét-Nat 特色：微濁、活潑、帶酵母感，是自然酒運動的代表款式',
@@ -4950,7 +4948,7 @@ const P3FinalExam_slides = [
       '兩者完全相同'
     ],
     answer: 1,
-    explanation: 'Bairrada Espumante 使用傳統法（Método Clássico），在瓶中進行二次發酵，壓力約 6 bar，酒泥陳年 9–36 個月。Vinho Verde 的微氣泡是在不鏽鋼桶中保留天然 CO₂（蘋果乳酸發酵的副產品），壓力約 1–2 bar，是完全不同的工藝。',
+    explanation: 'Bairrada Espumante 使用傳統法（Método Clássico），在瓶中進行二次發酵，壓力約 6 bar，酒泥陳年 9–36 個月。Vinho Verde 的微氣泡傳統上來自蘋果乳酸發酵的副產品 CO₂，今日多為直接充入 CO₂，壓力低於 1 bar，是完全不同的工藝。',
   },
   {
     type: 'quiz',
