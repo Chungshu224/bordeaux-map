@@ -1,6 +1,6 @@
 /**
  * lessonSlides.js  ─  澳洲葡萄酒課程投影片內容
- * Level 1 完整（18 課 + 期末），Level 2+ 框架預留
+ * Level 1 完整（15 課 + 期末），Level 2+ 框架預留
  */
 
 // ── Slide Map ─────────────────────────────────────────────────────────────
@@ -94,15 +94,15 @@ const SLIDE_MAP = {
     {
       type: 'map',
       title: '澳洲六大產酒州全圖',
-      subtitle: '點擊各州積瀏詳細資訊',
+      subtitle: '點擊各州瀏覽詳細資訊',
       mapRegion: 'all',
-      note: '各州顔色不同：SA 橙、VIC 紫、NSW 藍、WA 金、QLD 紅、TAS 綠，與之後探索地圖的展示一致',
+      note: '各州顏色不同：SA 橙、VIC 紫、NSW 藍、WA 金、QLD 紅、TAS 綠，與之後探索地圖的展示一致',
     },
     {
       type: 'content',
       title: '六大產酒州一覽',
       points: [
-        '🟠 南澳大利亞（SA）：最重要産州，Barossa Valley、McLaren Vale、Coonawarra',
+        '🟠 南澳大利亞（SA）：最重要產州，Barossa Valley、McLaren Vale、Coonawarra',
         '🟣 維多利亞（VIC）：產區最密集，Yarra Valley、Heathcote、Rutherglen',
         '🔵 新南威爾斯（NSW）：最古老，Hunter Valley、Orange、Riverina',
         '🟡 西澳大利亞（WA）：精品主義，Margaret River、Great Southern',
@@ -519,7 +519,7 @@ const SLIDE_MAP = {
       question: '哪個產區以「terra rossa 紅棕壤 + Cabernet Sauvignon」最著名？',
       options: ['Barossa Valley', 'Coonawarra', 'Hunter Valley', 'Margaret River'],
       answer: 1,
-      explanation: 'Coonawarra 以標誌性的 terra rossa 紅棕壤（覆蓋在白色石灰岩上）出產澳洲最著名的 Cabernet Sauvignon，被稱為「澳洲波爾多」。',
+      explanation: 'Coonawarra 以標誌性的 terra rossa 紅棕壤（覆蓋在白色石灰岩上）出產澳洲最著名的 Cabernet Sauvignon，是澳洲 Cabernet 的經典代表。',
     },
     {
       type: 'summary',
@@ -717,7 +717,7 @@ const SLIDE_MAP = {
           '古老片岩與花崗岩',
           '風格：花香、萊姆花、礦石、細膩',
           '酸度：高，但更圓潤',
-          '代表：Henschke Hill of Grace（同區）',
+          '代表：Henschke Julius Riesling（Hill of Grace 為同莊 Shiraz）',
           'Pewsey Vale 是 Eden Valley 著名 Riesling 園',
         ],
       },
@@ -739,7 +739,7 @@ const SLIDE_MAP = {
       question: 'Riesling 陳年 10-20 年後出現的標誌性香氣是？',
       options: ['草莓果醬', '汽油/煤油香（petrol）', '木桶香草', '奶油太妃糖'],
       answer: 1,
-      explanation: 'Riesling 陳年後產生的「汽油香」（petrol / kerosene）是其標誌性特色，由 TDN（三甲基-1,8-萘二醇）化合物在瓶內緩慢形成，是愛好者珍視的複雜度。',
+      explanation: 'Riesling 陳年後產生的「汽油香」（petrol / kerosene）是其標誌性特色，由 TDN（三甲基二氫萘）化合物在瓶內緩慢形成，是愛好者珍視的複雜度。',
     },
     {
       type: 'summary',
@@ -767,7 +767,7 @@ const SLIDE_MAP = {
       title: 'Coonawarra 產區地圖',
       subtitle: 'South Australia 最南端，Limestone Coast Zone',
       mapRegion: 'Coonawarra',
-      note: 'Coonawarra 燕尾形的 terra rossa 紅棕壤傀帶僅 15km 長，是全澳最經典的 Cabernet 小地塊',
+      note: 'Coonawarra 燕尾形的 terra rossa 紅棕壤地帶僅 15km 長，是全澳最經典的 Cabernet 小地塊',
     },
     {
       type: 'content',
@@ -831,7 +831,7 @@ const SLIDE_MAP = {
       title: 'Yarra Valley & Mornington Peninsula 地圖',
       subtitle: '兩個產區均位於 Victoria，Port Phillip Zone',
       mapRegion: 'Yarra Valley|Mornington Peninsula',
-      note: 'Yarra Valley 在墨爾本東北，Mornington Peninsula 在南邊半島，両者包圍 Port Phillip 灣',
+      note: 'Yarra Valley 在墨爾本東北，Mornington Peninsula 在南邊半島，兩者包圍 Port Phillip 灣',
     },
     {
       type: 'compare',
@@ -841,7 +841,7 @@ const SLIDE_MAP = {
         points: [
           '墨爾本東北 50km，Port Phillip Zone',
           '海拔 50–400m，涼爽，河谷地形',
-          '土壤：深紅火山土（下亞拉）+ 淺灰壤土（上亞拉）',
+          '土壤：較重的灰色壤土（下亞拉）+ 淺色壤土（上亞拉）',
           '品種：Pinot Noir、Chardonnay、Shiraz、Pinot Gris',
           '代表酒莊：Coldstream Hills、Yering Station',
           '下亞拉豐腴 / 上亞拉精緻',
@@ -865,7 +865,7 @@ const SLIDE_MAP = {
       points: [
         '1838 年開始種植，是維多利亞最古老產區之一',
         '1970s 復興：James Halliday 在 Coldstream Hills 引領精品酒運動',
-        '下亞拉（Lower Yarra）：紅色火山土，飽滿，更豐腴',
+        '下亞拉（Lower Yarra）：海拔較低、較溫暖，酒體飽滿，更豐腴',
         '上亞拉（Upper Yarra）：海拔更高，涼爽，更精緻細膩',
         '氣泡酒：Yarra Valley 也生產優質的傳統法氣泡酒（如 Domaine Chandon）',
       ],
@@ -914,7 +914,7 @@ const SLIDE_MAP = {
       title: 'Heathcote：5.4 億年的土壤',
       points: [
         '位置：Central Victoria Zone，墨爾本北方 120km',
-        '土壤：5.4 億年寒武紀紫色礫岩（Cambrian greenstone）— 全球獨特',
+        '土壤：約 5 億年前的寒武紀綠岩（Cambrian greenstone）風化紅褐土 — 全球獨特',
         '氣候：大陸型，夏熱（但海拔調節），日夜溫差大',
         'Shiraz：深色果實、礦石、黑胡椒、濃郁但有結構',
         "代表酒莊：Jasper Hill（Emily's Paddock）、Greenstone Vineyard",
@@ -927,12 +927,12 @@ const SLIDE_MAP = {
       points: [
         '位置：North East Victoria Zone，維多利亞最熱的產區之一',
         '氣候：炎熱大陸型，夏天乾熱，晚摘葡萄糖分超高',
-        '招牌：Rutherglen Muscat（Muscat Blanc à Petits Grains）',
+        '招牌：Rutherglen Muscat（Muscat à Petits Grains Rouge，又稱 Brown Muscat）',
         '釀造：氧化熟成的加強甜酒，棕色黏稠，複雜度無窮',
         '四個品質等級：Rutherglen → Classic → Grand → Rare',
         '代表酒莊：Chambers Rosewood、Morris Wines、Campbells',
       ],
-      note: '「Rare」等級的 Rutherglen Muscat 可能包含超過 100 年的老年份混調，是全球最獨特的甜酒之一',
+      note: '「Rare」等級的 Rutherglen Muscat 可能包含數十年甚至逾百年的老年份混調，是全球最獨特的甜酒之一',
     },
     {
       type: 'quiz',
@@ -1093,7 +1093,7 @@ const SLIDE_MAP = {
       title: 'Great Southern & Tasmania 地圖',
       subtitle: '西澳最大 Zone + 澳洲最南州分',
       mapRegion: 'Great Southern|TAS',
-      note: 'Great Southern 在 WA 西南端（金色）；Tasmania 屬獨立州分（綠色），兩者都是澳洲最溺製產區',
+      note: 'Great Southern 在 WA 西南端（金色）；Tasmania 屬獨立州份（綠色），兩者都是澳洲涼爽氣候的精品產區',
     },
     {
       type: 'compare',
@@ -1217,7 +1217,7 @@ const SLIDE_MAP = {
         'Chardonnay + 玄武岩',
       ],
       answer: 2,
-      explanation: 'Coonawarra 以「Cabernet Sauvignon + terra rossa（紅棕壤覆蓋石灰岩）」的風土搭配著稱，被稱為「澳洲波爾多」。',
+      explanation: 'Coonawarra 以「Cabernet Sauvignon + terra rossa（紅棕壤覆蓋石灰岩）」的風土搭配著稱，是澳洲 Cabernet 的經典代表。',
     },
     {
       type: 'quiz',
@@ -1332,7 +1332,7 @@ const SLIDE_MAP = {
       type: 'content',
       title: 'Tasmania 為什麼是澳洲最冷的產酒州？',
       points: [
-        '緯度：41–43°S，相當於勃艮第的緯度（南半球相反）',
+        '緯度：41–43°S，約在南半球的「西班牙北部／羅馬」緯度（勃艮第約 47°N，Tasmania 更接近赤道一側）',
         '海洋性氣候：四面環海，西風帶影響，全年涼爽多雨',
         '日照時數：夏季日照長（17-18 小時），彌補低溫影響',
         '年均氣溫：12–14°C，比 Yarra Valley 低 2–3°C',
@@ -1487,7 +1487,7 @@ const SLIDE_MAP = {
           '風格：果香豐富，更圓潤易飲',
           '青檸、柑橘、花香，輕礦物感',
           '陳年後：蜂蜜、吐司',
-          '代表：Grosset Polish Hill、Taylor\'s',
+          '代表：Grosset Watervale、Taylor\'s',
         ],
       },
       right: {
@@ -1497,7 +1497,7 @@ const SLIDE_MAP = {
           '風格：清瘦緊實，高酸礦物感更強',
           '石板、白花、青檸皮，更加線性',
           '陳年後：石油礦油感更顯著',
-          '代表：Grosset Watervale、Skillogalee',
+          '代表：Grosset Polish Hill、Skillogalee',
         ],
       },
     },
@@ -1544,7 +1544,7 @@ const SLIDE_MAP = {
     {
       type: 'map',
       title: 'Limestone Coast Zone 各產區',
-      subtitle: 'SA 東南部石灰岩地帶：Coonawarra、Padthaway、Wrattonbully 等六大 Region',
+      subtitle: 'SA 東南部石灰岩地帶：Coonawarra、Padthaway、Wrattonbully 等七個 Region',
       mapRegion: 'Coonawarra|Padthaway|Wrattonbully|Robe|Mount Benson|Mount Gambier',
     },,
 
@@ -1553,9 +1553,9 @@ const SLIDE_MAP = {
       title: 'Limestone Coast Zone 的地理',
       points: [
         '位於南澳東南角，靠近維多利亞州邊界',
-        'Zone 包含 8 個 GI Region：Coonawarra、Padthaway、Wrattonbully、Bordertown、Robe、Mount Benson、Mount Gambier、Bordertown',
+        'Zone 包含 7 個 GI Region：Coonawarra、Padthaway、Wrattonbully、Mount Benson、Robe、Mount Gambier、Bordertown',
         '共同特色：石灰岩（Limestone）地質，部分有著名的「Terra Rossa」紅土表層',
-        '氣候：凉爽至中等，海洋影響明顯（南極風從南澳海岸吹入）',
+        '氣候：涼爽至中等，海洋影響明顯（南極風從南澳海岸吹入）',
         '整體以 Cabernet Sauvignon 為旗艦品種著稱',
       ],
     },
@@ -1567,7 +1567,7 @@ const SLIDE_MAP = {
         '🌾 Padthaway：較平坦溫暖，Chardonnay 與 Shiraz，大型商業化（Hardy\'s Stonehaven）',
         '🪨 Wrattonbully：Coonawarra 北鄰，Terra Rossa 土壤，Cabernet & Merlot 品質新星崛起',
         '🌊 Robe & Mount Benson：臨海涼爽，Pinot Noir、Chardonnay、Riesling 表現出色',
-        '❄️ Mount Gambier：最南最冷（41°S），全澳最涼爽產區之一，Pinot Noir 與 Chardonnay',
+        '❄️ Mount Gambier：最南最冷（約 38°S，Limestone Coast 內），全澳最涼爽產區之一，Pinot Noir 與 Chardonnay',
         '🟫 Bordertown：最新 GI，過渡型氣候，多元品種探索中',
       ],
     },
@@ -1594,7 +1594,7 @@ const SLIDE_MAP = {
       type: 'summary',
       title: '本課小結',
       points: [
-        'Limestone Coast Zone：南澳東南，8 個 GI，石灰岩地質為共同特徵',
+        'Limestone Coast Zone：南澳東南，7 個 GI，石灰岩地質為共同特徵',
         'Coonawarra：Terra Rossa 紅土，澳洲最著名 Cabernet Sauvignon 產地',
         'Mount Gambier：最南最冷，Pinot Noir 崛起的新星',
       ],
@@ -1665,7 +1665,7 @@ const SLIDE_MAP = {
       title: 'Yarra Valley 的標誌性酒莊',
       points: [
         '🍷 Coldstream Hills：James Halliday 創立，Pinot Noir 先驅，Reserve 等級受高度讚譽',
-        '🍾 De Bortoli（Yarra Valley）：Noble One Botrytis Semillon 世界著名甜酒；Yarra Valley 系列品質卓越',
+        '🍾 De Bortoli（Yarra Valley）：Yarra Valley 系列品質卓越；酒廠集團的 Noble One Botrytis Semillon（產自 Riverina）是世界著名甜酒',
         '🌿 Yering Station：1838 年創立，Shiraz-Viognier 共釀先驅',
         '🏔️ Levantine Hill：新興精品酒莊，複雜型 Cabernet 混釀',
         '🎻 Oakridge：Pinot Noir 與 Chardonnay 精品，Local Vineyard Series 享譽業界',
@@ -1715,7 +1715,7 @@ const SLIDE_MAP = {
         '氣候：高海拔處涼爽（適合白葡萄和氣泡酒），低海拔較溫暖',
         '土壤：棕色壤土、砂質壤土，排水良好',
         '最著名特色：義大利葡萄品種的澳洲搖籃，有大量義大利裔移民後代釀酒人',
-        'Brown Brothers 是此區開拓者，King Valley 早在 1850 年代就有義大利移民定居',
+        'Brown Brothers 是此區開拓者，King Valley 在二戰後（1940–50 年代）起有大量義大利移民定居',
         '近年成為「替代品種運動」（Alternative Varieties）的全澳核心',
       ],
     },
@@ -1784,7 +1784,7 @@ const SLIDE_MAP = {
       points: [
         '位於維多利亞東北部，Murray River 附近，氣候炎熱乾燥（大陸性）',
         '澳洲最著名的加烈甜酒（Fortified Wine）產地，有百年以上的傳統',
-        '主力加烈酒：Rutherglen Muscat（用 Muscat Blanc à Petits Grains 品種）',
+        '主力加烈酒：Rutherglen Muscat（用 Muscat à Petits Grains Rouge，又稱 Brown Muscat）',
         '另一款：Rutherglen Topaque（前稱 Tokay，用 Muscadelle 品種）',
         '釀造：過熟葡萄 → 加入中性葡萄烈酒 → Solera 混合陳年系統',
         'Solera 系統：新舊年份混合，確保一致性並增加複雜度',
@@ -1798,7 +1798,7 @@ const SLIDE_MAP = {
         '🥈 Classic Rutherglen Muscat：更深琥珀色，更豐富，無花果、橙皮、烘焙感',
         '🥇 Grand Rutherglen Muscat：深紅棕色，極複雜，咖啡、黑巧克力、焦糖、無花果',
         '🏆 Rare Rutherglen Muscat（最高等級）：極少量，深不透光棕色，無比複雜，乾果、雪茄盒、太妃糖、回味永恆',
-        '等級越高 = 陳年越久（Rare 可含超過 50 年的老酒）+ 越濃縮',
+        '等級越高 = 陳年越久（Rare 可含數十年甚至逾百年的老酒）+ 越濃縮',
         '同樣四等級亦適用於 Topaque（Muscadelle 品種）',
       ],
     },
@@ -1816,17 +1816,17 @@ const SLIDE_MAP = {
     },
     {
       type: 'quiz',
-      question: 'Rutherglen Muscat 四個等級中，哪個是最高等級，且可能含有超過 50 年的老酒混合？',
+      question: 'Rutherglen Muscat 四個等級中，哪個是最高等級，且可能含有數十年以上老酒混合？',
       options: ['Grand Rutherglen Muscat', 'Rare Rutherglen Muscat', 'Classic Rutherglen Muscat', 'Rutherglen Muscat'],
       answer: 1,
-      explanation: 'Rare Rutherglen Muscat 是最高等級，透過 Solera 系統可能含有 50 年以上的老酒，顏色極深，風味無比複雜（焦糖、咖啡、黑巧克力、無花果乾），是澳洲最獨特的傳統加烈甜酒。',
+      explanation: 'Rare Rutherglen Muscat 是最高等級，透過 Solera 系統可能含有數十年以上的老酒，顏色極深，風味無比複雜（焦糖、咖啡、黑巧克力、無花果乾），是澳洲最獨特的傳統加烈甜酒。',
     },
     {
       type: 'summary',
       title: '本課小結',
       points: [
         '四等級：Rutherglen → Classic → Grand → Rare（越老越濃縮複雜）',
-        '品種：Muscat（Muscat Blanc à Petits Grains）；另有 Topaque（Muscadelle）',
+        '品種：Muscat（Muscat à Petits Grains Rouge／Brown Muscat）；另有 Topaque（Muscadelle）',
         'Chambers Rosewood：Rare 等級被評為全球最偉大加烈酒之一',
       ],
       nextLesson: '下一課：Grampians Sparkling Shiraz',
@@ -2082,7 +2082,7 @@ const SLIDE_MAP = {
       title: 'Orange GI 概況',
       points: [
         '位於新南威爾斯中西部，Great Dividing Range 西坡，海拔 600–1,100m',
-        '澳洲最高海拔的重要葡萄酒產區，以高海拔帶來的涼爽氣候聞名',
+        '澳洲海拔最高的葡萄酒產區之一，以高海拔帶來的涼爽氣候聞名',
         '土壤：火山玄武岩（Basalt），富含鐵質和礦物質，部分有石英砂土',
         '氣候：涼爽大陸性，夏季溫和（最高不超過 30°C），冬季可降雪',
         '核心品種：Chardonnay、Sauvignon Blanc、Cabernet Sauvignon、Merlot、Pinot Noir（高海拔）',
@@ -2095,7 +2095,7 @@ const SLIDE_MAP = {
       left: {
         label: 'Orange（橙市）',
         points: [
-          '海拔：600–1,100m（澳洲最高）',
+          '海拔：600–1,100m（澳洲最高海拔產區之一）',
           '土壤：玄武岩，礦物豐富',
           '氣候：涼爽，夏日清爽',
           '風格：清爽酸度，礦物感，精緻',
@@ -2469,7 +2469,7 @@ const SLIDE_MAP = {
       title: 'Granite Belt 概況',
       points: [
         '位於昆士蘭州最南端，靠近新南威爾斯邊境，Stanthorpe 鎮為中心',
-        '海拔：800–1,100m，是全澳最高海拔的主要葡萄酒產區之一',
+        '海拔：800–1,100m，是全澳海拔最高的葡萄酒產區之一',
         '土壤：花崗岩（Granite）分解的砂質土，排水極佳，低肥力',
         '氣候：「大陸性 + 高海拔」，夏季暖熱但夜晚涼爽，冬季可能有霜凍，四季分明',
         'Queensland 的絕大多數葡萄園都位於此，昆州 90%+ 的葡萄酒來自 Granite Belt',
@@ -2561,7 +2561,7 @@ const SLIDE_MAP = {
       title: '全球影響與消費者認知改變',
       points: [
         '2000 年代：螺旋蓋在歐洲市場仍受到懷疑（認為是廉價酒標誌）',
-        '2010 年代：紐西蘭、智利、南非等新世界國家跟進，螺旋蓋漸被接受',
+        '2000 年代初：紐西蘭率先大規模跟進（2001 年成立螺旋蓋推廣組織），隨後智利、南非等新世界國家也陸續採用，螺旋蓋漸被接受',
         '2020 年代：精品酒也使用螺旋蓋，消費者認知已改變，不再與廉價掛鉤',
         '細節改變：有些高端螺旋蓋設計更精緻（更重、印花），提升高端感',
         '研究支持：多項盲品研究證實，螺旋蓋封存的 Riesling 比軟木塞版本保存更完整',
@@ -2781,7 +2781,7 @@ const SLIDE_MAP = {
       type: 'content',
       title: '超高端 Luxury 系列',
       points: [
-        '💎 Bin 707（Cabernet Sauvignon）：Penfolds 最頂級 Cabernet，100% 全新法國桶陳年 18 個月，黑醋栗、石墨、雪松，陳年 20–30 年',
+        '💎 Bin 707（Cabernet Sauvignon）：Penfolds 最頂級 Cabernet，100% 全新美國橡木桶陳年 18 個月，黑醋栗、石墨、雪松，陳年 20–30 年',
         '👑 St Henri Shiraz：非木桶陳年（大型老橡木槽 vat），更純淨的 Shiraz 表達，每年只用同一支 Vat No.7',
         '💫 Magill Estate Shiraz：Penfolds 創始地 Magill Estate 單一葡萄園，城市葡萄園奇蹟',
         '🌟 RWT Barossa Valley Shiraz：RWT = Red Winemaking Trial，全程法國橡木桶，現代精緻風格的 Barossa Shiraz',
@@ -2854,7 +2854,7 @@ const SLIDE_MAP = {
       points: [
         '🏆 Hugh Johnson：「南半球唯一的 First Growth（一級酒莊）」',
         '🏆 Robert Parker：「已取代波爾多 Pétrus 成為全球最奇異濃縮的葡萄酒」',
-        '🥇 1971 年份：1976 年在 Wine Olympics（巴黎）贏得 Shiraz/Syrah 類別金牌',
+        '🥇 1971 年份：1979 年在 Gault-Millau Wine Olympics（巴黎）贏得 Shiraz/Syrah 類別金牌',
         '💯 1998 年份：Wine Spectator 給予 99 分，評為年度最佳紅酒之一',
         '🌏 南澳州遺產：Grange 在 2001 年被列為南澳州的文化財產（State Heritage Icon）',
         '💰 拍賣市場：Grange 是澳洲葡萄酒拍賣中最活躍的標的，頂級年份動輒數千澳元',
@@ -2906,7 +2906,7 @@ const SLIDE_MAP = {
         '澳洲年份差異因產區而異：Barossa 的好年份未必是 Yarra 的好年份',
         '主要影響因素：採收期降雨量、夏季高溫事件（heat spikes）、乾旱程度',
         '南半球採收：2 月底～4 月，「2022 年份」= 2021 年秋天種植、2022 年春夏生長、2022 年採收',
-        '挑戰：近年 La Niña（反聖嬰）帶來多雨年份（2010-12、2020-22），La Niño（聖嬰）則帶來乾旱高溫',
+        '挑戰：近年 La Niña（反聖嬰）帶來多雨年份（2010-12、2020-22），El Niño（聖嬰）則帶來乾旱高溫',
         '一般規律：炎熱乾燥年份 → Barossa/McLaren Vale Shiraz 飽滿豐厚；涼爽多雨年份 → Yarra/Tasmania 精緻細膩',
       ],
     },
@@ -2977,7 +2977,7 @@ const SLIDE_MAP = {
         '採收期提前：近 30 年採收時間平均提早 2–4 週（Barossa 等炎熱產區最明顯）',
         '高溫事件（Heat Spike）：超過 40°C 的極端高溫日數增加，危害近成熟葡萄',
         '更強烈的山火季：黑夏（2019-20）只是開端，未來類似事件可能更頻繁',
-        '降雨不穩定：La Niña 多雨 vs La Niño 嚴重乾旱的極端化加劇',
+        '降雨不穩定：La Niña 多雨 vs El Niño 嚴重乾旱的極端化加劇',
         '整體方向：傳統炎熱產區壓力增大；涼爽產區（Tasmania、高海拔）崛起機會',
       ],
     },
@@ -3066,7 +3066,7 @@ const SLIDE_MAP = {
       title: '口腔分析與結論',
       points: [
         '👄 口腔（Palate）：甜度 → 酸度 → 單寧（紅酒）→ 酒精 → 酒體 → 風味特性 → 餘韻',
-        '澳洲 Barossa Shiraz：酸度中等、單寧柔滑成熟（美桶影響）、酒精高（14–15.5%）、酒體飽滿',
+        '澳洲 Barossa Shiraz：酸度偏低至中等、單寧柔滑成熟（美桶影響）、酒精高（14–15.5%）、酒體飽滿',
         'Clare Valley Riesling：酸度極高（清脆明亮）、零單寧、酒精低（10.5–11%）、酒體輕盈',
         '🎯 結論（Conclusions）：品質等級（Faulty/Poor/Acceptable/Good/Very Good/Outstanding）',
         '陳年潛力判斷：高酸 + 高單寧 + 高濃縮度 = 陳年潛力強',
@@ -3312,7 +3312,7 @@ const SLIDE_MAP = {
         '🦪 Sydney Rock Oyster（雪梨岩牡蠣）+ Clare Valley Riesling：高酸清爽，金屬礦物感對應牡蠣碘味，經典組合',
         '🦐 King Prawn（帝王蝦）+ Margaret River Chardonnay：奶油質感 Chardonnay 搭甜蝦，相輔相成',
         '🐟 Barramundi 香煎 + Adelaide Hills Sauvignon Blanc：草本清新，帶出魚肉細膩甜味',
-        '🦞 Moreton Bay Bug（摩頓灣海蟹）+ Leeuwin Estate Chardonnay：頂級搭配，富含油脂的海鮮對應複雜豐滿的 Chard',
+        '🦞 Moreton Bay Bug（摩頓灣弓蝦，淺水龍蝦類）+ Leeuwin Estate Chardonnay：頂級搭配，富含油脂的海鮮對應複雜豐滿的 Chard',
         '🐙 章魚料理 + Tasmania Pinot Noir：輕盈紅酒搭配，不搶奪海鮮的細膩',
         '原則：海鮮多搭白酒/輕盈紅酒，注意醬汁的分量（重醬可搭更飽滿的白酒）',
       ],
