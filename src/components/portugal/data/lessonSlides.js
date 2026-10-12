@@ -777,7 +777,7 @@ const P1M4L1_slides = [
     question: '在「port-styles」金字塔中，以下哪一種 Port 是「瓶中陳年」（reductive，保留深色與鮮果香）而非「橡木桁氧化陳年」？',
     options: ['10 Year Tawny', 'Vintage Port', 'Colheita', '40 Year Tawny'],
     answer: 1,
-    explanation: 'Vintage Port 只在大桁中陳年 2 年即裝瓶，其後在瓶中長期陳年（可達 50+ 年），屬「靣靣陳年」風格、保有深染色與鮮果香。而 Tawny（10/20/40 Year、Colheita）都是在小 pipe 桁中長期接觸氧氣的「氧化陳年」，出紅棕色、核果與咖啡香。',
+    explanation: 'Vintage Port 只在大桁中陳年約 2 年（法規上限約 2.5 年）即裝瓶，其後在瓶中長期陳年（可達 50+ 年），屬「靣靣陳年」風格、保有深染色與鮮果香。而 Tawny（10/20/40 Year、Colheita）都是在小 pipe 桁中長期接觸氧氣的「氧化陳年」，出紅棕色、核果與咖啡香。',
   },
   {
     type: 'quiz',
@@ -1124,10 +1124,10 @@ const P2M1L2_slides = [
     type: 'compare',
     title: '波特酒四大主要類型',
     items: [
-      { icon: '🍓', label: 'Ruby', desc: '年輕、深紅色。黑莓藍莓果香，甜度明顯，通常 2-4 年桶陳，不氧化。最基礎的波特酒類型', color: '#8B0000' },
+      { icon: '🍓', label: 'Ruby', desc: '年輕、深紅色。黑莓藍莓果香，甜度明顯，通常在槽或大桶中陳年約 2–3 年，不氧化。最基礎的波特酒類型', color: '#8B0000' },
       { icon: '🟤', label: 'Tawny', desc: '在小型橡木桶中氧化陳年多年，轉為棕橙金色。堅果、太妃糖、橙皮香。可標示 10/20/30/40 年', color: '#8B4513' },
       { icon: '🍷', label: 'LBV（Late Bottled Vintage）', desc: '單一年份，在桶中陳年 4-6 年後裝瓶。介於 Ruby 和 Vintage 之間，性價比最高的年份波特酒', color: '#c0392b' },
-      { icon: '🏆', label: 'Vintage', desc: '最頂級。只在宣布的特殊年份生產，在桶中陳年 2 年後裝瓶，瓶中繼續陳年 20-50 年。世界最佳加烈酒', color: '#2c1a0a' },
+      { icon: '🏆', label: 'Vintage', desc: '最頂級。只在宣布的特殊年份生產，在桶中陳年約 2 年（最長 2.5 年）後裝瓶，瓶中繼續陳年 20-50 年。世界最佳加烈酒', color: '#2c1a0a' },
     ],
   },
   {
@@ -1176,7 +1176,7 @@ const P2M1L2_slides = [
     question: 'Vintage Port 通常在桶中陳年幾年後裝瓶？',
     options: ['1 年', '2 年', '10 年', '20 年'],
     answer: 1,
-    explanation: 'Vintage Port 在橡木桶中只陳年 2 年（短暫），然後裝瓶，瓶中繼續長期陳年。這是因為 Vintage Port 的複雜度主要來自瓶中陳年，而非桶陳。',
+    explanation: 'Vintage Port 在橡木桶中只陳年約 2 年（最長 2.5 年，短暫），然後裝瓶，瓶中繼續長期陳年。這是因為 Vintage Port 的複雜度主要來自瓶中陳年，而非桶陳。',
   },
   {
     type: 'map',
@@ -1191,7 +1191,7 @@ const P2M1L2_slides = [
       'Ruby：深紅果香，年輕不氧化',
       'Tawny：桶中氧化，10/20/30/40 年標示平均陳年',
       'LBV：單一年份，4-6 年桶陳，性價比最高',
-      'Vintage：頂級年份，2 年桶陳後瓶中陳年逾 50 年',
+      'Vintage：頂級年份，約 2–2.5 年桶陳後瓶中陳年逾 50 年',
       'Colheita：單一年份 Tawny，7+ 年桶陳',
     ],
   },
@@ -2878,7 +2878,7 @@ const P4M1L3_slides = [
       <p><strong>Vintage Port</strong> 並非每年都宣布（declared）。酒莊通常在採收後第二個春天，由 IVDP（杜羅河谷葡萄酒協會）審查後決定是否宣布。</p>
       <h4>📋 宣布流程</h4>
       <ol>
-        <li>採收後 18 個月，在橡木桶中短暫陳年（通常 2 年）</li>
+        <li>採收後 18 個月，在橡木桶中短暫陳年（通常約 2–2.5 年）</li>
         <li>酒莊向 IVDP 提交樣品申請宣布</li>
         <li>通過後裝瓶，需 10-20 年瓶中陳年才達最佳狀態</li>
       </ol>
@@ -2926,7 +2926,7 @@ const P4M1L3_slides = [
     question: 'Vintage Port 通常需要在瓶中陳年多少年才達到最佳飲用狀態？',
     options: ['3–5 年', '5–8 年', '10–20 年以上', '與 Tawny 一樣，桶中陳年即可'],
     answer: 2,
-    explanation: 'Vintage Port 在桶中只陳年 2 年就裝瓶，之後需要在瓶中進行長期陳年。大多數頂級 Vintage Port 需要 15–25 年才開始展現複雜度，最偉大的年份可以持續演化 50–80 年。',
+    explanation: 'Vintage Port 在桶中只陳年約 2–2.5 年就裝瓶，之後需要在瓶中進行長期陳年。大多數頂級 Vintage Port 需要 15–25 年才開始展現複雜度，最偉大的年份可以持續演化 50–80 年。',
   },
   {
     type: 'summary',
@@ -3802,7 +3802,7 @@ const P3M1L2_slides = [
     type: 'compare',
     title: 'Ruby 系列由低至高：完整比較',
     items: [
-      { icon: '🍓', label: 'Ruby / Ruby Reserve', desc: '無年份，大桶陳年 2–4 年，深紅果香，立即可飲，最基礎的波特酒', color: '#c0392b' },
+      { icon: '🍓', label: 'Ruby / Ruby Reserve', desc: '無年份，大桶陳年約 2–3 年，深紅果香，立即可飲，最基礎的波特酒', color: '#c0392b' },
       { icon: '🍷', label: 'LBV（過濾）', desc: '單一年份，桶陳 4–6 年，立即可飲，大量生產，高性價比的年份波特酒', color: '#922B21' },
       { icon: '💎', label: 'LBV（未過濾）', desc: '單一年份，桶陳 4–6 年，需換瓶，複雜度明顯提升，是真正的品飲體驗', color: '#7B241C' },
       { icon: '🏆', label: 'Vintage / Single Quinta', desc: '最頂級，桶陳 2 年 + 瓶中陳年 20–50 年，每瓶都是獨特的時間旅行', color: '#5c2a0a' },
@@ -3905,13 +3905,13 @@ const P3M1L3_slides = [
           <td style="padding:6px;font-weight:700">10 年</td><td style="padding:6px">7–15 年混調</td><td style="padding:6px">深橙棕</td><td style="padding:6px">橙皮・杏仁・乾果</td><td style="padding:6px">輕起司・果乾</td>
         </tr>
         <tr>
-          <td style="padding:6px;font-weight:700">20 年</td><td style="padding:6px">15–30 年混調</td><td style="padding:6px">金棕色</td><td style="padding:6px">太妃糖・核桃・焦糖</td><td style="padding:6px">藍紋起司・核桃蛋糕</td>
+          <td style="padding:6px;font-weight:700">20 年</td><td style="padding:6px">約 17–25 年混調（示意）</td><td style="padding:6px">金棕色</td><td style="padding:6px">太妃糖・核桃・焦糖</td><td style="padding:6px">藍紋起司・核桃蛋糕</td>
         </tr>
         <tr style="background:#fff3e0">
-          <td style="padding:6px;font-weight:700">30 年</td><td style="padding:6px">25–45 年混調</td><td style="padding:6px">淡琥珀金</td><td style="padding:6px">咖啡・陳年橙皮・蘭姆酒</td><td style="padding:6px">巧克力甜點・雪茄</td>
+          <td style="padding:6px;font-weight:700">30 年</td><td style="padding:6px">約 27–35 年混調（示意）</td><td style="padding:6px">淡琥珀金</td><td style="padding:6px">咖啡・陳年橙皮・蘭姆酒</td><td style="padding:6px">巧克力甜點・雪茄</td>
         </tr>
         <tr>
-          <td style="padding:6px;font-weight:700">40 年</td><td style="padding:6px">35–60+ 年混調</td><td style="padding:6px">極淡黃金</td><td style="padding:6px">黑巧克力・菸草・木香・乾玫瑰</td><td style="padding:6px">頂級巧克力・濃縮咖啡</td>
+          <td style="padding:6px;font-weight:700">40 年</td><td style="padding:6px">約 35+ 年混調（示意）</td><td style="padding:6px">極淡黃金</td><td style="padding:6px">黑巧克力・菸草・木香・乾玫瑰</td><td style="padding:6px">頂級巧克力・濃縮咖啡</td>
         </tr>
       </table>
       <p style="margin-top:8px;font-size:0.88em;color:#6b7280">⭐ <strong>Colheita</strong>：單一年份的 Tawny，桶陳至少 <strong>7 年</strong>，標示實際採收年份。是 Tawny 家族中最精緻的類型。</p>

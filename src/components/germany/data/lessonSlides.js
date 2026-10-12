@@ -1311,7 +1311,7 @@ export const G2M2L2 = {
     {
       type: 'comparison',
       title: 'Kaiserstuhl vs Markgräflerland 風格對比',
-      left: { label: '🌋 Kaiserstuhl（火山豐潤）', items: ['玄武岩、火山土壤', 'Spätburgunder 豐滿飽滿', '酒精度高（可達 14%+）', '礦物感與果實濃郁並存', '代表：Bernhard Huber、Salwey', 'Pinot Noir 可媲美南布根地'] },
+      left: { label: '🌋 Kaiserstuhl（火山豐潤）', items: ['玄武岩、火山土壤', 'Spätburgunder 豐滿飽滿', '酒精度高（可達 14%+）', '礦物感與果實濃郁並存', '代表：Salwey、Dr. Heger', 'Pinot Noir 可媲美南布根地'] },
       right: { label: '🇨🇭 Markgräflerland（瑞士邊境輕盈）', items: ['接近瑞士Basel，石灰岩土', 'Gutedel（Chasselas）為特色品種', '酒體清爽輕盈', '優雅細緻，酸度明亮', '代表：Ziereisen', '風格接近瑞士與阿爾薩斯'] }
     },
     {
@@ -1330,7 +1330,7 @@ export const G2M2L2 = {
         { label: '面積', value: '16,000 公頃' },
         { label: '南北長度', value: '約 400 公里（全德最長）' },
         { label: 'Spätburgunder 比例', value: '約 37%（德國最高）' },
-        { label: '代表酒莊', value: 'Bernhard Huber、Ziereisen、Salwey、Dr. Heger' }
+        { label: '代表酒莊', value: 'Salwey、Dr. Heger（Kaiserstuhl）；Bernhard Huber（Breisgau 的 Malterdingen）；Ziereisen（Markgräflerland）' }
       ]
     },
     {
@@ -1834,7 +1834,7 @@ export const G2M4L1 = {
       type: 'comparison',
       title: 'TBA vs Eiswein 核心差異',
       left: { label: '🍯 TBA（Trockenbeerenauslese）', items: ['需要貴腐菌（Botrytis）感染', '葡萄乾縮成葡萄乾狀態', '150+ Oechsle 最低含糖量', '顏色深金至琥珀', '蜂蜜、番紅花、焦糖香氣', '可陳年 50 年以上'] },
-      right: { label: '❄️ Eiswein（冰酒）', items: ['不需要貴腐菌（健康葡萄）', '葡萄在 -7°C 以下天然冰凍', '120+ Oechsle（依產區）', '顏色清澈金黃', '芒果、荔枝、蜂蜜酸甜', '陳年潛力同樣驚人'] }
+      right: { label: '❄️ Eiswein（冰酒）', items: ['不需要貴腐菌（健康葡萄）', '葡萄在 -7°C 以下天然冰凍', '約 110–128 Oechsle（與 BA 同級，依產區）', '顏色清澈金黃', '芒果、荔枝、蜂蜜酸甜', '陳年潛力同樣驚人'] }
     },
     {
       type: 'list',
