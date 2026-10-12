@@ -115,7 +115,7 @@ export const G1M1L2 = {
   lessonId: 'G1M1L2',
   title: '德國葡萄酒分級制度 QbA & Prädikat',
   description: '深入理解德國獨特的葡萄酒分級制度',
-  objectives: ['區分 Tafelwein、QbA、QmP', '掌握 Prädikat 六級甜度系統', '了解分級與採收成熟度的關聯'],
+  objectives: ['區分 Deutscher Wein（舊 Tafelwein）、Qualitätswein（舊 QbA）、Prädikatswein（舊 QmP）', '掌握 Prädikat 六級甜度系統', '了解分級與採收成熟度的關聯'],
   slides: [
     {
       type: 'title',
@@ -139,15 +139,15 @@ export const G1M1L2 = {
       type: 'timeline',
       title: '📈 分級系統由低到高',
       events: [
-        { year: 'Tafelwein', title: '餐酒', desc: '最基礎等級，日常飲用' },
+        { year: 'Deutscher Wein', title: '德國餐酒（舊稱 Tafelwein）', desc: '最基礎等級，日常飲用' },
         { year: 'Landwein', title: '地區酒', desc: '地理標示，品質略高於餐酒' },
-        { year: 'QbA', title: '特定產區優質葡萄酒', desc: '13 個 Anbaugebiete 生產，可加糖（Chaptalization）' },
-        { year: 'Kabinett', title: 'QmP 第一級', desc: '正常成熟度採收，輕盈優雅' },
-        { year: 'Spätlese', title: 'QmP 第二級', desc: '晚採（late harvest），豐潤甜美' },
-        { year: 'Auslese', title: 'QmP 第三級', desc: '精選串，可甜可乾，濃郁複雜' },
-        { year: 'Beerenauslese', title: 'QmP 第四級', desc: '逐粒精選，貴腐菌影響，濃甜' },
-        { year: 'Eiswein', title: 'QmP 第五級（酒汁比重與 BA 同級）', desc: '冰凍採收（-7°C 以下），濃縮甜酸，極稀珍貴' },
-        { year: 'Trockenbeerenauslese', title: 'QmP 第六級', desc: 'TBA：乾縮逐粒精選，甜酒巔峰' }
+        { year: 'Qualitätswein', title: '特定產區優質葡萄酒（舊稱 QbA）', desc: '13 個 Anbaugebiete 生產，可加糖（Chaptalization）' },
+        { year: 'Kabinett', title: 'Prädikatswein（舊 QmP）第一級', desc: '正常成熟度採收，輕盈優雅' },
+        { year: 'Spätlese', title: 'Prädikatswein（舊 QmP）第二級', desc: '晚採（late harvest），豐潤甜美' },
+        { year: 'Auslese', title: 'Prädikatswein（舊 QmP）第三級', desc: '精選串，可甜可乾，濃郁複雜' },
+        { year: 'Beerenauslese', title: 'Prädikatswein（舊 QmP）第四級', desc: '逐粒精選，貴腐菌影響，濃甜' },
+        { year: 'Eiswein', title: 'Prädikatswein（舊 QmP）第五級（酒汁比重與 BA 同級）', desc: '冰凍採收（-7°C 以下），濃縮甜酸，極稀珍貴' },
+        { year: 'Trockenbeerenauslese', title: 'Prädikatswein（舊 QmP）第六級', desc: 'TBA：乾縮逐粒精選，甜酒巔峰' }
       ]
     },
     {
@@ -166,8 +166,8 @@ export const G1M1L2 = {
           explanation: 'TBA（Trockenbeerenauslese）是德國 Prädikat 分級中最高等級，由乾縮的逐粒精選葡萄釀成，甜度極高，產量稀少。'
         },
         {
-          question: 'QbA 與 QmP 的主要區別是？',
-          options: ['產區不同', 'QbA 允許加糖，QmP 不允許', 'QmP 只能產自 Mosel', '兩者完全相同'],
+          question: 'Qualitätswein（舊稱 QbA）與 Prädikatswein（舊稱 QmP）的主要區別是？',
+          options: ['產區不同', 'Qualitätswein 允許加糖，Prädikatswein 不允許', 'QmP 只能產自 Mosel', '兩者完全相同'],
           answer: 1,
           explanation: 'QbA（Qualitätswein bestimmter Anbaugebiete）允許加入糖分（Chaptalization）來提升酒精濃度；而 QmP（Prädikatswein）嚴禁加糖，葡萄必須達到自然成熟標準。'
         }
@@ -999,7 +999,7 @@ export const G2M1L2 = {
     {
       type: 'content',
       title: '🏰 Rheingau 的地理傳奇',
-      content: 'Rheingau 是德國葡萄酒最具歷史地位的產區之一。萊茵河在此由西向東流，南岸的葡萄園因此享有難得的南向日照。北方的 Taunus 山脈如屏障般阻擋冷風，形成溫暖穩定的微氣候。全區面積約 3,285 公頃，Riesling 種植比例高達 80% 以上，是德國最集中的 Riesling 產區之一。酒風以結構飽滿、酒體豐潤、陳年潛力強著稱，與 Mosel 的輕盈纖細形成鮮明對比。'
+      content: 'Rheingau 是德國葡萄酒最具歷史地位的產區之一。萊茵河在此由東向西流，北岸的葡萄園因此面向南方，享有難得的南向日照。北方的 Taunus 山脈如屏障般阻擋冷風，形成溫暖穩定的微氣候。全區面積約 3,285 公頃，Riesling 種植比例高達 80% 以上，是德國最集中的 Riesling 產區之一。酒風以結構飽滿、酒體豐潤、陳年潛力強著稱，與 Mosel 的輕盈纖細形成鮮明對比。'
     },
     {
       type: 'germany-region-map',
@@ -1965,7 +1965,7 @@ export const G2M4L3 = {
       type: 'list',
       title: '⏳ 各等級陳年潛力指南',
       items: [
-        { icon: '🌿', text: 'Kabinett：5–15 年，尋找最清爽礦物巔峰期，最遲 10 年內飲完' },
+        { icon: '🌿', text: 'Kabinett：適飲期約 5–15 年，尋找最清爽礦物的巔峰期' },
         { icon: '🍑', text: 'Spätlese：10–25 年，頂級酒莊版本可達 25 年，充分發展蜂蜜層次' },
         { icon: '🌟', text: 'Auslese：15–30 年，甜味支撐陳年，30 年後出現藥草杏桃複雜度' },
         { icon: '🍯', text: 'BA（Beerenauslese）：20–40 年，貴腐風味與年份潛力共同決定' },
@@ -2379,7 +2379,7 @@ export const G3M2L1 = {
     {
       type: 'germany-region-map',
       title: 'Riesling 陳年核心產區地圖',
-      description: 'Mosel 板岩 Riesling 20–40 年、Rheingau 25–50 年——陳年條件最佳的產區都在萊茵河核心區',
+      description: 'Mosel 板岩 Riesling 可陳年 30–50 年以上（德國最長壽）、Rheingau 20–40 年——陳年條件最佳的產區都在萊茵河核心區',
       mapRegion: 'rhineCore',
       highlightFiles: ["mosel-region.geojson","rheingau-region.geojson","nahe-region.geojson"],
     },
@@ -2553,7 +2553,7 @@ export const G3M2L3 = {
       type: 'list',
       title: '年份選購策略（依 Prädikat 等級）',
       items: [
-        { icon: '🌿', text: 'Kabinett/Spätlese（即飲型）：選近 3–5 年，保持鮮活果香，不宜久存' },
+        { icon: '🌿', text: 'Kabinett/Spätlese（即飲型）：近 3–5 年的年份果香鮮活、可即飲；優質酒款亦可存放 10 年以上' },
         { icon: '🍑', text: 'Auslese（中期收藏）：好年份可陳 10–20 年，選 2005/2007/2017 年份' },
         { icon: '👑', text: 'BA/Eiswein/TBA（長期投資）：選 1971/1990/1999/2005，可陳 50 年以上' },
         { icon: '🍷', text: 'GG 乾型（現在適飲）：選 2012/2015/2017，已進入開放期，礦物感精彩' }
