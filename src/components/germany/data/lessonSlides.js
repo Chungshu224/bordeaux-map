@@ -214,7 +214,7 @@ export const G1M1L3 = {
         { icon: '☀️', text: 'Baden — 最南最溫暖，接近地中海風格' },
         { icon: '🍇', text: 'Württemberg — Trollinger 紅酒之鄉，Stuttgart 周邊' },
         { icon: '🏛️', text: 'Franken — Bocksbeutel 扁圓瓶，Silvaner 的故鄉' },
-        { icon: '🌸', text: 'Hessische Bergstrasse — 德國最小產區之一' },
+        { icon: '🌸', text: 'Hessische Bergstrasse — 德國第二小產區（約 461 公頃）' },
         { icon: '❄️', text: 'Saale-Unstrut & Sachsen — 東德兩個產區，大陸型氣候' }
       ]
     },
@@ -225,11 +225,11 @@ export const G1M1L3 = {
         { icon: '📐', text: 'Mosel：全球坡度最陡的產區之一，近半數葡萄園超過 30 度、部分達 70 度，機械採收幾乎不可能' },
         { icon: '📜', text: 'Rheinhessen：德國最早文獻記載的葡萄園 Niersteiner Glöck 就在此地' },
         { icon: '🍷', text: 'Pfalz：德國最大紅酒產區，全德近半 Merlot 種植於此；擁有全球最大葡萄酒節（Bad Dürkheim）' },
-        { icon: '🔄', text: 'Rheingau：因「萊茵河膝」（Rheinknie）轉彎形成絕佳南向微氣候，Riesling 佔比高達 85%，全德最高' },
+        { icon: '🔄', text: 'Rheingau：因「萊茵河膝」（Rheinknie）轉彎形成絕佳南向微氣候，Riesling 佔比約 76%，為德國 Riesling 比例最高的主要產區之一' },
         { icon: '🪨', text: 'Nahe：火成岩、沉積岩、變質岩齊聚一地，被稱為「岩石循環博物館」' },
         { icon: '🔴', text: 'Ahr：紅葡萄品種佔比 79%，全德最高，儘管地處最北端' },
         { icon: '🏛️', text: 'Franken：沿美因河釀酒史超過 1200 年，Bocksbeutel 扁瓶是產區標誌' },
-        { icon: '🏰', text: 'Mittelrhein：德國最小產區，羅馬人最早於此種植葡萄；峽谷段 2002 年列入 UNESCO 世界遺產' },
+        { icon: '🏰', text: 'Mittelrhein：德國最小產區（約 460 公頃），羅馬人最早於此種植葡萄；峽谷段 2002 年列入 UNESCO 世界遺產' },
         { icon: '🌸', text: 'Hessische Bergstrasse：1971 年才獨立設區，春天杏花總是搶先其他產區綻放' },
         { icon: '🍇', text: 'Württemberg：德國第四大產區，紅酒佔 63%，本地人日常消耗量居全德之冠' },
         { icon: '🧱', text: 'Saale-Unstrut：西元 998 年即有種植記載，年雨量僅約 500mm，乾式石牆梯田是招牌景觀' },
@@ -272,7 +272,7 @@ export const G1M1L3 = {
           question: '「germany-regions-overview」互動探索中，以下哪個是屬於「北/東部寒涼」類別的產區？',
           options: ['Pfalz', 'Baden', 'Sachsen', 'Rheinhessen'],
           answer: 2,
-          explanation: 'Sachsen（薩克森）位於德國最東、累列為全國高，與 Ahr/Mittelrhein/Saale-Unstrut 同屬「北東部寒涼」4 區。Pfalz 與 Baden 是南部溫曖，Rheinhessen 是經典 Riesling 核心。'        }
+          explanation: 'Sachsen（薩克森）位於德國最東、緯度為全國最高，與 Ahr/Mittelrhein/Saale-Unstrut 同屬「北東部寒涼」4 區。Pfalz 與 Baden 是南部溫暖，Rheinhessen 是經典 Riesling 核心。'        }
       ]
     }
   ]
@@ -338,7 +338,7 @@ export const G1M2L1 = {
     },
     {      type: 'riesling-terroir',
       title: '🗺️ Riesling 風土全景探索',
-      description: '點選 5 大產區，互動比較 Mosel 藍灯板巖、Rheingau 多元土壤、Pfalz 玄武巖、Nahe 「土壤博物館」、Rheinhessen 紅色斜坡的土壤 / 氣候 / 香氣 / 著名 Einzellage / 代表酒莊。同一 Riesling 品種在不同風土上的個性差異一目了然。'
+      description: '點選 5 大產區，互動比較 Mosel 藍灰板巖、Rheingau 多元土壤、Pfalz 玄武巖、Nahe 「土壤博物館」、Rheinhessen 紅色斜坡的土壤 / 氣候 / 香氣 / 著名 Einzellage / 代表酒莊。同一 Riesling 品種在不同風土上的個性差異一目了然。'
     },
     {      type: 'quiz',
       title: '快速測驗',
@@ -470,7 +470,7 @@ export const G1M2L3 = {
     {
       type: 'germany-region-map',
       title: '德國紅葡萄主產區地圖',
-      description: 'Ahr（最小最北）、Pfalz（最大）、Württemberg（產量最多）、Baden（最南）——德國紅酒四強的地理分布',
+      description: 'Ahr（小而北）、Pfalz（最大）、Württemberg（產量最多）、Baden（最南）——德國紅酒四強的地理分布',
       mapRegion: 'overview',
       highlightFiles: ['ahr-region.geojson', 'pfalz-region.geojson', 'wuerttemberg-region.geojson', 'baden-freiburg-region.geojson', 'baden-karlsruhe-region.geojson'],
     },
@@ -589,7 +589,7 @@ export const G1M3L2 = {
     {
       type: 'qmp-sweetness',
       title: '🍯 QmP 6 級甜度階梯互動詳解',
-      description: '點選雘形階梯任一層查看詳細資訊：Oechsle°、潛在酒精、殘糖、採收與釀造、香氣、餐酒搭配、經典酒莊代表。從輕盈的 Kabinett（7-9% abv）一路進階到稀世 TBA（200+°Oe、単瓶總華可達£15,000+）。'
+      description: '點選楔形階梯任一層查看詳細資訊：Oechsle°、潛在酒精、殘糖、採收與釀造、香氣、餐酒搭配、經典酒莊代表。從輕盈的 Kabinett（7-9% abv）一路進階到稀世 TBA（200+°Oe、単瓶總華可達£15,000+）。'
     },
     {
       type: 'quiz',
@@ -605,7 +605,7 @@ export const G1M3L2 = {
           question: '以下哪個 Prädikat 等級不需要貴腐菌（Botrytis）？',
           options: ['Beerenauslese', 'Trockenbeerenauslese', 'Eiswein', 'Auslese'],
           answer: 2,
-          explanation: 'Eiswein 的甜度濃縮完全依賴低溫冰凍，不需要貴腐菌。事實上，健康的葡萄反而更利於釀造 Eiswein，因為貴腐菌會破壞葡萄的細胞結構，影響冰凍效果。'
+          explanation: 'Eiswein 的甜度濃縮完全依賴低溫冰凍，不需要貴腐菌。Eiswein 要求葡萄健康且能撐到冰凍採收，不應受貴腐菌明顯影響。'
         },
         {
           question: '「qmp-sweetness」階梯中，TBA（Trockenbeerenauslese）採收葡萄的最大特點在於？',
@@ -712,7 +712,7 @@ export const G1M4L1 = {
       title: '🥘 德國美食與葡萄酒搭配',
       items: [
         { icon: '🥩', text: '德國豬腳（Schweinshaxe）+ Pfalz Spätburgunder 紅酒' },
-        { icon: '🐟', text: '萊茵河鱸魚（Lachsforelle）+ Mosel Kabinett Riesling' },
+        { icon: '🐟', text: '鮭鱒（Lachsforelle）+ Mosel Kabinett Riesling' },
         { icon: '🧀', text: '德國白乳酪（Quark）+ Franken Silvaner Trocken' },
         { icon: '🌮', text: '豬肉酸菜（Sauerkraut）+ Rheinhessen Riesling Halbtrocken' },
         { icon: '🦐', text: '河蝦（Flusskrebs）+ Rheingau Riesling Spätlese' },
@@ -798,7 +798,7 @@ export const G1FinalExam = {
           question: 'Prädikat 系統中，哪個等級的採收葡萄必須完全天然冰凍（不能使用貴腐菌）？',
           options: ['Beerenauslese', 'Trockenbeerenauslese', 'Eiswein', 'Auslese'],
           answer: 2,
-          explanation: 'Eiswein（冰酒）必須使用健康、未受貴腐菌感染的葡萄，在 -8°C 以下天然冰凍後採收。事實上，貴腐菌（Botrytis）對 Eiswein 有害，會破壞冰凍效果。TBA 才是需要貴腐菌的等級。'
+          explanation: 'Eiswein（冰酒）必須使用健康、未受貴腐菌感染的葡萄，在 -7°C 以下天然冰凍後採收。Eiswein 要求葡萄健康，不應受貴腐菌明顯影響；貴腐菌主要與 BA／TBA 相關。'
         },
         {
           question: '以下哪個德國產區以種植 Spätburgunder（黑皮諾）紅酒聞名，且地處德國最北？',
@@ -1172,8 +1172,8 @@ export const G2M1L4 = {
     {
       type: 'comparison',
       title: '上 Nahe vs 下 Nahe 風格對比',
-      left: { label: '⛰️ 上 Nahe（Obere Nahe）', items: ['Monzingen、Bad Kreuznach 上游', '板岩為主，較涼爽', '酒體豐潤，礦物感厚重', '適合陳年', '代表：Emrich-Schönleber', '風格：深邃、層次豐富'] },
-      right: { label: '🌊 下 Nahe（Untere Nahe）', items: ['Schlossböckelheim 下游', '斑岩、火山岩、石英岩', '礦物感更尖銳細緻', '酸度更鮮明', '代表：Dönnhoff', '風格：透明、精準、礦石感強'] }
+      left: { label: '⛰️ 上 Nahe（Obere Nahe）', items: ['Monzingen、Bad Kreuznach 上游', '板岩為主，較涼爽', '酒體豐潤，礦物感厚重', '適合陳年', '代表：Dönnhoff（Oberhausen）、Emrich-Schönleber', '風格：深邃、層次豐富'] },
+      right: { label: '🌊 下 Nahe（Untere Nahe）', items: ['Schlossböckelheim 下游', '斑岩、火山岩、石英岩', '礦物感更尖銳細緻', '酸度更鮮明', '風格：透明、精準、礦石感強'] }
     },
     {
       type: 'stats',
@@ -1295,7 +1295,7 @@ export const G2M2L2 = {
     {
       type: 'content',
       title: '☀️ Baden 的地理奇觀',
-      content: 'Baden 是德國最南端的葡萄酒產區，從博登湖（Bodensee）北岸一路延伸 470 公里至 Heidelberg 附近，面積約 16,000 公頃，地跨德國最長的葡萄酒地帶。西與法國阿爾薩斯隔萊茵河相望，共享相近的風土，但各自發展出獨特個性。Baden 年均氣溫全德最高，夏季酷熱，葡萄成熟度極佳，因此 Spätburgunder（黑皮諾）在此展現出最豐滿的果實感，被譽為「德國的布根地」。'
+      content: 'Baden 是德國最南端的葡萄酒產區，從博登湖（Bodensee）北岸一路延伸約 400 公里至 Heidelberg 附近，面積約 16,000 公頃，地跨德國最長的葡萄酒地帶。西與法國阿爾薩斯隔萊茵河相望，共享相近的風土，但各自發展出獨特個性。Baden 年均氣溫全德最高，夏季酷熱，葡萄成熟度極佳，因此 Spätburgunder（黑皮諾）在此展現出最豐滿的果實感，被譽為「德國的布根地」。'
     },
     {
       type: 'list',
@@ -1317,7 +1317,7 @@ export const G2M2L2 = {
     {
       type: 'germany-region-map',
       title: 'Baden 產區地圖',
-      description: '德國最南、最長的產區——470 公里從博登湖延伸至 Heidelberg，緊鄰法國阿爾薩斯',
+      description: '德國最南、最長的產區——約 400 公里從博登湖延伸至 Heidelberg，緊鄰法國阿爾薩斯',
       mapRegion: 'baden',
       highlightFiles: ['baden-freiburg-region.geojson', 'baden-karlsruhe-region.geojson'],
     },
@@ -1328,7 +1328,7 @@ export const G2M2L2 = {
       title: '📊 Baden 關鍵數據',
       stats: [
         { label: '面積', value: '16,000 公頃' },
-        { label: '南北長度', value: '470 公里（全德最長）' },
+        { label: '南北長度', value: '約 400 公里（全德最長）' },
         { label: 'Spätburgunder 比例', value: '約 37%（德國最高）' },
         { label: '代表酒莊', value: 'Bernhard Huber、Ziereisen、Salwey、Dr. Heger' }
       ]
@@ -1384,7 +1384,7 @@ export const G2M2L3 = {
 
       title: '🍇 Württemberg 特色葡萄品種',
       items: [
-        { icon: '🌸', text: 'Trollinger：德語「南蒂羅爾人」，幾乎只產於 Württemberg，酒色淡、果香清新、低單寧、微酸' },
+        { icon: '🌸', text: 'Trollinger：與義大利 Schiava／Vernatsch 同為一種，德國幾乎只種在 Württemberg，酒色淡、果香清新、低單寧、微酸' },
         { icon: '💪', text: 'Lemberger（Blaufränkisch）：深色、單寧結實、黑莓香料，是 Württemberg 最有個性的紅品種' },
         { icon: '🌿', text: 'Schwarzriesling（Pinot Meunier）：「黑 Riesling」，即 Meunier，花香柔美、中等酒體' },
         { icon: '🔶', text: 'Spätburgunder：在 Württemberg 也有種植，但比例低於 Baden' },
@@ -1409,7 +1409,7 @@ export const G2M2L3 = {
       stats: [
         { label: '面積', value: '11,500 公頃' },
         { label: '紅酒比例', value: '約 70%（全德最高）' },
-        { label: '最具特色品種', value: 'Trollinger（幾乎僅見於此地）' },
+        { label: '最具特色品種', value: 'Trollinger（德國幾乎僅見於此地）' },
         { label: '產區中心', value: 'Stuttgart；次產區 Remstal、Heilbronn' }
       ]
     },
@@ -1511,7 +1511,7 @@ export const G2M2L4 = {
 export const G2M3L1 = {
   lessonId: 'G2M3L1',
   title: 'Ahr — 德國紅酒聖地',
-  description: '探索德國最小卻最精英的紅酒產區',
+  description: '探索德國小而精的紅酒產區',
   objectives: ['了解 Ahr 如何在北緯 50 度釀出優秀紅酒', '認識 Ahr 的地形與土壤優勢', '掌握 Ahr 與 Pfalz 的 Spätburgunder 風格差異'],
   slides: [
     {
@@ -1523,7 +1523,7 @@ export const G2M3L1 = {
     {
       type: 'content',
       title: '🔴 Ahr 的驚人成就',
-      content: 'Ahr 位於德國萊茵河支流阿爾河（Ahr）的河谷地帶，是德國最小的傳統葡萄酒產區之一，面積僅約 565 公頃。地處北緯 50.5 度，理論上難以讓紅葡萄充分成熟，然而 Ahr 卻以 Spätburgunder（黑皮諾）稱霸德國紅酒界。其秘密在於：陡峭的 V 字型峽谷地形將冷空氣排出，灰瓦岩與板岩吸熱蓄溫，南向坡道捕捉最多陽光，三重優勢造就了 Ahr 酒的優雅細膩——紅莓、丁香、細緻單寧，是德國最精緻的紅酒風格之一。'
+      content: 'Ahr 位於德國萊茵河支流阿爾河（Ahr）的河谷地帶，是德國較小的傳統葡萄酒產區之一，面積僅約 531 公頃。地處北緯 50.5 度，理論上難以讓紅葡萄充分成熟，然而 Ahr 卻以 Spätburgunder（黑皮諾）稱霸德國紅酒界。其秘密在於：陡峭的 V 字型峽谷地形將冷空氣排出，灰瓦岩與板岩吸熱蓄溫，南向坡道捕捉最多陽光，三重優勢造就了 Ahr 酒的優雅細膩——紅莓、丁香、細緻單寧，是德國最精緻的紅酒風格之一。'
     },
     {
       type: 'germany-region-map',
@@ -1556,7 +1556,7 @@ export const G2M3L1 = {
       type: 'stats',
       title: '📊 Ahr 關鍵數據',
       stats: [
-        { label: '面積', value: '565 公頃（全德最小之一）' },
+        { label: '面積', value: '531 公頃（德國較小產區之一）' },
         { label: 'Spätburgunder 比例', value: '約 65%' },
         { label: '緯度', value: '北緯 50.5°（全德最北紅酒產區之一）' },
         { label: '代表酒莊', value: 'Meyer-Näkel、Deutzerhof、Jean Stodden、Kreuzberg' }
@@ -1598,12 +1598,12 @@ export const G2M3L2 = {
     {
       type: 'content',
       title: '🏰 Mittelrhein 的世遺風景',
-      content: 'Mittelrhein（中萊茵）是德國最小的葡萄酒產區之一，面積僅約 430 公頃。這段萊茵河峽谷——從 Bingen 至 Koblenz——在 2002 年被列為 UNESCO 世界文化遺產。陡峭的岩壁上聳立著數十座中世紀城堡，葡萄園就嵌在其間，坡度高達 45–65 度，景觀壯麗但農作極為費力。泥盆紀板岩（Devonian Slate）是主要土壤，為 Riesling 提供清爽礦物感與高酸張力。Mittelrhein 的 Riesling 以其精瘦清澈、礦石感鮮明著稱，是行家眼中的寶藏。'
+      content: 'Mittelrhein（中萊茵）是德國面積最小的葡萄酒產區，面積僅約 460 公頃。這段萊茵河峽谷——從 Bingen 至 Koblenz——在 2002 年被列為 UNESCO 世界文化遺產。陡峭的岩壁上聳立著數十座中世紀城堡，葡萄園就嵌在其間，坡度高達 45–65 度，景觀壯麗但農作極為費力。泥盆紀板岩（Devonian Slate）是主要土壤，為 Riesling 提供清爽礦物感與高酸張力。Mittelrhein 的 Riesling 以其精瘦清澈、礦石感鮮明著稱，是行家眼中的寶藏。'
     },
     {
       type: 'germany-region-map',
       title: 'Mittelrhein 產區地圖',
-      description: 'Bingen 至 Koblenz 的 UNESCO 世遺峽谷——430 公頃，德國最小且最難耕作的產區',
+      description: 'Bingen 至 Koblenz 的 UNESCO 世遺峽谷——460 公頃，德國最小且最難耕作的產區',
       mapRegion: 'mittelrhein',
       highlightFiles: ['mittelrhein-region.geojson'],
     },
@@ -1634,7 +1634,7 @@ export const G2M3L2 = {
       type: 'stats',
       title: '📊 Mittelrhein 關鍵數據',
       stats: [
-        { label: '面積', value: '430 公頃（德國最小產區之一）' },
+        { label: '面積', value: '460 公頃（德國最小產區）' },
         { label: 'Riesling 比例', value: '超過 75%' },
         { label: '世界遺產', value: 'UNESCO 萊茵峽谷世界文化遺產（2002年）' },
         { label: '主要土壤', value: '泥盆紀板岩（Devonian Slate）' }
@@ -1664,24 +1664,24 @@ export const G2M3L2 = {
 export const G2M3L3 = {
   lessonId: 'G2M3L3',
   title: 'Hessische Bergstrasse — 德國最早的春天',
-  description: '認識德國面積最小的官方葡萄酒產區',
+  description: '認識德國面積第二小的官方葡萄酒產區',
   objectives: ['了解 Hessische Bergstrasse 的地理與氣候特色', '認識產區主要品種與生產者', '掌握這個隱藏小產區的獨特魅力'],
   slides: [
     {
       type: 'title',
       title: 'Hessische Bergstrasse — 德國最早的春天',
-      subtitle: '杏花盛開的德國最小官方產區',
+      subtitle: '杏花盛開的德國第二小官方產區',
       background: '#5c6bc0'
     },
     {
       type: 'content',
       title: '🌸 Hessische Bergstrasse 的春日傳奇',
-      content: 'Hessische Bergstrasse（黑森山道）是德國面積最小的官方葡萄酒產區，僅約 455 公頃。「Bergstrasse」意為「山道」，這條古老的貿易道路沿 Odenwald 山脈（奧登瓦爾德）西麓而行，如今葡萄園就分佈於此。這個產區最著名的特色是德國最早到來的春天——每年 2 月底至 3 月初，Bensheim 與 Heppenheim 的杏仁樹（Mandelbaum）率先開花，成為當地的傳統春日節慶。Odenwald 山脈為葡萄園提供天然屏障，使氣溫偏暖，春季回溫特別早，是德國獨特的「春天前哨站」。'
+      content: 'Hessische Bergstrasse（黑森山道）是德國第二小的官方葡萄酒產區（僅次於 Mittelrhein），僅約 461 公頃。「Bergstrasse」意為「山道」，這條古老的貿易道路沿 Odenwald 山脈（奧登瓦爾德）西麓而行，如今葡萄園就分佈於此。這個產區最著名的特色是德國最早到來的春天——每年 2 月底至 3 月初，Bensheim 與 Heppenheim 的杏仁樹（Mandelbaum）率先開花，成為當地的傳統春日節慶。Odenwald 山脈為葡萄園提供天然屏障，使氣溫偏暖，春季回溫特別早，是德國獨特的「春天前哨站」。'
     },
     {
       type: 'germany-region-map',
       title: 'Hessische Bergstraße 產區地圖',
-      description: 'Odenwald 山脈西麓的德國最小官方產區（455 公頃）——鄰近 Rheinhessen 與 Pfalz，德國最早到春天的葡萄酒地帶',
+      description: 'Odenwald 山脈西麓的德國第二小的官方產區（461 公頃）——鄰近 Rheinhessen 與 Pfalz，德國最早到春天的葡萄酒地帶',
       mapRegion: 'hessische',
       highlightFiles: ['hessische-region.geojson'],
     },
@@ -1703,7 +1703,7 @@ export const G2M3L3 = {
       type: 'stats',
       title: '📊 Hessische Bergstrasse 關鍵數據',
       stats: [
-        { label: '面積', value: '455 公頃（全德官方最小產區）' },
+        { label: '面積', value: '461 公頃（德國第二小產區）' },
         { label: '主要品種', value: 'Riesling（超過 50%）、Spätburgunder、Müller-Thurgau' },
         { label: '主要生產者', value: 'Bergsträsser Winzer eG 合作社' },
         { label: '特色', value: '德國最早春天，杏花節，在地消費為主' }
@@ -1834,7 +1834,7 @@ export const G2M4L1 = {
       type: 'comparison',
       title: 'TBA vs Eiswein 核心差異',
       left: { label: '🍯 TBA（Trockenbeerenauslese）', items: ['需要貴腐菌（Botrytis）感染', '葡萄乾縮成葡萄乾狀態', '150+ Oechsle 最低含糖量', '顏色深金至琥珀', '蜂蜜、番紅花、焦糖香氣', '可陳年 50 年以上'] },
-      right: { label: '❄️ Eiswein（冰酒）', items: ['不需要貴腐菌（健康葡萄）', '葡萄在 -8°C 以下天然冰凍', '120+ Oechsle（依產區）', '顏色清澈金黃', '芒果、荔枝、蜂蜜酸甜', '陳年潛力同樣驚人'] }
+      right: { label: '❄️ Eiswein（冰酒）', items: ['不需要貴腐菌（健康葡萄）', '葡萄在 -7°C 以下天然冰凍', '120+ Oechsle（依產區）', '顏色清澈金黃', '芒果、荔枝、蜂蜜酸甜', '陳年潛力同樣驚人'] }
     },
     {
       type: 'list',
@@ -1852,7 +1852,7 @@ export const G2M4L1 = {
       title: '📊 TBA 與 Eiswein 關鍵數據',
       stats: [
         { label: 'TBA 最低 Oechsle', value: '150–154°Oe（依產區而異）' },
-        { label: 'Eiswein 採收溫度', value: '-8°C 以下（通常冬季深夜採收）' },
+        { label: 'Eiswein 採收溫度', value: '-7°C 以下（通常冬季深夜採收）' },
         { label: '陳年潛力', value: 'TBA 50 年以上；Eiswein 30–50 年' },
         { label: '價格範圍', value: '頂級 TBA 每瓶可達數千至數萬歐元' }
       ]
@@ -1863,9 +1863,9 @@ export const G2M4L1 = {
       questions: [
         {
           question: 'Eiswein 的釀造最關鍵的要求是什麼？',
-          options: ['葡萄必須感染貴腐菌', '在 -8°C 以下天然冰凍且葡萄必須健康', '必須在陽光最強的午後採收', '葡萄必須在橡木桶中發酵'],
+          options: ['葡萄必須感染貴腐菌', '在 -7°C 以下天然冰凍且葡萄必須健康', '必須在陽光最強的午後採收', '葡萄必須在橡木桶中發酵'],
           answer: 1,
-          explanation: 'Eiswein 有兩個核心要求：一、葡萄必須在 -8°C 以下的低溫中天然冰凍；二、葡萄必須健康（沒有貴腐菌感染）。冰凍使水分結晶，榨汁時只留下高度濃縮的甜酸汁液。若葡萄感染了貴腐菌，其細胞結構被破壞，冰凍效果就會打折扣，無法達到 Eiswein 的標準。'
+          explanation: 'Eiswein 有兩個核心要求：一、葡萄必須在 -7°C 以下的低溫中天然冰凍；二、葡萄必須健康（沒有貴腐菌感染）。冰凍使水分結晶，榨汁時只留下高度濃縮的甜酸汁液。若葡萄感染了貴腐菌，其細胞結構被破壞，冰凍效果就會打折扣，無法達到 Eiswein 的標準。'
         },
         {
           question: '哪個酒莊的 TBA 曾在拍賣會上創下德國葡萄酒世界紀錄高價？',
@@ -2084,7 +2084,7 @@ export const G2FinalExam = {
           question: 'Württemberg 最具地方特色、幾乎只在此地種植的紅葡萄品種是？',
           options: ['Dornfelder', 'Lemberger', 'Trollinger', 'Spätburgunder'],
           answer: 2,
-          explanation: 'Trollinger 是 Württemberg 最具代表性的地方品種，幾乎只在此地種植，釀出酒色偏淡、果香清新、低單寧的輕盈紅酒，是當地人日常飲用的「鄉土酒」，深深根植於 Württemberg 的飲食文化中。'
+          explanation: 'Trollinger 是 Württemberg 最具代表性的地方品種，在德國幾乎只在此地種植，釀出酒色偏淡、果香清新、低單寧的輕盈紅酒，是當地人日常飲用的「鄉土酒」，深深根植於 Württemberg 的飲食文化中。'
         },
         {
           question: 'Franken 最具識別性的兩大特色是？',
@@ -2126,7 +2126,7 @@ export const G2FinalExam = {
           question: 'TBA 與 Eiswein 的最關鍵區別是什麼？',
           options: ['TBA 酒精度較高，Eiswein 較低', 'TBA 需要貴腐菌感染；Eiswein 需健康葡萄天然冰凍', 'TBA 只能在 Mosel 生產', 'Eiswein 比 TBA 甜度更高'],
           answer: 1,
-          explanation: '兩者的本質區別：TBA 仰賴 Botrytis 貴腐菌感染葡萄、蒸發水分濃縮糖分；而 Eiswein 要求完全健康的葡萄在 -8°C 以下天然冰凍，榨汁時水分以冰晶形式被分離，留下濃縮甜酸汁液。健康葡萄是 Eiswein 的必要條件，貴腐菌反而有害。'
+          explanation: '兩者的本質區別：TBA 仰賴 Botrytis 貴腐菌感染葡萄、蒸發水分濃縮糖分；而 Eiswein 要求完全健康的葡萄在 -7°C 以下天然冰凍，榨汁時水分以冰晶形式被分離，留下濃縮甜酸汁液。健康葡萄是 Eiswein 的必要條件，貴腐菌反而有害。'
         },
         {
           question: 'Winzersekt（精品 Sekt）的規範最低要求酒渣陳年多少時間？',
@@ -2618,9 +2618,9 @@ export const G3M3L1 = {
       title: '德國傳統料理搭配建議（詳細版）',
       items: [
         { icon: '🥩', text: '德國豬腳（Schweinshaxe）→ Pfalz Spätburgunder Trocken 或 Ahr Spätburgunder（單寧切油脂）' },
-        { icon: '🥬', text: '酸菜豬肉（Sauerkraten）→ Rheinhessen Riesling Spätlese（甜酸平衡酸菜）' },
+        { icon: '🥬', text: '酸菜豬肉（Sauerkraut）→ Rheinhessen Riesling Spätlese（甜酸平衡酸菜）' },
         { icon: '🌿', text: '白蘆筍（Weißer Spargel）→ Franken Silvaner Trocken 或 Pfalz Riesling（傳統最佳搭配）' },
-        { icon: '🐟', text: '萊茵河鱸魚（Lachsforelle）→ Mosel Kabinett（輕盈海鮮配輕盈白酒）' },
+        { icon: '🐟', text: '鮭鱒（Lachsforelle）→ Mosel Kabinett（輕盈海鮮配輕盈白酒）' },
         { icon: '🌭', text: '德國白腸（Weißwurst）→ Bavarian 白酒或 Franken Silvaner Trocken' },
         { icon: '🧀', text: '德國黑麵包配藍紋乳酪 → Rheingau Spätlese 或 Auslese（甜酸切乳酪脂）' },
         { icon: '🍎', text: '蘋果蛋糕（Apfelstrudel）→ Pfalz Riesling Auslese（甜配甜原則）' }

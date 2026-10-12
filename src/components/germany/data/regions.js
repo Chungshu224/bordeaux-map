@@ -65,7 +65,7 @@ export const germanyRegions = [
     vineyardFile: '/germany/geojson/rheingau-vineyard.geojson',
     grapes: ['Riesling', 'Spätburgunder'],
     styles: ['Kabinett', 'Spätlese', 'Auslese', 'Eiswein', 'TBA'],
-    description: '傳統頂級產區，Riesling 佔比高達 85%（全德最高）；「萊茵河膝」轉彎處造就南向坡的絕佳微氣候',
+    description: '傳統頂級產區，Riesling 佔比約 76%；「萊茵河膝」轉彎處造就南向坡的絕佳微氣候',
     soils: ['板岩', '石英岩', '黏土板岩'],
     climate: '大陸型，萊茵河調節',
     hectares: 3117,

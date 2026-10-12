@@ -44,7 +44,7 @@ const questions = [
     clue: '簡稱 BA，德語「漿果精選」，產量極少，價格昂貴'
   },
   {
-    subject: '在自然冰凍狀態（-8°C 以下）採收壓榨，不需要貴腐菌，濃縮甜酸對比強烈',
+    subject: '在自然冰凍狀態（-7°C 以下）採收壓榨，不需要貴腐菌，濃縮甜酸對比強烈',
     options: ['Beerenauslese', 'TBA', 'Eiswein', 'Auslese'],
     answer: 'Eiswein',
     clue: '需要等待天然霜凍，有些年份甚至等不到，是最稀有的等級之一'

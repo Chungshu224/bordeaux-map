@@ -202,7 +202,7 @@ const defaultRegions = [
   },
   {
     key: 'mittelrhein', name: 'Mittelrhein', zhName: '中萊茵', zone: 'east', emoji: '🏰',
-    size: '470 公頃', signature: 'Riesling',
+    size: '460 公頃', signature: 'Riesling',
     tagline: '萊茵河遊船風光區——世界遺產中的微小 Riesling 產區',
     climate: '萊茵河河谷涼爽、陡坡板岩',
     soils: '板岩、灰岩、火山岩',
@@ -222,13 +222,13 @@ const defaultRegions = [
   },
   {
     key: 'sachsen', name: 'Sachsen', zhName: '薩克森', zone: 'east', emoji: '⛪',
-    size: '500 公頃（德國最小）', signature: 'Müller-Thurgau + Riesling + Weissburgunder',
-    tagline: '德國最小最東產區——Elbe 河畔 Dresden 周邊',
+    size: '522 公頃', signature: 'Müller-Thurgau + Riesling + Weissburgunder',
+    tagline: '德國最東產區——Elbe 河畔 Dresden 周邊',
     climate: '寒涼大陸性、日照短。極端微氣候',
     soils: '花崗岩、片麻岩 (Gneiss)、黃土',
     style: '輕盈乾型酒、酸度高、礦物突出。產量幾乎全在當地消費',
     producers: ['Schloss Proschwitz', 'Schloss Wackerbarth', 'Klaus Zimmerling'],
-    keyFact: 'Sachsen 是德國最小的官方葡萄酒產區（500 公頃）、最東產區、世界最北產區之一。Schloss Wackerbarth 結合葡萄酒與氣泡酒（Sekt）製造，是 Saxony 觀光重點。'
+    keyFact: 'Sachsen 是德國最東的官方葡萄酒產區（522 公頃）、最東產區、世界最北產區之一。Schloss Wackerbarth 結合葡萄酒與氣泡酒（Sekt）製造，是 Saxony 觀光重點。'
   }
 ]
 
