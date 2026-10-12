@@ -185,7 +185,7 @@ const P1M1L2_slides = [
     question: '以下哪個是葡萄牙最大的 DOC（面積最大的法定產區）？',
     options: ['Douro', 'Alentejo', 'Vinho Verde', 'Dão'],
     answer: 2,
-    explanation: 'Vinho Verde 位於葡萄牙西北部的 Minho 大區，是葡萄牙面積最大的 DOC，覆蓋約 34,000 公頃。',
+    explanation: 'Vinho Verde 位於葡萄牙西北部的 Minho 大區，是葡萄牙面積最大的 DOC，覆蓋約 21,000 公頃。',
   },
   {
     type: 'quiz',
@@ -812,7 +812,7 @@ const P1M4L2_slides = [
     title: 'Vinho Verde — 最大 DOC 的清新綠酒',
     subtitle: 'Level 1 · 第十一課',
     points: [
-      { icon: '🌿', label: '最大 DOC', text: '葡萄牙面積最大的 DOC，約 34,000 公頃' },
+      { icon: '🌿', label: '最大 DOC', text: '葡萄牙面積最大的 DOC，約 21,000 公頃' },
       { icon: '💦', label: '「綠酒」的真正含義', text: '指年輕新鮮的酒，不是顏色！可以是白、紅、粉紅' },
       { icon: '⭐', label: '9 個子產區', text: '包含頂級 Alvarinho 的 Monção 和 Melgaço' },
     ],
@@ -868,7 +868,7 @@ const P1M4L2_slides = [
   {
     type: 'vinho-verde-subregions',
     title: '🌿 Vinho Verde 9 大子產區互動深度',
-    description: 'Vinho Verde 是葡萄牙最大的 DOC（34,000 ha），9 個子產區各有主導品種與風土差異——從頂級 Alvarinho 重鎮 Monção/Melgaço 到深色 Vinhão 紅酒重鎮 Sousa/Baião 的完整互動探索',
+    description: 'Vinho Verde 是葡萄牙最大的 DOC（約 21,000 ha），9 個子產區各有主導品種與風土差異——從頂級 Alvarinho 重鎮 Monção/Melgaço 到深色 Vinhão 紅酒重鎮 Sousa/Baião 的完整互動探索',
   },
 ]
 
@@ -1074,7 +1074,7 @@ const P2M1L1_slides = [
       </ul>
       <h4>🍷 代表性酒款</h4>
       <ul>
-        <li><strong>Barca Velha</strong>（Ferreirinha）：被譽為「葡萄牙的 Pétrus」</li>
+        <li><strong>Barca Velha</strong>（Ferreirinha）：葡萄牙最具代表性的頂級紅酒</li>
         <li><strong>Quinta do Crasto Reserva</strong>：國際知名，性價比高</li>
         <li><strong>Niepoort Redoma</strong>：有機自然派代表</li>
       </ul>
@@ -1219,7 +1219,7 @@ const P2M5L1_slides = [
       <p>馬德拉酒之所以能陳年百年，關鍵在於<strong>Estufagem（加熱氧化工藝）</strong>。</p>
       <h4>🌡️ 兩種加熱方式</h4>
       <ul>
-        <li><strong>Estufagem（工業加熱）</strong>：將酒置於不鏽鋼槽中，加熱至 45–50°C 並維持 3 個月以上，加速馬德拉化（Maderization）</li>
+        <li><strong>Estufagem（工業加熱）</strong>：將酒置於不鏽鋼槽中，加熱（法規上限 50°C，常見 40–50°C）並維持至少 3 個月，加速馬德拉化（Maderization）</li>
         <li><strong>Canteiro（自然加熱）⭐</strong>：將酒桶存放在酒莊頂樓，讓大西洋的陽光和空氣自然加熱熟化，過程緩慢（可達數十年）。頂級馬德拉酒的方式</li>
       </ul>
       <h4>🔄 馬德拉化效果</h4>
@@ -1235,7 +1235,7 @@ const P2M5L1_slides = [
     type: 'compare',
     title: '馬德拉四大品種與風格（從干到甜）',
     items: [
-      { icon: '🍋', label: 'Sercial（極干）', desc: '酒精 17%，殘糖低。高酸清爽，帶堅果鹽水礦物質感，作餐前酒最佳', color: '#c9b45c' },
+      { icon: '🍋', label: 'Sercial（極干）', desc: '殘糖低（Extra Seco／Seco）。高酸清爽，帶堅果鹽水礦物質感，作餐前酒最佳', color: '#c9b45c' },
       { icon: '🌿', label: 'Verdelho（中干）', desc: '殘糖略高。帶煙燻香草，中等濃郁度，可搭配海鮮湯', color: '#7a8c3a' },
       { icon: '🟤', label: 'Bual（中甜）', desc: '甜度明顯。深色，帶太妃糖、無花果、焦糖複雜風味，佐起司完美', color: '#8B4513' },
       { icon: '🍯', label: 'Malvasia（極甜）', desc: '最甜最濃郁。蜂蜜、杏桃、熱帶水果，絲滑質感，最受歡迎的餐後甜酒', color: '#B8860B' },
@@ -1262,14 +1262,14 @@ const P2M5L1_slides = [
   {
     type: 'madeira-noble-grapes',
     title: '🏝️ Madeira 四大貴族品種 × 工藝互動深度',
-    description: 'Sercial / Verdelho / Bual / Malvasia 甜度光譜 + Estufagem（工業）vs Canteiro（自然）工藝對比 + 5 級陳年分級的完整互動探索',
+    description: 'Sercial / Verdelho / Bual / Malvasia 甜度光譜 + Estufagem（工業）vs Canteiro（自然）工藝對比 + 陳年與年份標示的完整互動探索',
   },
   {
     type: 'summary',
     message: '恭喜完成馬德拉課程！',
     keyPoints: [
       'Madeira 位於大西洋火山島，獨特加熱氧化工藝使酒不朽',
-      'Estufagem = 工業加熱（45–50°C）；Canteiro = 自然頂樓陳年（頂級）',
+      'Estufagem = 工業加熱（≤50°C，至少 3 個月）；Canteiro = 自然頂樓陳年（頂級）',
       '四大品種由干到甜：Sercial（極干）→ Verdelho（中干）→ Bual（中甜）→ Malvasia（極甜）',
       '馬德拉可陳年超過百年，是世界最長壽的葡萄酒之一',
     ],
@@ -1465,7 +1465,7 @@ const P2M1L3_slides = [
     question: 'Vinho Verde 傳統上保留少量 CO₂ 的原因是什麼？',
     options: ['法規規定必須有氣泡', '增加鮮活感，彌補高酸度帶來的清爽特性', '掩蓋酒的缺陷', '降低酒精度'],
     answer: 1,
-    explanation: 'Vinho Verde 保留少量天然 CO₂（微氣泡），是傳統釀造工藝的結果——在不鏽鋼桶中保留蘋果乳酸發酵產生的少量二氧化碳。這種微氣泡增加了鮮活感和清爽度，成為 Vinho Verde 的標誌性特色，特別適合搭配海鮮。',
+    explanation: 'Vinho Verde 保留少量天然 CO₂（微氣泡），是傳統釀造工藝的結果——傳統上來自蘋果乳酸發酵（MLF）在瓶中產生的少量二氧化碳；今日多數生產者改為直接充入 CO₂（壓力低於 1 bar，法規上不屬氣泡酒）。這種微氣泡增加了鮮活感和清爽度，成為 Vinho Verde 的標誌性特色，特別適合搭配海鮮。',
   },
   {
     type: 'summary',
@@ -1603,7 +1603,7 @@ const P2M2L1_slides = [
       </ul>
       <h4>📊 基本數字</h4>
       <ul>
-        <li>DOC 面積：約 <strong>20,000 公頃</strong>葡萄藤（已種植）</li>
+        <li>DOC 面積：約 <strong>9,800 公頃</strong>葡萄藤（已種植）</li>
         <li>海拔：<strong>400–800m</strong>，部分頂級葡萄園超過 700m</li>
         <li>Dão 歷史上曾受私人酒廠壟斷（1950–90年代），1990 後獨立酒莊崛起</li>
       </ul>
@@ -2187,7 +2187,7 @@ const P2M3L3_slides = [
       <ul>
         <li><strong>河谷地帶（Campo do Tejo）</strong>：沖積平原，土壤肥沃，高產，傳統大量生產區</li>
         <li><strong>丘陵地帶（Charneca）</strong>：砂岩、黏土，較乾旱，品質更高，近代精品酒莊集中此區</li>
-        <li><strong>北部山地</strong>：靠近 Serra de São Mamede，海拔較高，保留酸度</li>
+        <li><strong>北部山地</strong>：地勢較高、較涼爽，保留酸度</li>
       </ul>
       <h4>🌡️ 氣候</h4>
       <ul>
@@ -2197,7 +2197,7 @@ const P2M3L3_slides = [
       </ul>
       <h4>🍇 主要品種</h4>
       <ul>
-        <li>紅：<strong>Castelão（= Fernão Pires 的紅酒版）・Trincadeira・Aragonez・Touriga Nacional</strong></li>
+        <li>紅：<strong>Castelão・Trincadeira・Aragonez・Touriga Nacional</strong></li>
         <li>白：<strong>Fernão Pires（最廣泛）・Arinto・Sauvignon Blanc</strong></li>
         <li>國際品種：Cabernet Sauvignon、Syrah、Merlot（IGP 標示）</li>
       </ul>
@@ -2340,7 +2340,7 @@ const P2M4L1_slides = [
       <ul>
         <li><strong>Esporão</strong>：Reguengos 子區，葡萄牙出口量最大的酒莊，有機農法先鋒</li>
         <li><strong>Herdade do Mouchão</strong>：古典風格，Alicante Bouschet 標竿，需陳年 10+ 年</li>
-        <li><strong>Cartuxa（Fundação Eugénio de Almeida）</strong>：Évora 的歷史品牌，旗艦 Pera Manca 是 Alentejo 的 Pétrus</li>
+        <li><strong>Cartuxa（Fundação Eugénio de Almeida）</strong>：Évora 的歷史品牌，旗艦 Pera Manca 是 Alentejo 最具傳奇性的酒款</li>
         <li><strong>Cortes de Cima</strong>：丹麥移民酒莊，Syrah 先驅，接近 Vidigueira</li>
       </ul>
     `,
@@ -2354,10 +2354,10 @@ const P2M4L1_slides = [
   },
   {
     type: 'quiz',
-    question: 'Alentejo 最知名的旗艦酒款「Pera Manca」由哪個酒莊生產，被稱為 Alentejo 的「Pétrus」？',
+    question: 'Alentejo 最知名的旗艦酒款「Pera Manca」由哪個酒莊生產，被視為 Alentejo 最具傳奇性的旗艦酒款？',
     options: ['Esporão', 'Herdade do Mouchão', 'Cartuxa（Fundação Eugénio de Almeida）', 'Cortes de Cima'],
     answer: 2,
-    explanation: 'Pera Manca 由位於 Évora 的 Cartuxa（Fundação Eugénio de Almeida）生產，是 Alentejo 最具傳奇性的旗艦酒款，被稱為「Alentejo 的 Pétrus」。只在最優秀的年份發布，同時有紅酒和白酒版本。',
+    explanation: 'Pera Manca 由位於 Évora 的 Cartuxa（Fundação Eugénio de Almeida）生產，是 Alentejo 最具傳奇性的旗艦酒款，是 Alentejo 最具傳奇性的酒款之一。只在最優秀的年份發布，同時有紅酒和白酒版本。',
   },
   {
     type: 'summary',
@@ -2631,9 +2631,9 @@ const P2FinalExam_slides = [
   {
     type: 'quiz',
     question: 'Madeira 馬德拉酒「Canteiro」工藝和「Estufagem」工藝的根本差異是？',
-    options: ['Canteiro 使用外加葡萄糖增甜，Estufagem 不加', 'Canteiro 是在酒莊頂樓自然加熱陳年（頂級），Estufagem 是工業不鏽鋼桶加熱（45–50°C）', 'Canteiro 比 Estufagem 更快完成', 'Canteiro 只用於 Sercial，Estufagem 只用於 Malvasia'],
+    options: ['Canteiro 使用外加葡萄糖增甜，Estufagem 不加', 'Canteiro 是在酒莊頂樓自然加熱陳年（頂級），Estufagem 是工業不鏽鋼槽加熱（≤50°C）', 'Canteiro 比 Estufagem 更快完成', 'Canteiro 只用於 Sercial，Estufagem 只用於 Malvasia'],
     answer: 1,
-    explanation: 'Canteiro 是頂級 Madeira 的自然加熱方式，將酒桶存放在酒莊頂樓，利用大西洋氣候自然熟化，過程可達數十年，品質更複雜細膩。Estufagem 是工業加熱法，在不鏽鋼桶中加熱至 45–50°C 維持至少 3 個月，用於大量生產款。',
+    explanation: 'Canteiro 是頂級 Madeira 的自然加熱方式，將酒桶存放在酒莊頂樓，利用大西洋氣候自然熟化，過程可達數十年，品質更複雜細膩。Estufagem 是工業加熱法，在不鏽鋼槽中加熱（上限 50°C）維持至少 3 個月，用於大量生產款。',
   },
   {
     type: 'quiz',
@@ -2676,9 +2676,9 @@ const P4M1L1_slides = [
   {
     type: 'content',
     icon: '🏰',
-    title: 'Barca Velha — 葡萄牙的 Pétrus',
+    title: 'Barca Velha — 葡萄牙最傳奇的紅酒',
     html: `
-      <p><strong>Barca Velha</strong> 是葡萄牙最具代表性的頂級紅酒，由 Ferreira 酒莊於 1952 年由 Fernando Nicolau de Almeida 創制。它常被稱為「葡萄牙的 Pétrus」，每次發布都引發市場轟動。</p>
+      <p><strong>Barca Velha</strong> 是葡萄牙最具代表性的頂級紅酒，由 Ferreira 酒莊於 1952 年由 Fernando Nicolau de Almeida 創制。它只在最優秀的年份才發布，每次發布都引發市場轟動。</p>
       <h4>🍇 品種與產區</h4>
       <ul>
         <li><strong>產區</strong>：Douro Superior（杜羅河上游，靠近西班牙邊界）</li>
@@ -2688,7 +2688,7 @@ const P4M1L1_slides = [
       <h4>📊 極罕見的發布規律</h4>
       <ul>
         <li>並非每年都生產：只在最優年份才發布，部分年份降格為 <em>Reserva Especial</em></li>
-        <li>自 1952 年至今，共發布 26 個年份（截至 2023 年）</li>
+        <li>自 1952 年至今，共宣布約 21 個年份（至 2015 年份，2024 年上市）</li>
         <li>著名年份：1964、1982、1985、1991、2004、2011</li>
         <li>市場價格：頂級年份每瓶可達數百至逾千歐元</li>
       </ul>
@@ -3184,7 +3184,7 @@ const P4M2L3_slides = [
     items: [
       { icon: '🌿', label: 'Niepoort（Douro）', desc: 'Dirk Niepoort：全串發酵、最低 SO₂，Batuta 和 Charme 是自然酒界的標竿作品', color: '#155724' },
       { icon: '🏔️', label: 'Quinta da Pellada（Dão）', desc: '生物動力農法，Álvaro Castro 的老藤 Touriga Nacional，純淨礦物感', color: '#1a3a6e' },
-      { icon: '🌊', label: 'João Pato（Bairrada）', desc: '有機農法，Baga 的現代詮釋，濃郁但精緻，突破 Bairrada 的傳統高澀印象', color: '#8B4513' },
+      { icon: '🌊', label: 'Filipa Pato（Bairrada）', desc: '有機農法，Baga 的現代詮釋，濃郁但精緻，突破 Bairrada 的傳統高澀印象', color: '#8B4513' },
       { icon: '🏝️', label: 'Barbeito（Madeira）', desc: '有機農法，極小批次的單一品種馬德拉，展現風土細節', color: '#8E44AD' },
     ],
   },
@@ -3413,7 +3413,7 @@ const P4M3L3_slides = [
     title: '波特酒與馬德拉：收藏與投資指南',
     subtitle: 'Level 4 · 陳年潛力與市場價值',
     points: [
-      { icon: '📈', label: '資產增值', text: 'Vintage Port 頂級年份年均增值 8–12%，超越多數傳統投資' },
+      { icon: '📈', label: '資產增值', text: 'Vintage Port 頂級年份在拍賣市場具有升值潛力（不保證）' },
       { icon: '🏺', label: '馬德拉的永恆性', text: '19 世紀馬德拉至今仍可飲用，是世界上最長壽的葡萄酒' },
       { icon: '🔍', label: '真偽鑑定', text: '學習如何識別真正的頂級老酒，避免市場上的假酒陷阱' },
     ],
@@ -3470,7 +3470,7 @@ const P4M3L3_slides = [
     type: 'compare',
     title: '波特酒 vs 馬德拉：收藏投資比較',
     items: [
-      { icon: '🥃', label: 'Vintage Port（投資型）', desc: '明確評分體系、全球拍賣市場成熟、頂級年份年均增值 8–12%，但需嚴格儲存條件', color: '#5c2a0a' },
+      { icon: '🥃', label: 'Vintage Port（投資型）', desc: '明確評分體系、全球拍賣市場成熟、頂級年份具升值潛力（不保證），但需嚴格儲存條件', color: '#5c2a0a' },
       { icon: '🏺', label: 'Madeira Frasqueira（收藏型）', desc: '陳年潛力無限（數百年），儲存相對容易（對溫度變化更寬容），但市場流動性較低', color: '#8E44AD' },
     ],
   },
@@ -3514,10 +3514,10 @@ const P4FinalExam_slides = [
   },
   {
     type: 'quiz',
-    question: '「葡萄牙的 Pétrus」指的是哪一支酒？',
+    question: '哪一支酒是 1952 年創立、只在最佳年份宣布的葡萄牙傳奇紅酒？',
     options: ['Quinta do Crasto Reserva', 'Barca Velha', 'Niepoort Batuta', 'Ramos Pinto Duas Quintas'],
     answer: 1,
-    explanation: 'Barca Velha 由 Ferreira 酒莊於 1952 年創制，因其稀罕、頂級品質和高昂價格，常被稱為「葡萄牙的 Pétrus」。它只在最優秀的年份才發布，至今共發布約 26 個年份。',
+    explanation: 'Barca Velha 由 Ferreira 酒莊於 1952 年創制，因其稀罕、頂級品質和高昂價格，是葡萄牙最具傳奇性的紅酒之一。它只在最優秀的年份才宣布，至今約 21 個年份。',
   },
   {
     type: 'quiz',
@@ -4041,7 +4041,7 @@ const P3M2L1_slides = [
     title: 'Madeira 的加熱氧化工藝深度解析',
     subtitle: 'Level 3 · Estufagem vs. Canteiro',
     points: [
-      { icon: '🌡️', label: 'Estufagem 工業法', text: '不鏽鋼桶中加熱至 45–50°C，至少 90 天——大量生產的標準工藝' },
+      { icon: '🌡️', label: 'Estufagem 工業法', text: '不鏽鋼槽中加熱（上限 50°C，常見 40–50°C），至少 3 個月——大量生產的標準工藝' },
       { icon: '🏠', label: 'Canteiro 自然法', text: '酒莊頂樓自然熟化，可達數十年——頂級馬德拉的唯一選擇' },
       { icon: '♾️', label: '馬德拉化的本質', text: '充分氧化後的酒不再怕氧、怕熱——這就是馬德拉可陳年百年的科學秘密' },
     ],
@@ -4055,10 +4055,10 @@ const P3M2L1_slides = [
       <h4>🏭 工業 Estufagem（大量生產款）</h4>
       <ul>
         <li>將加烈後的 Madeira 酒置於<strong>不鏽鋼槽（Estufas）</strong>中</li>
-        <li>緩慢加熱至 <strong>45–50°C</strong>，維持至少 <strong>90 天（3 個月）</strong></li>
+        <li>緩慢加熱（法規上限 <strong>50°C</strong>，常見 40–50°C），維持至少 <strong>3 個月</strong>；IVBAM 於加熱前接獲通報，可抽樣並封存槽體</li>
         <li>此過程加速了「馬德拉化（Maderization）」——正常需要數十年的氧化在 3 個月內完成</li>
         <li>產生的特徵香氣：焦糖・烘烤・燉煮水果・咖啡</li>
-        <li>冷卻後靜置至少 <strong>90 天</strong>，讓沉澱穩定，再過濾裝瓶</li>
+        <li>冷卻後靜置讓沉澱穩定，再過濾裝瓶</li>
       </ul>
       <h4>🔬 馬德拉化的化學反應</h4>
       <ul>
@@ -4099,9 +4099,9 @@ const P3M2L1_slides = [
     type: 'compare',
     title: 'Estufagem vs. Canteiro：兩種工藝全面對比',
     items: [
-      { icon: '🏭', label: 'Estufagem（工業）', desc: '不鏽鋼桶，45–50°C 加熱 90 天。快速馬德拉化，焦糖烘烤香突出。大量生產，3–5 年陳年後裝瓶', color: '#5d4037' },
+      { icon: '🏭', label: 'Estufagem（工業）', desc: '不鏽鋼槽，加熱（≤50°C）至少 3 個月。快速馬德拉化，焦糖烘烤香突出。大量生產，3–5 年陳年後裝瓶', color: '#5d4037' },
       { icon: '🏠', label: 'Canteiro（自然）⭐', desc: '閣樓木桶，自然溫度（20–25°C），陳年 2–100 年。緩慢熟化，層次精緻，可陳年百年。頂級 Madeira 唯一方式', color: '#8e44ad' },
-      { icon: '⏱️', label: '時間成本差異', desc: 'Estufagem = 90 天；Canteiro = 2–100 年。兩者品質差距與時間成本差距相對應', color: '#37474f' },
+      { icon: '⏱️', label: '時間成本差異', desc: 'Estufagem = 至少 3 個月；Canteiro = 2–100 年。兩者品質差距與時間成本差距相對應', color: '#37474f' },
       { icon: '💰', label: '價格差異', desc: '5 年 Estufagem ≈ €10–20；10 年 Canteiro ≈ €50–100；50 年 Canteiro ≈ €500+；百年老 Madeira ≈ 數千歐元', color: '#1565c0' },
     ],
   },
@@ -4110,12 +4110,12 @@ const P3M2L1_slides = [
     question: 'Canteiro 和 Estufagem 最根本的工藝差異是什麼？',
     options: [
       'Canteiro 使用不鏽鋼桶，Estufagem 使用橡木桶',
-      'Canteiro 是在酒莊頂樓自然溫度緩慢熟化（年至數十年），Estufagem 是不鏽鋼桶工業加熱至 45–50°C（90 天）',
+      'Canteiro 是在酒莊頂樓自然溫度緩慢熟化（年至數十年），Estufagem 是不鏽鋼槽工業加熱（≤50°C，至少 3 個月）',
       'Canteiro 只用於干型 Madeira，Estufagem 只用於甜型',
       'Canteiro 在西班牙進行，Estufagem 在葡萄牙進行'
     ],
     answer: 1,
-    explanation: 'Canteiro（自然法）是頂級 Madeira 的工藝：酒置於酒莊閣樓橡木桶中，利用島嶼自然氣候（20–25°C）緩慢熟化，可達 2–100 年以上。Estufagem（工業法）是大量生產方式：在不鏽鋼桶中加熱至 45–50°C 維持 90 天，快速完成馬德拉化。',
+    explanation: 'Canteiro（自然法）是頂級 Madeira 的工藝：酒置於酒莊閣樓橡木桶中，利用島嶼自然氣候（20–25°C）緩慢熟化，可達 2–100 年以上。Estufagem（工業法）是大量生產方式：在不鏽鋼槽中加熱（上限 50°C）維持至少 3 個月，快速完成馬德拉化。',
   },
   {
     type: 'quiz',
@@ -4128,7 +4128,7 @@ const P3M2L1_slides = [
     type: 'summary',
     message: '恭喜完成 Madeira 工藝深度課程！',
     keyPoints: [
-      'Estufagem（工業）：不鏽鋼桶 45–50°C × 90 天，大量生產，快速馬德拉化',
+      'Estufagem（工業）：不鏽鋼槽 ≤50°C × 至少 3 個月，大量生產，快速馬德拉化',
       'Canteiro（自然）⭐：閣樓自然熟化 2–100 年，頂級 Madeira 唯一方式',
       '馬德拉化 = 梅納反應 + 氧化 + 酯化，使酒完全穩定，不再怕熱怕氧',
       '百年 Madeira 只可能是 Canteiro，Blandy\'s 等頂級酒莊保有 1900 年份仍在銷售',
@@ -4160,14 +4160,14 @@ const P3M2L2_slides = [
       <ul>
         <li>種植在 Madeira 島<strong>最高海拔（700–900m）</strong>的葡萄園，是島上最涼爽的地帶</li>
         <li>晚熟，採收時仍帶極高酸度，殘糖低</li>
-        <li><strong>風格</strong>：極干（殘糖 18–65 g/L），最高酸度，清爽礦物，帶杏仁・鹽水・碘・煙熏香氣</li>
+        <li><strong>風格</strong>：極干／干（約 ≤49–59 g/L），最高酸度，清爽礦物，帶杏仁・鹽水・碘・煙熏香氣</li>
         <li><strong>最佳飲用方式</strong>：冰涼（8–10°C）作餐前酒，搭配橄欖・堅果・海鮮濃湯</li>
         <li>陳年潛力：10–50 年的 Sercial 可展現驚人複雜度</li>
       </ul>
       <h4>🌿 Verdelho（中干）</h4>
       <ul>
         <li>種植在中海拔（400–700m）地帶，成熟度略高於 Sercial</li>
-        <li><strong>風格</strong>：中干（殘糖 65–85 g/L），微甜酸度高，帶獨特的<strong>煙燻・香草・金黃蘋果</strong>香氣</li>
+        <li><strong>風格</strong>：中干 Meio Seco（約 54–78 g/L），微甜酸度高，帶獨特的<strong>煙燻・香草・金黃蘋果</strong>香氣</li>
         <li><strong>最佳飲用方式</strong>：微冰（10–12°C），可搭配清燉海鮮・蔬菜湯品</li>
         <li>歷史上曾是最受英國市場喜愛的馬德拉風格</li>
       </ul>
@@ -4181,14 +4181,14 @@ const P3M2L2_slides = [
       <h4>🟤 Bual（= Boal）（中甜）</h4>
       <ul>
         <li>種植在中低海拔（200–400m），溫暖地帶，更早成熟</li>
-        <li><strong>風格</strong>：中甜（殘糖 85–130 g/L），深金棕色，帶<strong>無花果・太妃糖・焦糖・可可</strong>複雜風味</li>
+        <li><strong>風格</strong>：中甜 Meio Doce（約 78–100 g/L），深金棕色，帶<strong>無花果・太妃糖・焦糖・可可</strong>複雜風味</li>
         <li>酸度仍足夠支撐甜度，不顯膩重</li>
         <li><strong>最佳飲用方式</strong>：室溫（16–18°C），搭配藍紋起司・核桃甜點・巧克力</li>
       </ul>
       <h4>🍯 Malvasia（= Malmsey）（極甜）</h4>
       <ul>
         <li>種植在<strong>最低海拔（0–200m）</strong>的沿海地帶，最溫暖，糖分最高</li>
-        <li><strong>風格</strong>：極甜（殘糖 130–200 g/L），深琥珀色，帶<strong>蜂蜜・杏桃・熱帶水果・柳橙果醬</strong></li>
+        <li><strong>風格</strong>：甜 Doce（約 ≥100 g/L），深琥珀色，帶<strong>蜂蜜・杏桃・熱帶水果・柳橙果醬</strong></li>
         <li>儘管極甜，馬德拉的高酸度讓它不覺膩口，而是絲滑甜潤</li>
         <li><strong>最佳飲用方式</strong>：微溫（16°C），作餐後甜酒，搭配蛋撻・甜蜜糕點・鵝肝</li>
         <li>是市場最受歡迎的馬德拉風格，也是入門首選</li>
@@ -4204,10 +4204,10 @@ const P3M2L2_slides = [
     type: 'compare',
     title: 'Madeira 四大品種甜度光譜',
     items: [
-      { icon: '🍋', label: 'Sercial（極干）', desc: '殘糖 18–65 g/L，最高酸，礦物鹽水，餐前酒，8–10°C', color: '#c9b45c' },
-      { icon: '🌿', label: 'Verdelho（中干）', desc: '殘糖 65–85 g/L，煙燻香草，搭配湯品，10–12°C', color: '#7a8c3a' },
-      { icon: '🟤', label: 'Bual（中甜）', desc: '殘糖 85–130 g/L，無花果太妃糖，起司甜點，室溫', color: '#8B4513' },
-      { icon: '🍯', label: 'Malvasia（極甜）', desc: '殘糖 130–200 g/L，蜂蜜杏桃，餐後甜酒，16°C，市場最受歡迎', color: '#B8860B' },
+      { icon: '🍋', label: 'Sercial（極干）', desc: '約 ≤49–59 g/L（Extra Seco／Seco），最高酸，礦物鹽水，餐前酒，8–10°C', color: '#c9b45c' },
+      { icon: '🌿', label: 'Verdelho（中干）', desc: '約 54–78 g/L（Meio Seco），煙燻香草，搭配湯品，10–12°C', color: '#7a8c3a' },
+      { icon: '🟤', label: 'Bual（中甜）', desc: '約 78–100 g/L（Meio Doce），無花果太妃糖，起司甜點，室溫', color: '#8B4513' },
+      { icon: '🍯', label: 'Malvasia（極甜）', desc: '約 ≥100 g/L（Doce），蜂蜜杏桃，餐後甜酒，16°C，市場最受歡迎', color: '#B8860B' },
     ],
   },
   {
@@ -4227,7 +4227,7 @@ const P3M2L2_slides = [
       '因為 Malvasia 葡萄本身含苦味物質'
     ],
     answer: 2,
-    explanation: 'Madeira 以極高的天然酸度著稱，即使是最甜的 Malvasia（殘糖 130–200 g/L）也因為馬德拉化工藝保留了豐富的酸度，使甜味有足夠的酸度骨架支撐，口感絲滑甜潤而不膩口，這是 Madeira 甜型款與其他甜酒最大的差異。',
+    explanation: 'Madeira 以極高的天然酸度著稱，即使是最甜的 Malvasia（約 ≥100 g/L（Doce））也因為馬德拉化工藝保留了豐富的酸度，使甜味有足夠的酸度骨架支撐，口感絲滑甜潤而不膩口，這是 Madeira 甜型款與其他甜酒最大的差異。',
   },
   {
     type: 'summary',
@@ -4248,9 +4248,9 @@ const P3M2L3_slides = [
     icon: '⏳',
     gradient: 'linear-gradient(135deg, #4a148c, #311b92)',
     title: 'Madeira 陳年：百年老酒的秘密',
-    subtitle: 'Level 3 · 五個陳年等級與永恆馬德拉',
+    subtitle: 'Level 3 · 陳年與年份標示',
     points: [
-      { icon: '⏳', label: '五個陳年等級', text: 'Finest（3年）→ Reserva（5年）→ Special Reserve（10年）→ Extra Reserve（15年）→ Frasqueira（20年+）' },
+      { icon: '⏳', label: '陳年與年份標示', text: 'Reserva（5年）→ Special Reserve（10年）→ Extra Reserve（15年）→ 20/30/40/50 年；單一年份：Colheita（桶陳≥5年）、Frasqueira（≥20年）' },
       { icon: '♾️', label: '為何可陳年百年？', text: '三重保護：充分氧化 + 高酒精（17–22%）+ 高酸度，是世界最穩定的葡萄酒' },
       { icon: '📅', label: '百年老酒', text: 'Blandy\'s 等酒莊保有 1920、1900 年份仍可購買，是有確實記錄的最長壽葡萄酒' },
     ],
@@ -4258,42 +4258,54 @@ const P3M2L3_slides = [
   {
     type: 'content',
     icon: '📊',
-    title: 'Madeira 五個官方陳年等級',
+    title: 'Madeira 官方陳年與年份標示',
     html: `
-      <p>葡萄牙 IVBAM（Madeira、Banyuls 及 Pico 葡萄酒研究院）制定了 Madeira 的官方陳年分級。</p>
+      <p>葡萄牙 IVBAM（馬德拉葡萄酒、刺繡暨手工藝研究院）管理 Madeira 的官方分級。年數標示（5／10／15／20…年）是不同年份調配而成的非年份酒，由 IVBAM 品評小組核可「具備該年齡風格」，並非保證的最低或平均年齡。</p>
       <table style="width:100%;border-collapse:collapse;font-size:0.87em">
         <tr style="background:#4a148c;color:white">
-          <th style="padding:7px">等級</th><th style="padding:7px">最低陳年</th><th style="padding:7px">方式</th><th style="padding:7px">特色</th>
+          <th style="padding:7px">標示</th><th style="padding:7px">年齡／規定</th><th style="padding:7px">方式</th><th style="padding:7px">特色</th>
         </tr>
         <tr style="background:#f3e5f5">
-          <td style="padding:6px"><strong>Finest（Selecionado）</strong></td>
-          <td style="padding:6px">3 年</td>
-          <td style="padding:6px">Estufagem</td>
-          <td style="padding:6px">基礎款，烹飪用途或入門飲用</td>
+          <td style="padding:6px"><strong>Finest / Selected / Choice</strong></td>
+          <td style="padding:6px">品質用語</td>
+          <td style="padding:6px">—</td>
+          <td style="padding:6px">法規認可的品質標示，不是年份分級；入門款</td>
         </tr>
         <tr>
-          <td style="padding:6px"><strong>Reserva（Reserve）</strong></td>
+          <td style="padding:6px"><strong>Reserva（Velho / Reserve）</strong></td>
           <td style="padding:6px">5 年</td>
           <td style="padding:6px">Estufagem / Canteiro</td>
           <td style="padding:6px">日常飲用，性價比高</td>
         </tr>
         <tr style="background:#f3e5f5">
-          <td style="padding:6px"><strong>Special Reserve</strong></td>
+          <td style="padding:6px"><strong>Reserva Velha / Special Reserve</strong></td>
           <td style="padding:6px">10 年</td>
           <td style="padding:6px">Canteiro 為主</td>
           <td style="padding:6px">複雜度明顯，品種特色開始展現</td>
         </tr>
         <tr>
-          <td style="padding:6px"><strong>Extra Reserve</strong></td>
+          <td style="padding:6px"><strong>Reserva Extra / Extra Reserve</strong></td>
           <td style="padding:6px">15 年</td>
           <td style="padding:6px">Canteiro</td>
           <td style="padding:6px">精緻深邃，收藏入門</td>
         </tr>
         <tr style="background:#f3e5f5">
-          <td style="padding:6px"><strong>Frasqueira（Vintage）⭐</strong></td>
-          <td style="padding:6px">20 年以上</td>
+          <td style="padding:6px"><strong>20 / 30 / 40 / 50 年</strong></td>
+          <td style="padding:6px">直接標示年數</td>
+          <td style="padding:6px">Canteiro</td>
+          <td style="padding:6px">超過 50 年則於酒標以文字說明</td>
+        </tr>
+        <tr>
+          <td style="padding:6px"><strong>Colheita（單一年份）</strong></td>
+          <td style="padding:6px">桶陳至少 5 年</td>
+          <td style="padding:6px">連續桶陳</td>
+          <td style="padding:6px">單一採收年份，經品質核可</td>
+        </tr>
+        <tr style="background:#f3e5f5">
+          <td style="padding:6px"><strong>Frasqueira / Garrafeira ⭐</strong></td>
+          <td style="padding:6px">桶陳至少 20 年</td>
           <td style="padding:6px">Canteiro 唯一</td>
-          <td style="padding:6px">單一年份，最頂級，陳年潛力無限</td>
+          <td style="padding:6px">單一年份、推薦品種，品質須屬卓越</td>
         </tr>
       </table>
       <p style="margin-top:8px;font-size:0.88em"><strong>Frasqueira</strong> 是葡萄牙語中「玻璃瓶」的意思，也是頂級 Madeira 的代名詞。需至少 Canteiro 陳年 20 年以上，品質最頂，可繼續陳年 50–100 年。</p>
@@ -4324,8 +4336,6 @@ const P3M2L3_slides = [
       <h4>🏆 有記錄的百年老 Madeira</h4>
       <ul>
         <li>Blandy's <strong>1900 Vintage Malmsey</strong>：1900 年採收，仍可購買飲用，狀態驚人</li>
-        <li>D'Oliveiras <strong>1850 Verdelho</strong>：最老之一，極少量仍在市場流通</li>
-        <li>拿破崙時代（1815 年前）的 Madeira 被發現於美國白宮地窖，品飲後仍令人驚嘆</li>
       </ul>
     `,
   },
@@ -4352,7 +4362,7 @@ const P3M2L3_slides = [
     type: 'summary',
     message: '恭喜完成 Madeira 陳年課程！',
     keyPoints: [
-      '五個等級：Finest（3年）→ Reserva（5年）→ Special Reserve（10年）→ Extra Reserve（15年）→ Frasqueira（20年+）',
+      '年數標示：Reserva 5 年 → Special Reserve 10 年 → Extra Reserve 15 年 → 20/30/40/50 年（IVBAM 品評核可的風格年齡）；Colheita ≥5 年、Frasqueira ≥20 年',
       'Frasqueira 是頂級，Canteiro 唯一，單一年份，陳年潛力無限',
       '三重保護：充分氧化 + 高酒精（17–22%）+ 高酸度',
       'Blandy\'s 的 1900 Vintage 仍在銷售，是世界最長壽葡萄酒的活證明',
@@ -4391,7 +4401,7 @@ const P3M3L1_slides = [
       <ul>
         <li>Baga 天然高酸正好適合傳統法氣泡酒（高酸是氣泡酒的基礎）</li>
         <li>帶紅漿果、野玫瑰香氣，細緻氣泡，是全世界最特殊的紅色傳統法氣泡酒之一</li>
-        <li>Luís Pato・Filipa Pato・Sidral Mundet 等酒莊的紅色 Espumante 獲國際大獎</li>
+        <li>Luís Pato・Filipa Pato 等酒莊的紅色 Espumante 獲國際大獎</li>
       </ul>
       <h4>🏆 代表酒莊</h4>
       <ul>
@@ -4406,7 +4416,7 @@ const P3M3L1_slides = [
     title: '葡萄牙三大氣泡酒風格對比',
     items: [
       { icon: '🏅', label: 'Bairrada Espumante（傳統法）', desc: '瓶中二次發酵，酒泥陳年 9–36 個月，細緻持久氣泡，礦物感強。有白色（Bical）和獨特紅色（Baga）', color: '#1565c0' },
-      { icon: '🌿', label: 'Vinho Verde 微氣泡（天然殘留）', desc: '在不鏽鋼桶中保留天然 CO₂，輕微氣泡（1–2 bar vs. 傳統法 6 bar），清爽怡人，適合海鮮', color: '#006600' },
+      { icon: '🌿', label: 'Vinho Verde 微氣泡（天然殘留）', desc: '傳統為 MLF 副產 CO₂、今日多為充入 CO₂，輕微氣泡（低於 1 bar vs. 傳統法 約 6 bar），清爽怡人，適合海鮮', color: '#006600' },
       { icon: '🏔️', label: 'Távora-Varosa Espumante（傳統法）', desc: '葡萄牙第一個氣泡酒 DOC（1989），最高海拔（500–900m），酒泥陳年 18+ 個月，以 Malvasia Fina 為主', color: '#37474f' },
     ],
   },
@@ -4422,19 +4432,19 @@ const P3M3L1_slides = [
     question: 'Vinho Verde 的「微氣泡」與 Bairrada Espumante 的氣泡最主要的差異是什麼？',
     options: [
       '兩者完全相同，都是傳統法製造',
-      'Vinho Verde 是在桶中保留天然 CO₂（約 1–2 bar），Bairrada 是瓶中二次發酵（約 6 bar），後者氣泡更持久精緻',
+      'Vinho Verde 是在桶中保留天然 CO₂（壓力低於 1 bar），Bairrada 是瓶中二次發酵（約 6 bar），後者氣泡更持久精緻',
       'Vinho Verde 比 Bairrada 的氣泡更多',
       'Vinho Verde 不含氣泡，只有 Bairrada 有'
     ],
     answer: 1,
-    explanation: 'Vinho Verde 的微氣泡來自在不鏽鋼桶中保留的天然 CO₂（發酵副產物），壓力約 1–2 bar，氣泡細緻短暫。Bairrada Espumante 是瓶中二次發酵（傳統法），壓力約 5–6 bar（與香檳相同），氣泡更持久精緻，兩者是截然不同的工藝。',
+    explanation: 'Vinho Verde 的微氣泡傳統上來自蘋果乳酸發酵的副產物 CO₂（今日多為直接充入），壓力低於 1 bar，氣泡細緻短暫。Bairrada Espumante 是瓶中二次發酵（傳統法），壓力約 5–6 bar（與香檳相同），氣泡更持久精緻，兩者是截然不同的工藝。',
   },
   {
     type: 'summary',
     message: '恭喜完成葡萄牙氣泡酒課程！',
     keyPoints: [
       'Bairrada：最重要的傳統法氣泡酒，酒泥陳年 9–36 個月，有白色（Bical）和獨特紅色（Baga）',
-      'Vinho Verde：在桶中保留天然 CO₂，輕微氣泡（1–2 bar），清爽適合海鮮',
+      'Vinho Verde：在桶中保留天然 CO₂，輕微氣泡（低於 1 bar），清爽適合海鮮',
       'Távora-Varosa：葡萄牙第一個氣泡酒 DOC（1989），最高海拔，酒泥陳年 18+ 個月',
       'Baga 紅色傳統法氣泡酒是世界最獨特的氣泡酒之一',
     ],
@@ -4600,11 +4610,11 @@ const P3M3L3_slides = [
     options: [
       '釀酒師在裝瓶前人工充入 CO₂',
       '傳統法瓶中二次發酵',
-      '不鏽鋼桶中保留天然 CO₂（未進行蘋果乳酸發酵的副產品）',
+      '傳統上來自蘋果乳酸發酵（MLF）的副產品 CO₂（今日多為直接充入）',
       '使用特殊的起泡葡萄品種'
     ],
     answer: 2,
-    explanation: 'Vinho Verde 的微氣泡是傳統釀造的自然結果：酒在不鏽鋼桶中完成發酵，不進行蘋果乳酸發酵（MLF），保留了 CO₂ 在酒液中，壓力約 1–2 bar。這不是刻意製造的氣泡，而是延續數百年的傳統「缺陷」，後來成為 Vinho Verde 的標誌特色。',
+    explanation: 'Vinho Verde 的微氣泡是傳統釀造的自然結果：傳統上酒液的蘋果乳酸發酵（MLF）延遲到裝瓶後，在瓶中產生少量 CO₂；今日多數生產者則直接充入 CO₂，壓力低於 1 bar。這不是刻意製造的氣泡，而是延續數百年的傳統「缺陷」，後來成為 Vinho Verde 的標誌特色。',
   },
   {
     type: 'quiz',
@@ -4622,7 +4632,7 @@ const P3M3L3_slides = [
     type: 'summary',
     message: '恭喜完成 Vinho Verde 微氣泡課程！',
     keyPoints: [
-      'Vinho Verde 微氣泡：不鏽鋼桶保留天然 CO₂，壓力僅 1–2 bar，是傳統結果',
+      'Vinho Verde 微氣泡：不鏽鋼桶保留天然 CO₂，壓力低於 1 bar，傳統上為 MLF 副產物、今日多為充入 CO₂',
       '頂級 Alvarinho 趨向無氣泡，以展現品種純粹特色',
       'Pét-Nat：發酵未完成時裝瓶，只有一次發酵，最古老的氣泡酒方式',
       'Pét-Nat 特色：微濁、活潑、帶酵母感，是自然酒運動的代表款式',
@@ -4938,7 +4948,7 @@ const P3FinalExam_slides = [
     question: 'Madeira 的四大品種中，種植在最低海拔（0–200m）、甜度最高的是哪個品種？',
     options: ['Sercial', 'Verdelho', 'Bual', 'Malvasia（Malmsey）'],
     answer: 3,
-    explanation: 'Malvasia（Malmsey）種植在 Madeira 島最低海拔（0–200m）的溫暖沿海地帶，是糖分最高的品種，釀造極甜風格（殘糖 130–200 g/L）。儘管甜度極高，Madeira 天然高酸使其不顯膩口，帶蜂蜜・杏桃・熱帶水果香，是市場最受歡迎的 Madeira 風格。',
+    explanation: 'Malvasia（Malmsey）種植在 Madeira 島最低海拔（0–200m）的溫暖沿海地帶，是糖分最高的品種，釀造極甜風格（約 ≥100 g/L（Doce））。儘管甜度極高，Madeira 天然高酸使其不顯膩口，帶蜂蜜・杏桃・熱帶水果香，是市場最受歡迎的 Madeira 風格。',
   },
   {
     type: 'quiz',
@@ -4950,7 +4960,7 @@ const P3FinalExam_slides = [
       '兩者完全相同'
     ],
     answer: 1,
-    explanation: 'Bairrada Espumante 使用傳統法（Método Clássico），在瓶中進行二次發酵，壓力約 6 bar，酒泥陳年 9–36 個月。Vinho Verde 的微氣泡是在不鏽鋼桶中保留天然 CO₂（蘋果乳酸發酵的副產品），壓力約 1–2 bar，是完全不同的工藝。',
+    explanation: 'Bairrada Espumante 使用傳統法（Método Clássico），在瓶中進行二次發酵，壓力約 6 bar，酒泥陳年 9–36 個月。Vinho Verde 的微氣泡傳統上來自蘋果乳酸發酵的副產品 CO₂，今日多為直接充入 CO₂，壓力低於 1 bar，是完全不同的工藝。',
   },
   {
     type: 'quiz',
@@ -5017,7 +5027,7 @@ const P3FinalExam_slides = [
     message: '🎉 恭喜完成葡萄牙葡萄酒 Level 3 所有課程！您已掌握頂級加強酒與特殊工藝的深度知識。',
     keyPoints: [
       '✅ 波特酒工藝：加烈時機（7–8% 酒精）・Lagar 踩皮・Ruby vs. Tawny 系列',
-      '✅ 馬德拉技術：Estufagem（工業）vs. Canteiro（自然）・四大品種甜度光譜・五個陳年等級',
+      '✅ 馬德拉技術：Estufagem（工業）vs. Canteiro（自然）・四大品種甜度光譜・陳年與年份標示',
       '✅ 葡萄牙氣泡酒：Bairrada 傳統法・Vinho Verde 天然 CO₂・Pét-Nat 自然酒',
       '✅ 風土深度：花崗岩・片岩・石灰岩的土壤影響分析',
       '✅ 橡木桶哲學：Balseiro 大桶傳統（保留風土）vs. 法國 Barrique（添加木香）',

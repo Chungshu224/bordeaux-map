@@ -17,7 +17,7 @@ export const courseLevels = {
     icon: '🌱',
     color: '#006600',
     gradient: 'linear-gradient(135deg, #006600, #1a9b1a)',
-    totalLessons: 14,
+    totalLessons: 13,
     modules: [
       {
         id: 'P1M1',
@@ -78,7 +78,7 @@ export const courseLevels = {
     icon: '🍷',
     color: '#8B0000',
     gradient: 'linear-gradient(135deg, #8B0000, #c0392b)',
-    totalLessons: 22,
+    totalLessons: 17,
     prerequisites: ['完成 Level 1'],
     modules: [
       {
@@ -150,7 +150,7 @@ export const courseLevels = {
     icon: '🏆',
     color: '#1a6b9b',
     gradient: 'linear-gradient(135deg, #1a6b9b, #2980b9)',
-    totalLessons: 15,
+    totalLessons: 14,
     prerequisites: ['完成 Level 1', '完成 Level 2'],
     modules: [
       {
@@ -213,7 +213,7 @@ export const courseLevels = {
     icon: '👑',
     color: '#B8860B',
     gradient: 'linear-gradient(135deg, #B8860B, #DAA520)',
-    totalLessons: 12,
+    totalLessons: 10,
     prerequisites: ['完成 Level 1', '完成 Level 2', '完成 Level 3'],
     modules: [
       {

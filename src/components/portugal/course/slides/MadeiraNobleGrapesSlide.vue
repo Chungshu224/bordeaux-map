@@ -65,13 +65,13 @@
             <span>⚙️ Estufagem（工業加熱）</span>
             <span class="method-grade">入門級 / 大量生產</span>
           </div>
-          <div class="method-temp">🌡️ 45–50°C × 3 個月以上</div>
+          <div class="method-temp">🌡️ 上限 50°C（常見 40–50°C）× 至少 3 個月</div>
           <ol>
             <li><strong>不鏽鋼加熱槽</strong>：將酒置入大型不鏽鋼槽（estufa）</li>
-            <li><strong>蒸氣盤管</strong>：底部蒸氣盤管加熱至 45–50°C</li>
+            <li><strong>蒸氣盤管</strong>：加熱盤管／夾套加熱（上限 50°C）</li>
             <li><strong>恆溫維持</strong>：維持高溫至少 3 個月（法定）</li>
-            <li><strong>緩慢冷卻</strong>：90 天後緩慢降溫，再儲存最少 90 天</li>
-            <li><strong>適用酒款</strong>：3 年、5 年級的入門 Madeira</li>
+            <li><strong>緩慢冷卻</strong>：加熱期結束後緩慢降溫、靜置穩定</li>
+            <li><strong>適用酒款</strong>：Finest 與 5 年級的入門 Madeira</li>
           </ol>
           <div class="method-pros">
             <strong>優點：</strong>速度快、成本低、產量大
@@ -92,7 +92,7 @@
             <li><strong>頂樓存放</strong>：放置於酒莊閣樓 / 頂樓 (canteiros 木架)</li>
             <li><strong>陽光自然加熱</strong>：大西洋陽光與通風自然溫和加熱</li>
             <li><strong>長期氧化</strong>：透過木桶緩慢氧化、蒸發濃縮（數十年）</li>
-            <li><strong>適用酒款</strong>：10 年、20 年、30 年、40 年、Frasqueira（單一年份）、Colheita</li>
+            <li><strong>適用酒款</strong>：10 年、20 年、30 年、40 年、Frasqueira（單一年份，≥20 年）</li>
           </ol>
           <div class="method-pros">
             <strong>優點：</strong>細膩複雜、層次豐富、極致陳年潛力（100+ 年）
@@ -106,7 +106,7 @@
 
     <!-- 5 級陳年分級 -->
     <div class="aging-section">
-      <h3>📅 Madeira 陳年分級（最低瓶陳）</h3>
+      <h3>📅 Madeira 陳年與年份標示（IVBAM 核可的風格年齡）</h3>
       <div class="aging-tiers">
         <div v-for="(t, i) in agingTiers" :key="i" class="aging-tier" :style="{ borderLeftColor: t.color }">
           <div class="tier-name">{{ t.name }}</div>
@@ -140,8 +140,8 @@ const grapes = [
     color: '#c9b45c',
     colorEnd: '#d4c172',
     bgTint: '#faf6e8',
-    sweetnessTag: '極干 Extra Dry',
-    rs: '< 49',
+    sweetnessTag: '極干／干 Extra Dry–Dry',
+    rs: '≤ 約 49–59',
     abv: '17–18%',
     ripeness: '低（早採）',
     altitude: '600–800 m（最高）',
@@ -159,7 +159,7 @@ const grapes = [
     colorEnd: '#9aa852',
     bgTint: '#f0f4e0',
     sweetnessTag: '中干 Off-Dry',
-    rs: '49–78',
+    rs: '約 54–78',
     abv: '17–18%',
     ripeness: '中等',
     altitude: '300–600 m',
@@ -177,7 +177,7 @@ const grapes = [
     colorEnd: '#A0522D',
     bgTint: '#f5e8dc',
     sweetnessTag: '中甜 Medium-Sweet',
-    rs: '78–96',
+    rs: '約 78–100',
     abv: '17–19%',
     ripeness: '高',
     altitude: '200–400 m',
@@ -195,7 +195,7 @@ const grapes = [
     colorEnd: '#D4A017',
     bgTint: '#faf3e0',
     sweetnessTag: '極甜 Sweet',
-    rs: '> 96（最高 150+）',
+    rs: '≥ 約 100',
     abv: '17–22%',
     ripeness: '極高（晚採）',
     altitude: '0–300 m（最低）',
@@ -211,11 +211,13 @@ const grapes = [
 const active = computed(() => grapes[activeIdx.value])
 
 const agingTiers = [
-  { name: 'Finest / 3 Years', method: 'Estufagem', desc: '入門級，3 年瓶陳，混調品種', price: '€15–€25', color: '#888' },
-  { name: '5 Years / Reserve', method: 'Estufagem 或混合', desc: '5 年瓶陳，可單一品種', price: '€25–€45', color: '#3498db' },
-  { name: '10 Years / Special Reserve', method: 'Canteiro 開始', desc: '10 年瓶陳，必須單一品種', price: '€50–€90', color: '#16a085' },
-  { name: '20 / 30 / 40 Years / Extra Reserve', method: 'Canteiro', desc: '長期自然陳年，複雜度大幅提升', price: '€100–€500', color: '#8e44ad' },
-  { name: 'Colheita / Frasqueira', method: 'Canteiro 100%', desc: '單一年份，Frasqueira 必須陳 20 年以上', price: '€200–€5000+', color: '#7B1F2A' }
+  { name: 'Finest / Selected / Choice', method: '品質用語', desc: '法規認可的品質標示，不是年份分級；入門款', price: '€15–€25', color: '#888' },
+  { name: '5 Years / Reserva', method: 'Estufagem 或 Canteiro', desc: '5 年風格，可單一品種（單一品種須含 85% 以上）', price: '€25–€45', color: '#3498db' },
+  { name: '10 Years / Reserva Velha・Special Reserve', method: 'Canteiro 為主', desc: '10 年風格，由 IVBAM 品評小組核可', price: '€50–€90', color: '#16a085' },
+  { name: '15 Years / Reserva Extra', method: 'Canteiro', desc: '15 年風格，精緻深邃', price: '€80–€150', color: '#27ae60' },
+  { name: '20 / 30 / 40 / 50+ Years', method: 'Canteiro', desc: '長期自然陳年，直接標示年數；超過 50 年於酒標文字說明', price: '€100–€500', color: '#8e44ad' },
+  { name: 'Colheita', method: '連續桶陳 ≥5 年', desc: '單一採收年份，經品質核可', price: '€60–€300', color: '#c0392b' },
+  { name: 'Frasqueira / Garrafeira', method: 'Canteiro 100%', desc: '單一年份、推薦品種，桶陳至少 20 年，品質須屬卓越', price: '€200–€5000+', color: '#7B1F2A' }
 ]
 </script>
 

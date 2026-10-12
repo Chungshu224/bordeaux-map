@@ -2,7 +2,7 @@
   <div class="vinho-verde-slide">
     <div class="slide-header">
       <h2>{{ slide?.title || '🌿 Vinho Verde 9 大子產區互動深度' }}</h2>
-      <p class="slide-desc">{{ slide?.description || 'Vinho Verde 是葡萄牙最大的 DOC（34,000 ha），9 個子產區（sub-regiões）各有主導品種與風土差異。從頂級 Alvarinho 重鎮 Monção/Melgaço，到花香典範 Lima、深色芳香紅酒 Sousa/Baião 的全方位互動探索。' }}</p>
+      <p class="slide-desc">{{ slide?.description || 'Vinho Verde 是葡萄牙最大的 DOC（約 21,000 ha），9 個子產區（sub-regiões）各有主導品種與風土差異。從頂級 Alvarinho 重鎮 Monção/Melgaço，到花香典範 Lima、深色芳香紅酒 Sousa/Baião 的全方位互動探索。' }}</p>
     </div>
 
     <!-- 9 子產區地圖示意 + 篩選 -->
