@@ -31,7 +31,7 @@
       "icon": "💎",
       "features": [
         { "title": "Trinity Hill（1993年創立）", "description": "由釀酒師 John Hancock 與倫敦餐廳 Bleeding Heart 業主 Robert 與 Robyn Wilson 共同創立，是最早在 Gimblett Gravels 貧瘠礫石地上插旗的酒莊之一。旗艦酒 Homage 是僅在最佳年份少量釀造的 100% Syrah，被視為紐西蘭最具代表性的 Syrah 之一。", "icon": "🍷" },
-        { "title": "Craggy Range（1997年創立）", "description": "由企業家 Terry Peabody 與紐西蘭首位葡萄酒 Master of Wine 資格的 Steve Smith 共同創立，於 Te Mata Peak 山腳下的 Gimblett Gravels 建立約 250 英畝的自有葡萄園。旗艦酒 Le Sol（Syrah）是 Wine Advocate 評分史上少數獲得 95 分以上的紐西蘭酒款，另一旗艦 Sophia 則是 Merlot 主導的波爾多混釀。", "icon": "⛰️" }
+        { "title": "Craggy Range（1997年創立）", "description": "由企業家 Terry Peabody 與資深 Master of Wine 兼葡萄園管理者 Steve Smith 共同創立，於 Te Mata Peak 山腳下的 Gimblett Gravels 建立約 250 英畝的自有葡萄園。旗艦酒 Le Sol（Syrah）是 Wine Advocate 評分史上少數獲得 95 分以上的紐西蘭酒款，另一旗艦 Sophia 則是 Merlot 主導的波爾多混釀。", "icon": "⛰️" }
       ],
       "quiz": {
         "question": "Trinity Hill 的旗艦酒款 Homage 是什麼類型的酒？",
@@ -62,7 +62,7 @@
       "title": "從酒莊發展看產業里程碑",
       "subtitle": "六家酒莊的創立年份，串起 Hawke's Bay 紅酒產業的成長軌跡",
       "items": [
-        { "year": "1896年", "text": "Te Mata Estate 成立，成為紐西蘭最古老、持續營運至今的酒莊。" },
+        { "year": "1896年", "text": "Te Mata Estate 成立，成為紐西蘭歷史最悠久的精品酒莊之一。" },
         { "year": "1897年", "text": "Church Road（原 Marist 修會酒莊）成立，1949 年釀出紐西蘭第一款商業化 Cabernet Sauvignon。" },
         { "year": "1988年", "text": "Villa Maria 購入 Gimblett Gravels 的 Ngakirikiri 葡萄園，為日後旗艦酒款奠基。" },
         { "year": "1993年", "text": "Trinity Hill 於 Gimblett Gravels 創立，成為礫石地塊的早期拓荒者之一。" },
