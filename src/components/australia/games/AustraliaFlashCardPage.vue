@@ -25,7 +25,7 @@
             <div class="diff-name">挑戰</div>
             <div class="diff-desc">多線索推理</div>
             <ul class="diff-list">
-              <li>30+ 個 GI 產區</li>
+              <li>65+ 個 GI 產區</li>
               <li>⏱ 每題 5 秒</li>
               <li>共 16 題</li>
               <li>線索可能誤導！</li>
@@ -224,7 +224,7 @@ const ALL_REGIONS = [
   },
   {
     nameZh: '希斯科特', nameEn: 'Heathcote', state: 'VIC',
-    clues: ['前寒武紀 Cambrian 橄欖石土壤', '超深層土壤賦予 Shiraz 礦石感', '與 Barossa Shiraz 風格截然不同'],
+    clues: ['寒武紀（Cambrian）綠岩風化土壤', '超深層土壤賦予 Shiraz 礦石感', '與 Barossa Shiraz 風格截然不同'],
     easy: false,
   },
   {

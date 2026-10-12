@@ -212,7 +212,7 @@ const REGIONS_EASY = [
   { nameZh: '阿德萊德山',        nameEn: 'Adelaide Hills',       state: 'SA',  hint: '涼爽高地，優秀白酒' },
   { nameZh: '亞拉谷',            nameEn: 'Yarra Valley',         state: 'VIC', hint: '墨爾本近郊，頂級 Pinot' },
   { nameZh: '莫寧頓半島',        nameEn: 'Mornington Peninsula', state: 'VIC', hint: '海洋性氣候，精緻 Pinot' },
-  { nameZh: '希斯科特',          nameEn: 'Heathcote',            state: 'VIC', hint: '古老前寒武紀土壤' },
+  { nameZh: '希斯科特',          nameEn: 'Heathcote',            state: 'VIC', hint: '古老寒武紀綠岩土壤' },
   { nameZh: '盧瑟格蘭',          nameEn: 'Rutherglen',           state: 'VIC', hint: '澳洲 Muscat 強化酒' },
   { nameZh: '格蘭坪',            nameEn: 'Grampians',            state: 'VIC', hint: '氣泡 Shiraz 名產地' },
   { nameZh: '金伯利',            nameEn: 'Goulburn Valley',      state: 'VIC', hint: 'Marsanne 著名產地' },

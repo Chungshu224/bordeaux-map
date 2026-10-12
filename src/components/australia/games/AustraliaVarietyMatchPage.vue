@@ -208,7 +208,7 @@ const V2R_PAIRS = [
   {
     subjectZh: 'Cabernet Sauvignon',  subjectEn: 'Cabernet Sauvignon',
     correctZh: '瑪格麗特河',          correctEn: 'Margaret River',
-    hint: '澳洲波爾多，紅黑醋栗 + 藥草',
+    hint: '澳洲最著名的 Cabernet 產區，紅黑醋栗 + 藥草',
     dir: 'v2r',
     distractors: ['巴羅薩谷','獵人谷','莫寧頓半島'],
   },
