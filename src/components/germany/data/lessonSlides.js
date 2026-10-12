@@ -146,14 +146,14 @@ export const G1M1L2 = {
         { year: 'Spätlese', title: 'QmP 第二級', desc: '晚採（late harvest），豐潤甜美' },
         { year: 'Auslese', title: 'QmP 第三級', desc: '精選串，可甜可乾，濃郁複雜' },
         { year: 'Beerenauslese', title: 'QmP 第四級', desc: '逐粒精選，貴腐菌影響，濃甜' },
-        { year: 'Trockenbeerenauslese', title: 'QmP 第六級', desc: 'TBA：乾縮逐粒精選，甜酒巔峰' },
-        { year: 'Eiswein', title: 'QmP 特殊', desc: '冰凍採收，濃縮甜酸，極稀珍貴' }
+        { year: 'Eiswein', title: 'QmP 第五級（酒汁比重與 BA 同級）', desc: '冰凍採收（-7°C 以下），濃縮甜酸，極稀珍貴' },
+        { year: 'Trockenbeerenauslese', title: 'QmP 第六級', desc: 'TBA：乾縮逐粒精選，甜酒巔峰' }
       ]
     },
     {
       type: 'content',
       title: '🔍 Trocken & Halbtrocken',
-      content: '德國葡萄酒中，Trocken（不甜）和 Halbtrocken（半甜）是描述成品酒中殘糖量的術語，與 Prädikat 等級無直接關係。例如，一瓶 Spätlese Trocken 是以晚採葡萄釀造但完全發酵至不甜的風格，保留了豐富的水果風味但無殘糖甜感。'
+      content: '德國葡萄酒中，Trocken（乾型）和 Halbtrocken（半乾型）是描述成品酒中殘糖量的術語，與 Prädikat 等級無直接關係。例如，一瓶 Spätlese Trocken 是以晚採葡萄釀造但完全發酵至不甜的風格，保留了豐富的水果風味但無殘糖甜感。'
     },
     {
       type: 'quiz',
@@ -231,7 +231,7 @@ export const G1M1L3 = {
         { icon: '🏛️', text: 'Franken：沿美因河釀酒史超過 1200 年，Bocksbeutel 扁瓶是產區標誌' },
         { icon: '🏰', text: 'Mittelrhein：德國最小產區（約 460 公頃），羅馬人最早於此種植葡萄；峽谷段 2002 年列入 UNESCO 世界遺產' },
         { icon: '🌸', text: 'Hessische Bergstrasse：1971 年才獨立設區，春天杏花總是搶先其他產區綻放' },
-        { icon: '🍇', text: 'Württemberg：德國第四大產區，紅酒佔 63%，本地人日常消耗量居全德之冠' },
+        { icon: '🍇', text: 'Württemberg：德國第四大產區，紅酒約佔三分之二，本地人日常消耗量居全德之冠' },
         { icon: '🧱', text: 'Saale-Unstrut：西元 998 年即有種植記載，年雨量僅約 500mm，乾式石牆梯田是招牌景觀' },
         { icon: '🍾', text: 'Sachsen：擁有全德幾乎唯獨此地種植的特有品種 Goldriesling' },
         { icon: '☀️', text: 'Baden：南北縱貫約 400 公里，是德國唯一被歸類為 EU B 級（較溫暖）的產區' }
@@ -545,7 +545,7 @@ export const G1M3L1 = {
           question: '「Einzellage」代表什麼？',
           options: ['混調葡萄酒', '單一葡萄園', '整個產區', '酒莊聯盟'],
           answer: 1,
-          explanation: 'Einzellage（複數 Einzellagen）是德語「單一葡萄園地塊」的意思，是德國最精確的產地標示，類似法國的 Premier Cru。'
+          explanation: 'Einzellage（複數 Einzellagen）是德語「單一葡萄園地塊」的意思，是德國最精確的產地標示（單一葡萄園）；注意它本身只是產地單位，並不等同法國的 Premier Cru 分級。'
         }
       ]
     }
@@ -745,7 +745,7 @@ export const G1M4L1 = {
           explanation: '辛辣食物與帶有殘糖的甜型 Riesling 是黃金組合，甜度能中和辣感，高酸度清洗味蕾，Auslese 的豐潤果味也能與泰式香料形成美妙對話。'
         },
         {
-          question: '以下哪道料理最適合搭配 Riesling Kabinett（不甜或極輕甜）？',
+          question: '以下哪道料理最適合搭配 Riesling Kabinett（輕甜至微甜）？',
           options: ['四川麻辣火鍋', '藍紋乳酪（Roquefort）', '日式生魚片壽司', '蜂蜜杏仁甜點'],
           answer: 2,
           explanation: 'Riesling Kabinett 的高酸度與礦物感與日式生魚片是天作之合，礦石感呼應海洋鮮味，酸度清爽如醋漬醬汁。辣食需要甜型 Riesling；乳酪與甜點則需更甜的版本（Auslese / TBA）。'
@@ -880,7 +880,7 @@ export const G1FinalExam = {
         },
         {
           question: '搭配泰式麻辣料理，Riesling 甜度應選擇哪個等級最適合？',
-          options: ['Kabinett（極輕甜或不甜）', 'Auslese（中高甜度）', 'Trocken（完全不甜）', 'Eiswein（極甜）'],
+          options: ['Kabinett（輕甜至微甜）', 'Auslese（中高甜度）', 'Trocken（完全不甜）', 'Eiswein（極甜）'],
           answer: 1,
           explanation: '搭配辛辣料理時，Riesling Auslese 的甜度能有效中和口腔辣感灼熱，高酸度清洗味蕾，豐潤果香與泰式香料形成美妙共鳴。這也是亞洲頂級餐廳侍酒師的常用技巧。'
         }
@@ -1015,7 +1015,7 @@ export const G2M1L2 = {
       title: '🌟 Rheingau 頂級葡萄園',
       items: [
         { icon: '⛰️', text: 'Rüdesheimer Berg Schlossberg：陡峭板岩坡，酒體強勁，礦物氣息深邃' },
-        { icon: '🌹', text: 'Rauenthaler Baiken：Robert Weil 旗艦園，以濃郁蜂蜜花香與細緻單寧聞名' },
+        { icon: '🌹', text: 'Rauenthaler Baiken：Robert Weil 的名園之一（旗艦為 Kiedricher Gräfenberg），以濃郁蜂蜜花香與細緻單寧聞名' },
         { icon: '🏛️', text: 'Erbacher Marcobrunn：萊茵河畔的歷史名園，石灰質土壤帶來豐潤質感' },
         { icon: '🍇', text: 'Hochheimer Domdechaney：遠離主產區的孤立精品，傳說英女王維多利亞鍾愛' },
         { icon: '🏰', text: 'Winkeler Hasensprung：黏土板岩混合，風格介於豐潤與礦物之間' }
@@ -1089,7 +1089,7 @@ export const G2M1L3 = {
     {
       type: 'comparison',
       title: 'Roter Hang vs Hügelland 品質對比',
-      left: { label: '🔴 Roter Hang（頂級）', items: ['萊茵河沿岸紅砂岩坡地', 'VDP Grosse Lage 等級', '酒體豐潤，礦物感強烈', 'Riesling 占主導', '世界級陳年潛力', '代表：Keller、Wittmann'] },
+      left: { label: '🔴 Roter Hang（頂級）', items: ['萊茵河沿岸紅砂岩坡地', 'VDP Grosse Lage 等級', '酒體豐潤，礦物感強烈', 'Riesling 占主導', '世界級陳年潛力', '代表：Gunderloch、Kühling-Gillot、St. Antony'] },
       right: { label: '🌾 Hügelland（日常）', items: ['內陸丘陵高地', '多元品種齊種', '風格清爽易飲', '大量 Müller-Thurgau', '年輕即飲型', '合理價位，日常佳選'] }
     },
     {
@@ -1363,18 +1363,18 @@ export const G2M2L3 = {
     {
       type: 'title',
       title: 'Württemberg — Trollinger 紅酒之鄉',
-      subtitle: '斯圖加特周邊的 70% 紅酒王國',
+      subtitle: '斯圖加特周邊的紅酒王國',
       background: '#6B1A1A'
     },
     {
       type: 'content',
       title: '🍷 Württemberg 的紅酒文化',
-      content: 'Württemberg 是德國紅酒比例最高的產區，約 70% 的葡萄園種植紅葡萄品種，面積約 11,500 公頃。德國南部城市 Stuttgart（斯圖加特）是這個產區的中心，葡萄園沿內卡河（Neckar River）及其支流蜿蜒延伸。Württemberg 最具地方特色的品種是 Trollinger，這種幾乎只在此地種植的紅葡萄釀出清淡粉紅般的紅酒，是當地人日常飲用的「鄉土酒」。此外，Lemberger（Blaufränkisch）和 Schwarzriesling（Pinot Meunier）也在此有精彩表現，為外地人提供了更令人驚艷的選擇。'
+      content: 'Württemberg 是德國紅酒比例最高的大型產區之一，約三分之二的葡萄園種植紅葡萄品種（小產區 Ahr 比例更高），面積約 11,400 公頃。德國南部城市 Stuttgart（斯圖加特）是這個產區的中心，葡萄園沿內卡河（Neckar River）及其支流蜿蜒延伸。Württemberg 最具地方特色的品種是 Trollinger，這種幾乎只在此地種植的紅葡萄釀出清淡粉紅般的紅酒，是當地人日常飲用的「鄉土酒」。此外，Lemberger（Blaufränkisch）和 Schwarzriesling（Pinot Meunier）也在此有精彩表現，為外地人提供了更令人驚艷的選擇。'
     },
     {
       type: 'germany-region-map',
       title: 'Württemberg 產區地圖',
-      description: '斯圖加特為中心沿內卡河延伸——德國紅酒比例最高的產區（70% 紅葡萄）',
+      description: '斯圖加特為中心沿內卡河延伸——德國大型產區中紅酒比例最高（約三分之二紅葡萄）',
       mapRegion: 'wuerttemberg',
       highlightFiles: ['wuerttemberg-region.geojson'],
     },
@@ -1407,8 +1407,8 @@ export const G2M2L3 = {
       type: 'stats',
       title: '📊 Württemberg 關鍵數據',
       stats: [
-        { label: '面積', value: '11,500 公頃' },
-        { label: '紅酒比例', value: '約 70%（全德最高）' },
+        { label: '面積', value: '約 11,400 公頃' },
+        { label: '紅酒比例', value: '約三分之二（大型產區最高）' },
         { label: '最具特色品種', value: 'Trollinger（德國幾乎僅見於此地）' },
         { label: '產區中心', value: 'Stuttgart；次產區 Remstal、Heilbronn' }
       ]
@@ -1692,7 +1692,7 @@ export const G2M3L3 = {
       title: '🍇 Hessische Bergstrasse 的特色',
       items: [
         { icon: '🌸', text: '最早春天：2–3 月杏花先開，是德國春天的第一站，觀光吸引力強' },
-        { icon: '🏔️', text: 'Odenwald 保護：山脈東側為葡萄園阻擋冷空氣，微氣候溫暖穩定' },
+        { icon: '🏔️', text: 'Odenwald 保護：山脈位於葡萄園東側，阻擋冷空氣，微氣候溫暖穩定' },
         { icon: '🍇', text: 'Riesling 主導：50% 以上種植 Riesling，清爽礦物風格' },
         { icon: '🤝', text: '合作社主導：Bergsträsser Winzer eG 合作社生產大部分產量' },
         { icon: '🏘️', text: '主要城鎮：Bensheim（產區中心）、Heppenheim（北部重心）' },
@@ -2487,7 +2487,7 @@ export const G3M2L2 = {
         { icon: '⚠️', text: '陷阱1：Rheingau 的 Kabinett 有時也很輕盈→看顏色是否有金黃色調，有則偏 Rheingau' },
         { icon: '⚠️', text: '陷阱2：Mosel Auslese 也有蜂蜜感→但板岩礦石仍存在且酒精更低，可分辨' },
         { icon: '⚠️', text: '陷阱3：熟成 Mosel 顏色變深→看汽油礦石香氣可確認是 Mosel 陳年酒' },
-        { icon: '✅', text: '破解：永遠先看酒精——Mosel < 10% 幾乎是鐵律，Rheingau 通常 11% 以上' }
+        { icon: '✅', text: '破解：永遠先看酒精——Mosel 的 Kabinett／Spätlese 常低於 10%，Rheingau 通常 11% 以上' }
       ]
     },
     {
