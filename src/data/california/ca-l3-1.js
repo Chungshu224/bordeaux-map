@@ -186,7 +186,7 @@ export const lessonContent = [
           <h4>Howell Mountain</h4>
           <div class="mava-specs">
             <span>海拔：420–760 m</span>
-            <span>AVA 認定：1984 年</span>
+            <span>AVA 認定：1983 年</span>
             <span>面積：約 1,100 英畝葡萄園</span>
           </div>
           <p>位於 Napa 東側山脊，海拔在晨霧雲層之上。火山噴出的紅色黏土（volcanic tuff）和礫石土壤，礦物含量極高。</p>
