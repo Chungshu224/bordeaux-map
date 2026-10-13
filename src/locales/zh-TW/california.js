@@ -107,8 +107,8 @@ export default {
       description: '太平洋寒流、海岸山脈、晝夜溫差——六大產區群（North Coast、Central Coast、Sierra Foothills、Inland Valleys、Southern CA、Far North CA）的地理特徵與氣候個性',
     },
     'ca-l1-3': {
-      title: 'Napa Valley：16 個子 AVA 的 Cabernet 帝國',
-      description: '從 Carneros 到 Calistoga 的南北風土差異,16 個子 AVA 的個性解析,以及 Opus One、Screaming Eagle 等傳奇酒莊',
+      title: 'Napa Valley：17 個子 AVA 的 Cabernet 帝國',
+      description: '從 Carneros 到 Calistoga 的南北風土差異,17 個子 AVA 的個性解析,以及 Opus One、Screaming Eagle 等傳奇酒莊',
     },
     'ca-l1-4': {
       title: 'Sonoma County：19 個 AVA 的多元王國',
@@ -119,8 +119,8 @@ export default {
       description: '太平洋迷霧（The Fog）如何調節氣溫讓 Napa 與 Sonoma 降溫,沖積平原 vs 火山岩土壤對葡萄風味的塑造',
     },
     'ca-l2-2': {
-      title: 'Napa Valley 16 個次產區 & Sonoma 多樣性',
-      description: '從 Rutherford Dust 到 Stags Leap District,Napa 16 個子 AVA 全解析；Sonoma 19 個 AVA 的品種版圖：Russian River Pinot、Dry Creek Zinfandel',
+      title: 'Napa Valley 17 個次產區 & Sonoma 多樣性',
+      description: '從 Rutherford Dust 到 Stags Leap District,Napa 17 個子 AVA 全解析；Sonoma 19 個 AVA 的品種版圖：Russian River Pinot、Dry Creek Zinfandel',
     },
     'ca-l2-3': {
       title: 'Santa Barbara 橫向山谷 & Paso Robles 石灰岩',

@@ -58,7 +58,7 @@ export const lessonContent = [
       <p>幾乎整個北美太平洋岸的海岸山脈都呈<strong>南北走向</strong>，這是太平洋板塊沿聖安德烈亞斯斷層（San Andreas Fault）平行滑動所形成的典型結果。但在聖巴巴拉一帶，卻出現了一整段違反常理的<strong>東西走向</strong>山脈——這就是「橫向山脈」（Transverse Ranges），包括 Santa Ynez Mountains 與 San Rafael Mountains。</p>
       <div class="tg-mechanism">
         <h4>🔬 為什麼會「橫」過來？</h4>
-        <p>約 2,000 萬年前，太平洋板塊相對北美板塊的運動方向出現了局部彎曲（一般稱為「Big Bend」），造成該區域的地殼不是單純水平滑移，而是受到強烈的擠壓力。這股垂直於斷層走向的壓縮力，把原本的地層像手風琴一樣摺曲並旋轉了近 90 度，連帶把海底沉積的砂岩、頁岩與石灰岩層一併抬升出海面，形成了東西橫向排列的山脈——這段地形沿加州海岸線延伸約 50 英里，是整個南北美洲西岸最大範圍的橫向山脈區。</p>
+        <p>約 2,000 萬年前，太平洋板塊相對北美板塊的運動方向出現了局部彎曲（一般稱為「Big Bend」），造成該區域的地殼不是單純水平滑移，而是受到強烈的擠壓力。這股垂直於斷層走向的壓縮力，把原本的地層像手風琴一樣摺曲並旋轉了近 90 度，連帶把海底沉積的砂岩、頁岩與石灰岩層一併抬升出海面，形成了東西橫向排列的山脈——這段地形東西綿延數百公里，是北美西岸極為罕見的東西走向山系。</p>
       </div>
       <div class="transverse-explanation">
         <div class="te-card">
@@ -93,7 +93,7 @@ export const lessonContent = [
         <div class="sb-ava-card highlight">
           <h4>🌟 Sta. Rita Hills（聖麗塔山丘）</h4>
           <p class="ava-established">AVA 認定：2001 年（1998 年提交產區申請）</p>
-          <p>聖巴巴拉最負盛名的 Pinot Noir 產地，面積約 52 平方英里，介於 Lompoc 與 Buellton 之間。太平洋距此僅約 16 公里，海霧和強勁海風終日進入。三條東西向丘陵在中新世（約 2,000 萬年前）被地殼擠壓從海床抬升出露，露出砂土、黏土與<strong>矽藻土（Diatomaceous Earth）</strong>——由遠古矽藻等含矽微生物遺骸沉積後隆起形成，質輕多孔、極端排水，主要分布於西側靠近 Lompoc 一帶。</p>
+          <p>聖巴巴拉最負盛名的 Pinot Noir 產地，面積約 56 平方英里，介於 Lompoc 與 Buellton 之間。太平洋距此僅約 16 公里，海霧和強勁海風終日進入。三條東西向丘陵在中新世（約 2,000 萬年前）被地殼擠壓從海床抬升出露，露出砂土、黏土與<strong>矽藻土（Diatomaceous Earth）</strong>——由遠古矽藻等含矽微生物遺骸沉積後隆起形成，質輕多孔、極端排水，主要分布於西側靠近 Lompoc 一帶。</p>
           <div class="ava-highlights">
             <span>🍷 Pinot Noir（世界頂級）</span>
             <span>🍾 Chardonnay</span>
@@ -104,7 +104,7 @@ export const lessonContent = [
         <div class="sb-ava-card">
           <h4>Santa Maria Valley（聖瑪利亞谷）</h4>
           <p class="ava-established">AVA 認定：1981 年</p>
-          <p>加州最涼爽的 AVA 之一。完全開放的橫向谷地，終年受太平洋強風影響，是加州最適合種植 Pinot Noir 和 Chardonnay 的地區之一。Bien Nacido Vineyard（1837 年建立）是最著名的葡萄園之一。</p>
+          <p>加州最涼爽的 AVA 之一。完全開放的橫向谷地，終年受太平洋強風影響，是加州最適合種植 Pinot Noir 和 Chardonnay 的地區之一。Bien Nacido Vineyard（1970 年代起種植）是最著名的葡萄園之一。</p>
           <div class="ava-highlights">
             <span>🍷 Pinot Noir</span>
             <span>🍾 Chardonnay</span>
@@ -178,8 +178,8 @@ export const lessonContent = [
         <div class="si-card pinot">
           <h4>🚀 Pinot Noir 效應（正面）</h4>
           <ul>
-            <li>電影上映後 1 年，美國 Pinot Noir 銷量上升 <strong>16%</strong></li>
-            <li>聖巴巴拉葡萄酒旅遊人次暴增 3 倍</li>
+            <li>電影上映後 1 年，美國西部 Pinot Noir 銷量上升 <strong>16%</strong></li>
+            <li>聖巴巴拉葡萄酒旅遊人次大幅成長</li>
             <li>全球市場對 Santa Barbara Pinot 的認知度從幾乎為零躍升至高度知名</li>
             <li>帶動加州北海岸 Pinot 產區（Russian River Valley、Sonoma Coast）銷售全面提升</li>
           </ul>
@@ -274,7 +274,7 @@ export const lessonContent = [
         <div class="estate-card">
           <h4>Saxum Vineyards</h4>
           <p class="estate-location">Willow Creek District</p>
-          <p class="estate-story">由 Justin Smith 於 2000 年創立，2010 年份 James Berry Vineyard 曾獲 Wine Advocate 100 分，是帶動帕索隆河品種國際聲望最重要的酒莊之一。以西側石灰岩混合頁岩的葡萄園，種植 Syrah、Grenache、Mourvèdre 混調。</p>
+          <p class="estate-story">由 Justin Smith 於 2000 年創立，2007 年份 James Berry Vineyard 曾獲 Wine Spectator 選為 2010 年度百大第一名，是帶動帕索隆河品種國際聲望最重要的酒莊之一。以西側石灰岩混合頁岩的葡萄園，種植 Syrah、Grenache、Mourvèdre 混調。</p>
           <p class="estate-style">風格：極度濃縮，黑橄欖、鮮血鐵鏽感、野生香料</p>
         </div>
         <div class="estate-card">
@@ -333,7 +333,7 @@ export const lessonContent = [
             question: '聖巴巴拉的橫向山脈（Transverse Ranges）為何呈東西走向而非典型的南北走向？',
             options: ['A. 純粹隨機的地形侵蝕結果', 'B. 太平洋板塊運動方向出現局部彎曲，垂直於斷層的擠壓力把地層摺曲旋轉近 90 度', 'C. 因為人工開墾改變了地形', 'D. 因為當地火山噴發造成'],
             correct: 1,
-            explanation: '約 2,000 萬年前太平洋板塊相對北美板塊的運動出現局部彎曲（Big Bend），產生強烈的垂直擠壓力，把原本的地層摺曲並旋轉近 90 度，連帶抬升海底沉積岩層，形成東西橫向的山脈系統，是整個南北美洲西岸最大範圍的橫向山脈區。'
+            explanation: '約 2,000 萬年前太平洋板塊相對北美板塊的運動出現局部彎曲（Big Bend），產生強烈的垂直擠壓力，把原本的地層摺曲並旋轉近 90 度，連帶抬升海底沉積岩層，形成東西橫向的山脈系統，是北美西岸極為罕見的東西走向山系。'
           },
           {
             type: 'single',
@@ -375,7 +375,7 @@ export const lessonContent = [
             question: '2004 年電影《Sideways》主要對哪個品種產生了銷售促進效果？',
             options: ['A. Merlot', 'B. Chardonnay', 'C. Pinot Noir', 'D. Cabernet Sauvignon'],
             correct: 2,
-            explanation: '電影《Sideways》中，主角 Miles 對 Pinot Noir 充滿熱情的描述引發了全球消費者對聖巴巴拉 Pinot Noir 的興趣，使美國 Pinot Noir 銷量在電影上映後一年內上升了 16%。'
+            explanation: '電影《Sideways》中，主角 Miles 對 Pinot Noir 充滿熱情的描述引發了全球消費者對聖巴巴拉 Pinot Noir 的興趣，使美國西部 Pinot Noir 銷量在電影上映後一年內上升了 16%。'
           },
           {
             type: 'single',

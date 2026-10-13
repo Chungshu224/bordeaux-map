@@ -39,7 +39,7 @@
     <!-- 子 AVA -->
     <div v-else-if="currentTab === 'ava'" class="ns-ava">
       <div class="ns-ava-side">
-        <h3>🍷 Napa Valley — 16 個子 AVA</h3>
+        <h3>🍷 Napa Valley — 17 個子 AVA</h3>
         <p class="ns-ava-note">由南向北氣候逐漸變熱（Carneros 最涼，Calistoga 最熱）</p>
         <ul class="ns-ava-list">
           <li v-for="a in NAPA_AVAS" :key="a.name">
@@ -98,7 +98,7 @@
         <h3>🌲 Sonoma County 一句話</h3>
         <p class="ns-sum-quote">「多元、清新、永續 — 加州最具風土多樣性的產區」</p>
         <ul>
-          <li>面積 60,000 公頃，是 Napa 三倍以上</li>
+          <li>面積約 24,000 公頃，約為 Napa 的 1.3 倍</li>
           <li>Pinot Noir + Chardonnay 為主，但種有 60+ 個品種</li>
           <li>全美永續認證酒莊比例最高（99% 酒莊符合認證）</li>
           <li>Russian River Valley、Sonoma Coast 為頂級涼爽 Pinot 產區</li>
@@ -124,12 +124,12 @@ const TABS = [
 const currentTab = ref(props.slide?.defaultTab || 'compare')
 
 const COMPARE_ROWS = [
-  { label: '面積', napa: '約 18,000 公頃', sonoma: '約 60,000 公頃（3 倍 Napa）' },
+  { label: '面積', napa: '約 18,000 公頃', sonoma: '約 24,000 公頃（約 1.3 倍 Napa）' },
   { label: '氣候帶', napa: '溫暖至炎熱（南涼北熱）', sonoma: '冷涼至溫暖（西涼東暖）' },
   { label: '海風影響', napa: '經 Carneros 入南部，北部山谷較少受影響', sonoma: '太平洋直接吹拂，受 Petaluma Gap 與河谷風主導' },
   { label: '主力品種', napa: 'Cabernet Sauvignon（40%）、Chardonnay、Merlot', sonoma: 'Pinot Noir、Chardonnay、Cabernet Sauvignon、Zinfandel' },
   { label: '頂級風格', napa: '濃郁、結構嚴謹、橡木桶顯著、長陳年潛力', sonoma: '多元優雅、酸度活潑、純淨果味' },
-  { label: '子 AVA 數', napa: '16 個（Napa Valley 為母 AVA）', sonoma: '19 個（含 Sonoma Coast、Russian River 等）' },
+  { label: '子 AVA 數', napa: '17 個（Napa Valley 為母 AVA）', sonoma: '19 個（含 Sonoma Coast、Russian River 等）' },
   { label: '酒莊數', napa: '約 475 家（許多 Cult Wine）', sonoma: '約 425 家（家族酒莊比例高）' },
   { label: '價格定位', napa: 'NT$ 2,500 起，頂級 NT$ 15,000+', sonoma: 'NT$ 1,500 起，頂級 NT$ 8,000+' },
   { label: '永續認證', napa: '約 50% 酒莊', sonoma: '99% 酒莊（全美最高）' },

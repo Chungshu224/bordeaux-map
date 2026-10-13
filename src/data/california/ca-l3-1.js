@@ -77,7 +77,7 @@ export const lessonContent = [
             </div>
             <div class="hv-factor">
               <strong>海霧之上</strong>
-              <p>許多 Napa 山地 AVA（Howell Mountain 420m+、Spring Mountain 400m+）高於晨霧雲層。白天陽光充足，夜晚溫度隨海拔下降。</p>
+              <p>許多 Napa 山地 AVA（Howell Mountain 420m+ 與 Spring Mountain 高海拔區塊）高於晨霧雲層。白天陽光充足，夜晚溫度隨海拔下降。</p>
               <p class="hv-result wine-quality">→ 強烈陽光帶來更高花青素含量，涼夜保留酸度</p>
             </div>
             <div class="hv-factor">
@@ -206,7 +206,7 @@ export const lessonContent = [
           <p>位於 Napa 西側，地質複雜——火山岩、頁岩、砂岩，不同小坡面展現不同個性。涼爽的山地微氣候比谷地低 3–5°C。</p>
           <div class="mava-style">
             <h5>典型風格</h5>
-            <p>兼具優雅和力量的 Cabernet——比谷地更多礦物感，比 Howell Mountain 更精細。也出產加州最優質的 Pinot Noir（特別是高海拔的 Chardonnay）。</p>
+            <p>兼具優雅和力量的 Cabernet——比谷地更多礦物感，比 Howell Mountain 更精細。高海拔區塊的 Chardonnay 也有出色表現。</p>
           </div>
           <p class="mava-estates">代表酒莊：Pride Mountain Vineyards（跨越 Napa/Sonoma 縣界！）、Spring Mountain Vineyard</p>
         </div>
@@ -227,11 +227,11 @@ export const lessonContent = [
         <div class="mava-card">
           <h4>Mount Veeder</h4>
           <div class="mava-specs">
-            <span>海拔：120–790 m（Napa 最高峰）</span>
+            <span>海拔：約 180–790 m</span>
             <span>AVA 認定：1990 年</span>
             <span>面積：約 1,000 英畝葡萄園</span>
           </div>
-          <p>位於 Napa 最西南方的玄武岩（Basalt）和砂岩高地。是 Napa 和 Sonoma 縣界的山脊，受到太平洋和 San Pablo Bay 的雙重影響。</p>
+          <p>位於 Napa 最西南方，以砂岩、頁岩為主並夾有火山岩的高地。是 Napa 和 Sonoma 縣界的山脊，受到太平洋和 San Pablo Bay 的雙重影響。</p>
           <div class="mava-style">
             <h5>典型風格</h5>
             <p>加州最具大地感（Earthy）的 Cabernet——野生香料、泥土、蘑菇風味明顯，單寧顆粒感強，需要充分的時間才能完全開放。</p>
@@ -256,7 +256,7 @@ export const lessonContent = [
             <span>地形：Oakville 沖積扇（Alluvial Fan）</span>
           </div>
           <p class="lv-history"><strong>歷史：</strong>拓荒者 H. W. Crabb 於 1868 年在 Oakville 建立 Hermosa Vineyard，1886 年更名為 To Kalon。1958 年起 Robert Mondavi 家族陸續購入超過 300 英畝，1966 年 Robert Mondavi 在此建立自己的酒莊，成為 Napa 現代精品化的起點。葡萄栽培專家 Andy Beckstoffer 也擁有原始 Crabb 地產的另一部分（Beckstoffer To Kalon）。</p>
-          <p class="lv-legal"><strong>商標之爭：</strong>Robert Mondavi Winery 於 1988 年為「To Kalon」註冊商標，2002 年因 Schrader Cellars 使用 Beckstoffer To Kalon 名稱而興訟。2003 年雙方達成和解——Mondavi 授予 Beckstoffer 永久、免權利金的商標使用權，讓 Beckstoffer 種植戶得以在酒標上合法標示「To Kalon Vineyard」。這場訴訟凸顯了單一名園在加州已具備等同法國一級園（Grand Cru）的商業與法律價值。</p>
+          <p class="lv-legal"><strong>商標之爭：</strong>Robert Mondavi Winery 於 1988 年為「To Kalon」註冊商標，2002 年因 Schrader Cellars 使用 Beckstoffer To Kalon 名稱而興訟。2003 年雙方達成和解——雙方的和解條款未公開，但據報導 Beckstoffer 獲准讓其客戶在酒標上標示「To Kalon Vineyard」（附有箱數上限）。這場訴訟凸顯了單一名園在加州已具備等同法國一級園（Grand Cru）的商業與法律價值。</p>
           <p class="lv-terroir"><strong>風土：</strong>位於 Oakville 沖積扇的頂部，深厚而排水良好的礫石壤土，是少數同時具備山麓排水性和谷地日照條件的地塊，被許多釀酒師視為 Napa Cabernet 的「原型」風格——黑醋栗、雪松、極細緻的單寧骨架。</p>
         </div>
         <div class="lv-card monte-bello">
@@ -389,13 +389,13 @@ export const lessonContent = [
       <div class="regions-grid">
         <div class="region-card">
           <h4>Santa Cruz Mountains AVA</h4>
-          <p><strong>海拔：</strong>可達 800 米以上，加州法定海拔門檻最高的 AVA 之一（部分地塊須達到特定最低海拔才可納入）。</p>
-          <p><strong>特色：</strong>橫跨聖塔克拉拉與聖馬刁郡，太平洋與 San Francisco Bay 雙重影響，霧況複雜多變。Monte Bello 的石灰岩地質在此區並非特例，而是山脊地質的縮影。</p>
+          <p><strong>海拔：</strong>最高可達 800 米以上；AVA 以海拔線劃界（太平洋側 400 英尺、灣區側 800 英尺以上才納入）。</p>
+          <p><strong>特色：</strong>橫跨聖塔克拉拉、聖塔克魯茲與聖馬刁三郡，太平洋與 San Francisco Bay 雙重影響，霧況複雜多變。Monte Bello 的石灰岩地質在此區並非特例，而是山脊地質的縮影。</p>
           <p class="region-example">代表：Ridge Vineyards、Mount Eden Vineyards</p>
         </div>
         <div class="region-card">
           <h4>Santa Lucia Highlands AVA</h4>
-          <p><strong>海拔：</strong>60–450 米的向陽台地（Benchland），俯瞰 Salinas Valley。</p>
+          <p><strong>海拔：</strong>最高約 370 米（1,200 英尺）的向陽台地（Benchland），俯瞰 Salinas Valley。</p>
           <p><strong>特色：</strong>加州罕見的「強風 + 高海拔」組合——來自 Monterey Bay 的強勁午後海風大幅降低果實溫度、縮小果粒，是 Pinot Noir 和 Syrah 的頂尖產地，也是研究「風」作為微氣候變因（而非僅是霧或海拔）的最佳案例。</p>
           <p class="region-example">代表：Pisoni Vineyard、Rosella's Vineyard</p>
         </div>
@@ -441,9 +441,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '關於 To Kalon Vineyard 的商標訴訟，以下敘述何者正確？',
-            options: ['A. 訴訟最終判定「To Kalon」不能出現在任何酒標上', 'B. Robert Mondavi Winery 於 1988 年註冊「To Kalon」商標，2003 年與 Beckstoffer 和解，授予其永久免權利金的使用權', 'C. To Kalon 是一個受 TTB 正式認定的獨立 AVA', 'D. 這場訴訟發生在 1976 年巴黎審判之前'],
+            options: ['A. 訴訟最終判定「To Kalon」不能出現在任何酒標上', 'B. Robert Mondavi Winery 於 1988 年註冊「To Kalon」商標，2003 年與 Beckstoffer 和解（條款未公開），Beckstoffer 客戶獲准在酒標使用該名稱', 'C. To Kalon 是一個受 TTB 正式認定的獨立 AVA', 'D. 這場訴訟發生在 1976 年巴黎審判之前'],
             correct: 1,
-            explanation: 'Robert Mondavi Winery 於 1988 年為「To Kalon」註冊商標，2002 年因 Schrader Cellars 使用 Beckstoffer To Kalon 名稱興訟，2003 年雙方和解，Mondavi 授予 Beckstoffer 永久、免權利金的商標使用權。這場訴訟凸顯單一名園在加州已具備等同法國一級園的商業法律價值。'
+            explanation: 'Robert Mondavi Winery 於 1988 年為「To Kalon」註冊商標，2002 年因 Schrader Cellars 使用 Beckstoffer To Kalon 名稱興訟，2003 年雙方和解（條款未公開），據報導 Beckstoffer 客戶獲准在酒標使用該名稱。這場訴訟凸顯單一名園在加州已具備等同法國一級園的商業法律價值。'
           },
           {
             type: 'single',

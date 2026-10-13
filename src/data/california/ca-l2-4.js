@@ -142,12 +142,12 @@ export const lessonContent = [
         <div class="mlf-comparison">
           <div class="mlf-card full">
             <h5>完全進行 MLF（Buttery Style）</h5>
-            <p>1980–2000 年代加州流行風格。Chardonnay 呈現奶油、奶酪、烤麵包的濃郁質感，酸度低而圓潤。代表：Rombauer Chardonnay（著名的「Vacation Chardonnay」）</p>
+            <p>1980–2000 年代加州流行風格。Chardonnay 呈現奶油、奶酪、烤麵包的濃郁質感，酸度低而圓潤。代表：Rombauer Chardonnay（奶油風格的代表）</p>
             <span class="mlf-result">結果：豐腴、奶油感、低酸</span>
           </div>
           <div class="mlf-card none">
             <h5>完全不進行 MLF（Crisp Style）</h5>
-            <p>2010 年代後流行的「新浪潮加州白酒」風格。保留蘋果酸的清爽感，展現 Chardonnay 的果香和礦物感，不用或少用橡木桶。代表：Littorai、Ceritas 的布根地風格 Chardonnay</p>
+            <p>2010 年代後流行的「新浪潮加州白酒」風格。保留蘋果酸的清爽感，展現 Chardonnay 的果香和礦物感，不用或少用橡木桶。風格特徵：少用或不用新橡木桶，實際作法依酒莊而異（許多布根地式酒莊仍會部分進行 MLF）</p>
             <span class="mlf-result">結果：清爽、高酸、礦物感</span>
           </div>
           <div class="mlf-card partial">
@@ -191,7 +191,7 @@ export const lessonContent = [
         </div>
         <div class="sh-card">
           <h4>Scharffenberger Cellars</h4>
-          <p class="sh-parent">Mendocino County 獨立酒莊</p>
+          <p class="sh-parent">Mendocino County 氣泡酒廠，現屬 Louis Roederer 集團（曾短暫更名 Pacific Echo）</p>
           <p>Anderson Valley 的先鋒氣泡酒廠，以高性價比的傳統法氣泡酒聞名加州。</p>
           <span>產地：Anderson Valley</span>
         </div>
@@ -202,7 +202,7 @@ export const lessonContent = [
           <li><strong>採收涼爽氣候葡萄</strong> → 高酸低糖的基酒（base wine），通常 Pinot Noir + Chardonnay，有時加入少量 Pinot Meunier</li>
           <li><strong>調配（Assemblage）</strong> → 混合不同批次、不同葡萄園、不同年份（Non-Vintage）或單一年份（Vintage）基酒，追求酒莊一致的「屋風格」（House Style）</li>
           <li><strong>裝瓶與二次發酵（Tirage）</strong> → 加入酵母和糖（Liqueur de Tirage）後裝瓶並以皇冠蓋封瓶，糖分在瓶中被酵母發酵成酒精與 CO₂，因無處逸散，瓶壓可累積達 6 大氣壓</li>
-          <li><strong>酒泥陳年（Lees Aging）</strong> → 死酵母（lees）持續與酒液接觸，酵母細胞壁自溶釋出多醣體與胺基酸，帶來烤麵包、餅乾、堅果的風味複雜度。法定最低酒泥接觸期：NV 至少 15 個月，Vintage 至少 36 個月，許多加州精品酒款遠超此標準</li>
+          <li><strong>酒泥陳年（Lees Aging）</strong> → 死酵母（lees）持續與酒液接觸，酵母細胞壁自溶釋出多醣體與胺基酸，帶來烤麵包、餅乾、堅果的風味複雜度。香檳產區（AOC）規定的最低酒泥接觸期為 NV 15 個月、Vintage 36 個月（加州沒有統一的法定標準），許多加州精品酒款遠超此參考值</li>
           <li><strong>轉瓶（Riddling / Remuage）</strong> → 酒瓶置於轉瓶架（Pupitre）上，逐日小角度轉動並漸漸倒置，讓沉澱的酒泥緩慢集中滑向瓶口，現代多以自動轉瓶機（Gyropalette）完成</li>
           <li><strong>除渣（Disgorgement / Dégorgement）</strong> → 將瓶口浸入冷凍鹽水槽，凍結含酒泥的瓶頸冰栓，開瓶時瓶內壓力自動把冰渣彈射排出，酒液維持澄澈</li>
           <li><strong>補液定裝（Dosage）</strong> → 除渣後液面略降，補入「補液液」（Liqueur d'Expédition，通常是糖與基酒調和液）以補足液位並決定最終甜度等級</li>
@@ -315,19 +315,19 @@ export const lessonContent = [
           </div>
           <div class="timeline-item">
             <div class="timeline-badge">1987</div>
-            <div class="timeline-content"><strong>🏔️ Atlas Peak 計畫啟動</strong><p>托斯卡尼名莊 Antinori 家族的 Piero Antinori 相中 Napa 東側 Atlas Peak 的石灰岩高原，判斷其晝夜溫差與土壤條件適合 Sangiovese，開始種植試驗。</p></div>
+            <div class="timeline-content"><strong>🏔️ Atlas Peak 計畫啟動</strong><p>托斯卡尼名莊 Antinori 家族的 Piero Antinori 相中 Napa 東側 Atlas Peak 的火山岩高原，判斷其晝夜溫差與土壤條件適合 Sangiovese，開始種植試驗。</p></div>
           </div>
           <div class="timeline-item">
             <div class="timeline-badge">1990s</div>
-            <div class="timeline-content"><strong>📈 Cal-Ital 熱潮</strong><p>Robert Pepi、Ferrari-Carano 等酒莊跟進種植，加州 Sangiovese 種植面積一度攀升至約 3,000 英畝，媒體稱之為「Cal-Ital」運動。</p></div>
+            <div class="timeline-content"><strong>📈 Cal-Ital 熱潮</strong><p>Robert Pepi、Ferrari-Carano 等酒莊跟進種植，加州 Sangiovese 種植面積在 1980 年代末攀升至約 3,000 英畝的高峰，媒體稱之為「Cal-Ital」運動。</p></div>
           </div>
           <div class="timeline-item">
             <div class="timeline-badge modern">1997 至今</div>
-            <div class="timeline-content"><strong>📉 退燒與回穩</strong><p>由於克隆株選擇不當、消費市場對加州 Sangiovese 認知度不足，許多酒莊將其視為副業而非主力品種，熱潮消退，種植面積回落至約 1,500 英畝，但少數堅持下來的酒莊如今釀出品質扎實的作品。</p></div>
+            <div class="timeline-content"><strong>📉 退燒與回穩</strong><p>由於克隆株選擇不當、消費市場對加州 Sangiovese 認知度不足，許多酒莊將其視為副業而非主力品種，熱潮消退，種植面積回落至約 1,800 英畝，但少數堅持下來的酒莊如今釀出品質扎實的作品。</p></div>
           </div>
         </div>
       </div>
-      <p class="sangiovese-lesson">💡 教學意義：Sangiovese 的興衰史是一堂重要的風土適應課——移植一個品種不能只看氣候相似度（Atlas Peak 的石灰岩與晝夜溫差確實接近托斯卡尼），克隆株選擇、市場認知與釀酒團隊的長期投入同樣是決定成敗的關鍵變數，這也是 Rhône Rangers 運動能長期成功、而 Cal-Ital 運動相對受限的部分原因。</p>
+      <p class="sangiovese-lesson">💡 教學意義：Sangiovese 的興衰史是一堂重要的風土適應課——移植一個品種不能只看氣候相似度（Atlas Peak 的高海拔與晝夜溫差確實接近托斯卡尼，但火山土壤與托斯卡尼的石灰質黏土並不相同），克隆株選擇、市場認知與釀酒團隊的長期投入同樣是決定成敗的關鍵變數，這也是 Rhône Rangers 運動能長期成功、而 Cal-Ital 運動相對受限的部分原因。</p>
     </div>`
   },
 
@@ -339,7 +339,7 @@ export const lessonContent = [
         <div class="estate-card">
           <h4>Ridge Vineyards</h4>
           <p class="estate-location">Dry Creek Valley（Lytton Springs）／Santa Cruz Mountains</p>
-          <p class="estate-story">1962 年創立，釀酒師 Paul Draper 長年堅持極簡釀造哲學：野生酵母發酵、美國橡木桶（而非法國桶）、成分標示透明化（Ridge 是最早在酒標上列出完整成分的加州酒莊之一）。Lytton Springs 老藤園混植 Zinfandel、Petite Sirah、Carignane，延續加州早期「田間混調」（Field Blend）傳統。</p>
+          <p class="estate-story">1959 年由史丹佛工程師購地、1962 年首度商業釀造，釀酒師 Paul Draper 長年堅持極簡釀造哲學：野生酵母發酵、美國橡木桶（而非法國桶）、成分標示透明化（Ridge 是最早在酒標上列出完整成分的加州酒莊之一）。Lytton Springs 老藤園混植 Zinfandel、Petite Sirah、Carignane，延續加州早期「田間混調」（Field Blend）傳統。</p>
           <p class="estate-style">風格：透明、質樸，展現老藤田間混調的複雜香料與野莓層次</p>
         </div>
         <div class="estate-card">
@@ -407,14 +407,14 @@ export const lessonContent = [
             question: 'Atlas Peak 的 Sangiovese 種植計畫最初是由哪個托斯卡尼名莊家族主導？',
             options: ['A. Frescobaldi 家族', 'B. Antinori 家族（Piero Antinori）', 'C. Gaja 家族', 'D. Ricasoli 家族'],
             correct: 1,
-            explanation: '1987 年，托斯卡尼名莊 Antinori 家族的 Piero Antinori 相中 Napa 東側 Atlas Peak 的石灰岩高原，判斷其晝夜溫差與土壤條件適合 Sangiovese，展開種植試驗，是 1990 年代「Cal-Ital」熱潮的起點之一。'
+            explanation: '1987 年，托斯卡尼名莊 Antinori 家族的 Piero Antinori 相中 Napa 東側 Atlas Peak 的火山岩高原，判斷其晝夜溫差與土壤條件適合 Sangiovese，展開種植試驗，是 1990 年代「Cal-Ital」熱潮的起點之一。'
           },
           {
             type: 'single',
             question: '在加州氣泡酒發展中，哪個香檳大廠於 1973 年率先在加州設廠？',
             options: ['A. Roederer', 'B. Taittinger', 'C. Moët & Chandon（Domaine Chandon）', 'D. Krug'],
             correct: 2,
-            explanation: 'Moët & Chandon 於 1973 年在 Napa Valley Yountville 建立了 Domaine Chandon，是第一個在加州設立分廠的頂級香檳大廠，開啟了加州傳統法氣泡酒的黃金時代。'
+            explanation: 'Moët & Chandon 於 1973 年在 Napa Valley Yountville 建立了 Domaine Chandon，是第一個在 Napa Valley 設立酒廠的香檳大廠，開啟了加州傳統法氣泡酒的黃金時代。'
           }
         ]
       }
@@ -489,14 +489,14 @@ export const lessonContent = [
             question: 'Atlas Peak 的 Sangiovese 種植計畫是哪個托斯卡尼家族在 1987 年主導展開的？',
             options: ['A. Gaja 家族', 'B. Antinori 家族', 'C. Frescobaldi 家族', 'D. Mondavi 家族'],
             correct: 1,
-            explanation: '1987 年 Antinori 家族的 Piero Antinori 相中 Atlas Peak 的石灰岩高原展開 Sangiovese 種植試驗，是加州「Cal-Ital」運動最具代表性的案例之一。'
+            explanation: '1987 年 Antinori 家族的 Piero Antinori 相中 Atlas Peak 的火山岩高原展開 Sangiovese 種植試驗，是加州「Cal-Ital」運動最具代表性的案例之一。'
           },
           {
             type: 'single',
             question: '哪個香檳大廠於 1973 年率先在加州 Napa Valley 設廠？',
             options: ['A. Roederer', 'B. Taittinger', 'C. Moët & Chandon（Domaine Chandon）', 'D. Krug'],
             correct: 2,
-            explanation: 'Moët & Chandon 於 1973 年在 Napa Valley Yountville 建立 Domaine Chandon，是第一個在加州設立分廠的頂級香檳大廠。'
+            explanation: 'Moët & Chandon 於 1973 年在 Napa Valley Yountville 建立 Domaine Chandon，是第一個在 Napa Valley 設立酒廠的香檳大廠。'
           },
           {
             type: 'single',

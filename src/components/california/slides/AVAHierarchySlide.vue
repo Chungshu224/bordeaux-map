@@ -115,7 +115,7 @@ const LEVELS = [
       'Bennett Valley (Sonoma)',
       'Santa Rita Hills (Santa Barbara)'
     ],
-    trivia: '加州 Napa Valley 內有 16 個子 AVA，Sonoma County 有 19 個 AVA，是全美 AVA 細分最詳盡的兩個產區。子 AVA 通常代表更高品質與更明確風土特徵。'
+    trivia: '加州 Napa Valley 內有 17 個子 AVA，Sonoma County 有 19 個 AVA，是全美 AVA 細分最詳盡的兩個產區。子 AVA 通常代表更高品質與更明確風土特徵。'
   },
   {
     key: 'ava',

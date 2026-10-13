@@ -102,8 +102,8 @@ export default {
       description: 'Pacific cold currents, coastal mountains, day-night temperature swings — geographic features and climate personalities of the six region clusters (North Coast, Central Coast, Sierra Foothills, Inland Valleys, Southern CA, Far North CA).',
     },
     'ca-l1-3': {
-      title: 'Napa Valley: The Cabernet Empire of 16 Sub-AVAs',
-      description: 'North-south terroir contrasts from Carneros to Calistoga, profiles of 16 sub-AVAs, and legendary wineries like Opus One and Screaming Eagle.',
+      title: 'Napa Valley: The Cabernet Empire of 17 Sub-AVAs',
+      description: 'North-south terroir contrasts from Carneros to Calistoga, profiles of 17 sub-AVAs, and legendary wineries like Opus One and Screaming Eagle.',
     },
     'ca-l1-4': {
       title: 'Sonoma County: A Diverse Kingdom of 19 AVAs',
@@ -130,8 +130,8 @@ export default {
       description: 'How the Pacific Fog regulates temperatures and cools Napa & Sonoma; alluvial plains vs volcanic soils and their imprint on grape flavor.',
     },
     'ca-l2-2': {
-      title: 'Napa\'s 16 Sub-AVAs & Sonoma Diversity',
-      description: 'Full breakdown of Napa\'s 16 sub-AVAs from Rutherford Dust to Stags Leap District; Sonoma\'s 19 AVAs and varietal map: Russian River Pinot, Dry Creek Zinfandel.',
+      title: 'Napa\'s 17 Sub-AVAs & Sonoma Diversity',
+      description: 'Full breakdown of Napa\'s 17 sub-AVAs from Rutherford Dust to Stags Leap District; Sonoma\'s 19 AVAs and varietal map: Russian River Pinot, Dry Creek Zinfandel.',
     },
     'ca-l2-3': {
       title: 'Santa Barbara Transverse Valleys & Paso Robles Limestone',

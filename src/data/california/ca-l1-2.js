@@ -168,7 +168,7 @@ export const lessonContent = [
       <div class="sub-regions">
         <div class="sub-region livermore">
           <h4>🔬 Livermore Valley — 加州 Chardonnay 與 Cabernet 的基因庫</h4>
-          <p>舊金山灣區東緣，1883 年 Carl H. Wente 和 James Concannon 兩位移民幾乎同時創立 <strong>Wente Vineyards</strong> 與 <strong>Concannon Vineyard</strong>，是美國歷史最悠久的家族酒莊之一。1912 年 Wente 家族從法國引進 Chardonnay 插枝，篩選培育出「Wente 克隆」（Wente clone），今日超過 75% 的加州 Chardonnay 血統可追溯至此；1893 年 Concannon 從波爾多 Château Margaux 引進 Cabernet Sauvignon 插枝，至今約 80% 的加州 Cabernet Sauvignon 可追溯至這批「Concannon clone」。礫石與石灰質土壤帶來類波爾多的風土條件。</p>
+          <p>舊金山灣區東緣，1883 年 Carl H. Wente 和 James Concannon 兩位移民幾乎同時創立 <strong>Wente Vineyards</strong> 與 <strong>Concannon Vineyard</strong>，是美國歷史最悠久的家族酒莊之一。1912 年 Wente 家族從法國引進 Chardonnay 插枝，篩選培育出「Wente 克隆」（Wente clone），今日加州大多數 Chardonnay 的血統可追溯至此；1893 年 Concannon 從波爾多 Château Margaux 引進 Cabernet Sauvignon 插枝，至今約 80% 的加州 Cabernet Sauvignon 可追溯至這批「Concannon clone」。礫石與石灰質土壤帶來類波爾多的風土條件。</p>
         </div>
 
         <div class="sub-region monterey">
@@ -176,7 +176,7 @@ export const lessonContent = [
           <p>蒙特雷灣的強烈海風（俗稱「蒙特雷噴嘴」Monterey Funnel）帶來極涼爽氣候，是加州風量最大的產區。葡萄藤必須逆風生長，造就天然低產量和濃縮風味。</p>
           <ul>
             <li><strong>Santa Lucia Highlands：</strong>坡地葡萄園位於霧線之上，Pinot Noir 與 Syrah 表現卓越，是近 20 年崛起最快的加州 Pinot 產區之一。</li>
-            <li><strong>Chalone AVA：</strong>1982 年成為 Monterey 郡第一個 AVA，海拔近 600 公尺，石灰岩與火山岩混合土壤全加州罕見。<strong>Chalone Vineyard</strong> 葡萄園早在 1919 年即已種植，是郡內最古老的葡萄園之一，以 Chardonnay 和 Pinot Noir 聞名。</li>
+            <li><strong>Chalone AVA：</strong>1982 年成為 Monterey 郡第一個 AVA，海拔近 600 公尺，花崗岩與石灰岩混合土壤全加州罕見。<strong>Chalone Vineyard</strong> 葡萄園早在 1919 年即已種植，是郡內最古老的葡萄園之一，以 Chardonnay 和 Pinot Noir 聞名。</li>
             <li><strong>Arroyo Seco：</strong>以 Riesling 與 Chardonnay 見長，卵石覆蓋的沖積扇土壤幫助夜間快速散熱。</li>
           </ul>
         </div>
@@ -185,7 +185,7 @@ export const lessonContent = [
           <h4>☀️ Paso Robles</h4>
           <p>中央海岸最熱、面積最大的次產區，西區（較涼，石灰質土壤）和東區（較熱，沖積土）風格迥異，2014 年官方細分為 11 個次分區。以 Rhône 風格葡萄酒聞名（Syrah、Grenache、Mourvèdre），但 Cabernet Sauvignon 和 Zinfandel 也表現卓越。</p>
           <div class="key-avas">
-            <span class="ava-tag">Tablas Creek（1989 年由 Rhône 名莊 Château de Beaucastel 家族與 Vineyard Brands 的 Haas 家族合資創立，引進 16 個 Rhône 品種插枝，帶動加州「Rhône Ranger」運動）</span>
+            <span class="ava-tag">Tablas Creek（1989 年由 Rhône 名莊 Château de Beaucastel 家族與 Vineyard Brands 的 Haas 家族合資創立，從 Beaucastel 引進多個 Rhône 品種的插枝，帶動加州「Rhône Ranger」運動）</span>
             <span class="ava-tag">DAOU、Justin Vineyards（Bordeaux 風格代表酒莊）</span>
           </div>
         </div>
@@ -231,7 +231,7 @@ export const lessonContent = [
 
       <h3>☀️ Southern California（南加州）</h3>
       <div class="region-block">
-        <p><strong>Temecula Valley</strong>（特梅庫拉谷）是南加州最重要的葡萄酒旅遊目的地，距洛杉磯約 90 分鐘車程。高爾夫球具創辦人 Ely Callaway 於 1969 年創立 <strong>Callaway Vineyard</strong>，是產區第一座商業酒莊、也是第一個開設品飲室的酒莊，證明南加州同樣能種出優質葡萄酒。「Rainbow Gap」（彩虹缺口）讓太平洋涼風得以吹入原本應該炎熱的內陸谷地，帶來夜間降溫。San Diego County 的 Ramona Valley（2006 年設立 AVA）也有日益增長的葡萄酒旅遊社群。</p>
+        <p><strong>Temecula Valley</strong>（特梅庫拉谷）是南加州最重要的葡萄酒旅遊目的地，距洛杉磯約 90 分鐘車程。高爾夫球具創辦人 Ely Callaway 於 1969 年創立 <strong>Callaway Vineyard</strong>，1974 年開設產區第一間對外開放的品飲室（Cilurzo 家族 1968 年已率先在此種下商業葡萄園），證明南加州同樣能種出優質葡萄酒。「Rainbow Gap」（彩虹缺口）讓太平洋涼風得以吹入原本應該炎熱的內陸谷地，帶來夜間降溫。San Diego County 的 Ramona Valley（2005 年設立 AVA）也有日益增長的葡萄酒旅遊社群。</p>
         <div class="key-facts-small">
           <span>📍 核心 AVA：Temecula Valley、Ramona Valley</span>
           <span>🍇 Cabernet Franc、Chardonnay、Sauvignon Blanc</span>
@@ -402,10 +402,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: '加州約 75% 的 Chardonnay 血統可追溯至哪個酒莊培育的克隆品系？',
+            question: '加州大多數 Chardonnay 的血統可追溯至哪個酒莊培育的克隆品系？',
             options: ['A. Robert Mondavi Winery', 'B. Wente Vineyards（Livermore Valley）', 'C. Chateau Montelena', 'D. Ridge Vineyards'],
             correct: 1,
-            explanation: 'Wente 家族 1912 年從法國引進 Chardonnay 插枝並篩選培育出「Wente clone」，今日超過 75% 的加州 Chardonnay 血統可追溯至此，Livermore Valley 因此被稱為加州 Chardonnay 的基因庫。'
+            explanation: 'Wente 家族 1912 年從法國引進 Chardonnay 插枝並篩選培育出「Wente clone」，今日加州大多數 Chardonnay 的血統可追溯至此，Livermore Valley 因此被稱為加州 Chardonnay 的基因庫。'
           },
           {
             type: 'single',
@@ -419,7 +419,7 @@ export const lessonContent = [
             question: 'Paso Robles 的 Tablas Creek Vineyard 由哪個法國家族與美國夥伴於 1989 年合資創立？',
             options: ['A. Château Mouton-Rothschild', 'B. Château de Beaucastel（Perrin 家族）', 'C. Domaine Leflaive', 'D. Louis Roederer'],
             correct: 1,
-            explanation: 'Tablas Creek Vineyard 由 Rhône 名莊 Château de Beaucastel 的 Perrin 家族與 Vineyard Brands 的 Haas 家族於 1989 年合資創立，引進 16 個 Rhône 品種插枝，帶動加州「Rhône Ranger」運動。'
+            explanation: 'Tablas Creek Vineyard 由 Rhône 名莊 Château de Beaucastel 的 Perrin 家族與 Vineyard Brands 的 Haas 家族於 1989 年合資創立，從 Beaucastel 引進多個 Rhône 品種的插枝，帶動加州「Rhône Ranger」運動。'
           },
           {
             type: 'single',

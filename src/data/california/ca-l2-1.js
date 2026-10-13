@@ -105,7 +105,7 @@ export const lessonContent = [
       <div class="gap-cards">
         <div class="gap-card">
           <h4>🌬️ Petaluma Gap — 全美第一個以風速界定的 AVA</h4>
-          <p>介於 Tomales Bay 與 Bodega Bay 之間，一條寬約 15 英里、海拔多在 600 英尺以下的低矮丘陵走廊，讓太平洋海風幾乎無阻礙地灌入 Sonoma 南部再匯入 San Pablo Bay。2017 年獲 TTB 認定為 AVA 時，其邊界並非以山脊或河流劃定，而是以「持續風速達每小時 8 英里以上」的氣象數據為界——這在美國 AVA 史上是首例。午後風速隨內陸增溫而加大，也讓區內 Pinot Noir、Syrah 呈現厚實果皮、高酸的特徵。</p>
+          <p>從 Bodega Bay 向東南延伸約 30 英里至 San Pablo Bay 的 Sears Point，一條寬約 15 英里、海拔多在 600 英尺以下的低矮丘陵走廊，讓太平洋海風幾乎無阻礙地灌入 Sonoma 南部再匯入 San Pablo Bay。2017 年獲 TTB 認定為 AVA 時，其邊界並非以山脊或河流劃定，而是以「持續風速達每小時 8 英里以上」的氣象數據為界——這在美國 AVA 史上是首例。午後風速隨內陸增溫而加大，也讓區內 Pinot Noir、Syrah 呈現厚實果皮、高酸的特徵。</p>
         </div>
         <div class="gap-card">
           <h4>🌫️ Russian River 河谷缺口</h4>
@@ -289,7 +289,7 @@ export const lessonContent = [
       <div class="winkler-method">
         <h4>計算方法</h4>
         <p>計算 4月1日到10月31日之間，每天超過 10°C（50°F）的「有效熱量度日」總和。</p>
-        <code class="formula">GDD = Σ [(最高溫 + 最低溫) / 2 − 10°C]</code>
+        <code class="formula">GDD = Σ [(最高溫 + 最低溫) / 2 − 50°F（即 10°C）]</code>
       </div>
       <div class="winkler-regions">
         <div class="wr-item region-i">
@@ -365,7 +365,7 @@ export const lessonContent = [
           <thead><tr><th>產區</th><th>主導氣候機制</th><th>主導土壤成因</th><th>疊加結果</th></tr></thead>
           <tbody>
             <tr><td>Carneros</td><td>San Pablo Bay 直接海霧入口，終年涼爽</td><td>黏土為主，保水性強</td><td>薄皮品種天堂：Pinot Noir、Chardonnay、氣泡酒基酒</td></tr>
-            <tr><td>Calistoga</td><td>山脈阻隔海霧，逆溫層之下但緯度已遠離海洋</td><td>火山岩，排水極佳、礦物質豐富</td><td>加州最濃烈的 Cabernet：高酒精度、深色果香、礦石感</td></tr>
+            <tr><td>Calistoga</td><td>山脈阻隔海霧，逆溫層之下但緯度已遠離海洋</td><td>火山岩，排水極佳、礦物質豐富</td><td>濃烈的 Cabernet：高酒精度、深色果香、礦石感</td></tr>
             <tr><td>Howell Mountain</td><td>海拔高於霧線，日照時數多於谷底</td><td>火山岩壤土，貧瘠限制產量</td><td>結構緊實、濃縮度高、極具陳年潛力</td></tr>
             <tr><td>Russian River Valley</td><td>Petaluma Gap + 河谷缺口雙重輸送，潮汐式霧氣</td><td>沖積土與部分海洋沉積岩</td><td>優雅高酸 Pinot Noir，兼具日照成熟度與涼爽保酸</td></tr>
           </tbody>

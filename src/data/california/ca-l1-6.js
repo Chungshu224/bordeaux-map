@@ -77,7 +77,7 @@ export const lessonContent = [
       <div class="mendocino-other">
         <h4>其他子 AVA</h4>
         <ul>
-          <li>🌲 <strong>Mendocino Ridge（1997 年設立）：</strong>海拔 1,200 英尺以上的「島嶼型」山地 AVA——法規規定產區僅涵蓋霧線之上的山頭，是全美唯一以海拔高度（而非連續地塊）劃定邊界的 AVA，出產最涼爽的 Zinfandel</li>
+          <li>🌲 <strong>Mendocino Ridge（1997 年設立）：</strong>海拔 1,200 英尺以上的「島嶼型」山地 AVA——法規規定產區僅涵蓋霧線之上的山頭，是全美唯一的非連續（島嶼型）AVA，以海拔高度劃定邊界，出產最涼爽的 Zinfandel</li>
           <li>🌾 <strong>Potter Valley（1983 年設立）：</strong>Mendocino 內陸溫暖谷地，Sauvignon Blanc 和 Riesling 表現佳</li>
           <li>🍇 <strong>Cole Ranch（1983 年設立）：</strong>全美面積最小的 AVA 之一，僅約 60 英畝葡萄園</li>
           <li>🌿 <strong>Yorkville Highlands（1998 年設立）：</strong>Anderson Valley 東南側過渡地帶，Bordeaux 品種與 Rhône 品種皆有種植</li>
@@ -126,12 +126,12 @@ export const lessonContent = [
   {
     title: 'Sierra Foothills — 金礦時代的老藤傳奇',
     highlights: [
-      { id: 1, icon: '⛏️', title: '1849 淘金熱遺產', content: 'Sierra Foothills AVA 於 1987 年正式設立，涵蓋 6 個子產區，見證加州最早的葡萄酒商業化浪潮之一' },
+      { id: 1, icon: '⛏️', title: '1849 淘金熱遺產', content: 'Sierra Foothills AVA 於 1987 年正式設立，涵蓋 5 個子產區，見證加州最早的葡萄酒商業化浪潮之一' },
       { id: 2, icon: '🇮🇹', title: '義大利移民品種基因庫', content: 'Amador County 是美國 Barbera 種植最重要的產地之一' }
     ],
     content: `<div class="sierra-detail">
       <h3>⛏️ Sierra Foothills — 加州淘金熱的葡萄酒遺產</h3>
-      <p>內華達山脈西側山麓，海拔多在 1,000-3,000 英尺之間。這裡是 1849 年加州淘金熱（Gold Rush）的核心地帶，淘金客帶來了對葡萄酒的需求，許多葡萄園隨之建立。Sierra Foothills AVA 於 1987 年正式設立，內含 California Shenandoah Valley（1982 年設立）、El Dorado（1983 年設立）、Fiddletown（1983 年設立）、Fair Play（2001 年設立，加州平均海拔最高的 AVA 之一）、North Yuba 等 6 個子產區。如今，部分老藤已有超過百年歷史。</p>
+      <p>內華達山脈西側山麓，海拔多在 1,000-3,000 英尺之間。這裡是 1849 年加州淘金熱（Gold Rush）的核心地帶，淘金客帶來了對葡萄酒的需求，許多葡萄園隨之建立。Sierra Foothills AVA 於 1987 年正式設立，內含 California Shenandoah Valley（1982 年設立）、El Dorado（1983 年設立）、Fiddletown（1983 年設立）、Fair Play（2001 年設立，加州平均海拔最高的 AVA 之一）、North Yuba 等 5 個子產區。如今，部分老藤已有超過百年歷史。</p>
 
       <div class="sierra-highlights">
         <div class="s-box">
@@ -207,7 +207,7 @@ export const lessonContent = [
 
       <div class="far-north">
         <h3>🌲 Far North California — 加州葡萄酒的神秘北疆</h3>
-        <p>從 Trinity County 到 Shasta County，遠北加州地廣人稀，尚未有廣泛設立的 AVA 涵蓋整個區域，葡萄酒業仍處於開拓階段。Trinity County 的高海拔葡萄園以耐候的 Petite Sirah 和 Grenache 等品種為主，Shasta County 則有小型有機農場實驗種植涼爽氣候品種。這片區域代表加州葡萄酒版圖仍在持續擴張的前沿地帶。</p>
+        <p>從 Trinity County 到 Shasta County，遠北加州地廣人稀，僅有小型的 Trinity Lakes AVA（2005 年認定，實際種植僅約 30 英畝）涵蓋局部地區，葡萄酒業仍處於開拓階段。Trinity County 的高海拔葡萄園以 Pinot Noir、Riesling 等涼爽品種為主，Shasta County 則有小型有機農場實驗種植涼爽氣候品種。這片區域代表加州葡萄酒版圖仍在持續擴張的前沿地帶。</p>
       </div>
     </div>`
   },
@@ -288,7 +288,7 @@ export const lessonContent = [
         </div>
         <div class="timeline-item">
           <div class="timeline-badge">1987</div>
-          <div class="timeline-content"><strong>⛏️ Sierra Foothills AVA 正式設立</strong><p>整合 California Shenandoah Valley、El Dorado、Fiddletown 等 6 個子產區。</p></div>
+          <div class="timeline-content"><strong>⛏️ Sierra Foothills AVA 正式設立</strong><p>整合 California Shenandoah Valley、El Dorado、Fiddletown 等 5 個子產區。</p></div>
         </div>
         <div class="timeline-item">
           <div class="timeline-badge">1991</div>
