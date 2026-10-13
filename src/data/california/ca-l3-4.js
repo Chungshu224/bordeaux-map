@@ -119,7 +119,7 @@ export const lessonContent = [
       <div class="apt-warning">
         <h4>⚠️ 進階配餐的常見陷阱</h4>
         <ul>
-          <li><strong>高單寧 + 高辣度：</strong>單寧與辣椒素（Capsaicin）會互相放大彼此的刺激感，讓兩者都顯得更粗糙——應改以低單寧、略帶甜潤的酒款（如 Zinfandel）搭配辛辣菜餚</li>
+          <li><strong>高單寧 + 高辣度：</strong>單寧與辣椒素（Capsaicin）會互相放大彼此的刺激感，讓兩者都顯得更粗糙——應改以低單寧、略帶甜潤的酒款（如帶少許殘糖的 Riesling，或低酒精、低單寧的紅酒）搭配辛辣菜餚</li>
           <li><strong>高酸海鮮料理 + 高單寧紅酒：</strong>魚類中的不飽和脂肪酸遇上紅酒單寧和鐵質，容易產生令人不悅的金屬腥味（常見於生蠔配厚重紅酒），應避免</li>
           <li><strong>甜點 + 不甜的酒：</strong>甜點的糖分會讓不甜的酒喝起來顯得更酸澀、更單薄，甜點配酒的基本原則是「酒的甜度須等於或高於菜餚的甜度」</li>
         </ul>
@@ -275,7 +275,7 @@ export const lessonContent = [
     title: '實務演練：跨產區多道式對比套餐設計',
     content: `<div class="tasting-menu-design">
       <h3>🍽️ 六道式加州跨產區對比品飲晚宴設計</h3>
-      <p>這是一套侍酒師證照等級的實務演練——設計一場以「橫跨加州五大產區」為主題的多道式套餐酒單，每道菜選用不同 AVA 的代表酒款，並運用前述 Congruent／Contrasting／Bridging 三種技巧，讓整場晚宴的酒單呈現有邏輯的「強度遞增」曲線，而不是隨機排列。</p>
+      <p>這是一套侍酒師證照等級的實務演練——設計一場以「橫跨加州六個產區」為主題的多道式套餐酒單，每道菜選用不同 AVA 的代表酒款，並運用前述 Congruent／Contrasting／Bridging 三種技巧，讓整場晚宴的酒單呈現有邏輯的「強度遞增」曲線，而不是隨機排列。</p>
       <div class="tm-course">
         <div class="tm-num">1</div>
         <div class="tm-body">
@@ -334,7 +334,7 @@ export const lessonContent = [
         <h4>🎯 這套設計示範的專業能力</h4>
         <ul>
           <li>整場酒單依循「氣泡 → 高酸白酒 → 中酒體紅／白 → 高單寧紅酒 → 甜／加烈酒」的強度遞增曲線，避免前面喝了重酒導致後面味蕾疲乏</li>
-          <li>五大產區（Sonoma Coast、Santa Barbara、Sonoma、Sierra Foothills、Napa、Paso Robles）依序登場，讓賓客在一餐之內走遍加州的風土光譜</li>
+          <li>六個產區（Sonoma Coast、Santa Barbara、Sonoma、Sierra Foothills、Napa、Paso Robles）依序登場，讓賓客在一餐之內走遍加州的風土光譜</li>
           <li>每一道都明確標示所運用的配餐技巧（Congruent／Contrasting／Bridging），而非憑直覺搭配——這正是證照考試中要求的「說明配餐邏輯」能力</li>
         </ul>
       </div>
@@ -355,7 +355,7 @@ export const lessonContent = [
               <p><strong>顏色深度：</strong>淺（Pale） → 中（Medium） → 深（Deep）</p>
               <p><strong>顏色調性（Napa Cabernet 範例）：</strong>深紫紅 → 寶石紅 → 石榴紅（隨年份老化）</p>
               <p><strong>清澈度：</strong>清澈 vs 渾濁（自然酒可能略顯渾濁）</p>
-              <p><strong>杯腳（Tears/Legs）：</strong>緩慢的淚腳 = 高酒精或高甘油含量</p>
+              <p><strong>杯腳（Tears/Legs）：</strong>緩慢的淚腳 = 高酒精或高糖分／甘油含量（不能用來判斷品質）</p>
             </div>
           </div>
         </div>
@@ -384,7 +384,7 @@ export const lessonContent = [
               <p><strong>單寧（Tannin — 紅酒）：</strong>低 / 中 / 高 ; 質地：粗糙 / 細緻 / 絲滑</p>
               <p><strong>酒體（Body）：</strong>輕盈 / 中等 / 豐滿 → 加州普遍中至豐滿</p>
               <p><strong>酒精感（Alcohol）：</strong>溫暖 vs 熱感 → 低於 14% 通常無熱感，超過 15% 可能產生不適的熱感</p>
-              <p><strong>回味（Finish）：</strong>短（< 5 秒）/ 中（5–10 秒）/ 長（> 10 秒）</p>
+              <p><strong>回味（Finish）：</strong>短 / 中 / 長（秒數僅供練習參考，需與平衡、集中度一併評估）</p>
             </div>
           </div>
         </div>
@@ -483,7 +483,7 @@ export const lessonContent = [
             question: '為什麼應避免將高單寧紅酒與辛辣（高辣度）菜餚搭配？',
             options: ['A. 單寧會讓辣椒的顏色改變', 'B. 單寧與辣椒素會互相放大彼此的刺激感，讓兩者都顯得更粗糙', 'C. 這種搭配在加州文化中被視為禁忌', 'D. 辣味會完全掩蓋單寧的存在，並無實質影響'],
             correct: 1,
-            explanation: '單寧與辣椒素（Capsaicin）會互相放大彼此在口腔中的刺激感，使搭配整體顯得更粗糙、更不平衡。面對辛辣菜餚時，應改以低單寧、略帶甜潤的酒款（如 Zinfandel 或半甜型白酒）進行搭配，以緩和辛辣的刺激感。'
+            explanation: '單寧與辣椒素（Capsaicin）會互相放大彼此在口腔中的刺激感，使搭配整體顯得更粗糙、更不平衡。面對辛辣菜餚時，應改以低單寧、略帶甜潤的酒款（如半甜型 Riesling 或低酒精、低單寧的紅酒）進行搭配，以緩和辛辣的刺激感。'
           },
           {
             type: 'single',
@@ -497,7 +497,7 @@ export const lessonContent = [
             question: '在系統性品飲評估中，「回味（Finish）」超過 10 秒通常代表什麼？',
             options: ['A. 酒精度過高', 'B. 葡萄酒品質較低', 'C. 葡萄酒品質較高，複雜度豐富', 'D. 葡萄酒有輕微缺陷'],
             correct: 2,
-            explanation: '回味（Finish）的長度是評估葡萄酒品質的重要指標之一。品質越高的葡萄酒，香氣和味道在嚥下後殘留的時間越長。頂級的 Napa Cabernet 和 Santa Barbara Pinot Noir 的回味可以持續 20–30 秒。'
+            explanation: '回味（Finish）的長度是評估葡萄酒品質的重要指標之一。品質越高的葡萄酒，香氣和味道在嚥下後殘留的時間越長。頂級酒款的回味通常更長，但仍須與平衡、集中度和複雜度一併評估。'
           },
           {
             type: 'single',
@@ -549,9 +549,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '2006 年巴黎審判 30 週年重賽的結果，最令人震驚之處是什麼？',
-            options: ['A. 法國酒款全面獲勝，扳回一城', 'B. 1976 年僅排名第五的 Ridge Monte Bello 1971，在重賽中奪冠並大幅領先第二名', 'C. 重賽結果與 1976 年完全相同', 'D. 重賽因評審意見不合而取消'],
+            options: ['A. 法國酒款全面獲勝，扳回一城', 'B. 1976 年僅排名第五的 Ridge Monte Bello 1971，在重賽中奪冠', 'C. 重賽結果與 1976 年完全相同', 'D. 重賽因評審意見不合而取消'],
             correct: 1,
-            explanation: '2006 年於倫敦與納帕同步舉行的重賽中，1976 年原賽事僅排名第五的 Ridge Vineyards Monte Bello 1971 奪得冠軍，領先第二名達 18 分之多，加州酒款包辦前五名，證明了加州頂級酒款的長期陳年實力。'
+            explanation: '2006 年於倫敦與納帕同步舉行的重賽中，1976 年原賽事僅排名第五的 Ridge Vineyards Monte Bello 1971 奪得冠軍，加州酒款包辦前五名，證明了加州頂級酒款的長期陳年實力。'
           },
           {
             type: 'single',
@@ -593,7 +593,7 @@ export const lessonContent = [
             question: '系統性品飲評估中，「回味（Finish）」超過 10 秒通常代表什麼？',
             options: ['A. 酒精度過高', 'B. 葡萄酒品質較低', 'C. 葡萄酒品質較高，複雜度豐富', 'D. 葡萄酒有輕微缺陷'],
             correct: 2,
-            explanation: '回味長度是評估葡萄酒品質的重要指標。頂級的 Napa Cabernet 和 Santa Barbara Pinot Noir 的回味可持續 20–30 秒，這是「傑出（Outstanding）」品質的標誌。'
+            explanation: '回味長度是評估葡萄酒品質的重要指標。頂級酒款的回味通常更長，但仍須與平衡、集中度和複雜度一併評估。'
           },
           {
             type: 'single',

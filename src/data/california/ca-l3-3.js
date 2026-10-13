@@ -75,7 +75,7 @@ export const lessonContent = [
                 <tr><td>Heitz Martha's Vineyard 1970</td><td>Château Montrose 1970</td></tr>
                 <tr><td>Clos Du Val 1972</td><td>Château Haut-Brion 1970</td></tr>
                 <tr><td>Ridge Monte Bello 1971</td><td>Château Léoville Las Cases 1971</td></tr>
-                <tr><td>Freemark Abbey 1969</td><td>Château Beychevelle 1970</td></tr>
+                <tr><td>Mayacamas 1971</td><td>—</td></tr><tr><td>Freemark Abbey 1969</td><td>—</td></tr>
               </tbody>
             </table>
             <div class="jop-result winner">
@@ -92,7 +92,7 @@ export const lessonContent = [
                 <tr><td>Chateau Montelena 1973</td><td>Meursault Charmes 1973</td></tr>
                 <tr><td>Chalone 1974</td><td>Beaune Clos des Mouches 1973</td></tr>
                 <tr><td>Spring Mountain 1973</td><td>Puligny-Montrachet 1972</td></tr>
-                <tr><td>Freemark Abbey 1972</td><td>Bâtard-Montrachet 1973</td></tr>
+                <tr><td>Freemark Abbey 1972</td><td>Bâtard-Montrachet 1973</td></tr><tr><td>Veedercrest 1972</td><td>—</td></tr><tr><td>David Bruce 1973</td><td>—</td></tr>
               </tbody>
             </table>
             <div class="jop-result winner">
@@ -121,7 +121,7 @@ export const lessonContent = [
     title: '2006 年 30 週年重賽：加州的陳年潛力大反攻',
     highlights: [
       { id: 'r1', icon: '🔁', title: '雙城同步盲品', content: '2006 年 5 月，Steven Spurrier 在倫敦與納帕同步舉辦重賽，邀請國際知名評審重新盲品 1976 年賽事中同款酒的較新年份陳年狀態。' },
-      { id: 'r2', icon: '👑', title: 'Ridge Monte Bello 的大逆轉', content: '1976 年僅排名第五的 Ridge Monte Bello 1971，在 2006 年重賽的倫敦與納帕兩地評分合併後奪得冠軍，領先第二名達 18 分之多。' },
+      { id: 'r2', icon: '👑', title: 'Ridge Monte Bello 的大逆轉', content: '1976 年僅排名第五的 Ridge Monte Bello 1971，在 2006 年重賽的倫敦與納帕兩地評分合併後奪得冠軍。' },
       { id: 'r3', icon: '📉', title: '法國名莊的意外表現', content: '原本被普遍看好、預期會隨陳年展現優勢的 Mouton-Rothschild 與 Haut-Brion，在重賽中的名次反而低於預期。' }
     ],
     content: `<div class="rematch-2006">
@@ -132,7 +132,7 @@ export const lessonContent = [
         <p>Steven Spurrier 於 2006 年安排了倫敦與納帕兩地同步進行的重賽，邀請國際公認具權威性的評審小組，針對當年紅酒組參賽酒款（此時已陳年 30 餘年）重新進行盲品評分，兩地評分結果合併計算最終名次。</p>
         <div class="rematch-result">
           <h4>🏆 結果：加州包辦前五名</h4>
-          <p>合併倫敦與納帕兩地評分後，<strong>Ridge Vineyards Monte Bello 1971</strong>（1976 年原賽事中僅排名第五）奪得冠軍，領先第二名達 18 分之多。加州酒款包辦了此次重賽的前五名，而原先被寄予厚望、預期會隨陳年展現優勢的 Mouton-Rothschild 與 Haut-Brion，名次反而低於預期。</p>
+          <p>合併倫敦與納帕兩地評分後，<strong>Ridge Vineyards Monte Bello 1971</strong>（1976 年原賽事中僅排名第五）奪得冠軍。加州酒款包辦了此次重賽的前五名，而原先被寄予厚望、預期會隨陳年展現優勢的 Mouton-Rothschild 與 Haut-Brion，名次反而低於預期。</p>
         </div>
         <div class="rematch-meaning">
           <h4>侍酒師應如何解讀這個結果</h4>
@@ -355,9 +355,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '2006 年巴黎審判 30 週年重賽的結果，最令人震驚之處是什麼？',
-            options: ['A. 法國酒款全面獲勝，扳回一城', 'B. 1976 年僅排名第五的 Ridge Monte Bello 1971，在重賽中奪冠並大幅領先第二名', 'C. 重賽結果與 1976 年完全相同', 'D. 重賽因評審意見不合而取消'],
+            options: ['A. 法國酒款全面獲勝，扳回一城', 'B. 1976 年僅排名第五的 Ridge Monte Bello 1971，在重賽中奪冠', 'C. 重賽結果與 1976 年完全相同', 'D. 重賽因評審意見不合而取消'],
             correct: 1,
-            explanation: '2006 年於倫敦與納帕同步舉行的重賽中，1976 年原賽事僅排名第五的 Ridge Vineyards Monte Bello 1971，在合併兩地評分後奪得冠軍，領先第二名達 18 分之多，加州酒款包辦前五名，證明了加州頂級酒款的長期陳年實力。'
+            explanation: '2006 年於倫敦與納帕同步舉行的重賽中，1976 年原賽事僅排名第五的 Ridge Vineyards Monte Bello 1971，在合併兩地評分後奪得冠軍，加州酒款包辦前五名，證明了加州頂級酒款的長期陳年實力。'
           },
           {
             type: 'single',

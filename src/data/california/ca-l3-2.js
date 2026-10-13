@@ -3,7 +3,7 @@
  * 加州葡萄酒產業的未來：三大永續認證體系的實質要求、氣候變遷應對與釀酒師技藝的極致
  *
  * 內容查證來源（2026 年 8 月）：
- * - Certified California Sustainable Winegrowing（CSWA）官網 sustainablewinegrowing.org / californiasustainablewine.com — 認證規範、227 項最佳實踐、14 大類別、85% 門檻
+ * - Certified California Sustainable Winegrowing（CSWA）官網 sustainablewinegrowing.org / californiasustainablewine.com — 認證規範、227 項最佳實踐、14 大類別
  * - Demeter USA 官網 demeter-usa.org — Biodynamic Farm Standard、9 種製劑、10% 生物多樣性用地要求
  * - CCOF.org、UC Organic Agriculture Institute — 有機認證 3 年轉型期規範
  * - SIP Certified（sipcertified.org）、Napa Green 官網 — 兩個平行認證體系的定位差異
@@ -44,7 +44,7 @@ export const lessonContent = [
   {
     title: '加州三大永續農業認證',
     highlights: [
-      { id: 'c1', icon: '♻️', title: 'CCSW 的稽核邏輯', content: 'CCSW 並非「非黑即白」的合格/不合格制度，而是以 1–4 分量表為 227 項最佳實踐評分，要求 85% 以上項目達到 2 分或以上，並強制符合 63 項葡萄園與 43 項酒莊的先決條件。' },
+      { id: 'c1', icon: '♻️', title: 'CCSW 的稽核邏輯', content: 'CCSW 並非「非黑即白」的合格/不合格制度，而是以 1–4 分量表為 227 項最佳實踐評分，須符合先決條件，並每年提出改善行動計畫、接受第三方稽核。' },
       { id: 'c2', icon: '🌙', title: 'Demeter 的核心哲學', content: '生物動力法不只是「不用化學品」，而是把農場視為一個自我維持的有機體，強制要求至少 10% 土地用於生物多樣性棲地，並使用 9 種特定製劑。' },
       { id: 'c3', icon: '🌿', title: 'CCOF/USDA 的轉型期', content: '土地必須連續 3 年未使用禁用物質，才能取得認證；CCOF 另設「Certified Transitional」過渡標章，供轉型期滿 1 年以上的農場使用。' }
     ],
@@ -83,7 +83,7 @@ export const lessonContent = [
                 <li>CCOF「Certified Transitional」過渡標章：轉型滿 1 年以上即可申請，作為邁向完整認證的階段性認可</li>
                 <li>禁止所有合成化學品：農藥、除草劑、殺菌劑</li>
                 <li>允許使用天然允許物質清單內的硫磺（防霉）和銅基製劑（防霜黴病）</li>
-                <li>「Made with Organic Grapes」（葡萄有機但釀造過程未受完整規範）vs「Organic Wine」（連二氧化硫添加也受嚴格限制，通常不得高於一般酒款）——兩者標示意義不同</li>
+                <li>「Made with Organic Grapes」（葡萄有機但釀造過程未受完整規範）vs「Organic Wine」（美國規定不得添加亞硫酸鹽；Made with Organic Grapes 則可添加，上限 100 ppm）——兩者標示意義不同</li>
                 <li>若酒莊本身處理／裝瓶有機葡萄，酒莊設施本身也須取得 NOP 加工端（Handler）認證</li>
               </ul>
             </div>
@@ -99,8 +99,8 @@ export const lessonContent = [
               <h5>關鍵要求</h5>
               <ul>
                 <li>依循《California Code of Sustainable Winegrowing》自評手冊，涵蓋 <strong>14 大類別、227 項最佳實踐</strong></li>
-                <li>須符合 <strong>63 項葡萄園先決條件</strong>與 <strong>43 項酒莊先決條件</strong>（Prerequisite Practices）</li>
-                <li>整體評分須達到「85% 以上項目為 2 分（滿分 4 分量表）或以上」的門檻</li>
+                <li>須符合一定數量的<strong>先決條件</strong>（Prerequisite Practices）</li>
+                <li>每年依 1–4 分量表自評，擬定行動計畫並展現持續改善</li>
                 <li>由獨立第三方稽核機構進行實地稽核與紀錄審查</li>
                 <li>涵蓋整合式病蟲害管理（IPM）、溫室氣體排放、能源與水資源效率、員工教育福利、社區關係等面向</li>
               </ul>
@@ -178,7 +178,7 @@ export const lessonContent = [
       <div class="stat-grid">
         <div class="stat-box">
           <div class="stat-number">6 天</div>
-          <div class="stat-label">UC Davis 研究：氣溫每上升 1°C，採收期平均提前的天數</div>
+          <div class="stat-label">研究估計：氣溫每上升 1°C，採收期平均提前的天數（依地區與研究而異）</div>
         </div>
         <div class="stat-box">
           <div class="stat-number">12.5% → 14.5%+</div>
@@ -186,7 +186,7 @@ export const lessonContent = [
         </div>
         <div class="stat-box">
           <div class="stat-number">約 37 億美元</div>
-          <div class="stat-label">2020 年野火對美國葡萄酒產業造成的估計損失（加州、奧勒岡合計）</div>
+          <div class="stat-label">2020 年野火對加州葡萄酒產業造成的估計損失</div>
         </div>
       </div>
       <div class="climate-challenges">
@@ -287,7 +287,7 @@ export const lessonContent = [
               <li><strong>Pét-Nat（Pétillant Naturel，自然氣泡酒）：</strong>在一次發酵完成前裝瓶，讓瓶中殘存的糖分繼續發酵產生 CO₂，通常不除渣（sur lie），酒液略帶渾濁</li>
             </ul>
           </div>
-          <p class="wt-masters">代表：Donkey & Goat（Berkeley）、Scholium Project、Ruth Lewandowski</p>
+          <p class="wt-masters">代表：Donkey & Goat（Berkeley）、Scholium Project</p>
         </div>
         <div class="wt-card">
           <h4>🧊 夜間採收（Night Harvest）</h4>
@@ -375,9 +375,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '關於 CCSW（Certified California Sustainable Winegrowing）的稽核邏輯，以下敘述何者正確？',
-            options: ['A. 只要不使用任何化學品即可通過認證', 'B. 以 227 項最佳實踐、14 大類別的量表評分，須符合先決條件並達到 85% 以上項目為 2 分以上的門檻', 'C. 只稽核葡萄園，不涉及酒莊生產設施', 'D. 由加州政府直接發證，無需第三方稽核'],
+            options: ['A. 只要不使用任何化學品即可通過認證', 'B. 以 227 項最佳實踐、14 大類別的量表評分，須符合先決條件、每年提出改善計畫並經第三方稽核', 'C. 只稽核葡萄園，不涉及酒莊生產設施', 'D. 由加州政府直接發證，無需第三方稽核'],
             correct: 1,
-            explanation: 'CCSW 依循《California Code of Sustainable Winegrowing》自評手冊，涵蓋 14 大類別、227 項最佳實踐，須符合 63 項葡萄園與 43 項酒莊先決條件，並整體達到 85% 以上項目為 2 分（滿分 4 分）以上的門檻，由獨立第三方稽核機構驗證。'
+            explanation: 'CCSW 依循《California Code of Sustainable Winegrowing》自評手冊，涵蓋 14 大類別、227 項最佳實踐，須符合先決條件，每年以 1–4 分量表自評並提出改善行動計畫，由獨立第三方稽核機構驗證。'
           },
           {
             type: 'single',
@@ -395,17 +395,17 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: 'UC Davis 研究指出，氣溫每上升 1°C，加州葡萄採收期平均會提前多久？',
+            question: '研究估計，氣溫每上升 1°C，葡萄採收期平均大約會提前多久？',
             options: ['A. 約 1 天', 'B. 約 6 天', 'C. 約 20 天', 'D. 約 2 個月'],
             correct: 1,
-            explanation: 'UC Davis 的研究發現，即使只是 1°C 的氣溫上升，也能使採收時間平均提前約 6 天，反映出氣候變遷對葡萄物候期（Phenology）的顯著且可量化的影響。'
+            explanation: '研究估計，即使只是 1°C 的氣溫上升，也能使採收時間平均提前約一週左右（常見估計約 6 天，依地區與研究而異），反映出氣候變遷對葡萄物候期（Phenology）的顯著且可量化的影響。'
           },
           {
             type: 'single',
             question: 'Whole Cluster Fermentation（整串發酵）對加州 Pinot Noir 的主要效果是什麼？',
             options: ['A. 增加酒精度', 'B. 增加複雜的香料感，並帶來更柔和圓潤的整體口感', 'C. 降低葡萄酒的陳年潛力', 'D. 使葡萄酒顏色更深'],
             correct: 1,
-            explanation: 'Whole Cluster Fermentation 在葡萄梗完全成熟的前提下，可以增加葡萄酒的香料複雜度（來自梗中的多酚），並通過發酵過程中產生的 CO₂ 提高 pH 值，帶來更圓潤柔和的整體口感。'
+            explanation: 'Whole Cluster Fermentation 在葡萄梗完全成熟的前提下，可以增加葡萄酒的香料複雜度（來自梗中的多酚），並因梗帶入的鉀使 pH 值上升，帶來更圓潤柔和的整體口感。'
           },
           {
             type: 'single',

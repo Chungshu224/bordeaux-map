@@ -54,7 +54,7 @@ export const lessonContent = [
   {
     title: 'Livermore Valley — 加州 Chardonnay 的搖籃',
     highlights: [
-      { id: 1, icon: '🧬', title: '加州 Chardonnay 基因中心', content: 'Wente 家族 1880 年代自布根地引進的克隆株，是全加州約 80% Chardonnay 的基因來源' },
+      { id: 1, icon: '🧬', title: '加州 Chardonnay 基因中心', content: 'Wente 家族 1912 年自法國（蒙彼利埃）引進插穗，所選育的 Wente 克隆是加州最廣泛種植的 Chardonnay 克隆之一' },
       { id: 2, icon: '🏆', title: '品種標示先驅', content: 'Wente 1936 年首度在酒標印上「Chardonnay」品種名；Concannon 1961 年推出全美第一款單一品種標示的 Petite Sirah' }
     ],
     content: `<div class="livermore-detail">
@@ -64,7 +64,7 @@ export const lessonContent = [
       <div class="livermore-highlights">
         <div class="highlight-box">
           <h4>🧬 加州 Chardonnay 的基因中心</h4>
-          <p>加州約 80% 的 Chardonnay 基因可追溯至 Livermore Valley！C.H. Wente 從布根地引進的 Chardonnay 種苗，經加州大學戴維斯分校葡萄種苗基金會（FPS）除毒篩選後編號為「Clone 4」（俗稱 Wente Clone），後來成為整個加州 Chardonnay 種植的主要基因來源，也是美國種植最廣泛的 Chardonnay 克隆之一。1936 年，Wente 以該年份葡萄裝瓶並在酒標印上「Chardonnay」品種名，是美國最早的品種標示先例之一。</p>
+          <p>加州大多數 Chardonnay 的基因可追溯至 Livermore Valley！Wente 家族 1912 年從法國（蒙彼利埃的 Richter 苗圃）引進的 Chardonnay 插穗，經加州大學戴維斯分校葡萄種苗基金會（FPS）除毒篩選後編號為「Clone 4」（俗稱 Wente Clone），後來成為整個加州 Chardonnay 種植的主要基因來源，也是美國種植最廣泛的 Chardonnay 克隆之一。1936 年，Wente 以該年份葡萄裝瓶並在酒標印上「Chardonnay」品種名，是美國最早的品種標示先例之一。</p>
         </div>
         <div class="highlight-box">
           <h4>🏆 多個品種認定先鋒</h4>
@@ -88,14 +88,14 @@ export const lessonContent = [
     ],
     content: `<div class="paso-detail">
       <h3>☀️ Paso Robles — 加州最熱鬧的 Rhône 葡萄酒產地</h3>
-      <p>Paso Robles 近年是加州成長最快的精品葡萄酒產區，以 Syrah、Grenache、Mourvèdre 等 Rhône 品種著稱，但 Cabernet Sauvignon 和 Zinfandel 也表現卓越。整個 Paso Robles AVA 面積廣達約 26.6 萬英畝，是加州面積最大的 AVA 之一。</p>
+      <p>Paso Robles 近年是加州成長最快的精品葡萄酒產區，以 Syrah、Grenache、Mourvèdre 等 Rhône 品種著稱，但 Cabernet Sauvignon 和 Zinfandel 也表現卓越。整個 Paso Robles AVA 面積廣達約 61 萬英畝，是加州面積最大的 AVA 之一。</p>
 
       <div class="paso-geography">
         <h4>🗺️ 東西分野：兩個完全不同的 Paso Robles</h4>
         <div class="east-west-split">
           <div class="east-side">
             <h5>東部 Paso Robles（Estrella District、San Miguel District 等）</h5>
-            <p>遠離海岸，溫暖炎熱，晝夜溫差可達 25-28°C（約 45-50°F）。土壤以石灰岩和礫石為主，地勢平緩。生產豐厚飽滿的 Cabernet、Zinfandel 和 Merlot。</p>
+            <p>遠離海岸，溫暖炎熱，晝夜溫差可達 25-28°C（約 45-50°F）。土壤以沖積礫石與沙質壤土為主，地勢平緩。生產豐厚飽滿的 Cabernet、Zinfandel 和 Merlot。</p>
           </div>
           <div class="west-side">
             <h5>西部 Paso Robles（Adelaida District、Willow Creek District 等）</h5>
@@ -114,7 +114,7 @@ export const lessonContent = [
           </div>
           <div class="ava-card">
             <h5>Willow Creek District</h5>
-            <p>西側涼爽地帶，DAOU Family Estates 所在山丘，海拔可達 610 公尺</p>
+            <p>西側涼爽地帶，山丘海拔可達 610 公尺</p>
           </div>
           <div class="ava-card">
             <h5>Templeton Gap District</h5>
@@ -270,7 +270,7 @@ export const lessonContent = [
       <h3>🌬️ Monterey County — 強風下的優雅涼氣候</h3>
       <p>蒙特雷灣（Monterey Bay）的獨特地形使 Salinas Valley 成為天然的風洞——冷空氣被灣區吸入內陸，帶來加州最強的午後海風。葡萄藤在強風中彎曲生長，蒸散作用旺盛，天然低產量。這種艱難環境造就了濃縮、精緻的果香，Chardonnay、Pinot Noir 和 Riesling 都有卓越表現。Monterey County 整體葡萄種植面積在加州名列前茅，同時也是重要的加工用葡萄產地。</p>
       <div class="monterey-highlights">
-        <div class="h-item"><strong>重要子 AVA：</strong>Arroyo Seco（1983 年設立，涼爽、以 Riesling 和 Chardonnay 著稱）、Carmel Valley（1983 年設立，較溫暖，適合 Cabernet 和 Bordeaux 品種）、Chalone（1982 年設立，海拔約 600 公尺以上、石灰岩土壤的高地孤島型 AVA）、Santa Lucia Highlands（1991 年設立，高海拔、強風、加州頂尖 Pinot Noir 產地）</div>
+        <div class="h-item"><strong>重要子 AVA：</strong>Arroyo Seco（1983 年設立，涼爽、以 Riesling 和 Chardonnay 著稱）、Carmel Valley（1983 年設立，較溫暖，適合 Cabernet 和 Bordeaux 品種）、Chalone（1982 年設立，海拔約 600 公尺以上、花崗岩與石灰岩土壤的高地孤島型 AVA）、Santa Lucia Highlands（1991 年設立，高海拔、強風、加州頂尖 Pinot Noir 產地）</div>
         <div class="h-item"><strong>Santa Lucia Highlands：</strong>沿 Santa Lucia 山脈東側坡地，海拔沖積台地地形加上強烈的午後海風，是加州高海拔涼氣候 Pinot Noir 的代表產區之一，風格介於布根地的細緻與加州的濃郁果香之間，Syrah 和 Chardonnay 同樣出色。</div>
         <div class="h-item"><strong>代表酒莊：</strong>Pisoni Vineyards（Santa Lucia Highlands 傳奇老藤 Pinot 種植家族，供應葡萄給區內多家頂尖酒莊）、Wrath Wines、Chalone Vineyard（Chalone AVA 開拓者）、Bernardus Winery（Carmel Valley）</div>
       </div>

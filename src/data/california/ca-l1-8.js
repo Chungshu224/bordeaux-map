@@ -269,7 +269,7 @@ export const lessonContent = [
           <li>1966 年：Robert Mondavi Winery 創立，現代 Napa 葡萄酒的里程碑</li>
           <li>1976 年：巴黎評判（Judgment of Paris）——紅酒冠軍：Stag's Leap Wine Cellars；白酒冠軍：Chateau Montelena</li>
           <li>1981 年：Napa Valley 成為加州第一個 AVA；同年 Santa Cruz Mountains、Santa Maria Valley 等 AVA 也相繼設立</li>
-          <li>1987 年：Sierra Foothills AVA 正式設立，整合 6 個子產區</li>
+          <li>1987 年：Sierra Foothills AVA 正式設立，整合 5 個子產區</li>
           <li>1989 年：Tablas Creek Vineyard 於 Paso Robles 創立，開啟 Rhône Rangers 運動</li>
           <li>1991 年：Lodi Winegrape Commission 成立，後續推動 LODI RULES 永續認證</li>
           <li>2006 年：Lodi 內部核准 7 個子 AVA；同年 Santa Cruz Mountains 的 Ridge 1971 年份 Monte Bello 在「巴黎評判 30 週年重賽」中奪冠</li>
@@ -282,7 +282,7 @@ export const lessonContent = [
         <ul>
           <li>AVA 只規範地理邊界與最低比例（85% 原料需來自標示產區），不像法國 AOC 那樣規範品種、產量與釀造方式</li>
           <li>加州目前已有超過 150 個 AVA，且數量持續增加</li>
-          <li>AVA 之下可再劃分子 AVA（如 Napa Valley 之下有 16 個子 AVA），形成州 → 產區群 → AVA → 子 AVA 的層級結構</li>
+          <li>AVA 之下可再劃分子 AVA（如 Napa Valley 之下有 17 個子 AVA），形成州 → 產區群 → AVA → 子 AVA 的層級結構</li>
         </ul>
       </div>
     </div>`
@@ -299,12 +299,12 @@ export const lessonContent = [
           <table class="compare-table">
             <thead><tr><th>產區群</th><th>代表 AVA / 子產區</th><th>主要品種</th><th>氣候特性</th></tr></thead>
             <tbody>
-              <tr><td>北海岸（North Coast）</td><td>Napa Valley（16 子 AVA）、Sonoma County（19 個 AVA）</td><td>Cab Sauv、Pinot Noir、Chardonnay</td><td>地中海型，受海霧調節</td></tr>
+              <tr><td>北海岸（North Coast）</td><td>Napa Valley（17 子 AVA）、Sonoma County（19 個 AVA）</td><td>Cab Sauv、Pinot Noir、Chardonnay</td><td>地中海型，受海霧調節</td></tr>
               <tr><td>中央海岸（Central Coast）</td><td>Paso Robles（11 子 AVA）、Santa Barbara（Sta. Rita Hills、Ballard Canyon）、Santa Cruz Mountains、Monterey（Santa Lucia Highlands）、Livermore Valley</td><td>Syrah、Grenache、Pinot Noir、Cab Sauv</td><td>涼爽至溫和，橫向山谷與強風效應</td></tr>
               <tr><td>Sierra Foothills</td><td>El Dorado、California Shenandoah Valley、Fiddletown</td><td>Zinfandel（老藤）、Barbera</td><td>山地大陸性，晝夜溫差大</td></tr>
               <tr><td>中央谷地（Inland Valleys）</td><td>Lodi（7 子 AVA）、Madera</td><td>Zinfandel、Cab Sauv、Chardonnay</td><td>溫暖乾燥，部分受三角洲涼風調節</td></tr>
               <tr><td>南加州（Southern CA）</td><td>Temecula Valley、Malibu Coast、Ramona Valley</td><td>多元品種，Rhône 與 Bordeaux 品種並重</td><td>地中海型，山口缺口帶來涼風</td></tr>
-              <tr><td>遠北加州（Far North CA）</td><td>Trinity County、Shasta County</td><td>Petite Sirah、Grenache</td><td>高海拔，偏涼，仍在拓荒階段</td></tr>
+              <tr><td>遠北加州（Far North CA）</td><td>Trinity County、Shasta County</td><td>Pinot Noir、Riesling 等涼爽品種</td><td>高海拔，偏涼，仍在拓荒階段</td></tr>
             </tbody>
           </table>
         </div>
@@ -314,7 +314,7 @@ export const lessonContent = [
         <h4>🌊 Mendocino & Lake County 速記</h4>
         <ul>
           <li>Anderson Valley（1983 年設立）：世界級 Pinot Noir、氣泡酒（Roederer Estate）與 Alsatian 品種</li>
-          <li>Mendocino Ridge（1997 年設立）：全美唯一以海拔劃界的「島嶼型」AVA</li>
+          <li>Mendocino Ridge（1997 年設立）：全美唯一的非連續（「島嶼型」）AVA，以海拔 1,200 英尺以上劃界</li>
           <li>Lake County：火山紅土壤（Red Hills，2004 年設立）與高海拔（High Valley，2005 年設立）是兩大關鍵字</li>
         </ul>
       </div>
@@ -432,9 +432,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '加州 Chardonnay 的「Wente Clone」典故是指什麼？',
-            options: ['A. Ridge Winery 研發的 Chardonnay 克隆', 'B. C.H. Wente 1880 年代從布根地引進的 Chardonnay 克隆，是加州種植面積最大的 Chardonnay 克隆之一', 'C. 加州大學 Davis 分校培育的實驗克隆', 'D. 禁酒令後重新引進的 Chardonnay 品種'],
+            options: ['A. Ridge Winery 研發的 Chardonnay 克隆', 'B. Wente 家族 1912 年從法國引進的 Chardonnay 克隆，是加州種植面積最大的 Chardonnay 克隆之一', 'C. 加州大學 Davis 分校培育的實驗克隆', 'D. 禁酒令後重新引進的 Chardonnay 品種'],
             correct: 1,
-            explanation: 'Wente Clone 是指 C.H. Wente 在 1880 年代從布根地引進的 Chardonnay 種苗，種植於 Livermore Valley，經 UC Davis 除毒篩選後編號為 Clone 4。這批克隆後來成為加州種植面積最大的 Chardonnay 克隆之一，1936 年 Wente 更率先在酒標標示品種名。'
+            explanation: 'Wente Clone 是指 Wente 家族 1912 年從法國引進的 Chardonnay 種苗，種植於 Livermore Valley，經 UC Davis 除毒篩選後編號為 Clone 4。這批克隆後來成為加州種植面積最大的 Chardonnay 克隆之一，1936 年 Wente 更率先在酒標標示品種名。'
           },
           {
             type: 'single',

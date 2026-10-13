@@ -1,5 +1,5 @@
 /**
- * CA-L2-2 北海岸深度剖析：Napa Valley 16 個子 AVA & Sonoma County 19 個 AVA
+ * CA-L2-2 北海岸深度剖析：Napa Valley 17 個子 AVA & Sonoma County 19 個 AVA
  * 深化重點：Rutherford vs Oakville 比較風土分析、酒莊案例研究、Sonoma 完整 AVA 版圖
  * 資料來源（2026 年查證）：
  *  - napavintners.com「Napa Valley Soils and Geology」；napawineproject.com（各子 AVA 沿革）
@@ -17,7 +17,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          North Coast 是加州葡萄酒的聖地——納帕谷的 Cabernet Sauvignon 以不到波爾多 1/15 的面積創造世界最高價格，索諾瑪郡以 99% 可持續認證成為全球環保葡萄酒典範。Level 1 已經帶您認識過兩郡的子 AVA 名單；本課將更進一步——直接比較「為什麼」Rutherford 跟 Oakville 只隔幾公里，Cabernet 卻喝起來不一樣，並透過具體酒莊案例，讓風土理論落地成品飲判斷力。
+          North Coast 是加州葡萄酒的聖地——納帕谷的 Cabernet Sauvignon 以不到波爾多 1/5 的面積創造世界最高價格，索諾瑪郡以 99% 可持續認證成為全球環保葡萄酒典範。Level 1 已經帶您認識過兩郡的子 AVA 名單；本課將更進一步——直接比較「為什麼」Rutherford 跟 Oakville 只隔幾公里，Cabernet 卻喝起來不一樣，並透過具體酒莊案例，讓風土理論落地成品飲判斷力。
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
@@ -43,10 +43,10 @@ export const lessonContent = [
     content: `<div class="napa-overview">
       <h3>🏔️ Napa Valley — 小而精的奇蹟</h3>
       <div class="napa-key-facts">
-        <div class="nkf-item"><span class="nkf-num">45,342</span><span class="nkf-label">英畝葡萄園（約波爾多的 1/15）</span></div>
+        <div class="nkf-item"><span class="nkf-num">45,342</span><span class="nkf-label">英畝葡萄園（約波爾多的 1/6）</span></div>
         <div class="nkf-item"><span class="nkf-num">4%</span><span class="nkf-label">加州總葡萄酒產量</span></div>
         <div class="nkf-item"><span class="nkf-num">1981</span><span class="nkf-label">獲得加州第一個 AVA 認定</span></div>
-        <div class="nkf-item"><span class="nkf-num">16</span><span class="nkf-label">個子 AVA</span></div>
+        <div class="nkf-item"><span class="nkf-num">17</span><span class="nkf-label">個子 AVA</span></div>
         <div class="nkf-item"><span class="nkf-num">1839</span><span class="nkf-label">George Yount 種下第一批葡萄</span></div>
         <div class="nkf-item"><span class="nkf-num">地中海</span><span class="nkf-label">氣候類型</span></div>
       </div>
@@ -64,10 +64,10 @@ export const lessonContent = [
 
   {
     component: 'CaliforniaRegionMapSlide',
-    title: 'Napa Valley 16 子 AVA 地圖',
+    title: 'Napa Valley 17 子 AVA 地圖',
     componentProps: {
       slide: {
-        title: 'Napa Valley 16 個子 AVA 地圖',
+        title: 'Napa Valley 17 個子 AVA 地圖',
         description: '從南端涼爽的 Carneros 到北端溫暖的 Calistoga，探索 Napa Valley 的南北風土漸變',
         mapGroup: 'Napa Valley',
         highlightAVAs: ['Carneros', 'Oakville', 'Rutherford', 'St. Helena', 'Calistoga', 'Stags Leap District'],
@@ -76,9 +76,9 @@ export const lessonContent = [
   },
 
   {
-    title: 'Napa Valley：從南到北的 16 個子 AVA',
+    title: 'Napa Valley：從南到北的 17 個子 AVA',
     content: `<div class="napa-sub-avas">
-      <h3>📍 Napa 16 個子 AVA — 由南至北風土漸變</h3>
+      <h3>📍 Napa 17 個子 AVA — 由南至北風土漸變</h3>
       <div class="ava-progression">
         <div class="ava-zone zone-cool">
           <h4>🌊 南部涼爽帶（最受海霧影響）</h4>
@@ -110,7 +110,7 @@ export const lessonContent = [
             </div>
             <div class="ava-item">
               <strong>Stags Leap District</strong>
-              <p>1976 年巴黎評判冠軍 Stag's Leap Wine Cellars 的故鄉。東側玄武岩峭壁反射熱能，賦予 Cabernet 獨特的「鐵鏽手套中的天鵝絨」質地——柔滑單寧中帶有礦石感。</p>
+              <p>1976 年巴黎評判冠軍 Stag's Leap Wine Cellars 的故鄉。東側玄武岩峭壁反射熱能，賦予 Cabernet 獨特的「天鵝絨手套中的鐵拳」質地——柔滑單寧中帶有礦石感。</p>
               <span class="ava-grapes">Cabernet Sauvignon</span>
             </div>
             <div class="ava-item">
@@ -140,7 +140,7 @@ export const lessonContent = [
           <div class="ava-list">
             <div class="ava-item">
               <strong>Calistoga</strong>
-              <p>Napa 最北端，火山岩土壤（近 Geyser 地熱區），是全谷最溫暖的地方。地熱礦泥浴著名旅遊地。出產加州最濃烈、酒精度最高的 Cabernet。</p>
+              <p>Napa 最北端，火山岩土壤（近 Geyser 地熱區），是全谷最溫暖的地方。地熱礦泥浴著名旅遊地。出產濃厚、酒精度偏高的 Cabernet。</p>
               <span class="ava-grapes">Cabernet Sauvignon · Zinfandel</span>
             </div>
           </div>
@@ -160,23 +160,28 @@ export const lessonContent = [
             </div>
             <div class="ava-item">
               <strong>Diamond Mountain District</strong>
-              <p>Calistoga 西北側山地，著名的白色石英岩碎石混合火山土，排水極佳，出產結構緊實、需長期陳年的山地 Cabernet。</p>
+              <p>Calistoga 西北側山地，著名的黑色火山角礫岩與火山土，排水極佳，出產結構緊實、需長期陳年的山地 Cabernet。</p>
               <span class="ava-grapes">Cabernet Sauvignon</span>
             </div>
             <div class="ava-item">
               <strong>Atlas Peak</strong>
-              <p>Napa 東側高原，海拔 600–900 公尺，土壤富含石灰岩（在 Napa 相當罕見），賦予天然酸度。1980 年代 Antinori 家族在此開拓 Sangiovese 種植的先例。</p>
+              <p>Napa 東側高原，海拔約 230–810 公尺，土壤以火山岩為主，高海拔帶來涼爽夜晚。1980 年代 Antinori 家族在此開拓 Sangiovese 種植的先例。</p>
               <span class="ava-grapes">Cabernet Sauvignon · Sangiovese</span>
             </div>
             <div class="ava-item">
               <strong>Mount Veeder</strong>
-              <p>Napa 西側火山高地，美西最複雜的葡萄酒風土之一。低產量老藤，帶有明顯泥土感和礦石骨架的強勁 Cabernet。</p>
+              <p>Napa 西側山地（砂岩、頁岩與火山岩並存），美西最複雜的葡萄酒風土之一。低產量老藤，帶有明顯泥土感和礦石骨架的強勁 Cabernet。</p>
               <span class="ava-grapes">Cabernet Sauvignon</span>
             </div>
             <div class="ava-item">
               <strong>Wild Horse Valley</strong>
               <p>Napa 東南端海拔最高的 AVA 之一，火山岩地質，氣候受灣區涼風調節，種植面積極小，多用於涼爽氣候 Pinot Noir 試驗。</p>
               <span class="ava-grapes">Pinot Noir</span>
+            </div>
+            <div class="ava-item">
+              <strong>Crystal Springs of Napa Valley</strong>
+              <p>2024 年 11 月新增的第 17 個子 AVA，位於 St. Helena、Calistoga 與 Howell Mountain 之間的山坡地，是 2011 年 Coombsville 之後 Napa 首個新增的子 AVA。</p>
+              <span class="ava-grapes">Cabernet Sauvignon</span>
             </div>
           </div>
         </div>
@@ -250,7 +255,7 @@ export const lessonContent = [
         <div class="estate-card">
           <h4>Robert Mondavi Winery</h4>
           <p class="estate-location">Oakville</p>
-          <p class="estate-story">1966 年建立，是現代 Napa 葡萄酒產業的奠基者。Robert Mondavi 推廣了加州葡萄酒在全球的形象，率先在標籤標注葡萄品種，並推廣 Fumé Blanc（Sauvignon Blanc）。</p>
+          <p class="estate-story">1966 年建立，是現代 Napa 葡萄酒產業的奠基者。Robert Mondavi 推廣了加州葡萄酒在全球的形象，積極推廣在標籤標注葡萄品種，並推廣 Fumé Blanc（Sauvignon Blanc）。</p>
           <p class="estate-style">風格：以 Cabernet 和 Fumé Blanc 聞名</p>
         </div>
         <div class="estate-card">
@@ -285,7 +290,7 @@ export const lessonContent = [
         </div>
         <div class="sa-item">
           <h4>🌬️ Petaluma Gap（新興風動產區）</h4>
-          <p>2017 年獲 TTB 認定，是美國史上第一個以「持續風速達每小時 8 英里以上」界定範圍的 AVA。介於 Tomales Bay 與 Bodega Bay 之間，海拔多在 600 英尺以下的低矮丘陵讓太平洋海風幾乎無阻礙地灌入，午後風力尤其強勁，果實需發展較厚果皮以抵禦風壓，帶來風格獨特、酸度明亮的 Pinot Noir 與 Syrah。</p>
+          <p>2017 年獲 TTB 認定，是美國史上第一個以「持續風速達每小時 8 英里以上」界定範圍的 AVA。從 Bodega Bay 向東南延伸約 30 英里至 San Pablo Bay 的 Sears Point，海拔多在 600 英尺以下的低矮丘陵讓太平洋海風幾乎無阻礙地灌入，午後風力尤其強勁，果實需發展較厚果皮以抵禦風壓，帶來風格獨特、酸度明亮的 Pinot Noir 與 Syrah。</p>
           <div class="sa-details">
             <span>氣候：終年強風，涼爽</span>
             <span>代表酒莊：Sangiacomo、Cline Cellars、Argot</span>
@@ -369,8 +374,8 @@ export const lessonContent = [
           <tbody>
             <tr><td>海霧入口</td><td>單一入口：San Pablo Bay（南端）</td><td>多重入口：太平洋直接海岸線 + Petaluma Gap + Russian River 河谷缺口</td></tr>
             <tr><td>山谷走向</td><td>單一南北向谷地，氣候梯度呈線性（南涼北暖）</td><td>地形破碎，多個獨立山谷走向各異，氣候呈拼貼式分布而非單一梯度</td></tr>
-            <tr><td>面積</td><td>約 18,000 公頃</td><td>約 60,000 公頃（Napa 的 3 倍以上）</td></tr>
-            <tr><td>子 AVA 數</td><td>16 個，多數圍繞單一 Cabernet 敘事分級</td><td>19 個，橫跨從極涼（Sonoma Coast）到溫暖（Alexander Valley）的完整光譜</td></tr>
+            <tr><td>面積</td><td>約 18,000 公頃</td><td>約 24,000 公頃（約 Napa 的 1.3 倍）</td></tr>
+            <tr><td>子 AVA 數</td><td>17 個，多數圍繞單一 Cabernet 敘事分級</td><td>19 個，橫跨從極涼（Sonoma Coast）到溫暖（Alexander Valley）的完整光譜</td></tr>
             <tr><td>主力品種邏輯</td><td>幾乎所有子 AVA 都圍繞 Cabernet Sauvignon 的細部風格差異</td><td>因地形破碎，同一郡內可同時是頂級 Pinot 產區（RRV）與頂級 Zinfandel 產區（Dry Creek）</td></tr>
           </tbody>
         </table>

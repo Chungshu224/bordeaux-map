@@ -1,6 +1,6 @@
 /**
- * CA-L1-3 Napa Valley：16 個子 AVA 的 Cabernet 帝國
- * 16 個子 AVA 的南北氣候梯度、頂級酒莊與 Cabernet Sauvignon 品飲解析
+ * CA-L1-3 Napa Valley：17 個子 AVA 的 Cabernet 帝國
+ * 17 個子 AVA 的南北氣候梯度、頂級酒莊與 Cabernet Sauvignon 品飲解析
  * 資料來源：Napa Valley Vintners（napavintners.com）、Discover California Wines（discovercaliforniawines.com）、
  * TTB AVA 認定紀錄（ttb.gov）、Napa Green（napagreen.org）、Wikipedia Napa Valley AVA 條目、
  * Stag's Leap Wine Cellars／Chateau Montelena／Beaulieu Vineyard／Schramsberg 官網、
@@ -14,7 +14,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          Napa Valley——一個聽到名字就令人肅然起敬的葡萄酒聖地。這座僅占加州葡萄酒種植面積約 4% 的狹長谷地，卻生產全球最昂貴、最被收藏的 Cabernet Sauvignon 之一。16 個歷史悠久的子 AVA（2024 年底新增 Crystal Springs 後達 17 個），每一個都有自己的風土個性和頂級酒莊。
+          Napa Valley——一個聽到名字就令人肅然起敬的葡萄酒聖地。這座僅占加州葡萄酒產量約 4% 的狹長谷地，卻生產全球最昂貴、最被收藏的 Cabernet Sauvignon 之一。17 個子 AVA（含 2024 年底新增的 Crystal Springs），每一個都有自己的風土個性和頂級酒莊。
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
@@ -23,7 +23,7 @@ export const lessonContent = [
             <p>掌握從 Carneros（涼）到 Calistoga（熱）的風土漸變，以及山地 AVA 與谷底 AVA 的結構差異</p>
           </div>
           <div class="point-item">
-            <h4>📍 認識 16 個子 AVA 的個性</h4>
+            <h4>📍 認識 17 個子 AVA 的個性</h4>
             <p>區分 Oakville、Rutherford、Stags Leap District、Howell Mountain 等重要子產區的土壤、氣候與代表酒莊</p>
           </div>
           <div class="point-item">
@@ -50,10 +50,10 @@ export const lessonContent = [
       <div class="overview-stats">
         <div class="stat-block">
           <div class="stat-number">45,342</div>
-          <div class="stat-desc">英畝葡萄園（僅占加州葡萄酒面積約 4%）</div>
+          <div class="stat-desc">英畝葡萄園（僅占加州葡萄酒產量約 4%）</div>
         </div>
         <div class="stat-block">
-          <div class="stat-number">16</div>
+          <div class="stat-number">17</div>
           <div class="stat-desc">個歷史悠久的子 AVA，各有獨特個性</div>
         </div>
         <div class="stat-block">
@@ -102,7 +102,7 @@ export const lessonContent = [
         </div>
         <div class="timeline-item">
           <div class="timeline-badge">1966</div>
-          <div class="timeline-content"><strong>🍷 Robert Mondavi 創立酒莊</strong><p>率先在標籤標注葡萄品種，推廣 Fumé Blanc，奠定現代 Napa 葡萄酒工業的基礎</p></div>
+          <div class="timeline-content"><strong>🍷 Robert Mondavi 創立酒莊</strong><p>積極推廣在標籤標注葡萄品種，推廣 Fumé Blanc，奠定現代 Napa 葡萄酒工業的基礎</p></div>
         </div>
         <div class="timeline-item">
           <div class="timeline-badge">1968</div>
@@ -126,11 +126,11 @@ export const lessonContent = [
         </div>
         <div class="timeline-item">
           <div class="timeline-badge">1983–2011</div>
-          <div class="timeline-content"><strong>🧩 16 個子 AVA 陸續劃定</strong><p>從 1983 年 Los Carneros、Howell Mountain 率先獲認證，到 2011 年 Coombsville 成為第 16 個子 AVA，歷經近 30 年逐步建立起今日的巢狀 AVA 系統。</p></div>
+          <div class="timeline-content"><strong>🧩 子 AVA 陸續劃定</strong><p>從 1983 年 Los Carneros、Howell Mountain 率先獲認證，到 2011 年 Coombsville 成為第 16 個子 AVA，歷經近 30 年逐步建立起今日的巢狀 AVA 系統。</p></div>
         </div>
         <div class="timeline-item">
           <div class="timeline-badge">1982–1990s</div>
-          <div class="timeline-content"><strong>⚠️ AXR1 根瘤蚜蟲危機</strong><p>廣泛種植的 AXR1 砧木不敵新型根瘤蚜蟲（Biotype B），近三分之二 Napa 葡萄園被迫剷除重植，重建成本逾 10 億美元，但也促成更精細的地塊與砧木選擇研究。</p></div>
+          <div class="timeline-content"><strong>⚠️ AXR1 根瘤蚜蟲危機</strong><p>廣泛種植的 AXR1 砧木不敵新型根瘤蚜蟲（Biotype B），Napa 逾 5 萬英畝葡萄園被迫剷除重植，重建成本逾 10 億美元，但也促成更精細的地塊與砧木選擇研究。</p></div>
         </div>
         <div class="timeline-item">
           <div class="timeline-badge">1984、1986</div>
@@ -150,7 +150,7 @@ export const lessonContent = [
     componentProps: {
       slide: {
         title: 'Napa Valley AVA 地圖',
-        description: '美國最著名的葡萄酒谷地，16 個子 AVA，以 Cabernet Sauvignon 聞名全球',
+        description: '美國最著名的葡萄酒谷地，17 個子 AVA，以 Cabernet Sauvignon 聞名全球',
         mapGroup: 'Napa Valley',
         highlightAVAs: ['Oakville', 'Rutherford', 'Stags Leap District', 'Howell Mountain', 'Spring Mountain District'],
       }
@@ -204,7 +204,7 @@ export const lessonContent = [
         </div>
         <div class="ava-card valley-floor">
           <h4>Rutherford（1993 年認定）</h4>
-          <p>「Rutherford Dust」—— Rutherford 特有的礫石土壤帶來的特殊單寧質地，被形容為「塵土感」風格。Robert Mondavi 曾說：「To know Rutherford dust is to know the essence of Napa Valley Cabernet.」</p>
+          <p>「Rutherford Dust」—— Rutherford 特有的礫石土壤帶來的特殊單寧質地，被形容為「塵土感」風格。Napa 流傳的名句（常被歸於 André Tchelistcheff）：「To know Rutherford dust is to know the essence of Napa Valley Cabernet.」</p>
           <div class="ava-wines">帶「Rutherford Dust」的 Cabernet</div>
           <div class="ava-producers">Inglenook、Cakebread、Beaulieu Vineyard（創立於 1900 年）</div>
         </div>
@@ -234,7 +234,7 @@ export const lessonContent = [
         </div>
         <div class="ava-card valley-floor">
           <h4>Coombsville（2011 年認定，第 16 個子 AVA）</h4>
-          <p>納帕市（City of Napa）東側的火山岩高原，受 San Pablo Bay 涼風調節，是 Napa 最晚獲認證的傳統子 AVA。近年因涼爽氣候與優雅風格逐漸受到侍酒師關注。</p>
+          <p>納帕市（City of Napa）東側的火山岩高原，受 San Pablo Bay 涼風調節，於 2011 年獲認證，是 Napa 近年較新的子 AVA 之一。近年因涼爽氣候與優雅風格逐漸受到侍酒師關注。</p>
           <div class="ava-wines">結構緊緻、酸度明亮的 Cabernet</div>
           <div class="ava-producers">Farella Vineyard、Coombsville 多為精品小型莊園</div>
         </div>
@@ -249,7 +249,7 @@ export const lessonContent = [
       <div class="avas-grid">
         <div class="ava-card mountain">
           <h4>Howell Mountain（1983 年認定，Napa 最早的子 AVA之一）</h4>
-          <p>海拔約 400-900 公尺山地 AVA，高於霧線，陽光充足。火山岩土壤貧瘠、排水極佳，單寧緊實，需長期陳年。</p>
+          <p>海拔約 420–760 公尺山地 AVA，高於霧線，陽光充足。火山岩土壤貧瘠、排水極佳，單寧緊實，需長期陳年。</p>
           <div class="ava-wines">濃縮耐久 Cabernet、Zinfandel</div>
           <div class="ava-producers">Dunn Vineyards（1979 年由前 Caymus 釀酒師 Randy Dunn 創立）、Summit Lake</div>
         </div>
@@ -261,13 +261,13 @@ export const lessonContent = [
         </div>
         <div class="ava-card mountain">
           <h4>Diamond Mountain District（2001 年認定）</h4>
-          <p>Calistoga 西北山地，著名的 Diamond Mountain 土壤——白色石英岩碎石混合火山土，生產濃縮有力的酒款。</p>
+          <p>Calistoga 西北山地，著名的 Diamond Mountain 土壤——以火山土與火山角礫岩為主，生產濃縮有力的酒款。</p>
           <div class="ava-wines">濃縮有力的 Cabernet</div>
           <div class="ava-producers">Diamond Creek Vineyards、Constant Diamond Mountain</div>
         </div>
         <div class="ava-card mountain">
           <h4>Atlas Peak（1992 年認定）</h4>
-          <p>Napa 東側 Vaca 山脈高原，海拔約 600-900 公尺，土壤富含石灰岩（在加州相當罕見），賦予天然酸度。</p>
+          <p>Napa 東側 Vaca 山脈高原，海拔約 230–810 公尺，土壤以火山岩為主，高海拔帶來涼爽夜晚與緊實結構。</p>
           <div class="ava-wines">高酸度、清雅的 Cabernet 和 Sangiovese</div>
           <div class="ava-producers">Kongsgaard、William Hill</div>
         </div>
@@ -288,7 +288,7 @@ export const lessonContent = [
           <div class="ava-producers">Domaine Carneros、Etude</div>
         </div>
         <div class="ava-card other">
-          <h4>Calistoga（2009 年認定，Napa 最晚才劃定的谷底 AVA）</h4>
+          <h4>Calistoga（2009 年認定）</h4>
           <p>全谷最溫暖的子 AVA，火山岩土壤（Calistoga 因溫泉與間歇泉聞名），生產加州最豐厚的 Cabernet 和 Zinfandel。</p>
           <div class="ava-wines">豐厚 Cabernet、Zinfandel</div>
           <div class="ava-producers">Chateau Montelena、Jericho Canyon</div>
@@ -300,7 +300,7 @@ export const lessonContent = [
           <div class="ava-producers">Volker Eisele Family Estate</div>
         </div>
         <div class="ava-card other">
-          <h4>Wild Horse Valley（1988 年認定，面積最小的子 AVA之一）</h4>
+          <h4>Wild Horse Valley（1988 年認定，種植面積最小的子 AVA 之一）</h4>
           <p>Napa 東南角一個孤立的火山岩高原，海拔約 500-700 公尺，是 Napa 最涼爽、面積最小、最少被談論的子 AVA，種植面積僅約數十英畝，以 Pinot Noir 與 Chardonnay 為主，多供應氣泡酒基酒。</p>
           <div class="ava-wines">Pinot Noir、Chardonnay（多作氣泡酒基酒）</div>
           <div class="ava-producers">多為小型精品莊園，鮮少獨立裝瓶</div>
@@ -347,7 +347,7 @@ export const lessonContent = [
         </div>
         <div class="producer-card iconic">
           <h4>Stag's Leap Wine Cellars</h4>
-          <p>1970 年由 Warren Winiarski 創立，1976 年「巴黎評判」紅酒冠軍即是其 1973 年份 S.L.V. Estate Cabernet Sauvignon。如今由 Piero Antinori（義大利）和 Ste. Michelle Wine Estates 聯合持有。</p>
+          <p>1970 年由 Warren Winiarski 創立，1976 年「巴黎評判」紅酒冠軍即是其 1973 年份 S.L.V. Estate Cabernet Sauvignon。2007 年售予 Ste. Michelle Wine Estates 與 Antinori 家族，2023 年起由 Marchesi Antinori 全資持有。</p>
           <div class="p-label">📍 Stags Leap District · 創立 1970 年</div>
         </div>
         <div class="producer-card iconic">
@@ -387,7 +387,7 @@ export const lessonContent = [
         </div>
         <div class="producer-card historic">
           <h4>Duckhorn Vineyards</h4>
-          <p>1976 年由「Mr. Merlot」Dan Duckhorn 創立，是全美第一家專注釀造頂級單一品種 Merlot 的精品酒莊，在 Cabernet 稱霸的年代率先證明 Merlot 也能獨當一面，帶動 1980-90 年代全美 Merlot 熱潮。</p>
+          <p>1976 年由「Mr. Merlot」Dan Duckhorn 創立，是專注釀造頂級 Merlot 的標竿酒莊，在 Cabernet 稱霸的年代率先證明 Merlot 也能獨當一面，帶動 1980-90 年代全美 Merlot 熱潮。</p>
           <div class="p-label">📍 St. Helena · 創立 1976 年</div>
         </div>
       </div>
@@ -550,10 +550,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: 'Napa Valley 中哪個子 AVA 以罕見的石灰岩土壤著稱，賦予葡萄酒更高的天然酸度？',
+            question: 'Napa Valley 中哪個子 AVA 位於東側 Vaca 山脈高原、以火山岩土壤與涼爽夜晚著稱，並曾是 Antinori 家族種植 Sangiovese 的據點？',
             options: ['A. Oakville', 'B. Rutherford', 'C. Atlas Peak', 'D. Calistoga'],
             correct: 2,
-            explanation: 'Atlas Peak 位於 Napa 東側 Vaca 山脈高原，海拔約 600-900 公尺，富含石灰岩土壤，在加州相當罕見，賦予葡萄酒更高的天然酸度，適合釀造 Cabernet Sauvignon 和 Sangiovese。'
+            explanation: 'Atlas Peak 位於 Napa 東側 Vaca 山脈高原，海拔約 230–810 公尺，土壤以火山岩（安山岩、玄武岩等）為主，高海拔帶來涼爽夜晚與較緩慢的成熟，適合釀造 Cabernet Sauvignon 和 Sangiovese。'
           },
           {
             type: 'single',

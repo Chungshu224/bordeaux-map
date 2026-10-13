@@ -59,7 +59,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: '🏆', title: '巴黎評判傳奇', content: '1976 年納帕 Cabernet Sauvignon 和 Chardonnay 在盲品中擊敗法國頂級佳釀，震撼全球葡萄酒界' },
       { id: 2, icon: '🍷', title: '全美 85% 葡萄酒', content: '加州年產量占全美約 85%，是美國葡萄酒工業的絕對核心' },
-      { id: 3, icon: '💰', title: '73 億美元經濟規模', content: '加州葡萄酒與葡萄種植業每年為加州經濟貢獻約 730 億美元，支撐超過 42 萬個加州就業機會' }
+      { id: 3, icon: '💰', title: '730 億美元經濟規模', content: '加州葡萄酒與葡萄種植業每年為加州經濟貢獻約 730 億美元，支撐超過 42 萬個加州就業機會' }
     ],
     content: `<div class="ca-intro">
       <p class="lead-text">加州（California）是全球最重要的葡萄酒產區之一，坐擁多樣化的地理環境與氣候，從太平洋沿岸的涼爽海霧到內陸的炎熱山谷，孕育出豐富多彩的葡萄酒風格。</p>
@@ -127,7 +127,7 @@ export const lessonContent = [
       </div>
       <div class="timeline-item">
         <div class="timeline-badge">1982–1990s</div>
-        <div class="timeline-content"><strong>⚠️ 第二次根瘤蚜蟲危機（AXR1 事件）</strong><p>1950–70 年代廣泛種植的 AXR1 砧木被發現對新型根瘤蚜蟲（Biotype B）沒有足夠抗性。1980 年代起蟲害再度重創 Napa 與其他北加州產區，估計近三分之二的納帕葡萄園被迫剷除重植，重建成本超過 10 億美元——但也促成了更精細的地塊選址、砧木選擇與種植密度研究，間接提升了整體品質。</p></div>
+        <div class="timeline-content"><strong>⚠️ 第二次根瘤蚜蟲危機（AXR1 事件）</strong><p>1950–70 年代廣泛種植的 AXR1 砧木被發現對新型根瘤蚜蟲（Biotype B）沒有足夠抗性。1980 年代起蟲害再度重創 Napa 與其他北加州產區，估計納帕逾 5 萬英畝葡萄園被迫剷除重植，重建成本超過 10 億美元——但也促成了更精細的地塊選址、砧木選擇與種植密度研究，間接提升了整體品質。</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-badge">2006</div>
@@ -229,9 +229,9 @@ export const lessonContent = [
           <h4>加州 AVA 重要數字</h4>
           <ul>
             <li>📌 全加州共逾 150 個 AVA，是全美 AVA 數量最多的州（持續增加中）</li>
-            <li>📌 Napa Valley 主 AVA 之下巢狀著 16 個歷史悠久的子 AVA，2024 年底新增 Crystal Springs 後已達 17 個</li>
+            <li>📌 Napa Valley 主 AVA 之下巢狀著 17 個子 AVA（含 2024 年底新增的 Crystal Springs）</li>
             <li>📌 Sonoma County 擁有 19 個 AVA，是加州擁有 AVA 數量最多的郡之一</li>
-            <li>📌 加州 AVA 面積差異極大：小至數百英畝（如 Napa 的 Wild Horse Valley），大至橫跨數郡、數十萬英畝（如 Central Coast 底下的 San Francisco Bay AVA）</li>
+            <li>📌 加州 AVA 面積差異極大：小至僅數十英畝實際種植（如 Napa 的 Wild Horse Valley，AVA 約 3,300 英畝、已種植約 70 英畝），大至橫跨數郡、數十萬英畝（如 Central Coast 底下的 San Francisco Bay AVA）</li>
             <li>📌 一個 AVA 可以橫跨多個郡（如 Los Carneros 橫跨 Napa 與 Sonoma），一個郡也可以同時是一個 AVA 名稱（如 Sonoma County AVA）</li>
           </ul>
         </div>
@@ -252,7 +252,7 @@ export const lessonContent = [
           <tr><td>1</td><td>🇮🇹 義大利</td><td>全球產量最大，占全球近五分之一</td></tr>
           <tr><td>2</td><td>🇫🇷 法國</td><td>全球第二大產量國</td></tr>
           <tr><td>3</td><td>🇪🇸 西班牙</td><td>全球第三大產量國</td></tr>
-          <tr><td>（4）</td><td>🇺🇸 加州（若視為國家）</td><td>美國以外全球最大單一產酒地，占全美產量約 85%</td></tr>
+          <tr><td>（4）</td><td>🇺🇸 加州（若視為國家）</td><td>若視為國家約為全球第四大產酒地，占全美產量約 85%</td></tr>
         </tbody>
       </table>
       <p class="global-note">💡 值得留意的是，「產量排名」反映的是「量」，加州葡萄酒真正撼動世界的地方在於「質」——1976 年巴黎評判證明了加州頂級酒款的品質足以與法國最偉大的名莊並駕齊驅，這也是本課程開篇特別介紹巴黎評判的原因：加州的全球地位，是量與質雙重意義上的領先。</p>
@@ -482,7 +482,7 @@ export const lessonContent = [
             question: '1980 年代重創 Napa Valley 的「AXR1 事件」是什麼問題？',
             options: ['A. 一種新型除草劑污染葡萄園', 'B. 廣泛使用的 AXR1 砧木不敵新型根瘤蚜蟲，導致大量葡萄園需剷除重植', 'C. 一種葡萄病毒導致 Chardonnay 減產', 'D. 加州政府禁止使用 AXR1 品種釀酒'],
             correct: 1,
-            explanation: '1950–70 年代廣泛種植的 AXR1 砧木對新型根瘤蚜蟲（Biotype B）抗性不足，1980 年代起蟲害重創 Napa，近三分之二的葡萄園被迫剷除重植，重建成本超過 10 億美元。'
+            explanation: '1950–70 年代廣泛種植的 AXR1 砧木對新型根瘤蚜蟲（Biotype B）抗性不足，1980 年代起蟲害重創 Napa，逾 5 萬英畝的葡萄園被迫剷除重植，重建成本超過 10 億美元。'
           },
           {
             type: 'single',

@@ -114,7 +114,7 @@ export const lessonContent = [
     title: 'Chardonnay — 加州白酒之后',
     highlights: [
       { id: 1, icon: '👸', title: '加州種植最廣的白葡萄', content: 'Russian River Valley、Carneros、Sta. Rita Hills 各有精彩表現' },
-      { id: 2, icon: '📊', title: 'Wente Clone 的統治力', content: '全美約 90,000 英畝 Chardonnay 種植面積中，Wente 血統仍是最大宗來源之一' }
+      { id: 2, icon: '📊', title: 'Wente Clone 的統治力', content: '加州約 90,000 英畝 Chardonnay 種植面積中，Wente 血統仍是最大宗來源之一' }
     ],
     content: `<div class="variety-detail chardonnay">
       <h3>👸 Chardonnay</h3>
@@ -153,7 +153,7 @@ export const lessonContent = [
       <div class="clone-section">
         <h4>🧬 常見克隆株</h4>
         <div class="clone-grid">
-          <div class="clone-card"><strong>Clone 4（Old Wente）</strong><p>1880 年代 C.H. Wente 從布根地引進 Livermore Valley 的種苗，經 UC Davis 葡萄種苗基金會（FPS）除毒篩選編號為 Clone 4，晚熟、果串大、產量穩定，是加州 Chardonnay 種植面積最大的克隆之一</p></div>
+          <div class="clone-card"><strong>Clone 4（Old Wente）</strong><p>1912 年 Wente 家族從法國蒙彼利埃的 Richter 苗圃引進 Livermore Valley 的插穗，經 UC Davis 葡萄種苗基金會（FPS）除毒篩選編號為 Clone 4，晚熟、果串大、產量穩定，是加州 Chardonnay 種植面積最大的克隆之一</p></div>
           <div class="clone-card"><strong>Clone 76 / 95</strong><p>常見於追求飽滿、濃郁風味的現代種植方案，果實風味濃縮度高</p></div>
           <div class="clone-card"><strong>Clone 96</strong><p>與 Dijon 系統克隆並列使用，風味明亮，常用於強調果香的現代風格</p></div>
         </div>
@@ -347,7 +347,7 @@ export const lessonContent = [
         </thead>
         <tbody>
           <tr><td>Cabernet Sauvignon</td><td>Clone 4、6、169、337</td><td>Clone 4 源自阿根廷 Mendoza；Clone 6 源自 19 世紀波爾多老藤選種</td></tr>
-          <tr><td>Chardonnay</td><td>Clone 4（Wente／Old Wente）、76、95、96</td><td>Clone 4 源自 1880 年代 Livermore Valley 引種，晚熟高產</td></tr>
+          <tr><td>Chardonnay</td><td>Clone 4（Wente／Old Wente）、76、95、96</td><td>Clone 4 源自 1912 年 Wente 家族自法國引種，晚熟高產</td></tr>
           <tr><td>Pinot Noir</td><td>Dijon 667／777／115、Pommard（UCD 4）、Swan</td><td>Dijon 系統源自法國布根地；Pommard 由 Harold Olmo 於 1951 年引進</td></tr>
           <tr><td>Zinfandel</td><td>Lytton、Moore、Teldeschi、St. Peter's Church</td><td>以歷史老園「命名選種」流傳，而非編號克隆系統</td></tr>
           <tr><td>Grenache</td><td>ENTAV-INRA 70、136、362、513、515</td><td>法國官方認證克隆系統，經 Tablas Creek 等酒莊引入加州</td></tr>
@@ -365,7 +365,7 @@ export const lessonContent = [
     ],
     content: `<div class="blending-philosophy">
       <h3>🍷 加州混釀酒款的兩大傳統</h3>
-      <p>加州法規要求「品種標示酒」（varietal-labeled wine）須至少含 75% 該品種葡萄，這個規定意外促成了混釀酒款的獨特商標文化——當酒莊想釀造更均衡、不受限於單一品種比例的混釀酒時，需要一個不屬於任何特定品種名稱的行銷用語。</p>
+      <p>美國聯邦法規要求「品種標示酒」（varietal-labeled wine）須至少含 75% 該品種葡萄，這個規定意外促成了混釀酒款的獨特商標文化——當酒莊想釀造更均衡、不受限於單一品種比例的混釀酒時，需要一個不屬於任何特定品種名稱的行銷用語。</p>
 
       <div class="meritage-box">
         <h4>🏷️ Meritage（Bordeaux 式混釀）</h4>
@@ -390,9 +390,9 @@ export const lessonContent = [
           {
             type: 'single',
             question: '「Wente Clone」是指什麼？',
-            options: ['A. 加州最著名的 Cabernet Sauvignon 克隆株', 'B. 加州種植面積最大 Chardonnay 克隆之一，由 Wente 家族 1880 年代從布根地引進', 'C. 加州最老的 Zinfandel 老藤克隆', 'D. Robert Mondavi 研發的 Pinot Noir 克隆'],
+            options: ['A. 加州最著名的 Cabernet Sauvignon 克隆株', 'B. 加州種植面積最大 Chardonnay 克隆之一，由 Wente 家族 1912 年從法國引進', 'C. 加州最老的 Zinfandel 老藤克隆', 'D. Robert Mondavi 研發的 Pinot Noir 克隆'],
             correct: 1,
-            explanation: '「Wente Clone」指 C.H. Wente 1880 年代從布根地引進的 Chardonnay 種苗，經 UC Davis 除毒篩選後編號為 Clone 4，是加州種植面積最大的 Chardonnay 克隆之一，1936 年 Wente 更率先在酒標上標示「Chardonnay」品種名。'
+            explanation: '「Wente Clone」指 Wente 家族 1912 年從法國引進的 Chardonnay 插穗，經 UC Davis 除毒篩選後編號為 Clone 4，是加州種植面積最大的 Chardonnay 克隆之一，1936 年 Wente 更率先在酒標上標示「Chardonnay」品種名。'
           },
           {
             type: 'single',
