@@ -147,20 +147,49 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { getAlsaceLessonSlides } from '../data/lessonSlides.js'
+import { applyAlsace } from '../data/alsaceI18n.js'
+
+// 多語系 overlay：zh-TW 為單一事實來源，其他語系以路徑對應的翻譯 JSON 套用（缺漏自動 fallback 回中文）
+const ALSACE_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/alsace/*.json')
 
 const props = defineProps({
   lesson: { type: Object, required: true },
   isFinalExam: { type: Boolean, default: false },
 })
 const emit = defineEmits(['close', 'complete'])
+const { locale } = useI18n()
 
 const currentSlide = ref(0)
 const quizAnswered = ref(false)
 const quizSelected = ref(null)
 
-// 取得該課程的投影片
-const slides = computed(() => getAlsaceLessonSlides(props.lesson.id))
+const overlayData = ref(null)
+let overlayToken = 0
+async function loadOverlay() {
+  const token = ++overlayToken
+  const loc = locale.value
+  const lessonId = props.lesson.id
+  if (!loc || loc === 'zh-TW') { overlayData.value = null; return }
+  const key = Object.keys(ALSACE_TRANSLATIONS).find(k =>
+    k.includes(`/${loc}/`) && k.endsWith(`/${lessonId}.json`)
+  )
+  if (!key) { overlayData.value = null; return }
+  try {
+    const mod = await ALSACE_TRANSLATIONS[key]()
+    if (token === overlayToken) overlayData.value = mod?.default || mod || null
+  } catch {
+    if (token === overlayToken) overlayData.value = null
+  }
+}
+watch([() => props.lesson.id, locale], loadOverlay, { immediate: true })
+
+// 取得該課程的投影片（依語系套用翻譯 overlay）
+const slides = computed(() => {
+  const raw = getAlsaceLessonSlides(props.lesson.id)
+  return overlayData.value ? applyAlsace(raw, overlayData.value) : raw
+})
 const currentSlideData = computed(() => slides.value[currentSlide.value] || {})
 const progressPct = computed(() => slides.value.length > 1
   ? Math.round((currentSlide.value / (slides.value.length - 1)) * 100) : 0
