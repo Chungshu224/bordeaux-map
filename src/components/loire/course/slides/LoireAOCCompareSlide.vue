@@ -58,7 +58,7 @@ const DEFAULT_PAIR = [
     subtitle: '中央羅亞爾 · 全球 Sauvignon Blanc 標竿',
     emoji: '⛰️',
     color: '#1b7a4a',
-    location: '羅亞爾河左岸高地，Bourges 南方',
+    location: '羅亞爾河左岸高地，Bourges 東北方',
     soil: 'Caillottes（白堊石灰）、Terres Blanches（Kimmeridgian）、Silex（燧石）三土壤分佈',
     grape: 'Sauvignon Blanc（白）、Pinot Noir（紅/粉紅）',
     style: '清新果香、酸度銳利、白堊礦石為主',

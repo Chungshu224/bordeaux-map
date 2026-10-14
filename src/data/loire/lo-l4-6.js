@@ -54,7 +54,7 @@ export const lessonContent = [
               <tr>
                 <td><strong>前菜</strong></td>
                 <td>布列塔尼生蠔 + 海膽</td>
-                <td>Muscadet Sèvre et Maine sur Lie（15 年 Cru Communaux）</td>
+                <td>Muscadet Sèvre et Maine sur Lie（10 年左右的 Cru Communaux）</td>
                 <td>海洋礦物共鳴，酵母陳年的麵包感 × 海膽奶油感</td>
               </tr>
               <tr>

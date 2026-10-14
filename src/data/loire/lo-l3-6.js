@@ -11,13 +11,13 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          伏弗雷（Vouvray）位於 Touraine 心臟地帶，跨越 8 個村莊、約 2,200 公頃葡萄園，是<strong>世界上少數能在同一 AOC 內生產從骨感乾型到貴腐甜酒、再到傳統法氣泡酒的產區</strong>。它的多樣性來自一個品種——<strong>Chenin Blanc（白詩南）</strong>，以及 Tuffeau 凝灰岩這個能呼吸的母岩。
+          伏弗雷（Vouvray）位於 Touraine 心臟地帶，跨越 8 個村莊、約 2,000–3,000 公頃葡萄園（各來源不一），是<strong>世界上少數能在同一 AOC 內生產從骨感乾型到貴腐甜酒、再到傳統法氣泡酒的產區</strong>。它的多樣性來自一個品種——<strong>Chenin Blanc（白詩南）</strong>，以及 Tuffeau 凝灰岩這個能呼吸的母岩。
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
           <div class="point-item">
             <h4>📐 四級甜度系統</h4>
-            <p>完整掌握 Sec / Demi-Sec / Moelleux / Liquoreux 的殘糖標準與品評特徵</p>
+            <p>依歐盟標示規則，完整掌握 Sec / Demi-Sec / Moelleux / Doux（Liquoreux）的殘糖標準與品評特徵</p>
           </div>
           <div class="point-item">
             <h4>🪨 Tuffeau 凝灰岩風土</h4>
@@ -29,7 +29,7 @@ export const lessonContent = [
           </div>
           <div class="point-item">
             <h4>🥂 Vouvray Mousseux/Pétillant</h4>
-            <p>認識 Vouvray 的傳統法氣泡酒產線——僅次於香檳的法國第二大瓶內二次發酵產區之一</p>
+            <p>認識 Vouvray 的傳統法氣泡酒產線——氣泡酒占 Vouvray 產量的重要比例</p>
           </div>
         </div>
       </div>
@@ -49,12 +49,12 @@ export const lessonContent = [
         <div class="vouvray-facts">
           <h4>📐 Vouvray 基本數據</h4>
           <ul>
-            <li><strong>面積：</strong>約 2,200 公頃</li>
+            <li><strong>面積：</strong>約 2,000–3,000 公頃（各來源不一）</li>
             <li><strong>品種：</strong>100% Chenin Blanc</li>
             <li><strong>土壤：</strong>Tuffeau 凝灰岩、Aubuis（黏土石灰）、Perruches（黏土燧石）</li>
             <li><strong>氣候：</strong>溫和大陸型，受羅亞爾河調節</li>
             <li><strong>年產：</strong>約 12 萬 hL，其中約 60% 為氣泡酒</li>
-            <li><strong>氣泡標示：</strong>Vouvray Mousseux（傳統法）、Vouvray Pétillant（半氣泡，3.5–4 atm）</li>
+            <li><strong>氣泡標示：</strong>Vouvray Mousseux（傳統法）、Vouvray Pétillant（半氣泡，氣壓約 1–2.5 atm）</li>
           </ul>
         </div>
       </div>
@@ -157,24 +157,24 @@ export const lessonContent = [
     title: 'Vouvray 氣泡酒——被遺忘的法國氣泡名產',
     highlights: [
       { id: 1, icon: '🥂', title: '傳統法製作', content: 'Vouvray Mousseux 與 Méthode Champenoise 規範相同（瓶內二次發酵）' },
-      { id: 2, icon: '🫧', title: '兩種氣壓', content: 'Mousseux（5 atm，全氣泡）與 Pétillant（3.5 atm，半氣泡）並存' },
-      { id: 3, icon: '📦', title: '產量驚人', content: 'Vouvray 60% 產量為氣泡酒，是法國僅次於香檳區與 Limoux 的瓶內二次發酵重鎮之一' }
+      { id: 2, icon: '🫧', title: '兩種氣壓', content: 'Mousseux（全氣泡，≥ 3.5 atm）與 Pétillant（半氣泡，約 1–2.5 atm）並存' },
+      { id: 3, icon: '📦', title: '產量驚人', content: 'Vouvray 60% 產量為氣泡酒，是法國重要的瓶內二次發酵產地之一' }
     ],
     content: `
       <div class="vouvray-sparkling">
         <p class="lead-text">許多人不知道，Vouvray 的氣泡酒產量遠大於靜態酒——這要追溯到 19 世紀末，當白詩南的高酸特質配合鐵路運輸的便利，使 Vouvray 成為巴黎宴會桌上香檳的平價替代品。今日的 Vouvray Mousseux/Pétillant 仍延續此傳統，是 Chenin Blanc 氣泡酒的最高典範。</p>
         <div class="sparkling-grid">
           <div class="sparkling-block">
-            <h4>🥂 Vouvray Mousseux（5 atm）</h4>
+            <h4>🥂 Vouvray Mousseux（≥ 3.5 atm）</h4>
             <ul>
               <li>瓶內二次發酵（Méthode Traditionnelle）</li>
-              <li>最少 9 個月酒泥陳釀（多數酒莊 12–24 月）</li>
+              <li>最少陳年 12 個月（多數酒莊 12–24 月）</li>
               <li>風格：青蘋果、白花、烤麵包、白堊礦物</li>
-              <li>常見：Brut（&lt; 12 g/L 殘糖）、Sec、Demi-Sec</li>
+              <li>常見：Brut（≤ 12 g/L 殘糖）、Sec、Demi-Sec</li>
             </ul>
           </div>
           <div class="sparkling-block">
-            <h4>🫧 Vouvray Pétillant（3.5 atm）</h4>
+            <h4>🫧 Vouvray Pétillant（約 1–2.5 atm）</h4>
             <ul>
               <li>半氣泡風格（更接近 Frizzante）</li>
               <li>細緻泡沫、口感較柔和</li>
@@ -203,15 +203,15 @@ export const lessonContent = [
         id: 'q1',
         question: 'Vouvray AOC 中 Demi-Sec 的殘糖範圍是？',
         options: ['0–4 g/L', '4–12 g/L', '12–45 g/L', '45 g/L 以上'],
-        correctIndex: 2,
-        explanation: 'Vouvray 的甜度分級：Sec（&lt; 4 g/L）、Sec-Tendre（4–8 g/L）、Demi-Sec（12–45 g/L）、Moelleux（45–80 g/L）、Liquoreux（&gt; 80 g/L）。Demi-Sec 是 Vouvray 最具代表性的風格，常被視為 Chenin Blanc 與 Tuffeau 風土最自然的呈現方式。'
+        correctIndex: 1,
+        explanation: '依歐盟標示規則，甜度分級為：Sec（≤ 4 g/L，酸度配合時可到 9）、Demi-Sec（4–12 g/L，可到 18）、Moelleux（12–45 g/L）、Doux／Liquoreux（&gt; 45 g/L，常為貴腐）。Demi-Sec 是 Vouvray 最具代表性的風格，常被視為 Chenin Blanc 與 Tuffeau 風土最自然的呈現方式。'
       },
       {
         id: 'q2',
         question: 'Vouvray 約有多少比例的產量為氣泡酒？',
         options: ['約 20%', '約 40%', '約 60%', '幾乎沒有'],
         correctIndex: 2,
-        explanation: 'Vouvray 約 60% 產量為氣泡酒（Mousseux + Pétillant），是法國僅次於香檳區的重要瓶內二次發酵產區。這個傳統可追溯至 19 世紀末，當鐵路將 Vouvray 高酸 Chenin 運往巴黎，作為香檳的平價替代品。'
+        explanation: 'Vouvray 約 60% 產量為氣泡酒（Mousseux + Pétillant），是法國重要的瓶內二次發酵產區之一。這個傳統可追溯至 19 世紀末，當鐵路將 Vouvray 高酸 Chenin 運往巴黎，作為香檳的平價替代品。'
       },
       {
         id: 'q3',

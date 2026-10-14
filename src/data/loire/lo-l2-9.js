@@ -50,12 +50,12 @@ export const lessonContent = [
         question: 'Saumur-Champigny 最知名的傳奇酒莊是哪一個？',
         options: [
           'Charles Joguet（Chinon 精品莊）',
-          'Clos Rougeard（Foucault 兄弟，大橡木桶傳統陳年）',
+          'Clos Rougeard（Foucault 兄弟，橡木桶長期培養）',
           'Domaine de Bellivière（Loir 河谷自然酒）',
           'Domaine de la Chevalerie（Bourgueil 傳統派）'
         ],
         correctIndex: 1,
-        explanation: 'Clos Rougeard（Foucault 兄弟創立，現屬 Bouygues 集團）是 Saumur-Champigny 最傳奇的酒莊，以古老大型橡木桶（foudres）長期陳年，頂款 Le Bourg 在二手市場達 €300–500+/瓶，被稱為「羅亞爾的 Romanée-Conti」。'
+        explanation: 'Clos Rougeard（Foucault 兄弟創立，現屬 Bouygues 集團）是 Saumur-Champigny 最傳奇的酒莊，以橡木桶（Le Bourg 為全新重烘烤新桶）長期培養，頂款 Le Bourg 在二手市場價格極高，被稱為「羅亞爾的 Romanée-Conti」。'
       },
       {
         id: 'q3',

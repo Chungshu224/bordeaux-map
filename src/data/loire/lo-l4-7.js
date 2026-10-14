@@ -35,15 +35,15 @@ export const lessonContent = [
     questions: [
       {
         id: 'q1',
-        question: 'Muscadet AOC 中，「Cru Communaux」（如 Granite de Clisson、Orthogneiss de Gorges）代表什麼意義？',
+        question: 'Muscadet AOC 中，「Cru Communaux」（如 Clisson、Gorges、Le Pallet）代表什麼意義？',
         options: [
           '它們是 Muscadet 的甜型版本，殘糖高於 20 g/L',
-          '特定地質地塊的頂級 Muscadet，法規要求最少 20 個月在死酵母（lies）上陳年，品質遠高於基礎 Muscadet sur Lie',
+          '特定地質地塊的頂級 Muscadet，法規要求長時間（最少約 17–18 個月起）在死酵母（lies）上陳年，品質遠高於基礎 Muscadet sur Lie',
           '這是 Muscadet 的有機認證標誌，只有通過有機認證的酒莊才可使用',
           '「Communaux」指共用公共地下酒窖陳年的生產者聯盟'
         ],
         correctIndex: 1,
-        explanation: 'Muscadet Cru Communaux（也稱 Muscadet Cru Communal）是 2011 年引入的頂級等級，代表特定地質地塊的最高品質 Muscadet：最少 20 個月（部分要求 24 個月）在死酵母上陳年（比基礎 sur Lie 的 6 個月更長），每個 Cru 以地質命名（Granite de Clisson, Orthogneiss de Gorges, Gneiss de Monnières-Saint-Fiacre 等），是 Muscadet 重建品質形象的核心策略。'
+        explanation: 'Muscadet Cru Communaux（也稱 Muscadet Cru Communal）是 2011 年引入的頂級等級，代表特定地質地塊的最高品質 Muscadet：最少約 17–18 個月起（多數 cru 24 個月以上）在死酵母上陳年（比基礎 sur Lie 的約 5–6 個月更長），每個 Cru 以村莊／地塊命名並有代表性土壤（Clisson 花崗岩、Gorges 輝長岩底土、Le Pallet 片麻岩等），是 Muscadet 重建品質形象的核心策略。'
       },
       {
         id: 'q2',
@@ -55,7 +55,7 @@ export const lessonContent = [
           '它的年產量是 Muscadet 的三倍，是羅亞爾最大的白酒 AOC'
         ],
         correctIndex: 1,
-        explanation: 'Savennières AOC 以 100% Chenin Blanc 釀造完全干型白酒（Sec），種植在安茹西部的片岩（schiste）和火山岩坡地上。Nicolas Joly 的 Coulée de Serrant（Biodynamie 農法）是最著名代表，通常需要 8–20 年才展現全部複雜度，是法國最偉大的干型白酒之一。'
+        explanation: 'Savennières AOC 以 100% Chenin Blanc 釀造，以干型白酒（Sec）為主，種植在安茹西部的片岩（schiste）和火山岩坡地上。Nicolas Joly 的 Coulée de Serrant（Biodynamie 農法）是最著名代表，通常需要 8–20 年才展現全部複雜度，是法國最偉大的干型白酒之一。'
       },
       {
         id: 'q3',
@@ -98,12 +98,12 @@ export const lessonContent = [
         question: 'Quarts-de-Chaume 在 2011 年獲得「Grand Cru」稱號的條件是什麼（最主要的評估標準）？',
         options: [
           '因為它是面積最大的羅亞爾甜酒 AOC',
-          '面積僅約 35 公頃的微型產區，長達數十年的頂級品質記錄（可媲美 Sauternes Grand Cru），極嚴格的產量限制（最高 25 hl/ha），以及手工多次逐串採收的貴腐標準',
+          '面積僅約 40 公頃的微型產區，長達數十年的頂級品質記錄，極嚴格的產量限制（20 hl/ha，上限 25 hl/ha），以及手工分批採收、高糖度的貴腐標準',
           '因為它是第一個使用 GPS 精準定位地塊的 AOC',
           '因為 Nicolas Joly 的 Biodynamie 農法為它帶來了 Grand Cru 認定'
         ],
         correctIndex: 1,
-        explanation: 'Quarts-de-Chaume 的 Grand Cru 認定（2011 年正式法規承認）來自多個嚴格標準：極小面積（35 公頃，只有 4–5 個主要生產者）、數十年的頂級品質記錄（可媲美 Sauternes 最佳 Grand Cru）、最低殘糖要求（136 g/L + 天然貴腐）、手工多次逐串採收（Trie par Trie），以及最低陳年 18 個月在木桶中。這是羅亞爾河谷迄今唯一的 Grand Cru 等級 AOC。'
+        explanation: 'Quarts-de-Chaume 的 Grand Cru 認定（2011 年正式法規承認）來自多個嚴格標準：極小面積（約 40 公頃）、數十年的頂級品質記錄、嚴格產量（20 hl/ha）、高糖度要求（葡萄汁含糖 ≥ 298 g/L、發酵後殘糖 > 85 g/L）與手工分批採收（par tries successives）。這是羅亞爾河谷迄今唯一的 Grand Cru 等級 AOC。'
       },
       {
         id: 'q7',

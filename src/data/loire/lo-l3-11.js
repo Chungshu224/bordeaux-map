@@ -103,7 +103,7 @@ export const lessonContent = [
             <li><strong>地域共鳴：</strong>南特（Nantes）距布列塔尼海岸不到 2 小時，Muscadet 的農民幾乎每個週末都吃生蠔——這是數百年來「一起生長、一起消費」形成的自然和諧</li>
           </ul>
         </div>
-        <p><strong>進階配對：</strong>Savennières（Nicolas Joly，100% Chenin Blanc，干型）× Sole meunière（法式黃油煎鰈魚）——都漢頂級白酒配同樣頂級淡水魚料理的宮廷配對。</p>
+        <p><strong>進階配對：</strong>Savennières（Nicolas Joly，100% Chenin Blanc，干型）× Sandre au beurre blanc（白奶油醬梭鱸）——安茹頂級白酒配羅亞爾河淡水魚，同一條河的經典配對。</p>
       </div>
     `
   },
@@ -130,7 +130,7 @@ export const lessonContent = [
   {
     title: 'Level 3 綜合評量（第二題）',
     highlights: [
-      { id: 1, icon: '🍯', title: 'Vouvray Moelleux', content: 'Chenin Blanc 釀造的半甜到甜型白酒，殘糖 30–50 g/L，但天生保有高酸度' },
+      { id: 1, icon: '🍯', title: 'Vouvray Moelleux', content: 'Chenin Blanc 釀造的半甜到甜型白酒，殘糖約 12–45 g/L，但天生保有高酸度' },
       { id: 2, icon: '⚖️', title: '甜酸平衡', content: '甜型酒配起司的關鍵在於酸度是否足以抵消甜度帶來的油膩感' }
     ],
     quiz: {

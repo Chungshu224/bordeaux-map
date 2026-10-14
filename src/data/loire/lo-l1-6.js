@@ -89,7 +89,7 @@ export const lessonContent = [
       question: 'Muscadet「Crus Communaux」與一般 Muscadet sur lie 最主要的差別是什麼？',
       options: ['Crus Communaux 使用不同的葡萄品種', 'Crus Communaux 需要更長時間的 sur lie 陳放（最少18-24個月），有更強的陳年能力', 'Crus Communaux 產區面積更大', 'Crus Communaux 不得使用 Melon de Bourgogne'],
       correct: 1,
-      explanation: 'Crus Communaux 是 Muscadet 最高等級的地塊分級，最低要求 sur lie 陳放 18 個月（許多生產者會陳放 3-5 年），遠超一般 Muscadet sur lie 的 4 個月要求。這樣的長時間酒泥接觸讓酒款發展出更複雜的質感和香氣，使其能陳放 10-15 年，完全顛覆了「Muscadet 是便宜早飲型白酒」的舊觀念。'
+      explanation: 'Crus Communaux 是 Muscadet 最高等級的地塊分級，最低要求 sur lie 陳放 18 個月（許多生產者會陳放 3-5 年），遠超一般 Muscadet sur lie 約 5–6 個月（次年 3 月起裝瓶）的要求。這樣的長時間酒泥接觸讓酒款發展出更複雜的質感和香氣，使其能陳放 10-15 年，完全顛覆了「Muscadet 是便宜早飲型白酒」的舊觀念。'
     }
   },
 
@@ -263,7 +263,7 @@ export const lessonContent = [
       <div class="centre-loire-aops">
         <div class="flagship-aop">
           <h4>⭐ Sancerre（桑塞爾）</h4>
-          <p><strong>位置：</strong>Cher 省，羅亞爾河右岸高地</p>
+          <p><strong>位置：</strong>Cher 省，羅亞爾河左岸高地</p>
           <p><strong>面積：</strong>約 2,800 公頃</p>
           <p><strong>三種土壤 × 三種風格：</strong></p>
           <ul>
@@ -276,7 +276,7 @@ export const lessonContent = [
         </div>
         <div class="flagship-aop">
           <h4>⭐ Pouilly-Fumé（普利福美）</h4>
-          <p><strong>位置：</strong>羅亞爾河左岸，Nièvre 省</p>
+          <p><strong>位置：</strong>羅亞爾河右岸，Nièvre 省</p>
           <p><strong>面積：</strong>約 1,300 公頃</p>
           <p><strong>土壤：</strong>燧石（silex）、基默里奇泥灰岩、石灰岩</p>
           <p><strong>「Fumé」特色：</strong>燧石土壤帶來典型的「pierre à fusil」（打火石）煙燻礦石香氣</p>

@@ -87,7 +87,7 @@ export const lessonContent = [
             <h4>🌸 Reuilly AOC</h4>
             <p><strong>地理：</strong>Indre 省，Cher 河和 Arnon 河之間，面積約 200 公頃</p>
             <p><strong>特色：</strong>Reuilly 提供三種顏色——白酒（Sauvignon Blanc）、紅酒（Pinot Noir）、粉紅酒（<strong>Pinot Gris</strong>！）</p>
-            <p><strong>Pinot Gris 粉紅：</strong>這是 Reuilly 最獨特之處——用 Pinot Gris 釀造粉紅酒（顏色極淡，接近橙色），有獨特的煙燻和薑黃香氣，在整個羅亞爾中央產區找不到第二個地方這樣做</p>
+            <p><strong>Pinot Gris 粉紅：</strong>這是 Reuilly 最獨特之處——用 Pinot Gris 釀造粉紅酒（顏色極淡，接近橙色），有獨特的煙燻和薑黃香氣，在中央產區中只有 Reuilly 與 Châteaumeillant 這樣做</p>
             <p><strong>白酒風格：</strong>類似 Quincy 但更圓潤，礦物感強，偶爾有熱帶水果感</p>
           </div>
         </div>
@@ -149,7 +149,7 @@ export const lessonContent = [
           '它是法國最昂貴的 Sauvignon Blanc 產區，超越 Sancerre'
         ],
         correctIndex: 1,
-        explanation: 'Reuilly AOC 除了白酒（Sauvignon Blanc）和紅酒（Pinot Noir）之外，還用 Pinot Gris 釀造顏色極淡的粉紅酒——這種近乎透明的洋蔥皮色粉紅酒在整個中央產區是獨一無二的，帶有煙燻和薑黃特色。'
+        explanation: 'Reuilly AOC 除了白酒（Sauvignon Blanc）和紅酒（Pinot Noir）之外，還用 Pinot Gris 釀造顏色極淡的粉紅酒——這種近乎透明的洋蔥皮色粉紅酒在中央產區十分少見，帶有煙燻和薑黃特色。'
       },
       {
         id: 'q3',

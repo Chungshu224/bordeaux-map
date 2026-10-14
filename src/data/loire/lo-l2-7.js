@@ -10,7 +10,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          同樣是 Chinon 的 Cabernet Franc，一瓶在不鏽鋼桶中完成釀造，另一瓶在古老的大型橡木桶中沉睡三年——打開後卻是完全不同的兩個世界。這堂課是羅亞爾河谷最重要的品飲訓練課之一：學會用你的鼻子和味蕾識別桶型對葡萄酒的影響，是進入侍酒師世界的必修功課。
+          同樣是 Chinon 的 Cabernet Franc，一瓶在不鏽鋼桶中完成釀造，另一瓶在橡木桶中沉睡兩三年——打開後卻是完全不同的兩個世界。這堂課是羅亞爾河谷最重要的品飲訓練課之一：學會用你的鼻子和味蕾識別桶型對葡萄酒的影響，是進入侍酒師世界的必修功課。
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
@@ -24,7 +24,7 @@ export const lessonContent = [
           </div>
           <div class="point-item">
             <h4>🏆 了解羅亞爾傳奇酒莊的釀造哲學</h4>
-            <p>Clos Rougeard 和 Charles Joguet 各自的桶型選擇與哲學差異</p>
+            <p>Clos Rougeard（新桶長期培養）和 Charles Joguet（依地塊選桶）各自的桶型選擇與哲學差異</p>
           </div>
         </div>
       </div>
@@ -59,17 +59,17 @@ export const lessonContent = [
       <div class="philosophy-comparison">
         <div class="producer-card traditional">
           <h3>🏰 Clos Rougeard（Saumur-Champigny）</h3>
-          <h4>哲學：傳統大桶長期陳年</h4>
-          <p><strong>代表人物：</strong>Charly 和 Nady Foucault 兄弟（現由 Bouygues 集團接手，2017 年），創立自 1920s</p>
-          <p><strong>桶型：</strong>古老的大型橡木桶（foudres 和 demi-muids，容量 300–600L），桶齡常超過 30–50 年</p>
-          <p><strong>陳年時間：</strong>旗艦款 Le Bourg 和 Les Poyeux 在桶中陳年 18–36 個月</p>
+          <h4>哲學：勃艮第式橡木桶長期培養、低干預</h4>
+          <p><strong>代表人物：</strong>Charly 和 Nady Foucault 兄弟（家族釀酒歷史可追溯至 17 世紀；2017 年起由 Bouygues 家族接手）</p>
+          <p><strong>桶型：</strong>225L 橡木小桶（barrique）：Le Bourg 使用全新、重烘烤的新桶；Les Poyeux 則使用二手桶（曾裝過其他名莊的酒）。並非大型 foudre</p>
+          <p><strong>陳年時間：</strong>Le Bourg 在新桶中培養約 2 年，裝瓶後再瓶陳約 2 年才上市</p>
           <p><strong>風格：</strong>香氣極度複雜（皮革、乾玫瑰、菸草、礦物），單寧細緻但密集，需要 10–20 年才展現全貌。被稱為「Saumur-Champigny 的 Romanée-Conti」。</p>
-          <p><strong>價格：</strong>已在二手市場出現，頂款每瓶 €300–500+</p>
+          <p><strong>價格：</strong>二手市場上頂款價格可達數百歐元以上</p>
         </div>
         <div class="producer-card modern">
           <h3>⚗️ Charles Joguet（Chinon）</h3>
-          <h4>哲學：单一地塊 + 不同桶型實驗</h4>
-          <p><strong>代表人物：</strong>Charles Joguet（画家轉型釀酒師），現由 Alain Delaunay 管理</p>
+          <h4>哲學：單一地塊 + 不同桶型實驗</h4>
+          <p><strong>代表人物：</strong>Charles Joguet 創立的 Chinon 名莊，現由 Alain Delaunay 管理</p>
           <p><strong>桶型：</strong>依地塊不同，彈性選用不鏽鋼桶、舊橡木大桶，偶爾實驗新桶</p>
           <p><strong>核心理念：</strong>讓土壤說話——礫石地塊用鋼桶保留鮮果，凝灰岩地塊用舊桶增加礦物複雜度</p>
           <p><strong>代表酒款：</strong>Clos de la Dioterie（凝灰岩，舊桶，複雜）、Varennes du Grand Clos（礫石，鋼桶，清新）</p>
@@ -128,12 +128,12 @@ export const lessonContent = [
         question: 'Clos Rougeard 被稱為「Saumur-Champigny 的 Romanée-Conti」，主要因為？',
         options: [
           '它使用完全相同的 Pinot Noir 品種',
-          '傳統大桶長期陳年、極低產量、頂款在二手市場達 €300–500+，複雜度達布根地頂級水準',
+          '新橡木桶長期培養、極低產量、頂款在二手市場價格極高，複雜度與陳年潛力達布根地頂級水準',
           '它位於 Saumur-Champigny 的 Grand Cru 地塊',
           '它是唯一允許使用 Pinot Noir 的羅亞爾 AOC'
         ],
         correctIndex: 1,
-        explanation: 'Clos Rougeard（Foucault 兄弟）以傳統大橡木桶（foudres）長期陳年，極低產量，複雜度和陳年潛力達到世界頂級水準（頂款 Le Bourg 需陳年 10–20 年），在二手市場每瓶 €300–500+，是羅亞爾最傳奇的紅酒之一。'
+        explanation: 'Clos Rougeard（Foucault 兄弟）以 225L 橡木桶（Le Bourg 為全新重烘烤新桶）長期培養，極低產量，複雜度和陳年潛力達到世界頂級水準（頂款 Le Bourg 需陳年 10–20 年），在二手市場價格極高，是羅亞爾最傳奇的紅酒之一。'
       }
     ]
   }

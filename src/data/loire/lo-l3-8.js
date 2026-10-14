@@ -73,9 +73,9 @@ export const lessonContent = [
         </div>
         <div class="aoc-white-item">
           <h4>🌿 Coteaux-du-Vendômois Blanc</h4>
-          <p><strong>品種：</strong>Chenin Blanc + 允許 Pineau d'Aunis（白色版本，非常罕見的白葡萄版本）</p>
-          <p><strong>特色：</strong>旺多姆（Vendôme）周邊的小產區，主要以 Pineau d'Aunis 紅酒聞名，但白酒版本也有獨特的辛香草本氣息</p>
-          <p><strong>自然酒文化：</strong>這裡是法國自然酒聖地之一，Thierry Puzelat（Clos du Tue-Boeuf）是最著名的自然酒生產者，他的葡萄酒有時被列為「世界自然酒 50 強」</p>
+          <p><strong>品種：</strong>以 Chenin Blanc 為主（可搭配少量 Chardonnay）；Pineau d'Aunis 是紅葡萄品種，只用於紅酒與粉紅（vin gris）</p>
+          <p><strong>特色：</strong>旺多姆（Vendôme）周邊的小產區，主要以 Pineau d'Aunis 紅酒聞名，白酒則以 Chenin Blanc 為主，酸度鮮明</p>
+          <p><strong>自然酒文化：</strong>這裡是法國自然酒聖地之一，Loir 與 Vendôme 一帶聚集了不少以有機、自然法釀酒的小農</p>
         </div>
       </div>
     `

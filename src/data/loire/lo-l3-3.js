@@ -39,7 +39,7 @@ export const lessonContent = [
   {
     title: '萊揚河谷——法國西部的貴腐天堂',
     highlights: [
-      { id: 1, icon: '🌫️', title: '晨霧誘發貴腐', content: 'Layon 河谷狹窄、東西走向，秋季清晨產生濃霧（高濕度）' },
+      { id: 1, icon: '🌫️', title: '晨霧誘發貴腐', content: 'Layon 河谷狹窄、呈西北–東南走向，秋季清晨產生濃霧（高濕度）' },
       { id: 2, icon: '☀️', title: '午後乾燥', content: '霧散後南向坡面充分日照，抑制有害灰黴、促進貴腐健康發展' },
       { id: 3, icon: '🪨', title: '片岩風土', content: 'Anjou Noir 黑色片岩 + 凝灰岩，賦予甜酒礦物張力，避免一味甜膩' }
     ],
@@ -75,7 +75,7 @@ export const lessonContent = [
         '冬季嚴寒'
       ],
       correct: 1,
-      explanation: '貴腐 Botrytis cinerea 需要「濕→乾→濕→乾」的循環。萊揚河谷狹窄、東西走向的地形使秋季每日清晨產生濃霧（高濕誘發孢子）、午後霧散乾燥（抑制有害灰腐並濃縮葡萄）。這個日內節奏比單純的高濕度更關鍵——若整天潮濕，葡萄會直接腐爛。'
+      explanation: '貴腐 Botrytis cinerea 需要「濕→乾→濕→乾」的循環。萊揚河谷狹窄、呈西北–東南走向的地形使秋季每日清晨產生濃霧（高濕誘發孢子）、午後霧散乾燥（抑制有害灰腐並濃縮葡萄）。這個日內節奏比單純的高濕度更關鍵——若整天潮濕，葡萄會直接腐爛。'
     }
   },
 
@@ -93,8 +93,8 @@ export const lessonContent = [
   {
     title: '萊揚甜酒金字塔',
     highlights: [
-      { id: 1, icon: '🥇', title: 'Quarts de Chaume Grand Cru', content: 'Loire 唯一 Grand Cru，2011 年認定，34 公頃' },
-      { id: 2, icon: '🥈', title: 'Bonnezeaux', content: '單一 Cru AOC，77 公頃，與 QdC 平起平坐的歷史名園' },
+      { id: 1, icon: '🥇', title: 'Quarts de Chaume Grand Cru', content: 'Loire 唯一 Grand Cru，2011 年法規通過（2010 年份起適用），約 40 公頃' },
+      { id: 2, icon: '🥈', title: 'Bonnezeaux', content: '單一 Cru AOC，約 80–120 公頃（資料來源不一），與 QdC 平起平坐的歷史名園' },
       { id: 3, icon: '🥉', title: 'Coteaux du Layon (Villages)', content: '7 個指定村莊：Beaulieu、Faye、Rablay、Rochefort、Saint-Aubin、Saint-Lambert、Chaume' }
     ],
     content: `
@@ -104,21 +104,21 @@ export const lessonContent = [
           <div class="pyramid-level grand-cru">
             <h4>🥇 Quarts de Chaume Grand Cru（Loire 唯一 GC）</h4>
             <ul>
-              <li><strong>面積：</strong>約 34 公頃，位於 Rochefort-sur-Loire 村</li>
+              <li><strong>面積：</strong>約 40 公頃，位於 Rochefort-sur-Loire 村</li>
               <li><strong>產量上限：</strong>20 hL/ha（最嚴格）</li>
-              <li><strong>最低殘糖：</strong>110 g/L（Botrytis 必須高度感染）</li>
-              <li><strong>採收：</strong>強制多次手工 tries（最少 3 次）</li>
-              <li><strong>名家：</strong>Château Bellerive（Florent Baumard）、Château Pierre-Bise、Domaine des Baumard</li>
+              <li><strong>糖度門檻：</strong>葡萄汁含糖 ≥ 298 g/L，發酵後殘糖 > 85 g/L（Botrytis 必須高度感染）</li>
+              <li><strong>採收：</strong>必須手工、分批多次採收（par tries successives）</li>
+              <li><strong>名家：</strong>Château de Bellerive、Château Pierre-Bise、Domaine des Baumard</li>
               <li><strong>歷史：</strong>名稱源於 15 世紀「最好四分之一」的封建租稅故事</li>
             </ul>
           </div>
           <div class="pyramid-level cru">
             <h4>🥈 Bonnezeaux（單一 Cru AOC）</h4>
             <ul>
-              <li><strong>面積：</strong>約 77 公頃，位於 Thouarcé 村</li>
+              <li><strong>面積：</strong>約 80–120 公頃（資料來源不一），位於 Thouarcé 村</li>
               <li><strong>產量上限：</strong>25 hL/ha</li>
               <li><strong>最低殘糖：</strong>51 g/L（Moelleux 等級以上）</li>
-              <li><strong>三大坡：</strong>La Montagne、Beauregard、Les Melleresses</li>
+              <li><strong>三大坡：</strong>La Montagne、Beauregard、Fesles（另有 Les Melleresses 等地塊名）</li>
               <li><strong>名家：</strong>Château de Fesles、Domaine Petit Val、Domaine des Petits Quarts</li>
             </ul>
           </div>
@@ -152,7 +152,7 @@ export const lessonContent = [
         'Loire 第一個有機 AOC'
       ],
       correct: 1,
-      explanation: 'Quarts de Chaume 在 2011 年從原本的 AOC 升格為 Loire 河谷唯一的「Grand Cru」AOC，是繼 Alsace Grand Cru 與 Bourgogne Grand Cru 之後，法國第三個正式 Grand Cru 體系。這個 34 公頃的小區坐落於萊揚河支流的天然保護地形中，秋季貴腐條件極為穩定。'
+      explanation: 'Quarts de Chaume 在 2011 年（2010 年份起適用）從原本的 AOC 升格為 Loire 河谷唯一的「Grand Cru」AOC，（法國其他 Grand Cru 例如 Alsace、Bourgogne、Chablis 各有各的體系）。這個約 40 公頃的小區坐落於萊揚河支流的天然保護地形中，秋季貴腐條件極為穩定。'
     }
   },
 
@@ -209,8 +209,8 @@ export const lessonContent = [
         id: 'q1',
         question: 'Quarts de Chaume Grand Cru 的最低殘糖規定是？',
         options: ['34 g/L', '51 g/L', '85 g/L', '110 g/L'],
-        correctIndex: 3,
-        explanation: 'Quarts de Chaume Grand Cru 的最低殘糖標準為 110 g/L，是 Loire 全境最嚴格的甜酒規範，遠高於 Bonnezeaux（51 g/L）與 Coteaux du Layon Villages（34 g/L）。產量上限也最嚴格（20 hL/ha），確保葡萄達到極致貴腐濃縮。'
+        correctIndex: 2,
+        explanation: 'Quarts de Chaume Grand Cru 規章要求發酵後殘糖 > 85 g/L（葡萄汁含糖至少 298 g/L），是 Loire 甜酒中最嚴格的規範之一。產量上限也最嚴格（20 hL/ha），確保葡萄達到極致貴腐濃縮。'
       },
       {
         id: 'q2',

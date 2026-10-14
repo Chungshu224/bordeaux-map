@@ -10,7 +10,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          在香檳（Champagne）之外，法國有七個可以生產「Crémant」的地區——羅亞爾河谷是其中最大且最多元的。Crémant-de-Loire、Saumur Mousseux、Vouvray Mousseux……這些氣泡酒不只是香檳的平價替代品，它們有自己獨特的品種個性和風土故事，是羅亞爾河谷值得深入認識的一個面向。
+          在香檳（Champagne）之外，法國有八個可以生產「Crémant」的 AOC——羅亞爾河谷的 Crémant-de-Loire 是產量僅次於 Alsace 的大產區，也是品種最多元的之一。Crémant-de-Loire、Saumur Mousseux、Vouvray Mousseux……這些氣泡酒不只是香檳的平價替代品，它們有自己獨特的品種個性和風土故事，是羅亞爾河谷值得深入認識的一個面向。
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
@@ -19,7 +19,7 @@ export const lessonContent = [
             <p>掌握 Méthode Traditionnelle（傳統法）從基酒到成品的完整釀造流程</p>
           </div>
           <div class="point-item">
-            <h4>🍾 辨識羅亞爾四大氣泡 AOC 的差異</h4>
+            <h4>🍾 辨識羅亞爾主要氣泡 AOC 的差異</h4>
             <p>Crémant-de-Loire、Saumur Mousseux、Vouvray Mousseux、Montlouis-sur-Loire Mousseux 的品種和風格比較</p>
           </div>
           <div class="point-item">
@@ -35,28 +35,28 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: '🍶', title: '第一次發酵（基酒）', content: '採收葡萄釀造成靜態基酒（vin de base），通常酸度高、酒精低（9–11%），為二次發酵保留足夠的空間' },
       { id: 2, icon: '🔄', title: '第二次發酵（Tirage）', content: '在瓶中加入酵母和糖分（Liqueur de Tirage），封蓋後在低溫酒窖中進行瓶內二次發酵，產生二氧化碳氣泡，酒精升至 12–13%' },
-      { id: 3, icon: '⏳', title: '酵母陳年（Élevage sur Lie）', content: '二次發酵完成後，酒瓶在死酵母沉澱（lies）上陳年：Crémant 至少 9 個月，Vintage Champagne 至少 3 年。酵母自溶（autolyse）賦予麵包屑、烤吐司、堅果等二次香氣' },
+      { id: 3, icon: '⏳', title: '酵母陳年（Élevage sur Lie）', content: '二次發酵完成後，酒瓶在死酵母沉澱（lies）上陳年：Crémant-de-Loire 至少 12 個月，Vintage Champagne 至少 3 年。酵母自溶（autolyse）賦予麵包屑、烤吐司、堅果等二次香氣' },
       { id: 4, icon: '🎯', title: '除渣（Dégorgement）', content: '瓶口凍結後去除酵母渣，補入「Liqueur d\'Expédition」調整殘糖（Brut Nature: 0 g/L → Doux: >50 g/L），最終封瓶' }
     ],
     content: `
       <div class="methode-trad">
         <p>傳統法是羅亞爾氣泡酒和香檳共用的釀造工藝，但羅亞爾的品種個性完全不同——以白詩南（Chenin Blanc）為核心，帶來蘋果、梨子、白花的清新個性，而非香檳的 Pinot Noir 紅果感。</p>
-        <p>Crémant 法規要求：傳統法、至少 9 個月酵母陳年（香檳法規要求 12–15 個月），整串採收（非機器破碎採收），產量限制。</p>
+        <p>Crémant 法規要求：傳統法、手工採收、整串壓榨，並有最低酵母陳年期（Crémant 通則至少 9 個月；Crémant-de-Loire 要求至少 12 個月；香檳 NV 至少 15 個月，其中 12 個月需在酒泥上），另有產量限制。</p>
       </div>
     `
   },
   {
     component: 'LoireCremantMethodsSlide',
-    title: 'Loire 氣泡酒四大 AOC 互動深度對比',
+    title: 'Loire 氣泡酒主要 AOC 互動深度對比',
     componentProps: {
       slide: {
-        title: 'Loire 氣泡酒四大 AOC 對比',
+        title: 'Loire 氣泡酒主要 AOC 對比',
         description: 'Crémant de Loire / Saumur Brut / Vouvray Mousseux / Touraine Mousseux 的工法、品種、Dosage 全方位互動對比，並對照 Méthode Traditionnelle 與 Méthode Ancestrale (Pét-Nat) 兩大工法。'
       }
     }
   },
   {
-    title: '四大羅亞爾氣泡 AOC 深度比較',
+    title: '羅亞爾氣泡酒 AOC 深度比較',
     content: `
       <div class="sparkling-comparison">
         <div class="aoc-grid">
@@ -64,7 +64,7 @@ export const lessonContent = [
             <h4>🥂 Crémant-de-Loire AOC</h4>
             <p><strong>範圍：</strong>整個羅亞爾河谷（安茹 + 索米爾 + 都漢）</p>
             <p><strong>主要品種：</strong>Chenin Blanc（主）+ Cabernet Franc（紅/粉紅）+ Chardonnay（副）</p>
-            <p><strong>酵母陳年：</strong>最少 12 個月（比 Crémant 法規更嚴格）</p>
+            <p><strong>酵母陳年：</strong>最少 12 個月（比 Crémant 通則的 9 個月更嚴格）</p>
             <p><strong>風格：</strong>最多樣——從純 Chenin Blanc 的蘋果花香，到混釀的複雜度；也有 Rosé（Cabernet Franc 主導）</p>
             <p><strong>均價：</strong>€10–25（性價比非常高的節慶選擇）</p>
           </div>

@@ -39,11 +39,11 @@ export const lessonContent = [
         options: [
           '0–4 g/L（完全干型）',
           '4–12 g/L（微甜）',
-          '30–80 g/L（半甜到甜型）',
-          '超過 150 g/L（貴腐等級）'
+          '12–45 g/L（半甜到甜型）',
+          '超過 45 g/L（極甜／貴腐等級）'
         ],
         correctIndex: 2,
-        explanation: 'Vouvray 的甜度分級：Sec（0–4 g/L）、Demi-Sec（4–18 g/L）、Moelleux（30–80 g/L，有時更高）、Liquoreux（80 g/L+，貴腐或極甜）。Moelleux 是「柔軟的」意思，代表帶有明顯甜感但仍保有 Chenin Blanc 高酸度的平衡甜型風格。'
+        explanation: '依歐盟標示規則，Vouvray 甜度分級：Sec（0–4 g/L）、Demi-Sec（4–12 g/L）、Moelleux（12–45 g/L）、Doux／Liquoreux（45 g/L 以上，貴腐或極甜）。Moelleux 是「柔軟的」意思，代表帶有明顯甜感但仍保有 Chenin Blanc 高酸度的平衡甜型風格。'
       },
       {
         id: 'q2',

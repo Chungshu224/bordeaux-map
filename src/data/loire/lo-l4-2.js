@@ -150,7 +150,7 @@ export const lessonContent = [
     title: '地圖閱讀技巧——三個關鍵觀察點',
     highlights: [
       { id: 1, icon: '🌊', title: '河流即邊界', content: '主流 Loire、支流 Layon/Cher/Vienne 常為 AOC 邊界' },
-      { id: 2, icon: '🧭', title: '南向坡優先', content: 'Loire 北岸南向坡是頂級酒款集中地（Savennières、Vouvray、Sancerre）' },
+      { id: 2, icon: '🧭', title: '南向坡優先', content: '頂級 AOC 靠的是向陽坡面，而不是在河的哪一岸：Savennières、Vouvray 在北岸，Sancerre、Chinon、Montlouis 在南／西岸' },
       { id: 3, icon: '📍', title: '嵌套金字塔', content: '大 AOC 內有小 AOC，小 AOC 內有 Cru，Cru 內有單一葡萄園' }
     ],
     content: `
@@ -161,7 +161,7 @@ export const lessonContent = [
             <h4>🌊 觀察點 1：河流如何劃分 AOC</h4>
             <p>羅亞爾河谷的 AOC 邊界經常與河流走向一致：</p>
             <ul>
-              <li><strong>Loire 主流：</strong>分隔 Anjou Noir（南岸）vs Anjou Blanc（北岸）；Vouvray（北岸）vs Montlouis（南岸）</li>
+              <li><strong>Loire 主流：</strong>Vouvray（北岸）vs Montlouis（南岸）、Sancerre（左／西岸）vs Pouilly-Fumé（右／東岸）隔河相望；Anjou Noir（西，片岩）與 Anjou Blanc（東，凝灰岩）則是地質分區，不是以河為界</li>
               <li><strong>Layon 河：</strong>萊揚甜酒帶完全沿河谷分布</li>
               <li><strong>Vienne 河：</strong>Chinon 在 Vienne 河谷，Bourgueil 在 Loire 主流北岸</li>
               <li><strong>Cher 河：</strong>Touraine 大 AOC 跨越 Cher 河谷</li>
@@ -169,21 +169,22 @@ export const lessonContent = [
           </div>
           <div class="tip-block">
             <h4>🧭 觀察點 2：坡向（Exposure）決定品質</h4>
-            <p>北半球葡萄酒最理想的坡向是<strong>南向（exposé sud）</strong>——日照最充足、光合作用最強、葡萄成熟度最佳。Loire 河谷的頂級 AOC 大多位於 Loire 北岸的南向坡：</p>
+            <p>北半球葡萄酒最理想的坡向是<strong>南向（exposé sud）</strong>——日照最充足、光合作用最強、葡萄成熟度最佳。Loire 河谷許多頂級 AOC 都位於朝南的向陽坡，不論在河的哪一岸：</p>
             <ul>
               <li>Savennières：Loire 北岸南向陡坡</li>
               <li>Vouvray：Loire 北岸南向坡（Tours 東邊）</li>
-              <li>Sancerre：Loire 西側高地南向坡</li>
+              <li>Sancerre：Loire 左（西）岸高地的向陽坡</li>
+              <li>Chinon、Saumur-Champigny、Montlouis：都在南岸，同樣利用向陽坡與 Tuffeau</li>
             </ul>
-            <p>這也解釋為何「北岸」常產頂級酒款，與直覺（南方更暖）相反——關鍵在於「向陽面」而非「方位」。</p>
+            <p>所以關鍵在於「向陽面（坡向與坡度）」而不是「河的哪一岸」。</p>
           </div>
           <div class="tip-block">
             <h4>📍 觀察點 3：嵌套金字塔結構</h4>
             <p>法國 AOC 體系是金字塔式嵌套，地圖上同一個葡萄園可能同時屬於多個 AOC：</p>
             <ul>
-              <li>Anjou Blanc（地區級）→ 1,000 公頃</li>
-              <li>↳ Savennières（村莊級）→ 145 公頃</li>
-              <li>　↳ Coulée de Serrant（單一園）→ 7 公頃</li>
+              <li>Savennières（村莊級）→ 約 145 公頃</li>
+              <li>↳ La Roche-aux-Moines（Cru）→ 33 公頃</li>
+              <li>↳ Coulée de Serrant（單一園）→ 7 公頃</li>
             </ul>
             <p>酒農可選擇用哪個層級裝瓶。等級越高，規範越嚴格、產量越低、價格越高。</p>
           </div>
@@ -191,15 +192,15 @@ export const lessonContent = [
       </div>
     `,
     quiz: {
-      question: '為何 Loire 北岸往往產出更頂級的酒款，反而不是更南方的南岸？',
+      question: '在羅亞爾河谷，比「葡萄園在河的哪一岸」更能決定品質的是？',
       options: [
-        '北岸的氣候更熱',
-        'Loire 河水從北岸流過',
-        '北岸有「南向坡」的陡坡，是北半球最理想的日照面向',
-        '北岸的葡萄品種更好'
+        '葡萄園在河的北岸還是南岸',
+        '葡萄園離大西洋的直線距離',
+        '坡向與坡度——朝南、日照充足的向陽坡',
+        '葡萄園所屬的行政區'
       ],
       correct: 2,
-      explanation: '北半球葡萄園最理想的坡向是<strong>南向（exposé sud）</strong>，因為太陽從南方斜射，南向坡的入射角接近 90°，光合作用效率最高。Loire 河北岸的陡坡正好朝南，因此 Savennières、Vouvray、Sancerre 等頂級 AOC 都集中在北岸南向坡。這是葡萄酒地理學的核心原理之一——「北岸 = 南向坡 = 頂級風土」的反直覺結構。'
+      explanation: '北半球葡萄園最理想的坡向是<strong>南向（exposé sud）</strong>，因為太陽從南方斜射，南向坡的入射角接近 90°，光合作用效率最高。Savennières、Vouvray、Bourgueil 在北岸，Sancerre 在左（西）岸，Chinon、Saumur-Champigny、Montlouis 在南岸——頂級 AOC 分佈在河的兩岸，共同點是朝南的向陽坡。判讀產區地圖時，先看坡向與坡度，再看河岸。'
     }
   },
 
@@ -241,7 +242,7 @@ export const lessonContent = [
           '由行政區劃分'
         ],
         correctIndex: 2,
-        explanation: 'Anjou Noir 與 Anjou Blanc 是「地質分區」概念，分界線大致位於 Saumur 城附近：西側為前寒武紀 Brioverian 片岩（藍黑色，故稱 Noir），東側為白堊紀 Tuffeau 凝灰岩（雪白，故稱 Blanc）。這條地質線決定了 Chenin 風格、紅葡萄品種選擇（Cabernet Franc 在 Anjou Blanc 較常見）等多項風土差異。'
+        explanation: 'Anjou Noir 與 Anjou Blanc 是「地質分區」概念，分界線大致位於 Angers 與 Saumur 之間：西側為前寒武紀 Brioverian 片岩（藍黑色，故稱 Noir），東側為白堊紀 Tuffeau 凝灰岩（雪白，故稱 Blanc）。這條地質線決定了 Chenin 風格、紅葡萄品種選擇（Cabernet Franc 在 Anjou Blanc 較常見）等多項風土差異。'
       },
       {
         id: 'q4',

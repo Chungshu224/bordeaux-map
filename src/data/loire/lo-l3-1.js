@@ -131,15 +131,15 @@ export const lessonContent = [
           <ul>
             <li><strong>面積：</strong>約 145 公頃</li>
             <li><strong>品種：</strong>100% Chenin Blanc</li>
-            <li><strong>糖度：</strong>僅 Sec（&lt; 8 g/L）——這是 Loire 唯一禁止甜酒的高級 Chenin AOC</li>
-            <li><strong>產量上限：</strong>50 hL/ha（嚴於一般 Anjou Blanc 的 60 hL/ha）</li>
+            <li><strong>糖度：</strong>絕大多數為干型（Sec，殘糖 ≤ 4 g/L，酸度配合時可到 8 g/L）；法規亦允許過熟年份釀 demi-sec／moelleux／doux，但很少見</li>
+            <li><strong>產量上限：</strong>干型 50 hL/ha（甜型 35 hL/ha）</li>
             <li><strong>採收：</strong>必須手工，多次採摘允許</li>
           </ul>
         </div>
         <div class="savennieres-crus">
           <h4>🌟 兩個獨立 Cru AOC</h4>
           <ul>
-            <li><strong>Coulée de Serrant：</strong>7 公頃，由 Nicolas Joly 家族（Domaine de la Coulée de Serrant）獨家擁有自 1130 年。Joly 是生物動力法（Biodynamie）的全球先驅，酒款被視為「自然酒」運動的精神原點之一</li>
+            <li><strong>Coulée de Serrant：</strong>7 公頃，由 Nicolas Joly 家族（Domaine de la Coulée de Serrant）獨家擁有（1962 年購入；葡萄園本身自 1130 年由修士開墾）。Joly 是生物動力法（Biodynamie）的全球先驅，酒款被視為「自然酒」運動的精神原點之一</li>
             <li><strong>La Roche-aux-Moines：</strong>33 公頃，多家酒莊共享。代表生產者：Domaine aux Moines、Château de Chamboureau</li>
           </ul>
         </div>
@@ -236,22 +236,22 @@ export const lessonContent = [
       },
       {
         id: 'q2',
-        question: 'Savennières AOC 規定可生產的甜度級別是？',
+        question: 'Savennières 最主要的甜度風格是？',
         options: [
           'Sec / Demi-Sec / Moelleux 全部',
-          '僅 Sec（干型）',
+          '干型（Sec）為主，法規亦允許少量半干／甜型',
           '僅 Demi-Sec（半干）',
           '僅 Moelleux（甜型）'
         ],
         correctIndex: 1,
-        explanation: 'Savennières 是 Loire 唯一規定僅能生產 Sec（干型，殘糖 &lt; 8 g/L）的高級 Chenin Blanc AOC。這個嚴格規範強迫酒莊聚焦於 Chenin 干白的極致表現，不讓殘糖掩蓋風土差異。Coulée de Serrant 與 La Roche-aux-Moines 兩個獨立 Cru AOC 也遵循此規定。'
+        explanation: 'Savennières 絕大多數是干型（Sec：殘糖 ≤ 4 g/L，酸度配合時可到 8 g/L）。法規並未禁止甜型，過熟年份仍可釀 demi-sec、moelleux 或 doux（產量上限也較低），只是市面上幾乎都是干白，讓 Chenin 的風土差異直接呈現。'
       },
       {
         id: 'q3',
         question: 'Coulée de Serrant 由哪位生物動力法先驅獨家擁有？',
         options: ['Vincent Carême', 'Nicolas Joly', 'Didier Dagueneau', 'Jacky Blot'],
         correctIndex: 1,
-        explanation: 'Coulée de Serrant 是 Savennières 內的獨立 Cru AOC，僅 7 公頃，自 1130 年起即為單一葡萄園。Nicolas Joly 從 1980 年代起將其轉為生物動力法（Biodynamie）耕作，成為全球生物動力法葡萄酒運動的精神領袖。他的著作《Wine from Sky to Earth》是該領域經典。'
+        explanation: 'Coulée de Serrant 是 Savennières 內的獨立 Cru AOC，僅 7 公頃，自 1130 年由修士開墾，Joly 家族於 1962 年購入。Nicolas Joly 從 1980 年代起將其轉為生物動力法（Biodynamie）耕作，成為全球生物動力法葡萄酒運動的精神領袖。他的著作《Wine from Sky to Earth》是該領域經典。'
       },
       {
         id: 'q4',
