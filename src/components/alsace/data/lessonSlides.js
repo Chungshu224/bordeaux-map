@@ -585,7 +585,7 @@ const AL1M3L1_slides = [
   {
     type: 'content',
     icon: '📜',
-    title: '不是德國 Riesling 的親戚',
+    title: '與德國 Riesling 是同一品種',
     html: `
       <p>阿爾薩斯的 Riesling 於 <strong>15 世紀</strong>即見於文獻記載（最早約 1477 年）。它與德國萊茵地區的 Riesling 是<strong>同一個品種</strong>，風格差異來自土壤、氣候與釀法：阿爾薩斯多釀成乾型、酒精度較高。</p>
       <p style="margin-top:8px">Riesling 是阿爾薩斯萊茵河岸最具代表性的品種，被公認為<strong>整個阿爾薩斯產區最高貴、最精緻的品種</strong>——目前佔全產區種植面積 <strong>21.68%</strong>，是種植最廣的品種。</p>
@@ -953,7 +953,7 @@ const AL1M4L1_slides = [
     keyPoints: [
       '三層架構：Alsace（基礎，74% 產量）→ +地理標示（13 個）→ Alsace Grand Cru（頂層，僅 4% 產量）',
       '每個地理標示都限定特定授權品種——如 Scherwiller/Wolxheim 限 Riesling，Blienschwiller/Côtes de Barr 限 Sylvaner',
-      'Grand Cru 原則上單一品種，須人工採收，基礎產量僅 55hl/ha（約為基礎層的一半多一點）',
+      'Grand Cru 原則上單一品種，須人工採收，基礎產量僅 55hl/ha（約為基礎層的七成）',
       '兩個混釀特例：Altenberg de Bergheim（Riesling+Pinot Gris+Gewurztraminer）與 Kaefferkopf（Gewurztraminer+Riesling+Pinot Gris）',
     ],
     nextLesson: '下一課：酒標規則與品種標示',
@@ -965,7 +965,7 @@ const AL1M4L2_slides = [
     type: 'cover',
     icon: '🏷️',
     gradient: 'linear-gradient(135deg, #1b4332, #c9a227)',
-    title: '酒標規則與品種標示：85% 規則詳解',
+    title: '酒標規則與品種標示',
     subtitle: 'Level 1 · 第十三課',
     points: [
       { icon: '📦', label: '強制規定', text: '所有阿爾薩斯酒都必須在原產地裝瓶' },
@@ -1203,7 +1203,7 @@ const AL1M4L4_slides = [
     message: 'VT 與 SGN 入門學習完成！Level 1 即將完成，準備好迎接期末測驗了嗎？',
     keyPoints: [
       'VT（晚摘）：過熟葡萄，保留品種辨識度並疊加濃縮效應；SGN（貴腐精選）：多次選果只取貴腐果粒，風味由濃縮與貴腐特徵主導',
-      '1984 年 3 月 1 日部長法令正式命名，是全法國 AOC 中糖度門檻數一數二嚴格的甜酒等級',
+      '1984 年 3 月 1 日部長法令正式命名，含糖量門檻極為嚴格的甜酒等級',
       '僅限 Gewurztraminer、Pinot Gris、Riesling、Muscat 四個品種——也是 Grand Cru 原則上的授權品種（Zotzenberg、Pinot Noir 為例外）',
       '嚴格條件：人工採收、單一品種、禁止加糖、須標示年份、須經 INAO 預先申報與雙重認證',
     ],
@@ -3039,7 +3039,7 @@ const AL3M3L1_slides = [
       '現行門檻：Gewurztraminer／Pinot Gris VT 270g/L（16.0°）、SGN 306g/L（18.2°）；Riesling／Muscat VT 244g/L（14.5°）、SGN 276g/L（16.4°）',
       '七項強制條件：人工採收、單一品種、達最低糖度、禁止加糖、達對應酒精度、INAO 預先申報、雙重認證',
       '半大陸型氣候（低降雨＋秋季充足日照）是貴腐與晚摘得以發生的氣候基礎',
-      '與侏羅稻草酒並列全法國 AOC 體系中數一數二嚴格的甜酒標準',
+      '阿爾薩斯規範最嚴格的甜酒標準',
     ],
     nextLesson: '下一課：四大品種的貴腐甜酒風格',
   },
@@ -3338,7 +3338,7 @@ const AL3M5L1_slides = [
       '1966 年確認為受規範的原產地名稱（現為 AOP），原料僅限 AOP Alsace 產區的 Gewurztraminer 葡萄渣',
       '每 100kg 原料須能萃取至少 4.5 公升純酒精',
       '傳統壺式蒸餾器兩階段蒸餾，明文禁止使用精餾塔',
-      '出爐酒精度須低於 68° GL，銷售須達 45° GL 以上，非酒精物質須超過 400g/L',
+      '出爐酒精度須低於 68° GL，銷售須達 45° GL 以上，非酒精物質須達 300 g/hl 純酒精以上',
     ],
     nextLesson: '下一課：Mirabelle de Lorraine 洛林蜜李白蘭地',
   },
@@ -3418,7 +3418,7 @@ const AL3M5L2_slides = [
       '兩個品種：Mirabelle de Metz（早熟、斑點）與 Mirabelle de Nancy（較大、均勻黃色）',
       '產業規模：年產 15,000 噸、350 位生產者、40 萬棵蜜李樹、約 2,000 公頃果園',
       '1953 年 11 月 30 日 AOC 認證，涵蓋洛林四省',
-      '嚴格規範：自然發酵至少 15 天、蒸餾不超過 70%vol、銷售須達 45%vol、酯類物質須達 200g/L',
+      '嚴格規範：自然發酵至少 15 天、蒸餾不超過 70%vol、銷售須達 45%vol、酯類物質須達 200 g/hl 純酒精',
     ],
     nextLesson: '下一課：Level 3 綜合評量',
   },
