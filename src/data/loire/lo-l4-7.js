@@ -55,7 +55,7 @@ export const lessonContent = [
           '它的年產量是 Muscadet 的三倍，是羅亞爾最大的白酒 AOC'
         ],
         correctIndex: 1,
-        explanation: 'Savennières AOC 以 100% Chenin Blanc 釀造，以干型白酒（Sec）為主，種植在安茹西部的片岩（schiste）和火山岩坡地上。Nicolas Joly 的 Coulée de Serrant（Biodynamie 農法）是最著名代表，通常需要 8–20 年才展現全部複雜度，是法國最偉大的干型白酒之一。'
+        explanation: 'Savennières AOC 以 100% Chenin Blanc 釀造，以干型白酒（Sec）為主，種植在安茹西部的片岩（schiste）和火山岩坡地上。Nicolas Joly 的 Coulée de Serrant（Biodynamie 農法）是最著名代表，通常需要 10–30 年才展現全部複雜度，是法國最偉大的干型白酒之一。'
       },
       {
         id: 'q3',
@@ -91,7 +91,7 @@ export const lessonContent = [
           'Burgundy Pinot Noir × 美國德州烤肉'
         ],
         correctIndex: 1,
-        explanation: '「地域配對」最完美的體現是 Sancerre 白酒 × Crottin de Chavignol：兩者都來自同一個 Chavignol 小村（人口不足 200 人）。山羊在 Sancerre 葡萄園旁邊的草場吃草，吸收相同的 Kimmeridgian 礦物質，讓起司和葡萄酒共享了深層的風土個性——這是地域共鳴最直接的例子，也是法國美食哲學「吃喝本地」的教科書案例。'
+        explanation: '「地域配對」最完美的體現是 Sancerre 白酒 × Crottin de Chavignol：兩者都來自同一個 Chavignol 小村（人口不足 200 人）。兩者在同一片土地與飲食文化中並存數百年，風味互相呼應——這是地域共鳴最直接的例子，也是法國美食哲學「吃喝本地」的教科書案例。'
       },
       {
         id: 'q6',

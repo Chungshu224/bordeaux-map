@@ -62,12 +62,12 @@ export const lessonContent = [
         question: 'Sancerre × Crottin de Chavignol 被稱為「地域配對教科書」的最根本原因是？',
         options: [
           '因為兩者都以「S」開頭，方便記憶',
-          '兩者都來自同一個 Chavignol 村，山羊在葡萄園旁的草場吃草，吸收相同的礦物質，形成深層的「風土共鳴」',
+          '兩者都來自同一個 Chavignol 一帶的產地，在同一片土地與飲食文化中並存，形成深層的「風土共鳴」',
           '因為起司的高脂肪含量讓飲酒者在喝更多 Sancerre 時不容易醉',
           '法律規定 Sancerre 必須與 Crottin 一起銷售'
         ],
         correctIndex: 1,
-        explanation: '最深層的原因是「地域共鳴（terroir pairing）」——Chavignol 村的山羊在 Sancerre 葡萄園附近的同一片草場吃草，它們的奶（製成 Crottin）和旁邊生長的葡萄（釀成 Sancerre）吸收了相同的礦物質和植物個性，這種同源性造就了最自然的和諧。'
+        explanation: '最深層的原因是「地域共鳴（terroir pairing）」——Crottin 與 Sancerre 同出於 Chavignol 一帶，數百年來一起被當地人搭配飲食，這種同源性造就了最自然的和諧。'
       },
       {
         id: 'q4',

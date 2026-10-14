@@ -35,7 +35,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: '🧀', title: 'Crottin de Chavignol 起司', content: 'Crottin de Chavignol 是法國最著名的山羊起司之一（AOP），產自 Chavignol 村（就在 Sancerre 旁邊！），小巧圓形，熟成 3–6 週，外皮略硬，內部奶白細膩，帶明顯的山羊奶味和榛果感' },
       { id: 2, icon: '🔬', title: '配對化學', content: 'Sancerre 的高酸度（pH 3.2–3.4）切割山羊起司的奶油脂肪；燧石礦物感與起司表皮的陳年礦物感相互呼應；Sauvignon Blanc 的草本（牧草、薄荷）香氣呼應山羊的牧場個性' },
-      { id: 3, icon: '🏡', title: '地域共鳴（Terroir Connection）', content: '最深層的原因是地域共鳴——Chavignol 村的山羊在 Sancerre 葡萄園旁邊的同一片草場吃草，吸收了相同的礦物質和植物，起司和葡萄酒因此共享了同樣的「place」個性' }
+      { id: 3, icon: '🏡', title: '地域共鳴（Terroir Connection）', content: '最深層的原因是地域共鳴——Crottin de Chavignol 與 Sancerre 出自同一個產地，數百年來在同一片土地與飲食文化中一起發展，起司和葡萄酒因此共享同樣的「place」個性' }
     ],
     content: `
       <div class="sancerre-crottin">
@@ -118,12 +118,12 @@ export const lessonContent = [
       question: 'Sancerre × Crottin de Chavignol 被稱為「地域共鳴（terroir pairing）」的最主要原因是？',
       options: [
         '兩者均在同一座酒窖中發酵和熟成',
-        'Chavignol 的山羊在 Sancerre 葡萄園旁同一片草場吃草，共享相同礦物質和植物個性',
+        '兩者出自同一產地，在同一片土地與飲食文化中一起發展，風味互相呼應',
         '起司在製作過程中加入了 Sancerre 白酒浸泡',
         '兩者都使用來自同一口井的泉水'
       ],
       answer: 1,
-      explanation: 'Crottin de Chavignol 的山羊在 Sancerre 葡萄園旁的同一片草場吃草，吸收了相同的 Kimmeridgian 石灰岩礦物質和草地植物，起司與葡萄酒因此共享同樣的「place」個性。Sancerre 的燧石礦物感與起司陳年表皮的礦物感互相呼應，是「地域共鳴」的教科書案例。'
+      explanation: 'Crottin de Chavignol 與 Sancerre 出自同一個產地，長久在同一片土地與飲食文化中並存，起司與葡萄酒因此被視為共享同樣的「place」個性。Sancerre 的燧石礦物感與起司陳年表皮的礦物感互相呼應，是「地域共鳴」的教科書案例。'
     }
   },
 

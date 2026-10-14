@@ -83,15 +83,15 @@ export const lessonContent = [
       },
       {
         id: 'q5',
-        question: 'Chinon 的三種土壤類型中，哪一種最適合搭配 Rillettes de Tours？為什麼？',
+        question: 'Chinon 的三種土壤類型中，哪一種「輕盈、高酸、低單寧」的風格最適合切割 Rillettes de Tours 的豐厚油脂？',
         options: [
           '高台黏土石灰岩（plateau）——單寧最緊實，與油脂最相配',
-          '凝灰岩坡地（coteau）——中等結構，酸度充足，礦物感與鹹豬肉互補',
+          '凝灰岩坡地（coteau）——結構較緊實、需要陳年，更適合配羊腿等大塊紅肉',
           '礫石平地（graviers）——輕盈清新，酸度高，切割油脂效果最佳',
           '三種都不適合，應改喝白酒'
         ],
         correctIndex: 2,
-        explanation: '礫石平地（graviers）的 Chinon 最輕盈，酸度最清爽，能有效切割 Rillettes 的豐厚油脂，且年輕飲用時的草莓和紫羅蘭果香與鹹肉形成甜鹹對比。凝灰岩坡地的 Chinon 也很適合，但更適合配羊腿等更豐厚的肉類。'
+        explanation: '礫石平地（graviers）的 Chinon 最輕盈，酸度最清爽，能有效切割 Rillettes 的豐厚油脂，且年輕飲用時的草莓和紫羅蘭果香與鹹肉形成甜鹹對比。凝灰岩坡地與高台黏土石灰岩的 Chinon 結構更緊實，更適合配羊腿等更豐厚的肉類。'
       }
     ]
   }

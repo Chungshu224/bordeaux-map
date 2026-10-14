@@ -159,7 +159,7 @@ export const lessonContent = [
   {
     title: 'Botrytis cinerea——貴腐菌的化學魔法',
     highlights: [
-      { id: 1, icon: '🦠', title: '菌絲穿透果皮', content: '不破壞果皮的情況下穿透氣孔，產生「微孔效應」' },
+      { id: 1, icon: '🦠', title: '菌絲穿透果皮', content: '分泌酶穿透果皮蠟質層，產生「微孔效應」，果皮整體仍保持完整' },
       { id: 2, icon: '💧', title: '水分蒸發', content: '果皮微孔讓葡萄水分緩慢蒸發，糖、酸、香氣前驅物濃縮 2–3 倍' },
       { id: 3, icon: '🍯', title: '甘油 + 風味化合物', content: '生成大量甘油（圓潤口感）與 sotolon（蜂蜜、咖哩、堅果）' }
     ],
@@ -170,7 +170,7 @@ export const lessonContent = [
           <h4>🔬 貴腐五階段</h4>
           <ol>
             <li><strong>孢子附著：</strong>晨霧帶來水氣，孢子在葡萄表皮萌發</li>
-            <li><strong>菌絲穿透：</strong>菌絲從葡萄氣孔（lenticels）穿入，不破壞果皮完整性</li>
+            <li><strong>菌絲穿透：</strong>菌絲分泌酶穿入果皮，在果皮上形成微孔，但不破壞果皮整體完整性</li>
             <li><strong>微孔形成：</strong>菌絲分泌酶部分溶解果皮，形成微孔通道</li>
             <li><strong>水分蒸發：</strong>午後乾燥條件下，葡萄水分透過微孔緩慢蒸發，糖度從 22°Brix 濃縮至 35–45°Brix</li>
             <li><strong>葡萄萎縮：</strong>外觀變成粉紫色、皺縮如葡萄乾，俗稱「pourri plein」（完美貴腐）</li>
@@ -191,7 +191,7 @@ export const lessonContent = [
     quiz: {
       question: 'Botrytis cinerea 在貴腐過程中**不會**做以下哪件事？',
       options: [
-        '從葡萄氣孔穿透果皮',
+        '以酶穿透果皮並形成微孔',
         '產生甘油與葡萄糖酸',
         '完全破壞果皮使葡萄液流出',
         '濃縮糖分與酸度'
