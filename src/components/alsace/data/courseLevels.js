@@ -53,7 +53,7 @@ export const courseLevels = {
         title: '第四章：AOC 分級制度',
         lessons: [
           { id: 'AL1M4L1', title: 'AOC 三層架構：Alsace／地理標示／Grand Cru' },
-          { id: 'AL1M4L2', title: '酒標規則與品種標示：85% 規則詳解' },
+          { id: 'AL1M4L2', title: '酒標規則與品種標示' },
           { id: 'AL1M4L3', title: '產量與釀造規定' },
           { id: 'AL1M4L4', title: 'VT 與 SGN 貴腐甜酒入門' },
         ],

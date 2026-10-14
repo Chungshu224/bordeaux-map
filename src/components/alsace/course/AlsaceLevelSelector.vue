@@ -2,7 +2,7 @@
   <CourseHomeLayout :theme="theme" region-name="Alsace" breadcrumb-country="歐洲・法國東北">
     <RegionHero
       :icon="theme.icon"
-      tagline="阿爾薩斯葡萄酒・法國唯一以品種命名的產區・51 個 Grand Cru"
+      tagline="阿爾薩斯葡萄酒・法國主要產區中唯一以品種命名的產區・51 個 Grand Cru"
       title="阿爾薩斯葡萄酒"
       subtitle="Alsace Wine · Riesling · Gewurztraminer · Grand Cru · VT/SGN"
       description="從孚日山雨影效應與逆溫層現象，到 51 個 Grand Cru 的地質分類，再到全法國最嚴格的貴腐甜酒等級——探索這個以品種為名、幾乎只產白酒的獨特產區。"
@@ -79,7 +79,7 @@ const achievementCount = computed(
 const heroStats = [
   { value: '51',   label: 'Grand Cru' },
   { value: '10',   label: '大品種' },
-  { value: '1',    label: '法國唯一品種命名產區' }
+  { value: '1',    label: '法國主要產區中唯一品種命名' }
 ]
 
 const quickNavItems = [
@@ -127,10 +127,10 @@ const levelData = [
 ]
 
 const overviewItems = [
-  { icon: '🏷️', title: '法國唯一以品種命名', desc: '阿爾薩斯傳統上以葡萄品種命名酒款，與法國多數以產地命名的 AOC 邏輯截然不同。' },
+  { icon: '🏷️', title: '法國主要產區中唯一以品種命名', desc: '阿爾薩斯傳統上以葡萄品種命名酒款，與法國多數以產地命名的 AOC 邏輯截然不同。' },
   { icon: '🌡️', title: '逆溫層現象',         desc: '孚日山麓的丘陵坡地比平原更溫暖，是理解 Grand Cru 選址邏輯的關鍵。' },
   { icon: '🪨', title: '十大地質族群',       desc: '51 個 Grand Cru 依地質可分為片岩、花崗岩、石灰岩等十大族群，風土多樣性驚人。' },
-  { icon: '🍯', title: '全法門檻最嚴格的甜酒', desc: 'VT 與 SGN 貴腐甜酒的糖度門檻，在全法國 AOC 中僅次於侏羅稻草酒。' },
+  { icon: '🍯', title: '全法門檻最嚴格的甜酒', desc: 'VT 與 SGN 貴腐甜酒的糖度門檻，糖度門檻極為嚴格。' },
   { icon: '🥂', title: 'Crémant d\'Alsace',   desc: '法國國內銷量第一的 AOC 氣泡酒，佔阿爾薩斯總產量近兩成。' },
   { icon: '🇩🇪', title: '法德文化交融',        desc: '歷史上多次易主，品種、語言與飲食文化深受德國萊茵地區影響。' }
 ]

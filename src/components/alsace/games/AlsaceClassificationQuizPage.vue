@@ -157,7 +157,7 @@ import { globalAlsaceAchievementManager } from '@/stores/alsaceAchievementSystem
 const emit = defineEmits(['back'])
 const pageEl = ref(null)
 
-const EASY_OPTIONS = ['AOC Alsace', 'Grand Cru', '補充地理標示', "Crémant d'Alsace", 'VT 晚摘', 'SGN 貴腐精選', 'Klevener AOC']
+const EASY_OPTIONS = ['AOC Alsace', 'Grand Cru', '補充地理標示', "Crémant d'Alsace", 'VT 晚摘', 'SGN 貴腐精選', 'Klevener de Heiligenstein']
 
 const EASY_BANK = [
   { subject: '涵蓋全區 119 個村莊的基礎產區位階',                      answer: 'AOC Alsace' },
@@ -166,7 +166,7 @@ const EASY_BANK = [
   { subject: '1976 年正式認證的傳統法氣泡酒',                        answer: "Crémant d'Alsace" },
   { subject: '晚摘甜酒，糖度門檻低於貴腐精選',                        answer: 'VT 晚摘' },
   { subject: '貴腐精選甜酒，糖度門檻全阿爾薩斯最高',                    answer: 'SGN 貴腐精選' },
-  { subject: '全阿爾薩斯唯一限定單一村莊群種植授權的品種型 AOC',          answer: 'Klevener AOC' },
+  { subject: '以 Savagnin rose 為唯一授權品種、僅限 Heiligenstein 周邊村莊的地名',          answer: 'Klevener de Heiligenstein' },
   { subject: '1975 年首次法定劃分、2007 年最後一次擴充',               answer: 'Grand Cru' },
   { subject: '法國國內在家消費銷量第一的 AOC 氣泡酒',                   answer: "Crémant d'Alsace" },
   { subject: '為整餐畫下完美句點的最高等級貴腐甜酒',                    answer: 'SGN 貴腐精選' },
@@ -175,15 +175,15 @@ const EASY_BANK = [
 const HARD_OPTIONS = ['AOC Alsace', 'Grand Cru', '補充地理標示', "Crémant d'Alsace", 'VT', 'SGN', 'Klevener de Heiligenstein', 'Kaefferkopf']
 
 const HARD_BANK = [
-  { subject: 'Riesling／Muscat 的最低天然糖度門檻為 235° Oechsle（約 235g/L）',        answer: 'VT' },
+  { subject: 'Riesling／Muscat 的最低天然糖度門檻為 244 g/L',        answer: 'VT' },
   { subject: 'Riesling／Muscat 的最低天然糖度門檻為 276° Oechsle（約 276g/L）',        answer: 'SGN' },
-  { subject: 'Gewurztraminer／Pinot Gris 的最低天然糖度門檻為 257° Oechsle',           answer: 'VT' },
+  { subject: 'Gewurztraminer／Pinot Gris 的最低天然糖度門檻為 270 g/L',           answer: 'VT' },
   { subject: 'Gewurztraminer／Pinot Gris 的最低天然糖度門檻為 306° Oechsle',           answer: 'SGN' },
   { subject: '全阿爾薩斯僅二允許混釀的 Grand Cru 之一，1932 年即受司法保護，早於 AOC 概念誕生', answer: 'Kaefferkopf' },
-  { subject: '1742 年引入 Heiligenstein 村，是限定單一村莊群種植的品種型 AOC',           answer: 'Klevener de Heiligenstein' },
+  { subject: '1742 年引入 Heiligenstein 村的 Savagnin rose 非芳香型變種所對應的地名',           answer: 'Klevener de Heiligenstein' },
   { subject: '酒渣瓶中陳年不得少於 9 個月的傳統法氣泡酒',                              answer: "Crémant d'Alsace" },
   { subject: '共 13 個，官方稱為「dénomination géographique complémentaire」的中間位階', answer: '補充地理標示' },
-  { subject: '僅限 Riesling、Gewurztraminer、Pinot Gris、Muscat 四大品種的最高分級',      answer: 'Grand Cru' },
+  { subject: '原則上僅限 Riesling、Gewurztraminer、Pinot Gris、Muscat 四大品種的最高分級',      answer: 'Grand Cru' },
   { subject: '涵蓋全區 119 個村莊，是所有阿爾薩斯葡萄酒共同的地理範圍基礎',                answer: 'AOC Alsace' },
 ]
 

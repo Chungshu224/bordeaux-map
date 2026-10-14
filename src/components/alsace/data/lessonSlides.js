@@ -20,7 +20,7 @@ const AL1M1L1_slides = [
     subtitle: 'Level 1 · 第一課',
     points: [
       { icon: '📍', label: '法國最小的大區', text: '8,280 平方公里，僅比科西嘉島略小' },
-      { icon: '🏷️', label: '以品種命名', text: '全法國唯一傳統上以葡萄品種而非產地命名的 AOC' },
+      { icon: '🏷️', label: '以品種命名', text: '法國主要產區中唯一傳統上以葡萄品種而非產地命名的 AOC' },
       { icon: '🥂', label: '幾乎全是白酒', text: '乾型、高酸、香氣奔放，是法國最獨特的白酒產區' },
     ],
   },
@@ -111,7 +111,7 @@ const AL1M1L2_slides = [
     subtitle: 'Level 1 · 第二課',
     points: [
       { icon: '🏛️', label: '兩個省', text: 'Bas-Rhin（北，首府 Strasbourg）與 Haut-Rhin（南，首府 Colmar）' },
-      { icon: '🌊', label: '萊茵河與 Ill 河', text: '產區地名 Alsace 就來自 Ill 河的古語意涵' },
+      { icon: '🌊', label: '萊茵河與 Ill 河', text: '產區地名 Alsace，一說來自 Ill 河，另一說為古高地德語「外來領地」' },
       { icon: '📏', label: '狹長葡萄園帶', text: '南北延伸約 100 公里，加上一塊孤立飛地' },
     ],
   },
@@ -151,7 +151,7 @@ const AL1M1L2_slides = [
     type: 'compare',
     title: '兩條關鍵河流',
     items: [
-      { icon: '🌊', label: 'Le Rhin（萊茵河）', desc: '全長約 1,320 公里，發源於瑞士阿爾卑斯山，最終注入北海；構成阿爾薩斯的東側天然邊界', color: '#2d6a4f' },
+      { icon: '🌊', label: 'Le Rhin（萊茵河）', desc: '全長約 1,230 公里，發源於瑞士阿爾卑斯山，最終注入北海；構成阿爾薩斯的東側天然邊界', color: '#2d6a4f' },
       { icon: '💧', label: "L'Ill（伊爾河）", desc: '萊茵河最重要的支流，全長 208 公里，發源自阿爾薩斯侏羅山區，流經 Altkirch、Mulhouse、Sélestat、Strasbourg——「Alsace」（Elsass）這個地名，語源就來自古語「Ill 河流經之地」', color: '#c9a227' },
     ],
   },
@@ -166,7 +166,7 @@ const AL1M1L2_slides = [
   },
   {
     type: 'quiz',
-    question: '「Alsace」這個地名的語源，最直接和以下哪一項有關？',
+    question: '「Alsace」這個地名的語源，常見的一說和以下哪一項有關？',
     options: [
       '古代凱爾特部落的名稱',
       'Ill 河——古語意為「Ill 河流經之地」',
@@ -174,7 +174,7 @@ const AL1M1L2_slides = [
       '中世紀某位領主的姓氏',
     ],
     answer: 1,
-    explanation: 'Alsace 源自古語 Elsass：El- 來自阿勒曼尼語 Ell，指的是縱貫阿爾薩斯南北、最終注入萊茵河的 Ill 河；-sass 則來自古語動詞「坐落、位於」。合起來 Elsass 字面意義就是「Ill 河流經之地」（Pays de l\'Ill）。',
+    explanation: 'Alsace 源自古語 Elsass：El- 來自阿勒曼尼語 Ell，指的是縱貫阿爾薩斯南北、最終注入萊茵河的 Ill 河；-sass 則來自古語動詞「坐落、位於」。合起來 Elsass 字面意義就是「Ill 河流經之地」（Pays de l\'Ill）。這是常見的一說；另一個主流說法認為 Alsace 源自古高地德語 Ali-saz／Elisaz，意為「外來領地」。',
   },
   {
     type: 'summary',
@@ -183,7 +183,7 @@ const AL1M1L2_slides = [
       '阿爾薩斯由兩省組成：Bas-Rhin（北，首府 Strasbourg）與 Haut-Rhin（南，首府 Colmar）',
       '「Bas」在北、「Haut」在南——源自萊茵河上下游相對位置，不是地理高低',
       '東側與北側緊鄰德國（隔萊茵河與 Lauter 河），南接 Franche-Comté，西接 Lorraine',
-      'Alsace 地名語源：來自 Ill 河（萊茵河最重要支流）——「Ill 河流經之地」',
+      'Alsace 地名語源：常見一說來自 Ill 河（萊茵河最重要支流）；另一說為古高地德語「外來領地」',
       '葡萄園呈南北狹長帶狀（Thann 至 Marlenheim，約 100 公里），另有 Cléebourg 孤立飛地',
     ],
   },
@@ -222,7 +222,7 @@ const AL1M1L3_slides = [
     title: '1871–1945：反覆易主的動盪年代',
     html: `
       <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px">
-        <div style="background:#f0e9e3;border-radius:8px;padding:10px 14px"><strong>1871 年</strong>：普法戰爭後阿爾薩斯併入德國。德國當局為避免阿爾薩斯酒與萊茵河對岸的德國酒競爭，反而<strong>鼓勵過度加糖（gallisation）與加水（最高可達 20%）</strong>的低品質量產做法。</div>
+        <div style="background:#f0e9e3;border-radius:8px;padding:10px 14px"><strong>1871 年</strong>：普法戰爭後阿爾薩斯併入德國。此後產業偏重大量生產，<strong>加糖（gallisation）與加水</strong>等量產做法盛行，品質與聲譽隨之下滑。</div>
         <div style="background:#f0e9e3;border-radius:8px;padding:10px 14px"><strong>1871–1918 年</strong>：生產過剩、啤酒消費增加導致出口市場流失、南方葡萄酒隨鐵路大量輸入競爭、根瘤蚜與真菌病害蔓延——多重打擊接踵而至。</div>
         <div style="background:#f0e9e3;border-radius:8px;padding:10px 14px"><strong>1918 年</strong>：第一次世界大戰結束，阿爾薩斯重返法國，但葡萄園已幾近荒廢——1901 至 1908 年間平均產量僅約 6 hl/ha；1942 年時雜交品種仍佔種植面積 33%。</div>
         <div style="background:#f0e9e3;border-radius:8px;padding:10px 14px"><strong>1940–1945 年</strong>：二戰期間再度被納粹德國併吞，1945 年解放、重返法國。</div>
@@ -251,15 +251,15 @@ const AL1M1L3_slides = [
   },
   {
     type: 'quiz',
-    question: '1871 年德國統治阿爾薩斯期間，為什麼鼓勵當地酒莊採用過度加糖與加水的量產做法？',
+    question: '1871–1918 年德國統治阿爾薩斯期間，阿爾薩斯葡萄酒產業呈現什麼樣的處境？',
     options: [
-      '因為當時葡萄糖分普遍不足，不得不加糖',
-      '為了避免阿爾薩斯酒的品質與萊茵河對岸的德國酒競爭',
-      '這是法國政府留下的舊規定',
-      '因為戰爭導致葡萄欠收，需要增量',
+      '以高品質、低產量的精品路線聞名',
+      '偏重大量生產，並遭遇生產過剩與外來競爭，品質與聲譽下滑',
+      '葡萄園全面改種啤酒花',
+      '完全停止葡萄酒生產',
     ],
     answer: 1,
-    explanation: '1871 年後阿爾薩斯併入德國，德國當局刻意鼓勵過度加糖（gallisation）與加水（最高 20%）的量產做法，目的是讓阿爾薩斯酒維持低品質、大量生產，以避免與萊茵河對岸的德國酒形成直接的品質競爭。',
+    explanation: '1871 年後阿爾薩斯併入德國。德國統治期間產業偏重量產，加上生產過剩、啤酒消費增加、南方葡萄酒隨鐵路輸入，以及根瘤蚜與真菌病害的衝擊，品質與聲譽明顯下滑。',
   },
   {
     type: 'summary',
@@ -323,7 +323,7 @@ const AL1M1L4_slides = [
           <div style="font-size:0.85rem;color:#333">阿爾薩斯平均年雨量</div>
         </div>
         <div style="background:#fefae0;border-radius:10px;padding:14px">
-          <div style="font-size:1.3rem;font-weight:800;color:#c9a227">約 500 mm</div>
+          <div style="font-size:1.3rem;font-weight:800;color:#c9a227">約 500–600 mm</div>
           <div style="font-size:0.85rem;color:#333">Colmar 一帶（與法國南部 Montpellier 相當）</div>
         </div>
       </div>
@@ -332,7 +332,7 @@ const AL1M1L4_slides = [
   },
   {
     type: 'quiz',
-    question: 'Colmar 一帶年雨量僅約 500mm，與法國哪個著名的乾燥地區相當？這是什麼原因造成的？',
+    question: 'Colmar 一帶年雨量僅約 500–600mm，與法國哪個著名的乾燥地區相當？這是什麼原因造成的？',
     options: [
       '與地中海沿岸的 Montpellier 相當，因為孚日山脈阻擋了大西洋西風的雨影效應',
       '與 Rioja 相當，因為地處內陸盆地',
@@ -340,7 +340,7 @@ const AL1M1L4_slides = [
       '這是氣候變遷造成的近年異常現象',
     ],
     answer: 0,
-    explanation: 'Colmar 一帶年雨量僅約 500mm，與地中海沿岸的 Montpellier 相當——這並非因為氣候溫暖乾燥，而是因為孚日山脈（Vosges）阻擋了大西洋盛行西風帶來的水氣，形成顯著的雨影效應（rain shadow），造就阿爾薩斯成為法國最乾燥的產區之一。',
+    explanation: 'Colmar 一帶年雨量僅約 500–600mm，與地中海沿岸的 Montpellier 相當——這並非因為氣候溫暖乾燥，而是因為孚日山脈（Vosges）阻擋了大西洋盛行西風帶來的水氣，形成顯著的雨影效應（rain shadow），造就阿爾薩斯成為法國最乾燥的產區之一。',
   },
   {
     type: 'summary',
@@ -348,7 +348,7 @@ const AL1M1L4_slides = [
     keyPoints: [
       '產區細分為 10 個氣候帶（北至南編號 1–10），反映顯著的微氣候差異',
       '兩大熱力特徵：日夜溫差可達 15°C；逆溫層現象讓丘陵坡地比平原更溫暖（暖帶效應 +1–1.5°C）',
-      '孚日山脈阻擋大西洋西風，是阿爾薩斯成為法國最乾燥產區之一的關鍵（Colmar 一帶僅約 500mm，堪比 Montpellier）',
+      '孚日山脈阻擋大西洋西風，是阿爾薩斯成為法國最乾燥產區之一的關鍵（Colmar 一帶僅約 500–600mm，堪比 Montpellier）',
       '乾燥、日照充足的秋季氣候，是孕育 VT／SGN 貴腐甜酒的重要基礎',
     ],
   },
@@ -587,7 +587,7 @@ const AL1M3L1_slides = [
     icon: '📜',
     title: '不是德國 Riesling 的親戚',
     html: `
-      <p>阿爾薩斯的 Riesling 於 <strong>15 世紀</strong>引入，據信源自法國奧爾良地區（Orléanais）——這一點值得特別留意：<strong>儘管同名，阿爾薩斯 Riesling 與德國萊茵地區的 Riesling 並無直接血緣關係</strong>，兩者風格也頗有差異。</p>
+      <p>阿爾薩斯的 Riesling 於 <strong>15 世紀</strong>即見於文獻記載（最早約 1477 年）。它與德國萊茵地區的 Riesling 是<strong>同一個品種</strong>，風格差異來自土壤、氣候與釀法：阿爾薩斯多釀成乾型、酒精度較高。</p>
       <p style="margin-top:8px">Riesling 是阿爾薩斯萊茵河岸最具代表性的品種，被公認為<strong>整個阿爾薩斯產區最高貴、最精緻的品種</strong>——目前佔全產區種植面積 <strong>21.68%</strong>，是種植最廣的品種。</p>
     `,
   },
@@ -628,7 +628,7 @@ const AL1M3L1_slides = [
     type: 'summary',
     message: 'Riesling 學習完成！',
     keyPoints: [
-      '15 世紀引入自法國奧爾良地區，與德國 Riesling 並無直接血緣關係',
+      '15 世紀即見於文獻，與德國 Riesling 是同一品種；風格差異來自土壤、氣候與釀法',
       '佔阿爾薩斯總種植面積 21.68%，是種植最廣的品種，被稱為「阿爾薩斯酒中之王」',
       '晚熟品種，獨特之處在於低溫下仍能持續成熟',
       '風格：乾型、高酸、礦石感、陳年潛力佳；經典搭配為魚類料理與阿爾薩斯酸菜',
@@ -656,7 +656,7 @@ const AL1M3L2_slides = [
     title: 'Savagnin 家族的芳香玫瑰紅變種',
     html: `
       <p>Gewurztraminer 是 <strong>Savagnin Blanc 的芳香型玫瑰色變種</strong>，起源眾說紛紜，但普遍認為是帶有麝香特徵的 Traminer 選種而來。阿爾薩斯早在 <strong>1551 年</strong>就有文獻記載此品種（植物學家 Bock 的《Kreuterbuch》一書）。</p>
-      <p style="margin-top:8px">此品種還有一個<strong>非芳香型</strong>的變種——在阿爾薩斯稱為「Heiligensteiner Klevener」，即今日的 <strong>Klevener de Heiligenstein</strong>，是僅限單一村莊的獨立 AOC（Level 2 深入介紹）。</p>
+      <p style="margin-top:8px">此品種還有一個<strong>非芳香型</strong>的變種——在阿爾薩斯稱為「Heiligensteiner Klevener」，即今日的 <strong>Klevener de Heiligenstein</strong>，是 AOC Alsace 下、僅限 Heiligenstein 周邊村莊的補充地理標示（Level 2 深入介紹）。</p>
     `,
   },
   {
@@ -703,7 +703,7 @@ const AL1M3L2_slides = [
     message: 'Gewurztraminer 學習完成！',
     keyPoints: [
       'Savagnin Blanc 的芳香玫瑰色變種，阿爾薩斯早在 1551 年就有文獻記載',
-      '非芳香型變種即今日的 Klevener de Heiligenstein，是限定單一村莊的獨立 AOC',
+      '非芳香型變種即今日的 Klevener de Heiligenstein，是限定 Heiligenstein 周邊村莊的補充地理標示',
       '風格高貴飽滿，即使乾型也常保留些許殘糖以平衡香氣與口感',
       '是搭配重口味起司（Munster、Roquefort）與異國辛香料理的理想選擇',
     ],
@@ -721,7 +721,7 @@ const AL1M3L3_slides = [
     points: [
       { icon: '🍯', label: 'Pinot Gris', text: '曾稱「Tokay d\'Alsace」，是最豐腴飽滿的阿爾薩斯白酒' },
       { icon: '🍇', label: 'Muscat', text: '兩個品種、最乾型、最奔放的葡萄香氣' },
-      { icon: '⚖️', label: '2006 年更名', text: 'Tokay 之名因與匈牙利協議而正式走入歷史' },
+      { icon: '⚖️', label: '2007 年份起更名', text: 'Tokay 之名因與匈牙利協議而正式走入歷史' },
     ],
   },
   {
@@ -730,7 +730,7 @@ const AL1M3L3_slides = [
     title: 'Pinot Gris：從 Tokay d\'Alsace 到今日之名',
     html: `
       <p>Pinot Gris 曾長期被稱為「<strong>Tokay d'Alsace</strong>」或「Tokay-Pinot Gris」，是 Pinot Noir 的灰色變種（因果皮顏色得名）。這個「Tokay」之名容易讓人誤以為與匈牙利 Tokaji 甜酒有關，實則毫無關聯。</p>
-      <p style="margin-top:8px">1984 年歐盟法規曾正式允許使用「Tokay Pinot Gris」這個名稱，但根據阿爾薩斯與匈牙利、歐盟於 1993 年達成的協議，<strong>自 2006 年 11 月 22 日起，Tokay 之名正式走入歷史</strong>，品種名稱統一為 Pinot Gris。</p>
+      <p style="margin-top:8px">1984 年歐盟法規曾正式允許使用「Tokay Pinot Gris」這個名稱，但根據阿爾薩斯與匈牙利、歐盟於 1993 年達成的協議，<strong>自 2007 年份起，Tokay 之名正式走入歷史</strong>，品種名稱統一為 Pinot Gris。</p>
       <p style="margin-top:8px">早熟品種，產量不穩定；果粒呈灰藍至藍灰色。可用於釀造 Grand Cru、VT 與 SGN。目前佔種植面積 <strong>14%</strong>。</p>
     `,
   },
@@ -781,7 +781,7 @@ const AL1M3L3_slides = [
     type: 'summary',
     message: 'Pinot Gris 與 Muscat 學習完成！',
     keyPoints: [
-      'Pinot Gris 曾稱 Tokay d\'Alsace，2006 年起正式棄用 Tokay 之名；風格豐腴飽滿，是阿爾薩斯白酒中最厚重的品種',
+      'Pinot Gris 曾稱 Tokay d\'Alsace，2007 年份起正式棄用 Tokay 之名；風格豐腴飽滿，是阿爾薩斯白酒中最厚重的品種',
       'Muscat 有兩個品種：Muscat「dit d\'Alsace」與 Muscat Ottonel，皆源自東方，1510 年即有種植紀錄',
       'Muscat 是四大貴族品種中最乾型、酒體最輕的一支，奔放的葡萄香氣是其招牌特徵',
       '兩者皆可用於 Grand Cru、VT、SGN——但 Muscat 種植面積僅 2.25%，是最稀少的一支',
@@ -808,7 +808,7 @@ const AL1M3L4_slides = [
     icon: '🥂',
     title: 'Pinot Blanc（Klevner／Weissclevner）與 Auxerrois',
     html: `
-      <p>Pinot Blanc 據信起源於義大利北部，17 世紀才首次見於文獻記載，是 Pinot Noir 的白色變種。產量頗豐（50–70 hl/ha），天然酒精度可達 9.8°–13.8°，常用於釀造 Crémant 基酒，也經常與 <strong>Auxerrois</strong> 混釀或並列標示。</p>
+      <p>Pinot Blanc 是 Pinot 家族（Pinot Noir／Pinot Gris）的白色突變種，一般認為起源於布根地一帶，17 世紀才首次見於文獻記載。產量頗豐（50–70 hl/ha），天然酒精度可達 9.8°–13.8°，常用於釀造 Crémant 基酒，也經常與 <strong>Auxerrois</strong> 混釀或並列標示。</p>
       <p style="margin-top:8px"><strong>Auxerrois</strong> 常與 Pinot Blanc 統計並列（種植區域高度重疊）：酸度略低，酒精度略高，因此成酒通常更圓潤、更易飲，但精緻度可能略遜於 Pinot Blanc 本身。</p>
       <p style="margin-top:8px"><strong>風格</strong>：常優於 Sylvaner 的表現，乾型、順口，帶宜人的酸度支撐——一款「無需多想、輕鬆好喝」的日常酒款；適合搭配冷盤（豬肉／鴨肉／兔肉凍、火腿蘆筍捲）與熱食（火腿酥皮捲、白醬燉肉、酥皮小牛胸腺、家禽燉菜）。種植面積 <strong>21.21%</strong>，與 Riesling 幾乎並列第一。</p>
     `,
@@ -879,8 +879,8 @@ const AL1M4L1_slides = [
     title: 'AOC 三層架構：Alsace／地理標示／Grand Cru',
     subtitle: 'Level 1 · 第十二課',
     points: [
-      { icon: '1️⃣', label: '第一層 Alsace', text: '基礎 AOC，約佔全產區產量 25%' },
-      { icon: '2️⃣', label: '第二層 +地理標示', text: '11 個經認定的地理名稱，各自限定品種' },
+      { icon: '1️⃣', label: '第一層 Alsace', text: '基礎 AOC，約佔全產區產量 74%' },
+      { icon: '2️⃣', label: '第二層 +地理標示', text: '13 個經認定的地理名稱，各自限定品種' },
       { icon: '3️⃣', label: '第三層 Grand Cru', text: '單一地塊命名，僅佔全產區產量約 4%' },
     ],
   },
@@ -893,15 +893,15 @@ const AL1M4L1_slides = [
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
         <div style="background:#eaf5ef;border-left:4px solid #2d6a4f;border-radius:0 10px 10px 0;padding:12px">
           <strong>① Alsace（Vin d'Alsace）——基礎層</strong><br/>
-          涵蓋整個劃定產區範圍，約佔阿爾薩斯總產量 25%。酒渣陳放需超過 12 個月，基礎產量上限 100 hl/ha（另有 20% 彈性上限 PLC）。可釀白酒與粉紅酒，品種包括 Riesling、Pinot Blanc、Pinot Noir、Pinot Gris、Auxerrois 與 Chardonnay（僅限 Crémant）；粉紅酒僅能由 Pinot Noir 釀造。
+          涵蓋整個劃定產區範圍，約佔阿爾薩斯總產量 74%。酒渣陳放需超過 12 個月，基礎產量上限 80 hl/ha（另有 20% 彈性上限 PLC）。可釀白酒與粉紅酒，品種包括 Riesling、Pinot Blanc、Pinot Noir、Pinot Gris、Auxerrois 與 Chardonnay（僅限 Crémant）；粉紅酒僅能由 Pinot Noir 釀造。
         </div>
         <div style="background:#fefae0;border-left:4px solid #c9a227;border-radius:0 10px 10px 0;padding:12px">
           <strong>② Alsace + 地理標示（Dénomination géographique）——中間層</strong><br/>
-          在「Alsace」名稱後，可加註 <strong>11 個</strong>經正式認定的地理名稱：Blienschwiller、Côtes de Barr、Côte de Rouffach、Klevener de Heiligenstein、Ottrott、Rodern、Saint-Hippolyte、Scherwiller、Vallée Noble、Val Saint-Grégoire、Wolxheim——每個地理標示都限定於特定村莊範圍，並各自搭配專屬的授權品種。
+          在「Alsace」名稱後，可加註 <strong>13 個</strong>經正式認定的地理名稱：Bergheim、Blienschwiller、Coteaux du Haut-Koenigsbourg、Côtes de Barr、Côte de Rouffach、Klevener de Heiligenstein、Ottrott、Rodern、Saint-Hippolyte、Scherwiller、Vallée Noble、Val Saint-Grégoire、Wolxheim——每個地理標示都限定於特定村莊範圍，並各自搭配專屬的授權品種。
         </div>
         <div style="background:#f0e9e3;border-left:4px solid #40241a;border-radius:0 10px 10px 0;padding:12px">
           <strong>③ Alsace Grand Cru——頂層</strong><br/>
-          以單一劃定地塊（lieu-dit）命名，僅佔全產區產量約 <strong>4%</strong>。原則上須來自單一貴族品種（Riesling、Gewurztraminer、Pinot Gris、Muscat 之一），且須人工採收。基礎產量僅 55 hl/ha（PLC 上限至 66 hl/ha）——比基礎 Alsace 層低了近一半。
+          以單一劃定地塊（lieu-dit）命名，僅佔全產區產量約 <strong>4%</strong>。原則上須來自單一貴族品種（Riesling、Gewurztraminer、Pinot Gris、Muscat 之一），且須人工採收。基礎產量僅 55 hl/ha（PLC 上限至 66 hl/ha）——比基礎 Alsace 層約低三成。
         </div>
       </div>
     `,
@@ -945,13 +945,13 @@ const AL1M4L1_slides = [
       'Grand Cru 允許所有品種混釀，沒有任何限制',
     ],
     answer: 1,
-    explanation: '阿爾薩斯 AOC 三層架構由下而上分別是：Alsace（基礎層，約佔產量 25%，基礎產量 100hl/ha）、Alsace + 地理標示（11 個經認定名稱，各自限定授權品種）、Alsace Grand Cru（頂層，僅佔產量約 4%，基礎產量僅 55hl/ha）。命名越具體，規範越嚴格，允許的最高產量也越低——這正是分級邏輯的核心。',
+    explanation: '阿爾薩斯 AOC 三層架構由下而上分別是：Alsace（基礎層，約佔產量 74%，基礎產量 80hl/ha）、Alsace + 地理標示（13 個經認定名稱，各自限定授權品種）、Alsace Grand Cru（頂層，僅佔產量約 4%，基礎產量僅 55hl/ha）。命名越具體，規範越嚴格，允許的最高產量也越低——這正是分級邏輯的核心。',
   },
   {
     type: 'summary',
     message: 'AOC 三層架構學習完成！',
     keyPoints: [
-      '三層架構：Alsace（基礎，25% 產量）→ +地理標示（11 個）→ Alsace Grand Cru（頂層，僅 4% 產量）',
+      '三層架構：Alsace（基礎，74% 產量）→ +地理標示（13 個）→ Alsace Grand Cru（頂層，僅 4% 產量）',
       '每個地理標示都限定特定授權品種——如 Scherwiller/Wolxheim 限 Riesling，Blienschwiller/Côtes de Barr 限 Sylvaner',
       'Grand Cru 原則上單一品種，須人工採收，基礎產量僅 55hl/ha（約為基礎層的一半多一點）',
       '兩個混釀特例：Altenberg de Bergheim（Riesling+Pinot Gris+Gewurztraminer）與 Kaefferkopf（Gewurztraminer+Riesling+Pinot Gris）',
@@ -1075,9 +1075,9 @@ const AL1M4L3_slides = [
   {
     type: 'content',
     icon: '🍇',
-    title: '各品種的產量上限（Alsace 基礎層級）',
+    title: '各品種的產量差異（舊制參考值）',
     html: `
-      <p>即使在同一個 Alsace 基礎層級內，不同品種的最高允許產量也不一樣——反映出「越是精緻的品種，越需要低產來換取濃縮度」：</p>
+      <p>以下是早年依品種區分的產量上限（舊制，供對照；現行 AOC Alsace 白酒基礎產量上限為 80 hl/ha）。即使在同一層級內，不同品種的最高允許產量也不一樣——反映出「越是精緻的品種，越需要低產來換取濃縮度」：</p>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px;text-align:center;font-size:0.85rem">
         <div style="background:#f0e9e3;border-radius:8px;padding:10px"><strong>100 hl/ha</strong><br/>Auxerrois・Chasselas・Pinot Blanc・Pinot(Klevner)・Sylvaner</div>
         <div style="background:#fefae0;border-radius:8px;padding:10px"><strong>90 hl/ha</strong><br/>Muscat・Muscat Ottonel・Riesling</div>
@@ -1096,7 +1096,7 @@ const AL1M4L3_slides = [
         <li>所有 <strong>Alsace Grand Cru</strong> 酒款</li>
         <li>所有標示 <strong>VT（Vendanges Tardives）</strong>或 <strong>SGN（Sélection de Grains Nobles）</strong>的酒款</li>
       </ul>
-      <p style="margin-top:10px">此外，兩個混釀 Grand Cru（Altenberg de Bergheim、Kaefferkopf）還規定了最低種植密度：<strong>每公頃須超過 5,500 株</strong>——高密度種植有助於加劇植株間競爭，進一步限制天然產量。</p>
+      <p style="margin-top:10px">此外，兩個混釀 Grand Cru（Altenberg de Bergheim、Kaefferkopf）還規定了最低種植密度：<strong>Altenberg de Bergheim 每公頃須超過 5,500 株，Kaefferkopf 為每公頃 4,500 株</strong>——高密度種植有助於加劇植株間競爭，進一步限制天然產量。</p>
     `,
   },
   {
@@ -1116,9 +1116,9 @@ const AL1M4L3_slides = [
     message: '產量與釀造規定學習完成！',
     keyPoints: [
       '產量上限隨命名具體程度遞減：基礎 Alsace 80hl/ha → +地理標示 72hl/ha → +地塊名稱 68hl/ha → Grand Cru 55hl/ha',
-      '同一層級內，「貴族」品種（Gewurztraminer、Pinot Gris 80hl/ha）產量上限低於量產品種（Sylvaner 等 100hl/ha）',
+      '舊制中，同一層級內「貴族」品種（Gewurztraminer、Pinot Gris 80hl/ha）產量上限低於量產品種（Sylvaner 等 100hl/ha）',
       '地塊命名的 Pinot Gris／Pinot Noir、所有 Grand Cru、所有 VT／SGN，皆須人工採收',
-      '兩個混釀 Grand Cru 額外規定種植密度須超過 5,500 株／公頃',
+      '兩個混釀 Grand Cru 額外規定最低種植密度：Altenberg de Bergheim 5,500 株／公頃、Kaefferkopf 4,500 株／公頃',
     ],
     nextLesson: '下一課：VT 與 SGN 貴腐甜酒入門',
   },
@@ -1133,7 +1133,7 @@ const AL1M4L4_slides = [
     subtitle: 'Level 1 · 第十五課',
     points: [
       { icon: '🍇', label: '僅限 4 個品種', text: 'Gewurztraminer・Pinot Gris・Riesling・Muscat' },
-      { icon: '📅', label: '1984 年正式命名', text: '是全法國 AOC 中門檻最嚴格的甜酒等級之一' },
+      { icon: '📅', label: '1984 年正式命名', text: '含糖量門檻極為嚴格的甜酒等級' },
       { icon: '☀️', label: '氣候基礎', text: '乾燥少雨的秋季，是孕育貴腐與晚摘的關鍵' },
     ],
   },
@@ -1142,7 +1142,7 @@ const AL1M4L4_slides = [
     icon: '🍯',
     title: 'VT 與 SGN：兩種概念、兩種風格',
     html: `
-      <p>VT（Vendanges Tardives，晚摘）與 SGN（Sélection de Grains Nobles，貴腐精選）是可以附加在 Alsace 或 Alsace Grand Cru 酒標上的兩個特殊標示，代表阿爾薩斯規範最嚴格的頂級甜酒——其含糖量門檻，在全法國 AOC 體系中僅次於侏羅（Jura）的稻草酒（vin de paille）。</p>
+      <p>VT（Vendanges Tardives，晚摘）與 SGN（Sélection de Grains Nobles，貴腐精選）是可以附加在 Alsace 或 Alsace Grand Cru 酒標上的兩個特殊標示，代表阿爾薩斯規範最嚴格的頂級甜酒——其含糖量門檻極為嚴格。</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
         <div style="background:#fefae0;border-left:4px solid #c9a227;border-radius:0 10px 10px 0;padding:12px">
           <strong>🍇 Vendanges Tardives（VT）</strong><br/>
@@ -1168,7 +1168,6 @@ const AL1M4L4_slides = [
         <div style="background:#eaf5ef;border-radius:8px;padding:10px;text-align:center;font-weight:700">Riesling</div>
         <div style="background:#eaf5ef;border-radius:8px;padding:10px;text-align:center;font-weight:700">Muscat</div>
       </div>
-      <p style="margin-top:10px">⚠️ <strong>特殊例外</strong>：即使符合條件，Kaefferkopf 地塊出產的 Pinot Gris，法規明文<strong>禁止</strong>使用 VT 或 SGN 標示——這是阿爾薩斯法規中一個相當獨特的例外規定。</p>
     `,
   },
   {
@@ -1197,7 +1196,7 @@ const AL1M4L4_slides = [
       '任何品種皆可，只要糖度達標即可',
     ],
     answer: 1,
-    explanation: 'VT（Vendanges Tardives）與 SGN（Sélection de Grains Nobles）法規明訂僅限四個「貴族」品種：Gewurztraminer、Pinot Gris、Riesling、Muscat。這四個品種也正是唯一被允許用於 Alsace Grand Cru 的品種——顯示阿爾薩斯將最高規範保留給這四個核心貴族品種的一致邏輯。',
+    explanation: 'VT（Vendanges Tardives）與 SGN（Sélection de Grains Nobles）法規明訂僅限四個「貴族」品種：Gewurztraminer、Pinot Gris、Riesling、Muscat。這四個品種也是 Alsace Grand Cru 原則上的授權品種（例外：Zotzenberg 可用 Sylvaner；Hengst、Kirchberg de Barr、Vorbourg 自 2022 年起可產 Pinot Noir 紅酒）——顯示阿爾薩斯將最高規範保留給這四個核心貴族品種的一致邏輯。',
   },
   {
     type: 'summary',
@@ -1205,9 +1204,8 @@ const AL1M4L4_slides = [
     keyPoints: [
       'VT（晚摘）：過熟葡萄，保留品種辨識度並疊加濃縮效應；SGN（貴腐精選）：多次選果只取貴腐果粒，風味由濃縮與貴腐特徵主導',
       '1984 年 3 月 1 日部長法令正式命名，是全法國 AOC 中糖度門檻數一數二嚴格的甜酒等級',
-      '僅限 Gewurztraminer、Pinot Gris、Riesling、Muscat 四個品種——與 Grand Cru 授權品種完全一致',
+      '僅限 Gewurztraminer、Pinot Gris、Riesling、Muscat 四個品種——也是 Grand Cru 原則上的授權品種（Zotzenberg、Pinot Noir 為例外）',
       '嚴格條件：人工採收、單一品種、禁止加糖、須標示年份、須經 INAO 預先申報與雙重認證',
-      '特殊例外：Kaefferkopf 的 Pinot Gris 即使達標，法規仍禁止使用 VT／SGN 標示',
     ],
     nextLesson: '下一課：Level 1 綜合評量',
   },
@@ -1247,7 +1245,7 @@ const AL1FinalExam_slides = [
   },
   {
     type: 'quiz',
-    question: '【氣候】阿爾薩斯 Colmar 一帶年雨量僅約 500mm 的主因是什麼？',
+    question: '【氣候】阿爾薩斯 Colmar 一帶年雨量僅約 500–600mm 的主因是什麼？',
     options: [
       '地中海氣候直接影響',
       '孚日山脈阻擋大西洋西風，形成顯著雨影效應',
@@ -1281,12 +1279,12 @@ const AL1FinalExam_slides = [
     question: '【品種】阿爾薩斯的 Pinot Gris 曾經有什麼別名？何時正式棄用？',
     options: [
       '「Riesling Gris」，2000 年棄用',
-      '「Tokay d\'Alsace」，2006 年 11 月起正式棄用',
+      '「Tokay d\'Alsace」，2007 年份起正式棄用',
       '「Muscat Gris」，1993 年棄用',
       '從未有過別名',
     ],
     answer: 1,
-    explanation: 'Pinot Gris 曾稱「Tokay d\'Alsace」或「Tokay-Pinot Gris」。根據阿爾薩斯與匈牙利、歐盟於 1993 年達成的協議，自 2006 年 11 月 22 日起正式棄用 Tokay 之名，因為容易讓人誤以為與匈牙利 Tokaji 甜酒有關。',
+    explanation: 'Pinot Gris 曾稱「Tokay d\'Alsace」或「Tokay-Pinot Gris」。根據阿爾薩斯與匈牙利、歐盟於 1993 年達成的協議，自 2007 年份起正式棄用 Tokay 之名，因為容易讓人誤以為與匈牙利 Tokaji 甜酒有關。',
   },
   {
     type: 'quiz',
@@ -1341,7 +1339,7 @@ const AL1FinalExam_slides = [
       'Pinot Noir、Chardonnay、Auxerrois、Klevener',
     ],
     answer: 1,
-    explanation: 'VT／SGN 僅限 Gewurztraminer、Pinot Gris、Riesling、Muscat 四個「貴族」品種——與 Alsace Grand Cru 的授權品種完全一致，展現阿爾薩斯法規對這四個核心品種的一貫規範邏輯。',
+    explanation: 'VT／SGN 僅限 Gewurztraminer、Pinot Gris、Riesling、Muscat 四個「貴族」品種——也是 Alsace Grand Cru 原則上的授權品種（Zotzenberg 的 Sylvaner、部分 Grand Cru 的 Pinot Noir 為例外），展現阿爾薩斯法規對這四個核心品種的一貫規範邏輯。',
   },
   {
     type: 'quiz',
@@ -1365,7 +1363,7 @@ const AL1FinalExam_slides = [
       '✅ 氣候與地質：孚日山雨影效應、逆溫層現象、斷裂帶造就的風土多樣性',
       '✅ 品種光譜：Riesling（21.68%）為首，Gewurztraminer／Pinot Gris／Muscat 構成四大貴族品種',
       '✅ AOC 三層架構：Alsace → +地理標示 → Grand Cru，命名越具體、規範越嚴格、產量越低',
-      '✅ VT／SGN：僅限四大貴族品種，是全法國門檻最嚴格的甜酒等級之一',
+      '✅ VT／SGN：僅限四大貴族品種，是門檻極為嚴格的甜酒等級',
     ],
     nextLesson: '準備好了嗎？Level 2：Grand Cru 深度探索，即將帶你走入 51 個特級園的地質世界！',
   },
@@ -2014,7 +2012,7 @@ const AL2M5L1_slides = [
     icon: '🟧',
     title: '泥灰砂岩：混合質地的多樣風土',
     html: `
-      <p>泥灰砂岩（marno-gréseux）族群由<strong>白堊紀 Dogger 砂質泥灰岩，或第三紀砂岩／石灰岩礫石堆積</strong>組成，質地介於純石灰岩與純砂岩之間，共 <strong>7 個 Grand Cru</strong>，是阿爾薩斯地理分布最廣的地質族群之一。</p>
+      <p>泥灰砂岩（marno-gréseux）族群由<strong>侏羅紀 Dogger 砂質泥灰岩，或第三紀砂岩／石灰岩礫石堆積</strong>組成，質地介於純石灰岩與純砂岩之間，共 <strong>7 個 Grand Cru</strong>，是阿爾薩斯地理分布最廣的地質族群之一。</p>
     `,
   },
   {
@@ -2107,7 +2105,7 @@ const AL2M5L2_slides = [
     points: [
       { icon: '🍷', label: '混釀特例', text: 'Altenberg de Bergheim 是全阿爾薩斯僅二的混釀 Grand Cru 之一' },
       { icon: '📅', label: '古老聲譽', text: '四個地塊皆有 8-14 世紀的悠久文獻記載' },
-      { icon: '🌿', label: 'Zotzenberg', text: '唯一歷史上允許 Sylvaner 的 Grand Cru' },
+      { icon: '🌿', label: 'Zotzenberg', text: '唯一允許 Sylvaner 的 Grand Cru（2005 年份起）' },
     ],
   },
   {
@@ -2138,7 +2136,7 @@ const AL2M5L2_slides = [
       {
         icon: '🌾',
         label: 'Zotzenberg（Mittelbergheim，36.45ha）',
-        desc: '侏羅紀泥灰石灰岩＋漸新世石灰質礫岩，保水抗旱。1364 年首度以「Zoczenberg」記載。歷史上是唯一的 <strong>Sylvaner 專屬 Grand Cru</strong>（獨家授權），20 世紀初即以自己名稱商業化銷售；Gewurztraminer／Riesling／Pinot Gris 表現亦優異。',
+        desc: '侏羅紀泥灰石灰岩＋漸新世石灰質礫岩，保水抗旱。1364 年首度以「Zoczenberg」記載。2005 年份起成為唯一獲准使用 <strong>Sylvaner</strong> 的 Grand Cru，20 世紀初即以自己名稱商業化銷售；Gewurztraminer／Riesling／Pinot Gris 表現亦優異。',
         color: '#f39c12',
       },
     ],
@@ -2148,12 +2146,12 @@ const AL2M5L2_slides = [
     question: 'Zotzenberg（Mittelbergheim）在 51 個 Grand Cru 中有什麼獨特之處？',
     options: [
       '是唯一的火山岩地塊',
-      '歷史上是唯一授權種植 Sylvaner 的 Grand Cru',
+      '唯一獲准種植 Sylvaner 的 Grand Cru（2005 年份起）',
       '是面積最大的 Grand Cru',
       '是唯一位於萊茵平原的 Grand Cru',
     ],
     answer: 1,
-    explanation: 'Zotzenberg 歷史上以 Sylvaner 聞名，是阿爾薩斯特別授權 Sylvaner 可用於 Grand Cru 等級的地塊——這在整個「僅限四大貴族品種」的 Grand Cru 體系中是獨一無二的特例，展現出此地泥灰石灰岩風土對 Sylvaner 品種的獨特加持。',
+    explanation: 'Zotzenberg 歷史上以 Sylvaner 聞名，是阿爾薩斯特別授權 Sylvaner 可用於 Grand Cru 等級的地塊——這在整個「原則上僅限四大貴族品種」的 Grand Cru 體系中是獨一無二的特例，展現出此地泥灰石灰岩風土對 Sylvaner 品種的獨特加持。',
   },
   {
     type: 'summary',
@@ -2162,7 +2160,7 @@ const AL2M5L2_slides = [
       'Altenberg de Bergheim（35.06ha）：全阿爾薩斯僅二的混釀 Grand Cru（Riesling+Pinot Gris+Gewurztraminer）',
       'Engelberg（Dahlenheim）：884 年文獻記載「高貴的酒」，阿爾薩斯最早的產區紀錄之一',
       'Osterberg（Ribeauvillé）：Ribeaupierre 領主的歷史葡萄園',
-      'Zotzenberg（Mittelbergheim）：歷史上唯一授權 Sylvaner 的 Grand Cru',
+      'Zotzenberg（Mittelbergheim）：唯一獲准使用 Sylvaner 的 Grand Cru（2005 年份起）',
     ],
     nextLesson: '下一課：泥灰石灰岩群（上）',
   },
@@ -2403,7 +2401,7 @@ const AL2M6L1_slides = [
     subtitle: 'Level 2 · 第十四課 · 特殊產區',
     points: [
       { icon: '📍', label: 'Cléebourg 飛地', text: '與主要葡萄園帶相距 90 公里的孤立產區' },
-      { icon: '🌹', label: 'Klevener AOC', text: '全阿爾薩斯唯一限定單一村莊的品種 AOC' },
+      { icon: '🌹', label: 'Klevener de Heiligenstein', text: '以 Savagnin rose 為唯一授權品種的補充地理標示' },
       { icon: '🤝', label: '共同精神', text: '兩者都展現阿爾薩斯風土多樣性中最特殊的角落' },
     ],
   },
@@ -2420,10 +2418,10 @@ const AL2M6L1_slides = [
   {
     type: 'content',
     icon: '🌹',
-    title: 'Klevener de Heiligenstein：獨一無二的單一村莊 AOC',
+    title: 'Klevener de Heiligenstein：以 Savagnin rose 為主角的補充地理標示',
     html: `
       <p>還記得 Level 1 提到的 <strong>Klevener de Heiligenstein</strong> 嗎？它是 Gewurztraminer 的<strong>非芳香型變種</strong>——在阿爾薩斯稱為「Heiligensteiner Klevner」，是 <strong>Savagnin rose（非麝香型）</strong>。</p>
-      <p style="margin-top:8px">這個品種於 <strong>1742 年</strong>引入 Heiligenstein（Bas-Rhin），是全阿爾薩斯唯一<strong>限定在單一村莊種植授權</strong>的品種型 AOC——僅限 Bourgheim、Gertwiller、Goxwiller、Heiligenstein、Obernai 這幾個緊鄰的村莊。</p>
+      <p style="margin-top:8px">這個品種於 <strong>1742 年</strong>引入 Heiligenstein（Bas-Rhin），是 AOC Alsace 的補充地理標示之一，以 <strong>Savagnin rose 為唯一授權品種</strong>——僅限 Bourgheim、Gertwiller、Goxwiller、Heiligenstein、Obernai 這幾個緊鄰的村莊。</p>
       <p style="margin-top:8px">風格上：不甜的白酒，內斂含蓄，帶有<strong>乳香與辛香、花香</strong>調性，透露出與 Gewurztraminer 的血緣關係，卻更顯精緻與細膩平衡——兼具 Riesling 的活力與 Pinot Gris 的豐腴，是絕佳的全餐搭配酒款，也適合搭配部分亞洲料理。</p>
     `,
   },
@@ -2447,7 +2445,7 @@ const AL2M6L1_slides = [
       '約 200 公頃，氣候較涼，Pinot Blanc Auxerrois 與 Pinot Gris 合計佔 54%',
       '1988 年起標示 10 個高潛力 lieux-dits，展現「準 Grand Cru」精神',
       'Klevener de Heiligenstein：Gewurztraminer 的非芳香型變種（Savagnin rose），1742 年引入',
-      '是全阿爾薩斯唯一限定單一村莊種植授權的品種型 AOC，僅限 Heiligenstein 周邊幾個村莊',
+      '是 AOC Alsace 下以 Savagnin rose 為唯一授權品種的補充地理標示，僅限 Heiligenstein 周邊幾個村莊',
     ],
     nextLesson: '下一課：阿爾薩斯知名 Clos 巡禮',
   },
@@ -2481,14 +2479,14 @@ const AL2M6L2_slides = [
     items: [
       {
         icon: '👑',
-        label: 'Clos Sainte Hune（Hunawihr，1.25ha）',
-        desc: '100% Riesling，F.E. Trimbach 酒莊獨家擁有，是阿爾薩斯乃至全球最受推崇的 Riesling 之一，被視為阿爾薩斯 Riesling 的巔峰代表。',
+        label: 'Clos Sainte Hune（Hunawihr，1.67ha）',
+        desc: '100% Riesling，F.E. Trimbach 酒莊獨家擁有，位於 Rosacker Grand Cru 的中坡內，是阿爾薩斯乃至全球最受推崇的 Riesling 之一，被視為阿爾薩斯 Riesling 的巔峰代表。',
         color: '#2980b9',
       },
       {
         icon: '⛰️',
         label: 'Clos Windsbuhl（Hunawihr）',
-        desc: 'Zind-Humbrecht 酒莊租賃經營，火山岩風土，坡度高達 <strong>68%</strong>——可能是全阿爾薩斯坡度最陡的葡萄園！展現極致濃縮與礦石感。',
+        desc: 'Zind-Humbrecht 酒莊經營的獨立地塊，位於 Turckheim，<strong>石灰質（白堊與黏土）陡坡</strong>風土，以濃縮度與礦石感聞名。',
         color: '#c0392b',
       },
       {
@@ -2554,7 +2552,7 @@ const AL2M6L2_slides = [
       'Clos = 獨立、常有牆圍的單一地塊，由單一酒莊獨家擁有，可能位於 Grand Cru 內或完全獨立',
       '部分 Clos 採「多品種一起採收壓榨」的傳統做法，與 Edelzwicker／Gentil 的調配邏輯不同',
       'Clos Sainte Hune（Trimbach）：阿爾薩斯 Riesling 的巔峰代表',
-      'Clos Windsbuhl：坡度達 68%，可能是全阿爾薩斯最陡的葡萄園',
+      'Clos Windsbuhl（Zind-Humbrecht）：石灰質陡坡的獨立地塊',
       'Clos de Meywihr：僅 10 公畝 60 公厘，全阿爾薩斯最小的 Clos',
     ],
     nextLesson: '下一課：Level 2 綜合評量',
@@ -2619,7 +2617,7 @@ const AL2FinalExam_slides = [
     question: '【品種特例】哪個 Grand Cru 歷史上是唯一授權種植 Sylvaner 的地塊？',
     options: ['Zotzenberg', 'Steinklotz', 'Bruderthal', 'Goldert'],
     answer: 0,
-    explanation: 'Zotzenberg（Mittelbergheim）歷史上以 Sylvaner 聞名，是特別授權 Sylvaner 可用於 Grand Cru 等級的地塊——在整個「僅限四大貴族品種」的 Grand Cru 體系中獨一無二。',
+    explanation: 'Zotzenberg（Mittelbergheim）歷史上以 Sylvaner 聞名，是特別授權 Sylvaner 可用於 Grand Cru 等級的地塊——在整個「原則上僅限四大貴族品種」的 Grand Cru 體系中獨一無二。',
   },
   {
     type: 'quiz',
@@ -2652,7 +2650,7 @@ const AL2FinalExam_slides = [
       'Muscat 的變種，僅限 Ribeauvillé 種植',
     ],
     answer: 1,
-    explanation: 'Klevener de Heiligenstein 是 Gewurztraminer（Savagnin rose）的非芳香型變種，1742 年引入 Heiligenstein，是全阿爾薩斯唯一限定單一村莊種植授權的品種型 AOC，僅限 Bourgheim、Gertwiller、Goxwiller、Heiligenstein、Obernai 幾個緊鄰村莊。',
+    explanation: 'Klevener de Heiligenstein 是 Gewurztraminer（Savagnin rose）的非芳香型變種，1742 年引入 Heiligenstein，是 AOC Alsace 下以 Savagnin rose 為唯一授權品種的補充地理標示，僅限 Bourgheim、Gertwiller、Goxwiller、Heiligenstein、Obernai 幾個緊鄰村莊。',
   },
   {
     type: 'quiz',
@@ -2664,7 +2662,7 @@ const AL2FinalExam_slides = [
       'René Muré，Muscat',
     ],
     answer: 1,
-    explanation: 'Clos Sainte Hune（Hunawihr，1.25ha）由 F.E. Trimbach 酒莊獨家擁有，100% Riesling，是阿爾薩斯乃至全球最受推崇的 Riesling 之一，被視為阿爾薩斯 Riesling 的巔峰代表。',
+    explanation: 'Clos Sainte Hune（Hunawihr，1.67ha）由 F.E. Trimbach 酒莊獨家擁有，100% Riesling，是阿爾薩斯乃至全球最受推崇的 Riesling 之一，被視為阿爾薩斯 Riesling 的巔峰代表。',
   },
   {
     type: 'summary',
@@ -2674,7 +2672,7 @@ const AL2FinalExam_slides = [
       '✅ Grand Cru 分級：1975 年創設，1983/1992/2007 三波劃定達 51 個地塊',
       '✅ 十大地質族群：從片岩（1）到泥灰石灰岩（13），橫跨數億年地質史',
       '✅ 兩個混釀特例：Altenberg de Bergheim 與 Kaefferkopf',
-      '✅ 特殊產區：Cléebourg 飛地、Klevener de Heiligenstein 單一村莊 AOC',
+      '✅ 特殊產區：Cléebourg 飛地、Klevener de Heiligenstein 補充地理標示',
       '✅ 知名 Clos：Sainte Hune、Windsbuhl、Zahnacker 等傳奇地塊',
     ],
     nextLesson: '準備好了嗎？Level 3：釀造工藝與特殊酒款，即將帶你深入 Crémant、貴腐甜酒與蒸餾酒的世界！',
@@ -2839,7 +2837,7 @@ const AL3M2L1_slides = [
     subtitle: 'Level 3 · 第三課',
     points: [
       { icon: '📜', label: '1976 年 AOC', text: 'Crémant d\'Alsace 正式獲得法定產區認證' },
-      { icon: '🍇', label: '強制整串壓榨', text: '全法國少數強制「vendange entière」的 AOC 之一' },
+      { icon: '🍇', label: '強制整串壓榨', text: 'Crémant 的標準規範：必須整串壓榨「vendange entière」' },
       { icon: '⏳', label: '9 個月酒渣陳年', text: '瓶中二次發酵的最低陳年要求' },
     ],
   },
@@ -2908,18 +2906,19 @@ const AL3M2L2_slides = [
     title: 'Crémant 品種特性與市場地位',
     subtitle: 'Level 3 · 第四課',
     points: [
-      { icon: '🍇', label: '五個授權品種', text: 'Pinot Blanc 為主力，各品種賦予不同個性' },
+      { icon: '🍇', label: '六個授權品種', text: 'Pinot Blanc 為主力，各品種賦予不同個性' },
       { icon: '🏆', label: '全法第一', text: '法國國內銷量第一的 AOC 氣泡酒' },
       { icon: '📈', label: '25 年成長 13 倍', text: '從 1982 年的 220 萬瓶到 2007 年的 2,800 萬瓶' },
     ],
   },
   {
     type: 'compare',
-    title: '五個授權品種各自的貢獻',
+    title: '六個授權品種各自的貢獻',
     items: [
       { icon: '🥂', label: 'Pinot Blanc（主力品種）', desc: '多數「blancs de blancs」Crémant 的基礎，賦予細膩與柔順感', color: '#c9a227' },
       { icon: '🍋', label: 'Riesling', desc: '帶來活潑鮮明的果香調性，充滿優雅與高貴氣質', color: '#2d6a4f' },
       { icon: '🍈', label: 'Pinot Gris', desc: '為 Crémant 增添豐富度與結構骨架', color: '#7c4a2d' },
+      { icon: '🍐', label: 'Auxerrois', desc: '帶來圓潤柔和的質地，常與 Pinot Blanc 搭配', color: '#8d6e63' },
       { icon: '✨', label: 'Chardonnay（僅限 Crémant）', desc: '賦予氣質與輕盈感，是唯一僅限用於 Crémant 的品種', color: '#f1c40f' },
       { icon: '🌹', label: 'Pinot Noir', desc: '唯一能釀造粉紅 Crémant 的品種，少數情況也可做成 blanc de noirs，兼具魅力與細緻', color: '#c0392b' },
     ],
@@ -2958,7 +2957,7 @@ const AL3M2L2_slides = [
     type: 'summary',
     message: 'Crémant 品種特性與市場地位學習完成！',
     keyPoints: [
-      '五個授權品種：Pinot Blanc（主力）、Riesling、Pinot Gris、Chardonnay（僅限 Crémant）、Pinot Noir（唯一可做粉紅）',
+      '六個授權品種：Pinot Blanc（主力）、Riesling、Pinot Gris、Auxerrois、Chardonnay（僅限 Crémant）、Pinot Noir（唯一可做粉紅）',
       '法國國內銷量第一的 AOC 氣泡酒，市佔率 36.9%，年產約 2,900 萬瓶（佔阿爾薩斯總產量 19%）',
       '25 年間成長 13 倍：1982 年 220 萬瓶 → 2007 年 2,800 萬瓶',
       '消費集中大東部地區（34%），本土市場佔 83%，歐美出口持續成長',
@@ -2985,16 +2984,16 @@ const AL3M3L1_slides = [
     icon: '📊',
     title: '精確的糖度與酒精度門檻',
     html: `
-      <p>Level 1 已經認識過 VT 與 SGN 的基本規範，這裡我們深入官方精確數據——以 <strong>2007 年採收年</strong>實際採用的門檻為例（法規最低值＋逐年上修後的實際執行值）：</p>
+      <p>Level 1 已經認識過 VT 與 SGN 的基本規範，這裡我們深入官方精確數據——以現行門檻為例（VT 數值已較 2007 年採收年的舊制上修，舊制為 Gewurztraminer／Pinot Gris 257 g/L、Riesling／Muscat 235 g/L；SGN 不變）：</p>
       <table style="width:100%;border-collapse:collapse;margin-top:8px;font-size:0.8rem">
         <tr style="background:#fefae0"><th style="padding:5px" rowspan="2">品種</th><th colspan="2" style="padding:5px">Vendanges Tardives</th><th colspan="2" style="padding:5px">Sélection de Grains Nobles</th></tr>
         <tr style="background:#fefae0"><th style="padding:5px">含糖量(g/L)</th><th style="padding:5px">最低酒精度</th><th style="padding:5px">含糖量(g/L)</th><th style="padding:5px">最低酒精度</th></tr>
-        <tr><td style="padding:5px;border:1px solid #eee">Gewurztraminer</td><td style="padding:5px;border:1px solid #eee">257</td><td style="padding:5px;border:1px solid #eee">15.3°</td><td style="padding:5px;border:1px solid #eee">306</td><td style="padding:5px;border:1px solid #eee">18.2°</td></tr>
-        <tr><td style="padding:5px;border:1px solid #eee">Pinot Gris</td><td style="padding:5px;border:1px solid #eee">257</td><td style="padding:5px;border:1px solid #eee">15.3°</td><td style="padding:5px;border:1px solid #eee">306</td><td style="padding:5px;border:1px solid #eee">18.2°</td></tr>
-        <tr><td style="padding:5px;border:1px solid #eee">Riesling</td><td style="padding:5px;border:1px solid #eee">235</td><td style="padding:5px;border:1px solid #eee">14.0°</td><td style="padding:5px;border:1px solid #eee">276</td><td style="padding:5px;border:1px solid #eee">16.4°</td></tr>
-        <tr><td style="padding:5px;border:1px solid #eee">Muscat</td><td style="padding:5px;border:1px solid #eee">235</td><td style="padding:5px;border:1px solid #eee">14.0°</td><td style="padding:5px;border:1px solid #eee">276</td><td style="padding:5px;border:1px solid #eee">16.4°</td></tr>
+        <tr><td style="padding:5px;border:1px solid #eee">Gewurztraminer</td><td style="padding:5px;border:1px solid #eee">270</td><td style="padding:5px;border:1px solid #eee">16.0°</td><td style="padding:5px;border:1px solid #eee">306</td><td style="padding:5px;border:1px solid #eee">18.2°</td></tr>
+        <tr><td style="padding:5px;border:1px solid #eee">Pinot Gris</td><td style="padding:5px;border:1px solid #eee">270</td><td style="padding:5px;border:1px solid #eee">16.0°</td><td style="padding:5px;border:1px solid #eee">306</td><td style="padding:5px;border:1px solid #eee">18.2°</td></tr>
+        <tr><td style="padding:5px;border:1px solid #eee">Riesling</td><td style="padding:5px;border:1px solid #eee">244</td><td style="padding:5px;border:1px solid #eee">14.5°</td><td style="padding:5px;border:1px solid #eee">276</td><td style="padding:5px;border:1px solid #eee">16.4°</td></tr>
+        <tr><td style="padding:5px;border:1px solid #eee">Muscat</td><td style="padding:5px;border:1px solid #eee">244</td><td style="padding:5px;border:1px solid #eee">14.5°</td><td style="padding:5px;border:1px solid #eee">276</td><td style="padding:5px;border:1px solid #eee">16.4°</td></tr>
       </table>
-      <p style="margin-top:8px">💡 這些糖度門檻，加上侏羅（Jura）稻草酒（vin de paille），是<strong>全法國 AOC 體系中數一數二嚴格</strong>的甜酒標準。</p>
+      <p style="margin-top:8px">💡 這些糖度門檻是<strong>阿爾薩斯規範最嚴格的甜酒標準</strong>。</p>
     `,
   },
   {
@@ -3037,7 +3036,7 @@ const AL3M3L1_slides = [
     type: 'summary',
     message: 'VT 與 SGN 嚴格規範學習完成！',
     keyPoints: [
-      '2007 年門檻：Gewurztraminer／Pinot Gris VT 257g/L（15.3°）、SGN 306g/L（18.2°）；Riesling／Muscat VT 235g/L（14.0°）、SGN 276g/L（16.4°）',
+      '現行門檻：Gewurztraminer／Pinot Gris VT 270g/L（16.0°）、SGN 306g/L（18.2°）；Riesling／Muscat VT 244g/L（14.5°）、SGN 276g/L（16.4°）',
       '七項強制條件：人工採收、單一品種、達最低糖度、禁止加糖、達對應酒精度、INAO 預先申報、雙重認證',
       '半大陸型氣候（低降雨＋秋季充足日照）是貴腐與晚摘得以發生的氣候基礎',
       '與侏羅稻草酒並列全法國 AOC 體系中數一數二嚴格的甜酒標準',
@@ -3292,7 +3291,7 @@ const AL3M5L1_slides = [
     title: 'Marc d\'Alsace Gewurztraminer',
     subtitle: 'Level 3 · 第九課',
     points: [
-      { icon: '📜', label: '2010 年 AOP', text: '從葡萄酒渣中提煉的珍貴蒸餾酒' },
+      { icon: '📜', label: '1966 年確認', text: '從葡萄酒渣中提煉的珍貴蒸餾酒' },
       { icon: '🍇', label: '原料來源', text: '僅限 Gewurztraminer 葡萄渣，須完整去梗' },
       { icon: '🔥', label: '雙次蒸餾', text: '傳統壺式蒸餾器，禁止使用精餾塔' },
     ],
@@ -3302,7 +3301,7 @@ const AL3M5L1_slides = [
     icon: '📜',
     title: '從葡萄渣到珍貴蒸餾酒',
     html: `
-      <p>Marc d'Alsace Gewurztraminer 是阿爾薩斯的特色蒸餾酒，於 <strong>2010 年</strong>正式取得受保護的原產地名稱（Appellation d'Origine Protégée）。</p>
+      <p>Marc d'Alsace Gewurztraminer 是阿爾薩斯的特色蒸餾酒，於 <strong>1966 年</strong>經法令確認為受規範的原產地名稱，現行為受保護的原產地名稱（AOP）。</p>
       <p style="margin-top:8px">原料規定極為嚴格：必須採用在 <strong>AOP Alsace 產區範圍內採收的 Gewurztraminer 葡萄渣（marc）</strong>，並在 Haut-Rhin 與 Bas-Rhin 兩省境內完成蒸餾。這些葡萄渣必須<strong>健康且完整去梗</strong>，每 100 公斤申報原料，須能萃取出至少 <strong>4.5 公升純酒精</strong>。</p>
     `,
   },
@@ -3315,7 +3314,7 @@ const AL3M5L1_slides = [
         <li><strong>蒸餾方式</strong>：採<strong>兩階段蒸餾</strong>，使用傳統的<strong>壺式蒸餾器（alambic à repasse）</strong>——明文<strong>禁止使用精餾塔（colonnes de rectification）</strong>，以保留葡萄渣本身粗獷而濃郁的香氣特質</li>
         <li><strong>蒸餾出的酒精度</strong>：出爐時須低於 68° GL</li>
         <li><strong>銷售酒精度</strong>：裝瓶銷售時須達 45° GL 以上</li>
-        <li><strong>非酒精物質含量</strong>：須超過每公升 400 公克（這些物質正是賦予 Marc 濃郁香氣與個性的來源）</li>
+        <li><strong>非酒精物質含量</strong>：每百公升純酒精至少須達 300 公克（300 g/hl 純酒精；這些物質正是賦予 Marc 濃郁香氣與個性的來源）</li>
       </ul>
       <p style="margin-top:10px">💡 由於原料正是 Gewurztraminer 果皮與種籽（榨汁後的固形物），Marc d'Alsace Gewurztraminer 往往能濃縮展現這個品種最奔放的<strong>玫瑰、荔枝與辛香</strong>特質——是阿爾薩斯餐後酒文化中極具代表性的一支。</p>
     `,
@@ -3336,7 +3335,7 @@ const AL3M5L1_slides = [
     type: 'summary',
     message: 'Marc d\'Alsace Gewurztraminer 學習完成！',
     keyPoints: [
-      '2010 年正式取得 AOP 保護，原料僅限 AOP Alsace 產區的 Gewurztraminer 葡萄渣',
+      '1966 年確認為受規範的原產地名稱（現為 AOP），原料僅限 AOP Alsace 產區的 Gewurztraminer 葡萄渣',
       '每 100kg 原料須能萃取至少 4.5 公升純酒精',
       '傳統壺式蒸餾器兩階段蒸餾，明文禁止使用精餾塔',
       '出爐酒精度須低於 68° GL，銷售須達 45° GL 以上，非酒精物質須超過 400g/L',
@@ -3396,7 +3395,7 @@ const AL3M5L2_slides = [
         <li><strong>蒸餾器</strong>：可用<strong>壺式蒸餾器（à repasse）</strong>，或使用明火／蒸氣加熱的<strong>單次蒸餾（premier jet discontinu）</strong>設備</li>
         <li><strong>蒸餾出的酒精度</strong>：最高不超過 <strong>70% vol.</strong></li>
         <li><strong>銷售酒精度</strong>：最低須達 <strong>45% vol.</strong></li>
-        <li><strong>非酒精物質含量</strong>：每公升純酒精中須低於 400 公克，其中<strong>酯類物質至少須達 200 公克</strong>——這是賦予 Mirabelle 白蘭地特有果香酯類調性的關鍵</li>
+        <li><strong>非酒精物質含量</strong>：每百公升純酒精中須低於 400 公克（g/hl 純酒精），其中<strong>酯類物質至少須達 200 公克</strong>——這是賦予 Mirabelle 白蘭地特有果香酯類調性的關鍵</li>
       </ul>
     `,
   },
@@ -3581,7 +3580,7 @@ const AL4M2L1_slides = [
     html: `
       <p>阿爾薩斯與德國萊茵／摩塞爾產區，都座落在數百萬年前<strong>萊茵地塹（Rhine Rift Valley）</strong>形成過程中誕生的破碎地質帶上——這也是為什麼兩地土壤都呈現極高的多樣性。但兩地的氣候命運卻截然不同：</p>
       <ul style="padding-left:20px;line-height:1.8;margin-top:6px">
-        <li><strong>阿爾薩斯（Colmar）</strong>：孚日山脈（Vosges）阻擋了由西而來的雨雲，年降雨量不到 500mm，是<strong>全法國第二乾燥的城鎮</strong>（僅次於南部的 Perpignan）；年日照約 <strong>1,800 小時</strong>，年均溫 10-11°C，4-9 月生長季均溫超過 16°C</li>
+        <li><strong>阿爾薩斯（Colmar）</strong>：孚日山脈（Vosges）阻擋了由西而來的雨雲，年降雨量約 500–600mm，常被稱為<strong>全法國第二乾燥的城鎮</strong>（僅次於南部的 Perpignan）；年日照約 <strong>1,800 小時</strong>，年均溫 10-11°C，4-9 月生長季均溫超過 16°C</li>
         <li><strong>德國摩澤爾／萊茵高</strong>：屬<strong>大陸性氣候</strong>，雨量中等，秋季漫長——這對 Riesling 等晚熟品種格外重要，也是 BA、TBA、Eiswein 等極甜酒款得以形成的氣候基礎</li>
       </ul>
       <p style="margin-top:8px">💡 阿爾薩斯的乾燥少雨造就了葡萄更容易達到完全成熟；德國的漫長冷涼秋季則讓葡萄得以在樹上緩慢累積糖分與香氣，同時保留高酸度。</p>
@@ -3656,7 +3655,7 @@ const AL4M2L2_slides = [
     subtitle: 'Level 4 · 第二課',
     points: [
       { icon: '❓', label: '甜度標示的長年爭議', text: '「乾型」酒標下，殘糖含量卻可能天差地遠' },
-      { icon: '📋', label: '2020 年甜度分級新制', text: 'sec／demi-sec／moelleux／liquoreux 四級標示上路' },
+      { icon: '📋', label: '2020 年甜度分級新制', text: 'sec／demi-sec／moelleux／doux 四級標示上路' },
       { icon: '⚖️', label: '兩種釀酒哲學並存', text: '傳統飽滿殘糖派 vs 現代極致乾爽派' },
     ],
   },
@@ -3677,10 +3676,10 @@ const AL4M2L2_slides = [
       <p>為了回應這項長年爭議，阿爾薩斯酒業公會於 <strong>2020 年</strong>推動重大改革：自 2021 年份起，<strong>AOC Alsace 與 AOC Alsace Grand Cru</strong> 的酒標上須強制標示官方甜度分級（Indication de la Teneur en Sucre）：</p>
       <table style="width:100%;border-collapse:collapse;margin-top:6px;font-size:0.82rem">
         <tr style="background:#f3f0ea"><th style="padding:6px 8px;border:1px solid #ddd">分級</th><th style="padding:6px 8px;border:1px solid #ddd">中文</th><th style="padding:6px 8px;border:1px solid #ddd">風格</th></tr>
-        <tr><td style="padding:6px 8px;border:1px solid #ddd">Sec</td><td style="padding:6px 8px;border:1px solid #ddd">乾型</td><td style="padding:6px 8px;border:1px solid #ddd">殘糖最低，口感俐落</td></tr>
-        <tr><td style="padding:6px 8px;border:1px solid #ddd">Demi-sec</td><td style="padding:6px 8px;border:1px solid #ddd">半乾型</td><td style="padding:6px 8px;border:1px solid #ddd">略帶柔和甘甜感</td></tr>
-        <tr><td style="padding:6px 8px;border:1px solid #ddd">Moelleux</td><td style="padding:6px 8px;border:1px solid #ddd">半甜型</td><td style="padding:6px 8px;border:1px solid #ddd">明顯甜潤口感</td></tr>
-        <tr><td style="padding:6px 8px;border:1px solid #ddd">Liquoreux</td><td style="padding:6px 8px;border:1px solid #ddd">甜型</td><td style="padding:6px 8px;border:1px solid #ddd">濃郁蜜甜，含 VT／SGN</td></tr>
+        <tr><td style="padding:6px 8px;border:1px solid #ddd">Sec</td><td style="padding:6px 8px;border:1px solid #ddd">乾型</td><td style="padding:6px 8px;border:1px solid #ddd">殘糖最低（約 4 g/L 以下，酸度足夠時可放寬至 9 g/L），口感俐落</td></tr>
+        <tr><td style="padding:6px 8px;border:1px solid #ddd">Demi-sec</td><td style="padding:6px 8px;border:1px solid #ddd">半乾型</td><td style="padding:6px 8px;border:1px solid #ddd">略帶柔和甘甜感（約 12 g/L 以下）</td></tr>
+        <tr><td style="padding:6px 8px;border:1px solid #ddd">Moelleux</td><td style="padding:6px 8px;border:1px solid #ddd">半甜型</td><td style="padding:6px 8px;border:1px solid #ddd">明顯甜潤口感（約 12–45 g/L）</td></tr>
+        <tr><td style="padding:6px 8px;border:1px solid #ddd">Doux</td><td style="padding:6px 8px;border:1px solid #ddd">甜型</td><td style="padding:6px 8px;border:1px solid #ddd">濃郁蜜甜（約 45 g/L 以上）</td></tr>
       </table>
       <p style="margin-top:8px">這項改革讓消費者終於能在選購時就掌握酒款的甜度定位，而不必仰賴品種刻板印象或酒莊聲譽來猜測。</p>
     `,
@@ -3722,14 +3721,14 @@ const AL4M2L2_slides = [
       '規定所有阿爾薩斯白酒都必須是乾型',
     ],
     answer: 1,
-    explanation: '阿爾薩斯長年存在「隱藏甜度」的爭議：許多 Pinot Gris、Gewurztraminer 即使未標示甜度也可能帶有明顯殘糖，讓消費者難以判斷。2020 年新制自 2021 年份起強制要求 AOC Alsace 與 AOC Alsace Grand Cru 標示 sec／demi-sec／moelleux／liquoreux 四級甜度資訊，讓兩種釀酒哲學都能誠實透明地標示定位。',
+    explanation: '阿爾薩斯長年存在「隱藏甜度」的爭議：許多 Pinot Gris、Gewurztraminer 即使未標示甜度也可能帶有明顯殘糖，讓消費者難以判斷。2020 年新制自 2021 年份起強制要求 AOC Alsace 與 AOC Alsace Grand Cru 標示 sec／demi-sec／moelleux／doux 四級甜度資訊，讓兩種釀酒哲學都能誠實透明地標示定位。',
   },
   {
     type: 'summary',
     message: '傳統 vs 現代風格學習完成！',
     keyPoints: [
       '阿爾薩斯長年存在「隱藏甜度」爭議：一般 AOC Alsace 甜度無強制門檻，Pinot Gris／Gewurztraminer 常帶隱藏殘糖',
-      '2020 年新制：2021 年份起 AOC Alsace 與 Grand Cru 強制標示 sec/demi-sec/moelleux/liquoreux 四級甜度',
+      '2020 年新制：2021 年份起 AOC Alsace 與 Grand Cru 強制標示 sec/demi-sec/moelleux/doux 四級甜度',
       '傳統飽滿派：保留殘糖平衡濃郁酒體，視為風土自然表現',
       '現代乾爽派：全面發酵至乾，追求純淨酸度骨架與國際市場餐搭友善度',
       '兩派並存正是阿爾薩斯的魅力所在，品飲時應先留意甜度標示',
@@ -3835,7 +3834,7 @@ const AL4M3L2_slides = [
     points: [
       { icon: '🛣️', label: 'Route des Vins d\'Alsace', text: '從 Marlenheim 到 Thann，貫穿整個產區的葡萄酒之路' },
       { icon: '🏘️', label: '半木造童話村莊', text: 'Riquewihr、Eguisheim、Kaysersberg 等經典酒鄉' },
-      { icon: '🍇', label: '兩省分野', text: 'Bas-Rhin（北）與 Haut-Rhin（南）以 Colmar 為界' },
+      { icon: '🍇', label: '兩省分野', text: 'Bas-Rhin（北）與 Haut-Rhin（南），界線在 Sélestat 一帶' },
     ],
   },
   {
@@ -3850,9 +3849,9 @@ const AL4M3L2_slides = [
   {
     type: 'content',
     icon: '🗾',
-    title: 'Bas-Rhin 與 Haut-Rhin：以 Colmar 為界的兩個世界',
+    title: 'Bas-Rhin 與 Haut-Rhin：兩個省的兩個世界',
     html: `
-      <p>阿爾薩斯葡萄酒產區行政上橫跨兩個省份，以 <strong>Colmar</strong> 為分界點：</p>
+      <p>阿爾薩斯葡萄酒產區行政上橫跨兩個省份，兩省界線在 <strong>Sélestat 一帶</strong>（Colmar 是南段 Haut-Rhin 的首府）：</p>
       <ul style="padding-left:20px;line-height:1.8;margin-top:6px">
         <li><strong>Bas-Rhin（下萊茵省，北段）</strong>：涵蓋 Strasbourg、Molsheim、Obernai、Barr 一帶——孚日山脈在此段相對較低矮，給予葡萄園的雨影保護較弱，氣候略涼</li>
         <li><strong>Haut-Rhin（上萊茵省，南段）</strong>：涵蓋 Ribeauvillé、Riquewihr、Colmar、Eguisheim、Guebwiller 一帶——孚日山脈在此段最為高聳，雨影效應最強，是阿爾薩斯最核心精華的葡萄酒產區，51 個 Grand Cru 中絕大多數都座落於此</li>
@@ -3891,7 +3890,7 @@ const AL4M3L2_slides = [
     message: '觀光路線與葡萄酒文化學習完成！',
     keyPoints: [
       'Route des Vins d\'Alsace：北起 Marlenheim，南至 Thann，貫穿整個產區',
-      'Bas-Rhin（北，孚日山較低矮）與 Haut-Rhin（南，孚日山最高聳、Grand Cru 精華區）以 Colmar 為界',
+      'Bas-Rhin（北，孚日山較低矮）與 Haut-Rhin（南，孚日山最高聳、Grand Cru 精華區），界線在 Sélestat 一帶',
       '半木造童話村莊：Riquewihr（法國最美村莊之一）、Eguisheim（教皇出生地）、Kaysersberg（史懷哲出生地）',
       '葡萄酒觀光與耶誕市集文化緊密交織，是阿爾薩斯重要的文化資產',
     ],
@@ -4099,7 +4098,7 @@ const AL4FinalExam_slides = [
       '因為缺乏河流灌溉',
     ],
     answer: 1,
-    explanation: '孚日山脈（Vosges）阻擋了由西而來的雨雲，形成顯著的雨影效應，使 Colmar 年降雨量不到 500mm，是全法國第二乾燥的城鎮，僅次於南部的 Perpignan。',
+    explanation: '孚日山脈（Vosges）阻擋了由西而來的雨雲，形成顯著的雨影效應，使 Colmar 年降雨量約 500–600mm，常被稱為全法國第二乾燥的城鎮，僅次於南部的 Perpignan。',
   },
   {
     type: 'quiz',
@@ -4111,7 +4110,7 @@ const AL4FinalExam_slides = [
       '所有阿爾薩斯酒款皆不強制標示',
     ],
     answer: 1,
-    explanation: '自 2021 年份起，AOC Alsace 與 AOC Alsace Grand Cru 的酒標須強制標示官方甜度分級（sec/demi-sec/moelleux/liquoreux），解決了長年「隱藏甜度」造成消費者困惑的問題。',
+    explanation: '自 2021 年份起，AOC Alsace 與 AOC Alsace Grand Cru 的酒標須強制標示官方甜度分級（sec/demi-sec/moelleux/doux），解決了長年「隱藏甜度」造成消費者困惑的問題。',
   },
   {
     type: 'quiz',
