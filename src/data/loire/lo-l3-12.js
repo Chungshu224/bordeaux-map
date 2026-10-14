@@ -10,12 +10,12 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          Level 3 是羅亞爾河谷最豐富的一個層次——從安茹片岩坡地的干型白詩南，到 Layon 河谷的頂級貴腐，再到 Sancerre 的燧石礦物雙雄，你已走過 32 個白酒和氣泡 AOC。這份評量將測試你對整個白詩南工藝光譜、中央產區土壤辨識、以及羅亞爾食物配對原理的掌握程度。
+          Level 3 是羅亞爾河谷最豐富的一個層次——從安茹片岩坡地的干型白詩南，到 Layon 河谷的頂級貴腐，再到 Sancerre 的燧石礦物雙雄，你已走過數十個白酒和氣泡 AOC。這份評量將測試你對整個白詩南工藝光譜、中央產區土壤辨識、以及羅亞爾食物配對原理的掌握程度。
         </p>
         <div class="exam-info">
           <div class="info-item">
             <h4>📝 評量範圍</h4>
-            <p>Level 3 全部 11 堂課（lo-l3-1 ～ lo-l3-11）共 32 個白酒/氣泡 AOC</p>
+            <p>Level 3 全部 11 堂課（lo-l3-1 ～ lo-l3-11）涵蓋數十個白酒／氣泡 AOC</p>
           </div>
           <div class="info-item">
             <h4>🎯 題目數量</h4>

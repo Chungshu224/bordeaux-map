@@ -15,7 +15,7 @@ export const lessonContent = [
         <div class="exam-info">
           <div class="info-item">
             <h4>📝 評量範圍</h4>
-            <p>Level 2 全部 8 堂課（lo-l2-1 ～ lo-l2-8）共 19 個紅/粉紅 AOC</p>
+            <p>Level 2 全部 8 堂課（lo-l2-1 ～ lo-l2-8）涵蓋多個紅／粉紅 AOC</p>
           </div>
           <div class="info-item">
             <h4>🎯 題目數量</h4>

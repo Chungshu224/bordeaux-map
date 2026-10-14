@@ -257,7 +257,7 @@ export const lessonContent = [
       </div>
     </div>`,
     quiz: {
-      question: '為什麼許多羅亞爾紅酒（如 Saint-Nicolas-de-Bourgueil）建議以比一般紅酒稍低的溫度（12-14°C）服侍？',
+      question: '為什麼許多羅亞爾紅酒（如 Saint-Nicolas-de-Bourgueil）建議以比一般紅酒稍低的溫度（14-16°C）服侍？',
       options: ['因為這些酒含有大量殘糖，低溫能凸顯甜度', '低溫服侍能讓清新的果香和酸度更加突出，正符合羅亞爾輕盈清新的風格', '這些酒不耐室溫，否則會氧化', '羅亞爾傳統就是冰鎮紅酒'],
       correct: 1,
       explanation: '羅亞爾輕盈型紅酒（如 Saint-Nicolas-de-Bourgueil、Gamay de Touraine）在稍低溫度下服侍，能讓清新的紅果果香（覆盆子、草莓）更加突出，同時保持天然高酸度帶來的活潑口感。若溫度過高（如 20°C），酒精感會上升，細緻的果香反而被掩蓋，失去這類酒最迷人的輕盈清新特質。'

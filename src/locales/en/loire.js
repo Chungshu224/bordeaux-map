@@ -2,7 +2,7 @@
 export default {
   selector: {
     breadcrumb: 'France · Loire Valley',
-    tagline: 'Loire Valley · Garden of France · Five Sub-Regions',
+    tagline: 'Loire Valley · Garden of France · Four Sub-Regions',
     title: 'Loire Valley Wines',
     subtitle: 'Loire Valley · Sancerre · Vouvray · Muscadet · Chinon',
     description: 'From the iodine-tinged Muscadet of Nantes, through Anjou\'s Chenin Blanc and Touraine\'s sparkling wines, to the twin stars of Sancerre and Pouilly-Fumé in the Central Vineyards—master France\'s most diverse wine valley.',

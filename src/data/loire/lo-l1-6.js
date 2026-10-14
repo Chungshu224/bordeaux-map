@@ -272,7 +272,7 @@ export const lessonContent = [
             <li><strong>「Silex」燧石：</strong>礦石感強烈，煙燻鐵礦香，代表村莊：Ménétréol</li>
           </ul>
           <p><strong>也生產：</strong>少量 Pinot Noir 紅酒（Sancerre Rouge）和粉紅酒，品質極高，常被誤認為輕盈的勃艮第</p>
-          <p><strong>著名生產者：</strong>Henri Bourgeois、Domaine Vacheron、Alphonse Mellot、Henri Pellé</p>
+          <p><strong>著名生產者：</strong>Henri Bourgeois、Domaine Vacheron、Alphonse Mellot</p>
         </div>
         <div class="flagship-aop">
           <h4>⭐ Pouilly-Fumé（普利福美）</h4>
@@ -326,7 +326,7 @@ export const lessonContent = [
       { id: 2, icon: '❄️', title: '最涼爽的羅亞爾子產區', content: '北方位置造就羅亞爾最涼爽的微氣候，Chenin Blanc 白酒酸度極高，個性鮮明，是收藏家的低調珍品' }
     ],
     content: `<div class="vallee-du-loir">
-      <p class="lead-text">Vallée du Loir 沿著羅亞爾河北方的支流「Loir 河」延伸（注意：是「Loir」不帶「e」，非羅亞爾主河「Loire」），從 Villiers-sur-Loir 到 Château-du-Loir 一帶。涼爽的氣候和以凝灰石（tuffeau）為主的土壤，孕育出個性鮮明的辛香紅酒和礦石白酒。</p>
+      <p class="lead-text">Vallée du Loir 沿著羅亞爾河北方「Loir 河」延伸（注意：是「Loir」不帶「e」，非羅亞爾主河「Loire」；Loir 河先匯入 Sarthe 河，再經 Maine 河流入羅亞爾河），從 Villiers-sur-Loir 到 Château-du-Loir 一帶。涼爽的氣候和以凝灰石（tuffeau）為主的土壤，孕育出個性鮮明的辛香紅酒和礦石白酒。</p>
       <div class="loir-stats">
         <div class="stat-box">
           <strong>官方描述</strong>：「Cap au nord, fraîcheur garantie！」（向北去，清爽有保障！）<br>
@@ -347,7 +347,7 @@ export const lessonContent = [
             <p><strong>評價：</strong>常被葡萄酒收藏家視為「最低調的羅亞爾頂級白酒」</p>
           </div>
           <div class="aop-card">
-            <h5>Coteaux du Loir（羅亞爾丘）</h5>
+            <h5>Coteaux du Loir（盧瓦爾河丘，Loir 河沿岸）</h5>
             <p><strong>品種：</strong>白酒：Chenin Blanc；紅酒/粉紅：Pineau d'Aunis、Gamay、Grolleau、Côt、Cabernet Franc</p>
             <p><strong>面積：</strong>約 200 公頃</p>
             <p><strong>土壤：</strong>凝灰石、黏土</p>

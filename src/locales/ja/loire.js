@@ -2,7 +2,7 @@
 export default {
   selector: {
     breadcrumb: 'フランス・ロワール渓谷',
-    tagline: 'ロワール渓谷・フランスの庭・五大サブリージョン',
+    tagline: 'ロワール渓谷・フランスの庭・四大サブリージョン',
     title: 'ロワール渓谷ワイン',
     subtitle: 'Loire Valley · Sancerre · Vouvray · Muscadet · Chinon',
     description: 'ナントのヨード香漂うミュスカデから、アンジュのシュナン・ブランとトゥーレーヌのスパークリング、そして中央産地サンセール双璧まで——フランス最多様なワイン渓谷を制覇。',

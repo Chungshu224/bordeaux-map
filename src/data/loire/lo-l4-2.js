@@ -10,7 +10,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          理論課累積了 Loire 河谷四大子產區、近 30 個 AOC 的知識；現在是時候將這些抽象概念視覺化。本課程使用 Mapbox GL JS + GeoJSON 技術，將 Loire 河谷完整地理結構互動呈現——你可以看到每個 AOC 的邊界、河流走向、土壤帶分布，並透過點擊探索每個產區的細節。
+          理論課累積了 Loire 河谷四大子產區、數十個 AOC 的知識；現在是時候將這些抽象概念視覺化。本課程使用 Mapbox GL JS + GeoJSON 技術，將 Loire 河谷完整地理結構互動呈現——你可以看到每個 AOC 的邊界、河流走向、土壤帶分布，並透過點擊探索每個產區的細節。
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">

@@ -34,7 +34,7 @@ export const lessonContent = [
     title: '安茹粉紅酒的甜度光譜',
     highlights: [
       { id: 1, icon: '🌸', title: "Cabernet-d'Anjou（微甜）", content: 'Cabernet Franc + Cabernet Sauvignon，法定殘糖 10–40 g/L，花香優雅，是法國最暢銷的甜型粉紅 AOC 之一' },
-      { id: 2, icon: '🍓', title: 'Rosé-d\'Anjou（微甜）', content: '以 Grolleau 為主，允許 Cabernet、Gamay，殘糖略高，更甜美易飲，年輕飲用' },
+      { id: 2, icon: '🍓', title: 'Rosé-d\'Anjou（微甜）', content: '以 Grolleau 為主，允許 Cabernet、Gamay，殘糖約 7–30 g/L，比 Cabernet-d'Anjou 略不甜，甜美易飲，年輕飲用' },
       { id: 3, icon: '🌹', title: 'Rosé-de-Loire（干型）', content: '干型粉紅，Cabernet Franc 主導（最少 30%），残糖 ≤ 3 g/L，是三者中最嚴肅精緻的粉紅酒' }
     ],
     content: `

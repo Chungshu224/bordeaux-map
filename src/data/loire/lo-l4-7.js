@@ -15,7 +15,7 @@ export const lessonContent = [
         <div class="exam-info">
           <div class="info-item">
             <h4>📝 評量範圍</h4>
-            <p>Level 1–4 全部 26 堂課，涵蓋羅亞爾河谷 58 個 AOC</p>
+            <p>Level 1–4 全部 36 堂課，涵蓋羅亞爾河谷數十個 AOC</p>
           </div>
           <div class="info-item">
             <h4>🎯 題目數量</h4>
