@@ -4,6 +4,7 @@
  */
 
 import { applyTranslations } from './lessonI18nUtils.js'
+import { applyAlsace } from '../components/alsace/data/alsaceI18n.js'
 
 // ── i18n overlay：以 import.meta.glob 預先索引各語系 lesson 翻譯 JSON ──
 // Vite 會把它們打成獨立 chunk（不會全部一次載入）
@@ -107,6 +108,8 @@ class LessonContentManager {
             const mod = await translationLoader()
             const flat = mod?.default || mod
             if (flat && typeof flat === 'object') {
+              // Loire 使用「路徑鍵」overlay（與阿爾薩斯相同格式），其餘課程沿用索引鍵
+              if (lessonId.startsWith('lo-')) return applyAlsace(baseContent, flat)
               return applyTranslations(baseContent, flat)
             }
           } catch (e) {
