@@ -230,9 +230,9 @@ const S1M2L2_slides = [
     title: '西班牙陳年等級（以 Rioja 紅酒為例）',
     items: [
       { icon: '🍇', label: 'Joven（新酒）', desc: '當年或次年上市，無橡木桶或極短桶陳，強調果味鮮活', color: '#27ae60' },
-      { icon: '🪵', label: 'Crianza', desc: '紅酒：最少 2 年（含 6 個月橡木桶）；白/粉：1 年', color: '#e67e22' },
-      { icon: '⭐', label: 'Reserva', desc: '紅酒：最少 3 年（含 1 年橡木桶）；白/粉：2 年', color: '#c0392b' },
-      { icon: '👑', label: 'Gran Reserva', desc: '紅酒：最少 5 年（含 18 個月橡木桶）；白/粉：4 年', color: '#8e44ad' },
+      { icon: '🪵', label: 'Crianza', desc: '紅酒：最少 24 個月（含 ≥ 12 個月橡木桶）；白/粉：18 個月（含 ≥ 6 個月橡木桶）', color: '#e67e22' },
+      { icon: '⭐', label: 'Reserva', desc: '紅酒：最少 36 個月（含 ≥ 12 個月橡木桶，其餘瓶陳）；白/粉：24 個月（含 ≥ 6 個月橡木桶）', color: '#c0392b' },
+      { icon: '👑', label: 'Gran Reserva', desc: '紅酒：最少 60 個月（含 ≥ 24 個月橡木桶，其餘瓶陳）；白/粉：48 個月（含 ≥ 6 個月橡木桶）', color: '#8e44ad' },
     ],
   },
   {
@@ -265,30 +265,30 @@ const S1M2L2_slides = [
     type: 'image',
     title: '🍷 酒標實例：Gran Reserva（最高等級）',
     image: '/spain/images/labels/rioja/rioja-bordon-gran-reserva-1999.jpg',
-    caption: 'Rioja Bordón Gran Reserva 1999（Bodegas Franco-Españolas，1890 年創立）——紅酒需陳年至少 5 年（含 18 個月橡木桶），是陳年最久、最傳統的等級。',
+    caption: 'Rioja Bordón Gran Reserva 1999（Bodegas Franco-Españolas，1890 年創立）——紅酒需陳年至少 5 年（含至少 24 個月橡木桶），是陳年最久、最傳統的等級。',
   },
   {
     type: 'quiz',
     question: 'Rioja 的 Gran Reserva 紅酒，最短需要多少年的總陳年時間（橡木桶 + 瓶中）？',
     options: ['2 年', '3 年', '5 年', '7 年'],
     answer: 2,
-    explanation: 'Gran Reserva 紅酒至少需要 5 年總陳年時間，其中在橡木桶中至少 18 個月，其餘在瓶中熟成。',
+    explanation: 'Gran Reserva 紅酒至少需要 5 年總陳年時間，其中在橡木桶中至少 24 個月（Rioja 與 Ribera del Duero 比全國通則的 18 個月更嚴格），其餘在瓶中熟成。',
   },
   {
     type: 'quiz',
     question: '在「rioja-aging」互動詳解中，Rioja「Crianza」紅酒最短需要在橡木桶中陳年多久？',
     options: ['6 個月', '12 個月', '18 個月', '24 個月'],
     answer: 1,
-    explanation: 'Crianza 紅酒規定：總陳年 ≥2 年，其中橡木桶（225L）陳年 ≥12 個月。與 Reserva（12 月桶陳、總 3 年）、Gran Reserva（18 月桶陳、總 5 年）完整區隔。這是你在超市選酒時最實用的「多長時間關鍵」。',
+    explanation: 'Crianza 紅酒規定：總陳年 ≥2 年，其中橡木桶（225L）陳年 ≥12 個月。與 Reserva（12 月桶陳、總 3 年）、Gran Reserva（24 月桶陳、總 5 年）完整區隔。西班牙全國通則的桶陳要求較短（Crianza 6／Reserva 12／Gran Reserva 18 個月），Rioja 與 Ribera del Duero 對紅酒採更嚴格的標準。這是你在超市選酒時最實用的「多長時間關鍵」。',
   },
   {
     type: 'summary',
     message: '陳年制度學習完成！',
     keyPoints: [
       'Joven：新鮮果味，無（或極少）橡木桶陳年',
-      'Crianza：最少 2 年（紅酒），含 6 個月橡木桶',
+      'Crianza：最少 2 年（紅酒），含 12 個月橡木桶',
       'Reserva：最少 3 年（紅酒），含 12 個月橡木桶',
-      'Gran Reserva：最少 5 年（紅酒），含 18 個月橡木桶',
+      'Gran Reserva：最少 5 年（紅酒），含 24 個月橡木桶（全國通則為 18 個月）',
       '美國橡木 = 香草椰子風；法國橡木 = 雪松烟燻風',
     ],
   },
@@ -5248,7 +5248,7 @@ const S2M4L1_slides = [
     items: [
       { icon: '🥂', label: 'Fino', desc: '最輕盈。Flor 酵母保護下生物熟成。15% 酒精。乾型。杏仁、青蘋果、咸鮮礦石。需冷藏飲用', color: '#f1c40f' },
       { icon: '🌊', label: 'Manzanilla', desc: '同 Fino，但只能在 Sanlúcar de Barrameda 生產。更多海洋鹽漬感。極輕盈清脆', color: '#3498db' },
-      { icon: '🍯', label: 'Amontillado', desc: 'Flor 死去後繼續氧化熟成。15-22% 酒精。榛子、太妃糖、蜂蜜、煙燻。介於 Fino 和 Oloroso 之間', color: '#e67e22' },
+      { icon: '🍯', label: 'Amontillado', desc: 'Flor 死去後繼續氧化熟成。16-22% 酒精。榛子、太妃糖、蜂蜜、煙燻。介於 Fino 和 Oloroso 之間', color: '#e67e22' },
       { icon: '🪵', label: 'Oloroso', desc: '沒有 Flor 保護，純氧化熟成。18-20% 酒精。核桃、皮革、乾果、香料。干型到中甜', color: '#784212' },
       { icon: '🍇', label: 'Pedro Ximénez（PX）', desc: '用日曬濃縮的 PX 葡萄乾釀製。極甜（> 200g/L 殘糖）。棗蜜漿、無花果乾、巧克力。可淋在冰淇淋上', color: '#1a1a1a' },
       { icon: '✨', label: 'Cream', desc: 'Oloroso 加入 PX 甜化調配。甜潤圓滑，是全球最暢銷的 Sherry 風格（如 Harvey\'s Bristol Cream）', color: '#c39bd3' },
@@ -6589,7 +6589,7 @@ const S3M2L3_slides = [
     subtitle: 'Level 3 · Joven · Reserva · Gran Reserva · de Paraje',
     points: [
       { icon: '🥂', label: 'Joven', text: '酒泥陳年 9 個月以上，清新果香，Brut 款最普遍' },
-      { icon: '⭐', label: 'Reserva', text: '15 個月以上，香氣複雜度明顯提升，性價比之選' },
+      { icon: '⭐', label: 'Reserva', text: '18 個月以上（2020 年新規；舊制為 15 個月），香氣複雜度明顯提升，性價比之選' },
       { icon: '👑', label: 'Gran Reserva', text: '30 個月以上，必須為 Brut Nature 或 Extra Brut 干型' },
       { icon: '🗺️', label: 'de Paraje Calificado', text: '2017 年新設，最嚴格的單一酒莊精品等級' },
     ],
@@ -6613,7 +6613,7 @@ const S3M2L3_slides = [
         </div>
         <div style="background:#e9f7ef;border-left:4px solid #27ae60;padding:12px;border-radius:0 10px 10px 0">
           <strong>⭐ Cava Reserva</strong><br/>
-          陳年時間：≥ 15 個月。開始出現酒泥香氣（餅乾、烤麵包）。果味與酵母感平衡發展。通常為年份款。
+          陳年時間：≥ 18 個月（2020 年新規，舊制為 15 個月）。開始出現酒泥香氣（餅乾、烤麵包）。果味與酵母感平衡發展。通常為年份款。
         </div>
         <div style="background:#f5eef8;border-left:4px solid #8e44ad;padding:12px;border-radius:0 10px 10px 0">
           <strong>👑 Cava Gran Reserva</strong><br/>
@@ -6650,7 +6650,7 @@ const S3M2L3_slides = [
     message: 'Cava 分類學習完成！',
     keyPoints: [
       'Joven：≥ 9 個月，清新果香，日常主力款',
-      'Reserva：≥ 15 個月，果味+酵母平衡，性價比高',
+      'Reserva：≥ 18 個月（2020 年新規，舊制 15 個月），果味+酵母平衡，性價比高',
       'Gran Reserva：≥ 30 個月，必須 Brut Nature 或 Extra Brut',
       'de Paraje Calificado（2017 年）：≥ 36 個月，單一莊園，Brut Nature，最高等級',
     ],
