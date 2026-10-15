@@ -224,7 +224,7 @@ const clusters = [
     center: [117.5, -34],
     zoom: 6,
     keyRegions: ['Margaret River', 'Great Southern', 'Swan District'],
-    desc: 'Margaret River 澳洲波爾多・Great Southern 五個 Region・印度洋海洋氣候影響下的精品主義。',
+    desc: 'Margaret River 澳洲波爾多・Great Southern 五個 Sub-Region・印度洋海洋氣候影響下的精品主義。',
     regionCount: 6,
     subRegionCount: 1,
     waCluster: 'Western Australia',

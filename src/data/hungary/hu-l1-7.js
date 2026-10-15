@@ -15,7 +15,7 @@ export const lessonContent = [
     title: '甜型白酒：Tokaji Aszú 與 Szamorodni',
     highlights: [
       { id: 1, icon: '🍯', title: 'Tokaji Aszú', content: '最著名的匈牙利酒款，以貴腐果漿釀製，殘糖 120 g/L 以上，蜂蜜、杏桃、橙皮蜜餞的層次感' },
-      { id: 2, icon: '🎭', title: 'Szamorodni', content: '「Szamorodni」意為「按原樣採收」，整串葡萄採收（含貴腐和普通果粒），可為干型（Száraz）或甜型（Édes）' },
+      { id: 2, icon: '🎭', title: 'Szamorodni', content: '「Szamorodni」意為「按原樣採收」，整串葡萄採收（含貴腐和普通果粒；貴腐果通常少於五成），可為干型（Száraz）或甜型（Édes）；依法須桶陳至少 2 年，風格偏氧化，有時桶中會形成類似 Sherry flor 的酵母膜' },
       { id: 3, icon: '💎', title: 'Eszencia', content: '純 Aszú 漿果自身重量壓出的果汁，糖度 450-800 g/L，是世界上最珍稀甜酒，一般只在最佳年份出產' },
       { id: 4, icon: '🏠', title: '橡木桶陳年', content: '傳統 Tokaji 在匈牙利橡木（Zemplén）或 Aszú 桶中陳年，帶有氧化性的棕色香料（榛子、蜂蠟、薑）複雜度' }
     ],
