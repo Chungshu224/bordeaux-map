@@ -418,6 +418,21 @@ const P1M2L1_slides = [
     explanation: 'Vinho Verde 是葡萄牙重要的 DOC（法定產區），規範了產區範圍、允許品種及釀造方式。注意：「Vinho Verde」意為「綠酒」，不代表等級，而是 DOC 名稱。',
   },
   {
+    type: 'content',
+    icon: '🏷️',
+    title: '酒標用語補充：VR、Reserva、Garrafeira',
+    html: `
+      <p>葡萄牙酒標上的幾個常見用語，各自有明確的法定下限：</p>
+      <ul>
+        <li><strong>Vinho Regional（VR）</strong>：至少 <strong>85%</strong> 的葡萄須來自標示的地區，可用品種範圍廣，且設有最低酒精度</li>
+        <li><strong>Reserva（靜態酒）</strong>：酒精度須比該 DOC／VR 的法定最低<strong>高至少 0.5%</strong>（個別 DOC 規定更嚴者從嚴）；傳統法氣泡酒標 Reserva 則表示瓶中酒渣陳年 <strong>≥ 12 個月</strong></li>
+        <li><strong>Colheita Seleccionada</strong>：酒精度比區域法定下限高至少 <strong>1%</strong></li>
+        <li><strong>Garrafeira</strong>（限有年份的 DOC／VR）：紅酒陳年 <strong>≥ 30 個月</strong>（其中瓶陳 ≥ 12 個月）；白酒與粉紅酒 <strong>≥ 12 個月</strong>（瓶陳 ≥ 6 個月）</li>
+      </ul>
+      <p style="margin-top:8px;font-size:0.85em;color:#666">依據 2011–2012 年的整理資料；各 DOC 另有更嚴格規定時，以該 DOC 為準。</p>
+    `,
+  },
+  {
     type: 'summary',
     message: '恭喜完成第五課！您已掌握葡萄牙葡萄酒分級制度。',
     keyPoints: [
@@ -1326,6 +1341,20 @@ const P2M5L2_slides = [
     mapRegion: 'Açores',
   },
   {
+    type: 'content',
+    icon: '🌋',
+    title: 'Açores 三個 DOC 補充',
+    html: `
+      <p>亞速爾三座有 DOC 的島嶼，風格各異：</p>
+      <ul>
+        <li><strong>Pico DOC</strong>：加烈白酒，加烈後酒精度須 ≥ <strong>16%</strong>，並桶陳 ≥ <strong>3 年</strong>；品種為 Verdelho、Arinto、Terrantez，葡萄園以玄武岩石牆庇護</li>
+        <li><strong>Biscoitos DOC</strong>（Terceira 島）：同樣以上述品種釀造加烈白酒</li>
+        <li><strong>Graciosa DOC</strong>：不加烈的乾白餐酒</li>
+      </ul>
+      <p style="margin-top:8px;font-size:0.85em;color:#666">依據 2011–2012 年的整理資料。</p>
+    `,
+  },
+  {
     type: 'summary',
     message: '恭喜完成亞速爾課程！',
     keyPoints: [
@@ -1778,6 +1807,20 @@ const P2M2L2_slides = [
     explanation: 'Bairrada Espumante 使用傳統法（Método Clássico），即在瓶中進行二次發酵，最低需在酒泥上陳年 9 個月（頂級款 18+ 個月），類似法國香檳的製作方式。',
   },
   {
+    type: 'content',
+    icon: '🍇',
+    title: 'Bairrada 法規補充',
+    html: `
+      <p>Bairrada DOC 的紅白酒品種規定：</p>
+      <ul>
+        <li>紅酒須含 <strong>≥ 50% Baga</strong>，可與 Touriga Nacional、Camarate、Castelão、Jaen、Alfrocheiro 調配</li>
+        <li>Baga 偏好黏土（barros）土壤；白葡萄（Maria Gomes＝Fernão Pires、Arinto）多種在較砂質的土壤</li>
+        <li>酒精度達 <strong>12.5%</strong>（DOC 一般下限為 11%）者，才能標示 <strong>Bairrada Clássico</strong></li>
+      </ul>
+      <p style="margin-top:8px;font-size:0.85em;color:#666">依據 2011–2012 年的整理資料。</p>
+    `,
+  },
+  {
     type: 'summary',
     message: '恭喜完成 Bairrada 課程！',
     keyPoints: [
@@ -2144,6 +2187,20 @@ const P2M3L2_slides = [
     explanation: 'Bucelas DOC 規定白酒必須使用至少 75% 的 Arinto 品種。Arinto 在 Bucelas 的石灰岩土壤中表現出色，展現清爽高酸和礦物質感，是葡萄牙最重要的白酒歷史 DOC 之一。',
   },
   {
+    type: 'content',
+    icon: '🏖️',
+    title: '里斯本三寶補充規定',
+    html: `
+      <p>三個靠近首都、面積持續縮小的 DOC：</p>
+      <ul>
+        <li><strong>Colares</strong>：紅酒須含 ≥ <strong>80% Ramisco</strong>、白酒須含 ≥ 80% Malvasia，都來自砂地上的未嫁接老藤，傳統種在溝中以抵擋海風；內陸較硬的 <em>chão rijo</em> 土壤產的紅酒則須含 ≥ 80% Castelão</li>
+        <li><strong>Carcavelos</strong>：僅剩約 25 公頃。紅酒須含 ≥ 75% Castelão 與 Preto Martinho；酒先發酵至干，再以 <em>vinho abafado</em>（以酒精中止發酵的葡萄汁）加烈增甜，桶陳 ≥ 2 年並瓶陳 ≥ 6 個月</li>
+        <li><strong>Bucelas</strong>：白酒須含 ≥ <strong>75% Arinto</strong></li>
+      </ul>
+      <p style="margin-top:8px;font-size:0.85em;color:#666">依據 2011–2012 年的整理資料。</p>
+    `,
+  },
+  {
     type: 'summary',
     message: '恭喜完成里斯本三寶課程！',
     keyPoints: [
@@ -2440,6 +2497,20 @@ const P2M4L2_slides = [
     options: ['Quinta do Crasto', 'José Maria da Fonseca', 'Esporão', 'Niepoort'],
     answer: 1,
     explanation: 'José Maria da Fonseca 創立於 1834 年，是 Moscatel de Setúbal 最重要的歷史生產商，保存了多個逾百年的陳年老 Moscatel，是葡萄牙酒業最珍貴的活歷史之一。',
+  },
+  {
+    type: 'content',
+    icon: '🍇',
+    title: 'Setúbal 與 Palmela 補充規定',
+    html: `
+      <p>Península de Setúbal 的兩個 DOC 各有清楚的品種門檻：</p>
+      <ul>
+        <li><strong>Moscatel de Setúbal</strong>：白酒須含 ≥ <strong>67%</strong> Moscatel de Setúbal（Muscat d’Alexandrie），紅酒（Roxo）須含 ≥ 67% Moscatel Roxo；單一品種標示則需達 <strong>85%</strong></li>
+        <li>發酵並加烈後，酒液會繼續與 Muscat 果皮<strong>浸泡長達約 6 個月</strong>，賦予濃郁花香；之後在大木桶中熟成最長約 5 年才上市，部分酒款可超過 20 年</li>
+        <li><strong>Palmela DOC</strong>：紅酒以 Castelão 為主，法定至少 <strong>66.7%</strong>；白酒大量使用 Fernão Pires 與 Arinto，也允許國際品種</li>
+      </ul>
+      <p style="margin-top:8px;font-size:0.85em;color:#666">依據 2011–2012 年的整理資料。</p>
+    `,
   },
   {
     type: 'summary',
@@ -4357,6 +4428,23 @@ const P3M2L3_slides = [
     ],
     answer: 1,
     explanation: 'Madeira 的百年陳年秘密在於三重保護：①充分氧化（Estufagem/Canteiro 工藝使酒完全穩定，不再因氧氣劣化）②高酒精（17–22%，抑制所有微生物）③高酸度（pH 3.0–3.2，抑制細菌並維持結構活力），三者共同造就了世界最長壽的葡萄酒。',
+  },
+  {
+    type: 'content',
+    icon: '📜',
+    title: 'Madeira 酒標與法規補充',
+    html: `
+      <p>幾個容易被忽略的 Madeira 法定細節：</p>
+      <ul>
+        <li>酒標寫品種名時，酒中須含 <strong>≥ 85%</strong> 該品種；<strong>Tinta Negra</strong> 約佔 Madeira 產量的 <strong>80–85%</strong>，卻不屬四大貴族品種，未標品種的平價款多以它為主</li>
+        <li><strong>Estufagem</strong>：加熱至約 45–50°C 並維持 3 個月，之後靜置 ≥ 90 天才入桶；採收後 <strong>2 年</strong>內不得上市。較溫和的 <em>armazéns de calor</em>（熱房）則以較低溫度加熱，最長約 1 年</li>
+        <li><strong>Canteiro</strong>：桶陳 ≥ 2 年（閣樓、朝南窗邊等自然熱源），<strong>≥ 3 年</strong>才可裝瓶；頂級者桶陳可超過 20 年</li>
+        <li><strong>Colheita</strong> 與 <strong>Frasqueira</strong> 都需 ≥ 85% 為標示年份的葡萄；Frasqueira 桶陳 ≥ 20 年，並須再瓶陳 ≥ 2 年才上市</li>
+        <li>非年份調配：<strong>Rainwater</strong>（美國市場受歡迎，以 Tinta Negra 為主、微甜輕盈，最年輕的酒 ≥ 3 年）、Finest／Choice（3–5 年）、Reserva（5–10 年）、Special Reserve（10–15 年）、Extra Reserve（15–20 年）</li>
+        <li><strong>Solera</strong> 分次調配的標示自葡萄牙加入歐盟後已禁止，市面上僅剩禁令前釀製的老酒</li>
+      </ul>
+      <p style="margin-top:8px;font-size:0.85em;color:#666">依據 2012 年前後的整理資料，細節以現行 IVBAM 規章為準。</p>
+    `,
   },
   {
     type: 'summary',

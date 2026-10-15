@@ -153,7 +153,7 @@ export const G1M1L2 = {
     {
       type: 'content',
       title: '🔍 Trocken & Halbtrocken',
-      content: '德國葡萄酒中，Trocken（乾型）和 Halbtrocken（半乾型）是描述成品酒中殘糖量的術語，與 Prädikat 等級無直接關係。例如，一瓶 Spätlese Trocken 是以晚採葡萄釀造但完全發酵至不甜的風格，保留了豐富的水果風味但無殘糖甜感。'
+      content: '德國葡萄酒中，Trocken（乾型）和 Halbtrocken（半乾型）是描述成品酒中殘糖量的術語，與 Prädikat 等級無直接關係。例如，一瓶 Spätlese Trocken 是以晚採葡萄釀造但完全發酵至不甜的風格，保留了豐富的水果風味但無殘糖甜感。\n\n另外，德國葡萄酒研究所（Mainz）自 2000 年份起推出兩個簡化的乾型標示：Classic（「和諧的乾型」，殘糖 ≤ 15 g/L、酒精 ≥ 12%（Mosel 為 11.5%）、單一品種、酒標不標葡萄園）與 Selection（「優質乾型」，殘糖 ≤ 9 g/L（Riesling 可到 12 g/L）、單一品種單一葡萄園、產量 ≤ 60 hL/ha、手工採收、採收隔年 9 月 1 日後才能上市）。'
     },
     {
       type: 'quiz',
