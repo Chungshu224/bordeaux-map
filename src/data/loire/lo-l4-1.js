@@ -1,6 +1,6 @@
 /**
  * LO-L4-1 奧弗涅丘——火山土壤精品
- * AOCs: Côtes-d'Auvergne + 5 crus: Boudes、Chateaugay、Corent、Madargues、Riom
+ * AOCs: Côtes-d'Auvergne + 5 crus: Boudes、Chanturgue、Chateaugay、Corent、Madargues
  */
 
 export const lessonContent = [
@@ -10,7 +10,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          法國中部的奧弗涅（Auvergne）是一片被遺忘的葡萄酒樂土——死火山、玄武岩、花崗岩交織成的古老地景，造就了法國最獨特的土壤條件之一。Côtes-d'Auvergne 的 Gamay 和 Pinot Noir 生長在 5 個各有性格的「cru」村莊，其中一個——Corent——的葡萄園就在一座死火山口之中！
+          法國中部的奧弗涅（Auvergne）是一片被遺忘的葡萄酒樂土——死火山、玄武岩、花崗岩交織成的古老地景，造就了法國最獨特的土壤條件之一。Côtes-d'Auvergne 的 Gamay 和 Pinot Noir 生長在 5 個各有性格的「cru」村莊，其中一個——Corent——的葡萄園就在死火山 Puy de Corent 的山坡上，而且是唯一專門生產粉紅酒的 cru！
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
@@ -20,7 +20,7 @@ export const lessonContent = [
           </div>
           <div class="point-item">
             <h4>🗺️ 掌握 Côtes-d'Auvergne 五個 cru 的差異</h4>
-            <p>從 Corent 的火山口葡萄園到 Boudes 的黑色玄武岩坡地，每個 cru 都有自己的獨特故事</p>
+            <p>從 Corent 的火山坡粉紅酒到 Boudes 的黑色玄武岩坡地，每個 cru 都有自己的獨特故事</p>
           </div>
           <div class="point-item">
             <h4>🍷 認識奧弗涅 Gamay 與布根地 Gamay 的差異</h4>
@@ -46,8 +46,8 @@ export const lessonContent = [
             <thead><tr><th>特性</th><th>火山土壤（玄武岩/花崗岩）</th><th>石灰岩/黏土</th></tr></thead>
             <tbody>
               <tr><td>礦物感</td><td>強烈的煙燻、鹽礦物、燧石</td><td>白堊、石灰岩的清新礦物</td></tr>
-              <tr><td>酸度</td><td>通常更高（土壤酸性較強）</td><td>較柔和圓潤</td></tr>
-              <tr><td>色素/酚類</td><td>更豐富（鐵鎂促進酚類合成）</td><td>較淡雅（石灰岩風格）</td></tr>
+              <tr><td>酸度</td><td>常見較清爽的酸度（受品種、海拔與採收期影響）</td><td>較柔和圓潤</td></tr>
+              <tr><td>色素/酚類</td><td>常見較深的顏色與較多酚類</td><td>較淡雅（石灰岩風格）</td></tr>
               <tr><td>代表性風味</td><td>黑果、煙燻、礦物、鮮味（umami）</td><td>紅果、白花、奶油、石灰感</td></tr>
             </tbody>
           </table>
@@ -61,11 +61,11 @@ export const lessonContent = [
       <div class="auvergne-crus">
         <div class="cru-grid">
           <div class="cru-card highlight">
-            <h4>🌋 Corent — 火山口中的葡萄園</h4>
-            <p><strong>地質：</strong>Puy de Corent 是一座死火山（puy），Corent 村的葡萄園就種植在這個古老火山口（caldera）的內壁上——這在全法國甚至全世界都極為罕見</p>
-            <p><strong>品種：</strong>以 Gamay 為主，主要生產粉紅酒（Rosé），是整個 Côtes-d'Auvergne 最有名的 cru</p>
+            <h4>🌋 Corent — 死火山山坡上的粉紅酒</h4>
+            <p><strong>地質：</strong>Puy de Corent 是一座死火山（puy），Corent 村的葡萄園就種植在這座古老火山的山坡上，土壤含玄武岩、火山渣（pozzolana）等火山物質</p>
+            <p><strong>品種：</strong>以 Gamay 為主，是 Côtes-d'Auvergne 唯一專門生產粉紅酒（Rosé）的 cru，也是最有名的 cru 之一</p>
             <p><strong>風格：</strong>Corent 的粉紅酒顏色極淡（接近洋蔥皮色），礦物感極強，有獨特的煙燻和火山岩感，在法國餐廳界越來越受到尊重</p>
-            <p><strong>特別之處：</strong>每年夏天，Corent 火山口頂部舉辦「奧弗涅火山葡萄酒節」，遊客可以在海拔 800 公尺的古老火山口中喝 Gamay 粉紅——這是法國最具戲劇性的葡萄酒體驗之一</p>
+            <p><strong>特別之處：</strong>在死火山的山坡上品嚐 Gamay 粉紅，是法國最具戲劇性的葡萄酒體驗之一</p>
           </div>
           <div class="cru-card">
             <h4>🖤 Boudes — 黑色玄武岩坡地</h4>
@@ -85,9 +85,9 @@ export const lessonContent = [
             <p><strong>風格：</strong>花崗岩賦予更高酸度，Madargues 的 Gamay 以清爽、低酒精（通常 11–12%）、礦物感強著稱；也生產品質佳的粉紅酒</p>
           </div>
           <div class="cru-card">
-            <h4>🌿 Riom — 最北的 cru</h4>
-            <p><strong>地質：</strong>火山灰 + 花崗岩</p>
-            <p><strong>特色：</strong>Riom 在 Clermont-Ferrand 以北，是五個 cru 中最涼爽的，出產最清爽、最礦物的 Pinot Noir，有時被比喻為「迷你 Gevrey-Chambertin」</p>
+            <h4>🌿 Chanturgue — 克萊蒙費宏近郊的小 cru</h4>
+            <p><strong>地點：</strong>位於 Clermont-Ferrand 近郊的 Puy de Chanturgue 山坡，是五個 cru 中最小、最少見的一個</p>
+            <p><strong>特色：</strong>歷史上曾以紅酒聞名，現今產量極少，在市場上很難見到</p>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export const lessonContent = [
     componentProps: {
       slide: {
         title: 'Côtes-d\'Auvergne 五 Cru 地圖',
-        description: '奧弗涅火山鏈上的五個 Cru——Corent（火山口）、Boudes（玄武岩）、Chateaugay（城堡山）、Madargues（花崗岩）、Riom（最北）的分布位置',
+        description: '奧弗涅火山鏈上的五個 Cru——Corent（死火山坡）、Boudes（玄武岩）、Chanturgue（近郊小 cru）、Chateaugay（城堡山）、Madargues（花崗岩）的分布位置',
         mapGroup: 'MassifCentral',
         highlightFiles: ['Côtes-dAuvergne-Corent.geojson', 'Côtes-dAuvergne-Boudes.geojson', 'Côtes-dAuvergne-Chateaugay.geojson', 'Côtes-dAuvergne-Madargues.geojson'],
       }
@@ -122,8 +122,8 @@ export const lessonContent = [
             <tr><td>市場知名度</td><td>低（奧弗涅在外市場幾乎不存在）</td><td>全球知名（Beaujolais Nouveau 文化）</td></tr>
           </tbody>
         </table>
-        <p><strong>代表酒莊：</strong>Domaine Rougeyron（Corent 最知名）、Cave Saint-Verny（奧弗涅規模最大的酒商，多個 cru）</p>
-        <p><strong>旅遊提示：</strong>奧弗涅火山鏈（Chaine des Puys）在 2018 年列入 UNESCO 世界遺產，造訪 Corent 火山口葡萄園是羅亞爾河谷旅遊的必選行程之一。</p>
+        <p><strong>代表酒莊：</strong>Cave Saint-Verny（奧弗涅規模最大的酒商，多個 cru）</p>
+        <p><strong>旅遊提示：</strong>奧弗涅火山鏈（Chaine des Puys）在 2018 年列入 UNESCO 世界遺產，造訪 Corent 山坡葡萄園是奧弗涅旅遊的亮點之一。</p>
       </div>
     `
   },
@@ -136,12 +136,12 @@ export const lessonContent = [
         question: 'Côtes-d\'Auvergne Corent cru 最特別之處是什麼？',
         options: [
           '它是五個 cru 中面積最大、產量最多的',
-          '葡萄園種植在一座死火山口（caldera）的內壁上，是法國最獨特的葡萄園地形之一',
+          '它是 Côtes-d\'Auvergne 唯一專門生產粉紅酒的 cru，葡萄園在死火山 Puy de Corent 的山坡上',
           '它是唯一允許種植 Chenin Blanc 的奧弗涅 cru',
           '它的葡萄酒必須在海底進行陳年（水下酒窖）'
         ],
         correctIndex: 1,
-        explanation: 'Corent 村的葡萄園種植在 Puy de Corent 死火山口（caldera）的內壁上，海拔約 800 公尺，這種地形在全法國甚至全世界都極為罕見。火山口的特殊微氣候和玄武岩/火山灰土壤賦予 Corent 粉紅酒極強的礦物感和煙燻感。'
+        explanation: 'Corent 是 Côtes-d\'Auvergne 五個 cru 中唯一專門生產粉紅酒的，葡萄園位於 Puy de Corent 這座死火山的山坡上。火山土壤賦予 Corent 粉紅酒極強的礦物感和煙燻感。'
       },
       {
         id: 'q2',

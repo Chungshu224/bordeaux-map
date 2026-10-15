@@ -16,11 +16,11 @@ export const lessonContent = [
         <div class="learning-points">
           <div class="point-item">
             <h4>🌿 認識 Romorantin — 世界最稀有品種之一</h4>
-            <p>Cour-Cheverny AOC 是全球唯一允許 Romorantin 品種的 AOC，這個品種幾乎只在 Cour-Cheverny 的 100 公頃土地上存活</p>
+            <p>Cour-Cheverny AOC 是全球唯一允許 Romorantin 品種的 AOC，這個品種幾乎只在 Cour-Cheverny 僅數十公頃（約 50 公頃上下）的土地上存活</p>
           </div>
           <div class="point-item">
             <h4>🏰 掌握 Cheverny 的多品種混調邏輯</h4>
-            <p>Sauvignon Blanc + Chardonnay + Chenin 的混調如何在城堡附近的砂礫土上展現獨特個性</p>
+            <p>Sauvignon Blanc 為主，加入 Chardonnay、Chenin 等的混調如何在城堡附近的砂礫土上展現獨特個性</p>
           </div>
           <div class="point-item">
             <h4>🗺️ 了解 Valençay 的地理位置和品種特色</h4>
@@ -34,13 +34,13 @@ export const lessonContent = [
     title: 'Cheverny AOC — 城堡旁的優雅混調白酒',
     highlights: [
       { id: 1, icon: '🏰', title: 'Château de Cheverny', content: 'Cheverny AOC 以著名的 Château de Cheverny（丁丁歷險記中的 Moulinsart 城堡原型）為地標，葡萄園環繞城堡分布' },
-      { id: 2, icon: '🍇', title: '混調法規', content: '白酒：Sauvignon Blanc 最少 50% + Chardonnay + Chenin Blanc（少量允許）。這種混調賦予 Cheverny 比純 Sauvignon Blanc 更圓潤的質地' },
+      { id: 2, icon: '🍇', title: '混調法規', content: '白酒：Sauvignon（含 Sauvignon Gris）佔 60–84%，Chardonnay、Chenin、Orbois 等佔 16–40%。這種混調賦予 Cheverny 比純 Sauvignon Blanc 更圓潤的質地' },
       { id: 3, icon: '🪨', title: '砂礫土壤', content: '都漢平原的砂質礫石土，排水極佳，造就清新輕盈、果香純粹的白酒，酸度中等，適合年輕 1–4 年飲用' }
     ],
     content: `
       <div class="cheverny-content">
-        <p><strong>Cheverny AOC</strong>（1993 年獲認，包含紅酒、白酒和粉紅）最重要的特色是其白酒的混調邏輯：以 Sauvignon Blanc 主導，但 Chardonnay 的加入（20–40%）帶來橡木發酵的圓潤感和更豐富的酒體，讓它有別於純粹的 Sauvignon Blanc 風格（如 Sancerre）。</p>
-        <p>紅酒以 Gamay 和 Pinot Noir 為主（允許少量 Cabernet Franc），風格輕盈，是週間餐酒的絕佳選擇。整體來說，Cheverny 是都漢性價比最高的精品 AOC 之一，均價 €12–20。</p>
+        <p><strong>Cheverny AOC</strong>（1993 年獲認，包含紅酒、白酒和粉紅）最重要的特色是其白酒的混調邏輯：以 Sauvignon Blanc 主導，但 Chardonnay 等品種的加入（合計 16–40%）帶來更圓潤的質地和更豐富的酒體，讓它有別於純粹的 Sauvignon Blanc 風格（如 Sancerre）。</p>
+        <p>紅酒以 Pinot Noir 為主（60–84%）、Gamay 為輔（16–40%），另允許少量 Cabernet Franc、Côt，風格輕盈，是週間餐酒的絕佳選擇。整體來說，Cheverny 是都漢性價比最高的精品 AOC 之一，均價 €12–20。</p>
         <p><strong>代表酒莊：</strong>Domaine du Salvard（有機農法，Cheverny 最知名精品莊）、Domaine Tesier</p>
       </div>
     `
@@ -49,7 +49,7 @@ export const lessonContent = [
     title: 'Cour-Cheverny AOC — Romorantin 的最後庇護所',
     content: `
       <div class="cour-cheverny-section">
-        <p><strong>Cour-Cheverny AOC</strong> 是一個極其特殊的存在：它是全球唯一允許種植和釀造 <strong>Romorantin</strong> 品種的 AOC，這個品種幾乎已經從法國葡萄酒版圖上消失，唯在 Cour-Cheverny 的 100 公頃土地上頑強存活。</p>
+        <p><strong>Cour-Cheverny AOC</strong> 是一個極其特殊的存在：它是全球唯一允許種植和釀造 <strong>Romorantin</strong> 品種的 AOC，這個品種幾乎已經從法國葡萄酒版圖上消失，唯在 Cour-Cheverny 僅數十公頃的土地上頑強存活。</p>
         <div class="romorantin-profile">
           <h4>🌿 Romorantin 品種檔案</h4>
           <div class="profile-grid">
@@ -111,19 +111,19 @@ export const lessonContent = [
           '它是都漢唯一的 Grand Cru 等級'
         ],
         correctIndex: 1,
-        explanation: 'Cour-Cheverny AOC 是全球唯一允許 Romorantin 品種（100%）的法定產區，這個幾近絕種的品種只在 Cour-Cheverny 的約 100 公頃土地上存活，展現出高酸度、燧石礦物感的獨特風格。'
+        explanation: 'Cour-Cheverny AOC 是全球唯一允許 Romorantin 品種（100%）的法定產區，這個幾近絕種的品種只在 Cour-Cheverny 僅數十公頃的土地上存活，展現出高酸度、燧石礦物感的獨特風格。'
       },
       {
         id: 'q2',
         question: 'Cheverny AOC 白酒的混調特色為何能區別於純粹的 Sauvignon Blanc 風格？',
         options: [
           '因為加入了 Chenin Blanc 的蜂蜜甜感',
-          'Chardonnay 的加入（20–40%）帶來橡木發酵的圓潤感和更豐富酒體，讓它比純 Sauvignon Blanc 更圓潤',
+          'Chardonnay 等品種的加入（合計 16–40%）帶來更圓潤的質地和更豐富酒體，讓它比純 Sauvignon Blanc 更圓潤',
           '因為使用了大量新橡木桶陳年',
           '因為混入了 Cabernet Franc，增加複雜度'
         ],
         correctIndex: 1,
-        explanation: 'Cheverny 白酒的獨特性在於 Sauvignon Blanc（最少 50%）+ Chardonnay 的混調——Chardonnay 帶來圓潤的酒體和橡木陳年的複雜度，讓 Cheverny 比純 Sauvignon Blanc 風格（如 Sancerre）更有層次和飽滿感。'
+        explanation: 'Cheverny 白酒的獨特性在於 Sauvignon（60–84%）+ Chardonnay／Chenin／Orbois（16–40%）的混調——Chardonnay 等品種帶來圓潤的酒體，讓 Cheverny 比純 Sauvignon Blanc 風格（如 Sancerre）更有層次和飽滿感。'
       }
     ]
   }

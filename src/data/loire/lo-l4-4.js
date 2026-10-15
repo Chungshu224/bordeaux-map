@@ -119,7 +119,7 @@ export const lessonContent = [
                 <tr><td>20–30 年</td><td>榛果、蘑菇、碘礦物、白松露</td><td>最佳狀態，一生難忘</td></tr>
               </tbody>
             </table>
-            <p class="note">Nicolas Joly 曾說：「Coulée de Serrant 需要 12 年才開始說話，20 年才說出它想說的話。」</p>
+            <p class="note">許多品飲者的共識是：頂級 Coulée de Serrant 需要十年以上才會開始展開。</p>
           </div>
         </div>
       </div>

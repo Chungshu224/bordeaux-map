@@ -16,7 +16,7 @@ export const lessonContent = [
         <div class="learning-points">
           <div class="point-item">
             <h4>🍯 深入認識 Quarts-de-Chaume Grand Cru</h4>
-            <p>羅亞爾河谷唯一的 Grand Cru 等級 AOC（直到 2011 年），35 公頃的微型產區</p>
+            <p>羅亞爾河谷唯一的 Grand Cru 等級 AOC（2011 年通過），約 40 公頃的微型產區</p>
           </div>
           <div class="point-item">
             <h4>🌺 理解 Bonnezeaux 的獨特風土</h4>
@@ -46,7 +46,7 @@ export const lessonContent = [
           <ol>
             <li>清晨霧氣提供濕度，菌絲穿入葡萄皮（但葡萄仍完整，不腐爛）</li>
             <li>午後陽光乾燥，蒸發水分，葡萄皮皺縮（「rôti」= 烤過一般）</li>
-            <li>糖度從 20% 濃縮至 30–40%，酸度同步提升，特殊的「貴腐香氣」（蜂蜜、薑、橙皮、杏桃乾）形成</li>
+            <li>糖度從 20% 濃縮至 30–40%，Chenin 的高酸度仍能支撐甜度，特殊的「貴腐香氣」（蜂蜜、薑、橙皮、杏桃乾）形成</li>
           </ol>
         </div>
       </div>
@@ -58,7 +58,7 @@ export const lessonContent = [
     componentProps: {
       slide: {
         title: 'Layon 甜酒帶地圖',
-        description: 'Layon 河谷甜酒三層級——廣域 Coteaux-du-Layon、精選 Bonnezeaux（92 ha）、頂峰 Quarts-de-Chaume Grand Cru（35 ha）的嵌套地理',
+        description: 'Layon 河谷甜酒三層級——廣域 Coteaux-du-Layon、精選 Bonnezeaux（約 80–120 ha）、頂峰 Quarts-de-Chaume Grand Cru（約 40 ha）的嵌套地理',
         mapGroup: 'AnjouSaumur',
         highlightFiles: ['Coteaux-du-Layon.geojson', 'Bonnezeaux.geojson', 'Quarts-de-Chaume.geojson'],
       }
@@ -69,11 +69,11 @@ export const lessonContent = [
     title: 'Quarts-de-Chaume Grand Cru — 羅亞爾的頂峰',
     content: `
       <div class="quarts-de-chaume">
-        <p><strong>Quarts-de-Chaume</strong>（AOC 成立 1954 年，Grand Cru 稱號 2011 年獲正式法規承認）是羅亞爾河谷面積最小、最珍貴的甜酒產區。</p>
+        <p><strong>Quarts-de-Chaume</strong>（AOC 成立 1954 年，Grand Cru 稱號 2011 年獲正式法規承認，2010 年份起適用）是羅亞爾河谷面積最小、最珍貴的甜酒產區。</p>
         <div class="qdc-facts">
           <div class="fact-item">
-            <h4>📐 面積：約 35 公頃</h4>
-            <p>之所以如此珍稀，因為法律規定只有在這 35 公頃的特定坡地上生產的酒才可使用這個名稱。4 個主要生產者，每年總產量僅約 75,000 瓶。</p>
+            <h4>📐 面積：約 40 公頃</h4>
+            <p>之所以如此珍稀，因為法律規定只有在這約 40 公頃的特定坡地上生產的酒才可使用這個名稱，生產者屈指可數，總產量極少。</p>
           </div>
           <div class="fact-item">
             <h4>🪨 地質：石英岩 + 片岩</h4>
@@ -88,7 +88,7 @@ export const lessonContent = [
           <h4>🍷 風格特色</h4>
           <p><strong>年輕時（1–5 年）：</strong>金黃色澤，蜂蜜、新鮮杏桃、白桃、金合歡花、薑的清新甜感，酸度高達 pH 3.2，完美平衡甜度</p>
           <p><strong>陳年後（10–30 年）：</strong>深金棕色，橙皮蜜餞、薑糖、烤椰子、太妃糖、烤榛果、煙燻礦物的複雜演化，稱為「rancio」特質，是羅亞爾最神秘的陳年轉化之一</p>
-          <p><strong>代表酒莊：</strong>Château-Bellerive（Domaine des Baumard 的旗艦）、Domaine Ogereau、Château de la Roche-aux-Moines（Nicolas Joly）</p>
+          <p><strong>代表酒莊：</strong>Domaine des Baumard、Château Pierre-Bise、Château de Bellerive</p>
         </div>
       </div>
     `
@@ -107,7 +107,7 @@ export const lessonContent = [
           <table>
             <thead><tr><th>特色</th><th>Quarts-de-Chaume</th><th>Bonnezeaux</th></tr></thead>
             <tbody>
-              <tr><td>面積</td><td>35 公頃（微型）</td><td>92 公頃（小型）</td></tr>
+              <tr><td>面積</td><td>約 40 公頃（微型）</td><td>約 80–120 公頃（小型）</td></tr>
               <tr><td>土壤</td><td>石英岩 + 片岩（淺色）</td><td>深紫色片岩（更保熱）</td></tr>
               <tr><td>風格</td><td>精緻、礦物感強、緊緻</td><td>豐潤、奔放、熱帶果香更明顯</td></tr>
               <tr><td>香氣</td><td>薑、金合歡、白桃</td><td>芒果、百香果、熱帶蜂蜜</td></tr>

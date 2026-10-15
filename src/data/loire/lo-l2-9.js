@@ -15,7 +15,7 @@ export const lessonContent = [
         <div class="exam-info">
           <div class="info-item">
             <h4>📝 評量範圍</h4>
-            <p>Level 2 全部 8 堂課（lo-l2-1 ～ lo-l2-8）共 19 個紅/粉紅 AOC</p>
+            <p>Level 2 全部 8 堂課（lo-l2-1 ～ lo-l2-8）涵蓋多個紅／粉紅 AOC</p>
           </div>
           <div class="info-item">
             <h4>🎯 題目數量</h4>
@@ -50,12 +50,12 @@ export const lessonContent = [
         question: 'Saumur-Champigny 最知名的傳奇酒莊是哪一個？',
         options: [
           'Charles Joguet（Chinon 精品莊）',
-          'Clos Rougeard（Foucault 兄弟，大橡木桶傳統陳年）',
+          'Clos Rougeard（Foucault 兄弟，橡木桶長期培養）',
           'Domaine de Bellivière（Loir 河谷自然酒）',
           'Domaine de la Chevalerie（Bourgueil 傳統派）'
         ],
         correctIndex: 1,
-        explanation: 'Clos Rougeard（Foucault 兄弟創立，現屬 Bouygues 集團）是 Saumur-Champigny 最傳奇的酒莊，以古老大型橡木桶（foudres）長期陳年，頂款 Le Bourg 在二手市場達 €300–500+/瓶，被稱為「羅亞爾的 Romanée-Conti」。'
+        explanation: 'Clos Rougeard（Foucault 兄弟創立，現屬 Bouygues 集團）是 Saumur-Champigny 最傳奇的酒莊，以橡木桶（Le Bourg 為全新重烘烤新桶）長期培養，頂款 Le Bourg 在二手市場價格極高，被稱為「羅亞爾的 Romanée-Conti」。'
       },
       {
         id: 'q3',
@@ -83,15 +83,15 @@ export const lessonContent = [
       },
       {
         id: 'q5',
-        question: 'Chinon 的三種土壤類型中，哪一種最適合搭配 Rillettes de Tours？為什麼？',
+        question: 'Chinon 的三種土壤類型中，哪一種「輕盈、高酸、低單寧」的風格最適合切割 Rillettes de Tours 的豐厚油脂？',
         options: [
           '高台黏土石灰岩（plateau）——單寧最緊實，與油脂最相配',
-          '凝灰岩坡地（coteau）——中等結構，酸度充足，礦物感與鹹豬肉互補',
+          '凝灰岩坡地（coteau）——結構較緊實、需要陳年，更適合配羊腿等大塊紅肉',
           '礫石平地（graviers）——輕盈清新，酸度高，切割油脂效果最佳',
           '三種都不適合，應改喝白酒'
         ],
         correctIndex: 2,
-        explanation: '礫石平地（graviers）的 Chinon 最輕盈，酸度最清爽，能有效切割 Rillettes 的豐厚油脂，且年輕飲用時的草莓和紫羅蘭果香與鹹肉形成甜鹹對比。凝灰岩坡地的 Chinon 也很適合，但更適合配羊腿等更豐厚的肉類。'
+        explanation: '礫石平地（graviers）的 Chinon 最輕盈，酸度最清爽，能有效切割 Rillettes 的豐厚油脂，且年輕飲用時的草莓和紫羅蘭果香與鹹肉形成甜鹹對比。凝灰岩坡地與高台黏土石灰岩的 Chinon 結構更緊實，更適合配羊腿等更豐厚的肉類。'
       }
     ]
   }

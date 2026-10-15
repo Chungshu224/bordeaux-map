@@ -11,7 +11,7 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          來到中央羅亞爾（Centre-Loire），意味著羅亞爾河之旅即將抵達源頭——這裡的氣候已轉為半大陸型，土壤從凝灰岩切換為侏羅紀晚期的 <strong>Kimmeridgian 泥灰岩</strong>、<strong>Silex 燧石</strong>與<strong>白堊石灰岩</strong>三巨頭。Sancerre 與 Pouilly-Fumé 隔河相望，卻造就了 Sauvignon Blanc 在世界舞台上的最高典範。
+          來到中央羅亞爾（Centre-Loire），意味著羅亞爾河之旅已深入法國內陸、進入河的上游——這裡的氣候已轉為半大陸型，土壤從凝灰岩切換為侏羅紀晚期的 <strong>Kimmeridgian 泥灰岩</strong>、<strong>Silex 燧石</strong>與<strong>白堊石灰岩</strong>三巨頭。Sancerre 與 Pouilly-Fumé 隔河相望，卻造就了 Sauvignon Blanc 在世界舞台上的最高典範。
         </p>
         <h3 class="section-title">本課程學習目標</h3>
         <div class="learning-points">
@@ -37,15 +37,15 @@ export const lessonContent = [
   },
 
   {
-    title: '中央羅亞爾——羅亞爾河的源頭精品',
+    title: '中央羅亞爾——羅亞爾河上游的精品',
     highlights: [
       { id: 1, icon: '⛰️', title: '半大陸型氣候', content: '冬寒夏熱、溫差大，葡萄保留集中香氣，亦帶來春霜風險' },
-      { id: 2, icon: '🌊', title: '羅亞爾河源頭', content: '此處羅亞爾河蜿蜒於 Sancerre 高地與 Pouilly 平原之間，河流影響微氣候' },
+      { id: 2, icon: '🌊', title: '羅亞爾河上游', content: '此處羅亞爾河蜿蜒於 Sancerre 高地與 Pouilly 平原之間，河流影響微氣候' },
       { id: 3, icon: '🍇', title: '兩大主角', content: 'Sauvignon Blanc 為主，Pinot Noir 釀製粉紅與紅酒（僅 Sancerre 可釀紅）' }
     ],
     content: `
       <div class="loire-centre-overview">
-        <p class="lead-text">中央羅亞爾位於法國中部 Bourges 城以南，距離羅亞爾河出海口已超過 700 公里。這裡的氣候、土壤與葡萄品種，與西部 Muscadet、安茹的 Chenin Blanc 世界完全不同——Sauvignon Blanc 在這裡找到了它的精神原點。</p>
+        <p class="lead-text">中央羅亞爾位於法國中部 Bourges 東北方，沿河距離出海口約 500 公里（羅亞爾河全長約 1,000 公里，源頭在更南邊的 Ardèche 山區）。這裡的氣候、土壤與葡萄品種，與西部 Muscadet、安茹的 Chenin Blanc 世界完全不同——Sauvignon Blanc 在這裡找到了它的精神原點。</p>
         <div class="key-facts">
           <h4>📐 中央羅亞爾基本數據</h4>
           <ul>
@@ -67,7 +67,7 @@ export const lessonContent = [
         '中央羅亞爾受地中海影響'
       ],
       correct: 0,
-      explanation: '中央羅亞爾距離大西洋約 350 公里，已脫離海洋型氣候影響。半大陸型氣候帶來明顯的日夜與季節溫差，這正是 Sauvignon Blanc 能發展出集中香氣與礦物張力的關鍵條件，但同時也帶來春霜風險（如 2016、2017、2021 等年份多次受損）。'
+      explanation: '中央羅亞爾距離大西洋直線超過 400 公里，已脫離海洋型氣候影響。半大陸型氣候帶來明顯的日夜與季節溫差，這正是 Sauvignon Blanc 能發展出集中香氣與礦物張力的關鍵條件，但同時也帶來春霜風險（如 2016、2017、2021 等年份多次受損）。'
     }
   },
 
@@ -212,10 +212,10 @@ export const lessonContent = [
         <div class="satellite-grid">
           <div class="satellite-block">
             <h4>🍃 Menetou-Salon</h4>
-            <p><strong>地理：</strong>Sancerre 西南方約 30 公里</p>
+            <p><strong>地理：</strong>Sancerre 西南方約 20 公里</p>
             <p><strong>土壤：</strong>主要為 Kimmeridgian 泥灰岩（與 Sancerre Terres Blanches 同源）</p>
             <p><strong>品種：</strong>Sauvignon Blanc（白）、Pinot Noir（紅/粉紅）</p>
-            <p><strong>風格：</strong>近似 Sancerre Terres Blanches 風格，礦物感強、價格約 Sancerre 60–70%</p>
+            <p><strong>風格：</strong>近似 Sancerre Terres Blanches 風格，礦物感強、價格通常比 Sancerre 親民</p>
             <p><strong>名家：</strong>Henry Pellé、Domaine de l'Ermitage</p>
           </div>
           <div class="satellite-block">
@@ -273,7 +273,7 @@ export const lessonContent = [
           '氣候差異極大'
         ],
         correctIndex: 1,
-        explanation: '兩者氣候相同（隔著羅亞爾河，距離僅 5 公里）、品種相同（皆以 Sauvignon Blanc 為主）。最關鍵的差異在於土壤：Pouilly-Fumé 約 60% 為燧石，產生強烈煙燻 pierre à fusil 風格；Sancerre 則三種土壤並存（Caillottes 40% / Terres Blanches 40% / Silex 20%），產出更多元的風格光譜。'
+        explanation: '兩者氣候相同（隔著羅亞爾河，距離僅 5 公里）、品種相同（皆以 Sauvignon Blanc 為主）。最關鍵的差異在於土壤：Pouilly-Fumé 以 Kimmeridgian 泥灰岩為主，並以 Silex 燧石的 pierre à fusil 煙燻風格聞名；Sancerre 則 Caillottes、Terres Blanches、Silex 三種土壤並存，產出更多元的風格光譜。'
       },
       {
         id: 'q2',

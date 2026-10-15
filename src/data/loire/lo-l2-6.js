@@ -42,7 +42,7 @@ export const lessonContent = [
         <p><strong>Pineau d'Aunis</strong> 是羅亞爾河谷最具個性的本地品種——它不像 Cabernet Franc 那樣廣為人知，不像 Chenin Blanc 那樣被全球討論，但它擁有任何國際品種都無法複製的獨特辛香個性。</p>
         <div class="variety-profile">
           <h4>🔬 品種科學檔案</h4>
-          <p><strong>別名：</strong>Chenin Noir（雖然與 Chenin Blanc 無基因關係），Gris Cot</p>
+          <p><strong>別名：</strong>Chenin Noir（雖然與 Chenin Blanc 無親緣關係）</p>
           <p><strong>DNA 親緣：</strong>基因研究顯示 Pineau d'Aunis 是羅亞爾河谷最古老的本土品種之一，與其他主流品種的親緣關係遠</p>
           <p><strong>農業特性：</strong>早熟，對春霜敏感，中等產量，有機農法下表現尤佳</p>
         </div>
@@ -61,11 +61,11 @@ export const lessonContent = [
         <div class="aoc-comparison">
           <div class="aoc-item">
             <h4>🌊 Coteaux-du-Loir</h4>
-            <p><strong>位置：</strong>Loir 河（La Chartre-sur-le-Loir 附近，索米爾西北方）</p>
+            <p><strong>位置：</strong>Loir 河（La Chartre-sur-le-Loir 附近，索米爾東北方）</p>
             <p><strong>土壤：</strong>凝灰岩和矽質砂岩，向陽坡地</p>
             <p><strong>品種：</strong>紅酒以 Pineau d'Aunis 和 Cabernet Franc 為主；也有白酒（Chenin Blanc）</p>
             <p><strong>風格：</strong>是整個羅亞爾河谷氣候最涼爽的 AOC 之一，Pineau d'Aunis 在這裡展現最純粹的辛香特色</p>
-            <p><strong>代表酒莊：</strong>Domaine de Bellivière（Nicolas Joly 弟子 Éric Nicolas），是 Loir 河谷最重要的精品莊</p>
+            <p><strong>代表酒莊：</strong>Domaine de Bellivière（Éric Nicolas），是 Loir 河谷最重要的精品莊之一</p>
           </div>
           <div class="aoc-item">
             <h4>🌾 Coteaux-du-Vendômois</h4>
@@ -82,7 +82,7 @@ export const lessonContent = [
     title: 'Orléans 與 Orléans-Cléry — 最北的羅亞爾 AOC',
     content: `
       <div class="orleans-section">
-        <p>奧爾良（Orléans）位於羅亞爾河谷最東端，也是整個法定產區的最北端，氣候接近巴黎盆地，是羅亞爾河谷中最強調有機農法和自然酒的產區之一。</p>
+        <p>奧爾良（Orléans）位於羅亞爾河谷的最北端，氣候接近巴黎盆地，是羅亞爾河谷中最強調有機農法和自然酒的產區之一。</p>
         <div class="orleans-aocs">
           <div class="aoc-card">
             <h4>🏛️ Orléans AOC（2006 年獲認）</h4>

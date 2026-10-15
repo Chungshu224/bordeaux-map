@@ -69,7 +69,7 @@ export const lessonContent = [
         <div class="soil-tasting-grid">
           <div class="soil-card">
             <h4>🔥 燧石（Silex）</h4>
-            <p><strong>分布：</strong>Bué 村和 Ménétréol 村周邊</p>
+            <p><strong>分布：</strong>Saint-Satur、Ménétréol 一帶</p>
             <p><strong>外觀：</strong>淺金黃色，帶綠色光澤，顏色偏淺</p>
             <p><strong>香氣指紋：</strong>
               <ul>
@@ -97,7 +97,7 @@ export const lessonContent = [
           </div>
           <div class="soil-card">
             <h4>🪨 Caillottes（石灰岩礫石）</h4>
-            <p><strong>分布：</strong>Verdigny 村和平緩坡地</p>
+            <p><strong>分布：</strong>Bué、Crézancy 等較平緩坡地</p>
             <p><strong>香氣指紋：</strong>
               <ul>
                 <li>最多白花和花香，草本個性最明顯（接近 New Zealand SB 的草地風格）</li>
@@ -131,7 +131,7 @@ export const lessonContent = [
             </tr>
             <tr>
               <td><strong>凝灰岩坡地（Coteau Tuffeau）</strong></td>
-              <td>村莊北向坡</td>
+              <td>村莊南向坡</td>
               <td>乾玫瑰、石墨、紅莓果乾、礦物感</td>
               <td>中等酒體、礦物感強、需醒酒，單寧細密</td>
               <td>10–20 年</td>

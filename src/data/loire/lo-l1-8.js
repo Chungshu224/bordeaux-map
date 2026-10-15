@@ -268,19 +268,19 @@ export const lessonContent = [
             </ul>
           </div>
           <div class="checklist-item">
-            <h5>✅ L1-3 Chenin Blanc</h5>
+            <h5>✅ L1-3 Pays Nantais 產區概論</h5>
             <ul>
-              <li>干型：Savennières（最偉大干型）、Vouvray sec</li>
-              <li>甜酒金字塔：Quarts de Chaume（唯一 Grand Cru）> Bonnezeaux > Coteaux du Layon</li>
-              <li>陳年潛力：巔峰可達 20-50 年</li>
+              <li>法國最西端產區，大西洋海洋型氣候</li>
+              <li>阿莫里坎地盾：花崗岩、輝長岩、片麻岩等結晶基底</li>
+              <li>1709 年大寒冬後 Melon de Bourgogne 稱王；1936–37 年 Muscadet AOC 認定</li>
             </ul>
           </div>
           <div class="checklist-item">
-            <h5>✅ L1-4 其他白葡萄品種</h5>
+            <h5>✅ L1-4 Muscadet 家族全解</h5>
             <ul>
-              <li>Melon de Bourgogne → Muscadet（sur lie 工藝）</li>
-              <li>Sauvignon Blanc → Sancerre + Pouilly-Fumé</li>
-              <li>Folle Blanche → Gros Plant（高酸）</li>
+              <li>四大 AOC：Muscadet、Sèvre-et-Maine、Coteaux de la Loire、Côtes de Grandlieu</li>
+              <li>Sur lie（酒泥陳釀）工藝</li>
+              <li>10 個 Crus Communaux（2011 年起）：Clisson、Gorges、Le Pallet 等</li>
             </ul>
           </div>
           <div class="checklist-item">
@@ -293,7 +293,7 @@ export const lessonContent = [
             </ul>
           </div>
           <div class="checklist-item">
-            <h5>✅ L1-6 四大產區</h5>
+            <h5>✅ L1-6 子產區深度探索</h5>
             <ul>
               <li>Pays Nantais：Muscadet 王國</li>
               <li>Anjou-Saumur：甜酒天堂 + Saumur-Champigny 紅酒</li>

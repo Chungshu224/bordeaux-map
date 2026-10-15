@@ -69,9 +69,9 @@ export const lessonContent = [
             aop: '85% 產量，最重要',
             soil: '花崗岩 · 片岩 · 輝長岩',
             grapes: 'Melon de Bourgogne 100%',
-            surLie: '最少至次年 3 月；Crus Communaux 需 24–36 個月',
+            surLie: '最少至次年 3 月；Crus Communaux 最少約 17–18 個月起，多數 24 個月以上',
             style: '礦石張力最豐富，唯一擁有 10 個 Crus Communaux 地塊的 AOC，陳年後展現蜂蜜與烤麵包複雜度',
-            note: '⭐ Clisson（片岩）、Gorges（輝長岩）、Le Pallet（花崗岩）為三大旗艦 Cru',
+            note: '⭐ Clisson（花崗岩）、Gorges（輝長岩）、Le Pallet（片麻岩）為三大旗艦 Cru',
           },
           {
             id: 'mcdgl',
@@ -205,7 +205,7 @@ export const lessonContent = [
       { id: 2, icon: '⏰', title: '三個陳釀等級，三種風格境界', content: '短期（< 6 個月）→ 清新活潑；中期（< 18 個月）→ 豐潤結構；長期（> 24 個月）→ 複雜陳年，對應 10 個 Crus Communaux 地塊等級制度' }
     ],
     content: `<div class="history-section">
-      <p class="history-intro">Sur Lie（帶酒泥陳釀）是 Muscadet 最核心的釀造工藝。MSM、MCDGL、MCDLL <strong>三個地區 AOC 均強制要求</strong>，10 個 Crus Communaux 更需 24 個月以上——<span class="intro-highlight">時間長短決定風格境界</span></p>
+      <p class="history-intro">Sur Lie（帶酒泥陳釀）是 Muscadet 最核心的釀造工藝。MSM、MCDGL、MCDLL <strong>三個地區 AOC 均強制要求</strong>，10 個 Crus Communaux 更需長時間陳釀（最少約 17–18 個月起，多數 24 個月以上）——<span class="intro-highlight">時間長短決定風格境界</span></p>
     </div>
     <div class="region-overview" style="margin-top:10px">
       <p class="region-intro">🏗️ 傳統儲存方式：<strong>地下混凝土桶</strong>（覆蓋玻璃磚或陶磚的地下水槽）——南特獨有的傳統設施，穩定地下溫度確保緩慢、均勻的酒泥接觸。</p>
@@ -236,7 +236,7 @@ export const lessonContent = [
           <div class="rc-header">
             <span class="rc-icon">🏆</span>
             <span class="rc-name">長期 Sur Lie</span>
-            <span class="rc-aop">&gt; 24 個月</span>
+            <span class="rc-aop">≥ 17–18 個月（多數 &gt; 24）</span>
           </div>
           <div class="rc-body">
             <div class="rc-grape">10 個 Crus Communaux 地塊</div>
@@ -260,7 +260,7 @@ export const lessonContent = [
       </div>
       <div class="timeline-item">
         <div class="timeline-badge modern">24–48 個月</div>
-        <div class="timeline-content"><strong>🏆 Crus Communaux：最長陳釀</strong><p>10 個地塊分級均需超過 24 個月；Château-Thébaud 最長可達 48 個月，頂級年份展現 10–40 年陳年潛力。</p></div>
+        <div class="timeline-content"><strong>🏆 Crus Communaux：最長陳釀</strong><p>10 個地塊分級均需長時間 sur lie（最少約 17–18 個月起，多數 24 個月以上）；Château-Thébaud 最長可達 48 個月，頂級年份展現 10–40 年陳年潛力。</p></div>
       </div>
     </div>`,
     quiz: {
@@ -272,7 +272,7 @@ export const lessonContent = [
         '只有 10 個 Crus Communaux 地塊'
       ],
       correct: 1,
-      explanation: '根據官方規定，Muscadet-Sèvre-et-Maine（MSM）、Muscadet-Côtes-de-Grandlieu（MCDGL）、Muscadet-Coteaux-de-la-Loire（MCDLL）三個地區 AOC 均強制要求 Sur Lie 陳釀，最少至次年 3 月 1 日。10 個 Crus Communaux 地塊更需超過 24 個月。基礎通用 Muscadet AOC 則可選擇是否標示 Sur Lie。'
+      explanation: '根據官方規定，Muscadet-Sèvre-et-Maine（MSM）、Muscadet-Côtes-de-Grandlieu（MCDGL）、Muscadet-Coteaux-de-la-Loire（MCDLL）三個地區 AOC 均強制要求 Sur Lie 陳釀，最少至次年 3 月 1 日。10 個 Crus Communaux 地塊更需長時間陳釀（最少約 17–18 個月起，多數 24 個月以上）。基礎通用 Muscadet AOC 則可選擇是否標示 Sur Lie。'
     }
   },
 

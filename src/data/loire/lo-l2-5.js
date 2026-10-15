@@ -34,7 +34,7 @@ export const lessonContent = [
     title: 'Touraine Rouge — 都漢地區性紅酒的骨幹',
     highlights: [
       { id: 1, icon: '🍷', title: 'Touraine Rouge', content: '地區性 AOC，涵蓋整個都漢。Gamay（主）+ Cabernet Franc + Côt（Malbec）混釀，風格輕盈果香，適合年輕飲用' },
-      { id: 2, icon: '🏰', title: 'Touraine-Amboise Rouge', content: '安博瓦茲城堡旁的村莊級 AOC，以 Gamay 和 Côt（Malbec）為主，可出產比地區性更有深度的款式' },
+      { id: 2, icon: '🏰', title: 'Touraine-Amboise Rouge', content: '安博瓦茲城堡旁的村莊級 AOC，紅酒以 Côt（Malbec）為核心（INAO 新規範為 100% Côt；2017 年份前過渡期可混少量 Gamay、Cabernet Franc），比地區性 Touraine 更有深度' },
       { id: 3, icon: '🌹', title: 'Touraine Rosé', content: '地區性粉紅 AOC，以 Gamay 為主，輕盈清爽，是夏日日常粉紅的好選擇' }
     ],
     content: `
@@ -50,7 +50,7 @@ export const lessonContent = [
             <p>在都漢稱為「Côt」的 Malbec，比阿根廷版本更精緻，帶有更多紫羅蘭花香和辛香料感，少量混入可增加顏色深度和香氣複雜度。</p>
           </div>
         </div>
-        <p><strong>Touraine-Amboise</strong> 以安博瓦茲古城為中心，在凝灰岩和砂質土壤上，Gamay 和 Côt 混釀出比地區性更有個性的紅酒，部分酒款可陳年 3–5 年。</p>
+        <p><strong>Touraine-Amboise</strong> 以安博瓦茲古城為中心，在凝灰岩和砂質土壤上，以 Côt（Malbec）釀出比地區性更有個性的紅酒，部分酒款可陳年 3–5 年。</p>
       </div>
     `
   },

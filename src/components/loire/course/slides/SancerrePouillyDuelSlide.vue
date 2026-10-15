@@ -110,12 +110,12 @@ const activeRegion = ref('sancerre')
 const compareRows = [
   { label: '法定品種', sancerre: 'Sauvignon Blanc 100% (白) / Pinot Noir (紅・粉紅)', pouilly: 'Sauvignon Blanc 100% (僅白)' },
   { label: '氣候', sancerre: '半大陸型，丘陵起伏明顯', pouilly: '半大陸型，地勢較平緩' },
-  { label: '主導土壤', sancerre: 'Caillottes 40% + Terres Blanches 40% + Silex 20%', pouilly: 'Silex 60%（最高比例燧石） + Kimmeridgian + 黏土' },
+  { label: '主導土壤', sancerre: 'Caillottes、Terres Blanches、Silex 三種並存（Terres Blanches 面積最大）', pouilly: 'Kimmeridgian 泥灰岩為主，Silex 燧石為最具代表性的特色土壤' },
   { label: '海拔', sancerre: '200–400 m 陡坡', pouilly: '180–280 m 緩坡' },
   { label: '法定產量上限', sancerre: '65 hL/ha', pouilly: '65 hL/ha' },
   { label: '典型風格', sancerre: '柑橘、白花、黑醋栗芽 (cassis)、活潑酸度', pouilly: '燧石煙燻 (gunflint)、菸草、礦物、結構緊密' },
   { label: '陳年潛力', sancerre: '入門 1-3 年；頂級 Silex/Terres Blanches 可 8-15 年', pouilly: '一般 3-8 年；Dagueneau 頂級可 15-25 年' },
-  { label: '紅白比例', sancerre: '白 75% / 紅+粉紅 25%', pouilly: '白 100%（紅酒需 AOC Pouilly-sur-Loire 改用 Chasselas）' },
+  { label: '紅白比例', sancerre: '白 75% / 紅+粉紅 25%', pouilly: '白 100%（Pouilly-Fumé 為 Sauvignon Blanc；同區的 Pouilly-sur-Loire AOC 則用 Chasselas 釀白酒）' },
   { label: '價格區間', sancerre: '€12–€60（頂級 €100+）', pouilly: '€15–€80（Dagueneau Silex €250+）' }
 ]
 
@@ -127,8 +127,8 @@ const soils = [
     icon: '🥌',
     color: '#3498db',
     colorEnd: '#5dade2',
-    sancerrePct: '~ 40%（Bué / Crézancy / Sury）',
-    pouillyPct: '~ 5%（極少）',
+    sancerrePct: '佔相當比例（Bué / Crézancy / Sury-en-Vaux）',
+    pouillyPct: '較少見',
     desc: '侏羅紀中期 Oxfordian 期形成的白色細碎石灰岩塊，排水極佳、保水力低、加熱迅速。',
     style: '果香奔放、年輕易飲、檸檬與葡萄柚'
   },
@@ -139,8 +139,8 @@ const soils = [
     icon: '🧱',
     color: '#d4af37',
     colorEnd: '#e8b952',
-    sancerrePct: '~ 40%（Chavignol、Sancerre 鎮）',
-    pouillyPct: '~ 30%（南部 Saint-Andelain）',
+    sancerrePct: '面積最大（Chavignol、Sancerre 鎮周邊）',
+    pouillyPct: '主要土壤之一（含 Saint-Andelain 一帶）',
     desc: '與 Chablis 完全同源（1.55 億年前 Kimmeridgian 期），含化石牡蠣，賦予深刻的鹹礦物感。',
     style: '結構紮實、礦物張力、陳年潛力佳'
   },
@@ -151,8 +151,8 @@ const soils = [
     icon: '🔥',
     color: '#7B1F2A',
     colorEnd: '#A8324A',
-    sancerrePct: '~ 20%（東部 Ménétréol、Sury-en-Vaux 高地）',
-    pouillyPct: '~ 60%（Saint-Andelain 主導）',
+    sancerrePct: '較少（東部 Saint-Satur、Ménétréol 一帶）',
+    pouillyPct: '最具代表性（Saint-Andelain 一帶）',
     desc: '黑灰色硬質燧石礫，富含矽（SiO₂），晝夜釋放熱量穩定。「Fumé」之名即源自此土。',
     style: '煙燻火藥香、菸草、極致礦物、最強陳年'
   }

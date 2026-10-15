@@ -2,7 +2,7 @@
 export default {
   selector: {
     breadcrumb: '法國・羅亞爾河',
-    tagline: '羅亞爾河谷・法國花園・五大子產區',
+    tagline: '羅亞爾河谷・法國花園・四大子產區',
     title: '羅亞爾河谷葡萄酒',
     subtitle: 'Loire Valley · Sancerre · Vouvray · Muscadet · Chinon',
     description: '從南特碘香 Muscadet、安茹白詩南、都漢氣泡，到中央產區的桑塞爾雙雄——掌握法國最多元的葡萄酒河谷。',

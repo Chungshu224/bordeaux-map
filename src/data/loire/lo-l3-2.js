@@ -114,7 +114,7 @@ export const lessonContent = [
               <li><strong>所有權：</strong>Joly 家族 1962 年購入後獨家擁有（Domaine de la Coulée de Serrant）</li>
               <li><strong>歷史：</strong>1130 年由 Cistercian 修士種植；歷代被法王 Louis XI、文豪 Honoré de Balzac 讚譽</li>
               <li><strong>耕作：</strong>1980 年代起全面生物動力法（Biodynamie）</li>
-              <li><strong>規範：</strong>產量上限 25 hL/ha（Loire 干白最嚴格）；100% Chenin Blanc Sec</li>
+              <li><strong>規範：</strong>產量限制比主 AOC 更嚴；100% Chenin Blanc，以干型為主</li>
               <li><strong>風格：</strong>蜂蠟、咖哩、乾燥草藥、極長餘韻；30+ 年陳年潛力</li>
               <li><strong>價格：</strong>每瓶 €120–€200（年輕酒款），陳年酒款 €300+</li>
             </ul>
@@ -125,7 +125,7 @@ export const lessonContent = [
               <li><strong>面積：</strong>33 公頃</li>
               <li><strong>所有權：</strong>多家酒莊共享（最大者 Domaine aux Moines 約 9 公頃）</li>
               <li><strong>歷史：</strong>1106 年由 Saint-Nicolas 修士種植；得名於修道院</li>
-              <li><strong>規範：</strong>產量上限 30 hL/ha；100% Chenin Blanc Sec</li>
+              <li><strong>規範：</strong>產量限制比主 AOC 更嚴；100% Chenin Blanc，以干型為主</li>
               <li><strong>風格：</strong>較 Coulée 更直接、結構紮實、礦物張力強</li>
               <li><strong>名家：</strong>Domaine aux Moines、Château de Chamboureau、Domaine du Closel</li>
             </ul>
@@ -134,7 +134,7 @@ export const lessonContent = [
             <h4>🥉 Savennières（主 AOC）</h4>
             <ul>
               <li><strong>面積：</strong>約 105 公頃（扣除兩個 Cru 後）</li>
-              <li><strong>規範：</strong>產量上限 50 hL/ha；100% Chenin Blanc Sec</li>
+              <li><strong>規範：</strong>干型產量上限 50 hL/ha；100% Chenin Blanc，以干型為主</li>
               <li><strong>名家：</strong>Domaine du Closel、Domaine des Baumard、Domaine du Petit Métris、Château d'Epiré</li>
               <li><strong>風格：</strong>從乾淨清爽到結構紮實，視酒莊風格而異</li>
             </ul>
@@ -178,7 +178,7 @@ export const lessonContent = [
         </div>
         <div class="renaissance">
           <h4>🌍 Renaissance des Appellations 國際組織</h4>
-          <p>Joly 1990 年代創立的國際生物動力葡萄酒組織，目前會員包括：</p>
+          <p>Joly 於 2001 年創立的國際生物動力葡萄酒組織，目前會員包括：</p>
           <ul>
             <li>法國：Domaine Leflaive、Comte Lafon、Marcel Deiss、Zind-Humbrecht</li>
             <li>德國：Dr. Bürklin-Wolf、Wittmann</li>
@@ -265,7 +265,7 @@ export const lessonContent = [
           'Savennières → Coulée de Serrant → La Roche-aux-Moines'
         ],
         correctIndex: 1,
-        explanation: '由最頂級（最小、最嚴格）到最廣泛：Coulée de Serrant（7 公頃，單一葡萄園 AOC，產量 25 hL/ha）→ La Roche-aux-Moines（33 公頃，Cru AOC，30 hL/ha）→ Savennières（105 公頃主 AOC，50 hL/ha）。這個結構與勃艮第的 Grand Cru → Premier Cru → Village 邏輯類似。'
+        explanation: '由最頂級（最小、最嚴格）到最廣泛：Coulée de Serrant（7 公頃，單一葡萄園 AOC）→ La Roche-aux-Moines（33 公頃，Cru AOC）→ Savennières（105 公頃主 AOC，干型 50 hL/ha）。這個結構與勃艮第的 Grand Cru → Premier Cru → Village 邏輯類似。'
       },
       {
         id: 'q4',

@@ -147,7 +147,7 @@ export const lessonContent = [
         <h4>🍾 甜度等級與代表 AOP</h4>
         <div class="sweetness-pyramid">
           <div class="sweetness-level">
-            <h5>🟡 Demi-sec（半干型）：12-45 g/L 殘糖</h5>
+            <h5>🟡 Demi-sec（半干型）：4-12 g/L 殘糖</h5>
             <div class="level-content">
               <p><strong>代表 AOP：</strong>Vouvray demi-sec、Montlouis demi-sec</p>
               <p><strong>風格：</strong>甜度適中，酸糖完美平衡；蜂蜜、梨、薑的溫柔甜感</p>
@@ -155,7 +155,7 @@ export const lessonContent = [
             </div>
           </div>
           <div class="sweetness-level">
-            <h5>🟠 Moelleux（甜型）：45-120 g/L 殘糖</h5>
+            <h5>🟠 Moelleux（甜型）：12-45 g/L 殘糖</h5>
             <div class="level-content">
               <p><strong>代表 AOP：</strong>Vouvray moelleux、Coteaux de l'Aubance、Coteaux du Layon</p>
               <p><strong>風格：</strong>明顯甜美，蜂蜜花香，陳年後增加蜂蜡、杏桃、薑餅</p>
@@ -163,7 +163,7 @@ export const lessonContent = [
             </div>
           </div>
           <div class="sweetness-level premium">
-            <h5>🔴 Liquoreux / Grand Cru（極甜）：120+ g/L 殘糖</h5>
+            <h5>🔴 Doux / Liquoreux / Grand Cru（極甜）：45+ g/L 殘糖</h5>
             <div class="level-content">
               <p><strong>代表 AOP：</strong>
                 <ul>

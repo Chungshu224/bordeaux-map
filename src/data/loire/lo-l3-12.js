@@ -10,12 +10,12 @@ export const lessonContent = [
     content: `
       <div class="intro-content">
         <p class="intro-lead">
-          Level 3 是羅亞爾河谷最豐富的一個層次——從安茹片岩坡地的干型白詩南，到 Layon 河谷的頂級貴腐，再到 Sancerre 的燧石礦物雙雄，你已走過 32 個白酒和氣泡 AOC。這份評量將測試你對整個白詩南工藝光譜、中央產區土壤辨識、以及羅亞爾食物配對原理的掌握程度。
+          Level 3 是羅亞爾河谷最豐富的一個層次——從安茹片岩坡地的干型白詩南，到 Layon 河谷的頂級貴腐，再到 Sancerre 的燧石礦物雙雄，你已走過數十個白酒和氣泡 AOC。這份評量將測試你對整個白詩南工藝光譜、中央產區土壤辨識、以及羅亞爾食物配對原理的掌握程度。
         </p>
         <div class="exam-info">
           <div class="info-item">
             <h4>📝 評量範圍</h4>
-            <p>Level 3 全部 11 堂課（lo-l3-1 ～ lo-l3-11）共 32 個白酒/氣泡 AOC</p>
+            <p>Level 3 全部 11 堂課（lo-l3-1 ～ lo-l3-11）涵蓋數十個白酒／氣泡 AOC</p>
           </div>
           <div class="info-item">
             <h4>🎯 題目數量</h4>
@@ -39,11 +39,11 @@ export const lessonContent = [
         options: [
           '0–4 g/L（完全干型）',
           '4–12 g/L（微甜）',
-          '30–80 g/L（半甜到甜型）',
-          '超過 150 g/L（貴腐等級）'
+          '12–45 g/L（半甜到甜型）',
+          '超過 45 g/L（極甜／貴腐等級）'
         ],
         correctIndex: 2,
-        explanation: 'Vouvray 的甜度分級：Sec（0–4 g/L）、Demi-Sec（4–18 g/L）、Moelleux（30–80 g/L，有時更高）、Liquoreux（80 g/L+，貴腐或極甜）。Moelleux 是「柔軟的」意思，代表帶有明顯甜感但仍保有 Chenin Blanc 高酸度的平衡甜型風格。'
+        explanation: '依歐盟標示規則，Vouvray 甜度分級：Sec（0–4 g/L）、Demi-Sec（4–12 g/L）、Moelleux（12–45 g/L）、Doux／Liquoreux（45 g/L 以上，貴腐或極甜）。Moelleux 是「柔軟的」意思，代表帶有明顯甜感但仍保有 Chenin Blanc 高酸度的平衡甜型風格。'
       },
       {
         id: 'q2',
@@ -62,12 +62,12 @@ export const lessonContent = [
         question: 'Sancerre × Crottin de Chavignol 被稱為「地域配對教科書」的最根本原因是？',
         options: [
           '因為兩者都以「S」開頭，方便記憶',
-          '兩者都來自同一個 Chavignol 村，山羊在葡萄園旁的草場吃草，吸收相同的礦物質，形成深層的「風土共鳴」',
+          '兩者都來自同一個 Chavignol 一帶的產地，在同一片土地與飲食文化中並存，形成深層的「風土共鳴」',
           '因為起司的高脂肪含量讓飲酒者在喝更多 Sancerre 時不容易醉',
           '法律規定 Sancerre 必須與 Crottin 一起銷售'
         ],
         correctIndex: 1,
-        explanation: '最深層的原因是「地域共鳴（terroir pairing）」——Chavignol 村的山羊在 Sancerre 葡萄園附近的同一片草場吃草，它們的奶（製成 Crottin）和旁邊生長的葡萄（釀成 Sancerre）吸收了相同的礦物質和植物個性，這種同源性造就了最自然的和諧。'
+        explanation: '最深層的原因是「地域共鳴（terroir pairing）」——Crottin 與 Sancerre 同出於 Chavignol 一帶，數百年來一起被當地人搭配飲食，這種同源性造就了最自然的和諧。'
       },
       {
         id: 'q4',

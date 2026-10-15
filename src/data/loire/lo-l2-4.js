@@ -53,7 +53,7 @@ export const lessonContent = [
     title: 'Bourgueil 與 Saint-Nicolas-de-Bourgueil',
     highlights: [
       { id: 1, icon: '🔴', title: 'Bourgueil AOC', content: '位於 Loire 河北岸，凝灰岩和礫石土壤混合，紅黑果香兼具，結構比 Chinon 稍微厚重，部分酒款可陳年 15–20 年' },
-      { id: 2, icon: '🌸', title: 'Saint-Nicolas-de-Bourgueil AOC', content: '位於 Bourgueil 內部的獨立 AOC，砂質礫石為主，土壤最輕，酒風最輕盈，紅果花香，是三者中最適合年輕飲用的' }
+      { id: 2, icon: '🌸', title: 'Saint-Nicolas-de-Bourgueil AOC', content: '與 Bourgueil 相鄰（同在 Loire 北岸）的獨立 AOC，砂質礫石為主，土壤最輕，酒風最輕盈，紅果花香，是三者中最適合年輕飲用的' }
     ],
     content: `
       <div class="bourgueil-section">
