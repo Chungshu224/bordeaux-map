@@ -71,6 +71,7 @@
   },
   {
     "id": "Colli Piacentini DOC",
+    "boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
     "name": "Colli Piacentini",
     "type": "DOC",
     "style": ["紅酒", "白酒", "氣泡酒"],
@@ -239,6 +240,7 @@
   },
   {
     "id": "Emilia IGP",
+    "boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
     "name": "Emilia",
     "type": "IGP",
     "style": ["紅酒", "白酒", "氣泡酒", "粉紅酒"],
@@ -253,6 +255,7 @@
   },
   {
     "id": "Rubicone IGP",
+    "boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
     "name": "Rubicone",
     "type": "IGP",
     "style": ["紅酒", "白酒", "氣泡酒", "粉紅酒"],
