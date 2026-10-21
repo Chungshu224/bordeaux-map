@@ -287,7 +287,9 @@ const unifiedInfo = computed(() => {
   if (a.zone) meta.push({ label: '產區範圍', value: a.zone })
   return {
     name: a.name,
-    badges: a.type ? [{ label: a.type, type: a.type }] : [],
+    badges: a.type
+      ? [{ label: a.type, type: a.type }, ...(a.isSubzone ? [{ label: '子產區' }] : [])]
+      : [],
     meta,
     styles: Array.isArray(a.style) ? a.style : (a.style ? [a.style] : []),
     grapes: a.grapes || [],
@@ -650,10 +652,13 @@ async function loadRegionData() {
     if (!res.ok) throw new Error(`無法載入 ${url}`)
     const raw = await res.json()
     // 統一 style 為陣列（部分 JSON 的 style 欄位為字串而非陣列）
+    // 「DOC 子產區」（例如 Valle d'Aosta 的 7 個命名子產區）併入 DOC 顯示，並以 isSubzone 標記
     aocData.value = raw
-      .filter(item => ['DOCG', 'DOC', 'IGT'].includes(item.type))
+      .filter(item => ['DOCG', 'DOC', 'IGT', 'DOC 子產區'].includes(item.type))
       .map(item => ({
         ...item,
+        isSubzone: item.type === 'DOC 子產區',
+        type: item.type === 'DOC 子產區' ? 'DOC' : item.type,
         style: Array.isArray(item.style) ? item.style : (item.style ? [item.style] : [])
       }))
   } catch (e) {
