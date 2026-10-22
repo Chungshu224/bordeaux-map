@@ -14,6 +14,7 @@
  *   node scripts/build-italy-climate.mjs --region=tuscany
  *   node scripts/build-italy-climate.mjs --limit=40
  *   node scripts/build-italy-climate.mjs --delay=1200
+ *   node scripts/build-italy-climate.mjs --summer-only   （額度消耗約 1/4，結果相同）
  *   node scripts/build-italy-climate.mjs --merge --region=piedmont
  *     （--merge：保留現有 JSON 中已有資料的產區，只補抓全為 null 的產區，再重算統計值）
  */
@@ -40,6 +41,8 @@ const REGION_FILTER = (args.find((a) => a.startsWith('--region=')) || '').split(
 const LIMIT = Number((args.find((a) => a.startsWith('--limit=')) || '').split('=')[1] || 0)
 const REQUEST_DELAY_MS = Number((args.find((a) => a.startsWith('--delay=')) || '').split('=')[1] || 1200)
 const MERGE = args.includes('--merge')
+// --summer-only：只抓每年 6–8 月（指標本來就只用夏季），數值與整年抓取完全相同，但 Open-Meteo 額度消耗約 1/4
+const SUMMER_ONLY = args.includes('--summer-only')
 
 proj4.defs(
   'EPSG:3003',
@@ -201,12 +204,12 @@ function computeCentroid(filePath) {
   return [Number((sumLon / count).toFixed(4)), Number((sumLat / count).toFixed(4))]
 }
 
-async function fetchSummerClimate(lat, lng, retries = 3) {
+async function fetchDailyRange(lat, lng, startDate, endDate, retries = 3) {
   const url = new URL('https://archive-api.open-meteo.com/v1/archive')
   url.searchParams.set('latitude', lat.toFixed(4))
   url.searchParams.set('longitude', lng.toFixed(4))
-  url.searchParams.set('start_date', `${START_YEAR}-01-01`)
-  url.searchParams.set('end_date', `${END_YEAR}-12-31`)
+  url.searchParams.set('start_date', startDate)
+  url.searchParams.set('end_date', endDate)
   url.searchParams.set('daily', 'temperature_2m_mean,sunshine_duration,precipitation_sum')
   url.searchParams.set('timezone', 'UTC')
 
@@ -214,6 +217,11 @@ async function fetchSummerClimate(lat, lng, retries = 3) {
     try {
       const res = await fetch(url.toString())
       if (res.status === 429) {
+        const body = await res.text().catch(() => '')
+        if (/daily/i.test(body)) {
+          console.error('\n[stop] Open-Meteo 每日額度已用完，請明天再執行（--merge 會接續未完成的產區）')
+          process.exit(2)
+        }
         const wait = 2500 * (attempt + 1)
         process.stdout.write(` (429 wait ${wait / 1000}s)`)
         await sleep(wait)
@@ -230,53 +238,7 @@ async function fetchSummerClimate(lat, lng, retries = 3) {
       const rainValues = json.daily?.precipitation_sum || []
       if (!times.length) throw new Error('no daily data')
 
-      const tempSums = {}
-      const tempCnts = {}
-      const sunSums = {}
-      const sunCnts = {}
-      const rainSums = {}
-      const rainCnts = {}
-
-      for (let i = 0; i < times.length; i++) {
-        const [year, month] = times[i].split('-').map(Number)
-        if (month < 6 || month > 8) continue
-
-        const t = tempValues[i]
-        if (t != null) {
-          tempSums[year] = (tempSums[year] || 0) + t
-          tempCnts[year] = (tempCnts[year] || 0) + 1
-        }
-
-        const s = sunValues[i]
-        if (s != null) {
-          // Open-Meteo sunshine_duration is seconds/day, convert to hours in summer total
-          sunSums[year] = (sunSums[year] || 0) + s / 3600
-          sunCnts[year] = (sunCnts[year] || 0) + 1
-        }
-
-        const r = rainValues[i]
-        if (r != null) {
-          rainSums[year] = (rainSums[year] || 0) + r
-          rainCnts[year] = (rainCnts[year] || 0) + 1
-        }
-      }
-
-      const temps = YEARS.map((y) => {
-        if (!tempCnts[y] || tempCnts[y] < 30) return null
-        return Number((tempSums[y] / tempCnts[y]).toFixed(2))
-      })
-
-      const sun = YEARS.map((y) => {
-        if (!sunCnts[y] || sunCnts[y] < 30) return null
-        return Number((sunSums[y]).toFixed(1))
-      })
-
-      const rain = YEARS.map((y) => {
-        if (!rainCnts[y] || rainCnts[y] < 30) return null
-        return Number((rainSums[y]).toFixed(1))
-      })
-
-      return { temps, sun, rain }
+      return { times, tempValues, sunValues, rainValues }
     } catch (err) {
       if (attempt < retries) {
         await sleep(1500)
@@ -288,6 +250,70 @@ async function fetchSummerClimate(lat, lng, retries = 3) {
   }
 
   return null
+}
+
+function aggregateSummer(parts) {
+  const tempSums = {}
+  const tempCnts = {}
+  const sunSums = {}
+  const sunCnts = {}
+  const rainSums = {}
+  const rainCnts = {}
+
+  for (const { times, tempValues, sunValues, rainValues } of parts) {
+    for (let i = 0; i < times.length; i++) {
+      const [year, month] = times[i].split('-').map(Number)
+      if (month < 6 || month > 8) continue
+
+      const t = tempValues[i]
+      if (t != null) {
+        tempSums[year] = (tempSums[year] || 0) + t
+        tempCnts[year] = (tempCnts[year] || 0) + 1
+      }
+
+      const s = sunValues[i]
+      if (s != null) {
+        // Open-Meteo sunshine_duration is seconds/day, convert to hours in summer total
+        sunSums[year] = (sunSums[year] || 0) + s / 3600
+        sunCnts[year] = (sunCnts[year] || 0) + 1
+      }
+
+      const r = rainValues[i]
+      if (r != null) {
+        rainSums[year] = (rainSums[year] || 0) + r
+        rainCnts[year] = (rainCnts[year] || 0) + 1
+      }
+    }
+  }
+
+  const temps = YEARS.map((y) => {
+    if (!tempCnts[y] || tempCnts[y] < 30) return null
+    return Number((tempSums[y] / tempCnts[y]).toFixed(2))
+  })
+  const sun = YEARS.map((y) => {
+    if (!sunCnts[y] || sunCnts[y] < 30) return null
+    return Number(sunSums[y].toFixed(1))
+  })
+  const rain = YEARS.map((y) => {
+    if (!rainCnts[y] || rainCnts[y] < 30) return null
+    return Number(rainSums[y].toFixed(1))
+  })
+  return { temps, sun, rain }
+}
+
+async function fetchSummerClimate(lat, lng) {
+  if (!SUMMER_ONLY) {
+    const whole = await fetchDailyRange(lat, lng, `${START_YEAR}-01-01`, `${END_YEAR}-12-31`)
+    return whole ? aggregateSummer([whole]) : null
+  }
+  const parts = []
+  for (const y of YEARS) {
+    const part = await fetchDailyRange(lat, lng, `${y}-06-01`, `${y}-08-31`)
+    if (!part) return null
+    parts.push(part)
+    await sleep(150)
+  }
+  return aggregateSummer(parts)
 }
 
 function calcBaseline(arr) {
