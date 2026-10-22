@@ -12,7 +12,7 @@
 
 ## ⚠️ 製作前必讀
 
-1. **氣候熱力圖只涵蓋部分大區**。`italy-climate.json` 共 391 個產區，但真正有數值的只有 Piemonte（33 個）、Veneto（14）、Tuscany（14）、Friuli（9）、Lazio（3）、Emilia（3）。**南義與島嶼（Campania、Puglia、Sicily、Sardinia 等）全部為空值**。因此本集氣候段只做「Piemonte → Veneto → Tuscany」的北到中比較與「1980 年代 vs 近十年」的暖化對照，**不要**拍南北全國梯度，也不要在字幕暗示南義有數據。
+1. **氣候熱力圖只涵蓋部分大區，且本集依賴 `feat/italy-climate-south` 分支的資料**。目前 `italy-climate.json` 有數值的大區為 Piemonte（33 個產區）、Veneto（14）、Tuscany（14）、Friuli（9）、Sicily（22／24）、Puglia（29／32），Lazio（3）與 Emilia（3）僅零星有值。**Campania、Sardinia、Calabria、Basilicata、Abruzzo、Molise、Marche、Umbria、Liguria、Trentino、Lombardy 仍為空值**（Open-Meteo 每日額度用完，尚未補抓）。因此本集氣候段只用 Piemonte → Tuscany → Puglia（輔以 Sicily）做南北對比，**不要**點選或展示上述空值大區。拍攝前請先確認該分支已合併或在本機載入。
 2. **本集沒有酒莊地塊層**，義大利整體都沒有；畫面以大區地圖、氣候圖層、分級金字塔為主。
 3. 旁白中的所有數字皆取自課程 JSON（見各段「資料來源」），不要憑印象修改。
 
@@ -67,34 +67,38 @@
 
 ---
 
-### 【圖二：氣候——由北到中越來越暖 30-55秒】
+### 【圖二：氣候——越往南越暖，也越來越暖 30-55秒】
 
 **視覺關鍵字**:
 ```
 氣候熱力圖啟動, 指標切換為「夏季平均氣溫（6–8 月）」,
-先顯示 2015–2024 平均：Piemonte 23.1° → Veneto 23.7° → Tuscany 24.5° 三個大區色塊由冷轉暖,
-年份滑桿向左拖回 1980 年代, 三區色塊同步轉冷,
-大字：+2.5～2.8°C
+先顯示 2015–2024 平均：Piemonte 23.1° → Tuscany 24.5° → Puglia 25.7° 三個大區色塊由冷轉暖（Sicily 24.9° 可作為補充一閃而過）,
+年份滑桿向左拖回 1980 年代, 各區色塊同步轉冷,
+大字：北部 約 +2.5°C｜南部 +1.5～2.3°C
 ```
 
 **操作示範**:
 1. 開啟氣候圖層，選「氣溫」指標
-2. 年份滑桿停在近十年，逐一點選 Piemonte、Veneto、Tuscany 的產區，讀出數值
+2. 年份滑桿停在近十年，依序點選 Piemonte、Tuscany、Puglia 的產區，讀出數值
 3. 向左拖到 1980 年代，對照色塊變化
+4. 避開沒有資料的大區（見「製作前必讀」）
 
-**旁白文案**（約 105 字）:
-"打開氣候熱力圖，看夏季平均氣溫。近十年，皮埃蒙特約二十三點一度，威尼托二十三點七度，托斯卡納二十四點五度——由北到中，一路變暖。再把年份拖回八〇年代，三個大區都低了兩度半左右。氣候變遷，早就寫在義大利的葡萄園裡。"
+**旁白文案**（約 100 字）:
+"打開氣候熱力圖，看夏季平均氣溫。近十年，皮埃蒙特約二十三點一度，托斯卡納二十四點五度，普利亞二十五點七度——越往南，越暖。再把年份拖回八〇年代，北部低了約兩度半，南部也低了一點五到兩點三度。氣候變遷，早就寫在義大利的葡萄園裡。"
 
 **字幕關鍵詞**:
 ```
 🌡️ 夏季均溫（6–8 月）｜2015–2024
-Piemonte 23.1°C → Veneto 23.7°C → Tuscany 24.5°C
-📈 對比 1980–1989：約 +2.5～2.8°C
+Piemonte 23.1°C → Tuscany 24.5°C → Puglia 25.7°C
+📈 對比 1980–1989：北部約 +2.5°C｜南部 +1.5～2.3°C
 ```
 
-**資料來源**: `public/data/italy-climate.json`（`aocs[*].temps`，年份 1980–2024；數值為各大區「有資料產區」的平均：Piemonte 33、Veneto 14、Tuscany 14）
+**資料來源**: `public/data/italy-climate.json`（`aocs[*].temps`，年份 1980–2024；數值為各大區「有資料產區」的平均：Piemonte 33、Tuscany 14、Puglia 29、Sicily 22；1980–89 平均：Piemonte 20.6、Tuscany 21.9、Puglia 23.4、Sicily 23.4）
 
-**備註**: 字幕務必標「各大區有資料產區之平均」，避免被誤讀為官方氣象統計。
+**備註**:
+- 字幕務必標「各大區有資料產區之平均」，避免被誤讀為官方氣象統計。
+- Sicily 平均（24.9°C）被高海拔的 Etna 拉低（Etna DOC 近年僅約 21°C），所以南北遞增的主線以 Puglia 當南端；Sicily 若出現，旁白不要說「西西里比托斯卡納更熱很多」。
+- 各大區的升溫幅度受取樣產區影響，字幕用「約」。
 
 ---
 
@@ -153,7 +157,7 @@ Barolo 與 Barbaresco 酒標淡入, 網站介面浮現,
 ### 螢幕錄製部分
 - [ ] 義大利地圖啟動，20 個大區輪廓依序亮起
 - [ ] 北／中／南三段高亮
-- [ ] 氣候圖層：指標切換為氣溫，近十年狀態下點選 Piemonte／Veneto／Tuscany 各 1–2 個產區
+- [ ] 氣候圖層：指標切換為氣溫，近十年狀態下點選 Piemonte／Tuscany／Puglia 各 1–2 個產區
 - [ ] 年份滑桿從 2024 拖回 1980 年代（錄兩次，一次快一次慢，剪輯時挑）
 - [ ] L1M1L2 分級金字塔逐階點開（DOCG → DOC → IGT）
 - [ ] 課程卡片展開
@@ -161,7 +165,7 @@ Barolo 與 Barbaresco 酒標淡入, 網站介面浮現,
 ### 圖形動畫部分
 - [ ] 數字「20／350+」跳動
 - [ ] 地形比例環圈（35／42／23）
-- [ ] 「+2.5～2.8°C」大字出現
+- [ ] 「北部約 +2.5°C｜南部 +1.5～2.3°C」大字出現
 - [ ] 「等級 ≠ 好壞」對比字卡
 
 ### 素材部分
@@ -169,7 +173,7 @@ Barolo 與 Barbaresco 酒標淡入, 網站介面浮現,
 - [ ] DOCG 官方封條特寫
 - [ ] 北義阿爾卑斯山腳、中義丘陵、西西里空拍各 2–3 秒
 
-**注意**: 本集不要拍南義氣候圖層、不要拍「顯示酒莊」。
+**注意**: 不要拍沒有氣候資料的大區（Campania、Sardinia、Calabria 等）、不要拍「顯示酒莊」。
 
 ---
 
@@ -186,8 +190,8 @@ Barolo 與 Barbaresco 酒標淡入, 網站介面浮現,
 // 義大利全景
 map.flyTo({ center: [12.5, 42.5], zoom: 5.2, pitch: 0, duration: 2000 });
 
-// 氣候段：這三個大區才有數值
-const climateRegionsWithData = ['piedmont', 'veneto', 'tuscany'];
+// 氣候段：這些大區才有數值（需先合併 feat/italy-climate-south）
+const climateRegionsWithData = ['piedmont', 'veneto', 'tuscany', 'puglia', 'sicily'];
 // 取值：italy-climate.json → aocs[產區名].temps[年份索引]（年份 1980–2024）
 // 指標：夏季平均氣溫（6–8 月）；基準期 1981–2010
 ```
@@ -201,7 +205,7 @@ const climateRegionsWithData = ['piedmont', 'veneto', 'tuscany'];
 - `L1M1L1` 與 `L1M1L3` 的氣候帶說明是教學簡化版（北部大陸性、中部地中海、南部濃郁），旁白已照用，不延伸成更精確的氣候分類。
 
 ### 資料涵蓋範圍誠實揭露
-- 氣候數據僅限 Piemonte／Veneto／Tuscany 等部分大區（見上方「製作前必讀」）。
+- 氣候數據僅限部分大區：Piemonte、Veneto、Tuscany、Friuli、Sicily、Puglia（見上方「製作前必讀」）；其餘大區補抓前請勿拍攝。
 - 地圖資料來源：Mapbox, OpenStreetMap contributors；氣候資料：Open-Meteo Historical Weather API。
 
 ### 旁白製作（WineAudio）
