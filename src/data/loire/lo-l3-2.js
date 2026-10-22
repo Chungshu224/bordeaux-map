@@ -101,7 +101,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: '🥇', title: 'Coulée de Serrant', content: '7 公頃，獨家擁有，1130 年至今' },
       { id: 2, icon: '🥈', title: 'La Roche-aux-Moines', content: '33 公頃，多家酒莊共享' },
-      { id: 3, icon: '🥉', title: 'Savennières', content: '105 公頃主 AOC，整體區域' }
+      { id: 3, icon: '🥉', title: 'Savennières', content: '全區約 145 公頃，內含兩個 Cru' }
     ],
     content: `
       <div class="savennieres-trilogy">
@@ -133,7 +133,7 @@ export const lessonContent = [
           <div class="trilogy-block tier3">
             <h4>🥉 Savennières（主 AOC）</h4>
             <ul>
-              <li><strong>面積：</strong>約 105 公頃（扣除兩個 Cru 後）</li>
+              <li><strong>面積：</strong>全區約 145 公頃（內含上述兩個 Cru；各資料來源約 140–150 公頃）</li>
               <li><strong>規範：</strong>干型產量上限 50 hL/ha；100% Chenin Blanc，以干型為主</li>
               <li><strong>名家：</strong>Domaine du Closel、Domaine des Baumard、Domaine du Petit Métris、Château d'Epiré</li>
               <li><strong>風格：</strong>從乾淨清爽到結構紮實，視酒莊風格而異</li>
@@ -150,7 +150,7 @@ export const lessonContent = [
     componentProps: {
       slide: {
         title: 'Savennières 三部曲地圖',
-        description: 'Loire 北岸南向坡上的三層金字塔——主 AOC Savennières（105 ha）、Cru La Roche-aux-Moines（33 ha）、單一園 Coulée de Serrant（7 ha）的嵌套位置',
+        description: 'Loire 北岸南向坡上的三層金字塔——主 AOC Savennières（全區約 145 ha，內含兩個 Cru）、Cru La Roche-aux-Moines（33 ha）、單一園 Coulée de Serrant（7 ha）的嵌套位置',
         mapGroup: 'AnjouSaumur',
         highlightFiles: ['Savennières.geojson', 'Savennières-Roche-aux-Moines.geojson', 'Coulée-de-Serrant.geojson'],
       }
@@ -265,7 +265,7 @@ export const lessonContent = [
           'Savennières → Coulée de Serrant → La Roche-aux-Moines'
         ],
         correctIndex: 1,
-        explanation: '由最頂級（最小、最嚴格）到最廣泛：Coulée de Serrant（7 公頃，單一葡萄園 AOC）→ La Roche-aux-Moines（33 公頃，Cru AOC）→ Savennières（105 公頃主 AOC，干型 50 hL/ha）。這個結構與勃艮第的 Grand Cru → Premier Cru → Village 邏輯類似。'
+        explanation: '由最頂級（最小、最嚴格）到最廣泛：Coulée de Serrant（7 公頃，單一葡萄園 AOC）→ La Roche-aux-Moines（33 公頃，Cru AOC）→ Savennières（全區約 145 公頃、內含兩個 Cru 的主 AOC，干型 50 hL/ha）。這個結構與勃艮第的 Grand Cru → Premier Cru → Village 邏輯類似。'
       },
       {
         id: 'q4',
