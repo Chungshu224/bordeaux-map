@@ -95,7 +95,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: '🥇', title: 'Quarts de Chaume Grand Cru', content: 'Loire 唯一 Grand Cru，2011 年法規通過（2010 年份起適用），約 40 公頃' },
       { id: 2, icon: '🥈', title: 'Bonnezeaux', content: '單一 Cru AOC，約 80–120 公頃（資料來源不一），與 QdC 平起平坐的歷史名園' },
-      { id: 3, icon: '🥉', title: 'Coteaux du Layon (Villages)', content: '7 個指定村莊：Beaulieu、Faye、Rablay、Rochefort、Saint-Aubin、Saint-Lambert、Chaume' }
+      { id: 3, icon: '🥉', title: 'Coteaux du Layon (Villages)', content: '6 個指定村莊：Beaulieu、Faye、Rablay、Rochefort、Saint-Aubin、Saint-Lambert；Chaume 另立為 Premier Cru' }
     ],
     content: `
       <div class="layon-pyramid">
@@ -117,18 +117,18 @@ export const lessonContent = [
             <ul>
               <li><strong>面積：</strong>約 80–120 公頃（資料來源不一），位於 Thouarcé 村</li>
               <li><strong>產量上限：</strong>25 hL/ha</li>
-              <li><strong>最低殘糖：</strong>51 g/L（Moelleux 等級以上）</li>
+              <li><strong>最低殘糖：</strong>51 g/L（Moelleux 等級以上；葡萄汁含糖 ≥ 238 g/L）</li>
               <li><strong>三大坡：</strong>La Montagne、Beauregard、Fesles（另有 Les Melleresses 等地塊名）</li>
               <li><strong>名家：</strong>Château de Fesles、Domaine Petit Val、Domaine des Petits Quarts</li>
             </ul>
           </div>
           <div class="pyramid-level villages">
-            <h4>🥉 Coteaux du Layon Villages（7 村莊指定）</h4>
+            <h4>🥉 Coteaux du Layon Villages（6 村莊指定）</h4>
             <ul>
               <li><strong>面積：</strong>約 200 公頃</li>
               <li><strong>產量上限：</strong>30 hL/ha</li>
-              <li><strong>最低殘糖：</strong>34 g/L</li>
-              <li><strong>7 個村莊：</strong>Beaulieu-sur-Layon、Faye-d'Anjou、Rablay-sur-Layon、Rochefort-sur-Loire、Saint-Aubin-de-Luigné、Saint-Lambert-du-Lattay、<strong>Chaume Premier Cru</strong>（最頂級村，2011 年升格）</li>
+              <li><strong>最低殘糖：</strong>34 g/L（葡萄汁含糖 ≥ 238 g/L，酒精 ≥ 12%）</li>
+              <li><strong>6 個村莊：</strong>Beaulieu-sur-Layon、Faye-d'Anjou、Rablay-sur-Layon、Rochefort-sur-Loire、Saint-Aubin-de-Luigné、Saint-Lambert-du-Lattay；位於 Rochefort 轄下的 <strong>Chaume Premier Cru</strong> 另立為獨立 AOC（約 80 公頃、葡萄汁含糖 ≥ 272 g/L、25 hL/ha）</li>
             </ul>
           </div>
           <div class="pyramid-level base">
@@ -136,7 +136,7 @@ export const lessonContent = [
             <ul>
               <li><strong>面積：</strong>約 1,400 公頃，跨 27 個村莊</li>
               <li><strong>產量上限：</strong>35 hL/ha</li>
-              <li><strong>最低殘糖：</strong>34 g/L（Demi-sec 以上）</li>
+              <li><strong>最低殘糖：</strong>34 g/L（Demi-sec 以上；葡萄汁含糖 ≥ 221 g/L）</li>
               <li><strong>定位：</strong>入門貴腐酒，提供性價比選擇</li>
             </ul>
           </div>
@@ -242,6 +242,18 @@ export const lessonContent = [
         ],
         correctIndex: 1,
         explanation: 'Botrytis 並不會讓整個葡萄園同時感染——同一個葡萄串中，可能某些葡萄已達完美貴腐，其他仍未感染或剛開始感染。Tries Successives 要求採收工人多次回到葡萄園（頂級 QdC GC 至少 3 次，部分酒莊甚至 6–8 次），每次只挑選達到「pourri plein」狀態的葡萄。這個方式人力成本極高，但是頂級貴腐酒品質的保證。'
+      },
+      {
+        id: 'q5',
+        question: 'Coteaux du Layon Villages 可在標籤標示的村莊共有幾個？Chaume 的地位為何？',
+        options: [
+          '7 個，Chaume 是其中之一',
+          '6 個，Chaume 另立為 Premier Cru（Rochefort 轄下）',
+          '27 個，Chaume 是最大的村',
+          '6 個，Chaume 是 Grand Cru'
+        ],
+        correctIndex: 1,
+        explanation: 'Villages 指定的是 6 個村莊（Beaulieu、Faye、Rablay、Rochefort、Saint-Aubin、Saint-Lambert），葡萄汁含糖 ≥ 238 g/L。Chaume 是 Rochefort-sur-Loire 轄下的地塊，另立為 Coteaux du Layon Premier Cru Chaume（約 80 公頃、葡萄汁含糖 ≥ 272 g/L、25 hL/ha）。Quarts de Chaume 才是 Grand Cru。'
       }
     ]
   }
