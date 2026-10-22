@@ -338,7 +338,7 @@ export const lessonContent = [
           question: '「Puttonyos」這個詞在托卡伊傳統中最初指的是什麼實物？',
           options: ['A. 托卡伊產區內的行政區劃單位', 'B. 傳統上背在背上、用來採收 Aszú 貴腐果漿的木桶', 'C. 一種只在托卡伊使用的貴腐菌菌株名稱', 'D. 托卡伊酒莊申請分級認證用的證書'],
           correct: 1,
-          explanation: 'Puttonyos 原指採收工人背在背上用來裝運 Aszú 貴腐果漿的傳統木桶，每桶約 20 公斤。後來這個詞演變成甜度分級單位——「幾 Puttonyos」代表每桶基酒中加入了幾桶 Aszú 果漿。'
+          explanation: 'Puttonyos 原指採收工人背在背上用來裝運 Aszú 貴腐果漿的傳統木桶，每桶約 25 公斤。後來這個詞演變成甜度分級單位——「幾 Puttonyos」代表每桶基酒中加入了幾桶 Aszú 果漿。'
         },
         {
           type: 'single',

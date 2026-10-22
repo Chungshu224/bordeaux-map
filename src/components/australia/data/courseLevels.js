@@ -109,7 +109,7 @@ export const courseLevels = [
         id: 'M4', title: '西澳深度',
         lessons: [
           { id: 'A2M4L1', title: 'Margaret River 子產區解析',    icon: '🗺' },
-          { id: 'A2M4L2', title: 'Great Southern 五個 Region',   icon: '5️⃣' },
+          { id: 'A2M4L2', title: 'Great Southern 五個 Sub-Region',   icon: '5️⃣' },
           { id: 'A2M4L3', title: 'Frankland River Riesling 風格', icon: '🍋' },
         ],
       },

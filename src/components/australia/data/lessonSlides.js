@@ -1101,7 +1101,7 @@ const SLIDE_MAP = {
       left: {
         label: 'Great Southern（WA）',
         points: [
-          'WA 最大 Zone，5 個 Region',
+          'WA 最大的 GI Region，下分 5 個 Sub-Region',
           '涼爽地中海 + 南冰洋調節',
           'Albany / Denmark / Frankland River / Mount Barker / Porongurup',
           'Riesling 精緻礦石，Shiraz 胡椒辛料',
@@ -1142,7 +1142,7 @@ const SLIDE_MAP = {
       type: 'summary',
       title: '本課小結',
       points: [
-        'Great Southern：WA 最大Zone，5 Region，Riesling & Shiraz 精緻',
+        'Great Southern：WA 最大的 GI Region，5 個 Sub-Region，Riesling & Shiraz 精緻',
         'Tasmania：全澳最冷，氣泡酒 + Pinot Noir 世界級，近年快速崛起',
         '兩個產區都是涼爽氣候、精品風格的代表',
       ],
@@ -2216,45 +2216,45 @@ const SLIDE_MAP = {
         'Wilyabrup：心臟地帶，頂級 Cabernet；Wallcliffe：Leeuwin 頂級 Chardonnay',
         '強項：Cabernet Sauvignon、Chardonnay、SBS（Sémillon-Sauvignon Blanc）',
       ],
-      nextLesson: '下一課：Great Southern 五個 Region',
+      nextLesson: '下一課：Great Southern 五個 Sub-Region',
     },
   ],
 
-  // A2M4L2 — Great Southern 五個 Region
+  // A2M4L2 — Great Southern 五個 Sub-Region
   A2M4L2: [
     {
       type: 'cover',
-      title: 'Great Southern 五個 Region',
+      title: 'Great Southern 五個 Sub-Region',
       subtitle: 'Level 2 · Module 4 · Lesson 2',
       bg: 'linear-gradient(135deg, #1a4d1a 0%, #1a6b9b 100%)',
       emoji: '5️⃣',
     },
     {
       type: 'map',
-      title: 'Great Southern 五大 Region 地圖',
-      subtitle: 'WA 最大 Zone：Albany・Denmark・Frankland River・Mount Barker・Porongurup',
+      title: 'Great Southern 五大 Sub-Region 地圖',
+      subtitle: 'WA 最大 GI Region：Albany・Denmark・Frankland River・Mount Barker・Porongurup',
       mapRegion: 'Albany|Denmark|Frankland River|Mount Barker|Porongurup',
     },,
 
     {
       type: 'content',
-      title: 'Great Southern Zone 概況',
+      title: 'Great Southern Region 概況',
       points: [
-        '位於西澳最南端，是澳洲面積最大的葡萄酒 Zone（約 100,000 平方公里）',
+        '位於西澳最南端，是西澳面積最大的葡萄酒 GI Region',
         '氣候：涼爽海洋性至大陸性，受南大洋強烈影響，是西澳最涼爽的葡萄酒區域',
-        '五個獨立 GI Region：Albany、Denmark、Frankland River、Mount Barker、Porongurup',
+        '下分五個 Sub-Region：Albany、Denmark、Frankland River、Mount Barker、Porongurup',
         '共同特色：涼爽氣候、高酸葡萄酒、Riesling 和 Shiraz 是主力',
         '面積廣大但酒莊稀少，多為小型精品操作',
       ],
     },
     {
       type: 'content',
-      title: '五個 Region 特色一覽',
+      title: '五個 Sub-Region 特色一覽',
       points: [
         '🌊 Albany：最南沿海，極涼爽，Pinot Noir、Chardonnay、Riesling，細緻精品風格',
         '🌿 Denmark：涼爽海洋性，Chardonnay 與 Pinot Noir 表現出色，酒莊多為小型家庭式',
         '🌾 Frankland River：內陸，大陸性氣候，Riesling（石板礦物感）和 Cabernet 代表作，Alkoomi 老藤',
-        '🏔️ Mount Barker：最重要的 Region，氣候平衡，Riesling 和 Shiraz 並重，Plantagenet 是代表',
+        '🏔️ Mount Barker：最重要的 Sub-Region，氣候平衡，Riesling 和 Shiraz 並重，Plantagenet 是代表',
         '⛰️ Porongurup：范廷嶺（Stirling Range）保護，最小但最獨特，花崗岩土壤，精品 Riesling 和 Pinot Noir',
         '整體核心品種：Riesling（線性礦物）、Shiraz（胡椒感）、Cabernet、Chardonnay',
       ],
@@ -2272,10 +2272,10 @@ const SLIDE_MAP = {
     },
     {
       type: 'quiz',
-      question: 'Great Southern 的哪個 Region 以花崗岩土壤上的精品 Riesling 和 Pinot Noir 著稱，是五個中最小但最獨特的？',
+      question: 'Great Southern 的哪個 Sub-Region 以花崗岩土壤上的精品 Riesling 和 Pinot Noir 著稱，是五個中最小但最獨特的？',
       options: ['Albany', 'Frankland River', 'Mount Barker', 'Porongurup'],
       answer: 3,
-      explanation: 'Porongurup 是 Great Southern 最小的 Region，位於 Stirling Range 山脈的花崗岩丘陵上，有天然防護，出產非常精緻獨特的 Riesling 和 Pinot Noir，是西澳的隱藏寶石。',
+      explanation: 'Porongurup 是 Great Southern 最小的 Sub-Region，位於 Stirling Range 山脈的花崗岩丘陵上，有天然防護，出產非常精緻獨特的 Riesling 和 Pinot Noir，是西澳的隱藏寶石。',
     },
     {
       type: 'summary',
@@ -2301,7 +2301,7 @@ const SLIDE_MAP = {
     {
       type: 'map',
       title: 'Frankland River 產區地圖',
-      subtitle: 'Great Southern Zone 最內陸的 Region，大陸型氣候造就濃郁 Riesling',
+      subtitle: 'Great Southern Region 最內陸的 Sub-Region，大陸型氣候造就濃郁 Riesling',
       mapRegion: 'Frankland River',
     },,
 
@@ -2309,8 +2309,8 @@ const SLIDE_MAP = {
       type: 'content',
       title: 'Frankland River 的地理與氣候',
       points: [
-        '位於 Great Southern Zone 的西北部，距海較遠，更具大陸性氣候特徵',
-        '海拔：200–320m，地形平緩，與其他 Great Southern Region 相比夏季更熱',
+        '位於 Great Southern Region 的西北部，距海較遠，更具大陸性氣候特徵',
+        '海拔：200–320m，地形平緩，與其他 Great Southern Sub-Region 相比夏季更熱',
         '土壤：古老片岩（Schist）、石板（Slate）和砂質壤土，礦物感豐富',
         '氣候特點：晝夜溫差大（可達 20°C+），保留天然酸度',
         '降雨：主要集中冬春，夏季相對乾燥，有利葡萄集中成熟',
@@ -2725,7 +2725,7 @@ const SLIDE_MAP = {
         '✅ 南澳深度：老藤分級、Eden/Clare 對比、Limestone Coast 全覽',
         '✅ 維多利亞：Yarra 上下亞拉、King Valley 義大利品種、Rutherglen Muscat、Grampians 氣泡紅',
         '✅ NSW：Hunter Semillon 陳年奇蹟、Canberra 精品、Orange/Mudgee 高海拔',
-        '✅ 西澳：Margaret River 子產區、Great Southern 五個 Region、Frankland Riesling',
+        '✅ 西澳：Margaret River 子產區、Great Southern 五個 Sub-Region、Frankland Riesling',
         '✅ Tasmania 北南比較、Granite Belt 替代品種',
         '✅ 釀酒工藝：螺旋蓋革命、橡木桶比較、有機/自然酒趨勢',
       ],
