@@ -38,6 +38,7 @@
 	},
 	{
 		"id": "Valle-d-Aosta-DOC",
+		"boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
 		"name": "Valle d'Aosta / Vallée d'Aoste",
 		"type": "DOC",
 		"region": "Valle d'Aosta",
@@ -62,6 +63,7 @@
 	},
 	{
 		"id": "Arnad-Montjovet",
+		"boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
 		"name": "Arnad-Montjovet",
 		"type": "DOC 子產區",
 		"region": "Valle d'Aosta",
@@ -78,6 +80,7 @@
 	},
 	{
 		"id": "Donnas",
+		"boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
 		"name": "Donnas",
 		"type": "DOC 子產區",
 		"region": "Valle d'Aosta",
@@ -94,6 +97,7 @@
 	},
 	{
 		"id": "Chambave",
+		"boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
 		"name": "Chambave",
 		"type": "DOC 子產區",
 		"region": "Valle d'Aosta",
@@ -110,6 +114,7 @@
 	},
 	{
 		"id": "Nus",
+		"boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
 		"name": "Nus",
 		"type": "DOC 子產區",
 		"region": "Valle d'Aosta",
@@ -126,6 +131,7 @@
 	},
 	{
 		"id": "Torrette",
+		"boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
 		"name": "Torrette",
 		"type": "DOC 子產區",
 		"region": "Valle d'Aosta",
@@ -142,6 +148,7 @@
 	},
 	{
 		"id": "Enfer-d-Arvier",
+		"boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
 		"name": "Enfer d'Arvier",
 		"type": "DOC 子產區",
 		"region": "Valle d'Aosta",
@@ -158,6 +165,7 @@
 	},
 	{
 		"id": "Blanc-de-Morgex-et-de-La-Salle",
+		"boundaryNote": "邊界為市鎮範圍近似（ISTAT 市鎮邊界依 disciplinare 市鎮名單合併），範圍大於實際葡萄園",
 		"name": "Blanc de Morgex et de La Salle",
 		"type": "DOC 子產區",
 		"region": "Valle d'Aosta",
