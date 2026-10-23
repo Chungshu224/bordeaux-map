@@ -90,13 +90,15 @@
 - 入口：課程首頁「品種配對・產區速答」→ `GreeceGameHubPage`（沿用共用 `GameHub`）
 - 共用引擎 `games/GreeceQuizEngine.vue`：計時、連勝加成（×1.5／2／3）、錯題回顧、排行榜；題目格式 `{ stem, tag, hint, options, correct, explain }`
 - 產區速答：PDO 名稱＋線索 → 六大地理區；簡單 13 個主要 PDO、4 選項；困難全 33 個、6 選項
-- 品種配對：19 個品種；簡單＝品種 → 特徵；困難＝加入特徵 → 品種與 PDO → 核心品種（10 組無歧義配對）
+- 品種配對：19 個品種（共四款遊戲）；簡單＝品種 → 特徵；困難＝加入特徵 → 品種與 PDO → 核心品種（10 組無歧義配對）
+- 分級辨識快答：PDO／PGI／OPAP／OPE／Retsina／Verdea 術語辨識（簡單）；加入 PGI 層級（Regional／District／Area）與制度數字（困難）；選項為人工挑選，避免歧義（例如 PDO 與 OPAP 不同題並列）
+- 希臘知識閃問：直接取自 Level 1–3 課程測驗（`flashData.js` 以 `import.meta.glob` 讀取，不另維護題庫、同題幹去重）；簡單＝Level 1（23 題）、困難＝Level 2＋3（62 題）；課程測驗修正時遊戲題庫自動同步
 - 題庫 `src/data/greece/gameData.js`，事實只取自課程已查證內容，不含有出入的數字（如 Reserve 月數）
 - 排行榜沿用 `game_scores` 表（`game_type`: `gr_region_quiz`／`gr_grape_match`，無需 migration）；最高分存 localStorage（`gr_region_best`／`gr_grape_best`）
 - 頁面文字目前僅繁體中文（與匈牙利遊戲一致）
 
 ## 尚未做（下一階段）
-- 更多遊戲（Hungary 另有分級辨識、知識閃問）、品飲筆記（首頁已顯示「即將推出」）
+- 品飲筆記（首頁已顯示「即將推出」）
 - 成就系統、詞彙辭典（`WineGlossary`／`AdminGlossary` 尚未加入 greece）
 - Supabase `courses` 資料表需新增 `greece` 一列才能在首頁上架
 - 地圖與頁面的實機畫面檢查（vite build 已通過；需 `VITE_MAPBOX_TOKEN` 才能在瀏覽器看到底圖）

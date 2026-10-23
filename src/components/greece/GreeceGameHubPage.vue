@@ -22,6 +22,8 @@
 
     <GreeceRegionQuizPage v-else-if="currentGame === 'region'" @back="currentGame = null" />
     <GreeceGrapeMatchPage v-else-if="currentGame === 'grape'" @back="currentGame = null" />
+    <GreeceClassificationQuizPage v-else-if="currentGame === 'classification'" @back="currentGame = null" />
+    <GreeceFlashPage v-else-if="currentGame === 'flash'" @back="currentGame = null" />
   </div>
 </template>
 
@@ -30,6 +32,8 @@ import { ref, computed } from 'vue'
 import SharedGameHub from '../shared/GameHub.vue'
 import GreeceRegionQuizPage from './games/GreeceRegionQuizPage.vue'
 import GreeceGrapeMatchPage from './games/GreeceGrapeMatchPage.vue'
+import GreeceClassificationQuizPage from './games/GreeceClassificationQuizPage.vue'
+import GreeceFlashPage from './games/GreeceFlashPage.vue'
 
 defineEmits(['back'])
 
@@ -47,10 +51,22 @@ const GAMES = [
     desc: '從描述判斷品種，或從 PDO 找出核心品種：Assyrtiko、Xinomavro、Agiorgitiko 等',
     tags: ['配對', '多種題型', '錯題回顧'],
     accent: '#B8902A', accent2: '#d9b24a'
+  },
+  {
+    id: 'classification', icon: '🏷️', name: '分級辨識快答',
+    desc: 'PDO／PGI、OPAP／OPE、Retsina 與 Verdea，以及 PGI 的三個層級',
+    tags: ['分級', '簡單 / 困難', '制度與術語'],
+    accent: '#6A4C93', accent2: '#8d6bb8'
+  },
+  {
+    id: 'flash', icon: '⚡', name: '希臘知識閃問',
+    desc: '從歷史、風土到法規與產業——直接取自 Level 1–3 課程題庫',
+    tags: ['問答', '簡單 / 困難', '85+ 題'],
+    accent: '#2E7D32', accent2: '#4caf50'
   }
 ]
 
-const BEST_KEYS = ['gr_region_best', 'gr_grape_best']
+const BEST_KEYS = ['gr_region_best', 'gr_grape_best', 'gr_class_best', 'gr_flash_best']
 const stats = computed(() => {
   let played = 0
   let totalBest = 0

@@ -153,3 +153,64 @@ export function buildGrapeQuestions(diff) {
     ...PDO_GRAPE.map(p2g)
   ])
 }
+
+// ── 分級辨識（制度與術語）────────────────────────────────────────
+// 每題的選項是人工挑選的（正解＋不會產生歧義的干擾項）。
+const TERM_ITEMS = [
+  { stem: '葡萄須 100% 來自該區的歐盟層級保護名稱', ans: 'PDO', wrong: ['PGI', 'Retsina', 'Verdea'],
+    explain: 'PDO 要求葡萄 100% 來自該區；目前登記 33 個。' },
+  { stem: '至少 85% 的葡萄來自該區，其餘可來自希臘其他地區', ans: 'PGI', wrong: ['PDO', 'Retsina', 'Verdea'],
+    explain: 'PGI 至少 85% 來自該區；目前約 114 個，分 Regional、District、Area 三級。' },
+  { stem: '舊制用語，適用乾型酒，瓶頸為紅色封帶', ans: 'OPAP', wrong: ['OPE', 'PGI', 'Retsina'],
+    explain: 'OPAP＝優質法定產區（乾型酒），瓶頸紅色封帶。' },
+  { stem: '舊制用語，適用甜酒與強化酒，瓶頸為藍色封帶', ans: 'OPE', wrong: ['OPAP', 'PGI', 'Verdea'],
+    explain: 'OPE＝受控法定產區（甜酒與強化酒），瓶頸藍色封帶。' },
+  { stem: '歐盟認定的傳統名稱，僅限希臘使用，發酵中加入阿勒頗松樹脂', ans: 'Retsina', wrong: ['Verdea', 'PDO', 'OPE'],
+    explain: 'Retsina 是傳統名稱；樹脂在發酵結束後移除。' },
+  { stem: 'Zakynthos 的傳統名稱白酒', ans: 'Verdea', wrong: ['Retsina', 'OPAP', 'OPE'],
+    explain: 'Verdea 是 Zakynthos 的傳統名稱。' },
+  { stem: 'Naoussa', ans: 'PDO', wrong: ['PGI', 'Retsina', 'Verdea'], explain: 'Naoussa 是 100% Xinomavro 的 PDO。' },
+  { stem: 'Nemea', ans: 'PDO', wrong: ['PGI', 'Retsina', 'Verdea'], explain: 'Nemea 是 100% Agiorgitiko 的 PDO。' },
+  { stem: 'Santorini', ans: 'PDO', wrong: ['PGI', 'Retsina', 'Verdea'], explain: 'Santorini 是 PDO。' },
+  { stem: 'PGI Crete', ans: 'PGI', wrong: ['PDO', 'Retsina', 'Verdea'], explain: '克里特島上大部分的酒以 PGI Crete 銷售。' },
+  { stem: 'PGI Attica', ans: 'PGI', wrong: ['PDO', 'OPAP', 'OPE'], explain: 'Attica 沒有 PDO，非松脂酒以 PGI Attica 銷售。' },
+  { stem: 'PGI Thrace', ans: 'PGI', wrong: ['PDO', 'OPAP', 'OPE'], explain: '色雷斯沒有 PDO，以 PGI 標示。' }
+]
+
+const LEVEL_ITEMS = [
+  { stem: 'PGI Aegean Sea', ans: 'Regional', explain: 'Aegean Sea 是 Regional 級 PGI。' },
+  { stem: 'PGI Imathia', ans: 'District', explain: 'Imathia 是 District 級 PGI。' },
+  { stem: 'PGI Drama', ans: 'District', explain: 'Drama 是 District 級 PGI。' },
+  { stem: 'PGI Florina', ans: 'District', explain: 'Florina 是 District 級 PGI。' },
+  { stem: 'PGI Halkidiki', ans: 'District', explain: 'Halkidiki 是 District 級 PGI。' },
+  { stem: 'PGI Achaia', ans: 'District', explain: 'Achaia 是 District 級 PGI。' },
+  { stem: 'PGI Cyclades', ans: 'District', explain: 'Cyclades 是 District 級 PGI。' },
+  { stem: 'PGI Epanomi', ans: 'Area', explain: 'Epanomi 是 Area 級 PGI（如 Ktima Gerovassiliou）。' },
+  { stem: 'PGI Slopes of Aigialia', ans: 'Area', explain: 'Slopes of Aigialia 是 Area 級 PGI。' }
+]
+
+const FACT_ITEMS = [
+  { stem: '希臘目前登記的 PDO 數量約為？（Wines of Greece）', ans: '33', wrong: ['28', '58', '114'],
+    explain: '現行為 33 個；2018 年教材列 28 個，舊資料的 PGI 為 58，現行約 114。' },
+  { stem: '希臘目前的 PGI 數量約為？', ans: '114', wrong: ['33', '58', '8'], explain: '約 114 個；Regional 8、District 37，其餘為 Area。' },
+  { stem: 'Regional 級 PGI 共有幾個？', ans: '8', wrong: ['37', '33', '114'], explain: 'Regional 8 個、District 37 個。' },
+  { stem: 'District 級 PGI 共有幾個？', ans: '37', wrong: ['8', '33', '114'], explain: 'District 37 個，約以行政縣為界。' },
+  { stem: 'Retsina 的樹脂上限約為體積的多少？', ans: '1%（10 g/L）', wrong: ['5%', '0.1%', '10%'], explain: '資料記載約 1%（10 g/L），且須在發酵進行到三分之二前加入。' },
+  { stem: '「Reserve／Grand Reserve」這類陳年用語適用於？', ans: '前 OPAP／OPE 的 PDO 酒款',
+    wrong: ['PGI 酒款', '所有希臘酒', '只限 Retsina'], explain: 'PGI 不可使用；各 PDO 另有自己的陳年規範（如 Mavrodaphne of Patras）。' },
+  { stem: 'OPAP 與 OPE 源於哪一年的法令？', ans: '1969 年', wrong: ['1981 年', '2009 年', '1992 年'],
+    explain: '源於 1969 年法令，2009 年起納入歐盟 PDO 架構。' }
+]
+
+export function buildClassificationQuestions(diff) {
+  const mk = (stem, tag, ans, wrong, explain) => {
+    const opts = shuffle([ans, ...wrong])
+    return { tag, stem, options: opts, correct: opts.indexOf(ans), explain }
+  }
+  const terms = TERM_ITEMS.map(t => mk(t.stem, '辨識術語／制度', t.ans, t.wrong, t.explain))
+  if (diff === 'easy') return shuffle(terms)
+  const levels = LEVEL_ITEMS.map(l => mk(l.stem, 'PGI 屬於哪一級？', l.ans,
+    shuffle(['Regional', 'District', 'Area', 'PDO'].filter(x => x !== l.ans)), l.explain))
+  const facts = FACT_ITEMS.map(f => mk(f.stem, '制度數字與規範', f.ans, f.wrong, f.explain))
+  return shuffle([...terms, ...levels, ...facts])
+}
