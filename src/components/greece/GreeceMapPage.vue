@@ -72,6 +72,7 @@ import {
   RegionMapHeader, RegionMapLayerPanel, RegionMapInfoPanel,
   RegionMapAppellationDrawer, RegionMapMobileToolbar
 } from '../shared/regionMap/index.js'
+import { globalGreeceAchievementManager } from '../../stores/greeceAchievementSystem.js'
 
 const props = defineProps({ initialRegion: { type: Object, default: null } })
 const emits = defineEmits(['back-to-course'])
@@ -169,6 +170,7 @@ function selectById(id, fly = true) {
   if (!feat) return
   activeFeature.value = feat.properties
   infoBarCollapsed.value = false
+  globalGreeceAchievementManager.recordRegionExplored(feat.properties.id, feat.properties.group)
   if (!map) return
   applyHighlight()
   if (fly) map.fitBounds(bboxOf(feat), { padding: 70, duration: 900, maxZoom: 11 })
@@ -312,6 +314,7 @@ async function initMap(retry = 0) {
 }
 
 onMounted(async () => {
+  globalGreeceAchievementManager.init()
   await nextTick()
   await initMap()
 })

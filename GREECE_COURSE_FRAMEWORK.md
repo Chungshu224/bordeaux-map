@@ -104,10 +104,18 @@
 - ⚠ **需先套用 migration** `supabase/migrations/20261023000000_add_greece_tasting_types.sql`（擴充 `wine_type` CHECK）；未套用前儲存會被資料庫拒絕。我沒有對正式資料庫執行任何變更
 - 頁面文字目前僅繁體中文（與匈牙利筆記一致）
 
+## 成就系統、詞彙辭典、courses 資料列
+- 成就：`src/stores/greeceAchievementSystem.js`（29 項，已註冊於 `useAchievements.js`）；觸發點為課程完成、地圖探索 PDO、遊戲結算、品飲筆記同步；總覽頁有成就入口。
+- 詞彙辭典：`WineGlossary`／`AdminGlossary` 已加入 greece（第三語為希臘文 `el`），課程頁掛載 `<WineGlossary region="greece" />`。
+- ⚠ 需手動套用的 migration（學院資料庫無法由 MCP 連線，尚未套用）：
+  - `20261023000000_add_greece_tasting_types.sql`（品飲筆記 wine_type）
+  - `20261023000100_add_greece_course.sql`（courses 新增 greece，預設 `active=false`，價格為暫定值）
+  - `20261023000200_add_greece_glossary.sql`（`el` 欄位、region CHECK、10 筆種子詞條）
+- 首頁顯示卡片另需把 `PlatformHome` 的 `courseShowHome.greece` 改為 true。
+
 ## 尚未做（下一階段）
-- 成就系統、詞彙辭典（`WineGlossary`／`AdminGlossary` 尚未加入 greece）
-- Supabase `courses` 資料表需新增 `greece` 一列才能在首頁上架
 - 地圖與頁面的實機畫面檢查（vite build 已通過；需 `VITE_MAPBOX_TOKEN` 才能在瀏覽器看到底圖）
+- 套用上述 migration、確認 greece 價格後公開課程
 
 ## 資料來源（Drive）與待查證事項
 - `greece.pdf`（Court of Master Sommeliers, 2018）、`希臘酒.pptx`（2022 筆記）、`greeceregs.pdf`（2011 法規）、`193269_map_GREECE PDO.pdf`（33 PDO 官方地圖）

@@ -21,11 +21,12 @@
       :percent="totalProgressPct"
       :completed-count="completedLessons.length"
       :total-count="totalLessonCount"
-      :achievement-count="0"
+      :achievement-count="achievementCount"
       :streak="0"
       :cta-text="heroButtonText"
       @cta="startJourney"
       @open-progress="showProgressModal = true"
+      @open-achievements="showAchievementModal = true"
     />
 
     <!-- 3. Quick Nav（地圖／練習／筆記規劃中） -->
@@ -45,6 +46,8 @@
       title="為什麼學習希臘葡萄酒？"
       :items="overviewItems"
     />
+
+    <AchievementModal :open="showAchievementModal" course-key="greece" @close="showAchievementModal = false" />
 
     <ProgressModal
       :open="showProgressModal"
@@ -68,15 +71,21 @@ import {
   LevelTrack,
   RegionStoryGrid,
   ProgressModal,
+  AchievementModal,
   getTheme
 } from '../shared/courseHome/index.js'
 import { greeceLearningState, greeceLearningLevels } from '../../stores/greeceLearningStore.js'
 import { authActions } from '../../stores/authStore.js'
+import { globalGreeceAchievementManager, greeceAchievementState } from '../../stores/greeceAchievementSystem.js'
 
 const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
 
 const theme = getTheme('greece')
 const showProgressModal = ref(false)
+const showAchievementModal = ref(false)
+
+globalGreeceAchievementManager.init()
+const achievementCount = computed(() => greeceAchievementState.unlockedAchievements.length)
 
 const LEVELS = [1, 2, 3]
 const completedLessons = computed(() => greeceLearningState.completedLessons)
@@ -148,6 +157,7 @@ const quickNavItems = computed(() => [
   { key: 'map',      desc: '33 個 PDO 互動地圖' },
   { key: 'games',    desc: '品種配對・產區速答' },
   { key: 'notebook', desc: '希臘酒款品飲筆記' },
+  { key: 'achievements', desc: `${achievementCount.value} 個已解鎖徽章` },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 
@@ -155,6 +165,7 @@ function onQuickNav(key) {
   if (key === 'map') emit('openMap')
   else if (key === 'games') emit('openGames')
   else if (key === 'notebook') emit('openNotebook')
+  else if (key === 'achievements') showAchievementModal.value = true
   else if (key === 'progress') showProgressModal.value = true
 }
 

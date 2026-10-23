@@ -139,6 +139,7 @@
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { supabase } from '@/lib/supabaseClient.js'
 import { authState } from '@/stores/authStore.js'
+import { globalGreeceAchievementManager } from '@/stores/greeceAchievementSystem.js'
 
 const props = defineProps({
   gameType: { type: String, required: true },     // game_scores.game_type，如 gr_grape_match
@@ -270,6 +271,10 @@ function nextQuestion() {
       const prev = parseInt(localStorage.getItem(props.bestKey) || '0')
       if (score.value > prev) localStorage.setItem(props.bestKey, String(score.value))
     } catch { /* localStorage 不可用時略過 */ }
+    globalGreeceAchievementManager.init()
+    globalGreeceAchievementManager.recordQuizResult({
+      correctCount: correctCount.value, totalQ: questions.value.length, gameType: props.gameType
+    })
     phase.value = 'final'
     stopRaf()
   }

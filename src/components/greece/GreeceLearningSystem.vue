@@ -40,6 +40,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="greece" />
   </div>
 </template>
 
@@ -53,9 +54,11 @@ import {
   greeceReloadFromStorage
 } from '../../stores/greeceLearningStore.js'
 import { authActions, authState, authInitPromise } from '../../stores/authStore.js'
+import { globalGreeceAchievementManager } from '../../stores/greeceAchievementSystem.js'
 import { saveGreeceLesson, loadAndMergeGreeceProgress } from '../../lib/courseProgressSync.js'
 import GreeceCourseLayout from './GreeceCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import WineGlossary from '../WineGlossary.vue'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -64,6 +67,8 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+
+globalGreeceAchievementManager.init()
 
 const currentLevel = computed(() => greeceLearningState.currentLevel)
 const currentLesson = computed(() => greeceLearningState.currentLesson)
@@ -128,9 +133,20 @@ onMounted(async () => {
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
+    const alreadyDone = greeceLearningState.completedLessons.includes(lessonId)
     greeceLearningActions.completeLesson(lessonId)
     const userId = authState.user?.id
     if (userId) saveGreeceLesson(userId, lessonId)
+    // 成就記錄（重複完成同一課不重複計算）
+    if (!alreadyDone) {
+      const lessons = currentLevelData.value?.lessons || []
+      const isLevelDone = lessons.length > 0 &&
+        lessons.every(l => greeceLearningState.completedLessons.includes(l.id))
+      globalGreeceAchievementManager.recordLessonCompleted({
+        levelId: isLevelDone ? currentLevel.value : null,
+        totalProgress: greeceLearningProgress.value
+      })
+    }
   }
   greeceLearningActions.exitLesson()
 }

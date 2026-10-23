@@ -97,7 +97,7 @@ const { t } = useI18n()
 
 const SUPPORTED_REGIONS = [
   'bordeaux', 'bourgogne', 'italy',
-  'spain', 'portugal', 'germany', 'hungary',
+  'spain', 'portugal', 'germany', 'hungary', 'greece',
   'loire', 'california', 'australia', 'newzealand'
 ]
 
@@ -105,7 +105,7 @@ const props = defineProps({
   region: {
     type: String,
     default: 'bordeaux',
-    validator: v => ['bordeaux', 'bourgogne', 'italy', 'spain', 'portugal', 'germany', 'hungary', 'loire', 'california', 'australia', 'newzealand'].includes(v)
+    validator: v => ['bordeaux', 'bourgogne', 'italy', 'spain', 'portugal', 'germany', 'hungary', 'greece', 'loire', 'california', 'australia', 'newzealand'].includes(v)
   }
 })
 
@@ -118,6 +118,7 @@ const REGION_META = {
   portugal:   { icon: '🇵🇹', lang3Key: 'pt', lang3Label: 'Português' },
   germany:    { icon: '🇩🇪', lang3Key: 'de', lang3Label: 'Deutsch' },
   hungary:    { icon: '🇭🇺', lang3Key: 'hu', lang3Label: 'Magyar' },
+  greece:     { icon: '🇬🇷', lang3Key: 'el', lang3Label: 'Ελληνικά' },
   loire:      { icon: '🏰', lang3Key: 'fr', lang3Label: 'Français' },
   california: { icon: '🌉', lang3Key: '',   lang3Label: '' },
   australia:  { icon: '🦘', lang3Key: '',   lang3Label: '' },
@@ -164,7 +165,7 @@ async function loadGlossary() {
   try {
     const { data, error } = await supabase
       .from('wine_glossary')
-      .select('id, zh, en, fr, it, es, pt, de, hu, definition, category')
+      .select('id, zh, en, fr, it, es, pt, de, hu, el, definition, category')
       .eq('region', props.region)
       .order('zh')
     if (error) throw error

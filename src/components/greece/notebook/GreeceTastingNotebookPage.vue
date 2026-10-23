@@ -106,6 +106,7 @@ import { supabase } from '@/lib/supabaseClient.js'
 import { authState } from '@/stores/authStore.js'
 import GreeceTastingNoteModal from './GreeceTastingNoteModal.vue'
 import { WINE_TYPES } from '@/data/greece/tastingData.js'
+import { globalGreeceAchievementManager } from '@/stores/greeceAchievementSystem.js'
 
 const emit = defineEmits(['back'])
 const router = useRouter()
@@ -167,6 +168,8 @@ async function loadNotes() {
   if (error) console.warn('載入希臘筆記失敗:', error.message)
   notes.value = data || []
   loading.value = false
+  globalGreeceAchievementManager.init()
+  globalGreeceAchievementManager.syncTastingNotes(notes.value.filter(n => n.status === 'tried' || n.status === 'wishlist').length)
 }
 
 const openNote = note => { selectedNote.value = note; showModal.value = true }
