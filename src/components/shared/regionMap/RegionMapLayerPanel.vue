@@ -24,7 +24,7 @@
         <span class="lbtn-text">等高線</span>
         <span class="lbtn-dot" :class="{ on: showContours }"></span>
       </button>
-      <button class="rmap-btn-layer" :class="{ active: climateEnabled }" @click="$emit('toggle-climate')">
+      <button v-if="!hideClimate" class="rmap-btn-layer" :class="{ active: climateEnabled }" @click="$emit('toggle-climate')">
         <span class="lbtn-icon">🌡</span>
         <span class="lbtn-text">氣候熱力</span>
         <span class="lbtn-dot" :class="{ on: climateEnabled }"></span>
@@ -66,6 +66,8 @@ defineProps({
   soilDisabled: { type: Boolean, default: true },
   /** 完全隱藏土壤結構按鈕 */
   hideSoil: { type: Boolean, default: false },
+  /** 完全隱藏氣候熱力按鈕（尚無氣候資料的課程用） */
+  hideClimate: { type: Boolean, default: false },
   /** 是否顯示 BRGM 地質圖按鈕（法國產區用） */
   brgmAvailable: { type: Boolean, default: false },
   brgmEnabled: { type: Boolean, default: false },

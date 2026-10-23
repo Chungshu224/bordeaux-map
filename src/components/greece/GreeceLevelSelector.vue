@@ -73,7 +73,7 @@ import {
 import { greeceLearningState, greeceLearningLevels } from '../../stores/greeceLearningStore.js'
 import { authActions } from '../../stores/authStore.js'
 
-const emit = defineEmits(['enterLevel'])
+const emit = defineEmits(['enterLevel', 'openMap'])
 
 const theme = getTheme('greece')
 const showProgressModal = ref(false)
@@ -145,14 +145,15 @@ const heroStats = [
 ]
 
 const quickNavItems = computed(() => [
-  { key: 'map',      desc: '希臘產區互動地圖', enabled: false },
+  { key: 'map',      desc: '33 個 PDO 互動地圖' },
   { key: 'games',    desc: '品種配對・產區競答', enabled: false },
   { key: 'notebook', desc: '品飲筆記', enabled: false },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 
 function onQuickNav(key) {
-  if (key === 'progress') showProgressModal.value = true
+  if (key === 'map') emit('openMap')
+  else if (key === 'progress') showProgressModal.value = true
 }
 
 const levelData = computed(() => [

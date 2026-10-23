@@ -77,11 +77,20 @@
 - D3 考試形式取自 Napa Valley Wine Academy，課內已提醒以 WSET 官方最新規格為準
 - 綜合評量刻意避開仍有出入的數字（如 Reserve 月數）
 
+## 互動地圖（33 PDO）
+- 資料：Bianchi et al. (2022) *A geospatial inventory of regulatory information for wine protected designations of origin in Europe*, Scientific Data（Figshare，CC0）；取其中 `PDO-GR-*` 共 33 筆，EPSG:3035 → WGS84，簡化約 30 m，輸出 `public/greece/greece_pdo.geojson`（約 380 KB）
+- 屬性：英文／希臘文名稱、六大地理區、登記日、範圍面積、酒款、品種、說明（品種與規範數字與 Level 2 一致）
+- 33 個與課程分區完全對得上：馬其頓 4、伊庇魯斯與色薩利 4、伯羅奔尼撒 7、愛奧尼亞 3、愛琴海 8、克里特 7
+- 範圍完全相同的組合：Lemnos／Muscat of Lemnos、Paros／Malvasia Paros、Sitia／Malvasia Sitia、Candia／Malvasia Candia（點選時顯示「同一範圍另有」；重疊處點擊取面積較小者）
+- 元件：`src/components/greece/GreeceMapPage.vue`（Mapbox，共用 regionMap 元件；3D、等高線、搜尋抽屜）；`RegionMapLayerPanel` 新增 `hideClimate` 屬性；課程首頁「地圖」已啟用
+- 限制：該資料集為 2021 年前登記的名單，與目前官方名單若有出入以官方為準；邊界為資料集原始範圍，非各 PDO 完整的法定描述；Candia 的規範細節未寫入
+- 尚無氣候圖層、地質圖層、發音；地圖頁文字目前僅繁體中文（與匈牙利地圖頁一致）
+
 ## 尚未做（下一階段）
-- 互動地圖＋PDO 邊界資料（33 PDO，需另找公開 GeoJSON）、遊戲、品飲筆記（首頁已顯示「即將推出」）
+- 遊戲、品飲筆記（首頁已顯示「即將推出」）
 - 成就系統、詞彙辭典（`WineGlossary`／`AdminGlossary` 尚未加入 greece）
 - Supabase `courses` 資料表需新增 `greece` 一列才能在首頁上架
-- 實際 vite build 與畫面檢查
+- 地圖與頁面的實機畫面檢查（vite build 已通過；需 `VITE_MAPBOX_TOKEN` 才能在瀏覽器看到底圖）
 
 ## 資料來源（Drive）與待查證事項
 - `greece.pdf`（Court of Master Sommeliers, 2018）、`希臘酒.pptx`（2022 筆記）、`greeceregs.pdf`（2011 法規）、`193269_map_GREECE PDO.pdf`（33 PDO 官方地圖）

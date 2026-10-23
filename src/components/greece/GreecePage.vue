@@ -5,6 +5,13 @@
       v-if="view === 'selector'"
       style="min-height: 100vh;"
       @enterLevel="goToLevel"
+      @openMap="view = 'map'"
+    />
+
+    <!-- 地圖模式 -->
+    <GreeceMapPage
+      v-else-if="view === 'map'"
+      @back-to-course="view = 'selector'"
     />
 
     <!-- 課程模式 -->
@@ -20,8 +27,9 @@
 import { ref } from 'vue'
 import GreeceLevelSelector from './GreeceLevelSelector.vue'
 import GreeceLearningSystem from './GreeceLearningSystem.vue'
+import GreeceMapPage from './GreeceMapPage.vue'
 
-const view = ref('selector') // 'selector' | 'course'
+const view = ref('selector') // 'selector' | 'map' | 'course'
 const selectedLevel = ref(1)
 
 function goToLevel(n) {
