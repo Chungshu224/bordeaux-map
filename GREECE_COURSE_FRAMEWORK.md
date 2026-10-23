@@ -1,6 +1,6 @@
 # 🇬🇷 希臘葡萄酒課程框架（Diploma 備考導向）
 
-> 狀態：**框架版**。頁面、路由、進度、21 課大綱已就緒；每課目前只有「封面＋本課重點」，詳細內容待補。
+> 狀態：頁面、路由、進度、21 課大綱已就緒。**Level 1（6 課）已完成正式內容**（含測驗與 en/ja）；Level 2、3 仍為「封面＋本課重點」框架。
 > 分支：`feat/greece-course-framework`（未合併）
 
 ## 結構
@@ -55,8 +55,14 @@
 - 21 課資料 `src/data/greece/gr-l*.js`＋en/ja 翻譯 `src/locales/{en,ja}/lessons/greece/`
 - 共用 `LevelTrack` 新增選用屬性 `maxColumns`（預設 2，不影響其他課程）
 
+## Level 1 內容說明
+- 每課 4 張內容投影片＋知識檢測，gr-l1-6 為 8 題綜合評量（及格 60）
+- 事實來源：Wines of Greece（33 PDO／114 PGI）、WineWithSeth（約 9.6 萬公頃、300+ 本土品種、品種與土壤細節）、Drive 筆記；PDO 分區以官方地圖為準（4＋4＋7＋3＋8＋7＝33）
+- 刻意未寫入：PDO 100%／PGI 比例、Reserve 陳年月數（留待 Level 2 查證；來源間 PGI 比例有 80%／85% 之別，EU 條文為 85%，仍須對官方文件確認）
+- 「六大地理區」為教學分法，非官方行政區
+
 ## 尚未做（下一階段）
-- 各課正式內容（投影片、測驗、Diploma 論述題）
+- Level 2、3 正式內容（投影片、測驗、Diploma 論述題）
 - 互動地圖＋PDO 邊界資料（33 PDO，需另找公開 GeoJSON）、遊戲、品飲筆記（首頁已顯示「即將推出」）
 - 成就系統、詞彙辭典（`WineGlossary`／`AdminGlossary` 尚未加入 greece）
 - Supabase `courses` 資料表需新增 `greece` 一列才能在首頁上架
