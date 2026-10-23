@@ -134,6 +134,18 @@ const routes = [
     redirect: '/hungary'
   },
 
+  // ─── 希臘葡萄酒課程（框架版）──────────────────────────────────────────────────
+  {
+    path: '/greece',
+    name: 'Greece',
+    component: () => import('../components/greece/GreecePage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🇬🇷 希臘 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/greece/course',
+    redirect: '/greece'
+  },
+
   // ─── 加州 AVA 探索地圖 ───────────────────────────────────────────────────────
   {
     path: '/california',
@@ -289,6 +301,7 @@ const COURSE_ACCESS_RULES = {
   Loire: { courseId: 'loire', minimumTier: 'free' },
   LoireCourse: { courseId: 'loire', minimumTier: 'basic' },
   Hungary: { courseId: 'hungary', minimumTier: 'free' },
+  Greece: { courseId: 'greece', minimumTier: 'free' },
   California: { courseId: 'california', minimumTier: 'free' },
   CaliforniaCourse: { courseId: 'california', minimumTier: 'basic' },
   Learning: { courseId: 'bordeaux', minimumTier: 'free' },

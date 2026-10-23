@@ -542,6 +542,50 @@
             </div>
           </div>
 
+
+          <!-- ── Hungary ── -->
+          <div v-if="courseShowHome['greece'] || isAdmin" class="course-card greece">
+            <div :class="['card-status', courseStatuses.greece ? 'active' : 'planning']">
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.greece ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🇬🇷</div>
+              <div class="card-region">Greece · Ελλάδα</div>
+              <h3 class="card-title">{{ $t('home.courses.greece.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.greece.desc') }}</p>
+            </div>
+            <div class="course-preview-strip greece-strip">
+              <div class="cp-stat">
+                <span class="cp-num">33</span>
+                <span class="cp-label" v-html="$t('home.courses.greece.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Santorini</span>
+                <span class="cp-label" v-html="$t('home.courses.greece.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.greece.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Assyrtiko</span>
+                <span class="cp-label" v-html="$t('home.courses.greece.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features greece-features">
+              <span class="cpf-item greece-tag">✔ {{ $t('home.courses.greece.f1') }}</span>
+              <span class="cpf-item greece-tag">✔ {{ $t('home.courses.greece.f2') }}</span>
+              <span class="cpf-item greece-tag">✔ {{ $t('home.courses.greece.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button v-if="courseStatuses.greece" class="btn-enter-course" @click="router.push('/greece')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
+            </div>
+          </div>
+
         </div><!-- /courses-grid 舊世界 -->
       </div><!-- /region-group 舊世界 -->
 
@@ -1132,6 +1176,7 @@ const courseConfig = computed(() => [
   { id: 'germany',    label: t('home.courses.labels.germany'), route: '/germany',          group: 'europe'   },
   { id: 'portugal',   label: t('home.courses.labels.portugal'), route: '/portugal',         group: 'europe'   },
   { id: 'hungary',    label: t('home.courses.labels.hungary'), route: '/hungary',          group: 'europe'   },
+  { id: 'greece',     label: t('home.courses.labels.greece'), route: '/greece',           group: 'europe'   },
   { id: 'australia',  label: t('home.courses.labels.australia'), route: '/australia',         group: 'newworld' },
   { id: 'newzealand', label: t('home.courses.labels.newzealand'), route: '/newzealand',        group: 'newworld' },
   { id: 'california', label: t('home.courses.labels.california'), route: '/california/course', group: 'newworld' },
@@ -1144,9 +1189,9 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, alsace: false })
 
 async function loadCourseData() {
   try {
@@ -1943,6 +1988,13 @@ onMounted(async () => {
   box-shadow: 0 4px 16px rgba(30,90,50,0.4);
 }
 .loire-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(30,90,50,0.6); }
+/* Greece card */
+.greece-strip { background: rgba(13,94,175,0.07); border-color: rgba(13,94,175,0.22); }
+.greece-strip .cp-num { color: #0D5EAF; font-size: 0.9rem; }
+.greece-strip .cp-label { color: #073a73; }
+.greece-strip .cp-divider { background: rgba(13,94,175,0.25); }
+.greece-features .greece-tag { color: #0D5EAF; background: rgba(13,94,175,0.06); border-color: rgba(13,94,175,0.18); }
+
 /* Hungary card */
 .hungary-strip { background: rgba(206,41,57,0.07); border-color: rgba(206,41,57,0.22); }
 .hungary-strip .cp-num { color: #ce2939; font-size: 0.9rem; }

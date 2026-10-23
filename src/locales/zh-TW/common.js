@@ -100,6 +100,7 @@ export default {
     portugal:   '葡萄牙',
     germany:    '德國',
     hungary:    '匈牙利',
+    greece:     '希臘',
     loire:      '羅亞爾河谷',
     california: '加州',
     australia:  '澳洲',

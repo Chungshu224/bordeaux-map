@@ -32,11 +32,13 @@ const props = defineProps({
   subtitle: { type: String, default: '' },
   ctaText: { type: String, default: '' },
   // levels: [{ number, title, subtitle, icon, description, tags, modules, lessons, progress, unlocked, unlockHint }]
-  levels: { type: Array, required: true }
+  levels: { type: Array, required: true },
+  // 每列最多幾張卡片（預設 2；三階段課程可傳 3）
+  maxColumns: { type: Number, default: 2 }
 })
 defineEmits(['enter', 'cta'])
 
-const cols = computed(() => Math.min(props.levels.length, 2))
+const cols = computed(() => Math.min(props.levels.length, props.maxColumns))
 </script>
 
 <style scoped>

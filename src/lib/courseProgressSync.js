@@ -200,6 +200,24 @@ export async function loadAndMergeHungaryProgress(userId) {
   return true
 }
 
+// ─── Greece ──────────────────────────────────────────────────────
+// Greece 使用 store state + localStorage，加 Supabase 同步（與 Hungary 同模式）
+export const saveGreeceLesson = (userId, lessonId) => upsertLesson(userId, 'greece', lessonId)
+
+export async function loadAndMergeGreeceProgress(userId) {
+  const rows = await fetchRows(userId, 'greece')
+  if (!rows.length) return false
+  const remote = rows.map(r => r.module_id)
+  const STORAGE_KEY = `greece-wine-academy-progress:${userId}`
+  const raw = localStorage.getItem(STORAGE_KEY)
+  const local = raw ? JSON.parse(raw) : { completedLessons: [], userProgress: {} }
+  const merged = Array.from(new Set([...(local.completedLessons || []), ...remote]))
+  if (merged.length === (local.completedLessons || []).length) return false
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...local, completedLessons: merged }))
+  console.log('[greeceSync] ✅ synced')
+  return true
+}
+
 // ─── Loire ───────────────────────────────────────────────────────
 // Loire 使用 store state；localStorage 由 store 負責（已補上）
 export const saveLoireLesson = (userId, lessonId) => upsertLesson(userId, 'loire', lessonId)
