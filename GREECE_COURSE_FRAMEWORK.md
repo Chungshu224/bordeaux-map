@@ -97,8 +97,14 @@
 - 排行榜沿用 `game_scores` 表（`game_type`: `gr_region_quiz`／`gr_grape_match`，無需 migration）；最高分存 localStorage（`gr_region_best`／`gr_grape_best`）
 - 頁面文字目前僅繁體中文（與匈牙利遊戲一致）
 
+## 品飲筆記
+- 入口：課程首頁「品飲筆記」→ `notebook/GreeceTastingNotebookPage.vue`（列表、篩選、搜尋、品味分析）＋ `GreeceTastingNoteModal.vue`（新增／編輯）
+- 資料：沿用 `tasting_notes` 表（`source = 'greece'`，產區存 `aoc_id`），不新增欄位
+- 酒款類型 8 種：`gr_white`／`gr_red`／`gr_rose`／`gr_sparkling`／`gr_sweet`／`gr_fortified`／`gr_retsina`／`gr_other`；顏色、香氣、口感、結構詞彙在 `src/data/greece/tastingData.js`
+- ⚠ **需先套用 migration** `supabase/migrations/20261023000000_add_greece_tasting_types.sql`（擴充 `wine_type` CHECK）；未套用前儲存會被資料庫拒絕。我沒有對正式資料庫執行任何變更
+- 頁面文字目前僅繁體中文（與匈牙利筆記一致）
+
 ## 尚未做（下一階段）
-- 品飲筆記（首頁已顯示「即將推出」）
 - 成就系統、詞彙辭典（`WineGlossary`／`AdminGlossary` 尚未加入 greece）
 - Supabase `courses` 資料表需新增 `greece` 一列才能在首頁上架
 - 地圖與頁面的實機畫面檢查（vite build 已通過；需 `VITE_MAPBOX_TOKEN` 才能在瀏覽器看到底圖）
