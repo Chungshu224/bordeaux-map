@@ -86,8 +86,17 @@
 - 限制：該資料集為 2021 年前登記的名單，與目前官方名單若有出入以官方為準；邊界為資料集原始範圍，非各 PDO 完整的法定描述；Candia 的規範細節未寫入
 - 尚無氣候圖層、地質圖層、發音；地圖頁文字目前僅繁體中文（與匈牙利地圖頁一致）
 
+## 互動遊戲
+- 入口：課程首頁「品種配對・產區速答」→ `GreeceGameHubPage`（沿用共用 `GameHub`）
+- 共用引擎 `games/GreeceQuizEngine.vue`：計時、連勝加成（×1.5／2／3）、錯題回顧、排行榜；題目格式 `{ stem, tag, hint, options, correct, explain }`
+- 產區速答：PDO 名稱＋線索 → 六大地理區；簡單 13 個主要 PDO、4 選項；困難全 33 個、6 選項
+- 品種配對：19 個品種；簡單＝品種 → 特徵；困難＝加入特徵 → 品種與 PDO → 核心品種（10 組無歧義配對）
+- 題庫 `src/data/greece/gameData.js`，事實只取自課程已查證內容，不含有出入的數字（如 Reserve 月數）
+- 排行榜沿用 `game_scores` 表（`game_type`: `gr_region_quiz`／`gr_grape_match`，無需 migration）；最高分存 localStorage（`gr_region_best`／`gr_grape_best`）
+- 頁面文字目前僅繁體中文（與匈牙利遊戲一致）
+
 ## 尚未做（下一階段）
-- 遊戲、品飲筆記（首頁已顯示「即將推出」）
+- 更多遊戲（Hungary 另有分級辨識、知識閃問）、品飲筆記（首頁已顯示「即將推出」）
 - 成就系統、詞彙辭典（`WineGlossary`／`AdminGlossary` 尚未加入 greece）
 - Supabase `courses` 資料表需新增 `greece` 一列才能在首頁上架
 - 地圖與頁面的實機畫面檢查（vite build 已通過；需 `VITE_MAPBOX_TOKEN` 才能在瀏覽器看到底圖）
