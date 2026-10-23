@@ -124,3 +124,8 @@
   - Reserve／Grand Reserve 陳年月數
   - PDO「100% 本區」與 PGI「至少 85%」的比例要求
   - 名稱拼寫差異（如 Amynteo／Amyndeo）
+
+## 地圖的 PGI 參考點（2026-10-23）
+- 歐盟 CC0 資料集只有 PDO 邊界，沒有 PGI 邊界；官網與可讀來源也沒有完整 114 個 PGI 名單（需查 eAmbrosia）。
+- 地圖新增 15 個「PGI 參考點」（`src/data/greece/pgiRef.js`）：只收官網／教材明確提到者，以地名位置示意，**不是產區範圍**；可在圖例開關，也列在產區抽屜最後一組。
+- 若要補完整 PGI：需從 eAmbrosia 匯出清單（名稱、層級、規格），邊界另找官方 GIS 資料。

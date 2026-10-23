@@ -3,7 +3,7 @@
     <section class="map-section">
       <RegionMapHeader
         regionName="希臘"
-        title="🇬🇷 希臘葡萄酒產區地圖（33 PDO）"
+        title="🇬🇷 希臘葡萄酒產區地圖（33 PDO＋PGI 參考點）"
         icon="🇬🇷"
         @back="emits('back-to-course')"
       />
@@ -20,12 +20,17 @@
 
       <div ref="mapContainer" class="map"></div>
 
-      <div v-if="mapReady && !activeFeature" class="gr-legend">
+      <div v-if="mapReady && !activeFeature && !activePgi" class="gr-legend">
         <div v-for="g in GROUPS" :key="g.key" class="gr-legend-item">
           <span class="gr-legend-dot" :style="{ background: g.color }"></span>
           {{ g.label }}（{{ countByGroup[g.key] || 0 }}）
         </div>
-        <div class="gr-legend-hint">點擊產區查看資訊；邊界資料為歐盟官方 PDO 資料（CC0）</div>
+        <label class="gr-legend-toggle">
+          <input type="checkbox" v-model="showPgi" @change="togglePgi" />
+          <span class="gr-pgi-dot"></span> PGI 參考點（{{ PGI_REF.length }}）
+        </label>
+        <div class="gr-legend-hint">點擊產區查看資訊；PDO 邊界為歐盟官方資料（CC0）。PGI 僅為示意位置，非官方邊界；完整 114 個 PGI 請查 eAmbrosia。</div>
+        <div class="gr-legend-hint">{{ PGI_RULES }}</div>
       </div>
 
       <div v-if="showLayerPanel" class="layer-panel-wrapper">
@@ -45,7 +50,7 @@
         :aoc-open="drawerOpen"
         :layer-open="showLayerPanel"
         :is3D="is3D"
-        :info-open="!!activeFeature && !infoBarCollapsed"
+        :info-open="!!(activeFeature || activePgi) && !infoBarCollapsed"
         @action="handleMobileAction"
       />
 
@@ -57,7 +62,7 @@
       region-name="希臘"
       :grouped="groupedDrawer"
       :search="search"
-      :active-id="activeFeature ? activeFeature.id : ''"
+      :active-id="activePgi ? activePgi.id : (activeFeature ? activeFeature.id : '')"
       @update:search="search = $event"
       @select="onDrawerSelect"
     />
@@ -73,6 +78,7 @@ import {
   RegionMapAppellationDrawer, RegionMapMobileToolbar
 } from '../shared/regionMap/index.js'
 import { globalGreeceAchievementManager } from '../../stores/greeceAchievementSystem.js'
+import { PGI_REF, PGI_RULES } from '../../data/greece/pgiRef.js'
 
 const props = defineProps({ initialRegion: { type: Object, default: null } })
 const emits = defineEmits(['back-to-course'])
@@ -100,6 +106,8 @@ const showLayerPanel = ref(false)
 const search = ref('')
 const features = ref([])
 const activeFeature = ref(null)
+const activePgi = ref(null)
+const showPgi = ref(true)
 let map = null
 let contoursInitialized = false
 
@@ -110,6 +118,7 @@ const countByGroup = computed(() => {
 })
 
 const activeColor = computed(() =>
+  activePgi.value ? '#E07B00' :
   activeFeature.value ? GROUP_BY_KEY[activeFeature.value.group]?.color || '#0D5EAF' : '#0D5EAF')
 
 // 範圍完全相同的 PDO（如 Lemnos 與 Muscat of Lemnos）
@@ -120,6 +129,20 @@ function coLocated(f) {
 }
 
 const unifiedInfo = computed(() => {
+  const g = activePgi.value
+  if (g) {
+    return {
+      name: `PGI ${g.name}`,
+      originalName: `ΠΓΕ ${g.name_el}`,
+      badges: [{ label: 'PGI' }, ...(g.level ? [{ label: g.level }] : [])],
+      meta: [
+        { label: '地區', value: g.region },
+        { label: '位置', value: '示意點，非官方邊界' }
+      ],
+      grapes: g.grapes || [],
+      description: `${g.notes} ${PGI_RULES}`
+    }
+  }
   const f = activeFeature.value
   if (!f) return null
   const others = coLocated(f)
@@ -141,7 +164,11 @@ const unifiedInfo = computed(() => {
 
 const groupedDrawer = computed(() => {
   const q = search.value.trim().toLowerCase()
-  return GROUPS.map(g => ({
+  const pgiItems = PGI_REF
+    .filter(p => !q || p.name.toLowerCase().includes(q) || p.name_el.toLowerCase().includes(q))
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map(p => ({ id: p.id, name: `PGI ${p.name}`, type: 'PGI', styles: [] }))
+  const pdoGroups = GROUPS.map(g => ({
     key: g.key,
     label: g.label,
     items: features.value
@@ -151,6 +178,9 @@ const groupedDrawer = computed(() => {
       .sort((a, b) => a.name.localeCompare(b.name))
       .map(p => ({ id: p.id, name: p.name, type: g.key, styles: p.styles || [] }))
   })).filter(g => g.items.length)
+  return pgiItems.length
+    ? [...pdoGroups, { key: 'pgi', label: 'PGI 參考點（示意位置）', items: pgiItems }]
+    : pdoGroups
 })
 
 function bboxOf(feature) {
@@ -165,7 +195,20 @@ function bboxOf(feature) {
   return [[minX, minY], [maxX, maxY]]
 }
 
+function selectPgi(id, fly = true) {
+  const g = PGI_REF.find(p => p.id === id)
+  if (!g) return
+  activeFeature.value = null
+  activePgi.value = g
+  infoBarCollapsed.value = false
+  if (!map) return
+  applyHighlight()
+  if (fly) map.flyTo({ center: g.lngLat, zoom: Math.max(map.getZoom(), 8.5), duration: 900 })
+}
+
 function selectById(id, fly = true) {
+  if (String(id).startsWith('PGI-')) return selectPgi(id, fly)
+  activePgi.value = null
   const feat = features.value.find(f => f.properties.id === id)
   if (!feat) return
   activeFeature.value = feat.properties
@@ -194,6 +237,7 @@ function applyHighlight() {
 
 function resetMap() {
   activeFeature.value = null
+  activePgi.value = null
   infoBarCollapsed.value = true
   drawerOpen.value = false
   is3D.value = false
@@ -252,6 +296,41 @@ function handleMobileAction(action) {
   else if (action === 'info') infoBarCollapsed.value = !infoBarCollapsed.value
 }
 
+function togglePgi() {
+  if (!map) return
+  const vis = showPgi.value ? 'visible' : 'none'
+  for (const id of ['gr-pgi-circle', 'gr-pgi-label']) {
+    if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', vis)
+  }
+}
+
+function addPgiLayers() {
+  map.addSource('gr-pgi', {
+    type: 'geojson',
+    data: {
+      type: 'FeatureCollection',
+      features: PGI_REF.map(p => ({
+        type: 'Feature',
+        properties: { id: p.id, name: `PGI ${p.name}` },
+        geometry: { type: 'Point', coordinates: p.lngLat }
+      }))
+    }
+  })
+  map.addLayer({ id: 'gr-pgi-circle', type: 'circle', source: 'gr-pgi',
+    layout: { visibility: showPgi.value ? 'visible' : 'none' },
+    paint: { 'circle-radius': 7, 'circle-color': '#FFB020', 'circle-stroke-color': '#ffffff', 'circle-stroke-width': 2 } })
+  map.addLayer({ id: 'gr-pgi-label', type: 'symbol', source: 'gr-pgi',
+    layout: { visibility: showPgi.value ? 'visible' : 'none', 'text-field': ['get', 'name'], 'text-size': 11, 'text-offset': [0, 1.2], 'text-anchor': 'top', 'text-optional': true },
+    paint: { 'text-color': '#ffffff', 'text-halo-color': 'rgba(0,0,0,0.85)', 'text-halo-width': 1.5 },
+    minzoom: 6.5 })
+  map.on('click', 'gr-pgi-circle', e => {
+    const f = e.features && e.features[0]
+    if (f) selectPgi(f.properties.id, false)
+  })
+  map.on('mouseenter', 'gr-pgi-circle', () => { map.getCanvas().style.cursor = 'pointer' })
+  map.on('mouseleave', 'gr-pgi-circle', () => { map.getCanvas().style.cursor = '' })
+}
+
 function addPdoLayers(geojson) {
   const colorMatch = ['match', ['get', 'group'],
     ...GROUPS.flatMap(g => [g.key, g.color]), '#888']
@@ -262,12 +341,14 @@ function addPdoLayers(geojson) {
     paint: { 'line-color': '#ffffff', 'line-width': 1.5, 'line-opacity': 0.9 } })
 
   map.on('click', 'gr-fill', e => {
+    if (map.getLayer('gr-pgi-circle') && map.queryRenderedFeatures(e.point, { layers: ['gr-pgi-circle'] }).length) return
     const hits = e.features || []
     if (!hits.length) return
     // 重疊時選面積最小者（最具體的 PDO）
     const best = hits.reduce((a, b) => (a.properties.area_km2 <= b.properties.area_km2 ? a : b))
     selectById(best.properties.id, false)
   })
+  addPgiLayers()
   map.on('mouseenter', 'gr-fill', () => { map.getCanvas().style.cursor = 'pointer' })
   map.on('mouseleave', 'gr-fill', () => { map.getCanvas().style.cursor = '' })
 }
@@ -346,6 +427,8 @@ onUnmounted(() => {
 }
 .gr-legend-item { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
 .gr-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.gr-legend-toggle { display: flex; align-items: center; gap: 6px; margin-top: 6px; cursor: pointer; }
+.gr-pgi-dot { width: 10px; height: 10px; border-radius: 50%; background: #FFB020; border: 2px solid #fff; box-shadow: 0 0 0 1px #c98100; flex-shrink: 0; }
 .gr-legend-hint { margin-top: 6px; font-size: 0.7rem; color: #5b6b7a; line-height: 1.35; }
 .layer-panel-wrapper { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%); z-index: 46; }
 .map-error {
