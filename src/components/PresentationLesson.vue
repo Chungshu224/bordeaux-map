@@ -2121,12 +2121,14 @@ function extractIntroSubtitle(html) {
 function getCourseGradient(id) {
   if (id?.startsWith('ca-')) return 'linear-gradient(135deg, #7b2d00 0%, #c0392b 100%)'
   if (id?.startsWith('hu-')) return 'linear-gradient(135deg, #5b1fa0 0%, #3a0d7a 100%)'
+  if (id?.startsWith('gr-')) return 'linear-gradient(135deg, #0D5EAF 0%, #073a73 100%)'
   if (id?.startsWith('lo-')) return 'linear-gradient(135deg, #1a6e40 0%, #0d4a28 100%)'
   return 'linear-gradient(135deg, #722f37 0%, #4a0e15 100%)' // Bordeaux
 }
 function getCourseIcon(id) {
   if (id?.startsWith('ca-')) return '🍷'
   if (id?.startsWith('hu-')) return '🍾'
+  if (id?.startsWith('gr-')) return '🏺'
   if (id?.startsWith('lo-')) return '🌊'
   return '🍇'
 }

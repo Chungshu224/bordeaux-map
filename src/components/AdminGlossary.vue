@@ -297,6 +297,7 @@ const regionOptions = [
   { key: 'portugal',   label: '葡萄牙',   icon: '🇵🇹', lang3: 'pt', lang3Label: 'Português' },
   { key: 'germany',    label: '德國',       icon: '🇩🇪', lang3: 'de', lang3Label: 'Deutsch' },
   { key: 'hungary',    label: '匈牙利',   icon: '🇭🇺', lang3: 'hu', lang3Label: 'Magyar' },
+  { key: 'greece',     label: '希臘',       icon: '🇬🇷', lang3: 'el', lang3Label: 'Ελληνικά' },
   { key: 'loire',      label: '羅亞爾河', icon: '🏰', lang3: 'fr', lang3Label: 'Français' },
   { key: 'california', label: '加州',       icon: '🌉', lang3: '',   lang3Label: '' },
   { key: 'australia',  label: '澳洲',       icon: '🦘', lang3: '',   lang3Label: '' },
@@ -336,7 +337,7 @@ async function loadAll() {
   loading.value = true
   const { data, error } = await supabase
     .from('wine_glossary')
-    .select('id, region, zh, en, fr, it, es, pt, de, hu, definition, category')
+    .select('id, region, zh, en, fr, it, es, pt, de, hu, el, definition, category')
     .order('region')
     .order('zh')
   if (!error) allItems.value = data ?? []
@@ -373,6 +374,7 @@ const filtered = computed(() => {
     (i.pt || '').toLowerCase().includes(q) ||
     (i.de || '').toLowerCase().includes(q) ||
     (i.hu || '').toLowerCase().includes(q) ||
+    (i.el || '').toLowerCase().includes(q) ||
     i.definition.toLowerCase().includes(q)
   )
   return list
@@ -418,7 +420,7 @@ const formError = ref('')
 
 const emptyForm = () => ({
   region: filterRegion.value,
-  zh: '', en: '', fr: '', it: '', es: '', pt: '', de: '', hu: '',
+  zh: '', en: '', fr: '', it: '', es: '', pt: '', de: '', hu: '', el: '',
   definition: '',
   category: 'grape',
 })
@@ -439,6 +441,7 @@ function openForm(item) {
       pt:         item.pt || '',
       de:         item.de || '',
       hu:         item.hu || '',
+      el:         item.el || '',
       definition: item.definition,
       category:   item.category,
     }
@@ -466,6 +469,7 @@ async function saveForm() {
     pt:         form.value.pt || '',
     de:         form.value.de || '',
     hu:         form.value.hu || '',
+    el:         form.value.el || '',
     definition: form.value.definition,
     category:   form.value.category,
     updated_at: new Date().toISOString(),
@@ -805,6 +809,7 @@ async function runBatchTranslate() {
 .region-portugal   { background: #fce4ec; color: #ad1457; }
 .region-germany    { background: #ede7f6; color: #4527a0; }
 .region-hungary    { background: #fffde7; color: #ef6c00; }
+.region-greece     { background: #e3f2fd; color: #0d5eaf; }
 .region-loire      { background: #e0f7fa; color: #006064; }
 .region-california { background: #fff8e1; color: #ef6c00; }
 .region-australia  { background: #ffebee; color: #c62828; }

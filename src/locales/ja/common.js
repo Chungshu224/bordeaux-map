@@ -82,6 +82,7 @@ export default {
     portugal:   'ポルトガル',
     germany:    'ドイツ',
     hungary:    'ハンガリー',
+    greece:     'ギリシャ',
     loire:      'ロワール渓谷',
     california: 'カリフォルニア',
     australia:  'オーストラリア',

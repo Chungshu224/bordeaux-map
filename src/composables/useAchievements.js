@@ -52,6 +52,11 @@ import {
   globalCaliforniaAchievementManager
 } from '../stores/californiaAchievementSystem.js'
 import {
+  greeceAchievementState,
+  greeceAchievementDefinitions,
+  globalGreeceAchievementManager
+} from '../stores/greeceAchievementSystem.js'
+import {
   alsaceAchievementState,
   alsaceAchievementDefinitions,
   globalAlsaceAchievementManager
@@ -66,7 +71,8 @@ const COURSE_LABELS = {
   spain:       '侍酒師的筆記本',
   newzealand:  '侍酒師的筆記本',
   california:  '侍酒師的筆記本',
-  alsace:      '侍酒師的筆記本'
+  alsace:      '侍酒師的筆記本',
+  greece:      '侍酒師的筆記本'
 }
 
 // ── 各課程分類定義 ────────────────────────────────────────────
@@ -158,6 +164,14 @@ const COURSE_CATEGORIES = {
     { id: 'quiz',       name: '測驗挑戰', icon: '🎯' },
     { id: 'time',       name: '時間特殊', icon: '⏰' },
     { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
+  greece: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗與遊戲', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
   ]
 }
 
@@ -223,6 +237,10 @@ export function useAchievements(courseKey) {
     state       = californiaAchievementState
     definitions = californiaAchievementDefinitions
     manager     = globalCaliforniaAchievementManager
+  } else if (courseKey === 'greece') {
+    state       = greeceAchievementState
+    definitions = greeceAchievementDefinitions
+    manager     = globalGreeceAchievementManager
   } else if (courseKey === 'alsace') {
     state       = alsaceAchievementState
     definitions = alsaceAchievementDefinitions
