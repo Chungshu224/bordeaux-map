@@ -543,10 +543,10 @@
           </div>
 
 
-          <!-- ── Hungary ── -->
-          <div v-if="courseShowHome['greece'] || isAdmin" class="course-card greece">
+          <!-- ── Greece（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card greece">
             <div :class="['card-status', courseStatuses.greece ? 'active' : 'planning']">
-              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.greece ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
+              {{ $t('home.courses.common.statusAdmin') }}
             </div>
             <div class="card-hero">
               <div class="card-icon">🇬🇷</div>
@@ -576,13 +576,12 @@
               </div>
             </div>
             <div class="course-preview-features greece-features">
-              <span class="cpf-item greece-tag">✔ {{ $t('home.courses.greece.f1') }}</span>
-              <span class="cpf-item greece-tag">✔ {{ $t('home.courses.greece.f2') }}</span>
-              <span class="cpf-item greece-tag">✔ {{ $t('home.courses.greece.f3') }}</span>
+              <span class="cpf-item greece-tag">{{ $t('home.courses.greece.f1') }}</span>
+              <span class="cpf-item greece-tag">{{ $t('home.courses.greece.f2') }}</span>
+              <span class="cpf-item greece-tag">{{ $t('home.courses.greece.f3') }}</span>
             </div>
             <div class="card-enter-cta">
-              <button v-if="courseStatuses.greece" class="btn-enter-course" @click="router.push('/greece')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
-              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
+              <button class="btn-enter-course" @click="router.push('/greece')">{{ $t('home.courses.common.enterAdmin') }} →</button>
             </div>
           </div>
 
@@ -1193,6 +1192,9 @@ const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
 const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, alsace: false })
 
+// 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
+const ADMIN_ONLY_COURSES = ['greece']
+
 async function loadCourseData() {
   try {
     const { data } = await supabase
@@ -1201,7 +1203,7 @@ async function loadCourseData() {
     if (data) {
       data.forEach(c => {
         courseStatuses.value[c.id] = c.active
-        courseShowHome.value[c.id] = c.show_on_home !== false
+        courseShowHome.value[c.id] = c.show_on_home !== false && !ADMIN_ONLY_COURSES.includes(c.id)
         if (c.id === 'bordeaux') {
           pricing.value = {
             basic:   { monthly: c.price_basic_monthly   ?? 290,  yearly: c.price_basic_yearly   ?? 1800 },
@@ -1890,6 +1892,7 @@ onMounted(async () => {
 .course-card.bordeaux { border-color: rgba(212,175,55,0.3); background: rgba(212,175,55,0.04); }
 .course-card.bourgogne { border-color: rgba(107,45,139,0.4); background: rgba(107,45,139,0.05); }
 .course-card.spain { border-color: rgba(192,57,43,0.4); background: rgba(192,57,43,0.05); }
+.course-card.greece { border-color: rgba(13,94,175,0.4); background: rgba(13,94,175,0.05); }
 /* 課程深度預覽 strip */
 .course-preview-strip {
   display: flex; align-items: center; justify-content: space-between;

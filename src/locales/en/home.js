@@ -197,9 +197,9 @@ export default {
       s2label: 'Volcanic<br>White',
       s3label: 'Learning<br>Stages',
       s4label: 'Flagship<br>Variety',
-      f1: '✔ Three-stage course framework',
-      f2: '✔ PDO/PGI and Traditional terms',
-      f3: '✔ Built for Diploma preparation',
+      f1: 'Interactive map of 33 PDOs',
+      f2: '4 games and a tasting notebook',
+      f3: '29 achievements · Diploma-focused',
     },
     australia: {
       title: 'Australian Wine',

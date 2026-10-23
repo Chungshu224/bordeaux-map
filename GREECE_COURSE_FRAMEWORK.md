@@ -111,7 +111,7 @@
   - `20261023000000_add_greece_tasting_types.sql`（品飲筆記 wine_type）
   - `20261023000100_add_greece_course.sql`（courses 新增 greece，預設 `active=false`，價格為暫定值）
   - `20261023000200_add_greece_glossary.sql`（`el` 欄位、region CHECK、10 筆種子詞條）
-- 首頁顯示卡片另需把 `PlatformHome` 的 `courseShowHome.greece` 改為 true。
+- 首頁希臘卡片目前僅管理員可見：`PlatformHome` 的 `ADMIN_ONLY_COURSES = ['greece']` 會強制隱藏（即使 DB 的 show_on_home 為 true）。公開時移除 'greece'，並把 DB 的 `active`、`show_on_home` 設為 true。
 
 ## 尚未做（下一階段）
 - 地圖與頁面的實機畫面檢查（vite build 已通過；需 `VITE_MAPBOX_TOKEN` 才能在瀏覽器看到底圖）
